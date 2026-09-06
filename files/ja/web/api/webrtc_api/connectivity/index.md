@@ -1,6 +1,8 @@
 ---
 title: WebRTC 接続
 slug: Web/API/WebRTC_API/Connectivity
+l10n:
+  sourceCommit: 27bceead8e9b1fe9c92df0fa5e418f81bd5b9fdf
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
@@ -8,11 +10,12 @@ slug: Web/API/WebRTC_API/Connectivity
 WebRTC ではさまざまなプロトコルが相互作用してピアー間の接続を確立し、データやメディアの転送を行いますが、この記事ではその仕組みを解説します。
 
 > [!NOTE]
-> このページは、構造的な完全性と内容の完全性のために、大幅な書き換えが必要です。多くの情報があるのは良いことですが、ここは現在ゴミ捨て場のようなものなので、構成はめちゃくちゃです。
+> このページは、構成の整合性とコンテンツの網羅性を確保するため、大幅な書き直しが必要です。ここにある情報の多くは有益です。しかし、現時点ではいわば情報の寄せ集めのような状態であるため、構成が散らかっています。
+<!-- 上記のため、本記事の翻訳文は暫定的なものです。 -->
 
 ## シグナリング
 
-残念なことに、WebRTC は中間に何らかのサーバーがなければ接続を作成できません。このサーバーを**シグナルチャンネル**、または**シグナリングサービス**と呼びます。接続を確立する前に情報を交換する伝達手段はどんなものでも構いません。Eメール、はがき、伝書鳩でも...決めるのはあなたです。
+残念なことに、WebRTC は中間に何らかのサーバーがなければ接続を作成できません。このサーバーを**シグナルチャンネル**、または**シグナリングサービス**と呼びます。接続を確立する前に情報を交換する伝達手段はどんなものでも構いません。E メール、はがき、伝書鳩でも...決めるのはあなたです。
 
 交換する必要のある情報はオファーとアンサーと呼ばれ、その中身は下記で説明する {{Glossary("SDP")}} です。
 
@@ -20,110 +23,112 @@ WebRTC ではさまざまなプロトコルが相互作用してピアー間の�
 
 ### セッションディスクリプション
 
-WebRTC 接続のエンドポイント設定は**セッションディスクリプション**と呼ばれます。そこに含まれる情報は、送られるメディアの種類、形式、使用される転送プロトコル、エンドポイントの IP アドレスとポート、またその他メディア転送エンドポイントを記述するのに必要な情報です。この情報を **セッションディスクリプションプロトコル** ({{Glossary("SDP")}}) を使って交換し、保存します。 SDP データ形式の詳細は {{RFC(2327)}} にあります。
+WebRTC 接続のエンドポイント設定は**セッションディスクリプション**と呼ばれます。そこに含まれる情報は、送られるメディアの種類、形式、使用される転送プロトコル、エンドポイントの IP アドレスとポート、またその他メディア転送エンドポイントをディスクリプションするのに必要な情報です。この情報を **セッションディスクリプションプロトコル** ({{Glossary("SDP")}}) を使って交換し、保存します。 SDP データ形式の詳細は {{RFC(8866)}} にあります。
 
-ユーザーが WebRTC コールを他のユーザーに開始するとき、**オファー**と呼ばれる特別な記述を作成します。コールする側がコールに必要な設定を提案し、そのすべての情報をオファーの記述に盛り込みます。受け取る側は**アンサー**を返します。アンサーは受け取る側が用意する記述です。このようにして、両デバイスがお互いにメディアデータの交換に必要な情報を共有します。この交換は Interactive Connectivity Establishment ({{Glossary("ICE")}}) を使って行われます。ICE とは二つのデバイスが Network Address Translation ({{Glossary("NAT")}}) によって隔てられていてもオファーとアンサーを交換するために媒介を利用できるようにするプロトコルです。
+ユーザーが WebRTC コールを他のユーザーに開始するとき、**オファー**と呼ばれる特別なディスクリプションを作成します。コールする側がコールに必要な設定を提案し、そのすべての情報をオファーのディスクリプションに盛り込みます。受け取る側は**アンサー**を返します。アンサーは受け取る側が用意するディスクリプションです。このようにして、両デバイスがお互いにメディアデータの交換に必要な情報を共有します。この交換は Interactive Connectivity Establishment ({{Glossary("ICE")}}) を使って行われます。ICE とは二つのデバイスが Network Address Translation ({{Glossary("NAT")}}) によって隔てられていてもオファーとアンサーを交換するために媒介を利用できるようにするプロトコルです。
 
-各ピアーは 2 つの記述を手に入れます。 **local description** が自分側の記述で、 **remote description** が相手側の記述です。
+各ピアーは 2 つのディスクリプションを手に入れます。 **ローカルディスクリプション** が自分側のディスクリプションで、 **リモートディスクリプション** が相手側のディスクリプションです。
 
 オファー／アンサーの交換はコールを最初に確立する際に実行されますが、それだけでなくフォーマットや他の設定に変更が必要なときにも随時実行されます。コールの新規作成時でも既存の設定変更時でも、いずれにしてもオファーとアンサーを交換するために以下のような基本的なステップが実行されます。なお、ここでは ICE レイヤーは除外しています。
 
-1. 呼び出す側が {{domxref("navigator.mediaDevices.getUserMedia()")}} を通じてローカルメディアを取得する
+1. 呼び出す側が {{domxref("MediaDevices.getUserMedia")}} を通じてローカルメディアを取得する
 2. 呼び出す側が `RTCPeerConnection` を作成し、{{domxref("RTCPeerConnection.addTrack()")}} を実行する。(`addStream` が非推奨であるため)
 3. 呼び出す側がオファーを作成するために {{domxref("RTCPeerConnection.createOffer()")}} を実行する
-4. 呼び出す側がオファーを <em>local description</em> (ローカル側の接続の記述) として設定するために {{domxref("RTCPeerConnection.setLocalDescription()")}} を実行する
+4. 呼び出す側がオファーを _ローカルディスクリプション_ (ローカル側の接続のディスクリプション) として設定するために {{domxref("RTCPeerConnection.setLocalDescription()")}} を実行する
 5. 呼び出す側は setLocalDescription() を実行した後、STUN サーバーに問い合わせて ICE 候補を生成する
 6. 呼び出す側がシグナリングサーバーを使ってオファーを届けたい相手に送る
-7. 受け取る側がオファーを受け取り、それを <em>remote description</em> (相手側の接続の記述) として記録するために {{domxref("RTCPeerConnection.setRemoteDescription()")}} を実行する
+7. 受け取る側がオファーを受け取り、それを _リモートディスクリプション_ (相手側の接続のディスクリプション) として記録するために {{domxref("RTCPeerConnection.setRemoteDescription()")}} を実行する
 8. 受け取る側がコールに必要なセットアップを行う。ローカルメディアを取得し、 {{domxref("RTCPeerConnection.addTrack()")}} を通じてメディアトラックをピアー接続にアタッチする
 9. 受け取る側が {{domxref("RTCPeerConnection.createAnswer()")}} を実行することでアンサーを作成する
-10. 受け取る側が {{domxref("RTCPeerConnection.setLocalDescription()")}} に作成したアンサーを渡して実行し、アンサーを自身の local description としてセットする。この時点で受け取る側は両側の接続設定を知ることになる。
+10. 受け取る側が {{domxref("RTCPeerConnection.setLocalDescription()")}} に作成したアンサーを渡して実行し、アンサーを自身の ローカルディスクリプション としてセットする。この時点で受け取る側は両側の接続設定を知ることになる。
 11. 受け取る側がシグナリングサーバーを使ってアンサーを呼び出す側に送る
 12. 呼び出す側がアンサーを受け取る。
-13. 呼び出す側がアンサーを remote description として設定するために {{domxref("RTCPeerConnection.setRemoteDescription()")}} を実行する。これで呼び出す側も両者の設定を知ることになる。設定した通りにメディアが流れ始める。
+13. 呼び出す側がアンサーを リモートディスクリプション として設定するために {{domxref("RTCPeerConnection.setRemoteDescription()")}} を実行する。これで呼び出す側も両者の設定を知ることになる。設定した通りにメディアが流れ始める。
 
-### Pending and current descriptions
+### 待機中および現在のディスクリプション
 
-Taking one step deeper into the process, we find that `localDescription` and `remoteDescription`, the properties which return these two descriptions, aren't as simple as they look. Because during renegotiation, an offer might be rejected because it proposes an incompatible format, it's necessary that each endpoint have the ability to propose a new format but not actually switch to it until it's accepted by the other peer. For that reason, WebRTC uses _pending_ and _current_ descriptions.
+このプロセスをさらに深く掘り下げてみると、これら 2 つのディスクリプションを返すプロパティである `localDescription` と `remoteDescription` は、見た目ほど単純ではないことがわかります。再ネゴシエーションの際、互換性のない形式が提案されたためにオファーが拒否される可能性があるため、それぞれのエンドポイントは新しい形式を提案できる一方で、相手側のピアが受け入れるまでは実際にその形式に切り替えないようにする必要があります。そのため、WebRTC では待機中や現在のディスクリプションが使用されます。
 
-The **current description** (which is returned by the {{domxref("RTCPeerConnection.currentLocalDescription")}} and {{domxref("RTCPeerConnection.currentRemoteDescription")}} properties) represents the description currently in actual use by the connection. This is the most recent connection that both sides have fully agreed to use.
+**現在のディクリプション**（{{domxref("RTCPeerConnection.currentLocalDescription")}} および {{domxref("RTCPeerConnection.currentRemoteDescription")}} プロパティによって返されるもの）は、その接続で現在実際に使用されているディクリプションを表します。これは、双方が完全に合意して使用している最新の接続です。
 
-The **pending description** (returned by {{domxref("RTCPeerConnection.pendingLocalDescription")}} and {{domxref("RTCPeerConnection.pendingRemoteDescription")}}) indicates a description which is currently under consideration following a call to `setLocalDescription()` or `setRemoteDescription()`, respectively.
+**待機中のディクリプション**（{{domxref("RTCPeerConnection.pendingLocalDescription")}} および {{domxref("RTCPeerConnection.pendingRemoteDescription")}} によって返される）は、それぞれ `setLocalDescription()` または `setRemoteDescription()` の呼び出し後に、現在検討中のディクリプションを示しています。
 
-When reading the description (returned by {{domxref("RTCPeerConnection.localDescription")}} and {{domxref("RTCPeerConnection.remoteDescription")}}), the returned value is the value of `pendingLocalDescription`/`pendingRemoteDescription` if there's a pending description (that is, the pending description isn't `null`); otherwise, the current description (`currentLocalDescription`/`currentRemoteDescription`) is returned.
+ディスクリプション（{{domxref("RTCPeerConnection.localDescription")}} および {{domxref("RTCPeerConnection.remoteDescription")}} によって返されるもの）を読み込む際、待機中のディスクリプションがある場合（つまり、待機中のディスクリプションが `null` ではない場合）、返される値は `pendingLocalDescription`/`pendingRemoteDescription` の値となります。それ以外の場合は、現在のディスクリプション（`currentLocalDescription`/`currentRemoteDescription`）が返されます。
 
-When changing the description by calling `setLocalDescription()` or `setRemoteDescription()`, the specified description is set as the pending description, and the WebRTC layer begins to evaluate whether or not it's acceptable. Once the proposed description has been agreed upon, the value of `currentLocalDescription` or `currentRemoteDescription` is changed to the pending description, and the pending description is set to null again, indicating that there isn't a pending description.
-
-> [!NOTE]
-> The `pendingLocalDescription` contains not just the offer or answer under consideration, but any local ICE candidates which have already been gathered since the offer or answer was created. Similarly, `pendingRemoteDescription` includes any remote ICE candidates which have been provided by calls to {{domxref("RTCPeerConnection.addIceCandidate()")}}.
-
-See the individual articles on these properties and methods for more specifics, and [Codecs used by WebRTC](/ja/docs/Web/Media/Formats/WebRTC_codecs) for information about codecs supported by WebRTC and which are compatible with which browsers. The codecs guide also offers guidance to help you choose the best codecs for your needs.
-
-## ICE candidates
-
-As well as exchanging information about the media (discussed above in Offer/Answer and SDP), peers must exchange information about the network connection. This is known as an **ICE candidate** and details the available methods the peer is able to communicate (directly or through a TURN server). Typically, each peer will propose its best candidates first, making their way down the line toward their worse candidates. Ideally, candidates are UDP (since it's faster, and media streams are able to recover from interruptions relatively easily), but the ICE standard does allow TCP candidates as well.
+`setLocalDescription()` または `setRemoteDescription()` を呼んでディスクリプションを変更する場合、指定されたディスクリプションが「待機中のディスクリプション」として設定され、WebRTC レイヤーはそのディスクリプションが受け入れられるかどうかを評価し始めます。提案されたディスクリプションについて合意が成立すると、`currentLocalDescription` または `currentRemoteDescription` の値が「待機中のディスクリプション」に変更され、「待機中のディスクリプション」は繰り返し null に設定され、待機中のディスクリプションが存在しないことを示します。
 
 > [!NOTE]
-> Generally, ICE candidates using TCP are only going to be used when UDP is not available or is restricted in ways that make it not suitable for media streaming. Not all browsers support ICE over TCP, however.
+> `pendingLocalDescription` には、検討中のオファーやアンサーだけでなく、そのオファーやアンサーが作成されてからこれまでに収集されたすべてのローカル ICE 候補も含まれます。同様に、`pendingRemoteDescription` には、{{domxref("RTCPeerConnection.addIceCandidate()")}} の呼び出しによって指定されたすべてのリモート ICE 候補が含まれます。
 
-ICE allows candidates to represent connections over either {{Glossary("TCP")}} or {{Glossary("UDP")}}, with UDP generally being preferred (and being more widely supported). Each protocol supports a few types of candidate, with the candidate types defining how the data makes its way from peer to peer.
+詳細については、これらのプロパティやメソッドに関する個別の記事をご覧ください。また、WebRTC で対応しているコーデックや、各ブラウザーとの互換性に関する情報については、[WebRTC で使用されるコーデック](/ja/docs/Web/Media/Guides/Formats/WebRTC_codecs) を参照してください。コーデックガイドでは、ニーズに最適なコーデックを選択するための指針も提供されています。
 
-### UDP candidate types
+## ICE 候補
 
-UDP candidates (candidates with their {{domxref("RTCIceCandidate.protocol", "protocol")}} set to `udp`) can be one of these types:
+メディアに関する情報（上記の「オファー／アンサー」および SDP で説明した内容）の交換に加え、ピア間はネットワーク接続に関する情報も交換しなければなりません。これは **ICE 候補**と呼ばれ、そのピアが利用できる通信メソッド（直接、または TURN サーバー経由）の詳細が記載されています。通常、それぞれのピアはまず最適な候補を提案し、その後、順次劣った候補へと移っていきます。理想的には、候補は UDP であるべきです（速度が速く、メディアストリームが中断から比較的容易に回復できるためですが）、ICE 標準では TCP 候補もすることができる。
+
+> [!NOTE]
+> 一般的に、TCP を使用する ICE 候補は、UDP が利用できない場合や、メディアストリーミングに適さないような制限がかけられている場合にのみ使用されます。ただし、すべてのブラウザーが TCP 上の ICE を対応していない場合があります。
+
+ICE では、候補が {{Glossary("TCP")}} または {{Glossary("UDP")}} のいずれかを介して接続を表すことができるが、一般的には UDP が推奨される（また、より広く対応されている）。それぞれのプロトコルはいくつか種類の候補に対応しており、これらの候補の種類によって、データがピア間でどのように伝送されるかが定義される。
+
+### UDP の候補型
+
+UDP 候補（{{domxref("RTCIceCandidate.protocol", "protocol")}} が `udp` に設定されている候補）は、以下のいずれかの型になります。
 
 - `host`
-  - : A host candidate is one for which its {{domxref("RTCIceCandidate/address", "ip")}} address is the actual, direct IP address of the remote peer.
+  - : ホスト候補は、その {{domxref("RTCIceCandidate/address", "ip")}} アドレスが、リモートピアーの実際の直接 IP アドレスであるものを指します。
 - `prflx`
-  - : A peer reflexive candidate is one whose IP address comes from a symmetric NAT between the two peers, usually as an additional candidate during trickle ICE (that is, additional candidate exchanges that occur after primary signaling but before the connection verification phase is finished).
+  - : ピア反射型候補とは、その IP アドレスが 2 つのピア間の対称 NAT を経由して決まる候補のことを指し、通常はトリクル ICE の過程で追加の候補として生成されます（つまり、プライマリシグナリングの後、接続検証フェーズが完了する前に発生する追加の候補交換です）。
 - `srflx`
-  - : A server reflexive candidate is generated by a STUN/TURN server; the connection's initiator requests a candidate from the STUN server, which forwards the request through the remote peer's NAT, which creates and returns a candidate whose IP address is local to the remote peer. The STUN server then replies to the initiator's request with a candidate whose IP address is unrelated to the remote peer.
+  - : サーバー反射型候補は、STUN/TURN サーバーによって生成されます。接続の開始者は STUN サーバーに候補をリクエストすると、STUN サーバーはそのリクエストをリモートピアーの NAT を経由して転送します。NAT は、IP アドレスがリモートピアーのローカルアドレスである候補を作成して返します。その後、STUN サーバーは、IP アドレスがリモートピアーとは無関係な候補を、開始者のリクエストに対する応答として返します。
 - `relay`
-  - : A relay candidate is generated just like a server reflexive candidate (`"srflx"`), but using {{Glossary("TURN")}} instead of {{Glossary("STUN")}}.
+  - : リレー候補は、サーバー反射型候補 (`"srflx"`) と同様に生成されますが、{{Glossary("STUN")}} の代わりに {{Glossary("TURN")}} が使用されます。
 
-### TCP candidate types
+### TCP の候補型
 
-TCP candidates (that is, candidates whose {{domxref("RTCIceCandidate.protocol", "protocol")}} is `tcp`) can be of these types:
+TCP 候補（つまり、{{domxref("RTCIceCandidate.protocol", "protocol")}} が `tcp` である候補）には、以下の型があります。
 
 - `active`
-  - : The transport will try to open an outbound connection but won't receive incoming connection requests. This is the most common type, and the only one that most user agents will gather.
+  - : このトランスポートは、送信方向の接続を開こうとしますが、受信方向の接続要求は受け付けません。これが最も一般的な型であり、ほとんどのユーザーエージェントが収集する唯一の型です。
 - `passive`
-  - : The transport will receive incoming connection attempts but won't attempt a connection itself.
+  - : このトランスポートは、着信接続要求を受け付けますが、自ら接続を試みることはありません。
 - `so`
-  - : The transport will try to simultaneously open a connection with its peer.
+  - : トランスポートは、相手側との接続を同時に開こうとします。
 
-### Choosing a candidate pair
+### 候補ペアの選択
 
-The ICE layer selects one of the two peers to serve as the **controlling agent**. This is the ICE agent which will make the final decision as to which candidate pair to use for the connection. The other peer is called the **controlled agent**. You can identify which one your end of the connection is by examining the value of {{domxref("RTCIceTransport.role", "RTCIceCandidate.transport.role")}}, although in general it doesn't matter which is which.
+ ICE レイヤーは、2 つのピアのうち 1 つを **制御エージェント** として選択します。これは、接続にどの候補ペアを使用するかを最終的に決定する ICE エージェントです。もう一方のピアは **被制御エージェント** と呼ばれます。{{domxref("RTCIceTransport.role", "RTCIceCandidate.transport.role")}} の値を確認することで、接続のどちら側がどちらの役割を担っているかを特定できますが、一般的にはどちらがどちらであっても問題はありません。
 
-The controlling agent not only takes responsibility for making the final decision as to which candidate pair to use, but also for signaling that selection to the controlled agent by using STUN and an updated offer, if necessary. The controlled agent just waits to be told which candidate pair to use.
+制御側エージェントは、どの候補ペアを使用するかという最終決定を行う責任を負うだけでなく、必要に応じて STUN および更新されたオファーを使用して、その選択を被制御側エージェントに通知する責任も負います。被制御側エージェントは、どの候補ペアを使用すべきか指示されるのを待つだけです。
 
-It's important to keep in mind that a single ICE session may result in the controlling agent choosing more than one candidate pair. Each time it does so and shares that information with the controlled agent, the two peers reconfigure their connection to use the new configuration described by the new candidate pair.
+単一の ICE セッションにおいて、制御側エージェントが複数の候補ペアを選択する場合があることを念頭に置いておくことが重要です。制御側エージェントが候補ペアを選択し、その情報を被制御側エージェントと共有するたびに、2 つのピアは、新しい候補ペアで記述された新しい設定を使用するように接続を再構成します。
 
-Once the ICE session is complete, the configuration that's currently in effect is the final one, unless an ICE reset occurs.
+ICE セッションが完了すると、ICE のリセットが発生しない限り、その時点で有効な設定が最終的なものとなります。
 
-At the end of each generation of candidates, an end-of-candidates notification is sent in the form of an {{domxref("RTCIceCandidate")}} whose {{domxref("RTCIceCandidate.candidate", "candidate")}} property is an empty string. This candidate should still be added to the connection using {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} method, as usual, in order to deliver that notification to the remote peer.
+それぞれの候補の生成が終了すると、{{domxref("RTCIceCandidate")}} という形で「候補終了」通知が送信されます。このオブジェクトの {{domxref("RTCIceCandidate.candidate", "candidate")}} プロパティは空文字列となります。この候補は、リモートピアーにその通知を配信するために、通常通り {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} メソッドを使用してピア接続に追加する必要があります。
 
-When there are no more candidates at all to be expected during the current negotiation exchange, an end-of-candidates notification is sent by delivering a {{domxref("RTCIceCandidate")}} whose {{domxref("RTCIceCandidate.candidate", "candidate")}} property is `null`. This message does _not_ need to be sent to the remote peer. It's a legacy notification of a state which can be detected instead by watching for the {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} to change to `complete`, by watching for the {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} event.
+現在のネゴシエーションのやり取りにおいて、まったく候補が期待できない場合、{{domxref("RTCIceCandidate")}} の {{domxref("RTCIceCandidate.candidate", "candidate")}} プロパティが `null` となるオブジェクトを配信することで、候補終了通知が行われます。このメッセージをリモートピアーに送信する必要_はない_。これは古い状態通知であり、代わりに {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} が `complete` に変更されるのを監視するか、{{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} イベントを監視することで、この状態を検知することが可能です。
 
-## When things go wrong
+## 何かに失敗したとき
 
-During negotiation, there will be times when things just don't work out. For example, when renegotiating a connection—for example, to adapt to changing hardware or network configurations—it's possible that negotiation could reach a dead end, or some form of error might occur that prevents negotiation at all. There may be permissions issues or other problems as well, for that matter.
+ネゴシエーションの過程では、どうしてもうまくいかない場合があります。例えば、ハードウェアやネットワーク構成の変更に対応するために接続の再ネゴシエーションを行う際、ネゴシエーションが行き詰まったり、何らかのエラーが発生してネゴシエーション自体がまったく行えなくなったりする可能性があります。また、権限の問題やその他の課題が生じる場合もあります。
 
-### ICE rollbacks
+### ICE ロールバック
 
-When renegotiating a connection that's already active and a situation arises in which the negotiation fails, you don't really want to kill the already-running call. After all, you were most likely just trying to upgrade or downgrade the connection, or to otherwise make adaptations to an ongoing session. Aborting the call would be an excessive reaction in that situation.
+すでに確立されている接続の再ネゴシエーション中に、ネゴシエーションが失敗する状況が生じた場合、すでに実行中の呼び出しを強制終了させることは望ましくありません。何しろ、おそらくは単に接続のアップグレードやダウングレード、あるいは進行中のセッションに対するその他の調整を試みていただけでしょう。そのような状況で呼び出しを中止させるのは、過剰な対応となります。
 
-Instead, you can initiate an **ICE rollback**. A rollback restores the SDP offer (and the connection configuration by extension) to the configuration it had the last time the connection's {{domxref("RTCPeerConnection.signalingState", "signalingState")}} was `stable`.
+その代わりに、**ICE ロールバック**を実行することが可能です。ロールバックを行うと、SDP オファー（ひいては接続設定）が、その接続の {{domxref("RTCPeerConnection.signalingState", "signalingState")}} が最後に `stable` だった時点の設定に復元されます。
 
-To programmatically initiate a rollback, send a description whose {{domxref("RTCSessionDescription.type", "type")}} is `rollback`. Any other properties in the description object are ignored.
+プログラムでロールバックを開始するには、{{domxref("RTCSessionDescription.type", "type")}} が `rollback` である記述を送信します。記述オブジェクト内のその他のプロパティは無視されます。
 
-In addition, the ICE agent will automatically initiate a rollback when a peer that had previously created an offer receives an offer from the remote peer. In other words, if the local peer is in the state `have-local-offer`, indicating that the local peer had previously _sent_ an offer, calling `setRemoteDescription()` with a _received_ offer triggers rollback so that the negotiation switches from the remote peer being the caller to the local peer being the caller.
+さらに、ICE エージェントは、以前にオファーを作成したピアがリモートピアーからオファーを受信すると、自動的にロールバックを開始します。言い換えれば、ローカルピアが `have-local-offer` 状態（ローカルピアが以前にオファーを送信したことを示す）にある場合、受信したオファーを使用して `setRemoteDescription()` を呼び出すと、ロールバックがトリガーされ、ネゴシエーションの呼び出し側がリモートピアーからローカルピアへと切り替わります。
 
-### ICE restarts
+### ICE 再起動
 
-For now, see [ICE restart](/ja/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart).
+[ICE 再起動](/ja/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart)のプロセスについて学びましょう。
 
-## The entire exchange in a complicated diagram
+## 複雑な図表にまとめられたやり取りの全容
 
-[![A complete architectural diagram showing the whole WebRTC process.](webrtc-complete-diagram.png)](https://hacks.mozilla.org/2013/07/webrtc-and-the-ocean-of-acronyms/)
+![WebRTC のプロセス全体を表示させた完全なアーキテクチャ図。](webrtc-complete-diagram.png)
+
+[出典](https://hacks.mozilla.org/2013/07/webrtc-and-the-ocean-of-acronyms/)
