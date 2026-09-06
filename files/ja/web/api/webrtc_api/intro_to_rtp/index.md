@@ -85,6 +85,7 @@ async function enableHold(audioStream) {
 1. 送信側の音声トラックを、保留音楽を含む {{domxref("MediaStreamTrack")}} に置き換えます。
 2. 受信側の音声トラックを無効にします。
 3. 音声トランシーバーを送信専用モードに切り替えます。
+
 これにより、`RTCPeerConnection` に {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} イベントが送信され、再ネゴシエーションが開始されます。これに対し、コードは {{domxref("RTCPeerConnection.createOffer")}} を使用して SDP オファーを生成し、シグナリングサーバーを経由してリモートピアーに送信することで応答します。
 ローカルピアーのマイク音声の代わりに再生する音声が含まれている `audioStream` は、どこからでも取得できます。1 つの方法として、非表示の {{HTMLElement("audio")}} 要素を設置し、{{domxref("HTMLMediaElement.captureStream", "HTMLAudioElement.captureStream()")}} を使用してその音声ストリームを取得する方法があります。
 
@@ -106,6 +107,7 @@ async function holdRequested(offer) {
 ```
 
 ここで行われる段階は以下の通りです。
+
 1. {{domxref("RTCPeerConnection.setRemoteDescription()")}} を呼び出して、リモート記述を指定された `offer` に設定します。
 2. 音声トランシーバーの {{domxref("RTCRtpSender")}} のトラックを `null`（トラックなし）に置き換えます。これにより、トランシーバーからの音声送信が停止します。
 3. 音声トランシーバーの {{domxref("RTCRtpTransceiver.direction", "direction")}} プロパティを `"recvonly"` に設定し、トランシーバーが音声を受信のみ行い、送信は一切行わないように指示します。
@@ -151,6 +153,7 @@ async function holdEnded(offer, micStream) {
 ```
 
 ここで `try` ブロック内で実行される手順は以下の通りです。
+
 1. `setRemoteDescription()` を呼び出して、受信したオファーをリモート記述として格納します。
 2. オーディオトランシーバーの `RTCRtpSender` の {{domxref("RTCRtpSender.replaceTrack", "replaceTrack()")}} メソッドを使用して、送信オーディオトラックをマイクのオーディオストリームの最初のトラックに設定します。
 3. トランシーバーの方向を `"sendrecv"` に設定し、音声の送信と受信の両方を再開することを示します。
