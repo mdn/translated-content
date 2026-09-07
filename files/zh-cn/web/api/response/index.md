@@ -38,7 +38,7 @@ slug: Web/API/Response
 - {{domxref("Response.body")}} {{readonlyInline}}
   - : 一个简单的 getter，用于暴露一个 {{domxref("ReadableStream")}} 类型的 body 内容。
 - {{domxref("Response.bodyUsed")}} {{readonlyInline}}
-  - : 包含了一个{{domxref("Boolean", "布尔值")}}来标示该 Response 是否读取过 {{domxref("Body")}}。
+  - : 包含了一个{{jsxref("Boolean", "布尔值")}}来标示该 Response 是否读取过 {{domxref("Body")}}。
 
 ## 方法
 

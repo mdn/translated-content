@@ -17,7 +17,7 @@ RTCDataChannel 接口代表在两者之间建立了一个双向数据通道的�
 - {{domxref("RTCDataChannel.label")}} {{readOnlyInline}}
   - : 返回一个包含有描述数据通道名字的{{jsxref("String")}}。这个字段没有唯一性要求。
 - {{domxref("RTCDataChannel.ordered")}} {{readOnlyInline}}
-  - : 返回一个{{domxref("Boolean")}}对象，表示传递信息的顺序是否有保证。
+  - : 返回一个{{jsxref("Boolean")}}对象，表示传递信息的顺序是否有保证。
 - {{domxref("RTCDataChannel.protocol")}} {{readOnlyInline}}
   - : 返回一个包含有正在使用的子协议的名称的 {{jsxref("String")}}，如果没有这样的子协议，返回""
 - {{domxref("RTCDataChannel.id")}} {{readOnlyInline}}
@@ -38,9 +38,9 @@ RTCDataChannel 接口代表在两者之间建立了一个双向数据通道的�
 - {{domxref("RTCDataChannel.maxRetransmits")}} {{readOnlyInline}}
   - : 是一个`unsigned short`类型，表示不可靠模式下消息允许尝试重发的最大次数。
 - {{domxref("RTCDataChannel.negotiated")}} {{readOnlyInline}}
-  - : 是一个{{domxref("Boolean")}}类型，表示这个 channel 是否已经通过应用协商。
+  - : 是一个{{jsxref("Boolean")}}类型，表示这个 channel 是否已经通过应用协商。
 - {{domxref("DataChannel.reliable")}} {{non-standard_inline}} {{readOnlyInline}}
-  - : 是一个{{domxref("Boolean")}}类型，表示这个链接能不能以非可靠模式发送消息。已经废弃的 api。
+  - : 是一个{{jsxref("Boolean")}}类型，表示这个链接能不能以非可靠模式发送消息。已经废弃的 api。
 - {{domxref("DataChannel.stream")}} {{non-standard_inline}} {{readOnlyInline}}
   - : 和{{domxref("RTCDataChannel.id")}}等效，已经废弃的 api。
 

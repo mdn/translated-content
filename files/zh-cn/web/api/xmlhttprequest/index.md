@@ -49,7 +49,7 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 - {{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}
   - : {{domxref("XMLHttpRequestUpload")}}，代表上传进度。
 - {{domxref("XMLHttpRequest.withCredentials")}}
-  - : 一个{{domxref("Boolean", "布尔值")}}，用来指定跨站 `Access-Control` 请求是否应当带有授权信息，如 cookie 或身份验证标头。
+  - : 一个{{jsxref("Boolean", "布尔值")}}，用来指定跨站 `Access-Control` 请求是否应当带有授权信息，如 cookie 或身份验证标头。
 
 ### 非标准属性
 
