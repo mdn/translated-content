@@ -22,7 +22,7 @@ _Pas de méthode héritée._
 - {{domxref("DOMImplementation.createHTMLDocument()")}}
   - : Crée et retourne un {{domxref("Document")}} HTML.
 - {{domxref("DOMImplementation.hasFeature()")}}
-  - : Retourne un {{domxref("Boolean")}} indiquant si une caractéristique donnée est supportée ou non. Cette fonction n'est pas fiable et est conservée uniquement à des fins de compatibilité : à l'exception des requêtes liées au SVG, elle renvoie toujours la valeur `true` _(vrai)._ Les anciens navigateurs sont très incohérents dans leur comportement.
+  - : Retourne un {{jsxref("Boolean")}} indiquant si une caractéristique donnée est supportée ou non. Cette fonction n'est pas fiable et est conservée uniquement à des fins de compatibilité : à l'exception des requêtes liées au SVG, elle renvoie toujours la valeur `true` _(vrai)._ Les anciens navigateurs sont très incohérents dans leur comportement.
 
 ## Spécifications
 
