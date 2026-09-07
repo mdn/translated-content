@@ -42,7 +42,6 @@ DOM чаще всего используется в JavaScript, но не явл
 - {{domxref("ParentNode")}} {{experimental_inline}}
 - {{domxref("ProcessingInstruction")}}
 - {{jsxref("Promise")}} {{experimental_inline}}
-- {{domxref("PromiseResolver")}} {{experimental_inline}}
 - {{domxref("Range")}}
 - {{domxref("Text")}}
 - {{domxref("TreeWalker")}}
