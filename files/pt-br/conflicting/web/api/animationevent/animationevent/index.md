@@ -33,9 +33,9 @@ animationEvent.initAnimationEvent(typeArg, canBubbleArg, cancelableArg, animatio
     | `animationiteration` | A iteração corrente se completou. |
 
 - `canBubbleArg`
-  - : Uma {{domxref("Boolean")}} bandeira indicando se o evento pode ser bolha (`true`) ou não (`false)`.
+  - : Uma {{jsxref("Boolean")}} bandeira indicando se o evento pode ser bolha (`true`) ou não (`false)`.
 - `cancelableArg`
-  - : Uma {{domxref("Boolean")}} bandeira indicando se o evento associado pode ser evitado (`true`) ou não (`false)`.
+  - : Uma {{jsxref("Boolean")}} bandeira indicando se o evento associado pode ser evitado (`true`) ou não (`false)`.
 - `animationNameArg`
   - : Um {{jsxref("String")}} contendo o valor do{{cssxref("animation-name")}} propriedade CSS associada com a transição.
 - `elapsedTimeArg`

@@ -44,7 +44,7 @@ Você pode criar um novo objeto `Request` usando o construtor {{domxref("Request
 - {{domxref("Body.body")}} {{readonlyInline}}
   - : Um simples "getter" para ler o conteúdo do corpo através da interface {{domxref("ReadableStream")}}.
 - {{domxref("Body.bodyUsed")}} {{readonlyInline}}
-  - : Armazena um {{domxref("Boolean", "Booleano")}} que declara se o corpo da requisição já foi utilizado em uma resposta.
+  - : Armazena um {{jsxref("Boolean", "Booleano")}} que declara se o corpo da requisição já foi utilizado em uma resposta.
 
 ## Métodos
 
