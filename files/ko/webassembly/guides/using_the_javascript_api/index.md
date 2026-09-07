@@ -164,7 +164,7 @@ memory.grow(1);
    console.log(sum);
    ```
 
-Memory 객체의 버퍼 ([`Memory.prototype.buffer`](/ko/docs/WebAssembly/JavaScript_interface/Memory/buffer))에서 {{domxref ("Uint32Array")}} 뷰를 만드는 방법에 유의하십시오.
+Memory 객체의 버퍼 ([`Memory.prototype.buffer`](/ko/docs/WebAssembly/JavaScript_interface/Memory/buffer))에서 {{jsxref("Uint32Array")}} 뷰를 만드는 방법에 유의하십시오.
 
 메모리 가져 오기는 함수 가져 오기와 마찬가지로 작동하며 메모리 개체 만 JavaScript 함수 대신 값으로 전달됩니다. 메모리 가져 오기는 다음과 같은 두 가지 이유로 유용합니다.
 
