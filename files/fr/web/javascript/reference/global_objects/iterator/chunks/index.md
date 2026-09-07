@@ -3,7 +3,7 @@ title: "Iterator : méthode chunks()"
 short-title: chunks()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/chunks
 l10n:
-  sourceCommit: d43ba33e72afa135ce782e2c0ca19fe32a93bb13
+  sourceCommit: e316526e520d8163e9151dca8973eb777b5285e0
 ---
 
 {{SeeCompatTable}}

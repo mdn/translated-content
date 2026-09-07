@@ -3,8 +3,6 @@ title: Affectation après décalage à droite non signé (>>>=)
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
 ---
 
-{{jsSidebar("Operators")}}
-
 L'**opérateur de décalage à droite non signé et d'affectation** (`>>>=`) décale la séquence de bits fournie par l'opérande gauche vers la droite, d'autant de bits qu'indiqués par l'opérande droit, puis affecte le résultat de l'opération à la variable indiquée par l'opérande gauche.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Unsigned right shift assignment operator")}}

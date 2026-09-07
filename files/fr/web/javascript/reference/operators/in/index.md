@@ -3,8 +3,6 @@ title: L'opérateur in
 slug: Web/JavaScript/Reference/Operators/in
 ---
 
-{{jsSidebar("Operators")}}
-
 L'**opérateur `in`** renvoie `true` si une propriété donnée appartient à l'objet donné (directement ou via sa chaîne de prototype).
 
 {{InteractiveExample("JavaScript Demo: Expressions - in operator")}}

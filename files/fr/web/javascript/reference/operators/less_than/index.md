@@ -3,8 +3,6 @@ title: Inférieur strict (<)
 slug: Web/JavaScript/Reference/Operators/Less_than
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur inférieur strict (`<`) renvoie `true` si son opérande gauche est strictement inférieur à son opérande droit et `false` sinon.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Less than operator")}}

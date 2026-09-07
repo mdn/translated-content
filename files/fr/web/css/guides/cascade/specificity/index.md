@@ -2,7 +2,7 @@
 title: Spécificité
 slug: Web/CSS/Guides/Cascade/Specificity
 l10n:
-  sourceCommit: da60cb61c2cbb7fb35807515095d9efb129eacbc
+  sourceCommit: 3fbc8b2ba17c1cf331fb67ce2e6561b15bf4f197
 ---
 
 La **Spécificité** est le poids que les navigateurs utilisent dans l'algorithme de cascade pour déterminer la [déclaration CSS](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#syntaxe_css_de_base) la plus pertinente pour un élément, ce qui, à son tour, détermine la valeur de la propriété à appliquer à l'élément. L'algorithme de spécificité calcule ce poids à partir d'un [sélecteur CSS](/fr/docs/Web/CSS/Reference#sélecteurs) et compare les valeurs résultantes pour décider quelle règle, parmi les déclarations CSS concurrentes au sein de la même origine et couche, est appliquée à un élément.
@@ -51,11 +51,11 @@ input:focus,
 
 Le sélecteur `[type="password"]` dans la liste de sélecteurs ci-dessus, avec un poids de spécificité de `0-1-0`, applique la déclaration `color: blue` à tous les types d'entrée de mot de passe.
 
-Tous les champs de saisie, quel que soit leur type, lorsqu'ils reçoivent le focus, correspondent au deuxième sélecteur de la liste, `input:focus`, avec un poids de spécificité de `0-1-1`&nbsp;; ce poids est composé de la pseudo-classe `:focus` (0-1-0) et du type `input` (0-0-1). Si le champ de saisie de mot de passe a le focus, il correspond à `input:focus`, et le poids de spécificité pour la déclaration de style `color: blue` est de `0-1-1`. Lorsque ce champ de saisie de mot de passe n'a pas le focus, le poids de spécificité reste à `0-1-0`.
+Tous les champs de saisie, quel que soit leur type, lorsqu'ils reçoivent la sélection, correspondent au deuxième sélecteur de la liste, `input:focus`, avec un poids de spécificité de `0-1-1`&nbsp;; ce poids est composé de la pseudo-classe `:focus` (0-1-0) et du type `input` (0-0-1). Si le champ de saisie de mot de passe a la sélection, il correspond à `input:focus`, et le poids de spécificité pour la déclaration de style `color: blue` est de `0-1-1`. Lorsque ce champ de saisie de mot de passe n'a pas la sélection, le poids de spécificité reste à `0-1-0`.
 
 La spécificité pour un champ de saisie requis imbriqué dans un élément avec l'attribut `id="monApp"` est de `1-2-1`, basée sur un ID, deux pseudo-classes et un type d'élément.
 
-Si le type de champ de saisie de mot de passe avec `required` est imbriqué dans un élément avec `id="monApp"`, le poids de spécificité est de `1-2-1`, basé sur un ID, deux pseudo-classes et un type d'élément, qu'il ait le focus ou non. Pourquoi le poids de spécificité est-il de `1-2-1` plutôt que `0-1-1` ou `0-1-0` dans ce cas&nbsp;? Parce que le poids de spécificité provient du sélecteur correspondant ayant le poids de spécificité le plus élevé. Le poids est déterminé en comparant les valeurs dans les trois colonnes, de gauche à droite.
+Si le type de champ de saisie de mot de passe avec `required` est imbriqué dans un élément avec `id="monApp"`, le poids de spécificité est de `1-2-1`, basé sur un ID, deux pseudo-classes et un type d'élément, qu'il ait la sélection ou non. Pourquoi le poids de spécificité est-il de `1-2-1` plutôt que `0-1-1` ou `0-1-0` dans ce cas&nbsp;? Parce que le poids de spécificité provient du sélecteur correspondant ayant le poids de spécificité le plus élevé. Le poids est déterminé en comparant les valeurs dans les trois colonnes, de gauche à droite.
 
 ```css
 [type="password"] {
@@ -99,7 +99,7 @@ La colonne _CLASSE_ est le nombre de noms de classes, de sélecteurs d'attributs
 
 ```css
 :root input {
-  color: green; /* 0-1-1 - GAGNE parceque la colonne CLASSE est plus grande */
+  color: green; /* 0-1-1 - GAGNE parce que la colonne CLASSE est plus grande */
 }
 html body main input {
   color: yellow; /* 0-0-4 */
@@ -115,7 +115,7 @@ input.maClasse {
   color: yellow; /* 0-1-1 */
 }
 :root input {
-  color: green; /* 0-1-1 GAGNE parceque la règle vient après */
+  color: green; /* 0-1-1 GAGNE parce que la règle vient après */
 }
 ```
 
@@ -188,7 +188,7 @@ a:not(#fauxId#fauxId#fauxId) {
 }
 ```
 
-Dans cet exemple, tous les liens sont bleus, sauf si cette règle est remplacée par une déclaration de lien comportant au moins trois identifiants, si une valeur de couleur associée à un élément `a` inclut le [drapeau `!important`](#lexception_!important), ou si le lien comporte une déclaration de couleur dans un [style embarqué](#styles_embarqués). Si vous utilisez cette technique, ajoutez un commentaire pour expliquer pourquoi cette astuce était nécessaire.
+Dans cet exemple, tous les liens sont bleus, sauf si cette règle est remplacée par une déclaration de lien comportant au moins trois identifiants, si une valeur de couleur associée à un élément `a` inclut le [drapeau `!important`](#lexception_!important), ou si le lien comporte une déclaration de couleur dans un [style embarqué](#styles_embarqués). Si vous utilisez cette technique, ajoutez un commentaire pour expliquer pourquoi cette astuce est nécessaire.
 
 ### Styles embarqués
 
@@ -208,7 +208,7 @@ p[style*="purple"] {
 }
 ```
 
-Assurez-vous d'inclure un commentaire à chaque utilisation du drapeau important afin que les mainteneurs du code comprennent pourquoi un anti-modèle CSS a été utilisé.
+Assurez-vous d'inclure un commentaire à chaque utilisation du drapeau important afin que les mainteneur·euse·s du code comprennent pourquoi un anti-modèle CSS a été utilisé.
 
 ### L'exception `!important`
 
@@ -244,7 +244,7 @@ footer a {
 
 ### Comment les blocs `@scope` affectent la spécificité
 
-Inclure un ensemble de règles à l'intérieur d'un bloc {{CSSxRef("@scope")}} n'affecte pas la spécificité de son sélecteur, quel que soit le sélecteur utilisé à l'intérieur de la [racine et de la limite du scope](/fr/docs/Web/CSS/Reference/At-rules/@scope#syntaxe).
+Inclure un ensemble de règles à l'intérieur d'un bloc {{CSSxRef("@scope")}} n'affecte pas la spécificité de son sélecteur, quel que soit le sélecteur utilisé à l'intérieur de la [racine et de la limite de la portée](/fr/docs/Web/CSS/Reference/At-rules/@scope#syntaxe).
 Cependant, si vous décidez d'ajouter explicitement la pseudo-classe {{CSSxRef(":scope")}}, vous devez en tenir compte lors du calcul de leur spécificité.
 `:scope`, comme toutes les pseudo-classes régulières, a une spécificité de 0-1-0. Par exemple&nbsp;:
 
@@ -264,7 +264,7 @@ Au lieu d'utiliser `!important`, envisagez d'utiliser des couches de cascade et 
 
 ### Rendre les sélecteurs spécifiques avec et sans ajouter de spécificité
 
-En indiquant la section du document que vous stylisez avant l'élément que vous sélectionnez, la règle devient plus spécifique. Selon la manière dont vous l'ajoutez, vous pouvez ajouter un peu, beaucoup ou aucune spécificité, comme illustré ci-dessous&nbsp;:
+En indiquant la section du document que vous mettez en forme avant l'élément que vous sélectionnez, la règle devient plus spécifique. Selon la manière dont vous l'ajoutez, vous pouvez ajouter un peu, beaucoup ou aucune spécificité, comme illustré ci-dessous&nbsp;:
 
 ```html
 <main id="monContenu">
@@ -338,7 +338,7 @@ Dans l'exemple ci-dessus, tout le texte des paragraphes, y compris le contenu im
 
 ### Éviter et surcharger `!important`
 
-La meilleure approche est de ne pas utiliser `!important`. Les explications ci-dessus sur la spécificité devraient être utiles pour éviter d'utiliser ce drapeau et le supprimer complètement lorsqu'il est rencontré.
+La meilleure approche est de ne pas utiliser `!important`. Les explications ci-dessus sur la spécificité doivent être utiles pour éviter d'utiliser ce drapeau et le supprimer complètement lorsqu'il est rencontré.
 
 Pour supprimer le besoin perçu de `!important`, vous pouvez faire l'une des choses suivantes&nbsp;:
 
@@ -440,9 +440,9 @@ html body main input {
 
 Si tous les sélecteurs ci-dessus ciblent le même élément de saisie, celui-ci est affiché en rouge, car la première déclaration possède la valeur la plus élevée dans la colonne _ID_.
 
-Le dernier sélecteur comporte quatre composants _TYPE_. Bien qu'il présente la valeur entière la plus élevée, quel que soit le nombre d'éléments et de pseudo-éléments inclus (même s'il y en avait 150), les composants _TYPE_ n'ont jamais la priorité sur les composants _CLASSE_. Les valeurs des colonnes sont comparées de gauche à droite lorsque les valeurs des colonnes sont égales.
+Le dernier sélecteur comporte quatre composants _TYPE_. Bien qu'il présente la valeur entière la plus élevée, quel que soit le nombre d'éléments et de pseudo-éléments inclus (même s'il y en a 150), les composants _TYPE_ n'ont jamais la priorité sur les composants _CLASSE_. Les valeurs des colonnes sont comparées de gauche à droite lorsque les valeurs des colonnes sont égales.
 
-Si nous avions converti le sélecteur d'identifiant dans le code d'exemple ci-dessus en un sélecteur d'attribut, les deux premiers sélecteurs auraient la même spécificité, comme indiqué ci-dessous&nbsp;:
+Si nous avions converti le sélecteur d'identifiant dans le code d'exemple ci-dessus en un sélecteur d'attribut, les deux premiers sélecteurs ont la même spécificité, comme indiqué ci-dessous&nbsp;:
 
 ```css
 [id="monElement"] input.maClasse {

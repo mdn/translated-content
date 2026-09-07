@@ -3,7 +3,7 @@ title: Collections indexées
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
 
 Ce chapitre présente les collections de données qui sont ordonnées par un indice. Cela inclue les tableaux et les objets semblables à des tableaux que sont les objets [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) et les objets [`TypedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray).
 
