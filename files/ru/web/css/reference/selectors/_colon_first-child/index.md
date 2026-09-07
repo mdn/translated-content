@@ -22,7 +22,11 @@ p:first-child {
 
 ## Синтаксис
 
-{{csssyntax}}
+```css
+:first-child {
+  /* ... */
+}
+```
 
 ## Примеры
 
