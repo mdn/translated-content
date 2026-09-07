@@ -60,7 +60,7 @@ RTCDataChannel 接口代表在两者之间建立了一个双向数据通道的�
 - {{domxref("RTCDataChannel.close()")}}
   - : 关闭 channel 的方法。这个关闭动作不是直接生效的。这个方法会将 channel 的{{domxref("RTCDataChannel.readyState", "state")}} 属性设置为`"closing"`状态，在消息队列中的消息全部发送完毕之后，channel 才会被关闭。
 - {{domxref("RTCDataChannel.send()")}}
-  - : 将参数中的数据通过 channel 发送。这个数据可以是{{jsxref("String")}}, {{domxref("Blob")}}, {{jsxref("ArrayBuffer")}}或者是 {{domxref("ArrayBufferView")}}类型。
+  - : 将参数中的数据通过 channel 发送。这个数据可以是{{jsxref("String")}}, {{domxref("Blob")}}, {{jsxref("ArrayBuffer")}}或者是 {{jsxref("TypedArray")}}类型。
 
 ## 示例
 
