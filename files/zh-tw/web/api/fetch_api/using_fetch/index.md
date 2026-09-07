@@ -434,7 +434,7 @@ The {{domxref("Response.Response","Response()")}} constructor takes two optional
 
 Both requests and responses may contain body data. A body is an instance of any of the following types:
 
-- {{domxref("ArrayBuffer")}}
+- {{jsxref("ArrayBuffer")}}
 - {{domxref("ArrayBufferView")}} (Uint8Array and friends)
 - {{domxref("Blob")}}/File
 - string

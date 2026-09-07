@@ -52,7 +52,7 @@ slug: Web/API/Response
 `Response` implements {{domxref("Body")}}, so it also has the following methods available to it:
 
 - {{domxref("Body.arrayBuffer()")}}
-  - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with an {{domxref("ArrayBuffer")}}.
+  - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with an {{jsxref("ArrayBuffer")}}.
 - {{domxref("Body.blob()")}}
   - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with a {{domxref("Blob")}}.
 - {{domxref("Body.formData()")}}
