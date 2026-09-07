@@ -27,7 +27,7 @@ _继承自父接口 {{domxref("Element")}} 和 {{domxref("GlobalEventHandlers")}
 | {{domxref("HTMLElement.itemId")}} {{experimental_inline}}                       | {{jsxref("String")}}                    |                                                                            |
 | {{domxref("HTMLElement.itemRef")}} {{readonlyInline}}{{experimental_inline}}    | {{domxref("DOMSettableTokenList")}}     |                                                                            |
 | {{domxref("HTMLElement.itemProp")}} {{readonlyInline}}{{experimental_inline}}   | {{domxref("DOMSettableTokenList")}}     |                                                                            |
-| {{domxref("HTMLElement.itemValue")}} {{experimental_inline}}                    | {{domxref("object")}}                   |                                                                            |
+| {{domxref("HTMLElement.itemValue")}} {{experimental_inline}}                    | {{jsxref("Object")}}                    |                                                                            |
 | {{domxref("HTMLElement.lang")}}                                                 | {{jsxref("String")}}                    | 获取/设置元素属性、文本、内容的语言                                        |
 | {{domxref("HTMLElement.offsetHeight")}} {{readonlyInline}}                      | `double`                                | 元素自身可视高度加上上下 border 的宽度                                     |
 | {{domxref("HTMLElement.offsetLeft")}}{{readonlyInline}}                         | `double`                                | 元素自己 border 左边距离父元素 border 左边或者 body 元素 border 左边的距离 |
