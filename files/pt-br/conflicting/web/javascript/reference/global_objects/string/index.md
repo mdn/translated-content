@@ -17,6 +17,5 @@ Passando [`null`](/pt-BR/docs/Web/JavaScript/Reference/Operators/null) para um m
 
 - [String](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String "/pt-BR/docs/Web/API/DOMString")
 - {{jsxref("String")}}
-- {{jsxref("String")}}
 - [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays/String_view)
 - [Binary strings](/pt-BR/docs/Web/API/DOMString/Binary)
