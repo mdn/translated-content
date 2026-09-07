@@ -62,7 +62,7 @@ slug: Web/API/Request
 - {{domxref("Body.formData()")}}
   - : Возвращает promise который разрешается с помощью {{domxref("FormData")}} представления тела запроса.
 - {{domxref("Body.json()")}}
-  - : Returns a promise that resolves with a {{domxref("JSON")}} representation of the request body.
+  - : Returns a promise that resolves with a {{jsxref("JSON")}} representation of the request body.
 - {{domxref("Body.text()")}}
   - : Returns a promise that resolves with an {{jsxref("String")}} (text) representation of the request body.
 
