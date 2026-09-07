@@ -23,7 +23,7 @@ var sharePromise = navigator.share(data);
 
 ### Valor de retorno
 
-Um {{domxref ("Promise")}} que será cumprido assim que um usuário concluir uma ação de compartilhamento (geralmente o usuário escolheu um aplicativo para compartilhar). Ele rejeitará imediatamente se o parâmetro de dados não estiver especificado corretamente e também rejeitará se o usuário cancelar o compartilhamento.
+Um {{jsxref("Promise")}} que será cumprido assim que um usuário concluir uma ação de compartilhamento (geralmente o usuário escolheu um aplicativo para compartilhar). Ele rejeitará imediatamente se o parâmetro de dados não estiver especificado corretamente e também rejeitará se o usuário cancelar o compartilhamento.
 
 ## Exemplos
 
