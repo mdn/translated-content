@@ -1,6 +1,7 @@
 ---
 title: 102 Processing
-slug: Web/HTTP/Reference/Status/102
+slug: conflicting/Web/HTTP/Reference/Status
+original_slug: Web/HTTP/Reference/Status/102
 l10n:
   sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
