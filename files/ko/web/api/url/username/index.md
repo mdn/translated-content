@@ -5,7 +5,7 @@ slug: Web/API/URL/username
 
 {{ApiRef("URL API")}}
 
-{{domxref("URL")}} 인터페이스의 **`username`** 속성은 도메인 이전의 사용자 이름을 담은 {{domxref("USVString")}}을 반환합니다.
+{{domxref("URL")}} 인터페이스의 **`username`** 속성은 도메인 이전의 사용자 이름을 담은 {{jsxref("String")}}을 반환합니다.
 
 {{AvailableInWorkers}}
 
@@ -18,7 +18,7 @@ url.username = newUsername;
 
 ### 값
 
-{{domxref("USVString")}}.
+{{jsxref("String")}}.
 
 ## 예제
 
