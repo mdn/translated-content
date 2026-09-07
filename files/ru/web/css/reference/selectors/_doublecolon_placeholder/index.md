@@ -22,7 +22,11 @@ original_slug: Web/CSS/::placeholder
 
 ## Синтаксис
 
-{{csssyntax}}
+```css
+::placeholder {
+  /* ... */
+}
+```
 
 ## Примеры
 

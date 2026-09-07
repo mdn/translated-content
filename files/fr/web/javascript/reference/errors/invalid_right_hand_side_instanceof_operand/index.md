@@ -3,8 +3,6 @@ title: "TypeError: invalid 'instanceof' operand 'x'"
 slug: Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 ---
 
-{{jsSidebar("Errors")}}
-
 ## Message
 
 ```

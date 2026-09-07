@@ -3,8 +3,6 @@ title: Classes
 slug: Web/JavaScript/Reference/Classes
 ---
 
-{{JsSidebar("Classes")}}
-
 Les classes JavaScript ont été introduites avec ECMAScript 2015. Elles sont un « sucre syntaxique » par rapport à l'héritage prototypal. En effet, cette syntaxe n'introduit pas un nouveau modèle d'héritage dans JavaScript ! Elle fournit uniquement une syntaxe plus simple pour créer des objets et manipuler l'héritage.
 
 ## Définir des classes

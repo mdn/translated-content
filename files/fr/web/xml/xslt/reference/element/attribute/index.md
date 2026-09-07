@@ -4,8 +4,6 @@ slug: Web/XML/XSLT/Reference/Element/attribute
 original_slug: Web/XSLT/Element/attribute
 ---
 
-{{XsltSidebar}}
-
 L'élément `<xsl:attribute>` crée un attribut dans le document de sortie, en utilisant n'importe quelle donnée accessible depuis la feuille de styles. L'élément **doit** être la première chose définie dans l'élément du document de sortie pour lequel il détermine les valeurs d'attributs.
 
 ### Syntaxe
