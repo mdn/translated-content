@@ -20,7 +20,7 @@ var myRequest = new Request(input, init);
     - Request 객체의 클론 생성을 위해 입력할 {{domxref("Request")}} 객체. 기존의 request 객체로 새로운 동일한 객체를 생성할때, 다음과 같은 보안에 관련된 예외가 검출될 수 있습니다.
 - _init_ {{optional_inline}}
   - : 리퀘스트를 적용할 커스텀 설정을 포함한 옵션오브젝트. 설정 가능한 옵션은 다음과 같습니다.\* `method`: `GET`, `POST`과 같은 리퀘스트 메소드.
-    - `headers`: {{domxref("Headers")}}객체 또는 {{domxref("ByteString")}}를 포함하는 리퀘스트에 추가하는 헤더.
+    - `headers`: {{domxref("Headers")}}객체 또는 {{jsxref("String")}}를 포함하는 리퀘스트에 추가하는 헤더.
     - `body`: 리퀘스트에 추가할 바디. {{domxref("Blob")}}이나, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{jsxref("String")}}, 또한 {{domxref("ReadableStream")}} 객체를 사용할 수 있습니다.Request객체가 GET이나 HEAD메서드를 사용하는 경우, 바디를 포함하지 않습니다.
     - `mode`: Request에서 사용할 모드. `cors`, `no-cors`, `same-origin`, 또한 `navigate`이 사용 가능하며, 기본값은 `cors`입니다. 47버전 이전의 크롬에서는 기본값이 `no-cors` 이며 크롬 47버전 이후로 `same-origin`가 사용 가능하게 되었습니다.
     - `credentials`: Request에서 사용할 자격 증명서(Request Credential)입니다.`omit`, `same-origin`, 또는 `include`를 사용할 수 있습니다.기본값은 `omit`.이며, 크롬 47 이전의 기본값은 `same-origin` 입니다. 크롬 47 이후로부터`include`가 사용 가능하게 되었습니다.
