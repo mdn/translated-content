@@ -5,7 +5,7 @@ slug: Web/API/AnalyserNode/getByteFrequencyData
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AnalyserNode") }} 인터페이스의 **`getByteFrequencyData()`** 메서드는 전달된 {{domxref("Uint8Array")}} (unsigned byte array) 내로 현재 주파수 데이터를 복사합니다.
+{{ domxref("AnalyserNode") }} 인터페이스의 **`getByteFrequencyData()`** 메서드는 전달된 {{jsxref("Uint8Array")}} (unsigned byte array) 내로 현재 주파수 데이터를 복사합니다.
 
 주파수 데이터는 0에서 255 스케일의 정수로 구성되어 있습니다.
 
@@ -26,7 +26,7 @@ void analyser.getByteFrequencyData(dataArray); // getByteFrequencyData()로부�
 ### 매개변수
 
 - `array`
-  - : 주파수 영역 데이터가 복사될 {{domxref("Uint8Array")}}. 소리가 없는 모든 샘플에 대해서, 값은 `-Infinity`입니다.
+  - : 주파수 영역 데이터가 복사될 {{jsxref("Uint8Array")}}. 소리가 없는 모든 샘플에 대해서, 값은 `-Infinity`입니다.
     만약 배열이 {{domxref("AnalyserNode.frequencyBinCount")}}보다 더 적은 요소를 가지고 있다면, 초과한 요소는 탈락됩니다. 만약 이것이 필요한 것보다 더 많은 요소를 가지고 있다면, 초과한 요소는 무시됩니다.
 
 ### 반환 값

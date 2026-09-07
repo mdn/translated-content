@@ -38,7 +38,7 @@ analyser 노드는 그리고 나서, 여러분이 {{ domxref("AnalyserNode.fftSi
 
 데이터를 캡쳐하기 위해서는, 여러분은 주파수 데이터를 캡쳐하기 위해 {{ domxref("AnalyserNode.getFloatFrequencyData()") }}와 {{ domxref("AnalyserNode.getByteFrequencyData()") }} 메서드를 사용할 필요가 있고, 파형 데이터를 캡쳐하기 위해서는 {{ domxref("AnalyserNode.getByteTimeDomainData()") }}와 {{ domxref("AnalyserNode.getFloatTimeDomainData()") }}를 사용할 필요가 있습니다.
 
-이 메서드들은 데이터를 명시된 배열에 복사하므로, 여러분은 메서드를 호출하기 전에 데이터를 받기 위한 새로운 배열을 만들 필요가 있습니다. 첫번째 메서드는 32비트 부동 숫자를 만들고, 두번째와 세번째는 8비트 unsigned 정수를 만들기 때문에, 표준 JavaScript 배열은 이를 수행할 수 없습니다 — 여러분이 어떤 데이터를 다루느냐에 따라, {{jsxref("Float32Array")}}나 {{ domxref("Uint8Array") }}배열을 사용할 필요가 있습니다.
+이 메서드들은 데이터를 명시된 배열에 복사하므로, 여러분은 메서드를 호출하기 전에 데이터를 받기 위한 새로운 배열을 만들 필요가 있습니다. 첫번째 메서드는 32비트 부동 숫자를 만들고, 두번째와 세번째는 8비트 unsigned 정수를 만들기 때문에, 표준 JavaScript 배열은 이를 수행할 수 없습니다 — 여러분이 어떤 데이터를 다루느냐에 따라, {{jsxref("Float32Array")}}나 {{jsxref("Uint8Array")}}배열을 사용할 필요가 있습니다.
 
 그래서 예를 들자면, 우리가 2048의 fft 사이즈를 다루고 있다고 해 봅시다. 우리는 fft의 절반인 {{ domxref("AnalyserNode.frequencyBinCount") }} 값을 반환하고, 그리고 나서 Uint8Array의 길이 인자로서 frequencyBinCount와 함께 Uint8Array()을 호출합니다 — 이것은 얼마나 많은 데이터 포인트를 우리가 그 fft 사이즈에 대해 수집할 것인지를 나타냅니다.
 

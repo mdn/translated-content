@@ -12,7 +12,7 @@ l10n:
 
 배열 내의 각 원소는 특정한 주파수에 대한 데시벨 값을 나타냅니다. 주파수들은 0에서 샘플 레이트의 1/2까지 선형적으로 퍼져 있습니다. 예를 들자면, `48000` Hz 샘플 레이트에 대해서, 배열의 마지막 원소는 `24000` Hz에 대한 데시벨 값을 나타냅니다.
 
-정밀성이 떨어지더라도 성능이 더 중요하다면 {{domxref("AnalyserNode.getByteFrequencyData()")}}를 사용하세요. {{domxref("Uint8Array")}}에서 동작합니다.
+정밀성이 떨어지더라도 성능이 더 중요하다면 {{domxref("AnalyserNode.getByteFrequencyData()")}}를 사용하세요. {{jsxref("Uint8Array")}}에서 동작합니다.
 
 ## 구문
 
