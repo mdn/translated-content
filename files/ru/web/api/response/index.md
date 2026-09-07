@@ -42,7 +42,7 @@ slug: Web/API/Response
 - {{domxref("Body.body")}} {{readonlyInline}}
   - : A simple getter exposing a {{domxref("ReadableStream")}} of the body contents.
 - {{domxref("Body.bodyUsed")}} {{readonlyInline}}
-  - : Stores a {{domxref("Boolean")}} that declares whether the body has been used in a response yet.
+  - : Stores a {{jsxref("Boolean")}} that declares whether the body has been used in a response yet.
 
 ## Методы
 

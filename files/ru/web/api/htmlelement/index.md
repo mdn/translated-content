@@ -20,7 +20,7 @@ _Наследует свойства родителя, {{domxref("Element")}}, �
 - {{domxref("HTMLElement.contentEditable")}}
   - : Является {{domxref ("DOMString")}}, где значение" true "означает, что элемент доступен для редактирования, а значение" false " означает, что это не так.
 - {{domxref("HTMLElement.isContentEditable")}} {{readonlyInline}}
-  - : Возвращает {{domxref ("Boolean")}}, который указывает, можно ли редактировать содержимое элемента.
+  - : Возвращает {{jsxref("Boolean")}}, который указывает, можно ли редактировать содержимое элемента.
 - {{domxref("HTMLElement.contextMenu")}}
   - : Является {{domxref ("HTMLMenuElement")}}, представляющим контекстное меню, связанное с элементом. Может быть null
 - {{domxref("HTMLElement.dataset")}} {{readonlyInline}} — набор данных

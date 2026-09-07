@@ -46,7 +46,7 @@ slug: Web/API/Request
 - {{domxref("Body.body", "body")}} {{readonlyInline}}
   - : Простой getter используемый для раскрытия {{domxref("ReadableStream")}} "тела" (body) содержимого.
 - {{domxref("Body.bodyUsed", "bodyUsed")}} {{readonlyInline}}
-  - : Хранит {{domxref("Boolean")}}, декларирующее использовалось ли "тело" ранее в ответе.
+  - : Хранит {{jsxref("Boolean")}}, декларирующее использовалось ли "тело" ранее в ответе.
 
 ## Методы
 
