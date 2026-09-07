@@ -10,7 +10,7 @@ slug: Web/API/FontFace
 ## Constructor
 
 - {{domxref("FontFace.FontFace", "FontFace()")}}
-  - : 使用 URL 指向的外部资源或{{domxref("ArrayBuffer")}}构造并返回一个新的 `FontFace` 对象。
+  - : 使用 URL 指向的外部资源或{{jsxref("ArrayBuffer")}}构造并返回一个新的 `FontFace` 对象。
 
 ## Properties
 

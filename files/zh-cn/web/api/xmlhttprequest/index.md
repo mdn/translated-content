@@ -27,7 +27,7 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 - {{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}
   - : 返回 一个无符号短整型（`unsigned short`）数字，代表请求的状态码。
 - {{domxref("XMLHttpRequest.response")}} {{readonlyinline}}
-  - : 返回一个 {{domxref("ArrayBuffer")}}、{{domxref("Blob")}}、{{domxref("Document")}}，或 {{jsxref("String")}}，具体是哪种类型取决于 {{domxref("XMLHttpRequest.responseType")}} 的值。其中包含整个响应实体（response entity body）。
+  - : 返回一个 {{jsxref("ArrayBuffer")}}、{{domxref("Blob")}}、{{domxref("Document")}}，或 {{jsxref("String")}}，具体是哪种类型取决于 {{domxref("XMLHttpRequest.responseType")}} 的值。其中包含整个响应实体（response entity body）。
 - {{domxref("XMLHttpRequest.responseText")}} {{readonlyinline}}
   - : 返回一个 {{jsxref("String")}}，该 {{jsxref("String")}} 包含对请求的响应，如果请求未成功或尚未发送，则返回 `null`。
 - {{domxref("XMLHttpRequest.responseType")}}
