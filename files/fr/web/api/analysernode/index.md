@@ -72,14 +72,14 @@ _Hérite des propriétés de son parent,_ _{{domxref("AudioNode")}}_.
 <!---->
 
 - {{domxref("AnalyserNode.getByteFrequencyData()")}}
-  - : Copie les données de fréquence dans un tableau {{domxref("Uint8Array")}} passé en paramètre.
+  - : Copie les données de fréquence dans un tableau {{jsxref("Uint8Array")}} passé en paramètre.
 - {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
   - : Copie les données de forme d'onde ou du domaine temporel dans un tableau {{jsxref("Float32Array")}} passé en paramètre.
 
 <!---->
 
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
-  - : Copie les données de forme d'onde ou du domaine temporel dans un tableau {{domxref("Uint8Array")}} passé en paramètre.
+  - : Copie les données de forme d'onde ou du domaine temporel dans un tableau {{jsxref("Uint8Array")}} passé en paramètre.
 
 ## Exemples
 

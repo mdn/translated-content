@@ -379,14 +379,14 @@ On peut accéder aux données en utilisant les méthodes suivantes:
 <!---->
 
 - {{domxref("AnalyserNode.getByteFrequencyData()")}}
-  - : Copies les données de fréquence dans le tableau d'octets non signés {{domxref("Uint8Array")}} passé en argument.
+  - : Copies les données de fréquence dans le tableau d'octets non signés {{jsxref("Uint8Array")}} passé en argument.
 
 <!---->
 
 - {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
   - : Copie les données de l'onde de forme, ou domaine temporel, dans le {{jsxref("Float32Array")}} passé en argument.
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
-  - : Copie les données de l'onde de forme, ou domaine temporel, dans le tableau d'octets non signés {{domxref("Uint8Array")}} passé en argument.
+  - : Copie les données de l'onde de forme, ou domaine temporel, dans le tableau d'octets non signés {{jsxref("Uint8Array")}} passé en argument.
 
 > [!NOTE]
 > Pour plus d'informations, voir notre article [Visualizations with Web Audio API](/fr/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API).
