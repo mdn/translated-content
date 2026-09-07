@@ -114,7 +114,7 @@ ctx.decodeAudioData(compressedBuffer).then(function (decodedData) {
 
 ## 返回
 
-一个 {{domxref("Promise") }}对象。
+一个 {{jsxref("Promise")}}对象。
 
 ## 规范
 
