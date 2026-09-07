@@ -40,7 +40,7 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 
 ### Возвращающееся значение
 
-{{domxref("undefined")}}.
+{{jsxref("undefined")}}.
 
 ## Примеры
 
