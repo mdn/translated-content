@@ -420,7 +420,7 @@ The last part of the rendering loop involves us calling {{domxref("VRDisplay.sub
 
 In this section we'll discuss the `displayPoseStats()` function, which displays our updated pose data on each frame. The function is fairly simple.
 
-First of all, we store the six different property values obtainable from the {{domxref("VRPose")}} object in their own variables — each one is a {{domxref("Float32Array")}}.
+First of all, we store the six different property values obtainable from the {{domxref("VRPose")}} object in their own variables — each one is a {{jsxref("Float32Array")}}.
 
 ```js
 function displayPoseStats(pose) {
