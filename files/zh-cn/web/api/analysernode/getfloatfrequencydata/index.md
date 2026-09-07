@@ -5,7 +5,7 @@ slug: Web/API/AnalyserNode/getFloatFrequencyData
 
 {{ APIRef("Web Audio API") }}
 
-**`getFloatFrequencyData()`** 作为{{domxref("AnalyserNode")}} 接口的方法能将当前分析节点（AnalyserNode）的频率数据拷贝进一个 {{domxref("Float32Array")}} 数组对象。
+**`getFloatFrequencyData()`** 作为{{domxref("AnalyserNode")}} 接口的方法能将当前分析节点（AnalyserNode）的频率数据拷贝进一个 {{jsxref("Float32Array")}} 数组对象。
 
 此数组表示的频率范围为 0 \~ 22050 Hz，每个元素表示对应频率上的信号分量强度，单位为分贝。
 
@@ -20,7 +20,7 @@ getFloatFrequencyData(array)
 ### 参数
 
 - `array`
-  - : 你即将用于拷贝频域数据（frequency domain data）的 {{domxref("Float32Array")}} 数组。对于任何无声的样本，它的值应该是 `-Infinity`.
+  - : 你即将用于拷贝频域数据（frequency domain data）的 {{jsxref("Float32Array")}} 数组。对于任何无声的样本，它的值应该是 `-Infinity`.
     如果这一数组的可容纳元素数少于该分析节点的{{domxref("AnalyserNode.frequencyBinCount")}}值，超出容量的数据元素将被舍弃。而如果容量多于需要，多余的数组元素将不会被操作。
 
 ### 返回值
