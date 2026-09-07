@@ -4653,6 +4653,7 @@
 /fr/docs/Web/HTTP/Public_Key_Pinning	/fr/docs/Web/Security/Defenses/Certificate_Transparency
 /fr/docs/Web/HTTP/Range_requests	/fr/docs/Web/HTTP/Guides/Range_requests
 /fr/docs/Web/HTTP/Redirections	/fr/docs/Web/HTTP/Guides/Redirections
+/fr/docs/Web/HTTP/Reference/Status/102	/fr/docs/Web/HTTP/Reference/Status
 /fr/docs/Web/HTTP/Requêtes_conditionnelles	/fr/docs/Web/HTTP/Guides/Conditional_requests
 /fr/docs/Web/HTTP/Resources_and_specifications	/fr/docs/Web/HTTP/Reference/Resources_and_specifications
 /fr/docs/Web/HTTP/Session	/fr/docs/Web/HTTP/Guides/Session
