@@ -44,7 +44,7 @@ Promise<Response> fetch(input[, init]);
 
 ### Возвращаемое значение
 
-{{domxref("Promise")}}, содержащий {{domxref("Response")}} объект (ответ на запрос).
+{{jsxref("Promise")}}, содержащий {{domxref("Response")}} объект (ответ на запрос).
 
 ### Исключения
 

@@ -27,7 +27,7 @@ slug: Web/API/Response
 - {{domxref("Response.statusText")}} {{readonlyinline}}
   - : Строка, соответствующая коду ответа (например, `OK` для кода `200`).
 - {{domxref("Response.trailers")}}
-  - : A {{domxref("Promise")}} resolving to a {{domxref("Headers")}} object, associated with the response with {{domxref("Response.headers")}} for values of the HTTP {{HTTPHeader("Trailer")}} header.
+  - : A {{jsxref("Promise")}} resolving to a {{domxref("Headers")}} object, associated with the response with {{domxref("Response.headers")}} for values of the HTTP {{HTTPHeader("Trailer")}} header.
 - {{domxref("Response.type")}} {{readonlyinline}}
   - : The type of the response (e.g., `basic`, `cors`).
 - {{domxref("Response.url")}} {{readonlyinline}}

@@ -23,7 +23,7 @@ _Этот интерфейс не наследует свойства._
 - {{domxref("FontFace.featureSettings")}}
   - : {{jsxref("String")}} получает или устанавливает редко используемые возможности шрифта. Эквивалентен дескриптору {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}.
 - {{domxref("FontFace.loaded")}} {{readonlyinline}}
-  - : Возвращает {{domxref("Promise")}}, которое выполняется для текущего объекта `FontFace`, когда специфичный шрифт, указанный в конструкторе объекта, завершает загрузку, либо отклоняется с помощью `SyntaxError`.
+  - : Возвращает {{jsxref("Promise")}}, которое выполняется для текущего объекта `FontFace`, когда специфичный шрифт, указанный в конструкторе объекта, завершает загрузку, либо отклоняется с помощью `SyntaxError`.
 - {{domxref("FontFace.status")}} {{readonlyinline}}
   - : Возвращает перечисляемое значение, указывающее на состояние шрифта : `"unloaded"`, `"loading"`, `"loaded"`, или `"error"`.
 - {{domxref("FontFace.stretch")}}
