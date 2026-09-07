@@ -27,7 +27,7 @@ performance.mark(name);
 ### Arguments
 
 - name
-  - : mark의 이름을 나타내는 {{domxref("DOMString")}}.
+  - : mark의 이름을 나타내는 {{jsxref("String")}}.
 
 ### Return value
 

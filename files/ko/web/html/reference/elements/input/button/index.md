@@ -56,7 +56,7 @@ original_slug: Web/HTML/Element/input/button
       <td>
         <strong><a href="#값">값</a></strong>
       </td>
-      <td>버튼의 레이블로 사용할 {{domxref("DOMString")}}</td>
+      <td>버튼의 레이블로 사용할 {{jsxref("String")}}</td>
     </tr>
     <tr>
       <td>이벤트</td>
@@ -82,7 +82,7 @@ original_slug: Web/HTML/Element/input/button
 
 ## 값
 
-`<input type="button">` 요소의 [`value`](/ko/docs/Web/HTML/Element/input#value) 특성은 버튼의 레이블로 사용할 {{domxref("DOMString")}}을 담습니다.
+`<input type="button">` 요소의 [`value`](/ko/docs/Web/HTML/Element/input#value) 특성은 버튼의 레이블로 사용할 {{jsxref("String")}}을 담습니다.
 
 ```html
 <input type="button" value="클릭하세요" />

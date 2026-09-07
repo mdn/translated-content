@@ -15,7 +15,7 @@ const lang = navigator.language;
 
 ### 값
 
-{{RFC(5646, "Tags for Identifying Languages(BCP 47)")}}가 정의한 언어 태그의 {{domxref("DOMString")}}입니다. 유효한 값은 "en", "en-US", "ko", "ko-KR" 등입니다.
+{{RFC(5646, "Tags for Identifying Languages(BCP 47)")}}가 정의한 언어 태그의 {{jsxref("String")}}입니다. 유효한 값은 "en", "en-US", "ko", "ko-KR" 등입니다.
 
 iOS Safari 버전 10.2 이전에서는 "en-us", "ko-kr"처럼 국가 코드를 소문자로 반환합니다.
 

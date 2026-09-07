@@ -53,7 +53,7 @@ slug: Web/API/URL
 ## 정적 메서드
 
 - {{domxref("URL.createObjectURL", "createObjectURL()")}}
-  - : 고유한 블롭 URL, 즉 `blob:` 을 스킴으로 하고, 브라우저 내의 객체를 가리키는 고유한 불투명 문자열을 그 뒤에 붙인 {{domxref("DOMString")}}을 반환합니다.
+  - : 고유한 블롭 URL, 즉 `blob:` 을 스킴으로 하고, 브라우저 내의 객체를 가리키는 고유한 불투명 문자열을 그 뒤에 붙인 {{jsxref("String")}}을 반환합니다.
 - {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}
   - : 이전에 {{domxref("URL.createObjectURL()")}}로 생성한 객체 URL을 취소합니다.
 

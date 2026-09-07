@@ -21,9 +21,9 @@ slug: Web/API/MessageEvent
 _이 interface는 부모 객체인 {{domxref("Event")}}의 속성을 상속받습니다._
 
 - {{domxref("MessageEvent.data")}} {{ReadonlyInline}}
-  - : emitter에 의해 보내진 데이터인 {{domxref("DOMString")}}, {{domxref("Blob")}} 또는 {{domxref("ArrayBuffer")}}를 포함합니다.
+  - : emitter에 의해 보내진 데이터인 {{jsxref("String")}}, {{domxref("Blob")}} 또는 {{domxref("ArrayBuffer")}}를 포함합니다.
 - {{domxref("MessageEvent.origin")}}
-  - : {{domxref("DOMString")}} 입니다.…
+  - : {{jsxref("String")}} 입니다.…
 - {{domxref("MessageEvent.ports")}}
   - : …
 - {{domxref("MessageEvent.source")}}
