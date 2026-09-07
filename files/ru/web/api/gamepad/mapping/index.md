@@ -24,7 +24,7 @@ console.log(gp.mapping);
 
 ## Значение
 
-A {{domxref("string")}}.
+A {{jsxref("String")}}.
 
 ## Спецификации
 

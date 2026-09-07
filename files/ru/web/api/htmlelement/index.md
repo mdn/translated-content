@@ -16,11 +16,11 @@ _Наследует свойства родителя, {{domxref("Element")}}, �
 - {{domxref("HTMLElement.accessKey")}} — ключ доступа
   - : Эта строковая переменная {{jsxref("String")}} отображает ключ доступа, сопоставленный элементу _{{domxref("Element")}}_.
 - {{domxref("HTMLElement.accessKeyLabel")}} {{readonlyInline}}
-  - : Возвращает {{domxref ("DOMString")}}, содержащий назначенный ключ доступа элемента.
+  - : Возвращает {{jsxref("String")}}, содержащий назначенный ключ доступа элемента.
 - {{domxref("HTMLElement.contentEditable")}}
-  - : Является {{domxref ("DOMString")}}, где значение" true "означает, что элемент доступен для редактирования, а значение" false " означает, что это не так.
+  - : Является {{jsxref("String")}}, где значение" true "означает, что элемент доступен для редактирования, а значение" false " означает, что это не так.
 - {{domxref("HTMLElement.isContentEditable")}} {{readonlyInline}}
-  - : Возвращает {{domxref ("Boolean")}}, который указывает, можно ли редактировать содержимое элемента.
+  - : Возвращает {{jsxref("Boolean")}}, который указывает, можно ли редактировать содержимое элемента.
 - {{domxref("HTMLElement.contextMenu")}}
   - : Является {{domxref ("HTMLMenuElement")}}, представляющим контекстное меню, связанное с элементом. Может быть null
 - {{domxref("HTMLElement.dataset")}} {{readonlyInline}} — набор данных

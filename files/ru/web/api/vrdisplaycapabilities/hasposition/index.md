@@ -14,7 +14,7 @@ l10n:
 
 ### Значение
 
-{{domxref("Boolean")}}.
+{{jsxref("Boolean")}}.
 
 ## Примеры
 
