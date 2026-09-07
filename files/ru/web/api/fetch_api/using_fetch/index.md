@@ -360,7 +360,7 @@ addEventListener("fetch", function (event) {
 
 Запрос и ответ могут содержать данные тела. Тело является экземпляром любого из следующих типов:
 
-{{jsxref("ArrayBuffer")}}{{domxref("ArrayBufferView")}} (Uint8Array и подобные){{domxref("Blob")}}/Filestring{{domxref("URLSearchParams")}}{{domxref("FormData")}}
+{{jsxref("ArrayBuffer")}}{{jsxref("TypedArray")}} (Uint8Array и подобные){{domxref("Blob")}}/Filestring{{domxref("URLSearchParams")}}{{domxref("FormData")}}
 
 {{domxref("Body")}} примесь определяет следующие методы для извлечения тела (реализованы как для {{domxref("Request")}} так и для {{domxref("Response")}}). Все они возвращают promise, который в конечном итоге исполняется и выводит содержимое.
 
