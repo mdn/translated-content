@@ -60,7 +60,7 @@ Puedes crear un nuevo objeto `Request` usando el constructor {{domxref("Request.
 - {{domxref("Body.formData()")}}
   - : Devuelve una promesa que se resuelve con una representación {{domxref("FormData")}} del cuerpo de la solicitud.
 - {{domxref("Body.json()")}}
-  - : Devuelve una promesa que se resuelve con una representación {{domxref ("JSON")}} del cuerpo de la solicitud.
+  - : Devuelve una promesa que se resuelve con una representación {{jsxref("JSON")}} del cuerpo de la solicitud.
 - {{domxref("Body.text()")}}
   - : Devuelve una promesa que se resuelve con una representación {{jsxref("String")}} (text) del cuerpo de la solicitud.
 
