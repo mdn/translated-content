@@ -174,7 +174,7 @@ Toutes ces méthodes prennent un [itérable](/fr/docs/Web/JavaScript/Reference/I
 
 Il existe deux autres méthodes statiques pratiques&nbsp;: {{JSxRef("Promise.allKeyed()")}} et {{JSxRef("Promise.allSettledKeyed()")}}, qui se comportent comme `Promise.all()` et `Promise.allSettled()`, mais prennent des _objets_ de promesses et retournent des promesses qui se complètent avec des _objets_ de la même forme. En travaillant avec des objets au lieu de tableaux, vous pouvez associer les résultats à des clés sémantiquement significatives, au lieu d'un ordre de tableau arbitraire qui peut être difficile à maintenir.
 
-Ces méthodes attachent des gestionnaires à chaque promesse d'entrée en utilisant {{jsxref("Promise/then", "then()")}}. Même lorsque la promesse résultante est réglée tôt (par exemple lorsqu'une entrée dans `Promise.race()` est réglée), les autres gestionnaires ne sont pas supprimés. Passer de manière répétée la même promesse en attente aux méthodes de concurrence peut accumuler des gestionnaires même lorsque ces gestionnaires ne sont jamais utilisés&nbsp;:
+Ces méthodes attachent des gestionnaires à chaque promesse d'entrée en utilisant {{jsxref("Promise/then", "then()")}}. Même lorsque la promesse résultante est acquittée tôt (par exemple lorsqu'une entrée dans `Promise.race()` est acquittée), les autres gestionnaires ne sont pas supprimés. Passer de manière répétée la même promesse en attente aux méthodes de concurrence peut accumuler des gestionnaires même lorsque ces gestionnaires ne sont jamais utilisés&nbsp;:
 
 ```js
 const promesseEnAttente = new Promise(() => {});
