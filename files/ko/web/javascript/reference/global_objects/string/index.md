@@ -289,5 +289,4 @@ for (var i = 0, n = inputValues.length; i < n; ++i) {
 
 ## 같이 보기
 
-- {{jsxref("String")}}
 - [Binary strings](/ko/docs/Web/API/DOMString/Binary)
