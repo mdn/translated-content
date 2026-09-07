@@ -3,7 +3,7 @@ title: "Window : méthode postMessage()"
 short-title: postMessage()
 slug: Web/API/Window/postMessage
 l10n:
-  sourceCommit: ff81a4e4cb740060aca2df256ce2e07d1e2c0b4e
+  sourceCommit: 6030ef1aadf967b80e2c79c3d3463cccc8ea0c95
 ---
 
 {{APIRef("HTML DOM")}}

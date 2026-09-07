@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}{{Deprecated_Header}}
+{{APIRef}}
 
 返回视口相对于设备自然方向的旋转角度（以 90 度为增量的度数）。
 

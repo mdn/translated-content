@@ -3,7 +3,7 @@ title: Firefox 155 note de version pour les développeurs
 short-title: Firefox 155
 slug: Mozilla/Firefox/Releases/155
 l10n:
-  sourceCommit: d38616f73d7bfbd6c6f698390657da14a92bbb2f
+  sourceCommit: 1a1ae3db9b94004fef31e64cef0f27c6116356e2
 ---
 
 Cet article présente les informations concernant les changements de Firefox 155 qui concernent les développeur·euse·s.
@@ -16,7 +16,7 @@ Firefox 155 est sorti le [1er septembre 2026 <sup>(angl.)</sup>](https://whattra
 - Les boutons d'émulation des fonctionnalités média dans la [vue Règles <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html) sont désormais regroupés dans un panneau d'émulation dédié, qui s'ouvre en utilisant le bouton `@`.
   Le panneau ajoute également l'émulation de la fonctionnalité média {{CSSxRef("@media/prefers-reduced-motion", "prefers-reduced-motion")}}.
   ([bogue Firefox 1692434 <sup>(angl.)</sup>](https://bugzil.la/1692434) et [bogue Firefox 1477920 <sup>(angl.)</sup>](https://bugzil.la/1477920)).
-- [L'observateur JSON <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) ouvre désormais les documents [JSON Lines <sup>(angl.)</sup>](https://jsonlines.org/) (NDJSON), qui sont servis en tant que `application/jsonlines`, `application/x-ndjson` ou `text/jsonl`, ou qui ont une extension de fichier `.jsonl`.
+- [L'observateur JSON <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) ouvre désormais les documents [JSON Lines <sup>(angl.)</sup>](https://jsonlines.org/) (NDJSON), qui sont servis en tant que `application/jsonl`, `application/jsonlines`, `application/x-ndjson` ou `text/jsonl`, ou qui ont une extension de fichier `.jsonl`.
   Chaque ligne est analysée séparément dans sa propre entrée repliable, étiquetée avec le numéro de ligne dont elle provient, et une ligne qui échoue à être analysée est signalée en incise sans affecter le reste du document.
   ([bogue Firefox 2055774 <sup>(angl.)</sup>](https://bugzil.la/2055774), [bogue Firefox 2060972 <sup>(angl.)</sup>](https://bugzil.la/2060972) et [bogue Firefox 2060529 <sup>(angl.)</sup>](https://bugzil.la/2060529)).
 - Un raccourci clavier a été ajouté pour désactiver les points d'arrêt dans le [Débogueur](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html).
@@ -114,9 +114,9 @@ Pas de changements notables.
 
 ### WebAssembly
 
-- La [section d'importation compacte <sup>(angl.)</sup>](https://github.com/WebAssembly/compact-import-section) du format binaire est désormais prise en charge, ce qui réduit la taille des modules ayant de nombreux imports.
+- La [section d'importation compacte <sup>(angl.)</sup>](https://github.com/WebAssembly/compact-import-section) du format binaire est désormais prise en charge, ce qui réduit la taille des modules ayant de nombreuses instructions [`import`](/fr/docs/WebAssembly/Reference/Definitions/import).
   ([bogue Firefox 2062344 <sup>(angl.)</sup>](https://bugzil.la/2062344)).
-- La proposition [d'arithmétique large <sup>(angl.)</sup>](https://github.com/WebAssembly/wide-arithmetic) est désormais prise en charge, ajoutant les instructions `i64.add128`, `i64.sub128`, `i64.mul_wide_s` et `i64.mul_wide_u`.
+- La proposition [d'arithmétique large <sup>(angl.)</sup>](https://github.com/WebAssembly/wide-arithmetic) est désormais prise en charge, ajoutant les instructions [`i64.add128`](/fr/docs/WebAssembly/Reference/Numeric/add128), [`i64.sub128`](/fr/docs/WebAssembly/Reference/Numeric/sub128), [`i64.mul_wide_s`](/fr/docs/WebAssembly/Reference/Numeric/mul_wide_s) et [`i64.mul_wide_u`](/fr/docs/WebAssembly/Reference/Numeric/mul_wide_u).
   Celles-ci produisent des résultats sur 128 bits à partir d'opérandes sur 64 bits, ce qui devait auparavant être émulé dans le code compilé en WebAssembly, comme dans les bibliothèques de grands nombres et de cryptographie.
   ([bogue Firefox 2062374 <sup>(angl.)</sup>](https://bugzil.la/2062374)).
 
@@ -132,8 +132,6 @@ Pas de changements notables.
 - Mise à jour du module spécifique à Mozilla `moz:debugging` pour ne plus dépendre de la même API de boucle d'évènements imbriquée que les outils de développement, ce qui empêche les conflits lorsque WebDriver BiDi et DevTools sont utilisés en parallèle. ([bogue Firefox 2041335 <sup>(angl.)</sup>](https://bugzil.la/2041335)).
 - Correction de la commande `browsingContext.reload` qui échouait lorsqu'elle était utilisée pour des cadres. ([bogue Firefox 2030909 <sup>(angl.)</sup>](https://bugzil.la/2030909)).
 - Suppression de la prise en charge de l'argument `contexts` dans la commande `session.unsubscribe`. Désormais, les clients ne peuvent se désabonner que par nom d'évènement ou par ID d'abonnement. ([bogue Firefox 1988723 <sup>(angl.)</sup>](https://bugzil.la/1988723)).
-
-## Changements pour les développeur·euse·s d'extensions
 
 ## Fonctionnalités web expérimentales
 
@@ -179,3 +177,7 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 - **Valeur `border-area` pour `background-clip`**&nbsp;: `layout.css.background-clip.border-area.enabled`
 
   La valeur [`border-area`](/fr/docs/Web/CSS/Reference/Properties/background-clip#border-area) de la propriété CSS {{CSSxRef("background-clip")}} découpe l'arrière-plan jusqu'à la zone peinte par la bordure de l'élément, ce qui permet d'utiliser un dégradé ou une image comme bordure. ([bogue Firefox 2045230 <sup>(angl.)</sup>](https://bugzil.la/2045230)).
+
+- **`view-timeline` inclut `view-timeline-inset`**&nbsp;: `layout.css.scroll-driven-animations.enabled`
+
+  La propriété raccourcie {{CSSxRef("view-timeline")}} prend désormais en charge la propriété {{CSSxRef("view-timeline-inset")}}. Le raccourci permet de définir les valeurs d'encart (ou d'écart) de début et/ou de fin pour ajuster la position de la chronologie dans la progression de la vue. ([bogue Firefox 2046602 <sup>(angl.)</sup>](https://bugzil.la/2046602)).

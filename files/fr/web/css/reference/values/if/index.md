@@ -3,7 +3,7 @@ title: Fonction CSS `if()`
 short-title: if()
 slug: Web/CSS/Reference/Values/if
 l10n:
-  sourceCommit: 3143a6094e7b87cf1a96b61f9551fb4d95049777
+  sourceCommit: f0179562ad8e2a4dd1f0916c529792198d7e06b2
 ---
 
 {{SeeCompatTable}}

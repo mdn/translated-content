@@ -3,7 +3,7 @@ title: "ウェブアクセシビリティ: 色と輝度を理解する"
 short-title: 色と輝度
 slug: Web/Accessibility/Guides/Colors_and_Luminance
 l10n:
-  sourceCommit: 5a195171d06aee3d9c1c78d71c7f0c3a060f5263
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 色、輝度、彩度を理解することは、視力のあるすべてのユーザーにとってデザインや読み取り可能性を高めるために重要ですが、視力が低下している人や色覚障碍のある人、特定の神経障碍や認知障碍、他にも障碍のある人にとっては不可欠です。
@@ -30,7 +30,7 @@ l10n:
 
 ### 用語
 
-異なる用語が同じことを記述することが多いため、用語は混乱することがあります。特に「輝度」と「彩度」は正しく理解することが重要です。例えば、「彩度」はある業界では「クロマ」と呼ばれている一方、「クロマ」と「彩度」は異なる概念とする業界もあります。 HSL 色空間の "L" は「明度」とされることもありますし、「輝度」と呼ばれる場合もあります。一般的な色の名前のような単純に見えるものでさえ、議論の余地があります。例えば、「深紅の赤」という色は 16 進数値で記述されるとき、ある人は `#990000` と記述し、他の人は `#DC143C` と記述します。この文書では、 W3C の [CSS Color Module Level 4](https://www.w3.org/TR/css-color-4/) で定義されている用語を使用します。
+異なる用語が同じことを記述することが多いため、用語は混乱することがあります。特に「輝度」と「彩度」は正しく理解することが重要です。例えば、「彩度」はある業界では「クロマ」と呼ばれている一方、「クロマ」と「彩度」は異なる概念とする業界もあります。 HSL 色空間の "L" は「明度」とされることもありますし、「輝度」と呼ばれる場合もあります。一般的な色の名前のような単純に見えるものでさえ、議論の余地があります。例えば、「深紅の赤」という色は 16 進数値で記述されるとき、ある人は `#990000` と記述し、他の人は `#DC143C` と記述します。この文書では、CSS の {{cssxref("named-color")}} ページで定義されている用語を使用します。
 
 色を使って作業する場合、どの「色空間」で作業しているかを知ることが重要です。色空間が異なると、異なる測定システムに割り当てられるからです。
 
@@ -40,7 +40,7 @@ l10n:
 
 ## sRGB 色空間
 
-色には、[`<color>` データ型](/ja/docs/Web/CSS/Reference/Values/color_value) を入力することで明らかなように、RGB、RGB 10進数、RGB パーセント、HSL、HWB、LCH、LAB、CMYK、他にも多くの定義する方法があります。
+色には、{{cssxref("&lt;color&gt;")}} データ型を入力することで明らかなように、RGB、RGB 10 進数、RGB パーセント、HSL、HWB、LCH、Lab、CMYK、他にも多くの定義する方法があります。
 
 デジタルに関わる技術の多くは、過去にはRGB色空間を使用していました。 RGB 色モデルは、「アルファ」を含めて色の不透明度を指定できるように拡張されています (RGBA)。色を測定するための他のメソッドは、他の色空間を使用して測定し、現代のディスプレイやブラウザーの対応しています。それでも、動画制作を含め、 RGB 色空間での色測定が主流です。
 
@@ -82,7 +82,7 @@ color: hsl(300deg 100% 50% / 100%);
 color: hwb(300deg 0% 0%);
 color: hwb(300 0% 0% / 1);
 
-/* sRGB 値の LAB 表現 */
+/* sRGB 値の Lab 表現 */
 color: lab(60 93.56 -60.5);
 color: lab(60 93.56 -60.5 / 1);
 
@@ -95,7 +95,7 @@ color: color(xyz-d65 0.59 0.28 0.96);
 color: color(xyz-d65 0.59 0.28 0.96 / 1);
 ```
 
-最初の例では、定義済みの[名前付きの色](/ja/docs/Web/CSS/Reference/Values/named-color)を使用しています。
+最初の例では、定義済みの名前付きの色 ({{cssxref("named-color")}}) を使用しています。
 
 sRGB の値を直接パーセントで設定するには、 0% をオフ（黒）、 100% をその色の完全な値にします。値は赤、緑、青の順です。 sRGB 値を 0 から 255 までの数値で直接設定することもできます。
 
@@ -105,23 +105,23 @@ sRGB の値を直接パーセントで設定するには、 0% をオフ（黒�
 
 この例は古い [`rgb()` および `rgba()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb#例) の構文も示しています。色関数の古い構文はカンマ区切りで、アルファチャンネルを記載するために別個の関数があります。新しい色関数は、（カンマ区切りではなく）空間区切りの値を持つ 1 つの構文のみで、アルファチャンネルが存在する場合は、その前にスラッシュを記述します。現行の構文では、数値とパーセントを混合することができ、 `none` キーワードに対応しています。カンマ区切りの古い構文は対応していません。
 
-次の例は "HSL" を示しています。"HSL" は _Hue, Saturation, Lightness_ （色相、彩度、明度）の略です。 HSL の色値は、 RGB 値よりも直感的であると多くの人に考えられています。設定から生成される色はまだ sRGB 色空間ですが、 [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) は多くの人にとって直感的な構文です。色相は角度として調整され、色相を調整するためにノブや円形のコントロールを使用してユーザーインターフェイスを作成するのは簡単です。 HSL 色は輝度ではなく明るさであることに注意してください。
+次の例は "HSL" を示しています。"HSL" は _Hue, Saturation, Lightness_ （色相、彩度、明度）の略です。 HSL の色値は、 RGB 値よりも直感的であると多くの人に考えられています。設定から生成される色はまだ sRGB 色空間ですが、{{cssxref("color_value/hsl")}} は多くの人にとって直感的な構文です。色相は角度として調整され、色相を調整するためにノブや円形のコントロールを使用してユーザーインターフェイスを作成するのは簡単です。 HSL 色は輝度ではなく明るさであることに注意してください。
 
-その次の例は "HWB" を示しています。"HWB" は _Hue, Whiteness, Blackness_ （色相、白色度、黒色度）の略です。 `hsl()` と [`hwb()`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb) の両方とも、最初の値は [`<number>`](/ja/docs/Web/CSS/Reference/Values/number) または [`<angle>`](/ja/docs/Web/CSS/Reference/Values/angle) になります。単位がない場合、値は `deg` 度として解釈されます。
+その次の例は "HWB" を示しています。"HWB" は _Hue, Whiteness, Blackness_ （色相、白色度、黒色度）の略です。 `hsl()` と {{cssxref("color_value/hwb")}} の両方とも、最初の値は {{cssxref("number")}} または {{cssxref("angle")}} になります。単位がない場合、値は `deg` 度として解釈されます。
 
-他にもいくつかの色関数や色空間があります。最後の 3 つの例では、[`lab()`](/ja/docs/Web/CSS/Reference/Values/color_value/lab)、[`oklch()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklch)、[`color()`](/ja/docs/Web/CSS/Reference/Values/color_value/color)の色関数を使用してマゼンタを表しています。
+他にもいくつかの色関数や色空間があります。最後の 3 つの例では、{{cssxref("color_value/lab")}}、{{cssxref("color_value/oklch")}}、{{cssxref("color_value/color")}}の色関数を使用してマゼンタを表しています。
 
 ### 変換
 
 これまで見てきたように、同じ色空間内の 1 つの色でもさまざまな方法で発生する可能性があります。 RGB 色空間がどのように「マゼンタ」という色を記述するのに使用されているかを見ていくと、同じ色が、 rgb 値に変換される 3 桁の短縮形の 16 進数で表現されたり、同じ rgb 値に変換される 6 桁の 16 進数で表現されたり、パーセントで表現される rgba 値で表現されたりすることがわかります。
 
-RGB は CRT を使用することを反映したハードウェア指向のものです。多くの開発者やデザイナーは、直感的な [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) 記法を推奨しています。 RGB から HSL への変換は単純な式ではできません。幸いなことに、ブラウザーは自動的にそれを行いますし、ブラウザーの開発者ツールでは色をシフトを押しながらクリックすると、変換する機能を提供しています。
+RGB は CRT を使用することを反映したハードウェア指向のものです。多くの開発者やデザイナーは、直感的な {{cssxref("color_value/hsl")}} 記法を推奨しています。 RGB から HSL への変換は単純な式ではできません。幸いなことに、ブラウザーは自動的にそれを行いますし、ブラウザーの開発者ツールでは色をシフトを押しながらクリックすると、変換する機能を提供しています。
 
 開発者ツールに加えて、 RGB を HSL に変換し、 RGB の 16 進数と CSS 関数の構文の両方を提供するツールもたくさんあります。例えば、Tom Jewett 氏の "[mini color selector](https://colortutorial.design/microColorsC.html)" は、ブラウザーでコントラストを調べるための HSL、RGB、Hex オプションを備えており、色を変換してくれるツールの素晴らしい例です。開発者ツールのカラーピッカーとこのツールは、すべて WCAG の [color contrast](https://webaim.org/resources/contrastchecker/) の値を提供することに注意してください。
 
 ![HSL と RGB、色のコントラスト値を持つカラーピッカー。](microcolorsc.jpg)
 
-前述のように、 [CSS 色モジュール](/ja/docs/Web/CSS/Guides/Colors)には、 [`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch) および [`oklch()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklch) の色関数記法や、 [`lab()`](/ja/docs/Web/CSS/Reference/Values/color_value/lab) および [`oklab()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklab) 色座標系を含む色空間の追加を含んでいます。とはいえ、 sRGB は普遍的なものであるため、アクセシビリティのための既定で推奨する色空間であることに変わりはありません。
+前述のように、 [CSS 色モジュール](/ja/docs/Web/CSS/Guides/Colors)には、 {{cssxref("color_value/lch")}} および {{cssxref("color_value/oklch")}} の色関数記法や、{{cssxref("color_value/lab")}} および {{cssxref("color_value/oklab")}} 色座標系を含む色空間の追加を含んでいます。とはいえ、 sRGB は普遍的なものであるため、アクセシビリティのための既定で推奨する色空間であることに変わりはありません。
 
 しかし、アクセシビリティに関する標準と規格の作成は、特に色のコントラスト比に適用される sRGB 色空間を主に使用しています。
 
@@ -130,7 +130,7 @@ RGB は CRT を使用することを反映したハードウェア指向のも�
 
 ### 色値の問い合わせ
 
-{{domxref('Window.getComputedStyle()')}} メソッドは、 RGB 10 進参照スケールを使用するか、 `color(srgb...)` によって値を返します。例えば、 `Window.getComputedStyle()` を `<div>` に `background-color: #ff0000` を設定したものに対して呼び出すと、背景色の計算値を `rgb(255 0 0)` — RGB 10 進参照として返します。しかし、[相対色を使用する](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)（例えば `background-color: rgb(from blue 255 0 0)` の）場合、`Window.getComputedStyle()` を呼び出すと、計算された背景色が `color(srgb 1 0 0)` として返されます。コンピューターのハードウェアに関連しているため、 `Window.getComputedStyle()` は人間の目がどのように色を知覚するかではなく、 RGB の観点から色を測定します。
+{{domxref('Window.getComputedStyle()')}} メソッドは、 RGB 10 進参照スケールを使用するか、 `color(srgb...)` によって値を返します。例えば、 `Window.getComputedStyle()` を `<div>` に `background-color: red` を設定したものに対して呼び出すと、背景色の計算値を `rgb(255, 0, 0)` — RGB 10 進参照として返します。しかし、[相対色を使用する](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)（例えば `background-color: rgb(from blue 255 0 0)` の）場合、`Window.getComputedStyle()` を呼び出すと、計算された背景色が `color(srgb 1 0 0)` として返されます。コンピューターのハードウェアに関連しているため、 `Window.getComputedStyle()` は人間の目がどのように色を知覚するかではなく、 RGB の観点から色を測定します。
 
 ### 赤緑色覚障碍
 
@@ -176,9 +176,9 @@ RGB は CRT を使用することを反映したハードウェア指向のも�
 
 色のコントラスト比は輝度成分がなければ意味がなく、輝度が決まれば色のコントラスト比が決まります。
 
-人間の知覚において、輝度の違いは色の違いよりも重要です。輝度コントラストによって、色覚障碍者でも見ることができるコンテンツを開発することができるからです。このことを理解すれば、輝度が低いために見えにくい色でも、輝度が対照的な別の色と配置することで、より見やすくなるように輝度を操作できるかもしれません。例えば、 NASA による青色に関する興味深い研究では、輝度が低いこの色も、適切な輝度コントラストが得られるように注意を払えば、見やすくすることができると指摘しています（この記事 [Designing with blue](https://colorusage.arc.nasa.gov/blue_2.php) より）。
+人間の知覚において、輝度の違いは色の違いよりも重要です。輝度コントラストによって、色覚障碍者でも見ることができるコンテンツを開発することができるからです。このことを理解すれば、輝度が低いために見えにくい色でも、輝度が対照的な別の色と配置することで、より見やすくなるように輝度を操作できるかもしれません。例えば、 NASA による青色に関する興味深い研究では、輝度が低いこの色も、適切な輝度コントラストが得られるように注意を払えば、見やすくすることができると指摘しています（この記事 [Designing with blue](https://web.archive.org/web/20250216024807/https://colorusage.arc.nasa.gov/blue_2.php) より）。
 
-相対輝度の計算は簡単ではありません。幸いなことに、[オンライン輝度・コントラストチェッカー](https://contrast-ratio.com/)が利用できますし、[相対輝度の計算](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance)の方法の説明書もあります。
+相対輝度の計算は簡単ではありません。幸いなことに、[オンライン輝度・コントラストチェッカー](https://www.siegemedia.com/contrast-ratio)が利用できますし、[相対輝度の計算](https://w3c.github.io/wcag/guidelines/22/#dfn-relative-luminance)の方法の説明書もあります。
 
 ## 色の知覚
 
@@ -228,7 +228,7 @@ RGB は CRT を使用することを反映したハードウェア指向のも�
 
 モニター上の色に関して言えば、彩度の高い色は特定の波長を持っています。色空間ごとに彩度の定義は異なるかもしれませんが、彩度は容易に測定できます。重要なのは、あなたがどの色空間で作業しているかを把握し、必要に応じて変換できるようにしておくことです。
 
-受光感度を議論する際に最も頻繁に考慮される色空間は、RGB、HSL、および HSV （HSB とも呼ばれる）色空間です。 HSV 色空間は _hue_, _saturation_, _value_ （色相、彩度、量）を表し、同義語の HSB は _hue_, _saturation_, _brightness_ （色相、彩度、明るさ）を表します。 CSS では _hue_, _whiteness_, _blackness_ を [`hwb()`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb) として表します。
+受光感度を議論する際に最も頻繁に考慮される色空間は、RGB、HSL、および HSV （HSB とも呼ばれる）色空間です。 HSV 色空間は _hue_, _saturation_, _value_ （色相、彩度、量）を表し、同義語の HSB は _hue_, _saturation_, _brightness_ （色相、彩度、明るさ）を表します。 CSS では _hue_, _whiteness_, _blackness_ を {{cssxref("color_value/hwb")}} として表します。
 
 作業する色空間が何であるかを知っておくことは重要です。例えば、彩度の高い色は HSL では明度が `0.5` ですが、 HWB では値が `1` となります。 RGB 色空間における飽和は、通常その色の RGB 値 `255` または `100%` で示されます。例えば、 16 進数値 `#ff0000` の飽和赤は RGB 値 `rgb(255 0 0)` と HSL 値 `hsl(0 100% 50%)` があります。 16 進数値 `#ff3300` の異なる飽和赤は RGB 値が `rgb(255 51 0)`、HSL値が `hsl(12 100% 50%)` です。どちらも「飽和」赤です。これらは異なる「色相」ですが、どちらも飽和色とみなされます。
 
@@ -236,7 +236,7 @@ RGB は CRT を使用することを反映したハードウェア指向のも�
 
 ### 彩度と輝度
 
-輝度が両極端で、黒と白が極端な場合、彩度が低下します。 NASA の[彩度に対する輝度の影響](https://colorusage.arc.nasa.gov/design_lum_1.php)（英語）では、低輝度での彩度の損失があること、また「...高輝度での彩度の損失 - 色は白に収束します」と指摘しています。
+輝度が両極端で、黒と白が極端な場合、彩度が低下します。 NASA の[彩度に対する輝度の影響](https://web.archive.org/web/20250216024807/https://colorusage.arc.nasa.gov/design_lum_1.php)<sup>(英語)</sup>では、低輝度での彩度の損失があること、また「...高輝度での彩度の損失 - 色は白に収束します」と指摘しています。
 
 ## 色の組み合わせ
 
@@ -262,7 +262,7 @@ RGB は CRT を使用することを反映したハードウェア指向のも�
 
 ## 赤の特例
 
-すべての色（「色相」）が脳で同じように処理されるわけではありません。人間の生理学と心理学は、一般的に言って、他の色とは異なる形で赤色に影響を受けます。私たちは、色に対して生理的・心理的に反応します。例えば、[ある色は他の色よりもてんかん発作を発生させやすいこと](https://www.sciencedaily.com/releases/2009/09/090925092858.htm)が実証されています。端末によっては、[アクセシビリティオプションとしての「グレースケール」設定](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)を提供しているものもあり、写真に敏感な人を支援することができます。グレースケール設定を模倣するには、 CSS の {{cssxref("filter")}} プロパティで [`grayscale()`](/ja/docs/Web/CSS/Reference/Values/filter-function/grayscale) または [`saturate()`](/ja/docs/Web/CSS/Reference/Values/filter-function/saturate) フィルター関数 ([`<filter-function>`](/ja/docs/Web/CSS/Reference/Values/filter-function)) を使用してください。
+すべての色（「色相」）が脳で同じように処理されるわけではありません。人間の生理学と心理学は、一般的に言って、他の色とは異なる形で赤色に影響を受けます。私たちは、色に対して生理的・心理的に反応します。例えば、[ある色は他の色よりもてんかん発作を発生させやすいこと](https://www.sciencedaily.com/releases/2009/09/090925092858.htm)が実証されています。端末によっては、[アクセシビリティオプションとしての「グレースケール」設定](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)を提供しているものもあり、写真に敏感な人を支援することができます。グレースケール設定を模倣するには、 CSS の {{cssxref("filter")}} プロパティで {{cssxref("filter-function/grayscale")}} または {{cssxref("filter-function/saturate")}} フィルター関数 ({{cssxref("filter-function")}}) を使用してください。
 
 ### 飽和赤
 
@@ -308,14 +308,14 @@ RGB は CRT を使用することを反映したハードウェア指向のも�
 - **青は明るさやまぶしさにも大きな影響を与える:** [Blue and glare & brightness](https://pubmed.ncbi.nlm.nih.gov/31288107/)
 - **赤い色眼鏡は幸福感や喜びを向上させる:** [Looking Through "Rose-Tinted" Glasses: The Influence of Tint on Visual Affective Processing](https://pubmed.ncbi.nlm.nih.gov/31244627/)
 - **赤は私たちの行動に大きな影響を与えることがよく知られている:** [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/), Scientific American, S. Martinez-Conde, Stephen L. Macknik
-- **赤い環境:** 研究によれば、外傷性脳損傷を患っている人に対して、[赤い環境では認知機能が縮小する](https://pubmed.ncbi.nlm.nih.gov/20649469/)（英語）ことが示されています。
+- **赤い環境:** 研究によれば、外傷性脳損傷を患っている人に対して、[赤い環境では認知機能が縮小する](https://pubmed.ncbi.nlm.nih.gov/20649469/)<sup>(英語)</sup>ことが示されています。
 
 ## 関連情報
 
 - [アクセシビリティ](/ja/docs/Web/Accessibility)
 - [アクセシビリティの学習経路](/ja/docs/Learn_web_development/Core/Accessibility)
-- CSS の [`color`](/ja/docs/Web/CSS/Reference/Properties/color) プロパティ
-- [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) データ型
+- CSS の {{cssxref("color")}} プロパティ
+- CSS の {{cssxref("&lt;color&gt;")}} データ型
 - [発作と身体反応に関するウェブアクセシビリティ](/ja/docs/Web/Accessibility/Seizure_disorders)
 - [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
 - [Red Desaturation](https://www.smartoptometry.app/red-desaturation/) 人間の目は赤に敏感に反応するため、眼科医は赤を使用する検査を設定し、視神経の健全性を評価している。
