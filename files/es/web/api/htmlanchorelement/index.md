@@ -21,13 +21,13 @@ Hereda propiedades de su elemento primario, {{domxref ("HTMLElement")}}, y las i
 - {{domxref ("HTMLAnchorElement.download")}} {{experimental_inline}}
   - : Es un {{jsxref("String")}} que indica que el recurso vinculado está destinado a descargarse en lugar de mostrarse en el navegador. El valor representa el nombre propuesto del archivo. Si el nombre no es un nombre de archivo válido del sistema operativo subyacente, el navegador lo adaptará.
 - {{domxref ("HTMLHyperlinkElementUtils.hash")}}
-  - : Es un {{domxref ("USVString")}} que representa el identificador de fragmento, incluida la marca hash inicial ('#'), si la hay, en la URL a la que se hace referencia.
+  - : Es un {{jsxref("String")}} que representa el identificador de fragmento, incluida la marca hash inicial ('#'), si la hay, en la URL a la que se hace referencia.
 - {{domxref ("HTMLHyperlinkElementUtils.host")}}
-  - : Es un {{domxref ("USVString")}} que representa el nombre de host y el puerto (si no es el puerto predeterminado) en la URL a la que se hace referencia.
+  - : Es un {{jsxref("String")}} que representa el nombre de host y el puerto (si no es el puerto predeterminado) en la URL a la que se hace referencia.
 - {{domxref ("HTMLHyperlinkElementUtils.hostname")}}
-  - : Es un {{domxref ("USVString")}} que representa el nombre de host en la URL referenciada.
+  - : Es un {{jsxref("String")}} que representa el nombre de host en la URL referenciada.
 - {{domxref ("HTMLHyperlinkElementUtils.href")}}
-  - : Es un {{domxref ("USVString")}} que refleja el atributo HTML [`href`](/es/docs/Web/HTML/Reference/Elements/a#href), que contiene una URL válida de un recurso vinculado.
+  - : Es un {{jsxref("String")}} que refleja el atributo HTML [`href`](/es/docs/Web/HTML/Reference/Elements/a#href), que contiene una URL válida de un recurso vinculado.
 - {{domxref ("HTMLAnchorElement.hreflang")}}
   - : Es un {{jsxref("String")}} que refleja el atributo HTML [`hreflang`](/es/docs/Web/HTML/Reference/Elements/a#hreflang), que indica el idioma del recurso vinculado.
 - {{domxref ("HTMLAnchorElement.media")}}
@@ -35,15 +35,15 @@ Hereda propiedades de su elemento primario, {{domxref ("HTMLElement")}}, y las i
 - {{domxref ("HTMLAnchorElement.name")}} {{deprecated_inline}}
   - : Es un {{jsxref("String")}} que representa el nombre del ancla.
 - {{domxref ("HTMLHyperlinkElementUtils.password")}}
-  - : Es un {{domxref ("USVString")}} que contiene la contraseña especificada antes del nombre de dominio.
+  - : Es un {{jsxref("String")}} que contiene la contraseña especificada antes del nombre de dominio.
 - {{domxref ("HTMLHyperlinkElementUtils.origin")}} {{readonlyInline}}
-  - : Devuelve un {{domxref ("USVString")}} que contiene el origen de la URL, que es su esquema, su dominio y su puerto.
+  - : Devuelve un {{jsxref("String")}} que contiene el origen de la URL, que es su esquema, su dominio y su puerto.
 - {{domxref ("HTMLHyperlinkElementUtils.pathname")}}
-  - : Es un {{domxref ("USVString")}} que representa el componente del nombre de ruta, si lo hay, de la URL referenciada.
+  - : Es un {{jsxref("String")}} que representa el componente del nombre de ruta, si lo hay, de la URL referenciada.
 - {{domxref ("HTMLHyperlinkElementUtils.port")}}
-  - : Es un {{domxref ("USVString")}} que representa el componente de puerto, si lo hay, de la URL a la que se hace referencia.
+  - : Es un {{jsxref("String")}} que representa el componente de puerto, si lo hay, de la URL a la que se hace referencia.
 - {{domxref ("HTMLHyperlinkElementUtils.protocol")}}
-  - : Es un {{domxref ("USVString")}} que representa el componente de protocolo, incluidos los puntos finales (':'), de la URL a la que se hace referencia.
+  - : Es un {{jsxref("String")}} que representa el componente de protocolo, incluidos los puntos finales (':'), de la URL a la que se hace referencia.
 - {{domxref ("HTMLAnchorElement.referrerPolicy")}} {{experimental_inline}}
   - : Es un {{jsxref("String")}} que refleja el atributo [`referrerpolicy`](/es/docs/Web/HTML/Reference/Elements/a#referrerpolicy) HTML que indica qué referencia usar.
 - {{domxref ("HTMLAnchorElement.rel")}}
@@ -53,7 +53,7 @@ Hereda propiedades de su elemento primario, {{domxref ("HTMLElement")}}, y las i
 - {{domxref ("HTMLAnchorElement.rev")}} {{deprecated_inline}}
   - : Es un {{jsxref("String")}} que representa el atributo HTML [`rev`](/es/docs/Web/HTML/Reference/Elements/a#rev), que especifica la relación del objeto de enlace con el objeto de destino.
 - {{domxref ("HTMLHyperlinkElementUtils.search")}}
-  - : Es un {{domxref ("USVString")}} que representa el elemento de búsqueda, incluido el signo de interrogación principal ('?'), Si lo hay, de la URL a la que se hace referencia.
+  - : Es un {{jsxref("String")}} que representa el elemento de búsqueda, incluido el signo de interrogación principal ('?'), Si lo hay, de la URL a la que se hace referencia.
 - {{domxref ("HTMLAnchorElement.shape")}} {{deprecated_inline}}
   - : Es un {{jsxref("String")}} que representa la forma del área activa.
 - {{domxref ("HTMLAnchorElement.tabindex")}}
@@ -65,7 +65,7 @@ Hereda propiedades de su elemento primario, {{domxref ("HTMLElement")}}, y las i
 - {{domxref ("HTMLAnchorElement.type")}}
   - : Es un {{jsxref("String")}} que refleja el atributo HTML [`type`](/es/docs/Web/HTML/Reference/Elements/a#type), que indica el tipo MIME del recurso vinculado.
 - {{domxref ("HTMLHyperlinkElementUtils.nombre de usuario")}}
-  - : Es un {{domxref ("USVString")}} que contiene el nombre de usuario especificado antes del nombre de dominio.
+  - : Es un {{jsxref("String")}} que contiene el nombre de usuario especificado antes del nombre de dominio.
 
 ## Metodos
 
@@ -76,7 +76,7 @@ Hereda los métodos de su padre, {{domxref ("HTMLElement")}}, y los implementa d
 - {{domxref ("HTMLElement.focus ()")}}
   - : Da el foco del teclado al elemento actual.
 - {{domxref ("HTMLHyperlinkElementUtils.toString ()")}}
-  - : Devuelve un {{domxref ("USVString")}} que contiene la URL completa. Es un sinónimo de {{domxref ("URLUtils.href")}}, aunque no se puede usar para modificar el valor.
+  - : Devuelve un {{jsxref("String")}} que contiene la URL completa. Es un sinónimo de {{domxref ("URLUtils.href")}}, aunque no se puede usar para modificar el valor.
 
 Los métodos blur () y focus () se heredan de {{domxref ("HTMLElement")}} de HTML5 on, pero se definieron en HTMLAnchorElement en DOM Level 2 HTML y especificaciones anteriores.
 
