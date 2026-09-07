@@ -156,7 +156,7 @@ DOM чаще всего используется в JavaScript, но не явл
 - {{domxref("CanvasPattern")}}
 - {{domxref("TextMetrics")}}
 - {{domxref("ImageData")}}
-- {{domxref("CanvasPixelArray")}}
+- {{jsxref("Uint8ClampedArray")}}
 - {{domxref("NotifyAudioAvailableEvent")}}
 - {{domxref("HTMLAllCollection")}}
 - {{domxref("HTMLFormControlsCollection")}}
