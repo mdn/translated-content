@@ -12,10 +12,10 @@ original_slug: WebAssembly/Loading_and_running
 
 WebAssembly는 아직 `<script type='module'>` 또는 ES2015 `import` statements와 통합되어 있지 않으므로 imports를 사용하여 브라우저에서 가져올 방법이 없습니다.
 
-이전의 [`WebAssembly.compile`](/ko/docs/WebAssembly/Reference/JavaScript_interface/compile) / [`WebAssembly.instantiate`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiate) 메소드를 사용하려면 WebAssembly 모듈 바이너리를 포함하는 {{domxref ( "ArrayBuffer")}}를 생성해야합니다. 원시 바이트를 가져온 다음 컴파일 / 인스턴스화합니다. 이것은 `new Function(string)`과 유사합니다. 단, 문자열 (JavaScript 소스 코드)을 바이트 배열 버퍼 (WebAssembly 소스 코드)로 대체한다는 점만 다릅니다.
+이전의 [`WebAssembly.compile`](/ko/docs/WebAssembly/Reference/JavaScript_interface/compile) / [`WebAssembly.instantiate`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiate) 메소드를 사용하려면 WebAssembly 모듈 바이너리를 포함하는 {{jsxref("ArrayBuffer")}}를 생성해야합니다. 원시 바이트를 가져온 다음 컴파일 / 인스턴스화합니다. 이것은 `new Function(string)`과 유사합니다. 단, 문자열 (JavaScript 소스 코드)을 바이트 배열 버퍼 (WebAssembly 소스 코드)로 대체한다는 점만 다릅니다.
 
 최신 [`WebAssembly.compileStreaming`](/ko/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming)/[`WebAssembly.instantiateStreaming`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) 방법이 훨씬 더 효율적입니다.
-네트워크에서는 {{domxref("ArrayBuffer")}} 단계가 필요하지 않게 하면서 직접 바이트의 원시 스트림에 대한 작업을 수행합니다.
+네트워크에서는 {{jsxref("ArrayBuffer")}} 단계가 필요하지 않게 하면서 직접 바이트의 원시 스트림에 대한 작업을 수행합니다.
 
 그러면 어떻게 이 바이트를 어레이 버퍼에 넣고 컴파일할 수 있을까요? 다음 단원에서 설명합니다.
 

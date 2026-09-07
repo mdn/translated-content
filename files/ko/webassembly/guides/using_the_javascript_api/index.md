@@ -43,7 +43,7 @@ WebAssembly JavaScript API를 사용하는 방법과 웹 페이지에서 wasm �
 
 ### 웹어셈블리 모듈을 스트리밍하기
 
-Firefox 58의 새로운 기능으로 기본 소스에서 직접 WebAssembly 모듈을 컴파일하고 인스턴스화하는 기능이 있습니다. 이는 [`WebAssembly.compileStreaming()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming) 와 [`WebAssembly.instantiateStreaming()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) 메소드를 사용하여 수행됩니다. 이 메소드는 바이트 코드를 직접 `Module`/`Instance` 인스턴스로 변환 할 수 있기 때문에 스트리밍이 아닌 방식의 메소드보다 작성이 쉽습니다. 별도로 {{domxref("Response")}}를 {{domxref("ArrayBuffer")}}로 호출할 필요성을 없애줍니다.
+Firefox 58의 새로운 기능으로 기본 소스에서 직접 WebAssembly 모듈을 컴파일하고 인스턴스화하는 기능이 있습니다. 이는 [`WebAssembly.compileStreaming()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming) 와 [`WebAssembly.instantiateStreaming()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) 메소드를 사용하여 수행됩니다. 이 메소드는 바이트 코드를 직접 `Module`/`Instance` 인스턴스로 변환 할 수 있기 때문에 스트리밍이 아닌 방식의 메소드보다 작성이 쉽습니다. 별도로 {{domxref("Response")}}를 {{jsxref("ArrayBuffer")}}로 호출할 필요성을 없애줍니다.
 
 이 예제는 (GitHub의 [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) 데모와 [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)를 보세요) `instantiateStreaming()`을 사용하여 wasm 모듈을 가져오고, JavaScript 함수를 가져오고, 컴파일하고 인스턴스화하며, 내 보낸 함수에 액세스하는 방법을 한번에 보여줍니다.
 
@@ -64,7 +64,7 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 위에서 설명한 스트리밍 방법을 사용할 수 없거나 사용하지 않으려면 스트리밍하지 않는 메서드[`WebAssembly.compile`](/ko/docs/WebAssembly/Reference/JavaScript_interface/compile) / [`WebAssembly.instantiate`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiate)를 대신 사용할 수 있습니다.
 
-이 메소드는 바이트 코드에 직접 액세스하지 않으므로 wasm 모듈을 컴파일 / 인스턴스화하기 전에 응답을 {{domxref ( "ArrayBuffer")}}로 변환하는 추가 단계가 필요합니다.
+이 메소드는 바이트 코드에 직접 액세스하지 않으므로 wasm 모듈을 컴파일 / 인스턴스화하기 전에 응답을 {{jsxref("ArrayBuffer")}}로 변환하는 추가 단계가 필요합니다.
 
 이와 동등한 코드는 다음과 같습니다.
 
@@ -128,7 +128,7 @@ memory.grow(1);
 
 메모리 인스턴스 생성시 최대 값이 제공되었을 때 이 최대 값을 초과하여 증가하려고 시도하면 [`WebAssembly.RangeError`](/ko/docs/WebAssembly/Reference/JavaScript_interface/RangeError) 예외가 발생합니다. 엔진은 이 상한값을 이용하여 미리 메모리를 예약하므로 크기를 보다 효율적으로 조정할 수 있습니다.
 
-{{domxref("ArrayBuffer")}}의 byteLength는 불변이므로, [`Memory.prototype.grow()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) 오퍼레이션이 성공하면, 버퍼 getter는 (새로운 byteLength로) 새로운 ArrayBuffer 객체를 돌려 주어, 이전의 모든 ArrayBuffer 객체는 「detached」가되거나, 이전에 가리켰던 기본 메모리와의 접속이 끊어집니다.
+{{jsxref("ArrayBuffer")}}의 byteLength는 불변이므로, [`Memory.prototype.grow()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) 오퍼레이션이 성공하면, 버퍼 getter는 (새로운 byteLength로) 새로운 ArrayBuffer 객체를 돌려 주어, 이전의 모든 ArrayBuffer 객체는 「detached」가되거나, 이전에 가리켰던 기본 메모리와의 접속이 끊어집니다.
 
 함수와 마찬가지로 선형 메모리를 모듈 내부에서 정의하거나 가져올 수 있습니다. 마찬가지로 모듈은 메모리를 선택적으로 내보낼수도 있습니다. 즉, JavaScript는 새 WebAssembly.Memory를 만들고 가져 오기로 전달하거나 [`Instance.prototype.exports`](/ko/docs/WebAssembly/JavaScript_interface/Instance/exports)를 통해 메모리 내보내기를 하여 WebAssembly 인스턴스의 메모리에 액세스 할 수 있습니다.
 

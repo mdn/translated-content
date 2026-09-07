@@ -72,7 +72,7 @@ _또한 {{domxref("EventTarget")}} 인터페이스로부터의 메서드를 구�
 - {{domxref("BaseAudioContext.createWaveShaper()")}}
   - : 비선형 변형(non-linear distortion) 효과를 구현하기 위해 사용되는 {{domxref("WaveShaperNode")}}를 생성합니다.
 - {{domxref("BaseAudioContext.decodeAudioData()")}}
-  - : 비동기적으로 {{domxref("ArrayBuffer")}}에 포함된 오디오 파일 데이터를 디코드합니다. 이 경우, ArrayBuffer는 보통 `arraybuffer`에 `responseType`을 설정한 후 {{domxref("XMLHttpRequest")}}의 `response` 특성으로부터 로딩됩니다. 이 메서드는 오디오 파일의 조각이 아니라, 오직 완전한 파일에서만 작동합니다.
+  - : 비동기적으로 {{jsxref("ArrayBuffer")}}에 포함된 오디오 파일 데이터를 디코드합니다. 이 경우, ArrayBuffer는 보통 `arraybuffer`에 `responseType`을 설정한 후 {{domxref("XMLHttpRequest")}}의 `response` 특성으로부터 로딩됩니다. 이 메서드는 오디오 파일의 조각이 아니라, 오직 완전한 파일에서만 작동합니다.
 
 ## 예제
 
