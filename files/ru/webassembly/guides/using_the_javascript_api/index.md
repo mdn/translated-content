@@ -164,7 +164,7 @@ memory.grow(1);
    console.log(sum);
    ```
 
-Обратите внимание на то, что мы создаём представление данных {{domxref("Uint32Array")}} с помощью свойства buffer объекта памяти ([`Memory.prototype.buffer`](/ru/docs/WebAssembly/JavaScript_interface/Memory/buffer)), а не самого объекта памяти.
+Обратите внимание на то, что мы создаём представление данных {{jsxref("Uint32Array")}} с помощью свойства buffer объекта памяти ([`Memory.prototype.buffer`](/ru/docs/WebAssembly/JavaScript_interface/Memory/buffer)), а не самого объекта памяти.
 
 Импорт памяти почти такой же как импорт функций, только вместо JavaScript функций передаются объекты памяти. Импорт памяти полезен по двум причинам:
 
