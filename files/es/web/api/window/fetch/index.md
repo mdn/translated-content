@@ -47,7 +47,7 @@ Promise<Response> fetch(input[, init]);
 
 ### Return value
 
-Una {{domxref("Promise")}} que resuelve a un objeto {{domxref("Response")}}.
+Una {{jsxref("Promise")}} que resuelve a un objeto {{domxref("Response")}}.
 
 ### Excepciones
 
