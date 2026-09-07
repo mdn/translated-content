@@ -9,7 +9,7 @@ slug: Web/API/AnalyserNode/getFloatFrequencyData
 
 此数组表示的频率范围为 0 \~ 22050 Hz，每个元素表示对应频率上的信号分量强度，单位为分贝。
 
-如果你需要更好的性能并且不太在意数据的精度，你可以使用 {{domxref("AnalyserNode.getByteFrequencyData()")}} 作为代替，这一接口使用 {{domxref("Uint8Array")}}来存储数据（对应的也是这个精度的格式）.
+如果你需要更好的性能并且不太在意数据的精度，你可以使用 {{domxref("AnalyserNode.getByteFrequencyData()")}} 作为代替，这一接口使用 {{jsxref("Uint8Array")}}来存储数据（对应的也是这个精度的格式）.
 
 ## 语法
 
