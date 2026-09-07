@@ -26,7 +26,6 @@ HTTP 回應狀態碼表示特定的 [HTTP](/zh-TW/docs/Web/HTTP) 請求是否已
   - : 這個代碼是作為對來自用戶端的 {{HTTPHeader("Upgrade")}} 請求標頭的回應，並指示伺服器正在切換到的協議。
 - `102 Processing` {{deprecated_inline}}
   - : 此代碼曾在{{Glossary("WebDAV", "基於 Web 的分散式編寫和版本控制（WebDAV）")}}的上下文中使用，用以表示伺服器已收到請求，但在回應當時尚無可用的狀態。該狀態碼最早於 {{RFC("2518")}} 中引入，但隨後在 {{RFC("4918")}} 中從 WebDAV 中移除。此回應碼已被廢棄且不再使用。
-    该响应码现已被废弃，不再使用。
 - {{HTTPStatus(103, "103 Early Hints")}}
   - : 這個狀態碼主要用於與 {{HTTPHeader("Link")}} 標頭一起使用，讓用戶代理在伺服器準備回應或者頁面需要從中獲取資源的原始來源時，開始[預加載](/zh-TW/docs/Web/HTML/Reference/Attributes/rel/preload)資源或者[預連接](/zh-TW/docs/Web/HTML/Reference/Attributes/rel/preconnect)到一個來源。
 
