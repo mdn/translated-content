@@ -28,7 +28,7 @@ Ce type d'objet est conçu pour contenir de petit extraits audio, durant génér
 ## Méthodes
 
 - {{domxref("AudioBuffer.getChannelData()")}}
-  - : Retourne un {{domxref ("Float32Array")}} contenant les données PCM associés au canal, défini par l'index du canal (0 représentant le premier canal).
+  - : Retourne un {{jsxref("Float32Array")}} contenant les données PCM associés au canal, défini par l'index du canal (0 représentant le premier canal).
 - {{domxref("AudioBuffer.copyFromChannel()")}}
   - : Copie les échantillons du canal associé à `AudioBuffer` dans un tableau de destination.
 - {{domxref("AudioBuffer.copyToChannel()")}}

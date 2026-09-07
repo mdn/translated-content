@@ -374,7 +374,7 @@ Une visualisation audio consiste en général à utiliser un flux de données au
 On peut accéder aux données en utilisant les méthodes suivantes:
 
 - {{domxref("AnalyserNode.getFloatFrequencyData()")}}
-  - : Copie les données de fréquence dans le tableau {{domxref("Float32Array")}} passé en argument.
+  - : Copie les données de fréquence dans le tableau {{jsxref("Float32Array")}} passé en argument.
 
 <!---->
 
@@ -384,7 +384,7 @@ On peut accéder aux données en utilisant les méthodes suivantes:
 <!---->
 
 - {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
-  - : Copie les données de l'onde de forme, ou domaine temporel, dans le {{domxref("Float32Array")}} passé en argument.
+  - : Copie les données de l'onde de forme, ou domaine temporel, dans le {{jsxref("Float32Array")}} passé en argument.
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
   - : Copie les données de l'onde de forme, ou domaine temporel, dans le tableau d'octets non signés {{domxref("Uint8Array")}} passé en argument.
 
