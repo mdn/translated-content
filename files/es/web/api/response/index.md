@@ -38,7 +38,7 @@ Tú puedes crear un nuevo objeto `Response` usando el constructor{{domxref("Resp
 - {{domxref("Body.body")}} {{readonlyInline}}
   - : Un simple método get que expone un {{domxref("ReadableStream")}} de los contenidos del body.
 - {{domxref("Body.bodyUsed")}} {{readonlyInline}}
-  - : Almacena un {{domxref("Boolean")}} en el cuál declara si el body ya fue enviado como respuesta anteriormente.
+  - : Almacena un {{jsxref("Boolean")}} en el cuál declara si el body ya fue enviado como respuesta anteriormente.
 
 ## Methods
 
