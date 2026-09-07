@@ -29,12 +29,12 @@ serviceWorkerRegistration.showNotification(title, [options]);
 
       Les réponses appropriées sont construites à l'aide de `event.action` dans l'événement [`notificationclick`](/fr/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event).
 
-    - `badge`: Un {{domxref ("USVString")}} contenant l'URL de l'image utilisée pour représenter la notification lorsqu'il n'y a pas assez d'espace pour afficher la notification elle-même.
+    - `badge`: Un {{jsxref("String")}} contenant l'URL de l'image utilisée pour représenter la notification lorsqu'il n'y a pas assez d'espace pour afficher la notification elle-même.
     - `body`: Un {{jsxref("String")}} représentant le corps du texte de la notification, qui est affiché sous le titre.
     - `data`: Données arbitraires que vous souhaitez associer à la notification. Elles peuvent être de n'importe quel type de données.
     - `dir`: La direction dans laquelle afficher la notification. La valeur par défaut est `auto`, qui adopte simplement le comportement du paramètre de langue du navigateur, mais vous pouvez remplacer ce comportement en définissant les valeurs de `ltr` et `rtl` (bien que la plupart des navigateurs semblent ignorer ces paramètres.)
-    - `icon`: Une {{domxref ("USVString")}} contenant l'URL d'une icône à afficher dans la notification.
-    - `image`: Une {{domxref ("USVString")}} contenant l'URL d'une image à afficher dans la notification.
+    - `icon`: Une {{jsxref("String")}} contenant l'URL d'une icône à afficher dans la notification.
+    - `image`: Une {{jsxref("String")}} contenant l'URL d'une image à afficher dans la notification.
     - `lang`: La langue de la notification, telle que spécifiée à l'aide d'un {{jsxref("String")}} représentant une [balise de langue BCP 47](https://www.rfc-editor.org/info/bcp/bcp47.txt). Consultez la page des [codes de langue à 2 lettres ISO](https://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/) de Sitepoint pour une référence simple.
     - `renotify`: Un {{jsxref("Boolean", "Booléen")}} spécifiant si l'utilisateur doit être notifié après qu'une nouvelle notification remplace l'ancienne. La valeur par défaut est `false`, ce qui signifie qu'ils ne seront pas notifiés.
     - `requireInteraction`: Un {{jsxref("Boolean", "Booléen")}} indiquant qu'une notification doit rester active jusqu'à ce que l'utilisateur clique dessus ou la rejette, plutôt que de se fermer automatiquement. La valeur par défaut est `false`.
