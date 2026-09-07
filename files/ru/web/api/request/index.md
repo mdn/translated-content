@@ -56,7 +56,7 @@ slug: Web/API/Request
 `Request` имплементирует {{domxref("Body")}}, таким образом наследуя следующие параметры:
 
 - {{domxref("Body.arrayBuffer()")}}
-  - : Возвращает промис, который выполняется, возвращая {{domxref("ArrayBuffer")}} репрезентацию тела запроса.
+  - : Возвращает промис, который выполняется, возвращая {{jsxref("ArrayBuffer")}} репрезентацию тела запроса.
 - {{domxref("Body.blob()")}}
   - : Возвращает promise
 - {{domxref("Body.formData()")}}

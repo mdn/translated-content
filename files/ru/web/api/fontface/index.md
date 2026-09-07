@@ -10,7 +10,7 @@ slug: Web/API/FontFace
 ## Конструктор
 
 - {{domxref("FontFace.FontFace", "FontFace()")}}
-  - : Создаёт и возвращает новый объект `FontFace`, созданный из внешнего ресурса, описанного URL-адресом или из {{domxref("ArrayBuffer")}}.
+  - : Создаёт и возвращает новый объект `FontFace`, созданный из внешнего ресурса, описанного URL-адресом или из {{jsxref("ArrayBuffer")}}.
 
 ## Свойства
 
