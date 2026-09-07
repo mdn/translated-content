@@ -15,11 +15,11 @@ style.setProperty(propertyName, value, priority);
 
 ### 参数
 
-- _`propertyName`_ 是一个 {{domxref('DOMString')}} ，代表被更改的 CSS 属性。
-- _`value`_{{optional_inline}} 是一个 {{domxref('DOMString')}} ，含有新的属性值。如果没有指定，则当作空字符串。
+- _`propertyName`_ 是一个 {{jsxref("String")}} ，代表被更改的 CSS 属性。
+- _`value`_{{optional_inline}} 是一个 {{jsxref("String")}} ，含有新的属性值。如果没有指定，则当作空字符串。
   - 注意：_`value`_ 不能包含 `"!important"` --那个应该使用 _`priority`_ 参数。
 
-- _`priority`_{{optional_inline}} 是一个 {{domxref('DOMString')}} 允许设置 "important" CSS 优先级。如果没有指定，则当作空字符串。
+- _`priority`_{{optional_inline}} 是一个 {{jsxref("String")}} 允许设置 "important" CSS 优先级。如果没有指定，则当作空字符串。
 
 ### 返回值
 
