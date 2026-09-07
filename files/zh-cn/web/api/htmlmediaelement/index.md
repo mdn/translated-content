@@ -7,7 +7,7 @@ slug: Web/API/HTMLMediaElement
 
 HTML 媒体元素接口在属性和方法中添加了 {{domxref("HTMLElement", "HTML 元素", "", 1)}}来支持基础的媒体相关的能力，就像音频和视频一样。{{domxref("HTMLVideoElement", "HTML 视频元素", "", 1)}}和{{domxref("HTMLAudioElement", "HTML 音频元素", "", 1)}}元素都继承自此接口。
 
-{{InheritanceDiagram(600, 180)}}
+{{InheritanceDiagram}}
 
 ## 特性
 
