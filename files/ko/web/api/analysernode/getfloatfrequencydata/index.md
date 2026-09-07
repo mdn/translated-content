@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("Web Audio API") }}
 
-{{domxref("AnalyserNode")}} 인터페이스의 **`getFloatFrequencyData()`** 메서드는 전달된 {{domxref("Float32Array")}} 배열 내로 현재 주파수 데이터를 복사합니다. 이 배열은 샘플, 즉 어느 한 시점에 신호의 강도입니다.
+{{domxref("AnalyserNode")}} 인터페이스의 **`getFloatFrequencyData()`** 메서드는 전달된 {{jsxref("Float32Array")}} 배열 내로 현재 주파수 데이터를 복사합니다. 이 배열은 샘플, 즉 어느 한 시점에 신호의 강도입니다.
 
 배열 내의 각 원소는 특정한 주파수에 대한 데시벨 값을 나타냅니다. 주파수들은 0에서 샘플 레이트의 1/2까지 선형적으로 퍼져 있습니다. 예를 들자면, `48000` Hz 샘플 레이트에 대해서, 배열의 마지막 원소는 `24000` Hz에 대한 데시벨 값을 나타냅니다.
 
@@ -23,7 +23,7 @@ getFloatFrequencyData(array)
 ### 매개변수
 
 - `array`
-  - : 주파수 영역 데이터가 복사될 {{domxref("Float32Array")}}. 소리가 없는 모든 샘플의 값은 `-Infinity`입니다. 배열의 요소 수가 {{domxref("AnalyserNode.frequencyBinCount")}}보다 더 적으면, 초과한 요소들은 탈락됩니다. 반대로, 배열의 요소 수가 더 크면, 초과한 요소들은 무시됩니다.
+  - : 주파수 영역 데이터가 복사될 {{jsxref("Float32Array")}}. 소리가 없는 모든 샘플의 값은 `-Infinity`입니다. 배열의 요소 수가 {{domxref("AnalyserNode.frequencyBinCount")}}보다 더 적으면, 초과한 요소들은 탈락됩니다. 반대로, 배열의 요소 수가 더 크면, 초과한 요소들은 무시됩니다.
 
 ### 반환 값
 
