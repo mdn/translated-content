@@ -53,7 +53,7 @@ Tú puedes crear un nuevo objeto `Response` usando el constructor{{domxref("Resp
 <!---->
 
 - {{domxref("Body.arrayBuffer()")}}
-  - : Toma un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve con un {{domxref("ArrayBuffer")}}.
+  - : Toma un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve con un {{jsxref("ArrayBuffer")}}.
 - {{domxref("Body.blob()")}}
   - : Toma un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve con un {{domxref("Blob")}}.
 - {{domxref("Body.formData()")}}

@@ -309,7 +309,7 @@ El constructor {{domxref("Response.Response","Response()")}} toma dos argurmento
 
 Tanto las peticiones como las respuestas pueden contener datos body. Body es una instancia de cualquiera de los siguientes tipos:
 
-- {{domxref("ArrayBuffer")}}
+- {{jsxref("ArrayBuffer")}}
 - {{domxref("ArrayBufferView")}} (Uint8Array y amigos)
 - {{domxref("Blob")}}/File
 - string

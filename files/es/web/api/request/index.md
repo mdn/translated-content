@@ -54,7 +54,7 @@ Puedes crear un nuevo objeto `Request` usando el constructor {{domxref("Request.
 `Request` implementa {{domxref("Body")}}, por lo que también tiene los siguientes métodos disponibles:
 
 - {{domxref("Body.arrayBuffer()")}}
-  - : Devuelve una promesa que se resuelve con una representación {{domxref("ArrayBuffer")}} del cuerpo de la solicitud.
+  - : Devuelve una promesa que se resuelve con una representación {{jsxref("ArrayBuffer")}} del cuerpo de la solicitud.
 - {{domxref("Body.blob()")}}
   - : Devuelve una promesa que se resuelve con una representación {{domxref("Blob")}} del cuerpo de la solicitud.
 - {{domxref("Body.formData()")}}
