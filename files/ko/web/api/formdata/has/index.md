@@ -25,7 +25,7 @@ formData.has(name);
 
 ### Returns
 
-{{domxref("Boolean")}}.
+{{jsxref("Boolean")}}.
 
 ## Example
 

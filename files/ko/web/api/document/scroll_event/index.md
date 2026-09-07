@@ -22,8 +22,8 @@ document view 나 element가 스크롤 될 때, **`scroll`** 이벤트가 발생
 | ------------------------------- | -------------------------- | --------------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | 이벤트 대상 (DOM 트리의 최상위 타겟)                      |
 | `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | 이벤트의 타입                                             |
-| `bubbles` {{readonlyInline}}    | {{domxref("Boolean")}}     | 이벤트가 버블이 되는지                                    |
-| `cancelable` {{readonlyInline}} | {{domxref("Boolean")}}     | 이벤트 취소가 가능한지                                    |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | 이벤트가 버블이 되는지                                    |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | 이벤트 취소가 가능한지                                    |
 | `view` {{readonlyInline}}       | {{domxref("WindowProxy")}} | {{domxref("Document.defaultView")}} (document의 `window`) |
 | `detail` {{readonlyInline}}     | `long` (`float`)           | `0`.                                                      |
 

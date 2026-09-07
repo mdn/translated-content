@@ -23,7 +23,7 @@ slug: Web/API/Text
 부모인 {{domxref("CharacterData")}}로부터 속성을 상속합니다.
 
 - {{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}{{deprecated_inline() }}
-  - : 텍스트 노드가 공백만 포함하는지 여부를 나타내는 {{domxref("Boolean")}} 플래그를 반환합니다.
+  - : 텍스트 노드가 공백만 포함하는지 여부를 나타내는 {{jsxref("Boolean")}} 플래그를 반환합니다.
 - {{domxref("Text.wholeText")}} {{readonlyInline}}
   - : 이 {{domxref("Node")}}와 논리적으로 인접한 모든 `Text` 노드의 텍스트를 문서 내의 순서대로 이어붙인 {{domxref("DOMString")}}을 반환합니다.
 - {{domxref("Text.assignedSlot")}} {{readonlyinline}}
