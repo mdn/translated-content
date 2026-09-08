@@ -1,7 +1,6 @@
 ---
 title: ¿Qué contiene la cabecera? Metadatos de la página web
 slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
-l10n.sourceCommit: 0d59135676db5a372b4dd692f0686e6bdfc13b51
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content")}}
