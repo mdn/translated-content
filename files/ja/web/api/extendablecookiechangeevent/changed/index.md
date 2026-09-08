@@ -8,7 +8,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("service")}}
 
- **`changed`** は {{domxref("ExtendableCookieChangeEvent")}} インターフェイスの読み取り専用プロパティで、指定された `ExtendableCookieChangeEvent` のインスタンスで変更されたすべての Cookie を返します。
+**`changed`** は {{domxref("ExtendableCookieChangeEvent")}} インターフェイスの読み取り専用プロパティで、指定された `ExtendableCookieChangeEvent` のインスタンスで変更されたすべての Cookie を返します。
 
 ## 値
 
