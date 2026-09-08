@@ -3,8 +3,6 @@ title: downloads.removeFile()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/removeFile
 ---
 
-{{AddonSidebar}}
-
 La fonction **`removeFile()`** de l'API {{WebExtAPIRef("downloads")}} supprime un fichier téléchargé du disque.
 
 Cette API supprime le fichier du disque, mais ne le supprime pas de l'historique des téléchargements du navigateur, donc un appel {{WebExtAPIRef("downloads.search()")}} renvoie toujours l'élément comme {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}, mais son attribut `exists` sera `false`.

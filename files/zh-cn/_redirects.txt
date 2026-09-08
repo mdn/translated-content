@@ -4159,6 +4159,7 @@
 /zh-CN/docs/Web/HTTP/Public_Key_Pinning	/zh-CN/docs/Web/Security/Defenses/Certificate_Transparency
 /zh-CN/docs/Web/HTTP/Range_requests	/zh-CN/docs/Web/HTTP/Guides/Range_requests
 /zh-CN/docs/Web/HTTP/Redirections	/zh-CN/docs/Web/HTTP/Guides/Redirections
+/zh-CN/docs/Web/HTTP/Reference/Status/102	/zh-CN/docs/Web/HTTP/Reference/Status#102_processing
 /zh-CN/docs/Web/HTTP/Resources_and_URIs	/zh-CN/docs/Web/HTTP/Guides/MIME_types
 /zh-CN/docs/Web/HTTP/Resources_and_specifications	/zh-CN/docs/Web/HTTP/Reference/Resources_and_specifications
 /zh-CN/docs/Web/HTTP/Response_codes	/zh-CN/docs/Web/HTTP/Reference/Status
@@ -4169,7 +4170,7 @@
 /zh-CN/docs/Web/HTTP/Status	/zh-CN/docs/Web/HTTP/Reference/Status
 /zh-CN/docs/Web/HTTP/Status/100	/zh-CN/docs/Web/HTTP/Reference/Status/100
 /zh-CN/docs/Web/HTTP/Status/101	/zh-CN/docs/Web/HTTP/Reference/Status/101
-/zh-CN/docs/Web/HTTP/Status/102	/zh-CN/docs/Web/HTTP/Reference/Status/102
+/zh-CN/docs/Web/HTTP/Status/102	/zh-CN/docs/Web/HTTP/Reference/Status#102_processing
 /zh-CN/docs/Web/HTTP/Status/103	/zh-CN/docs/Web/HTTP/Reference/Status/103
 /zh-CN/docs/Web/HTTP/Status/200	/zh-CN/docs/Web/HTTP/Reference/Status/200
 /zh-CN/docs/Web/HTTP/Status/201	/zh-CN/docs/Web/HTTP/Reference/Status/201

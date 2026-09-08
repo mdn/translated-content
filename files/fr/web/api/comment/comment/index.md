@@ -5,7 +5,7 @@ slug: Web/API/Comment/Comment
 
 {{ApiRef("DOM")}}{{seeCompatTable}}
 
-Le constructeur **`Comment()`** renvoie un objet {{domxref("Comment")}} _(Commentaire)_ nouvellement créé avec le {{domxref ("DOMString")}} donné en paramètre comme contenu textuel.
+Le constructeur **`Comment()`** renvoie un objet {{domxref("Comment")}} _(Commentaire)_ nouvellement créé avec le {{jsxref("String")}} donné en paramètre comme contenu textuel.
 
 ## Syntaxe
 

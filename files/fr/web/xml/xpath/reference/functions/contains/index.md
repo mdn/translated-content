@@ -4,8 +4,6 @@ slug: Web/XML/XPath/Reference/Functions/contains
 original_slug: Web/XPath/Functions/contains
 ---
 
-{{XsltSidebar}}
-
 La fonction `contains` détermine si la chaîne passée en premier argument contient la chaîne passée en second argument et retourne le booléen `true` ou `false`.
 
 ### Syntaxe

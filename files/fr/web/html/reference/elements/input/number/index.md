@@ -1,6 +1,6 @@
 ---
-title: Valeur d'attribut HTML `Valeur d'attribut HTML `<input type="number">``
-short-title: Valeur d'attribut HTML `<input type="number">`
+title: Valeur d'attribut HTML `<input type="number">`
+short-title: <input type="number">
 slug: Web/HTML/Reference/Elements/input/number
 l10n:
   sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc

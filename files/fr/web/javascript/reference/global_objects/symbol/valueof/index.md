@@ -3,8 +3,6 @@ title: Symbol.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 ---
 
-{{JSRef}}
-
 La méthode **`valueOf()`** renvoie la valeur primitive correspondant à l'objet `Symbol`.
 
 ## Syntaxe

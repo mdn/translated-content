@@ -128,7 +128,7 @@ document.fonts.add(bitterFontFace);
 log.textContent += `Bitter font: ${bitterFontFace.status}\n`; // > Bitter font: unloaded
 ```
 
-然后我们调用 {{domxref('FontFace.load()')}} 方法来加载字体，并等待返回的 {{domxref('Promise')}} 对象。当 `Promise` 兑现时，我们打印字体状态（为 `loaded`）的日志，并使用已加载的字体在 canvas 中绘制文本。
+然后我们调用 {{domxref('FontFace.load()')}} 方法来加载字体，并等待返回的 {{jsxref("Promise")}} 对象。当 `Promise` 兑现时，我们打印字体状态（为 `loaded`）的日志，并使用已加载的字体在 canvas 中绘制文本。
 
 ```js
 bitterFontFace.load().then(

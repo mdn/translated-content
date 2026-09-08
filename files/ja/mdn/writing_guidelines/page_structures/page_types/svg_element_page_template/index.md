@@ -54,7 +54,7 @@ l10n:
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 ページのコンテンツは導入段落から始めましょう。要素名から始め、それが何をするのかを買いてください。
 これはできれば 1 つか 2 つの短い文章にしてください。

@@ -7,8 +7,6 @@ l10n:
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps/Tutorials/js13kGames/Loading", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
-{{PWASidebar}}
-
 Mettre en cache le contenu d'une application pour travailler en mode déconnecté est une fonctionnalité appréciable, tout comme l'installation d'une application web sur son écran d'accueil. Toutefois, nous pouvons aller plus loin que les utilisations initiées par la personne. En effet, grâce aux messages poussés (<i lang="en">push messages</i>) et aux notifications, nous pouvons informer l'utilisatrice ou l'utilisateur que de nouvelles informations sont disponibles.
 
 ## Deux API, un seul but

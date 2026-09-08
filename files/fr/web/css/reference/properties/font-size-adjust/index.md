@@ -3,10 +3,10 @@ title: Propriété CSS `font-size-adjust`
 short-title: font-size-adjust
 slug: Web/CSS/Reference/Properties/font-size-adjust
 l10n:
-  sourceCommit: 82eeb8918aee4fe017a6ef1cb286bfd0a8a0ff43
+  sourceCommit: 032208d4eb693c082d62e570f80ed5542325bbb6
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`font-size-adjust`** ajuste la taille d'une police pour correspondre à un indicateur de police choisit, telle que la hauteur des lettres minuscules, à une proportion définie de la {{cssxref("font-size")}}. Cette propriété est destinée à ajuster les polices de repli afin qu'elles aient des métriques similaires à celles de la police de premier choix.
+La propriété [CSS](/fr/docs/Web/CSS) **`font-size-adjust`** ajuste la taille d'une police pour correspondre à un indicateur de police choisit, telle que la hauteur des lettres minuscules, à une proportion définie de la {{CSSxRef("font-size")}}. Cette propriété est destinée à ajuster les polices de repli afin qu'elles aient des métriques similaires à celles de la police de premier choix.
 
 La lisibilité peut devenir un problème lorsque la première {{CSSxRef("font-family")}} n'est pas disponible et que la fonte de repli qui la remplace possède une valeur d'aspect très différente (hauteur des lettres minuscules divisée par la taille de la fonte). La lisibilité des fontes, en particulier pour les petites tailles, dépend davantage de la taille des lettres minuscules que de celle des lettres majuscules. La propriété `font-size-adjust` est utile pour ajuster la taille de la fonte de repli afin de conserver une valeur d'aspect cohérente entre les fontes, garantissant ainsi une apparence similaire du texte quelle que soit la fonte utilisée.
 
@@ -38,7 +38,7 @@ Cette propriété définie comme valeur le mot-clé `none`, ou une valeur (`<num
 
 - `none`
   - : Aucun ajustement de la taille n'est appliqué.
-- `<font-metric>` {{optional_inline}}
+- `<font-metric>` {{Optional_Inline}}
   - : Définit l'indicateur de fonte à utiliser pour ajuster la taille de la fonte. Par défaut, `ex-height` est utilisé si aucun `<font-metric>` n'est défini. Ce paramètre est défini comme l'un des mots-clés suivants&nbsp;:
     - `ex-height`
       - : Utilise le ratio de la hauteur d'x (hauteur de la lettre minuscule «&nbsp;x&nbsp;» dans une fonte) à la taille de la fonte (valeur d'aspect) pour ajuster la taille de la fonte. Cette valeur de mot-clé est utilisée pour normaliser les lettres minuscules entre les fontes.
@@ -63,9 +63,9 @@ Cette propriété définie comme valeur le mot-clé `none`, ou une valeur (`<num
 
 ## Description
 
-La propriété `font-size-adjust` ajuste la taille d'une fonte pour correspondre à un indicateur de fonte choisit, telle que la hauteur des lettres minuscules, à une proportion définie de la {{cssxref("font-size")}}. L'ajustement est appliqué à chaque fonte utilisée pour rendre le texte, et pas seulement aux fontes de repli.
+La propriété `font-size-adjust` ajuste la taille d'une fonte pour correspondre à un indicateur de fonte choisit, telle que la hauteur des lettres minuscules, à une proportion définie de la {{CSSxRef("font-size")}}. L'ajustement est appliqué à chaque fonte utilisée pour rendre le texte, et pas seulement aux fontes de repli.
 
-Définir une valeur `<number>` ajuste la taille de la fonte en fonction du `<font-metric>` par défaut ou défini. Par exemple, lorsque la valeur est définie sur `ex-height`, la valeur `<number>` ajuste la taille de la fonte sélectionnée de sorte que la hauteur de son glyphe `x` soit le multiple défini de la taille de la fonte. Cette valeur doit généralement correspondre à la valeur d'aspect (ratio de la hauteur en x à la taille de la fonte) de la première fonte choisie. Cela signifie que la première fonte, lorsqu'elle est disponible, s'affiche de manière cohérente dans tous les navigateurs. La sélection d'une valeur différente redimensionne également la première fonte choisie, mais dans ce cas, il est préférable de modifier la {{cssxref("font-size")}} à la place.
+Définir une valeur `<number>` ajuste la taille de la fonte en fonction du `<font-metric>` par défaut ou défini. Par exemple, lorsque la valeur est définie sur `ex-height`, la valeur `<number>` ajuste la taille de la fonte sélectionnée de sorte que la hauteur de son glyphe `x` soit le multiple défini de la taille de la fonte. Cette valeur doit généralement correspondre à la valeur d'aspect (ratio de la hauteur en x à la taille de la fonte) de la première fonte choisie. Cela signifie que la première fonte, lorsqu'elle est disponible, s'affiche de manière cohérente dans tous les navigateurs. La sélection d'une valeur différente redimensionne également la première fonte choisie, mais dans ce cas, il est préférable de modifier la {{CSSxRef("font-size")}} à la place.
 
 > [!NOTE]
 > Si le `<font-metric>` défini a été redéfini dans {{CSSxRef("@font-face")}}, par exemple en utilisant le descripteur [`size-adjust`](/fr/docs/Web/CSS/Reference/At-rules/@font-face/size-adjust), alors l'indicateur redéfini est utilisé dans le calcul de `font-size-adjust`. Cela signifie que lorsque `font-size-adjust` et `size-adjust` sont appliqués ensemble, `size-adjust` n'a aucun effet.

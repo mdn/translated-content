@@ -3,7 +3,7 @@ title: 元素：keypress 事件
 slug: Web/API/Element/keypress_event
 ---
 
-{{APIRef}} {{deprecated_header}}
+{{APIRef}}
 
 当按下产生字符或符号值的键时，将触发 `keypress` 事件。
 

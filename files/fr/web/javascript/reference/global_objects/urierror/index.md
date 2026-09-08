@@ -3,8 +3,6 @@ title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
 ---
 
-{{JSRef}}
-
 L'objet **`URIError`** représente une erreur renvoyée lorsqu'une fonction de manipulation d'URI a été utilisée de façon inappropriée.
 
 ## Constructeur

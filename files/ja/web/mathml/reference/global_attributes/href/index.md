@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 29e6ba9d844b835a1f00346ef1a78fa5d9e7c1a8
 ---
 
-{{Non-standard_header}}{{deprecated_header}}
+{{Non-standard_header}}
 
 **`href`** は[グローバル属性](/ja/docs/Web/MathML/Reference/Global_attributes)で、MathML 要素上に、指定された URL を指すハイパーリンクを作成します。
 

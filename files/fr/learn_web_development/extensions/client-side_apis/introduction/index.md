@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ccafad98826d97da19728626047a7020000fd639
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Extensions/Client-side_APIs")}}
+{{NextMenu("Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 Tout d'abord, nous verrons dans les grandes lignes ce qu'est une API&nbsp;: leur fonctionnement, comment les utiliser dans votre code, et leur structure. Nous verrons également quelles sont les principales API et leur utilisation.
 

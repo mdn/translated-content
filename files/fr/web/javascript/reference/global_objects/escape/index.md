@@ -2,10 +2,8 @@
 title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 > [!NOTE]
 > `escape()` est une fonction non standard implémentée par les navigateurs et n'a été standardisée que pour la compatibilité inter-moteurs. Elle n'est pas requise dans tous les moteurs JavaScript et peut ne pas fonctionner partout. Utilisez {{JSxRef("encodeURIComponent()")}} ou {{JSxRef("encodeURI()")}} si possible.
@@ -34,7 +32,7 @@ Une nouvelle chaîne de caractères dont certains caractères ont été échapp�
 La fonction `escape()` remplace tous les caractères par des séquences d'échappement, à l'exception des caractères de mot {{Glossary("ASCII")}} (A—Z, a—z, 0—9, \_) et `@\*_+-./`. Les caractères sont échappés par unités de code UTF-16. Si la valeur de l'unité de code est inférieure à 256, elle est représentée par un nombre hexadécimal à deux chiffres au format `%XX`, complété à gauche par 0 si nécessaire. Sinon, elle est représentée par un nombre hexadécimal à quatre chiffres au format `%uXXXX`, complété à gauche par 0 si nécessaire.
 
 > [!NOTE]
-> Cette fonction était principalement utilisée pour {{Glossary("Percent-encoding", "l'encodage en pourcent")}} et est en partie basée sur le format d'échappement de {{RFC(1738)}}. Le format d'échappement n'est _pas_ une [séquence d'échappement](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#séquences_déchappement) dans les littéraux de chaîne. Vous pouvez remplacer `%XX` par `\xXX` et `%uXXXX` par `\uXXXX` pour obtenir une chaîne contenant de véritables séquences d'échappement de littéraux de chaîne.
+> Cette fonction était principalement utilisée pour {{Glossary("Percent-encoding", "l'encodage en pourcent")}} et est en partie basée sur le format d'échappement de {{RFC(1738)}}. Le format d'échappement n'est _pas_ une [séquence d'échappement](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#séquences_déchappement) dans les littéraux de chaîne de caractères. Vous pouvez remplacer `%XX` par `\xXX` et `%uXXXX` par `\uXXXX` pour obtenir une chaîne de caractères contenant de véritables séquences d'échappement de littéraux de chaîne de caractères.
 
 ## Exemples
 

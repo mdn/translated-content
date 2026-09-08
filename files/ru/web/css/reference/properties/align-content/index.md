@@ -6,7 +6,7 @@ original_slug: Web/CSS/align-content
 
 {{CSSRef}}
 
-Свойство {{cssxRef('', 'CSS')}} **`align-content`** устанавливает распределение пространства между и вокруг элементами контента вдоль поперечной оси {{cssxRef('CSS_Flexible_Box_Layout', 'flexbox')}} контейнера или вдоль блочной оси {{cssxRef('CSS_Grid_Layout', 'grid')}} контейнера.
+Свойство [CSS](/ru/docs/Web/CSS) **`align-content`** устанавливает распределение пространства между и вокруг элементами контента вдоль поперечной оси {{cssxRef('CSS_Flexible_Box_Layout', 'flexbox')}} контейнера или вдоль блочной оси {{cssxRef('CSS_Grid_Layout', 'grid')}} контейнера.
 
 The interactive example below use Grid Layout to demonstrate some of the values of this property.
 

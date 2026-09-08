@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feSpotLight
 original_slug: Web/SVG/Element/feSpotLight
 ---
 
-{{SVGRef}}
-
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feSpotLight>`** définit une source de lumière qui permet de créer un feu de projecteur. On la place dans une primitive de filtre d'éclairage: {{SVGElement("feDiffuseLighting")}} ou {{SVGElement("feSpecularLighting")}}.
 
 ## Contexte d'utilisation

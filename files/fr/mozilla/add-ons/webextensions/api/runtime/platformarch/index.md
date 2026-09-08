@@ -3,8 +3,6 @@ title: runtime.PlatformArch
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch
 ---
 
-{{AddonSidebar}}
-
 L'architecture du processeur de la machine.
 
 ## Type

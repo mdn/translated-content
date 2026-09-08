@@ -60,7 +60,7 @@ L'appel à `Permissions.query()` doit définir l'origine intégrée&nbsp;:
 ```js
 navigator.permissions.query({
   name: "top-level-storage-access",
-  requestedOrigin: "https://www.example.com,
+  requestedOrigin: "https://www.example.com",
 });
 ```
 
@@ -72,7 +72,7 @@ navigator.permissions.query({
 ```js
 function rSAFor() {
   if ("requestStorageAccessFor" in document) {
-    document.requestStorageAccessFor("https://example.com).then(
+    document.requestStorageAccessFor("https://example.com").then(
       (res) => {
         // Utiliser l'accès au stockage
         faireUnTrucAvecLesCookies();

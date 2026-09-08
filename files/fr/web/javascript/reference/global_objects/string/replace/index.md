@@ -3,8 +3,6 @@ title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
 ---
 
-{{JSRef}}
-
 La méthode **`replace()`** renvoie une nouvelle chaîne de caractères dans laquelle tout ou partie des correspondances à un `modèle` sont remplacées par un `remplacement`. Le `modèle` utilisé peut être une {{jsxref("RegExp")}} et le remplacement peut être une chaîne ou une fonction à appeler pour chaque correspondance. Si `modèle` est une chaîne de caractères, seule la première correspondance sera remplacée.
 
 La chaîne de caractère originale reste inchangée.

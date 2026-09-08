@@ -3,14 +3,14 @@ title: "Permissions-Policy : directive browsing-topics"
 short-title: browsing-topics
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/browsing-topics
 l10n:
-  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 L'en-tête HTTP {{HTTPHeader("Permissions-Policy")}} avec la directive **`browsing-topics`** contrôle l'accès à [l'API Topics](/fr/docs/Web/API/Topics_API).
 
-Lorsqu'une politique interdit spécifiquement l'utilisation de l'API Topics, toute tentative d'appel de la méthode {{DOMxRef("Document.browsingTopics()")}} ou d'envoi d'une requête avec un en-tête {{HTTPHeader("Sec-Browsing-Topics")}} échouera avec une `NotAllowedError` de l'objet {{DOMxRef("DOMException")}}.
+Lorsqu'une politique interdit spécifiquement l'utilisation de l'API Topics, toute tentative d'appel de la méthode {{DOMxRef("Document.browsingTopics()")}} ou d'envoi d'une requête avec un en-tête {{HTTPHeader("Sec-Browsing-Topics")}} échoue avec une `NotAllowedError` de l'objet {{DOMxRef("DOMException")}}.
 
 ## Syntaxe
 

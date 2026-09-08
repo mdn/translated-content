@@ -4,7 +4,7 @@ slug: Web/HTML/Reference/Elements/marquee
 original_slug: Web/HTML/Element/marquee
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{HTMLSidebar}}
 
 ## Resumen
 

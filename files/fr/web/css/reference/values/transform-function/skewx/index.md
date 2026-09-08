@@ -91,11 +91,11 @@ skewX(a)
   </tbody>
 </table>
 
-## Formal syntax
+## Syntaxe formelle
 
 {{CSSSyntax}}
 
-## Examples
+## Exemples
 
 ### HTML
 

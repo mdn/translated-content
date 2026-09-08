@@ -3,8 +3,6 @@ title: webRequest.StreamFilter.suspend()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/suspend
 ---
 
-{{AddonSidebar}}
-
 Suspend une demande. Après cet appel, plus aucune donnée ne sera livrée jusqu'à ce que la requête soit reprise avec un appel à {{WebExtAPIRef("webRequest.StreamFilter.resume()", "resume()")}}.
 
 Vous ne pouvez pas appeler cette fonction avant que l'événement {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} ne soit déclenché.

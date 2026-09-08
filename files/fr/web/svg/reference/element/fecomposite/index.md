@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feComposite
 original_slug: Web/SVG/Element/feComposite
 ---
 
-{{SVGRef}}
-
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feComposite>`** effectue la combinaison de deux images en entrée, pixel par pixel, en utilisant une des opérations de composition de Porter-Duff: `over`_,_ `in`_,_ `atop`_,_ `out`_,_ `xor`, et `lighter`. Il est également possible d'appliquer une opération de type `arithmetic` (avec un résultat borné entre \[0..1]).
 
 L'opération `arithmetic` est utile pour combiner le résultat de {{SVGElement("feDiffuseLighting")}} et {{SVGElement("feSpecularLighting")}} avec des textures. Si l'opération `arithmetic` est choisie, chaque pixel est calculé à l'aide de la formule suivante:

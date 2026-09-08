@@ -20,7 +20,11 @@ Los estilos definidos por la pseudoclase `:active` serán anulados por cualquier
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:active {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

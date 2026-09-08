@@ -2,7 +2,7 @@
 title: Temporal.Now
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Now
 l10n:
-  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
+  sourceCommit: 91b5a448a517239876a4bc92640bbbf29e30b106
 ---
 
 L'objet **`Temporal.Now`** d'espace de noms contient des méthodes statiques pour obtenir l'heure actuelle dans différents formats.
@@ -11,7 +11,7 @@ L'objet **`Temporal.Now`** d'espace de noms contient des méthodes statiques pou
 
 Contrairement à la plupart des objets universels, `Temporal.Now` n'est pas un constructeur. Vous ne pouvez pas l'utiliser avec l'opérateur {{JSxRef("new")}} ni invoquer l'objet `Temporal.Now` comme une fonction. Toutes les propriétés et méthodes de `Temporal.Now` sont statiques (tout comme l'objet {{JSxRef("Math")}}).
 
-Fondamentalement, l'heure système est retournée par le système d'exploitation comme un temps écoulé depuis l'époque Unix (généralement avec une précision au milliseconde, mais pouvant également être au nanoseconde). {{JSxRef("Temporal/Now/instant", "Temporal.Now.instant()")}} retourne ce temps sous forme d'objet {{JSxRef("Temporal.Instant")}}.
+Fondamentalement, l'heure système est retournée par le système d'exploitation comme un temps écoulé depuis l'époque Unix. {{JSxRef("Temporal/Now/instant", "Temporal.Now.instant()")}} retourne ce temps sous forme d'objet {{JSxRef("Temporal.Instant")}}. Bien que cet objet puisse représenter des nanosecondes, la résolution de l'heure actuelle dépend de l'horloge système et des paramètres du navigateur.
 
 Un instant peut être interprété dans un fuseau horaire (qui est le fuseau horaire système {{JSxRef("Temporal/Now/timeZoneId", "Temporal.Now.timeZoneId()")}} par défaut) de la même manière que {{JSxRef("Temporal/Instant/toZonedDateTimeISO", "Temporal.Instant.prototype.toZonedDateTimeISO()")}}. Pour obtenir un objet {{JSxRef("Temporal.ZonedDateTime")}}, vous pouvez utiliser {{JSxRef("Temporal/Now/zonedDateTimeISO", "Temporal.Now.zonedDateTimeISO()")}}. Vous pouvez également obtenir différentes parties de la date et de l'heure, en utilisant {{JSxRef("Temporal/Now/plainDateISO", "Temporal.Now.plainDateISO()")}}, {{JSxRef("Temporal/Now/plainTimeISO", "Temporal.Now.plainTimeISO()")}} et {{JSxRef("Temporal/Now/plainDateTimeISO", "Temporal.Now.plainDateTimeISO()")}}.
 
@@ -19,27 +19,11 @@ Par exemple, si l'ordinateur est réglé sur le fuseau horaire «&nbsp;America/N
 
 ### Réduire la précision temporelle
 
-Pour offrir une protection contre les attaques par analyse temporelle et contre [l'empreinte numérique](/fr/docs/Glossary/Fingerprinting), la précision des fonctions de `Temporal.Now` peut être arrondie selon les paramètres du navigateur. Dans Firefox, la préférence `privacy.reduceTimerPrecision` est activée par défaut et sa valeur par défaut est de 2ms. Vous pouvez aussi activer `privacy.resistFingerprinting`, auquel cas la précision sera de 100ms ou la valeur de `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, la plus grande des deux.
+Pour offrir une protection contre les attaques par analyse temporelle et contre [l'empreinte numérique](/fr/docs/Glossary/Fingerprinting), la précision de l'heure actuelle retournée par les méthodes `Temporal.Now` peut être réduite en fonction des paramètres du navigateur.
 
-Par exemple, avec une précision temporelle réduite, le résultat de `Temporal.Now.instant().epochMilliseconds` sera toujours un multiple de 2, ou un multiple de 100 (ou de `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`) lorsque `privacy.resistFingerprinting` est activé.
+Dans Chrome, l'intervalle d'arrondi est de `0.1ms`, ou de `0.005ms` dans les contextes isolés entre origines.
 
-```js
-// précision temporelle réduite (2ms) dans Firefox 60
-Temporal.Now.instant().epochMilliseconds;
-// Might be:
-// 1519211809934
-// 1519211810362
-// 1519211811670
-// …
-
-// précision temporelle réduite avec `privacy.resistFingerprinting` activé
-Temporal.Now.instant().epochMilliseconds;
-// Might be:
-// 1519129853500
-// 1519129858900
-// 1519129864400
-// …
-```
+Dans Firefox, ces méthodes obtiennent l'heure actuelle de la même manière que {{JSxRef("Date.now()")}}. Elles héritent de la précision de cette lecture de l'horloge sans introduire d'inexactitude supplémentaire. L'horodatage est toujours un nombre entier de millisecondes, donc sa résolution est limitée à 1 ms dans tous les contextes. L'accès à `epochNanoseconds` n'augmente pas sa précision.
 
 ## Propriétés statiques
 

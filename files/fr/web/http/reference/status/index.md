@@ -24,10 +24,12 @@ Les codes de statut listés ci-dessous sont définis par la [RFC 9110 <sup>(angl
   - : Cette réponse intermédiaire indique que tout est OK pour le moment et que le client peut continuer sa requête ou l'ignorer si celle-ci est déjà finie.
 - {{HTTPStatus(101, "101 Switching Protocols")}}
   - : Ce code est envoyé en réponse à un en-tête de requête {{HTTPHeader("Upgrade")}} de la part du client et indique le protocole sur lequel passe le serveur.
-- {{HTTPStatus(102, "102 Processing")}} {{Deprecated_Inline}}
-  - : Ce code était utilisé dans des contextes {{Glossary("WebDAV")}} pour indiquer qu'une requête a été reçue par le serveur, mais qu'aucun statut n'était disponible au moment de la réponse.
+- `102 Processing` {{Deprecated_Inline}}
+  - : Ce code était utilisé dans des contextes de {{Glossary("WebDAV", "Création de contenu distribuée sur le Web")}} pour indiquer qu'une requête avait été reçue par le serveur, mais qu'aucun statut n'était disponible au moment de la réponse.
+    Le code de statut a été introduit pour la première fois dans {{RFC("2518")}}, mais il a été supprimé de WebDAV dans {{RFC("4918")}}.
+    Le code de réponse a été obsolète et n'est plus utilisé.
 - {{HTTPStatus(103, "103 Early Hints")}}
-  - : Ce code de statut est principalement destiné à être utilisé avec l'en-tête {{HTTPHeader("Link")}}, permettant à l'agent utilisateur de commencer le [préchargement](/fr/docs/Web/HTML/Reference/Attributes/rel/preload) des ressources pendant que le serveur prépare une réponse ou de [préconnecter](/fr/docs/Web/HTML/Reference/Attributes/rel/preconnect) à une origine depuis laquelle la page a besoin de ressources.
+  - : Ce code de statut est principalement destiné à être utilisé avec l'en-tête {{HTTPHeader("Link")}}, permettant à l'agent utilisateur de commencer le [préchargement](/fr/docs/Web/HTML/Reference/Attributes/rel/preload) des ressources pendant que le serveur prépare une réponse ou de [pré-connecter](/fr/docs/Web/HTML/Reference/Attributes/rel/preconnect) à une origine depuis laquelle la page a besoin de ressources.
 
 ## Réponses de succès
 
@@ -42,7 +44,7 @@ Les codes de statut listés ci-dessous sont définis par la [RFC 9110 <sup>(angl
 - {{HTTPStatus(202, "202 Accepted")}}
   - : La requête a été reçue mais n'a pas encore été traitée. C'est une réponse évasive, ce qui signifie qu'il n'y a aucun moyen en HTTP d'envoyer une réponse asynchrone ultérieure indiquant le résultat issu du traitement de la requête. Elle est destinée aux cas où un autre processus ou serveur gère la requête, et peut être utile pour faire du traitement par lots.
 - {{HTTPStatus(203, "203 Non-Authoritative Information")}}
-  - : Ce code de réponse signifie que l'ensemble de méta-informations renvoyé n'est pas exactement l'ensemble disponible sur le serveur d'origine, mais plutôt un ensemble collecté à partir d'une copie locale ou tierce. Ce code est utilisé la plupart du temps par les serveurs miroirs ou de sauvegarde d'une autre ressource. À l'exception de cette condition, une réponse {{HTTPStatus(200, "200 OK")}} est préférable.
+  - : Ce code de réponse signifie que l'ensemble de méta-informations retourné n'est pas exactement l'ensemble disponible sur le serveur d'origine, mais plutôt un ensemble collecté à partir d'une copie locale ou tierce. Ce code est utilisé la plupart du temps par les serveurs miroirs ou de sauvegarde d'une autre ressource. À l'exception de cette condition, une réponse {{HTTPStatus(200, "200 OK")}} est préférable.
 - {{HTTPStatus(204, "204 No Content")}}
   - : Il n'y a pas de contenu à envoyer pour cette requête, mais les en-têtes peuvent être utiles. L'agent utilisateur peut mettre à jour ses en-têtes en cache pour cette ressource en les remplaçant par les nouveaux.
 - {{HTTPStatus(205, "205 Reset Content")}}
@@ -70,8 +72,8 @@ Les codes de statut listés ci-dessous sont définis par la [RFC 9110 <sup>(angl
 - {{HTTPStatus(304, "304 Not Modified")}}
   - : Ce code est utilisé pour des raisons de cache. Il indique au client que la réponse n'a pas été modifiée. De fait, le client peut continuer à utiliser la même version de la réponse, [mise en cache](/fr/docs/Web/HTTP/Guides/Caching).
 - `305 Use Proxy` {{Deprecated_Inline}}
-  - : A été défini dans une version antérieure de la spécification HTTP pour indiquer qu'une réponse sollicitée doit transiter par un proxy. Ce code est aujourd'hui périmé pour des raisons de sécurité relatives à la configuration d'un proxy.
-- `306 unused`
+  - : A été défini dans une version antérieure de la spécification HTTP pour indiquer qu'une réponse sollicitée doit transiter par un mandataire. Ce code est aujourd'hui périmé pour des raisons de sécurité relatives à la configuration d'un mandataire.
+- `306 Unused` {{Deprecated_Inline}}
   - : Ce code de réponse n'est plus en service, son usage est actuellement réservé. Il était utilisé dans une version précédente de la spécification HTTP/1.1.
 - {{HTTPStatus(307, "307 Temporary Redirect")}}
   - : Le serveur a envoyé cette réponse pour rediriger le client afin d'obtenir la ressource demandée par une autre URI, en utilisant la même méthode que précédemment. Ce code a la même sémantique que le code `302 Found`, à l'exception près que l'agent utilisateur _ne doit pas_ changer la méthode HTTP utilisée&nbsp;: si {{HTTPMethod("POST")}} était utilisé dans la première requête, alors `POST` doit être utilisé dans la seconde.
@@ -98,12 +100,12 @@ Les codes de statut listés ci-dessous sont définis par la [RFC 9110 <sup>(angl
 - {{HTTPStatus(407, "407 Proxy Authentication Required")}}
   - : Similaire au code `401`, sauf que l'authentification doit être effectuée au travers d'un proxy.
 - {{HTTPStatus(408, "408 Request Timeout")}}
-  - : Cette réponse est envoyée par une connexion en attente par certains serveurs, même sans qu'il y ait de requête préalable de la part du client. Cela signifie que le serveur aimerait fermer cette connexion inutilisée. Cette réponse est bien plus utilisée depuis que certains navigateurs, comme Chrome, Firefox 27+ ou IE9, utilisent des [mécanismes de préconnexion HTTP <sup>(angl.)</sup>](https://www.belshe.com/2011/02/10/the-era-of-browser-preconnect/) pour accélérer la navigation. Notez aussi que certains serveurs ferment simplement la connexion sans même envoyer ce message.
+  - : Cette réponse est envoyée par une connexion en attente par certains serveurs, même sans qu'il y ait de requête préalable de la part du client. Cela signifie que le serveur aimerait fermer cette connexion inutilisée. Cette réponse est bien plus utilisée depuis que certains navigateurs, comme Chrome, Firefox 27+ ou IE9, utilisent des [mécanismes de pré-connexion HTTP <sup>(angl.)</sup>](https://www.belshe.com/2011/02/10/the-era-of-browser-preconnect/) pour accélérer la navigation. Notez aussi que certains serveurs ferment simplement la connexion sans même envoyer ce message.
 - {{HTTPStatus(409, "409 Conflict")}}
   - : Cette réponse est envoyée lorsqu'une requête entre en conflit avec l'état actuel du serveur.
-    Dans l'édition web distante {{Glossary("WebDAV")}}, les réponses `409` sont des erreurs envoyées au client afin qu'un·e utilisateur·ice puisse résoudre un conflit et renvoyer la requête.
+    Dans l'édition web distante {{Glossary("WebDAV")}}, les réponses `409` sont des erreurs envoyées au client afin qu'un·e utilisateur·ice puisse résoudre un conflit et retourner la requête.
 - {{HTTPStatus(410, "410 Gone")}}
-  - : Cette réponse est envoyée lorsque le contenu demandé a été supprimé de façon permanente du serveur, sans nouvelle adresse. Les clients doivent vider les caches et liens associés à cette ressource. La spécification HTTP a conçu ce code de statut pour qu'il soit utilisé pour des «&nbsp;services promotionnels limités dans le temps&nbsp;». Les API ne devraient pas se sentir obligées d'indiquer que des ressources ont été supprimées avec ce code de statut.
+  - : Cette réponse est envoyée lorsque le contenu demandé a été supprimé de façon permanente du serveur, sans nouvelle adresse. Les clients doivent vider les caches et liens associés à cette ressource. La spécification HTTP a conçu ce code de statut pour qu'il soit utilisé pour des «&nbsp;services promotionnels limités dans le temps&nbsp;». Les API ne doivent pas se sentir obligées d'indiquer que des ressources ont été supprimées avec ce code de statut.
 - {{HTTPStatus(411, "411 Length Required")}}
   - : Le serveur a rejeté la requête, car le champ d'en-tête {{HTTPHeader("Content-Length")}} n'est pas défini et le serveur l'impose.
 - {{HTTPStatus(412, "412 Precondition Failed")}}
@@ -129,12 +131,12 @@ Les codes de statut listés ci-dessous sont définis par la [RFC 9110 <sup>(angl
 - {{HTTPStatus(424, "424 Failed Dependency")}} ({{Glossary("WebDAV")}})
   - : La requête a échoué à cause de l'échec d'une requête précédente.
 - {{HTTPStatus(425, "425 Too Early")}} {{Experimental_Inline}}
-  - : Indiquer que le serveur ne souhaite pas traiter une requête qui pourrait être rejouée.
+  - : Indiquer que le serveur ne souhaite pas traiter une requête qui peut être rejouée.
 - {{HTTPStatus(426, "426 Upgrade Required")}}
   - : Le serveur refuse de traiter la requête en utilisant le protocole actuel mais peut accepter de le faire si le client opte pour un autre protocole.
     Le serveur envoie un en-tête {{HTTPHeader("Upgrade")}} dans une réponse 426 pour indiquer le ou les protocoles requis.
 - {{HTTPStatus(428, "428 Precondition Required")}}
-  - : Le serveur d'origine impose que la requête soit conditionnelle. Ceci est prévu pour empêcher le problème de 'perte de mise à jour', où un client récupère l'état d'une ressource avec `GET`, le modifie, et le renvoie au serveur avec `PUT` pendant qu'un tiers modifie l'état du serveur, ce qui conduit à un conflit.
+  - : Le serveur d'origine impose que la requête soit conditionnelle. Ceci est prévu pour empêcher le problème de «&nbsp;perte de mise à jour&nbsp;», où un client récupère l'état d'une ressource avec `GET`, le modifie, et le retourne au serveur avec `PUT` pendant qu'un tiers modifie l'état du serveur, ce qui conduit à un conflit.
 - {{HTTPStatus(429, "429 Too Many Requests")}}
   - : L'utilisateur·ice a envoyé trop de requêtes dans un laps de temps donné ({{Glossary("Rate_limit", "limitation du débit")}}).
 - {{HTTPStatus(431, "431 Request Header Fields Too Large")}}
@@ -148,7 +150,7 @@ Les codes de statut listés ci-dessous sont définis par la [RFC 9110 <sup>(angl
   - : Le serveur a rencontré une situation qu'il ne sait pas traiter.
     Cette erreur est générique, indiquant que le serveur ne peut pas trouver de code de statut `5XX` plus approprié pour répondre.
 - {{HTTPStatus(501, "501 Not Implemented")}}
-  - : La méthode de requête n'est pas supportée par le serveur et ne peut pas être traitée. Les seules méthodes que les serveurs sont tenus de prendre en charge (et donc pour lesquelles ils ne peuvent pas renvoyer ce code) sont {{HTTPMethod("GET")}} et {{HTTPMethod("HEAD")}}.
+  - : La méthode de requête n'est pas supportée par le serveur et ne peut pas être traitée. Les seules méthodes que les serveurs sont tenus de prendre en charge (et donc pour lesquelles ils ne peuvent pas retourner ce code) sont {{HTTPMethod("GET")}} et {{HTTPMethod("HEAD")}}.
 - {{HTTPStatus(502, "502 Bad Gateway")}}
   - : Cette réponse d'erreur signifie que le serveur, alors qu'il fonctionnait en tant que passerelle pour recevoir une réponse nécessaire pour traiter la requête, a reçu une réponse invalide.
 - {{HTTPStatus(503, "503 Service Unavailable")}}
@@ -160,11 +162,11 @@ Les codes de statut listés ci-dessous sont définis par la [RFC 9110 <sup>(angl
 - {{HTTPStatus(506, "506 Variant Also Negotiates")}}
   - : Le serveur a une erreur de configuration interne&nbsp;: la négociation de contenu transparente pour la requête aboutit à une dépendance circulaire.
 - {{HTTPStatus(507, "507 Insufficient Storage")}} ({{Glossary("WebDAV")}})
-  - : L'action n'a pas pu être effectuée sur la ressource car le serveur est incapable de stocker la représentation nécessaire pour mener à bien la requête.
+  - : L'action n'a pas pu être effectuée sur la ressource, car le serveur est incapable de stocker la représentation nécessaire pour mener à bien la requête.
 - {{HTTPStatus(508, "508 Loop Detected")}} ({{Glossary("WebDAV")}})
   - : Le serveur a détecté une boucle infinie en traitant la requête.
 - {{HTTPStatus(510, "510 Not Extended")}}
-  - : La requête du client déclare une extension HTTP ({{RFC("2774")}}) qui devrait être utilisée pour traiter la requête, mais l'extension n'est pas prise en charge.
+  - : La requête du client déclare une extension HTTP ({{RFC("2774")}}) qui doit être utilisée pour traiter la requête, mais l'extension n'est pas prise en charge.
 - {{HTTPStatus(511, "511 Network Authentication Required")}}
   - : Le code de statut 511 indique que le client doit s'authentifier afin de pouvoir accéder au réseau.
 

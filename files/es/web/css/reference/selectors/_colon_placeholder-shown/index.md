@@ -17,7 +17,11 @@ La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:place
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:placeholder-shown {
+  /* ... */
+}
+```
 
 ## Ejemplos
 

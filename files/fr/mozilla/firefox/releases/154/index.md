@@ -3,7 +3,7 @@ title: Firefox 154 note de version pour les développeurs
 short-title: Firefox 154
 slug: Mozilla/Firefox/Releases/154
 l10n:
-  sourceCommit: 2ad62b2e8cb4dbd6305f23fda33d800e218d8aef
+  sourceCommit: a31068ba2df086b7aba127b26d28b083537d5894
 ---
 
 Cet article présente les informations concernant les changements de Firefox 154 qui concernent les développeur·euse·s.
@@ -36,6 +36,14 @@ Pas de changements notables.
   Ces deux méthodes retournent un [objet d'aide à l'itérateur](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator#objets_daide_à_litérateur) qui peut être itéré pour produire un certain nombre d'éléments de l'itérateur d'origine sous forme de tableau.
   La différence entre les méthodes est que l'aide `chunks()` divise les éléments de l'itérateur d'origine en morceaux de tableau consécutifs, tandis que l'aide `windows()` retourne un tableau qui est une fenêtre glissante sur l'itérateur d'origine (chaque itération produit un tableau qui avance d'un élément&nbsp;: en supprimant le premier élément de l'itération précédente et en récupérant un nouvel élément de l'itérateur d'origine).
   ([bogue Firefox 2047997 <sup>(angl.)</sup>](https://bugzil.la/2047997)).
+
+### HTTP
+
+- L'en-tête de réponse {{HTTPHeader("No-Vary-Search")}} est désormais pris en charge.
+  Par défaut, un navigateur crée une entrée de cache HTTP distincte pour stocker la réponse pour chaque chaîne de caractères de requête, même si la réponse ne change pas pour certains ou tous les paramètres, ou ne dépend pas de leur ordre.
+  Cet en-tête permet au serveur de définir si l'ordre importe et quels paramètres de requête, le cas échéant, modifient le contenu des réponses.
+  Le navigateur peut alors éviter de mettre en cache ou de récupérer des ressources en double.
+  ([bogue Firefox 2038013 <sup>(angl.)</sup>](https://bugzil.la/2038013)).
 
 ### APIs
 
@@ -88,6 +96,10 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 - **Calculer une valeur basée sur `progress()`**&nbsp;: `layout.css.progress-function.enabled`
 
   La fonction CSS {{CSSxRef("progress()")}} est désormais prise en charge. Cela permet à l'utilisateur·ice de calculer un {{CSSxRef("&lt;number&gt;")}} basé sur une valeur (ou progression) comprise entre une valeur minimale et une valeur maximale. ([bogue Firefox 2047015 <sup>(angl.)</sup>](https://bugzil.la/2047015)).
+
+- **Mettre à jour la transparence d'une couleur avec `alpha()`**&nbsp;: `layout.css.alpha-color-function.enabled`
+
+  La fonction CSS {{CSSxRef("color_value/alpha", "alpha()")}} est désormais prise en charge. Elle permet de passer une couleur et de récupérer la couleur avec une valeur alpha (transparence) différente, en laissant les autres composants de la couleur inchangés. ([bogue Firefox 2047437 <sup>(angl.)</sup>](https://bugzil.la/2047437)).
 
 - **CSS Typed Object Model Level 1** (Nightly)&nbsp;: `layout.css.typed-om.enabled`
 

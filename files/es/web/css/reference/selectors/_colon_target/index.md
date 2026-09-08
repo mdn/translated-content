@@ -27,7 +27,11 @@ El siguiente elemento sería seleccionado por un selector `:target` cuando la UR
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:target {
+  /* ... */
+}
+```
 
 ## Ejemplos
 

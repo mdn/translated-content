@@ -3,8 +3,6 @@ title: browserAction.setBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText
 ---
 
-{{AddonSidebar}}
-
 Définit le texte du badge pour l'action du navigateur. Le badge est affiché en haut de l'icône.
 
 Les onglets sans texte de badge spécifique hériteront du texte global du badge, qui est `""` par défaut.

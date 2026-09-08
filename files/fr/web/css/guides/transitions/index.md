@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Transitions
 original_slug: Web/CSS/CSS_transitions
 ---
 
-{{CSSRef}}
-
 Les **transitions CSS** permettent de créer des transitions harmonieuses entre les valeurs des propriétés CSS concernées. Elles permettent aussi de définir leur évolution (accélération/décélération), via les fonctions de minutage.
 
 ## Référence

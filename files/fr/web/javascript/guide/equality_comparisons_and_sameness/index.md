@@ -2,7 +2,7 @@
 title: Comparaisons d'égalité et de similitude
 slug: Web/JavaScript/Guide/Equality_comparisons_and_sameness
 l10n:
-  sourceCommit: 188029af4111e0adc8e577c4727cc70c38844b85
+  sourceCommit: b7c5617fc1d8eb00c6884a708983da21ad61b228
 ---
 
 JavaScript fournit trois opérations permettant de comparer des valeurs&nbsp;:
@@ -25,6 +25,8 @@ Elles correspondent à trois des quatre algorithmes d'égalité en JavaScript&nb
 - [SameValueZero <sup>(angl.)</sup>](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-samevaluezero)&nbsp;: utilisé par de nombreuses opérations intégrées
 
 Notez que la distinction entre ces opérations concerne toutes leur traitement des valeurs primitives&nbsp;; aucune d'entre elles ne compare si les paramètres sont conceptuellement similaires dans leur structure. Pour des objets non primitifs `x` et `y` qui ont la même structure mais qui sont des objets distincts, toutes les formes ci-dessus sont évaluées à `false`.
+
+Comparer le contenu d'objets ou de tableaux distincts de manière récursive s'appelle {{Glossary("deep equality", "l'égalité profonde")}}. JavaScript ne fournit pas d'opérateur de comparaison profonde général&nbsp;; les bibliothèques et les API hôtes peuvent fournir des utilitaires de comparaison avec des règles différentes.
 
 ## Égalité stricte avec `===`
 

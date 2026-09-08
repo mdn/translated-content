@@ -3,10 +3,8 @@ title: "Date : méthode setYear()"
 short-title: setYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 La méthode **`setYear()`** des instances de {{JSxRef("Date")}} définit l'année pour une date définie selon l'heure locale.
 

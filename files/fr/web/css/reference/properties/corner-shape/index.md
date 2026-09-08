@@ -144,8 +144,6 @@ Si vous souhaitez utiliser des coins façonnés dans un `border-shape`, vous dev
 
 ## Exemples
 
-## Examples
-
 ### Utilisation simple de `corner-shape`
 
 #### HTML

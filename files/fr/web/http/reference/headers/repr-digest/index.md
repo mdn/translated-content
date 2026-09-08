@@ -3,7 +3,7 @@ title: En-tête Repr-Digest
 short-title: Repr-Digest
 slug: Web/HTTP/Reference/Headers/Repr-Digest
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: e5a63f8d002dcac9654be79bd03bfda262dd4d89
 ---
 
 L'HTTP{{Glossary("Request header", "en-tête de requête")}} et {{Glossary("Response header", "de réponse")}} **`Repr-Digest`** fournit une {{Glossary("hash function", "fonction de hachage")}} de la représentation sélectionnée de la ressource cible.
@@ -13,13 +13,14 @@ La _représentation sélectionnée_ est le format spécifique d'une ressource ch
 Les détails concernant la représentation peuvent être déterminés à partir des {{Glossary("Representation header", "en-têtes de représentation")}}, tels que {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}} et {{HTTPHeader("Content-Encoding")}}.
 
 Le digest de représentation s'applique à l'ensemble de la représentation plutôt qu'à l'encodage ou au découpage en tranches des messages utilisés pour l'envoyer.
-Un {{HTTPHeader("Content-Digest")}} s'applique au contenu d'un message HTTP spécifique et aura des valeurs différentes en fonction des {{HTTPHeader("Content-Encoding")}} et {{HTTPHeader("Content-Range")}} de chaque message.
+Un {{HTTPHeader("Content-Digest")}} s'applique au contenu d'un message HTTP spécifique et a des valeurs différentes en fonction des {{HTTPHeader("Content-Encoding")}} et {{HTTPHeader("Content-Range")}} de chaque message.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Type d'en-tête</th>
-      <td>{{Glossary("Representation header", "En-tête de représentation")}}</td>
+      <td>{{Glossary("Request header", "En-tête de requête")}}, {{Glossary("Response header", "En-tête de réponse")}}, {{Glossary("Representation header", "En-tête de représentation")}}</td>
+    </tr>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden request header", "En-tête de requête interdit")}}</th>
@@ -37,6 +38,8 @@ Repr-Digest: <digest-algorithm>=<digest-value>
 Repr-Digest: <digest-algorithm>=<digest-value>,…,<digest-algorithmN>=<digest-valueN>
 ```
 
+`Repr-Digest` est un _dictionnaire de champ structuré_ ({{RFC("9651", "Structured Field Values for HTTP")}}), dont les clés sont `<digest-algorithm>` et les valeurs `<digest-value>`.
+
 ## Directives
 
 - `<digest-algorithm>`
@@ -44,135 +47,145 @@ Repr-Digest: <digest-algorithm>=<digest-value>,…,<digest-algorithmN>=<digest-v
     Seuls deux algorithmes de digest enregistrés sont considérés sûrs&nbsp;: `sha-512` et `sha-256`.
     Les algorithmes de digest enregistrés non sécurisés (hérités) sont&nbsp;: `md5`, `sha` (SHA-1), `unixsum`, `unixcksum`, `adler` (ADLER32) et `crc32c`.
 - `<digest-value>`
-  - : Le digest en octets de la représentation en utilisant `<digest-algorithm>`.
-    Le choix de l'algorithme de digest détermine également l'encodage à utiliser&nbsp;: `sha-512` et `sha-256` utilisent l'encodage {{Glossary("base64")}}, tandis que certains algorithmes hérités comme `unixsum` utilisent un entier décimal.
-    Contrairement aux brouillons antérieurs de la spécification, les octets du digest encodés en base64 standard sont enveloppés entre deux deux-points (`:`, ASCII 0x3A) dans le cadre de la [syntaxe de dictionnaire <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc8941#name-byte-sequences).
-
-L'utilisation d'algorithmes de digest non sécurisés est fortement déconseillée, car des collisions peuvent être réalistement provoquées, rendant l'utilité du digest faible.
-Sauf si vous travaillez avec des systèmes hérités (ce qui est improbable, car la plupart s'attendent à l'en-tête obsolète `Digest` et ne comprendront pas cette spécification), envisagez d'omettre un `Repr-Digest` plutôt que d'en inclure un avec un algorithme de digest non sécurisé.
-
-## Description
-
-Un en-tête `Digest` avait été défini dans des spécifications précédentes, mais il s'est avéré problématique car le périmètre auquel le digest s'appliquait n'était pas clair.
-Plus précisément, il était difficile de distinguer si un digest s'appliquait à l'ensemble de la représentation de la ressource ou au contenu spécifique d'un message HTTP.
-Ainsi, deux en-têtes séparés ont été définis (`Content-Digest` et `Repr-Digest`) pour transmettre respectivement les digests du contenu des messages HTTP et les digests des représentations de ressources.
+  - : Le digest de l'ensemble des données de la représentation sélectionnée (voir la [section 8.1 de la spécification sur la sémantique HTTP <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc9110/#section-8.1)) utilisant `<digest-algorithm>`, encodé en {{Glossary("base64")}} et entouré de deux-points (`:`, ASCII 0x3A). Cet encodage est appelé une [séquence d'octets <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc9651/#name-byte-sequences) dans la spécification.
 
 ## Exemples
 
-### Envoi d'un `Repr-Digest` dans une requête par un agent utilisateur
+Dans tous les exemples, les points d'accès sont configurés pour envoyer des en-têtes de digest non sollicités. Les champs {{HTTPHeader("Want-Content-Digest")}} et {{HTTPHeader("Want-Repr-Digest")}} peuvent éventuellement être utilisés par un expéditeur pour demander un `Content-Digest` ou un `Repr-Digest`, ainsi que ses préférences d'algorithme de hachage.
+
+### Utiliser un `Repr-Digest` SHA-256 dans une réponse
+
+Un agent utilisateur demande une ressource&nbsp;:
+
+```http
+GET /items/123 HTTP/1.1
+Host: example.com
+```
+
+Le serveur répond avec un `Repr-Digest` de la représentation utilisant l'algorithme SHA-256.
+Le digest est calculé sur les octets exacts de la représentation, `{"salut": "mdn"}` (16 octets, sans inclure explicitement de saut de ligne final)&nbsp;:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 16
+Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
+
+{"salut": "mdn"}
+```
+
+### Obtenir des valeurs `Content-Digest` et `Repr-Digest` identiques
+
+Un agent utilisateur demande une ressource&nbsp;:
+
+```http
+GET /items/123 HTTP/1.1
+Host: example.com
+```
+
+Le serveur répond avec un `Content-Digest` et un `Repr-Digest` du contenu du message utilisant l'algorithme SHA-256.
+Les champs `Repr-Digest` et `Content-Digest` ont des valeurs identiques, car ils sont calculés avec le même algorithme sur les mêmes octets, `{"salut": "mdn"}` (16 octets), et dans ce cas la représentation entière est envoyée dans un seul message&nbsp;:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 16
+Content-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
+Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
+
+{"salut": "mdn"}
+```
+
+### Obtenir des valeurs `Content-Digest` et `Repr-Digest` différentes
+
+Un agent utilisateur demande seulement une partie d'une ressource en utilisant une [requête de plage](/fr/docs/Web/HTTP/Guides/Range_requests)&nbsp;:
+
+```http
+GET /items/123 HTTP/1.1
+Host: example.com
+Range: bytes=0-7
+```
+
+Le serveur retourne une réponse {{HTTPStatus("206", "206 Partial Content")}} contenant uniquement les octets demandés, `{"salut"` (8 octets), comme contenu du message.
+`Content-Digest` couvre uniquement ces octets, tandis que `Repr-Digest` couvre toujours la représentation entière, `{"salut": "mdn"}` (16 octets)&nbsp;: les deux valeurs diffèrent donc&nbsp;:
+
+```http
+HTTP/1.1 206 Partial Content
+Content-Type: application/json
+Content-Range: bytes 0-7/16
+Content-Digest: sha-256=:pKQv0IAKChzGfyfxu5TNqcnvxIzaG4XICf6NQnB1YhY=:
+Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
+```
+
+### Calculer le digest d'une représentation encodée avec gzip
+
+Dans cette requête, le client utilise l'en-tête {{HTTPHeader("Accept-Encoding")}} pour indiquer qu'il accepte la compression gzip&nbsp;:
+
+```http
+GET /items/123 HTTP/1.1
+Host: example.com
+Accept-Encoding: gzip
+```
+
+La réponse du serveur inclut l'en-tête {{HTTPHeader("Content-Encoding")}}, indiquant que les octets du message proviennent de la représentation gzip de la ressource.
+
+Le digest est calculé sur les octets encodés avec gzip plutôt que sur le texte original non encodé.
+Ici, le corps JSON de 16 octets `{"salut": "mdn"}` est compressé avec gzip pour former une représentation de 36 octets, et `Content-Digest` et `Repr-Digest` sont calculés sur ces 36 octets (présentés ici en hexadécimal pour faciliter la lecture)&nbsp;:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Encoding: gzip
+Content-Length: 36
+Content-Digest: sha-256=:6Gx6u1ZhhahDLs06Zc6ZEqXxUy8RNjy18CaMucjKOFk=:
+Repr-Digest: sha-256=:6Gx6u1ZhhahDLs06Zc6ZEqXxUy8RNjy18CaMucjKOFk=:
+
+1F 8B 08 00 00 00 00 00 02 FF AB 56 CA 48 CD C9 C9 57 B2 52 50 CA 4D C9 53 AA 05 00 35 D8 1D 91 10 00 00 00
+```
+
+### Gérer l'absence de contenu avec `Repr-Digest`
+
+Si la même ressource est demandée avec la méthode {{HTTPMethod("HEAD")}} plutôt qu'avec {{HTTPMethod("GET")}}, la réponse ne contient aucun contenu&nbsp;:
+
+```http
+HEAD /items/123 HTTP/1.1
+Host: example.com
+```
+
+La valeur `Repr-Digest` est la même que précédemment, car elle s'applique toujours à la représentation complète, `{"salut": "mdn"}`.
+Cependant, le serveur n'envoie aucun contenu dans la réponse et peut omettre l'en-tête `Content-Digest`&nbsp;:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
+```
+
+Plutôt que d'omettre `Content-Digest` en l'absence de contenu, un serveur peut le calculer explicitement sur une chaîne de caractères vide.
+Selon la [section 6.3 de la RFC 9530 <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc9530/#section-6.3), cela permet à un destinataire, notamment lorsque le digest est couvert par une signature de message HTTP, de vérifier qu'aucun contenu n'a été ajouté ou supprimé, plutôt que de vérifier uniquement que l'en-tête a été omis&nbsp;:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Digest: sha-256=:47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=:
+Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
+```
+
+### Envoyer des digests dans les requêtes avec un agent utilisateur
 
 Dans l'exemple suivant, un agent utilisateur envoie un digest du contenu du message en utilisant SHA-512.
-Il envoie à la fois un `Content-Digest` et un `Repr-Digest`, qui diffèrent l'un de l'autre à cause du `Content-Encoding`&nbsp;:
+Le digest est calculé sur les octets exacts du corps du message, `{"recipient":"Alex","amount":900000000}` (39 octets, sans inclure explicitement de saut de ligne final).
+Comme la représentation entière est envoyée dans cette requête unique, `Content-Digest` et `Repr-Digest` ont la même valeur&nbsp;:
 
 ```http
 POST /bank_transfer HTTP/1.1
 Host: example.com
-Content-Encoding: zstd
-Content-Digest: sha-512=:ABC…=:
-Repr-Digest: sha-512=:DEF…=:
+Content-Type: application/json
+Content-Length: 39
+Content-Digest: sha-512=:PlrIZYU3M76B30wGsL0h6O79BoxHTdAG+RnMPjOyECTSJCN/KnYdOrSCCWjxV3ckkyvdRmZ52//M3WbehCXcPw==:
+Repr-Digest: sha-512=:PlrIZYU3M76B30wGsL0h6O79BoxHTdAG+RnMPjOyECTSJCN/KnYdOrSCCWjxV3ckkyvdRmZ52//M3WbehCXcPw==:
 
-{
- "recipient": "Alex",
- "amount": 900000000
-}
-```
-
-Le serveur peut calculer un digest du contenu qu'il a reçu et comparer le résultat avec les en-têtes `Content-Digest` ou `Repr-Digest` pour valider l'intégrité du message.
-Dans des requêtes comme l'exemple ci‑dessus, le `Repr-Digest` est plus utile au serveur car il est calculé sur la représentation décodée et serait plus cohérent dans différents scénarios.
-
-### Réponse HTTP où `Repr-Digest` et `Content-Digest` coïncident
-
-Un serveur HTTP peut envoyer la représentation entière non encodée dans un seul message.
-Dans ce cas, `Repr-Digest` et `Content-Digest` ont des valeurs égales pour les mêmes algorithmes de digest&nbsp;:
-
-```http
-…
-Repr-Digest: sha-256=:AEGPTgUMw5e96wxZuDtpfm23RBU3nFwtgY5fw4NYORo=:
-Content-Digest: sha-256=:AEGPTgUMw5e96wxZuDtpfm23RBU3nFwtgY5fw4NYORo=:
-…
-Content-Type: text/yaml
-Content-Encoding: br
-Content-Length: 38054
-Content-Range: 0-38053/38054
-…
-
-[message body]
-```
-
-### Réponses HTTP où `Repr-Digest` et `Content-Digest` divergent
-
-Un serveur peut compresser le contenu pour l'envoi.
-Dans ce cas, {{HTTPHeader("Content-Digest")}} dépendra de l'en-tête {{HTTPHeader("Content-Encoding")}} et aura donc une valeur différente de l'en-tête `Repr-Digest` dans une réponse&nbsp;:
-
-```http
-…
-Repr-Digest: sha-256=:AEGPTgUMw5e96wxZuDtpfm23RBU3nFwtgY5fw4NYORo=:, sha-512=:U59TCCaZPA9Qio3CzHJVAgDnIAut53t5Sgkj2Gv4BvDd0b+OX9QpIdgWkzdXLmBsmvBrf3t5PBt+UrVK6k5dkw==:
-Content-Digest: sha-256=:293wcr5IoFAsDCzdoDXR1Qppgf2yxOPO1bvQ3nZQtuI=:, unixsum=54809
-…
-Content-Type: text/html; charset=utf-8
-Content-Encoding: br
-…
-
-[message body]
-```
-
-Dans une autre réponse, le serveur utilise une méthode de compression différente, entraînant un nouveau `Content-Digest`, mais les mêmes digests `Repr-Digest`&nbsp;:
-
-```http
-…
-Repr-Digest: sha-256=:AEGPTgUMw5e96wxZuDtpfm23RBU3nFwtgY5fw4NYORo=:, sha-512=:U59TCCaZPA9Qio3CzHJVAgDnIAut53t5Sgkj2Gv4BvDd0b+OX9QpIdgWkzdXLmBsmvBrf3t5PBt+UrVK6k5dkw==:
-Content-Digest: sha-256=:rv9Jivc4TmcacLUshzN3OdX7Hz+ORnQRaiTaIKZQ0zk=:
-…
-Content-Type: text/html; charset=utf-8
-Content-Encoding: zstd
-…
-
-[message body]
-```
-
-### Requête et réponse HTTP réussies utilisant `Want-Repr-Digest`, `Repr-Digest` et `Content-Digest`
-
-La requête {{HTTPMethod("PUT")}} suivante inclut un en-tête `Want-Repr-Digest`, indiquant que le serveur doit inclure un en-tête `Repr-Digest` avec un digest `sha-256` si l'opération réussit&nbsp;:
-
-```http
-PUT /api/transact HTTP/1.1
-Want-Repr-Digest: sha-256=8
-Content-Type: text/json
-…
-
-[message body]
-```
-
-Le serveur répond par une réponse {{HTTPStatus("201", "201 Created")}} réussie, incluant les en-têtes `Repr-Digest` et `Content-Digest` avec des digests sha-256 de la représentation et du contenu, respectivement&nbsp;:
-
-```http
-HTTP/1.1 201 Created
-Repr-Digest: sha-256=:W8oN3H3CmE/CBpV6ZPNozV2AIDzzQpWL7CCOXyDyDzI=:
-Content-Encoding: br
-Content-Digest: sha-256=:2IBI7hQn83oTCgB3Z/6apOl91WGoctRfRj/F9gkvVo8=:
-…
-
-[message body]
-```
-
-### Requête et réponse HTTP échouées utilisant `Repr-Digest`
-
-Dans le message suivant, un agent utilisateur demande une ressource avec un digest sha-256 spécifique&nbsp;:
-
-```http
-GET /api/last-transaction HTTP/1.1
-Accept: text/json
-Repr-Digest: sha-256=:2IBI7hQn83oTCgB3Z/6apOl91WGoctRfRj/F9gkvVo8=:
-…
-```
-
-Un statut {{HTTPStatus("406", "406 Not Acceptable")}} est retourné par le serveur pour indiquer que l'opération a échoué étant donné un digest spécifique pour la ressource.
-Un en-tête `Repr-Digest` est inclus avec la valeur du digest SHA-256 qui aboutirait à une réponse réussie si l'agent utilisateur répéta la requête avec cette valeur&nbsp;:
-
-```http
-HTTP/1.1 406 Not Acceptable
-Repr-Digest: sha-256=:W8oN3H3CmE/CBpV6ZPNozV2AIDzzQpWL7CCOXyDyDzI=:
-…
+{"recipient":"Alex","amount":900000000}
 ```
 
 ## Spécifications

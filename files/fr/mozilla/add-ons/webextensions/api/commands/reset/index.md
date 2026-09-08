@@ -3,8 +3,6 @@ title: commands.reset()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/reset
 ---
 
-{{AddonSidebar}}
-
 Réinitialise la description de la commande donnée et le raccourci clavier aux valeurs indiquées dans [`commands` de la clé du manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) de l'extension.
 
 Cela annule efficacement les modifications apportées à la commande à l'aide de la fonction {{WEbExtAPIRef("commands.update()")}}.

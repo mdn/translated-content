@@ -3,7 +3,7 @@ title: En-tête Permissions-Policy
 short-title: Permissions-Policy
 slug: Web/HTTP/Reference/Headers/Permissions-Policy
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: 7a2016c1eec26048dce86e8af0b2127395db7f46
 ---
 
 {{SeeCompatTable}}
@@ -103,7 +103,7 @@ Vous pouvez définir&nbsp;:
   - : Contrôle si le document courant est autorisé à utiliser [l'API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API).
 
 - {{HTTPHeader("Permissions-Policy/autoplay", "autoplay")}} {{Experimental_Inline}}
-  - : Contrôle si le document courant est autorisé à lire automatiquement des médias demandés par l'interface {{DOMxRef("HTMLMediaElement")}}. Lorsque cette politique est désactivée et qu'il n'y a pas eu de geste de la part de l'utilisateur·ice, la promesse ({{JSxRef("Promise")}}) retournée par {{DOMxRef("HTMLMediaElement.play()")}} est rejetée avec une erreur `NotAllowedError` {{DOMxRef("DOMException")}}. L'attribut autoplay sur les éléments HTML {{HTMLElement("audio")}} et {{HTMLElement("video")}} est ignoré.
+  - : Contrôle si le document courant est autorisé à lire automatiquement des médias demandés par l'interface {{DOMxRef("HTMLMediaElement")}}. Lorsque cette politique est désactivée et qu'il n'y a pas eu de geste de la part de l'utilisateur·ice, la promesse ({{JSxRef("Promise")}}) retournée par {{DOMxRef("HTMLMediaElement.play()")}} est rejetée avec une erreur `NotAllowedError` {{DOMxRef("DOMException")}}. L'attribut `autoplay` sur les éléments HTML {{HTMLElement("audio")}} et {{HTMLElement("video")}} est ignoré.
 
 - {{HTTPHeader("Permissions-Policy/bluetooth", "bluetooth")}} {{Experimental_Inline}}
   - : Contrôle si l'utilisation de [l'API Web Bluetooth](/fr/docs/Web/API/Web_Bluetooth_API) est autorisée. Lorsque cette politique est désactivée, les méthodes de l'objet {{DOMxRef("Bluetooth")}} retourné par {{DOMxRef("Navigator.bluetooth")}} retournent soit `false`, soit rejettent la promesse ({{JSxRef("Promise")}}) retournée avec une erreur `SecurityError` {{DOMxRef("DOMException")}}.
@@ -136,7 +136,7 @@ Vous pouvez définir&nbsp;:
   - : Contrôle l'allocation du quota partagé [`fetchLater()`](/fr/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas) pour les sous-cadres inter-origines.
 
 - {{HTTPHeader("Permissions-Policy/display-capture", "display-capture")}} {{Experimental_Inline}}
-  - : Contrôle si le document courant est autorisé à utiliser la méthode {{DOMxRef("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} pour capturer le contenu de l'écran. Lorsque cette politique est désactivée, la promesse retournée par `getDisplayMedia()` sera rejetée avec une erreur `NotAllowedError` {{DOMxRef("DOMException")}} si l'autorisation de capturer l'écran n'est pas obtenue.
+  - : Contrôle si le document courant est autorisé à utiliser la méthode {{DOMxRef("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} pour capturer le contenu de l'écran. Lorsque cette politique est désactivée, la promesse retournée par `getDisplayMedia()` est rejetée avec une erreur `NotAllowedError` {{DOMxRef("DOMException")}} si l'autorisation de capturer l'écran n'est pas obtenue.
 
 - {{HTTPHeader("Permissions-Policy/encrypted-media", "encrypted-media")}} {{Experimental_Inline}}
   - : Contrôle si le document courant est autorisé à utiliser [l'API Encrypted Media Extensions](/fr/docs/Web/API/Encrypted_Media_Extensions_API) (EME). Lorsque cette politique est désactivée, la promesse ({{JSxRef("Promise")}}) retournée par {{DOMxRef("Navigator.requestMediaKeySystemAccess()")}} est rejetée avec une erreur `SecurityError` {{DOMxRef("DOMException")}}.
@@ -155,19 +155,31 @@ Vous pouvez définir&nbsp;:
   - : Contrôle si le document courant est autorisé à recueillir des informations sur l'orientation de l'appareil avec l'interface {{DOMxRef("Gyroscope")}}.
 
 - {{HTTPHeader("Permissions-Policy/hid", "hid")}} {{Experimental_Inline}}
-  - : Contrôle si le document courant est autorisé à utiliser {{DOMxRef("WebHID API", "l'API WebHID", "", "nocode")}} pour se connecter à des périphériques d'interface humaine peu courants ou exotiques, comme des claviers alternatifs ou des manettes.
+  - : Contrôle si le document courant est autorisé à utiliser {{DOMxRef("WebHID API", "l'API WebHID", "", 1)}} pour se connecter à des périphériques d'interface humaine peu courants ou exotiques, comme des claviers alternatifs ou des manettes.
 
 - {{HTTPHeader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} {{Experimental_Inline}}
   - : Contrôle si le document courant est autorisé à utiliser [l'API Federated Credential Management (FedCM)](/fr/docs/Web/API/FedCM_API).
 
 - {{HTTPHeader("Permissions-Policy/idle-detection", "idle-detection")}} {{Experimental_Inline}}
-  - : Contrôle si le document courant est autorisé à utiliser {{DOMxRef("Idle Detection API", "l'API Idle Detection", "", "nocode")}} pour détecter les interactions des utilisatrices et utilisateurs avec leurs appareils, par exemple pour indiquer l'état «&nbsp;disponible&nbsp;»/«&nbsp;absent&nbsp;» dans des applications de chat.
+  - : Contrôle si le document courant est autorisé à utiliser {{DOMxRef("Idle Detection API", "l'API Idle Detection", "", 1)}} pour détecter les interactions des utilisateur·ice·s avec leurs appareils, par exemple pour indiquer l'état «&nbsp;disponible&nbsp;»/«&nbsp;absent&nbsp;» dans des applications de chat.
 
 - {{HTTPHeader("Permissions-Policy/language-detector", "language-detector")}} {{Experimental_Inline}}
-  - : Contrôle l'accès à la fonctionnalité de détection de langue de [l'API Translator and Language Detector](/fr/docs/Web/API/Translator_and_Language_Detector_APIs).
+  - : Contrôle l'accès à la fonctionnalité de détection de langue de [l'API traduction et détection de langue](/fr/docs/Web/API/Translator_and_Language_Detector_APIs).
+
+- {{HTTPHeader("Permissions-Policy/language-model", "language-model")}} {{Experimental_Inline}}
+  - : Contrôle l'accès à la [l'API Prompt](/fr/docs/Web/API/Prompt_API).
 
 - {{HTTPHeader("Permissions-Policy/local-fonts", "local-fonts")}} {{Experimental_Inline}}
-  - : Contrôle si le document courant est autorisé à collecter des informations sur les polices installées localement avec la méthode {{DOMxRef("Window.queryLocalFonts()")}} (voir aussi {{DOMxRef("Local Font Access API", "l'API Local Font Access", "", "nocode")}}).
+  - : Contrôle si le document courant est autorisé à collecter des informations sur les polices installées localement avec la méthode {{DOMxRef("Window.queryLocalFonts()")}} (voir aussi {{DOMxRef("Local Font Access API", "l'API Local Font Access", "", 1)}}).
+
+- {{HTTPHeader("Permissions-Policy/local-network", "local-network")}} {{Experimental_Inline}}
+  - : Contrôle si le document courant est autorisé à effectuer des requêtes réseau vers des adresses locales.
+
+- {{HTTPHeader("Permissions-Policy/local-network-access", "local-network-access")}} {{Experimental_Inline}}
+  - : Contrôle si le document courant est autorisé à effectuer des requêtes réseau vers des adresses locales et de bouclage. Cette directive de politique est un alias des directives plus granulaires `local-network` et `loopback-network`.
+
+- {{HTTPHeader("Permissions-Policy/loopback-network", "loopback-network")}} {{Experimental_Inline}}
+  - : Contrôle si le document courant est autorisé à effectuer des requêtes réseau vers des adresses de bouclage.
 
 - {{HTTPHeader("Permissions-Policy/magnetometer", "magnetometer")}} {{Experimental_Inline}}
   - : Contrôle si le document courant est autorisé à recueillir des informations sur l'orientation de l'appareil avec l'interface {{DOMxRef("Magnetometer")}}.
@@ -206,13 +218,13 @@ Vous pouvez définir&nbsp;:
   - : Contrôle si le document courant est autorisé à utiliser [l'API Screen Wake Lock](/fr/docs/Web/API/Screen_Wake_Lock_API) pour indiquer que l'appareil ne doit pas s'éteindre ou diminuer la luminosité de l'écran.
 
 - {{HTTPHeader("Permissions-Policy/serial", "serial")}} {{Experimental_Inline}}
-  - : Contrôle si le document courant est autorisé à utiliser {{DOMxRef("Web Serial API", "l'API Web Serial", "", "nocode")}} pour communiquer avec des dispositifs série, soit connectés directement avec un port série, soit avec des dispositifs USB ou Bluetooth émulant un port série.
+  - : Contrôle si le document courant est autorisé à utiliser {{DOMxRef("Web Serial API", "l'API Web Serial", "", 1)}} pour communiquer avec des dispositifs série, soit connectés directement avec un port série, soit avec des dispositifs USB ou Bluetooth émulant un port série.
 
 - {{HTTPHeader("Permissions-Policy/speaker-selection", "speaker-selection")}} {{Experimental_Inline}}
   - : Contrôle si le document courant est autorisé à utiliser [l'API Audio Output Devices](/fr/docs/Web/API/Audio_Output_Devices_API) pour lister et sélectionner des haut-parleurs.
 
 - {{HTTPHeader("Permissions-Policy/storage-access", "storage-access")}} {{Experimental_Inline}}
-  - : Contrôle si un document chargé dans un contexte tiers (c.-à-d. intégré dans un {{HTMLElement("iframe")}}) est autorisé à utiliser {{DOMxRef("Storage Access API", "l'API Storage Access", "", "nocode")}} pour demander l'accès aux cookies non partitionnés.
+  - : Contrôle si un document chargé dans un contexte tiers (c.-à-d. intégré dans un {{HTMLElement("iframe")}}) est autorisé à utiliser {{DOMxRef("Storage Access API", "l'API Storage Access", "", 1)}} pour demander l'accès aux cookies non partitionnés.
 
 - {{HTTPHeader("Permissions-Policy/translator", "translator")}} {{Experimental_Inline}}
   - : Contrôle l'accès à la fonctionnalité de traduction [des API Translator and Language Detector](/fr/docs/Web/API/Translator_and_Language_Detector_APIs).
@@ -280,7 +292,7 @@ Pour appliquer une politique au domaine courant et à d'autres&nbsp;:
   allow="geolocation 'self' https://a.example.com https://b.example.com"></iframe>
 ```
 
-Important&nbsp;: Par défaut, si un `<iframe>` navigue vers un autre domaine, la politique n'est pas appliquée au domaine vers lequel l'`<iframe>` navigue. En listant le domaine cible dans l'attribut `allow`, la politique de permissions appliquée à l'`<iframe>` d'origine est appliquée au domaine cible.
+Important&nbsp;: Par défaut, si un `<iframe>` navigue vers un autre domaine, la politique n'est pas appliquée au domaine vers lequel un `<iframe>` navigue. En listant le domaine cible dans l'attribut `allow`, la politique de permissions appliquée à un `<iframe>` d'origine est appliquée au domaine cible.
 
 Plusieurs fonctionnalités peuvent être contrôlées en même temps en incluant une liste de directives de politique séparées par des points-virgules dans l'attribut `allow`.
 
@@ -321,7 +333,7 @@ Dans vos `<iframe>` publicitaires, vous pouvez autoriser l'accès au domaine `ht
 <iframe src="https://trusted-ad-network.com" allow="geolocation"></iframe>
 ```
 
-Si un autre domaine est chargé dans l'`<iframe>`, il n'a pas accès à la géolocalisation&nbsp;:
+Si un autre domaine est chargé dans un `<iframe>`, il n'a pas accès à la géolocalisation&nbsp;:
 
 ```html
 <iframe src="https://rogue-origin-example.com" allow="geolocation"></iframe>
@@ -356,7 +368,7 @@ navigator.geolocation.getCurrentPosition(
 );
 ```
 
-Le [contenu du signalement](/fr/docs/Web/API/Reporting_API#points_de_terminaison_du_server_de_signalement) envoyé au point de terminaison pourrait ressembler à ceci&nbsp;:
+Le [contenu du signalement](/fr/docs/Web/API/Reporting_API#points_de_terminaison_du_server_de_signalement) envoyé au point de terminaison peut ressembler à ceci&nbsp;:
 
 ```json
 [

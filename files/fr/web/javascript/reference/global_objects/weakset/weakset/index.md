@@ -3,8 +3,6 @@ title: Constructeur WeakSet()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
 ---
 
-{{JSRef}}
-
 Le **constructeur `WeakSet()`** permet de créer des objets `WeakSet` qui stockent, avec des références faibles, des _objets_ dans un ensemble.
 
 ## Syntaxe

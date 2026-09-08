@@ -3,8 +3,6 @@ title: windows.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onCreated
 ---
 
-{{AddonSidebar}}
-
 Lancer quand la fenêtre est créée
 
 ## Syntaxe

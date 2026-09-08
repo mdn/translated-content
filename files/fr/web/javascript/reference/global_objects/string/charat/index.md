@@ -3,8 +3,6 @@ title: String.prototype.charAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charAt
 ---
 
-{{JSRef}}
-
 La méthode **`charAt()`** renvoie une nouvelle chaîne contenant le caractère (ou, plus précisément, le point de code UTF-16) à la position indiquée en argument.
 
 {{InteractiveExample("JavaScript Demo: String.charAt()")}}

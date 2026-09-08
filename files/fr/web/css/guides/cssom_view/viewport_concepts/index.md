@@ -2,7 +2,7 @@
 title: Concepts de zone d'affichage
 slug: Web/CSS/Guides/CSSOM_view/Viewport_concepts
 l10n:
-  sourceCommit: a7da8b5f8846bb412400c41e27525760df35f54e
+  sourceCommit: e1e7e2ac2cb1e40293c32c24bc0667905e9a7a04
 ---
 
 Cet article explique le concept de {{Glossary("viewport", "zone d'affichage")}} (<i lang="en">viewport</i> en anglais) — ce que c'est et son impact en termes de CSS, SVG et appareils mobiles. Cet article définit la zone d'affichage initiale et la zone d'affichage réelle, et différencie entre la {{Glossary("visual viewport", "zone d'affichage visuelle")}} (<i lang="en">visual viewport</i> en anglais) et la {{Glossary("layout viewport", "zone d'affichage de la mise en page")}} (<i lang="en">layout viewport</i> en anglais).
@@ -53,7 +53,7 @@ Il existe plusieurs propriétés du DOM qui permettent d'obtenir la taille de la
 - La largeur interne ({{DOMxRef("Window.innerWidth")}}) correspondent à la largeur, en pixels CSS, de la zone d'affichage de la fenêtre du navigateur, y compris, si elle est affichée, la barre de défilement verticale.
 - La largeur extérieure ({{DOMxRef("Window.outerWidth")}}) correspond à la largeur totale de la fenêtre du navigateur, y compris l'ensemble du {{Glossary("chrome")}} de la fenêtre.
 
-Dans une expérience avec ces propriétés, on a constaté que `innerWidth` et `outerWidth` étaient identiques, mais que `outerHeight` était 100 pixels plus grand que `innerHeight`. Cela s'explique par le fait que `outerHeight` inclut le chrome du navigateur&nbsp;: les mesures ont été prises sur un navigateur avec une barre d'adresse et une barre de favoris totalisant 100 pixels de hauteur, mais sans chrome à gauche ou à droite de la fenêtre.
+Dans une expérience avec ces propriétés, on a constaté que `innerWidth` et `outerWidth` sont identiques, mais que `outerHeight` est 100 pixels plus grand que `innerHeight`. Cela s'explique par le fait que `outerHeight` inclut le chrome du navigateur&nbsp;: les mesures ont été prises sur un navigateur avec une barre d'adresse et une barre de favoris totalisant 100 pixels de hauteur, mais sans chrome à gauche ou à droite de la fenêtre.
 
 La zone à l'intérieur de `innerHeight` et `innerWidth` est généralement considérée comme le **{{Glossary("layout viewport", "zone d'affichage de la mise en page")}}**. Le chrome du navigateur n'est pas considéré comme faisant partie de la zone d'affichage.
 
@@ -98,7 +98,7 @@ Pour une page contenant des cadres intégrés (<i lang="en">iframes</i> en angla
 
 ### CSS
 
-La zone d'affichage de la mise en page et la zone d'affichage visuelle mentionnées ci-dessus ne sont pas les seules zones d'affichage que vous rencontrerez. Toute sous-zone d'affichage entièrement ou partiellement affichée dans la zone d'affichage de la mise en page est considérée comme une zone d'affichage visuelle.
+La zone d'affichage de la mise en page et la zone d'affichage visuelle mentionnées ci-dessus ne sont pas les seules zones d'affichage que vous rencontrez. Toute sous-zone d'affichage entièrement ou partiellement affichée dans la zone d'affichage de la mise en page est considérée comme une zone d'affichage visuelle.
 
 On pense généralement que les requêtes média [`width`](/fr/docs/Web/CSS/Reference/At-rules/@media/width) et [`height`](/fr/docs/Web/CSS/Reference/At-rules/@media/height) sont relatives à la largeur et à la hauteur de la fenêtre du navigateur. Elles sont en réalité relatives à la zone d'affichage, qui est la fenêtre dans le document principal mais est la taille intrinsèque de l'élément parent dans un contexte de navigation imbriqué comme les objets, les cadres intégrés et les SVG. En CSS, nous avons également des [unités de longueur basées sur la taille de la zone d'affichage](/fr/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#unités_de_la_vue). Une unité `vh` correspond à 1% de la hauteur de la zone d'affichage de la mise en page. De même, l'unité `vw` correspond à 1% de la largeur de la zone d'affichage de la mise en page.
 

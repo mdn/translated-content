@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/x
 original_slug: Web/SVG/Attribute/x
 ---
 
-{{SVGRef}}
-
 L'attribut **`x`** définit une coordonnée en abscisse dans le système de coordonnées de l'utilisatrice ou l'utilisateur.
 
 Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:

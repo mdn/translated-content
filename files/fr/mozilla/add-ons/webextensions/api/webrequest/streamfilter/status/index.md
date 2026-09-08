@@ -3,8 +3,6 @@ title: webRequest.StreamFilter.status
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/status
 ---
 
-{{AddonSidebar}}
-
 Une chaîne de caractères qui décrit l'état actuel de la demande. Ce sera l'une des valeurs suivantes :
 
 - `"uninitialized"`

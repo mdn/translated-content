@@ -36,7 +36,11 @@ Sólo unas pocas propiedades de CSS se pueden usar con el pseudoelemento `::firs
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+::first-letter {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

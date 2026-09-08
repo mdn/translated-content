@@ -3,8 +3,6 @@ title: WeakSet.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 ---
 
-{{JSRef}}
-
 La méthode **`delete()`** permet de retirer un élément donné d'un objet `WeakSet`.
 
 {{InteractiveExample("JavaScript Demo: WeakSet.Prototype.delete()")}}

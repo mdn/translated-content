@@ -5,7 +5,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}
+{{non-standard_header}}{{ APIRef("DOM") }}
 
 在处理 mousedown 事件的期间调用此方法以将所有的鼠标事件的目标都设置为该元素，直到释放鼠标按钮或者调用 {{domxref("document.releaseCapture()")}}。
 

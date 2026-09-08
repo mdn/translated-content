@@ -24,7 +24,11 @@ input:read-write {
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:read-write {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

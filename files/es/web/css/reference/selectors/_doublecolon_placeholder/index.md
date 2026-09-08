@@ -20,7 +20,11 @@ Solo el subconjuto de las propiedades CSS que aplican al pseudo-elemento {{cssxr
 
 ## Sintáxis
 
-{{csssyntax}}
+```css
+::placeholder {
+  /* ... */
+}
+```
 
 ## Ejemplos
 

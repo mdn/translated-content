@@ -3,22 +3,20 @@ title: En-tête Sec-Browsing-Topics
 short-title: Sec-Browsing-Topics
 slug: Web/HTTP/Reference/Headers/Sec-Browsing-Topics
 l10n:
-  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 > [!WARNING]
 > Cette fonctionnalité est actuellement opposée par deux fournisseurs de navigateurs. Voir la section [Positions sur les standards](/fr/docs/Web/API/Topics_API#positions_sur_les_standards) pour plus de détails sur l'opposition.
 
 > [!NOTE]
-> Un [processus d'inscription](/fr/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment) est requis pour utiliser cette fonctionnalité dans vos applications.
+> Un [processus d'inscription](/fr/docs/Web/Privacy/Guides/Privacy_sandbox#inscription) est requis pour utiliser cette fonctionnalité dans vos applications.
 
 {{Glossary("request header", "L'en-tête de requête")}} HTTP **`Sec-Browsing-Topics`** envoie les sujets sélectionnés pour l'utilisateur·ice actuel·le avec la requête associée, qui sont utilisés par une plateforme publicitaire pour choisir une publicité personnalisée à afficher.
 
-Si le site appelant n'inclut pas l'API Topics dans un [processus d'inscription au bac à sable de confidentialité](/fr/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment) réussi, toute tentative de création ou de modification de `Sec-Browsing-Topics` échoue silencieusement, et tout en-tête `Sec-Browsing-Topics` existant est supprimé.
-
-Voir [Utiliser l'API Topics](/fr/docs/Web/API/Topics_API/Using) pour plus de détails.
+Si le site appelant n'inclut pas l'API Topics dans un [processus d'inscription au bac à sable de confidentialité](/fr/docs/Web/Privacy/Guides/Privacy_sandbox#inscription) réussi, toute tentative de création ou de modification de `Sec-Browsing-Topics` échoue silencieusement, et tout en-tête `Sec-Browsing-Topics` existant est supprimé.
 
 <table class="properties">
   <tbody>
@@ -56,7 +54,7 @@ Un objet JSON représentant un tableau de jusqu'à trois objets représentant le
 
 ## Exemples
 
-Les valeurs exactes des propriétés peuvent varier en fonction de l'implémentation du navigateur. Un exemple d'en-tête provenant de Chrome pourrait ressembler à ce qui suit&nbsp;:
+Les valeurs exactes des propriétés peuvent varier en fonction de l'implémentation du navigateur. Un exemple d'en-tête provenant de Chrome peut ressembler à ce qui suit&nbsp;:
 
 ```http
 Sec-Browsing-Topics: [{configVersion: "chrome.1", modelVersion: "1", taxonomyVersion: "1", topic: 43, version: "chrome.1:1:1"}]
@@ -64,7 +62,7 @@ Sec-Browsing-Topics: [{configVersion: "chrome.1", modelVersion: "1", taxonomyVer
 
 ## Spécifications
 
-Cette fonctionnalitée ne fait partir d'aucun standard officiel, bien qu'elle soit définie dans le [brouillon de proposition non officiel de l'API Topics <sup>(angl.)</sup>](https://patcg-individual-drafts.github.io/topics/).
+Cette fonctionnalité ne fait partir d'aucun standard officiel, bien qu'elle soit définie dans le [brouillon de proposition non officiel de l'API Topics <sup>(angl.)</sup>](https://patcg-individual-drafts.github.io/topics/).
 
 ## Compatibilité des navigateurs
 

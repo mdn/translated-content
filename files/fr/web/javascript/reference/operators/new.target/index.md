@@ -3,8 +3,6 @@ title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
 ---
 
-{{JSSidebar("Operators")}}
-
 La syntaxe **`new.target`** est disponible dans toutes les fonctions et permet entre autres de tester si une fonction ou un constructeur a été appelé avec `new`. Dans les constructeurs, il fait référence au constructeur invoqué par [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Dans les appels de fonction « normaux », `new.target` vaut {{jsxref("undefined")}}.
 
 {{InteractiveExample("JavaScript Demo: Expressions - new.target")}}

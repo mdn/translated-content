@@ -3,8 +3,6 @@ title: String.prototype.trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
 ---
 
-{{JSRef}}
-
 La méthode **`trimStart()`** permet de retirer les blancs au début de la chaîne de caractères. `trimLeft()` est un synonyme pour cette méthode.
 
 {{InteractiveExample("JavaScript Demo: String.trimStart()")}}

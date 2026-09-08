@@ -3,8 +3,6 @@ title: browsingData.DataTypeSet
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
 ---
 
-{{AddonSidebar}}
-
 Le type **`browsingData.DataTypeSet`** décrit un ensemble de types de données.
 
 Il contient un certains nombres de propriétés booléennes. Le nom de chaque propriété est le nom d'un type particulier de données de navigations : "Téléchargements", "historique" et ainsi de suite. Toutes les propriétés sont facultatives.

@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 39065429ffa608d6b486d599ce2ac9f156a32bd3
 ---
 
-{{CSSRef}}
-
 Dans ce guide, nous verrons quels sont les cas d'utilisation classiques pour les boîtes flexibles et lorsque cette méthode est plus pertinente qu'une autre méthode de disposition.
 
 ## Pourquoi choisir les boîtes flexibles ?

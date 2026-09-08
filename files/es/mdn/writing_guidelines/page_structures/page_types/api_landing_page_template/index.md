@@ -94,7 +94,7 @@ l10n:
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar_
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 Comienza el contenido de la página con un párrafo introductorio: comienza nombrando la API y explicando qué hace. Idealmente, debería ser de una o dos oraciones breves.
 

@@ -3,8 +3,6 @@ title: contentScripts
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
 ---
 
-{{AddonSidebar}}
-
 Utilisez cette API pour enregistrer des scripts de contenu. L'enregistrement d'un script de contenu demande au navigateur d'insérer les scripts de contenu donnés dans des pages correspondant aux modèles d'URL donnés.
 
 Cette API est très similaire à la clé [`"content_scripts"`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) du manifest.json, à l'exception de `"content_scripts"` , l'ensemble des scripts de contenu et des motifs associés est fixé au moment de l'installation. Avec l'API `contentScripts`, une extension peut enregistrer et désenregistrer des scripts au moment de l'exécution.

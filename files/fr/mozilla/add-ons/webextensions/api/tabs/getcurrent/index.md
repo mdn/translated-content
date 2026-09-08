@@ -3,8 +3,6 @@ title: tabs.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getCurrent
 ---
 
-{{AddonSidebar}}
-
 Obtenez un {{WebExtAPIRef("tabs.Tab")}} contenant des informations sur l'onglet dans lequel ce script s'exécute.
 
 Vous pouvez appeler cette fonction dans des contextes comportant un onglet de navigateur, par exemple une [pages d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages). Si vous l'appelez à partir d'un script d'arrière-plan ou d'une fenêtre contextuelle, elle renverra undefined.

@@ -20,7 +20,11 @@ Esta pseudo-clase es útil para diseñar campos que no son necesarios para envia
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:optional {
+  /* ... */
+}
+```
 
 ## Ejemplos
 

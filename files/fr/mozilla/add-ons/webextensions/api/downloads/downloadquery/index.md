@@ -3,8 +3,6 @@ title: downloads.DownloadQuery
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadQuery
 ---
 
-{{AddonSidebar}}
-
 Le type `DownloadQuery` de l'API {{WebExtAPIRef("downloads")}} définit un ensemble de paramètres pouvant être utilisés pour rechercher dans le gestionnaire de téléchargements un ensemble spécifique de téléchargements.
 
 Ce type est utilisé par exemple dans {{WebExtAPIRef("downloads.search()")}} et {{WebExtAPIRef("downloads.erase()")}}, en tant qu'objet de requête pour filtrer l'ensemble de {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} pour retourner ou effacer.

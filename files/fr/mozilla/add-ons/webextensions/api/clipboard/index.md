@@ -3,8 +3,6 @@ title: clipboard
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard
 ---
 
-{{AddonSidebar}}
-
 L'API `presse-papiers` permet à une extension de copier des éléments dans le presse papier du système. Actuellement l'API ne prend en charge que la copie d'images, mais elle est destinée à prendre en charge la copie de texte et HTML dans l'avenir.
 
 Cette API WebExtension existe principalement parce que l'API standard du presse-papiers Web [ne prend pas en charge l'écriture d'images dans le presse-papiers](https://w3c.github.io/clipboard-apis/#writing-to-clipboard). Cette API peut être dépréciée une fois que le support de l'API Clipboard pour les contenus non textuels du presse-papiers est entré en usage général.

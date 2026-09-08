@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---
 
-{{APIRef("Performance API")}} {{Deprecated_Header}}{{Non-standard_header}}
+{{APIRef("Performance API")}} {{Non-standard_header}}
 
 標準外の古い `performance.memory` プロパティは、ウェブサイトのメモリーフットプリントを測定し縮小するのに役立つ JavaScript ヒープのサイズを返します。
 

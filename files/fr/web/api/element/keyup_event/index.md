@@ -3,7 +3,7 @@ title: "Element : évènement keyup"
 short-title: keyup
 slug: Web/API/Element/keyup_event
 l10n:
-  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
+  sourceCommit: 358daf81ac9cf3db999cc8af7aed81ef4ff0c3f6
 ---
 
 {{APIRef("UI Events")}}
@@ -15,6 +15,8 @@ Les évènements {{DOMxRef("Element/keydown_event", "keydown")}} et `keyup` four
 La cible d'un évènement clavier est l'élément actuellement sélectionné qui traite l'activité du clavier. Cela inclut&nbsp;: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}, tout élément qui est [`contentEditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable), et tout autre élément avec lequel on peut interagir au clavier, comme {{HTMLElement("a")}}, {{HTMLElement("button")}}, et {{HTMLElement("summary")}}. Si aucun élément approprié n'est sélectionné, la cible de l'évènement est le {{HTMLElement("body")}} ou la racine. L'évènement [se propage](/fr/docs/Learn_web_development/Core/Scripting/Event_bubbling). Il peut atteindre le {{DOMxRef("Document")}} et la {{DOMxRef("Window")}}.
 
 La cible d'un évènement peut changer entre différents évènements clavier. Par exemple, la cible du `keydown` lors de l'appui sur la touche <kbd>Tab</kbd> est différente de celle du `keyup`, car la sélection a changée.
+
+Comme l'évènement se déclenche après le relâchement de la touche, les propriétés des touches modificateurs ({{DOMxRef("KeyboardEvent/ctrlKey", "ctrlKey")}}, {{DOMxRef("KeyboardEvent/altKey", "altKey")}}, {{DOMxRef("KeyboardEvent/shiftKey", "shiftKey")}}, et {{DOMxRef("KeyboardEvent/metaKey", "metaKey")}}) reflètent l'état après le relâchement. Par exemple, `ctrlKey` est `false` lors de l'évènement `keyup` pour la touche <kbd>Control</kbd> elle-même. Si une autre touche est relâchée alors que la touche <kbd>Control</kbd> reste enfoncée, `ctrlKey` est `true` lors de l'évènement `keyup` de cette touche.
 
 ## Syntaxe
 

@@ -3,8 +3,6 @@ title: theme.reset()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/reset
 ---
 
-{{AddonSidebar}}
-
 Réinitialise tout thème appliqué à l'aide de la méthode {{WebExtAPIRef("theme.update()")}}
 
 Notez que cela réinitialisera toujours le thème au thème par défaut d'origine, même si l'utilisateur a sélectionné un thème différent avant que le thème de cette extension ait été appliqué (voir [bug 1415267](https://bugzilla.mozilla.org/show_bug.cgi?id=1415267)).

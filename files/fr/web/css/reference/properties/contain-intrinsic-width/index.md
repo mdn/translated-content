@@ -60,7 +60,7 @@ La valeur mémorisée n'est pas utilisée si les éléments enfants sont en cour
 
 {{CSSSyntax}}
 
-## Examples
+## Exemples
 
 En plus de l'exemple ci-dessous, la page {{CSSxRef("contain-intrinsic-size")}} contient un exemple interactif qui montre l'effet de la modification de la largeur et de la hauteur intrinsèques.
 

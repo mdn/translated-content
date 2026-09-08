@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 **`HTMLFrameSetElement`** 接口提供用于操作 {{HTMLElement("frameset")}} 元素的特定属性（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用）。
 

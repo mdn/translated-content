@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 3b1efe57f3b22a97acb9db335f2848c90cdfe40e
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}{{deprecated_header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 {{domxref("WebTransportDatagramDuplexStream")}} 接口的只读属性 **`writable`** 返回一个 {{domxref("WritableStream")}} 实例，可用于向流中不可靠地写入传出数据报。
 

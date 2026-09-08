@@ -2,7 +2,7 @@
 title: HTMLMetaElement
 slug: Web/API/HTMLMetaElement
 l10n:
-  sourceCommit: ad01ed9218be15d7aeaa0666ec0bc2a2d17f3574
+  sourceCommit: 4c58f4735f986a91bee1b77e336143630df727a2
 ---
 
 {{APIRef("HTML DOM")}}
@@ -60,7 +60,7 @@ L'attribut `content` définit la taille de la zone d'affichage et est ajouté à
 ```js
 const meta = document.createElement("meta");
 meta.name = "viewport";
-meta.content = "width=device-width, initial-scale=1";
+meta.content = "width=device-width";
 document.head.appendChild(meta);
 ```
 

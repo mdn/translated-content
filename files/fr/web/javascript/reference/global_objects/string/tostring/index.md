@@ -3,8 +3,6 @@ title: String.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/String/toString
 ---
 
-{{JSRef}}
-
 La méthode **`toString()`** renvoie une chaine de caractères représentant l'objet renseigné.
 
 {{InteractiveExample("JavaScript Demo: String.toString()")}}

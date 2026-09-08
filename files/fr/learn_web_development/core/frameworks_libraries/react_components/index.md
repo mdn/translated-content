@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 06754bc607017d19a7f088df7d6b0b7b635cbe58
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Jusqu'à présent, notre application est monolithique. Avant de pouvoir en faire quelque chose, nous devons la scinder en composants gérables et descriptifs. React n'a pas de règles strictes sur ce qui est et n'est pas un composant&nbsp;: c'est à vous de décider&nbsp;! Dans cet article, nous allons vous montrer une façon judicieuse de diviser notre application en composants.
 

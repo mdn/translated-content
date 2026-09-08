@@ -46,18 +46,18 @@ L'interface `PerformanceEventTiming` des événements de l'`Event Timing API` fo
 
 ## Propriétés
 
-- [`PerformanceEventTiming.processingStart`](/fr/docs/Web/API/PerformanceEventTiming/processingStart) _lecture seule_ {{ExperimentalBadge}}
+- [`PerformanceEventTiming.processingStart`](/fr/docs/Web/API/PerformanceEventTiming/processingStart) _lecture seule_
   - : Retourne un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant l'heure à laquelle la diffusion des événements a commencé.
-- [`PerformanceEventTiming.processingEnd`](/fr/docs/Web/API/PerformanceEventTiming/processingEnd) _lecture seule_ {{ExperimentalBadge}}
+- [`PerformanceEventTiming.processingEnd`](/fr/docs/Web/API/PerformanceEventTiming/processingEnd) _lecture seule_
   - : Retourne un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant l'heure à laquelle la diffusion de l'événement s'est terminée.
-- [`PerformanceEventTiming.cancelable`](/fr/docs/Web/API/PerformanceEventTiming/cancelable) _lecture seule_ {{ExperimentalBadge}}
+- [`PerformanceEventTiming.cancelable`](/fr/docs/Web/API/PerformanceEventTiming/cancelable) _lecture seule_
   - : Retourne un [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) représentant l'attribut annulable de l'événement associé.
 - [`PerformanceEventTiming.target`](/fr/docs/Web/API/PerformanceEventTiming/target) _lecture seule_ {{Non-standard_Inline}}
   - : Retourne un [`Node`](/fr/docs/Web/API/Node) représentant la dernière cible de l'événement associé, si elle n'est pas supprimée.
 
 ## Méthodes
 
-- [`PerformanceEventTiming.toJSON()`](</fr/docs/Web/API/PerformanceEventTiming/toJSON()>) {{ExperimentalBadge}}
+- [`PerformanceEventTiming.toJSON()`](</fr/docs/Web/API/PerformanceEventTiming/toJSON()>)
   - : Convertit l'objet [`PerformanceEventTiming`](/fr/docs/Web/API/PerformanceEventTiming) en JSON.
 
 ## Exemples

@@ -3,8 +3,6 @@ title: downloads.State
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/State
 ---
 
-{{AddonSidebar}}
-
 Le type d'`état` de l'API {{WebExtAPIRef("downloads")}} définit différents états dans lesquels un téléchargement en cours peut se trouver.
 
 Une propriété d'`state` {{WebExtAPIRef('downloads.DownloadItem')}} contiendra une chaîne tirée des valeurs définies dans ce type.

@@ -2,7 +2,7 @@
 title: Macros de liens
 slug: MDN/Writing_guidelines/Page_structures/Links
 l10n:
-  sourceCommit: 94e900db86109d76e8a1e120e3b135db0d543c87
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 MDN propose de nombreuses macros pour créer des liens toujours à jour vers le contenu MDN. Ce guide présente les macros de renvoi croisé MDN que vous pouvez utiliser pour inclure un lien unique vers une autre page ou une liste de liens vers toutes les sous-pages d'un document.
@@ -122,4 +122,4 @@ Par exemple, `\{{CSSxRef("background-color")}}` crée le lien "{{CSSxRef("backgr
 
 - [Utiliser les macros](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros)
 - [Macros courantes](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), y compris les macros BCD (`\{{Compat}}`) et les macros de spécification (`\{{Specifications}}`).
-- [Guide des bannières et avis](/fr/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices) incluant les macros `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}` et `\{{SecureContext_Header}}`.
+- [Guide des bannières et avis](/fr/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices) incluant les macros `\{{SeeCompatTable}}` et `\{{SecureContext_Header}}`.

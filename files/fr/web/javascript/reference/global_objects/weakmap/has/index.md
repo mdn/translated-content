@@ -3,8 +3,6 @@ title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 ---
 
-{{JSRef}}
-
 La méthode **`has()`** renvoie un booléen qui indique s'il existe (ou non) un élément avec une clé donnée au sein de l'objet `WeakMap`.
 
 {{InteractiveExample("JavaScript Demo: WeakMap.prototype.has()")}}

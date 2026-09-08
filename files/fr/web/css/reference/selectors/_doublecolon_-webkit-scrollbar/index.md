@@ -3,12 +3,20 @@ title: Pseudo-élément CSS `::-webkit-scrollbar`
 short-title: ::-webkit-scrollbar
 slug: Web/CSS/Reference/Selectors/::-webkit-scrollbar
 l10n:
-  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
+  sourceCommit: b2a7378d76136b568fe9414f46abda899b2bf700
 ---
 
 {{Non-standard_Header}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-scrollbar`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de modifier le style de la barre de défilement associée à un élément. Il s'agit d'un pseudo-élément propriétaire, uniquement disponible pour les navigateurs WebKit.
+
+Les propriétés standard {{cssxref("scrollbar-color")}} et {{cssxref("scrollbar-width")}} peuvent être utilisées comme alternatives pour les navigateurs qui ne prennent pas en charge ce pseudo-élément et les pseudo-éléments associés `::-webkit-scrollbar-*` (voir la [compatibilité des navigateurs](#compatibilité_des_navigateurs)).
+
+> [!NOTE]
+> Si les valeurs calculées de {{cssxref("scrollbar-color")}} et {{cssxref("scrollbar-width")}} d'un élément sont différentes de `auto`, elles remplacent le style `::-webkit-scrollbar-*`.
+> Comme `scrollbar-color` est hérité, un élément est affecté lorsqu'un ancêtre le définit, même si l'élément lui-même ne le fait pas.
+> Définir `scrollbar-color: auto` sur l'élément restaure son style `::-webkit-scrollbar-*` s'il a été précédemment supprimé par un réglage `scrollbar-color` sur un ancêtre.
+> Voir [Ajouter une solution de repli pour les styles de barre de défilement](#ajouter_une_solution_de_repli_pour_les_styles_de_barre_de_défilement) pour plus de détails.
 
 ## Sélecteurs de barre de défilement
 
@@ -24,7 +32,7 @@ Vous pouvez utiliser les pseudo-éléments suivants pour personnaliser différen
 
 ## Accessibilité
 
-Les auteur·ice·s doivent éviter de mettre en forme les barres de défilement, car le changement de l'apparence des barres de défilement par rapport à la valeur par défaut [perturbe la cohérence externe <sup>(angl.)</sup>](https://inclusivedesignprinciples.info/#be-consistent), ce qui a un impact négatif sur l'utilisabilité. Si vous mettez en forme les barres de défilement, assurez-vous qu'il y a suffisamment de contraste de couleur et que les cibles tactiles mesurent au moins 44px de large et de haut. Voir [Techniques pour WCAG 2.0 : G183 : Utiliser un rapport de contraste de 3:1 <sup>(angl.)</sup>](https://www.w3.org/TR/WCAG20-TECHS/G183.html) et [Comprendre WCAG 2.1 : Taille de la cible <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html).
+Les auteur·ice·s doivent éviter de mettre en forme les barres de défilement, car le changement de l'apparence des barres de défilement par rapport à la valeur par défaut [perturbe la cohérence externe <sup>(angl.)</sup>](https://inclusivedesignprinciples.info/#be-consistent), ce qui a un impact négatif sur l'utilisabilité. Si vous mettez en forme les barres de défilement, assurez-vous qu'il y a suffisamment de contraste de couleur et que les cibles tactiles mesurent au moins 44px de large et de haut. Voir [Techniques pour WCAG 2.0&nbsp;: G183&nbsp;: Utiliser un rapport de contraste de 3:1 <sup>(angl.)</sup>](https://www.w3.org/TR/WCAG20-TECHS/G183.html) et [Comprendre WCAG 2.1&nbsp;: Taille de la cible <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html).
 
 ## Exemples
 
@@ -76,14 +84,14 @@ Les auteur·ice·s doivent éviter de mettre en forme les barres de défilement,
   display: none;
 }
 
-/* Demonstrate a "mostly customized" scrollbar
- * (won't be visible otherwise if width/height is specified) */
+/* Démontre une barre de défilement « en grande partie personnalisée »
+ * (qui n'est pas visible si la largeur ou la hauteur est définie) */
 .mostly-customized-scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 8px;
-  background-color: #aaaaaa; /* or add it to the track */
+  background-color: #aaaaaa; /* ou l'ajoute à la piste */
 }
-/* Add a thumb */
+/* Ajoute du style au pouce */
 .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
   background: black;
 }
@@ -91,7 +99,7 @@ Les auteur·ice·s doivent éviter de mettre en forme les barres de défilement,
 
 #### Résultat
 
-{{EmbedLiveSample("mettre_en_forme_les_barres_de_défilement_en_utilisant_-webkit-scrollbar", 600, 300)}}
+{{EmbedLiveSample("Mettre en forme les barres de défilement en utilisant `-webkit-scrollbar`", 600, 300)}}
 
 ### Ajouter une solution de repli pour les styles de barre de défilement
 
@@ -155,7 +163,7 @@ L'exemple suivant montre comment appliquer des couleurs aux barres de défilemen
 
 Dans l'exemple ci-dessous, vous pouvez faire défiler la boîte bordée verticalement pour voir l'effet de la mise en forme de la barre de défilement.
 
-{{EmbedLiveSample("ajouter_une_solution_de_repli_pour_les_styles_de_barre_de_défilement")}}
+{{EmbedLiveSample("Ajouter une solution de repli pour les styles de barre de défilement")}}
 
 ## Spécifications
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
 ---
 
-{{ApiRef("HTML DOM")}}{{Deprecated_header}}{{non-standard_header}}
+{{ApiRef("HTML DOM")}}{{non-standard_header}}
 
 **`Navigator.doNotTrack`** 属性返回用户的请勿追踪设置，该设置指示用户是否请求网站和广告商不要追踪他们。
 
