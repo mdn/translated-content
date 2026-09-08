@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{DefaultAPISidebar("")}}
+{{APIRef("WebVTT")}}
 
 **`line`** は {{domxref("VTTCue")}} インターフェイスのプロパティで、この WebVTT キューのキュー行を表します。
 
