@@ -43,10 +43,10 @@ cargo install wasm-pack
 
 在 [npm signup page](https://www.npmjs.com/signup) 注册 npm 账户，并填写表格。
 
-接下来，在命令行中运行 `npm adduser`:
+接下来，在命令行中运行 `npm login`:
 
 ```bash
-> npm adduser
+> npm login
 Username: yournpmusername
 Password:
 Email: (this IS public) you@example.com
