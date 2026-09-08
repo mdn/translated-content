@@ -15,7 +15,7 @@ l10n:
 
 ## 示例
 
-在此示例中，`aria-colindextext` 属性设置在 ID 为 `role-heading` 的元素上，值为 "Aria Role column"。使用 `ariaColIndexText` 我们将值更新为字符串 "New column name"。
+在此示例中，`aria-colindextext` 属性设置在 ID 为 `role-heading` 的元素上，值为“ARIA 角色列”。使用 `ariaColIndexText` 我们将值更新为字符串“新列名”。
 
 ```html
 <table
@@ -35,7 +35,7 @@ l10n:
         aria-sort="none"
         aria-rowindex="1"
         aria-colindex="1"
-        aria-colindextext="Aria Role column">
+        aria-colindextext="ARIA 角色列">
         ARIA 角色
       </th>
       <th
@@ -70,9 +70,9 @@ l10n:
 
 ```js
 let el = document.getElementById("role-heading");
-console.log(el.ariaColIndexText); // "Aria Role"
-el.ariaColIndexText = "New column name";
-console.log(el.ariaColIndexText); // "New column name"
+console.log(el.ariaColIndexText); // "ARIA 角色"
+el.ariaColIndexText = "新列名";
+console.log(el.ariaColIndexText); // "新列名"
 ```
 
 ## 规范
