@@ -15,7 +15,7 @@ jobs:
   # Docs: https://github.com/actions/labeler
   label-by-path:
     # do not run on forks
-    if: github.repository == 'mdn/translated-content'
+    if: github.repository_owner == 'mdn'
     name: Label by path
     runs-on: ubuntu-latest
     steps:
@@ -27,7 +27,7 @@ jobs:
   # Docs: https://github.com/CodelyTV/pr-size-labeler
   label-by-size:
     # do not run on forks
-    if: github.repository == 'mdn/translated-content'
+    if: github.repository_owner == 'mdn'
     needs: label-by-path
     name: Label by size
     runs-on: ubuntu-latest
