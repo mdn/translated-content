@@ -15,7 +15,7 @@ l10n:
 
 `<blink>` は、 Netscape のエンジニアである [Lou Montulli](https://ja.wikipedia.org/wiki/ルー・モントゥリ) と同僚たちがマウンテンビューのバーでしていた会話がきっかけで生まれたようです。彼が翌朝オフィスに出社すると、同僚のひとりが徹夜でその機能を実装していたことに気づきました（[詳しい話はこちら](https://web.archive.org/web/20220331020029/http://www.montulli.org/theoriginofthe%3Cblink%3Etag)）。
 
-当初は人気を集めた `<blink>` ですが、乱用された結果、多くの人がこれを不快だと感じ、多くの批判を受けるようになりました。さらに重要なことは、可読性を低下させ、視覚障害者やてんかん、ADHD のような[認知障害](/ja/docs/Web/Accessibility/Guides/Cognitive_accessibility)のあるユーザーにとって特に問題となる可能性があることです。`<blink>` は、混乱を起こしたり、最悪の場合、[発作を引き起こす](/ja/docs/Web/Accessibility/Seizure_disorders)こともあります。
+当初は人気を集めた `<blink>` ですが、乱用された結果、多くの人がこれを不快だと感じ、多くの批判を受けるようになりました。さらに重要なことは、可読性を低下させ、視覚障害者やてんかん、ADHD のような[認知障害](/ja/docs/Web/Accessibility/Guides/Cognitive_accessibility)のあるユーザーにとって特に問題となる可能性があることです。`<blink>` は、混乱を起こしたり、最悪の場合、[発作を引き起こす](/ja/docs/Web/Accessibility/Guides/Seizure_disorders)こともあります。
 
 `<blink>` は正式に仕様化されたことはなく、主要なブラウザー間で互換性も得られませんでした。これはウェブの歴史の一部と考えることができます。
 
