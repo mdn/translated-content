@@ -20,7 +20,7 @@ formData.has(name);
 
 ### 返回
 
-一个 {{domxref("Boolean")}}。
+一个 {{jsxref("Boolean")}}。
 
 ## 示例
 
