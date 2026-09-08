@@ -12,5 +12,3 @@ build/
 
 # XXX Ignored until https://github.com/prettier/prettier/issues/11828 is fixed
 /files/ru/web/javascript/guide/expressions_and_operators/index.md
-/files/zh-cn/web/javascript/reference/operators/exponentiation/index.md
-/files/zh-cn/web/javascript/reference/operators/exponentiation_assignment/index.md
