@@ -3,7 +3,7 @@ title: "`unknown` 错误码"
 short-title: unknown
 slug: Web/WebDriver/Reference/Errors/UnknownError
 l10n:
-  sourceCommit: 421a9c26127cf11e33e72184b14656c9d406294d
+  sourceCommit: de5b264fa7bf6bb49811bf79f8f28f10835bfb79
 ---
 
 **unknown** 错误是一种 [WebDriver 错误](/zh-CN/docs/Web/WebDriver/Reference/Errors)，当驱动程序在处理[命令](/zh-CN/docs/Web/WebDriver/Reference/Classic/Commands)时发生未指明的错误时会出现。
