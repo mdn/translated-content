@@ -6,7 +6,7 @@ l10n:
   sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{deprecated_header}}{{APIRef("UI Events")}}{{Non-standard_header}}
+{{APIRef("UI Events")}}{{Non-standard_header}}
 
 **`locale`** は {{domxref("CompositionEvent")}} インターフェイスの読み取り専用のプロパティで、現在の入力システムのロケール（例えば、結合操作が IME に関連付けられているならばキーボードレイアウトのロケール）を返します。
 

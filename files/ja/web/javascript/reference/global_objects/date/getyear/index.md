@@ -5,7 +5,7 @@ l10n:
   sourceCommit: e8320dfbed49d37589d0fe759ef6506885f340f7
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 **`getYear()`** は {{jsxref("Date")}} インスタンスのメソッドで、地方時に基づき、指定された日時の「年」を返します。`getYear()` は完全な桁数の値を返さないため（いわゆる「2000 年問題」）、使用されなくなり、{{jsxref("Date/getFullYear", "getFullYear()")}} メソッドに置き換えられました。
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
 **`HTMLMediaElement.controller`** プロパティは、要素に割り当てられたメディアコントローラーを表します。
 
