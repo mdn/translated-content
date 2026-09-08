@@ -22,6 +22,7 @@ l10n:
 ## インスタンスプロパティ
 
 _このインターフェイスには {{domxref("Event")}} から継承したプロパティもあります。_
+
 - {{domxref("CookieChangeEvent.changed")}} {{ReadOnlyInline}}
   - : 新しく作成されたすべてのクッキーを一覧にした配列です。なお、有効期限が過去の日付に設定されて作成されたクッキーは、直ちに削除されるため、この一覧には含まれません。
 - {{domxref("CookieChangeEvent.deleted")}} {{ReadOnlyInline}}
