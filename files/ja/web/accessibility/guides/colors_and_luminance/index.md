@@ -316,7 +316,7 @@ RGB は CRT を使用することを反映したハードウェア指向のも�
 - [アクセシビリティの学習経路](/ja/docs/Learn_web_development/Core/Accessibility)
 - CSS の {{cssxref("color")}} プロパティ
 - CSS の {{cssxref("&lt;color&gt;")}} データ型
-- [発作と身体反応に関するウェブアクセシビリティ](/ja/docs/Web/Accessibility/Seizure_disorders)
+- [発作と身体反応に関するウェブアクセシビリティ](/ja/docs/Web/Accessibility/Guides/Seizure_disorders)
 - [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
 - [Red Desaturation](https://www.smartoptometry.app/red-desaturation/) 人間の目は赤に敏感に反応するため、眼科医は赤を使用する検査を設定し、視神経の健全性を評価している。
 - [Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group](https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1528-1167.2005.31305.x)
