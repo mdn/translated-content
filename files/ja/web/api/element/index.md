@@ -2,7 +2,7 @@
 title: Element
 slug: Web/API/Element
 l10n:
-  sourceCommit: cf16851e73da29823438198c4f0efcb7026b7d10
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 {{APIRef("DOM")}}
@@ -19,6 +19,8 @@ XUL の `XULElement` インターフェイスのようなウェブプラット�
 
 _`Element` は、親インターフェイスである {{DOMxRef("Node")}}、およびその親インターフェイスである {{DOMxRef("EventTarget")}} からプロパティを継承しています。_
 
+- {{DOMxRef("Element.activeViewTransition")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : {{domxref("ViewTransition")}} インスタンスを返します。これは、要素に対して現在アクティブな[ビュー遷移](/ja/docs/Web/API/View_Transition_API)を表します。
 - {{DOMxRef("Element.assignedSlot")}} {{ReadOnlyInline}}
   - : このノードが挿入された {{htmlelement("slot")}} を表す {{DOMxRef("HTMLSlotElement")}} を返します。
 - {{DOMxRef("Element.attributes")}} {{ReadOnlyInline}}
@@ -41,6 +43,8 @@ _`Element` は、親インターフェイスである {{DOMxRef("Node")}}、お�
   - : この要素の内部の幅を表す数値を返します。
 - {{DOMxRef("Element.currentCSSZoom")}} {{ReadOnlyInline}}
   - : 要素の実効ズームサイズを示す数値。要素がレンダリングされない場合は 1.0 です。
+- {{DOMxRef("Element.customElementRegistry")}} {{ReadOnlyInline}}
+  - : この要素に関連付けられた {{domxref("CustomElementRegistry")}} オブジェクト。設定されていない場合は `null` となります。
 - {{DOMxRef("Element.elementTiming")}} {{Experimental_Inline}}
   - : {{domxref("PerformanceElementTiming")}} API において要素を監視するためのマークとなる [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性を反映した文字列です。
 - {{domxref("Element.firstElementChild")}} {{ReadOnlyInline}}
@@ -215,6 +219,8 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
   - : {{domxref("Node")}} オブジェクトまたは文字列を、この `Element` の親の子ノードリストの中、 `Element` の直後に追加します。
 - {{DOMxRef("Element.animate()")}}
   - : この要素でアニメーションを作成および実行するためのショートカットメソッドです。作成した Animation オブジェクトのインスタンスを返します。
+- {{DOMxRef("Element.ariaNotify()")}}
+  - : 指定されたテキスト文字列をスクリーンリーダーで読み上げさせるように指定します。
 - {{DOMxRef("Element.append()")}}
   - : この要素の最後の子の後に、一連の {{domxref("Node")}} オブジェクトまたは文字列を挿入します。
 - {{DOMxRef("Element.attachShadow()")}}
@@ -273,6 +279,8 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
   - : 指定された {{domxref("Node")}} を、呼び出し元ノード内で直接の子として、指定された参照ノードの前に移動します。ノードは除去される前に再挿入されることはありません。
 - {{DOMxRef("Element.prepend()")}}
   - : この要素の最初の子の前に、一連の {{domxref("Node")}} オブジェクトまたは文字列を挿入します。
+- {{DOMxRef("Element.pseudo()")}} {{experimental_inline}}
+  - : {{domxref("CSSPseudoElement")}} オブジェクトを返します。これは、指定された型の、その要素に関連付けられた [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を表します。
 - {{DOMxRef("Element.querySelector()")}}
   - : 要素に対して、指定したセレクターに一致する最初の {{DOMxRef("Node")}} を返します。
 - {{DOMxRef("Element.querySelectorAll()")}}
@@ -315,12 +323,14 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
   - : 現在ノードに、指定された名前と名前空間を持つ属性値を設定します。
 - {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : マウスイベントキャプチャーを設定し、すべてのマウスイベントをこの要素にリダイレクトします。
-- {{DOMxRef("Element.setHTML()")}} {{SecureContext_Inline}} {{experimental_inline}}
+- {{DOMxRef("Element.setHTML()")}} {{SecureContext_Inline}}
   - : HTML の文字列を解釈し、[サニタイズ](/ja/docs/Web/API/HTML_Sanitizer_API)して文書フラグメントに変換し、 DOM 内の要素の元のサブツリーを置き換えます。
 - {{DOMxRef("Element.setHTMLUnsafe()")}}
   - : HTML の文字列を無害化せずに構文解析して文書フラグメントに入れ、DOM 内の要素の元サブツリーを置き換えます。HTML 文字列は宣言的なシャドウルートを入れることができますが、[`Element.innerHTML`](/ja/docs/Web/API/Element/innerHTML) を使用して HTML を設定した場合は、テンプレート要素として解釈されます。
 - {{DOMxRef("Element.setPointerCapture()")}}
-  - : 指定された要素を、以降の[ポインターイベント](/ja/docs/Web/API/Pointer_events)のキャプチャー対象として指定します。
+  - : 指定された要素を、以降の[ポインターイベント](/ja/docs/Web/API/Pointer_events)のキャプチャ対象として指定します。
+- {{DOMxRef("Element.startViewTransition()")}} {{experimental_inline}}
+  - : 同じ文書内 (SPA) の新しい[要素スコープ](/ja/docs/Web/API/View_Transition_API/Using_element-scoped)への[ビュー遷移](/ja/docs/Web/API/View_Transition_API)を開始し、それを表す {{domxref("ViewTransition")}} オブジェクトを返します。
 - {{DOMxRef("Element.toggleAttribute()")}}
   - : 論理属性のオンオフを切り替えます。属性が存在していれば削除、属性が存在していなければ追加します。
 
@@ -332,7 +342,7 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
   - : スクリプトが実行されたときに発行されます。
 - {{domxref("Element/beforeinput_event", "beforeinput")}}
   - : 入力要素の値が変更されようとすると発行されます。
-- {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
+- {{domxref("Element/beforematch_event", "beforematch")}}
   - : [見つかるまでの間は非表示](/ja/docs/Web/HTML/Reference/Global_attributes/hidden)状態にある要素で、ユーザーが「ページ内検索」機能やフラグメントナビゲーションによってコンテンツを見つけたため、ブラウザーがそのコンテンツを公開しようとしているときに発行されます。
 - {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : スクリプトが実行されそうになったときに発行されます。
