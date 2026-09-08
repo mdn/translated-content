@@ -96,9 +96,18 @@ jobs:
           service_account: deploy-mdn-review-content@${{ secrets.GCP_PROJECT_NAME }}.iam.gserviceaccount.com
           workload_identity_provider: projects/${{ secrets.WIP_PROJECT_ID }}/locations/global/workloadIdentityPools/github-actions/providers/github-actions
 
-      - name: Setup gcloud
-        if: steps.check.outputs.HAS_ARTIFACT
-        uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db # v3.0.1
+      - parallel:
+          - name: Setup gcloud
+            if: steps.check.outputs.HAS_ARTIFACT
+            uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db # v3.0.1
+
+          - name: Checkout (mdn/content)
+            uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+            if: steps.check.outputs.HAS_ARTIFACT
+            with:
+              repository: mdn/content
+              path: content
+              persist-credentials: false
 
       - name: Upload to GCS
         if: steps.check.outputs.HAS_ARTIFACT
@@ -112,14 +121,6 @@ jobs:
           parent: false
           concurrency: 500
           process_gcloudignore: false
-
-      - name: Checkout (mdn/content)
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        if: steps.check.outputs.HAS_ARTIFACT
-        with:
-          repository: mdn/content
-          path: content
-          persist-credentials: false
 
       - name: Setup (mdn/content)
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
