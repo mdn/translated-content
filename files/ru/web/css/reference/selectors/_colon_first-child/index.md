@@ -6,7 +6,7 @@ original_slug: Web/CSS/:first-child
 
 {{CSSRef}}
 
-{{cssxRef('', 'CSS')}} {{cssxRef('Pseudo-classes', 'псевдокласс')}} **`:first-child`** находит любой элемент, являющийся первым в своём родителе.
+[CSS](/ru/docs/Web/CSS) {{cssxRef('Pseudo-classes', 'псевдокласс')}} **`:first-child`** находит любой элемент, являющийся первым в своём родителе.
 
 ```css
 >
