@@ -9,7 +9,7 @@ l10n:
 
 Zstandard (略称: `zstd`) は、zlib レベル以上の圧縮率でのリアルタイム圧縮用途を対象とした、高速な可逆圧縮アルゴリズムです。[Huff0 and FSE ライブラリー](https://github.com/Cyan4973/FiniteStateEntropy) が提供する非常に高速なエントロピー処理段階によって支えられています。同等の CPU コストで {{glossary("Brotli_compression", "Brotli")}} よりも高い圧縮率を実現したり、同等の圧縮率でより低い CPU コストを実現したりすることがよくあります。
 
-ブラウザーの対応状況については、[`Content-Encoding` のブラウザーの互換性](/ja/docs/Web/HTTP/Reference/Headers/Content-Encoding#browser_compatibility) を参照してください。
+ブラウザーの対応状況については、[`Content-Encoding` のブラウザーの互換性](/ja/docs/Web/HTTP/Reference/Headers/Content-Encoding#ブラウザーの互換性) を参照してください。
 
 ## 関連情報
 
