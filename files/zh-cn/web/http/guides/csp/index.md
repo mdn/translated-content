@@ -540,7 +540,7 @@ target.innerHTML = possiblyXSS;
 // 若设置了 require-trusted-types-for，将抛出异常
 ```
 
-可信类型对象使用用户定义的*策略*对象创建。你的代码可以创建任何种类的策略对象，包括那些转换函数实际上并不净化输入、因而无法保护你的策略。为尽量降低这一风险，你可以包含 [`trusted-types`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) 指令。它列出可接受的策略名称，浏览器将只允许使用这些已命名的策略。
+可信类型对象使用用户定义的*策略*对象创建。你的代码可以创建任何种类的策略对象，包括那些转换函数实际上并不净化输入、因而无法保护你的策略。为尽量降低这一风险，你可以包含 [`trusted-types`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) 指令。它列出可接受的策略名称，浏览器将只允许使用这些列出的策略。
 
 ## 测试你的策略
 
@@ -561,10 +561,7 @@ Content-Security-Policy-Report-Only: policy
 报告 CSP 违规的推荐方法是使用[报告 API](/zh-CN/docs/Web/API/Reporting_API)，在 {{HTTPHeader("Reporting-Endpoints")}} 中声明端点，并使用 `Content-Security-Policy` 标头的 {{CSP("report-to")}} 指令将其中之一指定为 CSP 报告目标。
 
 > [!WARNING]
-> 你也可以使用 CSP 的 {{CSP("report-uri")}} 指令来指定 CSP 违规报告的目标 URL。
-> 这会通过 {{HTTPHeader("Content-Type")}} 为 `application/csp-report` 的 `POST` 操作发送略有不同的 JSON 报告格式。
-> 这种方法已弃用，但在所有浏览器都支持 {{CSP("report-to")}} 之前，你应当同时声明两者。
-> 有关该方法的更多信息，请参见 {{CSP("report-uri")}} 主题。
+> 你也可以使用 CSP 的 {{CSP("report-uri")}} 指令来指定 CSP 违规报告的目标 URL。这会通过 {{HTTPHeader("Content-Type")}} 为 `application/csp-report` 的 `POST` 操作发送略有不同的 JSON 报告格式。这种方法已弃用，但在所有浏览器都支持 {{CSP("report-to")}} 之前，你应当同时声明两者。有关该方法的更多信息，请参见 {{CSP("report-uri")}} 主题。
 
 服务器可以使用 {{HTTPHeader("Reporting-Endpoints")}} HTTP 响应标头告知客户端将报告发送到何处。该标头将一个或多个端点 URL 定义为逗号分隔的列表。例如，要定义一个名为 `csp-endpoint`、在 `https://example.com/csp-reports` 接受报告的报告端点，服务器的响应标头可以如下所示：
 
