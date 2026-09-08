@@ -29,7 +29,7 @@ l10n:
 - 警报对话框必须被正确标注
 - 必须正确管理键盘焦点
 
-`alertdialog` 必须具有可访问名称，通过 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 或 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 定义。警报对话框文本必须具有使用 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 提供的{{glossary("accessible description", "无障碍描述")}}，。
+`alertdialog` 必须具有可访问名称，通过 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 或 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 定义。警报对话框文本必须具有使用 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 提供的{{glossary("accessible description", "无障碍描述")}}。
 
 ### 关联的 WAI-ARIA 角色、状态和属性
 
