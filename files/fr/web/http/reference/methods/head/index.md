@@ -54,7 +54,7 @@ HEAD <request-target>["?"<query>] HTTP/1.1
 
 - `<request-target>`
   - : Identifie la ressource cible de la requête lorsqu'elle est combinée avec l'information fournie par l'en-tête {{HTTPHeader("Host")}}.
-    Il s'agit d'un chemin absolu (par exemple `/chemin/vers/fichier.html`) pour les requêtes vers un serveur d'origine et d'une URL absolue pour les requêtes vers les serveurs mandataires (<i lang="en">proxies</i>) (par exemple `http://www.exemple.fr/chemin/vers/fichier.html`).
+    Il s'agit d'un chemin absolu (par exemple `/chemin/vers/fichier.html`) pour les requêtes vers un serveur d'origine et d'une URL absolue pour les requêtes vers les serveurs mandataires (<i lang="en">proxies</i>) (par exemple `http://www.example.com/chemin/vers/fichier.html`).
 - `<query>` {{Optional_Inline}}
   - : Un fragment de requête optionnel précédé d'un point d'interrogation `?`.
     Utilisé généralement pour fournir de l'information sous la forme de paires `clé=valeur`.
@@ -63,10 +63,10 @@ HEAD <request-target>["?"<query>] HTTP/1.1
 
 ### Récupération réussie des métadonnées d'une ressource
 
-La commande `curl` suivante crée une requête `HEAD` pour `exemple.fr`&nbsp;:
+La commande `curl` suivante crée une requête `HEAD` pour `example.com`&nbsp;:
 
 ```bash
-curl --head exemple.fr
+curl --head example.com
 ```
 
 C'est l'équivalent d'une requête `GET`, sauf que le serveur ne doit pas inclure de corps de message dans la réponse.
@@ -74,7 +74,7 @@ Cela crée une requête HTTP qui ressemble à&nbsp;:
 
 ```http
 HEAD / HTTP/1.1
-Host: exemple.fr
+Host: example.com
 User-Agent: curl/8.6.0
 Accept: */*
 ```

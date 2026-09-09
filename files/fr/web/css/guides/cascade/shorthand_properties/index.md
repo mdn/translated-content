@@ -2,7 +2,7 @@
 title: Propriétés raccourcies
 slug: Web/CSS/Guides/Cascade/Shorthand_properties
 l10n:
-  sourceCommit: 82f81b39d2a3fb0d944c79ff98343d98d02b7eab
+  sourceCommit: 9dad06197b9a4c09d7c1e03b5aac47458a30cb2e
 ---
 
 Les **_propriétés raccourcies_** sont des propriétés CSS permettant de paramétrer simultanément les valeurs de plusieurs propriétés CSS. Utiliser une propriété raccourcie permet d'obtenir des feuilles de style plus concises (et souvent plus lisibles).
@@ -164,7 +164,7 @@ Il peut être simplifié comme suit&nbsp;:
 inset: 0 20px 0 20px;
 ```
 
-Commes pour les marges et les remplissages, les valeurs d'encart sont ordonnées dans le sens des aiguilles d'une montre — haut, droite, bas, puis gauche (TRBL).
+Comme pour les marges et les remplissages, les valeurs d'encart sont ordonnées dans le sens des aiguilles d'une montre — haut, droite, bas, puis gauche (TRBL).
 
 ## La propriété raccourcie universelle
 

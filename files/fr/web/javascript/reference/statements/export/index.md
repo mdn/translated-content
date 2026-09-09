@@ -3,8 +3,6 @@ title: export
 slug: Web/JavaScript/Reference/Statements/export
 ---
 
-{{jsSidebar("Statements")}}
-
 L'instruction **`export`** est utilisée lors de la création de modules JavaScript pour exporter des fonctions, des objets ou des valeurs primitives à partir du module, de sorte qu'ils puissent être utilisés par d'autres programmes grâce à l'instruction {{jsxref("Statements/import", "import")}}.
 
 Les modules exportés sont interprétés en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) dans tous les cas. L'instruction `export` ne peut pas être utilisée dans les scripts embarqués.
@@ -75,7 +73,7 @@ Mais un export par défaut peut être importé avec n'importe quel nom, par exem
 
 ```js
 let k;
-export default k = 12; // dans le fichier test.js
+export default (k = 12); // dans le fichier test.js
 import m from "./test"; // notez que nous avons la liberté d'utiliser import m au lieu de import k, parce que k était l'export par défaut
 console.log(m); // enregistrera 12
 ```

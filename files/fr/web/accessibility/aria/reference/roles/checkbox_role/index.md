@@ -2,12 +2,11 @@
 title: "ARIA : rôle checkbox"
 short-title: checkbox
 slug: Web/Accessibility/ARIA/Reference/Roles/checkbox_role
-original_slug: Web/Accessibility/ARIA/Roles/checkbox_role
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
-Le rôle `checkbox` est destiné aux contrôles interactifs cochables. Les éléments contenant `role="checkbox"` doivent également inclure l'attribut [`aria-checked`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) afin d'exposer l'état de la case à cocher aux technologies d'assistance.
+Le rôle `checkbox` est destiné aux contrôles interactifs pouvant être cochés. Les éléments contenant `role="checkbox"` doivent également inclure l'attribut [`aria-checked`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) afin d'exposer l'état de la case à cocher aux technologies d'assistance.
 
 ```html
 <span
@@ -19,7 +18,7 @@ Le rôle `checkbox` est destiné aux contrôles interactifs cochables. Les élé
 ```
 
 > [!NOTE]
-> La première règle d'ARIA est la suivante&nbsp;: si un élément ou un attribut HTML natif possède déjà la sémantique et le comportement nécessaires, utilisez-le au lieu de détourner un élément et d'ajouter de l'ARIA. Utilisez plutôt la [case à cocher HTML `<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) (avec un {{HTMLElement('label')}} associé), qui fournit nativement toutes les fonctionnalités requises&nbsp;:
+> La première règle d'ARIA est la suivante&nbsp;: si un élément ou un attribut HTML natif possède déjà la sémantique et le comportement nécessaires, utilisez-le au lieu de détourner un élément et d'ajouter de l'ARIA. Utilisez plutôt la [case à cocher HTML `<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) (avec un {{HTMLElement("label")}} associé), qui fournit nativement toutes les fonctionnalités requises&nbsp;:
 
 ```html
 <input type="checkbox" id="chk1-label" name="RememberPreferences" />
@@ -28,7 +27,7 @@ Le rôle `checkbox` est destiné aux contrôles interactifs cochables. Les élé
 
 ## Description
 
-Le contrôle de formulaire HTML natif ([`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox)) possède deux états («&nbsp;cochée&nbsp;» ou «&nbsp;non cochée&nbsp;»), avec un état [`indeterminate`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox#gérer_un_état_indéterminé) définissable via JavaScript. De même, un élément avec `role="checkbox"` peut exposer trois états via l'attribut `aria-checked`&nbsp;: `true`, `false` ou `mixed`.
+Le contrôle de formulaire HTML natif ([`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox)) possède deux états («&nbsp;cochée&nbsp;» ou «&nbsp;non cochée&nbsp;»), avec un état [`indeterminate`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox#gérer_un_état_indéterminé) définissable avec JavaScript. De même, un élément avec `role="checkbox"` peut exposer trois états avec l'attribut `aria-checked`&nbsp;: `true`, `false` ou `mixed`.
 
 Une case à cocher étant un contrôle interactif, elle doit être sélectionnée et accessible au clavier. Si le rôle est appliqué à un élément non sélectionnable, utilisez l'attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) pour y remédier. Le raccourci clavier attendu pour activer une case à cocher est la touche <kbd>Espace</kbd>.
 
@@ -50,7 +49,7 @@ Comme les descendants de `checkbox` sont présentiels, le code suivant est équi
 <div role="checkbox"><h6 role="presentation">Nom de ma case à cocher</h6></div>
 ```
 
-Du point de vue de l'utilisateur·ice d'une technologie d'assistance, le titre n'existe pas puisque les extraits précédents sont équivalents à ce qui suit dans l'[arbre d'accessibilité](/fr/docs/Glossary/Accessibility_tree)&nbsp;:
+Du point de vue de l'utilisateur·ice d'une technologie d'assistance, le titre n'existe pas puisque les extraits précédents sont équivalents à ce qui suit dans [l'arbre d'accessibilité](/fr/docs/Glossary/Accessibility_tree)&nbsp;:
 
 ```html
 <div role="checkbox">Nom de ma case à cocher</div>
@@ -78,7 +77,7 @@ Du point de vue de l'utilisateur·ice d'une technologie d'assistance, le titre n
 
 ### JavaScript requis
 
-#### Gestionnaires d'événements requis
+#### Gestionnaires d'évènements requis
 
 - `onclick`
   - : Gère les clics souris sur la case à cocher et sur l'étiquette associée, en modifiant la valeur de `aria-checked` et l'apparence de la case pour qu'elle paraisse cochée ou non aux utilisateur·ice·s voyant·e·s.
@@ -161,7 +160,7 @@ label.addEventListener("click", changeCheckbox);
 Quand le rôle `checkbox` est ajouté à un élément, l'agent utilisateur doit&nbsp;:
 
 - Exposer l'élément avec un rôle `checkbox` dans l'API d'accessibilité du système d'exploitation.
-- Lorsqu'une valeur `aria-checked` change, envoyer un événement d'état accessible modifié.
+- Lorsqu'une valeur `aria-checked` change, envoyer un évènement d'état accessible modifié.
 
 Les technologies d'assistance doivent&nbsp;:
 
@@ -174,7 +173,7 @@ Les personnes qui implémentent des cases à cocher doivent&nbsp;:
 - Fournir des styles indiquant quand la case est ciblée.
 
 > [!NOTE]
-> Les avis peuvent diverger quant à la manière dont les technologies d'assistance devraient gérer cette technique. Les informations ci-dessus représentent l'un de ces avis et peuvent évoluer.
+> Les avis peuvent diverger quant à la manière dont les technologies d'assistance doivent gérer cette technique. Les informations ci-dessus représentent l'un de ces avis et peuvent évoluer.
 
 ## Bonnes pratiques
 

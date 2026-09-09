@@ -44,9 +44,9 @@ _Больше деталей и изменений смотрите в [блог
 - Реализованы новые методы строк в ECMAScript 6: {{jsxref("String.prototype.codePointAt()")}} и {{jsxref("String.prototype.fromCodePoint()")}} ([Firefox bug 918879](https://bugzil.la/918879)).
 - The [ECMAScript Internationalization API (ECMA-402)](https://www.ecma-international.org/ecma-402/1.0/) has been implemented and is now enabled by default in Firefox Desktop ([Firefox bug 853301](https://bugzil.la/853301)):
   - New objects in the new {{jsxref("Intl")}} object namespace:
-    - {{jsxref("Collator", "Intl.Collator")}}
-    - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
-    - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
+    - {{jsxref("Intl/Collator", "Intl.Collator")}}
+    - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+    - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
 
   - The following methods of {{jsxref("String")}}, {{jsxref("Number")}} and {{jsxref("Date")}} have been updated to include the `locales` and `options` arguments per ECMA-402:
     - {{jsxref("String.prototype.localeCompare()")}}
@@ -57,7 +57,7 @@ _Больше деталей и изменений смотрите в [блог
 
 - To match the updated ECMAScript6 draft specification, the {{jsxref("Map")}} and {{jsxref("Set")}} objects now treat `-0` and `+0` as the same when checking for key and value equality.
 - `Promise` has been enabled by default ([Firefox bug 918806](https://bugzil.la/918806)).
-- Completed generators now returns an {{jsxref("IteratorResult")}} object instead of throwing ([Firefox bug 958951](https://bugzil.la/958951)).
+- Completed generators now returns an `IteratorResult` object instead of throwing ([Firefox bug 958951](https://bugzil.la/958951)).
 - A malformed JSON string parsed by {{jsxref("JSON.parse()")}} now yields a more detailed error message containing the line and column number that caused the parsing error. This is useful when debugging large JSON data.
 
 ### Интерфейс/APIs/DOM
@@ -66,7 +66,7 @@ _Больше деталей и изменений смотрите в [блог
 - The {{domxref("URLUtils")}} interface now supports the {{domxref("URLUtils.searchParams", "searchParams")}} property returning a {{domxref("URLSearchParams")}} object, allowing to modify the search params of an URL ([Firefox bug 887836](https://bugzil.la/887836)). The {{domxref("URLSearchParams")}} constructor allows easier parsing of query strings.
 - The {{domxref("Worker.onLine")}} property is now supported, allowing to know the online/offline status in workers ([Firefox bug 925437](https://bugzil.la/925437)).
 - As part of the implementation of Web Components, the {{domxref("HTMLShadowElement")}} interface has been implemented behind the `dom.webcomponents.enabled`. Flip it to `true` if you want to use it. ([Firefox bug 887538](https://bugzil.la/887538)).
-- The read-only property {{domxref("HTMLIFrameElement.sandbox")}} is no longer a {{domxref("string")}} but an {{domxref("HTMLSettableToken")}} ([Firefox bug 845057](https://bugzil.la/845057)).
+- The read-only property {{domxref("HTMLIFrameElement.sandbox")}} is no longer a {{jsxref("String")}} but an {{domxref("HTMLSettableToken")}} ([Firefox bug 845057](https://bugzil.la/845057)).
 - On {{domxref("HTMLCanvasElement.getContext()")}}, the value `moz-webgl` is no longer supported. Use the standard `webgl` value ([Firefox bug 913597](https://bugzil.la/913597)).
 - The constructor for {{domxref("ImageData")}} has been added. This interface can be used in a {{domxref("Worker")}}. ([Firefox bug 959958](https://bugzil.la/959958))
 - The property {{domxref("NavigatorLocation.origin", "location.origin")}} is now available in workers ([Firefox bug 964148](https://bugzil.la/964148)).

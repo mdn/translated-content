@@ -3,8 +3,6 @@ title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 ---
 
-{{JSRef}}
-
 Un objet **`String`** est utilisé afin de représenter et de manipuler une chaîne de caractères.
 
 ## Description

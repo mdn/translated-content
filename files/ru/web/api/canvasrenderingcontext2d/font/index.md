@@ -16,7 +16,7 @@ ctx.font = value;
 ### Опции
 
 - `value`
-  - : Строка {{domxref("DOMString")}} с разобранным CSS {{cssxref("font")}} значением. Значение по умолчанию – "10px sans-serif".
+  - : Строка {{jsxref("String")}} с разобранным CSS {{cssxref("font")}} значением. Значение по умолчанию – "10px sans-serif".
 
 ## Примеры
 

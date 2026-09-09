@@ -3,10 +3,10 @@ title: "HTMLTableColElement : propriété align"
 short-title: align
 slug: Web/API/HTMLTableColElement/align
 l10n:
-  sourceCommit: 4cb9d89a204a9532370693b982e8a3b274a874b1
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`align`** de l'interface {{DOMxRef("HTMLTableColElement")}} est une chaîne de caractères indiquant comment aligner horizontalement le texte dans un élément de colonne {{HTMLElement("col")}} d'un tableau.
 
@@ -28,7 +28,7 @@ Les valeurs possibles sont&nbsp;:
 
 ## Exemples
 
-Utilisez la propriété CSS `text-align` sur les éléments HTML {{HTMLElement("td")}} et {{HTMLElement("th")}}. Comme les éléments {{HTMLElement("td")}} d'une colonne ne sont pas des enfants de {{HTMLElement("col")}}, définir l'attribut `align` en HTML ou la propriété CSS `text-align` sur un élément {{HTMLElement("col")}} n'aura aucun effet. Sélectionnez plutôt les cellules d'une colonne à l'aide de [`:is(td, tr):nth-child(n)`](/fr/docs/Web/CSS/Reference/Selectors/:nth-child), où `n` est le numéro de la colonne, ou d'un sélecteur similaire.
+Utilisez la propriété CSS `text-align` sur les éléments HTML {{HTMLElement("td")}} et {{HTMLElement("th")}}. Comme les éléments {{HTMLElement("td")}} d'une colonne ne sont pas des enfants de {{HTMLElement("col")}}, définir l'attribut `align` en HTML ou la propriété CSS `text-align` sur un élément {{HTMLElement("col")}} n'a aucun effet. Sélectionnez plutôt les cellules d'une colonne à l'aide de [`:is(td, tr):nth-child(n)`](/fr/docs/Web/CSS/Reference/Selectors/:nth-child), où `n` est le numéro de la colonne, ou d'un sélecteur similaire.
 
 Un [exemple](/fr/docs/Web/CSS/Reference/Selectors/:nth-child#mettre_en_forme_une_colonne_de_tableau) est disponible sur la page de {{CSSxRef(":nth-child()")}}.
 

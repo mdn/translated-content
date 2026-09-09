@@ -62,6 +62,6 @@ console.log(end.toString()); // 00:34:56
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainTime")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.PlainTime")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/PlainTime/subtract", "Temporal.PlainTime.prototype.subtract()")}}

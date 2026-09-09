@@ -152,43 +152,36 @@ border-bottom-left-radius: 3px 4px;
 <pre id="example-1">
 border: solid 10px;
 border-radius: 10px 40px 40px 10px;
-  </pre
->
+  </pre>
 <pre id="example-2">
 border: groove 1em red;
 border-radius: 2em;
-  </pre
->
+  </pre>
 <pre id="example-3">
 background: gold;
 border: ridge gold;
 border-radius: 13em/3em;
-  </pre
->
+  </pre>
 <pre id="example-4">
 border: none;
 border-radius: 40px 10px;
 background: gold;
-  </pre
->
+  </pre>
 <pre id="example-5">
 border: none;
 border-radius: 50%;
 background: burlywood;
-  </pre
->
+  </pre>
 <pre id="example-6">
 border: dotted;
 border-width: 10px 4px;
 border-radius: 10px 40px;
-  </pre
->
+  </pre>
 <pre id="example-7">
 border: dashed;
 border-width: 2px 4px;
 border-radius: 40px;
-  </pre
->
+  </pre>
 ```
 
 ```css hidden

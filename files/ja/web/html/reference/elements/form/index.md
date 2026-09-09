@@ -1,8 +1,9 @@
 ---
-title: "<form>: フォーム要素"
+title: HTML `<form>` フォーム要素
+short-title: <form>
 slug: Web/HTML/Reference/Elements/form
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 **`<form>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウェブサーバーに情報を送信するための対話型コントロールを含む文書の区間を表します。

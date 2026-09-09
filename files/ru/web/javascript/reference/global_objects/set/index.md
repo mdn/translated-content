@@ -28,7 +28,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 
 ## Статические свойства
 
-- {{jsxref("Set.@@species", "get Set[@@species]")}}
+- {{jsxref("Set/Symbol.species", "get Set[@@species]")}}
   - : Функция-конструктор, которая используется для создания производных объектов.
 
 ## Свойства экземпляра
@@ -48,7 +48,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
   - : Удаляет элемент, связанный с переданным значением, и возвращает логическое значение, подтверждающее, был ли элемент успешно удалён или нет. `Set.prototype.has(value)` впоследствии вернет `false`.
 - {{jsxref("Set.prototype.has()")}}
   - : Возвращает логическое значение, утверждающее, присутствует ли элемент с заданным значением в объекте `Set` или нет.
-- {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}
+- {{jsxref("Set/Symbol.iterator", "Set.prototype[@@iterator]()")}}
   - : Возвращает новый объект итератора, который выдает **значения** для каждого элемента в объекте `Set` в порядке вставки.
 - {{jsxref("Set.prototype.values()")}}
   - : Возвращает новый объект итератора, который выдает **значения** для каждого элемента в объекте `Set` в порядке вставки.

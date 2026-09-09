@@ -3,8 +3,6 @@ title: Symbol.prototype.description
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
 ---
 
-{{JSRef}}
-
 La propriété en lecture seule **`description`** est une chaîne de caractères qui renvoie la description optionnelle de l'objet {{jsxref("Symbol")}}.
 
 {{InteractiveExample("JavaScript Demo: Symbol.prototype.description")}}

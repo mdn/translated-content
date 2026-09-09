@@ -56,7 +56,7 @@ ECMAScript 6의 새로운 기능. 유니 코드 포인트 이스케이프를 사
 
 ### 문자열 개체
 
-{{jsxref("문자열")}} 개체는 문자열 기본 데이터 형식의 래퍼입니다.
+{{jsxref("String", "문자열")}} 개체는 문자열 기본 데이터 형식의 래퍼입니다.
 
 ```js
 var s = new String("foo"); // Creates a String object
@@ -84,11 +84,11 @@ mystring[0] = "L"; // This has no effect, because strings are immutable
 mystring[0]; // This returns "H"
 ```
 
-유니 코드 스칼라 값이 U + FFFF (희귀 한 중국어 / 일본어 / 한국어 / 베트남어 문자 및 일부 이모티콘)보다 큰 문자는 각각 서로 다른 두 개의 코드 단위로 UTF-16에 저장됩니다. 예를 들어, 단일 문자 U + 1F600 "Emoji grinning face"를 포함하는 문자열은 길이가 2입니다. 대괄호를 사용하여 이러한 문자열의 개별 코드 단위에 액세스하면 일치하지 않는 대리 코드 단위가있는 문자열이 만들어지는 등의 바람직하지 않은 결과가 발생할 수 있습니다. 유니 코드 표준 위반 MDN 버그 857438이 수정 된 후에 예제가 이 페이지에 추가되어야합니다. {{jsxref ( "String.fromCodePoint ()")}} 또는 {{jsxref ( "String.prototype.codePointAt ()")}}도 참조하십시오.
+유니 코드 스칼라 값이 U + FFFF (희귀 한 중국어 / 일본어 / 한국어 / 베트남어 문자 및 일부 이모티콘)보다 큰 문자는 각각 서로 다른 두 개의 코드 단위로 UTF-16에 저장됩니다. 예를 들어, 단일 문자 U + 1F600 "Emoji grinning face"를 포함하는 문자열은 길이가 2입니다. 대괄호를 사용하여 이러한 문자열의 개별 코드 단위에 액세스하면 일치하지 않는 대리 코드 단위가있는 문자열이 만들어지는 등의 바람직하지 않은 결과가 발생할 수 있습니다. 유니 코드 표준 위반 MDN 버그 857438이 수정 된 후에 예제가 이 페이지에 추가되어야합니다. {{jsxref("String.fromCodePoint()")}} 또는 {{jsxref("String.prototype.codePointAt()")}}도 참조하십시오.
 
 `String` 객체는 다양한 메서드가 있습니다: 문자열 자체의 변경된 결과를 반환하는 `substring`과 `toUpperCase`가 그것!
 
-다음 표는 {{jsxref("문자열")}} 개체의 메서드를 요약한 것입니다.
+다음 표는 {{jsxref("String", "문자열")}} 개체의 메서드를 요약한 것입니다.
 
 <table class="standard-table">
   <caption>
@@ -262,11 +262,11 @@ console.log(`Fifteen is ${a + b} and\nnot ${2 * a + b}.`);
 
 ## 국제화
 
-{{jsxref("Intl")}} 개체는 ECMA스크립트 국제 API에 언어와 문자열과 숫자서식과 날짜와 시간서식을 제공하는 명칭공간입니다. {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, 와 {{jsxref("DateTimeFormat")}} 개체들을 위한 생성자들은 `Intl` 개체의 특성들입니다.
+{{jsxref("Intl")}} 개체는 ECMA스크립트 국제 API에 언어와 문자열과 숫자서식과 날짜와 시간서식을 제공하는 명칭공간입니다. {{jsxref("Intl/Collator", "Collator")}}, {{jsxref("Intl/NumberFormat", "NumberFormat")}}, 와 {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} 개체들을 위한 생성자들은 `Intl` 개체의 특성들입니다.
 
 ### 날짜와 시간서식
 
-{{jsxref("DateTimeFormat")}} 개체는 날짜와 시간을 서식하기에 유용합니다. 다음 코드는 미국에서 쓰이는 영어로 날짜를 서식합니다. (결과는 다른 시간대와 다릅니다)
+{{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} 개체는 날짜와 시간을 서식하기에 유용합니다. 다음 코드는 미국에서 쓰이는 영어로 날짜를 서식합니다. (결과는 다른 시간대와 다릅니다)
 
 ```js
 var msPerDay = 24 * 60 * 60 * 1000;
@@ -289,7 +289,7 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 
 ### 숫자 서식
 
-{{jsxref("NumberFormat")}}개체는 통화를 위해 숫자를 서식하는것에 대해 유용하다.
+{{jsxref("Intl/NumberFormat", "NumberFormat")}}개체는 통화를 위해 숫자를 서식하는것에 대해 유용하다.
 
 ```js
 var gasPrice = new Intl.NumberFormat("en-US", {
@@ -310,7 +310,7 @@ console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 
 ### 조합
 
-{{jsxref("Collator")}}개체는 문자열을 비교하고 구분하는 것에 대해 유용합니다.
+{{jsxref("Intl/Collator", "Collator")}}개체는 문자열을 비교하고 구분하는 것에 대해 유용합니다.
 
 예를 들어, 실제로 독일에선 phonebook과 dictionary라는 2개의 다른 종류의 명령어들이 있습니다. 전화기록부류는 소리를 강조합니다. 그리고 구분에 앞서 다른것들은 "ä", "ö"인것처럼 "ae", "oe"로 확장됐습니다.
 

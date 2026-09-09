@@ -2,7 +2,7 @@
 title: globalThis
 slug: Web/JavaScript/Reference/Global_Objects/globalThis
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
 La propriété globale **`globalThis`** contient la valeur [globale de `this`](/fr/docs/Web/JavaScript/Reference/Operators/this#dans_le_contexte_global), qui est généralement similaire à [l'objet global](/fr/docs/Glossary/Global_object).
@@ -29,7 +29,7 @@ L'objet global `this`.
 
 ## Description
 
-Historiquement, accéder à l'objet global a nécessité différentes syntaxes selon les environnements JavaScript. Sur le Web, vous pouvez utiliser {{DOMxRef("Window/window", "window")}}, {{DOMxRef("Window/self", "self")}}, ou {{DOMxRef("Window/frames", "frames")}} — mais dans les [Web Workers](/fr/docs/Web/API/Worker) seul `self` fonctionne. Dans Node.js aucun de ces mots-clés ne fonctionne et il faut utiliser `global`. Le mot-clé `this` pouvait être utilisé à l'intérieur des fonctions en mode non-strict, mais `this` vaudra `undefined` dans les modules et dans les fonctions utilisant le mode strict. Vous pouvez aussi utiliser `Function('return this')()`, mais les environnements qui désactivent {{JSxRef("Global_Objects/eval", "eval()")}}, comme {{Glossary("CSP")}} dans les navigateurs, empêchent l'utilisation de {{JSxRef("Function")}} de cette manière.
+Historiquement, accéder à l'objet global a nécessité différentes syntaxes selon les environnements JavaScript. Sur le Web, vous pouvez utiliser {{DOMxRef("Window/window", "window")}}, {{DOMxRef("Window/self", "self")}}, ou {{DOMxRef("Window/frames", "frames")}} — mais dans les [Web Workers](/fr/docs/Web/API/Worker) seul `self` fonctionne. Dans Node.js aucun de ces mots-clés ne fonctionne et il faut utiliser `global`. Le mot-clé `this` pouvait être utilisé à l'intérieur des fonctions en mode non-strict, mais `this` vaut `undefined` dans les modules et dans les fonctions utilisant le mode strict. Vous pouvez aussi utiliser `Function('return this')()`, mais les environnements qui désactivent {{JSxRef("Global_Objects/eval", "eval()")}}, comme {{Glossary("CSP")}} dans les navigateurs, empêchent l'utilisation de {{JSxRef("Function")}} de cette manière.
 
 La propriété `globalThis` fournit une méthode standard pour accéder à la valeur de `this` global (et donc à l'objet global lui-même) dans tous les environnements. Contrairement à des propriétés similaires comme `window` et `self`, elle fonctionne aussi bien dans les contextes avec ou sans fenêtre. Ainsi, on peut accéder à l'objet global de façon homogène, sans avoir à connaître l'environnement d'exécution du code. Pour mieux mémoriser ce nom, rappelez-vous que dans la portée globale, la valeur de `this` est `globalThis`.
 
@@ -42,7 +42,7 @@ Dans de nombreux moteurs, `globalThis` est une référence à l'objet global ré
 
 ### Nommage
 
-D'autres noms furent proposés pour cette fonctionnalité (tels que `self` et `global`) mais ils furent écartés car ils pouvaient entraîner des problèmes de compatibilité avec du code existant. Pour plus de détails, voir [le document de la proposition pour le nommage](https://github.com/tc39/proposal-global/blob/master/NAMING.md).
+D'autres noms furent proposés pour cette fonctionnalité (tels que `self` et `global`) mais ils furent écartés, car ils peuvent entraîner des problèmes de compatibilité avec du code existant. Pour plus de détails, voir [le document de la proposition pour le nommage](https://github.com/tc39/proposal-global/blob/master/NAMING.md).
 
 ## Exemples
 

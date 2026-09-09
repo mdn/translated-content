@@ -59,7 +59,7 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 
 - Il n'est pas nécessaire que tous les liens soient contenus dans un élément `<nav>`. `<nav>` est destiné uniquement à un bloc principal de liens de navigation&nbsp;; typiquement, l'élément {{HTMLElement("footer")}} contient souvent une liste de liens qui n'ont pas besoin d'être dans un élément `<nav>`.
 - Un document peut comporter plusieurs éléments `<nav>`, par exemple un pour la navigation du site et un autre pour la navigation interne à la page. [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) peut être utilisé dans ce cas pour améliorer l'accessibilité, voir [l'exemple](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements#libeller_le_contenu_des_sections).
-- Les agents utilisateur·ice·s, tels que les lecteurs d'écran destinés aux personnes en situation de handicap, peuvent utiliser cet élément pour déterminer s'il faut omettre le rendu initial du contenu réservé à la navigation.
+- Les agents utilisateurs, tels que les lecteurs d'écran destinés aux personnes en situation de handicap, peuvent utiliser cet élément pour déterminer s'il faut omettre le rendu initial du contenu réservé à la navigation.
 
 ## Exemples
 

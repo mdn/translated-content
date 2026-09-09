@@ -3,13 +3,13 @@ title: "HTMLElement : propriété style"
 short-title: style
 slug: Web/API/HTMLElement/style
 l10n:
-  sourceCommit: c053b4b3bb0f34736e9f4402d4254830670af723
+  sourceCommit: 6ec00da93f656e1386f27507291bc6431540d97a
 ---
 
 {{APIRef("CSSOM")}}
 
-La propriété en lecture seule **`style`** de l'interface {{DOMxRef("HTMLElement")}} retourne le [`style`](/fr/docs/Web/HTML/Reference/Global_attributes/style) _en ligne_ d'un élément sous la forme d'un objet {{DOMxRef("CSSStyleProperties")}} dynamique.
-Cet objet peut être utilisé pour obtenir et définir les styles en ligne d'un élément.
+La propriété en lecture seule **`style`** de l'interface {{DOMxRef("HTMLElement")}} retourne le [`style`](/fr/docs/Web/HTML/Reference/Global_attributes/style) _en incise_ d'un élément sous la forme d'un objet {{DOMxRef("CSSStyleProperties")}} dynamique.
+Cet objet peut être utilisé pour obtenir et définir les styles en incise d'un élément.
 
 ## Valeur
 
@@ -23,31 +23,31 @@ Bien que la propriété `style` soit en lecture seule dans le sens où vous ne p
 
 ## Description
 
-Les valeurs des styles en ligne définis dans l'attribut [`style`](/fr/docs/Web/HTML/Reference/Global_attributes/style) de l'élément sont reflétées par les propriétés correspondantes de l'objet {{DOMxRef("CSSStyleProperties")}} retourné.
+Les valeurs des styles en incise définis dans l'attribut [`style`](/fr/docs/Web/HTML/Reference/Global_attributes/style) de l'élément sont reflétées par les propriétés correspondantes de l'objet {{DOMxRef("CSSStyleProperties")}} retourné.
 
 > [!NOTE]
-> {{DOMxRef("CSSStyleProperties")}} possède des propriétés nommées avec des tirets et les propriétés correspondantes en {{Glossary("camel_case", "casse camel")}} pour **toutes** les [propriétés CSS](/fr/docs/Web/CSS/Reference/Properties) prises en charge par le navigateur (pas seulement celles définies en ligne).
-> Les propriétés qui n'ont pas de style en ligne correspondant sont définies à `""`.
+> {{DOMxRef("CSSStyleProperties")}} possède des propriétés nommées avec des tirets et les propriétés correspondantes en {{Glossary("camel_case", "casse camel")}} pour **toutes** les [propriétés CSS](/fr/docs/Web/CSS/Reference/Properties) prises en charge par le navigateur (pas seulement celles définies en incise).
+> Les propriétés qui n'ont pas de style en incise correspondant sont définies à `""`.
 
 Les propriétés CSS abrégées de l'élément sont développées en leurs propriétés longues correspondantes.
-Par exemple, un élément avec le style `"border-top: 1px solid black"` sera représenté dans l'objet retourné par les propriétés nommées {{CSSxRef("border-top")}} et `borderTop`, ainsi que par les propriétés longues correspondantes {{CSSxRef("border-top-color")}} et `borderTopColor`, {{CSSxRef("border-top-style")}} et `borderTopStyle`, et {{CSSxRef("border-top-width")}} et `borderTopWidth`.
+Par exemple, un élément avec le style `"border-top: 1px solid black"` est représenté dans l'objet retourné par les propriétés nommées {{CSSxRef("border-top")}} et `borderTop`, ainsi que par les propriétés longues correspondantes {{CSSxRef("border-top-color")}} et `borderTopColor`, {{CSSxRef("border-top-style")}} et `borderTopStyle`, et {{CSSxRef("border-top-width")}} et `borderTopWidth`.
 
 Pour ajouter des styles spécifiques à un élément sans modifier les autres valeurs, il est généralement préférable de définir les propriétés individuelles sur l'objet {{DOMxRef("CSSStyleProperties")}}.
 Par exemple, vous pouvez écrire `element.style.backgroundColor = "red"`.
-Une déclaration de style est réinitialisée en lui affectant `null` ou une chaîne vide, par exemple `element.style.color = null`.
+Une déclaration de style est réinitialisée en lui affectant `null` ou une chaîne de caractères vide, par exemple `element.style.color = null`.
 
-La propriété `style` a la même priorité dans la cascade CSS qu'une déclaration de style en ligne définie via l'attribut `style`.
+La propriété `style` a la même priorité dans la cascade CSS qu'une déclaration de style en incise définie avec l'attribut `style`.
 
 ## Exemples
 
 ### Utilisation simple
 
-Cet exemple montre comment lire les styles en ligne d'un élément.
+Cet exemple montre comment lire les styles en incise d'un élément.
 Dans chaque cas, il lit les propriétés de style nommées avec des tirets en utilisant {{DOMxRef("CSSStyleDeclaration/getPropertyPriority", "getPropertyValue()")}} et obtient les propriétés en casse camel avec l'opérateur point.
 
 #### HTML
 
-On commence par définir un élément {{HTMLElement("div")}} et un élément imbriqué qui définissent différents styles en ligne, en utilisant à la fois la forme abrégée et la forme longue.
+On commence par définir un élément {{HTMLElement("div")}} et un élément imbriqué qui définissent différents styles en incise, en utilisant à la fois la forme abrégée et la forme longue.
 
 ```html
 <div style="font-weight: bold;">
@@ -121,7 +121,7 @@ Nous voyons aussi que la propriété {{CSSxRef("border-top")}} correspondant à 
 {{EmbedLiveSample("Utilisation simple", 100, 280)}}
 
 Notez que `font-weight` est défini sur le `CSSStyleProperties` (comme toutes les autres propriétés CSS, bien que nous ne les ayons pas toutes consignées).
-Cependant, ce n'est pas un style en ligne pour l'élément imbriqué, donc sa valeur est définie sur une chaîne vide (`""`).
+Cependant, ce n'est pas un style en incise pour l'élément imbriqué, donc sa valeur est définie sur une chaîne de caractères vide (`""`).
 
 ### Énumération des informations de style
 
@@ -129,7 +129,7 @@ Cet exemple démontre comment nous pouvons énumérer les propriétés nommées 
 
 #### HTML
 
-On commence par définir un élément {{HTMLElement("div")}} et un élément imbriqué qui définissent différents styles en ligne, en utilisant à la fois la forme abrégée et la forme longue.
+On commence par définir un élément {{HTMLElement("div")}} et un élément imbriqué qui définissent différents styles en incise, en utilisant à la fois la forme abrégée et la forme longue.
 C'est le même HTML que dans l'exemple précédent.
 
 ```html
@@ -169,7 +169,7 @@ const elementStyle = element.style;
 // Parcourir tous les styles de l'élément en utilisant `for...in`
 for (const prop in elementStyle) {
   // Vérifier que la propriété appartient à l'instance CSSStyleProperties
-  // S'assurer que la propriété est un index numérique (indiquant un style en ligne/nommé avec des tirets)
+  // S'assurer que la propriété est un index numérique (indiquant un style en incise/nommé avec des tirets)
   if (
     Object.hasOwn(elementStyle, prop) &&
     !Number.isNaN(Number.parseInt(prop, 10))
@@ -186,7 +186,7 @@ for (const prop in elementStyle) {
 #### Résultats
 
 Le résultat est montré ci-dessous.
-Notez que seules les propriétés CSS en long de l'élément sont énumérées (la propriété abrégée en ligne n'est pas énumérée).
+Notez que seules les propriétés CSS en long de l'élément sont énumérées (la propriété abrégée en incise n'est pas énumérée).
 
 {{EmbedLiveSample("Énumération des informations de style", 100, 180)}}
 
@@ -195,10 +195,8 @@ Notez que seules les propriétés CSS en long de l'élément sont énumérées (
 ```html
 <div id="box"></div>
 
-<form name="FormName">
-  <button id="btn1">Rendre la bordure épaisse de 20px</button>
-  <button id="btn2">Rendre la bordure épaisse de 5px</button>
-</form>
+<button id="btn1">Rendre la bordure épaisse de 20px</button>
+<button id="btn2">Rendre la bordure épaisse de 5px</button>
 ```
 
 ```css
@@ -230,9 +228,7 @@ Dans cet exemple, certaines propriétés de style de base d'un élément de para
 
 ```html
 <p id="pid">Du texte</p>
-<form>
-  <p><button type="button">Changer le texte</button></p>
-</form>
+<p><button type="button">Changer le texte</button></p>
 ```
 
 ```js

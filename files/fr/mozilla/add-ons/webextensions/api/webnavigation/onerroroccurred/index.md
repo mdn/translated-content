@@ -3,8 +3,6 @@ title: webNavigation.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onErrorOccurred
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsqu'une erreur se produit et que la navigation est annulée. Cela peut se produire si une erreur réseau s'est produite ou si l'utilisateur a interrompu la navigation.
 
 ## Syntaxe

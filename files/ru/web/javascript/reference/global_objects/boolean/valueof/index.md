@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 
 ## Сводка
 
-Метод **`valueOf()`** возвращает примитивное значение объекта {{jsxref("Global_Objects/Boolean", "Boolean")}}.
+Метод **`valueOf()`** возвращает примитивное значение объекта {{jsxref("Boolean")}}.
 
 ## Синтаксис
 
@@ -21,7 +21,7 @@ bool.valueOf()
 
 ## Описание
 
-Метод `valueOf` объекта {{jsxref("Global_Objects/Boolean", "Boolean")}} возвращает примитивное значение объекта или литерала логического типа.
+Метод `valueOf` объекта {{jsxref("Boolean")}} возвращает примитивное значение объекта или литерала логического типа.
 
 Этот метод обычно вызывается внутри движка JavaScript, а не явно в коде.
 

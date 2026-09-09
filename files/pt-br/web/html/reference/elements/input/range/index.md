@@ -213,15 +213,15 @@ Este controle está usando um atributo `list` especificando o ID de uma {{HTMLEl
 
 </pre
         >
-      </td>
-      <td>
-        <img
+</td>
+<td>
+<img
           alt="Screenshot of a plain slider control on macOS"
           src="macslider-ticks.png"
           style="height: 28px; width: 184px"
         />
-      </td>
-    </tr>
+</td>
+</tr>
   </tbody>
 </table>
 
@@ -256,15 +256,15 @@ Você pode adicionar rótulos para seu controle usando o atributo [`label`](/pt-
 
 </pre
         >
-      </td>
-      <td>
-        <img
+</td>
+<td>
+<img
           alt="Screenshot of a plain slider control on macOS"
           src="macslider-labels.png"
           style="height: 44px; width: 184px"
         />
-      </td>
-    </tr>
+</td>
+</tr>
   </tbody>
 </table>
 

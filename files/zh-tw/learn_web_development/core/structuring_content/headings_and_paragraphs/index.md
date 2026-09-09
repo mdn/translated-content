@@ -122,8 +122,7 @@ If you make a mistake, you can always reset it using the _Reset_ button. 如果�
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
 My short story I am a policewoman and my name is Trish.
 
-My legs are made of cardboard and I am married to a fish.</textarea
->
+My legs are made of cardboard and I am married to a fish.</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Reset" />
@@ -313,8 +312,7 @@ Try editing the live sample below to create your very own HTML unordered list.
 milk
 eggs
 bread
-hummus</textarea
->
+hummus</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Reset" />
@@ -473,8 +471,7 @@ Drive to the end of the road
 Turn right
 Go straight across the first two roundabouts
 Turn left at the third roundabout
-The school is on your right, 300 meters up the road</textarea
->
+The school is on your right, 300 meters up the road</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Reset" />
@@ -636,8 +633,7 @@ Quick hummus recipe
 
   Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you've made it. If it starts to become fizzy, you should definitely discard it.
 
-  Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</textarea
->
+  Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Reset" />
@@ -859,8 +855,7 @@ In this active learning section, we have provided an editable example. Inside it
   all wearing green jumpsuits and silly hats, and
   seemed to be having a whale of a time. If anyone
    has any information about this incident, please
-    contact the police now.</p></textarea
->
+    contact the police now.</p></textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Reset" />

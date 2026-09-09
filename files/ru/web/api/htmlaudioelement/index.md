@@ -29,7 +29,7 @@ mySound = new Audio([URLString]);
 
 Параметры
 
-- `URLString` (expected type: {{domxref("DOMString")}}; optional)
+- `URLString` (expected type: {{jsxref("String")}}; optional)
   - : 'src' для 'audio' тега. (URL , с которого должен получать mp3 файл)
 
 ### Регулярные методы

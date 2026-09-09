@@ -3,10 +3,8 @@ title: "Élément HTML `<rtc>` : l'élément de conteneur de texte Ruby"
 short-title: <rtc>
 slug: Web/HTML/Reference/Elements/rtc
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<rtc>`** sert à regrouper les annotations sémantiques des caractères présentés dans un ruby d'éléments {{HTMLElement("rb")}} utilisés à l'intérieur d'un élément {{HTMLElement("ruby")}}. Les éléments {{HTMLElement("rb")}} peuvent avoir à la fois des annotations de prononciation ({{HTMLElement("rt")}}) et des annotations sémantiques (`<rtc>`).
 

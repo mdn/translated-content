@@ -30,7 +30,7 @@ La liste d'autorisation par défaut pour `compute-pressure` est `self`, ce qui p
 L'utilisation par des tiers peut être activée de manière sélective en utilisant l'attribut `allow` sur les éléments HTML {{HTMLElement("iframe")}}&nbsp;:
 
 ```html
-<iframe src="https://exemple.com" allow="compute-pressure"></iframe>
+<iframe src="https://example.com" allow="compute-pressure"></iframe>
 ```
 
 ### Désactiver complètement l'API Compute Pressure

@@ -3,10 +3,10 @@ title: "HTMLCanvasElement : propriété mozOpaque"
 short-title: mozOpaque
 slug: Web/API/HTMLCanvasElement/mozOpaque
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("Canvas API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Canvas API")}}{{Non-standard_Header}}
 
 La propriété non standard **`mozOpaque`** de l'interface {{DOMxRef("HTMLCanvasElement")}} est une valeur booléenne correspondant à l'attribut HTML [`moz-opaque`](/fr/docs/Web/HTML/Reference/Elements/canvas#moz-opaque) de l'élément {{HTMLElement("canvas")}}. Elle indique si la translucidité est à prendre en compte. Si le canevas sait qu'il n'y a pas de translucidité, les performances de peinture peuvent être optimisées.
 

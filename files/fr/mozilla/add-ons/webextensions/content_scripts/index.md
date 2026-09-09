@@ -3,8 +3,6 @@ title: Scripts de contenu
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
 
-{{AddonSidebar}}
-
 Un script de contenu (_content script_ en anglais) est une partie de votre extension qui s'exécute dans le contexte d'une page web donnée (par opposition aux scripts d'arrière-plan qui font partie de l'extension, ou aux scripts qui font partie du site Web lui-même, tels que ceux chargés en utilisant l'élément {{HTMLElement("script")}}).
 
 Les [scripts d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) peuvent accéder à l'ensemble des [API WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/API) mais ils ne peuvent pas accéder directement au contenu des pages web. Aussi, si votre extension doit manipuler le contenu des pages web, vous devrez utiliser les scripts de contenu.
@@ -51,7 +49,7 @@ Il n'y a qu'une seule portée globale pour chaque _frame_ et pour chaque extensi
 
 À l'aide des méthodes (1) et (2), vous ne pouvez charger des scripts que dans des pages dont les URL peuvent être représentées par un [motif de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 
-En utilisant la méthode (3), vous pouvez également charger des scripts dans des pages packagées avec votre extension, mais vous ne pouvez pas charger des scripts dans des pages privilégiées du navigateur (comme [`about:debugging`]() ou [`about:addons`]()).
+En utilisant la méthode (3), vous pouvez également charger des scripts dans des pages packagées avec votre extension, mais vous ne pouvez pas charger des scripts dans des pages privilégiées du navigateur (comme [`about:debugging`](<>) ou [`about:addons`](<>)).
 
 ## Environnement des scripts de contenu
 

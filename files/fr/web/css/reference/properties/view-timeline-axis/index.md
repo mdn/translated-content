@@ -40,7 +40,7 @@ Par défaut, les animations CSS {{CSSxRef("@keyframes")}} progressent le long de
 
 Pour les chronologies de progression de la vue, la progression de l'animation le long des chronologies est basée sur la visibilité de l'élément, ou _sujet_. La propriété `view-timeline-axis` est définie sur le sujet.
 
-Le sujet doit être imbriqué à l'intérieur d'un élément défilable. Si l'élément défilable ne déborde pas de son conteneur dans la dimension de l'axe ou si le débordement est masqué ou coupé, aucune chronologie de progression de défilement ne est créée.
+Le sujet doit être imbriqué à l'intérieur d'un élément défilable. Si l'élément défilable ne déborde pas de son conteneur dans la dimension de l'axe ou si le débordement est masqué ou coupé, aucune chronologie de progression de défilement n'est créée.
 
 La propriété `view-timeline-axis`, ainsi que les propriétés {{CSSxRef("view-timeline-inset")}} et {{CSSxRef("view-timeline-name")}}, fait partie de la propriété raccourcie {{CSSxRef("view-timeline")}}.
 

@@ -1,28 +1,26 @@
 ---
-title: Content-Location
+title: Content-Location ヘッダー
+short-title: Content-Location
 slug: Web/HTTP/Reference/Headers/Content-Location
-original_slug: Web/HTTP/Headers/Content-Location
 l10n:
-  sourceCommit: 1176e753733ee9d2e8966cc7cf03df495dce9aba
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-**`Content-Location`** ヘッダーは、返されるデータの代替場所を示します。主な用途は、[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)の結果として送信されたリソースの URL を示すことです。
+HTTP の **`Content-Location`** {{Glossary("representation header", "表現ヘッダー")}}は、返されるデータの代替場所を示します。
+主な用途は、[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)の結果として送信されたリソースの URL を示すことです。
 
-{{HTTPHeader("Location")}} と `Content-Location` は異なります。
-`Location` はリダイレクトの URL を示し、`Content-Location` は今後のコンテンツネゴシエーションなしでリソースへのアクセスに使用する直接 URL を示します。 `Location` はレスポンスに関連付けられたヘッダーで、 `Content-Location` は返されたデータに関連付けられます。この区別は[例](#例)がないと抽象的に見えるかもしれません。
+`Content-Location` は {{HTTPHeader("Location")}} とは異なります。
+`Content-Location` は、[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)が発生した際に、リソースにアクセスするための直接 URL を示すもので、これによりクライアントはこのリソースに対する今後のコンテンツネゴシエーションを省略することができます。
+一方、`Location` は、`3XX` リダイレクトの対象、または {{HTTPStatus("201", "201 Created")}} レスポンスで新規に作成されたリソースの URL のどちらかを示します。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">ヘッダー種別</th>
-      <td>
-        {{Glossary("Representation header", "表現ヘッダー")}}
-      </td>
+      <td>{{Glossary("Representation header", "表現ヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">
-        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
-      </th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>いいえ</td>
     </tr>
   </tbody>
@@ -36,7 +34,7 @@ Content-Location: <url>
 
 ## ディレクティブ
 
-- \<url>
+- `<url>`
   - : （リクエスト URL に対する）[相対](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#絶対_url_と相対_url) URL または[絶対](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#絶対_url_と相対_url) URL。
 
 ## 例
@@ -51,37 +49,11 @@ Content-Location: <url>
 | `Accept: application/xml, text/xml`   | `Content-Location: /documents/foo.xml`  |
 | `Accept: text/plain, text/*`          | `Content-Location: /documents/foo.txt`  |
 
-これらのURLは例です。サイトは、[クエリー文字列引数](/ja/docs/Web/API/HTMLAnchorElement/search)、例えば `/documents/foo?format=json`、`/documents/foo?format=xml` など、任意の URL パターンでさまざまなファイル形式を提供することができます。
+これらの URL は例です。サイトは、[クエリー文字列引数](/ja/docs/Web/API/HTMLAnchorElement/search)、例えば `/documents/foo?format=json`、`/documents/foo?format=xml` など、任意の URL パターンでさまざまなファイル形式を提供することができます。
 
 その後クライアントはその特定の URL で JSON バージョンが利用可能であることを覚えて、次に文書を要求するときにコンテンツのネゴシエーションをスキップします。
 
 サーバーは {{HTTPHeader("Accept-Language")}} のような他の[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)ヘッダーを考慮することもあります。
-
-### 新しい文書を指す (HTTP 201 Created)
-
-サイトの API を通じて新しいブログ投稿を作成しているとします。
-
-```http
-POST /new/post
-Host: example.com
-Content-Type: text/markdown
-
-# My first blog post!
-
-I made this through `example.com`'s API. I hope it worked.
-```
-
-サイトは公開された投稿をレスポンス本体で返します。サーバーは、新しい投稿の場所を `Content-Location` ヘッダーで指定し、この場所がこのレスポンスのコンテンツ（本体）を参照することを示します。
-
-```http
-HTTP/1.1 201 Created
-Content-Type: text/markdown
-Content-Location: /my-first-blog-post
-
-# My first blog post
-
-I made this through `example.com`'s API. I hope it worked.
-```
 
 ### トランザクションの結果の URL を示す
 
@@ -90,15 +62,15 @@ I made this through `example.com`'s API. I hope it worked.
 ```html
 <form action="/send-payment" method="post">
   <p>
-    <label
-      >送金したい宛先は？
+    <label>
+      送金したい宛先は？
       <input type="text" name="recipient" />
     </label>
   </p>
 
   <p>
-    <label
-      >金額は？
+    <label>
+      金額は？
       <input type="number" name="amount" />
     </label>
   </p>

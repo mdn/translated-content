@@ -3,12 +3,12 @@ title: Propriété CSS `-moz-user-input`
 short-title: -moz-user-input
 slug: Web/CSS/Reference/Properties/-moz-user-input
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
-Dans les applications Mozilla, **`-moz-user-input`** détermine si un élément acceptera une saisie utilisateur.
+Dans les applications Mozilla, **`-moz-user-input`** détermine si un élément accepte une saisie utilisateur.
 
 Depuis Firefox 60, cette propriété ne peut plus permettre à un élément d'accepter une saisie utilisateur s'il ne le fait pas normalement. Elle ne peut être utilisée que pour désactiver la saisie utilisateur.
 
@@ -48,8 +48,8 @@ La propriété `user-input` n'est actuellement pas en cours de normalisation.
 
 ```css
 input.exemple {
-  /* L'utilisateur·ice pourra sélectionner le texte
-     mais ne pourra pas le modifier. */
+  /* L'utilisateur·ice peut sélectionner le texte
+     mais ne peut pas le modifier. */
   -moz-user-input: none;
 }
 ```

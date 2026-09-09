@@ -45,7 +45,7 @@ input {
 
 Если используемый браузер не поддерживает тип `range`, он будет отображаться как input`{{HTMLElement('input/text', 'text')}}.`
 
-| **[Value](#value)**               | {{domxref("DOMString")}}, содержащий строковое представление выбранного числового значения; используйте {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}} чтобы получить значение {{jsxref("Number")}}.                                                                                                  |
+| **[Value](#value)**               | {{jsxref("String")}}, содержащий строковое представление выбранного числового значения; используйте {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}} чтобы получить значение {{jsxref("Number")}}.                                                                                                      |
 | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **События**                       | [`change`](/ru/docs/Web/API/HTMLElement/change_event) и [`input`](/ru/docs/Web/API/Element/input_event)                                                                                                                                                                                                               |
 | **Поддерживаемые общие атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Reference/Elements/input#autocomplete), [`list`](/ru/docs/Web/HTML/Reference/Elements/input#list), [`max`](/ru/docs/Web/HTML/Reference/Elements/input#max), [`min`](/ru/docs/Web/HTML/Reference/Elements/input#min), and [`step`](/ru/docs/Web/HTML/Reference/Elements/input#step) |
@@ -61,7 +61,7 @@ input {
 - Значение не может быть больше чем [`max`](/ru/docs/Web/HTML/Reference/Elements/input#max). По умолчанию: 100.
 - Значение должно кратно [`step`](/ru/docs/Web/HTML/Reference/Elements/input#step). По умолчанию: 1.
 
-Атрибут [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value) содержит {{domxref("DOMString")}}, который содержит строковое представление выбранного числа. Значение никогда не является пустой строкой (`""`). Значение, по умолчанию, находится посередине, между указанными минимальным и максимальным значениями — если максимум оказывается меньше минимума, то значение по умолчанию приравнивается к значению атрибута `min`. Алгоритм определения значения по умолчанию:
+Атрибут [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value) содержит {{jsxref("String")}}, который содержит строковое представление выбранного числа. Значение никогда не является пустой строкой (`""`). Значение, по умолчанию, находится посередине, между указанными минимальным и максимальным значениями — если максимум оказывается меньше минимума, то значение по умолчанию приравнивается к значению атрибута `min`. Алгоритм определения значения по умолчанию:
 
 ```js
 defaultValue =
@@ -225,15 +225,15 @@ defaultValue =
 
 </pre
         >
-      </td>
-      <td>
-        <img
+</td>
+<td>
+<img
           alt="Screenshot of a plain slider control on macOS"
           src="macslider-ticks.png"
           style="height: 28px; width: 184px"
         />
-      </td>
-    </tr>
+</td>
+</tr>
   </tbody>
 </table>
 
@@ -268,15 +268,15 @@ defaultValue =
 
 </pre
         >
-      </td>
-      <td>
-        <img
+</td>
+<td>
+<img
           alt="Screenshot of a plain slider control on macOS"
           src="macslider-labels.png"
           style="height: 44px; width: 184px"
         />
-      </td>
-    </tr>
+</td>
+</tr>
   </tbody>
 </table>
 

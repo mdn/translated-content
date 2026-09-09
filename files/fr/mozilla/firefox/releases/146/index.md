@@ -3,7 +3,7 @@ title: Firefox 146 note de version pour les développeurs
 short-title: Firefox 146
 slug: Mozilla/Firefox/Releases/146
 l10n:
-  sourceCommit: 13fd8fb0c8553a8bf34b37f4952d911fad5a0d6b
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Cet article présente les informations concernant les changements de Firefox 146 qui concernent les développeur·euse·s.
@@ -58,17 +58,17 @@ Aucun changement notable.
 
 - Mise à jour de la commande `emulation.setLocaleOverride` pour outrepasser la valeur de retour de `navigator.language` et `navigator.languages` en plus des API JS. ([bogue Firefox 1994396 <sup>(angl.)</sup>](https://bugzil.la/1994396)).
 - Mise à jour du comportement de réinitialisation des commandes `emulation.setLocaleOverride` et `emulation.setTimezoneOverride` pour correspondre aux récents changements de spécification. Lors de l'appel de cette commande pour réinitialiser la surcharge d'un contexte de navigation spécifique, les surcharges configurées pour un contexte utilisateur possédant ce contexte de navigation continuent de s'appliquer. ([bogue Firefox 1988725 <sup>(angl.)</sup>](https://bugzil.la/1988725)).
-- Ajout du support du localisateur `context` à la commande `browsingContext.locateNodes` ce qui permet de récupérer le conteneur de contextes de navigation non de niveau supérieur, comme les éléments de cadre intégré (`iframe`). ([bogue Firefox 1941270 <sup>(angl.)</sup>](https://bugzil.la/1941270)).
+- Ajout du support du localisateur `context` à la commande `browsingContext.locateNodes` ce qui vous permet de récupérer le conteneur de contextes de navigation non de niveau supérieur, comme les éléments de cadre intégré (`iframe`). ([bogue Firefox 1941270 <sup>(angl.)</sup>](https://bugzil.la/1941270)).
 - Implémentation de la commande `network.setExtraHeaders` qui peut être utilisée pour définir des en-têtes de requête qui sont automatiquement ajoutés aux requêtes déclenchées dans les contextes de navigation ou contextes utilisateur fournis. ([bogue Firefox 1979731 <sup>(angl.)</sup>](https://bugzil.la/1979731)).
-- Mise à jour de toutes nos commandes de collecte de données réseau (`network.addDataCollector`, `network.getData` et `network.disownData`) pour prendre en charge le type de données `request` ce qui permet de collecter et de récupérer les données POST des requêtes. ([bogue Firefox 1988955 <sup>(angl.)</sup>](https://bugzil.la/1988955)).
+- Mise à jour de toutes nos commandes de collecte de données réseau (`network.addDataCollector`, `network.getData` et `network.disownData`) pour prendre en charge le type de données `request` ce qui vous permet de collecter et de récupérer les données POST des requêtes. ([bogue Firefox 1988955 <sup>(angl.)</sup>](https://bugzil.la/1988955)).
 - Amélioration de notre implémentation de `network.getData` pour prendre également en charge les requêtes utilisant le schéma `data:`. ([bogue Firefox 1992210 <sup>(angl.)</sup>](https://bugzil.la/1992210)).
-- Correction d'un bug pour `network.getData` qui ne levait pas l'erreur attendue `no such network data` pour les requêtes non prises en charge. ([bogue Firefox 1992214 <sup>(angl.)</sup>](https://bugzil.la/1992214)).
-- Correction d'un bug dans nos évènements `network` où différentes requêtes réutilisaient le même identifiant, impactant principalement les URL de données ou les requêtes en cache. ([bogue Firefox 1992348 <sup>(angl.)</sup>](https://bugzil.la/1992348)).
+- Correction d'un bogue pour `network.getData` qui ne levait pas l'erreur attendue `no such network data` pour les requêtes non prises en charge. ([bogue Firefox 1992214 <sup>(angl.)</sup>](https://bugzil.la/1992214)).
+- Correction d'un bogue dans nos évènements `network` où différentes requêtes réutilisaient le même identifiant, impactant principalement les URL de données ou les requêtes en cache. ([bogue Firefox 1992348 <sup>(angl.)</sup>](https://bugzil.la/1992348)).
 
 #### Marionette
 
 - Correction d'une régression dans `WebDriver:GetElementText` qui provoquait une capitalisation incorrecte du texte contenant des caractères accentués (par exemple, «&nbsp;ó&nbsp;»). ([bogue Firefox 1986392 <sup>(angl.)</sup>](https://bugzil.la/1986392)).
-- Correction d'un bug dans la désérialisation JSON de `WebFrame` qui levait incorrectement une erreur `no such window` au lieu de `no such frame` lors du traitement d'images invalides. ([bogue Firefox 1996540 <sup>(angl.)</sup>](https://bugzil.la/1996540)).
+- Correction d'un bogue dans la dé-sérialisation JSON de `WebFrame` qui levait incorrectement une erreur `no such window` au lieu de `no such frame` lors du traitement d'images invalides. ([bogue Firefox 1996540 <sup>(angl.)</sup>](https://bugzil.la/1996540)).
 - Ajout d'une extension WebDriver pour contrôler le signal de [Global Privacy Control <sup>(angl.)</sup>](https://w3c.github.io/gpc/). ([bogue Firefox 1969865 <sup>(angl.)</sup>](https://bugzil.la/1969865)).
 
 ## Changements pour les développeur·euse·s d'extensions

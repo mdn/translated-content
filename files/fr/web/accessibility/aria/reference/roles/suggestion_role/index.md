@@ -22,7 +22,7 @@ Lorsque vous avez un changement de contenu qui implique une insertion _et_ une s
 </p>
 ```
 
-On peut même fournir une boîte d'information indiquant qui a fait la suggestion et quand, et l'associer à la suggestion via [`aria-details`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)&nbsp;:
+On peut même fournir une boîte d'information indiquant qui a fait la suggestion et quand, et l'associer à la suggestion avec [`aria-details`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)&nbsp;:
 
 ```html
 <p>
@@ -39,14 +39,14 @@ On peut même fournir une boîte d'information indiquant qui a fait la suggestio
 </div>
 ```
 
-Les navigateurs ont tendance à fournir une barre noire par défaut pour les suppressions, et un soulignement noir pour les insertions lorsqu'on utilise les éléments HTML qui exposent implicitement ces rôles. Mais lorsque vous utilisez des rôles ARIA explicites pour modifier des éléments HTML, comme des div, il faudra utiliser du CSS pour personnaliser le style visuel de ces suppressions et insertions.
+Les navigateurs ont tendance à fournir une barre noire par défaut pour les suppressions, et un soulignement noir pour les insertions lorsqu'on utilise les éléments HTML qui exposent implicitement ces rôles. Mais lorsque vous utilisez des rôles ARIA explicites pour modifier des éléments HTML, comme des div, il faut utiliser du CSS pour personnaliser le style visuel de ces suppressions et insertions.
 
 ## Bonnes pratiques
 
 ### Préférer le HTML
 
-L'utilisation des éléments {{HTMLElement('ins')}} et {{HTMLElement('del')}} communique automatiquement qu'une section possède le rôle `insertion` ou `deletion`. Si possible, privilégiez l'utilisation des éléments HTML.
+L'utilisation des éléments {{HTMLElement("ins")}} et {{HTMLElement("del")}} communique automatiquement qu'une section possède le rôle `insertion` ou `deletion`. Si possible, privilégiez l'utilisation des éléments HTML.
 
 ## Spécifications
 
-Fait partie de WAI-ARIA&nbsp;1.3, qui est encore en cours de rédaction.
+Fait partie de WAI-ARIA 1.3, qui est encore en cours de rédaction.

@@ -3,8 +3,6 @@ title: idle.onStateChanged
 slug: Mozilla/Add-ons/WebExtensions/API/idle/onStateChanged
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsque le système change passe à l'état actif, inactif ou vérouillé. L'écouteur d'événement reçoit une chaîne qui a l'une des trois valeurs suivantes :
 
 - "vérouillé" si l'écran est vérouillé ou si l'économisateur d'écran s'active

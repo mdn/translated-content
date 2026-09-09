@@ -3,7 +3,7 @@ title: Propriété CSS `interpolate-size`
 short-title: interpolate-size
 slug: Web/CSS/Reference/Properties/interpolate-size
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 {{SeeCompatTable}}
@@ -13,7 +13,7 @@ La propriété [CSS](/fr/docs/Web/CSS) **`interpolate-size`** permet d'activer l
 Cette propriété est généralement utilisée pour animer la {{CSSxRef("width")}} et/ou la {{CSSxRef("height")}} d'un conteneur entre une `<length-percentage>` et la taille complète de son contenu (c'est-à-dire entre les états «&nbsp;fermé&nbsp;» et «&nbsp;ouvert&nbsp;» ou «&nbsp;masquer&nbsp;» et «&nbsp;révéler&nbsp;») lorsque l'animation d'une propriété CSS hors modèle de boîte, comme {{CSSxRef("transform")}}, n'est pas une solution viable.
 
 > [!NOTE]
-> Le comportement activé par `interpolate-size` ne peut pas être activé par défaut sur l'ensemble du web car de nombreux sites utilisent des feuilles de style qui supposent que les valeurs de taille intrinsèque ne peuvent pas être animées. L'activer par défaut causerait plusieurs problèmes de rétrocompatibilité (voir la [discussion CSS WG concernée <sup>(angl.)</sup>](https://github.com/w3c/csswg-drafts/issues/626#issuecomment-2071016522)).
+> Le comportement activé par `interpolate-size` ne peut pas être activé par défaut sur l'ensemble du web, car de nombreux sites utilisent des feuilles de style qui supposent que les valeurs de taille intrinsèque ne peuvent pas être animées. L'activer par défaut causerait plusieurs problèmes de rétrocompatibilité (voir la [discussion CSS WG concernée <sup>(angl.)</sup>](https://github.com/w3c/csswg-drafts/issues/626#issuecomment-2071016522)).
 
 ## Syntaxe
 
@@ -32,8 +32,10 @@ interpolate-size: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `allow-keywords`
-  - : Active [l'interpolation](/fr/docs/Glossary/Interpolation) entre une valeur de type {{CSSxRef("&lt;length-percentage&gt;")}} et une valeur de taille intrinsèque, afin de permettre l'animation entre les deux.
+  - : Active {{Glossary("Interpolation", "l'interpolation")}} entre une valeur de type {{CSSxRef("&lt;length-percentage&gt;")}} et une valeur de taille intrinsèque, afin de permettre l'animation entre les deux.
 - `numeric-only`
   - : Le comportement par défaut — les valeurs de taille intrinsèque ne peuvent pas être interpolées.
 
@@ -177,7 +179,7 @@ Le reste du CSS a été masqué pour plus de clarté.
 
 #### Résultat
 
-Essayez de survoler le `<section>` ou de lui donner le focus au clavier — il s'animera jusqu'à sa hauteur complète, révélant tout le contenu.
+Essayez de survoler le `<section>` ou de lui donner la sélection au clavier — il s'anime jusqu'à sa hauteur complète, révélant tout le contenu.
 
 {{EmbedLiveSample("Utilisation simple de `interpolate-size`", "100%", 225)}}
 

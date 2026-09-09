@@ -96,7 +96,7 @@ Voici le résultat obtenu&nbsp;:
 
 Lorsqu'on envoie le formulaire ci-dessus avec un bouton radio sélectionné, les données du formulaire contiennent une entrée sous la forme `contact=valeur`. Par exemple, si l'utilisateur·ice clique sur le bouton radio «&nbsp;Téléphone&nbsp;» puis envoie le formulaire, les données du formulaire contiennent la ligne `contact=telephone`.
 
-Si vous omettez l'attribut `value` dans le HTML, les données envoyées par le formulaire attribuent la valeur `on` au groupe. Dans ce cas, si l'utilisateur·ice clique sur l'option «&nbsp;Téléphone&nbsp;» et envoie le formulaire, les données envoyées seraient `contact=on`, ce qui n'est pas utile. N'oubliez donc pas de définir vos attributs `value`&nbsp;!
+Si vous omettez l'attribut `value` dans le HTML, les données envoyées par le formulaire attribuent la valeur `on` au groupe. Dans ce cas, si l'utilisateur·ice clique sur l'option «&nbsp;Téléphone&nbsp;» et envoie le formulaire, les données envoyées sont `contact=on`, ce qui n'est pas utile. N'oubliez donc pas de définir vos attributs `value`&nbsp;!
 
 > [!NOTE]
 > Si aucun bouton radio n'est sélectionné lors de l'envoi du formulaire, le groupe radio n'est pas inclus dans les données envoyées, car il n'y a aucune valeur à fournir.

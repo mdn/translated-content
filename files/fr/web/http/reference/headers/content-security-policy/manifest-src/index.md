@@ -51,13 +51,13 @@ Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 Soit cet en-tête CSP&nbsp;:
 
 ```http
-Content-Security-Policy: manifest-src https://exemple.com/
+Content-Security-Policy: manifest-src https://example.com/
 ```
 
 Cet élément HTML {{HTMLElement("link")}} sera bloqué et ne se chargera pas&nbsp;:
 
 ```html
-<link rel="manifest" href="https://hors-exemple.com/manifest" />
+<link rel="manifest" href="https://hors-example.com/manifest" />
 ```
 
 ## Spécifications

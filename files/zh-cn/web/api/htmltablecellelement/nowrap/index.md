@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{APIRef("HTML DOM API")}}{{deprecated_header}}
+{{APIRef("HTML DOM API")}}
 
 {{domxref("HTMLTableCellElement")}} 接口的 **`noWrap`** 属性返回一个指示单元格的文本是否可以换行的布尔值。
 

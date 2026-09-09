@@ -22,7 +22,7 @@ l10n:
 <!--
 ## Interactive challenge
 
-First of all, we are giving you a fun, interactive challenge involving function return values, created by our [learning partner](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds), [Scrimba](https://scrimba.com/home).
+First of all, we are giving you a fun, interactive challenge involving function return values, created by our [learning partner](/en-US/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み), [Scrimba](https://scrimba.com/home).
 
 Watch the embedded scrim, and complete the task on the timeline (the little ghost icon) by following the instructions and editing the code. When you are done, you can resume watching the scrim to check how the teacher's solution matches up with yours.
 

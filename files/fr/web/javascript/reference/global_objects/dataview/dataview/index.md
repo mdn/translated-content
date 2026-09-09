@@ -75,4 +75,4 @@ view.getInt16(1); // 42
 ## Voir aussi
 
 - [Une prothèse d'émulation pour `DataView` avec la bibliothèque `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- L'objet {{JSxRef("DataView")}}
+- L'objet natif {{JSxRef("DataView")}}

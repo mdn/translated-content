@@ -21,7 +21,7 @@ Si une page doit établir des connexions avec de nombreux domaines tiers, les pr
 Vous pouvez aussi utiliser le préconnect via l'en-tête HTTP [`Link`](/fr/docs/Web/HTTP/Reference/Headers/Link), par exemple&nbsp;:
 
 ```http
-Link: <https://exemple.fr>; rel="preconnect"
+Link: <https://example.com>; rel="preconnect"
 ```
 
 ## Spécifications

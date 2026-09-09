@@ -44,7 +44,7 @@ Chaque élément `<abbr>` que vous utilisez est indépendant des autres&nbsp;; f
 Il n'est pas obligatoire de baliser toutes les abréviations avec `<abbr>`. Cependant, il existe quelques cas où cela s'avère utile&nbsp;:
 
 - Lorsqu'une abréviation est utilisée et que vous souhaitez fournir un développement ou une définition en dehors du flux du contenu du document, utilisez `<abbr>` avec un attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) approprié.
-- Pour définir une abréviation qui pourrait être inconnue du lecteur, présentez le terme avec `<abbr>` et un texte en ligne fournissant la définition. N'ajoutez un attribut `title` que si le développement ou la définition n'est pas disponible en ligne.
+- Pour définir une abréviation qui peut être inconnue du lecteur, présentez le terme avec `<abbr>` et un texte en incise fournissant la définition. N'ajoutez un attribut `title` que si le développement ou la définition n'est pas disponible en incise.
 - Lorsque la présence d'une abréviation dans le texte doit être notée sémantiquement, l'élément `<abbr>` est utile. Cela peut ensuite servir à la mise en forme ou à des scripts.
 - Vous pouvez utiliser `<abbr>` conjointement avec {{HTMLElement("dfn")}} pour établir des définitions de termes qui sont des abréviations ou des acronymes. Voir l'exemple [Définir une abréviation](#définir_une_abréviation) ci-dessous.
 
@@ -54,7 +54,7 @@ Dans les langues qui possèdent la notion de [nombre grammatical](<https://fr.wi
 
 ## Mise en forme par défaut
 
-Le but de cet élément est purement d'apporter une commodité à l'auteur·ice et tous les navigateurs l'affichent en ligne ({{CSSxRef("display", "display: inline")}}) par défaut, même si la mise en forme par défaut varie d'un navigateur à l'autre&nbsp;:
+Le but de cet élément est purement d'apporter une commodité à l'auteur·ice et tous les navigateurs l'affichent en incise ({{CSSxRef("display", "display: inline")}}) par défaut, même si la mise en forme par défaut varie d'un navigateur à l'autre&nbsp;:
 
 Certains navigateurs ajoutent un soulignement en pointillés au contenu de l'élément. D'autres ajoutent ce soulignement tout en convertissant le contenu en petites majuscules. D'autres encore n'appliquent pas de style particulier, l'affichant comme un élément {{HTMLElement("span")}}. Pour contrôler cette mise en forme, utilisez les propriétés CSS {{CSSxRef("text-decoration")}} et {{CSSxRef("font-variant")}}.
 

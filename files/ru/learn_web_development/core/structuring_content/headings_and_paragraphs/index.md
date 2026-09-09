@@ -109,8 +109,7 @@ slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
 Моя мини-история
 Я полицейский, и моё имя Триш.
-Мои ноги сделаны из картона, и мой муж — рыба.</textarea
->
+Мои ноги сделаны из картона, и мой муж — рыба.</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Сбросить" />
@@ -300,8 +299,7 @@ textarea.onkeyup = function () {
 молоко
 яйца
 хлеб
-хумус</textarea
->
+хумус</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Сбросить" />
@@ -464,8 +462,7 @@ textarea.onkeyup = function () {
 Поверните направо
 Езжайте прямо через первые два перекрёстка с круговым движением
 Поверните налево на третьем перекрёстке
-Школа справа от вас, 300 метров вверх по дороге</textarea
->
+Школа справа от вас, 300 метров вверх по дороге</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Сбросить" />
@@ -633,8 +630,7 @@ textarea.onkeyup = function () {
 
   Храните хумус в запечатанном контейнере в холодильнике. Хумус хранится примерно неделю после приготовления. Если он начнёт пениться, выкидывайте его.
 
-  Хумус можно хранить в морозильном отделении 2–3 месяца.</textarea
->
+  Хумус можно хранить в морозильном отделении 2–3 месяца.</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Сбросить" />
@@ -858,8 +854,7 @@ textarea.onkeyup = function () {
 надеты зелёные спортивные костюмы и глупые шляпы, и,
 по-видимому, они были в нетрезвом состоянии. Если у кого-то
 есть какая-либо информация об этом инциденте, пожалуйста,
-позвоните в полицию немедленно.</p></textarea
->
+позвоните в полицию немедленно.</p></textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Сбросить" />

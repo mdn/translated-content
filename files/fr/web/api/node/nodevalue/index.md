@@ -1,84 +1,66 @@
 ---
-title: element.nodeValue
+title: "Node : propriété nodeValue"
+short-title: nodeValue
 slug: Web/API/Node/nodeValue
+l10n:
+  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
 {{APIRef("DOM")}}
 
-La propriété **`Node.nodeValue`** renvoie ou définit la valeur du nœud courant.
+La propriété **`nodeValue`** de l'interface {{DOMxRef("Node")}} retourne ou définit la valeur du nœud actuel.
 
-## Syntaxe
+## Valeur
 
-```js
-value = node.nodeValue;
+Une chaîne de caractères contenant la valeur du nœud actuel, le cas échéant.
+Pour le document lui-même, `nodeValue` retourne `null`.
+Pour les nœuds de type texte, commentaire et CDATA, `nodeValue` retourne le contenu du nœud.
+Pour les nœuds d'attribut, la valeur de l'attribut est retournée.
+
+Le tableau suivant montre les valeurs de retour pour différents types de nœuds.
+
+| Nœud                                 | Valeur de nodeValue              |
+| ------------------------------------ | -------------------------------- |
+| {{DOMxRef("CDATASection")}}          | Contenu de la section CDATA      |
+| {{DOMxRef("Comment")}}               | Contenu du commentaire           |
+| {{DOMxRef("Document")}}              | `null`                           |
+| {{DOMxRef("DocumentFragment")}}      | `null`                           |
+| {{DOMxRef("DocumentType")}}          | `null`                           |
+| {{DOMxRef("Element")}}               | `null`                           |
+| {{DOMxRef("NamedNodeMap")}}          | `null`                           |
+| {{DOMxRef("ProcessingInstruction")}} | Contenu entier excluant la cible |
+| {{DOMxRef("Text")}}                  | Contenu du nœud texte            |
+
+> [!NOTE]
+> Lorsque `nodeValue` est défini sur `null`, le fait de le définir n'a aucun effet.
+
+## Exemples
+
+```html
+<div id="d1">Bonjour le monde</div>
+<!-- Exemple de commentaire -->
+<output id="resultat">Pas encore calculé.</output>
 ```
 
-`value` (_valeur_) est une chaîne contenant la valeur du nœud courant, s'il y en a une.
+et le script suivant&nbsp;:
 
-## Notes
+```js
+let noeud = document.querySelector("body").firstChild;
+let resultat = "Noms des nœuds :\n";
+while (noeud) {
+  resultat += `Valeur de ${noeud.nodeName} : ${noeud.nodeValue}\n`;
+  noeud = noeud.nextSibling;
+}
 
-Pour le document lui-même, `nodeValue` renvoie `null`. Pour des nœuds texte, de commentaires et CDATA, `nodeValue` renvoie le contenu du nœud. Pour les nœuds d'attributs, il s'agira de la valeur de l'attribut.
+const sortie = document.getElementById("resultat");
+sortie.innerText = resultat;
+```
 
-Le tableau suivant montre les valeurs de retour pour différents types de nœuds&nbsp;:
+{{EmbedLiveSample("Exemples", "100%", 250)}}
 
-<table>
-  <tbody>
-    <tr>
-      <td>Attr</td>
-      <td>valeur de l'attribut</td>
-    </tr>
-    <tr>
-      <td>CDATASection</td>
-      <td>contenu de la section CDATA</td>
-    </tr>
-    <tr>
-      <td>Comment</td>
-      <td>contenu du commentaire</td>
-    </tr>
-    <tr>
-      <td>Document</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>DocumentFragment</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>DocumentType</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>Element</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>NamedNodeMap</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>EntityReference</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>Notation</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>ProcessingInstruction</td>
-      <td>tout le contenu à l'exception de la cible</td>
-    </tr>
-    <tr>
-      <td>Text</td>
-      <td>contenu du nœud texte</td>
-    </tr>
-  </tbody>
-</table>
+## Spécifications
 
-Lorsque `nodeValue` est défini comme étant `null`, l'assignation n'a aucun effet.
-
-## Spécification
-
-- [DOM Level 2 Core: Node.nodeValue](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D080) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-F68D080) (non normative)
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

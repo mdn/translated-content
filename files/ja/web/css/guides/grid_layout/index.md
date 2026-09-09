@@ -3,7 +3,7 @@ title: CSS グリッドレイアウト
 short-title: グリッドレイアウト
 slug: Web/CSS/Guides/Grid_layout
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b02c4fe0f8c485fa3fd0af10005310aaecef64ca
 ---
 
 **CSS グリッドレイアウト**モジュールは、ページを大きな領域に分割することや、 HTML のプリミティブから構成されたコントロールの部品間の、寸法、位置、レイヤーに関する関係を定義することに優れています。
@@ -98,9 +98,9 @@ l10n:
 
 ### 関数
 
-- {{CSSxRef("repeat", "repeat()")}}
-- {{CSSxRef("minmax", "minmax()")}}
-- {{CSSxRef("fit-content_function", "fit-content()")}}
+- {{cssxref("repeat()")}}
+- {{cssxref("minmax()")}}
+- {{cssxref("fit-content()")}}
 
 ### データ型
 
@@ -154,8 +154,8 @@ l10n:
 - [サブグリッド](/ja/docs/Web/CSS/Guides/Grid_layout/Subgrid)
   - : サブグリッドの用途とデザインパターン、何を解決するのか。
 
-- [メイソンリーレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Masonry_layout)
-  - : メイソンリーレイアウトとは何か、そしてそれがどのように使用されるかを詳細に説明します。
+- [グリッドレーンレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Grid_lanes)
+  - : グリッドレーンレイアウトとは何か、そしてそれがどのように使用されるかを詳細に説明します。
 
 - [グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
   - : グリッドレイアウトにおけるボックス配置の動作です。
@@ -172,14 +172,17 @@ l10n:
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}
 - {{cssxref("align-self")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
 - {{cssxref("justify-content")}}
 - {{cssxref("justify-items")}}
 - {{cssxref("justify-self")}}
 - {{cssxref("place-content")}}
 - {{cssxref("place-items")}}
 - {{cssxref("place-self")}}
+
+[CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)モジュール
+
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
 - {{cssxref("row-gap")}}
 
 [CSS ボックスサイズ指定](/ja/docs/Web/CSS/Guides/Box_sizing)モジュール
@@ -196,7 +199,7 @@ l10n:
 - {{cssxref("min-content")}} 値
 - {{cssxref("max-content")}} 値
 - {{cssxref("fit-content")}} 値
-- {{cssxref("fit-content_function", "fit-content()")}} 関数
+- {{cssxref("fit-content()")}} 関数
 
 ## 仕様書
 

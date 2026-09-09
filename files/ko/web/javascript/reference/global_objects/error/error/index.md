@@ -31,7 +31,7 @@ new Error(message, fileName, lineNumber);
 
 ### 생성자 또는 함수 호출
 
-`Error`를 {{JSxRef("Operators/new", "new")}} 없이 함수로써 호출한 경우에도 `Error` 객체를
+`Error`를 {{JSxRef("new")}} 없이 함수로써 호출한 경우에도 `Error` 객체를
 반환합니다. 따라서 단순히 `Error`를 호출하기만 해도 `new` 키워드를 사용한 것과 같은 결과를
 낳습니다.
 

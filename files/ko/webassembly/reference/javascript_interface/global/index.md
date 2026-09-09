@@ -6,7 +6,7 @@ original_slug: WebAssembly/JavaScript_interface/Global
 
 {{WebAssemblySidebar}}
 
-**`WebAssembly.Global`** 객체는 전역 변수 인스턴스를 나타내며 JavaScript 및 하나 이상의 {{jsxref("WebAssembly.Module")}} 인스턴스에서 가져오거나 내보낼 수 있습니다. 이렇게 하면 여러 모듈을 동적으로 연결할 수 있습니다.
+**`WebAssembly.Global`** 객체는 전역 변수 인스턴스를 나타내며 JavaScript 및 하나 이상의 [`WebAssembly.Module`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Module) 인스턴스에서 가져오거나 내보낼 수 있습니다. 이렇게 하면 여러 모듈을 동적으로 연결할 수 있습니다.
 
 ## 생성자
 
@@ -20,7 +20,7 @@ original_slug: WebAssembly/JavaScript_interface/Global
 ### 인스턴스 속성
 
 - `Global.prototype.constructor`
-  - : 이 객체의 인스턴스를 생성한 함수를 반환합니다. 기본적으로 이것은 {{jsxref("WebAssembly.Global()")}} 생성자입니다.
+  - : 이 객체의 인스턴스를 생성한 함수를 반환합니다. 기본적으로 이것은 [`WebAssembly.Global()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Global) 생성자입니다.
 - `Global.prototype[@@toStringTag]`
   - : [@@toStringTag](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 프로퍼티의 초기값은 문자열 값 "WebAssembly.Global" 입니다.
 - `Global.prototype.value`

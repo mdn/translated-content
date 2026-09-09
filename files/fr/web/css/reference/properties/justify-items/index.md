@@ -3,7 +3,7 @@ title: Propriété CSS `justify-items`
 short-title: justify-items
 slug: Web/CSS/Reference/Properties/justify-items
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 07758d01509695fe45ccc3f7687f6597dc3d9e2a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`justify-items`** définit la valeur par défaut de {{CSSxRef("justify-self")}} pour tous les éléments de la boîte, leur donnant ainsi une façon par défaut de justifier chaque boîte le long de l'axe approprié.
@@ -54,13 +54,13 @@ justify-items: end;
 }
 ```
 
-L'effet de cette propriété sera différent selon le type de disposition utilisé&nbsp;:
+L'effet de cette propriété est différent selon le type de disposition utilisé&nbsp;:
 
-- Pour les dispositions de bloc, cette propriété aligne les éléments à l'intérieur de leur bloc englobant sur l'axe en ligne.
-- Pour les éléments positionnés de façon absolue, cette propriété aligne les éléments à l'intérieur de leur bloc englobant sur l'axe en ligne, en tenant compte des valeurs de décalage haut, gauche, bas et droite.
+- Pour les dispositions de bloc, cette propriété aligne les éléments à l'intérieur de leur bloc englobant sur l'axe en incise.
+- Pour les éléments positionnés de façon absolue, cette propriété aligne les éléments à l'intérieur de leur bloc englobant sur l'axe en incise, en tenant compte des valeurs de décalage haut, gauche, bas et droite.
 - Pour les dispositions des cellules de tableau, cette propriété est _ignorée_ (voir [L'alignement des boîtes pour les dispositions de bloc, positionnées absolument et les tableaux](/fr/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables))
-- Pour les dispositions flexibles (_flexbox_), cette propriété est _ignorée_ (voir [L'alignement des boîtes flexibles](/fr/docs/Web/CSS/Guides/Box_alignment/In_flexbox))
-- Pour les grilles, cette propriété aligne les éléments à l'intérieur de leur zone de grille sur l'axe en ligne (voir [L'alignement des boîtes en disposition grille](/fr/docs/Web/CSS/Guides/Box_alignment/In_grid_layout))
+- Pour les dispositions flexibles, cette propriété est _ignorée_ (voir [L'alignement des boîtes flexibles](/fr/docs/Web/CSS/Guides/Box_alignment/In_flexbox))
+- Pour les grilles, cette propriété aligne les éléments à l'intérieur de leur zone de grille sur l'axe en incise (voir [L'alignement des boîtes en disposition grille](/fr/docs/Web/CSS/Guides/Box_alignment/In_grid_layout))
 
 ## Syntaxe
 
@@ -113,43 +113,43 @@ Cette propriété peut prendre l'une des quatre formes suivantes&nbsp;:
 ### Valeurs
 
 - `normal`
-  - : Ce mot-clé aura un sens différent selon le mode de disposition utilisé :
+  - : Ce mot-clé a un sens différent selon le mode de disposition utilisé&nbsp;:
     - Pour une disposition en bloc, `normal` est synonyme de `start`.
-    - Pour les dispositions avec un positionnment absolu, ce mot-clé se comporte comme `start` pour les boîtes des éléments remplacés ou comme `stretch` pour les autres boîtes positionnées de façon absolue.
-    - Pour les dispositions des cellules de tableaux, ce mot-clé n'a pas de signification car cette propriété est _ignorée_.
-    - Pour les dispositions qui utilisent les boîtes flexibles, ce mot-clé n'a pas de signification car cette propriété est _ignorée_.
-    - Pour les dispositions qui utilisent une grille, ce mot-clé aura un comportement proche de `stretch`, sauf pour les boîtes qui ont des dimensions intrinsèques, dans ce cas, il est synonyme de `start`.
+    - Pour les dispositions avec un positionnement absolu, ce mot-clé se comporte comme `start` pour les boîtes des éléments remplacés ou comme `stretch` pour les autres boîtes positionnées de façon absolue.
+    - Pour les dispositions des cellules de tableaux, ce mot-clé n'a pas de signification, car cette propriété est _ignorée_.
+    - Pour les dispositions qui utilisent les boîtes flexibles, ce mot-clé n'a pas de signification, car cette propriété est _ignorée_.
+    - Pour les dispositions qui utilisent une grille, ce mot-clé un comportement proche de `stretch`, sauf pour les boîtes qui ont des dimensions intrinsèques, dans ce cas, il est synonyme de `start`.
 - `start`
-  - : Les éléments sont regroupés vers le début du conteneur pour l'axe en ligne.
+  - : Les éléments sont regroupés vers le début du conteneur pour l'axe en incise.
 - `end`
-  - : Les éléments sont regroupés vers la fin du conteneur pour l'axe en ligne.
+  - : Les éléments sont regroupés vers la fin du conteneur pour l'axe en incise.
 - `flex-start`
   - : Pour les éléments qui ne sont pas enfants d'un conteneur flexible, cette valeur est traitée comme `start`.
 - `flex-end`
   - : Pour les éléments qui ne sont pas enfants d'un conteneur flexible, cette valeur est traitée comme `end`.
 - `self-start`
-  - : Les éléments sont alignés sur le bord du conteneur au début de l'axe en ligne.
+  - : Les éléments sont alignés sur le bord du conteneur au début de l'axe en incise.
 - `self-end`
-  - : Les éléments sont alignés sur le bord du conteneur à la fin de l'axe en ligne.
+  - : Les éléments sont alignés sur le bord du conteneur à la fin de l'axe en incise.
 - `center`
-  - : Les éléments sont regroupés au centre du conteneur dans le sens de l'axe en ligne.
+  - : Les éléments sont regroupés au centre du conteneur dans le sens de l'axe en incise.
 - `left`
-  - : Les éléments sont accolés les uns aux autres vers le bord gauche du conteneur d'alignement. Si l'axe de la propriété n'est pas parallèle à l'axe en ligne, cette valeur se comporte comme `start`.
+  - : Les éléments sont accolés les uns aux autres vers le bord gauche du conteneur d'alignement. Si l'axe de la propriété n'est pas parallèle à l'axe en incise, cette valeur se comporte comme `start`.
 - `right`
-  - : Les éléments sont accolés les uns aux autres vers le bord droit du conteneur d'alignement sur l'axe approprié. Si l'axe de la propriété n'est pas parallèle à l'axe en ligne, cette valeur se comporte comme `start`.
+  - : Les éléments sont accolés les uns aux autres vers le bord droit du conteneur d'alignement sur l'axe approprié. Si l'axe de la propriété n'est pas parallèle à l'axe en incise, cette valeur se comporte comme `start`.
 - `baseline`, `first baseline`, `last baseline`
   - : Ces valeurs permettent de définir l'alignement par rapport à la ligne de base pour l'élément du conteneur avec la ligne de base la plus haute ou la plus basse.
-    Si `first baseline` n'est pas prise en charge, la valeur correspondra à `start`, si `last baseline` n'est pas prise en charge, la valeur correspondra à `end`.
+    Si `first baseline` n'est pas prise en charge, la valeur correspond à `start`, si `last baseline` n'est pas prise en charge, la valeur correspond à `end`.
 - `stretch`
-  - : Si la somme des tailles des éléments est inférieure à la taille du conteneur pour l'axe en ligne, les éléments dimensionnés automatiquement seront élargis de la même longueur tout en respectant les contraintes imposées par {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (ou par les fonctionnalités équivalentes), afin que l'ensemble des éléments remplisse exactement le conteneur.
+  - : Si la somme des tailles des éléments est inférieure à la taille du conteneur pour l'axe en incise, les éléments dimensionnés automatiquement sont élargis de la même longueur tout en respectant les contraintes imposées par {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (ou par les fonctionnalités équivalentes), afin que l'ensemble des éléments remplisse exactement le conteneur.
 - `anchor-center`
-  - : Dans le cas des éléments [positionnés avec une ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning), aligne les éléments au centre de l'élément d'ancre associé dans la direction en ligne. Voir [Centrer sur l'ancre avec `anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_avec_anchor-center).
+  - : Dans le cas des éléments [positionnés avec une ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning), aligne les éléments au centre de l'élément d'ancre associé dans la direction en incise (<i lang="en">inline</i> en anglais). Voir [Centrer sur l'ancre avec `anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_avec_anchor-center).
 - `safe`
-  - : Si la taille de l'élément dépasse du conteneur pour la valeur d'alignement indiquée, l'élément est alors aligné comme si la valeur `start` avait été utilisée.
+  - : Si la taille de l'élément dépasse du conteneur pour la valeur d'alignement indiquée, l'élément est alors aligné comme si la valeur `start` a été utilisée.
 - `unsafe`
   - : Quelle que soit la taille de l'élément par rapport au conteneur (il peut dépasser), la valeur fournie pour indiquer l'alignement est respectée.
 - `legacy`
-  - : La valeur est héritée par les éléments descendants de la boîte. Si un élément descendant a `justify-self: auto`, le mot-clé `legacy` ne sera pas pris en compte mais uniquement la valeur `left`, `right`, ou `center`.
+  - : La valeur est héritée par les éléments descendants de la boîte. Si un élément descendant a `justify-self: auto`, le mot-clé `legacy` n'est pas pris en compte mais uniquement la valeur `left`, `right`, ou `center`.
 
 ## Définition formelle
 

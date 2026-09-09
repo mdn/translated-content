@@ -3,10 +3,10 @@ title: Propriété CSS `border-left`
 short-title: border-left
 slug: Web/CSS/Reference/Properties/border-left
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-left`** permet de définir toutes les propriétés de la [bordure](/fr/docs/Web/CSS/Reference/Properties/border) à gauche d'un élément.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-left`** permet de définir toutes les propriétés de la [bordure](/fr/docs/Web/CSS/Reference/Properties/border) à gauche d'un élément.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: border-left")}}
 
@@ -98,7 +98,7 @@ border-left-style: dotted;
 border-left: none thick green;
 ```
 
-La valeur de {{CSSxRef("border-left-style")}} fournie avant `border-left` est ignorée. Comme la valeur par défaut de {{CSSxRef("border-left-style")}} est `none`, si vous n'indiquez pas la partie `border-style`, il n'y aura pas de bordure.
+La valeur de {{CSSxRef("border-left-style")}} fournie avant `border-left` est ignorée. Comme la valeur par défaut de {{CSSxRef("border-left-style")}} est `none`, si vous n'indiquez pas la partie `border-style`, il n'y a pas de bordure.
 
 ## Définition formelle
 

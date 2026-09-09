@@ -5,7 +5,7 @@ slug: Web/API/HTMLAnchorElement/username
 
 {{ApiRef("URL API")}}
 
-Свойство **`HTMLHyperlinkElementUtils.username`** – это {{domxref("USVString")}}, содержащий имя пользователя, указанное перед именем домена.
+Свойство **`HTMLHyperlinkElementUtils.username`** – это {{jsxref("String")}}, содержащий имя пользователя, указанное перед именем домена.
 
 ## Синтаксис
 

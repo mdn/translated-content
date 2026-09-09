@@ -17,10 +17,10 @@ const map = new Map([["toto", "truc"]]);
 const defaultCreator = (key) => `par défaut pour ${key}`;
 
 console.log(map.getOrInsertComputed("toto", defaultCreator));
-// Sortie attendue : "truc"
+// Résultat attendu : "truc"
 
 console.log(map.getOrInsertComputed("tata", defaultCreator));
-// Sortie attendue : "par défaut pour tata"
+// Résultat attendu : "par défaut pour tata"
 ```
 
 ## Syntaxe
@@ -76,7 +76,7 @@ map.getOrInsertComputed("toto", createurParDefaut); // N'affiche rien
 
 - [Prothèse d'émulation de `Map.prototype.getOrInsertComputed` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#map-upsert)
 - [Prothèse d'émulation es-shims de `Map.prototype.getOrInsertComputed` <sup>(angl.)</sup>](https://www.npmjs.com/package/map.prototype.getorinsertcomputed)
-- L'objet {{JSxRef("Map")}}
+- L'objet natif {{JSxRef("Map")}}
 - La méthode {{JSxRef("Map.prototype.get()")}}
 - La méthode {{JSxRef("Map.prototype.set()")}}
 - La méthode {{JSxRef("Map.prototype.has()")}}

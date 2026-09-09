@@ -1,128 +1,109 @@
 ---
-title: Object.prototype.__proto__
+title: "Object : propriété __proto__"
+short-title: __proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
+l10n:
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{JSRef}}{{Deprecated_header}}
-
 > [!WARNING]
-> Étant donnée la façon dont la plupart des moteurs JavaScript optimisent les performances, modifier le `[[Prototype]]` d'un objet est une opération lente pour chaque navigateur et moteur JavaScript. Les impacts liés aux performances sur ce point sont vastes et subtiles : ils concernent pas uniquement le temps passé à effectuer `obj.__proto__ = ...`, mais peuvent concerner n'importe quel code pour n'importe quel objet dont `[[Prototype]]` a été modifié. Si vous souhaitez obtenir des performances optimales, évitez de modifier le `[[Prototype]]` d'un objet. À la place, il est conseillé de créer un objet avec le prototype voulu en utilisant {{jsxref("Object.create()")}}.
+> Changer le `[[Prototype]]` d'un objet est, de par la manière dont les moteurs JavaScript modernes optimisent les accès aux propriétés, actuellement une opération très lente dans tous les navigateurs et moteurs JavaScript. De plus, les effets de la modification de l'héritage sont subtils et étendus, et ne se limitent pas au temps passé dans l'instruction `obj.__proto__ = ...`, mais peuvent s'étendre à **_tout_** code ayant accès à un objet dont le `[[Prototype]]` a été modifié. Vous pouvez en lire plus dans [Fondamentaux du moteur JavaScript&nbsp;: optimisation des prototypes](https://mathiasbynens.be/notes/prototypes).
 
-> [!WARNING]
-> Bien que la propriété `Object.prototype.__proto__` soit déjà supportée dans la plupart des navigateurs à l'heure actuelle, son comportement n'a été standardisé que récemment avec la spécification ECMAScript 2015. Si vous avez besoin d'utiliser cette propriété dans des environnements antérieurs à ES2015, il est recommandé d'utiliser {{jsxref("Object.getPrototypeOf()")}}.
+> [!NOTE]
+> L'utilisation de `__proto__` est controversée et déconseillée. Son existence et son comportement exact n'ont été standardisés qu'en tant que fonctionnalité héritée pour garantir la compatibilité web, tout en présentant plusieurs [problèmes de sécurité](/fr/docs/Web/Security/Attacks/Prototype_pollution) et pièges. Pour un meilleur support, préférez {{JSxRef("Object.getPrototypeOf()")}}/{{JSxRef("Reflect.getPrototypeOf()")}} et {{JSxRef("Object.setPrototypeOf()")}}/{{JSxRef("Reflect.setPrototypeOf()")}} à la place.
 
-La propriété `__proto__` de {{jsxref("Object")}} est une propriété accesseur (un couple de fonction avec un accesseur (_getter_) et un mutateur (_setter_)) qui expose le `[[Prototype]]` interne (qui est soit un objet, soit {{jsxref("null")}}) de l'objet courant.
+La propriété d'accesseur **`__proto__`** des instances de {{JSxRef("Object")}} expose le [`[[Prototype]]`](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) (soit un objet, soit {{JSxRef("null")}}) de cet objet.
 
-L'utilisation de `__proto__` est sujet à controverse. Elle a été déconseillée par plusieurs personnes et n'avait jamais été incluse dans la spécification ECMAScript. Cependant, de nombreux navigateurs ont décidé de l'implémenter. À l'heure actuelle, la propriété `__proto__` a été standardisée avec la spécification ECMAScript 2015 et sera officiellement supportée à l'avenir. Une alternative à cette propriété peut être l'utilisation des méthodes {{jsxref("Object.getPrototypeOf")}}/{{jsxref("Reflect.getPrototypeOf")}} et {{jsxref("Object.setPrototypeOf")}}/{{jsxref("Reflect.setPrototypeOf")}}. Cependant, modifier le `[[Prototype]]` d'un objet est toujours une opération lente qui doit être évitée le plus possible pour des raisons de performances.
-
-La propriété `__proto__` peut également être utilisée avec un littéral objet afin de définir le `[[Prototype]]` lors de la construction (ce qui en fait une alternative à {{jsxref("Object.create()")}}. Voir la page sur {{jsxref("Operators/Object_initializer","les initialisateurs d'objet","",1)}}.
+La propriété `__proto__` peut également être utilisée dans une définition de littéral d'objet pour définir le `[[Prototype]]` de l'objet lors de sa création, comme alternative à {{JSxRef("Object.create()")}}. Voir&nbsp;: [syntaxe de l'initialiseur / littéral d'objet](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer). Cette syntaxe est standard et optimisée dans les implémentations, et assez différente de `Object.prototype.__proto__`.
 
 ## Syntaxe
 
-```js
-var proto = obj.__proto__;
+```js-nolint
+obj.__proto__
 ```
 
-> [!NOTE]
-> Le nom de la propriété est composé de deux tirets bas, suivis de « proto », suivis par deux tirets bas (_underscores_)
+### Valeur de retour
+
+Si elle est utilisée comme accesseur, retourne le `[[Prototype]]` de l'objet.
+
+### Exceptions
+
+- {{JSxRef("TypeError")}}
+  - : Levée si vous tentez de définir le prototype d'un objet [non extensible](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible) ou d'un [objet exotique à prototype immuable <sup>(angl.)</sup>](https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html#sec-immutable-prototype-exotic-objects), tel que `Object.prototype` ou {{DOMxRef("window")}}.
 
 ## Description
 
-L'accesseur `__proto__` expose la valeur du `[[Prototype]]` interne d'un objet.
+La fonction d'accesseur `__proto__` expose la valeur du `[[Prototype]]` interne d'un objet. Pour les objets créés à l'aide d'un littéral d'objet (à moins que vous n'utilisiez la syntaxe du [mutateur de prototype](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer#mutateur_de_prototype)), cette valeur est `Object.prototype`. Pour les objets créés à l'aide de littéraux de tableau, cette valeur est [`Array.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array). Pour les fonctions, cette valeur est {{JSxRef("Function.prototype")}}. Vous pouvez en savoir plus sur la chaîne de prototypes dans [Héritage et chaîne de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
-- Pour les objets créés via un littéral objet, cette valeur est {{jsxref("Object")}}.
-- Pour les objet créés via un littéral de tableau, cette valeur est {{jsxref("Array")}}.
-- Pour les fonctions, cette valeur est {{jsxref("Function")}}.
-- Pour les objets créés en utilisant `new fun`, avec `fun` un des constructeurs natif de fonctions, fournis par JavaScript ({{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("String")}}, etc.), cette valeur est `fun.prototype`.
-- Pour les objets créés en utilisant `new fun`, avec `fun` une function definie dans un script, cette valeur est la valeur de `fun.prototype` au moment où `new fun` est évaluée. (Ainsi, si on affecte une nouvelle valeur à `fun.prototype`, les instances crées précédemment conserveront leur `[[Prototype]]`, les objets créés par la suite bénéficieront de la nouvelle valeur pour leur `[[Prototype]]`.)
+Le mutateur `__proto__` permet de modifier le `[[Prototype]]` d'un objet. La valeur fournie doit être un objet ou {{JSxRef("null")}}. Fournir toute autre valeur n'a aucun effet.
 
-Le mutateur `__proto__` permet de changer le `[[Prototype]]` d'un objet. Cet objet doit être extensible selon {{jsxref("Object.isExtensible")}}, si ce n'est pas le cas, une exception {{jsxref("TypeError")}} sera renvoyée. La valeur fournie pour le nouveau prototype doit être un objet ou {{jsxref("null")}}. Toute autre valeur entraînera un échec silencieux.
+Contrairement à {{JSxRef("Object.getPrototypeOf()")}} et {{JSxRef("Object.setPrototypeOf()")}}, qui sont toujours disponibles sur `Object` en tant que propriétés statiques et reflètent toujours la propriété interne `[[Prototype]]`, la propriété `__proto__` n'existe pas toujours en tant que propriété sur tous les objets et, par conséquent, ne reflète pas de manière fiable `[[Prototype]]`.
 
-Pour plus d'éléments sur le fonctionnement de l'héritage et des prototypes, voir la page sur [l'héritage et les chaînes de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
+La propriété `__proto__` n'est qu'une propriété d'accesseur sur `Object.prototype` composée d'une fonction accesseur et d'une fonction mutateur. Un accès à la propriété `__proto__` qui consulte finalement `Object.prototype` trouve cette propriété, mais un accès qui ne consulte pas `Object.prototype` ne la trouve pas. Si une autre propriété `__proto__` est trouvée avant que `Object.prototype` ne soit consulté, cette propriété masque celle trouvée sur `Object.prototype`.
 
-Le propriété `__proto__` n'est qu'une propriété accesseur (composée d'une fonction accesseur (_getter_) et d'une fonction mutateur (_setter_)) pour {{jsxref("Object")}}. Si l'accès à `__proto__` consulte {{jsxref("Object")}}, on trouvera la propriété. Un accesseur qui ne consulte pas {{jsxref("Object")}} ne pourra pas trouver le prototype. Si une propriété `__proto__` est trouvée avant que {{jsxref("Object")}} ne soit consulté, cette propriété « cachera » {{jsxref("Object")}}.
-
-```js
-var aucunProto = Object.create(null);
-
-console.log(typeof aucunProto.__proto__); // undefined
-console.log(Object.getPrototypeOf(aucunProto)); // null
-
-aucunProto.__proto__ = 17;
-
-console.log(aucunProto.__proto__); // 17
-console.log(Object.getPrototypeOf(aucunProto)); // null
-
-var protoCaché = {};
-Object.defineProperty(protoCaché, "__proto__", {
-  value: 42,
-  writable: true,
-  configurable: true,
-  enumerable: true,
-});
-
-console.log(protoCaché.__proto__); // 42
-console.log(Object.getPrototypeOf(protoCaché) === Object.prototype); // true
-```
+Les [objets avec prototype `null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object#objets_avec_prototype_null) n'héritent d'aucune propriété de `Object.prototype`, y compris la propriété d'accesseur `__proto__`. Par conséquent, si vous tentez de lire `__proto__` sur un tel objet, la valeur est toujours `undefined` indépendamment du `[[Prototype]]` réel de l'objet, et toute affectation à `__proto__` crée une nouvelle propriété appelée `__proto__` au lieu de définir le prototype de l'objet. De plus, `__proto__` peut être redéfini en tant que propriété propre sur n'importe quelle instance d'objet avec {{JSxRef("Object.defineProperty()")}} sans déclencher le mutateur. Dans ce cas, `__proto__` n'est plus un accesseur pour `[[Prototype]]`. Par conséquent, il est toujours préférable d'utiliser {{JSxRef("Object.getPrototypeOf()")}} et {{JSxRef("Object.setPrototypeOf()")}} pour définir et obtenir le `[[Prototype]]` d'un objet.
 
 ## Exemples
 
-Dans ce qui suit, on crée un nouvelle instance d'`Employé` et on teste si `__proto__` est bien le même objet que le prototype de son constructeur.
-
-> [!WARNING]
-> Les remarques données plus haut sur les atteintes à la performance restent valables pour ces exemples. Ces exemples permettent uniquement d'illustrer le fonctionnement de `__proto__`, ils ne font pas office de recommandations.
+### Utiliser la propriété `__proto__`
 
 ```js
-// On déclare une fonction à utiliser comme constructeur
-function Employé() {
-  /* on initialise l'instance */
-}
+function Cercle() {}
+const forme = {};
+const circle = new Cercle();
 
-// On crée une nouvelle instance d'Employé
-var fred = new Employé();
+// Définit le prototype de l'objet.
+// OBSOLÈTE. Ceci est uniquement à des fins d'exemple. NE FAITES PAS CELA dans du vrai code.
+forme.__proto__ = circle;
 
-// On teste l'équivalence
-fred.__proto__ === Employé.prototype; // true
+// Obtient le prototype de l'objet.
+console.log(forme.__proto__ === Cercle); // false
 ```
 
-À cet instant, `fred` hérite de `Employé`. On peut toutefois changer ça en assignant un nouvel objet à `fred.__proto__` :
-
 ```js
-// Assigner un nouvel objet à __proto__
-fred.__proto__ = Object.prototype;
-```
-
-`fred` n'hérite plus de `Employé.prototype`, mais de `Object.prototype`. Il perd donc les propriétés héritées de `Employé.prototype`.
-
-Cela n'est possible que pour les objets {{jsxref("Object.isExtensible", "extensibles","",1)}}. La propriété `__proto__` d'un objet non-extensible ne peut pas être changée :
-
-```js
-var obj = {};
-Object.preventExtensions(obj);
-
-obj.__proto__ = {}; // renvoie une exception TypeError
-```
-
-On notera que même la propriété `__proto__` de `Object.prototype` peut être redéfinie tant que la chaîne de prototypes se termine par `null` :
-
-```js
-var b = {};
-
-Object.prototype.__proto__ = Object.create(
-  null, //[[Prototype]]
-  {
-    salut: {
-      value: function () {
-        console.log("salut");
-      },
-    },
+function FormeA() {}
+const FormeB = {
+  a() {
+    console.log("aaa");
   },
-);
+};
 
-b.salut();
+FormeA.prototype.__proto__ = FormeB;
+console.log(FormeA.prototype.__proto__); // { a: [Function: a] }
+
+const formeA = new FormeA();
+formeA.a(); // aaa
+console.log(FormeA.prototype === formeA.__proto__); // true
 ```
 
-Si la propriété `__proto__` de {{jsxref("Object")}} ne permet pas d'aboutir à {{jsxref("null")}} via la chaîne de prototypes, on a une chaîne cyclique et on doit avoir une exception {{jsxref("TypeError")}} "cyclic \_\_proto\_\_ value".
+```js
+function FormeC() {}
+const FormeD = {
+  a() {
+    console.log("a");
+  },
+};
+
+const formeC = new FormeC();
+formeC.__proto__ = FormeD;
+formeC.a(); // a
+console.log(FormeC.prototype === formeC.__proto__); // false
+```
+
+```js
+function Test() {}
+Test.prototype.monNom = function () {
+  console.log("monNom");
+};
+
+const test = new Test();
+console.log(test.__proto__ === Test.prototype); // true
+test.monNom(); // monNom
+
+const obj = {};
+obj.__proto__ = Test.prototype;
+obj.monNom(); // monNom
+```
 
 ## Spécifications
 
@@ -134,6 +115,7 @@ Si la propriété `__proto__` de {{jsxref("Object")}} ne permet pas d'aboutir à
 
 ## Voir aussi
 
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.setPrototypeOf()")}}
+- La méthode {{JSxRef("Object.prototype.isPrototypeOf()")}}
+- La méthode statique {{JSxRef("Object.getPrototypeOf()")}}
+- La méthode statique {{JSxRef("Object.setPrototypeOf()")}}
+- [Attaque de pollution de prototype](/fr/docs/Web/Security/Attacks/Prototype_pollution)

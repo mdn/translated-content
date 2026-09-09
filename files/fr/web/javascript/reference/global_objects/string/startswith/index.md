@@ -3,8 +3,6 @@ title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
 ---
 
-{{JSRef}}
-
 La méthode **`startsWith()`** renvoie un booléen indiquant si la chaine de caractères commence par la deuxième chaine de caractères fournie en argument.
 
 {{InteractiveExample("JavaScript Demo: String.startsWith()")}}

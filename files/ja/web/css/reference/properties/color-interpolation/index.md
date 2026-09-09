@@ -1,9 +1,9 @@
 ---
-title: color-interpolation
+title: CSS `color-interpolation` プロパティ
+short-title: color-interpolation
 slug: Web/CSS/Reference/Properties/color-interpolation
-original_slug: Web/CSS/color-interpolation
 l10n:
-  sourceCommit: eca1c1c2dfd430d6b7942b0f73128c4c0831e5c1
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 CSS の `color-interpolation` プロパティは、SVG で用いられ、SVG 要素 {{SVGElement("linearGradient")}} および {{SVGElement("radialGradient")}} で用いる色空間を指定します。
@@ -25,7 +25,7 @@ color-interpolation: linearRGB;
   - : 色の補間を sRGB 色空間で行うべきであることを表します。
     `color-interpolation` プロパティが設定されていない場合、初期値はこの値になります。
 - `linearRGB`
-  - : 色の補間を [sRGB の仕様書](https://webstore.iec.ch/publication/6169)に記述されている通りの linearized RGB 色空間で行うべきであることを表します。
+  - : 色の補間を [sRGB の仕様書](https://webstore.iec.ch/en/publication/6169)に記述されている通りの linearized RGB 色空間で行うべきであることを表します。
 
 ## 公式定義
 
@@ -127,4 +127,4 @@ svg {
 
 - {{SVGElement("linearGradient")}}
 - {{SVGElement("radialGradient")}}
-- {{SVGAttr("color-interpolation")}}
+- SVG {{SVGAttr("color-interpolation")}} 属性

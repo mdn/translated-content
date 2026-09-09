@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Display/In_flow_and_out_of_flow
 original_slug: Web/CSS/CSS_display/In_flow_and_out_of_flow
 ---
 
-{{CSSRef}}
-
 Dans [le précédent guide](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout), nous avons vu le fonctionnement de la disposition en ligne et en bloc dans le flux normal. Tous les éléments qui sont « dans » le flux seront disposés grâce à cette méthode.
 
 Dans l'exemple qui suit, on a un titre, un paragraphe, une liste puis un paragraphe final qui contient un élément `strong`. Le titre et les paragraphes sont des éléments de blocs et l'élément `strong` est un élément en ligne. La liste est affichée en utilisant les boîtes flexibles afin d'avoir les éléments de la liste sur une même ligne mais cette liste contribue bien à la disposition en ligne et en bloc car le conteneur a un type `display` externe qui vaut `block`.

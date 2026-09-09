@@ -3,10 +3,10 @@ title: Propriété CSS `image-rendering`
 short-title: image-rendering
 slug: Web/CSS/Reference/Properties/image-rendering
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`image-rendering`** fournit une indication au navigateur à propos de l'algorithme qui devrait être utilisé pour redimensionner les images. Elle s'applique à l'élément visé, aux images fournies via les autres propriétés CSS et aux éléments descendants de l'élément ciblé.
+La propriété [CSS](/fr/docs/Web/CSS) **`image-rendering`** fournit une indication au navigateur à propos de l'algorithme qui doit être utilisé pour redimensionner les images. Elle s'applique à l'élément visé, aux images fournies avec les autres propriétés CSS et aux éléments descendants de l'élément ciblé.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: image-rendering")}}
 
@@ -42,7 +42,7 @@ image-rendering: pixelated;
 }
 ```
 
-{{Glossary("user agent", "L'agent utilisateur")}} agrandira ou réduira une image lorsque l'auteur·ice de la page définit des dimensions différentes de sa taille naturelle. Un redimensionnement peut aussi se produire lors d'une interaction utilisateur (zoom). Par exemple, si la taille naturelle d'une image est de `100×100px`, mais que ses dimensions réelles sont de `200×200px` (ou `50×50px`), alors l'image sera agrandie (ou réduite) en utilisant l'algorithme défini par `image-rendering`. Cette propriété n'a aucun effet sur les images non redimensionnées.
+{{Glossary("user agent", "L'agent utilisateur")}} agrandit ou réduit une image lorsque l'auteur·ice de la page définit des dimensions différentes de sa taille naturelle. Un redimensionnement peut aussi se produire lors d'une interaction utilisateur·ice (zoom). Par exemple, si la taille naturelle d'une image est de `100×100px`, mais que ses dimensions réelles sont de `200×200px` (ou `50×50px`), alors l'image est agrandie (ou réduite) en utilisant l'algorithme défini par `image-rendering`. Cette propriété n'a aucun effet sur les images non redimensionnées.
 
 ## Syntaxe
 
@@ -63,8 +63,10 @@ image-rendering: unset;
 
 ### Valeurs
 
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
+
 - `auto`
-  - : L'algorithme utilisé dépend de l'agent utilisateur. Depuis la version 1.9 (Firefox 3.0), Gecko utilise un algorithme de rééchantillonnage _bilinéaire_ (haute qualité).
+  - : L'algorithme utilisé dépend de l'agent utilisateur. Depuis la version 1.9 (Firefox 3.0), Gecko utilise un algorithme de ré-échantillonnage _bilinéaire_ (haute qualité).
 - `smooth` {{Experimental_Inline}}
   - : L'algorithme utilisé pour le redimensionnement doit maximiser l'apparence de l'image. Les algorithmes qui adoucissent les couleurs (l'interpolation bilinéaire par exemple) sont acceptables. Cette valeur est destinée aux images telles que les photos.
 - `crisp-edges`
@@ -90,7 +92,7 @@ image-rendering: unset;
 
 ### Paramétrer l'algorithme de redimensionnement des images
 
-Dans cet exemple, une image est répétée trois fois, chacune ayant une valeur différente de `image-rendering` appliquée.
+Dans cet exemple, une image est répétée quatre fois, chacune ayant une valeur différente de `image-rendering` appliquée.
 
 ```html hidden
 <div>

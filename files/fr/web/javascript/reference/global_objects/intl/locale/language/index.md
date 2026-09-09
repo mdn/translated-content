@@ -48,5 +48,5 @@ console.log(locale.language); // "es"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}
 - [Sous-balise de langue Unicode <sup>(angl.)</sup>](https://www.unicode.org/reports/tr35/#unicode_language_subtag_validity) dans la spécification du langage de balisage des données de locale Unicode

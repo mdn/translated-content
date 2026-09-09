@@ -3,8 +3,6 @@ title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
 ---
 
-{{jsSidebar("Statements")}}
-
 L'instruction **`for await…of`** permet de créer une boucle qui parcourt les objets itérables asynchrones de la même façon qu'on parcourt les itérables synchrones (tels que les chaînes de caractères ({{jsxref("String")}}), les tableaux {{jsxref("Array")}}, les objets semblables aux tableaux comme {{jsxref("Functions/arguments", "arguments")}} ou {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}. Cette instruction invoque un mécanisme d'itération spécifique et les instructions à exécuter pour chaque propriété de l'objet.
 
 ## Syntaxe

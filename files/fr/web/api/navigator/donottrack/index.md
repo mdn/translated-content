@@ -3,10 +3,10 @@ title: "Navigator : propriété doNotTrack"
 short-title: doNotTrack
 slug: Web/API/Navigator/doNotTrack
 l10n:
-  sourceCommit: 636b90011532e3fd2cf9333aaf1754fdc8de7938
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
 La propriété **`doNotTrack`** de l'interface {{DOMxRef("Navigator")}} retourne le paramètre «&nbsp;<i lang="en">Do Not Track</i>&nbsp;» (ou «&nbsp;Ne Pas Suivre&nbsp;» en français) de l'utilisateur·ice, qui indique si celui·celle-ci demande aux sites web et aux annonceurs de ne pas appliquer de suivi.
 

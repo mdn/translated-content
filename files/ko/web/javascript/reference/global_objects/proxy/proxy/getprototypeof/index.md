@@ -64,7 +64,7 @@ new Proxy(obj, {
 - {{jsxref("Reflect.getPrototypeOf()")}}
 - [`__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 
 ### 불변 조건
 

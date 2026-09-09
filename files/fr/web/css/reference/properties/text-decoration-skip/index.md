@@ -3,10 +3,8 @@ title: Propriété CSS `text-decoration-skip`
 short-title: text-decoration-skip
 slug: Web/CSS/Reference/Properties/text-decoration-skip
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-decoration-skip`** définit la façon dont les lignes décoratives doivent être appliquées aux éléments et aux caractères. Elle contrôle les lignes décoratives dessinées par l'élément courant ainsi que celles de ses ancêtres.
 
@@ -36,9 +34,9 @@ text-decoration-skip: unset;
 ### Valeurs
 
 - `none`
-  - : Rien n'est ignoré. Ainsi, la décoration de texte est dessinée pour tout le contenu textuel et à travers les boîtes en ligne atomiques.
+  - : Rien n'est ignoré. Ainsi, la décoration de texte est dessinée pour tout le contenu textuel et à travers les boîtes en incise atomiques.
 - `objects`
-  - : Toute la boîte de l'élément est ignorée s'il s'agit d'un élément en ligne atomique comme une image ou un élément en ligne de type bloc.
+  - : Toute la boîte de l'élément est ignorée s'il s'agit d'un élément en incise atomique comme une image ou un élément en incise de type bloc.
 - `spaces`
   - : Tous les espacements sont ignorés&nbsp;: tous les [caractères d'espacement Unicode <sup>(angl.)</sup>](https://www.unicode.org/reports/tr44/#White_Space) et tous les séparateurs de mots, ainsi que tout {{CSSxRef("letter-spacing")}} ou {{CSSxRef("word-spacing")}} adjacent.
 - `leading-spaces`

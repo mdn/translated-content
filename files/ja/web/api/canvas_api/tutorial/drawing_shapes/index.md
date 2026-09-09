@@ -2,12 +2,12 @@
 title: キャンバスでの図形の描画
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 l10n:
-  sourceCommit: 2acd54ab1a18f86cc4a193a0df017185a1de2e40
+  sourceCommit: 6f1b699dd8891431bbfe0bc3bb803f929fa6032e
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
-[キャンバスの環境](/ja/docs/Web/API/Canvas_API/Tutorial/Basic_usage)をセットアップしましたので、キャンバスに描画する方法の詳細に入ることができます。この記事の終わりまでに、長方形、三角形、直線、円弧、曲線を描く方法を学び、基本的な図形について理解できます。キャンバスにオブジェクトを描く際はパスを扱うことが不可欠ですので、その方法を見ていきます。
+[キャンバスの環境](/ja/docs/Web/API/Canvas_API/Tutorial/Basic_usage)をセットアップしましたので、キャンバスに描画する方法の詳細に入ることができます。この記事の終わりまでに、矩形、三角形、直線、円弧、曲線を描く方法を学び、基本的な図形について理解できます。キャンバスにオブジェクトを描く際はパスを扱うことが不可欠ですので、その方法を見ていきます。
 
 ## グリッド
 
@@ -17,43 +17,37 @@ l10n:
 
 普通、グリッド上の 1 単位はキャンバス上の 1 ピクセルに相当します。このグリッドの原点は、*左上*の角に (0,0) の座標が配置されています。すべての要素がこの原点から相対的に配置されます。よって青い正方形の左上の場所は左から x ピクセル、上から y ピクセルの、 (x,y) の位置になります。このチュートリアルの後半では、原点を別の位置に移動したり、グリッドを回転させたり、拡大縮小したりする方法を紹介しますが、今は既定のままにしておきましょう。
 
-## 長方形の描画
+## 矩形の描画
 
-{{Glossary("SVG")}} とは異なり、 {{HTMLElement("canvas")}} は 2 つの基本的な図形、長方形とパス（直線で結んだ点のリスト）のみに対応しています。他の全ての図形は 1 つ以上のパスの組み合わせで作らなくてはなりません。幸いなことに、パスを描く一連の関数があり、とても複雑な図形を作ることができます。
+{{Glossary("SVG")}} とは異なり、 {{HTMLElement("canvas")}} は 2 つの基本的な図形、矩形とパス（直線で結んだ点のリスト）のみに対応しています。他の全ての図形は 1 つ以上のパスの組み合わせで作らなくてはなりません。幸いなことに、パスを描く一連の関数があり、とても複雑な図形を作ることができます。
 
-最初に長方形を見ていきましょう。キャンバスに長方形を描く関数が 3 つあります。
+最初に矩形を見ていきましょう。キャンバスに矩形を描く関数が 3 つあります。
 
 - {{domxref("CanvasRenderingContext2D.fillRect", "fillRect(x, y, width, height)")}}
-  - : 塗りつぶされた長方形を描きます。
+  - : 塗りつぶされた矩形を描きます。
 - {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect(x, y, width, height)")}}
-  - : 長方形の輪郭を描きます。
+  - : 矩形の輪郭を描きます。
 - {{domxref("CanvasRenderingContext2D.clearRect", "clearRect(x, y, width, height)")}}
   - : 指定された領域を消去し、完全な透明にします。
 
-3 つの関数は同じ引数を取ります。 `x` と `y` はキャンバスにおける長方形の左上の角の位置（原点からの相対位置）を指定します。 `width` と `height` は長方形の大きさを指定します。
+3 つの関数は同じ引数を取ります。 `x` と `y` はキャンバスにおける矩形の左上の角の位置（原点からの相対位置）を指定します。 `width` と `height` は矩形の大きさを指定します。
 
 以下のものは前ページの `draw()` 関数ですが、ここではこれら 3 つの関数を使用しています。
 
-### 長方形の例
+### 矩形の例
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const canvas = document.getElementById("my-canvas");
+  const ctx = canvas.getContext("2d");
 
-    ctx.fillRect(25, 25, 100, 100);
-    ctx.clearRect(45, 45, 60, 60);
-    ctx.strokeRect(50, 50, 50, 50);
-  }
+  ctx.fillRect(25, 25, 100, 100);
+  ctx.clearRect(45, 45, 60, 60);
+  ctx.strokeRect(50, 50, 50, 50);
 }
 ```
 
@@ -65,11 +59,162 @@ draw();
 
 {{EmbedLiveSample("Rectangular_shape_example", "", "160")}}
 
-`fillRect()` 関数は 100 ピクセル各の大きな黒い正方形を描きます。 `clearRect()` 関数は中心から 60x60 ピクセルの正方形を取り除き、最後に `strokeRect()` が消去された正方形の中に 50x50 ピクセルの長方形の輪郭を描きます。
+`fillRect()` 関数は 100 ピクセル各の大きな黒い正方形を描きます。 `clearRect()` 関数は中心から 60x60 ピクセルの正方形を取り除き、最後に `strokeRect()` が消去された正方形の中に 50x50 ピクセルの矩形の輪郭を描きます（概念的には 50x50 ですが、実際には 52x52 です。これについては次の節で説明します）。
 
 後のページでは、 `clearRect()` に代わる 2 つのメソッドを紹介し、描画された図形の色と輪郭のスタイルを変更する方法について説明します。
 
-次の節で見るパス関数とは異なり、 3 つの長方形関数はすべてキャンバスに即座に描画されます。
+次の節で見るパス関数とは異なり、 3 つの矩形関数はすべてキャンバスに即座に描画されます。
+
+## 縁がぼやけて見える場合
+
+以上、矩形の例や、これから紹介するすべての例において、図形の縁が、SVG や CSS で描画された同等の図形に比べてぼやけて見えることにお気づきかもしれません。これは、キャンバス API が鮮明な縁を描画できないからではなく、キャンバスのグリッドが画面上の実ピクセルに割り当てられる仕組みによるものです。また、場合によっては、ブラウザーがキャンバスを変倍する処理の仕方も原因となっています。上記の例では分かりにくい場合は、CSS を使用してキャンバスを拡大してみましょう。
+
+```html live-sample___seeing_blurry_edges live-sample___seeing_blurry_edges_2 live-sample___seeing_blurry_edges_3
+<canvas id="canvas" width="15" height="15"></canvas>
+```
+
+```css live-sample___seeing_blurry_edges live-sample___seeing_blurry_edges_2 live-sample___seeing_blurry_edges_3
+#canvas {
+  width: 300px;
+  height: 300px;
+}
+```
+
+```js live-sample___seeing_blurry_edges live-sample___seeing_blurry_edges_2
+function draw() {
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+  ctx.strokeRect(2, 2, 10, 10);
+  ctx.fillRect(7, 7, 1, 1);
+}
+```
+
+```js hidden live-sample___seeing_blurry_edges live-sample___seeing_blurry_edges_2 live-sample___seeing_blurry_edges_3
+draw();
+```
+
+{{EmbedLiveSample("Seeing blurry edges", "", "350")}}
+
+この例では、キャンバスを極めて小さく (15x15) 作成していますが、その後 CSS を使用して 300x300 ピクセルに拡大しています。その結果、キャンバスのそれぞれのピクセルは、CSS ピクセルでいう 20x20 のブロックで表されます。(2,2) から (12,12) まで線画の矩形が描画され、(7,7) から (8,8) まで塗りつぶしの矩形が描画されます。これはかなりぼやけて表示されます。これは、デフォルトで、ブラウザーがラスター画像を変倍する際に、スムージングアルゴリズムを使用して余分なピクセルを補間するためです。これは写真や、角が丸いキャンバスグラフィックには適していますが、直線的な図形にはあまり適していません。これを修正するには、{{cssxref("image-rendering")}} を `pixelated` に設定します。
+
+```css live-sample___seeing_blurry_edges_2 live-sample___seeing_blurry_edges_3
+#canvas {
+  image-rendering: pixelated;
+}
+```
+
+{{EmbedLiveSample("Seeing blurry edges 2", "", "350")}}
+
+これで、ブラウザーがキャンバスの変倍を行う際、元の画像のピクセル感ができる限り維持されるようになりました。
+
+> [!NOTE]
+> `image-rendering: pixelated` は、縁の鮮明さを維持する手法として、問題がないわけではありません。CSS ピクセルとデバイスピクセルが一致しない場合（{{domxref("Window/devicePixelRatio", "devicePixelRatio")}} が整数でない場合）、特定のピクセルが他のピクセルよりも大きく描画され、外観に不均一さが生じる可能性があります。しかし、CSS ピクセルがデバイスピクセルに正確に対応できない場合、デバイスピクセルを正確に埋めることは不可能であるため、この問題を解決するのは容易ではありません。
+
+しかし、これで別の課題が明らかになります。これは、最初の矩形の例でも実際に確認できることです。すなわち、ストロークで描かれた矩形は、幅が 1 ピクセルではなく 2 ピクセルになっているだけでなく、デフォルトの黒ではなく灰色に見えます。これは、座標が図形の境界としてどのように解釈されるかによるものです。
+
+上の[グリッド](#the_grid)の図をもう一度見てみると、`2` や `12` といった座標は、個々のピクセルではなく、2 つのピクセルの境界を表していることがわかります。下記の画像では、グリッドはキャンバスの座標グリッドを表しています。グリッド線の間の正方形が、画面上の実際のピクセルです。下の最初のグリッド画像では、(2,1) から (5,5) までの矩形が塗りつぶされています。その間の領域全体（薄赤色）はピクセル境界線上に位置しているため、塗りつぶされた矩形は縁が鮮明に描画されます。
+
+![3 つの座標グリッドがあります。グリッド線は画面上での実際のピクセルです。それぞれのグリッドの左上角は (0,0) とラベル付けされています。1 番目のグリッドでは、(2,1) から (5,5) までの矩形が薄赤色で塗りつぶされています。2 つ目のグリッドでは、(3,1) から (3,5) までが、1 ピクセル幅のロイヤルブルーの線で結ばれています。ロイヤルブルーの線はグリッド線の中央を通っており、x 軸上では 2.5 から 3.5 まで伸び、グリッド線の両側のピクセルに半分ずつはみ出しています。また、x 軸上では 2 から 4 まで、線の両側に水色の背景が広がっています。2 つ目の座標グリッドにおける淡青色の不鮮明な線の拡張を避けるため、3 つ目の座標グリッド内のパスは、点 (3.5,1) から (3.5,5) までのロイヤルブルーの線となっている。1 ピクセル分の線幅により、単一のピクセル分の垂直線が完全に埋め尽くされることになります。](canvas-grid.png)
+
+(3,1) から (3,5) までの経路で線幅を `1.0` とすると、2 つ目の画像の様な状況になります。実際に塗りつぶされる領域（濃い青）は、経路の両側のピクセルの半分までしか広がりません。これを近似してレンダリングする必要があるため、それらのピクセルは部分的にしか塗りつぶされず、結果として領域全体（水色と濃い青）が、実際のストローク色の半分ほどの濃さの色で塗りつぶされてしまいます。これは、上記の矩形の例における `strokeRect()` の呼び出しで、線幅 `1.0` を指定した場合に現れる現象です。
+
+この問題を修正するには、パスの作成においてとても正確さを期す必要があります。線幅 `1.0` の線がパスの両側に 0.5 単位ずつ伸びることを踏まえると、ピクセルの中心を基準にパスを作成すれば、3 つ目画像のような状況になります。つまり、線幅 `1.0` の線が、単一のピクセルにおける縦線を完全にかつ正確に埋め尽くすことになるのです。
+
+> [!NOTE]
+> なお、先の垂直線の例では、Y座標は依然として整数のグリッド線位置を参照していたことに注意してください。もしそうではなかった場合、両端でピクセルが半分しか塗りつぶされない状態になっていたでしょう。
+
+つまり、これが先ほど、矩形の例における `strokeRect(50, 50, 50, 50)` の呼び出しが、概念的には 50x50 であるものの、実際には 52x52 になると説明した理由です。概要の実際の塗りつぶし領域は (49.5, 49.5) から始まり (100.5, 100.5) で終わります。また、部分的に塗りつぶされたピクセルがあるため、実際に塗りつぶされる領域は (49, 49) から (101, 101) までとなり、これは 52x52 になります。そして、縁の幅は 2 ピクセルです。正確に50x50で、幅1ピクセルの実線の枠線を取得するには、矩形の太さ（1 ピクセル）分だけ矩形を縮小し、その半分の太さ（0.5 ピクセル）分だけ移動させる必要があります。
+
+```js live-sample___seeing_blurry_edges_3
+function draw() {
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+  ctx.strokeRect(2.5, 2.5, 9, 9);
+  ctx.fillRect(7, 7, 1, 1);
+}
+```
+
+{{EmbedLiveSample("Seeing blurry edges 3", "", "350")}}
+
+幅が均等な行の場合、それぞれの半分は整数のピクセル数であるため、ピクセルの真ん中を通るのではなく、ピクセルの間（つまり (3,1) から (3,5)）を通るパスにする必要があります。
+
+拡大縮小可能な二次元グラフィックを作業する初期段階では少々手間がかかるかもしれませんが、ピクセルグリッドやパスの位置に注意を払うことで、拡大縮小やその他の変換が行われても、図形が確実に正しく表示されます。正しい位置に描かれた幅 1.0 の垂直線は、2 倍に拡大しても鮮明な 2 ピクセルの線となり、正しい位置に現れます。
+
+このピクセルが部分的に塗りつぶされる現象は、ピクセルグリッドに配置されていない図形にも見られます。例えば、回転した矩形を考えてみましょう（その描き方については次の節で説明します）。`image-rendering: pixelated` を適用した場合と適用しない場合の違いを確認するために、2 つのキャンバスが横に並んでいる状態であり、3 つ目のキャンバスにはグリッド線を含めて実寸大で描画しています。
+
+```html hidden live-sample___seeing_blurry_edges_4
+<canvas id="canvas1" width="12" height="12"></canvas>
+<canvas id="canvas2" width="12" height="12"></canvas>
+<canvas id="canvas3" width="240" height="240"></canvas>
+```
+
+```css hidden live-sample___seeing_blurry_edges_4
+html,
+body {
+  width: 800px;
+  overflow-x: scroll;
+}
+
+@media (width < 500px) {
+  html,
+  body {
+    width: 300px;
+  }
+}
+
+#canvas1,
+#canvas2 {
+  width: 240px;
+  height: 240px;
+}
+#canvas2 {
+  image-rendering: pixelated;
+}
+```
+
+```js live-sample___seeing_blurry_edges_4
+function draw(canvasId) {
+  const canvas = document.getElementById(canvasId);
+  const ctx = canvas.getContext("2d");
+  ctx.beginPath();
+  ctx.moveTo(3, 2);
+  ctx.lineTo(9, 4.5);
+  ctx.lineTo(6.5, 10.5);
+  ctx.lineTo(0.5, 8);
+  ctx.closePath();
+  ctx.fill();
+}
+
+function drawFullScale() {
+  const canvas = document.getElementById("canvas3");
+  const ctx = canvas.getContext("2d");
+  ctx.beginPath();
+  ctx.moveTo(60, 40);
+  ctx.lineTo(180, 90);
+  ctx.lineTo(130, 210);
+  ctx.lineTo(10, 160);
+  ctx.closePath();
+  ctx.fill();
+  ctx.strokeStyle = "lightgray";
+  for (let i = 0; i < 16; i++) {
+    ctx.moveTo(i * 20, 0);
+    ctx.lineTo(i * 20, 300);
+    ctx.moveTo(0, i * 20);
+    ctx.lineTo(300, i * 20);
+    ctx.stroke();
+  }
+}
+```
+
+```js hidden live-sample___seeing_blurry_edges_4
+draw("canvas1");
+draw("canvas2");
+drawFullScale();
+```
+
+{{EmbedLiveSample("Seeing blurry edges 4", "", "350")}}
+
+画像を拡大すると意図通りにぼやけて見える場合、画像を縮小すれば鮮明に見えるようになります。例えば、画面にキャンバスを 300x150 ピクセルで表示したい場合は、600x300 ピクセルで生成し、CSS を使って縮小することができます。これは、CSS ピクセルが複数の画面ピクセルで表される高 DPI 画面（Apple の Retina ディスプレイなど）で特に有用です。なぜなら、300x150 ピクセルのキャンバスをそのまま描画すると、ページ上の他の要素とはピクセル解像度が異なってしまうからです。
 
 ## パスを描く
 
@@ -109,25 +254,19 @@ draw();
 例えば、三角形を描くコードは次のようになります。
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="100" height="100"></canvas>
-  </body>
-</html>
+<canvas id="my-canvas" width="100" height="100"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const canvas = document.getElementById("my-canvas");
+  const ctx = canvas.getContext("2d");
 
-    ctx.beginPath();
-    ctx.moveTo(75, 50);
-    ctx.lineTo(100, 75);
-    ctx.lineTo(100, 25);
-    ctx.fill();
-  }
+  ctx.beginPath();
+  ctx.moveTo(75, 50);
+  ctx.lineTo(100, 75);
+  ctx.lineTo(100, 25);
+  ctx.fill();
 }
 ```
 
@@ -151,29 +290,23 @@ draw();
 これをあなた自身で試すには、以下のコードを使うことができます。さきほど見た `draw()` 関数に貼り付けるだけです。
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const canvas = document.getElementById("my-canvas");
+  const ctx = canvas.getContext("2d");
 
-    ctx.beginPath();
-    ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // 外の円
-    ctx.moveTo(110, 75);
-    ctx.arc(75, 75, 35, 0, Math.PI, false); // 口 (時計回り)
-    ctx.moveTo(65, 65);
-    ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // 左目
-    ctx.moveTo(95, 65);
-    ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // 右目
-    ctx.stroke();
-  }
+  ctx.beginPath();
+  ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+  ctx.moveTo(110, 75);
+  ctx.arc(75, 75, 35, 0, Math.PI, false); // Mouth (clockwise)
+  ctx.moveTo(65, 65);
+  ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
+  ctx.moveTo(95, 65);
+  ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
+  ctx.stroke();
 }
 ```
 
@@ -202,34 +335,28 @@ draw();
 次の例では 2 つの三角形が描かれています。 1 つは塗りつぶされ、もう 1 つは輪郭線が描かれます。
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const canvas = document.getElementById("my-canvas");
+  const ctx = canvas.getContext("2d");
 
-    // 塗りつぶした三角形
-    ctx.beginPath();
-    ctx.moveTo(25, 25);
-    ctx.lineTo(105, 25);
-    ctx.lineTo(25, 105);
-    ctx.fill();
+  // 塗りつぶした三角形
+  ctx.beginPath();
+  ctx.moveTo(25, 25);
+  ctx.lineTo(105, 25);
+  ctx.lineTo(25, 105);
+  ctx.fill();
 
-    // 輪郭の三角形
-    ctx.beginPath();
-    ctx.moveTo(125, 125);
-    ctx.lineTo(125, 45);
-    ctx.lineTo(45, 125);
-    ctx.closePath();
-    ctx.stroke();
-  }
+  // 輪郭の三角形
+  ctx.beginPath();
+  ctx.moveTo(125, 125);
+  ctx.lineTo(125, 45);
+  ctx.lineTo(45, 125);
+  ctx.closePath();
+  ctx.stroke();
 }
 ```
 
@@ -269,36 +396,30 @@ draw();
 > この例では、ほかの例より若干大きなサイズである 150 x 200 ピクセルのキャンバスが必要です。
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="200"></canvas>
-  </body>
-</html>
+<canvas id="my-canvas" width="150" height="200"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const canvas = document.getElementById("my-canvas");
+  const ctx = canvas.getContext("2d");
 
-    for (let i = 0; i < 4; i++) {
-      for (let j = 0; j < 3; j++) {
-        ctx.beginPath();
-        const x = 25 + j * 50; // x 座標
-        const y = 25 + i * 50; // y 座標
-        const radius = 20; // 円弧の半径
-        const startAngle = 0; // 円孤の始点
-        const endAngle = Math.PI + (Math.PI * j) / 2; // 円孤の終点
-        const counterclockwise = i % 2 !== 0; // 時計回りまたは反時計回り
+  for (let i = 0; i < 4; i++) {
+    for (let j = 0; j < 3; j++) {
+      ctx.beginPath();
+      const x = 25 + j * 50; // x 座標
+      const y = 25 + i * 50; // y 座標
+      const radius = 20; // 円弧の半径
+      const startAngle = 0; // 円孤の始点
+      const endAngle = Math.PI + (Math.PI * j) / 2; // 円孤の終点
+      const counterclockwise = i % 2 !== 0; // 時計回りまたは反時計回り
 
-        ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
+      ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
 
-        if (i > 1) {
-          ctx.fill();
-        } else {
-          ctx.stroke();
-        }
+      if (i > 1) {
+        ctx.fill();
+      } else {
+        ctx.stroke();
       }
     }
   }
@@ -323,9 +444,9 @@ draw();
 これらの違いは右の画像を使うことで説明することができます。二次ベジェ曲線は始点と終点（青い点）と 1 つの**制御点**（赤い点で示したもの）を持つのに対して、三次ベジェ曲線は 2 つの制御点を持ちます。
 ![二次曲線とベジェ曲線の比較。](canvas_curves.png)
 
-それらのメソッドの両方の `x` と `y` 引数は終点の座標です。`cp1x` と `cp1y` は最初の制御点、`cp2x` と `cp2y` は 2 番目の制御点の座標です。
+それらのメソッドの両方の `x` と `y` 引数は終点の座標です。`cp1x` と `cp1y` は最初の制御点の座標、`cp2x` と `cp2y` は 2 番目の制御点の座標です。
 
-二次・三次ベジェ曲線は、 Adobe Illustrator のようなベクトル描画ソフトとは異なり、何をしているのかが直接視覚的にわからないため、かなり難易度が高いです。そのため、複雑な形状を描くのはかなり難しいです。次の例では、単純な有機的な形状をいくつか描きますが、時間と忍耐力があれば、もっと複雑な形状を作成することが可能です。
+二次・三次ベジェ曲線は、Adobe Illustrator のようなベクター描画ソフトとは異なり、何をしているのかが直接視覚的にわからないため、かなり難易度が高いです。そのため、複雑な形状を描くのはかなり難しいです。次の例では、単純な有機的な形状をいくつか描きますが、時間と忍耐力があれば、もっと複雑な形状を作成することが可能です。
 
 これらの例で非常に難しいものは何もありません。 どちらの場合も、最終的に描かれた一連の曲線が完全な図形となるのを見ることになります。
 
@@ -334,30 +455,24 @@ draw();
 この例では、吹き出しをレンダリングするために複数の二次ベジェ曲線を使用しています。
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const canvas = document.getElementById("my-canvas");
+  const ctx = canvas.getContext("2d");
 
-    // 二次曲線の例
-    ctx.beginPath();
-    ctx.moveTo(75, 25);
-    ctx.quadraticCurveTo(25, 25, 25, 62.5);
-    ctx.quadraticCurveTo(25, 100, 50, 100);
-    ctx.quadraticCurveTo(50, 120, 30, 125);
-    ctx.quadraticCurveTo(60, 120, 65, 100);
-    ctx.quadraticCurveTo(125, 100, 125, 62.5);
-    ctx.quadraticCurveTo(125, 25, 75, 25);
-    ctx.stroke();
-  }
+  // 二次曲線の例
+  ctx.beginPath();
+  ctx.moveTo(75, 25);
+  ctx.quadraticCurveTo(25, 25, 25, 62.5);
+  ctx.quadraticCurveTo(25, 100, 50, 100);
+  ctx.quadraticCurveTo(50, 120, 30, 125);
+  ctx.quadraticCurveTo(60, 120, 65, 100);
+  ctx.quadraticCurveTo(125, 100, 125, 62.5);
+  ctx.quadraticCurveTo(125, 25, 75, 25);
+  ctx.stroke();
 }
 ```
 
@@ -365,37 +480,31 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Quadratic_Bezier_curves", "", "160")}}
+{{EmbedLiveSample("二次ベジェ曲線", "", "160")}}
 
 #### 三次ベジェ曲線
 
 この例では、三次ベジェ曲線を使ってハートを描画します。
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const canvas = document.getElementById("my-canvas");
+  const ctx = canvas.getContext("2d");
 
-    // 三次ベジェ曲線の例
-    ctx.beginPath();
-    ctx.moveTo(75, 40);
-    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
-    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
-    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
-    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
-    ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
-    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
-    ctx.fill();
-  }
+  // 三次ベジェ曲線の例
+  ctx.beginPath();
+  ctx.moveTo(75, 40);
+  ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
+  ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+  ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
+  ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+  ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+  ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
+  ctx.fill();
 }
 ```
 
@@ -403,14 +512,14 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Cubic_Bezier_curves", "", "160")}}
+{{EmbedLiveSample("三次ベジェ曲線", "", "160")}}
 
-### 長方形
+### 矩形
 
-[長方形の描画](#長方形の描画)で見た、キャンバスに直接長方形を描く 3つ のメソッドに加え、現在開いているパスに長方形のパスを追加する `rect()` メソッドも用意されています。
+[矩形の描画](#矩形の描画)で見た、キャンバスに直接矩形を描く 3つ のメソッドに加え、現在開いているパスに矩形のパスを追加する `rect()` メソッドも用意されています。
 
 - {{domxref("CanvasRenderingContext2D.rect", "rect(x, y, width, height)")}}
-  - : (`x`, `y`) で指定した位置を左上の角にして、 `width` および `height` で指定した幅および高さの長方形を描きます。
+  - : (`x`, `y`) で指定した位置を左上の角にして、 `width` および `height` で指定した幅および高さの矩形を描きます。
 
 このメソッドが実行される前に、引数に (x,y) を持った `moveTo()` メソッドが自動的に呼ばれます。すなわち、始点が標準の位置に置かれます。
 
@@ -419,80 +528,74 @@ draw();
 このページのすべての例で図形につき一種類のパス関数のみを使ってきました。しかし、図形を作るのに使用できるパスの種類の制限は一切ありません。そこで、この最後の例では非常に有名なゲームのキャラクターを作るために、全てのパス関数を組み合わせてみましょう。
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="200" height="185"></canvas>
-  </body>
-</html>
+<canvas id="my-canvas" width="200" height="185"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const canvas = document.getElementById("my-canvas");
+  const ctx = canvas.getContext("2d");
 
-    roundedRect(ctx, 12, 12, 184, 168, 15);
-    roundedRect(ctx, 19, 19, 170, 154, 9);
-    roundedRect(ctx, 53, 53, 49, 33, 10);
-    roundedRect(ctx, 53, 119, 49, 16, 6);
-    roundedRect(ctx, 135, 53, 49, 33, 10);
-    roundedRect(ctx, 135, 119, 25, 49, 10);
+  roundedRect(ctx, 12, 12, 184, 168, 15);
+  roundedRect(ctx, 19, 19, 170, 154, 9);
+  roundedRect(ctx, 53, 53, 49, 33, 10);
+  roundedRect(ctx, 53, 119, 49, 16, 6);
+  roundedRect(ctx, 135, 53, 49, 33, 10);
+  roundedRect(ctx, 135, 119, 25, 49, 10);
 
-    ctx.beginPath();
-    ctx.arc(37, 37, 13, Math.PI / 7, -Math.PI / 7, false);
-    ctx.lineTo(31, 37);
-    ctx.fill();
+  ctx.beginPath();
+  ctx.arc(37, 37, 13, Math.PI / 7, -Math.PI / 7, false);
+  ctx.lineTo(31, 37);
+  ctx.fill();
 
-    for (let i = 0; i < 8; i++) {
-      ctx.fillRect(51 + i * 16, 35, 4, 4);
-    }
-
-    for (let i = 0; i < 6; i++) {
-      ctx.fillRect(115, 51 + i * 16, 4, 4);
-    }
-
-    for (let i = 0; i < 8; i++) {
-      ctx.fillRect(51 + i * 16, 99, 4, 4);
-    }
-
-    ctx.beginPath();
-    ctx.moveTo(83, 116);
-    ctx.lineTo(83, 102);
-    ctx.bezierCurveTo(83, 94, 89, 88, 97, 88);
-    ctx.bezierCurveTo(105, 88, 111, 94, 111, 102);
-    ctx.lineTo(111, 116);
-    ctx.lineTo(106.333, 111.333);
-    ctx.lineTo(101.666, 116);
-    ctx.lineTo(97, 111.333);
-    ctx.lineTo(92.333, 116);
-    ctx.lineTo(87.666, 111.333);
-    ctx.lineTo(83, 116);
-    ctx.fill();
-
-    ctx.fillStyle = "white";
-    ctx.beginPath();
-    ctx.moveTo(91, 96);
-    ctx.bezierCurveTo(88, 96, 87, 99, 87, 101);
-    ctx.bezierCurveTo(87, 103, 88, 106, 91, 106);
-    ctx.bezierCurveTo(94, 106, 95, 103, 95, 101);
-    ctx.bezierCurveTo(95, 99, 94, 96, 91, 96);
-    ctx.moveTo(103, 96);
-    ctx.bezierCurveTo(100, 96, 99, 99, 99, 101);
-    ctx.bezierCurveTo(99, 103, 100, 106, 103, 106);
-    ctx.bezierCurveTo(106, 106, 107, 103, 107, 101);
-    ctx.bezierCurveTo(107, 99, 106, 96, 103, 96);
-    ctx.fill();
-
-    ctx.fillStyle = "black";
-    ctx.beginPath();
-    ctx.arc(101, 102, 2, 0, Math.PI * 2, true);
-    ctx.fill();
-
-    ctx.beginPath();
-    ctx.arc(89, 102, 2, 0, Math.PI * 2, true);
-    ctx.fill();
+  for (let i = 0; i < 8; i++) {
+    ctx.fillRect(51 + i * 16, 35, 4, 4);
   }
+
+  for (let i = 0; i < 6; i++) {
+    ctx.fillRect(115, 51 + i * 16, 4, 4);
+  }
+
+  for (let i = 0; i < 8; i++) {
+    ctx.fillRect(51 + i * 16, 99, 4, 4);
+  }
+
+  ctx.beginPath();
+  ctx.moveTo(83, 116);
+  ctx.lineTo(83, 102);
+  ctx.bezierCurveTo(83, 94, 89, 88, 97, 88);
+  ctx.bezierCurveTo(105, 88, 111, 94, 111, 102);
+  ctx.lineTo(111, 116);
+  ctx.lineTo(106.333, 111.333);
+  ctx.lineTo(101.666, 116);
+  ctx.lineTo(97, 111.333);
+  ctx.lineTo(92.333, 116);
+  ctx.lineTo(87.666, 111.333);
+  ctx.lineTo(83, 116);
+  ctx.fill();
+
+  ctx.fillStyle = "white";
+  ctx.beginPath();
+  ctx.moveTo(91, 96);
+  ctx.bezierCurveTo(88, 96, 87, 99, 87, 101);
+  ctx.bezierCurveTo(87, 103, 88, 106, 91, 106);
+  ctx.bezierCurveTo(94, 106, 95, 103, 95, 101);
+  ctx.bezierCurveTo(95, 99, 94, 96, 91, 96);
+  ctx.moveTo(103, 96);
+  ctx.bezierCurveTo(100, 96, 99, 99, 99, 101);
+  ctx.bezierCurveTo(99, 103, 100, 106, 103, 106);
+  ctx.bezierCurveTo(106, 106, 107, 103, 107, 101);
+  ctx.bezierCurveTo(107, 99, 106, 96, 103, 96);
+  ctx.fill();
+
+  ctx.fillStyle = "black";
+  ctx.beginPath();
+  ctx.arc(101, 102, 2, 0, Math.PI * 2, true);
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.arc(89, 102, 2, 0, Math.PI * 2, true);
+  ctx.fill();
 }
 
 // 角丸の四角形を描画するためのユーティリティ関数
@@ -525,33 +628,27 @@ draw();
 穴のあいた図形を描画するには、外側の図形を描画するときと同じように、異なる時計回りに穴を描画する必要があります。外側の図形を時計回りに、内側の図形を反時計回りに描画するか、外側の図形を反時計回りに、内側の図形を時計回りに描画します。
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const canvas = document.getElementById("my-canvas");
+  const ctx = canvas.getContext("2d");
 
-    ctx.beginPath();
+  ctx.beginPath();
 
-    // 外側の図形を時計回りに ⟳
-    ctx.moveTo(0, 0);
-    ctx.lineTo(150, 0);
-    ctx.lineTo(75, 129.9);
+  // 外側の図形を時計回りに ⟳
+  ctx.moveTo(0, 0);
+  ctx.lineTo(150, 0);
+  ctx.lineTo(75, 129.9);
 
-    // 内側の図形を反時計回りに ↺
-    ctx.moveTo(75, 20);
-    ctx.lineTo(50, 60);
-    ctx.lineTo(100, 60);
+  // 内側の図形を反時計回りに ↺
+  ctx.moveTo(75, 20);
+  ctx.lineTo(50, 60);
+  ctx.lineTo(100, 60);
 
-    ctx.fill();
-  }
+  ctx.fill();
 }
 ```
 
@@ -585,31 +682,25 @@ new Path2D(d); // SVG パスデータからパスを作成する
 
 ### Path2D の例
 
-この例では、長方形と円を作成します。どちらも `Path2D` オブジェクトとして保存しており、後で使用することができます。新たな `Path2D` API に合わせて、いくつかのメソッドが現在のパスに代わり任意で `Path2D` を受け入れられるように更新されました。ここでは、キャンバスに両方のオブジェクトを描くため、 1 つの path 引数を `stroke` および `fill` で使用しています。
+この例では、矩形と円を作成します。どちらも `Path2D` オブジェクトとして保存しており、後で使用することができます。新たな `Path2D` API に合わせて、いくつかのメソッドが現在のパスに代わり任意で `Path2D` を受け入れられるように更新されました。ここでは、キャンバスに両方のオブジェクトを描くため、 1 つの path 引数を `stroke` および `fill` で使用しています。
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="130" height="100"></canvas>
-  </body>
-</html>
+<canvas id="my-canvas" width="130" height="100"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const canvas = document.getElementById("my-canvas");
+  const ctx = canvas.getContext("2d");
 
-    const rectangle = new Path2D();
-    rectangle.rect(10, 10, 50, 50);
+  const rectangle = new Path2D();
+  rectangle.rect(10, 10, 50, 50);
 
-    const circle = new Path2D();
-    circle.arc(100, 35, 25, 0, 2 * Math.PI);
+  const circle = new Path2D();
+  circle.arc(100, 35, 25, 0, 2 * Math.PI);
 
-    ctx.stroke(rectangle);
-    ctx.fill(circle);
-  }
+  ctx.stroke(rectangle);
+  ctx.fill(circle);
 }
 ```
 

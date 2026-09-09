@@ -3,10 +3,10 @@ title: Pseudo-classe CSS `:nth-last-child()`
 short-title: :nth-last-child()
 slug: Web/CSS/Reference/Selectors/:nth-last-child
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: 0c62b082755017d0773ecaaee7e74efd5e066d0b
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-last-child`** permet de cibler les éléments qui possèdent `an+b-1` nœud frères qui les suivent pour un même élément parent avec un indice n entier qui est incrémenté à partir de 0. Avec CSS3, il était nécessaire que l'élément ciblé ait un élément parent, cette restriction a été levée en CSS4.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-last-child`** permet de cibler les éléments qui possèdent `an+b-1` nœud voisins qui les suivent pour un même élément parent avec un indice n entier qui est incrémenté à partir de 0. Avec CSS3, il était nécessaire que l'élément ciblé ait un élément parent, cette restriction a été levée en CSS4.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :nth-last-child", "tabbed-shorter")}}
 
@@ -61,7 +61,12 @@ La pseudo-classe `nth-last-child` prend un seul argument qui représente le moti
 ### Notation fonctionnelle
 
 - `<An+B>`
-  - : Représente les éléments dont la position, à partir de la fin, est la `An+B`-ième avec `n` qui parcourt les entiers à partir de 0. Les valeurs fournies pour `A` et `B` doivent être des entiers {{CSSxRef("&lt;integer&gt;")}}.
+  - : Représente les éléments dont la position numérique dans une série d'éléments voisins correspond au motif `An+B`, pour toute valeur entière positive ou nulle de `n`, où&nbsp;:
+    - `A` est un pas entier,
+    - `B` est un décalage entier,
+    - `n` correspond à tous les entiers positifs, à partir de 0.
+
+    On peut l'interpréter comme le `An+B`-ième élément d'une liste. L'indice du premier élément, compté à partir de la fin, est `1`. Les valeurs de `A` et `B` doivent toutes deux être des {{CSSxRef("&lt;integer&gt;")}}.
 
 #### La syntaxe `of <selector>`
 
@@ -73,7 +78,7 @@ En passant un sélecteur en argument, nous pouvons sélectionner le **n-ième de
 ```
 
 > [!NOTE]
-> Cela est différent de déplacer le sélecteur en dehors de la fonction, comme&nbsp;:
+> C'est différent de déplacer le sélecteur en dehors de la fonction, comme&nbsp;:
 
 ```css
 li.important:nth-last-child(-n + 3) {
@@ -87,9 +92,9 @@ Ce sélecteur applique un style aux éléments de liste s'ils font également pa
 ### Exemple de sélecteurs
 
 - `tr:nth-last-child(odd)` ou `tr:nth-last-child(2n+1)`
-  - : Représente les lignes impaires d'un tableau HTML : 1, 3, 5, etc., en partant de la fin.
+  - : Représente les lignes impaires d'un tableau HTML&nbsp;: 1, 3, 5, etc., en partant de la fin.
 - `tr:nth-last-child(even)` ou `tr:nth-last-child(2n)`
-  - : Représente les lignes paires d'un tableau HTML : 2, 4, 6, etc., en partant de la fin.
+  - : Représente les lignes paires d'un tableau HTML&nbsp;: 2, 4, 6, etc., en partant de la fin.
 - `:nth-last-child(7)`
   - : Représente le septième élément, en partant de la fin.
 - `:nth-last-child(5n)`
@@ -97,11 +102,11 @@ Ce sélecteur applique un style aux éléments de liste s'ils font également pa
 - `:nth-last-child(3n+4)`
   - : Représente les éléments 4, 7, 10, 13, etc., en partant de la fin.
 - `:nth-last-child(-n+3)`
-  - : Représente les trois derniers éléments parmi un groupe de frères.
+  - : Représente les trois derniers éléments parmi un groupe de voisins.
 - `p:nth-last-child(n)` ou `p:nth-last-child(n+1)`
-  - : Représente chaque élément `<p>` parmi un groupe de frères. Cela est identique à un simple sélecteur `p`. (Puisque `n` commence à zéro, tandis que le dernier élément commence à un, `n` et `n+1` sélectionneront tous deux les mêmes éléments.)
+  - : Représente chaque élément `<p>` parmi un groupe de voisins. C'est identique à un simple sélecteur `p`. (Puisque `n` commence à zéro, tandis que le dernier élément commence à un, `n` et `n+1` sélectionnent tous deux les mêmes éléments.)
 - `p:nth-last-child(1)` ou `p:nth-last-child(0n+1)`
-  - : Représente chaque `<p>` qui est le premier élément parmi un groupe de frères, en partant de la fin. Cela est identique au sélecteur {{CSSxRef(":last-child")}}.
+  - : Représente chaque `<p>` qui est le premier élément parmi un groupe de voisins, en partant de la fin. C'est identique au sélecteur {{CSSxRef(":last-child")}}.
 
 ### Exemple de tableau
 
@@ -158,7 +163,7 @@ tr:nth-last-child(2) {
 
 ### Requêtes de quantité
 
-La mise en forme _quantity query_ des éléments dépend du nombre d'entre eux. Dans cet exemple, les éléments de liste deviennent rouges lorsqu'il y en a au moins trois dans une liste donnée. Cela est accompli en combinant les capacités de la pseudo-classe `nth-last-child` et du [combinator de frère suivant](/fr/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator).
+La mise en forme _quantity query_ des éléments dépend du nombre d'entre eux. Dans cet exemple, les éléments de liste deviennent rouges lorsqu'il y en a au moins trois dans une liste donnée. C'est accompli en combinant les capacités de la pseudo-classe `nth-last-child` et du [combinator de voisin suivant](/fr/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator).
 
 #### HTML
 
@@ -261,7 +266,7 @@ li:nth-last-child(odd of .noted) {
 
 #### Résultat
 
-Les éléments avec `class="noted"` ont une bordure inférieure épaisse et les éléments 1, 7, 14 et 20 ont un fond solide car ce sont les éléments de liste _impairs_ avec `class="noted"`.
+Les éléments avec `class="noted"` ont une bordure inférieure épaisse et les éléments 1, 7, 14 et 20 ont un fond solide, car ce sont les éléments de liste _impairs_ avec `class="noted"`.
 
 {{EmbedLiveSample('exemple_de_syntaxe_of_selector', 550, 120)}}
 

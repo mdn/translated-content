@@ -4,8 +4,6 @@ slug: Web/API/Web_Animations_API/Tips
 original_slug: Web/CSS/CSS_animations/Tips
 ---
 
-{{CSSRef}}
-
 Les animations CSS permettent de réaliser réaliser des effets incroyables en mainpulant les éléments de vos documents et applications.. Cependant, il est parfois compliqué d'obtenir l'effet désiré. Dans cet article, on explorera différents conseils visant à simplifier la réalisation d'animations.
 
 ## Relancer une animation

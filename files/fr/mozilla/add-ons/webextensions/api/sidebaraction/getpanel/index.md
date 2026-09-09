@@ -3,8 +3,6 @@ title: sidebarAction.getPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
 ---
 
-{{AddonSidebar}}
-
 Obtient une URL vers le document HTML qui définit le contenu de la barre latérale.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

@@ -3,7 +3,7 @@ title: Caractéristique média CSS `scan`
 short-title: scan
 slug: Web/CSS/Reference/At-rules/@media/scan
 l10n:
-  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
+  sourceCommit: 5a41c90092765ffe35958f439c2ab626714db340
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`scan`** permet d'appliquer des styles CSS en fonction du procédé de balayage du périphérique de sortie.
@@ -23,7 +23,7 @@ La plupart des écrans modernes (et tous les écrans d'ordinateur) utilisent le 
 
 L'entrelacement était utilisé par les moniteurs CRT et certains téléviseurs plasma pour donner l'impression d'un nombre d'images par seconde (<abbr title="images par seconde">IPS</abbr>) plus élevé tout en réduisant la bande passante. Avec l'entrelacement, les images vidéo alternent entre l'affichage des lignes paires et impaires de l'écran, ne téléchargeant et n'affichant que la moitié de l'image à chaque fois. Cela exploite la capacité du cerveau humain à lisser les images, simulant ainsi une diffusion à <abbr title="images par seconde">IPS</abbr> plus élevé pour un coût en bande passante réduit de moitié.
 
-Lorsque vous ciblez des écrans entrelacés, évitez les mouvements très rapides à l'écran et assurez-vous que les détails animés font plus d'1px de large pour réduire le scintillement.
+Lorsque vous ciblez des écrans entrelacés, évitez les mouvements très rapides à l'écran et assurez-vous que les détails animés font plus de `1px` de large pour réduire le scintillement.
 
 ## Exemples
 
@@ -56,7 +56,7 @@ p {
     border-style: dashed;
   }
 }
-@media not screen and (scan: interlaced) {
+@media not screen and (scan: interlace) {
   p {
     color: purple;
   }
@@ -65,7 +65,7 @@ p {
 
 ### Résultat
 
-{{EmbedLiveSample("exemples")}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 
@@ -77,5 +77,5 @@ p {
 
 ## Voir aussi
 
-- La règle at [@media](/fr/docs/Web/CSS/Reference/At-rules/@media), qui permet d'utiliser l'expression `scan`.
+- La règle {{CSSxRef("@media")}}, qui permet d'utiliser l'expression `scan`.
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using) pour comprendre quand et comment utiliser une requête média.

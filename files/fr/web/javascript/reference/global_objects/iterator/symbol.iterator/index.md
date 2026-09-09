@@ -46,6 +46,6 @@ for (const valeur of tableauIterateur) {
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Iterator")}}
+- L'objet natif {{JSxRef("Iterator")}}
 - La propriété statique {{JSxRef("Symbol.iterator")}}
 - [Protocole d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)

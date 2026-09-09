@@ -3,8 +3,6 @@ title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
 ---
 
-{{AddonSidebar}}
-
 Obtient tous les onglets qui ont les propriétés spécifiées, ou tous les onglets si aucune propriété n'est spécifiée.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

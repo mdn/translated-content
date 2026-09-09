@@ -4,8 +4,6 @@ slug: Web/XML/EXSLT/Reference/str/tokenize
 original_slug: Web/EXSLT/str/tokenize
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
-
 `str:tokenize()` divise une chaîne en utilisant un ensemble de caractère comme délimiteur qui détermine l'endroit où doivent être fait les séparations, en retournant un ensemble de nœuds contenant les chaînes résultantes.
 
 ### Syntaxe

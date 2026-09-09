@@ -2,7 +2,7 @@
 title: API メソッドサブページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 > [!NOTE]
@@ -37,7 +37,6 @@ l10n:
 >     静的メソッドの場合、スラッグには `_static` の接尾辞を付けて、 `Web/API/インターフェイス名/メソッド名_static` のようにしてください。これによって、インスタンスメソッドと静的メソッドが同じ名前の場合に対応することができます。
 >
 >     なお、スラッグでのメソッド名は括弧を省略してください（末尾は `NameOfTheMethod` であり `NameOfTheMethod()` ではありません）。
->
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >
@@ -72,7 +71,7 @@ l10n:
 >
 > _公開前に、忘れずにこの説明文全体を削除してください。_
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 ページのコンテンツは導入段落で始めてください。メソッドの名前で始め、それがどのインターフェイスに属しているかを示し、それが何をするのかを述べてください。
 これはできれば 1、2 の短い文にすべきです。対応する API リファレンスページのメソッドの概要から、この大部分をコピーすることができます。

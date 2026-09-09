@@ -35,7 +35,7 @@ Un élément `<meta name="referrer">` possède les attributs supplémentaires su
     - `origin-when-cross-origin`
       - : Envoie l'URL complète (sans les paramètres) pour les requêtes same-origin, mais n'envoie que l'origine dans les autres cas.
     - `same-origin`
-      - : Envoie l'URL complète (sans les paramètres) pour les requêtes same-origin. Les requêtes cross-origin n'auront pas d'en-tête référent.
+      - : Envoie l'URL complète (sans les paramètres) pour les requêtes same-origin. Les requêtes cross-origin n'ont pas d'en-tête référent.
     - `strict-origin`
       - : Envoie l'origine lorsque la destination est au moins aussi sécurisée que la page actuelle (HTTP(S)→HTTPS), mais n'envoie aucun référent si elle est moins sécurisée (HTTPS→HTTP).
     - `strict-origin-when-cross-origin`

@@ -60,6 +60,6 @@ dataviewLengthTracking.byteLength; // 0 (la plage visualisée n'est plus valide)
 ## Voir aussi
 
 - Le guide [des tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- L'objet {{JSxRef("DataView")}}
-- L'objet {{JSxRef("ArrayBuffer")}}
-- L'objet {{JSxRef("SharedArrayBuffer")}}
+- L'objet natif {{JSxRef("DataView")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("SharedArrayBuffer")}}

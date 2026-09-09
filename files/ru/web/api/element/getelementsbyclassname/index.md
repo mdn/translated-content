@@ -39,7 +39,7 @@ element.getElementsByClassName("red test");
 document.getElementById("main").getElementsByClassName("test");
 ```
 
-Мы так же можем использовать все методы из {{jsxref("Array.prototype")}} на любом {{ domxref("HTMLCollection") }} путём передачи `HTMLCollection` в метод как значение _this_. Так мы найдём все {{HTMLElement("div")}} элементы, которые имеют класс test:
+Мы так же можем использовать все методы из {{jsxref("Array")}} на любом {{ domxref("HTMLCollection") }} путём передачи `HTMLCollection` в метод как значение _this_. Так мы найдём все {{HTMLElement("div")}} элементы, которые имеют класс test:
 
 ```js
 var testElements = document.getElementsByClassName("test");

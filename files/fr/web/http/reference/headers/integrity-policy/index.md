@@ -63,7 +63,7 @@ Cet exemple montre un document qui bloque et signale à un point de terminaison 
 Notez que le `integrity-endpoint` utilisé dans `Integrity-Policy` est défini dans l'en-tête {{HTTPHeader("Reporting-Endpoints")}}.
 
 ```http
-Reporting-Endpoints: integrity-endpoint="https://exemple.com/integrity", backup-integrity-endpoint="https://report-provider.exemple/integrity"
+Reporting-Endpoints: integrity-endpoint="https://example.com/integrity", backup-integrity-endpoint="https://report-provider.exemple/integrity"
 Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint backup-integrity-endpoint)
 ```
 
@@ -72,10 +72,10 @@ La [charge utile du rapport](/fr/docs/Web/API/Reporting_API#points_de_terminaiso
 ```json
 {
   "type": "integrity-violation",
-  "url": "https://exemple.com",
+  "url": "https://example.com",
   "body": {
-    "documentURL": "https://exemple.com",
-    "blockedURL": "https://exemple.com/main.js",
+    "documentURL": "https://example.com",
+    "blockedURL": "https://example.com/main.js",
     "destination": "script",
     "reportOnly": false
   }

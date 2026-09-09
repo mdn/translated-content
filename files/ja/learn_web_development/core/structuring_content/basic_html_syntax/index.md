@@ -72,7 +72,7 @@ HTML は、**HTML 文書**、あるいは単に**文書**と呼ばれるテキ�
 - **終了タグ (Closing tag):** 開始タグと同じですが、要素名の前にスラッシュを記載します。これは、要素の終わりを示すものです。終了タグを記載し忘れるのは、初心者にありがちなミスで、おかしな結果を生むことがあります。
 
 > [!NOTE]
-> 学習パートナーである Scrimba の [HTML タグ](https://scrimba.com/learn-html-and-css-c0p/~02?via=MDN) <sup> [_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> すくリムで HTML タグのインタラクティブな解説をご覧ください。
+> 学習パートナーである Scrimba の [HTML タグ](https://scrimba.com/learn-html-and-css-c0p/~02?via=MDN) <sup> [_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> すくリムで HTML タグのインタラクティブな解説をご覧ください。
 
 ### 最初の HTML 要素を作ってみる
 

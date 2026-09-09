@@ -11,7 +11,7 @@ Contrairement aux macros listées dans [Macros couramment utilisées](/fr/docs/M
 
 Cette macro n'est utilisée que dans des contextes particuliers, comme une référence d'API spécifique.
 
-- [`RFC`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/rfc.rs) crée un lien vers le RFC spécifié, à partir de son numéro. La syntaxe est `\{{RFC(numéro)}}`. Par exemple, `\{{RFC(2616)}}` donne {{ RFC(2616) }}.
+- [`RFC`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/rfc.rs) crée un lien vers le RFC définit, à partir de son numéro. La syntaxe est `\{{RFC(numéro)}}`. Par exemple, `\{{RFC(2616)}}` donne {{ RFC(2616) }}.
 
 ### Composants de page d'accueil
 
@@ -27,4 +27,4 @@ Il existe plusieurs macros permettant de générer automatiquement le contenu de
 
 Une macro est spécialement conçue pour créer des [listes de liens](/fr/docs/MDN/Writing_guidelines/Page_structures/Sidebars) dans le contenu&nbsp;:
 
-- [`QuickLinksWithSubpages`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/quick_links_with_subpages.rs) crée une liste de liens composée des pages situées sous la page courante (ou une page spécifiée). Jusqu'à deux niveaux de profondeur sont générés.
+- [`QuickLinksWithSubpages`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/quick_links_with_subpages.rs) crée une liste de liens composée des pages situées sous la page courante (ou une page définie). Jusqu'à deux niveaux de profondeur sont générés.

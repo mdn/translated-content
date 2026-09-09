@@ -17,7 +17,11 @@ Esta pseudo-clase es útil para resaltar errores de campo para el usuario.
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:invalid {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

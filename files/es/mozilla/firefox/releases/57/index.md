@@ -54,9 +54,9 @@ _No hay ningún cambio._
 
 ### JavaScript
 
-- El bucle no estándar {{jsxref("Statements/for_each...in", "for each...in")}} (E4X) fue eliminado. En su lugar, utilícese {{jsxref("Statements/for...of", "for...of")}} y consúltese [Atención: los bucles de JavaScript 1.6 «for-each-in» son obsoletos](/es/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated) para obtener ayuda en la migración. ([Error 1083470 en Firefox](https://bugzil.la/1083470)).
-- Se marcaron como obsoletos los métodos {{jsxref("Object.prototype.watch()")}} y {{jsxref("Object.unwatch", "unwatch()")}}. Se emitirá una alerta si se utilizan y serán eliminados en el futuro próximo ([Error 934669 en Firefox](https://bugzil.la/934669)).
-- Se eliminaron los objetos {{jsxref("Iterator")}} y {{jsxref("StopIteration")}} y el protocolo de iteración heredado ([Error 1098412 en Firefox](https://bugzil.la/1098412)).
+- El bucle no estándar `for each...in` (E4X) fue eliminado. En su lugar, utilícese {{jsxref("Statements/for...of", "for...of")}} y consúltese [Atención: los bucles de JavaScript 1.6 «for-each-in» son obsoletos](/es/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated) para obtener ayuda en la migración. ([Error 1083470 en Firefox](https://bugzil.la/1083470)).
+- Se marcaron como obsoletos los métodos `Object.prototype.watch()` y `unwatch()`. Se emitirá una alerta si se utilizan y serán eliminados en el futuro próximo ([Error 934669 en Firefox](https://bugzil.la/934669)).
+- Se eliminaron los objetos {{jsxref("Iterator")}} y `StopIteration` y el protocolo de iteración heredado ([Error 1098412 en Firefox](https://bugzil.la/1098412)).
 
 ### API
 

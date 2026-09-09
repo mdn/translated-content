@@ -2,7 +2,7 @@
 title: CSS セレクターページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template
 l10n:
-  sourceCommit: d2fb8cdc9422dd2b68ff23f616d70811729f1fbd
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 > [!NOTE]
@@ -47,8 +47,6 @@ l10n:
 > - `\{{Deprecated_Header}}` — これは **非推奨** バナーを生成し、この技術の使用を[避けるべき](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)であることを示します。
 > - `\{{Non-standard_Header}}` — これは **標準外** バナーを生成し、この機能がどの仕様書にもないことを示します。
 >
-> 下記のアドバイスに従って、以下のマクロを更新または削除してください。
->
 > **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
 >
 > **実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
@@ -63,7 +61,7 @@ l10n:
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 概要段落 - 始めに、セレクターの名前とそれが何をするのかを説明してください。これはできれば 1 つか 2 つの短い文章にしてください。
 

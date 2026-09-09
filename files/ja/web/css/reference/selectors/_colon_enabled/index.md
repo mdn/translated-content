@@ -1,17 +1,12 @@
 ---
-title: :enabled
+title: CSS `:enabled` 擬似クラス
+short-title: :enabled
 slug: Web/CSS/Reference/Selectors/:enabled
-original_slug: Web/CSS/:enabled
+l10n:
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-**`:enabled`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、すべての有効な要素を表します。有効な要素とは、アクティブ化 (選択、クリック、入力など) したりフォーカスを得たりすることができるものです。要素には無効な状態、つまりアクティブ化したりフォーカスを得たりすることができない状態もあります。
-
-```css
-/* 有効な <input> を選択 */
-input:enabled {
-  color: blue;
-}
-```
+**`:enabled`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、すべての有効な要素を表します。有効な要素とは、アクティブ化（選択、クリック、入力など）したりフォーカスを得たりすることができるものです。要素には無効な状態、つまりアクティブ化したりフォーカスを得たりすることができない状態もあります。
 
 {{InteractiveExample("CSS デモ: :enabled", "tabbed-standard")}}
 
@@ -28,27 +23,29 @@ label {
 
 ```html interactive-example
 <form>
-  <label for="name">Name:</label>
+  <label for="name">名前:</label>
   <input id="name" name="name" type="text" />
 
-  <label for="emp">Employed:</label>
+  <label for="emp">在籍:</label>
   <select id="emp" name="emp" disabled>
     <option>No</option>
     <option>Yes</option>
   </select>
 
-  <label for="empDate">Employment Date:</label>
+  <label for="empDate">入社日:</label>
   <input id="empDate" name="empDate" type="date" disabled />
 
-  <label for="resume">Resume:</label>
+  <label for="resume">履歴書:</label>
   <input id="resume" name="resume" type="file" />
 </form>
 ```
 
 ## 構文
 
-```
-:enabled
+```css
+:enabled {
+  /* ... */
+}
 ```
 
 ## 例
@@ -63,7 +60,7 @@ label {
   <input type="text" id="FirstField" value="Lorem" /><br />
 
   <label for="SecondField">Second field (disabled):</label>
-  <input type="text" id="SecondField" value="Ipsum" disabled="disabled" /><br />
+  <input type="text" id="SecondField" value="Ipsum" disabled /><br />
 
   <input type="button" value="Submit" />
 </form>
@@ -73,11 +70,11 @@ label {
 
 ```css
 input:enabled {
-  color: #2b2;
+  color: #22bb22;
 }
 
 input:disabled {
-  color: #aaa;
+  color: #aaaaaa;
 }
 ```
 

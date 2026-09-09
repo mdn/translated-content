@@ -3,10 +3,10 @@ title: Propriété CSS `animation`
 short-title: animation
 slug: Web/CSS/Reference/Properties/animation
 l10n:
-  sourceCommit: 8fbdeb7fdee69284a6423044f24b8b4a7140028f
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`animation`** permet d'appliquer une animation entre des styles. Il s'agit d'une propriété raccourcie pour {{CSSxRef("animation-name")}}, {{CSSxRef("animation-duration")}}, {{CSSxRef("animation-timing-function")}}, {{CSSxRef("animation-delay")}}, {{CSSxRef("animation-iteration-count")}}, {{CSSxRef("animation-direction")}}, {{CSSxRef("animation-fill-mode")}}, {{CSSxRef("animation-play-state")}} et {{CSSxRef("animation-timeline")}}.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`animation`** permet d'appliquer une animation entre des styles. Il s'agit d'une propriété raccourcie pour {{CSSxRef("animation-name")}}, {{CSSxRef("animation-duration")}}, {{CSSxRef("animation-timing-function")}}, {{CSSxRef("animation-delay")}}, {{CSSxRef("animation-iteration-count")}}, {{CSSxRef("animation-direction")}}, {{CSSxRef("animation-fill-mode")}}, {{CSSxRef("animation-play-state")}} et {{CSSxRef("animation-timeline")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: animation")}}
 
@@ -162,7 +162,7 @@ Veillez à fournir un mécanisme permettant d'interrompre ou de désactiver l'an
 ## Exemples
 
 > [!NOTE]
-> Il est déconseillé d'animer les propriétés du [modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model), car cela entraîne un recalcul de la mise en page et des repeints. L'animation de toute propriété du modèle de boîte est intrinsèquement coûteuse en ressources processeur&nbsp;; il est préférable d'animer la propriété [transform](/fr/docs/Web/CSS/Reference/Properties/transform).
+> Il est déconseillé d'animer les propriétés du [modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model), car cela entraîne un recalcule de la mise en page et des repeints. L'animation de toute propriété du modèle de boîte est intrinsèquement coûteuse en ressources processeur&nbsp;; il est préférable d'animer la propriété [transform](/fr/docs/Web/CSS/Reference/Properties/transform).
 
 ### Utilisation simple : Un lever de soleil
 

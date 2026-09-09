@@ -93,7 +93,7 @@ md.toLocaleString("fr-FR", { day: "numeric" }); // 1
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainMonthDay")}}
-- L'objet {{JSxRef("Intl.DateTimeFormat")}}
+- L'objet natif {{JSxRef("Temporal.PlainMonthDay")}}
+- L'objet natif {{JSxRef("Intl.DateTimeFormat")}}
 - La méthode {{JSxRef("Temporal/PlainMonthDay/toJSON", "Temporal.PlainMonthDay.prototype.toJSON()")}}
 - La méthode {{JSxRef("Temporal/PlainMonthDay/toString", "Temporal.PlainMonthDay.prototype.toString()")}}

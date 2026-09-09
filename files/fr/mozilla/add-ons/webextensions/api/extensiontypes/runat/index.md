@@ -3,8 +3,6 @@ title: extensionTypes.RunAt
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/RunAt
 ---
 
-{{AddonSidebar}}
-
 Le plus tot que le Javascript ou CSS sera injecté dans l'onglet.
 
 ## Type

@@ -60,5 +60,5 @@ if (!String.prototype.trim) {
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.trimLeft()")}} {{non-standard_inline}}
-- {{jsxref("String.prototype.trimRight()")}} {{non-standard_inline}}
+- {{jsxref("String.prototype.trimStart()", "String.prototype.trimLeft()")}} {{non-standard_inline}}
+- {{jsxref("String.prototype.trimEnd()", "String.prototype.trimRight()")}} {{non-standard_inline}}

@@ -27,7 +27,7 @@ slug: Web/API/Element/focusout_event
 | Свойство                           | Тип                                      | Описание                                      |
 | ---------------------------------- | ---------------------------------------- | --------------------------------------------- |
 | `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Цель события, теряющая фокус.                 |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | Тип события.                                  |
+| `type` {{readonlyInline}}          | {{jsxref("String")}}                     | Тип события.                                  |
 | `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Всплывает ли событие при нормальных условиях. |
 | `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Возможно ли отменить событие.                 |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM-элемент) | Цель события, получающая фокус.               |

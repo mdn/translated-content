@@ -2,12 +2,12 @@
 title: HTMLLegendElement
 slug: Web/API/HTMLLegendElement
 l10n:
-  sourceCommit: 31adb079729df4b96305b4ffa396bd4216042124
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 {{APIRef("HTML DOM")}}
 
-L'interface **`HTMLLegendElement`** permet d'accéder aux propriétés des éléments HTML {{HTMLElement("legend")}}. Elle hérite des propriétés et méthodes de l'interface {{DOMxRef("HTMLElement")}}.
+L'interface **`HTMLLegendElement`** vous permet d'accéder aux propriétés des éléments HTML {{HTMLElement("legend")}}. Elle hérite des propriétés et méthodes de l'interface {{DOMxRef("HTMLElement")}}.
 
 {{InheritanceDiagram}}
 

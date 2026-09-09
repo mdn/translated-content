@@ -7,8 +7,6 @@ l10n:
 
 {{PreviousMenu("Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
-{{PWASidebar}}
-
 Dans les articles précédents, nous avons abordé les API qui permettent que [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) soit une application web progressive&nbsp;:
 
 - [Les <i lang="en">service workers</i>](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)

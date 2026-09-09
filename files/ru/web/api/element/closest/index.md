@@ -13,7 +13,7 @@ slug: Web/API/Element/closest
 var elt = element.closest(selectors);
 ```
 
-- **`selectors`** - строка, а точнее {{domxref("DOMString")}}, содержащая CSS-селектор, к примеру: "#id", ".class", "div" ...
+- **`selectors`** - строка, а точнее {{jsxref("String")}}, содержащая CSS-селектор, к примеру: "#id", ".class", "div" ...
 - Результат - элемент DOM ({{domxref("Element")}}), либо null.
 
 ## Исключения

@@ -1,9 +1,9 @@
 ---
-title: SEO
+title: SEO (検索エンジン最適化)
 slug: Glossary/SEO
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 **SEO** (Search Engine Optimization, 検索エンジン最適化)は、検索結果上であるウェブサイトをより目立たさせるための過程です。検索ランキングの改善とも言えます。
 
@@ -20,12 +20,7 @@ SEO の方法は大きく 3 つに分類されます:
 - サイトの人気
   - : 他の有名なされたサイトがあなたのサイトにリンクしすると、多くのトラフィックを得ることができます。
 
-## 詳細情報
+## 関連情報
 
-### 一般知識
-
-- ウィキペディアの[検索エンジン最適化](https://ja.wikipedia.org/wiki/検索エンジン最適化)( SEO )の記事です
-
-### SEO を学ぶ
-
-- [Google ウェブマスター学習リソース](https://www.google.com/webmasters/learn/)
+- [SEO](https://ja.wikipedia.org/wiki/検索エンジン最適化) - ウィキペディア
+- [Google Search Central](https://developers.google.com/search/docs)

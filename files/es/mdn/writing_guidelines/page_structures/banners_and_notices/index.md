@@ -2,7 +2,7 @@
 title: Banners y avisos
 slug: MDN/Writing_guidelines/Page_structures/Banners_and_notices
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 793bcbe2dd88fc553d2c4c918c4dec4899704022
 ---
 
 Los banners y avisos se muestran en algunas páginas, en particular en la referencia de la API, para destacar factores importantes que afectarán el uso del contenido descrito.

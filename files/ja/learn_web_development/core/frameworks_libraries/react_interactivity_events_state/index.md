@@ -1,5 +1,6 @@
 ---
 title: "React での操作の実装: イベントと状態"
+short-title: React のイベントと状態
 slug: Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state
 l10n:
   sourceCommit: 6ba4f3b350be482ba22726f31bbcf8ad3c92a9c6

@@ -7,7 +7,7 @@ slug: Web/API/URL/createObjectURL_static
 
 ## Определение
 
-**`URL.createObjectURL()`** - статический метод, который создаёт {{domxref("DOMString")}}, содержащий URL с указанием на объект, заданный как параметр. Время жизни URL связано с {{domxref("document")}} окна в котором он был создан. Новый URL объект может представлять собой {{domxref("File")}} объект или {{domxref("Blob")}} объект.
+**`URL.createObjectURL()`** - статический метод, который создаёт {{jsxref("String")}}, содержащий URL с указанием на объект, заданный как параметр. Время жизни URL связано с {{domxref("document")}} окна в котором он был создан. Новый URL объект может представлять собой {{domxref("File")}} объект или {{domxref("Blob")}} объект.
 
 {{AvailableInWorkers}}
 

@@ -51,13 +51,13 @@ Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 Soit cet en-tête CSP&nbsp;:
 
 ```http
-Content-Security-Policy: img-src https://exemple.com/
+Content-Security-Policy: img-src https://example.com/
 ```
 
 Cet élément HTML {{HTMLElement("img")}} sera bloqué et ne se chargera pas&nbsp;:
 
 ```html
-<img src="https://hors-exemple.com/toto.jpg" alt="image d'exemple" />
+<img src="https://hors-example.com/toto.jpg" alt="image d'exemple" />
 ```
 
 ## Spécifications

@@ -3,7 +3,7 @@ title: Propriété CSS `column-wrap`
 short-title: column-wrap
 slug: Web/CSS/Reference/Properties/column-wrap
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 {{SeeCompatTable}}
@@ -28,18 +28,20 @@ column-wrap: unset;
 
 ### Valeurs
 
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
+
 - `auto`
   - : La valeur initiale. Si la propriété {{CSSxRef("column-height")}} du conteneur de contenu est définie sur une valeur de type {{CSSxRef("&lt;length&gt;")}}, `auto` se résout en `wrap`, sinon elle se résout en `nowrap`.
 - `nowrap`
-  - : Les colonnes débordantes dépassent dans la direction en ligne.
+  - : Les colonnes débordantes dépassent dans la direction en incise.
 - `wrap`
   - : Les colonnes débordantes sont placées dans une nouvelle rangée dans la direction de bloc.
 
 ## Description
 
-La propriété `column-wrap` peut être utilisée pour définir les colonnes d'une [mise en page multi-colonnes CSS](/fr/docs/Web/CSS/Guides/Multicol_layout) afin qu'elles se replient sur une nouvelle rangée lorsqu'elles commencent à déborder de la largeur de la colonne. Cela est utile pour créer des mises en page plus lisibles lors de l'utilisation des propriétés {{CSSxRef("column-count")}} ou {{CSSxRef("column-width")}} pour définir plusieurs colonnes.
+La propriété `column-wrap` peut être utilisée pour définir les colonnes d'une [mise en page multi-colonnes CSS](/fr/docs/Web/CSS/Guides/Multicol_layout) afin qu'elles se replient sur une nouvelle rangée lorsqu'elles commencent à déborder de la largeur de la colonne. C'est utile pour créer des mises en page plus lisibles lors de l'utilisation des propriétés {{CSSxRef("column-count")}} ou {{CSSxRef("column-width")}} pour définir plusieurs colonnes.
 
-Sans `column-wrap`, les colonnes excédentaires déborderont sur le côté, et les lecteurs devront faire défiler dans la direction en ligne pour lire tout le contenu. La propriété {{CSSxRef("column-height")}}, ainsi que `column-wrap`, permet de définir une hauteur spécifique pour les colonnes et de les envelopper sur une nouvelle rangée de colonnes lorsque le bord du conteneur est atteint.
+Sans `column-wrap`, les colonnes excédentaires débordent sur le côté, et les lecteurs doivent faire défiler dans la direction en incise (<i lang="en">inline</i> en anglais) pour lire tout le contenu. La propriété {{CSSxRef("column-height")}}, ainsi que `column-wrap`, permet de définir une hauteur spécifique pour les colonnes et de les envelopper sur une nouvelle rangée de colonnes lorsque le bord du conteneur est atteint.
 
 La valeur par défaut de `column-wrap` est `auto`, ce qui se résout en `wrap` lorsque `column-height` est défini sur une valeur de type `<length>`&nbsp;; `wrap` permet aux colonnes à hauteur fixe de s'enrouler sur plusieurs rangées. Lorsque `column-height` est égal à `auto`, `column-wrap: auto` se résout en `nowrap`, permettant aux colonnes de déborder horizontalement si une hauteur de conteneur fixe est définie.
 
@@ -420,7 +422,7 @@ checkbox.addEventListener("change", () => {
 
 Nous faisons de l'élément HTML {{HTMLElement("body")}} un conteneur multi-colonnes en définissant la propriété {{CSSxRef("column-count")}} à `3`. Nous définissons ensuite un {{CSSxRef("gap")}} de `3em 2em`, ce qui donne un écart de `3em` entre les rangées et un écart de `2em` entre les colonnes.
 
-Nous définissons ensuite une `column-height` de `90vh`, ce qui rend les colonnes presque aussi hautes que la fenêtre. Nous définissons également `column-wrap` sur `nowrap`, ce qui fait que les colonnes excédentaires débordent horizontalement. Cela est nécessaire car la valeur initiale de `column-wrap` est `auto`, ce qui se résout en `wrap` lorsque `column-height` est défini sur une valeur de type `<length>`.
+Nous définissons ensuite une `column-height` de `90vh`, ce qui rend les colonnes presque aussi hautes que la fenêtre. Nous définissons également `column-wrap` sur `nowrap`, ce qui fait que les colonnes excédentaires débordent horizontalement. C'est nécessaire car la valeur initiale de `column-wrap` est `auto`, ce qui se résout en `wrap` lorsque `column-height` est défini sur une valeur de type `<length>`.
 
 La case à cocher permet de basculer la propriété `column-wrap` entre `nowrap` et `wrap`. Lorsqu'elle est définie sur `wrap`, les colonnes de contenu excédentaires débordent verticalement dans de nouvelles rangées de colonnes, créant ainsi la mise en page verticale. La valeur de `column-height` fait en sorte que chaque rangée de colonnes remplisse la fenêtre.
 

@@ -21,13 +21,13 @@ Une chaîne de caractères.
 ```html
 <video
   id="media"
-  src="https://exemple.com/video.mp4"
-  poster="https://exemple.com/poster.jpg"></video>
+  src="https://example.com/video.mp4"
+  poster="https://example.com/poster.jpg"></video>
 ```
 
 ```js
 const el = document.getElementById("media");
-console.log(el.poster); // Affiche : "https://exemple.com/poster.jpg"
+console.log(el.poster); // Affiche : "https://example.com/poster.jpg"
 ```
 
 ## Spécifications

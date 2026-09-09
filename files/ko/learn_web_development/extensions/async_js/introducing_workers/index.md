@@ -115,8 +115,7 @@ document.querySelector("#reload").addEventListener("click", () => {
     <button id="reload">Reload</button>
 
     <textarea id="user-input" rows="5" cols="62">
-Try typing in here immediately after pressing "Generate primes"</textarea
-    >
+Try typing in here immediately after pressing "Generate primes"</textarea>
 
     <div id="output"></div>
   </body>

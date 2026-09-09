@@ -42,8 +42,7 @@ window.onselect = funcRef;
 Highlight some of this text
 with the mouse pointer
 to fire the onselect event.
-</textarea
-    >
+</textarea>
   </body>
 </html>
 ```

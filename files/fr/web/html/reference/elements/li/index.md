@@ -40,7 +40,7 @@ p {
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `value`
-  - : Cette valeur entière indique la valeur ordinale en cours de l'élément de liste tel que défini par l'élément {{HTMLElement("ol")}}. La seule valeur autorisée pour cet attribut est un nombre, même si la liste est affichée avec des chiffres romains ou des lettres. Les éléments de la liste qui suivent celui-ci continueront la numérotation à partir de la valeur indiquée. L'attribut **value** n'a pas de signification pour les listes non ordonnées ({{HTMLElement("ul")}}) ou pour les menus ({{HTMLElement("menu")}}).
+  - : Cette valeur entière indique la valeur ordinale en cours de l'élément de liste tel que défini par l'élément {{HTMLElement("ol")}}. La seule valeur autorisée pour cet attribut est un nombre, même si la liste est affichée avec des chiffres romains ou des lettres. Les éléments de la liste qui suivent celui-ci continuent la numérotation à partir de la valeur indiquée. L'attribut **value** n'a pas de signification pour les listes non ordonnées ({{HTMLElement("ul")}}) ou pour les menus ({{HTMLElement("menu")}}).
 - `type` {{Deprecated_Inline}}
   - : Cet attribut de caractère indique le type de numérotation utilisé pour la liste&nbsp;:
     - `a`&nbsp;: lettres minuscules

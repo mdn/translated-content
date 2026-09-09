@@ -3,7 +3,7 @@ title: "Document : propriété activeViewTransition"
 short-title: activeViewTransition
 slug: Web/API/Document/activeViewTransition
 l10n:
-  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
+  sourceCommit: 3114d1b72a4d46d314caa7f73f775a1f6f7407dc
 ---
 
 {{APIRef("DOM")}}
@@ -15,7 +15,7 @@ La transition de vue ({{DOMxRef("ViewTransition")}}) peut être accédée de dif
 - La valeur de retour de {{DOMxRef("Document.startViewTransition()")}} dans le cas des transitions de vue au sein du même document.
 - La propriété `viewTransition` des objets d'évènement {{DOMxRef("Window.pagereveal_event", "pagereveal")}} et {{DOMxRef("Window.pageswap_event", "pageswap")}} dans le cas des transitions de vue entre documents.
 
-Cependant, la propriété `activeViewTransition` fournit un moyen cohérent d'accéder à la transition de vue active dans n'importe quel contexte, sans avoir à se soucier de la sauvegarder pour y accéder facilement plus tard.
+Cependant, la propriété `activeViewTransition` fournit un moyen cohérent d'accéder à la transition de vue active dans n'importe quel contexte, sans avoir à se soucier de sauvegarder une référence pour y accéder plus tard.
 
 ## Valeur
 
@@ -52,6 +52,7 @@ document.activeViewTransition.finished.then(() => {
 ## Voir aussi
 
 - La méthode {{DOMxRef("Document.startViewTransition()")}}
+- La propriété {{DOMxRef("Element.activeViewTransition")}}
 - L'évènement {{DOMxRef("Window.pagereveal_event", "pagereveal")}}
 - L'évènement {{DOMxRef("Window.pageswap_event", "pageswap")}}
 - [L'API View Transition](/fr/docs/Web/API/View_Transition_API)

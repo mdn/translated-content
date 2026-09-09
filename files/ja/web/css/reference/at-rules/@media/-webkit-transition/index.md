@@ -1,11 +1,12 @@
 ---
-title: -webkit-transition
+title: CSS `-webkit-transition` メディア特性
+short-title: -webkit-transition
 slug: Web/CSS/Reference/At-rules/@media/-webkit-transition
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{deprecated_header}} {{ Non-standard_header }}
+{{ Non-standard_header }}
 
 > [!NOTE]
 > すべてのブラウザーが、ベンダー接頭辞なしの [`transition`](/ja/docs/Web/CSS/Reference/Properties/transition#ブラウザーの互換性) プロパティに対応しています。Chromium ベースのブラウザーではなく、 WebKit (Safari) だけが `-webkit-transition` メディア特性に対応しています。メディアクエリーとして接頭辞なしの `transition` に対応しているブラウザーはありません（ただし、一部のブラウザーは {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}} には対応しています）。代わりに、機能クエリーの [`@supports (transition)`](/ja/docs/Web/CSS/Reference/At-rules/@supports) を使用してください。
@@ -60,7 +61,6 @@ Apple では [Safari CSS リファレンス](https://developer.apple.com/library
 - {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
 - {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
 - {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
-- [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
 - {{cssxref("transition")}} および [CSS トランジションの使用](/ja/docs/Web/CSS/Guides/Transitions/Using)
 - {{cssxref("@media")}} および[メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@supports")}} および[機能クエリーの使用](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)

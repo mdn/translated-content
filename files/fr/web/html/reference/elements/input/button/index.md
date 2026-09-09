@@ -88,23 +88,23 @@ Nous allons commencer par créer un bouton simple avec un gestionnaire d'évène
 ```
 
 ```js
-const button = document.querySelector("input");
-const paragraph = document.querySelector("p");
+const bouton = document.querySelector("input");
+const paragraphe = document.querySelector("p");
 
-button.addEventListener("click", updateButton);
+bouton.addEventListener("click", actualiserBouton);
 
-function updateButton() {
-  if (button.value === "Démarrer la machine") {
-    button.value = "Arrêter la machine";
-    paragraph.textContent = "La machine est démarrée !";
+function actualiserBouton() {
+  if (bouton.value === "Démarrer la machine") {
+    bouton.value = "Arrêter la machine";
+    paragraphe.textContent = "La machine est démarrée !";
   } else {
-    button.value = "Démarrer la machine";
-    paragraph.textContent = "La machine est arrêtée.";
+    bouton.value = "Démarrer la machine";
+    paragraphe.textContent = "La machine est arrêtée.";
   }
 }
 ```
 
-Dans ce script, on récupère une référence à l'objet {{DOMxRef("HTMLInputElement")}} qui représente l'élément `<input>` du DOM et on stocke cette référence dans la variable `btn`. {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} pour ensuite lui rattacher une fonction qui est utilisée lorsque l'évènement [`click`](/fr/docs/Web/API/Element/click_event) se produit sur le bouton.
+Dans ce script, on récupère une référence à l'objet {{DOMxRef("HTMLInputElement")}} qui représente l'élément `<input>` du DOM et on stocke cette référence dans la variable `bouton`. {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} pour ensuite lui rattacher une fonction qui est utilisée lorsque l'évènement [`click`](/fr/docs/Web/API/Element/click_event) se produit sur le bouton.
 
 {{EmbedLiveSample("Un bouton simple", 650, 100)}}
 
@@ -122,18 +122,18 @@ Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit
 ```
 
 ```js hidden
-const button = document.querySelector("input");
-const paragraph = document.querySelector("p");
+const bouton = document.querySelector("input");
+const paragraphe = document.querySelector("p");
 
-button.addEventListener("click", updateButton);
+bouton.addEventListener("click", actualiserBouton);
 
-function updateButton() {
-  if (button.value === "Démarrer la machine") {
-    button.value = "Arrêter la machine";
-    paragraph.textContent = "La machine est démarrée !";
+function actualiserBouton() {
+  if (bouton.value === "Démarrer la machine") {
+    bouton.value = "Arrêter la machine";
+    paragraphe.textContent = "La machine est démarrée !";
   } else {
-    button.value = "Démarrer la machine";
-    paragraph.textContent = "La machine est arrêtée.";
+    bouton.value = "Démarrer la machine";
+    paragraphe.textContent = "La machine est arrêtée.";
   }
 }
 ```
@@ -160,16 +160,16 @@ Vous pouvez activer et désactiver des boutons à l'exécution en définissant `
 ```
 
 ```js
-const button = document.querySelector("input");
+const bouton = document.querySelector("input");
 
-button.addEventListener("click", disableButton);
+bouton.addEventListener("click", desactiverBouton);
 
-function disableButton() {
-  button.disabled = true;
-  button.value = "Désactivé";
+function desactiverBouton() {
+  bouton.disabled = true;
+  bouton.value = "Désactivé";
   setTimeout(() => {
-    button.disabled = false;
-    button.value = "Activé";
+    bouton.disabled = false;
+    bouton.value = "Activé";
   }, 2000);
 }
 ```
@@ -192,15 +192,15 @@ L'exemple ci-dessous montre ce comportement. Il est très similaire à l'exemple
 ```
 
 ```js hidden
-const button = document.querySelector("input");
-const fieldset = document.querySelector("fieldset");
+const bouton = document.querySelector("input");
+const groupeChamps = document.querySelector("fieldset");
 
-button.addEventListener("click", disableButton);
+bouton.addEventListener("click", desactiverBouton);
 
-function disableButton() {
-  fieldset.disabled = true;
+function desactiverBouton() {
+  groupeChamps.disabled = true;
   setTimeout(() => {
-    fieldset.disabled = false;
+    groupeChamps.disabled = false;
   }, 2000);
 }
 ```
@@ -208,7 +208,7 @@ function disableButton() {
 {{EmbedLiveSample("Héritage de l'état désactivé", 650, 100)}}
 
 > [!NOTE]
-> À la différence des autres navigateurs, Firefox conserve l'état `disabled` d'un élément `<input>` même après le rechargement de la page. Pour contourner ce comportement, définissez l'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete) de l'élément `<input>` à `off`. (Voir [Firefox boggue 654072 <sup>(angl.)</sup>](https://bugzil.la/654072) pour plus de détails.)
+> À la différence des autres navigateurs, Firefox conserve l'état `disabled` d'un élément `<input>` même après le rechargement de la page. Pour contourner ce comportement, définissez l'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete) de l'élément `<input>` à `off`. (Voir [Firefox bogue 654072 <sup>(angl.)</sup>](https://bugzil.la/654072) pour plus de détails.)
 
 ## Validation
 
@@ -294,8 +294,8 @@ sizePicker.oninput = () => {
   output.textContent = sizePicker.value;
 };
 
-// On enregistre les coordonnées du pointeur de la souris
-// emouse pointer coordinates, and whether the button is pressed
+// On enregistre les coordonnées du pointeur de la souris,
+// et si le bouton est enfoncé
 let curX;
 let curY;
 let pressed = false;
@@ -340,7 +340,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Exemples", '100%', 600)}}
+{{EmbedLiveSample("Exemples", "100%", 600)}}
 
 ## Résumé technique
 

@@ -346,7 +346,7 @@ l10n:
       <td><code>scriptlevel</code></td>
       <td><a href="/ja/docs/Web/MathML/Reference/Global_attributes">すべての MathML 要素</a></td>
       <td>
-        この要素の <a href="/ja/docs/Web/CSS/Reference/Properties/math-depth">math-depth</a> を指定します。受け付ける値や対応は、 <a href="/ja/docs/Web/MathML/Global_attributes/scriptlevel#values">scriptlevel ページ</a>を参照してください。
+        この要素の <a href="/ja/docs/Web/CSS/Reference/Properties/math-depth">math-depth</a> を指定します。受け付ける値や対応は、 <a href="/ja/docs/Web/MathML/Reference/Global_attributes/scriptlevel#values">scriptlevel ページ</a>を参照してください。
       </td>
     </tr>
     <tr>

@@ -1,38 +1,52 @@
 ---
-title: Node.isSameNode()
+title: "Node : méthode isSameNode()"
+short-title: isSameNode()
 slug: Web/API/Node/isSameNode
+l10n:
+  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`Node.isSameNode()`** teste si deux noeuds sont identiques, c'est-à-dire, s'ils font référence au même objet.
+La méthode **`isSameNode()`** de l'interface {{DOMxRef("Node")}} est un alias hérité de l'opérateur de stricte égalité `===` en JavaScript.
+Autrement dit, elle teste si deux nœuds sont identiques (c'est-à-dire s'ils font référence au même objet).
+
+> [!NOTE]
+> Il n'est pas nécessaire d'utiliser `isSameNode()`&nbsp;; utilisez plutôt l'opérateur de stricte égalité `===`.
 
 ## Syntaxe
 
-```js
-var isSameNode = node.isSameNode(other);
+```js-nolint
+isSameNode(otherNode)
 ```
 
 ### Paramètres
 
-- `other` Le {{domxref("Node")}} à tester.
+- `otherNode`
+  - : L'objet {{DOMxRef("Node")}} à comparer.
+    > [!NOTE]
+    > Ce paramètre n'est pas optionnel, mais peut être défini sur `null`.
 
-## Exemple
+### Valeur de retour
+
+Une valeur booléenne qui est `true` si les deux nœuds sont strictement égaux, sinon `false`.
+
+## Exemples
 
 Dans cet exemple, nous créons 3 blocs {{HTMLElement("div")}}. Le premier et le troisième ont les mêmes contenus et attributs, alors que le second est différent. Ensuite, nous exécutons du JavaScript pour comparer les nœuds en utilisant `isSameNode()` et sortons les résultats.
 
 ### HTML
 
 ```html
-<div>This is the first element.</div>
-<div>This is the second element.</div>
-<div>This is the first element.</div>
+<div>Ceci est le premier élément.</div>
+<div>Ceci est le deuxième élément.</div>
+<div>Ceci est le troisième élément.</div>
 
-<p id="output"></p>
+<p id="sortie"></p>
 ```
 
 ```css hidden
-#output {
+#sortie {
   width: 440px;
   border: 2px solid black;
   border-radius: 5px;
@@ -45,20 +59,23 @@ Dans cet exemple, nous créons 3 blocs {{HTMLElement("div")}}. Le premier et le 
 ### JavaScript
 
 ```js
-let output = document.getElementById("output");
-let divList = document.getElementsByTagName("div");
+const sortie = document.getElementById("sortie");
+const divList = document.getElementsByTagName("div");
 
-output.innerHTML +=
-  "div 0 same as div 0: " + divList[0].isSameNode(divList[0]) + "<br/>";
-output.innerHTML +=
-  "div 0 same as div 1: " + divList[0].isSameNode(divList[1]) + "<br/>";
-output.innerHTML +=
-  "div 0 same as div 2: " + divList[0].isSameNode(divList[2]) + "<br/>";
+sortie.innerText += `div 0 same as div 0: ${divList[0].isSameNode(
+  divList[0],
+)}\n`;
+sortie.innerText += `div 0 same as div 1: ${divList[0].isSameNode(
+  divList[1],
+)}\n`;
+sortie.innerText += `div 0 same as div 2: ${divList[0].isSameNode(
+  divList[2],
+)}\n`;
 ```
 
 ### Résultats
 
-{{ EmbedLiveSample('Exemple', 480) }}
+{{EmbedLiveSample("Exemples", "100%", 205)}}
 
 ## Spécifications
 
@@ -70,4 +87,4 @@ output.innerHTML +=
 
 ## Voir aussi
 
-- {{domxref("Node.isEqualNode()")}}
+- La méthode {{DOMxRef("Node.isEqualNode()")}}

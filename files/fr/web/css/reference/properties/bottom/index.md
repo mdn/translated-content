@@ -89,20 +89,20 @@ bottom: unset;
   - : Une valeur {{CSSxRef("&lt;length&gt;")}} négative, nulle ou positive&nbsp;:
     - pour les _éléments positionnés de façon absolue_, cela représente la distance jusqu'au bord inférieur du bloc englobant.
     - pour les _éléments positionnés de façon relative_, cela représente la distance avec laquelle l'élément est déplacé au-dessus de sa position normale.
-    - pour les _éléments positionnés par ancre_, la fonction {{CSSxRef("anchor()")}} retourne une valeur {{CSSxRef("&lt;length&gt;")}} relative à la position du bord supérieur ou inférieur de l'élément ancre associé (voir [Utiliser les propriétés d'encart avec des valeurs de fonction `anchor()`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#utiliser_les_propriétés_dencart_avec_des_valeurs_de_fonction_anchor)), et la fonction {{CSSxRef("anchor-size()")}} retourne une valeur {{CSSxRef("&lt;length&gt;")}} relative à la largeur ou à la hauteur de l'élément ancre associé (voir [Définir la position d'un élément en fonction de la taille de l'ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#dimensionner_les_éléments_selon_la_taille_de_lancre)).
+    - pour les _éléments positionnés par une ancre_, la fonction {{CSSxRef("anchor()")}} retourne une valeur {{CSSxRef("&lt;length&gt;")}} relative à la position du bord supérieur ou inférieur de l'élément ancre associé (voir [Utiliser les propriétés d'encart avec des valeurs de fonction `anchor()`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#utiliser_les_propriétés_dencart_avec_des_valeurs_de_fonction_anchor)), et la fonction {{CSSxRef("anchor-size()")}} retourne une valeur {{CSSxRef("&lt;length&gt;")}} relative à la largeur ou à la hauteur de l'élément ancre associé (voir [Définir la position d'un élément en fonction de la taille de l'ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#dimensionner_les_éléments_selon_la_taille_de_lancre)).
 
 - {{CSSxRef("&lt;percentage&gt;")}}
   - : Un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) de la hauteur du bloc englobant.
 - `auto`
   - : Définit que&nbsp;:
-    - pour les _éléments positionnés de façon absolue_, la position de l'élément est basée sur la propriété {{CSSxRef("top")}}, tandis que `height: auto` est traitée comme une hauteur basée sur le contenu&nbsp;; ou si `top` vaut aussi `auto`, l'élément est positionné là où il devrait l'être verticalement s'il était un élément statique.
+    - pour les _éléments positionnés de façon absolue_, la position de l'élément est basée sur la propriété {{CSSxRef("top")}}, tandis que `height: auto` est traitée comme une hauteur basée sur le contenu&nbsp;; ou si `top` vaut aussi `auto`, l'élément est positionné là où il doit l'être verticalement s'il est un élément statique.
     - pour les _éléments positionnés de façon relative_, la distance de l'élément par rapport à sa position normale est basée sur la propriété {{CSSxRef("top")}}&nbsp;; ou si `top` vaut aussi `auto`, l'élément n'est pas déplacé verticalement.
 
 ## Description
 
 L'effet de `bottom` dépend de la façon dont l'élément est positionné (c'est-à-dire la valeur de la propriété {{CSSxRef("position")}})&nbsp;:
 
-- Lorsque `position` vaut `absolute` ou `fixed`, la propriété `bottom` définit la distance entre le bord extérieur de la [marge inférieure](/fr/docs/Web/CSS/Guides/Box_model/Introduction) de l'élément et le bord extérieur du remplissage inférieur du bloc englobant, ou, dans le cas des [éléments positionnés par ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using) lorsque la fonction {{CSSxRef("anchor()")}} est utilisée dans la valeur, par rapport à la position du bord [`<anchor-side>`](/fr/docs/Web/CSS/Reference/Values/anchor#anchor-side) défini. La propriété `bottom` est [compatible](/fr/docs/Web/CSS/Reference/Values/anchor#compatibilité_des_propriétés_dencart_et_des_valeurs_anchor-side) avec les valeurs `top`, `bottom`, `start`, `end`, `self-start`, `self-end`, `center` et `<percentage>`.
+- Lorsque `position` vaut `absolute` ou `fixed`, la propriété `bottom` définit la distance entre le bord extérieur de la [marge inférieure](/fr/docs/Web/CSS/Guides/Box_model/Introduction) de l'élément et le bord extérieur du remplissage inférieur du bloc englobant, ou, dans le cas des [éléments positionnés par une ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using) lorsque la fonction {{CSSxRef("anchor()")}} est utilisée dans la valeur, par rapport à la position du bord [`<anchor-side>`](/fr/docs/Web/CSS/Reference/Values/anchor#anchor-side) défini. La propriété `bottom` est [compatible](/fr/docs/Web/CSS/Reference/Values/anchor#compatibilité_des_propriétés_dencart_et_des_valeurs_anchor-side) avec les valeurs `top`, `bottom`, `start`, `end`, `self-start`, `self-end`, `center` et `<percentage>`.
 - Lorsque `position` vaut `relative`, la propriété `bottom` définit la distance avec laquelle le bord inférieur de l'élément est déplacé au-dessus de sa position normale.
 - Lorsque `position` vaut `sticky`, la propriété `bottom` est utilisée pour calculer le rectangle de contrainte de collage.
 - Lorsque `position` vaut `static`, la propriété `bottom` n'a _aucun effet_.
@@ -121,7 +121,7 @@ Lorsque {{CSSxRef("top")}} et `bottom` sont tous deux définis, que `position` v
 
 ### Positionner en absolu et en fixe
 
-Dans l'exemple qui suit, on illustre la différence de comportement de la propriété `bottom` lorsque {{CSSxRef("position")}} vaut `absolute` ou lorsqu'elle vaut `fixed`. When the regular text becomes taller than the viewable portion of the page (that is, the browser window's viewport), blocks positioned with `position:absolute` scroll with the page, while blocks positioned with `position:fixed` don't.
+Dans l'exemple qui suit, on illustre la différence de comportement de la propriété `bottom` lorsque {{CSSxRef("position")}} vaut `absolute` ou lorsqu'elle vaut `fixed`. Lorsque le texte normal dépasse la partie visible de la page (c'est-à-dire la zone d'affichage de la fenêtre du navigateur), les éléments positionnés avec `position:absolute` défilent avec la page, contrairement à ceux positionnés avec `position:fixed`.
 
 #### HTML
 

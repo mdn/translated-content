@@ -1,6 +1,8 @@
 ---
 title: キャンバスを作ってその上に描画する
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+l10n:
+  sourceCommit: 36decb5c06d8c61ea011824b4c4446b04a4cf3a7
 ---
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
@@ -11,11 +13,11 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_dra
 
 ## ゲームの HTML
 
-ゲームはすべて {{htmlelement("canvas")}} 要素に描画されるため、 HTML 文書構造は極めて簡潔です。好きなテキストエディターを使って新しい HTML 文書を作成し、適当な場所に `index.html` として保存してください。そして、その HTML 文書に次のコードを追加してください。
+ゲームはすべて {{htmlelement("canvas")}} 要素に描画されるため、 HTML 文書構造は最小限です。好きなテキストエディターを使って新しい HTML 文書を作成し、適当な場所に `index.html` として保存してください。そして、その HTML 文書に次のコードを追加してください。
 
 ```html
 <!doctype html>
-<html lang="en-US">
+<html lang="ja">
   <head>
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
@@ -25,7 +27,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_dra
         margin: 0;
       }
       canvas {
-        background: #eee;
+        background: #eeeeee;
         display: block;
         margin: 0 auto;
       }
@@ -59,7 +61,7 @@ const ctx = canvas.getContext("2d");
 ```js
 ctx.beginPath();
 ctx.rect(20, 40, 50, 50);
-ctx.fillStyle = "#FF0000";
+ctx.fillStyle = "red";
 ctx.fill();
 ctx.closePath();
 ```
@@ -83,25 +85,58 @@ ctx.closePath();
 - 開始角度と終了角度 (円を描く始める時点の角度と描き終えたあとの角度をラジアンで)
 - 描く方向 (時計回りは `false` で、既定値。反時計回りは `true`。) この最後の引数は省略可能です。
 
-{{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} プロパティは先程とは違う形になっています。これは CSS でそうであるように、色は 16 進値、色キーワード、 `rgba()` 関数、その他利用可能な色メソッドなら何でも指定することができるからです。
+{{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} プロパティは先程とは違う形になっています。これは CSS でそうであるように、色は 16 進値、色キーワード、 `rgb()` 関数、その他利用可能な色メソッドなら何でも指定することができるからです。
 
 図形を {{domxref("CanvasRenderingContext2D.fill()","fill()")}} で塗りつぶすかわりに {{domxref("CanvasRenderingContext2D.stroke()","stroke()")}} で縁だけ色を付けることも出来ます。次のコードも自分の JavaScript に追記してみてください。
 
 ```js
 ctx.beginPath();
 ctx.rect(160, 10, 100, 40);
-ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
+ctx.strokeStyle = "rgb(0 0 255 / 50%)";
 ctx.stroke();
 ctx.closePath();
 ```
 
-上記のコードは青く縁取られたからの四角形を描画します。 `rgba()` 関数内のアルファチャネルにより青色は半透明になっています。
+上記のコードは青く縁取られたからの四角形を描画します。 `rgb()` 関数内のアルファチャネルにより青色は半透明になっています。
 
-## 自分のコードと比べる
+## 自分のコードと比べよう
 
-以下が JSFiddle で即実行可能な最初のレッスンのソースコード全てです。
+以下に、実行可能な最初のレッスンのソースコード全体を示します。
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}
+```html
+<canvas id="myCanvas" width="480" height="320"></canvas>
+```
+
+```css
+canvas {
+  background: #eeeeee;
+}
+```
+
+```js
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+ctx.beginPath();
+ctx.rect(20, 40, 50, 50);
+ctx.fillStyle = "red";
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
+ctx.fillStyle = "green";
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.rect(160, 10, 100, 40);
+ctx.strokeStyle = "rgb(0 0 255 / 0.5)";
+ctx.stroke();
+ctx.closePath();
+```
+
+{{embedlivesample("compare_your_code", 600, 340)}}
 
 > [!NOTE]
 > 与えられた図形の大きさや色を変えてみましょう。

@@ -3,7 +3,7 @@ title: "CSS : Mettre en forme le contenu"
 short-title: Mettre en forme le contenu
 slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_content
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: b5ee197a87ea18acbc4dd9544efa8c0e46253785
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}
@@ -200,7 +200,7 @@ Revenons à notre exemple et utilisons CSS pour améliorer l'apparence du texte.
 
 ## CSS, c'est avant tout des boîtes
 
-Vous remarquerez en utilisant CSS que beaucoup de choses tournent autour des boîtes. La plupart des éléments HTML d'une page peuvent être vus comme des boîtes empilées (ou placées côte à côte). Vous pouvez définir des valeurs sur ces boîtes pour la taille, la couleur, la position, etc. C'est ce qu'on appelle le [**modèle de boîte**](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model).
+Vous remarquez en utilisant CSS que beaucoup de choses tournent autour des boîtes. La plupart des éléments HTML d'une page peuvent être vus comme des boîtes empilées (ou placées côte à côte). Vous pouvez définir des valeurs sur ces boîtes pour la taille, la couleur, la position, etc. C'est ce qu'on appelle le [**modèle de boîte**](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model).
 
 ![Trois boîtes imbriquées les unes dans les autres. De l'extérieur vers l'intérieur, elles sont étiquetées margin, border et padding](box-model.png)
 
@@ -322,11 +322,11 @@ Enfin, on définit la propriété {{CSSxRef("max-width")}} à `100%` pour s'assu
 
 Si vous avez suivi toutes les instructions de cet article, vous devez obtenir une page qui ressemble à ceci&nbsp;:
 
-![Un logo Mozilla, centré, un titre et des paragraphes. La page est maintenant bien stylisée, avec un fond bleu pour toute la page et un fond orange pour la bande de contenu principal centrée.](website-screenshot-final.png)
+![Un logo Mozilla, centré, un titre et des paragraphes. La page est maintenant bien mise en forme, avec un fond bleu pour toute la page et un fond orange pour la bande de contenu principal centrée.](website-screenshot-final.png)
 
 Vous pouvez [voir notre version ici <sup>(angl.)</sup>](https://mdn.github.io/beginner-html-site-styled/). Si vous êtes bloqué·e, vous pouvez toujours comparer votre travail avec [le code final de cet exemple sur GitHub <sup>(angl.)</sup>](https://github.com/mdn/beginner-html-site-styled/blob/main/styles/style.css).
 
-Dans cet article, nous n'avons fait qu'effleurer la surface de CSS. Vous en apprendrez beaucoup plus dans notre module principal [Bases de la mise en forme CSS](/fr/docs/Learn_web_development/Core/Styling_basics) plus loin dans le cours.
+Dans cet article, nous n'avons fait qu'effleurer la surface de CSS. Vous en apprenez beaucoup plus dans notre module principal [Bases de la mise en forme CSS](/fr/docs/Learn_web_development/Core/Styling_basics) plus loin dans le cours.
 
 ## Voir aussi
 

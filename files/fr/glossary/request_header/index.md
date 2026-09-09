@@ -5,9 +5,9 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-Un **en-tête de requête** est un {{Glossary("HTTP header", "en-tête HTTP")}} qui peut être utilisé dans une requête HTTP pour fournir des informations sur le contexte de la requête, afin que le serveur puisse adapter la réponse. Par exemple, les en-têtes {{HTTPHeader("Accept", "Accept-*")}} indiquent les formats autorisés et préférés pour la réponse. D'autres en-têtes peuvent servir à fournir des informations d'authentification (par exemple {{HTTPHeader("Authorization")}}), à contrôler la mise en cache, ou à transmettre des informations sur l'agent utilisateur·ice ou le référent, etc.
+Un **en-tête de requête** est un {{Glossary("HTTP header", "en-tête HTTP")}} qui peut être utilisé dans une requête HTTP pour fournir des informations sur le contexte de la requête, afin que le serveur puisse adapter la réponse. Par exemple, les en-têtes {{HTTPHeader("Accept", "Accept-*")}} indiquent les formats autorisés et préférés pour la réponse. D'autres en-têtes peuvent servir à fournir des informations d'authentification (par exemple {{HTTPHeader("Authorization")}}), à contrôler la mise en cache, ou à transmettre des informations sur l'agent utilisateur ou le référent, etc.
 
-Tous les en-têtes pouvant apparaître dans une requête ne sont pas qualifiés d'_en-têtes de requête_ par la spécification. Par exemple, l'en-tête {{HTTPHeader("Content-Type")}} est qualifié d'{{Glossary("representation header", "en-tête de représentation")}}.
+Tous les en-têtes pouvant apparaître dans une requête ne sont pas qualifiés _d'en-têtes de requête_ par la spécification. Par exemple, l'en-tête {{HTTPHeader("Content-Type")}} est qualifié {{Glossary("representation header", "d'en-tête de représentation")}}.
 
 De plus, {{Glossary("CORS")}} définit un sous-ensemble d'en-têtes de requête comme {{Glossary('CORS-safelisted request header', 'en-têtes simples')}}, des en-têtes de requête toujours considérés comme autorisés et qui ne sont pas explicitement listés dans les réponses aux requêtes {{Glossary("preflight request", "préliminaires")}}.
 

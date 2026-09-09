@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.border`** プロパティは、 {{HtmlElement("table")}} 要素の境界の幅を表します。
 

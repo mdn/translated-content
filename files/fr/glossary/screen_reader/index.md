@@ -2,7 +2,7 @@
 title: Lecteur d'écran
 slug: Glossary/Screen_reader
 l10n:
-  sourceCommit: e81cf36acffe197d01b1ad282c3582ebd7b0b54d
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 Les lecteurs d'écran sont des applications logicielles qui tentent de transmettre ce qui est affiché à l'écran de manière non visuelle, généralement sous forme de synthèse vocale, mais aussi en braille ou en icônes sonores. Les lecteurs d'écran sont essentiels pour les utilisateur·ice·s malvoyant·e·s, illettré·e·s ou ayant un trouble d'apprentissage. Il existe quelques lecteurs d'écran sous forme d'extensions de navigateur, mais la plupart fonctionnent à l'échelle du système pour toutes les applications, et non seulement pour le navigateur.

@@ -15,7 +15,7 @@ _L'interface `AudioWorklet` ne définit pas de propriétés propres, mais hérit
 
 ## Méthodes
 
-Cette interface hérite des méthodes de *{{domxref('Worklet')}}. L'interface `AudioWorklet`*ne définit aucune méthode propre*.*
+Cette interface hérite des méthodes de _{{domxref('Worklet')}}. L'interface `AudioWorklet`*ne définit aucune méthode propre*._
 
 ## Evénements
 

@@ -44,7 +44,7 @@ Aucun ({{JSxRef("undefined")}}).
 
 La question évidente est&nbsp;: pourquoi cette méthode existe‑t‑elle, alors que nous disposons de la méthode {{DOMxRef("HTMLFormElement.submit", "submit()")}} depuis toujours&nbsp;?
 
-La réponse est simple. `submit()` soumet le formulaire, mais c'est tout ce qu'elle fait. `requestSubmit()`, en revanche, agit comme si un bouton de soumission avait été cliqué. Le contenu du formulaire est validé, et le formulaire est soumis seulement si la validation réussit. Une fois le formulaire soumis, l'événement {{DOMxRef("HTMLFormElement.submit_event", "submit")}} est renvoyé à l'objet `form`.
+La réponse est simple. `submit()` soumet le formulaire, mais c'est tout ce qu'elle fait. `requestSubmit()`, en revanche, agit comme si un bouton de soumission avait été cliqué. Le contenu du formulaire est validé, et le formulaire est soumis seulement si la validation réussit. Une fois le formulaire soumis, l'évènement {{DOMxRef("HTMLFormElement.submit_event", "submit")}} est renvoyé à l'objet `form`.
 
 ## Exemples
 

@@ -3,7 +3,7 @@ title: "HTTP : HyperText Transfer Protocol"
 short-title: HTTP
 slug: Web/HTTP
 l10n:
-  sourceCommit: d1f3f179175c80c18b1b78ba0df0ea7d15ca32cc
+  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
 ---
 
 **_<i lang="en">Hypertext Transfer Protocol</i> (HTTP) (ou protocole de transfert hypertexte en français)_** est un protocole de [la couche application](https://fr.wikipedia.org/wiki/Couche_application) qui permet de transmettre des documents hypermédias, comme HTML.

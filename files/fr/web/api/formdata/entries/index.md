@@ -1,47 +1,46 @@
 ---
-title: FormData.entries()
+title: "FormData : méthode entries()"
+short-title: entries()
 slug: Web/API/FormData/entries
+l10n:
+  sourceCommit: bd15d43260b7e72b1066c04d9d9f3b79129c619c
 ---
 
-{{AvailableInWorkers}}
+{{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
-{{APIRef("XMLHttpRequest API")}}
-
-La methode **FormData.entries()** retourne un {{jsxref("Iteration_protocols",'iterateur')}} permettant d'accéder aux paires clefs/valeurs contenues dans cet objet.
-La clef de chaque paire est une {{jsxref("String")}}. De la même manière, la valeur peut être une {{jsxref("String")}} ou un {{domxref("Blob")}}.
-
-> [!NOTE]
-> Cette methode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+La méthode **`entries()`** de l'interface {{DOMxRef("FormData")}} retourne un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) qui parcourt toutes les paires clé/valeur contenues dans le {{DOMxRef("FormData")}}. La clé de chaque paire est une chaîne de caractères, et la valeur est soit une chaîne de caractères, soit un {{DOMxRef("Blob")}}.
 
 ## Syntaxe
 
-```js
-formData.entries();
+```js-nolint
+entries()
 ```
 
-### Valeur retournée
+### Paramètres
 
-Retourne un {{jsxref("Iteration_protocols","iterateur")}}.
+Aucun.
 
-## Exemple
+### Valeur de retour
+
+Un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) des paires clé/valeur de {{DOMxRef("FormData")}}.
+
+## Exemples
 
 ```js
-// Creation d'un objet FormData
-var formData = new FormData();
-formData.append("key1", "value1");
-formData.append("key2", "value2");
+formData.append("cle1", "valeur1");
+formData.append("cle2", "valeur2");
 
-// Affichage des paires clefs/valeurs
-for (var pair of formData.entries()) {
-  console.log(pair[0] + ", " + pair[1]);
+// Affichage des paires clé/valeur
+for (const paire of formData.entries()) {
+  console.log(paire[0], paire[1]);
 }
 ```
 
-Le resultat est:
+Le résultat est&nbsp;:
 
-```
-key1, value1
-key2, value2
+```plain
+cle1 valeur1
+cle2 valeur2
 ```
 
 ## Spécifications
@@ -54,7 +53,5 @@ key2, value2
 
 ## Voir aussi
 
-- {{domxref("XMLHTTPRequest")}}
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Utiliser les objets FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- [Utiliser des objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
+- L'élément HTML {{HTMLElement("form")}}

@@ -142,7 +142,11 @@ footer a {
 
 ## Синтаксис
 
-{{CSSSyntax}}
+```css-nolint
+:where(<complex-selector-list>) {
+  /* ... */
+}
+```
 
 ## Спецификации
 

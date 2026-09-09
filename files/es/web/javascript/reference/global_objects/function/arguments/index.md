@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
 ---
 
-{{JSRef}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{JSRef}}{{Non-standard_Header}}
 
 > [!NOTE]
 > La propiedad `arguments` de los objetos {{jsxref("Function")}} está en desuso. La forma recomendada de acceder al objeto `arguments` es hacer referencia a la variable {{jsxref("Functions/arguments", "arguments") }} disponible dentro de las funciones.

@@ -3,14 +3,14 @@ title: "Window : propriété menubar"
 short-title: menubar
 slug: Web/API/Window/menubar
 l10n:
-  sourceCommit: 62cedc63226017e9e7d0718b6fea3529ca8dbf37
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`menubar`** de l'interface {{DOMxRef("Window")}} retourne l'objet `menubar`.
 
-Ceci fait partie d'un groupe de propriétés de `Window` qui contiennent une propriété booléenne `visible`, qui représentait autrefois si une partie particulière de l'interface utilisateur d'un navigateur web était visible ou non.
+Ceci fait partie d'un groupe de propriétés de `Window` qui contiennent une propriété booléenne `visible`, qui représente autrefois si une partie particulière de l'interface utilisateur d'un navigateur web est visible ou non.
 
 Pour des raisons de confidentialité et d'interopérabilité, la valeur de la propriété `visible` est maintenant `false` si cette `Window` est une fenêtre s'ouvrant par-dessus (<i lang="en">popup</i> en anglais), sinon `true`.
 

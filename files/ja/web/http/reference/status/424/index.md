@@ -2,7 +2,7 @@
 title: 424 Failed Dependency
 slug: Web/HTTP/Reference/Status/424
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 HTTP の **`424 Failed Dependency`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、要求されたアクションが他のアクションに依存しており、そのアクションが失敗したため、対象のリソースに対してメソッドを実行できなかったことを示します。

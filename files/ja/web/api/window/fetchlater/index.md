@@ -42,7 +42,7 @@ fetchLater(resource, options)
 `fetchLater()` では、[`fetch()` と同じ例外](/ja/docs/Web/API/Window/fetch#例外)に加え、以下の追加の例外が発生する可能性があります。
 
 - {{domxref("QuotaExceededError")}}
-  - : この機能の使用は、利用可能な割り当てを超えたためブロックされました。詳細については、[`fetchLater()` の割り当て](/ja/docs/Web/API/fetchLater_API/fetchLater_quotas) を参照してください。`fetchLater()` を呼び出す側は、特にサードパーティの JavaScript を埋め込んでいる場合、ほぼすべてのケースで防御的プログラミングを行い、`QuotaExceededError` エラーを捕捉する必要があります。
+  - : この機能の使用は、利用可能な割り当てを超えたためブロックされました。詳細については、[`fetchLater()` の割り当て](/ja/docs/Web/API/Fetch_API/Using_Deferred_Fetch) を参照してください。`fetchLater()` を呼び出す側は、特にサードパーティの JavaScript を埋め込んでいる場合、ほぼすべてのケースで防御的プログラミングを行い、`QuotaExceededError` エラーを捕捉する必要があります。
 
 - `RangeError` {{domxref("DOMException")}}
   - : `activateAfter` に負の値が指定された場合に発生します。
@@ -59,7 +59,7 @@ fetchLater(resource, options)
 
 ## 例
 
-[`fetchLater()` の割り当て量](/ja/docs/Web/API/fetchLater_API/fetchLater_quotas) の記事では、割り当て量がどのように適用されるかの例が示されています。
+[`fetchLater()` の割り当て量](/ja/docs/Web/API/Fetch_API/Using_Deferred_Fetch) の記事では、割り当て量がどのように適用されるかの例が示されています。
 
 ### ページから離脱または閉じられるまで`GET`リクエストを遅延させる
 
@@ -175,6 +175,6 @@ detachedWindow.fetchLater("https://origin.example.com");
 ## 関連情報
 
 - [`fetchLater()` API](/ja/docs/Web/API/Fetch_API)
-- [`fetchLater()` の割り当て](/ja/docs/Web/API/fetchLater_API/fetchLater_quotas)
+- [`fetchLater()` の割り当て](/ja/docs/Web/API/Fetch_API/Using_Deferred_Fetch)
 - {{domxref("FetchLaterResult")}}
 - [フェッチ API](/ja/docs/Web/API/Fetch_API)

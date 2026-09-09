@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Text_decoration
 original_slug: Web/CSS/CSS_text_decoration
 ---
 
-{{CSSRef}}
-
 **_CSS Text Decoration_** (ou module des décorations textuelles CSS) est un module CSS qui définit les caractéristiques relatives à la décoration du texte, comme le soulignage, les ombres et les marques d'emphase.
 
 ## Référence

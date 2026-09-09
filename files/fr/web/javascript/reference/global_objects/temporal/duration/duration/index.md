@@ -83,5 +83,5 @@ console.log(d.toString()); // "P1Y2M3W4DT5H6M7.00800901S"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode statique {{JSxRef("Temporal/Duration/from", "Temporal.Duration.from()")}}

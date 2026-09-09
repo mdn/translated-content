@@ -3,7 +3,7 @@ title: "Élément HTML `<h1>-<h6>` : les éléments de titre de section"
 short-title: <h1>-<h6>
 slug: Web/HTML/Reference/Elements/Heading_Elements
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: f398f522d05bb8bfe739ac2417b00712b7888494
 ---
 
 Les éléments [HTML](/fr/docs/Web/HTML) **`<h1>`** à **`<h6>`** représentent les six niveaux de titre de section. `<h1>` correspond au niveau de section le plus haut et `<h6>` correspond au niveau le plus faible. Par défaut, tous les éléments de titre créent une boîte de [niveau bloc](/fr/docs/Glossary/Block-level_content) dans la mise en page, commençant sur une nouvelle ligne et prenant toute la largeur disponible dans leur bloc conteneur.
@@ -53,24 +53,26 @@ h4 {
 
 Ces éléments incluent uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
+Les attributs universels [`headingoffset`](/fr/docs/Web/HTML/Reference/Global_attributes/headingoffset) et [`headingreset`](/fr/docs/Web/HTML/Reference/Global_attributes/headingreset) peuvent être utilisés pour ajuster le niveau de titre calculé de ces éléments.
+
 ## Notes d'utilisation
 
 - Les informations de titre peuvent être utilisées par les agents utilisateur afin de construire automatiquement la table des matières d'un document.
-- Il ne faut pas utiliser des éléments de titre pour ajuster la taille du texte. Pour cela, on utilisera la propriété CSS [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size).
-- Il ne faut pas sauter de niveaux entre les titres&nbsp;: on commencera toujours par `<h1>`, suivi `<h2>` et ainsi de suite.
+- Il ne faut pas utiliser des éléments de titre pour ajuster la taille du texte. Pour cela, on utilise la propriété CSS [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size).
+- Il ne faut pas sauter de niveaux entre les titres&nbsp;: on commence toujours par `<h1>`, suivi `<h2>` et ainsi de suite.
 
 ### Éviter d'avoir plusieurs éléments `<h1>` sur une page
 
-Bien qu'il soit permis par le standard HTML d'utiliser plusieurs éléments `<h1>` sur une même page tant que ceux-ci ne sont pas [imbriqués](#imbrication), cela est considéré comme une mauvaise pratique. Une page devrait généralement avoir un seul élément `<h1>` qui décrit le contenu de la page (semblable à l'élément {{HTMLElement("title")}}).
+Bien qu'il soit permis par le standard HTML d'utiliser plusieurs éléments `<h1>` sur une même page tant que ceux-ci ne sont pas [imbriqués](#imbrication), cela est considéré comme une mauvaise pratique. Une page doit généralement avoir un seul élément `<h1>` qui décrit le contenu de la page (semblable à l'élément {{HTMLElement("title")}}).
 
 > [!NOTE]
 > L'imbrication de plusieurs éléments `<h1>` au sein [d'éléments sectionnants](/fr/docs/Web/HTML/Reference/Elements#sectionnement_du_contenu) imbriqués était autorisée dans d'anciennes versions du standard HTML. Toutefois, cela a toujours été considéré comme une mauvaise pratique et ce n'est plus conforme. Pour en savoir plus, vous pouvez lire le billet [<i lang="en">There Is No Document Outline Algorithm</i> d'Adrian Roselli <sup>(angl.)</sup>](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html).
 
-Mieux vaudra donc utiliser un seul élément `<h1>` par page et [l'imbrication de titres d'autres niveaux](#imbrication) sans sauter de niveaux.
+Mieux vaut donc utiliser un seul élément `<h1>` par page et [l'imbrication de titres d'autres niveaux](#imbrication) sans sauter de niveaux.
 
 ### Définir une taille de police uniforme pour `<h1>`
 
-Avant mai&nbsp;2025, le [standard HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings) définissait que les éléments `<h1>` contenus dans un élément `<section>`, `<article>`, `<aside>` ou `<nav>` devaient s'afficher comme un `<h2>` (taille de police plus petite et {{CSSxRef("margin-block")}} ajustée), ou comme un `<h3>` s'ils étaient imbriqués d'un niveau supplémentaire, et ainsi de suite. Ce style par défaut dépendant du contexte a désormais été [supprimé <sup>(angl.)</sup>](https://github.com/whatwg/html/issues/7867).
+Avant mai&nbsp;2025, le [standard HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings) définit que les éléments `<h1>` contenus dans un élément `<section>`, `<article>`, `<aside>` ou `<nav>` doivent s'afficher comme un `<h2>` (taille de police plus petite et {{CSSxRef("margin-block")}} ajustée), ou comme un `<h3>` s'ils sont imbriqués d'un niveau supplémentaire, et ainsi de suite. Ce style par défaut dépendant du contexte a désormais été [supprimé <sup>(angl.)</sup>](https://github.com/whatwg/html/issues/7867).
 
 Pour garantir un rendu cohérent des `<h1>` dans les navigateurs qui implémentent l'ancien style par défaut dépendant du contexte, utilisez la règle de style suivante&nbsp;:
 
@@ -94,7 +96,7 @@ Alternativement, pour éviter d'écraser d'autres règles de style ciblant `<h1>
 
 ### Navigation
 
-Les personnes qui utilisent des lecteurs d'écran naviguent en sautant de titre en titre afin de déterminer rapidement le contenu de la page. Aussi, il faut éviter de sauter des niveaux de titre. En effet, s'il y a un trou, la personne qui navigue ainsi pourrait se demander où est passé le titre manquant.
+Les personnes qui utilisent des lecteurs d'écran naviguent en sautant de titre en titre afin de déterminer rapidement le contenu de la page. Aussi, il faut éviter de sauter des niveaux de titre. En effet, s'il y a un trou, la personne qui navigue ainsi peut se demander où est passé le titre manquant.
 
 À ne pas faire&nbsp;:
 
@@ -142,7 +144,7 @@ Les titres peuvent être imbriqués comme sous-sections pour refléter l'organis
 <h3>Abdomen</h3>
 ```
 
-Les lecteurs d'écran généreraient une liste comme celle-ci&nbsp;:
+Les lecteurs d'écran génèrent une liste comme celle-ci&nbsp;:
 
 1. `h1` Coléoptères
    1. `h2` Étymologie
@@ -203,7 +205,7 @@ Le contenu sectionnant peut être libellé en utilisant une combinaison des attr
 
 {{EmbedLiveSample("Exemples de contenu sectionné", "100%", 190)}}
 
-Avec cet exemple, un lecteur d'écran annoncera la présence de deux sections [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav), la première appelée «&nbsp;Navigation primaire&nbsp;» et l'autre appelée «&nbsp;Navigation du pied de page&nbsp;». Si les libellés n'avaient pas été fournis, la personne aurait dû consulter le contenu de chaque élément `<nav>` afin de déterminer leur utilité.
+Avec cet exemple, un lecteur d'écran annonce la présence de deux sections [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav), la première appelée «&nbsp;Navigation primaire&nbsp;» et l'autre appelée «&nbsp;Navigation du pied de page&nbsp;». Si les libellés n'ont pas été fournis, la personne a dû consulter le contenu de chaque élément `<nav>` afin de déterminer leur utilité.
 
 - [Utiliser l'attribut `aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 - [Tutoriels sur les libellés pour les régions et la structure des pages, par la WAI <sup>(angl.)</sup>](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)

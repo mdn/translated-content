@@ -3,16 +3,16 @@ title: "ARIA : attribut aria-orientation"
 short-title: aria-orientation
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-orientation
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 4b63d71105e55a4d488b8f8bf8b338d42577a0e6
 ---
 
 L'attribut `aria-orientation` indique si l'orientation d'un élément est horizontale, verticale ou inconnue/ambiguë.
 
 ## Description
 
-Il peut être important pour l'utilisateur·ice de connaître l'orientation afin de savoir comment naviguer dans certains widgets, car l'orientation influence le comportement attendu des flèches gauche, droite, haut et bas. L'attribut `aria-orientation` est utilisé pour indiquer aux technologies d'assistance si l'orientation d'un élément est `horizontal`, `vertical` ou `undefined`.
+Il peut être important pour l'utilisateur·ice de connaître l'orientation afin de savoir comment naviguer dans certains composants, car l'orientation influence le comportement attendu des flèches gauche, droite, haut et bas. L'attribut `aria-orientation` est utilisé pour indiquer aux technologies d'assistance si l'orientation d'un élément est `horizontal`, `vertical` ou `undefined`.
 
-Plusieurs widgets ont des orientations par défaut&nbsp;:
+Plusieurs composants ont des orientations par défaut&nbsp;:
 
 Horizontal par défaut&nbsp;:
 
@@ -30,9 +30,9 @@ Vertical par défaut&nbsp;:
 
 Chaque [`separator`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) doit avoir une `aria-orientation` cohérente avec l'orientation du séparateur.
 
-Lorsque les nœuds d'un arbre sont disposés horizontalement au lieu de la disposition verticale par défaut, ou lorsqu'une liste d'onglets est verticale au lieu de l'horizontale par défaut, la flèche bas se comporte comme le ferait normalement la flèche droite, et la flèche haut se comporte comme la flèche gauche. Dans ces cas, les utilisateur·ice·s de technologies d'assistance doivent connaître l'orientation du widget afin de naviguer correctement.
+Lorsque les nœuds d'un arbre sont disposés horizontalement au lieu de la disposition verticale par défaut, ou lorsqu'une liste d'onglets est verticale au lieu de l'horizontale par défaut, la flèche bas se comporte comme le fait normalement la flèche droite, et la flèche haut se comporte comme la flèche gauche. Dans ces cas, les utilisateur·ice·s de technologies d'assistance doivent connaître l'orientation du composant afin de naviguer correctement.
 
-Les flèches haut et bas sont généralement disponibles pour le défilement normal du navigateur, même lorsque le focus se trouve à l'intérieur d'un arbre ou d'une liste d'onglets. Incluez `aria-orientation` pour alerter les utilisateur·ice·s lorsqu'un widget n'a pas l'orientation par défaut attendue et la navigation associée.
+Les flèches haut et bas sont généralement disponibles pour le défilement normal du navigateur, même lorsque la sélection se trouve à l'intérieur d'un arbre ou d'une liste d'onglets. Incluez `aria-orientation` pour alerter les utilisateur·ice·s lorsqu'un composant n'a pas l'orientation par défaut attendue et la navigation associée.
 
 Rappelez-vous toujours que ARIA ne modifie que la façon dont les technologies d'assistance présentent le contenu à vos utilisateur·ice·s&nbsp;; modifier le comportement des touches fléchées nécessite JavaScript.
 

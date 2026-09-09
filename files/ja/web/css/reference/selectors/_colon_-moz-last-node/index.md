@@ -1,20 +1,24 @@
 ---
-title: :-moz-last-node
+title: CSS `:-moz-last-node` 擬似クラス
+short-title: :-moz-last-node
 slug: Web/CSS/Reference/Selectors/:-moz-last-node
-original_slug: Web/CSS/:-moz-last-node
+l10n:
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-{{Non-standard_header}}
+{{Non-standard_header}}{{SeeCompatTable}}
 
-**`:-moz-last-node`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)であり、他の要素の最後の子要素であるあらゆる要素を表します。 {{Cssxref(":last-child")}} とは異なり、最後の子要素の後に（ホワイトスペース以外の）テキストがあると一致しません。
+**`:-moz-last-node`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)です。他の要素の最後の子要素であるあらゆる要素を表します。 {{Cssxref(":last-child")}} とは異なり、最後の子要素の後に（ホワイトスペース以外の）テキストがあると一致しません。
 
 > [!NOTE]
-> 要素の末尾にあるホワイトスペースは `:-moz-last-node` の決定において無視されます。
+> 要素の末尾にあるホワイトスペースは `:-moz-last-node` の判定において無視されます。
 
 ## 構文
 
-```css-nolint
-:-moz-last-node {}
+```css
+:-moz-last-node {
+  /* ... */
+}
 ```
 
 ## 例
@@ -31,12 +35,12 @@ span:-moz-last-node {
 
 ```html
 <p>
-  <span>This does not match.</span>
-  <span>This matches!</span>
+  <span>これは一致します。</span>
+  <span>これは一致しません。</span>
 </p>
 
 <p>
-  <span>This doesn't match because it's followed by text.</span>
+  <span>これは、その後にテキストがあるため一致しません。</span>
   Blahblah.
 </p>
 ```
@@ -48,6 +52,10 @@ span:-moz-last-node {
 ## 仕様書
 
 どの仕様にも含まれていません。
+
+## ブラウザーの互換性
+
+{{Compat}}
 
 ## 関連情報
 

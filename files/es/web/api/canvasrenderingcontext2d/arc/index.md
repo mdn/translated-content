@@ -62,8 +62,7 @@ Edite el código de abajo y vea su actualización de cambios en vivo en el lienz
 <textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.arc(50, 50, 50, 0, 2 * Math.PI, false);
-ctx.stroke();</textarea
->
+ctx.stroke();</textarea>
 ```
 
 ```js hidden

@@ -195,4 +195,4 @@ try {
 ## 같이 보기
 
 - {{jsxref("Statements/try...catch", "try...catch")}}
-- {{jsxref("Global_Objects/Error", "Error")}}
+- {{jsxref("Error")}}

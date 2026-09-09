@@ -105,6 +105,6 @@ console.log(
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal")}}
-- L'objet {{JSxRef("Temporal.PlainDate")}}
-- L'objet {{JSxRef("Temporal.PlainYearMonth")}}
+- L'objet natif {{JSxRef("Temporal")}}
+- L'objet natif {{JSxRef("Temporal.PlainDate")}}
+- L'objet natif {{JSxRef("Temporal.PlainYearMonth")}}

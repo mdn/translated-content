@@ -25,9 +25,9 @@ For more information about the constructor syntax and the parameters, see _[Type
   - : Returns a number value of the element size. `8` in the case of an `Float64Array`.
 - Float64Array.length
   - : Static length property whose value is 0. For the actual length (number of elements), see {{jsxref("TypedArray.prototype.length", "Float64Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Float64Array.name")}}
+- {{jsxref("Function.name", "Float64Array.name")}}
   - : Returns the string value of the constructor name. In the case of the `Float64Array` type: "Float64Array".
-- {{jsxref("TypedArray.prototype", "Float64Array.prototype")}}
+- {{jsxref("TypedArray", "Float64Array.prototype")}}
   - : Prototype for the _TypedArray_ objects.
 
 ## Methods
@@ -39,7 +39,7 @@ For more information about the constructor syntax and the parameters, see _[Type
 
 ## `Float64Array` prototype
 
-All `Float64Array` objects inherit from {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+All `Float64Array` objects inherit from {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Properties
 
@@ -106,7 +106,7 @@ All `Float64Array` objects inherit from {{jsxref("TypedArray.prototype", "%Typed
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Float64Array.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Float64Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Float64Array.prototype[@@iterator]()")}}
   - : Returns a new `Array Iterator` object that contains the values for each index in the array.
 
 ## Examples
@@ -152,7 +152,7 @@ var float64 = new Float64Array(iterable);
 
 ## Compatibility notes
 
-Starting with ECMAScript 2015, `Float64Array` constructors require to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a `Float64Array` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
+Starting with ECMAScript 2015, `Float64Array` constructors require to be constructed with a {{jsxref("new")}} operator. Calling a `Float64Array` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
 
 ```js example-bad
 var dv = Float64Array([1, 2, 3]);

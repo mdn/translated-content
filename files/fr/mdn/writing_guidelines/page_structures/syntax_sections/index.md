@@ -2,7 +2,7 @@
 title: Sections de syntaxe
 slug: MDN/Writing_guidelines/Page_structures/Syntax_sections
 l10n:
-  sourceCommit: 14acf1aa7885157debdf1b6111f4bd10c064ec60
+  sourceCommit: c6e5080f41fc8ef79e487e01c6978069b7819423
 ---
 
 La section de syntaxe d'une page de référence MDN contient un encadré de syntaxe définissant la syntaxe exacte d'une fonctionnalité (par exemple, quels paramètres peut-elle accepter, lesquels sont optionnels&nbsp;?). Cet article explique comment rédiger les encadrés de syntaxe pour les articles de référence.
@@ -11,7 +11,7 @@ La section de syntaxe d'une page de référence MDN contient un encadré de synt
 
 Les sections de syntaxe pour les pages de référence d'API sont rédigées manuellement et peuvent varier légèrement selon la fonctionnalité documentée.
 La section commence par un titre (généralement un titre de niveau deux `##`) nommé «&nbsp;Syntaxe&nbsp;», et doit être placée en haut de la page de référence (juste sous l'introduction).
-Sous le titre se trouve un bloc de code affichant la syntaxe exacte de la fonctionnalité, délimité par des backticks de code fence ` ```[langage-markup] `.
+Sous le titre se trouve un bloc de code affichant la syntaxe exacte de la fonctionnalité, délimité par des accents graves (<i lang="en">backticks</i> en anglais) de bloc de code ` ```[langage-markup] `.
 
 L'exemple ci-dessous montre le code Markdown pour une section Syntaxe typique (pour une fonction JavaScript)&nbsp;:
 
@@ -27,15 +27,15 @@ slice(start, end)
 
 > [!NOTE]
 > Le langage de balisage utilisé ici est `js-nolint`, où `js` indique que la coloration JavaScript doit être utilisée.
-> Pour les sections de syntaxe JavaScript, `-nolint` est aussi requis car la section syntaxe n'est volontairement pas du «&nbsp;vrai&nbsp;» JavaScript et on ne veut pas que le linter la «&nbsp;corrige&nbsp;» (les valeurs de retour et les points-virgules de fin de ligne sont omis).
+> Pour les sections de syntaxe JavaScript, `-nolint` est aussi requis, car la section syntaxe n'est volontairement pas du «&nbsp;vrai&nbsp;» JavaScript et on ne veut pas que le linter la «&nbsp;corrige&nbsp;» (les valeurs de retour et les points-virgules de fin de ligne sont omis).
 
 ### Règles générales de style
 
 Quelques règles à suivre pour le balisage dans le bloc de syntaxe&nbsp;:
 
 - **Ne pas** terminer une ligne par un point-virgule `;`. Les sections de syntaxe ne sont pas destinées à montrer du code exécutable. Il n'est donc pas pertinent d'afficher des points-virgules.
-- **Ne pas** utiliser `<code>` dans le bloc de syntaxe (ni dans aucun bloc d'exemple de code sur MDN). Non seulement c'est inutile, mais notre balisage ne le veut pas et il ne s'affichera pas comme vous le souhaitez.
-- Spécifiez uniquement la fonction et ses arguments. Exemples «&nbsp;corrigés&nbsp;» ci-dessous&nbsp;:
+- **Ne pas** utiliser `<code>` dans le bloc de syntaxe (ni dans aucun bloc d'exemple de code sur MDN). Non seulement c'est inutile, mais notre balisage ne le veut pas et il ne s'affiche pas comme vous le souhaitez.
+- Définissez uniquement la fonction et ses arguments. Exemples «&nbsp;corrigés&nbsp;» ci-dessous&nbsp;:
 
   ```js-nolint
   querySelector(selector)
@@ -71,7 +71,7 @@ URL.createObjectURL(object)
 
 Les méthodes pouvant être utilisées de plusieurs façons doivent être détaillées sur plusieurs lignes, montrant toutes les variantes possibles.
 
-Chaque option doit être sur sa propre ligne, sans commentaire ni affectation par option. Par exemple, {{JSxRef("Array.prototype.slice()")}} a deux paramètres optionnels, et serait documentée ainsi&nbsp;:
+Chaque option doit être sur sa propre ligne, sans commentaire ni affectation par option. Par exemple, {{JSxRef("Array.prototype.slice()")}} a deux paramètres optionnels, et est documentée ainsi&nbsp;:
 
 ```js-nolint
 slice()
@@ -186,7 +186,7 @@ splice(start, deleteCount, item1, item2, /* …, */ itemN)
 
 Ajoutez ensuite une sous-section «&nbsp;Paramètres&nbsp;», qui explique chaque paramètre dans une liste de description. Les paramètres objets peuvent inclure une liste de description imbriquée détaillant chaque membre. Les paramètres optionnels doivent être marqués avec la macro \\{{Optional_Inline}} à côté de leur nom.
 
-Le nom de chaque paramètre doit être entouré de backticks markdown `` ` ` ``.
+Le nom de chaque paramètre doit être entouré de accents graves (<i lang="en">backticks</i> en anglais) markdown `` ` ` ``.
 
 > [!NOTE]
 > Même si la fonctionnalité ne prend aucun paramètre, il faut inclure une section «&nbsp;Paramètres&nbsp;» avec le contenu «&nbsp;Aucun&nbsp;».
@@ -203,7 +203,7 @@ Aucune (\{{JSxRef("undefined")}}).
 
 Enfin, ajoutez une sous-section «&nbsp;Exceptions&nbsp;», qui explique quelles exceptions peuvent être levées si un problème survient lors de l'appel du constructeur/méthode. Cela peut être dû à une faute de frappe dans un nom de paramètre, à une valeur de mauvais type, à un problème d'environnement (par exemple, tentative d'utilisation d'une fonctionnalité réservée au contexte sécurisé dans un contexte non sécurisé), ou autre.
 
-Pour déterminer les exceptions levées par une méthode, il faut souvent consulter la spécification. L'analyse des étapes détaillées de la spec permet généralement d'obtenir la liste des exceptions et des situations qui les déclenchent.
+Pour déterminer les exceptions levées par une méthode, il faut souvent consulter la spécification. L'analyse des étapes détaillées de la spécification permet généralement d'obtenir la liste des exceptions et des situations qui les déclenchent.
 
 Les noms et explications des exceptions doivent être inclus dans une liste de description.
 
@@ -224,31 +224,35 @@ Si l'accès à la propriété peut lever une exception, ajoutez une sous-section
 
 Les pages de référence des objets natifs JavaScript suivent les mêmes règles de base que les pages de référence d'API (pour les méthodes et propriétés). Quelques différences peuvent être observées&nbsp;:
 
-- Pour les objets natifs avec un seul constructeur, la syntaxe du constructeur est souvent incluse sur la page d'accueil de l'objet. Voir {{JSxRef("Date")}} par exemple. Les méthodes statiques (celles qui existent sur l'objet `Date` lui-même) sont listées sous «&nbsp;Méthodes&nbsp;», tandis que les méthodes d'instance sont sous «&nbsp;Méthodes de Date.prototype&nbsp; ».
+- Pour les objets natifs avec un seul constructeur, la syntaxe du constructeur est souvent incluse sur la page d'accueil de l'objet. Voir {{JSxRef("Date")}} par exemple. Les méthodes statiques (celles qui existent sur l'objet `Date` lui-même) sont listées sous «&nbsp;Méthodes&nbsp;», tandis que les méthodes d'instance sont sous «&nbsp;Méthodes de Date.prototype&nbsp;».
 - Les méthodes sans paramètres ou exceptions ont plus souvent ces sous-sections omises sur les pages de référence JavaScript. Voir {{JSxRef("Date.getDate()")}} et {{JSxRef("Date.now()")}} par exemple.
 
 ## Syntaxe de référence CSS
 
 ### Propriétés
 
-Les pages de référence des propriétés CSS incluent une section «&nbsp;Syntaxe&nbsp;», autrefois placée en haut de la page mais de plus en plus souvent sous une section montrant un exemple d'utilisation typique et un exemple interactif (voir {{CSSxRef("animation")}} par exemple).
+Les pages de référence des propriétés CSS incluent une section «&nbsp;Syntaxe&nbsp;». Elle est suivie d'un exemple interactif illustrant ce que fait la propriété. Pour les propriétés abrégées, elle suit la section «&nbsp;Propriétés constitutives&nbsp;».
+
+La section «&nbsp;Syntaxe&nbsp;» elle-même commence par un bloc de code illustrant les déclarations typiques pour la propriété (voir {{CSSxRef("animation")}} par exemple).
 
 > [!NOTE]
 > Cela s'explique par la complexité de la syntaxe formelle CSS, peu utilisée par la majorité des lecteur·ice·s MDN, et qui peut rebuter les débutant·e·s. La vraie syntaxe et les exemples sont plus utiles à la plupart des gens.
 
-Dans la section syntaxe, on trouve les éléments suivants.
+À l'intérieur de la section «&nbsp;Syntaxe&nbsp;», vous trouvez les sous-sections suivantes.
 
-#### Texte d'explication optionnel
+#### Section valeur
 
-Certaines propriétés CSS sont évidentes et n'ont pas besoin d'explication supplémentaire (par exemple {{CSSxRef("color")}}). D'autres sont plus complexes et nécessitent des explications sur l'ordre des valeurs, la multiplicité, etc. (voir {{CSSxRef("animation")}}). Dans ces cas, ajoutez une explication avant les sous-sections.
+Vous devez inclure une section «&nbsp;Valeurs&nbsp;».
 
-#### Section valeurs
+Cette section commence par une phrase introductive expliquant comment la valeur de la propriété est construite — une seule valeur, une ou deux valeurs, ou une liste séparée par des espaces ou des virgules — ainsi que toute contrainte sur l'ordre ou la combinaison. Commencez cette phrase par «&nbsp;Cette propriété est définie comme&nbsp;» et terminez-la par deux-points, de sorte qu'elle mène à la liste de définition des types de valeurs CSS et des mots-clés qui composent la valeur de la propriété. Par exemple, la section [valeurs](/fr/docs/Web/CSS/Reference/Properties/font-style#valeurs) de la propriété `font-style` commence sa liste de définition par cette phrase&nbsp;:
 
-Ajoutez ensuite une section «&nbsp;Valeurs&nbsp;» — elle contient une liste de description expliquant les types de valeurs CSS qui composent la valeur de la propriété. Chaque type doit être entouré de chevrons et lié à la page de référence MDN correspondante si elle existe. Par exemple, voir la propriété {{CSSxRef("border")}} — elle référence trois types de valeurs, dont un seul est lié ({{CSSxRef("&lt;color&gt;")}}).
+> Cette propriété est définie comme l'une des valeurs de mot-clé suivantes. Le mot-clé `oblique` peut éventuellement être suivi d'un `<angle>`&nbsp;:
+
+Dans la liste de définition, encadrez chaque type de valeur par des chevrons et créez un lien vers la page de référence MDN couvrant ce type de valeur si une page existe pour celui-ci. Pour un exemple, voir la section «&nbsp;Valeurs&nbsp;» de {{CSSxRef("list-style-image")}}.
 
 #### Syntaxe formelle
 
-La dernière section, «&nbsp;Syntaxe formelle&nbsp;», est générée automatiquement avec la macro `\{{CSSSyntax}}`. Cette macro récupère les données des spécifications CSS via le package [@webref/css npm <sup>(angl.)</sup>](https://www.npmjs.com/package/@webref/css). Pour inclure la syntaxe formelle&nbsp;:
+La dernière section, «&nbsp;Syntaxe formelle&nbsp;», est générée automatiquement avec la macro `\{{CSSSyntax}}`. Cette macro récupère les données des spécifications CSS avec le package [@webref/css npm <sup>(angl.)</sup>](https://www.npmjs.com/package/@webref/css). Pour inclure la syntaxe formelle&nbsp;:
 
 1. Ajoutez un titre&nbsp;: `## Syntaxe formelle`.
 2. Placez la macro `\{{CSSSyntax}}` juste en dessous.

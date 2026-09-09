@@ -13,34 +13,34 @@ slug: WebAssembly/Reference/JavaScript_interface
 
 Основное использование `WebAssembly` следующее:
 
-- Загрузка кода WebAssembly, с помощью функции {{jsxref("WebAssembly.instantiate()")}}.
-- Создание новой памяти и таблицы экземпляров с помощью конструкторов {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}}.
-- Обеспечение возможности управлять ошибками, которые появляются в WebAssembly с помощью конструкторов {{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}}.
+- Загрузка кода WebAssembly, с помощью функции [`WebAssembly.instantiate()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiate).
+- Создание новой памяти и таблицы экземпляров с помощью конструкторов [`WebAssembly.Memory()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Memory)/[`WebAssembly.Table()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Table).
+- Обеспечение возможности управлять ошибками, которые появляются в WebAssembly с помощью конструкторов [`WebAssembly.CompileError()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/CompileError)/[`WebAssembly.LinkError()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/LinkError)/[`WebAssembly.RuntimeError()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError).
 
 ## Методы
 
-- {{jsxref("WebAssembly.instantiate()")}}
+- [`WebAssembly.instantiate()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiate)
   - : Основное API для компиляции и создания экземпляра кода WebAssembly, возвращающее `Module` и его первый `Instance`.
-- {{jsxref("WebAssembly.compile()")}}
-  - : Компилирует {{jsxref("WebAssembly.Module")}} из бинарного кода WebAssembly, оставляя создание экземпляра отдельным шагом.
-- {{jsxref("WebAssembly.validate()")}}
+- [`WebAssembly.compile()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/compile)
+  - : Компилирует [`WebAssembly.Module`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Module) из бинарного кода WebAssembly, оставляя создание экземпляра отдельным шагом.
+- [`WebAssembly.validate()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/validate)
   - : Проверяет представленный типизированный массив бинарного кода WebAssembly, возвращая в зависимости от того были ли байты кода WebAssembly валидны (`true`) или (`false`).
 
 ## Конструкторы
 
-- {{jsxref("WebAssembly.Module()")}}
+- [`WebAssembly.Module()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Module)
   - : Создаёт новый объект WebAssembly `Module`.
-- {{jsxref("WebAssembly.Instance()")}}
+- [`WebAssembly.Instance()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Instance)
   - : Создаёт новый объект WebAssembly `Instance`.
-- {{jsxref("WebAssembly.Memory()")}}
+- [`WebAssembly.Memory()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Memory)
   - : Создаёт новый объект WebAssembly `Memory`.
-- {{jsxref("WebAssembly.Table()")}}
+- [`WebAssembly.Table()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Table)
   - : Создаёт новый объект WebAssembly `Table`.
-- {{jsxref("WebAssembly.CompileError()")}}
+- [`WebAssembly.CompileError()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/CompileError)
   - : Создаёт новый объект WebAssembly `CompileError`.
-- {{jsxref("WebAssembly.LinkError()")}}
+- [`WebAssembly.LinkError()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/LinkError)
   - : Создаёт новый объект WebAssembly `LinkError`.
-- {{jsxref("WebAssembly.RuntimeError()")}}
+- [`WebAssembly.RuntimeError()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
   - : Создаёт новый объект WebAssembly `RuntimeError`.
 
 ## Примеры

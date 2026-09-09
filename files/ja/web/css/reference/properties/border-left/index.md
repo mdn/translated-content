@@ -1,11 +1,12 @@
 ---
-title: border-left
+title: CSS `border-left` プロパティ
+short-title: border-left
 slug: Web/CSS/Reference/Properties/border-left
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-**`border-left`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、要素の左側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)のプロパティをすべて設定します。
+**`border-left`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、要素の左側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)のプロパティをすべて設定します。
 
 {{InteractiveExample("CSS デモ: border-left")}}
 
@@ -47,22 +48,6 @@ border-left: 4mm ridge rgb(211 220 50 / 0.6);
 }
 ```
 
-他の一括指定プロパティと同様に、 `border-left` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。次のコードを考えてください。
-
-```css
-border-left-style: dotted;
-border-left: thick green;
-```
-
-これは、実際には以下と同じです。
-
-```css
-border-left-style: dotted;
-border-left: none thick green;
-```
-
-`border-left` の前で設定された {{cssxref("border-left-style")}} の値は無視されます。 {{cssxref("border-left-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
-
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。
@@ -97,6 +82,24 @@ border-left: unset;
 - {{cssxref("&lt;color&gt;")}}
   - : {{cssxref("border-left-color")}} を参照してください。
 
+## 解説
+
+他の一括指定プロパティと同様に、 `border-left` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティはデフォルト値が設定されます。次のコードを考えてください。
+
+```css
+border-left-style: dotted;
+border-left: thick green;
+```
+
+これは、実際には以下と同じです。
+
+```css
+border-left-style: dotted;
+border-left: none thick green;
+```
+
+`border-left` の前で設定された {{cssxref("border-left-style")}} の値は無視されます。 {{cssxref("border-left-style")}} のデフォルト値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
+
 ## 公式定義
 
 {{CSSInfo}}
@@ -107,7 +110,7 @@ border-left: unset;
 
 ## 例
 
-### 左の境界の適用
+### 左側の境界の適用
 
 #### HTML
 

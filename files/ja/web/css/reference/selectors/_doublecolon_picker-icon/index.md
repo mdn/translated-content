@@ -1,12 +1,10 @@
 ---
-title: ::picker-icon
+title: CSS `::picker-icon` 擬似クラス
+short-title: ::picker-icon
 slug: Web/CSS/Reference/Selectors/::picker-icon
-original_slug: Web/CSS/::picker-icon
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
-
-{{SeeCompatTable}}
 
 **`::picker-icon`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、アイコンが関連付けられたフォームコントロール内のピッカーアイコンを対象とします。[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)の場合、 `<select>` 要素に示される矢印アイコン（閉じられた状態では下向きを指す）を選択します。
 
@@ -20,7 +18,7 @@ l10n:
 
 ## 解説
 
-`::picker-icon`擬似要素は、フォームコントロールのピッカーアイコン、すなわちコントロールボタン上に表示させるアイコンを対象とします。 元の要素にピッカーがあり、かつ {{cssxref("appearance")}} プロパティの `base-select` 値によって基本的な外観が設定されている場合にのみ、対象として利用できます。 生成されたボックスは、 {{cssxref("::after")}} 擬似要素によって生成されたボックスの後に現れ、既定のブラウザースタイルシートで指定されたアイコンが表示されます。 {{cssxref("content")}} プロパティを使用してカスタマイズできます。
+`::picker-icon` 擬似要素は、フォームコントロールのピッカーアイコン、すなわちコントロールボタン上に表示させるアイコンを対象とします。 元の要素にピッカーがあり、かつ {{cssxref("appearance")}} プロパティの `base-select` 値によって基本的な外観が設定されている場合にのみ、対象として利用できます。 生成されたボックスは、 {{cssxref("::after")}} 擬似要素によって生成されたボックスの後に現れ、既定のブラウザースタイルシートで指定されたアイコンが表示されます。 {{cssxref("content")}} プロパティを使用してカスタマイズできます。
 
 `::picker-icon` セレクターを使用すると、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)のインライン末尾側にある下向きの矢印を選択できます。例えば、アイコンの色やサイズをカスタマイズしたり、別のアイコンに（{{cssxref("content")}} や [SVG](/ja/docs/Web/SVG) を使用して）置き換えたり、ピッカーが開くための操作時と閉じられた時にアニメーションを適用したい場合に便利です。
 
@@ -33,7 +31,7 @@ l10n:
 
 ### ピッカーアイコンのアニメーション
 
-カスタマイズ可能な選択機能を利用するには、 `<select>` 要素とそのピッカーの両方に、 {{cssxref("appearance")}} 値として `base-select` を設定する必要があります：
+カスタマイズ可能な選択機能を利用するには、 `<select>` 要素とそのピッカーの両方に、 {{cssxref("appearance")}} 値として `base-select` を設定する必要があります。
 
 ```css
 select,

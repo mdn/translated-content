@@ -61,7 +61,7 @@ forEach(callbackFn, thisArg)
 - **순회 중인 `Set` 객체**
 
 그러나 `Set`은 키 값을 사용하지 않으므로, 처음 두 개의 매개변수 모두 **요소 값**을 받습니다.
-이는 {{jsxref("Map.foreach", "Map")}}과 {{jsxref("Array.forEach","Array")}}에서
+이는 {{jsxref("Map.forEach", "Map")}}과 {{jsxref("Array.forEach","Array")}}에서
 사용하는 `forEach()`와 동일한 형태를 유지하기 위해서 입니다.
 
 `thisArg` 매개변수를 `forEach()`에 제공한 경우

@@ -2,7 +2,7 @@
 title: 429 Too Many Requests
 slug: Web/HTTP/Reference/Status/429
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 HTTP の **`429 Too Many Requests`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、クライアントが指定時間内にたくさんリクエストを送信しすぎたことを示します。
@@ -31,14 +31,14 @@ Host: example.com
 ```
 
 この例では、クライアントが 1 分あたりのリクエスト数が設定したしきい値を超えたときに、サーバー全体の速度制限が有効になります。
-リクエストは 60 分後にこのクライアントに再び許可されることを示す {{HTTPHeader("Retry-After")}} ヘッダーとともに 429 レスポンスを返します。
+429 レスポンスが、{{HTTPHeader("Retry-After")}} ヘッダーをつけて返されます。このヘッダーは、3600 秒（60 分）後にもこのクライアントからのリクエストが再び許可されることを示しています。
 
 ```http
 HTTP/1.1 429 Too Many Requests
 Content-Type: text/html
 Retry-After: 3600
 
-<html>
+<html lang="en-US">
   <head>
     <title>Too Many Requests</title>
   </head>

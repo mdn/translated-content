@@ -74,4 +74,4 @@ print(e.toString()); // 'привет'
 
 ## Смотрите также
 
-- {{jsxref("Error.prototype.toSource()")}}
+- {{jsxref("Error.prototype.toString()", "Error.prototype.toSource()")}}

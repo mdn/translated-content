@@ -107,4 +107,4 @@ Cela s'explique par le fait que pendant [la guerre sino-japonaise](https://fr.wi
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Date")}}
+- L'objet natif {{JSxRef("Date")}}

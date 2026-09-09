@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 758ddcdfb06f53955fa3c05dd32e7e4e53fd3009
 ---
 
-{{Deprecated_Header}}
-
 > [!WARNING]
 > 若有可能，建議作者使用較新的 {{cssxref("clip-path")}} 屬性來取代。
 

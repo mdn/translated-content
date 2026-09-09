@@ -22,7 +22,7 @@ generatorObject.return(value);
 
 ## 반환 값
 
-두 개의 속성을 가진 {{jsxref("Global_Objects/Object", "객체")}}이고, 이 속성은 다음과 같습니다.
+두 개의 속성을 가진 {{jsxref("Object", "객체")}}이고, 이 속성은 다음과 같습니다.
 
 - `done`
   - : 불리언 값입니다.

@@ -1,91 +1,100 @@
 ---
-title: Cómo crear widgets de formularios personalizados
+title: Cómo crear controles de formularios personalizados
+short-title: Controles de formularios personalizados
 slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls
-original_slug: Learn/Forms/How_to_build_custom_form_controls
+l10n:
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript", "Learn_web_development/Extensions/Forms")}}
 
-Hay muchos casos donde los [widgets de formularios HTML disponibles](/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls) simplemente no son suficientes. si desea [establecer un estilo avanzado](/es/docs/Learn/Forms/Advanced_form_styling) en algunos widgets como el elemento {{HTMLElement("select")}} o si desea proporcionar comportamientos personalizados, no tiene más opción que crear sus propios widgets.
+Hay casos en los que los controles de formulario HTML nativos disponibles pueden parecer insuficientes. Por ejemplo, si necesitas [aplicar un estilo avanzado](/es/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling) a algunos controles, como el elemento {{HTMLElement("select")}}, o si quieres ofrecer comportamientos personalizados, puedes considerar construir tus propios controles.
 
-En este aartículo, veremos cómo construir dicho widget. Para ello, trabajaremos con un ejemplo: Reconstruir el elemento {{HTMLElement("select")}}.
+En este artículo veremos cómo construir un control personalizado. Para ello, trabajaremos con un ejemplo: reconstruir el elemento {{HTMLElement("select")}}. También hablaremos de cómo, cuándo y si tiene sentido construir tu propio control, y qué hay que tener en cuenta cuando construir un control es un requisito.
 
 > [!NOTE]
-> Nos enfocaremos en construir los widgets, no en cómo hacer que el código sea genérico y reutilizable; eso implicaría algún código JavaScript no trivial y manipulación del DOM en un contexto desconocido, y eso está fuera del alcance de este artículo.
+> Nos centraremos en construir el control, no en cómo hacer que el código sea genérico y reutilizable; eso implicaría código JavaScript no trivial y manipulación del DOM en un contexto desconocido, lo cual queda fuera del alcance de este artículo.
 
-## Diseño, estructura, y semántica
+## Diseño, estructura y semántica
 
-Antes de crear un widget personalizado, debería iniciar por averiguar exactamente qué es lo que desea. Esto le ahorarrá tiempo considerable. En particular, es importante definir claramente todos los estados de su widget. Para hacer esto, es bueno comenzar con un widget existente, cuyos estados y comportamientos son bien conocidos, por lo que simplemente puede imitarlos tanto como sea posible.
+Antes de construir un control personalizado, deberías empezar por definir exactamente lo que quieres. Esto te ahorrará un tiempo precioso. En particular, es importante definir claramente todos los estados de tu control. Para ello, es buena idea partir de un control existente cuyos estados y comportamiento sean bien conocidos, de modo que puedas imitarlos tanto como sea posible.
 
 En nuestro ejemplo, reconstruiremos el elemento {{HTMLElement("select")}}. Este es el resultado que queremos lograr:
 
-![The three states of a select box](/files/4481/custom-select.png)
+![Los tres estados de un cuadro de selección](custom-select.png)
 
-Esta captura de pantall muestra los tres estados principales de nuestro widget: el estado normal (a la izquiera); el estado activo (en el centro) y el estado abierto (a la derecha).
+Esta captura de pantalla muestra los tres estados principales de nuestro control: el estado normal (a la izquierda), el estado activo (en el medio) y el estado abierto (a la derecha).
 
-En términos de comportamiento, queremos que nuestro widget sea utilizable tanto con un ratón como con un teclado, al igual que cualquier widget nativo. Comencemos por definir cómo el widget llega a cada estado:
+En cuanto al comportamiento, estamos recreando un elemento HTML nativo. Por lo tanto, debería tener los mismos comportamientos y la misma semántica que el elemento HTML nativo. Necesitamos que nuestro control se pueda usar tanto con el ratón como con el teclado, y que sea comprensible para un lector de pantalla, igual que cualquier control nativo. Empecemos por definir cómo el control llega a cada estado:
 
-El widget está en su estado normal cuando:
+**El control está en su estado normal cuando:**
 
-- La página carga
-- El widget estaba activo y el usuario hace clic en cualquier lugar fuera del widget
-- El widget estaba activo y el usuario mueve el foco a otro widget usando el teclado
+- la página se carga.
+- el control estaba activo y el usuario hace clic en cualquier lugar fuera de él.
+- el control estaba activo y el usuario mueve el foco a otro control usando el teclado (por ejemplo, la tecla <kbd>Tab</kbd>).
 
-> [!NOTE]
-> Mover el foco al rededor de la página generalmente se hace presionando la tecla de tabulación, pero este no es el estándar en todas partes. Por ejemplo, el ciclo a través de enlaces en una página se realiza en Safari de forma predeterminada usando la combinación [combinación Opction+Tab](https://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/).
+**El control está en su estado activo cuando:**
 
-El widget está en su estado activo cuando:
+- el usuario hace clic en él o lo toca en una pantalla táctil.
+- el usuario pulsa la tecla tabulador y el control obtiene el foco.
+- el control estaba en su estado abierto y el usuario hace clic en él.
 
-- El usuario hace clic en él
-- El usuario presiona la tecla tab y obtiene foco
-- El widget estaba en su estado abierto y el usuario hace clic en el widget.
+**El control está en su estado abierto cuando:**
 
-El widget está en su estado abierto cuando:
+- el control se encuentra en cualquier estado distinto de abierto y el usuario hace clic en él.
 
-- El widget está en cualquier otro estado diferente a abierto y el usuario hace clic en él.
+Una vez que sabemos cómo cambiar de estado, es importante definir cómo cambiar el valor del control:
 
-Una vez que sabemos cómo cambiar los estados, es importante definir cómo cambiar el valor del widget:
+**El valor cambia cuando:**
 
-El valor cambia cuando:
+- el usuario hace clic en una opción mientras el control está en el estado abierto.
+- el usuario pulsa las flechas hacia arriba o hacia abajo mientras el control está en su estado activo.
 
-- El usuario hace clic en una opción cuando el widget está en estado abierto
-- El usuario pulsa las teclas de flecha hacia arriba o hacia abajocuando el widget está en estado activo
+**El valor no cambia cuando:**
 
-Finalmente, definamos cómo se comportarán las opciones del widget:
+- el usuario pulsa la flecha hacia arriba cuando la primera opción está seleccionada.
+- el usuario pulsa la flecha hacia abajo cuando la última opción está seleccionada.
 
-- Cuando se abre el widget, se resalta la opción seleccionada
-- Cuando el ratón está sobre una opción, la opción se resalta y la opción resaltada anteriormente vuelve a su estado normal
+Por último, definamos cómo se comportarán las opciones del control:
 
-Para los fines de nuestro ejemplo, nos detendremos con eso; sin embargo, si eres un lector cuidadoso, notarás que faltan algunos comportamientos. Por ejemplo, ¿qué crees que sucederá si el usuario pulsa la tecla de tabulación mientras el widget está en estado abierto? La respuesta es ... nada. OK, el comportamiento correcto parece obvio, pero el hecho es que, como no está definido en nuestras especificaciones, es muy fácil pasar por alto este comportamiento. Esto es especialmente cierto en un entorno de equipo cuando las personas que diseñan el comportamiento del widget son diferentes de las que lo implementan.
+- Cuando el control se abre, la opción seleccionada se resalta.
+- Cuando el ratón está sobre una opción, esa opción se resalta y la opción resaltada previamente vuelve a su estado normal.
 
-Otro ejemplo divertido: ¿qué pasará si el usuario pulsa las teclas de flecha hacia arriba o hacia abajo mientras el widget está en estado abierto? Este es un poco más complicado. Si considera que el estado activo y el estado abierto son completamente diferentes, la respuesta es nuevamente "no pasará nada" porque no definimos ninguna interacción de teclado para el estado abierto. Por otro lado, si considera que el estado activo y el estado abierto se superponen un poco, el valor puede cambiar pero la opción definitivamente no se resaltará en consecuencia, una vez más porque no definimos ninguna interacción del teclado sobre las opciones cuando el widget es en su estado abierto (solo hemos definido lo que debería suceder cuando se abre el widget, pero nada después de eso).
+Para los propósitos de nuestro ejemplo, nos detendremos ahí; sin embargo, si eres un lector atento, notarás que faltan algunos comportamientos. Por ejemplo, ¿qué crees que pasará si el usuario pulsa la tecla tabulador mientras el control está en su estado abierto? La respuesta es _nada_. Vale, el comportamiento correcto parece obvio, pero el hecho es que, como no está definido en nuestras especificaciones, es muy fácil pasarlo por alto. Esto es especialmente cierto en un entorno de equipo, cuando las personas que diseñan el comportamiento del control son distintas de las que lo implementan.
 
-En nuestro ejemplo, las especificaciones faltantes son obvias, así que las manejaremos, pero puede ser un problema real en widgets nuevos y exóticos, para los cuales nadie tiene la menor idea de cuál es el comportamiento correcto. Por lo tanto, siempre es bueno pasar tiempo en esta etapa de diseño, porque si defines un comportamiento deficiente u olvidas definir uno, será muy difícil redefinirlo una vez que los usuarios se hayan acostumbrado. Si tiene dudas, solicite las opiniones de los demás y, si tiene el presupuesto para ello, no dude en realizar las pruebas de usuario. Este proceso se llama Diseño UX. Si desea obtener más información sobre este tema, debe consultar los siguientes recursos útiles:
+Otro ejemplo curioso: ¿qué pasará si el usuario pulsa las flechas hacia arriba o hacia abajo mientras el control está en el estado abierto? Este es un poco más complicado. Si consideras que el estado activo y el estado abierto son completamente distintos, la respuesta vuelve a ser "no pasará nada", porque no definimos ninguna interacción de teclado para el estado abierto. Por otro lado, si consideras que el estado activo y el estado abierto se solapan un poco, el valor podría cambiar, pero la opción definitivamente no se resaltará en consecuencia, de nuevo porque no definimos ninguna interacción de teclado sobre las opciones cuando el control está en su estado abierto (solo definimos qué debe pasar cuando el control se abre, pero nada después de eso).
+
+Tenemos que pensar un poco más allá: ¿qué pasa con la tecla escape? Al pulsar la tecla <kbd>Esc</kbd> se cierra un select abierto. Recuerda que, si quieres ofrecer la misma funcionalidad que el elemento nativo {{htmlelement('select')}} existente, debe comportarse exactamente igual que el select para todos los usuarios, ya sea con teclado, ratón, pantalla táctil, lector de pantalla o cualquier otro dispositivo de entrada.
+
+En nuestro ejemplo, las especificaciones que faltan son evidentes, así que las resolveremos, pero esto puede ser un verdadero problema para controles nuevos y exóticos. Cuando se trata de elementos estandarizados, como es el caso de {{htmlelement('select')}}, los autores de la especificación dedicaron una cantidad de tiempo desmesurada a especificar todas las interacciones para cada caso de uso y cada dispositivo de entrada. Crear controles nuevos no es tan fácil, especialmente si estás creando algo que nunca se ha hecho antes y, por lo tanto, nadie tiene la más mínima idea de cuáles son los comportamientos e interacciones esperados. Al menos select ya se ha hecho antes, ¡así que sabemos cómo debería comportarse!
+
+Diseñar interacciones nuevas suele ser una opción solo para los grandes actores de la industria, que tienen suficiente alcance como para que una interacción que creen pueda convertirse en un estándar. Por ejemplo, Apple introdujo la rueda de desplazamiento con el iPod en 2001. Tenían la cuota de mercado necesaria para introducir con éxito una forma completamente nueva de interactuar con un dispositivo, algo que la mayoría de las empresas de dispositivos no pueden hacer.
+
+Lo mejor es no inventar nuevas interacciones de usuario. Para cualquier interacción que sí añadas, es fundamental dedicar tiempo a la etapa de diseño; si defines mal un comportamiento, o te olvidas de definir alguno, será muy difícil redefinirlo una vez que los usuarios se hayan acostumbrado a él. Si tienes dudas, pide la opinión de otras personas, y si dispones de presupuesto para ello, no dudes en [realizar pruebas de usuario](https://en.wikipedia.org/wiki/Usability_testing). Este proceso se llama diseño UX. Si quieres aprender más sobre este tema, consulta los siguientes recursos útiles:
 
 - [UXMatters.com](https://www.uxmatters.com/)
-- [UXDesign.com](https://uxdesign.com/)
-- [The UX Design section of SmashingMagazine](https://uxdesign.smashingmagazine.com/)
+- [La sección de UX Design de SmashingMagazine](https://www.smashingmagazine.com/)
 
 > [!NOTE]
-> Ademas, en la mayoría de los sistemas hay una forma de abrir el elemento {{HTMLElement("select")}} para ver todas las opciones disponibles (esto es lo mismo que hacer clic en el elemento {{HTMLElement("select")}} con un ratón). Esto se logra con Alt+Flecha abajo en Windows y no fué implementado en nuestro ejemplo —pero sería facil hacerlo, ya que el mecanismo ya se implementó para el evento `clic`.
+> Además, en la mayoría de los sistemas hay una forma de abrir el elemento {{HTMLElement("select")}} con el teclado para ver todas las opciones disponibles (esto equivale a hacer clic en el elemento {{HTMLElement("select")}} con el ratón). En Windows esto se consigue con <kbd>Alt</kbd> + <kbd>Flecha abajo</kbd>. No implementamos esto en nuestro ejemplo, pero sería fácil hacerlo, ya que el mecanismo ya está implementado para el evento `click`.
 
-### Definiendo la estructura y semántica HTML
+## Definir la estructura HTML y (algo de) semántica
 
-Ahora que se ha decidido la funcionalidad básica del widget, es hora de comenzar a construir nuestro widget. El primer paso es definir su estructura HTML y darle una semántica básica. Esto es lo que necesitamos para reconstruir un elemento {{HTMLElement("select")}}:
+Ahora que se ha decidido la funcionalidad básica del control, es hora de empezar a construirlo. El primer paso es definir su estructura HTML y darle algo de semántica básica. Esto es lo que necesitamos para reconstruir un elemento {{HTMLElement("select")}}:
 
 ```html
-<!-- Este es nuestro contenedor principal para nuestro widget.
-     El atributo tabindex es lo que permite al usuario enforcar el widget.
-     Veremos más adelante que es mejor configurarlo a través de JavaScript. -->
+<!-- Este es nuestro contenedor principal para el control.
+     El atributo tabindex es lo que permite al usuario enfocar el control.
+     Más adelante veremos que es mejor establecerlo mediante JavaScript. -->
 <div class="select" tabindex="0">
-  <!-- Este contenedor será usado para mostrar el valor actual del widget -->
+  <!-- Este contenedor se usará para mostrar el valor actual del control -->
   <span class="value">Cherry</span>
 
-  <!-- Este contenedor contedrá todas las opciones disponibles para nuestro widget.
+  <!-- Este contenedor incluirá todas las opciones disponibles para nuestro control.
        Como es una lista, tiene sentido usar el elemento ul. -->
   <ul class="optList">
-    <!-- Cada opción solo contiene el valor que se mostrará, veremos más tarde
-         cómo manejar el valor real que será enviado con el formulario de datos -->
+    <!-- Cada opción solo contiene el valor que se mostrará, más adelante veremos
+         cómo manejar el valor real que se enviará con los datos del formulario -->
     <li class="option">Cherry</li>
     <li class="option">Lemon</li>
     <li class="option">Banana</li>
@@ -95,174 +104,167 @@ Ahora que se ha decidido la funcionalidad básica del widget, es hora de comenza
 </div>
 ```
 
-Tenga en cuanta el uso de nombres de clases; estos identifican cada parte relevante independientemente de los elementos HTML subyacentes reales utilizados. Esto es importante para garantizar que no vinculamos nuestro CSS y JavaScript a una estructura HTML sólida, de modo que podamos realizar cambios despues en la implementación sin romper el código que usa el widget. Pro ejemplo, si desea implementar el equivalente del elemento {{HTMLElement("optgroup")}}.
+Fíjate en el uso de nombres de clase; estos identifican cada parte relevante independientemente de los elementos HTML subyacentes que se usen realmente. Esto es importante para asegurarnos de no atar nuestro CSS y JavaScript a una estructura HTML rígida, de modo que podamos hacer cambios de implementación más adelante sin romper el código que usa el control. Por ejemplo, ¿qué pasa si más adelante quieres implementar el equivalente del elemento {{HTMLElement("optgroup")}}?
 
-### Creating the look and feel using CSS
+Sin embargo, los nombres de clase no aportan ningún valor semántico. En este estado actual, el usuario de un lector de pantalla solo "ve" una lista desordenada. Añadiremos semántica ARIA dentro de poco.
 
-Now that we have a structure, we can start designing our widget. The whole point of building this custom widget is to be able to style this widget exactly as we want. To that end, we will split our CSS work into two parts: the first part will be the CSS rules absolutely necessary to have our widget behave like a {{HTMLElement("select")}} element, and the second part will consist of the fancy styles used to make it look the way we want.
+## Crear el aspecto visual con CSS
 
-#### Required styles
+Ahora que tenemos una estructura, podemos empezar a diseñar nuestro control. El objetivo principal de construir este control personalizado es poder darle el estilo exacto que queremos. Para ello, dividiremos nuestro trabajo de CSS en dos partes: la primera parte serán las reglas CSS absolutamente necesarias para que nuestro control se comporte como un elemento {{HTMLElement("select")}}, y la segunda parte consistirá en los estilos vistosos usados para darle el aspecto que queremos.
 
-The required styles are those necessary to handle the three states of our widget.
+### Estilos requeridos
+
+Los estilos requeridos son los necesarios para manejar los tres estados de nuestro control.
 
 ```css
 .select {
-  /* This will create a positioning context for the list of options */
+  /* Esto creará un contexto de posicionamiento para la lista de opciones;
+     añadir esto a `.select:focus-within` será una mejor opción cuando tenga soporte completo
+  */
   position: relative;
 
-  /* This will make our widget become part of the text flow and sizable at the same time */
+  /* Esto hará que nuestro control pase a formar parte del flujo de texto y sea redimensionable a la vez */
   display: inline-block;
 }
 ```
 
-We need an extra class `active` to define the look and feel of our widget when it is in its active state. Because our widget is focusable, we double this custom style with the {{cssxref(":focus")}} pseudo-class in order to be sure they will behave the same.
+Necesitamos una clase extra `active` para definir el aspecto de nuestro control cuando está en su estado activo. Como nuestro control es enfocable, duplicamos este estilo personalizado con la pseudoclase {{cssxref(":focus")}} para asegurarnos de que se comporten igual.
 
 ```css
 .select.active,
 .select:focus {
-  outline: none;
+  outline-color: transparent;
 
-  /* This box-shadow property is not exactly required, however it's so important to be sure
-     the active state is visible that we use it as a default value, feel free to override it. */
+  /* Esta propiedad box-shadow no es exactamente obligatoria, sin embargo es imprescindible para asegurar
+     que el estado activo sea visible, especialmente para los usuarios de teclado, por lo que la usamos como valor predeterminado. */
   box-shadow: 0 0 3px 1px #227755;
 }
 ```
 
-Now, let's handle the list of options:
+Ahora, manejemos la lista de opciones:
 
 ```css
-/* The .select selector here is syntactic sugar to be sure the classes we define are
-   the ones inside our widget. */
+/* El selector .select aquí ayuda a asegurarnos de que solo seleccionamos
+   elementos dentro de nuestro control. */
 .select .optList {
-  /* This will make sure our list of options will be displayed below the value
-     and out of the HTML flow */
+  /* Esto asegurará que nuestra lista de opciones se muestre debajo del valor
+     y fuera del flujo HTML */
   position: absolute;
   top: 100%;
   left: 0;
 }
 ```
 
-We need an extra class to handle when the list of options is hidden. This is necessary in order to manage the differences between the active state and the open state that do not exactly match.
+Necesitamos una clase extra para manejar cuándo la lista de opciones está oculta. Esto es necesario para gestionar las diferencias entre el estado activo y el estado abierto, que no coinciden exactamente.
 
 ```css
 .select .optList.hidden {
-  /* This is a simple way to hide the list in an accessible way,
-     we will talk more about accessibility in the end */
+  /* Esta es una forma sencilla de ocultar la lista de manera accesible;
+     hablaremos más sobre accesibilidad al final */
   max-height: 0;
   visibility: hidden;
 }
 ```
 
-#### Beautification
+> [!NOTE]
+> También podríamos haber usado `transform: scale(1, 0)` para que la lista de opciones no tenga altura y sí ancho completo.
 
-So now that we have the basic functionality in place, the fun can start. The following is just an example of what is possible, and will match the screenshot at the beginning of this article. However, you should feel free to experiment and see what you can come up with.
+### Embellecimiento
+
+Ahora que tenemos la funcionalidad básica en su lugar, puede empezar la parte divertida. Lo siguiente es solo un ejemplo de lo que es posible, y coincidirá con la captura de pantalla del principio de este artículo. Sin embargo, siéntete libre de experimentar y ver qué se te ocurre.
 
 ```css
 .select {
-  /* All sizes will be expressed with the em value for accessibility reasons
-     (to make sure the widget remains resizable if the user uses the
-     browser's zoom in a text-only mode). The computations are made
-     assuming 1em == 16px which is the default value in most browsers.
-     If you are lost with px to em conversion, try https://riddle.pl/emcalc/ */
-  font-size: 0.625em; /* this (10px) is the new font size context for em value in this context */
-  font-family: Verdana, Arial, sans-serif;
+  /* Los cálculos se hacen asumiendo que 1em equivale a 16px, que es el valor predeterminado en la mayoría de los navegadores.
+     Si tienes dudas sobre la conversión de px a em, prueba https://nekocalc.com/px-to-em-converter */
+  font-size: 0.625em; /* esto (10px) es el nuevo contexto de tamaño de fuente para el valor em en este contexto */
+  font-family: "Verdana", "Arial", sans-serif;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
-  /* We need extra room for the down arrow we will add */
-  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  /* Necesitamos espacio extra para la flecha hacia abajo que añadiremos */
+  padding: 0.1em 2.5em 0.2em 0.5em;
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
-  border-radius: 0.4em; /* 4px */
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  border: 0.2em solid black;
+  border-radius: 0.4em;
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 
-  /* The first declaration is for browsers that do not support linear gradients.
-     The second declaration is because WebKit based browsers haven't unprefixed it yet.
-     If you want to support legacy browsers, try https://www.colorzilla.com/gradient-editor/ */
-  background: #f0f0f0;
-  background: -webkit-linear-gradient(90deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
 .select .value {
-  /* Because the value can be wider than our widget, we have to make sure it will not
-     change the widget's width */
+  /* Como el valor puede ser más ancho que nuestro control, tenemos que asegurarnos de que no
+     cambie el ancho del control. Si el contenido se desborda, mostramos puntos suspensivos */
   display: inline-block;
   width: 100%;
   overflow: hidden;
-
-  vertical-align: top;
-
-  /* And if the content overflows, it's better to have a nice ellipsis. */
   white-space: nowrap;
   text-overflow: ellipsis;
+  vertical-align: top;
 }
 ```
 
-We don't need an extra element to design the down arrow; instead, we're using the {{cssxref("::after")}} pseudo-element. However, it could also be implemented using a simple background image on the `select` class.
+No necesitamos un elemento extra para diseñar la flecha hacia abajo; en su lugar, usamos el pseudoelemento {{cssxref("::after")}}. También se podría implementar usando una simple imagen de fondo en la clase `select`.
 
 ```css
-.select:after {
-  content: "▼"; /* We use the unicode caracter U+25BC; see https://www.utf8-chartable.de */
+.select::after {
+  content: "▼"; /* Usamos el carácter unicode U+25BC; asegúrate de establecer una etiqueta meta charset */
   position: absolute;
-  z-index: 1; /* This will be important to keep the arrow from overlapping the list of options */
+  z-index: 1; /* Esto será importante para evitar que la flecha se superponga a la lista de opciones */
   top: 0;
   right: 0;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   height: 100%;
-  width: 2em; /* 20px */
-  padding-top: 0.1em; /* 1px */
+  width: 2em;
+  padding-top: 0.1em;
 
-  border-left: 0.2em solid #000; /* 2px */
-  border-radius: 0 0.1em 0.1em 0; /* 0 1px 1px 0 */
+  border-left: 0.2em solid black;
+  border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   text-align: center;
 }
 ```
 
-Next, let's style the list of options:
+A continuación, demos estilo a la lista de opciones:
 
 ```css
 .select .optList {
-  z-index: 2; /* We explicitly said the list of options will always overlap the down arrow */
+  z-index: 2; /* Dijimos explícitamente que la lista de opciones siempre estará por encima de la flecha hacia abajo */
 
-  /* this will reset the default style of the ul element */
+  /* esto restablecerá el estilo predeterminado del elemento ul */
   list-style: none;
   margin: 0;
   padding: 0;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
-  /* This will ensure that even if the values are smaller than the widget,
-     the list of options will be as large as the widget itself */
+  /* Si los valores son más pequeños que el control, la lista de opciones
+     será tan ancha como el control mismo */
   min-width: 100%;
 
-  /* In case the list is too long, its content will overflow vertically
-     (which will add a vertical scrollbar automatically) but never horizontally
-     (because we haven't set a width, the list will adjust its width automatically.
-     If it can't, the content will be truncated) */
+  /* En caso de que la lista sea demasiado larga, su contenido se desbordará verticalmente
+     (lo cual añadirá una barra de desplazamiento vertical automáticamente) pero nunca horizontalmente
+     (porque no hemos establecido un ancho, la lista ajustará su ancho automáticamente.
+     Si no puede, el contenido se truncará) */
   max-height: 10em; /* 100px */
   overflow-y: auto;
   overflow-x: hidden;
 
-  border: 0.2em solid #000; /* 2px */
-  border-top-width: 0.1em; /* 1px */
-  border-radius: 0 0 0.4em 0.4em; /* 0 0 4px 4px */
+  border: 0.2em solid black;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4); /* 0 2px 4px */
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
   background: #f0f0f0;
 }
 ```
 
-For the options, we need to add a `highlight` class to be able to identify the value the user will pick (or has picked).
+Para las opciones, necesitamos añadir una clase `highlight` para poder identificar el valor que el usuario elegirá (o ha elegido).
 
 ```css
 .select .option {
@@ -270,14 +272,14 @@ For the options, we need to add a `highlight` class to be able to identify the v
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
-So here's the result with our three states:
+Aquí está el resultado con nuestros tres estados ([consulta el código fuente aquí](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_1)):
 
-#### Basic state
+#### Estado básico
 
 ```html hidden
 <div class="select">
@@ -301,7 +303,7 @@ So here's the result with our three states:
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -317,19 +319,18 @@ So here's the result with our three states:
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -343,7 +344,7 @@ So here's the result with our three states:
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -358,11 +359,11 @@ So here's the result with our three states:
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -373,11 +374,11 @@ So here's the result with our three states:
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -392,14 +393,14 @@ So here's the result with our three states:
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
-{{EmbedLiveSample("",120,130)}}
+{{EmbedLiveSample("Estado_básico",120,130)}}
 
-#### Active state
+#### Estado activo
 
 ```html hidden
 <div class="select active">
@@ -423,7 +424,7 @@ So here's the result with our three states:
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -439,19 +440,18 @@ So here's the result with our three states:
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -465,7 +465,7 @@ So here's the result with our three states:
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -480,11 +480,11 @@ So here's the result with our three states:
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -495,11 +495,11 @@ So here's the result with our three states:
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -514,14 +514,14 @@ So here's the result with our three states:
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
-{{EmbedLiveSample("",120,130)}}
+{{EmbedLiveSample("Estado_activo",120,130)}}
 
-#### Open state
+#### Estado abierto
 
 ```html hidden
 <div class="select active">
@@ -545,7 +545,7 @@ So here's the result with our three states:
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -561,19 +561,18 @@ So here's the result with our three states:
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -587,7 +586,7 @@ So here's the result with our three states:
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -602,11 +601,11 @@ So here's the result with our three states:
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -617,11 +616,11 @@ So here's the result with our three states:
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -636,39 +635,39 @@ So here's the result with our three states:
 }
 
 .select .highlight {
-  background: #000;
-  color: #fff;
+  background: black;
+  color: white;
 }
 ```
 
-{{EmbedLiveSample("",120,130)}}
+{{EmbedLiveSample("Estado_abierto",120,130)}}
 
-## Bring your widget to life with JavaScript
+## Dar vida a tu control con JavaScript
 
-Now that our design and structure are ready, we can write the JavaScript code to make the widget actually work.
+Ahora que nuestro diseño y estructura están listos, podemos escribir el código JavaScript para hacer que el control funcione de verdad.
 
 > [!WARNING]
-> The following code is educational and should not be used as-is. Among many things, as we'll see, it is not future-proof and it will not work on legacy browsers. It also has redundant parts that should be optimized in production code.
+> Lo que sigue es código educativo, no código de producción, y no debería usarse tal cual. No está preparado para el futuro ni funcionará en navegadores antiguos. También tiene partes redundantes que deberían optimizarse en código de producción.
 
-> [!NOTE]
-> Creating reusable widgets is something that can be a bit tricky. The [W3C Web Component draft](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html) is one of the answers to this specific issue. [The X-Tag project](http://x-tags.org/) is a test implementation of this specification; we encourage you to take a look at it.
+### ¿Por qué no funciona?
 
-### Why isn't it working?
+Antes de empezar, es importante recordar que **JavaScript en el navegador es una tecnología poco confiable**. Los controles personalizados dependen de JavaScript para unir todo. Sin embargo, hay casos en los que JavaScript no puede ejecutarse en el navegador:
 
-Before we start, it's important to remember something very important about JavaScript: inside a browser, **it's an unreliable technology**. When you are building custom widgets, you'll have to rely on JavaScript because it's a necessary thread to tie everything together. However, there are many cases in which JavaScript isn't able to run in the browser:
+- El usuario ha desactivado JavaScript: esto es inusual, muy poca gente desactiva JavaScript hoy en día.
+- El script no se cargó: este es uno de los casos más comunes, especialmente en el mundo móvil, donde la red no es muy confiable.
+- El script tiene errores: siempre debes considerar esta posibilidad.
+- El script entra en conflicto con un script de terceros: esto puede pasar con scripts de seguimiento o cualquier bookmarklet que use el usuario.
+- El script entra en conflicto con una extensión del navegador, o se ve afectado por ella (como la extensión [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) de Firefox o la extensión [ScriptBlock](https://chromewebstore.google.com/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba) de Chrome).
+- El usuario está usando un navegador antiguo, y una de las funciones que necesitas no es compatible: esto pasará con frecuencia cuando uses APIs de vanguardia.
+- El usuario interactúa con el contenido antes de que el JavaScript se haya descargado, analizado y ejecutado por completo.
 
-- The user has turned off JavaScript: This is the most unusual case ever; very few people turn off JavaScript nowadays.
-- The script is not loading. This is one of the most common cases, especially in the mobile world where the network is not very reliable.
-- The script is buggy. You should always consider this possibility.
-- The script is in conflict with a third party script. This can happen with tracking scripts or any bookmarklets the user uses.
-- The script is in conflict with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension or Chrome's [NotScripts](https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn) extension).
-- The user is using a legacy browser, and one of the features you require is not supported. This will happen frequently when you make use of cutting-edge APIs.
+Debido a estos riesgos, es realmente importante considerar seriamente qué pasará si tu JavaScript no funciona. Hablaremos de las opciones a tener en cuenta y cubriremos lo básico en nuestro ejemplo (una discusión completa sobre cómo resolver este problema para todos los escenarios necesitaría un libro entero). Solo recuerda que es fundamental hacer que tu script sea genérico y reutilizable.
 
-Because of these risks, it's really important to seriously consider what will happen if JavaScript isn't working. Dealing in detail with this issue is out of the scope of this article because it's closely linked to how you want to make your script generic and reusable, but we'll consider the basics of this in our example.
+En nuestro ejemplo, si nuestro código JavaScript no se ejecuta, recurriremos a mostrar un elemento {{HTMLElement("select")}} estándar. Incluimos nuestro control y el {{HTMLElement("select")}}; cuál de los dos se muestra depende de la clase del elemento body, y esa clase se actualiza mediante el script que hace funcionar al control, cuando este se carga correctamente.
 
-In our example, if our JavaScript code isn't running, we'll fall back to displaying a standard {{HTMLElement("select")}} element. To achieve this, we need two things.
+Para lograrlo, necesitamos dos cosas:
 
-First, we need to add a regular {{HTMLElement("select")}} element before each use of our custom widget. This is actually also required in order to be able to send data from our custom widget along with the rest of our form data; more about this later.
+Primero, necesitamos añadir un elemento {{HTMLElement("select")}} normal antes de cada instancia de nuestro control personalizado. Hay un beneficio en tener este select "extra" incluso si nuestro JavaScript funciona como se espera: usaremos este select para enviar los datos de nuestro control personalizado junto con el resto de los datos del formulario. Hablaremos de esto con más detalle más adelante.
 
 ```html
 <body class="no-widget">
@@ -695,15 +694,15 @@ First, we need to add a regular {{HTMLElement("select")}} element before each us
 </body>
 ```
 
-Second, we need two new classes to let us hide the unneeded element (that is, the "real" {{HTMLElement("select")}} element if our script isn't running, or the custom widget if it is running). Note that by default, our HTML code hides our custom widget.
+Segundo, necesitamos dos clases nuevas para poder ocultar el elemento que no se necesita: ocultamos visualmente el control personalizado si nuestro script no se está ejecutando, o el elemento {{HTMLElement("select")}} "real" si sí se está ejecutando. Ten en cuenta que, por defecto, nuestro código HTML oculta nuestro control personalizado.
 
 ```css
 .widget select,
 .no-widget .select {
-  /* This CSS selector basically says:
-     - either we have set the body class to "widget" and thus we hide the actual {{HTMLElement("select")}} element
-     - or we have not changed the body class, therefore the body class is still "no-widget",
-       so the elements whose class is "select" must be hidden */
+  /* Este selector CSS básicamente dice:
+     - o hemos establecido la clase del body como "widget" y por tanto ocultamos el elemento <select> real
+     - o no hemos cambiado la clase del body, por lo que la clase del body sigue siendo "no-widget",
+       así que los elementos cuya clase sea "select" deben ocultarse */
   position: absolute;
   left: -5000em;
   height: 0;
@@ -711,18 +710,18 @@ Second, we need two new classes to let us hide the unneeded element (that is, th
 }
 ```
 
-Now we just need a JavaScript switch to determine if the script is running or not. This switch is very simple: if at page load time our script is running, it will remove the `no-widget` class and add the `widget` class, thereby swapping the visibility of the {{HTMLElement("select")}} element and of the custom widget.
+Este CSS oculta visualmente uno de los elementos, pero sigue estando disponible para los lectores de pantalla.
+
+Ahora necesitamos un interruptor de JavaScript para determinar si el script se está ejecutando o no. Este interruptor son un par de líneas: si en el momento de cargar la página nuestro script se está ejecutando, eliminará la clase `no-widget` y añadirá la clase `widget`, intercambiando así la visibilidad del elemento {{HTMLElement("select")}} y del control personalizado.
 
 ```js
-window.addEventListener("load", function () {
-  document.body.classList.remove("no-widget");
-  document.body.classList.add("widget");
-});
+document.body.classList.remove("no-widget");
+document.body.classList.add("widget");
 ```
 
-#### Without JS
+#### Sin JS
 
-Check out the [full source code](/es/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2#no_js).
+Consulta el [código fuente completo](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_2#no_js).
 
 ```html hidden
 <form class="no-widget">
@@ -757,11 +756,11 @@ Check out the [full source code](/es/docs/Learn/Forms/How_to_build_custom_form_c
 }
 ```
 
-{{EmbedLiveSample("Without_JS",120,130)}}
+{{EmbedLiveSample("Sin_JS",120,130)}}
 
-#### With JS
+#### Con JS
 
-Check out the [full source code](/es/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2#js).
+Consulta el [código fuente completo](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_2#js).
 
 ```html hidden
 <form class="no-widget">
@@ -803,7 +802,7 @@ Check out the [full source code](/es/docs/Learn/Forms/How_to_build_custom_form_c
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -819,19 +818,18 @@ Check out the [full source code](/es/docs/Learn/Forms/How_to_build_custom_form_c
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -845,7 +843,7 @@ Check out the [full source code](/es/docs/Learn/Forms/How_to_build_custom_form_c
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -860,11 +858,11 @@ Check out the [full source code](/es/docs/Learn/Forms/How_to_build_custom_form_c
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -875,11 +873,11 @@ Check out the [full source code](/es/docs/Learn/Forms/How_to_build_custom_form_c
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -894,175 +892,167 @@ Check out the [full source code](/es/docs/Learn/Forms/How_to_build_custom_form_c
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
 ```js hidden
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+const form = document.querySelector("form");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
-});
+form.classList.remove("no-widget");
+form.classList.add("widget");
 ```
 
-{{EmbedLiveSample("",120,130)}}
+{{EmbedLiveSample("Con_JS",120,130)}}
 
 > [!NOTE]
-> If you really want to make your code generic and reusable, instead of doing a class switch it's far better to just add the widget class to hide the {{HTMLElement("select")}} elements, and to dynamically add the DOM tree representing the custom widget after every {{HTMLElement("select")}} element in the page.
+> Si de verdad quieres que tu código sea genérico y reutilizable, en lugar de hacer un cambio de clase es mucho mejor simplemente añadir la clase widget para ocultar los elementos {{HTMLElement("select")}}, y añadir dinámicamente el árbol DOM que representa el control personalizado después de cada elemento {{HTMLElement("select")}} en la página.
 
-### Making the job easier
+### Facilitando el trabajo
 
-In the code we are about to build, we will use the standard DOM API to do all the work we need. However, although DOM API support has gotten much better in browsers, there are always issues with legacy browsers (especially with good old Internet Explorer).
-
-If you want to avoid trouble with legacy browsers, there are two ways to do so: using a dedicated framework such as [jQuery](https://jquery.com/), [$dom](https://github.com/julienw/dollardom), [prototype](http://prototypejs.org/), [Dojo](https://dojotoolkit.org/), [YUI](https://yuilibrary.com/), or the like, or by polyfilling the missing feature you want to use (which can easily be done through conditional loading, with the [yepnope](https://yepnopejs.com/) library for example).
-
-The features we plan to use are the following (ordered from the riskiest to the safest):
+En el código que vamos a construir, usaremos las APIs estándar de JavaScript y del DOM para hacer todo el trabajo que necesitamos. Las funciones que planeamos usar son las siguientes:
 
 1. {{domxref("element.classList","classList")}}
-2. {{domxref("EventTarget.addEventListener","addEventListener")}}
-3. [`forEach`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) (This is not DOM but modern JavaScript)
-4. {{domxref("element.querySelector","querySelector")}} and {{domxref("element.querySelectorAll","querySelectorAll")}}
+2. {{domxref("EventTarget.addEventListener","addEventListener()")}}
+3. {{domxref("NodeList.forEach()")}}
+4. {{domxref("element.querySelector","querySelector()")}} y {{domxref("element.querySelectorAll","querySelectorAll()")}}
 
-Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array). This is important because `Array` objects support the [`forEach`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an `Array` and because `forEach` is so convenient to use, we can easily add the support of `forEach` to {{domxref("NodeList")}} in order to make our life easier, like so:
+### Construir las funciones de retorno de eventos
 
-```js
-NodeList.prototype.forEach = function (callback) {
-  Array.prototype.forEach.call(this, callback);
-};
-```
-
-We weren't kidding when we said it's easy to do.
-
-### Building event callbacks
-
-The ground is ready, we can now start to define all the functions that will be used each time the user interacts with our widget.
+El trabajo preliminar está hecho. Ahora podemos empezar a definir todas las funciones que se usarán cada vez que el usuario interactúe con nuestro control.
 
 ```js
-// This function will be used each time we want to deactivate a custom widget
-// It takes one parameter
-// select : the DOM node with the `select` class to deactivate
+// Esta función se usará cada vez que queramos desactivar un control personalizado
+// Recibe un parámetro
+// select: el nodo del DOM con la clase `select` a desactivar
 function deactivateSelect(select) {
-  // If the widget is not active there is nothing to do
+  // Si el control no está activo, no hay nada que hacer
   if (!select.classList.contains("active")) return;
 
-  // We need to get the list of options for the custom widget
-  var optList = select.querySelector(".optList");
+  // Necesitamos obtener la lista de opciones del control personalizado
+  const optList = select.querySelector(".optList");
 
-  // We close the list of option
+  // Cerramos la lista de opciones
   optList.classList.add("hidden");
 
-  // and we deactivate the custom widget itself
+  // y desactivamos el control personalizado en sí
   select.classList.remove("active");
 }
 
-// This function will be used each time the user wants to (de)activate the widget
-// It takes two parameters:
-// select : the DOM node with the `select` class to activate
-// selectList : the list of all the DOM nodes with the `select` class
+// Esta función se usará cada vez que el usuario quiera activar el control
+// (lo cual, a su vez, desactivará otros controles select)
+// Recibe dos parámetros:
+// select: el nodo del DOM con la clase `select` a activar
+// selectList: la lista de todos los nodos del DOM con la clase `select`
 function activeSelect(select, selectList) {
-  // If the widget is already active there is nothing to do
+  // Si el control ya está activo, no hay nada que hacer
   if (select.classList.contains("active")) return;
 
-  // We have to turn off the active state on all custom widgets
-  // Because the deactivateSelect function fulfill all the requirement of the
-  // forEach callback function, we use it directly without using an intermediate
-  // anonymous function.
+  // Tenemos que desactivar el estado activo en todos los controles personalizados
+  // Como la función deactivateSelect cumple todos los requisitos de la función
+  // de retorno de forEach, la usamos directamente sin usar una función
+  // anónima intermedia.
   selectList.forEach(deactivateSelect);
 
-  // And we turn on the active state for this specific widget
+  // Y activamos el estado activo para este control específico
   select.classList.add("active");
 }
 
-// This function will be used each time the user wants to open/closed the list of options
-// It takes one parameter:
-// select : the DOM node with the list to toggle
+// Esta función se usará cada vez que el usuario quiera abrir/cerrar la lista de opciones
+// Recibe un parámetro:
+// select: el nodo del DOM con la lista a alternar
 function toggleOptList(select) {
-  // The list is kept from the widget
-  var optList = select.querySelector(".optList");
+  // La lista se obtiene a partir del control
+  const optList = select.querySelector(".optList");
 
-  // We change the class of the list to show/hide it
+  // Cambiamos la clase de la lista para mostrarla/ocultarla
   optList.classList.toggle("hidden");
 }
 
-// This function will be used each time we need to highlight an option
-// It takes two parameters:
-// select : the DOM node with the `select` class containing the option to highlight
-// option : the DOM node with the `option` class to highlight
+// Esta función se usará cada vez que necesitemos resaltar una opción
+// Recibe dos parámetros:
+// select: el nodo del DOM con la clase `select` que contiene la opción a resaltar
+// option: el nodo del DOM con la clase `option` a resaltar
 function highlightOption(select, option) {
-  // We get the list of all option available for our custom select element
-  var optionList = select.querySelectorAll(".option");
+  // Obtenemos la lista de todas las opciones disponibles para nuestro elemento select personalizado
+  const optionList = select.querySelectorAll(".option");
 
-  // We remove the highlight from all options
-  optionList.forEach(function (other) {
+  // Quitamos el resaltado de todas las opciones
+  optionList.forEach((other) => {
     other.classList.remove("highlight");
   });
 
-  // We highlight the right option
+  // Resaltamos la opción correcta
   option.classList.add("highlight");
 }
 ```
 
-That's all you need in order to handle the various states of the custom widget.
+Necesitas estas funciones para manejar los distintos estados del control personalizado.
 
-Next, we bind these functions to the appropriate events:
+A continuación, vinculamos estas funciones a los eventos correspondientes:
 
 ```js
-// We handle the event binding when the document is loaded.
-window.addEventListener("load", function () {
-  var selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  // Each custom widget needs to be initialized
-  selectList.forEach(function (select) {
-    // as well as all its `option` elements
-    var optionList = select.querySelectorAll(".option");
+// Cada control personalizado necesita ser inicializado
+selectList.forEach((select) => {
+  // así como todos sus elementos `option`
+  const optionList = select.querySelectorAll(".option");
 
-    // Each time a user hovers their mouse over an option, we highlight the given option
-    optionList.forEach(function (option) {
-      option.addEventListener("mouseover", function () {
-        // Note: the `select` and `option` variable are closures
-        // available in the scope of our function call.
-        highlightOption(select, option);
-      });
+  // Cada vez que el usuario pasa el ratón sobre una opción, resaltamos esa opción
+  optionList.forEach((option) => {
+    option.addEventListener("mouseover", () => {
+      // Nota: las variables `select` y `option` son clausuras (closures)
+      // disponibles en el ámbito de nuestra llamada a la función.
+      highlightOption(select, option);
     });
+  });
 
-    // Each times the user click on a custom select element
-    select.addEventListener("click", function (event) {
-      // Note: the `select` variable is a closure
-      // available in the scope of our function call.
+  // Cada vez que el usuario hace clic o toca un elemento select personalizado
+  select.addEventListener("click", (event) => {
+    // Nota: la variable `select` es una clausura (closure)
+    // disponible en el ámbito de nuestra llamada a la función.
 
-      // We toggle the visibility of the list of options
-      toggleOptList(select);
-    });
+    // Alternamos la visibilidad de la lista de opciones
+    toggleOptList(select);
+  });
 
-    // In case the widget gain focus
-    // The widget gains the focus each time the user clicks on it or each time
-    // they use the tabulation key to access the widget
-    select.addEventListener("focus", function (event) {
-      // Note: the `select` and `selectList` variable are closures
-      // available in the scope of our function call.
+  // En caso de que el control obtenga el foco
+  // El control obtiene el foco cada vez que el usuario hace clic en él o cada vez
+  // que usa la tecla de tabulación para acceder al control
+  select.addEventListener("focus", (event) => {
+    // Nota: las variables `select` y `selectList` son clausuras (closures)
+    // disponibles en el ámbito de nuestra llamada a la función.
 
-      // We activate the widget
-      activeSelect(select, selectList);
-    });
+    // Activamos el control
+    activeSelect(select, selectList);
+  });
 
-    // In case the widget loose focus
-    select.addEventListener("blur", function (event) {
-      // Note: the `select` variable is a closure
-      // available in the scope of our function call.
+  // En caso de que el control pierda el foco
+  select.addEventListener("blur", (event) => {
+    // Nota: la variable `select` es una clausura (closure)
+    // disponible en el ámbito de nuestra llamada a la función.
 
-      // We deactivate the widget
+    // Desactivamos el control
+    deactivateSelect(select);
+  });
+
+  // Pierde el foco si el usuario pulsa `esc`
+  select.addEventListener("keyup", (event) => {
+    // desactivar al soltar la tecla `esc`
+    if (event.key === "Escape") {
       deactivateSelect(select);
-    });
+    }
   });
 });
 ```
 
-At that point, our widget will change state according to our design, but its value doesn't get updated yet. We'll handle that next.
+Llegados a este punto, nuestro control cambiará de estado según nuestro diseño, pero su valor todavía no se actualiza. Nos ocuparemos de eso a continuación.
 
-#### Live example
+#### Ejemplo en vivo
+
+Consulta el [código fuente completo](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_3).
 
 ```html hidden
 <form class="no-widget">
@@ -1104,7 +1094,7 @@ At that point, our widget will change state according to our design, but its val
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -1120,19 +1110,18 @@ At that point, our widget will change state according to our design, but its val
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -1146,7 +1135,7 @@ At that point, our widget will change state according to our design, but its val
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -1161,11 +1150,11 @@ At that point, our widget will change state according to our design, but its val
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -1176,11 +1165,11 @@ At that point, our widget will change state according to our design, but its val
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -1195,8 +1184,8 @@ At that point, our widget will change state according to our design, but its val
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -1233,153 +1222,155 @@ function highlightOption(select, option) {
   option.classList.add("highlight");
 }
 
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+const form = document.querySelector("form");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
-});
+form.classList.remove("no-widget");
+form.classList.add("widget");
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
 
-    optionList.forEach((option) => {
-      option.addEventListener("mouseover", () => {
-        highlightOption(select, option);
-      });
+  optionList.forEach((option) => {
+    option.addEventListener("mouseover", () => {
+      highlightOption(select, option);
     });
+  });
 
-    select.addEventListener(
-      "click",
-      (event) => {
-        toggleOptList(select);
-      },
-      false,
-    );
+  select.addEventListener("click", (event) => {
+    toggleOptList(select);
+  });
 
-    select.addEventListener("focus", (event) => {
-      activeSelect(select, selectList);
-    });
+  select.addEventListener("focus", (event) => {
+    activeSelect(select, selectList);
+  });
 
-    select.addEventListener("blur", (event) => {
+  select.addEventListener("blur", (event) => {
+    deactivateSelect(select);
+  });
+
+  select.addEventListener("keyup", (event) => {
+    if (event.key === "Escape") {
       deactivateSelect(select);
-    });
-
-    select.addEventListener("keyup", (event) => {
-      if (event.keyCode === 27) {
-        deactivateSelect(select);
-      }
-    });
+    }
   });
 });
 ```
 
-| Live example                                                                                  |
-| --------------------------------------------------------------------------------------------- |
-| {{EmbedLiveSample("",120,130)}}                                                               |
-| [Check out the source code](/es/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3) |
+{{EmbedLiveSample("Ejemplo_en_vivo",120,130)}}
 
-### Handling the widget's value
+### Manejar el valor del control
 
-Now that our widget is working, we have to add code to update its value according to user input and make it possible to send the value along with form data.
+Ahora que nuestro control funciona, tenemos que añadir código para actualizar su valor según la entrada del usuario y hacer posible enviar el valor junto con los datos del formulario.
 
-The easiest way to do this is to use a native widget under the hood. Such a widget will keep track of the value with all the built-in controls provided by the browser, and the value will be sent as usual when a form is submitted. There's no point in reinventing the wheel when we can have all this done for us.
+La forma más sencilla de hacerlo es usar un control nativo por debajo. Ese control se encargará de llevar el registro del valor con todos los controles integrados que ofrece el navegador, y el valor se enviará como de costumbre cuando se envíe un formulario. No tiene sentido reinventar la rueda cuando podemos tener todo esto resuelto para nosotros.
 
-As seen previously, we already use a native select widget as a fallback for accessibility reasons; we can simply synchronize its value with that of our custom widget:
+Como vimos antes, ya usamos un control select nativo como alternativa por razones de accesibilidad; podemos sincronizar su valor con el de nuestro control personalizado:
 
 ```js
-// This function updates the displayed value and synchronizes it with the native widget.
-// It takes two parameters:
-// select : the DOM node with the class `select` containing the value to update
-// index  : the index of the value to be selected
+// Esta función actualiza el valor mostrado y lo sincroniza con el control nativo.
+// Recibe dos parámetros:
+// select : el nodo del DOM con la clase `select` que contiene el valor a actualizar
+// index  : el índice del valor que se debe seleccionar
 function updateValue(select, index) {
-  // We need to get the native widget for the given custom widget
-  // In our example, that native widget is a sibling of the custom widget
-  var nativeWidget = select.previousElementSibling;
+  // Necesitamos obtener el control nativo correspondiente al control personalizado dado
+  // En nuestro ejemplo, ese control nativo es hermano del control personalizado
+  const nativeWidget = select.previousElementSibling;
 
-  // We also need  to get the value placeholder of our custom widget
-  var value = select.querySelector(".value");
+  // También necesitamos obtener el contenedor del valor de nuestro control personalizado
+  const value = select.querySelector(".value");
 
-  // And we need the whole list of options
-  var optionList = select.querySelectorAll(".option");
+  // Y necesitamos la lista completa de opciones
+  const optionList = select.querySelectorAll(".option");
 
-  // We set the selected index to the index of our choice
+  // Establecemos el índice seleccionado con el índice de nuestra elección
   nativeWidget.selectedIndex = index;
 
-  // We update the value placeholder accordingly
-  value.innerHTML = optionList[index].innerHTML;
+  // Actualizamos el contenedor del valor en consecuencia
+  value.textContent = optionList[index].textContent;
 
-  // And we highlight the corresponding option of our custom widget
+  // Y resaltamos la opción correspondiente en nuestro control personalizado
   highlightOption(select, optionList[index]);
 }
 
-// This function returns the current selected index in the native widget
-// It takes one parameter:
-// select : the DOM node with the class `select` related to the native widget
+// Esta función devuelve el índice actualmente seleccionado en el control nativo
+// Recibe un parámetro:
+// select : el nodo del DOM con la clase `select` relacionado con el control nativo
 function getIndex(select) {
-  // We need to access the native widget for the given custom widget
-  // In our example, that native widget is a sibling of the custom widget
-  var nativeWidget = select.previousElementSibling;
+  // Necesitamos acceder al control nativo correspondiente al control personalizado dado
+  // En nuestro ejemplo, ese control nativo es hermano del control personalizado
+  const nativeWidget = select.previousElementSibling;
 
   return nativeWidget.selectedIndex;
 }
 ```
 
-With these two functions, we can bind the native widgets to the custom ones:
+Con estas dos funciones, podemos vincular los controles nativos con los personalizados:
 
 ```js
-// We handle event binding when the document is loaded.
-window.addEventListener("load", function () {
-  var selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  // Each custom widget needs to be initialized
-  selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll(".option"),
-      selectedIndex = getIndex(select);
+// Cada control personalizado necesita ser inicializado
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
+  const selectedIndex = getIndex(select);
 
-    // We make our custom widget focusable
-    select.tabIndex = 0;
+  // Hacemos que nuestro control personalizado sea enfocable
+  select.tabIndex = 0;
 
-    // We make the native widget no longer focusable
-    select.previousElementSibling.tabIndex = -1;
+  // Hacemos que el control nativo ya no sea enfocable
+  select.previousElementSibling.tabIndex = -1;
 
-    // We make sure that the default selected value is correctly displayed
-    updateValue(select, selectedIndex);
+  // Nos aseguramos de que el valor seleccionado por defecto se muestre correctamente
+  updateValue(select, selectedIndex);
 
-    // Each time a user clicks on an option, we update the value accordingly
-    optionList.forEach(function (option, index) {
-      option.addEventListener("click", function (event) {
-        updateValue(select, index);
-      });
-    });
-
-    // Each time a user uses their keyboard on a focused widget, we update the value accordingly
-    select.addEventListener("keyup", function (event) {
-      var length = optionList.length,
-        index = getIndex(select);
-
-      // When the user hits the down arrow, we jump to the next option
-      if (event.keyCode === 40 && index < length - 1) {
-        index++;
-      }
-
-      // When the user hits the up arrow, we jump to the previous option
-      if (event.keyCode === 38 && index > 0) {
-        index--;
-      }
-
+  // Cada vez que el usuario hace clic en una opción, actualizamos el valor en consecuencia
+  optionList.forEach((option, index) => {
+    option.addEventListener("click", (event) => {
       updateValue(select, index);
     });
+  });
+
+  // Cada vez que el usuario usa el teclado en un control enfocado, actualizamos el valor en consecuencia
+  select.addEventListener("keyup", (event) => {
+    let index = getIndex(select);
+    // Cuando el usuario pulsa la tecla Escape, desactivamos el control personalizado
+    if (event.key === "Escape") {
+      deactivateSelect(select);
+    }
+
+    // Cuando el usuario pulsa la flecha hacia abajo, saltamos a la siguiente opción
+    if (event.key === "ArrowDown" && index < optionList.length - 1) {
+      index++;
+      // Prevenimos la acción por defecto de la pulsación de la flecha hacia abajo.
+      // Sin esto, la página se desplazaría hacia abajo cuando se pulse la flecha hacia abajo.
+      event.preventDefault();
+    }
+
+    // Cuando el usuario pulsa la flecha hacia arriba, saltamos a la opción anterior
+    if (event.key === "ArrowUp" && index > 0) {
+      index--;
+      // Prevenimos la acción por defecto de la pulsación de la flecha hacia arriba.
+      event.preventDefault();
+    }
+    if (event.key === "Enter" || event.key === " ") {
+      // Si se pulsa Enter o Espacio, alternamos la lista de opciones
+      toggleOptList(select);
+    }
+
+    updateValue(select, index);
   });
 });
 ```
 
-In the code above, it's worth noting the use of the [`tabIndex`](/es/docs/Web/API/HTMLElement/tabIndex) property. Using this property is necessary to ensure that the native widget will never gain focus, and to make sure that our custom widget gains focus when the user uses his keyboard or his mouse.
+En el código anterior, vale la pena destacar el uso de la propiedad [`tabIndex`](/es/docs/Web/API/HTMLElement/tabIndex). Usar esta propiedad es necesario para asegurarnos de que el control nativo nunca obtenga el foco, y para asegurarnos de que nuestro control personalizado obtenga el foco cuando el usuario use el teclado o el ratón.
 
-With that, we're done! Here's the result:
+¡Con esto, hemos terminado!
+
+#### Ejemplo en vivo
+
+Consulta el [código fuente aquí](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_4).
 
 ```html hidden
 <form class="no-widget">
@@ -1421,7 +1412,7 @@ With that, we're done! Here's the result:
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -1437,19 +1428,18 @@ With that, we're done! Here's the result:
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -1463,7 +1453,7 @@ With that, we're done! Here's the result:
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -1478,11 +1468,11 @@ With that, we're done! Here's the result:
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -1493,11 +1483,11 @@ With that, we're done! Here's the result:
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -1512,8 +1502,8 @@ With that, we're done! Here's the result:
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -1556,7 +1546,7 @@ function updateValue(select, index) {
   const optionList = select.querySelectorAll(".option");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 
@@ -1566,104 +1556,95 @@ function getIndex(select) {
   return nativeWidget.selectedIndex;
 }
 
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+const form = document.querySelector("form");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
-});
+form.classList.remove("no-widget");
+form.classList.add("widget");
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
 
-    optionList.forEach((option) => {
-      option.addEventListener("mouseover", () => {
-        highlightOption(select, option);
-      });
+  optionList.forEach((option) => {
+    option.addEventListener("mouseover", () => {
+      highlightOption(select, option);
     });
+  });
 
-    select.addEventListener("click", (event) => {
-      toggleOptList(select);
-    });
+  select.addEventListener("click", (event) => {
+    toggleOptList(select);
+  });
 
-    select.addEventListener("focus", (event) => {
-      activeSelect(select, selectList);
-    });
+  select.addEventListener("focus", (event) => {
+    activeSelect(select, selectList);
+  });
 
-    select.addEventListener("blur", (event) => {
-      deactivateSelect(select);
-    });
+  select.addEventListener("blur", (event) => {
+    deactivateSelect(select);
   });
 });
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
-    const selectedIndex = getIndex(select);
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
+  const selectedIndex = getIndex(select);
 
-    select.tabIndex = 0;
-    select.previousElementSibling.tabIndex = -1;
+  select.tabIndex = 0;
+  select.previousElementSibling.tabIndex = -1;
 
-    updateValue(select, selectedIndex);
+  updateValue(select, selectedIndex);
 
-    optionList.forEach((option, index) => {
-      option.addEventListener("click", (event) => {
-        updateValue(select, index);
-      });
-    });
-
-    select.addEventListener("keyup", (event) => {
-      let index = getIndex(select);
-
-      if (event.key === "Escape") {
-        deactivateSelect(select);
-      }
-      if (event.key === "ArrowDown" && index < optionList.length - 1) {
-        index++;
-      }
-      if (event.key === "ArrowUp" && index > 0) {
-        index--;
-      }
-
+  optionList.forEach((option, index) => {
+    option.addEventListener("click", (event) => {
       updateValue(select, index);
     });
+  });
+
+  select.addEventListener("keyup", (event) => {
+    let index = getIndex(select);
+
+    if (event.key === "Escape") {
+      deactivateSelect(select);
+    }
+    if (event.key === "ArrowDown" && index < optionList.length - 1) {
+      index++;
+    }
+    if (event.key === "ArrowUp" && index > 0) {
+      index--;
+    }
+
+    updateValue(select, index);
   });
 });
 ```
 
-| Live example                                                                                  |
-| --------------------------------------------------------------------------------------------- |
-| {{EmbedLiveSample("",120,130)}}                                                               |
-| [Check out the source code](/es/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4) |
+{{EmbedLiveSample("Ejemplo_en_vivo_2",120,130)}}
 
-But wait a second, are we really done?
+Pero espera un momento, ¿de verdad hemos terminado?
 
-## Make it accessible
+## Hacerlo accesible
 
-We have built something that works and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, from the browser's point of view it isn't one, so assistive technologies won't be able to understand it's a select box. In short, this pretty new select box isn't accessible!
+Hemos construido algo que funciona y, aunque estamos lejos de un cuadro de selección con todas las funciones, funciona bien. Pero lo que hemos hecho no es más que trastear con el DOM. No tiene una semántica real, y aunque se parezca a un cuadro de selección, desde el punto de vista del navegador no lo es, así que las tecnologías de asistencia no podrán entender que se trata de un cuadro de selección. En resumen, ¡este bonito cuadro de selección nuevo no es accesible!
 
-Fortunately, there is a solution and it's called [ARIA](/es/docs/Web/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](https://www.w3.org/TR/wai-aria/) specifically designed for what we are doing here: making web applications and custom widgets accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes is dead simple, so let's do it.
+Por suerte, hay una solución y se llama [ARIA](/es/docs/Web/Accessibility/ARIA). ARIA significa "Accessible Rich Internet Application" (Aplicación de Internet Rica y Accesible), y es [una especificación del W3C](https://w3c.github.io/aria/) diseñada específicamente para lo que estamos haciendo aquí: hacer que las aplicaciones web y los controles personalizados sean accesibles. Básicamente es un conjunto de atributos que extienden HTML para que podamos describir mejor los roles, estados y propiedades, como si el elemento que acabamos de idear fuera el elemento nativo por el que intenta pasar. Estos atributos se pueden usar editando el marcado HTML. También actualizamos los atributos ARIA mediante JavaScript a medida que el usuario actualiza el valor seleccionado.
 
-### The `role` attribute
+### El atributo `role`
 
-The key attribute used by [ARIA](/es/docs/Web/Accessibility/ARIA) is the [`role`](/es/docs/Web/Accessibility/ARIA/Guides/Techniques) attribute. The [`role`](/es/docs/Web/Accessibility/ARIA/Guides/Techniques) attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors. In our example, we will use the [`listbox`](/es/docs/Web/Accessibility/ARIA/Roles/listbox_role) role. It's a "composite role", which means elements with that role expect to have children, each with a specific role (in this case, at least one child with the `option` role).
+El atributo clave usado por [ARIA](/es/docs/Web/Accessibility/ARIA) es el atributo [`role`](/es/docs/Web/Accessibility/ARIA/Guides/Techniques). El atributo [`role`](/es/docs/Web/Accessibility/ARIA/Guides/Techniques) acepta un valor que define para qué se usa un elemento. Cada rol define sus propios requisitos y comportamientos. En nuestro ejemplo, usaremos el rol [`listbox`](/es/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role). Es un "rol compuesto", lo que significa que los elementos con ese rol deben tener hijos, cada uno con un rol específico (en este caso, al menos un hijo con el rol `option`).
 
-It's also worth noting that ARIA defines roles that are applied by default to standard HTML markup. For example, the {{HTMLElement("table")}} element matches the role `grid`, and the {{HTMLElement("ul")}} element matches the role `list`. Because we use a {{HTMLElement("ul")}} element, we want to make sure the `listbox` role of our widget will supersede the `list` role of the {{HTMLElement("ul")}} element. To that end, we will use the role `presentation`. This role is designed to let us indicate that an element has no special meaning, and is used solely to present information. We will apply it to our {{HTMLElement("ul")}} element.
+También vale la pena señalar que ARIA define roles que se aplican por defecto al marcado HTML estándar. Por ejemplo, el elemento {{HTMLElement("table")}} coincide con el rol `grid`, y el elemento {{HTMLElement("ul")}} coincide con el rol `list`. Como usamos un elemento {{HTMLElement("ul")}}, queremos asegurarnos de que el rol `listbox` de nuestro control reemplace al rol `list` del elemento {{HTMLElement("ul")}}. Para ello, usaremos el rol `presentation`. Este rol está diseñado para indicar que un elemento no tiene un significado especial, y se usa únicamente para presentar información. Lo aplicaremos a nuestro elemento {{HTMLElement("ul")}}.
 
-To support the [`listbox`](/es/docs/Web/Accessibility/ARIA/Roles/listbox_role) role, we just have to update our HTML like this:
+Para dar soporte al rol [`listbox`](/es/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role), solo tenemos que actualizar nuestro HTML así:
 
 ```html
-<!-- We add the role="listbox" attribute to our top element -->
+<!-- Añadimos el atributo role="listbox" a nuestro elemento superior -->
 <div class="select" role="listbox">
   <span class="value">Cherry</span>
-  <!-- We also add the role="presentation" to the ul element -->
+  <!-- También añadimos role="presentation" al elemento ul -->
   <ul class="optList" role="presentation">
-    <!-- And we add the role="option" attribute to all the li elements -->
+    <!-- Y añadimos el atributo role="option" a todos los elementos li -->
     <li role="option" class="option">Cherry</li>
     <li role="option" class="option">Lemon</li>
     <li role="option" class="option">Banana</li>
@@ -1674,35 +1655,41 @@ To support the [`listbox`](/es/docs/Web/Accessibility/ARIA/Roles/listbox_role) r
 ```
 
 > [!NOTE]
-> Including both the `role` attribute and a `class` attribute is only necessary if you want to support legacy browsers that do not support the [CSS attribute selectors](/es/docs/Web/CSS/Reference/Selectors/Attribute_selectors).
+> No es necesario incluir tanto el atributo `role` como un atributo `class`. En lugar de usar `.option`, usa el [selector de atributos](/es/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[role="option"]` en tu CSS.
 
-### The `aria-selected` attribute
+### El atributo `aria-selected`
 
-Using the [`role`](/es/docs/Web/Accessibility/ARIA/Guides/Techniques) attribute is not enough. [ARIA](/es/docs/Web/Accessibility/ARIA) also provides many states and property attributes. The more and better you use them, the better your widget will be understood by assistive technologies. In our case, we will limit our usage to one attribute: `aria-selected`.
+Usar el atributo [`role`](/es/docs/Web/Accessibility/ARIA/Guides/Techniques) no es suficiente. [ARIA](/es/docs/Web/Accessibility/ARIA) también ofrece muchos atributos de estado y de propiedad. Cuanto más y mejor los uses, mejor entenderán tu control las tecnologías de asistencia. En nuestro caso, limitaremos su uso a un solo atributo: `aria-selected`.
 
-The `aria-selected` attribute is used to mark which option is currently selected; this lets assistive technologies inform the user what the current selection is. We will use it dynamically with JavaScript to mark the selected option each time the user chooses one. To that end, we need to revise our `updateValue()` function:
+El atributo `aria-selected` se usa para marcar qué opción está seleccionada actualmente; esto permite que las tecnologías de asistencia informen al usuario cuál es la selección actual. Lo usaremos dinámicamente con JavaScript para marcar la opción seleccionada cada vez que el usuario elija una. Para ello, necesitamos revisar nuestra función `updateValue()`:
 
 ```js
 function updateValue(select, index) {
-  var nativeWidget = select.previousElementSibling;
-  var value = select.querySelector(".value");
-  var optionList = select.querySelectorAll(".option");
+  const nativeWidget = select.previousElementSibling;
+  const value = select.querySelector(".value");
+  const optionList = select.querySelectorAll('[role="option"]');
 
-  // We make sure that all the options are not selected
-  optionList.forEach(function (other) {
+  // Nos aseguramos de que ninguna opción quede seleccionada
+  optionList.forEach((other) => {
     other.setAttribute("aria-selected", "false");
   });
 
-  // We make sure the chosen option is selected
+  // Nos aseguramos de que la opción elegida quede seleccionada
   optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 ```
 
-Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](http://www.nvda-project.org/) or [VoiceOver](https://www.apple.com/accessibility/voiceover/)):
+Podría haber parecido más sencillo dejar que un lector de pantalla se enfoque en el select oculto fuera de pantalla e ignore el nuestro con estilo propio, pero esta no es una solución accesible. Los lectores de pantalla no se limitan a personas ciegas; las personas con baja visión, e incluso con visión perfecta, también los usan. Por esta razón, no puedes hacer que el lector de pantalla se enfoque en un elemento fuera de pantalla.
+
+A continuación está el resultado final de todos estos cambios (te harás una mejor idea probándolo con una tecnología de asistencia como [NVDA](https://www.nvaccess.org/) o [VoiceOver](https://www.apple.com/accessibility/features/?vision)).
+
+#### Ejemplo en vivo
+
+Consulta el [código fuente completo aquí](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_5).
 
 ```html hidden
 <form class="no-widget">
@@ -1744,7 +1731,7 @@ Here is the final result of all these changes (you'll get a better feel for this
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -1760,19 +1747,18 @@ Here is the final result of all these changes (you'll get a better feel for this
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -1786,7 +1772,7 @@ Here is the final result of all these changes (you'll get a better feel for this
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -1801,11 +1787,11 @@ Here is the final result of all these changes (you'll get a better feel for this
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -1816,11 +1802,11 @@ Here is the final result of all these changes (you'll get a better feel for this
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -1835,8 +1821,8 @@ Here is the final result of all these changes (you'll get a better feel for this
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -1885,7 +1871,7 @@ function updateValue(select, index) {
   optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 
@@ -1895,82 +1881,181 @@ function getIndex(select) {
   return nativeWidget.selectedIndex;
 }
 
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+const form = document.querySelector("form");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
-});
+form.classList.remove("no-widget");
+form.classList.add("widget");
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
-    const selectedIndex = getIndex(select);
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
+  const selectedIndex = getIndex(select);
 
-    select.tabIndex = 0;
-    select.previousElementSibling.tabIndex = -1;
+  select.tabIndex = 0;
+  select.previousElementSibling.tabIndex = -1;
 
-    updateValue(select, selectedIndex);
+  updateValue(select, selectedIndex);
 
-    optionList.forEach((option, index) => {
-      option.addEventListener("mouseover", () => {
-        highlightOption(select, option);
-      });
-
-      option.addEventListener("click", (event) => {
-        updateValue(select, index);
-      });
+  optionList.forEach((option, index) => {
+    option.addEventListener("mouseover", () => {
+      highlightOption(select, option);
     });
 
-    select.addEventListener("click", (event) => {
-      toggleOptList(select);
-    });
-
-    select.addEventListener("focus", (event) => {
-      activeSelect(select, selectList);
-    });
-
-    select.addEventListener("blur", (event) => {
-      deactivateSelect(select);
-    });
-
-    select.addEventListener("keyup", (event) => {
-      let index = getIndex(select);
-
-      if (event.keyCode === 27) {
-        deactivateSelect(select);
-      }
-      if (event.keyCode === 40 && index < optionList.length - 1) {
-        index++;
-      }
-      if (event.keyCode === 38 && index > 0) {
-        index--;
-      }
-
+    option.addEventListener("click", (event) => {
       updateValue(select, index);
     });
+  });
+
+  select.addEventListener("click", (event) => {
+    toggleOptList(select);
+  });
+
+  select.addEventListener("focus", (event) => {
+    activeSelect(select, selectList);
+  });
+
+  select.addEventListener("blur", (event) => {
+    deactivateSelect(select);
+  });
+
+  select.addEventListener("keyup", (event) => {
+    let index = getIndex(select);
+
+    if (event.key === "Escape") {
+      deactivateSelect(select);
+    }
+    if (event.key === "ArrowDown" && index < optionList.length - 1) {
+      index++;
+    }
+    if (event.key === "ArrowUp" && index > 0) {
+      index--;
+    }
+
+    updateValue(select, index);
   });
 });
 ```
 
-| Live example                                                                                        |
-| --------------------------------------------------------------------------------------------------- |
-| {{EmbedLiveSample("",120,130)}}                                                                     |
-| [Check out the final source code](/es/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5) |
+{{EmbedLiveSample("Ejemplo_en_vivo_3",120,130)}}
 
-## Conclusion
+Si quieres seguir avanzando, el código de este ejemplo necesita algunas mejoras antes de volverse genérico y reutilizable. Este es un ejercicio que puedes intentar hacer tú mismo. Dos pistas para ayudarte con esto: el primer argumento de todas nuestras funciones es el mismo, lo que significa que esas funciones necesitan el mismo contexto. Construir un objeto para compartir ese contexto sería una buena idea.
 
-We have seen all the basics of building a custom form widget, but as you can see it's not trivial to do, and often it's better and easier to rely on third-party libraries instead of coding them from scratch yourself (unless, of course, your goal is to build such a library).
+## Un enfoque alternativo: usar botones de radio
 
-Here are a few libraries you should consider before coding your own:
+En el ejemplo anterior, reinventamos un elemento {{htmlelement('select')}} usando HTML, CSS y JavaScript no semánticos. Ese select seleccionaba una opción entre un número limitado de opciones, que es la misma funcionalidad que ofrece un grupo de botones {{htmlelement('input/radio', 'radio')}} con el mismo nombre.
+
+Por lo tanto, podríamos reinventar esto usando botones de radio en su lugar; veamos esta opción.
+
+Podemos empezar con una lista desordenada completamente semántica y accesible de botones {{htmlelement('input/radio','radio')}}, cada uno con su {{htmlelement('label')}} asociada, etiquetando todo el grupo con un par {{htmlelement('fieldset')}} y {{htmlelement('legend')}} semánticamente apropiado.
+
+```html
+<fieldset>
+  <legend>Pick a fruit</legend>
+  <ul class="styledSelect">
+    <li>
+      <input
+        type="radio"
+        name="fruit"
+        value="Cherry"
+        id="fruitCherry"
+        checked />
+      <label for="fruitCherry">Cherry</label>
+    </li>
+    <li>
+      <input type="radio" name="fruit" value="Lemon" id="fruitLemon" />
+      <label for="fruitLemon">Lemon</label>
+    </li>
+    <li>
+      <input type="radio" name="fruit" value="Banana" id="fruitBanana" />
+      <label for="fruitBanana">Banana</label>
+    </li>
+    <li>
+      <input
+        type="radio"
+        name="fruit"
+        value="Strawberry"
+        id="fruitStrawberry" />
+      <label for="fruitStrawberry">Strawberry</label>
+    </li>
+    <li>
+      <input type="radio" name="fruit" value="Apple" id="fruitApple" />
+      <label for="fruitApple">Apple</label>
+    </li>
+  </ul>
+</fieldset>
+```
+
+Aplicaremos un poco de estilo a la lista de botones de radio (no al legend/fieldset) para que se parezca un poco al ejemplo anterior, solo para mostrar que se puede hacer:
+
+```css
+.styledSelect {
+  display: inline-block;
+  padding: 0;
+}
+.styledSelect li {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+.styledSelect [type="radio"] {
+  position: absolute;
+  left: -100vw;
+  top: -100vh;
+}
+.styledSelect label {
+  margin: 0;
+  line-height: 2;
+  padding-left: 4px;
+}
+.styledSelect:not(:focus-within) input:not(:checked) + label {
+  height: 0;
+  outline-color: transparent;
+  overflow: hidden;
+}
+.styledSelect:not(:focus-within) input:checked + label {
+  border: 0.2em solid black;
+  border-radius: 0.4em;
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
+}
+.styledSelect:not(:focus-within) input:checked + label::after {
+  content: "▼";
+  background: black;
+  float: right;
+  color: white;
+  padding: 0 4px;
+  margin: 0 -4px 0 4px;
+}
+.styledSelect:focus-within {
+  border: 0.2em solid black;
+  border-radius: 0.4em;
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
+}
+.styledSelect:focus-within input:checked + label {
+  background-color: #333333;
+  color: white;
+  width: 100%;
+}
+```
+
+Sin JavaScript, y con solo un poco de CSS, podemos dar estilo a la lista de botones de radio para mostrar únicamente el elemento marcado. Cuando el foco está dentro del `<ul>` en el `<fieldset>`, la lista se abre, y las flechas arriba y abajo (y también izquierda y derecha) funcionan para seleccionar el elemento anterior y siguiente. Pruébalo:
+
+{{EmbedLiveSample("Un_enfoque_alternativo_usar_botones_de_radio",200,240)}}
+
+Esto funciona, hasta cierto punto, sin JavaScript. Hemos creado un control similar a nuestro control personalizado, que funciona incluso si el JavaScript falla. Parece una gran solución, ¿verdad? Bueno, no del todo. Funciona con el teclado, pero no como se esperaría con un clic de ratón. Probablemente tenga más sentido usar los estándares web como base para los controles personalizados en lugar de depender de frameworks para crear elementos sin semántica nativa. Sin embargo, nuestro control no tiene la misma funcionalidad que un `<select>` tiene de forma nativa.
+
+Por el lado positivo, este control es totalmente accesible para un lector de pantalla y totalmente navegable mediante el teclado. Sin embargo, este control no es un reemplazo de {{htmlelement('select')}}. Hay funcionalidad que difiere y/o falta. Por ejemplo, las cuatro flechas permiten navegar por las opciones, pero al hacer clic en la flecha hacia abajo cuando el usuario está en el último botón, lo lleva al primer botón; no se detiene en la parte superior e inferior de la lista de opciones como lo hace un `<select>`.
+
+Dejaremos añadir esta funcionalidad faltante como ejercicio para el lector.
+
+## Conclusión
+
+Hemos visto todos los conceptos básicos para construir un control de formulario personalizado, pero como puedes ver, no es algo trivial. Antes de crear tu propio control personalizado, considera si HTML ofrece elementos alternativos que puedan usarse para cubrir adecuadamente tus necesidades. Si de verdad necesitas crear un control personalizado, a menudo es más fácil apoyarse en bibliotecas de terceros en lugar de construir el tuyo propio. Pero si creas el tuyo, modificas elementos existentes, o usas un framework para implementar un control ya hecho, recuerda que crear un control de formulario usable y accesible es más complicado de lo que parece.
+
+Aquí tienes algunas bibliotecas que deberías considerar antes de programar la tuya:
 
 - [jQuery UI](https://jqueryui.com/)
+- [AXE accessible custom select dropdowns](https://www.webaxe.org/accessible-custom-select-dropdowns/)
 - [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
-- [Nice Forms](https://www.emblematiq.com/lab/niceforms/)
-- [And many more…](https://www.google.fr/search?q=HTML+custom+form+controls&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:fr:official&client=firefox-a)
 
-If you want to move forward, the code in this example needs some improvement before it becomes generic and reusable. This is an exercise you can try to perform. Two hints to help you in this: the first argument for all our functions is the same, which means those functions need the same context. Building an object to share that context would be wise. Also, you need to make it feature-proof; that is, it needs to be able to work better with a variety of browsers whose compatibility with the Web standards they use vary. Have fun!
-
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript", "Learn_web_development/Extensions/Forms")}}
+Si creas controles alternativos mediante botones de radio, tu propio JavaScript, o con una biblioteca de terceros, asegúrate de que sea accesible y esté preparado para el futuro; es decir, necesita funcionar bien con una variedad de navegadores cuya compatibilidad con los estándares web que usan varía. ¡Diviértete!

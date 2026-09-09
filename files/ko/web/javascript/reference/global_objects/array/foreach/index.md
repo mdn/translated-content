@@ -181,7 +181,7 @@ console.log(obj.sum); // 16
 > 콜백 함수를 전달할 때
 > [화살표 함수 표현식](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)을 사용하는 경우,
 > 모든 화살표 함수가 이 값을 문법적으로(lexical) 바인딩하므로
-> {{jsxref("Operators/this", "this")}} 매개 변수를 생략할 수 있습니다.
+> {{jsxref("this")}} 매개 변수를 생략할 수 있습니다.
 
 ### 객체 복사 함수
 

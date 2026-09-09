@@ -2,10 +2,8 @@
 title: 用語集ページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Glossary_page_template
 l10n:
-  sourceCommit: 77eea2b80f7352068ed59a2c2fb03de4ed85e194
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
-
-{{MDNSidebar}}
 
 > [!NOTE]
 > _この説明文全体を削除してから公開してください。_

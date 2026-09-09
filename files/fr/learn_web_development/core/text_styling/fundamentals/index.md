@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Fundamentals
 original_slug: Learn/CSS/Styling_text/Fundamentals
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}
+{{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}
 
 Dans cet article, nous allons commencer le voyage vers la maîtrise des styles du texte avec {{glossary("CSS")}}. Nous passerons en revue les principes de base de mise en forme du texte, y compris la graisse, la famille et le style de police, les codes d'abréviation, l'alignement du texte et autres effets, ainsi que l'espacement des lignes et des lettres.
 
@@ -664,8 +664,7 @@ Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ avec le bouton 
     id="code"
     class="html-input"
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-  <p>Un peu de texte pour vous délecter&nbsp;!</p></textarea
-  >
+  <p>Un peu de texte pour vous délecter&nbsp;!</p></textarea>
 
   <h2>Zone de saisie de la CSS</h2>
   <textarea
@@ -674,8 +673,7 @@ Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ avec le bouton 
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 p {
 
-  }</textarea
-  >
+  }</textarea>
 
   <h2>Zone de rendu</h2>
   <div

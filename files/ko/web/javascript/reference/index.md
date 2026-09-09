@@ -22,14 +22,14 @@ slug: Web/JavaScript/Reference
 ### 함수 속성
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
-- {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
-- {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
-- {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
-- {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
-- {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
-- {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
-- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{JSxRef("isFinite()")}}
+- {{JSxRef("isNaN()")}}
+- {{JSxRef("parseFloat()")}}
+- {{JSxRef("parseInt()")}}
+- {{JSxRef("decodeURI()")}}
+- {{JSxRef("decodeURIComponent()")}}
+- {{JSxRef("encodeURI()")}}
+- {{JSxRef("encodeURIComponent()")}}
 
 ### 기초 객체
 
@@ -113,15 +113,15 @@ slug: Web/JavaScript/Reference
 ### 국제화
 
 - {{JSxRef("Intl")}}
-- {{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}
-- {{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/DisplayNames", "Intl.DisplayNames")}}
-- {{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}
-- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
-- {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
-- {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
-- {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}}
+- {{JSxRef("Intl.Collator")}}
+- {{JSxRef("Intl.DateTimeFormat")}}
+- {{JSxRef("Intl.DisplayNames")}}
+- {{JSxRef("Intl.ListFormat")}}
+- {{JSxRef("Intl.Locale")}}
+- {{JSxRef("Intl.NumberFormat")}}
+- {{JSxRef("Intl.PluralRules")}}
+- {{JSxRef("Intl.RelativeTimeFormat")}}
+- {{JSxRef("Intl.Segmenter")}}
 
 ## 명령문
 
@@ -176,7 +176,7 @@ slug: Web/JavaScript/Reference
 
 ### 일차 표현식
 
-- {{JSxRef("Operators/this", "this")}}
+- {{JSxRef("this")}}
 - {{JSxRef("Operators/function", "function")}}
 - {{JSxRef("Operators/class", "class")}}
 - {{JSxRef("Operators/function*", "function*")}}
@@ -185,9 +185,9 @@ slug: Web/JavaScript/Reference
 - {{JSxRef("Operators/async_function", "async function")}}
 - {{JSxRef("Operators/async_function*", "async function*")}}
 - {{JSxRef("Operators/await", "await")}}
-- {{JSxRef("Global_Objects/Array", "[]")}}
+- {{JSxRef("Array", "[]")}}
 - {{JSxRef("Operators/Object_initializer", "{}")}}
-- {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
+- {{JSxRef("RegExp", "/ab+c/i")}}
 - {{JSxRef("Operators/Grouping", "( )")}}
 - [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)
 
@@ -195,9 +195,9 @@ slug: Web/JavaScript/Reference
 
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
 - [`?.` (Optional chaining)](/ko/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- {{JSxRef("Operators/new", "new")}}
-- {{JSxRef("Operators/new%2Etarget", "new.target")}}
-- {{JSxRef("Operators/import%2Emeta", "import.meta")}}
+- {{JSxRef("new")}}
+- {{JSxRef("Operators/new.target", "new.target")}}
+- {{JSxRef("Operators/import.meta", "import.meta")}}
 - {{JSxRef("Operators/super", "super")}}
 - {{JSxRef("Operators/Spread_syntax", "...obj")}}
 
@@ -210,7 +210,7 @@ slug: Web/JavaScript/Reference
 
 ### 단항 연산자
 
-- {{JSxRef("Operators/delete", "delete")}}
+- {{JSxRef("delete")}}
 - {{JSxRef("Operators/void", "void")}}
 - {{JSxRef("Operators/typeof", "typeof")}}
 - {{JSxRef("Operators/Unary_plus", "+")}}
@@ -230,7 +230,7 @@ slug: Web/JavaScript/Reference
 ### 관계 연산자
 
 - {{JSxRef("Operators/in", "in")}}
-- {{JSxRef("Operators/instanceof", "instanceof")}}
+- {{JSxRef("instanceof")}}
 - {{JSxRef("Operators/Less_than", "&lt;")}}
 - {{JSxRef("Operators/Greater_than", "&gt;")}}
 - {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
@@ -259,11 +259,11 @@ slug: Web/JavaScript/Reference
 
 - {{JSxRef("Operators/Logical_AND", "&amp;&amp;")}}
 - {{JSxRef("Operators/Logical_OR", "||")}}
-- {{JSxRef("Operators/Nullish_coalescing_operator", "??")}}
+- {{JSxRef("Operators/Nullish_coalescing", "??")}}
 
 ### 조건(삼항) 연산자
 
-- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{JSxRef("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
 
 ### 할당 연산자
 
@@ -282,13 +282,13 @@ slug: Web/JavaScript/Reference
 - {{JSxRef("Operators/Bitwise_OR_assignment", "|=")}}
 - {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
-- {{JSxRef("Operators/Logical_nullish_assignment", "??=")}}
-- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = arr")}}
-- {{JSxRef("Operators/Destructuring_assignment", "{ a, b } = obj")}}
+- {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}
+- {{JSxRef("Operators/Destructuring", "[a, b] = arr")}}
+- {{JSxRef("Operators/Destructuring", "{ a, b } = obj")}}
 
 ### 쉼표 연산자
 
-- {{JSxRef("Operators/Comma_Operator", ",")}}
+- {{JSxRef("Operators/Comma_operator", ",")}}
 
 ## 함수
 

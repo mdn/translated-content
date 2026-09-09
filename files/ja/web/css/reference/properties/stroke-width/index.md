@@ -1,9 +1,9 @@
 ---
-title: stroke-width
+title: CSS `stroke-width` プロパティ
+short-title: stroke-width
 slug: Web/CSS/Reference/Properties/stroke-width
-original_slug: Web/CSS/stroke-width
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`stroke-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[SVG](/ja/docs/Web/SVG) 図形に適用されるストロークの幅を定義します。もし存在するならば、要素の {{SVGAttr("stroke-width")}} この属性を上書きします。

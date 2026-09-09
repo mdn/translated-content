@@ -3,8 +3,6 @@ title: history.onVisitRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/history/onVisitRemoved
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsqu'une page est complètement supprimée de l'historique du navigateur.
 
 - Si toutes les visites d'une seule page sont supprimées (par exemple, en utilisant {{WebExtAPIRef("history.deleteUrl")}}), cet événement est déclenché une fois.

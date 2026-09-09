@@ -33,16 +33,16 @@ La liste d'autorisation par défaut pour `bluetooth` est `self`. Le contexte de 
 
 ### Utilisation simple
 
-SecureCorp Inc. souhaite interdire l'utilisation de `bluetooth` dans toutes les cadres intégrés inter-origines, sauf celles dont l'origine est `https://exemple.com`. Elle peut le faire en envoyant l'en-tête HTTP suivant pour définir une politique de permissions&nbsp;:
+SecureCorp Inc. souhaite interdire l'utilisation de `bluetooth` dans toutes les cadres intégrés inter-origines, sauf celles dont l'origine est `https://example.com`. Elle peut le faire en envoyant l'en-tête HTTP suivant pour définir une politique de permissions&nbsp;:
 
 ```http
-Permissions-Policy: bluetooth=(self "https://exemple.com")
+Permissions-Policy: bluetooth=(self "https://example.com")
 ```
 
 SecureCorp Inc. doit également inclure un attribut {{HTMLElement('iframe', 'allow', '#attributs')}} sur chaque élément `<iframe>` où `bluetooth` doit être autorisé&nbsp;:
 
 ```html
-<iframe src="https://exemple.com/blue" allow="bluetooth"></iframe>
+<iframe src="https://example.com/blue" allow="bluetooth"></iframe>
 ```
 
 > [!NOTE]

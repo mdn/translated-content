@@ -290,12 +290,12 @@ A tabela a seguir resume as traps disponíveis aos objetos do tipo Proxy. Veja a
     </tr>
     <tr>
       <td>
-        {{jsxref("Proxy/Proxy/enumerate", "handler.enumerate()")}}
+        <code>handler.enumerate()</code>
       </td>
       <td>
         Property enumeration / for...in:
         <code>for (var name in proxy) {...}</code
-        ><br />{{jsxref("Reflect.enumerate()")}}
+        ><br /><code>Reflect.enumerate()</code>
       </td>
       <td>
         <p>O método <code>enumerate</code> deve retornar um objeto.</p>

@@ -22,11 +22,11 @@ Le rôle `feed` est une liste dynamique et défilante d'`articles` dans laquelle
 
 Un `feed` est un type de [`list`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/list_role), le rôle conteneur pour les [`articles`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/article_role) défilables où le défilement peut entraîner l'ajout d'articles en haut ou en bas de la liste. Le rôle permet aux technologies d'assistance d'utiliser le curseur de lecture en mode de navigation pour à la fois lire et faire défiler un flux de contenu riche qui peut continuer à défiler indéfiniment en chargeant plus de contenu au fur et à mesure que l'utilisateur·ice lit. Les exemples incluent un flux RSS, des flux d'actualités, des flux de médias sociaux comme Facebook, Instagram ou Mastodon, ou même une liste de produits connexes sur une page de commerce électronique. Ces flux peuvent être limités ou infinis, chargeant plus de contenu au fur et à mesure que l'utilisateur·ice fait défiler. La mise en œuvre du modèle `feed` permet à un lecteur d'écran de lire de manière fiable et de déclencher le chargement du contenu du flux tout en étant en mode lecture.
 
-Contrairement aux éléments de structure de document qui représentent des éléments HTML statiques, le rôle `feed` nécessite des interactions spécifiques et la mise en œuvre de la navigation au clavier. Le `feed` est un élément conteneur dont les enfants sont des {{HTMLElement('article')}} ou ont le rôle `article`. Chaque article au sein d'un flux doit être sélectionnable, avec un tabindex de 0 ou -1. Un article doit être défilé dans la vue lorsqu'il, ou un élément descendant, reçoit la sélection. Si l'ajout d'articles occupe le thread principal du navigateur, assurez-vous de définir `aria-busy="true"` sur le flux lui-même, et assurez-vous de le définir à nouveau sur `false` lorsque le traitement se termine, sinon l'utilisateur·ice risque de ne pas voir les mises à jour.
+Contrairement aux éléments de structure de document qui représentent des éléments HTML statiques, le rôle `feed` nécessite des interactions spécifiques et la mise en œuvre de la navigation au clavier. Le `feed` est un élément conteneur dont les enfants sont des {{HTMLElement("article")}} ou ont le rôle `article`. Chaque article au sein d'un flux doit être sélectionnable, avec un tabindex de 0 ou -1. Un article doit être défilé dans la vue lorsqu'il, ou un élément descendant, reçoit la sélection. Si l'ajout d'articles occupe le thread principal du navigateur, assurez-vous de définir `aria-busy="true"` sur le flux lui-même, et assurez-vous de le définir à nouveau sur `false` lorsque le traitement se termine, sinon l'utilisateur·ice risque de ne pas voir les mises à jour.
 
 Si le nombre d'articles est connu, définissez [`aria-setsize`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) sur les articles eux-mêmes. Cependant, si le nombre total est extrêmement grand, indéfini ou change souvent, définissez `aria-setsize="-1"` pour indiquer que la taille du flux n'est pas connue.
 
-Une autre fonctionnalité du modèle de flux est la lecture en diagonale : les articles d'un flux peuvent contenir à la fois un nom accessible avec le [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) et une description avec un `aria-describedby`, suggérant aux lecteurs d'écran quels éléments lire après l'étiquette lors de la navigation par article. En identifiant les éléments à l'intérieur d'un article qui fournissent le titre et le contenu principal, les technologies d'assistance peuvent fournir des fonctions qui permettent aux utilisateur·ice·s de passer d'un article à l'autre et de discerner efficacement quels articles ils souhaitent lire.
+Une autre fonctionnalité du modèle de flux est la lecture en diagonale&nbsp;: les articles d'un flux peuvent contenir à la fois un nom accessible avec le [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) et une description avec un `aria-describedby`, suggérant aux lecteurs d'écran quels éléments lire après l'étiquette lors de la navigation par article. En identifiant les éléments à l'intérieur d'un article qui fournissent le titre et le contenu principal, les technologies d'assistance peuvent fournir des fonctions qui permettent aux utilisateur·ice·s de passer d'un article à l'autre et de discerner efficacement quels articles ils souhaitent lire.
 
 Le modèle de flux permet une interaction fiable en mode de lecture des technologies d'assistance en établissant le suivant accord d'interopérabilité entre la page Web et les technologies d'assistance&nbsp;:
 
@@ -49,7 +49,7 @@ Si un flux est imbriqué dans un flux, comme un flux de commentaires dans un flu
 ### Propriétés, états et rôles WAI-ARIA associés
 
 - [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-  - : Si le flux n'a pas de titre visible, l'élément `feed` a une étiquette spécifiée avec `aria-label`. Si c'est le cas, voir `aria-labelledby`.
+  - : Si le flux n'a pas de titre visible, l'élément `feed` a une étiquette définie avec `aria-label`. Si c'est le cas, voir `aria-labelledby`.
 
 - [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
   - : Si le flux a un titre visible, l'élément `feed` a `aria-labelledby` faisant référence à l'élément contenant le titre. Si ce n'est pas le cas, ajoutez un `aria-label`.
@@ -64,7 +64,7 @@ Si un flux est imbriqué dans un flux, comme un flux de commentaires dans un flu
 
 Aucune, sauf si nécessaire par des attributs. Par exemple, définir [`aria-busy`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) sur `true` pendant l'opération de mise à jour si nécessaire, puis sur `false` à l'achèvement.
 
-Remarque&nbsp;: Il incombe à l'auteur d'appliquer le comportement clavier "ci-dessus".
+Remarque&nbsp;: Il incombe à l'auteur·ice d'appliquer le comportement clavier "ci-dessus".
 
 ## Exemples
 
@@ -80,7 +80,7 @@ Pour garantir une bonne expérience utilisateur, évitez d'insérer ou de suppri
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement('article')}}
-- L'élément {{HTMLElement('ul')}} de liste non ordonnée
+- L'élément HTML {{HTMLElement("article")}}
+- L'élément HTML {{HTMLElement("ul")}} de liste non ordonnée
 - [ARIA&nbsp;: rôle `article`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/article_role)
 - [ARIA&nbsp;: rôle `list`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)

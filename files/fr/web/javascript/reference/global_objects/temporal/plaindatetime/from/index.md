@@ -85,6 +85,6 @@ Pour plus d'exemples, notamment concernant les différents calendriers et les pa
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDateTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainDateTime")}}
 - Le constructeur {{JSxRef("Temporal/PlainDateTime/PlainDateTime", "Temporal.PlainDateTime()")}}
 - La méthode {{JSxRef("Temporal/PlainDateTime/with", "Temporal.PlainDateTime.prototype.with()")}}

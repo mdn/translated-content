@@ -3,7 +3,7 @@ title: "Selection: collapse() メソッド"
 short-title: collapse()
 slug: Web/API/Selection/collapse
 l10n:
-  sourceCommit: da1442e0040419eb105f0720fd539adb5d5ca286
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{ApiRef("DOM")}}

@@ -3,7 +3,7 @@ title: "Window : méthode queueMicrotask()"
 short-title: queueMicrotask()
 slug: Web/API/Window/queueMicrotask
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 3b7310aac5ffd95db697bf136b7323cffc7e5bd2
 ---
 
 {{APIRef("HTML DOM")}}
@@ -16,7 +16,7 @@ Cela permet à votre code de fonctionner sans interférer avec un autre code, do
 
 L'importance des micro-tâches vient de leur possibilité d'effectuer des tâches de manière asynchrone mais dans un ordre spécifique. Voir [Utiliser les micro-tâches en JavaScript avec `queueMicrotask()`](/fr/docs/Web/API/HTML_DOM_API/Microtask_guide) pour plus de détails.
 
-Les micro-tâches sont particulièrement utiles pour les bibliothèques et les <i lang="en">frameworks</i> qui doivent effectuer un nettoyage final ou d'autres tâches à exécuter avant le rendu.
+Les micro-tâches sont particulièrement utiles pour les bibliothèques et les cadriciels (<i lang="en">frameworks</i> en anglais) qui doivent effectuer un nettoyage final ou d'autres tâches à exécuter avant le rendu.
 
 ## Syntaxe
 
@@ -27,7 +27,7 @@ queueMicrotask(callback)
 ### Paramètres
 
 - `callback`
-  - : Une {{JSxRef("Operators/function", "function")}} qui doit être exécutée lorsque le moteur du navigateur détermine qu'il est sûr d'appeler votre code. Les micro-tâches mises en files d'attente sont exécutées après la fin de toutes les tâches en attente et avant de céder le contrôle à la boucle d'évènements du navigateur.
+  - : Une {{JSxRef("Function")}} qui doit être exécutée lorsque le moteur du navigateur détermine qu'il est sûr d'appeler votre code. Les micro-tâches mises en files d'attente sont exécutées après la fin de toutes les tâches en attente et avant de céder le contrôle à la boucle d'évènements du navigateur.
 
 ### Valeur de retour
 

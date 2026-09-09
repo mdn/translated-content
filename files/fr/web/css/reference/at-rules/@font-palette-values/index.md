@@ -19,7 +19,7 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
 }
 ```
 
-La valeur [&lt;dashed-ident&gt;](/fr/docs/Web/CSS/Reference/Values/dashed-ident) est un identifiant défini par l'utilisateur·rice qui, bien qu'il ressemble à une [propriété personnalisée CSS](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), se comporte différemment et n'est pas utilisé dans une [fonction CSS var()](/fr/docs/Web/CSS/Reference/Values/var).
+La valeur [&lt;dashed-ident&gt;](/fr/docs/Web/CSS/Reference/Values/dashed-ident) est un identifiant défini par l'utilisateur·ice qui, bien qu'il ressemble à une [propriété personnalisée CSS](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), se comporte différemment et n'est pas utilisé dans une [fonction CSS var()](/fr/docs/Web/CSS/Reference/Values/var).
 
 ### Descripteurs
 

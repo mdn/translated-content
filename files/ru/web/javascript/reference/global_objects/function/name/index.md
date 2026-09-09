@@ -66,7 +66,7 @@ console.log(f.name); // "f"
 console.log(object.someMethod.name); // "someMethod"
 ```
 
-Вы можете определить функцию с именем в {{jsxref("Operators/Function", "function expression", "", 1)}}:
+Вы можете определить функцию с именем в {{jsxref("Operators/function", "function expression", "", 1)}}:
 
 ```js
 var object = {

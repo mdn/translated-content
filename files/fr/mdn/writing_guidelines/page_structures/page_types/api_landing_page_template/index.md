@@ -2,7 +2,7 @@
 title: Modèle de page d'accueil d'API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_landing_page_template
 l10n:
-  sourceCommit: 6aca3e5157dbc163fe8209d9bf8cc3f2e8ec3f9d
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 > [!NOTE]
@@ -50,7 +50,6 @@ l10n:
 >
 > - `\{{SeeCompatTable}}` — cela génère une bannière **Ceci est une technologie expérimentale** qui indique que la technologie est [expérimentale](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#expérimental).
 >   Si elle est expérimentale et que la technologie est cachée derrière une préférence dans Firefox, vous devez également remplir une entrée pour elle dans la page [Fonctionnalités expérimentales dans Firefox](/fr/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — cela génère une bannière **Obsolète** qui indique que l'utilisation de la technologie est [découragée](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#obsolète).
 > - `\{{Non-standard_Header}}` — cela génère une bannière **Non standard** qui indique que la fonctionnalité ne fait partie d'aucune spécification.
 >
 > Vous devez mettre à jour ou supprimer les macros suivantes selon les conseils ci-dessous&nbsp;:
@@ -94,7 +93,7 @@ l10n:
 >
 > _N'oubliez pas de supprimer cette note explicative avant de publier_
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 Commencez le contenu de la page par un paragraphe introductif — commencez par nommer l'API et dire ce qu'elle fait. Cela doit idéalement être une ou deux phrases courtes.
 

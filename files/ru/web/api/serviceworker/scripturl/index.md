@@ -15,7 +15,7 @@ someURL = ServiceWorker.scriptURL
 
 ### Значение
 
-{{domxref("USVString")}} (см. [WebIDL-определение USVString](http://heycam.github.io/webidl/#idl-USVString).)
+{{jsxref("String")}} (см. [WebIDL-определение USVString](http://heycam.github.io/webidl/#idl-USVString).)
 
 ## Примеры
 

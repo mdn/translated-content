@@ -40,77 +40,77 @@ slug: Web/JavaScript/Reference/Global_Objects/Math
 > [!NOTE]
 > Обратите внимание, что точность большинства математических функций зависит от реализации. Это означает, что различные браузеры могут дать разные результаты, более того, даже один и тот же движок JavaScript на различных операционных системах или архитектурах может выдать разные результаты.
 
-- {{jsxref("Global_Objects/Math/abs", "Math.abs(x)")}}
+- {{jsxref("Math.abs", "Math.abs(x)")}}
   - : Возвращает абсолютное значение числа.
-- {{jsxref("Global_Objects/Math/acos", "Math.acos(x)")}}
+- {{jsxref("Math.acos", "Math.acos(x)")}}
   - : Возвращает арккосинус числа.
-- {{jsxref("Global_Objects/Math/acosh", "Math.acosh(x)")}} {{experimental_inline}}
+- {{jsxref("Math.acosh", "Math.acosh(x)")}} {{experimental_inline}}
   - : Возвращает гиперболический арккосинус числа.
-- {{jsxref("Global_Objects/Math/asin", "Math.asin(x)")}}
+- {{jsxref("Math.asin", "Math.asin(x)")}}
   - : Возвращает арксинус числа.
-- {{jsxref("Global_Objects/Math/asinh", "Math.asinh(x)")}} {{experimental_inline}}
+- {{jsxref("Math.asinh", "Math.asinh(x)")}} {{experimental_inline}}
   - : Возвращает гиперболический арксинус числа.
-- {{jsxref("Global_Objects/Math/atan", "Math.atan(x)")}}
+- {{jsxref("Math.atan", "Math.atan(x)")}}
   - : Возвращает арктангенс числа.
-- {{jsxref("Global_Objects/Math/atanh", "Math.atanh(x)")}} {{experimental_inline}}
+- {{jsxref("Math.atanh", "Math.atanh(x)")}} {{experimental_inline}}
   - : Возвращает гиперболический арктангенс числа.
-- {{jsxref("Global_Objects/Math/atan2", "Math.atan2(y, x)")}}
+- {{jsxref("Math.atan2", "Math.atan2(y, x)")}}
   - : Возвращает арктангенс от частного своих аргументов.
-- {{jsxref("Global_Objects/Math/cbrt", "Math.cbrt(x)")}} {{experimental_inline}}
+- {{jsxref("Math.cbrt", "Math.cbrt(x)")}} {{experimental_inline}}
   - : Возвращает кубический корень числа.
-- {{jsxref("Global_Objects/Math/ceil", "Math.ceil(x)")}}
+- {{jsxref("Math.ceil", "Math.ceil(x)")}}
   - : Возвращает значение числа, округлённое к большему целому.
-- {{jsxref("Global_Objects/Math/clz32", "Math.clz32(x)")}} {{experimental_inline}}
+- {{jsxref("Math.clz32", "Math.clz32(x)")}} {{experimental_inline}}
   - : Возвращает количество ведущих нулей 32-битного целого числа.
-- {{jsxref("Global_Objects/Math/cos", "Math.cos(x)")}}
+- {{jsxref("Math.cos", "Math.cos(x)")}}
   - : Возвращает косинус числа.
-- {{jsxref("Global_Objects/Math/cosh", "Math.cosh(x)")}} {{experimental_inline}}
+- {{jsxref("Math.cosh", "Math.cosh(x)")}} {{experimental_inline}}
   - : Возвращает гиперболический косинус числа.
-- {{jsxref("Global_Objects/Math/exp", "Math.exp(x)")}}
+- {{jsxref("Math.exp", "Math.exp(x)")}}
   - : Возвращает Ex, где _x_ — аргумент, а E — число Эйлера (2,718…), основание натурального логарифма.
-- {{jsxref("Global_Objects/Math/expm1", "Math.expm1(x)")}} {{experimental_inline}}
+- {{jsxref("Math.expm1", "Math.expm1(x)")}} {{experimental_inline}}
   - : Возвращает `exp(x)`, из которого вычли единицу.
-- {{jsxref("Global_Objects/Math/floor", "Math.floor(x)")}}
+- {{jsxref("Math.floor", "Math.floor(x)")}}
   - : Возвращает значение числа, округлённое к меньшему целому.
-- {{jsxref("Global_Objects/Math/fround", "Math.fround(x)")}} {{experimental_inline}}
+- {{jsxref("Math.fround", "Math.fround(x)")}} {{experimental_inline}}
   - : Возвращает ближайшее число с плавающей запятой [одинарной точности](https://ru.wikipedia.org/wiki/Число_одинарной_точности), представляющие это число.
-- {{jsxref("Global_Objects/Math/hypot", "Math.hypot([x[, y[, …]]])")}} {{experimental_inline}}
+- {{jsxref("Math.hypot", "Math.hypot([x[, y[, …]]])")}} {{experimental_inline}}
   - : Возвращает квадратный корень из суммы квадратов своих аргументов.
-- {{jsxref("Global_Objects/Math/imul", "Math.imul(x)")}} {{experimental_inline}}
+- {{jsxref("Math.imul", "Math.imul(x)")}} {{experimental_inline}}
   - : Возвращает результат умножения 32-битных целых чисел.
-- {{jsxref("Global_Objects/Math/log", "Math.log(x)")}}
+- {{jsxref("Math.log", "Math.log(x)")}}
   - : Возвращает натуральный логарифм числа (loge, также известен как ln).
-- {{jsxref("Global_Objects/Math/log1p", "Math.log1p(x)")}} {{experimental_inline}}
+- {{jsxref("Math.log1p", "Math.log1p(x)")}} {{experimental_inline}}
   - : Возвращает натуральный логарифм числа `1 + x` (loge, также известен как ln).
-- {{jsxref("Global_Objects/Math/log10", "Math.log10(x)")}} {{experimental_inline}}
+- {{jsxref("Math.log10", "Math.log10(x)")}} {{experimental_inline}}
   - : Возвращает десятичный логарифм числа.
-- {{jsxref("Global_Objects/Math/log2", "Math.log2(x)")}} {{experimental_inline}}
+- {{jsxref("Math.log2", "Math.log2(x)")}} {{experimental_inline}}
   - : Возвращает двоичный логарифм числа.
-- {{jsxref("Global_Objects/Math/max", "Math.max([x[, y[, …]]])")}}
+- {{jsxref("Math.max", "Math.max([x[, y[, …]]])")}}
   - : Возвращает наибольшее число из своих аргументов.
-- {{jsxref("Global_Objects/Math/min", "Math.min([x[, y[, …]]])")}}
+- {{jsxref("Math.min", "Math.min([x[, y[, …]]])")}}
   - : Возвращает наименьшее число из своих аргументов.
-- {{jsxref("Global_Objects/Math/pow", "Math.pow(a, n)")}}
+- {{jsxref("Math.pow", "Math.pow(a, n)")}}
   - : Возвращает `a` в `n`-й степени, то есть _a_<sup><i>n</i></sup>.
-- {{jsxref("Global_Objects/Math/random", "Math.random()")}}
+- {{jsxref("Math.random()")}}
   - : Возвращает псевдослучайное число в диапазоне от 0 до 1.
-- {{jsxref("Global_Objects/Math/round", "Math.round(x)")}}
+- {{jsxref("Math.round", "Math.round(x)")}}
   - : Возвращает значение числа, округлённое до ближайшего целого.
-- {{jsxref("Global_Objects/Math/sign", "Math.sign(x)")}} {{experimental_inline}}
+- {{jsxref("Math.sign", "Math.sign(x)")}} {{experimental_inline}}
   - : Возвращает знак числа, указывающий, является ли число положительным, отрицательным или нулём.
-- {{jsxref("Global_Objects/Math/sin", "Math.sin(x)")}}
+- {{jsxref("Math.sin", "Math.sin(x)")}}
   - : Возвращает синус числа.
-- {{jsxref("Global_Objects/Math/sinh", "Math.sinh(x)")}} {{experimental_inline}}
+- {{jsxref("Math.sinh", "Math.sinh(x)")}} {{experimental_inline}}
   - : Возвращает гиперболический синус числа.
-- {{jsxref("Global_Objects/Math/sqrt", "Math.sqrt(x)")}}
+- {{jsxref("Math.sqrt", "Math.sqrt(x)")}}
   - : Возвращает положительный квадратный корень числа.
-- {{jsxref("Global_Objects/Math/tan", "Math.tan(x)")}}
+- {{jsxref("Math.tan", "Math.tan(x)")}}
   - : Возвращает тангенс числа.
-- {{jsxref("Global_Objects/Math/tanh", "Math.tanh(x)")}} {{experimental_inline}}
+- {{jsxref("Math.tanh", "Math.tanh(x)")}} {{experimental_inline}}
   - : Возвращает гиперболический тангенс числа.
 - `Math.toSource()` {{non-standard_inline}}
   - : Возвращает строку `"Math"`.
-- {{jsxref("Global_Objects/Math/trunc", "Math.trunc(x)")}} {{experimental_inline}}
+- {{jsxref("Math.trunc", "Math.trunc(x)")}} {{experimental_inline}}
   - : Возвращает целую часть числа, убирая дробные цифры.
 
 ## Расширение объекта `Math`
@@ -155,4 +155,4 @@ console.log(Math.gcd(20, 30, 15, 70, 40)); // `5`
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/Number", "Number")}}
+- {{jsxref("Number")}}

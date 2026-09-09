@@ -3,8 +3,6 @@ title: runtime.getBrowserInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo
 ---
 
-{{AddonSidebar}}
-
 Renvoie les informations sur le navigateur dans lequel l'extension est installée.
 
 Il s'agit d'une fonction asynchrone qui renvoie une {{JSxRef("Promise")}}.

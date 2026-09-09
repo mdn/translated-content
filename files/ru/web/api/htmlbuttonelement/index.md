@@ -7,7 +7,7 @@ slug: Web/API/HTMLButtonElement
 
 Интерфейс HTMLButtonElement предоставляет свойства и методы для управления элементами {{HTMLElement("button")}} (помимо обычного интерфейса {{domxref("HTMLElement")}}, он также доступен - по наследованию) .
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Свойства
 
@@ -24,12 +24,12 @@ _Наследует свойства от его родителя, {{domxref("HT
   <tbody>
     <tr>
       <td><code>accessKey</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>Определённая кнопка клавиатуры, дающая доступ к кнопке.</td>
     </tr>
     <tr>
       <td><code>autofocus</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td>
         Управление должно получить фокус ввода при загрузки страницы, пока
         пользователь не отменяет его, например, набирая на клавиатуре в другом
@@ -39,7 +39,7 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>disabled</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td>Контроль выключен, что означает, он не принимает любых кликов.</td>
     </tr>
     <tr>
@@ -54,7 +54,7 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>formAction</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         <p>
           URI ресурса, обрабатывающего информацию, отправленную кнопкой. Если
@@ -66,7 +66,7 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>formEncType</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         Тип содержимого, используемый для отправки формы на сервер. Если указан
         этот атрибут, то он переопределяет
@@ -77,7 +77,7 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>formMethod</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         <p>
           HTTP метод, который браузер использует для отправки формы. Если задан,
@@ -88,7 +88,7 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>formNoValidate</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td>
         <p>
           Показывает что форма не будет проверена при отправке. Если задано,
@@ -100,7 +100,7 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>formTarget</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         <p>
           Имя или ключевое слово, указывающее, где должен отображаться ответ,
@@ -128,7 +128,7 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>name</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         <p>
           Имя объекта отправляемое с формой.
@@ -148,7 +148,7 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>type</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         <p>
           Указывает поведение кнопки. Это перечисляемый атрибут со следующими
@@ -172,7 +172,7 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>validationMessage</code> {{readonlyInline}}</td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         <p>
           A localized message that describes the validation constraints that the
@@ -191,12 +191,12 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>value</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>The current form control value of the button.</td>
     </tr>
     <tr>
       <td><code>willValidate</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td>
         Indicates whether the button is a candidate for constraint validation.
         It is <code>false</code> if any conditions bar it from constraint
@@ -210,10 +210,10 @@ _Наследует свойства от его родителя, {{domxref("HT
 
 _Наследует свойства от его родителя, {{domxref("HTMLElement")}}._
 
-| Name                                    | Return Type            | Description                        |
-| --------------------------------------- | ---------------------- | ---------------------------------- |
-| `checkValidity()`                       | {{domxref("Boolean")}} | Not supported for button elements. |
-| `setCustomValidity(in DOMString error)` | `void`                 | Not supported for button elements. |
+| Name                                    | Return Type           | Description                        |
+| --------------------------------------- | --------------------- | ---------------------------------- |
+| `checkValidity()`                       | {{jsxref("Boolean")}} | Not supported for button elements. |
+| `setCustomValidity(in DOMString error)` | `void`                | Not supported for button elements. |
 
 WIth Gecko-based browser, use the {{cssxref(":-moz-submit-invalid")}} pseudo-class to style submit buttons based on the validation of a form.
 

@@ -320,7 +320,7 @@ span {
 
 スクロールタイムラインの `scroll()` 関数とは異なり、`<scroller>` 引数は `view()` 関数には存在しません。これは、ビュータイムラインが常に直近のスクロールコンテナー内で対象を追跡するためです。
 
-この例では、インセット値を使用しているため、`from` および `to` キーフレームセレクターが使用できます。
+この例では、インセット値を使用しているため、`from` および `to` [キーフレームセレクター](/ja/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)が使用できます。
 
 ```css live-sample___anon_view_args
 @keyframes action {
@@ -360,5 +360,7 @@ span {
 
 ## 関連情報
 
-- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)
+- [タイムライン範囲名を理解する](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
+- [スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)モジュール
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)モジュール
 - [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)

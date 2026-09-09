@@ -1,35 +1,131 @@
 ---
-title: compositionupdate
+title: "Element : évènement compositionupdate"
+short-title: compositionupdate
 slug: Web/API/Element/compositionupdate_event
+l10n:
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
-L'événement **compositionupdate** est déclenché lorsqu'un caractère est ajouté à un passage de texte en train d'être composé (`démarre avec des caractères spéciaux qui nécessitent une sequence de touches et d'autres entrées telles que la reconnaissance vocale ou la suggestion de mots du mobile).`
+L'évènement **`compositionupdate`** est déclenché lorsqu'un nouveau caractère est reçu dans le cadre d'une session de composition de texte contrôlée par un système de composition de texte tel qu'une {{Glossary("input method editor", "méthode de saisie")}}.
 
-## Informations générales
+Par exemple, cet évènement peut être déclenché lorsqu'un·e utilisateur·ice saisit un caractère chinois en utilisant une {{Glossary("Input method editor", "méthode de saisie")}} [Pinyin](https://fr.wikipedia.org/wiki/Hanyu_pinyin).
 
-- Interface
-  - : {{domxref("TouchEvent")}}
-- Propagation
-  - : Oui
-- Annulable
-  - : Non
-- Cible
-  - : {{domxref("Element")}}
+## Syntaxe
 
-## Propriétés
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènement.
 
-| Property                        | Type                                                                            | Description                                                                                      |
-| ------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| `target` {{ReadOnlyInline}}     | {{domxref("EventTarget")}}                                                      | Elément ayant le focus qui traite la composition. Nul si non-accessible.                         |
-| `type` {{ReadOnlyInline}}       | {{jsxref("String")}}                                                            | Le type de l'événement.                                                                          |
-| `bubbles` {{ReadOnlyInline}}    | `boolean`                                                                       | Est-ce qu'il se propage?                                                                         |
-| `cancelable` {{ReadOnlyInline}} | `boolean`                                                                       | Peut-il être annulé?                                                                             |
-| `view` {{ReadOnlyInline}}       | {{domxref("WindowProxy")}}                                                      | {{domxref("Document.defaultView")}} (fenêtre du document).                                       |
-| `detail` {{ReadOnlyInline}}     | `long` (`float`)                                                                | 0.                                                                                               |
-| `data` {{ReadOnlyInline}}       | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) (string) | La chaîne de caractères originale éditée ou une chaîne vide.                                     |
-| `locale` {{ReadOnlyInline}}     | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) (string) | Le code de la langue pour l'évènement de composition si disponible&nbsp;; sinon une chaîne vide. |
+```js-nolint
+addEventListener("compositionupdate", (event) => { })
+
+oncompositionupdate = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("CompositionEvent")}}. Hérite de {{DOMxRef("UIEvent")}} et de {{DOMxRef("Event")}}.
+
+{{InheritanceDiagram("CompositionEvent")}}
+
+## Exemples
+
+```js
+const elementSaisie = document.querySelector('input[type="text"]');
+
+elementSaisie.addEventListener("compositionend", (event) => {
+  console.log(`caractères générés : ${event.data}`);
+});
+```
+
+### Exemple interactif
+
+#### HTML
+
+```html
+<div class="controle">
+  <p>
+    Premièrement, sélectionnez la zone de texte, puis ouvrez la méthode de
+    saisie&nbsp;:
+  </p>
+  <ul>
+    <li>sur macOS, appuyez sur <kbd>option</kbd> + <kbd>`</kbd></li>
+    <li>sur Windows, appuyez sur <kbd>windows</kbd> + <kbd>.</kbd></li>
+  </ul>
+  <label for="exemple">Exemple de saisie</label>
+  <input type="text" id="exemple" name="exemple" />
+</div>
+
+<div class="journal-event">
+  <label for="journalEvent">Journal évènement&nbsp;:</label>
+  <textarea
+    readonly
+    class="contenu-journal-event"
+    rows="8"
+    cols="25"
+    id="journalEvent"></textarea>
+  <button class="effacer-journal">Effacer</button>
+</div>
+```
+
+```css hidden
+body {
+  padding: 0.2rem;
+  display: grid;
+  grid-template-areas: "control log";
+}
+
+.controle {
+  grid-area: control;
+}
+
+.journal-event {
+  grid-area: log;
+}
+
+.contenu-journal-event {
+  resize: none;
+}
+
+label,
+button {
+  display: block;
+}
+
+input[type="text"] {
+  margin: 0.5rem 0;
+}
+
+kbd {
+  border-radius: 3px;
+  padding: 1px 2px 0;
+  border: 1px solid black;
+}
+```
+
+#### JavaScript
+
+```js
+const elementSaisie = document.querySelector('input[type="text"]');
+const journal = document.querySelector(".contenu-journal-event");
+const effacerJournal = document.querySelector(".effacer-journal");
+
+effacerJournal.addEventListener("click", () => {
+  journal.textContent = "";
+});
+
+function gestionEvenement(event) {
+  journal.textContent += `${event.type}: ${event.data}\n`;
+}
+
+elementSaisie.addEventListener("compositionstart", gestionEvenement);
+elementSaisie.addEventListener("compositionupdate", gestionEvenement);
+elementSaisie.addEventListener("compositionend", gestionEvenement);
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Exemple interactif", "100%", 180)}}
 
 ## Spécifications
 
@@ -41,6 +137,4 @@ L'événement **compositionupdate** est déclenché lorsqu'un caractère est ajo
 
 ## Voir aussi
 
-- [`compositionstart`](/fr/docs/Web/API/Element/compositionstart_event)
-- [`compositionupdate`](/fr/docs/Web/API/Element/compositionupdate_event)
-- [`compositionend`](/fr/docs/Web/API/Element/compositionend_event)
+- Évènements associés&nbsp;: {{DOMxRef("Element/compositionstart_event", "compositionstart")}}, {{DOMxRef("Element/compositionend_event", "compositionend")}}.

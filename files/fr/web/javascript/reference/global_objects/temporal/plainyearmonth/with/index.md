@@ -69,5 +69,5 @@ Pour plus d'exemples, consultez la documentation des propriétés individuelles 
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainYearMonth")}}
+- L'objet natif {{JSxRef("Temporal.PlainYearMonth")}}
 - La méthode statique {{JSxRef("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}

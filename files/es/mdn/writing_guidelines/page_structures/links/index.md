@@ -20,7 +20,7 @@ MDN ofrece macros que crean una lista de enlaces:
 - [`\{{QuickLinksWithSubpages()}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/quick_links_with_subpages.rs)
   - : Crea un conjunto de enlaces rápidos usando las páginas secundarias de la página actual (o de la página especificada) como destinos. Esto crea listas jerárquicas de hasta dos niveles de profundidad. Los títulos de las páginas se utilizan como texto del enlace y sus resúmenes como información emergente (tooltips).
 
-Por ejemplo, para incluir una lista ordenada de enlaces que incluya esta página y sus páginas relacionadas, escribe lo siguiente:
+Por ejemplo, para incluir una lista ordenada de enlaces que incluya esta página y sus páginas hermanas, escribe lo siguiente:
 
 ```md
 \{{ListSubpagesForSidebar("/es/docs/MDN/Writing_guidelines/Page_structures/Macros", 1)}}
@@ -53,7 +53,7 @@ Por eso, usar macros para agregar enlaces es rápido y fácil.
 
 ### Personalizar el texto visible
 
-Por defecto, el texto visible del enlace es el primer parámetro que se pasa a la macro. Para mostrar un texto diferente, usa el segundo parámetro. Por ejemplo, `\{{JSxRef("Array")}}` genera {{JSxRef("Array")}}. Para mostrar una variación de ese texto, usa `\{{JSxRef("Array", "JavaScript arrays")}}`, que genera {{JSxRef("Array", "JavaScript arrays")}}. Notarás que el enlace resultante tiene formato de código debido al comportamiento por defecto de la macro. Consulta la sección [Desactivar el formato de código](#disabling_code_formatting) para ver cómo omitir el estilo de código.
+Por defecto, el texto visible del enlace es el primer parámetro que se pasa a la macro. Para mostrar un texto diferente, usa el segundo parámetro. Por ejemplo, `\{{JSxRef("Array")}}` genera {{JSxRef("Array")}}. Para mostrar una variación de ese texto, usa `\{{JSxRef("Array", "JavaScript arrays")}}`, que genera {{JSxRef("Array", "JavaScript arrays")}}. Notarás que el enlace resultante tiene formato de código debido al comportamiento por defecto de la macro. Consulta la sección [Desactivar el formato de código](#desactivar_el_formato_de_código) para ver cómo omitir el estilo de código.
 
 ### Enlazar a páginas anidadas
 

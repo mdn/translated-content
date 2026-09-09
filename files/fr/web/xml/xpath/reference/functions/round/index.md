@@ -4,8 +4,6 @@ slug: Web/XML/XPath/Reference/Functions/round
 original_slug: Web/XPath/Functions/round
 ---
 
-{{XsltSidebar}}
-
 La fonction `round` retourne le nombre entier le plus proche d'un nombre donné.
 
 ### Syntaxe

@@ -3,10 +3,10 @@ title: "HTMLTableRowElement : propriété align"
 short-title: align
 slug: Web/API/HTMLTableRowElement/align
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`align`** de l'interface {{DOMxRef("HTMLTableRowElement")}} est une chaîne de caractères indiquant comment aligner horizontalement le texte dans la ligne de tableau ({{HTMLElement("tr")}}). Les cellules individuelles peuvent la remplacer.
 
@@ -26,7 +26,7 @@ Les valeurs possibles sont&nbsp;:
 - `justify`
   - : Justifie le texte dans la cellule. Utilisez plutôt `text-align: justify`.
 - `char`
-  - : Jamais pleinement pris en charge, aligne le texte sur un caractère défini. Utilisez `text-align: <string>`, où la chaîne est un seul caractère, lorsque c'est pris en charge.
+  - : Jamais pleinement pris en charge, aligne le texte sur un caractère défini. Utilisez `text-align: <string>`, où la chaîne de caractères est un seul caractère, lorsque c'est pris en charge.
 
 ## Exemples
 

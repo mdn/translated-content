@@ -86,7 +86,7 @@ l10n:
 
 ### 유사 Set 객체(Set-like objects)
 
-모든 [Set 구성 메서드](#set_composition)는 {{jsxref("Operators/this", "this")}}가 실제 `Set` 인스턴스여야 하지만, 인자는 Set과 유사하면 됩니다. 유사 Set 객체는 다음을 제공하는 객체입니다.
+모든 [Set 구성 메서드](#set_composition)는 {{jsxref("this")}}가 실제 `Set` 인스턴스여야 하지만, 인자는 Set과 유사하면 됩니다. 유사 Set 객체는 다음을 제공하는 객체입니다.
 
 - 숫자값을 가진 {{jsxref("Set/size", "size")}} 속성
 - 요소를 취하고 부울을 반환하는 {{jsxref("Set/has", "has()")}} 메서드

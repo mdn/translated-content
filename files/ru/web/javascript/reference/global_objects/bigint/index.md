@@ -72,7 +72,7 @@ const theFuture = previousMaxSafe + 2n;
 const multi = previousMaxSafe * 2n;
 // ↪ 18014398509481982n
 
-const subtr = multi – 10n;
+const subtr = multi - 10n;
 // ↪ 18014398509481972n
 
 const mod = multi % 10n;
@@ -81,8 +81,8 @@ const mod = multi % 10n;
 const bigN = 2n ** 54n;
 // ↪ 18014398509481984n
 
-bigN * -1n
-// ↪ –18014398509481984n
+bigN * -1n;
+// ↪ -18014398509481984n
 ```
 
 Оператор `/` также работает, как и ожидалось, с целыми числами. Однако, поскольку это BigInt, эта операция будет округляться в меньшую сторону, то есть она не будет возвращать какие-либо дробные цифры.
@@ -110,7 +110,7 @@ const rounded = 5n / 2n;
 // ↪ true
 ```
 
-{{JSxRef("Global_Objects/Number", "Обычные числа")}} и `BigInt` можно сравнивать как обычно.
+{{JSxRef("Number", "Обычные числа")}} и `BigInt` можно сравнивать как обычно.
 
 ```js
 1n < 2;
@@ -151,10 +151,10 @@ o === o; // true
 
 ### Условные выражения
 
-`BigInt` ведёт себя как {{JSxRef("Global_Objects/Number", "обычное число")}} в следующих случаях:
+`BigInt` ведёт себя как {{JSxRef("Number", "обычное число")}} в следующих случаях:
 
-- Преобразуется в {{JSxRef("Global_Objects/Boolean", "Boolean")}} через функцию {{JSxRef("Global_Objects/Boolean", "Boolean")}}
-- Используется с логическими операторами {{JSxRef("Operators/Logical_Operators", "Logical Operators")}} `||`, `&&` и `!`
+- Преобразуется в {{JSxRef("Boolean")}} через функцию {{JSxRef("Boolean")}}
+- Используется с логическими операторами {{JSxRef("Operators", "Logical Operators")}} `||`, `&&` и `!`
 - В условном тесте, таком как {{JSxRef("Statements/if...else", "if statement")}}.
 
 ```js

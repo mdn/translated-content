@@ -46,7 +46,7 @@ _`CompileError` 생성자에는 고유 한 고유 속성이 없지만 프로토 
 
 _`CompileError`_ 생성자에는 자체 메서드가 없지만 프로토 타입 체인을 통해 일부 메서드를 상속합니다.
 
-- {{jsxref("Error.prototype.toSource", "WebAssembly.CompileError.prototype.toSource()")}}
+- {{jsxref("Error.prototype.toString", "WebAssembly.CompileError.prototype.toSource()")}}
   - : 동일한 오류로 판단할 수 있는 코드를 반환합니다. {{jsxref("Error")}}에서 상속합니다.
 - {{jsxref("Error.prototype.toString", "WebAssembly.CompileError.prototype.toString()")}}
   - : 지정된 Error 객체를 나타내는 문자열을 반환합니다. {{jsxref("Error")}}에서 상속합니다.

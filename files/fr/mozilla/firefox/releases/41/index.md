@@ -3,7 +3,7 @@ title: Firefox 41 note de version pour les développeurs
 short-title: Firefox 41
 slug: Mozilla/Firefox/Releases/41
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 [Pour tester les dernières fonctionnalités pour les développeur·euse·s de Firefox, installez Firefox Developer Edition <sup>(angl.)</sup>](https://www.firefox.com/en-US/channel/desktop/developer/)
@@ -82,7 +82,7 @@ Points forts&nbsp;:
 
 #### Canvas API
 
-- {{DOMxRef("HTMLCanvasElement.captureStream()")}} et `CanvasCaptureMediaStream` ont été ajoutés et permettent de diffuser l'affichage d'un {{HTMLElement("canvas")}} en temps réel ([bogue Firefox 1032848 <sup>(angl.)</sup>](https://bugzil.la/1032848)).
+- {{DOMxRef("HTMLCanvasElement.captureStream()")}} et `CanvasCaptureMediaStream` ont été ajoutés et vous permettent de diffuser l'affichage d'un {{HTMLElement("canvas")}} en temps réel ([bogue Firefox 1032848 <sup>(angl.)</sup>](https://bugzil.la/1032848)).
 - {{DOMxRef("MediaStream.id")}} retourne désormais l'identifiant unique d'un flux ([bogue Firefox 1089798 <sup>(angl.)</sup>](https://bugzil.la/1089798)).
 - La valeur initiale de {{DOMxRef("CanvasRenderingContext2D.filter")}} est désormais correctement définie sur `none` ([bogue Firefox 1163124 <sup>(angl.)</sup>](https://bugzil.la/1163124)).
 

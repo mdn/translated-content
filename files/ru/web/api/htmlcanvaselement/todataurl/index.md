@@ -23,7 +23,7 @@ canvas.toDataURL(type, encoderOptions);
 ### Параметры
 
 - `type` {{optional_inline}}
-  - : Строка ({{domxref("DOMString")}}), указывающая формат изображения. По умолчанию — `image/png`.
+  - : Строка ({{jsxref("String")}}), указывающая формат изображения. По умолчанию — `image/png`.
 - `encoderOptions` {{optional_inline}}
   - : Число (типа {{jsxref("Number")}}) между `0` и `1`, указывающее качество изображения для форматов, использующих сжатие с потерями, таких как
     `image/jpeg` и `image/webp`.
@@ -31,7 +31,7 @@ canvas.toDataURL(type, encoderOptions);
 
 ### Возвращаемое значение
 
-Строка ({{domxref("DOMString")}}), содержащая запрошенный [data URI](/ru/docs/Web/URI/Reference/Schemes/data).
+Строка ({{jsxref("String")}}), содержащая запрошенный [data URI](/ru/docs/Web/URI/Reference/Schemes/data).
 
 ### Исключения
 

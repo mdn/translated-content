@@ -3,8 +3,6 @@ title: actions utilisateurs
 slug: Mozilla/Add-ons/WebExtensions/User_actions
 ---
 
-{{AddonSidebar}}
-
 Certaines API WebExtension exécutent des fonctions qui sont généralement exécutées à la suite d'une action utilisateur. Par exemple:
 
 - une action du navigateur avec un popup affichera le popup lorsque l'utilisateur clique dessus, mais il y a aussi une API {{WebExtAPIRef("browserAction.openPopup")}} permettant à une extension d'ouvrir le popup en programmation.

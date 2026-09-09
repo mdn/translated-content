@@ -2,7 +2,7 @@
 title: Contenu retiré
 slug: MDN/Writing_guidelines/Howto/Retiring_content/Retired_content
 l10n:
-  sourceCommit: ca0b474bb2e153ce72718cb304306e540065a888
+  sourceCommit: 238b07dfeb8c347c590bd02a63140867525d511c
 ---
 
 Cette page répertorie les sections de MDN Web Docs qui ont été retirées. Chaque entrée inclut un lien vers le contenu archivé dans le [dépôt MDN Museum <sup>(angl.)</sup>](https://github.com/mdn/museum) et vers le problème ou la discussion GitHub où la décision de retrait a été prise.
@@ -32,3 +32,12 @@ Une collection d'exemples de tests de l'API WebVR, incluant des informations d'a
 
 > [!NOTE]
 > Ce retrait a précédé le processus de [Retrait de contenu](/fr/docs/MDN/Writing_guidelines/Howto/Retiring_content). Il n'y a plus de discussion disponible.
+
+### Tutoriels des cadriciels Angular, Ember, Svelte et Vue JS
+
+- **Retiré&nbsp;:** août 2026
+- **Contenu archivé&nbsp;:** [museum/learn_web_development/frameworks_libraries <sup>(angl.)</sup>](https://github.com/mdn/museum/tree/main/learn_web_development/frameworks_libraries)
+- **Discussion&nbsp;:** [Supprimer les anciens articles sur les cadriciels JavaScript obsolètes de la section Apprendre le développement web <sup>(angl.)</sup>](https://github.com/orgs/mdn/discussions/827)
+- **PR sur GitHub&nbsp;:** [Archive JS du contenu sur les cadriciels <sup>(angl.)</sup>](https://github.com/mdn/content/pull/45105)
+
+Une série de tutoriels pour débutants montrant comment créer une application web de base en utilisant les cadriciels Angular, Ember, Svelte et Vue.

@@ -2,14 +2,14 @@
 title: 507 Insufficient Storage
 slug: Web/HTTP/Reference/Status/507
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
-Le code de statut de [réponse d'erreur serveur](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_serveur) HTTP **`507 Insufficient Storage`** indique qu'une action n'a pas pu être effectuée car le serveur ne dispose pas d'assez d'espace de stockage disponible pour mener à bien la requête.
+Le code de statut de [réponse d'erreur serveur](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_serveur) HTTP **`507 Insufficient Storage`** indique qu'une action n'a pas pu être effectuée, car le serveur ne dispose pas d'assez d'espace de stockage disponible pour mener à bien la requête.
 
 Ce code de statut a d'abord été utilisé dans le contexte de <i lang="en">Web Distributed Authoring and Versioning</i> ({{Glossary("WebDAV")}}), mais il s'est propagé à d'autres cas d'usage pour décrire des situations où les ressources du serveur sont épuisées.
 Les causes courantes de cette erreur peuvent être des répertoires du serveur à court d'espace disponible, une mémoire vive insuffisante pour une opération, ou des limites internes atteintes (comme des limites de mémoire propres à une application, par exemple).
-La requête à l'origine de cette erreur n'a pas nécessairement besoin d'inclure du contenu, car il peut s'agir d'une requête qui créerait une ressource sur le serveur si elle réussissait.
+La requête à l'origine de cette erreur n'a pas nécessairement besoin d'inclure du contenu, car il peut s'agir d'une requête qui crée une ressource sur le serveur si elle réussissait.
 
 Ce problème est considéré comme temporaire, contrairement à un code {{HTTPStatus("413", "413 Content Too Large")}}, qui indique que la requête du client est trop volumineuse pour être traitée par le serveur, indépendamment des contraintes de ressources du serveur.
 
@@ -28,7 +28,7 @@ Le serveur répond avec un code `507` pour indiquer que ses ressources sont épu
 
 ```http
 POST /upload HTTP/1.1
-Host: exemple.com
+Host: example.com
 Content-Type: image/jpeg
 Content-Length: 123456
 

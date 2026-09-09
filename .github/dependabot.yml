@@ -6,10 +6,15 @@ updates:
     schedule:
       interval: daily
     open-pull-requests-limit: 10
+    commit-message:
+      prefix: chore
+      prefix-development: build
+      include: scope
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: weekly
     commit-message:
-      prefix: "ci(deps): "
+      prefix: ci
+      include: scope

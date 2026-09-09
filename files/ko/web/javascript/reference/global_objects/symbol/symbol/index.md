@@ -66,7 +66,7 @@ Symbol("foo") === Symbol("foo"); // false
 
 ### new Symbol()
 
-{{jsxref("Operators/new", "new")}} 연산자를 사용한 아래 구문은 {{jsxref("TypeError")}}를 발생시킵니다.
+{{jsxref("new")}} 연산자를 사용한 아래 구문은 {{jsxref("TypeError")}}를 발생시킵니다.
 
 ```js example-bad
 const sym = new Symbol(); // TypeError

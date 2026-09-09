@@ -2,14 +2,12 @@
 title: Float16Array
 slug: Web/JavaScript/Reference/Global_Objects/Float16Array
 l10n:
-  sourceCommit: dd339290fa3a42d9a7f079e17a62e1df1206f29d
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`Float16Array`** は型付き配列で、プラットフォームのバイト順による 16 ビット浮動小数点数の配列を表します。バイト順の制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。初期化データが明示的に指定されていない限り、内容は `0` に初期化されます。生成されると、配列内の要素はそのオブジェクトのメソッドを使用するか、配列の標準的な配列の添字構文（すなわち、ブラケット記法）を使用するかして参照することができます。
 
-**`Float16Array`** 型配列は、プラットフォームのバイトオーダーで 16 ビット浮動小数点数の配列を表します。バイトオーダーの制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。初期化データが明示的に与えられない限り、内容は `0` に初期化されます。一旦初期化されると、オブジェクトのメソッドを使用するか、標準的な配列インデックスの構文（つまりブラケット記法）を使用して配列の要素を参照できます。
-
-`Float16Array` は隠された {{jsxref("TypedArray")}} クラスのサブクラスです。
+`Float16Array` は非公開の {{jsxref("TypedArray")}} クラスのサブクラスです。
 
 > [!NOTE]
 > Float16 のサポートは、JavaScript API と CPU アーキテクチャの両方において万能ではありません。これを使用すると、プラットフォームによってはパフォーマンスが低下する可能性があります。これは、[float-backed canvases](https://github.com/w3c/ColorWeb-CG/blob/main/canvas_float.md)、WebGPU、WebGL、[stable diffusion](https://github.com/huggingface/blog/blob/main/stable_diffusion.md) を含む深層学習モデルなど、高度に最適化されパフォーマンスに敏感なシステムとのやり取りを想定しています。
@@ -17,60 +15,60 @@ l10n:
 ## コンストラクター
 
 - {{jsxref("Float16Array/Float16Array", "Float16Array()")}}
-  - : 新しい `Float16Array` オブジェクトを作成します。
+  - : 新しい `Float16Array` オブジェクトを生成します。
 
 ## 静的プロパティ
 
-以下に加えて、親である {{jsxref("TypedArray")}} から静的プロパティを継承します。
+_親である {{jsxref("TypedArray")}} から継承した静的プロパティもあります_。
 
 - {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Float16Array.BYTES_PER_ELEMENT")}}
-  - : 要素サイズを数値で返します。`Float16Array` の場合は `2` を返します。
+  - : 要素の大きさを数値で返します。`Float16Array` の場合は `2` です。
 
 ## 静的メソッド
 
-親である {{jsxref("TypedArray")}} から静的メソッドを継承します。
+_親である {{jsxref("TypedArray")}} から継承した静的メソッドがあります_。
 
 ## インスタンスプロパティ
 
-以下に加えて、親である {{jsxref("TypedArray")}} からインスタンスプロパティを継承します。
+_親である {{jsxref("TypedArray")}} から継承したインスタンスプロパティもあります_。
 
-これらのプロパティは `Float16Array.prototype` で定義され、すべての `Float16Array` インスタンスで共有されます。
+これらのプロパティは `Float16Array.prototype` で定義されており、すべての `Float16Array` インスタンスで共有されています。
 
 - {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Float16Array.prototype.BYTES_PER_ELEMENT")}}
-  - : 要素サイズを数値で返します。`Float16Array` の場合は `2` を返します。
+  - : 要素の大きさを数値で返します。`Float16Array` の場合は `2` です。
 - {{jsxref("Object/constructor", "Float16Array.prototype.constructor")}}
-  - : インスタンスオブジェクトを生成したコンストラクター関数です。`Float16Array` インスタンスの場合、初期値は {{jsxref("Float16Array/Float16Array", "Float16Array")}} コンストラクターです。
+  - : このインスタンスオブジェクトを構築したコンストラクター関数です。 `Float16Array` インスタンスの場合、初期値は {{jsxref("Float16Array/Float16Array", "Float16Array")}} コンストラクターです。
 
 ## インスタンスメソッド
 
-親である {{jsxref("TypedArray")}} からインスタンスメソッドを継承します。
+_親である {{jsxref("TypedArray")}} から継承したインスタンスメソッドがあります_。
 
 ## 例
 
-### Float16Array を作成する様々な方法
+### 様々な方法で Float16Array を作成
 
 ```js
-// From a length
+// 長さから
 const float16 = new Float16Array(2);
 float16[0] = 42;
 console.log(float16[0]); // 42
 console.log(float16.length); // 2
 console.log(float16.BYTES_PER_ELEMENT); // 2
 
-// From an array
+// 配列から
 const x = new Float16Array([21, 31]);
 console.log(x[1]); // 31
 
-// From another TypedArray
+// 他の TypedArray から
 const y = new Float16Array(x);
 console.log(y[0]); // 21
 
-// From an ArrayBuffer
+// ArrayBuffer から
 const buffer = new ArrayBuffer(32);
 const z = new Float16Array(buffer, 4, 4);
 console.log(z.byteOffset); // 4
 
-// From an iterable
+// 反復可能オブジェクトから
 const iterable = (function* () {
   yield* [1, 2, 3];
 })();

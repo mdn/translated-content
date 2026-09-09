@@ -37,7 +37,7 @@ WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
 });
 ```
 
-{{jsxref("WebAssembly.Table")}}생성자를 사용하여 JavaScript에서 테이블 (`otherTable`)을 만든 다음 {{jsxref("WebAssembly.instantiateStreaming()")}}를 메서드를 사용하여 table.wasm를 우리가 만든 페이지에 로드합니다.
+[`WebAssembly.Table`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Table)생성자를 사용하여 JavaScript에서 테이블 (`otherTable`)을 만든 다음 [`WebAssembly.instantiateStreaming()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming)를 메서드를 사용하여 table.wasm를 우리가 만든 페이지에 로드합니다.
 
 그런 다음 모듈에서 함수를 내보내고 [`tbl.get()`](/ko/docs/WebAssembly/JavaScript_interface/Table/get)을 통해 참조하는 함수를 검색하고 각 함수를 호출 한 결과를 콘솔에 기록합니다. 그런 다음 `set()`을 사용하여 `otherTable` 테이블에 tbl 테이블과 동일한 함수에 대한 참조가 포함되도록합니다.
 

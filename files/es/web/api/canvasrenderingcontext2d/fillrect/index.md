@@ -58,8 +58,7 @@ Edita el código que se encuentra a continuación y observa en vivo los cambios 
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);</textarea
->
+ctx.fillRect(10, 10, 100, 100);</textarea>
 ```
 
 ```js hidden

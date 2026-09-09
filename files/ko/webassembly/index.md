@@ -62,7 +62,7 @@ WebAssembly는 JavaScript와 함께 보완되고 실행되도록 설계되었습
 - [`WebAssembly.validate()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/validate_static)
   - : `WebAssembly.validate()` 함수는 지정된 형식의 WebAssembly 이진 코드 배열의 유효성을 확인합니다.
 - [`WebAssembly.Memory()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Memory)
-  - : `WebAssembly.Memory` 객체는 사이즈 조절 가능한 {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}}로, `Instance`가 접근하는 메모리를 로우(raw) 바이트들로 들고있습니다.
+  - : `WebAssembly.Memory` 객체는 사이즈 조절 가능한 {{jsxref("Global_Objects/ArrayBuffer", "ArrayBuffer")}}로, `Instance`가 접근하는 메모리를 로우(raw) 바이트들로 들고있습니다.
 - [`WebAssembly.Table()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Table)
   - : `WebAssembly.Table` 객체는 `Instance` 에 의해 접근되는 불투명한 값(함수 레퍼런스)들의 사이즈 조절 가능한, 형식지정된 배열입니다.
 - [`WebAssembly.Tag()`](/ko/docs/WebAssembly/JavaScript_interface/Tag)

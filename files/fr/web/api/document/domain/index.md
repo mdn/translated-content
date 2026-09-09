@@ -3,10 +3,10 @@ title: "Document : propriété domain"
 short-title: domain
 slug: Web/API/Document/domain
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 La propriété **`domain`** de l'interface {{DOMxRef("Document")}} obtient/définit la partie domaine de {{Glossary("origin", "l'origine")}} du document courant, telle qu'utilisée par la [politique de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy).
 
@@ -50,10 +50,10 @@ D'autres alternatives qui fournissent des informations légèrement différentes
 document.domain = domainString;
 ```
 
-Le mutateur de cette propriété peut être utilisé pour _changer_ {{Glossary("origin", "l'origine")}} d'une page, et ainsi modifier la manière dont certaines vérifications de sécurité sont effectuées. Il ne peut être défini que sur le même domaine ou un domaine parent. Par exemple, si `https://a.exemple.com` et `https://b.exemple.com` utilisent tous deux
+Le mutateur de cette propriété peut être utilisé pour _changer_ {{Glossary("origin", "l'origine")}} d'une page, et ainsi modifier la manière dont certaines vérifications de sécurité sont effectuées. Il ne peut être défini que sur le même domaine ou un domaine parent. Par exemple, si `https://a.example.com et `https://b.eexample.comutilisent tous deux
 
 ```js
-document.domain = "exemple.com";
+document.domain = "example.com;
 ```
 
 alors ils ont tous deux modifié leur origine pour avoir le même domaine, et ils peuvent maintenant accéder directement au DOM de l'autre—malgré le fait qu'ils soient inter-origine, ce qui empêcherait normalement un tel accès.
@@ -64,7 +64,7 @@ On notera que définir `document.domain` sur sa valeur actuelle n'est pas une op
 document.domain = document.domain;
 ```
 
-alors elle sera considérée comme inter-origine et sera comptée comme inter-origine par rapport à toutes les autres pages normalement de même origine qui n'ont pas fait la même chose.
+alors elle est considérée comme inter-origine et est comptée comme inter-origine par rapport à toutes les autres pages normalement de même origine qui n'ont pas fait la même chose.
 
 #### Obsolescence
 
@@ -76,7 +76,7 @@ Cela est particulièrement dangereux sur un hébergement partagé. Par exemple, 
 
 Des problèmes similaires se produisent avec les sites d'hébergement partagé qui attribuent à chaque client un sous-domaine différent. Si un site définit `document.domain`, tout autre client sur un sous-domaine différent peut maintenant faire la même chose et commencer à accéder aux données du site original.
 
-Au lieu d'utiliser `document.domain` pour faciliter la communication inter-origine, vous devriez utiliser {{DOMxRef("Window.postMessage")}} pour envoyer un message asynchrone à l'autre origine. Cet accès contrôlé via le passage de messages est beaucoup plus sûr que l'exposition générale de toutes les données causée par `document.domain`.
+Au lieu d'utiliser `document.domain` pour faciliter la communication inter-origine, vous devriez utiliser {{DOMxRef("Window.postMessage")}} pour envoyer un message asynchrone à l'autre origine. Cet accès contrôlé avec le passage de messages est beaucoup plus sûr que l'exposition générale de toutes les données causée par `document.domain`.
 
 #### Échecs
 
@@ -87,7 +87,7 @@ Le mutateur lèvera une `SecurityError` de {{DOMxRef("DOMException")}} dans plus
 - Le [domaine effectif <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain) du document est `null`.
 - La valeur donnée n'est ni la même que le nom d'hôte actuel de la page, ni un domaine parent du domaine actuel.
 
-À titre d'exemple de ce dernier cas d'échec, essayer de définir `document.domain` sur `"exemple.org"` lorsque vous êtes sur `https://exemple.com/` générera une erreur.
+À titre d'exemple de ce dernier cas d'échec, essayer de définir `document.domain` sur `"exemple.org"` lorsque vous êtes sur `https://example.com` générera une erreur.
 
 De plus, dans le cadre de son obsolescence, il ne fera rien lorsqu'il est combiné avec certaines fonctionnalités d'isolation modernes&nbsp;:
 
@@ -97,7 +97,7 @@ De plus, dans le cadre de son obsolescence, il ne fera rien lorsqu'il est combin
 - Si utilisé sur une page isolée par origine, c'est-à-dire une page qui utilise l'en-tête HTTP
   {{HTTPHeader("Origin-Agent-Cluster")}} {{Experimental_Inline}}
 
-Enfin, définir `document.domain` ne modifie pas l'origine utilisée pour les vérifications d'origine par certaines API Web, empêchant l'accès aux sous-domaines via ce mécanisme. Les API concernées incluent (mais ne sont pas limitées à)&nbsp;: {{DOMxRef("Window.localStorage")}}, [l'API IndexedDB](/fr/docs/Web/API/IndexedDB_API), {{DOMxRef("BroadcastChannel")}}, {{DOMxRef("SharedWorker")}}.
+Enfin, définir `document.domain` ne modifie pas l'origine utilisée pour les vérifications d'origine par certaines API Web, empêchant l'accès aux sous-domaines avec ce mécanisme. Les API concernées incluent (mais ne sont pas limitées à)&nbsp;: {{DOMxRef("Window.localStorage")}}, [l'API IndexedDB](/fr/docs/Web/API/IndexedDB_API), {{DOMxRef("BroadcastChannel")}}, {{DOMxRef("SharedWorker")}}.
 
 ## Spécification
 

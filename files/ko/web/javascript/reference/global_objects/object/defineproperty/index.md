@@ -45,7 +45,7 @@ Object.defineProperty(obj, prop, descriptor);
 
 ## 설명
 
-`defineProperty` 메서드를 사용하면 객체의 속성을 세밀하게 추가하거나 수정할 수 있습니다. 할당을 통해 속성을 추가하는 일반적인 방법으로 추가한 속성은 객체의 속성을 열거({{jsxref("Statements/for...in", "for...in")}} 반복문 또는 {{jsxref("Object.keys")}} 메서드)할 때 노출되며, 원하는대로 값을 변경하고 {{jsxref("Operators/delete", "delete")}} 연산자로 삭제할 수도 있습니다. `defineProperty`를 사용하면 이런 기본 동작까지도 상세하게 조절할 수 있습니다. `Object.defineProperty()`로 추가한 속성은 기본적으로 불변하며 열거 불가능합니다.
+`defineProperty` 메서드를 사용하면 객체의 속성을 세밀하게 추가하거나 수정할 수 있습니다. 할당을 통해 속성을 추가하는 일반적인 방법으로 추가한 속성은 객체의 속성을 열거({{jsxref("Statements/for...in", "for...in")}} 반복문 또는 {{jsxref("Object.keys")}} 메서드)할 때 노출되며, 원하는대로 값을 변경하고 {{jsxref("delete")}} 연산자로 삭제할 수도 있습니다. `defineProperty`를 사용하면 이런 기본 동작까지도 상세하게 조절할 수 있습니다. `Object.defineProperty()`로 추가한 속성은 기본적으로 불변하며 열거 불가능합니다.
 
 속성 서술자(`descriptor`)는 데이터 서술자(data descriptors)와 접근자 서술자(accessor descriptors) 두 가지 형식을 취할 수 있습니다. **데이터 서술자**는 값을 가지는 속성을 기술할 때 사용합니다. **접근자 서술자**는 접근자(getter)-설정자(setter) 함수를 한 쌍으로 가지는 속성을 기술할 때 사용합니다. 서술자는 두 유형 중 하나여야 하며, 두 유형을 동시에 나타낼 수는 없습니다.
 
@@ -64,7 +64,7 @@ Object.defineProperty(obj, prop, descriptor);
 - `value`
   - : 속성에 연관된 값입니다. 유효한 JavaScript 값(숫자, 객체, 함수 등)은 모두 사용할 수 있습니다. **기본 값은 {{jsxref("undefined")}}입니다.**
 - `writable`
-  - : {{jsxref("Operators/Assignment_Operators", "할당 연산자", "", 1)}}로 속성의 값을 바꿀 수 있으면 `true`입니다. **기본 값은 `false`입니다.**
+  - : {{jsxref("Operators", "할당 연산자", "Assignment_operators", 1)}}로 속성의 값을 바꿀 수 있으면 `true`입니다. **기본 값은 `false`입니다.**
 
 **접근자 서술자**는 다음 키를 선택사항으로 가집니다.
 
@@ -462,7 +462,7 @@ console.log(myclass.prototype.y); // 1
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Object.prototype.watch()")}}
 - {{jsxref("Object.prototype.unwatch()")}}
-- {{jsxref("Operators/get", "get")}}
-- {{jsxref("Operators/set", "set")}}
+- {{jsxref("Functions/get", "get")}}
+- {{jsxref("Functions/set", "set")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Reflect.defineProperty()")}}

@@ -56,4 +56,4 @@ console.log(es.getTextInfo().direction); // "ltr"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}

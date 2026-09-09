@@ -2,7 +2,7 @@
 title: 300 Multiple Choices
 slug: Web/HTTP/Reference/Status/300
 l10n:
-  sourceCommit: 975650c2f6ea843d6f7cbc721aee5dbc1db907b2
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP の **`300 Multiple Choices`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)ステータスコードで、リクエストに対して複数のレスポンスがあることを示します。

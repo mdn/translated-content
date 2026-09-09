@@ -105,7 +105,7 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 ## 같이 보기
 
 - 블로그 포스트: [HTTP Strict Transport Security has landed!](https://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
-- 플로그 포스트: [HTTP Strict Transport Security (force HTTPS)](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
+- 블로그 포스트: [HTTP Strict Transport Security (force HTTPS)](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
 - OWASP 문서: [HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
 - 위키백과: [HTTP Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)
 - [HSTS 프리로드 서비스](https://hstspreload.org/)

@@ -3,14 +3,12 @@ title: "HTMLImageElement : propriété y"
 short-title: y
 slug: Web/API/HTMLImageElement/y
 l10n:
-  sourceCommit: 1f00512e3c9a20b5bb927db529bb5d639e346d96
+  sourceCommit: 384b4f1e0490f2f91f154a9ca977da78e0cc63a9
 ---
 
 {{APIRef("HTML DOM")}}
 
 La propriété en lecture seule **`y`** de l'interface {{DOMxRef("HTMLImageElement")}} indique la coordonnée y du bord supérieur de l'élément HTML {{HTMLElement("img")}} par rapport à l'origine de l'élément racine.
-
-Les propriétés {{DOMxRef("HTMLImageElement.x", "x")}} et `y` ne sont valides pour une image que si sa propriété {{CSSxRef("display")}} a pour valeur calculée `table-column` ou `table-column-group`. Cela signifie que l'une de ces valeurs est définie explicitement, héritée d'un élément parent, ou appliquée parce que l'image se trouve dans une colonne définie par {{HTMLElement("col")}} ou {{HTMLElement("colgroup")}}.
 
 ## Valeur
 
@@ -20,9 +18,9 @@ Dans le schéma ci-dessous, le bord supérieur correspond au bord supérieur de 
 
 ![Schéma montrant les relations entre les différentes boîtes associées à un élément](boxmodel-3.png)
 
-## Exemple
+## Exemples
 
-Voir [`HTMLImageElement.x`](/fr/docs/Web/API/HTMLImageElement/x#exemple) pour un exemple de code qui montre l'utilisation de `HTMLImageElement.y` (et `HTMLImageElement.x`).
+Pour des exemples, voir la page de la propriété {{DOMxRef("HTMLImageElement.x", "x")}}.
 
 ## Spécifications
 
@@ -34,7 +32,4 @@ Voir [`HTMLImageElement.x`](/fr/docs/Web/API/HTMLImageElement/x#exemple) pour un
 
 ## Voir aussi
 
-- La propriété CSS {{CSSxRef("display")}}
-- L'élément HTML {{HTMLElement("col")}}
-- L'élément HTML {{HTMLElement("colgroup")}}
 - La propriété {{DOMxRef("HTMLImageElement.x")}}

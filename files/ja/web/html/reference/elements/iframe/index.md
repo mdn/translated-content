@@ -3,7 +3,7 @@ title: HTML `<iframe>` インラインフレーム要素
 short-title: <iframe>
 slug: Web/HTML/Reference/Elements/iframe
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 **`<iframe>`** は [HTML](/ja/docs/Web/HTML) の要素で、入れ子になった{{Glossary("browsing context", "閲覧コンテキスト")}}を表現し、現在の HTML ページに別のページを埋め込むことができます。
@@ -57,7 +57,7 @@ iframe {
     > この属性は古い属性とみなされており、 `allow="payment *"` として再定義されました。
 
 - `browsingtopics` {{non-standard_inline}} {{deprecated_inline}}
-  - : 論理属性で、表示されている場合、現在のユーザーの選択されたトピックを `<iframe>` のソースのリクエストと共に送信することを指定します。詳細は、[トピック API の使用](/ja/docs/Web/API/Topics_API/Using)を参照してください。
+  - : 論理属性で、表示されている場合、現在のユーザーの選択されたトピックを `<iframe>` のソースのリクエストと共に送信することを指定します。
 
 - `credentialless` {{Experimental_Inline}}
   - : `true` に設定すると `<iframe>` を無信頼であることを示します。 つまり、そのコンテンツは新しい、一時的なコンテキストで読み込まれることになります。これはそのオリジンに関連するネットワーク、クッキー、ストレージデータへのアクセス権がありません。最上位の文書の存続期間に依存する新しいコンテキストを使用します。その代わりに {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) 埋め込みルールは解除され、COEP を設定した文書はそうでない第三者の文書を埋め込むことができるようになります。詳しくは[無信頼の iframe](/ja/docs/Web/HTTP/Guides/IFrame_credentialless) を参照してください。
@@ -218,6 +218,14 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 `<iframe>` で発生する `error` イベントと `load` イベントを使用すると、ローカルネットワークの HTTP サーバーの URL 空間を推測することができる可能性があります。そのため、セキュリティ対策として、ユーザーエージェントは `<iframe>` に対して [error](/ja/docs/Web/API/HTMLElement/error_event) イベントを発生させず、`<iframe>` のコンテンツの読み込みに失敗しても、常に [load](/ja/docs/Web/API/HTMLElement/load_event) イベントが発生します。
 
+## レスポンシブな `<iframe>` サイズ指定
+
+セキュリティおよびプライバシー上の理由から、`<iframe>` 要素はデフォルトで、埋め込まれている文書内コンテンツのサイズに関する情報を親文書に対して一切公開しません。
+
+`<iframe>` 要素のサイズをそのコンテンツに基づいてレスポンシブに調整できるようにするには、埋め込み文書に [`<meta name="responsive-embedded-sizing">`](/ja/docs/Web/HTML/Reference/Elements/meta/name/responsive-embedded-sizing) タグを含めることで、親文書とのサイズ情報の共有を有効にすることができます。その後、`<iframe>` に CSS の {{cssxref("frame-sizing")}} プロパティを設定することで、埋め込み文書の実際のコンテンツサイズと同じ水平または垂直サイズに合わせることができます。これにより、`<iframe>` のコンテンツが埋め込み元文書にシームレスに収まり、不要なスクロールバーの表示を避けることができます。
+
+埋め込み文書のレイアウトサイズが変更された際に、`<iframe>` のサイズを動的に変更するには、埋め込み文書側から {{domxref("Window.requestResize()")}} メソッドを呼び出し、更新されたサイズを報告することができます。
+
 ## アクセシビリティ
 
 読み上げソフトのような支援技術を利用して操作している人は、 `<iframe>` 上の [`title` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/title)を使用して内容をラベル付けします。 title の値で埋め込みコンテンツを正確に説明してください。
@@ -357,3 +365,4 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 - [CSP: frame-ancestors](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors)
 - [プライバシー、アクセス制限、情報セキュリティ](/ja/docs/Web/Privacy)
+- [ローカルネットワークアクセス](/ja/docs/Web/Security/Defenses/Local_network_access)

@@ -3,16 +3,16 @@ title: Propriété CSS `corner-shape`
 short-title: corner-shape
 slug: Web/CSS/Reference/Properties/corner-shape
 l10n:
-  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 {{SeeCompatTable}}
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`corner-shape`** permet de définir la forme des coins d'une boîte, dans la zone déterminée par la valeur de sa propriété {{CSSxRef("border-radius")}}.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`corner-shape`** permet de définir la forme des coins d'une boîte, dans la zone déterminée par la valeur de sa propriété {{CSSxRef("border-radius")}}.
 
 ## Propriétés constitutives
 
-La propriété `corner-shape` est une forme raccourcie pour les propriétés physiques suivantes&nbsp;:
+Cette propriété est une forme raccourcie pour les propriétés physiques suivantes&nbsp;:
 
 - {{CSSxRef("corner-top-left-shape")}}
 - {{CSSxRef("corner-top-right-shape")}}
@@ -114,7 +114,7 @@ div {
 }
 ```
 
-### Propriétés qui suivent la forme du coin
+### Propriétés qui suivent `corner-shape`
 
 Les propriétés suivantes suivent la forme du coin lorsqu'elles sont appliquées au conteneur&nbsp;:
 
@@ -128,6 +128,12 @@ Les propriétés suivantes suivent la forme du coin lorsqu'elles sont appliquée
 
 Voir la [démonstration des propriétés qui suivent la forme du coin](#demonstration_of_properties_that_follow_the_corner-shape) pour quelques exemples.
 
+### Interaction avec `border-shape`
+
+La propriété `corner-shape` n'a aucun effet lorsque la propriété {{CSSxRef("border-shape")}} est définie sur un élément. En effet, `border-shape` est incompatible avec `border-radius`&nbsp;: lorsque `border-shape` est défini, tout `border-radius` défini est ignoré&nbsp;; `corner-shape` dépend de `border-radius` et n'a donc aucun effet non plus.
+
+Si vous souhaitez utiliser des coins façonnés dans un `border-shape`, vous devez les dessiner directement dans la forme.
+
 ## Définition formelle
 
 {{CSSInfo}}
@@ -137,8 +143,6 @@ Voir la [démonstration des propriétés qui suivent la forme du coin](#demonstr
 {{CSSSyntax}}
 
 ## Exemples
-
-## Examples
 
 ### Utilisation simple de `corner-shape`
 
@@ -210,10 +214,10 @@ Le balisage de cet exemple contient un seul élément HTML {{HTMLElement("div")}
 ```html live-sample___styles-following-corner-shape
 <div>
   Certaines propriétés suivent la forme du coin, comme la bordure, le contour,
-  l'ombre portée, le débordement et le filtre d'arrière-plan. Cela est utile
-  pour aider différents aspects de votre conception à ne pas entrer en conflit.
-  Comme montré, cela peut produire des effets visuels intéressants, donc vous
-  devriez tester soigneusement votre conception.
+  l'ombre portée, le débordement et le filtre d'arrière-plan. C'est utile pour
+  aider différents aspects de votre conception à ne pas entrer en conflit. Comme
+  montré, cela peut produire des effets visuels intéressants, donc vous devez
+  tester soigneusement votre conception.
 </div>
 ```
 
@@ -297,7 +301,7 @@ Dans cette démonstration, vous pouvez sélectionner différentes valeurs de `co
 
 #### HTML
 
-Le balisage de cet exemple contient un sélecteur ({{HTMLElement("select")}}) permettant de choisir différentes valeurs de `corner-shape`, un curseur [`<input type="range">`](/fr/docs/Web/HTML/Reference/Elements/input/range) pour sélectionner différentes valeurs de `border-radius`, et un élément HTML {{HTMLElement("section")}} pour appliquer ces valeurs. Les éléments HTML {{HTMLElement("option")}} du sélecteur proposent plusieurs mots-clés et valeurs {{CSSxRef("superellipse()")}}, répartis en deux groupes avec {{HTMLElement("optgroup")}}. Pour les mots-clés, la valeur équivalente de `superellipse()` est aussi indiquée, séparée par une barre verticale.
+Le balisage de cet exemple contient un sélecteur ({{HTMLElement("select")}}) permettant de choisir différentes valeurs de `corner-shape`, un curseur `{{HTMLElement("input/range", "&lt;input type=\"range\"&gt;")}}` pour sélectionner différentes valeurs de `border-radius`, et un élément HTML {{HTMLElement("section")}} pour appliquer ces valeurs. Les éléments HTML {{HTMLElement("option")}} du sélecteur proposent plusieurs mots-clés et valeurs {{CSSxRef("superellipse()")}}, répartis en deux groupes avec {{HTMLElement("optgroup")}}. Pour les mots-clés, la valeur équivalente de `superellipse()` est aussi indiquée, séparée par une barre verticale.
 
 ```html live-sample___corner-shape-select
 <form>
@@ -427,7 +431,7 @@ Essayez de sélectionner différentes valeurs pour voir comment cela affecte la 
 
 ### Comparaison des valeurs de `superellipse()`
 
-Dans cet exemple, nous proposons deux curseurs [`<input type="range">`](/fr/docs/Web/HTML/Reference/Elements/input/range) permettant de parcourir de nombreuses valeurs différentes de `corner-shape` avec {{CSSxRef("superellipse()")}} et de {{CSSxRef("border-radius")}} pour comparer les effets de chaque valeur sur un conteneur.
+Dans cet exemple, nous proposons deux curseurs `{{HTMLElement("input/range", "&lt;input type=\"range\"&gt;")}}` permettant de parcourir de nombreuses valeurs différentes de `corner-shape` avec {{CSSxRef("superellipse()")}} et de {{CSSxRef("border-radius")}} pour comparer les effets de chaque valeur sur un conteneur.
 
 #### HTML
 
@@ -630,6 +634,7 @@ Le résultat affiché ressemble à ceci&nbsp;:
 ## Voir aussi
 
 - La propriété {{CSSxRef("border-radius")}}
+- La propriété {{CSSxRef("border-shape")}}
 - Le module [des bordures et décorations de boîte CSS](/fr/docs/Web/CSS/Guides/Borders_and_box_decorations)
 - Le module [des arrière-plans et bordures CSS](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)
 - Le module [des animations CSS](/fr/docs/Web/CSS/Guides/Animations)

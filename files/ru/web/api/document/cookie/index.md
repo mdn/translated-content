@@ -48,7 +48,7 @@ document.cookie = newCookie;
     - The `strict` value will prevent the cookie from being sent by the browser to the target site in all cross-site browsing context, even when following a regular link.
     - The `lax` value will only send cookies for TOP LEVEL navigation GET requests. This is sufficient for user tracking, but it will prevent many CSRF attacks.
 
-- The cookie value string can use {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}} to ensure that the string does not contain any commas, semicolons, or whitespace (which are disallowed in cookie values).
+- The cookie value string can use {{jsxref("encodeURIComponent()")}} to ensure that the string does not contain any commas, semicolons, or whitespace (which are disallowed in cookie values).
 - Some user agent implementations support the following cookie prefixes:
   - `__Secure-` Signals to the browser that it should only include the cookie in requests transmitted over a secure channel.
   - `__Host-` Signals to the browser that in addition to the restriction to only use the cookie from a secure origin, the scope of the cookie is limited to a path attribute passed down by the server. If the server omits the path attribute the "directory" of the request URI is used. It also signals that the domain attribute must not be present, which prevents the cookie from being sent to other domains. For Chrome the path attribute must always be the origin.
@@ -327,15 +327,15 @@ Executes a function only once, even after the refresh of the page.
 #### Параметры
 
 - `callback`
-  - : The function to be executed ({{jsxref("function", "", "", 1)}}).
+  - : The function to be executed ({{jsxref("Operators/function", "function", "", 1)}}).
 - `thisObject` Optional
-  - : The {{jsxref("Operators/this", "this")}} object ({{jsxref("Object", "", "", 1)}} or {{jsxref("Global_Objects/null", "null")}}).
+  - : The {{jsxref("this")}} object ({{jsxref("Object", "", "", 1)}} or {{jsxref("null")}}).
 - `argumentToPass1, argumentToPass2, argumentToPassN` Optional
   - : The arguments of the `callback` function.
 - `identifier`
   - : The identifier to check, i.e. the name of the cookie ({{jsxref("String", "string", "", 1)}})
 - `onlyHere` Optional
-  - : A {{jsxref("Boolean", "boolean", "", 1)}} expressing whether the cookie will use the local path (`true`) instead of the global one (`false` or `undefined`) ({{jsxref("Boolean", "boolean", "", 1)}} or {{jsxref("Global_Objects/undefined", "undefined")}})
+  - : A {{jsxref("Boolean", "boolean", "", 1)}} expressing whether the cookie will use the local path (`true`) instead of the global one (`false` or `undefined`) ({{jsxref("Boolean", "boolean", "", 1)}} or {{jsxref("undefined")}})
 
 #### Примеры использования
 

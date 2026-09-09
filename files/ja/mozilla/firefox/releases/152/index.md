@@ -1,9 +1,9 @@
 ---
-title: Firefox 152 release notes for developers (Stable)
-short-title: Firefox 152 (Stable)
+title: Firefox 152 release notes for developers
+short-title: Firefox 152
 slug: Mozilla/Firefox/Releases/152
 l10n:
-  sourceCommit: 3305c80f225be0e373313d96841f6bf9a52e314b
+  sourceCommit: cb5a9829f49b8ef7a28311ca419538194fd6525e
 ---
 
 このページでは、開発者に影響する Firefox 152 の変更点をまとめています。
@@ -107,3 +107,7 @@ Firefox 152 は、米国時間 [2026 年 6 月 16 日](https://whattrainisitnow.
 - **`@keyframes` セレクターの `<timeline-range-name>` 値**: `layout.css.scroll-driven-animations.enabled`
 
   {{cssxref("@keyframes")}} アットルールで [`<timeline-range-name>`](/ja/docs/Web/CSS/Reference/Values/timeline-range-name) の値をサポートしました。これらの[値](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) は、スクロール連動アニメーションが発生するセグメントを指定できます ([Firefox bug 1824875](https://bugzil.la/1824875))。
+
+- **Crash Reporting** (Nightly): `dom.reporting.crash.enabled`
+
+  [Reporting API](/ja/docs/Web/API/Reporting_API) を介してクラッシュレポートを送信できます ([Firefox bug 2036160](https://bugzil.la/2036160))。

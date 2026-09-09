@@ -111,7 +111,7 @@ Les attributs suivants sont obsolètes et ne doivent pas être utilisés. Ils so
   - : Définit la couleur d'arrière-plan du tableau. La valeur est une couleur HTML&nbsp;; soit un [code hexadécimal RGB à 6 chiffres](/fr/docs/Web/CSS/Reference/Values/hex-color), précédé d'un `#`, ou un [mot-clé de couleur](/fr/docs/Web/CSS/Reference/Values/named-color). Les autres valeurs CSS {{CSSxRef("&lt;color&gt;")}} ne sont pas prises en charge. Utilisez la propriété CSS {{CSSxRef("background-color")}} à la place, car cet attribut est obsolète.
 
 - `border` {{Deprecated_Inline}}
-  - : Définit, en tant que valeur entière non négative (en pixels), la taille de la bordure entourant le tableau. Si la valeur est `0`, l'attribut [`frame`](#frame) est défini sur void. Utilisez plutôt la propriété CSS {{CSSxRef("border")}}, car cet attribut est obsolète.
+  - : Définit, en tant que valeur entière non négative (en pixels), la taille de la bordure entourant le tableau. Si la valeur est `0`, l'attribut [`frame`](#frame) est défini sur `void`. Utilisez plutôt la propriété CSS {{CSSxRef("border")}}, car cet attribut est obsolète.
 
 - `cellpadding` {{Deprecated_Inline}}
   - : Définit l'espace entre le contenu d'une cellule et sa bordure. Cet attribut est obsolète&nbsp;: au lieu de l'utiliser, appliquez la propriété CSS {{CSSxRef("padding")}} aux éléments {{HTMLElement("th")}} et {{HTMLElement("td")}}.
@@ -164,7 +164,7 @@ Pour la mise en forme, on peut considérer que les éléments du tableau sont pl
 
 ![Couches d'éléments de tableau](table_element_layers.png)
 
-L'arrière-plan défini sur un élément d'une couche ne sera visible que si les couches au-dessus ont un arrière-plan transparent. Une cellule manquante est rendue comme si une boîte de cellule de tableau anonyme occupait cet emplacement.
+L'arrière-plan défini sur un élément d'une couche n'est visible que si les couches au-dessus ont un arrière-plan transparent. Une cellule manquante est rendue comme si une boîte de cellule de tableau anonyme occupait cet emplacement.
 
 ## Accessibilité
 
@@ -190,12 +190,12 @@ L'attribut [`scope`](/fr/docs/Web/HTML/Reference/Elements/th#scope) sur les cell
 
 Les technologies d'assistance telles que les lecteurs d'écran peuvent avoir des difficultés à analyser les tableaux si complexes que les cellules d'en-tête ne peuvent pas être associées de manière strictement horizontale ou verticale. Cela est généralement indiqué par la présence des attributs [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#colspan) et [`rowspan`](/fr/docs/Web/HTML/Reference/Elements/td#rowspan).
 
-Idéalement, envisagez d'autres façons de présenter le contenu du tableau, notamment en le divisant en une collection de tableaux plus petits et liés qui n'ont pas besoin d'utiliser les attributs [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#colspan) et [`rowspan`](/fr/docs/Web/HTML/Reference/Elements/td#rowspan). En plus d'aider les personnes utilisant des technologies d'assistance à comprendre le contenu du tableau, cela peut aussi bénéficier aux personnes ayant des troubles cognitifs qui pourraient avoir du mal à comprendre les associations décrites par la présentation du tableau.
+Idéalement, envisagez d'autres façons de présenter le contenu du tableau, notamment en le divisant en une collection de tableaux plus petits et liés qui n'ont pas besoin d'utiliser les attributs [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#colspan) et [`rowspan`](/fr/docs/Web/HTML/Reference/Elements/td#rowspan). En plus d'aider les personnes utilisant des technologies d'assistance à comprendre le contenu du tableau, cela peut aussi bénéficier aux personnes ayant des troubles cognitifs qui peuvent avoir du mal à comprendre les associations décrites par la présentation du tableau.
 
 Si le tableau ne peut pas être divisé, utilisez une combinaison des attributs [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) et [`headers`](/fr/docs/Web/HTML/Reference/Elements/td#headers) pour associer informatiquement chaque cellule du tableau aux cellules d'en-tête (éléments {{HTMLElement("th")}}) auxquelles elle est associée.
 
 - [Utiliser les tableaux HTML pour les personnes souffrant de troubles de la vision](/fr/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#tableaux_pour_des_utisateurs_malvoyants)
-- [Les tableaux avec des en-têtes sur plusieurs niveaux • Tutoriels d'accesibilité web W3C WAI <sup>(angl.)</sup>](https://www.w3.org/WAI/tutorials/tables/multi-level/)
+- [Les tableaux avec des en-têtes sur plusieurs niveaux • Tutoriels d'accessibilité web W3C WAI <sup>(angl.)</sup>](https://www.w3.org/WAI/tutorials/tables/multi-level/)
 - [H43&nbsp;: Utiliser les attributs `id` et `headers` afin d'associer les cellules de données et les cellules d'en-tête dans les tableaux | Techniques W3C pour WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
 
 ## Exemples
@@ -208,7 +208,7 @@ Ces exemples de tableaux montrent comment créer un tableau {{Glossary("accessib
 
 En raison de la structure des tableaux HTML, le {{Glossary("markup", "marquage")}} peut rapidement devenir volumineux. Pour cette raison, il est important de définir clairement l'objectif et l'apparence finale du tableau afin de créer la structure appropriée. Une structure logique développée avec un marquage {{Glossary("semantics", "sémantique")}} est non seulement plus facile à mettre en forme, mais permet de créer des tableaux utiles et accessibles qui peuvent être compris et parcourus par tout le monde, y compris les moteurs de recherche et les utilisateur·ice·s de technologies d'assistance.
 
-Le premier exemple est basique, les exemples suivants gagnent en complexité. Nous allons d'abord développer une structure de tableau HTML très simple. Les deux premiers exemples ne contiennent aucun groupe de sections de tableau comme une tête, un corps ou un pied défini, et n'impliquent aucun étalement de cellule ni relation de cellule explicitement définie. Même une légende n'est pas fournie. Au fil des exemples, ils seront progressivement enrichis pour inclure toutes les fonctionnalités qu'un tableau de données complexe doit posséder.
+Le premier exemple est basique, les exemples suivants gagnent en complexité. Nous allons d'abord développer une structure de tableau HTML très simple. Les deux premiers exemples ne contiennent aucun groupe de sections de tableau comme une tête, un corps ou un pied défini, et n'impliquent aucun étalement de cellule ni relation de cellule explicitement définie. Même une légende n'est pas fournie. Au fil des exemples, ils sont progressivement enrichis pour inclure toutes les fonctionnalités qu'un tableau de données complexe doit posséder.
 
 ### Tableau simple
 
@@ -380,7 +380,7 @@ Comme la première ligne (élément {{HTMLElement("tr")}}) ne contient que des c
 </table>
 ```
 
-Encore une fois, le CSS et le rendu visuel restent inchangés — le fait de définir de tels groupes de sections de tableau fournit des informations contextuelles précieuses pour les technologies d'assistance, y compris les lecteurs d'écran et les moteurs de recherche, ainsi que pour la mise en forme en CSS, qui sera illustrée dans un exemple ultérieur.
+Encore une fois, le CSS et le rendu visuel restent inchangés — le fait de définir de tels groupes de sections de tableau fournit des informations contextuelles précieuses pour les technologies d'assistance, y compris les lecteurs d'écran et les moteurs de recherche, ainsi que pour la mise en forme en CSS, qui est illustrée dans un exemple ultérieur.
 
 ### Fusion de colonnes et de lignes
 
@@ -451,7 +451,7 @@ La section d'en-tête comporte désormais deux lignes, l'une avec les en-têtes 
 
 - Les cellules d'en-tête «&nbsp;Nom&nbsp;», «&nbsp;ID&nbsp;» et «&nbsp;Solde&nbsp;» de la première ligne s'étendent sur les deux lignes d'en-tête du tableau grâce à l'attribut [`rowspan`](/fr/docs/Web/HTML/Reference/Elements/th#rowspan), ce qui les rend chacune hautes de deux lignes.
 - La cellule d'en-tête «&nbsp;Périodes d'adhésion&nbsp;» de la première ligne s'étend sur deux colonnes grâce à l'attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/th#colspan), ce qui la rend large de deux colonnes.
-- La seconde ligne ne contient que les deux cellules d'en-tête «&nbsp;Adhésion&nbsp;» et «&nbsp;Annulation&nbsp;» car les trois autres colonnes sont fusionnées avec les cellules de la première ligne qui s'étendent sur deux lignes. Les deux cellules d'en-tête sont correctement positionnées sous l'en-tête «&nbsp;Périodes d'adhésion&nbsp;».
+- La seconde ligne ne contient que les deux cellules d'en-tête «&nbsp;Adhésion&nbsp;» et «&nbsp;Annulation&nbsp;», car les trois autres colonnes sont fusionnées avec les cellules de la première ligne qui s'étendent sur deux lignes. Les deux cellules d'en-tête sont correctement positionnées sous l'en-tête «&nbsp;Périodes d'adhésion&nbsp;».
 
 ### Légende de tableau et résumé de colonne
 
@@ -615,7 +615,7 @@ Nous allons maintenant aller plus loin, avec des styles appliqués aux lignes de
 
 #### Résultat
 
-Voici a quoi ressemblera le tableau final&nbsp;:
+Voici a quoi ressemble le tableau final&nbsp;:
 
 {{EmbedLiveSample("Mise en forme avancée du tableau", 650, 210)}}
 
@@ -709,7 +709,7 @@ th {
 }
 ```
 
-La règle CSS suivante définit le {{CSSxRef("background-color")}} de tous les éléments {{HTMLElement("tr")}} dans l'en-tête du tableau (défini avec {{HTMLElement("thead")}}). Ensuite, la bordure inférieure de l'en-tête est définie comme une ligne de deux pixels de large. Remarquez cependant que nous utilisons le sélecteur CSS {{CSSxRef(":nth-of-type")}} pour appliquer la propriété CSS {{CSSxRef("border-bottom")}} à la _deuxième_ ligne de l'en-tête. Pourquoi&nbsp;? Parce que l'en-tête est composé de deux lignes dont certaines cellules sont fusionnées. Il y a donc réellement deux lignes&nbsp;; appliquer le style à la première ligne ne donnerait pas le résultat attendu&nbsp;:
+La règle CSS suivante définit le {{CSSxRef("background-color")}} de tous les éléments {{HTMLElement("tr")}} dans l'en-tête du tableau (défini avec {{HTMLElement("thead")}}). Ensuite, la bordure inférieure de l'en-tête est définie comme une ligne de deux pixels de large. Remarquez cependant que nous utilisons le sélecteur CSS {{CSSxRef(":nth-of-type")}} pour appliquer la propriété CSS {{CSSxRef("border-bottom")}} à la _deuxième_ ligne de l'en-tête. Pourquoi&nbsp;? Parce que l'en-tête est composé de deux lignes dont certaines cellules sont fusionnées. Il y a donc réellement deux lignes&nbsp;; appliquer le style à la première ligne ne donne pas le résultat attendu&nbsp;:
 
 ```css
 thead > tr {
@@ -777,7 +777,7 @@ tfoot td {
 
 Un problème courant avec les tableaux sur le web est qu'ils ne fonctionnent pas naturellement très bien sur les petits écrans lorsque la quantité de contenu est importante, et la manière de les rendre défilants n'est pas évidente, surtout lorsque le balisage provient d'un CMS et ne peut pas être modifié pour ajouter un conteneur.
 
-Cet exemple propose une façon d'afficher des tableaux dans de petits espaces. Le contenu HTML a été masqué car il est très volumineux et il n'y a rien de particulier à signaler. Le CSS est plus intéressant à examiner dans cet exemple.
+Cet exemple propose une façon d'afficher des tableaux dans de petits espaces. Le contenu HTML a été masqué, car il est très volumineux et il n'y a rien de particulier à signaler. Le CSS est plus intéressant à examiner dans cet exemple.
 
 ```html hidden
 <table>
@@ -979,9 +979,9 @@ Cet exemple propose une façon d'afficher des tableaux dans de petits espaces. L
 
 #### CSS
 
-En regardant ces styles, vous remarquerez que la propriété CSS {{CSSxRef("display")}} du tableau a été définie sur `block`. Cela permet le défilement, mais le tableau perd une partie de son intégrité et les cellules tentent de devenir aussi petites que possible. Pour atténuer ce problème, nous avons appliqué {{CSSxRef("white-space")}} à `nowrap` sur le {{HTMLElement("tbody")}}. Cependant, nous ne le faisons pas pour le {{HTMLElement("thead")}} afin d'éviter que des titres longs n'obligent les colonnes à être plus larges que nécessaire pour afficher les données.
+En regardant ces styles, vous remarquez que la propriété CSS {{CSSxRef("display")}} du tableau a été définie sur `block`. Cela permet le défilement, mais le tableau perd une partie de son intégrité et les cellules tentent de devenir aussi petites que possible. Pour atténuer ce problème, nous avons appliqué {{CSSxRef("white-space")}} à `nowrap` sur le {{HTMLElement("tbody")}}. Cependant, nous ne le faisons pas pour le {{HTMLElement("thead")}} afin d'éviter que des titres longs n'obligent les colonnes à être plus larges que nécessaire pour afficher les données.
 
-Pour garder les en-têtes du tableau visibles lors du défilement, nous avons appliqué {{CSSxRef("position")}} à sticky sur les éléments {{HTMLElement("th")}}. Notez que nous n'avons **pas** défini {{CSSxRef("border-collapse")}} à `collapse`, car sinon l'en-tête ne pourrait pas être séparé correctement du reste du tableau.
+Pour garder les en-têtes du tableau visibles lors du défilement, nous avons appliqué {{CSSxRef("position")}} à sticky sur les éléments {{HTMLElement("th")}}. Notez que nous n'avons **pas** défini {{CSSxRef("border-collapse")}} à `collapse`, car sinon l'en-tête ne peut pas être séparé correctement du reste du tableau.
 
 Étant donné que le `<table>` a une taille fixe, le paramètre {{CSSxRef("overflow")}} à `auto` est la partie importante ici, car il rend le tableau défilant.
 

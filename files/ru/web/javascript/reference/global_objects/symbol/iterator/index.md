@@ -15,11 +15,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 
 Некоторые встроенные типы имеют стандартное итерационное поведение, в то время как другие типы (как {{jsxref("Object")}}) таким свойством не обладают. Метод `@@iterator` имеют следующие встроенные типы:
 
-- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
-- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
-- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
+- {{jsxref("Array/Symbol.iterator", "Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("String/Symbol.iterator", "String.prototype[@@iterator]()")}}
+- {{jsxref("Map/Symbol.iterator", "Map.prototype[@@iterator]()")}}
+- {{jsxref("Set/Symbol.iterator", "Set.prototype[@@iterator]()")}}
 
 Смотрите также [Протоколы перебора](/ru/docs/Web/JavaScript/Reference/Iteration_protocols) для получения дополнительных сведений.
 
@@ -60,8 +60,8 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 ## Смотрите также
 
 - [Протоколы перебора](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
-- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
-- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
+- {{jsxref("Array/Symbol.iterator", "Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("String/Symbol.iterator", "String.prototype[@@iterator]()")}}
+- {{jsxref("Map/Symbol.iterator", "Map.prototype[@@iterator]()")}}
+- {{jsxref("Set/Symbol.iterator", "Set.prototype[@@iterator]()")}}

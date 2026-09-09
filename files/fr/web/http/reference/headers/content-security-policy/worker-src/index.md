@@ -51,7 +51,7 @@ Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 Soit cet en-tête CSP&nbsp;:
 
 ```http
-Content-Security-Policy: worker-src https://exemple.com/
+Content-Security-Policy: worker-src https://example.com/
 ```
 
 {{DOMxRef("Worker")}}, {{DOMxRef("SharedWorker")}}, {{DOMxRef("ServiceWorker")}} seront bloqués et ne seront pas chargés&nbsp;:
@@ -59,8 +59,8 @@ Content-Security-Policy: worker-src https://exemple.com/
 ```html
 <script>
   let blockedWorker = new Worker("data:application/javascript,...");
-  blockedWorker = new SharedWorker("https://hors-exemple.com/");
-  navigator.serviceWorker.register("https://hors-exemple.com/sw.js");
+  blockedWorker = new SharedWorker("https://hors-example.com/");
+  navigator.serviceWorker.register("https://hors-example.com/sw.js");
 </script>
 ```
 

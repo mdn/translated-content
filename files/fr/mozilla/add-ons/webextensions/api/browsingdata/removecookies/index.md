@@ -3,8 +3,6 @@ title: browsingData.removeCookies()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
 ---
 
-{{AddonSidebar}}
-
 Efface les cookies du navigateur
 
 Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :

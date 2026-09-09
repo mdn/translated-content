@@ -55,6 +55,7 @@ The review teams for each locale are:
 - Spanish (`es`) content - the [es-content](https://github.com/orgs/mdn/teams/es-content) team, which consists of:
   - [JuanVqz](https://github.com/JuanVqz)
   - [Graywolf9](https://github.com/Graywolf9)
+  - [mariomorillo](https://github.com/mariomorillo)
 
 ---
 

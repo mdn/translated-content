@@ -23,8 +23,8 @@ Un nombre. Les valeurs valides pour la mesure des clics privés sont comprises e
 ```html
 <a
   id="ad-link"
-  href="https://exemple.com"
-  attributiondestination="https://exemple.com">
+  href="https://example.com
+  attributiondestination="https://example.com>
   Cliquez pour visiter notre boutique
 </a>
 ```

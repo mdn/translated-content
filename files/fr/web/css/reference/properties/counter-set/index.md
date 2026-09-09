@@ -3,14 +3,14 @@ title: Propriété CSS `counter-set`
 short-title: counter-set
 slug: Web/CSS/Reference/Properties/counter-set
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`counter-set`** permet d'attribuer des valeurs aux [compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) sur l'élément.
 
 Si les compteurs n'existent pas, la propriété `counter-set` crée un nouveau compteur pour chaque compteur nommé dans la liste des paires compteur et valeur séparées par des espaces. Cependant, pour créer un nouveau compteur, il est recommandé d'utiliser la propriété CSS {{CSSxRef("counter-reset")}}.
 
-Si un compteur nommé dans la liste n'a pas de valeur, la valeur du compteur sera définie à `0`.
+Si un compteur nommé dans la liste n'a pas de valeur, la valeur du compteur est définie à `0`.
 
 > [!NOTE]
 > La valeur d'un compteur peut être incrémentée ou décrémentée grâce à la propriété CSS {{CSSxRef("counter-increment")}}.
@@ -82,7 +82,7 @@ counter-set: mon-compteur -1;
 /* Définir "compteur1" avec 1 et "compteur2" à 4 */
 counter-set: compteur1 1 compteur2 4;
 
-/* Réinitialiser les compteurs qui auraient été définis avec des règles moins spécifiques */
+/* Réinitialiser les compteurs qui ont été définis avec des règles moins spécifiques */
 counter-set: none;
 
 /* Valeurs globales */
@@ -93,17 +93,14 @@ counter-set: revert-layer;
 counter-set: unset;
 ```
 
-La propriété `counter-set` est définit avec l'une de ces deux valeurs&nbsp;:
-
-- Une valeur de type `<custom-ident>` qui fournit le nom du compteur, éventuellement suivie d'un entier (`<integer>`). Il est possible de définir plusieurs compteurs à réinitialiser en séparant les valeurs grâce à un espace.
-- Le mot-clé `none`.
-
 ### Valeurs
+
+Cette propriété est définie soit sous la forme d'une liste de valeurs `<custom-ident>` séparées par des espaces, chacune pouvant être suivie d'un `<integer>`, soit par le mot-clé `none`&nbsp;:
 
 - {{CSSxRef("&lt;custom-ident&gt;")}}
   - : Le nom du compteur à définir ou à modifier.
 - {{CSSxRef("&lt;integer&gt;")}}
-  - : La valeur à utiliser pour le compteur à chaque occurrence de l'élément. Par cette valeur sera `0`. S'il n'existe pas déjà de compteur avec le nom courant pour l'élément, l'élément créera un nouveau compteur avec ce nom et utilisera alors cette valeur.
+  - : La valeur à utiliser pour le compteur à chaque occurrence de l'élément. Par cette valeur est `0`. S'il n'existe pas déjà de compteur avec le nom courant pour l'élément, l'élément crée un nouveau compteur avec ce nom et utilise alors cette valeur.
 - `none`
   - : Aucune définition ou modification de compteur ne doit être appliquée. Cette valeur peut être utilisée afin de surcharger une déclaration `counter-set` d'une règle moins spécifique.
 

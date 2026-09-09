@@ -15,10 +15,10 @@ const map = new Map();
 map.set("toto", "truc");
 
 console.log(map.has("toto"));
-// Sortie attendue : true
+// Résultat attendu : true
 
 console.log(map.has("baz"));
-// Sortie attendue : false
+// Résultat attendu : false
 ```
 
 ## Syntaxe
@@ -58,7 +58,7 @@ maMap.has("bidule"); // false
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Map")}}
+- L'objet natif {{JSxRef("Map")}}
 - La méthode {{JSxRef("Map.prototype.delete()")}}
 - La méthode {{JSxRef("Map.prototype.get()")}}
 - La méthode {{JSxRef("Map.prototype.set()")}}

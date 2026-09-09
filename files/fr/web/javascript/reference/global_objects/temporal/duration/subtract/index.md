@@ -54,6 +54,6 @@ Pour plus d'exemples et de mises en garde, voir la méthode [`add()`](/fr/docs/W
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/Duration/add", "Temporal.Duration.prototype.add()")}}
 - La méthode {{JSxRef("Temporal/Duration/negated", "Temporal.Duration.prototype.negated()")}}

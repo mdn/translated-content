@@ -2,7 +2,7 @@
 title: 200 OK
 slug: Web/HTTP/Reference/Status/200
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse de succès](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès) HTTP **`200 OK`** indique qu'une requête a réussi.
@@ -29,7 +29,7 @@ Il est plus courant de voir {{HTTPStatus("201", "201 Created")}} si la ressource
 
 ### Réception d'un `200 OK` pour une requête `GET`
 
-Dans cet exemple, une requête `GET` réussie vers `https://exemple.com` retourne une réponse `200 OK`.
+Dans cet exemple, une requête `GET` réussie vers `https://example.com` retourne une réponse `200 OK`.
 La réponse inclut des en-têtes de représentation et un corps de message contenant le contenu HTML&nbsp;:
 
 ```http
@@ -50,21 +50,21 @@ Content-Length: 1256
 <!-- Le contenu HTML commence ici -->
 ```
 
-### Réception d'un `200 OK` pour une requête `POST` lors de la soumission d'un formulaire
+### Réception d'un `200 OK` pour une requête `POST` lors de l'envoie d'un formulaire
 
-En supposant qu'un formulaire existe pour envoyer des données à un point de terminaison de gestion des abonnements à `http://exemple.com/subscribe`.
-Une requête `POST` pour abonner un·e utilisateur·ice pourrait ressembler à ceci&nbsp;:
+En supposant qu'un formulaire existe pour envoyer des données à un point de terminaison de gestion des abonnements à `http://example.com/subscribe`.
+Une requête `POST` pour abonner un·e utilisateur·ice peut ressembler à ceci&nbsp;:
 
 ```http
 POST /subscribe HTTP/1.1
-Host: exemple.com
+Host: example.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 50
 
-name=Sandra%20Smith&email=sandra.smith%40exemple.com
+name=Sandra%20Smith&email=sandra.smith%40example.com
 ```
 
-Dans cet exemple, une réponse avec un statut `200 OK` pourrait ressembler à ceci&nbsp;:
+Dans cet exemple, une réponse avec un statut `200 OK` peut ressembler à ceci&nbsp;:
 
 ```http
 HTTP/1.1 200 OK
@@ -74,7 +74,7 @@ Content-Type: application/json
   "message": "Abonnement utilisateur en attente. Un courriel de confirmation a été envoyé.",
   "subscription": {
     "name": "Sandra Smith",
-    "email": "sandra.smith@exemple.com",
+    "email": "sandra.smith@example.com",
     "id": 123,
     "feed": "default"
   }

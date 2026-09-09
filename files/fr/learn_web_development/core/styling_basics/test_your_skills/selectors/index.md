@@ -3,7 +3,7 @@ title: "Testez vos compétences : Les sélecteurs"
 short-title: "Test : Les sélecteurs"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
 l10n:
-  sourceCommit: a623d4459e2aa00d17dc0fd6b6bc44f56c589950
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
@@ -169,7 +169,7 @@ Voici le code sous-jacent pour ce point de départ&nbsp;:
 ```html live-sample___selectors3-start live-sample___selectors3-finish
 <div class="conteneur">
   <p>
-    Les légumes, <a href="http://exemple.com">c'est un plus pour vous</a>, c'est
+    Les légumes, <a href="http://example.com">c'est un plus pour vous</a>, c'est
     pourquoi je vous demande de mettre davantage de chou-rave, ciboulette,
     daikon, amarante, tatsoi, tomatillo, melon, haricots azuki, ail.
   </p>
@@ -355,8 +355,8 @@ Voici le code sous-jacent pour ce point de départ&nbsp;:
 
 ```html live-sample___selectors5-start live-sample___selectors5-finish
 <ul>
-  <li><a href="https://exemple.com">Lien 1</a></li>
-  <li><a href="http://exemple.com" title="Visitez exemple.com">Lien 2</a></li>
+  <li><a href="https://example.com">Lien 1</a></li>
+  <li><a href="http://example.com" title="Visitez example.com">Lien 2</a></li>
   <li><a href="/contact">Lien 3</a></li>
   <li><a href="../contact/index.html">Lien 4</a></li>
 </ul>

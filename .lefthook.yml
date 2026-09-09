@@ -8,7 +8,7 @@ pre-commit:
 
     - name: Autocorrect zh-cn
       glob: "{docs,files}/zh-cn/*.md"
-      run: npx autocorrect --fix {staged_files}
+      run: npx autocorrect-node --fix {staged_files}
       stage_fixed: true
 
     - name: Format markdown

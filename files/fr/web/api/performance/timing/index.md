@@ -5,7 +5,7 @@ l10n:
   sourceCommit: cadd198e75b25e939938c414e46e95aa7f14318b
 ---
 
-{{APIRef("Navigation Timing")}}{{deprecated_header}}
+{{APIRef("Navigation Timing")}}
 
 L'ancienne propriété **`Performance.timing`** en lecture seule renvoie un objet [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) contenant des informations de performance liées à la latence.
 

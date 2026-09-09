@@ -3,8 +3,6 @@ title: Assertions
 slug: Web/JavaScript/Guide/Regular_expressions/Assertions
 ---
 
-{{jsSidebar("JavaScript Guide")}}
-
 Les assertions indiquent les conditions selon lesquelles il est possible d'avoir une correspondance (contenu situé avant la correspondance, situé après ou expressions conditionnelles).
 
 ## Types

@@ -3,8 +3,6 @@ title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
 ---
 
-{{AddonSidebar}}
-
 La fonction **`download()`** de l'API {{WebExtAPIRef("downloads")}} télécharge le fichier, compte tenu de son URL et d'autres préférences optionnelles.
 
 - Si l'`url` spécifiée utilise le protocole HTTP ou HTTPS, la requête inclura tous les cookies actuellement définis pour son nom d'hôte.

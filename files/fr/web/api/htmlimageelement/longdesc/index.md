@@ -3,18 +3,18 @@ title: "HTMLImageElement : propriété longDesc"
 short-title: longDesc
 slug: Web/API/HTMLImageElement/longDesc
 l10n:
-  sourceCommit: 1f00512e3c9a20b5bb927db529bb5d639e346d96
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
-La propriété **`longDesc`** (_obsolète_) de l'interface {{DOMxRef("HTMLImageElement")}} spécifie l'URL d'un fichier texte ou HTML contenant une description détaillée de l'image. Cela peut être utilisé pour fournir des informations supplémentaires facultatives au-delà de la brève description fournie dans l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title). Elle reflète l'attribut de contenu [`longdesc`](/fr/docs/Web/HTML/Reference/Elements/img#longdesc) de l'élément `<img>`.
+La propriété **`longDesc`** (_obsolète_) de l'interface {{DOMxRef("HTMLImageElement")}} définie l'URL d'un fichier texte ou HTML contenant une description détaillée de l'image. Cela peut être utilisé pour fournir des informations supplémentaires facultatives au-delà de la brève description fournie dans l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title). Elle reflète l'attribut de contenu [`longdesc`](/fr/docs/Web/HTML/Reference/Elements/img#longdesc) de l'élément `<img>`.
 
 Cet attribut est considéré comme obsolète dans la [spécification HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc). Son avenir est incertain&nbsp;; les auteur·ice·s doivent utiliser une alternative {{Glossary("WAI")}}-{{Glossary("ARIA")}} telle que [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) ou [`aria-details`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details). Vous pouvez également encapsuler l'image dans un lien à l'aide de l'élément HTML {{HTMLElement("a")}}.
 
 ## Valeur
 
-Une chaîne de caractères qui peut être soit une chaîne vide (indiquant qu'aucune description longue n'est disponible), soit l'URL d'un fichier contenant une description longue du contenu de l'image.
+Une chaîne de caractères qui peut être soit une chaîne de caractères vide (indiquant qu'aucune description longue n'est disponible), soit l'URL d'un fichier contenant une description longue du contenu de l'image.
 
 ## Exemples
 

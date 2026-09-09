@@ -1,11 +1,12 @@
 ---
-title: "@custom-media"
+title: CSS `@custom-media` アットルール
+short-title: "@custom-media"
 slug: Web/CSS/Reference/At-rules/@custom-media
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 6b0dc010f6c32a23b54aef95094cee9ec0e1b7b5
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`@custom-media`** は CSS の[アットルール](/ja/docs/Web/CSS/Reference/At-rules)で、長くて複雑な[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)の別名を定義します。同じ `<media-query-list>` をハードコードで複数の {{cssxref("@media")}} アットルールに繰り返し記述する代わりに、`@custom-media` アットルールで一度定義し、このスタイルシート内で必要に応じて参照できます。
 
@@ -39,7 +40,7 @@ l10n:
 
 カスタムメディアクエリーは、メディアクエリー機能内で他のものから別名を参照することで構成することができます。これにより、より表現力豊かで階層化された条件を構築することが可能になります。ただし、カスタムメディアクエリーは自身を参照することはできず、また循環参照の連鎖の一部を形成することもできません。循環依存関係が存在する場合（直接的または間接的を問わず）、そのループに関与するすべてのカスタムメディアクエリーが無効となります。
 
-複数の `@custom-media` ルールが同じ `<dashed-ident>` 名を定義している場合、ソース順序における最後の宣言のみが適用されます。それ以前の宣言はすべて無視されます。
+複数の `@custom-media` ルールで同じ `<dashed-ident>` 名が定義されていた場合、`@media` ルールが評価される時点でスコープ内にあるルールが使用されます。後続の `@custom-media` ルールが宣言されても、それ以前の参照は遡って更新されることはありません。
 
 ### 論理演算子でメディアクエリーを評価
 
@@ -52,7 +53,7 @@ l10n:
 `not` 演算子はメディア条件全体を否定します。特定の条件が `false` の場合にのみルールを適用したい場合に有用です。
 
 ```css
-@custom-media --no-script not (script);
+@custom-media --no-script not (scripting);
 
 @media (--no-script) {
 }
@@ -73,20 +74,20 @@ l10n:
 
 #### `or` 演算子の使用
 
-論理 `or` 演算子（またはその別名であるカンマ）は、掲載されている条件のいずれかが `true` の場合に一致するメディアクエリーを作成します。
+論理 `or` 演算子（または、複数のメディア種別を組み合わせる際の別名であるカンマ）は、掲載されている条件のいずれかが `true` の場合に一致するメディアクエリーを作成します。
 
 ```css
-@custom-media --screen-or-print-1 screen, print;
-@custom-media --screen-or-print-2 screen or print;
+@custom-media --screen-or-print screen, print;
+@custom-media --narrow-or-tall (width < 600px) or (height > 800px);
 
-@media (--screen-or-print-1) {
+@media (--screen-or-print) {
 }
 
-@media (--screen-or-print-2) {
+@media (--narrow-or-tall) {
 }
 ```
 
-両方の別名は同一です。これらは画面環境と印刷環境の両方で有効になります。
+`--screen-or-print` の別名は、カンマを使用して `screen` または `print` のどちらかのメディア種別に一致させます。`--narrow-or-tall` の別名は、`or` キーワードを使用して 2 つのメディア特性を組み合わせ、ビューポートの幅が 600px 未満の場合、高さが 800px を超える場合、あるいはその両方の場合に一致します。
 
 ## 形式文法
 
@@ -219,7 +220,12 @@ l10n:
 @custom-media --mobile-breakpoint (width < 480px);
 ```
 
-`--mobile-breakpoint` の最初の定義は上書きされるため無視されます。最終的な宣言が、そのカスタムメディアクエリーを参照するすべての要素で使用される有効な値となります。
+複数の `@custom-media` ルールで同じ名前が使用されていた場合、`@media` ルールが評価される時点でスコープ内にあるルールが使用されます。後の `@custom-media` ルールが宣言されても、それ以前の参照は遡って更新されることはありません。
+
+例えば、上記のコードでは、`@media` ルール内の `--mobile-breakpoint` の参照は `(width < 320px)` として評価されるため、このスタイルシートの後半で `--mobile-breakpoint` が `(width < 480px)` として再定義されていても、ビューポートの幅が 320px 未満の場合にのみ `.container` ルールが適用されます。
+
+> [!NOTE]
+> `@custom-media` の上書き動作については、CSS 仕様書において現在も議論中であり、将来変更されることがあります。現在の対応状況については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
 
 ## 仕様書
 

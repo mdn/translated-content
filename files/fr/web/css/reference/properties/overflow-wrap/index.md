@@ -3,10 +3,10 @@ title: Propriété CSS `overflow-wrap`
 short-title: overflow-wrap
 slug: Web/CSS/Reference/Properties/overflow-wrap
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`overflow-wrap`** s'applique au texte, définissant si le navigateur doit insérer des sauts de ligne à l'intérieur d'une chaîne autrement insécable pour éviter que le texte ne dépasse de sa boîte de ligne.
+La propriété [CSS](/fr/docs/Web/CSS) **`overflow-wrap`** s'applique au texte, définissant si le navigateur doit insérer des sauts de ligne à l'intérieur d'une chaîne de caractères autrement insécable pour éviter que le texte ne dépasse de sa boîte de ligne.
 
 > [!NOTE]
 > La propriété était à l'origine une extension non standard et non préfixée de Microsoft appelée `word-wrap`, et a été implémentée par la plupart des navigateurs sous le même nom. Elle a depuis été renommée en `overflow-wrap`, `word-wrap` étant devenu un alias.
@@ -50,7 +50,7 @@ overflow-wrap: break-word;
 ```
 
 > [!NOTE]
-> Contrairement à {{CSSxRef("word-break")}}, `overflow-wrap` ne créera une rupture que si un mot entier ne peut pas être placé sur sa propre ligne sans dépasser.
+> Contrairement à {{CSSxRef("word-break")}}, `overflow-wrap` ne crée une rupture que si un mot entier ne peut pas être placé sur sa propre ligne sans dépasser.
 
 ## Syntaxe
 
@@ -68,9 +68,9 @@ overflow-wrap: revert-layer;
 overflow-wrap: unset;
 ```
 
-La propriété `overflow-wrap` peut être définie avec l'un des mots-clés suivants.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `normal`
   - : Les lignes ne peuvent se casser qu'aux points de rupture de mots normaux (comme un espace entre deux mots).

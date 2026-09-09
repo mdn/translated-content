@@ -77,8 +77,7 @@ Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel 
 <textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.ellipse(100, 100, 50, 75, 45 * Math.PI/180, 0, 2 * Math.PI);
-ctx.stroke();</textarea
->
+ctx.stroke();</textarea>
 ```
 
 ```js hidden

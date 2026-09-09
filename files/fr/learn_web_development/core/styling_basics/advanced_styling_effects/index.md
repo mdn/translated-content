@@ -4,8 +4,6 @@ slug: Learn_web_development/Core/Styling_basics/Advanced_styling_effects
 original_slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 ---
 
-{{LearnSidebar}}
-
 Cet article est une sorte de boîte à malices : elle introduit certaines des fonctions avancées disponibles pour styliser les boîtes, fonctions n'entrant pas dans catégories vues plus haut — comme les ombres, les mélanges de couleurs ou les filtres.
 
 <table class="standard-table">
@@ -380,8 +378,7 @@ Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ l'exemple avec 
     class="html-input"
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 <div class="style-me">
-</div></textarea
-  >
+</div></textarea>
 
   <h2>Zone de saisie de la CSS</h2>
   <textarea
@@ -397,8 +394,7 @@ Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ l'exemple avec 
   background-color: red;
   background: url(colorful-heart.png) no-repeat center 20px,
               linear-gradient(to bottom right, #f33, #a33);
-} </textarea
-  >
+} </textarea>
 
   <h2>Zone de rendu</h2>
   <div

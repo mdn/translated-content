@@ -29,7 +29,7 @@ MDN の**ウェブ開発の学習**（または**学習**）へようこそ。�
 - 基本を終えた方
   - : [発展モジュール](/ja/docs/Learn_web_development/Extensions)は、知識を広げ、専門分野を開発し始めるには有益な追加スキルを扱っています。コアモジュールを完了したら、こちらに進んでください。
 - 学校で働いている方
-  - : 私たちのモジュールを指導のガイドとして使い、さらにアイディアをお探しの方は[教育者ページ](/ja/docs/Learn_web_development/Educators)を参照するか、または Scrimba の [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> に生徒を登録してください。
+  - : 私たちのモジュールを指導のガイドとして使い、さらにアイディアをお探しの方は[教育者ページ](/ja/docs/Learn_web_development/Educators)を参照するか、または Scrimba の [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> に生徒を登録してください。
 
 ## 確認テスト
 
@@ -62,7 +62,7 @@ MDN の**ウェブ開発の学習**（または**学習**）へようこそ。�
 
 ## 関連情報
 
-- [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup>
+- [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
   - : [Scrimba](https://scrimba.com?via=mdn) （英語）のフロントエンド開発者キャリアパスでは、楽しく対話しながら学べるレッスンや課題、知識豊富な講師、対応しているコミュニティを通じて、有能なフロントエンドウェブ開発者になるために必要なすべてを学ぶことができます。ゼロから最初のフロントエンドの仕事に就くまで、このコースの多くの部分は、無料版として単独で利用できます。
 - [Codecademy](https://www.codecademy.com/)（英語）
   - : 一からプログラミング言語を学ぶための優れたインタラクティブなサイトです。

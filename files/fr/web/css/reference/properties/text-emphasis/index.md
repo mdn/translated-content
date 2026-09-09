@@ -3,10 +3,10 @@ title: Propriété CSS `text-emphasis`
 short-title: text-emphasis
 slug: Web/CSS/Reference/Properties/text-emphasis
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`text-emphasis`** applique des marques d'emphase au texte (sauf les espaces et les caractères de contrôle). C'est une propriété raccourcie pour {{CSSxRef("text-emphasis-style")}} et {{CSSxRef("text-emphasis-color")}}.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`text-emphasis`** applique des marques d'emphase au texte (sauf les espaces et les caractères de contrôle). C'est une propriété raccourcie pour {{CSSxRef("text-emphasis-style")}} et {{CSSxRef("text-emphasis-color")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: text-emphasis")}}
 
@@ -49,7 +49,7 @@ La propriété `text-emphasis` est assez différente de {{CSSxRef("text-decorati
 La taille du symbole d'emphase, comme les symboles ruby, est d'environ 50% de la taille de la police, et `text-emphasis` peut affecter la hauteur de ligne lorsque l'interligne courant n'est pas suffisant pour les marques.
 
 > [!NOTE]
-> `text-emphasis` ne réinitialise pas la valeur de {{CSSxRef("text-emphasis-position")}}. En effet, si le style et la couleur des marques d'emphase peuvent varier dans un texte, il est extrêmement rare que leur position varie. Dans les très rares cas où cela est nécessaire, utilisez la propriété {{CSSxRef("text-emphasis-position")}}.
+> `text-emphasis` ne réinitialise pas la valeur de {{CSSxRef("text-emphasis-position")}}. En effet, si le style et la couleur des marques d'emphase peuvent varier dans un texte, il est extrêmement rare que leur position varie. Dans les très rares cas où c'est nécessaire, utilisez la propriété {{CSSxRef("text-emphasis-position")}}.
 
 ## Syntaxe
 
@@ -62,7 +62,7 @@ text-emphasis: "x";
 text-emphasis: "点";
 text-emphasis: "\25B2";
 text-emphasis: "*" #555;
-text-emphasis: "toto"; /* À ne pas utiliser, cela pourra être considéré comme 't' uniquement */
+text-emphasis: "toto"; /* À ne pas utiliser, cela peut être considéré comme 't' uniquement */
 
 /* Valeurs avec un(des) mot(s)-clé(s) */
 text-emphasis: filled;
@@ -84,15 +84,15 @@ text-emphasis: unset;
 ### Valeurs
 
 - `none`
-  - : Il n'y aura pas de marques d'emphase appliquées.
+  - : Il n'y a pas de marques d'emphase appliquées.
 - `filled`
-  - : La forme de la marque est remplie avec une couleur unie. Si aucun des mots-clés parmi `filled` ou `open` n'est présent, ce sera la valeur par défaut.
+  - : La forme de la marque est remplie avec une couleur unie. Si aucun des mots-clés parmi `filled` ou `open` n'est présent, ce est la valeur par défaut.
 - `open`
   - : La forme de la marque est évidée.
 - `dot`
   - : La forme de la marque est un petit cercle. Le cercle plein est le caractère `'•'` (`U+2022`) et celui qui est évidé est `'◦'` (`U+25E6`).
 - `circle`
-  - : La forme de la marque est un grand cercle. Le cercle plein est le caractère `'●'` (`U+25CF`) et celui du cercle évidé est `'○'` (`U+25CB`). Lorsqu'aucune forme n'est spécifiée, c'est la forme par défaut utilisée pour les modes d'écriture horizontaux.
+  - : La forme de la marque est un grand cercle. Le cercle plein est le caractère `'●'` (`U+25CF`) et celui du cercle évidé est `'○'` (`U+25CB`). Lorsqu'aucune forme n'est définie, c'est la forme par défaut utilisée pour les modes d'écriture horizontaux.
 - `double-circle`
   - : La forme de la marque est un double-cercle. Le double-cercle plein est le caractère `'◉'` (`U+25C9`), celui du double-cercle évidé est `'◎'` (`U+25CE`).
 - `triangle`
@@ -102,7 +102,7 @@ text-emphasis: unset;
 - `<string>`
   - : Affiche la chaîne de caractères donnée comme marques. Les auteur·ice·s ne doivent pas définir plus d'un _caractère_ dans `<string>`. L'agent utilisateur peut tronquer ou ignorer les chaînes de caractères comportant plus d'un groupe de graphèmes.
 - `<color>`
-  - : Définit la couleur utilisée pour la marque. Si aucune couleur n'est définie, la valeur utilisée par défaut sera `currentColor`.
+  - : Définit la couleur utilisée pour la marque. Si aucune couleur n'est définie, la valeur utilisée par défaut est `currentColor`.
 
 ## Définition formelle
 
@@ -146,5 +146,5 @@ h2 {
 
 ## Voir aussi
 
-- Les propriétés longues {{CSSxRef('text-emphasis-style')}}, {{CSSxRef('text-emphasis-color')}}.
-- La propriété {{CSSxRef('text-emphasis-position')}} permet de définir la position des marques d'emphase.
+- Les propriétés longues {{CSSxRef("text-emphasis-style")}}, {{CSSxRef("text-emphasis-color")}}.
+- La propriété {{CSSxRef("text-emphasis-position")}} vous permet de définir la position des marques d'emphase.

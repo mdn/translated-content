@@ -57,11 +57,11 @@ Par défaut (c'est-à-dire si l'attribut n'est pas défini), CORS n'est pas util
 
 ### Utiliser `crossorigin` avec l'élément `script`
 
-On peut utiliser l'élément {{HTMLElement("script")}} afin d'indiquer au navigateur d'exécuter un script (ici, `https://exemple.fr/framework-exemple.js`) sans envoyer les informations d'authentification de l'utilisateur·ice.
+On peut utiliser l'élément {{HTMLElement("script")}} afin d'indiquer au navigateur d'exécuter un script (ici, `https://example.com/framework-exemple.js`) sans envoyer les informations d'authentification de l'utilisateur·ice.
 
 ```html
 <script
-  src="https://exemple.fr/framework-exemple.js"
+  src="https://example.com/framework-exemple.js"
   crossorigin="anonymous"></script>
 ```
 

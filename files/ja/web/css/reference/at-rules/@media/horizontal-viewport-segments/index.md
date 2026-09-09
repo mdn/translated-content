@@ -1,8 +1,9 @@
 ---
-title: horizontal-viewport-segments
+title: CSS `horizontal-viewport-segments` メディア特性
+short-title: horizontal-viewport-segments
 slug: Web/CSS/Reference/At-rules/@media/horizontal-viewport-segments
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 {{SeeCompatTable}}

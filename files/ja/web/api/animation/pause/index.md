@@ -3,7 +3,7 @@ title: "Animation: pause() メソッド"
 short-title: pause()
 slug: Web/API/Animation/pause
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
 ---
 
 {{ APIRef("Web Animations") }}
@@ -13,7 +13,7 @@ l10n:
 ## 構文
 
 ```js-nolint
-animation.pause();
+pause()
 ```
 
 ### 引数
@@ -34,7 +34,7 @@ animation.pause();
 `Animation.pause()` はウェブアニメーション API の国のアリスの[Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)で何度も使用しています。 {{domxref("Element.animate()")}} メソッドで作成したアニメーションはすぐに再生を始めるので、それを避けたい場合は手動で一時停止しなければならないのが主な理由です。
 
 ```js
-// animation of the cupcake slowly getting eaten up
+// カップケーキが少しずつ食べられていく様子のアニメーション
 const nommingCake = document
   .getElementById("eat-me_sprite")
   .animate(
@@ -46,23 +46,23 @@ const nommingCake = document
     },
   );
 
-// doesn't actually need to be eaten until a click event, so pause it initially:
+// 実際にはクリックイベントが発生するまで実行する必要はないため、最初は一時停止しておく
 nommingCake.pause();
 ```
 
-Additionally, when resetting:
+更に、リセット時に次のようにします。
 
 ```js
-// An all-purpose function to pause the animations on Alice, the cupcake, and the bottle that reads "drink me."
+// カップケーキ、アリス、"drink me" と書かれたボトルのアニメーションを一時停止するための汎用関数
 const stopPlayingAlice = () => {
   aliceChange.pause();
   nommingCake.pause();
   drinking.pause();
 };
 
-// When the user releases the cupcake or the bottle, pause the animations.
-cake.addEventListener("mouseup", stopPlayingAlice, false);
-bottle.addEventListener("mouseup", stopPlayingAlice, false);
+// ユーザーがカップケーキやボトルを離したら、アニメーションを一時停止
+cake.addEventListener("mouseup", stopPlayingAlice);
+bottle.addEventListener("mouseup", stopPlayingAlice);
 ```
 
 ## 仕様書
@@ -77,7 +77,6 @@ bottle.addEventListener("mouseup", stopPlayingAlice, false);
 
 - [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
 - {{domxref("Animation")}}: ウェブページのアニメーションを制御することができるその他のメソッドやプロパティ
-- {{domxref("Animation.pause()")}}: アニメーションを停止します。
 - {{domxref("Animation.reverse()")}}: アニメーションを逆方向に再生します。
 - {{domxref("Animation.finish()")}}: アニメーションを終了します。
 - {{domxref("Animation.cancel()")}}: アニメーションをキャンセルします。

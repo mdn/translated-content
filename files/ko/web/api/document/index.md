@@ -247,9 +247,9 @@ _`Document`는 {{domxref("Node")}}와 {{domxref("EventTarget")}} 인터페이스
 - {{domxref("document.getElementById()")}}
   - : 주어진 ID를 가진 요소의 참조를 반환합니다.
 - {{domxref("document.querySelector()")}}
-  - : 문서 내에서 주어진 선택자를 만족하는 첫 번째 {{jsxref("Element")}}를 반환합니다.
+  - : 문서 내에서 주어진 선택자를 만족하는 첫 번째 {{domxref("Element")}}를 반환합니다.
 - {{domxref("document.querySelectorAll()")}}
-  - : 주어진 선택자를 만족하는 모든 요소의 {{jsxref("NodeList")}}를 반환합니다.
+  - : 주어진 선택자를 만족하는 모든 요소의 {{domxref("NodeList")}}를 반환합니다.
 
 `Document` 인터페이스는 {{domxref("XPathEvaluator")}} 인터페이스를 확장합니다.
 

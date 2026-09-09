@@ -356,8 +356,7 @@ Si te equivocas, puedes volver a empezar con el botón _Reinicio_. Si te quedas 
       <li>The goblin statue</li>
     </ol>
   </li>
-</ul></textarea
-  >
+</ul></textarea>
 
   <h2>CSS Input</h2>
   <textarea

@@ -1,8 +1,9 @@
 ---
 title: Syntaxe CSS
+short-title: Syntaxe
 slug: Web/CSS/Guides/Syntax
 l10n:
-  sourceCommit: 81f8fcd666952c1782653a3675347c392cc997ca
+  sourceCommit: ddf85bfec1b6e43cdacb404de0c38a801c561640
 ---
 
 Le module **Syntaxe CSS** décrit, en termes généraux, la structure et la syntaxe des feuilles de style en cascade, ou CSS. Il définit CSS comme le langage de description du rendu de documents structurés (tels que HTML et XML), sur le web et ailleurs.

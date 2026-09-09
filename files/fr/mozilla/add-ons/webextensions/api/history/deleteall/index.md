@@ -3,8 +3,6 @@ title: history.deleteAll()
 slug: Mozilla/Add-ons/WebExtensions/API/history/deleteAll
 ---
 
-{{AddonSidebar}}
-
 Supprime toutes les visites de l'historique du navigateur.
 
 Cette fonction déclenche {{WebExtAPIRef("history.onVisitRemoved")}} une seule fois, avec `allHistory` défini sur `true` et un argument `urls` vide.

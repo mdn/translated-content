@@ -72,5 +72,5 @@ rtf.formatToParts(100, "day");
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.RelativeTimeFormat")}}
+- L'objet natif {{JSxRef("Intl.RelativeTimeFormat")}}
 - La méthode {{JSxRef("Intl/RelativeTimeFormat/format", "Intl.RelativeTimeFormat.prototype.format()")}}

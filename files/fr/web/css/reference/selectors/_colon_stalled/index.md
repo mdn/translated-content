@@ -53,4 +53,4 @@ audio:stalled {
 - La pseudo-classe {{CSSxRef(":seeking")}}
 - La pseudo-classe {{CSSxRef(":volume-locked")}}
 - Les [sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)
-- L'événement [`stalled`](/fr/docs/Web/API/HTMLMediaElement/stalled_event)
+- L'évènement [`stalled`](/fr/docs/Web/API/HTMLMediaElement/stalled_event)

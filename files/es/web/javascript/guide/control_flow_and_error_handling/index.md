@@ -7,7 +7,7 @@ slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 
 JavaScript admite un compacto conjunto de declaraciones, específicamente declaraciones de control de flujo, que puedes utilizar para incorporar una gran cantidad de interactividad en tu aplicación. Este capítulo proporciona una descripción de estas declaraciones.
 
-La {{JSxRef("Sentencias", "referencia de JavaScript")}} contiene detalles exhaustivos sobre las declaraciones de este capítulo. El carácter de punto y coma (`;`) se utiliza para separar declaraciones en código JavaScript.
+La {{JSxRef("Statements", "referencia de JavaScript")}} contiene detalles exhaustivos sobre las declaraciones de este capítulo. El carácter de punto y coma (`;`) se utiliza para separar declaraciones en código JavaScript.
 
 Todas las expresiones e instrucciones de JavaScript también son una declaración. Consulta [Expresiones y operadores](/es/docs/Web/JavaScript/Guide/Expressions_and_operators) para obtener información completa sobre las expresiones.
 

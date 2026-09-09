@@ -1,9 +1,9 @@
 ---
-title: r
+title: CSS `r` プロパティ
+short-title: r
 slug: Web/CSS/Reference/Properties/r
-original_slug: Web/CSS/r
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`r`** は [CSS](/ja/docs/Web/CSS) のプロパティで、円の半径を定義します。これは SVG の {{SVGElement("circle")}} 要素でのみ使用されます。存在する場合、その円の {{SVGAttr("r")}} 属性を上書きします。
@@ -57,7 +57,7 @@ r: unset;
 </svg>
 ```
 
-CSS を使用して、最初の円のみスタイルを設定し、 2 番目の円には既定のスタイルを使用します（{{cssxref("fill")}} の既定値は黒）。 `r` プロパティを使用して SVG の {{SVGAttr("r")}} 属性の値を上書きし、 `fill` と {{cssxref("stroke")}} を指定します。 SVG の既定のサイズは、幅が `300px`、高さが `150px`です。
+CSS を使用して、最初の円のみスタイルを設定し、 2 番目の円にはデフォルトのスタイルを使用します（{{cssxref("fill")}} のデフォルト値は黒）。 `r` プロパティを使用して SVG の {{SVGAttr("r")}} 属性の値を上書きし、 `fill` と {{cssxref("stroke")}} を指定します。 SVG のデフォルトのサイズは、幅が `300px`、高さが `150px`です。
 
 ```css
 svg {

@@ -53,6 +53,6 @@ console.log(jaJP.getCalendars()); // ["gregory", "japanese"]
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}
 - La propriété {{JSxRef("Intl.Locale.prototype.calendar")}}
 - [Identifiants de calendrier Unicode <sup>(angl.)</sup>](https://www.unicode.org/reports/tr35/#UnicodeCalendarIdentifier) dans la spécification du langage de balisage des données de locale Unicode

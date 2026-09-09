@@ -10,12 +10,12 @@ Le code de statut de [réponse de redirection](/fr/docs/Web/HTTP/Reference/Statu
 Un navigateur recevant ce statut demande automatiquement la ressource à l'URL figurant dans l'en-tête `Location`, redirigeant ainsi l'utilisateur·ice vers la nouvelle page.
 
 La méthode de requête et son corps **ne sont pas modifiés** par le client lors de la requête redirigée.
-Un {{HTTPStatus("301", "301 Moved Permanently")}} exige que la méthode et le corps restent inchangés lors d'une redirection, mais cela est incorrectement géré par d'anciens clients qui utilisent à la place la méthode {{HTTPMethod("GET")}}.
+Un {{HTTPStatus("301", "301 Moved Permanently")}} exige que la méthode et le corps restent inchangés lors d'une redirection, mais c'est incorrectement géré par d'anciens clients qui utilisent à la place la méthode {{HTTPMethod("GET")}}.
 
 > [!NOTE]
 > Certaines applications Web peuvent utiliser `308 Permanent Redirect` de façon non standard et pour d'autres usages.
 > Par exemple, Google Drive utilise la réponse `308 Resume Incomplete` pour indiquer au client qu'un téléversement inachevé est bloqué.
-> Voir [Effectuer un téléchargement résumable <sup>(angl.)</sup>](https://developers.google.com/workspace/drive/api/guides/manage-uploads) dans la documentation Google Drive pour plus d'informations.
+> Voir [Effectuer un téléchargement pouvant reprendre <sup>(angl.)</sup>](https://developers.google.com/workspace/drive/api/guides/manage-uploads) dans la documentation Google Drive pour plus d'informations.
 
 ## Statut
 
@@ -34,7 +34,7 @@ Host: www.exemple.org
 
 ```http
 HTTP/1.1 308 Permanent Redirect
-Location: http://www.exemple.com/featured
+Location: http://www.example.com/featured
 Content-Length: 0
 ```
 

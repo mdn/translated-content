@@ -3,10 +3,10 @@ title: "HTMLImageElement : propriété border"
 short-title: border
 slug: Web/API/HTMLImageElement/border
 l10n:
-  sourceCommit: 1f00512e3c9a20b5bb927db529bb5d639e346d96
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété _obsolète_ **`border`** de l'interface {{DOMxRef("HTMLImageElement")}} définit le nombre de pixels d'épaisseur que doit avoir la bordure entourant l'image. Une valeur de 0, la valeur par défaut, indique qu'aucune bordure ne doit être dessinée. Elle reflète l'attribut de contenu [`border`](/fr/docs/Web/HTML/Reference/Elements/img#border) de l'élément HTML `<img>`.
 

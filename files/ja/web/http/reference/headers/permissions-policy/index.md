@@ -354,7 +354,7 @@ navigator.geolocation.getCurrentPosition(
 );
 ```
 
-エンドポイントに送信される[レポート本体](/ja/docs/Web/API/Reporting_API#reporting_server_endpoints)は、次のような形式になります。
+エンドポイントに送信される[レポート本体](/ja/docs/Web/API/Reporting_API#レポートサーバーのエンドポイント)は、次のような形式になります。
 
 ```json
 [

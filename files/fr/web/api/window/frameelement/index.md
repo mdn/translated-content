@@ -3,10 +3,10 @@ title: "Window : propriété frameElement"
 short-title: frameElement
 slug: Web/API/Window/frameElement
 l10n:
-  sourceCommit: 44c4ec928281dc2d7c5ea42b7d2c74a2013f16ac
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`frameElement`** de l'interface {{DOMxRef("Window")}} retourne un élément HTML (tel que {{HTMLElement("iframe")}} ou {{HTMLElement("object")}}) dans lequel la fenêtre est intégrée.
 

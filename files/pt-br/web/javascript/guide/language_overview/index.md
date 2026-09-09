@@ -468,7 +468,7 @@ for (var i = 0, len = a.length; i < len; i++) {
 Uma forma mais elegante ainda poderia ser:
 
 ```js
-for (var i = 0, item; (item = a[i++]); ) {
+for (var i = 0, item; (item = a[i++]);) {
   // Faça algo com item
 }
 ```

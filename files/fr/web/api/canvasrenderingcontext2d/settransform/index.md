@@ -66,8 +66,7 @@ Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel 
 </div>
 <textarea id="code" class="playable-code">
 ctx.setTransform(1,1,0,1,0,0);
-ctx.fillRect(0,0,100,100);</textarea
->
+ctx.fillRect(0,0,100,100);</textarea>
 ```
 
 ```js hidden

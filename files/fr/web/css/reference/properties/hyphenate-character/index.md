@@ -68,7 +68,7 @@ La valeur définit soit la chaîne de caractères à utiliser à la place d'un t
 
 ## Exemples
 
-Cet exemple montre deux blocs de texte identiques qui ont {{CSSxRef("hyphens")}} définie pour garantir qu'ils se coupent où cela est nécessaire, y compris sur les coupures conditionnelles (créées avec `&shy;`).
+Cet exemple montre deux blocs de texte identiques qui ont {{CSSxRef("hyphens")}} définie pour garantir qu'ils se coupent où c'est nécessaire, y compris sur les coupures conditionnelles (créées avec `&shy;`).
 Le premier bloc a la valeur du trait d'union modifiée en symbole égal (`=`).
 Le second bloc n'a pas de valeur définie pour `hyphenate-character`, ce qui équivaut à `hyphenate-character: auto` pour les agents utilisateur qui prennent en charge cette propriété.
 

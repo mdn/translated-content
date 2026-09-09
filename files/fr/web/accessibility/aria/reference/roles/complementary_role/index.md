@@ -22,7 +22,7 @@ Ceci est une barre latérale contenant des liens vers les sponsors du projet.
 Le rôle `complementary` est [un rôle de repère](/fr/docs/Web/Accessibility/ARIA/Guides/Techniques#rôles_de_repères). Les repères peuvent être utilisés par les technologies d'assistance pour identifier et naviguer rapidement vers de grandes sections du document. Le contenu répertorié dans un conteneur avec le rôle de repère `complementary` doit avoir du sens s'il est séparé du contenu principal du document.
 
 > [!NOTE]
-> L'utilisation de l'élément {{HTMLElement('aside')}} communiquera automatiquement qu'une section a un rôle de `complementary`. Les développeurs devraient toujours préférer utiliser le bon élément HTML sémantique plutôt que d'utiliser ARIA.
+> L'utilisation de l'élément {{HTMLElement("aside")}} communique automatiquement qu'une section a un rôle de `complementary`. Les développeur·euse·s devraient toujours préférer utiliser le bon élément HTML sémantique plutôt que d'utiliser ARIA.
 
 ## Exemples
 
@@ -67,13 +67,13 @@ Le rôle `complementary` est [un rôle de repère](/fr/docs/Web/Accessibility/AR
 
 ### Préférer HTML
 
-L'utilisation de l'élément {{HTMLElement('aside')}} communiquera automatiquement que l'élément a un rôle complémentaire (`complementary`). Si possible, privilégiez l'utilisation de l'élément sémantique `<aside>` plutôt que le rôle `complementary`.
+L'utilisation de l'élément {{HTMLElement("aside")}} communique automatiquement que l'élément a un rôle complémentaire (`complementary`). Si possible, privilégiez l'utilisation de l'élément sémantique `<aside>` plutôt que le rôle `complementary`.
 
 ### Étiquetage des repères
 
 #### Plusieurs repères
 
-S'il y a plus d'un rôle de repère `complementary` ou élément {{HTMLElement('aside')}} dans un document, fournissez une étiquette pour chaque repère à l'aide de l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label), ou, si l'élément aside a un titre suffisamment descriptif, pointez-y avec l'attribut [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby). Cette étiquette permettra à un·e utilisateur·ice de technologie d'assistance de comprendre rapidement l'objectif de chaque repère.
+S'il y a plus d'un rôle de repère `complementary` ou élément {{HTMLElement("aside")}} dans un document, fournissez une étiquette pour chaque repère à l'aide de l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label), ou, si l'élément aside a un titre suffisamment descriptif, pointez-y avec l'attribut [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby). Cette étiquette permet à un·e utilisateur·ice de technologie d'assistance de comprendre rapidement l'objectif de chaque repère.
 
 ```html
 <aside aria-label="Note d'usage">
@@ -89,7 +89,7 @@ S'il y a plus d'un rôle de repère `complementary` ou élément {{HTMLElement('
 
 #### Descriptions redondantes
 
-Les lecteurs d'écran annonceront le type de rôle du repère. De ce fait, vous n'avez pas besoin de décrire ce qu'est le repère dans son étiquette. Par exemple, une déclaration de `role="complementary"` avec un `aria-label="Barre latérale"` peut être annoncée de manière redondante comme, «&nbsp;barre latérale complémentaire&nbsp;».
+Les lecteurs d'écran annoncent le type de rôle du repère. De ce fait, vous n'avez pas besoin de décrire ce qu'est le repère dans son étiquette. Par exemple, une déclaration de `role="complementary"` avec un `aria-label="Barre latérale"` peut être annoncée de manière redondante comme, «&nbsp;barre latérale complémentaire&nbsp;».
 
 ### Avantages supplémentaires
 
@@ -103,7 +103,7 @@ Certaines technologies, telles que les extensions de navigateur, peuvent génér
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement('aside')}}
+- L'élément HTML {{HTMLElement("aside")}}
 - [Utiliser des sections HTML et des plans](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [Rôles des repères&nbsp;: Utiliser ARIA&nbsp;: rôles, états et propriétés](/fr/docs/Web/Accessibility/ARIA/Guides/Techniques#rôles_de_repères)
 - [Repères accessibles | scottohara.me <sup>(angl.)</sup>](https://www.scottohara.me/blog/2018/03/03/landmarks.html)

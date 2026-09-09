@@ -42,7 +42,7 @@ Pour une zone d'affichage jusqu'à 400px de large, l'image est affichée à 200p
 
 ### JavaScript
 
-Le code suivant lit la propriété `width` pour obtenir la largeur de l'image. Il s'exécute lors des événements {{DOMxRef("Window.load_event", "load")}} et {{DOMxRef("Window.resize_event", "resize")}} afin d'afficher la largeur actuelle.
+Le code suivant lit la propriété `width` pour obtenir la largeur de l'image. Il s'exécute lors des évènements {{DOMxRef("Window.load_event", "load")}} et {{DOMxRef("Window.resize_event", "resize")}} afin d'afficher la largeur actuelle.
 
 ```js
 const clockImage = document.querySelector("img");

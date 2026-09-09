@@ -1,73 +1,68 @@
 ---
-title: element.attributes
+title: "Element : propriété attributes"
+short-title: attributes
 slug: Web/API/Element/attributes
+l10n:
+  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}
 
-La propriété **`Element.attributes`** renvoie une collection des noeuds d'attribut enregistrés dans le noeud spécifié. Il est une {{domxref("NamedNodeMap")}}, pas un tableau (_Array_), aussi il n'a pas de méthodes {{jsxref("Array")}} et l'index de noeud {{domxref("Attr")}} peuvent différer entre les navigateurs. Pour être plus précis, les `attributs` sont une paire clé / valeur de chaînes représentant toutes les informations concernant cet attribut.
+La propriété **`attributes`** de l'interface {{DOMxRef("Element")}} retourne une collection dynamique de tous les nœuds d'attribut enregistrés pour le nœud défini. Il s'agit d'un objet {{DOMxRef("NamedNodeMap")}}, et non d'un tableau (`Array`), donc il n'a pas de méthodes {{JSxRef("Array")}} et les index des nœuds {{DOMxRef("Attr")}} peuvent différer selon les navigateurs. Plus précisément, `attributes` est une paire clé/valeur de chaînes de caractères représentant toutes les informations concernant cet attribut.
 
-## Syntaxe
+## Valeur
 
-```js
-var attr = element.attributes;
-```
+Un objet {{DOMxRef("NamedNodeMap")}}.
 
-## Exemple
+## Exemples
 
-### Exemples basiques
+### Exemples simples
 
 ```js
-// récupère le premier élément <p> du document
-var para = document.getElementsByTagName("p")[0];
-var attr = para.attributes;
+// Récupère le premier élément <p> du document
+const paragraphe = document.querySelector("p");
+const attributs = paragraphe.attributes;
 ```
 
-### Énumération des attributs d'éléments
+### Énumérer les attributs d'éléments
 
-L'indexation numérique est utile pour parcourir tous les attributs d'un élément.
-L'exemple suivant parcourt les nœuds d'attribut de l'élément du document avec l'ID "paragraph" et imprime la valeur de chaque attribut.
+Vous pouvez énumérer les attributs d'un élément en utilisant [`for…of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of).
+L'exemple suivant parcourt les nœuds d'attribut de l'élément du document avec l'ID «&nbsp;paragraphe&nbsp;» et imprime la valeur de chaque attribut.
 
 ```html
-<!doctype html>
-
-<html>
-  <head>
-    <title>Exemple d'attributs</title>
-    <script type="text/javascript">
-      function listAttributes() {
-        var paragraph = document.getElementById("paragraph");
-        var result = document.getElementById("result");
-
-        // D'abord, vérifier que le "paragraph" a quelques attributs
-        if (paragraph.hasAttributes()) {
-          var attrs = paragraph.attributes;
-          var output = "";
-          for (var i = attrs.length - 1; i >= 0; i--) {
-            output += attrs[i].name + "->" + attrs[i].value;
-          }
-          result.value = output;
-        } else {
-          result.value = "No attributes to show";
-        }
-      }
-    </script>
-  </head>
-
-  <body>
-    <p id="paragraph">Sample Paragraph</p>
-    <form action="">
-      <p>
-        <input
-          type="button"
-          value="Show first attribute name and value"
-          onclick="listAttributes();" />
-        <input id="result" type="text" value="" />
-      </p>
-    </form>
-  </body>
-</html>
+<p id="paragraphe" class="vert" contenteditable>Exemple de paragraphe</p>
+<input
+  type="button"
+  value="Afficher le nom et la valeur de l'attribut du paragraphe" />
+<pre id="resultat"></pre>
 ```
+
+```css
+.vert {
+  color: green;
+}
+```
+
+```js
+const paragraphe = document.getElementById("paragraphe");
+const resultat = document.getElementById("resultat");
+const btn = document.querySelector("input[type='button']");
+
+btn.addEventListener("click", () => {
+  // Tout d'abord, vérifions que le paragraphe comporte bien certains attributs
+  if (paragraphe.hasAttributes()) {
+    let sortie = "Attributs du premier paragraphe :\n";
+    for (const attr of paragraphe.attributes) {
+      sortie += `${attr.name} -> ${attr.value}\n`;
+    }
+    resultat.textContent = sortie;
+  } else {
+    resultat.textContent = "Aucun attribut à afficher";
+  }
+});
+```
+
+{{EmbedLiveSample("Énumérer les attributs d'éléments", 100, 300)}}
 
 ## Spécifications
 
@@ -79,5 +74,5 @@ L'exemple suivant parcourt les nœuds d'attribut de l'élément du document avec
 
 ## Voir aussi
 
-- {{domxref("NamedNodeMap")}}, l'interface de l'objet retourné
-- Considérations de compatibilité entre navigateurs : sur [quirksmode](https://www.quirksmode.org/dom/w3c_core.html#attributes) (en)
+- L'interface {{DOMxRef("NamedNodeMap")}} de l'objet retourné
+- Considérations de compatibilité entre navigateurs&nbsp;: sur [le mode <i lang="en">quirks</i> <sup>(angl.)</sup>](https://www.quirksmode.org/dom/w3c_core.html#attributes)

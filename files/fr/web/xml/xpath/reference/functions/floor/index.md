@@ -4,8 +4,6 @@ slug: Web/XML/XPath/Reference/Functions/floor
 original_slug: Web/XPath/Functions/floor
 ---
 
-{{XsltSidebar}}
-
 La fonction `floor` évalue un nombre décimal et retourne le plus grand nombre entier inférieur ou égal au nombre évalué.
 
 ### Syntaxe

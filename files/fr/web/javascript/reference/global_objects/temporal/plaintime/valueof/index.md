@@ -57,7 +57,7 @@ time2.since(time1).toString(); // "PT12H"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainTime")}}
 - La méthode {{JSxRef("Temporal/PlainTime/toString", "Temporal.PlainTime.prototype.toString()")}}
 - La méthode {{JSxRef("Temporal/PlainTime/toJSON", "Temporal.PlainTime.prototype.toJSON()")}}
 - La méthode {{JSxRef("Temporal/PlainTime/toLocaleString", "Temporal.PlainTime.prototype.toLocaleString()")}}

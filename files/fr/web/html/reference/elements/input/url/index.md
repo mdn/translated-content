@@ -74,7 +74,7 @@ Le champ échoue à [la validation des contraintes](/fr/docs/Web/HTML/Guides/Con
 
 ### `pattern`
 
-L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui impose un format à [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value), que cette dernière doit respecter afin que le champ soit [valide](/fr/docs/Web/HTML/Guides/Constraint_validation) . Le contenu de `pattern` doit être une expression rationnelle JavaScript valide, comme utilisé par le type {{JSxRef("RegExp")}} et comme documenté dans [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions). Le marqueur `"u"` est utilisé à la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode et non {{Glossary("ASCII")}}. Il ne faut pas entourer l'expression de barres obliques.
+L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui impose un format à [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value), que cette dernière doit respecter afin que le champ soit [valide](/fr/docs/Web/HTML/Guides/Constraint_validation). Le contenu de `pattern` doit être une expression rationnelle JavaScript valide, comme utilisé par le type {{JSxRef("RegExp")}} et comme documenté dans [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions). Le marqueur `"u"` est utilisé à la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode et non {{Glossary("ASCII")}}. Il ne faut pas entourer l'expression de barres obliques.
 
 Si aucune expression rationnelle n'est fournie ou que celle-ci est invalide, aucune contrainte de format n'est appliquée et cet attribut est ignoré complètement.
 
@@ -118,7 +118,7 @@ L'attribut universel [`spellcheck`](/fr/docs/Web/HTML/Reference/Global_attribute
 
 Un champ de saisie peut avoir la vérification orthographique activée s'il n'utilise pas l'attribut [`readonly`](#readonly) et qu'il n'est pas désactivé.
 
-La valeur renvoyée par la lecture de `spellcheck` ne reflète pas nécessairement l'état réel de la vérification orthographique pour le contrôle si {{Glossary("user agent", "l'agent utilisateur")}} surcharge ce paramètre.
+La valeur retournée par la lecture de `spellcheck` ne reflète pas nécessairement l'état réel de la vérification orthographique pour le contrôle si {{Glossary("user agent", "l'agent utilisateur")}} surcharge ce paramètre.
 
 ## Attributs non-standard
 
@@ -145,20 +145,20 @@ Actuellement, l'ensemble des navigateurs implémentent ce type de champ comme un
 
 La valeur du champ est considérée valide lorsqu'elle est vide ou qu'il s'agit d'une URL correctement formatée, autrement elle est invalide. Si on ajoute l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required), la valeur vide n'est plus valide, il est nécessaire de saisir une valeur.
 
-Ainsi, si l'utilisateur·ice saisit l'URL `http://www.exemple.com`, voici ce qui est envoyé vers le serveur&nbsp;: `monURL=http%3A%2F%2Fwww.exemple.com` (notez la façon dont certains caractères sont échappés).
+Ainsi, si l'utilisateur·ice saisit l'URL `http://www.example.com`, voici ce qui est envoyé vers le serveur&nbsp;: `monURL=http%3A%2F%2Fwww.example.com` (notez la façon dont certains caractères sont échappés).
 
 ### Textes indicatifs
 
 Parfois, il est utile de fournir une indication sur le type de donnée attendu. Cela peut être particulièrement important si la conception de la page ne propose pas d'étiquettes descriptives pour chaque {{HTMLElement("input")}}. C'est là qu'interviennent les **textes indicatifs**. Un texte indicatif (<i lang="en">placeholder</i> en anglais) est une valeur qui montre la forme que doit prendre la `value` en présentant un exemple de valeur valide, affiché à l'intérieur de la boîte de saisie lorsque la `value` de l'élément est `""`. Une fois que des données sont saisies dans la boîte, le texte indicatif disparaît&nbsp;; si la boîte est vidée, le texte indicatif réapparaît.
 
-Ici, nous avons un champ de saisie `url` avec le texte indicatif `http://www.exemple.com`. Notez comment le texte indicatif disparaît et réapparaît lorsque vous manipulez le contenu du champ.
+Ici, nous avons un champ de saisie `url` avec le texte indicatif `http://www.example.com`. Notez comment le texte indicatif disparaît et réapparaît lorsque vous manipulez le contenu du champ.
 
 ```html
 <input
   id="monURL"
   name="monURL"
   type="url"
-  placeholder="http://www.exemple.com" />
+  placeholder="http://www.example.com" />
 ```
 
 {{EmbedLiveSample("Textes indicatifs", 600, 40)}}

@@ -32,13 +32,13 @@ La liste d'autorisation par défaut pour `ch-ua-high-entropy-values` est `*`.
 La politique suivante ne permettrait qu'à l'origine actuelle et à deux autres origines spécifiques de récupérer des données à haute entropie.
 
 ```http
-Permissions-Policy: ch-ua-high-entropy-values=("self https://a.exemple.com" "https://b.exemple.com")
+Permissions-Policy: ch-ua-high-entropy-values=("self https://a.example.com" "https://b.example.com")
 ```
 
 Vous pourriez ensuite intégrer l'une des deux autres origines&nbsp;:
 
 ```html
-<iframe src="https://a.exemple.com" allow="ch-ua-high-entropy-values"></iframe>
+<iframe src="https://a.example.com" allow="ch-ua-high-entropy-values"></iframe>
 ```
 
 ## Spécifications

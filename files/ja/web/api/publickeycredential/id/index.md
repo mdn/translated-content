@@ -1,8 +1,9 @@
 ---
-title: PublicKeyCredential.id
+title: "PublicKeyCredential: id プロパティ"
+short-title: id
 slug: Web/API/PublicKeyCredential/id
 l10n:
-  sourceCommit: b7cd76af245c330c6a1a9f489602015fa0714044
+  sourceCommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
@@ -22,13 +23,13 @@ l10n:
 
 ```js
 const publicKey = {
-  challenge: new Uint8Array(26) /* this actually is given from the server */,
+  challenge: new Uint8Array(26) /* これは実際にはサーバーから与えられる */,
   rp: {
     name: "Example CORP",
     id: "login.example.com",
   },
   user: {
-    id: new Uint8Array(26) /* To be changed for each user */,
+    id: new Uint8Array(26) /* ユーザー毎に変化する */,
     name: "canand@example.com",
     displayName: "Carina Anand",
   },
@@ -44,11 +45,11 @@ navigator.credentials
   .create({ publicKey })
   .then((newCredentialInfo) => {
     const id = newCredentialInfo.id;
-    // Do something with the id
+    // id で何かを行う
 
-    // send attestation response and client extensions
-    // to the server to proceed with the registration
-    // of the credential
+    // アテステーションレスポンスとクライアント
+    // 拡張情報をサーバーに送信し、資格情報の登録を
+    // 続行する
   })
   .catch((err) => {
     console.error(err);

@@ -3,10 +3,10 @@ title: "HTMLTableColElement : propriété vAlign"
 short-title: vAlign
 slug: Web/API/HTMLTableColElement/vAlign
 l10n:
-  sourceCommit: 4cb9d89a204a9532370693b982e8a3b274a874b1
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`vAlign`** de l'interface {{DOMxRef("HTMLTableColElement")}} est une chaîne de caractères indiquant comment aligner verticalement le texte dans un élément de colonne {{HTMLElement("col")}} d'un tableau.
 

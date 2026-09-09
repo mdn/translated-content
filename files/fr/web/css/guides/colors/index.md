@@ -3,7 +3,7 @@ title: Couleurs CSS
 short-title: Couleurs
 slug: Web/CSS/Guides/Colors
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 1055ee79c55c33ef82e2efc27ed248a561365724
 ---
 
 Le module **Couleurs CSS** définit les couleurs, les types de couleurs, le mélange des couleurs, l'opacité, ainsi que la manière d'appliquer ces couleurs et effets au contenu HTML.
@@ -42,6 +42,7 @@ Le module Couleurs CSS introduit également la règle @ {{CSSxRef("@color-profil
   - {{CSSxRef("color_value/oklab", "oklab()")}}
   - {{CSSxRef("color_value/oklch", "oklch()")}}
   - {{CSSxRef("color_value/color", "color()")}}
+- {{CSSxRef("color_value/alpha", "alpha()")}}
 - {{CSSxRef("color_value/color-mix", "color-mix()")}}
 - {{CSSxRef("color_value/contrast-color", "contrast-color()")}}
 - {{CSSxRef("color_value/light-dark", "light-dark()")}}

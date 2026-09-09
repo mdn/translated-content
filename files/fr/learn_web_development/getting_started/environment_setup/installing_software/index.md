@@ -3,7 +3,7 @@ title: Installation des outils de base
 short-title: Installation des outils
 slug: Learn_web_development/Getting_started/Environment_setup/Installing_software
 l10n:
-  sourceCommit: ac12900a68c677e6c2f7ed0c7b7d32881e42003d
+  sourceCommit: afcdfa050626bb7eb05ee693df8997020db9ff2e
 ---
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}
@@ -44,11 +44,11 @@ Disposer de navigateurs web modernes est essentiel pour le développement web af
 Les navigateurs les plus courants sont les suivants&nbsp;:
 
 - Navigateurs de bureau&nbsp;:
-  - Basés sur [Chromium](https://fr.wikipedia.org/wiki/Chromium)&nbsp;: [Google Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/fr/opera), [Brave](https://brave.com/fr/download/), [Microsoft Edge](https://www.microsoft.com/fr-fr/edge), [Vivaldi](https://vivaldi.com/fr/).
+  - Basés sur [Chromium](https://fr.wikipedia.org/wiki/Chromium)&nbsp;: [Google Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/fr/opera), [Brave](https://brave.com/fr/download/), [Microsoft Edge](https://explore.microsoft.com/fr-fr/edge), [Vivaldi](https://vivaldi.com/fr/).
   - Basés sur [Gecko](<https://fr.wikipedia.org/wiki/Gecko_(moteur_de_rendu)>)&nbsp;: [Mozilla Firefox](https://www.firefox.com/fr/).
   - Basés sur [WebKit](https://fr.wikipedia.org/wiki/WebKit)&nbsp;: [Apple Safari](https://www.apple.com/fr/safari/).
 - Navigateurs mobiles/alternatifs&nbsp;:
-  - Basés sur Chromium (Android)&nbsp;: [Google Chrome](https://www.google.com/chrome/go-mobile/), [Opera](https://www.opera.com/fr/opera), [Brave](https://brave.com/fr/download/), [Microsoft Edge](https://www.microsoft.com/fr-fr/edge/mobile), [Samsung Internet](https://www.samsung.com/fr/apps/samsung-internet/), [Vivaldi](https://vivaldi.com/fr/android/).
+  - Basés sur Chromium (Android)&nbsp;: [Google Chrome](https://www.google.com/chrome/go-mobile/), [Opera](https://www.opera.com/fr/opera), [Brave](https://brave.com/fr/download/), [Microsoft Edge](https://explore.microsoft.com/fr-fr/edge/mobile), [Samsung Internet](https://www.samsung.com/fr/apps/samsung-internet/), [Vivaldi](https://vivaldi.com/fr/android/).
   - Basés sur Gecko (Android)&nbsp;: [Mozilla Firefox](https://www.firefox.com/fr/download/android/).
   - Basés sur WebKit (iOS)&nbsp;: [Apple Safari](https://www.apple.com/fr/safari/).
     > [!NOTE]
@@ -69,7 +69,7 @@ Vous examinez les stratégies de test plus en détail dans notre module [des tes
 
 ## Serveurs web locaux
 
-Normalement, lorsque vous saisissez une adresse web dans un navigateur pour charger un site, les fichiers nécessaires à l'affichage du site sont récupérés depuis un serveur web distant. Vous en apprendrez plus sur ce fonctionnement dans l'article suivant de la série.
+Normalement, lorsque vous saisissez une adresse web dans un navigateur pour charger un site, les fichiers nécessaires à l'affichage du site sont récupérés depuis un serveur web distant. Vous en apprenez plus sur ce fonctionnement dans l'article suivant de la série.
 
 Lorsque vous créez un site localement (sur votre propre machine), vous pouvez souvent ouvrir le fichier HTML principal directement dans un navigateur pour le tester. Cependant, certains exemples nécessitent d'être exécutés par un serveur web local pour fonctionner correctement.
 
@@ -111,10 +111,10 @@ Même si ces outils sont essentiels en équipe, vous n'avez pas à vous en préo
 
 ## Applications de déploiement de site
 
-Une fois votre site ou application terminé·e (en local ou sur un serveur de développement), vous voudrez le/la mettre en ligne sur un serveur web distant pour que vos utilisateur·ice·s puissent y accéder avec une adresse web&nbsp;!
+Une fois votre site ou application terminé·e (en local ou sur un serveur de développement), vous voulez le/la mettre en ligne sur un serveur web distant pour que vos utilisateur·ice·s puissent y accéder avec une adresse web&nbsp;!
 
 Il existe plusieurs façons de faire cela&nbsp;: acheter un hébergement et utiliser une [application SFTP](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server#sftp), utiliser un service comme [GitHub Pages](https://pages.github.com/) ou [Netlify](https://www.netlify.com/), ou encore partager rapidement une démonstration avec [CodePen](https://codepen.io/) ou [JSFiddle](https://jsfiddle.net/).
 
-Cette liste peut sembler impressionnante, mais ne vous inquiétez pas — vous n'avez pas besoin de tout savoir sur la publication de sites pour l'instant. Nous aborderons ce sujet à plusieurs reprises dans le cours. Vous aurez bientôt l'occasion de le pratiquer dans notre module [Votre premier site web](/fr/docs/Learn_web_development/Getting_started/Your_first_website).
+Cette liste peut sembler impressionnante, mais ne vous inquiétez pas — vous n'avez pas besoin de tout savoir sur la publication de sites pour l'instant. Nous abordons ce sujet à plusieurs reprises dans le cours. Vous avez bientôt l'occasion de le pratiquer dans notre module [Votre premier site web](/fr/docs/Learn_web_development/Getting_started/Your_first_website).
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}

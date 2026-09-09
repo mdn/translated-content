@@ -3,7 +3,7 @@ title: Propriété CSS `image-resolution`
 short-title: image-resolution
 slug: Web/CSS/Reference/Properties/image-resolution
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 {{SeeCompatTable}}
@@ -30,12 +30,14 @@ image-resolution: unset;
 
 ### Valeurs
 
+Cette propriété est définie avec une ou plusieurs valeurs séparées par des espaces parmi la liste suivante&nbsp;:
+
 - {{CSSxRef("&lt;resolution&gt;")}}
   - : Définit explicitement la résolution intrinsèque.
 - `from-image`
-  - : Utilise la résolution intrinsèque comme spécifié par le format de l'image. Si l'image ne spécifie pas elle-même sa propre résolution, alors la résolution explicitement spécifiée sera utilisée, si elle a été fournie. Sinon, la résolution par défaut sera de `1dppx` (1 pixel image par unité de pixel CSS).
+  - : Utilise la résolution intrinsèque comme définie par le format de l'image. Si l'image ne définit pas elle-même sa propre résolution, alors la résolution explicitement définie est utilisée, si elle a été fournie. Sinon, la résolution par défaut est de `1dppx` (1 pixel image par unité de pixel CSS).
 - `snap`
-  - : Si le mot-clé `snap` est fourni, la résolution calculée sera la résolution spécifiée arrondie à la valeur la plus proche correspondant à un {{Glossary("device pixel", "pixel image")}} défini sous la forme d'un nombre entier de pixels de l'appareil. Si la résolution est récupérée à partir de l'image, alors la résolution intrinsèque utilisée est la résolution native de l'image, arrondie de la même façon.
+  - : Si le mot-clé `snap` est fourni, la résolution calculée est la résolution définie arrondie à la valeur la plus proche correspondant à un {{Glossary("device pixel", "pixel image")}} défini sous la forme d'un nombre entier de pixels de l'appareil. Si la résolution est récupérée à partir de l'image, alors la résolution intrinsèque utilisée est la résolution native de l'image, arrondie de la même façon.
 
 > [!NOTE]
 > Les formats vectoriels tels que SVG n'ont pas de résolution intrinsèque, cette propriété n'a aucun effet sur les images vectorielles.
@@ -64,7 +66,7 @@ Lors de l'impression du document, utiliser une résolution plus élevée.
 
 ### Utiliser la propriété image-resolution avec des solutions de repli
 
-L'exemple ci-dessous utilise la résolution définie par l'image. Si l'image ne spécifie aucune résolution, alors la valeur de `300dpi` est utilisée à la place de la valeur par défaut de `1dppx`.
+L'exemple ci-dessous utilise la résolution définie par l'image. Si l'image ne définit aucune résolution, alors la valeur de `300dpi` est utilisée à la place de la valeur par défaut de `1dppx`.
 
 ```css
 .mon-image {
@@ -83,4 +85,4 @@ L'exemple ci-dessous utilise la résolution définie par l'image. Si l'image ne 
 ## Voir aussi
 
 - Autres propriétés CSS liées aux images&nbsp;: {{CSSxRef("object-fit")}}, {{CSSxRef("object-position")}}, {{CSSxRef("image-orientation")}}, {{CSSxRef("image-rendering")}}.
-- [Boggue sur Chromium&nbsp;: 1086473 <sup>(angl.)</sup>](https://bugs.chromium.org/p/chromium/issues/detail?id=1086473)
+- [Bogue sur Chromium&nbsp;: 1086473 <sup>(angl.)</sup>](https://bugs.chromium.org/p/chromium/issues/detail?id=1086473)

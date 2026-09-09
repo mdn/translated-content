@@ -3,7 +3,7 @@ title: Types de données CSS
 short-title: Types de données
 slug: Web/CSS/Reference/Values/Data_types
 l10n:
-  sourceCommit: ddf85bfec1b6e43cdacb404de0c38a801c561640
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
 Les **types de données CSS** définissent des valeurs typiques (y compris des mots-clés et des unités) acceptées par les propriétés et les fonctions CSS. Ils sont un type spécial de [type de valeur du composant <sup>(angl.)</sup>](https://drafts.csswg.org/css-values/#component-types).
@@ -99,7 +99,7 @@ Le module [Couleur CSS](/fr/docs/Web/CSS/Guides/Colors) définit le type de donn
 - {{CSSxRef("&lt;alpha-value&gt;")}}
   - : Définit la transparence d'une couleur. Peut être un `<number>`, auquel cas 0 est complètement transparent et 1 est complètement opaque, ou un `<percentage>`, auquel cas 0% est complètement transparent et 100% complètement opaque.
 - {{CSSxRef("&lt;hue&gt;")}}
-  - : Définit l'`<angle>`, avec un identifiant d'unité de `deg`, `grad`, `rad` ou `turn`, ou un `<number>` sans unité interprété comme `deg`, de la {{Glossary("color wheel")}} spécifique aux `<absolute-color-functions>` dont il est un composant.
+  - : Définit l'`<angle>`, avec un identifiant d'unité de `deg`, `grad`, `rad` ou `turn`, ou un `<number>` sans unité interprété comme `deg`, de la {{Glossary("color wheel", "roue chromatique")}} spécifique aux `<absolute-color-functions>` dont il est un composant.
 
 ## Images
 
@@ -191,6 +191,7 @@ Les modules [formes CSS](/fr/docs/Web/CSS/Guides/Shapes) et [bordures et décora
 - {{CSSxRef("&lt;length&gt;")}}
 - {{CSSxRef("&lt;length-percentage&gt;")}}
 - {{CSSxRef("&lt;line-style&gt;")}}
+- {{CSSxRef("&lt;line-width&gt;")}}
 - {{CSSxRef("&lt;named-color&gt;")}}
 - {{CSSxRef("&lt;number&gt;")}}
 - {{CSSxRef("overflow_value", "&lt;overflow&gt;")}}

@@ -56,8 +56,7 @@ Edite o código abaixo e veja as alterações instantâneas no canvas:
 ctx.beginPath();
 ctx.moveTo(50,50);
 ctx.lineTo(200, 50);
-ctx.stroke()</textarea
->
+ctx.stroke()</textarea>
 ```
 
 ```js hidden

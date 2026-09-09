@@ -158,7 +158,7 @@ let duration = vacations.trip?.getTime?.();
 
 ### Использование с оператором ??
 
-Оператор {{JSxRef("Operators/Nullish_Coalescing_Operator", "??", '', 1)}} может использоваться после опциональной последовательности для установления значения по умолчанию:
+Оператор {{JSxRef("Operators/Nullish_coalescing", "??", '', 1)}} может использоваться после опциональной последовательности для установления значения по умолчанию:
 
 ```js
 let customer = {
@@ -181,4 +181,4 @@ console.log(customerCity); // Unknown city
 
 - [Github - Proposal-pipeline-operator](https://github.com/tc39/proposal-pipeline-operator)
 - [TC39 proposals](https://github.com/tc39/proposals)
-- {{JSxRef("Operators/Nullish_Coalescing_Operator", "Nullish Coalescing Operator", '', 1)}}
+- {{JSxRef("Operators/Nullish_coalescing", "Nullish Coalescing Operator", '', 1)}}

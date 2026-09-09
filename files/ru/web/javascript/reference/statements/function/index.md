@@ -80,7 +80,7 @@ function calc_sales(units_a, units_b, units_c) {
 
 ## Смотрите также
 
-- {{jsxref("Functions_and_function_scope", "Функции и область видимости")}}
+- {{jsxref("Functions", "Функции и область видимости")}}
 - {{jsxref("Function")}}
 - {{jsxref("Operators/function", "Функциональное выражение")}}
 - {{jsxref("Statements/function*", "Оператор function*")}}

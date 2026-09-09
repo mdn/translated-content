@@ -3,7 +3,7 @@ title: "HTMLMediaElement : propriété currentTime"
 short-title: currentTime
 slug: Web/API/HTMLMediaElement/currentTime
 l10n:
-  sourceCommit: 3b5a1c0dfd59257c0a51052a9efa7b0108f8ecca
+  sourceCommit: 91b5a448a517239876a4bc92640bbbf29e30b106
 ---
 
 {{APIRef("HTML DOM")}}
@@ -17,7 +17,7 @@ Changer la valeur de `currentTime` permet de déplacer la lecture vers le nouvea
 Une valeur en virgule flottante double précision indiquant le temps de lecture actuel en
 secondes.
 
-Si le média n'est pas encore en cours de lecture, la valeur de `currentTime` indique la position temporelle dans le média à laquelle la lecture commencera une fois que la méthode {{DOMxRef("HTMLMediaElement.play", "play()")}} sera appelée.
+Si le média n'est pas encore en cours de lecture, la valeur de `currentTime` indique la position temporelle dans le média à laquelle la lecture commence une fois que la méthode {{DOMxRef("HTMLMediaElement.play", "play()")}} est appelée.
 
 Définir `currentTime` sur une nouvelle valeur permet de déplacer la lecture vers le temps donné, si le média est disponible.
 
@@ -34,28 +34,22 @@ console.log(video.currentTime);
 
 ## Notes d'utilisation
 
-### Précision temporelle réduite
+### Précision temporelle
 
-Pour offrir une protection contre les attaques par chronométrage et le {{Glossary("Fingerprinting", "pistage")}}, la précision de `video.currentTime` peut être arrondie en fonction des paramètres du navigateur. Dans Firefox, la préférence `privacy.reduceTimerPrecision` est activée par défaut et est réglée sur 2 ms. Vous pouvez également activer `privacy.resistFingerprinting`, auquel cas la précision sera de 100 ms ou de la valeur de `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, selon la valeur la plus élevée.
+Le navigateur n'applique pas d'arrondi du minuteur à `currentTime`, y compris aux valeurs fournies par le script. La recherche peut toujours ajuster la position de lecture résultante à une position prise en charge par le média.
 
-Par exemple, avec une précision temporelle réduite, le résultat de `video.currentTime` sera toujours un multiple de `0.002`, ou un multiple de `0.1` (ou `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`) avec `privacy.resistFingerprinting` activé.
+La valeur de `currentTime` est une approximation de la position de lecture actuelle. Le navigateur met à jour cette valeur au fur et à mesure de la lecture. La [spécification HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/media.html#official-playback-position) exige que la position de lecture signalée reste stable pendant l'exécution des scripts.
+
+La fréquence de mise à jour dépend du navigateur et du pipeline de lecture multimédia. En conséquence, des lectures successives peuvent retourner le même `currentTime` même lorsque {{JSxRef("Date.now()")}} a avancé. Le nombre de décimales dans la valeur n'indique pas la fréquence de mise à jour ni la précision avec laquelle elle correspond à l'audio ou à la vidéo présentée.
+
+Par exemple, des lectures successives pendant la lecture peuvent produire ces valeurs&nbsp;:
 
 ```js
-// précision temporelle réduite (2ms) dans Firefox 60
 video.currentTime;
 // Peut être :
 // 23.404
-// 24.192
-// 25.514
-// …
-
-// précision temporelle réduite avec `privacy.resistFingerprinting` activé
-video.currentTime;
-// Peut être :
-// 49.8
-// 50.6
-// 51.7
-// …
+// 23.404
+// 23.452
 ```
 
 ## Spécifications

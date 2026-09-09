@@ -3,7 +3,7 @@ title: "Élément HTML `<progress>` : l'élément d'indicateur de progression"
 short-title: <progress>
 slug: Web/HTML/Reference/Elements/progress
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 11a5944cd0a3bf015b2ee9c7ee4c55025dd878ca
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<progress>`** indique l'état de complétion d'une tâche et est généralement représenté par une barre de progression.

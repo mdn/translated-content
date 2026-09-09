@@ -1,22 +1,19 @@
 ---
-title: Event.originalTarget
+title: "Event : propriété originalTarget"
+short-title: originalTarget
 slug: Web/API/Event/originalTarget
 l10n:
-  sourceCommit: 95b52aa7aeabbd2670f762da4fb7c0b0133f4d9f
+  sourceCommit: c20c12fab32381b983b4148d712fda227d34e2bd
 ---
 
-{{APIRef("DOM")}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}{{AvailableInWorkers}}
 
-La propriété en lecture seule **`originalTarget`**, rattachée à l'interface [`Event`](/fr/docs/Web/API/Event), renvoie la cible originale de l'évènement avant les éventuels reciblages. À la différence de [`Event.explicitOriginalTarget`](/fr/docs/Web/API/Event/explicitOriginalTarget), il peut s'agir d'un contenu natif anonyme.
+La propriété en lecture seule **`originalTarget`** de l'interface {{DOMxRef("Event")}} retourne la cible originale de l'évènement avant les éventuels re-ciblages. À la différence de {{DOMxRef("Event.explicitOriginalTarget")}} il peut s'agir d'un contenu natif anonyme.
 
 ## Spécifications
 
-Il s'agit d'une propriété spécifique à Mozilla qui ne fait partie d'aucune spécification actuelle et qui n'est pas en voie de standardisation.
+_Il s'agit d'une propriété propre à Mozilla qui ne fait partie d'aucune spécification actuelle. Elle n'est pas en passe de devenir une norme._
 
 ## Compatibilité des navigateurs
 
 {{Compat}}
-
-## Voir aussi
-
-- [Comparaison des cibles d'évènements](/fr/docs/Learn_web_development/Core/Scripting/Event_bubbling)

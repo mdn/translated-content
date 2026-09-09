@@ -41,13 +41,13 @@ Dans les arborescences à sélection multiple, tous les éléments sélectionné
 
 On peut utiliser soit `aria-selected`, soit `aria-checked` pour indiquer la sélection des éléments `treeitem`. Certaines interfaces utilisent `aria-selected` pour la sélection unique et `aria-checked` pour la sélection multiple.
 
-L'utilisation simultanée de `aria-selected` et `aria-checked` dans une même arborescence est fortement déconseillée. Ne les utilisez ensemble que si leur signification et leur usage sont différents, que cela est clair pour l'utilisateur·ice, et que l'interface propose un contrôle distinct pour chaque état.
+L'utilisation simultanée de `aria-selected` et `aria-checked` dans une même arborescence est fortement déconseillée. Ne les utilisez ensemble que si leur signification et leur usage sont différents, que c'est clair pour l'utilisateur·ice, et que l'interface propose un contrôle distinct pour chaque état.
 
 Dans les arborescences à sélection multiple, l'état sélectionné doit être indépendant de la sélection clavier. Par exemple, dans un explorateur de fichiers, l'utilisateur·ice peut déplacer la sélection pour choisir plusieurs fichiers à copier ou déplacer. La conception visuelle doit clairement distinguer les éléments sélectionnés de l'élément ayant la sélection.
 
 Si l'ensemble des éléments `treeitem` disponibles n'est pas présent dans le DOM (chargement dynamique lors du déplacement ou du défilement), chaque `treeitem` doit avoir [`aria-level`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level), [`aria-setsize`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) et [`aria-posinset`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) renseignés.
 
-Un `treeitem` doit obligatoirement avoir un nom accessible. En général, ce nom provient du contenu du `treeitem`. Il peut aussi être défini via [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby).
+Un `treeitem` doit obligatoirement avoir un nom accessible. En général, ce nom provient du contenu du `treeitem`. Il peut aussi être défini avec [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby).
 
 ## Propriétés, états et rôles WAI-ARIA associés
 
@@ -112,13 +112,13 @@ Pour une arborescence verticale (orientation par défaut)&nbsp;:
     <td>
       <ul>
         <li>La sélection se déplace sur le nœud suivant dont le nom commence par le caractère tapé.</li>
-        <li>Si plusieurs caractères sont saisis rapidement, la sélection se déplace sur le nœud dont le nom commence par la chaîne saisie.</li>
+        <li>Si plusieurs caractères sont saisis rapidement, la sélection se déplace sur le nœud dont le nom commence par la chaîne de caractères saisie.</li>
       </ul>
     </td>
   </tr>
   <tr>
     <td><kbd>*</kbd> (optionnel)</td>
-    <td>Développe tous les nœuds frères au même niveau que le nœud courant.</td>
+    <td>Développe tous les nœuds voisins au même niveau que le nœud courant.</td>
   </tr>
 </table>
 
@@ -214,7 +214,7 @@ Ce balisage fournit la sémantique d'une vue arborescente, mais pas l'interactiv
 
 Si les éléments de l'arborescence ne sont pas sélectionnables par défaut, JavaScript peut être utilisé pour ajouter [`tabIndex="-1"`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) à tous les `treeitem` sauf celui qui doit recevoir la sélection lors de l'entrée dans l'arborescence, qui doit avoir `tabIndex="0"`.
 
-Toutes les fonctionnalités clavier décrites dans la section «&nbsp;Interactions au clavier&nbsp;» ainsi que les événements de pointeur doivent être programmés, y compris la gestion de la sélection, la navigation dans l'arborescence, le développement/réduction des nœuds parents et la gestion de la sélection.
+Toutes les fonctionnalités clavier décrites dans la section «&nbsp;Interactions au clavier&nbsp;» ainsi que les évènements de pointeur doivent être programmés, y compris la gestion de la sélection, la navigation dans l'arborescence, le développement/réduction des nœuds parents et la gestion de la sélection.
 
 Si l'arborescence comporte plus de 7 éléments, il est recommandé d'inclure la recherche rapide (saisie semi-automatique).
 

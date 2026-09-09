@@ -1,9 +1,9 @@
 ---
-title: :muted
+title: CSS `:muted` 擬似クラス
+short-title: :muted
 slug: Web/CSS/Reference/Selectors/:muted
-original_slug: Web/CSS/:muted
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:muted`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)セレクターで、 {{htmlelement("audio")}} や {{htmlelement("video")}} のような音を発する可能性がある要素であるが、ミュート（強制的に音を消した）状態にある要素を表します。

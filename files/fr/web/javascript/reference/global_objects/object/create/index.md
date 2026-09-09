@@ -1,44 +1,45 @@
 ---
-title: Object.create()
+title: "Object : méthode statique create()"
+short-title: create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`Object.create()`** crée un nouvel objet, en utilisant un objet existant comme prototype du nouvel objet créé.
 
-La méthode **`Object.create()`** crée un nouvel objet avec un prototype donné et des propriétés données.
-
-{{InteractiveExample("JavaScript Demo: Object.create()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Object.create()", "taller")}}
 
 ```js interactive-example
 const person = {
   isHuman: false,
-  printIntroduction: function () {
-    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+  printIntroduction() {
+    console.log(`Mon nom est ${this.name}. Suis-je humain ? ${this.isHuman}`);
   },
 };
 
 const me = Object.create(person);
 
-me.name = "Matthew"; // "name" is a property set on "me", but not on "person"
-me.isHuman = true; // Inherited properties can be overwritten
+me.name = "Matthew"; // "name" est une propriété définie sur "me", mais pas sur "person"
+me.isHuman = true; // Les propriétés héritées peuvent être écrasées
 
 me.printIntroduction();
-// Expected output: "My name is Matthew. Am I human? true"
+// Résultat attendu : "Mon nom est Matthew. Suis-je humain ? true"
 ```
 
 ## Syntaxe
 
-```js
-Object.create(proto);
-Object.create(proto, objetPropriétés);
+```js-nolint
+Object.create(proto)
+Object.create(proto, propertiesObject)
 ```
 
 ### Paramètres
 
 - `proto`
-  - : L'objet qui sera le prototype du nouvel objet créé.
-- `objetPropriétés`
-  - : Paramètre optionnel. S'il est fourni et qu'il ne vaut pas {{jsxref("undefined")}}, il sera utilisé comme un objet dont les propriétés propres (celles qui ne sont pas héritées par la chaîne de prototypes) et énumérables définiront des descripteurs pour les propriétés à ajouter au nouvel objet, avec les mêmes noms. Ces propriétés correspondent au deuxième argument de {{jsxref("Object.defineProperties()")}}.
+  - : L'objet qui est le prototype du nouvel objet créé.
+- `propertiesObject` {{Optional_Inline}}
+  - : Si défini et différent de {{JSxRef("undefined")}}, un objet dont les [propriétés propres énumérables](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) définissent des descripteurs de propriétés à ajouter au nouvel objet créé, avec les noms de propriétés correspondants. Ces propriétés correspondent au deuxième argument de {{JSxRef("Object.defineProperties()")}}.
 
 ### Valeur de retour
 
@@ -46,13 +47,14 @@ Un nouvel objet qui dispose du prototype et des propriétés indiquées.
 
 ### Exceptions
 
-Cette méthode lève une exception {{jsxref("TypeError")}} si le paramètre `objetPropriétés` vaut {{jsxref("null")}} ou s'il ne décrit pas des propriétés d'un objet.
+- {{JSxRef("TypeError")}}
+  - : Levée si `proto` n'est ni {{JSxRef("null")}}, ni un {{JSxRef("Object")}}.
 
 ## Exemples
 
 ### L'héritage classique avec `Object.create()`
 
-Dans l'exemple ci-dessous, on utilise `Object.create()` afin de réaliser un héritage de classe. Ce modèle ne supporte que l'héritage unique (un objet hérite directement uniquement d'un autre objet) car JavaScript ne gère pas l'héritage multiple.
+Ci-dessous est un exemple de l'utilisation de `Object.create()` pour réaliser un héritage classique. Il s'agit d'un héritage unique, ce qui est tout ce que JavaScript prend en charge.
 
 ```js
 // Forme, la classe parente
@@ -62,7 +64,7 @@ function Forme() {
 }
 
 // Méthode de la classe parente
-Forme.prototype.déplacer = function (x, y) {
+Forme.prototype.deplacer = function (x, y) {
   this.x += x;
   this.y += y;
   console.info("Forme déplacée.");
@@ -70,109 +72,91 @@ Forme.prototype.déplacer = function (x, y) {
 
 // Rectangle - classe fille
 function Rectangle() {
-  // on appelle le constructeur parent
-  Forme.call(this);
+  Forme.call(this); // appel du constructeur parent
 }
 
-// La classe fille surcharge la classe parente
-Rectangle.prototype = Object.create(Forme.prototype);
-
-// Si on ne définit pas le constructeur avec Rectangle, il récupèrera le constructeur
-// Forme (le parent).
-Rectangle.prototype.constructor = Rectangle;
-
-var rect = new Rectangle();
-
-console.log("instance de Rectangle ? ", rect instanceof Rectangle);
-// true
-console.log("une instance de Forme ? ", rect instanceof Forme);
-// true
-rect.déplacer(1, 1);
-// Affiche 'Forme déplacée.'
-```
-
-Si on souhaite hériter de plusieurs objets, on peut utiliser des _mixins_.
-
-```js
-function MaClasse() {
-  ClasseParente1.call(this);
-  ClasseParente2.call(this);
-}
-
-MaClasse.prototype = Object.create(ClasseParente1.prototype); // héritage d'une classe
-Object.assign(MaClasse.prototype, ClasseParente2.prototype); // mixin pour une autre
-MaClasse.prototype.constructor = MaClasse; // On réaffecte le constructeur
-
-MaClasse.prototype.maMéthode = function () {
-  // faire quelque chose
-};
-```
-
-Ici, la méthode {{jsxref("Object.assign()")}} copie les propriétés du prototype de la classe parente (`ClassParente2`) sur le prototype de la classe fille (`MaClasse`), les rendant disponibles pour toutes les instances de `MaClasse`. `Object.assign()` a été introduit avec ES2015 et [une prothèse d'émulation (polyfill)](</fr/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Prothèse_démulation_(polyfill)>) est disponible. Si le support des navigateurs plus anciens est nécessaire, les méthodes [`jQuery.extend()`](https://api.jquery.com/jQuery.extend/) ou [`_.assign()`](https://lodash.com/docs/#assign) (Lodash) peuvent être utilisées.
-
-### Utiliser l'argument `objetPropriétés` avec `Object.create()`
-
-```js
-var o;
-
-// on crée un objet avec null
-// comme prototype
-o = Object.create(null);
-
-o = {};
-// est équivalent à :
-o = Object.create(Object.prototype);
-
-// Exemple où on crée un objet avec quelques propriétés
-// (On voit ici que le second paramètres fait correspondre les clés
-// avec des descripteurs de propriétés.)
-o = Object.create(Object.prototype, {
-  // toto est une propriété de donnée
-  toto: { writable: true, configurable: true, value: "hello" },
-  // truc est une propriété d'accesseur/mutateur
-  truc: {
-    configurable: false,
-    get: function () {
-      return 10;
-    },
-    set: function (value) {
-      console.log("Définir `o.truc` à", value);
-    },
-    /* avec les accesseurs ES2015 on aura :
-    get() { return 10; },
-    set(value) { console.log('Définir `o.truc` à', value); } */
+// La sous-classe hérite de la super-classe
+Rectangle.prototype = Object.create(Forme.prototype, {
+  // Si vous ne définissez pas Rectangle.prototype.constructor sur
+  // Rectangle, il prend le prototype.constructor de Forme (le parent).
+  // Pour éviter cela, nous définissons le prototype.constructor sur Rectangle (la sous-classe).
+  constructor: {
+    value: Rectangle,
+    enumerable: false,
+    writable: true,
+    configurable: true,
   },
 });
 
-function Constructeur() {}
-o = new Constructeur();
-// est équivalent à :
-o = Object.create(Constructeur.prototype);
-// Bien entendu, si la fonction Constructeur
-// possède des instructions pour l'initialisation,
-// Object.create() ne pourra pas le reproduire
+const rect = new Rectangle();
 
-// on crée un nouvel objet dont le prototype est
-// un nouvel objet vide et on y ajoute une propriété
-// 'p' qui vaut 42
+console.log("instance de Rectangle ? ", rect instanceof Rectangle); // true
+console.log("une instance de Forme ? ", rect instanceof Forme); // true
+rect.deplacer(1, 1); // Affiche 'Forme déplacée.'
+```
+
+Notez qu'il existe certaines précautions à prendre lors de l'utilisation de `create()`, comme le fait de rajouter la propriété [`constructor`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) afin de garantir une sémantique correcte. Bien que `Object.create()` soit réputé plus performant que la modification du prototype avec {{JSxRef("Object.setPrototypeOf()")}}, la différence est en réalité négligeable si aucune instance n'est créée et si les accès aux propriétés ne sont pas encore optimisés. Dans le code moderne, la syntaxe [de classe](/fr/docs/Web/JavaScript/Reference/Classes) doit de toute façon être privilégiée.
+
+### Utiliser l'argument `objetPropriétés` avec `Object.create()`
+
+`Object.create()` permet un contrôle précis du processus de création d'objets. La [syntaxe d'initialisation d'objet](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer) est, en réalité, une syntaxe simplifiée de `Object.create()`. Grâce à `Object.create()`, il est possible de créer des objets avec un prototype défini, ainsi que certaines propriétés. Notez que le deuxième paramètre associe des clés à des _descripteurs de propriété_ — cela signifie que vous pouvez également contrôler l'énumérabilité, la configuration, etc. de chaque propriété, ce qui n'est pas possible avec les initialisations d'objets.
+
+```js
+o = {};
+// Est équivalent à :
+o = Object.create(Object.prototype);
+
+o = Object.create(Object.prototype, {
+  // toto est une propriété de données ordinaire
+  toto: {
+    writable: true,
+    configurable: true,
+    value: "bonjour",
+  },
+  // truc est une propriété accesseur
+  truc: {
+    configurable: false,
+    get() {
+      return 10;
+    },
+    set(value) {
+      console.log("Définir `o.truc` sur", value);
+    },
+  },
+});
+
+// Crée un nouvel objet dont le prototype est un nouvel objet vide
+// et ajoute une seule propriété 'p', dont la valeur est 42.
 o = Object.create({}, { p: { value: 42 } });
+```
 
-// par défaut, les propriétés ne sont PAS
-// écrivables, énumérables ou configurables
-o.p = 24;
-o.p;
-// 42
+Avec `Object.create()`, on peut créer un objet [avec un prototype `null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object#objets_avec_prototype_null). La syntaxe équivalente dans les initialisations d'objets est la clé [`__proto__`](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer#changement_de_prototype).
+
+```js
+o = Object.create(null);
+// Est équivalent à :
+o = { __proto__: null };
+```
+
+Par défaut, les propriétés ne sont _pas_ modifiables, énumérables ou configurables.
+
+```js
+o.p = 24; // lève une erreur en mode strict
+o.p; // 42
 
 o.q = 12;
-for (var prop in o) {
+for (const prop in o) {
   console.log(prop);
 }
 // 'q'
 
 delete o.p;
-// false
+// false ; lève une erreur en mode strict
+```
 
-// Pour définir une propriété selon ES3
+Pour définir une propriété avec les mêmes attributs que dans une initialisation, définissez explicitement `writable`, `enumerable` et `configurable`.
+
+```js
 o2 = Object.create(
   {},
   {
@@ -184,10 +168,21 @@ o2 = Object.create(
     },
   },
 );
-
-// Équivalent à
-// o2 = Object.create({p: 42});
+// Ce n'est pas équivalent à :
+// o2 = Object.create({ p: 42 })
+// ce qui crée un objet avec pour prototype { p: 42 }
 ```
+
+Vous pouvez utiliser `Object.create()` pour imiter le comportement de l'opérateur {{JSxRef("new")}}.
+
+```js
+function Constructor() {}
+o = new Constructor();
+// Est équivalent à :
+o = Object.create(Constructor.prototype);
+```
+
+Bien sûr, si le constructeur `Constructor` contient du code d'initialisation, la méthode `Object.create()` ne peut pas le refléter.
 
 ## Spécifications
 
@@ -199,7 +194,9 @@ o2 = Object.create(
 
 ## Voir aussi
 
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineProperties()")}}
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- Le billet de John Resig sur [`getPrototypeOf()`](https://ejohn.org/blog/objectgetprototypeof/) (en anglais)
+- [La prothèse d'émulation de `Object.create` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
+- La méthode statique {{JSxRef("Object.defineProperty()")}}
+- La méthode statique {{JSxRef("Object.defineProperties()")}}
+- La méthode {{JSxRef("Object.prototype.isPrototypeOf()")}}
+- La méthode statique {{JSxRef("Reflect.construct()")}}
+- [Object.getPrototypeOf <sup>(angl.)</sup>](https://johnresig.com/blog/objectgetprototypeof/) par John Resig (2008)

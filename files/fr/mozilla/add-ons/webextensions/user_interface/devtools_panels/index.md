@@ -3,8 +3,6 @@ title: panneaux devtools
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 ---
 
-{{AddonSidebar}}
-
 > [!NOTE]
 > Cette fonctionnalité deviendra disponible dans Firefox 54.
 

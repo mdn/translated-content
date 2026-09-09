@@ -2,7 +2,7 @@
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
 l10n:
-  sourceCommit: de5b557883e8eff2514f0fe6eeb180db782575b1
+  sourceCommit: d19dec85109590176f946fcceef48c787d578b1e
 ---
 
 {{APIRef("HTML DOM")}}
@@ -18,7 +18,7 @@ _Hérite également des propriétés de son interface parente, {{DOMxRef("HTMLEl
 Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui prennent en charge les attributs correspondants.
 
 - `HTMLInputElement.align` {{Deprecated_Inline}}
-  - : Une chaîne de caractères qui représente l'alignement de l'élément. _On utilisera CSS à la place._
+  - : Une chaîne de caractères qui représente l'alignement de l'élément. _On utilise le CSS à la place._
 
 - {{DOMxRef("HTMLInputElement.alpha")}} {{Experimental_Inline}}
   - : Un booléen qui représente l'attribut [`alpha`](/fr/docs/Web/HTML/Reference/Elements/input/color#alpha) de l'élément, indiquant si la composante alpha de la couleur peut être manipulée par l'utilisateur·ice et n'a pas besoin d'être complètement opaque.
@@ -51,7 +51,7 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
   - : Permet de lire et d'écrire l'action à effectuer (`"hide"`, `"show"`, ou `"toggle"`) sur une fenêtre contextuelle contrôlée par un élément {{HTMLElement("input")}} de `type="button"`. Cette propriété reflète la valeur de l'attribut HTML [`popovertargetaction`](/fr/docs/Web/HTML/Reference/Elements/input#popovertargetaction).
 
 - {{DOMxRef("HTMLInputElement.popoverTargetElement")}}
-  - : Permet de lire et d'écrire l'élément fenêtre contextuelle à contrôler via un élément {{HTMLElement("input")}} de `type="button"`. Équivalent JavaScript de l'attribut HTML [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/input#popovertarget).
+  - : Permet de lire et d'écrire l'élément fenêtre contextuelle à contrôler avec un élément {{HTMLElement("input")}} de `type="button"`. Équivalent JavaScript de l'attribut HTML [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/input#popovertarget).
 
 - {{DOMxRef("HTMLInputElement.step")}}
   - : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) de l'élément. Cet attribut fonctionne avec les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) pour limiter l'incrément d'une valeur numérique ou temporelle. Elle peut être la chaîne de caractères `any` ou un nombre décimal positif. Si la valeur n'est pas `any`, le contrôle acceptera uniquement les multiples de l'incrément depuis la valeur minimale.
@@ -63,7 +63,7 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
   - : Une chaîne de caractères qui représente une carte d'images côté client.
 
 - {{DOMxRef("HTMLInputElement.value")}}
-  - : Une chaîne de caractères qui permet de lire ou d'écrire la valeur contenue dans le contrôle. Si l'utilisatrice ou l'utilisateur saisit une valeur différente de la valeur attendue, cette propriété pourra renvoyer une chaîne vide.
+  - : Une chaîne de caractères qui permet de lire ou d'écrire la valeur contenue dans le contrôle. Si l'utilisateur·ice saisit une valeur différente de la valeur attendue, cette propriété peut retourner une chaîne de caractères vide.
 
 - {{DOMxRef("HTMLInputElement.valueAsDate")}}
   - : Un objet {{JSxRef("Date")}} qui permet de lire ou d'écrire la valeur de l'élément interprétée comme une date, ou `null` si la conversion n'est pas possible.
@@ -94,13 +94,13 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
 ### Propriétés d'instance qui s'appliquent à tous les éléments `<input>` qui ne sont pas masqués
 
 - {{DOMxRef("HTMLInputElement.disabled")}}
-  - : Un booléen qui permet de lire ou d'écrire l'attribut [`disabled`](/fr/docs/Web/HTML/Reference/Elements/input#disabled) de l'élément, qui indique qu'on ne peut pas interagir avec le contrôle. La valeur du champ ne sera pas envoyée avec le formulaire. Voir aussi [`readonly`](/fr/docs/Web/HTML/Reference/Elements/input#readonly).
+  - : Un booléen qui permet de lire ou d'écrire l'attribut [`disabled`](/fr/docs/Web/HTML/Reference/Elements/input#disabled) de l'élément, qui indique qu'on ne peut pas interagir avec le contrôle. La valeur du champ n'est pas envoyée avec le formulaire. Voir aussi [`readonly`](/fr/docs/Web/HTML/Reference/Elements/input#readonly).
 
 - {{DOMxRef("HTMLInputElement.required")}}
   - : Un booléen qui permet de lire ou d'écrire l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) de l'élément, qui indique que le champ doit être renseigné avant de pouvoir envoyer le formulaire.
 
 - {{DOMxRef("HTMLInputElement.validationMessage")}} {{ReadOnlyInline}}
-  - : Une chaîne de caractères qui retourne un message localisé qui décrit les éventuelles contraintes de validation qu'il doit respecter. Cette propriété aura la chaîne vide comme valeur si le contrôle ne participe pas à la validation des contraintes (c'est-à-dire si {{DOMxRef("HTMLInputElement.willValidate", "willValidate")}} vaut `false`), ou s'il respecte les contraintes. Cette valeur peut être définie avec la méthode {{DOMxRef("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}}.
+  - : Une chaîne de caractères qui retourne un message localisé qui décrit les éventuelles contraintes de validation qu'il doit respecter. Cette propriété a la chaîne de caractères vide comme valeur si le contrôle ne participe pas à la validation des contraintes (c'est-à-dire si {{DOMxRef("HTMLInputElement.willValidate", "willValidate")}} vaut `false`), ou s'il respecte les contraintes. Cette valeur peut être définie avec la méthode {{DOMxRef("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}}.
 
 - {{DOMxRef("HTMLInputElement.validity")}} {{ReadOnlyInline}}
   - : Retourne un objet [`ValidityState`](/fr/docs/Web/API/ValidityState) qui traduit l'état de validité courant de l'élément.
@@ -111,13 +111,13 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
 ### Propriétés d'instance seulement pour les éléments de type checkbox et radio
 
 - {{DOMxRef("HTMLInputElement.checked")}}
-  - : Un booleén qui permet de lire ou d'écrire l'état actuel de l'élément.
+  - : Un booléen qui permet de lire ou d'écrire l'état actuel de l'élément.
 
 - {{DOMxRef("HTMLInputElement.defaultChecked")}}
   - : Un booléen qui permet de lire ou d'écrire l'état par défaut du bouton radio ou de la case à cocher, tel qu'initialement indiqué en HTML par l'attribut `default`.
 
 - {{DOMxRef("HTMLInputElement.indeterminate")}}
-  - : Un booléen qui indique si la case à cocher ou le bouton radio est dans un état indéterminé. Pour les cases à cocher, cela se traduit par une case grisée d'une certaine façon (la case n'est ni cochée ni décochée). Cette propriété n'affecte pas la valeur de l'attribut `checked`, et cliquer sur la case à cocher la passera à `false` (décochée).
+  - : Un booléen qui indique si la case à cocher ou le bouton radio est dans un état indéterminé. Pour les cases à cocher, cela se traduit par une case grisée d'une certaine façon (la case n'est ni cochée ni décochée). Cette propriété n'affecte pas la valeur de l'attribut `checked`, et cliquer sur la case à cocher la passe à `false` (décochée).
 
 ### Propriétés d'instance seulement pour les éléments de type image
 
@@ -145,7 +145,7 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
   - : Un objet [`FileList`](/fr/docs/Web/API/FileList) qui permet de manipuler la liste des objets [`File`](/fr/docs/Web/API/File) qui représente les fichiers sélectionnés pour le téléversement.
 
 - {{DOMxRef("HTMLInputElement.webkitdirectory")}} {{Non-standard_Inline}}
-  - : Un booléen qui retourne la valeur de l'attribut [`webkitdirectory`](/fr/docs/Web/HTML/Reference/Elements/input#webkitdirectory) de l'élément. S'il vaut `true`, cela indique que l'interface du sélecteur de fichier n'acceptera que les répertoires (plutôt que les fichiers).
+  - : Un booléen qui retourne la valeur de l'attribut [`webkitdirectory`](/fr/docs/Web/HTML/Reference/Elements/input#webkitdirectory) de l'élément. S'il vaut `true`, cela indique que l'interface du sélecteur de fichier n'accepte que les répertoires (plutôt que les fichiers).
 
 - {{DOMxRef("HTMLInputElement.webkitEntries")}} {{Non-standard_Inline}}
   - : Un tableau [`FileSystemEntry`](/fr/docs/Web/API/FileSystemEntry) qui décrit les fichiers ou répertoires actuellement sélectionnés.
@@ -171,7 +171,7 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
   - : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) de l'élément, qui contient une expression rationnelle contre laquelle la valeur du contrôle est testée. On utilisera l'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#title) afin de décrire le motif à respecter. Cet attribut s'applique uniquement lorsque l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) vaut `text`, `search`, `tel`, `url`, ou `email`.
 
 - {{DOMxRef("HTMLInputElement.placeholder")}}
-  - : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Elements/input#placeholder) de l'élément, qui contient une indication fournie à l'utilisatrice ou à l'utilisateur quant à ce qui peut être saisi dans le contrôle. Le texte d'indication ne doit pas contenir de retour chariot ou de passage à la ligne. Cet attribut s'applique uniquement lorsque l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) vaut `text`, `search`, `tel`, `url`, ou `email`.
+  - : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Elements/input#placeholder) de l'élément, qui contient une indication fournie à l'utilisateur·ice quant à ce qui peut être saisi dans le contrôle. Le texte d'indication ne doit pas contenir de retour chariot ou de passage à la ligne. Cet attribut s'applique uniquement lorsque l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) vaut `text`, `search`, `tel`, `url`, ou `email`.
 
 - {{DOMxRef("HTMLInputElement.readOnly")}}
   - : Un booléen qui permet de lire ou d'écrire l'attribut [`readonly`](/fr/docs/Web/HTML/Reference/Elements/input#readonly) de l'élément, qui indique qu'il n'est pas possible de modifier la valeur du contrôle. Cet attribut est ignoré si l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) vaut `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, ou `button`.
@@ -202,7 +202,7 @@ _Hérite également des méthodes de son interface parente, {{DOMxRef("HTMLEleme
   - : Sélectionne tout le texte de l'élément de saisie et lui donne la sélection afin que l'utilisateur·ice puisse ensuite remplacer l'intégralité de son contenu.
 
 - {{DOMxRef("HTMLInputElement.setCustomValidity()")}}
-  - : Définit un message de validité personnalisé pour l'élément. Si ce message n'est pas la chaîne vide, l'élément souffre d'une erreur de validité personnalisée et n'est pas valide.
+  - : Définit un message de validité personnalisé pour l'élément. Si ce message n'est pas la chaîne de caractères vide, l'élément souffre d'une erreur de validité personnalisée et n'est pas valide.
 
 - {{DOMxRef("HTMLInputElement.setRangeText()")}}
   - : Remplace une plage de texte de l'élément de saisie par un nouveau texte.
@@ -226,7 +226,7 @@ _Hérite également des évènements de son interface parente, {{DOMxRef("HTMLEl
 Pour écouter ces évènements, utilisez {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} ou affectez un gestionnaire d'évènements à la propriété `oneventname` de cette interface&nbsp;:
 
 - L'évènement {{DOMxRef("HTMLInputElement/cancel_event", "cancel")}}
-  - : Déclenché lorsque l'utilisateur·ice annule la boîte de dialogue du sélecteur de fichiers via la touche <kbd>Échap</kbd> ou le bouton d'annulation, ou lorsqu'il·elle re‑sélectionne les mêmes fichiers précédemment sélectionnés.
+  - : Déclenché lorsque l'utilisateur·ice annule la boîte de dialogue du sélecteur de fichiers avec la touche <kbd>Échap</kbd> ou le bouton d'annulation, ou lorsqu'il·elle re‑sélectionne les mêmes fichiers précédemment sélectionnés.
 
 - L'évènement {{DOMxRef("HTMLInputElement/invalid_event", "invalid")}}
   - : Déclenché lorsqu'un élément ne respecte pas ses contraintes lors de la validation des contraintes.

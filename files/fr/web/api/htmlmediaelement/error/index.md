@@ -25,7 +25,7 @@ videoElement.onerror = () => {
     `Erreur ${videoElement.error.code}; détails : ${videoElement.error.message}`,
   );
 };
-videoElement.src = "https://exemple.com/videocassee.mp4";
+videoElement.src = "https://example.com/videocassee.mp4";
 ```
 
 ## Spécifications

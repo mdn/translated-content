@@ -68,6 +68,6 @@ console.log(instant2.toString()); // 1970-01-01T00:00:00Z
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Instant")}}
+- L'objet natif {{JSxRef("Temporal.Instant")}}
 - La méthode statique {{JSxRef("Temporal/Instant/fromEpochMilliseconds", "Temporal.Instant.fromEpochMilliseconds()")}}
 - La méthode statique {{JSxRef("Temporal/Instant/fromEpochNanoseconds", "Temporal.Instant.fromEpochNanoseconds()")}}

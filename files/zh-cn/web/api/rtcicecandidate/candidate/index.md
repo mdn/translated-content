@@ -37,9 +37,9 @@ a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 function handleNewIceCandidate(candidateSDP) {
   const candidateObj = new RTCIceCandidate(candidateSDP);
 
-  myPeerConnection.addIceCandidate(candidateObj).catch({
-    /* 处理 addIceCandidate() 引发的错误 */
-  });
+  myPeerConnection
+    .addIceCandidate(candidateObj)
+    .catch({/* 处理 addIceCandidate() 引发的错误 */});
 }
 ```
 

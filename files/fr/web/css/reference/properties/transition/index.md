@@ -3,10 +3,10 @@ title: Propriété CSS `transition`
 short-title: transition
 slug: Web/CSS/Reference/Properties/transition
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`transition`** permet de définir les propriétés {{CSSxRef("transition-property")}}, {{CSSxRef("transition-duration")}}, {{CSSxRef("transition-timing-function")}}, {{CSSxRef("transition-delay")}} et {{CSSxRef("transition-behavior")}}.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`transition`** permet de définir les propriétés {{CSSxRef("transition-property")}}, {{CSSxRef("transition-duration")}}, {{CSSxRef("transition-timing-function")}}, {{CSSxRef("transition-delay")}} et {{CSSxRef("transition-behavior")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: transition")}}
 
@@ -100,20 +100,20 @@ transition: unset;
 
 La valeur de la propriété `transition` s'exprime comme l'une des options suivantes&nbsp;:
 
-- La valeur spéciale `none`, qui indique qu'aucune transition n'aura lieu sur cet élément. C'est la valeur par défaut.
+- La valeur spéciale `none`, qui indique qu'aucune transition n'aa lieu sur cet élément. C'est la valeur par défaut.
 - Une ou plusieurs transitions avec une seule propriété, séparées par des virgules.
 
 Chaque transition avec une seule propriété décrit la transition à appliquer à une seule propriété ou à toutes les propriétés. Elle comprend&nbsp;:
 
 - zéro ou une valeur représentant la ou les propriétés auxquelles la transition doit s'appliquer. Cela peut être&nbsp;:
   - Un identifiant personnalisé ({{CSSxRef("&lt;custom-ident&gt;")}}) représentant une seule propriété.
-  - La valeur spéciale `all`, qui indique que la transition s'appliquera à toutes les propriétés qui changent lorsque l'élément change d'état.
-  - Aucune valeur, auquel cas la valeur `all` sera déduite et la transition définie s'appliquera toujours à toutes les propriétés changeantes.
+  - La valeur spéciale `all`, qui indique que la transition s'applique à toutes les propriétés qui changent lorsque l'élément change d'état.
+  - Aucune valeur, auquel cas la valeur `all` est déduite et la transition définie s'applique toujours à toutes les propriétés changeantes.
 - zéro ou une valeur {{CSSxRef("easing-function")}} représentant la fonction d'accélération à utiliser
 - zéro, une ou deux valeurs {{CSSxRef("&lt;time&gt;")}}. La première valeur pouvant être analysée comme une durée est affectée à {{CSSxRef("transition-duration")}}, et la deuxième valeur pouvant être analysée comme une durée est affectée à {{CSSxRef("transition-delay")}}.
 - zéro ou une valeur déclarant s'il faut lancer des transitions pour les propriétés dont le comportement d'animation est [discret](/fr/docs/Web/CSS/Guides/Animations/Animatable_properties#discrète). La valeur, si elle est présente, est soit le mot-clé `allow-discrete`, soit le mot-clé `normal`.
 
-Si vous définissez `all` comme propriété de transition pour une transition avec une seule propriété, puis définissez des transitions avec une seule propriété ultérieures avec des valeurs {{CSSxRef("&lt;custom-ident&gt;")}}, ces transitions ultérieures remplaceront la première. Par exemple&nbsp;:
+Si vous définissez `all` comme propriété de transition pour une transition avec une seule propriété, puis définissez des transitions avec une seule propriété ultérieures avec des valeurs {{CSSxRef("&lt;custom-ident&gt;")}}, ces transitions ultérieures remplacent la première. Par exemple&nbsp;:
 
 ```css
 transition:
@@ -121,7 +121,7 @@ transition:
   opacity 400ms;
 ```
 
-Dans ce cas, toutes les propriétés qui changent lorsque l'élément change d'état seront animées avec une durée de 200ms, sauf {{CSSxRef("opacity")}}, qui mettra 400ms pour effectuer sa transition.
+Dans ce cas, toutes les propriétés qui changent lorsque l'élément change d'état sont animées avec une durée de 200ms, sauf {{CSSxRef("opacity")}}, qui met 400ms pour effectuer sa transition.
 
 Voir [comment c'est géré](/fr/docs/Web/CSS/Guides/Transitions/Using#quand_les_listes_de_valeurs_des_propriétés_ont_des_longueurs_différentes) lorsque les listes de valeurs de propriété n'ont pas la même longueur. En bref, les descriptions de transition supplémentaires au-delà du nombre de propriétés réellement animées sont ignorées.
 

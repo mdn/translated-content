@@ -2,7 +2,7 @@
 title: Modèle de sous-page de propriété d'API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 > [!NOTE]
@@ -40,7 +40,6 @@ l10n:
 >     C'est formaté comme `Web/API/NameOfTheParentInterface/NameOfTheProperty`.
 >
 >     Si la propriété est statique, le slug doit avoir un suffixe `_static`, comme&nbsp;: `Web/API/NameOfTheParentInterface/NameOfTheProperty_static`. Cela nous permet de prendre en charge les propriétés d'instance et statiques qui ont le même nom.
->
 > - **page-type**
 >   - : La clé `page-type` pour les propriétés Web/API est soit `web-api-instance-property` (pour les propriétés d'instance) soit `web-api-static-property` (pour les propriétés statiques).
 > - **status**
@@ -62,7 +61,6 @@ l10n:
 >
 > - `\{{SeeCompatTable}}` — génère une bannière **Ceci est une technologie expérimentale** qui indique que la technologie est [expérimentale](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#expérimental).
 >   Si elle est expérimentale et que la technologie est cachée derrière une préférence dans Firefox, vous devez également remplir une entrée pour elle dans la page [Fonctionnalités expérimentales dans Firefox](/fr/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — génère une bannière **Obsolète** qui indique que l'utilisation de la technologie est [découragée](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#obsolète).
 > - `\{{Non-standard_Header}}` — génère une bannière **Non standard** qui indique que la fonctionnalité ne fait partie d'aucune spécification.
 >
 > Vous devez mettre à jour ou supprimer les macros suivantes selon les conseils ci-dessous&nbsp;:
@@ -79,11 +77,11 @@ l10n:
 >   Consultez notre guide sur les [barres latérales de référence API](/fr/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) pour plus d'informations.
 >   Ne fournissez pas manuellement les macros d'en-tête de statut. Reportez-vous à la section Voir [«&nbsp;Comment les statuts des fonctionnalités sont ajoutés ou mis à jour&nbsp;»](/fr/docs/MDN/Writing_guidelines/Page_structures/Feature_status#comment_les_statuts_sont-ils_ajoutés_ou_mis_à_jour) pour ajouter ces statuts à la page.
 >
-> Des exemples des bannières **Contexte sécurisé**, **Disponible dans les workers**, **Expérimental**, **Obsolète** et **Non standard** sont présentés juste après ce bloc de notes.
+> Des exemples des bannières **Contexte sécurisé**, **Disponible dans les workers**, **Expérimental** et **Non standard** sont présentés juste après ce bloc de notes.
 >
 > _N'oubliez pas de supprimer cette note explicative avant de publier._
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 La propriété [en lecture seule] **`NameOfTheProperty`** de l'interface \{{DOMxRef("NameOfTheParentInterface")}} _\<fournir un résumé concis du comportement\>_.
 

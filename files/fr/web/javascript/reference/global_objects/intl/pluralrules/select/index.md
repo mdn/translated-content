@@ -78,4 +78,4 @@ pr.select(18); // 'many'
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.PluralRules")}}
+- L'objet natif {{JSxRef("Intl.PluralRules")}}

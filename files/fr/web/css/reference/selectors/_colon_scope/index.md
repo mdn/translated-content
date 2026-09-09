@@ -3,7 +3,7 @@ title: Pseudo-classe CSS `:scope`
 short-title: :scope
 slug: Web/CSS/Reference/Selectors/:scope
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: e8310a9d2806a4aebf457f75eec4671e14e47e44
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:scope`** représente les éléments qui sont des points de référence ou des portées auxquels faire correspondre les sélecteurs.
@@ -41,7 +41,7 @@ Cet exemple montre que `:scope` est équivalent à `:root` lorsqu'il est utilis�
 }
 ```
 
-{{ EmbedLiveSample("utiliser_scope_comme_alternative_à_root", "100%", 50) }}
+{{EmbedLiveSample("Utiliser `:scope` comme alternative à `:root`", "100%", 50)}}
 
 ### Utiliser `:scope` pour mettre en forme la racine de la portée dans un bloc `@scope`
 
@@ -100,7 +100,7 @@ div {
 
 #### Résultat
 
-{{ EmbedLiveSample("utiliser_scope_pour_mettre_en_forme_la_racine_de_la_portée_dans_un_bloc_scope", "100%", 150) }}
+{{EmbedLiveSample("Utiliser `:scope` pour mettre en forme la racine de la portée dans un bloc `@scope`", "100%", 150)}}
 
 ### Utiliser `:scope` dans JavaScript
 
@@ -120,7 +120,7 @@ Cet exemple démontre l'utilisation de la pseudo-classe `:scope` dans JavaScript
 </div>
 <p>
   Identifiants des éléments sélectionnés&nbsp;:
-  <span id="results"></span>
+  <span id="resultats"></span>
 </p>
 ```
 
@@ -128,10 +128,10 @@ Cet exemple démontre l'utilisation de la pseudo-classe `:scope` dans JavaScript
 
 ```js
 const context = document.getElementById("context");
-const selected = context.querySelectorAll(":scope > div");
+const selectionne = context.querySelectorAll(":scope > div");
 
-document.getElementById("results").textContent = Array.prototype.map
-  .call(selected, (element) => `#${element.getAttribute("id")}`)
+document.getElementById("resultats").textContent = Array.prototype.map
+  .call(selectionne, (element) => `#${element.getAttribute("id")}`)
   .join(", ");
 ```
 
@@ -139,7 +139,23 @@ document.getElementById("results").textContent = Array.prototype.map
 
 La portée de `context` est l'élément avec l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) de `context`. Les éléments sélectionnés sont les éléments `<div>` qui sont des enfants directs de ce contexte — `element-1` et `element-2` — mais pas leurs descendants.
 
-{{ EmbedLiveSample('utiliser_scope_dans_javascript') }}
+{{EmbedLiveSample("Utiliser `:scope` dans JavaScript")}}
+
+### Ne jamais faire correspondre les combinateurs d'éléments voisins à droite de `:scope`
+
+La relation définie par `:scope` va toujours de l'ancêtre au descendant à partir de la racine de la portée. Par conséquent, placer un combinateur d'éléments voisins à droite de `:scope` crée un sélecteur qui ne peut jamais correspondre, car aucun élément ne peut se trouver dans la portée du sélecteur et être en même temps un élément voisin de `:scope`.
+
+```css example-bad
+:scope + p {
+  color: red;
+}
+
+:scope ~ * {
+  color: red;
+}
+```
+
+Les sélecteurs qui ne correspondent jamais peuvent déclencher un avertissement dans les outils de développement du navigateur.
 
 ## Spécifications
 

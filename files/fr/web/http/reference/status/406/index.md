@@ -2,7 +2,7 @@
 title: 406 Not Acceptable
 slug: Web/HTTP/Reference/Status/406
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`406 Not Acceptable`** indique que le serveur n'a pas pu produire une réponse correspondant à la liste des valeurs acceptables définies dans les en-têtes de [négociation de contenu proactive](/fr/docs/Web/HTTP/Guides/Content_negotiation#négociation_de_contenu_menée_par_le_serveur) de la requête et que le serveur n'a pas souhaité fournir une représentation par défaut.
@@ -16,7 +16,7 @@ Les en-têtes de négociation de contenu incluent&nbsp;:
 Un serveur peut retourner des réponses qui diffèrent des en-têtes d'acceptation de la requête.
 Dans ce cas, une réponse {{HTTPStatus("200")}} avec une ressource par défaut qui ne correspond pas à la liste des valeurs acceptables de négociation de contenu du client peut être préférable à l'envoi d'une réponse 406.
 
-If a server returns a 406, the body of the message should contain the list of available representations for the resource, allowing the user to choose, although no standard way for this is defined.
+Si un serveur retourne un 406, le corps du message doit contenir la liste des représentations disponibles pour la ressource, permettant à l'utilisateur·ice de choisir, bien qu'aucune méthode standard pour cela ne soit définie.
 
 ## Statut
 
@@ -28,11 +28,11 @@ If a server returns a 406, the body of the message should contain the list of av
 
 ### Type de contenu non disponible
 
-La requête suivante suppose que `www.exemple.com/docs/doc1` supporte l'envoi d'un document en tant que `application/rtf`&nbsp;:
+La requête suivante suppose que `www.example.com/docs/doc1` supporte l'envoi d'un document en tant que `application/rtf`&nbsp;:
 
 ```http
 GET /docs/doc1 HTTP/1.1
-Host: exemple.com
+Host: example.com
 Accept: application/rtf;
 ```
 

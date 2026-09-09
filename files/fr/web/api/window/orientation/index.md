@@ -3,10 +3,10 @@ title: "Window : propriété orientation"
 short-title: orientation
 slug: Web/API/Window/orientation
 l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef}}{{Deprecated_Header}}
+{{APIRef}}
 
 La propriété **`orientation`** de l'interface {{DOMxRef("Window")}} retourne l'orientation en degrés (par incréments de 90 degrés) de la fenêtre par rapport à l'orientation naturelle de l'appareil.
 

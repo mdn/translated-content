@@ -16,7 +16,7 @@ console.log(myIndex.locale);
 
 ### Value
 
-A {{domxref("DOMString")}}.
+A {{jsxref("String")}}.
 
 ## Example
 

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 이 장은 JavaScript의 모든 표준 내장 객체와 그 메서드 및 속성을 나열합니다.
 
-표준 내장 객체와 **전역 객체**를 헷갈리지 않도록 주의하세요. 표준 내장 객체는 **전역 범위의 여러 객체**를 일컫습니다. 전역 객체는 엄격 모드를 사용하지 않을 땐 전역 범위에서 {{jsxref("Operators/this", "this")}}, 지원하는 환경에선 {{jsxref("globalThis")}}를 사용해 접근할 수 있는 객체입니다. 사실 전역 범위는 **전역 객체와 전역 객체가 상속한 속성**으로 이루어집니다.
+표준 내장 객체와 **전역 객체**를 헷갈리지 않도록 주의하세요. 표준 내장 객체는 **전역 범위의 여러 객체**를 일컫습니다. 전역 객체는 엄격 모드를 사용하지 않을 땐 전역 범위에서 {{jsxref("this")}}, 지원하는 환경에선 {{jsxref("globalThis")}}를 사용해 접근할 수 있는 객체입니다. 사실 전역 범위는 **전역 객체와 전역 객체가 상속한 속성**으로 이루어집니다.
 
 전역 범위의 나머지 객체는 [사용자 스크립트가 생성](/ko/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects)하거나, 호스트 응용 프로그램이 제공합니다. 브라우저 맥락에서 사용 가능한 호스트 객체는 [API 참고서](/ko/docs/Web/API)에서 읽을 수 있습니다. [DOM](/ko/docs/Web/API/Document_Object_Model) 및 코어 [JavaScript](/ko/docs/Web/JavaScript)의 차이에 관한 자세한 정보는 [JavaScript 기술 개요](/ko/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)를 참고하세요.
 
@@ -27,17 +27,17 @@ slug: Web/JavaScript/Reference/Global_Objects
 객체에 붙지 않고 전역으로 호출하는 함수로, 반환 값을 호출자에게 바로 반환합니다.
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
-- {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
-- {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
-- {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
-- {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
-- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
-- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
-- {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
-- {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+- {{JSxRef("isFinite()")}}
+- {{JSxRef("isNaN()")}}
+- {{JSxRef("parseFloat()")}}
+- {{JSxRef("parseInt()")}}
+- {{JSxRef("encodeURI()")}}
+- {{JSxRef("encodeURIComponent()")}}
+- {{JSxRef("decodeURI()")}}
+- {{JSxRef("decodeURIComponent()")}}
 - **Deprecated**
-  - {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
-  - {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
+  - {{JSxRef("escape()")}} {{Deprecated_Inline}}
+  - {{JSxRef("unescape()")}} {{Deprecated_Inline}}
 
 ### 기초 객체
 
@@ -122,8 +122,8 @@ slug: Web/JavaScript/Reference/Global_Objects
 - {{JSxRef("Generator")}}
 - {{JSxRef("GeneratorFunction")}}
 - {{JSxRef("AsyncFunction")}}
-- {{JSxRef("Global_Objects/AsyncGenerator", "AsyncGenerator")}}
-- {{JSxRef("Global_Objects/AsyncGeneratorFunction", "AsyncGeneratorFunction")}}
+- {{JSxRef("AsyncGenerator")}}
+- {{JSxRef("AsyncGeneratorFunction")}}
 
 ### 리플렉션
 
@@ -135,10 +135,10 @@ slug: Web/JavaScript/Reference/Global_Objects
 ECMAScript 코어에 추가된 언어 구분 기능입니다.
 
 - {{JSxRef("Intl")}}
-- {{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}
-- {{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}
-- {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
-- {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
-- {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
+- {{JSxRef("Intl.Collator")}}
+- {{JSxRef("Intl.DateTimeFormat")}}
+- {{JSxRef("Intl.ListFormat")}}
+- {{JSxRef("Intl.NumberFormat")}}
+- {{JSxRef("Intl.PluralRules")}}
+- {{JSxRef("Intl.RelativeTimeFormat")}}
+- {{JSxRef("Intl.Locale")}}

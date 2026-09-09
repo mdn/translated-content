@@ -75,7 +75,7 @@ console.log(instant2.toString({ timeZone: "America/New_York" })); // '2019-12-31
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Instant")}}
+- L'objet natif {{JSxRef("Temporal.Instant")}}
 - La méthode statique {{JSxRef("Temporal/Instant/from", "Temporal.Instant.from()")}}
 - La méthode {{JSxRef("Temporal/Instant/toJSON", "Temporal.Instant.prototype.toJSON()")}}
 - La méthode {{JSxRef("Temporal/Instant/toLocaleString", "Temporal.Instant.prototype.toLocaleString()")}}

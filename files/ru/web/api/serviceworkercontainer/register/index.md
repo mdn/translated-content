@@ -22,11 +22,11 @@ ServiceWorkerContainer.register(scriptURL, options)
   - : URL скрипта service worker - а.
 - `options` `{{optional_inline}}`
   - : Опции — это объект необходимый для регистрации service worker-a. В данный момент доступные опции:
-    - `scope`: {{domxref("USVString")}} представляет собой URL, который определяет scope service worker-a; Какой диапазон URL может контролировать service worker. Это обычно относительный URL. Значение по умолчанию — это URL, который соответствует корню, т.е. './', используя директорию расположения js скрипта service worker-а как основу.
+    - `scope`: {{jsxref("String")}} представляет собой URL, который определяет scope service worker-a; Какой диапазон URL может контролировать service worker. Это обычно относительный URL. Значение по умолчанию — это URL, который соответствует корню, т.е. './', используя директорию расположения js скрипта service worker-а как основу.
 
 ### Возвращает
 
-{{domxref("Promise")}} который резолвится в {{domxref("ServiceWorkerRegistration")}} объект.
+{{jsxref("Promise")}} который резолвится в {{domxref("ServiceWorkerRegistration")}} объект.
 
 ## Пример использования
 

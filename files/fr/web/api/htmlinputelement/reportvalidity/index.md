@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`reportValidity()`** de l'interface {{DOMxRef("HTMLInputElement")}} effectue les mêmes vérifications de validité que la méthode {{DOMxRef("HTMLInputElement.checkValidity", "checkValidity()")}}. De plus, si l'évènement {{DOMxRef("HTMLInputElement/invalid_event", "invalid")}} n'est pas annulé, le navigateur affiche le problème à l'utilisateur·rice.
+La méthode **`reportValidity()`** de l'interface {{DOMxRef("HTMLInputElement")}} effectue les mêmes vérifications de validité que la méthode {{DOMxRef("HTMLInputElement.checkValidity", "checkValidity()")}}. De plus, si l'évènement {{DOMxRef("HTMLInputElement/invalid_event", "invalid")}} n'est pas annulé, le navigateur affiche le problème à l'utilisateur·ice.
 
 ## Syntaxe
 
@@ -142,7 +142,7 @@ function validateAge() {
 
 {{EmbedLiveSample("Custom error message", "100%", 120)}}
 
-Si vous activez le bouton «&nbsp;reportValidity()&nbsp;» avant d'indiquer un âge, la méthode `reportValidity()` renvoie `false` car la contrainte `required` n'est pas satisfaite. Cette méthode déclenche un évènement `invalid` sur l'élément et signale le problème à l'utilisateur·rice en affichant le message d'erreur personnalisé «&nbsp;Veuillez indiquer un âge (obligatoire)&nbsp;». Tant qu'un message d'erreur personnalisé est défini, l'activation du bouton «&nbsp;reportValidity()&nbsp;» continuera d'afficher une erreur même si vous sélectionnez un âge valide. Pour activer la validation, il faut réinitialiser le message d'erreur à la chaîne vide, ce qui est fait en cliquant sur le bouton «&nbsp;Corriger&nbsp;».
+Si vous activez le bouton «&nbsp;reportValidity()&nbsp;» avant d'indiquer un âge, la méthode `reportValidity()` renvoie `false` car la contrainte `required` n'est pas satisfaite. Cette méthode déclenche un évènement `invalid` sur l'élément et signale le problème à l'utilisateur·ice en affichant le message d'erreur personnalisé «&nbsp;Veuillez indiquer un âge (obligatoire)&nbsp;». Tant qu'un message d'erreur personnalisé est défini, l'activation du bouton «&nbsp;reportValidity()&nbsp;» continuera d'afficher une erreur même si vous sélectionnez un âge valide. Pour activer la validation, il faut réinitialiser le message d'erreur à la chaîne vide, ce qui est fait en cliquant sur le bouton «&nbsp;Corriger&nbsp;».
 
 ## Spécifications
 

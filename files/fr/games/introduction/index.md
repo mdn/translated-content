@@ -88,7 +88,7 @@ En tant que développeur de jeux vidéo, que vous soyez seul ou fassiez partie d
 4. Encore plus de contrôle, vous pouvez mettre à jour votre jeu quand vous le souhaitez. Plus besoin d'attendre avec impatience une approbation pendant qu'une personne cachée dans une autre entreprise décide si votre correctif critique sera publié aujourd'hui ou demain.
 5. Contrôlez votre analytique&nbsp;! Plutôt que de dépendre de quelqu'un d'autre pour décider des statistiques dont vous avez besoin, vous pouvez collecter les vôtres — ou choisir le tiers que vous préférez — pour obtenir des informations sur vos ventes et la portée de votre jeu.
 6. Vous pouvez gérer la relation avec votre clientèle de façon plus directe, à votre manière. Fini les retours client filtrés par les mécanismes limités d'un magasin d'applications. Interagissez avec vos client·e·s comme vous le souhaitez, sans intermédiaire.
-7. Vos joueur·euse·s peuvent jouer à votre jeu partout, à tout moment. Parce que le Web est omniprésent, vos client·e·s peuvent vérifier l'état de leur jeu sur leurs téléphones, tablettes, ordinateurs portables à la maison, ordinateurs de bureau au travail, ou tout autre appareil.
+7. Vos joueur·se·s peuvent jouer à votre jeu partout, à tout moment. Parce que le Web est omniprésent, vos client·e·s peuvent vérifier l'état de leur jeu sur leurs téléphones, tablettes, ordinateurs portables à la maison, ordinateurs de bureau au travail, ou tout autre appareil.
 
 ## Les technologies Web pour les développeurs de jeux vidéo
 
@@ -119,7 +119,7 @@ Pour les passionné·e·s de technologie, plongeons dans les API que le Web met 
 - [WebGL](/fr/docs/Web/API/WebGL_API)
   - : Permet de créer des graphismes 3D (et 2D) de haute performance, accélérés matériellement, à partir de contenu Web. Il s'agit d'une implémentation prise en charge par le Web de [OpenGL ES <sup>(angl.)</sup>](https://www.khronos.org/opengles/) 2.0.
 - [WebRTC](/fr/docs/Web/API/WebRTC_API)
-  - : L'API WebRTC (Real-Time Communications) vous donne le pouvoir de contrôler les données audio et vidéo, y compris la téléconférence et la transmission d'autres données d'application entre deux utilisateur·ice·s. Vous voulez que vos joueur·euse·s puissent discuter pendant qu'ils·elles explosent des monstres&nbsp;? Cette API est faite pour vous.
+  - : L'API WebRTC (Real-Time Communications) vous donne le pouvoir de contrôler les données audio et vidéo, y compris la téléconférence et la transmission d'autres données d'application entre deux utilisateur·ice·s. Vous voulez que vos joueur·se·s puissent discuter pendant qu'ils·elles explosent des monstres&nbsp;? Cette API est faite pour vous.
 - [WebSockets](/fr/docs/Web/API/WebSockets_API)
   - : L'API WebSocket permet de connecter votre application ou site à un serveur pour transmettre des données en temps réel. Parfait pour les jeux multijoueurs, les services de discussion, etc.
 - [Web Workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)

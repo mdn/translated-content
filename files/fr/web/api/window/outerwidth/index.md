@@ -3,10 +3,10 @@ title: "Window : propriété outerWidth"
 short-title: outerWidth
 slug: Web/API/Window/outerWidth
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 La propriété en lecture seule **`outerWidth`** de l'interface {{DOMxRef("Window")}} retourne la largeur de l'extérieur de la fenêtre du navigateur. Elle représente la largeur de toute la fenêtre du navigateur, y compris la barre latérale (si elle est agrandie), le chrome de la fenêtre et les bordures/poignées de redimensionnement de la fenêtre.
 

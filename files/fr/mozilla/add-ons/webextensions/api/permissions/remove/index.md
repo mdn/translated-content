@@ -3,8 +3,6 @@ title: permissions.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/remove
 ---
 
-{{AddonSidebar}}
-
 Demander d'abandonner les permissions listées dans l'objet {{WebExtAPIRef("permissions.Permissions")}}.
 
 L'argument `Permissions` peut contenir soit une propriété `origins` ,qui est un tableau de [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) , ou une propriété `permissions`, qui est un tableau de [permissions d'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), ou les deux. Les permissions doivent provenir de l'ensemble des permissions définies dans la clé [`optional_permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) du manifest.json.

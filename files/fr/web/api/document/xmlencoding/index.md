@@ -3,10 +3,10 @@ title: "Document : propriété xmlEncoding"
 short-title: xmlEncoding
 slug: Web/API/Document/xmlEncoding
 l10n:
-  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 La propriété **`xmlEncoding`** de l'interface {{DOMxRef("Document")}} retourne le codage déterminé par la déclaration XML. Devrait être `null` si non précisé ou inconnu.
 

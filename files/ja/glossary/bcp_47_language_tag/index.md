@@ -40,5 +40,5 @@ BCP 47 の完全な構文は {{rfc("5646")}} で規定されています。非�
 
 - [List of common primary language subtags](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags)
 - [RFC 5646: Tags for Identifying Languages](https://datatracker.ietf.org/doc/html/rfc5646): BCP 47 言語タグが定義されているところ。
-- [Choosing a Language Tag](https://www.w3.org/International/questions/qa-choosing-language-tags): 正しい言語タグを選択するための W3C 外d。
+- [Choosing a Language Tag](https://www.w3.org/International/questions/qa-choosing-language-tags): 正しい言語タグを選択するための W3C ガイド。
 - [BCP 47 language subtag lookup](https://r12a.github.io/app-subtags/): 言語のサブタグコードを検索

@@ -3680,13 +3680,6 @@
       "tonybengue"
     ]
   },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_getting_started": {
-    "modified": "2020-10-03T00:57:04.281Z",
-    "contributors": [
-      "duduindo",
-      "Anonymous"
-    ]
-  },
   "Learn_web_development/Core/Scripting": {
     "modified": "2020-07-16T22:29:50.440Z",
     "contributors": [
@@ -9200,12 +9193,6 @@
     "contributors": [
       "hellosct1",
       "loella16"
-    ]
-  },
-  "Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled": {
-    "modified": "2020-10-15T22:11:14.653Z",
-    "contributors": [
-      "hellosct1"
     ]
   },
   "Mozilla/Add-ons/WebExtensions/manifest.json/omnibox": {

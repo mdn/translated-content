@@ -23,11 +23,11 @@ La réponse `203` est similaire à la valeur [`214`](/fr/docs/Web/HTTP/Reference
 
 ### Réception d'une réponse de message filtré
 
-Dans cet exemple, un·e utilisateur·ice envoie une requête `GET` pour le contenu avec l'identifiant `123` à `exemple.com`.
+Dans cet exemple, un·e utilisateur·ice envoie une requête `GET` pour le contenu avec l'identifiant `123` à `example.com`.
 
 ```http
 GET /comments/123 HTTP/1.1
-Host: exemple.com
+Host: example.com
 ```
 
 Un mandataire a modifié le message selon des règles de filtrage de logiciels malveillants pour des pièces jointes connues comme dangereuses.
@@ -42,7 +42,7 @@ Content-Length: 123
 
 {
   "comment": "Découvrez ma bio !",
-  "attachment_url": "https://exemple.com/attachment-unavailable-faq"
+  "attachment_url": "https://example.com/attachment-unavailable-faq"
 }
 ```
 

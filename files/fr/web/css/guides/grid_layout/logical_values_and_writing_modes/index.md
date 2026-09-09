@@ -6,8 +6,6 @@ l10n:
   sourceCommit: f224dbe80c60289cd8b7d2bf92871d091e0f5d0d
 ---
 
-{{CSSRef}}
-
 Dans les articles précédents, nous avons évoqué un aspect important de la disposition en grille&nbsp;: la prise en charge des différents modes d'écriture. Dans ce guide, nous nous intéresserons plus particulièrement à cette fonctionnalité ainsi qu'aux autres méthodes modernes de disposition. Cela sera également l'occasion d'en apprendre plus sur les modes d'écritures et la notion de propriété logique/physique.
 
 ## Les propriétés logiques, les propriétés physiques et les valeurs

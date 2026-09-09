@@ -757,8 +757,7 @@ font:
     id="code"
     class="html-input"
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-  <p>Some sample text for your delight</p></textarea
-  >
+  <p>Some sample text for your delight</p></textarea>
 
   <h2>CSS Input</h2>
   <textarea
@@ -767,8 +766,7 @@ font:
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 p {
 
-  }</textarea
-  >
+  }</textarea>
 
   <h2>Output</h2>
   <div

@@ -8,7 +8,7 @@ l10n:
 
 La [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::slotted()`** représente n'importe quel élément ayant été placé à l'intérieur d'un emplacement (_slot_) au sein d'un gabarit (_template_) HTML (voir [Utiliser les gabarits et les emplacements](/fr/docs/Web/API/Web_components/Using_templates_and_slots) pour plus d'informations).
 
-Cela ne fonctionne que pour du CSS placé à l'intérieur d'un élément {{HTMLElement("template")}} et/ou dans le [le DOM d'ombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM). On notera également que ce sélecteur ne sélectionnera pas les noeuds texte placés dans les emplacements, il ne cible que les éléments.
+Cela ne fonctionne que pour du CSS placé à l'intérieur d'un élément {{HTMLElement("template")}} et/ou dans le [le DOM d'ombre (<i lang="en">shadow DOM</i> en anglais)](/fr/docs/Web/API/Web_components/Using_shadow_DOM). Notez également que ce sélecteur ne sélectionne pas les nœuds texte placés dans les emplacements, il ne cible que les éléments.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ::slotted()", "tabbed-shorter")}}
 
@@ -161,7 +161,7 @@ Notre balisage comprend trois éléments personnalisés, dont un élément perso
 </person-details>
 ```
 
-#### Result
+#### Résultat
 
 {{EmbedLiveSample("Mise en évidence des éléments dans les emplacements", 500, 500)}}
 

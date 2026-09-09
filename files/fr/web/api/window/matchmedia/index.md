@@ -3,10 +3,10 @@ title: "Window : méthode matchMedia()"
 short-title: matchMedia()
 slug: Web/API/Window/matchMedia
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 La méthode **`matchMedia()`** de l'interface {{DOMxRef("Window")}} retourne un nouvel objet {{DOMxRef("MediaQueryList")}} qui peut ensuite être utilisé pour déterminer si le {{DOMxRef("document")}} correspond à la chaîne de caractères de la [requête média](/fr/docs/Web/CSS/Guides/Media_queries/Using), ainsi que pour surveiller le document afin de détecter quand il correspond (ou cesse de correspondre) à cette requête média.
 
@@ -31,13 +31,13 @@ Un nouvel objet {{DOMxRef("MediaQueryList")}} pour la requête média. Utilisez 
 
 Vous pouvez utiliser la requête média retournée pour effectuer des vérifications instantanées et basées sur des évènements afin de voir si le document correspond à la requête média.
 
-Pour effectuer une vérification instantanée unique afin de voir si le document correspond à la requête média, regardez la valeur de la propriété {{DOMxRef("MediaQueryList.matches", "matches")}}, qui sera `true` si le document répond aux exigences de la requête média.
+Pour effectuer une vérification instantanée unique afin de voir si le document correspond à la requête média, regardez la valeur de la propriété {{DOMxRef("MediaQueryList.matches", "matches")}}, qui est `true` si le document répond aux exigences de la requête média.
 
 Si vous avez besoin de savoir en permanence si le document correspond ou non à la requête média, vous pouvez plutôt surveiller l'évènement {{DOMxRef("MediaQueryList.change_event", "change")}} pour qu'il soit envoyé à l'objet. Il y a [un bon exemple de cela](/fr/docs/Web/API/Window/devicePixelRatio#surveiller_les_changements_de_résolution_ou_de_niveau_de_zoom) dans l'article sur {{DOMxRef("Window.devicePixelRatio")}}.
 
 ## Exemples
 
-Cet exemple exécute la requête média `(width <= 600px)` et affiche la valeur de la propriété `matches` de l'objet `MediaQueryList` résultant dans un {{HTMLElement("span")}}&nbsp;; en conséquence, la sortie indiquera `"true"` si la largeur de la fenêtre est inférieure ou égale à 600 pixels, et `"false"` si la fenêtre est plus large.
+Cet exemple exécute la requête média `(width <= 600px)` et affiche la valeur de la propriété `matches` de l'objet `MediaQueryList` résultant dans un {{HTMLElement("span")}}&nbsp;; en conséquence, la sortie indique `"true"` si la largeur de la fenêtre est inférieure ou égale à 600 pixels, et `"false"` si la fenêtre est plus large.
 
 ### JavaScript
 

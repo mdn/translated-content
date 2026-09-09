@@ -1,15 +1,15 @@
 ---
-title: border-bottom-style
+title: CSS `border-bottom-style` プロパティ
+short-title: border-bottom-style
 slug: Web/CSS/Reference/Properties/border-bottom-style
-original_slug: Web/CSS/border-bottom-style
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`border-bottom-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の境界線 ({{cssxref("border")}}) のスタイルを設定します。
 
 > [!NOTE]
-> 仕様書では、異なるスタイルの境界線を角でどの様に接続するかを定義していません。
+> 仕様書では、異なるスタイルの境界線を角でどのように接続するかを定義していません。
 
 {{InteractiveExample("CSS デモ: border-bottom-style")}}
 
@@ -40,15 +40,15 @@ border-bottom-style: inset;
 ```html interactive-example
 <section id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界があるボックスです。
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -99,7 +99,7 @@ border-bottom-style: unset;
 
 #### HTML
 
-```html live-sample___demonstrating_all_border_styles
+```html
 <table>
   <tr>
     <td class="b1">none</td>
@@ -122,7 +122,7 @@ border-bottom-style: unset;
 
 #### CSS
 
-```css live-sample___demonstrating_all_border_styles
+```css
 /* 表の外見を定義 */
 table {
   border-width: 3px;
@@ -168,7 +168,7 @@ td {
 
 #### 結果
 
-{{ EmbedLiveSample('Demonstrating_all_border_styles', 300, 200) }}
+{{ EmbedLiveSample('すべての境界線のスタイルのデモ', 300, 200) }}
 
 ## 仕様書
 
@@ -180,5 +180,5 @@ td {
 
 ## 関連情報
 
-- その他のスタイルに関する境界のプロパティ: {{ Cssxref("border-left-style") }}, {{ Cssxref("border-right-style") }}, {{ Cssxref("border-top-style") }}, {{ Cssxref("border-style") }}
-- その他の下境界に関するプロパティ: {{ Cssxref("border-bottom") }}, {{ Cssxref("border-bottom-color") }}, {{ Cssxref("border-bottom-width") }}
+- その他のスタイルに関する境界のプロパティ: {{ Cssxref("border-left-style") }}、{{ Cssxref("border-right-style") }}、{{ Cssxref("border-top-style") }}、{{ Cssxref("border-style") }}
+- その他の下側の境界に関するプロパティ: {{ Cssxref("border-bottom") }}、{{ Cssxref("border-bottom-color") }}、{{ Cssxref("border-bottom-width") }}

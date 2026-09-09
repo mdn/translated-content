@@ -3,8 +3,6 @@ title: menus.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsqu'un élément de menu est cliqué.
 
 Pour la compatibilité avec les autres navigateurs, Firefox rend cet événement disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.

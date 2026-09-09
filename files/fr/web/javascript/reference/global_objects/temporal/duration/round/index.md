@@ -127,5 +127,5 @@ console.log(roundedDuration); // "P32D"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/Duration/total", "Temporal.Duration.prototype.total()")}}

@@ -1,25 +1,44 @@
 ---
 title: EvalError() コンストラクター
+short-title: EvalError()
 slug: Web/JavaScript/Reference/Global_Objects/EvalError/EvalError
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`EvalError`** コンストラクターは、グローバルの {{jsxref("Global_Objects/eval", "eval()")}} 関数に関する新しいエラーを生成します。この例外はもう JavaScript からは使用されていませんが、 `EvalError` オブジェクトは互換性のために残っています。object
+**`EvalError()`** コンストラクターは {{jsxref("EvalError")}} オブジェクトを生成します。
 
 ## 構文
 
+```js-nolint
+new EvalError()
+new EvalError(message)
+new EvalError(message, options)
+new EvalError(message, fileName)
+new EvalError(message, fileName, lineNumber)
+
+EvalError()
+EvalError(message)
+EvalError(message, options)
+EvalError(message, fileName)
+EvalError(message, fileName, lineNumber)
 ```
-new EvalError([message[, fileName[, lineNumber]]])
-```
+
+> [!NOTE]
+> `EvalError()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出せます。どちらも新しい `EvalError` インスタンスを生成します。
 
 ### 引数
 
 - `message` {{optional_inline}}
   - : 人間が読むためのエラーの説明です。
-- `fileName` {{optional_inline}}
+- `options` {{optional_inline}}
+  - : 以下のプロパティを持つオブジェクトです。
+    - `cause` {{optional_inline}}
+      - : エラーの具体的な原因を示すプロパティです。
+        エラーを捕捉し、より具体的または有用なエラーメッセージを付けて再度投げる場合、このプロパティを使用して元のエラーを渡すことができます。
+- `fileName` {{optional_inline}} {{non-standard_inline}}
   - : 例外が発生したコードを含むファイルの名前です。
-- `lineNumber` {{optional_inline}}
+- `lineNumber` {{optional_inline}} {{non-standard_inline}}
   - : 例外が発生したコードの行番号です。
 
 ## 例
@@ -30,15 +49,12 @@ new EvalError([message[, fileName[, lineNumber]]])
 
 ```js
 try {
-  throw new EvalError("Hello", "someFile.js", 10);
+  throw new EvalError("Hello");
 } catch (e) {
   console.log(e instanceof EvalError); // true
   console.log(e.message); // "Hello"
   console.log(e.name); // "EvalError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  console.log(e.stack); // このエラーのスタック
 }
 ```
 

@@ -3,7 +3,7 @@ title: En-tête Prefer
 short-title: Prefer
 slug: Web/HTTP/Reference/Headers/Prefer
 l10n:
-  sourceCommit: c8bc787246fbec6fed108e4fb9e25df1d70a29ce
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 L'en-tête HTTP **`Prefer`** permet aux clients d'indiquer des préférences pour des comportements spécifiques du serveur lors du traitement d'une requête.
@@ -12,7 +12,7 @@ L'en-tête HTTP **`Prefer`** permet aux clients d'indiquer des préférences pou
 > Les navigateurs ne gèrent pas les en-têtes `Prefer` et {{HTTPHeader("Preference-Applied")}}&nbsp;: ils sont utilisés dans des clients personnalisés, spécifiques à l'implémentation.
 > Assurez-vous que le client et le serveur prennent en charge cet en-tête avant de l'utiliser en production.
 >
-> Les serveurs doivent ignorer silencieusement les préférences qu'ils ne prennent pas en charge, comme si l'en-tête n'était pas présent.
+> Les serveurs doivent ignorer silencieusement les préférences qu'ils ne prennent pas en charge, comme si l'en-tête n'est pas présent.
 
 <table class="properties">
   <tbody>
@@ -65,7 +65,7 @@ Il s'agit généralement d'une réponse contenant uniquement les en-têtes (par 
 
 ```http
 POST /resource HTTP/1.1
-Host: exemple.com
+Host: example.com
 Content-Type: application/json
 Prefer: return=minimal
 
@@ -87,7 +87,7 @@ Cet exemple demande au serveur de démarrer une tâche de traitement asynchrone&
 
 ```http
 POST /process HTTP/1.1
-Host: exemple.com
+Host: example.com
 Prefer: respond-async
 
 {
@@ -100,7 +100,7 @@ Un en-tête `Location` pointe vers un moniteur de statut représentant l'état d
 
 ```http
 HTTP/1.1 202 Accepted
-Location: http://exemple.com/tasks/123/status
+Location: http://example.com/tasks/123/status
 ```
 
 ### Fournir plusieurs préférences
@@ -109,7 +109,7 @@ La requête suivante inclut deux préférences&nbsp;; `timezone=Jupiter/Red_Spot
 
 ```http
 GET /events HTTP/1.1
-Host: exemple.com
+Host: example.com
 Prefer: handling=strict, timezone=Jupiter/Red_Spot
 ```
 

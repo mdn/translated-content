@@ -105,7 +105,7 @@ button.addEventListener("click", updateName);
 JavaScript はそれ以上のことができます。もっと詳しく見てみましょう。
 
 > [!NOTE]
-> 先に進む前に、この早い段階で Scrimba の課題に挑戦して、実際に手を動かしてみてはいかがでしょうか？[ウェルカムメッセージのレンダリング](https://scrimba.com/learn-javascript-c0v/~0n?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup>。このコードの書き方がわからなくても、まったく心配はいりません。ウェブ検索で答えを探すのが最適です。Scrimba の最後にある解答を確認してみてください。
+> 先に進む前に、この早い段階で Scrimba の課題に挑戦して、実際に手を動かしてみてはいかがでしょうか？[ウェルカムメッセージのレンダリング](https://scrimba.com/learn-javascript-c0v/~0n?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>。このコードの書き方がわからなくても、まったく心配はいりません。ウェブ検索で答えを探すのが最適です。Scrimba の最後にある解答を確認してみてください。
 
 ## 実際に何ができるのか
 
@@ -229,7 +229,7 @@ JavaScript は CSS と同じような方法で、HTML ページに適用する�
 CSS では {{htmlelement("link")}} 要素を使用することで外部のスタイルシートを適用することができ、また、{{htmlelement("style")}} 要素を使用することで HTML 内蔵に書かれたスタイルシートを適用することが出来ました。 JavaScript で HTML に書く必要があるのは {{htmlelement("script")}} 要素だけです。どのように書くのか見てみましょう。
 
 > [!NOTE]
-> Scrimba の [Setting up our JavaScript file](https://scrimba.com/learn-javascript-c0v/~03?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> は対話的なチュートリアルで、HTML に JavaScript を追加するいくつかの方法を一通り行います。
+> Scrimba の [Setting up our JavaScript file](https://scrimba.com/learn-javascript-c0v/~03?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> は対話的なチュートリアルで、HTML に JavaScript を追加するいくつかの方法を一通り行います。
 
 ### 内蔵 JavaScript
 

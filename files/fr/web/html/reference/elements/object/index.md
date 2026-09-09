@@ -29,13 +29,13 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `classid` {{Deprecated_Inline}}
   - : L'URI de l'implémentation de l'objet. Cet attribut peut être utilisé avec (ou en remplacement de) l'attribut `data`.
 - `codebase` {{Deprecated_Inline}}
-  - : Le chemin absolu de base servant à résoudre les URI relatifs définies par `classid`, `data`, ou `archive`. S'il n'est pas renseigné, l'URI de base considéré sera celui du document.
+  - : Le chemin absolu de base servant à résoudre les URI relatifs définies par `classid`, `data`, ou `archive`. S'il n'est pas renseigné, l'URI de base considéré est celui du document.
 - `codetype` {{Deprecated_Inline}}
   - : Le type de contenu des données définies par `classid`.
 - `data`
   - : L'adresse de la ressource, une URL valide. Au moins un attribut `data` et un attribut `type` doivent être définis.
 - `declare` {{Deprecated_Inline}}
-  - : Si cet attribut booléen est présent, l'élément sera seulement une déclaration. L'objet devra donc être instancié par un élément `<object>` dans la suite du document. En HTML5, il faut répéter l'élément `<object>` complètement chaque fois que la ressource est réutilisée.
+  - : Si cet attribut booléen est présent, l'élément est seulement une déclaration. L'objet doit donc être instancié par un élément `<object>` dans la suite du document. En HTML5, il faut répéter l'élément `<object>` complètement chaque fois que la ressource est réutilisée.
 - [`form`](/fr/docs/Web/HTML/Reference/Attributes/form)
   - : L'élément de formulaire éventuel auquel l'élément est associé. La valeur de cet attribut doit être l'identifiant d'un élément {{HTMLElement("form")}} du même document.
 - `height`
@@ -47,7 +47,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `type`
   - : Le [type MIME](/fr/docs/Glossary/MIME_type) de la ressource définie par `data`. Au moins un attribut `data` et un attribut `type` doivent être définis.
 - `usemap` {{Deprecated_Inline}}
-  - : Une référence de type dièze-nom vers un élément {{HTMLElement("map")}}&nbsp;; c'est-à-dire un '#' suivi de la valeur d'un attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/map#name) d'un élément map.
+  - : Une référence de type dièze-nom vers un élément {{HTMLElement("map")}}&nbsp;; c'est-à-dire un '#' suivi de la valeur d'un attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/map#name) d'un élément `<map>`.
 - `width`
   - : La largeur de la ressource affichée, comme pour {{CSSxRef("&lt;integer&gt;")}} en {{Glossary("CSS pixel", "pixels CSS")}}.
 
@@ -73,7 +73,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 {{EmbedLiveSample("Intégrer une vidéo")}}
 
-Si la vidéo de l'exemple ne se charge pas, une image sera proposée à l'utilisateur·ice comme contenu de repli. La balise {{HTMLElement("img")}} est utilisée pour afficher une image. Nous incluons l'attribut `src` défini sur le chemin de l'image à intégrer. Nous incluons aussi l'attribut `alt`, qui fournit à l'image un nom accessible. Si l'image ne se charge pas non plus, le contenu de l'attribut `alt` sera affiché.
+Si la vidéo de l'exemple ne se charge pas, une image est proposée à l'utilisateur·ice comme contenu de repli. La balise {{HTMLElement("img")}} est utilisée pour afficher une image. Nous incluons l'attribut `src` défini sur le chemin de l'image à intégrer. Nous incluons aussi l'attribut `alt`, qui fournit à l'image un nom accessible. Si l'image ne se charge pas non plus, le contenu de l'attribut `alt` est affiché.
 
 ## Résumé technique
 

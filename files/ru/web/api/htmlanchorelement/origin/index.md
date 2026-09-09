@@ -5,7 +5,7 @@ slug: Web/API/HTMLAnchorElement/origin
 
 {{APIRef("URL API")}}
 
-Свойство только для чтения **`HTMLHyperlinkElementUtils.origin`** – это {{domxref("USVString")}}, содержащий сериализованные в Unicode протокол, хост и порт, а именно:
+Свойство только для чтения **`HTMLHyperlinkElementUtils.origin`** – это {{jsxref("String")}}, содержащий сериализованные в Unicode протокол, хост и порт, а именно:
 
 - для URL, начинающегося с `http` или `https`, – протокол, `'://'`, домен, `':'`, порт (порт по умолчанию, `80` и `443` соответственно, если указаны явно);
 - для URL, начинающегося с `file:`, – значение зависит от браузера;

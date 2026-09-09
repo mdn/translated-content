@@ -2,7 +2,7 @@
 title: Modèle de page de sélecteur CSS
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template
 l10n:
-  sourceCommit: d2fb8cdc9422dd2b68ff23f616d70811729f1fbd
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 > [!NOTE]
@@ -45,7 +45,6 @@ l10n:
 >
 >     Notez que vous devez d'abord créer ou mettre à jour une entrée pour le sélecteur et sa spécification dans notre <a href="https://github.com/mdn/browser-compat-data">dépôt de données de compatibilité des navigateurs <sup>(angl.)</sup></a>.
 >     Consultez notre [guide sur la façon de procéder](/fr/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
->
 > - **sidebar** (pages anglaises uniquement)
 >   - : Ceci est `cssref` pour toutes les pages de guide et de référence CSS.
 >     Voir [Structures de page&nbsp;: Barres latérales](/fr/docs/MDN/Writing_guidelines/Page_structures/Sidebars) pour plus de détails.
@@ -59,14 +58,13 @@ l10n:
 >
 > - `\{{SeeCompatTable}}` — Cette macro génère une bannière **Expérimentale**, qui indique que la technologie est [expérimentale](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#expérimental).
 >   Si la technologie est expérimentale et est cachée derrière une préférence dans Firefox, vous devez également remplir une entrée pour elle dans la page [Fonctionnalités expérimentales dans Firefox](/fr/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — Cette macro génère une bannière **Obsolète**, qui indique que l'utilisation de la technologie est [déconseillée](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#obsolète).
 > - `\{{Non-standard_Header}}` — Cette macro génère une bannière **Non standard** qui indique que la fonctionnalité ne fait partie d'aucune spécification.
 >
 > Ne fournissez pas manuellement les macros d'en-tête de statut&nbsp;:
 >
 > Reportez-vous à la section [«&nbsp;Comment les statuts des fonctionnalités sont ajoutés ou mis à jour&nbsp;»](/fr/docs/MDN/Writing_guidelines/Page_structures/Feature_status#comment_les_statuts_sont-ils_ajoutés_ou_mis_à_jour) pour ajouter ces statuts à la page.
 >
-> Des exemples des bannières **Expérimentale**, **Obsolète** et **Non standard** sont présentés juste après ce bloc de notes.
+> Des exemples des bannières **Expérimentale** et **Non standard** sont présentés juste après ce bloc de notes.
 >
 > ---
 >
@@ -78,7 +76,7 @@ l10n:
 >
 > _Supprimez cette note explicative avant de publier_
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 Le paragraphe de résumé — commencez par nommer le sélecteur et expliquer ce qu'il fait. Idéalement, cela doit être une ou deux phrases courtes.
 

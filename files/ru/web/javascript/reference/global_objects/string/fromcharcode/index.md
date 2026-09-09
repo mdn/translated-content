@@ -24,9 +24,9 @@ String.fromCharCode(num1[, ...[, numN]])
 
 ## Описание
 
-Этот метод возвращает примитивную строку, а не объект {{jsxref("Global_Objects/String", "String")}}.
+Этот метод возвращает примитивную строку, а не объект {{jsxref("String")}}.
 
-Поскольку метод `fromCharCode()` является статическим методом объекта {{jsxref("Global_Objects/String", "String")}}, вы всегда должны использовать его как `String.fromCharCode()`, а не как метод созданного вами экземпляра {{jsxref("Global_Objects/String", "String")}}.
+Поскольку метод `fromCharCode()` является статическим методом объекта {{jsxref("String")}}, вы всегда должны использовать его как `String.fromCharCode()`, а не как метод созданного вами экземпляра {{jsxref("String")}}.
 
 ## Примеры
 
