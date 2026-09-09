@@ -3,31 +3,34 @@ title: "Element: getAttributeNodeNS() メソッド"
 short-title: getAttributeNodeNS()
 slug: Web/API/Element/getAttributeNodeNS
 l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+  sourceCommit: f22f67069495dc37e550e354913d4ca984f5a4b0
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}
 
-指定された名前空間と名前を持つ属性の `Attr` ノードを返します。
+**`getAttributeNodeNS()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定された要素の指定された名前空間付き属性を {{domxref("Attr")}} ノードとして返します。要素にその名前空間で指定された名前の属性がない場合は、`null` を返します。
+
+このメソッドは、名前空間付き属性の[インスタンスプロパティ](/ja/docs/Web/API/Attr#instance_properties)が必要な場合に役立ちます。
+名前空間付き属性の値のみが必要な場合は、代わりに {{domxref("Element.getAttributeNS()", "getAttributeNS()")}} メソッドを使用することができます。
+
+HTML 文書を扱っており、リクエストされた属性を特定の名前空間に所属するものとして指定する必要がない場合は、代わりに {{domxref("Element.getAttributeNode()", "getAttributeNode()")}} メソッドを使用してください。
 
 ## 構文
 
 ```js-nolint
-getAttributeNodeNS(namespace, nodeName)
+getAttributeNodeNS(namespace, localName)
 ```
 
 ### 引数
 
-- `namespace` は属性の名前空間を特定する文字列です。
-- `nodeName` は属性の名前を指定する文字列です。
+- `namespace`
+  - : 属性の名前空間を指定する文字列です。名前空間を明示的に指定しない場合は `null` です。
+- `nodeName`
+  - : 属性の名前を指定する文字列です。
 
 ### 返値
 
-指定された属性のノードです。
-
-## メモ
-
-`getAttributeNodeNS` は [getAttributeNode](getAttributeNode) よりも、特定の名前空間に含まれる属性を特定することができる点でより具体的です。対応するセッターメソッドは [setAttributeNodeNS](/ja/docs/Web/API/Element/setAttributeNodeNS) です。
+その属性に対応する `Attr` ノードです。または、要素がその名前空間で指定された名前の属性を保有していない場合は `null` です。
 
 ## 仕様書
 
@@ -36,3 +39,9 @@ getAttributeNodeNS(namespace, nodeName)
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("Document.createAttribute()")}}
+- {{domxref("Document.createAttributeNS()")}}
+- {{domxref("Element.setAttributeNodeNS()")}}
