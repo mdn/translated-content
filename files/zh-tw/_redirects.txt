@@ -822,13 +822,14 @@
 /zh-TW/docs/Web/HTTP/Methods/TRACE	/zh-TW/docs/Web/HTTP/Reference/Methods/TRACE
 /zh-TW/docs/Web/HTTP/Network_Error_Logging	/zh-TW/docs/Web/HTTP/Guides/Network_Error_Logging
 /zh-TW/docs/Web/HTTP/Protocol_upgrade_mechanism	/zh-TW/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism
+/zh-TW/docs/Web/HTTP/Reference/Status/102	/zh-TW/docs/Web/HTTP/Reference/Status#102_processing
 /zh-TW/docs/Web/HTTP/Response_codes	/zh-TW/docs/Web/HTTP/Reference/Status
 /zh-TW/docs/Web/HTTP/Server-Side_Access_Control	/zh-TW/docs/Web/HTTP/Guides/CORS
 /zh-TW/docs/Web/HTTP/Session	/zh-TW/docs/Web/HTTP/Guides/Session
 /zh-TW/docs/Web/HTTP/Status	/zh-TW/docs/Web/HTTP/Reference/Status
 /zh-TW/docs/Web/HTTP/Status/100	/zh-TW/docs/Web/HTTP/Reference/Status/100
 /zh-TW/docs/Web/HTTP/Status/101	/zh-TW/docs/Web/HTTP/Reference/Status/101
-/zh-TW/docs/Web/HTTP/Status/102	/zh-TW/docs/Web/HTTP/Reference/Status/102
+/zh-TW/docs/Web/HTTP/Status/102	/zh-TW/docs/Web/HTTP/Reference/Status#102_processing
 /zh-TW/docs/Web/HTTP/Status/103	/zh-TW/docs/Web/HTTP/Reference/Status/103
 /zh-TW/docs/Web/HTTP/Status/200	/zh-TW/docs/Web/HTTP/Reference/Status/200
 /zh-TW/docs/Web/HTTP/Status/201	/zh-TW/docs/Web/HTTP/Reference/Status/201

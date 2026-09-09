@@ -72,7 +72,7 @@ _Наследует свойства от родительского узла {{
 - {{domxref("Element.shadowRoot") }} {{experimental_inline}} {{readOnlyInline}}
   - : ...
 - {{ domxref("Element.tagName") }} {{readOnlyInline}}
-  - : Возвращает {{domxref("String")}} с именем тега указанного элемента.
+  - : Возвращает {{jsxref("String")}} с именем тега указанного элемента.
 - {{ domxref("Element.undoManager")}} {{experimental_inline}} {{readOnlyInline}}
   - : Returns the {{domxref("UndoManager")}} associated with the element.
 - {{ domxref("Element.undoScope")}} {{experimental_inline}}

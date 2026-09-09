@@ -21,7 +21,7 @@ La propriété `XMLHttpRequest.response` contient le corps de la réponse. Elle 
     </tr>
     <tr>
       <td><code>"arraybuffer"</code></td>
-      <td>{{domxref("ArrayBuffer")}}</td>
+      <td>{{jsxref("ArrayBuffer")}}</td>
     </tr>
     <tr>
       <td><code>"blob"</code></td>

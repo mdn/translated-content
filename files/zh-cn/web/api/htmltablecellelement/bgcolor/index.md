@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 245715b48674c1729cb63417e4a27628e30ae28c
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 **`HTMLTableCellElement.bgColor`** 属性用于设置单元格的背景色或者检索已弃用的 [`bgColor`](/zh-CN/docs/Web/HTML/Reference/Elements/td#bgcolor) 属性的值（如果存在）。
 

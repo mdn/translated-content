@@ -21,7 +21,7 @@ _从它的父元素 {{domxref("HTMLElement")}} 继承的属性。_
 - {{domxref("HTMLImageElement.alt")}}
   - : 一个 {{jsxref("String")}} 表示 HTML 属性 [`alt`](/zh-CN/docs/Web/HTML/Reference/Elements/img#alt)，表明图像的后备描述内容，会在图像无法加载时显示。
 - {{domxref("HTMLImageElement.complete")}} {{readonlyInline}}
-  - : 返回一个 {{domxref("Boolean")}} 如果浏览器已经下载完毕，并且图像是[受支持的图片类型](/zh-CN/docs/Web/HTML/Reference/Elements/img#image_format)、解码的过程中没有发生错误，则返回 `true`。That means this value is also `true` if the image has no {{domxref("HTMLImageElement.src", "src")}} value indicating an image to load.
+  - : 返回一个 {{jsxref("Boolean")}} 如果浏览器已经下载完毕，并且图像是[受支持的图片类型](/zh-CN/docs/Web/HTML/Reference/Elements/img#image_format)、解码的过程中没有发生错误，则返回 `true`。That means this value is also `true` if the image has no {{domxref("HTMLImageElement.src", "src")}} value indicating an image to load.
 - {{domxref("HTMLImageElement.crossOrigin")}}
   - : 一个 {{jsxref("String")}} 表示这个 img 元素的 CORS 设置。参考 [CORS settings attributes](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)。This may be `null` if CORS is not used.
 - {{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}
@@ -32,7 +32,7 @@ _从它的父元素 {{domxref("HTMLElement")}} 继承的属性。_
 - {{domxref("HTMLImageElement.height")}}
   - : 一个整数，表示 HTML 属性 [`height`](/zh-CN/docs/Web/HTML/Reference/Elements/img#height)，说明了图像在 CSS 像素中渲染的高度。
 - {{domxref("HTMLImageElement.isMap")}}
-  - : 一个 {{domxref("Boolean")}} 表示 HTML 属性 [`ismap`](/zh-CN/docs/Web/HTML/Reference/Elements/img#ismap)，说明了图像是某个服务器端图像映射的一部分。This is different from a client-side image map, specified using an `<img>` element and a corresponding {{HTMLElement("map")}} which contains {{HTMLElement("area")}} elements indicating the clickable areas in the image. The image _must_ be contained within an {{HTMLElement("a")}} element; see the `ismap` page for details.
+  - : 一个 {{jsxref("Boolean")}} 表示 HTML 属性 [`ismap`](/zh-CN/docs/Web/HTML/Reference/Elements/img#ismap)，说明了图像是某个服务器端图像映射的一部分。This is different from a client-side image map, specified using an `<img>` element and a corresponding {{HTMLElement("map")}} which contains {{HTMLElement("area")}} elements indicating the clickable areas in the image. The image _must_ be contained within an {{HTMLElement("a")}} element; see the `ismap` page for details.
 - {{domxref("HTMLImageElement.naturalHeight")}} {{readonlyInline}}
   - : 返回一个整数，如果可用的话，表明图像在 CSS 中固有的高度，单位为像素；否则返回 `0`。如果图片是以其原来的大小渲染，则此值等于图片的高度。
 - {{domxref("HTMLImageElement.naturalWidth")}} {{readonlyInline}}

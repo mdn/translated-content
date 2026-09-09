@@ -3,8 +3,6 @@ title: Les tableaux typés en JavaScript
 slug: Web/JavaScript/Guide/Typed_arrays
 ---
 
-{{JsSidebar("Advanced")}}
-
 Les **tableaux typés JavaScript** sont des objets semblables à des tableaux qui fournissent un mécanisme pour lire et écrire des données binaires brutes dans des tampons mémoires.
 
 Les objets [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) qui représentent des tableaux en JavaScript peuvent être agrandis ou réduits dynamiquement et permettent de stocker n'importe quelle valeur JavaScript. Afin que la manipulation de ces objets soit efficace, le moteur JavaScript applique un certain nombre d'optimisations. Cependant, avec les avancées réalisées (telles que les flux audio et vidéo avec WebRTC et les WebSockets), il devient nécessaire de pouvoir manipuler des données binaires brutes au sein de tableaux typés, c'est pour ça que ces objets ont été introduits. Chaque élément d'un tableau typé JavaScript est une valeur binaire exprimée sous l'un des formats pris en charge (d'entiers représentés sur 8 bits jusqu'à des nombres flottants sur 64 bits).

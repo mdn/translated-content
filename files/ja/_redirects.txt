@@ -6174,6 +6174,7 @@
 /ja/docs/Web/HTTP/Range_requests	/ja/docs/Web/HTTP/Guides/Range_requests
 /ja/docs/Web/HTTP/Redirections	/ja/docs/Web/HTTP/Guides/Redirections
 /ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy
+/ja/docs/Web/HTTP/Reference/Status/102	/ja/docs/Web/HTTP/Reference/Status
 /ja/docs/Web/HTTP/Resources_and_URIs	/ja/docs/Web/HTTP/Guides/MIME_types
 /ja/docs/Web/HTTP/Resources_and_specifications	/ja/docs/Web/HTTP/Reference/Resources_and_specifications
 /ja/docs/Web/HTTP/Response_codes	/ja/docs/Web/HTTP/Reference/Status
@@ -6183,7 +6184,7 @@
 /ja/docs/Web/HTTP/Status	/ja/docs/Web/HTTP/Reference/Status
 /ja/docs/Web/HTTP/Status/100	/ja/docs/Web/HTTP/Reference/Status/100
 /ja/docs/Web/HTTP/Status/101	/ja/docs/Web/HTTP/Reference/Status/101
-/ja/docs/Web/HTTP/Status/102	/ja/docs/Web/HTTP/Reference/Status/102
+/ja/docs/Web/HTTP/Status/102	/ja/docs/Web/HTTP/Reference/Status
 /ja/docs/Web/HTTP/Status/103	/ja/docs/Web/HTTP/Reference/Status/103
 /ja/docs/Web/HTTP/Status/200	/ja/docs/Web/HTTP/Reference/Status/200
 /ja/docs/Web/HTTP/Status/201	/ja/docs/Web/HTTP/Reference/Status/201

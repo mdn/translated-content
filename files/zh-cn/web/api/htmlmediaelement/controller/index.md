@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
 **`HTMLMediaElement.controller`** 属性表示分配给该元素的媒体控制器。
 

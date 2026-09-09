@@ -23,8 +23,8 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
   - : 这个临时响应表明，迄今为止的所有内容都是可行的，客户端应该继续请求，如果已经完成，则忽略它。
 - {{HTTPStatus(101, "101 Switching Protocols")}}
   - : 该代码是响应客户端的 {{HTTPHeader("Upgrade")}} 请求头发送的，指明服务器即将切换的协议。
-- {{HTTPStatus(102, "102 Processing")}} ({{Glossary("WebDAV")}})
-  - : 此代码表示服务器已收到并正在处理该请求，但当前没有响应可用。
+- `102 Processing` {{deprecated_inline}}
+  - : 此代码曾在{{Glossary("WebDAV", "基于 Web 的分布式编写和版本控制（WebDAV）")}}的上下文中用于表示服务器已收到请求，但在响应时尚无可用状态。该状态码最早在 {{RFC("2518")}} 中引入，但随后于 {{RFC("4918")}} 从 WebDAV 中移除。该响应码已被弃用，不再使用。
 - {{HTTPStatus(103, "103 Early Hints")}}
   - : 此状态代码主要用于与 {{HTTPHeader("Link")}} 链接头一起使用，以允许用户代理在服务器准备响应阶段时开始预加载 [preloading](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload) 资源。
 
@@ -171,4 +171,5 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 ## 参见
 
 - [维基百科上的 HTTP 状态码](https://zh.wikipedia.org/wiki/HTTP状态码)
-- [IANA official registry of HTTP status codes](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+- [IANA HTTP 状态码官方注册表](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+- [rfc4918“102 Processing”移除说明](https://www.rfc-editor.org/info/rfc4918/#section-21.4)

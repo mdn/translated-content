@@ -3,7 +3,7 @@ title: "Promise : méthode then()"
 short-title: then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 l10n:
-  sourceCommit: 337d60017f421e14f17bf8e9051d302b0fdb9b9b
+  sourceCommit: 9bda33365e40b6c609fa5190a0af9b5dc6438cf0
 ---
 
 La méthode **`then()`** des instances {{JSxRef("Promise")}} prend jusqu'à deux arguments&nbsp;: des fonctions de rappel pour les cas de complétion (<i lang="en">fulfilled</i> en anglais) et de rejet de la promesse (`Promise`). Elle stocke les fonctions de rappel dans la promesse sur laquelle elle est appelée et retourne immédiatement un autre objet {{JSxRef("Promise")}}, ce qui permet de [chaîner](/fr/docs/Web/JavaScript/Guide/Using_promises#chaînage_des_promesses) les appels à d'autres méthodes de promesse.
@@ -63,7 +63,7 @@ La méthode `then()` permet de planifier l'exécution des fonctions de rappel po
 
 Pour plus d'informations à propos du gestionnaire d'échec `siRejetée()`, voir la référence pour la méthode {{JSxRef("Promise/catch", "catch()")}}.
 
-`then()` retourne un nouvel objet `Promise` mais modifie l'objet `Promise` sur lequel il est appelé, en ajoutant les gestionnaires à une liste interne. Par conséquent, le gestionnaire est conservé par la promesse originale et sa durée de vie est au moins aussi longue que celle de la promesse originale. Par exemple, l'exemple suivant finit par épuiser la mémoire même si la promesse retournée n'est pas conservée&nbsp;:
+`then()` retourne un nouvel objet de promesse mais modifie l'objet de promesse sur lequel il est appelé, en ajoutant les gestionnaires à une liste interne si la promesse est en attente. Par conséquent, le gestionnaire est conservé par la promesse originale tant que cette promesse reste en attente et accessible. Par exemple, l'exemple suivant finit par épuiser la mémoire même si la promesse retournée n'est pas conservée&nbsp;:
 
 ```js
 const promesseAttendue = new Promise(() => {});

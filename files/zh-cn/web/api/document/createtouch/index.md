@@ -5,7 +5,7 @@ l10n:
   sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}
 
 **`Document.createTouch()`** 方法创建并返回一个新的 {{DOMxRef("Touch")}} 对象。
 

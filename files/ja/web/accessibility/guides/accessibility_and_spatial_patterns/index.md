@@ -3,7 +3,7 @@ title: アクセシビリティと空間的パターン
 short-title: 空間的パターン
 slug: Web/Accessibility/Guides/Accessibility_and_Spatial_Patterns
 l10n:
-  sourceCommit: 7ba6358a0ff684cc67c60b76d6d972722bbf0d18
+  sourceCommit: 30c9f71e6a6cac4d894688cabf7e4b50af87cfe5
 ---
 
 このドキュメントでは、光感受性てんかん、前庭障害、その他の知覚障害を持つ人々に身体的症状を引き起こす可能性のある視覚的パターンについて説明します。

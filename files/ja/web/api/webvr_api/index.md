@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}{{Non-standard_header}}
+{{DefaultAPISidebar("WebVR API")}}{{Non-standard_header}}
 
 > [!NOTE]
 > WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザーでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。
