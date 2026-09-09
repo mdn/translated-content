@@ -11,8 +11,6 @@ build/
 /files/**/orphaned/**/*.md
 
 # XXX Ignored until https://github.com/prettier/prettier/issues/11828 is fixed
-/files/fr/web/javascript/reference/global_objects/array/includes/index.md
-/files/fr/web/javascript/reference/global_objects/intl/displaynames/of/index.md
 /files/ja/web/api/audiobuffer/audiobuffer/index.md
 /files/ru/web/javascript/guide/expressions_and_operators/index.md
 /files/zh-cn/web/javascript/reference/operators/exponentiation/index.md
