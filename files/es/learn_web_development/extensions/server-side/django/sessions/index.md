@@ -159,11 +159,11 @@ Agrega la línea que se muestra al final del siguiente bloque a tu plantilla HTM
 </ul>
 
 <p>
-  Has visitado esta página \{{ num_visits }} vece\{{ num_visits|pluralize }}.
+  Has visitado esta página \{{ num_visits }} ve\{{ num_visits|pluralize:"z,ces" }}.
 </p>
 ```
 
-Ten en cuenta que usamos la etiqueta de plantilla integrada de Django [pluralize](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#pluralize) para agregar una "s" cuando la página se ha visitado varias vece**s**.
+Ten en cuenta que usamos la etiqueta de plantilla integrada de Django [pluralize](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#pluralize) para elegir entre «ve**z**» y «ve**ces**» según el número de visitas. A diferencia del inglés, donde basta con agregar una "s", en español hay que indicarle las dos formas: `pluralize:"z,ces"`.
 
 Guarda tus cambios y reinicia el servidor de pruebas. Cada vez que recargues la página, el número debería actualizarse.
 
