@@ -3,10 +3,8 @@ title: Caractéristique média CSS `device-aspect-ratio`
 short-title: device-aspect-ratio
 slug: Web/CSS/Reference/At-rules/@media/device-aspect-ratio
 l10n:
-  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 > [!NOTE]
 > Pour interroger le {{Glossary("aspect ratio", "rapport d'aspect")}} de la zone d'affichage, il faut utiliser la caractéristique média {{CSSxRef("@media/aspect-ratio", "aspect-ratio")}}.

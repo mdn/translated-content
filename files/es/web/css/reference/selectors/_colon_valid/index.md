@@ -17,7 +17,11 @@ Esta pseudo-clase es útil para resaltar los campos correctos para el usuario.
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:valid {
+  /* ... */
+}
+```
 
 ## Ejemplos
 

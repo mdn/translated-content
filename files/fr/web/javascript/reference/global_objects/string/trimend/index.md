@@ -3,8 +3,6 @@ title: String.prototype.trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 ---
 
-{{JSRef}}
-
 La méthode **`trimEnd()`** permet de retirer les blancs situés à la fin d'une chaîne de caractères. `trimRight()` est un synonyme pour cette méthode.
 
 {{InteractiveExample("JavaScript Demo: String.trimEnd()")}}

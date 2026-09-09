@@ -4,8 +4,6 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll
 original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
 ---
 
-{{JSRef}}
-
 La méthode **`[@@matchAll]`** renvoie l'ensemble des correspondances d'une expression rationnelle sur une chaîne de caractères.
 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.matchAll]()")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b02c4fe0f8c485fa3fd0af10005310aaecef64ca
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`display`** définit si un élément est traité comme une [boîte de bloc ou en ligne](/fr/docs/Web/CSS/Guides/Display/Flow_layout) et le mode de disposition utilisé pour ses enfants, comme la [mise en flux](/fr/docs/Web/CSS/Guides/Display/Flow_layout), la disposition [grille](/fr/docs/Web/CSS/Guides/Grid_layout) ou la disposition [flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout).
+La propriété [CSS](/fr/docs/Web/CSS) **`display`** définit si un élément est traité comme une [boîte de bloc ou en incise](/fr/docs/Web/CSS/Guides/Display/Flow_layout) et le mode de disposition utilisé pour ses enfants, comme la [mise en flux](/fr/docs/Web/CSS/Guides/Display/Flow_layout), la disposition [grille](/fr/docs/Web/CSS/Guides/Grid_layout) ou la disposition [flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout).
 
 Formellement, la propriété **`display`** définit les types d'affichage interne et externe d'un élément. Le type externe détermine la participation de l'élément à la [mise en flux](/fr/docs/Web/CSS/Guides/Display/Flow_layout)&nbsp;; le type interne définit la disposition des enfants. Certaines valeurs de `display` sont entièrement définies dans leurs propres spécifications&nbsp;; par exemple, le détail de ce qui se passe lorsque `display: flex` est déclaré est défini dans la spécification du modèle de boîte flexible CSS.
 
@@ -129,7 +129,7 @@ Les valeurs de mots-clés peuvent être regroupées en six catégories de valeur
     - `block`
       - : L'élément génère une boîte de bloc, créant des retours à la ligne avant et après l'élément dans le flux normal.
     - `inline`
-      - : L'élément génère une ou plusieurs boîtes en ligne qui ne créent pas de retour à la ligne avant ou après elles-mêmes. En flux normal, l'élément suivant est sur la même ligne s'il y a de la place.
+      - : L'élément génère une ou plusieurs boîtes en incise (<i lang="en">inline</i> en anglais) qui ne créent pas de retour à la ligne avant ou après elles-mêmes. En flux normal, l'élément suivant est sur la même ligne s'il y a de la place.
 
 > [!NOTE]
 > Lorsqu'une propriété d'affichage est définie avec uniquement une valeur **extérieure** (par exemple, `display: block` ou `display: inline`), la valeur intérieure par défaut est `flow` (par exemple, `display: block flow` et `display: inline flow`).
@@ -151,11 +151,11 @@ Les valeurs de mots-clés peuvent être regroupées en six catégories de valeur
 - {{CSSxRef("&lt;display-inside&gt;")}}
   - : Ces mots-clés définissent le type d'affichage intérieur de l'élément, ce qui définit le type de contexte de formatage dans lequel son contenu est disposé (en supposant qu'il s'agit d'un élément non remplacé). Lorsqu'un de ces mots-clés est utilisé seul comme valeur unique, le type d'affichage extérieur de l'élément est par défaut `block` (à l'exception de `ruby`, qui est par défaut `inline`).
     - `flow`
-      - : L'élément dispose son contenu en utilisant la mise en flux (mise en page bloc et en ligne).
+      - : L'élément dispose son contenu en utilisant la mise en flux (mise en page bloc et en incise).
 
-        Si son type d'affichage extérieur est `inline` et qu'il participe à un contexte de formatage bloc ou en ligne, il génère alors une boîte en ligne. Sinon, il génère une boîte de bloc.
+        Si son type d'affichage extérieur est `inline` et qu'il participe à un contexte de formatage bloc ou en incise, il génère alors une boîte en incise. Sinon, il génère une boîte de bloc.
 
-        Selon la valeur d'autres propriétés (comme {{CSSxRef("position")}}, {{CSSxRef("float")}} ou {{CSSxRef("overflow")}}) et selon qu'il participe lui-même à un contexte de formatage bloc ou en ligne, il établit soit un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context) (BFC) pour son contenu, soit il intègre son contenu dans le contexte de formatage parent.
+        Selon la valeur d'autres propriétés (comme {{CSSxRef("position")}}, {{CSSxRef("float")}} ou {{CSSxRef("overflow")}}) et selon qu'il participe lui-même à un contexte de formatage bloc ou en incise, il établit soit un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context) (BFC) pour son contenu, soit il intègre son contenu dans le contexte de formatage parent.
 
     - `flow-root`
       - : L'élément génère une boîte de bloc qui établit un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context), définissant où se trouve la racine du formatage.
@@ -166,12 +166,12 @@ Les valeurs de mots-clés peuvent être regroupées en six catégories de valeur
     - `grid`
       - : L'élément se comporte comme un élément de niveau bloc et dispose son contenu selon le [modèle de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts).
     - `grid-lanes`
-      - : L'élément se comporte comme un élément de niveau bloc et organise son contenu selon une disposition de type grilles en lignes. Les colonnes sont définies par {{CSSxRef("grid-template-columns")}} et se comportent comme une grille stricte, tandis que les éléments sont regroupés dans le sens des blocs afin de combler les espaces entre les éléments de tailles différentes. Voir [la disposition des lignes de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) pour plus de détails.
+      - : L'élément se comporte comme un élément de niveau bloc et organise son contenu selon une disposition de type grilles en incises. Les colonnes sont définies par {{CSSxRef("grid-template-columns")}} et se comportent comme une grille stricte, tandis que les éléments sont regroupés dans le sens des blocs afin de combler les espaces entre les éléments de tailles différentes. Voir [la disposition des lignes de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) pour plus de détails.
 
     - `inline-grid-lanes`
-      - : L'élément se comporte comme un élément de niveau en incise et organise son contenu selon une mise en page de grilles en lignes. Les lignes sont définies par {{CSSxRef("grid-template-rows")}} et se comportent comme une grille stricte, tandis que les éléments sont regroupés dans le sens en incise pour combler les espaces entre les éléments de tailles différentes. Voir [la disposition des lignes de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) pour plus de détails.
+      - : L'élément se comporte comme un élément de niveau en incise et organise son contenu selon une mise en page de grilles en incises. Les lignes sont définies par {{CSSxRef("grid-template-rows")}} et se comportent comme une grille stricte, tandis que les éléments sont regroupés dans le sens en incise pour combler les espaces entre les éléments de tailles différentes. Voir [la disposition des lignes de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) pour plus de détails.
     - `ruby`
-      - : L'élément se comporte comme un élément de niveau en ligne et dispose son contenu selon le modèle de formatage ruby. Il se comporte comme les éléments HTML {{HTMLElement("ruby")}} correspondants.
+      - : L'élément se comporte comme un élément de niveau en incise et dispose son contenu selon le modèle de formatage ruby. Il se comporte comme les éléments HTML {{HTMLElement("ruby")}} correspondants.
 
 > [!NOTE]
 > Lorsqu'une propriété d'affichage est définie avec uniquement une valeur **intérieure** (par exemple, `display: flex` ou `display: grid`), la valeur extérieure par défaut est `block` (par exemple, `display: block flex` et `display: block grid`).
@@ -179,7 +179,7 @@ Les valeurs de mots-clés peuvent être regroupées en six catégories de valeur
 ### Élément de liste
 
 - {{CSSxRef("&lt;display-listitem&gt;")}}
-  - : L'élément génère une boîte de bloc pour le contenu et une boîte en ligne distincte pour l'élément de liste.
+  - : L'élément génère une boîte de bloc pour le contenu et une boîte en incise distincte pour l'élément de liste.
 
 Une valeur unique de `list-item` fait que l'élément se comporte comme un élément de liste.
 Cela peut être utilisé avec {{CSSxRef("list-style-type")}} et {{CSSxRef("list-style-position")}}.
@@ -234,24 +234,24 @@ Cela peut être utilisé avec {{CSSxRef("list-style-type")}} et {{CSSxRef("list-
 ### Précomposées
 
 - {{CSSxRef("&lt;display-legacy&gt;")}}
-  - : CSS 2 utilise une syntaxe précomposée à mot-clé unique pour la propriété `display`, nécessitant des mots-clés distincts pour les variantes de mode de disposition de niveau bloc et de niveau en ligne.
+  - : CSS 2 utilise une syntaxe précomposée à mot-clé unique pour la propriété `display`, nécessitant des mots-clés distincts pour les variantes de mode de disposition de niveau bloc et de niveau en incise.
     - `inline-block`
-      - : L'élément génère une boîte de bloc qui s'écoule avec le contenu environnant comme s'il s'agissait d'une seule boîte en ligne (se comportant comme le ferait un élément remplacé).
+      - : L'élément génère une boîte de bloc qui s'écoule avec le contenu environnant comme s'il s'agissait d'une seule boîte en incise (se comportant comme le ferait un élément remplacé).
 
         Cela équivaut à `inline flow-root`.
 
     - `inline-table`
-      - : La valeur `inline-table` n'a pas de correspondance directe en HTML. Elle se comporte comme un élément HTML {{HTMLElement("table")}}, mais comme une boîte en ligne, plutôt qu'une boîte de niveau bloc. À l'intérieur de la boîte de table se trouve un contexte de niveau bloc.
+      - : La valeur `inline-table` n'a pas de correspondance directe en HTML. Elle se comporte comme un élément HTML {{HTMLElement("table")}}, mais comme une boîte en incise, plutôt qu'une boîte de niveau bloc. À l'intérieur de la boîte de table se trouve un contexte de niveau bloc.
 
         Cela équivaut à `inline table`.
 
     - `inline-flex`
-      - : L'élément se comporte comme un élément de niveau en ligne et dispose son contenu selon le modèle flexbox.
+      - : L'élément se comporte comme un élément de niveau en incise et dispose son contenu selon le modèle flexbox.
 
         Cela équivaut à `inline flex`.
 
     - `inline-grid`
-      - : L'élément se comporte comme un élément de niveau en ligne et dispose son contenu selon le modèle de grille.
+      - : L'élément se comporte comme un élément de niveau en incise et dispose son contenu selon le modèle de grille.
 
         Cela équivaut à `inline grid`.
 
@@ -288,7 +288,7 @@ Les pages individuelles pour les différents types de valeurs que la propriété
 
 ### Mise en flux CSS (display: block, display: inline)
 
-- [Disposition en bloc et en ligne dans un flux normal](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
+- [Disposition en bloc et en incise dans un flux normal](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
 - [Disposition en flux et débordement](/fr/docs/Web/CSS/Guides/Display/Flow_layout_and_overflow)
 - [Disposition en flux et modes d'écriture](/fr/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)
 - [Introduction aux contextes de formatage](/fr/docs/Web/CSS/Guides/Display/Formatting_contexts)
@@ -375,7 +375,7 @@ Modifier la valeur de `display` pour un élément HTML {{HTMLElement("table")}} 
 
 ### Comparer les valeurs de `display`
 
-Dans cet exemple, vous avez deux éléments conteneurs de niveau bloc, chacun contenant trois enfants en ligne. En dessous, un menu déroulant vous permet d'appliquer différentes valeurs de `display` aux conteneurs, afin de comparer et de contraster la façon dont les différentes valeurs affectent la disposition de l'élément et celle de leurs enfants.
+Dans cet exemple, vous avez deux éléments conteneurs de niveau bloc, chacun contenant trois enfants en incise. En dessous, un menu déroulant vous permet d'appliquer différentes valeurs de `display` aux conteneurs, afin de comparer et de contraster la façon dont les différentes valeurs affectent la disposition de l'élément et celle de leurs enfants.
 
 Nous avons ajouté {{CSSxRef("padding")}} et {{CSSxRef("background-color")}} sur les conteneurs et leurs enfants, afin qu'il soit plus facile de voir l'effet des valeurs d'affichage.
 
@@ -513,5 +513,5 @@ Vous pouvez trouver plus d'exemples dans les pages pour chaque type d'affichage 
 - Le module [de disposition Ruby CSS](/fr/docs/Web/CSS/Guides/Ruby_layout)
 - L'attribut SVG {{SVGAttr("display")}}
 - [Explications sur les contextes de formatage](/fr/docs/Web/CSS/Guides/Display/Formatting_contexts)
-- [Les dispositions de bloc et en ligne dans un flux normal](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
+- [Les dispositions de bloc et en incise dans un flux normal](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
 - [Disposition des lignes de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes)

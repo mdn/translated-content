@@ -3,14 +3,14 @@ title: Propriété CSS `fill`
 short-title: fill
 slug: Web/CSS/Reference/Properties/fill
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 9505c8d1370343fb65affa01657f27751ab59103
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`fill`** définit comment le contenu textuel SVG et l'intérieur des formes SVG sont remplis ou peints. Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("fill")}} de l'élément.
 
 Les zones à l'intérieur du contour de la forme ou du texte SVG sont peintes. Ce qui est «&nbsp;à l'intérieur&nbsp;» d'une forme n'est pas toujours évident. Les chemins qui définissent une forme peuvent se chevaucher. Les zones considérées comme «&nbsp;intérieures&nbsp;» à ces formes complexes sont précisées par la propriété ou l'attribut {{CSSxRef("fill-rule")}}.
 
-Si des sous-chemins sont ouverts, `fill` ferme le chemin avant de peindre, comme si une commande «&nbsp;closepath&nbsp;» était incluse pour relier le dernier point du sous-chemin au premier. Autrement dit, `fill` s'applique aux sous-chemins ouverts dans les éléments `path` (c'est-à-dire les sous-chemins sans commande closepath) et aux éléments `polyline`.
+Si des sous-chemins sont ouverts, `fill` ferme le chemin avant de peindre, comme si une commande «&nbsp;closepath&nbsp;» est incluse pour relier le dernier point du sous-chemin au premier. Autrement dit, `fill` s'applique aux sous-chemins ouverts dans les éléments `path` (c'est-à-dire les sous-chemins sans commande `closepath`) et aux éléments `polyline`.
 
 > [!NOTE]
 > La propriété `fill` ne s'applique qu'aux éléments {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}} et {{SVGElement("tspan")}} imbriqués dans un {{SVGElement("svg")}}. Elle ne s'applique pas aux autres éléments SVG, HTML ou pseudo-éléments.
@@ -45,7 +45,7 @@ fill: unset;
 
 ### Valeurs
 
-La propriété est définie comme l'un des mots-clés suivants&nbsp;:
+Cette propriété est définie comme une seule valeur parmi la liste suivante ou comme deux valeurs lorsqu'on utilise `<url>`&nbsp;:
 
 - `none`
   - : Aucun `fill` n'est appliqué&nbsp;; les zones à l'intérieur du contour, s'il y en a, sont transparentes.

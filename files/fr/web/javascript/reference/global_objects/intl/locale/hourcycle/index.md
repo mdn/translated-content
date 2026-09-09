@@ -48,6 +48,6 @@ console.log(locale.hourCycle); // "h12"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}
 - La méthode {{JSxRef("Intl.Locale.prototype.getHourCycles()")}}
 - [Extension Unicode des cycles horaires <sup>(angl.)</sup>](https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier) dans la spécification du langage de balisage des données de locale Unicode

@@ -3,10 +3,10 @@ title: Propriété CSS `offset`
 short-title: offset
 slug: Web/CSS/Reference/Properties/offset
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`offset`** définit toutes les propriétés nécessaires à l'animation d'un élément le long d'un chemin défini. Les propriétés de décalage permettent ensemble de définir une _transformation de décalage_, une [transformation](/fr/docs/Web/CSS/Guides/Transforms/Using) qui aligne un point dans un élément ({{CSSxRef("offset-anchor")}}) sur une _position de décalage_ ({{CSSxRef("offset-position")}}) sur un chemin ({{CSSxRef("offset-path")}}) à différents points le long du chemin ({{CSSxRef("offset-distance")}}) et, en option, fait pivoter l'élément ({{CSSxRef("offset-rotate")}}) pour suivre la direction du chemin.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`offset`** définit toutes les propriétés nécessaires à l'animation d'un élément le long d'un chemin défini. Les propriétés de décalage permettent ensemble de définir une _transformation de décalage_, une [transformation](/fr/docs/Web/CSS/Guides/Transforms/Using) qui aligne un point dans un élément ({{CSSxRef("offset-anchor")}}) sur une _position de décalage_ ({{CSSxRef("offset-position")}}) sur un chemin ({{CSSxRef("offset-path")}}) à différents points le long du chemin ({{CSSxRef("offset-distance")}}) et, en option, fait pivoter l'élément ({{CSSxRef("offset-rotate")}}) pour suivre la direction du chemin.
 
 > [!NOTE]
 > Dans les premières versions de la spécification, cette propriété était intitulée `motion`.

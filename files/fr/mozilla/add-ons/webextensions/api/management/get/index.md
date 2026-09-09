@@ -3,8 +3,6 @@ title: management.get()
 slug: Mozilla/Add-ons/WebExtensions/API/management/get
 ---
 
-{{AddonSidebar}}
-
 Récupère un objet {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} contenant des informations sur l'extension spécifiée.
 
 Cette API requière la [permission API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management"

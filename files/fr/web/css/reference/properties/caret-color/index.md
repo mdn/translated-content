@@ -3,7 +3,7 @@ title: Propriété CSS `caret-color`
 short-title: caret-color
 slug: Web/CSS/Reference/Properties/caret-color
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`caret-color`** définit la couleur du **curseur d'insertion**, parfois appelé **curseur de saisie**. Il s'agit du marqueur visible qui apparaît au point d'insertion où le prochain caractère tapé est ajouté ou où le prochain caractère supprimé est retiré.
@@ -63,7 +63,7 @@ caret-color: unset;
 
 ### Valeurs
 
-Cette propriété est définie comme une seule valeur `<color>` ou le mot-clé `auto`&nbsp;:
+Cette propriété est définie par une valeur unique choisie parmi la liste suivante&nbsp;:
 
 - `auto`
   - : En général, il se rapporte à [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor), la couleur ({{CSSxRef("color")}}) du texte qui est modifié.

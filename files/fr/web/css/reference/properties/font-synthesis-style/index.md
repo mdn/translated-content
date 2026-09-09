@@ -121,7 +121,7 @@ p {
 
 @supports not (font-synthesis-style: oblique-only) {
   body::before {
-    content: "Your browser doesn't support the 'oblique-only' value.";
+    content: "Votre navigateur ne prend pas en charge la valeur 'oblique-only'.";
     background-color: wheat;
     display: block;
     text-align: center;

@@ -3,7 +3,7 @@ title: Propriété CSS `dynamic-range-limit`
 short-title: dynamic-range-limit
 slug: Web/CSS/Reference/Properties/dynamic-range-limit
 l10n:
-  sourceCommit: 468c261821b7443db6fdb748f733f21186597501
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`dynamic-range-limit`** définit la luminance maximale autorisée pour le contenu <abbr>HDR</abbr> pour <i lang="en">High Dynamic Range</i>, signifiant Grande Plage Dynamique.
@@ -28,6 +28,8 @@ dynamic-range-limit: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie par une valeur unique choisie parmi la liste suivante&nbsp;:
 
 - `standard`
   - : Définit la luminance maximale comme le blanc de référence à Haute Plage Dynamique (<abbr>HDR</abbr>), qui correspond à la couleur CSS `white`.

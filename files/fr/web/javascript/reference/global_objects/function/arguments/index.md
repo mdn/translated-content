@@ -3,10 +3,10 @@ title: "Function : propriété arguments"
 short-title: arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 l10n:
-  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 > [!NOTE]
 > La propriété `arguments` des objets {{JSxRef("Function")}} est obsolète. La méthode recommandée pour accéder à l'objet `arguments` est de se référer à la variable {{JSxRef("Functions/arguments", "arguments")}} disponible dans les fonctions.
@@ -90,5 +90,5 @@ console.log("a retourné : " + g.arguments);
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Functions/arguments", "arguments")}}
+- L'objet natif {{JSxRef("Functions/arguments", "arguments")}}
 - [Les fonctions](/fr/docs/Web/JavaScript/Reference/Functions)

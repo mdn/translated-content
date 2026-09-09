@@ -3,7 +3,7 @@ title: Méthode de requête CONNECT
 short-title: CONNECT
 slug: Web/HTTP/Reference/Methods/CONNECT
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 44a853a7fce4ef042b6eeddc96f0a587f25704d3
 ---
 
 La méthode HTTP **`CONNECT`** demande à un·e {{Glossary("Proxy server", "proxy")}} d'établir un tunnel HTTP vers un serveur de destination et, en cas de succès, de transmettre aveuglément les données dans les deux sens jusqu'à la fermeture du tunnel.
@@ -17,7 +17,7 @@ Si un site web est derrière un proxy et que des règles réseau imposent que to
 - Le serveur proxy établit une connexion sécurisée avec le serveur pour le compte du client.
 - Une fois la connexion établie, le proxy continue de relayer le flux TCP entre le client et le serveur.
 
-En plus de permettre un accès sécurisé à des sites derrière des proxies, un tunnel HTTP permet de faire passer du trafic qui serait autrement restreint (SSH ou FTP) via le protocole HTTP(S).
+En plus de permettre un accès sécurisé à des sites derrière des proxies, un tunnel HTTP permet de faire passer du trafic qui est autrement restreint (SSH ou FTP) avec le protocole HTTP(S).
 
 `CONNECT` est une méthode «&nbsp;hop-by-hop&nbsp;»&nbsp;: les proxies ne transmettent la requête `CONNECT` que s'il y a un autre proxy en amont du serveur d'origine, car la plupart des serveurs d'origine n'implémentent pas `CONNECT`.
 
@@ -66,7 +66,7 @@ CONNECT <host>:<port> HTTP/1.1
 - `<host>`
   - : Un hôte qui peut être un nom d'hôte enregistré (par exemple, `example.com`) ou une adresse IP (IPv4, IPv6).
 - `<port>`
-  - : Un numéro de port en décimal (par exemple, `80`, `443`). Il n'y a pas de port par défaut, donc le client **doit** toujours en spécifier un.
+  - : Un numéro de port en décimal (par exemple, `80`, `443`). Il n'y a pas de port par défaut, donc le client **doit** toujours en définir un.
 
 ## Exemple
 
@@ -94,4 +94,4 @@ Proxy-Authorization: basic aGVsbG86d29ybGQ=
 - [En-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)
 - L'entrée de glossaire {{Glossary("Proxy server")}}
 - L'en-tête {{HTTPHeader("Proxy-Authorization")}}
-- [Utiliser SSH via un proxy HTTP <sup>(angl.)</sup>](https://www.dimoulis.net/posts/ssh-over-proxy/) sur dimoulis.net (2023)
+- [Utiliser SSH avec un mandataire HTTP <sup>(angl.)</sup>](https://www.dimoulis.net/posts/ssh-over-proxy/) sur dimoulis.net (2023)

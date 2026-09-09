@@ -102,4 +102,4 @@ En plus de la magnitude, il est important de considérer la _précision_ de vos 
 
 - [La prothèse d'émulation de `Number.EPSILON` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
 - [La prothèse d'émulation es-shims de `Number.EPSILON` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-constants)
-- L'objet {{JSxRef("Number")}}
+- L'objet natif {{JSxRef("Number")}}

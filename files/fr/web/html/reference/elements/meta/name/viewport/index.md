@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<meta name="viewport">`
 short-title: viewport
 slug: Web/HTML/Reference/Elements/meta/name/viewport
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 4c58f4735f986a91bee1b77e336143630df727a2
 ---
 
 La valeur **`viewport`** pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) d'un élément HTML {{HTMLElement("meta")}} donne des indications sur la façon dont la {{Glossary("viewport", "zone d'affichage")}} doit être dimensionnée.
@@ -54,13 +54,16 @@ La {{Glossary("viewport", "zone d'affichage")}} du navigateur est la zone de la 
 
 Certains appareils mobiles et autres écrans étroits affichent les pages dans une fenêtre ou une zone d'affichage virtuelle plus large que l'écran, puis réduisent le résultat pour l'adapter à la taille de l'écran. Les utilisateur·ice·s peuvent alors zoomer et se déplacer pour examiner de plus près différentes parties de la page. Par exemple, si un écran mobile a une largeur de 640px, les pages peuvent être affichées dans une zone d'affichage virtuelle de 980px, puis réduites pour s'adapter à l'espace de 640px. Cela est fait parce que toutes les pages ne sont pas optimisées pour le mobile et peuvent mal s'afficher (ou au moins sembler inadaptées) lorsqu'elles sont rendues avec une petite largeur de zone d'affichage. Cette zone d'affichage virtuelle permet d'améliorer l'apparence générale des sites non optimisés pour le mobile sur les appareils à écran étroit. Cependant, ce mécanisme n'est pas idéal pour les pages optimisées pour les écrans étroits à l'aide de [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries)&nbsp;: si la zone d'affichage virtuelle est de 980px, les requêtes média qui s'activent à 640px ou 480px ou moins ne sont jamais utilisées, ce qui limite l'efficacité de ces techniques de conception réactive. L'élément `<meta>` viewport permet d'atténuer ce problème de zone d'affichage virtuelle sur les appareils à écran étroit.
 
-Le paramètre le plus courant est le suivant, qui définit la zone d'affichage pour qu'elle corresponde à la largeur de l'appareil et affiche le contenu à un zoom de 100%&nbsp;:
+Le paramètre recommandé est la suivante, qui définit la zone d'affichage pour qu'elle corresponde à la largeur de l'appareil&nbsp;:
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width" />
 ```
 
-Les sites peuvent définir leur zone d'affichage sur une taille spécifique. Par exemple, la définition `"width=320, initial-scale=1"` peut être utilisée pour s'adapter précisément à un petit écran de téléphone en mode portrait. Cela peut poser problème lorsque le navigateur affiche une page à une taille plus grande. Pour résoudre ce problème, les navigateurs élargiront la largeur de la zone d'affichage si nécessaire pour remplir l'écran à l'échelle demandée. Cela est particulièrement utile sur les appareils à grand écran.
+> [!NOTE]
+> Inclure `initial-scale=1.0` était historiquement nécessaire pour éviter des comportements de zoom inattendus dans les anciens navigateurs mobiles. Bien que les navigateurs modernes n'exigent pas `initial-scale` pour résoudre ce comportement, `initial-scale` n'est pas entièrement redondant et reste utile lors de la définition de valeurs par défaut de mise à l'échelle personnalisées ou de largeurs de mise en page fixes.
+
+Les sites peuvent définir leur zone d'affichage sur une taille spécifique. Par exemple, la définition `"width=320, initial-scale=1"` peut être utilisée pour s'adapter précisément à un petit écran de téléphone en mode portrait. Cela peut poser problème lorsque le navigateur affiche une page à une taille plus grande. Pour résoudre ce problème, les navigateurs élargissent la largeur de la zone d'affichage si nécessaire pour remplir l'écran à l'échelle demandée. Cela est particulièrement utile sur les appareils à grand écran.
 
 Pour les pages qui définissent une échelle initiale ou maximale, cela signifie que la propriété `width` correspond en réalité à une largeur minimale de zone d'affichage. Par exemple, si votre mise en page nécessite au moins 500 pixels de largeur, vous pouvez utiliser le balisage suivant. Lorsque l'écran fait plus de 500 pixels de large, le navigateur élargit la zone d'affichage (plutôt que de zoomer) pour remplir l'écran&nbsp;:
 
@@ -91,9 +94,7 @@ L'exemple suivant indique au navigateur que la page doit être affichée à la l
 La valeur de `content` suivante utilise plusieurs mots-clés qui suggèrent au navigateur d'utiliser le mode plein écran, ainsi que `viewport-fit`, ce qui permet d'éviter les découpes d'affichage comme les encoches des appareils mobiles&nbsp;:
 
 ```html
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="viewport" content="width=device-width, viewport-fit=cover" />
 ```
 
 ### Effet des composants d'interface interactifs

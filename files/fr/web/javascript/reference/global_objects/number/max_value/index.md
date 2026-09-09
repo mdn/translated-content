@@ -63,4 +63,4 @@ if (num1 * num2 <= Number.MAX_VALUE) {
 
 - La propriété statique {{JSxRef("Number.MIN_VALUE")}}
 - La propriété statique {{JSxRef("Number.MAX_SAFE_INTEGER")}}
-- L'objet {{JSxRef("Number")}}
+- L'objet natif {{JSxRef("Number")}}

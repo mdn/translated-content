@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/style
 original_slug: Web/SVG/Attribute/style
 ---
 
-{{SVGRef}}
-
 L'attribut **`style`** définit les [informations de style](/fr/docs/Web/CSS) pour son élément. Il fonctionne de manière identique à [l'attribut `style` en HTML](/fr/docs/Web/HTML/Reference/Global_attributes/style).
 
 ## Context d'utilisation

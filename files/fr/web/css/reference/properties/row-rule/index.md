@@ -3,7 +3,7 @@ title: Propriété CSS `row-rule`
 short-title: row-rule
 slug: Web/CSS/Reference/Properties/row-rule
 l10n:
-  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 {{SeeCompatTable}}

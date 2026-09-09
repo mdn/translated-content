@@ -22,7 +22,7 @@ slug: Web/API/Force_Touch_events
 
 La propriété suivante est connue pour être disponible sur les objets évènement [`webkitmouseforcewillbegin`](/fr/docs/Web/API/Element/webkitmouseforcewillbegin_event), [`mousedown`](/fr/docs/Web/API/Element/mousedown_event), [`webkitmouseforcechanged`](/fr/docs/Web/API/Element/webkitmouseforcechanged_event), [`webkitmouseforcedown`](/fr/docs/Web/API/Element/webkitmouseforcedown_event), [`webkitmouseforceup`](/fr/docs/Web/API/Element/webkitmouseforceup_event), [`mousemove`](/fr/docs/Web/API/Element/mousemove_event) et [`mouseup`](/fr/docs/Web/API/Element/mouseup_event):
 
-- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}
+- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline}} {{readonlyinline}}
   - : La quantité de pression actuellement appliquée sur le trackpad / écran tactile.
 
 ## Constantes

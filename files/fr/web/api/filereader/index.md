@@ -71,7 +71,7 @@ Pour plus d'informations et d'exemples, consulter [utiliser des fichiers depuis 
 - {{domxref("FileReader.abort()")}}
   - : Cette méthode interrompt l'opération de lecture. Après avoir renvoyé une valeur, l'état `readyState` aura la valeur `DONE`.
 - {{domxref("FileReader.readAsArrayBuffer()")}}
-  - : Cette méthode démarre la lecture du contenu pour le blob indiqué. Une fois que la lecture est terminée, l'attribut `result` contient un objet {{domxref("ArrayBuffer")}} représentant les données du fichier.
+  - : Cette méthode démarre la lecture du contenu pour le blob indiqué. Une fois que la lecture est terminée, l'attribut `result` contient un objet {{jsxref("ArrayBuffer")}} représentant les données du fichier.
 - {{domxref("FileReader.readAsBinaryString()")}} {{non-standard_inline}}
   - : Cette méthode démarre la lecture du contenu pour le blob indiqué. Une fois que la lecture est terminée, l'attribut `result` contient les données binaires brutes sous la forme d'une chaîne de caractères.
 - {{domxref("FileReader.readAsDataURL()")}}

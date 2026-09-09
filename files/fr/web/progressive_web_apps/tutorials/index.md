@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8d202854ade7328f827da2951bc714455f78674f
 ---
 
-{{PWASidebar}}
-
 Cette page répertorie les tutoriels permettant d'apprendre à développer des applications web progressives (abbrégé <abbr title="Progressive Web Apps">PWA</abbr> en anglais pour «&nbsp;<i lang="en">Progressive Web Apps</i>&nbsp;»). Les tutoriels décrivent les étapes de la création d'une application, du début à la fin, en expliquant comment les différentes fonctionnalités de l'application sont mises en œuvre.
 
 - [Créer votre première PWA](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker)

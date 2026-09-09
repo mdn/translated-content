@@ -3,8 +3,6 @@ title: String.prototype.link()
 slug: Web/JavaScript/Reference/Global_Objects/String/link
 ---
 
-{{JSRef}}
-
 La méthode **`link()`** permet de créer une chaîne de caractères représentant un élément HTML {{HTMLElement("a")}}, ce qui permet d'afficher la chaîne de caractères comme un lien hypertexte vers une URL donnée.
 
 ## Syntaxe

@@ -3,12 +3,12 @@ title: "HTMLTableElement : méthode deleteTFoot()"
 short-title: deleteTFoot()
 slug: Web/API/HTMLTableElement/deleteTFoot
 l10n:
-  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
+  sourceCommit: ea061caed30f127a79157d07c538d26f01b8702b
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`deleteTFoot()`** de l'interface {{DOMxRef("HTMLTableElement")}} supprime l'élément HTML {{HTMLElement("tfoot")}} d'un tableau ({{HTMLElement("table")}}) donné.
+La méthode **`deleteTFoot()`** de l'interface {{DOMxRef("HTMLTableElement")}} supprime le premier élément {{HTMLElement("tfoot")}} enfant d'un tableau ({{HTMLElement("table")}}) donné, s'il en existe un.
 
 ## Syntaxe
 
@@ -60,7 +60,7 @@ Cet exemple utilise JavaScript pour supprimer le pied d'un tableau.
 ### JavaScript
 
 ```js
-let table = document.querySelector("table");
+const table = document.querySelector("table");
 table.deleteTFoot();
 ```
 
@@ -75,3 +75,9 @@ table.deleteTFoot();
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La méthode {{DOMxRef("HTMLTableElement.createTFoot()")}}
+- La méthode {{DOMxRef("HTMLTableElement.deleteCaption()")}}
+- La méthode {{DOMxRef("HTMLTableElement.deleteTHead()")}}

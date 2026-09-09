@@ -3,7 +3,7 @@ title: "Iterator : méthode windows()"
 short-title: windows()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/windows
 l10n:
-  sourceCommit: d43ba33e72afa135ce782e2c0ca19fe32a93bb13
+  sourceCommit: e316526e520d8163e9151dca8973eb777b5285e0
 ---
 
 {{SeeCompatTable}}
@@ -106,5 +106,5 @@ for (const sousChaine of sousChaines) {
 
 - [La prothèse d'émulation de `Iterator.prototype.windows` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-chunking)
 - [La prothèse d'émulation es-shims de `Iterator.prototype.windows` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
-- L'objet {{JSxRef("Iterator")}}
+- L'objet natif {{JSxRef("Iterator")}}
 - La méthode {{JSxRef("Iterator.prototype.chunks()")}}

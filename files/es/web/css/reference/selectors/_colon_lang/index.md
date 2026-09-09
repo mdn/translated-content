@@ -20,7 +20,11 @@ p:lang(en) {
 
 ### Sintaxis formal
 
-{{csssyntax}}
+```plain
+:lang(<language-code> [,<language-code> ]*) {
+  /* ... */
+}
+```
 
 ### Parámetro
 

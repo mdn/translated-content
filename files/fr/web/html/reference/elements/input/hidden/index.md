@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="hidden">`
 short-title: <input type="hidden">
 slug: Web/HTML/Reference/Elements/input/hidden
 l10n:
-  sourceCommit: 659af2b5da3a3bf4064e75c3e4b7624386bec54b
+  sourceCommit: 2066cc916dfdcbb782340bf0ce562b230e947cba
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`"hidden"`** permettent aux développeur·euse·s web d'inclure des données dans un formulaire qui ne sont pas accessibles visuellement aux utilisateur·ice·s lorsque le formulaire est envoyé. Par exemple, l'identifiant du contenu actuellement commandé ou modifié, ou un jeton de sécurité unique. Les champs masqués sont totalement invisibles dans la page rendue, mais sont tout de même envoyés comme n'importe quel autre champ de formulaire. Bien que les données ne soient pas présentées aux utilisateur·ice·s dans le contenu rendu, elles restent accessibles dans le code HTML et peuvent être modifiées par les utilisateur·ice·s à l'aide d'outils tels que les [outils de développement du navigateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
@@ -55,9 +55,13 @@ Les champs masqués ne participent pas à la validation des contraintes&nbsp;; i
 
 ## Exemples
 
+### Utiliser un identifiant d'enregistrement masqué
+
 Voyons comment nous pourrions implémenter une version du formulaire d'édition décrit précédemment (voir [Suivre les modifications apportées au contenu](#suivre_les_modifications_apportées_au_contenu)), en utilisant un champ masqué pour mémoriser l'identifiant de l'enregistrement modifié.
 
-Le HTML du formulaire d'édition peut ressembler un peu à ceci&nbsp;:
+#### HTML
+
+Le formulaire HTML à modifier ressemble à ceci&nbsp;:
 
 ```html
 <form>
@@ -78,9 +82,7 @@ Voici le contenu de mon meilleur billet, j'espère que ça vous plaît !
 </form>
 ```
 
-Ajoutons quelques éléments de mise en forme&nbsp;:
-
-```css
+```css hidden
 html {
   font-family: sans-serif;
 }
@@ -114,20 +116,24 @@ textarea {
 }
 ```
 
+```js hidden
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+```
+
 Le serveur affecte la valeur du champ masqué dont l'ID est `postID` à l'identifiant de l'article dans sa base de données avant d'envoyer le formulaire au navigateur de l'utilisateur·ice, et utilise cette information lorsque le formulaire est retourné pour savoir quel enregistrement de la base de données mettre à jour avec les informations modifiées. Aucun script n'est nécessaire dans le contenu pour gérer cela.
 
-La sortie ressemble à ceci&nbsp;:
+#### Résultat
 
-{{EmbedLiveSample("Exemples", "100%", 200)}}
-
-> [!NOTE]
-> Vous pouvez aussi trouver l'exemple sur GitHub (voir le [code source <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/forms/hidden-input-example/index.html), et aussi [le voir en direct <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)).
+{{EmbedLiveSample("Utiliser un identifiant d'enregistrement masqué", "100%", 200)}}
 
 Lors de l'envoi, les données du formulaire envoyées au serveur ressemblent à ceci&nbsp;:
 
 `title=Mon+meilleur+billet&content=Le+contenu+de+mon+meilleur+article.+J'espère+qu'il+vous+plaît!&postId=34657`
 
-Bien que le champ masqué soit totalement invisible, ses données sont tout de même envoyées.
+Bien que le champ masqué ne soit pas visible dans le formulaire, ses données sont tout de même envoyées.
 
 ## Résumé technique
 

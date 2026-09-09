@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`initial-letter`** définit la taille et l'enfoncement des lettrines descendantes, montantes et enfoncées. Cette propriété s'applique aux pseudo-éléments {{CSSxRef("::first-letter")}} et aux premiers enfants en incise des conteneurs de bloc.
+La propriété [CSS](/fr/docs/Web/CSS) **`initial-letter`** définit la taille et l'enfoncement des lettrines descendantes, montantes et enfoncées. Cette propriété s'applique aux pseudo-éléments {{CSSxRef("::first-letter")}} et aux premiers enfants en incise (<i lang="en">inline</i> en anglais) des conteneurs de bloc.
 
 ## Syntaxe
 

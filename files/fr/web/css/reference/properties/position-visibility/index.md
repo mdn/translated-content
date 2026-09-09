@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`position-visibility`** permet de masquer conditionnellement un élément positionné par ancre en fonction, par exemple, de son débordement par rapport à son élément contenant ou à la fenêtre d'affichage.
+La propriété [CSS](/fr/docs/Web/CSS) **`position-visibility`** permet de masquer conditionnellement un élément positionné par une ancre en fonction, par exemple, de son débordement par rapport à son élément contenant ou à la zone d'affichage.
 
 ## Syntaxe
 
@@ -34,19 +34,19 @@ Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 - `anchors-valid`
   - : Si la valeur de la propriété {{CSSxRef("position-anchor")}} de l'élément positionné ne pointe pas vers un élément d'ancrage valide, l'élément positionné est fortement masqué.
 - `anchors-visible`
-  - : Si l'ancre est complètement masquée, soit en débordant de son élément contenant (ou de la fenêtre d'affichage), soit en étant recouverte par d'autres éléments, l'élément positionné est fortement masqué.
+  - : Si l'ancre est complètement masquée, soit en débordant de son élément contenant (ou de la zone d'affichage), soit en étant recouverte par d'autres éléments, l'élément positionné est fortement masqué.
 - `no-overflow`
-  - : Si l'élément positionné commence à déborder de son élément contenant ou de la fenêtre d'affichage, il est fortement masqué.
+  - : Si l'élément positionné commence à déborder de son élément contenant ou de la zone d'affichage, il est fortement masqué.
 
 ## Description
 
-Dans certaines situations, vous pouvez ne pas vouloir afficher un élément positionné par ancre. Par exemple, si son ancre associée a été défilée hors de l'écran mais que l'élément positionné par ancre reste partiellement ou totalement visible, il peut être difficile de savoir à quoi il se rapporte et il occupe de l'espace inutilement, vous pouvez donc préférer le masquer complètement.
+Dans certaines situations, vous pouvez ne pas vouloir afficher un élément positionné par une ancre. Par exemple, si son ancre associée a été défilée hors de l'écran mais que l'élément positionné par une ancre reste partiellement ou totalement visible, il peut être difficile de savoir à quoi il se rapporte et il occupe de l'espace inutilement, vous pouvez donc préférer le masquer complètement.
 
-La propriété `position-visibility` peut être utilisée pour afficher l'élément positionné par ancre avec la valeur `always`, ou pour le masquer de façon conditionnelle dans certaines situations&nbsp;:
+La propriété `position-visibility` peut être utilisée pour afficher l'élément positionné par une ancre avec la valeur `always`, ou pour le masquer de façon conditionnelle dans certaines situations&nbsp;:
 
 - `anchors-visible`&nbsp;: L'élément d'ancrage associé est complètement masqué.
-- `anchors-valid`&nbsp;: La propriété `position-anchor` de l'élément positionné par ancre ne fait pas référence à un {{CSSxRef("anchor-name")}} valide défini sur un élément d'ancrage dans le même document.
-- `no-overflow`&nbsp;: L'élément positionné par ancre est partiellement ou totalement masqué.
+- `anchors-valid`&nbsp;: La propriété `position-anchor` de l'élément positionné par une ancre ne fait pas référence à un {{CSSxRef("anchor-name")}} valide défini sur un élément d'ancrage dans le même document.
+- `no-overflow`&nbsp;: L'élément positionné par une ancre est partiellement ou totalement masqué.
 
 Lorsqu'un élément est masqué à cause de `position-visibility`, on dit qu'il est **fortement masqué**. Cela signifie qu'il se comporte comme si lui-même et ses éléments descendants ont une valeur {{CSSxRef("visibility")}} de `hidden`, quelle que soit leur valeur de visibilité réelle.
 
@@ -64,7 +64,7 @@ Lorsqu'un élément est masqué à cause de `position-visibility`, on dit qu'il 
 
 ### Utilisation simple
 
-Cet exemple permet de changer la valeur de la propriété `position-visibility` d'un élément positionné par ancre pour démontrer les effets de chaque valeur.
+Cet exemple permet de changer la valeur de la propriété `position-visibility` d'un élément positionné par une ancre pour démontrer les effets de chaque valeur.
 
 #### HTML
 
@@ -147,7 +147,7 @@ Nous définissons deux éléments HTML {{HTMLElement("div")}}&nbsp;: un élémen
 </form>
 ```
 
-Le HTML inclut également du texte factice pour rendre le contenu plus grand que la fenêtre d'affichage, nécessitant ainsi un défilement. Nous avons également inclus un {{HTMLElement("fieldset")}} avec un groupe de [boutons radio](/fr/docs/Web/HTML/Reference/Elements/input/radio) avec différentes valeurs de `position-visibility`. Le balisage pour ceux-ci n'est pas affiché pour des raisons de concision.
+Le HTML inclut également du texte factice pour rendre le contenu plus grand que la zone d'affichage, nécessitant ainsi un défilement. Nous avons également inclus un {{HTMLElement("fieldset")}} avec un groupe de [boutons radio](/fr/docs/Web/HTML/Reference/Elements/input/radio) avec différentes valeurs de `position-visibility`. Le balisage pour ceux-ci n'est pas affiché pour des raisons de concision.
 
 #### CSS
 
@@ -220,7 +220,7 @@ function definirVisibiliteDePosition(e) {
 
 #### Résultat
 
-Sélectionnez différentes valeurs de `position-visibility` puis faites défiler la page vers le haut et vers le bas pour voir leurs effets. Avec `position-visibility: always`, l'élément positionné n'est pas masqué. Avec `position-visibility: anchors-visible`, l'élément positionné n'est visible que lorsque l'ancre est partiellement ou entièrement à l'écran. Avec `position-visibility: no-overflow`, l'élément positionné est masqué dès qu'il commence à déborder de la fenêtre d'affichage.
+Sélectionnez différentes valeurs de `position-visibility` puis faites défiler la page vers le haut et vers le bas pour voir leurs effets. Avec `position-visibility: always`, l'élément positionné n'est pas masqué. Avec `position-visibility: anchors-visible`, l'élément positionné n'est visible que lorsque l'ancre est partiellement ou entièrement à l'écran. Avec `position-visibility: no-overflow`, l'élément positionné est masqué dès qu'il commence à déborder de la zone d'affichage.
 
 {{EmbedLiveSample("Utilisation simple", "100%", 180)}}
 
@@ -238,6 +238,6 @@ Sélectionnez différentes valeurs de `position-visibility` puis faites défiler
 - La propriété {{CSSxRef("position-anchor")}}
 - La propriété {{CSSxRef("position")}}
 - La propriété {{CSSxRef("position-area")}}
-- Le module [de positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
-- Le guide [d'utilisation du positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
+- Le module [de positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
+- Le guide [d'utilisation du positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
 - Le guide [des options de repli et de masquage conditionnel en cas de débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)

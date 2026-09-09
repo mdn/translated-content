@@ -68,5 +68,5 @@ Voir {{JSxRef("parseFloat()")}} pour plus de détails et d'exemples.
 
 - [La prothèse d'émulation de `Number.parseFloat` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
 - [La prothèse d'émulation es-shims de `Number.parseFloat` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.parsefloat)
-- L'objet {{JSxRef("Number")}}
+- L'objet natif {{JSxRef("Number")}}
 - La fonction native {{JSxRef("parseFloat()")}}

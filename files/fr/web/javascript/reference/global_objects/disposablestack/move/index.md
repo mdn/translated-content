@@ -184,5 +184,5 @@ class PluginHost {
 ## Voir aussi
 
 - [Gestion des ressources JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
-- L'objet {{JSxRef("DisposableStack")}}
+- L'objet natif {{JSxRef("DisposableStack")}}
 - La méthode {{JSxRef("DisposableStack.prototype.dispose()")}}

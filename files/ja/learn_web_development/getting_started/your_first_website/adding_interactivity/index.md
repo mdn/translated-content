@@ -32,7 +32,7 @@ JavaScript は、ウェブサイトに対話性を追加するプログラミン
 
 ## JavaScript とは何か
 
-{{Glossary(「JavaScript」)}}は本格的なプログラミング言語であり、**変数**、**ループ**、**関数**など、他のプログラミング言語で見かける（あるいは少なくとも耳にしたことがある）ような、プログラミングの定番機能をすべて含んでいます。
+{{Glossary("JavaScript")}} は本格的なプログラミング言語であり、**変数**、**ループ**、**関数**など、他のプログラミング言語で見かける（あるいは少なくとも耳にしたことがある）ような、プログラミングの定番機能をすべて含んでいます。
 
 JavaScript は、ウェブページで使用される場合（それ以外にも使用できますが）、一般的に次のように動作します。
 
@@ -88,7 +88,7 @@ listItems.forEach((item) => {
 
 ## "Hello world!" の手順を追って説明
 
-JavaScript で記述を始めるにあたって、サンプルウェブサイトに _Hello world!_ の例を追加する手順を順を追って追ってみましょう。（[_Hello world!_](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) は、プログラミング入門の標準例です。）
+JavaScript で記述を始めるにあたって、サンプルウェブサイトに _Hello world!_ の例を追加する手順を順を追って追ってみましょう。（[_Hello world!_](https://ja.wikipedia.org/wiki/Hello_world) は、プログラミング入門の標準例です。）
 
 > [!WARNING]
 > これまでこのコースに沿って進めてきていない場合は、[このサンプルコードをダウンロードして](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/main)作業を進めてください。

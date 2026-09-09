@@ -3,10 +3,8 @@ title: Propriété CSS `font-width`
 short-title: font-width
 slug: Web/CSS/Reference/Properties/font-width
 l10n:
-  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
+  sourceCommit: f8759faac983abbcd8276fd45ae881bb39efdf7a
 ---
-
-{{SeeCompatTable}}
 
 > [!NOTE]
 > La propriété `font-width` est le remplacement moderne de {{CSSxRef("font-stretch")}}, qui est un alias hérité. Bien que `font-width` soit le nom préféré dans la spécification, `font-stretch` bénéficie actuellement d'une compatibilité plus large avec les navigateurs. Consultez [l'exemple de repli](#fournir_un_repli_pour_font-stretch) et le tableau de [compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails.

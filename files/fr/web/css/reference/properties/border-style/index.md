@@ -3,10 +3,10 @@ title: Propriété CSS `border-style`
 short-title: border-style
 slug: Web/CSS/Reference/Properties/border-style
 l10n:
-  sourceCommit: a06cf3dca37bb7da1d5e5ad98c5d15a10dde3e8c
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-style`** permet de définir le style de ligne pour les quatre côtés de la bordure d'un élément.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-style`** permet de définir le style de ligne pour les quatre côtés de la bordure d'un élément.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: border-style")}}
 

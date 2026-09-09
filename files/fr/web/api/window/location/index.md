@@ -3,10 +3,10 @@ title: "Window : propriété location"
 short-title: location
 slug: Web/API/Window/location
 l10n:
-  sourceCommit: c053b4b3bb0f34736e9f4402d4254830670af723
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 La propriété en lecture seule **`location`** de l'interface {{DOMxRef("Window")}} retourne un objet {{DOMxRef("Location")}} contenant des informations sur l'emplacement actuel du document.
 
@@ -28,7 +28,7 @@ console.log(location); // affiche "https://developer.mozilla.org/fr/docs/Web/API
 
 ### Exemple 1 : naviguer sur une nouvelle page
 
-Lorsqu'une nouvelle valeur est affectée à l'objet `location`, un document sera chargé en utilisant l'URL comme si `location.assign()` avait été invoquée avec l'URL modifiée.
+Lorsqu'une nouvelle valeur est affectée à l'objet `location`, un document est chargé en utilisant l'URL comme si `location.assign()` a été invoquée avec l'URL modifiée.
 
 Notez que [les indicateurs de bac à sable relatifs à la navigation <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate) peuvent entraîner une exception et empêcher la navigation.
 
@@ -45,7 +45,7 @@ location.reload();
 
 ### Exemple 3
 
-Dans cet exemple, on recharge la page avec la méthode [`replace()`](/fr/docs/Web/API/Location/replace) afin d'insérer la valeur de `location.pathname` dans l'ancre&nbsp;:
+Dans cet exemple, on recharge la page avec la méthode {{DOMxRef("Location/replace", "replace()")}} afin d'insérer la valeur de `location.pathname` dans l'ancre&nbsp;:
 
 ```js
 function reloadPageWithHash() {
@@ -82,7 +82,7 @@ function sendData(sData) {
 // Dans le HTML: <button onclick="sendData('Des données');">Envoyer des données</button>
 ```
 
-On ajoutera `"?Des%20données"` à l'URL courante qui sera alors envoyée au serveur. Si aucune action n'est entreprise par le serveur, le document courant est rechargé avec la chaîne de recherche modifiée.
+On ajoutera `"?Des%20données"` à l'URL courante qui est alors envoyée au serveur. Si aucune action n'est entreprise par le serveur, le document courant est rechargé avec la chaîne de caractères de recherche modifiée.
 
 ### Exemple 6 : utiliser les marques-pages sans changer la propriété `hash`
 

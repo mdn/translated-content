@@ -3,10 +3,10 @@ title: Propriété CSS `border-width`
 short-title: border-width
 slug: Web/CSS/Reference/Properties/border-width
 l10n:
-  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-width`** permet de définir l'épaisseur de la bordure d'un élément.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-width`** permet de définir l'épaisseur de la bordure d'un élément.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: border-width")}}
 

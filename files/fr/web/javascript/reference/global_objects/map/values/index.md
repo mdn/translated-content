@@ -66,5 +66,5 @@ console.log(mapIter.next().value); // "licorne"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Map.prototype.entries()")}}
-- L'objet {{JSxRef("Map.prototype.keys()")}}
+- L'objet natif {{JSxRef("Map.prototype.entries()")}}
+- L'objet natif {{JSxRef("Map.prototype.keys()")}}

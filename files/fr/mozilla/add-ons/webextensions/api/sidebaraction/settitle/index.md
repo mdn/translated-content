@@ -3,8 +3,6 @@ title: sidebarAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle
 ---
 
-{{AddonSidebar}}
-
 Définit le titre de la barre latérale. Le titre est affiché n'importe où dans les barres latérales du navigateur. Par exemple, Firefox l'affichera dans le menu "Affichage > Barre latérale". Il est également affiché en haut de la barre latérale lorsque la barre latérale est ouverte.
 
 ## Types de titres

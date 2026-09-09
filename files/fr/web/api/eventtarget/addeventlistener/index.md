@@ -3,7 +3,7 @@ title: "EventTarget : méthode addEventListener()"
 short-title: addEventListener()
 slug: Web/API/EventTarget/addEventListener
 l10n:
-  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
+  sourceCommit: 26fb7eaa7b398a35c2463fa15ab6ccfa46a9e06d
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}

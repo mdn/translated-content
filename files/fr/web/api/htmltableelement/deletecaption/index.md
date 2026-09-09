@@ -3,12 +3,12 @@ title: "HTMLTableElement : méthode deleteCaption()"
 short-title: deleteCaption()
 slug: Web/API/HTMLTableElement/deleteCaption
 l10n:
-  sourceCommit: 0b5859108411e47d228a4bb9f30a5556ab17f63c
+  sourceCommit: ea061caed30f127a79157d07c538d26f01b8702b
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`deleteCaption()`** de l'interface {{DOMxRef("HTMLTableElement")}} supprime l'élément HTML {{HTMLElement("caption")}} d'un tableau ({{HTMLElement("table")}}) donné. S'il n'y a pas d'élément `<caption>` associé au tableau, cette méthode ne fait rien.
+La méthode **`deleteCaption()`** de l'interface {{DOMxRef("HTMLTableElement")}} supprime le premier élément {{HTMLElement("caption")}} enfant d'un tableau ({{HTMLElement("table")}}) donné, s'il en existe un.
 
 ## Syntaxe
 
@@ -33,7 +33,7 @@ Cet exemple utilise JavaScript pour supprimer la légende d'un tableau.
 ```html
 <table>
   <caption>
-    Cette légende sera supprimée&nbsp;!
+    Cette légende est supprimée&nbsp;!
   </caption>
   <tbody>
     <tr>
@@ -51,7 +51,7 @@ Cet exemple utilise JavaScript pour supprimer la légende d'un tableau.
 ### JavaScript
 
 ```js
-let table = document.querySelector("table");
+const table = document.querySelector("table");
 table.deleteCaption();
 ```
 
@@ -66,3 +66,9 @@ table.deleteCaption();
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La méthode {{DOMxRef("HTMLTableElement.createCaption()")}}
+- La méthode {{DOMxRef("HTMLTableElement.deleteTFoot()")}}
+- La méthode {{DOMxRef("HTMLTableElement.deleteTHead()")}}

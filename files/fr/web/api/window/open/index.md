@@ -3,10 +3,10 @@ title: "Window : méthode open()"
 short-title: open()
 slug: Web/API/Window/open
 l10n:
-  sourceCommit: 7e8e1764410fa1871549d9961c2375389b9d55eb
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 La méthode **`open()`** de l'interface {{DOMxRef("Window")}} charge une ressource indiquée dans un contexte de navigation (onglet, fenêtre ou {{HTMLElement("iframe")}}) nouveau ou existant, avec un nom donné.
 
@@ -30,7 +30,7 @@ open(url, target, windowFeatures)
     Le nom peut être utilisé comme valeur pour l'attribut `target` d'un élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a#target) ou [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form#target).
 
 - `windowFeatures` {{Optional_Inline}}
-  - : Une chaîne de caractères contenant une liste de fonctionnalités de fenêtre, séparées par des virgules, de la forme `nom=valeur`. Les valeurs booléennes peuvent être définies sur true en utilisant l'une des options suivantes&nbsp;: `nom`, `nom=yes`, `nom=true` ou `nom=n` où `n` est un entier non nul. Ces fonctionnalités incluent des options telles que la taille et le positionnement par défaut de la fenêtre, s'il faut ouvrir une fenêtre popup minimale, etc. Les options suivantes sont prises en charge&nbsp;:
+  - : Une chaîne de caractères contenant une liste de fonctionnalités de fenêtre, séparées par des virgules, de la forme `nom=valeur`. Les valeurs booléennes peuvent être définies sur true en utilisant l'une des options suivantes&nbsp;: `nom`, `nom=yes`, `nom=true` ou `nom=n` où `n` est un entier non nul. Ces fonctionnalités incluent des options telles que la taille et le positionnement par défaut de la fenêtre, s'il faut ouvrir une fenêtre intrusive (<i lang="en">popup</i> en anglais) minimale, etc. Les options suivantes sont prises en charge&nbsp;:
     - `attributionsrc` {{Deprecated_Inline}}
       - : Indique que vous souhaitez que le navigateur envoie un en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} avec l'appel à `open()`. Cet appel doit être effectué avec une {{Glossary("Transient_activation", "activation transitoire")}} (c'est-à-dire à l'intérieur d'un gestionnaire d'évènements d'interaction utilisateur·ice tel que `click`), dans les cinq secondes suivant l'interaction de l'utilisateur·ice. Côté serveur, c'est utilisé pour déclencher l'envoi d'un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} dans la réponse pour compléter l'enregistrement d'une source d'attribution.
 
@@ -270,7 +270,7 @@ Il est préférable d'éviter de recourir à `window.open()` pour plusieurs rais
 - Les utilisateur·ice·s peuvent utiliser les fonctionnalités intégrées du navigateur ou des extensions pour choisir d'ouvrir un lien dans une nouvelle fenêtre, dans la même fenêtre, dans un nouvel onglet, dans le même onglet ou en arrière-plan. Forcer l'ouverture à se produire d'une manière spécifique, en utilisant `window.open()`, risque de les perturber et de ne pas respecter leurs habitudes.
 - Les fenêtres affichées par dessus le contenu n'ont pas de barre de menus, alors que les nouveaux onglets utilisent l'interface utilisateur de la fenêtre du navigateur&nbsp;; ainsi, de nombreux utilisateur·ice·s préfèrent la navigation par onglets, car l'interface reste stable.
 
-### Ne jamais utiliser `window.open()` en ligne dans le HTML
+### Ne jamais utiliser `window.open()` en incise dans le HTML
 
 Évitez `<a href="#" onclick="window.open(…);">` ou `<a href="javascript:window\.open(…)" …>`.
 

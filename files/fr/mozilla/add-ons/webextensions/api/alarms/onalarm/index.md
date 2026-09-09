@@ -3,8 +3,6 @@ title: alarms.onAlarm
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm
 ---
 
-{{AddonSidebar}}
-
 Cet évènement est déclenché lorsque l'alarme se déclenche.
 
 ## Syntaxe

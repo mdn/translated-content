@@ -3,8 +3,6 @@ title: Reflect.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 ---
 
-{{JSRef}}
-
 la méthode statique **`Reflect.setPrototypeOf()`** est semblable à la méthode {{jsxref("Object.setPrototypeOf()")}} (exception faite de la valeur de retour). Elle permet de définir le prototype (c'est-à-dire la propriété interne `[[Prototype]]`) d'un objet donné avec un autre objet ou {{jsxref("null")}}. Cette méthode renvoie `true` si l'opération a réussi et `false` sinon.
 
 {{InteractiveExample("JavaScript Demo: Reflect.setPrototypeOf()")}}

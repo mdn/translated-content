@@ -3,10 +3,10 @@ title: Propriété CSS `box-flex`
 short-title: box-flex
 slug: Web/CSS/Reference/Properties/box-flex
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 > [!WARNING]
 > Cette propriété est utilisée pour contrôler certaines parties du modèle de boîtes XUL. Elle ne correspond ni à l'ancienne version de la spécification pour `box-flex` ni au comportement de `-webkit-box-flex`. Voir la page [Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) pour plus d'informations sur ce qui doit être utilisé à la place.

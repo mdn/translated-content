@@ -197,8 +197,6 @@ nsIDOMTextMetrics measureText(
 
 ### mozDrawText()
 
-{{ deprecated_header }}
-
 繪製文字使用由`mozTextStyle`屬性的文字樣式。文本當前的填充顏色被用來當做文字顏色。
 
 > [!NOTE]
@@ -226,8 +224,6 @@ ctx.mozDrawText("Sample String");
 這個範例將文字「Sample String」繪製到畫布（canvas）上。
 
 ### mozMeasureText()
-
-{{ deprecated_header }}
 
 返回寬度，像素值，指定文字
 

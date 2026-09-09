@@ -3,10 +3,10 @@ title: Propriété CSS `scroll-margin-inline`
 short-title: scroll-margin-inline
 slug: Web/CSS/Reference/Properties/scroll-margin-inline
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`scroll-margin-inline`** définit les marges de défilement d'un élément dans la dimension en ligne.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`scroll-margin-inline`** définit les marges de défilement d'un élément dans la dimension en incise.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: scroll-margin-inline")}}
 
@@ -191,10 +191,10 @@ Enfin, nous définissons les valeurs de marge de défilement, une différente po
 }
 ```
 
-Cela signifie que lorsque vous faites défiler les éléments enfants du milieu, le défilement s'accroche à `1rem` en dehors du bord de fin en ligne du deuxième `<div>`, et à `2rem` en dehors du bord de fin en ligne du troisième `<div>`.
+Cela signifie que lorsque vous faites défiler les éléments enfants du milieu, le défilement s'accroche à `1rem` en dehors du bord de fin en incise du deuxième `<div>`, et à `2rem` en dehors du bord de fin en incise du troisième `<div>`.
 
 > [!NOTE]
-> Ici, nous définissons `scroll-margin` sur le début _et_ la fin de l'axe en ligne (x dans notre cas), mais seul le bord de fin est vraiment pertinent. Il est tout aussi efficace de ne définir une marge de défilement que sur ce bord, par exemple avec `scroll-margin-inline: 0 1rem`, ou `scroll-margin-inline-end: 1rem`.
+> Ici, nous définissons `scroll-margin` sur le début _et_ la fin de l'axe en incise (x dans notre cas), mais seul le bord de fin est vraiment pertinent. Il est tout aussi efficace de ne définir une marge de défilement que sur ce bord, par exemple avec `scroll-margin-inline: 0 1rem`, ou `scroll-margin-inline-end: 1rem`.
 
 #### Résultat
 

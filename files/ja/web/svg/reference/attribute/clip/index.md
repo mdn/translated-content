@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{deprecated_header}}
-
 **`clip`** 属性は、要素の表示領域を定義します。代わりに {{svgattr("clip-path")}} を使用してください。
 
 > [!NOTE]

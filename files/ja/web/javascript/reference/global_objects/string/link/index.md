@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{Deprecated_Header}}
-
 **`link()`** は {{jsxref("String")}} 値のメソッドで、この文字列を {{HTMLElement("a")}} 要素に埋め込み (`<a href="...">str</a>`)、他の URL へのハイパーテキストリンクとして使用される文字列を生成します。
 
 > [!NOTE]

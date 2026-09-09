@@ -4,8 +4,6 @@ slug: Web/HTML/Reference/Elements/xmp
 original_slug: Web/HTML/Element/xmp
 ---
 
-{{Deprecated_Header}}
-
 ## Resumen
 
 El elemento HTML example element \<xmp> dibuja texto entre las etiquetas de inicio y fin sin interpretar el HTML que se encuentra en medio y lo muestra usando un tipo de letra monoespaciada . La especificación de HTML2 recomendaba que que esta debería de ser dibujada suficientemente amplia para permitir 80 caracteres por línea .

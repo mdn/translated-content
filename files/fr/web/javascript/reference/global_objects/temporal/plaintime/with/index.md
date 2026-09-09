@@ -63,7 +63,7 @@ Pour plus d'exemples, consultez la documentation des propriétés individuelles 
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainTime")}}
 - La méthode statique {{JSxRef("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}
 - La méthode {{JSxRef("Temporal/PlainTime/add", "Temporal.PlainTime.prototype.add()")}}
 - La méthode {{JSxRef("Temporal/PlainTime/subtract", "Temporal.PlainTime.prototype.subtract()")}}

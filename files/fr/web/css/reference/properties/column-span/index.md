@@ -148,5 +148,5 @@ h2 {
 ## Voir aussi
 
 - [Étendre et équilibrer les colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns)
-- [Éléments en ligne](/fr/docs/Glossary/Inline-level_content)
+- [Éléments en incise](/fr/docs/Glossary/Inline-level_content)
 - L'interface API {{DOMxRef("HTMLSpanElement")}}

@@ -2,7 +2,7 @@
 title: Event
 slug: Web/API/Event
 l10n:
-  sourceCommit: a1b98defe244f3bd4aa5087a4a20eb862b0663d9
+  sourceCommit: 91b5a448a517239876a4bc92640bbbf29e30b106
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
@@ -97,7 +97,7 @@ Notez que l'ensemble des interfaces d'évènements ont un nom qui termine par _E
 - {{DOMxRef("Event.target")}} {{ReadOnlyInline}}
   - : Une référence vers l'objet auquel l'évènement a été initialement envoyé.
 - {{DOMxRef("Event.timeStamp")}} {{ReadOnlyInline}}
-  - : L'instant auquel l'évènement a été créé (en millisecondes). Selon la spécification, cette valeur correspond au temps écoulé depuis l'époque Unix, mais en pratique, la définition varie selon les navigateurs. De plus, il est prévu de remplacer ce type par {{DOMxRef("DOMHighResTimeStamp")}}.
+  - : Un objet {{domxref("DOMHighResTimeStamp")}} représentant le moment où l'évènement a été créé, mesuré en millisecondes par rapport à l'origine temporelle de l'objet global pertinent.
 - {{DOMxRef("Event.type")}} {{ReadOnlyInline}}
   - : Le nom identifiant le type de l'évènement.
 
@@ -108,7 +108,7 @@ Notez que l'ensemble des interfaces d'évènements ont un nom qui termine par _E
 - {{DOMxRef("Event.explicitOriginalTarget")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : La cible originale explicite de l'évènement.
 - {{DOMxRef("Event.originalTarget")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : La cible originale de l'évènement, avant tout retargeting.
+  - : La cible originale de l'évènement, avant tout changement de cible.
 - {{DOMxRef("Event.returnValue")}} {{Deprecated_Inline}}
   - : Propriété historique encore supportée pour garantir la compatibilité des sites existants. Utilisez plutôt {{DOMxRef("Event.preventDefault()")}} et {{DOMxRef("Event.defaultPrevented")}}.
 - {{DOMxRef("Event.composed", "Event.scoped")}} {{ReadOnlyInline}} {{Deprecated_Inline}}

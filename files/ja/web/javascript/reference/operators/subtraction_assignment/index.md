@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-**減算代入演算子 (`*=`)** は、2 つのオペランドで[減算](/ja/docs/Web/JavaScript/Reference/Operators/Subtraction)を行い、結果を左オペランドに代入します。
+**減算代入演算子 (`-=`)** は、2 つのオペランドで[減算](/ja/docs/Web/JavaScript/Reference/Operators/Subtraction)を行い、結果を左オペランドに代入します。
 
 {{InteractiveExample("JavaScript デモ: 減算代入演算子 (-=)")}}
 

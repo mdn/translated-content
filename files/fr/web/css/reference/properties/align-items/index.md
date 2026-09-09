@@ -3,7 +3,7 @@ title: Propriété CSS `align-items`
 short-title: align-items
 slug: Web/CSS/Reference/Properties/align-items
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`align-items`** permet de définir la valeur de {{CSSxRef("align-self")}} sur tous les enfants directs en groupe. En flexbox, elle contrôle l'alignement des éléments sur {{Glossary("cross axis", "l'axe transversal")}}. En mise en page grille, elle contrôle l'alignement des éléments sur l'axe de bloc à l'intérieur de leurs {{Glossary("grid areas", "zones de grille")}}.
@@ -124,7 +124,7 @@ Cette propriété est définie comme un ou deux des mot-clés suivants&nbsp;:
   - : Les éléments flexibles sont étirés afin que la taille de la boîte de marge sur l'axe en bloc est la même que celle de la ligne sur laquelle l'élément se trouve, tout en respectant les contraintes de hauteur et de largeur.
 
 - `anchor-center`
-  - : Dans le cas des éléments [positionnés par ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning), aligne les éléments au centre de l'élément ancre associé dans la direction de bloc. Voir [Centrer sur l'ancre avec `anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_avec_anchor-center).
+  - : Dans le cas des éléments [positionnés par une ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning), aligne les éléments au centre de l'élément ancre associé dans la direction de bloc. Voir [Centrer sur l'ancre avec `anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_avec_anchor-center).
 
 - `safe`
   - : Ce mot-clé est utilisé avec un mot-clé d'alignement. Si la taille d'un des éléments dépasse du conteneur avec la valeur d'alignement indiquée, l'alignement est réalisé avec la valeur `start` à la place.

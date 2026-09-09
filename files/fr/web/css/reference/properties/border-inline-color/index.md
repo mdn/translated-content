@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-color`** définit la couleur des bordures logiques en ligne d'un élément, qui correspond à une bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond aux propriétés {{CSSxRef("border-top-color")}} et {{CSSxRef("border-bottom-color")}}, ou {{CSSxRef("border-right-color")}} et {{CSSxRef("border-left-color")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
+La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-color`** définit la couleur des bordures logiques en incise (<i lang="en">inline</i> en anglais) d'un élément, qui correspond à une bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond aux propriétés {{CSSxRef("border-top-color")}} et {{CSSxRef("border-bottom-color")}}, ou {{CSSxRef("border-right-color")}} et {{CSSxRef("border-left-color")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
 
 La couleur de la bordure dans l'autre dimension peut être définie avec {{CSSxRef("border-block-color")}}, qui définit {{CSSxRef("border-block-start-color")}} et {{CSSxRef("border-block-end-color")}}.
 

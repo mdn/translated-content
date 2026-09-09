@@ -3,7 +3,7 @@ title: VRDisplay.requestAnimationFrame()
 slug: Web/API/VRDisplay/requestAnimationFrame
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}
 
 **`requestAnimationFrame()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 {{domxref("Window.requestAnimationFrame")}} の特別な実装です．このメソッドは `VRDisplay` がレンダリングされている間、新しいフレームが来るたびに呼び出されるコールバック関数を含みます。
 

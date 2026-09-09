@@ -3,7 +3,7 @@ title: "Attribut HTML : `autocomplete`"
 short-title: autocomplete
 slug: Web/HTML/Reference/Attributes/autocomplete
 l10n:
-  sourceCommit: d4233d098f7c9c375716542aab8637122bb10edf
+  sourceCommit: 87adaa5384b1015690f3435ce0ba64ac097764eb
 ---
 
 L'attribut `autocomplete` permet aux développeur·euse·s web de définir si, et dans quelle mesure, {{Glossary("user agent", "l'agent utilisateur")}} est autorisé à fournir une aide automatisée pour remplir les champs d'un formulaire, ainsi que d'indiquer au navigateur le type d'information attendu dans le champ.
@@ -54,7 +54,7 @@ Si la même liste de jetons est utilisée dans plusieurs contrôles de formulair
 
 Certains jetons peuvent être utilisés plusieurs fois avec des valeurs attendues différentes, comme le jeton `postal-code` dans un formulaire contenant à la fois une adresse de livraison et de facturation. Inclure plusieurs jetons différents dans une liste séparée par des espaces permet d'attribuer des valeurs d'autocomplétion uniques&nbsp;: par exemple, `autocomplete="shipping postal-code"` et `autocomplete="billing postal-code"`.
 
-Certaines valeurs d'autocomplétion peuvent devoir être réutilisées plusieurs fois. Par exemple, un formulaire peut contenir plusieurs adresses de livraison et donc plusieurs occurrences de `"shipping postal-code"` tout en attendant des valeurs différentes. Pour rendre la valeur unique, le premier jeton de la liste peut être un jeton `section-*`, où les huit premiers caractères sont toujours "section-", suivis d'une chaîne de caractères alphanumérique. Tous les champs de formulaire ayant le même jeton `section-*` appartiennent au même **groupe nommé**.
+Certaines valeurs d'autocomplétion peuvent devoir être réutilisées plusieurs fois. Par exemple, un formulaire peut contenir plusieurs adresses de livraison et donc plusieurs occurrences de `"shipping postal-code"` tout en attendant des valeurs différentes. Pour rendre la valeur unique, le premier jeton de la liste peut être un jeton `section-*`, où les huit premiers caractères sont toujours «&nbsp;section-&nbsp;», suivis d'une chaîne de caractères alphanumérique. Tous les champs de formulaire ayant le même jeton `section-*` appartiennent au même **groupe nommé**.
 
 Si vous ajoutez l'attribut `autocomplete` sur un champ {{HTMLElement("input/hidden", "hidden")}} (`<input type="hidden">`), sa valeur doit être une liste ordonnée de jetons séparés par des espaces&nbsp;; les mots-clés `on` et `off` ne sont pas autorisés.
 

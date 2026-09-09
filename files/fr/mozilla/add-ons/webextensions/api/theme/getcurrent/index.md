@@ -3,8 +3,6 @@ title: theme.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/getCurrent
 ---
 
-{{AddonSidebar}}
-
 Retourne le theme utilisé actuellement sous la forme d'un objet {{WebExtAPIRef("theme.Theme", "Theme")}}. Les arguments disponible dans l'objet couleur sont listés dans les [propriétés de la couleur](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#colors).
 
 Il s'agit d'une fonction asynchrone qui renvoie un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

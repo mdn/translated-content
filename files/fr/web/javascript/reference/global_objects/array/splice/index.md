@@ -217,7 +217,7 @@ console.log(objetSimilaireTableau);
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.concat()")}}
 - La méthode {{JSxRef("Array.prototype.push()")}}
 - La méthode {{JSxRef("Array.prototype.pop()")}}

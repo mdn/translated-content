@@ -2,7 +2,7 @@
 title: Créer et travailler sur des problèmes
 slug: MDN/Community/Issues
 l10n:
-  sourceCommit: 7e96b93b5b540a0cddb52fef9ae05c9db3410d73
+  sourceCommit: 26fb7eaa7b398a35c2463fa15ab6ccfa46a9e06d
 ---
 
 En tant que contributeur·ice, vous pouvez [signaler](#directives_pour_signaler_un_problème) et [travailler](#directives_pour_travailler_sur_un_problème) sur des problèmes.
@@ -17,7 +17,7 @@ Faites ce qui suit&nbsp;:
 - Si vous avez une question, vous pouvez la poser dans les [salons de discussion MDN Web Docs](/fr/docs/MDN/Community/Communication_channels#salles_de_discussion) au lieu de signaler un problème.
 - S'il existe plusieurs façons de résoudre un problème, envisagez si vous devez [en discuter](/fr/docs/MDN/Community/Communication_channels#salles_de_discussion) avec le personnel/la communauté.
   Utilisez les discussions pour obtenir différents points de vue et converger vers une action convenue. Cela aide à garder les problèmes ciblés et productifs.
-- Après avoir signalé un problème, essayez de le résoudre vous-même. Il existe un guide sur la [soumission et les révisions de demandes de tirage](/fr/docs/MDN/Community/Pull_requests) qui couvre tout ce que vous devez savoir sur le processus de contribution.
+- Après avoir signalé un problème, essayez de le résoudre vous-même. Il existe un guide sur [l'envoi et les révisions de demandes de tirage](/fr/docs/MDN/Community/Pull_requests) qui couvre tout ce que vous devez savoir sur le processus de contribution.
 
 Évitez de faire ce qui suit&nbsp;:
 
@@ -44,7 +44,7 @@ Voici quelques conseils pour ouvrir des problèmes&nbsp;:
   - **Titre du problème** doit exprimer succinctement _l'action requise_.
   - **Description du problème** doit clairement décrire le bogue et, si possible, l'action requise pour résoudre le problème.
 
-    Pour les problèmes complexes dont la résolution nécessite plusieurs étapes, décomposez le travail en tâches plus petites à l'aide d'une [liste de tâches](https://docs.github.com/fr/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists). Mettez à jour l'état d'une tâche dans la description du problème au lieu de commenter sur le problème. Cela aide les autres qui pourraient autrement avoir besoin de faire défiler les commentaires sur le problème pour déterminer l'état des différentes tâches. Les commentaires dans un problème doivent être limités aux détails ou au contexte qui aident à résoudre le problème.
+    Pour les problèmes complexes dont la résolution nécessite plusieurs étapes, décomposez le travail en tâches plus petites à l'aide d'une [liste de tâches](https://docs.github.com/fr/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists). Mettez à jour l'état d'une tâche dans la description du problème au lieu de commenter sur le problème. Cela aide les autres qui peuvent autrement avoir besoin de faire défiler les commentaires sur le problème pour déterminer l'état des différentes tâches. Les commentaires dans un problème doivent être limités aux détails ou au contexte qui aident à résoudre le problème.
 
 - Si vous vous trouvez dans l'une des situations suivantes, déplacez la conversation vers [la discussion de MDN sur GitHub <sup>(angl.)</sup>](https://github.com/orgs/mdn/discussions)&nbsp;:
   - Vous n'êtes pas sûr que le problème soit valide ou quelle action est requise.
@@ -135,7 +135,7 @@ Pour tout autre type de bogue, commencez par [ouvrir un problème](#directives_p
 Ajoutez un commentaire sur votre intention de travailler sur le problème et, si possible, décrivez votre solution proposée ou les étapes pour le corriger.
 
 > [!NOTE]
-> Votre temps et vos efforts pourraient être gaspillés si vous ouvrez une requête de tirage sans ouvrir d'abord un problème.
+> Votre temps et vos efforts peuvent être gaspillés si vous ouvrez une requête de tirage sans ouvrir d'abord un problème.
 > Attendez que le problème soit trié, afin que l'équipe de MDN Web Docs puisse vérifier que le problème est légitime et approuver votre solution proposée.
 
 Utilisez les [directives pour travailler sur un problème](#directives_pour_travailler_sur_un_problème), essayez de résoudre le problème en mettant à jour la source appropriée, telle que&nbsp;:
@@ -265,7 +265,7 @@ Ensuite, définissez les étiquettes suivantes lorsque c'est possible&nbsp;:
   Si un problème n'a aucune de ces étiquettes, cela indique généralement que les contributions de la communauté ne sont pas encouragées pour ce problème. Cela peut être le cas lorsque des discussions supplémentaires sont nécessaires, que le travail nécessite quelqu'un de familier·ère avec les conventions éditoriales de MDN pour le prendre en charge, ou qu'un·e membre de l'équipe a l'intention de travailler dessus. Les contributeur·ice·s peuvent toujours travailler sur ces problèmes s'ils sont suffisamment familiers avec le processus.
 
 - État du problème&nbsp;: Si un problème n'a pas d'étiquette indiquant que nous acceptons des PR ou que le travail est en cours, ajoutez l'une des étiquettes suivantes pour indiquer ce qui le bloque&nbsp;:
-  - `needs BCD update`&nbsp;: Ajoutez cette étiquette si le problème concerne la documentation de nouvelles fonctionnalités ou comportements qui nécessiteraient d'abord des données sur leur mise en œuvre.
+  - `needs BCD update`&nbsp;: Ajoutez cette étiquette si le problème concerne la documentation de nouvelles fonctionnalités ou comportements qui nécessitent d'abord des données sur leur mise en œuvre.
   - `needs content update`&nbsp;: Ajoutez cette étiquette si la correction du problème dans un autre dépôt nécessite une correction équivalente dans le dépôt `mdn/content`.
   - `needs decision`&nbsp;: Ajoutez cette étiquette si le problème nécessite un consensus de l'équipe sur l'approche à adopter. Le consensus peut être atteint avec une discussion ou une réunion interne synchrone.
   - `needs example update`&nbsp;: Ajoutez cette étiquette si le problème implique la synchronisation des exemples de code dans un autre dépôt. Si le dépôt est externe, il doit probablement être converti en un [exemple en direct](/fr/docs/MDN/Writing_guidelines/Page_structures/Live_samples) interne ou transféré sous MDN en premier.
@@ -277,7 +277,7 @@ Une fois que vous avez analysé et validé le problème, et que vous avez appliq
 
 ### Fermer un problème comme non prévu
 
-Si un problème ne correspond à aucune tâche actionable, vous devez envisager de le fermer comme non prévu. Cliquez sur le menu déroulant à côté du bouton **Fermer le problème**, et sélectionnez **Fermer comme non prévu**. Publiez un commentaire expliquant la raison de la fermeture du problème. Ajoutez également l'une des étiquettes suivantes&nbsp;:
+Si un problème ne correspond à aucune tâche actionnable, vous devez envisager de le fermer comme non prévu. Cliquez sur le menu déroulant à côté du bouton **Fermer le problème**, et sélectionnez **Fermer comme non prévu**. Publiez un commentaire expliquant la raison de la fermeture du problème. Ajoutez également l'une des étiquettes suivantes&nbsp;:
 
 - `closed: browser bug`&nbsp;: Le problème signale un comportement inattendu dans le code du rapporteur ou dans le code de MDN, mais la cause est un bogue du navigateur. Le problème n'est également pas suffisamment significatif pour justifier une note BCD.
 - `closed: question`&nbsp;: Le problème est basé sur une erreur ou une incompréhension du rapporteur, et le contenu est déjà correct et clair. Cependant, vous devez toujours reconnaître le rapport et envisager si le contenu peut être clarifié davantage pour éviter des questions similaires à l'avenir.

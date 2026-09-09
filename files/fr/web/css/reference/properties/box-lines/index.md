@@ -3,10 +3,10 @@ title: Propriété CSS `box-lines`
 short-title: box-lines
 slug: Web/CSS/Reference/Properties/box-lines
 l10n:
-  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 > [!WARNING]
 > Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i>) et a été remplacée dans une version plus récente de la spécification. Voir la page [Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) pour plus d'informations.
@@ -17,7 +17,7 @@ Par défaut, une boîte horizontale organise ses éléments sur une seule ligne 
 
 Si, au contraire, on utilise la valeur **`multiple`**, la boîte peut s'étendre sur plusieurs rangées (des lignes ou des colonnes) afin de contenir ses différents éléments fils. La boîte utilise alors le moins de lignes ou de colonnes possibles et réduit les éléments à leur taille minimale si nécessaire.
 
-Si les éléments fils d'une boîte horizontale ne rentrent pas dans une ligne après avoir été réduits à leur taille minimale, ils sont déplacés sur une nouvelle ligne jusqu'à ce que rien ne dépasse de la ligne précédente. Le procédé est répété autant de fois que nécessaire. Si une ligne contient un seul élément et que celui-ci est trop grand, ce dernier reste sur cette ligne et dépasse en dehors de la boîte. Les nouvelles lignes sont créées en dessous des premières lorsque la direction de la boîte est `normal`, dans le sens inverse (`reverse`) elles sont empilées les unes au-dessus des autres. La hauteur d'une ligne est égale à la plus grande hauteur des éléments portés sur cette ligne. Aucun espace ne est ajouté entre les lignes en dehors des marges décrites par les plus grands éléments. Lors du calcul de la hauteur, les éléments avec une marge dont la valeur calculée est `auto` sont traités comme si la marge était nulle (`0`).
+Si les éléments fils d'une boîte horizontale ne rentrent pas dans une ligne après avoir été réduits à leur taille minimale, ils sont déplacés sur une nouvelle ligne jusqu'à ce que rien ne dépasse de la ligne précédente. Le procédé est répété autant de fois que nécessaire. Si une ligne contient un seul élément et que celui-ci est trop grand, ce dernier reste sur cette ligne et dépasse en dehors de la boîte. Les nouvelles lignes sont créées en dessous des premières lorsque la direction de la boîte est `normal`, dans le sens inverse (`reverse`) elles sont empilées les unes au-dessus des autres. La hauteur d'une ligne est égale à la plus grande hauteur des éléments portés sur cette ligne. Aucun espace ne est ajouté entre les lignes en dehors des marges décrites par les plus grands éléments. Lors du calcul de la hauteur, les éléments avec une marge dont la valeur calculée est `auto` sont traités comme si la marge est nulle (`0`).
 
 On a un fonctionnement analogue avec une disposition verticale.
 
@@ -57,7 +57,7 @@ Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 ### Utilisation simple
 
-Dans la version originale de la spécification, `box-lines` permettait d'indiquer que les enfants du conteneur flexible doivent passer à la ligne. Cette propriété était uniquement implémentée par les navigateurs WebKit et avec un préfixe.
+Dans la version originale de la spécification, `box-lines` permet d'indiquer que les enfants du conteneur flexible doivent passer à la ligne. Cette propriété est uniquement implémentée par les navigateurs WebKit et avec un préfixe.
 
 ```css
 div {

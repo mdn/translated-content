@@ -405,7 +405,7 @@ Dans les cas où `reduce()` est le meilleur choix, une bonne documentation et de
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.map()")}}
 - La méthode {{JSxRef("Array.prototype.flat()")}}
 - La méthode {{JSxRef("Array.prototype.flatMap()")}}

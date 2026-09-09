@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
-La propéiété [CSS](/fr/docs/Web/CSS) **`view-timeline-name`** définit les noms d'un ou plusieurs [chronomètres de progression de vue nommés](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#chronologie_de_progression_de_la_vue_nommée) associés à l'élément.
+La propriété [CSS](/fr/docs/Web/CSS) **`view-timeline-name`** définit les noms d'un ou plusieurs [chronomètres de progression de vue nommés](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#chronologie_de_progression_de_la_vue_nommée) associés à l'élément.
 
 ## Syntaxe
 
@@ -56,7 +56,7 @@ Une fois créé, les valeurs de nom `<dashed-ident>` définies peuvent être ré
 ### Créer une chronologie de progression de vue nommée
 
 Une chronologie de progression de vue nommée `--reveler-sujet` est définie en utilisant la propriété `view-timeline-name` sur un élément sujet avec une `class` de `animation`.
-Cela est ensuite défini comme la chronologie pour le même élément en utilisant `animation-timeline: --reveler-sujet;`. Le résultat est que l'élément sujet s'anime au fur et à mesure qu'il se déplace vers le haut du document lors du défilement.
+C'est ensuite défini comme la chronologie pour le même élément en utilisant `animation-timeline: --reveler-sujet;`. Le résultat est que l'élément sujet s'anime au fur et à mesure qu'il se déplace vers le haut du document lors du défilement.
 
 #### HTML
 

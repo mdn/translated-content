@@ -3,10 +3,10 @@ title: Propriété CSS `outline`
 short-title: outline
 slug: Web/CSS/Reference/Properties/outline
 l10n:
-  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`outline`** définit la plupart des propriétés de contour dans une seule déclaration.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`outline`** définit la plupart des propriétés de contour dans une seule déclaration.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: outline")}}
 

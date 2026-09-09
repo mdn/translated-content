@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`overscroll-behavior-inline`** définit le comportement d'un navigateur lorsqu'il atteint la limite de défilement dans la direction en ligne (_horizontale_).
+La propriété [CSS](/fr/docs/Web/CSS) **`overscroll-behavior-inline`** définit le comportement d'un navigateur lorsqu'il atteint la limite de défilement dans la direction en incise (_horizontale_).
 
 Voir {{CSSxRef("overscroll-behavior")}} pour une explication complète.
 
@@ -47,11 +47,11 @@ Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 ## Exemples
 
-### Prévenir le dépassement de défilement dans la direction en ligne
+### Prévenir le dépassement de défilement dans la direction en incise
 
-Dans cette démonstration, nous avons deux boîtes de niveau bloc, l'une à l'intérieur de l'autre. La boîte externe a une grande {{CSSxRef("width")}} définie dessus afin que la page puisse défiler horizontalement. La boîte interne a une petite largeur (et {{CSSxRef("height")}}) définie dessus afin qu'elle s'adapte confortablement à l'intérieur de la fenêtre d'affichage, mais son contenu a une grande largeur afin qu'il puisse également défiler horizontalement.
+Dans cette démonstration, nous avons deux boîtes de niveau bloc, l'une à l'intérieur de l'autre. La boîte externe a une grande {{CSSxRef("width")}} définie dessus afin que la page puisse défiler horizontalement. La boîte interne a une petite largeur (et {{CSSxRef("height")}}) définie dessus afin qu'elle s'adapte confortablement à l'intérieur de la zone d'affichage, mais son contenu a une grande largeur afin qu'il puisse également défiler horizontalement.
 
-Par défaut, lorsque la boîte interne est défilée et qu'une limite de défilement est atteinte, toute la page commence à défiler, ce qui n'est probablement pas ce que nous voulons. Pour éviter que cela ne se produise dans la direction en ligne, nous avons défini `overscroll-behavior-inline: contain` sur la boîte interne.
+Par défaut, lorsque la boîte interne est défilée et qu'une limite de défilement est atteinte, toute la page commence à défiler, ce qui n'est probablement pas ce que nous voulons. Pour éviter que cela ne se produise dans la direction en incise, nous avons défini `overscroll-behavior-inline: contain` sur la boîte interne.
 
 #### HTML
 
@@ -119,7 +119,7 @@ p {
 
 #### Résultat
 
-{{EmbedLiveSample("Prévenir le dépassement de défilement dans la direction en ligne", "100%", 500)}}
+{{EmbedLiveSample("Prévenir le dépassement de défilement dans la direction en incise", "100%", 500)}}
 
 ## Spécifications
 

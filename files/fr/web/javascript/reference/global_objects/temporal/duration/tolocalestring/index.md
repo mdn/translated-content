@@ -62,7 +62,7 @@ console.log(duration.toLocaleString()); // 1 h, 30 min et 15 s
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Duration")}}
-- L'objet {{JSxRef("Intl.DurationFormat")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Intl.DurationFormat")}}
 - La méthode {{JSxRef("Temporal/Duration/toJSON", "Temporal.Duration.prototype.toJSON()")}}
 - La méthode {{JSxRef("Temporal/Duration/toString", "Temporal.Duration.prototype.toString()")}}

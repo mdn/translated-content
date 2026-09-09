@@ -91,6 +91,6 @@ Pour plus d'exemples liés au comportement de concurrence commun à `Promise.all
 
 - [La prothèse d'émulation de `Promise.allSettledKeyed` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/proposals/await-dictionary)
 - [La prothèse d'émulation es-shims de `Promise.allSettledKeyed` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.allsettledkeyed)
-- L'objet {{JSxRef("Promise")}}
+- L'objet natif {{JSxRef("Promise")}}
 - La méthode statique {{JSxRef("Promise.allKeyed()")}}
 - La méthode statique {{JSxRef("Promise.allSettled()")}}

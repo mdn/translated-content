@@ -4,8 +4,6 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Gradients
 original_slug: Web/SVG/Tutorial/Gradients
 ---
 
-{{SVGRef}}
-
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes", "Web/SVG/Tutorials/SVG_from_scratch/Patterns") }}
 
 Probablement plus excitant qu'un simple remplissage et contour, est le fait de pouvoir créer et appliquer des dégradés comme remplissage ou contour.

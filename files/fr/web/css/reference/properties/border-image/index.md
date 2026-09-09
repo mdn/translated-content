@@ -3,7 +3,7 @@ title: Propriété CSS `border-image`
 short-title: border-image
 slug: Web/CSS/Reference/Properties/border-image
 l10n:
-  sourceCommit: 0cf00ab40deebad90225815e1881ae89bbca085b
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-image`** dessine une image autour d'un élément donné. Elle remplace la [bordure](/fr/docs/Web/CSS/Reference/Properties/border) classique de l'élément.
@@ -97,7 +97,7 @@ border-image: unset;
 La propriété `border-image` peut être définie avec une à cinq valeurs parmi celles définies ci-après.
 
 > [!NOTE]
-> Si la [valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing) de {{CSSxRef("border-image-source")}} vaut `none` ou si l'image ne peut pas être affichée, c'est le {{CSSxRef("border-style")}} correspondant qui sera affiché.
+> Si la [valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing) de {{CSSxRef("border-image-source")}} vaut `none` ou si l'image ne peut pas être affichée, c'est le {{CSSxRef("border-style")}} correspondant qui est affiché.
 
 ### Valeurs
 
@@ -145,7 +145,7 @@ Dans cet exemple, nous allons appliquer un motif en losange aux bordures d'un é
 
 #### CSS
 
-Pour correspondre à la taille d'un seul diamant, nous utiliserons une valeur de 81 divisée par 3, soit `27`, pour découper l'image en zones d'angle et de bord. Pour centrer l'image de bordure sur le bord de l'arrière-plan de l'élément, nous rendrons les valeurs de décalage égales à la moitié des valeurs de largeur. Enfin, une valeur de répétition `round` permettra d'ajuster les tranches de bordure de manière uniforme, c'est-à-dire sans découpe ni espace.
+Pour correspondre à la taille d'un seul diamant, nous utilisons une valeur de 81 divisée par 3, soit `27`, pour découper l'image en zones d'angle et de bord. Pour centrer l'image de bordure sur le bord de l'arrière-plan de l'élément, nous rendons les valeurs de décalage égales à la moitié des valeurs de largeur. Enfin, une valeur de répétition `round` permet d'ajuster les tranches de bordure de manière uniforme, c'est-à-dire sans découpe ni espace.
 
 ```css
 #bitmap {
@@ -192,7 +192,7 @@ Pour correspondre à la taille d'un seul diamant, nous utiliserons une valeur de
 
 ### Utiliser des bordures arrondies
 
-La propriété {{CSSxRef("border-radius")}} n'a aucun effet sur l'image de bordure. Cela est dû au fait que {{CSSxRef("border-image-outset")}} peut placer l'image en dehors de la zone de bordure, il n'est donc pas logique que l'image de bordure soit rognée par la zone de bordure. Pour créer des bordures arrondies lors de l'utilisation d'une image de bordure, vous devez créer l'image elle-même avec des coins arrondis, ou, dans le cas d'un dégradé, le dessiner en tant qu'arrière-plan à la place. Ci-dessous, nous montrons une approche pour ce faire, qui consiste à utiliser deux {{CSSxRef("background-image")}}&nbsp;: l'une qui étend la zone de bordure et une autre pour la zone de remplissage.
+La propriété {{CSSxRef("border-radius")}} n'a aucun effet sur l'image de bordure. C'est dû au fait que {{CSSxRef("border-image-outset")}} peut placer l'image en dehors de la zone de bordure, il n'est donc pas logique que l'image de bordure soit rognée par la zone de bordure. Pour créer des bordures arrondies lors de l'utilisation d'une image de bordure, vous devez créer l'image elle-même avec des coins arrondis, ou, dans le cas d'un dégradé, le dessiner en tant qu'arrière-plan à la place. Ci-dessous, nous montrons une approche pour ce faire, qui consiste à utiliser deux {{CSSxRef("background-image")}}&nbsp;: l'une qui étend la zone de bordure et une autre pour la zone de remplissage.
 
 #### HTML
 

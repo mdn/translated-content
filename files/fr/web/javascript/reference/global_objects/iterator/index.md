@@ -2,7 +2,7 @@
 title: Iterator
 slug: Web/JavaScript/Reference/Global_Objects/Iterator
 l10n:
-  sourceCommit: d43ba33e72afa135ce782e2c0ca19fe32a93bb13
+  sourceCommit: 5b9e4bb67e5cb4bb2b780e7338a6560463e5a1a7
 ---
 
 L'objet **`Iterator`** est un objet qui respecte le [protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérateur_») en fournissant une méthode `next()` qui retourne un objet résultat d'itérateur. Tous les itérateurs intégrés héritent de la classe `Iterator`. La classe `Iterator` fournit une méthode [`[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator) qui retourne l'objet itérateur lui-même, rendant l'itérateur également [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»). Elle propose aussi des méthodes utilitaires pour manipuler les itérateurs.
@@ -16,7 +16,7 @@ Voici tous les itérateurs JavaScript intégrés&nbsp;:
 - _L'itérateur de Map_ retourné par {{JSxRef("Map.prototype.values()")}}, {{JSxRef("Map.prototype.keys()")}}, {{JSxRef("Map.prototype.entries()")}} et [`Map.prototype[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator).
 - _L'itérateur de Set_ retourné par {{JSxRef("Set.prototype.values()")}}, {{JSxRef("Set.prototype.keys()")}}, {{JSxRef("Set.prototype.entries()")}} et [`Set.prototype[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator).
 - _L'itérateur de chaîne de caractères RegExp_ retourné par [`RegExp.prototype[Symbol.matchAll]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll) et {{JSxRef("String.prototype.matchAll()")}}.
-- L'objet {{JSxRef("Generator")}} retourné par les [fonctions génératrices](/fr/docs/Web/JavaScript/Reference/Statements/function*).
+- L'objet natif {{JSxRef("Generator")}} retourné par les [fonctions génératrices](/fr/docs/Web/JavaScript/Reference/Statements/function*).
 - _L'itérateur de segments_ retourné par la méthode [`[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/Symbol.iterator) de l'objet [`Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) retourné par [`Intl.Segmenter.prototype.segment()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment).
 - _L'itérateur d'aide_ retourné par les méthodes d'aide d'itérateur telles que {{JSxRef("Iterator.prototype.filter()")}} et {{JSxRef("Iterator.prototype.map()")}}.
 
@@ -142,9 +142,9 @@ const monIterateur = Iterator.from({
   - : Crée un nouvel objet `Iterator` à partir d'une liste d'objets itérables. Le nouvel itérateur produit les valeurs de chacun des itérables d'entrée, en séquence.
 - {{JSxRef("Iterator.from()")}}
   - : Crée un nouvel objet `Iterator` à partir d'un itérateur ou d'un objet itérable.
-- {{JSxRef("Iterator.zip()")}} {{Experimental_Inline}}
+- {{JSxRef("Iterator.zip()")}}
   - : Crée un nouvel objet `Iterator` qui agrège les éléments de plusieurs objets itérables en produisant des tableaux contenant les éléments à la même position.
-- {{JSxRef("Iterator.zipKeyed()")}} {{Experimental_Inline}}
+- {{JSxRef("Iterator.zipKeyed()")}}
   - : Crée un nouvel objet `Iterator` qui agrège les éléments de plusieurs objets itérables en produisant des objets contenant les éléments à la même position, avec des clés définies par l'entrée.
 
 ## Propriétés d'instance

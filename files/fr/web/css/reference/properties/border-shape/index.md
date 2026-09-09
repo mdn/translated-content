@@ -130,7 +130,7 @@ Notez comment la `border-shape` appliquée s'accorde bien avec la bordure ({{CSS
 
 ### Prise en charge des fonctions de forme
 
-Vous pouvez définir la `border-shape` d'un élément (y compris celle d'un élément en ligne ou pseudo-élément) en utilisant l'une des fonctions {{CSSxRef("&lt;basic-shape&gt;")}}. Ces fonctions incluent&nbsp;:
+Vous pouvez définir la `border-shape` d'un élément (y compris celle d'un élément en incise ou pseudo-élément) en utilisant l'une des fonctions {{CSSxRef("&lt;basic-shape&gt;")}}. Ces fonctions incluent&nbsp;:
 
 - {{CSSxRef("basic-shape/inset","inset()")}}, {{CSSxRef("basic-shape/rect","rect()")}} et {{CSSxRef("basic-shape/xywh","xywh()")}}&nbsp;: Fournissent différentes façons de définir des formes rectangulaires de base.
 - {{CSSxRef("basic-shape/circle","circle()")}}&nbsp;: Définit des formes circulaires.
@@ -164,9 +164,9 @@ Tous les styles de bordure ne sont pas appliqués aux éléments ayant la propri
 - {{CSSxRef("border-color")}}&nbsp;: Cette propriété est appliquée. Cependant, lorsque plusieurs bordures d'éléments ont des couleurs différentes appliquées, le navigateur choisit le premier bord avec une couleur de bordure, dans l'ordre suivant&nbsp;:
 
   - Bord du bloc de début
-  - Bord en ligne de début
+  - Bord en incise de début
   - Bord du bloc de fin
-  - Bord en ligne de fin
+  - Bord en incise de fin
 
   Le navigateur applique ensuite la couleur de bordure de ce bord à l'ensemble de la `border-shape` rendue.
 
@@ -185,7 +185,7 @@ border-left: 40px dotted hotpink;
 border-right: 50px double yellow;
 ```
 
-La boîte rendue a une bordure rectangulaire avec des coins arrondis. Le style de la bordure est `solid`, car les autres styles sont ignorés. La largeur et la couleur de la bordure sont respectivement de `40px` et `hotpink` — c'est dû au fait que la propriété `border-left` applique des styles au bord de début en ligne (en supposant que la page a un {{CSSxRef("writing-mode")}} horizontal), qui est le premier bord avec des styles de bordure&nbsp;; celui-ci est choisi par le navigateur selon la liste de priorité décrite précédemment.
+La boîte rendue a une bordure rectangulaire avec des coins arrondis. Le style de la bordure est `solid`, car les autres styles sont ignorés. La largeur et la couleur de la bordure sont respectivement de `40px` et `hotpink` — c'est dû au fait que la propriété `border-left` applique des styles au bord de début en incise (en supposant que la page a un {{CSSxRef("writing-mode")}} horizontal), qui est le premier bord avec des styles de bordure&nbsp;; celui-ci est choisi par le navigateur selon la liste de priorité décrite précédemment.
 
 ### Interaction avec `border-radius` et `corner-shape`
 

@@ -2,12 +2,12 @@
 title: FileSystemFileHandle
 slug: Web/API/FileSystemFileHandle
 l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
-{{domxref("File System Access API", "File System Access API", "", "nocode")}} の **`FileSystemFileHandle`** インターフェイスは、ファイルシステムのエントリーのハンドルを表します。このインターフェイスには、{{domxref('window.showOpenFilePicker()')}} メソッドを通じてアクセスします。
+**`FileSystemFileHandle`** は{{domxref("File System API", "ファイルシステム API", "", "nocode")}} のインターフェイスは、ファイルシステムの項目のハンドルを表します。このインターフェイスには、{{domxref('window.showOpenFilePicker()')}} メソッドを通じてアクセスします。
 
 注意するべき点として、読み書きの操作にはファイルアクセスの許可が必要ですが、この許可は同じオリジンの他のタブが開かれていない場合、ページを再読み込みすると消滅します。{{domxref("FileSystemHandle")}} インターフェイスの {{domxref("FileSystemHandle.queryPermission()", "queryPermission")}} メソッドを用いると、ファイルにアクセスする前に許可の状態を確かめることができます。
 
@@ -116,7 +116,7 @@ onmessage = async (e) => {
 ```
 
 > [!NOTE]
-> 仕様書の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}・{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}・{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}・{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は誤って非同期メソッドとされていました。これは現在では[修正されています](https://github.com/whatwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
+> 仕様書の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}・{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}・{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}・{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は誤って非同期メソッドとされていました。また、一部のブラウザーの古いバージョンでは、この方法で実装されています。しかし、これらのメソッドに対応する現在のブラウザーではすべて、同期メソッドとして実装されています。
 
 ## 仕様書
 
@@ -128,5 +128,5 @@ onmessage = async (e) => {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [ファイルシステム API](/ja/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

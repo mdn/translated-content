@@ -201,6 +201,6 @@ Lorsque vous implémentez vos propres itérateurs, pensez à les rendre itérabl
 
 - [Prothèse d'émulation de `Iterator.concat` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-sequencing)
 - [Prothèse d'émulation es-shims de `Iterator.concat` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
-- L'objet {{JSxRef("Iterator")}}
+- L'objet natif {{JSxRef("Iterator")}}
 - La méthode statique {{JSxRef("Iterator.from()")}}
 - La méthode {{JSxRef("Array.prototype.concat()")}}

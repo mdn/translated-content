@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Images/Replaced_element_properties
 original_slug: Web/CSS/CSS_images/Replaced_element_properties
 ---
 
-{{CSSRef}}
-
 En CSS, un **élément remplacé** est un élément dont la représentation est en dehors du champ de CSS. Ce sont des objets externes dont la représentation sera indépendante de CSS.
 
 Autrement dit, ces éléments sont des éléments dont le contenu n'est pas impacté par les styles du document. La position de l'élément remplacé peut être modifiée avec CSS mais le contenu même de l'élément ne pourra pas être modifiée. Certains éléments remplacés comme {{HTMLElement("iframe")}} peuvent avoir leurs propres feuilles de styles mais ils n'héritent pas de celles du document parent.

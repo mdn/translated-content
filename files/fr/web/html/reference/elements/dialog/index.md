@@ -3,7 +3,7 @@ title: "Élément HTML `<dialog>` : l'élément de boîte de dialogue"
 short-title: <dialog>
 slug: Web/HTML/Reference/Elements/dialog
 l10n:
-  sourceCommit: 4280928da7b326df9e358204a23df21b4668a29b
+  sourceCommit: c03648dd993f7afd0c17ce57061dc31d64f5e943
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<dialog>`** représente une boite de dialogue ou un composant interactif (par exemple un inspecteur ou une fenêtre).
@@ -30,8 +30,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
       - : Le dialogue ne peut être fermé que par un mécanisme défini par le·la développeur·euse.
 
     Si l'élément `<dialog>` ne possède pas de valeur `closedby` valide&nbsp;:
-    - s'il a été ouvert avec {{DOMxRef("HTMLDialogElement.showModal()", "showModal()")}}, il se comporte comme si la valeur était `"closerequest"`
-    - sinon, il se comporte comme si la valeur était `"none"`
+    - s'il a été ouvert avec {{DOMxRef("HTMLDialogElement.showModal()", "showModal()")}}, il se comporte comme si la valeur est `"closerequest"`
+    - sinon, il se comporte comme si la valeur est `"none"`
 
 - `open`
   - : Indique que la boîte de dialogue est active et disponible pour l'interaction. Si l'attribut `open` n'est pas présent, la boîte de dialogue n'est pas visible pour l'utilisateur·ice.
@@ -78,7 +78,7 @@ L'élément `<dialog>` doit être transformé en fenêtre contextuelle en ajouta
 Vous pouvez ensuite utiliser `popovertarget` sur un bouton/une entrée pour indiquer la cible de la fenêtre contextuelle, et `popovertargetaction` pour définir l'action à effectuer lorsque le bouton est cliqué.
 Notez que, puisque le dialogue est une fenêtre contextuelle, il est non bloquant, vous pouvez donc le fermer en cliquant à l'extérieur du dialogue.
 
-Le HTML ci-dessous montre comment appliquer les attributs à un élément `<button>` afin qu'il puisse être pressé pour afficher et masquer un `<dialog>` non bloquant avec un `id` de `"mon-dialogue"`.
+Le HTML ci-dessous montre comment appliquer les attributs à un élément `<button>` afin qu'il puisse être pressé pour afficher et masquer un `<dialog>` bloquant avec un `id` de `"mon-dialogue"`.
 
 ```html
 <button popovertarget="mon-dialogue">Ouvrir la boîte de dialogue</button>

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 **`shippingOption`** は {{domxref('PaymentRequest')}} インターフェイスの読み取り専用プロパティで、これは、選択された配送オプションの id、null（選択する配送オプションが設定されていない場合）、またはユーザーによって選択された配送オプションのいずれかを返します。「選択された」配送オプションが提供されていない場合、最初は `null` です。
 

@@ -115,10 +115,10 @@ console.log(Array.prototype.toLocaleString.call(objetSimilaireTableau));
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.toString()")}}
 - La méthode {{JSxRef("TypedArray.prototype.toLocaleString()")}}
-- L'objet global {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl")}}
 - La propriété {{JSxRef("Intl.ListFormat")}}
 - La méthode {{JSxRef("Object.prototype.toLocaleString()")}}
 - La méthode {{JSxRef("Number.prototype.toLocaleString()")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`scroll-margin-inline-end`** définit la marge de la zone d'accrochage au défilement à la fin de la dimension en ligne, utilisée pour accrocher cette boîte au [port d'accrochage](/fr/docs/Glossary/Scroll_snap#port_daccrochage). La zone d'accrochage au défilement est déterminée en prenant la boîte de bordure transformée, en trouvant sa boîte englobante rectangulaire (alignée sur les axes dans l'espace de coordonnées du conteneur de défilement), puis en ajoutant les décalages définis.
+La propriété [CSS](/fr/docs/Web/CSS) **`scroll-margin-inline-end`** définit la marge de la zone d'accrochage au défilement à la fin de la dimension en incise, utilisée pour accrocher cette boîte au [port d'accrochage](/fr/docs/Glossary/Scroll_snap#port_daccrochage). La zone d'accrochage au défilement est déterminée en prenant la boîte de bordure transformée, en trouvant sa boîte englobante rectangulaire (alignée sur les axes dans l'espace de coordonnées du conteneur de défilement), puis en ajoutant les décalages définis.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: scroll-margin-inline-end")}}
 
@@ -91,7 +91,7 @@ scroll-margin-inline-end: unset;
 ### Valeurs
 
 - {{CSSxRef("&lt;length&gt;")}}
-  - : Un décalage par rapport au bord de fin en ligne du conteneur de défilement.
+  - : Un décalage par rapport au bord de fin en incise du conteneur de défilement.
 
 ## Définition formelle
 
@@ -176,7 +176,7 @@ Enfin, nous définissons les valeurs de marge de défilement, une différente po
 }
 ```
 
-Cela signifie que lorsque vous faites défiler les éléments enfants du milieu, le défilement s'accrochera à `1rem` en dehors du bord de fin en ligne du deuxième `<div>`, et à `2rem` en dehors du bord de fin en ligne du troisième `<div>`.
+Cela signifie que lorsque vous faites défiler les éléments enfants du milieu, le défilement s'accrochera à `1rem` en dehors du bord de fin en incise du deuxième `<div>`, et à `2rem` en dehors du bord de fin en incise du troisième `<div>`.
 
 #### Résultat
 

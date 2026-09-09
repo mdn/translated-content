@@ -3,7 +3,7 @@ title: event.initEvent
 slug: Web/API/Event/initEvent
 ---
 
-{{ ApiRef("DOM") }}{{deprecated_header}}
+{{ ApiRef("DOM") }}
 
 ### Resumen
 

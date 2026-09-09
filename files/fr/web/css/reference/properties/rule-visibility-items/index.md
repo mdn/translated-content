@@ -3,12 +3,12 @@ title: Propriété CSS `rule-visibility-items`
 short-title: rule-visibility-items
 slug: Web/CSS/Reference/Properties/rule-visibility-items
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 {{SeeCompatTable}}
 
-La propriété raccourcie [CSS](/fr/docs/Web/CSS) **`rule-visibility-items`** définit si les segments de règle sont peints dans les gouttières des lignes et des colonnes adjacentes aux zones vides.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`rule-visibility-items`** définit si les segments de règle sont peints dans les gouttières des lignes et des colonnes adjacentes aux zones vides.
 
 ## Propriétés constitutives
 

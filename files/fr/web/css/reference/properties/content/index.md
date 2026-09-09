@@ -95,7 +95,7 @@ La valeur peut être&nbsp;:
 
 - L'un des deux mots-clés&nbsp;: `none` ou `normal`. `normal` est la valeur par défaut de la propriété.
 - `<content-replacement>` lors du remplacement d'un nœud DOM. `<content-replacement>` est toujours une `<image>`.
-- Une `<content-list>` lors du remplacement des pseudo-éléments et des marges. Une `<content-list>` est une liste d'une ou plusieurs boîtes en ligne (<i lang="en">inline box</i> en anglais) anonymes apparaissant dans l'ordre défini. Chaque élément de la `<content-list>` est de type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target) ou [`<leader()>`](#leader).
+- Une `<content-list>` lors du remplacement des pseudo-éléments et des marges. Une `<content-list>` est une liste d'une ou plusieurs boîtes en incise (<i lang="en">inline box</i> en anglais) anonymes apparaissant dans l'ordre défini. Chaque élément de la `<content-list>` est de type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target) ou [`<leader()>`](#leader).
 - Une valeur de texte alternatif facultative qui peut inclure des valeurs `<string>`, `<counter>`, ou la fonction [`attr()`](#attrx), précédée d'une barre oblique (`/`).
 
 Les mots-clés et les types de données mentionnés ci-dessus sont décrits plus en détail ci-dessous&nbsp;:

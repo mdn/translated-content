@@ -49,7 +49,7 @@ Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 ### Prévenir le dépassement de défilement dans la direction du bloc
 
-Dans cette démonstration, nous avons deux boîtes de niveau bloc, l'une à l'intérieur de l'autre. La boîte externe a une grande hauteur ({{CSSxRef("height")}}) définie dessus afin que la page puisse défiler verticalement. La boîte interne a une petite largeur ({{CSSxRef("width")}}) (et `height`) définie dessus afin qu'elle s'adapte confortablement à l'intérieur de la fenêtre d'affichage, mais son contenu a une grande `height` afin qu'il puisse également défiler verticalement.
+Dans cette démonstration, nous avons deux boîtes de niveau bloc, l'une à l'intérieur de l'autre. La boîte externe a une grande hauteur ({{CSSxRef("height")}}) définie dessus afin que la page puisse défiler verticalement. La boîte interne a une petite largeur ({{CSSxRef("width")}}) (et `height`) définie dessus afin qu'elle s'adapte confortablement à l'intérieur de la zone d'affichage, mais son contenu a une grande `height` afin qu'il puisse également défiler verticalement.
 
 Par défaut, lorsque la boîte interne est défilée et qu'une limite de défilement est atteinte, toute la page commence à défiler, ce qui n'est probablement pas ce que nous voulons. Pour éviter que cela ne se produise dans la direction du bloc, nous avons défini `overscroll-behavior-block: contain` sur la boîte interne.
 

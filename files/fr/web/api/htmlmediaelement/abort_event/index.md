@@ -3,12 +3,13 @@ title: "HTMLMediaElement : évènement abort"
 short-title: abort
 slug: Web/API/HTMLMediaElement/abort_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: 9032b617a2e2904618291c86a48e56e298e474bd
 ---
 
 {{APIRef("HTML DOM")}}
 
-L'évènement **`abort`** se déclenche lorsque la ressource n'a pas été entièrement chargée, mais pas à la suite d'une erreur.
+L'évènement **`abort`** se déclenche lorsque le chargement d'une ressource média est arrêté avant son achèvement, mais pas à la suite d'une erreur.
+Cela se produit généralement en supprimant l'attribut `src` ou en le définissant sur une chaîne de caractères vide (`""`), puis en appelant `load()`.
 
 Cet évènement n'est pas annulable et ne se propage pas.
 
@@ -28,20 +29,61 @@ Un objet {{DOMxRef("Event")}} générique.
 
 ## Exemples
 
+### Abandonner le chargement d'une ressource média
+
+L'exemple suivant montre comment abandonner le chargement d'une vidéo.
+Lorsque vous appuyez sur le bouton, le chargement d'une ressource vidéo commence.
+Après un court délai, le chargement est abandonné en supprimant l'attribut `src` et en appelant la méthode `load()`.
+Si la ressource vidéo est toujours en cours de chargement lorsque `load()` est appelée, l'évènement `abort` se déclenche.
+
+#### HTML
+
+```html
+<video controls width="250"></video>
+
+<button id="loadAndAbort">Charger et abandonner la vidéo</button>
+
+<pre id="log"></pre>
+```
+
+#### CSS
+
+```css
+video,
+button,
+pre {
+  display: block;
+  margin-block: 1rem;
+}
+```
+
+#### JavaScript
+
 ```js
 const video = document.querySelector("video");
-const videoSrc = "https://example.org/path/to/video.webm";
+const loadAndAbortButton = document.querySelector("#loadAndAbort");
+const log = document.querySelector("#log");
 
 video.addEventListener("abort", () => {
-  console.log(`Abandon du chargement : ${videoSrc}`);
+  log.textContent += "Chargement de la vidéo abandonné\n";
 });
 
-const source = document.createElement("source");
-source.setAttribute("src", videoSrc);
-source.setAttribute("type", "video/webm");
+loadAndAbortButton.addEventListener("click", () => {
+  log.textContent = "Chargement de la vidéo...\n";
 
-video.appendChild(source);
+  video.src = `/shared-assets/videos/flower.webm?nocache=${Date.now()}`;
+  video.load();
+
+  setTimeout(() => {
+    video.removeAttribute("src");
+    video.load();
+  }, 50);
+});
 ```
+
+#### Résultat
+
+{{EmbedLiveSample("Abandonner le chargement d'une ressource média", "100%", 300)}}
 
 ## Spécifications
 

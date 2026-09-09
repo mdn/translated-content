@@ -39,7 +39,7 @@ _从父接口{{domxref("EventTarget")}}上继承而来。_
 ## 静态方法
 
 - {{domxref("MediaSource.isTypeSupported()")}}
-  - : 返回一个 {{domxref("Boolean")}} 值表明给定的 MIME 类型是否被当前的浏览器支持——这意味着是否可以成功的创建这个 MIME 类型的 {{domxref("SourceBuffer")}} 对象。
+  - : 返回一个 {{jsxref("Boolean")}} 值表明给定的 MIME 类型是否被当前的浏览器支持——这意味着是否可以成功的创建这个 MIME 类型的 {{domxref("SourceBuffer")}} 对象。
 
 ## 示例
 

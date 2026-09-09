@@ -3,8 +3,6 @@ title: Symbol.match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
 ---
 
-{{JSRef}}
-
 Le symbole **`Symbol.match`** définit la correspondance d'une expression rationnelle par rapport à une chaîne de caractères. Cette fonction est appelée par la méthode {{jsxref("String.prototype.match()")}}.
 
 {{InteractiveExample("JavaScript Demo: Symbol.match")}}

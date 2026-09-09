@@ -3,12 +3,12 @@ title: En-tête Preference-Applied
 short-title: Preference-Applied
 slug: Web/HTTP/Reference/Headers/Preference-Applied
 l10n:
-  sourceCommit: a516a9818e8cef06c626d436ee1d73fc6d87ec51
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 L'en-tête HTTP **`Preference-Applied`** informe le client des préférences du client, issues de l'en-tête de requête {{HTTPHeader("Prefer")}}, qui ont été appliquées par le serveur.
 
-Le serveur indique si une préférence est appliquée à une réponse, dans le cas où cela serait ambigu pour le client.
+Le serveur indique si une préférence est appliquée à une réponse, dans le cas où c'est ambigu pour le client.
 
 <table class="properties">
   <tbody>

@@ -130,6 +130,6 @@ Temporal.PlainYearMonth.from({ year: 2021, month: 13 }, { overflow: "reject" });
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainYearMonth")}}
+- L'objet natif {{JSxRef("Temporal.PlainYearMonth")}}
 - La méthode {{JSxRef("Temporal/PlainYearMonth/PlainYearMonth", "Temporal.PlainYearMonth()")}}
 - La méthode {{JSxRef("Temporal/PlainYearMonth/with", "Temporal.PlainYearMonth.prototype.with()")}}

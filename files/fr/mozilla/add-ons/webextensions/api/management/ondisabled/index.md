@@ -3,8 +3,6 @@ title: management.onDisabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onDisabled
 ---
 
-{{AddonSidebar}}
-
 Action quand l'extension est désactivée.
 
 L'API requière l'[API de permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management".

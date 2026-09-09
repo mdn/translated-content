@@ -92,6 +92,6 @@ Ce code consomme un {{DOMxRef("ReadableStream")}} via un {{DOMxRef("ReadableStre
 ## Voir aussi
 
 - [Gestion des ressources JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
-- L'objet {{JSxRef("DisposableStack")}}
+- L'objet natif {{JSxRef("DisposableStack")}}
 - La méthode {{JSxRef("DisposableStack.prototype.defer()")}}
 - La méthode {{JSxRef("DisposableStack.prototype.use()")}}

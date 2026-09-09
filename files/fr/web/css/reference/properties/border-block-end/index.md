@@ -3,10 +3,10 @@ title: Propriété CSS `border-block-end`
 short-title: border-block-end
 slug: Web/CSS/Reference/Properties/border-block-end
 l10n:
-  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-block-end`** permet de définir à un seul endroit dans la feuille de style les valeurs de la propriété logique de bordure de fin de bloc.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-block-end`** permet de définir à un seul endroit dans la feuille de style les valeurs de la propriété logique de bordure de fin de bloc.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: border-block-end")}}
 

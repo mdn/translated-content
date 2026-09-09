@@ -3,8 +3,6 @@ title: ET binaire (&)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur ET binaire (`&`) renvoie un nombre dont la représentation binaire est une séquence de bits où il y a un `1` pour chaque position où les bits des deux opérandes valent `1`.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Bitwise AND")}}

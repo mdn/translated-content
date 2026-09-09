@@ -88,7 +88,7 @@ list-style-position: unset;
 Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `inside`
-  - : La boîte du marqueur ({{CSSxRef("::marker")}}) est la première boîte en ligne (<i lang="en">inline</i>) de la boîte principale. Le contenu de l'élément est appliqué à la suite de la boîte du marqueur.
+  - : La boîte du marqueur ({{CSSxRef("::marker")}}) est la première boîte en incise (<i lang="en">inline</i>) de la boîte principale. Le contenu de l'élément est appliqué à la suite de la boîte du marqueur.
 - `outside`
   - : La boîte du marqueur ({{CSSxRef("::marker")}}) est en dehors de la boîte principale. C'est la valeur par défaut pour {{CSSxRef("list-style")}}.
 

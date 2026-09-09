@@ -5,7 +5,7 @@ l10n:
   sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
 ---
 
-{{DefaultAPISidebar("Attribution Reporting API")}}{{SecureContext_Header}}{{Deprecated_Header}}
+{{DefaultAPISidebar("Attribution Reporting API")}}{{SecureContext_Header}}
 
 L'**API Attribution Reporting** permet aux développeur·euse·s de mesurer les conversions — par exemple, lorsqu'un·e utilisateur·ice clique sur une publicité intégrée sur un site, puis achète l'article sur le site du vendeur — et d'accéder ensuite aux rapports sur ces conversions. Elle le fait sans recourir aux cookies de suivi tiers.
 

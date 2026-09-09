@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-width`** définit la largeur des bordures logiques en ligne d'un élément, qui correspond à une largeur de bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond aux propriétés {{CSSxRef("border-top-width")}} et {{CSSxRef("border-bottom-width")}}, ou {{CSSxRef("border-left-width")}} et {{CSSxRef("border-right-width")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
+La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-width`** définit la largeur des bordures logiques en incise (<i lang="en">inline</i> en anglais) d'un élément, qui correspond à une largeur de bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond aux propriétés {{CSSxRef("border-top-width")}} et {{CSSxRef("border-bottom-width")}}, ou {{CSSxRef("border-left-width")}} et {{CSSxRef("border-right-width")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
 
 La largeur de bordure dans l'autre dimension peut être définie avec {{CSSxRef("border-block-width")}}, qui définit {{CSSxRef("border-block-start-width")}} et {{CSSxRef("border-block-end-width")}}.
 

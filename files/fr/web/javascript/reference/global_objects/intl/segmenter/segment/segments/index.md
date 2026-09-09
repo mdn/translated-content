@@ -24,5 +24,5 @@ Un objet **`Segments`** est une collection itérable des segments d'une chaîne 
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Segmenter")}}
+- L'objet natif {{JSxRef("Intl.Segmenter")}}
 - La méthode {{JSxRef("Intl.Segmenter.prototype.segment()")}}

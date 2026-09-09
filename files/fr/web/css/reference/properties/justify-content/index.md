@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`justify-content`** définit comment le navigateur répartit l'espace entre et autour des éléments de contenu le long de {{Glossary("main axis", "l'axe principal")}} d'un conteneur flexible et le long de [l'axe en ligne](/fr/docs/Glossary/Logical_properties#direction_en_ligne) des conteneurs grille et des conteneurs multi-colonnes.
+La propriété [CSS](/fr/docs/Web/CSS) **`justify-content`** définit comment le navigateur répartit l'espace entre et autour des éléments de contenu le long de {{Glossary("main axis", "l'axe principal")}} d'un conteneur flexible et le long de [l'axe en incise](/fr/docs/Glossary/Logical_properties#direction_en_incise) des conteneurs grille et des conteneurs multi-colonnes.
 
 L'exemple interactif ci-dessous montre quelques valeurs de `justify-content` en utilisant une disposition en grille.
 
@@ -113,10 +113,10 @@ La propriété est définie comme l'un des mots-clés suivants&nbsp;:
   - : Les éléments sont regroupés au centre du conteneur selon l'axe principal.
 
 - `left`
-  - : Les éléments sont regroupés bord à bord vers le bord gauche du conteneur d'alignement. Lorsque l'axe horizontal de la propriété n'est pas parallèle à l'axe en ligne, comme lorsque [`flex-direction: column;`](/fr/docs/Web/CSS/Reference/Properties/flex-direction) est utilisé, cette valeur se comporte comme `start`.
+  - : Les éléments sont regroupés bord à bord vers le bord gauche du conteneur d'alignement. Lorsque l'axe horizontal de la propriété n'est pas parallèle à l'axe en incise, comme lorsque [`flex-direction: column;`](/fr/docs/Web/CSS/Reference/Properties/flex-direction) est utilisé, cette valeur se comporte comme `start`.
 
 - `right`
-  - : Les éléments sont regroupés bord à bord vers le bord droit du conteneur d'alignement sur l'axe approprié. Si l'axe de la propriété n'est pas parallèle à l'axe en ligne (dans un conteneur grille) ou à l'axe principal (dans un conteneur flexible), cette valeur se comporte comme `start`.
+  - : Les éléments sont regroupés bord à bord vers le bord droit du conteneur d'alignement sur l'axe approprié. Si l'axe de la propriété n'est pas parallèle à l'axe en incise (dans un conteneur grille) ou à l'axe principal (dans un conteneur flexible), cette valeur se comporte comme `start`.
 
 - `normal`
   - : Se comporte comme `stretch`, sauf dans le cas des conteneurs multi-colonnes avec une valeur de {{CSSxRef("column-width")}} différente de `auto`, auquel cas les colonnes prennent la largeur définie par `column-width` au lieu de s'étirer pour remplir le conteneur. Comme `stretch` se comporte comme `start` dans les conteneurs flexibles, `normal` se comporte aussi comme `start`.
@@ -150,9 +150,9 @@ Cette propriété partage de nombreux mots-clés avec la propriété {{CSSxRef("
 
 Dans les [dispositions flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout), la propriété définit comment l'espace libre positif est réparti entre ou autour des éléments flexibles le long de l'axe principal. Cette propriété affecte l'espace entre les éléments d'une ligne, et non l'espace entre les lignes. L'alignement est effectué après l'application des longueurs et des marges automatiques, ce qui signifie que lorsque un ou plusieurs éléments flexibles d'une ligne ont un facteur {{CSSxRef("flex-grow")}} supérieur à `0`, la propriété n'a aucun effet, car il n'y a pas d'espace à répartir sur cette ligne. De plus, comme l'étirement sur l'axe principal est contrôlé par {{CSSxRef("flex")}}, la valeur `stretch` se comporte comme `flex-start`.
 
-Avec la [disposition en grille](/fr/docs/Web/CSS/Guides/Grid_layout), cette propriété répartit l'espace disponible entre ou autour des colonnes de la grille, et non des éléments de la grille. Si le conteneur de grille est plus grand que la grille elle-même, la propriété `justify-content` peut être utilisée pour justifier la grille le long de l'axe en ligne, en alignant les colonnes de la grille.
+Avec la [disposition en grille](/fr/docs/Web/CSS/Guides/Grid_layout), cette propriété répartit l'espace disponible entre ou autour des colonnes de la grille, et non des éléments de la grille. Si le conteneur de grille est plus grand que la grille elle-même, la propriété `justify-content` peut être utilisée pour justifier la grille le long de l'axe en incise, en alignant les colonnes de la grille.
 
-Les tailles de pistes `auto` de la grille (et uniquement les tailles de pistes `auto`) peuvent être étirées par les propriétés `align-content` et `justify-content`. Par conséquent, par défaut, une piste dimensionnée en `auto` occupe tout espace restant dans le conteneur de grille. Comme la taille en ligne de la grille doit être inférieure à celle du conteneur de grille pour qu'il y ait de l'espace à répartir, la propriété n'a aucun effet dans ce cas.
+Les tailles de pistes `auto` de la grille (et uniquement les tailles de pistes `auto`) peuvent être étirées par les propriétés `align-content` et `justify-content`. Par conséquent, par défaut, une piste dimensionnée en `auto` occupe tout espace restant dans le conteneur de grille. Comme la taille en incise (<i lang="en">inline</i> en anglais) de la grille doit être inférieure à celle du conteneur de grille pour qu'il y ait de l'espace à répartir, la propriété n'a aucun effet dans ce cas.
 
 ## Définition formelle
 

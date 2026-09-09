@@ -3,10 +3,10 @@ title: Propriété CSS `column-rule`
 short-title: column-rule
 slug: Web/CSS/Reference/Properties/column-rule
 l10n:
-  sourceCommit: 5cf8432d980cbe9b7e5611d647d8566b5c4ff3ed
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) `column-rule` définit la largeur, le style et la couleur des lignes tracées entre les colonnes des dispositions en grille, flexible et multi-colonnes.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) `column-rule` définit la largeur, le style et la couleur des lignes tracées entre les colonnes des dispositions en grille, flexible et multi-colonnes.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: column-rule")}}
 
@@ -97,7 +97,7 @@ column-rule: unset;
 
 ### Valeurs
 
-La propriété `column-rule` accepte une liste de valeurs séparées par des virgules, y compris&nbsp;:
+Cette propriété est définie sous la forme d'une liste de valeurs séparées par des virgules. Chaque valeur peut être de l'un des types suivants&nbsp;:
 
 - `<gap-rule>`
   - : Défini comme une, deux ou trois des valeurs listées ci-dessous, dans n'importe quel ordre.
@@ -154,7 +154,7 @@ column-rule:
   repeat(3, outset navy 10px, inset olive 1px);
 ```
 
-Ça crée une liste de sept règles. Si le nombre de styles dans la liste de styles de la valeur `column-rule` dépasse le nombre d'espaces entre les colonnes, les valeurs de style excédentaires sont ignorées. Si le conteneur sur lequel cela est appliqué a trois colonnes, la règle dans le premier espace est `solid maroon 5px` et la deuxième `outset navy 10px`.
+Ça crée une liste de sept règles. Si le nombre de styles dans la liste de styles de la valeur `column-rule` dépasse le nombre d'espaces entre les colonnes, les valeurs de style excédentaires sont ignorées. Si le conteneur sur lequel c'est appliqué a trois colonnes, la règle dans le premier espace est `solid maroon 5px` et la deuxième `outset navy 10px`.
 
 Si le nombre d'espaces entre les colonnes est supérieur au nombre de styles, la liste des styles est répétée. Si le conteneur a 8, 15, 22 ou 29 colonnes, cette séquence de styles est répétée une, deux, trois ou quatre fois, respectivement, la dernière règle étant `inset olive 1px`.
 

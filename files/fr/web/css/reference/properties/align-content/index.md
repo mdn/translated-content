@@ -286,6 +286,6 @@ Dans la [mise en page de bloc](/fr/docs/Web/CSS/Guides/Box_alignment/In_block_ab
 - [Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
 - [Alignement des boîtes dans une grille](/fr/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
 - [Alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment)
-- [Disposition en bloc et en ligne dans le flux normal](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
+- [Disposition en bloc et en incise dans le flux normal](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
 - [Contenu de niveau bloc](/fr/docs/Glossary/Block-level_content)
 - La propriété {{CSSxRef("display")}}

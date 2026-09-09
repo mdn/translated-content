@@ -3,7 +3,7 @@ title: Propriété CSS `column-gap`
 short-title: column-gap
 slug: Web/CSS/Reference/Properties/column-gap
 l10n:
-  sourceCommit: 53745a2089268ce62bf79695d7d347bcbd0abe57
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`column-gap`** définit la taille de l'espace ({{Glossary("Gutters", "Gouttières")}}) entre les colonnes d'un élément dans les dispositions multi-colonnes, flexibles et en grille.
@@ -74,9 +74,9 @@ column-gap: revert-layer;
 column-gap: unset;
 ```
 
-La propriété `column-gap` est définie par l'une des valeurs listées ci‑dessous.
-
 ### Valeurs
+
+Cette propriété est définie par une valeur unique choisie parmi la liste suivante&nbsp;:
 
 - `normal`
   - : Pour les dispositions multi-colonnes, résolu à `1em`&nbsp;; sinon `0`. C'est la valeur par défaut.
@@ -87,9 +87,9 @@ La propriété `column-gap` est définie par l'une des valeurs listées ci‑des
 
 ## Description
 
-La propriété `column-gap` définit la taille de l'espace entre les colonnes d'un élément. La propriété définit un espacement de longueur fixe entre les éléments d'un conteneur, séparant les boîtes dans l'axe en ligne du conteneur. Les valeurs négatives ne sont pas valides. La valeur par défaut `normal` est résolue à `1em` pour les conteneurs multi-colonnes, et à `0` partout ailleurs.
+La propriété `column-gap` définit la taille de l'espace entre les colonnes d'un élément. La propriété définit un espacement de longueur fixe entre les éléments d'un conteneur, séparant les boîtes dans l'axe en incise (<i lang="en">inline</i> en anglais) du conteneur. Les valeurs négatives ne sont pas valides. La valeur par défaut `normal` est résolue à `1em` pour les conteneurs multi-colonnes, et à `0` partout ailleurs.
 
-Les pourcentages sont calculés par rapport à la taille de la [boîte de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_contenu) de l'axe en ligne de l'élément conteneur lorsque cette taille est définie, et par rapport à `0` sinon, sauf dans la disposition en grille, pour laquelle les tailles en pourcentage cycliques sont résolues par rapport à zéro pour déterminer les contributions de la {{Glossary("intrinsic size", "taille intrinsèque")}} mais sont résolues par rapport à la boîte de contenu de l'élément lors de la disposition du contenu.
+Les pourcentages sont calculés par rapport à la taille de la [boîte de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_contenu) de l'axe en incise (<i lang="en">inline</i> en anglais) de l'élément conteneur lorsque cette taille est définie, et par rapport à `0` sinon, sauf dans la disposition en grille, pour laquelle les tailles en pourcentage cycliques sont résolues par rapport à zéro pour déterminer les contributions de la {{Glossary("intrinsic size", "taille intrinsèque")}} mais sont résolues par rapport à la boîte de contenu de l'élément lors de la disposition du contenu.
 
 L'espace entre les colonnes peut contenir un séparateur visible en tant qu'élément décoratif. S'il y a une règle entre les colonnes, définie avec la propriété {{CSSxRef("column-rule")}} ou le raccourci {{CSSxRef("rule")}}, elle apparaît au milieu de l'espace, mais n'a aucun effet sur la taille des espaces entre les colonnes.
 

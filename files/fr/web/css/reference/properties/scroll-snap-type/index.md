@@ -118,7 +118,7 @@ Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 - `block`
   - : Le conteneur de défilement s'accroche aux positions d'accrochage uniquement sur son axe de bloc.
 - `inline`
-  - : Le conteneur de défilement s'accroche aux positions d'accrochage uniquement sur son axe en ligne.
+  - : Le conteneur de défilement s'accroche aux positions d'accrochage uniquement sur son axe en incise.
 - `both`
   - : Le conteneur de défilement s'accroche aux positions d'accrochage sur ses deux axes indépendamment (il peut s'accrocher à des éléments différents selon chaque axe).
 - `mandatory`

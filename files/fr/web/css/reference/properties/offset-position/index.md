@@ -51,13 +51,13 @@ offset-position: unset;
 - `auto`
   - : Indique que la position de départ du décalage est le coin supérieur gauche de la boîte de l'élément.
 - {{CSSxRef("&lt;position&gt;")}}
-  - : Définit la position comme une coordonnée x/y pour placer un élément par rapport aux bords de sa boîte. La position peut être définie en utilisant une à quatre valeurs. Si deux valeurs qui ne sont pas des mots-clés sont utilisées, la première valeur représente la position horizontale et la seconde représente la position verticale. Si une seule valeur est spécifiée, la seconde valeur est supposée être `center`. Si trois ou quatre valeurs sont utilisées, les valeurs {{CSSxRef("length-percentage")}} sont des décalages pour les valeurs de mot-clé précédentes. Pour plus d'explications sur ces types de valeurs, voir {{CSSxRef("background-position")}}.
+  - : Définit la position comme une coordonnée x/y pour placer un élément par rapport aux bords de sa boîte. La position peut être définie en utilisant une à quatre valeurs. Si deux valeurs qui ne sont pas des mots-clés sont utilisées, la première valeur représente la position horizontale et la seconde représente la position verticale. Si une seule valeur est définie, la seconde valeur est supposée être `center`. Si trois ou quatre valeurs sont utilisées, les valeurs {{CSSxRef("length-percentage")}} sont des décalages pour les valeurs de mot-clé précédentes. Pour plus d'explications sur ces types de valeurs, voir {{CSSxRef("background-position")}}.
 
 ## Définition formelle
 
 {{CSSInfo}}
 
-## Syntax formelle
+## Syntaxe formelle
 
 {{CSSSyntax}}
 

@@ -66,7 +66,7 @@ console.log(usedOptions.type); // "conjunction" (la valeur par défaut)
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.ListFormat")}}
+- L'objet natif {{JSxRef("Intl.ListFormat")}}
 - La méthode {{JSxRef("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
 - La méthode {{JSxRef("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}
 - La méthode {{JSxRef("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}

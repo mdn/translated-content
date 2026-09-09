@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Masking
 original_slug: Web/CSS/CSS_masking
 ---
 
-{{CSSRef}}
-
 **_CSS Masking_** (ou « masques CSS ») est un module CSS qui définit les moyens, dont les masques et le _clipping_, pour dissimuler des parties d'éléments visuels, partiellement ou en totalité.
 
 ## Référence

@@ -50,7 +50,7 @@ resize: none;
 
 `resize` ne s'applique pas aux éléments suivants&nbsp;:
 
-- Éléments en ligne
+- Éléments en incise
 - Éléments de bloc pour lesquels la propriété {{CSSxRef("overflow")}} est définie sur `visible` ou `clip`
 
 ## Syntaxe
@@ -87,7 +87,7 @@ Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 - `block`
   - : L'élément affiche un mécanisme afin que l'utilisateur·ice puisse le redimensionner dans la direction _bloc_ (soit horizontalement, soit verticalement, en fonction de la valeur de {{CSSxRef("writing-mode")}} et de {{CSSxRef("direction")}}).
 - `inline`
-  - : L'élément affiche un mécanisme afin que l'utilisateur·ice puisse le redimensionner dans la direction _en ligne_ (soit horizontalement, soit verticalement, en fonction de la valeur de {{CSSxRef("writing-mode")}} et de {{CSSxRef("direction")}}).
+  - : L'élément affiche un mécanisme afin que l'utilisateur·ice puisse le redimensionner dans la direction _en incise_ (soit horizontalement, soit verticalement, en fonction de la valeur de {{CSSxRef("writing-mode")}} et de {{CSSxRef("direction")}}).
 
 ## Définition formelle
 

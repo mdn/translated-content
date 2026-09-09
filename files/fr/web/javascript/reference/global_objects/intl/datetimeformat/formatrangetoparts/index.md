@@ -108,5 +108,5 @@ console.log(fmt.formatRangeToParts(date1, date2));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.DateTimeFormat")}}
+- L'objet natif {{JSxRef("Intl.DateTimeFormat")}}
 - La méthode {{JSxRef("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}

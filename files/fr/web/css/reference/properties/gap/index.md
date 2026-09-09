@@ -3,10 +3,10 @@ title: Propriété CSS `gap`
 short-title: gap
 slug: Web/CSS/Reference/Properties/gap
 l10n:
-  sourceCommit: 7f138099644a02640a903b2abc39e685ca8ca7cd
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`gap`** définit les espaces (également appelés {{Glossary("gutters", "gouttières")}}) entre les lignes et les colonnes sur les conteneurs [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grilles](/fr/docs/Web/CSS/Guides/Grid_layout).
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`gap`** définit les espaces (également appelés {{Glossary("gutters", "gouttières")}}) entre les lignes et les colonnes sur les conteneurs [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grilles](/fr/docs/Web/CSS/Guides/Grid_layout).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: gap")}}
 
@@ -134,7 +134,7 @@ Les premières versions de la spécification des Grilles CSS appellent cette pro
 
 ### Dans les boîtes flexibles
 
-Avec les conteneurs flexibles, la propriété `gap` définit l'espace entre les éléments flexibles et les lignes flexibles. Que la première valeur soit l'espace entre les éléments flexibles ou entre les lignes flexibles dépend de la direction. Les éléments flexibles sont disposés en lignes ou en colonnes selon la valeur de la propriété {{CSSxRef("flex-direction")}}. Pour les lignes (`row` (par défaut) ou `row-reverse`), la première valeur définit l'espace entre les lignes flexibles, et la seconde valeur définit l'espace entre les éléments dans chaque ligne. Si une seule valeur est incluse, cette valeur est utilisée pour les deux dimensions.
+Avec les conteneurs flexibles, la propriété `gap` définit l'espace entre les éléments flexibles et les lignes flexibles. Que la première valeur soit l'espace entre les éléments flexibles ou entre les lignes flexibles dépend de la direction. Les éléments flexibles sont disposés en incises (<i lang="en">inline</i> en anglais) ou en colonnes selon la valeur de la propriété {{CSSxRef("flex-direction")}}. Pour les lignes (`row` (par défaut) ou `row-reverse`), la première valeur définit l'espace entre les lignes flexibles, et la seconde valeur définit l'espace entre les éléments dans chaque ligne. Si une seule valeur est incluse, cette valeur est utilisée pour les deux dimensions.
 
 Pour les colonnes (`column` ou `column-reverse`), la première valeur définit l'espace entre les éléments flexibles dans une ligne flexible, et la seconde valeur définit l'espace entre chaque ligne flexible. Là encore, si une seule valeur est incluse, cette valeur est utilisée pour les deux dimensions.
 
@@ -365,7 +365,7 @@ Dans le cas de la mise en page flexible, l'espace en pourcentage donne toujours 
 
 ## Spécifications
 
-{{Specifications("css.properties.gap.grid_context")}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

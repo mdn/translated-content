@@ -299,9 +299,9 @@ Ces propriétés sont définies sur `Temporal.ZonedDateTime.prototype` et partag
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
-- L'objet {{JSxRef("Temporal.Instant")}}
-- L'objet {{JSxRef("Temporal.PlainDateTime")}}
-- L'objet {{JSxRef("Temporal.PlainDate")}}
-- L'objet {{JSxRef("Temporal.PlainTime")}}
+- L'objet natif {{JSxRef("Temporal")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Instant")}}
+- L'objet natif {{JSxRef("Temporal.PlainDateTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainDate")}}
+- L'objet natif {{JSxRef("Temporal.PlainTime")}}

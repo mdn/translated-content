@@ -3,8 +3,6 @@ title: Symbol.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 ---
 
-{{JSRef}}
-
 La méthode **`toString()`** renvoie une chaîne de caractères représentant l'objet `Symbol`.
 
 {{InteractiveExample("JavaScript Demo: Symbol.prototype.toString()")}}

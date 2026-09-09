@@ -3,7 +3,7 @@ title: "Request : propriété duplex"
 short-title: duplex
 slug: Web/API/Request/duplex
 l10n:
-  sourceCommit: 3a9a6f9dd92859dca2f928c59b34d9177adb9ae5
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 {{APIRef("Fetch API")}}{{SeeCompatTable}}

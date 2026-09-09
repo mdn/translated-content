@@ -10,20 +10,21 @@ La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caracté
 
 ## Syntaxe
 
-La caractéristique `aspect-ratio` est définie avec un ratio (type CSS {{CSSxRef("&lt;ratio&gt;")}}) qui représente le ratio entre la largeur et la hauteur de la zone d'affichage . C'est une caractéristique d'intervalle ce qui signifie qu'on peut utiliser les variantes préfixées **`min-aspect-ratio`** et **`max-aspect-ratio`** afin de cibler des règles CSS en fonction d'une valeur minimale ou maximale.
+La caractéristique `aspect-ratio` est définie avec un ratio (type CSS {{CSSxRef("&lt;ratio&gt;")}}) qui représente le ratio entre la largeur et la hauteur de la zone d'affichage. C'est une caractéristique d'intervalle ce qui signifie qu'on peut utiliser les variantes préfixées **`min-aspect-ratio`** et **`max-aspect-ratio`** afin de cibler des règles CSS en fonction d'une valeur minimale ou maximale.
 
 ## Exemples
 
-Dans l'exemple ci-dessous, un élément {{HTMLElement("div")}} est contenu dans un {{HTMLElement("iframe")}}. L'iframe crée sa propre zone d'affichage. Redimensionnez l'`<iframe>` pour voir `aspect-ratio` en action.
+Dans l'exemple ci-dessous, un élément {{HTMLElement("div")}} est contenu dans un {{HTMLElement("iframe")}}. L'iframe crée sa propre zone d'affichage. Redimensionnez un `<iframe>` pour voir `aspect-ratio` en action.
 
-Notez que, lorsque aucune des conditions de requête média n'est vraie, l'arrière-plan devient blanc car aucune des règles ci-dessous ne s'applique au `<div>` à l'intérieur de l'`<iframe>`. Essayez de trouver quelles valeurs de largeur et de hauteur déclenchent ce comportement !
+Notez que, lorsque aucune des conditions de requête média n'est vraie, l'arrière-plan devient blanc car aucune des règles ci-dessous ne s'applique au `<div>` à l'intérieur de un `<iframe>`. Essayez de trouver quelles valeurs de largeur et de hauteur déclenchent ce comportement&nbsp;!
 
 ### HTML
 
 ```html
 <iframe id="outer">
   <div id="inner">
-    Watch this element as you resize iframe viewport's width and height.
+    Observez cet élément lorsque vous redimensionnez la largeur et la hauteur de
+    la zone d'affichage du cadre intégré.
   </div>
 </iframe>
 ```

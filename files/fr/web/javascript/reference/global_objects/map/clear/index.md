@@ -67,4 +67,4 @@ console.log(maMap.has("truc")); // false
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Map")}}
+- L'objet natif {{JSxRef("Map")}}

@@ -56,7 +56,7 @@ Si deux valeurs sont fournies, la première valeur représente l'encart/retrait 
 ### Créer une chronologie de progression de vue nommée avec encart
 
 Une chronologie de progression de vue nommée `--reveler-sujet` est définie en utilisant la propriété `view-timeline` sur un élément sujet avec une `class` de `animation`.
-Cela est ensuite défini comme la chronologie pour le même élément en utilisant `animation-timeline: --reveler-sujet;`. Le résultat est que l'élément sujet s'anime lorsqu'il se déplace vers le haut à travers le document lors du défilement.
+C'est ensuite défini comme la chronologie pour le même élément en utilisant `animation-timeline: --reveler-sujet;`. Le résultat est que l'élément sujet s'anime lorsqu'il se déplace vers le haut à travers le document lors du défilement.
 
 Une déclaration `view-timeline-inset` est également définie pour que l'animation commence plus tard que prévu et se termine plus tôt.
 

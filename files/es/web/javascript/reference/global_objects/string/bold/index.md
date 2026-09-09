@@ -5,8 +5,6 @@ slug: Web/JavaScript/Reference/Global_Objects/String/bold
 
 {{JSRef}}
 
-{{Deprecated_header}}
-
 ## Resumen
 
 Provoca que una cadena se muestre en negrita como si estuviera en una etiqueta {{HTMLElement("b")}}.

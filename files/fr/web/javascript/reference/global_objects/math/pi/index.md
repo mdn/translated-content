@@ -60,4 +60,4 @@ calculPérimètre(1); // 6.283185307179586
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Math")}}
+- L'objet natif {{JSxRef("Math")}}

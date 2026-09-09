@@ -3,7 +3,7 @@ title: Propriété CSS `print-color-adjust`
 short-title: print-color-adjust
 slug: Web/CSS/Reference/Properties/print-color-adjust
 l10n:
-  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`print-color-adjust`** définit ce que {{Glossary("user agent", "l'agent utilisateur")}} peut éventuellement faire pour optimiser l'apparence de l'élément sur l'appareil de sortie.

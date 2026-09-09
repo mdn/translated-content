@@ -3,12 +3,12 @@ title: Propriété CSS `rule-width`
 short-title: rule-width
 slug: Web/CSS/Reference/Properties/rule-width
 l10n:
-  sourceCommit: 343ab51426f9279175b8f71fff911621d0a7da20
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 {{SeeCompatTable}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`rule-width`** définit les largeurs de toutes les lignes tracées dans les gouttières des grilles multi-lignes, des conteneurs flexibles et des mises en page multi-colonnes, en définissant les largeurs des règles de colonne et de ligne à la même valeur.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`rule-width`** définit les largeurs de toutes les lignes tracées dans les gouttières des grilles multi-lignes, des conteneurs flexibles et des mises en page multi-colonnes, en définissant les largeurs des règles de colonne et de ligne à la même valeur.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: rule-width")}}
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("UI Events")}}{{non-standard_header}}{{deprecated_header}}
+{{APIRef("UI Events")}}{{non-standard_header}}
 
 已弃用的 **`KeyboardEvent.keyIdentifier`** 只读属性返回一个“按键标识符”字符串，可用于确定按下了哪个键。与其对应的未被弃用的替代属性是 {{domxref("KeyboardEvent.key")}}。
 

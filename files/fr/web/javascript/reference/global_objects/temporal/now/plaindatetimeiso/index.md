@@ -53,5 +53,5 @@ console.log(dateTimeInNewYork); // par exemple : 2021-09-30T23:12:34.567890123
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Now")}}
-- L'objet {{JSxRef("Temporal.PlainDateTime")}}
+- L'objet natif {{JSxRef("Temporal.Now")}}
+- L'objet natif {{JSxRef("Temporal.PlainDateTime")}}

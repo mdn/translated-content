@@ -3,7 +3,7 @@ title: "HTMLDialogElement : méthode requestClose()"
 short-title: requestClose()
 slug: Web/API/HTMLDialogElement/requestClose
 l10n:
-  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
+  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
 ---
 
 {{APIRef("HTML DOM")}}

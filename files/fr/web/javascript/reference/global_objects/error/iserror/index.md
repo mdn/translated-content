@@ -108,4 +108,4 @@ try {
 
 - [Prothèse d'émulation de `Error.isError` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#erroriserror)
 - [Prothèse d'émulation es-shims de `Error.isError` <sup>(angl.)</sup>](https://www.npmjs.com/package/error.iserror)
-- L'objet {{JSxRef("Error")}}
+- L'objet natif {{JSxRef("Error")}}

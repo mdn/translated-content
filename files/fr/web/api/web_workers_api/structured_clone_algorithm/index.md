@@ -15,7 +15,7 @@ Il y a quelques avantages notables à utiliser l'algorithme de clonage structur�
 
 - Le clonage structuré peut copier des objets [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp).
 - Le clonage structuré peut copier des objets {{ domxref("Blob") }}, {{ domxref("File") }} et {{ domxref("FileList") }}.
-- Le clonage structuré peut copier des objets {{ domxref("ImageData") }}. Les dimensions du {{ domxref("CanvasPixelArray") }} du clone correspondront à celles de l'original, et il recevra une copie des mêmes données de pixels.
+- Le clonage structuré peut copier des objets {{ domxref("ImageData") }}. Les dimensions du {{jsxref("Uint8ClampedArray")}} du clone correspondront à celles de l'original, et il recevra une copie des mêmes données de pixels.
 - Le clonage structuré copie correctement les objets contenant des graphes de références cycliques.
 
 ## Ce qui ne marche pas avec le clonage structuré

@@ -2,10 +2,10 @@
 title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 7d4628c5144f459ddb081a3e58d0e56f0c2db673
 ---
 
-La fonction **`encodeURI()`** encode un {{Glossary("URI")}} en remplaçant chaque occurrence de certains caractères par une, deux, trois ou quatre séquences d'échappement représentant l'encodage {{Glossary("UTF-8")}} du caractère (il n'y aura quatre séquences d'échappement que pour les caractères composés de deux codets suppléants). Par rapport à {{JSxRef("encodeURIComponent()")}}, cette fonction encode moins de caractères, préservant ceux qui font partie de la syntaxe de l'URI.
+La fonction **`encodeURI()`** encode un {{Glossary("URI")}} en remplaçant chaque occurrence de certains caractères par une, deux, trois ou quatre séquences d'échappement représentant l'encodage {{Glossary("UTF-8")}} du caractère (il n'y a quatre séquences d'échappement que pour les caractères composés de deux codets suppléants). Par rapport à {{JSxRef("encodeURIComponent()")}}, cette fonction encode moins de caractères, préservant ceux qui font partie de la syntaxe de l'URI.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: encodeURI()")}}
 
@@ -37,7 +37,7 @@ encodeURI(uri)
 
 ### Valeur de retour
 
-Une nouvelle chaîne de caractères représentant la chaîne fournie encodée en tant qu'URI.
+Une nouvelle chaîne de caractères représentant la chaîne de caractères fournie encodée en tant qu'URI.
 
 ### Exceptions
 
@@ -66,21 +66,20 @@ La fonction `encodeURI()` n'encode pas les caractères qui ont une signification
 http://preudo:motdepasse@www.example.com:80/chemin/du/fichier.php?toto=316&tata=ceci+est+un+espace#ancre
 ```
 
-`encodeURI`, comme son nom l'indique, sert à encoder une URL dans son ensemble, en supposant qu'elle est déjà bien formée. Si vous souhaitez assembler dynamiquement des valeurs de chaîne dans une URL, il est préférable d'utiliser {{JSxRef("encodeURIComponent()")}} sur chaque segment dynamique, afin d'éviter la présence de caractères de syntaxe d'URL à des endroits non souhaités.
+`encodeURI`, comme son nom l'indique, sert à encoder une URL dans son ensemble, en supposant qu'elle est déjà bien formée. Si vous souhaitez assembler dynamiquement des valeurs de chaîne de caractères dans une URL, il est préférable d'utiliser {{JSxRef("encodeURIComponent()")}} sur chaque segment dynamique, afin d'éviter la présence de caractères de syntaxe d'URL à des endroits non souhaités.
 
 ```js
 const name = "Thomas & Jerry";
 
-// This is bad:
-const link = encodeURI(`https://example.com/?choice=${name}`); // "https://example.com/?choice=Thomas%20&%20Jerry"
-console.log([...new URL(link).searchParams]); // [['choice', 'Thomas '], [" Jerry", '']
+// Ceci est mauvais :
+const mauvaisLien = encodeURI(`https://example.com/?choice=${name}`); // "https://example.com/?choice=Thomas%20&%20Jerry"
+console.log([...new URL(mauvaisLien).searchParams]); // [['choice', 'Thomas '], [" Jerry", '']
 
-// Instead:
-const link = encodeURI(
-  `https://example.com/?choice=${encodeURIComponent(name)}`,
+// Au lieu de cela :
+const bonLien = `https://example.com/?choice=${encodeURIComponent(name)}`;
 );
-// "https://example.com/?choice=Thomas%2520&%2520Jerry"
-console.log([...new URL(link).searchParams]); // [['choice', "Thomas%20&%20Jerry"]]
+// "https://example.com/?choice=Ben%20%26%20Jerry's"
+console.log([...new URL(bonLien).searchParams]); // [['choice', "Thomas%20&%20Jerry"]]
 ```
 
 ## Exemples
@@ -105,7 +104,7 @@ console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (l'espace est encodé 
 
 ### Encodage d'un codet suppléant isolé
 
-Une exception {{JSxRef("URIError")}} sera levée si on tente d'encoder un codet suppléant qui ne fait pas partie d'une paire haut-bas. Par exemple&nbsp;:
+Une exception {{JSxRef("URIError")}} est levée si on tente d'encoder un codet suppléant qui ne fait pas partie d'une paire haut-bas. Par exemple&nbsp;:
 
 ```js
 // On a une paire de codets surrogate
@@ -124,7 +123,7 @@ Vous pouvez utiliser {{JSxRef("String.prototype.toWellFormed()")}}, qui remplace
 
 ### Encodage pour RFC3986
 
-La {{RFC("3986")}} plus récente rend les crochets réservés (pour {{Glossary("IPv6")}}) et donc non encodés lors de la formation de quelque chose qui pourrait faire partie d'une URL (comme un hôte). Elle réserve aussi !, ', (, ), et \*, même si ces caractères n'ont pas d'usage de délimitation d'URI formalisé. La fonction suivante encode une chaîne de caractères au format d'URL conforme à la RFC3986.
+La {{RFC("3986")}} plus récente rend les crochets réservés (pour {{Glossary("IPv6")}}) et donc non encodés lors de la formation de quelque chose qui peut faire partie d'une URL (comme un hôte). Elle réserve aussi `!`, `'`, `(`, `)`, et `*`, même si ces caractères n'ont pas d'usage de délimitation d'URI formalisé. La fonction suivante encode une chaîne de caractères au format d'URL conforme à la RFC3986.
 
 ```js
 function encodeRFC3986URI(str) {

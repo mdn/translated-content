@@ -120,7 +120,7 @@ li {
 }
 ```
 
-Nous utilisons ensuite le pseudo-élément {{CSSxRef("::scroll-marker")}} pour créer un marqueur carré pour chaque élément de liste avec une bordure rouge, et appliquons des styles au pseudo-élément {{CSSxRef("::scroll-marker-group")}} pour disposer les marqueurs de défilement en ligne avec un écart de `0.2em` entre chaque.
+Nous utilisons ensuite le pseudo-élément {{CSSxRef("::scroll-marker")}} pour créer un marqueur carré pour chaque élément de liste avec une bordure rouge, et appliquons des styles au pseudo-élément {{CSSxRef("::scroll-marker-group")}} pour disposer les marqueurs de défilement en incise avec un écart de `0.2em` entre chaque.
 
 ```css
 li::scroll-marker {

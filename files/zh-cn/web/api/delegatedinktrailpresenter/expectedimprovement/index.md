@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcc977bc3e79a87edd64cd9ef977b515f63daa2c
 ---
 
-{{APIRef("Ink API")}}{{Deprecated_header}}{{Non-Standard_Header}}
+{{APIRef("Ink API")}}{{Non-Standard_Header}}
 
 {{domxref("DelegatedInkTrailPresenter")}} 接口的只读属性 **`expectedImprovement`** 返回一个以毫秒为单位的值，表示使用此演示器可以预期的延迟改进。
 

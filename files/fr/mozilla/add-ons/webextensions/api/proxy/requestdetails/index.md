@@ -2,7 +2,7 @@
 title: proxy.RequestDetails
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/RequestDetails
 l10n:
-  sourceCommit: 9791add3508e087982097f25fbd367c21bcb8305
+  sourceCommit: 76824348ac7be05f30c32f29e9495e7b29f71876
 ---
 
 Contient des informations sur une requête Web que le navigateur est sur le point de faire. Une instance de cet objet est passée dans l'écouteur {{WebExtAPIRef("proxy.onRequest")}}.
@@ -23,8 +23,6 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
   - : `boolean`. Indique si cette réponse est récupérée du cache disque.
 - `incognito`
   - : `boolean` `true` pour les demandes de navigation privées
-- `ip`
-  - : L'adresse IP du serveur à laquelle la demande est envoyée. Notez qu'il peut s'agir d'une adresse IPv6 littérale.
 - `method`
   - : `string`. Méthode HTTP standard: par exemple, `"GET"` ou `"POST"`.
 - `originUrl`
@@ -39,10 +37,12 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. Les en-têtes de requête HTTP qui vont être envoyés avec cette requête. Notez que ceci n'est inclus que si l'option `"requestHeaders"` a été passée dans `addListener()`.
 - `tabId`
   - : `integer`. ID de l'onglet dans lequel la requête a lieu. Défini sur -1 si la requête n'est pas liée à un onglet.
+- `thirdParty`
+  - : `boolean`. Indique si la requête et sa hiérarchie de fenêtres de contenu sont de tiers.
 - `timeStamp`
   - : `number`. L'heure à laquelle cet évènement s'est déclenché, en [millisecondes depuis l'époque](https://fr.wikipedia.org/wiki/Heure_Unix).
 - `type`
-  - : {{WebExtAPIRef('webRequest.ResourceType')}}. Le type de ressource demandé&nbsp;: par exemple, `"image"`, `"script"`, `"stylesheet"`.
+  - : {{WebExtAPIRef("webRequest.ResourceType")}}. Le type de ressource demandé&nbsp;: par exemple, `"image"`, `"script"`, `"stylesheet"`.
 - `url`
   - : `string`. Cible de la demande.
 

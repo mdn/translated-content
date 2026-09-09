@@ -3,7 +3,7 @@ title: "WebSocket : évènement close"
 short-title: close
 slug: Web/API/WebSocket/close_event
 l10n:
-  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("WebSockets API")}}{{AvailableInWorkers}}
@@ -26,20 +26,9 @@ Un objet {{DOMxRef("CloseEvent")}}. Hérite de l'objet {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("CloseEvent")}}
 
-## Propriétés de l'évènement
-
-_En plus des propriétés listées ci-dessous, les propriétés de l'interface parente, {{DOMxRef("Event")}}, sont disponibles._
-
-- {{DOMxRef("CloseEvent.code", "code")}} {{ReadOnlyInline}}
-  - : Retourne une valeur de type `unsigned short` contenant le code de fermeture envoyé par le serveur.
-- {{DOMxRef("CloseEvent.reason", "reason")}} {{ReadOnlyInline}}
-  - : Retourne une chaîne de caractères indiquant la raison pour laquelle le serveur a fermé la connexion. Ceci est spécifique au serveur et au sous-protocole concernés.
-- {{DOMxRef("CloseEvent.wasClean", "wasClean")}} {{ReadOnlyInline}}
-  - : Retourne une valeur booléenne indiquant si la connexion a été fermée proprement ou non.
-
 ## Exemples
 
-Vous pourriez vouloir savoir quand la connexion a été fermée afin de mettre à jour l'interface utilisateur ou, peut-être, enregistrer des données concernant la connexion fermée. En supposant que vous ayez une variable appelée `socketExemple` qui fait référence à une `WebSocket` ouverte, ce gestionnaire permettrait de gérer la situation où la socket a été fermée.
+Vous pouvez vouloir savoir quand la connexion a été fermée afin de mettre à jour l'interface utilisateur ou, peut-être, enregistrer des données concernant la connexion fermée. En supposant que vous ayez une variable appelée `socketExemple` qui fait référence à une `WebSocket` ouverte, ce gestionnaire permet de gérer la situation où la socket a été fermée.
 
 ```js
 socketExemple.addEventListener("close", (event) => {

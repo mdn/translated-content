@@ -65,8 +65,8 @@ Pour plus d'exemples, voir {{JSxRef("Temporal/PlainYearMonth/add", "add()")}}.
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainYearMonth")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.PlainYearMonth")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/PlainYearMonth/add", "Temporal.PlainYearMonth.prototype.add()")}}
 - La méthode {{JSxRef("Temporal/PlainYearMonth/since", "Temporal.PlainYearMonth.prototype.since()")}}
 - La méthode {{JSxRef("Temporal/PlainYearMonth/until", "Temporal.PlainYearMonth.prototype.until()")}}

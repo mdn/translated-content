@@ -3,10 +3,10 @@ title: Propriété CSS `box-align`
 short-title: box-align
 slug: Web/CSS/Reference/Properties/box-align
 l10n:
-  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 > [!WARNING]
 > Cette propriété s'inscrivait dans une ancienne version du standard pour le module CSS sur les boîtes flexibles et a été remplacée dans une nouvelle version du standard.

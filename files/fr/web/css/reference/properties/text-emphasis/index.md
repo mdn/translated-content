@@ -3,10 +3,10 @@ title: Propriété CSS `text-emphasis`
 short-title: text-emphasis
 slug: Web/CSS/Reference/Properties/text-emphasis
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`text-emphasis`** applique des marques d'emphase au texte (sauf les espaces et les caractères de contrôle). C'est une propriété raccourcie pour {{CSSxRef("text-emphasis-style")}} et {{CSSxRef("text-emphasis-color")}}.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`text-emphasis`** applique des marques d'emphase au texte (sauf les espaces et les caractères de contrôle). C'est une propriété raccourcie pour {{CSSxRef("text-emphasis-style")}} et {{CSSxRef("text-emphasis-color")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: text-emphasis")}}
 
@@ -146,5 +146,5 @@ h2 {
 
 ## Voir aussi
 
-- Les propriétés longues {{CSSxRef('text-emphasis-style')}}, {{CSSxRef('text-emphasis-color')}}.
-- La propriété {{CSSxRef('text-emphasis-position')}} permet de définir la position des marques d'emphase.
+- Les propriétés longues {{CSSxRef("text-emphasis-style")}}, {{CSSxRef("text-emphasis-color")}}.
+- La propriété {{CSSxRef("text-emphasis-position")}} vous permet de définir la position des marques d'emphase.

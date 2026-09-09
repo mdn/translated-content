@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feFuncA
 original_slug: Web/SVG/Element/feFuncA
 ---
 
-{{SVGRef}}
-
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feFuncA>`** doit être placée dans une balise {{SVGElement("feComponentTransfer")}} et elle définit la fonction de transfert pour le canal alpha (opacité) de l'image en entrée.
 
 ## Contexte d'utilisation

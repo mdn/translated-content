@@ -3,7 +3,7 @@ title: Les bases des tableaux HTML
 short-title: Bases des tableaux
 slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
 l10n:
-  sourceCommit: 2066cc916dfdcbb782340bf0ce562b230e947cba
+  sourceCommit: ce12c10364f35c64184dec44be85537b7e10d91f
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
@@ -223,7 +223,7 @@ Lorsque c'est fait correctement, les tableaux HTML sont bien pris en charge par 
 
 Vous pouvez également [consulter l'exemple de données planétaires en temps réel <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/tables/planets-data/) sur GitHub&nbsp;! Vous pouvez remarquer que le tableau y est un peu plus lisible&nbsp;: cela s'explique par le fait que le tableau affiché ci-dessus sur cette page ne comporte qu'un style minimal, tandis que la version GitHub bénéficie d'un CSS plus élaboré.
 
-Ne vous faites pas d'illusions&nbsp;; pour que les tableaux soient efficaces sur le Web, vous devez leur appliquer des styles à l'aide de [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), ainsi qu'une structure solide en HTML. Dans cette leçon, nous nous concentrons sur la partie HTML&nbsp;; vous découvrirez la mise en forme des tableaux plus tard, dans notre leçon [Mise en forme des tableaux](/fr/docs/Learn_web_development/Core/Styling_basics/Tables).
+Ne vous faites pas d'illusions&nbsp;; pour que les tableaux soient efficaces sur le Web, vous devez leur appliquer des styles à l'aide de [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), ainsi qu'une structure solide en HTML. Dans cette leçon, nous nous concentrons sur la partie HTML&nbsp;; vous découvrez la mise en forme des tableaux plus tard, dans notre leçon [Mise en forme des tableaux](/fr/docs/Learn_web_development/Core/Styling_basics/Tables).
 
 Nous ne nous concentrons pas sur le CSS dans ce module, mais nous avons fourni une feuille de style CSS minimale que vous pouvez utiliser pour rendre vos tableaux plus lisibles que ceux par défaut, sans aucun style. Vous pouvez trouver la [feuille de style ici <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css), ainsi qu'un [modèle HTML <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) qui applique cette feuille de style — ensemble, ils vous offrent un bon point de départ pour vous familiariser avec les tableaux HTML.
 
@@ -598,7 +598,7 @@ Votre HTML final doit ressembler à ceci&nbsp;:
 
 Il existe un moyen de cibler des colonnes de tableau entières en tant qu'entité unique, par exemple lors de l'application de styles à un tableau (ce que vous apprendrez plus tard, dans [Mettre en forme les tableaux](/fr/docs/Learn_web_development/Core/Styling_basics/Tables)). À mesure que vous gagnez de l'expérience dans la création de tableaux HTML, vous pouvez constater que l'application d'une couleur de fond, par exemple, à chaque cellule d'une seule colonne est plus difficile que vous ne le pensez. Les éléments {{HTMLElement("colgroup")}} et {{HTMLElement("col")}} offrent une solution à ce problème.
 
-L'élément `<colgroup>` doit être inclus en tant qu'enfant du tableau, juste après l'ouverture de l'élément `<table>`. À l'intérieur de l'élément `<colgroup>`, vous pouvez inclure un ou plusieurs éléments `<col>`, qui représentent des groupes de colonnes. L'élément `<col>` peut inclure un attribut `span` qui indique le nombre de colonnes dans ce groupe. Il peut également inclure des attributs globaux tels que `style` (si vous souhaitez cibler le groupe avec des styles en ligne) ou `class` (si vous souhaitez cibler ce groupe avec CSS ou JavaScript en utilisant un nom de classe). Les éléments `<col>` représentent les colonnes du tableau à partir du début des colonnes, par exemple à partir du côté gauche d'un tableau écrit dans une langue de gauche à droite comme l'anglais.
+L'élément `<colgroup>` doit être inclus en tant qu'enfant du tableau, juste après l'ouverture de l'élément `<table>`. À l'intérieur de l'élément `<colgroup>`, vous pouvez inclure un ou plusieurs éléments `<col>`, qui représentent des groupes de colonnes. L'élément `<col>` peut inclure un attribut `span` qui indique le nombre de colonnes dans ce groupe. Il peut également inclure des attributs globaux tels que `style` (si vous souhaitez cibler le groupe avec des styles en incise) ou `class` (si vous souhaitez cibler ce groupe avec CSS ou JavaScript en utilisant un nom de classe). Les éléments `<col>` représentent les colonnes du tableau à partir du début des colonnes, par exemple à partir du côté gauche d'un tableau écrit dans une langue de gauche à droite comme l'anglais.
 
 Voyons un exemple pour illustrer ce que nous voulons dire. Le tableau suivant montre un emploi du temps scolaire&nbsp;:
 
@@ -736,7 +736,7 @@ td {
 - Les éléments `<col>` avec une classe `column-fixed-width` ont une largeur fixe étroite appliquée.
 - L'élément `<col>` avec une classe `column-background-border` a une couleur de fond solide et une bordure épaisse appliquées.
 
-Vous n'avez pas besoin de vous inquiéter de la façon dont le CSS fonctionne pour l'instant&nbsp;; vous en apprendrez les détails plus tard dans notre module [Bases du style CSS](/fr/docs/Learn_web_development/Core/Styling_basics).
+Vous n'avez pas besoin de vous inquiéter de la façon dont le CSS fonctionne pour l'instant&nbsp;; vous allez apprendre les détails plus tard dans notre module [Bases du style CSS](/fr/docs/Learn_web_development/Core/Styling_basics).
 
 Regardons comment le code ci-dessus s'affiche&nbsp;:
 

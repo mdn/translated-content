@@ -55,4 +55,4 @@ console.log(dutch.baseName); // Affiche "nl-Latn-NL"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}

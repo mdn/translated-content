@@ -3,7 +3,7 @@ title: Fonctions de valeur CSS
 short-title: Fonctions
 slug: Web/CSS/Reference/Values/Functions
 l10n:
-  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
+  sourceCommit: d35a7643766c8f8d1d92044ca771dbf8dc843906
 ---
 
 Les **fonctions de valeur CSS** (<i lang="en">CSS value functions</i> en anglais) sont des instructions qui invoquent un traitement de données spécial ou des calculs pour retourner une [valeur](/fr/docs/Web/CSS/Guides/Values_and_units) [CSS](/fr/docs/Web/CSS) pour une propriété CSS. Les fonctions de valeur CSS représentent des [types de données](/fr/docs/Web/CSS/Reference/Values/Data_types) plus complexes et peuvent prendre certains arguments d'entrée pour calculer la valeur de retour.
@@ -115,6 +115,8 @@ Chacune des pages ci-dessous contient des informations détaillées sur la synta
   - : Calcule un nombre arrondi en fonction d'une stratégie d'arrondi.
 - {{CSSxRef("mod()")}}
   - : Calcule un module (avec le même signe que le diviseur) lors de la division d'un nombre par un autre.
+- {{CSSxRef("progress()")}}
+  - : Calcule la position d'une valeur entre deux autres valeurs — une valeur de départ et une valeur de fin. Le résultat représente la progression entre la valeur de départ et la valeur de fin, où 0 est le départ et 1 est la fin.
 - {{CSSxRef("rem()")}}
   - : Calcule un reste (avec le même signe que le dividende) lors de la division d'un nombre par un autre.
 
@@ -352,7 +354,7 @@ Les fonctions suivantes sont utilisées comme valeur de différentes propriété
 Les fonctions de positionnement des ancres sont utilisées lors du positionnement et du dimensionnement des éléments positionnés par rapport à la position et à la taille de leurs éléments d'ancrage associés.
 
 - {{CSSxRef("anchor()")}}
-  - : Retourne une longueur relative à la position des bords de l'élément d'ancrage associé à un élément positionné par ancre.
+  - : Retourne une longueur relative à la position des bords de l'élément d'ancrage associé à un élément positionné par une ancre.
 - {{CSSxRef("anchor-size()")}}
   - : Retourne une longueur relative à la taille de l'élément d'ancrage associé.
 

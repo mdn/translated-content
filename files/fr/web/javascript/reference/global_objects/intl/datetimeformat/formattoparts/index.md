@@ -197,5 +197,5 @@ Parce que `format()` concatène simplement toutes les chaînes de caractères `v
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.DateTimeFormat")}}
+- L'objet natif {{JSxRef("Intl.DateTimeFormat")}}
 - La méthode {{JSxRef("Intl/DateTimeFormat/format", "Intl.DateTimeFormat.prototype.format()")}}

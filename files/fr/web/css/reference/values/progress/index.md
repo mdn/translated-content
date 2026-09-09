@@ -3,7 +3,7 @@ title: Fonction CSS `progress()`
 short-title: progress()
 slug: Web/CSS/Reference/Values/progress
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: d35a7643766c8f8d1d92044ca771dbf8dc843906
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`progress()`** retourne une valeur {{CSSxRef("&lt;number&gt;")}} représentant la position d'une valeur (la valeur de progression) par rapport à deux autres valeurs (les valeurs de début et de fin de progression).
@@ -15,6 +15,10 @@ La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CS
 progress(300, 0, 1000)
 progress(50px, 0px, 100px)
 progress(50%, 30%, 80%)
+
+/* Valeur de retour non limitée */
+progress(no-clamp 300, 0, 100)
+progress(no-clamp 50px, 0px, 100px)
 
 /* Avec une propriété personnalisée */
 progress(var(--container-width), 320, 1200)
@@ -34,14 +38,16 @@ progress(calc(20 + 30), 0, 100)
 
 ### Paramètres
 
-La fonction `progress()` prend trois expressions {{CSSxRef("&lt;calc-sum&gt;")}} séparées par des virgules comme paramètres&nbsp;:
+La fonction `progress()` prend un mot-clé optionnel suivi de trois expressions {{CSSxRef("&lt;calc-sum&gt;")}} séparées par des virgules comme paramètres&nbsp;:
 
 ```plain
-progress(<calc-sum>, <calc-sum>, <calc-sum>)
+progress(no-clamp? <calc-sum>, <calc-sum>, <calc-sum>)
 ```
 
-Respectivement, ce sont&nbsp;:
+Ce sont&nbsp;:
 
+- `no-clamp` {{optional_inline}}
+  - : Un mot-clé qui empêche la valeur de retour d'être limitée à la plage `0` à `1`. Il est écrit avant la valeur de progression et n'est pas suivi d'une virgule. Voir [Limiter la valeur de retour](#limiter_la_valeur_de_retour).
 - Valeur de progression
   - : La valeur dont on veut calculer la position par rapport aux deux autres valeurs.
 - Début de progression
@@ -63,13 +69,37 @@ Si la valeur de progression se situe entre les valeurs de début et de fin de pr
 
 La fonction CSS `progress()` fournit un moyen de calculer un ratio de progression, ce qui est utile pour créer des cas d'utilisation tels que des animations de barres de progression ou des boîtes qui apparaissent progressivement à mesure qu'elles s'élargissent pour révéler leur contenu.
 
-L'utilisation la plus simple pourrait ressembler à ceci&nbsp;:
+L'utilisation la plus simple peut ressembler à ceci&nbsp;:
 
 ```css
 opacity: progress(5, 0, 10);
 ```
 
 Dans ce cas, la valeur calculée de {{CSSxRef("opacity")}} est `0.5`, car 5 est à mi-chemin entre `0` et `10`.
+
+### Limiter la valeur de retour
+
+Par défaut, la valeur de retour est limitée à la plage `0` à `1`, donc une valeur de progression en dehors des bornes de début et de fin de progression retourne la borne la plus proche&nbsp;:
+
+```css
+/* Calcule à 1, pas à 1.5 */
+scale: progress(15, 0, 10);
+
+/* Calcule à 0, pas à -0.5 */
+scale: progress(-5, 0, 10);
+```
+
+Inclure le mot-clé `no-clamp` avant la valeur de progression supprime cette restriction, de sorte que la fonction extrapole au-delà des bornes au lieu de s'y arrêter&nbsp;:
+
+```css
+/* Calcule à 1.5 */
+scale: progress(no-clamp 15, 0, 10);
+
+/* Calcule à -0.5 */
+scale: progress(no-clamp -5, 0, 10);
+```
+
+Notez que `no-clamp` est un mot-clé plutôt qu'un paramètre séparé, il n'est donc pas suivi d'une virgule.
 
 ### Types d'unités autorisés
 
@@ -100,7 +130,7 @@ La fonction `progress()` retourne des valeurs sans unité, elle peut donc être 
 
 ### Combiner `progress()` avec d'autres fonctions et propriétés personnalisées
 
-Parce que `progress()` ne retourne qu'une valeur sans unité comprise entre `0` et `1`, il est courant de la combiner avec une autre fonction mathématique telle que {{CSSxRef("calc()")}} pour obtenir la valeur et les unités souhaitées. Vous pouvez également utiliser des [propriétés personnalisées CSS](/fr/docs/Web/CSS/Reference/Properties/--*) à l'intérieur des fonctions `progress()` — cela a du sens, car vous voulez souvent définir les mêmes valeurs à plusieurs endroits, et/ou les baser sur des propriétés personnalisées définies par JavaScript.
+Parce que `progress()` ne retourne qu'une valeur sans unité, il est courant de la combiner avec une autre fonction mathématique telle que {{CSSxRef("calc()")}} pour obtenir la valeur et les unités souhaitées. Vous pouvez également utiliser des [propriétés personnalisées CSS](/fr/docs/Web/CSS/Reference/Properties/--*) à l'intérieur des fonctions `progress()` — cela a du sens, car vous voulez souvent définir les mêmes valeurs à plusieurs endroits, et/ou les baser sur des propriétés personnalisées définies par JavaScript.
 
 L'exemple suivant calcule le pourcentage de la largeur de la fenêtre entre une largeur minimale de `320px` et une largeur maximale de `1200px`. La fonction `calc()` est utilisée pour multiplier la valeur de retour de `progress()` par `600px` afin de la convertir en une valeur en pixels qui représente la moitié de la progression de la largeur de la fenêtre entre `320px` et `1200px`.
 

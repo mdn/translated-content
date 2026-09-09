@@ -3,12 +3,12 @@ title: Propriété CSS `user-modify`
 short-title: user-modify
 slug: Web/CSS/Reference/Properties/user-modify
 l10n:
-  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`user-modify`** n'a aucun effet. Elle était initialement conçue pour déterminer si le contenu d'un élément peut être édité ou non par l'utilisateur·ice.
+La propriété [CSS](/fr/docs/Web/CSS) **`user-modify`** n'a aucun effet. Elle est initialement conçue pour déterminer si le contenu d'un élément peut être édité ou non par l'utilisateur·ice.
 
 > [!WARNING]
 > Cette propriété a été remplacée par l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable).

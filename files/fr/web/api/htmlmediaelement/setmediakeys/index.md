@@ -3,14 +3,14 @@ title: "HTMLMediaElement : méthode setMediaKeys()"
 short-title: setMediaKeys()
 slug: Web/API/HTMLMediaElement/setMediaKeys
 l10n:
-  sourceCommit: 7cac5cc51350b7688903656bb36d79152f82d01f
+  sourceCommit: e1e7e2ac2cb1e40293c32c24bc0667905e9a7a04
 ---
 
 {{APIRef("HTML DOM")}}{{SecureContext_Header}}
 
-La méthode **`setMediaKeys()`** de l'interface {{DOMxRef("HTMLMediaElement")}} définit les {{DOMxRef("MediaKeys")}} qui seront utilisés pour déchiffrer les médias pendant la lecture.
+La méthode **`setMediaKeys()`** de l'interface {{DOMxRef("HTMLMediaElement")}} définit les {{DOMxRef("MediaKeys")}} qui sont utilisés pour déchiffrer les médias pendant la lecture.
 
-Elle retourne une promesse ({{JSxRef("Promise")}}) qui se résout si les nouvelles clés sont correctement définies, ou se rejette si les clés ne peuvent pas être définies.
+Elle retourne une promesse ({{JSxRef("Promise")}}) qui se complète si les nouvelles clés sont correctement définies, ou se rompt si les clés ne peuvent pas être définies.
 
 ## Syntaxe
 
@@ -25,7 +25,7 @@ setMediaKeys(mediaKeys)
 
 ### Valeur de retour
 
-Une promesse ({{JSxRef("Promise")}}) qui se résout avec {{JSxRef("undefined")}}.
+Une promesse ({{JSxRef("Promise")}}) qui se complète avec {{JSxRef("undefined")}}.
 
 ### Exceptions
 

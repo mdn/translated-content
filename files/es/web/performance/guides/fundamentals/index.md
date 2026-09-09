@@ -4,7 +4,7 @@ slug: Web/Performance/Guides/Fundamentals
 original_slug: Web/Performance/Fundamentals
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
+{{QuickLinksWithSubPages("/es/docs/Web/Performance")}}
 
 Performance significa eficiencia. En el contexto de Open Web Apps, este documento explica en general qué es performance, cómo la plataforma del navegador ayuda a mejorarlo y qué herramientas y procesos puede usar para probarlo y mejorarlo.
 

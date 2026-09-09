@@ -82,7 +82,7 @@ time.toLocaleString("en-US", { hour: "2-digit" }); // 12 PM
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainTime")}}
-- L'objet {{JSxRef("Intl.DateTimeFormat")}}
+- L'objet natif {{JSxRef("Temporal.PlainTime")}}
+- L'objet natif {{JSxRef("Intl.DateTimeFormat")}}
 - La méthode {{JSxRef("Temporal/PlainTime/toJSON", "Temporal.PlainTime.prototype.toJSON()")}}
 - La méthode {{JSxRef("Temporal/PlainTime/toString", "Temporal.PlainTime.prototype.toString()")}}

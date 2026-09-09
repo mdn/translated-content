@@ -136,7 +136,7 @@ p {
 
 {{Compat}}
 
-## See also
+## Voir aussi
 
 - La propriété {{CSSxRef("font-size")}}
 - La propriété {{CSSxRef("font-size-adjust")}}

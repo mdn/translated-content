@@ -6,7 +6,7 @@ l10n:
   sourceCommit: fc11c086fd41f090489fa35778998b606c257af2
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_getting_started","Learn_web_development/Core/Frameworks_libraries/React_components", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_getting_started","Learn_web_development/Core/Frameworks_libraries/React_components", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Disons que nous avons pour mission de créer une preuve de concept en React&nbsp;: une application qui permette d'ajouter, de modifier et de supprimer des tâches sur lesquelles on veut travailler, et de les marquer comme terminées sans les supprimer. Dans cet article, nous verrons comment mettre en place la structure de base et la mise en forme du composant `App` initial et qui servira de socle pour définir d'autres composants et implémenter l'interactivité par la suite.
 

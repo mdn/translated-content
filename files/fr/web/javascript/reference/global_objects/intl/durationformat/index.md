@@ -72,5 +72,5 @@ new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
 ## Voir aussi
 
 - [Prothèse d'émulation de `Intl.DurationFormat` dans FormatJS <sup>(angl.)</sup>](https://formatjs.github.io/docs/polyfills/intl-durationformat/)
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl")}}
 - La méthode {{JSxRef("Temporal/Duration/toLocaleString", "Temporal.Duration.prototype.toLocaleString()")}}

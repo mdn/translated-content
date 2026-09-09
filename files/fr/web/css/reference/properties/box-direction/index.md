@@ -3,10 +3,10 @@ title: Propriété CSS `box-direction`
 short-title: box-direction
 slug: Web/CSS/Reference/Properties/box-direction
 l10n:
-  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 > [!WARNING]
 > Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i>) et a été remplacée dans une version plus récente. La propriété `-moz-box-direction` ne peut être utilisée que dans des composants XUL tandis que la propriété `box-direction` a été remplacée par la propriété standard `flex-direction`. Voir la page [Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) pour plus d'informations sur ce qui doit être utilisé à la place.

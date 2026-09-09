@@ -54,5 +54,5 @@ console.log(locale.caseFirst); // "lower"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}
 - [Spécification Unicode pour la collation selon la casse <sup>(angl.)</sup>](https://github.com/unicode-org/cldr/blob/main/common/bcp47/collation.xml#L49)

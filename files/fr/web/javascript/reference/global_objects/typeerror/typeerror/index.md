@@ -3,8 +3,6 @@ title: Constructeur TypeError()
 slug: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
 ---
 
-{{JSRef}}
-
 Le constructeur **`TypeError()`** permet de créer un objet représentant une erreur qui se produit lorsqu'une opération n'a pu être réalisée, généralement (mais pas toujours) parce qu'une valeur n'était pas du type attendu.
 
 ## Syntaxe

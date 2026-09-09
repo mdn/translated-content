@@ -3,10 +3,10 @@ title: Propriété CSS `padding-inline`
 short-title: padding-inline
 slug: Web/CSS/Reference/Properties/padding-inline
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`padding-inline`** définit le remplissage logique au début et à la fin de l'axe en ligne d'un élément, ce qui correspond aux propriétés de remplissage physiques en fonction du mode d'écriture, de la direction et de l'orientation du texte de l'élément.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`padding-inline`** définit le remplissage logique au début et à la fin de l'axe en incise (<i lang="en">inline</i> en anglais) d'un élément, ce qui correspond aux propriétés de remplissage physiques en fonction du mode d'écriture, de la direction et de l'orientation du texte de l'élément.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: padding-inline")}}
 
@@ -83,7 +83,7 @@ La propriété `padding-inline` peut être définie avec une ou deux valeurs. Si
 - {{CSSxRef("&lt;length&gt;")}}
   - : La taille du remplissage exprimée avec une valeur absolue. Cette valeur ne peut être négative.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : La taille du remplissage exprimée en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur ne peut être négative.
+  - : La taille du remplissage exprimée en pourcentage, relative à la taille en incise (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur ne peut être négative.
 
 ## Description
 
@@ -99,7 +99,7 @@ Les valeurs de remplissage définies par `padding-inline` peuvent être équival
 
 ## Exemples
 
-### Définir le remplissage en ligne pour le texte vertical
+### Définir le remplissage en incise pour le texte vertical
 
 #### HTML
 
@@ -127,7 +127,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Définir le remplissage en ligne pour le texte vertical", 140, 140)}}
+{{EmbedLiveSample("Définir le remplissage en incise pour le texte vertical", 140, 140)}}
 
 ## Spécifications
 

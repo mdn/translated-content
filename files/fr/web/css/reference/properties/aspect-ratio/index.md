@@ -79,7 +79,7 @@ Cette propriété se définit avec le mot-clé `auto`, un `<ratio>`, ou les deux
 
 ## Description
 
-La propriété `aspect-ratio` définit un rapport largeur/hauteur désiré pour la boîte d'un élément. Cela signifie que même si la taille du conteneur parent ou de la fenêtre d'affichage change, le navigateur ajuste les dimensions de l'élément pour maintenir le rapport largeur/hauteur défini. Le {{Glossary("aspect ratio", "rapport d'aspect")}} défini est utilisé dans le calcul des tailles automatiques et dans certaines autres fonctions de mise en page.
+La propriété `aspect-ratio` définit un rapport largeur/hauteur désiré pour la boîte d'un élément. Cela signifie que même si la taille du conteneur parent ou de la zone d'affichage change, le navigateur ajuste les dimensions de l'élément pour maintenir le rapport largeur/hauteur défini. Le {{Glossary("aspect ratio", "rapport d'aspect")}} défini est utilisé dans le calcul des tailles automatiques et dans certaines autres fonctions de mise en page.
 
 Au moins une des dimensions de la boîte doit être automatique pour que `aspect-ratio` ait un effet. Si ni la largeur ni la hauteur n'est une taille automatique, le rapport d'aspect fourni n'a aucun effet sur les tailles préférentielles de la boîte.
 

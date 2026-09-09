@@ -3,7 +3,7 @@ title: "HTMLImageElement : propriété attributionSrc"
 short-title: attributionSrc
 slug: Web/API/HTMLImageElement/attributionSrc
 l10n:
-  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
+  sourceCommit: 7b9f3c730d1909846f80c70d84ac265d93d82af2
 ---
 
 {{APIRef("Attribution Reporting API")}}{{SecureContext_Header}}{{Non-standard_Header}}
@@ -36,8 +36,8 @@ imgElem.attributionSrc = "";
 ```
 
 ```js
-// Encoder les URL au cas où elles contiendraient des caractères spéciaux
-// comme '=' qui seraient mal interprétés.
+// Encoder les URL au cas où elles contiennent des caractères spéciaux
+// comme '=' qui sont mal interprétés.
 const encodedUrlA = encodeURIComponent("https://a.example/register-source");
 const encodedUrlB = encodeURIComponent("https://b.example/register-source");
 

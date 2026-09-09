@@ -16,7 +16,7 @@ Vous pouvez également utiliser les propriétés de transformation individuelles
 
 > [!WARNING]
 > Seuls certains éléments peuvent être transformés.
-> Les éléments dont la disposition est gérée avec des [boîtes en ligne non-remplacées](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model#les_éléments_en_ligne_et_les_boîtes_en_ligne), des [colonnes de tableau](/fr/docs/Web/HTML/Reference/Elements/col) ou des [groupes de colonnes de tableau](/fr/docs/Web/HTML/Reference/Elements/colgroup) ne peuvent pas être transformés.
+> Les éléments dont la disposition est gérée avec des [boîtes en incise (<i lang="en">inline</i> en anglais) qui ne sont pas remplacées](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model#les_éléments_en_incise_et_les_boîtes_en_incise), des [colonnes de tableau](/fr/docs/Web/HTML/Reference/Elements/col) ou des [groupes de colonnes de tableau](/fr/docs/Web/HTML/Reference/Elements/colgroup) ne peuvent pas être transformés.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: transform")}}
 

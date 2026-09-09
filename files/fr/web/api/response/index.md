@@ -2,14 +2,14 @@
 title: Response
 slug: Web/API/Response
 l10n:
-  sourceCommit: 252040efa8f6ca0f737fd7ec04e610354e58b98c
+  sourceCommit: 1bfa4c3f7895d734df516d2bc61240313397a63c
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 L'interface **`Response`** de [l'API Fetch](/fr/docs/Web/API/Fetch_API) représente la réponse à une requête.
 
-Vous pouvez créer un nouvel objet `Response` à l'aide du constructeur {{DOMxRef("Response.Response", "Response()")}}, mais vous rencontrerez plus souvent un objet `Response` retourné à la suite d'une autre opération d'API — par exemple, un service worker {{DOMxRef("FetchEvent.respondWith")}}, ou un simple {{DOMxRef("Window/fetch", "fetch()")}}.
+Vous pouvez créer un nouvel objet `Response` à l'aide du constructeur {{DOMxRef("Response.Response", "Response()")}}, mais vous rencontrez plus souvent un objet `Response` retourné à la suite d'une autre opération d'API — par exemple, un service worker {{DOMxRef("FetchEvent.respondWith")}}, ou un simple {{DOMxRef("Window/fetch", "fetch()")}}.
 
 ## Constructeur
 
@@ -29,7 +29,7 @@ Vous pouvez créer un nouvel objet `Response` à l'aide du constructeur {{DOMxRe
 - {{DOMxRef("Response.redirected")}} {{ReadOnlyInline}}
   - : Indique si la réponse résulte d'une redirection (c'est-à-dire si sa liste d'URL comporte plus d'une entrée).
 - {{DOMxRef("Response.status")}} {{ReadOnlyInline}}
-  - : Le code d'état de la réponse. (Ce sera `200` en cas de succès).
+  - : Le code d'état de la réponse. (C'est `200` en cas de succès).
 - {{DOMxRef("Response.statusText")}} {{ReadOnlyInline}}
   - : Le message d'état correspondant au code d'état. (par exemple, `OK` pour `200`).
 - {{DOMxRef("Response.type")}} {{ReadOnlyInline}}
@@ -62,6 +62,8 @@ Vous pouvez créer un nouvel objet `Response` à l'aide du constructeur {{DOMxRe
   - : Retourne une promesse qui est résolue avec le résultat de l'analyse du texte du corps de la réponse comme du {{JSxRef("JSON")}}.
 - {{DOMxRef("Response.text()")}}
   - : Retourne une promesse qui est résolue avec une représentation textuelle du corps de la réponse.
+- {{DOMxRef("Response.textStream()")}}
+  - : Retourne un {{DOMxRef("ReadableStream")}} qui peut être utilisé pour lire le contenu du corps de la réponse par morceaux en UTF-8.
 
 ## Exemples
 
@@ -98,7 +100,7 @@ const reponse = new Response();
 
 ### Appel à un fichier PHP
 
-Ici, nous appelons un fichier programme PHP qui génère une chaîne JSON, affichant le résultat en tant que valeur JSON.
+Ici, nous appelons un fichier programme PHP qui génère une chaîne de caractères JSON, affichant le résultat en tant que valeur JSON.
 
 ```js
 // Fonction pour récupérer du JSON en utilisant PHP

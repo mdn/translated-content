@@ -93,7 +93,7 @@ console.log(mapIter.next().value); // [Object, "bidule"]
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Map")}}
+- L'objet natif {{JSxRef("Map")}}
 - La méthode {{JSxRef("Map.prototype.entries()")}}
 - La méthode {{JSxRef("Map.prototype.keys()")}}
 - La méthode {{JSxRef("Map.prototype.values()")}}

@@ -158,4 +158,4 @@ Ces propriétés sont définies sur `Temporal.Duration.prototype` et partagées 
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal")}}
+- L'objet natif {{JSxRef("Temporal")}}

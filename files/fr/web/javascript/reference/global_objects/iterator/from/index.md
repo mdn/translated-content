@@ -120,5 +120,5 @@ console.log(obj2.next()); // { valeur: 1, fait: false }
 
 - [Prothèse d'émulation de `Iterator.from` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-helpers)
 - [Prothèse d'émulation es-shims de `Iterator.from` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
-- L'objet {{JSxRef("Iterator")}}
+- L'objet natif {{JSxRef("Iterator")}}
 - La méthode statique {{JSxRef("Array.from()")}}

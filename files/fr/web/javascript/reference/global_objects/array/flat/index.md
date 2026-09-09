@@ -118,7 +118,7 @@ console.log(Array.prototype.flat.call(objetSimilaireTableau));
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.concat()")}}
 - La méthode {{JSxRef("Array.prototype.flatMap()")}}
 - La méthode {{JSxRef("Array.prototype.map()")}}

@@ -3,7 +3,7 @@ title: Fonction CSS `circle()`
 short-title: circle()
 slug: Web/CSS/Reference/Values/basic-shape/circle
 l10n:
-  sourceCommit: b6de98eb9cd52ce7e37f22a340352f0af4c9d597
+  sourceCommit: 30e0adab23668217555b7ed37df7e6e61b002bf3
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`circle()`** définit un cercle grâce à son rayon et à la position du centre.

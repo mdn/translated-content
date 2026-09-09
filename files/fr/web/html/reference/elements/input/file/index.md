@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="file">`
 short-title: <input type="file">
 slug: Web/HTML/Reference/Elements/input/file
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`file"`** permettent à l'utilisateur·ice de choisir un ou plusieurs fichiers stockés sur son appareil. Une fois sélectionnés, les fichiers peuvent être téléversés vers un serveur à l'aide de [l'envoi de formulaire](/fr/docs/Learn_web_development/Extensions/Forms), ou manipulés à l'aide du code JavaScript et de [l'API File](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
@@ -113,10 +113,7 @@ div {
 
 Ce fragment de code HTML produit le résultat suivant&nbsp;:
 
-{{EmbedLiveSample('Un exemple simple', 650, 90)}}
-
-> [!NOTE]
-> Vous pouvez également trouver cet exemple sur GitHub — voir le [code source <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html), et aussi [voir la démonstration en direct <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+{{EmbedLiveSample("Un exemple simple", 650, 90)}}
 
 Quel que soit l'appareil ou le système d'exploitation de l'utilisateur·ice, le champ de fichier fournit un bouton qui ouvre une boîte de dialogue permettant de choisir un fichier.
 
@@ -178,10 +175,7 @@ div {
 
 Voici le résultat produit&nbsp;:
 
-{{EmbedLiveSample('Restreindre les types de fichiers acceptés', 650, 90)}}
-
-> [!NOTE]
-> Vous pouvez également consulter cet exemple sur GitHub — voir le [code source <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html) et aussi [voir la démonstration en direct <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
+{{EmbedLiveSample("Restreindre les types de fichiers acceptés", 650, 90)}}
 
 Le résultat peut sembler similaire, mais si vous essayez de sélectionner un fichier avec ce champ, vous voyez que le sélecteur ne permet de choisir que les types de fichiers définis dans la valeur de l'attribut `accept` (l'interface exacte varie selon les navigateurs et les systèmes d'exploitation).
 
@@ -222,12 +216,13 @@ elem.click();
 
 ## Exemples
 
+### Exemple complet de fichier
+
 Dans l'exemple qui suit, on présente un sélecteur de fichiers plus avancé, qui tire parti des informations disponibles grâce à la propriété `HTMLInputElement.files`. On montre aussi quelques astuces.
 
-> [!NOTE]
-> Le code source complet de cet exemple est disponible sur GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html) ([voir la démonstration _live_ associée](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). Nous n'expliquons pas ici la feuille de style CSS mais plutôt le code JavaScript qui contient la logique.
+#### HTML
 
-Tout d'abord, voici le fragment de code HTML utilisé&nbsp;:
+Le code HTML ressemble à ceci&nbsp;:
 
 ```html
 <form method="post" enctype="multipart/form-data">
@@ -310,9 +305,9 @@ form button:active {
 }
 ```
 
-Pour l'instant, le fragment HTML ressemble à ce que nous avons déjà vu avant, rien de spécial.
+Ceci est similaire à ce que nous avons vu précédemment, donc nous ne passons pas plus de temps à le décrire. De plus, nous avons masqué le CSS appliqué à l'exemple, car il n'est pas pertinent pour comprendre l'élément `<input>` de type fichier ou le JavaScript qui le pilote.
 
-Voyons maintenant le code JavaScript utilisé.
+#### JavaScript
 
 Pour les premières lignes du script, on récupère des références au formulaire et à l'élément {{HTMLElement("div")}} qui possède la classe `.preview`. Ensuite, on masque l'élément {{HTMLElement("input")}}, car leur apparence peut être incohérente entre les navigateurs et qu'il est difficile de les mettre en forme. Cliquer sur l'élément {{HTMLElement("label")}} suffit à ouvrir le sélecteur et nous mettons donc en forme cet élément à la façon d'un bouton. Ainsi, l'utilisateur·ice sait comment interagir avec le document pour téléverser des fichiers.
 
@@ -433,9 +428,9 @@ button.addEventListener("click", (e) => {
 });
 ```
 
-Et voici le résultat&nbsp;:
+#### Résultat
 
-{{EmbedLiveSample('Exemples', '100%', 200)}}
+{{EmbedLiveSample("Exemple complet de fichier", "100%", 200)}}
 
 ## Résumé technique
 

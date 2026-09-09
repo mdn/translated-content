@@ -132,5 +132,5 @@ console.log(formatNombre.format(`${grandNombre}E-6`));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.NumberFormat")}}
+- L'objet natif {{JSxRef("Intl.NumberFormat")}}
 - La méthode {{JSxRef("Number.prototype.toLocaleString()")}}

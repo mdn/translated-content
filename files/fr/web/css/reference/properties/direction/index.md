@@ -74,7 +74,7 @@ La propriété est définie comme l'un des mots-clés suivants&nbsp;:
 - `rtl`
   - : Le texte et les autres éléments vont de la droite vers la gauche.
 
-Afin que la propriété `direction` ait un effet sur les éléments en ligne, il faut que la valeur de la propriété {{CSSxRef("unicode-bidi")}} soit `embed` ou `override`.
+Afin que la propriété `direction` ait un effet sur les éléments en incise, il faut que la valeur de la propriété {{CSSxRef("unicode-bidi")}} soit `embed` ou `override`.
 
 ## Description
 

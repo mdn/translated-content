@@ -3,10 +3,10 @@ title: Propriété CSS `text-wrap`
 short-title: text-wrap
 slug: Web/CSS/Reference/Properties/text-wrap
 l10n:
-  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`text-wrap`** contrôle la manière dont le texte à l'intérieur d'un élément est enveloppé. Les différentes valeurs offrent&nbsp;:
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`text-wrap`** contrôle la manière dont le texte à l'intérieur d'un élément est enveloppé. Les différentes valeurs offrent&nbsp;:
 
 - Améliorations typographiques, par exemple des longueurs de ligne plus équilibrées pour les titres coupés.
 - Une manière de désactiver complètement le retour à la ligne du texte.

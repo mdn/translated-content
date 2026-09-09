@@ -46,7 +46,7 @@ Le nombre de couches est déterminé par le nombre de valeurs séparées par des
 
 Pour le traitement, la _couche source_, qui est l'image de la couche de masque actuelle ou associée, est soit ajoutée (par défaut), soustraite, intersectée ou exclue des couches de destination. Les _couches de destination_ sont les couches de masque situées en dessous de la source avec leurs opérateurs de composition correspondants appliqués&nbsp;; cela inclut toutes les couches précédentes, composées dans l'ordre d'apparition dans la liste de masques séparés par des virgules. Toutes les couches de masque situées en dessous de la couche de masque actuelle doivent être composées avant d'appliquer l'opération de composition pour la couche de masque actuelle. Les images des couches de masque sont transformées en masques alpha pour le traitement avant d'être combinées selon la valeur de composition définie.
 
-Les multiples couches de masque appliquées à un élément ou pseudo-élément agissent comme si elles étaient rendues dans un groupe isolé. En d'autres termes, les couches de masque sont composées avec d'autres couches de masque, et non avec le contenu de l'élément ou le contenu derrière l'élément.
+Les multiples couches de masque appliquées à un élément ou pseudo-élément agissent comme si elles sont rendues dans un groupe isolé. En d'autres termes, les couches de masque sont composées avec d'autres couches de masque, et non avec le contenu de l'élément ou le contenu derrière l'élément.
 
 ## Définition formelle
 
@@ -219,7 +219,7 @@ Et un SVG avec 4 masques&nbsp;; un cœur et un cercle alpha et un cœur et un ce
 ```
 
 ```css
-/* apply the mask images */
+/* applique les images de masque */
 tr.alphaMaskType img {
   mask-image: url("#heartAlpha"), url("#circleAlpha");
 }

@@ -3,10 +3,10 @@ title: Propriété CSS `grid`
 short-title: grid
 slug: Web/CSS/Reference/Properties/grid
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`grid`** permet de définir toutes les propriétés de grille explicites et implicites en une seule déclaration.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`grid`** permet de définir toutes les propriétés de grille explicites et implicites en une seule déclaration.
 
 En utilisant `grid`, vous définissez un axe avec {{CSSxRef("grid-template-rows")}} ou {{CSSxRef("grid-template-columns")}}, puis vous définissez comment le contenu doit se répéter automatiquement sur l'autre axe avec les propriétés de grille implicites&nbsp;: {{CSSxRef("grid-auto-rows")}}, {{CSSxRef("grid-auto-columns")}}, et {{CSSxRef("grid-auto-flow")}}.
 

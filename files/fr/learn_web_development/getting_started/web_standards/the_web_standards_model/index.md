@@ -2,7 +2,7 @@
 title: Le modèle des normes web
 slug: Learn_web_development/Getting_started/Web_standards/The_web_standards_model
 l10n:
-  sourceCommit: d19dec85109590176f946fcceef48c787d578b1e
+  sourceCommit: 077d3774b2de6f345b8552fe59ff9deb8b67ebd5
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites", "Learn_web_development/Getting_started/Web_standards")}}
@@ -174,7 +174,7 @@ Ces technologies ne sont pas considérées comme des «&nbsp;normes du web&nbsp;
 Une autre façon de décrire les langages côté client et côté serveur est **statique** et **dynamique**&nbsp;:
 
 - Un fichier HTML simple est stocké sur le serveur. Lorsqu'il est demandé, il est livré au client, inchangé, et rendu par le navigateur. Parce qu'il ne change pas, on parle de «&nbsp;statique&nbsp;».
-- Lorsque du code côté serveur (par exemple, un script Python ou une page ASP.NET) génère du HTML contenant des données et retourne ce HTML au client, le contenu du HTML change en fonction de ce que fait le code côté serveur. On parle donc de «&nbsp;dynamique&nbsp;».
+- Le code côté serveur (comme un script Python ou une page ASP.NET) génère du contenu HTML qui varie en fonction des données qui lui sont transmises, puis retourne ce HTML au client. On parle donc de «&nbsp;dynamique&nbsp;». Par exemple, la même page de prévisions météorologiques peut afficher des données différentes selon que le temps est ensoleillé ou pluvieux, selon l'emplacement de l'utilisateur·ice et selon ses préférences (certain·e·s utilisateur·ice·s peuvent vouloir voir le taux de pollen et l'humidité, tandis que d'autres peuvent ne pas se soucier de ces données et choisir des préférences pour les masquer).
 
 Il y a souvent un certain chevauchement entre les concepts de code statique et dynamique. Les langages côté serveur définissent généralement des structures HTML à l'intérieur d'un fichier de modèle, qui ont tendance à être principalement du HTML statique avec quelques sections dynamiques spéciales incluses qui changent en fonction des données à insérer.
 

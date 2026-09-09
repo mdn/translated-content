@@ -3,7 +3,7 @@ title: Propriété CSS `grid-template-columns`
 short-title: grid-template-columns
 slug: Web/CSS/Reference/Properties/grid-template-columns
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 2f710bc43d966483d0204330b14f841b440a6b60
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`grid-template-columns`** définit les noms de lignes et les fonctions de dimensionnement des pistes des {{Glossary("grid column", "colonnes de grille")}}.
@@ -69,7 +69,6 @@ grid-template-columns: minmax(100px, 1fr);
 grid-template-columns: fit-content(40%);
 grid-template-columns: repeat(3, 200px);
 grid-template-columns: subgrid;
-grid-template-columns: masonry;
 
 /* Valeurs de type <auto-track-list> */
 grid-template-columns: 200px repeat(auto-fill, 100px) 300px;
@@ -125,8 +124,6 @@ grid-template-columns: unset;
   - : Représente la formule `max(minimum, min(limit, max-content))`, où _minimum_ représente un minimum `auto` (qui est souvent, mais pas toujours, égal à un minimum {{CSSxRef("min-content")}}), et _limit_ est la fonction de dimensionnement de piste passée en argument à fit-content(). C'est essentiellement calculé comme la plus petite valeur entre `minmax(auto, max-content)` et `minmax(auto, limit)`.
 - {{CSSxRef("repeat()","repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ], &lt;track-list&gt; )")}}
   - : Représente un fragment répété d'une liste de pistes, cela permet de gérer des grilles avec de nombreuses colonnes pour lesquelles on réutilise un motif.
-- [`masonry`](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) {{Experimental_Inline}}
-  - : La valeur `masonry` indique que cet axe doit être mis en page selon l'algorithme de compartimentation.
 - [`subgrid`](/fr/docs/Web/CSS/Guides/Grid_layout/Subgrid)
   - : La valeur `subgrid` indique que la grille adopte la portion englobante de la grille parente sur cet axe. Plutôt que d'être définies explicitement, les tailles des lignes/colonnes de la grille sont reprises de la définition de la grille parente.
 

@@ -56,7 +56,6 @@ Las siguientes macros se utilizan para renderizar los banners de estado en los e
 
 - `\{{Deprecated_Header}}`
   - : Para el estado `deprecated`. Genera un banner de **Estado obsoleto**:
-    {{deprecated_header}}
 
 - `\{{SeeCompatTable}}`
   - : Para el estado `experimental`. Genera un banner de **Estado experimental**:

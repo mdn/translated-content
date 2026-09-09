@@ -166,5 +166,5 @@ console.log(
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.NumberFormat")}}
+- L'objet natif {{JSxRef("Intl.NumberFormat")}}
 - La méthode {{JSxRef("Number.prototype.toString()")}}

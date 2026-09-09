@@ -3,8 +3,6 @@ title: set()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
 ---
 
-{{AddonSidebar}}
-
 Utilisez `BrowserSetting.set()` pour modifier le paramètre du navigateur vers une nouvelle valeur.
 
 Certaines règles peuvent être restreintes lorsque les extensions sont capables de modifier les paramètres :

@@ -3,14 +3,17 @@ title: "Élément HTML `<template>` : l'élément de modèle de contenu"
 short-title: <template>
 slug: Web/HTML/Reference/Elements/template
 l10n:
-  sourceCommit: 29e6ba9d844b835a1f00346ef1a78fa5d9e7c1a8
+  sourceCommit: a447d93f8c264d39c49e9f465ad780a81e92ed71
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<template>`** sert de mécanisme pour contenir des fragments {{Glossary("HTML")}}, qui peuvent être utilisés plus tard avec JavaScript ou générés immédiatement dans le DOM d'ombre.
+L'élément [HTML](/fr/docs/Web/HTML) **`<template>`** sert de mécanisme pour contenir des fragments {{Glossary("HTML")}}, qui peuvent être utilisés plus tard avec JavaScript, générés immédiatement et insérés dans un DOM d'ombre, ou utilisés dans le cadre de {{Glossary("Out_of_order_patching", "la mise à jour hors séquence")}} avec `<template for="...">`.
 
 ## Attributs
 
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+
+- `for` {{Experimental_Inline}}
+  - : L'attribut `for` est utilisé pour la mise à jour hors séquence avec `<template for="...">`, correspondant à un marqueur équivalent `<?start id="...">` ou `<?marker "...">`. Voir la [section sur la mise à jour hors séquence](#mettre_à_jour_hors_séquence) et la [section des exemples](#exemples).
 
 - `shadowrootmode`
   - : Crée une [racine d'ombre](/fr/docs/Glossary/Shadow_tree) pour l'élément parent.
@@ -72,7 +75,7 @@ Cet élément n'a pas de contenu autorisé, car tout ce qui est imbriqué à l'i
 
 En raison de la façon dont l'élément `<template>` est analysé, toutes les balises `<html>`, `<head>` et `<body>` ouvrantes et fermantes à l'intérieur du template sont des erreurs de syntaxe et sont ignorées par l'analyseur, donc `<template><head><title>Test</title></head></template>` équivaut à `<template><title>Test</title></template>`.
 
-Il existe deux principales façons d'utiliser l'élément `<template>`.
+Il existe trois principales façons d'utiliser l'élément `<template>`.
 
 ### Fragment de document de template
 
@@ -92,6 +95,26 @@ Si l'élément a une autre valeur pour `shadowrootmode`, ou n'a pas l'attribut `
 De même, s'il y a plusieurs racines d'ombre déclaratives, seule la première est remplacée par un {{DOMxRef("ShadowRoot")}} — les suivantes sont analysées comme des objets {{DOMxRef("HTMLTemplateElement")}}.
 
 D'autres attributs préfixés par `shadowroot` permettent une personnalisation déclarative du `ShadowRoot`, comme le contrôle de l'affectation des emplacements.
+
+### Mettre à jour hors séquence
+
+> [!NOTE]
+> Ce cas d'utilisation est encore expérimental et bénéficie d'une prise en charge limitée dans les navigateurs.
+> Consultez le tableau de [compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus d'informations sur la prise en charge par les navigateurs.
+
+De manière traditionnelle, le HTML est livré dans l'ordre et lu, traité et affiché de haut en bas. Pour changer cet ordre, vous pouvez soit masquer ou réorganiser les éléments avec CSS, soit mettre à jour le DOM produit par le HTML par la suite avec JavaScript. Cependant, de nombreuses pages sont composées de plusieurs parties qui peuvent être prêtes à être rendues à différents moments, ou qui peuvent être plus importantes à livrer à l'utilisateur·ice plus tôt.
+
+L'élément `<template>` permet de livrer du HTML {{Glossary("Out_of_order_patching", "hors séquence")}}, ce qui implique de remplacer les marqueurs [d'instruction de traitement](/fr/docs/Web/API/ProcessingInstruction) par le contenu de l'élément `<template>` (également appelé **correction**).
+
+Par exemple, un marqueur d'instruction de traitement `<?marker name="my-identifier">` peut être corrigé avec le contenu d'un élément `<template for="my-identifier">` fourni beaucoup plus tard dans le HTML. Voir l'exemple [Utiliser `<template for>` pour la correction](#utiliser_template_for_pour_la_correction).
+
+Tout comme le marqueur d'instruction de traitement `<?marker>`, une paire `<?start>` et `<?end>` peut être utilisée pour contenir du contenu temporaire (par exemple, `<?start name="my-identifier">Chargement...<?end>`), qui est affiché temporairement jusqu'à ce que le `<template for="my-identifier">` soit traité et que toute la section soit remplacée. Voir l'exemple [Utiliser `<template for>` pour la correction de plage](#utiliser_template_for_pour_la_correction_de_plage).
+
+Lorsqu'elles sont écrites en HTML, les instructions de traitement peuvent être fournies avec ou sans le `?` final, et le navigateur l'ajoute si ce n'est pas le cas lors de l'analyse du DOM. Les deux formes `<?start?>` et `<?start>` sont donc valides et analysées comme `<?start?>`. XML est plus strict et exige le `?` final.
+
+Si l'attribut `for` ne correspond à aucun `name` d'instruction de traitement, le contenu de l'élément `<template>` reste caché dans le DOM et n'est utilisé dans aucune correction.
+
+Pour empêcher les composants de mettre à jour des parties non liées du DOM, les éléments `<template for="...">` ne peuvent corriger que les marqueurs à l'intérieur de l'arbre DOM du parent `<template>`. La seule exception est les éléments `<template>` qui sont des enfants directs de l'élément `<body>` — ils peuvent également corriger les éléments `<head>` pour permettre la mise à jour de `<title>` et d'autres éléments `<head>`.
 
 ## Exemples
 
@@ -499,6 +522,125 @@ container.appendChild(secondClone);
 Comme `firstClone` est un `DocumentFragment`, seuls ses enfants sont ajoutés à `container` lorsque `appendChild` est appelé&nbsp;; les gestionnaires d'évènements de `firstClone` ne sont pas copiés. En revanche, comme un gestionnaire d'évènements est ajouté au premier _nœud enfant_ de `secondClone`, le gestionnaire est copié lors de l'appel à `appendChild`, et le clic fonctionne comme attendu.
 
 {{EmbedLiveSample("Les données sur le DocumentFragment ne sont pas clonées")}}
+
+### Utiliser `<template for>` pour la correction
+
+Cet exemple utilise l'instruction de traitement `<?marker name="placeholder">` comme espace réservé et remplit ensuite le contenu à l'aide de `<template for="placeholder">`.
+
+```html-nolint
+<body>
+  <div>
+    <?marker name="placeholder">
+  </div>
+  …
+  <template for="placeholder">Lorem Ipsum…</template>
+  …
+</body>
+```
+
+Initialement, cela entraîne le rendu d'un `<div>` vide. Il est ensuite mis à jour comme suit après l'analyse et le traitement de l'élément `<template>`&nbsp;:
+
+```html-nolint
+  <div>
+    Lorem Ipsum…
+  </div>
+```
+
+### Utiliser `<template for>` pour la correction de plage
+
+Cet exemple utilise les instructions de traitement `<?start>` et `<?end>` pour contenir le contenu de l'espace réservé, qui est initialement affiché puis remplacé par le contenu de `<template for>` ultérieurement.
+
+```html-nolint
+<body>
+  <div>
+    <?start name="placeholder">
+    Chargement…
+    <?end>
+  </div>
+  …
+  <template for="placeholder">Lorem Ipsum…</template>
+  …
+</body>
+```
+
+Initialement, le `<div>` est rendu avec le contenu de l'espace réservé `Chargement…`. Il est ensuite mis à jour comme suit après l'analyse et le traitement de l'élément `<template>`&nbsp;:
+
+```html-nolint
+  <div>
+    Lorem Ipsum…
+  </div>
+```
+
+Cet exemple démontre également l'absence d'enfants et d'imbrication des instructions de traitement. Les instructions de traitement `<?start>` et `<?end>`, bien que liées en termes de leur relation avec `<template for>`, sont des [nœuds](/fr/docs/Web/API/Node) distincts et non des balises ouvrantes et fermantes. Elles ne contiennent donc pas le contenu `Chargement…` en tant qu'enfant (comme le montre l'absence d'indentation).
+
+### Utiliser `<template for>` pour la correction des éléments `<head>`
+
+Cet exemple montre que les éléments `<template for>` qui sont des enfants directs de l'élément `<body>` peuvent corriger les marqueurs `<head>`.
+
+```html-nolint
+<head>
+  …
+  <?start name="title"><title>Chargement…</title><?end>
+  <?start name="meta-description"><meta name="description" contents="Chargement…"><?end>
+  …
+</head>
+<body>
+  …
+  <template for="title"><title>Le titre réel de la page</title></template>
+  <template for="meta-description"><meta name="description" contents="Ceci est une description significative…"></template>
+  …
+</body>
+```
+
+Le résultat suivant apparaît une fois que les éléments `<template>` ont été analysés&nbsp;:
+
+```html-nolint
+<head>
+  …
+  <title>Le titre réel de la page</title>
+  <meta name="description" contents="Ceci est une description significative…">
+  …
+</head>
+<body>
+  …
+</body>
+```
+
+### Inclure des marqueurs dans `<template for>` pour permettre de modifier à nouveau le contenu ultérieurement
+
+Vous pouvez également insérer des marqueurs à l'intérieur des éléments `<template for>`, créant ainsi de nouveaux espaces réservés pour permettre la mise à jour du même contenu à plusieurs reprises. Vous pouvez réutiliser les attributs `name` existants.
+
+Par exemple, si vous créez une {{Glossary("SPA", "application monopage")}} avec `<template for>`, vous souhaitez peut-être permettre la mise à jour de `<title>` à chaque mise à jour de route, ce qui peut être réalisé comme suit&nbsp;:
+
+```html-nolint
+<head>
+  …
+  <?start name="title">
+  <title>Chargement…</title>
+  <?end>
+  …
+</head>
+<body>
+  …
+  <template for="title"><?start name="title"><title>Le titre réel de la page</title><?end></template>
+  …
+</body>
+```
+
+Une fois l'élément `<template>` analysé, cela donne le résultat suivant&nbsp;:
+
+```html-nolint
+<head>
+  …
+  <?start name="title"><title>Le titre réel de la page</title><?end>
+  …
+</head>
+<body>
+  …
+</body>
+```
+
+Par la suite, un nouveau `<template for="title">` peut être inséré dans le DOM pour remplacer à nouveau le `<title>`.
 
 ## Résumé technique
 

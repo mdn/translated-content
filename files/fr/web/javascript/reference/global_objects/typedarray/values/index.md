@@ -3,8 +3,6 @@ title: TypedArray.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 ---
 
-{{JSRef}}
-
 La méthode **`values()`** renvoie un nouvel objet `Array Iterator` qui contient les valeurs pour chaque indice du tableau.
 
 {{InteractiveExample("JavaScript Demo: TypedArray.values()")}}

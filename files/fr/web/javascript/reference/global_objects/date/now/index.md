@@ -3,7 +3,7 @@ title: "Date : méthode statique now()"
 short-title: now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 91b5a448a517239876a4bc92640bbbf29e30b106
 ---
 
 La méthode statique **`Date.now()`** retourne le nombre de millisecondes écoulées depuis [l'époque](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), qui est défini comme minuit au début du 1er janvier 1970, UTC.
@@ -43,23 +43,29 @@ Un nombre représentant le [timestamp](/fr/docs/Web/JavaScript/Reference/Global_
 
 ## Précision temporelle réduite
 
-Pour offrir une protection contre les attaques de minutage et [l'empreinte numérique](/fr/docs/Glossary/Fingerprinting), la précision de `Date.now()` peut être arrondie selon les paramètres du navigateur. Sous Firefox, la préférence `privacy.reduceTimerPrecision` est activée par défaut et vaut 2ms. Vous pouvez aussi activer `privacy.resistFingerprinting`, auquel cas la précision sera de 100ms ou la valeur de `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, selon laquelle est la plus grande.
+Pour offrir une protection contre les attaques de minutage et [l'empreinte numérique](/fr/docs/Glossary/Fingerprinting), la précision de `Date.now()` peut être réduite selon les réglages du navigateur.
 
-Par exemple, avec une précision temporelle réduite, le résultat de `Date.now()` sera toujours un multiple de 2, ou un multiple de 100 (ou de `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`) si `privacy.resistFingerprinting` est activé.
+L'horodatage est toujours un nombre entier de millisecondes, sa résolution est donc limitée à 1ms dans tous les contextes. Cela répond déjà à certains besoins élémentaires de sécurité et de confidentialité.
+
+Dans Firefox, la préférence `privacy.reduceTimerPrecision` est activée par défaut. Avec les réglages par défaut, l'horodatage a une résolution de 1ms. Si `privacy.resistFingerprinting` est activée, l'intervalle d'arrondi est de 16,667ms ou correspond à l'intervalle configuré par `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, selon la valeur la plus grande. Le résultat final est arrondi à un nombre entier.
+
+Par exemple, voici des valeurs possibles dans Firefox&nbsp;:
 
 ```js
-// Précision temporelle réduite (2ms) pour Firefox 60
-new Date().getTime();
+// Précision temporelle réduite (1ms) avec les réglages par défaut
+Date.now();
+// Peut être :
 // 1519211809934
-// 1519211810362
-// 1519211811670
+// 1519211810363
+// 1519211811671
 // …
 
-// précision temporelle avec `privacy.resistFingerprinting` activé
-new Date().getTime();
-// 1519129853500
-// 1519129858900
-// 1519129864400
+// Précision temporelle réduite avec `privacy.resistFingerprinting` activée
+Date.now();
+// Peut être :
+// 1519129853489
+// 1519129853506
+// 1519129853522
 // …
 ```
 

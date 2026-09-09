@@ -3,8 +3,6 @@ title: webRequest.StreamFilter
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
 ---
 
-{{AddonSidebar}}
-
 Un `StreamFilter` est un objet que vous pouvez utiliser pour surveiller et modifier les réponses HTTP.
 
 Pour créer un `StreamFilter`, appelez {{WebExtAPIRef("webRequest.filterResponseData()")}}, en lui passant l'ID de la requête web que vous voulez filtrer.

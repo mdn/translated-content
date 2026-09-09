@@ -3,8 +3,6 @@ title: webRequest.StreamFilter.onerror
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onerror
 ---
 
-{{AddonSidebar}}
-
 Un gestionnaire d'événements qui sera appelé lorsqu'une erreur se produit. C'est le plus souvent parce qu'un ID de requête invalide a été passé dans {{WebExtAPIRef("webRequest.filterResponseData()")}}.
 
 Après le déclenchement de cet événement, la propriété {{WebExtAPIRef("webRequest.StreamFilter.error")}} contiendra un message donnant plus d'informations sur l'erreur.

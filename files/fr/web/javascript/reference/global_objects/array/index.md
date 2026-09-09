@@ -933,5 +933,5 @@ Pour les méthodes qui itèrent dans l'ordre décroissant des indices, l'inserti
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet {{JSxRef("TypedArray")}}
-- L'objet {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("TypedArray")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}

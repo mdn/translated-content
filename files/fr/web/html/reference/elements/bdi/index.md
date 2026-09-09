@@ -3,7 +3,7 @@ title: "Élément HTML `<bdi>` : l'élément d'isolation bidirectionnelle"
 short-title: <bdi>
 slug: Web/HTML/Reference/Elements/bdi
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: da275ce3eae1d8d250f1079b4643213a7a2bbb90
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<bdi>`** indique à l'algorithme bidirectionnel du navigateur de traiter le texte qu'il contient indépendamment du texte qui l'entoure. Il est particulièrement utile lorsqu'un site insère dynamiquement du texte sans connaître la direction du texte inséré.
@@ -36,7 +36,15 @@ bdi {
 }
 ```
 
-Un texte bidirectionnel est un texte qui contient à la fois des suites de caractères à lire de gauche à droite (LTR en anglais pour _left-to-right_) et des suites de caractères à lire de droite à gauche (RTL en anglais pour _right-to-left_), par exemple une citation en arabe dans un texte en néerlandais. Les navigateurs implémentent [l'algorithme de bidirection Unicode (W3C) <sup>(angl.)</sup>](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics) afin de gérer ces cas. Dans cet algorithme, les caractères ont une direction implicite&nbsp;: les caractères latins sont considérés comme allant de gauche à droite et les caractères arabes comme allant de droite à gauche par exemple. D'autres caractères, comme les espaces ou certains caractères de ponctuation sont considérés comme neutres et leur direction est fournie par les caractères environnants.
+## Attributs
+
+Cet élément n'inclut que les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+
+Si l'attribut [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes/dir) n'est pas défini, l'élément se comporte tout de même comme si `dir="auto"` est défini.
+
+## Notes d'utilisation
+
+Un texte bidirectionnel est un texte qui contient à la fois des suites de caractères à lire de gauche à droite (LTR en anglais pour _left-to-right_) et des suites de caractères à lire de droite à gauche (RTL en anglais pour _right-to-left_), par exemple une citation en arabe dans un texte en néerlandais. Les navigateurs implémentent [l'algorithme de bi-direction Unicode (W3C) <sup>(angl.)</sup>](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics) afin de gérer ces cas. Dans cet algorithme, les caractères ont une direction implicite&nbsp;: les caractères latins sont considérés comme allant de gauche à droite et les caractères arabes comme allant de droite à gauche par exemple. D'autres caractères, comme les espaces ou certains caractères de ponctuation sont considérés comme neutres et leur direction est fournie par les caractères environnants.
 
 La plupart du temps, cet algorithme fournit le bon résultat, sans que l'auteur·ice ait besoin de fournir un balisage spécifique. Toutefois, dans certains cas, il faut aider l'algorithme et c'est là qu'intervient `<bdi>`.
 
@@ -63,11 +71,7 @@ Bien que le même effet visuel puisse être obtenu en utilisant la règle CSS {{
 
 Envelopper les caractères dans `<span dir="auto">` a le même effet que d'utiliser `<bdi>`, mais la sémantique est moins claire.
 
-## Attributs
-
-Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
-
-Cependant il a une sémantique légèrement différente. En effet, l'attribut **`dir`** n'est pas hérité. S'il n'est pas renseigné, sa valeur par défaut est `auto` et le navigateur décide de la direction à appliquer selon le contenu de l'élément si aucune valeur parmi `"rtl"`, `"ltr"` n'est fournie.
+Si un élément sémantique tel que {{HTMLElement("cite")}} est approprié, privilégiez l'utilisation de `<cite dir="auto">` plutôt que de `<bdi>`. Si aucun élément sémantique n'est approprié et que la direction souhaitée est `auto` (déduite du contenu), `<bdi>` est plus court que `<span dir="auto">` et traduit mieux l'intention de l'auteur·ice. Lorsqu'on définit des directions explicites telles que `ltr`, `<bdi dir="ltr">` et `<span dir="ltr">` sont parfaitement équivalents.
 
 ## Exemples
 

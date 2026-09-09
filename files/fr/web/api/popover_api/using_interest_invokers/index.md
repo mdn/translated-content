@@ -2,7 +2,7 @@
 title: Utilisation des invocateurs d'intérêt
 slug: Web/API/Popover_API/Using_interest_invokers
 l10n:
-  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
+  sourceCommit: 995f8bcede5aa8ca40921b030deef7524ce9e1a3
 ---
 
 {{DefaultAPISidebar("Popover API")}}
@@ -11,13 +11,13 @@ l10n:
 
 ## Concepts
 
-L'API Popover permet d'afficher une fenêtre contextuelle lorsqu'un élément de contrôle lié (l'**invocateur**) est activé, par exemple lorsqu'on clique dessus. Cette fonctionnalité est utile pour afficher des éléments d'interface tels que des boîtes d'information ou des panneaux. Vous pouvez [créer des fenêtres contextuelles de manière déclarative](/fr/docs/Web/API/Popover_API/Using#créer_des_fenêtres_contextuelles_déclaratives) en utilisant l'attribut [`popover`](/fr/docs/Web/HTML/Reference/Elements/button#popover) conjointement avec soit [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/button#popovertarget), soit [`commandfor`](/fr/docs/Web/HTML/Reference/Elements/button#commandfor).
+L'API Popover permet d'afficher une fenêtre contextuelle lorsqu'un élément de contrôle lié (**l'invocateur**) est activé, par exemple lorsqu'on clique dessus. Cette fonctionnalité est utile pour afficher des éléments d'interface tels que des boîtes d'information ou des panneaux. Vous pouvez [créer des fenêtres contextuelles de manière déclarative](/fr/docs/Web/API/Popover_API/Using#créer_des_fenêtres_contextuelles_déclaratives) en utilisant l'attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover) conjointement avec soit [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/button#popovertarget), soit [`commandfor`](/fr/docs/Web/HTML/Reference/Elements/button#commandfor).
 
-Outre ces fenêtres contextuelles déclenchées par activation, il est fréquent de vouloir afficher une fenêtre contextuelle lorsque l'utilisateur·ice survole ou met le focus sur un élément — des interactions qui indiquent son intérêt. Par exemple, de nombreux sites permettent de survoler un lien vers le profil d'une personne ou d'un groupe pour afficher une fenêtre contextuelle contenant davantage d'informations. Cet aperçu rapide aide à décider si l'on souhaite visiter la page complète. Ces fenêtres contextuelles peuvent aussi contenir des actions rapides, telles que «&nbsp;Suivre&nbsp;» ou «&nbsp;S'abonner au groupe&nbsp;», permettant d'agir sans perdre le contexte courant.
+Outre ces fenêtres contextuelles déclenchées par activation, il est fréquent de vouloir afficher une fenêtre contextuelle lorsque l'utilisateur·ice survole ou met la sélection sur un élément — des interactions qui indiquent son intérêt. Par exemple, de nombreux sites permettent de survoler un lien vers le profil d'une personne ou d'un groupe pour afficher une fenêtre contextuelle contenant davantage d'informations. Cet aperçu rapide aide à décider si l'on souhaite visiter la page complète. Ces fenêtres contextuelles peuvent aussi contenir des actions rapides, telles que «&nbsp;Suivre&nbsp;» ou «&nbsp;S'abonner au groupe&nbsp;», permettant d'agir sans perdre le contexte courant.
 
-Les invocateurs d'intérêt permettent au navigateur de proposer un comportement de fenêtres contextuelles fondé sur l'intérêt de manière cohérente et accessible, sans nécessiter JavaScript. Le navigateur détermine quand une personne montre de l'intérêt pour un élément et, par conséquent, quand une action doit être lancée. Montrer de l'intérêt se produit généralement lorsque l'utilisateur·ice survole, met le focus ou appuie longuement sur l'élément (la nature exacte de «&nbsp;l'intérêt&nbsp;» peut varier selon les navigateurs), et perdre l'intérêt survient généralement lorsque l'interaction cesse.
+Les invocateurs d'intérêt permettent au navigateur de proposer un comportement de fenêtres contextuelles fondé sur l'intérêt de manière cohérente et accessible, sans nécessiter JavaScript. Le navigateur détermine quand une personne montre de l'intérêt pour un élément et, par conséquent, quand une action doit être lancée. Montrer de l'intérêt se produit généralement lorsque l'utilisateur·ice survole, met la sélection ou appuie longuement sur l'élément (la nature exacte de «&nbsp;l'intérêt&nbsp;» peut varier selon les navigateurs), et perdre l'intérêt survient généralement lorsque l'interaction cesse.
 
-Le navigateur déclenche également des événements lorsque l'intérêt est acquis ou perdu, ce qui permet d'exécuter du code en réponse. De plus, cette fonctionnalité comprend des propriétés CSS et des sélecteurs pour styliser les éléments en fonction de l'intérêt.
+Le navigateur déclenche également des évènements lorsque l'intérêt est acquis ou perdu, ce qui permet d'exécuter du code en réponse. De plus, cette fonctionnalité comprend des propriétés CSS et des sélecteurs pour mettre en forme les éléments en fonction de l'intérêt.
 
 > [!NOTE]
 > Sur les appareils disposant d'une touche <kbd>Esc</kbd>, l'appui sur celle-ci annule tout intérêt. Cela fournit un moyen d'évasion général si l'interaction devient gênante ou indésirable.
@@ -28,14 +28,14 @@ Vous pouvez aussi utiliser les invocateurs d'intérêt pour exécuter du code pe
 
 La création déclarative d'un invocateur d'intérêt requiert deux éléments&nbsp;:
 
-- Un **élément invocateur**&nbsp;: c'est l'élément avec lequel l'utilisateur·ice interagit pour indiquer son intérêt et déclencher une action (par exemple afficher ou masquer un popover). L'élément invocateur doit posséder un attribut [`interestfor`](/fr/docs/Web/HTML/Reference/Elements/a#interestfor) dont la valeur est l'`id` de l'élément cible. L'élément invocateur peut être un élément HTML {{HTMLElement("a")}}, {{HTMLElement("button")}} ou {{HTMLElement("area")}}, ou un élément SVG [`<a>`](/fr/docs/Web/SVG/Reference/Element/a).
+- Un **élément invocateur**&nbsp;: c'est l'élément avec lequel l'utilisateur·ice interagit pour indiquer son intérêt et déclencher une action (par exemple afficher ou masquer une fenêtre contextuelle). L'élément invocateur doit posséder un attribut [`interestfor`](/fr/docs/Web/HTML/Reference/Elements/a#interestfor) dont la valeur est un `id` de l'élément cible. L'élément invocateur peut être un élément HTML {{HTMLElement("a")}}, {{HTMLElement("button")}} ou {{HTMLElement("area")}}, ou un élément SVG [`<a>`](/fr/docs/Web/SVG/Reference/Element/a).
 
-- Un **élément cible**&nbsp;: c'est l'élément affecté ou contrôlé lorsque l'intérêt est acquis ou perdu. L'élément cible doit posséder un `id` et peut être de presque n'importe quel type. L'ajout de l'attribut `popover` transforme cet élément en popover.
+- Un **élément cible**&nbsp;: c'est l'élément affecté ou contrôlé lorsque l'intérêt est acquis ou perdu. L'élément cible doit posséder un `id` et peut être de presque n'importe quel type. L'ajout de l'attribut `popover` transforme cet élément en fenêtre contextuelle.
 
   > [!NOTE]
   > Vous pouvez aussi définir l'élément cible de façon programmatique en affectant à la propriété DOM `interestForElement` de l'élément invocateur une référence vers l'élément cible. Pour plus d'informations, voir la section [L'API JavaScript de l'invocateur d'intérêt](#lapi_javascript_de_linvocateur_dinteret) plus bas dans ce guide.
 
-Voici un exemple simple &nbsp;: l'**invocateur** est un lien et l'**élément cible** est un paragraphe portant l'attribut `popover`.
+Voici un exemple simple &nbsp;: **l'invocateur** est un lien et **l'élément cible** est un paragraphe portant l'attribut `popover`.
 
 ```css hidden live-sample___basic-interest-invoker live-sample___interest-invoker-popover-interaction live-sample___interest-invoker-styling live-sample___interest-invoker-api live-sample___non-popover live-sample___link-preview-popover
 .no-interest-invokers body::before {
@@ -49,23 +49,25 @@ Voici un exemple simple &nbsp;: l'**invocateur** est un lien et l'**élément ci
 ```
 
 ```js hidden live-sample___basic-interest-invoker live-sample___interest-invoker-popover-interaction live-sample___interest-invoker-styling live-sample___interest-invoker-api live-sample___non-popover live-sample___link-preview-popover
-const supported =
-  HTMLButtonElement.prototype.hasOwnProperty("interestForElement");
+const supported = Object.hasOwn(
+  HTMLButtonElement.prototype,
+  "interestForElement",
+);
 if (!supported) {
   document.querySelector("html").classList.add("no-interest-invokers");
 }
 ```
 
 ```html live-sample___basic-interest-invoker
-<p>Du texte avec un <a href="#" interestfor="mypopover">lien</a>.</p>
-<p id="mypopover" popover>Un bref aperçu contenant quelques informations</p>
+<p>Du texte avec un <a href="#" interestfor="mafenetre">lien</a>.</p>
+<p id="mafenetre" popover>Un bref aperçu contenant quelques informations</p>
 ```
 
-L'ajout de l'attribut `popover` sur l'élément cible le masque (via {{CSSxRef("display", "display: none")}}) et le centre à l'écran. Montrer de l'intérêt pour l'élément invocateur (le lien) provoque l'affichage de la fenêtre contextuelle.
+L'ajout de l'attribut `popover` sur l'élément cible le masque (avec {{CSSxRef("display", "display: none")}}) et le centre à l'écran. Montrer de l'intérêt pour l'élément invocateur (le lien) provoque l'affichage de la fenêtre contextuelle.
 
 Cela s'affiche comme suit. Essayez d'interagir avec le lien&nbsp;:
 
-{{EmbedLiveSample("basic-interest-invoker", "100%", "150")}}
+{{EmbedLiveSample("basic-interest-invoker", "100%", 150)}}
 
 Remarquez que la fenêtre contextuelle apparaît lorsque le lien est survolé, ciblé ou appuyé longuement, et disparaît lorsque l'interaction cesse. En revanche, si le lien est activé (par exemple par un clic de souris), il se comporte comme un lien normal — sauf que dans cet exemple il ne mène nulle part.
 
@@ -73,14 +75,14 @@ La valeur de l'attribut `popover` n'affecte pas le comportement de la fenêtre c
 
 ## Combiner invocateurs d'intérêt et fenêtres contextuelles déclenchées par activation
 
-Il est possible de combiner des invocateurs d'intérêt et des fenêtres contextuelles classiques sur le même élément de contrôle. Dans l'exemple suivant, un élément {{HTMLElement("button")}} est configuré comme invocateur d'intérêt via l'attribut `interestfor`&nbsp;: il affichera une info‑bulle lorsque l'utilisateur·ice montrera de l'intérêt pour celui‑ci. Si le bouton est cliqué, il affichera ou masquera un autre fenêtre contextuelle référencée par l'attribut `commandfor`. L'attribut [`command`](/fr/docs/Web/HTML/Reference/Elements/button#command) est défini sur `toggle-popover`, permettant d'appuyer plusieurs fois sur le bouton pour basculer l'état de la fenêtre contextuelle.
+Il est possible de combiner des invocateurs d'intérêt et des fenêtres contextuelles classiques sur le même élément de contrôle. Dans l'exemple suivant, un élément {{HTMLElement("button")}} est configuré comme invocateur d'intérêt avec l'attribut `interestfor`&nbsp;: il affiche une info‑bulle lorsque l'utilisateur·ice montre de l'intérêt pour celui‑ci. Si le bouton est cliqué, il affiche ou masque un autre fenêtre contextuelle référencée par l'attribut `commandfor`. L'attribut [`command`](/fr/docs/Web/HTML/Reference/Elements/button#command) est défini sur `toggle-popover`, permettant d'appuyer plusieurs fois sur le bouton pour basculer l'état de la fenêtre contextuelle.
 
 ```css hidden live-sample___interest-invoker-popover-interaction
-#mytooltip {
+#mon-info-bulle {
   position-area: right;
 }
 
-#myinfobox {
+#ma-boiteinfo {
   position-area: bottom;
 }
 ```
@@ -89,14 +91,14 @@ Il est possible de combiner des invocateurs d'intérêt et des fenêtres context
 <p>
   Du contenu incluant un
   <button
-    interestfor="mytooltip"
-    commandfor="myinfobox"
+    interestfor="mon-info-bulle"
+    commandfor="ma-boiteinfo"
     command="toggle-popover">
     bouton
   </button>
 </p>
-<p id="mytooltip" popover="hint">Une info-bulle au survol</p>
-<p id="myinfobox" popover>
+<p id="mon-info-bulle" popover="hint">Une info-bulle au survol</p>
+<p id="ma-boiteinfo" popover>
   Une boîte d'information qui contient également quelques boutons de contrôle<br />
   <button>Bouton 1</button> <button>Bouton 2</button>
 </p>
@@ -106,15 +108,15 @@ Cela s'affiche comme suit&nbsp;:
 
 {{EmbedLiveSample("interest-invoker-popover-interaction", "100%", "150")}}
 
-Vous pouvez montrer de l'intérêt sur le bouton pour afficher l'info-bulle, et cliquer sur le bouton pour révéler la boîte d'information. Notez que les valeurs de l'attribut `popover` importent ici — la fenêtre de l'info-bulle est définie avec [`popover="hint"`](/fr/docs/Web/API/Popover_API/Using#utiliser_létat_«_hint_»_des_fenêtres_contextuelles), tandis que la boîte d'information utilise simplement `popover` (équivalent à `popover="auto"`). Cela permet à l'info-bulle de rester visible même lorsque la boîte d'information est affichée. Si les deux fenêtres contextuelles étaient définis sur `auto`, vous ne pourriez pas voir à la fois l'info-bulle et la boîte d'information. Dans une interface, il est utile de pouvoir afficher plusieurs info-bulles sans masquer des parties de l'interface déjà ouvertes.
+Vous pouvez montrer de l'intérêt sur le bouton pour afficher l'info-bulle, et cliquer sur le bouton pour révéler la boîte d'information. Notez que les valeurs de l'attribut `popover` importent ici — la fenêtre de l'info-bulle est définie avec [`popover="hint"`](/fr/docs/Web/API/Popover_API/Using#utiliser_létat_«_hint_»_des_fenêtres_contextuelles), tandis que la boîte d'information utilise simplement `popover` (équivalent à `popover="auto"`). Cela permet à l'info-bulle de rester visible même lorsque la boîte d'information est affichée. Si les deux fenêtres contextuelles sont définis sur `auto`, vous ne pouvez pas voir à la fois l'info-bulle et la boîte d'information. Dans une interface, il est utile de pouvoir afficher plusieurs info-bulles sans masquer des parties de l'interface déjà ouvertes.
 
 ## Mettre en forme des invocateurs d'intérêt
 
-Lorsqu'on met en forme des fenêtres contextuelles (<i lang="en">popovers</i> en anglais) utilisées avec des invocateurs d'intérêt, on peut employer les mêmes techniques que pour n'importe quelle autre fenêtre contextuelle (voir [Mettre en forme des fenêtres contextuelles](/fr/docs/Web/API/Popover_API/Using#mettre_en_forme_les_fenêtres_contextuelles)), y compris l'[utilisation du positionnement d'ancrage](/fr/docs/Web/API/Popover_API/Using#positionnement_dancrage_des_fenêtres_contextuelles) pour positionner les fenêtres contextuelles par rapport aux invocateurs et [l'animation des fenêtres contextuelles](/fr/docs/Web/API/Popover_API/Using#animation_des_fenêtres_contextuelles).
+Lorsqu'on met en forme des fenêtres contextuelles (<i lang="en">popovers</i> en anglais) utilisées avec des invocateurs d'intérêt, on peut employer les mêmes techniques que pour n'importe quelle autre fenêtre contextuelle (voir [Mettre en forme des fenêtres contextuelles](/fr/docs/Web/API/Popover_API/Using#mettre_en_forme_les_fenêtres_contextuelles)), y compris [l'utilisation du positionnement d'ancrage](/fr/docs/Web/API/Popover_API/Using#positionnement_dancrage_des_fenêtres_contextuelles) pour positionner les fenêtres contextuelles par rapport aux invocateurs et [l'animation des fenêtres contextuelles](/fr/docs/Web/API/Popover_API/Using#animation_des_fenêtres_contextuelles).
 
 Ceci dit, certaines fonctionnalités CSS sont spécifiques aux invocateurs d'intérêt&nbsp;:
 
-- La propriété raccourcie {{CSSxRef("interest-delay")}} et ses propriétés longues associées {{CSSxRef("interest-delay-start")}} et {{CSSxRef("interest-delay-end")}}&nbsp;: elles permettent d'ajouter un délai entre le moment où l'utilisateur montre ou perd l'intérêt et celui où le navigateur agit — par exemple pour afficher ou masquer une fenêtre contextuelle.
+- La propriété raccourcie {{CSSxRef("interest-delay")}} et ses propriétés longues associées {{CSSxRef("interest-delay-start")}} et {{CSSxRef("interest-delay-end")}}&nbsp;: elles permettent d'ajouter un délai entre le moment où l'utilisateur·ice montre ou perd l'intérêt et celui où le navigateur agit — par exemple pour afficher ou masquer une fenêtre contextuelle.
 - Les pseudo-classes {{CSSxRef(":interest-source")}} et {{CSSxRef(":interest-target")}}&nbsp;: elles permettent d'appliquer des styles respectivement à l'invocateur d'intérêt et à son élément cible associé, uniquement lorsque l'intérêt est indiqué.
 
 Voyons un exemple simple qui montre le fonctionnement de ces fonctionnalités.
@@ -123,10 +125,10 @@ Nous avons défini deux boutons et une info-bulle. L'info-bulle s'affiche ou se 
 
 ```html live-sample___interest-invoker-styling
 <p>
-  <button interestfor="mytooltip">Button 1</button>
-  <button interestfor="mytooltip">Button 2</button>
+  <button interestfor="mon-info-bulle">Bouton 1</button>
+  <button interestfor="mon-info-bulle">Bouton 2</button>
 </p>
-<p id="mytooltip" popover="hint">A hover tooltip</p>
+<p id="mon-info-bulle" popover="hint">Une info-bulle au survol</p>
 ```
 
 Dans le CSS, nous avons défini un `interest-delay` de `1s 2s` sur le `<button>` — cela crée un délai d'une seconde avant que l'info-bulle n'apparaisse lorsque l'utilisateur·ice montre de l'intérêt, et un délai de deux secondes avant qu'elle ne disparaisse lorsque l'intérêt est perdu. Nous utilisons également le sélecteur `button:interest-source` pour changer la {{CSSxRef("background-color")}} des boutons en `orange` lorsque l'intérêt est indiqué.
@@ -141,7 +143,7 @@ button:interest-source {
 }
 ```
 
-Ensuite, nous combinons la pseudo-classe `:interest-source` avec la pseudo-classe {{CSSxRef(":has()")}} pour appliquer `interest-delay-start: 0s` à tous les boutons à l'intérieur du paragraphe, mais seulement lorsque le paragraphe contient un bouton sur lequel l'intérêt est indiqué (c'est‑à‑dire un bouton correspondant à `button:interest-source`). C'est une technique utile — faire apparaître immédiatement la fenêtre contextuelle dès que l'intérêt est montré sur n'importe quel bouton créerait une expérience utilisateur agaçante, mais après qu'un·e utilisateur·ice a montré de l'intérêt pour un bouton, il est pratique de pouvoir se déplacer rapidement entre les différentes fenêtres contextuelles.
+Ensuite, nous combinons la pseudo-classe `:interest-source` avec la pseudo-classe {{CSSxRef(":has()")}} pour appliquer `interest-delay-start: 0s` à tous les boutons à l'intérieur du paragraphe, mais seulement lorsque le paragraphe contient un bouton sur lequel l'intérêt est indiqué (c'est‑à‑dire un bouton correspondant à `button:interest-source`). C'est une technique utile — faire apparaître immédiatement la fenêtre contextuelle dès que l'intérêt est montré sur n'importe quel bouton crée une expérience utilisateur agaçante, mais après qu'un·e utilisateur·ice a montré de l'intérêt pour un bouton, il est pratique de pouvoir se déplacer rapidement entre les différentes fenêtres contextuelles.
 
 ```css live-sample___interest-invoker-styling
 p:has(button:interest-source) button {
@@ -149,25 +151,25 @@ p:has(button:interest-source) button {
 }
 ```
 
-Nous avons aussi défini une propriété CSS {{CSSxRef("position-area")}} `bottom` sur l'info-bulle afin qu'elle apparaisse sous le bouton. Cela est possible car l'association d'une fenêtre contextuelle à son invocateur crée une référence d'ancrage implicite entre eux (voir [Positionnement d'ancrage des fenêtres contextuelles](/fr/docs/Web/API/Popover_API/Using#positionnement_dancrage_des_fenêtres_contextuelles) pour plus de détails).
+Nous avons aussi défini une propriété CSS {{CSSxRef("position-area")}} `bottom` sur l'info-bulle afin qu'elle apparaisse sous le bouton. Cela est possible, car l'association d'une fenêtre contextuelle à son invocateur crée une référence d'ancrage implicite entre eux (voir [Positionnement d'ancrage des fenêtres contextuelles](/fr/docs/Web/API/Popover_API/Using#positionnement_dancrage_des_fenêtres_contextuelles) pour plus de détails).
 
 ```css live-sample___interest-invoker-styling
-#mytooltip {
+#mon-info-bulle {
   position-area: bottom;
 }
 ```
 
-Enfin, nous utilisons le sélecteur `#mytooltip:interest-target` pour appliquer une bordure en pointillés sur la fenêtre contextuelle lorsque l'intérêt est indiqué.
+Enfin, nous utilisons le sélecteur `#mon-info-bulle:interest-target` pour appliquer une bordure en pointillés sur la fenêtre contextuelle lorsque l'intérêt est indiqué.
 
 ```css live-sample___interest-invoker-styling
-#mytooltip:interest-target {
+#mon-info-bulle:interest-target {
   border-style: dashed;
 }
 ```
 
 Cela se rend comme suit&nbsp;:
 
-{{EmbedLiveSample("interest-invoker-styling", "100%", "150")}}
+{{EmbedLiveSample("interest-invoker-styling", "100%", 150)}}
 
 Essayez de montrer de l'intérêt sur le bouton (par exemple en le survolant ou en le ciblant) pour observer le comportement décrit ci‑dessus.
 
@@ -175,9 +177,9 @@ Essayez de montrer de l'intérêt sur le bouton (par exemple en le survolant ou 
 
 Les invocateurs d'intérêt disposent d'une API JavaScript associée qui permet d'interroger l'élément ciblé par un invocateur d'intérêt et d'exécuter du code personnalisé lorsque l'intérêt est montré ou perdu. Les fonctionnalités de cette API sont&nbsp;:
 
-- La propriété {{DOMxRef("HTMLButtonElement.interestForElement", "interestForElement")}}, disponible sur les interfaces {{DOMxRef("HTMLButtonElement")}}, {{DOMxRef("HTMLAnchorElement")}}, {{DOMxRef("HTMLAreaElement")}} et {{DOMxRef("SVGAElement")}}. Elle retourne une référence vers l'élément cible de l'invocateur d'intérêt. C'est l'élément dont l'`id` est référencé dans l'attribut `interestfor` équivalent de l'invocateur HTML ou SVG.
-- Les événements {{DOMxRef("HTMLElement.interest_event", "interest")}} et {{DOMxRef("HTMLElement.loseinterest_event", "loseinterest")}}, qui sont déclenchés sur l'élément cible d'un invocateur d'intérêt lorsque l'intérêt est montré et perdu, respectivement. Vous pouvez écouter ces événements pour exécuter du code en réponse.
-- L'interface {{DOMxRef("InterestEvent")}}, qui représente l'objet événement pour les événements `interest` et `loseinterest`. Elle comprend une propriété `source` contenant une référence vers l'élément invocateur associé.
+- La propriété {{DOMxRef("HTMLButtonElement.interestForElement", "interestForElement")}}, disponible sur les interfaces {{DOMxRef("HTMLButtonElement")}}, {{DOMxRef("HTMLAnchorElement")}}, {{DOMxRef("HTMLAreaElement")}} et {{DOMxRef("SVGAElement")}}. Elle retourne une référence vers l'élément cible de l'invocateur d'intérêt. C'est l'élément dont un `id` est référencé dans l'attribut `interestfor` équivalent de l'invocateur HTML ou SVG.
+- Les évènements {{DOMxRef("HTMLElement.interest_event", "interest")}} et {{DOMxRef("HTMLElement.loseinterest_event", "loseinterest")}}, qui sont déclenchés sur l'élément cible d'un invocateur d'intérêt lorsque l'intérêt est montré et perdu, respectivement. Vous pouvez écouter ces évènements pour exécuter du code en réponse.
+- L'interface {{DOMxRef("InterestEvent")}}, qui représente l'objet évènement pour les évènements `interest` et `loseinterest`. Elle comprend une propriété `source` contenant une référence vers l'élément invocateur associé.
 
 ### Détection de la prise en charge des invocateurs d'intérêt
 
@@ -222,7 +224,7 @@ Regardons un exemple simple qui illustre les fonctionnalités de l'API en pratiq
   <a href="#">Lien 2</a>
   <a href="#">Lien 3</a>
 </p>
-<p id="mytooltip" popover="hint">Une info‑bulle au survol</p>
+<p id="mon-info-bulle" popover="hint">Une info‑bulle au survol</p>
 ```
 
 ```css hidden live-sample___interest-invoker-api
@@ -230,7 +232,7 @@ html {
   font-family: sans-serif;
 }
 
-#mytooltip {
+#mon-info-bulle {
   position-area: bottom;
 }
 ```
@@ -238,12 +240,12 @@ html {
 Dans le JavaScript, nous obtenons des références vers la fenêtre contextuelle et les trois liens. Nous parcourons ensuite les liens et affectons à la propriété {{DOMxRef("HTMLAnchorElement.interestForElement", "interestForElement")}} de chaque lien une référence vers la fenêtre contextuelle. Cela établit programmatiquement la relation invocateur—cible entre la fenêtre contextuelle et chaque lien.
 
 ```js live-sample___interest-invoker-api
-const tooltip = document.getElementById("mytooltip");
+const tooltip = document.getElementById("mon-info-bulle");
 const links = document.querySelectorAll("a");
 links.forEach((link) => (link.interestForElement = tooltip));
 ```
 
-Ensuite, nous attachons des gestionnaires d'événements `interest` et `loseinterest` à la fenêtre contextuelle. Lorsque l'intérêt est montré sur l'un des liens, nous mettons à jour le contenu textuel de la fenêtre contextuelle pour inclure le contenu textuel du lien qui a provoqué l'apparition de la fenêtre contextuelle (récupéré via la propriété `source` de l'objet événement). Lorsque l'intérêt est perdu, nous ajoutons un astérisque au contenu textuel de l'élément `source`, afin que vous puissiez voir le nombre de fois où l'intérêt a été montré sur celui‑ci.
+Ensuite, nous attachons des gestionnaires d'évènements `interest` et `loseinterest` à la fenêtre contextuelle. Lorsque l'intérêt est montré sur l'un des liens, nous mettons à jour le contenu textuel de la fenêtre contextuelle pour inclure le contenu textuel du lien qui a provoqué l'apparition de la fenêtre contextuelle (récupéré avec la propriété `source` de l'objet évènement). Lorsque l'intérêt est perdu, nous ajoutons un astérisque au contenu textuel de l'élément `source`, afin que vous puissiez voir le nombre de fois où l'intérêt a été montré sur celui‑ci.
 
 ```js live-sample___interest-invoker-api
 tooltip.addEventListener("interest", (e) => {
@@ -267,7 +269,7 @@ Voyons comment implémenter une fenêtre contextuelle d'aperçu en utilisant les
 
 ### HTML
 
-Le balisage inclut un lien vers un profil GitHub dans un court paragraphe et un `<div>` contenant un profil utilisateur limité avec un faux bouton «&nbsp;Suivre&nbsp;». L'attribut `interestfor` du lien pointe vers l'`id` du profil utilisateur. De plus, le profil utilisateur possède un attribut `popover`, ce qui le transforme en fenêtre contextuelle et le masque par défaut.
+Le balisage inclut un lien vers un profil GitHub dans un court paragraphe et un `<div>` contenant un profil utilisateur limité avec un faux bouton «&nbsp;Suivre&nbsp;». L'attribut `interestfor` du lien pointe vers un `id` du profil utilisateur. De plus, le profil utilisateur possède un attribut `popover`, ce qui le transforme en fenêtre contextuelle et le masque par défaut.
 
 ```html live-sample___link-preview-popover
 <p>
@@ -351,7 +353,7 @@ Ensuite, nous définissons une valeur `position-area` de `bottom right` sur la f
 }
 ```
 
-Dans le dernier bloc CSS, nous animons la propriété {{CSSxRef("opacity")}} de la fenêtre contextuelle afin qu'elle apparaisse en fondu lorsque l'intérêt est indiqué (comme le sélectionne la pseudo‑classe {{CSSxRef(":interest-target")}}). Comme la fenêtre contextuelle commence masquée (via `display: none`), quelques règles supplémentaires sont nécessaires pour l'animer correctement. Il faut définir [`transition-behavior: allow-discrete`](/fr/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) sur les propriétés {{CSSxRef("overlay")}} et {{CSSxRef("display")}} pour autoriser les animations discrètes. Il est également nécessaire d'utiliser un bloc {{CSSxRef("@starting-style")}} pour définir l'état initial de la fenêtre contextuelle dans l'état `interest-target`, car il n'a pas été rendu auparavant.
+Dans le dernier bloc CSS, nous animons la propriété {{CSSxRef("opacity")}} de la fenêtre contextuelle afin qu'elle apparaisse en fondu lorsque l'intérêt est indiqué (comme le sélectionne la pseudo‑classe {{CSSxRef(":interest-target")}}). Comme la fenêtre contextuelle commence masquée (avec `display: none`), quelques règles supplémentaires sont nécessaires pour l'animer correctement. Il faut définir [`transition-behavior: allow-discrete`](/fr/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) sur les propriétés {{CSSxRef("overlay")}} et {{CSSxRef("display")}} pour autoriser les animations discrètes. Il est également nécessaire d'utiliser un bloc {{CSSxRef("@starting-style")}} pour définir l'état initial de la fenêtre contextuelle dans l'état `interest-target`, car il n'a pas été rendu auparavant.
 
 ```css hidden live-sample___link-preview-popover
 [popover]:interest-target {
@@ -377,7 +379,7 @@ Dans le dernier bloc CSS, nous animons la propriété {{CSSxRef("opacity")}} de 
 
 Cela s'affiche comme suit&nbsp;:
 
-{{EmbedLiveSample("link-preview-popover", "100%", "260", , , , , "allow-popups")}}
+{{EmbedLiveSample("link-preview-popover", "100%", "260",,,,, "allow-popups")}}
 
 Essayez de survoler ou de cibler le lien pour afficher la fenêtre contextuelle d'aperçu. Il y a aussi une amélioration progressive dans cet exemple — dans les navigateurs qui ne prennent pas en charge cette fonctionnalité, le lien fonctionne comme prévu.
 
@@ -387,7 +389,7 @@ Voyons un exemple qui utilise des invocateurs d'intérêt sans fenêtres context
 
 ### HTML
 
-Le HTML contient cinq éléments `<button>` et un élément {{HTMLElement("article")}} représentant le panneau d'aperçu de style. Chaque bouton possède la même valeur `interestfor`, référant l'`id` de l'`<article>`, et chaque bouton possède une `class` qui représente un schéma de couleurs différent. Notez que le `<article>` n'a pas d'attribut `popover` défini (les fenêtres contextuelles ne sont pas une condition requise pour utiliser des invocateurs d'intérêt).
+Le HTML contient cinq éléments `<button>` et un élément {{HTMLElement("article")}} représentant le panneau d'aperçu de style. Chaque bouton possède la même valeur `interestfor`, référant un `id` d'un `<article>`, et chaque bouton possède une `class` qui représente un schéma de couleurs différent. Notez que le `<article>` n'a pas d'attribut `popover` défini (les fenêtres contextuelles ne sont pas une condition requise pour utiliser des invocateurs d'intérêt).
 
 ```html live-sample___non-popover
 <div>
@@ -499,7 +501,7 @@ button:interest-source {
 }
 ```
 
-Enfin, nous appliquons une {{CSSxRef("transition")}} au panneau de style afin que les valeurs de propriété `all` qui changent sur l'élément s'animent en douceur sur une durée de `0.7s`. Cela signifie que tous les changements de schéma de couleurs appliqués au panneau s'animeront.
+Enfin, nous appliquons une {{CSSxRef("transition")}} au panneau de style afin que les valeurs de propriété `all` qui changent sur l'élément s'animent en douceur sur une durée de `0.7s`. Cela signifie que tous les changements de schéma de couleurs appliqués au panneau s'animent.
 
 ```css live-sample___non-popover
 #style-panel {
@@ -518,7 +520,7 @@ const buttons = document.querySelectorAll("button");
 let prevStyle = "black-white";
 ```
 
-Ensuite, nous ajoutons des gestionnaires d'événements `interest` et `loseinterest` au panneau de style. Ces événements appellent les fonctions `sampleStyle()` et `revertStyle()` pour appliquer et rétablir les styles lorsque l'intérêt est montré et perdu sur les boutons. Nous parcourons également la collection `buttons` {{DOMxRef("NodeList")}} et ajoutons un gestionnaire d'événement `click` à chacun afin que, lorsqu'un bouton est activé, la fonction `setStyle()` soit exécutée.
+Ensuite, nous ajoutons des gestionnaires d'évènements `interest` et `loseinterest` au panneau de style. Ces évènements appellent les fonctions `sampleStyle()` et `revertStyle()` pour appliquer et rétablir les styles lorsque l'intérêt est montré et perdu sur les boutons. Nous parcourons également la collection `buttons` {{DOMxRef("NodeList")}} et ajoutons un gestionnaire d'évènement `click` à chacun afin que, lorsqu'un bouton est activé, la fonction `setStyle()` soit exécutée.
 
 ```js live-sample___non-popover
 stylePanel.addEventListener("interest", sampleStyle);
@@ -528,7 +530,7 @@ buttons.forEach((button) => button.addEventListener("click", setStyle));
 
 Enfin, nous définissons les fonctions mentionnées précédemment&nbsp;:
 
-- `sampleStyle()`&nbsp;: Lorsque l'intérêt est montré sur un bouton, sa `class` est obtenue depuis `e.source.className` (`InterestEvent.source` contient une référence vers l'invocateur d'intérêt sur lequel l'intérêt a été montré) et appliquée au panneau de style via `e.target.className`.
+- `sampleStyle()`&nbsp;: Lorsque l'intérêt est montré sur un bouton, sa `class` est obtenue depuis `e.source.className` (`InterestEvent.source` contient une référence vers l'invocateur d'intérêt sur lequel l'intérêt a été montré) et appliquée au panneau de style avec `e.target.className`.
 - `revertStyle()`&nbsp;: Lorsque l'intérêt est perdu, le panneau de style revient au style précédent stocké dans `prevStyle`.
 - `setStyle()`&nbsp;: Lorsque un bouton est cliqué, son `className` est appliqué au panneau de style. Nous mettons également à jour `prevStyle` avec le `className` du bouton cliqué afin que, la prochaine fois qu'un style est prévisualisé, le panneau puisse revenir au _nouveau_ style précédemment défini.
 

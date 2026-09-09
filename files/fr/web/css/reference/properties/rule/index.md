@@ -3,7 +3,7 @@ title: Propriété CSS `rule`
 short-title: rule
 slug: Web/CSS/Reference/Properties/rule
 l10n:
-  sourceCommit: f4d39e4f5a6f426bff5f91cccb5b6fadff094e27
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 {{SeeCompatTable}}
