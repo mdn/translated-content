@@ -36,7 +36,7 @@ La web abierta ofrece increíbles oportunidades para los desarrolladores. Para a
 - [JavaScript](/es/docs/Web/JavaScript)
   - : JavaScript es el lenguaje de programación nativo de la web.
 - [WebAssembly](/es/docs/WebAssembly)
-  - : WebAssembly permite programas escritos en C, C++, Rust, Swift, C#, Go, y más que se ejecuten en la web.
+  - : WebAssembly permite ejecutar en la web programas escritos en C, C++, Rust, Swift, C#, Go y más.
 - [HTTP](/es/docs/Web/HTTP)
   - : HTTP es el protocolo fundamental de Internet para obtener documentos, hojas de estilo, scripts, imágenes, videos, fuentes y otros recursos a través de la web, y para enviar datos de vuelta a los servidores web.
 - [Medios](/es/docs/Web/Media)

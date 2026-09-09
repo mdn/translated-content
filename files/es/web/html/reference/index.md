@@ -15,8 +15,8 @@ Esta referencia [HTML](/es/docs/Web/HTML) describe todos los **elementos** y **a
 - [Atributos Globales](/es/docs/Web/HTML/Reference/Global_attributes)
   - : Los atributos globales son atributos comunes a todos los elementos HTML; pueden usarse en todos los elementos, aunque pueden no tener efecto en algunos de ellos.
 - [Categorías de Contenido](/es/docs/Web/HTML/Guides/Content_categories)
-  - : Cada elemento HTML es miembro de una o más categorías de contenido — éstas categorías agrupan elementos que comparten caracteristicas en común.
+  - : Cada elemento HTML es miembro de una o más categorías de contenido — estas categorías agrupan elementos que comparten características en común.
 - [Comentarios HTML](/es/docs/Web/HTML/Guides/Comments)
-  - : Los comentarios HTML se utilizan para agregar explicaciones al marcado o para prevenit que el navegador interprete partes especificas del documento.
+  - : Los comentarios HTML se utilizan para agregar explicaciones al marcado o para prevenir que el navegador interprete partes específicas del documento.
 - [Formatos de fecha y hora utilizados en HTML](/es/docs/Web/HTML/Guides/Date_and_time_formats)
   - : Ciertos elementos HTML permiten especificar fechas y/u horas como el contenido o el valor de un atributo. Estos incluyen las variaciones de fecha y hora del elemento {{HTMLElement("input")}} así como también el elemento {{HTMLElement("ins")}} y los elementos {{HTMLElement("del")}}.
