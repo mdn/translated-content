@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-{{Non-standard_header}}{{deprecated_header}}
+{{Non-standard_header}}
 
 **`:-moz-broken`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)是一个用于匹配表示损坏图像链接的元素的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)。
 

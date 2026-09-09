@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ APIRef("HTML DOM") }} {{deprecated_header}}
+{{ APIRef("HTML DOM") }}
 
 > [!NOTE]
 > このプロパティは、 HTML 4.01 の W3C 技術勧告で非推奨とされ、文書のバージョン情報を得るためには DTD を使用することが推奨されています。

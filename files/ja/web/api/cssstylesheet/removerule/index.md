@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}
 
 旧式の {{domxref("CSSStyleSheet")}} の **`removeRule()`** メソッドは、スタイルシートオブジェクトからルールを削除します。これは、標準で推奨されるメソッド {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}} と機能的に同じです。
 

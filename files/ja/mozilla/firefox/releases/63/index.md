@@ -104,7 +104,7 @@ _変更なし。_
 - {{domxref("Web_Audio_API", "Web Audio API", "", "1")}} の {{domxref("AudioScheduledSourceNode")}} インターフェイス (および拡張によって、このインターフェイスを基にしたすべてのノード) でノードの開始時間として負の値が指定されたときに、正しい例外が発生するようになりました。そのエラーは `RangeError` です ([Firefox バグ 1413284](https://bugzil.la/1413284))。
 - {{domxref("AudioParam")}} オブジェクトの {{domxref("AudioParam.value", "value")}} で許可される最小値と最大値を、それぞれ単精度浮動小数点数で最小の負の値 (-340,282,346,638,528,859,811,704,183,484,516,925,440) と最大の正の値 (+340,282,346,638,528,859,811,704,183,484,516,925,440) に変更しました ([Firefox バグ 1476695](https://bugzil.la/1476695))。
 - アクティブなストリームのコーデックを変更できる、{domxref("SourceBuffer.changeType")}} メソッドをデフォルトで有効にしました。これは {{domxref("Media_Source_Extensions_API", "Media Source Extensions API", "", "1")}} の一部です ([Firefox バグ 1481166](https://bugzil.la/1481166))。
-- {{domxref("AudioParam.setValueCurveAtTime()")}} メソッドを、引数の値が次第に変わることを示すために浮動小数点数値の配列を受け入れるように更新しました。以前は {{domxref("Float32Array")}} であることが必要でした ([Firefox バグ 1421091](https://bugzil.la/1421091))。
+- {{domxref("AudioParam.setValueCurveAtTime()")}} メソッドを、引数の値が次第に変わることを示すために浮動小数点数値の配列を受け入れるように更新しました。以前は {{jsxref("Float32Array")}} であることが必要でした ([Firefox バグ 1421091](https://bugzil.la/1421091))。
 - また {{domxref("AudioParam.setValueCurveAtTime()")}} が、`values` の配列に有限ではない値が存在する場合に、`TypeError` を正しく返すようになりました ([Firefox バグ 1472095](https://bugzil.la/1472095))。
 - さらに `setValueCurveAtTime()` で、時間が経過した後に指定した値のカーブに従って引数が終了したとき、引数の値がカーブの値のリストの最後の値に設定されるようになりました ([Firefox バグ 1308436](https://bugzil.la/1308436))。
 - ほかのディクショナリーや仕様書に合わせて、`RTCRTPStreamStats` ディクショナリーを {{domxref("RTCRtpStreamStats")}} に改名しました ([Firefox バグ 1480498](https://bugzil.la/1480498))。

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 **`sizeX`** は {{domxref("VRStageParameters")}} インターフェイスの読み取り専用プロパティで、プレイエリア境界の幅をメートル単位で返します。
 

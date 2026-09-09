@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{Deprecated_Header}}
-
 > [!NOTE]
 > `unescape()` は、ブラウザーによって実装されている標準外の関数であり、エンジン間の互換性のためにのみ標準化されています。すべての JavaScript エンジンで実装されているとは限らず、すべての環境で動作するとは限りません。可能であれば、{{jsxref("decodeURIComponent()")}} または {{jsxref("decodeURI()")}} を使用してください。
 

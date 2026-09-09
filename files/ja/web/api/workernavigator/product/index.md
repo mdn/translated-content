@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 **`WorkerNavigator.product`** プロパティの値は、どのブラウザーでも常に "`Gecko`" です。このプロパティは互換性のためにのみ残されています。
 

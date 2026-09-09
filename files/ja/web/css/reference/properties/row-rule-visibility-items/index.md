@@ -3,14 +3,14 @@ title: CSS `row-rule-visibility-items` プロパティ
 short-title: row-rule-visibility-items
 slug: Web/CSS/Reference/Properties/row-rule-visibility-items
 l10n:
-  sourceCommit: afcdfa050626bb7eb05ee693df8997020db9ff2e
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 {{SeeCompatTable}}
 
-**`row-rule-visibility-items`** は [CSS](/ja/docs/Web/CSS) のプロパティで、空の領域に隣接する隙間に、行・段間の罫線の区間を描画するかどうかを定義します。
+**`row-rule-visibility-items`** は [CSS](/ja/docs/Web/CSS) のプロパティで、空の領域に隣接するギャップに、行間罫の区間を描画するかどうかを定義します。
 
-{{InteractiveExample("CSS Demo: row-rule-visibility-items")}}
+{{InteractiveExample("CSS デモ: row-rule-visibility-items")}}
 
 ```css interactive-example-choice
 row-rule-visibility-items: all;
@@ -73,21 +73,23 @@ row-rule-visibility-items: unset;
 
 ### 値
 
+このプロパティは、以下のキーワード値のいずれかで指定します。
+
 - `all`
-  - : 隣接する領域にアイテムが含まれているかどうかに関わらず、すべての隙間の区間に行・段間の罫線を引きます。
+  - : 隣接する領域にアイテムが含まれているかどうかに関わらず、すべてのギャップの区間に行間罫を引きます。
 
 - `around`
-  - : 隣接する 2 つの領域のうち、少なくとも 1 つがアイテムで占められている場合、その隙間の区間には行・段間の罫線を引きます。
+  - : 隣接する 2 つの領域のうち、少なくとも 1 つがアイテムで占められている場合、そのギャップの区間には行間罫を引きます。
 
 - `between`
-  - : 隣接する 2 つの領域が両方ともアイテムで占められている場合のみ、その間の区間には行・段間の罫線を引きます。
+  - : 隣接する 2 つの領域が両方ともアイテムで占められている場合のみ、その間の区間には行間罫を引きます。
 
 - `normal`
   - : `all` と同じ動作をします。これがデフォルトの設定です。
 
 ## 解説
 
-`row-rule-visibility-items` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout) および [グリッド](/ja/docs/Web/CSS/Guides/Grid_layout) コンテナー内で、複数の行があり、隣接する領域のいずれか一方または両方が空の場合、それらの領域間の隙間に行・段間罫線の区間を描画するかどうかを定義します。
+`row-rule-visibility-items` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)および[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)コンテナー内で、複数の行があり、隣接する領域のいずれか一方または両方が空の場合、それらの領域間のギャップに行間線区間を描画するかどうかを定義します。
 
 `row-rule-visibility-items` と {{cssxref("column-rule-visibility-items")}} プロパティの両方を {{cssxref("rule-visibility-items")}} 一括指定を使用して同じ値に設定することができます。
 
@@ -103,7 +105,7 @@ row-rule-visibility-items: unset;
 
 ### 基本的な例
 
-この例では、隣接するグリッド領域のうち少なくとも 1 つにグリッドアイテムが含まれている場合、2 つのグリッド領域の間に罫線が描画されるよう行間罫線を定義します。
+この例では、隣接するグリッド領域のうち少なくとも 1 つにグリッドアイテムが含まれている場合、2 つのグリッド領域の間に罫線が描画されるよう行間罫を定義します。
 
 #### HTML
 
@@ -124,7 +126,7 @@ row-rule-visibility-items: unset;
 
 順序付きリスト ({{htmlelement("ol")}}) をグリッドコンテナーとして定義し、{{cssxref("grid-template-rows")}} および {{cssxref("grid-template-columns")}} プロパティの両方を `repeat(4, 1fr)` に設定して 4 行 4 列のグリッドを生成し、{{cssxref("grid-row")}} および {{cssxref("grid-column")}} プロパティを使用して、最後のアイテムを右下のグリッド領域に移動させます。{{cssxref("gap")}} を `20px` に指定し、`5px` の破線の罫線が収まるよう、行間に十分な空間を提供します。
 
-最後に、`row-rule-visibility-items` を `around` に設定しました。これにより、隣接するグリッド領域のいずれか一方、あるいは両方にグリッドアイテムが含まれている場合にのみ、行間罫線が描画されるようになります。
+最後に、`row-rule-visibility-items` を `around` に設定しました。これにより、隣接するグリッド領域のいずれか一方、あるいは両方にグリッドアイテムが含まれている場合にのみ、行間罫が描画されるようになります。
 
 ```css
 ol {

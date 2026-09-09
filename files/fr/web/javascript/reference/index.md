@@ -3,10 +3,10 @@ title: Référence JavaScript
 short-title: Référence
 slug: Web/JavaScript/Reference
 l10n:
-  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
-La référence JavaScript sert de répertoire de faits sur le langage JavaScript. Le langage entier y est décrit en détail. Lorsque vous écrivez du code JavaScript, vous consulterez souvent ces pages (d'où le titre «&nbsp;Référence JavaScript&nbsp;»).
+La référence JavaScript sert de répertoire de faits sur le langage JavaScript. Le langage entier y est décrit en détail. Lorsque vous écrivez du code JavaScript, vous consultez souvent ces pages (d'où le titre «&nbsp;Référence JavaScript&nbsp;»).
 
 Le langage JavaScript est conçu pour être utilisé dans un environnement plus large, que ce soit un navigateur, des scripts côté serveur ou similaire. Pour l'essentiel, cette référence tente de rester indépendante de l'environnement et ne cible pas spécifiquement les navigateurs web.
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cac79d099b0a4e48456cb53eb2435f6acf03e188
 ---
 
-{{APIRef("DOM")}} {{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 **`Document.vlinkColor`** 属性用于获取或设置文档中用户已访问链接的颜色。
 

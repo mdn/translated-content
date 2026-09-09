@@ -25,5 +25,5 @@ l10n:
 
 - 相关术语：
   - {{Glossary("Debounce", "防抖")}}
-  - {{Glossary("Rate limit", "速率限制"}}
+  - {{Glossary("Rate limit", "速率限制")}}
 - CSS-Tricks 上的[通过示例解释防抖与节流](https://css-tricks.com/debouncing-throttling-explained-examples/)（2016 年 4 月 6 日）

@@ -58,7 +58,7 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 ### DOM
 
 - {{Domxref ( "HTMLHyperLinkElementUtils.pathname", "путь")}} и {{domxref ( "HTMLHyperLinkElementUtils.search", "поиск")}} {{domxref ( "HTMLHyperLinkElementUtils")}} свойства ранее возвращено неправильные части в URL. Например, для URL из `http://z.com/x?a=true&b=false`, `pathname` будет возвращаться « `/x?a=true&b=false"` и `search` вернётся„", а не» `/x` «и» `?a=true&b=false"` соответственно. Теперь это было исправлено ([Firefox bug 1310483](https://bugzil.la/1310483)).
-- {{Domxref ( "URLSearchParams.URLSearchParams", "URLSearchParams ()")}} Конструктор теперь принимает на {{domxref ( "USVString")}} или последовательность {{domxref ( "USVString")}} ев в качестве инициализации объект ([Firefox bug 1330678](https://bugzil.la/1330678)).
+- {{Domxref ( "URLSearchParams.URLSearchParams", "URLSearchParams ()")}} Конструктор теперь принимает на {{jsxref("String")}} или последовательность {{jsxref("String")}} ев в качестве инициализации объект ([Firefox bug 1330678](https://bugzil.la/1330678)).
 - {{Domxref ( "Selection.setBaseAndExtent ()")}} метод [API выбора](/ru/docs/Web/API/Selection_API) теперь реализован (см [Firefox bug 1321623](https://bugzil.la/1321623)).
 - ["Fakepath"](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly) дополнение `file` типа {{HTMLElement ( "вход")}} `values` была реализована в Gecko, давая его соотношение с другими браузерами (см [Firefox bug 1274596](https://bugzil.la/1274596)).
 - {{Domxref ( "Node.getRootNode ()")}} была реализована, заменяя устаревшее {{domxref ( "Node.rootNode")}} Свойство ([Firefox bug 1269155](https://bugzil.la/1269155)).

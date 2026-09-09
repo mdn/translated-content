@@ -6,8 +6,6 @@ l10n:
   sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
-{{Deprecated_Header}}
-
 `Expect-CT` {{Glossary("Response header", "レスポンスヘッダー")}}により、サイトが[証明書の透明性](/ja/docs/Web/Security/Defenses/Certificate_Transparency)の要件に関する報告や強制にオプトインすることができます。
 証明書の透明性 (CT) は、そのサイトに対して誤って発行された証明書が使用されても、それが見過ごされないようにするためにものです。
 

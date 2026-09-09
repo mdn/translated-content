@@ -97,7 +97,7 @@ _Met également en œuvre des méthodes de l'interface {{domxref("EventTarget")}
 - {{domxref("AudioContext.createAudioWorker()")}}
   - : Crée un objet {{domxref("AudioWorkerNode")}}, qui permet d'interagir avec un thread web worker afin de générer, traiter, ou analyser le son directement. Ajouté à la spec le 29 août 2014, mais encore implémenté par aucun des navigateurs à ce jour.
 - {{domxref("AudioContext.decodeAudioData()")}}
-  - : Décode de façon asynchrone les données d'un fichier audio contenues dans un objet {{domxref("ArrayBuffer")}}. Dans ce cas, le ArrayBuffer est en général chargé depuis un attribut de réponse {{domxref("XMLHttpRequest")}} quand l'attribut `responseType` est `arraybuffer`. Cette méthode ne fonctionne que sur des fichiers complets, pas sur des fragments de fichiers.
+  - : Décode de façon asynchrone les données d'un fichier audio contenues dans un objet {{jsxref("ArrayBuffer")}}. Dans ce cas, le ArrayBuffer est en général chargé depuis un attribut de réponse {{domxref("XMLHttpRequest")}} quand l'attribut `responseType` est `arraybuffer`. Cette méthode ne fonctionne que sur des fichiers complets, pas sur des fragments de fichiers.
 - {{domxref("AudioContext.resume()")}}
   - : Reprend le défilement du temps dans un contexte audio où il a précédemment été suspendu.
 - {{domxref("AudioContext.suspend()")}}

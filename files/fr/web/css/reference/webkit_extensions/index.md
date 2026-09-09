@@ -2,7 +2,7 @@
 title: Extensions CSS préfixées par le vendeur WebKit (-webkit-)
 slug: Web/CSS/Reference/Webkit_extensions
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 0d155984425e8964c889efb63ec39593e11bbc14
 ---
 
 Un {{Glossary("vendor prefix", "préfixe vendeur")}} est utilisé pour indiquer qu'une fonctionnalité est spécifique à un certain navigateur.
@@ -40,8 +40,6 @@ Les agents utilisateurs basés sur WebKit ou Blink (tels que Safari et Chrome) p
 
 ### M
 
-- `-webkit-margin-after`
-- `-webkit-margin-before`
 - {{CSSxRef("-webkit-mask-box-image")}}&nbsp;: Voir {{CSSxRef("mask-border")}} et {{CSSxRef("border-image")}}.
 - {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-outset")}}&nbsp;: Voir {{CSSxRef("mask-border")}} et {{CSSxRef("border-image")}}.
 - {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-repeat")}}&nbsp;: Voir {{CSSxRef("mask-border")}} et {{CSSxRef("border-image")}}.
@@ -127,8 +125,10 @@ Pour chacune des propriétés ci-dessous, utilisez les équivalents standard.
 ### J-Z
 
 - `-webkit-line-clamp`&nbsp;: Utilisez {{CSSxRef("line-clamp")}}.
-- `-webkit-margin-end`&nbsp;: Utilisez {{CSSxRef("margin-block-end")}}.
-- `-webkit-margin-start`&nbsp;: Utilisez {{CSSxRef("margin-block-start")}}.
+- `-webkit-margin-after`&nbsp;: Utilisez {{CSSxRef("margin-block-end")}}.
+- `-webkit-margin-before`&nbsp;: Utilisez {{CSSxRef("margin-block-start")}}.
+- `-webkit-margin-end`&nbsp;: Utilisez {{CSSxRef("margin-inline-end")}}.
+- `-webkit-margin-start`&nbsp;: Utilisez {{CSSxRef("margin-inline-start")}}.
 - `-webkit-padding-after`&nbsp;: Utilisez {{CSSxRef("padding-block-end")}}.
 - `-webkit-padding-before`&nbsp;: Utilisez {{CSSxRef("padding-block-start")}}.
 - `-webkit-padding-end`&nbsp;: Utilisez {{CSSxRef("padding-inline-end")}}.
@@ -184,4 +184,3 @@ Si un pseudo-élément (mais pas une pseudo-classe) a un préfixe `-webkit-`, le
 
 - [Extensions CSS préfixées par le vendeur Firefox (-moz-)](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
 - L'entrée du glossaire {{Glossary("Vendor Prefix", "Préfixe vendeur")}}.
-- [La mise en forme des contrôles de formulaires sur le Trac WebKit <sup>(angl.)</sup>](https://trac.webkit.org/wiki/Styling%20Form%20Controls)

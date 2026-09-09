@@ -23,7 +23,11 @@ dialog::backdrop {
 
 ## Синтаксис
 
-{{CSSSyntax}}
+```css
+::backdrop {
+  /* ... */
+}
+```
 
 ## Примеры
 

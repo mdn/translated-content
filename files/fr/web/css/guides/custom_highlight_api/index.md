@@ -3,7 +3,7 @@ title: API de mise en évidence personnalisée CSS
 short-title: API de mise en évidence personnalisée
 slug: Web/CSS/Guides/Custom_highlight_API
 l10n:
-  sourceCommit: a2d0346638937e9c92c500dcb568803778e8354e
+  sourceCommit: c26d4cc8e9b10c504587531c49fa82b7b646be18
 ---
 
 Le module de **l'API de mise en évidence personnalisée avec CSS** fournit un moyen programmatique de cibler des plages de texte spécifiques définies par des objets de plage, sans affecter la structure DOM sous-jacente. Les objets de plage peuvent ensuite être sélectionnés avec des pseudo-éléments `::highlight()`, et des styles de mise en évidence peuvent être ajoutés et supprimés. Les fonctionnalités de ce module peuvent créer des effets de mise en évidence similaires à ceux des éditeurs de texte qui mettent en évidence les erreurs d'orthographe ou de grammaire, et des éditeurs de code qui mettent en évidence les erreurs de syntaxe.

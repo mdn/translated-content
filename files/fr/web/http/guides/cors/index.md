@@ -2,7 +2,7 @@
 title: Cross-Origin Resource Sharing (CORS)
 slug: Web/HTTP/Guides/CORS
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: f4c14731a1a157fc8d8f7357ac4d74d14a7d7fb5
 ---
 
 Le **Cross-Origin Resource Sharing** ({{Glossary("CORS")}}) (ou «&nbsp;partage des ressources entre origines multiples&nbsp;» en français, moins usité) est un mécanisme basé sur les en-têtes {{Glossary("HTTP")}} qui permet à un serveur d'indiquer toute {{Glossary("origin", "origine")}} (domaine, schéma ou port) autre que la sienne à partir de laquelle un navigateur doit autoriser le chargement des ressources. CORS repose également sur un mécanisme par lequel les navigateurs effectuent une requête «&nbsp;préliminaire&nbsp;» (<i lang="en">preflight</i> en anglais) au serveur hébergeant la ressource cross-origin, afin de vérifier que le serveur autorise la requête réelle. Dans cette pré-requête, le navigateur envoie des en-têtes indiquant la méthode HTTP et les en-têtes qui sont utilisés dans la requête réelle.
@@ -43,7 +43,7 @@ Nous présentons trois scénarios qui illustrent le fonctionnement du partage de
 
 Certaines requêtes ne déclenchent pas de {{Glossary("Preflight_request", "requête CORS préliminaire")}}. Celles-ci sont appelées _requêtes simples_ dans l'ancienne [spécification CORS <sup>(angl.)</sup>](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology), bien que la [spécification Fetch <sup>(angl.)</sup>](https://fetch.spec.whatwg.org/) (qui définit maintenant le CORS) n'utilise pas ce terme.
 
-La motivation est que l'élément {{HTMLElement("form")}} de HTML 4.0 (qui précède les requêtes inter-origines avec {{DOMxRef("Window/fetch", "fetch()")}} et {{DOMxRef("XMLHttpRequest")}}) peut soumettre des requêtes simples à n'importe quelle origine, donc toute personne écrivant un serveur doit déjà se protéger contre les attaques {{Glossary("CSRF", "falsification de requête inter-sites")}} (CSRF). Dans cette hypothèse, le serveur n'a pas besoin de s'inscrire (en répondant à une requête préliminaire) pour recevoir toute requête qui ressemble à une soumission de formulaire, puisque la menace de CSRF n'est pas pire que celle d'une soumission de formulaire. Cependant, le serveur doit toujours s'inscrire en utilisant {{HTTPHeader("Access-Control-Allow-Origin")}} pour _partager_ la réponse avec le script.
+La motivation est que l'élément {{HTMLElement("form")}} de HTML 4.0 (qui précède les requêtes inter-origines avec {{DOMxRef("Window/fetch", "fetch()")}} et {{DOMxRef("XMLHttpRequest")}}) peut envoyer des requêtes simples à n'importe quelle origine, donc toute personne écrivant un serveur doit déjà se protéger contre les attaques {{Glossary("CSRF", "falsification de requête inter-sites")}} (CSRF). Dans cette hypothèse, le serveur n'a pas besoin de s'inscrire (en répondant à une requête préliminaire) pour recevoir toute requête qui ressemble à un envoi de formulaire, puisque la menace de CSRF n'est pas pire que celle d'un envoi de formulaire. Cependant, le serveur doit toujours s'inscrire en utilisant {{HTTPHeader("Access-Control-Allow-Origin")}} pour _partager_ la réponse avec le script.
 
 Une _requête simple_ est une requête qui **respecte toutes les conditions suivantes**&nbsp;:
 
@@ -76,7 +76,7 @@ Une _requête simple_ est une requête qui **respecte toutes les conditions suiv
 >
 > Aucun autre navigateur n'applique ces restrictions supplémentaires, car elles ne font pas partie de la spécification.
 
-Si, par exemple, on a un contenu web situé sous le domaine `http://toto.exemple` qui souhaite invoquer du contenu situé sous le domaine `http://truc.autre`, on pourrait utiliser du code JavaScript semblable à ce qui suit sur `toto.exemple`&nbsp;:
+Si, par exemple, on a un contenu web situé sous le domaine `http://toto.exemple` qui souhaite invoquer du contenu situé sous le domaine `http://truc.autre`, on peut utiliser du code JavaScript semblable à ce qui suit sur `toto.exemple`&nbsp;:
 
 ```js
 const fetchPromise = fetch("https://truc.autre");
@@ -128,7 +128,7 @@ En réponse, le serveur retourne un en-tête {{HTTPHeader("Access-Control-Allow-
 Access-Control-Allow-Origin: *
 ```
 
-Ce modèle d'utilisation des en-têtes {{HTTPHeader("Origin")}} et {{HTTPHeader("Access-Control-Allow-Origin")}} est la forme la plus simple du protocole de contrôle d'accès. Si les propriétaires de la ressource sur `https://truc.autre` souhaitent restreindre l'accès à la ressource aux requêtes _uniquement_ depuis `https://toto.exemple` (c'est-à-dire qu'aucun autre domaine que `https://toto.exemple` ne peut accéder à la ressource en inter-origine), ils enverraient&nbsp;:
+Ce modèle d'utilisation des en-têtes {{HTTPHeader("Origin")}} et {{HTTPHeader("Access-Control-Allow-Origin")}} est la forme la plus simple du protocole de contrôle d'accès. Si les propriétaires de la ressource sur `https://truc.autre` souhaitent restreindre l'accès à la ressource aux requêtes _uniquement_ depuis `https://toto.exemple` (c'est-à-dire qu'aucun autre domaine que `https://toto.exemple` ne peut accéder à la ressource en inter-origine), ils envoient&nbsp;:
 
 ```http
 Access-Control-Allow-Origin: https://toto.exemple
@@ -254,22 +254,22 @@ Content-Type: text/plain
 
 Tous les navigateurs ne prennent pas encore en charge le suivi des redirections après une requête préliminaire. Si une redirection se produit après une telle requête, certains navigateurs affichent actuellement un message d'erreur tel que le suivant&nbsp;:
 
-> La requête a été redirigée vers `https://example.com/toto`, ce qui est interdit pour les requêtes inter-origines nécessitant une prévalidation.
-> La requête nécessite une prévalidation, ce qui est interdit pour suivre les redirections inter-origines.
+> La requête a été redirigée vers `https://example.com/toto`, ce qui est interdit pour les requêtes inter-origines nécessitant une pré-validation.
+> La requête nécessite une pré-validation, ce qui est interdit pour suivre les redirections inter-origines.
 
 Le protocole CORS exigeait initialement ce comportement mais [a depuis été modifié pour ne plus l'exiger <sup>(angl.)</sup>](https://github.com/whatwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2). Toutefois, tous les navigateurs n'ont pas encore implémenté ce changement et conservent donc le comportement initial.
 
 Tant que les navigateurs ne se sont pas alignés sur la spécification, vous pouvez contourner cette limitation en faisant une ou les deux actions suivantes&nbsp;:
 
 - Modifier le comportement côté serveur pour éviter la requête préliminaire et/ou pour éviter la redirection
-  — Modifier la requête afin qu'il s'agisse d'une [requête simple](#requêtes_simples) qui n'entraîne pas de prévalidation
+  — Modifier la requête afin qu'il s'agisse d'une [requête simple](#requêtes_simples) qui n'entraîne pas de pré-validation
 
 Si cela n'est pas possible, une autre solution consiste à&nbsp;:
 
-1. Effectuer une [requête simple](#requêtes_simples) (en utilisant {{DOMxRef("Response.url")}} pour l'API Fetch, ou {{DOMxRef("XMLHttpRequest.responseURL")}}) pour déterminer vers quelle URL la requête prévalidée réelle aboutirait.
+1. Effectuer une [requête simple](#requêtes_simples) (en utilisant {{DOMxRef("Response.url")}} pour l'API Fetch, ou {{DOMxRef("XMLHttpRequest.responseURL")}}) pour déterminer vers quelle URL la requête pré-validée réelle aboutirait.
 2. Faire une autre requête (la requête _réelle_) en utilisant l'URL obtenue depuis `Response.url` ou `XMLHttpRequest.responseURL` lors de la première étape.
 
-Cependant, si la requête déclenche une prévalidation à cause de la présence de l'en-tête `Authorization`, vous ne pouvez pas contourner la limitation avec les étapes ci‑dessus. Et vous ne pouvez pas du tout la contourner à moins de contrôler le serveur vers lequel la requête est effectuée.
+Cependant, si la requête déclenche une pré-validation à cause de la présence de l'en-tête `Authorization`, vous ne pouvez pas contourner la limitation avec les étapes ci‑dessus. Et vous ne pouvez pas du tout la contourner à moins de contrôler le serveur vers lequel la requête est effectuée.
 
 ### Requêtes avec informations d'authentification
 
@@ -293,7 +293,7 @@ const fetchPromise = fetch(requete);
 fetchPromise.then((reponse) => console.log(reponse));
 ```
 
-Ce code crée un objet {{DOMxRef("Request")}} en définissant l'option `credentials` sur `"include"` dans le constructeur, puis transmet cet objet à `fetch()`. Comme il s'agit d'une requête `GET` simple, elle n'est pas prévalidée, mais le navigateur **rejette** toute réponse qui ne possède pas l'en-tête {{HTTPHeader("Access-Control-Allow-Credentials")}} défini à `true`, et ne rend pas la réponse disponible pour le contenu web qui a effectué l'appel.
+Ce code crée un objet {{DOMxRef("Request")}} en définissant l'option `credentials` sur `"include"` dans le constructeur, puis transmet cet objet à `fetch()`. Comme il s'agit d'une requête `GET` simple, elle n'est pas pré-validée, mais le navigateur **rejette** toute réponse qui ne possède pas l'en-tête {{HTTPHeader("Access-Control-Allow-Credentials")}} défini à `true`, et ne rend pas la réponse disponible pour le contenu web qui a effectué l'appel.
 
 ![Diagramme d'une requête GET avec Access-Control-Allow-Credentials](https://mdn.github.io/shared-assets/images/diagrams/http/cors/include-credentials.svg)
 
@@ -333,10 +333,10 @@ Bien que l'en-tête `Cookie` de la requête contienne le cookie destiné au cont
 
 #### Requêtes préliminaires et informations d'authentification
 
-Les requêtes de prévalidation CORS ne doivent jamais inclure d'informations d'authentification. La _réponse_ à une requête préliminaire doit préciser `Access-Control-Allow-Credentials: true` pour indiquer que la requête réelle peut être effectuée avec des informations d'authentification.
+Les requêtes de pré-validation CORS ne doivent jamais inclure d'informations d'authentification. La _réponse_ à une requête préliminaire doit préciser `Access-Control-Allow-Credentials: true` pour indiquer que la requête réelle peut être effectuée avec des informations d'authentification.
 
 > [!NOTE]
-> Certains services d'authentification d'entreprise exigent que des certificats clients TLS soient envoyés dans les requêtes de prévalidation, en contradiction avec la spécification [Fetch <sup>(angl.)</sup>](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials).
+> Certains services d'authentification d'entreprise exigent que des certificats clients TLS soient envoyés dans les requêtes de pré-validation, en contradiction avec la spécification [Fetch <sup>(angl.)</sup>](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials).
 >
 > Firefox 87 permet d'activer ce comportement non conforme en définissant la préférence&nbsp;: `network.cors_preflight.allow_client_cert` sur `true` [bogue Firefox 1511151 <sup>(angl.)</sup>](https://bugzil.la/1511151). Les navigateurs basés sur Chromium envoient actuellement toujours des certificats client TLS dans les requêtes de pré-vérification CORS [bogue Chrome 775438 <sup>(angl.)</sup>](https://crbug.com/775438).
 
@@ -357,9 +357,9 @@ Notez aussi qu'un en‑tête de réponse `Set-Cookie` ne définit pas de cookie 
 
 #### Cookies tiers
 
-Notez que les cookies définis dans les réponses CORS sont soumis aux politiques normales de cookies tiers. Dans l'exemple ci-dessus, la page est chargée depuis `toto.exemple`, mais l'en-tête `Set-Cookie` dans la réponse est envoyé par `truc.autre`, et ne serait donc pas enregistré si le navigateur de l'utilisateur·ice est configuré pour rejeter tous les cookies tiers.
+Notez que les cookies définis dans les réponses CORS sont envoyé aux politiques normales de cookies tiers. Dans l'exemple ci-dessus, la page est chargée depuis `toto.exemple`, mais l'en-tête `Set-Cookie` dans la réponse est envoyé par `truc.autre`, et n'est donc pas enregistré si le navigateur de l'utilisateur·ice est configuré pour rejeter tous les cookies tiers.
 
-Les cookies définis dans les requêtes et réponses CORS sont soumis aux mêmes politiques de cookies tiers.
+Les cookies définis dans les requêtes et réponses CORS sont envoyé aux mêmes politiques de cookies tiers.
 
 Les politiques de cookies tiers peuvent empêcher l'envoi de cookies tiers dans les requêtes, ce qui empêche effectivement un site de faire des requêtes authentifiées même si le serveur tiers le permet (en utilisant `Access-Control-Allow-Credentials`). La politique par défaut diffère selon les navigateurs, mais peut être définie à l'aide de l'attribut [SameSite](/fr/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value).
 
@@ -367,7 +367,7 @@ Même si les requêtes authentifiées sont autorisées, un navigateur peut être
 
 ## En-têtes de réponse HTTP
 
-Dans cette section, on liste les en-têtes de réponse HTTP qui sont renvoyés par le serveur pour le contrôle d'accès, tels que définis par la spécification _Cross-Origin Resource Sharing_. La section précédente illustre, avec des exemples concrets, leur fonctionnement.
+Dans cette section, on liste les en-têtes de réponse HTTP qui sont retournés par le serveur pour le contrôle d'accès, tels que définis par la spécification _Cross-Origin Resource Sharing_. La section précédente illustre, avec des exemples concrets, leur fonctionnement.
 
 ### `Access-Control-Allow-Origin`
 
@@ -424,7 +424,7 @@ Access-Control-Allow-Credentials: true
 
 ### `Access-Control-Allow-Methods`
 
-L'en‑tête {{HTTPHeader("Access-Control-Allow-Methods")}} indique la ou les méthodes autorisées pour accéder à la ressource. Cet en‑tête est utilisé en réponse à une requête préliminaire. Les conditions dans lesquelles une requête fait l'objet d'une prévalidation sont expliquées ci‑dessus.
+L'en‑tête {{HTTPHeader("Access-Control-Allow-Methods")}} indique la ou les méthodes autorisées pour accéder à la ressource. Cet en‑tête est utilisé en réponse à une requête préliminaire. Les conditions dans lesquelles une requête fait l'objet d'une pré-validation sont expliquées ci‑dessus.
 
 ```http
 Access-Control-Allow-Methods: <method>[, <method>]*
@@ -498,5 +498,5 @@ Des exemples d'utilisation se trouvent [ci‑dessus](#requêtes_préliminaires).
 - [Utiliser le CORS avec tous les navigateurs (modernes) <sup>(angl.)</sup>](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
 - [Réponse sur Stack Overflow avec des «&nbsp;comment faire&nbsp;» pour résoudre les problèmes courants <sup>(angl.)</sup>](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141)&nbsp;:
   - Comment éviter les requêtes préliminaires
-  - Comment utiliser un proxy CORS pour contourner _«&nbsp;No Access-Control-Allow-Origin header&nbsp;»_
+  - Comment utiliser un mandataire CORS pour contourner _«&nbsp;No Access-Control-Allow-Origin header&nbsp;»_
   - Comment corriger _«&nbsp;Access-Control-Allow-Origin header must not be the wildcard&nbsp;»_
