@@ -1,8 +1,9 @@
 ---
 title: "Tutorial Django Parte 4: Sitio de Administración de Django"
+short-title: "4: Sitio de administración de Django"
 slug: Learn_web_development/Extensions/Server-side/Django/Admin_site
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 815f1a18f44059500b337719295c6eda14b6228e
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django")}}
