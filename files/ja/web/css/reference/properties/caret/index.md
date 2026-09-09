@@ -1,15 +1,16 @@
 ---
-title: caret
+title: CSS `caret` プロパティ
+short-title: caret
 slug: Web/CSS/Reference/Properties/caret
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 {{SeeCompatTable}}
 
-**`caret`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、**挿入キャレット**の外見や動作を単一の宣言で設定します。
+**`caret`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、**挿入キャレット**の外見や動作を単一の宣言で設定します。
 
-{{InteractiveExample("CSS Demo: caret")}}
+{{InteractiveExample("CSS デモ: caret")}}
 
 ```css interactive-example-choice
 caret: red;

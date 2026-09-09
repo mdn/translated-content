@@ -28,7 +28,7 @@ ServiceWorkerContainer.register(scriptURL, options)
 
 ### Valor retornado
 
-A {{domxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistration")}} object.
+A {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistration")}} object.
 
 ## Ejemplos
 

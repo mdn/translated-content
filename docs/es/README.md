@@ -16,6 +16,7 @@ Guía para colaborar traduciendo y manteniendo el contenido de MDN Web Docs al e
 - [Mantener el `l10n.sourceCommit` al día](#mantener-el-l10nsourcecommit-al-día)
 - [Convención de traducciones](#convención-de-traducciones)
   - [Estilo de escritura](#estilo-de-escritura)
+  - [Notas pendientes (`TODO`)](#notas-pendientes-todo)
 - [Arreglar "flaws" (defectos)](#arreglar-flaws-defectos)
 - [Charla con nosotros](#charla-con-nosotros)
 - [Enlaces relevantes](#enlaces-relevantes)
@@ -377,6 +378,42 @@ Rari/Yari distingue mayúsculas en los nombres de macro. Usa exactamente la capi
 - `{{Deprecated_Header}}`, no `{{deprecated_header}}`
 - `{{SeeCompatTable}}`, no `{{seecompattable}}`
 - `{{Non-standard_Header}}`, no `{{non-standard_header}}`
+
+---
+
+### Notas pendientes (`TODO`)
+
+A veces, al traducir, queda una duda que no se puede resolver en el momento: un ancla cuyo destino todavía no existe en español, o un término sin equivalente acordado. Para esos casos usamos un marcador en el propio archivo, con **este formato exacto**:
+
+```md
+<!-- TODO(l10n-es): enlace sin ancla; #compatibilidad_con_navegadores depende de que se sincronice Web/API/Fetch_API -->
+```
+
+**El prefijo `TODO(l10n-es)` no es decorativo.** Buscar sólo `TODO` en `files/es/` no es fiable: también encuentra la palabra española _TODOS_ (`Elimina el contorno de TODOS los enlaces`) y títulos de enlaces en inglés (`A simple TODO list using HTML5 IndexedDB`). Con el prefijo, un solo comando da el inventario completo del locale:
+
+```bash
+grep -rn 'TODO(l10n-es)' files/es/
+```
+
+#### Antes de dejar un marcador, intenta resolver la duda
+
+La mayoría se responden en el momento, y un marcador resuelto vale más que un marcador registrado. Para el caso más común, un ancla, hay cuatro escenarios y sólo uno termina en `TODO`:
+
+1. **El fragmento apunta a un identificador técnico.** No se traduce, así que no hay nada que esperar: corrige el enlace con el ancla en inglés y sigue. Los encabezados en prosa sí cambian (`#deprecated` → `#obsoleto`), pero un identificador no: `#display-p3` convive con `srgb`, `oklab` y `rec2020`, son valores de la función CSS `color()` y sobreviven igual a la traducción.
+2. **La página destino ya está traducida.** Usa el `id` que renderiza hoy esa página, que puede seguir en inglés si esa sección concreta aún no se tradujo. No lo deduzcas de memoria: compruébalo contra la página real (ver la sección de anclas más arriba).
+3. **Un PR abierto ya crea ese `id`.** Pasa a menudo cuando alguien traduce dos páginas relacionadas: no hace falta marcador ni issue, sólo apuntar al ancla que ese PR va a crear y decir en la conversación del PR cuál de los dos se fusiona primero.
+4. **La página destino no existe en español, o existe pero está desactualizada y no tiene esa sección.** Este sí es el caso del marcador. Ver abajo.
+
+#### Si la duda depende de otra página
+
+Deja **el enlace sin el fragmento** (un ancla que no coincide con nada deja al lector arriba de la página, igual que si no hubiera ancla), agrega el marcador, y **abre el issue sobre la página destino**, no sobre la que lleva el marcador: un issue para _traducir_ o _sincronizar_ `Web/API/Fetch_API`, listando en su cuerpo los enlaces que están esperando.
+
+El sentido importa. Nadie que vaya a traducir una página busca antes qué otras páginas le enlazan, así que un issue abierto sobre el archivo que lleva el marcador se quedaría dormido exactamente igual que el marcador. Puesto en la página destino, agrupa varios marcadores en un solo issue y le pone la lista de arreglos delante a quien puede resolverlos.
+
+#### Dos límites
+
+- **Los marcadores se publican.** Los comentarios HTML llegan al HTML renderizado. No se ven al leer, pero quedan en el código fuente de la página publicada. Por eso el marcador debe ser breve y describir la duda concreta, no ser un apunte personal.
+- **Un `TODO` no es para contenido sin traducir.** Si a una sección le falta el texto, eso no es una duda pendiente sino una traducción incompleta, y el camino es una sub-tarea de sincronización de esa página. Marcadores como `<!-- TODO: add content -->` o `!!TODO!!` dejados en medio de la prosa acaban publicándose y se leen como un error en la página.
 
 ---
 
