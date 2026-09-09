@@ -15,6 +15,11 @@ Guía para colaborar traduciendo y manteniendo el contenido de MDN Web Docs al e
 - [Imágenes y otros archivos](#imágenes-y-otros-archivos)
 - [Mantener el `l10n.sourceCommit` al día](#mantener-el-l10nsourcecommit-al-día)
 - [Convención de traducciones](#convención-de-traducciones)
+  - [Términos técnicos](#términos-técnicos)
+  - [Marcadores en línea](#marcadores-en-línea)
+  - [Formato matemático](#formato-matemático)
+  - [Macros de glosario](#macros-de-glosario)
+  - [Elegir el macro de referencia correcto](#elegir-el-macro-de-referencia-correcto)
   - [Estilo de escritura](#estilo-de-escritura)
 - [Arreglar "flaws" (defectos)](#arreglar-flaws-defectos)
 - [Charla con nosotros](#charla-con-nosotros)
@@ -334,6 +339,36 @@ Cuando en inglés aparece `{{Glossary("TLD")}}` y el término natural en españo
 
 > Excepción: si la frase en español ya explica el término justo después del macro (por ejemplo, `{{Glossary("TLD")}} (Top-Level Domain) Dominio de primer nivel`), deja el macro con un solo argumento para evitar duplicar el texto renderizado.
 
+### Elegir el macro de referencia correcto
+
+Cada macro `*xref` construye la URL sobre un subárbol fijo de la documentación. Si eliges el equivocado, el enlace apunta a una página que no existe o que sólo funciona por una redirección, y nada en el PR lo delata: la macro se renderiza igual y el CI pasa.
+
+| Macro                            | Enlaza a                                | Úsalo para                                                 |
+| -------------------------------- | --------------------------------------- | ---------------------------------------------------------- |
+| `{{domxref("X")}}`               | `/es/docs/Web/API/X`                    | Interfaces, métodos, propiedades y eventos de las APIs web |
+| `{{jsxref("X")}}`                | `/es/docs/Web/JavaScript/Reference/…/X` | Objetos globales y sintaxis de JavaScript                  |
+| `{{cssxref("X")}}`               | `/es/docs/Web/CSS/X`                    | Propiedades, tipos de valor, funciones y pseudoclases CSS  |
+| `{{HTMLElement("X")}}`           | `/es/docs/Web/HTML/…`                   | Elementos HTML                                             |
+| `{{httpheader("X")}}`            | `/es/docs/Web/HTTP/Headers/X`           | Cabeceras HTTP                                             |
+| `{{SVGAttr}}` / `{{SVGElement}}` | `/es/docs/Web/SVG/…`                    | Atributos y elementos SVG                                  |
+| `{{Glossary("X", "texto")}}`     | `/es/docs/Glossary/X`                   | Términos del glosario                                      |
+
+Todas aceptan los mismos argumentos: `{{macro("Página", "texto a mostrar", "ancla")}}`.
+
+**El error más frecuente es usar `domxref` para tipos de JavaScript.** Aparecen en las páginas de APIs web, así que es natural tratarlos como parte del DOM, pero sus páginas viven en la referencia de JavaScript. `/es/docs/Web/API/DOMString` devuelve un 404; `Web/API/Boolean`, `Web/API/Promise` y `Web/API/USVString` responden 200 sólo porque redirigen a la referencia de JavaScript, es decir, el enlace funciona por accidente y con un salto de más.
+
+Los tipos de WebIDL además no se enlazan con su propio nombre, porque no tienen página propia: se enlazan al tipo de JavaScript que representan, y el texto mostrado cambia con ellos.
+
+| En la fuente en inglés                                                              | Qué usar                              |
+| ----------------------------------------------------------------------------------- | ------------------------------------- |
+| `DOMString`, `USVString`, `ByteString`, `CSSOMString`                               | `{{jsxref("String")}}`                |
+| `ArrayBufferView`                                                                   | `{{jsxref("TypedArray")}}`            |
+| `Boolean`, `Promise`, `Number`, `JSON`, `ArrayBuffer`, `Float32Array`, `Uint8Array` | `{{jsxref("…")}}` con el mismo nombre |
+
+Si necesitas conservar el nombre traducido en el texto visible, va como segundo argumento y la página sigue siendo la inglesa: `{{jsxref("Promise", "Promesa")}}`.
+
+Para saber a qué subárbol pertenece un macro que no esté en la tabla, mira su fuente en `yari/kumascript/macros/<Macro>.ejs`: la ruta base está escrita en el propio archivo.
+
 ### Estilo de escritura
 
 #### Tuteo (tú) en lugar de usted
@@ -377,36 +412,6 @@ Rari/Yari distingue mayúsculas en los nombres de macro. Usa exactamente la capi
 - `{{Deprecated_Header}}`, no `{{deprecated_header}}`
 - `{{SeeCompatTable}}`, no `{{seecompattable}}`
 - `{{Non-standard_Header}}`, no `{{non-standard_header}}`
-
-#### Elegir el macro de referencia correcto
-
-Cada macro `*xref` construye la URL sobre un subárbol fijo de la documentación. Si eliges el equivocado, el enlace apunta a una página que no existe o que sólo funciona por una redirección, y nada en el PR lo delata: la macro se renderiza igual y el CI pasa.
-
-| Macro                            | Enlaza a                                | Úsalo para                                                 |
-| -------------------------------- | --------------------------------------- | ---------------------------------------------------------- |
-| `{{domxref("X")}}`               | `/es/docs/Web/API/X`                    | Interfaces, métodos, propiedades y eventos de las APIs web |
-| `{{jsxref("X")}}`                | `/es/docs/Web/JavaScript/Reference/…/X` | Objetos globales y sintaxis de JavaScript                  |
-| `{{cssxref("X")}}`               | `/es/docs/Web/CSS/X`                    | Propiedades, tipos de valor, funciones y pseudoclases CSS  |
-| `{{HTMLElement("X")}}`           | `/es/docs/Web/HTML/…`                   | Elementos HTML                                             |
-| `{{httpheader("X")}}`            | `/es/docs/Web/HTTP/Headers/X`           | Cabeceras HTTP                                             |
-| `{{SVGAttr}}` / `{{SVGElement}}` | `/es/docs/Web/SVG/…`                    | Atributos y elementos SVG                                  |
-| `{{Glossary("X", "texto")}}`     | `/es/docs/Glossary/X`                   | Términos del glosario                                      |
-
-Todas aceptan los mismos argumentos: `{{macro("Página", "texto a mostrar", "ancla")}}`.
-
-**El error más frecuente es usar `domxref` para tipos de JavaScript.** Aparecen en las páginas de APIs web, así que es natural tratarlos como parte del DOM, pero sus páginas viven en la referencia de JavaScript. `/es/docs/Web/API/DOMString` devuelve un 404; `Web/API/Boolean`, `Web/API/Promise` y `Web/API/USVString` responden 200 sólo porque redirigen a la referencia de JavaScript, es decir, el enlace funciona por accidente y con un salto de más.
-
-Los tipos de WebIDL además no se enlazan con su propio nombre, porque no tienen página propia: se enlazan al tipo de JavaScript que representan, y el texto mostrado cambia con ellos.
-
-| En la fuente en inglés                                                              | Qué usar                              |
-| ----------------------------------------------------------------------------------- | ------------------------------------- |
-| `DOMString`, `USVString`, `ByteString`, `CSSOMString`                               | `{{jsxref("String")}}`                |
-| `ArrayBufferView`                                                                   | `{{jsxref("TypedArray")}}`            |
-| `Boolean`, `Promise`, `Number`, `JSON`, `ArrayBuffer`, `Float32Array`, `Uint8Array` | `{{jsxref("…")}}` con el mismo nombre |
-
-Si necesitas conservar el nombre traducido en el texto visible, va como segundo argumento y la página sigue siendo la inglesa: `{{jsxref("Promise", "Promesa")}}`.
-
-Para saber a qué subárbol pertenece un macro que no esté en la tabla, mira su fuente en `yari/kumascript/macros/<Macro>.ejs`: la ruta base está escrita en el propio archivo.
 
 ---
 
