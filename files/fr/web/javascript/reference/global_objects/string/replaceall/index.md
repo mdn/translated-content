@@ -3,8 +3,6 @@ title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 ---
 
-{{JSRef}}
-
 La méthode **`replaceAll()`** retourne une nouvelle chaîne de caractères dans laquelle toutes les occurrences d'un motif donné ont été remplacées par une chaîne de remplacement. L'argument `pattern` fournit pour décrire le motif peut être une chaîne de caractères ou une expression rationnelle ([`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)), l'argument `replacement` peut être une chaîne de caractères ou une fonction qui sera appelée pour chaque correspondance.
 
 La chaîne de caractères initiale restera inchangée.

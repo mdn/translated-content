@@ -6,7 +6,7 @@ l10n:
   sourceCommit: d0b23f3f26637aa405ee9ee0a0892fc6e9b742ef
 ---
 
-{{APIRef}} {{deprecated_header}}
+{{APIRef}}
 
 **`keypress`** イベントは、文字値を生成するキーが押下されたときに発行されます。
 

@@ -3,8 +3,6 @@ title: find.find()
 slug: Mozilla/Add-ons/WebExtensions/API/find/find
 ---
 
-{{AddonSidebar}}
-
 Recherche du texte dans un onglet.
 
 Vous pouvez utiliser cette fonction pour rechercher des pages Web HTTP(S) normales. Il recherche un seul onglet : vous pouvez spécifier l'ID d'un onglet particulier à rechercher, ou il recherchera l'onglet actif par défaut. Il recherche toutes les images de l'onglet..

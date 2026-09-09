@@ -3,7 +3,7 @@ title: "Atomics : méthode statique or()"
 short-title: or()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
 l10n:
-  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
+  sourceCommit: 3fbc8b2ba17c1cf331fb67ce2e6561b15bf4f197
 ---
 
 La méthode statique **`Atomics.or()`** calcule un OU binaire entre une valeur donnée et la valeur présente à une position donnée du tableau, et retourne l'ancienne valeur à cette position. Cette opération atomique garantit qu'aucune autre écriture n'intervient tant que la valeur modifiée n'a pas été réinscrite.
@@ -30,13 +30,13 @@ L'ancienne valeur contenue à l'emplacement du tableau (`typedArray[index]`).
 ### Exceptions
 
 - {{JSxRef("TypeError")}}
-  - : Lèvee si `typedArray` n'est pas l'un des types d'entiers autorisés.
+  - : Levée si `typedArray` n'est pas l'un des types d'entiers autorisés.
 - {{JSxRef("RangeError")}}
   - : Levée si `index` est en dehors des limites de `typedArray`.
 
 ## Description
 
-L'opération binaire OU retourne 1 si `a` ou `b` valent 1. La table de vérité de cette opération est&nbsp;:
+L'opération binaire OU retourne 1 si `a` ou `b` vaut 1. La table de vérité de cette opération est&nbsp;:
 
 | `a` | `b` | `a \| b` |
 | --- | --- | -------- |

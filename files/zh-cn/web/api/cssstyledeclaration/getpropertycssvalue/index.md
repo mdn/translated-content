@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
-{{ APIRef("CSSOM") }} {{deprecated_header}}
+{{ APIRef("CSSOM") }}
 
 **CSSStyleDeclaration.getPropertyCSSValue()** 方法返回一个包含指定属性 CSS 值的 {{domxref('CSSValue')}}。注意：如果属性名是一个简写属性，该方法会返回 `null`。
 

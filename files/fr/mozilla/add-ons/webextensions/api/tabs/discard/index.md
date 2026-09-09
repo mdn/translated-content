@@ -3,8 +3,6 @@ title: tabs.discard()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
 ---
 
-{{AddonSidebar}}
-
 Rejette un ou plusieurs onglets.
 
 Certains navigateurs "suppriment" automatiquement les onglets dont ils ne pensent pas qu'ils seront bientôt utiles à l'utilisateur. L'onglet reste visible dans la bande d'onglets et le navigateur se souvient de son état, donc si l'utilisateur sélectionne un onglet qui a été supprimé, il est immédiatement restauré.

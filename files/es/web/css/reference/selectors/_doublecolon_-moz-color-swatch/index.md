@@ -13,7 +13,11 @@ El **`::-moz-color-swatch`** [pdseudo-elemento CSS](/es/docs/Web/CSS) es una [ex
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+::-moz-color-swatch {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

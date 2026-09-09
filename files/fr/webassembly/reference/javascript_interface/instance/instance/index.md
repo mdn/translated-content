@@ -4,8 +4,6 @@ slug: WebAssembly/Reference/JavaScript_interface/Instance/Instance
 original_slug: WebAssembly/JavaScript_interface/Instance/Instance
 ---
 
-{{WebAssemblySidebar}}
-
 Le constructeur **`WebAssembly.Instance()`** crée un nouvel objet `Instance` qui représente une instance sans état et exécutable d'un [`WebAssembly.Module`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module).
 
 ## Syntaxe

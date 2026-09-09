@@ -3,8 +3,6 @@ title: Constructeur URIError()
 slug: Web/JavaScript/Reference/Global_Objects/URIError/URIError
 ---
 
-{{JSRef}}
-
 Le constructeur **`URIError()`** permet de créer une erreur lorsqu'une fonction de gestion d'un URI a été utilisée de façon incorrecte.
 
 ## Syntaxe

@@ -3,10 +3,8 @@ title: "Iterator : méthode join()"
 short-title: join()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/join
 l10n:
-  sourceCommit: e57e3fdd4ab6fb372ddc3d78e5b428f318202426
+  sourceCommit: 5b9e4bb67e5cb4bb2b780e7338a6560463e5a1a7
 ---
-
-{{SeeCompatTable}}
 
 La méthode **`join()`** des instances de {{JSxRef("Iterator")}} est similaire à {{JSxRef("Array.prototype.join()")}}&nbsp;: elle retourne une chaîne de caractères qui est la concaténation de tous les éléments produits par l'itérateur, séparés par une virgule ou une chaîne de caractères de séparateur définie. Si l'itérateur n'a qu'un seul élément, cet élément est converti en chaîne de caractères sans utiliser le séparateur.
 

@@ -3,8 +3,6 @@ title: downloads.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
 ---
 
-{{AddonSidebar}}
-
 L'événement **`onChanged()`** de l'API {{WebExtAPIRef("downloads")}} est déclenché lorsque l'une des propriétés de {{WebExtAPIRef('downloads.DownloadItem')}} change (à l'exception de `bytesReceived`).
 
 L'écouteur reçoit un fichier `downloadDelta` en tant que paramètre — un objet contenant le `downloadId` de l'objet {{WebExtAPIRef('downloads.DownloadItem')}} en question, plus le statut de toutes les propriétés qui ont changé.

@@ -3,10 +3,10 @@ title: Fonction CSS `image()`
 short-title: image()
 slug: Web/CSS/Reference/Values/image/image
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 61f27416f7cfa79bd102042eeb3e44fe629d9c95
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`image()`** définit une {{CSSxRef("&lt;image&gt;")}} à la façon de la fonction {{CSSxRef("url_function", "url()")}} mais avec des fonctionnalités supplémentaires comme la définition de la directionnalité, la possibilité d'indiquer une image par défaut si l'image initiale n'est pas prise en charge, l'affichage d'une partie de l'image ou le choix de la couleur à utiliser par défaut si aucune des images indiquées ne peut être affichée.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`image()`** définit une {{CSSxRef("&lt;image&gt;")}} à la façon de la fonction {{CSSxRef("url_function", "url()")}} mais avec des fonctionnalités supplémentaires comme la définition de la direction, la possibilité d'indiquer une image par défaut si l'image initiale n'est pas prise en charge, l'affichage d'une partie de l'image ou le choix de la couleur à utiliser par défaut si aucune des images indiquées ne peut être affichée.
 
 > [!NOTE]
 > Attention à ne pas confondre cette notation fonctionnelle CSS avec {{DOMxRef("HTMLImageElement/Image", "<code>Image()</code>, constructeur de l'interface DOM <code>HTMLImageElement</code>", "", 1)}}.
@@ -88,11 +88,11 @@ Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan, car 
 - [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.1_—_des_équivalents_textuels_doivent_être_fournis_pour_tout_contenu_non_textuel)
 - [Comprendre les critères de réussite 1.1.1 - Guide de compréhension WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
-Cette fonction peut aider à améliorer l'accessibilité en fournissant une couleur par défaut lorsque le chargement d'une image échoue. Bien qu'il faille toujours utiliser `background-color` comme défaut pour chaque image d'arrière-plan, la fonction CSS `image()` permet d'ajouter une couleur d'arrière-plan pour toute image dont le chargement échouerait (par exemple un fichier PNG/GIF/WebP avec de la transparence).
+Cette fonction peut aider à améliorer l'accessibilité en fournissant une couleur par défaut lorsque le chargement d'une image échoue. Bien qu'il faille toujours utiliser `background-color` comme défaut pour chaque image d'arrière-plan, la fonction CSS `image()` permet d'ajouter une couleur d'arrière-plan pour toute image dont le chargement échoue (par exemple un fichier PNG/GIF/WebP avec de la transparence).
 
 ## Exemples
 
-### Utiliser des images prenant en compte la directionnalité
+### Utiliser des images prenant en compte la direction
 
 ```html
 <ul>
@@ -111,7 +111,7 @@ ul {
 
 Pour les éléments de la liste allant de gauche à droite (ceux avec `dir="ltr"` ou qui héritent de cette direction depuis leur ancêtre), l'image pour la puce est utilisée telle quelle. Les éléments de la liste avec `dir="rtl"` (que ce soit explicitement défini comme ici ou que cette direction provienne de la direction par défaut du document, par exemple un document en arabe ou en hébreu), l'image est affichée à droite et est renversée horizontalement (de la même façon qu'avec `transform: scaleX(-1)`). Le texte est également affiché de gauche à droite.
 
-{{EmbedLiveSample("Utiliser des images prenant en compte la directionnalité", "100%", 200)}}
+{{EmbedLiveSample("Utiliser des images prenant en compte la direction", "100%", 200)}}
 
 ### Afficher une section de l'image
 

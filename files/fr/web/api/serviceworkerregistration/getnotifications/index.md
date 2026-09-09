@@ -18,7 +18,7 @@ serviceWorkerRegistration.getNotifications(options)
 
 - options {{optional_inline}}
   - : Un objet contenant des options pour filtrer les notifications renvoyées. Les options disponibles sont:
-    - `tag`: Un {{domxref ("DOMString")}} représentant un tag de notification. Si spécifié, seules les notifications contenant cette balise seront renvoyées.
+    - `tag`: Un {{jsxref("String")}} représentant un tag de notification. Si spécifié, seules les notifications contenant cette balise seront renvoyées.
 
 ### Valeur de retour
 

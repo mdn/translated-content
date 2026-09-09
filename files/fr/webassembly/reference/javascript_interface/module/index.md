@@ -4,8 +4,6 @@ slug: WebAssembly/Reference/JavaScript_interface/Module
 original_slug: WebAssembly/JavaScript_interface/Module
 ---
 
-{{WebAssemblySidebar}}
-
 Un objet **`WebAssembly.Module`** contient du code WebAssembly, sans état et qui a déjà été compilé par le navigateur. Ce code peut être [partagé avec des <i lang="en">web workers</i>](/fr/docs/Web/API/Worker/postMessage) et être instancié à plusieurs reprises.
 
 ## Constructeur

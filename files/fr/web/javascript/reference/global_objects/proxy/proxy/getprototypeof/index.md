@@ -3,8 +3,6 @@ title: handler.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 ---
 
-{{JSRef}}
-
 La méthode **`handler.getPrototypeOf()`** représente une trappe pour la méthode interne `[[GetPrototypeOf]]`.
 
 {{InteractiveExample("JavaScript Demo: handler.getPrototypeOf()", "taller")}}

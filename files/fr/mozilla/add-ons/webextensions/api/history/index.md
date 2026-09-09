@@ -3,8 +3,6 @@ title: history
 slug: Mozilla/Add-ons/WebExtensions/API/history
 ---
 
-{{AddonSidebar}}
-
 Utilisez l'API `historique` pour interargir avec l'historique du navigateur.
 
 Si vous recherchez des informations sur l'historique de session du navigateur, consultez l'[interface historique](/fr/docs/Web/API/History).

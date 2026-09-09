@@ -3,10 +3,10 @@ title: "Content-Security-Policy : directive prefetch-src"
 short-title: prefetch-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/prefetch-src
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`prefetch-src`** définit les ressources pouvant être préchargées ou préaffichées.
 
@@ -23,7 +23,7 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`prefetch-sr
     <tr>
       <th scope="row">Solution de repli {{CSP("default-src")}}</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>.
+        Oui, si cette directive est absente, l'agent utilisateur consulte la directive <code>default-src</code>.
       </td>
     </tr>
   </tbody>
@@ -56,7 +56,7 @@ Soit cet en-tête CSP&nbsp;:
 Content-Security-Policy: prefetch-src https://example.com/
 ```
 
-Les requêtes émises par ce code généreront des erreurs de réseau puisque les URL demandées ne correspondent pas à la liste de permissions de la directive `prefetch-src`&nbsp;:
+Les requêtes émises par ce code génèrent des erreurs de réseau puisque les URL demandées ne correspondent pas à la liste de permissions de la directive `prefetch-src`&nbsp;:
 
 ```html
 <link rel="prefetch" href="https://exemple.org/" />

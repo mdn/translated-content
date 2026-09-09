@@ -3,8 +3,6 @@ title: browserAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
 ---
 
-{{AddonSidebar}}
-
 Définit l'icône pour l'action du navigateur.
 
 Vous pouvez spécifier une seule icône comme chemin d'accès à un fichier ou un objet {{WebExtAPIRef('browserAction.ImageDataType')}} .

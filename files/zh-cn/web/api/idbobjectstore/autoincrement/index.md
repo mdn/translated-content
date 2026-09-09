@@ -15,7 +15,7 @@ slug: Web/API/IDBObjectStore/autoIncrement
 
 ## 值
 
-{{domxref("Boolean")}}:
+{{jsxref("Boolean")}}:
 
 | 值      | 含义                      |
 | ------- | ------------------------- |

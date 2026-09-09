@@ -3,8 +3,6 @@ title: browserAction.getBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeText
 ---
 
-{{AddonSidebar}}
-
 Obtient le texte du badge de l'action du navigateur.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

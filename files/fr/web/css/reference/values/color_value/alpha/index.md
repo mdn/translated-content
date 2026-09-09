@@ -3,7 +3,7 @@ title: Fonction CSS `alpha()`
 short-title: alpha()
 slug: Web/CSS/Reference/Values/color_value/alpha
 l10n:
-  sourceCommit: b6de98eb9cd52ce7e37f22a340352f0af4c9d597
+  sourceCommit: 77ee105b32c153b8822321ce54462134d4767c50
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`alpha()`** prend une couleur ({{CSSxRef("color_value","color")}}) d'origine et retourne cette même couleur avec un canal alpha (transparence) modifié. Les composants de couleur de la couleur d'origine sont conservés inchangés. Le résultat est dans le même espace colorimétrique que la couleur d'origine.
@@ -24,8 +24,8 @@ alpha(from var(--my-color) / calc(alpha * 0.5))
 - `from <color>`
   - : La syntaxe de [la couleur relative](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors) consiste en le mot-clé `from` suivi de n'importe quelle valeur {{CSSxRef("&lt;color&gt;")}} valide, définissant la **couleur d'origine**. Les composants de couleur de la couleur d'origine sont conservés inchangés dans le résultat&nbsp;; seul le canal alpha est affecté.
 
-- `/ <alpha-value>` {{Optional_Inline}}
-  - : Une valeur {{CSSxRef("&lt;alpha-value&gt;")}} définissant le niveau alpha de la couleur de sortie. Il peut s'agir d'un nombre (`<number>`) compris entre `0` et `1`, d'un `<percentage>` compris entre `0%` et `100%`, ou d'une expression {{CSSxRef("calc()")}}. Dans cette valeur, le mot-clé **`alpha`** peut être utilisé pour faire référence au canal alpha de la couleur d'origine en tant que `<number>` (où `1.0` équivaut à `100%`). Si cet argument est omis, l'alpha de la couleur d'origine est utilisé tel quel.
+- `/ <alpha-value>`
+  - : Une valeur {{CSSxRef("&lt;alpha-value&gt;")}} définissant le niveau alpha de la couleur de sortie. Il peut s'agir d'un nombre (`<number>`) compris entre `0` et `1`, d'un `<percentage>` compris entre `0%` et `100%`, ou d'une expression {{CSSxRef("calc()")}}. Dans cette valeur, le mot-clé **`alpha`** peut être utilisé pour faire référence au canal alpha de la couleur d'origine en tant que `<number>` (où `1.0` équivaut à `100%`).
 
 ### Valeur de retour
 
@@ -40,6 +40,10 @@ Dans l'argument de la valeur alpha, le mot-clé de composant `alpha` correspond 
 Contrairement à la syntaxe générale des [couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors) (par ex., `oklch(from ...)`), la fonction `alpha()` n'expose pas les mots-clés des canaux de couleur individuels de l'espace colorimétrique de la couleur d'origine. Elle ne s'occupe que du canal alpha, en conservant le reste de la couleur intact.
 
 La valeur de retour est toujours dans le même espace colorimétrique que la couleur d'origine. Par exemple, si la couleur d'origine est une couleur [`oklch()`](/fr/docs/Web/CSS/Reference/Values/color_value/oklch), le résultat est également résolu en OKLCh, avec la même luminosité, chroma et teinte.
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

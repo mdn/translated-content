@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/height
 original_slug: Web/SVG/Attribute/height
 ---
 
-{{SVGRef}}
-
 L'attribut **`height`** définit la longueur verticale d'un élément dans le système des coordonnées de l'utilisatrice ou l'utilisateur.
 
 Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:

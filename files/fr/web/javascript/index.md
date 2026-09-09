@@ -2,12 +2,12 @@
 title: JavaScript
 slug: Web/JavaScript
 l10n:
-  sourceCommit: 04158640487c17d515de8078c9307a2f906377d0
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
 **JavaScript** (ou **JS** en abrégé) est un langage de programmation léger, interprété (ou {{Glossary("Just_In_Time_Compilation", "compilé à la volée")}}) avec des {{Glossary("First-class Function", "fonctions de première classe")}}. S'il est surtout connu comme langage de script pour les pages web, [de nombreux environnements hors navigateur](https://fr.wikipedia.org/wiki/JavaScript#Autres_utilisations) l'utilisent aussi, comme {{Glossary("Node.js")}}, [Apache CouchDB <sup>(angl.)</sup>](https://couchdb.apache.org/) ou [Adobe Acrobat <sup>(angl.)</sup>](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). JavaScript est un langage [à prototype](/fr/docs/Glossary/Prototype-based_programming), [à ramasse-miettes](/fr/docs/Glossary/Garbage_collection), [dynamique](/fr/docs/Glossary/Dynamic_typing), prenant en charge plusieurs paradigmes&nbsp;: impératif, fonctionnel et orienté objet.
 
-Les capacités dynamiques de JavaScript incluent la construction d'objets à l'exécution, les listes de paramètres variables, les fonctions comme variables, la création dynamique de scripts (via [`eval`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval)), l'introspection d'objets (via [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) et les utilitaires [`Object`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object#static_methods)), et la récupération du code source (les fonctions JavaScript conservent leur texte source, accessible via [`toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString)).
+Les capacités dynamiques de JavaScript incluent la construction d'objets à l'exécution, les listes de paramètres variables, les fonctions comme variables, la création dynamique de scripts (avec [`eval`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval)), l'introspection d'objets (avec [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) et les utilitaires [`Object`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object#static_methods)), et la récupération du code source (les fonctions JavaScript conservent leur texte source, accessible avec [`toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString)).
 
 Cette section est dédiée au langage JavaScript lui-même, et non aux parties spécifiques aux pages web ou à d'autres environnements hôtes. Pour les {{Glossary("API")}} propres aux pages web, consultez [API Web](/fr/docs/Web/API) et {{Glossary("DOM")}}.
 
@@ -29,7 +29,7 @@ Nos [modules principaux pour apprendre le développement web](/fr/docs/Learn_web
 - [Votre premier site web&nbsp;: ajouter de l'interactivité](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
   - : Cet article propose une brève introduction à JavaScript et à son utilisation, destinée aux personnes totalement débutantes en développement web.
 - [Scripts dynamiques avec JavaScript](/fr/docs/Learn_web_development/Core/Scripting)
-  - : Ce module se concentre sur l'essentiel du langage JavaScript, ainsi que sur quelques sujets clés autour&nbsp;: apprendre ces notions vous donnera une base solide.
+  - : Ce module se concentre sur l'essentiel du langage JavaScript, ainsi que sur quelques sujets clés autour&nbsp;: apprendre ces notions vous donne une base solide.
 - [Frameworks et bibliothèques JavaScript](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Les frameworks JavaScript sont essentiels dans le développement web moderne côté client, fournissant des outils éprouvés pour créer des applications web interactives et évolutives. Beaucoup d'entreprises les utilisent comme standard, et de nombreux emplois en développement exigent désormais une expérience des frameworks. Cette série d'articles constitue un point de départ confortable pour débuter avec les frameworks.
 
@@ -53,7 +53,7 @@ Nos [modules principaux pour apprendre le développement web](/fr/docs/Learn_web
 - [Structures de données JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures)
   - : Présentation des structures de données disponibles en JavaScript.
 - [Comparaisons d'égalité et de similitude](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
-  - : JavaScript propose trois opérations de comparaison de valeurs&nbsp;: l'égalité stricte avec `===`, l'égalité souple avec `==` et la méthode {{jsxref("Object.is()")}}.
+  - : JavaScript propose trois opérations de comparaison de valeurs&nbsp;: l'égalité stricte avec `===`, l'égalité souple avec `==` et la méthode {{JSxRef("Object.is()")}}.
 - [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
   - : Comment les différentes méthodes qui parcourent les propriétés d'un objet gèrent l'énumérabilité et la propriété de ces attributs.
 - [Closures](/fr/docs/Web/JavaScript/Guide/Closures)
@@ -71,11 +71,11 @@ Nos [modules principaux pour apprendre le développement web](/fr/docs/Learn_web
 Consultez la [référence JavaScript complète](/fr/docs/Web/JavaScript/Reference).
 
 - [Objets standards](/fr/docs/Web/JavaScript/Reference/Global_Objects)
-  - : Découvrez les objets intégrés standards&nbsp;: {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}}, et d'autres.
+  - : Découvrez les objets intégrés standards&nbsp;: {{JSxRef("Array")}}, {{JSxRef("Boolean")}}, {{JSxRef("Error")}}, {{JSxRef("Function")}}, {{JSxRef("JSON")}}, {{JSxRef("Math")}}, {{JSxRef("Number")}}, {{JSxRef("Object")}}, {{JSxRef("RegExp")}}, {{JSxRef("String")}}, {{JSxRef("Map")}}, {{JSxRef("Set")}}, {{JSxRef("WeakMap")}}, {{JSxRef("WeakSet")}}, et d'autres.
 - [Expressions et opérateurs](/fr/docs/Web/JavaScript/Reference/Operators)
-  - : Approfondissez le comportement des opérateurs JavaScript&nbsp;: {{jsxref("instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("new")}}, {{jsxref("this")}}, la [priorité des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence), etc.
+  - : Approfondissez le comportement des opérateurs JavaScript&nbsp;: {{JSxRef("instanceof")}}, {{JSxRef("Operators/typeof", "typeof")}}, {{JSxRef("new")}}, {{JSxRef("this")}}, la [priorité des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence), etc.
 - [Instructions et déclarations](/fr/docs/Web/JavaScript/Reference/Statements)
-  - : Découvrez le fonctionnement de {{jsxref("Statements/do...while", "do-while")}}, {{jsxref("Statements/for...in", "for-in")}}, {{jsxref("Statements/for...of", "for-of")}}, {{jsxref("Statements/try...catch", "try-catch")}}, {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/var", "var")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/if...else", "if-else")}}, {{jsxref("Statements/switch", "switch")}} et d'autres instructions et mots-clés JavaScript.
+  - : Découvrez le fonctionnement de {{JSxRef("Statements/do...while", "do-while")}}, {{JSxRef("Statements/for...in", "for-in")}}, {{JSxRef("Statements/for...of", "for-of")}}, {{JSxRef("Statements/try...catch", "try-catch")}}, {{JSxRef("Statements/let", "let")}}, {{JSxRef("Statements/var", "var")}}, {{JSxRef("Statements/const", "const")}}, {{JSxRef("Statements/if...else", "if-else")}}, {{JSxRef("Statements/switch", "switch")}} et d'autres instructions et mots-clés JavaScript.
 - [Fonctions](/fr/docs/Web/JavaScript/Reference/Functions)
   - : Apprenez à utiliser les fonctions JavaScript pour développer vos applications.
 - [Classes](/fr/docs/Web/JavaScript/Reference/Classes)

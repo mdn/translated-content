@@ -3,10 +3,10 @@ title: Pseudo-classe CSS `:valid`
 short-title: :valid
 slug: Web/CSS/Reference/Selectors/:valid
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:valid`** permet de cibler tout élément HTML {{HTMLElement("input")}} ou {{HTMLElement("form")}} dont la [validation](/fr/docs/Web/HTML/Guides/Constraint_validation) du contenu s'effectue correctement par rapport au type de donnée attendu. On peut ainsi facilement mettre en forme les champs correctement remplis par l'utilisateur·ice.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:valid`** permet de cibler tout élément HTML {{HTMLElement("input")}} ou {{HTMLElement("form")}} dont la [validation](/fr/docs/Web/HTML/Guides/Constraint_validation) du contenu s'effectue correctement par rapport au type de donnée attendu. Cela vous permet de donner facilement aux champs valides un aspect qui aide l'utilisateur·ice à vérifier que ses données sont correctement formatées.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :valid", "tabbed-shorter")}}
 

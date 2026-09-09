@@ -7,7 +7,7 @@ l10n:
 
 En JavaScript, un **booléen** est une {{Glossary("Primitive", "valeur primitive")}} qui peut être `true` ou `false`.
 
-Un objet {{JSxRef("Boolean")}} est une {{Glossary("wrapper", "enveloppe (<i lang="en">wrapper</i>)")}} pour les valeurs booléennes primitives.
+Un objet {{JSxRef("Boolean")}} est une {{Glossary("wrapper", "enveloppe (<i lang='en'>wrapper</i>)")}} pour les valeurs booléennes primitives.
 
 ## Voir aussi
 

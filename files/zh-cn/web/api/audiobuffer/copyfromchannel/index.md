@@ -16,7 +16,7 @@ myArrayBuffer.copyFromChannel(destination,channelNumber,startInChannel);
 ### 参数
 
 - _destination_
-  - : 将通道数据复制到的{{domxref("Float32Array")}}
+  - : 将通道数据复制到的{{jsxref("Float32Array")}}
 - _channelNumber_
   - : 当前 AudioBuffer 的通道号，用于复制通道数据。键入 channelNumber 大于或等于{{domxref("AudioBuffer.numberOfChannels")}}，将会抛出`INDEX_SIZE_ERR` 的错误
 - _startInChannel_ {{optional_inline}}

@@ -1,35 +1,35 @@
 ---
-title: Disposition en bloc et en ligne dans le flux normal
-short-title: Disposition en bloc et en ligne
+title: Disposition en bloc et en incise dans le flux normal
+short-title: Disposition en bloc et en incise
 slug: Web/CSS/Guides/Display/Block_and_inline_layout
 l10n:
-  sourceCommit: 32bdfdb82cf91ce9942b694286dec62be2cc20aa
+  sourceCommit: 2c6196c0352ac439f13adc6a0a83d79993ef5a1e
 ---
 
-Dans ce guide, nous verrons le comportement des éléments de bloc et des éléments en ligne lorsqu'ils sont placés dans le flux normal.
+Dans ce guide, nous voyons le comportement des éléments de bloc et des éléments en incise lorsqu'ils sont placés dans le flux normal.
 
-Le flux normal est défini dans la [spécification CSS 2.1 <sup>(angl.)</sup>](https://www.w3.org/TR/CSS2/visuren.html#normal-flow) qui explique que toutes les boîtes situées dans le flux normal font partie d'un _contexte de formatage_. Elles peuvent être soit de niveau en bloc, soit de niveau en ligne, mais pas les deux à la fois. Nous décrivons les boîtes de niveau en bloc comme participant à un _contexte de mise en forme de bloc_, et les boîtes de niveau en ligne comme participant à un _contexte de mise en forme en ligne_.
+Le flux normal est défini dans la [spécification CSS 2.1 <sup>(angl.)</sup>](https://www.w3.org/TR/CSS2/visuren.html#normal-flow) qui explique que toutes les boîtes situées dans le flux normal font partie d'un _contexte de formatage_. Elles peuvent être soit de niveau en bloc, soit de niveau en incise, mais pas les deux à la fois. Nous décrivons les boîtes de niveau en bloc comme participant à un _contexte de mise en forme de bloc_, et les boîtes de niveau en incise comme participant à un _contexte de mise en forme en incise_.
 
-Le comportement des éléments qui ont un contexte de formatage de bloc ou en ligne est également défini dans cette spécification. Pour les éléments avec un contexte de formatage de bloc, voici ce qui est indiqué dans la spécification&nbsp;:
+Le comportement des éléments qui ont un contexte de formatage de bloc ou en incise est également défini dans cette spécification. Pour les éléments avec un contexte de formatage de bloc, voici ce qui est indiqué dans la spécification&nbsp;:
 
 > «&nbsp;Dans un contexte de formatage de bloc, les boîtes sont disposées l'une après l'autre, verticalement, en démarrant en haut du bloc englobant. La distance verticale entre deux boîtes voisines est déterminée par les propriétés relatives aux marges. Les marges verticales fusionnent pour deux boîtes de bloc voisines au sein d'un contexte de formatage de bloc.\
 > Dans un contexte de formatage de bloc, chaque bord gauche de chaque boîte touche le bord gauche du bloc englobant (pour les documents écrits de droite à gauche, ce sont les bords droits qui coïncident).&nbsp;» - 9.4.1
 
-Quant aux éléments du contexte de formatage en ligne&nbsp;:
+Quant aux éléments du contexte de formatage en incise&nbsp;:
 
-> «&nbsp;Dans un contexte de formatage en ligne, les boîtes sont disposées horizontalement, les unes à la suite des autres, en partant du haut d'un bloc conteneur. Les marges horizontales, les bordures et le remplissage sont respectés entre ces boîtes. Les boîtes peuvent être alignées verticalement de différentes manières&nbsp;: leurs bords inférieurs ou supérieurs peuvent être alignés, ou encore les lignes de base du texte qu'elles contiennent peuvent être alignées. La zone rectangulaire qui contient les boîtes formant une ligne est appelée une boîte de ligne.&nbsp;» - 9.4.2
+> «&nbsp;Dans un contexte de formatage en incise, les boîtes sont disposées horizontalement, les unes à la suite des autres, en partant du haut d'un bloc conteneur. Les marges horizontales, les bordures et le remplissage sont respectés entre ces boîtes. Les boîtes peuvent être alignées verticalement de différentes manières&nbsp;: leurs bords inférieurs ou supérieurs peuvent être alignés, ou encore les lignes de base du texte qu'elles contiennent peuvent être alignées. La zone rectangulaire qui contient les boîtes formant une ligne est appelée une boîte de ligne.&nbsp;» - 9.4.2
 
-Notez que la spécification CSS 2.1 décrit les documents comme étant en mode d'écriture horizontal, de haut en bas. Par exemple, en décrivant la distance verticale entre les boîtes de bloc. Le comportement des éléments en bloc et en ligne est identique en mode d'écriture vertical&nbsp;; nous abordons ce sujet dans notre guide [Disposition en flux et modes d'écriture](/fr/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes).
+Notez que la spécification CSS 2.1 décrit les documents comme étant en mode d'écriture horizontal, de haut en bas. Par exemple, en décrivant la distance verticale entre les boîtes de bloc. Le comportement des éléments en bloc et en incise est identique en mode d'écriture vertical&nbsp;; nous abordons ce sujet dans notre guide [Disposition en flux et modes d'écriture](/fr/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes).
 
 ## Les éléments qui participent à un contexte de formatage de bloc
 
 Les éléments de bloc organisés avec un mode d'écriture horizontal (un document en français par exemple) sont disposés verticalement les uns au dessus des autres.
 
-![Direction en ligne est horizontale. Direction en bloc est verticale.](mdn-horizontal.png)
+![Direction en incise est horizontale. Direction en bloc est verticale.](mdn-horizontal.png)
 
-Avec un mode d'écriture vertical, les boîtes seraient organisées horizontalement.
+Avec un mode d'écriture vertical, les boîtes sont organisées horizontalement.
 
-![Direction en ligne est verticale. Direction en bloc est horizontale.](mdn-vertical.png)
+![Direction en incise est verticale. Direction en bloc est horizontale.](mdn-vertical.png)
 
 Dans ce guide, nous allons travailler en français et donc un mode d'écriture horizontal. Cependant, tout ce qui est décrit ici doit fonctionner de la même manière si votre document est en mode d'écriture vertical.
 
@@ -163,11 +163,11 @@ Pour en savoir plus à propos de la fusion des marges, vous pouvez lire [l'artic
 >
 > ![Capture d'écran du panneau du modèle de boîte dans les outils de développement du navigateur, qui montre les quatre valeurs pour la marge, la bordure et le remplissage ainsi que la hauteur et la largeur dans un graphique en haut et liste box-sizing, display, float, line-height, position et z-index en dessous du graphique.](box-model.png)
 
-## Les éléments qui participent à un contexte de formatage en ligne
+## Les éléments qui participent à un contexte de formatage en incise
 
-Les éléments en ligne s'affichent les uns à la suite des autres, dans le sens de lecture des phrases selon le mode d'écriture utilisé. Même si l'on a tendance à ne pas considérer les éléments en ligne comme possédant une boîte, comme tout ce qui relève du CSS, c'est pourtant le cas. Ces boîtes en ligne sont disposées les unes à la suite des autres. S'il n'y a pas suffisamment d'espace dans le bloc conteneur pour accueillir toutes les boîtes, une boîte peut s'étendre sur une nouvelle ligne. Les lignes ainsi créées sont appelées boîtes de ligne.
+Les éléments en incise s'affichent les uns à la suite des autres, dans le sens de lecture des phrases selon le mode d'écriture utilisé. Même si l'on a tendance à ne pas considérer les éléments en incise comme possédant une boîte, comme tout ce qui relève du CSS, c'est pourtant le cas. Ces boîtes en incise sont disposées les unes à la suite des autres. S'il n'y a pas suffisamment d'espace dans le bloc conteneur pour accueillir toutes les boîtes, une boîte peut s'étendre sur une nouvelle ligne. Les lignes ainsi créées sont appelées boîtes de ligne.
 
-Dans l'exemple suivant on a trois boîtes en ligne créées par un paragraphe avec un élément {{HTMLElement("strong")}} à l'intérieur.
+Dans l'exemple suivant on a trois boîtes en incise créées par un paragraphe avec un élément {{HTMLElement("strong")}} à l'intérieur.
 
 ```html live-sample___inline
 <p>
@@ -201,13 +201,13 @@ strong {
 
 {{EmbedLiveSample("line-box")}}
 
-Pour en savoir plus sur le comportement des boîtes en ligne et des boîtes de bloc, vous pouvez consulter [le guide sur le modèle de formatage visuel](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model).
+Pour en savoir plus sur le comportement des boîtes en incise et des boîtes de bloc, vous pouvez consulter [le guide sur le modèle de formatage visuel](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model).
 
 ## La propriété `display` et la disposition de flux
 
-En plus des règles existantes dans CSS2.1, de nouveaux niveaux de CSS décrivent davantage le comportement des boîtes de bloc et en ligne. La propriété {{CSSxRef("display")}} définit comment une boîte et toutes les boîtes qu'elle contient se comportent. Dans le CSS Display Model Level 3, nous pouvons en apprendre davantage sur la façon dont la propriété `display` modifie le comportement des boîtes et des boîtes qu'elles génèrent.
+En plus des règles existantes dans CSS2.1, de nouveaux niveaux de CSS décrivent davantage le comportement des boîtes de bloc et en incise. La propriété {{CSSxRef("display")}} définit comment une boîte et toutes les boîtes qu'elle contient se comportent. Dans le CSS Display Model Level 3, nous pouvons en apprendre davantage sur la façon dont la propriété `display` modifie le comportement des boîtes et des boîtes qu'elles génèrent.
 
-Le type d'affichage d'un élément définit le type d'affichage externe&nbsp;; cela dicte comment la boîte s'affiche aux côtés des autres éléments dans le même contexte de formatage. Il définit également le type d'affichage interne, qui dicte comment les boîtes à l'intérieur de cet élément se comportent. Nous pouvons voir cela très clairement en considérant une disposition flexible. Dans l'exemple ci-dessous, on a un {{HTMLElement("div")}}, auquel on a donné `display: flex`. Le conteneur flexible se comporte comme un élément de bloc&nbsp;: il s'affiche sur une nouvelle ligne et prend tout l'espace disponible dans la direction en ligne. C'est le type d'affichage externe de `block`.
+Le type d'affichage d'un élément définit le type d'affichage externe&nbsp;; cela dicte comment la boîte s'affiche aux côtés des autres éléments dans le même contexte de formatage. Il définit également le type d'affichage interne, qui dicte comment les boîtes à l'intérieur de cet élément se comportent. Nous pouvons voir cela très clairement en considérant une disposition flexible. Dans l'exemple ci-dessous, on a un {{HTMLElement("div")}}, auquel on a donné `display: flex`. Le conteneur flexible se comporte comme un élément de bloc&nbsp;: il s'affiche sur une nouvelle ligne et prend tout l'espace disponible dans la direction en incise. C'est le type d'affichage externe de `block`.
 
 Les éléments flexibles, en revanche, participent à un contexte de formatage flexible, car leur parent est l'élément avec `display: flex`, qui a un type d'affichage interne de `flex`, établissant le contexte de formatage flexible pour les enfants directs.
 
@@ -235,13 +235,13 @@ Les éléments flexibles, en revanche, participent à un contexte de formatage f
 
 {{EmbedLiveSample("flex")}}
 
-Vous pouvez donc considérer que chaque boîte en CSS fonctionne de cette manière. La boîte elle-même possède un type d'affichage externe, ce qui lui permet de savoir comment se comporter par rapport aux autres boîtes. Elle possède ensuite un type d'affichage interne qui modifie le comportement de ses enfants. Ces enfants possèdent eux aussi un type d'affichage externe et interne. Les éléments flexible de l'exemple précédent deviennent des boîtes de niveau flexible, leur type d'affichage externe est donc déterminé par leur appartenance au contexte de formatage flexible. Ils possèdent toutefois un type d'affichage interne de type _flux_, ce qui signifie que leurs enfants participent au flux normal. Les éléments imbriqués à l'intérieur de notre élément flexible s'affichent comme des éléments en bloc et en ligne, à moins qu'un élément ne modifie leur type d'affichage.
+Vous pouvez donc considérer que chaque boîte en CSS fonctionne de cette manière. La boîte elle-même possède un type d'affichage externe, ce qui lui permet de savoir comment se comporter par rapport aux autres boîtes. Elle possède ensuite un type d'affichage interne qui modifie le comportement de ses enfants. Ces enfants possèdent eux aussi un type d'affichage externe et interne. Les éléments flexible de l'exemple précédent deviennent des boîtes de niveau flexible, leur type d'affichage externe est donc déterminé par leur appartenance au contexte de formatage flexible. Ils possèdent toutefois un type d'affichage interne de type _flux_, ce qui signifie que leurs enfants participent au flux normal. Les éléments imbriqués à l'intérieur de notre élément flexible s'affichent comme des éléments en bloc et en incise, à moins qu'un élément ne modifie leur type d'affichage.
 
-Ce concept de type d'affichage externe et interne est important, car il nous indique qu'un conteneur utilisant une méthode de mise en page telle que les boîtes flexibles (`display: flex`) ou les grilles (`display: grid`) participe toujours à la mise en page en bloc et en ligne, en raison du type d'affichage externe de ces méthodes étant `block`.
+Ce concept de type d'affichage externe et interne est important, car il nous indique qu'un conteneur utilisant une méthode de mise en page telle que les boîtes flexibles (`display: flex`) ou les grilles (`display: grid`) participe toujours à la mise en page en bloc et en incise, en raison du type d'affichage externe de ces méthodes étant `block`.
 
 ### Modifier le contexte de formatage auquel un élément participe
 
-Les navigateurs affichent les éléments en bloc ou en ligne en fonction de ce qui est normalement logique pour cet élément. Par exemple, un élément {{HTMLElement("strong")}} est utilisé pour mettre fortement en évidence un segment de contenu et est affiché en gras par défaut dans les navigateurs. Il n'est, généralement, pas logique que cet élément `<strong>` soit affiché comme un élément de niveau bloc, passant à une nouvelle ligne. Si vous souhaitez que tous les éléments `<strong>` soient affichés comme des boîtes de niveau bloc, vous pouvez le faire en définissant `strong { display: block; }`. La possibilité de mettre en forme le contenu avec CSS signifie que vous pouvez toujours utiliser les éléments HTML les plus sémantiques pour marquer votre contenu, puis modifier leur affichage avec CSS.
+Les navigateurs affichent les éléments en bloc ou en incise en fonction de ce qui est normalement logique pour cet élément. Par exemple, un élément {{HTMLElement("strong")}} est utilisé pour mettre fortement en évidence un segment de contenu et est affiché en gras par défaut dans les navigateurs. Il n'est, généralement, pas logique que cet élément `<strong>` soit affiché comme un élément de niveau bloc, passant à une nouvelle ligne. Si vous souhaitez que tous les éléments `<strong>` soient affichés comme des boîtes de niveau bloc, vous pouvez le faire en définissant `strong { display: block; }`. La possibilité de mettre en forme le contenu avec CSS signifie que vous pouvez toujours utiliser les éléments HTML les plus sémantiques pour marquer votre contenu, puis modifier leur affichage avec CSS.
 
 ```html live-sample___change-formatting
 <p>
@@ -262,11 +262,11 @@ strong {
 
 ## Résumé
 
-Dans ce guide, nous avons vu comment les éléments étaient affichés dans le flux normal, comme éléments de bloc ou comme éléments en ligne. Les éléments HTML s'affichent par défaut de façon lisible sans CSS. En comprenant comment fonctionne le flux normal, vous comprenez comment apporter les modifications nécessaires pour parvenir à la disposition désirée.
+Dans ce guide, nous avons vu comment les éléments sont affichés dans le flux normal, comme éléments de bloc ou comme éléments en incise. Les éléments HTML s'affichent par défaut de façon lisible sans CSS. En comprenant comment fonctionne le flux normal, vous comprenez comment apporter les modifications nécessaires pour parvenir à la disposition désirée.
 
 ## Voir aussi
 
 - [Le modèle de boîte CSS de base](/fr/docs/Web/CSS/Guides/Box_model)
 - [Apprendre&nbsp;: le flux normal](/fr/docs/Learn_web_development/Core/CSS_layout/Introduction#cours_normal)
-- [Les éléments HTML en ligne](/fr/docs/Glossary/Inline-level_content)
+- [Les éléments HTML en incise](/fr/docs/Glossary/Inline-level_content)
 - [Les éléments HTML de bloc](/fr/docs/Glossary/Block-level_content)

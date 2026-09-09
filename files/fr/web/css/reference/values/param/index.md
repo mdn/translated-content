@@ -39,7 +39,7 @@ param(--color3, green);
 Tous les exemples suivants utilisent le même fichier SVG, qui a des attributs définis avec la fonction CSS {{CSSxRef("env()")}}.
 
 ```svg
-<!-- example of the code in the external SVG file -->
+<!-- exemple de code dans le fichier SVG externe -->
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <rect
     width="100"

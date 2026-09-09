@@ -3,8 +3,6 @@ title: commands.update()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/update
 ---
 
-{{AddonSidebar}}
-
 Changez la description ou le raccourci clavier pour la commande donnée.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

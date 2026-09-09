@@ -3,8 +3,6 @@ title: Reflect.get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
 ---
 
-{{JSRef}}
-
 La méthode statique **`Reflect.get()`** est une fonction qui permet d'obtenir une propriété d'un objet cible. Elle fonctionne comme (`cible[cléPropriété]`) mais sous la forme d'une fonction.
 
 {{InteractiveExample("JavaScript Demo: Reflect.get()")}}

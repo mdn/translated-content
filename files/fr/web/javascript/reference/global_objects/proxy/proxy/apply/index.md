@@ -3,8 +3,6 @@ title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 ---
 
-{{JSRef}}
-
 La méthode **`handler.apply()`** représente une trappe pour un appel de fonctions.
 
 {{InteractiveExample("JavaScript Demo: handler.apply()", "taller")}}

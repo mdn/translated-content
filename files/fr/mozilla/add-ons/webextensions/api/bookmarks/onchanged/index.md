@@ -3,8 +3,6 @@ title: bookmarks.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
 ---
 
-{{AddonSidebar}}
-
 Mise en place quand il y a un changement à :
 
 - le titre ou l'URL d'un signet

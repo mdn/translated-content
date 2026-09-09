@@ -3,8 +3,6 @@ title: windows.get()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/get
 ---
 
-{{AddonSidebar}}
-
 Obtient les détails sur une fenêtre, compte tenu de son identifiant. Les détails sont transmis à un rappel.
 
 Il s'agit d'une fonction asynchrone qui renvoit une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

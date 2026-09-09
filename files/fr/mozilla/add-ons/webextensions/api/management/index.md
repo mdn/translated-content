@@ -3,8 +3,6 @@ title: management
 slug: Mozilla/Add-ons/WebExtensions/API/management
 ---
 
-{{AddonSidebar}}
-
 Obtenez les éléments sur les modules complémentaires installés.
 
 Avec l'API de `gestion` vous pouvez :

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 23fb12ae62339140281b9aad2c9f856e2e5a4762
 ---
 
-{{APIRef("DOM")}} {{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 非推奨の `bgColor` プロパティは、現在の文書の背景色を取得または設定します。
 

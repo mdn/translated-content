@@ -3,8 +3,6 @@ title: Accesseurs de propriétés
 slug: Web/JavaScript/Reference/Operators/Property_accessors
 ---
 
-{{jsSidebar("Operators")}}
-
 Les **accesseurs de propriété** permettent de fournir un accès aux propriétés d'un objet en utilisant une notation avec un point ou une notation avec des crochets
 
 {{InteractiveExample("JavaScript Demo: Expressions - Property accessors")}}

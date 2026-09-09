@@ -52,7 +52,7 @@ span {
 
 ### Espaces de noms
 
-Dans cet exemple, le sélecteur ne correspondra qu'aux éléments `<h1>` dans l'espace de noms example.
+Dans cet exemple, le sélecteur ne correspond qu'aux éléments `<h1>` dans l'espace de noms _example_.
 
 ```css
 @namespace example url("http://www.example.com/");

@@ -3,8 +3,6 @@ title: tabs.executeScript()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 ---
 
-{{AddonSidebar}}
-
 Injecte du code JavaScript dans une page.
 
 Vous pouvez injecter du code dans des pages dont l'URL peut être exprimée à l'aide d'un [modèle de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)&nbsp;: son schéma doit être "http", "https", "file", "ftp". Pour ce faire, vous devez disposer de la permission pour l'URL de la page, soit explicitement en tant que [permission d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), ou via la [permission activeTab](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).

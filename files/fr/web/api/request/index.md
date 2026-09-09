@@ -2,7 +2,7 @@
 title: Request
 slug: Web/API/Request
 l10n:
-  sourceCommit: 513146a616213fee548fdcf72dc1359030eb3395
+  sourceCommit: 1bfa4c3f7895d734df516d2bc61240313397a63c
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
@@ -73,6 +73,8 @@ Vous pouvez créer un nouvel objet `Request` à l'aide du constructeur {{DOMxRef
   - : Retourne une promesse qui se résout avec le résultat de l'analyse du corps de la requête en tant que {{JSxRef("JSON")}}.
 - {{DOMxRef("Request.text()")}}
   - : Retourne une promesse qui se résout avec une représentation texte du corps de la requête.
+- {{DOMxRef("Request.textStream()")}}
+  - : Retourne un {{DOMxRef("ReadableStream")}} qui peut être utilisé pour lire le contenu du corps de la requête par morceaux en UTF-8.
 
 > [!NOTE]
 > Les fonctions du corps de la requête ne peuvent être exécutées qu'une seule fois&nbsp;; les appels suivants sont rejetés avec un TypeError indiquant que le flux du corps a déjà été utilisé.

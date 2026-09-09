@@ -3,7 +3,7 @@ title: "Array : méthode findLast()"
 short-title: findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 l10n:
-  sourceCommit: f9fe909466736b335491bdd866701e4b023057d0
+  sourceCommit: 9f46f08d20b21498293cbf6b84f508103272ec6f
 ---
 
 La méthode **`findLast()`** des instances de {{JSxRef("Array")}} parcourt le tableau en ordre inverse et retourne la valeur du premier élément qui satisfait la fonction de test fournie.
@@ -12,8 +12,8 @@ Si aucun élément ne satisfait la fonction de test, {{JSxRef("undefined")}} est
 Si vous souhaitez&nbsp;:
 
 - le _premier_ élément correspondant, utilisez {{JSxRef("Array/find", "find()")}}.
-- l'_indice_ du dernier élément correspondant dans le tableau, utilisez {{JSxRef("Array/findLastIndex", "findLastIndex()")}}.
-- l'_indice d'une valeur_, utilisez {{JSxRef("Array/indexOf", "indexOf()")}}.
+- _l'indice_ du dernier élément correspondant dans le tableau, utilisez {{JSxRef("Array/findLastIndex", "findLastIndex()")}}.
+- _l'indice d'une valeur_, utilisez {{JSxRef("Array/indexOf", "indexOf()")}}.
   (Cette méthode est semblable à {{JSxRef("Array/findIndex", "findIndex()")}}, mais compare chaque élément à la valeur indiquée au lieu d'utiliser une fonction de test.)
 - savoir si une valeur _existe_ dans un tableau, utilisez {{JSxRef("Array/includes", "includes()")}}.
   Là encore, chaque élément est comparé à la valeur indiquée au lieu d'utiliser une fonction de test.
@@ -40,7 +40,7 @@ findLast(callbackFn, thisArg)
 ### Paramètres
 
 - `callbackFn`
-  - : La fonction à exécuter pour chaque élément du tableau. Elle doit renvoyer une valeur [équivalente à `true`](/fr/docs/Glossary/Truthy) pour indiquer qu'un élément correspondant a été trouvé, et une valeur [équivalente à `false`](/fr/docs/Glossary/Falsy) sinon. La fonction est appelée avec les arguments suivants&nbsp;:
+  - : La fonction à exécuter pour chaque élément du tableau. Elle doit retourner une valeur [équivalente à `true`](/fr/docs/Glossary/Truthy) pour indiquer qu'un élément correspondant a été trouvé, et une valeur [équivalente à `false`](/fr/docs/Glossary/Falsy) sinon. La fonction est appelée avec les arguments suivants&nbsp;:
     - `element`
       - : La valeur de l'élément courant du tableau en cours de traitement.
     - `index`
@@ -100,12 +100,12 @@ const inventaire = [
 const resultat = inventaire.findLast(({ quantite }) => quantite < 2);
 
 console.log(resultat);
-// { name: "poissons", quantite: 1 }
+// { nom: "poissons", quantite: 1 }
 ```
 
 ### Trouver le dernier nombre premier d'un tableau
 
-Dans l'exemple suivant, on trouve le dernier élément du tableau qui est un nombre premier (ou on renvoie [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) si le tableau ne contient pas de nombre premier)&nbsp;:
+Dans l'exemple suivant, on trouve le dernier élément du tableau qui est un nombre premier (ou on retourne {{JSxRef("undefined")}} si le tableau ne contient pas de nombre premier)&nbsp;:
 
 ```js
 function estPremier(n) {
@@ -128,7 +128,7 @@ console.log([4, 5, 7, 8, 9, 11, 12].findLast(estPremier)); // 11
 ```
 
 > [!NOTE]
-> L'implémentation de `estPremier()` est uniquement à des fins de démonstration. Pour une application réelle, il est préférable d'utiliser un algorithme fortement mémoïsé comme le [crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne) afin d'éviter les calculs répétés.
+> L'implémentation de `estPremier()` est uniquement à des fins de démonstration. Pour une application réelle, il est préférable d'utiliser un algorithme fortement {{Glossary("Memoization", "mémoïsé")}} comme le [crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne) afin d'éviter les calculs répétés.
 
 ### Trouver la tâche la plus récemment terminée
 
@@ -228,7 +228,7 @@ const semblableTableau = {
   0: 2,
   1: 7.3,
   2: 4,
-  3: 3, // ignoré par findLast() car length vaut 3
+  3: 3, // ignoré par findLast(), car length vaut 3
 };
 console.log(
   Array.prototype.findLast.call(semblableTableau, (x) => Number.isInteger(x)),

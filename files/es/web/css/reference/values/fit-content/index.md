@@ -38,7 +38,13 @@ Función que acepta un `<length>` o un `<percentage>` como un argumento.
 
 ### Formal syntax
 
-{{csssyntax}}
+```css
+/* Used in sizing properties */
+width: fit-content;
+height: fit-content;
+inline-size: fit-content;
+block-size: fit-content;
+```
 
 ## Ejemplo
 

@@ -3,12 +3,12 @@ title: "Window : évènement languagechange"
 short-title: languagechange
 slug: Web/API/Window/languagechange_event
 l10n:
-  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-L'évènement **`languagechange`** de l'interface {{DOMxRef("Window")}} est déclenché sur l'objet d'étendue globale lorsque la langue préférée de l'utilisateur change.
+L'évènement **`languagechange`** de l'interface {{DOMxRef("Window")}} est déclenché sur l'objet d'étendue globale lorsque la langue préférée de l'utilisateur·ice change.
 
 ## Syntax
 
@@ -34,7 +34,7 @@ En plus de l'interface `Window`, la propriété du gestionnaire d'évènements `
 
 ## Exemples
 
-Vous pouvez utiliser l'événement `languagechange` dans une méthode {{DOMxRef("EventTarget/addEventListener", "addEventListener")}}&nbsp;:
+Vous pouvez utiliser l'évènement `languagechange` dans une méthode {{DOMxRef("EventTarget/addEventListener", "addEventListener")}}&nbsp;:
 
 ```js
 window.addEventListener("languagechange", function () {

@@ -3,7 +3,7 @@ title: En-tête Prefer
 short-title: Prefer
 slug: Web/HTTP/Reference/Headers/Prefer
 l10n:
-  sourceCommit: c8bc787246fbec6fed108e4fb9e25df1d70a29ce
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 L'en-tête HTTP **`Prefer`** permet aux clients d'indiquer des préférences pour des comportements spécifiques du serveur lors du traitement d'une requête.
@@ -12,7 +12,7 @@ L'en-tête HTTP **`Prefer`** permet aux clients d'indiquer des préférences pou
 > Les navigateurs ne gèrent pas les en-têtes `Prefer` et {{HTTPHeader("Preference-Applied")}}&nbsp;: ils sont utilisés dans des clients personnalisés, spécifiques à l'implémentation.
 > Assurez-vous que le client et le serveur prennent en charge cet en-tête avant de l'utiliser en production.
 >
-> Les serveurs doivent ignorer silencieusement les préférences qu'ils ne prennent pas en charge, comme si l'en-tête n'était pas présent.
+> Les serveurs doivent ignorer silencieusement les préférences qu'ils ne prennent pas en charge, comme si l'en-tête n'est pas présent.
 
 <table class="properties">
   <tbody>

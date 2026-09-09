@@ -69,7 +69,7 @@ l10n:
 >
 > _請記得刪除這整段說明文字後再發布。_
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 請在頁面內容開頭添加一個簡介段落——首先命名該事件，說明它屬於哪個介面，並描述它的功能。這部分應該儘量用一到兩個簡短的句子來表達。你可以從對應 API 參考頁面中該屬性的摘要中擷取大部分內容。
 

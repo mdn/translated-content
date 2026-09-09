@@ -3,7 +3,7 @@ title: Fonction CSS `atan()`
 short-title: atan()
 slug: Web/CSS/Reference/Values/atan
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: daa035392f8466e6d75f290d9ffa4317adca4070
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`atan()`** est une fonction trigonométrique qui retourne l'arc tangente d'un nombre compris entre `-∞` et `+∞`. La fonction contient un seul calcul qui retourne un angle ({{CSSxRef("&lt;angle&gt;")}}) compris entre `-90deg` et `90deg`.
@@ -29,7 +29,7 @@ La fonction `atan(number)` n'accepte qu'une seule valeur comme paramètre.
 
 ### Valeur de retour
 
-L'arc tangente d'un `number` retournera toujours un angle ({{CSSxRef("&lt;angle&gt;")}}) compris entre `-90deg` et `90deg`.
+L'arc tangente d'un `number` retourne toujours un angle ({{CSSxRef("&lt;angle&gt;")}}) compris entre `-90deg` et `90deg`.
 
 - Si `number` est `0⁻`, le résultat est `0⁻`.
 - Si `number` est `+∞`, le résultat est `90deg`.

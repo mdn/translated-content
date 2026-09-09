@@ -2,7 +2,7 @@
 title: Compression dans HTTP
 slug: Web/HTTP/Guides/Compression
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 La **compression** est une méthode importante pour accroître les performances d'un site web. Pour certains documents, une réduction de la taille peut atteindre 70% ce qui permet de diminuer les besoins en bande passante. Au fil des ans, les algorithmes ont gagné en efficacité, et de nouveaux sont désormais pris en charge par les clients et les serveurs.
@@ -49,7 +49,7 @@ Apache prend en charge la compression et utilise [mod_deflate <sup>(angl.)</sup>
 
 Les formats de compression modernes tels que {{Glossary("Brotli compression", "compression Brotli")}} et {{Glossary("Zstandard compression", "compression Zstandard")}} peuvent utiliser des dictionnaires de données fréquemment utilisées pour augmenter encore la compression par rapport à la simple référence à celles présentes dans le fichier compressé. Typiquement, pour les réponses HTTP, cela utilise le dictionnaire statique prédéfini inclus dans ce format (par exemple [le dictionnaire statique Brotli est disponible dans le code source <sup>(angl.)</sup>](https://github.com/google/brotli/blob/master/csharp/org/brotli/dec/Dictionary.cs)).
 
-[Transport du dictionnaire de compression](/fr/docs/Web/HTTP/Guides/Compression_dictionary_transport) permet à un·e développeur·euse de définir une ressource qui peut être utilisée comme dictionnaire pour les futures requêtes. Il peut s'agir d'un fichier de dictionnaire spécifique ou d'une ressource existante (par exemple, utiliser `app.v1.js` comme dictionnaire lors du téléchargement de `app.v2.js`). Cela améliore généralement la compression et donc le temps de chargement. Dans l'exemple `app.vX.js`, la majeure partie du téléchargement ne consisterait qu'en le delta entre les deux versions, et les octets communs pourraient être référencés à partir du fichier `app.v1.js` déjà téléchargé.
+[Transport du dictionnaire de compression](/fr/docs/Web/HTTP/Guides/Compression_dictionary_transport) permet à un·e développeur·euse de définir une ressource qui peut être utilisée comme dictionnaire pour les futures requêtes. Il peut s'agir d'un fichier de dictionnaire spécifique ou d'une ressource existante (par exemple, utiliser `app.v1.js` comme dictionnaire lors du téléchargement de `app.v2.js`). Cela améliore généralement la compression et donc le temps de chargement. Dans l'exemple `app.vX.js`, la majeure partie du téléchargement ne consiste qu'en le delta entre les deux versions, et les octets communs peuvent être référencés à partir du fichier `app.v1.js` déjà téléchargé.
 
 ## Compression saut par saut
 
@@ -61,7 +61,7 @@ Pour ce faire, HTTP utilise un mécanisme similaire à la négociation de conten
 
 ![Diagramme de séquence détaillant les échanges d'en-têtes en compression saut par saut](httpcomp2.svg)
 
-En pratique, la compression saut par saut est transparente pour le serveur et le client, et elle est rarement utilisée. Les en-têtes {{HTTPHeader("TE")}} et {{HTTPHeader("Transfer-Encoding")}} sont principalement utilisés pour envoyer une réponse par morceaux, ce qui permet de commencer à transmettre une ressource sans connaître sa longueur.
+En pratique, la compression saut par saut est transparente pour le serveur et le client, et elle est rarement utilisée. Les en-têtes {{HTTPHeader("TE")}} et {{HTTPHeader("Transfer-Encoding")}} sont principalement utilisés pour envoyer une réponse par morceaux, ce qui vous permet de commencer à transmettre une ressource sans connaître sa longueur.
 
 Il est important de noter que l'utilisation de {{HTTPHeader("Transfer-Encoding")}} et de la compression au niveau des nœuds est si rare que la plupart des serveurs, comme Apache, Nginx ou IIS, n'ont pas de moyen simple de la configurer. Une telle configuration se fait généralement au niveau du proxy.
 

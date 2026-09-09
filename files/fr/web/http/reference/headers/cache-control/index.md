@@ -3,7 +3,7 @@ title: En-tête Cache-Control
 short-title: Cache-Control
 slug: Web/HTTP/Reference/Headers/Cache-Control
 l10n:
-  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
+  sourceCommit: 50da788b972b99730b4aeb8fec8fde3bde10975d
 ---
 
 {{Glossary("request header", "L'en-tête de requête")}} et {{Glossary("response header", "de réponse")}} HTTP **`Cache-Control`** contient des _directives_ (c'est-à-dire des instructions), dans les requêtes et dans les réponses, pour contrôler [la mise en cache](/fr/docs/Web/HTTP/Guides/Caching) dans les navigateurs et caches partagés (par exemple les mandataires (<i lang="en">proxies</i> en anglais), CDN).
@@ -46,24 +46,24 @@ Les directives pour la mise en cache suivent les règles suivantes&nbsp;:
 
 Le tableau qui suit indique les directives standard pour `Cache-Control`&nbsp;:
 
-| Requête          | Réponse                  |
-| ---------------- | ------------------------ |
-| `max-age`        | `max-age`                |
-| `max-stale`      | -                        |
-| `min-fresh`      | -                        |
-| -                | `s-maxage`               |
-| `no-cache`       | `no-cache`               |
-| `no-store`       | `no-store`               |
-| `no-transform`   | `no-transform`           |
-| `only-if-cached` | -                        |
-| -                | `must-revalidate`        |
-| -                | `proxy-revalidate`       |
-| -                | `must-understand`        |
-| -                | `private`                |
-| -                | `public`                 |
-| -                | `immutable`              |
-| -                | `stale-while-revalidate` |
-| `stale-if-error` | `stale-if-error`         |
+| Requête                             | Réponse                                             |
+| ----------------------------------- | --------------------------------------------------- |
+| [`max-age`](#max-age)               | [`max-age`](#max-age)                               |
+| [`max-stale`](#max-stale)           | -                                                   |
+| [`min-fresh`](#min-fresh)           | -                                                   |
+| -                                   | [`s-maxage`](#s-maxage)                             |
+| [`no-cache`](#no-cache)             | [`no-cache`](#no-cache)                             |
+| [`no-store`](#no-store)             | [`no-store`](#no-store)                             |
+| [`no-transform`](#no-transform)     | [`no-transform`](#no-transform)                     |
+| [`only-if-cached`](#only-if-cached) | -                                                   |
+| -                                   | [`must-revalidate`](#must-revalidate)               |
+| -                                   | [`proxy-revalidate`](#proxy-revalidate)             |
+| -                                   | [`must-understand`](#must-understand)               |
+| -                                   | [`private`](#private)                               |
+| -                                   | [`public`](#public)                                 |
+| -                                   | [`immutable`](#immutable)                           |
+| -                                   | [`stale-while-revalidate`](#stale-while-revalidate) |
+| [`stale-if-error`](#stale-if-error) | [`stale-if-error`](#stale-if-error)                 |
 
 Voir [le tableau de compatibilité](#compatibilité_des_navigateurs) pour leur prise en charge respective. Les agents utilisateurs qui ne reconnaissent pas une directive doivent l'ignorer.
 
@@ -137,6 +137,12 @@ Si vous souhaitez que les caches vérifient leur contenu à chaque mise à jour 
 
 Notez que `no-cache` ne signifie pas «&nbsp;ne pas mettre en cache&nbsp;». `no-cache` permet aux caches de stocker une réponse, mais impose une revalidation avant toute réutilisation. Si vous souhaitez effectivement ne pas _stocker_ de données pour ne pas avoir de cache du tout, il faut utiliser la directive `no-store`.
 
+> [!NOTE]
+> La directive `no-cache` ne garantit pas la revalidation pour les navigations dans l'historique — telles que celles effectuées à l'aide du bouton <kbd>Retour</kbd>.
+> Si le cache arrière/avant ({{Glossary("bfcache")}}) est utilisé, le navigateur restaure un instantané de la page sans revalidation.
+> Même lorsque le cache arrière/avant n'est pas utilisé, le navigateur peut quand même servir la réponse mise en cache sans revalidation.
+> Cela est [autorisé par la spécification <sup>(angl.)</sup>](https://httpwg.org/specs/rfc7234.html#history.lists), car les navigations dans l'historique sont généralement considérées comme la restauration d'un instantané d'une session historique et non comme une nouvelle requête pour une page précédemment visitée.
+
 #### `must-revalidate`
 
 La directive de réponse `must-revalidate` indique que la réponse peut être stockée dans les caches et peut être réutilisée tant qu'elle est [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness). Si la réponse devient [périmée](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness), elle doit être revalidée avec le serveur d'origine avant de pouvoir être réutilisée.
@@ -148,6 +154,12 @@ Cache-Control: max-age=604800, must-revalidate
 ```
 
 HTTP permet aux caches de réutiliser [des réponses périmées](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) lorsqu'ils sont déconnectés du serveur d'origine. `must-revalidate` permet d'éviter ce fonctionnement, soit la réponse enregistrée est revalidée auprès du serveur d'origine, soit une réponse 504 (<i lang="en">Gateway Timeout</i>) est générée.
+
+> [!NOTE]
+> La directive `must-revalidate` ne garantit pas la revalidation pour les navigations dans l'historique — telles que celles effectuées à l'aide du bouton <kbd>Retour</kbd>.
+> Si le cache arrière/avant ({{Glossary("bfcache")}}) est utilisé, le navigateur restaure un instantané de la page sans revalidation.
+> Même lorsque le cache arrière/avant n'est pas utilisé, le navigateur peut quand même servir la réponse mise en cache sans revalidation.
+> Cela est [autorisé par la spécification <sup>(angl.)</sup>](https://httpwg.org/specs/rfc7234.html#history.lists), car les navigations dans l'historique sont généralement considérées comme la restauration d'un instantané d'une session historique et non comme une nouvelle requête pour une page précédemment visitée.
 
 #### `proxy-revalidate`
 
@@ -300,6 +312,12 @@ Cache-Control: max-age=0
 `max-age=0` est une alternative à `no-cache`, car de nombreuses (et anciennes) implémentations de cache (HTTP/1.0) n'implémentent pas `no-cache`. Les navigateurs récents continuent d'utiliser `max-age=0` pour le rechargement à des fins de rétro-compatibilité, utilisant `no-cache` pour un rechargement forcé.
 
 Si la valeur de `max-age` est négative (par exemple `-1`) ou n'est pas un entier (par exemple, `3599.99`), le comportement pour la mise en cache n'est pas défini. Toutefois, la section sur [le calcul pour la durée de la fraîcheur <sup>(angl.)</sup>](https://httpwg.org/specs/rfc7234.html#calculating.freshness.lifetime) de la spécification HTTP indique&nbsp;:
+
+> [!NOTE]
+> La directive `max-age` ne garantit pas la revalidation pour les navigations dans l'historique — telles que celles effectuées à l'aide du bouton <kbd>Retour</kbd>.
+> Si le cache arrière/avant ({{Glossary("bfcache")}}) est utilisé, le navigateur restaure un instantané de la page sans revalidation.
+> Même lorsque le cache arrière/avant n'est pas utilisé, le navigateur peut quand même servir la réponse mise en cache sans revalidation.
+> Cela est [autorisé par la spécification <sup>(angl.)</sup>](https://httpwg.org/specs/rfc7234.html#history.lists), car les navigations dans l'historique sont généralement considérées comme la restauration d'un instantané d'une session historique et non comme une nouvelle requête pour une page précédemment visitée.
 
 #### `max-stale`
 

@@ -2,26 +2,26 @@
 title: Fonctionnalités dépréciées et obsolètes
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Cette page liste les fonctionnalités de JavaScript qui sont dépréciées (c'est-à-dire encore disponibles mais prévues pour être supprimées) et obsolètes (c'est-à-dire plus utilisables).
 
 ## Fonctionnalités dépréciées
 
-Ces fonctionnalités dépréciées peuvent encore être utilisées, mais doivent être utilisées avec prudence car elles ne sont pas obligatoirement implémentées par tous les moteurs JavaScript. Vous devriez travailler à les supprimer de votre code.
+Ces fonctionnalités dépréciées peuvent encore être utilisées, mais doivent être utilisées avec prudence, car elles ne sont pas obligatoirement implémentées par tous les moteurs JavaScript. Vous devez travailler à les supprimer de votre code.
 
-Certaines de ces fonctionnalités dépréciées sont listées dans la section [Annexe B <sup>(angl.)</sup>](https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html) de la spécification ECMAScript. Cette section est décrite comme normative optionnelle — c'est-à-dire que les navigateurs web doivent implémenter ces fonctionnalités, tandis que les hôtes non web peuvent ne pas le faire. Ces fonctionnalités sont probablement stables car les supprimer provoquerait des problèmes de compatibilité ascendante et casserait les sites web existants. (JavaScript a pour objectif de conception de «&nbsp;ne pas casser le web&nbsp;».) Cependant, elles ne sont pas portables sur toutes les plateformes et peuvent ne pas être prises en charge par tous les outils d'analyse, il est donc conseillé de ne pas les utiliser, comme l'introduction de l'Annexe B l'indique&nbsp;:
+Certaines de ces fonctionnalités dépréciées sont listées dans la section [Annexe B <sup>(angl.)</sup>](https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html) de la spécification ECMAScript. Cette section est décrite comme normative optionnelle — c'est-à-dire que les navigateurs web doivent implémenter ces fonctionnalités, tandis que les hôtes non web peuvent ne pas le faire. Ces fonctionnalités sont probablement stables, car les supprimer provoque des problèmes de compatibilité ascendante et casse les sites web existants. (JavaScript a pour objectif de conception de «&nbsp;ne pas casser le web&nbsp;».) Cependant, elles ne sont pas portables sur toutes les plateformes et peuvent ne pas être prises en charge par tous les outils d'analyse, il est donc conseillé de ne pas les utiliser, comme l'introduction de l'Annexe B l'indique&nbsp;:
 
-> … Toutes les fonctionnalités et tous les comportements du langage décrits dans la présente annexe présentent une ou plusieurs caractéristiques indésirables et, en l'absence d'usage historique, seraient supprimés de la présente spécification. …
+> … Toutes les fonctionnalités et tous les comportements du langage décrits dans la présente annexe présentent une ou plusieurs caractéristiques indésirables et, en l'absence d'usage historique, sont supprimés de la présente spécification. …
 >
-> … Les programmeur·euse·s ne devraient pas utiliser ou supposer l'existence de ces fonctionnalités et comportements lors de l'écriture de nouveau code ECMAScript. …
+> … Les programmeur·euse·s ne doivent pas utiliser ou supposer l'existence de ces fonctionnalités et comportements lors de l'écriture de nouveau code ECMAScript. …
 
-Certaines autres, bien que dans le corps principal de la spécification, sont également marquées comme normatives optionnelles et ne devraient pas être utilisées de manière dépendante.
+Certaines autres, bien que dans le corps principal de la spécification, sont également marquées comme normatives optionnelles et ne doivent pas être utilisées de manière dépendante.
 
 ### Commentaires HTML
 
-Le code source JavaScript, s'il est analysé comme des scripts, permet des commentaires de type HTML, comme si le script faisait partie d'une balise `<script>`.
+Le code source JavaScript, s'il est analysé comme des scripts, permet des commentaires de type HTML, comme si le script fait partie d'une balise `<script>`.
 
 Le code suivant est un JavaScript valide lorsqu'il est exécuté dans un navigateur web (ou Node.js, qui utilise le moteur V8 de Chrome)&nbsp;:
 
@@ -63,8 +63,8 @@ Les syntaxes regex suivantes sont dépréciées et ne sont disponibles qu'en [mo
 - [Les références arrière](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) qui ne se réfèrent pas à un groupe capturant existant deviennent des [échappements octaux hérités](#séquences_déchappements).
 - Dans les [classes de caractères](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_class), les plages de caractères où une limite est une classe de caractères font que le `-` devient un caractère littéral.
 - Une séquence d'échappement non reconnue devient un [«&nbsp;échappement d'identité&nbsp;»](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape).
-- Les séquences d'échappement dans les [classes de caractères](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) de la forme `\cX` où `X` est un chiffre ou `_` sont décodées de la même manière que celles avec des lettres {{Glossary("ASCII")}}&nbsp;: `\c0` est identique à `\cP` lorsqu'on prend le modulo 32. De plus, si la forme `\cX` est rencontrée n'importe où où `X` n'est pas l'un des caractères reconnus, alors le backslash est traité comme un caractère littéral.
-- La séquence `\k` dans une regex qui n'a pas de [groupes capturants nommés](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) est traitée comme un échappement d'identité.
+- Les séquences d'échappement dans les [classes de caractères](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) de la forme `\cX` où `X` est un chiffre ou `_` sont décodées de la même manière que celles avec des lettres {{Glossary("ASCII")}}&nbsp;: `\c0` est identique à `\cP` lorsqu'on prend le modulo 32. De plus, si la forme `\cX` est rencontrée n'importe où où `X` n'est pas l'un des caractères reconnus, alors la barre oblique inversée est traité comme un caractère littéral.
+- La séquence `\k` dans une regex qui n'a pas de [groupes capturant nommés](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) est traitée comme un échappement d'identité.
 - Les caractères de syntaxe `]`, `{`, et `}` peuvent apparaître [littéralement](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) sans échappement s'ils ne peuvent pas être interprétés comme la fin d'une classe de caractères ou des délimiteurs de quantificateur.
 
 ### Propriétés de `Function`
@@ -80,7 +80,7 @@ Les syntaxes regex suivantes sont dépréciées et ne sont disponibles qu'en [mo
 ### Propriétés de `String`
 
 - Les méthodes d'encapsulation HTML comme {{JSxRef("String.prototype.fontsize")}} et {{JSxRef("String.prototype.big")}} sont dépréciées.
-- {{JSxRef("String.prototype.substr")}} ne sera probablement pas supprimée de sitôt, mais elle est définie dans l'annexe B et est donc optionnelle sur le plan normatif.
+- {{JSxRef("String.prototype.substr")}} n'est probablement pas supprimée de sitôt, mais elle est définie dans l'annexe B et est donc optionnelle sur le plan normatif.
 - `String.prototype.trimLeft` et `String.prototype.trimRight` doivent être remplacés par {{JSxRef("String.prototype.trimStart")}} et {{JSxRef("String.prototype.trimEnd")}}.
 
 ### Méthodes de `Date`
@@ -97,9 +97,9 @@ Les syntaxes regex suivantes sont dépréciées et ne sont disponibles qu'en [mo
 
 L'instruction {{JSxRef("Statements/with", "with")}} est dépréciée et indisponible en mode strict.
 
-Les initialisateurs dans les déclarations `var` des en-têtes de boucles {{JSxRef("Statements/for...in", "for…in")}} sont dépréciés et produisent des [erreurs de syntaxe](/fr/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer) en mode strict. L'expression d'initialisation est évaluée et affectée à la variable, mais la valeur serait immédiatement réaffectée lors de la première itération de la boucle.
+Les initialisateurs dans les déclarations `var` des en-têtes de boucles {{JSxRef("Statements/for...in", "for…in")}} sont dépréciés et produisent des [erreurs de syntaxe](/fr/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer) en mode strict. L'expression d'initialisation est évaluée et affectée à la variable, mais la valeur est immédiatement réaffectée lors de la première itération de la boucle.
 
-Normalement, le bloc `catch` d'une instruction {{JSxRef("Statements/try...catch", "try…catch")}} ne peut contenir aucune déclaration de variable portant le même nom que les variables liées dans le `catch()`. Une grammaire étendue permet au bloc `catch` de contenir une variable déclarée avec {{JSxRef("Statements/var", "var")}} portant le même nom que l'identifiant lié au `catch`, mais uniquement si la liaison `catch` est un identifiant simple, et non un [modèle de déstructuration](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring). Cependant, l'initialisation et l'affectation de cette variable n'agiraient que sur l'identifiant lié au `catch`, au lieu de la variable de portée supérieure, et le comportement pourrait être déroutant.
+Normalement, le bloc `catch` d'une instruction {{JSxRef("Statements/try...catch", "try…catch")}} ne peut contenir aucune déclaration de variable portant le même nom que les variables liées dans le `catch()`. Une grammaire étendue permet au bloc `catch` de contenir une variable déclarée avec {{JSxRef("Statements/var", "var")}} portant le même nom que l'identifiant lié au `catch`, mais uniquement si la liaison `catch` est un identifiant simple, et non un [modèle de déstructuration](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring). Cependant, l'initialisation et l'affectation de cette variable n'agissent que sur l'identifiant lié au `catch`, au lieu de la variable de portée supérieure, et le comportement peut être déroutant.
 
 ```js
 var a = 2;
@@ -138,7 +138,7 @@ Les éléments suivants sont désormais des propriétés des instances de `RegEx
 | {{JSxRef("RegExp/multiline", "multiline")}} (également via `RegExp.$*`) | Indique si la recherche doit s'effectuer sur plusieurs lignes.                                                                                   |
 | {{JSxRef("RegExp/source", "source")}}                                   | Le texte du motif.                                                                                                                               |
 
-La méthode `valueOf()` n'est plus spécialisée pour `RegExp`. Elle utilise {{JSxRef("Object.prototype.valueOf()")}}, qui renvoie elle-même.
+La méthode `valueOf()` n'est plus spécialisée pour `RegExp`. Elle utilise {{JSxRef("Object.prototype.valueOf()")}}, qui retourne elle-même.
 
 ### Propriétés de `Function`
 
@@ -148,7 +148,7 @@ La méthode `valueOf()` n'est plus spécialisée pour `RegExp`. Elle utilise {{J
 
 | Propriété                    | Description                                                                                                                  | Alternative                                                                                                                                                                           |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `__count__`                  | Retourne le nombre de propriétés énumérables directement sur un objet défini par l'utilisateur·ice.                          | [`Object.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)                                                                                                       |
+| `__count__`                  | Retourne le nombre de propriétés énumérables directement disponible sur un objet défini par l'utilisateur·ice.               | [`Object.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)                                                                                                       |
 | `__parent__`                 | Pointe vers le contexte d'un objet.                                                                                          | Pas de remplacement direct                                                                                                                                                            |
 | `__iterator__`               | Utilisé avec les [itérateurs hérités](#générateurs_et_itérateurs_hérités).                                                   | [`Symbol.iterator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) et les nouveaux [protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) |
 | `__noSuchMethod__`           | Une méthode appelée lorsqu'une propriété inexistante est appelée en tant que méthode.                                        | {{JSxRef("Proxy")}}                                                                                                                                                                   |
@@ -234,6 +234,6 @@ Firefox, avant la version 26, a implémenté un autre protocole d'itérateur sim
 
 Cette fonctionnalité, ainsi que le constructeur global `StopIteration`, ont été supprimés dans Firefox 58+. Pour les utilisations futures, envisagez d'utiliser les boucles {{JSxRef("Statements/for...of", "for…of")}} et le [protocole d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols).
 
-### Variables dièze
+### Variables dièse
 
-Les variables dièze sont obsolètes. Pour créer des structures circulaires, utilisez plutôt des variables temporaires.
+Les variables dièse sont obsolètes. Pour créer des structures circulaires, utilisez plutôt des variables temporaires.

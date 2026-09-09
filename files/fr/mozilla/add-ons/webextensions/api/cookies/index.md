@@ -3,8 +3,6 @@ title: cookies
 slug: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
 
-{{AddonSidebar}}
-
 Permet aux extensions d'obtenir et de définir des cookies, et d'être averti quand ils changent.
 
 Pour utiliser cette API, vous devez inclure l'[API permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "cookies" dans votre fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), ainsi que les [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour les sites dont vous devez accéder aux cookies. Voir les [permissions cookies](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies#permissions).

@@ -3,8 +3,6 @@ title: menus.onHidden
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onHidden
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsque le navigateur cesse d'afficher un menu: par exemple, parce que l'utilisateur a cliqué à l'extérieur ou sélectionné un élément.
 
 Elle est seulement déclenchée pour les menus qui peuvent être manipulés en utilisant l'API {{WebExtAPIRef("menus")}} elle-même: ceci inclut le menu contextuel, le menu des outils du navigateur et le menu des signets.

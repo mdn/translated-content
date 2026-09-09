@@ -3,8 +3,6 @@ title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
 
-{{JSRef}}
-
 **`Reflect`** est un objet natif qui fournit des méthodes pour les opérations qui peuvent être interceptées en JavaScript (via les proxies). Les méthodes de cet objet sont les mêmes que celles des [gestionnaires de proxy](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy). `Reflect` n'est pas une fonction (y compris pour construire un objet).
 
 ## Description

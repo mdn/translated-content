@@ -3,8 +3,6 @@ title: Les APIs JavaScript
 slug: Mozilla/Add-ons/WebExtensions/API
 ---
 
-{{AddonSidebar}}
-
 Les APIs WebExtensions en JavaScript peuvent être utilisées au sein des [scripts d'arrière plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) de l'extension et dans tout autre document livré avec celle-ci. Ceci inclut les pop-ups relatives à une [action navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) ou [action de page](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions), [barres latérales](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), [pages d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages), ou [pages de nouvel onglet](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). Certaines de ces APIs peuvent également être interrogées par des [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts) de l'extension (voir la [liste dans le guide des scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis)).
 
 Pour utiliser les APIs plus puissantes, vous devez en [demander la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) dans le manifest.json de votre extension.

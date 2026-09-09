@@ -3,7 +3,7 @@ title: Propriété CSS `flex-shrink`
 short-title: flex-shrink
 slug: Web/CSS/Reference/Properties/flex-shrink
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: efbef0da1dbe29be125eb7db0b831a4e4bd9220d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`flex-shrink`** définit le facteur de rétrécissement d'un élément flexible. Si la taille de tous les éléments flexibles est supérieure à celle du conteneur flexible, [les éléments flexibles peuvent rétrécir](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#la_propriété_flex-shrink) pour s'adapter selon leur valeur `flex-shrink`. [L'espace négatif libre](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#espace_libre_positif_et_négatif) de chaque ligne flexible se répartit entre les éléments flexibles de la ligne ayant une valeur `flex-shrink` supérieure à `0`.

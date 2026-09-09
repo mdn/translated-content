@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Web_fonts
 original_slug: Learn/CSS/Styling_text/Web_fonts
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}
 
 Dans le premier article du module, nous avons exploré les fonctions CSS de base disponibles pour composer du texte. Dans cet article, nous allons plus loin et explorons les polices web en détail : comment télécharger des polices personnalisées en même temps que la page Web, pour donner un style plus varié et personnalisé au texte.
 

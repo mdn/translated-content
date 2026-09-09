@@ -2,7 +2,7 @@
 title: API Service Worker
 slug: Web/API/Service_Worker_API
 l10n:
-  sourceCommit: 73ca80b86a348f88f51fdb8f9441c114b76e94f1
+  sourceCommit: 972c6cc542e271e4c00def9465d7a0cc81011378
 ---
 
 {{DefaultAPISidebar("Service Workers API")}}{{AvailableInWorkers}}
@@ -16,11 +16,11 @@ Les <i lang="en">service workers</i> agissent principalement comme des serveurs 
 
 Un <i lang="en">service worker</i> est un [<i lang="en">worker</i>](/fr/docs/Web/API/Worker) piloté par les évènements, enregistré par rapport à une origine et un chemin. Il prend la forme d'un fichier JavaScript qui peut contrôler la page web/le site auquel il est associé, interceptant et modifiant les requêtes de navigation et de ressources, et mettant en cache les ressources de manière très granulaire pour vous donner un contrôle complet sur le comportement de votre application dans certaines situations (la plus évidente étant lorsque le réseau n'est pas disponible).
 
-Un <i lang="en">service worker</i> s'exécute dans le contexte d'un <i lang="en">worker</i> et n'a donc pas accès au DOM. Il s'exécute dans un <i lang="en">thread</i> différent du <i lang="en">thread</i> JavaScript principal et n'est donc pas bloquant. Il est conçu pour fonctionner de façon complètement asynchrone. Aussi, les API synchrones comme [XHR](/fr/docs/Web/API/XMLHttpRequest) et [<i lang="en">Web Storage</i>](/fr/docs/Web/API/Web_Storage_API) ne peuvent pas être utilisées dans le code d'un <i lang="en">service worker</i>.
+Un <i lang="en">service worker</i> s'exécute dans le contexte d'un <i lang="en">worker</i> et n'a donc pas accès au DOM. Il s'exécute dans un processus différent du processus JavaScript principal et n'est donc pas bloquant. Il est conçu pour fonctionner de façon complètement asynchrone. Aussi, les API synchrones comme [XHR](/fr/docs/Web/API/XMLHttpRequest) et [<i lang="en">Web Storage</i>](/fr/docs/Web/API/Web_Storage_API) ne peuvent pas être utilisées dans le code d'un <i lang="en">service worker</i>.
 
 Les <i lang="en">service workers</i> ne peuvent pas importer des modules JavaScript de manière dynamique, et [`import()`](/fr/docs/Web/JavaScript/Reference/Operators/import) génère une erreur si elle est appelée dans le contexte global d'un <i lang="en">service worker</i>. Les importations statiques utilisant l'instruction [`import`](/fr/docs/Web/JavaScript/Reference/Statements/import) sont autorisées.
 
-Les <i lang="en">service workers</i> ne sont disponibles que dans des [contextes sécurisés](/fr/docs/Web/Security/Defenses/Secure_Contexts)&nbsp;: cela signifie que leur document est servi avec HTTPS, bien que les navigateurs considèrent également `http://localhost` comme un contexte sécurisé, pour faciliter le développement local. Les connexions HTTP sont susceptibles d'être victimes d'injection de code malveillant par des attaques {{Glossary("MitM", "du monstre du milieu")}}, et de telles attaques peuvent être aggravées si elles ont accès à ces API puissantes.
+Les <i lang="en">service workers</i> ne sont disponibles que dans des [contextes sécurisés](/fr/docs/Web/Security/Defenses/Secure_Contexts)&nbsp;: cela signifie que leur document est servi avec HTTPS, bien que les navigateurs considèrent également `http://localhost` comme un contexte sécurisé, pour faciliter le développement local. Les connexions HTTP sont susceptibles d'être victimes d'injection de code malveillant par des attaques du [monstre du milieu (MITM)](/fr/docs/Web/Security/Attacks/MITM), et de telles attaques peuvent être aggravées si elles ont accès à ces API puissantes.
 
 > [!NOTE]
 > Sous Firefox, pour effectuer des tests, vous pouvez exécuter les <i lang="en">service workers</i> sur HTTP (de manière non sécurisée)&nbsp;; il suffit de cocher l'option **Activer les Service Workers sur HTTP (lorsque la boîte à outils est ouverte)** dans le menu des options/roue dentée des outils de développement de Firefox.
@@ -138,6 +138,7 @@ Les <i lang="en">service workers</i> sont également conçus pour répondre à c
 - [Utiliser les <i lang="en">Service Workers</i>](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Cycle de vie des <i lang="en">Service Workers</i> <sup>(angl.)</sup>](https://web.dev/articles/service-worker-lifecycle)
 - [Exemple de code de base pour les <i lang="en">Service Workers</i> <sup>(angl.)</sup>](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
+- [Accès au réseau local](/fr/docs/Web/Security/Defenses/Local_network_access)
 - Les Web APIs qui sont liées à l'API <i lang="en">Service Worker</i>&nbsp;:
   - {{DOMxRef("Background Fetch API", "L'API de récupération en arrière-plan", "", "nocode")}}
   - {{DOMxRef("Background Synchronization API", "L'API de synchronisation en arrière-plan", "", "nocode")}}

@@ -3,8 +3,6 @@ title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 ---
 
-{{JSRef}}
-
 La méthode **`delete()`** permet de retirer un élément donné d'un objet `Set`.
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.delete()")}}

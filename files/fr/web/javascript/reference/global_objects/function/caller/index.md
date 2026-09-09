@@ -3,10 +3,10 @@ title: "Function : propriété caller"
 short-title: caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 l10n:
-  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 > [!NOTE]
 > En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), accéder à `caller` d'une fonction déclenche une erreur — l'API est supprimée sans remplacement. Cela vise à empêcher le code de «&nbsp;remonter la pile&nbsp;», ce qui pose des risques de sécurité et limite fortement les possibilités d'optimisations comme l'intégration et l'optimisation des appels en queue. Pour plus d'explications, vous pouvez lire [la justification de la dépréciation de `arguments.callee`](/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee#description).
@@ -49,7 +49,7 @@ Notez que le seul comportement défini par la spécification ECMAScript est que 
 
 Cette propriété remplace la propriété obsolète `arguments.caller` de l'objet {{JSxRef("Functions/arguments", "arguments")}}.
 
-La propriété spéciale `__caller__`, qui renvoyait l'objet d'activation de l'appelant permettant ainsi de reconstituer la pile, a été supprimée pour des raisons de sécurité.
+La propriété spéciale `__caller__`, qui retourne l'objet d'activation de l'appelant vous permettant ainsi de reconstituer la pile, a été supprimée pour des raisons de sécurité.
 
 ## Exemples
 

@@ -3,7 +3,7 @@ title: Fonction CSS `lab()`
 short-title: lab()
 slug: Web/CSS/Reference/Values/color_value/lab
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`lab()`** exprime une couleur donnée dans {{Glossary("color space", "l'espace de couleur")}} CIE L\*a\*b\*.
@@ -78,9 +78,9 @@ Lors de l'utilisation de la syntaxe de couleur relative à l'intérieur d'une fo
 - Les canaux `a` et `b` sont chacun résolus en une valeur `<number>` entre `-125` et `125`, inclus.
 - Le canal `alpha` est résolu en une valeur `<number>` entre `0` et `1`, inclus.
 
-Lors de la définition d'une couleur relative, les différents canaux de la couleur de sortie peuvent être exprimés de plusieurs façons différentes. Ci-dessous, nous étudierons quelques exemples pour illustrer cela.
+Lors de la définition d'une couleur relative, les différents canaux de la couleur de sortie peuvent être exprimés de plusieurs façons différentes. Ci-dessous, nous étudions quelques exemples pour illustrer cela.
 
-Dans les deux premiers exemples suivants, nous utilisons la syntaxe de couleur relative. Cependant, le premier produit la même couleur que la couleur d'origine et le second produit une couleur qui n'est pas du tout basée sur la couleur d'origine. Ils ne créent pas vraiment de couleurs relatives&nbsp;! Vous seriez peu susceptible d'utiliser ces exemples dans une base de code réelle, et vous utiliseriez probablement simplement une valeur de couleur absolue à la place. Nous avons inclus ces exemples comme point de départ pour apprendre la syntaxe `lab()` relative.
+Dans les deux premiers exemples suivants, nous utilisons la syntaxe de couleur relative. Cependant, le premier produit la même couleur que la couleur d'origine et le second produit une couleur qui n'est pas du tout basée sur la couleur d'origine. Ils ne créent pas vraiment de couleurs relatives&nbsp;! Vous êtes peu susceptible d'utiliser ces exemples dans une base de code réelle, et vous utilisez probablement simplement une valeur de couleur absolue à la place. Nous avons inclus ces exemples comme point de départ pour apprendre la syntaxe `lab()` relative.
 
 Commençons par une couleur d'origine de `hsl(0 100% 50%)` (équivalent à `red`). La fonction suivante produit la même couleur que la couleur d'origine — elle utilise les valeurs de canal `l`, `a`, et `b` de la couleur d'origine (`54.29`, `80.8198`, et `69.8997`) comme valeurs de canal de sortie&nbsp;:
 
@@ -134,7 +134,7 @@ lab(from hsl(0 100% 50%) calc(l + 20) calc(a - 20) calc(b - 40) / calc(alpha - 0
 ```
 
 > [!NOTE]
-> Étant donné que les valeurs des canaux de couleur d'origine sont résolues en valeurs `<number>`, vous devez leur ajouter des nombres lorsque vous les utilisez dans des calculs, même dans les cas où un canal accepterait normalement des valeurs `<percentage>`, `<angle>`, ou d'autres types de valeur. Ajouter un `<percentage>` à un `<number>`, par exemple, ne fonctionne pas.
+> Étant donné que les valeurs des canaux de couleur d'origine sont résolues en valeurs `<number>`, vous devez leur ajouter des nombres lorsque vous les utilisez dans des calculs, même dans les cas où un canal accepte normalement des valeurs `<percentage>`, `<angle>`, ou d'autres types de valeur. Ajouter un `<percentage>` à un `<number>`, par exemple, ne fonctionne pas.
 
 ## Syntaxe formelle
 
@@ -211,7 +211,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Ajustement de la luminosité", "", "200")}}
+{{EmbedLiveSample("Ajustement de la luminosité", "", 200)}}
 
 ### Ajustement des axes de couleur
 
@@ -287,7 +287,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Ajustement des axes de couleur", "", "200")}}
+{{EmbedLiveSample("Ajustement des axes de couleur", "", 200)}}
 
 La colonne de gauche se trouve à l'extrémité jaune (-125) de l'axe `b` et la colonne de droite se trouve à l'extrémité bleue (125). La rangée du haut affiche les couleurs à l'extrémité rouge de l'axe `a` (-125) et la rangée du bas se trouve à l'extrémité verte (125). La colonne et la rangée du milieu sont aux points médians (0) de chaque axe, avec la cellule du milieu qui est grise&nbsp;; elle ne contient ni rouge, ni vert, ni jaune, ni bleu, avec une valeur `0` pour les deux axes.
 
@@ -361,8 +361,7 @@ span {
 
 #### Résultat
 
-{{EmbedLiveSample("Dégradés linéaires le long des axes a et b
-", "", 420)}}
+{{EmbedLiveSample("Dégradés linéaires le long des axes a et b", "", 420)}}
 
 ### Ajustement de l'opacité
 

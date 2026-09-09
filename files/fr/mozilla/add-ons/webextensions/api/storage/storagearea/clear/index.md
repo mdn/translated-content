@@ -3,8 +3,6 @@ title: StorageArea.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/clear
 ---
 
-{{AddonSidebar}}
-
 Supprime tous les éléments de la zone de stockage.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

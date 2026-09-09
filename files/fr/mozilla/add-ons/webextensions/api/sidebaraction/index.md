@@ -3,8 +3,6 @@ title: sidebarAction
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction
 ---
 
-{{AddonSidebar}}
-
 Obtient et définit les propriétés de la barre latérale d'une extension.
 
 Une [barre latérale](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) est un volet qui s'affiche à gauche ou à droite de la fenêtre du navigateur, à côté de la page Web. Le navigateur fournit une interface utilisateur qui permet à l'utilisateur de voir les barres latérales actuellement disponibles et de sélectionner une barre latérale à afficher. En utilisant la clé [`sidebar_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json, une extension peut définir sa propre barre latérale.

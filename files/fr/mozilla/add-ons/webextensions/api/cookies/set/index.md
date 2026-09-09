@@ -3,8 +3,6 @@ title: cookies.set()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/set
 ---
 
-{{AddonSidebar}}
-
 La méthode **`set()`** de l'API {{WebExtAPIRef("cookies")}} définit un cookie contenant des données précises de cookie. Cette méthode équivaut à l'émission d'un en-tête HTTP `Set-Cookie` lors d'une requête à une URL donnée.
 
 L'appel réussit uniquement si vous incluez la [permission de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "cookies" dans votre fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), ainsi que les [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour l'URL indiquée dans son manifest. L'URL donnée a également besoin des permissions nécessaires pour créer un cookie avec les paramètres donnés.

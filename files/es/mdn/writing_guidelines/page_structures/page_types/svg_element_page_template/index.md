@@ -69,7 +69,7 @@ l10n:
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar_
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 Comienza el contenido de la página con un párrafo introductorio — empieza nombrando el elemento y explicando qué hace.
 Lo ideal sería que sea de una o dos oraciones cortas.

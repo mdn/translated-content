@@ -76,7 +76,7 @@ La fonction `matrix3d()` est définie avec 16 valeurs. Les valeurs sont données
 - _a1_ _b1_ _c1_ _d1_ _a2_ _b2_ _c2_ _d2_ _a3_ _b3_ _c3_ _d3_
   - : Nombres ({{CSSxRef("&lt;number&gt;")}}) décrivant la transformation linéaire.
 - _a4_ _b4_ _c4_ _d4_
-  - : Nombres ({{CSSxRef("&lt;number&gt;")}}) décrivant la translation à appliquer.
+  - : Nombres ({{CSSxRef("&lt;number&gt;")}}) décrivant lé déplacement à appliquer.
 
 <table class="standard-table">
   <thead>
@@ -190,7 +190,7 @@ L'exemple suivant montre un cube 3D créé à partir d'éléments DOM et de tran
 
 #### Résultat
 
-{{EmbedLiveSample('Exemple d'écrasement de cube', '100%', '300px')}}
+{{EmbedLiveSample("Exemple d'écrasement de cube", "100%", 300)}}
 
 ### Exemple de déplacement et de mise à l'échelle de matrice
 
@@ -214,7 +214,7 @@ html {
 }
 body {
   height: 100vh;
-  /* Centering content */
+  /* Centre le contenu */
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -229,20 +229,20 @@ body {
   text-align: center;
   font-family: system-ui, sans-serif;
   font-size: 14px;
-  /* Setting up animation for better demonstration */
+  /* Configuration de l'animation pour une meilleure démonstration */
   animation: MotionScale 2s alternate linear infinite;
 }
 
 @keyframes MotionScale {
   0% {
     /*
-      Identity matrix is used as basis here.
-      The matrix below describes the
-      following transformations:
-        Translates every X point by -50px
-        Translates every Y point by -100px
-        Translates every Z point by 0
-        Scales down by 10%
+      La matrice identité sert ici de base.
+      La matrice ci-dessous décrit les
+      transformations suivantes :
+        Déplacement de chaque point X de -50 px
+        Déplacement de chaque point Y de -100 px
+        Déplacement de chaque point Z de 0
+        Réduction d'échelle de 10 %
     */
     /* prettier-ignore */
     transform: matrix3d(
@@ -275,7 +275,7 @@ body {
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple de déplacement et de mise à l'échelle de matrice", '100%', 400)}}
+{{EmbedLiveSample("Exemple de déplacement et de mise à l'échelle de matrice", "100%", 400)}}
 
 ## Spécifications
 

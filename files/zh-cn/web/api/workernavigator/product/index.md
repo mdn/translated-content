@@ -6,7 +6,7 @@ l10n:
   sourceCommit: dcbb1d99185118360cc84b3a0e935e77fe0a03e3
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}{{AvailableInWorkers("worker")}}
+{{APIRef("HTML DOM")}} {{AvailableInWorkers("worker")}}
 
 **`WorkerNavigator.product`** 属性的值在任何浏览器中始终为 `"Gecko"`。此属性仅出于兼容性目的而保留。
 

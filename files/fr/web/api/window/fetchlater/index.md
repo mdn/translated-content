@@ -3,7 +3,7 @@ title: "Window : méthode fetchLater()"
 short-title: fetchLater()
 slug: Web/API/Window/fetchLater
 l10n:
-  sourceCommit: 8c1bc8d99fc8301fbbe874f6dcf8d41a9f4fe5fb
+  sourceCommit: b2c48c8b7c097aeab4bc15a388c913f466f40e25
 ---
 
 {{APIRef("Fetch API")}}{{SeeCompatTable}}
@@ -48,14 +48,14 @@ Les [mêmes exceptions que pour `fetch()`](/fr/docs/Web/API/Window/fetch#excepti
   - : Levée lorsqu'une valeur négative pour `activateAfter` est définie.
 
 - `TypeError` {{DOMxRef("DOMException")}}
-  - : En plus des raisons pour `fetch()`, cette exception sera également levée pour une requête {{DOMxRef("ReadableStream")}} (qui ne peut pas être différée) ou pour l'utilisation d'URL non fiables (comme `http://`).
+  - : En plus des raisons pour `fetch()`, cette exception est également levée pour une requête {{DOMxRef("ReadableStream")}} (qui ne peut pas être différée) ou pour l'utilisation d'URL non fiables (comme `http://`).
 
 ### Valeur de retour
 
 Un objet {{DOMxRef("FetchLaterResult")}} contenant une propriété booléenne `activated` indiquant si la requête a déjà été envoyée.
 
 > [!NOTE]
-> Une fois la requête de récupération envoyée, sa réponse — y compris le corps et les en-têtes — n'est pas disponible et sera ignorée.
+> Une fois la requête de récupération envoyée, sa réponse — y compris le corps et les en-têtes — n'est pas disponible et est ignorée.
 
 ## Exemples
 
@@ -105,7 +105,7 @@ try {
 ### Différer une requête `POST` pendant environ une minute et créer une fonction pour vérifier si elle a été envoyée
 
 ```js
-const result = fetchLater("https://report.example.com, {
+const result = fetchLater("https://report.example.com", {
   method: "POST",
   body: JSON.stringify(myReport),
   activateAfter: 60000 /* 1 minute */,
@@ -149,19 +149,19 @@ function createBeacon(data) {
 
 ### Exemples invalides
 
-Toutes les appels suivants à `fetchLater()` généreraient une exception&nbsp;:
+Toutes les appels suivants à `fetchLater()` génèrent une exception&nbsp;:
 
 ```js
 // Seules les URL potentiellement fiables sont prises en charge
-fetchLater("http://untrusted.example.com);
+fetchLater("http://untrusted.example.com");
 
 // La longueur de la requête différée doit être connue
-fetchLater("https://origin.example.com, { body: someDynamicStream });
+fetchLater("https://origin.example.com", { body: someDynamicStream });
 
 // Le fetch différé ne fonctionne que sur les fenêtres actives
 const detachedWindow = iframe.contentWindow;
 iframe.remove();
-detachedWindow.fetchLater("https://origin.example.com);
+detachedWindow.fetchLater("https://origin.example.com");
 ```
 
 ## Spécifications

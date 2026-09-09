@@ -2,7 +2,7 @@
 title: Utilisable
 slug: Web/Accessibility/Guides/Understanding_WCAG/Operable
 l10n:
-  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
+  sourceCommit: 051d02b402b7f76c2078b12283aa18318c34c38b
 ---
 
 Cet article fournit des conseils pratiques pour rédiger votre contenu web afin qu'il respecte les critères de succès du principe **Utilisable** des Directives pour l'accessibilité du contenu Web (WCAG) 2.0 et 2.1. Le principe Utilisable stipule que les composants d'interface utilisateur et la navigation doivent pouvoir être utilisés.

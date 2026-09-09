@@ -3,8 +3,6 @@ title: storage.StorageArea
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea
 ---
 
-{{AddonSidebar}}
-
 StorageArea est un objet représentant une zone de stockage.
 
 ## Type

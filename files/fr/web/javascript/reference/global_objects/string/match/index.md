@@ -3,8 +3,6 @@ title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 ---
 
-{{JSRef}}
-
 La méthode **`match()`** permet d'obtenir le tableau des correspondances entre la chaîne courante et une expression rationnelle.
 
 {{InteractiveExample("JavaScript Demo: String.match()")}}

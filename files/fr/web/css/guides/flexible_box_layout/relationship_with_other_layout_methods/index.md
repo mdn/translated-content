@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods
 original_slug: Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 ---
 
-{{CSSRef}}
-
 Dans cet article, nous verrons comment les boîtes flexibles interagissent avec les autres modules CSS. Nous verrons quelles sont les spécifications qui décrivent les boîtes flexibles et pourquoi les boîtes flexibles sont différentes des autres modules.
 
 > [!NOTE]

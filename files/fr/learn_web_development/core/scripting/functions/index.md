@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Functions
 original_slug: Learn/JavaScript/Building_blocks/Functions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}
 
 Les **fonctions** sont un autre concept essentiel de la programmation, qui permettent de stocker dans un bloc défini une partie de code qui effectue une seule tâche afin de l'appeler plus tard lorsque nous en avons besoin en utilisant une seule commande courte — au lieu de ré-écrire l'intégralité de ce code à chaque fois. Dans cet article nous explorons les concepts fondamentaux inhérents aux fonctions tels que la syntaxe de base, comment les définir et les invoquer, leur portée et leurs paramètres.
 

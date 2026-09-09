@@ -53,7 +53,7 @@ _Также реализованы методы из интерфейса_ {{dom
 - {{domxref("AudioContext.createDynamicsCompressor()")}}
   - : Создаёт объект {{domxref("DynamicsCompressorNode")}}, который может быть использован для акустической компрессии аудио-сигнала.
 - {{domxref("AudioContext.decodeAudioData()")}}
-  - : Асинхронно декодирует данные из аудио-файла, находящиеся в {{domxref("ArrayBuffer")}}. В этом случае ArrayBuffer заполняется при ответе на запрос {{domxref("XMLHttpRequest")}}. `и установке` атрибута `responseType` в `arraybuffer`. Этот метод работает только с полными аудио-файлами и не работает с их фрагментами.
+  - : Асинхронно декодирует данные из аудио-файла, находящиеся в {{jsxref("ArrayBuffer")}}. В этом случае ArrayBuffer заполняется при ответе на запрос {{domxref("XMLHttpRequest")}}. `и установке` атрибута `responseType` в `arraybuffer`. Этот метод работает только с полными аудио-файлами и не работает с их фрагментами.
 - {{domxref("AudioContext.createGain()")}}
   - : Создаёт объект {{domxref("GainNode")}}, который может быть использован для контроля общей громкости во всём аудио-графе.
 - {{domxref("AudioContext.createOscillator()")}}

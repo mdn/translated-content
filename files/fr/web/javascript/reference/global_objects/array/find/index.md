@@ -3,14 +3,14 @@ title: "Array : méthode find()"
 short-title: find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9f46f08d20b21498293cbf6b84f508103272ec6f
 ---
 
 La méthode **`find()`** des instances de {{JSxRef("Array")}} retourne le premier élément du tableau fourni qui satisfait la fonction de test donnée.
 Si aucune valeur ne satisfait la fonction de test, {{JSxRef("undefined")}} est retourné.
 
-- Si vous avez besoin de l'**indice** de l'élément trouvé dans le tableau, utilisez {{JSxRef("Array/findIndex", "findIndex()")}}.
-- Si vous souhaitez trouver l'**indice d'une valeur**, utilisez {{JSxRef("Array/indexOf", "indexOf()")}}.
+- Si vous avez besoin de **l'indice** de l'élément trouvé dans le tableau, utilisez {{JSxRef("Array/findIndex", "findIndex()")}}.
+- Si vous souhaitez trouver **l'indice d'une valeur**, utilisez {{JSxRef("Array/indexOf", "indexOf()")}}.
   (C'est similaire à {{JSxRef("Array/findIndex", "findIndex()")}}, mais chaque élément est comparé à la valeur pour l'égalité, au lieu d'utiliser une fonction de test.)
 - Si vous souhaitez savoir si une valeur **existe** dans un tableau, utilisez {{JSxRef("Array/includes", "includes()")}}.
   Là encore, chaque élément est comparé à la valeur pour l'égalité, au lieu d'utiliser une fonction de test.
@@ -57,7 +57,7 @@ Sinon, {{JSxRef("undefined")}} est retourné.
 
 La méthode `find()` est une [méthode itérative](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives). Elle appelle la fonction `callbackFn` fournie une fois pour chaque élément du tableau, dans l'ordre croissant des indices, jusqu'à ce que `callbackFn` retourne une [valeur vraie](/fr/docs/Glossary/Truthy). `find()` retourne alors cet élément et arrête l'itération. Si `callbackFn` ne retourne jamais de valeur vraie, `find()` retourne {{JSxRef("undefined")}}. Consultez la section [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives) pour plus d'informations sur le fonctionnement général de ces méthodes.
 
-`callbackFn` est appelée pour chaque indice du tableau, pas seulement ceux qui ont une valeur assignée. Les cases vides dans les [tableaux creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux) se comportent comme si leur valeur était `undefined`.
+`callbackFn` est appelée pour chaque indice du tableau, pas seulement ceux qui ont une valeur assignée. Les cases vides dans les [tableaux creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux) se comportent comme si leur valeur est `undefined`.
 
 La méthode `find()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend seulement que la valeur de `this` possède une propriété `length` et des propriétés à clé entière.
 
@@ -119,7 +119,7 @@ console.log([4, 5, 8, 12].find(estPremier)); // 5
 ```
 
 > [!NOTE]
-> L'implémentation de `estPremier()` est uniquement destinée à la démonstration. Pour une utilisation réelle, il est préférable d'utiliser un algorithme fortement mémoïsé, comme le [crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne), afin d'éviter des calculs répétés.
+> L'implémentation de `estPremier()` est uniquement destinée à la démonstration. Pour une utilisation réelle, il est préférable d'utiliser un algorithme fortement {{Glossary("Memoization", "mémoïsé")}}, comme le [crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne), afin d'éviter des calculs répétés.
 
 ### Utiliser le troisième argument de `callbackFn`
 
@@ -141,7 +141,7 @@ console.log(premierCreux); // 1
 
 ### Utiliser `find()` sur des tableaux creux
 
-Les cases vides dans les tableaux creux _sont_ parcourues et sont traitées comme si leur valeur était `undefined`.
+Les cases vides dans les tableaux creux _sont_ parcourues et sont traitées comme si leur valeur est `undefined`.
 
 ```js
 // Déclare un tableau sans éléments aux indices 2, 3 et 4
@@ -188,7 +188,7 @@ La méthode `find()` lit la propriété `length` de `this` puis accède à chaqu
 ```js
 const objetSimilaireTableau = {
   length: 3,
-  "-1": 0.1, // ignoré par find() car -1 < 0
+  "-1": 0.1, // ignoré par find(), car -1 < 0
   0: 2,
   1: 7.3,
   2: 4,
@@ -219,5 +219,5 @@ console.log(
 - La méthode {{JSxRef("Array.prototype.every()")}}
 - La méthode {{JSxRef("Array.prototype.some()")}}
 - La méthode {{JSxRef("TypedArray.prototype.find()")}}
-- [Prothèse d'émulation core-js pour `Array.prototype.find` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims pour `Array.prototype.find` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.find)
+- [La prothèse d'émulation core-js pour `Array.prototype.find` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
+- [La prothèse d'émulation es-shims pour `Array.prototype.find` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.find)

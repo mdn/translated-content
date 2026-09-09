@@ -2,7 +2,7 @@
 title: Messages HTTP
 slug: Web/HTTP/Guides/Messages
 l10n:
-  sourceCommit: 7a32241450ff246ab9035aca6e54483349ce855b
+  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
 ---
 
 **Les messages HTTP** sont le mécanisme utilisé pour échanger des données entre un serveur et un client dans le protocole HTTP.
@@ -10,14 +10,14 @@ Il existe deux types de messages&nbsp;: les **requêtes** envoyées par le clien
 
 Les développeur·euse·s créent rarement, voire jamais, des messages HTTP à partir de zéro.
 Des applications telles qu'un navigateur, un proxy ou un serveur web utilisent des logiciels conçus pour créer des messages HTTP de manière fiable et efficace.
-La façon dont les messages sont créés ou transformés est contrôlée via des API dans les navigateurs, des fichiers de configuration pour les proxies ou serveurs, ou d'autres interfaces.
+La façon dont les messages sont créés ou transformés est contrôlée par des API dans les navigateurs, des fichiers de configuration pour les proxies ou serveurs, ou d'autres interfaces.
 
 Dans les versions du protocole HTTP jusqu'à HTTP/2, les messages sont basés sur du texte, et sont relativement simples à lire et à comprendre une fois que vous vous êtes familiarisé·e avec le format.
 Dans HTTP/2, les messages sont encapsulés dans un encadrement binaire, ce qui les rend un peu plus difficiles à lire.
 Cependant, la sémantique sous-jacente du protocole reste la même, vous pouvez donc apprendre la structure et la signification des messages HTTP à partir du format textuel des messages HTTP/1.x, et appliquer cette compréhension à HTTP/2 et au-delà.
 
 Ce guide utilise les messages HTTP/1.1 pour des raisons de lisibilité, et explique la structure des messages HTTP en utilisant le format HTTP/1.1.
-Nous mettons en avant certaines différences que vous pourriez avoir besoin de décrire pour HTTP/2 dans la section finale.
+Nous mettons en avant certaines différences que vous pouvez avoir besoin de décrire pour HTTP/2 dans la section finale.
 
 > [!NOTE]
 > Vous pouvez voir les messages HTTP dans l'onglet **Réseau** des outils de développement d'un navigateur, ou si vous affichez les messages HTTP dans la console à l'aide d'outils CLI comme [curl <sup>(angl.)</sup>](https://curl.se/), par exemple.
@@ -32,7 +32,7 @@ L'illustration suivante montre à quoi ressemblent les messages en HTTP/1.1&nbsp
 Les requêtes et les réponses partagent une structure similaire&nbsp;:
 
 1. Une _ligne de départ_ est une seule ligne qui décrit la version HTTP ainsi que la méthode de la requête ou le résultat de la requête.
-2. Un ensemble optionnel d'_en-têtes HTTP_ contenant des métadonnées qui décrivent le message. Par exemple, une requête pour une ressource peut inclure les formats autorisés pour cette ressource, tandis que la réponse peut inclure des en-têtes pour indiquer le format effectivement retourné.
+2. Un ensemble optionnel _d'en-têtes HTTP_ contenant des métadonnées qui décrivent le message. Par exemple, une requête pour une ressource peut inclure les formats autorisés pour cette ressource, tandis que la réponse peut inclure des en-têtes pour indiquer le format effectivement retourné.
 3. Une ligne vide indiquant que les métadonnées du message sont terminées.
 4. Un _corps_ optionnel contenant les données associées au message. Il peut s'agir de données POST à envoyer au serveur dans une requête, ou d'une ressource retournée au client dans une réponse.
    La présence ou non d'un corps dans un message est déterminée par la ligne de départ et les en-têtes HTTP.
@@ -41,7 +41,7 @@ La ligne de départ et les en-têtes du message HTTP sont collectivement appelé
 
 ## Requêtes HTTP
 
-Prenons l'exemple suivant d'une requête HTTP `POST` envoyée après la soumission d'un formulaire sur une page web&nbsp;:
+Prenons l'exemple suivant d'une requête HTTP `POST` envoyée après l'envoi d'un formulaire sur une page web&nbsp;:
 
 ```http
 POST /users HTTP/1.1
@@ -68,7 +68,7 @@ La ligne de départ dans les requêtes HTTP/1.x (`POST /users HTTP/1.1` dans l'e
 - `<protocol>`
   - : La _version HTTP_, qui définit la structure du reste du message, agissant comme un indicateur de la version attendue pour la réponse.
     Il s'agit presque toujours de `HTTP/1.1`, car `HTTP/0.9` et `HTTP/1.0` sont obsolètes.
-    Dans HTTP/2 et au-delà, la version du protocole n'est pas incluse dans les messages car elle est comprise lors de l'établissement de la connexion.
+    Dans HTTP/2 et au-delà, la version du protocole n'est pas incluse dans les messages, car elle est comprise lors de l'établissement de la connexion.
 
 ### Cibles de requête
 
@@ -105,7 +105,7 @@ Voici une liste des types de cibles et quand elles sont utilisées&nbsp;:
 ### En-têtes de requête
 
 Les en-têtes sont des métadonnées envoyées avec une requête après la ligne de départ et avant le corps.
-Dans l'[exemple de soumission de formulaire](#requêtes_http) ci-dessus, il s'agit des lignes suivantes du message&nbsp;:
+Dans [l'exemple d'envoi de formulaire](#requêtes_http) ci-dessus, il s'agit des lignes suivantes du message&nbsp;:
 
 ```http
 Host: example.com
@@ -129,13 +129,13 @@ Certains en-têtes sont exclusivement utilisés dans les requêtes, tandis que d
 
 Le corps de la requête est la partie d'une requête qui transporte des informations vers le serveur.
 Seules les requêtes `PATCH`, `POST` et `PUT` possèdent un corps.
-Dans [l'exemple de soumission de formulaire](#requêtes_http), cette partie correspond au corps&nbsp;:
+Dans [l'exemple d'envoi de formulaire](#requêtes_http), cette partie correspond au corps&nbsp;:
 
 ```http
 name=FirstName+LastName&email=ssmth%40example.com
 ```
 
-Le corps de la requête de soumission de formulaire contient une quantité relativement faible d'informations sous forme de paires `key=value` (clé-valeur), mais un corps de requête peut contenir d'autres types de données attendues par le serveur&nbsp;:
+Le corps de la requête d'envoi de formulaire contient une quantité relativement faible d'informations sous forme de paires `key=value` (clé-valeur), mais un corps de requête peut contenir d'autres types de données attendues par le serveur&nbsp;:
 
 ```json
 {
@@ -211,7 +211,7 @@ Comme pour les en-têtes de requête, il existe de nombreux en-têtes différent
   On trouve aussi des informations sur la ressource retournée, comme son type de contenu ({{HTTPHeader("Content-Type")}}), ou la façon dont elle doit être mise en cache ({{HTTPHeader("Cache-Control")}}).
 - {{Glossary("Representation header", "Les en-têtes de représentation")}} si le message possède un corps, ils décrivent la forme des données du message ainsi que tout encodage appliqué.
   Par exemple, la même ressource peut être formatée dans un type de média particulier comme XML ou JSON, localisée dans une langue écrite ou une région géographique particulière, et/ou compressée ou autrement encodée pour la transmission.
-  Cela permet au destinataire de comprendre comment reconstruire la ressource telle qu'elle était avant sa transmission sur le réseau.
+  Cela permet au destinataire de comprendre comment reconstruire la ressource telle qu'elle est avant sa transmission sur le réseau.
 
 ### Corps de la réponse
 
@@ -223,7 +223,7 @@ Les corps de réponse peuvent être&nbsp;:
 
 - Des corps à ressource unique définis par les deux en-têtes&nbsp;: {{HTTPHeader("Content-Type")}} et {{HTTPHeader("Content-Length")}}, ou de longueur inconnue et encodés par morceaux avec {{HTTPHeader("Transfer-Encoding")}} défini à `chunked`.
 - [Des corps à ressources multiples](/fr/docs/Web/HTTP/Guides/MIME_types#multipartform-data), constitués d'un corps contenant plusieurs parties, chacune contenant une information différente.
-  Les corps multiparties sont généralement associés aux [formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms), mais peuvent aussi être envoyés en réponse à des [requêtes de plage](/fr/docs/Web/HTTP/Guides/Range_requests).
+  Les corps en plusieurs parties sont généralement associés aux [formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms), mais peuvent aussi être envoyés en réponse à des [requêtes de plage](/fr/docs/Web/HTTP/Guides/Range_requests).
 
 Les réponses avec un code d'état qui répond à la requête sans avoir besoin d'inclure de contenu, comme {{HTTPStatus("201", "201 Created")}} ou {{HTTPStatus("204", "204 No Content")}}, n'ont pas de corps.
 
@@ -246,7 +246,7 @@ Cela signifie que les navigateurs sont limités dans le nombre de ressources qu'
 
 HTTP/2 permet d'utiliser une seule connexion TCP pour plusieurs requêtes et réponses en même temps.
 Ceci est réalisé en encapsulant les messages dans une trame binaire et en envoyant les requêtes et réponses dans un **flux** numéroté sur une connexion.
-Les trames de données et d'en-têtes sont traitées séparément, ce qui permet de compresser les en-têtes via un algorithme appelé HPACK.
+Les trames de données et d'en-têtes sont traitées séparément, ce qui permet de compresser les en-têtes avec un algorithme appelé HPACK.
 Utiliser la même connexion TCP pour gérer plusieurs requêtes en même temps s'appelle le _multiplexage_.
 
 ![Multiplexage des requêtes et réponses en HTTP/2 avec une seule connexion TCP.](https://mdn.github.io/shared-assets/images/diagrams/http/messages/http-2-connection.png)
@@ -272,21 +272,21 @@ Dans les requêtes, on trouve les pseudo-en-têtes suivants&nbsp;:
 
 Dans les réponses, il n'y a qu'un seul pseudo-en-tête, et c'est `:status` qui fournit le code de la réponse.
 
-On peut effectuer une requête HTTP/2 avec [nghttp <sup>(angl.)</sup>](https://github.com/nghttp2/nghttp2) pour interroger `example.com`, ce qui affichera la requête dans une forme plus lisible.
+On peut effectuer une requête HTTP/2 avec [nghttp <sup>(angl.)</sup>](https://github.com/nghttp2/nghttp2) pour interroger `example.com`, ce qui affiche la requête dans une forme plus lisible.
 Vous pouvez lancer la requête avec cette commande, où l'option `-n` ignore les données téléchargées et `-v` active le mode verbeux, affichant la réception et la transmission des trames&nbsp;:
 
 ```bash
 nghttp -nv https://www.example.com
 ```
 
-En parcourant la sortie, vous verrez le minutage de chaque trame transmise et reçue&nbsp;:
+En parcourant la sortie, vous voyez le minutage de chaque trame transmise et reçue&nbsp;:
 
 ```plain
 [  0.123] <send|recv> <frame-type> <frame-details>
 ```
 
 Il n'est pas nécessaire d'entrer dans tous les détails de cette sortie, mais repérez la trame `HEADERS` au format `[  0.123] send HEADERS frame ...`.
-Dans les lignes qui suivent la transmission de l'en-tête, vous verrez les lignes suivantes&nbsp;:
+Dans les lignes qui suivent la transmission de l'en-tête, vous voyez les lignes suivantes&nbsp;:
 
 ```http
 [  0.447] send HEADERS frame ...
@@ -300,9 +300,9 @@ Dans les lignes qui suivent la transmission de l'en-tête, vous verrez les ligne
           user-agent: nghttp2/1.61.0
 ```
 
-Cela devrait vous sembler familier si vous êtes déjà à l'aise avec HTTP/1.x et que les concepts abordés plus haut dans ce guide s'appliquent toujours.
+Cela doit vous sembler familier si vous êtes déjà à l'aise avec HTTP/1.x et que les concepts abordés plus haut dans ce guide s'appliquent toujours.
 Il s'agit de la trame binaire contenant la requête `GET` pour `example.com`, convertie en forme lisible par `nghttp`.
-En descendant plus loin dans la sortie de la commande, vous verrez le pseudo-en-tête `:status` dans l'un des flux reçus du serveur&nbsp;:
+En descendant plus loin dans la sortie de la commande, vous voyez le pseudo-en-tête `:status` dans l'un des flux reçus du serveur&nbsp;:
 
 ```http
 [  0.433] recv (stream_id=13) :status: 200
@@ -315,7 +315,7 @@ En descendant plus loin dans la sortie de la commande, vous verrez le pseudo-en-
 ...
 ```
 
-Et si vous retirez le minutage et l'identifiant de flux de ce message, cela devrait vous sembler encore plus familier&nbsp;:
+Et si vous retirez le minutage et l'identifiant de flux de ce message, cela doit vous sembler encore plus familier&nbsp;:
 
 ```http
 :status: 200
@@ -323,7 +323,7 @@ content-encoding: gzip
 age: 112721
 ```
 
-Approfondir les trames de message, les identifiants de flux et la gestion de la connexion dépasse le cadre de ce guide, mais pour comprendre et déboguer les messages HTTP/2, vous devriez être bien équipé·e avec les connaissances et outils de cet article.
+Approfondir les trames de message, les identifiants de flux et la gestion de la connexion dépasse le cadre de ce guide, mais pour comprendre et déboguer les messages HTTP/2, vous devez être bien équipé·e avec les connaissances et outils de cet article.
 
 ## Conclusion
 
@@ -338,13 +338,13 @@ HTTP/3 conserve la même sémantique HTTP fondamentale, donc des fonctionnalité
 
 Si vous comprenez la sémantique de HTTP/1.1, vous avez déjà une base solide pour appréhender HTTP/2 et HTTP/3.
 La principale différence réside dans **la façon** dont ces sémantiques sont mises en œuvre au niveau du transport.
-En suivant les exemples et concepts de ce guide, vous devriez maintenant être en mesure de travailler avec HTTP, de comprendre le sens des messages et la façon dont les applications utilisent HTTP pour envoyer et recevoir des données.
+En suivant les exemples et concepts de ce guide, vous devez maintenant être en mesure de travailler avec HTTP, de comprendre le sens des messages et la façon dont les applications utilisent HTTP pour envoyer et recevoir des données.
 
 ## Voir aussi
 
 - [Évolution de HTTP](/fr/docs/Web/HTTP/Guides/Evolution_of_HTTP)
 - [Mécanisme de mise à niveau du protocole](/fr/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)
 - Termes du glossaire&nbsp;:
-  - {{Glossary('HTTP')}}
-  - {{Glossary('HTTP_2', 'HTTP/2')}}
-  - {{Glossary('QUIC')}}
+  - {{Glossary("HTTP")}}
+  - {{Glossary("HTTP_2", "HTTP/2")}}
+  - {{Glossary("QUIC")}}

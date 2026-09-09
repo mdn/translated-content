@@ -21,7 +21,11 @@ Esta pseudo-clase es útil para dar al usuario una indicación visual de que el 
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:in-range {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

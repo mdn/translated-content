@@ -3,7 +3,7 @@ title: "Element : propriété ariaLabelledByElements"
 short-title: ariaLabelledByElements
 slug: Web/API/Element/ariaLabelledByElements
 l10n:
-  sourceCommit: 2f20bc484496536ba975dc33d9af4e4fb6b9413b
+  sourceCommit: 3b4a7a32fc2fe8cb6bd9a1e62f4ca52e002599ef
 ---
 
 {{APIRef("DOM")}}

@@ -18,7 +18,7 @@ _Heredadas de su padre, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLImageElement.border")}} {{deprecated_inline}}
   - : Es un {{jsxref("String")}} que indica el ancho del borde alrededor de la imagen. Este está desaprobado y debe usarse la propiedad CSS {{cssxref("border")}} en su lugar.
 - {{domxref("HTMLImageElement.complete")}} {{readonlyInline}}
-  - : Devuelve un {{domxref("Boolean")}} que es `true` si el navegador ha terminado de buscar la imagen, sea o no exitoso. También devuelve `true` si la imagen no tiene valor {{domxref("HTMLImageElement.src", "src")}}.
+  - : Devuelve un {{jsxref("Boolean")}} que es `true` si el navegador ha terminado de buscar la imagen, sea o no exitoso. También devuelve `true` si la imagen no tiene valor {{domxref("HTMLImageElement.src", "src")}}.
 - {{domxref("HTMLImageElement.crossOrigin")}}
   - : Es un {{jsxref("String")}} representa la configuración CORS para el elemento imagen. Ver [Atributos de configuración CORS](/es/docs/Web/HTML/Reference/Attributes/crossorigin) para más detalles.
 - {{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}{{experimental_inline}}
@@ -28,7 +28,7 @@ _Heredadas de su padre, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLImageElement.hspace")}} {{deprecated_inline}}
   - : Es un `long` que representa el espacio a izquierda y derecha de la imagen.
 - {{domxref("HTMLImageElement.isMap")}}
-  - : Es un {{domxref("Boolean")}} que refleja el atributo HTML [`ismap`](/es/docs/Web/HTML/Reference/Elements/img#ismap), indica que la imagen es parte del mapa de imagen del lado del servidor.
+  - : Es un {{jsxref("Boolean")}} que refleja el atributo HTML [`ismap`](/es/docs/Web/HTML/Reference/Elements/img#ismap), indica que la imagen es parte del mapa de imagen del lado del servidor.
 - {{domxref("HTMLImageElement.longDesc")}} {{deprecated_inline}}
   - : Es un {{jsxref("String")}} que representa la URI de una larga descripción de la imagen.
 - {{domxref("HTMLImageElement.lowSrc")}} {{deprecated_inline}}

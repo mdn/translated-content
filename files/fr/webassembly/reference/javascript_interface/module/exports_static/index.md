@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 292e29ec89933d06416419f8403241b7e34f6555
 ---
 
-{{WebAssemblySidebar}}
-
 La méthode statique **`WebAssembly.Module.exports()`** renvoie un tableau qui contient les descriptions des exports déclarés pour un module donné.
 
 ## Syntaxe

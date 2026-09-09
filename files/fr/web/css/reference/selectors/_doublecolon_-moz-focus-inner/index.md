@@ -3,15 +3,15 @@ title: Pseudo-élément CSS `::-moz-focus-inner`
 short-title: ::-moz-focus-inner
 slug: Web/CSS/Reference/Selectors/::-moz-focus-inner
 l10n:
-  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-focus-inner`** est [une extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui représente le contour interne pour le focus sur l'élément HTML {{HTMLElement("button")}} ainsi que les boutons {{HTMLElement("input/button","button")}}, {{HTMLElement("input/submit","submit")}}, {{HTMLElement("input/reset","reset")}} et {{HTMLElement("input/color","color")}} de l'élément {{HTMLElement("input")}}.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-focus-inner`** est [une extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui représente le contour interne pour la sélection sur l'élément HTML {{HTMLElement("button")}} ainsi que les boutons {{HTMLElement("input/button","button")}}, {{HTMLElement("input/submit","submit")}}, {{HTMLElement("input/reset","reset")}} et {{HTMLElement("input/color","color")}} de l'élément {{HTMLElement("input")}}.
 
 > [!NOTE]
-> Utiliser `::-moz-focus-inner` sur un autre élément que les types de boutons pris en charge n'aura aucun effet.
+> Utiliser `::-moz-focus-inner` sur un autre élément que les types de boutons pris en charge n'a aucun effet.
 
 ## Syntaxe
 

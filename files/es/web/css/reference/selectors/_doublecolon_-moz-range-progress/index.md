@@ -15,7 +15,11 @@ El [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS]
 
 ## Síntaxis
 
-{{csssyntax}}
+```css
+::-moz-range-progress {
+  /* ... */
+}
+```
 
 ## Ejemplo
 
