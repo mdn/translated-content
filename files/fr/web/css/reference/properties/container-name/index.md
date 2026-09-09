@@ -3,7 +3,7 @@ title: Propriété CSS `container-name`
 short-title: container-name
 slug: Web/CSS/Reference/Properties/container-name
 l10n:
-  sourceCommit: afcdfa050626bb7eb05ee693df8997020db9ff2e
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`container-name`** définit une liste de noms de conteneurs de requête utilisée par la règle {{CSSxRef("@container")}} dans une [requête de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries).
@@ -28,6 +28,8 @@ container-name: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie sous la forme d'une liste de valeurs `<custom-ident>` séparées par des espaces ou du mot-clé `none`&nbsp;:
 
 - `none`
   - : La valeur par défaut. Le conteneur de requête n'a pas de nom.

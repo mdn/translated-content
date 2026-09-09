@@ -3,10 +3,10 @@ title: "Element : évènement DOMActivate"
 short-title: DOMActivate
 slug: Web/API/Element/DOMActivate_event
 l10n:
-  sourceCommit: 99487ceacd216eeb20b8679b1dc0fe6b16e7366d
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef}}{{Deprecated_Header}}
+{{APIRef}}
 
 L'évènement **`DOMActivate`** se déclenche sur un élément lorsqu'il devient actif, par exemple lorsqu'il est cliqué avec la souris ou lorsqu'une touche est utilisée pour y naviguer.
 

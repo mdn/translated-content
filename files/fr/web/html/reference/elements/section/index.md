@@ -46,7 +46,7 @@ Comme mentionné ci-dessus, `<section>` est un élément de sectionnement géné
 
 Considérez aussi les cas suivants&nbsp;:
 
-- Si le contenu de l'élément représente une unité autonome et indépendante qui a du sens en tant que pièce syndiquée (par exemple, un article de blog, un commentaire de blog ou un article de journal), l'élément {{HTMLElement("article")}} sera plus approprié.
+- Si le contenu de l'élément représente une unité autonome et indépendante qui a du sens en tant que pièce syndiquée (par exemple, un article de blog, un commentaire de blog ou un article de journal), l'élément {{HTMLElement("article")}} est plus approprié.
 - Si le contenu représente une information tangente utile qui accompagne le contenu principal, mais n'en fait pas directement partie (comme des liens associés ou une biographie d'auteur·ice), utilisez {{HTMLElement("aside")}}.
 - Si le contenu représente la zone principale d'un document, utilisez {{HTMLElement("main")}}.
 - Si vous utilisez l'élément uniquement comme conteneur de mise en forme, utilisez plutôt {{HTMLElement("div")}}.
@@ -85,7 +85,7 @@ Pour récapituler, chaque `<section>` doit être identifiée, généralement en 
 
 ### Utiliser une section sans titre
 
-Les circonstances où vous pouvez voir `<section>` utilisé sans titre se trouvent généralement dans des sections d'applications web ou d'interfaces utilisateur, plutôt que dans des structures de documents traditionnelles. Dans un document, il n'est pas vraiment logique d'avoir une section distincte de contenu sans titre pour décrire son contenu. Ces titres sont utiles pour tous les lecteurs·rices, mais particulièrement pour les utilisateur·ice·s de technologies d'assistance comme les lecteurs d'écran, et ils sont aussi bénéfiques pour le référencement.
+Les circonstances où vous pouvez voir `<section>` utilisé sans titre se trouvent généralement dans des sections d'applications web ou d'interfaces utilisateur, plutôt que dans des structures de documents traditionnelles. Dans un document, il n'est pas vraiment logique d'avoir une section distincte de contenu sans titre pour décrire son contenu. Ces titres sont utiles pour tous les lecteur·ice·s, mais particulièrement pour les utilisateur·ice·s de technologies d'assistance comme les lecteurs d'écran, et ils sont aussi bénéfiques pour le référencement.
 
 Considérez cependant un mécanisme de navigation secondaire. Si la navigation globale est déjà englobée dans un élément `<nav>`, il est possible d'entourer un menu précédent/suivant dans un élément `<section>`&nbsp;:
 

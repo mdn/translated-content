@@ -62,7 +62,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ### Exemple de plage haute et basse
 
-On remarquera ici que l'attribut [`min`](#min) est absent (ce qui est autorisé), la valeur minimale sera alors `0`.
+Remarquez ici que l'attribut [`min`](#min) est absent (ce qui est autorisé), la valeur minimale est alors `0`.
 
 #### HTML
 

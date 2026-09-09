@@ -3,7 +3,7 @@ title: "HTMLImageElement : propriété referrerPolicy"
 short-title: referrerPolicy
 slug: Web/API/HTMLImageElement/referrerPolicy
 l10n:
-  sourceCommit: 1f00512e3c9a20b5bb927db529bb5d639e346d96
+  sourceCommit: 7b9f3c730d1909846f80c70d84ac265d93d82af2
 ---
 
 {{APIRef("HTML DOM")}}

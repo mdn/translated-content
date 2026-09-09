@@ -6,9 +6,9 @@ l10n:
   sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<a>`** (ou élément d'_ancre_), avec [son attribut `href`](#href), crée un hyperlien vers des pages web, des fichiers, des adresses e-mail, des emplacements dans la même page ou toute autre ressource accessible par une URL.
+L'élément [HTML](/fr/docs/Web/HTML) **`<a>`** (ou élément _d'ancre_), avec [son attribut `href`](#href), crée un hyperlien vers des pages web, des fichiers, des adresses e-mail, des emplacements dans la même page ou toute autre ressource accessible par une URL.
 
-Le contenu de chaque `<a>` doit indiquer la destination du lien. Si l'attribut `href` est présent, appuyer sur la touche Entrée lorsque l'élément `<a>` est sélectionné l'active.
+Le contenu de chaque `<a>` doit indiquer la destination du lien. Si l'attribut `href` est présent, appuyer sur la touche Entrée lorsque l'élément `<a>` est sélectionné (<i lang="en">focus</i> en anglais) l'active.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;a&gt;")}}
 
@@ -68,7 +68,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > - Le comportement du téléchargement varie selon le navigateur, les paramètres utilisateur·ice·s et d'autres facteurs. L'utilisateur·ice peut être invité·e avant le début du téléchargement, ou le fichier peut être enregistré automatiquement, ou il peut s'ouvrir automatiquement, soit dans une application externe, soit dans le navigateur lui-même.
     > - Si l'en-tête `Content-Disposition` comporte des informations différentes de celles de l'attribut `download`, le comportement résultant peut différer&nbsp;:
     >   - Si l'en-tête définit un `nom de fichier`, il a priorité sur un nom de fichier défini dans l'attribut `download`.
-    >   - Si l'en-tête définit une disposition de `inline`, Chrome et Firefox donnent la priorité à l'attribut et le traitent comme un téléchargement. Les anciennes versions de Firefox (avant 82) donnent la priorité à l'en-tête et affichent le contenu en ligne.
+    >   - Si l'en-tête définit une disposition de `inline`, Chrome et Firefox donnent la priorité à l'attribut et le traitent comme un téléchargement. Les anciennes versions de Firefox (avant 82) donnent la priorité à l'en-tête et affichent le contenu en incise.
 
 - `href`
   - : L'URL vers laquelle pointe l'hyperlien. Les liens ne sont pas limités aux URL basées sur HTTP&nbsp;: ils peuvent utiliser n'importe quel schéma d'URL pris en charge par les navigateurs&nbsp;:
@@ -88,11 +88,11 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `ping`
   - : Contient une liste d'URL séparées par des espaces vers lesquelles sont envoyées des requêtes {{HTTPMethod("POST")}} avec le corps `PING` lorsque l'utilisateur·ice suit le lien. Cet attribut est généralement utilisé pour tracer un·e utilisateur·ice.
 - `interestfor` {{Experimental_Inline}} {{Non-standard_Inline}}
-  - : Définit l'élément `<a>` comme un **invocateur d'intérêt** (<i lang="en">interest invoker</i>). Sa valeur est l'`id` de l'élément cible, qui est affecté d'une manière ou d'une autre (généralement affiché ou masqué) lorsque l'intérêt est montré ou perdu sur l'élément invocateur (par exemple au survol/fin de survol ou à la sélection/perte de sélection). Voir [Utilisation des invocateurs d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) pour plus de détails et d'exemples.
+  - : Définit l'élément `<a>` comme un **invocateur d'intérêt** (<i lang="en">interest invoker</i>). Sa valeur est un `id` de l'élément cible, qui est affecté d'une manière ou d'une autre (généralement affiché ou masqué) lorsque l'intérêt est montré ou perdu sur l'élément invocateur (par exemple au survol/fin de survol ou à la sélection/perte de sélection (<i lang="en">focus/blur</i> en anglais)). Voir [Utilisation des invocateurs d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) pour plus de détails et d'exemples.
 - `referrerpolicy`
   - : Détermine la quantité d'informations du [référent](/fr/docs/Web/HTTP/Reference/Headers/Referer) à envoyer lors du suivi du lien.
-    - `no-referrer`&nbsp;: L'en-tête {{HTTPHeader("Referer")}} ne est pas envoyé.
-    - `no-referrer-when-downgrade`&nbsp;: L'en-tête {{HTTPHeader("Referer")}} ne est pas envoyé vers des {{Glossary("origin", "origines")}} sans {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
+    - `no-referrer`&nbsp;: L'en-tête {{HTTPHeader("Referer")}} n'est pas envoyé.
+    - `no-referrer-when-downgrade`&nbsp;: L'en-tête {{HTTPHeader("Referer")}} n'est pas envoyé vers des {{Glossary("origin", "origines")}} sans {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
     - `origin`&nbsp;: Le référent envoyé est limité à l'origine de la page référente&nbsp;: son [schéma](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, et {{Glossary("port")}}.
     - `origin-when-cross-origin`&nbsp;: Le référent envoyé à d'autres origines est limité au schéma, à l'hôte et au port. Les navigations sur la même origine incluent toujours le chemin.
     - `same-origin`&nbsp;: Un référent est envoyé pour la {{Glossary("Same-origin policy", "même origine")}}, mais les requêtes inter-origines ne contiennent aucune information de référent.
@@ -182,7 +182,7 @@ Dans ces cas, on privilégie plutôt l'utilisation d'un bouton {{HTMLElement("bu
 
 ### Liens externes, liens vers des ressources non-HTML
 
-Les liens qui ouvrent un nouvel onglet ou une nouvelle fenêtre grâce à `target="_blank"`, ainsi que les liens qui ouvrent des fichiers devraient fournir une indication sur ce qui se produit lorsqu'on clique sur ces liens.
+Les liens qui ouvrent un nouvel onglet ou une nouvelle fenêtre grâce à `target="_blank"`, ainsi que les liens qui ouvrent des fichiers doivent fournir une indication sur ce qui se produit lorsqu'on clique sur ces liens.
 
 Les personnes qui utilisent des outils d'assistance à la navigation comme des lecteurs d'écran et/ou qui souffrent de troubles de la vision, cognitifs peuvent être confuses lorsqu'un nouvel onglet, fichier ou une nouvelle fenêtre s'ouvre de façon inattendue. Les anciennes versions des lecteurs d'écran peuvent également ne pas annoncer ce comportement.
 
@@ -239,7 +239,7 @@ Les personnes qui utilisent des outils d'assistance à la navigation comme des l
 
 ### _Skip links_ — liens pour l'accès rapide au contenu
 
-Un _skip link_ (aussi appelé _skipnav_ en anglais) est un élément `a` qui est placé le plus près possible de l'élément [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body) et qui renvoie au début du contenu principal de la page.
+Un _skip link_ (aussi appelé _skipnav_ en anglais) est un élément `a` qui est placé le plus près possible de l'élément [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body) et qui envoie au début du contenu principal de la page.
 
 ```html
 <body>
@@ -247,7 +247,7 @@ Un _skip link_ (aussi appelé _skipnav_ en anglais) est un élément `a` qui est
 
   <header>…</header>
 
-  <main id="content"><!-- Le lien "skip" renvoie vers ici --></main>
+  <main id="content"><!-- Le lien "skip" envoie vers ici --></main>
 </body>
 ```
 

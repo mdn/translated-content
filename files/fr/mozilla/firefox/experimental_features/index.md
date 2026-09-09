@@ -548,9 +548,9 @@ Notez que Firefox ne prend pas en charge la fourniture de {{DOMxRef("CrashReport
 - `dom.reporting.crash.enabled`
   - : Mettre sur `true` pour activer (activé par défaut dans Nightly).
 
-### Registres d'éléments personnalisés à portée limitée
+### Registres d'éléments personnalisés avec portée
 
-La prise en charge des [registres d'éléments personnalisés à portée limitée](/fr/docs/Web/API/Web_components/Using_custom_elements#registres_des_éléments_personnalisés_à_portée_limitée) est en cours d'implémentation.
+La prise en charge des [registres d'éléments personnalisés avec portée](/fr/docs/Web/API/Web_components/Using_custom_elements#registres_des_éléments_personnalisés_avec_portée) est en cours d'implémentation.
 Les registres à portée permettent à un arbre d'ombre de créer un {{DOMxRef("CustomElementRegistry")}} indépendant dont les définitions ne s'appliquent qu'à ce sous-arbre DOM spécifique.
 Cela permet d'éviter les collisions lorsque plusieurs composants Web déclarent des éléments portant le même nom.
 

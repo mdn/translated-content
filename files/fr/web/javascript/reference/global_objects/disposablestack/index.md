@@ -75,4 +75,4 @@ Ces propriétés sont définies sur `DisposableStack.prototype` et partagées pa
 - [Gestion des ressources JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
 - Le symbole {{JSxRef("Symbol.dispose")}}
 - La déclaration {{JSxRef("Statements/using", "using")}}
-- L'objet {{JSxRef("AsyncDisposableStack")}}
+- L'objet natif {{JSxRef("AsyncDisposableStack")}}

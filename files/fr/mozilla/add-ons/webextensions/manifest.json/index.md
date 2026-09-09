@@ -2,7 +2,7 @@
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
 l10n:
-  sourceCommit: 6d09b387b3a5137be8fc24137d8052403d26ecc6
+  sourceCommit: ef11240e109e4b39ff9e8cac248d1c7d7c842112
 ---
 
 > [!NOTE]
@@ -50,6 +50,7 @@ Les différentes clés utilisées dans le fichier `manifest.json` sont listées 
 - [page_action](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) (Manifest V2 seulement dans Chrome)
 - [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)
 - [protocol_handlers](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers) (Firefox seulement)
+- [sandbox](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sandbox)
 - [short_name](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name)
 - [sidebar_action](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action)
 - [storage](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/storage) (N'est pas pris en charge dans Firefox)

@@ -3,10 +3,10 @@ title: "Document : propriété lastStyleSheetSet"
 short-title: lastStyleSheetSet
 slug: Web/API/Document/lastStyleSheetSet
 l10n:
-  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
 La propriété **`lastStyleSheetSet`** de l'interface {{DOMxRef("Document")}} retourne le dernier jeu de feuilles de styles activé. La valeur de cette propriété change chaque fois que la propriété {{DOMxRef("document.selectedStyleSheetSet")}} est modifiée.
 

@@ -93,7 +93,7 @@ console.log(Array.of.call({}, 1)); // [ 1 ]
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - Le constructeur {{JSxRef("Array/Array", "Array()")}}
 - La méthode {{JSxRef("Array.from()")}}
 - La méthode {{JSxRef("TypedArray.of()")}}

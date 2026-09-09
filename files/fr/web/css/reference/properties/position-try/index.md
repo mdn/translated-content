@@ -3,10 +3,10 @@ title: Propriété CSS `position-try`
 short-title: position-try
 slug: Web/CSS/Reference/Properties/position-try
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`position-try`** correspond aux propriétés {{CSSxRef("position-try-order")}} et {{CSSxRef("position-try-fallbacks")}}.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`position-try`** correspond aux propriétés {{CSSxRef("position-try-order")}} et {{CSSxRef("position-try-fallbacks")}}.
 
 ## Propriétés constitutives
 
@@ -70,7 +70,7 @@ Cette démonstration montre l'effet de `position-try`.
 
 #### HTML
 
-Le HTML inclut deux éléments HTML {{HTMLElement("div")}} qui deviendront une ancre et un élément positionné par rapport à l'ancre.
+Le HTML inclut deux éléments HTML {{HTMLElement("div")}} qui deviennent une ancre et un élément positionné par rapport à l'ancre.
 
 ```html
 <div class="ancre">⚓︎</div>
@@ -170,6 +170,6 @@ L'élément apparaît sous son ancre, même s'il est initialement positionné au
 - La propriété {{CSSxRef("position-try-order")}}
 - La règle {{CSSxRef("@position-try")}}
 - Le type de donnée {{CSSxRef("position-area_value", "&lt;position-area&gt;")}}
-- Le module [de positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
-- Le guide [d'utilisation du positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
+- Le module [de positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
+- Le guide [d'utilisation du positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
 - Le guide [des options de repli et de masquage conditionnel en cas de débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)

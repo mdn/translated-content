@@ -3,10 +3,10 @@ title: Propriété CSS `list-style`
 short-title: list-style
 slug: Web/CSS/Reference/Properties/list-style
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`list-style`** permet de définir toutes les propriétés de style de liste en une seule fois.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`list-style`** permet de définir toutes les propriétés de style de liste en une seule fois.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: list-style")}}
 
@@ -147,7 +147,7 @@ La propriété `list-style` est définie avec une, deux ou trois valeurs dans n'
 
 ## Accessibilité
 
-Safari ne reconnait pas les listes ordonnées ou non ordonnées comme des listes dans l'arbre d'accessibilité si elles ont une valeur `list-style` de `none`, sauf si la liste est imbriquée dans l'élément de navigation {{HTMLElement("nav")}}. Ce [comportement est intentionnel <sup>(angl.)</sup>](https://webkit.org/b/170179#c1) et n'est pas considéré comme un bug.
+Safari ne reconnait pas les listes ordonnées ou non ordonnées comme des listes dans l'arbre d'accessibilité si elles ont une valeur `list-style` de `none`, sauf si la liste est imbriquée dans l'élément de navigation {{HTMLElement("nav")}}. Ce [comportement est intentionnel <sup>(angl.)</sup>](https://webkit.org/b/170179#c1) et n'est pas considéré comme un bogue.
 
 Pour que les listes soient annoncées comme des listes, ajoutez [`role="list"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/list_role) aux éléments {{HTMLElement("ol")}} et {{HTMLElement("ul")}}, surtout si la liste n'est pas imbriquée dans un `<nav>`. Cela restaure la sémantique de liste sans affecter le design&nbsp;:
 
@@ -170,7 +170,7 @@ ul li::before {
 }
 ```
 
-Une déclaration de `content: "";` (une chaîne vide) est ignorée, tout comme les valeurs de `content` qui ne contiennent que des espaces, telles que `content: " ";`.
+Une déclaration de `content: "";` (une chaîne de caractères vide) est ignorée, tout comme les valeurs de `content` qui ne contiennent que des espaces, telles que `content: " ";`.
 
 Ces solutions CSS ne doivent être utilisées que lorsque la solution HTML n'est pas disponible, et uniquement après avoir vérifié qu'elles ne produisent pas de comportements inattendus pouvant nuire à l'expérience utilisateur.
 

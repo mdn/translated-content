@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
+{{ApiRef("DOM")}}{{Non-standard_header}}
 
 The **`Document.queryCommandEnabled()`** メソッドは、指定したエディターコマンドがブラウザーで有効になっているかどうかを報告します。
 

@@ -73,7 +73,7 @@ circle:first-of-type {
 
 {{EmbedLiveSample("Définir le rayon d'un cercle", 300, 180)}}
 
-### Différence entre `viewBox` et les pixels de la fenêtre d'affichage
+### Différence entre `viewBox` et les pixels de la zone d'affichage
 
 Cet exemple contient deux SVG, chacun avec deux éléments `<circle>`. Le deuxième SVG inclut un attribut `viewBox` pour démontrer la différence entre le `viewBox` SVG et les fenêtres d'affichage SVG.
 
@@ -103,7 +103,7 @@ circle:first-of-type {
 }
 ```
 
-{{EmbedLiveSample("Différence entre `viewBox` et les pixels de la fenêtre d'affichage", 300, 360)}}
+{{EmbedLiveSample("Différence entre `viewBox` et les pixels de la zone d'affichage", 300, 360)}}
 
 Parce que l'attribut `viewBox` définit le SVG avec une largeur de 200 pixels dans le système de coordonnées SVG et que l'image est agrandie à `300px`, les `30` pixels de coordonnées SVG sont mis à l'échelle pour être affichés sous forme de `45` pixels CSS.
 
@@ -137,7 +137,7 @@ circle:first-of-type {
 
 {{EmbedLiveSample("Définir le rayon d'un cercle en utilisant des pourcentages", 300, 360)}}
 
-Dans les deux cas, le rayon du cercle est de `30%` de la diagonale normalisée de la fenêtre d'affichage SVG. Le rayon `r` est égal à <math><mn>0.3</mn><mo>&#xd7;</mo><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math>. Alors que la première image utilise `300` et `150` pixels CSS et que la seconde utilise `200` et `100` unités de la boîte de vue SVG, 30% est une valeur proportionnelle. En conséquence, la valeur de `r` est la même&nbsp;: `47.43` unités de la boîte de vue, ce qui correspond à `71.15` pixels CSS.
+Dans les deux cas, le rayon du cercle est de `30%` de la diagonale normalisée de la zone d'affichage SVG. Le rayon `r` est égal à <math><mn>0.3</mn><mo>&#xd7;</mo><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math>. Alors que la première image utilise `300` et `150` pixels CSS et que la seconde utilise `200` et `100` unités de la boîte de vue SVG, 30% est une valeur proportionnelle. En conséquence, la valeur de `r` est la même&nbsp;: `47.43` unités de la boîte de vue, ce qui correspond à `71.15` pixels CSS.
 
 Alors que le `r` est le même, les points centraux diffèrent parce que le second SVG est agrandi de 50%, décalant son centre vers le bas et vers la droite de 50%.
 

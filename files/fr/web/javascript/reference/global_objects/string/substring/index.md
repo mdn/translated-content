@@ -3,8 +3,6 @@ title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
 ---
 
-{{JSRef}}
-
 La méthode **`substring()`** retourne une sous-chaîne de la chaîne courante, entre un indice de début et un indice de fin.
 
 {{InteractiveExample("JavaScript Demo: String.substring()")}}

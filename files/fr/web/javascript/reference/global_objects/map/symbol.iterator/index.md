@@ -23,8 +23,8 @@ const iterator = map[Symbol.iterator]();
 for (const item of iterator) {
   console.log(item);
 }
-// Sortie attendue : Array ["0", "toto"]
-// Sortie attendue : Array [1, "truc"]
+// Résultat attendu : Array ["0", "toto"]
+// Résultat attendu : Array [1, "truc"]
 ```
 
 ## Syntaxe
@@ -93,7 +93,7 @@ console.log(mapIter.next().value); // [Object, "bidule"]
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Map")}}
+- L'objet natif {{JSxRef("Map")}}
 - La méthode {{JSxRef("Map.prototype.entries()")}}
 - La méthode {{JSxRef("Map.prototype.keys()")}}
 - La méthode {{JSxRef("Map.prototype.values()")}}

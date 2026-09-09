@@ -3,8 +3,6 @@ title: tabs.toggleReaderMode()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode
 ---
 
-{{AddonSidebar}}
-
 Bascule en mode Lecteur pour l'onglet donné.
 
 Cette fonction permet de basculer en mode Lecteur pour l'onglet donné. Il prend un identifiant de tabulation en tant que paramètre: s'il est omis, l'onglet actuellement actif est basculé.

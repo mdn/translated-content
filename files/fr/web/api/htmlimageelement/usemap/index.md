@@ -3,7 +3,7 @@ title: "HTMLImageElement : propriété useMap"
 short-title: useMap
 slug: Web/API/HTMLImageElement/useMap
 l10n:
-  sourceCommit: 754b68246f4e69e404309fee4a1699e047e43994
+  sourceCommit: 7b9f3c730d1909846f80c70d84ac265d93d82af2
 ---
 
 {{APIRef("HTML DOM")}}
@@ -12,7 +12,7 @@ La propriété **`useMap`** de l'interface {{DOMxRef("HTMLImageElement")}} refl�
 
 ## Valeur
 
-Une chaîne de caractères contenant le symbole dièse `#` suivi du [`name`](/fr/docs/Web/HTML/Reference/Elements/map#name) de l'élément {{HTMLElement("map")}} qui définit la carte d'image à appliquer à l'image.
+Une chaîne de caractères contenant le symbole dièse `#` suivi du [`name`](/fr/docs/Web/HTML/Reference/Elements/map#name) de l'élément HTML {{HTMLElement("map")}} qui définit la carte d'image à appliquer à l'image.
 
 ## Exemples
 
@@ -44,7 +44,7 @@ image.alt = "";
 image.useMap = "#mainmenu-map";
 ```
 
-Pour d'autres exemples (y compris interactifs), voir les articles sur les éléments {{HTMLElement("map")}} et {{HTMLElement("area")}}, ainsi que le [guide d'utilisation des cartes d'image](/fr/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image).
+Pour d'autres exemples (y compris interactifs), voir les articles sur les éléments HTML {{HTMLElement("map")}} et {{HTMLElement("area")}}, ainsi que le [guide d'utilisation des cartes d'image](/fr/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image).
 
 ## Spécifications
 

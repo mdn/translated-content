@@ -4,8 +4,6 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species
 original_slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 ---
 
-{{JSRef}}
-
 La propriété d'accesseur **`TypedArray[@@species]`** renvoie le constructeur [du tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
 ## Syntaxe

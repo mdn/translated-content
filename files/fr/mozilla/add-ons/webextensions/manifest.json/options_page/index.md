@@ -24,8 +24,6 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_page
   </tbody>
 </table>
 
-{{Deprecated_Header}}
-
 > [!WARNING]
 > Cette clé du manifest a été dépréciée. Utilisez [`options_ui`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)à la place.
 

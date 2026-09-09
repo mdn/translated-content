@@ -74,5 +74,5 @@ try {
 
 - [Prothèse d'émulation de `AggregateError` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-promise)
 - [Prothèse d'émulation de `AggregateError` fourni par es-shims <sup>(angl.)</sup>](https://www.npmjs.com/package/es-aggregate-error)
-- L'objet global {{JSxRef("Error")}}
+- L'objet natif {{JSxRef("Error")}}
 - La propriété {{JSxRef("Promise.any")}}

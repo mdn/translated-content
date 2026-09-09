@@ -3,8 +3,6 @@ title: windows.getLastFocused()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getLastFocused
 ---
 
-{{AddonSidebar}}
-
 Obtient la fenêtre qui a été recentrée récemment — généralement la fenêtre 'en haut'.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

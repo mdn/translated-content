@@ -3,10 +3,10 @@ title: "Document : méthode writeln()"
 short-title: writeln()
 slug: Web/API/Document/writeln
 l10n:
-  sourceCommit: 5c513c8e3075989886ae5f3b00d92f2b2988085a
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 > [!WARNING]
 > Cette méthode analyse son entrée comme du HTML, écrivant le résultat dans le DOM.
@@ -44,7 +44,7 @@ Aucune ({{JSxRef("undefined")}}).
 ## Description
 
 La méthode est essentiellement identique à {{DOMxRef("document.write()")}} mais ajoute une nouvelle ligne (les informations du sujet lié s'appliquent également à cette méthode).
-Cette nouvelle ligne ne sera visible que si elle est injectée dans un élément où les sauts de ligne sont affichés.
+Cette nouvelle ligne n'est visible que si elle est injectée dans un élément où les sauts de ligne sont affichés.
 Les informations supplémentaires de {{DOMxRef("document.write()")}} s'appliquent également à cette méthode.
 
 ### Considérations de sécurité

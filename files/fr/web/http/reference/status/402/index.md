@@ -2,7 +2,7 @@
 title: 402 Payment Required
 slug: Web/HTTP/Reference/Status/402
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 304469f96698fda14a08e35060057a23761daea4
 ---
 
 Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`402 Payment Required`** est un code de statut de réponse **non standard** réservé à un usage futur.
@@ -27,7 +27,7 @@ L'exemple suivant tente d'appeler une API de paiement à l'aide d'une requête P
 POST /merchant/transfers/payment HTTP/1.1
 Host: payments.example.com
 Content-Type: application/json
-Content-Length: 402
+Content-Length: 529
 
 {
   "payment_transfer": {
@@ -57,7 +57,7 @@ Le serveur répond à la requête avec un code 402 s'il y a un problème avec la
 HTTP/1.1 402 Payment Required
 Date: Tue, 02 Jul 2024 12:56:49 GMT
 Content-Type: application/json
-Content-Length: 175
+Content-Length: 194
 
 {
   "error": {

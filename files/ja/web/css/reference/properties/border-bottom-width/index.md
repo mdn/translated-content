@@ -3,10 +3,10 @@ title: CSS `border-bottom-width` プロパティ
 short-title: border-bottom-width
 slug: Web/CSS/Reference/Properties/border-bottom-width
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
-**`border-bottom-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスの下の境界の幅を設定します。
+**`border-bottom-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の境界の幅を設定します。
 
 {{InteractiveExample("CSS デモ: border-bottom-width")}}
 
@@ -33,7 +33,7 @@ border-bottom-width: 0;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    これはボックスと、それを囲む境界線です。
+    これは周囲に境界があるボックスです。
   </div>
 </section>
 ```
@@ -72,14 +72,8 @@ border-bottom-width: unset;
 
 ### 値
 
-- `<line-width>`
-  - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合、以下の値のいずれかでなければなりません。
-    - `thin`
-      - `1px` と同じです。
-    - `medium`
-      - `3px` と同じです。
-    - `thick`
-      - `5px` と同じです。
+- {{cssxref("&lt;line-width&gt;")}}
+  - : 境界線の幅を、非負の {{cssxref("&lt;length&gt;")}} を明示的に指定するか、キーワード `thin`、`medium`、`thick` のいずれかで定義します。デフォルトは `medium` です。
 
 ## 公式定義
 
@@ -91,7 +85,7 @@ border-bottom-width: unset;
 
 ## 例
 
-### 下境界の太さの比較
+### 下境界の幅の比較
 
 #### HTML
 
@@ -118,7 +112,7 @@ div:nth-child(2) {
 
 #### 結果
 
-{{EmbedLiveSample('Comparing_bottom_border_widths', '100%')}}
+{{EmbedLiveSample('下境界の幅の比較', '100%')}}
 
 ## 仕様書
 
@@ -130,5 +124,5 @@ div:nth-child(2) {
 
 ## 関連情報
 
-- 境界の太さに関する他の CSS プロパティ: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}, {{Cssxref("border-width")}}
-- 下の境界に関する他の CSS プロパティ: {{Cssxref("border")}}, {{Cssxref("border-bottom")}}, {{Cssxref("border-bottom-style")}}, {{Cssxref("border-bottom-color")}}
+- 境界の幅に関する他の CSS プロパティ: {{Cssxref("border-left-width")}}、{{Cssxref("border-right-width")}}、{{Cssxref("border-top-width")}}、{{Cssxref("border-width")}}
+- 下の境界に関する他の CSS プロパティ: {{Cssxref("border")}}、{{Cssxref("border-bottom")}}、{{Cssxref("border-bottom-style")}}、{{Cssxref("border-bottom-color")}}

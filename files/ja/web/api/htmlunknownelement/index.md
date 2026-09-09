@@ -1,21 +1,23 @@
 ---
 title: HTMLUnknownElement
 slug: Web/API/HTMLUnknownElement
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-**`HTMLUnknownElement`** インターフェイスは不正な HTML 要素である事を表します。{{domxref("HTMLElement")}} インターフェイスを継承しますが、追加のメソッドやプロパティは実装しません。
+**`HTMLUnknownElement`** インターフェイスは無効な HTML 要素を表します。{{DOMxRef("HTMLElement")}} インターフェイスを継承していますが、追加のメソッドやプロパティは実装していません。
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
-固有プロパティはありません。{{domxref("HTMLElement")}} インターフェイスから継承するプロパティのみ利用可能です。
+_固有のプロパティはありません。親である {{DOMxRef("HTMLElement")}} インターフェイスから継承したプロパティがあります。_
 
-## メソッド
+## インスタンスメソッド
 
-固有メソッドはありません。{{domxref("HTMLElement")}} インターフェイスから継承するメソッドのみ利用可能です。
+_固有のメソッドはありません。親である {{DOMxRef("HTMLElement")}} インターフェイスから継承したメソッドがあります。_
 
 ## 仕様書
 
@@ -24,7 +26,3 @@ slug: Web/API/HTMLUnknownElement
 ## ブラウザーの互換性
 
 {{Compat}}
-
-## 関連情報
-
-- このインターフェイスを持つ非標準要素及び廃止要素 : {{HTMLElement("bgsound")}} 、 {{HTMLElement("isindex")}} 、 {{HTMLElement("multicol")}} 、 {{HTMLElement("nextid")}} 、 {{HTMLElement("rb")}} 、 {{HTMLElement("spacer")}}

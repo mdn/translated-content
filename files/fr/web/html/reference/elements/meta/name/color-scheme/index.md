@@ -3,13 +3,13 @@ title: Valeur d'attribut HTML `<meta name="color-scheme">`
 short-title: color-scheme
 slug: Web/HTML/Reference/Elements/meta/name/color-scheme
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 3a7da595860e07c871e243e58a8fe8b7043e305a
 ---
 
 La valeur **`color-scheme`** pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) de l'élément HTML {{HTMLElement("meta")}} indique un schéma de couleurs suggéré que les agents utilisateurs doivent utiliser pour une page.
 Si elle est définie, vous définissez le schéma de couleurs à l'aide d'un attribut [`content`](/fr/docs/Web/HTML/Reference/Elements/meta#content) dans l'élément `<meta>` avec une valeur CSS {{CSSxRef("color-scheme")}} valide.
 
-La couleur de thème fonctionne au _niveau du document_ de la même manière que la propriété CSS {{CSSxRef("color-scheme")}} spécifie les schémas de couleurs préférés et acceptés des _éléments individuels_.
+La couleur de thème fonctionne au _niveau du document_ de la même manière que la propriété CSS {{CSSxRef("color-scheme")}} définit les schémas de couleurs préférés et acceptés des _éléments individuels_.
 L'utilisation principale de `<meta name="color-scheme">` est d'indiquer la compatibilité et l'ordre de préférence pour les modes clair et sombre.
 Par exemple, pour indiquer qu'un document préfère le mode sombre mais prend aussi en charge le mode clair&nbsp;:
 
@@ -31,14 +31,10 @@ Un élément `<meta name="color-scheme">` possède les attributs supplémentaire
     - `light`, `dark`, `light dark`, `dark light`
       - : Un ou plusieurs schémas de couleurs pris en charge par le document.
         Plusieurs schémas de couleurs indiquent que le premier est préféré par le document, mais que le second est acceptable si l'utilisateur·ice le préfère.
-        Spécifier plusieurs fois le même schéma de couleurs a le même effet que de le spécifier une seule fois.
+        Définir plusieurs fois le même schéma de couleurs a le même effet que de le définir une seule fois.
     - `only light`
       - : Indique que le document _ne prend en charge que_ le mode clair, avec un arrière-plan clair et des couleurs de premier plan foncées.
         `only dark` _n'est pas valide_, car forcer un document à s'afficher en mode sombre alors qu'il n'est pas compatible peut rendre le contenu illisible et tous les principaux navigateurs utilisent par défaut le mode clair si rien n'est configuré.
-- `media` {{Optional_Inline}}
-  - : Tout type ou requête média valide.
-    Si fourni, les options pour le schéma de couleurs du document définies dans l'attribut `content` sont suggérées au navigateur lorsque la requête média correspond.
-    Ceci est surtout utile pour la fonctionnalité CSS {{CSSxRef("@media/prefers-color-scheme", "prefers-color-scheme")}}.
 
 ## Exemples
 

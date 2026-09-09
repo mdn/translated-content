@@ -2,7 +2,7 @@
 title: Modèle de page de garde
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key
 l10n:
-  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 > [!NOTE]
@@ -47,7 +47,7 @@ Cette section répertorie les valeurs `page-type` pour les pages sous [Apprendre
 - `learn-topic`&nbsp;: un aperçu d'un sujet, c'est-à-dire une collection de modules comme [_CSS_](/fr/docs/Learn_web_development/Core/Styling_basics).
 - `learn-module`&nbsp;: un aperçu d'un module, c'est-à-dire une collection ordonnée de guides, comme [_Structurer le contenu avec HTML_](/fr/docs/Learn_web_development/Core/Structuring_content).
 - `learn-module-chapter`&nbsp;: un guide qui fait partie d'un module, comme [_Accessibilité mobile_](/fr/docs/Learn_web_development/Core/Accessibility/Mobile).
-- `learn-module-assessment`&nbsp;: un guide spécial avec une activité permettant d'évaluer la compréhension d'un module ou d'une partie de celui-ci, comme [_Tester vos compétences&nbsp;: Boutons et formulaires_](/fr/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons).
+- `learn-module-assessment`&nbsp;: un guide spécial avec une activité vous permettant d'évaluer la compréhension d'un module ou d'une partie de celui-ci, comme [_Tester vos compétences&nbsp;: Boutons et formulaires_](/fr/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons).
 - `learn-faq`&nbsp;: la réponse à une question spécifique sur le développement web, comme [_Qu'est-ce qu'un nom de domaine&nbsp;?_](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name).
 
 ### Types de pages d'accessibilité

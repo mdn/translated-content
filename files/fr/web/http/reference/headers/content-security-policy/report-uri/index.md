@@ -3,10 +3,8 @@ title: "Content-Security-Policy : directive report-uri"
 short-title: report-uri
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 > [!WARNING]
 > La directive {{CSP("report-to")}} est prévue pour remplacer `report-uri`, et dans les navigateurs qui prennent en charge `report-to`, la directive `report-uri` est ignorée.

@@ -3,8 +3,6 @@ title: theme
 slug: Mozilla/Add-ons/WebExtensions/API/theme
 ---
 
-{{AddonSidebar}}
-
 Permet aux extensions du navigateur de mettre à jour le thème du navigateur.
 
 Pour utiliser cette API, une extension doit demander la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "theme" dans son fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).

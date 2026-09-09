@@ -4,7 +4,7 @@ slug: Web/HTML/Reference/Elements/center
 original_slug: Web/HTML/Element/center
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{HTMLSidebar}}
 
 ### Definición
 

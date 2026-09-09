@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Display/Containing_block
 original_slug: Web/CSS/CSS_display/Containing_block
 ---
 
-{{CSSRef}}
-
 Le **bloc englobant (_containing block_)** affecte souvent la taille et la position d'un élément. La plupart du temps, le bloc englobant est la [zone de contenu](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model#les_propriétés_des_boîtes) de l'ancêtre de [bloc](/fr/docs/Glossary/Block-level_content) le plus proche mais cette règle n'est pas absolue. Dans cet article, nous verrons les différents facteurs qui participent à la définition du bloc englobant.
 
 Lorsqu'un agent utilisateur (un navigateur web par exemple) dispose un document, il génère une boîte pour chaque élément du document. Chaque boîte est divisée en quatre zones :

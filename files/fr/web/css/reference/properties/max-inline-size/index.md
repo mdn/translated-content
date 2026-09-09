@@ -92,7 +92,7 @@ La propriété `max-inline-size` peut prendre les mêmes valeurs que les propri�
 
 ## Exemples
 
-### Définir la taille maximale en ligne en pixels
+### Définir la taille maximale en incise en pixels
 
 #### HTML
 
@@ -113,7 +113,7 @@ La propriété `max-inline-size` peut prendre les mêmes valeurs que les propri�
 
 #### Résultat
 
-{{EmbedLiveSample("Définir la taille maximale en ligne en pixels")}}
+{{EmbedLiveSample("Définir la taille maximale en incise en pixels")}}
 
 ## Spécifications
 

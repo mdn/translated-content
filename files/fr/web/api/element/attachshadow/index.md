@@ -32,7 +32,7 @@ attachShadow(options)
       - : Un booléen qui définit si la racine d'ombre peut être clonée&nbsp;: lorsqu'il est défini sur `true`, l'élément hôte d'ombre cloné à l'aide de {{DOMxRef("Node.cloneNode()")}} ou {{DOMxRef("Document.importNode()")}} inclut la racine d'ombre dans la copie. Sa valeur par défaut est `false`.
 
     - `customElementRegistry` {{Optional_Inline}}
-      - : Un objet {{DOMxRef('CustomElementRegistry')}} qui est utilisé comme [registre d'éléments personnalisés limité](/fr/docs/Web/API/Web_components/Using_custom_elements#registre_déléments_personnalisés_limité) de la racine d'ombre attachée.
+      - : Un objet {{DOMxRef('CustomElementRegistry')}} qui est utilisé comme [registre d'éléments personnalisés avec portée](/fr/docs/Web/API/Web_components/Using_custom_elements#registres_des_éléments_personnalisés_avec_portée) de la racine d'ombre attachée.
         Si `null` ou `undefined`, la racine d'ombre utilise le registre global référencé par {{DOMxRef("Window.customElements")}}.
 
     - `delegatesFocus` {{Optional_Inline}}

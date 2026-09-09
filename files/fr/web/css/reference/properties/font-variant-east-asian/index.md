@@ -3,7 +3,7 @@ title: Propriété CSS `font-variant-east-asian`
 short-title: font-variant-east-asian
 slug: Web/CSS/Reference/Properties/font-variant-east-asian
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-east-asian`** contrôle l'utilisation des glyphes alternatifs pour les scripts japonais, chinois et d'Asie orientale.
@@ -69,6 +69,8 @@ font-variant-east-asian: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie soit par `normal`, soit par `ruby`, soit par une liste d'espaces séparés des valeurs suivantes&nbsp;:
 
 - `normal`
   - : Ce mot-clé désactive les glyphes alternatifs.

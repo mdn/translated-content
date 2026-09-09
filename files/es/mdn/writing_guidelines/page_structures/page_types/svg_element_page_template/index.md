@@ -2,7 +2,7 @@
 title: Plantilla de página de elemento SVG
 slug: MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
 l10n:
-  sourceCommit: 39d45a2e71cee2c107a026a59ba0d9229a511592
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 {{MDNSidebar}}
@@ -69,7 +69,7 @@ l10n:
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar_
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 Comienza el contenido de la página con un párrafo introductorio — empieza nombrando el elemento y explicando qué hace.
 Lo ideal sería que sea de una o dos oraciones cortas.

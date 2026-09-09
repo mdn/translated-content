@@ -3,7 +3,7 @@ title: Constructeur AggregateError()
 short-title: AggregateError()
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: f5ff65031db62ca1d855f2043525462b00455d1b
 ---
 
 Le **constructeur `AggregateError()`** permet de créer une erreur qui agrège plusieurs erreurs.
@@ -61,5 +61,5 @@ try {
 ## Voir aussi
 
 - La propriété {{JSxRef("Promise.any")}}
-- [Une prothèse d'émulation pour `AggregateError` avec la bibliothèque `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Une prothèse d'émulation pour `AggregateError` avec la bibliothèque `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-error)
 - [Une prothèse d'émulation es-shims pour `AggregateError` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-aggregate-error)

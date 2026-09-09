@@ -3,7 +3,7 @@ title: "Animation: finished プロパティ"
 short-title: finished
 slug: Web/API/Animation/finished
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: ec1006afdf68a5808a48ab6301f9ccff3cd7ecc2
 ---
 
 {{ APIRef("Web Animations") }}

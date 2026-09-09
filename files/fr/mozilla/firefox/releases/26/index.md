@@ -3,7 +3,7 @@ title: Firefox 26 note de version pour les développeurs
 short-title: Firefox 26
 slug: Mozilla/Firefox/Releases/26
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: 30e0adab23668217555b7ed37df7e6e61b002bf3
 ---
 
 Firefox 26 est sorti le 10 Décembre 2013. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeur·euse·s Web, mais également pour les développeur·euse·s Firefox et Gecko ainsi que pour les développeur·euse·s de modules complémentaires.
@@ -23,7 +23,7 @@ Firefox 26 est sorti le 10 Décembre 2013. Cet article répertorie les modificat
 - La propriété `HTMLSelectElement.selectedOptions` a été implémentée ([bogue Firefox 596681 <sup>(angl.)</sup>](https://bugzil.la/596681)).
 - Dans l'élément {{HTMLElement("input")}} de type `email`, les valeurs avec des étiquettes de domaine de plus de 63 caractères ne sont plus considérées comme valides ([bogue Firefox 884332 <sup>(angl.)</sup>](https://bugzil.la/884332)).
 - Les propriétés `HTMLInputElement.width` et `height` retournent désormais `0` lorsque le `type` n'est pas `image` ([bogue Firefox 905240 <sup>(angl.)</sup>](https://bugzil.la/905240)).
-- Un élément {{HTMLElement("fieldset")}} est désormais invalide, et peut être stylisé en utilisant la pseudo-classe {{CSSxRef(":invalid")}}, quand l'un des éléments qu'il contient est invalide ([bogue Firefox 717181 <sup>(angl.)</sup>](https://bugzil.la/717181)).
+- Un élément {{HTMLElement("fieldset")}} est désormais invalide, et peut être mis en forme en utilisant la pseudo-classe {{CSSxRef(":invalid")}}, quand l'un des éléments qu'il contient est invalide ([bogue Firefox 717181 <sup>(angl.)</sup>](https://bugzil.la/717181)).
 
 ### JavaScript
 

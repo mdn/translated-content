@@ -51,4 +51,4 @@ console.log(newMD2.monthCode, newMD2.day); // "M06" 3
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainMonthDay")}}
+- L'objet natif {{JSxRef("Temporal.PlainMonthDay")}}

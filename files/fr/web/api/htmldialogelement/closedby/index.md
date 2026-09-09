@@ -3,7 +3,7 @@ title: "HTMLDialogElement : propriété closedBy"
 short-title: closedBy
 slug: Web/API/HTMLDialogElement/closedBy
 l10n:
-  sourceCommit: 6aca3e5157dbc163fe8209d9bf8cc3f2e8ec3f9d
+  sourceCommit: 2b6b8ed9b2e7cd0ce3193c0716e24cd67d523c81
 ---
 
 {{APIRef("HTML DOM")}}
@@ -44,6 +44,7 @@ Si l'attribut `closedby` est absent ou invalide, il revient à l'état **Auto**.
 
 ```html hidden
 <pre id="journal"></pre>
+<button id="ouvrir">Ouvrir la boîte de dialogue</button>
 ```
 
 ```js hidden
@@ -52,11 +53,15 @@ function journaliser(texte) {
   elementJournal.innerText = `${elementJournal.innerText}${texte}\n`;
   elementJournal.scrollTop = elementJournal.scrollHeight;
 }
+const bouton = document.getElementById("ouvrir");
+bouton.addEventListener("click", () => {
+  const dialogue = document.querySelector("dialog");
+  dialogue.showModal();
+});
 ```
 
 ```js
 const dialogue = document.querySelector("dialog");
-dialogue.showModal();
 journaliser(`closedBy: ${dialogue.closedBy}`);
 ```
 

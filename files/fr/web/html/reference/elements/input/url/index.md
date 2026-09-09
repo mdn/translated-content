@@ -74,7 +74,7 @@ Le champ échoue à [la validation des contraintes](/fr/docs/Web/HTML/Guides/Con
 
 ### `pattern`
 
-L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui impose un format à [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value), que cette dernière doit respecter afin que le champ soit [valide](/fr/docs/Web/HTML/Guides/Constraint_validation) . Le contenu de `pattern` doit être une expression rationnelle JavaScript valide, comme utilisé par le type {{JSxRef("RegExp")}} et comme documenté dans [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions). Le marqueur `"u"` est utilisé à la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode et non {{Glossary("ASCII")}}. Il ne faut pas entourer l'expression de barres obliques.
+L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui impose un format à [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value), que cette dernière doit respecter afin que le champ soit [valide](/fr/docs/Web/HTML/Guides/Constraint_validation). Le contenu de `pattern` doit être une expression rationnelle JavaScript valide, comme utilisé par le type {{JSxRef("RegExp")}} et comme documenté dans [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions). Le marqueur `"u"` est utilisé à la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode et non {{Glossary("ASCII")}}. Il ne faut pas entourer l'expression de barres obliques.
 
 Si aucune expression rationnelle n'est fournie ou que celle-ci est invalide, aucune contrainte de format n'est appliquée et cet attribut est ignoré complètement.
 
@@ -118,7 +118,7 @@ L'attribut universel [`spellcheck`](/fr/docs/Web/HTML/Reference/Global_attribute
 
 Un champ de saisie peut avoir la vérification orthographique activée s'il n'utilise pas l'attribut [`readonly`](#readonly) et qu'il n'est pas désactivé.
 
-La valeur renvoyée par la lecture de `spellcheck` ne reflète pas nécessairement l'état réel de la vérification orthographique pour le contrôle si {{Glossary("user agent", "l'agent utilisateur")}} surcharge ce paramètre.
+La valeur retournée par la lecture de `spellcheck` ne reflète pas nécessairement l'état réel de la vérification orthographique pour le contrôle si {{Glossary("user agent", "l'agent utilisateur")}} surcharge ce paramètre.
 
 ## Attributs non-standard
 

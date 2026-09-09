@@ -3,8 +3,6 @@ title: tabs.setZoomSettings()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/setZoomSettings
 ---
 
-{{AddonSidebar}}
-
 Définit les paramètres de zoom pour l'onglet spécifié. Ces paramètres sont réinitialisés aux paramètres par défaut lors de la navigation dans l'onglet.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

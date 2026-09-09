@@ -3,7 +3,7 @@ title: "Element : évènement blur"
 short-title: blur
 slug: Web/API/Element/blur_event
 l10n:
-  sourceCommit: 8ee7b342ad04d3414a678080987f806bb1ea5afa
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("UI Events")}}
@@ -33,13 +33,6 @@ onblur = (event) => { }
 Un objet {{DOMxRef("FocusEvent")}}. Hérite de {{DOMxRef("UIEvent")}} et {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
-
-## Propriétés de l'évènement
-
-_Cette interface hérite également des propriétés de son parent {{DOMxRef("UIEvent")}}, et indirectement de {{DOMxRef("Event")}}._
-
-- {{DOMxRef("FocusEvent.relatedTarget")}}
-  - : L'élément recevant la sélection, le cas échéant.
 
 ## Exemples
 

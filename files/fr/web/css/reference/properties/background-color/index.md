@@ -3,7 +3,7 @@ title: Propriété CSS `background-color`
 short-title: background-color
 slug: Web/CSS/Reference/Properties/background-color
 l10n:
-  sourceCommit: 21fddb9643fae34dce16aec8eb5dd86cc29e0b7c
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-color`** définit la couleur d'arrière-plan d'un élément.
@@ -83,9 +83,9 @@ background-color: revert-layer;
 background-color: unset;
 ```
 
-La propriété `background-color` se définit grâce à une valeur de type `<color>`.
-
 ### Valeurs
+
+Cette propriété se définit grâce à une valeur de type `<color>`&nbsp;:
 
 - {{CSSxRef("&lt;color&gt;")}}
   - : La couleur uniforme de l'arrière-plan. Elle est affichée derrière toute {{CSSxRef("background-image")}} définie, bien que la couleur reste visible à travers toute transparence présente dans l'image.

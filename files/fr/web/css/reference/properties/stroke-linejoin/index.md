@@ -3,7 +3,7 @@ title: Propriété CSS `stroke-linejoin`
 short-title: stroke-linejoin
 slug: Web/CSS/Reference/Properties/stroke-linejoin
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: d19dec85109590176f946fcceef48c787d578b1e
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`stroke-linejoin`** définit la forme à utiliser aux coins des chemins tracés d'un élément [SVG](/fr/docs/Web/SVG). Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("stroke-linejoin")}} de l'élément.

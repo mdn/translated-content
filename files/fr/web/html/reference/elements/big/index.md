@@ -3,10 +3,8 @@ title: "Élément HTML `<big>` : l'élément d'agrandissement de texte"
 short-title: <big>
 slug: Web/HTML/Reference/Elements/big
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) obsolète **`<big>`** affiche le texte qu'il contient avec une taille de police supérieure d'un niveau à celle du texte environnant (par exemple, `medium` devient `large`). La taille est limitée à la valeur maximale autorisée par le navigateur.
 

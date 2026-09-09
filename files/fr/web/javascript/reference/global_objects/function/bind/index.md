@@ -3,7 +3,7 @@ title: "Function : méthode bind()"
 short-title: bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
 La méthode **`bind()`** des instances de {{JSxRef("Function")}} crée une nouvelle fonction qui, lorsqu'elle est appelée, appelle cette fonction avec son mot-clé `this` défini sur la valeur fournie, et une séquence d'arguments donnée précédant ceux fournis lors de l'appel de la nouvelle fonction.
@@ -39,7 +39,7 @@ bind(thisArg, arg1, arg2, /* …, */ argN)
 ### Paramètres
 
 - `thisArg`
-  - : La valeur à transmettre en tant que paramètre `this` à la fonction cible `func` lorsque la fonction liée est appelée. Si la fonction n'est pas en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), {{JSxRef("null")}} et {{JSxRef("undefined")}} seront remplacées par l'objet global, et les valeurs primitives seront converties en objets. La valeur est ignorée si la fonction liée est construite en utilisant l'opérateur {{JSxRef("new")}}.
+  - : La valeur à transmettre en tant que paramètre `this` à la fonction cible `func` lorsque la fonction liée est appelée. Si la fonction n'est pas en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), {{JSxRef("null")}} et {{JSxRef("undefined")}} sont remplacées par l'objet global, et les valeurs primitives sont converties en objets. La valeur est ignorée si la fonction liée est construite en utilisant l'opérateur {{JSxRef("new")}}.
 - `arg1`, …, `argN` {{Optional_Inline}}
   - : Arguments à faire précéder aux arguments fournis à la fonction liée lors de l'invocation de `func`.
 
@@ -64,7 +64,7 @@ const journalAttache2 = journalAttache.bind("cette nouvelle valeur", 3, 4);
 journalAttache2(5, 6); // "cette valeur", 1, 2, 3, 4, 5, 6
 ```
 
-Une fonction liée peut également être construite à l'aide de l'opérateur {{JSxRef("new")}} si sa fonction cible est constructible. Cela agit comme si la fonction cible avait été construite à la place. Les arguments préfixés sont transmis à la fonction cible comme d'habitude, tandis que la valeur `this` fournie est ignorée (car la construction prépare son propre `this`, comme le montrent les paramètres de {{JSxRef("Reflect.construct")}}). Si la fonction liée est directement construite, {{JSxRef("Operators/new.target", "new.target")}} sera la fonction cible. (Autrement dit, la fonction liée est transparente pour `new.target`.)
+Une fonction liée peut également être construite à l'aide de l'opérateur {{JSxRef("new")}} si sa fonction cible est constructible. Cela agit comme si la fonction cible avait été construite à la place. Les arguments préfixés sont transmis à la fonction cible comme d'habitude, tandis que la valeur `this` fournie est ignorée (car la construction prépare son propre `this`, comme le montrent les paramètres de {{JSxRef("Reflect.construct")}}). Si la fonction liée est directement construite, {{JSxRef("Operators/new.target", "new.target")}} est la fonction cible. (Autrement dit, la fonction liée est transparente pour `new.target`.)
 
 ```js
 class Base {
@@ -107,7 +107,7 @@ La fonction liée hérite également de la [chaîne de prototypes](/fr/docs/Web/
 
 ### Créer une fonction liée
 
-La façon la plus simple d'utiliser `bind()` est de faire une fonction qui, peu importe la façon dont elle est appellée, le sera avec une certaine valeur `this` donnée.
+La façon la plus simple d'utiliser `bind()` est de faire une fonction qui, peu importe la façon dont elle est appelée, l'est avec une certaine valeur `this` donnée.
 
 Une erreur courante lorsqu'on débute en JavaScript est d'extraire une méthode d'un objet, puis plus tard d'appeler cette méthode depuis un objet et de s'attendre à utiliser l'objet original en tant que valeur de `this` (par exemple en utilisant cette méthode dans un _callback_).
 
@@ -137,13 +137,13 @@ console.log(boundGetX()); // 81
 ```
 
 > [!NOTE]
-> Si vous exécutez cet exemple en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), le paramètre `this` de `retrieveX` sera lié à `undefined` au lieu de `globalThis`, ce qui fera échouer l'appel à `retrieveX()`.
+> Si vous exécutez cet exemple en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), le paramètre `this` de `retrieveX` est lié à `undefined` au lieu de `globalThis`, ce qui fait échouer l'appel à `retrieveX()`.
 >
-> Si vous exécutez cet exemple dans un module ECMAScript, le `this` de niveau supérieur sera lié à `undefined` au lieu de `globalThis`, ce qui fera échouer l'affectation `this.x = 9`.
+> Si vous exécutez cet exemple dans un module ECMAScript, le `this` de niveau supérieur est lié à `undefined` au lieu de `globalThis`, ce qui fait échouer l'affectation `this.x = 9`.
 >
-> Si vous exécutez cet exemple dans un module Node CommonJS, le `this` de niveau supérieur sera lié à `module.exports` au lieu de `globalThis`. Cependant, le paramètre `this` de `retrieveX` sera toujours lié à `globalThis` en mode non strict et à `undefined` en mode strict. Ainsi, en mode non strict (le mode par défaut), l'appel à `retrieveX()` retournera `undefined` car `this.x = 9` écrit dans un objet différent (`module.exports`) de celui que `getX` lit (`globalThis`).
+> Si vous exécutez cet exemple dans un module Node CommonJS, le `this` de niveau supérieur est lié à `module.exports` au lieu de `globalThis`. Cependant, le paramètre `this` de `retrieveX` est toujours lié à `globalThis` en mode non strict et à `undefined` en mode strict. Ainsi, en mode non strict (le mode par défaut), l'appel à `retrieveX()` retourne `undefined`, car `this.x = 9` écrit dans un objet différent (`module.exports`) de celui que `getX` lit (`globalThis`).
 
-En fait, certaines «&nbsp;médodes&nbsp;» intégrées sont aussi des accesseurs qui retournent des fonctions liées — un exemple notable est [`Intl.NumberFormat.prototype.format()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format#utiliser_format_avec_map), qui, lorsqu'on y accède, retourne une fonction liée que vous pouvez directement transmettre comme fonction de rappel.
+En fait, certaines «&nbsp;méthodes&nbsp;» intégrées sont aussi des accesseurs qui retournent des fonctions liées — un exemple notable est [`Intl.NumberFormat.prototype.format()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format#utiliser_format_avec_map), qui, lorsqu'on y accède, retourne une fonction liée que vous pouvez directement transmettre comme fonction de rappel.
 
 ### Fonctions partiellement appliquées
 
@@ -179,7 +179,7 @@ console.log(ajoutertrenteSept(5, 10)); // 42
 
 ### Avec `setTimeout()`
 
-Par défaut, à l'intérieur de {{DOMxRef("Window.setTimeout", "setTimeout()")}}, le mot-clé `this` sera défini sur [`globalThis`](/fr/docs/Web/JavaScript/Reference/Global_Objects/globalThis), qui correspond à {{DOMxRef("window")}} dans les navigateurs. Lorsque vous travaillez avec des méthodes de classe qui nécessitent que `this` fasse référence à des instances de classe, vous pouvez lier explicitement `this` à la fonction de rappel afin de conserver l'instance.
+Par défaut, à l'intérieur de {{DOMxRef("Window.setTimeout", "setTimeout()")}}, le mot-clé `this` est défini sur [`globalThis`](/fr/docs/Web/JavaScript/Reference/Global_Objects/globalThis), qui correspond à {{DOMxRef("window")}} dans les navigateurs. Lorsque vous travaillez avec des méthodes de classe qui nécessitent que `this` fasse référence à des instances de classe, vous pouvez lier explicitement `this` à la fonction de rappel afin de conserver l'instance.
 
 ```js
 class FleuraisonTardive {
@@ -205,7 +205,7 @@ Vous pouvez également utiliser des [fonctions fléchées](/fr/docs/Web/JavaScri
 ```js
 class FleuraisonTardive {
   floraison() {
-    // éclare la floraison après un délai d'une seconde
+    // Déclare la floraison après un délai d'une seconde
     setTimeout(() => this.declare(), 1000);
   }
 }
@@ -229,7 +229,7 @@ const p = new Point(1, 2);
 p.toString();
 // '1,2'
 
-// Cette version montre que la valeur de thisArg n'a pas d'importance car elle est ignorée
+// Cette version montre que la valeur de thisArg n'a pas d'importance, car elle est ignorée
 const YAxisPoint = Point.bind(null, 0 /* x */);
 
 const axisPoint = new YAxisPoint(5);
@@ -242,7 +242,7 @@ new YAxisPoint(17, 42) instanceof Point; // true
 
 Notez qu'il n'est pas nécessaire de faire quoi que ce soit de particulier pour créer une fonction liée à utiliser avec {{JSxRef("new")}}. {{JSxRef("Operators/new.target", "new.target")}}, {{JSxRef("instanceof")}}, {{JSxRef("this")}} etc. fonctionnent tous comme prévu, comme si le constructeur n'avait jamais été lié. La seule différence est qu'elle ne peut plus être utilisée pour {{JSxRef("Classes/extends", "extends")}}.
 
-Le corollaire est qu'il n'est pas nécessaire de faire quoi que ce soit de particulier pour créer une fonction liée à appeler simplement, même si vous préféreriez que la fonction liée ne soit appelée qu'avec {{JSxRef("new")}}. Si vous l'appelez sans `new`, le `this` lié n'est soudainement plus ignoré.
+Le corollaire est qu'il n'est pas nécessaire de faire quoi que ce soit de particulier pour créer une fonction liée à appeler simplement, même si vous préférez que la fonction liée ne soit appelée qu'avec {{JSxRef("new")}}. Si vous l'appelez sans `new`, le `this` lié n'est soudainement plus ignoré.
 
 ```js
 const objetVide = {};
@@ -281,7 +281,7 @@ console.log(new BoundDerived() instanceof Derived); // true
 
 `bind()` est également utile dans les cas où vous souhaitez transformer une méthode qui nécessite une valeur `this` spécifique en une fonction utilitaire simple qui accepte l'ancien paramètre `this` comme paramètre normal. Cela ressemble à la façon dont fonctionnent les fonctions utilitaires généralistes&nbsp;: au lieu d'appeler `array.map(callback)`, vous utilisez `map(array, callback)`, ce qui vous permet d'utiliser `map` avec des objets ressemblant à des tableaux qui ne sont pas des tableaux (par exemple, [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments)) sans modifier `Object.prototype`.
 
-Prenons {{JSxRef("Array.prototype.slice()")}}, par exemple, que vous souhaitez utiliser pour convertir un objet ressemblant à un tableau en un vrai tableau. Vous pourriez créer un raccourci comme ceci&nbsp;:
+Prenons {{JSxRef("Array.prototype.slice()")}}, par exemple, que vous souhaitez utiliser pour convertir un objet ressemblant à un tableau en un vrai tableau. Vous pouvez créer un raccourci comme ceci&nbsp;:
 
 ```js
 const slice = Array.prototype.slice;

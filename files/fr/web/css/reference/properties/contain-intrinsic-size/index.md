@@ -3,10 +3,10 @@ title: Propriété CSS `contain-intrinsic-size`
 short-title: contain-intrinsic-size
 slug: Web/CSS/Reference/Properties/contain-intrinsic-size
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 61f27416f7cfa79bd102042eeb3e44fe629d9c95
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`contain-intrinsic-size`** définit la taille d'un élément que le navigateur utilisera pour la mise en page lorsque l'élément est soumis à la [compartimentation de la taille](/fr/docs/Web/CSS/Guides/Containment/Using#compartimentation_de_la_taille).
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`contain-intrinsic-size`** définit la taille d'un élément que le navigateur utilise pour la mise en page lorsque l'élément est envoyé à la [compartimentation de la taille](/fr/docs/Web/CSS/Guides/Containment/Using#compartimentation_de_la_taille).
 
 ## Propriétés constituantes
 
@@ -57,24 +57,24 @@ Les valeurs suivantes peuvent être définies pour la propriété `contain-intri
 
 Si une valeur est fournie en tant que mot‑clé, en tant que longueur ou en tant que paire `auto [<length> | none]`, elle s'applique à la fois à la largeur et à la hauteur.
 
-Deux valeurs de longueur peuvent être définies ; elles s'appliquent respectivement à la largeur puis à la hauteur.
+Deux valeurs de longueur peuvent être définies&nbsp;; elles s'appliquent respectivement à la largeur puis à la hauteur.
 Si deux paires `auto [<length> | none]` sont définies, la première paire s'applique à la largeur et la seconde à la hauteur.
 
 ## Description
 
 La propriété est généralement appliquée aux éléments susceptibles de déclencher la compartimentation de taille, tels que {{CSSxRef("contain", "contain: size")}} et {{CSSxRef("content-visibility")}}.
 
-La compartimentation de taille permet à un agent utilisateur de disposer un élément comme s'il avait une taille fixe, évitant des recalculs de mise en page inutiles en évitant le rerendu des éléments enfants pour déterminer la taille réelle (améliorant ainsi l'expérience utilisateur).
-Par défaut, la compartimentation de taille considère les éléments comme s'ils n'avaient pas de contenu et peut contracter la mise en page de la même manière que si les contenus n'avaient ni largeur ni hauteur.
-La propriété `contain-intrinsic-inline-size` permet aux auteur·ice·s de définir une valeur appropriée à utiliser comme taille en ligne pour la mise en page.
+La compartimentation de taille permet à un agent utilisateur de disposer un élément comme s'il a une taille fixe, évitant des recalcules de mise en page inutiles en évitant de refaire un rendu des éléments enfants pour déterminer la taille réelle (améliorant ainsi l'expérience utilisateur).
+Par défaut, la compartimentation de taille considère les éléments comme s'ils n'ont pas de contenu et peut contracter la mise en page de la même manière que si les contenus n'ont ni largeur ni hauteur.
+La propriété `contain-intrinsic-inline-size` permet aux auteur·ice·s de définir une valeur appropriée à utiliser comme taille en incise (<i lang="en">inline</i> en anglais) pour la mise en page.
 
-La valeur `auto <length>` permet de mémoriser la taille en ligne d'un élément si celui‑ci a déjà été «&nbsp;rendu normalement&nbsp;» (avec ses éléments enfants), puis d'utiliser cette valeur mémorisée à la place de la valeur définie lorsque l'élément omet son contenu.
+La valeur `auto <length>` permet de mémoriser la taille en incise d'un élément si celui‑ci a déjà été «&nbsp;rendu normalement&nbsp;» (avec ses éléments enfants), puis d'utiliser cette valeur mémorisée à la place de la valeur définie lorsque l'élément omet son contenu.
 Cela permet aux éléments hors écran avec {{CSSxRef("content-visibility", "content-visibility: auto")}} de bénéficier de la compartimentation de taille sans que les développeur·euse·s aient à être aussi précis·e·s dans leurs estimations de la taille des éléments.
 La valeur mémorisée n'est pas utilisée si les éléments enfants sont en cours de rendu (si la compartimentation de taille est activée, la `<length>` définie est utilisée).
 
 Dans les mises en page en grille et en colonnes multiples, une taille explicite est traitée différemment d'une hauteur implicite basée sur le contenu.
-Les éléments peuvent être mis en page de façon sensiblement différente de ce qu'elle serait si l'élément était simplement rempli de contenu jusqu'à cette hauteur.
-La valeur `auto none` permet à l'élément de revenir à `contain-intrinsic-size: none` si aucune valeur mémorisée n'existe, ce qui permet de disposer l'élément comme s'il n'avait pas de contenu. Ceci est presque toujours préférable à définir 0px comme taille intrinsèque dans les mises en page en grille et en colonnes multiples, où les éléments contenus peuvent déborder de leurs parents et provoquer une mise en page inattendue.
+Les éléments peuvent être mis en page de façon sensiblement différente de ce qu'elle est si l'élément est simplement rempli de contenu jusqu'à cette hauteur.
+La valeur `auto none` permet à l'élément de revenir à `contain-intrinsic-size: none` si aucune valeur mémorisée n'existe, ce qui permet de disposer l'élément comme s'il n'a pas de contenu. Ceci est presque toujours préférable à définir 0px comme taille intrinsèque dans les mises en page en grille et en colonnes multiples, où les éléments contenus peuvent déborder de leurs parents et provoquer une mise en page inattendue.
 
 ## Définition formelle
 
@@ -89,13 +89,13 @@ La valeur `auto none` permet à l'élément de revenir à `contain-intrinsic-siz
 ### Utiliser des paires de valeurs automatiques pour la taille intrinsèque
 
 Cet exemple montre `contain-intrinsic-size: auto <length>` et `contain-intrinsic-size: auto none`, dans une mise en page où de nombreux éléments affichés verticalement ont des estimations de taille intrinsèque à la fois exactes et inexactes.
-L'utilisation de `content-visibility: auto` évite de rendre les éléments lorsqu'ils sont hors écran, ainsi cette propriété se prête bien à une combinaison avec `contain-intrinsic-size` pour améliorer les performances de rendu et réduire les [recalculs de mise en page](/fr/docs/Glossary/Reflow).
+L'utilisation de `content-visibility: auto` évite de rendre les éléments lorsqu'ils sont hors écran, ainsi cette propriété se prête bien à une combinaison avec `contain-intrinsic-size` pour améliorer les performances de rendu et réduire les [recalcules de mise en page](/fr/docs/Glossary/Reflow).
 
 La paire de valeurs `contain-intrinsic-size: auto 500px` indique au navigateur d'utiliser 500px comme une sorte de «&nbsp;taille de remplacement&nbsp;» (largeur et hauteur) pour l'élément lorsqu'il est hors écran et que la page est en cours de mise en page.
-Lorsque l'utilisateur fait défiler jusqu'à l'élément et qu'il doit être affiché, le navigateur calculera la taille réelle de l'élément et de son contenu.
-S'il existe une différence entre la taille de remplacement et la taille calculée, cela peut forcer un nouveau recalcul de la mise en page, avec les modifications associées de la position de la barre latérale.
+Lorsque l'utilisateur·ice fait défiler jusqu'à l'élément et qu'il doit être affiché, le navigateur calcule la taille réelle de l'élément et de son contenu.
+S'il existe une différence entre la taille de remplacement et la taille calculée, cela peut forcer un nouveau recalcule de la mise en page, avec les modifications associées de la position de la barre latérale.
 
-Une fois que le navigateur dispose de l'information de taille réelle pour l'élément, il mémorisera cette taille lorsque l'élément repassera hors écran, et utilisera la taille mémorisée pour les calculs de mise en page à la place de la valeur de remplacement.
+Une fois que le navigateur dispose de l'information de taille réelle pour l'élément, il mémorise cette taille lorsque l'élément repasse hors écran, et utilise la taille mémorisée pour les calculs de mise en page à la place de la valeur de remplacement.
 L'avantage est que le navigateur n'a pas besoin de rendre de façon répétée le contenu de l'élément pour calculer sa taille, ce qui est particulièrement utile lorsque le contenu est complexe ou dépend de ressources réseau ou de JavaScript.
 
 #### HTML
@@ -243,7 +243,7 @@ p {
 - Les dernières boîtes ont `auto none`, donc elles ont une taille estimée nulle.
   Lorsqu'elles apparaissent à l'écran, la taille de l'élément et de son parent est recalculée pour être beaucoup plus grande, si bien que la barre de défilement diminue et remonte.
 
-Après avoir défilé jusqu'en bas, vous pouvez ensuite faire défiler la page vers le haut et vers le bas en douceur, car l'utilisation de `content-visibility: auto` enregistre la taille réellement rendue de l'élément pour la prochaine fois où il s'affichera.
+Après avoir défilé jusqu'en bas, vous pouvez ensuite faire défiler la page vers le haut et vers le bas en douceur, car l'utilisation de `content-visibility: auto` enregistre la taille réellement rendue de l'élément pour la prochaine fois où il s'affiche.
 
 {{EmbedLiveSample("Utiliser des paires de valeurs automatiques pour la taille intrinsèque", 800, 400)}}
 
@@ -309,7 +309,7 @@ contentVisibilitySelector.addEventListener("change", () => {
 
 #### HTML
 
-Le HTML définit deux boutons, un élément conteneur qui est soumis à la compartimentation via la propriété `content-visibility`.
+Le HTML définit deux boutons, un élément conteneur qui est envoyé à la compartimentation par la propriété `content-visibility`.
 
 ```html
 <p>
@@ -344,7 +344,7 @@ Le HTML définit deux boutons, un élément conteneur qui est soumis à la compa
 
 Utilisez les sélecteurs pour appliquer les styles donnés à l'élément HTML `div` contenant.
 Notez que lorsque `content-visibility` est `visible` ou `auto`, modifier `contain-intrinsic-size` ne fait aucune différence.
-En revanche, si le contenu est masqué, définir `contain-intrinsic-size` sur `none` contracte l'élément parent comme si son élément enfant n'avait aucune taille.
+En revanche, si le contenu est masqué, définir `contain-intrinsic-size` sur `none` contracte l'élément parent comme si son élément enfant n'a aucune taille.
 
 {{EmbedLiveSample("Définir la taille intrinsèque", "100%", 170)}}
 

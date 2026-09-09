@@ -3,10 +3,10 @@ title: Propriété CSS `border-radius`
 short-title: border-radius
 slug: Web/CSS/Reference/Properties/border-radius
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`border-radius`** permet d'arrondir les coins du bord extérieur d'un élément. Vous pouvez définir un seul rayon pour obtenir des coins circulaires, ou deux rayons pour obtenir des coins elliptiques.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-radius`** permet d'arrondir les coins du bord extérieur d'un élément. Vous pouvez définir un seul rayon pour obtenir des coins circulaires, ou deux rayons pour obtenir des coins elliptiques.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: border-radius")}}
 
@@ -198,7 +198,7 @@ La courbure de la bordure s'applique à l'arrière-plan (défini avec la propri�
 La propriété `border-radius` ne s'applique pas aux éléments de tableaux lorsque {{CSSxRef("border-collapse")}} vaut `collapse`.
 
 > [!NOTE]
-> Comme pour les autres propriétés raccourcies, il n'est pas possible d'hériter de valeurs individuelles (par exemple `border-radius: 0 0 inherit inherit` pour surcharger les définitions existantes). Si on souhaite avoir un comportement de ce type, on devra utiliser les propriétés détaillées.
+> Comme pour les autres propriétés raccourcies, il n'est pas possible d'hériter de valeurs individuelles (par exemple `border-radius: 0 0 inherit inherit` pour surcharger les définitions existantes). Si on souhaite avoir un comportement de ce type, on doit utiliser les propriétés détaillées.
 
 ## Définition formelle
 
@@ -304,11 +304,11 @@ pre#example-7 {
 
 ### Utiliser `corner-shape` avec `border-radius`
 
-Lorsqu'une valeur de `border-radius` différente de `0` est appliquée à un coin d'une boîte, vous pouvez utiliser la propriété {{CSSxRef("corner-shape")}} (ou l'une de ses [formes longues et raccourcies](/fr/docs/Web/CSS/Reference/Properties/corner-shape#propriétés_raccourcies_et_longues_de_corner--shape)) pour appliquer des formes personnalisées à ce coin, comme un biseau, une encoche ou une superellipse. Cet exemple montre l'utilisation de `corner-shape`.
+Lorsqu'une valeur de `border-radius` différente de `0` est appliquée à un coin d'une boîte, vous pouvez utiliser la propriété {{CSSxRef("corner-shape")}} (ou l'une de ses [formes longues et raccourcies](/fr/docs/Web/CSS/Reference/Properties/corner-shape#propriétés_raccourcies_et_longues_de_corner--shape)) pour appliquer des formes personnalisées à ce coin, comme un biseau, une encoche ou une super-ellipse. Cet exemple montre l'utilisation de `corner-shape`.
 
 #### HTML
 
-The markup for this example contains a single {{HTMLElement("div")}} element.
+Le code de cet exemple contient un seul élément HTML {{HTMLElement("div")}}.
 
 ```html live-sample___basic-usage
 <div></div>

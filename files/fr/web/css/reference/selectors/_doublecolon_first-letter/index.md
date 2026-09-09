@@ -3,7 +3,7 @@ title: Pseudo-élément CSS `::first-letter`
 short-title: ::first-letter
 slug: Web/CSS/Reference/Selectors/::first-letter
 l10n:
-  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
+  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::first-letter`** sélectionne la première lettre de la première ligne d'un bloc, si elle n'est pas précédée par un quelconque autre contenu (comme une image ou un tableau en ligne) sur sa ligne.
@@ -35,7 +35,7 @@ La première lettre d'un élément n'est pas toujours triviale à identifier&nbs
 
 - La ponctuation qui précède ou suit immédiatement la première lettre est incluse dans la correspondance. La ponctuation comprend tout caractère Unicode défini dans les classes _open_ (Ps), _close_ (Pe), _initial quote_ (Pi), _final quote_ (Pf) et _other punctuation_ (Po).
 - Certaines langues ont des digraphes qui sont toujours capitalisés ensemble, comme le `IJ` en néerlandais. Dans ces cas, les deux lettres du digraphe doivent être correspondantes par le pseudo-élément `::first-letter`.
-- Une combinaison du pseudo-élément {{CSSxRef("::before")}} et de la propriété {{CSSxRef("content")}} peut injecter du texte au début de l'élément. Dans ce cas, `::first-letter` correspondra à la première lettre de ce contenu généré.
+- Une combinaison du pseudo-élément {{CSSxRef("::before")}} et de la propriété {{CSSxRef("content")}} peut injecter du texte au début de l'élément. Dans ce cas, `::first-letter` correspond à la première lettre de ce contenu généré.
 
 > [!NOTE]
 > CSS a introduit la notation `::first-letter` (avec deux deux-points) pour distinguer [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) des [pseudo-elements](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Pour des raisons de compatibilité, les navigateurs acceptent également `:first-letter`, introduit plus tôt.

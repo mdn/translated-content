@@ -395,4 +395,4 @@ try {
 ## Voir aussi
 
 - [Prothèse d'émulation pour `Intl.supportedValuesOf` dans FormatJS <sup>(angl.)</sup>](https://formatjs.github.io/docs/polyfills/intl-supportedvaluesof/)
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl")}}

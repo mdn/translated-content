@@ -126,5 +126,5 @@ new Intl.DurationFormat("en", { style: "digital", fractionalDigits: 3 }).format(
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.DurationFormat")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Intl.DurationFormat")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}

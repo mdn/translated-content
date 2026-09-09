@@ -3,10 +3,10 @@ title: "Document : propriété domain"
 short-title: domain
 slug: Web/API/Document/domain
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 La propriété **`domain`** de l'interface {{DOMxRef("Document")}} obtient/définit la partie domaine de {{Glossary("origin", "l'origine")}} du document courant, telle qu'utilisée par la [politique de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy).
 
@@ -64,7 +64,7 @@ On notera que définir `document.domain` sur sa valeur actuelle n'est pas une op
 document.domain = document.domain;
 ```
 
-alors elle sera considérée comme inter-origine et sera comptée comme inter-origine par rapport à toutes les autres pages normalement de même origine qui n'ont pas fait la même chose.
+alors elle est considérée comme inter-origine et est comptée comme inter-origine par rapport à toutes les autres pages normalement de même origine qui n'ont pas fait la même chose.
 
 #### Obsolescence
 
@@ -76,7 +76,7 @@ Cela est particulièrement dangereux sur un hébergement partagé. Par exemple, 
 
 Des problèmes similaires se produisent avec les sites d'hébergement partagé qui attribuent à chaque client un sous-domaine différent. Si un site définit `document.domain`, tout autre client sur un sous-domaine différent peut maintenant faire la même chose et commencer à accéder aux données du site original.
 
-Au lieu d'utiliser `document.domain` pour faciliter la communication inter-origine, vous devriez utiliser {{DOMxRef("Window.postMessage")}} pour envoyer un message asynchrone à l'autre origine. Cet accès contrôlé via le passage de messages est beaucoup plus sûr que l'exposition générale de toutes les données causée par `document.domain`.
+Au lieu d'utiliser `document.domain` pour faciliter la communication inter-origine, vous devriez utiliser {{DOMxRef("Window.postMessage")}} pour envoyer un message asynchrone à l'autre origine. Cet accès contrôlé avec le passage de messages est beaucoup plus sûr que l'exposition générale de toutes les données causée par `document.domain`.
 
 #### Échecs
 
@@ -97,7 +97,7 @@ De plus, dans le cadre de son obsolescence, il ne fera rien lorsqu'il est combin
 - Si utilisé sur une page isolée par origine, c'est-à-dire une page qui utilise l'en-tête HTTP
   {{HTTPHeader("Origin-Agent-Cluster")}} {{Experimental_Inline}}
 
-Enfin, définir `document.domain` ne modifie pas l'origine utilisée pour les vérifications d'origine par certaines API Web, empêchant l'accès aux sous-domaines via ce mécanisme. Les API concernées incluent (mais ne sont pas limitées à)&nbsp;: {{DOMxRef("Window.localStorage")}}, [l'API IndexedDB](/fr/docs/Web/API/IndexedDB_API), {{DOMxRef("BroadcastChannel")}}, {{DOMxRef("SharedWorker")}}.
+Enfin, définir `document.domain` ne modifie pas l'origine utilisée pour les vérifications d'origine par certaines API Web, empêchant l'accès aux sous-domaines avec ce mécanisme. Les API concernées incluent (mais ne sont pas limitées à)&nbsp;: {{DOMxRef("Window.localStorage")}}, [l'API IndexedDB](/fr/docs/Web/API/IndexedDB_API), {{DOMxRef("BroadcastChannel")}}, {{DOMxRef("SharedWorker")}}.
 
 ## Spécification
 

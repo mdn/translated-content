@@ -1,15 +1,17 @@
 ---
 title: Type conversion (型変換)
 slug: Glossary/Type_Conversion
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+型変換 (Type conversion) (または型キャスト (typecasting) ) は、データをあるデータ型から別なデータ型に変換することを意味します。暗黙の型変換は、コンパイラーが自動的にデータ型を割り当てるものの、その場でソースコードで明示的に型変換が必要な場合もあります。
 
-型変換 (Type conversion) (または型キャスト (typecasting) ) は、データをあるデータ型から別なデータ型に変換することを意味します。*暗黙の型変換*は、コンパイラーが自動的にデータ型を割り当てるものの、その場でソースコードで*明示的に*型変換が必要な場合もあります。例えば、 `5+2.0` という命令が与えられた場合、浮動小数点の `2.0` は暗黙的に整数に型キャストされますが、 `Number("0x11")` という命令が与えられた場合、 "0x11" の文字列は明示的に数値の 17 として型キャストされます。
+例えば、`"foo" + 1` という式の場合、数値 ({{glossary("Number")}}) である `1` は暗黙的に文字列 ({{glossary("String")}}) に変換され、この式は `"foo1"` を返します。また、命令 `Number("0x11")` の場合、文字列 `"0x11"` は明示的に数値 `17` に変換されます。
 
-1. 関連用語:
-   1. {{Glossary("Type", "型")}}
-   2. {{Glossary("Type coercion", "型強制")}}
+## 関連情報
 
-2. Wikipedia の記事
-   1. [型変換](https://ja.wikipedia.org/wiki/型変換)
+- [型変換](https://ja.wikipedia.org/wiki/型変換) (ウィキペディア)
+- 関連用語:
+  - {{Glossary("Type", "型")}}
+  - {{Glossary("Type coercion", "型強制")}}

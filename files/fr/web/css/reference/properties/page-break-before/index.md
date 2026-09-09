@@ -3,17 +3,15 @@ title: Propriété CSS `page-break-before`
 short-title: page-break-before
 slug: Web/CSS/Reference/Properties/page-break-before
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 > [!WARNING]
 > Cette propriété a été remplacée par la propriété {{CSSxRef("break-before")}}.
 
 La propriété [CSS](/fr/docs/Web/CSS) **`page-break-before`** permet d'ajuster les sauts de page placés _avant_ l'élément courant.
 
-Cette propriété s'applique aux éléments de blocs qui génèrent une boîte. Elle ne s'appliquera pas à un {{HTMLElement("div")}} qui ne génère pas de boîte.
+Cette propriété s'applique aux éléments de blocs qui génèrent une boîte. Elle ne s'applique pas à un {{HTMLElement("div")}} qui ne génère pas de boîte.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: page-break-before")}}
 
@@ -85,6 +83,8 @@ page-break-before: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `auto` {{Deprecated_Inline}}
   - : Valeur initiale. Les sauts de page sont automatiques (ni forcés, ni interdits).
 - `always` {{Deprecated_Inline}}
@@ -104,7 +104,7 @@ page-break-before: unset;
 
 La propriété `page-break-before` est désormais une propriété héritée, remplacée par {{CSSxRef("break-before")}}.
 
-Pour des raisons de compatibilité, `page-break-before` doit être traité par les navigateurs comme un alias de `break-before`. Cela garantit que les sites utilisant `page-break-before` continuent de fonctionner comme prévu. Un sous-ensemble de valeurs doit être aliasé comme suit&nbsp;:
+Pour des raisons de compatibilité, `page-break-before` doit être traité par les navigateurs comme un alias de `break-before`. Cela garantit que les sites utilisant `page-break-before` continuent de fonctionner comme prévu. Un sous-ensemble de valeurs doit avoir un alias comme suit&nbsp;:
 
 | page-break-before | break-before |
 | ----------------- | ------------ |

@@ -3,7 +3,7 @@ title: Propriété CSS `column-count`
 short-title: column-count
 slug: Web/CSS/Reference/Properties/column-count
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`column-count`** divise le contenu d'un élément en le répartissant dans le nombre de colonnes à définir.
@@ -67,6 +67,8 @@ column-count: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie par une valeur unique choisie parmi la liste suivante&nbsp;:
 
 - `auto`
   - : Le nombre de colonnes est déterminé par d'autres propriétés CSS, telles que {{CSSxRef("column-width")}}.

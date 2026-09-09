@@ -2,14 +2,14 @@
 title: HTMLStyleElement
 slug: Web/API/HTMLStyleElement
 l10n:
-  sourceCommit: 7cd4706990ab95794415aee05ba0a9662e742a17
+  sourceCommit: b2c48c8b7c097aeab4bc15a388c913f466f40e25
 ---
 
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLStyleElement`** représente un élément HTML {{HTMLElement("style")}}. Elle hérite des propriétés et méthodes de son parent, {{DOMxRef("HTMLElement")}}.
 
-Cette interface ne permet pas de manipuler le CSS qu'elle contient (dans la plupart des cas). Pour manipuler le CSS, consultez [Utiliser des informations de mise en forme dynamiques](/fr/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information) pour un aperçu des objets permettant de manipuler les propriétés CSS définies via le DOM.
+Dans la plupart des cas, cette interface ne permet pas de manipuler le CSS qu'elle contient. Pour manipuler le CSS, consultez [Utiliser des informations de mise en forme dynamiques](/fr/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information) pour un aperçu des objets permettant de manipuler les propriétés CSS définies par le DOM.
 
 {{InheritanceDiagram}}
 

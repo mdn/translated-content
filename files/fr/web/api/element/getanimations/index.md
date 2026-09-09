@@ -3,7 +3,7 @@ title: "Element : méthode getAnimations()"
 short-title: getAnimations()
 slug: Web/API/Element/getAnimations
 l10n:
-  sourceCommit: 24e13993867fc8fd95d6112117b170595b015aee
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 {{APIRef("Web Animations")}}
@@ -81,7 +81,7 @@ L'animation est initialement en pause afin que nous puissions la démarrer en Ja
 .barre-progression {
   width: 100%;
   height: 20px;
-  background: #eee;
+  background: #eeeeee;
   border-radius: 4px;
   overflow: hidden;
 }

@@ -1,6 +1,8 @@
 ---
 title: パドルとキーボード操作
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
+l10n:
+  sourceCommit: 56718ef243af7c00ad3e848d436e718499c0590f
 ---
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}
@@ -47,11 +49,11 @@ let rightPressed = false;
 let leftPressed = false;
 ```
 
-最初は制御ボタンは押されていないため、どちらにおいても既定値は `false` です。ボタンが押されたのを検知するため、 2 つのイベントリスナーを設定します。 JavaScript の最後にある `setInterval()` の行のちょうど上に次のコードを追記してください。
+最初は制御ボタンは押されていないため、どちらにおいても既定値は `false` です。ボタンが押されたのを検知するため、 2 つのイベントリスナーを設定します。`drawBall` 関数の定義のすぐ上に、次の行を追加してください。
 
 ```js
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("keydown", keyDownHandler);
+document.addEventListener("keyup", keyUpHandler);
 ```
 
 キーボードのキーのどれかに対して `keydown` イベントが発生したとき（どれかが押されたとき）、 `keyDownHandler()` 関数が実行されます。 2 つ目のリスナーについても同様で、（そのキーが押されなくなったき） `keyup` イベントは `keyUpHandler()` 関数を呼び出します。自分の `addEventListener()` の行の下に次のコードを追記してください。
@@ -110,11 +112,112 @@ if (rightPressed) {
 drawPaddle();
 ```
 
-## 自分のコードと比べる
+## 自分のコードと比べよう
 
 自分のコードと比べられる、実際に動くコードがこちらになります。
 
-{{JSFiddleEmbed("https://jsfiddle.net/L9xfn4up/1/","","395")}}
+```html hidden
+<canvas id="myCanvas" width="480" height="320"></canvas>
+<button id="runButton">ゲーム開始</button>
+```
+
+```css hidden
+canvas {
+  background: #eeeeee;
+}
+button {
+  display: block;
+}
+```
+
+```js hidden
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+const ballRadius = 10;
+let x = canvas.width / 2;
+let y = canvas.height - 30;
+let dx = 2;
+let dy = -2;
+const paddleHeight = 10;
+const paddleWidth = 75;
+let paddleX = (canvas.width - paddleWidth) / 2;
+let rightPressed = false;
+let leftPressed = false;
+
+document.addEventListener("keydown", keyDownHandler);
+document.addEventListener("keyup", keyUpHandler);
+
+function keyDownHandler(e) {
+  if (e.key === "Right" || e.key === "ArrowRight") {
+    rightPressed = true;
+  } else if (e.key === "Left" || e.key === "ArrowLeft") {
+    leftPressed = true;
+  }
+}
+
+function keyUpHandler(e) {
+  if (e.key === "Right" || e.key === "ArrowRight") {
+    rightPressed = false;
+  } else if (e.key === "Left" || e.key === "ArrowLeft") {
+    leftPressed = false;
+  }
+}
+
+function drawBall() {
+  ctx.beginPath();
+  ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+function drawPaddle() {
+  ctx.beginPath();
+  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+  drawPaddle();
+
+  if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+    dx = -dx;
+  }
+  if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+    dy = -dy;
+  }
+
+  if (rightPressed) {
+    paddleX += 7;
+    if (paddleX + paddleWidth > canvas.width) {
+      paddleX = canvas.width - paddleWidth;
+    }
+  } else if (leftPressed) {
+    paddleX -= 7;
+    if (paddleX < 0) {
+      paddleX = 0;
+    }
+  }
+
+  x += dx;
+  y += dy;
+}
+
+function startGame() {
+  setInterval(draw, 10);
+}
+
+const runButton = document.getElementById("runButton");
+runButton.addEventListener("click", () => {
+  startGame();
+  runButton.disabled = true;
+});
+```
+
+{{embedlivesample("compare_your_code", 600, 360)}}
 
 > [!NOTE]
 > パドルを速く、または遅く動くようにしたり、大きさを変えたりしてみましょう。

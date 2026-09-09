@@ -1,56 +1,76 @@
 ---
-title: Response.bodyUsed
+title: Response：bodyUsed 属性
+short-title: bodyUsed
 slug: Web/API/Response/bodyUsed
+l10n:
+  sourceCommit: 77fd649b791632aec695c5c4c7ca5bc726f4d1e9
 ---
 
-{{APIRef("Fetch")}}{{ SeeCompatTable }}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-**`bodyUsed`** 是 {{domxref("Response")}} mixin 中的一个只读属性。用以表示该 body 是否被使用过。
+{{domxref("Response")}} 接口的 **`bodyUsed`** 只读属性是一个布尔值，指示主体是否已被读取。
 
-## 语法
+## 值
 
-```js
-var myBodyUsed = response.bodyUsed;
-```
-
-### 可能的值
-
-{{domxref("Boolean")}}.
+一个布尔值。
 
 ## 示例
 
-在以下[fetch 请求示例](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request)（运行 [fetch request live](https://mdn.github.io/fetch-examples/fetch-request/)）。通过{{domxref("Request.Request")}}构造器创建了一个 fetch 请求，来获得一张 JPG 图片。当 fetch 成功后，通过{{domxref("Blob")}} 来使用了 fetch 返回的资源--{{domxref("URL.createObjectURL")}}创建该资源的 URL，并作为 {{htmlelement("img")}}元素的 src 源来显示图片。
+### 检查 `bodyUsed`
 
-注意：在 `response.blob()` 被调用前后，输出 `response.bodyUsed` 的差异。
+本示例说明读取响应的主体会将 `bodyUsed` 的值从 `false` 变为 `true`。
 
-### HTML Content
+该示例包含一张空图片。
+
+当示例的 JavaScript 运行时，我们获取一张图片，并将返回的 Promise 赋给变量 `responsePromise`。
+
+当用户点击“使用响应”时，我们检查该响应是否已被使用。如果已使用，则打印一条消息。如果尚未使用，则读取响应主体，并用它为图片的 `src` 属性提供值。
+
+#### HTML
 
 ```html
-<img
-  class="my-image"
-  src="https://wikipedia.org/static/images/project-logos/frwiki-1.5x.png" />
+<p><button id="use">使用响应</button> <button id="reset">重置</button></p>
+<p><img id="my-image" src="" width="150" /></p>
+<pre id="log"></pre>
 ```
 
-### JS Content
+#### JavaScript
 
 ```js
-var myImage = document.querySelector(".my-image");
-fetch("https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg")
-  .then(function (response) {
-    console.log(response.bodyUsed);
-    var res = response.blob();
-    console.log(response.bodyUsed);
-    return res;
-  })
-  .then(function (response) {
-    var objectURL = URL.createObjectURL(response);
+const useResponse = document.querySelector("#use");
+const reset = document.querySelector("#reset");
+const myImage = document.querySelector("#my-image");
+const log = document.querySelector("#log");
+
+const responsePromise = fetch(
+  "/shared-assets/images/examples/firefox-logo.svg",
+);
+
+useResponse.addEventListener("click", async () => {
+  const response = await responsePromise;
+  if (response.bodyUsed) {
+    log.textContent = "主体已被使用！";
+  } else {
+    const result = await response.blob();
+    const objectURL = URL.createObjectURL(result);
     myImage.src = objectURL;
-  });
+  }
+});
+
+reset.addEventListener("click", () => {
+  document.location.reload();
+});
 ```
 
-{{EmbedLiveSample('示例', '100%', '250px')}}
+#### 结果
 
-## Specifications
+最初图片没有值。如果你点击一次“使用响应”，则 `bodyUsed` 为 `false`，因此我们读取响应并设置图片。如果你再次点击“使用响应”，则 `bodyUsed` 为 `true`，我们会打印消息。
+
+点击“重置”可重新加载示例，以便再次尝试。
+
+{{ EmbedLiveSample('示例', '100%', '300px') }}
+
+## 规范
 
 {{Specifications}}
 
@@ -58,8 +78,8 @@ fetch("https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg")
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
+- [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

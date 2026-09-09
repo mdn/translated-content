@@ -42,4 +42,4 @@ console.log(Temporal.Now.timeZoneId()); // par exemple : "America/New_York"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Now")}}
+- L'objet natif {{JSxRef("Temporal.Now")}}

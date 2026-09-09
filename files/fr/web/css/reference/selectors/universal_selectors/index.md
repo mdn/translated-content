@@ -80,7 +80,7 @@ L'astérisque est optionnelle avec les sélecteurs simples. Par exemple, `*.warn
 
 ### Espaces de noms
 
-Dans cet exemple, le sélecteur ne correspondra qu'aux éléments dans l'espace de noms example.
+Dans cet exemple, le sélecteur ne correspond qu'aux éléments dans l'espace de noms _example_.
 
 ```css
 @namespace example url("http://www.example.com/");

@@ -88,7 +88,7 @@ Chaque objet peut contenir les propriétés suivantes&nbsp;:
       - : Indique que les URL proviennent d'une liste, définie dans la clé `"urls"`. La présence d'une clé `"urls"` implique `"source": "list"`, donc cette propriété est optionnelle.
 
 - `"urls"` {{Experimental_Inline}}
-  - : Un tableau de chaînes de caractères représentant une liste d'URL auxquelles appliquer la règle. Ces URL peuvent être absolues ou relatives. Les URL relatives sont analysées par rapport à l'URL de base du document (si elles sont en ligne dans un document) ou par rapport à l'URL de la ressource externe (si elles sont récupérées de façon externe). `"urls"` et `"where"` ne peuvent pas être définis ensemble dans la même règle.
+  - : Un tableau de chaînes de caractères représentant une liste d'URL auxquelles appliquer la règle. Ces URL peuvent être absolues ou relatives. Les URL relatives sont analysées par rapport à l'URL de base du document (si elles sont en incise dans un document) ou par rapport à l'URL de la ressource externe (si elles sont récupérées de façon externe). `"urls"` et `"where"` ne peuvent pas être définis ensemble dans la même règle.
 
 - `"where"` {{Experimental_Inline}}
   - : Objet représentant les conditions selon lesquelles la règle s'applique aux URL contenues dans le document associé. Concrètement, l'objet `"where"` représente un test effectué sur chaque lien de la page pour déterminer si la règle de spéculation s'applique. `"where"` et `"urls"` ne peuvent pas être définis ensemble dans la même règle.
@@ -110,11 +110,11 @@ Chaque objet peut contenir les propriétés suivantes&nbsp;:
     Les conditions `"where"` peuvent être imbriquées sur plusieurs niveaux pour créer des conditions complexes, ou vous pouvez choisir de les séparer en plusieurs règles pour les garder simples. Voir [exemples de syntaxe pour where](#exemples_de_syntaxe_pour_where) pour plus d'explications et d'exemples d'utilisation.
 
 - `"eagerness"` {{Experimental_Inline}}
-  - : Une chaîne de caractères fournissant une indication au navigateur sur le degré d'empressement à précharger/prérendre les cibles de liens afin d'équilibrer les gains de performance et la consommation de ressources. Les valeurs possibles sont&nbsp;:
+  - : Une chaîne de caractères fournissant une indication au navigateur sur le degré d'empressement à précharger/pré-rendre les cibles de liens afin d'équilibrer les gains de performance et la consommation de ressources. Les valeurs possibles sont&nbsp;:
     - `"immediate"`
       - : L'auteur·ice pense que le lien a de fortes chances d'être suivi, et/ou que le document peut être long à récupérer. Le préchargement/pré-rendu doit commencer dès que possible, sous réserve des préférences utilisateur·ice et des limites de ressources.
     - `"eager"`
-      - : L'auteur·ice souhaite précharger/prérendre un grand nombre de navigations, le plus tôt possible. Le préchargement/pré-rendu doit commencer au moindre signe qu'un lien peut être suivi. Par exemple, l'utilisateur·ice peut déplacer le curseur vers le lien, le survoler ou le mettre en sélection un instant, ou arrêter le défilement avec le lien en position visible.
+      - : L'auteur·ice souhaite précharger/pré-rendre un grand nombre de navigations, le plus tôt possible. Le préchargement/pré-rendu doit commencer au moindre signe qu'un lien peut être suivi. Par exemple, l'utilisateur·ice peut déplacer le curseur vers le lien, le survoler ou le mettre en sélection un instant, ou arrêter le défilement avec le lien en position visible.
     - `"moderate"`
       - : L'auteur·ice cherche un compromis entre `eager` et `conservative`. Le préchargement/pré-rendu doit commencer lorsqu'il y a une indication raisonnable que l'utilisateur·ice suit le lien prochainement. Par exemple, l'utilisateur·ice fait défiler un lien dans la zone visible et le survole ou le met en sélection un instant.
     - `"conservative"`
@@ -141,7 +141,7 @@ Chaque objet peut contenir les propriétés suivantes&nbsp;:
     - `ruleset`
       - : Les URL doivent être évaluées relativement au fichier dans lequel les règles sont définies. C'est la valeur par défaut.
 
-    Ce paramètre n'est pertinent que pour les règles définies dans un fichier externe (avec l'en-tête {{HTTPHeader("Speculation-Rules")}}). Lorsque les règles sont définies dans le même document (dans un élément `<script>` en ligne), cela n'a pas d'impact.
+    Ce paramètre n'est pertinent que pour les règles définies dans un fichier externe (avec l'en-tête {{HTTPHeader("Speculation-Rules")}}). Lorsque les règles sont définies dans le même document (dans un élément `<script>` en incise), cela n'a pas d'impact.
 
 - `"requires"` {{Experimental_Inline}}
   - : Un tableau de chaînes de caractères représentant les capacités du navigateur qui analyse la règle, qui doivent être disponibles pour que la règle s'applique aux URL définies.
@@ -307,7 +307,7 @@ Les [paramètres de recherche (ou chaînes de caractères de requête)](/fr/docs
 { "where": { "href_matches": "/*\\?*(^|&)category=*" } }
 ```
 
-Toute condition peut être niée en la plaçant dans une condition `"not"` — cela signifie que, si elle correspond, un lien _n'a pas_ la règle de spéculation appliquée, mais si elle _ne_ correspond _pas_, il _aura_ la règle appliquée. L'exemple suivant fait en sorte que tous les liens qui _ne_ correspondent _pas_ au motif d'URL `/logout` aient la règle appliquée, mais pas ceux qui correspondent à `/logout`&nbsp;:
+Toute condition peut être niée en la plaçant dans une condition `"not"` — cela signifie que, si elle correspond, un lien _n'a pas_ la règle de spéculation appliquée, mais si elle _ne_ correspond _pas_, il _a_ la règle appliquée. L'exemple suivant fait en sorte que tous les liens qui _ne_ correspondent _pas_ au motif d'URL `/logout` aient la règle appliquée, mais pas ceux qui correspondent à `/logout`&nbsp;:
 
 ```json
 { "where": { "not": { "href_matches": "/logout" } } }
@@ -459,7 +459,7 @@ Si un lien est survolé, le navigateur commence à précharger ce lien spécifiq
 Si l'utilisateur·ice survole un autre lien avant la fin du préchargement, le motif `expects_no_vary_search` indique au navigateur qu'il n'est pas nécessaire d'annuler le préchargement en cours, car toutes les URL `/users` avec un paramètre d'URL `id` pointent effectivement vers la même page dans ce contexte (et pour la mise en cache).
 
 > [!WARNING]
-> Une attention particulière doit être portée lors de l'utilisation de prerender avec `No-Vary-Search`, car la page peut initialement être pré-rendue avec différents paramètres d'URL. `No-Vary-Search` est utilisé pour les paramètres d'URL qui livrent la même ressource depuis le serveur, mais sont utilisés côté client pour diverses raisons (rendu côté client, paramètres UTM pour la mesure analytique, etc.). Comme le pré-rendu initial peut concerner différents paramètres d'URL, tout code dépendant de ceux-ci ne doit s'exécuter qu'après l'activation du pré-rendu.
+> Une attention particulière doit être portée lors de l'utilisation de pré-rendu avec `No-Vary-Search`, car la page peut initialement être pré-rendue avec différents paramètres d'URL. `No-Vary-Search` est utilisé pour les paramètres d'URL qui livrent la même ressource depuis le serveur, mais sont utilisés côté client pour diverses raisons (rendu côté client, paramètres UTM pour la mesure analytique, etc.). Comme le pré-rendu initial peut concerner différents paramètres d'URL, tout code dépendant de ceux-ci ne doit s'exécuter qu'après l'activation du pré-rendu.
 
 Plusieurs paramètres peuvent être fournis dans un tableau séparé par des espaces&nbsp;:
 
@@ -503,7 +503,7 @@ L'ensemble de règles de type document suivant montre comment `eagerness` peut �
 Ici, on indique que&nbsp;:
 
 - Tous les liens de même site contenus dans le document doivent être pré-rendus de façon conservatrice (c'est-à-dire lorsque l'utilisateur·ice commence à les activer).
-- Tous les liens produits (dans ce cas, ceux ayant une classe `.product-link`) du document doivent être pré-rendus de façon « eager » (c'est-à-dire si l'utilisateur·ice manifeste une intention de navigation vers eux).
+- Tous les liens produits (dans ce cas, ceux ayant une classe `.product-link`) du document doivent être pré-rendus de façon «&nbsp;<i lang="en">eager</i>&nbsp;» (c'est-à-dire si l'utilisateur·ice manifeste une intention de navigation vers eux).
 
 > [!NOTE]
 > Les effets des réglages d'empressement sont moins utiles pour les règles de type liste. Par défaut, les URL des règles de liste sont préchargées/pré-rendues immédiatement dès que les règles sont analysées, ce qui est attendu — elles servent à lister explicitement des URL prioritaires à rendre disponibles au plus vite. Pour cette raison, `eager` a le même effet que `immediate` dans les implémentations actuelles. Les réglages d'empressement plus faibles servent au préchargement/pré-rendu lors d'interactions avec les liens, et pour cela on utilise plutôt des règles de type document pour les trouver sur la page.
@@ -586,6 +586,6 @@ Il n'est pas nécessaire pour les règles de type document (qui utilisent `where
 
 ## Voir aussi
 
-- [Prérendre des pages dans Chrome pour des navigations instantanées](https://developer.chrome.com/docs/web-platform/prerender-pages?hl=fr) sur developer.chrome.com
+- [Pré-rendre des pages dans Chrome pour des navigations instantanées](https://developer.chrome.com/docs/web-platform/prerender-pages?hl=fr) sur developer.chrome.com
 - [Chargement spéculatif](/fr/docs/Web/Performance/Guides/Speculative_loading)
 - [L'API Speculation Rules](/fr/docs/Web/API/Speculation_Rules_API)

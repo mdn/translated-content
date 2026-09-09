@@ -2,7 +2,7 @@
 title: キャンバスのチュートリアル
 slug: Web/API/Canvas_API/Tutorial
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: b4d7275e992575d765bd1f504c28c0a64e1d0632
 ---
 
 {{DefaultAPISidebar("Canvas API")}}
@@ -34,10 +34,6 @@ l10n:
 
 ## 関連情報
 
-- [Canvas トピックのページ](/ja/docs/Web/API/Canvas_API)
-
-## 貢献者へのメモ
-
-2013 年 6 月 17 日の週に発生した不運な技術的エラーにより、すべての過去の貢献者の属性を含む、このチュートリアルの履歴情報が失われました。この問題についておわびするとともに、この不運な事故を容赦願います。
+- [キャンバスのトピックのページ](/ja/docs/Web/API/Canvas_API)
 
 {{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}

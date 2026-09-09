@@ -1,35 +1,36 @@
 ---
-title: Object.values()
+title: "Object : méthode statique values()"
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode statique **`Object.values()`** retourne un tableau contenant les valeurs des propriétés énumérables d'un objet donné ayant des clés de type chaîne de caractères.
 
-La méthode **`Object.values()`** renvoie un tableau contenant les valeurs des propriétés propres énumérables d'un objet dont l'ordre est le même que celui obtenu avec une boucle {{jsxref("Statements/for...in", "for...in")}} (la boucle `for-in` est différente car elle parcourt également les propriétés héritées).
-
-{{InteractiveExample("JavaScript Demo: Object.values()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Object.values()")}}
 
 ```js interactive-example
-const object1 = {
-  a: "somestring",
+const object = {
+  a: "du texte",
   b: 42,
   c: false,
 };
 
-console.log(Object.values(object1));
-// Expected output: Array ["somestring", 42, false]
+console.log(Object.values(object));
+// Résultat attendu : Array ["du texte", 42, false]
 ```
 
 ## Syntaxe
 
-```js
-Object.values(obj);
+```js-nolint
+Object.values(obj)
 ```
 
 ### Paramètres
 
 - `obj`
-  - : L'objet dont on souhaite connaître les valeurs des propriétés propres énumérables.
+  - : Un objet.
 
 ### Valeur de retour
 
@@ -37,48 +38,54 @@ Un tableau dont les éléments sont les valeurs des propriétés énumérables d
 
 ## Description
 
-`Object.values()` renvoie un tableau dont les éléments sont les valeurs des propriétés énumérables directement rattachées à l'objet passé en argument. L'ordre du tableau est le même que celui obtenu lorsqu'on parcourt les propriétés manuellement.
+`Object.values()` retourne un tableau dont les éléments sont les valeurs des propriétés énumérables ayant des clés de type chaîne de caractères directement rattachées à l'objet `object`. C'est la même chose que d'itérer avec une boucle {{JSxRef("Statements/for...in", "for...in")}}, sauf qu'une boucle `for...in` énumère également les propriétés de la chaîne de prototypes. L'ordre du tableau retourné par `Object.values()` est le même que celui fourni par une boucle {{JSxRef("Statements/for...in", "for...in")}}.
+
+Si vous avez besoin des clés des propriétés, utilisez plutôt {{JSxRef("Object.keys()")}}. Si vous avez besoin à la fois des clés et des valeurs des propriétés, utilisez plutôt {{JSxRef("Object.entries()")}}.
 
 ## Exemples
 
+### Utiliser `Object.values()`
+
 ```js
-var obj = { toto: "truc", machin: 42 };
+const obj = { toto: "truc", baz: 42 };
 console.log(Object.values(obj)); // ['truc', 42]
 
-// un objet semblable à un tableau
-var obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.values(obj)); // ['a', 'b', 'c']
+// Objet semblable à un tableau
+const objCommeTableau1 = { 0: "a", 1: "b", 2: "c" };
+console.log(Object.values(objCommeTableau1)); // ['a', 'b', 'c']
 
-// un objet semblable à un tableau
-// dont les clés sont ordonnées aléatoirement
-// lorsque des clés numériques sont utilisées, les valeurs sont
-// renvoyées selon l'ordre numérique des clés
-var un_obj = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.values(un_obj)); // ['b', 'c', 'a']
+// Objet semblable à un tableau avec un ordre de clés aléatoire
+// Lors de l'utilisation de clés numériques, les valeurs sont retournées
+// dans l'ordre numérique des clés
+const objCommeTableau2 = { 100: "a", 2: "b", 7: "c" };
+console.log(Object.values(objCommeTableau2)); // ['b', 'c', 'a']
 
-// getToto est une propriété qui
-// n'est pas énumérable
-var mon_obj = Object.create(
+// getToto n'est pas une propriété énumérable
+const monObjet = Object.create(
   {},
   {
     getToto: {
-      value: function () {
+      value() {
         return this.toto;
       },
     },
   },
 );
-mon_obj.toto = "truc";
-console.log(Object.values(mon_obj)); // ['truc']
-
-// un argument de type primitif sera
-// converti en un objet
-console.log(Object.values("toto")); // ['t', 'o', 't', 'o']
+monObjet.toto = "truc";
+console.log(Object.values(monObjet)); // ['truc']
 ```
 
-## Prothèse d'émulation (_polyfill_)
+### Utiliser `Object.values()` sur des primitifs
 
-Afin d'ajouter le support pour `Object.values` dans des environnements plus anciens qui ne supportent pas la méthode nativement, vous pouvez utiliser une prothèse comme celle proposée sur le dépôt [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) ou sur le dépôt [es-shims/Object.values](https://github.com/es-shims/Object.values).
+Les arguments qui ne sont pas des objets sont [convertis en objets](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object#conversion_en_objet). {{JSxRef("undefined")}} et {{JSxRef("null")}} ne peuvent pas être convertis en objets et lèvent immédiatement une {{JSxRef("TypeError")}}. Seules les chaînes de caractères peuvent avoir des propriétés énumérables propres, tandis que tous les autres primitifs retournent un tableau vide.
+
+```js
+// Les chaînes de caractères ont des indices comme propriétés énumérables propres
+console.log(Object.values("toto")); // ['t', 'o', 't', 'o']
+
+// Les autres primitives à l'exception de undefined et null n'ont pas de propriétés propres
+console.log(Object.values(100)); // []
+```
 
 ## Spécifications
 
@@ -90,9 +97,12 @@ Afin d'ajouter le support pour `Object.values` dans des environnements plus anci
 
 ## Voir aussi
 
-- [Énumérabilité et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.entries()")}}
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
+- [Prothèse d'émulation de `Object.values` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
+- [Prothèse d'émulation es-shims de `Object.values` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.values)
+- [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- La méthode statique {{JSxRef("Object.keys()")}}
+- La méthode statique {{JSxRef("Object.entries()")}}
+- La méthode {{JSxRef("Object.prototype.propertyIsEnumerable()")}}
+- La méthode statique {{JSxRef("Object.create()")}}
+- La méthode statique {{JSxRef("Object.getOwnPropertyNames()")}}
+- La méthode {{JSxRef("Map.prototype.values()")}}

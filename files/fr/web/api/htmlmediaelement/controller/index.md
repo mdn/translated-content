@@ -3,10 +3,10 @@ title: "HTMLMediaElement : propriété controller"
 short-title: controller
 slug: Web/API/HTMLMediaElement/controller
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
 La propriété **`controller`** de l'interface {{DOMxRef("HTMLMediaElement")}} représente le contrôleur média assigné à l'élément.
 

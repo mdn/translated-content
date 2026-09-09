@@ -3,7 +3,7 @@ title: "Element : évènement click"
 short-title: click
 slug: Web/API/Element/click_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("UI Events")}}
@@ -38,35 +38,6 @@ Un objet {{DOMxRef("PointerEvent")}}. Hérite de {{DOMxRef("MouseEvent")}}.
 
 > [!NOTE]
 > Dans les versions antérieures de la spécification, le type d'évènement pour cet évènement était un {{DOMxRef("MouseEvent")}}. Consultez la [compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus d'informations.
-
-## Propriétés de l'évènement
-
-_Cette interface hérite des propriétés de {{DOMxRef("MouseEvent")}} et {{DOMxRef("Event")}}._
-
-- {{DOMxRef("PointerEvent.altitudeAngle")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Représente l'angle entre l'axe d'un transducteur (un pointeur ou un stylet) et le plan X-Y de l'écran d'un dispositif.
-- {{DOMxRef("PointerEvent.azimuthAngle")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Représente l'angle entre le plan Y-Z et le plan contenant à la fois l'axe du transducteur (pointeur ou stylet) et l'axe Y.
-- {{DOMxRef("PointerEvent.pointerId")}} {{ReadOnlyInline}}
-  - : Identifiant unique du pointeur à l'origine de l'évènement.
-- {{DOMxRef("PointerEvent.width")}} {{ReadOnlyInline}}
-  - : La largeur (amplitude sur l'axe X), en pixels CSS, de la géométrie de contact du pointeur.
-- {{DOMxRef("PointerEvent.height")}} {{ReadOnlyInline}}
-  - : La hauteur (amplitude sur l'axe Y), en pixels CSS, de la géométrie de contact du pointeur.
-- {{DOMxRef("PointerEvent.pressure")}} {{ReadOnlyInline}}
-  - : La pression normalisée de l'entrée du pointeur comprise entre `0` et `1`, où `0` et `1` représentent respectivement la pression minimale et maximale que le matériel est capable de détecter.
-- {{DOMxRef("PointerEvent.tangentialPressure")}} {{ReadOnlyInline}}
-  - : La pression tangentielle normalisée de l'entrée du pointeur (également appelée «&nbsp;pression du canon&nbsp;» ou [contrainte cylindrique <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Cylinder_stress)) comprise entre `-1` et `1`, où `0` représente la position neutre du contrôle.
-- {{DOMxRef("PointerEvent.tiltX")}} {{ReadOnlyInline}}
-  - : L'angle plan (en degrés, compris entre `-90` et `90`) entre le plan Y-Z et le plan contenant à la fois l'axe du pointeur (par exemple, un stylet) et l'axe Y.
-- {{DOMxRef("PointerEvent.tiltY")}} {{ReadOnlyInline}}
-  - : L'angle plan (en degrés, compris entre `-90` et `90`) entre le plan X-Z et le plan contenant à la fois l'axe du pointeur (par exemple, un stylet) et l'axe X.
-- {{DOMxRef("PointerEvent.twist")}} {{ReadOnlyInline}}
-  - : La rotation dans le sens des aiguilles d'une montre du pointeur (par exemple, un stylet) autour de son axe principal en degrés, avec une valeur comprise entre `0` et `359`.
-- {{DOMxRef("PointerEvent.pointerType")}} {{ReadOnlyInline}}
-  - : Indique le type de dispositif à l'origine de l'évènement (souris, stylet, tactile, etc.).
-- {{DOMxRef("PointerEvent.isPrimary")}} {{ReadOnlyInline}}
-  - : Indique si le pointeur représente le pointeur principal de ce type de pointeur.
 
 ## Notes d'utilisation
 

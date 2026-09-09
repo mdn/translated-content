@@ -3,7 +3,7 @@ title: Firefox 34 note de version pour les développeurs
 short-title: Firefox 34
 slug: Mozilla/Firefox/Releases/34
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Firefox 34 a été publié le 1er décembre 2014. Cet article répertorie les principaux changements utiles non seulement pour les développeur·euse·s web, mais aussi pour les développeur·euse·s Firefox et Gecko ainsi que pour les développeur·euse·s d'extensions.
@@ -72,7 +72,7 @@ _Pas de changement._
 - Notre implémentation expérimentale de l'EME continue. La méthode `MediaKeySession.getUsableKeyIds()` a été ajoutée ([bogue Firefox 1057171 <sup>(angl.)</sup>](https://bugzil.la/1057171)).
 - Concernant [WebRTC](/fr/docs/Web/API/WebRTC_API)&nbsp;:
   - une implémentation expérimentale de `RTPSender` et `RTPReceiver` fonctionnant avec {{DOMxRef("RTCPeerConnection")}} a été mise en place ([bogue Firefox 1032835 <sup>(angl.)</sup>](https://bugzil.la/1032835)).
-  - le partage de fenêtre d'application a été ajouté à {{DOMxRef("Navigator.getUserMedia()")}} ([bogue Firefox 1036653 <sup>(angl.)</sup>](https://bugzil.la/1036653)) et `MediaTrackConstraintSet` prend désormais en charge `browserWindow` et `scrollWithPage`, permettant de choisir l'onglet d'une fenêtre à partager sans afficher la boîte de dialogue de sélection d'onglet ([bogue Firefox 1041700 <sup>(angl.)</sup>](https://bugzil.la/1041700)).
+  - le partage de fenêtre d'application a été ajouté à {{DOMxRef("Navigator.getUserMedia()")}} ([bogue Firefox 1036653 <sup>(angl.)</sup>](https://bugzil.la/1036653)) et `MediaTrackConstraintSet` prend désormais en charge `browserWindow` et `scrollWithPage`, vous permettant de choisir l'onglet d'une fenêtre à partager sans afficher la boîte de dialogue de sélection d'onglet ([bogue Firefox 1041700 <sup>(angl.)</sup>](https://bugzil.la/1041700)).
   - `"browser"` est désormais une valeur acceptée de MediaSourceEnum, utilisée pour définir les contraintes ([bogue Firefox 1041493 <sup>(angl.)</sup>](https://bugzil.la/1041493)).
 
 - Pour les Web Components, le changement de cible des évènements est désormais implémenté ([bogue Firefox 887541 <sup>(angl.)</sup>](https://bugzil.la/887541)).

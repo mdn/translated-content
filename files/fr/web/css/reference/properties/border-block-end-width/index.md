@@ -3,7 +3,7 @@ title: Propriété CSS `border-block-end-width`
 short-title: border-block-end-width
 slug: Web/CSS/Reference/Properties/border-block-end-width
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-block-end-width`** définit la largeur de la bordure logique de fin de bloc d'un élément, qui correspond à une bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle peut correspondre à {{CSSxRef("border-top-width")}}, {{CSSxRef("border-right-width")}}, {{CSSxRef("border-bottom-width")}} ou {{CSSxRef("border-left-width")}} selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
@@ -53,7 +53,7 @@ writing-mode: vertical-lr;
 ## Syntaxe
 
 ```css
-/* Valeurs de type <'border-width'> */
+/* Valeurs de type <'line-width'> */
 border-block-end-width: 5px;
 border-block-end-width: thick;
 
@@ -69,8 +69,8 @@ Les propriétés associées sont {{CSSxRef("border-block-start-width")}}, {{CSSx
 
 ### Valeurs
 
-- `<'border-width'>`
-  - : La largeur utilisée pour la bordure, voir {{CSSxRef("border-width")}}.
+- {{CSSxRef("&lt;line-width&gt;")}}
+  - : Définit la largeur de la bordure, soit comme une longueur ({{CSSxRef("&lt;length&gt;")}}) non négative explicite, soit en utilisant les mots-clés&nbsp;: `thin`, `medium` ou `thick`. La valeur par défaut est `medium`.
 
 ## Définition formelle
 

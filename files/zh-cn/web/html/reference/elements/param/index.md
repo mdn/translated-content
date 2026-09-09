@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0af6781c93ffe3d011a060b4e517187cf780e93a
 ---
 
-{{Deprecated_Header}}
-
 **`<param>`** [HTML](/zh-CN/docs/Web/HTML) 元素为 {{HTMLElement("object")}} 元素定义形式参数。
 
 > [!NOTE]

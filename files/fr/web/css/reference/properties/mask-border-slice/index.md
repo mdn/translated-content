@@ -48,7 +48,7 @@ La valeur optionnelle `fill` peut être utilisée et placée à n'importe quel e
 - {{CSSxRef("&lt;number&gt;")}}
   - : Représente un décalage par rapport au bord en _pixels_ pour les images matricielles et en _coordonnées_ pour les images vectorielles. Pour les images vectorielles, le nombre est relatif à la taille de l'élément, et non à la taille de l'image source, donc les pourcentages sont généralement préférables dans ces cas.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : Représente un décalage par rapport au bord en pourcentage de la taille de l'image source : la largeur de l'image pour les décalages horizontaux, la hauteur pour les décalages verticaux.
+  - : Représente un décalage par rapport au bord en pourcentage de la taille de l'image source&nbsp;: la largeur de l'image pour les décalages horizontaux, la hauteur pour les décalages verticaux.
 - `fill`
   - : Conserve la région centrale de l'image. Sa largeur et sa hauteur sont ajustées pour correspondre aux régions supérieure et gauche de l'image, respectivement.
 
@@ -56,13 +56,13 @@ La valeur optionnelle `fill` peut être utilisée et placée à n'importe quel e
 
 Cette découpe permet d'obtenir neuf régions au total&nbsp;: quatre pour les coins, quatre pour les côtés et une région pour le centre. Cette découpe est effectuée selon 4 lignes qui sont écartées d'une certaine distance des bords de l'image.
 
-[![The nine regions defined by the border-image or border-image-slice properties](border-image-slice.png)](border-image-slice.png)
+![Les neuf régions définies par les propriétés border-image ou border-image-slice](border-image-slice.png)(border-image-slice.png)
 
 Le diagramme ci-avant illustre l'emplacement de chaque région.
 
-- Les zones de 1 à 4 sont les zones aux coins. Chacune sera utilisée une seule fois pour construire les coins de l'image du masque.
+- Les zones de 1 à 4 sont les zones aux coins. Chacune est utilisée une seule fois pour construire les coins de l'image du masque.
 - Les zones 5 à 8 sont les zones de côtés. Ces zones peuvent être [répétées, redimensionnées, ou modifiées](/fr/docs/Web/CSS/Reference/Properties/mask-border-repeat) afin que le masque de bordure final ait les mêmes dimensions que l'élément.
-- La zone 9 est la zone centrale. Par défaut, elle n'est pas utilisée mais elle pourra être utilisée comme image d'arrière-plan si le mot-clé `fill` est utilisé.
+- La zone 9 est la zone centrale. Par défaut, elle n'est pas utilisée mais elle peut être utilisée comme image d'arrière-plan si le mot-clé `fill` est utilisé.
 
 Les propriétés {{CSSxRef("mask-border-repeat")}}, {{CSSxRef("mask-border-width")}} et {{CSSxRef("mask-border-outset")}} déterminent la façon dont ces régions sont utilisées pour construire le masque de bordure final.
 

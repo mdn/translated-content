@@ -3,12 +3,12 @@ title: Propriété CSS `animation-play-state`
 short-title: animation-play-state
 slug: Web/CSS/Reference/Properties/animation-play-state
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-play-state`** définit si une animation est en cours ou en pause.
 
-Reprendre une animation en pause fera démarrer l'animation là où elle s'est arrêtée au moment de la pause, plutôt que de recommencer depuis le début de la séquence d'animation.
+Reprendre une animation en pause fait démarrer l'animation là où elle s'est arrêtée au moment de la pause, plutôt que de recommencer depuis le début de la séquence d'animation.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: animation-play-state")}}
 
@@ -80,10 +80,12 @@ animation-play-state: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme une liste de mots-clés séparés par des virgules&nbsp;:
+
 - `running`
-  - : L'**animation** est actuellement **en cours**.
+  - : **L'animation** est actuellement **en cours**.
 - `paused`
-  - : L'**animation** est actuellement **en pause**.
+  - : **L'animation** est actuellement **en pause**.
 
 > [!NOTE]
 > Lorsque vous indiquez plusieurs valeurs séparées par des virgules sur une propriété `animation-*`, elles sont appliquées aux animations dans l'ordre d'apparition des {{CSSxRef("animation-name")}}. Si le nombre d'animations et de valeurs de propriété `animation-*` ne correspond pas, voir [Définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
@@ -105,13 +107,13 @@ Cette animation est en pause, mais s'exécute lorsque vous la survolez.
 #### HTML
 
 ```html
-<div class="box"></div>
+<div class="boite"></div>
 ```
 
 #### CSS
 
 ```css
-.box {
+.boite {
   background-color: rebeccapurple;
   border-radius: 10px;
   width: 100px;
@@ -122,7 +124,7 @@ Cette animation est en pause, mais s'exécute lorsque vous la survolez.
   animation-play-state: paused;
 }
 
-.box:hover {
+.boite:hover {
   animation-play-state: running;
 }
 
@@ -142,7 +144,7 @@ Passez la souris sur le rectangle pour lancer l'animation.
 
 {{EmbedLiveSample("Mettre une animation en pause", "100%", 150)}}
 
-Voir [Animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using) pour des exemples.
+Voir [les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using) pour des exemples.
 
 ## Spécifications
 

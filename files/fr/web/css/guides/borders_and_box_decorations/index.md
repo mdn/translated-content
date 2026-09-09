@@ -3,7 +3,7 @@ title: Bordures et décorations de boîte CSS
 short-title: Bordures et décorations de boîte
 slug: Web/CSS/Guides/Borders_and_box_decorations
 l10n:
-  sourceCommit: cd0970bc03cf30a9a8089954cc542a17dbe9eba3
+  sourceCommit: 26fb7eaa7b398a35c2463fa15ab6ccfa46a9e06d
 ---
 
 Le module de **bordures et décorations de boîte CSS** fournit des propriétés permettant d'ajouter des bordures, des formes de coins,et des ombres de boîte aux éléments. Ce module étend les bordures et décorations de boîte introduites dans le module [Arrière-plans et bordures CSS](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders), en ajoutant les propriétés {{CSSxRef("corner-shape")}} et `border-shape`, les propriétés logiques {{CSSxRef("border-radius")}}, les propriétés longues pour la propriété {{CSSxRef("box-shadow")}} et des propriétés pour créer des bordures partielles.

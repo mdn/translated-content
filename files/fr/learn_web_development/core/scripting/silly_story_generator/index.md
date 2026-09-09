@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Silly_story_generator
 original_slug: Learn/JavaScript/First_steps/Silly_story_generator
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenu("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}
 
 Dans cette évaluation, vous aurez pour tâche d'utiliser les connaissances que vous avez apprises dans les articles de ce module et de les appliquer dans le but de créer une appli ludique qui génère des histoires absurdes au hasard. Amusez-vous bien !
 

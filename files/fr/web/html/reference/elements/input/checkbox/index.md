@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
 ---
 
-Les éléments {{HTMLElement("input")}} de type **`checkbox`** sont affichés par défaut sous la forme de cases qui sont cochées lorsqu'elles sont activées, comme vous pouvez le voir sur un formulaire papier gouvernemental. L'apparence exacte dépend de la configuration du système d'exploitation sous lequel le navigateur fonctionne. Il s'agit généralement d'un carré, mais il peut avoir des coins arrondis. Une case à cocher permet de sélectionner des valeurs individuelles à soumettre dans un formulaire (ou pas).
+Les éléments {{HTMLElement("input")}} de type **`checkbox`** sont affichés par défaut sous la forme de cases qui sont cochées lorsqu'elles sont activées, comme vous pouvez le voir sur un formulaire papier gouvernemental. L'apparence exacte dépend de la configuration du système d'exploitation sous lequel le navigateur fonctionne. Il s'agit généralement d'un carré, mais il peut avoir des coins arrondis. Une case à cocher permet de sélectionner des valeurs individuelles à envoyer dans un formulaire (ou pas).
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;checkbox&quot;&gt;", "tabbed-standard")}}
 
@@ -66,7 +66,7 @@ Une chaîne de caractères représentant la valeur de la case à cocher. Celle-c
 
 Dans cet exemple, on a le nom (l'attribut `name`) `subscribe` utilisé pour la case à cocher avec une valeur (l'attribut `value`) qui est `newsletter`. Lorsque le formulaire est envoyé, les données sont transmises sous la forme `subscribe=newsletter`.
 
-Si l'attribut `value` n'était pas renseigné, la valeur par défaut est `on` (dans l'exemple, les données envoyées au serveur auraient eu la forme `subscribe=on`).
+Si l'attribut `value` n'était pas renseigné, la valeur par défaut est `on` (dans l'exemple, les données envoyées au serveur ont eu la forme `subscribe=on`).
 
 > [!NOTE]
 > Si la case à cocher n'est pas cochée lorsque le formulaire est envoyé, ni le nom ni la valeur ne sont envoyés au serveur pour indiquer cet état (autrement dit, le client n'envoie pas quelque chose comme `value=unchecked`)&nbsp;; la valeur n'est pas transmise au serveur du tout. Si on veut envoyer une valeur par défaut lorsque la case à cocher est décochée, une solution peut être d'utiliser du JavaScript pour créer un élément `{{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}}`.

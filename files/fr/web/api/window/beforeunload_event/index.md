@@ -3,10 +3,10 @@ title: "Window : évènement beforeunload"
 short-title: beforeunload
 slug: Web/API/Window/beforeunload_event
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 L'évènement **`beforeunload`** de l'interface {{DOMxRef("Window")}} est déclenché lorsque la fenêtre actuelle, le document contenu et les ressources associées sont sur le point d'être déchargés. Le document est encore visible et l'évènement est encore annulable à ce stade.
 
@@ -16,7 +16,7 @@ La boîte de dialogue peut être déclenchée de la façon suivante&nbsp;:
 
 - En appelant la méthode {{DOMxRef("Event.preventDefault()", "preventDefault()")}} de l'objet évènement.
 - En définissant la propriété {{DOMxRef("BeforeUnloadEvent.returnValue", "returnValue")}} de l'objet évènement sur une chaîne de caractères non vide ou toute valeur équivalente à vrai.
-- En retournant toute valeur équivalente à vrai depuis la fonction gestionnaire d'évènement, par exemple&nbsp;: `return "chaîne de caractères"`. Notez que cela ne fonctionne que lorsque la fonction est attachée via la propriété `onbeforeunload`, et non la méthode {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}. Ce comportement est cohérent dans les versions modernes de Firefox, Safari et Chrome.
+- En retournant toute valeur équivalente à vrai depuis la fonction gestionnaire d'évènement, par exemple&nbsp;: `return "chaîne de caractères"`. Notez que cela ne fonctionne que lorsque la fonction est attachée avec la propriété `onbeforeunload`, et non la méthode {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}. Ce comportement est cohérent dans les versions modernes de Firefox, Safari et Chrome.
 
 Les deux derniers mécanismes sont des fonctionnalités héritées&nbsp;; la bonne pratique consiste à déclencher la boîte de dialogue en appelant `preventDefault()` sur l'objet évènement, tout en définissant également `returnValue` pour prendre en charge les cas hérités.
 
@@ -38,8 +38,8 @@ Un objet {{DOMxRef("BeforeUnloadEvent")}}. Hérite de {{DOMxRef("Event")}}.
 
 Pour déclencher l'affichage de la boîte de dialogue lorsque l'utilisateur·ice ferme ou navigue dans l'onglet, une fonction gestionnaire d'évènement `beforeunload` doit appeler {{DOMxRef("Event.preventDefault()", "preventDefault()")}} sur l'objet évènement. Vous devez noter que les implémentations modernes&nbsp;:
 
-- Exigent une [activation persistante](/fr/docs/Glossary/Sticky_activation) pour que la boîte de dialogue soit affichée. Autrement dit, le navigateur n'affichera la boîte de dialogue que si le cadre ou tout cadre intégré reçoit un geste ou une interaction de l'utilisateur·ice. Si l'utilisateur·ice n'a jamais interagi avec la page, il n'y a pas de données utilisateur à sauvegarder, donc aucun cas légitime pour la boîte de dialogue.
-- N'affichent qu'une chaîne générique définie par le navigateur dans la boîte de dialogue affichée. Cela ne peut pas être contrôlé par le code de la page web.
+- Exigent une [activation persistante](/fr/docs/Glossary/Sticky_activation) pour que la boîte de dialogue soit affichée. Autrement dit, le navigateur n'affiche la boîte de dialogue que si le cadre ou tout cadre intégré reçoit un geste ou une interaction de l'utilisateur·ice. Si l'utilisateur·ice n'a jamais interagi avec la page, il n'y a pas de données utilisateur à sauvegarder, donc aucun cas légitime pour la boîte de dialogue.
+- N'affichent qu'une chaîne de caractères générique définie par le navigateur dans la boîte de dialogue affichée. Cela ne peut pas être contrôlé par le code de la page web.
 
 L'évènement `beforeunload` présente certains problèmes&nbsp;:
 
@@ -51,7 +51,7 @@ L'évènement `beforeunload` présente certains problèmes&nbsp;:
   > [!NOTE]
   > Il est recommandé d'utiliser l'évènement {{DOMxRef("Document.visibilitychange_event", "visibilitychange")}} comme signal plus fiable pour la sauvegarde automatique de l'état de l'application, afin de contourner des problèmes comme ceux ci-dessus. Voir [Ne perdez pas l'état utilisateur et application, utilisez la visibilité de page <sup>(angl.)</sup>](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) pour plus de détails.
 
-- Dans Firefox, `beforeunload` n'est pas compatible avec le [cache arrière/avant <sup>(angl.)</sup>](https://web.dev/articles/bfcache) (bfcache)&nbsp;: c'est-à-dire que Firefox ne placera pas les pages dans le bfcache si elles ont des écouteurs `beforeunload`, ce qui est mauvais pour les performances.
+- Dans Firefox, `beforeunload` n'est pas compatible avec le [cache arrière/avant <sup>(angl.)</sup>](https://web.dev/articles/bfcache) (bfcache)&nbsp;: c'est-à-dire que Firefox ne place pas les pages dans le bfcache si elles ont des écouteurs `beforeunload`, ce qui est mauvais pour les performances.
 
 Il est donc recommandé que les développeur·euse·s n'écoutent `beforeunload` que lorsque les utilisateur·ice·s ont des modifications non enregistrées afin que la boîte de dialogue mentionnée ci-dessus puisse être utilisée pour les avertir d'une perte de données imminente, et de retirer l'écouteur lorsque ce n'est pas nécessaire. Écouter `beforeunload` avec parcimonie peut minimiser l'impact sur les performances.
 
@@ -65,7 +65,7 @@ En plus de l'interface `Window`, la propriété de gestionnaire d'évènement `o
 
 ## Exemples
 
-Dans l'exemple suivant, nous avons un champ de texte HTML {{HTMLElement("input")}} pour représenter des données qui pourraient être modifiées et nécessiter une sauvegarde&nbsp;:
+Dans l'exemple suivant, nous avons un champ de texte HTML {{HTMLElement("input")}} pour représenter des données qui peuvent être modifiées et nécessiter une sauvegarde&nbsp;:
 
 ```html
 <form>

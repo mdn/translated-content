@@ -2,10 +2,10 @@
 title: HTMLFrameSetElement
 slug: Web/API/HTMLFrameSetElement
 l10n:
-  sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 L'interface **`HTMLFrameSetElement`** fournit des propriétés spéciales (au-delà de celles de l'interface standard {{DOMxRef("HTMLElement")}} dont elles héritent aussi) pour manipuler les éléments {{HTMLElement("frameset")}}.
 

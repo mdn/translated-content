@@ -3,15 +3,15 @@ title: En-tête Expect
 short-title: Expect
 slug: Web/HTTP/Reference/Headers/Expect
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`Expect`** indique qu'il y a des attentes qui doivent être satisfaites par le serveur afin de traiter la requête complète avec succès.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Expect`** indique qu'il y a des attentes qui doivent être satisfaites par le serveur afin de traiter la requête complète avec succès.
 
 Lorsqu'une requête contient un en-tête `Expect: 100-continue`, le serveur envoie une réponse {{HTTPStatus("100", "100 Continue")}} pour indiquer qu'il est prêt ou capable de recevoir le reste du contenu de la requête.
 Attendre une réponse `100` peut être utile si un client anticipe une erreur probable, par exemple lors de l'envoi d'opérations modifiant l'état sans authentification préalable vérifiée.
 
-Une réponse {{HTTPStatus("417", "417 Expectation Failed")}} est renvoyée si le serveur ne peut pas satisfaire l'attente, ou tout autre statut dans le cas contraire (par exemple, un statut [4XX](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) pour une erreur côté client, ou un statut [2XX](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès) si la requête peut être résolue avec succès sans traitement supplémentaire).
+Une réponse {{HTTPStatus("417", "417 Expectation Failed")}} est retournée si le serveur ne peut pas satisfaire l'attente, ou tout autre statut dans le cas contraire (par exemple, un statut [4XX](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) pour une erreur côté client, ou un statut [2XX](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès) si la requête peut être résolue avec succès sans traitement supplémentaire).
 
 Aucun des navigateurs les plus courants n'envoie l'en-tête `Expect`, mais certains clients (outils en ligne de commande) le font par défaut.
 

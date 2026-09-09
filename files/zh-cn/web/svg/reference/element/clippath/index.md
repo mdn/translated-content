@@ -1,11 +1,26 @@
 ---
-title: clipPath
+title: <clipPath>
 slug: Web/SVG/Reference/Element/clipPath
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-[SVG](/zh-CN/docs/Web/SVG) 元素 **`<clipPath>`** 定义一条剪切路径，可作为其他元素的 {{SVGAttr("clip-path")}} 属性的值。
+**`<clipPath>`** [SVG](/zh-CN/docs/Web/SVG) 元素定义一条裁剪路径，供 {{SVGAttr("clip-path")}} 属性使用。
 
-剪切路径限制了图形的可见范围。从概念上来说，如果图形超出了当前剪切路径所包围的区域，那么超出部分将不会绘制。
+裁剪路径限制可应用绘制的区域。从概念上讲，绘图中位于裁剪路径所界定区域之外的部分不会被绘制。
+
+## 使用上下文
+
+{{svginfo}}
+
+## 属性
+
+- {{SVGAttr("clipPathUnits")}}
+  - : 定义 `<clipPath>` 元素内容的坐标系。_值类型_：`userSpaceOnUse` | `objectBoundingBox`；_默认值_：`userSpaceOnUse`；_动画性_：**是**
+
+## DOM 接口
+
+该元素实现了 {{domxref("SVGClipPathElement")}} 接口。
 
 ## 示例
 
@@ -21,26 +36,25 @@ svg {
 <svg viewBox="0 0 100 100">
   <clipPath id="myClip">
     <!--
-      圆圈外的所有东西都会被裁剪掉，因此不可见。
+      圆外的所有内容都会被裁剪，因此不可见。
     -->
     <circle cx="40" cy="35" r="35" />
   </clipPath>
 
-  <!-- 作为引用元素（英文原文：for reference）的黑色心形 -->
+  <!-- 原始黑色心形，供参考 -->
   <path
     id="heart"
     d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
 
   <!--
-    和上述黑色心形形状相同的红色心形，剪切路径是上面定义的圆；
-    红色心形只有在圆内的部分可见。
+    只有裁剪圆内的红色心形部分可见。
   -->
-  <use clip-path="url(#myClip)" xlink:href="#heart" fill="red" />
+  <use clip-path="url(#myClip)" href="#heart" fill="red" />
 </svg>
 ```
 
 ```css
-/* 如果浏览器支持几何属性 r，可以加一点 css */
+/* 为已实现 r 几何属性的浏览器添加一点 CSS */
 
 @keyframes openYourHeart {
   from {
@@ -58,19 +72,9 @@ svg {
 
 {{EmbedLiveSample('示例', 100, 100)}}
 
-从概念上讲，剪切路径等于给引用元素设置了一个自定义的可视区域。因此，它虽然会影响一个元素的绘制，但不会影响这个元素本身的几何形状，比如被剪切元素（通过 {{SVGAttr("clip-path")}} 属性引用了 `<clipPath>` 的元素及其子元素）的包围盒和没有被剪切时相同。
+裁剪路径在概念上等同于引用元素的自定义视口。因此，它会影响元素的*渲染*，但不会影响元素的*固有几何*。被裁剪元素（即通过 {{SVGAttr("clip-path")}} 属性引用 `<clipPath>` 元素的元素，或引用元素的子元素）的边界框必须与未裁剪时相同。
 
-默认情况下，{{cssxref("pointer-events")}} 不会在被剪切掉的区域（不可见的区域）内触发。举个例子，如果一个半径为 10 的圆形被剪切成半径为 5 的圆形，那么这个圆在半径为 5 以外的区域不会收到“click”事件。
-
-## 属性
-
-- {{SVGAttr("clipPathUnits")}}
-  - : 为 `<clipPath>` 元素的内容定义坐标系。
-    _Value type_: `userSpaceOnUse`|`objectBoundingBox` ; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
-
-## 使用上下文
-
-{{svginfo}}
+默认情况下，被裁剪区域不会派发 {{cssxref("pointer-events")}} 事件。例如，一个半径为 `10` 的圆被裁剪为半径为 `5` 的圆时，在较小半径之外不会接收“click”事件。
 
 ## 规范
 
@@ -80,7 +84,9 @@ svg {
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
-- Other clipping and masking SVG elements: {{SVGElement("mask")}}
-- Some CSS properties: {{cssxref("clip-path")}}, {{cssxref("pointer-events")}}
+- {{SVGElement("mask")}}
+- CSS {{cssxref("clip-path")}} 属性
+- [CSS 裁剪简介](/zh-CN/docs/Web/CSS/Guides/Masking/Clipping)
+- [CSS 遮罩](/zh-CN/docs/Web/CSS/Guides/Masking/Clipping)模块

@@ -2,14 +2,14 @@
 title: Comment fonctionne le Web
 slug: Learn_web_development/Getting_started/Web_standards/How_the_web_works
 l10n:
-  sourceCommit: 19cee96ad42daadec1e4b66e87536ec7a5d5cb80
+  sourceCommit: b5ee197a87ea18acbc4dd9544efa8c0e46253785
 ---
 
 {{NextMenu("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
 
 _Comment fonctionne le Web_ fournit une description générale de ce qui se passe lorsque vous utilisez un navigateur web pour accéder à une page web, en expliquant la «&nbsp;magie&nbsp;» qui s'opère en coulisses pour transmettre le code pertinent à votre ordinateur afin que le navigateur l'assemble en quelque chose que vous pouvez consulter.
 
-Cette théorie n'est pas essentielle pour écrire du code web à court terme, mais vous en tirerez rapidement profit en comprenant ce qui se passe en arrière-plan.
+Cette théorie n'est pas essentielle pour écrire du code web à court terme, mais vous en tirez rapidement profit en comprenant ce qui se passe en arrière-plan.
 
 > [!NOTE]
 > Cet article n'explique pas comment les navigateurs web transforment le code en pages web. C'est abordé dans [Comment les navigateurs chargent les sites web](/fr/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites).
@@ -70,7 +70,7 @@ Pour que les données puissent circuler dans les deux sens, il nous faut les él
   - **Ressources**&nbsp;: terme générique pour tous les autres éléments présents sur un site web — comme les images, la musique, la vidéo, les documents Word et les PDF — qui ne sont pas du code interprété par le navigateur.
 
   > [!NOTE]
-  > Vous découvrirez comment le navigateur assemble ces fichiers en une page web plus loin dans ce cours, dans [Comment les navigateurs chargent les sites web](/fr/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites).
+  > Vous découvrez comment le navigateur assemble ces fichiers en une page web plus loin dans ce cours, dans [Comment les navigateurs chargent les sites web](/fr/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites).
 
 ## Que se passe-t-il exactement ?
 
@@ -143,7 +143,7 @@ La réponse complète est plus complexe que cela, mais nous en avons omis la maj
 
 ### Autres codes d'état
 
-Plus haut, nous avons rencontré le [code d'état](/fr/docs/Web/HTTP/Reference/Status) `200`, qui indique que la requête HTTP a réussi. Il existe de nombreux codes d'état HTTP avec des significations et des usages spécifiques, mais vous n'en verrez couramment que quelques-uns&nbsp;:
+Plus haut, nous avons rencontré le [code d'état](/fr/docs/Web/HTTP/Reference/Status) `200`, qui indique que la requête HTTP a réussi. Il existe de nombreux codes d'état HTTP avec des significations et des usages spécifiques, mais vous n'en voyez couramment que quelques-uns&nbsp;:
 
 - `301`
   - : La ressource demandée a été déplacée de façon permanente vers un nouvel emplacement, indiqué dans la réponse. Cela sert à rediriger le contenu lorsqu'il a été déplacé.
@@ -152,7 +152,7 @@ Plus haut, nous avons rencontré le [code d'état](/fr/docs/Web/HTTP/Reference/S
 - `403`
   - : Le serveur ne donne pas accès à la ressource demandée au client. Cela arrive généralement lorsque le serveur sait qui est le client, mais que celui-ci n'a pas la permission d'accéder à la page demandée.
 - `404`
-  - : Le serveur ne trouve pas la ressource demandée. Ce code est souvent renvoyé si l'URL est incorrecte ou si un contenu a été supprimé sans redirection.
+  - : Le serveur ne trouve pas la ressource demandée. Ce code est souvent retourné si l'URL est incorrecte ou si un contenu a été supprimé sans redirection.
 - `503`
   - : La requête ne peut pas être traitée à cause d'un problème côté serveur. C'est fréquent lorsque les serveurs sont hors ligne pour maintenance, et c'est censé être temporaire.
 

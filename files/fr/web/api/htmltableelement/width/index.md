@@ -3,10 +3,10 @@ title: "HTMLTableElement : propriété width"
 short-title: width
 slug: Web/API/HTMLTableElement/width
 l10n:
-  sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`width`** de l'interface {{DOMxRef("HTMLTableElement")}} représente la largeur souhaitée du tableau.
 

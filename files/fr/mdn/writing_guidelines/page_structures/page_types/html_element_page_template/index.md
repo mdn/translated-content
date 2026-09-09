@@ -2,7 +2,7 @@
 title: Modèle de page d'élément HTML
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 > [!NOTE]
@@ -59,16 +59,15 @@ l10n:
 >
 > - `\{{SeeCompatTable}}` — cela génère une bannière **Ceci est une technologie expérimentale** qui indique que la technologie est [expérimentale](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#expérimental).
 >   Si elle est expérimentale et que la technologie est cachée derrière une préférence dans Firefox, vous devez également remplir une entrée pour elle dans la page [Fonctionnalités expérimentales dans Firefox](/fr/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — cela génère une bannière **Obsolète** qui indique que l'utilisation de la technologie est [découragée](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#obsolète).
 > - `\{{Non-standard_Header}}` — cela génère une bannière **Non standard** qui indique que la fonctionnalité ne fait partie d'aucune spécification.
 >
 > Voir [«&nbsp;Comment les statuts des fonctionnalités sont ajoutés ou mis à jour&nbsp;»](/fr/docs/MDN/Writing_guidelines/Page_structures/Feature_status#comment_les_statuts_sont-ils_ajoutés_ou_mis_à_jour) pour plus d'information.
 >
-> Des exemples des bannières **Expérimentale**, **Obsolète** et **Non standard** sont présentés après ce bloc de notes.
+> Des exemples des bannières **Expérimentale** et **Non standard** sont présentés après ce bloc de notes.
 >
 > _N'oubliez pas de supprimer cette note explicative avant de publier._
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<insert_the_element_name>`** fait _(insérer un paragraphe résumant le nom de l'élément et ce qu'il fait, idéalement une ou deux phrases courtes)_.
 

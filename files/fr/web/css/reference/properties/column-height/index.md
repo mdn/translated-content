@@ -3,7 +3,7 @@ title: Propriété CSS `column-height`
 short-title: column-height
 slug: Web/CSS/Reference/Properties/column-height
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 {{SeeCompatTable}}
@@ -33,16 +33,18 @@ column-height: unset;
 
 ### Valeurs
 
+Cette propriété est définie par une valeur unique choisie parmi la liste suivante&nbsp;:
+
 - `auto`
-  - : La valeur initiale. Si le conteneur de contenu a une hauteur définie, les colonnes de contenu s'étendront jusqu'à cette hauteur, débordant sur le côté si le contenu ne tient pas à l'intérieur du conteneur. Si le conteneur de contenu n'a pas de hauteur définie, le contenu sera réparti également entre les colonnes générées à l'intérieur du conteneur.
+  - : La valeur initiale. Si le conteneur de contenu a une hauteur définie, les colonnes de contenu s'étendent jusqu'à cette hauteur, débordant sur le côté si le contenu ne tient pas à l'intérieur du conteneur. Si le conteneur de contenu n'a pas de hauteur définie, le contenu est réparti également entre les colonnes générées à l'intérieur du conteneur.
 - {{CSSxRef("&lt;length&gt;")}}
   - : La hauteur des colonnes. Doit être non négative.
 
 ## Description
 
-La propriété `column-height` définit la hauteur des colonnes dans une [mise en page multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout). Cela est utile pour contraindre la hauteur des colonnes pour la lisibilité lors de la définition de plusieurs colonnes à l'aide des propriétés {{CSSxRef("column-count")}} ou {{CSSxRef("column-width")}}.
+La propriété `column-height` définit la hauteur des colonnes dans une [mise en page multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout). C'est utile pour contraindre la hauteur des colonnes pour la lisibilité lors de la définition de plusieurs colonnes à l'aide des propriétés {{CSSxRef("column-count")}} ou {{CSSxRef("column-width")}}.
 
-Sans `column-height`, si la hauteur du contenu multi-colonnes dépasse la hauteur de la fenêtre, les lecteurs devront faire défiler jusqu'à la fin d'une colonne, puis revenir en haut de la colonne suivante. Une solution possible serait de définir une hauteur fixe sur le conteneur de contenu, cependant, les colonnes excédentaires déborderont alors sur le côté, et les lecteurs devront faire défiler horizontalement pour lire tout le contenu.
+Sans `column-height`, si la hauteur du contenu multi-colonnes dépasse la hauteur de la fenêtre, les lecteurs doivent faire défiler jusqu'à la fin d'une colonne, puis revenir en haut de la colonne suivante. Une solution possible est de définir une hauteur fixe sur le conteneur de contenu, cependant, les colonnes excédentaires débordent alors sur le côté, et les lecteurs doivent faire défiler horizontalement pour lire tout le contenu.
 
 La propriété `column-height`, ainsi que {{CSSxRef("column-wrap")}}, permet de définir une hauteur spécifique pour les colonnes et de les envelopper sur une nouvelle rangée de colonnes lorsque le bord du conteneur est atteint.
 
@@ -64,7 +66,7 @@ Cet exemple démontre une utilisation simple de la propriété `column-height` p
 
 #### HTML
 
-Nous incluons un poème de Dr. Seuss en utilisant une liste ordonnée ({{HTMLElement("ol")}}) contenant 28 éléments {{HTMLElement("li")}}, suivi du nom de l'auteur dans un paragraphe ({{HTMLElement("p")}}).
+Nous incluons un poème de Dr. Seuss en utilisant une liste ordonnée ({{HTMLElement("ol")}}) contenant 28 éléments {{HTMLElement("li")}}, suivi du nom de l'auteur·ice dans un paragraphe ({{HTMLElement("p")}}).
 
 ```html
 <ol>
@@ -113,7 +115,7 @@ Nous incluons un poème de Dr. Seuss en utilisant une liste ordonnée ({{HTMLEle
 
 #### CSS
 
-Nous définissons la liste ordonnée (`<ol>`) comme un conteneur multi-colonnes en définissant la propriété {{CSSxRef("column-width")}} à `150px`, ce qui signifie que le conteneur contiendra autant de colonnes que possible, chacune ayant au moins `150px` de large. La propriété {{CSSxRef("gap")}} de `2em` définit un écart horizontal entre les colonnes et un écart vertical entre les rangées de colonnes. Nous définissons ensuite la `column-height` à `2em`, ce qui fait que la valeur par défaut `auto` de la propriété `column-wrap` se résout en `wrap` pour créer des rangées de colonnes enveloppées.
+Nous définissons la liste ordonnée (`<ol>`) comme un conteneur multi-colonnes en définissant la propriété {{CSSxRef("column-width")}} à `150px`, ce qui signifie que le conteneur contient autant de colonnes que possible, chacune ayant au moins `150px` de large. La propriété {{CSSxRef("gap")}} de `2em` définit un écart horizontal entre les colonnes et un écart vertical entre les rangées de colonnes. Nous définissons ensuite la `column-height` à `2em`, ce qui fait que la valeur par défaut `auto` de la propriété `column-wrap` se résout en `wrap` pour créer des rangées de colonnes enveloppées.
 
 ```css live-sample___basic-example
 ol {
@@ -404,7 +406,7 @@ Le HTML, qui contient plusieurs paragraphes de contenu provenant des pages d'acc
 
 #### CSS
 
-Nous commençons par définir {{CSSxRef("column-width")}} sur l'élément HTML {{HTMLElement("body")}} pour définir la largeur préférée des colonnes. Un {{CSSxRef("gap")}} de `3em 2em` entraîne un espace de `3em` entre les lignes et un espace de `2em` entre les colonnes. Le {{CSSxRef("column-rule")}} ajoute une ligne au centre de l'espace entre les colonnes. La `column-height` de `95vh` rend les colonnes presque aussi hautes que la fenêtre d'affichage.
+Nous commençons par définir {{CSSxRef("column-width")}} sur l'élément HTML {{HTMLElement("body")}} pour définir la largeur préférée des colonnes. Un {{CSSxRef("gap")}} de `3em 2em` entraîne un espace de `3em` entre les lignes et un espace de `2em` entre les colonnes. Le {{CSSxRef("column-rule")}} ajoute une ligne au centre de l'espace entre les colonnes. La `column-height` de `95vh` rend les colonnes presque aussi hautes que la zone d'affichage.
 
 Nous définissons explicitement {{CSSxRef("column-wrap")}} sur `wrap` comme rappel du comportement de retour à la ligne appliqué. Nous aurions pu définir la valeur sur `auto` ou omettre complètement la propriété, car, par défaut, `column-wrap` se résout en `wrap` lorsque `column-height` est défini sur une valeur `<length>`.
 
@@ -473,7 +475,7 @@ p {
 
 {{EmbedLiveSample("scroll-snapped", "100%", 400)}}
 
-Essayez de faire défiler le contenu. Remarquez comment chaque nouvelle ligne de colonnes remplit la fenêtre d'affichage, et comment le contenu s'accroche proprement en haut d'une nouvelle ligne à chaque défilement.
+Essayez de faire défiler le contenu. Remarquez comment chaque nouvelle ligne de colonnes remplit la zone d'affichage, et comment le contenu s'accroche proprement en haut d'une nouvelle ligne à chaque défilement.
 
 ### Zone de test de `column-height` et `column-count` playground
 
@@ -481,7 +483,7 @@ Cet exemple s'appuie sur le précédent en incluant deux curseurs de plage qui v
 
 #### HTML et JavaScript
 
-Le HTML est le même que dans l'exemple précédent, avec l'ajout d'un formulaire contenant deux éléments `{{HTMLElement("input/range", "&lt;input type=\"range\"&gt;")}}` qui mettent à jour les valeurs de `column-count` et `column-height` via JavaScript. Le HTML et le JavaScript sont masqués pour plus de concision.
+Le HTML est le même que dans l'exemple précédent, avec l'ajout d'un formulaire contenant deux éléments `{{HTMLElement("input/range", "&lt;input type=\"range\"&gt;")}}` qui mettent à jour les valeurs de `column-count` et `column-height` avec JavaScript. Le HTML et le JavaScript sont masqués pour plus de concision.
 
 ```html hidden live-sample___column-playground
 <form>

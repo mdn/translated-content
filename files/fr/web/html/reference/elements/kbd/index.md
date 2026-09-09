@@ -3,10 +3,12 @@ title: "Élément HTML `<kbd>` : l'élément de saisie clavier"
 short-title: <kbd>
 slug: Web/HTML/Reference/Elements/kbd
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: f201fb25d8aeda059065686c180e161c995369d2
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<kbd>`** représente une portion de texte en ligne désignant une saisie de texte de l'utilisateur·ice à partir d'un clavier, d'une commande vocale ou de tout autre dispositif de saisie de texte. Par convention, {{Glossary("user agent", "l'agent utilisateur")}} affiche le contenu d'un élément `<kbd>` en utilisant sa police monospace par défaut, bien que cela ne soit pas imposé par la norme HTML.
+L'élément [HTML](/fr/docs/Web/HTML) **`<kbd>`** représente une saisie de l'utilisateur·ice (typiquement au clavier). Par défaut, le texte contenu est affiché en utilisant la police monospace par défaut de {{Glossary("user agent", "l'agent utilisateur")}}.
+
+`<kbd>` peut être imbriqué de différentes façons avec l'élément HTML {{HTMLElement("samp")}} (résultat d'exemple) pour représenter diverses formes de saisie ou de sortie selon les indices visuels.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;kbd&gt;", "tabbed-shorter")}}
 
@@ -47,10 +49,10 @@ D'autres éléments peuvent être utilisés en association avec `<kbd>` afin de 
 
 - Imbriquer un élément `<kbd>` dans un autre élément `<kbd>` représente une touche ou une unité de saisie au sein d'une saisie plus grande. Cf. [Représenter les frappes de touches dans une saisie](#représenter_les_frappes_de_touches_dans_une_saisie) ci-après.
 - Imbriquer un élément `<kbd>` dans un élément {{HTMLElement("samp")}} permet d'indiquer que la saisie a été restituée (_echo_) à l'utilisateur·ice. Cf. [Saisie restituée](#saisie_restituée), ci-après.
-- Imbriquer un élément `<samp>` dans un élément `<kbd>` permet de représenter des saisies basées sur le texte présenté par le système (cela peut être le nom de menus, d'éléments de menu ou le nom de bouttons affichés à l'écran). Cf. [Représenter les options de saisies à l'écran](#représenter_les_options_de_saisies_à_lécran) ci-après.
+- Imbriquer un élément `<samp>` dans un élément `<kbd>` permet de représenter des saisies basées sur le texte présenté par le système (cela peut être le nom de menus, d'éléments de menu ou le nom de boutons affichés à l'écran). Cf. [Représenter les options de saisies à l'écran](#représenter_les_options_de_saisies_à_lécran) ci-après.
 
 > [!NOTE]
-> Il est possible de définir un style pour surcharger la mise en forme par défaut du navigateur pour l'élément `<kbd>`. À ce titre, on gardera à l'esprit que les préférences et feuilles de style de l'utilisateur·ice peuvent surcharger la mise en forme du site.
+> Il est possible de définir un style pour surcharger la mise en forme par défaut du navigateur pour l'élément `<kbd>`. À ce titre, on garde à l'esprit que les préférences et feuilles de style de l'utilisateur·ice peuvent surcharger la mise en forme du site.
 
 ## Exemples
 
@@ -69,7 +71,7 @@ D'autres éléments peuvent être utilisés en association avec `<kbd>` afin de 
 
 ### Représenter les frappes de touches dans une saisie
 
-Afin de décrire une saisie constituée de plusieurs touches, on imbriquera plusieurs élément `<kbd>` dans un élément `<kbd>` englobant qui représente la saisie dans son ensemble. Chaque frappe clavier qui le constitue sera représentée par son propre élément `<kbd>`.
+Afin de décrire une saisie constituée de plusieurs touches, on imbrique plusieurs élément `<kbd>` dans un élément `<kbd>` englobant qui représente la saisie dans son ensemble. Chaque frappe clavier qui le constitue est représentée par son propre élément `<kbd>`.
 
 #### Sans mise en forme
 
@@ -86,10 +88,10 @@ Commençons par analyser le code HTML.
 </p>
 ```
 
-On voit ici que l'ensemble de la combinaison de touches est contenue dans un élément `<kbd>` et que chaque touche possèe son propre élément.
+On voit ici que l'ensemble de la combinaison de touches est contenue dans un élément `<kbd>` et que chaque touche possède son propre élément.
 
 > [!NOTE]
-> Il n'est pas nécessaire d'imbriquer tous ces éléments&nbsp;; vous pouvez choisir de simplifier en omettant l'élément `<kbd>` externe. En d'autres termes, simplifier ceci en `<kbd>Ctrl</kbd>+<kbd>N</kbd>` serait parfaitement valide.
+> Il n'est pas nécessaire d'imbriquer tous ces éléments&nbsp;; vous pouvez choisir de simplifier en omettant l'élément `<kbd>` externe. En d'autres termes, simplifier ceci en `<kbd>Ctrl</kbd>+<kbd>N</kbd>` est parfaitement valide.
 >
 > Cependant, selon votre feuille de style, il peut être utile d'utiliser ce type d'imbrication.
 
@@ -139,7 +141,7 @@ En imbriquant un élément `<kbd>` dans un élément {{HTMLElement("samp")}}, on
 
 ```html
 <p>
-  S'il se produit une erreur de syntaxe, cet outil affichera la commande
+  S'il se produit une erreur de syntaxe, cet outil affiche la commande
   initialement saisie pour que vous la revoyez&nbsp;:
 </p>
 <blockquote>
@@ -157,7 +159,7 @@ Imbriquer un élément `<samp>` dans un élément `<kbd>` représente une saisie
 
 #### HTML
 
-Ainsi, si on souhaite expliquer comment choisir l'option "Nouveau document" dans le menu "Fichier" avec un document HTML, on pourra écrire&nbsp;:
+Ainsi, si on souhaite expliquer comment choisir l'option «&nbsp;Nouveau document&nbsp;» dans le menu «&nbsp;Fichier&nbsp;» avec un document HTML, on peut écrire&nbsp;:
 
 ```html
 <p>
@@ -176,7 +178,7 @@ Ainsi, si on souhaite expliquer comment choisir l'option "Nouveau document" dans
 </p>
 ```
 
-On voit ici différentes imbrications. La description de l'option du menu est incluse dans un élément `<kbd>` qui contient le menu et le nom de l'élément du menu dans des éléments `<kbd>` et `<samp>`, indiquant que la saisie se fera par l'intermédiaire de quelque chose présenté à l'écran.
+On voit ici différentes imbrications. La description de l'option du menu est incluse dans un élément `<kbd>` qui contient le menu et le nom de l'élément du menu dans des éléments `<kbd>` et `<samp>`, indiquant que la saisie se fait par l'intermédiaire de quelque chose présenté à l'écran.
 
 #### Résultat
 

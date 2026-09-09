@@ -110,6 +110,6 @@ console.log(
 ## Voir aussi
 
 - [Prothèse d'émulation de `JSON.isRawJSON` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#jsonparse-source-text-access)
-- L'objet {{JSxRef("JSON")}}
+- L'objet natif {{JSxRef("JSON")}}
 - La méthode {{JSxRef("JSON.stringify()")}}
 - La méthode {{JSxRef("JSON.rawJSON()")}}

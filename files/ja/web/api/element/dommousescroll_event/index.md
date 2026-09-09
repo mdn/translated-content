@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef}}{{Deprecated_Header}}{{Non-standard_header}}
+{{APIRef}}{{Non-standard_header}}
 
 DOM の `DOMMouseScroll` イベントは、マウスホイールなどが操作され、前回のイベントから 1 行または 1 ページ以上スクロールした場合に非同期に発生します。このイベントは {{ domxref("MouseScrollEvent") }} インターフェイスで表されます。このイベントは Firefox でのみ実装されています。代わりに、標準の {{domxref("Element.wheel_event", "wheel")}} イベントを使用してください。
 

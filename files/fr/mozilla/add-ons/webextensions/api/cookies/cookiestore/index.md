@@ -3,8 +3,6 @@ title: cookies.CookieStore
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 ---
 
-{{AddonSidebar}}
-
 Le type `CookieStore` de l'API {{WebExtAPIRef("cookies")}} représente un cookie store dans le navigateur.
 
 Les fenperes dans les différents mode de navigations peut utiliser différents magasins de cookies — Une fenêtre de navigation privée/ mode navigation privée, par exemple utilisera un magasin de cookies séparé d'une fenêtre non-privée / privée.

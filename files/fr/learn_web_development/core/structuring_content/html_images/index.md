@@ -3,7 +3,7 @@ title: Les images en HTML
 short-title: Les images
 slug: Learn_web_development/Core/Structuring_content/HTML_images
 l10n:
-  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
+  sourceCommit: 2066cc916dfdcbb782340bf0ce562b230e947cba
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/Test_your_skills/Images", "Learn_web_development/Core/Structuring_content")}}
@@ -56,7 +56,7 @@ Donc, par exemple, si votre image s'appelle `dinosaur.jpg`, et qu'elle est situ�
 <img src="dinosaur.jpg" alt="Dinosaure" />
 ```
 
-Si l'image se trouvait dans un sous-répertoire `images`, qui se trouvait dans le même répertoire que la page HTML, vous l'intégrez comme ceci&nbsp;:
+Si l'image se trouve dans un sous-répertoire `images`, qui se trouve dans le même répertoire que la page HTML, vous l'intégrez comme ceci&nbsp;:
 
 ```html
 <img src="images/dinosaur.jpg" alt="Dinosaure" />
@@ -87,9 +87,6 @@ Le code précédent, que ce soit avec l'URL absolue ou relative, nous donne le r
 > [!NOTE]
 > Les éléments comme {{HTMLElement("img")}} et {{HTMLElement("video")}} sont souvent désignés comme des **éléments remplacés**. C'est parce que le contenu et la taille de ces éléments sont définies par une ressource externe (comme un fichier image ou video), pas par le contenu de l'élément lui-même.
 
-> [!NOTE]
-> Vous pouvez trouver les exemples finis de cette section sur [Github <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (regardez aussi le [code source <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html).)
-
 ### Texte alternatif
 
 Le prochain attribut que nous allons étudier est `alt`. Sa valeur est supposée être un descriptif sous forme de texte de l'image, à utiliser dans les cas où l'image ne peut être affichée. Par exemple, le code au-dessus peut être modifié de cette manière&nbsp;:
@@ -101,7 +98,7 @@ Le prochain attribut que nous allons étudier est `alt`. Sa valeur est supposée
             il a une grande tête avec de longues dents pointues" />
 ```
 
-La manière la plus simple de tester votre texte `alt` est de mal épeler votre nom de fichier intentionnellement. Si dans l'exemple, la photo était épelée `dinosooooor.jpg`, le navigateur ne l'affiche pas, mais affiche le texte alternatif à la place&nbsp;:
+La manière la plus simple de tester votre texte `alt` est de mal épeler votre nom de fichier intentionnellement. Si dans l'exemple, la photo est épelée `dinosooooor.jpg`, le navigateur ne l'affiche pas, mais affiche le texte alternatif à la place&nbsp;:
 
 ![Le titre « Images en HTML », mais cette fois l'image du dinosaure n'est pas affichée, et le texte alt est à la place.](alt-text.png)
 
@@ -223,16 +220,8 @@ Il est préférable d'inclure ces informations supplémentaires dans le texte pr
 Il est maintenant temps de jouer&nbsp;! Cette tâche vous permet d'intégrer une image.
 
 1. Cliquez sur **"Exécuter"** dans le bloc de code ci-dessous pour éditer l'exemple dans le MDN Playground.
-2. Modifiez la balise {{HTMLElement("img")}} existante afin qu'elle intègre l'image située à l'URL suivante&nbsp;:
-
-   ```url
-   https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
-   ```
-
-   > [!NOTE]
-   > Nous avons dit plus tôt de ne jamais faire de «&nbsp;<i lang="en">hotlinking</i>&nbsp;» sur d'autres serveurs sans permission, mais cette image se trouve sur notre dépôt GitHub, donc c'est OK.
-
-3. Ajoutez un attribut `alt` à l'image. Vous pouvez vérifier que le texte alternatif fonctionne en faisant temporairement une faute dans l'URL de l'image.
+2. Modifiez la balise {{HTMLElement("img")}} existante afin qu'elle intègre l'image `dinosaur_small.jpg`.
+3. Ajoutez un attribut `alt` à l'image. Vous pouvez vérifier que le texte alternatif fonctionne en faisant temporairement une faute dans le nom de fichier de l'image.
 4. Réglez la largeur et la hauteur correctes de l'image (indice&nbsp;: elle fait `200px` de large et `171px` de haut), puis expérimentez avec d'autres valeurs pour voir l'effet.
 5. Ajoutez un `title` à l'image.
 
@@ -251,7 +240,7 @@ Votre HTML final doit ressembler à ceci&nbsp;:
 
 ```html
 <img
-  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+  src="dinosaur_small.jpg"
   alt="La tête et le torse d'un squelette de dinosaure ;
             il a une grande tête avec de longues dents pointues"
   width="200"
@@ -275,7 +264,7 @@ Les créateurs d'œuvres originales telles que des chansons, des livres ou des l
 
 - Obtenir une permission explicite et écrite du titulaire du droit d'auteur·ice.
 - Payer des frais de licence pour les utiliser. Cela peut être des frais uniques pour une utilisation illimitée («&nbsp;libre de droits&nbsp;»), ou cela peut être «&nbsp;géré par droits&nbsp;», auquel cas vous devez peut-être payer des frais spécifiques par utilisation selon le créneau horaire, la région géographique, l'industrie ou le type de média, etc.
-- Limiter vos utilisations à celles qui seraient considérées comme [usage équitable <sup>(angl.)</sup>](https://fairuse.stanford.edu/overview/fair-use/what-is-fair-use/) ou [traitement équitable <sup>(angl.)</sup>](https://copyrightservice.co.uk/copyright/p27_work_of_others) dans votre juridiction.
+- Limiter vos utilisations à celles qui sont considérées comme [usage équitable <sup>(angl.)</sup>](https://fairuse.stanford.edu/overview/fair-use/what-is-fair-use/) ou [traitement équitable <sup>(angl.)</sup>](https://copyrightservice.co.uk/copyright/p27_work_of_others) dans votre juridiction.
 
 Les auteur·ice·s ne sont pas tenus d'inclure un avis de droit d'auteur·ice ou des conditions de licence avec leur travail. Le droit d'auteur·ice existe automatiquement dans une œuvre originale dès qu'elle est créée dans un support tangible. Ainsi, si vous trouvez une image en ligne et qu'il n'y a pas d'avis de droit d'auteur·ice ou de conditions de licence, la solution la plus sûre est de supposer qu'elle est protégée par le droit d'auteur·ice avec tous les droits réservés.
 
@@ -360,7 +349,7 @@ Une meilleure solution consiste à utiliser les éléments HTML {{HTMLElement("f
 L'élément {{HTMLElement("figcaption")}} dit au navigateur et aux technologies d'assistance que la légende décrit le contenu de l'autre élément {{HTMLElement("figure")}}.
 
 > [!NOTE]
-> D'un point de vue accessibilité, les légendes ont un rôle différent du texte [`alt`](/fr/docs/Web/HTML/Reference/Elements/img#alt). Le texte [`alt`](/fr/docs/Web/HTML/Reference/Elements/img#alt) ne sert qu'en absence d'image tandis que les légendes servent en même temps aux utilisateur·ice·s qui voient l'image. Les légendes et le texte `alt` devraient cependant être différents, car ils apparaissent tout deux quand l'image est absente. Essayez d'enlever les images dans votre navigateur et voyez à quoi ça ressemble.
+> D'un point de vue accessibilité, les légendes ont un rôle différent du texte [`alt`](/fr/docs/Web/HTML/Reference/Elements/img#alt). Le texte [`alt`](/fr/docs/Web/HTML/Reference/Elements/img#alt) ne sert qu'en absence d'image tandis que les légendes servent en même temps aux utilisateur·ice·s qui voient l'image. Les légendes et le texte `alt` doivent cependant être différents, car ils apparaissent tout deux quand l'image est absente. Essayez d'enlever les images dans votre navigateur et voyez à quoi ça ressemble.
 
 Une figure n'est pas forcé de contenir une image. C'est une unité de contenu indépendante qui&nbsp;:
 
@@ -382,7 +371,7 @@ Si vous faites une erreur, vous pouvez remettre votre travail à zéro en utilis
 
 ```html live-sample___images-2
 <img
-  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+  src="dinosaur_small.jpg"
   alt="La tête et le torse d'un squelette de dinosaure ; il a une grande tête avec de longues dents acérées"
   width="200"
   height="171"
@@ -399,7 +388,7 @@ Votre code HTML final doit ressembler à ceci&nbsp;:
 ```html
 <figure>
   <img
-    src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+    src="dinosaur_small.jpg"
     alt="La tête et le torse d'un squelette de dinosaure ; il a une grande tête avec de longues dents acérées"
     width="200"
     height="171" />
@@ -423,12 +412,12 @@ p {
 
 L'image intégrée ainsi obtenue est sans doute plus facile à positionner et à contrôler que les images HTML. Alors pourquoi s'embêter avec les images HTML&nbsp;? Comme évoqué plus haut, les images d'arrière-plan CSS sont uniquement destinées à la décoration. Si vous souhaitez simplement ajouter un élément esthétique à votre page pour en améliorer l'aspect visuel, cela convient parfaitement. Cependant, ces images n'ont absolument aucune signification sémantique. Elles ne peuvent pas avoir d'équivalent textuel, sont invisibles pour les lecteurs d'écran, etc. C'est là que les images HTML prennent tout leur sens&nbsp;!
 
-Récapitulons&nbsp;: si une image a une signification par rapport à votre contenu, vous devez utiliser une image HTML. Si une image est purement décorative, vous devez utiliser des images d'arrière-plan CSS (nous aborderons ce sujet en détail plus tard dans les modules de base).
+Récapitulons&nbsp;: si une image a une signification par rapport à votre contenu, vous devez utiliser une image HTML. Si une image est purement décorative, vous devez utiliser des images d'arrière-plan CSS (nous abordons ce sujet en détail plus tard dans les modules de base).
 
 ## Résumé
 
 C'est tout pour le moment. Nous avons abordé en détail les images et les légendes.
 
-Dans le prochain article, nous vous proposerons des tests que vous pourrez utiliser pour vérifier dans quelle mesure vous avez compris et retenu les informations que nous avons fournies sur les images HTML.
+Dans le prochain article, nous vous proposons des tests que vous pouvez utiliser pour vérifier dans quelle mesure vous avez compris et retenu les informations que nous avons fournies sur les images HTML.
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/Test_your_skills/Images", "Learn_web_development/Core/Structuring_content")}}

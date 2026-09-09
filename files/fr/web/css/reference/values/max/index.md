@@ -3,7 +3,7 @@ title: Fonction CSS `max()`
 short-title: max()
 slug: Web/CSS/Reference/Values/max
 l10n:
-  sourceCommit: 6857a53b4ef756a062310b555e61f2ec722a2441
+  sourceCommit: 11c522da37b7469cbce26bbe220936aec1d372d0
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`max()`** permet d'obtenir la plus grande valeurs parmi une liste d'expressions, séparées par des virgules afin d'utiliser ce maximum comme valeur d'une propriété CSS. La fonction `max()` peut être utilisée à tout endroit où une valeur de type {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}} ou {{CSSxRef("&lt;integer&gt;")}} est autorisée.
@@ -33,7 +33,7 @@ width: max(5vw, 100px);
 </section>
 ```
 
-Dans ce premier exemple montré ci-dessus, la largeur est d'au moins 400px, mais est plus large sur la zone d'affichage (<i lang="en">viewport</i> en anglais) est supérieure à 2000px (dans ce cas, 1vw serait 20px, donc 20vw serait 400px). Cette technique utilise une unité absolue pour définir une valeur minimale fixe pour la propriété, et une unité relative pour permettre à la valeur de croître afin de s'adapter aux zones d'affichage plus larges.
+Dans ce premier exemple montré ci-dessus, la largeur est d'au moins 400px, mais est plus large sur la zone d'affichage (<i lang="en">viewport</i> en anglais) est supérieure à 2000px (dans ce cas, 1vw vaut 20px, donc 20vw vaut 400px). Cette technique utilise une unité absolue pour définir une valeur minimale fixe pour la propriété, et une unité relative pour permettre à la valeur de croître afin de s'adapter aux zones d'affichage plus larges.
 
 ## Syntaxe
 
@@ -54,7 +54,7 @@ Vous pouvez utiliser différentes unités pour chaque valeur de votre expression
 
 - Les expressions mathématiques impliquant des pourcentages pour les largeurs et hauteurs des colonnes de tableau, des groupes de colonnes de tableau, des lignes de tableau, des groupes de lignes de tableau et des cellules de tableau dans les tableaux à disposition automatique et fixe _peuvent_ être traitées comme si `auto` avait été défini.
 - Il est permis d'imbriquer les fonctions `min()` et `max()` comme valeurs d'expression. Les expressions sont des expressions mathématiques complètes, vous pouvez donc utiliser l'addition, la soustraction, la multiplication et la division directement sans utiliser la fonction `calc()` elle-même.
-- L'expression peut être des valeurs combinant les opérateurs d'addition ( + ), de soustraction ( - ), de multiplication ( \* ) et de division ( / ), en utilisant les règles de priorité des opérateurs standard. Assurez-vous de mettre un espace de chaque côté des opérandes + et -. Les opérandes de l'expression peuvent être n'importe quelle valeur de syntaxe \<length>.
+- L'expression peut être des valeurs combinant les opérateurs d'addition (`+`), de soustraction (`-`), de multiplication (`*`) et de division (`/`), en utilisant les règles de priorité des opérateurs standard. Assurez-vous de mettre un espace de chaque côté des opérandes `+` et `-`.
 - Vous pouvez (et devez souvent) combiner les valeurs `min()` et `max()`, ou utiliser `max()` dans une fonction `clamp()` ou `calc()`.
 
 ## Syntaxe formelle
@@ -88,16 +88,16 @@ Voyons un exemple de CSS&nbsp;:
 h1 {
   font-size: 2rem;
 }
-h1.responsive {
+h1.reactif {
   font-size: max(4vw, 2em, 2rem);
 }
 ```
 
-La taille de la police est au minimum de 2rems, soit deux fois la taille par défaut de la police sur la page. Cela garantit qu'elle est lisible et accessible.
+La taille de la police est au minimum de `2rem`, soit deux fois la taille par défaut de la police sur la page. Cela garantit qu'elle est lisible et accessible.
 
 ```html
 <h1>Ce texte est toujours lisible, mais ne change pas de taille</h1>
-<h1 class="responsive">
+<h1 class="reactif">
   Ce texte est toujours lisible, et est réactif, jusqu'à un certain point
 </h1>
 ```

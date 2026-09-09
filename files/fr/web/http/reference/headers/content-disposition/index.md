@@ -3,12 +3,12 @@ title: En-tête Content-Disposition
 short-title: Content-Disposition
 slug: Web/HTTP/Reference/Headers/Content-Disposition
 l10n:
-  sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
-L'en-tête HTTP **`Content-Disposition`** indique si le contenu doit être affiché _en ligne_ (<i lang="en">inline</i> en anglais) dans le navigateur en tant que page Web ou partie de page Web, ou téléchargé en tant que _pièce jointe_ localement.
+L'en-tête HTTP **`Content-Disposition`** indique si le contenu doit être affiché _en incise_ (<i lang="en">inline</i> en anglais) dans le navigateur en tant que page Web ou partie de page Web, ou téléchargé en tant que _pièce jointe_ localement.
 
-Dans un corps multipartie, l'en-tête doit être utilisé sur chaque sous-partie pour fournir des informations sur son champ correspondant. La sous-partie est délimitée par la _limite_ définie dans l'en-tête {{HTTPHeader("Content-Type")}}. Lorsqu'il est utilisé sur le corps lui-même, `Content-Disposition` n'a aucun effet.
+Dans un corps en plusieurs parties, l'en-tête doit être utilisé sur chaque sous-partie pour fournir des informations sur son champ correspondant. La sous-partie est délimitée par la _limite_ définie dans l'en-tête {{HTTPHeader("Content-Type")}}. Lorsqu'il est utilisé sur le corps lui-même, `Content-Disposition` n'a aucun effet.
 
 L'en-tête `Content-Disposition` est défini dans le contexte plus large des messages MIME pour l'e-mail, mais seul un sous-ensemble des paramètres possibles s'applique aux formulaires HTTP et aux requêtes {{HTTPMethod("POST")}}. Seule la valeur `form-data`, ainsi que les directives optionnelles `name` et `filename`, peuvent être utilisées dans le contexte HTTP.
 
@@ -51,14 +51,14 @@ Il est conseillé d'éviter les séquences d'échappement en pourcentage dans `f
 Les navigateurs peuvent appliquer des transformations pour respecter les exigences du système de fichiers, comme convertir les séparateurs de chemin (`/` et `\`) en tirets bas (`_`).
 
 > [!NOTE]
-> Chrome, et Firefox 82 et versions ultérieures, privilégient l'attribut `download` de [l'élément HTML `<a>`](/fr/docs/Web/HTML/Reference/Elements/a) par rapport au paramètre `Content-Disposition: inline` (pour les [URL de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy)). Les versions antérieures de Firefox privilégient l'en-tête et affichent le contenu en ligne.
+> Chrome, et Firefox 82 et versions ultérieures, privilégient l'attribut `download` de [l'élément HTML `<a>`](/fr/docs/Web/HTML/Reference/Elements/a) par rapport au paramètre `Content-Disposition: inline` (pour les [URL de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy)). Les versions antérieures de Firefox privilégient l'en-tête et affichent le contenu en incise.
 
 ### En tant qu'en-tête pour un corps à plusieurs parties
 
 Un corps `multipart/form-data` nécessite un en-tête `Content-Disposition` pour fournir des informations sur chaque sous-partie du formulaire (par exemple, pour chaque champ de formulaire et tout fichier faisant partie des données du champ).
 La première directive est toujours `form-data`, et l'en-tête doit également inclure un paramètre `name` pour identifier le champ concerné. Les directives supplémentaires sont insensibles à la casse.
 La valeur de tout argument (après le signe `=`) peut être soit un jeton, soit une chaîne de caractères entre guillemets.
-Les chaînes entre guillemets sont recommandées, et de nombreuses implémentations serveur exigent que les valeurs soient entre guillemets.
+Les chaînes de caractères entre guillemets sont recommandées, et de nombreuses implémentations serveur exigent que les valeurs soient entre guillemets.
 Ceci s'explique par le fait qu'un jeton doit être en US-ASCII pour les en-têtes de type MIME comme `Content-Disposition`, et US-ASCII n'autorise pas certains caractères courants dans les noms de fichiers et autres valeurs.
 Les paramètres multiples sont séparés par un point-virgule (`;`).
 
@@ -76,7 +76,7 @@ name="nomFichier"; filename="nomfichier.jpg"
     Un `name` avec une valeur de `'_charset_'` indique que la partie n'est pas un champ HTML, mais le jeu de caractères par défaut à utiliser pour les parties sans information de charset explicite.
 
 - `filename`
-  - : Est suivie d'une chaîne de caractères contenant le nom d'origine du fichier transmis. Ce paramètre fournit principalement une information indicative. Les recommandations de la [RFC2183 <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc2183#section-2.3) s'appliquent&nbsp;:
+  - : Est suivie d'une chaîne de caractères contenant le nom d'origine du fichier transmis. Ce paramètre fournit principalement une information indicative. Les recommandations de la [RFC2183 <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc2183/#section-2.3) s'appliquent&nbsp;:
     - Préférer les caractères ASCII si possible (le client peut encoder en pourcentage, tant que l'implémentation serveur le décode).
     - Toute information de chemin doit être supprimée, par exemple en remplaçant `/` par `_`.
     - Lors de l'écriture sur disque, il ne doit pas écraser un fichier existant.
@@ -100,13 +100,13 @@ Content-Length: 22
 <HTML>Enregistrez-moi !</HTML>
 ```
 
-Ce fichier HTML sera téléchargé plutôt qu'affiché dans le navigateur.
-La plupart des navigateurs proposeront à l'utilisateur·ice de l'enregistrer sous le nom de fichier `cool.html` par défaut (comme indiqué dans la directive `filename`).
+Ce fichier HTML est téléchargé plutôt qu'affiché dans le navigateur.
+La plupart des navigateurs proposent à l'utilisateur·ice de l'enregistrer sous le nom de fichier `cool.html` par défaut (comme indiqué dans la directive `filename`).
 
 ### Envoi HTML avec le type de contenu `multipart/form-data`
 
 L'exemple suivant montre un formulaire HTML envoyé en utilisant `multipart/form-data` avec l'en-tête `Content-Disposition`.
-En pratique, la valeur de la limite `delimiter123` serait une chaîne générée par le navigateur, comme `----8721656041911415653955004498`&nbsp;:
+En pratique, la valeur de la limite `delimiter123` est une chaîne de caractères générée par le navigateur, comme `----8721656041911415653955004498`&nbsp;:
 
 ```http
 POST /test.html HTTP/1.1
@@ -135,5 +135,5 @@ value2
 ## Voir aussi
 
 - [Les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)
-- L'en-tête {{HTTPHeader("Content-Type")}} définissant la limite du corps multipartie.
+- L'en-tête {{HTTPHeader("Content-Type")}} définissant la limite du corps en plusieurs parties.
 - L'interface {{DOMxRef("FormData")}} utilisée pour manipuler les données de formulaire à utiliser dans les API {{DOMxRef("Window/fetch", "fetch()")}} ou {{DOMxRef("XMLHttpRequest")}}.

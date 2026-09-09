@@ -51,4 +51,4 @@ console.log(Intl.ListFormat.supportedLocalesOf(locales, options));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.ListFormat")}}
+- L'objet natif {{JSxRef("Intl.ListFormat")}}

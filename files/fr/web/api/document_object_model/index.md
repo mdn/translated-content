@@ -2,7 +2,7 @@
 title: Référence du DOM
 slug: Web/API/Document_Object_Model
 l10n:
-  sourceCommit: 231152e9a749aaeba8de45f4cc712845a470dda9
+  sourceCommit: 20d58a48bad972cddca0630fa0fbc06fd1b23244
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -28,7 +28,7 @@ const paragraphs = document.querySelectorAll("p");
 alert(paragraphs[0].nodeName);
 ```
 
-Toutes les propriétés, méthodes et évènements disponibles pour manipuler et créer des pages web sont organisés en objets. Par exemple, l'objet `document` qui représente le document lui-même, les objets `table` qui implémentent l'interface DOM {{domxref("HTMLTableElement")}} pour accéder aux tableaux HTML, etc., sont tous des objets.
+Toutes les propriétés, méthodes et évènements disponibles pour manipuler et créer des pages web sont organisés en objets. Par exemple, l'objet `document` qui représente le document lui-même, les objets `table` qui implémentent l'interface DOM {{DOMxRef("HTMLTableElement")}} pour accéder aux tableaux HTML, etc., sont tous des objets.
 
 Le DOM est construit à l'aide de plusieurs API qui fonctionnent ensemble. Le DOM de base définit les entités décrivant n'importe quel document et les objets qu'il contient. Celui-ci est étendu au besoin par d'autres API qui ajoutent de nouvelles fonctionnalités et capacités au DOM. Par exemple, l'[API DOM HTML](/fr/docs/Web/API/HTML_DOM_API) ajoute la prise en charge des documents HTML au DOM de base, et l'API SVG ajoute la prise en charge des documents SVG.
 
@@ -58,7 +58,7 @@ Lorsqu'un navigateur web analyse un document HTML, il construit un arbre DOM pui
 
 ### Le DOM et JavaScript
 
-L'exemple précédent, comme presque tous les exemples, est en {{glossary("JavaScript")}}. Autrement dit, il est _écrit_ en JavaScript, mais _utilise_ le DOM pour accéder au document et à ses éléments. Le DOM n'est pas un langage de programmation, mais sans lui, le langage JavaScript n'aurait aucun modèle ou notion de pages web, de documents HTML, de documents SVG et de leurs différentes parties. Le document dans son ensemble, l'en-tête, les tableaux du document, les en-têtes de tableau, le texte dans les cellules et tous les autres éléments d'un document font partie du modèle objet de document pour ce document. Ils peuvent tous être accessibles et manipulés à l'aide du DOM et d'un langage de script comme JavaScript.
+L'exemple précédent, comme presque tous les exemples, est en {{Glossary("JavaScript")}}. Autrement dit, il est _écrit_ en JavaScript, mais _utilise_ le DOM pour accéder au document et à ses éléments. Le DOM n'est pas un langage de programmation, mais sans lui, le langage JavaScript n'aurait aucun modèle ou notion de pages web, de documents HTML, de documents SVG et de leurs différentes parties. Le document dans son ensemble, l'en-tête, les tableaux du document, les en-têtes de tableau, le texte dans les cellules et tous les autres éléments d'un document font partie du modèle objet de document pour ce document. Ils peuvent tous être accessibles et manipulés à l'aide du DOM et d'un langage de script comme JavaScript.
 
 Le DOM ne fait pas partie du langage JavaScript, mais constitue une API Web utilisée pour créer des sites web. JavaScript peut aussi être utilisé dans d'autres contextes. Par exemple, Node.js exécute des programmes JavaScript sur un ordinateur, mais fournit un ensemble d'API différent et l'API DOM ne fait pas partie du cœur de l'environnement Node.js.
 
@@ -78,7 +78,7 @@ Pour plus d'informations sur les technologies impliquées dans l'écriture de Ja
 
 Vous n'avez rien de particulier à faire pour commencer à utiliser le DOM. Vous utilisez l'API directement en JavaScript dans ce qu'on appelle un _script_, c'est-à-dire un programme exécuté par un navigateur.
 
-Lorsque vous créez un script, qu'il soit intégré dans un élément `<script>` ou inclus dans la page web, vous pouvez immédiatement utiliser l'API des objets {{domxref("document")}} ou {{domxref("Window", "window")}} pour manipuler le document lui-même ou n'importe lequel des éléments de la page web (les éléments descendants du document). Votre programmation DOM peut être aussi simple que l'exemple suivant, qui affiche un message dans la console à l'aide de la fonction {{domxref("console/log_static", "console.log()")}}&nbsp;:
+Lorsque vous créez un script, qu'il soit intégré dans un élément `<script>` ou inclus dans la page web, vous pouvez immédiatement utiliser l'API des objets {{DOMxRef("document")}} ou {{DOMxRef("Window", "window")}} pour manipuler le document lui-même ou n'importe lequel des éléments de la page web (les éléments descendants du document). Votre programmation DOM peut être aussi simple que l'exemple suivant, qui affiche un message dans la console à l'aide de la fonction {{DOMxRef("console/log_static", "console.log()")}}&nbsp;:
 
 ```html
 <body onload="console.log('Bienvenue sur ma page d\'accueil !');">
@@ -154,7 +154,7 @@ Cependant, la relation entre les objets et les interfaces qu'ils implémentent d
 
 ### Interfaces et objets
 
-De nombreux objets implémentent plusieurs interfaces différentes. L'objet table, par exemple, implémente une interface spécialisée {{domxref("HTMLTableElement")}}, qui inclut des méthodes comme `createCaption` et `insertRow`. Mais comme il s'agit aussi d'un élément HTML, `table` implémente l'interface `Element` décrite dans le chapitre de référence DOM {{domxref("Element")}}. Enfin, comme un élément HTML est aussi, du point de vue du DOM, un nœud dans l'arbre des nœuds qui composent le modèle objet d'une page HTML ou XML, l'objet table implémente également l'interface plus basique `Node`, dont `Element` hérite.
+De nombreux objets implémentent plusieurs interfaces différentes. L'objet table, par exemple, implémente une interface spécialisée {{DOMxRef("HTMLTableElement")}}, qui inclut des méthodes comme `createCaption` et `insertRow`. Mais comme il s'agit aussi d'un élément HTML, `table` implémente l'interface `Element` décrite dans le chapitre de référence DOM {{DOMxRef("Element")}}. Enfin, comme un élément HTML est aussi, du point de vue du DOM, un nœud dans l'arbre des nœuds qui composent le modèle objet d'une page HTML ou XML, l'objet table implémente également l'interface plus basique `Node`, dont `Element` hérite.
 
 Lorsque vous obtenez une référence à un objet `table`, comme dans l'exemple suivant, vous utilisez couramment ces trois interfaces de façon interchangeable sur l'objet, parfois sans même le savoir.
 
@@ -189,25 +189,25 @@ Le tableau suivant décrit brièvement ces types de données.
   </thead>
   <tbody>
     <tr>
-      <td>{{domxref("Document")}}</td>
+      <td>{{DOMxRef("Document")}}</td>
       <td>
         Lorsqu'un membre retourne un objet de type <code>document</code> (par exemple, la propriété <code>ownerDocument</code> d'un élément retourne le <code>document</code> auquel il appartient), cet objet est le <code>document</code> racine lui-même. Le chapitre de référence <a href="/fr/docs/Web/API/Document">DOM <code>document</code></a> décrit l'objet <code>document</code>.
       </td>
     </tr>
     <tr>
-      <td>{{domxref("Node")}}</td>
+      <td>{{DOMxRef("Node")}}</td>
       <td>
         Tout objet situé dans un document est un nœud d'un certain type. Dans un document HTML, un objet peut être un nœud élément, mais aussi un nœud texte ou un nœud attribut.
       </td>
     </tr>
     <tr>
-      <td>{{domxref("Element")}}</td>
+      <td>{{DOMxRef("Element")}}</td>
       <td>
-        Le type <code>element</code> est basé sur l'interface <code>node</code>. Il fait référence à un élément ou à un nœud de type <code>element</code> retourné par un membre de l'API DOM. Plutôt que de dire, par exemple, que la méthode {{domxref("document.createElement()")}} retourne une référence à un <code>node</code>, on dit simplement que cette méthode retourne l'<code>element</code> qui vient d'être créé dans le DOM. Les objets <code>element</code> implémentent l'interface DOM <code>Element</code> ainsi que l'interface plus basique <code>Node</code>, toutes deux incluses dans cette référence. Dans un document HTML, les éléments sont enrichis par l'interface {{domxref("HTMLElement")}} de l'API DOM HTML ainsi que par d'autres interfaces décrivant les capacités de types d'éléments spécifiques (par exemple, {{domxref("HTMLTableElement")}} pour les éléments {{HTMLElement("table")}}).
+        Le type <code>element</code> est basé sur l'interface <code>node</code>. Il fait référence à un élément ou à un nœud de type <code>element</code> retourné par un membre de l'API DOM. Plutôt que de dire, par exemple, que la méthode {{DOMxRef("document.createElement()")}} retourne une référence à un <code>node</code>, on dit simplement que cette méthode retourne l'<code>element</code> qui vient d'être créé dans le DOM. Les objets <code>element</code> implémentent l'interface DOM <code>Element</code> ainsi que l'interface plus basique <code>Node</code>, toutes deux incluses dans cette référence. Dans un document HTML, les éléments sont enrichis par l'interface {{DOMxRef("HTMLElement")}} de l'API DOM HTML ainsi que par d'autres interfaces décrivant les capacités de types d'éléments spécifiques (par exemple, {{DOMxRef("HTMLTableElement")}} pour les éléments {{HTMLElement("table")}}).
       </td>
     </tr>
     <tr>
-      <td>{{domxref("Attr")}}</td>
+      <td>{{DOMxRef("Attr")}}</td>
       <td>
         Lorsqu'un attribut est retourné par un membre (par exemple, par la méthode <code>createAttribute()</code>), il s'agit d'une référence d'objet qui expose une interface spéciale (quoique réduite) pour les attributs. Les attributs sont des nœuds dans le DOM tout comme les éléments, même si vous les utiliserez rarement ainsi.
       </td>
@@ -215,7 +215,7 @@ Le tableau suivant décrit brièvement ces types de données.
   </tbody>
 </table>
 
-Il existe aussi quelques considérations terminologiques courantes à garder à l'esprit. Il est courant d'appeler tout nœud {{domxref("Attr")}} un «&nbsp;attribut&nbsp;» et d'appeler un tableau de nœuds DOM une `nodeList`. Vous trouverez ces termes et d'autres introduits et utilisés dans toute la documentation.
+Il existe aussi quelques considérations terminologiques courantes à garder à l'esprit. Il est courant d'appeler tout nœud {{DOMxRef("Attr")}} un «&nbsp;attribut&nbsp;» et d'appeler un tableau de nœuds DOM une `nodeList`. Vous trouverez ces termes et d'autres introduits et utilisés dans toute la documentation.
 
 Les objets `document` et `window` sont ceux dont vous utiliserez généralement le plus souvent les interfaces en programmation DOM. En termes simples, l'objet `window` représente quelque chose comme le navigateur, et l'objet `document` est la racine du document lui-même. `Element` hérite de l'interface générique `Node`, et ces deux interfaces fournissent ensemble de nombreuses méthodes et propriétés que vous utilisez sur les éléments individuels. Ces éléments peuvent aussi avoir des interfaces spécifiques pour gérer le type de données qu'ils contiennent, comme dans l'exemple d'objet `table` de la section précédente.
 
@@ -242,13 +242,13 @@ Le modèle objet de document (DOM) a été fortement simplifié. Pour cela, les 
 
 ## DOM HTML
 
-Un document contenant du HTML est décrit grâce à l'interface {{DOMxRef("Document")}}, qui est étendue par la spécification HTML pour inclure différentes fonctionnalités propres au HTML. En particulier, l'interface {{domxref("Element")}} est enrichie pour devenir {{domxref("HTMLElement")}} et ses différentes sous-classes, chacune représentant un élément (ou une famille d'éléments étroitement liés).
+Un document contenant du HTML est décrit grâce à l'interface {{DOMxRef("Document")}}, qui est étendue par la spécification HTML pour inclure différentes fonctionnalités propres au HTML. En particulier, l'interface {{DOMxRef("Element")}} est enrichie pour devenir {{DOMxRef("HTMLElement")}} et ses différentes sous-classes, chacune représentant un élément (ou une famille d'éléments étroitement liés).
 
 L'API DOM HTML donne accès à diverses fonctionnalités du navigateur comme les onglets, les fenêtres, les styles CSS, les feuilles de style, l'historique de navigation, etc. Ces interfaces sont détaillées dans la documentation de l'[API DOM HTML](/fr/docs/Web/API/HTML_DOM_API).
 
 ## DOM SVG
 
-De la même façon, un document contenant du SVG est aussi décrit grâce à l'interface {{DOMxRef("Document")}}, qui est étendue par la spécification SVG pour inclure différentes fonctionnalités propres au SVG. En particulier, l'interface {{domxref("Element")}} est enrichie pour devenir {{domxref("SVGElement")}} et ses différentes sous-classes, chacune représentant un élément ou une famille d'éléments proches. Ces interfaces sont détaillées dans la documentation de l'[API SVG](/fr/docs/Web/API/SVG_API).
+De la même façon, un document contenant du SVG est aussi décrit grâce à l'interface {{DOMxRef("Document")}}, qui est étendue par la spécification SVG pour inclure différentes fonctionnalités propres au SVG. En particulier, l'interface {{DOMxRef("Element")}} est enrichie pour devenir {{DOMxRef("SVGElement")}} et ses différentes sous-classes, chacune représentant un élément ou une famille d'éléments proches. Ces interfaces sont détaillées dans la documentation de l'[API SVG](/fr/docs/Web/API/SVG_API).
 
 ## Exemples
 
@@ -256,9 +256,9 @@ De la même façon, un document contenant du SVG est aussi décrit grâce à l'i
 
 Cet exemple utilise un élément HTML {{HTMLElement("div")}} contenant un élément {{HTMLElement("textarea")}} et deux éléments {{HTMLElement("button")}}. Lorsque l'utilisateur·ice clique sur le premier bouton, on place du texte dans le `<textarea>`. Lorsque l'utilisateur·ice clique sur le second bouton, on efface le texte. On utilise&nbsp;:
 
-- {{domxref("Document.querySelector()")}} pour accéder aux éléments `<textarea>` et aux boutons.
-- {{domxref("EventTarget.addEventListener()")}} pour écouter les clics sur les boutons.
-- {{domxref("Node.textContent")}} pour définir et effacer le texte.
+- {{DOMxRef("Document.querySelector()")}} pour accéder aux éléments `<textarea>` et aux boutons.
+- {{DOMxRef("EventTarget.addEventListener()")}} pour écouter les clics sur les boutons.
+- {{DOMxRef("Node.textContent")}} pour définir et effacer le texte.
 
 #### HTML
 
@@ -287,14 +287,14 @@ button {
 #### JavaScript
 
 ```js
-const story = document.body.querySelector(".story");
+const story = document.querySelector(".story");
 
-const setText = document.body.querySelector("#set-text");
+const setText = document.querySelector("#set-text");
 setText.addEventListener("click", () => {
   story.textContent = "C'était une nuit sombre et orageuse…";
 });
 
-const clearText = document.body.querySelector("#clear-text");
+const clearText = document.querySelector("#clear-text");
 clearText.addEventListener("click", () => {
   story.textContent = "";
 });
@@ -308,11 +308,11 @@ clearText.addEventListener("click", () => {
 
 Cet exemple utilise un élément HTML {{HTMLElement("div")}} contenant un autre {{HTMLElement("div")}} et deux éléments {{HTMLElement("button")}}. Lorsque l'utilisateur·ice clique sur le premier bouton, on crée un nouvel élément et on l'ajoute comme enfant du `<div>`. Lorsque l'utilisateur·ice clique sur le second bouton, on retire l'élément enfant. On utilise&nbsp;:
 
-- {{domxref("Document.querySelector()")}} pour accéder aux éléments `<div>` et aux boutons.
-- {{domxref("EventTarget.addEventListener()")}} pour écouter les clics sur les boutons.
-- {{domxref("Document.createElement")}} pour créer l'élément.
-- {{domxref("Node.appendChild()")}} pour ajouter l'enfant.
-- {{domxref("Node.removeChild()")}} pour retirer l'enfant.
+- {{DOMxRef("Document.querySelector()")}} pour accéder aux éléments `<div>` et aux boutons.
+- {{DOMxRef("EventTarget.addEventListener()")}} pour écouter les clics sur les boutons.
+- {{DOMxRef("Document.createElement")}} pour créer l'élément.
+- {{DOMxRef("Node.appendChild()")}} pour ajouter l'enfant.
+- {{DOMxRef("Node.removeChild()")}} pour retirer l'enfant.
 
 #### HTML
 
@@ -434,7 +434,7 @@ document.querySelector("input").addEventListener("click", () => {
 });
 ```
 
-{{ EmbedLiveSample("Lire et modifier l'arbre", 800, 300) }}
+{{EmbedLiveSample("Lire et modifier l'arbre", 800, 300)}}
 
 ### Créer un arbre
 
@@ -465,16 +465,18 @@ root.appendChild(body);
 
 Cet exemple montre comment les évènements sont déclenchés et gérés dans le DOM de façon très simple. Lorsque le corps (<code>BODY</code>) de ce document HTML se charge, un gestionnaire d'évènement est enregistré sur la première ligne du tableau (<code>TABLE</code>). Ce gestionnaire traite l'évènement en exécutant la fonction <code>stopEvent</code>, qui modifie la valeur de la cellule du bas du tableau.
 
-Cependant, <code>stopEvent</code> appelle aussi la méthode {{domxref("event.stopPropagation")}} de l'objet évènement, ce qui empêche l'évènement de se propager plus haut dans le DOM. Notez que le tableau lui-même possède un gestionnaire d'évènement {{domxref("Element.click_event","onclick")}} qui devrait afficher un message lorsque le tableau est cliqué. Mais la méthode <code>stopEvent</code> a stoppé la propagation, donc après la mise à jour des données du tableau, la phase de l'évènement s'arrête effectivement et une boîte d'alerte s'affiche pour le confirmer.
+Cependant, <code>stopEvent</code> appelle aussi la méthode {{DOMxRef("event.stopPropagation")}} de l'objet évènement, ce qui empêche l'évènement de se propager plus haut dans le DOM. Notez que le tableau lui-même possède un gestionnaire d'évènement {{DOMxRef("Element.click_event","onclick")}} qui doit afficher un message lorsque le tableau est cliqué. Mais la méthode <code>stopEvent</code> a stoppé la propagation, donc après la mise à jour des données du tableau, la phase de l'évènement s'arrête effectivement et une boîte d'alerte s'affiche pour le confirmer.
 
 ```html
 <table id="t-daddy">
-  <tr id="tbl1">
-    <td id="c1">un</td>
-  </tr>
-  <tr>
-    <td id="c2">deux</td>
-  </tr>
+  <tbody>
+    <tr id="tbl1">
+      <td id="c1">un</td>
+    </tr>
+    <tr>
+      <td id="c2">deux</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -493,28 +495,28 @@ function stopEvent(event) {
   const c2 = document.getElementById("c2");
   c2.textContent = "hello";
 
-  // this ought to keep t-daddy from getting the click.
+  // ceci doit empêcher t-daddy de recevoir le clic.
   event.stopPropagation();
-  console.log("event propagation halted.");
+  console.log("la propagation de l'évènement est arrêtée.");
 }
 
 const elem = document.getElementById("tbl1");
 elem.addEventListener("click", stopEvent);
 
 document.getElementById("t-daddy").addEventListener("click", () => {
-  console.log("t-daddy clicked");
+  console.log("t-daddy a cliqué");
 });
 ```
 
-{{EmbedLiveSample("Propagation des évènements", "", "300")}}
+{{EmbedLiveSample("Propagation des évènements", "", 300)}}
 
 ### Afficher les propriétés de l'objet évènement
 
-Cet exemple utilise les méthodes du DOM pour afficher toutes les propriétés {{domxref("Window.load_event", "onload")}} de l'objet {{domxref("event")}} et leurs valeurs dans un tableau. Il montre aussi une technique utile utilisant une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) pour parcourir les propriétés d'un objet et obtenir leurs valeurs.
+Cet exemple utilise les méthodes du DOM pour afficher toutes les propriétés {{DOMxRef("Window.click_event", "click")}} de l'objet d'évènement et leurs valeurs dans un tableau. Il montre aussi une technique utile utilisant une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) pour parcourir les propriétés d'un objet et obtenir leurs valeurs.
 
 Les propriétés des objets évènement diffèrent grandement selon les navigateurs. La [norme WHATWG DOM <sup>(angl.)</sup>](https://dom.spec.whatwg.org/) liste les propriétés standard, mais de nombreux navigateurs en ajoutent d'autres.
 
-Placez le code suivant dans un fichier texte vierge et chargez-le dans différents navigateurs&nbsp;: vous serez surpris·e du nombre et des noms de propriétés. Vous pouvez aussi ajouter des éléments dans la page et appeler cette fonction depuis différents gestionnaires d'évènements.
+Placez le code suivant dans un fichier texte vierge et chargez-le dans différents navigateurs&nbsp;: vous êtes surpris·e du nombre et des noms de propriétés. Vous pouvez aussi ajouter des éléments dans la page et appeler cette fonction depuis différents gestionnaires d'évènements.
 
 ```html
 <h1>Propriétés de l'objet évènement DOM <span id="eventType"></span></h1>
@@ -523,6 +525,7 @@ Placez le code suivant dans un fichier texte vierge et chargez-le dans différen
 ```css
 table {
   border-collapse: collapse;
+  margin-top: 2em;
 }
 thead {
   font-weight: bold;
@@ -540,13 +543,12 @@ td {
 ```
 
 ```js
-function showEventProperties(e) {
+function showEventProperties(event) {
   function addCell(row, text) {
     const cell = row.insertCell(-1);
     cell.appendChild(document.createTextNode(text));
   }
 
-  const event = e || window.event;
   document.getElementById("eventType").textContent = event.type;
 
   const table = document.createElement("table");
@@ -573,12 +575,10 @@ function showEventProperties(e) {
   document.body.appendChild(table);
 }
 
-document.addEventListener("DOMContentLoaded", (e) => {
-  showEventProperties(e);
-});
+window.addEventListener("click", showEventProperties);
 ```
 
-{{EmbedLiveSample("Afficher les propriétés de l'objet évènement", "", "300")}}
+{{EmbedLiveSample("Afficher les propriétés de l'objet évènement", "", 300)}}
 
 ## Spécifications
 
@@ -587,5 +587,5 @@ document.addEventListener("DOMContentLoaded", (e) => {
 ## Voir aussi
 
 - [Modèle d'objet CSS (CSSOM)](/fr/docs/Web/API/CSS_Object_Model)
-- L'[API DOM HTML](/fr/docs/Web/API/HTML_DOM_API)
-- L'[API SVG](/fr/docs/Web/API/SVG_API)
+- [L'API DOM HTML](/fr/docs/Web/API/HTML_DOM_API)
+- [L'API SVG](/fr/docs/Web/API/SVG_API)

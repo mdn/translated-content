@@ -4,8 +4,6 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Image_element
 original_slug: Web/SVG/Tutorial/SVG_Image_Tag
 ---
 
-{{SVGRef}}
-
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Using_fonts", "Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG") }}
 
 L'élément SVG {{ SVGElement("image") }} permet d'afficher des images pixélisées au sein d'un objet SVG.

@@ -3,7 +3,7 @@ title: "ARIA : rôle progressbar"
 short-title: progressbar
 slug: Web/Accessibility/ARIA/Reference/Roles/progressbar_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 Le rôle `progressbar` définit un élément qui affiche l'état de progression des tâches qui prennent du temps.
@@ -98,7 +98,7 @@ Il est recommandé d'utiliser un élément {{HTMLElement("progress")}} ou [`<inp
 ## Voir aussi
 
 - L'élément HTML {{HTMLElement("progress")}}
-- D'autres widgets de plage incluent&nbsp;:
+- D'autres composants de plage incluent&nbsp;:
   - [ARIA&nbsp;: rôle `meter`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role)
   - [ARIA&nbsp;: rôle `scrollbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
   - [ARIA&nbsp;: rôle `separator`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) (si sélectionnable)

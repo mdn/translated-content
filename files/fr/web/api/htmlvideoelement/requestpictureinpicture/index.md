@@ -3,14 +3,14 @@ title: "HTMLVideoElement : méthode requestPictureInPicture()"
 short-title: requestPictureInPicture()
 slug: Web/API/HTMLVideoElement/requestPictureInPicture
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 61ceefea7281f267055e4481a9a610d7ac2e724e
 ---
 
 {{APIRef("Picture-in-Picture API")}}
 
 La méthode **`requestPictureInPicture()`** de l'interface {{DOMxRef("HTMLVideoElement")}} émet une demande asynchrone pour afficher la vidéo en mode image dans l'image.
 
-Il n'est pas garanti que la vidéo passera en mode image dans l'image. Si l'autorisation d'entrer dans ce mode est accordée, la promèsse ({{JSxRef("Promise")}}) retournée sera résolue et la vidéo recevra un évènement {{DOMxRef("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}} pour indiquer qu'elle est désormais en mode image dans l'image.
+Il n'est pas garanti que la vidéo passe en mode image dans l'image. Si l'autorisation d'entrer dans ce mode est accordée, la promesse ({{JSxRef("Promise")}}) retournée est complétée et la vidéo reçoit un évènement {{DOMxRef("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}} pour indiquer qu'elle est désormais en mode image dans l'image.
 
 ## Syntaxe
 
@@ -24,7 +24,7 @@ Aucun.
 
 ### Valeur de retour
 
-Une promesse ({{JSxRef("Promise")}}) qui sera résolue en un objet {{DOMxRef("PictureInPictureWindow")}} pouvant être utilisé pour écouter le redimensionnement de cette fenêtre flottante par l'utilisateur·ice.
+Une promesse ({{JSxRef("Promise")}}) qui est complétée en un objet {{DOMxRef("PictureInPictureWindow")}} pouvant être utilisé pour écouter le redimensionnement de cette fenêtre flottante par l'utilisateur·ice.
 
 ### Exceptions
 

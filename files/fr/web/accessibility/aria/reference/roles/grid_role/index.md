@@ -3,7 +3,7 @@ title: "ARIA : rôle grid"
 short-title: grid
 slug: Web/Accessibility/ARIA/Reference/Roles/grid_role
 l10n:
-  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
+  sourceCommit: db443a6062d0e858a62af2f9a3a7558335ffd2dd
 ---
 
 Le rôle `grid` est destiné à un composant qui contient une ou plusieurs lignes de cellules. La position de chaque cellule est significative et peut être mise au point à l'aide de l'entrée au clavier.
@@ -47,7 +47,7 @@ Le rôle `grid` est un composant composite contenant une collection d'une ou plu
 </table>
 ```
 
-Un composant de grille contient une ou plusieurs lignes avec une ou plusieurs cellules de contenu interactif thématiquement lié. Bien qu'il n'implique pas de présentation visuelle spécifique, il implique une relation entre les éléments. Les utilisations se répartissent en deux catégories&nbsp;: la présentation d'informations tabulaires (grilles de données) et le regroupement d'autres widgets (grilles de mise en page). Même si les grilles de données et les grilles de mise en page utilisent les mêmes rôles, états et propriétés ARIA, les différences dans leur contenu et leur objectif font ressortir des facteurs importants à prendre en compte dans la conception de l'interaction au clavier. Voir [ARIA Authoring Practices Guide <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) pour plus de détails.
+Un composant de grille contient une ou plusieurs lignes avec une ou plusieurs cellules de contenu interactif thématiquement lié. Bien qu'il n'implique pas de présentation visuelle spécifique, il implique une relation entre les éléments. Les utilisations se répartissent en deux catégories&nbsp;: la présentation d'informations tabulaires (grilles de données) et le regroupement d'autres composants (grilles de mise en page). Même si les grilles de données et les grilles de mise en page utilisent les mêmes rôles, états et propriétés ARIA, les différences dans leur contenu et leur objectif font ressortir des facteurs importants à prendre en compte dans la conception de l'interaction au clavier. Voir [le guide d'accessibilité ARIA pour les auteur·ice·s <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) pour plus de détails.
 
 Les éléments de cellule ont le rôle [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), sauf s'ils sont un en-tête de ligne ou de colonne, auquel cas, les éléments sont [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) et [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role), respectivement. Les éléments de cellule doivent être possédés par des éléments avec un rôle [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role). Les lignes peuvent être regroupées à l'aide du rôle [`rowgroup`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role).
 
@@ -363,7 +363,7 @@ document.querySelector("table").addEventListener("keydown", (event) => {
 
 ## Problèmes d'accessibilité
 
-Même si l'utilisation du clavier est correctement implémentée, certain·e·s utilisateur·ice·s pourraient ne pas être conscients qu'ils doivent utiliser les touches fléchées. Assurez-vous que la fonctionnalité et l'interaction nécessaires peuvent être mieux réalisées en utilisant le rôle de grille.
+Même si l'utilisation du clavier est correctement implémentée, certain·e·s utilisateur·ice·s peuvent ne pas être conscients qu'ils doivent utiliser les touches fléchées. Assurez-vous que la fonctionnalité et l'interaction nécessaires peuvent être mieux réalisées en utilisant le rôle de grille.
 
 ## Spécifications
 

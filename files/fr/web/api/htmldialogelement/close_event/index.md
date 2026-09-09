@@ -3,14 +3,14 @@ title: "HTMLDialogElement : évènement close"
 short-title: close
 slug: Web/API/HTMLDialogElement/close_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: 661a04e7a61abe3d8c7245f04cdd1d0bc865fe69
 ---
 
 {{APIRef("HTML DOM")}}
 
 L'évènement `close` est déclenché sur un objet `HTMLDialogElement` lorsque l'élément {{HTMLElement("dialog")}} qu'il représente a été fermé.
 
-Cet évènement n'est pas annulable et ne remonte pas dans la chaîne d'évènements (ne se «&nbsp;propage&nbsp;» pas).
+Cet évènement n'est pas annulable et ne se propage pas.
 
 ## Syntaxe
 

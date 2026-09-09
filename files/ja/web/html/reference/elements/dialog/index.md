@@ -3,7 +3,7 @@ title: HTML `<dialog>` ダイアログ要素
 short-title: <dialog>
 slug: Web/HTML/Reference/Elements/dialog
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 4280928da7b326df9e358204a23df21b4668a29b
 ---
 
 **`<dialog>`** は [HTML](/ja/docs/Web/HTML) の要素で、モーダルまたは非モーダルダイアログボックスや、それ以外の消すことができるアラート、インスペクター、サブウィンドウなどのような対話的コンポーネントを表します。
@@ -120,11 +120,11 @@ CSS の {{cssxref('::backdrop')}} 擬似要素を使用することで、{{domxr
 
 ユーザーがダイアログを閉じることができる機構を確実に用意してください。すべてのユーザーが確実にダイアログを閉じることができるようにする最も確実な方法は、閉じるための明確なボタンを記載することです。例えば、確認、キャンセル、閉じるなどのボタンが適切です。
 
-既定では、`showModal()` メソッドによって呼び出されたダイアログは、<kbd>Esc</kbd> によって閉じることができます。非モーダルダイアログでは、既定では <kbd>Esc</kbd> キーで閉じませんし、非モーダルダイアログが表すものによっては、この動作が望ましくない場合があります。キーボードの利用者は、<kbd>Esc</kbd> キーでモーダルダイアログを閉じることを期待します。この動作が実装され、維持されていることを確認してください。複数のモーダルダイアログが開いている場合、<kbd>Esc</kbd> は最後に示されたダイアログのみを閉じるようにします。`<dialog>` を使用した場合、この動作はブラウザーによって提供されます。
+デフォルトでは、`showModal()` メソッドによって呼び出されたダイアログは、<kbd>Esc</kbd> によって閉じることができます。非モーダルダイアログでは、デフォルトでは <kbd>Esc</kbd> キーで閉じませんし、非モーダルダイアログが表すものによっては、この動作が望ましくない場合があります。キーボードの利用者は、<kbd>Esc</kbd> キーでモーダルダイアログを閉じることを期待します。この動作が実装され、維持されていることを確認してください。複数のモーダルダイアログが開いている場合、<kbd>Esc</kbd> は最後に示されたダイアログのみを閉じるようにします。`<dialog>` を使用した場合、この動作はブラウザーによって提供されます。
 
-ダイアログは他の要素を使用して作成することができますが、ネイティブの `<dialog>` 要素は、同様の目的で他の要素を使用する場合は再現しなければならないユーザビリティとアクセシビリティ機能を提供します。独自のダイアログ実装を作成する場合は、すべての期待される既定の動作に対応しており、適切なラベル付けの推奨事項に従うことを保証してください。
+ダイアログは他の要素を使用して作成することができますが、ネイティブの `<dialog>` 要素は、同様の目的で他の要素を使用する場合は再現しなければならないユーザビリティとアクセシビリティ機能を提供します。独自のダイアログ実装を作成する場合は、すべての期待されるデフォルトの動作に対応しており、適切なラベル付けの推奨事項に従うことを保証してください。
 
-`<dialog>` 要素は、ARIA の [role="dialog"](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) 属性を使用した独自ダイアログと同じような形で、ブラウザーが提供します。`<dialog>` 要素が `showModal()` メソッドで呼び出された場合、暗黙のうちに [aria-modal="true"](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal) となり、一方 `<dialog>` が `show()` メソッド、または `open` 属性を使用して表示されたり `<dialog>` の既定の `display` を変更した場合は `[aria-modal="false"]` として表示されます。モーダルダイアログを実装する際には、`<dialog>` とそのコンテンツ以外は [`inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert) 属性を使って不活性化する必要があります。`<dialog>` を `HTMLDialogElement.showModal()` メソッドで使用した場合、この動作はブラウザーが提供します。
+`<dialog>` 要素は、ARIA の [role="dialog"](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) 属性を使用した独自ダイアログと同じような形で、ブラウザーが提供します。`<dialog>` 要素が `showModal()` メソッドで呼び出された場合、暗黙のうちに [aria-modal="true"](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal) となり、一方 `<dialog>` が `show()` メソッド、または `open` 属性を使用して表示されたり `<dialog>` のデフォルトの `display` を変更した場合は `[aria-modal="false"]` として表示されます。モーダルダイアログを実装する際には、`<dialog>` とそのコンテンツ以外は [`inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert) 属性を使って不活性化する必要があります。`<dialog>` を `HTMLDialogElement.showModal()` メソッドで使用した場合、この動作はブラウザーが提供します。
 
 ## 例
 
@@ -212,7 +212,7 @@ CSS の {{cssxref('::backdrop')}} 擬似要素を使用することで、{{domxr
 
 この例では、[グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient)の背景を持つモーダルダイアログを示しています。`.showModal()` メソッドは、［ダイアログを表示］ボタンが押された際に、モーダルダイアログを開くためのものです。ダイアログは、<kbd>Esc</kbd> キーを押すか、ダイアログ内の［閉じる］ボタンが押された際に `close()` メソッドを使用することで閉じることができます。
 
-ダイアログが開くと、既定では、ブラウザーはダイアログ内でフォーカス可能な最初の要素にフォーカスを当てます。この例では、 [`autofocus`](/ja/docs/Web/HTML/Reference/Global_attributes/autofocus) 属性が［閉じる］ボタンに適用されており、このボタンにダイアログが開いたときにフォーカスが当たります。これは、ダイアログが開いた直後にユーザーが対話すると想定される要素だからです。
+ダイアログが開くと、デフォルトでは、ブラウザーはダイアログ内でフォーカス可能な最初の要素にフォーカスを当てます。この例では、 [`autofocus`](/ja/docs/Web/HTML/Reference/Global_attributes/autofocus) 属性が［閉じる］ボタンに適用されており、このボタンにダイアログが開いたときにフォーカスが当たります。これは、ダイアログが開いた直後にユーザーが対話すると想定される要素だからです。
 
 #### HTML
 
@@ -269,9 +269,9 @@ closeButton.addEventListener("click", () => {
 
 ### ダイアログからの返値を処理
 
-この例では、`<dialog>` 要素の [`returnValue`](/ja/docs/Web/API/HTMLDialogElement/returnValue) と、フォームを使用してモーダルダイアログを閉じる方法を示しています。 既定では、`returnValue` は空文字列、または `<dialog>` 要素内にフォームを送信するボタンがある場合はその値となります。
+この例では、`<dialog>` 要素の [`returnValue`](/ja/docs/Web/API/HTMLDialogElement/returnValue) と、フォームを使用してモーダルダイアログを閉じる方法を示しています。 デフォルトでは、`returnValue` は空文字列、または `<dialog>` 要素内にフォームを送信するボタンがある場合はその値となります。
 
-この例では、［ダイアログを表示］ボタンが押されるとモーダルダイアログが開きます。ダイアログには、{{HTMLElement("select")}} と 2 つの {{HTMLElement("button")}} 要素という形でフォームが含まれており、既定では `type="submit"` となっています。イベントリスナーは、選択オプションが変更された際に［確認］ボタンの値を更新します。［確認］ボタンがダイアログを閉じるために有効化された場合、ボタンの現在の値が返値となります。［キャンセル］ボタンが押されてダイアログが閉じられた場合、 `returnValue` は `cancel` となります。
+この例では、［ダイアログを表示］ボタンが押されるとモーダルダイアログが開きます。ダイアログには、{{HTMLElement("select")}} と 2 つの {{HTMLElement("button")}} 要素という形でフォームが含まれており、デフォルトでは `type="submit"` となっています。イベントリスナーは、選択オプションが変更された際に［確認］ボタンの値を更新します。［確認］ボタンがダイアログを閉じるために有効化された場合、ボタンの現在の値が返値となります。［キャンセル］ボタンが押されてダイアログが閉じられた場合、 `returnValue` は `cancel` となります。
 
 ダイアログが閉じられると、返値が［ダイアログを表示］ボタンの下に表示されます。 <kbd>Esc</kbd> キーを押してダイアログが閉じられた場合、 `returnValue` は更新されず、 `close` イベントも発生しないため、{{HTMLElement("output")}} 内のテキストは更新されません。
 
@@ -310,7 +310,7 @@ closeButton.addEventListener("click", () => {
 
 ［キャンセル］ボタンがクリックされるとダイアログが閉じられます。これは、`<button>` に [`formmethod="dialog"`](/ja/docs/Web/HTML/Reference/Elements/input/submit#formmethod) 属性が指定されているためです。
 フォームのメソッドが [`dialog`](#追加メモ) の場合、フォームの状態は保存されますが送信はされず、ダイアログが閉じられます（この属性は {{HTMLElement("form")}} のデフォルトである {{HTTPMethod("GET")}} メソッドを上書きします）。
-`action` がない場合、既定の {{HTTPMethod("GET")}} メソッドでフォームを送信すると、ページの再読み込みが発生します。
+`action` がない場合、デフォルトの {{HTTPMethod("GET")}} メソッドでフォームを送信すると、ページの再読み込みが発生します。
 JavaScript を使用して、送信を阻止し、ダイアログを閉じるために、それぞれ {{domxref("event.preventDefault()")}} と {{domxref("HTMLDialogElement.close()")}} メソッドを使用しています。
 
 ```js
@@ -320,20 +320,20 @@ const outputBox = document.querySelector("output");
 const selectEl = favDialog.querySelector("select");
 const confirmBtn = favDialog.querySelector("#confirmBtn");
 
-// "Show the dialog" ボタンで <dialog> をモーダルに開く
+// ［ダイアログを表示］ボタンで <dialog> をモーダルに開く
 showButton.addEventListener("click", () => {
   favDialog.showModal();
 });
 
-// "Cancel" ボタンで [formmethod="dialog"] による送信を行わずにダイアログを閉じ、close イベントを発行する
+// ［キャンセル］ボタンで [formmethod="dialog"] による送信を行わずにダイアログを閉じ、close イベントを発行する
 favDialog.addEventListener("close", (e) => {
   outputBox.value =
     favDialog.returnValue === "default"
       ? "返値がありません。"
-      : `ReturnValue: ${favDialog.returnValue}`; // 空文字列ではなく、既定値かどうかを調べる必要がある
+      : `ReturnValue: ${favDialog.returnValue}`; // 空文字列ではなく、デフォルト値かどうかを調べる必要がある
 });
 
-// ［確認］ボタンが既定でフォームを送信しないようにし、`close()` メソッドでダイアログを閉じ、"close" イベントを発生させる
+// ［確認］ボタンがデフォルトでフォームを送信しないようにし、`close()` メソッドでダイアログを閉じ、"close" イベントを発生させる
 confirmBtn.addEventListener("click", (event) => {
   event.preventDefault(); // この偽フォームを送信しない
   favDialog.close(selectEl.value); // ここで選択ボックスの値を送る必要がある
@@ -522,20 +522,20 @@ closeBtns.forEach((btn) => {
 - `display` の `block`（または他の可視の `display` 値）から `none` へのアニメーションでは、アニメーション再生時間の `100%` の時点で値が `none` に切り替わるため、全体を通して表示されます。
 
 > [!NOTE]
-> [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)を使用してアニメーションを行う場合、上記の動作を有効にするには [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) を設定する必要があります。[CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)でアニメーションを行う場合、この動作は既定では利用でき、同等の手順は必要ありません。
+> [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)を使用してアニメーションを行う場合、上記の動作を有効にするには [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) を設定する必要があります。[CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)でアニメーションを行う場合、この動作はデフォルトでは利用でき、同等の手順は必要ありません。
 
 #### dialog 要素のトランジション
 
 CSS トランジションで `<dialog>` をアニメーションさせる場合、以下の機能が要求されます。
 
 - {{cssxref("@starting-style")}} アットルール
-  - : `<dialog>` に設定されたプロパティの、開かれるたびにトランジションする開始値のセットを提供します。これは予期せぬ動作を避けるために必要です。既定では、CSS トランジションは、可視要素のプロパティが 1 つの値から別の値に変更された場合のみ発生します。要素の最初のスタイル更新時や、`display` の型が `none` から別の型に変更された場合には発生しません。
+  - : `<dialog>` に設定されたプロパティの、開かれるたびにトランジションする開始値のセットを提供します。これは予期せぬ動作を避けるために必要です。デフォルトでは、CSS トランジションは、可視要素のプロパティが 1 つの値から別の値に変更された場合のみ発生します。要素の最初のスタイル更新時や、`display` の型が `none` から別の型に変更された場合には発生しません。
 - {{cssxref("display")}} プロパティ
   - : トランジションのリストに `display` を追加すると、トランジションの再生時間中、`<dialog>` が `display: block`（またはダイアログが開いている状態として設定されている他の可視 `display` 値）のままになり、他にもトランジションが確実に表示されます。
 - {{cssxref("overlay")}} プロパティ
   - : トランジションのリストに `overlay` が含まれていると、最上位レイヤーから `<dialog>` が確実に除去されるまでトランジションが完了するまで遅延され、トランジションが確実に表示されるようになります。
 - {{cssxref("transition-behavior")}} プロパティ
-  - : `transition-behavior: allow-discrete` を `display` と `overlay` トランジション（または {{cssxref("transition")}} 一括指定）に設定すると、既定ではアニメーションできないこれら2つのプロパティで離散トランジションが有効になります。
+  - : `transition-behavior: allow-discrete` を `display` と `overlay` トランジション（または {{cssxref("transition")}} 一括指定）に設定すると、デフォルトではアニメーションできないこれら2つのプロパティで離散トランジションが有効になります。
 
 この機能がどのようなものか見ていくために、例えば次のような例を挙げてみましょう。
 
@@ -554,7 +554,7 @@ CSS トランジションで `<dialog>` をアニメーションさせる場合�
 
 ##### CSS
 
-この CSS では、`@starting-style` ブロックを記述して、`opacity` および `transform` プロパティのトランジション開始時のスタイル、`dialog:open` 状態のトランジション終了時のスタイル、`<dialog>` が表示された後に元の状態に戻る際の既定の `dialog` 状態のスタイルを定義します。注意してほしいのは、 `<dialog>` の `transition` リストには、これらのプロパティだけでなく、`display` と `overlay` プロパティも含まれ、それぞれに `allow-discrete` が設定されていることです。
+この CSS では、`@starting-style` ブロックを記述して、`opacity` および `transform` プロパティのトランジション開始時のスタイル、`dialog:open` 状態のトランジション終了時のスタイル、`<dialog>` が表示された後に元の状態に戻る際のデフォルトの `dialog` 状態のスタイルを定義します。注意してほしいのは、 `<dialog>` の `transition` リストには、これらのプロパティだけでなく、`display` と `overlay` プロパティも含まれ、それぞれに `allow-discrete` が設定されていることです。
 
 また、開いたときに現れる `<dialog>` の背後に現れる {{cssxref("::backdrop")}} の {{cssxref("background-color")}} プロパティに開始時のスタイル値を設定し、素敵な暗転アニメーションを指定しました。 `dialog:open::backdrop` セレクターは、ダイアログが開いているときに、`<dialog>` 要素の背景のみを選択します。
 
@@ -640,7 +640,7 @@ closeBtn.addEventListener("click", () => {
 {{ EmbedLiveSample("dialog 要素のトランジション", "100%", "200") }}
 
 > [!NOTE]
-> `<dialog>`は、表示される時点では常に `display: none` から `display: block` に変更されるため、項目遷移が発生するたびに、`<dialog>` は `@starting-style` スタイルから `dialog:open` スタイルにトランジションします。 `<dialog>` が閉じられると、`dialog:open` 状態から既定の `dialog` 状態にトランジションします。
+> `<dialog>`は、表示される時点では常に `display: none` から `display: block` に変更されるため、項目遷移が発生するたびに、`<dialog>` は `@starting-style` スタイルから `dialog:open` スタイルにトランジションします。 `<dialog>` が閉じられると、`dialog:open` 状態からデフォルトの `dialog` 状態にトランジションします。
 >
 > このような場合、項目への入力時と出力時のスタイル設定のトランジションが異なることが可能です。この例については、「[開始スタイルを使用する場合のデモ](/ja/docs/Web/CSS/Reference/At-rules/@starting-style#demonstration_of_when_starting_styles_are_used)」をご覧ください。
 

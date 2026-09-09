@@ -3,14 +3,14 @@ title: "Window : évènement pagereveal"
 short-title: pagereveal
 slug: Web/API/Window/pagereveal_event
 l10n:
-  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("HTML DOM")}}
 
-L'évènement **`pagereveal`** est émis lorsqu'un document est rendu pour la première fois, soit lors du chargement d'un nouveau document depuis le réseau, soit lors de l'activation d'un document (soit depuis le [cache avant/arrière](/fr/docs/Glossary/bfcache) (bfcache), soit depuis le [prérendu](/fr/docs/Glossary/Prerender)).
+L'évènement **`pagereveal`** est émis lorsqu'un document est rendu pour la première fois, soit lors du chargement d'un nouveau document depuis le réseau, soit lors de l'activation d'un document (soit depuis le [cache avant/arrière](/fr/docs/Glossary/bfcache) (bfcache), soit depuis le [pré-rendu](/fr/docs/Glossary/Prerender)).
 
-Cela est utile dans le cas des [transitions de vue](/fr/docs/Web/API/View_Transition_API) entre documents (MPA) pour manipuler une transition active depuis la page entrante d'une navigation. Par exemple, vous pourriez vouloir ignorer la transition ou personnaliser l'animation de la transition entrante via JavaScript.
+C'est utile dans le cas des [transitions de vue](/fr/docs/Web/API/View_Transition_API) entre documents (MPA) pour manipuler une transition active depuis la page entrante d'une navigation. Par exemple, vous pouvez vouloir ignorer la transition ou personnaliser l'animation de la transition entrante avec JavaScript.
 
 ## Syntaxe
 
@@ -27,11 +27,6 @@ onpagereveal = (event) => { }
 Un objet {{DOMxRef("PageRevealEvent")}}. Hérite de {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("PageRevealEvent")}}
-
-## Propriétés de l'évènement
-
-- {{DOMxRef("PageRevealEvent.viewTransition")}} {{ReadOnlyInline}}
-  - : Retourne l'objet {{DOMxRef("ViewTransition")}} représentant la transition de vue entre documents entrante, si une transition est active lorsque l'évènement est déclenché. Sinon, il retourne `null`.
 
 ## Exemples
 

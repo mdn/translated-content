@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="image">`
 short-title: <input type="image">
 slug: Web/HTML/Reference/Elements/input/image
 l10n:
-  sourceCommit: 3a814443b0b97b9334811b7b1406cae3a009d487
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`image`** sont utilisés pour créer des boutons d'envoi de formulaire graphiques. Autrement dit, il s'agit de boutons d'envoi qui affichent une image plutôt qu'un texte.
@@ -151,7 +151,7 @@ Prenons un exemple simple qui utilise les différentes fonctionnalités essentie
   width="100"
   height="30"
   alt="Se connecter"
-  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" />
+  src="https://mdn.github.io/shared-assets/images/examples/login-button.png" />
 ```
 
 {{EmbedLiveSample("Fonctionnalités essentielles des boutons d'image", 600, 50)}}
@@ -183,7 +183,7 @@ Les éléments `<input type="image">`, comme [les boutons d'envoi classiques](/f
 - `formnovalidate`
   - : Un attribut booléen définissant que le formulaire ne doit pas être validé lorsqu'il est envoyé. Si cet attribut est défini, il remplace l'attribut [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#novalidate) du formulaire propriétaire de l'élément.
 - `formtarget`
-  - : Un nom ou un mot-clé indiquant où afficher la réponse reçue après l'envoi du formulaire. Il s'agit d'un nom ou d'un mot-clé pour un _contexte de navigation_ (par exemple, un onglet, une fenêtre ou un cadre en ligne). Si cet attribut est défini, il remplace l'attribut [`target`](/fr/docs/Web/HTML/Reference/Elements/form#target) du formulaire propriétaire de l'élément. Les mots-clés suivants ont des significations particulières&nbsp;:
+  - : Un nom ou un mot-clé indiquant où afficher la réponse reçue après l'envoi du formulaire. Il s'agit d'un nom ou d'un mot-clé pour un _contexte de navigation_ (par exemple, un onglet, une fenêtre ou un cadre en incise). Si cet attribut est défini, il remplace l'attribut [`target`](/fr/docs/Web/HTML/Reference/Elements/form#target) du formulaire propriétaire de l'élément. Les mots-clés suivants ont des significations particulières&nbsp;:
     - `_self`&nbsp;: Charger la réponse dans le même contexte de navigation que celui en cours. Cette valeur est la valeur par défaut si l'attribut n'est pas défini.
     - `_blank`&nbsp;: Charger la réponse dans un nouveau contexte de navigation sans nom.
     - `_parent`&nbsp;: Charger la réponse dans le contexte de navigation parent de celui en cours. S'il n'y a pas de parent, cette option se comporte de la même manière que `_self`.
@@ -191,7 +191,7 @@ Les éléments `<input type="image">`, comme [les boutons d'envoi classiques](/f
 
 ### Utiliser les coordonnées `x` et `y` du clic sur le bouton
 
-Lors de l'envoi d'un formulaire avec un bouton graphique `<input type="image">`, deux données supplémentaires sont automatiquement envoyées au serveur par le navigateur — les coordonnées `x` et `y` de l'emplacement du clic sur l'image. Vous pouvez voir ceci à l'œuvre dans [l'exemple sur les coordonnées X Y <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/forms/image-type-example/xy-coordinates-example.html).
+Lors de l'envoi d'un formulaire avec un bouton graphique `<input type="image">`, deux données supplémentaires sont automatiquement envoyées au serveur par le navigateur — les coordonnées `x` et `y` de l'emplacement du clic sur l'image. Vous pouvez voir ceci à l'œuvre dans [l'exemple sur les coordonnées X Y <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/forms/image-type-xy-coords/).
 
 Lorsqu'on clique sur l'image pour envoyer le formulaire, des données sont ajoutées aux paramètres de l'URL, telles que `?x=52&y=55`. Attention, si le bouton utilise un attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/input#name), le nom défini est préfixé à chaque nom de coordonnée séparées par un point. Par exemple, si le `name` vaut `position`, les coordonnées retournées sont formatées dans l'URL comme `?position.x=52&position.y=55`.
 
@@ -208,8 +208,6 @@ Vous pouvez utiliser la propriété {{CSSxRef("object-position")}} pour ajuster 
 ### Un formulaire de connexion
 
 L'exemple suivant affiche le même bouton qu'auparavant, cette fois-ci inclus dans un formulaire de connexion classique.
-
-{{EmbedLiveSample("Un formulaire de connexion", 600, 200)}}
 
 #### HTML
 
@@ -228,7 +226,7 @@ L'exemple suivant affiche le même bouton qu'auparavant, cette fois-ci inclus da
     <input
       id="image"
       type="image"
-      src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+      src="https://mdn.github.io/shared-assets/images/examples/login-button.png"
       alt="Login"
       width="100" />
   </div>
@@ -252,11 +250,13 @@ label {
 }
 ```
 
+#### Résultat
+
+{{EmbedLiveSample("Un formulaire de connexion", 600, 200)}}
+
 ### Ajuster la position et le redimensionnement de l'image
 
 Dans ce nouvel exemple, on adapte l'exemple précédent afin d'avoir plus de place pour l'image et on ajuste la taille et la position de l'image à l'aide des propriétés {{CSSxRef("object-fit")}} et {{CSSxRef("object-position")}}.
-
-{{EmbedLiveSample("Ajuster la position et le redimensionnement de l'image", 600, 300)}}
 
 #### HTML
 
@@ -275,7 +275,7 @@ Dans ce nouvel exemple, on adapte l'exemple précédent afin d'avoir plus de pla
     <input
       id="image"
       type="image"
-      src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+      src="https://mdn.github.io/shared-assets/images/examples/login-button.png"
       alt="Login"
       width="200"
       height="100" />
@@ -303,6 +303,10 @@ label {
   background-color: #dddddd;
 }
 ```
+
+#### Résultat
+
+{{EmbedLiveSample("Ajuster la position et le redimensionnement de l'image", 600, 300)}}
 
 Ici, `object-position` est configuré afin que l'image soit dessinée au coin supérieur droit de l'élément et `object-fit` est paramétré avec la valeur `contain`, qui indique que l'image doit être dessinée avec la taille la plus grande possible qui puisse tenir dans la boîte de l'élément, sans modifier ses proportions. Notez que l'arrière-plan gris de l'élément est toujours visible sur la zone qui n'est pas couverte par l'image.
 

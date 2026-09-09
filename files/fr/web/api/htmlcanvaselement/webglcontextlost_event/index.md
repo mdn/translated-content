@@ -3,12 +3,12 @@ title: "HTMLCanvasElement : évènement webglcontextlost"
 short-title: webglcontextlost
 slug: Web/API/HTMLCanvasElement/webglcontextlost_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("WebGL API")}}
 
-L'évènement **`webglcontextlost`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) est déclenché si l'agent utilisateur détecte que le tampon de dessin associé à un objet {{DOMxRef("WebGLRenderingContext")}} a été perdu.
+L'évènement **`webglcontextlost`** de [l'API WebGL](/fr/docs/Web/API/WebGL_API) est déclenché si l'agent utilisateur détecte que le tampon de dessin associé à un objet {{DOMxRef("WebGLRenderingContext")}} a été perdu.
 
 Cet évènement ne se propage pas.
 
@@ -27,13 +27,6 @@ onwebglcontextlost = (event) => { }
 Un {{DOMxRef("WebGLContextEvent")}}. Hérite de {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("WebGLContextEvent")}}
-
-## Propriétés de l'évènement
-
-_Cette interface hérite des propriétés de son interface parente, {{DOMxRef("Event")}}._
-
-- {{DOMxRef("WebGLContextEvent.statusMessage")}}
-  - : Une propriété en lecture seule contenant des informations supplémentaires sur l'évènement.
 
 ## Exemple
 

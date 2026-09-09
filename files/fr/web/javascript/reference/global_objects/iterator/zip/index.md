@@ -3,10 +3,8 @@ title: "Iterator : méthode statique zip()"
 short-title: zip()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/zip
 l10n:
-  sourceCommit: 38c09bffe4654e74bfd225d28575afe42d4fe344
+  sourceCommit: 5b9e4bb67e5cb4bb2b780e7338a6560463e5a1a7
 ---
-
-{{JSRef}}{{SeeCompatTable}}
 
 La méthode statique **`Iterator.zip()`** crée un nouvel objet {{JSxRef("Iterator")}} qui agrège plusieurs éléments à partir de plusieurs objets itérables en retournant des tableaux contenant les éléments à la même position. Elle permet essentiellement de "zipper" les itérables d'entrée, permettant une itération simultanée sur eux.
 
@@ -49,7 +47,7 @@ La fonction `Iterator.zip()` se comporte comme une opération de [transposition]
 ];
 ```
 
-L'itérateur résultant, quel que soit le mode, commencera par produire les tableaux suivants&nbsp;:
+L'itérateur résultant, quel que soit le mode, commence par produire les tableaux suivants&nbsp;:
 
 ```js
 [a1, b1, c1];
@@ -75,7 +73,7 @@ Si l'itérable `padding` contient moins de trois valeurs, les valeurs manquantes
 
 ## Exemples
 
-### Itération sur une map avec des indices
+### Itération sur un tableau associatif avec des indices
 
 En utilisant `Iterator.zip()`, vous pouvez itérer sur n'importe quel objet itérable (les chaînes de caractères ne sont pas prises en charge par défaut) tout en ayant accès à un compteur incrémental&nbsp;:
 
@@ -160,7 +158,7 @@ for (const [lettre, nombre] of it) {
 
 ### Combiner des chaînes de caractères
 
-Les chaînes de caractères ne sont pas acceptées comme itérables d'entrée pour `Iterator.zip()`, car il est désormais considéré comme une erreur de rendre les chaînes implicitement itérables. Pour combiner des chaînes, convertissez-les explicitement en itérateurs en utilisant {{JSxRef("Iterator.from()")}}&nbsp;:
+Les chaînes de caractères ne sont pas acceptées comme itérables d'entrée pour `Iterator.zip()`, car il est désormais considéré comme une erreur de rendre les chaînes de caractères implicitement itérables. Pour combiner des chaînes de caractères, convertissez-les explicitement en itérateurs en utilisant {{JSxRef("Iterator.from()")}}&nbsp;:
 
 ```js
 const str1 = "abc";
@@ -206,7 +204,7 @@ for (const [char1, char2] of it) {
 
 - [Prothèse d'émulation de `Iterator.zip` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/proposals/joint-iteration)
 - [Prothèse d'émulation es-shims de `Iterator.zip` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
-- L'objet {{JSxRef("Iterator")}}
+- L'objet natif {{JSxRef("Iterator")}}
 - La méthode statique {{JSxRef("Iterator.zipKeyed()")}}
 - La méthode statique {{JSxRef("Iterator.from()")}}
 - La méthode statique {{JSxRef("Iterator.concat()")}}

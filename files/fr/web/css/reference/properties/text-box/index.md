@@ -3,10 +3,10 @@ title: Propriété CSS `text-box`
 short-title: text-box
 slug: Web/CSS/Reference/Properties/text-box
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`text-box`** correspond aux propriétés {{CSSxRef("text-box-trim")}} et {{CSSxRef("text-box-edge")}}, qui définissent ensemble la quantité d'espace à supprimer du bord de début de bloc et du bord de fin de bloc du conteneur de bloc d'un élément de texte.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`text-box`** correspond aux propriétés {{CSSxRef("text-box-trim")}} et {{CSSxRef("text-box-edge")}}, qui définissent ensemble la quantité d'espace à supprimer du bord de début de bloc et du bord de fin de bloc du conteneur de bloc d'un élément de texte.
 
 ## Propriétés constitutives
 
@@ -55,7 +55,7 @@ Si `text-box-trim` est omis, il est défini sur `trim-both`. Si `text-box-edge` 
 
 ## Description
 
-La hauteur du contenu composé uniquement de texte est relative à la hauteur de la police. Dans les fichiers de polices numériques, la hauteur inclut tous les caractères, y compris les lettres majuscules, les hampes, les jambages, etc. Les différentes polices ont des hauteurs de ligne de base différentes, ce qui signifie que des lignes de texte avec la même valeur de `font-size` produiront des boîtes de ligne de hauteurs différentes, affectant l'apparence de l'espacement entre les lignes.
+La hauteur du contenu composé uniquement de texte est relative à la hauteur de la police. Dans les fichiers de polices numériques, la hauteur inclut tous les caractères, y compris les lettres majuscules, les hampes, les jambages, etc. Les différentes polices ont des hauteurs de ligne de base différentes, ce qui signifie que des lignes de texte avec la même valeur de `font-size` produisent des boîtes de ligne de hauteurs différentes, affectant l'apparence de l'espacement entre les lignes.
 
 Les propriétés `text-box` permettent de supprimer l'espace supplémentaire du bord de début de bloc et du bord de fin de bloc du conteneur de bloc d'un élément de texte, ce qui peut inclure {{Glossary("leading", "l'interligne")}} au bord de début de bloc et au bord de fin de bloc du texte, ainsi que l'espacement défini à l'intérieur de la police (comme décrit ci-dessus). Cela facilite grandement le contrôle de l'espacement du texte dans la direction du bloc.
 
@@ -129,5 +129,5 @@ La sortie est la suivante. Notez comment nous avons inclus une bordure supérieu
 
 - Les propriétés {{CSSxRef("text-box-edge")}}, {{CSSxRef("text-box-trim")}}
 - Le type de donnée {{CSSxRef("&lt;text-edge&gt;")}}
-- Le module [de disposition en ligne CSS](/fr/docs/Web/CSS/Guides/Inline_layout)
+- Le module [de disposition en incise CSS](/fr/docs/Web/CSS/Guides/Inline_layout)
 - [La propriété CSS text-box-edge <sup>(angl.)</sup>](https://developer.chrome.com/blog/css-text-box-trim) sur developer.chrome.com (2025)

@@ -1,9 +1,9 @@
 ---
-title: "`@namespace` CSS アットルール"
+title: CSS `@namespace` アットルール
 short-title: "@namespace"
 slug: Web/CSS/Reference/At-rules/@namespace
 l10n:
-  sourceCommit: 1dcf976e9b654679c762568812562b1a2361c755
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 **`@namespace`** は[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、
@@ -42,7 +42,7 @@ svg|a {
 ## 構文
 
 ```css
-/* 既定の名前空間 */
+/* デフォルトの名前空間 */
 @namespace url("XML-namespace-URL");
 @namespace "XML-namespace-URL";
 
@@ -57,14 +57,14 @@ svg|a {
 
 `@namespace` ルールは、スタイルシート内ですべての {{cssxref("@charset")}} および {{cssxref("@import")}} ルールより後、また他のアットルールや[スタイル宣言](/ja/docs/Web/API/CSSStyleDeclaration)より前に配置しなければなりません。
 
-`@namespace` は、スタイルシートの**既定の名前空間**が定義できます。既定の名前空間を定義するとすべての全称セレクターや要素型セレクター（属性セレクターは除く。後述のメモを参照）は、既定の名前空間内の要素にのみ適用されます。
+`@namespace` は、スタイルシートの**デフォルトの名前空間**が定義できます。デフォルトの名前空間を定義するとすべての全称セレクターや要素型セレクター（属性セレクターは除く。後述のメモを参照）は、デフォルトの名前空間内の要素にのみ適用されます。
 
 また、 `@namespace` ルールで**名前空間の接頭辞**が定義できます。全称セレクター、要素型セレクター、属性セレクターに名前空間の接頭辞を付加すると、これらのセレクターは名前空間*および*要素または属性に一致する場合のみ一致します。
 
 HTML では、既知の[外来要素](https://html.spec.whatwg.org/multipage/syntax.html#foreign-elements)へ自動的に名前空間が割り当てられます。すなわち、 HTML 要素は文書内に `xmlns` 属性が存在しなくても XHTML 名前空間 (`http://www.w3.org/1999/xhtml`) に含まれているかのように動作します。また [`<svg>`](/ja/docs/Web/SVG/Reference/Element/svg) および [`<math>`](/ja/docs/Web/MathML/Reference/Element/math) 要素は、適切な名前空間（それぞれ `http://www.w3.org/2000/svg` および `http://www.w3.org/1998/Math/MathML`）が割り当てられます。
 
 > [!NOTE]
-> XML では、属性に直接接頭辞を定義しない限り（_例_: `xlink:href`）、属性は名前空間を持ちません。言い換えると、属性は所属する要素から名前空間を継承しません。この動作に合わせるため、 CSS の既定の名前空間は属性セレクターに適用しません。
+> XML では、属性に直接接頭辞を定義しない限り（_例_: `xlink:href`）、属性は名前空間を持ちません。言い換えると、属性は所属する要素から名前空間を継承しません。この動作に合わせるため、 CSS のデフォルトの名前空間は属性セレクターに適用しません。
 
 ## 形式文法
 
@@ -72,13 +72,13 @@ HTML では、既知の[外来要素](https://html.spec.whatwg.org/multipage/syn
 
 ## 例
 
-### 既定かつ定義済みの名前空間の指定
+### デフォルトかつ定義済みの名前空間の指定
 
 ```css
 @namespace url("http://www.w3.org/1999/xhtml");
 @namespace svg url("http://www.w3.org/2000/svg");
 
-/* XHTML は既定で接頭辞のない名前空間であるため、これは XHTML のすべての <a> 要素を選択します */
+/* XHTML はデフォルトで接頭辞のない名前空間であるため、これは XHTML のすべての <a> 要素を選択します */
 a {
 }
 

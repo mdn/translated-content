@@ -3,12 +3,12 @@ title: "Window: localStorage プロパティ"
 short-title: localStorage
 slug: Web/API/Window/localStorage
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: fbe455624f7a57d897260d947580428087a48c09
 ---
 
 {{APIRef("Web Storage API")}}
 
-**`localStorage`** は {{domxref("window")}} プロパティの読み取り専用プロパティで、この {{DOMxRef("Document")}} の {{glossary("origin")}} における {{DOMxRef("Storage")}} オブジェクトにアクセスできます。格納されたデータは、ブラウザーのセッションを跨いで保存されます。
+**`localStorage`** は {{domxref("window")}} インターフェイスの読み取り専用プロパティで、この {{DOMxRef("Document")}} の {{glossary("origin")}} における {{DOMxRef("Storage")}} オブジェクトにアクセスできます。格納されたデータは、ブラウザーのセッションを跨いで保存されます。
 
 `localStorage` は {{DOMxRef("Window.sessionStorage", "sessionStorage")}} によく似ていますが、 `localStorage` のデータには期限がないのに対し、 `sessionStorage` のデータはページセッションが終了したとき、すなわちページが閉じられたときにクリアされます。（「プライベートブラウジング」や「プライバシーモード」のセッションに読み込まれた文書の `localStorage` のデータは、最後の「プライベート」タブが閉じられたときにクリアされます。）
 
@@ -37,7 +37,7 @@ l10n:
 
 ## 例
 
-以下のスニペットでは現在のドメインのローカル {{DOMxRef("Storage")}} オブジェクトにアクセスし、{{DOMxRef("Storage.setItem()")}} を利用してデータを追加しています。
+以下のスニペットでは現在のドメインのローカル {{DOMxRef("Storage")}} オブジェクトにアクセスし、{{DOMxRef("Storage.setItem()")}} を利用してデータを追加したり、すでにそのキーがある場合はアイテムを更新したりします。
 
 ```js
 localStorage.setItem("myCat", "Tom");

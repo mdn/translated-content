@@ -62,4 +62,4 @@ console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales, options));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.RelativeTimeFormat")}}
+- L'objet natif {{JSxRef("Intl.RelativeTimeFormat")}}

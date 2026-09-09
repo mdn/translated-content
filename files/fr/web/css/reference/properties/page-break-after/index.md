@@ -3,10 +3,8 @@ title: Propriété CSS `page-break-after`
 short-title: page-break-after
 slug: Web/CSS/Reference/Properties/page-break-after
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 > [!WARNING]
 > Cette propriété a été remplacée par la propriété {{CSSxRef("break-after")}}.
@@ -81,7 +79,7 @@ page-break-after: revert-layer;
 page-break-after: unset;
 ```
 
-Cette propriété s'applique aux éléments de blocs qui génèrent une boîte. Elle ne s'appliquera pas à un {{HTMLElement("div")}} qui ne génère pas de boîte.
+Cette propriété s'applique aux éléments de blocs qui génèrent une boîte. Elle ne s'applique pas à un {{HTMLElement("div")}} qui ne génère pas de boîte.
 
 ### Valeurs
 
@@ -104,7 +102,7 @@ Cette propriété s'applique aux éléments de blocs qui génèrent une boîte. 
 
 La propriété `page-break-after` est désormais une propriété héritée, remplacée par {{CSSxRef("break-after")}}.
 
-Pour des raisons de compatibilité, `page-break-after` doit être traité par les navigateurs comme un alias de `break-after`. Cela garantit que les sites utilisant `page-break-after` continuent de fonctionner comme prévu. Un sous-ensemble de valeurs doit être aliasé comme suit&nbsp;:
+Pour des raisons de compatibilité, `page-break-after` doit être traité par les navigateurs comme un alias de `break-after`. Cela garantit que les sites utilisant `page-break-after` continuent de fonctionner comme prévu. Un sous-ensemble de valeurs doit avoir un alias comme suit&nbsp;:
 
 | page-break-after | break-after |
 | ---------------- | ----------- |

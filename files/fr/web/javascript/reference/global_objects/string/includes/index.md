@@ -3,8 +3,6 @@ title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
 ---
 
-{{JSRef}}
-
 La méthode **`includes()`** détermine si une chaîne de caractères est contenue dans une autre et renvoie `true` ou `false` selon le cas de figure.
 
 {{InteractiveExample("JavaScript Demo: String.includes()")}}

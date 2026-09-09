@@ -3,7 +3,7 @@ title: Propriété CSS `stroke-linecap`
 short-title: stroke-linecap
 slug: Web/CSS/Reference/Properties/stroke-linecap
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`stroke-linecap`** définit la forme à utiliser à la fin des sous-tracés ouverts des contours non fermés des éléments [SVG](/fr/docs/Web/SVG). Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("stroke-linecap")}} de l'élément.
@@ -28,14 +28,16 @@ stroke-linecap: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `butt`
-  - : Indique que le contour de chaque sous-tracé ne s'étend pas au-delà de ses deux points d'extrémité. Sur un sous-tracé de longueur nulle, le chemin ne sera pas rendu du tout. C'est la valeur par défaut.
+  - : Indique que le contour de chaque sous-tracé ne s'étend pas au-delà de ses deux points d'extrémité. Sur un sous-tracé de longueur nulle, le chemin n'est pas rendu du tout. C'est la valeur par défaut.
 
 - `round`
-  - : Indique qu'à la fin de chaque sous-tracé, le contour sera étendu par un demi-cercle dont le diamètre est égal à la largeur du contour. Sur un sous-tracé de longueur nulle, le contour consiste en un cercle complet centré sur le point du sous-tracé.
+  - : Indique qu'à la fin de chaque sous-tracé, le contour est étendu par un demi-cercle dont le diamètre est égal à la largeur du contour. Sur un sous-tracé de longueur nulle, le contour consiste en un cercle complet centré sur le point du sous-tracé.
 
 - `square`
-  - : Indique qu'à la fin de chaque sous-tracé, le contour sera étendu par un rectangle dont la largeur est égale à la moitié de la largeur du contour et la hauteur est égale à la largeur du contour. Sur un sous-tracé de longueur nulle, le contour consiste en un carré dont la largeur est égale à la largeur du contour, centré sur le point du sous-tracé.
+  - : Indique qu'à la fin de chaque sous-tracé, le contour est étendu par un rectangle dont la largeur est égale à la moitié de la largeur du contour et la hauteur est égale à la largeur du contour. Sur un sous-tracé de longueur nulle, le contour consiste en un carré dont la largeur est égale à la largeur du contour, centré sur le point du sous-tracé.
 
 ## Définition formelle
 

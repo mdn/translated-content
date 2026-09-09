@@ -3,10 +3,10 @@ title: "HTMLTableSectionElement : propriété chOff"
 short-title: chOff
 slug: Web/API/HTMLTableSectionElement/chOff
 l10n:
-  sourceCommit: d16706e4e930c57161d473287374a9286c663147
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`chOff`** de l'interface {{DOMxRef("HTMLTableSectionElement")}} ne fait rien. Elle reflète l'attribut `charoff` de l'élément de section.
 

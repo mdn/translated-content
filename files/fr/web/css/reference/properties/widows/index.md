@@ -3,7 +3,7 @@ title: Propriété CSS `widows`
 short-title: widows
 slug: Web/CSS/Reference/Properties/widows
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`widows`** définit le nombre minimum de lignes qui peuvent être laissées en haut de [la page](/fr/docs/Web/CSS/Guides/Paged_media), la région ou [la colonne](/fr/docs/Web/CSS/Guides/Multicol_layout).
@@ -26,6 +26,8 @@ widows: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme un `<integer>`&nbsp;:
 
 - {{CSSxRef("&lt;integer&gt;")}}
   - : Cet entier indique le nombre minimum de lignes qui peuvent apparaître en haut d'une nouvelle page, région ou colonne lorsqu'une rupture intervient. Si la valeur est négative, la déclaration est invalide.

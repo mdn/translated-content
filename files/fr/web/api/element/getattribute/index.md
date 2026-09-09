@@ -3,53 +3,31 @@ title: "Element : méthode getAttribute()"
 short-title: getAttribute()
 slug: Web/API/Element/getAttribute
 l10n:
-  sourceCommit: 3f10b3a23b7123d051dccb3a97c4258c540df9bd
+  sourceCommit: f22f67069495dc37e550e354913d4ca984f5a4b0
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`getAttribute()`** de l'interface {{DOMxRef("Element")}} retourne la valeur d'un attribut défini sur l'élément.
-
-Si l'attribut donné n'existe pas, la valeur retournée est `null`.
+La méthode **`getAttribute()`** de l'interface {{DOMxRef("Element")}} retourne la valeur sous forme de chaîne de caractères de l'attribut défini de l'élément défini. Elle retourne `null` si l'élément n'a pas d'attribut avec le nom donné.
 
 Si vous avez besoin d'inspecter les propriétés du nœud {{DOMxRef("Attr")}}, vous pouvez utiliser la méthode {{DOMxRef("Element.getAttributeNode()", "getAttributeNode()")}} à la place.
 
 ## Syntaxe
 
 ```js-nolint
-getAttribute(attributeName)
+getAttribute(attrName)
 ```
 
 ### Paramètres
 
-- `attributeName`
-  - : Le nom de l'attribut dont on souhaite obtenir la valeur.
+- `attrName`
+  - : Une chaîne de caractères définissant le nom de l'attribut. Lorsqu'elle est appelée sur un élément HTML dans un DOM identifié comme un document HTML, le nom est normalisé en minuscules.
 
 ### Valeur de retour
 
-Une chaîne de caractères contenant la valeur de `attributeName` si l'attribut existe, sinon `null`.
+Une chaîne de caractères contenant la valeur de l'attribut, ou `null` si l'élément n'a pas d'attribut avec le nom donné.
 
-## Exemples
-
-```html
-<!-- exemple de div dans un document HTML -->
-<div id="div1">Salut champion !</div>
-```
-
-```js
-const div1 = document.getElementById("div1");
-// <div id="div1">Salut champion !</div>
-
-const exempleAttr = div1.getAttribute("id");
-// "div1"
-
-const lang = div1.getAttribute("lang");
-// null
-```
-
-## Description
-
-### Sensibilité à la casse
+## Notes d'utilisation
 
 Lorsqu'elle est appelée sur un élément HTML dans un DOM identifié comme un document HTML,
 la méthode `getAttribute()` met son argument en minuscules avant de continuer.
@@ -72,17 +50,35 @@ Utilisez {{DOMxRef("Node.textContent", "textContent")}} (ou une autre API sûre 
 
 ### Retrouver des valeurs uniques
 
-Pour des raisons de sécurité, les nombres uniques [CSP](/fr/docs/Web/HTTP/Guides/CSP) provenant de sources qui ne sont pas des scripts (comme les sélecteurs CSS) et les appels à `.getAttribute("nonce")` sont masqués.
+Pour des raisons de sécurité, les nombres uniques [CSP](/fr/docs/Web/HTTP/Guides/CSP) provenant de sources qui ne sont pas des scripts (comme les sélecteurs CSS) et les appels à `.getAttribute("nonce")`, sont masqués.
 
 ```js example-bad
-let nombreUnique = script.getAttribute("nonce");
+const nombreUnique = script.getAttribute("nonce");
 // retourne une chaîne de caractères vide
 ```
 
 Au lieu de récupérer le nombre unique à partir de l'attribut de contenu, utilisez la propriété {{DOMxRef("HTMLElement/nonce", "nonce")}}&nbsp;:
 
 ```js
-let nombreUnique = script.nonce;
+const nombreUnique = script.nonce;
+```
+
+## Exemples
+
+```html
+<!-- exemple de div dans un document HTML -->
+<div id="div1">Salut champion !</div>
+```
+
+```js
+const div1 = document.getElementById("div1");
+// <div id="div1">Salut champion !</div>
+
+const attrExemple = div1.getAttribute("id");
+// "div1"
+
+const langue = div1.getAttribute("lang");
+// null
 ```
 
 ## Spécifications

@@ -3,10 +3,10 @@ title: "Element : évènement beforescriptexecute"
 short-title: beforescriptexecute
 slug: Web/API/Element/beforescriptexecute_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: d19dec85109590176f946fcceef48c787d578b1e
 ---
 
-{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
 > [!WARNING]
 > Cet évènement était une proposition dans une première version de la spécification. Ne vous y fiez pas.

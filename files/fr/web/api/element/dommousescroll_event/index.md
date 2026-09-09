@@ -3,10 +3,10 @@ title: "Element : évènement DOMMouseScroll"
 short-title: DOMMouseScroll
 slug: Web/API/Element/DOMMouseScroll_event
 l10n:
-  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef}}{{Non-standard_Header}}
 
 L'évènement DOM `DOMMouseScroll` est déclenché de manière asynchrone lorsque la molette de souris ou un dispositif similaire est utilisé et que la quantité de défilement accumulée dépasse 1 ligne ou 1 page depuis le dernier évènement. Il est représenté par l'interface {{DOMxRef("MouseScrollEvent")}}. Cet évènement n'a été implémenté que par Firefox. Vous devez plutôt utiliser l'évènement standard {{DOMxRef("Element.wheel_event", "wheel")}}.
 
@@ -14,7 +14,7 @@ Si vous voulez empêcher l'action par défaut des évènements de la molette de 
 
 Sur Gecko 17 (Firefox 17) ou ultérieur, vous devez appeler `preventDefault()` des évènements `wheel` qui doivent être déclenchés pour chaque évènement natif.
 
-Utilisez l'évènement standardisé {{DOMxRef("Element/wheel_event","wheel")}} si disponible.
+Utilisez l'évènement standardisé {{DOMxRef("Element/wheel_event", "wheel")}} si disponible.
 
 ## Syntaxe
 

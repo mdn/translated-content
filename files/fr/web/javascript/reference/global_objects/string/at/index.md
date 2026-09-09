@@ -3,8 +3,6 @@ title: String.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/String/at
 ---
 
-{{JSRef}}
-
 La méthode **`at()`** prend un entier en argument et renvoie une nouvelle chaîne de caractères ([`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) contenant le codet UTF-16 présent dans la chaîne courante à l'emplacement indiqué en argument. Cette méthode permet d'utiliser des arguments positifs ou négatifs. Lorsque le paramètre passé est un entier négatif, la recherche s'effectue depuis la fin de la chaîne de caractères.
 
 {{InteractiveExample("JavaScript Demo: String.at()")}}

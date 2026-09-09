@@ -116,5 +116,5 @@ On notera que les résultats obtenus avec les lignes précédentes peuvent varie
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Collator")}}
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl.Collator")}}
+- L'objet natif {{JSxRef("Intl")}}

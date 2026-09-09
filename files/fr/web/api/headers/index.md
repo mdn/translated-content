@@ -2,7 +2,7 @@
 title: Headers
 slug: Web/API/Headers
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
@@ -46,9 +46,9 @@ Toutes les méthodes <i lang="en">Headers</i> (en-têtes) lèveront une exceptio
 - {{DOMxRef("Headers.delete()")}}
   - : Supprime un en-tête dans un objet `Headers`.
 - {{DOMxRef("Headers.entries()")}}
-  - : Retourne un {{JSxRef("Iteration_protocols", "iterator")}} permettant d'accéder à toutes les paires clé/valeur contenues dans cet objet.
+  - : Retourne un {{JSxRef("Iteration_protocols", "iterator")}} vous permettant d'accéder à toutes les paires clé/valeur contenues dans cet objet.
 - {{DOMxRef("Headers.forEach()")}}
-  - : Exécute une fonction fournie une fois pour chaque élément du tableau.
+  - : Exécute une fonction fournie une fois pour chaque paire clé/valeur dans cet objet `Headers`.
 - {{DOMxRef("Headers.get()")}}
   - : Retourne une chaîne de caractères ({{JSxRef("String")}}) de toutes les valeurs d'un en-tête dans un objet `Headers` pour un nom donné.
 - {{DOMxRef("Headers.getSetCookie()")}}
@@ -70,7 +70,7 @@ Toutes les méthodes <i lang="en">Headers</i> (en-têtes) lèveront une exceptio
 
 ## Exemples
 
-Dans le fragment de code suivant, nous créons un nouvel Header en utilisant le contructeur `Headers()`, ajoutons un nouvel header à ce dernier en utilisant `append()`, puis retournons la valeur du header en utilisant `get()`&nbsp;:
+Dans le fragment de code suivant, nous créons un nouvel Header en utilisant le constructeur `Headers()`, ajoutons un nouvel header à ce dernier en utilisant `append()`, puis retournons la valeur du header en utilisant `get()`&nbsp;:
 
 ```js
 const monEnTete = new Headers();

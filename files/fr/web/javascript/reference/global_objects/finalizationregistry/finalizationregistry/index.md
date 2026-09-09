@@ -46,4 +46,4 @@ const registre = new FinalizationRegistry((valeurTenue) => {
 
 ## Voir aussi
 
-- L'objet {{JSxRef("FinalizationRegistry")}}
+- L'objet natif {{JSxRef("FinalizationRegistry")}}

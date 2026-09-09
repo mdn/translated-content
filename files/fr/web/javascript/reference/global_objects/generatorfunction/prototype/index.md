@@ -50,7 +50,7 @@ Le diagramme suivant illustre la chaîne de prototypes d'une fonction génératr
 
 - La déclaration {{JSxRef("Statements/function*", "function*")}}
 - [L'expression `function*`](/fr/docs/Web/JavaScript/Reference/Operators/function*)
-- L'objet {{JSxRef("AsyncGeneratorFunction")}}
-- L'objet {{JSxRef("GeneratorFunction")}}
+- L'objet natif {{JSxRef("AsyncGeneratorFunction")}}
+- L'objet natif {{JSxRef("GeneratorFunction")}}
 - [Héritage et chaîne de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 - [Itérateurs et générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators)

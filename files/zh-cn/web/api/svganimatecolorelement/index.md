@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 54eb3a678b4d4cbc94588d2234103e74dfa063a0
 ---
 
-{{APIRef("SVG")}}{{deprecated_header}}
+{{APIRef("SVG")}}
 
 **`SVGAnimateColorElement`** 接口对应于 `<animateColor>` 元素。
 

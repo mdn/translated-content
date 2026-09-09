@@ -3,8 +3,6 @@ title: sidebarAction.isOpen()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen
 ---
 
-{{AddonSidebar}}
-
 Renvoie `true` si la barre latérale de l'extension est ouverte dans une fenêtre donnée.
 
 Cette fonction accepte un `windowId` en paramètre :

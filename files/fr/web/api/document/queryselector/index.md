@@ -3,7 +3,7 @@ title: "Document : méthode querySelector()"
 short-title: querySelector()
 slug: Web/API/Document/querySelector
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 489f2f5115967ae01b6094a42d23c3bee5aba5fc
 ---
 
 {{APIRef("DOM")}}

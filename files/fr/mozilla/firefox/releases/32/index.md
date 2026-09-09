@@ -3,7 +3,7 @@ title: Firefox 32 note de version pour les développeurs
 short-title: Firefox 32
 slug: Mozilla/Firefox/Releases/32
 l10n:
-  sourceCommit: c13266140a9b05549d7c8616973cb17d9357467b
+  sourceCommit: f99d00a1c3697e26a679925954e26564e7e79b98
 ---
 
 Firefox 32 a été publié le 2 septembre 2014. Cet article répertorie les principaux changements utiles non seulement pour les développeur·euse·s web, mais aussi pour les développeur·euse·s Firefox et Gecko ainsi que pour les développeur·euse·s d'extensions.

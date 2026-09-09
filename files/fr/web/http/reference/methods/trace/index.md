@@ -3,7 +3,7 @@ title: Méthode de requête TRACE
 short-title: TRACE
 slug: Web/HTTP/Reference/Methods/TRACE
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 La méthode HTTP **`TRACE`** effectue un test de boucle de message le long du chemin vers la ressource cible.
@@ -13,7 +13,7 @@ Le destinataire final est soit le serveur d'origine, soit le premier serveur à 
 
 Le client ne doit pas envoyer de {{Glossary("HTTP Content", "contenu")}} dans la requête, ni générer d'en-têtes susceptibles de contenir des données sensibles comme des identifiants utilisateur·ice ou des cookies.
 Tous les serveurs n'implémentent pas la méthode `TRACE`, et certain·e·s propriétaires de serveurs ont historiquement interdit l'utilisation de la méthode `TRACE` en raison de préoccupations de sécurité.
-Dans de tels cas, une réponse d'erreur client {{HTTPStatus("405", "405 Method Not Allowed")}} [client error response](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) sera envoyée.
+Dans de tels cas, une [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) {{HTTPStatus("405", "405 Method Not Allowed")}} est envoyée.
 
 <table class="properties">
   <tbody>
@@ -106,4 +106,4 @@ Le navigateur n'utilise pas la méthode `TRACE` pour les actions initiées par l
 - [Méthodes de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods)
 - [Codes d'état de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
 - [En-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)
-- [Cross-Site Tracing (XST) <sup>(angl.)</sup>](https://owasp.org/www-community/attacks/Cross_Site_Tracing)
+- [Traçage inter-sites (XST) <sup>(angl.)</sup>](https://owasp.org/www-community/attacks/Cross_Site_Tracing)

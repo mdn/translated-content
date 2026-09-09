@@ -3,7 +3,7 @@ title: Propriété CSS `text-decoration-color`
 short-title: text-decoration-color
 slug: Web/CSS/Reference/Properties/text-decoration-color
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-decoration-color`** définit la couleur des décorations ajoutées au texte par {{CSSxRef("text-decoration-line")}}.
@@ -75,6 +75,8 @@ text-decoration-color: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme une valeur `<color>`&nbsp;:
 
 - {{CSSxRef("&lt;color&gt;")}}
   - : La couleur de la décoration de ligne.

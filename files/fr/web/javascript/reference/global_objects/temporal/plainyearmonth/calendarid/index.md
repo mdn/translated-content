@@ -51,4 +51,4 @@ console.log(newYM2.year, newYM2.monthCode); // 2021 "M06"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainYearMonth")}}
+- L'objet natif {{JSxRef("Temporal.PlainYearMonth")}}

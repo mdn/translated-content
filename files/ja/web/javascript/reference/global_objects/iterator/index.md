@@ -2,7 +2,7 @@
 title: Iterator
 slug: Web/JavaScript/Reference/Global_Objects/Iterator
 l10n:
-  sourceCommit: c534ba0cb925657de5e99ab8c540eae31afd9382
+  sourceCommit: e316526e520d8163e9151dca8973eb777b5285e0
 ---
 
 **`Iterator`** オブジェクトは、イテレーターの結果オブジェクトを返す `next()` メソッドを提供することで、[イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)に準拠したオブジェクトです。すべての組み込みイテレーターは `Iterator` クラスを継承しています。 `Iterator` クラスはイテレーターオブジェクト自身を返す [`[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator) メソッドを提供し、イテレーターを[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)にしています。また、イテレーターを操作するためのヘルパーメソッドもいくつか提供しています。
@@ -76,16 +76,18 @@ const firstThreeDigitTerm = seq.find((n) => n >= 100);
 
 次のように、配列のメソッドに類似した多くのイテレーターのメソッドが見つかります。
 
-| イテレーターのメソッド                     | 配列のメソッド                          |
-| ------------------------------------------ | --------------------------------------- |
-| {{jsxref("Iterator.prototype.every()")}}   | {{jsxref("Array.prototype.every()")}}   |
-| {{jsxref("Iterator.prototype.filter()")}}  | {{jsxref("Array.prototype.filter()")}}  |
-| {{jsxref("Iterator.prototype.find()")}}    | {{jsxref("Array.prototype.find()")}}    |
-| {{jsxref("Iterator.prototype.flatMap()")}} | {{jsxref("Array.prototype.flatMap()")}} |
-| {{jsxref("Iterator.prototype.forEach()")}} | {{jsxref("Array.prototype.forEach()")}} |
-| {{jsxref("Iterator.prototype.map()")}}     | {{jsxref("Array.prototype.map()")}}     |
-| {{jsxref("Iterator.prototype.reduce()")}}  | {{jsxref("Array.prototype.reduce()")}}  |
-| {{jsxref("Iterator.prototype.some()")}}    | {{jsxref("Array.prototype.some()")}}    |
+| イテレーターのメソッド                      | 配列のメソッド                           |
+| ------------------------------------------- | ---------------------------------------- |
+| {{jsxref("Iterator.prototype.every()")}}    | {{jsxref("Array.prototype.every()")}}    |
+| {{jsxref("Iterator.prototype.filter()")}}   | {{jsxref("Array.prototype.filter()")}}   |
+| {{jsxref("Iterator.prototype.find()")}}     | {{jsxref("Array.prototype.find()")}}     |
+| {{jsxref("Iterator.prototype.flatMap()")}}  | {{jsxref("Array.prototype.flatMap()")}}  |
+| {{jsxref("Iterator.prototype.forEach()")}}  | {{jsxref("Array.prototype.forEach()")}}  |
+| {{jsxref("Iterator.prototype.includes()")}} | {{jsxref("Array.prototype.includes()")}} |
+| {{jsxref("Iterator.prototype.join()")}}     | {{jsxref("Array.prototype.join()")}}     |
+| {{jsxref("Iterator.prototype.map()")}}      | {{jsxref("Array.prototype.map()")}}      |
+| {{jsxref("Iterator.prototype.reduce()")}}   | {{jsxref("Array.prototype.reduce()")}}   |
+| {{jsxref("Iterator.prototype.some()")}}     | {{jsxref("Array.prototype.some()")}}     |
 
 {{jsxref("Iterator.prototype.drop()")}} と {{jsxref("Iterator.prototype.take()")}} を組み合わせると、 {{jsxref("Array.prototype.slice()")}} に似たものになります。
 
@@ -159,10 +161,12 @@ const myIterator = Iterator.from({
 
 ## インスタンスメソッド
 
+- {{jsxref("Iterator.prototype.chunks()")}} {{experimental_inline}}
+  - : 元のイテレーターからの要素を連続した配列のチャンクに分割する、新しいイテレータヘルパーオブジェクトを返します。このヘルパーが反復処理されるたびに、基となるイテレーターから指定された数の要素を取得し、それらをまとめて返します。
 - {{jsxref("Iterator.prototype.drop()")}}
   - : このイテレーターの開始位置で指定された要素数をスキップする、新しいイテレーターヘルパーオブジェクトを返します。
 - {{jsxref("Iterator.prototype.every()")}}
-  - : イテレーターによって生成されたすべての要素が、指定された関数で実装しているテストに合格するかどうかをテストします。
+  - : 指定された判定関数の条件を満たさない要素が見つかった場合は `false` を返します。それ以外の場合、つまりそのような要素が見つからないままイテレーターが終了した場合は、`true` を返します。
 - {{jsxref("Iterator.prototype.filter()")}}
   - : 新しいイテレーターヘルパーオブジェクトを返します。このオブジェクトは、指定されたコールバック関数が `true` を返すイテレーターの要素のみを生成します。
 - {{jsxref("Iterator.prototype.find()")}}
@@ -171,16 +175,22 @@ const myIterator = Iterator.from({
   - : 元のイテレーターの各要素を取り、それを（別のイテレーターまたは反復可能オブジェクトに含まれている）マッピング関数に通し、マッピング関数から返された要素を生成する新しいイテレーターヘルパーオブジェクトを返します。
 - {{jsxref("Iterator.prototype.forEach()")}}
   - : このイテレーターによって生成された各要素に対して、指定された関数を一度ずつだけ実行します。
+- {{jsxref("Iterator.prototype.includes()")}} {{experimental_inline}}
+  - : イテレーターによって生成された要素が、指定された値と等しい場合、`true` を返します。それ以外の場合、つまりそのような要素が見つからずにイテレーターが終了した場合は、`false` を返します。
+- {{jsxref("Iterator.prototype.join()")}} {{experimental_inline}}
+  - : イテレーターによって生成されたすべての要素を、カンマまたは指定された区切り文字列で区切って連結した文字列を返します。
 - {{jsxref("Iterator.prototype.map()")}}
   - : 新しいイテレーターヘルパーオブジェクトを返します。このオブジェクトは、マッピング関数によって変換されたイテレーターの要素を反復処理します。
 - {{jsxref("Iterator.prototype.reduce()")}}
   - : イテレーターによって生成された各要素に対して、ユーザーが指定した「縮約」コールバック関数を実行し、前の要素の計算の返値を渡します。すべての要素に対して縮約を実行した最終結果は、単一の値となります。
 - {{jsxref("Iterator.prototype.some()")}}
-  - : イテレータ内の少なくとも 1 つの要素が、指定された関数で実装されているテストに合格しているかどうかを判定します。論理値を返します。
+  - : 指定されたテスト関数を満たす要素を見つけた場合は `true` を返します。それ以外の場合、つまりそのような要素が見つからずにイテレーターが終了した場合は、`false` を返します。
 - {{jsxref("Iterator.prototype.take()")}}
   - : このイテレーターで指定された数の要素を反復処理し、その後終了する新しいイテレーターヘルパーオブジェクトを返します。
 - {{jsxref("Iterator.prototype.toArray()")}}
   - : イテレーターから反復処理された要素で満たされた新しい配列インスタンス ({{jsxref("Array")}}) を作成します。
+- {{jsxref("Iterator.prototype.windows()")}} {{experimental_inline}}
+  - : 要素の移動ウィンドウを生成する新しいイテレーターヘルパーオブジェクトを返します。このヘルパーを反復処理するたびに、前回の反復処理で取得した最初の要素を除外し、元のイテレーターから次の要素を追加した配列を生成します。
 - [`Iterator.prototype[Symbol.dispose]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.dispose)
   - : `this` の `return()` メソッドが存在する場合、それを呼び出します。これにより disposable プロトコルが実装され、{{jsxref("Statements/using", "using")}} または {{jsxref("Statements/await_using", "await using")}} と共に使用された際に破棄することができます。
 - [`Iterator.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator)

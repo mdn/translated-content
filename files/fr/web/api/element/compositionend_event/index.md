@@ -3,7 +3,7 @@ title: "Element : évènement compositionend"
 short-title: compositionend
 slug: Web/API/Element/compositionend_event
 l10n:
-  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("UI Events")}}
@@ -27,15 +27,6 @@ oncompositionend = (event) => { }
 Un objet {{DOMxRef("CompositionEvent")}}. Hérite de {{DOMxRef("UIEvent")}} et de {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("CompositionEvent")}}
-
-## Propriétés de l'évènement
-
-_Cette interface hérite également des propriétés de son parent, {{DOMxRef("UIEvent")}}, et de son ancêtre — {{DOMxRef("Event")}}._
-
-- {{DOMxRef("CompositionEvent.data")}} {{ReadOnlyInline}}
-  - : Retourne les caractères générés par la méthode de saisie qui a déclenché l'évènement&nbsp;; cela varie en fonction du type d'évènement qui a généré l'objet `CompositionEvent`.
-- {{DOMxRef("CompositionEvent.locale")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Retourne la locale de la méthode de saisie actuelle (par exemple, la locale de la disposition du clavier si la composition est associée à une {{Glossary("Input method editor", "méthode de saisie")}}).
 
 ## Exemples
 

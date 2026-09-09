@@ -3,7 +3,7 @@ title: Pseudo-classe CSS `:-moz-drag-over`
 short-title: :-moz-drag-over
 slug: Web/CSS/Reference/Selectors/:-moz-drag-over
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: 77ea71add6054857698eb7ac1bfec8c7afe9ad4f
 ---
 
 {{Non-standard_Header}}

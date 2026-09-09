@@ -3,7 +3,7 @@ title: Méthode de requête PUT
 short-title: PUT
 slug: Web/HTTP/Reference/Methods/PUT
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 La méthode HTTP **`PUT`** crée une nouvelle ressource ou remplace la représentation de la ressource cible par le {{Glossary("HTTP Content", "contenu")}} de la requête.
@@ -97,4 +97,4 @@ Les développeur·euse·s peuvent définir cette méthode de requête avec {{DOM
 - [Méthodes de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods)
 - [Codes d'état de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
 - [En-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)
-- Les statuts de réponse {{HTTPStatus("201", "201 Created")}}, {{HTTPStatus("204", "204 No Content")}}
+- Les codes de statut de réponse {{HTTPStatus("201", "201 Created")}}, {{HTTPStatus("204", "204 No Content")}}

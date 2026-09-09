@@ -3,8 +3,6 @@ title: runtime.onConnectExternal
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsqu'une extension reçoit une demande de connexion d'une extension différente.
 
 Pour envoyer un message qui sera reçu par le programme d'écoute `onConnectExternal`, utilisez {{WebExtAPIRef("runtime.connect()")}}, en transmettant l'ID du destinataire dans le paramètre `extensionId`.

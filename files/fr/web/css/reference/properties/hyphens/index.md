@@ -3,7 +3,7 @@ title: Propriété CSS `hyphens`
 short-title: hyphens
 slug: Web/CSS/Reference/Properties/hyphens
 l10n:
-  sourceCommit: 35704c8c6b8065b8a288d0f6454e4a0387538dcc
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`hyphens`** définit comment les mots doivent être coupés en fin de ligne lorsque le texte s'étend sur plusieurs lignes.
@@ -55,16 +55,16 @@ hyphens: revert-layer;
 hyphens: unset;
 ```
 
-La propriété `hyphens` est définie comme une seule valeur clé choisie dans la liste ci-dessous.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `none`
   - : Les mots ne sont pas coupés en fin de ligne et ce même si les caractères invitent à une coupe. Les lignes se terminent uniquement sur des blancs.
 - `manual`
   - : Valeur par défaut. Les mots sont coupés pour le retour à la ligne uniquement là où des caractères à l'intérieur du mot suggèrent des opportunités de coupure. Voir [Suggérer des emplacements de coupure pour les lignes](#suggérer_des_emplacements_de_coupure_pour_les_lignes) ci-dessous pour plus de détails.
 - `auto`
-  - : Le navigateur est libre de couper les mots là où il l'estime approprié selon les règles qu'il choisit. Les emplacements de coupe suggérés (voir [Suggérer des emplacements de coupure pour les lignes](#suggérer_des_emplacements_de_coupure_pour_les_lignes) ci-dessous) par certains caractères devraient être privilégiés par rapport aux coupes automatiques.
+  - : Le navigateur est libre de couper les mots là où il l'estime approprié selon les règles qu'il choisit. Les emplacements de coupe suggérés (voir [Suggérer des emplacements de coupure pour les lignes](#suggérer_des_emplacements_de_coupure_pour_les_lignes) ci-dessous) par certains caractères doivent être privilégiés par rapport aux coupes automatiques.
 
 ## Description
 

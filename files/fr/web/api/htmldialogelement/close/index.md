@@ -3,7 +3,7 @@ title: "HTMLDialogElement : méthode close()"
 short-title: close()
 slug: Web/API/HTMLDialogElement/close
 l10n:
-  sourceCommit: 661a04e7a61abe3d8c7245f04cdd1d0bc865fe69
+  sourceCommit: 77ea71add6054857698eb7ac1bfec8c7afe9ad4f
 ---
 
 {{APIRef("HTML DOM")}}
@@ -80,7 +80,7 @@ const boutonOuvrir = document.getElementById("ouvrir");
 const boutonFermer = document.getElementById("fermer");
 const boutonFermerAvecValeur = document.getElementById("fermer-avec-valeur");
 
-// Le bouton d'ouverture ouvre une boîte de dialogue modale
+// Le bouton d'ouverture ouvre une boîte de dialogue bloquante
 boutonOuvrir.addEventListener("click", () => {
   // Réinitialiser la valeur de retour
   dialogue.returnValue = "";

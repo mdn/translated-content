@@ -36,19 +36,19 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<label>`** représente une légende pou
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - [`for`](/fr/docs/Web/HTML/Reference/Attributes/for)
-  - : La valeur correspond à l'[identifiant](/fr/docs/Web/HTML/Reference/Global_attributes/id) du contrôle de formulaire [étiquetable](/fr/docs/Web/HTML/Guides/Content_categories#labelable_éléments_étiquetables) dans le même document, [associant le `<label>` à ce contrôle de formulaire](#associer_un_libellé_à_un_contrôle_de_formulaire). Notez que sa propriété de réflexion JavaScript est [`htmlFor`](/fr/docs/Web/API/HTMLLabelElement/htmlFor).
+  - : La valeur correspond à [l'identifiant](/fr/docs/Web/HTML/Reference/Global_attributes/id) du contrôle de formulaire [étiquetable](/fr/docs/Web/HTML/Guides/Content_categories#labelable_éléments_étiquetables) dans le même document, [associant le `<label>` à ce contrôle de formulaire](#associer_un_libellé_à_un_contrôle_de_formulaire). Notez que sa propriété de réflexion JavaScript est [`htmlFor`](/fr/docs/Web/API/HTMLLabelElement/htmlFor).
 
 ## Notes d'utilisation
 
 ### Associer un libellé à un contrôle de formulaire
 
-Le premier élément du document avec un attribut `id` correspondant à la valeur de l'attribut `for` est le _contrôle étiqueté_ pour cet élément `label` — si l'élément avec cet `id` est effectivement un [élément étiquetable](/fr/docs/Web/HTML/Guides/Content_categories#labelable_éléments_étiquetables). S'il ne s'agit _pas_ d'un élément étiquetable, alors l'attribut `for` n'a aucun effet. Si d'autres éléments correspondent aussi à la valeur de l'`id` plus loin dans le document, ils ne sont pas pris en compte.
+Le premier élément du document avec un attribut `id` correspondant à la valeur de l'attribut `for` est le _contrôle étiqueté_ pour cet élément `label` — si l'élément avec cet `id` est effectivement un [élément étiquetable](/fr/docs/Web/HTML/Guides/Content_categories#labelable_éléments_étiquetables). S'il ne s'agit _pas_ d'un élément étiquetable, alors l'attribut `for` n'a aucun effet. Si d'autres éléments correspondent aussi à la valeur d'un `id` plus loin dans le document, ils ne sont pas pris en compte.
 
 Plusieurs éléments `<label>` peuvent être associés au même contrôle de formulaire en ayant plusieurs éléments `<label>` avec la même valeur d'attribut `for`, ce qui donne au contrôle de formulaire plusieurs étiquettes.
 
 Associer un `<label>` à un contrôle de formulaire, comme {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}, présente des avantages majeurs&nbsp;:
 
-- Le texte du libellé n'est pas seulement associé visuellement à son champ de saisie correspondant&nbsp;; il est aussi associé de façon programmatique. Cela signifie, par exemple, qu'un lecteur d'écran lira le libellé quand l'utilisateur·ice sélectionne le champ de saisie, ce qui facilite la compréhension des données à saisir pour une personne utilisant une technologie d'assistance.
+- Le texte du libellé n'est pas seulement associé visuellement à son champ de saisie correspondant&nbsp;; il est aussi associé de façon programmatique. Cela signifie, par exemple, qu'un lecteur d'écran lii le libellé quand l'utilisateur·ice sélectionne (<i lang="en">focus</i> en anglais) le champ de saisie, ce qui facilite la compréhension des données à saisir pour une personne utilisant une technologie d'assistance.
 - Lorsqu'un·e utilisateur·ice clique ou touche un libellé, le navigateur passe la sélection à son champ associé (l'évènement résultant est aussi déclenché pour le champ). Cette zone de sélection élargie offre un avantage à toute personne souhaitant l'activer, y compris celles utilisant un appareil à écran tactile.
 
 Il existe deux façons d'associer un `<label>` à un contrôle de formulaire, appelées association _explicite_ et _implicite_.
@@ -60,7 +60,7 @@ Pour associer explicitement un élément `<label>` à un élément `<input>`, il
 <input type="checkbox" name="peas" id="peas" />
 ```
 
-On peut aussi imbriquer directement l'élément `<input>` dans l'élément `<label>`, auquel cas les attributs `for` et `id` ne sont pas nécessaires car l'association est implicite&nbsp;:
+On peut aussi imbriquer directement l'élément `<input>` dans l'élément `<label>`, auquel cas les attributs `for` et `id` ne sont pas nécessaires, car l'association est implicite&nbsp;:
 
 ```html
 <label>
@@ -122,7 +122,7 @@ Les éléments pouvant être associés à un élément `<label>` incluent {{HTML
 
 ### Titres
 
-Placer des [éléments de titres](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) à l'intérieur d'un élément `label` causera des interférences avec de nombreux outils d'assistance car les titres sont généralement utilisés comme [une aide à la navigation](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements#navigation). Si le texte du libellé doit être ajusté visuellement, utilisez des classes CSS appliquées à l'élément `<label>`.
+Placer des [éléments de titres](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) à l'intérieur d'un élément `label` cause des interférences avec de nombreux outils d'assistance, car les titres sont généralement utilisés comme [une aide à la navigation](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements#navigation). Si le texte du libellé doit être ajusté visuellement, utilisez des classes CSS appliquées à l'élément `<label>`.
 
 Si un [formulaire](/fr/docs/Web/HTML/Reference/Elements/form), ou une section de formulaire, a besoin d'un titre, utilisez l'élément {{HTMLElement("legend")}} placé dans un {{HTMLElement("fieldset")}}.
 
@@ -146,7 +146,7 @@ Si un [formulaire](/fr/docs/Web/HTML/Reference/Elements/form), ou une section de
 
 ### Boutons
 
-Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value` valide ne nécessite pas l'ajout d'un libellé. Rajouter un libellé inutile pourra créer des interférences avec les outils d'assistance. Il en va de même pour l'élément {{HTMLElement("button")}}.
+Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value` valide ne nécessite pas l'ajout d'un libellé. Rajouter un libellé inutile peut créer des interférences avec les outils d'assistance. Il en va de même pour l'élément {{HTMLElement("button")}}.
 
 ## Exemples
 

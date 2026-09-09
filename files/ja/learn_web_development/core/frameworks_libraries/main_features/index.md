@@ -1,13 +1,12 @@
 ---
 title: フレームワークの主な機能
+short-title: フレームワークの機能
 slug: Learn_web_development/Core/Frameworks_libraries/Main_features
 l10n:
-  sourceCommit: c86c36ca478c7da904c22531e91fdcc2d2a6c690
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Introduction","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}
 
 主要な JavaScript フレームワークはそれぞれ、 DOM の更新、ブラウザーイベントの処理、楽しい開発者エクスペリエンスの提供に関して、異なるアプローチが採用されています。この記事では、「ビッグ 4」フレームワークの主な特徴を探り、フレームワークがどのように機能する傾向があるかを高いレベルから見ていき、それらの違いを見ていきます。
 
@@ -88,9 +87,9 @@ JSX と同様に、 Handlebars は中括弧を使用して変数の値を挿入�
 
 そしてこのデータは次のようになります。
 
-```js
+```json
 {
-  subject: "World";
+  "subject": "World"
 }
 ```
 
@@ -321,4 +320,4 @@ it("Increments the count when clicked", () => {
 
 この時点で、フレームワークを使用してアプリケーションを作成するときに使用する実際の言語、機能、ツールについてさらに理解できるはずです。あなたはきっと、実際にコーディングをしてみたいと熱意を持って取り組んでいると思います。それが次に行うことです。この時点で、最初に学習を開始するフレームワークを選択できます。
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Introduction","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}

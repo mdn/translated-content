@@ -3,12 +3,12 @@ title: "Headers : méthode keys()"
 short-title: keys()
 slug: Web/API/Headers/keys
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-La méthode **`keys()`** de l'interface {{DOMxRef("Headers")}} retourne un {{JSxRef("Iteration_protocols",'iterator')}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des objets {{JSxRef("String")}}.
+La méthode **`keys()`** de l'interface {{DOMxRef("Headers")}} retourne un itérateur ({{JSxRef("Iteration_protocols", "iterator")}}) vous permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des objets {{JSxRef("String")}}.
 
 ## Syntaxe
 
@@ -22,7 +22,7 @@ Aucun.
 
 ### Valeur de retour
 
-Retourne un {{JSxRef("Iteration_protocols", "iterator")}}.
+Retourne un itérateur ({{JSxRef("Iteration_protocols", "iterator")}}).
 
 ## Exemples
 
@@ -44,6 +44,10 @@ Le résultat est&nbsp;:
 content-type
 vary
 ```
+
+## Spécifications
+
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

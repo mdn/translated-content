@@ -4,8 +4,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/Symbol.species
 original_slug: Web/JavaScript/Reference/Global_Objects/Set/@@species
 ---
 
-{{JSRef}}
-
 **`Set[@@species]`** renvoie le constructeur `Set`.
 
 ## Syntaxe

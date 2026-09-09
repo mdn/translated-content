@@ -38,7 +38,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Un attribut booléen&nbsp;: si défini, l'audio commence automatiquement la lecture dès qu'il le peut, sans attendre la fin du téléchargement du fichier audio.
 
     > [!NOTE]
-    > Les sites qui lancent automatiquement de l'audio (ou des vidéos avec une piste audio) peuvent être désagréables pour les utilisateur·ices et doivent donc être évités dans la mesure du possible.
+    > Les sites qui lancent automatiquement de l'audio (ou des vidéos avec une piste audio) peuvent être désagréables pour les utilisateur·ice·s et doivent donc être évités dans la mesure du possible.
     > Si vous devez proposer une fonctionnalité de lecture automatique, rendez-la optionnelle (l'utilisateur·ice doit l'activer explicitement).
     > Cependant, cela peut être utile lors de la création d'éléments médias dont la source est définie ultérieurement, sous le contrôle de l'utilisateur·ice.
     > Consultez notre [guide sur la lecture automatique](/fr/docs/Web/Media/Guides/Autoplay) pour obtenir des informations supplémentaires sur la manière d'utiliser correctement la fonction _autoplay_.
@@ -118,45 +118,45 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 - {{DOMxRef("ScriptProcessorNode/audioprocess_event", "audioprocess")}} {{Deprecated_Inline}}
   - : La mémoire tampon en entrée d'un {{DOMxRef("ScriptProcessorNode")}} est prête à être traitée.
-- {{DOMxRef("HTMLMediaElement.canplay_event", 'canplay')}}
+- {{DOMxRef("HTMLMediaElement.canplay_event", "canplay")}}
   - : Le navigateur peut lire le média, mais estime que trop peu de données ont été chargées pour lire le média jusqu'à la fin sans devoir s'arrêter pour un chargement en mémoire tampon.
-- {{DOMxRef("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
+- {{DOMxRef("HTMLMediaElement.canplaythrough_event", "canplaythrough")}}
   - : Le navigateur estime qu'il peut lire le média jusqu'à la fin sans s'arrêter pour un chargement en mémoire tampon.
 - {{DOMxRef("OfflineAudioContext/complete_event", "complete")}}
   - : Le rendu d'un objet {{DOMxRef("OfflineAudioContext")}} est terminé.
-- {{DOMxRef("HTMLMediaElement.durationchange_event", 'durationchange')}}
+- {{DOMxRef("HTMLMediaElement.durationchange_event", "durationchange")}}
   - : L'attribut `duration` a été mis à jour.
-- {{DOMxRef("HTMLMediaElement.emptied_event", 'emptied')}}
+- {{DOMxRef("HTMLMediaElement.emptied_event", "emptied")}}
   - : Le média est devenu vide&nbsp;; par exemple, cet évènement est envoyé si le média a déjà été chargé (ou partiellement chargé) et que la méthode {{DOMxRef("HTMLMediaElement.load")}} est appelée pour le recharger.
-- {{DOMxRef("HTMLMediaElement.ended_event", 'ended')}}
+- {{DOMxRef("HTMLMediaElement.ended_event", "ended")}}
   - : La lecture a été interrompue car la fin du média a été atteinte.
-- {{DOMxRef("HTMLMediaElement.loadeddata_event", 'loadeddata')}}
+- {{DOMxRef("HTMLMediaElement.loadeddata_event", "loadeddata")}}
   - : La première image (<i lang="en">frame</i> en anglais) du média a été chargée.
-- {{DOMxRef("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}
+- {{DOMxRef("HTMLMediaElement.loadedmetadata_event", "loadedmetadata")}}
   - : Les métadonnées ont été chargées.
-- {{DOMxRef("HTMLMediaElement.loadstart_event", 'loadstart')}}
+- {{DOMxRef("HTMLMediaElement.loadstart_event", "loadstart")}}
   - : Déclenché lorsque le navigateur commence à charger la ressource.
-- {{DOMxRef("HTMLMediaElement.pause_event", 'pause')}}
+- {{DOMxRef("HTMLMediaElement.pause_event", "pause")}}
   - : La lecture a été mise en pause.
-- {{DOMxRef("HTMLMediaElement.play_event", 'play')}}
+- {{DOMxRef("HTMLMediaElement.play_event", "play")}}
   - : La lecture a commencé.
-- {{DOMxRef("HTMLMediaElement.playing_event", 'playing')}}
+- {{DOMxRef("HTMLMediaElement.playing_event", "playing")}}
   - : La lecture est prête à démarrer après avoir été mise en pause ou retardée par manque de données.
-- {{DOMxRef("HTMLMediaElement.ratechange_event", 'ratechange')}}
+- {{DOMxRef("HTMLMediaElement.ratechange_event", "ratechange")}}
   - : La vitesse de lecture a changé.
-- {{DOMxRef("HTMLMediaElement.seeked_event", 'seeked')}}
+- {{DOMxRef("HTMLMediaElement.seeked_event", "seeked")}}
   - : Une opération de déplacement du curseur de lecture (<i lang="en">seek</i> en anglais) est terminée.
-- {{DOMxRef("HTMLMediaElement.seeking_event", 'seeking')}}
+- {{DOMxRef("HTMLMediaElement.seeking_event", "seeking")}}
   - : Une opération de déplacement du curseur de lecture (<i lang="en">seek</i> en anglais) a commencé.
-- {{DOMxRef("HTMLMediaElement.stalled_event", 'stalled')}}
+- {{DOMxRef("HTMLMediaElement.stalled_event", "stalled")}}
   - : L'agent utilisateur tente de récupérer les données du média, mais les données n'arrivent pas comme prévu.
-- {{DOMxRef("HTMLMediaElement.suspend_event", 'suspend')}}
+- {{DOMxRef("HTMLMediaElement.suspend_event", "suspend")}}
   - : Le chargement des données du média a été suspendu.
-- {{DOMxRef("HTMLMediaElement.timeupdate_event", 'timeupdate')}}
+- {{DOMxRef("HTMLMediaElement.timeupdate_event", "timeupdate")}}
   - : Le temps indiqué par l'attribut `currentTime` a été mis à jour.
-- {{DOMxRef("HTMLMediaElement.volumechange_event", 'volumechange')}}
+- {{DOMxRef("HTMLMediaElement.volumechange_event", "volumechange")}}
   - : Le volume a changé.
-- {{DOMxRef("HTMLMediaElement.waiting_event", 'waiting')}}
+- {{DOMxRef("HTMLMediaElement.waiting_event", "waiting")}}
   - : La lecture a été interrompue en raison d'un manque temporaire de données.
 
 ## Notes d'utilisation

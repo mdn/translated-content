@@ -108,7 +108,7 @@ while (!result.done) {
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Segmenter")}}
+- L'objet natif {{JSxRef("Intl.Segmenter")}}
 - La méthode {{JSxRef("Intl.Segmenter.prototype.segment()")}}
 - La propriété statique {{JSxRef("Symbol.iterator")}}
 - [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)

@@ -53,7 +53,7 @@ console.log(newDate.toLocaleString("en-US", { calendar: "islamic-umalqura" }));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDate")}}
+- L'objet natif {{JSxRef("Temporal.PlainDate")}}
 - La méthode {{JSxRef("Temporal/PlainDate/with", "Temporal.PlainDate.prototype.with()")}}
 - La méthode statique {{JSxRef("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}
 - La propriété {{JSxRef("Temporal/PlainDate/calendarId", "Temporal.PlainDate.prototype.calendarId")}}

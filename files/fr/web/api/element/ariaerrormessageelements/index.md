@@ -3,7 +3,7 @@ title: "Element : propriété ariaErrorMessageElements"
 short-title: ariaErrorMessageElements
 slug: Web/API/Element/ariaErrorMessageElements
 l10n:
-  sourceCommit: 021ec74c882a8622cffbfb346cea128f00cd3bef
+  sourceCommit: 3b4a7a32fc2fe8cb6bd9a1e62f4ca52e002599ef
 ---
 
 {{APIRef("DOM")}}

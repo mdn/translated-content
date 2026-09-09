@@ -108,6 +108,6 @@ Ces propriétés sont définies sur `Temporal.PlainYearMonth.prototype` et parta
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal")}}
-- L'objet {{JSxRef("Temporal.PlainDate")}}
-- L'objet {{JSxRef("Temporal.PlainMonthDay")}}
+- L'objet natif {{JSxRef("Temporal")}}
+- L'objet natif {{JSxRef("Temporal.PlainDate")}}
+- L'objet natif {{JSxRef("Temporal.PlainMonthDay")}}

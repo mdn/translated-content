@@ -3,7 +3,7 @@ title: "Element : évènement auxclick"
 short-title: auxclick
 slug: Web/API/Element/auxclick_event
 l10n:
-  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
+  sourceCommit: 620c181285150bdb00b1abc2974251d18560efd1
 ---
 
 {{APIRef("UI Events")}}
@@ -31,40 +31,11 @@ Un objet {{DOMxRef("PointerEvent")}}. Hérite de {{DOMxRef("MouseEvent")}}.
 > [!NOTE]
 > Dans les versions antérieures de la spécification, le type d'évènement pour cet évènement était un {{DOMxRef("MouseEvent")}}. Consultez la [compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus d'informations.
 
-## Propriétés de l'évènement
-
-_Cette interface hérite des propriétés de {{DOMxRef("MouseEvent")}} et {{DOMxRef("Event")}}._
-
-- {{DOMxRef("PointerEvent.altitudeAngle")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Représente l'angle entre l'axe d'un transducteur (un pointeur ou un stylet) et le plan X-Y de l'écran de l'appareil.
-- {{DOMxRef("PointerEvent.azimuthAngle")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Représente l'angle entre le plan Y-Z et le plan contenant à la fois l'axe du transducteur (un pointeur ou un stylet) et l'axe Y.
-- {{DOMxRef("PointerEvent.pointerId")}} {{ReadOnlyInline}}
-  - : Un identifiant unique pour le pointeur à l'origine de l'évènement.
-- {{DOMxRef("PointerEvent.width")}} {{ReadOnlyInline}}
-  - : La largeur (magnitude sur l'axe X), en pixels CSS, de la géométrie de contact du pointeur.
-- {{DOMxRef("PointerEvent.height")}} {{ReadOnlyInline}}
-  - : La hauteur (magnitude sur l'axe Y), en pixels CSS, de la géométrie de contact du pointeur.
-- {{DOMxRef("PointerEvent.pressure")}} {{ReadOnlyInline}}
-  - : La pression normalisée de l'entrée du pointeur dans la plage `0` à `1`, où `0` et `1` représentent respectivement la pression minimale et maximale que le matériel est capable de détecter.
-- {{DOMxRef("PointerEvent.tangentialPressure")}} {{ReadOnlyInline}}
-  - : La pression tangentielle normalisée de l'entrée du pointeur (également connue sous le nom de pression de la bague ou [contrainte du cylindre <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Cylinder_stress)) dans la plage `-1` à `1`, où `0` est la position neutre du contrôle.
-- {{DOMxRef("PointerEvent.tiltX")}} {{ReadOnlyInline}}
-  - : L'angle du plan (en degrés, compris entre `-90` et `90`) entre le plan Y-Z et le plan contenant à la fois l'axe du pointeur (par exemple, un stylet) et l'axe Y.
-- {{DOMxRef("PointerEvent.tiltY")}} {{ReadOnlyInline}}
-  - : L'angle du plan (en degrés, compris entre `-90` et `90`) entre le plan X-Z et le plan contenant à la fois l'axe du pointeur (par exemple, un stylet) et l'axe X.
-- {{DOMxRef("PointerEvent.twist")}} {{ReadOnlyInline}}
-  - : La rotation dans le sens des aiguilles d'une montre du pointeur (par exemple, un stylet) autour de son axe principal en degrés, avec une valeur comprise entre `0` et `359`.
-- {{DOMxRef("PointerEvent.pointerType")}} {{ReadOnlyInline}}
-  - : Indique le type de périphérique à l'origine de l'évènement (souris, stylet, tactile, etc.).
-- {{DOMxRef("PointerEvent.isPrimary")}} {{ReadOnlyInline}}
-  - : Indique si le pointeur représente le pointeur principal de ce type de pointeur.
-
 ## Empêcher les actions par défaut
 
 Pour la grande majorité des navigateurs qui associent le clic central à l'ouverture d'un lien dans un nouvel onglet, y compris Firefox, il est possible d'annuler ce comportement en appelant {{DOMxRef("Event.preventDefault()", "preventDefault()")}} depuis un gestionnaire d'évènement `auxclick`.
 
-Lorsque vous écoutez les évènements `auxclick` provenant d'éléments qui ne prennent pas en charge la saisie ou la navigation, vous souhaitez souvent empêcher explicitement d'autres actions par défaut associées à l'action d'enfoncement du bouton central de la souris. Sous Windows, il s'agit généralement du défilement automatique, tandis que sous macOS et Linux, il s'agit généralement du collage depuis le presse-papiers. Pour ce faire, il suffit d'empêcher le comportement par défaut de l'évènement {{DOMxRef("Element/mousedown_event", "mousedown")}} ou {{DOMxRef("Element/pointerdown_event", "pointerdown")}}.
+Lorsque vous écoutez les évènements `auxclick` provenant d'éléments qui ne prennent pas en charge la saisie ou la navigation, vous souhaitez souvent empêcher explicitement d'autres actions par défaut associées à l'action d'enfoncement du bouton central de la souris. Sous Windows, il s'agit généralement du défilement automatique, et sur Linux il s'agit généralement du collage depuis le presse-papiers. Pour ce faire, il suffit d'empêcher le comportement par défaut de l'évènement {{DOMxRef("Element/mousedown_event", "mousedown")}} ou {{DOMxRef("Element/pointerdown_event", "pointerdown")}}.
 
 De plus, vous devez peut-être éviter l'ouverture d'un menu contextuel système après un clic droit. En raison des différences de synchronisation entre les systèmes d'exploitation, il s'agit là aussi d'un comportement par défaut de `auxclick` qui ne peut être désactivé. À la place, cela peut être réalisé en désactivant le comportement par défaut de l'évènement {{DOMxRef("Element/contextmenu_event", "contextmenu")}}.
 

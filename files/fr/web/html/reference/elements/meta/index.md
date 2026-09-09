@@ -11,7 +11,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<meta>`** représente toute information
 `<meta>` peut fournir différents types de métadonnées&nbsp;:
 
 - Si l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) est défini, l'élément `<meta>` fournit des _métadonnées au niveau du document_ qui s'appliquent à toute la page.
-- Si l'attribut [`http-equiv`](/fr/docs/Web/HTML/Reference/Elements/meta/http-equiv) est défini, l'élément `<meta>` agit comme une _directive pragma_ pour simuler des directives qui pourraient autrement être données par un en-tête HTTP.
+- Si l'attribut [`http-equiv`](/fr/docs/Web/HTML/Reference/Elements/meta/http-equiv) est défini, l'élément `<meta>` agit comme une _directive pragma_ pour simuler des directives qui peuvent autrement être données par un en-tête HTTP.
 - Si l'attribut [`charset`](#charset) est défini, l'élément `<meta>` est une _déclaration d'encodage_, indiquant l'encodage des caractères utilisé dans le document.
 - Si l'attribut [`itemprop`](/fr/docs/Web/HTML/Reference/Global_attributes/itemprop) est défini, l'élément `<meta>` fournit des _métadonnées définies par l'utilisateur·ice_.
 
@@ -49,7 +49,7 @@ La balise `<meta>` suivante fournit une `description` comme métadonnée pour la
 ### Définir une redirection de page
 
 L'exemple suivant utilise `http-equiv="refresh"` pour demander au navigateur d'effectuer une redirection.
-L'attribut `content="3;url=https://www.mozilla.org"` redirigera la page vers `https://www.mozilla.org` après 3 secondes&nbsp;:
+L'attribut `content="3;url=https://www.mozilla.org"` redirige la page vers `https://www.mozilla.org` après 3 secondes&nbsp;:
 
 ```html
 <meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />

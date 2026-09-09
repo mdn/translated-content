@@ -1,32 +1,33 @@
 ---
-title: Object.getOwnPropertyDescriptor()
+title: "Object : méthode statique getOwnPropertyDescriptor()"
+short-title: getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode statique **`Object.getOwnPropertyDescriptor()`** retourne un objet décrivant la configuration d'une propriété spécifique sur un objet donné (c'est-à-dire une propriété directement présente sur un objet et non dans la chaîne de prototypes de l'objet). L'objet retourné est mutable, mais le modifier n'a aucun effet sur la configuration de la propriété originale.
 
-La méthode **`Object.getOwnPropertyDescriptor()`** renvoie un descripteur de la propriété propre d'un objet (c'est-à-dire une propriété directement présente et pas héritée via la chaîne de prototypes).
-
-{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyDescriptor()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Object.getOwnPropertyDescriptor()")}}
 
 ```js interactive-example
-const object1 = {
-  property1: 42,
+const object = {
+  foo: 42,
 };
 
-const descriptor1 = Object.getOwnPropertyDescriptor(object1, "property1");
+const descriptor = Object.getOwnPropertyDescriptor(object, "foo");
 
-console.log(descriptor1.configurable);
-// Expected output: true
+console.log(descriptor.configurable);
+// Résultat attendu : true
 
-console.log(descriptor1.value);
-// Expected output: 42
+console.log(descriptor.value);
+// Résultat attendu : 42
 ```
 
 ## Syntaxe
 
-```js
-Object.getOwnPropertyDescriptor(obj, prop);
+```js-nolint
+Object.getOwnPropertyDescriptor(obj, prop)
 ```
 
 ### Paramètres
@@ -34,35 +35,35 @@ Object.getOwnPropertyDescriptor(obj, prop);
 - `obj`
   - : L'objet sur lequel on cherche la propriété.
 - `prop`
-  - : Le nom ou le symbole ({{jsxref("Symbol")}}) de la propriété dont on souhaite avoir la description.
+  - : Le nom ou le symbole ({{JSxRef("Symbol")}}) de la propriété dont on souhaite avoir la description.
 
 ### Valeur de retour
 
-Un descripteur de propriété de la propriété souhaitée si elle existe pour l'objet en question, sinon {{jsxref("undefined")}}.
+Un descripteur de propriété de la propriété souhaitée si elle existe pour l'objet en question, sinon {{JSxRef("undefined")}}.
 
 ## Description
 
-Cette méthode permet d'avoir des informations précises sur une propriété. Une propriété JavaScript est un nom (qui est une chaîne de caractères) ou un symbole ({{jsxref("Symbol")}}) associé à un descripteur. Voir la page {{jsxref("Object.defineProperty")}} pour plus d'informations sur les descripteurs de propriétés.
+Cette méthode permet d'examiner la description précise d'une propriété. Une _propriété_ en JavaScript se compose soit d'un nom de type chaîne de caractères, soit d'un {{JSxRef("Symbol")}} et d'un descripteur de propriété. Des informations supplémentaires sur les types de descripteurs de propriété et leurs attributs peuvent être trouvées dans {{JSxRef("Object.defineProperty()")}}.
 
-Un descripteur de propriété est un enregistrement qui dispose des attributs suivants :
+Un _descripteur de propriété_ est un enregistrement avec certains des attributs suivants&nbsp;:
 
-- **`value`**
-  - : La valeur associée à la propriété (pour les descripteurs de données uniquement).
-- **`writable`**
-  - : `true` si et seulement si la valeur associée à la propriété peut être changée (pour les descripteurs de données uniquement).
-- **`get`**
-  - : Une fonction qui joue le rôle d'accesseur (_getter_) pour la propriété ou {{jsxref("undefined")}} s'il n'y a pas d'accesseur (pour les descripteurs d'accesseurs uniquement).
-- **`set`**
-  - : Une fonction qui joue le rôle de mutateur (_setter_) pour la propriété ou `undefined` s'il n'y a pas de tel mutateur (pour les descripteurs d'accesseurs uniquement).
-- **`configurable`**
-  - : `true` si et seulement si le type du descripteur peut être changé et si la propriété peut être supprimée de l'objet.
-- **`enumerable`**
-  - : `true` si et seulement si la propriété doit apparaître lors d'une énumération des propriétés de l'objet.
+- `value`
+  - : La valeur associée à la propriété (uniquement pour les descripteurs de données).
+- `writable`
+  - : `true` si et seulement si la valeur associée à la propriété peut être modifiée (uniquement pour les descripteurs de données).
+- `get`
+  - : Une fonction qui sert d'accesseur pour la propriété, ou {{JSxRef("undefined")}} s'il n'y a pas d'accesseur (uniquement pour les descripteurs d'accesseur).
+- `set`
+  - : Une fonction qui sert de mutateur pour la propriété, ou {{JSxRef("undefined")}} s'il n'y a pas de mutateur (uniquement pour les descripteurs d'accesseur).
+- `configurable`
+  - : `true` si et seulement si le type de ce descripteur de propriété peut être modifié et si la propriété peut être supprimée de l'objet correspondant.
+- `enumerable`
+  - : `true` si et seulement si cette propriété apparaît lors de l'énumération des propriétés de l'objet correspondant.
 
 ## Exemples
 
 ```js
-var o, d;
+let o, d;
 
 o = {
   get toto() {
@@ -70,52 +71,64 @@ o = {
   },
 };
 d = Object.getOwnPropertyDescriptor(o, "toto");
-// d : {
-//       configurable: true,
-//       enumerable: true,
-//       get: /*l'accesseur*/,
-//       set: undefined
-//    }
+console.log(d);
+// {
+//   configurable: true,
+//   enumerable: true,
+//   get: [Function: get toto],
+//   set: undefined
+// }
 
 o = { truc: 42 };
 d = Object.getOwnPropertyDescriptor(o, "truc");
-// d : {
-//        configurable: true,
-//        enumerable: true,
-//        value: 42,
-//        writable: true
-//      }
+console.log(d);
+// {
+//   configurable: true,
+//   enumerable: true,
+//   value: 42,
+//   writable: true
+// }
+
+o = { [Symbol.for("machin")]: 73 };
+d = Object.getOwnPropertyDescriptor(o, Symbol.for("machin"));
+console.log(d);
+// {
+//   configurable: true,
+//   enumerable: true,
+//   value: 73,
+//   writable: true
+// }
 
 o = {};
-Object.defineProperty(o, "machin", {
+Object.defineProperty(o, "bidule", {
   value: 8675309,
   writable: false,
   enumerable: false,
 });
-d = Object.getOwnPropertyDescriptor(o, "machin");
-// d : {
-//        value: 8675309,
-//        writable: false,
-//        enumerable: false,
-//        configurable: false
-//      }
+d = Object.getOwnPropertyDescriptor(o, "bidule");
+console.log(d);
+// {
+//   value: 8675309,
+//   writable: false,
+//   enumerable: false,
+//   configurable: false
+// }
 ```
 
-## Notes
+### Convertir les valeurs qui ne sont pas des objets
 
-Pour ES5, si le premier argument de la méthode n'est pas un objet (mais une valeur d'un autre type), une exception {{jsxref("TypeError")}} sera levée. Pour ES2015, un argument non-objet sera d'abord converti en objet avant d'appliquer la méthode.
+Dans ES5, si le premier argument de cette méthode n'est pas un objet (une valeur primitive), alors il provoque une {{JSxRef("TypeError")}}. Dans ES2015, un premier argument qui n'est pas un objet est d'abord converti en objet.
 
 ```js
 Object.getOwnPropertyDescriptor("toto", 0);
 // TypeError: "toto" n'est pas un objet  // code ES5
 
-// code ES2015
 Object.getOwnPropertyDescriptor("toto", 0);
-// {
-//    configurable:false,
-//    enumerable:true,
-//    value:"f",
-//    writable:false
+// Object retourné par le code ES2015 : {
+//   configurable: false,
+//   enumerable: true,
+//   value: "f",
+//   writable: false
 // }
 ```
 
@@ -129,5 +142,5 @@ Object.getOwnPropertyDescriptor("toto", 0);
 
 ## Voir aussi
 
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
+- La méthode statique {{JSxRef("Object.defineProperty()")}}
+- La méthode statique {{JSxRef("Reflect.getOwnPropertyDescriptor()")}}

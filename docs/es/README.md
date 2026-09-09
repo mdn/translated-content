@@ -12,6 +12,7 @@ Guía para colaborar traduciendo y manteniendo el contenido de MDN Web Docs al e
   - [Opción A: Desde GitHub (sin instalar nada)](#opción-a-desde-github-sin-instalar-nada)
   - [Opción B: Desde tu computadora (recomendada para cambios grandes)](#opción-b-desde-tu-computadora-recomendada-para-cambios-grandes)
 - [Traducir un documento](#traducir-un-documento)
+- [Imágenes y otros archivos](#imágenes-y-otros-archivos)
 - [Mantener el `l10n.sourceCommit` al día](#mantener-el-l10nsourcecommit-al-día)
 - [Convención de traducciones](#convención-de-traducciones)
   - [Estilo de escritura](#estilo-de-escritura)
@@ -123,6 +124,9 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
 
 3. Traduce manteniendo intacto lo siguiente:
    - Identificadores del código (APIs, propiedades, métodos, variables, funciones).
+     - Los nombres propios de APIs conservan su forma en inglés: no se traducen **ni se reordenan**.
+       Escribe `Canvas API`, `WebVR API`, `WebXR Device API`, no «API Canvas» ni «API WebXR Device».
+       El artículo en español va delante del nombre completo: «la Canvas API quedó obsoleta».
    - Macros de Kumascript como `{{domxref(...)}}`, `{{jsxref(...)}}`, `{{Glossary(...)}}`.
    - Bloques de código: sólo traduce comentarios y cadenas dirigidas al usuario final.
    - Enlaces externos (GitHub, web.dev, etc.).
@@ -130,25 +134,26 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
 4. Cambia los enlaces internos de `/en-US/` a `/es/`.
 
    **¿Por qué `/es/` aunque la página no exista en español?**
-   MDN renderiza el contenido en inglés como respaldo (_fallback_) para las secciones o páginas que aún no han sido traducidas, pero siempre bajo la URL `/es/`. Un enlace como `/es/docs/Web/API/Fetch_API` funciona correctamente aunque la página no tenga traducción completa: el lector verá el contenido en inglés dentro del contexto de la interfaz en español.
+   Por coherencia de idioma del proyecto, no por un respaldo automático: si `files/es/…/index.md` no existe, la URL `/es/docs/…` devuelve `404`. MDN no sirve el artículo completo en inglés como sustituto de una página en español inexistente, y tampoco rellena con inglés las secciones que falten dentro de una página ya traducida: el texto en inglés que se ve en una traducción parcial está escrito en el propio archivo de `files/es/`. Aun así, el enlace **debe** escribirse en `/es/`: es la convención del proyecto, y así queda correcto automáticamente en cuanto la página destino se traduzca.
 
-   Por eso la regla general es: **usa siempre `/es/` en los enlaces internos absolutos de MDN**, sin excepción. Si la página de destino no existe en español, el sistema la muestra en inglés de forma transparente. No conserves `/en-US/` "para que funcione": un enlace en `/en-US/` saca al lector del contexto de su idioma preferido, incluso si la traducción sí existe.
+   Por eso la regla general es: **usa siempre `/es/` en los enlaces internos absolutos de MDN**, sin excepción. No conserves `/en-US/` "para que funcione": un enlace en `/en-US/` saca al lector del contexto de su idioma preferido, incluso si la traducción sí existe.
 
-   **Anclas (`#fragmento`): deben coincidir con el encabezado que se renderiza**
+   **Anclas (`#fragmento`): deben coincidir con un encabezado real de la página destino en español**
 
-   Cuando un enlace incluye un fragmento (`#`), la ancla debe coincidir con el ID del encabezado **tal como se renderiza en la página destino**. No es simplemente "español si la URL es `/es/`": lo que importa es qué contenido sirve MDN en esa URL.
+   Cuando un enlace incluye un fragmento (`#`), la ancla debe coincidir con el ID de un encabezado que exista **en la página en español** (asumiendo que la página ya está traducida; si no lo está, aplica la regla anterior del error 404). Un fragmento que no coincide con ningún ID no rompe el enlace (el navegador simplemente lo ignora y carga la página desde el inicio), pero deja al lector en la parte superior en lugar de la sección esperada.
 
-   | Caso                    | URL de destino               | Página destino              | Ancla correcta                                      |
-   | ----------------------- | ---------------------------- | --------------------------- | --------------------------------------------------- |
-   | Página _sin_ traducción | `/es/docs/Web/API/Fetch_API` | MDN sirve inglés (fallback) | Ancla en inglés: `#browser_compatibility`           |
-   | Página _con_ traducción | `/es/docs/Web/API/Fetch_API` | MDN sirve español           | Ancla en español: `#compatibilidad_con_navegadores` |
-   | Misma página            | `#fragmento`                 | El archivo actual           | Ancla del encabezado traducido                      |
+   | Caso                                | Qué hacer con la ancla                                                            |
+   | ----------------------------------- | --------------------------------------------------------------------------------- |
+   | La página destino está traducida    | Usa el ID del encabezado **traducido**: `#compatibilidad_con_navegadores`         |
+   | La página destino no está traducida | Quita el fragmento y deja solo el enlace a la página; agrégalo cuando se traduzca |
+   | Enlace dentro de la misma página    | Usa el ID del encabezado traducido de este archivo                                |
 
-   **Ejemplo del problema frecuente:** el inglés tiene `/en-US/docs/Web/API/Fetch_API#browser_compatibility`. Al traducir la página que contiene ese enlace, es tentador cambiar ambas partes a la vez: `/es/docs/Web/API/Fetch_API#compatibilidad_con_navegadores`. Pero si esa página no tiene traducción española, MDN la sirve en inglés y el encabezado `#compatibilidad_con_navegadores` no existe: el lector llega a la página pero sin desplazarse a la sección correcta.
+   **Ejemplo del problema frecuente:** dado el enlace en inglés `/en-US/docs/Web/API/Fetch_API#browser_compatibility`, al traducir, cambiar solo el prefijo (`/es/docs/Web/API/Fetch_API#browser_compatibility`) deja una ancla en inglés que no existe en la página en español, donde ese encabezado se renderiza como `#compatibilidad_con_navegadores`. En sentido contrario, copiar una ancla ya traducida hacia una página que aún no tiene traducción al español tampoco funciona.
 
-   La solución es verificar antes de cambiar la ancla:
-   - ¿Existe `files/es/…/Fetch_API/index.md` en el repositorio con ese encabezado ya traducido? → usa la ancla en español.
-   - ¿No existe o la sección puntual sigue en inglés? → cambia la URL a `/es/` pero **conserva la ancla en inglés**: `/es/docs/Web/API/Fetch_API#browser_compatibility`.
+   La solución es verificar antes de escribir la ancla:
+   - ¿Existe `files/es/…/Fetch_API/index.md` con ese encabezado ya traducido? → usa la ancla en español.
+   - ¿No existe la página en español? → deja solo `/es/docs/Web/API/Fetch_API`, sin fragmento.
+   - ¿Existe la página pero esa sección puntual aún no está traducida? → usa el ID tal como aparece renderizado actualmente en la página en español (puede seguir en inglés).
 
    Para los **enlaces dentro de la misma página** (`[ver más](#cómo_funciona)`), la ancla debe coincidir con el ID generado por el encabezado traducido. Si tradujiste `## How it works` como `## Cómo funciona`, el enlace debe ser `#cómo_funciona`.
 
@@ -163,6 +168,63 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
    Abre la página en `http://localhost:5042/es/docs/...`, inspecciona el encabezado con las herramientas de desarrollo del navegador y copia el `id` real generado por el _build_. Ese es el único valor confiable; no lo derives manualmente del texto del encabezado.
 
 5. Revisa el _front-matter_ YAML (`title`, `slug`, `l10n.sourceCommit`) como se describe en la siguiente sección.
+
+---
+
+## Imágenes y otros archivos
+
+**Regla corta: no copies a `files/es/` las imágenes que ya existen en `mdn/content`.**
+
+Cuando una página en español referencia una imagen que sólo existe en la carpeta en inglés, el _build_ resuelve automáticamente el `src` hacia la ruta de `en-US`. Basta con conservar en el Markdown la misma referencia relativa que usa el original:
+
+```md
+![Descripción de la imagen traducida al español](default-vite.png)
+```
+
+Y el HTML publicado en la página en español queda así:
+
+```html
+<img
+  src="/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started/default-vite.png"
+  alt="Descripción de la imagen traducida al español" />
+```
+
+Es decir: **traduce el texto del `alt`, pero no subas el archivo binario.**
+
+### ¿Por qué no duplicarlas?
+
+- **Tamaño del repositorio.** Git no puede calcular diferencias (_diff_) sobre un `.png` o un `.jpg`: cada commit que toque el archivo suma su peso completo al historial, para siempre.
+- **Desincronización silenciosa.** Si la imagen en inglés se actualiza o se renombra, la copia en español queda obsoleta sin que nada falle en CI. Es un problema real: la versión anterior de [Primeros pasos en React][react-getting-started] seguía mostrando una captura de `create-react-app` mucho después de que el original en inglés cambiara a Vite.
+- **No aporta nada.** Una copia idéntica byte por byte se renderiza exactamente igual que la referencia al original.
+
+De hecho, en todo `files/es/` hay apenas un puñado de imágenes, y casi todas son capturas propias que no existen en inglés.
+
+### ¿Cuándo sí se agrega una imagen a `files/es/`?
+
+Sólo cuando el **contenido de la imagen** es específico del idioma, por ejemplo:
+
+- Una captura de pantalla de una interfaz en español (el navegador, un formulario, un panel de herramientas de desarrollo).
+- Un diagrama cuyas etiquetas están en inglés en el original y aportan al lector verlas en español.
+
+En ese caso, colócala en la misma carpeta del documento (`files/es/<ruta>/mi-imagen.png`), usa el mismo nombre de archivo que el original para que sea evidente qué está reemplazando, y comprímela antes de subirla:
+
+```bash
+# Desde tu clon de mdn/content
+npm run filecheck ../translated-content/files/es/<ruta>/mi-imagen.png --save-compression
+```
+
+### Cómo verificar cómo quedó resuelta una imagen
+
+Cualquier página de MDN expone su HTML ya renderizado en `index.json`, lo que permite comprobar el `src` final sin levantar el sitio:
+
+```bash
+curl -sL "https://developer.mozilla.org/es/docs/<Slug>/index.json" | grep -oE '<img[^>]{0,140}'
+```
+
+Si el resultado apunta a `/en-US/...`, el respaldo funcionó correctamente y no hace falta hacer nada más.
+
+> [!NOTE]
+> Antes de agregar una imagen nueva, revisa el repositorio [mdn/shared-assets](https://github.com/mdn/shared-assets): funciona como biblioteca de recursos compartidos y quizá ya exista algo que puedas reutilizar. Los detalles generales están en [Cómo agregar imágenes y medios][guia-imagenes].
 
 ---
 
@@ -349,3 +411,5 @@ Al ejecutar `npm start` en tu clon de `mdn/content` puedes previsualizar localme
 Más información en [la discusión general de la comunidad de español](https://github.com/mdn/translated-content/discussions/4029).
 
 [guia-contribucion]: https://developer.mozilla.org/es/docs/MDN/Contribute
+[guia-imagenes]: https://developer.mozilla.org/es/docs/MDN/Writing_guidelines/Howto/Images_media
+[react-getting-started]: https://developer.mozilla.org/es/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started

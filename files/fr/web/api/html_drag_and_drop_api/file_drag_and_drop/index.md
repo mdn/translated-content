@@ -2,7 +2,7 @@
 title: Glisser et déposer des fichiers
 slug: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
 l10n:
-  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
+  sourceCommit: b2c48c8b7c097aeab4bc15a388c913f466f40e25
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -11,7 +11,7 @@ Comme mentionné sur [la page d'accueil](/fr/docs/Web/API/HTML_Drag_and_Drop_API
 
 ## Disposition de base de la page
 
-Parce que nous voulons également permettre la sélection normale de fichiers par `<input>`, il est logique que la zone de dépôt soit soutenue par un élément `<input>` afin que nous puissions à la fois y glisser des fichiers et cliquer dessus. Nous profitons d'une astuce courante, qui consiste à rendre l'élément `<input>` invisible, et à utiliser son {{HTMLElement("label")}} associé pour interagir avec l'utilisateur·ice à la place, car les éléments `<label>` sont beaucoup plus faciles à styliser. Nous ajoutons également les éléments pour prévisualiser les images déposées.
+Parce que nous voulons également permettre la sélection normale de fichiers par `<input>`, il est logique que la zone de dépôt soit soutenue par un élément `<input>` afin que nous puissions à la fois y glisser des fichiers et cliquer dessus. Nous profitons d'une astuce courante, qui consiste à rendre l'élément `<input>` invisible, et à utiliser son {{HTMLElement("label")}} associé pour interagir avec l'utilisateur·ice à la place, car les éléments `<label>` sont beaucoup plus faciles à mettre en forme. Nous ajoutons également les éléments pour prévisualiser les images déposées.
 
 ```html live-sample___file-dnd
 <label id="drop-zone">
@@ -131,7 +131,7 @@ window.addEventListener("dragover", (e) => {
 
 ## Traiter le dépôt
 
-Maintenant, nous implémentons le `gererDepot` en utilisant la méthode {{DOMxRef("DataTransferItem.getAsFile","getAsFile()")}} pour accéder à chaque fichier. Ensuite, votre application peut décider comment traiter ce fichier en utilisant [l'API File](/fr/docs/Web/API/File_API). Ici, nous les affichons simplement sur la page&nbsp;; en pratique, vous voudrez probablement les télécharger éventuellement sur le serveur également.
+Maintenant, nous implémentons le `gererDepot` en utilisant la méthode {{DOMxRef("DataTransferItem.getAsFile","getAsFile()")}} pour accéder à chaque fichier. Ensuite, votre application peut décider comment traiter ce fichier en utilisant [l'API File](/fr/docs/Web/API/File_API). Ici, nous les affichons simplement sur la page&nbsp;; en pratique, vous voulez probablement les télécharger éventuellement sur le serveur également.
 
 ```js live-sample___file-dnd
 const apercu = document.getElementById("preview");

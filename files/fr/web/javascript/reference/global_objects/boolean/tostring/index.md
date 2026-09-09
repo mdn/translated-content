@@ -14,12 +14,12 @@ La méthode **`toString()`** des valeurs {{JSxRef("Boolean")}} retourne une cha�
 const flag1 = new Boolean(true);
 
 console.log(flag1.toString());
-// Sortie attendue : "true"
+// Résultat attendu : "true"
 
 const flag2 = new Boolean(1);
 
 console.log(flag2.toString());
-// Sortie attendue : "true"
+// Résultat attendu : "true"
 ```
 
 ## Syntaxe

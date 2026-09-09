@@ -1,87 +1,91 @@
 ---
 title: Valeurs et unités CSS
+short-title: Valeurs et unités
 slug: Web/CSS/Guides/Values_and_units
-original_slug: Web/CSS/CSS_values_and_units
 l10n:
-  sourceCommit: bc761c19c07b875eb889d4aad87b18d8443da339
+  sourceCommit: c8522f47d8123fe529f39851b13b9fc01345ffbf
 ---
 
 Chaque déclaration CSS se compose d'une paire propriété/valeur. La valeur peut prendre diverses formes selon la propriété, comme un entier unique, un mot-clé, une fonction ou une combinaison de différents éléments&nbsp;; certaines valeurs ont des unités, tandis que d'autres n'en ont pas. Chaque propriété accepte également les valeurs CSS globales. Le module des valeurs et unités CSS définit les types de données — valeurs et unités — que les propriétés CSS acceptent. Ce module définit également la syntaxe de définition des valeurs CSS, ou grammaire formelle, utilisée pour définir l'ensemble des valeurs valides pour chaque propriété et fonction CSS.
+
+> [!NOTE]
+> Cette page introduit un module CSS. Pour trouver une liste exhaustive de toutes les valeurs, types et fonctions définis par les spécifications CSS, consultez la page de référence [valeurs](/fr/docs/Web/CSS/Reference/Values).
 
 ## Référence
 
 ### Propriétés
 
-- {{cssxref("interpolate-size")}}
+- {{CSSxRef("interpolate-size")}}
 
 ### Fonctions
 
-- {{cssxref("abs()")}}
-- {{cssxref("acos()")}}
-- {{cssxref("asin()")}}
-- {{cssxref("atan()")}}
-- {{cssxref("atan2()")}}
-- {{cssxref("attr()")}}
-- {{cssxref("calc()")}}
-- {{cssxref("calc-size()")}}
-- {{cssxref("clamp()")}}
-- {{cssxref("cos()")}}
-- {{cssxref("exp()")}}
-- {{cssxref("hypot()")}}
-- {{cssxref("ident()")}}
-- {{cssxref("if()")}}
-- {{cssxref("inherit()")}}
-- {{cssxref("log()")}}
-- {{cssxref("max()")}}
-- {{cssxref("min()")}}
-- {{cssxref("mod()")}}
-- {{cssxref("pow()")}}
-- {{cssxref("rem()")}}
-- {{cssxref("round()")}}
-- {{cssxref("sibling-count()")}}
-- {{cssxref("sibling-index()")}}
-- {{cssxref("sign()")}}
-- {{cssxref("sin()")}}
-- {{cssxref("sqrt()")}}
-- {{cssxref("tan()")}}
-- {{cssxref("url_function", "url()")}}
+- {{CSSxRef("abs()")}}
+- {{CSSxRef("acos()")}}
+- {{CSSxRef("asin()")}}
+- {{CSSxRef("atan()")}}
+- {{CSSxRef("atan2()")}}
+- {{CSSxRef("attr()")}}
+- {{CSSxRef("calc()")}}
+- {{CSSxRef("calc-size()")}}
+- {{CSSxRef("clamp()")}}
+- {{CSSxRef("cos()")}}
+- {{CSSxRef("exp()")}}
+- {{CSSxRef("hypot()")}}
+- {{CSSxRef("ident()")}}
+- {{CSSxRef("if()")}}
+- {{CSSxRef("inherit()")}}
+- {{CSSxRef("log()")}}
+- {{CSSxRef("max()")}}
+- {{CSSxRef("min()")}}
+- {{CSSxRef("mod()")}}
+- {{CSSxRef("pow()")}}
+- {{CSSxRef("random()")}}
+- {{CSSxRef("rem()")}}
+- {{CSSxRef("round()")}}
+- {{CSSxRef("sibling-count()")}}
+- {{CSSxRef("sibling-index()")}}
+- {{CSSxRef("sign()")}}
+- {{CSSxRef("sin()")}}
+- {{CSSxRef("sqrt()")}}
+- {{CSSxRef("tan()")}}
+- {{CSSxRef("url_function", "url()")}}
 
-Le module des valeurs et unités CSS introduit également les fonctions `calc-mix()`, `crossorigin()`, `first-valid()`, `integrity()`, `progress()`, `random()`, `random-item()`, `referrerpolicy()`, `src()`, `type()` et `toggle()`. Actuellement, aucun navigateur ne prend en charge ces fonctionnalités.
+Le module des valeurs et unités CSS introduit également les fonctions `calc-mix()`, `first-valid()`, `integrity()`, `random-item()`, `src()`, `type()`, et `toggle()`. Actuellement, aucun navigateur ne prend en charge ces fonctionnalités.
 
 ### Types de données
 
-- [`<angle-percentage>`](/fr/docs/Web/CSS/Reference/Values/angle-percentage)
-- [`<angle>`](/fr/docs/Web/CSS/Reference/Values/angle)
+- {{CSSxRef("&lt;angle-percentage&gt;")}}
+- {{CSSxRef("&lt;angle&gt;")}}
 - [`<animation-timeline>`](/fr/docs/Web/CSS/Reference/Properties/animation-timeline)
 - [`<attr-name>`](/fr/docs/Web/CSS/Reference/Values/attr#attr-name)
 - [`<attr-type>`](/fr/docs/Web/CSS/Reference/Values/attr#attr-type)
-- {{CSSxRef("&lt;calc-keyword&gt;")}} (`e`, `pi`, `infinity`, {{glossary("NaN")}})
+- {{CSSxRef("&lt;calc-keyword&gt;")}} (`e`, `pi`, `infinity`, {{Glossary("NaN")}})
 - [`<calc-size-basis>`](/fr/docs/Web/CSS/Reference/Values/calc-size#calc-size-basis)
-- [`<calc-sum>`](/fr/docs/Web/CSS/Reference/Values/calc-sum)
-- [`<custom-ident>`](/fr/docs/Web/CSS/Reference/Values/custom-ident)
-- [`<dashed-ident>`](/fr/docs/Web/CSS/Reference/Values/dashed-ident)
-- [`<dimension>`](/fr/docs/Web/CSS/Reference/Values/dimension)
-- [`<easing-function>`](/fr/docs/Web/CSS/Reference/Values/easing-function)
+- {{CSSxRef("&lt;calc-sum&gt;")}}
+- {{CSSxRef("&lt;custom-ident&gt;")}}
+- {{CSSxRef("&lt;dashed-ident&gt;")}}
+- {{CSSxRef("&lt;dimension&gt;")}}
+- {{CSSxRef("&lt;easing-function&gt;")}}
 - [`<first-valid()>`](/fr/docs/Web/CSS)
-- [`<ident>`](/fr/docs/Web/CSS/Reference/Values/ident)
-- [`<integer>`](/fr/docs/Web/CSS/Reference/Values/integer)
-- [`<length-percentage>`](/fr/docs/Web/CSS/Reference/Values/length-percentage)
-- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
-- [`<number>`](/fr/docs/Web/CSS/Reference/Values/number)
-- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
+- {{CSSxRef("&lt;ident&gt;")}}
+- {{CSSxRef("&lt;integer&gt;")}}
+- {{CSSxRef("&lt;length-percentage&gt;")}}
+- {{CSSxRef("&lt;length&gt;")}}
+- {{CSSxRef("&lt;number&gt;")}}
+- {{CSSxRef("&lt;percentage&gt;")}}
 - [`<position>`](/fr/docs/Web/CSS/Reference/Properties/position)
-- [`<ratio>`](/fr/docs/Web/CSS/Reference/Values/ratio)
-- [`<resolution>`](/fr/docs/Web/CSS/Reference/Values/resolution)
+- {{CSSxRef("&lt;ratio&gt;")}}
+- {{CSSxRef("&lt;resolution&gt;")}}
 - [`<rounding-strategy>`](/fr/docs/Web/CSS/Reference/Values/round#rounding-strategy) (`down`, `up`, `to-zero`)
-- [`<string>`](/fr/docs/Web/CSS/Reference/Values/string)
+- {{CSSxRef("&lt;string&gt;")}}
 - [`<syntax>`](/fr/docs/Web/CSS/Guides/Syntax/Introduction)
-- [`<time-percentage>`](/fr/docs/Web/CSS/Reference/Values/time-percentage)
-- [`<time>`](/fr/docs/Web/CSS/Reference/Values/time)
-- [`<url>`](/fr/docs/Web/CSS/Reference/Values/url_value)
+- {{CSSxRef("&lt;time-percentage&gt;")}}
+- {{CSSxRef("&lt;time&gt;")}}
+- {{CSSxRef("&lt;url&gt;")}}
 - [`<url-modifier>`](/fr/docs/Web/CSS/Reference/Values/url_function#url-modifier)
 - [`<view-timeline-name>`](/fr/docs/Web/CSS/Reference/Properties/view-timeline-name)
 
-Le module des valeurs et unités CSS introduit également les types de données [`<frequency>`](/fr/docs/Web/CSS/Reference/Values/frequency) et [`<frequency-percentage>`](/fr/docs/Web/CSS/Reference/Values/frequency-percentage). Actuellement, aucun navigateur ne prend en charge ces fonctionnalités.
+Le module des valeurs et unités CSS introduit également les types de données {{CSSxRef("&lt;frequency&gt;")}} et {{CSSxRef("&lt;frequency-percentage&gt;")}}. Actuellement, aucun navigateur ne prend en charge ces fonctionnalités.
 
 #### Unités
 
@@ -164,21 +168,21 @@ Le module des valeurs et unités CSS introduit également les types de données 
 
 ### Concepts clés
 
-- {{glossary("Advance measure", "Chasse")}}
+- {{Glossary("Advance measure", "Chasse")}}
 - [Notation d'intervalle entre crochets](/fr/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax#notation_par_crochets_minmax)
 - [Combinateurs de valeurs de composant](/fr/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax#composants_à_valeurs_de_combinateurs)
 - [Mots-clés globaux CSS](/fr/docs/Web/CSS/Reference/Values/Data_types#mots-clés_applicables_à_lensemble_du_css)
-- {{glossary("Device pixel", "Pixel de l'appareil")}}
+- {{Glossary("Device pixel", "Pixel de l'appareil")}}
 - [Notation fonctionnelle](/fr/docs/Web/CSS/Reference/Values/Functions)
-- {{glossary("Identifier", "Identifiant")}}
-- {{glossary("Interpolation")}}
-- {{glossary("Keyword", "Mot-clé")}}
+- {{Glossary("Identifier", "Identifiant")}}
+- {{Glossary("Interpolation")}}
+- {{Glossary("Keyword", "Mot-clé")}}
 - [Fonction mathématique](/fr/docs/Web/CSS/Guides/Values_and_units/Using_math_functions)
 - [Types de données numériques](/fr/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types)
-- {{glossary("Origin", "Origine")}}
-- {{glossary("Pixel")}}
+- {{Glossary("Origin", "Origine")}}
+- {{Glossary("Pixel")}}
 - [Types de données textuelles](/fr/docs/Web/CSS/Guides/Values_and_units/Textual_data_types)
-- {{glossary("URL")}}
+- {{Glossary("URL")}}
 - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
 
 ## Guides
@@ -204,31 +208,34 @@ Le module des valeurs et unités CSS introduit également les types de données 
 - [Apprendre&nbsp;: valeurs et unités](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
   - : Un aperçu de certains des types de valeurs les plus fréquemment utilisés, de leur nature et de leur fonctionnement.
 
+- [Sérialisation des valeurs CSS](/fr/docs/Web/API/CSS_Object_Model/CSS_value_serialization)
+  - : Comment les [API CSSOM](/fr/docs/Web/API/CSS_Object_Model) sérialisent les couleurs et autres valeurs en représentations de chaînes de caractères standardisées.
+
 ## Modules associés
 
 - Le module de [cascade et héritage CSS](/fr/docs/Web/CSS/Guides/Cascade)
-  - {{cssxref("initial")}}
-  - {{cssxref("inherit")}}
-  - {{cssxref("revert")}}
-  - {{cssxref("revert-layer")}}
-  - {{cssxref("unset")}}
-  - {{cssxref("all")}}
+  - {{CSSxRef("initial")}}
+  - {{CSSxRef("inherit")}}
+  - {{CSSxRef("revert")}}
+  - {{CSSxRef("revert-layer")}}
+  - {{CSSxRef("unset")}}
+  - {{CSSxRef("all")}}
 
 - Le module de [grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout)
-  - {{cssxref("&lt;flex&gt;")}}
+  - {{CSSxRef("&lt;flex&gt;")}}
   - [Unités flexibles](/fr/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#unités_flexibles) (`fr`)
 
 - Le module de [règles conditionnelles CSS](/fr/docs/Web/CSS/Guides/Conditional_rules)
   - [Unités de conteneur](/fr/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#unités_de_conteneur) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`)
 
 - Le module de [couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
-  - {{cssxref("&lt;color&gt;")}}
-  - {{cssxref("system-color")}}
+  - {{CSSxRef("&lt;color&gt;")}}
+  - {{CSSxRef("system-color")}}
   - [`color-mix()`](/fr/docs/Web/CSS/Reference/Values/color_value/color-mix)
 
-- Le module d'[images CSS](/fr/docs/Web/CSS/Guides/Images)
-  - {{cssxref("&lt;image&gt;")}}
-  - {{cssxref("&lt;gradient&gt;")}}
+- Le module [d'images CSS](/fr/docs/Web/CSS/Guides/Images)
+  - {{CSSxRef("&lt;image&gt;")}}
+  - {{CSSxRef("&lt;gradient&gt;")}}
 
 ## Spécifications
 

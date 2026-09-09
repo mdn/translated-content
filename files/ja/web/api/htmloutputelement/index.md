@@ -1,6 +1,8 @@
 ---
 title: HTMLOutputElement
 slug: Web/API/HTMLOutputElement
+l10n:
+  sourceCommit: af9a8ff87cfa6563c9a082162ce4ed7ba0b204e1
 ---
 
 {{APIRef("HTML DOM")}}
@@ -8,6 +10,11 @@ slug: Web/API/HTMLOutputElement
 **`HTMLOutputElement`** インターフェイスは、（{{domxref("HTMLElement")}} から継承したもの以外に）{{HTMLElement("output")}} 要素のレイアウトや表示を操作するためのプロパティやメソッドを提供します。
 
 {{InheritanceDiagram}}
+
+## コンストラクター
+
+- {{domxref("HTMLOutputElement.HTMLOutputElement", "HTMLOutputElement()")}} {{experimental_inline}}
+  - : 新しい `HTMLOutputElement` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
@@ -24,7 +31,7 @@ _このインターフェイスには、親である {{domxref("HTMLElement")}} 
 - {{domxref("HTMLOutputElement.name")}}
   - : 文字列で、 HTML の [`name`](/ja/docs/Web/HTML/Reference/Elements/output#name) 属性を反映し、フォームデータと共に送信されるコントロールの名前が入ります。
 - {{domxref("HTMLOutputElement.type")}} {{ReadOnlyInline}}
-  - : 文字列で "`output`" です。
+  - : 文字列で `"output"` です。
 - {{domxref("HTMLOutputElement.validationMessage")}} {{ReadOnlyInline}}
   - : 文字列で、（もしあれば）制約検証でコントロールが合格しなかった場合のローカライズされたメッセージを表現します。この属性はコントロールが制約検証の対象にならない場合（`willValidate` が `false` の場合）や、制約を満たしている場合は空文字列になります。
 - {{domxref("HTMLOutputElement.validity")}} {{ReadOnlyInline}}
@@ -32,7 +39,7 @@ _このインターフェイスには、親である {{domxref("HTMLElement")}} 
 - {{domxref("HTMLOutputElement.value")}}
   - : 文字列で、要素の内容の値を表します。 {{domxref("Node.textContent")}} プロパティと同様です。
 - {{domxref("HTMLOutputElement.willValidate")}} {{ReadOnlyInline}}
-  - : 論理値で、要素が制約検証の対象になるかどうかを示します。
+  - : その要素が制約検証の対象となるかどうかを示す論理値を返します。`HTMLOutputElement` オブジェクトの場合は、常に `false` になります。
 
 ## インスタンスメソッド
 

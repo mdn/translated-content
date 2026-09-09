@@ -3,7 +3,7 @@ title: "BigInt : méthode statique asUintN()"
 short-title: asUintN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: f542ed344953b3312fc92150bba11536667e288a
 ---
 
 La méthode statique **`BigInt.asUintN()`** tronque une valeur `BigInt` au nombre donné de bits les moins significatifs et retourne cette valeur sous la forme d'un entier qui n'est pas signé.
@@ -40,7 +40,7 @@ BigInt.asUintN(bits, bigint)
 
 ### Valeur de retour
 
-La valeur de `bigint` modulo `2 ** bits` comme entier qui n'est pas signé.
+Un BigInt contenant la représentation binaire de `bigint` tronquée à `bits` bits, interprétée comme un entier qui n'est pas signé.
 
 ### Exceptions
 

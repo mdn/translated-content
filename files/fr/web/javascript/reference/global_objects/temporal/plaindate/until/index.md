@@ -58,8 +58,8 @@ Pour plus d'exemples, voir [`since()`](/fr/docs/Web/JavaScript/Reference/Global_
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDate")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.PlainDate")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/PlainDate/add", "Temporal.PlainDate.prototype.add()")}}
 - La méthode {{JSxRef("Temporal/PlainDate/subtract", "Temporal.PlainDate.prototype.subtract()")}}
 - La méthode {{JSxRef("Temporal/PlainDate/since", "Temporal.PlainDate.prototype.since()")}}

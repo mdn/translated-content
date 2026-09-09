@@ -3,8 +3,6 @@ title: <tt>：電報文字元素
 slug: Web/HTML/Reference/Elements/tt
 ---
 
-{{deprecated_header}}
-
 **`<tt>`** [HTML](/zh-TW/docs/Web/HTML) 元素創建內嵌文本，使用{{Glossary("user agent", "使用者代理")}}預設的等寬字體呈現。此元素是為了渲染文本而創建的，就像在固定寬度顯示器上顯示的那樣，例如電報機、僅文字螢幕或列印機。
 
 **非比例**、**等寬**和**等寬字型**是可互換使用的術語，具有相同的一般含義：它們描述了所有字符寬度相同的字體。

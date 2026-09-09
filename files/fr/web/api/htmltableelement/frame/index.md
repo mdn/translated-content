@@ -3,10 +3,10 @@ title: "HTMLTableElement : propriété frame"
 short-title: frame
 slug: Web/API/HTMLTableElement/frame
 l10n:
-  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`frame`** de l'interface {{DOMxRef("HTMLTableElement")}} est une chaîne de caractères qui indique quelles bordures extérieures du tableau doivent être affichées.
 

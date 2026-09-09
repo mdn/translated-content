@@ -1,51 +1,94 @@
 ---
-title: Window.showModalDialog()
+title: HTMLDialogElement：showModal() 方法
+short-title: showModal()
 slug: Web/API/HTMLDialogElement/showModal
+l10n:
+  sourceCommit: 661a04e7a61abe3d8c7245f04cdd1d0bc865fe69
 ---
 
-{{ deprecated_header }}{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-**`Window.showModalDialog()`** 用于创建和展示一个指向特定网页的模态对话框。
+{{domxref("HTMLDialogElement")}} 接口的 **`showModal()`** 方法将对话框显示为模态对话框，叠放在其他可能可见的对话框或元素之上。
+
+模态对话框显示在{{glossary("top layer", "顶层")}}中，并伴随 {{cssxref("::backdrop")}} 伪元素。与对话框位于同一文档中的元素（对话框及其后代除外）会变为*惰性*（如同指定了 [`inert`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/inert) 属性）。仅包含该对话框的文档会被阻塞；如果对话框在 iframe 中渲染，页面的其余部分仍可交互。
 
 ## 语法
 
-```plain
-returnVal = window.showModalDialog(uri[, arguments][, options]);
+```js-nolint
+showModal()
 ```
 
-其中
+### 参数
 
-- `returnVal` 集合类型 (Set) 返回值。由`uri`指定的页面返回。
-- `uri` 要在模态对话框中打开的页面 URI。
-- `arguments` 可选变量。可以通过该参数将需要的值传入对话框。
-- `options` 可选字符串参数。用于设置对话框打开的样式，使用一个或多个逗号分隔。
+无。
 
-| Syntax                                           | Description                                                                                                                                          |
-| ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `center: {on \| off \| yes \| no \| 1 \| 0 }`    | If this argument's value is `on`, `yes`, or 1, the dialog window is centered on the desktop; otherwise it's hidden. The default value is `yes`.      |
-| `dialogheight: height`                           | Specifies the height of the dialog box; by default, the size is specified in pixels.                                                                 |
-| `dialogleft: left`                               | Specifies the horizontal position of the dialog box in relation to the upper-left corner of the desktop.                                             |
-| `dialogwidth: width`                             | Specifies the width of the dialog box; by default, the size is specified in pixels.                                                                  |
-| `dialogtop: top`                                 | Specifies the vertical position of the dialog box in relation to the upper-left corner of the desktop.                                               |
-| `resizable: {on \| off \| yes \| no \| 1 \| 0 }` | If this argument's value is `on`, `yes`, or 1, the dialog window can be resized by the user; otherwise its size is fixed. The default value is `no`. |
-| `scroll: {on \| off \| yes \| no \| 1 \| 0 }`    | If this argument's value is `on`, `yes`, or 1, the dialog window has scroll bars; otherwise its size is fixed. The default value is `no`.            |
+### 返回值
 
-> [!NOTE]
-> Firefox does not implement the `dialogHide`, `edge`, `status`, or `unadorned` arguments.
+无（{{jsxref("undefined")}}）。
 
-## Compatibility
+### 异常
 
-Introduced by Microsoft Internet Explorer 4. Support added to Firefox in Firefox 3 (deprectated in Fx 28), and to Safari in Safari 5.1.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : 如果对话框已经以非模态方式打开（即已通过 {{domxref("HTMLDialogElement.show()")}} 打开），则抛出此异常。
 
-## Examples
+## 示例
 
-[Try out `showModalDialog()`](https://mdn.dev/archives/media/samples/domref/showModalDialog.html).
+### 基本用法
 
-## Notes
+以下示例展示一个简单按钮：点击后会使用 `showModal()` 方法打开一个 {{htmlelement("dialog")}}。
 
-`showModalDialog()` is currently being standardized as part of HTML5. The third argument (for additional options) is not present in the HTML5 version, and is (safely) ignored by both Safari and Chrome.
+对话框打开时，你无法与页面其余部分交互，包括点击本会触发警告框的*触发警告*按钮。
 
-## Specification
+你可以点击*关闭对话框*按钮来关闭对话框（通过 {{domxref("HTMLDialogElement.close()")}} 方法）。
 
-- [`showModalDialog()`](https://msdn.microsoft.com/en-us/library/ms536759%28VS.85%29.aspx?f=255&MSPPError=-2147217396)
-- [HTML5 Dialogs implemented using separate documents](https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dialogs-implemented-using-separate-documents)
+#### HTML
+
+```html
+<dialog id="dialog">
+  <button type="button" id="close">关闭对话框</button>
+</dialog>
+
+<p><button id="open">打开对话框</button></p>
+<p><button id="alert">触发警告</button></p>
+```
+
+#### JavaScript
+
+```js
+const dialog = document.getElementById("dialog");
+const openButton = document.getElementById("open");
+const closeButton = document.getElementById("close");
+const alertButton = document.getElementById("alert");
+
+// “打开”按钮打开模态对话框
+openButton.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+// “触发警告”按钮触发警告框
+alertButton.addEventListener("click", () => {
+  alert("你点击了我！");
+});
+
+// “关闭”按钮关闭对话框
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
+```
+
+#### 结果
+
+{{EmbedLiveSample("基本用法", "100%", "250px")}}
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- HTML {{htmlelement("dialog")}} 元素
+- {{domxref("HTMLDialogElement.show()")}}

@@ -3,10 +3,10 @@ title: Type CSS `<line-style>`
 short-title: <line-style>
 slug: Web/CSS/Reference/Values/line-style
 l10n:
-  sourceCommit: a06cf3dca37bb7da1d5e5ad98c5d15a10dde3e8c
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
-Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{Glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<line-style>`** représente des mots-clés qui définissent le style d'une ligne, ou l'absence de ligne. Les valeurs de mot-clé `<line-style>` sont utilisées dans les propriétés [border](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders) et [column](/fr/docs/Web/CSS/Guides/Multicol_layout), aussi bien en version longue qu'en version abrégée&nbsp;:
+Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{Glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<line-style>`** représente des mots-clés qui définissent le style d'une ligne, ou l'absence de ligne. Les valeurs de mot-clé `<line-style>` sont utilisées dans les propriétés [de bordure](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders) et [de décoration des écarts](/fr/docs/Web/CSS/Guides/Gaps), aussi bien en version longue qu'en version abrégée&nbsp;:
 
 - {{CSSxRef("border")}}, {{CSSxRef("border-style")}}
 - {{CSSxRef("border-block")}}, {{CSSxRef("border-block-style")}}
@@ -20,6 +20,7 @@ Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{Glossary("
 - {{CSSxRef("border-right")}}, {{CSSxRef("border-right-style")}}
 - {{CSSxRef("border-top")}}, {{CSSxRef("border-top-style")}}
 - {{CSSxRef("column-rule")}}, {{CSSxRef("column-rule-style")}}
+- {{CSSxRef("row-rule")}}, {{CSSxRef("row-rule-style")}}
 
 ## Syntaxe
 
@@ -267,6 +268,8 @@ Remarquez que la couleur presque noire `#000001` peut être différente du noir 
 
 ## Voir aussi
 
+- Le type de donnée {{CSSxRef("&lt;line-width&gt;")}}
 - Le module des [arrière-plans et bordures CSS](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)
 - Le module de [l'interface utilisateur de base CSS](/fr/docs/Web/CSS/Guides/Basic_user_interface)
+- Le module des [écarts CSS](/fr/docs/Web/CSS/Guides/Gaps)
 - Le module de [disposition multi-colonne CSS](/fr/docs/Web/CSS/Guides/Multicol_layout)

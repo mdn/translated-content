@@ -41,4 +41,4 @@ console.log(dt3.calendarId); // "hebrew"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.ZonedDateTime")}}
+- L'objet natif {{JSxRef("Temporal.ZonedDateTime")}}

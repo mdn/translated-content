@@ -3,10 +3,8 @@ title: "Élément HTML `<frameset>` : l'élément contenant des frames"
 short-title: <frameset>
 slug: Web/HTML/Reference/Elements/frameset
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<frameset>`** est utilisé pour contenir les éléments {{HTMLElement("frame")}}.
 

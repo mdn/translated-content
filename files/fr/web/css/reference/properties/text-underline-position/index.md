@@ -3,7 +3,7 @@ title: Propriété CSS `text-underline-position`
 short-title: text-underline-position
 slug: Web/CSS/Reference/Properties/text-underline-position
 l10n:
-  sourceCommit: a516a9818e8cef06c626d436ee1d73fc6d87ec51
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-underline-position`** définit la position du soulignement utilisé lorsque la propriété {{CSSxRef("text-decoration")}} prend la valeur `underline`.
@@ -61,6 +61,8 @@ text-underline-position: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 - `auto`
   - : {{Glossary("user agent", "L'agent utilisateur")}} utilise son propre algorithme pour placer la ligne au niveau ou sous la {{Glossary("Baseline/Typography", "ligne de base alphabétique")}}.

@@ -62,7 +62,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     Lorsque cet attribut n'est pas présent, la ressource est récupérée sans requête CORS (l'en-tête HTTP `Origin:` n'est pas envoyé) et elle ne peut pas être utilisée dans un élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas). Si la valeur est invalide, elle est gérée comme si le mot-clé `anonymous` était utilisé. Pour plus d'informations, consulter l'article sur [les attributs de paramétrage du CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin).
 
 - `disablepictureinpicture`
-  - : Empêche le navigateur de suggérer un menu contextuel pour la superposition d'une image/vidéo ("_Picture-in-picture_") ou de demander l'activation automatique pour la superposition du média.
+  - : Empêche le navigateur de suggérer un menu contextuel pour la superposition d'une image/vidéo («&nbsp;_Picture-in-picture_&nbsp;») ou de demander l'activation automatique pour la superposition du média.
 - `disableremoteplayback`
   - : Un attribut booléen utilisé pour désactiver la capacité de lecture à distance dans les appareils qui sont attachés à l'aide de technologies câblées (HDMI, DVI, etc.) et sans fil (Miracast, Chromecast, DLNA, AirPlay, etc.).
 
@@ -373,7 +373,7 @@ Cet exemple s'appuie sur le précédent et fournit trois sources différentes po
 
 #### Résultat
 
-{{EmbedLiveSample('Sources multiples', "", 400)}}
+{{EmbedLiveSample("Sources multiples", "", 400)}}
 
 Le format AVI est essayé en premier. S'il ne peut pas être lu, le format [MP4](/fr/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4) est essayé. Un message de retour s'affiche si l'élément vidéo n'est pas pris en charge, mais pas si toutes les sources échouent.
 

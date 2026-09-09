@@ -3,7 +3,7 @@ title: Propriété CSS `image-rendering`
 short-title: image-rendering
 slug: Web/CSS/Reference/Properties/image-rendering
 l10n:
-  sourceCommit: d314d089e9be9ac78a91ba95ee80cad7d3cbe8c2
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`image-rendering`** fournit une indication au navigateur à propos de l'algorithme qui doit être utilisé pour redimensionner les images. Elle s'applique à l'élément visé, aux images fournies avec les autres propriétés CSS et aux éléments descendants de l'élément ciblé.
@@ -62,6 +62,8 @@ image-rendering: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `auto`
   - : L'algorithme utilisé dépend de l'agent utilisateur. Depuis la version 1.9 (Firefox 3.0), Gecko utilise un algorithme de ré-échantillonnage _bilinéaire_ (haute qualité).

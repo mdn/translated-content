@@ -108,7 +108,7 @@ DOM を使い始めるのに、特別なものは必要ありません。
       const heading = document.createElement("h1");
       const headingText = document.createTextNode("Big Head!");
       heading.appendChild(headingText);
-      document.body.appendChild(heading);
+      document.appendChild(heading);
     </script>
   </body>
 </html>
@@ -296,14 +296,14 @@ button {
 #### JavaScript
 
 ```js
-const story = document.body.querySelector(".story");
+const story = document.querySelector(".story");
 
-const setText = document.body.querySelector("#set-text");
+const setText = document.querySelector("#set-text");
 setText.addEventListener("click", () => {
   story.textContent = "暗くて嵐のような夜でした...";
 });
 
-const clearText = document.body.querySelector("#clear-text");
+const clearText = document.querySelector("#clear-text");
 clearText.addEventListener("click", () => {
   story.textContent = "";
 });
@@ -366,9 +366,9 @@ div.child {
 #### JavaScript
 
 ```js
-const parent = document.body.querySelector(".parent");
+const parent = document.querySelector(".parent");
 
-const addChild = document.body.querySelector("#add-child");
+const addChild = document.querySelector("#add-child");
 addChild.addEventListener("click", () => {
   // テキストノード「親」の他に、まだ子ノードがない場合のみ、
   // 子ノードを追加します。
@@ -381,9 +381,9 @@ addChild.addEventListener("click", () => {
   parent.appendChild(child);
 });
 
-const removeChild = document.body.querySelector("#remove-child");
+const removeChild = document.querySelector("#remove-child");
 removeChild.addEventListener("click", () => {
-  const child = document.body.querySelector(".child");
+  const child = document.querySelector(".child");
   parent.removeChild(child);
 });
 ```
@@ -521,7 +521,7 @@ document.getElementById("t-daddy").addEventListener("click", () => {
 
 ### イベントオブジェクトのプロパティの表示
 
-この例では、DOM メソッドを使って、 {{domxref("Window.load_event", "onload")}} [イベント](/ja/docs/Web/API/Event)オブジェクトのプロパティとそれらの値をすべて表として表示しています。また、オブジェクトのプロパティを反復し、それらの値を取得するために、[`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループを使った役に立つテクニックをお見せします。
+この例では、DOM メソッドを使って、{{domxref("Element.click_event", "click")}} イベントオブジェクトのプロパティとそれらの値をすべて表として表示しています。また、オブジェクトのプロパティを反復し、それらの値を取得するために、[`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループを使った役に立つテクニックをお見せします。
 
 イベントオブジェクトのプロパティはブラウザーによって大きく異なります。 [WHATWG DOM Standard](https://dom.spec.whatwg.org/) に標準のプロパティが載っていますが、多くのブラウザーはこれらを大幅に拡張しています。
 
@@ -534,6 +534,7 @@ document.getElementById("t-daddy").addEventListener("click", () => {
 ```css
 table {
   border-collapse: collapse;
+  margin-top: 2em;
 }
 thead {
   font-weight: bold;
@@ -551,19 +552,18 @@ td {
 ```
 
 ```js
-function showEventProperties(e) {
+function showEventProperties(event) {
   function addCell(row, text) {
     const cell = row.insertCell(-1);
     cell.appendChild(document.createTextNode(text));
   }
 
-  const event = e || window.event;
   document.getElementById("eventType").textContent = event.type;
 
   const table = document.createElement("table");
   const thead = table.createTHead();
   let row = thead.insertRow(-1);
-  const labelList = ["#", "Property", "Value"];
+  const labelList = ["#", "プロパティ", "値"];
   const len = labelList.length;
 
   for (let i = 0; i < len; i++) {
@@ -584,7 +584,7 @@ function showEventProperties(e) {
   document.body.appendChild(table);
 }
 
-showEventProperties(event);
+window.addEventListener("click", showEventProperties);
 ```
 
 {{EmbedLiveSample("イベントオブジェクトのプロパティの表示", "", "300")}}

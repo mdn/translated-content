@@ -2,7 +2,7 @@
 title: Qué escribimos
 slug: MDN/Writing_guidelines/What_we_write
 l10n:
-  sourceCommit: ca0b474bb2e153ce72718cb304306e540065a888
+  sourceCommit: de5b264fa7bf6bb49811bf79f8f28f10835bfb79
 ---
 
 MDN Web Docs contiene documentación _neutral respecto al navegador_ que permite a los desarrolladores web escribir código _agnóstico al navegador_. En este artículo, encontrarás información sobre si un tema o tipo de contenido determinado debe incluirse o no en MDN Web Docs.

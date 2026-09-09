@@ -3,7 +3,7 @@ title: Type CSS `<basic-shape>`
 short-title: <basic-shape>
 slug: Web/CSS/Reference/Values/basic-shape
 l10n:
-  sourceCommit: cd0970bc03cf30a9a8089954cc542a17dbe9eba3
+  sourceCommit: 6edb918a9e6bd17858d48dcfa5d76aa5ed5b9659
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<basic-shape>`** représente une forme utilisée dans les propriétés {{CSSxRef("border-shape")}}, {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}} et {{CSSxRef("shape-outside")}}.
@@ -71,9 +71,10 @@ Les paramètres communs à certaines fonctions de forme de base incluent&nbsp;:
   - : Définit les coins arrondis pour les [rectangles par décalage du conteneur](#syntaxe_pour_les_rectangles_par_décalage_du_conteneur), [rectangles par distance](#syntaxe_pour_les_rectangles_par_distance) et [rectangles à dimensions](#syntaxe_pour_les_rectangles_à_dimensions) en utilisant la même syntaxe que la propriété abrégée CSS [`border-radius`](/fr/docs/Web/CSS/Reference/Properties/border-radius).
 
 - `<shape-radius>`
-  - : Définit le rayon pour un [cercle](#syntaxe_pour_les_cercles) ou une [ellipse](#syntaxe_pour_les_ellipses). Les valeurs valides incluent {{CSSxRef("length")}}, {{CSSxRef("percentage")}}, `closest-side` (valeur par défaut) et `farthest-side`. Les valeurs négatives sont invalides.
+  - : Définit le rayon pour un [cercle](#syntaxe_pour_les_cercles) ou une [ellipse](#syntaxe_pour_les_ellipses). Les valeurs valides incluent {{CSSxRef("length")}}, {{CSSxRef("percentage")}}, `closest-side` (valeur par défaut), `farthest-side`, `closest-corner` et `farthest-corner`. Les valeurs négatives sont invalides.
 
     Le mot-clé `closest-side` utilise la distance du centre de la forme au côté le plus proche de la boîte de référence pour créer la longueur du rayon. Le mot-clé `farthest-side` utilise la distance du centre de la forme au côté le plus éloigné de la boîte de référence.
+    De même, les mots-clés `closest-corner` et `farthest-corner` utilisent la distance du centre de la forme au coin le plus proche et au coin le plus éloigné, respectivement.
 
 - `<position>`
   - : Définit le centre [`<position>`](/fr/docs/Web/CSS/Reference/Values/position_value) d'un [cercle](#syntaxe_pour_les_cercles) ou d'une [ellipse](#syntaxe_pour_les_ellipses). Par défaut, la valeur est `center` si omise.
@@ -136,13 +137,18 @@ Les arguments `<shape-radius>` représentent _rx_ et _ry_, les rayons selon les 
 
 ### Syntaxe pour les polygones
 
-La fonction {{CSSxRef("basic-shape/polygon","polygon()")}} définit un polygone à l'aide d'une règle de remplissage {{SVGAttr("fill-rule")}} SVG et d'un ensemble de coordonnées.
+La fonction {{CSSxRef("basic-shape/polygon", "polygon()")}} définit un polygone à l'aide d'un ensemble de paires de coordonnées séparées par des virgules, précédé facultativement par une règle de remplissage ({{SVGAttr("fill-rule")}}) SVG, un paramètre d'arrondissement des coins, ou les deux.
 
 ```plain
-polygon( <'fill-rule'>? , [ <length-percentage> <length-percentage> ]# )
+polygon( <'fill-rule'>? [ round <length> ]? , [ <length-percentage> <length-percentage> ]# )
 ```
 
-La fonction prend une liste de paires de coordonnées séparées par des virgules, chacune composée de deux valeurs `<length-percentage>` séparées par un espace, représentant les coordonnées x et y du polygone à la position _i_ (le sommet où deux lignes se rejoignent).
+Le premier paramètre facultatif peut contenir l'un ou l'autre des éléments suivants, ou les deux, séparés par une espace&nbsp;:
+
+- Une valeur SVG {{SVGAttr("fill-rule")}}, soit `nonzero`, soit `evenodd`, qui définit l'algorithme utilisé pour remplir la forme du polygone.
+- Le mot-clé [`round`](/fr/docs/Web/CSS/Reference/Values/basic-shape/polygon#round) suivi d'une valeur {{CSSxRef("&lt;length&gt;")}}, séparés par une espace. Cela définit que le polygone possède des coins arrondis, `<length>` définissant le rayon des coins.
+
+Chaque paire de coordonnées se compose de deux valeurs `<length-percentage>` séparées par une espace. Ces valeurs représentent les coordonnées sur les axes x et y d'un sommet du polygone.
 
 ### Syntaxe pour les chemins
 

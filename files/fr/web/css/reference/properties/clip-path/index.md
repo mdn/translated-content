@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`clip-path`** empêche une portion d'un élément d'être affichée en définissant une région de rognage. Seule la zone spécifique de l'élément à l'intérieur de la région sera affichée, le reste sera masqué.
+La propriété [CSS](/fr/docs/Web/CSS) **`clip-path`** empêche une portion d'un élément d'être affichée en définissant une région de rognage. Seule la zone spécifique de l'élément à l'intérieur de la région est affichée, le reste est masqué.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: clip-path")}}
 
@@ -45,10 +45,10 @@ clip-path: xywh(0 5px 100% 75% round 15% 0);
     Mon compagnon et moi avions convenu que je passerais le chercher chez lui
     après le dîner, au plus tard à onze heures. Ce jeune Français athlétique
     fait partie d'un petit groupe de sportifs parisiens qui se sont pris de
-    passion pour la « montgolfière ». Après avoir épuisé toutes les sensations
-    que l'on peut trouver dans les sports ordinaires, même celles de
-    l'«&nbsp;automobilisme&nbsp;» à une vitesse vertigineuse, les membres de
-    l'«&nbsp;Aéro Club&nbsp;» recherchent désormais dans les airs, où ils se
+    passion pour la «&nbsp;montgolfière&nbsp;». Après avoir épuisé toutes les
+    sensations que l'on peut trouver dans les sports ordinaires, même celles de
+    «&nbsp;l'automobilisme&nbsp;» à une vitesse vertigineuse, les membres de
+    «&nbsp;l'Aéro Club&nbsp;» recherchent désormais dans les airs, où ils se
     livrent à toutes sortes d'exploits audacieux, l'excitation palpitante qu'ils
     ne trouvent plus sur terre.
   </div>
@@ -121,7 +121,7 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
   - : Une {{CSSxRef("url_value", "&lt;url&gt;")}} qui référence un élément [SVG](/fr/docs/Web/SVG) {{SVGElement("clipPath")}}.
 
 - {{CSSxRef("&lt;basic-shape&gt;")}}
-  - : Une forme dont la taille et la position sont définies par la valeur `<geometry-box>`. Si aucune valeur de géométrie n'est fournie, `border-box` sera utilisée comme boîte de référence. La forme peut être définie avec l'une de ces valeurs&nbsp;:
+  - : Une forme dont la taille et la position sont définies par la valeur `<geometry-box>`. Si aucune valeur de géométrie n'est fournie, `border-box` est utilisée comme boîte de référence. La forme peut être définie avec l'une de ces valeurs&nbsp;:
     - {{CSSxRef("basic-shape/inset","inset()")}}
       - : Définit un rectangle.
     - {{CSSxRef("basic-shape/circle","circle()")}}
@@ -133,14 +133,14 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
     - {{CSSxRef("basic-shape/path","path()")}}
       - : Définit une forme en utilisant une règle de remplissage SVG optionnelle et une définition de chemin SVG.
     - {{CSSxRef("basic-shape/rect","rect()")}}
-      - : Définit un rectangle en utilisant les distances spécifiées par rapport aux bords de la boîte de référence.
+      - : Définit un rectangle en utilisant les distances définies par rapport aux bords de la boîte de référence.
     - {{CSSxRef("basic-shape/shape","shape()")}}
       - : Définit une forme en utilisant une règle de remplissage SVG optionnelle et des commandes de forme pour les lignes, les courbes et les arcs.
     - {{CSSxRef("basic-shape/xywh","xywh()")}}
-      - : Définit un rectangle en utilisant les distances spécifiées par rapport aux bords supérieur et gauche de la boîte de référence et les dimensions spécifiées de la largeur et de la hauteur du rectangle.
+      - : Définit un rectangle en utilisant les distances définies par rapport aux bords supérieur et gauche de la boîte de référence et les dimensions définies de la largeur et de la hauteur du rectangle.
 
 - `<geometry-box>`
-  - : Si cette valeur est combinée avec une valeur `<basic-shape>`, elle définira la boîte de référence dans laquelle placer la forme. Si elle est utilisée seule, ce sont les bords de la boîte (ainsi que les éventuels coins arrondis définis avec {{CSSxRef("border-radius")}}) qui sont utilisés comme ligne de rognage. Cette composante peut prendre les valeurs suivantes&nbsp;:
+  - : Si cette valeur est combinée avec une valeur `<basic-shape>`, elle définit la boîte de référence dans laquelle placer la forme. Si elle est utilisée seule, ce sont les bords de la boîte (ainsi que les éventuels coins arrondis définis avec {{CSSxRef("border-radius")}}) qui sont utilisés comme ligne de rognage. Cette composante peut prendre les valeurs suivantes&nbsp;:
     - `margin-box`
       - : La [boîte de marge](/fr/docs/Web/CSS/Guides/Shapes/From_box_values#margin-box) est utilisée comme boîte de référence.
     - `border-box`
@@ -160,7 +160,7 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
   - : Aucun chemin de rognage n'est créé.
 
 > [!NOTE]
-> Si [la valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing) est différente de `none`, cela entraînera la création d'un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) (de la même façon qu'{{CSSxRef("opacity")}} avec des valeurs différentes de `1`).
+> Si [la valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing) est différente de `none`, cela entraîne la création d'un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) (de la même façon que {{CSSxRef("opacity")}} avec des valeurs différentes de `1`).
 
 ## Définition formelle
 
@@ -213,7 +213,7 @@ div:last-of-type {
 
 {{EmbedLiveSample("shapes1", "", 230)}}
 
-Pour le premier triangle, nous n'avons pas spécifié de boîte de référence ; elle est donc par défaut `border-box`, avec les positions 0 % et 100 % situées sur le bord extérieur de la bordure. Dans le deuxième exemple, nous avons défini la `<geometry-box>` sur `content-box`, ce qui signifie que la boîte de référence pour la forme de base est le bord extérieur de la zone de contenu, qui se trouve à l'intérieur de la boîte de remplissage. Comme notre exemple n'a pas de `padding`, il s'agit du bord intérieur de la bordure.
+Pour le premier triangle, nous n'avons pas défini de boîte de référence&nbsp;; elle est donc par défaut `border-box`, avec les positions 0% et 100% situées sur le bord extérieur de la bordure. Dans le deuxième exemple, nous avons défini la `<geometry-box>` sur `content-box`, ce qui signifie que la boîte de référence pour la forme de base est le bord extérieur de la zone de contenu, qui se trouve à l'intérieur de la boîte de remplissage. Comme notre exemple n'a pas de `padding`, il s'agit du bord intérieur de la bordure.
 
 ### Les fonctions `shape()` et `path()`
 
@@ -306,7 +306,7 @@ div {
 }
 ```
 
-Nous définissons ensuite l'`id` du `<clipPath>` comme la `<clip-source>`. Nous centrons le texte dans l'exemple `cross` verticalement en utilisant {{CSSxRef("align-content")}}, sinon le texte serait rogné, comme c'est le cas dans l'exemple `window`.
+Nous définissons ensuite l'`id` du `<clipPath>` comme la `<clip-source>`. Nous centrons le texte dans l'exemple `cross` verticalement en utilisant {{CSSxRef("align-content")}}, sinon le texte est rogné, comme c'est le cas dans l'exemple `window`.
 
 ```css
 .window {
@@ -331,7 +331,7 @@ Cet exemple démontre les différentes valeurs de la propriété `clip-path` rog
 
 #### HTML
 
-Le HTML comprend une `<img>` qui sera rognée, un `<clipPath>` en forme d'étoile, et un élément HTML {{HTMLElement("select")}} pour choisir une valeur de propriété `clip-path`.
+Le HTML comprend une `<img>` qui est rognée, un `<clipPath>` en forme d'étoile, et un élément HTML {{HTMLElement("select")}} pour choisir une valeur de propriété `clip-path`.
 
 ```html
 <img

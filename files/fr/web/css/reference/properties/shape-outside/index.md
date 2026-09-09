@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`shape-outside`** définit une forme — qui peut ne pas être rectangulaire — autour de laquelle le contenu en ligne adjacent doit «&nbsp;s'écouler&nbsp;». Par défaut, le contenu en ligne s'écoule autour de la boîte de marge de l'élément&nbsp;; `shape-outside` permet de personnaliser cet écoulement, rendant possible l'enveloppement du texte autour d'objets complexes plutôt que de simples rectangles.
+La propriété [CSS](/fr/docs/Web/CSS) **`shape-outside`** définit une forme — qui peut ne pas être rectangulaire — autour de laquelle le contenu en incise (<i lang="en">inline</i> en anglais) adjacent doit «&nbsp;s'écouler&nbsp;». Par défaut, le contenu en incise s'écoule autour de la boîte de marge de l'élément&nbsp;; `shape-outside` permet de personnaliser cet écoulement, rendant possible l'enveloppement du texte autour d'objets complexes plutôt que de simples rectangles.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: shape-outside")}}
 
@@ -94,12 +94,12 @@ shape-outside: revert-layer;
 shape-outside: unset;
 ```
 
-La propriété `shape-outside` est définie en utilisant les valeurs de la liste ci-dessous, qui définissent la _zone de flottement_ pour les _éléments flottants_. La zone de flottement détermine la forme autour de laquelle le contenu en ligne (éléments flottants) s'enroule.
+La propriété `shape-outside` est définie en utilisant les valeurs de la liste ci-dessous, qui définissent la _zone de flottement_ pour les _éléments flottants_. La zone de flottement détermine la forme autour de laquelle le contenu en incise (éléments flottants) s'enroule.
 
 ### Valeurs
 
 - `none`
-  - : La zone de flottement n'est pas affectée. Le contenu en ligne s'enroule autour de la boîte de marge de l'élément, comme d'habitude.
+  - : La zone de flottement n'est pas affectée. Le contenu en incise s'enroule autour de la boîte de marge de l'élément, comme d'habitude.
 - `<shape-box>`
   - : La zone de flottement est calculée en fonction de la forme des bords de l'élément flottant (comme défini par le [modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model/Introduction)). Cela peut être `margin-box`, `border-box`, `padding-box` ou `content-box`. La forme inclut toute courbure créée par la propriété {{CSSxRef("border-radius")}} (comportement similaire à {{CSSxRef("background-clip")}}).
     - `margin-box`

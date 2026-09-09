@@ -4,8 +4,6 @@ slug: Web/CSS/Reference/Properties/clip
 original_slug: Web/CSS/clip
 ---
 
-{{deprecated_header}}
-
 ## Resumen
 
 La propiedad de CSS `clip` define qué porción de un elemento es visible. La propiedad `clip` se aplica solamente sobre elementos con {{ cssxref("position","position:absolute") }} o {{cssxref("position", "position:fixed")}}.

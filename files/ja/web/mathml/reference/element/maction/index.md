@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{Deprecated_Header}}
-
 **`<maction>`** は [MathML](/ja/docs/Web/MathML) の要素で、数式にアクションを結びつけることができます。デフォルトでまず最初の子要素のみがレンダリングされますが、一部のブラウザーでは `actiontype` および `selection` 属性を考慮して、独自の動作を実装する場合があります。
 
 > [!NOTE]

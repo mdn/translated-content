@@ -3,10 +3,10 @@ title: Propriété CSS `mask-border`
 short-title: mask-border
 slug: Web/CSS/Reference/Properties/mask-border
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`mask-border`** permet de créer un masque le long de la bordure d'un élément.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`mask-border`** permet de créer un masque le long de la bordure d'un élément.
 
 ## Propriétés constitutives
 

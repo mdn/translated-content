@@ -3,10 +3,8 @@ title: "Élément HTML `<font>` : l'élément de police"
 short-title: <font>
 slug: Web/HTML/Reference/Elements/font
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<font>`** définit la taille, la couleur et la police de son contenu.
 
@@ -26,7 +24,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ## Interface DOM
 
-Cet élément implément l'interface {{DOMxRef("HTMLFontElement")}}.
+Cet élément implémente l'interface {{DOMxRef("HTMLFontElement")}}.
 
 ## Spécifications
 

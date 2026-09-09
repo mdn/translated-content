@@ -3,7 +3,7 @@ title: HTML `<style>` スタイル情報要素
 short-title: <style>
 slug: Web/HTML/Reference/Elements/style
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 **`<style>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書あるいは文書の一部分のスタイル情報を含みます。 `<style>` 要素を含んでいる文書のコンテンツに適用される CSS を含みます。
@@ -35,7 +35,7 @@ p {
 }
 ```
 
-`<style>` 要素は文書の {{htmlelement("head")}} 要素の中に入れる必要があります。一般に、スタイルを外部スタイルシートに入れて {{htmlelement("link")}} 要素を使用することをより推奨します。
+`<style>` 要素は、通常、文書の {{htmlelement("head")}} 内に記載されます。また、{{htmlelement("template")}} 要素内など、メタデータコンテンツが許可されている場所であればどこでも使用できます。
 
 文書に複数の `<style>` および `<link>` が含まれている場合、これらは含まれている文書の DOM 上の順序で適用されます。 — 予期しないカスケード問題を防ぐために、含まれている順序が正しいことを確認してください。
 
@@ -91,6 +91,24 @@ p {
 #### 結果
 
 {{EmbedLiveSample('A_basic_stylesheet', '100%', '100')}}
+
+### `<style>` を `<template>` の中で使用
+
+`<style>` 要素は、{{HTMLElement("template")}} 要素の内部に配置することも可能です。スタイルは、テンプレートのコンテンツがインスタンス化され、文書内に挿入されるまでは有効になりません。
+
+```html
+<template id="card-template">
+  <style>
+    .card {
+      border: 1px solid #cccccc;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+  </style>
+
+  <div class="card">テンプレートコンテンツ</div>
+</template>
+```
 
 ### 複数の style 要素
 

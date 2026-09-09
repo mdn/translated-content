@@ -1,11 +1,10 @@
 ---
-title: <acronym>
+title: HTML `<acronym>` 頭字語または略語要素
+short-title: <acronym>
 slug: Web/HTML/Reference/Elements/acronym
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{HTMLSidebar}}{{deprecated_header}}
 
 **`<acronym>`** は [HTML](/ja/docs/Web/HTML) の要素で、頭字語または略語の単語を構成する文字の並びを明示することができます。
 
@@ -33,9 +32,9 @@ l10n:
 
 {{EmbedLiveSample('Examples')}}
 
-## 既定のスタイル
+## デフォルトのスタイル
 
-このタグの目的は単に作者の利便性のためのものであるため、ブラウザーによって既定のスタイルは様々です。
+このタグの目的は単に作者の利便性のためのものであるため、ブラウザーによってデフォルトのスタイルは様々です。
 
 - Opera、Firefox、Chrome などでは、この要素の内容に点線の下線が付きます。
 - ブラウザーによっては点線の下線を引くだけでなく、スモールキャップスにします。このスタイルを抑制するには、CSS で {{cssxref("font-variant", "font-variant: none")}} などをつけてください。

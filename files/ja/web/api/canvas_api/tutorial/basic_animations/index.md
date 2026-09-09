@@ -2,7 +2,7 @@
 title: 基本的なアニメーション
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
 l10n:
-  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
+  sourceCommit: 5f2a755c4fa7d126f85b56fbca90b15c5f039eff
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
@@ -19,7 +19,7 @@ l10n:
    描画する図形が（たとえば、背景画像のように）キャンバス全体を埋めない限り、以前に描画した図形をすべてクリアする必要があります。最も簡単な方法は、{{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} メソッドを使うことです。
 2. **キャンバスの状態を保存する**
    キャンバスの状態に影響を与える設定（スタイル、変形など）を変更していて、フレームを描画するたびに元の状態を使用したい場合は、その状態を保存する必要があります。
-3. **アニメ―ションさせる図形を描画する**
+3. **アニメーションさせる図形を描画する**
    実際に、フレームの描画を行います。
 4. **キャンバスの状態を復元する**
    状態を保存した場合は、新しいフレームを描画する前に状態を復元します。
@@ -38,13 +38,13 @@ l10n:
   - : `function` で指定した関数を `delay` ミリ秒ごとに繰り返し実行します。
 - {{domxref("Window.setTimeout", "setTimeout()")}}
   - : `function` で指定した関数を `delay` ミリ秒後に実行します。
-- {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame(callback)")}}
+- {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}
   - : アニメーションを実行することをブラウザーに通知し、次の再描画の前にアニメーションを更新するため、ブラウザーが指定の関数を呼び出すように要求します。
 
-ユーザーの操作が必要ない場合は、提供されたコードを繰り返し実行する `setInterval()` 関数が利用できます。ゲームを作成したい場合、キーボードまたはマウスのイベントを使用したアニメーションを制御するためには `setTimeout()` が利用できます。{{domxref("EventTarget/addEventListener", "addEventListener()")}} を用いてイベントリスナーを設定することで、ユーザーの操作を取得し、アニメーション関数を実行します。
+ユーザーの操作が必要ない場合は、提供されたコードを繰り返し実行する `setInterval()` 関数が利用できます。ゲームを作成したい場合、キーボードまたはマウスのイベントを使用したアニメーションを制御するためには `setTimeout()` が利用できます。{{domxref("EventTarget.addEventListener", "addEventListener()")}} を用いてイベントリスナーを設定することで、ユーザーの操作を取得し、アニメーション関数を実行します。
 
 > [!NOTE]
-> 以下の例では、{{domxref("window.requestAnimationFrame()")}} メソッドを使用してアニメーションを制御します。`requestAnimationFrame` メソッドは、フレームを描画する準備ができた時にシステムがアニメーションフレームを呼び出すことで、よりスムーズで効率的な方法でアニメーションを提供します。通常、コールバック回数は 1 秒あたり 60 回となり、バックグラウンドタブで実行している場合は、レートが低くなることがあります。特にゲームのアニメーションループの詳細については、[ゲーム開発](/ja/docs/Games)の[ビデオゲームの解剖学](/ja/docs/Games/Anatomy)を参照してください。
+> 以下の例では、{{domxref("Window.requestAnimationFrame()")}} メソッドを使用してアニメーションを制御します。`requestAnimationFrame` メソッドは、フレームを描画する準備ができた時にシステムがアニメーションフレームを呼び出すことで、よりスムーズで効率的な方法でアニメーションを提供します。通常、コールバック回数は 1 秒あたり 60 回となり、バックグラウンドタブで実行している場合は、レートが低くなることがあります。特にゲームのアニメーションループの詳細については、[ゲーム開発](/ja/docs/Games)の[ビデオゲームの解剖学](/ja/docs/Games/Anatomy)を参照してください。
 
 ## アニメーションする太陽系
 
@@ -62,6 +62,8 @@ l10n:
 const sun = new Image();
 const moon = new Image();
 const earth = new Image();
+const ctx = document.getElementById("canvas").getContext("2d");
+
 function init() {
   sun.src = "canvas_sun.png";
   moon.src = "canvas_moon.png";
@@ -70,8 +72,6 @@ function init() {
 }
 
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
-
   ctx.globalCompositeOperation = "destination-over";
   ctx.clearRect(0, 0, 300, 300); // clear canvas
 
@@ -219,7 +219,7 @@ function clock() {
   ctx.beginPath();
   ctx.arc(95, 0, 10, 0, Math.PI * 2, true);
   ctx.stroke();
-  ctx.fillStyle = "rgb(0 0 0 / 0%)";
+  ctx.fillStyle = "transparent";
   ctx.arc(0, 0, 3, 0, Math.PI * 2, true);
   ctx.fill();
   ctx.restore();

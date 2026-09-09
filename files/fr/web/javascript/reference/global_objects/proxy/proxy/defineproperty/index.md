@@ -3,8 +3,6 @@ title: handler.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 ---
 
-{{JSRef}}
-
 La méthode **`handler.defineProperty()`** est une trappe pour {{jsxref("Object.defineProperty()")}}.
 
 {{InteractiveExample("JavaScript Demo: handler.defineProperty()", "taller")}}

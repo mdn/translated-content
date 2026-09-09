@@ -3,7 +3,7 @@ title: Firefox 10 note de version pour les développeurs
 short-title: Firefox 10
 slug: Mozilla/Firefox/Releases/10
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Firefox 10 est sorti le 31 janvier 2012. Cet article fournit des informations sur les nouvelles fonctionnalités et les principaux bugs corrigés dans cette version, ainsi que des liens vers une documentation plus détaillée pour les développeur·euse·s web et les développeur·euse·s de modules complémentaires.
@@ -95,7 +95,7 @@ De grands progrès ont été réalisés pour mettre à jour IndexedDB selon la d
 
 - Les transformations 3D en CSS sont désormais prises en charge. Cela inclut la prise en charge des propriétés {{CSSxRef("transform-style")}}, {{CSSxRef("perspective")}}, {{CSSxRef("perspective-origin")}} et {{CSSxRef("backface-visibility")}}, ainsi que des fonctions de transformation 3D dans les propriétés {{CSSxRef("transform")}} et {{CSSxRef("transform-function")}}. Voir [Utilisation des transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using#propriétés_3d_spécifiques_à_css) pour plus de détails.
 - Deux nouvelles valeurs pour la propriété CSS {{CSSxRef("unicode-bidi")}} ont été ajoutées&nbsp;: `-moz-isolation` et `-moz-plaintext`. La valeur `-moz-isolation` isole, du point de vue de la direction, l'élément de son environnement, lui permettant d'avoir une direction différente. Un élément avec `unicode-bidi:-moz-isolation` se comporte comme un élément {{HTMLElement("bdi")}}. La valeur `-moz-plaintext` indique au navigateur d'utiliser Unicode euristique pour déterminer la direction et non la propriété CSS {{CSSxRef("direction")}}.
-- Les propriétés CSS {{CSSxRef("gradient/linear-gradient")}} et {{CSSxRef("gradient/repeating-linear-gradient")}} ont été mises à jour pour prendre en charge la nouvelle syntaxe `to` et l'algorithme _de coin magique_. Cela permet de donner une couleur précise sur le coin d'une boîte remplie de dégradé.
+- Les propriétés CSS {{CSSxRef("gradient/linear-gradient")}} et {{CSSxRef("gradient/repeating-linear-gradient")}} ont été mises à jour pour prendre en charge la nouvelle syntaxe `to` et l'algorithme _de coin magique_. Cela vous permet de donner une couleur précise sur le coin d'une boîte remplie de dégradé.
 - La gestion de la propriété {{CSSxRef("text-overflow")}} dans les cas où la boîte déborde des deux côtés alors que la propriété `text-overflow` est définie pour déborder d'un seul côté a été corrigée.
 - La gestion de la propriété {{CSSxRef("position")}} sur les éléments à l'intérieur des éléments {{HTMLElement("table")}} positionnés a été corrigée. **Ce changement affecte la mise en page des pages&nbsp;; cependant, nous respectons désormais la spécification CSS et les autres navigateurs, donc cela doit être facile à corriger.**
 - La fusion des marges autour des éléments {{HTMLElement("table")}} a été corrigée pour correspondre à la spécification CSS. Auparavant, les marges des éléments de table ne se fusionnaient pas avec les autres éléments adjacents, ce qui entraînait une mise en page incorrecte. **Ce changement affecte la mise en page des pages&nbsp;; cependant, nous respectons désormais la spécification CSS et les autres navigateurs, donc cela doit être facile à corriger.**
@@ -119,7 +119,7 @@ De grands progrès ont été réalisés pour mettre à jour IndexedDB selon la d
 Pour un aperçu des problèmes susceptibles de survenir lors de la mise à jour de vos extensions pour prendre en charge Firefox 10, consultez [Mise à jour des extensions pour Firefox 10](/fr/docs/Mozilla/Firefox/Releases/10/Updating_add-ons).
 
 > [!NOTE]
-> L'ancien type de données [`PRBool` <sup>(angl.)</sup>](https://web.archive.org/web/20210224213411/https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PRBool) a été retiré&nbsp;! Partout dans la documentation où il est mentionné, le type standard C++ `bool` est désormais utilisé. La documentation sera mise à jour à l'avenir, mais pour l'instant, gardez cela à l'esprit.
+> L'ancien type de données [`PRBool` <sup>(angl.)</sup>](https://web.archive.org/web/20210224213411/https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PRBool) a été retiré&nbsp;! Partout dans la documentation où il est mentionné, le type standard C++ `bool` est désormais utilisé. La documentation est mise à jour à l'avenir, mais pour l'instant, gardez cela à l'esprit.
 
 ### Manifestes
 

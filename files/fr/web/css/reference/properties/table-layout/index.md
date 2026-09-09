@@ -3,7 +3,7 @@ title: Propriété CSS `table-layout`
 short-title: table-layout
 slug: Web/CSS/Reference/Properties/table-layout
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`table-layout`** permet de définir l'algorithme utilisé pour disposer les cellules, lignes et colonnes d'un tableau ({{HTMLElement("table")}}).
@@ -86,19 +86,21 @@ table-layout: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `auto`
   - : L'algorithme automatique de disposition des tableaux est utilisé. Les largeurs du tableau et de ses cellules sont ajustées pour s'adapter au contenu. La plupart des navigateurs utilisent cet algorithme par défaut.
 
 - `fixed`
-  - : L'algorithme de disposition fixe des tableaux est utilisé. Lors de l'utilisation de ce mot-clé, la largeur du tableau _doit être définie explicitement_ à l'aide de la propriété {{CSSxRef("width")}}. Si la valeur de la propriété `width` est définie sur `auto` ou n'est pas spécifiée, le navigateur utilise l'algorithme automatique de disposition des tableaux, auquel cas la valeur `fixed` n'a aucun effet.
-    L'algorithme de disposition fixe des tableaux est plus rapide que l'algorithme automatique car la disposition horizontale du tableau dépend uniquement de la largeur du tableau, de la largeur des colonnes, des bordures ou de l'espacement des cellules. La disposition horizontale ne dépend pas du contenu des cellules car elle dépend uniquement des largeurs définies explicitement.
+  - : L'algorithme de disposition fixe des tableaux est utilisé. Lors de l'utilisation de ce mot-clé, la largeur du tableau _doit être définie explicitement_ à l'aide de la propriété {{CSSxRef("width")}}. Si la valeur de la propriété `width` est définie sur `auto` ou n'est pas définie, le navigateur utilise l'algorithme automatique de disposition des tableaux, auquel cas la valeur `fixed` n'a aucun effet.
+    L'algorithme de disposition fixe des tableaux est plus rapide que l'algorithme automatique, car la disposition horizontale du tableau dépend uniquement de la largeur du tableau, de la largeur des colonnes, des bordures ou de l'espacement des cellules. La disposition horizontale ne dépend pas du contenu des cellules, car elle dépend uniquement des largeurs définies explicitement.
 
     Avec l'algorithme de disposition fixe, la largeur de chaque colonne est déterminée comme suit&nbsp;:
     - Un élément de colonne avec une largeur explicite définit la largeur de cette colonne.
     - Sinon, une cellule de la première ligne avec une largeur explicite détermine la largeur de cette colonne.
     - Sinon, la colonne obtient la largeur de l'espace horizontal restant partagé.
 
-    Avec cet algorithme, l'ensemble du tableau peut être affiché une fois que la première ligne du tableau a été téléchargée et analysée. Cela peut accélérer le temps d'affichage par rapport à la méthode de disposition «&nbsp;automatique&nbsp;», mais le contenu des cellules suivantes peut ne pas tenir dans les largeurs de colonnes fournies. Les cellules utilisent la propriété {{CSSxRef("overflow")}} pour déterminer s'il faut couper tout contenu débordant, mais seulement si le tableau a une largeur connue&nbsp;; sinon, elles ne déborderont pas des cellules.
+    Avec cet algorithme, l'ensemble du tableau peut être affiché une fois que la première ligne du tableau a été téléchargée et analysée. Cela peut accélérer le temps d'affichage par rapport à la méthode de disposition «&nbsp;automatique&nbsp;», mais le contenu des cellules suivantes peut ne pas tenir dans les largeurs de colonnes fournies. Les cellules utilisent la propriété {{CSSxRef("overflow")}} pour déterminer s'il faut couper tout contenu débordant, mais seulement si le tableau a une largeur connue&nbsp;; sinon, elles ne débordent pas des cellules.
 
 ## Définition formelle
 
@@ -112,7 +114,7 @@ table-layout: unset;
 
 ### Tableaux à largeur fixe avec dépassement de texte
 
-Cet exemple utilise une disposition de tableau fixe, combinée avec la propriété {{CSSxRef("width")}}, pour restreindre la largeur du tableau. La propriété {{CSSxRef("text-overflow")}} est utilisée pour appliquer une ellipse aux mots trop longs pour tenir. Si la disposition du tableau était `auto`, le tableau s'agrandirait pour s'adapter à son contenu, même si une largeur a été définie.
+Cet exemple utilise une disposition de tableau fixe, combinée avec la propriété {{CSSxRef("width")}}, pour restreindre la largeur du tableau. La propriété {{CSSxRef("text-overflow")}} est utilisée pour appliquer une ellipse aux mots trop longs pour tenir. Si la disposition du tableau était `auto`, le tableau s'agrandit pour s'adapter à son contenu, même si une largeur a été définie.
 
 #### HTML
 

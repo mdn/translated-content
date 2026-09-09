@@ -3,7 +3,7 @@ title: "Element : propriété ariaPressed"
 short-title: ariaPressed
 slug: Web/API/Element/ariaPressed
 l10n:
-  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
+  sourceCommit: ce12c10364f35c64184dec44be85537b7e10d91f
 ---
 
 {{APIRef("DOM")}}

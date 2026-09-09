@@ -1,5 +1,5 @@
 ---
-title: 编译 C/C++ 为 WebAssembly
+title: 将 C/C++ 编译为 WebAssembly
 slug: WebAssembly/Guides/C_to_Wasm
 ---
 
@@ -11,59 +11,7 @@ slug: WebAssembly/Guides/C_to_Wasm
 
 ### 所需条件
 
-你需要将下列工具安装在你的电脑上，首先让我们确认下都有哪些。
-
-- [Git](https://git-scm.com/) — Linux 和 macOS 的机器一般已经预装了，在 Windows 下你可以从这里下载 [Git for Windows installer](https://git-scm.com/download/win)。
-- CMake — 在 Linux 或者 macOS 上，使用类似 apt-get 或 [brew](https://brew.sh/) 这样的包管理器来安装它，请确保依赖以及路径是否正确。在 Windows 上，使用 [CMake installer](https://cmake.org/download/)。
-- 主系统编译器 — 在 Linux 下，[安装 GCC](http://askubuntu.com/questions/154402/install-gcc-on-ubuntu-12-04-lts)。在 macOS 下，[安装 Xcode](https://itunes.apple.com/us/app/xcode/id497799835)。在 Windows 下，安装 [Visual Studio Community 2015 with Update 3 or newer](https://www.microsoft.com/zh-CN/download/details.aspx?id=48146)。
-- Python 2.7.x — On Linux and macOS, this is most likely provided out of the box. 从 [初学者指南](https://wiki.python.org/moin/BeginnersGuide/Downloadhere) 获取帮助。在 Windows 上，从 [Python 主页](https://www.python.org/downloads/)获取安装包。
-
-> [!NOTE]
-> 在 Windows 下你可能需要 [pywin32](https://sourceforge.net/projects/pywin32/files/pywin32/)，为了降低安装 pywin32 可能遇到的错误，请使用管理员权限在 cmd 内运行安装程序。
-
-### 编译 Emscripten
-
-接下来，你需要通过源码自己编译一个 Emscripten。运行下列命令来自动化地使用 Emscripten SDK。(在你想保存 Emscripten 的文件夹下运行)。
-
-```bash
-git clone https://github.com/juj/emsdk.git
-cd emsdk
-
-# 在 Linux 或者 Mac macOS 上
-./emsdk install --build=Release sdk-incoming-64bit binaryen-master-64bit
-./emsdk activate --global --build=Release sdk-incoming-64bit binaryen-master-64bit
-# 如果在你的 macos 上获得以下错误
-Error: No tool or SDK found by name 'sdk-incoming-64bit'
-# 请执行
-./emsdk install latest
-# 按照提示配置环境变量即可
-./emsdk activate latest
-
-
-# 在 Windows 上
-emsdk install --build=Release sdk-incoming-64bit binaryen-master-64bit
-emsdk activate --global --build=Release sdk-incoming-64bit binaryen-master-64bit
-
-# 注意：Windows 版本的 Visual Studio 2017 已经被支持，但需要在 emsdk install 需要追加 --vs2017 参数。
-```
-
-安装过程可以会花上一点时间，是时候去休息一下。安装程序会设置所有 Emscripten 运行所需要的环境变量。
-
-> [!NOTE]
-> global 标识会让 PATH 变量在全局被设置，所以接下来所打开的终端或者命令行窗口都会被设置。如果你仅仅想让 Emscripten 在当前窗口生效，就删掉这个标识。
-
-> [!NOTE]
-> 每当你想要使用 Emscripten 时，尝试从远程更新最新的 emscripten 代码是个很好的习惯（运行 git pull）。如果有更新，重新执行 install 和 activate 命令。这样就可以确保你使用的 Emscripten 一直保持最新。
-
-现在让我们进入 emsdk 文件夹，输入以下命令来让你进入接下来的流程，编译一个样例 C 程序到 asm.js 或者 wasm。
-
-```bash
-# on Linux or Mac macOS
-source ./emsdk_env.sh
-
-# on Windows
-emsdk_env.bat
-```
+按此教程获取 Emscripten SDK：<https://emscripten.org/docs/getting_started/downloads.html>
 
 ## 编译样例代码
 
@@ -194,13 +142,14 @@ emsdk_env.bat
    ```
 
 4. 如果你在浏览器中在此加载实例，你将看到和之前相同的结果。
-5. 现在我们需要运行新的 `myFunction()` JavaScript 函数。首先，按照以下实例添加一个 {{htmlelement("button")}} ，就在 `<script type='text/javascript'>` 开头标签之前。
+5. 现在我们需要运行新的 `myFunction()` JavaScript 函数。首先，在文本编辑器中打开 hello3.html 文件。
+6. 按照以下实例添加一个 {{htmlelement("button")}}，就在 `<script type='text/javascript'>` 开始标签之前。
 
    ```html
    <button class="mybutton">运行我的函数</button>
    ```
 
-6. 现在在最后一个 {{htmlelement("script")}} 元素（就在 `</script>` 关闭标签之前）中添加以下代码：
+7. 现在在第一个 {{htmlelement("script")}} 元素末尾添加以下代码：
 
    ```js
    document.querySelector(".mybutton").addEventListener("click", function () {
@@ -218,8 +167,7 @@ emsdk_env.bat
 
 ## 参见
 
-- [emscripten.org](http://emscripten.org/) — 了解更多 Emscripten 以及它的多种设置
-- [Calling compiled C functions from JavaScript using ccall/cwrap](https://kripken.github.io/emscripten-site/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap)
-- [Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?](https://kripken.github.io/emscripten-site/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)
-- [WebAssembly on Mozilla Research](https://research.mozilla.org/webassembly/)
-- [Compiling an Existing C Module to WebAssembly](/zh-CN/docs/WebAssembly/existing_C_to_wasm)
+- [emscripten.org](http://emscripten.org/)——了解更多 Emscripten 以及它的多种设置
+- [在 JavaScript 中使用 ccall/cwrap 调用已编译的 C 函数](https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap)
+- [为什么在将 C/C++ 源代码编译为 JavaScript 时，其中的函数会“消失”，或出现“No functions to process”的提示？](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)
+- [将已有的 C 模块编译为 WebAssembly](/zh-CN/docs/WebAssembly/Guides/Existing_C_to_Wasm)
