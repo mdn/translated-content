@@ -92,6 +92,7 @@ Las personas con visión normal tienen tres tipos de células cónicas que detec
 - Función `@media` {{cssxref("@media/color-gamut")}}
 - Tipo de dato CSS {{cssxref("&lt;color&gt;")}}
 - [Espacio de color sRGB](https://webstore.iec.ch/en/publication/6168)
-- [Espacio de color CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) en Wikipedia
+- [Espacio de color CIELAB](https://es.wikipedia.org/wiki/Espacio_de_color_Lab) en Wikipedia
+- [Espacio de color CIE 1931](https://es.wikipedia.org/wiki/Espacio_de_color_CIE_1931) en Wikipedia
 - [Espacio de color CIE 1931](https://en.wikipedia.org/wiki/CIE_1931_color_space) en Wikipedia
 - [Espacio de color Oklab](https://bottosson.github.io/posts/oklab/)
