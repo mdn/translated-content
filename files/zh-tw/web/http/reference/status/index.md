@@ -133,7 +133,7 @@ HTTP 回應狀態碼表示特定的 [HTTP](/zh-TW/docs/Web/HTTP) 請求是否已
 - {{HTTPStatus(428, "428 Precondition Required")}}
   - : 原始伺服器需要請求是[條件式的](/zh-TW/docs/Web/HTTP/Guides/Conditional_requests)。此回應旨在防止「丟失更新」問題，即當用戶端 {{HTTPMethod("GET")}} 資源的狀態、修改它並將其 {{HTTPMethod("PUT")}} 回伺服器時，同時第三方已在伺服器上修改了狀態，導致衝突。
 - {{HTTPStatus(429, "429 Too Many Requests")}}
-  - : 用戶在給定時間內發送了過多的請求（{{Glossary("Rate_limit","rate limiting", "速率限制"}}）。
+  - : 用戶在給定時間內發送了過多的請求（{{Glossary("Rate_limit", "速率限制")}}）。
 - {{HTTPStatus(431, "431 Request Header Fields Too Large")}}
   - : 伺服器不願處理該請求，因為其標頭欄位太大。減小請求標頭欄位的大小後，可以重新提交請求。
 - {{HTTPStatus(451, "451 Unavailable For Legal Reasons")}}
