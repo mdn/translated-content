@@ -10,7 +10,7 @@ l10n:
 
 **`::search-text`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、ユーザーエージェントの「検索」または「ページ内検索」などのテキスト検索機能によって特定された検索結果にスタイルを適用します。
 
-{{InteractiveExample("CSS Demo: ::search-text", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: ::search-text", "tabbed-shorter")}}
 
 ```css interactive-example
 p::search-text {
