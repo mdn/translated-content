@@ -19,7 +19,11 @@ div:focus-within {
 
 ## Синтаксис
 
-{{CSSSyntax}}
+```css
+:focus-within {
+  /* ... */
+}
+```
 
 ## Пример
 

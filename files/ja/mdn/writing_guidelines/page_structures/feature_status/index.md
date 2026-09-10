@@ -60,7 +60,6 @@ browser-compat: api.feature
 
 - `\{{Deprecated_Header}}`
   - : `deprecated` の状態です。これは**非推奨状態**バナーを生成します。
-    {{deprecated_header}}
 
 ### 定義リスト内の機能の状態アイコン
 

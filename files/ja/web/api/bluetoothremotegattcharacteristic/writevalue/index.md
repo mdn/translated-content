@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{Deprecated_header}}
+{{APIRef("Bluetooth API")}}
 
 かわりに {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithResponse()")}} や {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()")}} を使用してください。
 

@@ -109,7 +109,7 @@ HTML は、基本的なテキストの段落で構成されています。簡潔
 
 #### CSS
 
-CSSでは、まず `::search-text` 擬似要素のスタイル設定から始めます。この擬似要素に対して、{{cssxref("background-color")}}、{{cssxref(("color")}}、{{cssxref("text-shadow")}} という独自のスタイルを適用します。
+CSSでは、まず `::search-text` 擬似要素のスタイル設定から始めます。この擬似要素に対して、{{cssxref("background-color")}}、{{cssxref("color")}}、{{cssxref("text-shadow")}} という独自のスタイルを適用します。
 
 ```css hidden live-sample___custom-search-results
 html {

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 013f3148c4e85038bd961c984e357da703d315e3
 ---
 
-{{deprecated_header}}{{securecontext_header}}{{Non-standard_header}}
+{{securecontext_header}}{{Non-standard_header}}
 
 HTTP の **`Content-DPR`** {{Glossary("Response header", "レスポンスヘッダー")}}は、画面の {{HTTPHeader("DPR")}} クライアントヒントを使用して画像リソースが選択されたリクエストにおいて、画像の端末対ピクセル比 (DPR) を確認するために使用されます。
 

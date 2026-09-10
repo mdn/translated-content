@@ -3,8 +3,6 @@ title: Division (/)
 slug: Web/JavaScript/Reference/Operators/Division
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur de division (`/`) fournit le quotient de l'opérande gauche (le numérateur) divisé par l'opérande droite (le dénominateur).
 
 {{InteractiveExample("JavaScript Demo: Expressions - Division operator")}}

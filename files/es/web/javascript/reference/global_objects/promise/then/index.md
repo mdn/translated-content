@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 
 {{JSRef}}
 
-El método **`then()`** retorna una {{domxref("Promesa")}}. Recibe dos argumentos: funciones callback para los casos de éxito y fallo de [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+El método **`then()`** retorna una {{jsxref("Promise", "Promesa")}}. Recibe dos argumentos: funciones callback para los casos de éxito y fallo de [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 Nota: Si ambos argumentos son omitidos, o se proveen métodos que no sean funciones, se creará una nueva `Promesa` sin handlers adicionales, que simplemente adoptan el estado final de la `Promesa` que entonces es llamado. Si el primer argumento es omitido o se provee una no-función, el nuevo `Promise` que es creado simplemente adopta el estado cumplido del `Promise` que entonces es llamado (si se convierte en fulfilled). Si el segundo argument es omitido o se provee una no-función, el nuevo `Promise` que es creado simplemente adopta el estado de rechazo del `Promesa` que entonces es llamado (si se convierte en rechazado).
 

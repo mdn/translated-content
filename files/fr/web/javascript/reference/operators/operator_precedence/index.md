@@ -3,8 +3,6 @@ title: Précédence des opérateurs
 slug: Web/JavaScript/Reference/Operators/Operator_precedence
 ---
 
-{{jsSidebar("Operators")}}
-
 La **précédence des opérateurs** détermine l'ordre dans lequel les opérateurs sont évalués. Les opérateurs avec la plus haute précédence sont évalués en premier.
 
 Ainsi, l'opérateur de multiplication (« `*` ») (ayant une précédence plus haute que l'opérateur d'addition (« `+` »)) est évalué en premier et l'expression `6 * 4 + 2` renverra 26 (et pas 36).

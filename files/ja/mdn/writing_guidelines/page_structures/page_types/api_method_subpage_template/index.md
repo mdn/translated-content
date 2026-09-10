@@ -71,7 +71,7 @@ l10n:
 >
 > _公開前に、忘れずにこの説明文全体を削除してください。_
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 ページのコンテンツは導入段落で始めてください。メソッドの名前で始め、それがどのインターフェイスに属しているかを示し、それが何をするのかを述べてください。
 これはできれば 1、2 の短い文にすべきです。対応する API リファレンスページのメソッドの概要から、この大部分をコピーすることができます。

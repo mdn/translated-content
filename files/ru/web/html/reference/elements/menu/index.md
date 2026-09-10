@@ -42,8 +42,6 @@ This element was deprecated in HTML4, but reintroduced in HTML5.1 and the HTML l
 
 ### Context menu
 
-{{Deprecated_header}}
-
 #### HTML
 
 ```html

@@ -319,7 +319,7 @@ Les fenêtres contextuelles des sous‑menus fonctionnent bien tels quels, ils s
 ```
 
 > [!NOTE]
-> Dans la démo ([code source <sup>(angl.)</sup>](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)), les info‑bulles sont imbriquées à l'intérieur des boutons de contrôle des fenêtres contextuelles. Cela fournit un meilleur repli dans les navigateurs qui ne prennent pas en charge le positionnement par ancre CSS — les fenêtres contextuelles `hint` apparaissent à côté des boutons de contrôle associés plutôt qu'à un autre emplacement.
+> Dans la démo ([code source <sup>(angl.)</sup>](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)), les info‑bulles sont imbriquées à l'intérieur des boutons de contrôle des fenêtres contextuelles. Cela fournit un meilleur repli dans les navigateurs qui ne prennent pas en charge le positionnement par une ancre CSS — les fenêtres contextuelles `hint` apparaissent à côté des boutons de contrôle associés plutôt qu'à un autre emplacement.
 
 Pour contrôler l'affichage et le masquage, nous devons utiliser JavaScript. Tout d'abord, nous récupérons des références vers les fenêtres contextuelles `hint` et les boutons de contrôle, dans deux {{DOMxRef("NodeList")}} distincts, en utilisant {{DOMxRef("Document.querySelectorAll()")}}&nbsp;:
 

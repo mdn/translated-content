@@ -66,7 +66,7 @@ _Больше деталей и изменений смотрите в [блог
 - The {{domxref("URLUtils")}} interface now supports the {{domxref("URLUtils.searchParams", "searchParams")}} property returning a {{domxref("URLSearchParams")}} object, allowing to modify the search params of an URL ([Firefox bug 887836](https://bugzil.la/887836)). The {{domxref("URLSearchParams")}} constructor allows easier parsing of query strings.
 - The {{domxref("Worker.onLine")}} property is now supported, allowing to know the online/offline status in workers ([Firefox bug 925437](https://bugzil.la/925437)).
 - As part of the implementation of Web Components, the {{domxref("HTMLShadowElement")}} interface has been implemented behind the `dom.webcomponents.enabled`. Flip it to `true` if you want to use it. ([Firefox bug 887538](https://bugzil.la/887538)).
-- The read-only property {{domxref("HTMLIFrameElement.sandbox")}} is no longer a {{domxref("string")}} but an {{domxref("HTMLSettableToken")}} ([Firefox bug 845057](https://bugzil.la/845057)).
+- The read-only property {{domxref("HTMLIFrameElement.sandbox")}} is no longer a {{jsxref("String")}} but an {{domxref("HTMLSettableToken")}} ([Firefox bug 845057](https://bugzil.la/845057)).
 - On {{domxref("HTMLCanvasElement.getContext()")}}, the value `moz-webgl` is no longer supported. Use the standard `webgl` value ([Firefox bug 913597](https://bugzil.la/913597)).
 - The constructor for {{domxref("ImageData")}} has been added. This interface can be used in a {{domxref("Worker")}}. ([Firefox bug 959958](https://bugzil.la/959958))
 - The property {{domxref("NavigatorLocation.origin", "location.origin")}} is now available in workers ([Firefox bug 964148](https://bugzil.la/964148)).
