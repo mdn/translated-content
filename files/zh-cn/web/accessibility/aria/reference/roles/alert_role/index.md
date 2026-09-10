@@ -79,7 +79,7 @@ document.getElementById("alertContainer").textContent =
 
 可以将警报容器本身在视觉上隐藏，并用它来专门为屏幕阅读器提供更新/通知。当页面上的重要内容已经更新，但这种变化对屏幕阅读器用户来说不会立刻显现时，这种做法会很有用。
 
-但是，请确保不要使用 `display:none` 来隐藏容器，因为这样会把它对辅助技术也隐藏起来，意味着它们不会收到任何变更的通知。作为替代，请使用类似[`.visually-hidden` 样式](https://www.a11yproject.com/posts/how-to-hide-content/)的方案。
+但是，请确保不要使用 `display:none` 来隐藏容器，因为这样会把它对辅助技术也隐藏起来，意味着它们不会收到任何变更的通知。作为替代，请使用类似 [`.visually-hidden` 样式](https://www.a11yproject.com/posts/how-to-hide-content/)的方案。
 
 ```html
 <div id="hiddenAlertContainer" role="alert" class="visually-hidden"></div>
