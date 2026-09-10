@@ -1,202 +1,156 @@
 ---
-title: meta
+title: Elemento de metadatos HTML `<meta>`
+short-title: <meta>
 slug: Web/HTML/Reference/Elements/meta
-original_slug: Web/HTML/Element/meta
+l10n:
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}
+El elemento **`<meta>`** de [HTML](/es/docs/Web/HTML) representa {{Glossary("Metadata", "metadatos")}} que no pueden representarse mediante otros elementos relacionados con metadatos, como {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} o {{HTMLElement("title")}}.
 
-### Definición
+El elemento `<meta>` puede proporcionar los siguientes tipos de metadatos:
 
-- **meta** de "metainformation" - metainformación. Sirve para aportar información sobre el documento..
-  - : **Sus etiquetas son**: `<meta>` (solo tiene una).
+- Si se establece el atributo [`name`](/es/docs/Web/HTML/Reference/Elements/meta/name), el elemento `<meta>` proporciona _metadatos a nivel de documento_ que se aplican a toda la página.
+- Si se establece el atributo [`http-equiv`](/es/docs/Web/HTML/Reference/Elements/meta/http-equiv), el elemento `<meta>` actúa como una _directiva pragma_ para simular directivas que de otro modo se indicarían mediante un encabezado HTTP.
+- Si se establece el atributo [`charset`](#charset), el elemento `<meta>` es una _declaración de charset_ que indica la codificación de caracteres en la que está codificado el documento.
+- Si se establece el atributo [`itemprop`](/es/docs/Web/HTML/Reference/Global_attributes/itemprop), el elemento `<meta>` proporciona _metadatos definidos por el usuario_.
 
-    **Está definido como**: Elemento [de cabecera](/es/docs/HTML/Elemento/Tipos_de_elementos#de_cabecera).
+## Atributos
 
-    **Crea una caja**: No.
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
-    **Puede contener**: Nada.
+> [!NOTE]
+> El atributo [`name`](/es/docs/Web/HTML/Reference/Elements/meta/name) tiene un significado específico para el elemento `<meta>`.
+> El atributo [`itemprop`](/es/docs/Web/HTML/Reference/Global_attributes/itemprop) no debe establecerse en un elemento `<meta>` que incluya un atributo [`name`](/es/docs/Web/HTML/Reference/Elements/meta/name), [`http-equiv`](/es/docs/Web/HTML/Reference/Elements/meta/http-equiv) o [`charset`](#charset).
 
-    **Puede ser contenido por**: Elementos [head](/es/docs/Web/HTML/Reference/Elements/head)
+- `charset`
+  - : Este atributo declara la codificación de caracteres del documento. Si el atributo está presente, su valor debe coincidir, sin distinguir mayúsculas de minúsculas (ASCII), con la cadena `"utf-8"`, ya que UTF-8 es la única codificación válida para los documentos HTML5. Los elementos `<meta>` que declaran una codificación de caracteres deben ubicarse por completo dentro de los primeros 1024 bytes del documento.
+- [`content`](/es/docs/Web/HTML/Reference/Attributes/content)
+  - : Este atributo contiene el valor para el atributo [`http-equiv`](/es/docs/Web/HTML/Reference/Elements/meta/http-equiv) o [`name`](/es/docs/Web/HTML/Reference/Elements/meta/name), según cuál se utilice.
+- [`http-equiv`](/es/docs/Web/HTML/Reference/Elements/meta/http-equiv)
+  - : Define una directiva pragma, es decir, instrucciones para que el navegador procese el documento.
+    El nombre del atributo es la abreviatura de `http-equivalent`, ya que los valores permitidos son nombres de cabeceras HTTP equivalentes.
+- `media`
+  - : El atributo `media` define a qué medios se debe aplicar el color del tema definido en el atributo `content`.
+    Su valor es una [consulta de medios](/es/docs/Web/CSS/Guides/Media_queries/Using) que, si el atributo no está presente, toma el valor `all` de forma predeterminada.
+    Este atributo solo es relevante cuando el atributo [`name`](/es/docs/Web/HTML/Reference/Elements/meta/name) del elemento tiene el valor [`theme-color`](/es/docs/Web/HTML/Reference/Elements/meta/name/theme-color).
+    En cualquier otro caso, no tiene efecto y no debe incluirse.
+- [`name`](/es/docs/Web/HTML/Reference/Elements/meta/name)
+  - : Los atributos `name` y `content` pueden usarse juntos para proporcionar metadatos del documento como pares nombre-valor: el atributo `name` indica el nombre del metadato y el atributo `content` indica su valor.
 
-#### Atributos
+## Ejemplos
 
-~~Por defecto~~: Debe indicarlo el autor.
+### Establecer una descripción meta
 
-name = name [CS] Este atributo identifica un nombre de propiedad. Esta especificación no enumera los valores legales para este atributo. content = cdata [CS] Este atributo especifica el valor de una propiedad. Esta especificación no enumera los valores legales para este atributo. scheme = cdata [CS] Este atributo especifica un esquema que se usará para interpretar el valor de la propiedad (véase la sección sobre perfiles para más detalles). http-equiv = name [CI] Este atributo puede utilizarse en lugar del atributo name. Los servidores HTTP utilizan este atributo para obtener información sobre los encabezados del mensaje de respuesta HTTP.
+La siguiente etiqueta `<meta>` proporciona una `description` como metadato para la página web:
 
-<table class="fullwidth-table standard-table">
+```html
+<meta
+  name="description"
+  content="La referencia de HTML describe todos los elementos y atributos de HTML, incluidos los atributos globales que se aplican a todos los elementos." />
+```
+
+### Establecer una redirección de página
+
+El siguiente ejemplo utiliza `http-equiv="refresh"` para indicarle al navegador que realice una redirección.
+El atributo `content="3;url=https://www.mozilla.org"` redirigirá la página a `https://www.mozilla.org` después de 3 segundos:
+
+```html
+<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
+```
+
+## Resumen técnico
+
+<table class="properties">
   <tbody>
     <tr>
-      <th>atributo</th>
-      <th>descripción</th>
-      <th>valor</th>
-    </tr>
-    <tr>
-      <th colspan="3">Genéricos</th>
-    </tr>
-    <tr>
+      <th>
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
+          >Categorías de contenido</a
+        >
+      </th>
       <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-lang"
-          >lang</a
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#contenido_de_metadatos"
+          >Contenido de metadatos</a
+        >. Si está presente el atributo <a href="/es/docs/Web/HTML/Reference/Global_attributes/itemprop"><code>itemprop</code></a>:
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#contenido_de_flujo"
+          >Contenido de flujo</a
+        >,
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#contenido_de_frase"
+          >Contenido de frase</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th>Contenido permitido</th>
+      <td>Ninguno; es un {{Glossary("void element", "elemento vacío")}}.</td>
+    </tr>
+    <tr>
+      <th>Omisión de etiquetas</th>
+      <td>Debe tener una etiqueta de apertura y no debe tener etiqueta de cierre.</td>
+    </tr>
+    <tr>
+      <th>Padres permitidos</th>
+      <td>
+        <ul>
+          <li>
+            <code>&#x3C;meta charset></code>,
+            <code>&#x3C;meta http-equiv></code>: un elemento
+            {{HTMLElement("head")}}. Si el
+            <a href="/es/docs/Web/HTML/Reference/Elements/meta/http-equiv"><code>http-equiv</code></a> no es una
+            declaración de codificación, también puede estar dentro de un
+            elemento {{HTMLElement("noscript")}}, a su vez dentro de un
+            elemento <code>&#x3C;head></code>.
+          </li>
+          <li>
+            <code>&#x3C;meta name></code>: cualquier elemento que acepte
+            <a
+              href="/es/docs/Web/HTML/Guides/Content_categories#metadata_content"
+              >contenido de metadatos</a
+            >.
+          </li>
+          <li>
+            <code>&#x3C;meta itemprop></code>: cualquier elemento que acepte
+            <a
+              href="/es/docs/Web/HTML/Guides/Content_categories#metadata_content"
+              >contenido de metadatos</a
+            >
+            o
+            <a href="/es/docs/Web/HTML/Guides/Content_categories#flow_content"
+              >contenido de flujo</a
+            >.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rol ARIA implícito</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Sin rol correspondiente</a
         >
       </td>
-      <td>
-        Información sobre el
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html"
-          >idioma del contenido</a
-        >
-        del elemento y del valor de sus atributos.
-      </td>
-      <td>
-        Un
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-langcode"
-          >código de idioma</a
-        >. Por defecto: "desconocido". Lo fija el navegador.
-      </td>
     </tr>
     <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          >dir</a
-        >
-      </td>
-      <td>
-        Indica la
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html"
-          >dirección de texto</a
-        >
-        y tablas.
-      </td>
-      <td>
-        Uno de los siguientes: <abbr title="Left-to-right">'ltr' </abbr>o
-        <abbr title="Right-to-left">'rtl'. </abbr>Por defecto: En castellano
-        'ltr'. Lo fija el navegador.
-      </td>
+      <th scope="row">Roles ARIA permitidos</th>
+      <td>Ningún <code>role</code> permitido</td>
     </tr>
     <tr>
-      <th colspan="3">Específicos</th>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-name-META"
-          >name</a
-        >
-      </td>
-      <td>Nombre al que se asocia la metainformación</td>
-      <td>
-        Un 'nombre'. Sensible a
-        <abbr title="diferencia entre Mayúsculas y minúsculas">M/m.</abbr> Por
-        defecto: Lo fija el navegador.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-content"
-          >content</a
-        >
-      </td>
-      <td>
-        Los datos que se quieren asociar a
-        <code style="color: green">name</code>.
-      </td>
-      <td>
-        Texto. Sensible a
-        <abbr title="diferencia entre Mayúsculas y minúsculas">M/m.</abbr>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-http-equiv"
-          >http-equiv</a
-        >
-      </td>
-      <td>
-        Aporta información sobre los encabezado de respuesta HTTP, puede usarse
-        en lugar de <code style="color: green">name</code>.
-      </td>
-      <td>Un 'nombre'. Por defecto: Lo fija el navegador.</td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-scheme"
-          >scheme</a
-        >
-      </td>
-      <td>Indica un esquema de interpretación para los metadatos.</td>
-      <td>
-        Texto. Sensible a
-        <abbr title="diferencia entre Mayúsculas y minúsculas">M/m.</abbr>. Por
-        defecto: Lo fija el navegador.
-      </td>
-    </tr>
-    <tr>
-      <th colspan="3">De transición</th>
-    </tr>
-    <tr>
-      <td colspan="3">No tiene</td>
-    </tr>
-    <tr>
-      <th>atributo</th>
-      <th>descripción</th>
-      <th>valor</th>
+      <th>Interfaz DOM</th>
+      <td>{{domxref("HTMLMetaElement")}}</td>
     </tr>
   </tbody>
 </table>
 
-### Ejemplos de uso
+## Especificaciones
 
-#### Con name y content
+{{Specifications}}
 
-```
-<meta name="copyright" content="© 2006 MDC">
-```
+## Compatibilidad con navegadores
 
-#### Con http-equiv
+{{Compat}}
 
-```
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-```
+## Véase también
 
-### Estilo predeterminado
-
-### Notas
-
-### Referencia
-
-- El elemento [**meta** en la especificación](http://html.conclase.net/w3c/html401-es/struct/global.html#edef-META) de html 4.01
-
-### Soporte
-
-Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html.php#support-html401-meta): IE 6 - IE 7 - FF 1.5 - OP 9.
-
----
-
-> [!NOTE]
-> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
->
-> ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
-
-Categoría
-
-interwiki links
-
-automatismos
+- [Nombres de metadatos estándar](/es/docs/Web/HTML/Reference/Elements/meta/name)
+- [Aprende: `<meta>`](/es/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadatos_el_elemento_meta)
