@@ -79,7 +79,7 @@ slug: Web/CSS/Guides/Grid_layout
 }
 ```
 
-{{ EmbedLiveSample('example', '500', '440') }}
+{{EmbedLiveSample("Базовый_пример", "500", "440")}}
 
 ## Ссылки
 
