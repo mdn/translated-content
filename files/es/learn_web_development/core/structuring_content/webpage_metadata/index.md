@@ -1,6 +1,9 @@
 ---
 title: ¿Qué contiene la cabecera? Metadatos de la página web
+short-title: Metadatos de la página web
 slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
+l10n:
+  sourceCommit: 0d59135676db5a372b4dd692f0686e6bdfc13b51
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content")}}
@@ -35,17 +38,17 @@ Los navegadores web usan la información contenida en la {{glossary("Head", "cab
 
 ## ¿Qué es la cabecera HTML?
 
-Volvamos a ver el documento HTML sencillo [que vimos en el artículo anterior](/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomy_of_an_html_document):
+Volvamos a ver el documento HTML sencillo [que vimos en el artículo anterior](/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomía_de_un_documento_html):
 
 ```html
 <!doctype html>
-<html lang="en-US">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>My test page</title>
+    <title>Mi página de prueba</title>
   </head>
   <body>
-    <p>This is my page</p>
+    <p>Esta es mi página</p>
   </body>
 </html>
 ```
@@ -116,7 +119,7 @@ Si estableces tu codificación de caracteres como `ISO-8859-1`, por ejemplo (el 
 Para probar esto, vuelve a la plantilla HTML sencilla que obtuviste en la sección anterior sobre `<title>` (la página [title-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html)), intenta cambiar el valor de meta charset a `ISO-8859-1`, y añade el japonés a tu página. Este es el código que usamos:
 
 ```html
-<p>Japanese example: ご飯が熱い。</p>
+<p>Ejemplo en japonés: ご飯が熱い。</p>
 ```
 
 ### Añadiendo un autor y una descripción
@@ -149,16 +152,16 @@ La descripción también se usa en las páginas de resultados de los motores de 
 2. Mira el código fuente de la página (haz clic derecho en la página, elige _Ver código fuente de la página_ en el menú contextual).
 3. Encuentra la etiqueta meta de descripción. Se verá algo así (aunque puede cambiar con el tiempo):
 
-```html
-<meta
-  name="description"
-  content="The MDN Web Docs site
-     provides information about Open Web technologies
-     including HTML, CSS, and APIs for both websites and
-     progressive web apps." />
-```
+   ```html
+   <meta
+     name="description"
+     content="The MDN Web Docs site
+      provides information about Open Web technologies
+      including HTML, CSS, and APIs for both websites and
+      progressive web apps." />
+   ```
 
-1. Ahora busca "MDN Web Docs" en tu motor de búsqueda favorito (nosotros usamos Google). Notarás que el contenido de los elementos `<meta>` de descripción y `<title>` se usa en el resultado de búsqueda, ¡sin duda vale la pena tenerlos!
+4. Ahora busca "MDN Web Docs" en tu motor de búsqueda favorito (nosotros usamos Google). Notarás que el contenido de los elementos `<meta>` de descripción y `<title>` se usa en el resultado de búsqueda, ¡sin duda vale la pena tenerlos!
 
    ![Un resultado de búsqueda de Yahoo para "Mozilla Developer Network"](mdn-search-result.png)
 
@@ -208,7 +211,7 @@ Se puede añadir un favicon a tu página de la siguiente forma:
 > [!NOTE]
 > En este ejemplo, la ruta al archivo favicon empieza con `/`, lo que significa "busca el archivo en el directorio de nivel superior (o _raíz_) de tu sitio". Esto puede estar en un lugar distinto en el código fuente, dependiendo de qué sistema estés usando para crear tu sitio: los frameworks web suelen reservar una carpeta especial para los archivos en la raíz del sitio, como `static` o `public`.
 >
-> No te preocupes demasiado por los detalles de las rutas de archivo por ahora; aprenderás más sobre ellas más adelante (revisa [Una introducción rápida a las URL y rutas](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links#a_quick_primer_on_urls_and_paths) si tienes curiosidad).
+> No te preocupes demasiado por los detalles de las rutas de archivo por ahora; aprenderás más sobre ellas más adelante (revisa [Una introducción rápida a las URL y rutas](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links##primer_acercamiento_a_urls_y_rutas) si tienes curiosidad).
 >
 > Hoy en día, la mayoría de los navegadores y aplicaciones de software usan automáticamente un archivo `favicon.ico` encontrado en la raíz del sitio como favicon, así que muchos sitios ni siquiera se molestan en incluir el elemento `<link>`. Un elemento explícito sigue siendo útil por si quieres ubicar tu archivo favicon en otro lugar.
 
@@ -257,18 +260,18 @@ Prácticamente todos los sitios web que usas hoy en día emplean {{glossary("CSS
 
 - El elemento {{htmlelement("link")}} siempre debe ir dentro de la cabecera de tu documento. Este toma dos atributos, `rel="stylesheet"`, que indica que es la hoja de estilo del documento, y `href`, que contiene la ruta al archivo de la hoja de estilo:
 
-```html
-<link rel="stylesheet" href="my-css-file.css" />
-```
+  ```html
+  <link rel="stylesheet" href="my-css-file.css" />
+  ```
 
-- El elemento {{htmlelement("script")}} también debe ir en la cabecera, y debe incluir un atributo `src` que contenga la ruta al JavaScript que quieres cargar, y `defer` (un [atributo booleano](/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#boolean_attributes)), que le indica al navegador que cargue el JavaScript después de que la página haya terminado de procesar el HTML. El atributo `defer` es útil ya que garantiza que todo el HTML esté cargado antes de que se ejecute el JavaScript, de modo que no obtengas errores debido a que el JavaScript intenta acceder a un elemento HTML que aún no existe en la página. Hay [varias formas](/es/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#script_loading_strategies) de manejar la carga de JavaScript en tu página, pero esta es la más confiable para usar en navegadores modernos.
+- El elemento {{htmlelement("script")}} también debe ir en la cabecera, y debe incluir un atributo `src` que contenga la ruta al JavaScript que quieres cargar, y `defer` (un [atributo booleano](/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#atributos_booleanos)), que le indica al navegador que cargue el JavaScript después de que la página haya terminado de procesar el HTML. El atributo `defer` es útil ya que garantiza que todo el HTML esté cargado antes de que se ejecute el JavaScript, de modo que no obtengas errores debido a que el JavaScript intenta acceder a un elemento HTML que aún no existe en la página. Hay [varias formas](/es/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#script_loading_strategies) de manejar la carga de JavaScript en tu página, pero esta es la más confiable para usar en navegadores modernos.
 
-```html
-<script src="my-js-file.js" defer></script>
-```
+  ```html
+  <script src="my-js-file.js" defer></script>
+  ```
 
-> [!NOTE]
-> El elemento `<script>` puede parecer un {{glossary("void element", "elemento vacío")}}, pero no lo es, y por lo tanto necesita una etiqueta de cierre. En lugar de apuntar a un archivo de script externo, también puedes optar por poner tu script dentro del elemento `<script>`.
+  > [!NOTE]
+  > El elemento `<script>` puede parecer un {{glossary("void element", "elemento vacío")}}, pero no lo es, y por lo tanto necesita una etiqueta de cierre. En lugar de apuntar a un archivo de script externo, también puedes optar por poner tu script dentro del elemento `<script>`.
 
 ### Tu turno: Aplicando CSS y JavaScript a una página
 
