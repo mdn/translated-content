@@ -82,7 +82,7 @@ Una de las características más importantes de los [controles de formulario](/e
 - [`required`](/es/docs/Web/HTML/Reference/Attributes/required): Especifica si un campo de formulario debe rellenarse antes de que se pueda enviar el formulario.
 - [`minlength`](/es/docs/Web/HTML/Reference/Attributes/minlength) y [`maxlength`](/es/docs/Web/HTML/Reference/Attributes/maxlength): Especifican la longitud mínima y máxima de los datos de texto (cadenas).
 - [`min`](/es/docs/Web/HTML/Reference/Attributes/min), [`max`](/es/docs/Web/HTML/Reference/Attributes/max) y [`step`](/es/docs/Web/HTML/Reference/Attributes/step): Especifican los valores mínimo y máximo de los tipos de entrada numéricos y el incremento o paso de los valores, a partir del mínimo.
-- [`type`](/es/docs/Web/HTML/Reference/Elements/input): Especifica si los datos deben ser un número, una dirección de correo electrónico u otro tipo predefinido específico.
+- [`type`](/es/docs/Web/HTML/Reference/Elements/input#tipos_de_input): Especifica si los datos deben ser un número, una dirección de correo electrónico u otro tipo predefinido específico.
 - [`pattern`](/es/docs/Web/HTML/Reference/Attributes/pattern): Especifica una [expresión regular](/es/docs/Web/JavaScript/Guide/Regular_expressions) que define un patrón que deben seguir los datos introducidos.
 
 Si los datos introducidos en un campo de formulario siguen todas las reglas especificadas por los atributos aplicados al campo, se consideran válidos. De lo contrario, se consideran no válidos.
