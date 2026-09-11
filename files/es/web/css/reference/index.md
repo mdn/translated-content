@@ -150,11 +150,11 @@ Debido a que éstas tienen formatos de estructura variados, revise la sección [
 
 ### Valores
 
-- [Valor actual](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
-- [Valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
+- [Valor actual](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
+- [Valor calculado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
 - [Valor inicial](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
-- [Valor resuelto](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4)
-- [Valor específico](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1)
+- [Valor resuelto](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
+- [Valor específico](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
 - [Valor utilizado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
 
 ### Diseño

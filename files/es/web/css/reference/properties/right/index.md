@@ -17,7 +17,7 @@ Para los elementos con una posición absoluta (aquellos que tienen la propiedad 
 - [Heredable](/es/docs/Web/CSS/Guides/Cascade/Inheritance): no
 - Porcentajes: se refiere al ancho del bloque contenedor.
 - Media: {{cssxref("Media/Visual", "visual")}}
-- [Valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d): valor absoluto, porcentaje ó auto.
+- [Valor calculado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing): valor absoluto, porcentaje ó auto.
 
 ### Sintaxis
 

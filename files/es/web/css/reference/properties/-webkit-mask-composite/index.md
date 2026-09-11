@@ -14,7 +14,7 @@ La propiedad `-webkit-mask-composite` especifica la forma en la que múltiples i
 - Se aplica a : todos los elementos
 - [Heredable](/es/docs/Web/CSS/Guides/Cascade/Inheritance): no
 - Media: {{cssxref("Media/Visual", "visual")}}
-- [Valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d): tal y como se especifica.
+- [Valor calculado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing): tal y como se especifica.
 
 ## Síntaxis
 

@@ -21,7 +21,7 @@ Cuando se define tanto la propiedad `top` como {{cssxref("bottom")}} para un ele
 - [Heredable](/es/docs/Web/CSS/Guides/Cascade/Inheritance): no
 - Porcentajes: se refieren a la altura del bloque contenedor.
 - Medio: {{cssxref("Media/Visual", "visual")}}
-- [Valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d): valor absoluto, porcentaje ó auto.
+- [Valor calculado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing): valor absoluto, porcentaje ó auto.
 
 ### Sintaxis
 

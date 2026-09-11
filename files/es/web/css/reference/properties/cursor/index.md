@@ -15,7 +15,7 @@ La propiedad [CSS:cursor](/es/docs/Web/CSS/Reference/Properties/cursor) especifi
 - [CSS:inheritance](/es/docs/Web/CSS/Guides/Cascade/Inheritance): Si
 - Porcentaje: N/A
 - Media: [CSS:Media:Visual](/es/docs/Web/CSS/Reference/At-rules/@media), [CSS:Media:Interactivo](/es/docs/CSS/Media/Interactivo)
-- [CSS:Valor_calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d):como sea especificado con URLs relativos convertidos a URLs absolutos.
+- [CSS:Valor_calculado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing):como sea especificado con URLs relativos convertidos a URLs absolutos.
 
 ### Sintaxis
 
