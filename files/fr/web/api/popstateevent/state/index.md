@@ -18,8 +18,7 @@ Un objet, ou `null`.
 
 ## Exemples
 
-Le code ci-dessous affiche la valeur de `state` lors de l'utilisation de la
-méthode {{DOMxRef("History.pushState", "pushState()")}} pour ajouter une valeur à l'historique.
+Le code ci-dessous affiche la valeur de `state` lors de l'utilisation de la méthode {{DOMxRef("History.pushState", "pushState()")}} pour ajouter une valeur à l'historique.
 
 ```js
 // Affiche l'état de
