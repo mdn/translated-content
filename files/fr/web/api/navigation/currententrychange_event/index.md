@@ -16,7 +16,7 @@ Cet évènement se déclenche pour&nbsp;:
 
 - Les remplacements (c'est-à-dire un appel à {{DOMxRef("Navigation.navigate", "navigate()")}} avec `history` défini sur `replace`).
 
-- Les autres appels qui modifient l'état de l'entrée (par exemple, {{DOMxRef("Navigation.updateCurrentEntry", "updateCurrentEntry()")}}, ou le {{DOMxRef("History API", "History API", "", "nocode")}}'s {{DOMxRef("History.replaceState()")}}).
+- Les autres appels qui modifient l'état de l'entrée (par exemple, {{DOMxRef("Navigation.updateCurrentEntry", "updateCurrentEntry()")}}, ou le {{DOMxRef("History.replaceState()")}}) de {{DOMxRef("History API", "l'API History", "", "nocode")}}.
 
 Cet évènement se déclenche après que la navigation a été validée, ce qui signifie que l'URL visible a changé et que la mise à jour de {{DOMxRef("NavigationHistoryEntry")}} a eu lieu. Il est utile pour migrer depuis l'utilisation de fonctionnalités d'API plus anciennes comme les évènements {{DOMxRef("Window/hashchange_event", "hashchange")}} ou {{DOMxRef("Window/popstate_event", "popstate")}}.
 
