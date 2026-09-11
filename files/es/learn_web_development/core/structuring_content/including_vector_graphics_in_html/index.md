@@ -3,7 +3,7 @@ title: Incluir gráficos vectoriales en HTML
 short-title: Gráficos vectoriales
 slug: Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 l10n:
-  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
+  sourceCommit: 2066cc916dfdcbb782340bf0ce562b230e947cba
 ---
 
 Los gráficos vectoriales son muy útiles en muchas circunstancias — tienen un tamaño de archivo pequeño y son muy escalables, por lo que no se pixelan al hacer zoom o al ampliarlos a un tamaño grande. En este artículo te mostraremos cómo incluir uno en tu página web.
@@ -38,16 +38,28 @@ En la web, trabajarás con dos tipos de imágenes — **imágenes rasterizadas**
 - **Las imágenes rasterizadas** se definen mediante una cuadrícula de píxeles — un archivo de imagen rasterizada contiene información que muestra exactamente dónde debe colocarse cada píxel y de qué color debe ser. Los formatos rasterizados populares en la web incluyen Bitmap (`.bmp`), PNG (`.png`), JPEG (`.jpg`) y GIF (`.gif`).
 - **Las imágenes vectoriales** se definen mediante algoritmos — un archivo de imagen vectorial contiene definiciones de formas y trazados que la computadora puede usar para calcular cómo debe verse la imagen al representarse en la pantalla. El formato {{glossary("SVG")}} nos permite crear potentes gráficos vectoriales para usar en la web.
 
-Para darte una idea de la diferencia entre ambos, veamos un ejemplo. Puedes encontrar este ejemplo en vivo en nuestro repositorio de GitHub como [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) — muestra dos imágenes aparentemente idénticas una junto a la otra, de una estrella roja con una sombra negra. La diferencia es que la de la izquierda es un PNG y la de la derecha es una imagen SVG.
+Para darte una idea de la diferencia entre ambos, veamos un ejemplo:
 
-La diferencia se hace evidente cuando amplías la página — la imagen PNG se pixela a medida que haces zoom porque contiene información sobre dónde debe estar cada píxel (y de qué color). Al ampliarla, cada píxel simplemente aumenta de tamaño para ocupar varios píxeles en la pantalla, por lo que la imagen empieza a verse borrosa. La imagen vectorial, en cambio, sigue viéndose nítida y limpia, porque sin importar el tamaño que tenga, se usan los algoritmos para calcular las formas de la imagen, y los valores se escalan a medida que esta crece.
+```html live-sample___raster-vector live-sample___raster-vector-zoomed
+<img src="star.png" alt="Una estrella rasterizada" />
+<img src="star.svg" role="img" alt="Una estrella vectorial" />
+```
 
-![Dos imágenes de estrellas](raster-vector-default-size.png)
+Esto muestra dos estrellas rojas aparentemente idénticas con una sombra negra, una junto a la otra. La diferencia es que la de la izquierda es una imagen rasterizada (PNG) y la de la derecha es una imagen vectorial (SVG).
 
-![Dos imágenes de estrellas ampliadas, una nítida y la otra borrosa](raster-vector-zoomed.png)
+{{EmbedLiveSample("raster-vector", "100%", 120)}}
 
-> [!NOTE]
-> Las imágenes de arriba son en realidad todas PNG — la estrella de la izquierda en cada caso representa una imagen rasterizada, y la estrella de la derecha representa una imagen vectorial. De nuevo, visita la demo de [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) para ver un ejemplo real.
+La diferencia se hace evidente cuando amplías la página o aumentas el tamaño de las imágenes. Lo siguiente muestra cómo se representan ambas estrellas con un ancho de `300px`:
+
+```css hidden live-sample___raster-vector-zoomed
+img {
+  width: 300px;
+}
+```
+
+{{EmbedLiveSample("raster-vector-zoomed", "100%", 350)}}
+
+La imagen PNG se pixela porque contiene información sobre dónde debe estar cada píxel (y de qué color). Al ampliarla, cada píxel aumenta de tamaño para ocupar varios píxeles en la pantalla, por lo que la imagen empieza a verse borrosa. La imagen SVG, en cambio, sigue viéndose nítida y limpia, porque sin importar el tamaño que tenga, se usan los algoritmos para calcular las formas de la imagen, y los valores se escalan a medida que esta crece.
 
 Además, los archivos de imágenes vectoriales son mucho más livianos que sus equivalentes rasterizados, porque solo necesitan contener un puñado de algoritmos, en lugar de información sobre cada píxel de la imagen individualmente.
 
@@ -100,7 +112,7 @@ Para incrustar un SVG mediante un elemento {{htmlelement("img")}}, solo necesita
 ```html
 <img
   src="equilateral.svg"
-  alt="triangle with all three sides equal"
+  alt="triángulo con los tres lados iguales"
   height="87"
   width="100" />
 ```
@@ -124,7 +136,7 @@ Para los navegadores que no admiten SVG (IE 8 y versiones anteriores, Android 2.
 ```html
 <img
   src="equilateral.png"
-  alt="triangle with equal sides"
+  alt="triángulo con lados iguales"
   srcset="equilateral.svg" />
 ```
 
@@ -138,7 +150,7 @@ background-size: contain;
 
 Al igual que con el método `<img>` descrito antes, insertar SVG mediante imágenes de fondo de CSS significa que el SVG no se puede manipular con JavaScript, y está sujeto a las mismas limitaciones de CSS.
 
-Si tus SVG no aparecen en absoluto, puede deberse a que tu servidor no está configurado correctamente. Si ese es el problema, este [artículo te orientará en la dirección correcta](/es/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started#a_word_on_web_servers_for_.svgz_files).
+Si tus SVG no aparecen en absoluto, puede deberse a que tu servidor no está configurado correctamente. Si ese es el problema, este [artículo te orientará en la dirección correcta](/es/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started#unas_palabras_sobre_los_servidores_web_para_archivos_.svgz).
 
 ### Cómo incluir código SVG dentro de tu HTML
 
@@ -153,7 +165,7 @@ También puedes abrir el archivo SVG en un editor de texto, copiar el código SV
 #### Ventajas
 
 - Poner tu SVG en línea ahorra una solicitud HTTP y, por lo tanto, puede reducir un poco tu tiempo de carga.
-- Puedes asignar `class` e `id` a los elementos SVG y estilizarlos con CSS, ya sea dentro del SVG o donde pongas las reglas de estilo CSS para tu documento HTML. De hecho, puedes usar cualquier [atributo de presentación de SVG](/es/docs/Web/SVG/Reference/Attribute#presentation_attributes) como propiedad CSS.
+- Puedes asignar `class` e `id` a los elementos SVG y estilizarlos con CSS, ya sea dentro del SVG o donde pongas las reglas de estilo CSS para tu documento HTML. De hecho, puedes usar cualquier [atributo de presentación de SVG](/es/docs/Web/SVG/Reference/Attribute#atributos_presentacionales) como propiedad CSS.
 - Poner el SVG en línea es el único enfoque que te permite usar interacciones CSS (como `:focus`) y animaciones CSS en tu imagen SVG (incluso en tu hoja de estilo habitual).
 - Puedes convertir el marcado SVG en un hipervínculo envolviéndolo en un elemento {{htmlelement("a")}}.
 
