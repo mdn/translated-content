@@ -156,9 +156,9 @@ La descripción también se usa en las páginas de resultados de los motores de 
    <meta
      name="description"
      content="The MDN Web Docs site
-      provides information about Open Web technologies
-      including HTML, CSS, and APIs for both websites and
-      progressive web apps." />
+     provides information about Open Web technologies
+     including HTML, CSS, and APIs for both websites and
+     progressive web apps." />
    ```
 
 4. Ahora busca "MDN Web Docs" en tu motor de búsqueda favorito (nosotros usamos Google). Notarás que el contenido de los elementos `<meta>` de descripción y `<title>` se usa en el resultado de búsqueda, ¡sin duda vale la pena tenerlos!
@@ -204,14 +204,14 @@ Se puede añadir un favicon a tu página de la siguiente forma:
 1. Guardándolo en un formato compatible como `.ico`, `.gif`, o `.png` en algún lugar dentro de la estructura de carpetas de tu sitio web.
 2. Añadiendo un elemento {{htmlelement("link")}} dentro del bloque {{HTMLElement("head")}} de tu HTML, que haga referencia a la ruta del archivo favicon:
 
-```html
-<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-```
+   ```html
+   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+   ```
 
 > [!NOTE]
 > En este ejemplo, la ruta al archivo favicon empieza con `/`, lo que significa "busca el archivo en el directorio de nivel superior (o _raíz_) de tu sitio". Esto puede estar en un lugar distinto en el código fuente, dependiendo de qué sistema estés usando para crear tu sitio: los frameworks web suelen reservar una carpeta especial para los archivos en la raíz del sitio, como `static` o `public`.
 >
-> No te preocupes demasiado por los detalles de las rutas de archivo por ahora; aprenderás más sobre ellas más adelante (revisa [Una introducción rápida a las URL y rutas](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links##primer_acercamiento_a_urls_y_rutas) si tienes curiosidad).
+> No te preocupes demasiado por los detalles de las rutas de archivo por ahora; aprenderás más sobre ellas más adelante (revisa [Una introducción rápida a las URL y rutas](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links#primer_acercamiento_a_urls_y_rutas) si tienes curiosidad).
 >
 > Hoy en día, la mayoría de los navegadores y aplicaciones de software usan automáticamente un archivo `favicon.ico` encontrado en la raíz del sitio como favicon, así que muchos sitios ni siquiera se molestan en incluir el elemento `<link>`. Un elemento explícito sigue siendo útil por si quieres ubicar tu archivo favicon en otro lugar.
 
