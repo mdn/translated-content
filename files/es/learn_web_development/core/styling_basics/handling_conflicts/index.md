@@ -132,7 +132,7 @@ span {
 Algunas propiedades no se heredan; por ejemplo, {{cssxref("width")}}. Si estableces un `width` (ancho) del `50%` en un elemento, sus descendientes no obtendrán un ancho del `50%` con respecto al `width` de su elemento padre. ¡Si este fuera el caso, usar CSS sería muy frustrante!
 
 > [!NOTE]
-> En las páginas de referencia de las propiedades CSS de MDN encontrarás un cuadro de información técnica llamado «Definición formal», que enumera varios datos sobre esa propiedad, incluyendo si se hereda o no. Consulta, como ejemplo, la [sección de definición formal de la propiedad `color`](/es/docs/Web/CSS/Reference/Properties/color#formal_definition).
+> En las páginas de referencia de las propiedades CSS de MDN encontrarás un cuadro de información técnica llamado «Definición formal», que enumera varios datos sobre esa propiedad, incluyendo si se hereda o no. Consulta, como ejemplo, la [sección de definición formal de la propiedad `color`](/es/docs/Web/CSS/Reference/Properties/color#sintaxis_formal).
 
 ### Comprender cómo funcionan juntos estos conceptos
 
@@ -196,7 +196,7 @@ CSS proporciona cinco valores de propiedad universales especiales para controlar
 - {{cssxref("inherit")}}
   - : Establece que el valor de la propiedad aplicado a un elemento seleccionado sea el mismo que el de su elemento padre. En la práctica, esto "activa la herencia".
 - {{cssxref("initial")}}
-  - : Establece que el valor de la propiedad aplicado a un elemento seleccionado sea el [valor inicial](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value) de esa propiedad.
+  - : Establece que el valor de la propiedad aplicado a un elemento seleccionado sea el [valor inicial](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing) de esa propiedad.
 - {{cssxref("revert")}}
   - : Restablece el valor de la propiedad aplicado a un elemento seleccionado al estilo predeterminado del navegador, en lugar de los valores predeterminados aplicados a esa propiedad. Este valor se comporta como {{cssxref("unset")}} en muchos casos.
 - {{cssxref("revert-layer")}}
