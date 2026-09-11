@@ -48,7 +48,7 @@ history.pushState(objetEtat, "", "truc.html");
 
 Sur la page suivante, vous pouvez ensuite utiliser `history.state` pour accéder à `objetEtat` qui vient d'être ajouté.
 
-L'explication de ces deux lignes ci-dessus peut être trouvée dans l'article [Travailler avec l'API History](/fr/docs/Web/API/History_API/Working_with_the_History_API#using_pushstate). Ensuite, supposons que `https://www.mozilla.org/truc.html` exécute le JavaScript suivant&nbsp;:
+L'explication de ces deux lignes ci-dessus peut être trouvée dans l'article [Travailler avec l'API History](/fr/docs/Web/API/History_API/Working_with_the_History_API#utiliser_pushstate). Ensuite, supposons que `https://www.mozilla.org/truc.html` exécute le JavaScript suivant&nbsp;:
 
 ```js
 history.replaceState(objetEtat, "", "truc2.html");
