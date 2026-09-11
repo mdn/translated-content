@@ -1,25 +1,36 @@
 ---
-title: Touch.identifier
+title: Touch：identifier 属性
 slug: Web/API/Touch/identifier
+l10n:
+  sourceCommit: f71683f74da0078d9371c4d0c1ff9d3898fc7b59
 ---
 
-{{ ApiRef() }}
+{{ APIRef("Touch Events") }}
 
-### 概述
+**`Touch.identifier`** 返回一个唯一标识该触摸表面上此次接触点的值。在该手指（或触控笔）于表面上移动所涉及的每个事件中，该值保持不变，直到离开表面。
 
-返回一个可以唯一地识别和触摸平面接触的点的值。这个值在这根手指（或触摸笔等）所引发的所有事件中保持一致，直到它离开触摸平面。
+## 值
 
-### 语法
+一个 `long` 值，表示该 {{ domxref("Touch") }} 对象的唯一 ID。
 
-```plain
-var id = touchItem.identifier;
+## 示例
+
+```js
+someElement.addEventListener("touchmove", (e) => {
+  // 遍历自上次事件以来发生变化的触摸点列表
+  // 并打印每个触摸点的标识符。
+  for (let i = 0; i < e.changedTouches.length; i++) {
+    console.log(
+      `changedTouches[${i}].identifier = ${e.changedTouches[i].identifier}`,
+    );
+  }
+});
 ```
 
-### 返回值
+## 规范
 
-- `id`
-  - : {{ domxref("Touch") }} 对象的唯一标识符。
+{{Specifications}}
 
-### 标准定义
+## 浏览器兼容性
 
-[Touch Events Specification](https://www.w3.org/TR/touch-events/)
+{{Compat}}
