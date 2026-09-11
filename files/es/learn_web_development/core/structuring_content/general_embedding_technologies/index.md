@@ -1,363 +1,234 @@
 ---
-title: Desde object hasta iframe - otras tecnologías de incrustación
+title: De object a iframe — tecnologías de incrustación en general
+short-title: Tecnologías de incrustación
 slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
-original_slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
+l10n:
+  sourceCommit: f08b3d623c43e0256072013372ba393b5bd1a5a0
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
-
-Ahora ya deberías estar acostumbrado a integrar cosas en tus páginas web, incluyendo imágenes, video y audio. En este punto nos gustaría que des algo así como un paso al costado, prestando atención a elementos que te permiten integrar una amplia variedad de tipos de contenido en tus páginas web: los elementos {{htmlelement("iframe")}}, {{htmlelement("embed")}} y {{htmlelement("object")}}. Los `<iframe>`s son para incrustar otras páginas web, y los otros dos te permiten incrustar PDFs, SVG e incluso Flash — una tecnología que está en su camino de despedida, pero la cual seguirás viendo semi-regularmente.
+Los desarrolladores suelen pensar en incrustar medios como imágenes, video y audio en las páginas web. En este artículo damos un paso al costado, para ver algunos elementos que te permiten incrustar una amplia variedad de tipos de contenido en tus páginas web: los elementos {{htmlelement("iframe")}}, {{htmlelement("embed")}} y {{htmlelement("object")}}. Los `<iframe>` sirven para incrustar otras páginas web, mientras que los otros dos te permiten incrustar recursos externos como archivos PDF.
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerrequisitos:</th>
+      <th scope="row">Requisitos previos:</th>
       <td>
-        Conocimientos básicos de informática,
         <a
           href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
-          >software básico instalado</a
+          >Software básico instalado</a
         >, conocimientos básicos de
         <a
           href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
-          >manejo de archivos</a
-        >, familiaridad con los fundamentos de HTML (visto en
-        <a href="/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
-          >Iniciando en HTML</a
-        >) y los artículos previos en este modulo.
+          >trabajo con archivos</a
+        >, familiaridad con los <a href="/es/docs/Learn_web_development/Core/Structuring_content"
+          >fundamentos de HTML</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objetivo:</th>
       <td>
-        To learn how to embed items into web pages using
-        {{htmlelement("object")}}, {{htmlelement("embed")}}, and
-        {{htmlelement("iframe")}}, like Flash movies and other webpages.
+        Aprender a incrustar elementos en páginas web usando
+        {{htmlelement("object")}}, {{htmlelement("embed")}} y
+        {{htmlelement("iframe")}}, como documentos PDF y otras páginas web.
       </td>
     </tr>
   </tbody>
 </table>
 
-## Enlace a la sección: Una breve historia de incrustación
+## Una breve historia de la incrustación
 
-Hace mucho tiempo en la Web, era popular usar **marcos (frames)** para crear sitios web, pequeñas partes de un sitio web almacenadas en páginas HTML individuales. Estos estaban incrustados en un documento maestro llamado **conjunto de marcos (frameset)**, que le permitía especificar el área en la pantalla que ocupaba cada cuadro, como el tamaño de las columnas y las filas de una tabla. Estos fueron considerados el colmo del frescor a mediados y finales de los 90, y había evidencia de que tener una página web dividida en trozos más pequeños como este era mejor para velocidades de descarga, especialmente notable con conexiones de red tan lentas en ese momento. Sin embargo, tuvieron muchos problemas, que superaron con creces cualquier aspecto positivo ya que las velocidades de red se hicieron más rápidas, por lo que ya no se ve que se usen.
+Hace mucho tiempo en la Web, era popular usar **marcos** (frames) para crear sitios web — pequeñas partes de un sitio web almacenadas en páginas HTML individuales. Estos se incrustaban en un documento maestro llamado **conjunto de marcos** (frameset), que te permitía especificar el área de la pantalla que ocupaba cada marco, de forma similar a como se dimensionan las columnas y filas de una tabla. Se consideraban el colmo de la modernidad a mediados y finales de los 90, y había evidencia de que dividir una página web en fragmentos más pequeños de esta manera era mejor para la velocidad de descarga — algo especialmente notable dado lo lentas que eran las conexiones de red en ese entonces. Sin embargo, tenían muchos problemas, que superaban con creces cualquier aspecto positivo a medida que las velocidades de red se hicieron más rápidas, por lo que ya no se ven en uso.
 
-Poco tiempo después (finales de los 90, principios de 2000), las tecnologías de complementos se volvieron muy populares, como los Applets de Java y Flash . Esto permitió a los desarrolladores web incorporar contenido enriquecido en páginas web como videos y animaciones, que simplemente no estaban disponibles solo a través de HTML. La incrustación de estas tecnologías se logró a través de elementos como `<object>` y el menos utilizado `<embed>` , que fueron muy útiles en ese momento. Desde entonces, pasaron de moda debido a muchos problemas, incluidos el acceso, la seguridad, el tamaño del archivo y entre otros; en la actualidad, la mayoría de los dispositivos móviles ya no son compatibles con estos complementos, y el soporte de escritorio está en camino de desaparecer.
+Un poco más tarde (finales de los 90, principios de los 2000), las tecnologías de complementos se volvieron muy populares, como los [Applets de Java](/es/docs/Glossary/Java) y [Flash](/es/docs/Glossary/Adobe_Flash) — estas permitían a los desarrolladores web incrustar contenido enriquecido en las páginas web, como videos y animaciones, que simplemente no estaban disponibles solo con HTML. La incrustación de estas tecnologías se lograba mediante elementos como {{htmlelement("object")}}, y el menos utilizado {{htmlelement("embed")}}, y fueron muy útiles en su momento. Desde entonces han caído en desuso debido a muchos problemas, incluyendo la accesibilidad, la seguridad, el tamaño de archivo y más. Hoy en día, los navegadores principales han dejado de admitir complementos como Flash.
 
-Finalmente, apareció el elemento `<iframe>` (junto con otras formas de incrustación de contenido, como `<canvas>` , `<video>` , etc.). Esto proporciona una forma de insertar un documento web entero dentro de otro, como si fuera un `<img>` u otro elemento similar, y asi es como se usa en la actualidad.
+Finalmente, apareció el elemento {{htmlelement("iframe")}} (junto con otras formas de incrustar contenido, como {{htmlelement("canvas")}}, {{htmlelement("video")}}, etc.). Esto proporciona una forma de incrustar un documento web completo dentro de otro, como si fuera un {{htmlelement("img")}} u otro elemento similar, y se usa habitualmente hoy en día.
 
-Con la lección de historia fuera del camino, sigamos y veamos cómo usar algunos de estos.
+Con la lección de historia fuera del camino, sigamos adelante y veamos cómo usar algunas de estas tecnologías.
 
-## Aprendizaje activo: usos de incrustación clásicos
+## Jugando con usos clásicos de incrustación
 
-En este artículo vamos a ir directamente a una sección de aprendizaje activo, para darle una idea real de la utilidad de las tecnologías de inclusión. El mundo en línea está muy familiarizado con Youtube, pero muchas personas no conocen algunas de las comodidades para compartir que tiene disponibles. Veamos cómo Youtube nos permite insertar un video en cualquier página que nos guste usando un `<iframe>` .
+En este artículo vamos a pasar directamente a un ejercicio, para darte de inmediato una idea de para qué sirven las tecnologías de incrustación. El mundo en línea está muy familiarizado con [YouTube](https://www.youtube.com/), pero mucha gente no conoce algunas de las funciones para compartir que tiene disponibles.
 
-1. Primero, ve a Youtube y encuentra el video que te gusta.
-2. Debajo del video, encontrará un botón _Compartir_ : seleccionelo para mostrar las opciones para compartir.
-3. Seleccione el botón _Insertar_ y recibirá un código `<iframe>` - copielo.
-4. Insértelo en el cuadro de _entrada a_ continuación, y vea cuál es el resultado en la _salida_ .
+1. Primero, abre el [MDN Playground](/es/play).
+2. Ahora veremos cómo YouTube nos permite incrustar un video en cualquier página que queramos usando un {{htmlelement("iframe")}}.
+   1. Ve a YouTube y busca un video que te guste.
+   2. Debajo del video, encontrarás un botón _Compartir_ — selecciónalo para mostrar las opciones para compartir.
+   3. Selecciona el botón _Insertar_ y se te dará algo de código `<iframe>` — cópialo.
+   4. Pégalo en el panel de _HTML_ del Playground, y observa cuál es el resultado en la salida.
+3. Como puntos extra, también podrías intentar incrustar un [mapa de Google](https://www.google.com/maps/) en el Playground:
+   1. Ve a Google Maps y busca un mapa que te guste.
+   2. Haz clic en el "menú hamburguesa" (tres líneas horizontales) en la parte superior izquierda de la interfaz.
+   3. Selecciona la opción _Compartir o incrustar mapa_.
+   4. Selecciona la opción _Incrustar un mapa_, que te dará algo de código `<iframe>` — cópialo.
+   5. Pégalo en el panel de _HTML_ del Playground, y observa cuál es el resultado en la salida.
 
-Para obtener puntos de bonificación, también puede intentar insertar un mapa de Google en el ejemplo:
+Si cometes un error, siempre puedes restablecerlo usando el botón _Reset_ del Playground.
 
-1. Ve a Google Maps y encuentra un mapa que te guste.
-2. Haga clic en el "Menú Hamburger" (tres líneas horizontales) en la esquina superior izquierda de la IU.
-3. Seleccione la opción _Compartir o Insertar mapa_ .
-4. Seleccione la opción Insertar mapa, que le dará un código `<iframe>` - copielo.
-5. Insértelo en el cuadro de _entrada a_ continuación, y vea cuál es el resultado en la _salida_ .
+## Los iframes en detalle
 
-Si comete un error, siempre puede restablecerlo usando el botón _Restablecer_ . Si realmente te quedas atascado, presiona el botón _Mostrar solución_ para ver una respuesta.
+Bueno, eso fue fácil y divertido, ¿verdad? Los elementos {{htmlelement("iframe")}} están diseñados para permitirte incrustar otros documentos web dentro del documento actual. Esto es excelente para incorporar en tu sitio web contenido de terceros sobre el que quizás no tengas control directo y que no quieras tener que implementar tú mismo — como videos de proveedores de video en línea, sistemas de comentarios como [Disqus](https://disqus.com/), mapas de proveedores de mapas en línea, banners publicitarios, etc. Incluso los ejemplos editables en vivo que has estado usando a lo largo de este curso están implementados usando `<iframe>`s.
 
-```html hidden
-<h2>Live output</h2>
-
-<div class="output" style="min-height: 250px;"></div>
-
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
-</p>
-
-<textarea
-  id="code"
-  class="input"
-  style="width: 95%;min-height: 100px;"></textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
-```
-
-```css hidden
-html {
-  font-family: sans-serif;
-}
-
-h2 {
-  font-size: 16px;
-}
-
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
-
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-```
-
-```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var output = document.querySelector(".output");
-var code = textarea.value;
-var userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-var htmlSolution =
-  '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
-var solutionEntry = htmlSolution;
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.keyCode === 27) {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
-
-  var front = textarea.value.substring(0, caretPos);
-  var back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 600, "", "", "hide-codepen-jsfiddle") }}
-
-## Iframes en detalle
-
-Entonces, fue fácil y divertido ¿verdad? Los elementos {{htmlelement("iframe")}} están diseñados para permitirte incrustar documentos web en el documento actual. Esto es excelente para incorporar contenido de terceros en tu sitio web sobre el que no tengas control directo y no quieras tener que implementar tu propia versión — como vídeo de porveedeores de vídeo en línea, sistemas de comentarios como [Disqus](https://disqus.com/), mapas de proveedores de mapas en línea, banners publicitarios, etc. Los ejemplos editables que has estado usando a través de este curso se implementan usando `<iframe>`s.
-
-Hay algunos serios [Security concerns](#security_concerns) a considerar con `<iframe>`s, también se discute a continuación, pero esto no significa que debas dejar de usarlos en tus sitios web — solo requiere un poco de conocimiento y pensar cuidadosamente. Vamos a explorar el código con un poco más de detalle. Supongamos que quieres incluir el glosario de MDN en una de tus páginas web — podrías intentar algo como esto:
+Antes de sumergirte en el uso de elementos `<iframe>`, hay algunas preocupaciones de seguridad de las que debes estar al tanto. Supongamos que quisieras incluir el glosario de MDN en una de tus páginas web usando el elemento {{htmlelement("iframe")}}, podrías intentar algo como el siguiente ejemplo de código. Si agregaras el código de abajo en una de tus páginas, podrías sorprenderte al ver un mensaje de error en lugar de la página del glosario:
 
 ```html
 <iframe
-  src="https://developer.mozilla.org/es/docs/Glossary"
+  src="https://developer.mozilla.org/en-US/docs/Glossary"
   width="100%"
   height="500"
-  frameborder="0"
   allowfullscreen
   sandbox>
-  <p>
-    <a href="/es/docs/Glossary">
-      Fallback link for browsers that don't support iframes
-    </a>
-  </p>
 </iframe>
 ```
 
-Este ejemplo incluye los elementos básicos necesarios para usar un `<iframe>`:
+```css
+iframe {
+  border: none;
+}
+```
 
+Si observas la consola de tu navegador, verás un mensaje de error como el siguiente:
+
+```plain
+Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X-Frame-Options' to 'deny'.
+```
+
+La sección de [Seguridad](#preocupaciones_de_seguridad) más abajo entra en más detalle sobre por qué ves este error, pero primero, veamos qué está haciendo nuestro código.
+
+El ejemplo incluye lo mínimo indispensable necesario para usar un `<iframe>`:
+
+- [`border: none`](/es/docs/Web/CSS/Reference/Properties/border)
+  - : Si se usa, el `<iframe>` se muestra sin un borde a su alrededor. De lo contrario, por defecto, los navegadores muestran el `<iframe>` con un borde a su alrededor (lo cual generalmente no es deseable).
 - [`allowfullscreen`](/es/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
-  - : Si está configurado, el `<iframe>` se puede colocar en modo pantalla completa usando el [Full Screen API](/es/docs/Web/API/Fullscreen_API) (El uso del API está fuera del alcance de este artículo.)
-- [`frameborder`](/es/docs/Web/HTML/Reference/Elements/iframe#frameborder)
-  - : Si se establece en 1, esto le indica al navegador que dibuje un borde entre este marco y otros marcos, que es el comportamiento predeterminado. 0 elimina el borde. Usar esto ya no es realmente recomendable, ya que el mismo efecto se puede lograr mejor usando[`border`](/es/docs/Web/CSS/Reference/Properties/border)`: none;` en tu {{Glossary('CSS')}}.
+  - : Si se establece, el `<iframe>` puede colocarse en modo de pantalla completa usando la [API de Fullscreen](/es/docs/Web/API/Fullscreen_API) (algo fuera del alcance de este artículo).
 - [`src`](/es/docs/Web/HTML/Reference/Elements/iframe#src)
-  - : Este atributo, como con {{htmlelement("video")}}/{{htmlelement("img")}},contiene una ruta que apunta a la URL del documento que se va a incrustar.
-- [`width`](/es/docs/Web/HTML/Reference/Elements/iframe#width) and [`height`](/es/docs/Web/HTML/Reference/Elements/iframe#height)
-  - : Estos atributos especifican el ancho y la altura (width y height) que quieres que tenga el iframe.
-- **Contenido de reserva**
-  - : De la misma manera que otros elementos similares [`<video>`](/es/docs/Web/HTML/Reference/Elements/video), puedes incluir contenido alternativo entre las etiquetas de apertura y cierre `<iframe></iframe>` que aparecerán si el navegador no admite el `<iframe>`. En este caso hemos incluido un enlace a la página. Es poco probable que encuentres algún navegador que no admita `<iframe>`s en estos días.
+  - : Este atributo, al igual que con {{htmlelement("video")}}/{{htmlelement("img")}}, contiene una ruta que apunta a la URL del documento que se va a incrustar.
+- [`width`](/es/docs/Web/HTML/Reference/Elements/iframe#width) y [`height`](/es/docs/Web/HTML/Reference/Elements/iframe#height)
+  - : Estos atributos especifican el ancho y el alto que quieres que tenga el iframe.
 - [`sandbox`](/es/docs/Web/HTML/Reference/Elements/iframe#sandbox)
-  - : Este atributo, que funciona en navegadores un poco más modernos que el resto de la funciones de `<iframe>` (por ejemplo IE 10 y superior) solicita una mayor configuración de seguridad; bueno, hablaremos más sobre esto en la siguiente sección.
+  - : Este atributo, que funciona en navegadores ligeramente más modernos que el resto de las características de `<iframe>` (por ejemplo, IE 10 y superiores), solicita una configuración de seguridad más estricta; hablaremos más sobre esto en la siguiente sección.
 
 > [!NOTE]
-> Para mejorar la velocidad, es una buena idea establecer el atributo `src` de iframes con JavaScript después de que se cargue el contenido principal. Esto hace que tu página pueda utilizarse antes y disminuye el tiempo de carga de tu página principal (an important {{Glossary("SEO")}}.)
+> Para mejorar la velocidad, es una buena idea establecer el atributo `src` del iframe con JavaScript después de que el contenido principal haya terminado de cargarse. Esto hace que tu página sea utilizable antes y disminuye tu tiempo oficial de carga de página (una métrica importante de {{glossary("SEO")}}).
 
-### Con respecto a la seguridad
+### Preocupaciones de seguridad
 
-Arriba mencionamos nuestra preocupación por la seguridad — vamos a entrar en esto con un poco más de detalle ahora. No esperamos que comprendas todo este contenido perfectametne a la primera. Solo queremos informarte sobre esta preocupación y proporcionarte una referencia a la que volver a medida que tengas más experiencia y comiences a considerar el uso de `<iframe>`s en tu trabajo y en tus experimentos.además, no es necesario tener miedo y no usar `<iframe>`s — iframes, solo debes tener cuidado. Sigue leyendo...
+Arriba mencionamos las preocupaciones de seguridad — profundicemos un poco más en esto ahora. No esperamos que entiendas todo este contenido perfectamente la primera vez; solo queremos que tomes conciencia de esta preocupación, y darte una referencia a la que volver a medida que ganes más experiencia y empieces a considerar el uso de `<iframe>`s en tus experimentos y trabajos. Además, no hay necesidad de asustarse y dejar de usar `<iframe>`s — solo debes tener cuidado. Sigue leyendo…
 
-Los creadores de navegadores y los desarrolladores web han aprendido por las malas que los iframes son un objetivo común (término oficial: **vector de ataque**) para los "malos" de la Web (a menudo denominados **hackers**,o más exactamente, **crackers**) para atacar si están tratando de modificar maliciosamente tu página web, o engañar a las personas para que hagan algo que no quieren hacer, como revelar información confidencial como nombre de usuario o contraseña. Debido a esto, los ingenieros de especificaciones y los desarrolladores de navegadores han desarrollado varios mecanismos para hacer que los `<iframe>`s sean más seguros, y también hay mejores prácticas a considerar — cubriremos algunas de estas a continuación.
+Los creadores de navegadores y los desarrolladores web han aprendido de la manera difícil que los iframes son un objetivo común (término oficial: **vector de ataque**) para la gente mala de la Web (a menudo llamados **hackers**, o más precisamente, **crackers**) que buscan modificar maliciosamente tu página web, o engañar a las personas para que hagan algo que no quieren hacer, como revelar información sensible como nombres de usuario y contraseñas. Debido a esto, los ingenieros de especificaciones y los desarrolladores de navegadores han desarrollado varios mecanismos de seguridad para hacer que los `<iframe>`s sean más seguros, y también hay buenas prácticas a considerar — cubriremos algunas de ellas a continuación.
 
 > [!NOTE]
-> [Clickjacking](https://es.wikipedia.org/wiki/Clickjacking) es un tipo de ataque de iframe común en el que los piratas informáticos incrustan un iframe invisible en tu documento (o incrustan tu documento en su propio sitio web malicioso) y lo utilizan para capturar las interacciones de los ususarios. Esta es una forma común de engañar a los usuarios o robar datos sensibles.
+> El [clickjacking](/es/docs/Web/Security/Attacks/Clickjacking) es un tipo de ataque común mediante iframes en el que los hackers incrustan un iframe invisible en tu documento (o incrustan tu documento en su propio sitio web malicioso) y lo usan para capturar las interacciones de los usuarios. Esta es una forma común de engañar a los usuarios o de robar datos sensibles.
 
-Primero un ejemplo rápido — intenta cargar el ejemplo anterior que mostramos arriba en tu navegador — puedes encontrarlo en [Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) (ver el [código fuente](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ) Tu no verás nada en tu navegador, pero si miras en la _Consola_ en las [herramientas de desarrollador de tu navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), tú verás un mensaje diciendote porque.En Firefox, te dirá _Load denied by X-Frame-Options: "https://developer.mozilla.org/es/docs/Glossary" does not permit framing_. Esto es porque los desarrolladores que construyeron MDN han incluido una configuración en el servidor que almacena la página web que impide que sean incrustados dentro de `<iframe>`s (ver [Configure CSP directives](#configure_csp_directives), abajo.) Esto tiene sentido— una página completa de MDN no tiene sentido estar incrustada en otras páginas, a menos que tu quieras hacer algo como incrustarlas en tu sitio web y reclamarlas como propias — o intentar robar datos via clickjacking, los cuales ambos son cosas realmente malas. Además de que si todo el mundo comienza a hacerlo, todo el ancho de banda adicional podría costarle mucho dinero a Mozzilla.
+Pero primero, un ejemplo rápido — intenta cargar en tu navegador el ejemplo anterior que te mostramos arriba — puedes [encontrarlo en vivo en GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ([mira el código fuente](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) también). En lugar de la página que esperabas, probablemente verás algún tipo de mensaje del estilo "No puedo abrir esta página", y si miras la _Consola_ en las [herramientas de desarrollo del navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), verás un mensaje que te dice por qué. En Firefox, se te dirá algo como _The loading of "https\://developer.mozilla.org/en-US/docs/Glossary" in a frame is denied by "X-Frame-Options" directive set to "DENY"_ (la carga de "https\://developer.mozilla.org/en-US/docs/Glossary" en un marco es denegada por la directiva "X-Frame-Options" configurada como "DENY"). Esto se debe a que los desarrolladores que construyeron MDN incluyeron una configuración en el servidor que sirve las páginas del sitio para no permitir que se incrusten dentro de `<iframe>`s (mira [Configura las directivas CSP](#configura_las_directivas_csp), más abajo). Esto tiene sentido — no tiene mucho sentido incrustar una página completa de MDN en otras páginas, a menos que quieras hacer algo como incrustarlas en tu sitio y hacerlas pasar por tuyas, o intentar robar datos mediante [clickjacking](/es/docs/Web/Security/Attacks/Clickjacking), que son ambas cosas realmente malas de hacer. Además, si todo el mundo empezara a hacer esto, todo el ancho de banda adicional empezaría a costarle mucho dinero a Mozilla.
 
 #### Solo incrusta cuando sea necesario
 
-Algunas veces tiene sentido embeber contenido de terceros— como vídeos de youtube y mapas — pero puedes ahorrarte muchos dolores de cabeza si tu solo embebes contenido de terceros solo cuando es necesario. Una buena regla de oro para la seguridad web es "Nunca puedes ser demasiado cauteloso. Si lo hizo, verifíquelo de todos modos. Si alguien más lo hizo, asuma que es peligroso hasta que se demuestre lo contrario".
+A veces tiene sentido incrustar contenido de terceros — como videos de YouTube y mapas — pero puedes ahorrarte muchos dolores de cabeza si solo incrustas contenido de terceros cuando sea completamente necesario. Una buena regla para la seguridad web es: _"Nunca puedes ser demasiado cauteloso. Si tú lo hiciste, revísalo de todos modos. Si alguien más lo hizo, asume que es peligroso hasta que se demuestre lo contrario."_
 
-Además de la seguridad, debes ser consciente de los temas de propiedad intelectual. La mayoría del contenido tiene derechos de autor, en línea y fuera de línea, incluso contenido que no te esperas(por ejemplo, la mayoría de las imágenes en [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)). Nunca muestres en tu pagina contenido a menos que te pertenezca o que el dueño te haya dado por escrito su permiso inequívoco. Las penalidades por derechos de autor son severas. De nuevo, tu nunca puedes ser demasiado cauteloso.
+Además de la seguridad, también debes ser consciente de los problemas de propiedad intelectual. La mayoría del contenido tiene derechos de autor, tanto fuera de línea como en línea, incluso contenido que quizás no esperarías (por ejemplo, la mayoría de las imágenes en [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)). Nunca muestres contenido en tu página web a menos que te pertenezca o que sus dueños te hayan dado un permiso escrito e inequívoco. Las penalizaciones por infracción de derechos de autor son severas. De nuevo, nunca puedes ser demasiado cauteloso.
 
-Si el contenido es licenciado, debes obedecer los terminos de la licencia. Por ejemplo, el contenido en MDN es licenciado bajo[CC-BY-SA](/es/docs/MDN/Writing_guidelines#copyrights_and_licenses). Esto significa, que tu debes darnos [credito apropiadamente](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution) cuando tu citas nuestro contenido, aun si tu haces cambios substanciales.
+Si el contenido tiene licencia, debes obedecer los términos de esa licencia. Por ejemplo, el contenido de MDN está [licenciado bajo CC-BY-SA](/es/docs/MDN/Writing_guidelines/Attrib_copyright_license#documentation). Eso significa que debes [darnos crédito de forma adecuada](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution) cuando cites nuestro contenido, incluso si haces cambios sustanciales.
 
 #### Usa HTTPS
 
-{{Glossary("HTTPS")}} es la versión encriptada de {{Glossary("HTTP")}}. Deberias cumplir con tu página web usando HTTPS siempre que sea posible:
+{{Glossary("HTTPS")}} es la versión encriptada de {{Glossary("HTTP")}}. Deberías servir tus sitios web usando HTTPS siempre que sea posible:
 
-1. HTTPS reduce la oportunidad de que contenido remoto haya sido manipulado en el tránsito.
-2. HTTPS previene que el contenido embebido acceda al documento padre y viceversa.
+1. HTTPS reduce la posibilidad de que el contenido remoto haya sido manipulado en tránsito.
+2. HTTPS evita que el contenido incrustado acceda al contenido de tu documento padre, y viceversa.
 
-Usar HTTPS requiere un certificado de seguridad, el cual puede ser costoso (Aunque [Let's Encrypt](https://letsencrypt.org/) hace las cosas más faciles) — si tu no puedes tener uno, tu debes servir tu documento padre con HTTP. Sin embargo, debido al segundo beneficio de HTTPS expuesto arriba, no importa cual sea el costo tu nunca debes embeber contenido de terceros con HTTP. (En el mejor de los casos, el navegador de tus usuarios les dará una advertencia). Todas las empresas con buena reputación que hacen contenido para embeber via `<iframe>` lo harán disponible via HTTPS — mira la URLs dentro del `<iframe>` atributo `src` cuando tu estes embebiendo contenido desde Google Maps o Youtube, por ejemplo.
-
-> [!NOTE]
-> [Github pages](/es/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) permite que el contenido sea servido via HTTPS por defecto, asi que es util para hospedar tu contenido. Si estás usando un hosting diferente y no estás seguro, pregunta a tu proveedor de hosting acerca del tema .
-
-#### Siempre usa el atributo `sandbox`
-
-You want to give attackers as little power as you can to do bad things on your website, therefore you should give embedded content _only the permissions needed for doing its job._ Of course, this applies to your own content, too. un contenedor para codigo que puedes usar apropiadamente — o para probar — but can't cause any harm to the rest of the codebase (either accidental or malicious) is called a [sandbox](<https://en.wikipedia.org/wiki/Sandbox_(computer_security)>).
-
-Unsandboxed content can do way too much (executing JavaScript, submitting forms, popup windows, etc.) By default you should impose all available restrictions by using the `sandbox` attribute with no parameters, as shown in our previous example.
-
-If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the [`sandbox`](/es/docs/Web/HTML/Reference/Elements/iframe#sandbox) reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute — in that case the embedded content could bypass the same origin security policy that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.
+Habilitar HTTPS en tu sitio requiere instalar un certificado de seguridad especial. Muchos proveedores de hosting ofrecen alojamiento con HTTPS habilitado sin que necesites hacer ninguna configuración por tu cuenta para poner en marcha un certificado. Pero si _sí_ necesitas configurar el soporte de HTTPS para tu sitio por tu cuenta, [Let's Encrypt](https://letsencrypt.org/) proporciona herramientas e instrucciones que puedes usar para crear e instalar automáticamente el certificado necesario — con soporte incorporado para los servidores web más utilizados, incluyendo el servidor web Apache, Nginx y otros. Las herramientas de Let's Encrypt están diseñadas para hacer el proceso lo más sencillo posible, así que realmente no hay una buena razón para evitar usarlas, u otros medios disponibles, para habilitar HTTPS en tu sitio.
 
 > [!NOTE]
-> Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an `iframe`). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.
+> Las [páginas de GitHub](/es/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) permiten que el contenido se sirva mediante HTTPS por defecto.
+> Si estás usando un proveedor de hosting diferente, deberías comprobar qué soporte ofrece para servir contenido con HTTPS.
 
-#### Configure CSP directives
+#### Usa siempre el atributo `sandbox`
 
-{{Glossary("CSP")}} stands for **[content security policy](/es/docs/Web/HTTP/Guides/CSP)**, and provides [a set of HTTP Headers](/es/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) (metadata sent along with your web pages when they are served from a web server) designed to improve the security of your HTML document. When it comes to securing `<iframe>`s, you can _[configure your server to send an appropriate `X-Frame-Options` header.](/es/docs/Web/HTTP/Reference/Headers/X-Frame-Options)_ This can prevent other websites from embedding your content in their webpages (which would enable [clickjacking](https://es.wikipedia.org/wiki/Clickjacking) and a host of other attacks), which is exactly what the MDN developers have done, as we saw earlier on.
+Quieres darles a los atacantes el menor poder posible para hacer cosas malas en tu sitio web, por lo tanto, deberías darle al contenido incrustado _solo los permisos necesarios para hacer su trabajo._ Por supuesto, esto también se aplica a tu propio contenido. Un contenedor para código donde este se puede usar de manera apropiada — o para pruebas — pero que no puede causar ningún daño al resto de la base de código (ya sea accidental o malicioso) se llama [sandbox](<https://en.wikipedia.org/wiki/Sandbox_(computer_security)>).
 
-> [!NOTE]
-> You can read Frederik Braun's post [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) for more background information on this topic. Obviously, it's rather out of scope for a full explanation in this article.
+El contenido que no está en un sandbox puede ejecutar JavaScript, enviar formularios, activar ventanas emergentes, etc. Por defecto, deberías imponer todas las restricciones disponibles usando el atributo `sandbox` sin parámetros, como se muestra en nuestro ejemplo anterior.
 
-## The \<embed> and \<object> elements
-
-The {{htmlelement("embed")}} and {{htmlelement("object")}} elements serve a different function to {{htmlelement("iframe")}} — these elements are general purpose embedding tools for embedding multiple types of external content, which include plugin technologies like Java Applets and Flash, PDF (which can be shown in a browser with a PDF plugin), and even content like videos, SVG and images!
+Si es absolutamente necesario, puedes volver a agregar permisos uno por uno (dentro del valor del atributo `sandbox=""`) — mira la entrada de referencia de [`sandbox`](/es/docs/Web/HTML/Reference/Elements/iframe#sandbox) para ver todas las opciones disponibles. Un aspecto importante a tener en cuenta es que _nunca_ debes agregar tanto `allow-scripts` como `allow-same-origin` a tu atributo `sandbox` — en ese caso, el contenido incrustado podría eludir la [política del mismo origen](/es/docs/Glossary/Same-origin_policy) que impide que los sitios ejecuten scripts, y usar JavaScript para desactivar por completo el sandboxing.
 
 > [!NOTE]
-> A **plugin** is software that provides access to content the browser cannot read natively.
+> El sandboxing no ofrece ninguna protección si los atacantes pueden engañar a las personas para que visiten contenido malicioso directamente (fuera de un `iframe`). Si existe alguna posibilidad de que cierto contenido sea malicioso (por ejemplo, contenido generado por el usuario), sírvelo desde un {{glossary("domain", "dominio")}} diferente al de tu sitio principal.
 
-However, you are unlikely to use these elements very much — Applets haven't been used for years, Flash is no longer very popular, due to a number of reasons (see [The case against plugins](#the_case_against_plugins), below), PDFs tend to be be better linked to than embedded, and other content such as images and video have much better, easier elements to handle those. Plugins and these embedding methods are really a legacy technology, and we are mainly mentioning them in case you come across them in certain circumstances like intranets, or enterprise projects.
+#### Configura las directivas CSP
 
-If you find yourself needing to embed plugin content, this is the kind of information you'll need, at a minimum:
-
-|                                                                            | {{htmlelement("embed")}}                                                                                                  | {{htmlelement("object")}}                                                                                                   |
-| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| {{glossary("URL")}} of the embedded content                                | [`src`](/es/docs/Web/HTML/Reference/Elements/embed#src)                                                                   | [`data`](/es/docs/Web/HTML/Reference/Elements/object#data)                                                                  |
-| _accurate_ {{glossary("MIME type", 'media type')}} of the embedded content | [`type`](/es/docs/Web/HTML/Reference/Elements/embed#type)                                                                 | [`type`](/es/docs/Web/HTML/Reference/Elements/object#type)                                                                  |
-| height and width (in CSS pixels) of the box controlled by the plugin       | [`height`](/es/docs/Web/HTML/Reference/Elements/embed#height) [`width`](/es/docs/Web/HTML/Reference/Elements/embed#width) | [`height`](/es/docs/Web/HTML/Reference/Elements/object#height) [`width`](/es/docs/Web/HTML/Reference/Elements/object#width) |
-| names and values, to feed the plugin as parameters                         | ad hoc attributes with those names and values                                                                             | single-tag {{htmlelement("param")}} elements, contained within `<object>`                                                   |
-| independent HTML content as fallback for an unavailable resource           | not supported (`<noembed>` is obsolete)                                                                                   | contained within `<object>`, after `<param>` elements                                                                       |
+{{Glossary("CSP")}} son las siglas de **[content security policy](/es/docs/Web/HTTP/Guides/CSP)** (política de seguridad de contenido) y proporciona [un conjunto de encabezados HTTP](/es/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) (metadatos que se envían junto con tus páginas web cuando se sirven desde un servidor web) diseñados para mejorar la seguridad de tu documento HTML. Cuando se trata de proteger `<iframe>`s, puedes _[configurar tu servidor para que envíe un encabezado `X-Frame-Options` apropiado](/es/docs/Web/HTTP/Reference/Headers/X-Frame-Options)_. Esto puede evitar que otros sitios web incrusten tu contenido en sus páginas web (lo cual habilitaría el [clickjacking](/es/docs/Web/Security/Attacks/Clickjacking) y toda una serie de otros ataques), que es exactamente lo que han hecho los desarrolladores de MDN, como vimos anteriormente.
 
 > [!NOTE]
-> `<object>` requires a `data` attribute, a `type` attribute, or both. If you use both, you may also use the [`typemustmatch`](/es/docs/Web/HTML/Reference/Elements/object#typemustmatch) attribute (only implemented in Firefox, as of this writing). `typemustmatch` keeps the embedded file from running unless the `type` attribute provides the correct media type. `typemustmatch` can therefore confer significant security benefits when you're embedding content from a different {{glossary("origin")}} (it can keep attackers from running arbitrary scripts through the plugin).
+> Puedes leer la publicación de Frederik Braun [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) para obtener más información de contexto sobre este tema. Obviamente, está algo fuera del alcance de una explicación completa en este artículo.
 
-Here's an example that uses the {{htmlelement("embed")}} element to embed a Flash movie (see this [live on Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html), and [check the source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html) too):
+## Los elementos \<embed> y \<object>
+
+Los elementos {{htmlelement("embed")}} y {{htmlelement("object")}} cumplen una función diferente a la de {{htmlelement("iframe")}} — estos elementos son herramientas de incrustación de propósito general para incrustar contenido externo, como PDFs.
+
+Sin embargo, es poco probable que uses mucho estos elementos. Si necesitas mostrar PDFs, generalmente es mejor enlazarlos, en lugar de incrustarlos en la página.
+
+Históricamente, estos elementos también se han usado para incrustar contenido manejado por {{Glossary("Plugin", "complementos")}} del navegador, como {{Glossary("Adobe Flash")}}, pero esta tecnología ahora es obsoleta y no es compatible con los navegadores modernos.
+
+Si te encuentras necesitando incrustar contenido de un complemento, este es el tipo de información que necesitarás, como mínimo:
+
+<table class="standard-table no-markdown">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">{{htmlelement("embed")}}</th>
+      <th scope="col">{{htmlelement("object")}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{glossary("URL")}} del contenido incrustado</td>
+      <td><a href="/es/docs/Web/HTML/Reference/Elements/embed#src"><code>src</code></a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Elements/object#data"><code>data</code></a></td>
+    </tr>
+    <tr>
+      <td>
+        {{glossary("MIME type", "Tipo de medio")}} <em>exacto</em>
+        del contenido incrustado
+      </td>
+      <td><a href="/es/docs/Web/HTML/Reference/Elements/embed#type"><code>type</code></a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Elements/object#type"><code>type</code></a></td>
+    </tr>
+    <tr>
+      <td>
+        Alto y ancho (en píxeles CSS) del cuadro controlado por el complemento
+      </td>
+      <td>
+         <a href="/es/docs/Web/HTML/Reference/Elements/embed#height"><code>height</code></a><br /><a href="/es/docs/Web/HTML/Reference/Elements/embed#width"><code>width</code></a>
+      </td>
+      <td>
+         <a href="/es/docs/Web/HTML/Reference/Elements/object#height"><code>height</code></a><br /><a href="/es/docs/Web/HTML/Reference/Elements/object#width"><code>width</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td>Contenido HTML independiente como reserva para un recurso no disponible</td>
+      <td>No compatible (<code>&#x3C;noembed></code> es obsoleto)</td>
+      <td>
+        Contenido dentro de las etiquetas de apertura y cierre de
+        <code>&#x3C;object></code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+Veamos un ejemplo de `<object>` que incrusta un PDF en una página (mira el [ejemplo en vivo](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) y el [código fuente](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)):
 
 ```html
-<embed
-  src="whoosh.swf"
-  quality="medium"
-  bgcolor="#ffffff"
-  width="550"
-  height="400"
-  name="whoosh"
-  align="middle"
-  allowScriptAccess="sameDomain"
-  allowFullScreen="false"
-  type="application/x-shockwave-flash"
-  pluginspage="http://www.macromedia.com/go/getflashplayer" />
-```
-
-Pretty horrible, isn't it. The HTML generated by the Adobe Flash tool tended to be even worse, using an `<object>` element with an `<embed>` element embedded in it, to cover all bases (check out an example.) Flash was even used successfully as fallback content for HTML5 video, for a time, but this is increasingly being seen as not necessary.
-
-Now let's look at an `<object>` example that embeds a PDF into a page (see the [live example](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) and the [source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)):
-
-```html
-<object
-  data="mypdf.pdf"
-  type="application/pdf"
-  width="800"
-  height="1200"
-  typemustmatch>
+<object data="my-pdf.pdf" type="application/pdf" width="800" height="1200">
   <p>
     You don't have a PDF plugin, but you can
-    <a href="myfile.pdf">download the PDF file.</a>
+    <a href="my-pdf.pdf">download the PDF file. </a>
   </p>
 </object>
 ```
 
-PDFs were a necessary stepping stone between paper and digital, but they pose many [accessibility challenges](https://webaim.org/techniques/acrobat/acrobat) and can be hard to read on small screens. They do still tend to be popular in some circles, but it is much better to link to them so they can be downloaded or read on a separate page, rather than embedding them in a webpage.
+Los PDF fueron un paso necesario entre el papel y lo digital, pero presentan muchos [desafíos de accesibilidad](https://webaim.org/techniques/acrobat/acrobat) y pueden ser difíciles de leer en pantallas pequeñas. Aun así, tienden a ser populares en algunos círculos, pero es mucho mejor enlazarlos para que puedan descargarse o leerse en una página separada, en lugar de incrustarlos en una página web.
 
-### The case against plugins
+## Resumen
 
-Once upon a time, plugins were indispensable on the Web. Remember the days when you had to install Adobe Flash Player just to watch a movie online? And then you constantly got annoying alerts about updating Flash Player and your Java Runtime Environment. Web technologies have since grown much more robust, and those days are over. For most applications, it's time to stop delivering content that depends on plugins, and start taking advantage of Web technologies instead.
+El tema de incrustar otro contenido en documentos web puede volverse rápidamente muy complejo, así que en este artículo hemos intentado introducirlo de una manera simple y familiar que te resulte de inmediato relevante, sin dejar de insinuar algunas de las características más avanzadas de las tecnologías involucradas. Para empezar, es poco probable que uses la incrustación para mucho más que incluir contenido de terceros como mapas y videos en tus páginas. Sin embargo, a medida que ganes más experiencia, es probable que empieces a encontrarle más usos.
 
-- **Broaden your reach to everyone.** Everyone has a browser, but plugins are increasingly rare, especially among mobile users. Since the Web is largely usable without plugins, people would rather just go to your competitors' websites than install a plugin.
-- **Give yourself a break from the [extra accessibility headaches](https://webaim.org/techniques/flash/) that come with Flash and other plugins.**
-- **Stay clear of additional security hazards.** Adobe Flash is [notoriously insecure,](http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53) even after countless patches. In 2015, Alex Stamos, chief security officer of Facebook, even [requested that Adobe discontinue Flash.](http://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso)
-
-So what should you do? If you need interactivity, HTML and {{glossary("JavaScript")}} can readily get the job done for you with no need for Java applets or outdated ActiveX/BHO technology. Instead of relying on Adobe Flash, you can use [HTML5 video](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) for your media needs, [SVG](/es/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML) for vector graphics, and [Canvas](/es/docs/Web/API/Canvas_API/Tutorial) for complex images and animations. [Peter Elst was already writing some years ago](https://plus.google.com/+PeterElst/posts/P5t4pFhptvp) that Adobe Flash is rarely the right tool for the job, except for specialized gaming and business applications. As for ActiveX, even Microsoft's {{glossary("Microsoft Edge","Edge")}} browser no longer supports it.
-
-## Summary
-
-The topic of embedding other content in web documents can quickly become very complex, so in this article we've tried to introduce it in a simple, familiar way that will immediately seem relevant, while still hinting at some of the more advanced features of the involved technologies. To start with, you are unlikely to use embedding for much beyond including third party content like maps and videos on your pages. As you become more experienced however, you are likely to start finding more uses for them.
-
-There are many other technologies that involve embedding external content besides the ones we discussed here. We saw some in earlier articles, such as {{htmlelement("video")}}, {{htmlelement("audio")}}, and {{htmlelement("img")}}, but there are others to discover, such as {{htmlelement("canvas")}} for JavaScript-generated 2D and 3D graphics, and {{htmlelement("svg")}} for embedding vector graphics. We'll look at [SVG](/es/docs/Web/SVG) in the next article of the module.
-
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
+Hay muchas otras tecnologías que implican incrustar contenido externo además de las que discutimos aquí. Vimos algunas en artículos anteriores, como {{htmlelement("video")}}, {{htmlelement("audio")}} y {{htmlelement("img")}}, pero hay otras por descubrir, como {{htmlelement("canvas")}} para gráficos 2D y 3D generados con JavaScript, y {{SVGElement("svg")}} para incrustar gráficos vectoriales.
