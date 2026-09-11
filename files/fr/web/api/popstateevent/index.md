@@ -25,7 +25,7 @@ _Cette interface hérite également des propriétés de son parent, {{DOMxRef("E
 - {{DOMxRef("PopStateEvent.state")}} {{ReadOnlyInline}}
   - : Retourne une copie des informations qui ont été fournies à `pushState()` ou `replaceState()`.
 - {{DOMxRef("PopStateEvent.hasUAVisualTransition", "hasUAVisualTransition")}} {{ReadOnlyInline}}
-  - : Retourne `true` si l'agent utilisateur a effectué une transition visuelle pour cette navigation avant de déclencher cet évènement, ou `false` sinon.
+  - : Retourne `true` si l'agent utilisateur a effectué une transition visuelle pour cette navigation avant de déclencher cet évènement, sinon `false`.
 
 ## Méthodes d'instance
 
