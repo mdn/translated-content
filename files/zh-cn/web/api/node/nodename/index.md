@@ -1,53 +1,80 @@
 ---
-title: Node.nodeName
+title: Node：nodeName 属性
 slug: Web/API/Node/nodeName
+l10n:
+  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
 ---
 
-{{APIRef}}概述
+{{APIRef("DOM")}}
 
-返回当前节点的节点名称
+{{domxref("Node")}} 接口的 **`nodeName`** 只读属性以字符串形式返回当前节点的名称。
 
-## 附注
+## 值
 
-下表列出了所有类型的节点的`nodeName`属性的值。
+一个字符串。不同类型节点的取值如下：
 
-| 接口                                                               | nodeName 属性值                                                                                |
-| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
-| [Attr](/zh-CN/docs/Web/API/Attr)                                   | 等同于 [`Attr.name`](/zh-CN/docs/DOM/Attr.name) 属性的值                                       |
-| [CDATASection](/zh-CN/docs/Web/API/CDATASection)                   | "#cdata-section"                                                                               |
-| [Comment](/zh-CN/docs/Web/API/Comment)                             | "#comment"                                                                                     |
-| [Document](/zh-CN/docs/Web/API/Document)                           | "#document"                                                                                    |
-| [DocumentFragment](/zh-CN/docs/Web/API/DocumentFragment)           | "#document-fragment"                                                                           |
-| [DocumentType](/zh-CN/docs/Web/API/DocumentType)                   | 等同于 [`DocumentType.name`](/zh-CN/docs/DOM/DocumentType.name) 属性的值                       |
-| [Element](/zh-CN/docs/Web/API/Element)                             | 等同于 [`Element.tagName`](/zh-CN/docs/Web/API/Element/tagName) 属性的值                       |
-| [Entity](/zh-CN/docs/DOM/Entity)                                   | 实体名称                                                                                       |
-| [EntityReference](/zh-CN/docs/DOM/EntityReference)                 | 实体引用名称                                                                                   |
-| [Notation](/zh-CN/docs/DOM/Notation)                               | Notation 名称                                                                                  |
-| [ProcessingInstruction](/zh-CN/docs/Web/API/ProcessingInstruction) | 等同于 [`ProcessingInstruction.target`](/zh-CN/docs/DOM/ProcessingInstruction.target) 属性的值 |
-| [text](/zh-CN/docs/Web/API/Text)                                   | "#text"                                                                                        |
+- {{domxref("Attr")}}
+  - : {{domxref("Attr.name")}} 的值，即该属性的*限定名*。
+- {{domxref("CDATASection")}}
+  - : 字符串 `"#cdata-section"`。
+- {{domxref("Comment")}}
+  - : 字符串 `"#comment"`。
+- {{domxref("Document")}}
+  - : 字符串 `"#document"`。
+- {{domxref("DocumentFragment")}}
+  - : 字符串 `"#document-fragment"`。
+- {{domxref("DocumentType")}}
+  - : {{domxref("DocumentType.name")}} 的值。
+- {{domxref("Element")}}
+  - : {{domxref("Element.tagName")}} 的值，即 HTML 元素的*大写*标签名，或 XML 元素（如 SVG 或 MathML 元素）的*小写*标签名。
+- {{domxref("ProcessingInstruction")}}
+  - : {{domxref("ProcessingInstruction.target")}} 的值。
+- {{domxref("Text")}}
+  - : 字符串 `"#text"`。
 
 ## 示例
 
-假设已经存在下面的 HTML:
+本示例会显示若干节点的节点名称。
 
 ```html
-<div id="d1">hello world</div>
-<input type="text" id="t" />
+这是一些 HTML：
+<div id="d1">你好，世界</div>
+<!-- 注释示例 -->
+文本 <span>文本</span> 文本<br />
+<svg height="20" width="20">
+  <circle cx="10" cy="10" r="5" stroke="black" stroke-width="1" fill="red" />
+</svg>
+<hr />
+<output id="result">尚未计算。</output>
 ```
 
-以及下面的 JavaScript:
+以及以下脚本：
 
 ```js
-var div1 = document.getElementById("d1");
-var text_field = document.getElementById("t");
+let node = document.querySelector("body").firstChild;
+let result = "节点名称如下：\n";
+while (node) {
+  result += `${node.nodeName}\n`;
+  node = node.nextSibling;
+}
 
-text_field.value = div1.nodeName;
+const output = document.getElementById("result");
+output.innerText = result;
 ```
 
-在 XHTML(以及属于 XML 类型的文档) 中，变量 `text_field` 包含的值会是小写的"div".还在 HTML 中，变量 `text_field`包含的值会是大写的"DIV", `nodeName` 和 `tagName` 属性都有这种表现。查看[details on nodeName case sensitivity in different browsers](http://ejohn.org/blog/nodename-case-sensitivity/)一文深入了解。
-
-如果是元素节点，`nodeName` 属性和 `tagName` 属性返回相同的值，但如果是文本节点，`nodeName` 属性会返回 `"#text"`，而 `tagName` 属性会返回 `undefined`。
+{{ EmbedLiveSample("示例", "100%", "450")}}
 
 ## 规范
 
 {{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("Element.tagName")}}
+- {{domxref("Attr.name")}}
+- {{domxref("DocumentType.name")}}
+- {{domxref("ProcessingInstruction.target")}}
