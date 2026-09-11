@@ -10,12 +10,12 @@ original_slug: Web/CSS/min-width
 
 La propiedad `min-width` se usa para determinar la anchura mínima de un elemento. Previene que la propiedad {{ Cssxref("width") }} pueda ser inferior que `min-width`.
 
-- [Valor inicial](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing): 0
+- [Valor inicial](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing#valor_inicial): 0
 - Aplicable a: elementos de tipo bloque.
 - [Heredable](/es/docs/Web/CSS/Guides/Cascade/Inheritance): no
 - Porcentajes: se refieren a la anchura del bloque contenedor.
 - Media: {{cssxref("Media/Visual", "visual")}}
-- [Valor calculado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing):
+- [Valor calculado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing#valor_calculado):
 
 ### Sintaxis
 

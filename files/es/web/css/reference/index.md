@@ -150,12 +150,12 @@ Debido a que éstas tienen formatos de estructura variados, revise la sección [
 
 ### Valores
 
-- [Valor actual](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
-- [Valor calculado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
-- [Valor inicial](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
-- [Valor resuelto](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
-- [Valor específico](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
-- [Valor utilizado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
+- [Valor real](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing#valor_real)
+- [Valor calculado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing#valor_calculado)
+- [Valor inicial](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing#valor_inicial)
+- [Valor resuelto](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing#valor_resuelto)
+- [Valor especificado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing#valor_especificado)
+- [Valor utilizado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing#valor_utilizado)
 
 ### Diseño
 

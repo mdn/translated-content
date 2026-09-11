@@ -12,11 +12,11 @@ original_slug: Web/CSS/-webkit-mask-box-image
 
 `-webkit-mask-box-image` establece la imagen de máscara para la caja del borde de un elemento.
 
-- [Valor inicial](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing): none
+- [Valor inicial](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing#valor_inicial): none
 - Se aplica a : Todos los elementos
 - [Heredable](/es/docs/Web/CSS/Guides/Cascade/Inheritance): no
 - Media: {{cssxref("Media/Visual", "visual")}}
-- [Valor calculado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing): tal y como se especfica
+- [Valor calculado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing#valor_calculado): tal y como se especfica
 
 ## Síntaxis
 
