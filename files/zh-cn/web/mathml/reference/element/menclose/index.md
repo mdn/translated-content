@@ -2,7 +2,7 @@
 title: <menclose>
 slug: Web/MathML/Reference/Element/menclose
 l10n:
-  sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
+  sourceCommit: d65519931193d5324b1751ea291824f465f4643f
 ---
 
 {{Non-standard_header}}
