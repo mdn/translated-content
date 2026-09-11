@@ -3,12 +3,12 @@ title: "Window: open() メソッド"
 short-title: open()
 slug: Web/API/Window/open
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-**`open()`** は [`Window`](/ja/docs/Web/API/Window) インターフェイスのメソッドで、指定されたリソースを、新しい、または既存の指定された名前を持った閲覧コンテキスト (ウィンドウ、 [iframe](/ja/docs/Web/HTML/Reference/Elements/iframe)、タブ) に読み込みます。
+**`open()`** は [`Window`](/ja/docs/Web/API/Window) インターフェイスのメソッドで、指定されたリソースを、新しい、または既存の指定された名前を持った閲覧コンテキスト（ウィンドウ、 [iframe](/ja/docs/Web/HTML/Reference/Elements/iframe)、タブ）に読み込みます。
 
 ## 構文
 
@@ -31,7 +31,7 @@ open(url, target, windowFeatures)
 
 - `windowFeatures` {{optional_inline}}
   - : `name=value` の形式、または論理特性の場合は `name` だけで、ウィンドウの特性をカンマで区切った文字列です。論理値は、`name`、`name=yes`、`name=true`、`name=n` （`n` は 0 以外の整数） のいずれかを使用して true に設定できます。これらの機能には、ウィンドウの既定のサイズと位置、最小ポップアップウィンドウを開くかどうかなどのオプションが含まれます。次のオプションに対応しています。
-    - `attributionsrc` {{experimental_inline}}
+    - `attributionsrc` {{deprecated_inline}}
       - : ブラウザーに、 {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを `open()` 呼び出しとともに送信するように指示します。この呼び出しは、ユーザーの操作から 5 秒以内に、[一時的な有効化](/ja/docs/Glossary/Transient_activation)（つまり、 `click` などのユーザー操作イベントハンドラー内）で行わなければなりません。サーバー側では、このヘッダーは、帰属ソースの登録を完了するために、レスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} ヘッダーの送信を起動するために使用されます。
 
         さらに、 `open()` メソッドが完了すると、関連付けられたソースデータ （{{httpheader("Attribution-Reporting-Register-Source")}} レスポンスヘッダーで指定されたもの） を格納するために、ブラウザーも開始されます。
@@ -88,9 +88,12 @@ HTTP の {{httpheader("Cross-Origin-Opener-Policy")}} ヘッダーが使用さ�
 
 ## 解説
 
-[`Window`](/ja/docs/Web/API/Window) インターフェイスの `open()` メソッドは、 URL を引数として取り、識別する新規または既存のタブまたはウィンドウにリソースを読み込みます。 `target` 引数は、リソースを読み込むウィンドウやタブを決定します。また、 `windowFeatures` 引数は、最小限の UI 機能で新しいポップアップを開き、そのサイズや位置を制御するために使用することができます。
+[`Window`](/ja/docs/Web/API/Window) インターフェイスの `open()` メソッドは、 URL を引数として取り、識別する新規または既存の閲覧コンテキストにリソースを読み込みます。
+`target` 引数は、リソースをどのウィンドウ、タブ、フレームに読み込むかを指定します。また、`windowFeatures` 引数を使用することで、新しいウィンドウの機能（タブにするか、UI 機能を最小限に抑えたポップアップにするか、そのサイズや位置など）を制御できます。
 
-リモートの URL は、すぐには読み込まれません。 `window.open()` から返ったとき、ウィンドウには常に `about:blank` を含んでいます。 URL が実際に読み込まれるまでには猶予期間があり、現在のスクリプトブロックが実行を終えた後に開始されます。ウィンドウの生成と参照されるリソースの読み込みは、非同期に行われます。
+`window.open()` が新しい閲覧コンテキストを作成する場合（つまり、その名前の既存のウィンドウが見つからない場合）、そのウィンドウの内容は当初 `about:blank` になります。
+別の URL が指定された場合、その URL は非同期で読み込まれ、同一オリジンであればそのナビゲーションでグローバルオブジェクトが再利用されるため、読み込み前にウィンドウに設定されたプロパティは維持される可能性があります。
+target が既存のナビゲーション可能なウィンドウ（`_self`、`_parent`、`_top`、または既知のウィンドウ名）を参照している場合、`about:blank` フェーズは発生せず、ブラウザーは既存のコンテキストを直接遷移させます。
 
 現代のブラウザーは厳しいポップアップブロッカーポリシーを持っています。ポップアップウィンドウはユーザーの入力に直接反応して開く必要があり、 `Window.open()` を呼び出すたびに別個のジェスチャーイベントが要求されます。これにより、サイトがたくさんのウィンドウでユーザーをスパムするのを防ぐことができます。しかし、これはマルチウィンドウのアプリケーションでは課題となります。この制限をうまく回避するために、アプリケーションを次のように設計してください。
 
@@ -160,14 +163,10 @@ function openRequestedTab(url, windowName) {
 }
 
 const link = document.querySelector("a[target='OpenWikipediaWindow']");
-link.addEventListener(
-  "click",
-  (event) => {
-    openRequestedTab(link.href);
-    event.preventDefault();
-  },
-  false,
-);
+link.addEventListener("click", (event) => {
+  openRequestedTab(link.href);
+  event.preventDefault();
+});
 ```
 
 上記のコードは、リンクがポップアップを開くことに関連するいくつかのユーザビリティの問題を解決しています。コード中の `event.preventDefault()` の目的は、リンクの既定値のアクションを取り消すことです。`click` のイベントリスナーが実行されれば、リンクの既定値のアクションを実行する必要はありません。しかし、ユーザーのブラウザーで JavaScript のサポートが無効または存在しない場合、 `click` のイベントリスナーは無視され、ブラウザーは `"WikipediaWindowName"` という名前を持つターゲットフレームまたはウィンドウに参照されたリソースを読み込む。フレームやウィンドウに `"WikipediaWindowName"` という名前がない場合、ブラウザーは新しいウィンドウを作成して `"WikipediaWindowName"` という名前を付けます。
@@ -226,14 +225,10 @@ const links = document.querySelectorAll(
   "a[target='SingleSecondaryWindowName']",
 );
 for (const link of links) {
-  link.addEventListener(
-    "click",
-    (event) => {
-      openRequestedSingleTab(link.href);
-      event.preventDefault();
-    },
-    false,
-  );
+  link.addEventListener("click", (event) => {
+    openRequestedSingleTab(link.href);
+    event.preventDefault();
+  });
 }
 ```
 

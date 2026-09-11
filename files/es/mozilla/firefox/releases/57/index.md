@@ -107,7 +107,7 @@ _No hay ningún cambio._
 
 ### HTML
 
-- `<link rel="preload">` (véase [Precargar contenido con rel="preload"](/es/docs/Web/HTML/Attributes/rel/preload)) fue desactivado en Firefox 57 a causa de varios problemas de compatibilidad con la web (p. ej., [Error 1405761 en Firefox](https://bugzil.la/1405761)). Se espera que para Firefox 58 quede lista la versión de reemplazo, la cual funcionará para recursos no almacenables en la antememoria.
+- `<link rel="preload">` (véase [Precargar contenido con rel="preload"](/es/docs/Web/HTML/Reference/Attributes/rel/preload)) fue desactivado en Firefox 57 a causa de varios problemas de compatibilidad con la web (p. ej., [Error 1405761 en Firefox](https://bugzil.la/1405761)). Se espera que para Firefox 58 quede lista la versión de reemplazo, la cual funcionará para recursos no almacenables en la antememoria.
 
 ### API
 
