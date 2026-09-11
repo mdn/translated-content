@@ -8,7 +8,7 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
-Ahora que ya sabes para qué sirve [Express](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#introducing_express), te mostraremos cómo configurar y probar un entorno de desarrollo Node/Express en Windows, Linux (Ubuntu) o macOS. Sin importar el sistema operativo que uses, este artículo te da lo que necesitas para empezar a desarrollar aplicaciones Express.
+Ahora que ya sabes para qué sirve [Express](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#¿qué_son_express_y_node), te mostraremos cómo configurar y probar un entorno de desarrollo Node/Express en Windows, Linux (Ubuntu) o macOS. Sin importar el sistema operativo que uses, este artículo te da lo que necesitas para empezar a desarrollar aplicaciones Express.
 
 <table>
   <tbody>
