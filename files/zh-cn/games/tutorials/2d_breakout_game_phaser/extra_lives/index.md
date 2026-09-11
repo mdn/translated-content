@@ -2,7 +2,7 @@
 title: 额外生命
 slug: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
 l10n:
-  sourceCommit: b729305b4933d9dca398dc95ecb1a0f9aa29ee6b
+  sourceCommit: 1a0be468b9e7c88a09ea3438a81341c4f6a619a6
 ---
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Win_the_game", "Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens")}}
