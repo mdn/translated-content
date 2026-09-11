@@ -30,7 +30,7 @@ Un objet avec les propriétés suivantes&nbsp;:
 - `committed`
   - : Une promesse ({{JSxRef("Promise")}}) qui est complétée lorsque l'URL visible a changé et qu'une nouvelle {{DOMxRef("NavigationHistoryEntry")}} a été créée.
 - `finished`
-  - : Une {{JSxRef("Promise")}} qui est complétée lorsque toutes les promesses retournées par le gestionnaire {{DOMxRef("NavigateEvent.intercept()")}} sont complétées. Cela équivaut à la complétion de la promesse {{DOMxRef("NavigationTransition.finished")}}, lorsque l'évènement {{DOMxRef("Navigation/navigatesuccess_event", "navigatesuccess")}} se déclenche.
+  - : Une promesse ({{JSxRef("Promise")}}) qui est complétée lorsque toutes les promesses retournées par le gestionnaire {{DOMxRef("NavigateEvent.intercept()")}} sont complétées. Cela équivaut à la complétion de la promesse {{DOMxRef("NavigationTransition.finished")}}, lorsque l'évènement {{DOMxRef("Navigation/navigatesuccess_event", "navigatesuccess")}} se déclenche.
 
 Chacune de ces promesses se rompt si la navigation a échoué pour une raison quelconque.
 
