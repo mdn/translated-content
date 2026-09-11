@@ -38,7 +38,7 @@ Los navegadores usan la información contenida en el {{Glossary("Head", "head")}
 
 ## ¿Qué es la cabecera HTML?
 
-Repasemos el sencillo [documento HTML que vimos en el artículo anterior](/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomy_of_an_html_document):
+Repasemos el sencillo [documento HTML que vimos en el artículo anterior](/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomía_de_un_documento_html):
 
 ```html
 <!doctype html>
@@ -211,7 +211,7 @@ Se puede añadir un favicon a tu página de la siguiente manera:
 > [!NOTE]
 > En este ejemplo, la ruta al archivo del favicon comienza con `/`, lo que significa "busca el archivo en el directorio de nivel superior (o _raíz_) de tu sitio". Esto puede estar en un lugar diferente en el código fuente, dependiendo del sistema que uses para crear tu sitio: los frameworks web suelen reservar una carpeta especial para los archivos en la raíz del sitio, como `static` o `public`.
 >
-> No te preocupes demasiado por los detalles de las rutas de archivos por ahora; aprenderás más sobre ellas más adelante (consulta [Una breve introducción a las URL y las rutas](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links#a_quick_primer_on_urls_and_paths) si tienes curiosidad).
+> No te preocupes demasiado por los detalles de las rutas de archivos por ahora; aprenderás más sobre ellas más adelante (consulta [Una breve introducción a las URL y las rutas](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links#primer_acercamiento_a_urls_y_rutas) si tienes curiosidad).
 >
 > La mayoría de los navegadores y aplicaciones de software actuales usan automáticamente un archivo `favicon.ico` que se encuentra en la raíz del sitio como favicon, por lo que muchos sitios ni siquiera se molestan en incluir el elemento `<link>`. Un elemento explícito sigue siendo útil en caso de que quieras ubicar tu archivo de favicon en otro lugar.
 
@@ -264,7 +264,7 @@ Prácticamente todos los sitios web que usarás en la actualidad emplean {{Gloss
   <link rel="stylesheet" href="my-css-file.css" />
   ```
 
-- El elemento {{htmlelement("script")}} también debe ir en la cabecera, y debe incluir un atributo `src` que contenga la ruta al JavaScript que quieres cargar, y `defer` (un [atributo booleano](/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#boolean_attributes)), que le indica al navegador que cargue el JavaScript después de haber terminado de analizar el HTML. El atributo `defer` es útil porque garantiza que todo el HTML esté cargado antes de que se ejecute el JavaScript, de modo que no obtengas errores por intentar acceder a un elemento HTML que todavía no existe en la página. Hay [varias formas](/es/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#script_loading_strategies) de gestionar la carga de JavaScript en tu página, pero esta es la más confiable para los navegadores modernos.
+- El elemento {{htmlelement("script")}} también debe ir en la cabecera, y debe incluir un atributo `src` que contenga la ruta al JavaScript que quieres cargar, y `defer` (un [atributo booleano](/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#atributos_booleanos)), que le indica al navegador que cargue el JavaScript después de haber terminado de analizar el HTML. El atributo `defer` es útil porque garantiza que todo el HTML esté cargado antes de que se ejecute el JavaScript, de modo que no obtengas errores por intentar acceder a un elemento HTML que todavía no existe en la página. Hay [varias formas](/es/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#estrategias_para_la_carga_de_scripts) de gestionar la carga de JavaScript en tu página, pero esta es la más confiable para los navegadores modernos.
 
   ```html
   <script src="my-js-file.js" defer></script>
