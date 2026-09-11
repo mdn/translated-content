@@ -98,7 +98,7 @@ button.setAttribute("onclick", potentiallyUnsafeString);
 
 同様に、{{domxref("HTMLIFrameElement.srcdoc")}} 属性を設定したり、{{domxref("HTMLScriptElement.src")}} または {{domxref("SVGScriptElement.href")}} 属性に信頼できない URL を指定したりすることで、信頼できない HTML を DOM に挿入してしまうことがあります。
 
-これらの課題を軽減するには、それぞれのプロパティに対して文字列ではなく、常に適切な信頼型オブジェクト（{{domxref("TrustedHTML")}}、{{domxref(『TrustedScript』)}}、{{domxref("TrustedScriptURL")}}）を代入し、CSP の  [`require-trusted-types-for`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) ディレクティブを使用して[信頼型を強制する](/ja/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types)ことで、これらの問題を軽減できます。
+これらの課題を軽減するには、それぞれのプロパティに対して文字列ではなく、常に適切な信頼型オブジェクト（{{domxref("TrustedHTML")}}、{{domxref("TrustedScript")}}、{{domxref("TrustedScriptURL")}}）を代入し、CSP の [`require-trusted-types-for`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) ディレクティブを使用して[信頼型を強制する](/ja/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types)ことで、これらの問題を軽減できます。
 これにより、入力は変換関数を通じて処理されることが保証されます。この変換関数では、例えば、HTML に注入される前に、潜在的に危険なマークアップが除去される場合があります。
 
 ## 例
