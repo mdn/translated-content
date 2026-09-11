@@ -62,7 +62,7 @@ Si una caja tiene un tipo de visualización `inline`, entonces:
 
 Algunos elementos HTML, como `<a>`, `<span>`, `<em>` y `<strong>`, usan `inline` como tipo de visualización externa de forma predeterminada.
 
-La disposición en bloque y en línea es la forma predeterminada en la que se comportan las cosas en la web. De forma predeterminada y sin ninguna otra instrucción, los elementos dentro de una caja también se disponen en **[flujo normal](/es/docs/Learn_web_development/Core/CSS_layout/Introduction#normal_layout_flow)** y se comportan como cajas de bloque o en línea.
+La disposición en bloque y en línea es la forma predeterminada en la que se comportan las cosas en la web. De forma predeterminada y sin ninguna otra instrucción, los elementos dentro de una caja también se disponen en **[flujo normal](/es/docs/Learn_web_development/Core/CSS_layout/Introduction#flujo_normal)** y se comportan como cajas de bloque o en línea.
 
 ## Tipos de visualización interna y externa
 
@@ -85,15 +85,15 @@ El siguiente ejemplo tiene tres elementos HTML diferentes, todos con un tipo de 
 - Un párrafo a nivel de bloque, dentro del cual hay dos elementos `<span>`. Estos elementos normalmente serían `inline`; sin embargo, uno de ellos tiene una clase `block` y se establece en `display: block`. Como resultado, esa única palabra comienza en una nueva línea que ocupa todo el ancho de su elemento padre.
 
 ```html live-sample___block
-<p>I am a paragraph. A short one.</p>
+<p>Soy un párrafo. Uno corto.</p>
 <ul>
-  <li>Item One</li>
-  <li>Item Two</li>
-  <li>Item Three</li>
+  <li>Elemento uno</li>
+  <li>Elemento dos</li>
+  <li>Elemento tres</li>
 </ul>
 <p>
-  I am another paragraph. Some of the <span class="block">words</span> have been
-  wrapped in a <span>span element</span>.
+  Soy otro párrafo. Algunas de las <span class="block">palabras</span> se han
+  envuelto en un <span>elemento span</span>.
 </p>
 ```
 
@@ -137,16 +137,16 @@ Para alternar entre los modos de visualización, puedes cambiar `display: inline
 
 ```html live-sample___inline
 <p>
-  I am a paragraph. Some of the
-  <span>words</span> have been wrapped in a <span>span element</span>.
+  Soy un párrafo. Algunas de las <span>palabras</span> se han envuelto en un
+  <span>elemento span</span>.
 </p>
 <ul>
-  <li>Item One</li>
-  <li>Item Two</li>
-  <li>Item Three</li>
+  <li>Elemento uno</li>
+  <li>Elemento dos</li>
+  <li>Elemento tres</li>
 </ul>
-<p class="inline">I am a paragraph. A short one.</p>
-<p class="inline">I am another paragraph. Also a short one.</p>
+<p class="inline">Soy un párrafo. Uno corto.</p>
+<p class="inline">Soy otro párrafo. También uno corto.</p>
 ```
 
 ```css live-sample___inline
@@ -270,8 +270,8 @@ En el siguiente ejemplo, puedes ver dos cajas. Ambas tienen una clase `.box`, qu
 ¿Puedes cambiar el tamaño de la segunda caja (añadiendo CSS a la clase `.alternate`) para que coincida con la primera en ancho y alto?
 
 ```html live-sample___box-models
-<div class="box">I use the standard box model.</div>
-<div class="box alternate">I use the alternate box model.</div>
+<div class="box">Uso el modelo de caja estándar.</div>
+<div class="box alternate">Uso el modelo de caja alternativo.</div>
 ```
 
 ```css live-sample___box-models
@@ -323,7 +323,7 @@ Edita el siguiente ejemplo. Prueba a cambiar los valores de margen para ver cóm
 
 ```html live-sample___margin
 <div class="container">
-  <div class="box">Change my margin.</div>
+  <div class="box">Cambia mi margen.</div>
 </div>
 ```
 
@@ -362,8 +362,8 @@ Puedes probar esto estableciendo el `margin-top` del segundo párrafo en `0`. El
 
 ```html live-sample___margin-collapse
 <div class="container">
-  <p class="one">I am paragraph one.</p>
-  <p class="two">I am paragraph two.</p>
+  <p class="one">Soy el párrafo uno.</p>
+  <p class="two">Soy el párrafo dos.</p>
 </div>
 ```
 
@@ -392,7 +392,7 @@ p {
 Una serie de reglas determinan cuándo los márgenes colapsan y cuándo no. Para más información, consulta la página detallada sobre [cómo dominar el colapso de márgenes](/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing). Lo principal que debes recordar es que el colapso de márgenes es algo que puede ocurrir si estás creando espacio con márgenes y no obtienes el espacio que esperas.
 
 > [!NOTE]
-> [Aprende los márgenes con banderas](https://scrimba.com/frontend-path-c0j/~01e?via=mdn) <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>, de Scrimba, es una lección interactiva que ofrece práctica útil con los márgenes.
+> [Aprende los márgenes con banderas](https://scrimba.com/frontend-path-c0j/~01e?via=mdn) <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup>, de Scrimba, es una lección interactiva que ofrece práctica útil con los márgenes.
 
 ### Bordes
 
@@ -436,7 +436,7 @@ En el siguiente ejemplo hemos usado varias propiedades abreviadas y sin abreviar
 
 ```html live-sample___border
 <div class="container">
-  <div class="box">Change my borders.</div>
+  <div class="box">Cambia mis bordes.</div>
 </div>
 ```
 
@@ -481,7 +481,7 @@ En el siguiente ejemplo, edita los valores de relleno en la clase `.box` y obser
 
 ```html live-sample___padding
 <div class="container">
-  <div class="box">Change my padding.</div>
+  <div class="box">Cambia mi relleno.</div>
 </div>
 ```
 
@@ -515,8 +515,8 @@ En el siguiente ejemplo, tenemos un `<span>` dentro de un párrafo. Le hemos apl
 
 ```html live-sample___inline-box-model
 <p>
-  I am a paragraph and this is a <span>span</span> inside that paragraph. A span
-  is an inline element and so does not respect width and height.
+  Soy un párrafo y este es un <span>span</span> dentro de ese párrafo. Un span
+  es un elemento en línea y por eso no respeta width ni height.
 </p>
 ```
 
@@ -558,8 +558,8 @@ En este siguiente ejemplo, hemos añadido `display: inline-block` a nuestro elem
 
 ```html live-sample___inline-block
 <p>
-  I am a paragraph and this is a <span>span</span> inside that paragraph. A span
-  is an inline element and so does not respect width and height.
+  Soy un párrafo y este es un <span>span</span> dentro de ese párrafo. Un span
+  es un elemento en línea y por eso no respeta width ni height.
 </p>
 ```
 
@@ -594,9 +594,9 @@ Añade `display: inline-block;` a la regla con el selector `.links-list a`, y ve
 ```html live-sample___inline-block-nav
 <nav>
   <ul class="links-list">
-    <li><a href="">Link one</a></li>
-    <li><a href="">Link two</a></li>
-    <li><a href="">Link three</a></li>
+    <li><a href="">Enlace uno</a></li>
+    <li><a href="">Enlace dos</a></li>
+    <li><a href="">Enlace tres</a></li>
   </ul>
 </nav>
 ```
