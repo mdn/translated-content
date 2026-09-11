@@ -127,7 +127,7 @@ A veces tiene sentido incrustar contenido de terceros — como videos de YouTube
 
 Además de la seguridad, también debes ser consciente de los problemas de propiedad intelectual. La mayoría del contenido tiene derechos de autor, tanto fuera de línea como en línea, incluso contenido que quizás no esperarías (por ejemplo, la mayoría de las imágenes en [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)). Nunca muestres contenido en tu página web a menos que te pertenezca o que sus dueños te hayan dado un permiso escrito e inequívoco. Las penalizaciones por infracción de derechos de autor son severas. De nuevo, nunca puedes ser demasiado cauteloso.
 
-Si el contenido tiene licencia, debes obedecer los términos de esa licencia. Por ejemplo, el contenido de MDN está [licenciado bajo CC-BY-SA](/es/docs/MDN/Writing_guidelines/Attrib_copyright_license#documentation). Eso significa que debes [darnos crédito de forma adecuada](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution) cuando cites nuestro contenido, incluso si haces cambios sustanciales.
+Si el contenido tiene licencia, debes obedecer los términos de esa licencia. Por ejemplo, el contenido de MDN está [licenciado bajo CC-BY-SA](/es/docs/MDN/Writing_guidelines/Attrib_copyright_license#documentación). Eso significa que debes [darnos crédito de forma adecuada](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution) cuando cites nuestro contenido, incluso si haces cambios sustanciales.
 
 #### Usa HTTPS
 
@@ -219,8 +219,8 @@ Veamos un ejemplo de `<object>` que incrusta un PDF en una página (mira el [eje
 ```html
 <object data="my-pdf.pdf" type="application/pdf" width="800" height="1200">
   <p>
-    You don't have a PDF plugin, but you can
-    <a href="my-pdf.pdf">download the PDF file. </a>
+    No tienes un complemento para PDF, pero puedes
+    <a href="my-pdf.pdf">descargar el archivo PDF. </a>
   </p>
 </object>
 ```
