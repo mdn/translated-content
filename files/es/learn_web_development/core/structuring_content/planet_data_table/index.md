@@ -38,11 +38,7 @@ Para comenzar esta evaluación, crea una copia local de [blank-template.html](ht
 
 Estás trabajando en la escuela; tus estudiantes están estudiando los planetas de nuestro sistema solar y quieres proporcionarles una forma sencilla de seguir los datos para buscar hechos sobre los planetas. Una tabla HTML sería ideal — tienes que coger los datos que tienes disponibles y convertirlos en una tabla siguiendo los pasos de abajo.
 
-La tabla finalizada debería de verse así:
-
-![](assessment-table.png)
-
-También puedes ver el ejemplo [aquí](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) (no mires el código fuente — ¡no hagas trampas!)
+Puedes ver cómo debería quedar la tabla finalizada en el ejemplo [aquí](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) (no mires el código fuente — ¡no hagas trampas!)
 
 ## Pasos para completarlo
 

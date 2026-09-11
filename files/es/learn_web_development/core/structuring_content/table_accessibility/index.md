@@ -48,7 +48,7 @@ Como puedes deducir a partir del breve ejemplo anterior, el título debe contene
 Los subtítulos se colocan directamente debajo de la etiqueta `<table>`.
 
 > [!NOTE]
-> El atributo [`summary`](/es/docs/Web/HTML/Reference/Elements/table#summary) también se puede usar en el elemento `table` para proporcionar una descripción; los lectores de pantalla también lo leen. Sin embargo, recomendamos usar el elemento `caption`, porque [`summary`](/es/docs/Web/HTML/Reference/Elements/table#summary) está {{glossary("obsoleto")}} conforme a la especificación HTML5 y porque los usuarios sin discapacidad visual no pueden leerlo (no aparece en la página).
+> El atributo [`summary`](/es/docs/Web/HTML/Reference/Elements/table#summary) también se puede usar en el elemento `table` para proporcionar una descripción; los lectores de pantalla también lo leen. Sin embargo, recomendamos usar el elemento `caption`, porque [`summary`](/es/docs/Web/HTML/Reference/Elements/table#summary) está obsoleto y porque los usuarios sin discapacidad visual no pueden leerlo (no aparece en la página).
 
 ### Aprendizaje activo: Añadir un subtítulo
 
