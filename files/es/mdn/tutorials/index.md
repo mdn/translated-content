@@ -32,7 +32,7 @@ Estos recursos son creados por empresas y desarrolladores web con visión de fut
 
 - [Multimedia e inserción](/es/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b)
   - : Este módulo explora cómo usar HTML para incluir multimedia en sus páginas web, incluidas las diferentes formas en que se pueden incluir imágenes y cómo incrustar video, audio e incluso otras páginas web completas.
-- [Tablas HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics)
+- [Tablas HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
   - : Representar datos tabulares en una página web de una manera {{glossary("Accessibility", "accesible")}} y comprensible puede ser un desafío. Este módulo cubre el marcado básico de tablas, junto con funciones más complejas, como la implementación de subtítulos y resúmenes.
 
 ### Nivel avanzado

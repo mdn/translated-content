@@ -16,7 +16,7 @@ Aplicar estilos a una tabla HTML no es el trabajo más interesante del mundo, pe
         Conocimientos básicos de HTML (véase
         <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción a HTML</a
-        >) y <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics">tablas HTML</a>, y nociones de
+        >) y <a href="/es/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics">tablas HTML</a>, y nociones de
         cómo funciona el CSS (véase
         <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Introducción al CSS</a>.)
       </td>
