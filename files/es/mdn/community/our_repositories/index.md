@@ -2,7 +2,6 @@
 title: Repositorios de GitHub de MDN
 short-title: Repositorios de GitHub
 slug: MDN/Community/Our_repositories
-page-type: mdn-community-guide
 l10n:
   sourceCommit: 405633ae19118004716a450d26ad3916b0cc86fa
 ---
