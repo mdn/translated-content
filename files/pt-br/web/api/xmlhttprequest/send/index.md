@@ -26,7 +26,7 @@ XMLHttpRequest.send(body)
 
     Se nenhum valor for espeficicado para o corpo, o valor padrão de `null` é usado.
 
-A melhor maneira de enviar conteúdo binário (por exemplo, em uploads de arquivos) é usando um {{domxref("ArrayBufferView")}} ou {{domxref("Blob")}} em conjunto com o método `send()`.
+A melhor maneira de enviar conteúdo binário (por exemplo, em uploads de arquivos) é usando um {{jsxref("TypedArray")}} ou {{domxref("Blob")}} em conjunto com o método `send()`.
 
 ### Valor retornado
 

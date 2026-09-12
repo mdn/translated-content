@@ -25,7 +25,7 @@ _Essa interface também herda propriedades do seu pai, {{domxref("EventTarget")}
 - {{domxref("EventSource.url")}} {{readonlyinline}}
   - : Uma {{jsxref("String")}} representando a URL da origem.
 - {{domxref("EventSource.withCredentials")}} {{readonlyinline}}
-  - : Um {{domxref("Boolean")}} indicando se a `EventSource` foi instanciada com credenciais cross-origin ([CORS](/pt-BR/docs/Web/HTTP/Guides/CORS)) definidas (`true`) ou não (`false`, o padrão).
+  - : Um {{jsxref("Boolean")}} indicando se a `EventSource` foi instanciada com credenciais cross-origin ([CORS](/pt-BR/docs/Web/HTTP/Guides/CORS)) definidas (`true`) ou não (`false`, o padrão).
 
 ### Eventos
 
