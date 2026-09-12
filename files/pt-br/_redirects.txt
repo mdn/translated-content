@@ -562,8 +562,9 @@
 /pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks	/pt-BR/docs/Learn_web_development/Core/Frameworks_libraries
 /pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Comecando_com_React	/pt-BR/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started
 /pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started	/pt-BR/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started
-/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started	/pt-BR/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
-/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_iniciando	/pt-BR/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
+/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started	/pt-BR/docs/conflicting/Learn_web_development/Core/Frameworks_libraries
+/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_iniciando	/pt-BR/docs/conflicting/Learn_web_development/Core/Frameworks_libraries
+/pt-BR/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started	/pt-BR/docs/conflicting/Learn_web_development/Core/Frameworks_libraries
 /pt-BR/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables	/pt-BR/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables
 /pt-BR/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics	/pt-BR/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
 /pt-BR/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/pt-BR/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
