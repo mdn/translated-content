@@ -30,13 +30,13 @@ slug: Web/API/Blob
 ## 인스턴스 메서드
 
 - {{DOMxRef("Blob.prototype.arrayBuffer()")}}
-  - : `Blob`의 전체 내용을 이진 데이터로 담은 {{domxref("ArrayBuffer")}}로 이행하는 프로미스를 반환합니다
+  - : `Blob`의 전체 내용을 이진 데이터로 담은 {{jsxref("ArrayBuffer")}}로 이행하는 프로미스를 반환합니다
 - {{domxref("Blob.prototype.slice()")}}
   - : 메서드를 호출한 블롭의 바이트를 주어진 시작 바이트와 끝 바이트 범위에서 복제해 새로운 `Blob` 객체를 생성하고 반환합니다.
 - {{domxref("Blob.prototype.stream()")}}
   - : `Blob`의 콘텐츠를 읽을 수 있는 {{domxref("ReadableStream")}}을 반환합니다.
 - {{domxref("Blob.prototype.text()")}}
-  - : `Blob`의 전체 내용을 UTF-8 텍스트로 담은 {{domxref("USVString")}}으로 이행하는 프로미스를 반환합니다.
+  - : `Blob`의 전체 내용을 UTF-8 텍스트로 담은 {{jsxref("String")}}으로 이행하는 프로미스를 반환합니다.
 
 ## 예제
 

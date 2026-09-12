@@ -21,8 +21,8 @@ _{{domxref("AudioNodeOptions")}} dictionary로부터 매개변수를 상속받�
   - : 여러분이 노드가 관련되기를 바라는 오디오 컨텍스트를 나타내는 {{domxref("BaseAudioContext")}}
 - `options` {{optional_inline}}
   - : 여러분이 `PeriodicWave`가 가지기를 바라는 속성들을 정의하는 [`PeriodicWaveOptions`](https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveOptions) dictionary 객체 (이것은 또한 [PeriodicWaveConstraints](https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveConstraints)
-    dictionary에 정의된 옵션들도 상속받습니다.):\* `real`: 여러분이 파동을 형성하기 위해 사용하기를 원하는 코사인 항을 포함하는 {{domxref("Float32Array")}} ({{domxref("BaseAudioContext.createPeriodicWave")}}의 `real` 매개변수와 동일)
-    - `imag`: 여러분이 파동을 형성하기 위해 사용하기를 원하는 사인 항을 포함하는 {{domxref("Float32Array")}} ({{domxref("BaseAudioContext.createPeriodicWave")}}의 `imag` 매개변수와 동일)
+    dictionary에 정의된 옵션들도 상속받습니다.):\* `real`: 여러분이 파동을 형성하기 위해 사용하기를 원하는 코사인 항을 포함하는 {{jsxref("Float32Array")}} ({{domxref("BaseAudioContext.createPeriodicWave")}}의 `real` 매개변수와 동일)
+    - `imag`: 여러분이 파동을 형성하기 위해 사용하기를 원하는 사인 항을 포함하는 {{jsxref("Float32Array")}} ({{domxref("BaseAudioContext.createPeriodicWave")}}의 `imag` 매개변수와 동일)
 
 ### 반환 값
 

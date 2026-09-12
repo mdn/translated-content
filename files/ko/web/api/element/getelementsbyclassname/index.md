@@ -18,7 +18,7 @@ var elements = element.getElementsByClassName(names);
 ### Parameters
 
 - `names`
-  - : 검색할 클래스 혹은 클래스들을 띄어쓰기로 구분한 {{domxref("DOMString")}}
+  - : 검색할 클래스 혹은 클래스들을 띄어쓰기로 구분한 {{jsxref("String")}}
 
 ### Return value
 

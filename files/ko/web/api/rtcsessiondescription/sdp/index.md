@@ -5,7 +5,7 @@ slug: Web/API/RTCSessionDescription/sdp
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-읽기 속성인 **`RTCSessionDescription.sdp`** 는 세션에 대해 설명해주는 {{Glossary("SDP")}}를 가지고 있는 {{domxref("DOMString")}}입니다.
+읽기 속성인 **`RTCSessionDescription.sdp`** 는 세션에 대해 설명해주는 {{Glossary("SDP")}}를 가지고 있는 {{jsxref("String")}}입니다.
 
 ## Syntax
 
@@ -16,7 +16,7 @@ sessionDescription.sdp = value;
 
 ### 값
 
-아래와 같이 SDP 메세지를 포함하고 있는 {{domxref("DOMString")}}값 입니다.
+아래와 같이 SDP 메세지를 포함하고 있는 {{jsxref("String")}}값 입니다.
 
 ```
 v=0

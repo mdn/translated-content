@@ -20,7 +20,7 @@ var aKeyName = storage.key(index);
 
 ### Return value
 
-key 이름을 포함한 {{domxref("DOMString")}} 입니다.
+key 이름을 포함한 {{jsxref("String")}} 입니다.
 
 ## 예제
 
