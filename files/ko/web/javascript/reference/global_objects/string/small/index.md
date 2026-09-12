@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5a2cea779777daaff451f21ca3b7f4c28a68de9e
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("String")}} 값의 **`small()`** 메서드는 문자열을 작은 폰트로 표시되도록 하는 {{HTMLElement("small")}} 요소(`<small>str</small>`)에 안에 들어가는 문자열을 생성합니다.
 

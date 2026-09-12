@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5a2cea779777daaff451f21ca3b7f4c28a68de9e
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("String")}} 값의 **`anchor()`** 메서드는 name(`<a name="...">str</a>`)이 있는 {{HTMLElement("a")}} 요소 안에 해당 문자열을 집어넣은 문자열을 생성합니다.
 

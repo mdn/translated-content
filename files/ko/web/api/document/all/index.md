@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e8e22a6e6d6455222c8c1a1e1346a149d300ab35
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 {{DOMxRef("Document")}} 읽기전용 인터페이스인 **`all`** 속성은 문서 노드에 위치한{{DOMxRef("HTMLAllCollection")}} 반환합니다.
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5a2cea779777daaff451f21ca3b7f4c28a68de9e
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("String")}} 값의 **`link()`** 메서드는 이 문자열을 {{HTMLElement("a")}} 요소(`<a href="...">str</a>`)에 포함하는 문자열을 생성해, 다른 URL에 대한 하이퍼텍스트 링크로 사용할 수 있도록 합니다.
 

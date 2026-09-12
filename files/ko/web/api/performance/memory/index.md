@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---
 
-{{APIRef("Performance API")}} {{Deprecated_Header}}{{Non-standard_header}}
+{{APIRef("Performance API")}} {{Non-standard_header}}
 
 비표준이자 레거시 `performance.memory` 속성은 JavaScript 힙의 크기를 반환하며, 이는 웹사이트의 메모리 사용량을 측정하고 줄이는 데 도움이 될 수 있습니다.
 
