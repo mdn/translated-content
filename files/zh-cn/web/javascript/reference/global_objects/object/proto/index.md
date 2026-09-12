@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 ---
 
 > [!WARNING]
-> 由于现代 JavaScript 引擎优化属性访问的性质，修改一个对象的 `[[Prototype]]` 在每个浏览器和 JavaScript 引擎中都是非常缓慢的操作。此外，修改继承的效果是微妙和广泛的，不仅限于在 `obj.__proto__ = ...` 语句中花费的时间，而是可能扩展到***任何***有访问任何已经被修改过 `[[Prototype]]` 的对象的代码。你可以在这里阅读更多信息：[JavaScript 引擎基础：优化原型](https://mathiasbynens.be/notes/prototypes)。
+> 由于现代 JavaScript 引擎优化属性访问的性质，修改一个对象的 `[[Prototype]]` 在每个浏览器和 JavaScript 引擎中都是非常缓慢的操作。此外，修改继承的效果是微妙和广泛的，不仅限于在 `obj.__proto__ = ...` 语句中花费的时间，而是可能扩展到***任何***有访问任何已经被修改过 `[[Prototype]]` 的对象的代码。你可以在这里阅读更多信息：[JavaScript 引擎基础：优化原型](https://hijiangtao.github.io/2018/08/21/Prototypes)。
 
 > [!NOTE]
 > 使用 `__proto__` 是有争议且不被鼓励的。它的存在和确切行为仅作为遗留特性被标准化，以确保 Web 兼容性，但它存在一些安全问题和隐患。为了更好的支持，请优先使用 {{JSxRef("Object.getPrototypeOf()")}}/{{JSxRef("Reflect.getPrototypeOf()")}} 和 {{JSxRef("Object.setPrototypeOf()")}}/{{JSxRef("Reflect.setPrototypeOf()")}}。
