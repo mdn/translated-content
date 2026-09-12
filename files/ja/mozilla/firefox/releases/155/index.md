@@ -14,7 +14,7 @@ Firefox 155 は、米国時間 [2026 年 9 月 1 日](https://whattrainisitnow.c
 ### 開発者ツール
 
 - [ルールビュー](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html) のメディア特性エミュレーションボタンが専用のエミュレーションパネルに集約され、`@` ボタンを使用して開くようになりました。
-  このパネルには {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} メディア特性のエミュレーションも追加しました ([Firefox bug 1692434](https://bugzil.la/1692434) および [Firefox bug 1477920](https://bugzil.la/1477920))。 
+  このパネルには {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} メディア特性のエミュレーションも追加しました ([Firefox bug 1692434](https://bugzil.la/1692434) および [Firefox bug 1477920](https://bugzil.la/1477920))。
 - [JSON ビューワー](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) が [JSON Lines](https://jsonlines.org/) (NDJSON) ドキュメントを開くようになりました。これは `application/jsonl`、`application/jsonlines`、`application/x-ndjson`、`text/jsonl` あるいは `.jsonl` ファイル拡張子で提供されます。
   各行は個別に解析されてそれぞれが折りたたみ可能な項目になり、元の行番号がラベルとしてつきます。また、解析が失敗した行はドキュメントの残りに影響を与えることなく、インラインで報告します ([Firefox bug 2055774](https://bugzil.la/2055774)、[Firefox bug 2060972](https://bugzil.la/2060972)、[Firefox bug 2060529](https://bugzil.la/2060529))。
 - [デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) で、ブレークポイントを無効化するキーボードショートカットを追加しました ([Firefox bug 1642578](https://bugzil.la/1642578))。
