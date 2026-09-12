@@ -14,9 +14,9 @@ Firefox 155 は、米国時間 [2026 年 9 月 1 日](https://whattrainisitnow.c
 ### 開発者ツール
 
 - [ルールビュー](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html) のメディア特性エミュレーションボタンが専用のエミュレーションパネルに集約され、`@` ボタンを使用して開くようになりました。
-  このパネルには {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} メディア特性のエミュレーションも追加しました ([Firefox bug 1692434](https://bugzil.la/1692434) and [Firefox bug 1477920](https://bugzil.la/1477920))。
+  このパネルには {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} メディア特性のエミュレーションも追加しました ([Firefox bug 1692434](https://bugzil.la/1692434) および [Firefox bug 1477920](https://bugzil.la/1477920))。 
 - [JSON ビューワー](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) が [JSON Lines](https://jsonlines.org/) (NDJSON) ドキュメントを開くようになりました。これは `application/jsonl`、`application/jsonlines`、`application/x-ndjson`、`text/jsonl` あるいは `.jsonl` ファイル拡張子で提供されます。
-  各行は個別に解析されてそれぞれが折りたたみ可能な項目になり、元の行番号がラベルとしてつきます。また、解析が失敗した行はドキュメントの残りに影響を与えることなく、インラインで報告します ([Firefox bug 2055774](https://bugzil.la/2055774), [Firefox bug 2060972](https://bugzil.la/2060972), and [Firefox bug 2060529](https://bugzil.la/2060529))。
+  各行は個別に解析されてそれぞれが折りたたみ可能な項目になり、元の行番号がラベルとしてつきます。また、解析が失敗した行はドキュメントの残りに影響を与えることなく、インラインで報告します ([Firefox bug 2055774](https://bugzil.la/2055774)、[Firefox bug 2060972](https://bugzil.la/2060972)、[Firefox bug 2060529](https://bugzil.la/2060529))。
 - [デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) で、ブレークポイントを無効化するキーボードショートカットを追加しました ([Firefox bug 1642578](https://bugzil.la/1642578))。
 
 ### HTML
@@ -34,7 +34,7 @@ Firefox 155 は、米国時間 [2026 年 9 月 1 日](https://whattrainisitnow.c
   この結果は、たとえば `opacity: calc(0.4 + progress(100cqw, 300px, 900px) * 0.6)` のように、ほかの値を計算することにも使用できます ([Firefox bug 2047345](https://bugzil.la/2047345))。
 - {{cssxref("color_value/alpha", "alpha()")}} CSS 関数をサポートしました。
   これにより色を渡すことで、ほかの色の成分を変更せずにアルファ値 (透過度) が異なる色を取得できます。
-  関数の内部では、たとえば `alpha(from var(--brand) / calc(alpha * 0.5))` のように、元の色のアルファチャネルを参照するために `alpha` キーワードを使用できます ([Firefox bug 2059738](https://bugzil.la/2059738) and [Firefox bug 2059988](https://bugzil.la/2059988))。
+  関数の内部では、たとえば `alpha(from var(--brand) / calc(alpha * 0.5))` のように、元の色のアルファチャネルを参照するために `alpha` キーワードを使用できます ([Firefox bug 2059738](https://bugzil.la/2059738) および [Firefox bug 2059988](https://bugzil.la/2059988))。
 - {{cssxref("font-width")}} CSS プロパティを、{{cssxref("@font-face")}} 記述子の {{cssxref("@font-face/font-width", "font-width")}} および `CSSStyleDeclaration.fontWidth` プロパティとともにサポートしました。
   これは {{cssxref("font-stretch")}} プロパティの新しい名称であり、font-stretch は旧称のエイリアスとして機能し続けます。
   計算されたスタイルの列挙では、`font-stretch` ではなく `font-width` が返るようになったことに注意してください ([Firefox bug 1911075](https://bugzil.la/1911075))。
@@ -45,7 +45,7 @@ Firefox 155 は、米国時間 [2026 年 9 月 1 日](https://whattrainisitnow.c
   これらはイテラブルに代わってプロミスのオブジェクトを受け取ることを除いて、それぞれ {{jsxref("Promise.all()")}} および {{jsxref("Promise.allSettled()")}} と同様に動作します。これらは同じキーを持つオブジェクトで履行するため、位置の代わりに名前によって結果を読み取ることができます ([Firefox bug 2057270](https://bugzil.la/2057270))。
 - ネットワークエラーや誤った [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types) のために読み込みが失敗した [モジュール](/ja/docs/Web/JavaScript/Guide/Modules) が失敗としてキャッシュされなくなり、サーバーが復旧すると同じモジュール指定子による再インポートが成功します。
   これは JavaScript、[JSON](/ja/docs/Web/JavaScript/Reference/Statements/import/with#json_modules_type_json)、[CSS](/ja/docs/Web/JavaScript/Reference/Statements/import/with#css_modules_type_css)、[テキスト](/ja/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text) の各モジュールに対して、ウィンドウとワーカーの両方で、静的および [動的インポート](/ja/docs/Web/JavaScript/Reference/Operators/import) 双方に適用されます。
-  これに関連して、[`<link rel="modulepreload">`](/ja/docs/Web/HTML/Reference/Attributes/rel/modulepreload) で、取得済みまたは取得中のモジュールに対して {{domxref("HTMLElement/error_event", "error")}} ではなく {{domxref("HTMLElement/load_event", "load")}} イベントが発生するようになりました。またモジュールスクリプトが、以前に同じ URL での `modulepreload` が [完全性の検証](/ja/docs/Web/Security/Defenses/Subresource_Integrity) に失敗した場合でも読み込まれるようになりました ([Firefox bug 2055211](https://bugzil.la/2055211) and [Firefox bug 2052949](https://bugzil.la/2052949))。
+  これに関連して、[`<link rel="modulepreload">`](/ja/docs/Web/HTML/Reference/Attributes/rel/modulepreload) で、取得済みまたは取得中のモジュールに対して {{domxref("HTMLElement/error_event", "error")}} ではなく {{domxref("HTMLElement/load_event", "load")}} イベントが発生するようになりました。またモジュールスクリプトが、以前に同じ URL での `modulepreload` が [完全性の検証](/ja/docs/Web/Security/Defenses/Subresource_Integrity) に失敗した場合でも読み込まれるようになりました ([Firefox bug 2055211](https://bugzil.la/2055211) および [Firefox bug 2052949](https://bugzil.la/2052949))。
 
 ### HTTP
 
