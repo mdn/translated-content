@@ -3,7 +3,7 @@ title: Сборка Angular приложений и другие ресурсы
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_building
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 В финальной статье об Angular рассказывается, как создать полностью готовое приложение и предоставляются дополнительные ресурсы, которые помогут вам продолжить обучение
 
@@ -60,7 +60,7 @@ CLI компилирует приложение и помещает резуль
 
 На этом пока все. Надеемся, вам понравилось работать с Angular!
 
-{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 ## В это модуле
 
