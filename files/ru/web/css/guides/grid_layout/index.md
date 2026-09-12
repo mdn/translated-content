@@ -100,9 +100,9 @@ slug: Web/CSS/Guides/Grid_layout
 - {{cssxref("grid-row")}}
 - {{cssxref("grid-column")}}
 - {{cssxref("grid-area")}}
-- {{cssxref("grid-row-gap")}}
-- {{cssxref("grid-column-gap")}}
-- {{cssxref("grid-gap")}}
+- {{cssxref("row-gap")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
 
 ### CSS функции
 
