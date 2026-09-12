@@ -16,7 +16,7 @@ tableauDonnees.copyFromChannel(destination, numeroCanal, decalageDebut);
 ### Paramètres
 
 - _destination_
-  - : Un tableau {{domxref("Float32Array")}} dans lequel copier les données.
+  - : Un tableau {{jsxref("Float32Array")}} dans lequel copier les données.
 - _channelNumber_
   - : Le numéro du canal de l'AudioBuffer depuis lequel copier les données. Si _channelNumber_ est supérieur ou égal à {{domxref("AudioBuffer.numberOfChannels")}}, une exception `INDEX_SIZE_ERR est` levée.
 - _startInChannel_ {{optional_inline}}

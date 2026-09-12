@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
 ---
 
-{{jsSidebar("Errors")}}
-
 L'exception JavaScript <i lang="en">"can't convert BigInt to number"</i> se produit lorsqu'une opération arithmétique porte sur un mélange de valeurs [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) et [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number).
 
 ## Message

@@ -3,8 +3,6 @@ title: let
 slug: Web/JavaScript/Reference/Statements/let
 ---
 
-{{jsSidebar("Statements")}}
-
 L'instruction **`let`** permet de déclarer une variable dont la portée est celle du bloc courant, éventuellement en initialisant sa valeur.
 
 {{InteractiveExample("JavaScript Demo: Statement - Let")}}

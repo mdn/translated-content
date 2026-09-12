@@ -19,7 +19,7 @@ var result = element.matches(selectorString);
 
 ### Valor devuelto
 
-`result` es un {{domxref("Boolean")}}.
+`result` es un {{jsxref("Boolean")}}.
 
 ### Excepciones
 

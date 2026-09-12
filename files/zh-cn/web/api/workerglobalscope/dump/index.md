@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e8fe043f7d2ad7cd9804d1bf96e0310949f1dac7
 ---
 
-{{APIRef("Web Workers API")}}{{Non-standard_Header}}{{Deprecated_Header}}{{AvailableInWorkers("worker")}}
+{{APIRef("Web Workers API")}}{{Non-standard_Header}}{{AvailableInWorkers("worker")}}
 
 **`WorkerGlobalScope.dump()`** 方法将消息记录到浏览器的标准输出（`stdout`）。如果浏览器是从终端启动的，则通过 `dump()` 输出的内容将显示在终端中。这与 {{domxref("Window.dump()")}} 相同，但适用于 worker。
 

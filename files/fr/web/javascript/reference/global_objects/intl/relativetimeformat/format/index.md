@@ -3,7 +3,7 @@ title: "Intl.RelativeTimeFormat : méthode format()"
 short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
 l10n:
-  sourceCommit: 1474534461893381d54c502e655f334b5568e597
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 La méthode **`format()`** des instances de {{JSxRef("Intl.RelativeTimeFormat")}} permet de formater une `valeur` et une `unité` en fonction de la locale et des options de formatage de cet objet `Intl.RelativeTimeFormat`.
@@ -67,7 +67,7 @@ rtf.format(1, "day"); // "in 1 day"
 
 ### Utiliser l'option `auto`
 
-Si l'option `numeric: "auto"` est passée, elle produit la chaîne de caractères `yesterday`, `today` ou `tomorrow` au lieu de `1 day ago`, `in 0 days` ou `in 1 day`. Cela permet de ne pas toujours avoir à utiliser des valeurs numériques dans le résultat.
+Si l'option `numeric: "auto"` est passée, elle produit la chaîne de caractères `yesterday`, `today` ou `tomorrow` au lieu de `1 day ago`, `in 0 days` ou `in 1 day`. Cela vous permet d'éviter d'utiliser des valeurs numériques dans le résultat.
 
 ```js
 // Créer un formateur de temps relatif dans votre locale

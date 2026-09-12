@@ -1,18 +1,52 @@
-name: "Pull Request Labeler"
+name: PR labeler
+
 on:
   - pull_request_target
 
 permissions:
-  contents: read
+  # Patch issues, see: https://github.com/CodelyTV/pr-size-labeler/pull/89
+  issues: write
+  # Label pull requests.
   pull-requests: write
+  # Fetch files (used by actions/labeler to get config).
+  contents: read
 
 jobs:
-  triage:
-    # do not run on PRs in forks
-    if: github.repository == 'mdn/translated-content'
+  # Docs: https://github.com/actions/labeler
+  label-by-path:
+    # do not run on forks
+    if: github.repository_owner == 'mdn'
+    name: Label by path
     runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@bf12e9b00b37c5c0ca2b87b79b2daf7891dbda13 # v7.0.0
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           sync-labels: true
+
+  # Docs: https://github.com/CodelyTV/pr-size-labeler
+  label-by-size:
+    # do not run on forks
+    if: github.repository_owner == 'mdn'
+    needs: label-by-path
+    name: Label by size
+    runs-on: ubuntu-latest
+    steps:
+      - uses: codelytv/pr-size-labeler@095a41fca88b8764fd9e008ad269bcdb82bb38b9 # v1.10.4
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_api_url: "https://api.github.com"
+          xs_label: "size/xs"
+          xs_max_size: "5"
+          s_label: "size/s"
+          s_max_size: "50"
+          m_label: "size/m"
+          m_max_size: "500"
+          l_label: "size/l"
+          l_max_size: "1000"
+          xl_label: "size/xl"
+          fail_if_xl: "false"
+          message_if_xl: ""
+          files_to_ignore: |
+            "files/*/_redirects.txt"
+            "files/*/_wikihistory.json"

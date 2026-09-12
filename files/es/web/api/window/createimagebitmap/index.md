@@ -6,7 +6,7 @@ original_slug: Web/API/createImageBitmap
 
 {{APIRef("Canvas API")}}
 
-El método **`createImageBitmap()`** crea un _bitmap_ a partir de un recurso especificado, opcionalmente recortado para mostrar únicamente una porción de este. El método existe a nivel global como parte, tanto de las ventanas (_window_), como de los _workers_. Este admite una variedad de tipos de entrada, y devuelve una {{domxref("Promise")}} que es resuelta con un {{domxref("ImageBitmap")}}.
+El método **`createImageBitmap()`** crea un _bitmap_ a partir de un recurso especificado, opcionalmente recortado para mostrar únicamente una porción de este. El método existe a nivel global como parte, tanto de las ventanas (_window_), como de los _workers_. Este admite una variedad de tipos de entrada, y devuelve una {{jsxref("Promise")}} que es resuelta con un {{domxref("ImageBitmap")}}.
 
 ## Sintaxis
 
@@ -38,7 +38,7 @@ createImageBitmap(image, sx, sy, sw, sh[, options]).then(function(response) { ..
 
 ### Valor devuelto
 
-Una {{domxref("Promise")}} que es resuelta con un objeto {{domxref("ImageBitmap")}}, el cual contiene los datos del mapa de bits generado para el rectángulo dado.
+Una {{jsxref("Promise")}} que es resuelta con un objeto {{domxref("ImageBitmap")}}, el cual contiene los datos del mapa de bits generado para el rectángulo dado.
 
 ## Ejemplo
 

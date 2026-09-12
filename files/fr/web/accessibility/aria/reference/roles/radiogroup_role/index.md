@@ -143,7 +143,7 @@ Dans cet exemple avec {{HTMLElement("fieldset")}}, le rôle `radiogroup` n'est p
 ## Voir aussi
 
 - L'élément HTML {{HTMLElement("fieldset")}}
-- L'élément HTML {{HTMLElement("input/radio", "&lt;input type="radio"&gt;")}} de bouton radio
+- L'élément HTML `{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}` de bouton radio
 - [ARIA&nbsp;: rôle `radio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
 - [`aria-errormessage`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
 - [`aria-invalid`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)

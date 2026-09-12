@@ -2,12 +2,12 @@
 title: WebRTC API
 slug: Web/API/WebRTC_API
 l10n:
-  sourceCommit: 9716100b38b40f0f2ee8b3bfa2c692958868c5a6
+  sourceCommit: a544f6d64dc65d37bbf06282f95ff013c5a24a7f
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
 
-**WebRTC** (Web Real-Time Communication、ウェブリアルタイムコミュニケーション) は、ウェブアプリケーションやウェブサイトにて、仲介を必要とせずにブラウザー間で直接、任意のデータの交換や、キャプチャした音声／映像ストリームの送受信を可能にする技術です。 WebRTC に関する一連の標準規格は、ユーザーがプラグインやサードパーティ製ソフトウェアをインストールすることなく、ピアーツーピアーにて、データ共有や遠隔会議を実現することを可能にします。
+**WebRTC** (Web Real-Time Communication、ウェブリアルタイム通信) は、ウェブアプリケーションやウェブサイトにて、仲介を必要とせずにブラウザー間で直接、任意のデータの交換や、キャプチャした音声／映像ストリームの送受信を可能にする技術です。 WebRTC に関する一連の標準規格により、ユーザーがプラグインやサードパーティ製ソフトウェアをインストールすることなく、ピアーツーピアーにて、データ共有や遠隔会議を実現することができます。
 
 WebRTC は、相互に関連したいくつかの API とプロトコルで構成されており、これらが連携してこれを実現しています。ここで紹介するドキュメントでは、WebRTC の基礎知識、データ接続とメディア接続、両方の設定方法と、使用方法などを理解するのに役立ちます。
 
@@ -46,11 +46,11 @@ WebRTC は、様々なタスクを達成するために連携して動作する�
 - {{DOMxRef("RTCStatsReport")}}
   - : 接続または接続上の個々のトラックの統計情報の詳細を提供します。{{DOMxRef("RTCPeerConnection.getStats()")}} を呼び出すと報告を取得できます。
 - {{DOMxRef("RTCIceCandidate")}}
-  - : {{DOMxRef("RTCPeerConnection")}} を確立するための {{Glossary("ICE")}}(インタラクティブ接続確立) サーバーの候補を表します。
+  - : {{DOMxRef("RTCPeerConnection")}} を確立するための {{Glossary("ICE")}}(インタラクティブ接続確立) 構成の候補を表します。
 - {{DOMxRef("RTCIceTransport")}}
   - : {{Glossary("ICE")}} トランスポートに関する情報を表します。
 - {{DOMxRef("RTCPeerConnectionIceEvent")}}
-  - : ターゲットとの {{Glossary("ICE")}} 候補 (通常は {{DOMxRef("RTCPeerConnection")}}) に関連して発生するイベントを表します。この型のイベントは {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 1 つだけです。
+  - : ターゲットとの ICE 候補 (通常は {{DOMxRef("RTCPeerConnection")}}) に関連して発生するイベントを表します。この型のイベントは {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 1 つだけです。
 - {{DOMxRef("RTCRtpSender")}}
   - : {{DOMxRef("RTCPeerConnection")}} 上の {{DOMxRef("MediaStreamTrack")}} のデータのエンコードと送信を管理します。
 - {{DOMxRef("RTCRtpReceiver")}}
@@ -83,21 +83,21 @@ WebRTC は、様々なタスクを達成するために連携して動作する�
 - {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}
   - : ICE 候補の収集中にエラーが発生したことを示す{{domxref("RTCPeerConnectionIceErrorEvent")}}。
 - {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
-  - : ICE 接続の状態（{{domxref("RTCPeerConnection.iceconnectionstate", "iceconnectionstate")}} プロパティで得られる）が変化したときに {{domxref("RTCPeerConnection")}} に送られます。
+  - : ICE 接続の状態（{{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} プロパティで得られる）が変化したときに {{domxref("RTCPeerConnection")}} に送られます。
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
-  - : ICEの収集状態（{{domxref("RTCPeerConnection.icegatheringstate", "icegatheringstate")}} プロパティで得られる）が変化したときに {{domxref("RTCPeerConnection")}} に送られます。
+  - : ICE の収集状態（{{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} プロパティで得られる）が変化したときに {{domxref("RTCPeerConnection")}} に送られます。
 - {{domxref("RTCDataChannel.message_event", "message")}}
   - : データチャネルでメッセージを受信した。このイベントの型は {{domxref("MessageEvent")}} です。
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
-  - : domxref("RTCPeerConnection.createOffer", "createOffer()")}} に続いて {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} を呼び出し、`RTCPeerConnection`にセッション交渉を行う必要があることを通知します。
+  - : {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} に続いて {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} を呼び出し、`RTCPeerConnection`にセッション交渉を行う必要があることを通知します。
 - {{domxref("RTCDataChannel.open_event", "open")}}
   - : `RTCDataChannel` の基礎となるデータトランスポートが正常にオープンまたは再オープンされました。
 - {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}}
   - : イベントが発行された `RTCIceTransport` において、現在選択されている ICE 候補のペアが変更されました。
 - {{domxref("RTCPeerConnection.track_event", "track")}}
-  - : `track` イベントは {{domxref("RTCTrackevent")}} の型で、メディアのストリーミングの交渉が成功した後に新しいトラックが接続に追加されると {{domxref("RTCPeerConnection")}} に送信されます。
+  - : `track` イベントは {{domxref("RTCTrackEvent")}} の型で、メディアのストリーミングの交渉が成功した後に新しいトラックが接続に追加されると {{domxref("RTCPeerConnection")}} に送信されます。
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
-  - : ピアー接続の {{domxref("RTCPeerConnection.signalingstate", "signalingstate")}} が変更されたときに送信されます。これは {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} または {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} のいずれかが呼び出された結果発生するものです。
+  - : ピアー接続の {{domxref("RTCPeerConnection.signalingState", "signalingState")}} が変更されたときに送信されます。これは {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} または {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} のいずれかが呼び出された結果発生するものです。
 - {{domxref("RTCDtlsTransport.statechange_event", "statechange")}}
   - : `RTCDtlsTransport` の状態が変化した。
 - {{domxref("RTCIceTransport.statechange_event", "statechange")}}
@@ -170,19 +170,21 @@ WebRTC は、様々なタスクを達成するために連携して動作する�
 
 ## ガイド
 
+- [リアルタイム転送プロトコル (RTP) の紹介](/ja/docs/Web/API/WebRTC_API/Intro_to_RTP)
+  - : リアルタイム転送プロトコル (Real-time Transport Protocol, RTP) は、{{RFC(3550)}}で定義されており、リアルタイムでの優先度が必要なデータの交換をすることができる、IETF 標準のプロトコルです。この記事では、RTP とは何か、また WebRTC のコンテキストにおいてどのように機能するかについて概説します。
 - [WebRTC プロトコル入門](/ja/docs/Web/API/WebRTC_API/Protocols)
   - : この記事では、WebRTC API の基礎となっているプロトコルについて説明しています。
 - [WebRTC 接続](/ja/docs/Web/API/WebRTC_API/Connectivity)
   - : WebRTC 接続がどのように動くかを説明するガイド。どのように様々なプロトコルとインターフェイスが協調して用いられることで強力なコミュニケーションアプリを構築することができるかについて説明しています。
 - [WebRTC セッションのライフタイム](/ja/docs/Web/API/WebRTC_API/Session_lifetime)
-  - : WebRTCは任意のデータ、音声、映像またはそれらの組み合わせをやりとりするピアーツーピアー通信をブラウザーアプリケーション上に構築することができます。この記事では、接続の確立から不要となり閉じられるまでの WebRTC のライフタイムについて見ていきます。
+  - : WebRTC は任意のデータ、音声、映像またはそれらの組み合わせをやりとりするピアーツーピアー通信をブラウザーアプリケーション上に構築することができます。この記事では、接続の確立から不要となり閉じられるまでの WebRTC のライフタイムについて見ていきます。
 - [接続の確立: 完全なネゴシエーションパターン](/ja/docs/Web/API/WebRTC_API/Perfect_negotiation)
   - : **完全なネゴシエーション**はシグナリングプロセスが従うべき推奨されるデザインパターンです。二者を区別するためにたくさんのコーディングを必要とせずに、双方をオファー側とアンサー側のどちらにもなれることを可能にするネゴシエーションにおける透過性を提供します。
 - [シグナリングと双方向映像通話](/ja/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
   - : 以前の例で作成したウェブソケットベースのチャットシステムに参加者同士の映像通話機能を追加するチュートリアルと例。チャットサーバーのウェブソケット接続は WebRTC のシグナリングとして用いられます。
-- [WebRTC で用いられるコーデック](/ja/docs/Web/Media/Formats/WebRTC_codecs)
+- [WebRTC で用いられるコーデック](/ja/docs/Web/Media/Guides/Formats/WebRTC_codecs)
   - : WebRTC を用いる上でブラウザーが対応すべきコーデックと様々な有名なブラウザーで対応されている追加的なコーデックについてのガイド。必要に応じたベストなコーデックの選び方についてのガイドも含みます。
-- [WebRTC データチャネルを使う](/ja/docs/Web/API/WebRTC_API/Using_data_channels)
+- [WebRTC データチャンネルの使用](/ja/docs/Web/API/WebRTC_API/Using_data_channels)
   - : このガイドでは、ピアー接続と関連する {{DOMxRef("RTCDataChannel")}} を使用して、2 つのピアー間で任意のデータを交換する方法について説明します。
 - [WebRTC での DTMF の使用](/ja/docs/Web/API/WebRTC_API/Using_DTMF)
   - : {{DOMxRef("RTCDTMFSender")}} インターフェイスを用いた DTMF トーン送信サポートを含む、旧式の電話システムとのゲートウェイとやりとりを行うための WebRTC 対応について、このガイドでは、その方法を説明します。

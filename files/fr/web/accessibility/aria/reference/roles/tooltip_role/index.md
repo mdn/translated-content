@@ -3,7 +3,7 @@ title: "ARIA : rôle tooltip"
 short-title: tooltip
 slug: Web/Accessibility/ARIA/Reference/Roles/tooltip_role
 l10n:
-  sourceCommit: 4cb9d89a204a9532370693b982e8a3b274a874b1
+  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
 ---
 
 Un `tooltip` («&nbsp;info-bulle&nbsp;») est une bulle de texte contextuelle qui affiche une description pour un élément, apparaissant au survol du pointeur ou lors de la sélection clavier.
@@ -22,7 +22,7 @@ L'utilisation du rôle ARIA `tooltip` complète le comportement natif des info-b
 
 Les éléments avec le rôle `tooltip` doivent être référencés avec [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) avant ou lors de l'affichage de l'info-bulle. L'attribut `aria-describedby` est sur l'élément propriétaire, pas sur l'info-bulle.
 
-L'info-bulle n'est pas considérée comme un popup au sens de la propriété [`aria-haspopup`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) sur l'élément propriétaire, d'où l'utilisation du terme «&nbsp;bulle de texte&nbsp;» dans la définition introductive.
+L'info-bulle n'est pas considérée comme une fenêtre intrusive (<i lang="en">popup</i> en anglais) au sens de la propriété [`aria-haspopup`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) sur l'élément propriétaire, d'où l'utilisation du terme «&nbsp;bulle de texte&nbsp;» dans la définition introductive.
 
 Bien qu'une info-bulle puisse apparaître et disparaître, son apparition étant automatique et non contrôlée intentionnellement par l'utilisateur·ice, le rôle [`aria-expanded`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) n'est pas pris en charge.
 

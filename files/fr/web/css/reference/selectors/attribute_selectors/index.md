@@ -2,10 +2,10 @@
 title: Sélecteurs d'attribut
 slug: Web/CSS/Reference/Selectors/Attribute_selectors
 l10n:
-  sourceCommit: ff4dc3d43e814614df60ecdb7376b59698660ac2
+  sourceCommit: e2c34c75df6238fbeff790100cea1ab7e552e49e
 ---
 
-Un **sélecteur d'attribut** CSS permet de cibler des éléments en fonction de la présence d'un attribut donné, avec des options pour définir une correspondance exacte de valeur ou une correspondance de sous-chaîne.
+Un **sélecteur d'attribut** CSS permet de cibler des éléments en fonction de la présence d'un attribut donné, avec des options pour définir une correspondance exacte de valeur ou une correspondance de sous-chaîne de caractères.
 
 ```css
 /* Les éléments <a> avec un attribut title */
@@ -41,7 +41,7 @@ a[class~="logo"] {
 - `[attr=valeur]`
   - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur est exactement `valeur`.
 - `[attr~=valeur]`
-  - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur est `valeur`. Cette forme permet de fournir une liste de valeurs, séparées par des blancs, à tester. Si au moins une de ces valeurs est égale à celle de l'attribut, l'élément sera ciblé.
+  - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur est `valeur`. Cette forme permet de fournir une liste de valeurs, séparées par des blancs, à tester. Si au moins une de ces valeurs est égale à celle de l'attribut, l'élément est ciblé.
 - `[attr|=valeur]`
   - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur est exactement `valeur` ou dont la valeur commence par `valeur` suivi immédiatement d'un tiret (U+002D). Cela peut notamment être utilisé pour effectuer des correspondances avec des codes de langues.
 - `[attr^=valeur]`
@@ -51,9 +51,9 @@ a[class~="logo"] {
 - `[attr*=valeur]`
   - : Permet de cibler un élément qui possède un attribut `attr` et dont la valeur contient au moins une occurrence de `valeur` dans la chaîne de caractères.
 - `[attr operateur valeur i]`
-  - : On peut ajouter un `i` (ou `I`) avant le crochet de fin. Dans ce cas, la casse ne sera pas prise en compte (pour les caractères contenus sur l'intervalle ASCII).
+  - : On peut ajouter un `i` (ou `I`) avant le crochet de fin. Dans ce cas, la casse n'est pas prise en compte (pour les caractères contenus sur l'intervalle ASCII).
 - `[attr operateur valeur s]`
-  - : Ajouter un `s` (ou `S`) avant le crochet fermant permettra d'effectuer une comparaison de valeur sensible à la casse (pour les caractères ASCII).
+  - : Ajouter un `s` (ou `S`) avant le crochet fermant permet d'effectuer une comparaison de valeur sensible à la casse (pour les caractères ASCII).
 
 ### Valeurs
 
@@ -135,34 +135,34 @@ a[href^="https://"][href$=".org"] {
 #### CSS
 
 ```css
-/* Tous les éléments divs avec un attribut `lang` seront en gras. */
+/* Tous les éléments divs avec un attribut `lang` sont en gras. */
 div[lang] {
   font-weight: bold;
 }
 
-/* Tous les divs sans attribut `lang` seront en italique. */
+/* Tous les divs sans attribut `lang` sont en italique. */
 div:not([lang]) {
   font-style: italic;
 }
 
-/* Tous les divs en anglais américains seront bleus. */
+/* Tous les divs en anglais américains sont bleus. */
 div[lang~="en-us"] {
   color: blue;
 }
 
-/* Tous les divs en portugais seront verts. */
+/* Tous les divs en portugais sont verts. */
 div[lang="pt"] {
   color: green;
 }
 
-/* Tous les divs en chinois seront rouges (chinois
+/* Tous les divs en chinois sont rouges (chinois
    simplifié (zh-CN) ou traditionnel (zh-TW). */
 div[lang|="zh"] {
   color: red;
 }
 
 /* Tous les divs en chinois traditionnels pour l'attribut
-   `data-lang` seront violet. */
+   `data-lang` sont violet. */
 /* Note : Les doubles quotes ne sont pas strictement nécessaires
    ici */
 div[data-lang="zh-TW"] {
@@ -186,13 +186,13 @@ div[data-lang="zh-TW"] {
 
 ### Listes HTML ordonnées
 
-La spécification HTML exige que l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) soit testé sans sensibilité à la casse car il est principalement utilisé avec l'élément {{HTMLElement("input")}}.
+La spécification HTML exige que l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) soit testé sans sensibilité à la casse, car il est principalement utilisé avec l'élément {{HTMLElement("input")}}.
 Notez que si un modificateur n'est pas pris en charge par l'agent utilisateur, alors le sélecteur ne correspondra pas.
 
 #### CSS
 
 ```css
-/* Les types de liste devront être utilisé avec le
+/* Les types de liste doivent être utilisé avec le
    marqueur pour la casse vu les spécifications HTML */
 ol[type="a"]:first-child {
   list-style-type: lower-alpha;

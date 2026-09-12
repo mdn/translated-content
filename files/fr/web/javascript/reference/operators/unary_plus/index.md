@@ -3,8 +3,6 @@ title: Plus unaire (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur de plus unaire (`+`) précède son opérande et évalue son opérande en essayant de le convertir en nombre si ce n'est pas déjà une valeur numérique.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Unary plus operator", "taller")}}

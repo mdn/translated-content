@@ -73,7 +73,7 @@ Las evaluaciones de cada módulo están diseñadas para comprobar tu conocimient
 
 - [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) (15 a 20 horas de lectura/ejercicios)
 - [Multimedia e inserción](/es/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b) (15 a 20 horas de lectura/ejercicios)
-- [tablas HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics) (5 a 10 horas de lectura/ejercicios)
+- [tablas HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) (5 a 10 horas de lectura/ejercicios)
 
 ### Estilo y diseño con CSS
 

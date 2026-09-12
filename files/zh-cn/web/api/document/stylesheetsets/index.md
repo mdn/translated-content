@@ -3,7 +3,7 @@ title: Document：styleSheetSets 属性
 slug: Web/API/Document/styleSheetSets
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}
 
 **`styleSheetSets`** 只读属性返回一个所有当前可用样式表集合的实时列表。
 

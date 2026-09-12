@@ -6,7 +6,7 @@ l10n:
   sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
 ---
 
-{{APIRef}}{{Deprecated_Header}}{{Non-standard_header}}
+{{APIRef}}{{Non-standard_header}}
 
 このページの座標系で指定された {{domxref("WebKitPoint")}} が与えられると、 **`webkitConvertPointFromPageToNode()`** メソッドは、特定の DOM の {{domxref("Node")}} の座標系における同じ位置を指定する `Point` オブジェクトを返します。
 

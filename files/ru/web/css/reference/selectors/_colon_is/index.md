@@ -47,7 +47,11 @@ footer p:hover {
 
 ## Синтаксис
 
-{{CSSSyntax}}
+```css-nolint
+:is(<forgiving-selector-list>) {
+  /* ... */
+}
+```
 
 ## Примеры
 

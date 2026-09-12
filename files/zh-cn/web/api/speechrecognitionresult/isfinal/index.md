@@ -15,7 +15,7 @@ var myIsFinal = speechRecognitionResultInstance.isFinal;
 
 ### 返回值
 
-{{domxref("Boolean")}}
+{{jsxref("Boolean")}}
 
 ## 示例
 

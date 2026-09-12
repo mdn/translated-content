@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 157a449e2e8bf009fd316480c0d535d4a21527b0
 ---
 
-{{APIRef("DOM")}} {{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 **`Document.vlinkColor`** プロパティは、文書内のユーザーが訪問済みのリンクの色を取得または設定します。
 

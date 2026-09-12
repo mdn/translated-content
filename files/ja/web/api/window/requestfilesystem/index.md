@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0916e1754652f3a7c663ef031faa26c98f492023
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{non-standard_header}}
+{{APIRef("HTML DOM")}}{{non-standard_header}}
 
 標準外の {{domxref("Window")}} の **`requestFileSystem()`** メソッドは、 Google Chrome 固有のメソッドであり、ウェブサイトやアプリが自身の使用のためにサンドボックス化されたファイルシステムにアクセスできるようにします。返される {{domxref("FileSystem")}} は、他の[ファイルシステム API](/ja/docs/Web/API/File_and_Directory_Entries_API) と共に使用可能になります。
 

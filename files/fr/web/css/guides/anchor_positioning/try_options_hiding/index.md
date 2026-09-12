@@ -3,17 +3,17 @@ title: Options de repli et masquage conditionnel au débordement
 short-title: Traiter le débordement
 slug: Web/CSS/Guides/Anchor_positioning/Try_options_hiding
 l10n:
-  sourceCommit: 879a1aece3a1d4eb28c0024f0baac6aa1b96638e
+  sourceCommit: 7c56e442e76d472eff1c6a06eb5432bb11a47f3e
 ---
 
-Lorsque vous utilisez la [position par ancres CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning), il est important de veiller à ce que les éléments positionnés par ancre apparaissent toujours à un endroit pratique pour que l'utilisateur·ice puisse interagir avec eux, si possible, quel que soit l'emplacement de l'ancre. Par exemple, lorsque vous faites défiler la page, les ancres et leurs éléments positionnés associés se déplacent vers le bord de la fenêtre d'affichage. Lorsqu'un élément positionné commence à déborder de la fenêtre, vous voulez changer sa position pour le remettre dans l'écran, par exemple du côté opposé de l'ancre.
+Lorsque vous utilisez la [position par une ancres CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning), il est important de veiller à ce que les éléments positionnés par une ancre apparaissent toujours à un endroit pratique pour que l'utilisateur·ice puisse interagir avec eux, si possible, quel que soit l'emplacement de l'ancre. Par exemple, lorsque vous faites défiler la page, les ancres et leurs éléments positionnés associés se déplacent vers le bord de la fenêtre d'affichage. Lorsqu'un élément positionné commence à déborder de la fenêtre, vous voulez changer sa position pour le remettre dans l'écran, par exemple du côté opposé de l'ancre.
 
 Dans certaines situations, il peut être préférable de simplement masquer les éléments positionnés qui débordent — par exemple, si leurs ancres sont hors écran, leur contenu peut ne pas avoir de sens.
 
 Ce guide explique comment utiliser les mécanismes de positionnement des ancres CSS pour gérer ces cas — **options de repli d'essai de positionnement** et **masquage conditionnel**. Les options de repli d'essai de positionnement fournissent des positions alternatives que le navigateur peut essayer pour placer les éléments positionnés lorsqu'ils commencent à déborder, afin de les maintenir à l'écran. Le masquage conditionnel permet de définir les conditions dans lesquelles l'ancre ou un élément positionné est masqué.
 
 > [!NOTE]
-> Pour les notions fondamentales du positionnement des ancres CSS, voir [Utiliser la position par ancres CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
+> Pour les notions fondamentales du positionnement des ancres CSS, voir [Utiliser la position par une ancres CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
 
 ## Résumé des fonctionnalités
 
@@ -25,19 +25,19 @@ Les options de repli d'essai de positionnement peuvent être définies en utilis
 - [Valeurs `position-area`](#utiliser_position-area_comme_option_de_repli_dessai).
 - [Options personnalisées](#options_de_repli_personnalisées) définies avec la règle {{CSSxRef("@position-try")}}.
 
-De plus, la propriété {{CSSxRef("position-try-order")}} permet de définir différentes options qui font qu'une option de repli disponible est appliquée de préférence au positionnement initial de l'élément. Par exemple, vous pouvez vouloir afficher initialement l'élément dans un espace disposant de plus de hauteur ou de largeur disponible.
+De plus, la propriété {{CSSxRef("position-try-order")}} permet de définir différentes options qui font qu'une option de repli disponible est appliquée de préférence au positionnement initial de l'élément lorsqu'il est rendu pour la première fois. Par exemple, vous pouvez vouloir afficher initialement l'élément dans un espace disposant de plus de hauteur ou de largeur disponible.
 
-La propriété abrégée {{CSSxRef("position-try")}} permet de définir les valeurs de `position-try-order` et `position-try-fallbacks` en une seule déclaration.
+La propriété raccourcie {{CSSxRef("position-try")}} permet de définir les valeurs de `position-try-order` et `position-try-fallbacks` en une seule déclaration.
 
 Dans certaines situations, le contenu positionné par une ancre n'a pas de sens si l'ancre est hors de l'écran, ou inversement. Par exemple, vous pouvez avoir une ancre contenant une question de quiz, et des réponses dans des éléments positionnés associés, et vouloir les afficher ensemble ou pas du tout. Cela peut être réalisé avec le masquage conditionnel, qui est géré avec la propriété {{CSSxRef("position-visibility")}}. Cette propriété accepte différentes valeurs qui définissent les conditions dans lesquelles les éléments débordants sont masqués.
 
 ## Options de repli prédéfinies
 
-Les valeurs prédéfinies d'options de repli de la propriété `position-try-fallbacks` (définies comme [`<try-tactic>`](/fr/docs/Web/CSS/Reference/Properties/position-try-fallbacks#try-tactic) dans la spécification) vont «&nbsp;basculer&nbsp;» la position de l'élément positionné par ancre sur un ou deux axes si l'élément devait autrement déborder.
+Les valeurs prédéfinies d'options de repli de la propriété `position-try-fallbacks` (définies comme [`<try-tactic>`](/fr/docs/Web/CSS/Reference/Properties/position-try-fallbacks#try-tactic) dans la spécification) vont «&nbsp;basculer&nbsp;» la position de l'élément positionné par une ancre sur un ou deux axes si l'élément doit autrement déborder.
 
-L'élément peut être basculé sur l'axe de bloc (`flip-block`), l'axe en ligne (`flip-inline`), ou en diagonale le long d'une ligne imaginaire tracée d'un coin de l'ancre à travers son centre jusqu'à son coin opposé (`flip-start`). Ces trois valeurs basculent l'élément, en miroir vers le côté opposé pour les deux premières valeurs, et vers un côté adjacent pour `flip-start`. Par exemple, si un élément positionné `10px` au-dessus de son ancre commence à déborder en haut de l'ancre, la valeur `flip-block` basculer l'élément positionné pour le placer à 10px en dessous de son ancre.
+L'élément peut être basculé sur l'axe de bloc (`flip-block`), l'axe en incise (`flip-inline`), ou en diagonale le long d'une ligne imaginaire tracée d'un coin de l'ancre à travers son centre jusqu'à son coin opposé (`flip-start`). Ces trois valeurs basculent l'élément, en miroir vers le côté opposé pour les deux premières valeurs, et vers un côté adjacent pour `flip-start`. Par exemple, si un élément positionné `10px` au-dessus de son ancre commence à déborder en haut de l'ancre, la valeur `flip-block` basculer l'élément positionné pour le placer à 10px en dessous de son ancre.
 
-Dans cet exemple, nous incluons deux éléments HTML {{HTMLElement("div")}}. Le premier est notre élément d'ancre, et le second est positionné par rapport à l'ancre&nbsp;:
+Dans cet exemple, nous incluons deux éléments HTML {{HTMLElement("div")}}. Le premier est notre élément d'ancrage, et le second est positionné par rapport à l'ancre&nbsp;:
 
 ```html
 <div class="ancre">⚓︎</div>
@@ -78,7 +78,7 @@ body {
 }
 ```
 
-L'élément positionné par ancre reçoit un positionnement fixe et est attaché au coin supérieur gauche de l'ancre à l'aide d'un `position-area`. On lui donne `position-try-fallbacks: flip-block, flip-inline;` pour lui fournir des options de repli afin d'éviter qu'il ne déborde lorsque l'ancre s'approche du bord de la fenêtre.
+L'élément positionné par une ancre reçoit un positionnement fixe et est attaché au coin supérieur gauche de l'ancre à l'aide d'un `position-area`. On lui donne `position-try-fallbacks: flip-block, flip-inline;` pour lui fournir des options de repli afin d'éviter qu'il ne déborde lorsque l'ancre s'approche du bord de la fenêtre.
 
 ```css hidden
 .infobulle {
@@ -110,7 +110,7 @@ Essayez de faire défiler la démo afin que l'ancre s'approche des bords&nbsp;:
 - Déplacez l'ancre vers le haut de la fenêtre. L'élément positionné bascule en bas à gauche de l'ancre pour éviter le débordement.
 - Déplacez l'ancre vers la gauche de la fenêtre. L'élément positionné bascule en haut à droite de l'ancre pour éviter le débordement.
 
-Si vous déplacez l'ancre vers le coin supérieur gauche de la fenêtre d'affichage, vous remarquez un problème — lorsque l'élément positionné commence à déborder à la fois dans la direction du bloc et en ligne, il revient à sa position par défaut en haut à gauche et déborde dans les deux directions, ce qui n'est pas souhaité.
+Si vous déplacez l'ancre vers le coin supérieur gauche de la fenêtre d'affichage, vous remarquez un problème — lorsque l'élément positionné commence à déborder à la fois dans la direction du bloc et en incise, il revient à sa position par défaut en haut à gauche et déborde dans les deux directions, ce qui n'est pas souhaité.
 
 Cela se produit parce que nous n'avons donné au navigateur que les options de position `flip-block` _ou_ `flip-inline`. Nous ne lui avons pas donné la possibilité d'essayer les deux en même temps. Le navigateur essaie les options de repli, cherchant celle qui permet à l'élément positionné d'être entièrement rendu à l'intérieur de la fenêtre ou du bloc conteneur. S'il n'en trouve pas, il affiche l'élément positionné à sa position de rendu initiale, sans appliquer d'options de repli.
 
@@ -176,13 +176,13 @@ body {
 }
 ```
 
-Cela signifie que le navigateur essaie d'abord `flip-block` puis `flip-inline` pour éviter le débordement. Si ces options de repli échouent toutes les deux, il tente alors de combiner les deux, en inversant la position de l'élément à la fois sur l'axe de bloc et sur l'axe en ligne simultanément. Lorsque vous faites défiler l'ancre vers les bords supérieur _et_ gauche de la fenêtre d'affichage, l'élément positionné bascule vers le bas à droite.
+Cela signifie que le navigateur essaie d'abord `flip-block` puis `flip-inline` pour éviter le débordement. Si ces options de repli échouent toutes les deux, il tente alors de combiner les deux, en inversant la position de l'élément à la fois sur l'axe de bloc et sur l'axe en incise simultanément. Lorsque vous faites défiler l'ancre vers les bords supérieur _et_ gauche de la fenêtre d'affichage, l'élément positionné bascule vers le bas à droite.
 
 {{EmbedLiveSample("Combiner plusieurs valeurs en une option", "100%", 250)}}
 
 ## Utiliser `position-area` comme option de repli d'essai
 
-Les options de repli d'essai prédéfinies `<try-tactic>` sont utiles mais limitées, car elles ne permettent que d'inverser le placement de l'élément positionné selon les axes. Et si vous avez un élément positionné par ancre placé en haut à gauche de son ancre, et que vous voulez le déplacer directement sous l'ancre s'il commence à déborder&nbsp;?
+Les options de repli d'essai prédéfinies `<try-tactic>` sont utiles mais limitées, car elles ne permettent que d'inverser le placement de l'élément positionné selon les axes. Et si vous avez un élément positionné par une ancre placé en haut à gauche de son ancre, et que vous voulez le déplacer directement sous l'ancre s'il commence à déborder&nbsp;?
 
 Pour y parvenir, vous pouvez utiliser une valeur {{CSSxRef("position-area")}} comme option de repli d'essai, en l'incluant dans la liste `position-try-fallbacks`. Cela crée automatiquement une option de repli fondée sur cette position. En pratique, c'est un raccourci pour créer une [option de position personnalisée](#options_de_repli_personnalisées) qui contient uniquement cette valeur de propriété `position-area`.
 
@@ -251,7 +251,7 @@ Faites défiler la page et observez l'effet de ces options de repli d'essai lors
 
 ## Options de repli personnalisées
 
-Pour créer des options de repli de position personnalisées qui ne sont pas disponibles via les mécanismes précédents, utilisez la règle {{CSSxRef("@position-try")}}. La syntaxe est&nbsp;:
+Pour créer des options de repli de position personnalisées qui ne sont pas disponibles avec les mécanismes précédents, utilisez la règle {{CSSxRef("@position-try")}}. La syntaxe est&nbsp;:
 
 ```plain
 @position-try --try-fallback-name {
@@ -259,7 +259,7 @@ Pour créer des options de repli de position personnalisées qui ne sont pas dis
 }
 ```
 
-Le `--try-fallback-name` est un nom défini par le·la développeur·euse pour l'option de repli d'essai de position. Ce nom peut ensuite être défini dans la liste d'options de repli d'essai séparée par des virgules, valeur de la propriété {{CSSxRef("position-try-fallbacks")}}. Si plusieurs règles `@position-try` portent le même nom, la dernière dans l'ordre du document remplace les autres. Évitez d'utiliser le même nom pour vos options de repli d'essai _et_ pour vos ancres ou vos noms de propriétés personnalisées&nbsp;; cela n'invalide pas la règle @, mais rena votre CSS très difficile à suivre.
+Le `--try-fallback-name` est un nom défini par le·la développeur·euse pour l'option de repli d'essai de position. Ce nom peut ensuite être défini dans la liste d'options de repli d'essai séparée par des virgules, valeur de la propriété {{CSSxRef("position-try-fallbacks")}}. Si plusieurs règles `@position-try` portent le même nom, la dernière dans l'ordre du document remplace les autres. Évitez d'utiliser le même nom pour vos options de repli d'essai _et_ pour vos ancres ou vos noms de propriétés personnalisées&nbsp;; cela n'invalide pas la règle @, mais rend votre CSS très difficile à suivre.
 
 La propriété `descriptor-list` définit les valeurs de propriété pour cette option de repli d'essai, notamment le placement, les dimensions et les marges de l'élément positionné. La liste restreinte des descripteurs autorisés comprend&nbsp;:
 
@@ -375,16 +375,16 @@ Faites défiler la page et observez l'effet de ces options de repli d'essai lors
 
 {{EmbedLiveSample("Options de repli personnalisées", "100%", 250)}}
 
-## Mettre en forme les éléments positionnés par ancre en fonction du repli actif
+## Mettre en forme les éléments positionnés par une ancre en fonction du repli actif
 
-Un problème que la fonctionnalité ci-dessus ne résout pas est la mise à jour du style d'un élément positionné par ancre pour s'adapter à ses différentes options de repli. Par exemple, il est courant d'inclure une petite flèche sur une info-bulle qui pointe vers l'élément ancre auquel elle est associée, améliorant l'expérience utilisateur·ice en rendant l'association visuelle plus claire. Lorsque l'info-bulle se déplace vers une position différente, vous devez changer la position et l'orientation de la flèche, sinon elle semble incorrecte.
+Un problème que la fonctionnalité ci-dessus ne résout pas est la mise à jour du style d'un élément positionné par une ancre pour s'adapter à ses différentes options de repli. Par exemple, il est courant d'inclure une petite flèche sur une info-bulle qui pointe vers l'élément ancre auquel elle est associée, améliorant l'expérience utilisateur·ice en rendant l'association visuelle plus claire. Lorsque l'info-bulle se déplace vers une position différente, vous devez changer la position et l'orientation de la flèche, sinon elle semble incorrecte.
 
-Pour résoudre ce problème, vous pouvez utiliser les requêtes de conteneur ancrées. Celles-ci étendent la fonctionnalité des [requêtes de conteneur CSS](/fr/docs/Web/CSS/Guides/Containment/Container_queries) pour vous permettre de détecter quand une option de repli spécifique est appliquée à un élément positionné par ancre, et d'appliquer du CSS à ses descendants en conséquence. Plus précisément, les requêtes de conteneur ancrées reposent sur deux fonctionnalités&nbsp;:
+Pour résoudre ce problème, vous pouvez utiliser les requêtes de conteneur ancrées. Celles-ci étendent la fonctionnalité des [requêtes de conteneur CSS](/fr/docs/Web/CSS/Guides/Containment/Container_queries) pour vous permettre de détecter quand une option de repli spécifique est appliquée à un élément positionné par une ancre, et d'appliquer du CSS à ses descendants en conséquence. Plus précisément, les requêtes de conteneur ancrées reposent sur deux fonctionnalités&nbsp;:
 
-- La propriété {{CSSxRef("container-type")}} avec la valeur `anchored`&nbsp;: Appliquez ceci à l'élément positionné par ancre pour commencer à détecter quand différentes options de repli sont appliquées.
+- La propriété {{CSSxRef("container-type")}} avec la valeur `anchored`&nbsp;: Appliquez ceci à l'élément positionné par une ancre pour commencer à détecter quand différentes options de repli sont appliquées.
 - La règle {{CSSxRef("@container")}} avec le mot-clé `anchored`&nbsp;: Ceci est suivi d'un ensemble de parenthèses à l'intérieur desquelles le descripteur `fallback` est inclus. La valeur du descripteur est une valeur `position-try-fallbacks`.
 
-Par exemple, disons que nous avons un élément d'info-bulle positionné par ancre qui est positionné au-dessus de son ancre par défaut avec une valeur {{CSSxRef("position-area")}} qui est `top`, mais qui a une valeur {{CSSxRef("position-try-fallbacks")}} définie à `flip-block`. Cela provoque le basculement de l'info-bulle dans le sens du bloc vers le bas de son ancrage lorsqu'elle commence à déborder du haut de la zone d'affichage. Si nous voulons détecter quand le repli est appliqué à l'info-bulle, nous devons d'abord définir `container-type: anchored` dessus pour le transformer en conteneur de requête ancrée.
+Par exemple, disons que nous avons un élément d'info-bulle positionné par une ancre qui est positionné au-dessus de son ancre par défaut avec une valeur {{CSSxRef("position-area")}} qui est `top`, mais qui a une valeur {{CSSxRef("position-try-fallbacks")}} définie à `flip-block`. Cela provoque le basculement de l'info-bulle dans le sens du bloc vers le bas de son ancrage lorsqu'elle commence à déborder du haut de la zone d'affichage. Si nous voulons détecter quand le repli est appliqué à l'info-bulle, nous devons d'abord définir `container-type: anchored` dessus pour le transformer en conteneur de requête ancrée.
 
 ```css
 .tooltip {
@@ -410,127 +410,15 @@ Pour plus d'informations sur les requêtes de conteneurs ancrés et quelques exe
 
 ## Utiliser `position-try-order`
 
-La propriété {{CSSxRef("position-try-order")}} a un objectif légèrement différent du reste de la fonctionnalité d'essai de position, en ce qu'elle utilise des options de repli d'essai de position lorsque l'élément positionné est affiché pour la première fois, plutôt que lorsqu'il est en train de déborder.
+La propriété `position-try-order` a un objectif légèrement différent de celui des autres fonctionnalités `position-try`, en ce sens qu'elle influence l'option de secours `position-try` qui est appliquée lorsque l'élément positionné est affiché pour la première fois, plutôt que lorsqu'il est en cours de défilement. Par exemple, vous pouvez vouloir afficher initialement l'élément dans un espace qui dispose de plus de hauteur ou de largeur disponible que la position initiale par défaut.
 
-Cette propriété permet de définir que vous souhaitez que l'élément positionné soit affiché initialement en utilisant l'option de repli d'essai qui offre à son bloc conteneur le plus d'espace en largeur ou en hauteur. Cela s'obtient en définissant les valeurs `most-height`, `most-width`, `most-block-size` ou `most-inline-size`. Vous pouvez également supprimer les effets de toute valeur `position-try-order` définie précédemment en utilisant la valeur `normal`.
+Le navigateur teste les `position-try-fallbacks` disponibles pour déterminer lequel offre à l'élément positionné par une ancre le plus d'espace dans la direction définie. Il applique ensuite cette option, remplaçant le style initial de l'élément lorsque la page est rendue pour la première fois.
 
-Si aucune option de repli d'essai disponible n'offre plus d'espace en largeur/hauteur que le positionnement initial attribué à l'élément, `position-try-order` n'a aucun effet.
-
-Voyons une démo qui montre l'effet de cette propriété. Le HTML est identique à celui des exemples précédents, sauf que nous avons ajouté un `<form>` contenant des boutons radio, vous permettant de sélectionner différentes valeurs de `position-try-order` pour en observer les effets.
-
-```html hidden
-<div class="ancre">⚓︎</div>
-
-<div class="infobulle">
-  <p>Ceci est une boîte d'information.</p>
-</div>
-
-<form>
-  <fieldset>
-    <legend>Choisir un ordre d'essai</legend>
-    <div>
-      <label for="radio-normal">normal</label>
-      <input
-        type="radio"
-        id="radio-normal"
-        name="position-try-order"
-        value="normal"
-        checked />
-    </div>
-    <div>
-      <label for="radio-most-height">most-height</label>
-      <input
-        type="radio"
-        id="radio-most-height"
-        name="position-try-order"
-        value="most-height" />
-    </div>
-  </fieldset>
-</form>
-```
-
-Nous incluons une option de repli d'essai personnalisée — `--personnalisation-bas` — qui place l'élément sous l'ancre et ajoute une marge&nbsp;:
-
-```css hidden
-.ancre {
-  font-size: 1.8rem;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  background-color: hsl(240 100% 75%);
-  width: fit-content;
-  border-radius: 10px;
-  border: 1px solid black;
-  padding: 3px;
-}
-
-.ancre {
-  anchor-name: --mon-ancre;
-  position: absolute;
-  top: 100px;
-  left: 45%;
-}
-
-.infobulle {
-  color: darkblue;
-  background-color: azure;
-  border: 1px solid #dddddd;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 1rem;
-  text-align: center;
-}
-
-form {
-  position: fixed;
-  bottom: 2px;
-  right: 2px;
-}
-```
-
-```css
-@position-try --personnalisation-bas {
-  top: anchor(bottom);
-  bottom: unset;
-  margin-top: 10px;
-}
-```
-
-Nous positionnons initialement la boîte d'information en haut de l'ancre, puis lui appliquons notre option de repli d'essai personnalisée&nbsp;:
-
-```css
-.infobulle {
-  position: fixed;
-  position-anchor: --mon-ancre;
-  bottom: anchor(top);
-  margin-bottom: 10px;
-  justify-self: anchor-center;
-  position-try-fallbacks: --personnalisation-bas;
-}
-```
-
-Enfin, nous incluons un peu de JavaScript qui attache un gestionnaire d'évènement [`change`](/fr/docs/Web/API/HTMLElement/change_event) aux boutons radio. Lorsqu'un bouton radio est sélectionné, sa valeur est appliquée à la propriété `position-try-order` de la boîte d'information.
-
-```js
-const infobulle = document.querySelector(".infobulle");
-const radios = document.querySelectorAll('[name="position-try-order"]');
-
-for (const radio of radios) {
-  radio.addEventListener("change", definirOrdreDessai);
-}
-
-function definirOrdreDessai(e) {
-  const tryOrder = e.target.value;
-  infobulle.style.positionTryOrder = tryOrder;
-}
-```
-
-Vous pouvez sélectionner l'option d'ordre `most-height`. Cela a pour effet d'appliquer l'option de repli d'essai `--personnalisation-bas`, qui place l'élément sous l'ancre. Cela se produit parce qu'il y a plus d'espace sous l'ancre que dessus.
-
-{{EmbedLiveSample("Utiliser `position-try-order`", "100%", 300)}}
+Consultez la page de référence {{CSSxRef("position-try-order")}} pour plus d'informations et un exemple interactif qui démontre l'effet de cette propriété.
 
 ## Masquer conditionnellement des éléments positionnés avec une ancre
 
-Dans certaines situations, vous pouvez vouloir masquer un élément positionné par ancre. Par exemple, si l'élément d'ancrage est rogné parce qu'il est trop proche du bord de la fenêtre d'affichage, vous pouvez souhaiter masquer complètement son élément associé. La propriété {{CSSxRef("position-visibility")}} permet de définir les conditions selon lesquelles les éléments positionnés sont masqués.
+Dans certaines situations, vous pouvez vouloir masquer un élément positionné par une ancre. Par exemple, si l'élément d'ancrage est rogné parce qu'il est trop proche du bord de la fenêtre d'affichage, vous pouvez souhaiter masquer complètement son élément associé. La propriété {{CSSxRef("position-visibility")}} permet de définir les conditions selon lesquelles les éléments positionnés sont masqués.
 
 Par défaut, l'élément positionné s'affiche `always`. La valeur `no-overflow` **masque fortement** l'élément positionné si celui‑ci commence à déborder de son élément conteneur ou de la fenêtre d'affichage.
 
@@ -626,8 +514,8 @@ Faites défiler la page et notez comment l'élément positionné est masqué une
 
 ## Voir aussi
 
-- Le module de [position par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
-- [Utiliser la position par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
+- Le module de [position par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
+- [Utiliser la position par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
 - [Apprendre&nbsp;: positionnement CSS](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning)
 - Le module des [propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
 - [Apprendre&nbsp;: dimensionner des éléments en CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Sizing)

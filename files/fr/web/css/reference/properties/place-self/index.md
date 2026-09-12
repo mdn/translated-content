@@ -111,7 +111,7 @@ Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 - `stretch`
   - : Si la taille combinée des éléments le long de l'axe transversal est inférieure à la taille du conteneur d'alignement et que l'élément est de taille `auto`, sa taille est augmentée de manière égale (et non proportionnelle), tout en respectant les contraintes imposées par {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (ou fonctionnalité équivalente), de sorte que la taille combinée de tous les éléments de taille `auto` remplisse exactement le conteneur d'alignement le long de l'axe transversal.
 - `anchor-center`
-  - : Dans le cas des éléments [positionnés par ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning), aligne l'élément au centre de l'élément d'ancrage associé dans la direction bloc et en incise. Voir [Centrer sur l'ancre en utilisant `anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_avec_anchor-center).
+  - : Dans le cas des éléments [positionnés par une ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning), aligne l'élément au centre de l'élément d'ancrage associé dans la direction bloc et en incise. Voir [Centrer sur l'ancre en utilisant `anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_avec_anchor-center).
 
 ## Définition formelle
 

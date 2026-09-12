@@ -354,7 +354,7 @@ Les fonctions suivantes sont utilisées comme valeur de différentes propriété
 Les fonctions de positionnement des ancres sont utilisées lors du positionnement et du dimensionnement des éléments positionnés par rapport à la position et à la taille de leurs éléments d'ancrage associés.
 
 - {{CSSxRef("anchor()")}}
-  - : Retourne une longueur relative à la position des bords de l'élément d'ancrage associé à un élément positionné par ancre.
+  - : Retourne une longueur relative à la position des bords de l'élément d'ancrage associé à un élément positionné par une ancre.
 - {{CSSxRef("anchor-size()")}}
   - : Retourne une longueur relative à la taille de l'élément d'ancrage associé.
 

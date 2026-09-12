@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
-{{APIRef("UI Events")}}{{ Non-standard_Header }}{{Deprecated_Header}}
+{{APIRef("UI Events")}}{{ Non-standard_Header }}
 
 **`MouseScrollEvent`** インターフェイスは、ユーザーがマウスホイールや同様の入力デバイスを動かすことによって発生するイベントを表します。
 

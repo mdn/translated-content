@@ -110,7 +110,7 @@ void gl.vertexAttribPointer(index, size, type, normalized, stride, offset);
 
 ### 配列バッファーの作成
 
-まず、{{domxref("DataView")}} を用いた JSON データから動的に配列バッファーを作成します。`true` の用法に注意してください。WebGL は私達のデータがリトルエンディアンであることを予期しています。
+まず、{{jsxref("DataView")}} を用いた JSON データから動的に配列バッファーを作成します。`true` の用法に注意してください。WebGL は私達のデータがリトルエンディアンであることを予期しています。
 
 ```js
 //ジオメトリーを fetch() と Response.json() で読み込む

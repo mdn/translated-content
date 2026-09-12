@@ -5,7 +5,8 @@ l10n:
   sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
-{{deprecated_header}}
+> [!NOTE]
+> `font-stretch` 記述子は [CSS Fonts specification](https://drafts.csswg.org/css-fonts/#font-stretch-desc) において {{cssxref("@font-face/font-width")}} に改名されました。互換性を維持するため、この仕様書では `font-stretch` を `font-width` 記述子の古い別名として残しています。
 
 **`font-stretch`** は [CSS](/ja/docs/Web/CSS) の記述子で、ウェブページ作成者が {{cssxref("@font-face")}} アットルールで定義されているフォントが通常か、幅狭か、幅広かを指定できるようにします。
 
