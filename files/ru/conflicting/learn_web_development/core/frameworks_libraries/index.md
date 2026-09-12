@@ -1,6 +1,7 @@
 ---
 title: Фильтрация списка дел
-slug: Learn_web_development/Core/Frameworks_libraries/Angular_filtering
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries
+original_slug: Learn_web_development/Core/Frameworks_libraries/Angular_filtering
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}
