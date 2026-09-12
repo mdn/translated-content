@@ -12,7 +12,12 @@ original_slug: Web/CSS/::before
 
 ## Sintaxe
 
-{{csssyntax}}
+```css-nolint
+::before {
+  content: /* value */;
+  /* properties */
+}
+```
 
 A notação `::before` (com dois dois-pontos) foi introduzida no CSS3 afim de diferenciar [pseudo-classes](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) de [pseudo-elementos](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Navegadores também aceitam a notação `:before` introduzida no CSS 2.
 

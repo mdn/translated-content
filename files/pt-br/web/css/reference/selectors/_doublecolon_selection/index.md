@@ -35,8 +35,12 @@ Apenas certas propriedades podem ser usadas com o `::selection`:
 ```
 /* Sintaxe legado do Firefox (até a versão 61) */
 ::-moz-selection
+```
 
-{{CSSSyntax}}
+```css
+::selection {
+  /* ... */
+}
 ```
 
 ## Exemplo

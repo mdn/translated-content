@@ -15,7 +15,11 @@ A [pseudo-classe](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](
 
 ## Sintaxe
 
-{{CSSSyntax}}
+```css
+:blank {
+  /* ... */
+}
+```
 
 ## Especificações
 
