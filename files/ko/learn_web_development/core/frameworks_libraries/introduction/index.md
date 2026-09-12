@@ -47,7 +47,7 @@ JavaScript 프레임워크는 매일 사용하는 많은 웹사이트를 포함�
 
 [Ember](https://emberjs.com/)는 [SproutCore](https://en.wikipedia.org/wiki/SproutCore) 프로젝트에서 시작된 작업의 연속으로 2011년 12월에 처음 출시되었습니다. React 및 Vue와 같은 최신 대안보다 사용자가 적은 오래된 프레임워크이지만 안정성, 커뮤니티 지원 및 일부 영리한 코딩 원칙으로 인해 여전히 상당한 인기를 누리고 있습니다.
 
-[Ember 학습 시작](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+[Ember 학습 시작](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
 
 ### Angular
 
@@ -55,7 +55,7 @@ JavaScript 프레임워크는 매일 사용하는 많은 웹사이트를 포함�
 
 Angular는 선언적 HTML 템플릿을 사용하는 컴포넌트 기반 프레임워크입니다. 빌드 시 개발자에게 투명하게 프레임워크의 컴파일러가 템플릿을 최적화된 JavaScript 명령으로 변환합니다. Angular는 다음 장에서 좀 더 자세히 살펴볼 JavaScript의 상위 집합인 [TypeScript](https://www.typescriptlang.org/)를 사용합니다.
 
-[Angular 학습 시작](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+[Angular 학습 시작](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
 
 ### Vue
 
@@ -63,7 +63,7 @@ Angular는 선언적 HTML 템플릿을 사용하는 컴포넌트 기반 프레�
 
 Vue는 [AngularJS](https://angularjs.org/)와 마찬가지로 일부 자체 코드로 HTML을 확장합니다. 그 외에도 주로 최신 표준 JavaScript에 의존합니다.
 
-[Vue 학습 시작](/ko/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started)
+[Vue 학습 시작](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
 
 ### React
 
