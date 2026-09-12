@@ -102,25 +102,25 @@ instance.#privateField === 42; // Syntax error
 
 **private static 메소드**는 public static 메소드처럼 인스턴스가 아닌 class 로부터 호출된다. 그리고 private static 필드처럼 class 선언문 내부에서만 접근 가능하다.
 
-```js
 private static 메소드는 generator, async 그리고 async generator 함수가 될 수 있다.
 
-    class ClassWithPrivateStaticMethod {
-      static #privateStaticMethod() {
-        return 42
-      }
+```js
+class ClassWithPrivateStaticMethod {
+  static #privateStaticMethod() {
+    return 42
+  }
 
-      static publicStaticMethod1() {
-        return ClassWithPrivateStaticMethod.#privateStaticMethod();
-      }
+  static publicStaticMethod1() {
+    return ClassWithPrivateStaticMethod.#privateStaticMethod();
+  }
 
-      static publicStaticMethod2() {
-        return this.#privateStaticMethod();
-      }
-    }
+  static publicStaticMethod2() {
+    return this.#privateStaticMethod();
+  }
+}
 
-    console.assert(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
-    console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
+console.assert(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
+console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
 ```
 
 이는 `this` 를 사용할 때 예상치 못한 동작을 발생시킬 수 있다. (이는 `this` binding rule 이 적용되기 때문이다.) 다음 예시에서 `Derived.publicStaticMethod2()` 를 호출할 때, `this` 는 class `Derived` (`Base` 가 아니라) 를 가리킨다.
