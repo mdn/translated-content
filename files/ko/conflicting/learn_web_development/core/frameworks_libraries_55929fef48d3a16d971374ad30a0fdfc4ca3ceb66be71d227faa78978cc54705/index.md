@@ -1,7 +1,7 @@
 ---
 title: Svelte 시작하기
-slug: Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries_55929fef48d3a16d971374ad30a0fdfc4ca3ceb66be71d227faa78978cc54705
+original_slug: Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started
 ---
 
 {{LearnSidebar}}
