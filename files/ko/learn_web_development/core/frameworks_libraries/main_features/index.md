@@ -323,9 +323,9 @@ it("Increments the count when clicked", () => {
 프레임워크를 사용하여 애플리케이션을 만들 때, 사용할 실제 언어, 기능 및 도구에 대해 아이디어가 좀 더 떠올랐나요? 지금부터 열정적으로 시작하고 실제로 코딩해보세요. 지금 학습을 시작할 프레임워크를 선택해보세요.
 
 - [React](/ko/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
-- [Ember](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-- [Vue](/ko/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started)
-- [Svelte](/ko/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started)
-- [Angular](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+- [Ember](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
+- [Vue](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
+- [Svelte](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
+- [Angular](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Introduction","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}
