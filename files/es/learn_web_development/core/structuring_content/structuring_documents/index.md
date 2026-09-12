@@ -287,7 +287,7 @@ Quedará así:
 
 ## Planificación de una página web sencilla
 
-Una vez has planificado el contenido de una página web sencilla, el paso lógico siguiente es intentar trabajar en el contenido para todo el sitio web, las páginas que necesitas y la forma de disponer las conexiones entre ellas para producir la mejor experiencia de usuario a los visitantes. Esto se conoce con el nombre de ({{Glossary("Arquitectura de la información")}}). Una web grande y compleja necesitará mucha planificación, pero para una web sencilla compuesta por unas cuantas páginas, el proceso puede ser sencillo, ¡y divertido!.
+Una vez has planificado el contenido de una página web sencilla, el paso lógico siguiente es intentar trabajar en el contenido para todo el sitio web, las páginas que necesitas y la forma de disponer las conexiones entre ellas para producir la mejor experiencia de usuario a los visitantes. Esto se conoce con el nombre de ({{Glossary("Information_architecture", "Arquitectura de la información")}}). Una web grande y compleja necesitará mucha planificación, pero para una web sencilla compuesta por unas cuantas páginas, el proceso puede ser sencillo, ¡y divertido!.
 
 1. Ten en cuenta que habrá varios elementos comunes en muchas (si no en todas las) páginas, tal como el menú de navegación y el contenido del pie de página. Si la web está dedicada a un negocio, por ejemplo, sería una buena idea disponer de la información de contacto en el pie de página en todas las páginas. Anota lo que deseas tener en común en cada página.
 
@@ -301,7 +301,7 @@ Una vez has planificado el contenido de una página web sencilla, el paso lógic
 
    ![Una larga lista de todas las funciones que podrías incluir en tu sitio de viajes, desde buscar, hasta ofertas especiales e información específica del país](feature-list.png)
 
-4. A continuación, trata de ordenar todo este contenido por grupos, para hacerte una idea de las partes que podrían ir juntas en las diferentes páginas. Esto es muy similar a una técnica llamada {{Glossary("Clasificación de tarjetas")}}.
+4. A continuación, trata de ordenar todo este contenido por grupos, para hacerte una idea de las partes que podrían ir juntas en las diferentes páginas. Esto es muy similar a una técnica llamada {{Glossary("Card_sorting", "Clasificación de tarjetas")}}.
 
    ![Los elementos que deberían aparecer en un sitio de vacaciones ordenados en 5 categorías: Búsqueda, Especiales, Información específica del país, Resultados de búsqueda y Compra cosas](card-sorting.png)
 

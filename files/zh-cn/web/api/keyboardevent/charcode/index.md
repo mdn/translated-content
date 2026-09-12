@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 87440643d71bf81a5bf4b8fa21db9e3d56ead395
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}
 
 {{domxref("KeyboardEvent")}} 接口的 **`charCode`** 只读属性返回在 {{domxref("Element/keypress_event", "keypress")}} 事件中按下的字符键的 Unicode 值。
 

@@ -3,8 +3,6 @@ title: L'opérateur function
 slug: Web/JavaScript/Reference/Operators/function
 ---
 
-{{jsSidebar("Operators")}}
-
 Le mot-clé **`function`** permet de définir une fonction à l'intérieur d'une expression.
 
 > [!NOTE]

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 **`VREyeParameters`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで、指定した目のためにシーンを正しくレンダリングするためのすべての情報（視界の情報を含む）を表します。
 

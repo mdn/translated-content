@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{deprecated_header}}
-
 **`<plaintext>`** [HTML](/zh-CN/docs/Web/HTML) 元素将起始标签后面的任何东西渲染为纯文本，不会解释为 HTML。它没有闭合标签，因为起始标签之后的所有内容都被视为原始文本。
 
 > [!WARNING]

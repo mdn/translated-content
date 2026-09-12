@@ -31,7 +31,7 @@ Il existe cinq types de requêtes de conteneur&nbsp;:
   - : Les requêtes de conteneur en fonction de l'état de défilement permettent d'appliquer sélectivement des règles CSS aux descendants d'un conteneur en fonction des conditions d'état de défilement, telles que si l'élément interrogé est partiellement défilé ou si le conteneur est aligné sur un conteneur de défilement. Les éléments contenant doivent être explicitement déclarés comme _requêtes d'état des conteneurs de défilement_.
 
 - **[Requêtes de conteneur ancrés](/fr/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)**
-  - : Les requêtes de conteneur ancrés permettent de vérifier si le conteneur est [positionné par ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning) et dispose d'une [option de repli `position-try`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) appliquée.
+  - : Les requêtes de conteneur ancrés permettent de vérifier si le conteneur est [positionné par une ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning) et dispose d'une [option de repli `position-try`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) appliquée.
 
 Dans ce guide, nous apprenons les bases des requêtes de conteneur en examinant&nbsp;:
 

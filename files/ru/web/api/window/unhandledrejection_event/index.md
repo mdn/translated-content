@@ -49,4 +49,4 @@ window.addEventListener("unhandledrejection", function (event) {
 
 - [`rejectionhandled`](/ru/docs/Web/API/Window/rejectionhandled_event)
 - {{domxref("PromiseRejectionEvent")}}
-- {{domxref("Promise")}}
+- {{jsxref("Promise")}}

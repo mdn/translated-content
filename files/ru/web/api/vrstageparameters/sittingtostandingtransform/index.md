@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ccbc5d4100e0a5de844e060b025883ef1611d7b8
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 Доступное только для чтения свойство **`sittingToStandingTransform`** интерфейса {{domxref("VRStageParameters")}} содержит матрицу преобразования {{domxref("VRFrameData")}} из горизонтального вида в вертикальный.
 
@@ -16,7 +16,7 @@ l10n:
 
 ### Значение
 
-Массив {{domxref ("Float32Array")}}, содержащий компоненты матрицы преобразования 4×4.
+Массив {{jsxref("Float32Array")}}, содержащий компоненты матрицы преобразования 4×4.
 
 ## Примеры
 

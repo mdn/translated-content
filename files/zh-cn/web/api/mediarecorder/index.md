@@ -30,7 +30,7 @@ slug: Web/API/MediaRecorder
 ## 方法
 
 - {{domxref("MediaRecorder.canRecordMimeType()", "MediaRecorder.isTypeSupported()")}}
-  - : 返回一个{{domxref("Boolean")}} 值，来表示设置的 MIME type 是否被当前用户的设备支持。
+  - : 返回一个{{jsxref("Boolean")}} 值，来表示设置的 MIME type 是否被当前用户的设备支持。
 - {{domxref("MediaRecorder.pause()")}}
   - : 暂停媒体录制
 - {{domxref("MediaRecorder.requestData()")}}
@@ -45,7 +45,7 @@ slug: Web/API/MediaRecorder
 ## 静态方法
 
 - {{domxref("MediaRecorder.isTypeSupported()")}}
-  - : 静态方法，判断给定的 MIME 类型是否支持。返回{{domxref("Boolean")}}类型的值。
+  - : 静态方法，判断给定的 MIME 类型是否支持。返回{{jsxref("Boolean")}}类型的值。
 
 ## 事件处理
 

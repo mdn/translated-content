@@ -22,7 +22,11 @@ p:lang(en) {
 
 ### Формальный синтаксис
 
-{{csssyntax}}
+```plain
+:lang(<language-code> [,<language-code> ]*) {
+  /* ... */
+}
+```
 
 ### Параметр
 

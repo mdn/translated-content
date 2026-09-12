@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{Deprecated_Header}}
-
 **`<frame>`** は [HTML](/ja/docs/Web/HTML) の要素で、別の HTML 文書を表示できる特定の領域を定義します。 frame 要素は {{HTMLElement("frameset")}} の内部で使用してください。
 
 `<frame>` 要素の使用は、パフォーマンスの問題やスクリーンリーダーを使用するユーザーへのアクセシビリティの欠如といった欠点があるため推奨されません。`<frame>` 要素に代わり、 {{HTMLElement("iframe")}} を推奨します。
