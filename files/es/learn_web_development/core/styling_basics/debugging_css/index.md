@@ -23,7 +23,7 @@ Al escribir CSS te puedes encontrar que, a veces, alguna parte de tu CSS no hace
           href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >, HTML básico (véase
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">Introducción a HTML</a
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content">Introducción a HTML</a
         >) y nociones de cómo funciona el CSS (véase
         <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Primeros pasos con CSS</a>).
       </td>
