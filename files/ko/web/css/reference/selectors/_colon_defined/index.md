@@ -20,7 +20,11 @@ simple-custom:defined {
 
 ## 구문
 
-{{csssyntax}}
+```css
+:defined {
+  /* ... */
+}
+```
 
 ## 예제
 

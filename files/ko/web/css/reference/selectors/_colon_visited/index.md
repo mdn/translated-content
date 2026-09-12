@@ -29,7 +29,11 @@ a:visited {
 
 ## 구문
 
-{{csssyntax}}
+```css
+:visited {
+  /* ... */
+}
+```
 
 ## 예제
 

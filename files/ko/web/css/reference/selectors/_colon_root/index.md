@@ -16,7 +16,11 @@ original_slug: Web/CSS/:root
 
 ## 구문
 
-{{csssyntax}}
+```css
+:root {
+  /* ... */
+}
+```
 
 ## 예제
 
