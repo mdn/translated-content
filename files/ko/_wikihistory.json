@@ -1412,12 +1412,6 @@
       "DeadIntegral"
     ]
   },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_getting_started": {
-    "modified": "2020-11-22T21:30:23.419Z",
-    "contributors": [
-      "imtherealk"
-    ]
-  },
   "Learn_web_development/Core/Scripting": {
     "modified": "2020-07-16T22:31:09.649Z",
     "contributors": [
@@ -16097,6 +16091,12 @@
     "contributors": [
       "EricByHPHK",
       "Hwan-Woong-Lee"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Frameworks_libraries": {
+    "modified": "2020-11-22T21:30:23.419Z",
+    "contributors": [
+      "imtherealk"
     ]
   },
   "conflicting/Learn_web_development/Core/Scripting": {
