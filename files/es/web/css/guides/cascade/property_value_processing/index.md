@@ -152,7 +152,7 @@ El **valor inicial** de una propiedad es el valor predeterminado que figura en s
 Puedes establecer explícitamente el valor inicial usando la palabra clave {{cssxref("initial")}}.
 
 > [!NOTE]
-> El valor inicial se encuentra en la sección de sintaxis formal de la página de referencia de cada propiedad CSS. Por ejemplo, el [valor inicial de `font-size` es `medium`](/es/docs/Web/CSS/Reference/Properties/font-size). No debe confundirse con el valor especificado por la hoja de estilo del navegador.
+> El valor inicial se encuentra en la sección de sintaxis formal de la página de referencia de cada propiedad CSS. Por ejemplo, el [valor inicial de `font-size` es `medium`](/es/docs/Web/CSS/Reference/Properties/font-size#definición_formal). No debe confundirse con el valor especificado por la hoja de estilo del navegador.
 
 ### Valor calculado
 
@@ -232,7 +232,7 @@ updateAllUsedWidths();
 window.addEventListener("resize", updateAllUsedWidths);
 ```
 
-Aunque los tres valores especificados, `auto`, `50%` e `inherit`, son palabras clave y valores de {{cssxref("percentage")}}, obtener el `width` con `window.getComputedStyle(el)["width"];` devuelve un valor de [longitud absoluta](/es/docs/Web/CSS/Reference/Values/length) en `px`:
+Aunque los tres valores especificados, `auto`, `50%` e `inherit`, son palabras clave y valores de {{cssxref("percentage")}}, obtener el `width` con `window.getComputedStyle(el)["width"];` devuelve un valor de [longitud absoluta](/es/docs/Web/CSS/Reference/Values/length#unidades_de_longitud_absolutas) en `px`:
 
 {{ EmbedLiveSample('Example', '80%', 372) }}
 

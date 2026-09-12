@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Creating_links
 original_slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "conflicting/Learn_web_development/Core/Structuring_content")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
 
 Los hipervínculos (o enlaces) son elementos verdaderamente importantes — son los que hacen que la web sea _**web**_. Este artículo expone la sintaxis necesaria para crear un enlace, además contiene un catálogo de buenas prácticas para crearlos.
 
@@ -341,4 +341,4 @@ Has llegado al final de este artículo, pero ¿puedes recordar la información m
 
 Eso es todo en cuanto a enlaces, ¡por ahora! Volveremos a ellos más tarde en este curso cuando comencemos a usar estilos. Lo siguiente en HTML, será aprender la semántica de texto para usar algunas características avanzadas/inusuales que nos serán utilidad — Formato de texto avanzado será la próxima parada.
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "conflicting/Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}

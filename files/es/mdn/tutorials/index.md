@@ -19,7 +19,7 @@ Estos recursos son creados por empresas y desarrolladores web con visión de fut
 
 ### Nivel introductorio
 
-- [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content)
+- [Introducción a HTML](/es/docs/Learn_web_development/Core/Structuring_content)
   - : Este módulo prepara el escenario, acostumbrándolo a conceptos y sintaxis importantes, analizando la aplicación de HTML al texto, cómo crear hipervínculos y cómo usar HTML para estructurar una página web.
 - [Referencia de Elementos HTML](/es/docs/Web/HTML/Reference/Elements)
   - : Una referencia completa sobre elementos HTML y cómo los implementan los diferentes navegadores.
@@ -30,7 +30,7 @@ Estos recursos son creados por empresas y desarrolladores web con visión de fut
 
 ### Nivel intermedio
 
-- [Multimedia e inserción](/es/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b)
+- [Multimedia e inserción](/es/docs/Learn_web_development/Core/Structuring_content)
   - : Este módulo explora cómo usar HTML para incluir multimedia en sus páginas web, incluidas las diferentes formas en que se pueden incluir imágenes y cómo incrustar video, audio e incluso otras páginas web completas.
 - [Tablas HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
   - : Representar datos tabulares en una página web de una manera {{glossary("Accessibility", "accesible")}} y comprensible puede ser un desafío. Este módulo cubre el marcado básico de tablas, junto con funciones más complejas, como la implementación de subtítulos y resúmenes.
