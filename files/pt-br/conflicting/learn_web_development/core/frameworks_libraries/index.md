@@ -1,7 +1,7 @@
 ---
 title: Iniciando com Vue
-slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries
+original_slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Ember_resources","Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
