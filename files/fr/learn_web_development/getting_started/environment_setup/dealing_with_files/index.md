@@ -2,7 +2,7 @@
 title: Gérer les fichiers
 slug: Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
 l10n:
-  sourceCommit: 12fddfa7a8dfa7f4f30f7f55889b0e94a585d847
+  sourceCommit: a92a495c8483b26e18e677a364b0fc687832345c
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Environment_setup")}}
@@ -175,11 +175,11 @@ Dans ce cours, vous remarquerez que nous vous demandons toujours de nommer dossi
 1. De nombreux systèmes, y compris la plupart des serveurs web, sont sensibles à la casse. Par exemple, si vous placez une image sur votre site à `test-site/images/MaPhoto.jpg` et que dans un autre fichier vous la référencez comme `test-site/images/maphoto.jpg`, cela risque de ne pas fonctionner.
 2. Lorsque vous utilisez la ligne de commande, il faut mettre des guillemets autour des noms de fichiers contenant des espaces, sinon ils sont interprétés comme plusieurs éléments distincts.
 3. Certains langages de programmation (par exemple Python) gèrent mal les espaces dans les noms de fichiers dans certains cas (par exemple, si ces fichiers sont des modules à importer).
-4. Les noms de fichiers sont souvent utilisés dans les adresses web/URL. Si, par exemple, vous avez un fichier nommé `ma page.html` à la racine de votre serveur, il est généralement accessible à l'URL `https://example.com/ma%20page.html`. Les serveurs remplacent les espaces par `%20` (car les URL sont {{Glossary("Percent-encoding", "pourcent-encodées")}}), ce qui peut causer des bugs subtils si certains systèmes supposent que les noms de fichiers et d'URL correspondent parfaitement.
+4. Les noms de fichiers sont souvent utilisés dans les adresses web/URL. Si, par exemple, vous avez un fichier nommé `ma page.html` à la racine de votre serveur, il est généralement accessible à l'URL `https://example.com/ma%20page.html`. Les serveurs remplacent les espaces par `%20` (car les URL sont {{Glossary("Percent-encoding", "encodées en pourcentage")}}), ce qui peut causer des bogues subtils si certains systèmes supposent que les noms de fichiers et d'URL correspondent parfaitement.
 
 À la place des espaces, beaucoup de développeur·euse·s utilisent un séparateur comme le tiret (`-`) — par exemple `ma-page.html` plutôt que `ma page.html`. C'est une bonne pratique.
 
-Il vaut mieux prendre l'habitude d'écrire les noms de dossiers et fichiers en minuscules, sans espaces, et avec des mots séparés par des tirets, au moins au début. Vous aurez ainsi moins de problèmes par la suite.
+Il vaut mieux prendre l'habitude d'écrire les noms de dossiers et fichiers en minuscules, sans espaces, et avec des mots séparés par des tirets, au moins au début. Vous avez ainsi moins de problèmes par la suite.
 
 > [!NOTE]
 > Vous pouvez trouver d'autres bonnes pratiques sur les noms de fichiers et d'URL dans les [bonnes pratiques de structure d'URL de Google](https://developers.google.com/search/docs/crawling-indexing/url-structure?hl=fr).
@@ -188,7 +188,7 @@ Il vaut mieux prendre l'habitude d'écrire les noms de dossiers et fichiers en m
 
 Pour référencer un fichier depuis un autre, il faut fournir un chemin — c'est-à-dire une route, pour qu'un fichier sache où se trouve un autre. Par exemple, pour afficher une image dans une page web, votre code doit contenir un chemin indiquant l'emplacement de l'image à afficher.
 
-Voyons un exemple simple. Vous ne comprendrez peut-être pas tout pour l'instant, ce n'est pas grave.
+Voyons un exemple simple. Vous ne comprenez peut-être pas tout pour l'instant, ce n'est pas grave.
 
 1. Cherchez une image sur le web (par exemple avec [Google Images](https://www.google.com/imghp)) et téléchargez-la. Vous pouvez aussi utiliser notre [icône Firefox](https://raw.githubusercontent.com/mdn/beginner-html-site/refs/heads/main/images/firefox-icon.png) pour cet exemple.
 2. Placez l'image dans votre dossier _images_.
