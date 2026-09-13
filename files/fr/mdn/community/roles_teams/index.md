@@ -3,10 +3,10 @@ title: MDN Web Docs les rôles et les équipes
 short-title: Rôles et équipes
 slug: MDN/Community/Roles_teams
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: da7287ff61b6ea4db7f9a5e07be11263b525b7d0
 ---
 
-Le succès et la croissance du projet MDN Web Docs sont en grande partie dus à notre communauté de contributeur·ice·s. Certain·e·s contributeur·ice·s consacrent une partie de leur temps pour aider aux tâches quotidiennes liées à MDN Web Docs. Les modifications du site, y compris les tâches de maintenance, sont réalisées par des employé·e·s, des prestataires et un réseau de partenaires, tous·tes engagé·e·s pour la santé, la croissance et la maintenance de MDN Web Docs. Le projet s'appuie fortement sur les [rôles](#roles) et les [équipes](#equipes) de l'[organisation MDN sur GitHub <sup>(angl.)</sup>](https://github.com/mdn) pour gérer et intégrer les changements de ces différents groupes. La liste des membres actuels de l'organisation est disponible sur [github.com/orgs/mdn <sup>(angl.)</sup>](https://github.com/orgs/mdn/people).
+Le succès et la croissance du projet MDN Web Docs sont en grande partie dus à notre communauté de contributeur·ice·s. Certain·e·s contributeur·ice·s consacrent une partie de leur temps pour aider aux tâches quotidiennes liées à MDN Web Docs. Les modifications du site, y compris les tâches de maintenance, sont réalisées par des employé·e·s, des prestataires et un réseau de partenaires, tous·tes engagé·e·s pour la santé, la croissance et la maintenance de MDN Web Docs. Le projet s'appuie fortement sur les [rôles](#roles) et les [équipes](#equipes) de [l'organisation MDN sur GitHub <sup>(angl.)</sup>](https://github.com/mdn) pour gérer et intégrer les changements de ces différents groupes. La liste des membres actuels de l'organisation est disponible sur [github.com/orgs/mdn <sup>(angl.)</sup>](https://github.com/orgs/mdn/people).
 
 Les contributions de la communauté aident énormément ce projet libre.
 Les contributeur·ice·s peuvent valoriser leur travail sur MDN Web Docs pour démontrer leurs compétences rédactionnelles, techniques, de collaboration, ainsi que leur capacité à travailler avec des personnes issues de milieux divers. Cette section décrit les rôles que vous pouvez occuper en tant que bénévole sur le projet MDN Web Docs.
@@ -36,10 +36,10 @@ En tant que contributeur·ice, vous pouvez participer au projet par les activit�
 
 - Participer aux discussions communautaires sur les [canaux de communication](/fr/docs/MDN/Community/Communication_channels).
 - Aider d'autres contributeur·ice·s avec leurs requêtes de tirage et signalements ou accompagner les nouveaux·elles.
-- Soumettre des signalements de bogues. Consultez [les dépôts principaux](/fr/docs/MDN/Community/Our_repositories) pour plus d'informations.
+- Envoyer des signalements de bogues. Consultez [les dépôts principaux](/fr/docs/MDN/Community/Our_repositories) pour plus d'informations.
 - Commenter les signalements pour faire avancer les discussions vers une résolution constructive.
-- Traiter les signalements ouverts (par exemple, dans le dépôt [`translated-content` <sup>(angl.)</sup>](https://github.com/mdn/translated-content/issues)) en soumettant des [propositions de modification](/fr/docs/MDN/Community/Pull_requests).
-- Participer aux événements communautaires.
+- Traiter les signalements ouverts (par exemple, dans le dépôt [`translated-content` <sup>(angl.)</sup>](https://github.com/mdn/translated-content/issues)) en envoyant des [propositions de modification](/fr/docs/MDN/Community/Pull_requests).
+- Participer aux évènements communautaires.
 - Aider à promouvoir le projet MDN.
 
 **Exigences&nbsp;:**
@@ -53,7 +53,7 @@ Pour être contributeur·ice, vous devez respecter&nbsp;:
 
 Les contributeur·ice·s bénéficient des privilèges suivants&nbsp;:
 
-- Invitations à des événements pour les contributeur·ice·s.
+- Invitations à des évènements pour les contributeur·ice·s.
 - Éligibilité pour devenir [membre de l'organisation](#membre_de_lorganisation).
 
 ### Membre de l'organisation
@@ -71,7 +71,7 @@ Pour devenir membre de l'organisation, vous devez remplir au moins une des condi
 
 Les deux conditions suivantes sont obligatoires&nbsp;:
 
-- Avoir activé l'[authentification à deux facteurs](https://docs.github.com/fr/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication) sur votre compte GitHub.
+- Avoir activé [l'authentification à deux facteurs](https://docs.github.com/fr/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication) sur votre compte GitHub.
 - Avoir activé la [signature des commits](https://docs.github.com/fr/authentication/managing-commit-signature-verification/signing-commits).
 
 **Privilèges&nbsp;:**
@@ -97,7 +97,7 @@ En tant que mainteneur·euse, vous effectuez les activités suivantes&nbsp;:
 
 Pour être éligible au rôle de mainteneur·euse, vous devez remplir au moins une des conditions suivantes&nbsp;:
 
-- Avoir acquis de l'expérience en tant qu'[expert·e invité·e](#expert·e_invite·e) pendant au moins six mois.
+- Avoir acquis de l'expérience en tant [qu'expert·e invité·e](#expert·e_invite·e) pendant au moins six mois.
 - Avoir démontré une connaissance large du projet sur plusieurs domaines.
 - Avoir démontré la capacité à agir dans l'intérêt du projet, indépendamment de l'influence d'autres membres.
 - Avoir montré des qualités d'accompagnement d'autres contributeur·ice·s.
@@ -113,7 +113,7 @@ Les mainteneur·euse·s ont le droit d'approuver et de fusionner des requêtes d
 
 ### Propriétaire
 
-Les propriétaires disposent de droits étendus pour gérer les utilisateur·ice·s et les [équipes GitHub <sup>(angl.)</sup>](https://github.com/orgs/mdn/teams), gérer l'accès aux différents dépôts de l'[organisation MDN <sup>(angl.)</sup>](https://github.com/mdn), modifier les paramètres des dépôts et déployer en production.
+Les propriétaires disposent de droits étendus pour gérer les utilisateur·ice·s et les [équipes GitHub <sup>(angl.)</sup>](https://github.com/orgs/mdn/teams), gérer l'accès aux différents dépôts de [l'organisation MDN <sup>(angl.)</sup>](https://github.com/mdn), modifier les paramètres des dépôts et déployer en production.
 Les propriétaires doivent respecter toutes les exigences des autres rôles de contributeur·ice.
 
 > [!NOTE]
@@ -125,7 +125,7 @@ En plus des responsabilités des autres rôles, les propriétaires ont les respo
 
 - Respecter et faire respecter les normes de l'équipe MDN, y compris les [règles de participation à la communauté](https://www.mozilla.org/fr/about/governance/policies/participation/) et les [politiques Mozilla](https://www.mozilla.org/fr/about/governance/policies/).
 - Suivre les politiques de l'organisation MDN et montrer l'exemple.
-- Proposer, documenter et mettre en œuvre de nouvelles politiques via le [processus de requête de tirage](/fr/docs/MDN/Community/Pull_requests).
+- Proposer, documenter et mettre en œuvre de nouvelles politiques par le [processus de requête de tirage](/fr/docs/MDN/Community/Pull_requests).
 - Suivre et contribuer aux signalements et discussions dans toute l'organisation MDN.
 - S'assurer qu'un signalement ou une requête de tirage reçoive un retour d'un·e ou plusieurs membres sous une semaine.
 - [Archiver](https://docs.github.com/fr/repositories/archiving-a-github-repository/archiving-repositories) ou supprimer les dépôts non maintenus.
@@ -143,14 +143,14 @@ Les propriétaires peuvent&nbsp;:
 
 | Rôle                                                     | Exigences                                                                                                                                                                                                                                                                                                                     | Privilèges                                                                                                        |
 | :------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------- |
-| [**Contributeur·ice**](#contributeur·ice)                | Respecter le code de conduite et les consignes de contribution                                                                                                                                                                                                                                                                | - Invitations à des événements pour les contributeur·ice·s<br>- Éligibilité pour devenir membre de l'organisation |
+| [**Contributeur·ice**](#contributeur·ice)                | Respecter le code de conduite et les consignes de contribution                                                                                                                                                                                                                                                                | - Invitations à des évènements pour les contributeur·ice·s<br>- Éligibilité pour devenir membre de l'organisation |
 | [**Membre de l'organisation**](#membre_de_lorganisation) | - Activer la 2FA sur le compte GitHub<br>- Activer la signature des commits<br><br>Au moins une des conditions suivantes&nbsp;:<br>- Résoudre deux signalements ou plus<br>- Contribuer pendant au moins deux mois<br>- Contribution active dans un domaine du projet                                                         | Droits d'accès au niveau de l'organisation                                                                        |
 | [**Mainteneur·euse**](#mainteneur·euse)                  | Au moins une des conditions suivantes&nbsp;:<br>- Expert·e invité·e pendant au moins six mois<br>- Connaissance de plusieurs domaines du projet<br>- Agir pour la santé globale du projet<br>- Accompagner d'autres contributeur·ice·s<br>- Consacrer au moins 16h/mois au projet<br>- Participer aux réunions communautaires | Approuver et fusionner des requêtes de tirage                                                                     |
 | [**Propriétaire**](#proprietaire)                        | Limité au personnel Mozilla                                                                                                                                                                                                                                                                                                   | - Gérer l'accès des différents rôles aux dépôts<br>- Ajouter ou archiver des dépôts et projets                    |
 
 ## Rôles spéciaux
 
-Certains rôles de contributeur·ice·s comportent des responsabilités plus nuancées et des conditions d'éligibilité particulières. Cela inclut les [contributeur·ice·s à la une](#contributeurice_a_la_une), les [expert·e·s invité·e·s](#experte_invitee) et les [community managers](#community_manager).
+Certains rôles de contributeur·ice·s comportent des responsabilités plus nuancées et des conditions d'éligibilité particulières. Cela inclut les [contributeur·ice·s à la une](#contributeur·ice_a_la_une), les [expert·e·s invité·e·s](#expert·e_invite·e) et les [community managers](#community_manager).
 
 ### Contributeur·ice à la une
 
@@ -186,7 +186,7 @@ Pour être éligible au rôle d'expert·e invité·e, vous devez remplir au moin
 
 **Privilèges&nbsp;:**
 
-Les expert·e·s invité·e·s sont ajouté·e·s à l'[équipe des expert·e·s invité·e·s <sup>(angl.)</sup>](https://github.com/orgs/mdn/teams/invited-experts-and-co-maintainers) et à l'équipe du domaine ou projet concerné. Ils·Elles peuvent&nbsp;:
+Les expert·e·s invité·e·s sont ajouté·e·s à [l'équipe des expert·e·s invité·e·s <sup>(angl.)</sup>](https://github.com/orgs/mdn/teams/invited-experts-and-co-maintainers) et à l'équipe du domaine ou projet concerné. Ils·Elles peuvent&nbsp;:
 
 - Accéder au dépôt pour approuver et fusionner des requêtes de tirage.
 - Recommander et voter pour d'autres membres pour devenir expert·e invité·e.
@@ -199,7 +199,7 @@ Ils·Elles partagent de nombreuses responsabilités avec les [mainteneur·euse·
 En plus, ils·elles doivent&nbsp;:
 
 - Traiter les signalements de violation du [code de conduite <sup>(angl.)</sup>](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md) qui correspond aux [règles de participation de la communauté Mozilla](https://www.mozilla.org/fr/about/governance/policies/participation/) et décider des actions appropriées.
-- Organiser et animer des événements communautaires.
+- Organiser et animer des évènements communautaires.
 - Organiser des réunions de projet liées à la communauté.
 - Définir des stratégies médias pour promouvoir le projet MDN.
 - Définir et mettre en place l'expérience d'intégration des contributeur·ice·s.
@@ -233,7 +233,7 @@ Pour proposer quelqu'un comme contributeur·ice à la une, ouvrez un ticket sur 
 2. Sous «&nbsp;Nominate a spotlight contributor&nbsp;», cliquez sur le bouton **Get started**.
 3. Remplissez le formulaire avec les détails des contributions de la personne proposée et soumettez-le.
 
-L'équipe MDN contactera la personne nominée pour recueillir les informations à publier sur le [site](/fr/) dans la section «&nbsp;Contributeur·ice à la une&nbsp;».
+L'équipe MDN contacte la personne nominée pour recueillir les informations à publier sur le [site](/fr/) dans la section «&nbsp;Contributeur·ice à la une&nbsp;».
 
 ### Nomination d'un·e expert·e invité·e
 
@@ -253,14 +253,14 @@ La vie évolue et votre engagement en tant que contributeur·ice peut changer au
 - Passer à un rôle moins exigeant.
 - Quitter complètement le projet (demander le statut émérite).
 
-Dans tous ces cas, n'hésitez pas à discuter de votre situation et de votre engagement actuel avec l'[équipe MDN](#contacter_léquipe_mdn).
+Dans tous ces cas, n'hésitez pas à discuter de votre situation et de votre engagement actuel avec [l'équipe MDN](#contacter_léquipe_mdn).
 
 ### Rétrograder ou retirer des contributeur·ice·s inactif·ive·s
 
 Un·e contributeur·ice peut être rétrogradé·e ou retiré·e si les responsabilités et exigences ne sont pas respectées, notamment en cas d'inactivité répétée ou de violation du [code de conduite <sup>(angl.)</sup>](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md).
 
-La rétrogradation ou le retrait est proposé·e par un·e participant·e lors d'une réunion des mainteneur·euse·s.
-La personne proposeuse fournit des éléments pour justifier la demande.
+La rétrogradation ou le retrait est proposé par un·e participant·e lors d'une réunion des mainteneur·euse·s.
+La personne qui propose fournit des éléments pour justifier la demande.
 Après discussion, les mainteneur·euse·s et community managers votent pour prendre une décision.
 
 Retirer les contributeur·ice·s inactif·ive·s protège le projet et ses livrables, et ouvre aussi des opportunités pour de nouveaux·elles contributeur·ice·s.
@@ -276,15 +276,15 @@ Merci de communiquer avec l'équipe communauté pour éviter une rétrogradation
 
 ## Équipes
 
-Nous gérons les équipes à l'aide de la fonctionnalité [équipes GitHub(https://docs.github.com/fr/organizations/organizing-members-into-teams/about-teams). Être ajouté·e à une équipe signifie que vous avez exprimé votre volonté de vous impliquer davantage dans le projet. Cela implique aussi des responsabilités et droits supplémentaires, détaillés ci-dessous&nbsp;:
+Nous gérons les équipes à l'aide de la fonctionnalité [équipes GitHub](https://docs.github.com/fr/organizations/organizing-members-into-teams/about-teams). Être ajouté·e à une équipe signifie que vous avez exprimé votre volonté de vous impliquer davantage dans le projet. Cela implique aussi des responsabilités et droits supplémentaires, détaillés ci-dessous&nbsp;:
 
 - Une personne membre d'une équipe est généralement ajoutée au fichier [CODEOWNERS <sup>(angl.)</sup>](https://github.com/mdn/content/blob/main/.github/CODEOWNERS) pour son ou ses domaines d'intérêt.
 
-- Lorsqu'une requête de tirage concerne des fichiers de votre domaine de responsabilité (selon le fichier CODEOWNERS), vous serez automatiquement ajouté·e comme relecteur·ice grâce à l'[algorithme d'équilibrage de charge de GitHub](https://docs.github.com/fr/organizations/organizing-members-into-teams/managing-code-review-settings-for-your-team#routing-algorithms).
+- Lorsqu'une requête de tirage concerne des fichiers de votre domaine de responsabilité (selon le fichier CODEOWNERS), vous êtes automatiquement ajouté·e comme relecteur·ice grâce à [l'algorithme d'équilibrage de charge de GitHub](https://docs.github.com/fr/organizations/organizing-members-into-teams/managing-code-review-settings-for-your-team#routing-algorithms).
 
 - Les membres d'une équipe disposent d'un accès de niveau supérieur aux dépôts. Les droits sont accordés uniquement sur les dépôts nécessaires.
 
-Les équipes de l'[organisation MDN sur GitHub <sup>(angl.)</sup>](https://github.com/orgs/mdn/teams) incluent&nbsp;:
+Les équipes de [l'organisation MDN sur GitHub <sup>(angl.)</sup>](https://github.com/orgs/mdn/teams) incluent&nbsp;:
 
 - `@Core`&nbsp;: équipe principale MDN Web Docs
 - `@mdn-community-engagement`&nbsp;: personnes responsables de l'engagement communautaire sur nos dépôts
