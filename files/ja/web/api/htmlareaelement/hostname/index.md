@@ -1,13 +1,16 @@
 ---
 title: "HTMLAreaElement: hostname プロパティ"
+short-title: hostname
 slug: Web/API/HTMLAreaElement/hostname
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 8cc63f7e6619446ea38f6a38c457a597a9af564b
 ---
 
 {{ApiRef("HTML DOM")}}
 
-**`HTMLAreaElement.hostname`** プロパティは、URL のドメインを含む文字列です。
+**`hostname`** は {{domxref("HTMLAreaElement")}} インターフェイスのプロパティで、この `<area>` 要素の URL の{{glossary("domain name", "ドメイン名")}}または {{glossary("IP address", "IP アドレス")}}のどちらかを含む文字列です。この URL にホスト名がない場合、このプロパティには空文字列 (`""`) が入ります。 IPv4 および IPv6 アドレスは、先頭の 0 が削除されるなど正規化され、ドメイン名は [IDN](https://ja.wikipedia.org/wiki/国際化ドメイン名) に変換されます。
+
+詳しくは {{domxref("URL.hostname")}} を参照してください。
 
 ## 値
 

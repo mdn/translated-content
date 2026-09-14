@@ -1,13 +1,14 @@
 ---
 title: "EventSource: message イベント"
+short-title: message
 slug: Web/API/EventSource/message_event
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
-{{APIRef}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
-`message` は {{domxref("EventSource")}} API のイベントで、イベントソースからデータを受け取ったときに発生します。
+**`message`** は {{domxref("EventSource")}} インターフェイスのイベントで、イベントソースからデータを受け取ったときに発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
@@ -15,10 +16,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("message", (event) => {});
+```js-nolint
+addEventListener("message", (event) => { })
 
-onmessage = (event) => {};
+onmessage = (event) => { }
 ```
 
 ## イベント型
@@ -38,7 +39,7 @@ _このインターフェイスは親である {{domxref("Event")}} からプロ
 - {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
   - : 文字列で、このイベントの一意の ID を表します。
 - {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : `MessageEventSource` （{{domxref("WindowProxy")}}、{{domxref("MessagePort")}}、{{domxref("ServiceWorker")}} の何れかのオブジェクト）で、メッセージの送信元を表します。
+  - : `MessageEventSource` （{{glossary("WindowProxy")}}、{{domxref("MessagePort")}}、{{domxref("ServiceWorker")}} のいずれかのオブジェクト）で、メッセージの送信元を表します。
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
   - : {{domxref("MessagePort")}} オブジェクトの配列で、メッセージが送信されるチャンネルに関連するポートを表します（チャンネルメッセージングや、共有ワーカーにメッセージを送信する場合など、適切な場合）。
 

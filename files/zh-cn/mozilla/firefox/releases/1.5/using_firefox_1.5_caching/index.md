@@ -3,8 +3,6 @@ title: Using Firefox 1.5 caching
 slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 ---
 
-{{FirefoxSidebar}}
-
 ## 介绍
 
 [Firefox 1.5](/zh-CN/docs/Mozilla/Firefox/Releases/1.5) 对整个 web 页面的一个浏览器会话进行了内存缓存，包括他们对 JavaScript 状态。在访问过的页面间后退和前进不需要页面加载同时保存 JavaScript 状态。这个特性，被称为 bfcache（“后退前进缓存”），使得页面导航（切换）非常快。这个状态缓存被保存直到用户关闭浏览器。
@@ -14,7 +12,6 @@ slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 - 页面使用 `unload` 或者 `beforeunload` 处理程序;
 - 页面设置 "cache-control: no-store".
 - 页面是 HTTPS 同时页面至少有一个以下设置：
-
   - "Cache-Control: no-cache"
   - "Pragma: no-cache"
   - 使用 "Expires: 0" 或者 "Expires" 设置相对于“Date”header 值的过去日期值 (除非指定 "Cache-Control: max-age=");

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLAnchorElement.rel`** 属性反映 [`rel`](/zh-CN/docs/Web/HTML/Attributes/rel) 属性。它是一个字符串，包含由空格分隔的链接类型列表，这些类型指示由 {{HTMLElement("a")}} 元素表示的资源与当前文档之间的关系。
+**`HTMLAnchorElement.rel`** 属性反映 [`rel`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel) 属性。它是一个字符串，包含由空格分隔的链接类型列表，这些类型指示由 {{HTMLElement("a")}} 元素表示的资源与当前文档之间的关系。
 
 ## 值
 

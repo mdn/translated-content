@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 Заголовок ответа **`Access-Control-Max-Age`** указывает, на какое время может быть закеширован результат {{glossary("preflight request", "предзапроса")}}. Эта информация содержится в заголовках {{HTTPHeader("Access-Control-Allow-Methods")}} и {{HTTPHeader("Access-Control-Allow-Headers")}}.
 
 <table class="properties">

@@ -82,4 +82,4 @@ nacion("frances"); // TypeError: nacion no es una función
 
 ## Vea También
 
-- {{jsxref("Sentencias/while", "while")}}
+- {{jsxref("Statements/while", "while")}}

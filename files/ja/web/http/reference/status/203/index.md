@@ -1,12 +1,9 @@
 ---
 title: 203 Non-Authoritative Information
 slug: Web/HTTP/Reference/Status/203
-original_slug: Web/HTTP/Status/203
 l10n:
-  sourceCommit: 3f68a9604259dfa862dd741dc88ebc8fb5fa10fe
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`203 Non-Authoritative Information`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、リクエストが成功したものの、変換{{Glossary("Proxy server", "プロキシー")}}によって元のサーバーの {{HTTPStatus("200")}} (`OK`) レスポンスからヘッダーやコンテンツが変更されたことを表します。
 

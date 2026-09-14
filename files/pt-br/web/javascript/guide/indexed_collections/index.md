@@ -3,7 +3,7 @@ title: Coleções Indexadas
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
 
 Este capítulo introduz coleções de dados que são ordenados por um valor indexado. Isso inclui construtores de arrays e array-like como objetos {{jsxref("Array")}} e {{jsxref("TypedArray")}}.
 
@@ -38,7 +38,8 @@ var arr = [];
 arr.length = comprimentoDoArray;
 ```
 
-> **Nota:** **Nota :** No código acima, `comprimentoDoArray` deve ser um `Número`. De outra maneira, um array com um único elemento (o valor passado) será criado. Chamar `arr.length` retornará `comprimentoDoArray`, mas o array na verdade, contem elementos vazios (undefined). Executar um loop {{jsxref("Statements/for...in","for...in")}} no array, não retornará nenhum dos elementos do array.
+> [!NOTE]
+> No código acima, `comprimentoDoArray` deve ser um `Número`. De outra maneira, um array com um único elemento (o valor passado) será criado. Chamar `arr.length` retornará `comprimentoDoArray`, mas o array na verdade, contem elementos vazios (undefined). Executar um loop {{jsxref("Statements/for...in","for...in")}} no array, não retornará nenhum dos elementos do array.
 
 Além de poderem ser definidos como uma nova variável, como mostrado acima, arrays também podem ser atribuídos como uma propriedade de um novo objeto, ou de um objeto existente:
 
@@ -83,7 +84,8 @@ emp[1] = "Phil Lesh";
 emp[2] = "August West";
 ```
 
-> **Nota:** **Nota :** se você fornece um valor não inteiro ao operador do array, como no código acima, a propriedade será criada no objeto representando o array, ao invés do elemento do array.
+> [!NOTE]
+> se você fornece um valor não inteiro ao operador do array, como no código acima, a propriedade será criada no objeto representando o array, ao invés do elemento do array.
 
 ```js
 var arr = [];
@@ -109,7 +111,8 @@ var myArray = ["Vento", "Chuva", "Fogo"];
 
 Você então se refere ao primeiro elemento do array como em `myArray[0]` e ao segundo elemento do array como em `myArray[1]`. O índice do elemento começa com zero.
 
-> **Nota:** **Nota :** o operador do array (colchetes) também é usado para acessar as propriedades do array (arrays também são objetos em JavaScript). Por exemplo,
+> [!NOTE]
+> o operador do array (colchetes) também é usado para acessar as propriedades do array (arrays também são objetos em JavaScript). Por exemplo,
 
 ```js
 var arr = ["um", "dois", "três"];
@@ -444,11 +447,11 @@ Linha 3: [3,0] [3,1] [3,2] [3,3]
 
 ### Arrays e expressões regulares
 
-Quando um array é o resultado de uma equivalência entre uma expressão regular e um string, o array retorna propriedades e elementos que disponibilizam a informação sobre a correspondência. Um array é o valor retornado de {{jsxref("Global_Objects/RegExp/exec","RegExp.exec()")}}, {{jsxref("Global_Objects/String/match","String.match()")}}, e {{jsxref("Global_Objects/String/split","String.split()")}}. Para informações sobre o uso de arrays com expressões regulares, veja [Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions).
+Quando um array é o resultado de uma equivalência entre uma expressão regular e um string, o array retorna propriedades e elementos que disponibilizam a informação sobre a correspondência. Um array é o valor retornado de {{jsxref("RegExp.exec()")}}, {{jsxref("String.match()")}}, e {{jsxref("String.split()")}}. Para informações sobre o uso de arrays com expressões regulares, veja [Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ### Trabalhando com objetos array-like
 
-Alguns objetos JavaScript, como a {{domxref("NodeList")}} retornada pelo {{domxref("document.getElementsByTagName()")}} ou o objeto acessível dentro do {{jsxref("Functions/arguments","arguments")}} de uma função, se parecem e se comportam superficialmente como arrays, mas não compartilham de todos os seus métodos. O objeto `arguments` fornece um atributo {{jsxref("Global_Objects/Function/length","length")}} mas não implementa o método {{jsxref("Array.forEach", "forEach()")}}, por exemplo.
+Alguns objetos JavaScript, como a {{domxref("NodeList")}} retornada pelo {{domxref("document.getElementsByTagName()")}} ou o objeto acessível dentro do {{jsxref("Functions/arguments","arguments")}} de uma função, se parecem e se comportam superficialmente como arrays, mas não compartilham de todos os seus métodos. O objeto `arguments` fornece um atributo {{jsxref("Function.length","length")}} mas não implementa o método {{jsxref("Array.forEach", "forEach()")}}, por exemplo.
 
 Métodos Array prototype podem ser chamados contra outros objetos array-like. Por exemplo:
 
@@ -490,4 +493,4 @@ Views de arrays tipados possuem nomes autodescritivos e provêm views para todos
 
 Para mais informações, veja [Arrays tipados no JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays) e documentos de referência para os diferentes objetos {{jsxref("TypedArray")}}.
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}

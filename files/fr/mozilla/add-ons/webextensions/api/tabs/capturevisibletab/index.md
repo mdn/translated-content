@@ -3,8 +3,6 @@ title: tabs.captureVisibleTab()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
 ---
 
-{{AddonSidebar}}
-
 Crée une URI de données codant une image de la zone visible de l'onglet actuellement actif dans la fenêtre spécifiée. Vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `<all_urls>` pour utiliser cette méthode. (Alternativement, Chrome permet l'utilisation de cette méthode avec la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `activeTab` et un geste utilisateur qualifiant).
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -57,8 +55,6 @@ browser.browserAction.onClicked.addListener(function () {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -3,8 +3,6 @@ title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
 ---
 
-{{JSRef}}
-
 **`endsWith()`** 方法用于判断一个字符串是否以指定字符串结尾，如果是则返回 `true`，否则返回 `false`。
 
 {{InteractiveExample("JavaScript Demo: String.endsWith()")}}

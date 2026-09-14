@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
-
 {{jsxref("Iterator")}} 实例的 **`[Symbol.iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)，并允许内置迭代器被大多数期望可迭代对象的语法所消费，如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的值，即迭代器对象本身。
 
 ## 语法

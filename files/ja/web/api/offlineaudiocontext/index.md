@@ -37,7 +37,8 @@ _親インターフェイスである {{domxref("BaseAudioContext")}} からの�
 - {{domxref("OfflineAudioContext.resume()")}}
   - : 前回中断した音声の時刻の進行を再開します。
 
-> **メモ:** `resume()` メソッドはまだ利用できます。これは {{domxref("BaseAudioContext")}} インターフェイスで定義されるようになり（{{domxref("AudioContext.resume")}} を参照）、従って {{domxref("AudioContext")}} および {{domxref("OfflineAudioContext")}} インターフェイスの両方でアクセスできます。
+> [!NOTE]
+> `resume()` メソッドはまだ利用できます。これは {{domxref("BaseAudioContext")}} インターフェイスで定義されるようになり（{{domxref("AudioContext.resume")}} を参照）、従って {{domxref("AudioContext")}} および {{domxref("OfflineAudioContext")}} インターフェイスの両方でアクセスできます。
 
 ## イベント
 

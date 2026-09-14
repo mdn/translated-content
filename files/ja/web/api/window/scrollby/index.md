@@ -1,34 +1,36 @@
 ---
-title: Window.scrollBy()
+title: "Window: scrollBy() メソッド"
+short-title: scrollBy()
 slug: Web/API/Window/scrollBy
+l10n:
+  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
-{{ APIRef() }}
+{{APIRef}}
 
 **`Window.scrollBy()`** メソッドは、ウィンドウ内の文書を指定された量だけスクロールさせます。
 
 ## 構文
 
-```js
-scrollBy(x_coord, y_coord);
-scrollBy(options);
+```js-nolint
+scrollBy(xCoord, yCoord)
+scrollBy(options)
 ```
 
 ### 引数
 
-- `x_coord` はスクロールさせたい水平方向のピクセル数です。
-- `y_coord` はスクロールさせたい垂直方向のピクセル数です。
-
-\- または -
-
+- `xCoord`
+  - : スクロールさせたい水平方向のピクセル数です。
+- `yCoord`
+  - : スクロールさせたい垂直方向のピクセル数です。
 - `options`
-  - : 以下の引数を含む辞書です。
+  - : 以下のプロパティを持つオブジェクトです。
     - `top`
       - : ウィンドウまたは要素をスクロールする Y 軸方向のピクセル数を指定します。
     - `left`
       - : ウィンドウまたは要素をスクロールする X 軸方向のピクセル数を指定します。
     - `behavior`
-      - : スクロールを滑らかにアニメーションさせるか (`smooth`)、瞬時に一回のジャンプで行うか (`instant`)、あるいはブラウザーに選択させるか (`auto`, 既定値) を指定することができます。
+      - : スクロールを滑らかにアニメーションさせるか (`smooth`)、瞬時に一回のジャンプで行うか (`instant`)、あるいはブラウザーに選択させるか (`auto`, デフォルト値) を指定することができます。
 
 ### 返値
 

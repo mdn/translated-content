@@ -5,7 +5,7 @@ slug: Web/API/URL/hash
 
 {{ APIRef("URL API") }}
 
-La propriété **`hash`** de l'interface {{domxref("URL")}} retourne un {{domxref("USVString")}} contenant le caractère `'#'` suivi par l'identificateur de fragment de URL.
+La propriété **`hash`** de l'interface {{domxref("URL")}} retourne un {{jsxref("String")}} contenant le caractère `'#'` suivi par l'identificateur de fragment de URL.
 
 Le fragment n'est pas [décodé en pourcent](/fr/docs/Glossary/Percent-encoding). Si l'URL ne contient pas d'identificateur de fragment, la valeur de cette propriété est une chaîne de caractère vide — `""`.
 
@@ -20,7 +20,7 @@ object.hash = string;
 
 ### Valeur
 
-Un {{domxref("USVString")}}.
+Un {{jsxref("String")}}.
 
 ## Exemples
 

@@ -15,13 +15,14 @@ l10n:
 
 この属性は、サポート不足と誤用により非推奨となった、HTML で完全にサポートされたことのない `longdesc` 属性（置き換えられた要素のコンテンツへの長い説明の URL）と同様の目的を果たします。
 
-`aria-details` 属性は、より詳細な情報を取得するための要素の [`id`](/ja/docs/Web/HTML/Global_attributes/id)、またはスペースで区切られた `id` のリストを値として受け取ります。`aria-details` が要素に含まれている場合、支援技術は追加の情報が利用可能であることをユーザーに通知し、ユーザーが参照先のコンテンツに移動できるようにします。
+`aria-details` 属性は、より詳細な情報を取得するための要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id)、またはスペースで区切られた `id` のリストを値として受け取ります。`aria-details` が要素に含まれている場合、支援技術は追加の情報が利用可能であることをユーザーに通知し、ユーザーが参照先のコンテンツに移動できるようにします。
 
 `aria-details` によって参照される要素には、通常 [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) を介して提供される情報よりも多くの情報が含まれることが意図されています。
 
 `aria-detials` によって参照される要素は、全てのユーザーに表示される必要があります。`aria-details`は、画面を見て説明コンテンツが利用可能であることをすぐに判断できない可能性があるユーザーに、説明的なコンテンツが利用可能であることを通知します。
 
-> **メモ:** `aria-details` はアクセシブル説明には影響しません。
+> [!NOTE]
+> `aria-details` はアクセシブル説明には影響しません。
 
 `aria-describedby` とは異なり、`aria-details` によって参照される要素は、アクセシブル説明では使用されず、支援技術ユーザーに表示されるときにプレーンな文字列に変換されません。関連付けられているコンテンツが長すぎず、参照される要素のコンテンツを単純なテキスト文字列に平坦化しても情報が失われない場合は、代わりに `aria-describedby` を使用することを検討してください。ただし、要素に `aria-details` に加えて、`aria-describedby` もしくは `aria-description` のいずれかで説明が指定されていることは有効です。
 
@@ -66,9 +67,9 @@ definition ロールと term ロールについて、`aria-details` は [`defini
 
 ## 関連情報
 
-- HTML [id](/ja/docs/Web/HTML/Global_attributes/id) 属性
+- HTML [id](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性
 - [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 - [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 - [`aria-description`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)
 - [画像の `alt` 属性](/ja/docs/Web/API/HTMLImageElement/alt)
-- HTML [title](/ja/docs/Web/HTML/Global_attributes/title) 属性
+- HTML [title](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性

@@ -3,8 +3,6 @@ title: omnibox.OnInputEnteredDisposition
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/OnInputEnteredDisposition
 ---
 
-{{AddonSidebar}}
-
 Le type **`omnibox.OnInputEnteredDisposition`** décrit comment l'extension doit gérer une sélection d'utilisateur à partir des suggestions dans la liste déroulante de la barre d'adresse.
 
 Il est passé dans l'écouteur {{WebExtAPIRef("omnibox.onInputEntered")}} avec la sélection elle-même.
@@ -27,5 +25,3 @@ Les valeurs de ce type sont des chaînes. Ils peuvent prendre l'une des valeurs 
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

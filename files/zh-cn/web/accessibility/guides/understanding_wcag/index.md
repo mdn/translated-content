@@ -32,13 +32,11 @@ WCAG 2.1 包括：
 
 - WCAG 2.0 中的所有内容（逐字逐句）
 - 17 个新的 A/AA/AAA 级的成功标准，主要用于满足以下领域的用户需求：
-
   - 移动端无障碍
   - 低视力
   - 认知障碍
 
 - 阅读有关 WCAG 2.1 的更多内容：
-
   - W3C/WAI：[WCAG 2.1 中的新增内容](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/)
   - Deque：[WCAG 2.1：无障碍指南的下一步是什么](https://www.deque.com/blog/wcag-2-1-what-is-next-for-accessibility-guidelines/)
   - TPG：[Web 内容无障碍指南（WCAG）2.1](https://www.tpgi.com/web-content-accessibility-guidelines-wcag-2-1/)

@@ -6,11 +6,11 @@ l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 **`hspace`** は {{domxref("HTMLImageElement")}} インターフェイスの*廃止された*プロパティで、ページをレイアウトする際に {{HTMLElement("img")}} 要素の左右に何ピクセル分の空きを残すかを指定します。
 
-このプロパティは、{{Glossary("HTML")}} の [`hspace`](/ja/docs/Web/HTML/Element/img#hspace) 属性を反映します。
+このプロパティは、{{Glossary("HTML")}} の [`hspace`](/ja/docs/Web/HTML/Reference/Elements/img#hspace) 属性を反映します。
 
 ## 値
 

@@ -1,16 +1,15 @@
 ---
 title: starts-with
 slug: Web/XML/XPath/Reference/Functions/starts-with
-original_slug: Web/XPath/Reference/Functions/starts-with
+l10n:
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}{{ XsltRef() }}
 
 `starts-with` 関数は第 1 引数の文字列が第 2 引数の文字列で始まるかどうかを調べ、true または false を返します。
 
-### 構文
+## 構文
 
-```
+```plain
 starts-with(haystack, needle)
 ```
 
@@ -25,10 +24,10 @@ starts-with(haystack, needle)
 
 `haystack` が `needle` で始まれば `true`。 そうでなければ `false`。
 
-### 定義
+## 仕様書
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-starts-with)
+[XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-starts-with)
 
-### Gecko での対応
+## Gecko の対応
 
 対応済み。

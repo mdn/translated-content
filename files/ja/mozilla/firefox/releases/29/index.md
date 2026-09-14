@@ -3,8 +3,6 @@ title: Firefox 29 for developers
 slug: Mozilla/Firefox/Releases/29
 ---
 
-{{FirefoxSidebar}}
-
 Gecko 29 を搭載した Firefox 29 は、米国時間 2014 年 4 月 29 日にリリースされました。このページでは、開発者に影響する Firefox 29 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -25,12 +23,12 @@ _詳細および他の小規模な変更点については [Mozilla Hacks ブロ
 
 ### CSS
 
-- [CSS variables](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) を実装しました ([Firefox バグ 773296](https://bugzil.la/773296))。この件に関する Mozilla Hacks の記事は[こちら](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/)です。これは Release ビルド以外でのみデフォルトで有効です (Release ビルドで使用したい場合は設定項目 `layout.css.variables.enabled` を `true` に変更してください)。
+- [CSS variables](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) を実装しました ([Firefox バグ 773296](https://bugzil.la/773296))。この件に関する Mozilla Hacks の記事は[こちら](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/)です。これは Release ビルド以外でのみデフォルトで有効です (Release ビルドで使用したい場合は設定項目 `layout.css.variables.enabled` を `true` に変更してください)。
 - Flexbox で {{cssxref("visibility")}}`: collapse` をサポートしました ([Firefox バグ 783470](https://bugzil.la/783470))。
 - {{cssxref("box-sizing")}} プロパティの接頭辞を外しました ([Firefox バグ 243412](https://bugzil.la/243412))。
 - 何かがアニメーションするであろうというヒントを与える、{{cssxref("will-change")}} プロパティを追加しました。有効化するには設定項目 `layout.css.will-change.enabled` を `true` に変更しなければなりません。([Firefox バグ 940842](https://bugzil.la/940842))
 - `3e1` や `10e+0` といった指数表記を {{cssxref("&lt;number&gt;")}} 値でサポートしました ([Firefox バグ 964529](https://bugzil.la/964529))。
-- {{cssxref("&lt;gradient&gt;")}} タイプの画像を {{cssxref("border-image")}} でサポートしました ([Firefox バグ 709587](https://bugzil.la/709587))。
+- {{cssxref("gradient")}} タイプの画像を {{cssxref("border-image")}} でサポートしました ([Firefox バグ 709587](https://bugzil.la/709587))。
 - {{cssxref("touch-action")}} プロパティを実装しました。デフォルトでは無効であり、設定項目 `layout.css.touch_action.enabled` で制御します。([Firefox バグ 795567](https://bugzil.la/795567))
 - \<pre> 要素用の冗長なデフォルトスタイルを quirk.css から削除しました ([Firefox バグ 948914](https://bugzil.la/948914))。
 - CSS Variables のフォールバックを正しく実装しました (基本的な循環参照) ([Firefox バグ 950497](https://bugzil.la/950497))。
@@ -45,15 +43,12 @@ _詳細および他の小規模な変更点については [Mozilla Hacks ブロ
 
 - ECMAScript 6 の String の新たなメソッドである {{jsxref("String.prototype.codePointAt()")}} および {{jsxref("String.prototype.fromCodePoint()")}} を実装しました ([Firefox バグ 918879](https://bugzil.la/918879))。
 - [ECMAScript Internationalization API (ECMA-402)](https://www.ecma-international.org/ecma-402/1.0/) を実装しました。また、デスクトップ版 Firefox ではデフォルトで有効にしました ([Firefox バグ 853301](https://bugzil.la/853301)):
-
   - {{jsxref("Intl")}} オブジェクトネームスペースの新たなオブジェクト:
-
-    - {{jsxref("Collator", "Intl.Collator")}}
-    - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
-    - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
+    - {{jsxref("Intl/Collator", "Intl.Collator")}}
+    - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+    - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
 
   - 以下の {{jsxref("String")}}、{{jsxref("Number")}}、{{jsxref("Date")}} のメソッドを、ECMA-402 により引数 `locales` および `options` を持つように更新しました:
-
     - {{jsxref("String.prototype.localeCompare()")}}
     - {{jsxref("Number.prototype.toLocaleString()")}}
     - {{jsxref("Date.prototype.toLocaleString()")}}
@@ -62,7 +57,7 @@ _詳細および他の小規模な変更点については [Mozilla Hacks ブロ
 
 - 更新された ECMAScript6 仕様草案に準拠するため、{{jsxref("Map")}} オブジェクトおよび {{jsxref("Set")}} オブジェクトがキーと値の同一性を確認するときは、`-0` と `+0` を同一として扱うようになりました。
 - `Promise` をデフォルトで有効にしました ([Firefox バグ 918806](https://bugzil.la/918806))。
-- 完了した Generator は例外を発生させるのではなく {{jsxref("IteratorResult")}} を返すようになりました ([Firefox バグ 958951](https://bugzil.la/958951))。
+- 完了した Generator は例外を発生させるのではなく `IteratorResult` を返すようになりました ([Firefox バグ 958951](https://bugzil.la/958951))。
 
 ### インターフェイス/API/DOM
 
@@ -70,7 +65,7 @@ _詳細および他の小規模な変更点については [Mozilla Hacks ブロ
 - {{domxref("URLUtils")}} インターフェイスが、{{domxref("URLSearchParams")}} オブジェクトを返す {{domxref("URLUtils.searchParams", "searchParams")}} プロパティをサポートしました。URL の検索引数を変更できます ([Firefox バグ 887836](https://bugzil.la/887836))。{{domxref("URLSearchParams")}} コンストラクターにより、文字列のパースや検索が容易になります。
 - {{domxref("Worker.onLine")}} プロパティをサポートしました。Worker のオンライン/オフライン状況を知ることができます ([Firefox バグ 925437](https://bugzil.la/925437))。
 - Web Components の実装の一環として、{{domxref("HTMLShadowElement")}} インターフェイスを設定項目 `dom.webcomponents.enabled` のもとに実装しました。使用したい場合は値を `true` に変更してください。([Firefox バグ 887538](https://bugzil.la/887538))
-- 読み取り専用の {{domxref("HTMLIFrameElement.sandbox")}} プロパティの型は {{domxref("string")}} ではなく {{domxref("HTMLSettableToken")}} になりました ([Firefox バグ 845057](https://bugzil.la/845057))。
+- 読み取り専用の {{domxref("HTMLIFrameElement.sandbox")}} プロパティの型は {{jsxref("String")}} ではなく {{domxref("HTMLSettableToken")}} になりました ([Firefox バグ 845057](https://bugzil.la/845057))。
 - {{domxref("HTMLCanvasElement.getContext()")}} で、値 `moz-webgl` のサポートを廃止しました。標準化された値 `webgl` を使用してください ([Firefox バグ 913597](https://bugzil.la/913597))。
 - {{domxref("ImageData")}} のコンストラクターを追加しました。このインターフェイスは {{domxref("Worker")}} で使用できます。([Firefox バグ 959958](https://bugzil.la/959958))
 - {{domxref("NavigatorLocation.origin", "location.origin")}} が Worker で使用可能になりました ([Firefox バグ 964148](https://bugzil.la/964148))。

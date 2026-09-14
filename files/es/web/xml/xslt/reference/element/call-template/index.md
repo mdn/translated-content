@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/call-template
 original_slug: Web/XSLT/Reference/Element/call-template
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{XsltSidebar}}
 
 El elemento `<xsl:call-template>` invoca una plantilla con nombre.
 

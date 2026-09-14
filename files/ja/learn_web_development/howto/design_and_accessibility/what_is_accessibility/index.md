@@ -1,12 +1,9 @@
 ---
 title: アクセシビリティとは
 slug: Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
-original_slug: Learn/Common_questions/Design_and_accessibility/What_is_accessibility
 l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
-
-{{QuicklinksWithSubPages("ja/Learn/Common_questions")}}
 
 この記事はウェブアクセシビリティの背景にある基本的な概念を紹介します。
 
@@ -46,7 +43,6 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 動画について考えてみましょう。
 
 - 聴覚障碍
-
   - : 聴覚障碍者は動画からどのような恩恵を受けるのでしょうか？字幕を提供するか、あるいはそれより良いことは、全文を書き起こす必要があります。
 
     また、人それぞれのニーズに合わせて、音量を調整できるようにしましょう。

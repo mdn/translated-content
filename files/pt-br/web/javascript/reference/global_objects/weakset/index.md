@@ -29,12 +29,12 @@ As principais diferenças para o objeto {{jsxref("Set")}} são:
 
 - `WeakSet.length`
   - : O valor da propriedade de comprimento é 0.
-- {{jsxref("WeakSet.prototype")}}
+- {{jsxref("WeakSet")}}
   - : Representa o protóripo para o construtos `Set`. Permite a adição de propriedades para todos os objetos do `WeakSet`.
 
 ## `Instâncias WeakSet`
 
-Todas as instâncias do `WeakSet` herdam do {{jsxref("WeakSet.prototype")}}.
+Todas as instâncias do `WeakSet` herdam do {{jsxref("WeakSet")}}.
 
 ### Propriedades
 

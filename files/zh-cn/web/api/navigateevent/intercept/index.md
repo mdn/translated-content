@@ -25,7 +25,7 @@ intercept(options)
     - `focusReset` {{optional_inline}}
       - : 定义导航的焦点行为。这可能接受以下值之一：
         - `after-transition`
-          - : 一旦处理器返回的 promise 兑现，浏览器将聚焦具有 [`autofocus`](/zh-CN/docs/Web/HTML/Global_attributes/autofocus) 属性的第一个元素，或者如果没有元素设置 `autofocus`，则聚焦 {{htmlelement("body")}} 元素。这是默认值。
+          - : 一旦处理器返回的 promise 兑现，浏览器将聚焦具有 [`autofocus`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/autofocus) 属性的第一个元素，或者如果没有元素设置 `autofocus`，则聚焦 {{htmlelement("body")}} 元素。这是默认值。
         - `manual`
           - : 禁用默认行为。
     - `scroll` {{optional_inline}}

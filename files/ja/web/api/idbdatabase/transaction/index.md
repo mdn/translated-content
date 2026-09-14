@@ -23,7 +23,6 @@ transaction(storeNames, mode, options)
 ### 引数
 
 - `storeNames`
-
   - : 新しいトランザクションの対象となるオブジェクトストアの名前を表す文字列の配列です。アクセスが必要なオブジェクトストアのみを指定してください。アクセスが必要なオブジェクトストアが 1 個だけである場合は、その名前を文字列で指定できます。そのため、以下の行は等価です。
 
     ```js
@@ -40,7 +39,6 @@ transaction(storeNames, mode, options)
     空の配列を渡すと、例外が投げられます。
 
 - `mode` {{optional_inline}}
-
   - : トランザクション内で実行できるアクセスの種類です。トランザクションは `readonly`、`readwrite`、`readwriteflush` (非標準、Firefox のみ) の 3 種類のいずれかのモードで開始します。`versionchange` モードはここでは指定できません。この引数を指定しない場合、デフォルトのアクセスモードは `readonly` です。速度の低下を避けるため、実際にデータベースに書き込む必要がある場合以外は `readwrite` トランザクションを開始しないでください。
 
     データを更新するためオブジェクトストアを `readwrite` モードで開く必要がある場合、以下のようにすると良いです。
@@ -55,9 +53,7 @@ transaction(storeNames, mode, options)
     > Firefox では、何らかの理由で永続性を保証したい場合 (例えば、後で再計算できない重要なデータを保存する場合)、実験的な (非標準の) `readwriteflush` モードを用いてトランザクションを開始することで、`complete` イベントを伝える前にトランザクションをディスクに書き込むことを強制できます。({{domxref("IDBDatabase.transaction")}} を参照) これは現在実験的であり、`about:config` で `dom.indexedDB.experimental` を `true` に設定している場合のみ利用できます。
 
 - `options` {{optional_inline}}
-
   - : その他のオプションが入った辞書です。以下が利用可能なオプションです。
-
     - `durability`
       - : `"default"`、`"strict"`、`"relaxed"` のいずれかです。デフォルト値は `"default"` です。`"relaxed"` を使用するとパフォーマンスが向上しますが、保証は減ります。ウェブアプリケーションでは、キャッシュや変化が早いレコードなどの一時的なデータには `"relaxed"` を用い、パフォーマンスや電力に影響してもデータ消失のリスクを減らしたい場合は `"strict"` を用いるべきです。
 

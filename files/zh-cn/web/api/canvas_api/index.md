@@ -52,9 +52,11 @@ ctx.fillRect(10, 10, 150, 100);
 - {{domxref("Path2D")}} {{experimental_inline}}
 - {{domxref("ImageBitmapRenderingContext")}} {{experimental_inline}}
 
-> **备注：** [WebGL](/zh-CN/docs/Web/API/WebGL_API) 包含了与 `WebGLRenderingContext` 有关的接口的参考。
+> [!NOTE]
+> [WebGL](/zh-CN/docs/Web/API/WebGL_API) 包含了与 `WebGLRenderingContext` 有关的接口的参考。
 
-> **备注：** {{domxref("OffscreenCanvas")}} 也在 web worker 中可用。
+> [!NOTE]
+> {{domxref("OffscreenCanvas")}} 也在 web worker 中可用。
 
 {{domxref("CanvasCaptureMediaStream")}} 也是一个相关的接口。
 

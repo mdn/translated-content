@@ -15,7 +15,7 @@ L'interface **`ImageData`** représente les données des pixels au sein d'une ce
 ## Propriétés
 
 - {{domxref("ImageData.data")}}
-  - : Un {{domxref("Uint8ClampedArray")}} représentant un tableau à une seule dimension contenant les données des pixels sous format RVBA, chaque valeur comprise entre `0` et `255` (inclus).
+  - : Un {{jsxref("Uint8ClampedArray")}} représentant un tableau à une seule dimension contenant les données des pixels sous format RVBA, chaque valeur comprise entre `0` et `255` (inclus).
 - {{domxref("ImageData.height")}} {{readonlyInline}}
   - : Un `unsigned` `long` représentant la hauteur effective, en pixels, de l'objet `ImageData`.
 - {{domxref("ImageData.width")}} {{readonlyInline}}

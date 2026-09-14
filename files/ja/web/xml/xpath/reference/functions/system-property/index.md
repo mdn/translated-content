@@ -1,16 +1,15 @@
 ---
 title: system-property
 slug: Web/XML/XPath/Reference/Functions/system-property
-original_slug: Web/XPath/Reference/Functions/system-property
+l10n:
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+`system-property` 関数は、指定されたシステムプロパティを表すオブジェクトを返します。
 
-`system-property`関数は、指定されたシステムプロパティを表すオブジェクトを返します。
+## 構文
 
-### 構文
-
-```
+```plain
 system-property(name)
 ```
 
@@ -23,16 +22,16 @@ system-property(name)
 
 指定されたシステムプロパティを表すオブジェクト。
 
-### 注
+## 解説
 
 - xsl:version: プロセッサーによって実装された XSLT のバージョンを示す数字。このドキュメントで指定されているバージョンの XSLT を実装している XSLT プロセッサーの場合、これは 1.0 です
 - xsl:vendor: XSLT プロセッサーのベンダーを識別する文字列
 - xsl:vendor-url: XSLT プロセッサーのベンダーを識別する URL を含む文字列。通常これはベンダーのウェブサイトのホストページ (ホームページ) です
 
-### 定義
+## 仕様書
 
-[XSLT 1.0 12.4](https://www.w3.org/TR/xslt#function-system-property)
+[XSLT 1.0 12.4](https://www.w3.org/TR/1999/REC-xslt-19991116/#function-system-property)
 
-### Gecko での対応
+## Gecko の対応
 
-対応済み
+対応済み。

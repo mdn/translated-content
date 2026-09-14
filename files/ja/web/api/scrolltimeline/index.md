@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-**`ScrollTimeline`** は{{domxref("Web Animations API", "ウェブアニメーション API", "", "nocode")}} のインターフェイスで、スクロール進行タイムラインを表します（詳しくは [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations) を参照してください）。
+**`ScrollTimeline`** は{{domxref("Web Animations API", "ウェブアニメーション API", "", "nocode")}} のインターフェイスで、スクロール進行タイムラインを表します（詳しくは [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations) を参照してください）。
 
 `ScrollTimeline` インスタンスを {{domxref("Animation.Animation", "Animation()")}} コンストラクターまたは {{domxref("Element.animate()", "animate()")}} メソッドに渡すと、アニメーションの進行を制御するタイムラインとして指定します。
 
@@ -117,5 +117,5 @@ output.textContent = `Timeline source element: ${timeline.source.nodeName}. Time
 ## 関連情報
 
 - [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)
 - {{domxref("AnimationTimeline")}}, {{domxref("ViewTimeline")}}

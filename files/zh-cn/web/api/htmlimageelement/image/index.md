@@ -18,9 +18,9 @@ new Image(width, height)
 ### 参数
 
 - width
-  - : 图片的宽度 (即 [`width`](/zh-CN/docs/Web/HTML/Element/img#width) 属性).
+  - : 图片的宽度 (即 [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/img#width) 属性).
 - height
-  - : 图片的高度 (即 [`height`](/zh-CN/docs/Web/HTML/Element/img#height) 属性).
+  - : 图片的高度 (即 [`height`](/zh-CN/docs/Web/HTML/Reference/Elements/img#height) 属性).
 
 ## 示例
 

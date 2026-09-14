@@ -5,7 +5,7 @@ slug: Web/API/CSS/supports_static
 
 {{APIRef("CSSOM")}}
 
-**`CSS.supports()`** 静态方法返回一个{{domxref("Boolean")}}值，用来校验浏览器是否支持一个给定的 CSS 特性。
+**`CSS.supports()`** 静态方法返回一个{{jsxref("Boolean")}}值，用来校验浏览器是否支持一个给定的 CSS 特性。
 
 ## 语法
 
@@ -19,14 +19,14 @@ boolValue = CSS.supports(supportCondition);
 有两种不同的传值形式。第一种用来检验浏览器对于一对“属性 - 属性值”的支持：
 
 - _propertyName_
-  - : 一个包含要检查的 CSS 属性名称的{{domxref("DOMString")}}。
+  - : 一个包含要检查的 CSS 属性名称的{{jsxref("String")}}。
 - _value_
-  - : 一个包含要检查的 CSS 属性值的{{domxref("DOMString")}}。
+  - : 一个包含要检查的 CSS 属性值的{{jsxref("String")}}。
 
 第二种语法需要一个匹配{{cssxref("@supports")}}条件的参数：
 
 - _supportCondition_
-  - : 一个包含了检查条件的{{domxref("DOMString")}}。
+  - : 一个包含了检查条件的{{jsxref("String")}}。
 
 ## 实例
 

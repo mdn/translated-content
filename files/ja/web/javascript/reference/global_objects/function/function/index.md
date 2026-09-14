@@ -1,11 +1,10 @@
 ---
 title: Function() コンストラクター
+short-title: Function()
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Function()`** コンストラクターは、新しい {{jsxref("Function")}} オブジェクトを生成します。コンストラクターを直接呼び出すと動的に関数を生成することができますが、セキュリティや、 {{jsxref("Global_Objects/eval", "eval()")}} と似た性能の（ただし、はるかに重要性の低い）問題を抱えます。ただし `eval` とは異なり、 `Function` コンストラクターはグローバルスコープで実行される関数のみを生成します。
 
@@ -32,12 +31,12 @@ Function(arg1, arg2, functionBody)
 Function(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
-> **メモ:** `Function()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出すことができます。どちらも新しい `Function` インスタンスを作成します。
+> [!NOTE]
+> `Function()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出すことができます。どちらも新しい `Function` インスタンスを作成します。
 
 ### 引数
 
 - `arg1`, …, `argN` {{optional_inline}}
-
   - : 関数で仮引数名として使用される名前。それぞれ、JavaScript で有効な引数（プレーン[識別子](/ja/docs/Glossary/Identifier)、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[分割](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)引数のいずれか、オプションで[既定](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)値付き）に対応する文字列、またはカンマで区切られたそのような文字列のリストでなければなりません。
 
     引数は関数式と同様に解釈できるため、空白やコメントも受け入れられます。例えば、`"x", "theValue = 42", "[a, b] /* 数値 */"`、または `"x, theValue = 42, [a, b] /* 数値 */"` です。（`"x, theValue = 42", "[a, b]"` も正しいですが、とても読みづらいです。）

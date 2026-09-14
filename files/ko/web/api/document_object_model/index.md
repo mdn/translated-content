@@ -13,7 +13,7 @@ DOM은 문서를 논리적 트리로 표현합니다. 트리의 각 가지는 �
 
 노드에는 이벤트 핸들러도 첨부될 수 있습니다. 이벤트가 트리거되면 이벤트 핸들러가 실행됩니다.
 
-DOM이 무엇이고 어떻게 문서를 표현하는지에 대해 더 자세히 알아보려면, [DOM 소개](/ko/docs/Web/API/Document_Object_Model/Introduction) 문서를 참조하세요.
+DOM이 무엇이고 어떻게 문서를 표현하는지에 대해 더 자세히 알아보려면, [DOM 소개](/ko/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef) 문서를 참조하세요.
 
 ## DOM 인터페이스
 
@@ -93,5 +93,5 @@ HTML DOM API는 탭과 창, CSS 스타일과 스타일시트, 브라우저 히�
 
 ## 같이 보기
 
-- [DOM 예제](/ko/docs/Web/API/Document_Object_Model/Examples)
+- [DOM 예제](/ko/docs/conflicting/Web/API/Document_Object_Model)
 - [CSS 객체 모델 (CSSOM)](/ko/docs/Web/API/CSS_Object_Model)

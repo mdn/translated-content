@@ -12,7 +12,7 @@ slug: Web/API/Element/localName
 
 ## 值
 
-{{domxref("DOMString")}} 返回元素限定名的本地部分。
+{{jsxref("String")}} 返回元素限定名的本地部分。
 
 ## 示例
 

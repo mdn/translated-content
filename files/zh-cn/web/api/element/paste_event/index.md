@@ -1,6 +1,5 @@
 ---
 title: Element：paste 事件
-short-title: paste
 slug: Web/API/Element/paste_event
 ---
 
@@ -8,13 +7,13 @@ slug: Web/API/Element/paste_event
 
 当用户通过浏览器的用户界面发起“粘贴”动作时，将触发 **`paste`** 事件。
 
-如果光标处于可编辑的上下文中（例如，在 {{HTMLElement("textarea")}} 或 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 属性设置为 `true` 的元素中），那么默认动作是将剪贴板的内容插入光标位置的文档中。
+如果光标处于可编辑的上下文中（例如，在 {{HTMLElement("textarea")}} 或 [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性设置为 `true` 的元素中），那么默认动作是将剪贴板的内容插入光标位置的文档中。
 
 事件处理器可以通过调用事件 `clipboardData` 属性的 {{domxref("DataTransfer/getData", "getData()")}} 方法来访问剪贴板内容。
 
 要覆盖默认行为（例如插入一些不同的数据或转换剪贴板内容），事件处理程序必须使用 {{domxref("Event/preventDefault", "event.preventDefault()")}} 取消默认动作，然后手动插入其想要的数据。
 
-可以构建和派发一个[合成](/zh-CN/docs/Web/Events/Creating_and_triggering_events) `paste` 事件，但这不会影响系统剪贴板或文档内容。
+可以构建和派发一个[合成](/zh-CN/docs/Web/API/Document_Object_Model/Events) `paste` 事件，但这不会影响系统剪贴板或文档内容。
 
 ## 语法
 
@@ -86,6 +85,5 @@ target.addEventListener("paste", (event) => {
 
 ## 参见
 
-- 相关联事件：{{domxref("Element/cut_event", "cut")}}、{{domxref("Element/copy_event", "copy")}}
-- {{domxref("Document")}} 目标上的这个事件：{{domxref("Document/paste_event", "paste")}}
-- {{domxref("Window")}} 目标上的这个事件：{{domxref("Window/paste_event", "paste")}}
+- {{domxref("Element/cut_event", "cut")}} 事件
+- {{domxref("Element/copy_event", "copy")}} 事件

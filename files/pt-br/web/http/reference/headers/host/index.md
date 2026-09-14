@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Host
 original_slug: Web/HTTP/Headers/Host
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de solicitação de **`Host`** especifica o nome de domínio do servidor (para hospedagem virtual), e (opcionalmente) o número da porta TCP no qual o servidor está escutando.
 
 Se nenhuma porta for fornecida a porta padrão para o serviço solicitado (por exemplo, "80" para um HTTP URL) está implícita.
@@ -19,7 +17,7 @@ Um campo de cabeçalho de `Host` deve ser enviado em todas as mensagens desolici
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>yes</td>
     </tr>
   </tbody>

@@ -3,8 +3,6 @@ title: with
 slug: Web/JavaScript/Reference/Statements/with
 ---
 
-{{jsSidebar("Statements")}}
-
 > [!WARNING]
 > Il n'est pas recommandé d'utiliser l'instruction `with`. En effet, elle est parfois source de problèmes de compatibilité ou de bogues. Se référer au paragraphe « Inconvénient : l'ambiguïté » de la section « Description » pour plus de détails.
 
@@ -57,7 +55,7 @@ Dès qu'un nom non-qualifié est utilisé, JavaScript cherche dans la chaîne de
   }
   ```
 
-  Si vous appelez `f([1,2,3], obj)` dans un environnement ECMAScript 5, la référence à `values` à l'intérieur de l'instruction `with` sera liée avec `obj`. Cependant, ECMAScript 2015 (ES6) a introduit une propriété `values` pour {{jsxref("Array.prototype")}} (afin qu'elle soit disponible pour chaque tableau). Dans un environnement ECMAScript 2015, la référence à `values` utilisée à l'intérieur de l'instruction `with` sera résolue avec `[1,2,3].values`.
+  Si vous appelez `f([1,2,3], obj)` dans un environnement ECMAScript 5, la référence à `values` à l'intérieur de l'instruction `with` sera liée avec `obj`. Cependant, ECMAScript 2015 (ES6) a introduit une propriété `values` pour {{jsxref("Array")}} (afin qu'elle soit disponible pour chaque tableau). Dans un environnement ECMAScript 2015, la référence à `values` utilisée à l'intérieur de l'instruction `with` sera résolue avec `[1,2,3].values`.
 
 ## Exemples
 
@@ -86,7 +84,7 @@ with (Math) {
 
 ## Voir aussi
 
-- {{jsxref("Instructions/bloc", "Bloc d'instructions","",1)}}
+- {{jsxref("Statements/block", "Bloc d'instructions","",1)}}
 - {{jsxref("Strict_mode","Mode strict","",1)}}
 - {{jsxref("Symbol.unscopables")}}
-- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}

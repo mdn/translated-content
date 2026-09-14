@@ -54,7 +54,8 @@ img
   });
 ```
 
-> **メモ:** {{jsxref('Promise')}} を返すメソッドがなければ、 {{domxref("Window/load_event", "load")}} イベントハンドラーで画像を DOM に追加し、 {{domxref("HTMLElement/error_event", "error")}} イベントハンドラーでエラーを処理することになります。
+> [!NOTE]
+> {{jsxref('Promise')}} を返すメソッドがなければ、 {{domxref("Window/load_event", "load")}} イベントハンドラーで画像を DOM に追加し、 {{domxref("HTMLElement/error_event", "error")}} イベントハンドラーでエラーを処理することになります。
 
 ### 空の画像の防止
 

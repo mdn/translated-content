@@ -14,7 +14,7 @@ L'interface abstraite **`CharacterData`** représente un objet {{domxref("Node")
 _Hérite des propriétés de son parent {{domxref("Node")}} et implémente les interfaces {{domxref("ChildNode")}} et {{domxref("NonDocumentTypeChildNode")}}._
 
 - {{domxref("CharacterData.data")}}
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) representant les données textuelles contenues dans cet objet.
+  - : est une {{jsxref("String")}} (_chaîne de caractères_) representant les données textuelles contenues dans cet objet.
 - {{domxref("CharacterData.length")}} {{readonlyInline}}
   - : Retourne un `unsigned long` représentant la taille de la chaîne de caractères contenue dans `CharacterData.data`.
 - {{domxref("NonDocumentTypeChildNode.nextElementSibling")}} {{readonlyInline}}
@@ -27,17 +27,17 @@ _Hérite des propriétés de son parent {{domxref("Node")}} et implémente les i
 _Hérite des méthodes de ses parents, [`Node`](/fr/docs/Web/API/Node) et [`EventTarget`](/fr/docs/Web/API/EventTarget)._
 
 - {{domxref("CharacterData.appendData()")}}
-  - : Ajoute la {{domxref("DOMString")}} (_chaîne de caractères_) donnée à la chaîne `CharacterData.data` ; dans le retour de la méthode, `data` contient la {{domxref("DOMString")}} concaténée .
+  - : Ajoute la {{jsxref("String")}} (_chaîne de caractères_) donnée à la chaîne `CharacterData.data` ; dans le retour de la méthode, `data` contient la {{jsxref("String")}} concaténée .
 - {{domxref("CharacterData.deleteData()")}}
-  - : Supprime la quantité spécifiée de caractères, en commençant au point désigné, à partir de la chaîne `CharacterData.data` ; dans le retour de la méthode, `data` contient le raccourci {{domxref ("DOMString")}}.
+  - : Supprime la quantité spécifiée de caractères, en commençant au point désigné, à partir de la chaîne `CharacterData.data` ; dans le retour de la méthode, `data` contient le raccourci {{jsxref("String")}}.
 - {{domxref("CharacterData.insertData()")}}
-  - : Insère les caractères spécifiés, au point désigné, dans la chaîne `CharacterData.data` ; dans le retour de cette méthode, `data` contient la {{domxref ("DOMString")}} (_chaîne de caractères_) modifiée.
+  - : Insère les caractères spécifiés, au point désigné, dans la chaîne `CharacterData.data` ; dans le retour de cette méthode, `data` contient la {{jsxref("String")}} (_chaîne de caractères_) modifiée.
 - {{domxref("ChildNode.remove()")}} {{experimental_inline}}
   - : Supprime l'objet de la liste d'enfants de son parent.
 - {{domxref("CharacterData.replaceData()")}}
-  - : Remplace la quantité spécifiée de caractères, en commençant au point désigné, avec la {{domxref ("DOMString")}} (_chaîne de caractères_) spécifiée ; dans le retour de cette méthode, `data` contient la {{domxref ("DOMString")}} modifiée.
+  - : Remplace la quantité spécifiée de caractères, en commençant au point désigné, avec la {{jsxref("String")}} (_chaîne de caractères_) spécifiée ; dans le retour de cette méthode, `data` contient la {{jsxref("String")}} modifiée.
 - {{domxref("CharacterData.substringData()")}}
-  - : Renvoie une {{domxref ("DOMString")}} (_chaîne de caractères_) contenant la partie de `CharacterData.data` de la longueur spécifiée et commençant au point désigné.
+  - : Renvoie une {{jsxref("String")}} (_chaîne de caractères_) contenant la partie de `CharacterData.data` de la longueur spécifiée et commençant au point désigné.
 
 ## Spécifications
 

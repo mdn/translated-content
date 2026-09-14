@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-**`CSSSkew()`** コンストラクターは、新しい {{domxref("CSSSkew")}} オブジェクトを返します。これは、CSS の {{CSSXRef('transform')}} プロパティの [`skew()`](/ja/docs/Web/CSS/transform-function/skew) の値を表します。
+**`CSSSkew()`** コンストラクターは、新しい {{domxref("CSSSkew")}} オブジェクトを返します。これは、CSS の {{CSSXRef('transform')}} プロパティの [`skew()`](/ja/docs/Web/CSS/Reference/Values/transform-function/skew) の値を表します。
 
 ## 構文
 

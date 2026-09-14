@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 95a838d5d8e0e40aaa15897d23de476efade14b1
 ---
 
-{{jsSidebar("JavaScript Guide")}}
-
 量词表示要匹配的字符或表达式的数量。
 
 {{InteractiveExample("JavaScript Demo: RegExp quantifiers", "taller")}}

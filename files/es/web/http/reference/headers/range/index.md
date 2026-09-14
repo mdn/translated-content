@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 La cabecera de petición HTTP, **`Range`**, indica qué parte de un documento debe devolver el servidor. Varias partes pueden ser solicitadas con una sola cabecera `Range` a la vez, y el servidor puede enviar estas partes en un documento multipartes. Si el servidor devuelve rangos, utiliza {{HTTPStatus("206", "206 Contenido Parcial")}}. Si los rangos son inválidos, el servidor devuelve el error {{HTTPStatus("416", "416 No se puede satisfacer Range")}}. El servidor también puede ignorar el encabezado de Rango y devolver el documento completo con un código de estado {{HTTPStatus("200")}}.
 
 <table class="properties">

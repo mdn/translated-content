@@ -3,7 +3,7 @@ title: MathML 分数和根号
 slug: Web/MathML/Tutorials/For_beginners/Fractions_and_roots
 ---
 
-{{PreviousMenuNext("Web/MathML/Guides/Text_containers", "Web/MathML/Guides/Scripts", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners")}}
 
 本文在前文对文本容器介绍的基础上，介绍了如何通过嵌套分数和根号构建更复杂的 MathML 表达式。
 
@@ -298,4 +298,4 @@ checkboxes.forEach((checkbox) => {
 - [`<msqrt>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/msqrt)
 - [`<mroot>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mroot)
 
-{{PreviousMenuNext("Web/MathML/Guides/Text_containers", "Web/MathML/Guides/Scripts", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners")}}

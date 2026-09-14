@@ -10,7 +10,8 @@ l10n:
 
 **`handle`** は {{domxref("MediaSource")}} インターフェイスの読み取り専用プロパティで、 {{domxref("MediaSourceHandle")}} オブジェクトを返します。このオブジェクトは `MediaSource` のプロキシーであり、専用ワーカーからメインスレッドに戻り、{{domxref("HTMLMediaElement.srcObject")}} プロパティを介してメディア要素に結び付けられます。
 
-> **メモ:** `handle` は専用ワーカー内の {{domxref("MediaSource")}} インスタンスでのみ表示されます。
+> [!NOTE]
+> `handle` は専用ワーカー内の {{domxref("MediaSource")}} インスタンスでのみ表示されます。
 
 専用ワーカー内で作成された `MediaSource` オブジェクトは、それぞれ自分自身で個別の `MediaSourceHandle` を保有します。 `handle` ゲッターは常に、関連する専用ワーカー `MediaSource` インスタンス固有の `MediaSourceHandle` インスタンスを返します。ハンドルが既に {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} を使用してメインスレッドに移譲されている場合、ワーカー内のハンドルインスタンスは技術的に切り離され、再度移譲することはできません。
 
@@ -47,7 +48,8 @@ worker.addEventListener("message", (msg) => {
 });
 ```
 
-> **メモ:** {{domxref("MediaSourceHandle")}}は、共有ワーカーまたはサービスワーカーからは正常に移譲できません。
+> [!NOTE]
+> {{domxref("MediaSourceHandle")}}は、共有ワーカーまたはサービスワーカーからは正常に移譲できません。
 
 ## 仕様書
 

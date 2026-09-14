@@ -4,8 +4,6 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator
 original_slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
 ---
 
-{{JSRef}}
-
 La valeur initiale de la propriété @@iterator est le même objet fonction que la valeur initiale de {{jsxref("TypedArray.prototype.values()", "values")}}.
 
 ## Syntaxe

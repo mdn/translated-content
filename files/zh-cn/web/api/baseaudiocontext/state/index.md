@@ -16,7 +16,7 @@ var myState = audioCtx.state;
 
 ### 返回值
 
-{{domxref("DOMString")}}，可能的值如下：
+{{jsxref("String")}}，可能的值如下：
 
 - `suspended`: audio context 被阻塞了 (用{{domxref("AudioContext.suspend()")}} 方法)
 - `running`: audio context 正常运行

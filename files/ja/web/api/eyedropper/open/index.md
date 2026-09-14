@@ -20,9 +20,7 @@ open(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : {{domxref("AbortSignal")}} シグナルを渡す用のオプションオブジェクトです。
-
     - `signal`
       - : {{domxref("AbortSignal")}} です。`AbortSignal` の {{domxref("AbortController/abort()", "abort()")}} メソッドを呼ぶと、スポイトモードが終了します。
 

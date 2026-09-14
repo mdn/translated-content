@@ -1,14 +1,11 @@
 ---
 title: font-size
 slug: Web/SVG/Reference/Attribute/font-size
-original_slug: Web/SVG/Attribute/font-size
 l10n:
-  sourceCommit: 892a7fb41030e07dfd8daaa57d874239be1ecc8a
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{SVGRef}}
-
-**`font-size`** フォントサイズ属性は、複数行レイアウト環境でテキストを複数行にわたって設定する際に、{{Glossary("Baseline/Typography", "ベースライン")}}からベースラインまでのフォントのサイズを参照します。
+**`font-size`** フォントサイズ属性は、複数行レイアウト環境でテキストを複数行にわたって設定する際に、{{Glossary("baseline/typography", "ベースライン")}}からベースラインまでのフォントのサイズを参照します。
 
 > [!NOTE]
 > プレゼンテーション属性であるため、 `font-size` には対応する CSS プロパティ {{cssxref("font-size")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
@@ -17,27 +14,20 @@ l10n:
 
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 
 ## 例
 
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
+### SVG フォントサイズを制御
 
 ```html
 <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" font-size="smaller">smaller</text>
-  <text x="100" y="20" font-size="2em">2em</text>
+  <text y="25" font-size="smaller">smaller</text>
+  <text x="100" y="25" font-size="2em">2em</text>
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "200", "30")}}
+{{EmbedLiveSample}}
 
 ## 使用上のメモ
 
@@ -51,7 +41,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>medium</code></td>
     </tr>
     <tr>
@@ -61,7 +51,7 @@ svg {
   </tbody>
 </table>
 
-値の説明については、 [CSS の `font-size`](/ja/docs/Web/CSS/font-size#値) プロパティを参照してください。
+値の説明については、 [CSS の `font-size`](/ja/docs/Web/CSS/Reference/Properties/font-size#値) プロパティを参照してください。
 
 ## 仕様書
 

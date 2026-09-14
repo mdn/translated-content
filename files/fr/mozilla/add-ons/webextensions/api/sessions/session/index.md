@@ -3,8 +3,6 @@ title: sessions.Session
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 ---
 
-{{AddonSidebar}}
-
 L'objet de `Session` représente un onglet ou une fenêtre que l'utilisateur a fermé dans la session de navigation actuelle.
 
 Les sessions sont représentées comme des objets {{WebExtAPIRef("tabs.Tab", "Tab")}} si l'onglet a été fermé mais sa fenêtre n'a pas été fermée : par exemple, parce que l'utilisateur a cliqué sur le bouton "fermer l'onglet", et cet onglet n'était pas le seul onglet de sa fenêtre.
@@ -34,8 +32,6 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

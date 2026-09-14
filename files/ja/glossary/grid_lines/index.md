@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**グリッド線**は [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)を用いて明示的グリッドに{{glossary("Grid tracks", "トラック")}}を定義すると作成されます。
+**グリッド線**は [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)を用いて明示的グリッドに{{glossary("Grid tracks", "トラック")}}を定義すると作成されます。
 
 ## 例
 
@@ -56,7 +56,7 @@ l10n:
 
 {{ EmbedLiveSample('Example', '500', '250') }}
 
-線は線番号で指定できます。英語や日本語のように左から右方向に、列の線 1 がグリッドの左端、行の線 1 が上端となります。線番号は文書の[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)を考慮するため、右書きの言語においては例えば列の線 1 はグリッドの右端となります。下の画像では左書きの言語でのグリッドにおける線番号を図示しています。
+線は線番号で指定できます。英語や日本語のように左から右方向に、列の線 1 がグリッドの左端、行の線 1 が上端となります。線番号は文書の[書字方向](/ja/docs/Web/CSS/Guides/Writing_modes)を考慮するため、右書きの言語においては例えば列の線 1 はグリッドの右端となります。下の画像では左書きの言語でのグリッドにおける線番号を図示しています。
 
 ![行番号でグリッドを示す図。](1_diagram_numbered_grid_lines.png)
 
@@ -176,8 +176,8 @@ l10n:
 ### 参考資料
 
 - CSS グリッドレイアウトガイド:
-  - [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-  - [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-  - [名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-  - [グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+  - [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+  - [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+  - [名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
+  - [グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
   - [CSS グリッドレイアウト仕様におけるグリッド線の定義](https://drafts.csswg.org/css-grid/#grid-line-concept)

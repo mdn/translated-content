@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0025477aa4af0321b4c1e3e60c8f6bca08983a60
 ---
 
-{{GlossarySidebar}}
-
 **密码学**是研究如何安全地编码和传递消息的学科。密码学设计和研究用于在不安全环境中编码和解码消息，以及它们的应用。
 
 除了**数据机密性**，密码学还涉及**身份识别**、**身份验证**、**不可否认**以及**数据完整性**。因此，它还研究在上下文中密码方法的使用，这称为**密码系统**。
@@ -15,7 +13,6 @@ l10n:
 
 - 维基百科上的[密码学](https://zh.wikipedia.org/wiki/密码学)
 - [MDN Web 文档术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("Block cipher mode of operation", "分组密码工作模式")}}
   - {{Glossary("Cipher", "密码")}}
   - {{Glossary("Ciphertext", "密文")}}

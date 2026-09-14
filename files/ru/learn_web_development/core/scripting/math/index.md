@@ -3,7 +3,7 @@ title: Базовая математика в JavaScript — числа и оп�
 slug: Learn_web_development/Core/Scripting/Math
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Variables", "Learn/JavaScript/Первые_шаги/Строки", "Learn/JavaScript/Первые_шаги")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "conflicting/Learn_web_development/Core/Scripting")}}
 
 В этой части курса мы обсуждаем математику в JavaScript — как мы можем использовать {{Glossary("Operator","operators")}} и другие функции, чтобы успешно манипулировать числами для выполнения наших задач.
 
@@ -288,4 +288,4 @@ function updateBtn() {
 > [!NOTE]
 > Если вам хочется узнать подробнее о том, как математика реализуется в JavaScript, вы можете посмотреть главный раздел JavaScript MDN. Статьи [Числа и даты](/ru/docs/Web/JavaScript/Guide/Numbers_and_strings) и [Выражения и операторы](/ru/docs/Web/JavaScript/Reference/Operators) - хороший вариант для начала.
 
-{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Variables", "Learn/JavaScript/Первые_шаги/Строки", "Learn/JavaScript/Первые_шаги")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "conflicting/Learn_web_development/Core/Scripting")}}

@@ -682,4 +682,4 @@ draw();
 
 {{EmbedLiveSample("文字陰影範例", "180", "100")}}
 
-{{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Using_images", "Web/Guide/HTML/Canvas_tutorial/Transformations")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Transformations")}}

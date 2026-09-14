@@ -103,7 +103,7 @@ console.log(Object.keys(100)); // []
 ## Véase también
 
 - [Polyfill de `Object.keys` en `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerabilidad y posesión de propiedades](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerabilidad y posesión de propiedades](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

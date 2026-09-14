@@ -16,9 +16,9 @@ storage.setItem(nomClé, valeurClé);
 ### Paramètres
 
 - _nomClé_
-  - : C'est une {{domxref("DOMString")}} contenant le nom de la clé que l'on souhaite créer/modifier.
+  - : C'est une {{jsxref("String")}} contenant le nom de la clé que l'on souhaite créer/modifier.
 - _valeurClé_
-  - : C'est une {{domxref("DOMString")}} contenant la valeur associée à son nom de clé que l'on souhaite créer/modifier.
+  - : C'est une {{jsxref("String")}} contenant la valeur associée à son nom de clé que l'on souhaite créer/modifier.
 
 ### Retourne
 

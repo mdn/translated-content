@@ -139,22 +139,22 @@ The `page_action` key is an object that may have any of three properties, all op
         </p>
         <p>
           The HTML file may include CSS and JavaScript files using
-          <code><a href="/ja/docs/Web/HTML/Element/link">&#x3C;link></a></code>
+          <code><a href="/ja/docs/Web/HTML/Reference/Elements/link">&#x3C;link></a></code>
           and
           <code
-            ><a href="/ja/docs/Web/HTML/Element/script">&#x3C;script></a></code
+            ><a href="/ja/docs/Web/HTML/Reference/Elements/script">&#x3C;script></a></code
           >
           elements, just like a normal web page. However, don't use
           <code
-            ><a href="/ja/docs/Web/HTML/Element/script">&#x3C;script></a></code
+            ><a href="/ja/docs/Web/HTML/Reference/Elements/script">&#x3C;script></a></code
           >
           with embedded code, because you'll get a Content Violation Policy
           error. Instead,
           <code
-            ><a href="/ja/docs/Web/HTML/Element/script">&#x3C;script></a></code
+            ><a href="/ja/docs/Web/HTML/Reference/Elements/script">&#x3C;script></a></code
           >
           must use the
-          <code><a href="/ja/docs/Web/HTML/Element/script">src</a></code>
+          <code><a href="/ja/docs/Web/HTML/Reference/Elements/script">src</a></code>
           attribute to load a separate script file.
         </p>
         <p>

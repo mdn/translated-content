@@ -3,8 +3,6 @@ title: notifications.onButtonClicked
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsque l'utilisateur clique sur l'un des boutons de la notification.
 
 ## Syntaxe
@@ -29,9 +27,7 @@ Les événements ont trois fonctions :
 ### Parameters
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `notificationId`
       - : `string`. ID de la notification sur laquelle le bouton a été cliqué.
     - `buttonIndex`
@@ -46,5 +42,3 @@ Les événements ont trois fonctions :
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

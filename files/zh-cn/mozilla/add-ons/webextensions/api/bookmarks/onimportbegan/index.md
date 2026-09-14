@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当浏览器开始导入一组书签时触发。
 
 在导入一组书签时，{{WebExtAPIRef("bookmarks.onCreated", "onCreated")}} 可能会触发很多次。如果你的扩展正在监听 `onCreated`，且监听器比较耗资源，你还应该监听 `onImportBegan` 和 {{WebExtAPIRef("bookmarks.onImportEnded", "onImportEnded")}}。当收到 `onImportBegan` 时，忽略 `onCreated`，直到收到 `onImportEnded` 为止。你可以像往常一样处理所有其他通知。

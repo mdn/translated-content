@@ -3,8 +3,6 @@ title: Content-Encoding
 slug: Web/HTTP/Reference/Headers/Content-Encoding
 ---
 
-{{HTTPSidebar}}
-
 **`Content-Encoding`** - это сущность заголовка, используемая для сжатия медиа-типа. При наличии её значение определяет кодировку, применённую к сущности **`body`**. Это позволяет клиенту информацию как декодировать **`body`**, чтобы получить медиа-тип ссылающийся на заголовок **`Content-Type`**
 
 Рекомендация - сжимать данные насколько это возможно и следовательно использовать это поле, но некоторые типы данных, такие как изображения в формате jpeg, уже сжаты. Иногда, использование дополнительного сжатия не уменьшает размер пакета и даже может сделать загрузку дольше.
@@ -16,7 +14,7 @@ slug: Web/HTTP/Reference/Headers/Content-Encoding
       <td>{{Glossary("Entity header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
   </tbody>

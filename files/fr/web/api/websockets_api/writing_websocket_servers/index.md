@@ -1,111 +1,143 @@
 ---
 title: Écriture de serveurs WebSocket
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
+l10n:
+  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
 ---
 
 {{DefaultAPISidebar("WebSockets API")}}
 
-Un serveur WebSocket est une application TCP qui écoute sur n'importe quel port d'un serveur et suit un protocole spécifique, c'est aussi simple que cela. La création de son propre serveur TCP est quelque chose qui a tendance à effrayer alors qu'il n'est pas forcément très complexe de créer un serveur WebScoket sur la plateforme de votre choix.
+Un serveur WebSocket n'est rien d'autre qu'une application qui écoute un port d'un serveur TCP et qui suit un protocole spécifique. La création d'un serveur personnalisé peut sembler décourageante si vous ne l'avez jamais fait auparavant. En pratique, il peut cependant être assez simple d'implémenter un serveur WebSocket basique sur la plateforme de votre choix.
 
-Un serveur WebSocket peut être écrit dans n'importe quel language de programmation qui supporte les "[Berkeley sockets](https://fr.wikipedia.org/wiki/Berkeley_sockets)", par exemple C(++), python ou même PHP et JavaScript (avec nodejs). Ceci n'est pas un tutoriel destiné à un language particulier mais un guide aidant à l'écriture de votre propre serveur.
+Un serveur WebSocket peut être écrit dans n'importe quel langage côté serveur capable d'utiliser des [connexions Berkeley](https://fr.wikipedia.org/wiki/Berkeley_sockets), comme C(++), Python, {{Glossary("PHP")}} ou [JavaScript côté serveur](/fr/docs/Learn_web_development/Extensions/Server-side/Node_server_without_framework). Il ne s'agit pas d'un tutoriel pour un langage particulier, mais d'un guide destiné à faciliter l'écriture de votre propre serveur.
 
-Avant de débuter, vous **devez** connaître précisément le fonctionnement du protocole HTTP et disposer d'une certaine expérience sur celui-ci. Des connaissances sur les sockets TCP dans votre langage de développement est également précieux. Ce guide ne présente ainsi que le _minimum_ des connaissances requises et non un guide ultime.
+Cet article suppose que vous maîtrisez déjà le fonctionnement de {{Glossary("HTTP")}} et que vous possédez un niveau de programmation modéré. Selon le langage choisi, des connaissances sur les sockets TCP peuvent être nécessaires. L'objectif de ce guide est de présenter les connaissances minimales requises pour écrire un serveur WebSocket.
 
 > [!NOTE]
-> Lire la dernière spécification officielle sur les WebSockets [RFC 6455](https://datatracker.ietf.org/doc/rfc6455/?include_text=1). Les sections 1 et 4-7 sont particulièrement intéressantes pour ce qui nous occupe. La section 10 évoque la sécurité et doit être connue et mise en oeuvre avant d'exposer votre serveur au-delà du réseau local / lors de la mise en production.
+> Lisez la dernière spécification officielle des WebSockets, [RFC 6455 <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/rfc6455/?include_text=1). Les sections 1 et 4-7 sont particulièrement intéressantes pour les développeur·euse·s de serveurs. La section 10 traite de la sécurité et vous devez la consulter avant d'exposer votre serveur.
 
-Un serveur WebSocket est compris ici en "bas niveau" (_c'est-à-dire plus proche du langage machine que du langage humain_. Les WebSockets sont souvent séparés et spécialisés vis-à-vis de leurs homologues serveurs (pour des questions de montées en charge ou d'autres raisons), donc vous devez souvent utiliser un [proxy inverse](https://fr.wikipedia.org/wiki/Proxy_inverse) (_c'est-à-dire de l'extérieur vers l'intérieur du réseau local, comme pour un serveur HTTP classique_) pour détecter les "poignées de mains" spécifiques au WebSocket, qui précédent l'échange et permettent d'aiguiller les clients vers le bon logiciel. Dans ce cas, vous ne devez pas ajouter à votre serveur des _cookies_ et d'autres méthodes d'authentification.
+Un serveur WebSocket est expliqué ici à un niveau très bas. Les serveurs WebSocket sont souvent des serveurs séparés et spécialisés (pour l'équilibrage de charge ou d'autres raisons pratiques), aussi vous utilisez fréquemment un [proxy inverse](https://fr.wikipedia.org/wiki/Proxy_inverse) (par exemple un serveur HTTP classique) pour détecter les poignées de main WebSocket, les pré-traiter, et rediriger ces clients vers un véritable serveur WebSocket. Cela signifie que vous n'avez pas à alourdir votre code serveur avec des gestionnaires de cookies et d'authentification (par exemple).
 
-## La "poignée de mains" du WebSocket
+## La « poignée de mains » du WebSocket
 
-En tout premier lieu, le serveur doit écouter les connexions sockets entrantes utilisant le protocole TCP standard. Suivant votre plateforme, celui-ci peut déjà le faire pour vous. Pour l'exemple qui suit, nous prenons pour acquis que votre serveur écoute le domaine _exemple.com_ sur le port 8000 et votre serveur socket répond aux requêtes de type GET sur le chemin _/chat_.
+Tout d'abord, le serveur doit écouter les connexions socket entrantes en utilisant une socket TCP standard. Selon votre plateforme, cela peut être géré automatiquement. Par exemple, supposons que votre serveur écoute sur `example.com`, port 8000, et que votre serveur de sockets réponde aux requêtes {{HTTPMethod("GET")}} à `example.com/chat`.
 
 > [!WARNING]
-> Si le serveur peut écouter n'importe quel port, mais que vous décidez de ne pas utiliser un port standard (80 ou 443 pour SSL), cela peut créer en avant des problèmes avec les parefeux et/ou les proxys. De plus, gardez en mémoire que certains navigateur Web (notablement Firefox 8+), n'autorisent pas les connexions WebSocket non-SSL sur une page SSL.
+> Le serveur peut écouter sur n'importe quel port qu'il choisit, mais s'il choisit un port autre que 80 ou 443, il peut rencontrer des problèmes avec des pare-feu et/ou des proxies. Les navigateurs exigent généralement une connexion sécurisée pour les WebSockets, bien qu'ils puissent offrir une exception pour les appareils locaux.
 
-La _poignée de mains_ est la partie "Web" dans les WebSockets : c'est le pont entre le protocole HTTP et le WebSocket. Durant cette poignée, les détails (les paramètres) de la connexion sont négociés et l'une des parties peut interromptre la transaction avant la fin si l'un des termes ne lui est pas autorisé / ne lui est pas possible. Le serveur doit donc être attentif à comprendre parfaitement les demandes et attentes du client, sans quoi des procédures de sécurité seront déclenchées.
+La poignée de mains est le «&nbsp;Web&nbsp;» dans les WebSockets. C'est le pont entre HTTP et les WebSockets. Lors de la poignée de mains, les détails de la connexion sont négociés, et chaque partie peut se retirer avant la fin si les conditions ne sont pas favorables. Le serveur doit veiller à comprendre tout ce que le client demande, sinon des problèmes de sécurité peuvent survenir.
 
-### La requête de _poignée de mains_ côté client
+> [!NOTE]
+> L'URI de la requête (`/chat` ici) n'a pas de signification définie dans la spécification. Ainsi, beaucoup de personnes l'utilisent pour permettre à un seul serveur de gérer plusieurs applications WebSocket. Par exemple, `example.comchat` peut invoquer une application de dialogue multi-utilisateur·ice·s, tandis que `/jeu` sur le même serveur peut invoquer un jeu multijoueur.
 
-Même si vous construisez votre serveur au profit des WebSockets, votre client doit tout de même démarrer un processus dit de _poignée de main_. Vous devez donc savoir comment interprêter cette requête. En premier, le **client** enverra tout d'abord une requête HTTP correctement formée. La requête **doit** être à la version 1.1 ou supérieure et la méthode **doit** être de type GET :
+### Requête de poignée de mains côté client
 
-```
+Même si vous construisez votre serveur, un client doit tout de même initier le processus de poignée de main WebSocket en contactant le serveur et en demandant une connexion WebSocket. Vous devez donc savoir comment interpréter la requête du client. Le **client** envoie une requête HTTP assez standard avec des en-têtes qui ressemble à ceci (la version HTTP **doit** être 1.1 ou supérieure, et la méthode **doit** être `GET`)&nbsp;:
+
+```http
 GET /chat HTTP/1.1
-Host: exemple.com:8000
+Host: example.com8000
 Upgrade: websocket
 Connection: Upgrade
 Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
 Sec-WebSocket-Version: 13
 ```
 
-Le client peut solliciter des extensions de protocoles ou des sous-protocoles à cet instant ; voir [Miscellaneous](#miscellaneous) pour les détails. En outre, des en-têtes communs tel que _User-Agent_, _Referer_, _Cookie_ ou des en-têtes d'authentification peuvent être envoyés par la même requête : leur usage est laissé libre car ils ne se rapportent pas directement au WebSocket et au processus de poignée de main. A ce titre il semble préférable de les ignorer : d'ailleurs dans de nombreuses configurations communes, un proxy inverse les aura finalement déjà traitées.
-
-Si un des entêtes n'est pas compris ou sa valeur n'est pas correcte, le serveur devrait envoyer une réponse "[400 Bad Request](/fr/docs/Web/HTTP/Status#400)" (_erreur 400 : la requête est incorrecte_) et clore immédiatement la connexion. Il peut par ailleurs indiquer la raison pour laquelle la poignée de mains a échoué dans le corps de réponse HTTP, mais le message peut ne jamais être affiché par le navigateur (_en somme, tout dépend du comportement du client_). Si le serveur ne comprend pas la version de WebSockets présentée, il doit envoyer dans la réponse un entête _Sec-WebSocket-Version_ correspondant à la ou les version-s supportée-s. Ici le guide explique la version 13, la plus récente à l'heure de l'écriture du tutoriel (_voir le tutoriel en version anglaise pour la date exacte ; il s'agit là d'une traduction_). Maintenant, nous allons passer à l'entête attendu : _Sec-WebSocket-Key_.
+De plus, le serveur peut décider des demandes d'extension/sous-protocole à cet endroit&nbsp;; voir [Diverses informations utiles](#diverses_informations_utiles) pour les détails. L'entête `Sec-WebSocket-Accept` est importante en ce qu'elle doit être dérivée du {{HTTPHeader("Sec-WebSocket-Key")}} que le client lui a envoyé. Pour l'obtenir, concaténer la `Sec-WebSocket-Key` du client et la chaîne de caractères `"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"` (c'est une «&nbsp;[chaîne de caractères magique <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Magic_string)&nbsp;»), calculer le [SHA-1](https://fr.wikipedia.org/wiki/SHA-1) du résultat, puis retourner l'encodage [base64](https://fr.wikipedia.org/wiki/Base64) de ce hash.
 
 > [!NOTE]
-> Un grand nombre de navigateurs enverront un [`Entête d'origine`](/fr/docs/Web/HTTP/CORS#origin). Vous pouvez alors l'utiliser pour vérifier la sécurité de la transaction (par exemple vérifier la similitude des domaines, listes blanches ou noires, etc.) et éventuellement retourner une réponse [403 Forbidden](/fr/docs/Web/HTTP/Status#403) si l'origine ne vous plaît pas. Toutefois garder à l'esprit que cet entête peut être simulé ou trompeur (il peut être ajouté manuellement ou lors du transfert). De nombreuses applications refusent les transactions sans celui-ci.
+> Ce processus apparemment inutilement complexe existe afin qu'il soit évident pour le client que le serveur prend en charge les WebSockets. Ceci est important, car des problèmes de sécurité peuvent survenir si le serveur accepte une connexion WebSocket mais interprète les données comme une requête HTTP.
+
+Ainsi, si la clé est `"dGhlIHNhbXBsZSBub25jZQ=="`, la valeur de l'entête `Sec-WebSocket-Accept` est `"s3pPLMBiTxaQ9kYGzzhZRbK+xOo="`. Une fois que le serveur a envoyé ces en-têtes, la poignée de mains est terminée et vous pouvez commencer l'échange de données&nbsp;!
 
 > [!NOTE]
-> L'URI de la requête (`/chat` dans notre cas) n'a pas de signification particulièrement dans les spécifications en usage&nbsp;: elle permet simplement, par convention, de disposer d'une multitude d'applications en parallèle grâce à WebSocket. Par exemple, `exemple.com/chat` peut être associée à une API/une application de dialogue multiutilisateurs lorsque `/game` invoquera son homologue pour un jeu.
-
-> **Note :** [Les codes réguliers (_c-à-d défini par le protocole standard_) HTTP](/fr/docs/Web/HTTP/Status) ne peuvent être utilisés qu'**_avant_** la poignée : ceux après la poignée, sont définis d'une manière spécifique dans la section 7.4 de la documentation sus-nommée.
+> Le serveur peut envoyer d'autres entêtes comme {{HTTPHeader("Set-Cookie")}}, ou demander une authentification ou des redirections via d'autres codes de statut, avant d'envoyer la réponse de poignée de main.
 
 ### La réponse du serveur lors de la poignée de mains
 
-Lorsqu'il reçoit la requête du client, le serveur doit envoyer une réponse correctement formée dans un format non-standard HTTP et qui ressemble au code ci-dessous. Gardez à l'esprit que chaque entête se termine par un saut de ligne : _\r\n_&nbsp;; un saut de ligne doublé lors de l'envoi du dernier entête pour séparer du reste du corps (même si celui-ci est vide).
+Lorsque le **serveur** reçoit la requête de poignée de main, il doit retourner une réponse spéciale indiquant que le protocole va passer de HTTP à WebSocket. Cet en‑tête ressemble à ce qui suit (n'oubliez pas que chaque ligne d'en‑tête se termine par `\r\n` et qu'il faut ajouter un `\r\n` supplémentaire après la dernière pour indiquer la fin de l'en‑tête)&nbsp;:
 
-```
+```http
 HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade
 Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 ```
 
-En sus, le serveur peut décider de proposer des extensions de protocoles ou des sous-protocoles à cet instant ; voir [Miscellaneous](#miscellaneous) pour les détails. L'entête Sec-WebSocket-Accept nous intéresse ici : le serveur doit la former depuis l'entête Sec-WebSocket-Key envoyée précédemment par le client. Pour l'obtenir, vous devez concaténater (_rassembler_) la valeur de _Sec-WebSocket-Key_ et "_258EAFA5-E914-47DA-95CA-C5AB0DC85B11_" (valeur fixée par défaut : c'est une "[magic string](https://en.wikipedia.org/wiki/Magic_string)") puis procéder au hash par la méthode [SHA-1](https://en.wikipedia.org/wiki/SHA-1) du résultat et retourner le format au format [base64](https://en.wikipedia.org/wiki/Base64).
+De plus, le serveur peut décider des demandes d'extension/sous-protocole à cet endroit&nbsp;; voir [Diverses informations utiles](#diverses_informations_utiles) pour les détails. L'en‑tête `Sec-WebSocket-Accept` est importante en ce qu'elle doit être dérivée du {{HTTPHeader("Sec-WebSocket-Key")}} que le client lui a envoyé. Pour l'obtenir, concaténer la `Sec-WebSocket-Key` du client et la chaîne de caractères `"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"` (c'est une «&nbsp;[chaîne de caractères magique <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Magic_string)&nbsp;»), calculer le [SHA-1](https://fr.wikipedia.org/wiki/SHA-1) du résultat, puis retourner l'encodage [base64](https://fr.wikipedia.org/wiki/Base64) de ce hash.
 
 > [!NOTE]
-> Ce processus qui peut paraître inutilement complexe, permet de certifier que le serveur et le client sont bien sur une base WebSocket et non une requête HTTP (qui serait alors mal interprétée).
+> Ce processus apparemment inutilement complexe existe afin qu'il soit évident pour le client que le serveur prend en charge les WebSockets. Ceci est important, car des problèmes de sécurité peuvent survenir si le serveur accepte une connexion WebSocket mais interprète les données comme une requête HTTP.
 
-Ainsi si la clé (la valeur de l'entête du client) était "`dGhlIHNhbXBsZSBub25jZQ==`", le retour (_Accept \* dans la version d'origine du tutoriel_) sera : "`s3pPLMBiTxaQ9kYGzzhZRbK+xOo=`". Une fois que le serveur a envoyé les entêtes attendues, alors la poignée de mains est considérée comme effectuée et vous pouvez débuter l'échange de données !
+Ainsi, si la clé est `"dGhlIHNhbXBsZSBub25jZQ=="`, la valeur de l'en-tête `Sec-WebSocket-Accept` est `"s3pPLMBiTxaQ9kYGzzhZRbK+xOo="`. Une fois que le serveur a envoyé ces en-têtes, la négociation est terminée et vous pouvez commencer à échanger des données &nbsp;!
 
 > [!NOTE]
-> Le serveur peut envoyer à ce moment, d'autres entêtes comme par exemple Set-Cookie, ou demander une authenficiation ou encore une redirection via les codes standards HTTP et ce **avant** la fin du processus de poignée de main.
+> Le serveur peut envoyer d'autres en-têtes tels que {{HTTPHeader("Set-Cookie")}}, ou demander une authentification ou des redirections avec d'autres codes d'état, avant d'envoyer la réponse de poignée de main.
 
-### Suivre les clients confirmés
+### Suivre les clients
 
-Cela ne concerne pas directement le protocole WebSocket, mais mérite d'être mentionné maintenant : votre serveur pourra suivre le socket client : il ne faut donc pas tenter une poignée de mains supplémentaire avec un client déjà confirmé. Un même client avec la même IP pourrait alors se connecter à de multiples reprises, mais être finalement rejeté et dénié par le serveur si les tentatives sont trop nombreuses selon les règles pouvant être édictées pour éviter les attaques dites de [déni de service](https://en.wikipedia.org/wiki/Denial_of_service).
+Cela n'est pas directement lié au protocole WebSocket, mais cela mérite d'être mentionné ici&nbsp;: votre serveur doit garder une trace des connexions des clients afin de ne pas renouveler la négociation avec les clients qui ont déjà terminé la négociation. La même adresse IP client peut essayer de se connecter plusieurs fois. Cependant, le serveur peut les refuser s'ils tentent trop de connexions afin de se protéger contre [les attaques par déni de service](https://fr.wikipedia.org/wiki/Attaque_par_d%C3%A9ni_de_service).
+
+Par exemple, vous pouvez conserver un tableau des noms d'utilisateur·ice ou des numéros d'identification avec le {{DOMxRef("WebSocket")}} correspondant et d'autres données que vous devez associer à cette connexion.
 
 ## L'échange de trames de données
 
-Le client ou le serveur peuvent choisir d'envoyer un message à n'importe quel moment à partir de la fin du processus de poignée de mains : c'est la magie des WebSockets (une connexion permanente). Cependant, l'extraction d'informations à partir des trames de données n'est pas une expérience si... magique. Bien que toutes les trames suivent un même format spécifique, les données allant du client vers le serveur sont masquées en utilisant le [cryptage XOR](https://en.wikipedia.org/wiki/XOR_cipher) (avec une clé de 32 bits). L'article 5 de la spécification décrit en détail ce processus.
+Le client ou le serveur peuvent choisir d'envoyer un message à n'importe quel moment — c'est la magie des WebSockets. Cependant, extraire des informations de ces «&nbsp;trames&nbsp;» de données n'est pas une expérience si... magique. Bien que toutes les trames suivent un même format spécifique, les données allant du client vers le serveur sont masquées en utilisant le [cryptage XOR <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/XOR_cipher) (avec une clé de 32 bits). L'article 5 de la spécification décrit en détail ce processus.
 
 ### Format
 
-> [!WARNING]
-> Dans cette partie, `payload` équivaut en bon français à _charge utile_. C'est-à-dire les données qui ne font pas partie du fonctionnement de la trame mais de l'échange entre le serveur et le client. Ainsi «&nbsp;<i lang="en">payload data</i>&nbsp;» est traduit par «&nbsp;données utiles&nbsp;».
+Chaque trame (dans un sens ou dans un autre) suit le schéma suivant&nbsp;:
 
-Chaque trame (dans un sens ou dans un autre) suit le schéma suivant :
+```plain
+Trame de données du client vers le serveur (longueur du message 0 à 125)&nbsp;:
 
-```
- 0               1               2               3
- 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-------+-+-------------+-------------------------------+
+|F|R|R|R| opcode|M| Payload len |          Masking-key          |
+|I|S|S|S|  (4)  |A|     (7)     |             (32)              |
+|N|V|V|V|       |S|             |                               |
+| |1|2|3|       |K|             |                               |
++-+-+-+-+-------+-+-------------+-------------------------------+
+|    Masking-key (continued)    |          Payload Data         |
++-------------------------------- - - - - - - - - - - - - - - - +
+:                     Payload Data continued ...                :
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                     Payload Data continued ...                |
++---------------------------------------------------------------+
+
+Trame de données du client vers le serveur (longueur du message 16 bits)&nbsp;:
+
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-------+-+-------------+-------------------------------+
 |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
-|I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
-|N|V|V|V|       |S|             |   (if payload len==126/127)   |
+|I|S|S|S|  (4)  |A|     (7)     |             (16)              |
+|N|V|V|V|       |S|   (== 126)  |                               |
+| |1|2|3|       |K|             |                               |
++-+-+-+-+-------+-+-------------+-------------------------------+
+|                          Masking-key                          |
++---------------------------------------------------------------+
+:                          Payload Data                         :
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                     Payload Data continued ...                |
++---------------------------------------------------------------+
+
+Trame de données du serveur vers le client (longueur du message 64 bits)&nbsp;:
+
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-------+-+-------------+-------------------------------+
+|F|R|R|R| opcode|M| Payload len |    Extended payload length    |
+|I|S|S|S|  (4)  |A|     (7)     |             (64)              |
+|N|V|V|V|       |S|   (== 127)  |                               |
 | |1|2|3|       |K|             |                               |
 +-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +
-    4               5               6               7
-+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
-|     Extended payload length continued, if payload len == 127  |
+|               Extended payload length continued               |
 + - - - - - - - - - - - - - - - +-------------------------------+
-    8               9               10              11
-+ - - - - - - - - - - - - - - - +-------------------------------+
-|                               |Masking-key, if MASK set to 1  |
+|                               |          Masking-key          |
 +-------------------------------+-------------------------------+
-    12              13              14              15
-+-------------------------------+-------------------------------+
-| Masking-key (continued)       |          Payload Data         |
+|    Masking-key (continued)    |          Payload Data         |
 +-------------------------------- - - - - - - - - - - - - - - - +
 :                     Payload Data continued ...                :
 + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
@@ -113,38 +145,72 @@ Chaque trame (dans un sens ou dans un autre) suit le schéma suivant :
 +---------------------------------------------------------------+
 ```
 
-RSV1-3 peuvent être ignorés, ils concernent les extensions.
+Cela signifie qu'une trame contient les octets suivants&nbsp;:
 
-Le masquage de bits indique simplement si le message a été codé. Les messages du client doivent être masquée, de sorte que votre serveur doit attendre qu'il soit à 1. (_l'article 5.1 de la spécification prévoit que votre serveur doit se déconnecter d'un client si celui-ci envoie un message non masqué_). Lors de l'envoi d'une trame au client, ne masquez pas et ne réglez pas le bit de masque - cela sera expliqué plus tard.
+- Premier octet&nbsp;:
+  - Bit 0 FIN&nbsp;: indique s'il s'agit du dernier message d'une série. S'il vaut 0, le serveur continue d'écouter les autres parties du message&nbsp;; sinon, le serveur considère le message comme délivré. Plus d'informations à ce sujet plus loin.
+  - Bits 1—3 RSV1, RSV2, RSV3&nbsp;: peuvent être ignorés, ils concernent les extensions.
+  - Bits 4-7 OPCODE&nbsp;: définit comment interpréter les données utiles&nbsp;: `0x0` pour la continuation, `0x1` pour du texte (toujours encodé en UTF-8), `0x2` pour des données binaires, et d'autres «&nbsp;codes de contrôle&nbsp;» qui sont évoqués plus loin. Dans cette version des WebSockets, `0x3` à `0x7` et `0xB` à `0xF` n'ont pas de signification.
+- Bit 8 MASK&nbsp;: indique si le message est codé. Les messages du client doivent être masqués, donc votre serveur doit s'attendre à ce que ce bit soit à 1. (En fait, [section 5.1 de la spécification](https://datatracker.ietf.org/doc/html/rfc6455#section-5.1) indique que votre serveur doit se déconnecter d'un client qui envoie un message non masqué.) Les messages du serveur vers le client ne sont pas masqués et ce bit est à 0. Le masquage est expliqué plus loin, dans [Lire et démasquer les données](#lire_et_démasquer_les_données). _Note&nbsp;: Vous devez masquer les messages même lorsque vous utilisez un socket sécurisé._
+- Bits 9—15&nbsp;: longueur des données utiles. Peut aussi inclure les 2 ou 8 octets suivants&nbsp;; voir [Décoder la longueur des données utiles](#décoder_la_longueur_des_données_utiles).
+- Si le masquage est utilisé (toujours vrai pour les messages client-serveur), les 4 octets suivants contiennent la clé de masquage&nbsp;; voir [Lire et démasquer les données](#lire_et_démasquer_les_données).
+- Tous les octets suivants sont les données utiles.
 
-Note: Vous devez masquer les messages même lorsque vous utilisez un socket sécurisé.
+### Décoder la longueur des données utiles
 
-Le champ `opcode` définit comment est interpêtée la _charge utile_ (`payload data`) : ainsi `0x0` indique la consigne "continuer", `0x1` indique du texte (qui est systématiquement encodé en UTF-8), `0x2` pour des données binaires, et d'autres "codes de contrôle" qui seront évoqués plus tard. Dans cette version des WebSockets, `0x3` à 0x7 et `0xB` à `0xF` n'ont pas de significations particulières.
+Pour lire les données utiles, vous devez savoir quand arrêter la lecture. C'est pourquoi il est important de connaître la longueur des données utiles. Malheureusement, ce n'est pas toujours simple. Pour la lire, suivez ces étapes&nbsp;:
 
-Le bit FIN indique si c'est le dernier message de la série \[_NDT : pour la concaténation, pas la fin de la connexion elle-même_]. S'il est à 0, alors le serveur doit attendre encore une ou plusieurs parties. Sinon le message est considéré comme complet.
-
-### Connaître la taille des données utiles
-
-Pour (pouvoir) lire les _données utiles_, vous devez savoir quand arrêter la lecture dans le flux des trames entrantes vers le serveur. C'est pourquoi il est important de connaître la taille des _données utiles_. Et malheureusement ce n'est pas toujours simple. Voici quelques étapes essentielles à connaître :
-
-1. (_étape 1_) Lire tout d'abord les bits 9 à 15 (inclu) et les interprêter comme un entier non-signé. S'il équivaut à 125 ou moins, alors il correspond à la taille totale de la charge utile.
-   S'il vaut à 126, allez à l'étape 2 ou sinon, s'il vaut 127, allez à l'étape 3.
-2. (_étape 2_) Lire les 16 bits supplémentaires et les interprêter comme précédent (entier non-signé). Vous avez alors la taille des données utiles.
-3. (_étape 3_) Lire les 64 bits supplémentaires et les interprêter comme précédent (entier non-signé). Vous avez alors la taille des données utiles. Attention, le bit le plus significatif doit rester à 0.
+1. Lire les bits 9 à 15 (inclus) et les interpréter comme un entier non signé. S'il vaut 125 ou moins, alors c'est la longueur&nbsp;; vous avez **terminé**. S'il vaut 126, passez à l'étape 2. S'il vaut 127, passez à l'étape 3.
+2. Lire les 16 bits suivants et les interpréter comme un entier non signé. Vous avez **terminé**.
+3. Lire les 64 bits suivants et les interpréter comme un entier non signé. (Le bit le plus significatif _doit_ être à 0.) Vous avez **terminé**.
 
 ### Lire et démasquer les données
 
-Si le bit MASK a été fixé (et il devrait l'être, pour les messages client-serveur), vous devez lire les 4 prochains octets (32 bits) : ils sont la clé de masquage. Une fois la longueur de charge utile connue et la clé de masquage décodée, vous pouvez poursuivre la lecture des autres bits comme étant les données utiles masquées. Par convention pour le reste du paragraphe, appelons-les _données encodées_, et la clé _masque_. Pour décoder les données, bouclez les octets du texte reçu en XOR avec l'octet du (_i modulo 4_) ième octet du _masque_. En voici le pseudo-code (_JavaScript valide_) :
+Si le bit MASK a été fixé (et il doit l'être, pour les messages client-serveur), lisez les 4 octets suivants (32 bits)&nbsp;; il s'agit de la clé de masquage. Une fois la longueur de la charge utile et la clé de masquage décodées, vous pouvez lire ce nombre d'octets depuis la socket. Appelons les données `ENCODED`, et la clé `MASK`. Pour obtenir `DECODED`, parcourez les octets de `ENCODED` et appliquez un XOR avec l'octet (i modulo 4) de `MASK`. Exemple en JavaScript&nbsp;:
 
 ```js
-var DECODED = "";
-for (var i = 0; i < ENCODED.length; i++) {
-  DECODED[i] = ENCODED[i] ^ MASK[i % 4];
+// La fonction reçoit la trame sous forme de Uint8Array.
+// premierIndexApresLongueurChargeUtile est l'index du premier octet
+// après la longueur de la charge utile, donc il peut être 2, 4 ou 10.
+function getPayloadDecoded(trame, premierIndexApresLongueurChargeUtile) {
+  const mask = trame.slice(
+    premierIndexApresLongueurChargeUtile,
+    premierIndexApresLongueurChargeUtile + 4,
+  );
+  const chargeUtileEncodee = trame.slice(
+    premierIndexApresLongueurChargeUtile + 4,
+  );
+  // XOR sur chaque séquence de 4 octets dans la charge utile avec le
+  // masque
+  const chargeUtileDecodee = chargeUtileEncodee.map(
+    (octet, i) => octet ^ mask[i % 4],
+  );
+  return chargeUtileDecodee;
 }
+
+const trame = Uint8Array.from([
+  // FIN=1, RSV1-3=0, opcode=0x1 (texte)
+  0b10000001,
+  // MASK=1, charge utile de length=5
+  0b10000101,
+  // masque de 4 octets
+  1, 2, 3, 4,
+  // charge utile de 5 octets
+  105, 103, 111, 104, 110,
+]);
+
+// Suppose que vous avez obtenu le nombre 2 en décodant correctement la
+// longueur de la charge utile
+const chargeUtileDecodee = getPayloadDecoded(trame, 2);
 ```
 
-> [!NOTE]
-> Ici la variable `DECODED` correspond aux données utiles à votre application - en fonction de l'utilisation ou non d'un sous-protocole (_si c'est `json`, vous devez encore décoder les données utiles reçues avec le parseur JSON_).
+Vous pouvez maintenant déterminer ce que signifie `chargeUtileDecodee` selon votre application. Par exemple, vous pouvez [décoder](/fr/docs/Web/API/TextDecoder) cette donnée en UTF-8 si c'est un message texte.
+
+```js
+console.log(new TextDecoder().decode(chargeUtileDecodee)); // "bonjour"
+```
+
+Le masquage est une mesure de sécurité pour éviter que des parties malveillantes ne prédisent les données envoyées au serveur. Le client génère une clé de masquage aléatoire cryptographiquement pour chaque message.
 
 ### La fragmentation des messages
 
@@ -152,89 +218,86 @@ Les champs FIN et opcodes fonctionnent ensemble pour envoyer un message découp�
 
 Souvenez-vous de l'intérêt de l'opcode et ce qu'il implique dans l'échange des trames. Pour _0x1_ c'est du texte, pour _0x2_ des données binaires, etc. Toutefois pour _0x0_, la frame est dite "continue" (elle s'ajoute à la précédente). En voici un exemple plus clair, où il y a en réalité deux textes de message (sur 4 trames différentes)&nbsp;:
 
-```
-Client: FIN=1, opcode=0x1, msg="hello"
-Server: (process complete message immediately) Hi.
-Client: FIN=0, opcode=0x1, msg="and a"
+```plain
+Client: FIN=1, opcode=0x1, msg="bonjour"
+Server: (process complete message immediately) Salut.
+Client: FIN=0, opcode=0x1, msg="et un"
 Server: (listening, new message containing text started)
-Client: FIN=0, opcode=0x0, msg="happy new"
+Client: FIN=0, opcode=0x0, msg="joyeux nouvel"
 Server: (listening, payload concatenated to previous message)
-Client: FIN=1, opcode=0x0, msg="year!"
-Server: (process complete message) Happy new year to you too!
+Client: FIN=1, opcode=0x0, msg="an !"
+Server: (process complete message) Bonne année à vous aussi !
 ```
 
-La première trame dispose d'un message en entier (FIN = 1 et optcode est différent de 0x0) : le serveur peut traiter la requête reçue et y répondre. A partir de la seconde trame et pour les deux suivantes (soit trois trames), l'opcode à 0x1 puis 0x0 signifie qu'il s'agit d'un texte suivi du reste du contenu (0x1 = texte ; 0x0 = la suite). La 3e trame à FIN = 1 indique la fin de la requête.
-Voir la [section 5.4](https://tools.ietf.org/html/rfc6455#section-5.4) de la spécification pour les détails de cette partie.
+Remarquez que la première trame contient un message complet (avec `FIN=1` et `opcode!=0x0`), donc le serveur peut traiter ou répondre comme il le souhaite. La seconde trame envoyée par le client contient une charge utile texte (`opcode=0x1`), mais le message complet n'est pas encore arrivé (`FIN=0`). Toutes les parties restantes de ce message sont envoyées avec des trames de continuation (`opcode=0x0`), et la dernière trame du message est marquée par `FIN=1`. [La section 5.4 de la spécification <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/rfc6455#section-5.4) décrit la fragmentation des messages.
 
-## Pings-Pongs : le "coeur" des WebSockets
+## Pings et Pongs : le battement de cœur des WebSockets
 
-A n'importe quel moment après le processus de poignée de mains, le client ou le serveur peut choisir d'envoyer un _ping_ à l'autre partie. Lorsqu'il est reçu, l'autre partie doit renvoyer dès possible un _pong_. Cette pratique permet de vérifier et de maintenir la connexion avec le client par exemple.
+À n'importe quel moment après la poignée de mains, le client ou le serveur peut choisir d'envoyer un ping à l'autre partie. Lorsqu'un ping est reçu, le·la destinataire doit retourner un pong dès que possible. Vous pouvez utiliser cela pour vérifier que le client est toujours connecté, par exemple.
 
-Le _ping_ ou le _pong_ sont des trames classiques dites **de contrôle**. Les _pings_ disposent d'un opcode à `0x9` et les _pongs_ à `0xA`. Lorsqu'un _ping_ est envoyé, le _pong_ doit disposer de la même donnée utile en réponse que le ping (et d'une taille maximum autorisé de 125). Le _pong_ seul (c-à-d sans _ping_) est ignoré.
+Un ping ou un pong est simplement une trame classique, mais c'est une **trame de contrôle**. Les pings ont un opcode à `0x9`, et les pongs à `0xA`. Lorsque vous recevez un ping, renvoyez un pong avec exactement la même donnée utile que le ping (pour les pings et pongs, la longueur maximale de la charge utile est 125). Il se peut aussi que vous receviez un pong sans avoir envoyé de ping&nbsp;; ignorez-le si cela arrive.
 
 > [!NOTE]
-> Lorsque plusieurs pings sont envoyés à la suite, un **seul** pong suffit en réponse (_le plus récent pour la donnée utile renvoyée_).
+> Si vous avez reçu plusieurs pings avant d'avoir la possibilité d'envoyer un pong, vous n'envoyez qu'un seul pong.
 
 ## Clore la connexion
 
-La connexion peut être close à l'initiative du client ou du serveur grâce à l'envoi d'une trame de contrôle contenant des données spécifiques permettant d'interrompre la poignée de main (de lever définitivement le masque pour être plus précis ; voir la [section 5.5.1](https://tools.ietf.org/html/rfc6455#section-5.5.1)). Dès la réception de la trame, le récepteur envoit une trame spécifique de fermeture en retour (pour signifier la bonne compréhension de la fin de connexion). C'est l'émetteur à l'origine de la fermeture qui doit clore la connexion ; toutes les données supplémentaires sont éliminés / ignorés.
+Pour clore une connexion, le client ou le serveur peut envoyer une trame de contrôle contenant une séquence de contrôle spécifique pour initier la poignée de main de fermeture (détaillée dans [la section 5.5.1 de la spécification <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/rfc6455#section-5.5.1)). Lorsqu'une telle trame est reçue, l'autre partie envoie une trame de fermeture en réponse. La première partie ferme alors la connexion. Toute donnée reçue après la fermeture de la connexion est ensuite ignorée.
 
 ## Diverses informations utiles
 
 > [!NOTE]
-> L'ensemble des codes, extensions et sous-protocoles liés aux WebSocket sont enregistrés dans le (registre) [IANA WebSocket Protocol Registry](https://www.iana.org/assignments/websocket/websocket.xml).
+> L'ensemble des codes, extensions et sous-protocoles liés aux WebSocket sont enregistrés dans le (registre) [IANA WebSocket Protocol Registry <sup>(angl.)</sup>](https://www.iana.org/assignments/websocket/websocket.xml).
 
-Les extensions et sous-protocoles des WebSockets sont négociés durant [l'échange des entêtes de la poignée de mains](#poignéedemain). Si l'on pourrait croire qu'extensions et sous-protocles sont finalement la même chose, il n'en est rien : **le contrôle des extensions agit sur les trames** ce qui modifie la charge utile ; **alors que les sous-protocoles modifient uniquement la charge utile,** et rien d'autre. Les extensions sont optionnelles et généralisées (par exemple pour la compression des données) ; les sous-protocoles sont souvent obligatoires et ciblés (par exemple dans le cadre d'une application de chat ou d'un jeu MMORPG).
-
-> [!WARNING]
-> Les sous-extensions ou les sous-protocoles ne sont pas obligatoires pour l'échange de données par WebSockets ; mais l'esprit développé ici est de rendre soit plus efficace ou sécurisée la transmission (l'esprit d'une extension) ; soit de délimiter et de normaliser le contenu de l'échange (l'esprit d'un sous-protocole ; qui étend donc le protocole par défaut des WebSockets qu'est l'échange de texte simple au format UTF-8).
+Les extensions et sous-protocoles WebSocket sont négociés avec les entêtes lors de [la poignée de mains](#la_«_poignée_de_mains_»_du_websocket). Parfois, extensions et sous-protocoles semblent très similaires, mais il existe une distinction claire. Les extensions contrôlent la _trame_ WebSocket et _modifient_ la charge utile, tandis que les sous-protocoles structurent la _charge utile_ WebSocket et ne modifient jamais rien d'autre. Les extensions sont optionnelles et généralisées (comme la compression)&nbsp;; les sous-protocoles sont obligatoires et ciblés (comme ceux pour le chat ou les jeux MMORPG).
 
 ### Les extensions
 
-L'idée des extensions pourrait être, par exemple, la compression d'un fichier avant de l'envoyer par courriel / email à quelqu'un : les données transférées ne changent pas de contenu, mais leur format oui (et leur taille aussi...). Ce n'est donc pas le format du contenu qui change que le mode transmission - c'est le principe des extensions en WebSockets, dont le principe de base est d'être un protocole simple d'échange de données.
+Pensez à une extension comme à la compression d'un fichier avant de l'envoyer par courriel ou email à quelqu'un. Quoi que vous fassiez, vous envoyez les _mêmes_ données sous différentes formes. Le·la destinataire peut finalement obtenir les mêmes données que votre copie locale, mais elles sont envoyées différemment. C'est ce que fait une extension. WebSockets définit un protocole et une façon simple d'envoyer des données, mais une extension comme la compression peut permettre d'envoyer les mêmes données dans un format plus court.
 
 > [!NOTE]
-> Les extensions sont présentées et expliquées dans les sections 5.8, 9, 11.3.2, and 11.4 de la documentation sus-nommées.
+> Les extensions sont présentées et expliquées dans les sections 5.8, 9, 11.3.2, and 11.4 de la spécification.
 
 ### Les sous-protocoles
 
-Les sous-protocoles sont à comparer à [un schéma XML](https://en.wikipedia.org/wiki/XML_schema) ou [une déclaration de DocType](https://en.wikipedia.org/wiki/Document_Type_Definition). Ainsi vous pouvez utiliser seulement du XML et sa syntaxe et, imposer par le biais des sous-protocoles, son utilisation durant l'échange WebSocket. C'est l'intérêt de ces sous-protocoles : établir une structure définie (_et intangible : le client se voit imposer la mise en oeuvre par le serveur_), bien que les deux doivent l'accepter pour communiquer ensemble.
+Considérez un sous-protocole comme un [schéma XML <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/XML_schema) personnalisé ou une [déclaration de doctype](https://fr.wikipedia.org/wiki/Document_type_definition). Vous utilisez toujours XML et sa syntaxe, mais vous êtes en plus restreint·e par une structure convenue. Les sous-protocoles WebSocket fonctionnent de la même façon. Ils n'introduisent rien de complexe, ils établissent simplement une structure. Comme un doctype ou un schéma, les deux parties doivent accepter le sous-protocole&nbsp;; contrairement à un doctype ou un schéma, le sous-protocole est implémenté côté serveur et ne peut pas être référencé de l'extérieur par le client.
 
 > [!NOTE]
-> Les sous-protocoles sont expliqués dans les sections 1.9, 4.2, 11.3.4, and 11.5 de la documentation sus-nommés.
+> Les sous-protocoles sont expliqués dans les sections 1.9, 4.2, 11.3.4, and 11.5 de la spécification.
 
-Exemple : un client souhaite demander un sous-protocole spécifique. Pour se faire, il envoie dans les entêtes d'origine du processus de poignées de mains :
+Un client doit demander un sous-protocole spécifique. Pour ce faire, il envoie quelque chose comme ceci _dans le cadre de la poignée de mains initiale_&nbsp;:
 
-```
+```http
 GET /chat HTTP/1.1
 ...
 Sec-WebSocket-Protocol: soap, wamp
 ```
 
-Ou son équivalent :
+Ou son équivalent&nbsp;:
 
-```
+```http
 ...
 Sec-WebSocket-Protocol: soap
 Sec-WebSocket-Protocol: wamp
 ```
 
-Le serveur doit désormais choisir l'un des protocoles suggérés par le client et qu'il peut prendre en charge. S'il peut en prendre plus d'un, le premier envoyé par le client sera privilégié. Dans notre exemple, le client envoit `soap` et `wamp`, le serveur qui supporte les deux enverra donc&nbsp;:
+Le serveur doit désormais choisir l'un des protocoles suggérés par le client et qu'il peut prendre en charge. S'il peut en prendre plus d'un, le premier envoyé par le client est privilégié. Dans notre exemple, le client envoie `soap` et `wamp`, le serveur qui supporte les deux envoie donc&nbsp;:
 
-```
+```http
 Sec-WebSocket-Protocol: soap
 ```
 
 > [!WARNING]
-> Le serveur ne peut (ne doit) envoyer plus d'un entête `Sec-Websocket-Protocol`. **S'il n'en supporte aucun, il ne doit pas renvoyer l'entête `Sec-WebSocket-Protocol` (l'entête vide n'est pas correct).** Le client peut alors interrompre la connexion s'il n'a pas le sous-protocole qu'il souhaite (ou qu'il supporte).
+> Le serveur ne peut (ne doit) envoyer plus d'un entête `Sec-WebSocket-Protocol`.
+> S'il ne souhaite utiliser aucun sous-protocole, **_il ne doit pas envoyer d'entête `Sec-WebSocket-Protocol`_**. Envoyer un entête vide n'est pas correct. Le client peut alors interrompre la connexion s'il n'obtient pas le sous-protocole souhaité.
 
-Si vous souhaitez que votre serveur puisse supporter certains sous-protocoles, vous pourriez avoir besoin d'une application ou de scripts supplémentaires sur le serveur. Imaginons par exemple que vous utilisiez le sous-protocole json - où toutes les données échangées par WebSockets sont donc formatés suivant le format [JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation). Si le client sollicite ce sous-protocole et que le serveur souhaite l'accepter, vous **devez disposer** d'un parseur (d'un décodeur) JSON et décoder les données par celui-ci.
+Si vous souhaitez que votre serveur puisse supporter certains sous-protocoles, vous pouvez avoir besoin d'une application ou de scripts supplémentaires sur le serveur. Imaginons par exemple que vous utilisiez le sous-protocole `json`. Dans ce sous-protocole, toutes les données sont transmises au format [JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation). Si le client sollicite ce sous-protocole et que le serveur souhaite l'accepter, le serveur doit disposer d'un parseur JSON. En pratique, cela fait partie d'une bibliothèque, mais le serveur doit pouvoir traiter les données.
 
 > [!NOTE]
-> Pour éviter des conflits d'espaces de noms, il est recommandé d'utiliser le sous-protocole comme un sous-domaine de celui utilisé. Par exemple si vous utilisez un sous-protocole propriétaire qui utilise un format d'échange de données non-standard pour une application de _chat_ sur le domaine _exemple.com_, vous devrirez utiliser&nbsp;: `Sec-WebSocket-Protocol: chat.exemple.com`. S'il y a différentes versions possibles, modifiez le chemin pour faire correspondre le path à votre version comme ceci : `chat.exemple.com/2.0`. Notez que ce n'est pas obligatoire, c'est une convention d'écriture optionnel et qui peut être utilisée d'une toute autre façon.
+> Pour éviter des conflits d'espaces de noms, il est recommandé d'utiliser le nom du sous-protocole comme partie d'une chaîne de domaine. Si vous développez une application de chat personnalisée qui utilise un format propriétaire exclusif à Exemple SA, vous pouvez utiliser&nbsp;: `Sec-WebSocket-Protocol: chat.example.com. Notez que ce n'est pas obligatoire, c'est simplement une convention optionnelle, et vous pouvez utiliser n'importe quelle chaîne de caractères.
 
 ## Contenus associés
 
-- [Tutorial: Websocket server in C#](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_server)
-- [Writing WebSocket client applications](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
-- [Tutorial: Websocket server in VB.NET](/fr/docs/WebSockets/WebSocket_Server_Vb.NET)
+- [Écrire des applications clientes WebSocket](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [Tutoriel&nbsp;: serveur WebSocket en C#](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_server)
+- [Tutoriel&nbsp;: serveur WebSocket en Java](/fr/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java)

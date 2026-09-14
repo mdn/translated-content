@@ -4,7 +4,7 @@ slug: conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS
 original_slug: Learn/CSS/First_steps/What_is_CSS
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{NextMenu("conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
 
 **{{Glossary("CSS")}}** (Folhas de Estilo em Cascata) permite a você criar páginas web agradáveis, mas como isso funciona por baixo dos panos? Este artigo explica o que é CSS, com um exemplo de sintaxe simples, e, também, trata alguns conceitos-chaves sobre a linguagem.
 
@@ -23,7 +23,7 @@ original_slug: Learn/CSS/First_steps/What_is_CSS
           >como trabalhar com arquivos</a
         >, e conhecimento básico sobre HTML (estude
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+          href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introdução ao HTML</a
         >.)
       </td>
@@ -35,7 +35,7 @@ original_slug: Learn/CSS/First_steps/What_is_CSS
   </tbody>
 </table>
 
-No módulo [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML) vimos o que é HTML, e como ele é usado para fazer marcação de documentos. Estes documentos serão legíveis em um navegador web. Títulos serão mais largos do que textos comuns, parágrafos quebram em uma nova linha e tendo espaços entre eles. Links são coloridos e sublinhados para distingui-los do resto do texto. O que você está vendo é o estilo padrão do navegador - vários estilos básicos que o navegador aplica ao HTML, para garantir que ele será legível mesmo se não for explicitamente estilizado pelo autor da página web.
+No módulo [Introdução ao HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content) vimos o que é HTML, e como ele é usado para fazer marcação de documentos. Estes documentos serão legíveis em um navegador web. Títulos serão mais largos do que textos comuns, parágrafos quebram em uma nova linha e tendo espaços entre eles. Links são coloridos e sublinhados para distingui-los do resto do texto. O que você está vendo é o estilo padrão do navegador - vários estilos básicos que o navegador aplica ao HTML, para garantir que ele será legível mesmo se não for explicitamente estilizado pelo autor da página web.
 
 ![The default styles used by a browser](html-example.png)
 
@@ -49,9 +49,10 @@ Um **documento** é normalmente um arquivo texto estruturado usando uma linguage
 
 **Apresentar** um documento para um usuário significa convertê-lo para um formato utilizável pelo seu público. {{Glossary("browser","Browsers")}}, como {{Glossary("Mozilla Firefox","Firefox")}}, {{Glossary("Google Chrome","Chrome")}}, ou {{Glossary("Microsoft Edge","Edge")}} , são projetados para apresentar documentos visualmente, por exemplo, um uma tela de computador, projetor ou impressora.
 
-> **Nota:** **Observação**: Um navegador web é as vezes chamado de {{Glossary("User agent","user agent")}}, o que, basicamente, significa um programa de computador que representa uma pessoa por trás do sistema. Navegadores web são o principal tipo de agente do usuário que nos referimos quando falamos sobre CSS, contudo, ele não é o único. Há outros agentes de usuário disponíveis — tais como aqueles que convertem documentos HTML e CSS para PDF a serem impressos.
+> [!NOTE]
+> **Observação**: Um navegador web é as vezes chamado de {{Glossary("User agent","user agent")}}, o que, basicamente, significa um programa de computador que representa uma pessoa por trás do sistema. Navegadores web são o principal tipo de agente do usuário que nos referimos quando falamos sobre CSS, contudo, ele não é o único. Há outros agentes de usuário disponíveis — tais como aqueles que convertem documentos HTML e CSS para PDF a serem impressos.
 
-O CSS pode ser usado para estilizar um documento muito básico de texto — por exemplo, alterando a [cor](/pt-BR/docs/Web/CSS/color_value) e [tamanho](/pt-BR/docs/Web/CSS/font-size) dos títulos e links. Pode ser usado para criar layout — por exemplo, [transformando uma simples coluna de texto em um layout](/pt-BR/docs/Web/CSS/Layout_cookbook/Column_layouts) com uma área de conteúdo principal e um sidebar (barra lateral) para as informações relacionadas. Pode até ser usado para efeitos tais como [animação](/pt-BR/docs/Web/CSS/CSS_Animations). Dê uma olhada nos links deste parágrafo, para ver exemplos específicos.
+O CSS pode ser usado para estilizar um documento muito básico de texto — por exemplo, alterando a [cor](/pt-BR/docs/Web/CSS/Reference/Values/color_value) e [tamanho](/pt-BR/docs/Web/CSS/Reference/Properties/font-size) dos títulos e links. Pode ser usado para criar layout — por exemplo, [transformando uma simples coluna de texto em um layout](/pt-BR/docs/Web/CSS/Layout_cookbook/Column_layouts) com uma área de conteúdo principal e um sidebar (barra lateral) para as informações relacionadas. Pode até ser usado para efeitos tais como [animação](/pt-BR/docs/Web/CSS/CSS_Animations). Dê uma olhada nos links deste parágrafo, para ver exemplos específicos.
 
 ## Sintaxe CSS
 
@@ -87,7 +88,8 @@ p {
 
 Você constatará que rapidamente aprende alguns valores, enquanto outros precisará pesquisar. As páginas de propriedades individuais no MDN dá a você uma maneira rápida de procurar propriedades e seus respectivos valores, quando você esquecer, ou desejar saber quais valores pode usar.
 
-> **Nota:** **Observação**: Você pode achar links para todas as páginas de propriedades CSS (junto com outros recursos CSS) listados no MDN [referência CSS](/pt-BR/docs/Web/CSS/Reference). Alternativamente, você deve se acostumar a pesquisar por "mdn _css-feature-name_" no seu motor de busca favorito sempre que precisar procurar mais informações sobre uma característica CSS. Por exemplo, experimente pesquisar por "mdn color" e "mdn font-size"!
+> [!NOTE]
+> **Observação**: Você pode achar links para todas as páginas de propriedades CSS (junto com outros recursos CSS) listados no MDN [referência CSS](/pt-BR/docs/Web/CSS/Reference). Alternativamente, você deve se acostumar a pesquisar por "mdn _css-feature-name_" no seu motor de busca favorito sempre que precisar procurar mais informações sobre uma característica CSS. Por exemplo, experimente pesquisar por "mdn color" e "mdn font-size"!
 
 ## Módulos CSS
 
@@ -95,7 +97,7 @@ Como existem tantas coisas que você pode estilizar com CSS, a linguagem é divi
 
 Nesse ponto você não precisa se preocupar muito sobre como o CSS é estruturado. No entanto, isso pode tornar fácil achar informação se, por exemplo, você estiver ciente de que uma determinada propriedade provavelmente será encontrada entre outras coisas semelhantes e estiver, portanto, provavelmente na mesma especificação.
 
-Para um exemplo específico, vamos voltar ao módulo Backgrounds e Borders — você pode achar que isso tem um senso lógico para as propriedades [`background-color`](/pt-BR/docs/Web/CSS/background-color) e [`border-color`](/pt-BR/docs/Web/CSS/border-color) serem definidas neste módulo. E, você está certo!
+Para um exemplo específico, vamos voltar ao módulo Backgrounds e Borders — você pode achar que isso tem um senso lógico para as propriedades [`background-color`](/pt-BR/docs/Web/CSS/Reference/Properties/background-color) e [`border-color`](/pt-BR/docs/Web/CSS/border-color) serem definidas neste módulo. E, você está certo!
 
 ### Especificações CSS
 
@@ -109,14 +111,14 @@ Como iniciante no CSS, é provável que você ache as especificações CSS impre
 
 ## Suporte do navegador
 
-Uma vez que o CSS tenha sido especificado, então se torna útil para nós, em termos de desenvolvimento de páginas web, apenas se um ou mais navegadores implementá-los. Isso significa que o código foi escrito para transformar as instruções do nosso arquivo CSS em algo que possa ser mostrado na tela. Vamos olhar um pouco mais esse processo nas lições [Como o CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works). É inusitado implementarem uma característica ao mesmo tempo, e, geralmente, existe uma lacuna na qual se pode usar parte do CSS em alguns navegadores e em outros não. Por esse motivo, ser capaz de verificar o estado da implemtação é útil. Para cada página de propriedade no MDN, pode-se ver o estado dela, que se esta interessado. Assim, você saberá se pode usá-la em uma página.
+Uma vez que o CSS tenha sido especificado, então se torna útil para nós, em termos de desenvolvimento de páginas web, apenas se um ou mais navegadores implementá-los. Isso significa que o código foi escrito para transformar as instruções do nosso arquivo CSS em algo que possa ser mostrado na tela. Vamos olhar um pouco mais esse processo nas lições [Como o CSS funciona](/pt-BR/docs/Learn_web_development/Core/Styling_basics/What_is_CSS). É inusitado implementarem uma característica ao mesmo tempo, e, geralmente, existe uma lacuna na qual se pode usar parte do CSS em alguns navegadores e em outros não. Por esse motivo, ser capaz de verificar o estado da implemtação é útil. Para cada página de propriedade no MDN, pode-se ver o estado dela, que se esta interessado. Assim, você saberá se pode usá-la em uma página.
 
-A seguir, é apresentado o gráfico de dados compat para propriedade CSS [`font-family`](/pt-BR/docs/Web/CSS/font-family).
+A seguir, é apresentado o gráfico de dados compat para propriedade CSS [`font-family`](/pt-BR/docs/Web/CSS/Reference/Properties/font-family).
 
 {{Compat}}
 
 ## A seguir
 
-Agora que você tem algum entendimento do que o CSS é, vamos ao [Iniciando com CSS](/pt-BR/docs/Learn/CSS/First_steps/Getting_started), onde pode começar a escrever alguma coisa, você mesmo.
+Agora que você tem algum entendimento do que o CSS é, vamos ao [Iniciando com CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics/Getting_started), onde pode começar a escrever alguma coisa, você mesmo.
 
-{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
+{{NextMenu("conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}

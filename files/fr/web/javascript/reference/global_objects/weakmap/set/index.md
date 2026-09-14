@@ -3,8 +3,6 @@ title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 ---
 
-s{{JSRef}}
-
 La méthode **`set()`** permet d'ajouter un nouvel élément avec une `clé` et une `valeur` à un objet `WeakMap`.
 
 {{InteractiveExample("JavaScript Demo: WeakMap.prototype.set()")}}

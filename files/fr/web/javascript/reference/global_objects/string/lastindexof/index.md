@@ -3,8 +3,6 @@ title: String.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 ---
 
-{{JSRef}}
-
 La méthode **`lastIndexOf()`** renvoie l'indice, dans la chaîne courante, de la dernière occurence de la valeur donnée en argument. Si cette sous-chaîne n'est pas trouvée, la méthode renvoie -1. La recherche s'effectue de la fin vers le début de la chaîne, à partir de `indiceDébut`.
 
 {{InteractiveExample("JavaScript Demo: String.lastIndexOf()")}}
@@ -52,7 +50,8 @@ Les caractères d'une chaîne de caractères sont indexés de gauche à droite. 
 "canal".lastIndexOf("", 2); // renvoie 2
 ```
 
-> **Note :** `'abab'.lastIndexOf('ab', 2)` renvoie `2` et pas `0` car l'argument `indiceDébut` ne limite que le début de la correspondance recherchée ( qui est `'ab'`)
+> [!NOTE]
+> `'abab'.lastIndexOf('ab', 2)` renvoie `2` et pas `0` car l'argument `indiceDébut` ne limite que le début de la correspondance recherchée ( qui est `'ab'`)
 
 ### Sensibilité à la casse
 

@@ -121,7 +121,8 @@ draw();
 
 이 예제는 사각형을 canvas 원점에서 먼저 회전하고 그다음에 `translate()`의 도움을 받아 사각형 자체의 중심에서 회전하는 데 `rotate()`를 사용합니다.
 
-> **참고:** **주의**: 각도의 단위는 도(degree)가 아닌 라디안(radian)입니다. 변환하려면 `radians = (Math.PI/180)*degrees`.를 사용합니다.
+> [!NOTE]
+> **주의**: 각도의 단위는 도(degree)가 아닌 라디안(radian)입니다. 변환하려면 `radians = (Math.PI/180)*degrees`.를 사용합니다.
 
 ```js
 function draw() {

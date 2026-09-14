@@ -3,7 +3,7 @@ title: MathML 文本容器
 slug: Web/MathML/Tutorials/For_beginners/Text_containers
 ---
 
-{{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Getting_started", "Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners")}}
 
 现在，我们将重点介绍 MathML 的文本容器（变量、数字、运算符等），它们是 MathML 公式的构建模块。
 
@@ -183,7 +183,8 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 
 {{ EmbedLiveSample('<mi> 自动斜体化', 700, 50) }}
 
-> **备注：** [MathML Core 中的这个表格](https://w3c.github.io/mathml-core/#italic-mappings)提供了受斜体化影响的字符的详尽列表，以及相应的斜体字符。
+> [!NOTE]
+> [MathML Core 中的这个表格](https://w3c.github.io/mathml-core/#italic-mappings)提供了受斜体化影响的字符的详尽列表，以及相应的斜体字符。
 
 ## 阻止对 \<mi> 的自动斜体化
 
@@ -472,4 +473,4 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 - [`<mo>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mo)
 - [`<mtext>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mtext)
 
-{{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Getting_started", "Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners")}}

@@ -2,10 +2,8 @@
 title: サードパーティ API
 slug: Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
@@ -113,8 +111,8 @@ API の他の機能の使用方法を示すために、 Mapquest の例にさら
 
 Mapquest API で表示できる地図には、さまざまな種類があります。 これを行うには、次の行を見つけます。
 
-```js
-layers: L.mapquest.tileLayer("map");
+```js-nolint
+layers: L.mapquest.tileLayer("map"),
 ```
 
 hybrid-style map にするために `'map'` を `'hybrid'` に変えてみてください。他にも様々な値があります。 [`tileLayer` のリファレンスページ](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-tile-layer/) には使える様々なオプションや情報が載っています。
@@ -293,7 +291,7 @@ function displayResults(json) {
       const heading = document.createElement("h2");
       const link = document.createElement("a");
       const img = document.createElement("img");
-      const para1 = document.createElement("p");
+      const para = document.createElement("p");
       const keywordPara = document.createElement("p");
       keywordPara.classList.add("keywords");
 
@@ -301,7 +299,7 @@ function displayResults(json) {
 
       link.href = current.web_url;
       link.textContent = current.headline.main;
-      para1.textContent = current.snippet;
+      para.textContent = current.snippet;
       keywordPara.textContent = "Keywords: ";
       for (const keyword of current.keywords) {
         const span = document.createElement("span");
@@ -317,7 +315,7 @@ function displayResults(json) {
       article.appendChild(heading);
       heading.appendChild(link);
       article.appendChild(img);
-      article.appendChild(para1);
+      article.appendChild(para);
       article.appendChild(keywordPara);
       section.appendChild(article);
     }
@@ -332,7 +330,6 @@ function displayResults(json) {
 - 最初の [`if ()`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) ブロックは、10 個の記事が返されるかどうかをチェックします ( API は一度に 10 個までの記事を返します。) もし返された場合、前の 10 個 / 次の 10 個のページ切り替えボタンを含む {{htmlelement("nav")}} を表示します。10 記事未満の記事が返された場合、それらはすべて 1 ページに収まるので、ページ分割ボタンを表示する必要はありません。次のセクションでは、ページ分割機能の配線を行います。
 - 次の `if ()` ブロックは記事が返ってこないかどうかをチェックします。もしそうならば、何も表示しようとしません — "No results returned." というテキストを含む {{htmlelement("p")}} を作成して、それを `<section>` に挿入します。
 - いくつかの記事が返された場合、私たちはまず、それぞれのニュース記事を表示するために使用したいすべての要素を作成し、それぞれに適切なコンテンツを挿入し、適切な場所で DOM に挿入します。記事オブジェクトのどのプロパティに表示すべき正しいデータが含まれているかを調べるために、Article Search API リファレンス ([NYTimes APIs](https://developer.nytimes.com/apis)) を参照しました。これらの操作のほとんどはかなり明白ですが、いくつかは呼び出す価値があります。
-
   - 私たちは [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループを使用して、それぞれの記事に関連するすべてのキーワードを読み、それぞれを {{htmlelement("span")}} 内、 `<p>` 内に挿入します。これは、それぞれのスタイルを設定しやすくするために行いました。
   - `if ()` ブロック (`if (current.multimedia.length > 0) { }`) を使用して、各記事に画像が保有されているかどうかを調べます。画像を持っていない記事もあるからです。最初の画像が存在する場合のみ表示し、そうでない場合はエラーが発生します。
 

@@ -11,4 +11,4 @@ Normalmente o servidor de upstream não esta fora (ou seja, não fornece respost
 
 ## Aprenda mais
 
-- [list of HTTP response codes](/pt-BR/docs/Web/HTTP/Status)
+- [list of HTTP response codes](/pt-BR/docs/Web/HTTP/Reference/Status)

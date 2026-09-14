@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status
 original_slug: Web/HTTP/Status
 ---
 
-{{HTTPSidebar}}
-
 Los códigos de estado de respuesta HTTP indican si se ha completado satisfactoriamente una solicitud HTTP específica. Las respuestas se agrupan en cinco clases:
 
 1. Respuestas informativas (`100`–`199`),
@@ -25,7 +23,7 @@ Los códigos de estado se definen en la sección 10 de[RFC 2616](https://tools.i
 - {{HTTPStatus(102, "102 Processing")}} ({{Glossary("WebDAV")}})
   - : Este código indica que el servidor ha recibido la solicitud y aún se encuentra procesandola, por lo que no hay respuesta disponible.
 - {{HTTPStatus(103, "103 Early Hints")}}
-  - : Este código de estado está pensado principalmente para ser usado con el encabezado {{HTTPHeader("Link")}}, permitiendo que el agente de usuario empiece a [pre-cargar](/es/docs/Web/HTML/Attributes/rel/preload) recursos mientras el servidor prepara una respuesta.
+  - : Este código de estado está pensado principalmente para ser usado con el encabezado {{HTTPHeader("Link")}}, permitiendo que el agente de usuario empiece a [pre-cargar](/es/docs/Web/HTML/Reference/Attributes/rel/preload) recursos mientras el servidor prepara una respuesta.
 
 ## Respuestas satisfactorias
 

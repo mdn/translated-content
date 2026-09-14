@@ -19,7 +19,7 @@ var propertyName = style.item(index);
 
 ### Return value
 
-- _`propertyName`_ 是一个 {{domxref('DOMString')}} ，是在特定索引位置下的属性的名称。
+- _`propertyName`_ 是一个 {{jsxref("String")}} ，是在特定索引位置下的属性的名称。
 
 使用以下的 javascript 语法可以通过索引从 style 的节点列表中获取对应值：
 

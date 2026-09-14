@@ -30,7 +30,7 @@ onscroll = (event) => {};
 
 ### スクロールイベントの間引き
 
-`scroll` イベントは高い確率で生じることができるため、イベントハンドラーは DOM の変更といった計算上の処理コストの高い操作を実行すべきではありません。その代わり、次のように {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{DOMxRef("setTimeout()")}}、{{DOMxRef("CustomEvent")}} などを使ってイベントを間引くことをお勧めします。
+`scroll` イベントは高い確率で生じることができるため、イベントハンドラーは DOM の変更といった計算上の処理コストの高い操作を実行すべきではありません。その代わり、次のように {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{domxref("Window.setTimeout", "setTimeout()")}}、{{DOMxRef("CustomEvent")}} などを使ってイベントを間引くことをお勧めします。
 
 ただし、入力イベントやアニメーションフレームは同じような割合で発生するため、そのため下記のような最適化は不要の場合が多いことに注意してください。 この例では `requestAnimationFrame` の `scroll` イベントを最適化しています。
 

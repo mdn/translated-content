@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c9bad2ef8b5655146481292f3bce7de0dd86ba68
 ---
 
-{{AddonSidebar}}
-
 卸载给定 ID 的附加组件。
 
 该 API 需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。

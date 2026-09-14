@@ -46,7 +46,6 @@ Você pode pensar nesse objeto retornado como um "intérprete" de um array buffe
 ### Exceções
 
 - `{{jsxref("RangeError")}}`
-
   - : Lançado se o `byteOffset` ou `byteLength` especificados ultrapassarem o final do buffer.
 
     Por exemplo, se o buffer tem 16 bytes de comprimento, o `byteOffset` é 8 e o `byteLength` é 10, esse erro será lançado porque a view resultante tenta estender 2 bytes acima do comprimento total do buffer.
@@ -108,7 +107,7 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 
 ## Propriedades
 
-Todas as instâncias de `DataView` herdam {{jsxref("DataView.prototype")}} e permitem a adição de propriedades a todos os objetos DataView.
+Todas as instâncias de `DataView` herdam {{jsxref("DataView")}} e permitem a adição de propriedades a todos os objetos DataView.
 
 <!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Properties') -->
 
@@ -136,7 +135,7 @@ dv.getInt16(1); //42
 
 ## Notas de compatibilidade
 
-Começando com o Firefox 40, `DataView` deve ser construído com o operador {{jsxref("Operators/new", "new")}} . Chamando `DataView()` como uma função sem o `new`, irá lançar um {{jsxref("TypeError")}} de agora em diante.
+Começando com o Firefox 40, `DataView` deve ser construído com o operador {{jsxref("new")}} . Chamando `DataView()` como uma função sem o `new`, irá lançar um {{jsxref("TypeError")}} de agora em diante.
 
 ```js example-bad
 var dv = DataView(buffer, 0);

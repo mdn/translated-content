@@ -26,4 +26,4 @@ editable = element.isContentEditable
 ## 相关链接
 
 - {{domxref("HTMLElement.contentEditable")}}
-- 全局属性 [contenteditable](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)
+- 全局属性 [contenteditable](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable)

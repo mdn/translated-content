@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a8f881645d776d1303a0a25bd884f95e1b2805e1
 ---
 
-{{GlossarySidebar}}
-
 **表示标头**（representation header，或“表示元数据”）是一种用于描述 HTTP 消息主体中发送资源的特定的*表示*形式的 {{glossary("HTTP_header", "HTTP 标头")}}。
 
 例如，特定消息中的内容可能被编码以进行传输，整个资源可能被格式化为特定的媒体类型（例如 XML、JSON、HTML 或 Markdown），被本地化为特定的书面语言或者地理区域，或者通过特定算法被压缩。表示标头允许提取和理解底层数据。底层资源在每种情况下的语义都是一样的，但是它的表示形式是不同的。

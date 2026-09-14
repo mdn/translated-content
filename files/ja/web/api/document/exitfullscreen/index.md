@@ -59,4 +59,4 @@ document.onclick = (event) => {
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }} および {{cssxref("::backdrop")}}
-- {{HTMLElement("iframe")}} の [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性
+- {{HTMLElement("iframe")}} の [`allowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性

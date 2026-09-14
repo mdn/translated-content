@@ -48,7 +48,6 @@ l10n:
    ```
 
    让我们逐步讲解这段代码中最重要的部分：
-
    - `call.answer(window.localStream)`：如果 `answerCall` 是 `true`，你将想要调用 peerJS 的 `answer()` 函数来接听通话，传递本地流作为参数。
    - `showCallContent`：类似于你在呼叫按钮事件监听器中所做的，你希望被呼叫者看到正确的 HTML 内容。
    - `call.on('stream', () => { })` 块中的所有内容与呼叫按钮的事件监听器中的内容完全相同。之所以在这里也要添加它，是为了让浏览器也更新被呼叫者的视图。

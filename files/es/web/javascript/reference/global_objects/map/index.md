@@ -44,7 +44,7 @@ La especificación requiere que los _maps_ sean implementados "que, en promedio,
 
 ### Igualdad de llaves
 
-La igualdad de valores se basa en el algoritmo [Igualdad SameValueZero](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness#igualdad_same-value-zero). (Se solía usar [igualdad SameValue](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness#igualdad_same-value), el cual trataba `0` y `-0` como diferentes. Revise [compatibilidad con navegadores](#compatibilidad_con_navegadores).) Lo que significa que {{jsxref("NaN")}} es conciderado lo mismo que `NaN` (a pesar de que `NaN !== NaN`) y todos los otros valores son conciderados iguales, de acuerdo a la semantica del operador `===`.
+La igualdad de valores se basa en el algoritmo [Igualdad SameValueZero](/es/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#igualdad_same-value-zero). (Se solía usar [igualdad SameValue](/es/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#igualdad_same-value), el cual trataba `0` y `-0` como diferentes. Revise [compatibilidad con navegadores](#compatibilidad_con_navegadores).) Lo que significa que {{jsxref("NaN")}} es conciderado lo mismo que `NaN` (a pesar de que `NaN !== NaN`) y todos los otros valores son conciderados iguales, de acuerdo a la semantica del operador `===`.
 
 ### Objects vs. Maps
 
@@ -274,7 +274,7 @@ interface RTCStatsReport {
 
 Los objetos similares a `Map` son o de solo-lectura o lectura-escritura (véase la palabra clave `readonly` en el IDL de arriba).
 
-- Los obejtos similares a `Map` de solo-lectura tienen la propiedad [`size`](#map.prototype.size), y los métodos: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), y [`[Symbol.iterator]()`](#map.prototypesymbol.iterator).
+- Los objetos similares a `Map` de solo-lectura tienen la propiedad [`size`](#map.prototype.size), y los métodos: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), y [`[Symbol.iterator]()`](#map.prototypesymbol.iterator).
 - Los objetos similares a `Map` de lectura-escritura tienen métodos adicionales: [`clear()`](#map.prototype.clear), [`delete()`](#map.prototype.delete), y [`set()`](#map.prototype.set).
 
 Los métodos y propiedades tienen el mismo comportamiento que las entidades equivalentes en el objeto `Map`, excepto por la restricción en los tipos de llaves y valores.

@@ -8,10 +8,10 @@ l10n:
 
 {{APIRef("CSS Containment")}}{{SeeCompatTable}}
 
-**`contentvisibilityautostatechange`** イベントは、{{cssxref("content-visibility", "content-visibility: auto")}} が設定されている要素に対して、[ユーザーとの関連](/ja/docs/Web/CSS/CSS_containment#ユーザーとの関連)、[コンテンツをスキップ](/ja/docs/Web/CSS/CSS_containment#コンテンツのスキップ)を開始または停止するときに発行されます。
+**`contentvisibilityautostatechange`** イベントは、{{cssxref("content-visibility", "content-visibility: auto")}} が設定されている要素に対して、[ユーザーとの関連](/ja/docs/Web/CSS/Guides/Containment/Using#ユーザーとの関連)、[コンテンツをスキップ](/ja/docs/Web/CSS/Guides/Containment/Using#コンテンツのスキップ)を開始または停止するときに発行されます。
 
 要素が関係ない間（開始イベントと終了イベントの間）、ユーザーエージェントはレイアウトや描画を含む要素の描画をスキップし、ページの描画速度を大幅に向上させることができます。
-{{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベントは、アプリのコードがレンダリング処理（例えば {{htmlelement("canvas")}} への描画）を不要なときに開始または停止する方法を提供します。
+`contentvisibilityautostatechange` イベントは、アプリのコードがレンダリング処理（例えば {{htmlelement("canvas")}} への描画）を不要なときに開始または停止する方法を提供します。
 
 非表示になっても要素のコンテンツは意味づけされたままなので（例えば支援技術ユーザーにとって）、この指示は重要な意味づけされた DOM の更新をスキップするために使用すべきではありません。
 
@@ -65,6 +65,6 @@ function stopCanvasUpdates(canvas) {
 ## 関連情報
 
 - {{domxref("ContentVisibilityAutoStateChangeEvent")}}
-- [CSS Containment](/ja/docs/Web/CSS/CSS_containment)
+- [CSS Containment](/ja/docs/Web/CSS/Guides/Containment)
 - The {{cssxref("content-visibility")}} property
 - The {{cssxref("contain")}} property

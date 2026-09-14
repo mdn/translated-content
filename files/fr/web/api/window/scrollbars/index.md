@@ -3,7 +3,7 @@ title: Window.scrollbars
 slug: Web/API/Window/scrollbars
 ---
 
-{{APIRef()}}
+{{APIRef}}
 
 La propriété **`Window.scrollbars`** renvoie l'objet `scrollbars`, dont la visibilité peut être vérifié.
 

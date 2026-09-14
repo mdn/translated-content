@@ -18,5 +18,5 @@ l10n:
 ## 関連情報
 
 - [リアルユーザーモニタリング (RUM)](/ja/docs/Glossary/Real_User_Monitoring)
-- [リアルユーザーモニタリング (RUM) と合成モニタリング](/ja/docs/Web/Performance/Rum-vs-Synthetic)
+- [リアルユーザーモニタリング (RUM) と合成モニタリング](/ja/docs/Web/Performance/Guides/Rum-vs-Synthetic)
 - [ビーコン](/ja/docs/Glossary/Beacon)

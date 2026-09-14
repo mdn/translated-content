@@ -3,8 +3,6 @@ title: PUT
 slug: Web/HTTP/Reference/Methods/PUT
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `PUT` 请求方法**创建一个新的资源或用请求的有效载荷替换目标资源的表示。
 
 `PUT` 与 {{HTTPMethod("POST")}} 方法的区别是，`PUT` 方法是幂等的：调用一次与连续调用多次效果是相同的（即没有*副*作用），而连续调用多次相同的 {{HTTPMethod("POST")}} 方法可能会有副作用，比如多次提交同一订单。

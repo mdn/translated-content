@@ -133,7 +133,7 @@ Antes do SpiderMonkey 28, `Object.getOwnPropertyNames` não via propriedades nã
 
 ## Veja também
 
-- [Enumerabilidade e posse de propriedades](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerabilidade e posse de propriedades](/pt-BR/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}

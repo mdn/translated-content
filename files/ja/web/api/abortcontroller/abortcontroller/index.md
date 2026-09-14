@@ -54,7 +54,8 @@ function fetchVideo() {
 }
 ```
 
-> **メモ:** `abort()` が呼び出されると、`fetch()` のプロミスは `AbortError` で拒否されます。
+> [!NOTE]
+> `abort()` が呼び出されると、`fetch()` のプロミスは `AbortError` で拒否されます。
 
 [GitHub に完全に動作する例](https://github.com/mdn/dom-examples/tree/main/abort-api)があります。また、[ライブでの実行](https://mdn.github.io/dom-examples/abort-api/)も確認してください。
 

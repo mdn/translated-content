@@ -56,7 +56,7 @@ obj.dispatchEvent(dogFound);
 // "cat" および "dog" がコンソールの出力される
 ```
 
-その他の例が[イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)にあります。
+その他の例が[イベントの作成と起動](/ja/docs/Web/API/Document_Object_Model/Events)にあります。
 
 ## 仕様書
 
@@ -69,4 +69,4 @@ obj.dispatchEvent(dogFound);
 ## 関連情報
 
 - {{domxref("CustomEvent")}}
-- [イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)
+- [イベントの作成と起動](/ja/docs/Web/API/Document_Object_Model/Events)

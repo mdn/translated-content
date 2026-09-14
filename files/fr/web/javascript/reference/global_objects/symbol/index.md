@@ -3,8 +3,6 @@ title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
 ---
 
-{{JSRef}}
-
 Un objet **`Symbol`** est un objet natif dont le constructeur renvoie une valeur [primitive](/fr/docs/Glossary/Primitive) de type `symbol`. On parle de **valeur symbole** ou de **symbole**&nbsp;: il s'agit d'une valeur dont l'unicité est garantie. Les symboles sont souvent utilisés pour ajouter des clés de propriétés uniques à un objet afin que celles-ci ne rentrent pas en conflit avec des clés ajoutées par un autre code. Les symboles sont masqués des mécanismes habituellement utilisés pour parcourir les propriétés d'un objet. Cela permet une sorte d'[encapsulation](/fr/docs/Glossary/Encapsulation) faible, ou une forme faible de [masquage de l'information](https://fr.wikipedia.org/wiki/Masquage_de_l'information).
 
 Chaque appel à `Symbol()` garantit le renvoi d'un symbole unique. Chaque appel à `Symbol.for("cle")` renverra toujours le même symbole correspondant à la valeur `"cle"`. Lorsque `Symbol.for("cle")` est appelé, si un symbole existe avec cette clé dans le registre global des symboles, il est renvoyé. Sinon, un nouveau symbole est créé et est ajouté au registre global des symboles avec cette clé puis est renvoyé.
@@ -178,5 +176,5 @@ obj[Object(sym)]; // toujours 1
 - [Une prothèse d'émulation de `Symbol` dans la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - [La page du glossaire sur le type de données symbole](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
 - [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof)
-- [Types et structures de données en JavaScript](/fr/docs/Web/JavaScript/Data_structures)
+- [Types et structures de données en JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures)
 - [L'article ES6 en détails sur les symboles, disponible sur tech.mozfr.org](https://tech.mozfr.org/post/2015/06/21/ES6-en-details-%3A-les-symboles)

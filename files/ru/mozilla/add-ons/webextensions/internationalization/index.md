@@ -15,33 +15,24 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 Интернационализированное расширение может содержать такие же элементы, как и любое другое расширение — [фоновые скрипты](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts), [встраиваемые скрипты](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts), и т. д. — а также дополнительные инструменты, позволяющие переключаться между разными локализациями. Их можно представить следующим деревом директорий:
 
 - корневая-директория-расширения/
-
   - \_locales
-
     - en
-
       - messages.json
-
         - Сообщения на английском (строки)
 
     - de
-
       - messages.json
-
         - Сообщения на немецком (строки)
 
     - и т. д.
 
   - manifest.json
-
     - Метаданные, зависящие от локализации
 
   - myJavascript.js
-
     - Файл JavaScript, получающий локализацию браузера, сообщения, зависящие от локализации, и т. д.
 
   - myStyles.css
-
     - CSS, зависящий от локализации
 
 Давайте отдельно рассмотрим каждый элемент — последующие секции представляют собой шаги, которым стоит следовать во время интернационализации вашего расширения.
@@ -233,25 +224,17 @@ You clicked https://developer.mozilla.org.
 Рассмотрим следующий пример:
 
 - корневая-директория-расширения/
-
   - \_locales
-
     - en_GB
-
       - messages.json
-
         - `{ "colorLocalised": { "message": "colour", "description": "Color." }, ... }`
 
       en
-
       - messages.json
-
         - `{ "colorLocalised": { "message": "color", "description": "Color." }, ... }`
 
     - fr
-
       - messages.json
-
         - `{ "colorLocalised": { "message": "couleur", "description": "Color." }, ...}`
 
 Пусть `default_locale` установлен как `fr`, а текущая локализация браузера — `en_GB`:

@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaValueNow`** は {{domxref("Element")}} インターフェイスのプロパティで、範囲ウィジェットの現在値を定義する [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) 属性の値を反映します。
+**`ariaValueNow`** は {{domxref("Element")}} インターフェイスのプロパティで、範囲ウィジェットの現在値を定義する [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) 属性の値を反映します。
 
 ## 値
 
@@ -16,7 +16,7 @@ l10n:
 
 ## 例
 
-この例では、ID が `slider` の要素の [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) 属性は "1" に設定されています。`ariaValueNow` を使用して値を "2" に更新します。
+この例では、ID が `slider` の要素の [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) 属性は "1" に設定されています。`ariaValueNow` を使用して値を "2" に更新します。
 
 ```html
 <div

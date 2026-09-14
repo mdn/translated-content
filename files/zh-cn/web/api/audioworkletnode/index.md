@@ -5,7 +5,7 @@ slug: Web/API/AudioWorkletNode
 
 {{APIRef("Web Audio API")}} {{SeeCompatTable}}
 
-虽然这个接口可以在 [secure contexts](/zh-CN/docs/Web/Security/Secure_Contexts) 之外调用，但是 {{domxref("BaseAudioContext.audioWorklet")}} 属性不行，从而 {{domxref("AudioWorkletProcessor")}} 不能在外部定义。
+虽然这个接口可以在 [secure contexts](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts) 之外调用，但是 {{domxref("BaseAudioContext.audioWorklet")}} 属性不行，从而 {{domxref("AudioWorkletProcessor")}} 不能在外部定义。
 
 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 中的 **`AudioWorkletNode`** 接口代表了用户定义的{{domxref("AudioNode")}}的基类，该基类可以与其他节点一起连接到音频路由图。其具有关联的{{domxref("AudioWorkletProcessor")}}, 它在 Web Audio 执行实际的音频处理。
 

@@ -3,8 +3,6 @@ title: extends
 slug: Web/JavaScript/Reference/Classes/extends
 ---
 
-{{jsSidebar("Classes")}}
-
 Le mot-clé **`extends`** est utilisé dans les [déclarations](/fr/docs/Web/JavaScript/Reference/Statements/class) et [expressions de classes](/fr/docs/Web/JavaScript/Reference/Operators/class) afin de signifier qu'un type représenté par une classe hérite d'un autre type.
 
 {{InteractiveExample("JavaScript Demo: Classes Extends", "taller")}}
@@ -106,7 +104,7 @@ Ces exemples sont extraits de ces deux pages : [démonstration](https://googlech
 
 ### Étendre `null`
 
-Étendre {{jsxref("null")}} se fait comme avec une classe normale sauf que l'objet prototype n'hérite pas de {{jsxref("Object.prototype")}}.
+Étendre {{jsxref("null")}} se fait comme avec une classe normale sauf que l'objet prototype n'hérite pas de {{jsxref("Object")}}.
 
 ```js
 class extensionNull extends null {

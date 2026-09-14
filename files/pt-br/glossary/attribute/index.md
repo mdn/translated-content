@@ -16,5 +16,5 @@ Exemplo:
 
 ### Referência Técnica
 
-- [Referência de atributos de HTML](/pt-BR/docs/Web/HTML/Attributes)
-- Informações sobre [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes) de HTML.
+- [Referência de atributos de HTML](/pt-BR/docs/Web/HTML/Reference/Attributes)
+- Informações sobre [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes) de HTML.

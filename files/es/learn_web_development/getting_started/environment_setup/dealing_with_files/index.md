@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
 original_slug: Learn/Getting_started_with_the_web/Dealing_with_files
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
 Un sitio web consta de muchos archivos: texto del contenido, código, hojas de estilo, contenido multimedia, etc. Cuando estás creando un sitio web, necesitas ensamblar estos archivos en una estructura sensible en tu computadora local, asegurarte de que puedan comunicarse entre sí y hacer que todo su contenido se vea bien antes de que eventualmente [los cargues en un servidor](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website). El _manejo de archivos_ analiza algunos problemas que debes tener en cuenta, para que puedas configurar una estructura de archivos adecuada para tu sitio web.
 
@@ -80,4 +80,4 @@ Eso es todo por ahora. La estructura de tu directorio debería verse así:
 
 ![Una estructura de archivos en mac os x finder, que muestra un directorio de imágenes con una imagen, directorios de estilos y scripts vacíos, y un archivo index.html](file-structure.png)
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}

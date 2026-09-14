@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaRowSpan`** は {{domxref("Element")}} インターフェイスのプロパティで、表、グリッド、ツリーグリッド内のセルやグリッドセルにまたがる行数を定義する [`aria-rowspan`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) 属性の値を反映します。
+**`ariaRowSpan`** は {{domxref("Element")}} インターフェイスのプロパティで、表、グリッド、ツリーグリッド内のセルやグリッドセルにまたがる行数を定義する [`aria-rowspan`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan) 属性の値を反映します。
 
 ## 値
 

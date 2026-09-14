@@ -1,11 +1,14 @@
 ---
-title: Request.text()
+title: Request：text() 方法
+short-title: text()
 slug: Web/API/Request/text
+l10n:
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-{{domxref("Request")}} 接口的 **`text()`** 方法读取请求体并且将其作为一个 promise 返回，该 promise 将兑现一个 {{jsxref("String")}}。响应*总是*使用 UTF-8 解码。
+{{domxref("Request")}} 接口的 **`text()`** 方法用于读取请求体，并将其以会兑现为 {{jsxref("String")}} 的 promise 返回。响应内容*始终*使用 UTF-8 解码。
 
 ## 语法
 
@@ -31,8 +34,8 @@ const request = new Request("/myEndpoint", {
   body: text,
 });
 
-request.text().then(function (text) {
-  // do something with the text sent in the request
+request.text().then((text) => {
+  // 对请求中发送的文本进行处理
 });
 ```
 

@@ -3,7 +3,7 @@ title: Introdução a progressive web apps
 slug: Web/Progressive_web_apps/Tutorials/js13kGames
 ---
 
-{{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}
+{{NextMenu("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps")}}
 
 Este artigo fornece uma intrução as Progressive Web Apps (PWAs), explicando o que são e quais vantagens elas trazem em relação ao desenvolvimento de aplicações web comuns.
 
@@ -31,7 +31,7 @@ Existem alguns princípios que uma aplicação Web deve tentar seguir para serem
 
 - [Detectável](/pt-BR/docs/Apps/Progressive/Advantages#discoverable), o seu conteúdo deve poder ser encontrado por mecanismos de busca na Web.
 - [Instalável](/pt-BR/docs/Apps/Progressive/Advantages#installable), deve poder ser acessada a partir da tela inicial do dispositivo.
-- [Linkavel](/docs/Web/Apps/Progressive/Advantages#linkable), você deve poder compartilhar simplesmente enviando a sua URL.
+- [Linkavel](/docs/Web/Progressive_web_apps#linkable), você deve poder compartilhar simplesmente enviando a sua URL.
 - [Independente de rede](/pt-BR/docs/Apps/Progressive/Advantages#network_independent), deve funcionar offline e ou com uma conexão fraca.
 - [Progressiva](/pt-BR/docs/Apps/Progressive/Advantages#progressive), deve funcionar em um nível básico e navegadores antigos e em um nível completo nos mais modernos.
 - [Re-engajável](/pt-BR/docs/Apps/Progressive/Advantages#re-engageable), deve ser possível enviar notificações.
@@ -67,7 +67,7 @@ As mentioned before, PWAs don't depend on a single API, but rather using various
 
 The key ingredient required for PWAs is [service worker](/pt-BR/docs/Web/API/Service_Worker_API) support. Thankfully service workers are [now supported on all major browsers](https://jakearchibald.github.io/isserviceworkerready/) on desktop and mobile.
 
-Other features such as [Web App Manifest](/pt-BR/docs/Web/Manifest), [Push](/pt-BR/docs/Web/API/Push_API), [Notifications](/pt-BR/docs/Web/API/Notifications_API), and [Add to Home Screen](/pt-BR/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) functionality have wide support too. Currently Safari has limited support for Web App Manifest and Add to Home Screen and no support for web push notifications. However, other major browsers support all these features.
+Other features such as [Web App Manifest](/pt-BR/docs/Web/Progressive_web_apps/Manifest), [Push](/pt-BR/docs/Web/API/Push_API), [Notifications](/pt-BR/docs/Web/API/Notifications_API), and [Add to Home Screen](/pt-BR/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) functionality have wide support too. Currently Safari has limited support for Web App Manifest and Add to Home Screen and no support for web push notifications. However, other major browsers support all these features.
 
 Some of these APIs are experimental, with the documentation still in draft, but seeing success stories like those of Flipkart and AliExpress should convince you to try and implement some of the PWA features in your web app already.
 
@@ -81,6 +81,6 @@ You can find the online version at [mdn.github.io/pwa-examples/js13kpwa](https:/
 
 Now, let's move to the second part of this series, where we'll be looking at the structure of our example app.
 
-{{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}
+{{NextMenu("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps")}}
 
 {{QuickLinksWithSubpages("/pt-BR/docs/Web/Apps/Progressive/")}}

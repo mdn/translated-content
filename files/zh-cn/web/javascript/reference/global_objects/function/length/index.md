@@ -3,8 +3,6 @@ title: Function：length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
 ---
 
-{{JSRef}}
-
 {{jsxref("Function")}} 实例的 **`length`** 数据属性表示函数期望的参数数量。
 
 {{InteractiveExample("JavaScript Demo: Function.length")}}

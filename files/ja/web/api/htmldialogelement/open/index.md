@@ -1,63 +1,63 @@
 ---
 title: "HTMLDialogElement: open プロパティ"
+short-title: open
 slug: Web/API/HTMLDialogElement/open
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 7cd51a73ad94df604db79ccacbbe0513d0967650
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`open`** は {{domxref("HTMLDialogElement")}} インターフェイスのプロパティで、HTML の [`open`](/ja/docs/Web/HTML/Element/dialog#open) 属性を反映した論理値です。これは {{htmlelement("dialog")}} が操作できる状態であるかどうかを示します。
+**`open`** は {{domxref("HTMLDialogElement")}} インターフェイスのプロパティで、HTML の [`open`](/ja/docs/Web/HTML/Reference/Elements/dialog#open) 属性を反映した論理値です。これは {{htmlelement("dialog")}} が操作できる状態であるかどうかを示します。
 
 ## 値
 
-論理値で、HTML の [`open`](/ja/docs/Web/HTML/Element/dialog#open) 属性の状態を表します。`true` は設定されており、従ってダイアログは表示されています。`false` は設定されておらず、従ってダイアログは表示されていません。
+論理値で、HTML の [`open`](/ja/docs/Web/HTML/Reference/Elements/dialog#open) 属性の状態を表します。`true` はダイアログが表示されており、 `false` はダイアログが表示されていません。
 
-このプロパティは読み取り専用になりました。プログラムにより値を設定してダイアログを表示または非表示にすることは可能です。
+> [!WARNING]
+> `open` プロパティは技術的には読み取り専用ではなく直接設定可能ですが、[HTML 仕様書](https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-dialog-closedby)では強く禁じています。通常のダイアログ操作が予期せぬ形で破損する可能性があるためです。例えば、`open` をプログラムで `false` に設定しても、[`close`](/ja/docs/Web/API/HTMLDialogElement/close_event) イベントは発生せず、その後の [`close()`](/ja/docs/Web/API/HTMLDialogElement/close) および [`requestClose()`](/ja/docs/Web/API/HTMLDialogElement/requestClose) メソッドの呼び出しは効果がなくなります。代わりに、[`show()`](/ja/docs/Web/API/HTMLDialogElement/show)、[`showModal()`](/ja/docs/Web/API/HTMLDialogElement/showModal)、`close()`、`requestClose()`などのメソッドを使用して `open` 属性の値を変更することをお勧めします。
 
 ## 例
 
 以下の例では、クリックするとフォームを含む {{htmlelement("dialog")}} を `showModal()` メソッドで開くための単純なボタンを示しています。
-そこから _Cancel_ ボタンをクリックしてダイアログを閉じたり（{{domxref("HTMLDialogElement.close()")}} メソッドで）、送信ボタンでフォームを送信したりすることができます。
+そこから［閉じる］ボタンをクリックしてダイアログを閉じたり（{{domxref("HTMLDialogElement.close()")}} メソッドで）、送信ボタンでフォームを送信したりすることができます。
 
 ```html
-<!-- Simple pop-up dialog box -->
+<!-- 単純なポップアップダイアログボックス -->
 <dialog id="dialog">
   <form method="dialog">
-    <button type="submit">Close</button>
+    <button type="submit">閉じる</button>
   </form>
 </dialog>
 
 <p>
-  <button id="openDialog">Open Dialog</button>
+  <button id="openDialog">ダイアログを開く</button>
 </p>
 <p id="dialogStatus"></p>
+```
 
-<script>
-  (() => {
-    const openDialog = document.getElementById("openDialog");
-    const dialog = document.getElementById("dialog");
-    const text = document.getElementById("dialogStatus");
+```js
+const openDialog = document.getElementById("openDialog");
+const dialog = document.getElementById("dialog");
+const text = document.getElementById("dialogStatus");
 
-    function openCheck(dialog) {
-      if (dialog.open) {
-        text.innerText = "Dialog open";
-      } else {
-        text.innerText = "Dialog closed";
-      }
-    }
+function openCheck(dialog) {
+  if (dialog.open) {
+    text.innerText = "ダイアログが開きました";
+  } else {
+    text.innerText = "ダイアログが閉じました";
+  }
+}
 
-    // Update button opens a modal dialog
-    openDialog.addEventListener("click", () => {
-      dialog.showModal();
-      openCheck(dialog);
-    });
+// ボタンでモーダルダイアログを開く
+openDialog.addEventListener("click", () => {
+  dialog.showModal();
+  openCheck(dialog);
+});
 
-    dialog.addEventListener("close", () => {
-      openCheck(dialog);
-    });
-  })();
-</script>
+dialog.addEventListener("close", () => {
+  openCheck(dialog);
+});
 ```
 
 ### 結果

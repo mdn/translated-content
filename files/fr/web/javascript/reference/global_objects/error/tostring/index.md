@@ -1,63 +1,78 @@
 ---
-title: Error.prototype.toString()
+title: "Error : méthode toString()"
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-La méthode **`toString()`** renvoie une représentation de l'objet {{jsxref("Error")}} sous la forme d'une chaine de caractères.
+La méthode **`toString()`** des instances de {{JSxRef("Error")}} retourne une chaîne de caractères représentant cette erreur.
 
 ## Syntaxe
 
-```js
-e.toString();
+```js-nolint
+toString()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-Une chaîne de caractères représentant l'objet {{jsxref("Error")}}.
+Une chaîne de caractères représentant l'objet {{JSxRef("Error")}}.
 
 ## Description
 
-L'objet {{jsxref("Error")}} surcharge la méthode {{jsxref("Object.prototype.toString()")}} héritée par tous les objets. Sa sémantique est la suivante (en partant du principe que {{jsxref("Object")}} et {{jsxref("String")}} ont leurs valeurs originales) :
+L'objet {{JSxRef("Error")}} surcharge la méthode {{JSxRef("Object.prototype.toString()")}} héritée par tous les objets. Sa sémantique est la suivante&nbsp;:
 
 ```js
 Error.prototype.toString = function () {
-  "use strict";
-
-  var obj = Object(this);
-  if (obj !== this) throw new TypeError();
-
-  var name = this.name;
-  name = name === undefined ? "Error" : String(name);
-
-  var msg = this.message;
-  msg = msg === undefined ? "" : String(msg);
-
-  if (name === "") return msg;
-  if (msg === "") return name;
-
-  return name + ": " + msg;
+  if (
+    this === null ||
+    (typeof this !== "object" && typeof this !== "function")
+  ) {
+    throw new TypeError();
+  }
+  let name = this.name;
+  name = name === undefined ? "Erreur" : `${name}`;
+  let msg = this.message;
+  msg = msg === undefined ? "" : `${msg}`;
+  if (name === "") {
+    return msg;
+  }
+  if (msg === "") {
+    return name;
+  }
+  return `${name} : ${msg}`;
 };
 ```
 
 ## Exemples
 
+### Utiliser la méthode `toString()`
+
 ```js
-var e = new Error("Erreur fatale");
-console.log(e.toString()); // "Error: Erreur fatale"
+const e1 = new Error("erreur fatale");
+console.log(e1.toString()); // "Error: erreur fatale"
 
-e.name = undefined;
-console.log(e.toString()); // "Error: Erreur fatale"
+const e2 = new Error("erreur fatale");
+e2.name = undefined;
+console.log(e2.toString()); // "Error: erreur fatale"
 
-e.name = "";
-console.log(e.toString()); // "Erreur fatale"
+const e3 = new Error("erreur fatale");
+e3.name = "";
+console.log(e3.toString()); // "erreur fatale"
 
-e.message = undefined;
-console.log(e.toString()); // ""
+const e4 = new Error("erreur fatale");
+e4.name = "";
+e4.message = undefined;
+console.log(e4.toString()); // ""
 
-e.name = "salut";
-console.log(e.toString()); // "salut"
+const e5 = new Error("erreur fatale");
+e5.name = "bonjour";
+e5.message = undefined;
+console.log(e5.toString()); // "bonjour"
 ```
 
 ## Spécifications
@@ -70,4 +85,4 @@ console.log(e.toString()); // "salut"
 
 ## Voir aussi
 
-- {{jsxref("Error.prototype.toSource()")}} {{non-standard_inline}}
+- [Prothèse d'émulation de `Error.prototype.toString` avec de nombreuses corrections de bugs dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-error)

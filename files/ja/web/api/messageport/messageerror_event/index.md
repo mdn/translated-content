@@ -45,7 +45,7 @@ _このインターフェイスは親である {{domxref("Event")}} からプロ
 
 ## 例
 
-[`MessageChannel`](/ja/docs/Web/API/MessageChannel) を作成し、そのポートの 1 つを別の閲覧コンテキスト（別の [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) など）に送信するスクリプトを、次のようなコードで作成するとします。
+[`MessageChannel`](/ja/docs/Web/API/MessageChannel) を作成し、そのポートの 1 つを別の閲覧コンテキスト（別の [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) など）に送信するスクリプトを、次のようなコードで作成するとします。
 
 ```js
 const channel = new MessageChannel();

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当作为浏览器扩展提供的主题被应用或移除时触发。具体情况包括：
 
 - 安装[静态主题](https://extensionworkshop.com/documentation/themes/static-themes/)时
@@ -37,13 +35,9 @@ browser.theme.onUpdated.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当此事件发生时调用的函数。该函数传递以下参数：
-
     - `updateInfo`
-
       - : `object`。包含两个属性的对象：
-
         - `theme`
           - : `object`。如果事件因为移除了扩展提供的主题而触发，则这是一个空对象。如果事件因为应用了扩展提供的主题而触发，则这是一个表示已应用主题的 {{WebExtAPIRef("theme.Theme")}} 对象。
         - `windowId` {{optional_inline}}

@@ -15,5 +15,4 @@ JavaScript의 **엄격 모드(strict mode)** 는 제한된 JavaScript 변형을 
 
 - [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("Sloppy mode")}}

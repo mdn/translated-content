@@ -3,8 +3,6 @@ title: bookmarks.move()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 ---
 
-{{AddonSidebar}}
-
 La méthode **`bookmarks.move()`** déplace le {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} à la destination spécifiée dans l'arborescence des signets. Cela vous permet de déplacer un signet vers un nouveau dossier et / ou une position dans le dossier.
 
 > [!WARNING]
@@ -24,13 +22,11 @@ var movingBookmark = browser.bookmarks.move(
 ### Paramètres
 
 - `id`
-  - : Un {{jsxref("string")}} contenant l'ID du signet ou du dossier à déplacer.
+  - : Un {{jsxref("String")}} contenant l'ID du signet ou du dossier à déplacer.
 - `destination`
-
-  - : Un {{jsxref("object")}} qui spécifie la destination du signet. Cet objet doit contenir un ou les deux champs suivants :
-
+  - : Un {{jsxref("Object")}} qui spécifie la destination du signet. Cet objet doit contenir un ou les deux champs suivants :
     - `parentId` {{optional_inline}}
-      - : Un {{jsxref("string")}} qui spécifie l'ID du dossier de destination. Si cette valeur est omise, le signet est déplacé vers un nouvel emplacement dans son dossier actuel.
+      - : Un {{jsxref("String")}} qui spécifie l'ID du dossier de destination. Si cette valeur est omise, le signet est déplacé vers un nouvel emplacement dans son dossier actuel.
     - `index` {{optional_inline}}
       - : Un index basé sur 0 spécifiant la position dans le dossier vers lequel déplacer le signet. La valeur 0 déplace le signet vers le haut du dossier. Si cette valeur est omise, le signet est placé à la fin du nouveau dossier parent..
 
@@ -66,8 +62,6 @@ movingBookmark.then(onMoved, onRejected);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

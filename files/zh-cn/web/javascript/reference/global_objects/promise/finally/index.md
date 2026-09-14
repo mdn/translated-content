@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1766bc83f96aedb321f76068bdd51e9d4953c28d
 ---
 
-{{JSRef}}
-
 {{jsxref("Promise")}} 实例的 **`finally()`** 方法用于注册一个在 promise 敲定（兑现或拒绝）时调用的函数。它会立即返回一个等效的 {{jsxref("Promise")}} 对象，这可以允许你[链式](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#链式调用)调用其他 promise 方法。
 
 这可以让你避免在 promise 的 {{jsxref("Promise/then", "then()")}} 和 {{jsxref("Promise/catch", "catch()")}} 处理器中重复编写代码。

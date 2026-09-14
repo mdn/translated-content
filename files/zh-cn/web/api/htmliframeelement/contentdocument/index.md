@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-如果 iframe 及其父文档处于[同源](/zh-CN/docs/Web/Security/Same-origin_policy)，则返回一个 [`Document`](/zh-CN/docs/Web/API/Document)（即嵌套浏览上下文中的活动文档），否则返回 `null`。
+如果 iframe 及其父文档处于[同源](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)，则返回一个 [`Document`](/zh-CN/docs/Web/API/Document)（即嵌套浏览上下文中的活动文档），否则返回 `null`。
 
 ## contentDocument 示例
 

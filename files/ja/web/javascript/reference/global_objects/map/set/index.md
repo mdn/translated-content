@@ -1,25 +1,24 @@
 ---
 title: Map.prototype.set()
+short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
 l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+  sourceCommit: 7b63b90d24ad8945977bb9dc2735d75f72829bc1
 ---
 
-{{JSRef}}
+**`set()`** は {{jsxref("Map")}} インスタンスのメソッドで、指定されたキーと値を持つ新しい項目をこの対応表 (`Map`) に追加し、キーがすでに存在する場合は既存の項目を更新します。
 
-**`set()`** メソッドは、指定されたキーと値を持つ要素を `Map` オブジェクトに追加したり、更新したりします。
-
-{{InteractiveExample("JavaScript Demo: Map.prototype.set()")}}
+{{InteractiveExample("JavaScript デモ: Map.prototype.set()")}}
 
 ```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+const map = new Map();
+map.set("bar", "foo");
 
-console.log(map1.get("bar"));
-// Expected output: "foo"
+console.log(map.get("bar"));
+// 予想される結果: "foo"
 
-console.log(map1.get("baz"));
-// Expected output: undefined
+console.log(map.get("baz"));
+// 予想される結果: undefined
 ```
 
 ## 構文
@@ -31,9 +30,9 @@ set(key, value)
 ### 引数
 
 - `key`
-  - : `Map` オブジェクトに追加する要素のキーです。キーはいずれかの [JavaScript 型](/ja/docs/Web/JavaScript/Guide/Data_structures) （いずれかの[プリミティブ値](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ値)または任意の型の [JavaScript オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)）です。
+  - : この `Map` オブジェクト内で追加または変更する項目のキーです。どのような値でも指定できます。オブジェクトのキーは、値ではなく [参照](/ja/docs/Glossary/Object_reference) によって比較されます。
 - `value`
-  - : `Map` オブジェクトに追加する要素の値です。値はいずれかの [JavaScript 型](/ja/docs/Web/JavaScript/Guide/Data_structures) （いずれかの[プリミティブ値](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ値)または任意の型の [JavaScript オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)）です。
+  - : この `Map` オブジェクト内で追加または変更する項目の値です。どのような値でも指定できます。
 
 ### 返値
 
@@ -44,13 +43,13 @@ set(key, value)
 ### set() の使用
 
 ```js
-let myMap = new Map();
+const myMap = new Map();
 
-// マップに新しい要素を追加する
+// 対応表に新しい要素を追加する
 myMap.set("bar", "foo");
 myMap.set(1, "foobar");
 
-// マップにある要素を更新する
+// 対応表にある要素を更新する
 myMap.set("bar", "baz");
 ```
 
@@ -59,7 +58,7 @@ myMap.set("bar", "baz");
 `set()` メソッドは `Map` オブジェクトを返すため、以下のようにメソッドチェーンを作ることができます。
 
 ```js
-// チェーンを使用してマップに新しい要素を追加する
+// チェーンを使用して対応表に新しい要素を追加する
 myMap.set("bar", "foo").set(1, "foobar").set(2, "baz");
 ```
 
@@ -74,5 +73,6 @@ myMap.set("bar", "foo").set(1, "foobar").set(2, "baz");
 ## 関連情報
 
 - {{jsxref("Map")}}
+- {{jsxref("Map.prototype.delete()")}}
 - {{jsxref("Map.prototype.get()")}}
 - {{jsxref("Map.prototype.has()")}}

@@ -26,9 +26,7 @@ new File(fileBits, fileName, options)
 - `fileName`
   - : Una cadena que representa el nombre del archivo o ruta del archivo.
 - `options` {{optional_inline}}
-
   - : Un objeto de opciones que contiene los atributos para el archivo. Las opciones disponibles son los siguientes.
-
     - `type` {{optional_inline}}
       - : Una cadena que representa el tipo MIME del contenido que contendrá el archivo. El valor predeterminado es `""`
     - `endings` {{optional_inline}}

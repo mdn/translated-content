@@ -1,21 +1,18 @@
 ---
-title: Document.featurePolicy
+title: "Document : propriété featurePolicy"
+short-title: featurePolicy
 slug: Web/API/Document/featurePolicy
+l10n:
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{APIRef("Feature Policy")}}
+{{APIRef("Feature Policy")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
-La propriété en lecture seule **`featurePolicy`** de l'interface {{domxref("Document")}} retourne l'interface {{domxref("FeaturePolicy")}}, qui fournit une API permettant de consulter facilement les règles de fonctionnalités appliquées sur un document spécifique.
+La propriété en lecture seule **`featurePolicy`** de l'interface {{DOMxRef("Document")}} retourne l'interface {{DOMxRef("FeaturePolicy")}}, qui fournit une API simple pour inspecter les [politiques de fonctionnalités](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy) appliquées à un document spécifique.
 
-## Syntaxe
+## Valeur
 
-```js
-var policy = iframeElement.featurePolicy;
-```
-
-### Valeur
-
-Un objet {{domxref("FeaturePolicy")}} pouvant être utilisé pour consulter les paramètres de Feature Policy appliqués au document.
+Un objet {{DOMxRef("FeaturePolicy")}} pouvant être utilisé pour consulter les paramètres de politique de fonctionnalités appliqués au document.
 
 ## Spécifications
 

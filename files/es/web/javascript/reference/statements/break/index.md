@@ -26,7 +26,7 @@ La sentencia `break` incluye una etiqueta opcional que permite al programa salir
 
 #### Ejemplo: Usando `break`
 
-La siguiente función tiene una sentencia que termina el bucle {{jsxref("Sentencias/while", "while")}} cuando `i` es 3, y entonces devuelve el valor 3 \* `x`.
+La siguiente función tiene una sentencia que termina el bucle {{jsxref("Statements/while", "while")}} cuando `i` es 3, y entonces devuelve el valor 3 \* `x`.
 
 ```js
 function comprobarBreak(x) {
@@ -41,6 +41,6 @@ function comprobarBreak(x) {
 
 ## Vea También
 
-- {{jsxref("Sentencias/continue", "continue")}}
-- {{jsxref("Sentencias/label", "label")}}
-- {{jsxref("Sentencias/switch", "switch")}}
+- {{jsxref("Statements/continue", "continue")}}
+- {{jsxref("Statements/label", "label")}}
+- {{jsxref("Statements/switch", "switch")}}

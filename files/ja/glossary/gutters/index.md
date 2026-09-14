@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**溝** (Gutters) もしくはアレーはコンテンツトラック間に空間を開けることです。[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)で {{cssxref("column-gap")}}、{{cssxref("row-gap")}}、{{cssxref("gap")}} プロパティを使うと溝が作成されます。
+**溝** (Gutters) もしくはアレーはコンテンツトラック間に空間を開けることです。[CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)で {{cssxref("column-gap")}}、{{cssxref("row-gap")}}、{{cssxref("gap")}} プロパティを使うと溝が作成されます。
 
 ## 例
 
@@ -57,7 +57,7 @@ l10n:
 
 グリッドのサイズ決定においては、溝によるすき間は通常のグリッドトラックのように扱われますが、すき間の中には何も配置できません。すき間の分だけその場所のグリッドラインのサイズが増えるように振る舞うため、そのラインの後のグリッドアイテムはすき間の後から始まるように配置されます。
 
-トラックに余白を生じさせる原因は `row-gap` と `column-gap` プロパティだけではありません。マージン、パディング、[ボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)の余白分配プロパティなどいずれも視覚上のすき間を作ります。したがって、追加の余白をこれらの方法で一切作らないデザインをしていない限り、 `row-gap` および `column-gap` プロパティと「溝サイズ」が一致するようには見えません。
+トラックに余白を生じさせる原因は `row-gap` と `column-gap` プロパティだけではありません。マージン、パディング、[ボックス配置](/ja/docs/Web/CSS/Guides/Grid_layout/Box_alignment)の余白分配プロパティなどいずれも視覚上のすき間を作ります。したがって、追加の余白をこれらの方法で一切作らないデザインをしていない限り、 `row-gap` および `column-gap` プロパティと「溝サイズ」が一致するようには見えません。
 
 ## 関連情報
 
@@ -69,5 +69,5 @@ l10n:
 
 ### 参考情報
 
-- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)_
 - [CSS グリッドレイアウト仕様における溝の定義](https://drafts.csswg.org/css-grid/#gutters)

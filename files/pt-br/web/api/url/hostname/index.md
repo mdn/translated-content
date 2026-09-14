@@ -5,13 +5,13 @@ slug: Web/API/URL/hostname
 
 {{ApiRef("URL API")}}
 
-A propriedade **`hostname`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} contendo o {{glossary("domain name")}} da URL.
+A propriedade **`hostname`** da interface {{domxref("URL")}} é uma {{jsxref("String")}} contendo o {{glossary("domain name")}} da URL.
 
 {{AvailableInWorkers}}
 
 ## Valor
 
-Uma {{domxref("USVString")}}.
+Uma {{jsxref("String")}}.
 
 ## Exemplo
 

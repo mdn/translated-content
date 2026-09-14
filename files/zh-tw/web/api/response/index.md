@@ -38,7 +38,7 @@ slug: Web/API/Response
 - {{domxref("Body.body")}} {{readonlyInline}}
   - : A simple getter used to expose a {{domxref("ReadableStream")}} of the body contents.
 - {{domxref("Body.bodyUsed")}} {{readonlyInline}}
-  - : Stores a {{domxref("Boolean")}} that declares whether the body has been used in a response yet.
+  - : Stores a {{jsxref("Boolean")}} that declares whether the body has been used in a response yet.
 
 ## 方法
 
@@ -52,7 +52,7 @@ slug: Web/API/Response
 `Response` implements {{domxref("Body")}}, so it also has the following methods available to it:
 
 - {{domxref("Body.arrayBuffer()")}}
-  - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with an {{domxref("ArrayBuffer")}}.
+  - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with an {{jsxref("ArrayBuffer")}}.
 - {{domxref("Body.blob()")}}
   - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with a {{domxref("Blob")}}.
 - {{domxref("Body.formData()")}}
@@ -60,7 +60,7 @@ slug: Web/API/Response
 - {{domxref("Body.json()")}}
   - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with the result of parsing the body text as {{jsxref("JSON")}}.
 - {{domxref("Body.text()")}}
-  - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with a {{domxref("USVString")}} (text).
+  - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with a {{jsxref("String")}} (text).
 
 ## 範例
 

@@ -3,8 +3,6 @@ title: notifications.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/getAll
 ---
 
-{{AddonSidebar}}
-
 Obtient toutes les notifications actuellement actives créées par l'extension.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -76,5 +74,3 @@ browser.notifications.getAll().then(logNotifications);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

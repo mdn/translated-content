@@ -10,7 +10,7 @@ l10n:
 
 **`popoverTargetAction`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、この制御ボタンで制御されるポップオーバー要素で実行されるアクション（`"hide"`、`"show"`、`"toggle"` の何れか）を取得および設定します。
 
-これは HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Element/button#popovertargetaction) 属性の値を反映します。
+これは HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性の値を反映します。
 
 ## 値
 
@@ -31,7 +31,7 @@ l10n:
 `popover` 属性は [`"auto"`](/ja/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) に設定されているので、ポップオーバーはポップオーバー領域の外側をクリックすることで閉じることができます("light-dismissed")。
 
 最初にポップオーバーの表示・非表示に使用する HTML 要素 `<button>` とポップオーバーになる `<div>` を定義します。
-この阿合、[`popovertargetaction`](/ja/docs/Web/HTML/Element/button#popovertargetaction) 属性を `<button>` を設定したり、[`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性を `<div>` に設定したりはしません。プログラム的に行うからです。
+この阿合、[`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性を `<button>` を設定したり、[`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性を `<div>` に設定したりはしません。プログラム的に行うからです。
 
 ```html
 <button id="toggleBtn">ポップオーバーのトグル切り替え</button>

@@ -16,7 +16,7 @@ storage.removeItem(keyName);
 ### Parâmetros
 
 - _**keyName**_
-  - : A {{domxref("DOMString")}} contendo o nome da chave que você deseja remover.
+  - : A {{jsxref("String")}} contendo o nome da chave que você deseja remover.
 
 ### Retorno
 

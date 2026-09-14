@@ -1,19 +1,28 @@
 ---
 title: <title> — SVG アクセシブル名要素
 slug: Web/SVG/Reference/Element/title
-original_slug: Web/SVG/Element/title
 l10n:
-  sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
-{{SVGRef}}
-
-**`<title>`** 要素は、SVG の[コンテナー要素](/ja/docs/Web/SVG/Reference/Element#コンテナー要素)または[グラフィック要素](/ja/docs/Web/SVG/Reference/Element#グラフィック要素)のアクセシブルな短いテキストの説明を提供します。
+**`<title>`** は [SVG](/ja/docs/Web/SVG) の要素で、 SVG の[コンテナー要素](/ja/docs/Web/SVG/Reference/Element#コンテナー要素)または[グラフィック要素](/ja/docs/Web/SVG/Reference/Element#グラフィック要素)のアクセシブルな短いテキストの説明を提供します。
 
 `<title>` 要素内のテキストはグラフィックの一部としてレンダリングされませんが、ブラウザーは通常ツールチップとして表示します。要素が可視テキストで記述されている場合、 `<title>` 要素を使用するのではなく、 [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性でそのテキストを参照することが推奨されます。
 
 > [!NOTE]
 > SVG 1.1 との後方互換性のため、 `<title>` 要素は親の最初の子要素であるべきです。
+
+## 使用コンテキスト
+
+{{svginfo}}
+
+## 属性
+
+この要素はグローバル属性のみがあります。
+
+## DOM インターフェイス
+
+この要素は {{domxref("SVGTitleElement")}} インターフェイスを実装しています。
 
 ## 例
 
@@ -38,14 +47,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 150, '100%')}}
-
-## 属性
-
-この要素はグローバル属性のみがあります。
-
-## 使用コンテキスト
-
-{{svginfo}}
 
 ## 仕様書
 

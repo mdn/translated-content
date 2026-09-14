@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e46c58e6ed948e8c35c206762eb14a2e68616ed1
 ---
 
-{{JSRef}}
-
 {{jsxref("TypedArray")}} 实例的 **`toSorted()`** 方法是 {{jsxref("TypedArray/sort", "sort()")}} 方法的[拷贝](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)版本。它返回一个按升序排列元素的新类型化数组。此方法与 {{jsxref("Array.prototype.toSorted()")}} 使用相同的算法，不同之处在于它默认按数值排序，而不是按字符串排序。
 
 ## 语法
@@ -19,7 +17,6 @@ toSorted(compareFn)
 ### 参数
 
 - `compareFn` {{optional_inline}}
-
   - : 一个确定元素顺序的函数。如果忽略，该类型化数组的元素将按照数值大小进行排序。更多信息请参阅 {{jsxref("TypedArray/sort", "sort()")}}。
 
 ### 返回值

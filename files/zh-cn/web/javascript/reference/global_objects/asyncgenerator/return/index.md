@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
-
 {{jsxref("AsyncGenerator")}} 实例的 **`return()`** 方法的作用就好像一个 `return` 语句被插入到生成器主体的当前暂停位置，这会结束生成器并允许生成器与 [`try...finally`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#finally_块) 块结合使用时执行任何清理任务。
 
 ## 语法

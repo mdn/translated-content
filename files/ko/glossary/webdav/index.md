@@ -23,7 +23,6 @@ WebDAV를 사용하면 클라이언트가 아래를 수행할 수 있습니다.
 
 - 위키백과의 [WebDAV](https://en.wikipedia.org/wiki/WebDAV)
 - 명세서:
-
   - {{rfc(2518)}}
   - {{rfc(3253)}}
   - {{rfc(3744)}}

@@ -3,7 +3,7 @@ title: VRDisplay.getFrameData()
 slug: Web/API/VRDisplay/getFrameData
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}
 
 **`getFrameData()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 {{domxref("VRFrameData")}} オブジェクトを受け取り、現在のフレームをレンダリングするために必要な情報を入力します。
 

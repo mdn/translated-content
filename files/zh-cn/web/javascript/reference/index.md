@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
 ---
 
-{{jsSidebar}}
-
 JavaScript 参考提供了有关 JavaScript 语言的内容资料库。这里详细描述了整个语言。在编写 JavaScript 代码时，你经常会参考这些页面（因此，标题为“JavaScript 参考”）。
 
 JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务端脚本还是其他类似的环境。在大多数情况下，本参考与环境无关，且不针对 web 浏览器环境。
@@ -188,7 +186,7 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 ### 主要表达式
 
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
 - [字面量](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#字面量)
 - {{jsxref("Array", "[]")}}
 - {{jsxref("Operators/Object_initializer", "{}")}}
@@ -205,9 +203,9 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 - {{jsxref("Operators/Property_accessors", "属性访问器", "", 1)}}
 - {{jsxref("Operators/Optional_chaining", "?.")}}
-- {{jsxref("Operators/new", "new")}}
-- {{jsxref("Operators/new%2Etarget", "new.target")}}
-- {{jsxref("Operators/import%2Emeta", "import.meta")}}
+- {{jsxref("new")}}
+- {{jsxref("Operators/new.target", "new.target")}}
+- {{jsxref("Operators/import.meta", "import.meta")}}
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Operators/import", "import()")}}
 
@@ -220,7 +218,7 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 ### 一元运算符
 
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Operators/void", "void")}}
 - {{jsxref("Operators/typeof", "typeof")}}
 - {{jsxref("Operators/Unary_plus", "+")}}
@@ -244,7 +242,7 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 - {{jsxref("Operators/Greater_than", "&gt;")}}（大于）
 - {{jsxref("Operators/Less_than_or_equal", "&lt;=")}}
 - {{jsxref("Operators/Greater_than_or_equal", "&gt;=")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - {{jsxref("Operators/in", "in")}}
 
 ### 相等运算符
@@ -325,9 +323,9 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 [JavaScript 类](/zh-CN/docs/Web/JavaScript/Reference/Classes)。
 
-- {{jsxref("Classes/Constructor", "constructor")}}
+- {{jsxref("Classes/constructor", "constructor")}}
 - {{jsxref("Classes/extends", "extends")}}
-- [私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [私有元素](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - [公有类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - {{jsxref("Classes/static", "static")}}
 - [静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)

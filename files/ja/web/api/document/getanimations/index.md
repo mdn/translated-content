@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Animations")}}
 
-`getAnimations()` メソッドは {{domxref("Document")}} インターフェイスのメソッドで、この文書の配下にあるターゲット要素にあるすべての {{domxref("Animation")}} オブジェクトの配列を返します。この配列には [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations), [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions), [ウェブアニメーション](/ja/docs/Web/API/Web_Animations_API) が含まれます。
+`getAnimations()` メソッドは {{domxref("Document")}} インターフェイスのメソッドで、この文書の配下にあるターゲット要素にあるすべての {{domxref("Animation")}} オブジェクトの配列を返します。この配列には [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations), [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions), [ウェブアニメーション](/ja/docs/Web/API/Web_Animations_API) が含まれます。
 
 ## 構文
 
@@ -45,7 +45,7 @@ document.getAnimations().forEach((animation) => {
 ## 関連情報
 
 - [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)
+- [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)
 - {{domxref("Element.getAnimations()")}} - 単一の要素 ({{domxref("Element")}}) とその子孫にあるアニメーションのみを読み取る
 - {{domxref("Animation")}}

@@ -26,7 +26,7 @@ l10n:
 
 モーダル要素が表示される場合、作者は他の全てのコンテンツを不活性としてマークする必要があります（HTML の「不活性サブツリー」など）。無効なコンテンツは不活性コンテンツではありません。不活性コンテンツは、通常のブラウジングモードに加えて、支援技術ユーザーがページを詳細に探索できるようにするキャレットブラウジングなどの特殊なブラウジングモードを使用して操作することもできません。これには、コンテンツが意味を提供する可能性がある無効なコンテンツが含まれます。
 
-[`inert`](/ja/docs/Web/HTML/Global_attributes/inert) 属性はブール属性であり、その存在によって、要素とその全てのシャドウを含む子孫が不活性になることを示します。[`HTMLElement.inert`](/ja/docs/Web/API/HTMLElement/inert) が完全にサポートされるまで、[JavaScript を使用してコンテンツを不活性にする](https://samthor.au/2021/inert/) ことができます。
+[`inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert) 属性はブール属性であり、その存在によって、要素とその全てのシャドウを含む子孫が不活性になることを示します。[`HTMLElement.inert`](/ja/docs/Web/API/HTMLElement/inert) が完全にサポートされるまで、[JavaScript を使用してコンテンツを不活性にする](https://samthor.au/2021/inert/) ことができます。
 
 [`dialog`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) または [`alertdialog`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role) に `aria-modal="true"` を含めると、`aria-modal` はダイアログの外側のコンテンツは不活性であることを支援技術に通知するため、バックグラウンドコンテンツに [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) を設定する必要がなくなります。{{HTMLElement("dialog")}} 要素をサポートすることは良いですが、実装を徹底的にテストすることが極めて重要であることに注意してください。
 
@@ -97,5 +97,5 @@ l10n:
 - HTML {{HTMLElement("dialog")}} 要素
 - [`alertdialog` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
 - [`dialog` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
-- HTML [`inert` グローバル属性](/ja/docs/Web/HTML/Global_attributes/inert)
+- HTML [`inert` グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes/inert)
 - HTMLElement API [`inert`](/ja/docs/Web/API/HTMLElement/inert) 属性

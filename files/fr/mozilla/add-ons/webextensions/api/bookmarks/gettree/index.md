@@ -3,8 +3,6 @@ title: bookmarks.getTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
 ---
 
-{{AddonSidebar}}
-
 **`bookmarks.getTree()`** renvoie un tableau contenant la racine de l'arborescence des signets en tant qu'objet {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}.
 
 Vous pouvez accéder à l'intégralité de l'arborescence de manière récursive en utilisant sa propriété `children` et la propriété `children` de ses descendants, s'ils sont eux-mêmes des dossiers.
@@ -70,8 +68,6 @@ gettingTree.then(logTree, onRejected);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -12,13 +12,11 @@ l10n:
 历史记录 API 中定义的主要接口是 {{domxref("History")}} 接口，它定义了两套截然不同的方法：
 
 1. 在会话历史记录中导航到页面的方法：
-
    - {{domxref("History.back()")}}
    - {{domxref("History.forward()")}}
    - {{domxref("History.go()")}}
 
 2. 修改会话历史记录的方法：
-
    - {{domxref("History.pushState()")}}
    - {{domxref("History.replaceState()")}}
 

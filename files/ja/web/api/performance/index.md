@@ -18,15 +18,12 @@ l10n:
 _`Performance` インターフェイスはプロパティを継承しません。_
 
 - {{domxref("Performance.eventCounts")}} {{ReadOnlyInline}}
-
   - : イベント型ごとに配信されたイベント数を格納する {{domxref("EventCounts")}} マップです。
 
 - {{domxref("Performance.navigation")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-
   - : 古い {{domxref("PerformanceNavigation")}} オブジェクトで、ページが読み込みか更新か、リダイレクトの発生回数など、`timing` にリストされている時間に含まれる操作に関する有用なコンテキストを提供します。
 
 - {{domxref("Performance.timing")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-
   - : 古い {{domxref("PerformanceTiming")}} オブジェクトで、待ち時間関連のパフォーマンス情報を持っています。
 
 - {{domxref("Performance.memory")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}

@@ -3,8 +3,6 @@ title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
 ---
 
-{{JSRef}}
-
 **`values()`** 方法會回傳一個包含陣列中的每一個索引之對應值（value）的新 **`Array Iterator`** 物件。
 
 ```js

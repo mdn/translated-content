@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`willValidate`** は {{domxref("HTMLTextAreaElement")}} インターフェイスの読み取り専用のプロパティで、この {{htmlelement("textarea")}} 要素が[制約検証](/ja/docs/Web/HTML/Constraint_validation)の対象であるかどうかを示します。制約検証を禁止する条件がある場合、 `false` となります。例えば、 {{domxref("HTMLTextAreaElement.disabled", "disabled")}} または {{domxref("HTMLTextAreaElement.readOnly", "readOnly")}} プロパティが `true` の場合などです。
+**`willValidate`** は {{domxref("HTMLTextAreaElement")}} インターフェイスの読み取り専用のプロパティで、この {{htmlelement("textarea")}} 要素が[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)の対象であるかどうかを示します。制約検証を禁止する条件がある場合、 `false` となります。例えば、 {{domxref("HTMLTextAreaElement.disabled", "disabled")}} または {{domxref("HTMLTextAreaElement.readOnly", "readOnly")}} プロパティが `true` の場合などです。
 
 ## 値
 
@@ -28,4 +28,4 @@ l10n:
 - {{HTMLElement("textarea")}}
 - {{HTMLElement("form")}}
 - [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)

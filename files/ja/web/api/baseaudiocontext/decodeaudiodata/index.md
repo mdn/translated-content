@@ -46,7 +46,8 @@ _decodedData_ で履行される {{jsxref("Promise") }} オブジェクトです
 
 この例では、 `loadAudio()` は {{domxref("Window/fetch", "fetch()")}} を使用して音声ファイルを取得し、それを {{domxref("AudioBuffer")}} にデコードします。そして、後で再生できるように `audioBuffer` をグローバル変数 `buffer` にキャッシュします。
 
-> **メモ:** [完全な例をライブで実行](https://mdn.github.io/webaudio-examples/decode-audio-data/promise/)したり、[ソースを表示](https://github.com/mdn/webaudio-examples/blob/main/decode-audio-data/promise/)したりすることができます。
+> [!NOTE]
+> [完全な例をライブで実行](https://mdn.github.io/webaudio-examples/decode-audio-data/promise/)したり、[ソースを表示](https://github.com/mdn/webaudio-examples/blob/main/decode-audio-data/promise/)したりすることができます。
 
 ```js
 let audioCtx;
@@ -69,7 +70,8 @@ async function loadAudio() {
 
 この例では `loadAudio()` は {{domxref("Window/fetch", "fetch()")}} を用いて音声ファイルを取得し、コールバックベースの `decodeAudioData()` を用いて {{domxref("AudioBuffer")}} にデコードします。コールバックでは、デコードしたバッファーが再生されます。
 
-> **メモ:** [完全な例をライブで実行](https://mdn.github.io/webaudio-examples/decode-audio-data/callback/)したり、[ソースを表示](https://github.com/mdn/webaudio-examples/blob/main/decode-audio-data/callback/)したりすることができます。
+> [!NOTE]
+> [完全な例をライブで実行](https://mdn.github.io/webaudio-examples/decode-audio-data/callback/)したり、[ソースを表示](https://github.com/mdn/webaudio-examples/blob/main/decode-audio-data/callback/)したりすることができます。
 
 ```js
 let audioCtx;

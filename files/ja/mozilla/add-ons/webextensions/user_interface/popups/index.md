@@ -41,9 +41,9 @@ HTML ファイルを拡張機能に入れるには、 [`browser_action`](/ja/doc
 
 ポップアップはその中身に合わせて自動的にリサイズされます。ブラウザーごとにこのアルゴリズムは違う場合があります。
 
-Firefox では、サイズはポップアップが表示される直前に計算されて、最大で毎秒 10 回の DOM の変更があります。厳格モードの文書では、サイズは [`<body>`](/ja/docs/Web/HTML/Element/body) 要素のレイアウトサイズに基いて計算されます。後方互換モードでは、これは [`<html>`](/ja/docs/Web/HTML/Element/html) 要素です。 Firefox はその要素の好ましい幅を計算して、その幅にリフローして、縦のスクロールがないようにリサイズします。最大で **800x600 ピクセル**の範囲でユーザーの画面に合わせられます。（Firefox 60 以前では [680px まででした](https://bugzilla.mozilla.org/show_bug.cgi?id=1434177)。）ユーザーが[拡張機能のボタンをメニューに動かした](https://support.mozilla.org/ja/kb/customize-firefox-controls-buttons-and-toolbars#w_customize-the-menu-or-the-toolbar)り、ツールバーからオーバーフローした場合、ポップアップはメニューのパネル内に出てきて、固定の幅となります。
+Firefox では、サイズはポップアップが表示される直前に計算されて、最大で毎秒 10 回の DOM の変更があります。厳格モードの文書では、サイズは [`<body>`](/ja/docs/Web/HTML/Reference/Elements/body) 要素のレイアウトサイズに基いて計算されます。後方互換モードでは、これは [`<html>`](/ja/docs/Web/HTML/Reference/Elements/html) 要素です。 Firefox はその要素の好ましい幅を計算して、その幅にリフローして、縦のスクロールがないようにリサイズします。最大で **800x600 ピクセル**の範囲でユーザーの画面に合わせられます。（Firefox 60 以前では [680px まででした](https://bugzilla.mozilla.org/show_bug.cgi?id=1434177)。）ユーザーが[拡張機能のボタンをメニューに動かした](https://support.mozilla.org/ja/kb/customize-firefox-controls-buttons-and-toolbars#w_customize-the-menu-or-the-toolbar)り、ツールバーからオーバーフローした場合、ポップアップはメニューのパネル内に出てきて、固定の幅となります。
 
-ポップアップの `width` を CSS で設定する際、 [`<body>`](/ja/docs/Web/HTML/Element/body) に設定し `:root` には設定しないでください。
+ポップアップの `width` を CSS で設定する際、 [`<body>`](/ja/docs/Web/HTML/Reference/Elements/body) に設定し `:root` には設定しないでください。
 
 Firefox Android 57 では、ポップアップは新規タブの通常ページとして表示されます。
 

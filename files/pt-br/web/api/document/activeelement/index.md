@@ -63,13 +63,11 @@ var curElement = document.activeElement;
       <textarea name="ta-example-one" id="ta-example-one" rows="8" cols="40">
 This is Textarea Example One:
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.
-</textarea
-      >
+</textarea>
       <textarea name="ta-example-two" id="ta-example-two" rows="8" cols="40">
 This is Textarea Example Two:
 Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.
-</textarea
-      >
+</textarea>
     </form>
     Active Element Id: <span id="output-element"></span><br />
     Selected Text: <span id="output-text"></span>

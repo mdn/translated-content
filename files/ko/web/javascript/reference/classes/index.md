@@ -106,7 +106,7 @@ console.log(square.area); // 100
 
 ### 정적 메서드와 속성
 
-{{jsxref("Classes/static", "static", "", 1)}} 키워드는 클래스를 위한 정적(static) 메서드를 정의합니다. 정적 메서드는 클래스의 인스턴스화([instantiating](<https://developer.mozilla.org/ko/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_object_(class_instance)> 'An example of class instance is "var john = new Person();"')) 없이 호출되며, 클래스의 인스턴스에서는 호출할 수 없습니다. 정적 메서드는 어플리케이션(application)을 위한 유틸리티(utility) 함수를 생성하는 데 주로 사용됩니다. 반면, 정적 속성은 캐시, 고정 환경설정 또는 인스턴스 간에 복제할 필요가 없는 기타 데이터에 유용합니다.
+{{jsxref("Classes/static", "static", "", 1)}} 키워드는 클래스를 위한 정적(static) 메서드를 정의합니다. 정적 메서드는 클래스의 인스턴스화([instantiating](</ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects#The_object_(class_instance)> 'An example of class instance is "var john = new Person();"')) 없이 호출되며, 클래스의 인스턴스에서는 호출할 수 없습니다. 정적 메서드는 어플리케이션(application)을 위한 유틸리티(utility) 함수를 생성하는 데 주로 사용됩니다. 반면, 정적 속성은 캐시, 고정 환경설정 또는 인스턴스 간에 복제할 필요가 없는 기타 데이터에 유용합니다.
 
 ```js
 class Point {
@@ -137,7 +137,7 @@ console.log(Point.distance(p1, p2)); // 7.0710678118654755
 
 ### 프로토타입 및 정적 메서드를 사용한 `this` 바인딩
 
-메서드를 변수에 할당 한 다음 호출하는 것과 같이, 정적 메서드나 프로토타입 메서드가 {{jsxref("Operators/this", "this")}} 값 없이 호출될 때, `this` 값은 메서드 안에서 `undefined`가 됩니다. 이 동작은 {{jsxref("Strict_mode", "\"use strict\"")}} 명령어 없이도 같은 방식으로 동작하는데, `class` 문법 안에 있는 코드는 항상 strict mode 로 실행되기 때문입니다.
+메서드를 변수에 할당 한 다음 호출하는 것과 같이, 정적 메서드나 프로토타입 메서드가 {{jsxref("this")}} 값 없이 호출될 때, `this` 값은 메서드 안에서 `undefined`가 됩니다. 이 동작은 {{jsxref("Strict_mode", "\"use strict\"")}} 명령어 없이도 같은 방식으로 동작하는데, `class` 문법 안에 있는 코드는 항상 strict mode 로 실행되기 때문입니다.
 
 ```js
 class Animal {
@@ -248,7 +248,7 @@ class Rectangle {
 
 일반적인 프로퍼티와는 다르게 private 필드는 값을 할당하면서 만들어질 수 없습니다.
 
-자세한 내용은 {{jsxref("Classes/Private_class_fields", "private class fields", "", 1)}}를 참조하세요.
+자세한 내용은 {{jsxref("Classes/Private_elements", "private class fields", "", 1)}}를 참조하세요.
 
 ## `extends`를 통한 클래스 상속(sub classing)
 
@@ -419,7 +419,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
 - {{jsxref("Statements/class", "class 선언", "", 1)}}
 - {{jsxref("Operators/class", "class 식", "", 1)}}
 - {{jsxref("Classes/Public_class_fields", "Public class fields", "", 1)}}
-- {{jsxref("Classes/Private_class_fields", "Private class fields", "", 1)}}
+- {{jsxref("Classes/Private_elements", "Private class fields", "", 1)}}
 - {{jsxref("Operators/super", "super")}}
 - [블로그 게시물: "ES6 In Depth: Classes"](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/)
 - [Fields and public/private class properties proposal (stage 3)](https://github.com/tc39/proposal-class-fields)

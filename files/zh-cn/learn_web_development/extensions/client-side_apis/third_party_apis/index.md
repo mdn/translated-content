@@ -5,7 +5,7 @@ l10n:
   sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 到目前为止我们已经介绍的 API 是内置在浏览器中的，但并不是所有的 API 都是。许多大型网站和服务（例如 Google 地图、Twitter、Facebook、PayPal 等）提供的 API 允许开发者使用他们的数据（例如在博客上显示你的 Twitter 流）或服务（例如在你的网站上显示自定义 Google 地图，或者使用 Facebook 登录来登录你的用户）。本文着眼于浏览器 API 和第三方 API 的区别，并展示了后者的一些典型用途。
 

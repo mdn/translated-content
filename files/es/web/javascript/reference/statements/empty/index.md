@@ -59,4 +59,4 @@ console.log(b); // 0
 
 ## Vea también
 
-- {{jsxref("Sentencias/block", "Sentencia de bloque")}}
+- {{jsxref("Statements/block", "Sentencia de bloque")}}

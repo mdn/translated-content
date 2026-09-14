@@ -3,8 +3,6 @@ title: devtools.panels.ExtensionSidebarPane
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane
 ---
 
-{{AddonSidebar}}
-
 L'objet `ExtensionSidebarPane` représente un volet qu'une extension a ajouté à la barre latérale dans l'inspecteur HTML/CSS du navigateur.
 
 ![](inspector-sidebar.png)

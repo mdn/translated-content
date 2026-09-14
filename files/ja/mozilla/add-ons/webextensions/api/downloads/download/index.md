@@ -23,9 +23,7 @@ var downloading = browser.downloads.download(
 ### パラメーター
 
 - `options`
-
   - : この`object`ではダウンロードしたいファイルやその他のダウンロードに関する設定を指定します。指定できるプロパティは以下です。
-
     - `body`{{optional_inline}}
       - : リクエストの body を`string`で指定します。
     - `conflictAction`{{optional_inline}}
@@ -39,7 +37,6 @@ var downloading = browser.downloads.download(
     - `method`{{optional_inline}}
       - : HTTP\[S]を使用した URL を指定した際、HTTP メソッドを`string`で指定します。GET もしくは POST を設定できます。
     - `saveAs`{{optional_inline}}
-
       - : A `boolean` that specifies whether to provide a file chooser dialog to allow the user to select a filename (`true`), or not (`false`).
 
         If this option is omitted, the browser will show the file chooser or not based on the general user preference for this behavior (in Firefox this preference is labeled "Always ask you where to save files" in about:preferences, or `browser.download.useDownloadDir` in about:config).

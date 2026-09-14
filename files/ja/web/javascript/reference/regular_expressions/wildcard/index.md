@@ -2,10 +2,8 @@
 title: "ワイルドカード: ."
 slug: Web/JavaScript/Reference/Regular_expressions/Wildcard
 l10n:
-  sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{JsSidebar}}
 
 **ワイルドカード**は改行文字を除くすべての文字に一致します。`s` フラグが設定された場合は、改行文字にも一致します。
 
@@ -94,7 +92,7 @@ catch (e)
 
 ## 関連情報
 
-- [文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-- [正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
+- [文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)ガイド
+- [正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
 - [文字クラス: `[...]`, `[^...]`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
 - [文字クラスエスケープ: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)

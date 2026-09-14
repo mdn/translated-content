@@ -88,7 +88,7 @@ slug: Web/API/MutationRecord
         <div class="note">
           <p>
             注意，如果要让这个属性起作用，在相应的
-            <a href="/zh-CN/docs/Web/API/MutationObserverInit"
+            <a href="/zh-CN/docs/Web/API/MutationObserver/observe"
               >MutationObserverInit</a
             >
             参数的 <code>MutationObserver</code>

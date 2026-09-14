@@ -17,7 +17,6 @@ Un `CloseEvent` se envia a los clientes usando {{Glossary("WebSockets")}} cuando
 _Esta interface tambien hereda propiedades de su padre, {{domxref("Event")}}._
 
 - {{domxref("CloseEvent.code")}} {{readOnlyInline}}
-
   - : Devuelve un `unsigned short` que contienen el código de cierre enviado por el servidor. Los siguientes valores son los codigos de estado permitidos. Las siguientes definiciones vienen del sitio web de IANA \[[Ref](https://www.iana.org/assignments/websocket/websocket.xml#close-code-number)].
 
     | Status code   | Name                       | Description                                                                                                                                                                                                     |
@@ -45,7 +44,7 @@ _Esta interface tambien hereda propiedades de su padre, {{domxref("Event")}}._
     | `4000`–`4999` |                            | Disponible para uso de aplicaciones.                                                                                                                                                                            |
 
 - {{domxref("CloseEvent.reason")}} {{readOnlyInline}}
-  - : Retorna un {{domxref("DOMString")}} indicando la razon por que el servidor cerro la conexión. Esto es especifico para el servidor y sub-protocolo en particular.
+  - : Retorna un {{jsxref("String")}} indicando la razon por que el servidor cerro la conexión. Esto es especifico para el servidor y sub-protocolo en particular.
 - {{domxref("CloseEvent.wasClean")}} {{readOnlyInline}}
   - : Retorna un {{jsxref("Boolean")}} que indica si o no la conexion fue cerrada limpiamente.
 

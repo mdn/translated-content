@@ -3,8 +3,6 @@ title: Function.prototype[Symbol.hasInstance]()
 slug: Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance
 ---
 
-{{JSRef}}
-
 {{jsxref("Function")}} 实例的 **`[Symbol.hasInstance]()`** 方法指定确定构造函数是否将对象识别为其实例的默认过程。它由 [`instanceof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 运算符调用。
 
 ## 语法

@@ -2,10 +2,8 @@
 title: 継承とプロトタイプチェーン
 slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
 l10n:
-  sourceCommit: 3dbbefa32758e2a1ca9a37c2788370c06aae2738
+  sourceCommit: 4fc928963dcb04fece336fb3a2f34958fa4bdcb3
 ---
-
-{{jsSidebar("Advanced")}}
 
 プログラミングにおいて、「継承」とは親から子へと特性を渡すことを指し、新しいコードが既存のコードの機能を再利用し、その上に構築できるようにします。 JavaScript では、[オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)を用いて継承が実装されています。それぞれのオブジェクトは、プロトタイプと呼ばれる別のオブジェクトへの内部リンクを保持しています。そのプロトタイプオブジェクトは、さらに自身のプロトタイプを持っており、 `null` をプロトタイプとして持つオブジェクトに到達するまで、このプロセスが繰り返されます。定義上、 `null` にはプロトタイプが存在せず、**プロトタイプチェーン**の最終リンクとして機能します。プロトタイプチェーンのメンバーを変更したり、実行時にプロトタイプを入れ替えたりすることも可能であるため、 JavaScript では[静的呼び出し](https://en.wikipedia.org/wiki/Static_dispatch)のような概念は存在しません。
 
@@ -552,7 +550,7 @@ const filledRectangle = new FilledRectangle(5, 10, "blue");
 // filledRectangle ---> FilledRectangle.prototype ---> Rectangle.prototype ---> Object.prototype ---> null
 ```
 
-クラスは、複雑な継承構造を定義する際に、最高の読みやすさと保守性を実現します。 プロトタイプ継承には、プライベートプロパティという機能に代わるものはいくつかあります。 しかし、クラスは従来のコンストラクター関数よりも最適化されておらず、古い環境では対応していません。
+クラスは、複雑な継承構造を定義する際に、最高の読みやすさと保守性を実現します。[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements) は、プロトタイプ継承では簡単に置き換えることができない機能です。しかし、クラスは従来のコンストラクター関数よりも最適化されておらず、古い環境では対応していません。
 
 ### Object.setPrototypeOf() で
 
@@ -571,7 +569,8 @@ Object.setPrototypeOf(obj, anotherObj);
 
 すべてのオブジェクトは [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) セッターを継承しており、これを使用して既存のオブジェクトの `[[Prototype]]` を設定することができます（`__proto__` キーがオブジェクトでオーバーライドされていない場合）。
 
-> **警告:** `Object.prototype.__proto__` アクセサーは**標準外**で非推奨です。 代わりに、常に `Object.setPrototypeOf` を使用する必要があります。
+> [!WARNING]
+> `Object.prototype.__proto__` アクセサーは**標準外**で非推奨です。 代わりに、常に `Object.setPrototypeOf` を使用する必要があります。
 
 ```js
 const obj = {};

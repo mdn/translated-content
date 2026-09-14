@@ -3,8 +3,6 @@ title: Function.prototype.prototype
 slug: Web/JavaScript/Reference/Global_Objects/Function/prototype
 ---
 
-{{JSRef}}
-
 当 {{jsxref("Function")}} 实例作为构造函数与 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符一起使用时，该实例的 **`prototype`** 数据属性将用作新对象的原型。
 
 > [!NOTE]
@@ -16,7 +14,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/prototype
 
 {{js_property_attributes(1, 0, 0)}}
 
-> **备注：** [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的 `prototype` 属性是不可写的。
+> [!NOTE]
+> [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的 `prototype` 属性是不可写的。
 
 ## 描述
 

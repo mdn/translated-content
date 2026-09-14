@@ -3,8 +3,6 @@ title: Symbol.species
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
 ---
 
-{{JSRef}}
-
 Le symbole **`Symbol.species`** correspond à une fonction utilisée comme constructeur pour créer des objets dérivés.
 
 {{InteractiveExample("JavaScript Demo: Symbol.species")}}
@@ -60,5 +58,5 @@ console.log(mapped instanceof Array); // true
 
 ## Voir aussi
 
-- {{jsxref("Map.@@species", "Map[@@species]")}}
-- {{jsxref("Set.@@species", "Set[@@species]")}}
+- {{jsxref("Map/Symbol.species", "Map[@@species]")}}
+- {{jsxref("Set/Symbol.species", "Set[@@species]")}}

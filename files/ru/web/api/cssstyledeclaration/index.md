@@ -35,7 +35,7 @@ slug: Web/API/CSSStyleDeclaration
 - {{domxref("CSSStyleDeclaration.setProperty()")}}
   - : Изменяет существующее свойство CSS или создаёт новое свойство CSS в блоке объявления.
 - {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}}
-  - : Поддерживается только через getComputedStyle в Firefox. Возвращает значение свойства в виде {{ domxref ("CSSPrimitiveValue")}} или `null` [для сокращённых свойств.](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - : Поддерживается только через getComputedStyle в Firefox. Возвращает значение свойства в виде {{ domxref ("CSSPrimitiveValue")}} или `null` [для сокращённых свойств.](/ru/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
 
 ## Пример
 
@@ -43,7 +43,7 @@ slug: Web/API/CSSStyleDeclaration
 var styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
-for (var i = styleObj.length; i--; ) {
+for (var i = styleObj.length; i--;) {
   var nameString = styleObj[i];
   styleObj.removeProperty(nameString);
 }

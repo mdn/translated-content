@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Window Management API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-{{domxref("Window")}} インターフェイスの **`getScreenDetails()`** メソッドは、ユーザーのデバイスで利用できるすべての画面の詳細を表す {{domxref("ScreenDetails")}} オブジェクトインスタンスで満たされる {{domxref("Promise")}} を返します。
+{{domxref("Window")}} インターフェイスの **`getScreenDetails()`** メソッドは、ユーザーのデバイスで利用できるすべての画面の詳細を表す {{domxref("ScreenDetails")}} オブジェクトインスタンスで満たされる {{jsxref("Promise")}} を返します。
 
 ## 構文
 
@@ -26,7 +26,7 @@ getScreenDetails()
 ### 例外
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : [Permissions-Policy](/ja/docs/Web/HTTP/Guides/Permissions_Policy) によって [Window Management API](/ja/docs/Web/API/Window_Management_API) の使用がブロックされている場合、またはユーザーが明示的にブラウザのパーミッションリクエストを拒否した場合にスローされます。
+  - : [Permissions-Policy](/ja/docs/Web/HTTP/Guides/Permissions_Policy) によって [Window Management API](/ja/docs/Web/API/Window_Management_API) の使用がブロックされている場合、またはユーザーが明示的にブラウザーのパーミッションリクエストを拒否した場合にスローされます。
 
 ## 例
 

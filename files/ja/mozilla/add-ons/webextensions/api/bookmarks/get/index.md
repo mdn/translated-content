@@ -19,13 +19,11 @@ browser.bookmarks.get(
 ### 引数
 
 - `idOrIdList`
-  - : 取得したい {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} オブジェクトの ID を指定した {{jsxref("string")}} または {{jsxref("string")}} の {\[jsxref("array")}} です。
+  - : 取得したい {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} オブジェクトの ID を指定した {{jsxref("String")}} または {{jsxref("String")}} の {\[jsxref("array")}} です。
 - `callback`
-
-  - : ノードが取得された際に実行される {{jsxref("function")}} です。この関数には以下の引数が渡ります。
-
+  - : ノードが取得された際に実行される {{jsxref("Operators/function", "function")}} です。この関数には以下の引数が渡ります。
     - `results`
-      - : 各要素が {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} である、マッチしたノードの {{jsxref("array")}} です。セパレータは結果の戻り値に含まれません。ノードが見つからなかった場合の `results` は `undefined` となり、{{WebExtAPIRef("runtime.lastError")}} がセットされます。
+      - : 各要素が {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} である、マッチしたノードの {{jsxref("Array")}} です。セパレータは結果の戻り値に含まれません。ノードが見つからなかった場合の `results` は `undefined` となり、{{WebExtAPIRef("runtime.lastError")}} がセットされます。
 
 ## ブラウザーの互換性
 
@@ -53,7 +51,7 @@ function doesBookmarkExist(bookmarkId) {
 {{WebExtExamples}}
 
 > [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-get) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいて作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-get) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいて作成されています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

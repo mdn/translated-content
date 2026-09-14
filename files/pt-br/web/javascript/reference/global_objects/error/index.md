@@ -26,7 +26,7 @@ new Error([message[, fileName[, lineNumber]]])
 
 Erros em tempo de execução resultam em novos objetos `Error` sendo criados e lançados.
 
-Esta página documenta o uso do objeto `Error` em si e seu uso como uma função construtora. Para uma lista de propriedades e métodos herdados por instâncias de `Error`, veja {{jsxref("Error.prototype")}}.
+Esta página documenta o uso do objeto `Error` em si e seu uso como uma função construtora. Para uma lista de propriedades e métodos herdados por instâncias de `Error`, veja {{jsxref("Error")}}.
 
 ### Tipos de erro
 
@@ -45,11 +45,11 @@ Além do construtor genérico de `Error`, existem outros seis construtores princ
 - {{jsxref("TypeError")}}
   - : Cria uma instância representando um erro que ocorre quando uma variável ou parâmetro não é de um tipo válido.
 - {{jsxref("URIError")}}
-  - : Cria uma instância representando um erro que ocorre quando são passados parâmetros inválidos para {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} ou {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}.
+  - : Cria uma instância representando um erro que ocorre quando são passados parâmetros inválidos para {{jsxref("encodeURI()")}} ou {{jsxref("decodeURI()")}}.
 
 ## Propriedades
 
-- {{jsxref("Error.prototype")}}
+- {{jsxref("Error")}}
   - : Permite a criação de propriedades para instâncias de `Error`.
 
 ## Métodos
@@ -84,7 +84,7 @@ try {
 
 ### Capturando um erro específico
 
-Você pode escolher por capturar apenas tipos de erro específicos testando o tipo do erro com a propriedade {{jsxref("Object.prototype.constructor", "constructor")}} de erro ou, se você está escrevendo para _engines_ de JavaScript modernas, a palavra-chave {{jsxref("Operators/instanceof", "instanceof")}}:
+Você pode escolher por capturar apenas tipos de erro específicos testando o tipo do erro com a propriedade {{jsxref("Object.prototype.constructor", "constructor")}} de erro ou, se você está escrevendo para _engines_ de JavaScript modernas, a palavra-chave {{jsxref("instanceof")}}:
 
 ```js
 try {
@@ -143,6 +143,6 @@ try {
 
 ## Veja também
 
-- {{jsxref("Error.prototype")}}
+- {{jsxref("Error")}}
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try...catch")}}

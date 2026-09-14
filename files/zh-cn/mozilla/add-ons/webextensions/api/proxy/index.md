@@ -3,10 +3,8 @@ title: proxy
 slug: Mozilla/Add-ons/WebExtensions/API/proxy
 ---
 
-{{AddonSidebar}}
-
 > [!WARNING]
-> 不推荐使用 {{WebExtAPIRef("proxy.register()")}} 或者 {{WebExtAPIRef("proxy.unregister()")}} 方法使用 [Proxy Auto-Configuration (PAC) file](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register#pac_file_specification). 这个 API 将会在 Firefox 68 中废弃并且在 Firefox 71 中删除。
+> 不推荐使用 {{WebExtAPIRef("proxy.register()")}} 或者 {{WebExtAPIRef("proxy.unregister()")}} 方法使用 [Proxy Auto-Configuration (PAC) file](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy#pac_file_specification). 这个 API 将会在 Firefox 68 中废弃并且在 Firefox 71 中删除。
 
 使用 proxy API 来代理 web 请求。你可以使用 **{{WebExtAPIRef("proxy.onRequest")}}** 事件监听器来拦截 web 请求，并且返回一个可以描述是否代理并且怎样代理它们的对象。
 

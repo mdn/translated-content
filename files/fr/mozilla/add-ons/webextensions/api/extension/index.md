@@ -3,8 +3,6 @@ title: extension
 slug: Mozilla/Add-ons/WebExtensions/API/extension
 ---
 
-{{AddonSidebar}}
-
 Utilitaires liés à votre extension. Obtenez des URL vers des packages de ressources avec votre extension, récupérez l'objet [`Window`](/fr/docs/Web/API/Window) pour les pages de votre extension, récupérez les valeurs pour différents paramètres. Notez que les API de messagerie de ce module sont déconseillées au profit des API équivalentes dans le module [`runtime`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime).
 
 ## Types
@@ -54,8 +52,6 @@ Utilitaires liés à votre extension. Obtenez des URL vers des packages de resso
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

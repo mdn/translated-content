@@ -3,7 +3,7 @@ title: Как настроить локальный сервер для тест
 slug: Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
 
 Эта статья объясняет как установить простой локальный тестовый сервер на вашем компьютере, а так же основы его использования.
 
@@ -31,7 +31,6 @@ slug: Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
 Для этого нужно:
 
 1. Установить Python. Если вы пользуетесь Linux или Mac OS X, всё уже готово в вашей системе. Если вы пользователь Windows, вы можете скачать установочный файл с домашней страницы Python:
-
    - Зайдите на [python.org](https://www.python.org/)
    - В секции загрузок, выберите линк для Python "3.xxx".
    - Внизу страницы выберите _Windows x86 executable installer_ и скачайте его.

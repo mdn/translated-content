@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLLinkElement`** インターフェイスは、外部リソースの参照情報と、それらのリソースと文書の関係（またはその逆）を表します（[`<link>`](/ja/docs/Web/HTML/Element/link) 要素に対応します。 [`HTMLAnchorElement`](/ja/docs/Web/API/HTMLAnchorElement) で表される [`<a>`](/ja/docs/Web/HTML/Element/a) 要素と混同しないでください）。このオブジェクトは {{domxref("HTMLElement")}} インターフェイスのすべてのプロパティとメソッドを継承します。
+**`HTMLLinkElement`** インターフェイスは、外部リソースの参照情報と、それらのリソースと文書の関係（またはその逆）を表します（[`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素に対応します。 [`HTMLAnchorElement`](/ja/docs/Web/API/HTMLAnchorElement) で表される [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a) 要素と混同しないでください）。このオブジェクトは {{domxref("HTMLElement")}} インターフェイスのすべてのプロパティとメソッドを継承します。
 
 {{InheritanceDiagram}}
 
@@ -18,7 +18,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 - {{domxref("HTMLLinkElement.as")}}
   - : 文字列で、この HTML リンクによって読み込まれるコンテンツの種類を表します。
 - {{domxref("HTMLLinkElement.crossOrigin")}}
-  - : 文字列で、このリンク要素の CORS 設定に対応します。詳細については、 [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)を参照してください。
+  - : 文字列で、このリンク要素の CORS 設定に対応します。詳細については、 [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を参照してください。
 - {{domxref("HTMLLinkElement.disabled")}}
   - : 論理値で、リンクが無効であるかどうかを表します。現在、スタイルシートリンクでのみ使用されています。
 - {{domxref("HTMLLinkElement.fetchPriority")}} {{experimental_inline}}
@@ -27,18 +27,24 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
   - : 文字列で、対象リソースの URI を表します。
 - {{domxref("HTMLLinkElement.hreflang")}}
   - : 文字列で、リンク先リソースの言語コードを表します。
+- {{domxref("HTMLLinkElement.imageSizes")}}
+  - : 文字列で、 HTML の [`imagesizes`](/ja/docs/Web/HTML/Reference/Elements/link#imagesizes) 属性を反映します。画像条件とサイズのコンマ区切りリストです。
+- {{domxref("HTMLLinkElement.imageSrcset")}}
+  - : 文字列で、 HTML の [`imagesrcset`](/ja/docs/Web/HTML/Reference/Elements/link#imagesrcset) 属性を反映します。画像候補文字列のコンマ区切りリストです。
+- {{domxref("HTMLLinkElement.integrity")}}
+  - : 文字列で、ブラウザーが取得されたリソースが予期しない操作なしに配信されたことを確認するために使用できるインラインメタデータを含みます。 [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素の `integrity` 属性を反映します。
 - {{domxref("HTMLLinkElement.media")}}
   - : 文字列で、リソースに適用される 1 つ以上のメディア形式のリストを表します。
 - {{domxref("HTMLLinkElement.referrerPolicy")}}
-  - : 文字列で、使用するリファラーを示す HTML の [`referrerpolicy`](/ja/docs/Web/HTML/Element/link#referrerpolicy) 属性を反映します。
+  - : 文字列で、使用するリファラーを示す HTML の [`referrerpolicy`](/ja/docs/Web/HTML/Reference/Elements/link#referrerpolicy) 属性を反映します。
 - {{domxref("HTMLLinkElement.rel")}}
   - : 文字列で、リンク元文書からリンク先リソースに対する関連性を表します。
 - {{domxref("HTMLLinkElement.relList")}} {{ReadOnlyInline}}
-  - : {{domxref("DOMTokenList")}} で、 HTML の [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性をトークンのリストとして反映します。
-- {{domxref("HTMLLinkElement.sizes")}} {{ReadOnlyInline}}
-  - : {{domxref("DOMTokenList")}} で、トークンのリストとして HTML の [`sizes`](/ja/docs/Web/HTML/Element/link#sizes) 属性を反映します。
+  - : {{domxref("DOMTokenList")}} で、 HTML の [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性をトークンのリストとして反映します。
 - {{domxref("HTMLLinkElement.sheet")}} {{ReadOnlyInline}}
   - : 指定された要素に関連付けられた {{domxref("StyleSheet")}} オブジェクトを返します。存在しない場合は `null` を返します。
+- {{domxref("HTMLLinkElement.sizes")}} {{ReadOnlyInline}}
+  - : {{domxref("DOMTokenList")}} で、トークンのリストとして HTML の [`sizes`](/ja/docs/Web/HTML/Reference/Elements/link#sizes) 属性を反映します。
 - {{domxref("HTMLLinkElement.type")}}
   - : 文字列で、リンク先リソースの MIME タイプを表します。
 
@@ -47,7 +53,6 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 - {{domxref("HTMLLinkElement.charset")}} {{deprecated_inline}}
   - : 文字列で、対象リソースの文字エンコーディングを表します。
 - {{domxref("HTMLLinkElement.rev")}} {{deprecated_inline}}
-
   - : 文字列で、リソースからこの文書に対してリンクされたリソースの逆相の関係を表します。
 
     > [!NOTE]

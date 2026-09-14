@@ -5,7 +5,7 @@ slug: Web/API/DOMTokenList/keys
 
 {{APIRef("DOM")}}
 
-La méthode **`keys()`** de l'interface {{domxref("DOMTokenList")}} renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont de type `unsigned integer` _(entier non signé)_.
+La méthode **`keys()`** de l'interface {{domxref("DOMTokenList")}} renvoie un {{jsxref("Iteration_protocols",'itérateur')}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont de type `unsigned integer` _(entier non signé)_.
 
 ## Syntaxe
 
@@ -19,7 +19,7 @@ Aucun.
 
 ### Valeur retournée
 
-Renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}}.
+Renvoie un {{jsxref("Iteration_protocols","itérateur")}}.
 
 ## Exemples
 

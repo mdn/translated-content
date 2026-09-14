@@ -1,36 +1,43 @@
 ---
-title: Object.fromEntries()
+title: "Object : méthode statique fromEntries()"
+short-title: fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
+l10n:
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
-{{JSRef}}
+La méthode statique **`Object.fromEntries()`** permet de transformer une liste de paires de clés/valeurs en un objet.
 
-La méthode **`Object.fromEntries()`** permet de transformer une liste de paires de clés/valeurs en un objet.
-
-{{InteractiveExample("JavaScript Demo: Object.fromEntries()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Object.fromEntries()")}}
 
 ```js interactive-example
 const entries = new Map([
-  ["foo", "bar"],
-  ["baz", 42],
+  ["toto", "truc"],
+  ["tata", 42],
 ]);
 
 const obj = Object.fromEntries(entries);
 
 console.log(obj);
-// Expected output: Object { foo: "bar", baz: 42 }
+// Résultat attendu : Object { toto: "truc", tata: 42 }
 ```
 
 ## Syntaxe
 
-```js
-Object.fromEntries(iterable);
+```js-nolint
+Object.fromEntries(iterable)
 ```
 
 ### Paramètres
 
 - `iterable`
-  - : Un itérable tel qu'un tableau ({{jsxref("Array")}}) ou une {{jsxref("Map")}} ou tout autre objet qui implémente [le protocole itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»).
+  - : Un [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»), tel qu'un {{JSxRef("Array")}} ou une {{JSxRef("Map")}}, contenant une liste d'objets. Chaque objet doit avoir deux propriétés&nbsp;:
+    - `0`
+      - : Une chaîne de caractères ou un [symbole](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) représentant la clé de la propriété.
+    - `1`
+      - : La valeur de la propriété.
+
+    En général, cet objet est implémenté sous la forme d'un tableau à deux éléments, le premier élément étant la clé de la propriété et le second élément étant la valeur de la propriété.
 
 ### Valeur de retour
 
@@ -38,51 +45,54 @@ Un nouvel objet dont les propriétés sont fournies par les éléments de l'ité
 
 ## Description
 
-La méthode `Object.fromEntries()` prend comme argument une liste de paires de clés-valeurs et renvoie un nouvel objet dont les propriétés sont fournies par ces clés-valeurs. L'argument `iterable` doit implémenter une méthode `@@iterator` qui renvoie un itérateur produisant un objet semblable à un tableau avec deux éléments ; le premier élément est une valeur qui sera utilisée comme clé de la propriété et le second élément sera utilisé comme valeur associée à cette clé.
+La méthode `Object.fromEntries()` prend une liste de paires clé-valeur et retourne un nouvel objet dont les propriétés sont définies par ces entrées. L'argument `iterable` doit être un objet implémentant la méthode `[Symbol.iterator]()`. Cette méthode retourne un objet itérateur qui produit des objets de type tableau à deux éléments. Le premier élément est une valeur qui est utilisée comme clé de propriété, et le second élément est la valeur à associer à cette clé de propriété.
 
-`Object.fromEntries()` est la fonction inverse de {{jsxref("Object.entries()")}}.
+`Object.fromEntries()` effectue l'opération inverse de {{JSxRef("Object.entries()")}}, à la différence que `Object.entries()` ne retourne que des propriétés dont la clé est une chaîne de caractères, tandis que `Object.fromEntries()` peut également créer des propriétés dont la clé est un symbole.
+
+> [!NOTE]
+> Contrairement à {{JSxRef("Array.from()")}}, `Object.fromEntries()` n'utilise pas la valeur de `this`, par conséquent, l'appeler sur un autre constructeur ne crée pas d'objets de ce type.
 
 ## Exemples
 
 ### Convertir une `Map` en un `Object`
 
-Grâce à `Object.fromEntries`, on peut convertir des objets {{jsxref("Map")}} en {{jsxref("Object")}} :
+Grâce à `Object.fromEntries`, on peut convertir des objets {{JSxRef("Map")}} en {{JSxRef("Object")}}&nbsp;:
 
 ```js
-const map = new Map([
+const tab_assoc = new Map([
   ["toto", "truc"],
   ["machin", 42],
 ]);
-const obj = Object.fromEntries(map);
+const obj = Object.fromEntries(tab_assoc);
 console.log(obj); // { toto: "truc", machin: 42 }
 ```
 
 ### Convertir un `Array` en un `Object`
 
-Grâce à `Object.fromEntries`, on peut convertir des objets {{jsxref("Array")}} en {{jsxref("Object")}} :
+Grâce à `Object.fromEntries`, on peut convertir des objets {{JSxRef("Array")}} en {{JSxRef("Object")}}&nbsp;:
 
 ```js
-const arr = [
+const tab = [
   ["0", "a"],
   ["1", "b"],
   ["2", "c"],
 ];
-const obj = Object.fromEntries(arr);
+const obj = Object.fromEntries(tab);
 console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 ```
 
 ### Transformer des objets
 
-Avec `Object.fromEntries` et la méthode réciproque {{jsxref("Object.entries()")}}, et [les méthodes de manipulation de tableaux](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes), on peut transformer des objets :
+Avec `Object.fromEntries` et la méthode réciproque {{JSxRef("Object.entries()")}}, et [les méthodes de manipulation de tableaux](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_dinstance), on peut transformer des objets&nbsp;:
 
 ```js
-const object1 = { a: 1, b: 2, c: 3 };
+const objet1 = { a: 1, b: 2, c: 3 };
 
-const object2 = Object.fromEntries(
-  Object.entries(object1).map(([key, val]) => [key, val * 2]),
+const objet2 = Object.fromEntries(
+  Object.entries(objet1).map(([cle, val]) => [cle, val * 2]),
 );
 
-console.log(object2);
+console.log(objet2);
 // { a: 2, b: 4, c: 6 }
 ```
 
@@ -96,9 +106,13 @@ console.log(object2);
 
 ## Voir aussi
 
-- {{jsxref("Object.entries()")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.values()")}}
-- {{jsxref("Map.prototype.entries()")}}
-- {{jsxref("Map.prototype.keys()")}}
-- {{jsxref("Map.prototype.values()")}}
+- [La prothèse d'émulation de `Object.fromEntries` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
+- [La prothèse d'émulation es-shims de `Object.fromEntries` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.fromentries)
+- La méthode statique {{JSxRef("Object.entries()")}}
+- La méthode statique {{JSxRef("Object.keys()")}}
+- La méthode statique {{JSxRef("Object.values()")}}
+- La méthode {{JSxRef("Object.prototype.propertyIsEnumerable()")}}
+- La méthode statique {{JSxRef("Object.create()")}}
+- La méthode {{JSxRef("Map.prototype.entries()")}}
+- La méthode {{JSxRef("Map.prototype.keys()")}}
+- La méthode {{JSxRef("Map.prototype.values()")}}

@@ -11,4 +11,4 @@ CSS では**擬似クラス**セレクターを使うことで、ドキュメン
 
 ### 技術リファレンス
 
-- [Pseudo-class documentation (擬似クラス)](/ja/docs/Web/CSS/Pseudo-classes)
+- [Pseudo-class documentation (擬似クラス)](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)

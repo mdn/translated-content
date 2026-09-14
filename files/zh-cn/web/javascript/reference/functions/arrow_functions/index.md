@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e3faa375b0179de77a5eff00074e3d168a0a904c
 ---
 
-{{jsSidebar("Functions")}}
-
 **箭头函数表达式**的语法比传统的[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)更简洁，但在语义上有一些差异，在用法上也有一些限制：
 
 - 箭头函数没有独立的 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)、[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 和 [`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) {{Glossary("binding", "绑定")}}，并且不可被用作[方法](/zh-CN/docs/Glossary/Method)。
@@ -171,7 +169,7 @@ const func3 = () => { foo() {} };
 // SyntaxError: Unexpected token '{'
 ```
 
-这是因为只有当箭头后面的标记不是左括号时，JavaScript 才会将箭头函数视为表达式体，因此括号（{}）内的代码会被解析为一系列语句，其中 `foo` 是[标签](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)，而不是对象文字中的键。
+这是因为只有当箭头后面的标记不是左括号时，JavaScript 才会将箭头函数视为表达式体，因此括号（{}）内的代码会被解析为一系列语句，其中 `foo` 是[标签](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)，而不是对象字面量中的键。
 
 要解决这个问题，可以用括号将对象字面量包装起来：
 

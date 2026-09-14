@@ -5,13 +5,12 @@ l10n:
   sourceCommit: 38fb31b12de1019a538e868a90dd4dd4858e4871
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Allow-Headers`** 回應標頭用於回應包含 {{HTTPHeader("Access-Control-Request-Headers")}} 的{{glossary("preflight request", "預檢請求")}}，以指示實際請求中可以使用哪些 HTTP 標頭。
 
 如果請求包含 {{HTTPHeader("Access-Control-Request-Headers")}} 標頭，此標頭是必需的。
 
-> **備註：** {{glossary("CORS-safelisted_request_header", "列入 CORS 白名單的請求標頭")}}總是允許的，通常不會列在 `Access-Control-Allow-Headers` 中（除非有必要繞過安全名單的[附加限制](/zh-TW/docs/Glossary/CORS-safelisted_request_header#附加限制)）。
+> [!NOTE]
+> {{glossary("CORS-safelisted_request_header", "列入 CORS 白名單的請求標頭")}}總是允許的，通常不會列在 `Access-Control-Allow-Headers` 中（除非有必要繞過安全名單的[附加限制](/zh-TW/docs/Glossary/CORS-safelisted_request_header#附加限制)）。
 
 <table class="properties">
   <tbody>

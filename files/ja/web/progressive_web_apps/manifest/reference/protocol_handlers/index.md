@@ -2,10 +2,10 @@
 title: protocol_handlers
 slug: Web/Progressive_web_apps/Manifest/Reference/protocol_handlers
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 `protocol_handlers` メンバーは、このウェブアプリが登録・処理することができるプロトコルを表すオブジェクトの配列を指定します。プロトコルハンドラーは、 OS のアプリケーション設定にアプリケーションを登録します。登録は、特定のアプリケーションと与えられたプロトコルスキームを関連付けます。例えば、ウェブページで `mailto://` というプロトコルハンドラーを使用すると、登録されたメールアプリケーションが開きます。
 
@@ -16,7 +16,6 @@ l10n:
 プロトコルハンドラーオブジェクトには、次の値が含まれている場合があります。
 
 - `protocol` {{experimental_inline}}
-
   - : 必須の文字列で、処理するプロトコルを指定します。例えば、`mailto`、`ms-word`、`web+jngl` です。
 
 - `url` {{experimental_inline}}

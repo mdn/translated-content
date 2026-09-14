@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
-
 **`AsyncFunction()`** 构造函数创建一个新的 {{jsxref("AsyncFunction")}} 对象。
 
 注意，`AsyncFunction` *不是*全局对象。它可以通过以下代码获取：

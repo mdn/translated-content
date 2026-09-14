@@ -5,8 +5,6 @@ l10n:
   sourceCommit: becca01d713f7f3c37f40ede7ee7c282312dfa4f
 ---
 
-{{jsSidebar("Statements")}}
-
 **`do...while`** 语句创建了一个循环，只要测试条件为 true，该循环就会执行指定语句。执行语句后会对条件进行评估，从而使指定语句至少执行一次。
 
 {{InteractiveExample("JavaScript Demo: Statement - Do...While")}}

@@ -7,13 +7,13 @@ l10n:
 
 {{APIRef("Sensor API")}}
 
-{{domxref("Sensor")}} インターフェイスの読み取り専用プロパティ **`activated`** は、センサーが作動中かを表す {{jsxref('boolean')}} 値を返します。
+{{domxref("Sensor")}} インターフェイスの読み取り専用プロパティ **`activated`** は、センサーが作動中かを表す {{jsxref('Boolean')}} 値を返します。
 
 {{domxref('Sensor')}} はベースクラスなので、`activated` は派生クラスからのみ読み取り可能です。
 
 ## 値
 
-{{jsxref('boolean')}} 値です。
+{{jsxref('Boolean')}} 値です。
 
 ## 仕様書
 

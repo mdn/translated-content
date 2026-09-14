@@ -1,85 +1,67 @@
 ---
 title: フレームワークなしの Node.js サーバー
+short-title: プレーンな Node.js サーバー
 slug: Learn_web_development/Extensions/Server-side/Node_server_without_framework
-original_slug: Learn/Server-side/Node_server_without_framework
+l10n:
+  sourceCommit: c5d8af227105b2a6d2ab50ff74295ead221fce64
 ---
 
-{{LearnSidebar}}
+この記事では、フレームワークを一切使用せずに [Node.js](https://nodejs.org/ja/) で構築した静的ファイルサーバーをご紹介します。
+現在の Node.js では、静的ファイルサーバーに必要な機能のほとんどが、組み込みの API といくつかの手数料で実現できる状態になっています。
 
-この記事では、フレームワークを使用せずに、Node.js だけで構築された単純な静的ファイルサーバーを紹介します。
+## 例
 
-[Node.js](https://nodejs.org/en/)用に、サーバーを稼働させるのに役立つ多くのフレームワークがあります。
-
-最も人気があるのは、次のようなものです：
-
-- [Express](http://expressjs.com/): 広く使われているフレームワーク
-- [Hapi.js](https://hapijs.com/): アプリケーションとサービスを構築するための豊富なフレームワーク
-- [Total](https://www.totaljs.com/): 他のフレームワークやモジュールに依存しない、オールインワンの Node.js フレームワーク。
-
-これらは、どんな状況にも適しているというわけではありません。開発者は既存のフレームワークに依存することなく、独自のサーバーを構築する必要があることもあるでしょう。
-
-## 静的ファイルサーバーの例
-
-Node.js で構築された、簡単な静的ファイルサーバーの例を以下に示します。
+Node.js で構築された静的ファイルサーバーです。
 
 ```js
-var http = require("http");
-var fs = require("fs");
-var path = require("path");
+import * as fs from "node:fs";
+import * as http from "node:http";
+import * as path from "node:path";
+
+const PORT = 8000;
+
+const MIME_TYPES = {
+  default: "application/octet-stream",
+  html: "text/html; charset=UTF-8",
+  js: "text/javascript",
+  css: "text/css",
+  png: "image/png",
+  jpg: "image/jpeg",
+  gif: "image/gif",
+  ico: "image/x-icon",
+  svg: "image/svg+xml",
+};
+
+const STATIC_PATH = path.join(process.cwd(), "./static");
+
+const toBool = [() => true, () => false];
+
+const prepareFile = async (url) => {
+  const urlAsPath = decodeURI(url);
+  const paths = [STATIC_PATH, urlAsPath];
+  if (url.endsWith("/")) paths.push("index.html");
+  const filePath = path.join(...paths);
+  const pathTraversal = !filePath.startsWith(STATIC_PATH);
+  const exists = await fs.promises.access(filePath).then(...toBool);
+  const found = !pathTraversal && exists;
+  const streamPath = found ? filePath : `${STATIC_PATH}/404.html`;
+  const ext = path.extname(streamPath).substring(1).toLowerCase();
+  const stream = fs.createReadStream(streamPath);
+  return { found, ext, stream };
+};
 
 http
-  .createServer(function (request, response) {
-    console.log("request ", request.url);
-
-    var filePath = "." + request.url;
-    if (filePath == "./") {
-      filePath = "./index.html";
-    }
-
-    var extname = String(path.extname(filePath)).toLowerCase();
-    var mimeTypes = {
-      ".html": "text/html",
-      ".js": "text/javascript",
-      ".css": "text/css",
-      ".json": "application/json",
-      ".png": "image/png",
-      ".jpg": "image/jpg",
-      ".gif": "image/gif",
-      ".svg": "image/svg+xml",
-      ".wav": "audio/wav",
-      ".mp4": "video/mp4",
-      ".woff": "application/font-woff",
-      ".ttf": "application/font-ttf",
-      ".eot": "application/vnd.ms-fontobject",
-      ".otf": "application/font-otf",
-      ".wasm": "application/wasm",
-    };
-
-    var contentType = mimeTypes[extname] || "application/octet-stream";
-
-    fs.readFile(filePath, function (error, content) {
-      if (error) {
-        if (error.code == "ENOENT") {
-          fs.readFile("./404.html", function (error, content) {
-            response.writeHead(404, { "Content-Type": "text/html" });
-            response.end(content, "utf-8");
-          });
-        } else {
-          response.writeHead(500);
-          response.end(
-            "Sorry, check with the site admin for error: " +
-              error.code +
-              " ..\n",
-          );
-        }
-      } else {
-        response.writeHead(200, { "Content-Type": contentType });
-        response.end(content, "utf-8");
-      }
-    });
+  .createServer(async (req, res) => {
+    const file = await prepareFile(req.url);
+    const statusCode = file.found ? 200 : 404;
+    const mimeType = MIME_TYPES[file.ext] || MIME_TYPES.default;
+    res.writeHead(statusCode, { "Content-Type": mimeType });
+    file.stream.pipe(res);
+    console.log(`${req.method} ${req.url} ${statusCode}`);
   })
-  .listen(8125);
-console.log("Server running at http://127.0.0.1:8125/");
+  .listen(PORT);
+
+console.log(`サーバーが http://127.0.0.1:${PORT}/ で実行中`);
 ```
 
 ### 各部の説明
@@ -87,98 +69,33 @@ console.log("Server running at http://127.0.0.1:8125/");
 第 1 行から第 3 行までは、Node.js が提供するモジュールを組み込みます。おおむね「インポート」に似たような手続きです。
 
 ```js
-var http = require("http");
-var fs = require("fs");
-var path = require("path");
+import * as fs from "node:fs";
+import * as http from "node:http";
+import * as path from "node:path";
 ```
 
-次にある関数で、サーバーを生成します。 `https.createServer`は、サーバーオブジェクトを返しますが、下の例ではポート 8125 で要求の受付を開始します。
+次にある関数で、サーバーを生成します。`https.createServer` は `Server` オブジェクトを返します。このオブジェクトを起動するには、`PORT` でリクエストを待ち受けさせる必要があります。
 
 ```js
-http.createServer(function (request, response) {
-    ...
-}).listen(8125);
-console.log('Server running at http://127.0.0.1:8125/');
+http
+  .createServer((req, res) => {
+    /* http リクエストを処理 */
+  })
+  .listen(PORT);
+
+console.log(`サーバーが http://127.0.0.1:${PORT}/ で実行中`);
 ```
 
-次の 4 行では、要求があった URL から、ファイルへのパスを決定します。ファイル名が明示されていないときは、デフォルト名を使うようにします。
+非同期関数 `prepareFile` は、`{ found: boolean, ext: string, stream: ReadableStream }` という構造体を返します。
+ファイルを提供できる場合（サーバープロセスがアクセス権を持ち、パストラバーサル脆弱性が検出されない場合）、成功を示す `statusCode` として HTTP ステータス `200` を返します（それ以外の場合は `HTTP 404` を返します）。
+それ以外にもステータスコードが得られるので、`http.STATUS_CODES` をご参照ください。
+ステータス `404` の場合、`'/404.html'` ファイルのコンテンツを返します。
+
+リクエストされたファイルの拡張子は構文解析され、小文字に変換されます。その後、`MIME_TYPES` 集合から適切な [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)を検索します。一致するものがなければ、デフォルトのタイプとして `application/octet-stream` を使用します。
+
+最後に、エラーがなければ、リクエストされたファイルを送信します。`file.stream` には `Readable` ストリームが含まれ、それが `res`（`Writable` ストリームのインスタンス）にパイプ接続されます。
 
 ```js
-console.log("request ", request.url);
-var filePath = "." + request.url;
-if (filePath == "./") {
-  filePath = "./index.html";
-}
+res.writeHead(statusCode, { "Content-Type": mimeType });
+file.stream.pipe(res);
 ```
-
-例えば、`example.org`という URL を要求されたときは、`example.org/index.html`.のことだと解釈します。
-
-次に、要求されたファイルの拡張子を調べ、以下に定義する[MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)のどれかと一致したら、そのタイプを使います。一致しない場合には、デフォルトのタイプ`application/octet-stream`を使うようにします。
-
-```js
-var extname = String(path.extname(filePath)).toLowerCase();
-var mimeTypes = {
-  ".html": "text/html",
-  ".js": "text/javascript",
-  ".css": "text/css",
-  ".json": "application/json",
-  ".png": "image/png",
-  ".jpg": "image/jpg",
-  ".gif": "image/gif",
-  ".svg": "image/svg+xml",
-  ".wav": "audio/wav",
-  ".mp4": "video/mp4",
-  ".woff": "application/font-woff",
-  ".ttf": "application/font-ttf",
-  ".eot": "application/vnd.ms-fontobject",
-  ".otf": "application/font-otf",
-  ".wasm": "application/wasm",
-};
-
-var contentType = mimeTypes[extname] || "application/octet-stream";
-```
-
-最後に、ファイルの情報をクライアントに返送します。この関数では、あらかじめ用意してあった`filePath`変数を使ってファイルを読み込みます。
-
-```js
-fs.readFile(filePath, function(error, content) {
-    ...
-});
-```
-
-関数のなかで最初にやることは、起こりうるエラーへの対応です。
-
-```js
-if (error) {
-  ..
-} else {
-  ..
-}
-```
-
-一番多いのは、存在しないファイルを要求された場合（`ENOENT`）で、エラーコード 404 に対応するページを返してやります。
-
-```js
-if (error.code == "ENOENT") {
-  fs.readFile("./404.html", function (error, content) {
-    response.writeHead(404, { "Content-Type": "text/html" });
-    response.end(content, "utf-8");
-  });
-} else {
-  response.writeHead(500);
-  response.end(
-    "Sorry, check with the site admin for error: " + error.code + " ..\n",
-  );
-}
-```
-
-何もエラーが検出されなかったら、MIME 型をヘッダーに付けて、要求されたファイルを返してやります。
-
-```js
-response.writeHead(200, { "Content-Type": contentType });
-response.end(content, "utf-8");
-```
-
-## 拡張の検討
-
-静的なファイルの返送機能だけでなく、要求の度にページを動的に生成する機能を付け加えることを考えてみてください。

@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
   <tbody>
     <tr>
       <th scope="row">Type</th>
-      <td>{{ jsxref("array", "Tableau") }}</td>
+      <td>{{ jsxref("Array", "Tableau") }}</td>
     </tr>
     <tr>
       <th scope="row">Obligatoire</th>
@@ -52,7 +52,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
   <tbody>
     <tr>
       <td><code>all_frames</code></td>
-      <td>{{ jsxref("boolean", "Booléen") }}</td>
+      <td>{{ jsxref("Boolean", "Booléen") }}</td>
       <td>
         <p>
           <code>true</code>&nbsp;: injecte les scripts spécifiés dans
@@ -72,7 +72,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
     </tr>
     <tr>
       <td><code>css</code></td>
-      <td>{{ jsxref("array", "Tableau") }}</td>
+      <td>{{ jsxref("Array", "Tableau") }}</td>
       <td>
         <p>
           Un tableau de chemins, relatifs à <em>manifest.json</em>, référençant
@@ -93,7 +93,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
     </tr>
     <tr>
       <td><code>exclude_globs</code></td>
-      <td>{{ jsxref("array", "Tableau") }}</td>
+      <td>{{ jsxref("Array", "Tableau") }}</td>
       <td>
         <p>
           Un tableau de chaînes contenant des caractères génériques. Voir les
@@ -104,7 +104,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
     </tr>
     <tr>
       <td><code>exclude_matches</code></td>
-      <td>{{ jsxref("array", "Tableau") }}</td>
+      <td>{{ jsxref("Array", "Tableau") }}</td>
       <td>
         <p>
           Un tableau de
@@ -118,7 +118,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
     </tr>
     <tr>
       <td><code>include_globs</code></td>
-      <td>{{ jsxref("array", "Tableau") }}</td>
+      <td>{{ jsxref("Array", "Tableau") }}</td>
       <td>
         Un tableau de chaînes contenant des caractères génériques. Voir les
         <a href="#les_modèles_de_correspondance_durl">modèles de correspondance d'URL</a>
@@ -127,7 +127,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
     </tr>
     <tr>
       <td><code>js</code></td>
-      <td>{{ jsxref("array", "Tableau") }}</td>
+      <td>{{ jsxref("Array", "Tableau") }}</td>
       <td>
         <p>
           Un tableau de chemins, relatifs au fichier <em>manifest.json</em>,
@@ -151,13 +151,13 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
     </tr>
     <tr>
       <td><code>match_about_blank</code></td>
-      <td>{{ jsxref("boolean", "Booléen") }}</td>
+      <td>{{ jsxref("Boolean", "Booléen") }}</td>
       <td>
         <p>
           Insère les scripts de contenu dans les pages dont l'URL est
           <code>about:blank</code> ou <code>about:srcdoc</code>, si l'URL de la
           page qui a ouvert ou créé cette page
-          [correspond aux modèles](#les_modèles_de_correspondance_d'url)
+          [correspond aux modèles](#les_modèles_de_correspondance_durl)
           spécifiés dans le reste de la clé <code>content_scripts</code>.
         </p>
         <p>
@@ -196,7 +196,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
     </tr>
     <tr>
       <td><code>matches</code></td>
-      <td>{{ jsxref("array", "Tableau") }}</td>
+      <td>{{ jsxref("Array", "Tableau") }}</td>
       <td>
         <p>
           Un ensemble de
@@ -211,7 +211,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
     </tr>
     <tr>
       <td><code>run_at</code></td>
-      <td>{{ jsxref("string", "Chaîne") }}</td>
+      <td>{{ jsxref("String", "Chaîne") }}</td>
       <td>
         <p>
           Cette option détermine quand les scripts spécifiés dans

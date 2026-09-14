@@ -13,10 +13,10 @@ l10n:
 
 2 次ベジェ曲線を描くために、 P<sub>0</sub> から P<sub>1</sub> までと P<sub>1</sub> から P<sub>2</sub> までの 2 本の補助線が描かれます。3 本目の補助線は、1 本目の補助線上を徐々に移動する点を始点、2 本目の補助線上を徐々に移動する点を終点として描画されます。 この 3 本目の補助線上に、始点から終点まで徐々に移動する点が描かれます。 この点が描く曲線がベジェ曲線です。下記の図は、曲線の作成方法を示すアニメーションです。
 
-![ベジェ曲線の描画](bézier_2_big.gif)
+![ベジェ曲線の描画](bezier_2_big.gif)
 
 ## 関連情報
 
 - [ベジェ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A7%E6%9B%B2%E7%B7%9A)（ウィキペディア）
-- [CSS の 3 次ベジェイージング関数](/ja/docs/Web/CSS/easing-function#cubic-bezier_関数の例)
+- [CSS の 3 次ベジェイージング関数](/ja/docs/Web/CSS/Reference/Values/easing-function#cubic-bezier_関数の例)
 - {{SVGAttr("keySplines")}} SVG 属性

@@ -200,7 +200,6 @@ Mientras de las acciones del navegaro siembre son mostradas, las acciones de pá
 - [`browser_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key
 - [`browserAction`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
 - Ejemplos de acciones del navegador:
-
   - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
   - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
   - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
@@ -210,5 +209,4 @@ Mientras de las acciones del navegaro siembre son mostradas, las acciones de pá
 - [`page_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key
 - [`pageAction`](/es/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
 - Ejemplos de Acciones de página:
-
   - [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out)

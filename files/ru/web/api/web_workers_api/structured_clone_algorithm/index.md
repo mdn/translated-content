@@ -15,7 +15,7 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 
 - Структурированные клоны могут копировать [`RegExp`](/en-US/JavaScript/Reference/Global_Objects/RegExp) объекты.
 - Структурированные клоны могут копировать {{ domxref("Blob") }}, {{ domxref("File") }}, и {{ domxref("FileList") }} объекты.
-- Структурированные клоны могут копировать {{ domxref("ImageData") }} объекты. The dimensions of the clone's {{ domxref("CanvasPixelArray") }} will match the original and have a duplicate of the same pixel data.
+- Структурированные клоны могут копировать {{ domxref("ImageData") }} объекты. The dimensions of the clone's {{jsxref("Uint8ClampedArray")}} will match the original and have a duplicate of the same pixel data.
 - Structured clones can correctly duplicate objects containing cyclic graphs of references.
 
 ## Исключения, не работающие со структурированными клонами
@@ -23,7 +23,6 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 - [`Error`](/en-US/JavaScript/Reference/Global_Objects/Error) and [`Function`](/en-US/JavaScript/Reference/Global_Objects/Function) objects cannot be duplicated by the structured clone algorithm; attempting to do so will throw a `DATA_CLONE_ERR` exception.
 - Attempting to clone DOM nodes will likewise throw a `DATA_CLONE_ERR` exception.
 - Certain parameters of objects are not preserved:
-
   - The `lastIndex` field of [`RegExp`](/en-US/JavaScript/Reference/Global_Objects/RegExp) objects is not preserved.
   - Property descriptors, setters, and getters (as well as similar metadata-like features) are not duplicated. For example, if an object is marked read-only using a property descriptor, it will be read-write in the duplicate, since that's the default condition.
   - The prototype chain does not get walked and duplicated.

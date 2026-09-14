@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 **`canPresent`** は {{domxref("VRDisplayCapabilities")}} インターフェイスの読み取り専用プロパティで、VR ディスプレイが（HMD を通じて）コンテンツを表示可能かどうかの状態を論理値で返します。
 

@@ -74,6 +74,6 @@ En el siguiente ejemplo, tengo un contenedor de cuadrícula con dos elementos. L
 
 ### Otras lecturas
 
-- Guía de diseño Grid CSS: _[Conceptos básicos de grid layout](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- Guía de diseño Grid CSS: _[Conceptos básicos de grid layout](/es/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)_
 - Guía de diseño Grid CSS: _[Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
 - [Definición de Grid Areas en la especificación de Grid Layout CSS](https://drafts.csswg.org/css-grid/#grid-area-concept)

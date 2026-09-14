@@ -1,58 +1,51 @@
 ---
-title: CustomElementRegistry.whenDefined()
+title: "CustomElementRegistry: whenDefined() メソッド"
+short-title: whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
+l10n:
+  sourceCommit: ff9dd829bb17d272b7d14c41a442f2c2e3680521
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{APIRef("Web Components")}}
 
-**`whenDefined()`** は {{domxref("CustomElementRegistry")}} インターフェイスのメソッドで、指定した名前の要素が定義されたときに解決されるプロミス ({{jsxref("Promise")}}) を返します。</span>
+**`whenDefined()`** は {{domxref("CustomElementRegistry")}} インターフェイスのメソッドで、指定した名前の要素が定義されたときに解決されるプロミス ({{jsxref("Promise")}}) を返します。
 
 ## 構文
 
-```js
-customElements.whenDefined(name): Promise<CustomElementConstructor>;
+```js-nolint
+whenDefined(name)
 ```
 
 ### 引数
 
-- name
+- `name`
   - : カスタム要素の名前。
 
 ### 返値
 
-指定された名前の[カスタム要素](/ja/docs/Web/API/Window/customElements)が定義された時に、[カスタム要素](/ja/docs/Web/API/Window/customElements)のコンストラクターで履行されるプロミス ({{jsxref("Promise")}}) です。（そのような[カスタム要素](/ja/docs/Web/API/Window/customElements)が既に定義されている場合、返されるプロミスは直ちに履行されます。）
+指定された名前でカスタム要素が定義された際に、[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)のコンストラクターで履行されるプロミス ({{jsxref("Promise")}}) です。
+その名前でカスタム要素がすでに定義されている場合、このプロミスは直ちに履行されます。
 
-## 例外
+### 例外
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">例外</th>
-      <th scope="col">説明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>SyntaxError</code></td>
-      <td>
-        指定された名前が<a href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">有効なカスタム要素名</a>でなかった場合、プロミスは <code>SyntaxError</code> で拒否されます。
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `SyntaxError` {{domxref("DOMException")}}
+  - : 指定された [name](#name) が、[有効なカスタム要素名](/ja/docs/Web/API/CustomElementRegistry/define#有効なカスタム要素名)ではない場合。
 
 ## 例
 
-以下の例では、 `whenDefined()` を用いてメニューを生成するカスタム要素が定義されたタイミングを検出しています。実際にメニューコンテンツの表示準備が完了するまでは、メニューはプレースホルダーのコンテンツを表示します。
+### 基本的な使い方
+
+以下の例では、 `whenDefined()` を用いてメニューを生成するカスタム要素が定義されたタイミングを検出しています。
+実際にメニューコンテンツの表示準備が完了するまでは、メニューはプレースホルダーのコンテンツを表示します。
 
 ```html
 <nav id="menu-container">
-  <div class="menu-placeholder">Loading...</div>
+  <div class="menu-placeholder">読み込み中…</div>
   <nav-menu>
-    <menu-item>Item 1</menu-item>
-    <menu-item>Item 2</menu-item>
-    ...
-    <menu-item>Item N</menu-item>
+    <menu-item>アイテム 1</menu-item>
+    <menu-item>アイテム 2</menu-item>
+    …
+    <menu-item>アイテム N</menu-item>
   </nav-menu>
 </nav>
 ```
@@ -64,9 +57,11 @@ const placeholder = container.querySelector(".menu-placeholder");
 const undefinedElements = container.querySelectorAll(":not(:defined)");
 
 async function removePlaceholder() {
-  const promises = [...undefinedElements].map((button) =>
-    customElements.whenDefined(button.localName),
+  // 要素を固有の localName で絞り込む
+  const tags = new Set(
+    [...undefinedElements].map((button) => button.localName),
   );
+  const promises = [...tags].map((tag) => customElements.whenDefined(tag));
 
   // すべての子がアップグレードされるまで待つ
   await Promise.all(promises);

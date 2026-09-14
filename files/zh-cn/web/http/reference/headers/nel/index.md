@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 7ef65e18c747d5a6e109a0babf5c1ee3cb32a0a2
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP **`NEL`** 响应标头用于配置网络请求日志记录。
 

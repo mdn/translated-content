@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.map()
+short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 l10n:
   sourceCommit: 57375b77984037c614982a9327bc96101824db89
@@ -11,7 +12,7 @@ l10n:
 호출한 배열의 모든 요소에 주어진 함수를 호출한 결과로 채운
 새로운 배열을 생성합니다.
 
-{{InteractiveExample("JavaScript Demo: Array.map()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.map()")}}
 
 ```js interactive-example
 const array1 = [1, 4, 9, 16];

@@ -20,7 +20,7 @@ ctx.fillStyle = pattern;
 ### Opções
 
 - `color`
-  - : Um {{domxref("DOMString")}} passado como um valor de CSS {{cssxref("&lt;color&gt;")}}.
+  - : Um {{jsxref("String")}} passado como um valor de CSS {{cssxref("&lt;color&gt;")}}.
 - `gradient`
   - : Um objeto {{domxref("CanvasGradient")}} (um gradiente linear ou radial).
 - `pattern`
@@ -58,8 +58,7 @@ Edite o código abaixo e veja as alterações atualizadas na tela:
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = 'blue';
-ctx.fillRect(10, 10, 100, 100);</textarea
->
+ctx.fillRect(10, 10, 100, 100);</textarea>
 ```
 
 ```js hidden

@@ -39,7 +39,7 @@ Um objeto `Map` itera seus elementos na order da inserção - um loop {{jsxref("
 
 ### Igualdade de chaves
 
-- A igualdade de chaves é baseada no algoritimo [`sameValueZero`](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality).
+- A igualdade de chaves é baseada no algoritimo [`sameValueZero`](/pt-BR/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality).
 
 - O {{jsxref("NaN")}} é considerado o mesmo que o `NaN` (apesar de `NaN !== NaN`) e todos os outros valores são considerados de acordo com a semântica do operador `===`.
 
@@ -241,7 +241,7 @@ console.log(contacts.size); // 1
 
 ## propriedades estáticas
 
-- {{jsxref("Map.@@species", "get Map[@@species]")}}
+- {{jsxref("Map/Symbol.species", "get Map[@@species]")}}
   - : A função do construtor que é usada para criar apartir de objetos.
 
 ## propriedades da instância
@@ -265,7 +265,7 @@ console.log(contacts.size); // 1
 
 ### Métodos iterativos
 
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
+- {{jsxref("Map/Symbol.iterator", "Map.prototype[@@iterator]()")}}
   - : Retorna um novo objeto iterador que contèm **um array de `[chave, valor]`** para cada elemento do objeto `Map` na ordem em que foram inseridos.
 - {{jsxref("Map.prototype.keys()")}}
   - : Retorna um novo objeto iterador que contèm as **chaves** de cada elemento do objeto `Map` na ordem em que foram inseridos.

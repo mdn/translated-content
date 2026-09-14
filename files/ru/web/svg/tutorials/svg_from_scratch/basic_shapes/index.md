@@ -3,7 +3,7 @@ title: Основные Фигуры
 slug: Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Positions", "Web/SVG/Tutorials/SVG_from_scratch/Paths") }}
 
 Существует несколько основных фигур, используемых в большинстве рисунков SVG. Назначение этих фигур вполне очевидно из их имён. Мы привели здесь некоторые атрибуты, определяющие положение и размер, но спецификация элемента, вероятно, содержит более точное и полное описание, вместе с другими свойствами, не описанными здесь. Однако, так как они используются в большинстве документов SVG, важно иметь некоторое представление о них.
 
@@ -141,4 +141,4 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes
 - d
   - : Список точек и другой информации о том, как рисовать путь. Для подробной информации смотри секцию [Пути](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths).
 
-{{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Positions", "Web/SVG/Tutorials/SVG_from_scratch/Paths") }}

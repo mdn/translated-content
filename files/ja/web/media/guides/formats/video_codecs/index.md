@@ -38,42 +38,42 @@ l10n:
       <th scope="row"><a href="#av1">AV1</a></th>
       <td>AOMedia Video 1</td>
       <td>
-        <a href="/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4">MP4</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row"><a href="#avc_h.264">AVC (H.264)</a></th>
       <td>Advanced Video Coding</td>
       <td>
-        <a href="/ja/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#3gp">3GP</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
       <th scope="row"><a href="#h.263">H.263</a></th>
       <td>H.263 Video</td>
-      <td><a href="/ja/docs/Web/Media/Formats/Containers#3gp">3GP</a></td>
+      <td><a href="/ja/docs/Web/Media/Guides/Formats/Containers#3gp">3GP</a></td>
     </tr>
     <tr>
       <th scope="row"><a href="#hevc_h.265">HEVC (H.265)</a></th>
       <td>High Efficiency Video Coding</td>
-      <td><a href="/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a></td>
+      <td><a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4">MP4</a></td>
     </tr>
     <tr>
       <th scope="row"><a href="#mp4v-es">MP4V-ES</a></th>
       <td>MPEG-4 Video Elemental Stream</td>
       <td>
-        <a href="/ja/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#3gp">3GP</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
       <th scope="row"><a href="#mpeg-1_part_2_video">MPEG-1</a></th>
       <td>MPEG-1 Part 2 Visual</td>
       <td>
-        <a href="/ja/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#quicktime"
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpegmpeg-2">MPEG</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#quicktime"
           >QuickTime</a
         >
       </td>
@@ -82,9 +82,9 @@ l10n:
       <th scope="row"><a href="#mpeg-2_part_2_video">MPEG-2</a></th>
       <td>MPEG-2 Part 2 Visual</td>
       <td>
-        <a href="/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#quicktime"
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4">MP4</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpegmpeg-2">MPEG</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#quicktime"
           >QuickTime</a
         >
       </td>
@@ -92,24 +92,24 @@ l10n:
     <tr>
       <th scope="row"><a href="#theora">Theora</a> {{deprecated_inline}}</th>
       <td>Theora</td>
-      <td><a href="/ja/docs/Web/Media/Formats/Containers#ogg">Ogg</a></td>
+      <td><a href="/ja/docs/Web/Media/Guides/Formats/Containers#ogg">Ogg</a></td>
     </tr>
     <tr>
       <th scope="row"><a href="#vp8">VP8</a></th>
       <td>Video Processor 8</td>
       <td>
-        <a href="/ja/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#3gp">3GP</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#ogg">Ogg</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row"><a href="#vp9">VP9</a></th>
       <td>Video Processor 9</td>
       <td>
-        <a href="/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4">MP4</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#ogg">Ogg</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
   </tbody>
@@ -142,7 +142,7 @@ l10n:
     <tr>
       <th scope="row">色深度（ビット深度）</th>
       <td>
-        色のビット深度が高いほど、動画の色の忠実さの品質は高くなります。さらに、画像の飽和部分（つまり、明るく純粋な赤 <code>rgb(255 0 0 / 100%)</code> など、色が純粋で強い部分）では、 1 成分あたり 10 ビット（10 ビットカラー）未満の色深度は、色の可視段差なしで勾配を表現できないバンディング（帯状）を可能にします。
+        色のビット深度が高いほど、動画の色の忠実さの品質は高くなります。さらに、画像の飽和部分（例えば、明るく純粋な赤 <code>rgb(255 0 0 / 100%)</code> など、色が純粋で強い部分）では、 1 成分あたり 10 ビット（10 ビットカラー）未満の色深度は、色の可視段差なしで勾配を表現できない「バンディング」を引き起こします。
       </td>
       <td>
         コーデックによっては、色深度が高いほど圧縮ファイルサイズが大きくなる場合があります。決定要因は、圧縮されたデータにどのような内部ストレージ形式を使用するかです。
@@ -538,8 +538,8 @@ AV1 は現在 3 つのプロファイルを提供しています。**メイン**
         <a href="https://en.wikipedia.org/wiki/ISO/IEC_base_media_file_format"
           >ISOBMFF</a
         >, MPEG-TS,
-        <a href="/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4">MP4</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
     <tr>
@@ -688,8 +688,8 @@ AVC はまた、同じシーンの複数のビュー (Multiview Video Coding) �
     <tr>
       <th scope="row">コンテナーの対応</th>
       <td>
-        <a href="/ja/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#3gp">3GP</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -810,9 +810,9 @@ H.263 は独占的な形式で、Telenor, Fujitsu, Motorola, Samsung, Hitachi, P
     <tr>
       <th scope="row">コンテナーの対応</th>
       <td>
-        <a href="/ja/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#quicktime"
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#3gp">3GP</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4">MP4</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#quicktime"
           >QuickTime</a
         >
       </td>
@@ -986,7 +986,7 @@ HEVCは独占的な形式で、多くの特許で保護されています。ラ�
       <td>
         <a href="https://en.wikipedia.org/wiki/ISO/IEC_base_media_file_format"
             >ISOBMFF</a
-          >、MPEG-TS、<a href="/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/ja/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
+          >、MPEG-TS、<a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/ja/docs/Web/Media/Guides/Formats/Containers#quicktime">QuickTime</a>
       </td>
     </tr>
     <tr>
@@ -1094,7 +1094,7 @@ HEVCは独占的な形式で、多くの特許で保護されています。ラ�
         </table>
         <p>
           Firefox は MP4V-ES を
-          <a href="/ja/docs/Web/Media/Formats/Containers#3gp">3GP</a>
+          <a href="/ja/docs/Web/Media/Guides/Formats/Containers#3gp">3GP</a>
           コンテナーでのみ対応しています。
         </p>
         <p>Chrome は MP4V-ES に対応していません。ただし、 ChromeOS は対応しています。</p>
@@ -1103,8 +1103,8 @@ HEVCは独占的な形式で、多くの特許で保護されています。ラ�
     <tr>
       <th scope="row">コンテナーの対応</th>
       <td>
-        <a href="/ja/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#3gp">3GP</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -1376,7 +1376,7 @@ MPEG-2 には、異なる形で利用できるいくつかのプロファイル�
     <tr>
       <th scope="row">コンテナーの対応</th>
       <td>
-        <a href="/ja/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>, MPEG-TS (MPEG Transport Stream), <a href="/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>, <a href="/ja/docs/Web/Media/Formats/Containers#quicktime"
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpegmpeg-2">MPEG</a>, MPEG-TS (MPEG Transport Stream), <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4">MP4</a>, <a href="/ja/docs/Web/Media/Guides/Formats/Containers#quicktime"
           >QuickTime</a>
       </td>
     </tr>
@@ -1503,7 +1503,7 @@ Theora の欠点は、色成分あたり 8 ビットしか対応していない�
     </tr>
     <tr>
       <th scope="row">コンテナーの対応</th>
-      <td><a href="/ja/docs/Web/Media/Formats/Containers#ogg">Ogg</a></td>
+      <td><a href="/ja/docs/Web/Media/Guides/Formats/Containers#ogg">Ogg</a></td>
     </tr>
     <tr>
       <th scope="row">
@@ -1585,9 +1585,9 @@ VP8 のブラウザーの対応は、 HTML コンテンツ、特に [WebM](/ja/d
     <tr>
       <th scope="row">コンテナーの対応</th>
       <td>
-        <a href="/ja/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#3gp">3GP</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#ogg">Ogg</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
     <tr>
@@ -1693,7 +1693,7 @@ VP9 は、WebM コンテナーを使用することができる（そして、�
           <a href="https://en.wikipedia.org/wiki/Rec._2020">Rec. 2020</a>、
           <a href="https://en.wikipedia.org/wiki/SMPTE_C">SMPTE C</a>、 SMPTE-240M
           （廃止、Rec. 709 で置き換え）、
-          <a href="https://en.wikipedia.org/wiki/SRGB">sRGB</a>
+          <a href="https://ja.wikipedia.org/wiki/SRGB">sRGB</a>
         </p>
       </td>
     </tr>
@@ -1721,9 +1721,9 @@ VP9 は、WebM コンテナーを使用することができる（そして、�
     <tr>
       <th scope="row">コンテナーの対応</th>
       <td>
-        <a href="/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
-        <a href="/ja/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4">MP4</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#ogg">Ogg</a>,
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
     <tr>
@@ -1781,7 +1781,8 @@ VP9 は、WebM コンテナーを使用することができる（そして、�
    </video>
    ```
 
-> **メモ:** {{HTMLElement("video")}} 要素は、その中に {{HTMLElement("source")}} 要素があってもなくても、閉じタグの `</video>` が必要です。
+> [!NOTE]
+> {{HTMLElement("video")}} 要素は、その中に {{HTMLElement("source")}} 要素があってもなくても、閉じタグの `</video>` が必要です。
 
 ### 高画質な動画表示におすすめ
 

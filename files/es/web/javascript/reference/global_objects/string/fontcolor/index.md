@@ -3,7 +3,7 @@ title: String.prototype.fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}
 
 El método **`fontcolor()`** crea {{HTMLElement("font")}} elemento HTML que cambia el color de la cadena.
 
@@ -19,7 +19,7 @@ str.fontcolor(color)
 ### Parametros
 
 - `color`
-  - : A string expressing the color as a hexadecimal RGB triplet or as a string literal. String literals for color names are listed in the [CSS color reference](/es/docs/Web/CSS/color_value).
+  - : A string expressing the color as a hexadecimal RGB triplet or as a string literal. String literals for color names are listed in the [CSS color reference](/es/docs/Web/CSS/Reference/Values/color_value).
 
 ## Descripción
 

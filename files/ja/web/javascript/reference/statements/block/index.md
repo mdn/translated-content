@@ -9,7 +9,7 @@ l10n:
 
 **ブロック文** は 0 個以上の文をグループ化するのに使われます。ブロックは中括弧（「波括弧」）の組で区切られ、0 個以上の文または宣言のリストを含みます。
 
-{{InteractiveExample("JavaScript Demo: Statement - Block", "taller")}}
+{{InteractiveExample("JavaScript デモ: Statement - Block", "taller")}}
 
 ```js interactive-example
 var x = 1;
@@ -21,10 +21,10 @@ if (true) {
 }
 
 console.log(x);
-// Expected output: 2
+// 予想される結果: 2
 
 console.log(y);
-// Expected output: 1
+// 予想される結果: 1
 ```
 
 ## 構文

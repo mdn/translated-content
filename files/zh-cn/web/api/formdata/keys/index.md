@@ -5,7 +5,7 @@ slug: Web/API/FormData/keys
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
-**`FormData.keys()`** 该方法返回一个迭代器（{{jsxref("Iteration_protocols",'iterator')}}），遍历了该 formData 包含的所有 key，这些 key 是 {{domxref("USVString")}} 对象。
+**`FormData.keys()`** 该方法返回一个迭代器（{{jsxref("Iteration_protocols",'iterator')}}），遍历了该 formData 包含的所有 key，这些 key 是 {{jsxref("String")}} 对象。
 
 ## 语法
 

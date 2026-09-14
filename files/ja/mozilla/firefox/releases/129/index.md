@@ -5,16 +5,14 @@ l10n:
   sourceCommit: 10096e0e61277e85474989237545b705f1fa181b
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 129 の変更点をまとめています。Firefox 129 は、米国時間 [2024 年 8 月 6 日](https://whattrainisitnow.com/release/?version=129) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### CSS
 
-- [@starting-style](/ja/docs/Web/CSS/@starting-style) CSS アットルールをサポートしました。これは要素が最初にスタイルの更新を受けたときに、トランジションさせたい要素に設定されたプロパティの開始値を定義できます。現在、`display: none;` からアニメーションすることはできません ([Firefox bug 1834876](https://bugzil.la/1834876)、[Firefox bug 1834877](https://bugzil.la/1834877))。
-- {{CSSXRef("transition-behavior")}} CSS プロパティをサポートしました。これは値に [`allow-descrete`](/ja/docs/Web/CSS/transition-behavior#allow-discrete) を設定することで、{{CSSXRef("display")}} や {{CSSXRef("overlay")}} のような離散的なプロパティをトランジション可能にするかを指定できます ([Firefox bug 1901645](https://bugzil.la/1901645))。
+- [@starting-style](/ja/docs/Web/CSS/Reference/At-rules/@starting-style) CSS アットルールをサポートしました。これは要素が最初にスタイルの更新を受けたときに、トランジションさせたい要素に設定されたプロパティの開始値を定義できます。現在、`display: none;` からアニメーションすることはできません ([Firefox bug 1834876](https://bugzil.la/1834876)、[Firefox bug 1834877](https://bugzil.la/1834877))。
+- {{CSSXRef("transition-behavior")}} CSS プロパティをサポートしました。これは値に [`allow-descrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) を設定することで、{{CSSXRef("display")}} や {{CSSXRef("overlay")}} のような離散的なプロパティをトランジション可能にするかを指定できます ([Firefox bug 1901645](https://bugzil.la/1901645))。
 - `-webkit-font-feature-settings` を、標準の {{cssxref("font-feature-settings")}} プロパティの別名として実装しました ([Firefox bug 1595620](https://bugzil.la/1595620))。
 
 ### JavaScript
@@ -32,7 +30,7 @@ l10n:
   [`beforeinput` イベント](/ja/docs/Web/API/Element/beforeinput_event) が `textInput` を置き換えており、新しいアプリケーションはこちらを使用するべきです ([Firefox bug 1901923](https://bugzil.la/1901923))。
 - 既定の `.toJSON()` メソッドである {{domxref("GeolocationCoordinates.toJSON()")}} および {{domxref("GeolocationPosition.toJSON()")}} をサポートしました。`GeolocationCoordinates` および `GeolocationPosition` オブジェクトを {{jsxref("JSON.stringify()")}} でシリアライズできます ([Firefox bug 1890706](https://bugzil.la/1890706))。
 - {{domxref("CSSPageDescriptors")}} をサポートして、現在の仕様書に合わせて {{domxref("CSSStyleDeclaration")}} に代わり、{{domxref("CSSPageRule.style")}} の型として使用するようになりました。
-  これは、`CSSPageDescriptors` がすべてのプロパティではなく `@page` に関連するプロパティだけを公開することを保証します。また、CSS `@page` アットルールでページの [`size`](/ja/docs/Web/CSS/@page#size) の設定が `CSSPageRule.style` に反映されない問題を解決します。
+  これは、`CSSPageDescriptors` がすべてのプロパティではなく `@page` に関連するプロパティだけを公開することを保証します。また、CSS `@page` アットルールでページの [`size`](/ja/docs/Web/CSS/Reference/At-rules/@page#size) の設定が `CSSPageRule.style` に反映されない問題を解決します。
   ([Firefox bug 1890842](https://bugzil.la/1890842)、[Firefox bug 1867106](https://bugzil.la/1867106))。
 - {{domxref('MediaCapabilities.decodingInfo()')}} が特定の _暗号化されたメディア_ 構成のデコード情報も、暗号化されていないメディアと同様に取得できるようになりました。構成をサポートしているかや、コンテンツがスムーズに再生されて電力効率が良いかをアプリケーションが事前に知ることができます。この変更ではメディアを暗号化するために使用する鍵システムのプロパティを定義する `keySystemConfiguration` プロパティをメソッドの `configuration` 引数へ新たに追加しました。また鍵の作成や再生するコンテンツのデコードに使用できる {{domxref('MediaKeySystemAccess')}} オブジェクトを示す `keySystemAccess` プロパティを返されるオブジェクトへ新たに追加しました ([Firefox bug 1898344](https://bugzil.la/1898344))。
 - Firefox は同期 {{domxref("XMLHttpRequest")}} のイベントを、任意の進行中の非同期 `XMLHttpRequest` のイベントより先に発生させるようになりました。これは長期に渡っていた、他のブラウザーとの動作の違いを修正します。これは一部のサイトの問題を修正する一方で、同期 `XMLHttpRequest` の古い "ノンブロッキング" 動作を想定したサイトでパフォーマンスの劣化が発生する可能性があります。あなたのウェブサイトでこの変更により問題が解消するはずですが、まだ関連する不具合がみられる場合は [バグを報告](https://bugzil.la/) してください ([Firefox bug 697151](https://bugzil.la/697151))。

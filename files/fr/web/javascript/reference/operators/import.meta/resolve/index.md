@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c1ccc5843f5a7702f5cc69d4bf37db0aadc808ac
 ---
 
-{{JSSidebar("Operators")}}
-
 **`import.meta.resolve()`** est une fonction native, définie sur l'objet [`import.meta`](/fr/docs/Web/JavaScript/Reference/Operators/import.meta) d'un module JavaScript qui résout un spécificateur de module en une URL, en utilisant l'URL du module courant comme base.
 
 ## Syntaxe
@@ -90,7 +88,7 @@ Certains outils reconnaîtront `new URL("./lib/helper.js", import.meta.url).href
 
 ### Ne fait pas partie d'ECMAScript
 
-`import.meta.resolve()` n'est pas spécifiée ou documentée au sein de [la spécification ECMAScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_le_langage_ecmascript) pour les modules JavaScript. La spécification définit [l'objet `import.meta`](https://tc39.es/ecma262/#prod-ImportMeta) et [délègue la définition de ses propriétés aux environnements hôtes](https://tc39.es/ecma262/#sec-hostgetimportmetaproperties). Le standard WHATWG HTML reprend donc là où s'arrête le standard ECMAScript et [définit `import.meta.resolve()`](https://html.spec.whatwg.org/multipage/webappapis.html#hostgetimportmetaproperties) avec [la résolution de spécificateur de module](https://html.spec.whatwg.org/#resolve-a-module-specifier).
+`import.meta.resolve()` n'est pas spécifiée ou documentée au sein de [la spécification ECMAScript](/fr/docs/Web/JavaScript/Reference/JavaScript_technologies_overview#javascript_le_langage_ecmascript) pour les modules JavaScript. La spécification définit [l'objet `import.meta`](https://tc39.es/ecma262/#prod-ImportMeta) et [délègue la définition de ses propriétés aux environnements hôtes](https://tc39.es/ecma262/#sec-hostgetimportmetaproperties). Le standard WHATWG HTML reprend donc là où s'arrête le standard ECMAScript et [définit `import.meta.resolve()`](https://html.spec.whatwg.org/multipage/webappapis.html#hostgetimportmetaproperties) avec [la résolution de spécificateur de module](https://html.spec.whatwg.org/#resolve-a-module-specifier).
 
 Cela signifie que `import.meta.resolve()` ne fait pas nécessairement partie de toutes les implémentations conformes de JavaScript. Toutefois, `import.meta.resolve()` peut également faire partie d'environnements qui ne sont pas des navigateurs&nbsp;:
 

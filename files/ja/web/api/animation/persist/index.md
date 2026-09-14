@@ -30,9 +30,9 @@ persist()
 
 この例には、 3 つのボタンがあります。
 
-- "Add persistent animation" と "Add transient animation" はそれぞれ、赤い四角に新しい座標変換アニメーションを追加します。最初のアニメーションは左から右へ、 2 つ目は右から左へ、といった具合に、アニメーションは交互に向きを変えます。"Add persistent animation" は作成したアニメーションに `persist()` を呼び出します。
+- 「永続的なアニメーションを追加」と「一時的なアニメーションを追加」はそれぞれ、赤い四角に新しい座標変換アニメーションを追加します。最初のアニメーションは左から右へ、 2 つ目は右から左へ、といった具合に、アニメーションは交互に向きを変えます。「永続的なアニメーションを追加」は作成したアニメーションに `persist()` を呼び出します。
 
-- 3 つ目のボタン "Cancel an animation" は、最近追加したアニメーションを取り消される可能性があります。
+- 3 つ目のボタン「アニメーションをキャンセル」は、最近追加したアニメーションを取り消される可能性があります。
 
 この例では、キャンセルされる可能性のないすべてのアニメーションのリストが、追加された順に、それぞれのアニメーションの `replaceState` とともに表示されます。
 
@@ -40,9 +40,9 @@ persist()
 
 ```html
 <div id="animation-target"></div>
-<button id="start-persistent">Add persistent animation</button>
-<button id="start-transient">Add transient animation</button>
-<button id="cancel">Cancel an animation</button>
+<button id="start-persistent">永続的なアニメーションを追加</button>
+<button id="start-transient">一時的なアニメーションを追加</button>
+<button id="cancel">アニメーションをキャンセル</button>
 <ol id="stack"></ol>
 ```
 
@@ -90,7 +90,7 @@ function startAnimation(persist) {
   if (persist) {
     animation.persist();
   }
-  // Add the animation to the displayed stack (implementation not shown)
+  // 表示されているスタックにアニメーションを追加する（実装は省略）
   show(animation, offset);
 }
 
@@ -106,7 +106,7 @@ const template =
 const nodes = new Map();
 
 function show(animation, offset) {
-  const direction = offset < 0 ? "left" : "right";
+  const direction = offset < 0 ? "左" : "右";
   const li = template.cloneNode(true);
   const description = li.querySelector(".description");
   const replaceState = li.querySelector(".replaceState");
@@ -126,9 +126,9 @@ function show(animation, offset) {
 
 #### 結果
 
-新しい transient アニメーションを追加すると、前回追加した transient アニメーションが置き換わることに注意してください。それらのアニメーションは自動的に除去され、 `replaceState` は `"removed"` となります。しかし、 persistent アニメーションは除去されません。
+新しい一時的なアニメーションを追加すると、前回追加した一時的なアニメーションが置き換わることに注意してください。それらのアニメーションは自動的に除去され、 `replaceState` は `"removed"` となります。しかし、永続的なアニメーションは除去されません。
 
-{{htmlelement("div")}} の位置は最新のアクティブまたは persistent アニメーションによって決定されます。
+また、削除されたアニメーションは表示に影響を与えない点にも注意してください。{{htmlelement("div")}} の位置は、直近のアクティブなアニメーション、または永続化されたアニメーションによって決定されます。
 
 {{EmbedLiveSample("using_persist","",300)}}
 

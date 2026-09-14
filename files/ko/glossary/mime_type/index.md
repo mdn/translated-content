@@ -21,4 +21,4 @@ l10n:
 
 - [MIME type의 종류](https://www.iana.org/assignments/media-types/media-types.xhtml)
 - [서버 MIME Type을 적절하게 설정하는 방법](/ko/docs/Learn/Server-side/Configuring_server_MIME_types)
-- Web context에서 [MIME Types](/ko/docs/Web/HTTP/MIME_types)을 사용하기 위한 자세한 방법
+- Web context에서 [MIME Types](/ko/docs/Web/HTTP/Guides/MIME_types)을 사용하기 위한 자세한 방법

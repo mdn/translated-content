@@ -1,34 +1,30 @@
 ---
 title: "Window: afterprint イベント"
+short-title: afterprint
 slug: Web/API/Window/afterprint_event
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef}}
 
 **`afterprint`** イベントは、関連する文書の印刷が開始されたか、印刷プレビューが閉じた後に発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("WindowEventHandlers/onafterprint", "onafterprint")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{domxref("Window.beforeprint_event", "beforeprint")}} および `afterprint` イベントを使用すると、印刷が開始される前にページのコンテンツを変更し（例えば、バナーを除去するなど）、そして印刷が完了した後にそれらの変更を元に戻すことができます。一般的には、CSS の [`@media print`](/ja/docs/Web/CSS/Guides/Media_queries/Using#メディア種別を対象にする)アットルールを使用することを推奨しますが、場合によってはこれらのイベントを使用する必要があることがあります。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js-nolint
+addEventListener("afterprint", (event) => { })
+
+onafterprint = (event) => { }
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 

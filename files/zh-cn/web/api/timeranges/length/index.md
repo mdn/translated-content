@@ -1,39 +1,38 @@
 ---
-title: TimeRanges.length
+title: TimeRanges：length 属性
 slug: Web/API/TimeRanges/length
+l10n:
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
 {{APIRef("DOM")}}
 
-只读属性 **`TimeRanges.length`** 返回对象中时间范围的个数。
+**`TimeRanges.length`** 只读属性返回该对象中时间范围的数量。
 
-## 语法
+## 值
 
-```plain
-length = TimeRanges.length;
-```
+一个数字。
 
 ## 示例
 
-假定页面中存在一个 ID 为“myVideo”的 video 元素：
+给定一个 ID 为“myVideo”的 video 元素：
 
 ```js
-var v = document.GetElementById("myVideo");
+const v = document.getElementById("myVideo");
 
-var buf = v.buffered;
+const buf = v.buffered;
 
-var numRanges = buf.length;
+const numRanges = buf.length;
 
-if (buf.length == 1) {
-  // Only one range
-  if (buf.start(0) == 0 && buf.end(0) == v.duration) {
-    // The one range starts at the beginning and ends at
-    // the end of the video, so the whole thing is loaded
+if (buf.length === 1) {
+  // 只有一个范围
+  if (buf.start(0) === 0 && buf.end(0) === v.duration) {
+    // 这个范围从视频的开始处开始，一直到结尾结束，因此整个视频都会被加载
   }
 }
 ```
 
-这个例子演示了如何通过 `TimeRanges` 来判断 video 是否已经完全加载。
+这个示例检查了时间范围，并判断视频的全部内容是否已经加载完成。
 
 ## 规范
 

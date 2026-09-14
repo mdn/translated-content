@@ -7,7 +7,7 @@ slug: Web/API/CSSStyleSheet/insertRule
 
 El método **`CSSStyleSheet.insertRule()`** inserta una nueva regla de estilo en la actual hoja de estilos.
 
-Para conjuntos de reglas ésta contiene tanto al selector como la declaración de estilo. Para reglas-arroba, ésta especifica tanto al identificador-arroba como como al contenido de la regla. Si se asignan varias reglas en el {{domxref("DOMString")}} como parámetro se dispara una {{domxref("DOMException")}} con el código SYNTAX_ERR.
+Para conjuntos de reglas ésta contiene tanto al selector como la declaración de estilo. Para reglas-arroba, ésta especifica tanto al identificador-arroba como como al contenido de la regla. Si se asignan varias reglas en el {{jsxref("String")}} como parámetro se dispara una {{domxref("DOMException")}} con el código SYNTAX_ERR.
 
 ## Syntax
 
@@ -17,7 +17,7 @@ stylesheet.insertRule(regla, índice)
 
 ### Parameters
 
-- `regla` es un {{domxref("DOMString")}} que contiene la regla que se va a insertar (selector y declaración).
+- `regla` es un {{jsxref("String")}} que contiene la regla que se va a insertar (selector y declaración).
 - índice es un `unsigned int` que representa la posicion en la que se va a insertar.
 
 ## Ejemplos

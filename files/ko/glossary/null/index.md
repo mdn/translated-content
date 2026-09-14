@@ -19,11 +19,10 @@ console.log(typeof null); // "object"
 
 ## 같이 보기
 
-- [JavaScript의 타입](/ko/docs/Web/JavaScript/Data_structures)
+- [JavaScript의 타입](/ko/docs/Web/JavaScript/Guide/Data_structures)
 - JavaScript 전역 객체: [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)
 - 위키백과의 [널 포인터](https://ko.wikipedia.org/wiki/널_포인터)
 - **[용어 사전](/ko/docs/Glossary)**
-
   - {{Glossary("JavaScript")}}
   - {{Glossary("string")}}
   - {{Glossary("number")}}

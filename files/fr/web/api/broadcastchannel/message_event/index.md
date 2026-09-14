@@ -40,7 +40,7 @@ _En plus des propriétés listées ci-dessous, celles provenant de l'interface p
 
 ## Exemples
 
-Dans cet exemple, il y a un [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) «&nbsp;émetteur&nbsp;» qui diffuse le contenu du [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) lorsque l'utilisatrice ou l'utilisateur clique sur le bouton. Il y a deux `iframe`s «&nbsp;récepteurs&nbsp;» qui écoutent le message diffusé et écrivent le résultat dans un élément [`<div>`](/fr/docs/Web/HTML/Element/div).
+Dans cet exemple, il y a un [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe) «&nbsp;émetteur&nbsp;» qui diffuse le contenu du [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) lorsque l'utilisatrice ou l'utilisateur clique sur le bouton. Il y a deux `iframe`s «&nbsp;récepteurs&nbsp;» qui écoutent le message diffusé et écrivent le résultat dans un élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div).
 
 ### Émetteur
 

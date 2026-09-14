@@ -2,10 +2,13 @@
 title: 日付と時刻の表現
 slug: Web/JavaScript/Guide/Representing_dates_times
 l10n:
-  sourceCommit: c16a0ee78e5142b3bfcdaf57d595add3ce825f13
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}
+{{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}
+
+> [!NOTE]
+> `Date` オブジェクトは、古いものと見なされ、新しいコードでは使用を避けるべきと考えられています。近いうちに、このページを現行の代替手段について更新する予定です。
 
 ## Date オブジェクト
 

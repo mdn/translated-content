@@ -2,10 +2,10 @@
 title: 入力機器能力 API
 slug: Web/API/InputDeviceCapabilities_API
 l10n:
-  sourceCommit: 21d3e89589aaf9e5cfa667de679134513ab833f3
+  sourceCommit: 8cac4a3fed6a702840efd2deda67a922120732d0
 ---
 
-{{DefaultAPISidebar("InputDeviceCapabilities API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Input Device Capabilities API")}}{{SeeCompatTable}}
 
 入力機器能力 API は、入力イベントの基盤となるソースに関する詳細を提供します。この API は、機器が何かというよりも、機器がどのように動作するかを記述しようとするものです。例えば、この API の最初のバージョンは、機器がタッチ画面であるかどうかではなく、タッチイベントが発生するかどうかを示します。
 
@@ -24,8 +24,13 @@ myButton.addEventListener("mousedown", (e) => {
 
 ## インターフェイス
 
-- {{DOMxRef("InputDeviceCapabilities")}} {{Experimental_Inline}}
+- {{domxref("InputDeviceCapabilities")}} {{Experimental_Inline}}
   - : 入力機器に関する論理情報を提供します。
+
+## 他のインターフェイスへの拡張
+
+- {{domxref("UIEvent.sourceCapabilities")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : タッチイベントを作った物理デバイスに関する情報を提供する`InputDeviceCapabilities`インターフェイスのインスタンスを返します。
 
 ## 仕様書
 

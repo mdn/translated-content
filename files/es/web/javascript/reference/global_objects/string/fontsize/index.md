@@ -3,7 +3,7 @@ title: String.prototype.fontsize()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}
 
 El método **`fontsize()`** crea {{HTMLElement("font")}} elemento HTML que muestra una cadena con el tamaño especificado.
 

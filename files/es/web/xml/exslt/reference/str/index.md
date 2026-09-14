@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/str
 original_slug: Web/EXSLT/str
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}
+{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}
 
 El paquete Strings de EXSLT proporciona funciones que permiten la manipulación
 de cadenas.

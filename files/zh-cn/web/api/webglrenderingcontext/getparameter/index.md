@@ -430,7 +430,7 @@ getParameter(pname)
     </tr>
     <tr>
       <td><code>gl.RENDERER</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td></td>
     </tr>
     <tr>
@@ -465,7 +465,7 @@ getParameter(pname)
     </tr>
     <tr>
       <td><code>gl.SHADING_LANGUAGE_VERSION</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td></td>
     </tr>
     <tr>
@@ -590,12 +590,12 @@ getParameter(pname)
     </tr>
     <tr>
       <td><code>gl.VENDOR</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td></td>
     </tr>
     <tr>
       <td><code>gl.VERSION</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td></td>
     </tr>
     <tr>

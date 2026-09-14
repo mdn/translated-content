@@ -3,8 +3,6 @@ title: contextualIdentities.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/remove
 ---
 
-{{AddonSidebar}}
-
 Supprime une identité contextuelle, compte tenu de son ID de cookie.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

@@ -21,7 +21,7 @@ l10n:
 _该接口也从它的父接口 {{domxref("EventTarget")}} 继承属性。_
 
 - {{domxref("BroadcastChannel.name")}}
-  - : 频道名称，返回 {{domxref("DOMString")}}。
+  - : 频道名称，返回 {{jsxref("String")}}。
 
 ## 实例方法
 

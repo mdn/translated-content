@@ -3,8 +3,6 @@ title: 浏览器扩展
 slug: Mozilla/Add-ons/WebExtensions
 ---
 
-{{AddonSidebar}}
-
 扩展或者说是附加组件，拥有可以修改、增强浏览器的能力。用于 Firefox 的扩展，使用跨浏览器的 WebExtensions API 技术来构建。
 
 用于构建 Firefox 扩展的技术在很大程度上与被基于 Chromium 内核的浏览器（例如谷歌 Chrome 浏览器，微软 Edge 浏览器，Opera 浏览器，Vivaldi 浏览器）所支持的[扩展 API](https://developer.chrome.google.cn/docs/extensions) 所兼容。在大多数情况下，为基于 Chromium 内核浏览器而写的插件只需要[少许修改](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)就可以在 Firefox 中运行。

@@ -8,7 +8,7 @@ l10n:
 
 {{ApiRef("HTML DOM")}}
 
-**`defaultValue`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、{{HTMLElement("input")}} 要素の元の（または既定の）値を示します。これは、この要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性を反映します。
+**`defaultValue`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、{{HTMLElement("input")}} 要素の元の（または既定の）値を示します。これは、この要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性を反映します。
 
 ## 値
 

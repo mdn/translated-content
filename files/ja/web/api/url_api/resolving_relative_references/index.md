@@ -33,7 +33,7 @@ const parseResult = URL.parse(url, base);
 相対参照は、カレントディレクトリー (`./`)、カレントディレクトリーの親ディレクトリー (`../`)、またはサイトルート (`/`) に対する相対パス参照を使用して、ベース URL に対して解決されます。
 以下の章では、相対パスの各タイプについて、解決の作業方法を表示させます。
 
-## カレンとディレクトリーからの相対
+## カレントディレクトリーからの相対
 
 `./` で始まる相対参照、または接頭辞のない参照、例えば `./article`、`article`、`./article/` は、`base` 引数で表される URL のカレントディレクトリーに対する相対参照です。
 
@@ -66,7 +66,7 @@ log(new URL("article", "https://test.example.org/api/v1").href);
 // => https://test.example.org/api/article
 ```
 
-同様に、下記どちらのベース URL 文字列も、カレンとディレクトリーは `https://test.example.org/api/v2/` です。
+同様に、下記どちらのベース URL 文字列も、カレントディレクトリーは `https://test.example.org/api/v2/` です。
 最終的な URL を解決するために、これらに `story/` と `story` を追加します。
 
 ```js
@@ -106,7 +106,7 @@ function log(text) {
 ```
 
 次の例では、この点をより詳しく説明します。
-すべてのケースにおいて、カレントディレクトリーは `https://test.example.org/api/v1/v2/` です（2 つ目のケースでは、`v3` が最後のスラッシュの後に続きます）。相対参照はそれぞれ異なる親ディレクトリを指します。
+すべてのケースにおいて、カレントディレクトリーは `https://test.example.org/api/v1/v2/` です（2 つ目のケースでは、`v3` が最後のスラッシュの後に続きます）。相対参照はそれぞれ異なる親ディレクトリーを指します。
 
 ```js
 log(new URL("../path", "https://test.example.org/api/v1/v2/").href);

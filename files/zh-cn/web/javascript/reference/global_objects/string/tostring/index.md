@@ -3,8 +3,6 @@ title: String.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/String/toString
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 的 **`toString()`** 方法返回该字符串的值。
 
 {{InteractiveExample("JavaScript Demo: String.toString()")}}

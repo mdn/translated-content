@@ -58,7 +58,7 @@ mql.addEventListener("change", (event) => {
 
 ## 関連情報
 
-- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [プログラムによるメディアクエリーの評価](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)
+- [プログラムによるメディアクエリーの評価](/ja/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}

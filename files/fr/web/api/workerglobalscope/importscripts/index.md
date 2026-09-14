@@ -16,7 +16,7 @@ self.importScripts('foo.js', 'bar.js', ...);
 
 ### Paramètres
 
-Une liste d'objets {{domxref("DOMString")}} séparés par des virgules et représentant les scripts à importer.
+Une liste d'objets {{jsxref("String")}} séparés par des virgules et représentant les scripts à importer.
 
 ### Valeur de retour
 

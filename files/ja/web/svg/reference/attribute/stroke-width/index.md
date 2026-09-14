@@ -1,14 +1,14 @@
 ---
 title: stroke-width
 slug: Web/SVG/Reference/Attribute/stroke-width
-original_slug: Web/SVG/Attribute/stroke-width
 l10n:
-  sourceCommit: 5f7c22deaa74973658257aeaa012ac2ec0be87ae
+  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
 ---
 
-{{SVGRef}}
+**`stroke-width`** 属性は、図形に適用される描線の幅を定義する表示属性です。これは、あらゆる SVG 図形またはテキストコンテンツ要素に適用されますが、継承プロパティとして、 {{SVGElement("g")}} などの要素に適用され、子孫要素の線に意図通りの効果を持つことができます。
 
-**`stroke-width`** 属性は、図形に適用するストロークの幅を定義するプレゼンテーション属性です。
+> [!NOTE]
+> プレゼンテーション属性であるため、 `stroke-width` には対応する CSS プロパティ {{cssxref("stroke-width")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
 
 この属性は以下の SVG 要素で使用することができます。
 
@@ -21,7 +21,6 @@ l10n:
 - {{SVGElement('rect')}}
 - {{SVGElement('text')}}
 - {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
 ## 例
@@ -36,13 +35,13 @@ svg {
 
 ```html
 <svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
-  <!-- Default stroke width: 1 -->
+  <!-- 描線の既定の幅: 1 -->
   <circle cx="5" cy="5" r="3" stroke="green" />
 
-  <!-- Stroke width as a number -->
+  <!-- 描線の幅を数値で -->
   <circle cx="15" cy="5" r="3" stroke="green" stroke-width="3" />
 
-  <!-- Stroke width as a percentage -->
+  <!-- 描線の幅をパーセント値で -->
   <circle cx="25" cy="5" r="3" stroke="green" stroke-width="2%" />
 </svg>
 ```
@@ -89,3 +88,7 @@ svg {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- CSS の {{cssxref("stroke-width")}} プロパティ

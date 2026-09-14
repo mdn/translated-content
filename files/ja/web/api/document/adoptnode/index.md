@@ -29,7 +29,8 @@ adoptNode(externalNode)
 
 このメソッドを呼び出した後、 `importedNode` および `externalNode` は同じオブジェクトになります。
 
-> **メモ:** `importedNode` の {{domxref("Node.parentNode")}} は、まだ文書ツリーに挿入されていないので `null` です。
+> [!NOTE]
+> `importedNode` の {{domxref("Node.parentNode")}} は、まだ文書ツリーに挿入されていないので `null` です。
 
 ## 例
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
-{{APIRef("Service Workers API")}}{{deprecated_header}}{{Non-standard_header}}
+{{APIRef("Service Workers API")}}{{Non-standard_header}}
 
 **`isReload`** は {{domxref("FetchEvent")}} インターフェイスの読み取り専用プロパティで、ユーザーがページを再読み込みしようとしてこのイベントが配信されたのであれば `true` を返し、それ以外ならば `false` を返します。
 更新ボタンを押すと再読み込みされますが、リンクをクリックしたり、戻るボタンを押したりしても再読み込みされません。

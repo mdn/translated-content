@@ -3,8 +3,6 @@ title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
 
-{{jsSidebar("Objects")}}
-
 **`parseInt()`** 函式能將輸入的字串轉成整數。
 
 {{InteractiveExample("JavaScript Demo: Standard built-in objects - parseInt()")}}
@@ -171,9 +169,9 @@ console.log(filterInt("1.61803398875")); // NaN
 
 ## 參見
 
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
+- {{jsxref("parseFloat()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}
 - {{jsxref("Number.toString()")}}
 - {{jsxref("Object.valueOf")}}

@@ -1,12 +1,9 @@
 ---
 title: 101 Switching Protocols
 slug: Web/HTTP/Reference/Status/101
-original_slug: Web/HTTP/Status/101
 l10n:
-  sourceCommit: bd4d7bc4176d9f67297e3940ae7163a258f07ef5
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`101 Switching Protocols`** は[情報レスポンス](/ja/docs/Web/HTTP/Reference/Status#情報レスポンス)ステータスコードで、サーバーが切り替えようとしているプロトコルを示します。
 プロトコルはクライアントから受信した {{HTTPHeader("Upgrade")}} リクエストヘッダーで指定されます。

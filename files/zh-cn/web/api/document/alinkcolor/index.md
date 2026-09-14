@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 41c3f093216bda022f04b4a40fa55e2f0b7af5e0
 ---
 
-{{APIRef("DOM")}}{{Deprecated_header}}
+{{APIRef("DOM")}}
 
 返回或设置文档正文中活动链接的颜色。在 `mousedown` 和 `mouseup` 事件之间，链接处于活动状态。
 

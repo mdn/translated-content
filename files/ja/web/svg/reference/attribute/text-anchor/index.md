@@ -1,27 +1,23 @@
 ---
 title: text-anchor
 slug: Web/SVG/Reference/Attribute/text-anchor
-original_slug: Web/SVG/Attribute/text-anchor
 l10n:
-  sourceCommit: 58313eeb2415546be9763dc691b6d519433c6dbb
+  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
 ---
-
-{{SVGRef}}
 
 **`text-anchor`** 属性は、整形済みテキストや、折り返し領域が指定された基準点から {{cssxref("inline-size")}} で指定された領域となる自動折り返しテキストの文字列の位置揃え（行の先頭、中央、末尾揃え）に使用されます。
 
 この属性は、他の種類の自動折り返しテキストには適用されません。そのような場合は、 {{cssxref("text-align")}} を使用してください。複数行のテキストの場合、配置は各行に対して行われます。
 
-`text-anchor` 属性は、指定された {{SVGElement("text")}} 要素内の個々のテキストの塊に適用されます。それぞれのテキストの塊には、現在のテキストの初期位置があり、これはユーザー座標系における点を表します。 `<text>` 要素の {{SVGAttr("x")}} および {{SVGAttr("y")}} 属性、 {{SVGElement("tspan")}} または {{SVGElement("tref")}} 要素でテキストの塊の最初に描画される文字に明示的に割り当てられた `x` 属性または `y` 属性、または {{SVGElement("textPath")}} 要素の現在のテキストの初期位置の決定（コンテキストに応じて）の結果として生じるものです。
+`text-anchor` 属性は、指定された {{SVGElement("text")}} 要素内の個々のテキストの塊に適用されます。それぞれのテキストの塊には、現在のテキストの初期位置があり、これはユーザー座標系における点を表します。 `<text>` 要素の {{SVGAttr("x")}} および {{SVGAttr("y")}} 属性、 {{SVGElement("tspan")}} 要素でテキストの塊の最初に描画される文字に明示的に割り当てられた `x` 属性または `y` 属性、または {{SVGElement("textPath")}} 要素の現在のテキストの初期位置の決定（コンテキストに応じて）の結果として生じるものです。
 
 > [!NOTE]
-> プレゼンテーション属性であるため、 `text-anchor` は CSS プロパティとして使用できます。詳しくは {{cssxref('text-anchor')}} を参照してください。
+> プレゼンテーション属性であるため、 `text-anchor` には対応する CSS プロパティ {{cssxref("text-anchor")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
 
 この属性は次の SVG 要素で使用することができます。
 
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 
 ## 例
@@ -77,7 +73,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
-      <td>離散</td>
+      <td>離散的</td>
     </tr>
   </tbody>
 </table>

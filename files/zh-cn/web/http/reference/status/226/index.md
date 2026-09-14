@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ddc0d10f9df181bd034e99b9a93488ee47414dfd
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`226 IM Used`** [成功响应](/zh-CN/docs/Web/HTTP/Reference/Status#成功响应)状态码表示服务器在响应 {{HTTPMethod("GET")}} 请求时返回了一个{{Glossary("delta", "增量")}}。该状态码用于 *HTTP 增量编码*的上下文中。
 
 `IM` 是 _instance manipulation_（实例操作）的缩写，指的是生成*差异*（增量）算法。在增量编码中，客户端发送一个 {{HTTPMethod("GET")}} 请求，并携带了两个标头：`A-IM:` 表示偏好使用的差异算法，{{HTTPHeader("If-None-Match")}} 指定了客户端已有的资源版本。服务器会返回相对于给定基础文档的增量，而不是完整的文档。此响应使用 `226` 状态码，一个描述所用差异算法的 `IM:` 标头，并可能包含一个 `Delta-Base:` 标头，其中带有与增量关联的基础文档的 {{HTTPHeader("ETag")}}。

@@ -2,10 +2,8 @@
 title: どんなテキストエディターが利用できるか
 slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 l10n:
-  sourceCommit: 8906ca75f60f205a6dd18fe3c824bbee228802b2
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 この記事ではウェブ開発向けのテキストエディターをインストールする際に考慮すべき点をいくつか取り上げます。
 
@@ -79,7 +77,7 @@ l10n:
       <td>無料</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a href="https://webchat.freenode.net/?channels=brackets" rel="external"
+        <a href="https://irc.com/?channels=brackets" rel="external"
           >IRC</a
         >
       </td>
@@ -90,7 +88,7 @@ l10n:
       </td>
       <td>
         <a
-          href="https://ingorichter.github.io/BracketsExtensionTweetBot/"
+          href="https://ingo-richter.io/BracketsExtensionTweetBot/"
           rel="external"
           >あり</a
         >
@@ -102,8 +100,8 @@ l10n:
       <td>$99</td>
       <td>Mac</td>
       <td>
-        <a href="https://twitter.com/panic">Twitter</a>,
-        <a href="https://panic.com/qa" rel="external">フォーラム</a>,
+        <a href="https://x.com/panic">Twitter</a>,
+        <a href="https://help.panic.com/" rel="external">フォーラム</a>,
         <a href="https://nova.app/help/">オンライン</a>
       </td>
       <td><a href="https://help.panic.com/nova/">eBook</a></td>
@@ -150,7 +148,7 @@ l10n:
       <td>あり</td>
     </tr>
     <tr>
-      <td><a href="https://www.espressoapp.com/">Espresso</a></td>
+      <td><a href="https://espressoapp.com/">Espresso</a></td>
       <td>クローズドソース</td>
       <td>$99</td>
       <td>Mac</td>
@@ -194,24 +192,7 @@ l10n:
     </tr>
     <tr>
       <td>
-        <a href="https://www.activestate.com/products/komodo-edit/" rel="external"
-          >Komodo Edit</a
-        >
-      </td>
-      <td>MPL</td>
-      <td>無料</td>
-      <td>Windows, Mac, Linux</td>
-      <td><a href="https://community.komodoide.com/" rel="external">フォーラム</a></td>
-      <td>
-        <a href="https://docs.activestate.com/komodo" rel="external"
-          >オンラインマニュアル</a
-        >
-      </td>
-      <td><a href="https://docs.activestate.com/komodo/12/manual/extensions.html">あり</a></td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://www.notepad-plus-plus.org/" rel="external"
+        <a href="https://notepad-plus-plus.org/" rel="external"
           >Notepad++</a
         >
       </td>
@@ -257,19 +238,19 @@ l10n:
       <td>Windows, Mac, Linux</td>
       <td>
         <a
-          href="https://www.sublimetext.com/forum/viewforum.php?f=3"
+          href="https://forum.sublimetext.com/c/technical-support"
           rel="external"
           >Forum</a
         >
       </td>
       <td>
-        <a href="https://www.sublimetext.com/docs/">Official</a>,<a
+        <a href="https://www.sublimetext.com/docs/">Official</a>, <a
           href="https://docs.sublimetext.io/"
         >
           Unofficial</a
         >
       </td>
-      <td><a href="https://sublime.wbond.net/">あり</a></td>
+      <td><a href="https://packagecontrol.io/">あり</a></td>
     </tr>
     <tr>
       <td><a href="https://macromates.com/" rel="external">TextMate</a></td>
@@ -277,20 +258,17 @@ l10n:
       <td>$50</td>
       <td>Mac</td>
       <td>
-        <a href="https://twitter.com/macromates">Twitter</a>,
-        <a href="https://webchat.freenode.net/?channels=textmate">IRC</a>,
-        <a href="https://lists.macromates.com/listinfo/textmate" rel="external"
+        <a href="https://x.com/macromates">Twitter</a>,
+        <a href="https://irc.com/?channels=textmate">IRC</a>,
+        <a href="https://lists.macromates.com/postorius/lists/textmate.lists.macromates.com/" rel="external"
           >メーリングリスト</a
         >, <a href="mailto:tm-support@macromates.com">E-mail</a>
       </td>
       <td>
-        <a href="https://manual.macromates.com/en/">オンラインマニュアル</a>,
-        <a href="https://wiki.macromates.com/Main/HomePage" rel="external"
-          >Wiki</a
-        >
+        <a href="https://macromates.com/manual/en/">オンラインマニュアル</a>
       </td>
       <td>
-        <a href="https://wiki.macromates.com/Main/Plugins" rel="external"
+        <a href="https://macromates.com/textmate/manual/bundles" rel="external"
           >あり</a
         >
       </td>
@@ -337,7 +315,7 @@ l10n:
           >メーリングリスト</a
         >
       </td>
-      <td><a href="http://vimdoc.sourceforge.net/">オンラインマニュアル</a></td>
+      <td><a href="https://vimdoc.sourceforge.net/">オンラインマニュアル</a></td>
       <td>
         <a
           href="https://www.vim.org/scripts/script_search_results.php?order_by=creation_date&#x26;direction=descending"
@@ -427,8 +405,7 @@ l10n:
 
 - [Aptana Studio](https://www.axway.com/en/aptana)
 - [Eclipse](https://www.eclipse.org/)
-- [Komodo IDE](https://www.activestate.com/products/komodo-ide/)
-- [NetBeans IDE](https://netbeans.apache.org//)
+- [NetBeans IDE](https://netbeans.apache.org/)
 - [Visual Studio](https://visualstudio.microsoft.com/)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 
@@ -460,7 +437,6 @@ l10n:
 - [macOS](https://support.apple.com/guide/mac-help/choose-an-app-to-open-a-file-on-mac-mh35597/mac)
 
 - Linux
-
   - [Ubuntu Unity](https://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)
   - [GNOME](https://help.gnome.org/users/gnome-help/stable/files-open.html.en)
   - [KDE](https://userbase.kde.org/System_Settings/File_Associations)

@@ -3,8 +3,6 @@ title: devtools.network.onRequestFinished
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsqu'une requête réseau est terminée et que ses détails sont disponibles pour l'extension.
 
 La requête est donnée en tant qu'[objet d'entrée HAR](http://www.softwareishard.com/blog/har-12-spec/#entries), qui est également doté d'une méthode `getContent()` asynchrone qui récupère le contenu du corps de la réponse.
@@ -33,9 +31,7 @@ Les événements ont trois fonctions
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `request`
       - : `object`. Un objet représentant la requête. Cet objet est un seul objet d'[entrée HAR](http://www.softwareishard.com/blog/har-12-spec/#entries). Il définit également une méthode `getContent()` asynchrone, qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout avec le corps de la réponse.
 

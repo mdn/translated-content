@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Resources_and_specifications
 original_slug: Web/HTTP/Resources_and_specifications
 ---
 
-{{HTTPSidebar}}
-
 HTTP se especificó por primera vez a principios de los 90s. Diseñado con extensibilidad en mente, ha visto numerosas adiciones a lo largo de los años; esto lleva a que su especificación se disemine a través de númerosos documentos (en medio de extensiones experimentales abandonadas). Esta página presenta una lista de los recursos relevantes sobre HTTP:
 
 | Specification                                                                                             | Title                                                                                                                                                                                                                                                 | Status                                    |

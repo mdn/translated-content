@@ -3,9 +3,7 @@ title: handler.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 ---
 
-{{JSRef}}
-
-La méthode **`handler.construct()`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Afin que l'opération `new` puisse être valide sur le proxy correspondant, la cible utilisée doit avoir une méthode interne `[[Construct]]` (autrement dit, l'instruction `new cible` doit être valide).
+La méthode **`handler.construct()`** est une trappe pour l'opérateur {{jsxref("new")}}. Afin que l'opération `new` puisse être valide sur le proxy correspondant, la cible utilisée doit avoir une méthode interne `[[Construct]]` (autrement dit, l'instruction `new cible` doit être valide).
 
 {{InteractiveExample("JavaScript Demo: handler.construct()", "taller")}}
 
@@ -54,7 +52,7 @@ La méthode `construct` doit renvoyer un objet.
 
 ## Description
 
-La méthode **`handler.construct()`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}.
+La méthode **`handler.construct()`** est une trappe pour l'opérateur {{jsxref("new")}}.
 
 ### Interceptions
 
@@ -71,7 +69,7 @@ Si les invariants suivants ne sont pas respectés, le proxy renverra une excepti
 
 ## Exemples
 
-Dans l'exemple qui suit, on piège l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}.
+Dans l'exemple qui suit, on piège l'opérateur {{jsxref("new")}}.
 
 ```js
 var p = new Proxy(function () {}, {
@@ -123,6 +121,6 @@ new p(); // TypeError: p is not a constructor
 ## Voir aussi
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- L'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
+- L'opérateur {{jsxref("new")}}
 - {{jsxref("Reflect.construct()")}}

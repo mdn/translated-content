@@ -9,7 +9,8 @@ l10n:
 
 **`NodeList`** オブジェクトは[ノード](/ja/docs/Web/API/Node)の集合であり、 {{domxref("Node.childNodes")}} などのプロパティや {{domxref("document.querySelectorAll()")}} などのメソッドの返値として用いられます。
 
-> **メモ:** `NodeList` は `Array` とは異なりますが、`forEach()` メソッドで処理を反復適用することは可能です。{{jsxref("Array.from()")}} を使うことで `Array` に変換することができます。
+> [!NOTE]
+> `NodeList` は `Array` とは異なりますが、`forEach()` メソッドで処理を反復適用することは可能です。{{jsxref("Array.from()")}} を使うことで `Array` に変換することができます。
 
 ## 生きた NodeList と静的な NodeList
 
@@ -43,7 +44,6 @@ console.log(childNodes.length); // "3" が出力される
 ## インスタンスメソッド
 
 - {{domxref("NodeList.item()")}}
-
   - : 指定されたインデックスに対応するリスト内の要素を返します。インデックスが範囲外の場合は `null` を返します。
 
     `nodeList[i]` のアクセスの代替手段です（この場合、`i` が範囲外の時には `undefined` が返ります）。これは JavaScript 以外の言語による DOM の実装で便利です。

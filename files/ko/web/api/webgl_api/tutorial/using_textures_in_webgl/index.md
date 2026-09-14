@@ -12,7 +12,7 @@ slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 가장 먼저 해야할 일은 텍스쳐를 읽어오는 것입니다. 이번 예제에서는 동일한 하나의 텍스쳐를 회전하는 정육면체의 6개의 면에 입혀볼 것입니다. 여러개의 텍스쳐를 각 면에 입힌다고 해도 하나를 입히는 것과 동일한 방법을 적용하면 됩니다.
 
 > [!NOTE]
-> 텍스쳐를 외부에서 읽어올 때는 [크로스 도메인 규칙(cross-domain rules)](/ko/docs/Web/HTTP/CORS)에 유의해야 합니다. CORS(Cross Origin Resource Sharing)승인을 받을 수 있는 도메인에 있는 텍스쳐만 읽어올 수 있습니다. 자세한 내용은 [크로스 도메인 텍스쳐(Cross-domain textures)](/ko/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#Cross-domain_textures)를 참고하세요.
+> 텍스쳐를 외부에서 읽어올 때는 [크로스 도메인 규칙(cross-domain rules)](/ko/docs/Web/HTTP/Guides/CORS)에 유의해야 합니다. CORS(Cross Origin Resource Sharing)승인을 받을 수 있는 도메인에 있는 텍스쳐만 읽어올 수 있습니다. 자세한 내용은 [크로스 도메인 텍스쳐(Cross-domain textures)](/ko/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#Cross-domain_textures)를 참고하세요.
 
 텍스쳐를 읽어오는 코드는 다음과 같습니다:
 

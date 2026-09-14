@@ -56,4 +56,4 @@ console.log(hello.concat("Kevin", " tenha um bom dia."));
 ## Veja também
 
 - {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}
+- {{jsxref("Operators", "Assignment operators", "Assignment_operators", 1)}}

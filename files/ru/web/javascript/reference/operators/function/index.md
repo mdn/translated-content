@@ -48,7 +48,7 @@ var notHoisted = function () {
 
 ### Именованное функциональное выражение
 
-Если вы хотите сослаться на текущую функцию внутри тела этой функции, вам необходимо создать именованное функциональное выражение. Данное имя будет локальным только для тела функции (её области видимости). Кроме того, это позволяет избежать использования нестандартного свойства {{jsxref("arguments.callee")}}.
+Если вы хотите сослаться на текущую функцию внутри тела этой функции, вам необходимо создать именованное функциональное выражение. Данное имя будет локальным только для тела функции (её области видимости). Кроме того, это позволяет избежать использования нестандартного свойства {{jsxref("Functions/arguments/callee", "arguments.callee")}}.
 
 ```js
 var math = {
@@ -109,7 +109,7 @@ button.addEventListener("click", function (event) {
 
 ## Смотрите также
 
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
+- {{jsxref("Functions", "Functions and function scope")}}
 - {{jsxref("Function")}}
 - {{jsxref("Statements/function", "function statement")}}
 - {{jsxref("Statements/function*", "function* statement")}}

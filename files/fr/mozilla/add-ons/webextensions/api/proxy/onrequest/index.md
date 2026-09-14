@@ -3,8 +3,6 @@ title: proxy.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
 ---
 
-{{AddonSidebar}}
-
 Déclenché lorsqu'une requête Web est sur le point d'être effectuée, pour donner à l'extension la possibilité de l'utiliser comme proxy.
 
 Cet événement est étroitement modélisé sur les événements définis dans l'API [`webRequest`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) Comme ces événements, sa fonction `addListener()` prend trois arguments :
@@ -45,11 +43,9 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `listener`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction passera un seul argument, qui est un objet {{WebExtAPIRef("proxy.RequestDetails")}} contenant les détails de la requête.
 
     L'écouteur peut renvoyer l'un des éléments suivants:
-
     - un objet {{WebExtAPIRef("proxy.ProxyInfo")}}
     - un tableau d'objets `proxy.ProxyInfo`
     - Une `Promise` qui se résout en un objet `ProxyInfo`

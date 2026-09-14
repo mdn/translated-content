@@ -3,8 +3,6 @@ title: Affectation après OU exclusif binaire (^=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur d'affectation après OU exclusif (XOR) binaire (`^=`) utilise la représentation binaire des deux opérandes, effectue un OU exclusif entre chaque puis affecte le résultat obtenu à la variable représentée par l'opérande gauche.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Bitwise XOR assignment")}}

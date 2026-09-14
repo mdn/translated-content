@@ -3,7 +3,7 @@ title: Что такое доступность?
 slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
 
 Данная статья открывает модуль, в котором рассматривается, что такое доступность на самом деле — она включает в себя группы людей, которые нам нужно учитывать и почему, какие инструменты используют разные пользователи для взаимодействия с вебом, и как мы можем сделать доступность частью нашего рабочего процесса веб-разработки.
 
@@ -86,7 +86,8 @@ slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 
 С точки зрения статистики, опять же цифры значительны. Отчёт Корнелльского университета [О состоянии инвалидности за 2014 год](http://www.disabilitystatistics.org/StatusReports/2014-PDF/2014-StatusReport_US.pdf) (PDF, 511 КБ)(en) показывает, что в 2014 году 4,5% людей в США в возрасте 21-64 лет имели ту или иную форму когнитивной инвалидности.
 
-> **Примечание:** [Страница о когнитивных расстройствах](https://webaim.org/articles/cognitive/) на WebAIM обеспечивает полезное распространение этих идей, и это, безусловно, стоит прочитать.
+> [!NOTE]
+> [Страница о когнитивных расстройствах](https://webaim.org/articles/cognitive/) на WebAIM обеспечивает полезное распространение этих идей, и это, безусловно, стоит прочитать.
 
 ## Реализация доступности в проекте
 
@@ -149,4 +150,4 @@ slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 
 Эта статья должна была дать вам полезный обзор специальных возможностей, показать, почему это так важно, и посмотреть, как вы можете вписать его в свой рабочий процесс. Теперь у вас также должна быть жажда узнать о деталях реализации, которые помогут сделать сайты доступными, и мы начнём с этого в следующем разделе, рассматривая, почему HTML является хорошей основой для доступности.
 
-{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
+{{NextMenu("Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}

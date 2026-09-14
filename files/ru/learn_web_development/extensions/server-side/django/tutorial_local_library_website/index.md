@@ -3,7 +3,7 @@ title: "Руководство по Django: сайт местной библио
 slug: Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Первая статья в нашем цикле объясняет, что вы узнаете, и разбирает пример сайта "местная библиотека", который мы будем разрабатывать и улучшать в последующих статьях.
 
@@ -52,4 +52,4 @@ _Это_ название сайта, который мы создадим и б
 
 Теперь вы знаете чуть больше о сайте, который мы будем разрабатывать, и теперь самое время создать [скелет](/ru/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) нашего сайта.
 
-{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}

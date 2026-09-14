@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaDescription`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-description`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-description) 属性の値を反映し、この属性は、現在の要素を記述したり、注釈を付けたりする文字列値を定義します。
+**`ariaDescription`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-description`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description) 属性の値を反映し、この属性は、現在の要素を記述したり、注釈を付けたりする文字列値を定義します。
 
 ## 値
 

@@ -1,51 +1,43 @@
 ---
-title: FormData.get()
+title: "FormData : méthode get()"
+short-title: get()
 slug: Web/API/FormData/get
+l10n:
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{AvailableInWorkers}}
+{{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
-{{APIRef("XMLHttpRequest API")}}
-
-La méthode **`get()`** de l'interface [`FormData`](/fr/docs/Web/API/FormData) renvoie la première valeur associée à une clé donnée dans un objet `FormData`. Si vous souhaitez manipuler plusieurs valeurs et les récupérer intégralement, utilisez plutôt la méthode [`getAll()`](/fr/docs/Web/API/FormData/getAll).
-
-> [!NOTE]
-> Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+La méthode **`get()`** de l'interface {{DOMxRef("FormData")}} retourne la première valeur associée à une clé donnée dans un objet `FormData`. Si vous vous attendez à plusieurs valeurs et souhaitez toutes les récupérer, utilisez plutôt la méthode {{DOMxRef("FormData.getAll()","getAll()")}}.
 
 ## Syntaxe
 
-```js
-formData.get(name);
+```js-nolint
+get(name)
 ```
 
 ### Paramètres
 
 - `name`
-  - : Une chaîne de caractères [`USVString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le nom de la clé que vous souhaitez retrouver.
+  - : Une chaîne de caractères représentant le nom de la clé que vous souhaitez retrouver.
 
 ### Valeur de retour
 
-Un objet [`FormDataEntryValue`](/fr/docs/Web/API/FormData) contenant la valeur. Si la clé n'existe pas, la méthode renvoie `null`.
+Une valeur dont la clé correspond au `name` défini. Sinon, {{JSxRef("null")}}.
 
-## Exemple
+## Exemples
 
-La ligne suivante crée un objet `FormData` vide :
-
-```js
-var formData = new FormData();
-```
-
-Si nous ajoutons deux valeurs `username` en utilisant [`FormData.append`](/fr/docs/Web/API/FormData/append) :
+Si nous ajoutons deux valeurs `username` à un {{DOMxRef("FormData")}} en utilisant {{DOMxRef("FormData.append", "append()")}}&nbsp;:
 
 ```js
 formData.append("username", "Chris");
 formData.append("username", "Bob");
 ```
 
-L'appel suivant à `get()` renverra uniquement la première valeur `username` indexée :
+La méthode `get()` suivante ne retourne que la première valeur `username`&nbsp;:
 
 ```js
-formData.get("username"); // Renvoie "Chris"
+formData.get("username"); // Retourne "Chris"
 ```
 
 ## Spécifications
@@ -58,7 +50,5 @@ formData.get("username"); // Renvoie "Chris"
 
 ## Voir aussi
 
-- [`XMLHTTPRequest`](/fr/docs/Web/API/XMLHttpRequest)
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Utiliser les objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- [`<form>`](/fr/docs/Web/HTML/Element/form)
+- [Utiliser des objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
+- L'élément HTML {{HTMLElement("form")}}

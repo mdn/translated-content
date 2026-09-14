@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 ## 类型
 
 用于定义 RGBA 颜色的四个范围在 0-255 间的整型的 `array`。四个值分别指定了以下通道：

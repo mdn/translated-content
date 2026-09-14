@@ -19,9 +19,7 @@ l10n:
 - {{domxref("USBOutTransferResult.bytesWritten")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 転送要求によりデバイスに送られたバイト数を返します。
 - {{domxref("USBOutTransferResult.status")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-
   - : 転送要求の状態を返します。以下のいずれかです。
-
     - `"ok"` — 転送は成功しました。
     - `"stall"` — デバイスはエンドポイントでストール状態を発生させ、エラーを示しました。バルクエンドポイントやインタラプトエンドポイントでのストールは、次の `transferOut()` の呼び出しの前に `clearHalt()` を呼び出してクリアする必要があります。
 

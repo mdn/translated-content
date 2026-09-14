@@ -1,15 +1,15 @@
 ---
 title: GLSL シェーダー
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
+l10n:
+  sourceCommit: 3cbd2b2b2eb0be9425949c20ca5d398645f7c0e9
 ---
 
-{{GamesSidebar}}
-
-シェーダーは、 C と同様の構文を持つ特別な OpenGL シェーディング言語である GLSL (OpenGL Shading Language) を使用します。 GLSL はグラフィックスパイプラインによって直接実行されます。[様々な種類のシェーダー](https://www.khronos.org/opengl/wiki/Shader)がありますが、ウェブ上のグラフィックを作成するのに良く使用されるのは、頂点 (バーテックス) シェーダーとフラグメント (ピクセル) シェーダーの 2 種類です。 頂点シェーダーは、形状の位置を 3D 描画座標に変換します。 フラグメントシェーダーは、形状の色やその他の属性のレンダリングを計算します。
+シェーダーは、 C と同様の構文を持つ特別な OpenGL シェーディング言語である GLSL (OpenGL Shading Language) を使用します。 GLSL はグラフィックパイプラインによって直接実行されます。[様々な種類のシェーダー](https://wikis.khronos.org/opengl/Shader)がありますが、ウェブ上のグラフィックを作成するのに良く使用されるのは、頂点 (バーテックス) シェーダーとフラグメント (ピクセル) シェーダーの 2 種類です。 頂点シェーダーは、形状の位置を三次元の描画座標に変換します。フラグメントシェーダーは、形状の色やその他の属性のレンダリングを計算します。
 
 GLSL は JavaScript ほど直感的ではありません。 GLSL は強く型付けされており、ベクトルと行列を含む多くの数学があります。 それは非常に複雑になる可能性があります — 非常に速くも。 この記事では、立方体をレンダリングする簡単なサンプルコードを作成します。 背景となるコードを高速化するために、Three.js API を使用します。
 
-[基本理論](/ja/docs/Games/Techniques/3D_on_the_web/Basic_theory)の記事から覚えているかもしれませんが、頂点は 3D 座標系の点です。 頂点は追加のプロパティを持つことがあります。 3D 座標系は空間を定義し、頂点はその空間内の形状を定義するのに役立ちます。
+[基本理論](/ja/docs/Games/Techniques/3D_on_the_web/Basic_theory)の記事から覚えているかもしれませんが、頂点は三次元座標系の点です。 頂点は追加のプロパティを持つことがあります。三次元座標系は空間を定義し、頂点はその空間内の形状を定義するのに役立ちます。
 
 ## シェーダーの種類
 
@@ -36,11 +36,7 @@ GLSL は JavaScript ほど直感的ではありません。 GLSL は強く型付
 
 ### 環境設定
 
-WebGL シェーダーを使うには、それほど多くは必要ありません。 次のことが必要です。
-
-- 最新の Firefox や Chrome など、[WebGL](/ja/docs/Web/API/WebGL_API) を適切にサポートする最新のブラウザーを使用していることを確認してください。
-- 実験を保存するディレクトリーを作成します。
-- [最小化された最新の Three.js ライブラリー](https://threejs.org/build/three.min.js)のコピーをディレクトリー内に保存します。
+WebGL シェーダーを使い始めるには、[Three.js を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) に書かれている環境設定の手順に従い、Three.js が期待通りに動作するようにしてください。
 
 ### HTML の構造
 
@@ -48,32 +44,32 @@ WebGL シェーダーを使うには、それほど多くは必要ありませ�
 
 ```html
 <!doctype html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <title>MDN Games: Shaders demo</title>
+    <title>MDN ゲーム: シェーダーのデモ</title>
     <style>
-      body {
+      html,
+      body,
+      canvas {
         margin: 0;
         padding: 0;
-        font-size: 0;
-      }
-      canvas {
         width: 100%;
         height: 100%;
+        font-size: 0;
       }
     </style>
     <script src="three.min.js"></script>
   </head>
   <body>
     <script id="vertexShader" type="x-shader/x-vertex">
-      // vertex shader's code goes here
+      // 頂点シェーダーのコードをここに配置
     </script>
     <script id="fragmentShader" type="x-shader/x-fragment">
-      // fragment shader's code goes here
+      // フラグメントシェーダーのコードをここに配置
     </script>
     <script>
-      // scene setup goes here
+      // シーン設定をここに配置
     </script>
   </body>
 </html>
@@ -105,7 +101,8 @@ void main() {
 
 結果の `gl_Position` は、モデルビュー行列と射影行列に各ベクトルを乗算して、いずれの場合も最終的な頂点位置を取得することによって計算されます。
 
-> **メモ:** [頂点処理の段落](/ja/docs/Games/Techniques/3D_on_the_web/Basic_theory#vertex_processing)から、_モデル変換_、_ビュー変換_、および*投影変換*について詳しく知ることができます。 また、この記事の最後にあるリンクからも、詳細を学ぶことができます。
+> [!NOTE]
+> [頂点処理の段落](/ja/docs/Games/Techniques/3D_on_the_web/Basic_theory#頂点の処理)から、_モデル変換_、_ビュー変換_、*投影変換*について詳しく知ることができます。 また、この記事の最後にあるリンクからも、詳細を学ぶことができます。
 
 `projectionMatrix` と `modelViewMatrix` はどちらも Three.js によって提供され、ベクトルは新しい 3D 位置を渡します。 これにより、元の立方体がシェーダーを介して平行移動され `x` 軸に沿って 10 単位、`z` 軸に沿って 5 単位移動します。 4番目のパラメーターは無視して、デフォルトの `1.0` 値のままにしておくことができます。 これは、3D 空間の頂点位置のクリッピングを操作するために使用されますが、今回のケースでは必要ありません。
 
@@ -126,13 +123,13 @@ void main() {
 新しく作成したシェーダーを実際に立方体に適用するには、最初に `basicMaterial` の定義をコメントアウトします。
 
 ```js
-// var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
+// const basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
 ```
 
 次に、 [`shaderMaterial`](https://threejs.org/docs/#Reference/Materials/ShaderMaterial) を作成します。
 
 ```js
-var shaderMaterial = new THREE.ShaderMaterial({
+const shaderMaterial = new THREE.ShaderMaterial({
   vertexShader: document.getElementById("vertexShader").textContent,
   fragmentShader: document.getElementById("fragmentShader").textContent,
 });
@@ -143,11 +140,11 @@ var shaderMaterial = new THREE.ShaderMaterial({
 次に、立方体を定義する行で、`basicMaterial` を新しく作成した `shaderMaterial` に置き換える必要があります。
 
 ```js
-// var cube = new THREE.Mesh(boxGeometry, basicMaterial);
-var cube = new THREE.Mesh(boxGeometry, shaderMaterial);
+// const cube = new THREE.Mesh(boxGeometry, basicMaterial);
+const cube = new THREE.Mesh(boxGeometry, shaderMaterial);
 ```
 
-Three.js は、このマテリアルが与えられたメッシュにアタッチされたシェーダーをコンパイルして実行します。 この場合、立方体には頂点シェーダーとテクスチャシェーダーの両方が適用されます。 これで完了です。 可能な限り単純なシェーダーを作成しました。 おめでとう! 立方体は次のようになります。
+Three.js は、このマテリアルが与えられたメッシュにアタッチされたシェーダーをコンパイルして実行します。この場合、立方体には頂点シェーダーとテクスチャシェーダーの両方が適用されます。 これで完了です。 可能な限り単純なシェーダーを作成しました。 おめでとう! 立方体は次のようになります。
 
 ![Three.js blue cube demo](cube.png)
 
@@ -174,28 +171,28 @@ Three.js は、このマテリアルが与えられたメッシュにアタッ�
 ### JavaScript
 
 ```js
-var WIDTH = window.innerWidth;
-var HEIGHT = window.innerHeight;
+const WIDTH = window.innerWidth;
+const HEIGHT = window.innerHeight;
 
-var renderer = new THREE.WebGLRenderer({ antialias: true });
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(WIDTH, HEIGHT);
 renderer.setClearColor(0xdddddd, 1);
 document.body.appendChild(renderer.domElement);
 
-var scene = new THREE.Scene();
+const scene = new THREE.Scene();
 
-var camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
+const camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
 camera.position.z = 50;
 scene.add(camera);
 
-var boxGeometry = new THREE.BoxGeometry(10, 10, 10);
+const boxGeometry = new THREE.BoxGeometry(10, 10, 10);
 
-var shaderMaterial = new THREE.ShaderMaterial({
+const shaderMaterial = new THREE.ShaderMaterial({
   vertexShader: document.getElementById("vertexShader").textContent,
   fragmentShader: document.getElementById("fragmentShader").textContent,
 });
 
-var cube = new THREE.Mesh(boxGeometry, shaderMaterial);
+const cube = new THREE.Mesh(boxGeometry, shaderMaterial);
 scene.add(cube);
 cube.rotation.set(0.4, 0.2, 0);
 

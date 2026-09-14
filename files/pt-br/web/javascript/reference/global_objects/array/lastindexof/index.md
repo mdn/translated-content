@@ -62,7 +62,7 @@ Note que devemos tratar o caso `idx == 0` separadamente aqui pois o elemento ser
 
 ## Polyfill
 
-`lastIndexOf` foi adicionado ao padrão ECMA-262 na 5ª edição; devido a isso, não deve estar presente em outras implementações do padrão. Você pode contornar isso inserindo o seguinte código no início dos seus scripts, permitindo o uso de `lastIndexOf` em implementações que não o suportam nativamente. Esse algorítimo é exatamente o mesmo especificado no padrão ECMA-262, 5ª edição, assumindo que {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}}, {{jsxref("Global_Objects/Number", "Number")}}, {{jsxref("Math.floor")}}, {{jsxref("Math.abs")}}, e {{jsxref("Math.min")}} possuem seus valores originais.
+`lastIndexOf` foi adicionado ao padrão ECMA-262 na 5ª edição; devido a isso, não deve estar presente em outras implementações do padrão. Você pode contornar isso inserindo o seguinte código no início dos seus scripts, permitindo o uso de `lastIndexOf` em implementações que não o suportam nativamente. Esse algorítimo é exatamente o mesmo especificado no padrão ECMA-262, 5ª edição, assumindo que {{jsxref("Object")}}, {{jsxref("TypeError")}}, {{jsxref("Number")}}, {{jsxref("Math.floor")}}, {{jsxref("Math.abs")}}, e {{jsxref("Math.min")}} possuem seus valores originais.
 
 ```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.15

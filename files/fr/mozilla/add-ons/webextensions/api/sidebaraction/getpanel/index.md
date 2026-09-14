@@ -3,8 +3,6 @@ title: sidebarAction.getPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
 ---
 
-{{AddonSidebar}}
-
 Obtient une URL vers le document HTML qui définit le contenu de la barre latérale.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -20,9 +18,7 @@ var gettingPanel = browser.sidebarAction.getPanel(
 ### Paramètres
 
 - `details`
-
   - : `object`. Un objet avec les propriétés suivantes :
-
     - `tabId`{{optional_inline}}
       - : `integer`. Obtenir le panneau pour la barre latérale spécifique à l'onglet donné.
     - `windowId` {{optional_inline}}
@@ -63,8 +59,6 @@ gettingPanel.then(onGot);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

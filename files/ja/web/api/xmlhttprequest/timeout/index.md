@@ -3,17 +3,17 @@ title: "XMLHttpRequest: timeout プロパティ"
 short-title: timeout
 slug: Web/API/XMLHttpRequest/timeout
 l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+  sourceCommit: 0cc63ce1d7f43eb98746a908a9aba68ef6a36f7b
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-**`XMLHttpRequest.timeout`** は `unsigned long` 型で、リクエストが自動的に終了するまでの時間をミリ秒で示します。既定値は 0 で、タイムアウトが無いことを示します。 timeout は{{Glossary('document environment', '文書環境')}}で利用される同期 XMLHttpRequest や `InvalidAccessError` の例外を投げるものに使用することはできません。タイムアウトとなった場合、 [timeout](/ja/docs/Web/API/XMLHttpRequest/timeout_event) イベントが発行されます。
+**`XMLHttpRequest.timeout`** は `unsigned long` 型で、リクエストが自動的に終了するまでの時間をミリ秒で示します。既定値は 0 で、タイムアウトが無いことを示します。 timeout は{{Glossary('document environment', '文書環境')}}で利用される同期 XMLHttpRequest や `InvalidAccessError` の例外を投げるものに使用することはできません。タイムアウトとなった場合、 [timeout](/ja/docs/Web/API/XMLHttpRequestEventTarget/timeout_event) イベントが発行されます。
 
 > [!NOTE]
 > ウィンドウを持つ同期リクエストでは、タイムアウトを使用することはできません。
 
-[タイムアウトは非同期リクエストで使用してください](/ja/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests#example_using_a_timeout)。
+[タイムアウトは非同期リクエストで使用してください](/ja/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests#例_タイムアウトの利用)。
 
 ## 例
 

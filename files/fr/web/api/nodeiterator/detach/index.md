@@ -3,7 +3,7 @@ title: NodeIterator.detach()
 slug: Web/API/NodeIterator/detach
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}
 
 La méthode **`NodeIterator.detach()`** est une non opération, conservée seulement pour la rétro-compatibilité.
 

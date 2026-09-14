@@ -3,8 +3,6 @@ title: omnibox.onInputChanged
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputChanged
 ---
 
-{{AddonSidebar}}
-
 Lancé chaque fois que l'utilisateur modifie sa saisie, après avoir commencé à interagir avec votre extension en saisissant son mot-clé dans la barre d'adresse, puis en appuyant sur la touche espace.
 
 C'est l'événement que vous utiliserez pour remplir la liste déroulante de la barre d'adresse avec des suggestions. L'écouteur d'événement est transmis :
@@ -128,5 +126,3 @@ browser.omnibox.onInputEntered.addListener((url, disposition) => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

@@ -3,8 +3,6 @@ title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
 ---
 
-{{JSRef}}
-
 **`Math.min()`** 函数返回作为输入参数的数字中最小的一个，如果没有参数，则返回 {{jsxref("Infinity")}}。
 
 {{InteractiveExample("JavaScript Demo: Math.min()")}}

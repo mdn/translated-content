@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 original_slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/es/docs/Learn/Common_questions")}}
 
 Dedicarse a la web no es tan barato como parece. En este artículo discutimos cuánto puedes tener que gastar, y por qué.
 

@@ -25,7 +25,6 @@ respondWithNewView(view)
 ### 引数
 
 - `view`
-
   - : 関連付けられた読み取り可能なバイトストリームの消費者が {{domxref("ReadableStreamBYOBRequest.view")}} の代わりに書くべき {{jsxref("TypedArray")}} または {{jsxref("DataView")}} です。
 
     これは {{domxref("ReadableStreamBYOBRequest.view")}} と同じバッキングメモリー領域上のビューでなければならず、占めるメモリーは同じかそれ以下でなければなりません。
@@ -38,7 +37,6 @@ respondWithNewView(view)
 ### 例外
 
 - {{jsxref("TypeError")}}
-
   - : 元のオブジェクトが `ReadableStreamBYOBRequest` でないか、関連するコントローラがないか、関連する内部配列バッファーが存在しないか切り離されている場合に発生します。
     また、アクティブな読者がいるときに `view` の長さがゼロである場合や、閉じられたストリームで呼び出されたときにゼロでない場合にも発生する可能性があります。
 

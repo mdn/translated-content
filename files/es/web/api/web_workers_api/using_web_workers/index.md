@@ -219,19 +219,20 @@ Si tiene que pasar datos complejos y tienes que llamar a muchas funciones difere
         if (fOnError) {
           oWorker.onerror = fOnError;
         }
-        this.sendQuery =
-          function (/* queryable function name, argument to pass 1, argument to pass 2, etc. etc */) {
-            if (arguments.length < 1) {
-              throw new TypeError(
-                "QueryableWorker.sendQuery - not enough arguments",
-              );
-              return;
-            }
-            oWorker.postMessage({
-              bk4e1h0: arguments[0],
-              ktp3fm1: Array.prototype.slice.call(arguments, 1),
-            });
-          };
+        this.sendQuery = function (
+          /* queryable function name, argument to pass 1, argument to pass 2, etc. etc */
+        ) {
+          if (arguments.length < 1) {
+            throw new TypeError(
+              "QueryableWorker.sendQuery - not enough arguments",
+            );
+            return;
+          }
+          oWorker.postMessage({
+            bk4e1h0: arguments[0],
+            ktp3fm1: Array.prototype.slice.call(arguments, 1),
+          });
+        };
         this.postMessage = function (vMsg) {
           //I just think there is no need to use call() method
           //how about just oWorker.postMessage(vMsg);
@@ -329,7 +330,9 @@ function defaultQuery(vMsg) {
   // do something
 }
 
-function reply(/* listener name, argument to pass 1, argument to pass 2, etc. etc */) {
+function reply(
+  /* listener name, argument to pass 1, argument to pass 2, etc. etc */
+) {
   if (arguments.length < 1) {
     throw new TypeError("reply - not enough arguments");
     return;
@@ -357,7 +360,7 @@ Es un método posible para conmutar el contenido de cada mensaje de cada mainpag
 
 ### Pasando datos mediante transferencia de propiedades (objetos transferibles)
 
-Google Chrome 17 y Firefox 18 implementan un método adicional para enviar ciertos tipos de objetos desde o hacia el worker con un mejor rendimiento. Estos objetos se denominan objetos transferibles (transferable objects), es decir, objetos que implementan la interfaz {{domxref("Transferable")}}. Los objetos transferibles se transfieren de un contexto a otro con una operación "zero-copy". Esto supone una gran mejora de rendimiento al enviar grandes cantidades de datos. Piensa en ello como un paso por referencia si vienes del mundo de C/C++. Sin embargo, a diferecia del paso por referencia, la "versión" original no queda disponible una vez transferida. Su contenido es transferido al nuevo contexto. Por ejemplo, cuando se transfiere un {{domxref("ArrayBuffer")}} de tu aplicacion al Worker, el contenido del {{domxref("ArrayBuffer")}} original se vacía y no se puede utilizar posteriormente. Su contenido es (literalmente) transferido al contexto del Worker.
+Google Chrome 17 y Firefox 18 implementan un método adicional para enviar ciertos tipos de objetos desde o hacia el worker con un mejor rendimiento. Estos objetos se denominan objetos transferibles (transferable objects), es decir, objetos que implementan la interfaz {{domxref("Transferable")}}. Los objetos transferibles se transfieren de un contexto a otro con una operación "zero-copy". Esto supone una gran mejora de rendimiento al enviar grandes cantidades de datos. Piensa en ello como un paso por referencia si vienes del mundo de C/C++. Sin embargo, a diferecia del paso por referencia, la "versión" original no queda disponible una vez transferida. Su contenido es transferido al nuevo contexto. Por ejemplo, cuando se transfiere un {{jsxref("ArrayBuffer")}} de tu aplicacion al Worker, el contenido del {{jsxref("ArrayBuffer")}} original se vacía y no se puede utilizar posteriormente. Su contenido es (literalmente) transferido al contexto del Worker.
 
 ```js
 // Create a 32MB "file" and fill it.

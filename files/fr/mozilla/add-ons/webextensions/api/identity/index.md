@@ -3,8 +3,6 @@ title: identity
 slug: Mozilla/Add-ons/WebExtensions/API/identity
 ---
 
-{{AddonSidebar}}
-
 Utilisez l'API d'identité pour obtenir un code d'autorisation ou un jeton d'accès [OAuth2](https://oauth.net/2/), qu'une extension peut ensuite utiliser pour accéder aux données utilisateur d'un service prenant en charge l'accès à OAuth2 (tel qu'un compte Google ou Facebook).
 
 Les détails du fonctionnement du flux OAuth2 diffèrent d'un fournisseur de services à l'autre. Pour utiliser cette API avec un fournisseur de services particulier, vous devez consulter leur documentation. Par exemple :
@@ -57,8 +55,6 @@ Cela aura tendance à être spécifique au fournisseur de services, mais en gén
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

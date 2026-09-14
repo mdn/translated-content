@@ -16,7 +16,6 @@ history.pushState(state, title, [url])
 ### Parámetros
 
 - `state`
-
   - : El objeto `state` es un objeto de JavaScript asociado al nuevo registro en el historial creado por `pushState()`. Cuando el usuario navega al nuevo registro, un evento [`popstate`](/es/docs/Web/API/Window/popstate_event) es accionado, y la propiedad `state` del evento contiene una copia del objeto `state` del registro en el historial.
 
     El objeto `state` puede ser cualquier cosa que pueda ser serializada. Porque Firefox guarda los objetos `state` en el disco del usuario para que así puedan ser restaurados luego de que el usuario reinicia el navegador, se impone un límite de 640k caracteres en la representación serializada de un objeto `state`. Si pasas un objeto `state` con una representación serializada más grande que lo mencionado, a `pushState()`, el método arrojará una excepción. Si necesitas más espacio que el mencionado, es recomendable que uses {{domxref("Window.sessionStorage", "sessionStorage")}} y/o {{domxref("Window.localStorage", "localStorage")}}.

@@ -7,13 +7,13 @@ slug: Web/API/Range
 
 **`Range`** 객체는 주어진 document 내의 텍스트 노드들의 부분들(parts)과 document의 단편화에 포함된 노드들을 나타내고 있다.
 
-Range 오브젝트는 [`Document`](/ko/docs/Web/API/Document) 객체에 포함되어 있는 [`createRange`](/ko/docs/DOM/document.createRange) 메소드를 사용하여 생성할 수 있다. 또한 [`selection`](/ko/docs/DOM/Selection) 객체에 포함되어 있는 [`getRangeAt`](/ko/docs/DOM/Selection/getRangeAt) 메소드를 사용하여 추출할 수 있다.
+Range 오브젝트는 [`Document`](/ko/docs/Web/API/Document) 객체에 포함되어 있는 [`createRange`](/ko/docs/Web/API/Document/createRange) 메소드를 사용하여 생성할 수 있다. 또한 [`selection`](/ko/docs/Web/API/Selection) 객체에 포함되어 있는 [`getRangeAt`](/ko/docs/DOM/Selection/getRangeAt) 메소드를 사용하여 추출할 수 있다.
 
 {{domxref("Range.Range()", "Range()")}} 생성자 또한 사용 가능하다.
 
 ## 속성
 
-- [collapsed](/ko/docs/DOM/range.collapsed)
+- [collapsed](/ko/docs/Web/API/AbstractRange/collapsed)
   - : Range의 시작점과 끝점이 같인 위치인지를 알 수 있는 boolean 값을 반환한다.
 - [commonAncestorContainer](/ko/docs/DOM/range.commonAncestorContainer)
   - : startContainer와 endContainer 노드들을 포함한 최상위 노드를 반환한다.

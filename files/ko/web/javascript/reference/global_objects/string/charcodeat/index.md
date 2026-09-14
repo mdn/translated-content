@@ -72,7 +72,8 @@ const str = "𠮷𠮾";
 console.log(str.codePointAt(0)); // 134071
 ```
 
-> **참고:** `charCodeAt()`을 사용하여 `codePointAt()`을 다시 구현하지 마세요. UTF-16 서로게이트에서 유니코드 코드 포인트로의 변환은 복잡하며 `codePointAt()`은 문자열의 내부 표현을 직접 사용하므로 성능이 더 우수할 수 있습니다. 필요한 경우 `codePointAt()`에 대한 폴리필을 설치하시기 바랍니다.
+> [!NOTE]
+> `charCodeAt()`을 사용하여 `codePointAt()`을 다시 구현하지 마세요. UTF-16 서로게이트에서 유니코드 코드 포인트로의 변환은 복잡하며 `codePointAt()`은 문자열의 내부 표현을 직접 사용하므로 성능이 더 우수할 수 있습니다. 필요한 경우 `codePointAt()`에 대한 폴리필을 설치하시기 바랍니다.
 
 아래는 [유니코드 FAQ](https://unicode.org/faq/utf_bom.html#utf16-3)에서 발췌한 UTF-16 코드 단위 쌍을 유니코드 코드 포인트로 변환하는 가능한 알고리즘입니다.
 

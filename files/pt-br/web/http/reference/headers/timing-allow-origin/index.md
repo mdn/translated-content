@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Timing-Allow-Origin
 original_slug: Web/HTTP/Headers/Timing-Allow-Origin
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta **`Timing-Allow-Origin`** especifica origens que são permitidas de ver os valores dos atributos por funcionalidades da [Resource Timing API](/pt-BR/docs/Web/API/Performance_API/Resource_timing), na qual caso contrário será reportada como zero dada as restrições entre origens.
 
 <table class="properties">
@@ -15,7 +13,7 @@ O cabeçalho de resposta **`Timing-Allow-Origin`** especifica origens que são p
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

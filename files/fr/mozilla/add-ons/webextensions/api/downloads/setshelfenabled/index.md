@@ -3,8 +3,6 @@ title: downloads.setShelfEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/setShelfEnabled
 ---
 
-{{AddonSidebar}}
-
 La fonction **`setShelfEnabled()`** de l'API {{WebExtAPIRef("downloads")}} active ou désactive l'étagère grise située en bas de chaque fenêtre associée au profil de navigateur actuel. L'étagère sera désactivée si au moins une extension l'a désactivée.
 
 Si vous essayez d'activer l'étagère lorsqu'au moins une autre extension l'a déjà désactivé, l'appel échouera et {{WebExtAPIRef("runtime.lastError")}} sera défini avec un message d'erreur approprié.
@@ -34,8 +32,6 @@ Cette API est également disponible en tant que `browser.downloads.setShelfEnabl
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -14,11 +14,11 @@ _The `History`_ _interface doesn't inherit any property._
 - {{domxref("History.length")}} {{readOnlyInline}}
   - : Returns an `Integer` representing the number of elements in the session history, including the currently loaded page. For example, for a page loaded in a new tab this property returns `1`.
 - {{domxref("History.current")}} {{readOnlyInline}} {{ non-standard_inline() }} {{Deprecated_Inline}}
-  - : Returns a {{domxref("DOMString")}} representing the URL of the active item of the session history. This property was never available to web content and is no more supported by any browser. Use {{domxref("Location.href")}} instead.
+  - : Returns a {{jsxref("String")}} representing the URL of the active item of the session history. This property was never available to web content and is no more supported by any browser. Use {{domxref("Location.href")}} instead.
 - {{domxref("History.next")}} {{readOnlyInline}} {{ non-standard_inline() }} {{Deprecated_Inline}}
-  - : Returns a {{domxref("DOMString")}} representing the URL of the next item in the session history. This property was never available to web content and is not supported by other browsers.
+  - : Returns a {{jsxref("String")}} representing the URL of the next item in the session history. This property was never available to web content and is not supported by other browsers.
 - {{domxref("History.previous")}} {{readOnlyInline}} {{ non-standard_inline() }} {{Deprecated_Inline}}
-  - : Returns a {{domxref("DOMString")}} representing the URL of the previous item in the session history. This property was never available to web content and is not supported by other browsers.
+  - : Returns a {{jsxref("String")}} representing the URL of the previous item in the session history. This property was never available to web content and is not supported by other browsers.
 - {{domxref("History.scrollRestoration")}} {{experimental_inline}}
   - : Allows web applications to explicitly set default scroll restoration behavior on history navigation. This property can be either `auto` or `manual`.
 - {{domxref("History.state")}} {{readOnlyInline}}
@@ -29,14 +29,12 @@ _The `History`_ _interface doesn't inherit any property._
 _The `History`_ _interface doesn't inherit any methods._
 
 - {{domxref("History.back()")}}
-
   - : 回到 session history 紀錄中的前一頁，等同於使用者按下瀏覽器的上一頁按鈕。相當於 `history.go(-1)`。
 
     > [!NOTE]
     > Calling this method to go back beyond the first page in the session history has no effect and doesn't raise an exception.
 
 - {{domxref("History.forward()")}}
-
   - : 回到 session history 紀錄中的下一頁，等同於使用者按下瀏覽器的下一頁按鈕。相當於 `history.go(1)`。
 
     > [!NOTE]

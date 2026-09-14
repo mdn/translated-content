@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 检查扩展的任何 `declarativeNetRequest` 规则是否与假设请求匹配。仅在测试期间可用，因为这是用于扩展开发的。有关如何在每个浏览器中启用测试的详细信息，请参见[测试](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#测试)。
 
 ## 语法
@@ -21,7 +19,6 @@ let result = await browser.declarativeNetRequest.testMatchOutcome(
 ### 参数
 
 - `request`
-
   - : 要测试的请求的详细信息。
     - `initiator` {{optional_inline}}
       - : `string`。假设请求的发起者 URL（如果有）。
@@ -35,7 +32,6 @@ let result = await browser.declarativeNetRequest.testMatchOutcome(
       - : `string`。假设请求的 URL。
 
 - `options` {{optional_inline}}
-
   - : 请求选项的详细信息。
     - `includeOtherExtensions` {{optional_inline}}
       - : `boolean`。表示是否在 `matchedRules` 中包含其他扩展的匹配规则。当其他扩展的规则匹配时，生成的 `matchedRule` 将具有 `extensionId` 属性。默认为 `false`。

@@ -5,7 +5,7 @@ slug: Web/API/CSSStyleDeclaration/getPropertyPriority
 
 {{ APIRef("CSSOM") }}
 
-**CSSStyleDeclaration.getPropertyPriority()** 方法会根据传入的 CSS 属性，返回一个 {{domxref('DOMString')}} 来表示该属性的优先级。
+**CSSStyleDeclaration.getPropertyPriority()** 方法会根据传入的 CSS 属性，返回一个 {{jsxref("String")}} 来表示该属性的优先级。
 
 ## Syntax
 
@@ -15,11 +15,11 @@ var priority = style.getPropertyPriority(property);
 
 ### 参数
 
-- _`property`_ 是一个{{domxref('DOMString')}}，表示要检查的属性名。
+- _`property`_ 是一个{{jsxref("String")}}，表示要检查的属性名。
 
 ### 返回值
 
-- `priority` 是一个{{domxref('DOMString')}}，用以表示属性优先级。存在，就返回（例如：`"important"`）；不存在，则返回空字符串。
+- `priority` 是一个{{jsxref("String")}}，用以表示属性优先级。存在，就返回（例如：`"important"`）；不存在，则返回空字符串。
 
 ## 例子
 

@@ -1,11 +1,10 @@
 ---
 title: Set.prototype.symmetricDifference()
+short-title: symmetricDifference()
 slug: Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`symmetricDifference()`** は {{jsxref("Set")}} インスタンスのメソッドで、集合を受け取り、この Set と与えられた集合のどちらかにあるが、両方にはない要素の入った新しい Set を返します。
 
@@ -38,7 +37,7 @@ symmetricDifference(other)
 
 ![2 つの円が重なっているベン図。A と B の対称差は、どちらかの円に含まれるが、両方の円に含まれない領域です。](diagram.svg)
 
-`symmetricDifference()` は、[Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)オブジェクトを `other` 引数として受け入れます。{{jsxref("Operators/this", "this")}} は、ユーザーコードを呼び出すことなく、`this` オブジェクトに格納されているデータに直接アクセスするため、実際の {{jsxref("Set")}} インスタンスであることが要求されます。次に、`other` の `keys()` メソッドを呼び出して繰り返し処理を行い、`this` に存在し、`other` に存在しないすべての要素と、`other` に存在し、`this` に存在しないすべての要素をすべて含む新しい Set を構築します。
+`symmetricDifference()` は、[Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)オブジェクトを `other` 引数として受け入れます。{{jsxref("this")}} は、ユーザーコードを呼び出すことなく、`this` オブジェクトに格納されているデータに直接アクセスするため、実際の {{jsxref("Set")}} インスタンスであることが要求されます。次に、`other` の `keys()` メソッドを呼び出して繰り返し処理を行い、`this` に存在し、`other` に存在しないすべての要素と、`other` に存在し、`this` に存在しないすべての要素をすべて含む新しい Set を構築します。
 
 返される Set 内の要素の順序は、まず `this` の要素、次に `other` の要素となります。
 
@@ -65,6 +64,7 @@ console.log(evens.symmetricDifference(squares)); // Set(5) { 2, 6, 8, 1, 9 }
 ## 関連情報
 
 - [`Set.prototype.symmetricDifference` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#new-set-methods)
+- [es-shims による `Set.prototype.symmetricDifference` のポリフィル](https://www.npmjs.com/package/set.prototype.symmetricdifference)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.intersection()")}}
 - {{jsxref("Set.prototype.isDisjointFrom()")}}

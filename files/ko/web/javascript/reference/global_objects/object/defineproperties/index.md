@@ -35,7 +35,6 @@ Object.defineProperties(obj, props);
 - `obj`
   - : 속성을 정의하거나 수정할 객체.
 - `props`
-
   - : 정의하거나 수정할 속성의 이름을 키로, 그 속성을 서술하는 객체를 값으로 갖는 객체. `props`의 각 값은 데이터 서술자(data descriptor) 혹은 접근자 서술자(accessor descriptor) 중 하나여야 하며, 동시에 두 유형을 포함할 수 없다({{jsxref("Object.defineProperty()")}} 참조).
 
   데이터 서술자와 접근자 서술자 모두 다음 키를 선택적으로 포함할 수 있다.
@@ -51,7 +50,7 @@ Object.defineProperties(obj, props);
   - : 이 속성에 설정할 값. 올바른 JavaScript 값(숫자, 객체, 함수 등)이면 무엇이든 설정할 수 있다.
     **기본값은 {{jsxref("undefined")}}이다.**
 - `writable`
-  - : `true`일 경우 이 속성에 설정된 값을 {{jsxref("Operators/Assignment_Operators", "할당 연산자", "", 1)}}로 수정할 수 있다.
+  - : `true`일 경우 이 속성에 설정된 값을 {{jsxref("Operators", "할당 연산자", "Assignment_operators", 1)}}로 수정할 수 있다.
     **기본값은 `false`이다.**
     접근자 서술자의 경우 다음 키를 추가로 포함할 수 있다.
 - `get`
@@ -165,4 +164,4 @@ function defineProperties(obj, properties) {
 
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.keys()")}}
-- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

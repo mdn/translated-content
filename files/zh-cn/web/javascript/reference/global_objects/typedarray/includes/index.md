@@ -3,8 +3,6 @@ title: TypedArray.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
 ---
 
-{{JSRef}}
-
 **`includes()`** 方法判断类型化数组中是否含有特定元素，并相应返回 `true` 或者 `false`，这个方法的算法和 {{jsxref("Array.prototype.includes()")}} 相同。_TypedArray_ 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)之一。
 
 ## 语法

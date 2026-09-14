@@ -3,9 +3,7 @@ title: Build the brick field
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 ---
 
-{{GamesSidebar}}
-
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
 
 这是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)教程 10 节的第 6 节。你可以在完成本课程后在这里[Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html)找到源代码。
 
@@ -111,4 +109,4 @@ drawBricks();
 
 现在，我们有砖啦！但是球根本就没有和它们互动——接下来的第七章我们将让球和砖产生碰撞：[碰撞检测](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)。
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}

@@ -3,8 +3,6 @@ title: downloads.onErased
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
 ---
 
-{{AddonSidebar}}
-
 L'événement **`onErased()`** de l'API {{WebExtAPIRef("downloads")}} se déclenche lorsqu'un téléchargement est effacé de l'historique du navigateur.
 
 L'écouteur reçoit le paramètre `downloadId` de l'objet {{WebExtAPIRef('downloads.DownloadItem')}} en question en tant que paramètre.
@@ -31,9 +29,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. Cette fonction recevra les arguments suivants :
-
     - `downloadId`
       - : Un `integer` représentant l'`id` du {{WebExtAPIRef('downloads.DownloadItem')}} qui a été effacé.
 
@@ -63,8 +59,6 @@ var erasing = browser.downloads.erase({
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

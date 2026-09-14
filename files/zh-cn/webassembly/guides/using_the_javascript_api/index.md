@@ -227,7 +227,6 @@ const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0)；
 可以看到，它接受两个参数：
 
 - 一个对象，其中包含描述全局变量的两个属性：
-
   - `value`：它的数据类型，可以是 WebAssembly 模块接受的任何数据类型——`i32`、`i64`、`f32` 或 `f64`。
   - `mutable`：布尔值，指示值是否可变。
 

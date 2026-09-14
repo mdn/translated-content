@@ -3,7 +3,7 @@ title: RegExp.$1-$9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{non-standard_header}}
 
 Les propriétés non-standard **$1, $2, $3, $4, $5, $6, $7, $8, $9** sont des propriétés statiques accessibles en lecture qui contiennent les différents groupes capturés par une expression rationnelle.
 

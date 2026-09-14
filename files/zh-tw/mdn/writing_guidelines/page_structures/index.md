@@ -1,8 +1,15 @@
 ---
-title: MDN 內容與風格指南文檔歷史
+title: 頁面結構
 slug: MDN/Writing_guidelines/Page_structures
+l10n:
+  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
 
-這些指南說明 MDN 文件該如何撰寫及格式化，及我們的範例程式與其他內容該如何呈現。 跟著這些指南進行，你就可以確保你的產出既乾淨又便於使用。
+MDN 各處皆有特定的文件結構，用來在 MDN 文章中提供一致的資訊呈現。本頁列出描述這些結構的文章，以便你在撰寫、編輯或翻譯文件時，能適當地修改頁面內容。
 
-{{LandingPageListSubpages}}
+{{SubpagesWithSummaries}}
+
+## 參見
+
+- [頁面範本](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Page_types#頁面範本)
+- [頁面元件](/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide#頁面元件)

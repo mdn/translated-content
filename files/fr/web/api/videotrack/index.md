@@ -12,13 +12,13 @@ L'interface {{domxref("VideoTrack")}} représente une seule piste vidéo d'un é
 - {{domxref("VideoTrack.selected", "selected")}}
   - : Une valeur booléenne qui contrôle si la piste vidéo est active ou non. Seule une seule piste vidéo peut être active à un moment donné, donc la définition de cette propriété sur `true` pour une piste pendant qu'une autre piste est active rendra cette autre piste inactive.
 - {{domxref("VideoTrack.id", "id")}} {{ReadOnlyInline}}
-  - : Un {{domxref("DOMString")}} qui identifie de manière unique la piste dans le média. Cet identifiant peut être utilisé pour localiser une piste spécifique dans une liste de pistes vidéo en appelant {{domxref("VideoTrackList.getTrackById()")}}. L'identifiant peut également être utilisé comme partie fragment de l'URL si le support prend en charge la recherche par fragment de support conformément à la [spécification UR de fragments de média](https://www.w3.org/TR/media-frags/).
+  - : Un {{jsxref("String")}} qui identifie de manière unique la piste dans le média. Cet identifiant peut être utilisé pour localiser une piste spécifique dans une liste de pistes vidéo en appelant {{domxref("VideoTrackList.getTrackById()")}}. L'identifiant peut également être utilisé comme partie fragment de l'URL si le support prend en charge la recherche par fragment de support conformément à la [spécification UR de fragments de média](https://www.w3.org/TR/media-frags/).
 - {{domxref("VideoTrack.kind", "kind")}} {{ReadOnlyInline}}
-  - : Un {{domxref("DOMString")}} spécifiant la catégorie dans laquelle appartient la piste. Par exemple, la piste vidéo principale aurait un `type` `"principale"`.
+  - : Un {{jsxref("String")}} spécifiant la catégorie dans laquelle appartient la piste. Par exemple, la piste vidéo principale aurait un `type` `"principale"`.
 - {{domxref("VideoTrack.label", "label")}} {{ReadOnlyInline}}
-  - : Un {{domxref("DOMString")}} fournissant une étiquette lisible par l'homme pour la piste. Par exemple, une piste dont le `type` est `"signe"` peut avoir l'`étiquette` `"Une interprétation en langue des signes"`. Cette chaîne est vide si aucune étiquette n'est fournie.
+  - : Un {{jsxref("String")}} fournissant une étiquette lisible par l'homme pour la piste. Par exemple, une piste dont le `type` est `"signe"` peut avoir l'`étiquette` `"Une interprétation en langue des signes"`. Cette chaîne est vide si aucune étiquette n'est fournie.
 - {{domxref("VideoTrack.language", "language")}} {{ReadOnlyInline}}
-  - : Un {{domxref("DOMString")}} spécifiant la langue principale de la piste vidéo, ou une chaîne vide si elle est inconnue. La langue est spécifié en tant que code de langue BCP 47 ({{RFC(5646)}}), tel que `"en-US"` ou `"pt-BR"`.
+  - : Un {{jsxref("String")}} spécifiant la langue principale de la piste vidéo, ou une chaîne vide si elle est inconnue. La langue est spécifié en tant que code de langue BCP 47 ({{RFC(5646)}}), tel que `"en-US"` ou `"pt-BR"`.
 - {{domxref("VideoTrack.sourceBuffer", "sourceBuffer")}} {{ReadOnlyInline}}
   - : Le {{domxref("SourceBuffer")}} qui a créé la piste. Renvoie null si la piste n'a pas été créée par un {{domxref("SourceBuffer")}} ou le {{domxref("SourceBuffer")}} a été supprimé de l'attribut {{domxref("MediaSource.sourceBuffers")}} de sa source média parent.
 

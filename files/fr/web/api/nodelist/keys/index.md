@@ -5,7 +5,7 @@ slug: Web/API/NodeList/keys
 
 {{APIRef("DOM")}}
 
-La méthode **`NodeList.keys()`** renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des `unsigned integer` (_entier non signé_).
+La méthode **`NodeList.keys()`** renvoie un {{jsxref("Iteration_protocols",'itérateur')}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des `unsigned integer` (_entier non signé_).
 
 ## Syntaxe
 
@@ -15,7 +15,7 @@ nodeList.keys();
 
 ### Valeur retournée
 
-Renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}}.
+Renvoie un {{jsxref("Iteration_protocols","itérateur")}}.
 
 ## Exemple
 

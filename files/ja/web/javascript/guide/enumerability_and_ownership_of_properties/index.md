@@ -1,347 +1,84 @@
 ---
 title: プロパティの列挙可能性と所有権
 slug: Web/JavaScript/Guide/Enumerability_and_ownership_of_properties
-original_slug: Web/JavaScript/Enumerability_and_ownership_of_properties
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{JsSidebar("More")}}
+JavaScript オブジェクトのすべてのプロパティは、次の 3 つの要素によって分類できます。
 
-列挙可能プロパティは、内部の列挙可能（enumerable）フラグが true に設定されているプロパティです。これは、単純な代入や初期化で作成されたプロパティのデフォルトです ([Object.defineProperty](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) で追加したプロパティはデフォルトで列挙可能性が false になります）。プロパティのキーが [Symbol](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) でない限り、列挙可能なプロパティは [for...in](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループにの対象になります。プロパティの所有権は、プロパティがプロトタイプチェーンではなく、オブジェクトに直接属しているかどうかによって決まります。オブジェクトのプロパティはまとめて取り扱うこともでき、プロパティを検出、反復、列挙、取得するための多くの組み込み機能があります。以下に、使用可能なチャートと不足しているカテゴリを取得する方法を示すサンプルコードを示します。
+- 列挙可能か、列挙不可能か
+- 文字列か、[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)か
+- 自身のプロパティか、プロトタイプチェーンから継承されたプロパティか
 
-<table>
-  <caption>
-    プロパティの列挙可能性と所有権の検出、取得、反復の組み込みメソッド
-  </caption>
-  <tbody>
-    <tr>
-      <th>機能</th>
-      <th>所有するオブジェクト</th>
-      <th>所有するオブジェクトとプロトタイプチェーン</th>
-      <th>プロトタイプチェーンのみ</th>
-    </tr>
-    <tr>
-      <td>検出</td>
-      <td>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">列挙可能</th>
-              <th scope="col">列挙不可能</th>
-              <th scope="col">列挙可能と列挙不可能</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <p>
-                  <code
-                    ><a
-                      href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
-                      >propertyIsEnumerable</a
-                    ></code
-                  >
-                </p>
-                <p>
-                  <code
-                    ><a
-                      href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
-                      >hasOwnProperty</a
-                    ></code
-                  >
-                </p>
-              </td>
-              <td>
-                <p>
-                  <code
-                    ><a
-                      href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
-                      >hasOwnProperty</a
-                    ></code
-                  >
-                  –
-                  <code
-                    ><a
-                      href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
-                      >propertyIsEnumerable</a
-                    ></code
-                  >
-                  を使用して列挙可能なものを除外するようにフィルターリング
-                </p>
-              </td>
-              <td>
-                <code
-                  ><a
-                    href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
-                    >hasOwnProperty</a
-                  ></code
-                >
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">列挙可能</th>
-              <th scope="col">列挙不可能</th>
-              <th scope="col">列挙可能と列挙不可能</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>追加のコードが必要</td>
-              <td>追加のコードが必要</td>
-              <td>
-                <code
-                  ><a href="/ja/docs/Web/JavaScript/Reference/Operators/in"
-                    >in</a
-                  ></code
-                >
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td>追加のコードが必要</td>
-    </tr>
-    <tr>
-      <td>取得</td>
-      <td>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">列挙可能</th>
-              <th scope="col">列挙不可能</th>
-              <th scope="col">列挙可能と列挙不可能</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <p>
-                  <code
-                    ><a
-                      href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
-                      >Object.keys</a
-                    ></code
-                  >
-                </p>
-                <p>
-                  <code
-                    ><a
-                      href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
-                      >getOwnPropertyNames</a
-                    ></code
-                  >
-                </p>
-                <p>
-                  <code
-                    ><a
-                      href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
-                      >getOwnPropertySymbols</a
-                    ></code
-                  >
-                </p>
-              </td>
-              <td>
-                <code
-                  ><a
-                    href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
-                    >getOwnPropertyNames</a
-                  ></code
-                >,
-                <code
-                  ><a
-                    href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
-                    >getOwnPropertySymbols</a
-                  ></code
-                >
-                –
-                <code
-                  ><a
-                    href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
-                    >propertyIsEnumerable</a
-                  ></code
-                >
-                を使用して列挙可能なものを除外するようにフィルターリング
-              </td>
-              <td>
-                <p>
-                  <code
-                    ><a
-                      href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
-                      >getOwnPropertyNames</a
-                    ></code
-                  >
-                </p>
-                <p>
-                  <code
-                    ><a
-                      href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
-                      >getOwnPropertySymbols</a
-                    ></code
-                  >
-                </p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td>追加のコードが必要</td>
-      <td>追加のコードが必要</td>
-    </tr>
-    <tr>
-      <td>反復</td>
-      <td>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">列挙可能</th>
-              <th scope="col">列挙不可能</th>
-              <th scope="col">列挙可能と列挙不可能</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <p>
-                  <code
-                    ><a
-                      href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
-                      >Object.keys</a
-                    ></code
-                  >
-                </p>
-                <p>
-                  <code
-                    ><a
-                      href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
-                      >getOwnPropertyNames</a
-                    ></code
-                  >
-                </p>
-                <p>
-                  <code
-                    ><a
-                      href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
-                      >getOwnPropertySymbols</a
-                    ></code
-                  >
-                </p>
-              </td>
-              <td>
-                <code
-                  ><a
-                    href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
-                    >getOwnPropertyNames</a
-                  ></code
-                >,
-                <code
-                  ><a
-                    href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
-                    >getOwnPropertySymbols</a
-                  ></code
-                >
-                –
-                <code
-                  ><a
-                    href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
-                    >propertyIsEnumerable</a
-                  ></code
-                >
-                を使用して列挙可能なものを除外するようにフィルターリング
-              </td>
-              <td>
-                <p>
-                  <code
-                    ><a
-                      href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
-                      >getOwnPropertyNames</a
-                    ></code
-                  >
-                </p>
-                <p>
-                  <code
-                    ><a
-                      href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
-                      >getOwnPropertySymbols</a
-                    ></code
-                  >
-                </p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">列挙可能</th>
-              <th scope="col">列挙不可能</th>
-              <th scope="col">列挙可能と列挙不可能</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <p>
-                  <code
-                    ><a
-                      href="/ja/docs/Web/JavaScript/Reference/Statements/for...in"
-                      >for..in</a
-                    ></code
-                  >
-                </p>
-                <p>(symbol を除く)</p>
-              </td>
-              <td>追加のコードが必要</td>
-              <td>追加のコードが必要</td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td>追加のコードが必要</td>
-    </tr>
-  </tbody>
-</table>
+「列挙可能プロパティ」は、内部の列挙可能 (enumerable) フラグが true に設定されているプロパティです。これは、単純な代入や初期化で作成されたプロパティのデフォルトです。[`Object.defineProperty`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) で追加したプロパティはデフォルトで列挙不可能になります。多くの反復処理（[`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループや [`Object.keys`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) など）は列挙可能なキーしか処理しません。
+
+プロパティの所有権は、そのプロパティがオブジェクトに直接属しており、プロトタイプチェーンに属しているものではないかどうかによって決まります。
+
+列挙可能か否か、文字列かシンボルか、固有のプロパティか継承されたプロパティかを問わず、すべてのプロパティは[ドット記法またはブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使用してアクセスできます。この節では、JavaScript が指定する、オブジェクトのプロパティ群を一つずつ順に参照する方法に焦点を当てます。
+
+## オブジェクトプロパティの問い合わせ
+
+オブジェクトのプロパティを照会する組み込みの方法は 4 つあります。すべて文字列キーとシンボルキーの両方に対応しています。次の表は、それぞれのメソッドがいつ `true` を返すかをまとめたものです。
+
+|                                                                                                          | 列挙可能、自身 | 列挙可能、継承 | 列挙不可、自身 | 列挙不可、継承 |
+| -------------------------------------------------------------------------------------------------------- | -------------- | -------------- | -------------- | -------------- |
+| [`propertyIsEnumerable()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) | `true ✅`      | `false ❌`     | `false ❌`     | `false ❌`     |
+| [`hasOwnProperty()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)             | `true ✅`      | `false ❌`     | `true ✅`      | `false ❌`     |
+| [`Object.hasOwn()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)                      | `true ✅`      | `false ❌`     | `true ✅`      | `false ❌`     |
+| [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in)                                                   | `true ✅`      | `true ✅`      | `true ✅`      | `true ✅`      |
+
+## オブジェクトのプロパティの走査
+
+JavaScript で、オブジェクトのプロパティ群を順に処理するメソッドが数多くあります。プロパティが配列として返される場合もあるし、ループ内で一つずつ反復処理される場合もあるし、あるいは別のオブジェクトの生成や変更に使用する場合もある。以下の表は、プロパティがいつ参照されるかをまとめたものです。
+
+文字列プロパティのみ、またはシンボルプロパティのみを参照するメソッドには、追加のメモが付いています。✅ はこの種のプロパティが参照されることを示し、❌ は参照されないことを示します。
+
+|                                                                                                                                                                                                                                                               | 列挙可能、自身       | 列挙可能、継承     | 列挙不可、自身       | 列挙不可、継承 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | ------------------ | -------------------- | -------------- |
+| [`Object.keys`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)<br />[`Object.values`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/values)<br />[`Object.entries`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/entries) | ✅<br />（文字列）   | ❌                 | ❌                   | ❌             |
+| [`Object.getOwnPropertyNames`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)                                                                                                                                                   | ✅<br />（文字列）   | ❌                 | ✅<br />（文字列）   | ❌             |
+| [`Object.getOwnPropertySymbols`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols)                                                                                                                                               | ✅<br />（シンボル） | ❌                 | ✅<br />（シンボル） | ❌             |
+| [`Object.getOwnPropertyDescriptors`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors)                                                                                                                                       | ✅                   | ❌                 | ✅                   | ❌             |
+| [`Reflect.ownKeys`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys)                                                                                                                                                                         | ✅                   | ❌                 | ✅                   | ❌             |
+| [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in)                                                                                                                                                                                           | ✅<br />（文字列）   | ✅<br />（文字列） | ❌                   | ❌             |
+| [`Object.assign`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)<br />(After the first parameter)                                                                                                                                            | ✅                   | ❌                 | ❌                   | ❌             |
+| [Object spread](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)                                                                                                                                                                                    | ✅                   | ❌                 | ❌                   | ❌             |
 
 ## 列挙可能性/所有権によるプロパティの取得
 
 以下に示すのは全てのケースで最も効率的なアルゴリズムではなく、簡潔なデモであることに注意してください。
 
-- 検出は以下の方法で行うことができます。
-  `SimplePropertyRetriever.使いたい get メソッド(obj).indexOf(prop) > -1`
-- 反復は以下の方法で行うことができます。
-  `SimplePropertyRetriever.使いたい get メソッド(obj).forEach(function (value, prop) {});` (または `filter()`, `map()` などを使う)
+- 検出は次のの方法で行うことができます。
+  `SimplePropertyRetriever.theGetMethodYouWant(obj).includes(prop)`
+- 反復は次のの方法で行うことができます。
+  `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach((value, prop) => {});` (または `filter()`, `map()` などを使う)
 
 ```js
-var SimplePropertyRetriever = {
-  getOwnEnumerables: function (obj) {
+const SimplePropertyRetriever = {
+  getOwnEnumProps(obj) {
     return this._getPropertyNames(obj, true, false, this._enumerable);
-    // Or could use for..in filtered with hasOwnProperty or just this: return Object.keys(obj);
+    // または、Object.hasOwn でフィルタリングするか、単に return Object.keys(obj); とすることもできる
   },
-  getOwnNonenumerables: function (obj) {
+  getOwnNonEnumProps(obj) {
     return this._getPropertyNames(obj, true, false, this._notEnumerable);
   },
-  getOwnEnumerablesAndNonenumerables: function (obj) {
+  getOwnProps(obj) {
     return this._getPropertyNames(
       obj,
       true,
       false,
       this._enumerableAndNotEnumerable,
     );
-    // Or just use: return Object.getOwnPropertyNames(obj);
+    // または。単に return Object.getOwnPropertyNames(obj); を使用
   },
-  getPrototypeEnumerables: function (obj) {
+  getPrototypeEnumProps(obj) {
     return this._getPropertyNames(obj, false, true, this._enumerable);
   },
-  getPrototypeNonenumerables: function (obj) {
+  getPrototypeNonEnumProps(obj) {
     return this._getPropertyNames(obj, false, true, this._notEnumerable);
   },
-  getPrototypeEnumerablesAndNonenumerables: function (obj) {
+  getPrototypeProps(obj) {
     return this._getPropertyNames(
       obj,
       false,
@@ -349,14 +86,14 @@ var SimplePropertyRetriever = {
       this._enumerableAndNotEnumerable,
     );
   },
-  getOwnAndPrototypeEnumerables: function (obj) {
+  getOwnAndPrototypeEnumProps(obj) {
     return this._getPropertyNames(obj, true, true, this._enumerable);
-    // Or could use unfiltered for..in
+    // Or could use unfiltered for...in
   },
-  getOwnAndPrototypeNonenumerables: function (obj) {
+  getOwnAndPrototypeNonEnumProps(obj) {
     return this._getPropertyNames(obj, true, true, this._notEnumerable);
   },
-  getOwnAndPrototypeEnumerablesAndNonenumerables: function (obj) {
+  getOwnAndPrototypeEnumAndNonEnumProps(obj) {
     return this._getPropertyNames(
       obj,
       true,
@@ -364,61 +101,47 @@ var SimplePropertyRetriever = {
       this._enumerableAndNotEnumerable,
     );
   },
-  // Private static property checker callbacks
-  _enumerable: function (obj, prop) {
-    return obj.propertyIsEnumerable(prop);
+  // プライベート性的プロパティのチェッカーコールバック
+  _enumerable(obj, prop) {
+    return Object.prototype.propertyIsEnumerable.call(obj, prop);
   },
-  _notEnumerable: function (obj, prop) {
-    return !obj.propertyIsEnumerable(prop);
+  _notEnumerable(obj, prop) {
+    return !Object.prototype.propertyIsEnumerable.call(obj, prop);
   },
-  _enumerableAndNotEnumerable: function (obj, prop) {
+  _enumerableAndNotEnumerable(obj, prop) {
     return true;
   },
   // Inspired by http://stackoverflow.com/a/8024294/271577
-  _getPropertyNames: function getAllPropertyNames(
-    obj,
-    iterateSelfBool,
-    iteratePrototypeBool,
-    includePropCb,
-  ) {
-    var props = [];
-
+  _getPropertyNames(obj, iterateSelf, iteratePrototype, shouldInclude) {
+    const props = [];
     do {
-      if (iterateSelfBool) {
-        Object.getOwnPropertyNames(obj).forEach(function (prop) {
-          if (props.indexOf(prop) === -1 && includePropCb(obj, prop)) {
+      if (iterateSelf) {
+        Object.getOwnPropertyNames(obj).forEach((prop) => {
+          if (props.indexOf(prop) === -1 && shouldInclude(obj, prop)) {
             props.push(prop);
           }
         });
       }
-      if (!iteratePrototypeBool) {
+      if (!iteratePrototype) {
         break;
       }
-      iterateSelfBool = true;
-    } while ((obj = Object.getPrototypeOf(obj)));
-
+      iterateSelf = true;
+      obj = Object.getPrototypeOf(obj);
+    } while (obj);
     return props;
   },
 };
 ```
 
-## 検出テーブル
-
-|                         | `in` | `for..in` | `obj.hasOwnProperty` | `obj.propertyIsEnumerable` | `Object.keys` | `Object.getOwnPropertyNames` | `Object.getOwnPropertyDescriptors` | `Reflect.ownKeys()` |
-| ----------------------- | ---- | --------- | -------------------- | -------------------------- | ------------- | ---------------------------- | ---------------------------------- | ------------------- |
-| 列挙可能                | true | true      | true                 | true                       | true          | true                         | true                               | true                |
-| 列挙不可能              | true | false     | true                 | false                      | false         | true                         | true                               | true                |
-| Symbols キー            | true | false     | true                 | true                       | false         | false                        | true                               | true                |
-| 継承された列挙可能      | true | true      | false                | false                      | false         | false                        | false                              | false               |
-| 継承された列挙不可能    | true | false     | false                | false                      | false         | false                        | false                              | false               |
-| 継承された Symbols キー | true | false     | false                | false                      | false         | false                        | false                              | false               |
-
 ## 関連情報
 
 - [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in)
 - [`for..in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in)
-- {{jsxref("Object.hasOwnProperty()")}}
-- {{jsxref("Object.propertyIsEnumerable()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.getOwnPropertyDescriptors()")}}
+- [`Object.prototype.hasOwnProperty()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
+- [`Object.prototype.propertyIsEnumerable()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable)
+- [`Object.getOwnPropertyNames()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
+- [`Object.getOwnPropertySymbols()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols)
+- [`Object.keys()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
+- [`Object.getOwnPropertyDescriptors()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors)
+- [`Object.hasOwn()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)
+- [`Reflect.ownKeys()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys)

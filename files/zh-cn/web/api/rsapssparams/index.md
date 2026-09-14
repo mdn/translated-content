@@ -14,7 +14,6 @@ l10n:
 - `name`
   - : 一个字符串，应设置为 `RSA-PSS`。
 - `saltLength`
-
   - : 一个表示要使用的随机盐长度（以字节为单位）的 `long` 型整数。
 
     [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) 指出，“典型的盐长度”为 0 或密钥[生成](/zh-CN/docs/Web/API/SubtleCrypto/generateKey)时所选的[摘要算法](/zh-CN/docs/Web/API/SubtleCrypto#支持的算法)的输出长度。例如，如果使用 [SHA-256](/zh-CN/docs/Web/API/SubtleCrypto/digest#支持的算法) 作为摘要算法，则盐长度可以是 32。

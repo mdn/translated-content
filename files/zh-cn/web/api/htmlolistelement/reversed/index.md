@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("HTMLOListElement")}} 接口的 **`reversed`** 属性表示列表的顺序。
 
-它反映了 {{HTMLElement("ol")}} 元素的 [`reversed`](/zh-CN/docs/Web/HTML/Element/ol#reversed) 属性。
+它反映了 {{HTMLElement("ol")}} 元素的 [`reversed`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#reversed) 属性。
 
 ## 值
 

@@ -1,12 +1,9 @@
 ---
 title: 406 Not Acceptable
 slug: Web/HTTP/Reference/Status/406
-original_slug: Web/HTTP/Status/406
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`406 Not Acceptable`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、リクエストの[積極的コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation#サーバー駆動型コンテンツネゴシエーション)のヘッダーで定義された受付可能な値に一致するレスポンスを、サーバーが生成できず、かつ、サーバーが既定の表現方法で提供することを望まないことを表します。
 

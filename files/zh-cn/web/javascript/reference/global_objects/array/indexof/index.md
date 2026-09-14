@@ -3,8 +3,6 @@ title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 ---
 
-{{JSRef}}
-
 **`indexOf()`** 方法返回数组中第一次出现给定元素的下标，如果不存在则返回 -1。
 
 {{InteractiveExample("JavaScript Demo: Array.indexOf()")}}

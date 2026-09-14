@@ -20,7 +20,7 @@ object.replace(url);
 ### Paramètres
 
 - _url_
-  - : {{domxref("DOMString")}} contenant l'URL de la page vers laquelle naviguer.
+  - : {{jsxref("String")}} contenant l'URL de la page vers laquelle naviguer.
 
 ## Exemples
 

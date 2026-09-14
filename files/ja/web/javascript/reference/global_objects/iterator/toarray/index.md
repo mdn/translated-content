@@ -1,11 +1,10 @@
 ---
 title: Iterator.prototype.toArray()
+short-title: toArray()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/toArray
 l10n:
-  sourceCommit: 06b418a190b8e4a46682ab706d14984e7db34862
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`toArray()`** は {{jsxref("Iterator")}} インスタンスのメソッドで、このイテレーターから取り出される要素で新しい {{jsxref("Array")}} インスタンスを作成します。
 
@@ -60,5 +59,6 @@ console.log(array); // [2, 8, 34]
 ## 関連情報
 
 - [`Iterator.prototype.toArray` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims による `Iterator.prototype.toArray` のポリフィル](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Array.from()")}}

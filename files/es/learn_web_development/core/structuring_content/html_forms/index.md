@@ -182,11 +182,11 @@ Como dijimos anteriormente, el elemento {{htmlelement("form")}} actúa como el c
 
 Puede incluir cualquier elemento HTML que desee dentro de un elemento `<form>` para estructurar los elementos del formulario y proporcionar contenedores para orientar con CSS para el estilo, etc.
 
-En nuestro ejemplo, hemos incluido un [elemento de encabezado](/es/docs/Web/HTML/Element/Heading_Elements) (`<h2>`) para describir el propósito del formulario.
+En nuestro ejemplo, hemos incluido un [elemento de encabezado](/es/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h2>`) para describir el propósito del formulario.
 
 También hemos colocado cada par entrada/etiqueta y el botón de envío dentro de un {{htmlelement("p")}} separado, de modo que cada uno aparezca en una línea separada. Todos estos elementos están en línea de forma predeterminada, lo que significa que si no hiciéramos esto, todos estarían en la misma línea.
 
-Este es un patrón común para la estructuración de formularios. Algunas personas usan elementos `<p>` para separar los elementos de su formulario, algunos usan {{htmlelement("div")}}, {{htmlelement("section")}} o incluso elementos {{htmlelement("li")}}. No importa mucho, siempre y cuando los elementos utilizados tengan sentido semántico. Por ejemplo, tiene sentido dividir los grupos de elementos de formulario en párrafos o secciones de contenido separados, o incluso en elementos de una lista. Tendría menos sentido representarlos como [citas en bloque](/es/docs/Web/HTML/Element/blockquote), [aparte](/es/docs/Web/HTML/Element/aside) o [direcciones](/es/docs/Web/HTML/Element/address).
+Este es un patrón común para la estructuración de formularios. Algunas personas usan elementos `<p>` para separar los elementos de su formulario, algunos usan {{htmlelement("div")}}, {{htmlelement("section")}} o incluso elementos {{htmlelement("li")}}. No importa mucho, siempre y cuando los elementos utilizados tengan sentido semántico. Por ejemplo, tiene sentido dividir los grupos de elementos de formulario en párrafos o secciones de contenido separados, o incluso en elementos de una lista. Tendría menos sentido representarlos como [citas en bloque](/es/docs/Web/HTML/Reference/Elements/blockquote), [aparte](/es/docs/Web/HTML/Reference/Elements/aside) o [direcciones](/es/docs/Web/HTML/Reference/Elements/address).
 
 Hay un elemento especializado para agrupar elementos de formulario llamado {{htmlelement("fieldset")}}. Esto es útil en determinadas circunstancias, como en formularios complejos y al agrupar varias casillas de verificación y botones de opción. Veremos un par de ejemplos de `<fieldset>` más adelante.
 
@@ -205,7 +205,7 @@ Los atributos son los siguientes:
 - `id`: Especifica una ID que se puede usar para identificar el elemento. En este caso, se utiliza para asociar el control de formulario con su `<label>`.
 - `required`: Especifica que se debe ingresar un valor en el elemento de formulario antes de que se pueda enviar el formulario. Esto solo debe configurarse en las entradas que requiera, no en los campos opcionales.
 
-Debe tener en cuenta que algunos tipos de entrada normalmente no obtienen sus valores del texto ingresado en un campo. Por ejemplo, [`<input type="color">`](/es/docs/Web/HTML/Element/input/color) representa un widget de selector de color del que elige un color, mientras que [`<input type="radio">`](/es/docs/Web/HTML/Element/input/radio) representa un control de botón de opción que se puede seleccionar o no.
+Debe tener en cuenta que algunos tipos de entrada normalmente no obtienen sus valores del texto ingresado en un campo. Por ejemplo, [`<input type="color">`](/es/docs/Web/HTML/Reference/Elements/input/color) representa un widget de selector de color del que elige un color, mientras que [`<input type="radio">`](/es/docs/Web/HTML/Reference/Elements/input/radio) representa un control de botón de opción que se puede seleccionar o no.
 
 En el caso de los botones de opción, generalmente necesita proporcionar el valor que se enviaría si se selecciona dentro de un atributo `value` específico. Nota que puedes especificar un atributo `value` en tipos de entrada como `text` y `color`; el efecto es que el valor se rellena previamente en el campo de formulario cuando se representa por primera vez.
 
@@ -219,13 +219,13 @@ En el caso de los botones de opción, generalmente necesita proporcionar el valo
 
 #### Entradas especializadas de campo de texto
 
-El segundo ejercicio anterior plantea un punto interesante. El segundo campo de entrada espera específicamente una dirección de correo electrónico y valida los valores ingresados como tales. Si mira el código del formulario nuevamente, verá por qué: el segundo `<input>` tiene un `type` de `email`. Hay varios tipos de entrada de campo de texto especializados diseñados para manejar tipos de datos específicos: [`<input type="number">`](/es/docs/Web/HTML/Element/input/number), [`<input type="password">`](/es/docs/Web/HTML/Element/input/password), [`<input type="tel">`](/es/docs/Web/HTML/Element/input/tel), etc.
+El segundo ejercicio anterior plantea un punto interesante. El segundo campo de entrada espera específicamente una dirección de correo electrónico y valida los valores ingresados como tales. Si mira el código del formulario nuevamente, verá por qué: el segundo `<input>` tiene un `type` de `email`. Hay varios tipos de entrada de campo de texto especializados diseñados para manejar tipos de datos específicos: [`<input type="number">`](/es/docs/Web/HTML/Reference/Elements/input/number), [`<input type="password">`](/es/docs/Web/HTML/Reference/Elements/input/password), [`<input type="tel">`](/es/docs/Web/HTML/Element/input/tel), etc.
 
 > [!CALLOUT]
 >
 > **Pruébalo**
 >
-> Siga algunos de los enlaces anteriores para averiguar para qué se utilizan estos tipos de entrada. Eche un vistazo a nuestra referencia [`<input>`](/es/docs/Web/HTML/Element/input) y vea si puede encontrar más tipos de entrada de campo de texto especializados.
+> Siga algunos de los enlaces anteriores para averiguar para qué se utilizan estos tipos de entrada. Eche un vistazo a nuestra referencia [`<input>`](/es/docs/Web/HTML/Reference/Elements/input) y vea si puede encontrar más tipos de entrada de campo de texto especializados.
 
 ### Elementos `<label>`
 
@@ -272,7 +272,7 @@ Existen otros comportamientos de los botones que se pueden especificar a través
 
 > [!NOTE]
 >
-> También puede crear los tipos de botones anteriores utilizando un elemento `<input>` con los mismos valores de `type` especificados: [`<input type="submit">`](/es/docs/Web/HTML/Element/input/submit), [`<input type="reset">`](/es/docs/Web/HTML/Element/input/reset) y [`<input type="button">`](/es/docs/Web/HTML/Element/input/button). Sin embargo, estos tienen muchas desventajas en comparación con sus homólogos `<button>`. Debe utilizar `<button>` en su lugar.
+> También puede crear los tipos de botones anteriores utilizando un elemento `<input>` con los mismos valores de `type` especificados: [`<input type="submit">`](/es/docs/Web/HTML/Element/input/submit), [`<input type="reset">`](/es/docs/Web/HTML/Element/input/reset) y [`<input type="button">`](/es/docs/Web/HTML/Reference/Elements/input/button). Sin embargo, estos tienen muchas desventajas en comparación con sus homólogos `<button>`. Debe utilizar `<button>` en su lugar.
 
 ## Sobre la accesibilidad
 
@@ -364,7 +364,7 @@ Recomendamos que abra este ejemplo en una pestaña separada del navegador mientr
 
 ### Botones de radio
 
-Los botones "Elija el tipo de habitación de hotel" se implementan utilizando controles [`<input type="radio">`](/es/docs/Web/HTML/Element/input/radio). Estos se representan como un conjunto de controles de botón en los que solo se puede seleccionar uno del conjunto a la vez; no puede seleccionar más de uno a la vez. Llevan el nombre de los botones que se encuentran en las radios antiguas, donde se presiona un botón y el seleccionado previamente vuelve a aparecer.
+Los botones "Elija el tipo de habitación de hotel" se implementan utilizando controles [`<input type="radio">`](/es/docs/Web/HTML/Reference/Elements/input/radio). Estos se representan como un conjunto de controles de botón en los que solo se puede seleccionar uno del conjunto a la vez; no puede seleccionar más de uno a la vez. Llevan el nombre de los botones que se encuentran en las radios antiguas, donde se presiona un botón y el seleccionado previamente vuelve a aparecer.
 
 Nuestro código de ejemplo se ve así:
 
@@ -415,7 +415,7 @@ Puede establecer el atributo `disabled` en cualquier control de formulario, incl
 
 ### Casillas de verificación
 
-Nuestros selectores "clases a las que asistir" se implementan utilizando controles [`<input type="checkbox">`](/es/docs/Web/HTML/Element/input/checkbox). estos se representan como un conjunto de casillas de verificación de estado activado/desactivado. A diferencia de los botones de opción, puede seleccionar más de uno a la vez.
+Nuestros selectores "clases a las que asistir" se implementan utilizando controles [`<input type="checkbox">`](/es/docs/Web/HTML/Reference/Elements/input/checkbox). estos se representan como un conjunto de casillas de verificación de estado activado/desactivado. A diferencia de los botones de opción, puede seleccionar más de uno a la vez.
 
 ```html-nolint
 <fieldset>

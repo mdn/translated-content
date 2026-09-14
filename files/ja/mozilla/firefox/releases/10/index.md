@@ -3,8 +3,6 @@ title: Firefox 10 for developers
 slug: Mozilla/Firefox/Releases/10
 ---
 
-{{FirefoxSidebar}}
-
 Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日にリリースされました。このページでは、開発者に影響する Firefox 10 の変更点をまとめています。
 
 > [!NOTE]
@@ -15,7 +13,7 @@ Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日に�
 ### HTML
 
 - 方向が異なるテキストの部分を分離することを可能にする、HTML5 の {{ HTMLElement("bdi") }} (bi-directional isolation) 要素が実装されました。これは、既知の方向のテキスト内に未知の方向のテキスト (例えばデータベースから取り出したテキストで、方向が異なる可能性がある) を表示する場合に特に有用です。
-- [`href`](/ja/docs/Web/HTML/Element/a#href) 属性に、ページ先頭へのリンクを作成するための断片 "top" を指定可能になりました。これは過去に動作していてその後一時的に削除されていましたが、HTML5 仕様書との互換性のため再び動作するようになりました。例: `<a href="#top">Return to top of page</a>`.
+- [`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性に、ページ先頭へのリンクを作成するための断片 "top" を指定可能になりました。これは過去に動作していてその後一時的に削除されていましたが、HTML5 仕様書との互換性のため再び動作するようになりました。例: `<a href="#top">Return to top of page</a>`.
 
 ### JavaScript
 
@@ -54,8 +52,8 @@ Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日に�
 
 #### Canvas
 
-- [`createPattern()`](/ja/docs/DOM/CanvasRenderingContext2D#createPattern%28%29) メソッドは、サイズが 0 の canvas が指定された場合に例外が発生するようになりました。
-- 仕様書に準拠するため、[`putImageData()`](/ja/docs/DOM/CanvasRenderingContext2D#putImageData%28%29) の数値引数のいずれかに有限値でない値を与えたときに例外が発生するのではなく、値を無視するようになりました。
+- [`createPattern()`](/ja/docs/Web/API/CanvasRenderingContext2D#createPattern%28%29) メソッドは、サイズが 0 の canvas が指定された場合に例外が発生するようになりました。
+- 仕様書に準拠するため、[`putImageData()`](/ja/docs/Web/API/CanvasRenderingContext2D#putImageData%28%29) の数値引数のいずれかに有限値でない値を与えたときに例外が発生するのではなく、値を無視するようになりました。
 
 #### WebGL
 
@@ -65,7 +63,7 @@ Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日に�
 #### Web Workers
 
 - [Workers](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#section_2) 内で `XMLHttpRequest.responseType` 属性および `XMLHttpRequest.response` 属性が利用可能になりました。
-- [`Worker()`](</ja/docs/DOM/Worker#Worker()> "DOM/Worker#Worker()") コンストラクターが [data URIs](/ja/docs/Web/URI/Reference/Schemes/data) を受け入れるようになりました。
+- [`Worker()`](</ja/docs/Web/API/Worker#Worker()> "DOM/Worker#Worker()") コンストラクターが [data URIs](/ja/docs/Web/URI/Reference/Schemes/data) を受け入れるようになりました。
 
 #### IndexedDB
 
@@ -74,10 +72,10 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 - [`IDBIndex.count()`](/ja/docs/Web/API/IDBIndex#count) メソッドおよび [`IDBObjectStore.count()`](/ja/docs/Web/API/IDBObjectStore#count) メソッドが追加されました。
 - [`IDBCursor.advance()`](/ja/docs/Web/API/IDBCursor#advance) メソッドが追加されました。
 - [`IDBObjectStore.createIndex()`](/ja/docs/Web/API/IDBObjectStore#createindex) および [`IDBDatabase.createObjectStore()`](/ja/docs/Web/API/IDBDatabase#createobjectstore) で未知のオプション引数が渡されたとき、Gecko は例外を発生させるのではなくそれを無視するようになりました。
-- [`IDBTransaction.abort()`](/ja/docs/IndexedDB/IDBTransaction#abort%28%29) が呼び出されると、待機状態にあるすべての [`IDBRequest`](/ja/docs/Web/API/IDBRequest) は `errorCode` を `ABORT_ERROR` に設定します。
-- [`IDBObjectStore.delete()`](</ja/docs/IndexedDB/IDBObjectStore#delete()> "IndexedDB/IDBObjectStore#delete()") メソッドおよび [`IDBCursor.delete()`](</ja/docs/IndexedDB/IDBCursor#delete()> "IndexedDB/IDBCursor#delete()") メソッドは、戻り値となる [`IDBRequest`](/ja/docs/Web/API/IDBRequest) の `result` 属性の値を `undefined` にするようになりました。
-- 最新の仕様書で削除されたため、[`IDBDatabase.setVersion()`](</ja/docs/IndexedDB/IDBDatabase#setVersion()> "IndexedDB/IDBDatabase#setVersion()") メソッドは削除されました。データベースのバージョンは、更新された [`IDBFactory.open()`](/ja/docs/Web/API/IDBFactory#open) メソッドで渡すことができ、`onupgradeneeded` コールバックでデータベースのスキーマの更新が可能になります。なお、バージョンの型は `DOMString` から `unsigned long long` に替わりました。また、[`IDBVersionChangeRequest`](/ja/docs/IndexedDB/IDBVersionChangeRequest) インターフェイスは削除され、新たな [`IDBOpenDBRequest`](/ja/docs/Web/API/IDBOpenDBRequest) インターフェイスに置き換えられました。
-- [`IDBFactory.deleteDatabase()`](/ja/docs/IndexedDB/IDBFactory#deleteDatabase%28%29) メソッドが追加されました。
+- [`IDBTransaction.abort()`](/ja/docs/Web/API/IDBTransaction#abort%28%29) が呼び出されると、待機状態にあるすべての [`IDBRequest`](/ja/docs/Web/API/IDBRequest) は `errorCode` を `ABORT_ERROR` に設定します。
+- [`IDBObjectStore.delete()`](</ja/docs/Web/API/IDBObjectStore#delete()> "IndexedDB/IDBObjectStore#delete()") メソッドおよび [`IDBCursor.delete()`](</ja/docs/Web/API/IDBCursor#delete()> "IndexedDB/IDBCursor#delete()") メソッドは、戻り値となる [`IDBRequest`](/ja/docs/Web/API/IDBRequest) の `result` 属性の値を `undefined` にするようになりました。
+- 最新の仕様書で削除されたため、[`IDBDatabase.setVersion()`](</ja/docs/Web/API/IDBDatabase#setVersion()> "IndexedDB/IDBDatabase#setVersion()") メソッドは削除されました。データベースのバージョンは、更新された [`IDBFactory.open()`](/ja/docs/Web/API/IDBFactory#open) メソッドで渡すことができ、`onupgradeneeded` コールバックでデータベースのスキーマの更新が可能になります。なお、バージョンの型は `DOMString` から `unsigned long long` に替わりました。また、[`IDBVersionChangeRequest`](/ja/docs/IndexedDB/IDBVersionChangeRequest) インターフェイスは削除され、新たな [`IDBOpenDBRequest`](/ja/docs/Web/API/IDBOpenDBRequest) インターフェイスに置き換えられました。
+- [`IDBFactory.deleteDatabase()`](/ja/docs/Web/API/IDBFactory#deleteDatabase%28%29) メソッドが追加されました。
 
 #### その他の変更点
 
@@ -90,11 +88,11 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 
 ### CSS
 
-- CSS 3D Transforms がサポートされました。これには {{ cssxref("transform-style") }}、{{ cssxref("perspective") }}、{{ cssxref("perspective-origin") }}、{{ cssxref("backface-visibility") }} の各プロパティ、また同様に {{ cssxref("transform") }} および {{ cssxref("transform-function") }} プロパティによる 3D transform 機能が含まれます。詳しくは [Using CSS transforms](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms#3d_specific_css_properties) をご覧ください。
+- CSS 3D Transforms がサポートされました。これには {{ cssxref("transform-style") }}、{{ cssxref("perspective") }}、{{ cssxref("perspective-origin") }}、{{ cssxref("backface-visibility") }} の各プロパティ、また同様に {{ cssxref("transform") }} および {{ cssxref("transform-function") }} プロパティによる 3D transform 機能が含まれます。詳しくは [Using CSS transforms](/ja/docs/Web/CSS/Guides/Transforms/Using#3d_specific_css_properties) をご覧ください。
 - {{ cssxref("unicode-bidi") }} CSS プロパティへ、新たに 2 つの値 `-moz-isolation` および `-moz-plaintext` が追加されました。値 `-moz-isolation` は、要素がその環境から受けるテキストの方向の見解から切り離すことで、異なる方向のテキストであることを示すことができます。`unicode-bidi:-moz-isolation` を指定した要素は、 {{ HTMLElement("bdi") }} 要素のように動作します。値 `-moz-plaintext` は、テキストの方向の決定に CSS の {{ cssxref("direction") }} プロパティではなく Unicode のヒューリスティックな方法を用いることを示します。
 - CSS の {{ cssxref("linear-gradient") }} プロパティおよび {{ cssxref("repeating-linear-gradient") }} プロパティは、新たに `to` 構文と _magic corner_ アルゴリズムをサポートするよう更新されました。これにより、グラデーションが描画されたボックスの隅へ精密に色を配置することができます。
-- {{ cssxref("text-overflow") }} プロパティに処理法が一つだけ指定されている場合に、ボックスの両側へオーバーフローする場合の `text-overflow` の扱いが [正しくなりました](/ja/docs/Web/CSS/text-overflow#gecko_notes)。
-- ポジショニングされた {{ HTMLElement("table") }} 要素内部での {{ cssxref("position") }} プロパティの扱いが [修正されました](/ja/docs/Web/CSS/position#gecko_notes)。**この変更はページのレイアウトに影響を与えますが、CSS 仕様書や他のブラウザーに従うことになりますので、レイアウトの修正は容易でしょう。**
+- {{ cssxref("text-overflow") }} プロパティに処理法が一つだけ指定されている場合に、ボックスの両側へオーバーフローする場合の `text-overflow` の扱いが [正しくなりました](/ja/docs/Web/CSS/Reference/Properties/text-overflow#gecko_notes)。
+- ポジショニングされた {{ HTMLElement("table") }} 要素内部での {{ cssxref("position") }} プロパティの扱いが [修正されました](/ja/docs/Web/CSS/Reference/Properties/position#gecko_notes)。**この変更はページのレイアウトに影響を与えますが、CSS 仕様書や他のブラウザーに従うことになりますので、レイアウトの修正は容易でしょう。**
 - {{ HTMLElement("table") }} 要素のマージンの相殺が、CSS 仕様書に合致するようになりました。以前は table 要素のマージンは隣接する要素のマージンと相殺されなかったため、正しくないレイアウトになっていました。**この変更はページのレイアウトに影響を与えますが、CSS 仕様書や他のブラウザーに従うことになりますので、レイアウトの修正は容易でしょう。**
 
 ### SVG

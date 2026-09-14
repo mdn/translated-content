@@ -18,7 +18,7 @@ let srcset = htmlImageElement.srcset;
 
 ### Значение
 
-A {{domxref("USVString")}} containing a comma-separated list of one or more image candidate strings to be used when determining which image resource to present inside the {{HTMLElement("img")}} element represented by the `HTMLImageElement`_._
+A {{jsxref("String")}} containing a comma-separated list of one or more image candidate strings to be used when determining which image resource to present inside the {{HTMLElement("img")}} element represented by the `HTMLImageElement`_._
 
 Each image candidate string must begin with a valid URL referencing a non-interactive graphic resource. This is followed by a comma (`,`) character and then a condition descriptor that indicates the circumstances in which the indicated image should be used. Space characters, other than the whitespace separating the URL and the corresponding condition descriptor, are ignored; this includes both leading and trailing space, as well as space before or after each comma.
 
@@ -103,7 +103,7 @@ In the displayed output below, the selected URL will correspond with whether you
 
 {{EmbedLiveSample("Пример", 640, 320)}}
 
-For additional examples, see our guide to [responsive images](/ru/docs/Web/HTML/Responsive_images).
+For additional examples, see our guide to [responsive images](/ru/docs/Web/HTML/Guides/Responsive_images).
 
 ## Спецификации
 
@@ -116,5 +116,5 @@ For additional examples, see our guide to [responsive images](/ru/docs/Web/HTML/
 ## Смотрите также
 
 - [Images in HTML](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_images)
-- [Responsive images](/ru/docs/Web/HTML/Responsive_images)
+- [Responsive images](/ru/docs/Web/HTML/Guides/Responsive_images)
 - [Image file type and format guide](/ru/docs/Web/Media/Formats/Image_types)

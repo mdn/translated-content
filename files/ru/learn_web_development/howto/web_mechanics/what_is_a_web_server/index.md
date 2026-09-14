@@ -3,7 +3,7 @@ title: Что такое веб-сервер
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
 
 В этой статье мы узнаем, что из себя представляют веб-серверы, как они работают, и почему они так важны.
 

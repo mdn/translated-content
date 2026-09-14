@@ -1,29 +1,43 @@
 ---
-title: Document.createDocumentFragment()
+title: Document：createDocumentFragment() 方法
 slug: Web/API/Document/createDocumentFragment
+l10n:
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM WHATWG")}}
 
-建立新的 {{domxref("DocumentFragment")}}.
+建立一個新的空的 {{domxref("DocumentFragment")}}，可以將 DOM 節點新增到其中以建立畫面外 DOM 樹。
 
 ## 語法
 
-```plain
-var fragment = document.createDocumentFragment();
+```js-nolint
+createDocumentFragment()
 ```
 
-`fragment` 是 {{domxref("DocumentFragment")}} 的一個參考物件。
+### 參數
 
-## 描述
+無。
 
-`DocumentFragment`s 是 DOM 節點(Nodes)。他們不會成為 DOM 主幹的一部份。最常見的作法是先建立文本片段 (document fragment)，然後將元素 (element) 加入文本片段中，最後再將文本片段加入 DOM 樹中。在 DOM 樹中，文本片段將會被他所有的子元素取代。
+### 回傳值
 
-正因為文本片段是存在**記憶體**中，並且不是 DOM 主幹的一部分，增加子元素並不會導致網頁[重刷](https://developers.google.com/speed/docs/insights/browser-reflow)（重新計算元素的位置和幾何）。因此採用文本片段通常會有[比較好的效能表現](https://johnresig.com/blog/dom-documentfragments/)。
+一個新建立的、空的 {{domxref("DocumentFragment")}} 物件，準備好可以插入節點。
 
-## 舉例
+## 使用說明
 
-這個例子中用清單來呈現主流瀏覽器。
+`DocumentFragment` 是一種 DOM {{domxref("Node")}} 物件，永遠不會成為主要 DOM 樹的一部分。一般的使用場景是先建立文件片段，將元素附加到文件片段中，然後再將文件片段附加到 DOM 樹。在 DOM 樹中，文件片段會被其所有子元素取代。
+
+由於文件片段*在記憶體中*且不屬於主 DOM 樹的一部分，在某些舊版引擎中使用文件片段可能會帶來[更好的效能](https://johnresig.com/blog/dom-documentfragments/)。
+
+你也可以使用 `DocumentFragment` 建構子來建立新的片段：
+
+```js
+const fragment = new DocumentFragment();
+```
+
+## 範例
+
+此範例在一個 `DocumentFragment` 中建立主要 Web 瀏覽器的清單，然後將新的 DOM 子樹新增到文件中以顯示。
 
 ### HTML
 
@@ -34,12 +48,12 @@ var fragment = document.createDocumentFragment();
 ### JavaScript
 
 ```js
-var element = document.getElementById("ul"); // assuming ul exists
-var fragment = document.createDocumentFragment();
-var browsers = ["Firefox", "Chrome", "Opera", "Safari", "Internet Explorer"];
+const element = document.getElementById("ul"); // 假設 ul 存在
+const fragment = document.createDocumentFragment();
+const browsers = ["Firefox", "Chrome", "Opera", "Safari"];
 
-browsers.forEach(function (browser) {
-  var li = document.createElement("li");
+browsers.forEach((browser) => {
+  const li = document.createElement("li");
   li.textContent = browser;
   fragment.appendChild(li);
 });
@@ -49,9 +63,9 @@ element.appendChild(fragment);
 
 ### 結果
 
-在 [jsfiddle](https://jsfiddle.net/a0nn690f/) 上看範例結果。
+{{EmbedLiveSample("範例", 600, 140)}}
 
-## 規格
+## 規範
 
 {{Specifications}}
 
@@ -59,7 +73,7 @@ element.appendChild(fragment);
 
 {{Compat}}
 
-## 更多參考
+## 參見
 
 - {{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
 - {{domxref("documentFragment")}}

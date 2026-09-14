@@ -1,11 +1,10 @@
 ---
 title: "React での操作の実装: 編集、絞り込み、条件付きレンダリング"
+short-title: React での編集、絞り込み、条件付き UI
 slug: Learn_web_development/Core/Frameworks_libraries/React_interactivity_filtering_conditional_rendering
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 611edf6335e4a833a6f394d0d98b117e7b0a36bf
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state","Learn_web_development/Core/Frameworks_libraries/React_accessibility", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -32,8 +31,7 @@ React の旅も終わりに近づいてきました（これで終わりです�
 
 ## タスクの名前の編集
 
-タスクの名前を編集するためのユーザーインターフェイスはまだありません。 すぐに実装に取り掛かりましょう。 まずは、少なくとも `App.jsx` に `editTask()` 関数を実装します。 `deleteTask()` 関数と似たようなものになりますが、対象のオブジェクトを見つけるために `id` を必要とする点が異なります。また、タスクの名前を更新するための `newName` プロパティも必要となります。
-配列から何かを削除するのではなく、いくつかの変更を加えた新しい配列を返したいので、 [`Array.prototype.map()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map) を [`Array.prototype.filter()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) の代わりに使用します。
+タスクの名前を編集するためのユーザーインターフェイスはまだありません。 すぐに実装に取り掛かりましょう。 まずは、少なくとも `App.jsx` に `editTask()` 関数を実装します。 `deleteTask()` 関数と似たようなものになりますが、対象のオブジェクトを見つけるために `id` を必要とする点が異なります。また、タスクの名前を更新するための `newName` プロパティも必要となります。配列から何かを削除するのではなく、いくつかの変更を加えた新しい配列を返したいので、 [`Array.prototype.map()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map) を [`Array.prototype.filter()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) の代わりに使用します。
 
 `editTask()` 関数を `<App />` コンポーネント内に、他にも関数があるのと同じ場所に追加します。
 
@@ -235,6 +233,8 @@ function handleSubmit(e) {
 
 ```jsx
 <form className="stack-small" onSubmit={handleSubmit}>
+  {/* … */}
+</form>
 ```
 
 これでブラウザー上でタスクを編集できるようになっているはずです。この時点で、 `Todo.jsx` ファイルは次のようになっているはずです。
@@ -387,15 +387,17 @@ const filterList = FILTER_NAMES.map((name) => (
 これで、 `App.jsx` 内の 3 つの繰り返し `<FilterButton />` をこの `filterList` で置き換えます。次の部分を置き換えてください。
 
 ```jsx
-<FilterButton />
-<FilterButton />
-<FilterButton />
+<div className="filters btn-group stack-exception">
+  <FilterButton />
+  <FilterButton />
+  <FilterButton />
+</div>
 ```
 
 これを次のもので置き換えます。
 
-```jsx-nolint
-{filterList}
+```jsx
+<div className="filters btn-group stack-exception">{filterList}</div>
 ```
 
 これはまだ動作しません。最初の作業がまだ残っています。

@@ -3,8 +3,6 @@ title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
 
-{{AddonSidebar}}
-
 > [!NOTE]
 > 本文描述的是适用于 web 扩展技术的 manifest.json。若你正在寻找适用于 PWA 的 manifest.json 的有关信息，请参考这篇文章：[Web App 清单](/zh-CN/docs/Web/Progressive_web_apps/Manifest)。
 
@@ -41,7 +39,6 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json
 - [incognito](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito)
 - [manifest_version](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)
 - [name](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
-- [offline_enabled](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled)
 - [omnibox](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)
 - [optional_permissions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)
 - [options_page](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page)

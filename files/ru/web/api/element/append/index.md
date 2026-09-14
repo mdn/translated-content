@@ -5,11 +5,11 @@ slug: Web/API/Element/append
 
 {{APIRef("DOM")}}
 
-Метод **`Element.append()`** вставляет {{domxref("Node", "узлы")}} или {{domxref("DOMString", "строки с текстом")}} в конец `Element`. {{domxref("DOMString", "Строки с текстом")}} вставляются как {{domxref("Text", "текстовое содержимое")}}.
+Метод **`Element.append()`** вставляет {{domxref("Node", "узлы")}} или {{jsxref("String", "строки с текстом")}} в конец `Element`. {{jsxref("String", "Строки с текстом")}} вставляются как {{domxref("Text", "текстовое содержимое")}}.
 
 Отличия от метода {{domxref("Node.appendChild()")}}:
 
-- Метод `Element.append()` позволяет вставлять {{domxref("DOMString", "строки с текстом")}}, в то время как `Node.appendChild()` работает только с {{domxref("Node", "узлами")}}.
+- Метод `Element.append()` позволяет вставлять {{jsxref("String", "строки с текстом")}}, в то время как `Node.appendChild()` работает только с {{domxref("Node", "узлами")}}.
 - При вызове метод `Element.append()` ничего не возвращает, в то время как `Node.appendChild()` возвращает вставленный {{domxref("Node", "узел")}}.
 - С помощью `Element.append()` можно вставить сразу несколько узлов или строк текста, в то время как `Node.appendChild()` умеет вставлять по одной сущности за раз.
 
@@ -22,7 +22,7 @@ append(...nodesOrDOMStrings);
 ### Аргументы
 
 - `nodesOrDOMStrings`
-  - : Один или несколько {{domxref("Node", "узлов")}} или {{domxref("DOMString", "строк с текстом")}}, которые необходимо вставить.
+  - : Один или несколько {{domxref("Node", "узлов")}} или {{jsxref("String", "строк с текстом")}}, которые необходимо вставить.
 
 ### Исключения
 

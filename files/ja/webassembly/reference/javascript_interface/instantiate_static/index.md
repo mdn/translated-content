@@ -8,11 +8,11 @@ original_slug: WebAssembly/JavaScript_interface/instantiate_static
 
 **`WebAssembly.instantiate()`** 関数は WebAssembly コードをコンパイルおよびインスタンス化することができます。この関数は 2 つのオーバーロードを持ちます。
 
-- 第一のオーバーロードは、 [型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays) または {{jsxref("ArrayBuffer")}} で表現された WebAssembly バイナリーコードを受け取り、そして、コンパイルとインスタンス化の両方を 1 ステップで行います。返された `Promise` は解決時にコンパイルされた {{jsxref("WebAssembly.Module")}} と最初の {{jsxref("WebAssembly.Instance")}} を渡します。
-- 第二のオーバーロードは、すでにコンパイルされた {{jsxref("WebAssembly.Module")}} を受け取り、解決時にその `Module` の `Instance` を渡す `Promise` を返します。このオーバーロードは、すでに `Module` がコンパイル済みの場合に有用です。
+- 第一のオーバーロードは、 [型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays) または {{jsxref("ArrayBuffer")}} で表現された WebAssembly バイナリーコードを受け取り、そして、コンパイルとインスタンス化の両方を 1 ステップで行います。返された `Promise` は解決時にコンパイルされた [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) と最初の [`WebAssembly.Instance`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instance) を渡します。
+- 第二のオーバーロードは、すでにコンパイルされた [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) を受け取り、解決時にその `Module` の `Instance` を渡す `Promise` を返します。このオーバーロードは、すでに `Module` がコンパイル済みの場合に有用です。
 
 > [!WARNING]
-> このメソッドは wasm モジュールの読み込みとインスタンス化に最も効率的な方法ではありません。可能であれば、代わりにもっと新しい {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用すれば、生のバイトコードから直接モジュールの読み込み、コンパイル、インスタンス化を 1 ステップで行うことができ、 {{jsxref("ArrayBuffer")}} へ変換する必要がありません。
+> このメソッドは wasm モジュールの読み込みとインスタンス化に最も効率的な方法ではありません。可能であれば、代わりにもっと新しい [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) メソッドを使用すれば、生のバイトコードから直接モジュールの読み込み、コンパイル、インスタンス化を 1 ステップで行うことができ、 {{jsxref("ArrayBuffer")}} へ変換する必要がありません。
 
 ## 構文
 
@@ -27,19 +27,19 @@ Promise<ResultObject> WebAssembly.instantiate(bufferSource, importObject);
 - _bufferSource_
   - : コンパイルする .wasm モジュールを含む [型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays) または {{jsxref("ArrayBuffer")}}。
 - _importObject_ {{optional_inline}}
-  - : 関数や {{jsxref("WebAssembly.Memory")}} オブジェクトなどの新しく生成される `Instance` にインポートされる値を持つオブジェクト。モジュール内で宣言されたインポートそれぞれに対応するプロパティが存在する必要があります。そうでない場合、 {{jsxref("WebAssembly.LinkError")}} がスローされます。
+  - : 関数や [`WebAssembly.Memory`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory) オブジェクトなどの新しく生成される `Instance` にインポートされる値を持つオブジェクト。モジュール内で宣言されたインポートそれぞれに対応するプロパティが存在する必要があります。そうでない場合、 [`WebAssembly.LinkError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/LinkError) がスローされます。
 
 #### 返値
 
 解決時に次の 2 つのフィールドを持つ `ResultObject` を渡す `Promise`。
 
-- `module`: コンパイルされた {{jsxref("WebAssembly.Module")}} オブジェクト。この `Module` は再度インスタンス化することや、 {{domxref("Worker.postMessage", "postMessage()")}} 経由で共有したり、 [IndexedDB にキャッシュ](/ja/docs/WebAssembly/Caching_modules)することができます。
-- `instance`: {{jsxref("WebAssembly.Instance")}} オブジェクトで、すべての [エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions) を含む。
+- `module`: コンパイルされた [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) オブジェクト。この `Module` は再度インスタンス化することや、 {{domxref("Worker.postMessage", "postMessage()")}} 経由で共有したり、 [IndexedDB にキャッシュ](/ja/docs/WebAssembly/Caching_modules)することができます。
+- `instance`: [`WebAssembly.Instance`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instance) オブジェクトで、すべての [エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions) を含む。
 
 #### 例外
 
 - いずれかの引数が正しい型、または構造でない場合、 {{jsxref("TypeError")}} がスローされます。
-- 失敗した場合、プロミスは失敗の原因に応じて {{jsxref("WebAssembly.CompileError")}}, {{jsxref("WebAssembly.LinkError")}}, {{jsxref("WebAssembly.RuntimeError")}} をもって棄却されます。
+- 失敗した場合、プロミスは失敗の原因に応じて [`WebAssembly.CompileError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/CompileError), [`WebAssembly.LinkError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/LinkError), [`WebAssembly.RuntimeError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError) をもって棄却されます。
 
 ### 第二のオーバーロード — モジュールオブジェクトのインスタンスを取る
 
@@ -50,26 +50,26 @@ Promise<WebAssembly.Instance> WebAssembly.instantiate(module, importObject);
 #### 引数
 
 - _module_
-  - : インスタンス化する {{jsxref("WebAssembly.Module")}} オブジェクト。
+  - : インスタンス化する [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) オブジェクト。
 - _importObject_ {{optional_inline}}
-  - : 関数や {{jsxref("WebAssembly.Memory")}} オブジェクトなどの新しく生成される `Instance` にインポートされる値を含むオブジェクト。宣言されたモジュールのインポートごとに 1 つの一致するプロパティが存在する必要があります。そうでない場合、 {{jsxref("WebAssembly.LinkError")}} がスローされます。
+  - : 関数や [`WebAssembly.Memory`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory) オブジェクトなどの新しく生成される `Instance` にインポートされる値を含むオブジェクト。宣言されたモジュールのインポートごとに 1 つの一致するプロパティが存在する必要があります。そうでない場合、 [`WebAssembly.LinkError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/LinkError) がスローされます。
 
 #### 返値
 
-解決時に {{jsxref("WebAssembly.Instance")}} オブジェクトを渡す `Promise` 。
+解決時に [`WebAssembly.Instance`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instance) オブジェクトを渡す `Promise` 。
 
 #### 例外
 
 - いずれかの引数が正しくない型や構造のオブジェクトの場合、 {{jsxref("TypeError")}} がスローされます。
-- 失敗した場合、プロミスは失敗の原因に応じて {{jsxref("WebAssembly.CompileError")}}, {{jsxref("WebAssembly.LinkError")}}, {{jsxref("WebAssembly.RuntimeError")}} をもって棄却されます。
+- 失敗した場合、プロミスは失敗の原因に応じて [`WebAssembly.CompileError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/CompileError), [`WebAssembly.LinkError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/LinkError), [`WebAssembly.RuntimeError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError) をもって棄却されます。
 
 ## 例
 
-**注**: おそらく多くの場合は {{jsxref("WebAssembly.instantiateStreaming()")}} を使用したほうが、 `instantiate()` よりも効率的でしょう。
+**注**: おそらく多くの場合は [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) を使用したほうが、 `instantiate()` よりも効率的でしょう。
 
 ### 第一のオーバーロードの例
 
-fetch を使用して WebAssembly バイトコードを読み込んだ後、 {{jsxref("WebAssembly.instantiate()")}} 関数を使用してモジュールをコンパイル、インスタンス化し、その処理中に JavaScript の関数を WebAssembly モジュールにインポートします。次に、 `Instance` によってエクスポートされた[エクスポート済み WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions)を呼び出します。
+fetch を使用して WebAssembly バイトコードを読み込んだ後、 [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate) 関数を使用してモジュールをコンパイル、インスタンス化し、その処理中に JavaScript の関数を WebAssembly モジュールにインポートします。次に、 `Instance` によってエクスポートされた[エクスポート済み WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions)を呼び出します。
 
 ```js
 var importObject = {
@@ -91,7 +91,7 @@ fetch("simple.wasm")
 
 ### 第二のオーバーロードの例
 
-次の例 (GitHub 上の [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) デモを参照、 そして [動作例](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html) も確認してください) では、読み込まれた simple.wasm バイトコードを {{jsxref("WebAssembly.compileStreaming()")}} メソッドを使用してコンパイルし、 {{domxref("Worker.postMessage", "postMessage()")}} を使用して[ワーカー](/ja/docs/Web/API/Web_Workers_API)に送信しています。
+次の例 (GitHub 上の [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) デモを参照、 そして [動作例](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html) も確認してください) では、読み込まれた simple.wasm バイトコードを [`WebAssembly.compileStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming) メソッドを使用してコンパイルし、 {{domxref("Worker.postMessage", "postMessage()")}} を使用して[ワーカー](/ja/docs/Web/API/Web_Workers_API)に送信しています。
 
 ```js
 var worker = new Worker("wasm_worker.js");
@@ -101,7 +101,7 @@ WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
 );
 ```
 
-ワーカーでは (`wasm_worker.jsを参照`) モジュールで使用するためのインポートオブジェクトを定義して、メインスレッドからモジュールを受け取るイベントハンドラーを設定し、 {{jsxref("WebAssembly.instantiate()")}} メソッドを使用してインスタンスを生成し、エクスポートされた関数を呼び出します。
+ワーカーでは (`wasm_worker.jsを参照`) モジュールで使用するためのインポートオブジェクトを定義して、メインスレッドからモジュールを受け取るイベントハンドラーを設定し、 [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate) メソッドを使用してインスタンスを生成し、エクスポートされた関数を呼び出します。
 
 ```js
 var importObject = {

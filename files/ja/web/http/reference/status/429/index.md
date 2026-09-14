@@ -1,20 +1,17 @@
 ---
 title: 429 Too Many Requests
 slug: Web/HTTP/Reference/Status/429
-original_slug: Web/HTTP/Status/429
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
-{{HTTPSidebar}}
-
-HTTP の **`429 Too Many Requests`** [クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードは、クライアントが指定時間内にたくさんリクエストを送信しすぎたことを示します。
-リクエストの速度を落とすようにクライアントに依頼するこの仕組みは、一般に「{{glossary("Rate limit", "速度制限")}}」と呼ばれています。
+HTTP の **`429 Too Many Requests`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、クライアントが指定時間内にたくさんリクエストを送信しすぎたことを示します。
+リクエストの速度を落とすようにクライアントに依頼するこの仕組みは、一般に「{{glossary("rate limit", "速度制限")}}」と呼ばれています。
 
 新しいリクエストを行う前にどのくらい待つかを示す {{HTTPHeader("Retry-After")}} ヘッダーをこのレスポンスに含めることができます。
 
 速度制限の実装は様々で、制限はサーバー全体かもしれませんし、リソース毎かもしれません。
-通常、速度制限の制限はクライアントの IP に基づいて行われますが、 リクエストが認証されていたり {{Glossary("Cookie", "クッキー")}} が含まれていたりしていれば、 ユーザーや許可されたアプリケーションに固有の制限をかける可能性もあります。
+通常、速度制限はクライアントの IP アドレスに基づいて行われますが、リクエストが認証されている場合や{{Glossary("cookie", "クッキー")}}が含まれている場合は、ユーザーや許可されたアプリケーションに特定して制限することもあります。
 
 ## ステータス
 
@@ -33,15 +30,15 @@ GET /reports/mdn HTTP/1.1
 Host: example.com
 ```
 
-この例では、クライアントが 1 分あたりのリクエスト数が設定したしきい値を超えたときに、サーバ全体の速度制限が有効になります。
-リクエストは 60 分後にこのクライアントに再び許可されることを示す {{HTTPHeader("Retry-After")}} ヘッダーとともに 429 レスポンスを返します。
+この例では、クライアントが 1 分あたりのリクエスト数が設定したしきい値を超えたときに、サーバー全体の速度制限が有効になります。
+429 レスポンスが、{{HTTPHeader("Retry-After")}} ヘッダーをつけて返されます。このヘッダーは、3600 秒（60 分）後にもこのクライアントからのリクエストが再び許可されることを示しています。
 
 ```http
 HTTP/1.1 429 Too Many Requests
 Content-Type: text/html
 Retry-After: 3600
 
-<html>
+<html lang="en-US">
   <head>
     <title>Too Many Requests</title>
   </head>

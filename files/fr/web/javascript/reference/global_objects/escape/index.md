@@ -1,25 +1,19 @@
 ---
 title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
+l10n:
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{jsSidebar("Objects")}}
-
-> [!WARNING]
-> Bien que `escape(…)` ne soit pas strictement obsolète (au sens où elle n'a pas été retirée des standards), elle est définie au sein de [l'Annexe B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) du standard ECMA-262 qui commence par :
->
-> > … L'ensemble des fonctionnalités et comportements définis dans cette annexe possède une ou plusieurs caractéristiques indésirables. En l'absence d'une utilisation historique, ces fonctionnalités seraient retirés de la spécification. …
-> > … Les développeurs ne devraient pas utiliser ces fonctionnalités et comportements ou présupposer qu'elles existent lors de l'écriture de nouveau code ECMAScript. …
-
-La fonction **`escape()`** permet de renvoyer une nouvelle chaîne de caractères dont certains caractères ont été remplacés par leur séquence d'échappement hexadécimale. Cette méthode est obsolète et il est donc conseillé d'utiliser {{jsxref("encodeURI")}} ou {{jsxref("encodeURIComponent")}} à la place.
-
 > [!NOTE]
-> Cette fonction pouvait être utilisée pour l'encodage de fragment de requêtes d'URL. Si on souhaite remplacer des caractères par leur séquence d'échappement correcte (avec `%20` par exemple), on pourra utiliser [`decodeURIComponent`](/fr/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent).
+> `escape()` est une fonction non standard implémentée par les navigateurs et n'a été standardisée que pour la compatibilité inter-moteurs. Elle n'est pas requise dans tous les moteurs JavaScript et peut ne pas fonctionner partout. Utilisez {{JSxRef("encodeURIComponent()")}} ou {{JSxRef("encodeURI()")}} si possible.
+
+La fonction **`escape()`** calcule une nouvelle chaîne de caractères dans laquelle certains caractères ont été remplacés par des séquences d'échappement hexadécimales.
 
 ## Syntaxe
 
-```js
-escape(str);
+```js-nolint
+escape(str)
 ```
 
 ### Paramètres
@@ -33,11 +27,16 @@ Une nouvelle chaîne de caractères dont certains caractères ont été échapp�
 
 ## Description
 
-La fonction `escape` est une propriété de l'_objet global_. Les caractères spéciaux, sauf `@*_+-./`, seront encodés.
+`escape()` est une propriété fonction de l'objet global.
 
-La forme hexadécimale des caractères dont la valeur du codet est inférieure à 0xFF sera représentée sur deux chiffres : %xx. Pour les caractères avec un code supérieur, quatre chiffres seront utilisés avec le format suivant %**u**xxxx.
+La fonction `escape()` remplace tous les caractères par des séquences d'échappement, à l'exception des caractères de mot {{Glossary("ASCII")}} (A—Z, a—z, 0—9, \_) et `@\*_+-./`. Les caractères sont échappés par unités de code UTF-16. Si la valeur de l'unité de code est inférieure à 256, elle est représentée par un nombre hexadécimal à deux chiffres au format `%XX`, complété à gauche par 0 si nécessaire. Sinon, elle est représentée par un nombre hexadécimal à quatre chiffres au format `%uXXXX`, complété à gauche par 0 si nécessaire.
+
+> [!NOTE]
+> Cette fonction était principalement utilisée pour {{Glossary("Percent-encoding", "l'encodage en pourcent")}} et est en partie basée sur le format d'échappement de {{RFC(1738)}}. Le format d'échappement n'est _pas_ une [séquence d'échappement](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#séquences_déchappement) dans les littéraux de chaîne de caractères. Vous pouvez remplacer `%XX` par `\xXX` et `%uXXXX` par `\uXXXX` pour obtenir une chaîne de caractères contenant de véritables séquences d'échappement de littéraux de chaîne de caractères.
 
 ## Exemples
+
+### Utiliser la fonction `escape()`
 
 ```js
 escape("abc123"); // "abc123"
@@ -58,6 +57,7 @@ escape("@*_+-./"); // "@*_+-./"
 
 ## Voir aussi
 
-- {{jsxref("encodeURI")}}
-- {{jsxref("encodeURIComponent")}}
-- {{jsxref("unescape")}}
+- [Prothèse d'émulation de `escape` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- La fonction {{JSxRef("encodeURI()")}}
+- La fonction {{JSxRef("encodeURIComponent()")}}
+- La fonction {{JSxRef("unescape()")}} {{Deprecated_Inline}}

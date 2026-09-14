@@ -16,7 +16,7 @@ l10n:
 _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLPreElement.width")}} {{deprecated_inline}}
-  - : 一个 `long` 值，反映过时的 [`width`](/zh-CN/docs/Web/HTML/Element/pre#width) 属性，包含 {{HTMLElement("pre")}} 元素的固定长度。
+  - : 一个 `long` 值，反映过时的 [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/pre#width) 属性，包含 {{HTMLElement("pre")}} 元素的固定长度。
 
 ## 实例方法
 

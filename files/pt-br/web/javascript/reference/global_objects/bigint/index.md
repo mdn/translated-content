@@ -18,7 +18,8 @@ BigInt(value);
 - `value`
   - : O valor numérico do objeto que está sendo criado. Pode ser uma _string_ ou um número inteiro.
 
-> **Nota:** **Observação**: `BigInt()` não é usado com o operador {{jsxref("Operators/new", "new")}}.
+> [!NOTE]
+> **Observação**: `BigInt()` não é usado com o operador {{jsxref("new")}}.
 
 ## Descrição
 
@@ -44,7 +45,8 @@ const hugeBin = BigInt(
 
 Isso é parecido com um {{jsxref("Number")}} em algumas partes, mas difere-se em alguns assuntos importantes — ele não pode ser usado com métodos no objeto {{jsxref("Math")}} e não pode ser misturado em operações ou qualquer instância de `Number`.
 
-> **Aviso:** {{jsxref("Number")}} e `BigInt` não podem ser misturados em operações — eles devem ser manipulados com o mesmo tipo.
+> [!WARNING]
+> {{jsxref("Number")}} e `BigInt` não podem ser misturados em operações — eles devem ser manipulados com o mesmo tipo.
 >
 > Tenha cuidado com a conversão e desconversão de valores, visto que a precisão de `BigInt` pode ser perdida com a conversào para `Number`.
 
@@ -80,7 +82,7 @@ const theFuture = previousMaxSafe + 2n;
 const multi = previousMaxSafe * 2n;
 // ↪ 18014398509481982n
 
-const subtr = multi – 10n;
+const subtr = multi - 10n;
 // ↪ 18014398509481972n
 
 const mod = multi % 10n;
@@ -89,8 +91,8 @@ const mod = multi % 10n;
 const bigN = 2n ** 54n;
 // ↪ 18014398509481984n
 
-bigN * -1n
-// ↪ –18014398509481984n
+bigN * -1n;
+// ↪ -18014398509481984n
 ```
 
 O operador `/` também funciona com o esperado com números inteiros. No entanto, desde que esses sejam `BigInt`s e não `BigDecimal`s, essa operação vai arredondar para 0, o que significa que não vai retornar qualquer valor fracional.
@@ -108,7 +110,7 @@ const rounded = 5n / 2n;
 
 ### Comparações
 
-Um `BigInt` não é estritamente igual a um {{jsxref("Global_Objects/Number", "Number")}}, mas é mais ou menos assim.
+Um `BigInt` não é estritamente igual a um {{jsxref("Number")}}, mas é mais ou menos assim.
 
 ```js
 0n === 0;
@@ -118,7 +120,7 @@ Um `BigInt` não é estritamente igual a um {{jsxref("Global_Objects/Number", "N
 // ↪ true
 ```
 
-Um {{jsxref("Global_Objects/Number", "Number")}} e um `BigInt` podem ser comparado normalmente.
+Um {{jsxref("Number")}} e um `BigInt` podem ser comparado normalmente.
 
 ```js
 1n < 2;
@@ -159,7 +161,7 @@ o === o; // true
 
 ### Condicionais
 
-A `BigInt` comporta-se como {{jsxref("Global_Objects/Number", "Number")}} nos casos onde ele é convertido para um {{jsxref("Global_Objects/Boolean", "Boolean")}}: através da função {{jsxref("Global_Objects/Boolean", "Boolean")}}; quando usado com operadores lógicos {{jsxref("Operators/Logical_Operators", "Logical Operators")}} `||`, `&&`, e `!`; ou dentro de um teste condicional como um {{jsxref("Statements/if...else", "if statement")}}.
+A `BigInt` comporta-se como {{jsxref("Number")}} nos casos onde ele é convertido para um {{jsxref("Boolean")}}: através da função {{jsxref("Boolean")}}; quando usado com operadores lógicos {{jsxref("Operators", "Logical Operators")}} `||`, `&&`, e `!`; ou dentro de um teste condicional como um {{jsxref("Statements/if...else", "if statement")}}.
 
 ```js
 if (0n) {
@@ -198,7 +200,7 @@ Boolean(12n);
 
 ## Propriedades
 
-- {{jsxref("BigInt.prototype")}}
+- {{jsxref("BigInt")}}
   - : Permite a adição de propriedades a um objeto `BigInt`.
 
 ## Instâncias `BigInt`

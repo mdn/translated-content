@@ -5,11 +5,11 @@ slug: Web/API/Document/title
 
 {{APIRef("DOM")}}
 
-`document.title` 属性用于获取或设置文档的标题。如果存在，它的默认为 [`<title>`](/zh-CN/docs/Web/HTML/Element/title) 的值。
+`document.title` 属性用于获取或设置文档的标题。如果存在，它的默认为 [`<title>`](/zh-CN/docs/Web/HTML/Reference/Elements/title) 的值。
 
 ## 值
 
-一个包含*文档*标题的字符串。如果通过设置 `document.title` 将标题覆盖，则返回覆盖后的值。否则返回 [`<title>`](/zh-CN/docs/Web/HTML/Element/title) 元素里指定的标题。
+一个包含*文档*标题的字符串。如果通过设置 `document.title` 将标题覆盖，则返回覆盖后的值。否则返回 [`<title>`](/zh-CN/docs/Web/HTML/Reference/Elements/title) 元素里指定的标题。
 
 ```js
 document.title = newTitle;

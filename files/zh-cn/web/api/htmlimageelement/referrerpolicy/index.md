@@ -5,7 +5,7 @@ slug: Web/API/HTMLImageElement/referrerPolicy
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLImageElement.referrerPolicy`** 反映了 {{HTMLElement("img")}} 元素的 HTML 属性 [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/img#referrerpolicy) 的定义，这个属性定义了{{HTMLElement("img")}} 元素在获取资源时的引用方式。
+**`HTMLImageElement.referrerPolicy`** 反映了 {{HTMLElement("img")}} 元素的 HTML 属性 [`referrerpolicy`](/zh-CN/docs/Web/HTML/Reference/Elements/img#referrerpolicy) 的定义，这个属性定义了{{HTMLElement("img")}} 元素在获取资源时的引用方式。
 
 ## 值
 

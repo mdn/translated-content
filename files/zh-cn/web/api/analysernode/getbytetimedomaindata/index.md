@@ -5,7 +5,7 @@ slug: Web/API/AnalyserNode/getByteTimeDomainData
 
 {{ APIRef("Mountain View APIRef Project") }}
 
-{{ domxref("AnalyserNode") }} 接口的 **`getByteTimeDomainData()`** 方法复制当前波形或时域数据到传递给它的 {{domxref("Uint8Array")}} (无符号字节数组) 中。
+{{ domxref("AnalyserNode") }} 接口的 **`getByteTimeDomainData()`** 方法复制当前波形或时域数据到传递给它的 {{jsxref("Uint8Array")}} (无符号字节数组) 中。
 
 如果该数组的元素少于 {{domxref("AnalyserNode.fftSize")}}, 多余的元素会被丢弃。如果它有多于所需的元素，则忽略多余的元素。
 
@@ -21,7 +21,7 @@ analyser.getByteTimeDomainData(dataArray); // fill the Uint8Array with data retu
 ### 参数
 
 - `array`
-  - : 时域数据将被复制到的 {{domxref("Uint8Array")}} 。
+  - : 时域数据将被复制到的 {{jsxref("Uint8Array")}} 。
     如果数组中的元素少于 {{domxref("AnalyserNode.frequencyBinCount")}}, 则会删除多余的元素。如果它包含的元素多于需要的元素，则忽略多余的元素。
 
 ### 返回值

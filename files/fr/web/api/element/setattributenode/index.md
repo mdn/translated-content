@@ -1,15 +1,16 @@
 ---
 title: "Element : méthode setAttributeNode()"
+short-title: setAttributeNode()
 slug: Web/API/Element/setAttributeNode
 l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`setAttributeNode()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), ajoute un nouveau nœud [`Attr`](/fr/docs/Web/API/Attr) à l'élément courant.
+La méthode **`setAttributeNode()`** de l'interface {{DOMxRef("Element")}} ajoute un nouveau nœud {{DOMxRef("Attr")}} à l'élément défini.
 
-S'il n'est pas nécessaire de travailler sur le nœud [`Attr`](/fr/docs/Web/API/Attr) avant de l'ajouter (par exemple en le clonant depuis un autre élément), on pourra utiliser la méthode [`setAttribute()`](/fr/docs/Web/API/Element/setAttribute) à la place.
+S'il n'est pas nécessaire de travailler sur le nœud d'attribut (par exemple en le clonant depuis un autre élément) avant de l'ajouter, on peut utiliser la méthode {{DOMxRef("Element.setAttribute()", "setAttribute()")}} à la place.
 
 ## Syntaxe
 
@@ -20,11 +21,11 @@ setAttributeNode(attribute)
 ### Paramètres
 
 - `attribute`
-  - : Le nœud `Attr` à définir sur l'élément.
+  - : Le nœud {{DOMxRef("Attr")}} à définir sur l'élément.
 
 ### Valeur de retour
 
-L'éventuel nœud [`Attr`](/fr/docs/Web/API/Attr) remplacé.
+Le nœud d'attribut remplacé, le cas échéant, retourné par cette fonction.
 
 ## Exemples
 
@@ -33,26 +34,26 @@ Cet exemple copie l'attribut `class` d'un élément à l'autre.
 ### HTML
 
 ```html
-<div id="un" class="coucou">un</div>
+<div id="one" lang="en-US">one</div>
 <div id="deux">deux</div>
 ```
 
 ### JavaScript
 
 ```js
-let d1 = document.getElementById("un");
-let d2 = document.getElementById("deux");
-let a = d1.getAttributeNode("class");
+const d1 = document.getElementById("one");
+const d2 = document.getElementById("deux");
+const a = d1.getAttributeNode("lang");
 
 d2.setAttributeNode(a.cloneNode(true));
 
-// Affiche "coucou" dans la console
+// Retourne : 'en-US'
 console.log(d2.attributes[1].value);
 ```
 
 ## Notes
 
-Si l'attribut nommé existe déjà sur l'élément, cet attribut est remplacé par le nouveau et le nœud remplacé est renvoyé.
+Si l'attribut nommé existe déjà sur l'élément, cet attribut est remplacé par le nouveau et le nœud remplacé est retourné.
 
 ## Spécifications
 
@@ -64,8 +65,6 @@ Si l'attribut nommé existe déjà sur l'élément, cet attribut est remplacé p
 
 ## Voir aussi
 
-- [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)
-- [`Document.createAttribute()`](/fr/docs/Web/API/Document/createAttribute)
-- [`Element.getAttributeNode()`](/fr/docs/Web/API/Element/getAttributeNode)
-- [`Element.removeAttributeNode()`](/fr/docs/Web/API/Element/removeAttributeNode)
-- [`Element.setAttributeNS()`](/fr/docs/Web/API/Element/setAttributeNS)
+- La méthode {{DOMxRef("Document.createAttribute()")}}
+- La méthode {{DOMxRef("Element.getAttributeNode()")}}
+- La méthode {{DOMxRef("Element.removeAttributeNode()")}}

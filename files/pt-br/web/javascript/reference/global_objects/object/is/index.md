@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/is
 
 {{JSRef}}
 
-O método **`Object.is()`** determina se dois valores correspondem [ao mesmo valor](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+O método **`Object.is()`** determina se dois valores correspondem [ao mesmo valor](/pt-BR/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness).
 
 ## Sintaxe
 
@@ -26,7 +26,7 @@ Um {{jsxref("Boolean")}} indicando se os dois argumentos possuem o mesmo valor o
 
 ## Descrição
 
-`Object.is()` determina se dois valores correspondem [ao mesmo valor](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness). Dois valores correspondem ao mesmo valor se uma das seguintes condições for verdadeira:
+`Object.is()` determina se dois valores correspondem [ao mesmo valor](/pt-BR/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness). Dois valores correspondem ao mesmo valor se uma das seguintes condições for verdadeira:
 
 - ambos são {{jsxref("undefined")}}
 - ambos são {{jsxref("null")}}
@@ -34,15 +34,14 @@ Um {{jsxref("Boolean")}} indicando se os dois argumentos possuem o mesmo valor o
 - ambos são strings do mesmo comprimento, com os mesmos caracteres
 - ambos são o mesmo objeto
 - ambos são numéricos e
-
   - ambos são `+0`
   - ambos são `-0`
   - ambos são {{jsxref("NaN")}}
   - ou ambos são não-zero e ambos são não {{jsxref("NaN")}} e ambos correspondem ao mesmo valor
 
-Isso _não é_ o mesmo que ser igual de acordo com o operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}. O operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} aplica diversas coerções para ambos os lados (se eles não correspondem ao mesmo Tipo) antes de testar a igualdade (resultando em comportamentos como a comparação `"" == false` retornar `true`), enquanto `Object.is` não realiza a coerção de nenhum dos valores.
+Isso _não é_ o mesmo que ser igual de acordo com o operador {{jsxref("Operators", "==", "#Equality")}}. O operador {{jsxref("Operators", "==", "#Equality")}} aplica diversas coerções para ambos os lados (se eles não correspondem ao mesmo Tipo) antes de testar a igualdade (resultando em comportamentos como a comparação `"" == false` retornar `true`), enquanto `Object.is` não realiza a coerção de nenhum dos valores.
 
-Isso também _não_ _é_ o mesmo que ser igual de acordo com o operador {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}. O operador {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}} (assim como o operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}) trata os valores numéricos `-0` e `+0` como iguais e trata {{jsxref("Number.NaN")}} como não igual a {{jsxref("NaN")}}.
+Isso também _não_ _é_ o mesmo que ser igual de acordo com o operador {{jsxref("Operators", "===", "#Identity")}}. O operador {{jsxref("Operators", "===", "#Identity")}} (assim como o operador {{jsxref("Operators", "==", "#Equality")}}) trata os valores numéricos `-0` e `+0` como iguais e trata {{jsxref("Number.NaN")}} como não igual a {{jsxref("NaN")}}.
 
 ## Exemplos
 
@@ -94,4 +93,4 @@ if (!Object.is) {
 
 ## Veja também
 
-- [Comparações de igualdade](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness) — uma comparação dos três recursos implementados para verificação de igualdade.
+- [Comparações de igualdade](/pt-BR/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) — uma comparação dos três recursos implementados para verificação de igualdade.

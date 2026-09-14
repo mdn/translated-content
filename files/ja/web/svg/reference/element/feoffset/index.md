@@ -1,14 +1,11 @@
 ---
 title: <feOffset>
 slug: Web/SVG/Reference/Element/feOffset
-original_slug: Web/SVG/Element/feOffset
 l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-**`<feOffset>`** は SVG のフィルタープリミティブで、入力画像をオフセットします。入力画像全体は {{SVGAttr("dx")}} と {{SVGAttr("dy")}} 属性で指定した値だけオフセットされます。
+**`<feOffset>`** は [SVG](/ja/docs/Web/SVG) のフィルタープリミティブで、入力画像をオフセットします。入力画像全体は {{SVGAttr("dx")}} と {{SVGAttr("dy")}} 属性で指定した値だけオフセットされます。
 
 ## 使用コンテキスト
 

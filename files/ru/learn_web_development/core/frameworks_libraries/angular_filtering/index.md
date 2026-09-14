@@ -3,7 +3,7 @@ title: Фильтрация списка дел
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_filtering
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Теперь перейдем к добавлению функционала позволяющего пользователям фильтровать свои задачи, чтобы они могли просматривать активные, завершенные или все элементы.
 
@@ -12,7 +12,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Angular_filtering
     <tr>
       <th scope="row">Необходимые условия:</th>
       <td>
-        Понимание основ <a href="/ru/docs/Learn/HTML">HTML</a>, <a href="/ru/docs/Learn/CSS">CSS</a>, и <a href="/ru/docs/Learn/JavaScript">JavaScript</a>, знание <a href="/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">терминала/командной строки
+        Понимание основ <a href="/ru/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/ru/docs/Learn_web_development/Core/Styling_basics">CSS</a>, и <a href="/ru/docs/Learn_web_development/Core/Scripting">JavaScript</a>, знание <a href="/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">терминала/командной строки
       </td>
     </tr>
     <tr>
@@ -85,14 +85,13 @@ filter: 'all' | 'active' | 'done' = 'all';
 
 Это было быстро! Поскольку у вас уже был частично реализован код фильтрации в `app.component.ts`, все что вам нужно было сделать — это отредактировать шаблон, чтобы добавить элементы управления для фильтрации. В следующей и последней статье рассматривается, как создать полностью готовое Angular-приложение и предоставляются дополнительные ресурсы для продолжения учебного пути.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}
 
 ## В это модуле
 
 - [Введение в клиентские фреймворки](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
 - [Основные функции фреймворков](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
 - React
-
   - [Начало работы с React](/ru/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
   - [Начало создания приложения списка дел с React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
   - [Компоненты React-приложения](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
@@ -102,42 +101,38 @@ filter: 'all' | 'active' | 'done' = 'all';
   - [Ресурсы по React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
 
 - Ember
-
-  - [Начало работы с Ember](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Структура Ember-приложения и компоненты](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Интерактивность Ember: события, классы и состояние](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Интерактивность Ember: функциональность подвала, условная отрисовка](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Маршрутизация в Ember](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ресурсы по Ember и устранение неполадок](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+  - [Начало работы с Ember](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Структура Ember-приложения и компоненты](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Интерактивность Ember: события, классы и состояние](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Интерактивность Ember: функциональность подвала, условная отрисовка](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Маршрутизация в Ember](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Ресурсы по Ember и устранение неполадок](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
 
 - Vue
-
-  - [Начало работы с Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Создание вашего первого компонента Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Отрисовка списка Vue-компонентов](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Добавление новой формы во Vue: события, методы, и модели](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Стилизация Vue-компонентов с CSS](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Использование вычисляемых свойств во Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Условная отрисовка во Vue: Редактирование существующих дел](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Управление фокусом во Vue с помощью refs](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Ресурсы по Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+  - [Начало работы с Vue](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Создание вашего первого компонента Vue](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Отрисовка списка Vue-компонентов](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Добавление новой формы во Vue: события, методы, и модели](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Стилизация Vue-компонентов с CSS](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Использование вычисляемых свойств во Vue](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Условная отрисовка во Vue: Редактирование существующих дел](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Управление фокусом во Vue с помощью refs](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Ресурсы по Vue](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
 
 - Svelte
-
-  - [Начало работы со Svelte](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Начинаем приложение списка дел c использованием Svelte](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Динамическое поведение в Svelte: работа с переменными и пропсами](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Компоненты Svelte-приложения](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Продвинутый Svelte: реактивность, жизненный цикл, доступность](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Работа хранилищами в Svelte](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [Поддержка TypeScript в Svelte](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Развёртывание и следующие шаги](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+  - [Начало работы со Svelte](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Начинаем приложение списка дел c использованием Svelte](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Динамическое поведение в Svelte: работа с переменными и пропсами](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Компоненты Svelte-приложения](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Продвинутый Svelte: реактивность, жизненный цикл, доступность](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Работа хранилищами в Svelte](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Поддержка TypeScript в Svelte](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Развёртывание и следующие шаги](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
 
 - Angular
-
-  - [Начало работы с Angular](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_getting_started)
-  - [Начинаем приложение списка дел с использованием Angular](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning)
-  - [Стилизация Angular-приложения](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_styling)
-  - [Создание компонента элемента (item component)](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_item_component)
-  - [Фильтрация списка дел](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_filtering)
-  - [Сборка Angular-приложений и другие ресурсы](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_building)
+  - [Начало работы с Angular](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Начинаем приложение списка дел с использованием Angular](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Стилизация Angular-приложения](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Создание компонента элемента (item component)](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Фильтрация списка дел](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
+  - [Сборка Angular-приложений и другие ресурсы](/ru/docs/Learn_web_development/Core/Frameworks_libraries)

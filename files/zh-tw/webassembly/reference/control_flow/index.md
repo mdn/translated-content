@@ -13,7 +13,7 @@ WebAssembly 控制流相關指令。
   - : 讓程式跳躍至某一迴圈或是區塊。
 - [`call`](/zh-TW/docs/WebAssembly/Reference/Control_flow/call)
   - : 執行某一函數。
-- [`drop`](/zh-TW/docs/WebAssembly/Reference/Control_flow/Drop)
+- [`drop`](/zh-TW/docs/WebAssembly/Reference/Control_flow/drop)
   - : 從記憶堆疊中移除一個值。
 - [`end`](/zh-TW/docs/WebAssembly/Reference/Control_flow/end)
   - : 結束 `block`、`loop`、`if` 或是 `else` 區塊。

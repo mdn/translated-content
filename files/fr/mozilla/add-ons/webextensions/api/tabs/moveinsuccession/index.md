@@ -3,8 +3,6 @@ title: tabs.moveInSuccession()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
 ---
 
-{{AddonSidebar}}
-
 Modifie la relation de succession pour un groupe d'onglets.
 
 Using the {{WebExtAPIRef('tabs')}} API, a tab can be assigned a _successor_ tab in the same window. If tab B is the successor of tab A, and tab A is closed while it is the active tab, tab B will be activated next. If tab A doesn't have a successor, then the browser is free to determine which tab to activate next. If tab B is the successor of tab A, then tab A is called a _predecessor_ of tab B. A tab can have at most one successor, but it can have any number of predecessors. A tab cannot take itself or a tab in a different window as a successor.
@@ -28,9 +26,7 @@ browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, { insert: true });
 - `tabId` {{optional_inline}}
   - : `integer.` L'`ID` de l'onglet qui succédera au dernier onglet du tableau `tabIds`. Si cet `ID` est invalide ou {{WebExtAPIRef('tabs.TAB_ID_NONE')}}, le dernier onglet n'aura pas de successeur. Par défaut {{WebExtAPIRef('tabs.TAB_ID_NONE')}}.
 - `options` {{optional_inline}}
-
   - : `object`.
-
     - `append` {{optional_inline}}
       - : `boolean`. Détermine s'il faut déplacer les onglets dans les `tabIds` avant ou après `tabId` dans la succession. Si `false`, les onglets sont déplacés avant `tabId`, si `true`, les onglets sont déplacés après `tabId`. Par défaut à `false`.
     - `insert` {{optional_inline}}

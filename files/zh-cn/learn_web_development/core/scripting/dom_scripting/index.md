@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics","Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics","Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Core/Scripting")}}
 
 在编写网页和应用程序时，你最想做的事情之一是以某种方式操纵文档结构。这通常是通过使用文档对象模型（DOM）来实现的。这是一套大量使用了 {{domxref("Document")}} 对象，用于控制 HTML 和样式信息的 API。在这篇文章中，我们将详细了解如何使用 DOM，以及其他一些有趣的 API，它们可以以有趣的方式改变你的环境。
 
@@ -96,7 +96,7 @@ Web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
    const link = document.querySelector("a");
    ```
 
-4. 现在我们已经将元素引用存储在一个变量中，我们可以开始使用可用的属性和方法来操作它（它们定义在 {{htmlelement("a")}} 元素的 {{domxref("HTMLAnchorElement")}} 接口上，它继承于更一般的父接口 {{domxref("HTMLElement")}}，以及 {{domxref("Node")}}——它代表 DOM 中所有节点）。首先，让我们通过更新 {{domxref("Node.textContent")}} 属性的值来改变链接中的文本。在前一行下面添加以下内容：
+4. 现在我们已经将元素引用存储在一个变量中，可以开始通过该元素具有的属性和方法来操作它（对于 {{htmlelement("a")}} 元素，这些属性和方法定义在 {{domxref("HTMLAnchorElement")}} 接口、适用范围更广的父接口 {{domxref("HTMLElement")}}，以及表示 DOM 中所有节点的 {{domxref("Node")}} 接口上）。首先，让我们通过更新 {{domxref("Node.textContent")}} 属性的值来更改链接中的文本。在上一行下面添加以下内容：
 
    ```js
    link.textContent = "Mozilla Developer Network";
@@ -175,7 +175,7 @@ sect.appendChild(linkPara);
 sect.removeChild(linkPara);
 ```
 
-要删除一个仅基于自身引用的节点可能稍微有点复杂，这也是很常见的。你可以使用 {{domxref("Element.remove()")}}：
+当你想仅通过节点自身的引用来删除它时，这也是很常见的。你可以使用 {{domxref("Element.remove()")}}：
 
 ```js
 linkPara.remove();
@@ -193,7 +193,7 @@ linkPara.parentNode.removeChild(linkPara);
 
 通过 JavaScript 以不同的方式来操作 CSS 样式是可能的。
 
-首先，你可以使用 {{domxref("Document.stylesheets")}} 来获得一个附加在文档上的所有样式表的列表，它返回一个包含 {{domxref("CSSStyleSheet")}} 对象的类数组。然后你就可以根据需要添加/删除样式了。然而，我们不打算对这些功能进行扩展，因为它们是一种有点过时的、难以操作样式的方式。还有更多更简单的方法。
+首先，你可以使用 {{domxref("Document.styleSheets")}} 来获得一个附加在文档上的所有样式表的列表，它返回一个包含 {{domxref("CSSStyleSheet")}} 对象的类数组。然后你就可以根据需要添加/删除样式了。然而，我们不打算对这些功能进行扩展，因为它们是一种有点过时的、难以操作样式的方式。还有更多更简单的方法。
 
 第一种方法是直接将内联样式添加到你想动态样式的元素上。这是通过 {{domxref("HTMLElement.style")}} 属性实现的，它包含了文档中每个元素的内联样式信息。你可以设置这个对象的属性来直接更新元素样式。
 
@@ -255,29 +255,82 @@ linkPara.parentNode.removeChild(linkPara);
 
 ## 动手练习：一个动态的购物单
 
-在这个挑战中，我们想做一个简单的购物清单例子，允许你使用表单输入和按钮动态地将物品添加到清单中。当你在输入中添加一个项目并按下按钮时：
+在这个挑战中，我们想做一个简单的购物清单例子，允许你使用表单输入和按钮动态地将物品添加到清单中。当你在输入框中输入一个物品并点击按钮或按下 <kbd>Enter</kbd> 键时，会发生：
 
-- 购物项应该出现在清单中。
-- 每个购物项都应该给出一个按钮，可以按下按钮从清单中删除该项。
-- 输入框应该是清空的，并已经聚焦，为你准备好输入另一个项。
+- 物品应该出现在清单中。
+- 每件物品都应该给出一个按钮，可以按下按钮从清单中删除这件物品。
+- 输入框应该是清空的，并已经聚焦，以便输入下一件物品。
 
 完成后的演示程序看起来有点像这样的：
 
-![购物清单的演示布局。标题是“my shopping list”，后面是“Enter a new item”，有一个输入字段和“add item”按钮。下面是已经添加的项目的列表，每个项目都有一个相应的删除按钮](shopping-list.png)
+```html hidden live-sample___dynamic-shopping-list
+<h1>我的购物清单</h1>
+
+<form>
+  <label for="item">输入一个新物品：</label>
+  <input type="text" name="item" id="item" />
+  <button>添加物品</button>
+</form>
+
+<ul></ul>
+```
+
+```css hidden live-sample___dynamic-shopping-list
+li {
+  margin-bottom: 10px;
+}
+
+li button {
+  font-size: 12px;
+  margin-left: 20px;
+}
+```
+
+```js hidden live-sample___dynamic-shopping-list
+const list = document.querySelector("ul");
+const input = document.querySelector("input");
+const button = document.querySelector("button");
+
+button.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const myItem = input.value;
+  input.value = "";
+
+  const listItem = document.createElement("li");
+  const listText = document.createElement("span");
+  const listBtn = document.createElement("button");
+
+  listItem.appendChild(listText);
+  listText.textContent = myItem;
+  listItem.appendChild(listBtn);
+  listBtn.textContent = "删除";
+  list.appendChild(listItem);
+
+  listBtn.addEventListener("click", () => {
+    list.removeChild(listItem);
+  });
+
+  input.focus();
+});
+```
+
+{{EmbedLiveSample("dynamic-shopping-list", "100%", 300)}}
 
 要完成实验，要按照下面的步骤，确保购物单的行为如上所述。
 
-1. 首先，下载 [shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html) 文件，并存入本地。你会看到它有一些极小的 CSS，一个带有 label、input 和 button 的 div 和一个空的列表以及 {{htmlelement("script")}} 元素。要添加的所有程序都在 script 里面。
+1. 首先，下载 [shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html) 文件，并存入本地。你会看到它有一些极小的 CSS，一个带有 label、input 和 button 的 form 和一个空的列表以及 {{htmlelement("script")}} 元素。要添加的所有程序都在 script 里面。
 2. 创建三个变量来保存列表（{{htmlelement("ul")}}）、{{htmlelement("input")}} 和 {{htmlelement("button")}} 元素的引用。
 3. 创建一个[函数](/zh-CN/docs/Learn_web_development/Core/Scripting/Functions)响应点击按钮。
-4. 在函数体内，开始要在一个变量中存储输入框的当前[值](/zh-CN/docs/Web/API/HTMLInputElement#属性)。
-5. 然后，为输入框元素设置空字符串 `''` 以清空它。
-6. 创建三个新元素：一个列表元素（{{htmlelement('li')}}）、{{htmlelement('span')}} 和 {{htmlelement('button')}}，并把它们存入变量之中。
-7. 将 span 和按钮附加到列表元素的子节点。
-8. 把之前保存的输入框元素的值设置为 span 的文本内容，按钮的文本内容设置为“Delete”。
-9. 将列表元素附加到列表的子节点中。
-10. 为删除按钮绑定事件处理程序。当点击按钮时，删除它所在的整个列表元素（`<li>...</li>`）。
-11. 最后，使用 [`focus()`](/zh-CN/docs/Web/API/HTMLElement/focus) 方法聚焦输入框准备输入下一个购物项。
+4. 在函数体内，首先调用 [`preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault)。由于输入框包含在 form 元素中，按下 <kbd>Enter</kbd> 键会触发表单提交。调用 `preventDefault()` 可以阻止表单刷新页面，从而将新物品添加到清单中。
+5. 接着，将输入框当前的[值](/zh-CN/docs/Web/API/HTMLInputElement/value)存储在一个变量中。
+6. 然后，为输入框元素设置空字符串（`""`）以清空它。
+7. 创建三个新元素：一个列表元素（{{htmlelement('li')}}）、{{htmlelement('span')}} 和 {{htmlelement('button')}}，并把它们存入变量之中。
+8. 将 span 和 button 附加到列表元素的子节点。
+9. 把之前保存的输入框元素的值设置为 span 的文本内容，按钮的文本内容设置为“删除”。
+10. 将列表元素附加到列表的子节点中。
+11. 为**删除**按钮绑定事件处理器。当点击按钮时，删除它所在的整个列表元素（`<li>...</li>`）。
+12. 最后，使用 [`focus()`](/zh-CN/docs/Web/API/HTMLElement/focus) 方法使输入框获得焦点，以便输入下一件物品。
 
 > [!NOTE]
 > 如果你卡住了，请查看[完成的购物清单](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html)（[查看其在线版本](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html)）。

@@ -26,13 +26,11 @@ observe(target, options)
 - `target`
   - : DOM ツリー内で変更を監視したり、監視するノードのサブツリーのルートになったりする DOM ノード ({{domxref("Node")}})（あるいは要素 ({{domxref("Element")}}) である可能性もあります）。
 - `options`
-
   - : どの DOM の変更を `mutationObserver` の `callback` に報告するかを記述するオプションを提供するオブジェクト。
     `observe()` を呼ぶ際には、`childList`、`attribute`、`characterData` のうちの少なくとも 1 つは `true` でなければなりません。
     そうでない場合は、`TypeError` 例外が発生します。
 
     オプションは次の通りです。
-
     - `subtree` {{optional_inline}}
       - : `true` に設定すると、`target` を基点とするノードのサブツリー全体に監視が拡張されます。
         他のプロパティはすべて、`target` ノードだけに適用されるのではなく、サブツリーのすべてのノードに拡張されます。既定値は `false` です。 `target` の子孫が除去された場合、その子孫のサブツリーに対する変更は、その除去に関する通知が配信されるまで、引き続き監視されます。
@@ -62,9 +60,7 @@ observe(target, options)
 ### 例外
 
 - {{jsxref('TypeError')}}
-
   - : 以下のいずれかの状況で発生します。
-
     - `options` が、実際には何も監視しないように設定されている場合。
       （例えば、`childList`、`attributes`、`characterData` がすべて `false` の場合。）
     - `options.attributes` の値が `false` （これは属性の変更を監視しないことを示す）であるにもかかわらず、`attributeOldValue` は `true` であるか、または、`attributeFilter` が存在する場合。
@@ -169,7 +165,7 @@ observer.observe(userListElement, {
 
 ### 属性値の監視
 
-この例では、属性値の変更を監視する要素を観察し、その要素の [`dir`](/ja/docs/Web/HTML/Global_attributes/dir) 属性を `"ltr"` と `"rtl"` との間で切り替えるボタンを追加します。オブザーバーのコールバックの中で、属性の古い値をログ出力します。
+この例では、属性値の変更を監視する要素を観察し、その要素の [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) 属性を `"ltr"` と `"rtl"` との間で切り替えるボタンを追加します。オブザーバーのコールバックの中で、属性の古い値をログ出力します。
 
 #### HTML
 

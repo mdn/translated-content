@@ -3,8 +3,6 @@ title: Reste (%)
 slug: Web/JavaScript/Reference/Operators/Remainder
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur du reste (`%`) renvoie le reste de la division de l'opérande gauche par l'opérande droit. Le résultat a toujours le signe du numérateur.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Remainder operator")}}

@@ -3,8 +3,6 @@ title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
 
-{{JSRef}}
-
 **`ArrayBuffer`** 物件是一種表示通用、固定大小的原始二進制資料緩衝。想要直接操作一個 `ArrayBuffer` 物件的內容是不可能的。若要讀寫該緩衝的內容則必須透過視圖，可以選擇建立一個 {{jsxref("DataView")}} 視圖物件或是一個限定其成員為某種型別的 {{jsxref("TypedArray")}} 視圖物件，它們皆能以特定的型別解讀、修改 `ArrayBuffer`。
 
 ## 語法
@@ -41,7 +39,7 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
   - : The `ArrayBuffer` constructor's length property whose value is 1.
 - [`ArrayBuffer[Symbol.species]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species)
   - : The constructor function that is used to create derived objects.
-- {{jsxref("ArrayBuffer.prototype")}}
+- {{jsxref("ArrayBuffer")}}
   - : Allows the addition of properties to all `ArrayBuffer` objects.
 
 ## 方法
@@ -53,7 +51,7 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
 
 ## `ArrayBuffer` 實例
 
-所有的 `ArrayBuffer` 物件實例皆繼承自 {{jsxref("ArrayBuffer.prototype")}}.
+所有的 `ArrayBuffer` 物件實例皆繼承自 {{jsxref("ArrayBuffer")}}.
 
 ### 屬性
 
@@ -69,7 +67,7 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
 
 ## 範例
 
-In this example, we create a 8-byte buffer with a {{jsxref("Global_Objects/Int32Array", "Int32Array")}} view referring to the buffer:
+In this example, we create a 8-byte buffer with a {{jsxref("Int32Array")}} view referring to the buffer:
 
 ```js
 var buffer = new ArrayBuffer(8);
@@ -86,7 +84,7 @@ var view = new Int32Array(buffer);
 
 ## 相容性備註
 
-Starting with ECMAScript 2015, `ArrayBuffer` constructors require to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling an `ArrayBuffer` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
+Starting with ECMAScript 2015, `ArrayBuffer` constructors require to be constructed with a {{jsxref("new")}} operator. Calling an `ArrayBuffer` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
 
 ```js example-bad
 var dv = ArrayBuffer(10);

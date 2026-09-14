@@ -1,0 +1,148 @@
+---
+title: Propriété CSS `outline-width`
+short-title: outline-width
+slug: Web/CSS/Reference/Properties/outline-width
+l10n:
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
+---
+
+La propriété [CSS](/fr/docs/Web/CSS) **`outline-width`** définit l'épaisseur du contour d'un élément. Un contour est une ligne tracée autour d'un élément, à l'extérieur de la {{CSSxRef("border")}}.
+
+{{InteractiveExample("Démonstration CSS&nbsp;: outline-width")}}
+
+```css interactive-example-choice
+outline-width: 12px;
+```
+
+```css interactive-example-choice
+outline-width: thin;
+```
+
+```css interactive-example-choice
+outline-width: medium;
+```
+
+```css interactive-example-choice
+outline-width: thick;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Ceci est une boîte avec un contour autour.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
+
+Il est souvent plus pratique d'utiliser la propriété raccourcie {{CSSxRef("outline")}} lors de la définition de l'apparence d'un contour.
+
+## Syntaxe
+
+```css
+/* Valeurs avec un mot clé */
+outline-width: thin;
+outline-width: medium;
+outline-width: thick;
+
+/* Valeurs de type <length> */
+outline-width: 1px;
+outline-width: 0.1em;
+
+/* Valeurs globales */
+outline-width: inherit;
+outline-width: initial;
+outline-width: revert;
+outline-width: revert-layer;
+outline-width: unset;
+```
+
+### Valeurs
+
+Cette propriété est définie par une seule valeur `<line-width>`.
+
+- {{CSSxRef("&lt;line-width&gt;")}}
+  - : Définit la largeur du contour, soit comme une longueur ({{CSSxRef("&lt;length&gt;")}}) explicite non négative, soit avec les mots-clés&nbsp;: `thin`, `medium` ou `thick`. La valeur par défaut est `medium`.
+
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
+
+## Exemples
+
+### Définir la largeur du contour d'un élément
+
+#### HTML
+
+```html
+<span id="thin">thin</span>
+<span id="medium">medium</span>
+<span id="thick">thick</span>
+<span id="twopixels">2px</span>
+<span id="oneex">1ex</span>
+<span id="em">1.2em</span>
+```
+
+#### CSS
+
+```css
+span {
+  outline-style: solid;
+  display: inline-block;
+  margin: 20px;
+}
+
+#thin {
+  outline-width: thin;
+}
+
+#medium {
+  outline-width: medium;
+}
+
+#thick {
+  outline-width: thick;
+}
+
+#twopixels {
+  outline-width: 2px;
+}
+
+#oneex {
+  outline-width: 1ex;
+}
+
+#em {
+  outline-width: 1.2em;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Définir la largeur du contour d'un élément", "100%", 80)}}
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- La propriété raccourcie {{CSSxRef("outline")}}
+- La propriété {{CSSxRef("outline-style")}}
+- La propriété {{CSSxRef("outline-color")}}

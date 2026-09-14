@@ -3,8 +3,6 @@ title: downloads.getFileIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/getFileIcon
 ---
 
-{{AddonSidebar}}
-
 La fonction **`getFileIcon()`** de l'API {{WebExtAPIRef("downloads")}} récupère une icône pour le téléchargement spécifié.
 
 Pour les nouveaux téléchargements, les icônes de fichiers sont disponibles après la réception de l'événement {{WebExtAPIRef("downloads.onCreated")}}. L'image renvoyée par cette fonction pendant le téléchargement peut être différente de l'image renvoyée une fois le téléchargement terminé.
@@ -27,9 +25,7 @@ var gettingIcon = browser.downloads.getFileIcon(
 - `downloadId`
   - : Un `integer` eprésentant l'ID du téléchargement.
 - `options`{{optional_inline}}
-
   - : Un `object` d'options représentant les préférences pour l'icône à extraire. Il peut prendre les propriétés suivantes :
-
     - `size`{{optional_inline}}
       - : Un `integer` représentant la taille de l'icône. La taille de l'icône retournée sera la taille fournie au carré (en pixels). Si elle est omise, la taille par défaut de l'icône est 32x32 pixels.
 
@@ -75,8 +71,6 @@ searching.then(getIcon, onError);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

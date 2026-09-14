@@ -14,7 +14,7 @@ Este artigo é uma introdução às tabelas HTML, cobrindo o básico, como linha
       <th scope="row">Pré-requisitos:</th>
       <td>
         Noções básicas de HTML (consulte
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introdução ao HTML</a
         >
         ).
@@ -198,15 +198,15 @@ Quando criadas corretamente, até pessoas cegas podem interpretar dados tabulare
 
 Você também pode dar uma olhada [neste exemplo real](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) no GitHub! Uma coisa que você perceberá é que essa tabela parece um pouco mais legível lá — isso ocorre porque a tabela que você vê acima nesta página tem o mínimo de estilização, enquanto a versão do GitHub tem um CSS expressivo aplicado.
 
-Não se iluda; para que tabelas sejam de fato efetivas na web, você precisa fornecer algumas informações de estilo com [CSS](/pt-BR/docs/Learn/CSS), bem como uma boa estrutura sólida com HTML. Neste módulo nos iremos focar na parte do HTML; Para saber mais sobre a parte do CSS você deve visitar nosso artigo [Estilizando Tabelas](/pt-BR/docs/Learn/CSS/Building_blocks/Styling_tables) depois que você finalizar este.
+Não se iluda; para que tabelas sejam de fato efetivas na web, você precisa fornecer algumas informações de estilo com [CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics), bem como uma boa estrutura sólida com HTML. Neste módulo nos iremos focar na parte do HTML; Para saber mais sobre a parte do CSS você deve visitar nosso artigo [Estilizando Tabelas](/pt-BR/docs/Learn/CSS/Building_blocks/Styling_tables) depois que você finalizar este.
 
 Nós não focaremos em CSS neste módulo, mas nós forneceremos uma mínima folha de estilo CSS para você usar que fará suas tabelas mais legíveis que o padrão que teria sem nenhuma estilização. Você pode procurar a [folha de estilo aqui](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css), e você pode também procurar um [template HTML](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) que aplica a folha de estilo — juntos eles serão um bom ponto de partida para serem implementados com tabelas HTML.
 
 ### Quando NÃO utilizar tabelas HTML?
 
-Tabelas HTML devem ser usadas para exibir dados tabulares - foram projetadas para isso. Infelizmente, muitas pessoas se acostumaram a usar tabelas HTML para diagramar páginas web, por exemplo, uma linha para conter o cabeçalho, outra linha para conter as colunas de conteúdo, uma linha para conter o rodapé, etc. Mais detalhes e um exemplo podem ser encontrados em [Page Layouts](/pt-BR/docs/Learn/Accessibility/HTML#page_layouts) de nosso [Accessibility Learning Module](/pt-BR/docs/Learn/Accessibility). Isso era muito comum porque o suporte à CCS entre diferentes navegadores era muito ruim; tabelas sendo usadas para leiaute não são comuns nos dias de hoje mas ainda podem ser encontradas em alguns cantos da web.
+Tabelas HTML devem ser usadas para exibir dados tabulares - foram projetadas para isso. Infelizmente, muitas pessoas se acostumaram a usar tabelas HTML para diagramar páginas web, por exemplo, uma linha para conter o cabeçalho, outra linha para conter as colunas de conteúdo, uma linha para conter o rodapé, etc. Mais detalhes e um exemplo podem ser encontrados em [Page Layouts](/pt-BR/docs/Learn_web_development/Core/Accessibility/HTML#page_layouts) de nosso [Accessibility Learning Module](/pt-BR/docs/Learn_web_development/Core/Accessibility). Isso era muito comum porque o suporte à CCS entre diferentes navegadores era muito ruim; tabelas sendo usadas para leiaute não são comuns nos dias de hoje mas ainda podem ser encontradas em alguns cantos da web.
 
-Em resumo, usar tabelas para leiuate no lugar de usar [técnicas de leiaute CSS](/pt-BR/docs/Learn/CSS/CSS_layout) é uma péssima ideia. Os principais motivos são os seguintes:
+Em resumo, usar tabelas para leiuate no lugar de usar [técnicas de leiaute CSS](/pt-BR/docs/Learn_web_development/Core/CSS_layout) é uma péssima ideia. Os principais motivos são os seguintes:
 
 1. **Tabelas usadas para leiuate reduzem a accessibilidade para usuários com deficiência visual**: [Leitores de tela](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders), usados por pessoas cegas, interpretam as tags que existem na página HTML e leem em voz alta os conteúdos para os usuários. Como as tabelas não são adequadas para leiaute, e a marcação é mais complexa que aquela feita com técnicas de leiuate de CSS, a leitura em voz alta resultante dos leitores de tela será confusa para os usuários.
 2. **Tabelas produzem uma sopa de tags**: Como foi dito acima, tabelas usadas para leiaute geralmente envolvem estruturas de marcação mais complexas que as técnicas apropriadas para leiaute. Isso pode resultar em código mais difícil de escrever, de manter e de depurar.
@@ -217,7 +217,7 @@ Em resumo, usar tabelas para leiuate no lugar de usar [técnicas de leiaute CSS]
 Falamos o suficiente sobre teoria de tabelas, então, vamos partir para um exemplo prático e construir uma tabela simples.
 
 1. Antes de tudo, faça uma cópia local de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) e [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dentro de um novo diretório na sua máquina local.
-2. O conteúdo de cada tabela fica contido entre as duas tags : **[`<table></table>`](/pt-BR/docs/Web/HTML/Element/table)**. Acrescente-as dentro da seção body de seu HTML.
+2. O conteúdo de cada tabela fica contido entre as duas tags : **[`<table></table>`](/pt-BR/docs/Web/HTML/Reference/Elements/table)**. Acrescente-as dentro da seção body de seu HTML.
 3. O menor contêiner dentro de uma tabela é uma célula da tabela, que é criada por um elemento **[`<td>`](/pt-BR/docs/Web/HTML/Element/td)** ('td' significa 'dados da tabela'). Adicione as linhas seguintes dentro das tags da tabela:
 
    ```html
@@ -319,7 +319,7 @@ Aqui, o problema é que mesmo que possamos entender o que está acontecendo, nã
 Vamos tentar melhorar essa tabela.
 
 1. Primeiro, faça uma cópia local dos arquivos [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) e [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dentro de um novo diretório da sua máquina local. O HTML contém o mesmo exemplo de Dogs visto acima.
-2. Para reconhecer os cabeçalhos de uma tabela como cabeçalhos, tanto visualmente como semanticamente, podemos usar o elemento **[`<th>`](/pt-BR/docs/Web/HTML/Element/th)** ('th' significa 'cabeçalho da tabela'). Ele funciona da mesma maneira que um `<td>`, exceto que denota um cabeçalho, e não uma célula normal. Abra o arquivo HTML, e mude todos os elementos `<td>` que envolvem os cabeçalhos das tabelas para o elemento `<th>`.
+2. Para reconhecer os cabeçalhos de uma tabela como cabeçalhos, tanto visualmente como semanticamente, podemos usar o elemento **[`<th>`](/pt-BR/docs/Web/HTML/Reference/Elements/th)** ('th' significa 'cabeçalho da tabela'). Ele funciona da mesma maneira que um `<td>`, exceto que denota um cabeçalho, e não uma célula normal. Abra o arquivo HTML, e mude todos os elementos `<td>` que envolvem os cabeçalhos das tabelas para o elemento `<th>`.
 3. Salve o HTML e abra em um navegador, e veja que os cabeçalhos agora se parecem mais com cabeçalhos.
 
 > [!NOTE]
@@ -396,7 +396,7 @@ Vamos usar `colspan` e `rowspan` para melhorar essa tabela.
 Existe uma última característica da qual vamos falar nesse artigo, antes de prosseguir. HTML tem um método de definir informação de estilo para uma coluna inteira de dados de uma só vez — o elemento **[`<col>`](/pt-BR/docs/Web/HTML/Element/col)** e **[`<colgroup>`](/pt-BR/docs/Web/HTML/Element/colgroup)**. Eles existem por que pode ser um pouco entediante e ineficiente ter de especificar o estilo de colunas - temos de especificar as informações de estilo para _cada_ `<td>` ou `<th>` da coluna, ou usar um seletor complexo como o {{cssxref(":nth-child()")}}.
 
 > [!NOTE]
-> Estilizar colunas dessa maneira está [limitada para umas poucas propriedades](https://www.w3.org/TR/CSS22/tables.html#columns): [`border`](/pt-BR/docs/Web/CSS/border), [`background`](/pt-BR/docs/Web/CSS/background), [`width`](/pt-BR/docs/Web/CSS/width), e [`visibility`](/pt-BR/docs/Web/CSS/visibility). Para ajustar outras propriedades devemos aplicar o estilo para cada `<td>` ou `<th>` da coluna, ou usar um seletor complexo como um {{cssxref(":nth-child()")}}.
+> Estilizar colunas dessa maneira está [limitada para umas poucas propriedades](https://www.w3.org/TR/CSS22/tables.html#columns): [`border`](/pt-BR/docs/Web/CSS/border), [`background`](/pt-BR/docs/Web/CSS/Reference/Properties/background), [`width`](/pt-BR/docs/Web/CSS/Reference/Properties/width), e [`visibility`](/pt-BR/docs/Web/CSS/Reference/Properties/visibility). Para ajustar outras propriedades devemos aplicar o estilo para cada `<td>` ou `<th>` da coluna, ou usar um seletor complexo como um {{cssxref(":nth-child()")}}.
 
 Veja o simples exemplo a seguir:
 
@@ -488,6 +488,6 @@ Isso envolve o básico das tabelas HTML. No próximo artigo, veremos alguns recu
 
 ## Neste módulo
 
-- [Noções básicas de tabela HTML](/pt-BR/docs/Learn/HTML/Tables/Basics)
+- [Noções básicas de tabela HTML](/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - [Recursos avançados e acessibilidade da tabela HTML](/pt-BR/docs/Learn/HTML/Tables/Advanced)
 - [Estruturação de dados do planeta](/pt-BR/docs/Learn/HTML/Tables/Structuring_planet_data)

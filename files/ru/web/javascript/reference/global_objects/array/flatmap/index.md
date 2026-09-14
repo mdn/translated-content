@@ -18,11 +18,8 @@ var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
 ### Параметры
 
 - `callback`
-
   - : Функция которая производит элементы нового массива, принимает три аргумента:
-
     - `currentValue`
-
       - : Текущий обрабатываемый элемент массива.
 
     - `index`{{optional_inline}}

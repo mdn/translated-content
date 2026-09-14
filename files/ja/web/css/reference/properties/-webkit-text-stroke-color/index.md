@@ -1,0 +1,87 @@
+---
+title: CSS `-webkit-text-stroke-color` プロパティ
+short-title: -webkit-text-stroke-color
+slug: Web/CSS/Reference/Properties/-webkit-text-stroke-color
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+---
+
+**`-webkit-text-stroke-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの文字の線の[色](/ja/docs/Web/CSS/Reference/Values/color_value)を示します。このプロパティが設定されていない場合、{{cssxref("color")}} プロパティの値が使用されます。
+
+## 構文
+
+```css
+/* <color> 値 */
+-webkit-text-stroke-color: red;
+-webkit-text-stroke-color: #e08ab4;
+-webkit-text-stroke-color: rgb(200 100 0);
+
+/* グローバル値 */
+-webkit-text-stroke-color: inherit;
+-webkit-text-stroke-color: initial;
+-webkit-text-stroke-color: revert;
+-webkit-text-stroke-color: revert-layer;
+-webkit-text-stroke-color: unset;
+```
+
+### 値
+
+- `<color>`
+  - : 線の色。
+
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
+
+{{csssyntax}}
+
+## 例
+
+### 角の色を変化させる
+
+#### HTML
+
+```html
+<p>Text with stroke</p>
+<input type="color" value="#ff0000" />
+```
+
+#### CSS
+
+```css
+p {
+  margin: 0;
+  font-size: 4em;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: red; /* ライブサンプルで変更可能 */
+}
+```
+
+```js hidden
+const colorPicker = document.querySelector("input");
+colorPicker.addEventListener("change", (evt) => {
+  document.querySelector("p").style.webkitTextStrokeColor = evt.target.value;
+});
+```
+
+#### 結果
+
+{{EmbedLiveSample("Varying_the_stroke_color", "500px", "100px")}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [Introducing Text-Stroke](https://webkit.org/blog/85/introducing-text-stroke/) - webkit.org (2006)
+- [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
+- {{cssxref("-webkit-text-fill-color")}}
+- {{cssxref("-webkit-text-stroke-width")}}
+- {{cssxref("-webkit-text-stroke")}}

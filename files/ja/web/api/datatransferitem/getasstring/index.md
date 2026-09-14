@@ -1,8 +1,9 @@
 ---
-title: DataTransferItem.getAsString()
+title: "DataTransferItem: getAsString() メソッド"
+short-title: getAsString()
 slug: Web/API/DataTransferItem/getAsString
 l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+  sourceCommit: b5437b737639d6952d18b95ebd1045ed73e4bfa7
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -12,14 +13,7 @@ l10n:
 ## 構文
 
 ```js-nolint
-// アロー関数
-getAsString((data) => { /* … */ } )
-
-// コールバック関数
 getAsString(callbackFn)
-
-// インラインコールバック関数
-getAsString(function(data) { /* … */ })
 ```
 
 ### 引数
@@ -27,7 +21,7 @@ getAsString(function(data) { /* … */ })
 - `callbackFn`
   - : 以下の引数を受け取るコールバック関数です。
     - `data`
-      - : {{domxref("DataTransferItem", "データ転送アイテムの", "", 1)}}文字列データです。
+      - : {{domxref("DataTransferItem")}} の文字列データです。
 
 ### 返値
 
@@ -38,29 +32,25 @@ getAsString(function(data) { /* … */ })
 この例では、 {{domxref("HTMLElement/drop_event", "drop")}} イベントハンドラーにおいて、 `getAsString()` メソッドを _インライン関数_ として使用しているところを示しています。
 
 ```js
-function drop_handler(ev) {
+function dropHandler(ev) {
   console.log("Drop");
   ev.preventDefault();
-  const data = ev.dataTransfer.items;
-  for (let i = 0; i < data.length; i += 1) {
-    if (data[i].kind === "string" && data[i].type.match("^text/plain")) {
+  for (const item of ev.dataTransfer.items) {
+    if (item.kind === "string" && item.type.match("^text/plain")) {
       // This item is the target node
-      data[i].getAsString((s) => {
+      item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if (data[i].kind === "string" && data[i].type.match("^text/html")) {
+    } else if (item.kind === "string" && item.type.match("^text/html")) {
       // Drag data item is HTML
       console.log("… Drop: HTML");
-    } else if (
-      data[i].kind === "string" &&
-      data[i].type.match("^text/uri-list")
-    ) {
+    } else if (item.kind === "string" && item.type.match("^text/uri-list")) {
       // Drag data item is URI
       console.log("… Drop: URI");
-    } else if (data[i].kind === "file" && data[i].type.match("^image/")) {
+    } else if (item.kind === "file" && item.type.match("^image/")) {
       // Drag data item is an image file
-      const f = data[i].getAsFile();
-      console.log("… Drop: File ");
+      const f = item.getAsFile();
+      console.log("… Drop: File");
     }
   }
 }

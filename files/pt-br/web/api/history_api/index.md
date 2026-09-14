@@ -47,7 +47,8 @@ O número de páginas do histórico pode ser determinado pela propriedade _lengt
 const numberOfEntries = window.history.length;
 ```
 
-> **Nota:**O Internet Explorer suporta URLs como argumento para o método `go()`; isso não é um comportamento padrão e não é suportado pelo Gecko.
+> [!NOTE]
+> O Internet Explorer suporta URLs como argumento para o método `go()`; isso não é um comportamento padrão e não é suportado pelo Gecko.
 
 ## Adicionando e modificando entradas
 
@@ -79,7 +80,8 @@ Se clicarmos no botão Voltar novamente, a URL modificará para `http://mozilla.
 - **título** — Atualmente o Firefox ignora este parâmetro. Passar uma string vazia é suficiente contra futuras mudanças no método. Alternativamente, você pode passar um título curto para o estado.
 - **URL** — A URL da nova entrada no histórico é passada por este parâmetro. Note que o navegador não tentará carregar essa URL após uma chamada do método `pushState()`, porém pode tentar carregar a URL mais tarde, por exemplo depois que o usuário reinicie o navegador. A nova URL não precisa ser absoluta; caso seja relativa, é resolvida em relação a atual URL. A nova URL precisar ser da mesma origem que a URL atual; caso contrário, `pushState()` ativará uma exceção. Este parâmetro é opcional; caso seja especificado, é utilizado como a atual URL do documento.
 
-> **Nota:**No Gecko 2.0 até Gecko 5.0, o objeto passado é serializado utilizando JSON. A partir do Gecko 6.0, o objeto é serializado usando [o algorítmo de clonagem estruturada](/pt-BR/docs/DOM/The_structured_clone_algorithm). Isso permite que uma variedade maior de objetos possam ser serializados.
+> [!NOTE]
+> No Gecko 2.0 até Gecko 5.0, o objeto passado é serializado utilizando JSON. A partir do Gecko 6.0, o objeto é serializado usando [o algorítmo de clonagem estruturada](/pt-BR/docs/DOM/The_structured_clone_algorithm). Isso permite que uma variedade maior de objetos possam ser serializados.
 
 De certa forma, chamar o método `pushState()` é similar a executar `window.location = "#foo"`, no sentido de que ambos criarão e ativarão uma nova entrada no histórico associado com o documento atual. Porém `pushState()` tem algumas vantagens:
 
@@ -100,7 +102,8 @@ Em outros documentos, é criado um elemento com um namespace `null` de URI.
 
 `replaceState()` é particularmente útil quando você quer atualizar o objeto de estado ou a URL da atual entrada do histórico como resposta a alguma ação do usuário.
 
-> **Nota:**Em Gecko 2.0 até Gecko 5.0, o objeto passado é serializado utilizando JSON. Começando do Gecko 6.0, o objeto é serializado usando [o algorítmo de clonagem estruturada](/pt-BR/docs/DOM/The_structured_clone_algorithm). Isso permite que uma variedade maior de objetos possam ser serializados.
+> [!NOTE]
+> Em Gecko 2.0 até Gecko 5.0, o objeto passado é serializado utilizando JSON. Começando do Gecko 6.0, o objeto é serializado usando [o algorítmo de clonagem estruturada](/pt-BR/docs/DOM/The_structured_clone_algorithm). Isso permite que uma variedade maior de objetos possam ser serializados.
 
 ### Exemplo do método replaceState()
 

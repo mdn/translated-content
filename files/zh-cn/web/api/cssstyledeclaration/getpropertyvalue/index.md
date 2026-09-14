@@ -5,7 +5,7 @@ slug: Web/API/CSSStyleDeclaration/getPropertyValue
 
 {{ APIRef("CSSOM") }}
 
-**CSSStyleDeclaration.getPropertyValue()** 接口返回一个 {{domxref('DOMString')}} ，其中包含请求的 CSS 属性的值。
+**CSSStyleDeclaration.getPropertyValue()** 接口返回一个 {{jsxref("String")}} ，其中包含请求的 CSS 属性的值。
 
 ## 语法
 
@@ -15,11 +15,11 @@ var value = style.getPropertyValue(property);
 
 ### 参数
 
-- _`property`_ 是一个 {{domxref('DOMString')}}，是需要查询的 CSS 属性名称。
+- _`property`_ 是一个 {{jsxref("String")}}，是需要查询的 CSS 属性名称。
 
 ### 返回值
 
-- `value` 是 {{domxref('DOMString')}} ，包含查找属性的值。若对应属性没有设置，则返回空字符串。
+- `value` 是 {{jsxref("String")}} ，包含查找属性的值。若对应属性没有设置，则返回空字符串。
 
 ## 示例
 

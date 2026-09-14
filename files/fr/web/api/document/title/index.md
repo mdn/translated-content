@@ -1,45 +1,47 @@
 ---
-title: Document.title
+title: "Document : propriété title"
+short-title: title
 slug: Web/API/Document/title
+l10n:
+  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
 {{APIRef("DOM")}}
 
-Obtient ou défini le titre de la page.
+La propriété **`title`** de l'interface {{DOMxRef("Document")}} permet d'obtenir ou de définir le titre actuel du document.
+Lorsqu'elle est présente, elle prend par défaut la valeur de la balise HTML {{HTMLElement("title")}}.
 
-## Syntaxe
+## Valeur
 
-```js
-var docTitle = document.title;
-```
-
-`title` est la chaîne contenant le titre de la page. Si le titre a déjà été modifié par `document.title`, cela retournera cette valeur. Sinon cela retournera le titre par défaut de la page (voir les [notes](#notes) ci-dessous).
+Une chaîne de caractères contenant le titre du document. Si le titre a été remplacé en définissant `document.title`, il contient cette valeur. Sinon, il contient le titre défini dans l'élément HTML {{HTMLElement("title")}}.
 
 ```js
 document.title = newTitle;
 ```
 
-`newTitle` sera le nouveau titre de la page. Le changement de titre affectera également la valeur de retour de `document.title`, le titre de la page dans le navigateur (généralement le nom de l'onglet dans votre navigateur), et affectera également le DOM de la page (le contenu de la balise HTML `<title>`).
+`newTitle` est le nouveau titre du document. L'affectation modifie la valeur de retour de `document.title`, le titre affiché pour le document (par exemple, dans la barre de titre de la fenêtre ou de l'onglet), et elle affecte également le DOM du document (par exemple, le contenu de l'élément `<title>` dans un document HTML).
 
-## Exemple
+## Exemples
+
+En supposant que le `<head>` du document ressemble à ceci&nbsp;:
 
 ```html
-<!doctype html>
-<html>
-  <head>
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <script>
-      alert(document.title); // Affiche "Hello World!"
-      document.title = "Goodbye World!";
-      alert(document.title); // Affiche "Goodbye World!"
-    </script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Bonjour le monde !</title>
+</head>
 ```
 
-## Spécification
+```js
+console.log(document.title); // "Bonjour le monde !"
+document.title = "Au revoir le monde !"; // Titre de la page modifié
+console.log(document.title); // "Au revoir le monde !"
+```
 
-- [DOM Level 2 HTML: document.title](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-18446827)
-- [HTML5](https://www.whatwg.org/html/#document.title)
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

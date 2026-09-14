@@ -10,19 +10,19 @@ slug: Web/API/HTMLElement
 _Hereda propiedades de su padre, {{domxref("Element")}}, y los implementalo de {{domxref("GlobalEventHandlers")}} y {{domxref("TouchEventHandlers")}}._
 
 - {{domxref("HTMLElement.accessKey")}}
-  - : Es un {{domxref("DOMString")}} que representa la clave de acceso al elemento.
+  - : Es un {{jsxref("String")}} que representa la clave de acceso al elemento.
 - {{domxref("HTMLElement.accessKeyLabel")}} {{readonlyInline}}
-  - : Devuelve un {{domxref("DOMString")}} que contiene la clave asignada del elemento.
+  - : Devuelve un {{jsxref("String")}} que contiene la clave asignada del elemento.
 - {{domxref("HTMLElement.contentEditable")}}
-  - : Es un {{domxref("DOMString")}}, donde el valor `"true"` significa que el elemento es editable y si el valor es `"false"` significa que no lo es.
+  - : Es un {{jsxref("String")}}, donde el valor `"true"` significa que el elemento es editable y si el valor es `"false"` significa que no lo es.
 - {{domxref("HTMLElement.isContentEditable")}} {{readonlyInline}}
-  - : Devuelve un {{domxref("Boolean")}} si el contenido del elemento puede ser editado.
+  - : Devuelve un {{jsxref("Boolean")}} si el contenido del elemento puede ser editado.
 - {{domxref("HTMLElement.contextMenu")}}
   - : Es un {{domxref("HTMLMenuElement")}} que representa el menú contextual asociado al elemento. Puede ser `null`
 - {{domxref("HTMLElement.dataset")}} {{readonlyInline}}
   - : Devuelve un {{domxref("DOMStringMap")}} que permite el acceso de lectura y escritura de los atributos personalizados del elemento (`data-*`) .
 - {{domxref("HTMLElement.dir")}}
-  - : Es un {{domxref("DOMString")}}, que refleja el atributo global `dir`, representando la direccionalidad del elemento. Los posibles valores son `"ltr"`, `"rtl"`, and `"auto"`.
+  - : Es un {{jsxref("String")}}, que refleja el atributo global `dir`, representando la direccionalidad del elemento. Los posibles valores son `"ltr"`, `"rtl"`, and `"auto"`.
 - {{domxref("HTMLElement.draggable")}}
   - : Es un {{jsxref("Boolean")}} que indica si el elemento puede ser arrastrado..
 - {{domxref("HTMLElement.dropzone")}} {{readonlyInline}}
@@ -34,7 +34,7 @@ _Hereda propiedades de su padre, {{domxref("Element")}}, y los implementalo de {
 - {{domxref("HTMLElement.itemType")}} {{readonlyInline}}{{experimental_inline}}
   - : Devuelve un {{domxref("DOMSettableTokenList")}}…
 - {{domxref("HTMLElement.itemId")}} {{experimental_inline}}
-  - : Es un {{domxref("DOMString")}}…
+  - : Es un {{jsxref("String")}}…
 - {{domxref("HTMLElement.itemRef")}} {{readonlyInline}}{{experimental_inline}}
   - : Devuelve un {{domxref("DOMSettableTokenList")}}…
 - {{domxref("HTMLElement.itemProp")}} {{readonlyInline}}{{experimental_inline}}
@@ -42,7 +42,7 @@ _Hereda propiedades de su padre, {{domxref("Element")}}, y los implementalo de {
 - {{domxref("HTMLElement.itemValue")}} {{experimental_inline}}
   - : Devuelve un {{jsxref("Object")}}…
 - {{domxref("HTMLElement.lang")}}
-  - : Es un {{domxref("DOMString")}} que representa el lenguaje de los atributos del elemento, texto, y contenido del elemento.
+  - : Es un {{jsxref("String")}} que representa el lenguaje de los atributos del elemento, texto, y contenido del elemento.
 - {{domxref("HTMLElement.offsetHeight")}} {{readonlyInline}}{{experimental_inline}}
   - : Devuelve un `double` que contiene la altura de, en relación al diseño (`layout)`.
 - {{domxref("HTMLElement.offsetLeft")}}{{readonlyInline}}{{experimental_inline}}
@@ -56,13 +56,13 @@ _Hereda propiedades de su padre, {{domxref("Element")}}, y los implementalo de {
 - {{domxref("HTMLElement.properties")}} {{readonlyInline}}{{experimental_inline}}
   - : Returns an {{domxref("HTMLPropertiesCollection")}}…
 - {{domxref("HTMLElement.spellcheck")}}
-  - : Is a {{jsxref("Boolean")}} that controls [spell-checking](/es/docs/Web/HTML/Global_attributes/spellcheck). It is present on all HTML elements, though it hasn't an effect on all of them.
+  - : Is a {{jsxref("Boolean")}} that controls [spell-checking](/es/docs/Web/HTML/Reference/Global_attributes/spellcheck). It is present on all HTML elements, though it hasn't an effect on all of them.
 - {{domxref("HTMLElement.style")}}
   - : Is {{domxref("CSSStyleDeclaration")}}, an object representing the declarations of an element's style attributes.
 - {{domxref("HTMLElement.tabIndex")}}
   - : Is a `long` representing the position of the element in the tabbing order.
 - {{domxref("HTMLElement.title")}}
-  - : Is a {{domxref("DOMString")}} containing the text that appears in a popup box when mouse is over the element.
+  - : Is a {{jsxref("String")}} containing the text that appears in a popup box when mouse is over the element.
 - {{domxref("HTMLElement.translate")}} {{experimental_inline}}
   - : Is a {{jsxref("Boolean")}}
 

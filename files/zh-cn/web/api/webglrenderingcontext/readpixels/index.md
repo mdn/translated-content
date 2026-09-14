@@ -32,9 +32,7 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
 - `height`
   - : {{domxref("WebGL_API/Types", "GLsizei")}} 值，指定矩形的高度。
 - `format`
-
   - : {{domxref("WebGL_API/Types", "GLenum")}} 值，指定像素数据的格式，可能的值有：
-
     - `gl.ALPHA`
       - : 放弃红、绿、蓝通道读取 alpha 通道的数据。
     - `gl.RGB`
@@ -43,7 +41,6 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
       - : 从颜色缓存区读取红、绿、蓝以及 alpha 通道的数据。
 
     WebGL2 增加的
-
     - `gl.RED`
     - `gl.RG`
     - `gl.RED_INTEGER`
@@ -52,9 +49,7 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
     - `gl.RGBA_INTEGER`
 
 - `type`
-
   - : {{domxref("WebGL_API/Types", "GLenum")}} 值，指定像素数据的数据类型，可能的值有：
-
     - `gl.UNSIGNED_BYTE`
     - `gl.UNSIGNED_SHORT_5_6_5`
     - `gl.UNSIGNED_SHORT_4_4_4_4`
@@ -62,7 +57,6 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
     - `gl.FLOAT`
 
     WebGL2 增加的
-
     - `gl.BYTE`
     - `gl.UNSIGNED_INT_2_10_10_10_REV`
     - `gl.HALF_FLOAT`
@@ -74,9 +68,7 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
     - `gl.UNSIGNED_INT_5_9_9_9_REV`
 
 - `pixels`
-
   - : 用于读取数据的对象，必须与参数 `type` 的类型相匹配：
-
     - {{jsxref("Uint8Array")}}：`gl.UNSIGNED_BYTE`。
     - {{jsxref("Uint16Array")}}：`gl.UNSIGNED_SHORT_5_6_5`、`gl.UNSIGNED_SHORT_4_4_4_4` 或 `gl.UNSIGNED_SHORT_5_5_5_1`。
     - {{jsxref("Float32Array")}}：`gl.FLOAT`。
@@ -92,7 +84,6 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
 
 - `gl.INVALID_ENUM`：如果 `format` 或 `type` 不是可接受的值，则会引发此错误。
 - `gl.INVALID_OPERATION`：抛出此错误可能的原因：
-
   - `type` 是 `gl.UNSIGNED_SHORT_5_6_5` 且 `format` 不是 `gl.RGB`。
   - `type` 是 `gl.UNSIGNED_SHORT_4_4_4_4` 且 `format` 不是 `gl.RGBA`。
   - `type` 与类型化数组 `pixels` 的类型不匹配。

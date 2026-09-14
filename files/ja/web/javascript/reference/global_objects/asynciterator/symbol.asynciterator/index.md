@@ -9,7 +9,7 @@ l10n:
 
 **`[Symbol.asyncIterator]()`** は {{jsxref("AsyncIterator")}} インスタンスのメソッドで、[非同期反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)を実装し、組み込みの非同期イテレーターを、 [`for await...of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) ループのような非同期反復可能オブジェクトを期待するほとんどの構文で利用できるようにします。これは [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) の値を返しますが、これは非同期イテレーターオブジェクトそのものです。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype[Symbol.iterator]()")}}
+{{InteractiveExample("JavaScript デモ: Map.prototype[Symbol.iterator]()")}}
 
 ```js interactive-example
 const map1 = new Map();
@@ -22,8 +22,8 @@ const iterator1 = map1[Symbol.iterator]();
 for (const item of iterator1) {
   console.log(item);
 }
-// Expected output: Array ["0", "foo"]
-// Expected output: Array [1, "bar"]
+// 予想される結果: Array ["0", "foo"]
+// 予想される結果: Array [1, "bar"]
 ```
 
 ## 構文

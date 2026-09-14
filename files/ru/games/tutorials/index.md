@@ -3,8 +3,6 @@ title: Уроки
 slug: Games/Tutorials
 ---
 
-{{GamesSidebar}}
-
 Эта страница содержит несколько серий уроков, в которых освещаются различные рабочие процессы для эффективного создания разных типов веб-игр.
 
 - [2D игра Breakout на чистом JavaScript](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)

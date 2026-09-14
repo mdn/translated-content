@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 86aba12ebfdca9fb1de77afb08cc78a0c9e44d45
 ---
 
-{{JSRef}}
-
 {{jsxref("Boolean")}} 值的 **`valueOf()`** 方法返回 {{jsxref("Boolean")}} 对象的原始值。
 
 {{InteractiveExample("JavaScript Demo: Boolean.valueOf()")}}

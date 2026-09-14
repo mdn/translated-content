@@ -231,7 +231,8 @@ Este HTML será renderizado como uma caixa destacada:
 #### Chamadas
 
 ```plain
-> **Observação:** **É assim que você escreve uma chamada.**
+> [!CALLOUT]
+> **É assim que você escreve uma chamada.**
 >
 > Pode ter vários parágrafos.
 ```

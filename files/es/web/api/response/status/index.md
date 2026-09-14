@@ -48,5 +48,5 @@ fetch(myRequest).then(function (response) {
 ## Ver también
 
 - [API de Servicio Worker](/es/docs/Web/API/Service_Worker_API)
-- [Control de acceso HTTP (CORS)](/es/docs/Web/HTTP/CORS)
+- [Control de acceso HTTP (CORS)](/es/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/es/docs/Web/HTTP)

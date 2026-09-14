@@ -27,7 +27,7 @@ div {
 
 ### Conhecimentos Gerais
 
-- [Aprenda CSS](/pt-BR/docs/Learn/CSS)
+- [Aprenda CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics)
 
 ### Referências Técnicas
 

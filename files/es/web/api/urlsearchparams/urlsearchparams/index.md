@@ -18,7 +18,7 @@ var URLSearchParams = new URLSearchParams(init);
 ### Parámetros
 
 - _`init`_ {{optional_inline}}
-  - : Una instancia de {{domxref("USVString")}}, una secuencia de {{domxref("USVString")}}s, o un registro conteniendo dos {{domxref("USVString")}}s.
+  - : Una instancia de {{jsxref("String")}}, una secuencia de {{jsxref("String")}}s, o un registro conteniendo dos {{jsxref("String")}}s.
 
 ### Valor retornado
 

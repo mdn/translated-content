@@ -3,7 +3,7 @@ title: style
 slug: Web/SVG/Reference/Attribute/style
 ---
 
-**`style`** 属性指定了指定其元素的样式信息。它的功能与 HTML 中的 [style](/zh-CN/docs/Web/HTML/Global_attributes/style) 属性相同。
+**`style`** 属性指定了指定其元素的样式信息。它的功能与 HTML 中的 [style](/zh-CN/docs/Web/HTML/Reference/Global_attributes/style) 属性相同。
 
 ## 使用环境
 
@@ -42,11 +42,8 @@ slug: Web/SVG/Reference/Attribute/style
 - [Text content elements](/zh-CN/docs/Web/SVG/Reference/Element#textcontent) »
 - {{ SVGElement("clipPath") }}
 - {{ SVGElement("filter") }}
-- {{ SVGElement("font") }}
 - {{ SVGElement("foreignObject") }}
-- {{ SVGElement("glyphRef") }}
 - {{ SVGElement("stop") }}
-- {{ SVGElement("glyph") }}
 
 ## 规范
 

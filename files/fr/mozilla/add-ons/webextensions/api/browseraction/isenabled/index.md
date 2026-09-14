@@ -3,8 +3,6 @@ title: browserAction.isEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled
 ---
 
-{{AddonSidebar}}
-
 Renvoie `true` si l'action du navigateur est activée.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -20,9 +18,7 @@ let gettingIsEnabled = browser.browserAction.isEnabled(
 ### Paramètres
 
 - `details`
-
   - : `object`. Un objet contenant éventuellement le `tabId` ou `windowId` à vérifier.
-
     - `tabId` {{optional_inline}}
       - : `integer`. ID d'un onglet à vérifier
     - `windowId` {{optional_inline}}

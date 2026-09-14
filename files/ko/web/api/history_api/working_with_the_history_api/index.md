@@ -12,13 +12,11 @@ History API는 웹사이트가 브라우저의 세션 기록과 상호작용할 
 History API에서 정의된 주요 인터페이스는 {{domxref("History")}} 인터페이스이며, 이 인터페이스는 두 가지 전혀 다른 메서드 집합을 정의합니다.
 
 1. 세션 기록의 페이지로 이동하는 메서드
-
    - {{domxref("History.back()")}}
    - {{domxref("History.forward()")}}
    - {{domxref("History.go()")}}
 
 2. 세션 기록을 수정하는 메서드
-
    - {{domxref("History.pushState()")}}
    - {{domxref("History.replaceState()")}}
 

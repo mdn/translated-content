@@ -9,7 +9,8 @@ slug: Web/API/AudioWorkletProcessor/AudioWorkletProcessor
 
 ## 구문
 
-> **참고:** `AudioWorkletProcessor` 와 이것으로부터 파생된 클래스들은
+> [!NOTE]
+> `AudioWorkletProcessor` 와 이것으로부터 파생된 클래스들은
 > 사용자에 의해 제공된 코드로부터 직접적으로 초기화될 수 없습니다.
 > 대신, 이것들은 오직 연관된 {{domxref("AudioWorkletNode")}}들의 생성에 의해서만 내부적으로 생성됩니다.
 
@@ -20,11 +21,9 @@ new AudioWorkletProcessor(options);
 ### 매개변수
 
 - `options`
-
   - : {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}}에 _options_ 매개변수로서 전달되고 [structured clone algorithm](/ko/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)에 통과되는 객체. 사용 가능한 속성들은 다음과 같습니다:
 
     <!-- 명세는 이 객체를 다음으로 나타냅니다: AudioWorkletNodeOptions -->
-
     - `numberOfInputs` {{optional_inline}}
       - : {{domxref("AudioNode.numberOfInputs", "numberOfInputs")}} 속성을 초기화할 값. 기본 값은 1입니다.
     - `numberOfOutputs` {{optional_inline}}

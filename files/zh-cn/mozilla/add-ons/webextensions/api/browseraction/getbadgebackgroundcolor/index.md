@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 获取浏览器操作徽章的背景颜色。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
@@ -22,9 +20,7 @@ browser.browserAction.getBadgeBackgroundColor(
 ### 参数
 
 - `details`
-
   - : 包含以下属性的对象：
-
     - `tabId` {{optional_inline}}
       - : `integer`。指定从中获取徽章背景颜色的标签页。
     - `windowId` {{optional_inline}}

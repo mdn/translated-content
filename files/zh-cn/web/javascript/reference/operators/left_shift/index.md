@@ -3,8 +3,6 @@ title: 左移 (<<)
 slug: Web/JavaScript/Reference/Operators/Left_shift
 ---
 
-{{jsSidebar("Operators")}}
-
 **左移操作符 (`<<`)** 将第一个操作数向左移动指定位数，左边超出的位数将会被清除，右边将会补零。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Left shift operator")}}

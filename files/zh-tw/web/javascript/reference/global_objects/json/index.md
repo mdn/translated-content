@@ -3,15 +3,13 @@ title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
 ---
 
-{{JSRef}}
-
 **`JSON`** 物件包含了解析、或是轉換為 [JavaScript Object Notation](http://json.org/)（{{glossary("JSON")}}）格式的方法。這物件不能被呼叫或建構；而除了它的兩個方法屬性以外，本身也沒有特別的功能。
 
 ## 描述
 
 ### JavaScript Object Notation
 
-JSON 是序列物件、陣列、數字、字串、布林值、還有 {{jsxref("null")}} 的語法。它建基、但不同於 JavaScript：有些 JavaScript 不是 JSON、而有些 JSON 不是 JavaScript。請參見 [JSON: The JavaScript subset that isn't](http://timelessrepo.com/json-isnt-a-javascript-subset)。
+JSON 是序列物件、陣列、數字、字串、布林值、還有 {{jsxref("Operators/null", "null")}} 的語法。它建基、但不同於 JavaScript：有些 JavaScript 不是 JSON、而有些 JSON 不是 JavaScript。請參見 [JSON: The JavaScript subset that isn't](http://timelessrepo.com/json-isnt-a-javascript-subset)。
 
 | JavaScript 型別 | 與 JSON 的差別                                                                                             |
 | --------------- | ---------------------------------------------------------------------------------------------------------- |

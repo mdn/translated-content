@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/import
 original_slug: Web/XSLT/Reference/Element/import
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{XsltSidebar}}
 
 El elemento `<xsl:import>` sirve para importar el contenido de una hoja de estilo dentro de otra hoja de estilo. En general, el contenido de la hoja de estilo importada tiene una menor precedencia que el contenido de la hoja de estilo que la importa. Esto contrasta con el elemento `<xsl:include>` en el que el contenido de la hoja de estilo incluida tiene exactamente la misma precedencia que el contenido de la hoja de estilo que la incluye.
 

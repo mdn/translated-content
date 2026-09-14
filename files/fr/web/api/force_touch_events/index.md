@@ -3,9 +3,7 @@ title: Force Touch events
 slug: Web/API/Force_Touch_events
 ---
 
-{{DefaultAPISidebar("Force Touch events")}}
-
-{{Non-standard_header()}}
+{{DefaultAPISidebar("Force Touch Events")}}{{Non-standard_Header}}
 
 **Force Touch events** est une fonctionnalité propriétaire propre à Apple et qui rend possibles (si supporté par le matériel d'entrée) de nouvelles interactions basées sur le fait que l'utilisateur clique ou appuie sur l'écran tactile ou sur le trackpad.
 
@@ -24,7 +22,7 @@ slug: Web/API/Force_Touch_events
 
 La propriété suivante est connue pour être disponible sur les objets évènement [`webkitmouseforcewillbegin`](/fr/docs/Web/API/Element/webkitmouseforcewillbegin_event), [`mousedown`](/fr/docs/Web/API/Element/mousedown_event), [`webkitmouseforcechanged`](/fr/docs/Web/API/Element/webkitmouseforcechanged_event), [`webkitmouseforcedown`](/fr/docs/Web/API/Element/webkitmouseforcedown_event), [`webkitmouseforceup`](/fr/docs/Web/API/Element/webkitmouseforceup_event), [`mousemove`](/fr/docs/Web/API/Element/mousemove_event) et [`mouseup`](/fr/docs/Web/API/Element/mouseup_event):
 
-- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}
+- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline}} {{readonlyinline}}
   - : La quantité de pression actuellement appliquée sur le trackpad / écran tactile.
 
 ## Constantes

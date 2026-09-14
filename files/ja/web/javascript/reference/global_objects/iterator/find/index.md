@@ -1,11 +1,10 @@
 ---
 title: Iterator.prototype.find()
+short-title: find()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/find
 l10n:
-  sourceCommit: a71768c124d1bb2dceef873c0bda266e9f714e4c
+  sourceCommit: 76972cdb4d87dd72e0a2a3146af07d82c7ef7d67
 ---
-
-{{JSRef}}
 
 **`find()`** は {{jsxref("Iterator")}} インスタンスのメソッドで、 {{jsxref("Array.prototype.find()")}} に似ています。イテレーターが生成する要素のうち、指定された試験関数を満たす最初のものを返します。試験関数を満たす値がない場合は、 {{jsxref("undefined")}} を返します。
 
@@ -34,6 +33,8 @@ find(callbackFn)
 
 イテレーターヘルパーの主な利点は、配列メソッドよりも「遅延的」であるということです。つまり、要求されたときにのみ次の値を生成するという意味です。これにより、不必要なコンピューター処理を避けることができ、また、無限イテレーターでも使用することができます。無限イテレーターでは、 `find()` は最初の該当要素が見つかった時点でそれを返します。 `callbackFn` が常に偽値を返す場合、このメソッドは終了しません。
 
+`find()` を呼び出すと、メソッドが途中で返った場合でも、常にその元となるイテレーターが閉じられます。イテレーターが未完了の状態で残されることはありません。
+
 ## 例
 
 ### find() の使用
@@ -53,10 +54,10 @@ console.log(fibonacci().find(isEven)); // 2
 
 const isNegative = (x) => x < 0;
 console.log(fibonacci().take(10).find(isNegative)); // undefined
-console.log(fibonacci().find(isNegative)); // Never completes
+console.log(fibonacci().find(isNegative)); // 完了しない
 ```
 
-`find()` を呼び出すと、メソッドが途中で返った場合でも、常にその元となるイテレーターが閉じられます。イテレーターが未完了の状態で残されることはありません。
+このメソッドは返値の返却後、イテレーターを閉じます。
 
 ```js
 const seq = fibonacci();
@@ -75,6 +76,7 @@ console.log(seq.next()); // { value: undefined, done: true }
 ## 関連情報
 
 - [`Iterator.prototype.find` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims による `Iterator.prototype.find` のポリフィル](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.every()")}}
 - {{jsxref("Iterator.prototype.some()")}}

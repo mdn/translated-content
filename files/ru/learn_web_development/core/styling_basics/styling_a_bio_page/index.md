@@ -3,7 +3,7 @@ title: Использование ваших новых знаний
 slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 С учётом того что вы узнали за последние несколько уроков, вы должны обнаружить, что вы можете форматировать простые текстовые документы с использованием CSS, чтобы добавить к ним свой собственный стиль. Эта статья даёт вам возможность сделать это.
 
@@ -55,7 +55,6 @@ slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
 
 1. Загрузите ваш код на [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/).
 2. Напишите пост с просьбой о помощи и / или оценке на [форуме MDN](https://discourse.mozilla.org/c/mdn). Добавьте тег "learning" к вашему посту, чтобы нам легче было его найти. В вашем посте должны быть:
-
    - Заголовок с описанием наподобие "Assessment wanted for CSS First Steps".
    - Описание того, что вам нужно, — к примеру, что вы уже пробовали, что у вас не получается и вам нужна помощь.
    - Ссылка на ваш код в онлайн-редакторе.
@@ -65,4 +64,4 @@ slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
 
 Поздравляем вас с завершением первого модуля! Теперь вы неплохо разбираетесь в CSS и можете разобраться в таблицах стилей. В следующем модуле, [Как устроен CSS](/ru/docs/Learn_web_development/Core/Styling_basics), мы глубже разберёмся в некоторых аспектах языка.
 
-{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{PreviousMenu("Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics")}}

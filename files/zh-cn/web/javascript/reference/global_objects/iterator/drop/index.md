@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 088b56a895d22b6df854a9f26400af7d399f289f
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 {{jsxref("Iterator")}} 实例的 **`drop()`** 方法返回一个新的[迭代器辅助方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator#迭代器辅助方法)，该迭代器辅助方法会跳过此迭代器的开头的给定数量的元素。
 

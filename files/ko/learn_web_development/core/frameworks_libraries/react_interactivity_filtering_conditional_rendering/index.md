@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state","Learn_web_development/Core/Frameworks_libraries/React_accessibility", "Learn_web_development/Core/Frameworks_libraries")}}
 
 React 여정이 거의 끝나감에 따라(적어도 지금은), Todo 목록 애플리케이션의 주요 기능 영역에 마무리 작업을 추가할 것입니다. 여기에는 기존 할 일을 편집할 수 있도록 허용하고, 모든 할 일, 완료된 할 일 및 완료되지 않은 할 일 간의 할 일 목록을 필터링하는 것이 포함됩니다. 그 과정에서 조건부 UI 렌더링을 살펴보겠습니다.
 
@@ -16,9 +16,9 @@ React 여정이 거의 끝나감에 따라(적어도 지금은), Todo 목록 애
       <th scope="row">필요한 사전 지식:</th>
       <td>
         <p>
-          <a href="/ko/docs/Learn/HTML">HTML</a>,
-          <a href="/ko/docs/Learn/CSS">CSS</a>, 및
-          <a href="/ko/docs/Learn/JavaScript">JavaScript</a> 언어 핵심에 대한 친숙도,
+          <a href="/ko/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+          <a href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a>, 및
+          <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a> 언어 핵심에 대한 친숙도,
           <a
             href="/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >터미널/커멘드 라인</a
@@ -401,4 +401,4 @@ const taskList = tasks
 
 이제 애플리케이션이 기능적으로 완성되었습니다. 그러나, 이제 모든 기능을 구현했으므로, 더 많은 사용자가 애플리케이션을 사용할 수 있도록 몇 가지 개선 사항을 적용할 수 있습니다. 다음 글에서는 React에 포커스 관리를 포함하여, 사용성을 개선하고 키보드만 사용하는 사용자와 화면 판독기 사용자 모두의 혼란을 줄일 수 있는 방법을 살펴봄으로써, React 자습서의 내용을 마무리합니다.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state","Learn_web_development/Core/Frameworks_libraries/React_accessibility", "Learn_web_development/Core/Frameworks_libraries")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当一个标签页被关闭时触发。
 
 ## 语法
@@ -31,9 +29,7 @@ browser.tabs.onRemoved.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `tabId`
       - : `integer`。关闭的标签页的 ID。
     - `removeInfo`

@@ -3,7 +3,7 @@ title: Creating hyperlinks
 slug: Learn_web_development/Core/Structuring_content/Creating_links
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
 
 超連結(Hyperlinks)真的超級重要 — 它造就了我們現今所熟知的網路。這篇文章將會介紹超連結的使用語法，並且探討建立它們的最佳實踐方法。
 
@@ -44,7 +44,7 @@ slug: Learn_web_development/Core/Structuring_content/Creating_links
 
 ## 解析連結
 
-一個基本的連結由 {{htmlelement("a")}} 元素包裹一段文字而成(當然也不一定要是文字，見下方的[區塊級連結](#區塊級連結block-level_links))，同時，你需要將網路位址填入 [`href`](/zh-TW/docs/Web/HTML/Element/a#href) 屬性中，這個屬性有時也被叫做**超文字參考(Hypertext Reference)**或**目標(target)**。
+一個基本的連結由 {{htmlelement("a")}} 元素包裹一段文字而成(當然也不一定要是文字，見下方的[區塊級連結](#區塊級連結block-level_links))，同時，你需要將網路位址填入 [`href`](/zh-TW/docs/Web/HTML/Reference/Elements/a#href) 屬性中，這個屬性有時也被叫做**超文字參考(Hypertext Reference)**或**目標(target)**。
 
 ```html
 <p>
@@ -143,7 +143,7 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 
 ### 文件片段 (Document fragments)
 
-並不是每次都只能連到文件的頂端，你也可以連到 HTML 文件中的某個部分，而這個部分叫做**文件片段(document fragment)**。要做到這件事，你得先為你要連的元素設定 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性，通常你可以把連結設在標題(heading)上，像是下面這樣：
+並不是每次都只能連到文件的頂端，你也可以連到 HTML 文件中的某個部分，而這個部分叫做**文件片段(document fragment)**。要做到這件事，你得先為你要連的元素設定 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#id) 屬性，通常你可以把連結設在標題(heading)上，像是下面這樣：
 
 ```html
 <h2 id="Mailing_address">Mailing address</h2>
@@ -295,7 +295,7 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 
 它的結果會像是這樣：[Send email to nowhere](mailto:nowhere@mozilla.org)。
 
-事實上，電子郵件地址是選填的。如果你將它留空 (也就是說，你的 [`href`](/zh-TW/docs/Web/HTML/Element/a#href) 只寫了 "mailto:")，使用者的 mail client 會開啟一個寄信視窗，其中並沒有指定收信人，這在使用「分享」連結時非常有用，使用者可以自行決定要寄給誰。
+事實上，電子郵件地址是選填的。如果你將它留空 (也就是說，你的 [`href`](/zh-TW/docs/Web/HTML/Reference/Elements/a#href) 只寫了 "mailto:")，使用者的 mail client 會開啟一個寄信視窗，其中並沒有指定收信人，這在使用「分享」連結時非常有用，使用者可以自行決定要寄給誰。
 
 ### 指定細節
 
@@ -323,7 +323,7 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 
 ## 小試身手！
 
-你已經讀完這個章節囉，但你有掌握箇中的重點嗎？你可以在繼續閱讀後面的章節之前，先進行一些測驗 — 請前往[小試身手：超連結。](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links)
+你已經讀完這個章節囉，但你有掌握箇中的重點嗎？你可以在繼續閱讀後面的章節之前，先進行一些測驗 — 請前往[小試身手：超連結。](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links)
 
 ## 總結
 

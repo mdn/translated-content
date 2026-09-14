@@ -15,7 +15,7 @@ slug: Web/API/DOMStringList
 ## Методы
 
 - {{domxref("DOMStringList.item()")}}
-  - : Возвращает {{domxref("DOMString")}}.
+  - : Возвращает {{jsxref("String")}}.
 - {{domxref("DOMStringList.contains()")}}
   - : Возвращает {{jsxref("Boolean")}} с указанием, есть ли данная строка в списке.
 

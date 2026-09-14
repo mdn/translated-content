@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
 ---
 
-{{jsSidebar("Errors")}}
-
 L'exception JavaScript <i lang="en">"x can't be converted to BigInt because it isn't an integer"</i> se produit lorsque la fonction [`BigInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) est utilisée sur un nombre qui n'est pas entier.
 
 ## Message

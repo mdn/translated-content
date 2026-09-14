@@ -3,8 +3,6 @@ title: Promise.any()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/any
 ---
 
-{{JSRef}}
-
 **`Promise.any()`** 静态方法将一个 Promise 可迭代对象作为输入，并返回一个 {{jsxref("Promise")}}。当输入的任何一个 Promise 兑现时，这个返回的 Promise 将会兑现，并返回第一个兑现的值。当所有输入 Promise 都被拒绝（包括传递了空的可迭代对象）时，它会以一个包含拒绝原因数组的 {{jsxref("AggregateError")}} 拒绝。
 
 {{InteractiveExample("JavaScript Demo: Promise.any()")}}

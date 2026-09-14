@@ -5,7 +5,7 @@ slug: Web/API/MediaStream/id
 
 {{APIRef("WebRTC")}}
 
-**`MediaStream.id`** 只读属性，一个包含 36 个字符的 {{domxref("DOMString")}} ，用来作为这个对象的唯一标识符 (GUID) 。
+**`MediaStream.id`** 只读属性，一个包含 36 个字符的 {{jsxref("String")}} ，用来作为这个对象的唯一标识符 (GUID) 。
 
 ## 语法
 

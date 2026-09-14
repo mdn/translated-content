@@ -3,8 +3,6 @@ title: browsingData.removeHistory()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeHistory
 ---
 
-{{AddonSidebar}}
-
 Efface l'enregistrement des pages Web que l'utilisateur a visité (historique de navigation).
 
 Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :
@@ -78,8 +76,6 @@ browser.browsingData.removeHistory({}).then(onRemoved, onError);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

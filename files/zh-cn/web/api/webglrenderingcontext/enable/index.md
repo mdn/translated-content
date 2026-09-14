@@ -18,7 +18,6 @@ enable(cap)
 ### 参数
 
 - `cap`
-
   - : 一个指定要启用的 WebGL 的功能的 {{domxref("WebGL_API/Types", "GLenum")}}。可能的值有：
 
     | 常量                          | 描述                                                                                              |

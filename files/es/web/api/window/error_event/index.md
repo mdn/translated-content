@@ -18,7 +18,6 @@ window.onerror = funcRef;
 ### Parámetros
 
 - `funcRef` es una referencia a una función. Cuando la función devuelva `true`, se prevendrá el disparado del manejador de eventos por defecto. Parámetros de la función:
-
   - Mensaje de error (string)
   - Url en la que el error fue lanzado (string)
   - Número de línea en la que el error fue lanzado (number)

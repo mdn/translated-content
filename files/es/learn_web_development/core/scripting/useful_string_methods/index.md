@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Useful_string_methods
 original_slug: Learn/JavaScript/First_steps/Useful_string_methods
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "conflicting/Learn_web_development/Core/Scripting")}}
 
 Ahora que hemos analizado los conceptos básicos de las cadenas, aumentemos la velocidad y comencemos a pensar qué operaciones útiles podemos hacer en cadenas con métodos integados, como encontrar la longitud de una cadena de texto, unir y dividir cadenas, sustituyendo un caracter de una cadena por otro, y más.
 
@@ -710,4 +710,4 @@ textarea.onkeyup = function () {
 
 No puedes negar el hecho de que ser capaz de manejar palablas y oraciones en la programación es muy importante — especialmente en JavaScript, ya que los sitios web tratan sobre la comunicación con las personas. Este artículo te ha proporcionado los conceptos básicos que necesitas saber sobre la manipulación de cadenas por ahora. Esto debería servirte bien a medida que abordas temas más complejos en el futuro. A continuación, vamos a ver el último tipo importante de datos en el que necesitamos enfocarnos en el corto plazo — matrices.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "conflicting/Learn_web_development/Core/Scripting")}}

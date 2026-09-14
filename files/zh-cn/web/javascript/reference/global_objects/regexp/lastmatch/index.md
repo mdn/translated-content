@@ -3,7 +3,7 @@ title: RegExp.lastMatch ($&)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{non-standard_header}}
 
 **lastMatch** 非标准属性是正则表达式的静态和只读属性，含有最后匹配到的字符串。`RegExp.$&` 是这个属性的别名。
 

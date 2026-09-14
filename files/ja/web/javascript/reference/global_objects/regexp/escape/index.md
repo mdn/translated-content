@@ -1,11 +1,10 @@
 ---
 title: RegExp.escape()
+short-title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/escape
 l10n:
-  sourceCommit: a73295d4344aeab38c67262717d0dda8b3b9f0c5
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`RegExp.escape()`** は静的メソッドで、文字列内の潜在的な正規表現構文文字を[エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions#エスケープシーケンス)し、[リテラルパターン](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)として {{jsxref("RegExp/RegExp", "RegExp()")}} コンストラクターで安全に使用できる新しい文字列を返します。
 
@@ -105,4 +104,5 @@ function removeDomain(text, domain) {
 ## 関連情報
 
 - [`RegExp.escape` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#regexp-escaping)
+- [es-shims による `Reflect.escape` のポリフィル](https://www.npmjs.com/package/regexp.escape)
 - {{jsxref("RegExp")}}

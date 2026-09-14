@@ -3,8 +3,6 @@ title: 框架的主要特性
 slug: Learn_web_development/Core/Frameworks_libraries/Main_features
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}
 
 每种主流的 JavaScript 框架都有自己不同的方式更新 DOM、处理浏览器事件并为开发者提供愉快的使用体验，这篇文章将探索“四大”框架的主要特性，从较高的层次探讨框架的工作方式以及它们之间的区别。
@@ -47,7 +45,7 @@ const header = (
 );
 ```
 
-小括号内的表达式表示一个 HTML [`<header>`](/zh-CN/docs/Web/HTML/Element/header) 元素，里面还有一个 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 元素。第 4 行 `subject` 周围的花括号告诉应用程序要读取常量 `subject` 的值并将其插入到我们的 `<h1>` 元素当中。
+小括号内的表达式表示一个 HTML [`<header>`](/zh-CN/docs/Web/HTML/Reference/Elements/header) 元素，里面还有一个 [`<h1>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements) 元素。第 4 行 `subject` 周围的花括号告诉应用程序要读取常量 `subject` 的值并将其插入到我们的 `<h1>` 元素当中。
 
 当与 React 一起使用时，上一个片段中的 JSX 将被编译成这样：
 
@@ -157,7 +155,7 @@ function AuthorCredit(props) {
 />
 ```
 
-这将最终在浏览器中呈现以下 [`<figure>`](/zh-CN/docs/Web/HTML/Element/figure) 元素，其结构由 `AuthorCredit` 组件定义，其内容由 `AuthorCredit` 组件调用中的 props 定义：
+这将最终在浏览器中呈现以下 [`<figure>`](/zh-CN/docs/Web/HTML/Reference/Elements/figure) 元素，其结构由 `AuthorCredit` 组件定义，其内容由 `AuthorCredit` 组件调用中的 props 定义：
 
 ```html
 <figure>
@@ -318,12 +316,6 @@ it("Increments the count when clicked", () => {
 
 ## 总结
 
-现在，你应该对你在使用框架创建应用程序时要使用的实际语言、功能和工具有了更多的了解。我相信你一定很想去做一些编码工作，这就是你接下来要做的事情！在这一点上，你可以选择你想先开始学习哪个框架：
+现在，你应该对你在使用框架创建应用程序时要使用的实际语言、功能和工具有了更多的了解。我相信你一定很想去做一些编码工作，这就是你接下来要做的事情！
 
-- [React](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
-- [Ember](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Ember_getting_started)
-- [Vue](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started)
-- [Svelte](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started)
-- [Angular](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Angular_getting_started)
-
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Introduction","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}

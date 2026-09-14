@@ -3,8 +3,6 @@ title: const
 slug: Web/JavaScript/Reference/Statements/const
 ---
 
-{{jsSidebar("Statements")}}
-
 La **déclaration `const`** permet de créer une constante nommée accessible uniquement en lecture. Cela ne signifie pas que la valeur contenue est immuable, uniquement que l'identifiant ne peut pas être réaffecté. Autrement dit la valeur d'une constante ne peut pas être modifiée par des réaffectations ultérieures. Une constante ne peut pas être déclarée à nouveau.
 
 {{InteractiveExample("JavaScript Demo: Statement - Const")}}
@@ -72,12 +70,11 @@ var MA_FAV = 20;
 // cela renvoie également une erreur
 let MA_FAV = 20;
 
-
 // On notera l'importance de la portée de bloc :
 if (MA_FAV === 7) {
   // cela fonctionne sans problème et crée
   // une nouvelle variable dans cette portée
-  let MA_FAV =  20;
+  let MA_FAV = 20;
 
   // Ici, MA_FAV vaut 20
   console.log("mon nombre préféré est " + MA_FAV);
@@ -85,7 +82,6 @@ if (MA_FAV === 7) {
   // L'instruction suivante est remontée dans le
   // contexte global et provoque une erreur !
   var MA_FAV = 20;
-
 }
 
 // MA_FAV vaut toujours 7
@@ -95,10 +91,10 @@ console.log("mon nombre favori est " + MA_FAV);
 const TOTO; // SyntaxError: Missing initializer in const
 
 // const fonctionne également avec les objects
-const monObjet = {"clé": "valeur"};
+const monObjet = { clé: "valeur" };
 
 // Écraser l'objet échouera comme précédemment
-monObjet = {"autreClé": "valeur"};
+monObjet = { autreClé: "valeur" };
 
 // En revanche, les clés d'un objet ne sont pas
 // protégés et on peut donc, de façon valide, avoir
@@ -123,6 +119,6 @@ mon_tableau = ["B"]; // lève une exception
 
 ## Voir aussi
 
-- {{jsxref("Instructions/var","var")}}
-- {{jsxref("Instructions/let","let")}}
+- {{jsxref("Statements/var","var")}}
+- {{jsxref("Statements/let","let")}}
 - [Les constantes dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#constantes)

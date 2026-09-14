@@ -12,7 +12,6 @@ slug: Web/API/Document/readystatechange_event
 - Спецификация
   - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#current-document-readiness)
 - Интерфейс
-
   - : Event
 
 - Всплывает
@@ -29,7 +28,7 @@ slug: Web/API/Document/readystatechange_event
 | Свойство                        | Тип                        | Описание                                        |
 | ------------------------------- | -------------------------- | ----------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | Цель события (Самая верхняя цель в дереве DOM). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Тип события.                                    |
+| `type` {{readonlyInline}}       | {{jsxref("String")}}       | Тип события.                                    |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Всплывает ли событие.                           |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Возможно ли отменить событие.                   |
 

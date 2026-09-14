@@ -27,10 +27,10 @@ _また、 {{DOMxRef("Document")}} からメソッドを継承します。_
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - [The DOM interfaces index.](/ja/docs/Web/API/Document_Object_Model)

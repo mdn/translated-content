@@ -1,50 +1,66 @@
 ---
-title: select
+title: "HTMLInputElement : évènement select"
+short-title: select
 slug: Web/API/HTMLInputElement/select_event
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-L'évènement `select` est déclenché quand du texte est sélectionné. L'évènement peut ne pas être disponible pour tous les éléments dans tous les langages. Par exemple, en [HTML5](https://www.w3.org/TR/DOM-Level-3-Events/#references-HTML5), les évènements select ne peuvent être envoyés que sur des éléments `input` de formulaire et `textarea`.
+L'évènement **`select`** de l'interface {{DOMxRef("HTMLInputElement")}} est déclenché lorsqu'une portion de texte est sélectionnée.
 
-## Info générale
+## Syntaxe
 
-- Spécification
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-select)
-- Interface
-  - : UIEvent si généré depuis une interface utilisateur, Event sinon.
-- Remonte
-  - : Oui
-- Annulable
-  - : Non
-- Cible
-  - : Élément
-- Action par Défault
-  - : Aucune
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou affectez un gestionnaire d'évènements à la propriété correspondante.
 
-## Propriétés
+```js-nolint
+addEventListener("select", (event) => { })
 
-| Property                        | Type                                                                   | Description                                                                                |
-| ------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `target` {{readonlyInline}}     | [`EventTarget`](/fr/docs/Web/API/EventTarget)                          | The event target (the topmost target in the DOM tree).                                     |
-| `type` {{readonlyInline}}       | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) | The type of event.                                                                         |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Whether the event normally bubbles or not.                                                 |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Whether the event is cancellable or not.                                                   |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/fr/docs/Web/API/WindowProxy)                          | [`document.defaultView`](/fr/docs/Web/API/Document/defaultView) (`window` of the document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                                                       | 0.                                                                                         |
+onselect = (event) => { }
+```
 
-## Exemple
+## Type d'évènement
+
+Un objet {{DOMxRef("Event")}} générique.
+
+## Exemples
+
+### Journal de sélection
 
 ```html
-<input id="test" type="text" value="Sélectionnez-moi !" />
-<script>
-  var elem = document.getElementById("test");
-  elem.addEventListener(
-    "select",
-    function () {
-      alert("La sélection a changé !");
-    },
-    false,
-  );
-</script>
+<input value="Essayez de sélectionner du texte dans cet élément." />
+<p id="log"></p>
 ```
+
+```js
+function logSelection(event) {
+  const log = document.getElementById("log");
+  const selection = event.target.value.substring(
+    event.target.selectionStart,
+    event.target.selectionEnd,
+  );
+  log.textContent = `Vous avez sélectionné : ${selection}`;
+}
+
+const input = document.querySelector("input");
+input.addEventListener("select", logSelection);
+```
+
+{{EmbedLiveSample("Journal de sélection")}}
+
+### Équivalent `onselect`
+
+Vous pouvez aussi définir le gestionnaire d'évènements via la propriété `onselect`&nbsp;:
+
+```js
+input.onselect = logSelection;
+```
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

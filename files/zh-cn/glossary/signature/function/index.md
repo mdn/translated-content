@@ -3,8 +3,6 @@ title: 签名（函数）
 slug: Glossary/Signature/Function
 ---
 
-{{GlossarySidebar}}
-
 **函数签名**（*类型*签名，或*方法*签名）定义了{{Glossary("Function", "函数")}}或{{Glossary("Method", "方法")}}的输入与输出。
 
 一个签名可以包括：

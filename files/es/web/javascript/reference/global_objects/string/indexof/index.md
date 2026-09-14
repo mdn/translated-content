@@ -18,7 +18,6 @@ cadena.indexOf(valorBusqueda[, indiceDesde])
 ### Parámetros
 
 - `valorBusqueda`
-
   - : Una cadena que representa el valor de búsqueda.
 
 - `indiceDesde`

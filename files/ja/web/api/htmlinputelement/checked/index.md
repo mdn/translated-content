@@ -10,9 +10,9 @@ l10n:
 
 **`checked`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、要素の現在のチェック状態、つまり、あるフォームコントロールがチェック済みかどうかを指定します。
 
-論理プロパティである `checked` は、 `radio` ([`<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio)) および `checkbox` ([`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox)) 入力型に関連します。
+論理プロパティである `checked` は、 `radio` ([`<input type="radio">`](/ja/docs/Web/HTML/Reference/Elements/input/radio)) および `checkbox` ([`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox)) 入力型に関連します。
 
-HTML の [`checked`](/ja/docs/Web/HTML/Element/input#checked) 属性が存在することは、チェックボックスが既定でチェックされていることを示します。ただし、そのチェックボックスが現在チェックされているかどうかは示しません。チェックボックスの状態が変更された場合、このコンテンツ属性は変更を反映しません。`HTMLInputElement` の `checked` IDL プロパティのみが更新されます。`checked` 属性は、 {{domxref("HTMLInputElement.defaultChecked", "defaultChecked")}} プロパティによって反映されます。
+HTML の [`checked`](/ja/docs/Web/HTML/Reference/Elements/input#checked) 属性が存在することは、チェックボックスが既定でチェックされていることを示します。ただし、そのチェックボックスが現在チェックされているかどうかは示しません。チェックボックスの状態が変更された場合、このコンテンツ属性は変更を反映しません。`HTMLInputElement` の `checked` IDL プロパティのみが更新されます。`checked` 属性は、 {{domxref("HTMLInputElement.defaultChecked", "defaultChecked")}} プロパティによって反映されます。
 
 ラジオ入力の `checked` プロパティが `true` の場合、同じ {{DOMxRef("HTMLInputElement.name", "name")}} を持つ他のラジオ入力はすべて `false` です。同じ名前を持つラジオボタングループ内のいずれかのラジオボタンが {{DOMxRef("HTMLInputElement.required", "required")}} の場合、グループ内のボタンが 1 つでもチェックされると、グループ内の各ラジオボタンに対する {{domxref('ValidityState')}} オブジェクトの読み取り専用の {{domxref('ValidityState.valueMissing','valueMissing')}} プロパティは `false` になります。
 

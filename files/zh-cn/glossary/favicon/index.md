@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 Favicon（也被称为网站图标）是与网站一起包含的微小图标，显示在浏览器的地址栏、页面标签和书签菜单等位置。
 
 然而，请注意，大多数现代浏览器已将地址栏中的网站图标替换为指示网站是否使用 {{Glossary("HTTPS")}} 的图标。
@@ -18,8 +16,7 @@ Favicon（也被称为网站图标）是与网站一起包含的微小图标，�
 ## 参见
 
 - 维基百科上的 [Favicon](https://zh.wikipedia.org/wiki/Favicon)
-- [link rel="icon"](/zh-CN/docs/Web/HTML/Attributes/rel#icon) 元素文档，用于将网站图标添加到页面。
+- [link rel="icon"](/zh-CN/docs/Web/HTML/Reference/Attributes/rel#icon) 元素文档，用于将网站图标添加到页面。
 - 工具
-
   - [免费网站图标生成器](https://favicon.io/)
   - [网站图标和应用图标生成器](https://www.favicon-generator.org/)

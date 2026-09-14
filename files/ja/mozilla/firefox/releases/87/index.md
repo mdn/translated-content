@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7f74644d98484c67817c1dd556a6e394f5a26a6f
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 87 の変更点をまとめています。Firefox 87 は、米国時間 2021 年 3 月 23 日にリリースされました。
 
 > [!NOTE]
@@ -19,7 +17,6 @@ l10n:
 - 開発者が[ページインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-prefers-color-scheme)を使用して、オペレーティングシステムをライトモードやダークモードに切り替えることなく、 {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} メディアクエリーのシミュレーションができるようになりました ([Firefox バグ 1679408](https://bugzil.la/1679408) および [Firefox バグ 1692272](https://bugzil.la/1692272))。
 - [ページインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#viewing-common-pseudo-classes)を使用して、現在選択されている要素の {{cssxref(":target")}} 擬似クラスを (すでに対応している {{cssxref(":hover")}}、{{cssxref(":active")}}、{{cssxref(":focus")}}、{{cssxref(":focus-within")}}、{{cssxref(":focus-visible")}}、{{cssxref(":visited")}} 擬似クラスに加えて) 切り替えられるようになりました ([Firefox バグ 1689899](https://bugzil.la/1689899))。
 - Firefox 87 で、非活性の CSS ルールにする[ページインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#rule-display)の数々の改良とバグ修正を行いました。
-
   - テーブル以外の要素について、{{cssxref("table-layout")}} プロパティを非活性としてマークするようになりました ([Firefox バグ 1551571](https://bugzil.la/1551571))。
   - スクロールできない要素について、{{cssxref("scroll-padding")}} プロパティを (ショートハンドプロパティ・ロングハンドプロパティともに) 非活性としてマークするようになりました ([Firefox バグ 1551577](https://bugzil.la/1551577))。
   - 以前は{{cssxref("overflow")}} の一部の値で、{{cssxref("text-overflow")}} プロパティが誤って非活性としてマークされていました ([Firefox バグ 1671457](https://bugzil.la/1671457))。
@@ -36,7 +33,6 @@ _変更なし。_
 #### 廃止
 
 - 以下の Firefox 固有のテーマに関連するメディア特性を、ウェブページで使用できないようにしました ([Firefox バグ 787521](https://bugzil.la/787521))。
-
   - `-moz-mac-graphite-theme`
   - `-moz-mac-lion-theme`
   - `-moz-maemo-classic`
@@ -71,7 +67,7 @@ _変更なし。_
 
 #### DOM
 
-- {{domxref("HTMLElement.beforeinput_event", "beforeinput")}} イベントおよび {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} メソッドをデフォルトで有効化しました。これらはテキスト編集の動作を、ブラウザーが DOM ツリーを変更する前にウェブアプリがオーバーライドして、パフォーマンスを向上するために入力イベントをより細かく制御できます。グローバルの `beforeinput` イベントは {{HTMLElement("input")}} 要素 (または [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性を `true` に設定した任意の要素) へ、要素の値が変わる直前に送信されます。{{domxref("InputEvent")}} インターフェイスの `getTargetRanges()` メソッドは、入力居便がキャンセルされなかった場合に、DOM 変更の影響を受ける静的な範囲の配列を返します。
+- {{domxref("HTMLElement.beforeinput_event", "beforeinput")}} イベントおよび {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} メソッドをデフォルトで有効化しました。これらはテキスト編集の動作を、ブラウザーが DOM ツリーを変更する前にウェブアプリがオーバーライドして、パフォーマンスを向上するために入力イベントをより細かく制御できます。グローバルの `beforeinput` イベントは {{HTMLElement("input")}} 要素 (または [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性を `true` に設定した任意の要素) へ、要素の値が変わる直前に送信されます。{{domxref("InputEvent")}} インターフェイスの `getTargetRanges()` メソッドは、入力居便がキャンセルされなかった場合に、DOM 変更の影響を受ける静的な範囲の配列を返します。
 
 ### WebDriver conformance (Marionette)
 

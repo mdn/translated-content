@@ -52,7 +52,6 @@ slug: Web/SVG/Reference/Attribute/id
 </table>
 
 - \<id>
-
   - : Задаёт идентификатор элемента. Идентификатор должен быть уникальным в пределах дерева узлов, не должен быть пустой строкой и не должен содержать никаких пробелов.
 
     > [!NOTE]
@@ -70,5 +69,5 @@ slug: Web/SVG/Reference/Attribute/id
 
 ## Смотрите также
 
-- [HTML `id`](/ru/docs/Web/HTML/Global_attributes/id)
+- [HTML `id`](/ru/docs/Web/HTML/Reference/Global_attributes/id)
 - {{SVGAttr("class")}}

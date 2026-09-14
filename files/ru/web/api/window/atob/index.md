@@ -17,7 +17,7 @@ var decodedData = scope.atob(encodedData);
 
 ### Throws
 
-Выбрасывает {{jsxref("DOMException")}}, если длина переданной строки не кратна 4.
+Выбрасывает {{domxref("DOMException")}}, если длина переданной строки не кратна 4.
 
 ## Пример
 

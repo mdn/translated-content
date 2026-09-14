@@ -3,8 +3,6 @@ title: TypedArray.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 ---
 
-{{JSRef}}
-
 **`forEach()`** 方法对类型化数组的每个元素调用提供的函数。这个方法的算法和 {{jsxref("Array.prototype.forEach()")}} 相同。_TypedArray_ 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)之一。
 
 ## 语法

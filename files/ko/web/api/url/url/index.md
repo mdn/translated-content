@@ -24,7 +24,8 @@ const url = new URL(url [, base])
 - `base` {{optional_inline}}
   - : `url` 매개변수가 상대 URL인 경우 사용할 기준 URL을 나타내는 {{domxref("USVString")}}. 기본값은 `''`입니다.
 
-> **참고:** `base`에는 기존에 존재하는 {{domxref("URL")}} 객체도 사용할 수 있습니다. 그러면 {{domxref("URI.href", "href")}} 속성을 사용해 스스로 문자열화합니다.
+> [!NOTE]
+> `base`에는 기존에 존재하는 {{domxref("URL")}} 객체도 사용할 수 있습니다. 그러면 {{domxref("URI.href", "href")}} 속성을 사용해 스스로 문자열화합니다.
 
 ### 예외
 

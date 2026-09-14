@@ -24,7 +24,7 @@ const RAM = navigator.deviceMemory;
 
 ### 클라이언트 힌트
 
-이어서 여러분은 `Device-Memory`가 있는 HTTP 헤더의 [Client hints(클라이언트 힌트)](/ko/docs/Web/HTTP/Client_hints)를 통해 RAM 용량 근삿값을 확인할 수 있습니다.
+이어서 여러분은 `Device-Memory`가 있는 HTTP 헤더의 [Client hints(클라이언트 힌트)](/ko/docs/Web/HTTP/Guides/Client_hints)를 통해 RAM 용량 근삿값을 확인할 수 있습니다.
 
 ## 인터페이스
 

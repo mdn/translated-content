@@ -2,12 +2,12 @@
 title: URLSearchParams：sort() 方法
 slug: Web/API/URLSearchParams/sort
 l10n:
-  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
+  sourceCommit: 3e097148b4c6cb9c6d8824275599f855ca63827b
 ---
 
 {{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-**`URLSearchParams.sort()`** 方法对包含在此对象中的所有键/值对进行排序，并返回 `undefined`。排序顺序是根据键的 Unicode 码位。该方法使用稳定的排序算法（即，将保留具有相等键的键/值对之间的相对顺序）。
+**`URLSearchParams.sort()`** 方法对包含在此对象中的所有键/值对进行排序，并返回 `undefined`。键/值对按照键的 {{glossary("UTF-16", "UTF-16 码位")}}值排序。该方法使用稳定的排序算法（即，将保留具有相等键的键/值对之间的相对顺序）。
 
 ## 语法
 
@@ -29,7 +29,7 @@ sort()
 // 创建一个测试用的 URLSearchParams 对象
 const searchParams = new URLSearchParams("c=4&a=2&b=3&a=1");
 
-// 对键/值对进行派寻
+// 对键/值对进行排序
 searchParams.sort();
 
 // 显示排序后的查询字符串

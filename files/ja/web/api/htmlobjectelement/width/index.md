@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`width`** は {{domxref("HTMLObjectElement")}} インターフェイスのプロパティで、 HTML の [`width`](/ja/docs/Web/HTML/Element/object#width) 属性を反映した文字列であり、リソースが表示される幅を CSS ピクセル単位で指定する値を返します。
+**`width`** は {{domxref("HTMLObjectElement")}} インターフェイスのプロパティで、 HTML の [`width`](/ja/docs/Web/HTML/Reference/Elements/object#width) 属性を反映した文字列であり、リソースが表示される幅を CSS ピクセル単位で指定する値を返します。
 
 ## 値
 

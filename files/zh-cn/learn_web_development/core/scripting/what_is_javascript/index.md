@@ -1,28 +1,37 @@
 ---
 title: 什么是 JavaScript？
 slug: Learn_web_development/Core/Scripting/What_is_JavaScript
+l10n:
+  sourceCommit: 387f257e452a39d8d068649effae397e9179fd96
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
+{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
 
-欢迎来到 MDN 的 JavaScript 初学者课程！本节将在一定高度俯瞰 JavaScript，回答一些诸如“它是什么？”和“它能做什么？”的问题。并使你熟悉 JavaScript 的用途。
+欢迎来到 MDN 的 JavaScript 初学者课程！在本文中，我们将从宏观层面探讨 JavaScript，回答诸如“它是什么？”和“它能做什么？”等问题，并确保你充分理解 JavaScript 的用途。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>
-      <td>计算机基础知识，初步理解 HTML 和 CSS。</td>
+      <td>理解 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a> 和 <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS 基础</a>。</td>
     </tr>
     <tr>
-      <th scope="row">目标：</th>
-      <td>初步了解 JavaScript，包括一些概念、用途和嵌入网站的方法。</td>
+      <th scope="row">学习成果：</th>
+      <td>
+        <ul>
+          <li>什么是 JavaScript，如何在网站中应用它。</li>
+          <li>可以用 JavaScript 做些什么。</li>
+          <li>将 JavaScript 添加到网页中。</li>
+          <li>在 JavaScript 中撰写注释。</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
 
 ## 高层定义
 
-JavaScript 是一种脚本编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新——交互式的地图、2D/3D 动画、滚动播放的视频等等——JavaScript 就在其中。它是标准 Web 技术蛋糕的第三层，其中 [HTML](/zh-CN/docs/Learn_web_development/Core/Structuring_content) 和 [CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 我们已经在学习区的其他部分进行了详细的讲解。
+JavaScript 是一种脚本编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新——交互式地图、2D/3D 动画、滚动播放的视频等等——JavaScript 就在其中。它是标准 Web 技术蛋糕的第三层，其中 [HTML](/zh-CN/docs/Learn_web_development/Core/Structuring_content) 和 [CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 已经在学习区的其他部分进行了详细的讲解。
 
 ![标准 web 技术的三层——HTML、CSS 和 JavaScript](cake.png)
 
@@ -30,19 +39,36 @@ JavaScript 是一种脚本编程语言，它可以在网页上实现复杂的功
 - {{glossary("CSS")}} 是一种样式规则语言，可将样式应用于 HTML 内容，例如设置背景颜色和字体，在多个列中布局内容。
 - {{glossary("JavaScript")}} 是一种脚本语言，可以用来创建动态更新的内容，控制多媒体，制作图像动画，还有很多。（好吧，虽然它不是万能的，但可以通过简短的代码来实现神奇的功能。）
 
-这三层依次建立，秩序井然。以简单文本标签作为示例。首先用 HTML 将文本标记起来，从而赋予它结构和目的：
+这三层依次建立，秩序井然。以按钮作为示例。首先用 HTML 将文本标记起来，从而赋予它结构和目的：
 
-```html
-<button type="button">Player 1: Chris</button>
+```css hidden live-sample___string-concat-name-html live-sample___string-concat-name-css live-sample___string-concat-name-js
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-size: 1.4em;
+}
 ```
 
-![没有样式的“Player 1: Chris”按钮](just-html.png)
+```html live-sample___string-concat-name-html live-sample___string-concat-name-css live-sample___string-concat-name-js
+<button>玩家 1：小明</button>
+```
+
+{{EmbedLiveSample('string-concat-name-html', , '80')}}
 
 然后我们可以为它加一点 CSS 让它更好看：
 
-```css
+```css live-sample___string-concat-name-css live-sample___string-concat-name-js
 button {
-  font-family: "helvetica neue", helvetica, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   border: 2px solid rgb(200 200 0 / 60%);
@@ -55,26 +81,29 @@ button {
 }
 ```
 
-![已添加样式的“Player 1: Chris”按钮](html-and-css.png)
+{{EmbedLiveSample('string-concat-name-css', , '80')}}
 
 最后，我们可以再加上一些 JavaScript 来实现动态行为：
 
-```js
+```js live-sample___string-concat-name-js
+function updateName() {
+  const name = prompt("请输入新的名字");
+  button.textContent = `玩家 1：${name}`;
+}
+
 const button = document.querySelector("button");
 
 button.addEventListener("click", updateName);
-
-function updateName() {
-  const name = prompt("请输入新的名字");
-  button.textContent = `Player 1: ${name}`;
-}
 ```
 
-{{ EmbedLiveSample('高层定义', '100%', 80) }}
+请尝试单击文本标签，在弹出的对话框中输入名称，然后单击“确定”按钮。
 
-尝试点击最后一个版本的文本标签，观察会发生什么（也可在 GitHub 上查看这个演示的[源代码](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/javascript-label.html)或[在线运行它](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)）！
+{{EmbedLiveSample('string-concat-name-js', , '80', , , , , 'allow-modals')}}
 
-JavaScript 能做的远不止这些。让我们来仔细探索。
+JavaScript 还能做很多其他事情——让我们来详细了解一下。
+
+> [!NOTE]
+> 在继续学习之前，不妨趁此机会尝试一下 Scrimba 上的挑战，亲自动手实践一下？请查看[渲染欢迎信息](https://scrimba.com/learn-javascript-c0v/~0n?via=mdn) <sup> [_MDN 学习合作伙伴_](/zh-CN/docs/MDN/Writing_guidelines/Learning_content#伙伴链接与嵌入)</sup>。如果你不知道如何编写这段代码，完全不用担心；你可以尝试在网上搜索答案，或者查看练习末尾的答案。
 
 ## 它到底可以做什么？
 
@@ -95,29 +124,26 @@ API 通常分为两类。
 
 **浏览器 API** 内建于 web 浏览器中，它们可以将数据从周边计算机环境中筛选出来，还可以做实用的复杂工作。例如：
 
-- {{domxref("Document_Object_Model","文档对象模型 API","","nocode")}} 能通过创建、移除和修改 HTML，为页面动态应用新样式等手段来操作 HTML 和 CSS。比如当某个页面出现了一个弹窗，或者显示了一些新内容（像上文小演示中看到那样），这就是 DOM 在运行。
-- {{domxref("Geolocation","地理位置 API","","nocode")}} 获取地理信息。这就是为什么[谷歌地图](https://www.google.com/maps)可以找到你的位置，而且标示在地图上。
-- {{domxref("Canvas_API","画布（Canvas）","","nocode")}} 和 {{domxref("WebGL_API","WebGL","","nocode")}} API 可以创建生动的 2D 和 3D 图像。人们正运用这些 web 技术制作令人惊叹的作品。参见 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) 以及 [webglsamples](https://webglsamples.org/)。
-- 诸如 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC","","nocode")}} 等[影音类 API](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery) 让你可以利用多媒体做一些非常有趣的事，比如在网页中直接播放音乐和影片，或用自己的网络摄像头获取录像，然后在其他人的电脑上展示（试用简易版[截图演示](http://chrisdavidmills.github.io/snapshot/)以理解这个概念）。
-
-> [!NOTE]
-> 上述很多演示都不能在旧浏览器中运行。推荐你在测试代码时使用诸如 Firefox、Chrome、Edge 或者 Opera 等现代浏览器。当代码即将交付生产环境时（也就是真实的客户即将使用真实的代码时），你还需要深入考虑[跨平台测试](/zh-CN/docs/Learn_web_development/Extensions/Testing)。
+- [DOM（文档对象模型）API](/zh-CN/docs/Web/API/Document_Object_Model) 能通过创建、移除和修改 HTML，为页面动态应用新样式等手段来操作 HTML 和 CSS。比如当某个页面出现了一个弹窗，或者显示了一些新内容（像上文小演示中看到那样），这就是 DOM 在运行。
+- [地理位置 API](/zh-CN/docs/Web/API/Geolocation_API) 获取地理信息。正是通过这种方式，[谷歌地图](https://www.google.com/maps)可以找到你的位置，而且标示在地图上。
+- [画布](/zh-CN/docs/Web/API/Canvas_API) API 和 [WebGL](/zh-CN/docs/Web/API/WebGL_API) API 可以创建生动的 2D 和 3D 图像。人们正运用这些 web 技术制作令人惊叹的作品。参见 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) 和 [webglsamples](https://webglsamples.org/)。
+- [音频和视频 API](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery)，例如 {{domxref("HTMLMediaElement")}} 和 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 使你能够实现非常有趣的多媒体功能，例如直接在网页中播放音频和视频，或者从网络摄像头捕获视频并将其显示在其他人的计算机上（请尝试我们的简单[快照演示](https://chrisdavidmills.github.io/snapshot/)以了解其原理）。
 
 **第三方 API** 并没有默认嵌入浏览器中，一般要从网上取得它们的代码和信息。比如：
 
-- [Twitter API](https://developer.twitter.com/en/docs)、[新浪微博 API](https://open.weibo.com/) 可以在网站上展示最新推文之类。
-- [谷歌地图 API](https://developers.google.cn/maps/)、[OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API)、[高德地图 API](https://lbs.amap.com/) 可以在网站嵌入定制的地图等等。
+- [Bluesky API](https://docs.bsky.app/)、[新浪微博 API](https://open.weibo.com/) 允许在网站上显示最新帖子等。
+- [谷歌地图 API](https://developers.google.cn/maps/) 和 [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API)、[高德地图 API](https://lbs.amap.com/) 允许将自定义地图嵌入网站，并实现其他类似功能。
 
 > [!NOTE]
 > 这些 API 为进阶内容，本模块中不会涉及，更多信息请参考：[客户端 web API 模块](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs)。
 
-先稳住！你看到的只是冰山一角。你不可能仅靠学一天 JavaScript 就能构建下一个 Facebook、谷歌地图、或 Instagram——还有很多基础需要了解，这也是为什么你会在这里，让我们继续吧！
+此外还有更多内容等着你！不过，先别太兴奋。光是学习 24 小时的 JavaScript，你还无法打造出下一个 Facebook、谷歌地图或 Instagram——首先还有很多基础知识需要掌握。而这正是你来到这里的原因——让我们继续吧！
 
 ## JavaScript 在页面上做了什么？
 
 现在我们实实在在的学习一些代码，与此同时，探索 JavaScript 运行时背后发生的事情。
 
-让我们简单回顾一下，浏览器在读取一个网页时都发生什么（[CSS 如何工作](/zh-CN/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_究竟是怎么工作的？)一文中首次谈及）。浏览器在读取一个网页时，代码（HTML、CSS 和 JavaScript）将在一个运行环境（浏览器标签页）中得到执行。就像一间工厂，将原材料（代码）加工为一件产品（网页）。
+让我们简单回顾一下，浏览器在读取一个网页时都发生什么（[什么是 CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_如何应用到_html？) 一文中首次谈及）。浏览器在加载网页时，代码（HTML、CSS 和 JavaScript）将在一个运行环境（浏览器标签页）中得到执行，就像工厂将原材料（代码）加工为产品（网页）一样。
 
 ![当页面加载时，HTML、CSS 和 JavaScript 代码共同创建浏览器标签页中的内容](execution.png)
 
@@ -135,30 +161,30 @@ JavaScript 的一个非常常见的用途是通过文档对象模型 API（如�
 当浏览器执行到一段 JavaScript 代码时，通常会按从上往下的顺序执行这段代码。这意味着你需要注意代码书写的顺序。比如，我们回到第一个例子中的 JavaScript 代码：
 
 ```js
-const button = document.querySelector("button");
-
-button.addEventListener("click", updateName);
-
 function updateName() {
   const name = prompt("输入一个新的名字：");
   button.textContent = `玩家 1：${name}`;
 }
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
 ```
 
-首先使用 `document.querySelector` 选定一个按钮，然后使用 `addEventListener` 给它附上一个事件监听器（第 3 行），使得在它被点击时，`updateName()` 代码块（5 – 8 行）便会运行。`updateName()` 代码块（这类可以重复使用的代码块称为“函数”）向用户请求一个新名字，然后把这个名字插入到段落中以更新显示。
+首先使用 `document.querySelector` 选定一个按钮，然后使用 `addEventListener` 给它附上一个事件监听器（第 3 行），使得在它被点击时，`updateName()` 代码块（5 – 8 行）便会运行。`updateName()` 代码块（这类可以重复使用的代码块称为**函数**）向用户请求一个新名字，然后把这个名字插入到段落中以更新显示。
 
-如果互换了代码里最初两行的顺序，会导致问题。[浏览器开发者控制台](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)将返回一个错误：`Uncaught ReferenceError: Cannot access 'button' before initialization`。这意味着 `button` 对象还未初始化，所以我们不能为它增添事件监听器。
+如果互换了代码里 `const button = ...` 和 `button.addEventListener(...)` 两行的顺序，会导致问题。[浏览器开发者控制台](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)将返回一个错误：`Uncaught ReferenceError: Cannot access 'button' before initialization`。这意味着 `button` 对象还未初始化，所以我们不能为它添加事件监听器。
 
 > [!NOTE]
-> 这是一个很常见的错误，在引用对象之前必须确保该对象已经存在。
+> 由于存在诸如[提升](/zh-CN/docs/Glossary/Hoisting)之类的行为，JavaScript 并不总是严格按照从上到下的顺序执行，但目前请记住，通常需要先定义变量才能使用它们。这是常见的错误来源之一。
 
 ### 解释代码 vs 编译代码
 
-作为程序员，你或许听说过这两个术语：**解释**（interpret）和**编译**（compile）。在解释型语言中，代码自上而下运行，且实时返回运行结果。代码在由浏览器执行前，不需要将其转化为其他形式。代码将直接以文本格式被接收和处理。
+作为程序员，你或许听说过这两个术语：**解释**（interpret）和**编译**（compile）。在解释型语言中，代码自上而下运行，执行结果会立即返回。在浏览器执行代码之前，无需将代码转换为其他形式。代码以对程序员友好的文本形式接收，并直接以此形式进行处理。
 
 相对的，编译型语言需要先将代码转化（编译）成另一种形式才能运行。比如 C/C++ 先被编译成机器码，然后才能由计算机运行。程序将以二进制的格式运行，这些二进制内容是由程序源代码产生的。
 
-JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，并以代码自身的文本格式运行它。技术上，几乎所有 JavaScript 转换器都运用了一种叫做**即时编译**（just-in-time compiling）的技术；当 JavaScript 源代码被执行时，它会被编译成二进制的格式，使代码运行速度更快。尽管如此，JavaScript 仍然是一门解释型语言，因为编译过程发生在代码运行中，而非之前。
+JavaScript 是轻量级解释型语言。web 浏览器接受到 JavaScript 代码，并以代码自身的文本格式运行它。技术上，几乎所有 JavaScript 转换器都运用了一种叫做**即时编译**（just-in-time compiling）的技术；当 JavaScript 源代码被执行时，它会被编译成二进制的格式，使代码运行速度更快。尽管如此，JavaScript 仍然是一门解释型语言，因为编译过程发生在代码运行中，而非之前。
 
 两种类型的语言各有优势，这个问题我们暂且不谈。
 
@@ -166,7 +192,7 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
 
 你或许还听说过**服务器端**（server-side）和**客户端**（client-side）代码这两个术语，尤其是在 web 开发时。客户端代码是在用户的电脑上运行的代码，在浏览一个网页时，它的客户端代码就会被下载，然后由浏览器来运行并展示。在本模块中我们讨论的主要是**客户端 JavaScript**。
 
-而服务器端代码在服务器上运行，然后运行结果才由浏览器下载并展示出来。流行的服务器端 web 语言包括：PHP、Python、Ruby、ASP.NET，甚至有 JavaScript！JavaScript 也可用作服务器端语言，比如现在流行的 Node.js 环境，你可以在我们的[动态网页——服务器端编程](/zh-CN/docs/Learn_web_development/Extensions/Server-side)主题中找到更多关于服务器端 JavaScript 的知识。
+而服务器端代码在服务器上运行，然后运行结果才由浏览器下载并展示出来。流行的服务器端 web 语言包括：PHP、Python、Ruby、C#，甚至有 JavaScript！JavaScript 也可用作服务器端语言，比如现在流行的 Node.js 环境，你可以在我们的[动态网页——服务器端编程](/zh-CN/docs/Learn_web_development/Extensions/Server-side)主题中找到更多关于服务器端 JavaScript 的知识。
 
 ### 动态代码 vs 静态代码
 
@@ -177,6 +203,9 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
 ## 怎样向页面添加 JavaScript？
 
 可以像添加 CSS 那样将 JavaScript 添加到 HTML 页面中。CSS 使用 {{htmlelement("link")}} 元素链接外部样式表，使用 {{htmlelement("style")}} 元素向 HTML 嵌入内部样式表，而 JavaScript 这里只需一个元素——{{htmlelement("script")}}。我们来看看它是怎么工作的。
+
+> [!NOTE]
+> Scrimba 的[设置 JavaScript 文件](https://scrimba.com/learn-javascript-c0v/~03?via=mdn) <sup> [_MDN 学习合作伙伴_](/zh-CN/docs/MDN/Writing_guidelines/Learning_content#伙伴链接与嵌入)</sup> 的交互式教程将带你逐步了解几种向 HTML 中添加 JavaScript 的不同方法。
 
 ### 内部 JavaScript
 
@@ -210,10 +239,10 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
    });
    ```
 
-5. 保存文件并刷新浏览器，然后你会发现，点击按钮文档下方将会添加一个新段落。
+5. 保存文件并刷新浏览器——现在你应该会发现，点击该按钮后，会生成一个新段落并显示在下方。
 
 > [!NOTE]
-> 如果示例不能正常工作，请依次检查所有步骤，并保证没有纰漏。原始文件是否以 `.html` 为扩展名保存到本地了？`</body>` 标签前是否添加了 {{htmlelement("script")}} 元素？JavaScript 代码输入是否正确？**JavaScript 是区分大小写的，而且非常精确，所以你需要准确无误地输入所示的句法，否则可能会出错。**
+> 如果示例不能正常工作，请依次检查所有步骤，并保证没有纰漏。原始文件是否以 `.html` 为扩展名保存到本地了？`</body>` 标签前是否添加了 {{htmlelement("script")}} 元素？JavaScript 代码输入是否正确？**JavaScript 是区分大小写的，而且非常精确，所以你需要准确无误地输入所示的语法，否则可能会出错。**
 
 > [!NOTE]
 > 你可以在 GitHub 上查看此版本 [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)（[也可在线查看](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)）。
@@ -245,7 +274,7 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
    }
    ```
 
-4. 保存并刷新浏览器。就会发现点击按钮不起作用，如果检查浏览器控制台，会看见类似 `Cross-origin request blocked` 的错误。这是因为与许多外部资源一样，JavaScript 模块需要从与 HTML 同源的地方加载，并且 `file://` URL 不符合条件。有两个解决方案可以解决这个问题：
+4. 保存并刷新浏览器。就会发现点击按钮不起作用，如果检查浏览器控制台，会看见类似 `Cross-origin request blocked` 的错误。这是因为与许多外部资源一样，JavaScript 模块需要从与 HTML [同源](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)的地方加载，并且 `file://` URL 不符合条件。有两个解决方案可以解决这个问题：
    - 我们推荐的解决方案是按照指南[设置本地测试服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)。运行服务器程序并且在 `8000` 端口提供文件 `apply-javascript-external.html` 和 `script.js`，打开浏览器并访问 `http://localhost:8000`。
    - 如果无法运行本地服务器，也可以使用 `<script defer src="script.js"></script>` 代替 `<script type="module" src="script.js"></script>`。了解更多信息请参阅下面的[脚本加载策略](#脚本加载策略)。但是注意，本教程其他部分使用的特性可能需要本地 HTTP 服务器。
 5. 现在网站和之前一样了，但是我们的 JavaScript 放在了一个外部文件。一般来说，这对组织代码并在多个 HTML 文件中复用来说是一件好事。此外，没有大段脚本的 HTML 更容易阅读。
@@ -303,7 +332,6 @@ for (let i = 0; i < buttons.length; i++) {
 - 在上面的内部 JavaScript 示例中，脚本元素放在文档正文的底部，因此只能在 HTML 正文的其他部分被解析以后运行。
 - 在上面的外部 JavaScript 实例中，脚本元素放在文档的头部，在解析 HTML 正文之前解析。但是由于我们使用了 `<script type="module">`，代码被视为一个[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，并且浏览器在执行 JavaScript 模块之前会等待所有的 HTML 代码都处理完毕（也可以把外部脚本放在正文的底部，但是如果 HTML 内容较多且网络较慢，在浏览器开始获取并加载脚本之前可能需要大量的时间，因此将外部脚本放在头部通常会更好一些）。
 - 如果仍然想在文档头部使用非模块脚本，可能阻塞整个页面的显示，并且可能出现错误，因为脚本在文档解析之前执行：
-
   - 对于外部脚本，应该在 {{htmlelement("script")}} 元素上添加 `defer`（或者如果不需要 HTML 解析完成，则可以使用 `async`）属性。
   - 对于内部脚本，应该将代码封装在 [`DOMContextLoaded` 事件监听器](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event)中。
 
@@ -313,7 +341,7 @@ for (let i = 0; i < buttons.length; i++) {
 
 就像 HTML 和 CSS，JavaScript 代码中也可以添加注释，浏览器会忽略它们，注释只是为你的同事（还有你，如果半年后再看自己写的代码，还会记得其中的含义吗）提供关于代码如何工作的指引。注释非常有用，而且应该经常使用，尤其在大型应用中。注释分为两类：
 
-- 在双斜杠（//）后添加单行注释，比如：
+- 在双斜杠（`//`）后添加单行注释，比如：
 
   ```js
   // 我是一条注释
@@ -328,13 +356,13 @@ for (let i = 0; i < buttons.length; i++) {
   */
   ```
 
-比如说，我们可以这样为上一个演示添加注释：
+比如说，我们可以这样为上一个演示的 JavaScript 代码添加注释：
 
 ```js
 // 函数：创建一个新的段落并添加至 HTML body 底部。
 function createParagraph() {
   const para = document.createElement("p");
-  para.textContent = "你点了这个按钮！";
+  para.textContent = "你点击了按钮！";
   document.body.appendChild(para);
 }
 
@@ -358,6 +386,6 @@ for (const button of buttons) {
 
 恭喜你，迈出了探索 JavaScript 世界的第一步。我们从理论开始，介绍为什么要使用 JavaScript，以及用它能做什么事情。过程中穿插了一些代码示例并讲解了 JavaScript 如何与网站中其他代码适配，等等。
 
-现在 JavaScript 或许还有些令人生畏，但不用担心。在课程中我们会循序渐进。下一节将[全力投入实战](/zh-CN/docs/Learn_web_development/Core/Scripting/A_first_splash)，让你专注其中，并建立自己的 JavaScript 示例。
+JavaScript 目前看起来可能有点让人望而生畏，但别担心——在本课程中，我们将通过简单易懂的步骤带你逐步掌握，让你今后能轻松理解。在下一篇文章中，我们将直接进入实践环节，让你立即动手，编写自己的 JavaScript 示例。
 
 {{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}

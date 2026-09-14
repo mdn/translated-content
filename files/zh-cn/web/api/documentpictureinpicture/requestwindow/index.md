@@ -21,11 +21,8 @@ requestWindow(options)
 ### 参数
 
 - `options` {{optional_inline}}
-
   - : 包含以下属性的选项对象：
-
     - `disallowReturnToOpener` {{optional_inline}}
-
       - : 布尔值。设置为 `true` 时，此选项提示浏览器不应显示允许用户返回原始标签页并关闭画中画窗口的 UI 控件。默认为 `false`。例如，在 Chrome 实现此功能时，提供的 UI 控件是画中画窗口顶部栏中的“返回标签页”按钮：
 
         ![浏览器窗口中包含一个嵌入式视频播放器和多个控制按钮，顶部栏中有一个返回标签页按钮，以红色框突出显示](back-to-tab-button.png)
@@ -33,7 +30,6 @@ requestWindow(options)
     - `height` {{optional_inline}}
       - : 一个非负数，表示要为画中画窗口的视口设置的高度（以像素为单位）。默认值为 `0`。
     - `preferInitialWindowPlacement` {{optional_inline}}
-
       - : 布尔值，默认为 `false`。当设置为 `true` 时，画中画窗口在关闭并重新打开时总是回到最初打开的位置和大小。相反，如果 `preferInitialWindowPlacement` 为 `false`，画中画窗口的大小和位置将在关闭和重新打开时被记住——它将重新打开到之前的位置和大小，例如由用户设置。
 
     - `width` {{optional_inline}}

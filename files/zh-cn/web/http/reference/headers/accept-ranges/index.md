@@ -5,8 +5,6 @@ l10n:
   sourceCommit: eddef03cfbc7f50806a348f4093601033a7976fc
 ---
 
-{{HTTPSidebar}}
-
 **`Accept-Ranges`** HTTP 响应标头是服务器使用的一个标记，用于向客户端宣传其对文件下载的部分请求的支持。此字段的值表示可用于定义范围的单位。
 
 当存在 `Accept-Ranges` 标头时，浏览器可能会尝试*恢复*中断的下载，而不是尝试重新启动下载。

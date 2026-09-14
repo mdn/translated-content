@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef}}
-
 {{jsxref("Symbol")}} 值的 **`valueOf()`** 方法会返回该符号（symbol）的值。
 
 {{InteractiveExample("JavaScript Demo: Symbol.prototype.valueOf()")}}

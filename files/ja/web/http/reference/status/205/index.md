@@ -1,12 +1,9 @@
 ---
 title: 205 Reset Content
 slug: Web/HTTP/Reference/Status/205
-original_slug: Web/HTTP/Status/205
 l10n:
-  sourceCommit: 3f68a9604259dfa862dd741dc88ebc8fb5fa10fe
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`205 Reset Content`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、リクエストが成功し、クライアントに文書ビューをリセットするように指示します。
 
@@ -17,7 +14,9 @@ HTTP の **`205 Reset Content`** は[成功レスポンス](/ja/docs/Web/HTTP/Re
 > ステータスコード `205` を使用するウェブアプリケーションでは、クライアントが `205` レスポンスの後にコンテンツのリセットを処理することを想定しています。
 > これは通常、 JavaScript で行われます。 `205` レスポンス後にフォームなどのコンテンツをリセットすることは、ブラウザーがネイティブで処理しないためです。
 
-レスポンス本体にはコンテンツが含まれていてはならず、これは {{HTTPHeader("Content-Length", "Content-Length: 0")}} ヘッダーまたは {{HTTPHeader("Transfer-Encoding", "Transfer-Encoding: chunked")}} ヘッダーと空のチャンクを使用して示すことができます。
+なお、レスポンスにはいかなるコンテンツも含めてはならず、コンテンツが含まれている場合、ブラウザーがそれを拒否することがあります。
+また、レスポンスには {{HTTPHeader("Content-Length")}} ヘッダーを含めてはなりませんが、もし含める場合は、その値を `0` に設定しなければなりません。
+空のレスポンスは、空のチャンクを含む {{HTTPHeader("Transfer-Encoding", "Transfer-Encoding: chunked")}} ヘッダーを使用して示すこともできます。
 
 ## ステータス
 
@@ -35,9 +34,9 @@ HTTP の **`205 Reset Content`** は[成功レスポンス](/ja/docs/Web/HTTP/Re
 POST /submit HTTP/1.1
 Host: example.com
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 15
+Content-Length: 16
 
-comment=Hello!
+comment=Hello%21
 ```
 
 フォームの送信を正常に処理した後、サーバーは次の `205` レスポンスで応答し、クライアントがフォームをリセットすべきであることを示します。
@@ -45,18 +44,12 @@ comment=Hello!
 ```http
 HTTP/1.1 205 Reset Content
 Content-Type: text/html; charset=utf-8
-Content-Length: 0
 Date: Wed, 26 Jun 2024 12:00:00 GMT
 ```
 
 ## 仕様書
 
 {{Specifications}}
-
-## 互換性のメモ
-
-このレスポンスが永続的な接続上で誤って本文を含んだ場合、ブラウザーの動作はさまざまです。
-詳しくは [`204 No Content` の互換性のメモ](/ja/docs/Web/HTTP/Reference/Status/204#互換性のメモ)を参照してください。
 
 ## 関連情報
 

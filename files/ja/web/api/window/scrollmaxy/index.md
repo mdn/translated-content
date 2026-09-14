@@ -1,19 +1,18 @@
 ---
-title: Window.scrollMaxY
+title: "Window: scrollMaxY プロパティ"
+short-title: scrollMaxY
 slug: Web/API/Window/scrollMaxY
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}} {{Non-standard_header}}
 
 **`Window.scrollMaxY`** は読み取り専用プロパティで、文書が縦方向にスクロールできる最大ピクセル数を返します。
 
-## 構文
+## 値
 
-```js
-yMax = window.scrollMaxY;
-```
-
-- `yMax` はピクセル数です。
+数値です。
 
 ## 例
 

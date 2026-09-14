@@ -5,7 +5,7 @@ slug: Web/API/Location/origin
 
 {{APIRef("Location")}}
 
-La propiedad de sólo-lectura **`origin`** de la interfaz {{domxref("Location")}} es una {{domxref("USVString")}} que contiene la serialización Unicode del origen de la URL que representa; que es:
+La propiedad de sólo-lectura **`origin`** de la interfaz {{domxref("Location")}} es una {{jsxref("String")}} que contiene la serialización Unicode del origen de la URL que representa; que es:
 
 - para una URL que usa `http` o `https`, el esquema seguido de `'://'`, seguido del dominio, seguido de `':'`, seguido del puerto (el puerto por defecto, `80` y `443` respectivamente, si se indica de forma explícita);
 - para una URL que usa `file:` esquema, el valor es independiente del navegador;

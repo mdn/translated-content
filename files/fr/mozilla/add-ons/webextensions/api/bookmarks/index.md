@@ -3,8 +3,6 @@ title: bookmarks
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 ---
 
-{{AddonSidebar}}
-
 L'API de la [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} permet à une extension d'interagir et de manipuler le système de Bookmarking du navigateur. Vous pouvez l'utiliser pour enregistrer des marque-pages, récupérer des marque-pages existants et éditer, supprimer ou organiser des marque-pages.
 
 Pour utiliser cette API, une extension doit demander la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) « bookmarks » dans son fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
@@ -73,8 +71,6 @@ Les extensions ne peuvent pas créer, modifier ou supprimer des signets dans le 
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

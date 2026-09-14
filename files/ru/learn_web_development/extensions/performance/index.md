@@ -39,7 +39,6 @@ This topic contains the following guides. The following is a suggested order for
 - [Multimedia: images](/ru/docs/Learn/Performance/Multimedia)
   - : The lowest hanging fruit of web performance is often media optimization. Serving different media files based on each user agent's capability, size, and pixel density is possible. In this article we discuss the impact images have on performance, and the methods to reduce the number of bytes sent per image.
 - [Multimedia: video](/ru/docs/Learn/Performance/video)
-
   - : The lowest hanging fruit of web performance is often media optimization. In this article we discuss the impact video content has on performance, and cover tips like removing audio tracks from background videos can improve performance.
 
 - [JavaScript performance best practices](/ru/docs/Learn/Performance/JavaScript)
@@ -62,7 +61,7 @@ This topic contains the following guides. The following is a suggested order for
 
 - [Web performance resources](/ru/docs/Learn/Performance/Web_Performance_Basics)
   - : In addition to the front end components of HTML, CSS, JavaScript, and media files, there are features that can make applications slower and features that can make applications subjectively and objectively faster. There are many APIs, developer tools, best practices, and bad practices relating to web performance. Here we'll introduce many of these features ad the basic level and provide links to deeper dives to improve performance for each topic.
-- [Responsive images](/ru/docs/Web/HTML/Responsive_images)
+- [Responsive images](/ru/docs/Web/HTML/Guides/Responsive_images)
   - : In this article, we'll learn about the concept of responsive images — images that work well on devices with widely differing screen sizes, resolutions, and other such features — and look at what tools HTML provides to help implement them. This helps to improve performance across difference devices. Responsive images are just one part of [responsive design](/ru/docs/Learn_web_development/Core/CSS_layout/Responsive_Design), a future CSS topic for you to learn.
 - [Main web performance section on MDN](/ru/docs/Web/Performance)
   - : Our main web performance section — here you'll find much more detail on web performance including overviews of performance APIs, testing and analysis tools, and performance bottleneck gotchas.

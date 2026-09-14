@@ -24,8 +24,6 @@ console.log(
 // Expected output: Array ["a", "ä", "Z", "z"]
 ```
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Construtor
 
 - {{jsxref("Intl/Collator/Collator", "Intl.Collator()")}}
@@ -39,7 +37,7 @@ console.log(
 ## Métodos de instância
 
 - {{jsxref("Intl/Collator/compare", "Intl.Collator.prototype.compare")}}
-  - : Função Getter que compara duas strings conforme a ordenação deste objeto {{jsxref("Global_Objects/Intl/Collator", "Intl.Collator")}}.
+  - : Função Getter que compara duas strings conforme a ordenação deste objeto {{jsxref("Intl.Collator")}}.
 - {{jsxref("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}
   - : Retorna um novo objeto com as propriedades que refletem as opções de localização (`locale`) e agrupamento (`collation`) computadas durante a inicialização do objeto.
 

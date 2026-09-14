@@ -3,8 +3,6 @@ title: Initialisateur d'objet
 slug: Web/JavaScript/Reference/Operators/Object_initializer
 ---
 
-{{JsSidebar("Operators")}}
-
 Il est possible d'initialiser un objet en utilisant les notations [`new Object()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object), `Object.create()`, ou grâce à un littéral (appelée initialisateur). Un initialisateur d'objet est une liste contenant plusieurs (éventuellement 0) propriétés, séparées par des virgules, et leurs valeurs associées, cette liste étant entourée d'accolades (`{}`).
 
 {{InteractiveExample("JavaScript Demo: Expressions - Object initializer")}}
@@ -73,7 +71,7 @@ var o = {
 
 ## Description
 
-Un initialisateur d'objet est une expression qui permet de décrire l'initialisation d'un {{jsxref("Object")}}. Les objets sont constitués de propriétés qui permettent de les décrire. Les valeurs des propriétés d'un objet peuvent être construites à partir de [types de données primitifs](/fr/docs/Web/JavaScript/Data_structures#les_valeurs_primitives) ou à partir d'autres objets.
+Un initialisateur d'objet est une expression qui permet de décrire l'initialisation d'un {{jsxref("Object")}}. Les objets sont constitués de propriétés qui permettent de les décrire. Les valeurs des propriétés d'un objet peuvent être construites à partir de [types de données primitifs](/fr/docs/Web/JavaScript/Guide/Data_structures#les_valeurs_primitives) ou à partir d'autres objets.
 
 ### Créer des objets
 

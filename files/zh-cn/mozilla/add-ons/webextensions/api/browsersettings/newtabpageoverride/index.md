@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，可用于获取表示“新标签页”页面的 URL 字符串，即用户打开新的空白标签页时加载的页面。
 
 请注意，这是一个只读设置。

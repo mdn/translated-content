@@ -2,12 +2,10 @@
 title: 正規表現構文早見表
 slug: Web/JavaScript/Guide/Regular_expressions/Cheatsheet
 l10n:
-  sourceCommit: 2c762771070a207d410a963166adf32213bc3a45
+  sourceCommit: e166afc6dccac8ac4810a443c069cdb876cc4b5c
 ---
 
-{{jsSidebar("JavaScript Guide")}}
-
-このページでは、RegExp ガイドの記事の内容を集約して、RegExp 構文のすべての機能を網羅した全体的な早見表を提供します。特定のトピックに関する詳細な情報が必要な場合は、対応する見出しのリンクを辿って完全な記事にアクセスするか、[ガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)に移動してください。
+このページでは、`RegExp` ガイドの記事の内容を集約して、`RegExp` 構文のすべての機能を網羅した全体的な早見表を提供します。特定のトピックに関する詳細な情報が必要な場合は、対応する見出しのリンクを辿って完全な記事にアクセスするか、[ガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)に移動してください。
 
 ## 文字クラス
 
@@ -99,7 +97,7 @@ l10n:
       <td>
         <p>
           <a href="/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape"><strong>英数文字クラスエスケープ:</strong></a>
-          アンダースコアを含むあらゆる半角英数字（基本ラテンアルファベット）に一致します。 <code>[A-Za-z0-9_]</code> に相当します。例えば <code>/\w/</code> は、"apple" の "a"、"$5.28" の "5"、"3D" の "3"、"Émanuel" の "e" に一致します。
+          アンダースコアを含むあらゆる半角英数字（基本ラテンアルファベット）に一致します。 <code>[A-Za-z0-9_]</code> に相当します。例えば <code>/\w/</code> は、"apple" の "a"、"$5.28" の "5"、"3D" の "3"、"Émanuel" の "m" に一致します。
         </p>
       </td>
     </tr>
@@ -174,7 +172,7 @@ l10n:
           <a href="https://ja.wikipedia.org/wiki/
 キャレット記法"
             >キャレット記法</a
-          >を使用した制御文字に一致します。 "X" には A–Z の文字が入ります（コードポイント<code>U+0001</code><em>–</em><code>U+001A</code> に対応します）。例えば
+          >を使用した制御文字に一致します。 "X" には A–Z または a-z の文字が入ります（コードポイント<code>U+0001</code><em>–</em><code>U+001A</code> に対応します）。例えば
           <code>/\cM\J/</code> は "\r\n" の "\r" に一致します。
         </p>
       </td>
@@ -340,7 +338,8 @@ l10n:
 
 ### その他のアサーション
 
-> **メモ:** `?` の文字は数量子としても使用されます。
+> [!NOTE]
+> `?` の文字は数量子としても使用されます。
 
 <table class="standard-table">
   <thead>
@@ -452,7 +451,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <td><code>(?<em>flags</em>:<em>x</em>)</code>, <code>(?:<em>flags</em>-<em>flags</em>:<em>x</em>)</code></td>
+      <td><code>(?<em>flags</em>:<em>x</em>)</code>, <code>(?<em>flags</em>-<em>flags</em>:<em>x</em>)</code></td>
       <td>
         <p>
           <a href="/ja/docs/Web/JavaScript/Reference/Regular_expressions/Modifier"><strong>修飾子:</strong></a>
@@ -591,7 +590,7 @@ l10n:
       </td>
       <td>
         <p>
-          既定では <code>*</code> や <code>+</code> といった数量子は貪欲です。つまり、できる限り多くの文字列と一致しようとします。数量子の後に <code>?</code> の文字を指定すると、数量子が「非貪欲」になります。つまり、一致が見つかるとすぐに停止します。例えば、"some &#x3C;foo> &#x3C;bar> new &#x3C;/bar> &#x3C;/foo> thing" といった文字列が与えられた場合は、
+          デフォルトで、<code>*</code> や <code>+</code> といった数量子は「貪欲」です。つまり、可能な限り多くの回数を一致させようとします。量指定子の後に <code>?</code> 文字を付けると、その量指定子は「非貪欲」になります。つまり、最小の一致数が見つかり次第、そこで停止します。例えば、"some &#x3C;foo> &#x3C;bar> new &#x3C;/bar> &#x3C;/foo> thing" といった文字列が与えられた場合は、
         </p>
         <ul>
           <li>
@@ -599,6 +598,12 @@ l10n:
           </li>
           <li><code>/&#x3C;.*?>/</code> は "&#x3C;foo>" に一致します。</li>
         </ul>
+        <div class="notecard note">
+          <p>
+            <strong>メモ:</strong> <code>?</code> を <code>{n}</code> の後に付けることは、文法的には有効ですが、実際には意味がありません。
+            <code>{n}</code> は常に正確に n 回一致しますので、<code>x{n}?</code> は <code>x{n}</code> と同じになります。
+          </p>
+        </div>
       </td>
     </tr>
   </tbody>

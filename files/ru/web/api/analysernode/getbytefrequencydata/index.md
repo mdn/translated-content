@@ -5,7 +5,7 @@ slug: Web/API/AnalyserNode/getByteFrequencyData
 
 {{ APIRef("Web Audio API") }}
 
-Метод **`getByteFrequencyData()`** интерфейса {{ domxref("AnalyserNode") }} копирует текущие данные частоты в переданный в него Uint8Array {{domxref("Uint8Array")}} (unsigned byte array).
+Метод **`getByteFrequencyData()`** интерфейса {{ domxref("AnalyserNode") }} копирует текущие данные частоты в переданный в него Uint8Array {{jsxref("Uint8Array")}} (unsigned byte array).
 
 Данные частоты состоят из целых чисел по шкале от 0 до 255.
 
@@ -26,7 +26,7 @@ void analyser.getByteFrequencyData(dataArray); // заполняет Uint8Array 
 ### Параметры
 
 - `array`
-  - : {{domxref("Uint8Array")}} , в который будут скопированы данные частотной области. Для любого образца, который не содержит данных, значение равно `-Infinity`.
+  - : {{jsxref("Uint8Array")}} , в который будут скопированы данные частотной области. Для любого образца, который не содержит данных, значение равно `-Infinity`.
     Если в массиве меньше элементов, чем в {{domxref ("AnalyserNode.frequencyBinCount")}}, лишние элементы удаляются. Если в нем больше элементов, чем необходимо, лишние элементы игнорируются.
 
 ### Возвращаемое значение
@@ -78,7 +78,7 @@ draw();
 ## Параметры
 
 - array
-  - : {{domxref("Uint8Array")}}, в который будут скопированы данные частотной области.
+  - : {{jsxref("Uint8Array")}}, в который будут скопированы данные частотной области.
 
 ## Спецификации
 

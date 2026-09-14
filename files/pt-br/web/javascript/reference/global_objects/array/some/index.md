@@ -28,9 +28,7 @@ arr.some(callback[, thisArg])
 ### Parâmetros
 
 - `callback`
-
   - : Função para testar cada elemento, recebendo três argumentos:
-
     - `currentValue`
       - : O valor atual do elemento sendo processado no array.
     - `index`

@@ -22,9 +22,7 @@ new DelayNode(context, options)
 - `context`
   - : {{domxref("AudioContext")}} または {{domxref("OfflineAudioContext")}} への参照です。
 - `options` {{optional_inline}}
-
   - : 遅延ノードのオプションを指定します。以下のメンバーを含めることができます。
-
     - `delayTime`
       - : ノードの初期遅延時間を秒単位で指定します。既定では `0` です。
     - `maxDelayTime`

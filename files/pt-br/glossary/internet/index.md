@@ -11,4 +11,4 @@ A Internet é a rede mundial de redes que utiliza o conjunto de protocolos da In
 
 ### Saiba mais sobre isso
 
-- [How the Internet works](/pt-BR/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work) (Introdução para iniciantes)
+- [How the Internet works](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work) (Introdução para iniciantes)

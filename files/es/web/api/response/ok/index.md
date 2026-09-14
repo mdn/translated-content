@@ -14,7 +14,7 @@ var miOK = respuesta.ok;
 
 ### Valor
 
-Un {{domxref("Boolean")}}.
+Un {{jsxref("Boolean")}}.
 
 ## Ejemplo
 
@@ -48,5 +48,5 @@ fetch(peticion).then(function (respuesta) {
 ## Ver también
 
 - [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/es/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/es/docs/Web/HTTP)

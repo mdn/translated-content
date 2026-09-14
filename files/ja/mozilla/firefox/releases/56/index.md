@@ -1,15 +1,14 @@
 ---
-title: Firefox 56 for developers
+title: Firefox 56 開発者向けリリースノート
+short-title: Firefox 56
 slug: Mozilla/Firefox/Releases/56
 l10n:
-  sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
+  sourceCommit: 21ed9a1338b207e8a39064583c19d9f720235235
 ---
 
-{{FirefoxSidebar}}
+Firefox 56 は、米国時間 2017 年 9 月 28 日にリリースされました。この記事では、ウェブ開発者にとって有益な主な変更点を掲載しています。
 
-Firefox 56 は、米国時間 2017 年 9 月 28 日にリリースされました。このページでは、開発者に影響する Firefox 56 の変更点をまとめています。
-
-## ウェブ開発者向けの変更点一覧
+## ウェブ開発者向けの変更点
 
 ### 開発者ツール
 
@@ -19,11 +18,11 @@ Firefox 56 は、米国時間 2017 年 9 月 28 日にリリースされまし�
 ### HTML
 
 - ラベル付け可能なフォームコントロールに `labels` プロパティを実装しました。例えば {{domxref("HTMLInputElement.labels")}} です ([Firefox バグ 556743](https://bugzil.la/556743))。
-- `<link rel="preload">` を実装しました。詳しくは [リンク種別: preload](/ja/docs/Web/HTML/Attributes/rel/preload) をご覧ください ([Firefox バグ 1222633](https://bugzil.la/1222633))。現在は Firefox だけがキャッシュ可能なリソースの先読みに対応していることに注意してください。
+- `<link rel="preload">` を実装しました。詳しくは [rel="preload" によるコンテンツの先読み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)をご覧ください ([Firefox バグ 1222633](https://bugzil.la/1222633))。現在は Firefox だけがキャッシュ可能なリソースの先読みに対応していることに注意してください。
 
 ### CSS
 
-- Mozilla の独自仕様である {{cssxref("&lt;color&gt;")}} 値 `-moz-win-accentcolor` と `-moz-win-accentcolortext` ([Firefox バグ 1344910](https://bugzil.la/1344910))、および独自仕様のメディアクエリーである [`-moz-windows-accent-color-in-titlebar`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-windows-accent-color-in-titlebar) を実装しました ([Firefox バグ 1379938](https://bugzil.la/1379938))。
+- Mozilla の独自仕様である {{cssxref("&lt;color&gt;")}} 値 `-moz-win-accentcolor` と `-moz-win-accentcolortext` ([Firefox バグ 1344910](https://bugzil.la/1344910))、および独自仕様のメディアクエリーである `-moz-windows-accent-color-in-titlebar` を実装しました ([Firefox バグ 1379938](https://bugzil.la/1379938))。
 
 ### SVG
 
@@ -45,14 +44,14 @@ _変更なし。_
 - {{domxref("Gamepad.displayId")}} プロパティを実装しました ([Firefox バグ 1375816](https://bugzil.la/1375816))。
 - {{domxref("PerformanceTiming.secureConnectionStart")}} プロパティを実装しました ([Firefox バグ 772589](https://bugzil.la/772589))。
 - Firefox は `iso-2022-jp` の {{domxref("TextDecoder.TextDecoder","TextDecoder()")}} がインスタンス化されたときに黙って `iso-2022-jp-2` シーケンスを受け入れていました。しかし他のブラウザーはこれに対応しておらず、またこれを使用するページもないようですので、API を単純化するためにこの動作を削除しました ([Firefox バグ 715833](https://bugzil.la/715833))。
-- {{domxref("setTimeout()")}} および {{domxref("setInterval()")}} の 4ms 制限の動作を、[Timeouts throttled to >=4ms](/ja/docs/Web/API/Window/setTimeout#timeouts_throttled_to_%3e4ms) で説明しているとおり、他のブラウザーに合わせるよう更新しました ([Firefox バグ 1378586](https://bugzil.la/1378586))。
-- [ページ可視性 API](/ja/docs/Web/API/Page_Visibility_API) の {{domxref("Document.onvisibilitychange")}} ハンドラーを追加しました ([Firefox バグ 1333912](https://bugzil.la/1333912))。
-- {{domxref("Window.showModalDialog()")}} メソッドを削除しました ([Firefox バグ 981796](https://bugzil.la/981796))。
+- {{domxref("Window.setTimeout()")}}、{{domxref("WorkerGlobalScope.setTimeout()")}}、{{domxref("Window.setInterval()")}}、{{domxref("WorkerGlobalScope.setInterval()")}} の 4ms 制限の動作を、[待ち時間が指定値より長い理由](/ja/docs/Web/API/Window/setTimeout#待ち時間が指定値より長い理由)で説明しているとおり、他のブラウザーに合わせるよう更新しました ([Firefox バグ 1378586](https://bugzil.la/1378586))。
+- [ページ可視性 API](/ja/docs/Web/API/Page_Visibility_API) の {{domxref("Document.visibilitychange_event", "onvisibilitychange")}} ハンドラーを追加しました ([Firefox バグ 1333912](https://bugzil.la/1333912))。
+- `Window.showModalDialog()` メソッドを削除しました ([Firefox バグ 981796](https://bugzil.la/981796))。
 - {{domxref("HTMLFormElement.action")}}、{{domxref("HTMLInputElement.formAction")}}、{{domxref("HTMLButtonElement.formAction")}} プロパティの実装を、仕様書に従って正しい形式のサブミッション URL を返すように変更しました ([Firefox バグ 1366361](https://bugzil.la/1366361))。
 
 #### DOM イベント
 
-- `onwheel` が {{domxref("HTMLElement.onwheel", "HTMLElement")}} で使用可能になりました。以前は使用不可でした ([Firefox バグ 1370550](https://bugzil.la/1370550))。
+- {{domxref("Element/wheel_event", "onwheel")}} が {{domxref("HTMLElement")}} で使用可能になりました。以前は使用不可でした ([Firefox バグ 1370550](https://bugzil.la/1370550))。
 
 #### メディアと WebRTC
 
@@ -62,7 +61,7 @@ _変更なし。_
 #### Canvas と WebGL
 
 - {{domxref("CanvasRenderingContext2D.drawImage()")}} メソッドを、`imageSmoothingEnabled` が `false` であってもダウンスケーリングする際にスムージングを行うよう更新しました。これは仕様書では必須にされていませんが、Chrome の動作に合わせています。[Firefox バグ 1360415](https://bugzil.la/1360415) をご覧ください。
-- {{domxref("SVGImageElement")}} を {{domxref("CanvasImageSource")}} として使用可能になりました。例えば {{domxref("CanvasRenderingContext2D.drawImage","drawImage()")}} を呼び出すときに画像リソースとして使用できます ([Firefox バグ 1382027](https://bugzil.la/1382027))。
+- {{domxref("SVGImageElement")}} が {{domxref("CanvasRenderingContext2D.drawImage","drawImage()")}} 呼び出しの画像ソースとして使用可能になりました ([Firefox バグ 1382027](https://bugzil.la/1382027))。
 
 ### セキュリティ
 
@@ -70,19 +69,19 @@ _変更なし。_
 
 ### プラグイン
 
-- Android 版 Firefox で、すべてのプラグインのサポートを廃止しました ([bug 1381916](https://bugzilla.mozilla.org/show_bug.cgi?id=1381916))。
+- Android 版 Firefox で、すべてのプラグインのサポートを廃止しました ([bug 1381916](https://bugzil.la/1381916))。
 
 ### その他
 
 - URL エンコーディングの問題を避けるため、Gecko は URL を内部で [punycode](https://ja.wikipedia.org/wiki/Punycode) としてエンコードするようになりました ([Firefox バグ 945240](https://bugzil.la/945240) および [Firefox バグ 942074](https://bugzil.la/942074) の議論を参照)。
-- Windows および macOS 版の Firefox で、`-headless` フラグを使用して [ヘッドレスモード](/ja/docs/Mozilla/Firefox/Headless_mode) で実行することが可能になりました ([Firefox バグ 1355150](https://bugzil.la/1355150) および [Firefox バグ 1355147](https://bugzil.la/1355147))。
+- Windows および macOS 版の Firefox で、`-headless` フラグを使用してヘッドレスモードで実行することが可能になりました ([Firefox バグ 1355150](https://bugzil.la/1355150) および [Firefox バグ 1355147](https://bugzil.la/1355147))。
 
 ## ウェブプラットフォームから廃止
 
 ### HTML
 
-- {{htmlelement("isindex")}} 要素を HTML パーサーおよびフォーム送信から削除しました([Firefox バグ 1266495](https://bugzil.la/1266495))。
-- {{htmlelement("applet")}} 要素を削除しました ([Firefox バグ 1279218](https://bugzil.la/1279218))。
+- `<isindex>` 要素を HTML パーサーおよびフォーム送信から削除しました([Firefox バグ 1266495](https://bugzil.la/1266495))。
+- `<applet>` 要素を削除しました ([Firefox バグ 1279218](https://bugzil.la/1279218))。
 
 ### API
 
@@ -105,7 +104,7 @@ _変更なし。_
 - [cookies.set()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/cookies/set) および [cookies.remove()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/cookies/remove) がプライベートブラウジングモードで動作するようになりました。
 - [devtools.panels.elements.onSelectionChanged](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged) をサポートしました。
 - [downloads.open()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/downloads/open) が、ユーザーアクションから呼び出すことのみ可能になりました。
-- [FindProxyForURL の戻り値 "DIRECT" が、引数をとらないようになりました](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy#pac_file_environment)。
+- [FindProxyForURL の返値 "DIRECT" が、引数をとらないようになりました](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#返値の形式)。
 - [history.onVisited](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited) が、既知の場合に限ってページのタイトルを持つようになりました。
 - [management.get()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/management/get) および [management.getAll()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/management/getAll) をサポートしました。
 - [menus](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus) で "tools_menu" コンテキストをサポートしました。
@@ -124,7 +123,3 @@ _変更なし。_
 - [tabs.Tab.lastAccessed](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) をサポートしました。
 - [theme.reset()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/theme/reset) をサポートしました。
 - [windows.create()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows/create) および [windows.update()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows/update) で、ウィンドウの初期タイトルをサポートしました。
-
-## 過去のバージョン
-
-{{Firefox_for_developers(55)}}

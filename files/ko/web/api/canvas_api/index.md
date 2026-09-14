@@ -52,7 +52,8 @@ ctx.fillRect(10, 10, 150, 100);
 - {{domxref("Path2D")}} {{experimental_inline}}
 - {{domxref("ImageBitmapRenderingContext")}} {{experimental_inline}}
 
-> **참고:** **노트:** `WebGLRenderingContext`에 관련된 인터페이스는 [WebGL](/ko/docs/Web/API/WebGL_API) 하위에 참조되어있습니다.
+> [!NOTE]
+> **노트:** `WebGLRenderingContext`에 관련된 인터페이스는 [WebGL](/ko/docs/Web/API/WebGL_API) 하위에 참조되어있습니다.
 
 {{domxref("CanvasCaptureMediaStream")}}은 관련된 인터페이스입니다.
 
@@ -87,7 +88,8 @@ Canvas API는 굉장히 강력하지만, 사용하는 것이 항상 간단하지
 - [Scrawl-canvas](https://scrawl.rikweb.org.uk/)는 2D 캔버스 엘리먼트를 생성하고 조작하기위한 오픈소스 JavaScript 라이브러리입니다.
 - [ZIM](https://zimjs.com) 프레임워크는 canvas에서의 창의적인 코딩을 위한 편의성, 컴포넌트 및 컨트롤을 제공하는 프레임워크입니다. 접근성 및 다채로운 튜토리얼을 포함합니다.
 
-> **참고:** **노트:** WebGL을 사용하는 2D 및 3D를 위한 [WebGL API](/ko/docs/Web/API/WebGL_API)를 확인하세요.
+> [!NOTE]
+> **노트:** WebGL을 사용하는 2D 및 3D를 위한 [WebGL API](/ko/docs/Web/API/WebGL_API)를 확인하세요.
 
 ## 명세
 

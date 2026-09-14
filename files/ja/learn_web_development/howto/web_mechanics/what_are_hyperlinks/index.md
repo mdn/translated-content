@@ -2,10 +2,8 @@
 title: ハイパーリンクとは
 slug: Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks
 l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
-
-{{QuicklinksWithSubPages("/ja/docs/Learn/Common_questions")}}
 
 この記事では、ハイパーリンクとは何か、なぜ重要なのかを詳しく説明します。
 
@@ -14,11 +12,17 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        まず<a href="/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work">インターネットはどのように動くのか</a>を理解し、<a href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web">ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違い</a>についてよく理解している必要があります。
+        まず<a href="/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
+          >インターネットはどのように動くのか</a
+        >を理解し、<a
+          href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
+        >
+          ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違い</a
+        >についてよく理解している必要があります。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">目標:</th>
       <td>ウェブ上のリンクとその重要性について学びます。</td>
     </tr>
   </tbody>
@@ -65,7 +69,7 @@ l10n:
 
 ほとんどのリンクは 2 つのウェブページを結び付けています。**アンカー**は 1 つの文書の 2 つのセクションを一緒に結びます。 アンカーを指すリンクをたどると、ブラウザーは新しい文書を読み込むするのではなく、現在の文書の別の部分にジャンプします。ただし、他のリンクと同じ方法でアンカーを作成して使用します。
 
-![Example of a basic display and effect of an anchor in a web page](link-2.png)
+![ウェブページにおけるアンカーの基本的な表示と効果の例](link-2.png)
 
 ### リンクと検索エンジン
 
@@ -73,14 +77,15 @@ l10n:
 
 リンクは、検索エンジンがサイトにどれだけ早くリンクするかに影響します。問題は、検索エンジンのアクティビティを測定するのが難しいということです。企業は当然、自分のサイトが検索結果の上位にランクされることを望んでいます。検索エンジンがサイトのランクをどのように決定するかについては、次のことがわかっています。
 
-- リンクの**表示テキスト**は、どの検索クエリーが特定の URL を検索するかに影響します。ウェブページの**被リンク**が多いほど、検索結果のランクは高くなります。
+- リンクの**表示テキスト**は、どの検索クエリーが特定の URL を検索するかに影響します。
+- ウェブページの**被リンク**が多いほど、検索結果のランクは高くなります。
 - **外部リンク**は、元のウェブページと遷移先のウェブページの両方の検索ランキングに影響を与えますが、その程度は不明です。
 
-[SEO](http://en.wikipedia.org/wiki/Search_engine_optimization) （検索エンジン最適化）は、検索結果でウェブサイトを上位にランク付けする方法の研究です。ウェブサイトのリンクの使用を改善することは、有益な SEO テクニックのうちの一つです。
+[SEO](https://ja.wikipedia.org/wiki/検索エンジン最適化) （検索エンジン最適化）は、検索結果でウェブサイトを上位にランク付けする方法の研究です。ウェブサイトのリンクの使用を改善することは、有益な SEO テクニックのうちの一つです。
 
 ## 次のステップ
 
 それでは、いくつかウェブページにリンクを設定しましょう。
 
 - すべてのリンクが URL を指しているので、より理論的な背景を得るには、[URL とその構造](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)について学びます。
-- もう少し実用的なものが欲しいですか？ [HTML 入門](/ja/docs/Learn_web_development/Core/Structuring_content)モジュールの記事「[ハイパーリンクの作成](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)」で、リンクの実装方法について詳しく説明しています。
+- もう少し実用的なものが欲しいですか？[ハイパーリンクの作成](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)で、リンクの実装方法について詳しく説明しています。

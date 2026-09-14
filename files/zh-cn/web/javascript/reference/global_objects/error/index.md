@@ -3,8 +3,6 @@ title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
 ---
 
-{{JSRef}}
-
 当运行时错误产生时，`Error` 对象会被抛出。`Error` 对象也可用于用户自定义的异常的基础对象。下面列出了各种内建的标准错误类型。
 
 ## 描述
@@ -40,11 +38,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Error
 ## 静态方法
 
 - `Error.captureStackTrace()` {{non-standard_inline}}
-
   - : 一个非标准的 V8 函数，用于在 Error 实例上创建 {{JSxRef("Error.prototype.stack", "stack")}} 属性。
 
 - `Error.stackTraceLimit` {{non-standard_inline}}
-
   - : 一个非标准的 V8 数值属性，用于限制错误堆栈跟踪中包含堆栈帧数量。
 
 - `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}
@@ -88,7 +84,7 @@ try {
 
 ### 处理一个特定错误
 
-你可以通过判断异常的类型来特定处理某一类的异常，即判断 {{jsxref("Object.prototype.constructor", "constructor")}} 属性，当使用现代 JavaScript 引擎时，可使用 {{jsxref("Operators/instanceof", "instanceof")}} 关键字：
+你可以通过判断异常的类型来特定处理某一类的异常，即判断 {{jsxref("Object.prototype.constructor", "constructor")}} 属性，当使用现代 JavaScript 引擎时，可使用 {{jsxref("instanceof")}} 关键字：
 
 ```js
 try {

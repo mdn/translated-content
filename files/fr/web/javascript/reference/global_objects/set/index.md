@@ -3,8 +3,6 @@ title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 ---
 
-{{JSRef}}
-
 Un objet **`Set`** permet de stocker un ensemble de valeurs uniques de n'importe quel type, qu'il s'agisse de [valeurs primitives](/fr/docs/Glossary/Primitive) ou d'objets.
 
 ## Description
@@ -56,7 +54,6 @@ Chaque valeur d'un `Set` doit être unique, il faut donc tester l'égalité des 
 - [`Set.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/values)
   - : Un alias pour [`Set.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/values).
 - [`Set.prototype.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/entries)
-
   - : Renvoie un nouvel objet itérateur qui contient **un tableau `[valeur, valeur]`** pour chaque élément de l'objet `Set`, selon leur ordre d'insertion.
 
     Il s'agit d'une méthode analogue à celle disponible pour [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map), c'est pour ça qu'on a le doublonnement de la valeur à la place de la clé.

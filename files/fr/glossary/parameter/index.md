@@ -1,31 +1,46 @@
 ---
 title: Paramètre
 slug: Glossary/Parameter
+l10n:
+  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
 ---
 
-{{GlossarySidebar}}
+**Les paramètres** sont des variables nommées, déclarées dans une {{Glossary("function", "fonction")}}. Ils servent à référencer les {{Glossary("argument", "arguments")}} transmis à la fonction.
 
-Un paramètre est une variable nommée passée à une {{Glossary("fonction")}}. Les paramètres servent à importer des {{Glossary("argument","arguments")}} à l'intérieur des fonctions.
+Par exemple&nbsp;:
 
-Remarquez la différence entre _paramètres_ et _arguments_ :
+```js
+const argument1 = "Développement";
+const argument2 = "Web";
+exemple(argument1, argument2); // passage des deux arguments
 
-- Les paramètres d'une fonction sont les noms listés dans la définition de la fonction.
-- Les {{Glossary("argument","arguments")}} d'une fonction sont les valeurs réelles passées à la fonction.
-- Les paramètres sont initialisés avec les valeurs des arguments fournis.
+// Cette fonction prend deux valeurs
+function exemple(parametre1, parametre2) {
+  console.log(parametre1); // Affiche = "Développement"
+  console.log(parametre2); // Affiche = "Web"
+}
+```
 
-Deux sortes de paramètres :
+Il existe deux types de paramètres&nbsp;:
 
 - paramètres d'entrée
-  - : le type le plus fréquent ; ils passent des valeurs aux fonctions. En fonction du langage de programmation, les paramètres d'entrée peuvent être passés de plusieurs manières (e.g., appel par valeur, appel par adresse, appel par référence).
-- paramètres de retour/sortie
-  - : retournent principalement plusieurs valeurs depuis une fonction, mais ce n'est pas recommandé car cela peut prêter à confusion
+  - : le type le plus courant&nbsp;; ils transmettent des valeurs aux fonctions. Selon le langage de programmation, les paramètres d'entrée peuvent être transmis de plusieurs manières (par exemple, passage par valeur, par adresse, par référence).
+- paramètres de sortie/de retour
+  - : principalement utilisés pour retourner plusieurs valeurs depuis une fonction, mais ils sont déconseillés car ils prêtent à confusion
+
+## Différence entre paramètres et arguments
+
+Notez la différence entre _paramètres_ et _arguments_&nbsp;:
+
+- Les paramètres de fonction sont les noms listés dans la définition de la fonction.
+- Les {{Glossary("argument", "arguments")}} de fonction sont les valeurs réelles transmises à la fonction.
+- Les paramètres sont initialisés avec les valeurs des arguments fournis.
 
 ## Voir aussi
 
-### Culture générale
-
-- [Difference between _parameter_ and _argument_](http://en.wikipedia.org/wiki/Parameter_%28computer_programming%29#Parameters_and_arguments) sur Wikipédia
-
-### Référence technique
-
-- [Parameter-Passing Modes](http://pages.cs.wisc.edu/~hasti/cs368/CppTutorial/NOTES/PARAMS.html)
+- [Déclaration de fonction](/fr/docs/Web/JavaScript/Reference/Statements/function)
+- [Expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function)
+- Termes associés du glossaire&nbsp;:
+  - {{Glossary("Function", "Fonction")}}
+  - {{Glossary("Argument")}}
+- [Différence entre _paramètres_ et _arguments_](<https://fr.wikipedia.org/wiki/Param%C3%A8tre_(programmation_informatique)>)

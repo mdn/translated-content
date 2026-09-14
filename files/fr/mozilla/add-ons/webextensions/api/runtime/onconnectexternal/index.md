@@ -3,8 +3,6 @@ title: runtime.onConnectExternal
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsqu'une extension reçoit une demande de connexion d'une extension différente.
 
 Pour envoyer un message qui sera reçu par le programme d'écoute `onConnectExternal`, utilisez {{WebExtAPIRef("runtime.connect()")}}, en transmettant l'ID du destinataire dans le paramètre `extensionId`.
@@ -33,9 +31,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `fonction`
-
   - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants :
-
     - `port`
       - : Un objet {{WebExtAPIRef('runtime.Port')}} connectant le script en cours à l'autre extension à laquelle il se connecte.
 
@@ -86,8 +82,6 @@ browser.browserAction.onClicked.addListener(() => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

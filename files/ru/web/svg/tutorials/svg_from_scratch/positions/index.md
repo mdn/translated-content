@@ -3,7 +3,7 @@ title: Расположение (позиции)
 slug: Web/SVG/Tutorials/SVG_from_scratch/Positions
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Getting_started", "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes") }}
 
 ## Сетка
 
@@ -45,4 +45,4 @@ SVG для всех элементов использует систему ко�
 
 > \[...] предположим, что агент пользователя может определить из его окружения, что "1px" соответствует "0.2822222мм" (т.е., 90dpi). Тогда для всего обрабатываемого контента SVG: \[...] "1см" равен "35.43307px" (и следовательно 35,43307 пользовательских единиц)
 
-{{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Getting_started", "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes") }}

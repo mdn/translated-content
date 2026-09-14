@@ -42,15 +42,15 @@ if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
 
 {{domxref("WebGLShader")}} を参照すると、上記サンプルの `vertexShader` と `fragmentShader` の作成についての情報が得られます。
 
-## 仕様策定状況
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("WebGLRenderingContext.deleteProgram()")}}
 - {{domxref("WebGLRenderingContext.isProgram()")}}

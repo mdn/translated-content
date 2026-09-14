@@ -10,7 +10,8 @@ l10n:
 
 `createOscillator()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、周期的な波形を表現するソースである {{domxref("OscillatorNode")}} を生成します。基本的には一定の音程を発生させます。
 
-> **メモ:** {{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}} コンストラクターは {{domxref("OscillatorNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+> [!NOTE]
+> {{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}} コンストラクターは {{domxref("OscillatorNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
 ## 構文
 

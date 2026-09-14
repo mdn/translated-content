@@ -19,9 +19,7 @@ new TextDecoderStream(label, options)
 - `label`
   - : 默认为 `utf-8` 的字符串。可以是[任意有效的编码](/zh-CN/docs/Web/API/Encoding_API/Encodings)。
 - `options` {{optional_inline}}
-
   - : 一个具有属性的 `TextDecoderOptions` 对象：
-
     - `fatal`
       - : 一个布尔值，表示错误的模式。如果是 true，则在 decoder 遇到错误时抛出一个 {{domxref("DOMException")}}。默认值是 `false`。
 

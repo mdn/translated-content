@@ -1,24 +1,11 @@
 ---
-title: 作业：排版社区大学首页
+title: 挑战：排版社区大学首页
 slug: Learn_web_development/Core/Text_styling/Typesetting_a_homepage
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/CSS_layout", "Learn_web_development/Core/Text_styling")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/CSS_layout", "Learn_web_development/Core/Text_styling")}}
 
 在本测评中，通过对社区学校主页的文本样式化，我们会测试你对所有本模块涉及到的文本样式化技术的理解。你或许也会从中获得乐趣。
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">预备条件：</th>
-      <td>在本次测评前，你应该完成了本模块所有章节。</td>
-    </tr>
-    <tr>
-      <th scope="row">目标：</th>
-      <td>测试对 CSS 文本样式化技术的理解。</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 开始
 
@@ -77,9 +64,5 @@ slug: Learn_web_development/Core/Text_styling/Typesetting_a_homepage
 下图展示了其中一种设计完成后的例子。
 
 ![](example2.png)
-
-## 测评
-
-如果你将本测评作为课程的一部分，你应该能够将你的作品交给你的老师/指导员打分。如果你是自学的，你可以很轻松地在[discussion thread for this exercise](https://discourse.mozilla.org/t/typesetting-a-community-school-home-page-assessment/24683)，或者[Mozilla IRC](https://wiki.mozilla.org/IRC)的[#mdn](irc://irc.mozilla.org/mdn) IRC 频道上获得打分。先尝试完成本次练习——作弊是学不到任何东西的！
 
 {{PreviousMenuNext("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/CSS_layout", "Learn_web_development/Core/Text_styling")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当一个标签页从窗口中分离时触发，例如因为它正在被移动到另一个窗口。
 
 ## 语法
@@ -31,9 +29,7 @@ browser.tabs.onDetached.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `tabId`
       - : `integer`。分离的标签页的 ID。
     - `detachInfo`

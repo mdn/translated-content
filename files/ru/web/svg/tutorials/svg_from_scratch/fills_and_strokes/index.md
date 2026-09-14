@@ -3,7 +3,7 @@ title: Заливка и обводка
 slug: Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Paths", "Web/SVG/Tutorials/SVG_from_scratch/Gradients") }}
 
 Есть несколько способов раскрасить фигуры SVG (в т.ч. с указанием атрибутов объекта), используя инлайн-CSS, встроенную CSS-секцию, или внешний файл CSS. Большая часть SVG, которую вы встретите в интернете, использует встроенный CSS, однако преимущества и недостатки есть у каждого типа.
 
@@ -99,7 +99,8 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes
 
 В дополнение к установке атрибутов объектов, вы также можете использовать CSS для стилизации заливки и обводки. Не все атрибуты могут быть установлены через CSS. Но атрибуты взаимодействия с раскраской и заливкой обычно доступны, так что `fill`, `stroke`, `stroke-dasharray` и т.д. могут быть заданы этим способом, также как и градиенты, и паттерны, что показано ниже. Атрибуты вроде `width`, `height` или команд для путей SVG не могут быть установлены через CSS. Проще всего просто протестировать и узнать, что доступно, а что нет.
 
-> **Примечание:** [Спецификация SVG](https://www.w3.org/TR/SVG/propidx.html) строго разделяет атрибуты на _свойства_ и другие атрибуты. Первые могут быть изменены через CSS, а вторые - нет.
+> [!NOTE]
+> [Спецификация SVG](https://www.w3.org/TR/SVG/propidx.html) строго разделяет атрибуты на _свойства_ и другие атрибуты. Первые могут быть изменены через CSS, а вторые - нет.
 
 CSS может использоваться инлайн через атрибут `style`:
 
@@ -153,4 +154,4 @@ CSS может использоваться инлайн через атрибу
 }
 ```
 
-{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Paths", "Web/SVG/Tutorials/SVG_from_scratch/Gradients") }}

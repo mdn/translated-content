@@ -26,7 +26,7 @@ queueMicrotask(callback)
 ### 参数
 
 - `function`
-  - : 当浏览器引擎确定可以安全调用你的代码时执行的 {{jsxref("function")}}。微任务（microtask）的执行顺序在所有进行中的任务（pending task）完成之后，在对浏览器的事件循环产生控制之前。
+  - : 当浏览器引擎确定可以安全调用你的代码时执行的 {{jsxref("Operators/function", "function")}}。微任务（microtask）的执行顺序在所有进行中的任务（pending task）完成之后，在对浏览器的事件循环产生控制之前。
 
 ### 返回值
 

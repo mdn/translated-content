@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-{{GlossarySidebar}}
-
 通过设置 CSS 属性 `display: grid;` 可以定义一个 _CSS 网格_。你还可以继续使用 {{cssxref("grid-template-rows")}} 和 {{cssxref("grid-template-columns")}} 属性定义网格的列和行。
 
 使用这些属性定义的网格被称为*显式网格*。
@@ -62,9 +60,8 @@ l10n:
 
 ## 参见
 
-- [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [网格布局的基本概念](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
 - 属性参考：
-
   - {{cssxref("grid-template-columns")}}
   - {{cssxref("grid-template-rows")}}
   - {{cssxref("grid")}}

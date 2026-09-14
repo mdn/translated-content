@@ -15,11 +15,11 @@ Para muitas pessoas, a tecnologia torna as coisas mais fáceis. Para pessoas com
 
 ## Principais tutoriais
 
-A [área de aprendizagem de acessibilidade](/pt-BR/docs/Learn/Accessibility) da MDN contém tutoriais modernos e atualizados que abrangem os seguintes fundamentos de acessibilidade:
+A [área de aprendizagem de acessibilidade](/pt-BR/docs/Learn_web_development/Core/Accessibility) da MDN contém tutoriais modernos e atualizados que abrangem os seguintes fundamentos de acessibilidade:
 
 - [O que é acessibilidade?](/pt-BR/docs/Learn/Accessibility/What_is_accessibility)
   - : Este artigo inicia o módulo com uma boa visão do que realmente é acessibilidade — isso inclui quais grupos de pessoas precisamos considerar e por quê, quais ferramentas diferentes pessoas usam para interagir com a web e como podemos tornar a acessibilidade parte do nosso fluxo de trabalho de desenvolvimento web.
-- [HTML: uma boa base para acessibilidade](/pt-BR/docs/Learn/Accessibility/HTML)
+- [HTML: uma boa base para acessibilidade](/pt-BR/docs/Learn_web_development/Core/Accessibility/HTML)
   - : Boa parte do conteúdo web pode se tornar acessível apenas garantindo que os elementos HTML corretos sejam usados para o propósito correto em todos os momentos. Este artigo analisa detalhadamente como o HTML pode ser usado para garantir a máxima acessibilidade.
 - [Melhores práticas de acessibilidade do CSS e JavaScript](/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript)
   - : CSS e JavaScript, quando usados corretamente, também podem proporcionar experiências web acessíveis. Eles podem prejudicar significativamente a acessibilidade se usados incorretamente. Este artigo descreve algumas melhores práticas de CSS e JavaScript que devem ser consideradas para garantir que até mesmo o conteúdo complexo seja o mais acessível possível.
@@ -32,7 +32,7 @@ A [área de aprendizagem de acessibilidade](/pt-BR/docs/Learn/Accessibility) da 
 
 ## Outras documentações
 
-- [Entendendo as Diretrizes de Acessibilidade do Conteúdo Web](/pt-BR/docs/Web/Accessibility/Understanding_WCAG)
+- [Entendendo as Diretrizes de Acessibilidade do Conteúdo Web](/pt-BR/docs/Web/Accessibility/Guides/Understanding_WCAG)
   - : Este conjunto de artigos fornece explicações rápidas para ajudar você a entender as etapas que precisam ser seguidas para estar em conformidade com as recomendações descritas nas Diretrizes de Acessibilidade do Conteúdo Web 2.0 do W3C (WCAG 2.0 ou apenas WCAG, para os propósitos desta redação).
 - [Introdução à cor e acessibilidade](/pt-BR/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
   - : Este artigo discute nossa percepção de luz e cor, fornece uma base para o uso da cor em designs acessíveis e demonstra as melhores práticas para conteúdo visual e legível.
@@ -40,7 +40,7 @@ A [área de aprendizagem de acessibilidade](/pt-BR/docs/Learn/Accessibility) da 
   - : Até agora, as pessoas desenvolvedoras web que queriam tornar seus componentes baseados em `<div>` e `<span>` estilizados não tinham técnicas adequadas. A **acessibilidade por teclado** faz parte dos requisitos mínimos de acessibilidade, dos quais uma pessoa desenvolvedora deve estar ciente.
 - [ARIA](/pt-BR/docs/Web/Accessibility/ARIA)
   - : Esta é uma coleção de artigos para aprender como usar Aplicações de Internet Ricas Acessíveis (ARIA) para tornar seus documentos HTML mais acessíveis.
-- [Lista de verificação da acessibilidade móvel](/pt-BR/docs/Web/Accessibility/Mobile_accessibility_checklist)
+- [Lista de verificação da acessibilidade móvel](/pt-BR/docs/Web/Accessibility/Guides/Mobile_accessibility_checklist)
   - : Este artigo fornece uma lista de verificação concisa de requisitos de acessibilidade para pessoas desenvolvedoras de aplicativos móveis.
 - [Acessibilidade cognitiva](/pt-BR/docs/Web/Accessibility/Cognitive_accessibility)
   - : Este artigo explica como garantir que o conteúdo web que você está criando seja acessível a pessoas com deficiências cognitivas.
@@ -50,4 +50,4 @@ A [área de aprendizagem de acessibilidade](/pt-BR/docs/Learn/Accessibility) da 
 ## Consulte também
 
 - [Grupo de Interesse da WAI](https://www.w3.org/WAI/about/groups/waiig/)
-- [Guias para pessoas desenvolvedoras](/pt-BR/docs/Web/Guide)
+- [Guias para pessoas desenvolvedoras](/pt-BR/docs/MDN/Guides)

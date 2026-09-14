@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 配送情報を要求し、配送オプションが提供されている決済リクエストでは、ユーザーが利用できるオプションのリストから配送オプションを選ぶと、**`shippingoptionchange`** イベントが {{domxref("PaymentRequest")}} に送られます。
 

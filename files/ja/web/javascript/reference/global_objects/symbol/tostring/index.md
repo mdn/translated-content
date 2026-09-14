@@ -1,28 +1,27 @@
 ---
 title: Symbol.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`toString()`** メソッドは、指定された {{jsxref("Symbol")}} オブジェクトを表す文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: Symbol.prototype.toString()")}}
+{{InteractiveExample("JavaScript デモ: Symbol.prototype.toString()")}}
 
 ```js interactive-example
 console.log(Symbol("desc").toString());
-// Expected output: "Symbol(desc)"
+// 予想される結果: "Symbol(desc)"
 
 console.log(Symbol.iterator.toString());
-// Expected output: "Symbol(Symbol.iterator)
+// 予想される結果: "Symbol(Symbol.iterator)
 
 console.log(Symbol.for("foo").toString());
-// Expected output: "Symbol(foo)"
+// 予想される結果: "Symbol(foo)"
 
 // console.log(Symbol('foo') + 'bar');
-// Expected output: Error: Can't convert symbol to string
+// 予想される結果: Error: Can't convert symbol to string
 ```
 
 ## 構文

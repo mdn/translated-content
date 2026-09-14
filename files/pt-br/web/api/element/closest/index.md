@@ -15,7 +15,7 @@ var elt = element.closest(selectors);
 
 ### Parâmetros
 
-- _selectors_ é um {{domxref("DOMString")}} contendo uma lista de seletores, por exemplo `"p:hover, .toto + q"`
+- _selectors_ é um {{jsxref("String")}} contendo uma lista de seletores, por exemplo `"p:hover, .toto + q"`
 - _element_ é um {{domxref("Element")}} posicionado no início da árvore de elementos a ser percorrida.
 
 ### Valor retornado

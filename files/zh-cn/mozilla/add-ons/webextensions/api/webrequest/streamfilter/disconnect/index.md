@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 将过滤器从请求中断开。在该操作后浏览器将继续处理响应，但不会再触发任何过滤器事件，也不会再有任何过滤器函数调用产生任何效果。请注意此函数与 {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}} 之间的区别。使用 `disconnect()` 后，浏览器将继续处理任何进一步的响应数据，但这些数据将无法通过过滤器访问。使用 `close()` 后，浏览器将忽略尚未传递到渲染引擎的任何响应数据。
 
 当你不再需要与响应进行交互时，应始终第一时间调用 `disconnect()` 或 `close()`。

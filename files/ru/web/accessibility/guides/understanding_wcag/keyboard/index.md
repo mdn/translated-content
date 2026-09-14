@@ -18,7 +18,7 @@ Most interactive elements are focusable by default; you can make an element focu
 
 ### See also
 
-- [tabindex](/ru/docs/Web/HTML/Global_attributes/tabindex) global HTML attribute
+- [tabindex](/ru/docs/Web/HTML/Reference/Global_attributes/tabindex) global HTML attribute
 - Global event handlers: [onkeydown](/ru/docs/Web/API/Element/keydown_event)
 - Global event handlers: [onkeyup](/ru/docs/Web/API/Element/keyup_event)
 
@@ -30,7 +30,7 @@ This creates confusion for keyboard-only users when the focus order differs from
 
 ### See also
 
-- [tabindex](/ru/docs/Web/HTML/Global_attributes/tabindex) global HTML attribute
+- [tabindex](/ru/docs/Web/HTML/Reference/Global_attributes/tabindex) global HTML attribute
 - [Understanding focus order](https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html)
 - [Don't use tabindex greater than 0](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)
 
@@ -42,7 +42,7 @@ An element is clickable if it has an `onclick` event handler defined. You can ma
 
 ### See also
 
-- [tabindex](/ru/docs/Web/HTML/Global_attributes/tabindex) global HTML attribute
+- [tabindex](/ru/docs/Web/HTML/Reference/Global_attributes/tabindex) global HTML attribute
 - Global event handlers: [onkeydown](/ru/docs/Web/API/Element/keydown_event)
 - Global event handlers: [onkeyup](/ru/docs/Web/API/Element/keyup_event)
 
@@ -61,11 +61,11 @@ If the user can interact with an element (for example, using touch or a pointing
 
 ### See also
 
-- [tabindex](/ru/docs/Web/HTML/Global_attributes/tabindex) global HTML attribute
+- [tabindex](/ru/docs/Web/HTML/Reference/Global_attributes/tabindex) global HTML attribute
 
 ## Focusable element must have focus styling
 
-Any element that can receive keyboard focus should have visible styling that indicates when the element is focused. You can do this with the [`:focus`](/ru/docs/Web/CSS/:focus) CSS pseudo-class.
+Any element that can receive keyboard focus should have visible styling that indicates when the element is focused. You can do this with the [`:focus`](/ru/docs/Web/CSS/Reference/Selectors/:focus) CSS pseudo-class.
 
 Standard focusable elements such as links and input fields are given special styling by the browser by default, so you might not need to specify focus styling for such elements, unless you want the focus styling to be more distinctive.
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6aa664dc5ccb5edf0897f99ad5feb59325dff831
 ---
 
-{{GlossarySidebar}}
-
 **蛇形命名法**是一种不使用空格的短语书写方式，其中空格被下划线 `_` 替换，单词通常全部小写。通常将其写为“snake_case”，以提醒读者其外观。
 
 蛇形命名法通常用作变量命名约定。以下名称使用蛇形命名法：`left_shift`、`bitwise_invert`、`matrix_transpose`。

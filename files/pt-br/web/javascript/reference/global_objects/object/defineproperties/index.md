@@ -18,9 +18,7 @@ Object.defineProperties(obj, props)
 - `obj`
   - : O objeto no qual se cria ou modifica suas propriedades.
 - `props`
-
   - : Um objeto do qual propriedades enumeráveis constitui descritores para as propriedades serem definidas ou modificadas. Descritores de propriedade presente nos objetos provém em dois principais tipos: descritores de dados e de acesso (veja {{jsxref("Object.defineProperty()")}} para mais detalhes). Descritores têm as seguintes chaves:
-
     - `configurable`
       - : `true` se e somente se o tipo deste descritor de propriedades pode ser modificada e se a propriedade pode ser apagada do objeto correspondente.
         **Valor padrão é `false`.**
@@ -31,7 +29,7 @@ Object.defineProperties(obj, props)
       - : O valor associado com a propriedade. Pode ser qualquer valor válido em JavaScript value (número, objeto, função, etc).
         **Valor padrão é {{jsxref("undefined")}}.**
     - `writable`
-      - : `true` se e somente se o valor associado com a propriedade pode ser modificada com um {{jsxref("Operators/Assignment_Operators", "assignment operator", "", 1)}}.
+      - : `true` se e somente se o valor associado com a propriedade pode ser modificada com um {{jsxref("Operators", "assignment operator", "Assignment_operators", 1)}}.
         **Valor padrão é `false`.**
     - `get`
       - : Uma função a qual serve com um getter para a propriedade, ou {{jsxref("undefined")}} se não existe getter. A retorno da função será usado como o valor da propriedade.
@@ -139,4 +137,4 @@ function defineProperties(obj, properties) {
 
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.keys()")}}
-- [Enumerabilidade e direito de propriedades](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerabilidade e direito de propriedades](/pt-BR/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

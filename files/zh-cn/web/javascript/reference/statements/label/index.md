@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c6f0f106b9083984dbf597678def6561729bb459
 ---
 
-{{jsSidebar("Statements")}}
-
 **标记语句**是任何带有标识符前缀的[语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)。你可以使用嵌套在标记语句中的 {{jsxref("Statements/break", "break")}} 或 {{jsxref("Statements/continue", "continue")}} 语句跳转到对应标记。
 
 {{InteractiveExample("JavaScript Demo: Statement - Label")}}

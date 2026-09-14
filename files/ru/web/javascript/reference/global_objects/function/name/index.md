@@ -23,7 +23,9 @@ console.log(object.func2.name);
 // Expected output: "func2"
 ```
 
-Интерактивные примеры размещены в GitHub репозитории. Если вы хотите добавить свои примеры, то клонируйте <https://github.com/mdn/interactive-examples> и пришлите пул реквест.
+## Значение
+
+Строка.
 
 {{js_property_attributes(0,0,1)}}
 
@@ -64,7 +66,7 @@ console.log(f.name); // "f"
 console.log(object.someMethod.name); // "someMethod"
 ```
 
-Вы можете определить функцию с именем в {{jsxref("Operators/Function", "function expression", "", 1)}}:
+Вы можете определить функцию с именем в {{jsxref("Operators/function", "function expression", "", 1)}}:
 
 ```js
 var object = {

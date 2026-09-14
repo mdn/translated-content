@@ -3,8 +3,6 @@ title: cookies.get()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/get
 ---
 
-{{AddonSidebar}}
-
 La méthode **`get()`** de l'API {{WebExtAPIRef("cookies")}} récupère les informations d'un seul cookie, par son nom et son URL.
 
 Si plus d'un cookie portant le même nom existent pour une URL donnée, celui contenant le chemin le plus long sera retourné. Pour les cookies ayant la même longueur de chemin, le plus ancien cookie sera retourné. Si aucun cookie ne correspond alors `null` est retourné.
@@ -22,9 +20,7 @@ var getting = browser.cookies.get(
 ### Paramètres
 
 - `details`
-
   - : Un `objet` contenant les informations pouvant être utilisées pour récupérer un cookie. Il peut inclure les propriétés suivantes :
-
     - `firstPartyDomain`{{optional_inline}}
       - : Une `chaîne` représentant le domaine de première partie avec lequel le cookie à récupérer est associé. Cette propriété doit être fournie si l'isolation de la première partie est activée sur le navigateur. Voir [Isolement de la première partie](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies#isolement_de_la_première_partie).
     - `name`
@@ -73,8 +69,6 @@ getActive.then(getCookie);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

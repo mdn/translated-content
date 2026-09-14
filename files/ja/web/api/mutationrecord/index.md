@@ -108,7 +108,7 @@ slug: Web/API/MutationRecord
             <code>MutationObserver</code>
             <a href="/ja/docs/Web/API/MutationObserver/observe">observe</a>
             メソッドの対応する
-            <a href="/ja/docs/Web/API/MutationObserverInit"
+            <a href="/ja/docs/Web/API/MutationObserver/observe"
               >MutationObserverInit</a
             >
             引数で、 <code>attributeOldValue</code> または

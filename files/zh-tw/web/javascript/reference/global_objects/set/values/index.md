@@ -3,8 +3,6 @@ title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
 
-{{JSRef}}
-
 **`values()`** 方法回傳一個 `Iterator` 物件，包含著 `Set` 物件中所有元素，由插入順序排序。
 
 **`keys()`** 是這個方法的替身（為了與 {{jsxref("Map")}} 物件保持相似性）；他運行的完全一模一樣，回傳 `Set` 中元素的 **values**。

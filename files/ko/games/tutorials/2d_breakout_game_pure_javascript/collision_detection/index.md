@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
 
 이 학습은 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 일곱 번째 단계입니다. [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html)에서 이번 학습에서 완성된 코드를 확인할 수 있습니다.
@@ -129,7 +127,8 @@ collisionDetection();
 
 {{JSFiddleEmbed("https://jsfiddle.net/yumetodo/kaed3hbu/","","395")}}
 
-> **참고:** **연습하기: 벽돌이 부딪힐 때마다 색깔을 바꿔보세요.**
+> [!NOTE]
+> **연습하기: 벽돌이 부딪힐 때마다 색깔을 바꿔보세요.**
 
 ## 다음 단계
 

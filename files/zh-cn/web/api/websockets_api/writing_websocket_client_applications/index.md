@@ -23,7 +23,7 @@ webSocket = new WebSocket(url, protocols);
 ```
 
 - `url`
-  - : 要连接的 URL；这应当是 WebSocket 服务器会响应的 URL。
+  - : 要连接的 URL，即 WebSocket 服务器将响应的地址。其应使用 URL 方案 `wss://`，尽管某些软件在本地连接时可能允许使用不安全的 `ws://`。[大多数现代浏览器版本](/zh-CN/docs/Web/API/WebSocket/WebSocket#浏览器兼容性)也支持相对 URL 值以及 `https://` 和 `http://` 方案。
 - `protocols` {{ optional_inline() }}
   - : 一个协议字符串或一个协议字符串数组。这些字符串用来指定子协议，这样一个服务器就可以实现多个 WebSocket 子协议（比如你可能希望一个服务器可以根据指定的 `protocol` 来应对不同的互动情况）。如果不指定协议字符串则认为是空字符串。
 

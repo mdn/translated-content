@@ -2,10 +2,8 @@
 title: "キャプチャグループ: (...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Capturing_group
 l10n:
-  sourceCommit: 254d7f1a39f19543e27611948b0f94c202a140e8
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{JsSidebar}}
 
 **キャプチャグループ**は、サブパターンをグループ化し、グループ全体に[数量詞](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)を適用したり、グループ内で[論理和](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)を使用したりすることができます。サブパターンの一致に関する情報を記憶しているので、[後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)で参照したり、[照合結果](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec#返値)からその情報にアクセスしたりすることができます。
 
@@ -32,7 +30,8 @@ l10n:
 - {{jsxref("String.prototype.replace()")}} および {{jsxref("String.prototype.replaceAll()")}} メソッドの `replacement` コールバック関数の `pN` 引数
 - 同じパターン内の[後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)
 
-> **メモ:** `exec()` の結果の配列でも、キャプチャグループは `1`、`2` などの番号でアクセスされますが、これは要素 `0`` が一致するもの全体であるためです。`\0` は後方参照ではなく、NUL 文字の[文字エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)です。
+> [!NOTE]
+> `exec()` の結果の配列でも、キャプチャグループは `1`、`2` などの番号でアクセスされますが、これは要素 `0`` が一致するもの全体であるためです。`\0` は後方参照ではなく、NUL 文字の[文字エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)です。
 
 正規表現コード内のキャプチャグループは、その結果と一対一に対応します。キャプチャグループが一致しない場合（例えば、それが[論理和](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)の一致しない選択肢に属する場合）、対応する結果は未定義です。
 
@@ -117,8 +116,8 @@ parseTitle('title="Named capturing groups\' advantages"'); // "Named capturing g
 
 ## 関連情報
 
-- [グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
-- [正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
+- [グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)ガイド
+- [正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
 - [非キャプチャグループ: `(?:...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)
 - [名前付きキャプチャグループ: `(?<name>...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
 - [後方参照: `\1`, `\2`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)

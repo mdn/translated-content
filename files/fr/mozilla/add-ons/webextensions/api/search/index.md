@@ -3,8 +3,6 @@ title: search
 slug: Mozilla/Add-ons/WebExtensions/API/search
 ---
 
-{{AddonSidebar}}
-
 Récupère les moteurs de recherche et lance une recherche avec un moteur de recherche spécifique
 
 Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "search".

@@ -9,7 +9,7 @@ slug: Web/API/SubmitEvent/submitter
 
 ## 值
 
-一个元素，表示发送 {{domxref("HTMLFormElement.submit_event", "submit")}} 事件的表单元素。通常是 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性是 `submit` 的 {{HTMLElement("input")}} 元素或者 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性是 `submit` 的 {{HTMLElement("button")}} 元素，但它也可能是启动提交过程的其他元素。
+一个元素，表示发送 {{domxref("HTMLFormElement.submit_event", "submit")}} 事件的表单元素。通常是 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性是 `submit` 的 {{HTMLElement("input")}} 元素或者 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性是 `submit` 的 {{HTMLElement("button")}} 元素，但它也可能是启动提交过程的其他元素。
 
 如果提交不是由某些按钮触发的。则 `submitter` 的值是 `null`。
 

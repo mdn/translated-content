@@ -37,15 +37,15 @@ _从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 > 这些属性已被弃用，不应再使用。记录这些属性主要是为了帮助理解旧代码库。
 
 - {{domxref("HTMLTableRowElement.align")}} {{deprecated_inline}}
-  - : 一个反映 [`align`](/zh-CN/docs/Web/HTML/Element/tr#align) 属性的字符串枚举值。其指示元素内容相对于周围上下文的对齐方式，可能的值有：`"left"`、`"right"` 和 `"center"`。
+  - : 一个反映 [`align`](/zh-CN/docs/Web/HTML/Reference/Elements/tr#align) 属性的字符串枚举值。其指示元素内容相对于周围上下文的对齐方式，可能的值有：`"left"`、`"right"` 和 `"center"`。
 - {{domxref("HTMLTableRowElement.bgColor")}} {{deprecated_inline}}
-  - : 一个包含单元格背景色的字符串。它反映已弃用的 [`bgColor`](/zh-CN/docs/Web/HTML/Element/tr#bgcolor) 属性。
+  - : 一个包含单元格背景色的字符串。它反映已弃用的 [`bgColor`](/zh-CN/docs/Web/HTML/Reference/Elements/tr#bgcolor) 属性。
 - {{domxref("HTMLTableRowElement.ch")}} {{deprecated_inline}}
-  - : 一个包含单字符的字符串。这个字符是用来对齐某一列所有单元格内容的基准。它反映 [`char`](/zh-CN/docs/Web/HTML/Element/tr#char) 并默认为与语言相关的小数点，例如，英语的默认值为 `'.'`，法语的默认值为 `','`。此属性是可选的，而且没有得到很好的支持。
+  - : 一个包含单字符的字符串。这个字符是用来对齐某一列所有单元格内容的基准。它反映 [`char`](/zh-CN/docs/Web/HTML/Reference/Elements/tr#char) 并默认为与语言相关的小数点，例如，英语的默认值为 `'.'`，法语的默认值为 `','`。此属性是可选的，而且没有得到很好的支持。
 - {{domxref("HTMLTableRowElement.chOff")}} {{deprecated_inline}}
   - : 一个包含整数的字符串，表示由 `HTMLTableRowElement.ch` 定义的字符的右侧（对于从左到右的文本；或者对于从右到左的文本的左侧）必须保留多少个字符。此属性是可选的，并没有得到很好的支持。
 - {{domxref("HTMLTableRowElement.vAlign")}} {{deprecated_inline}}
-  - : 一个表示枚举值的字符串，指示单元格内容必须如何对齐。它反映 [`valign`](/zh-CN/docs/Web/HTML/Element/tr#valign) 属性，可以为以下值之一：`"top"`、`"middle"`、`"bottom"` 或 `"baseline"`。
+  - : 一个表示枚举值的字符串，指示单元格内容必须如何对齐。它反映 [`valign`](/zh-CN/docs/Web/HTML/Reference/Elements/tr#valign) 属性，可以为以下值之一：`"top"`、`"middle"`、`"bottom"` 或 `"baseline"`。
 
 ## 规范
 

@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills/Job_interviews", "Learn_web_development/Getting_started/Soft_skills")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills/Finding_a_job", "Learn_web_development/Getting_started/Soft_skills")}}
 
 > [!NOTE]
 > この記事のコンテンツは現在不完全です。申し訳ありません！私たちは MDN ウェブ開発の学習の章の改善に努めており、間もなく、 ("TODO") とマークされた場所も完了する予定です。
@@ -60,4 +60,4 @@ TODO
 - [Website development team structure: roles and processes](https://www.truemark.dev/blog/web-development-team-structure-role-process/), truemark.dev (2017)
 - [Waterfall vs. Agile vs. Kanban vs. Scrum: What's the difference?](https://asana.com/resources/waterfall-agile-kanban-scrum), Asana (2022)
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills/Job_interviews", "Learn_web_development/Getting_started/Soft_skills")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills/Finding_a_job", "Learn_web_development/Getting_started/Soft_skills")}}

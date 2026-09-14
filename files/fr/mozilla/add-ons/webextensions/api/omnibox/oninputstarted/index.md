@@ -3,8 +3,6 @@ title: omnibox.onInputStarted
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputStarted
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsque l'utilisateur commence à interagir avec votre extension en entrant son mot-clé dans la barre d'adresse, puis en appuyant sur la touche espace.
 
 Cela sera envoyé avant tout événement {{WebExtAPIRef("omnibox.onInputChanged")}} events.
@@ -50,5 +48,3 @@ browser.omnibox.onInputStarted.addListener(() => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

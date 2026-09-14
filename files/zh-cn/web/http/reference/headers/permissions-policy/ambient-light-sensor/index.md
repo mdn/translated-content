@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP {{HTTPHeader('Permissions-Policy')}} 标头的 `ambient-light-sensor` 指令控制当前文档是否被允许通过 {{domxref('AmbientLightSensor')}} 接口收集设备周围环境中的光亮信息。
 

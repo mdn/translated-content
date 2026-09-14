@@ -33,22 +33,18 @@ new Intl.RelativeTimeFormat([locales[, options]])
 ### Parâmetros
 
 - `locales`
-  - : Opcional. Uma string com uma tag da linguagem BCP 47, ou um array dessas strings. Para a forma geral e interpretação do argumento `locales` , acesse: {{jsxref("Global_Objects/Intl", "Página Intl", "#Locale_identification_and_negotiation", 1)}}.
+  - : Opcional. Uma string com uma tag da linguagem BCP 47, ou um array dessas strings. Para a forma geral e interpretação do argumento `locales` , acesse: {{jsxref("Intl", "Página Intl", "#Locale_identification_and_negotiation", 1)}}.
 - `options`
-
   - : Opcional. Um objeto com algumas ou todas as seguintes propriedades:
-
     - `localeMatcher`
       O algoritmo para comparação de local a ser usado. Os valores possíveis são `"lookup"` e `"best fit"`; o padrão é `"best fit"`. Para informações sobre esta opção, veja [`Intl`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation).
     - `numeric`
       O formato de saída da mensagem. Valores possíveis são:
-
       - `"always"` (padrão, e.g., `há 1 dia`),
       - ou `"auto"` (e.g., `ontem`). O valor`"auto"` permite que não seja sempre necessário o uso de valores númericos na saída.
 
     - `style`
       O comprimento da mensagem internacionalizada. Valores possíveis são:
-
       - `"long"` (padrão, e.g., `in 1 month`)
       - `"short"` (e.g., `in 1 mo.`),
       - ou `"narrow"` (e.g., `in 1 mo.`). O estilo narrow pode ser similar ao short em alguns locais.
@@ -57,12 +53,12 @@ new Intl.RelativeTimeFormat([locales[, options]])
 
 ### Propriedades
 
-- {{jsxref("RelativeTimeFormat.prototype", "Intl.RelativeTimeFormat.prototype")}}
+- {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat.prototype")}}
   - : Permite a adição de propriedades para todos os objetos.
 
 ### Métodos
 
-- {{jsxref("RelativeTimeFormat.supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl/RelativeTimeFormat/supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
   - : Retorna um array contendo os valores disponíveis dentre os que foram passados como parâmetro sem ter de recorrer ao local padrão do ambiente.
 
 ## Instâncias `RelativeTimeFormat`

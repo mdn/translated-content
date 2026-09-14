@@ -3,8 +3,6 @@ title: Number.POSITIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 ---
 
-{{JSRef}}
-
 **`Number.POSITIVE_INFINITY`** 静态数据属性表示正无穷大值。
 
 {{InteractiveExample("JavaScript Demo: Number.POSITIVE_INFINITY")}}

@@ -1,12 +1,9 @@
 ---
 title: stop-color
 slug: Web/SVG/Reference/Attribute/stop-color
-original_slug: Web/SVG/Attribute/stop-color
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`stop-color`** 属性は、グラデーションの色経由点で使用する色を示します。
 
@@ -14,7 +11,7 @@ l10n:
 > グラデーションに関して、SVG は `transparent` キーワードを CSS とは異なる方法で扱います。SVG はグラデーションを事前に乗算された空間で計算しないので、 `transparent` は実際には透明な黒を意味します。そのため、 `stop-color` に `transparent` という値を指定することは、 `stop-color` に `black` という値を指定し、 {{SVGAttr("stop-opacity")}} に `0` という値を指定することと同じです。
 
 > [!NOTE]
-> プレゼンテーション属性である `stop-color` は、CSS プロパティとして使用することができます。
+> プレゼンテーション属性であるため、 `stop-color` には対応する CSS プロパティ {{cssxref("stop-color")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
 
 この属性は以下の SVG 要素で使用することができます。
 
@@ -27,13 +24,7 @@ l10n:
     <tr>
       <th scope="row">値</th>
       <td>
-        <code>currentcolor</code> |
         {{cssxref("color_value", "&lt;color&gt;")}}
-        <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#icccolor"
-            >&#x3C;icccolor></a
-          ></code
-        >
       </td>
     </tr>
     <tr>
@@ -47,12 +38,8 @@ l10n:
   </tbody>
 </table>
 
-- `currentcolor`
-  - : このキーワードは、現在の塗りつぶしの色を表し、 [`<paint>`](/ja/docs/Web/SVG/Guides/Content_type#paint) の指定の中で、 {{SVGAttr("fill")}} および {{SVGAttr("stroke")}} 属性と同じ方法で指定することができます。
-- `<color>`
+- [`<color>`](/ja/docs/Web/SVG/Guides/Content_type#color)
   - : この値は色の値を示します。
-- `<icccolor>`
-  - : この値は ICC カラープロファイルを参照します。
 
 ## 仕様書
 
@@ -64,4 +51,5 @@ l10n:
 
 ## 関連情報
 
+- CSS の {{cssxref("stop-color")}} プロパティ
 - {{SVGAttr("stop-opacity")}}

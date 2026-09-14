@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_Header}}
+{{APIRef("CSSOM")}}
 
 **`removeListener()`** は {{DOMxRef("MediaQueryList")}} インターフェイスのメソッドで、 `MediaQueryListener` からリスナーを除去します。
 
@@ -61,8 +61,8 @@ mediaQueryList.removeListener(screenTest);
 
 ## 関連情報
 
-- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [プログラムによるメディアクエリーの評価](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)
+- [プログラムによるメディアクエリーの評価](/ja/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

@@ -28,7 +28,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 
 ## Description
 
-monthValue 및 dayValue 매개 변수를 지정하지 않으면 {{jsxref ("Date.prototype.getMonth()", "getMonth()")}} 및 {{jsxref("Date.prototype.getDate)","getDate()")}} 메소드가 사용됩니다.
+monthValue 및 dayValue 매개 변수를 지정하지 않으면 {{jsxref ("Date.prototype.getMonth()", "getMonth()")}} 및 {{jsxref("Date.prototype.getDate()", "getDate()")}} 메소드가 사용됩니다.
 
 지정한 매개 변수가 예상 범위를 벗어나면 setFullYear ()가 다른 매개 변수와 {{jsxref ( "Date")}} 객체의 날짜 정보를 그에 따라 업데이트하려고 시도합니다. 예를 들어, monthValue에 15를 지정하면 연도가 1 (yearValue + 1)만큼 증가하고 3은 해당 월에 사용됩니다.
 

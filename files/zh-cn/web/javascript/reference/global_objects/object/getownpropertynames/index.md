@@ -3,8 +3,6 @@ title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 ---
 
-{{JSRef}}
-
 **`Object.getOwnPropertyNames()`** 静态方法返回一个数组，其包含给定对象中所有自有属性（包括不可枚举属性，但不包括使用 symbol 值作为名称的属性）。
 
 {{InteractiveExample("JavaScript Demo: Object.getOwnPropertyNames()")}}

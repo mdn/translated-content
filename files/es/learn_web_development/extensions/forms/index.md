@@ -12,7 +12,7 @@ Este módulo provee una serie de artículos que te ayudarán a dominar los conoc
 
 ## Prerrequisitos
 
-Antes de comenzar este módulo, deberías al menos completar nuestra [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content). Hasta este punto, deberías ser capaz de comprender fácilmente las [Guías Introductorias](#guías_introductorias), y también ser capaz de usar nuestra guía de [Controles de formulario nativos básicos](/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls).
+Antes de comenzar este módulo, deberías al menos completar nuestra [Introducción a HTML](/es/docs/Learn_web_development/Core/Structuring_content). Hasta este punto, deberías ser capaz de comprender fácilmente las [Guías Introductorias](#guías_introductorias), y también ser capaz de usar nuestra guía de [Controles de formulario nativos básicos](/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls).
 
 Sin embargo para dominar los formularios, se require mas que conocimiento en HTML — también necesitas aprender algunas técnicas específicas para estlizar los controles del formulario, y es necesario un poco de conocimiento de _scripting_ para manejar cosas como, validación y creación de controles personalizados. Por lo tanto, antes de que revises las secciones listadas a continuación, te recomendamos que primero vayas y aprendas un poco acerca de [CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) y [JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792).
 
@@ -61,12 +61,12 @@ Los siguientes artículos, no son escenciales para el aprendizaje, pero pueden r
   - : Te encontras con algunos casos donde los _widgets_ nativos de los formularios, simplemente no proveen lo que necesitas p.ej debido a estilos o funcionalidad. En esos casos, quizás necesitarás construir tu propio _widget_ con HTML puro. Este artículo explica como podrías hacerlo, y las concideraciones de las que debes estar conciente al hacerlo, con un caso de estudio práctico.
 - [Enviando formularios a través de JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
   - : Este artículo revisa las maneras de usar un formulario para formar una solocitud HTTP y enviarla a través de JavaScript personalizado, en vez de hacerlo a través de envio de formulaio estándar. También revisa el porque querrías hacer esto, y las implacaciones de hacerlo. (Véase también [Usando objetos FormData](/es/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects).)
-- [Tabla de compatibilidad de propiedades de CSS para controles de formularios](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Tabla de compatibilidad de propiedades de CSS para controles de formularios](/es/docs/Learn_web_development/Extensions/Forms)
   - : Por último, este artículo provee una referencia práctica revisar que propiedades CSS son compatibles con que elements de formulario.
 
 ## Véase también
 
-- [Referencia de elementos de formularios HTML](/es/docs/Web/HTML/Element#formularios)
-- [Referencia de tipos \<input>](/es/docs/Web/HTML/Element/input)
-- [Referencia de atributos HTML](/es/docs/Web/HTML/Attributes)
+- [Referencia de elementos de formularios HTML](/es/docs/Web/HTML/Reference/Elements#formularios)
+- [Referencia de tipos \<input>](/es/docs/Web/HTML/Reference/Elements/input)
+- [Referencia de atributos HTML](/es/docs/Web/HTML/Reference/Attributes)
 - [Controles y métodos de entradas de usuario](/es/docs/Learn/Forms/User_input_methods)

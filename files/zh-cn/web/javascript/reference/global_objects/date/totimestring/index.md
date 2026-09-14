@@ -3,8 +3,6 @@ title: Date.prototype.toTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
 ---
 
-{{JSRef}}
-
 **`toTimeString()`** 方法以人类易读形式返回一个日期对象时间部分的字符串，该字符串以美式英语格式化。
 
 {{InteractiveExample("JavaScript Demo: Date.toTimeString()")}}

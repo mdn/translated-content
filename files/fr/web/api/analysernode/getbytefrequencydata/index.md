@@ -5,7 +5,7 @@ slug: Web/API/AnalyserNode/getByteFrequencyData
 
 {{ APIRef("Web Audio API") }}
 
-La méthode **`getByteFrequencyData()`** de l'objet [`AnalyserNode`](/fr/docs/Web/API/AnalyserNode) copie les données de fréquence dans le {{domxref("Uint8Array")}} passé en argument.
+La méthode **`getByteFrequencyData()`** de l'objet [`AnalyserNode`](/fr/docs/Web/API/AnalyserNode) copie les données de fréquence dans le {{jsxref("Uint8Array")}} passé en argument.
 
 Si le tableau a moins d'éléments que {{domxref("AnalyserNode.frequencyBinCount")}}, les excédants sont supprimés; s'il en a davantage, les excédants sont ignorés.
 
@@ -24,11 +24,11 @@ analyseur.getByteFrequencyData(tableauDonnees);
 
 ### Retourne
 
-Un {{domxref("Uint8Array")}}.
+Un {{jsxref("Uint8Array")}}.
 
 ## Exemple
 
-L'exemple suivant montre comment créer simplement un `AnalyserNode` avec [`AudioContext`](/fr/docs/Web/API/AudioContext), puis utiliser [`requestAnimationFrame`](/fr/docs/Web/API/Window/requestAnimationFrame) et [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) (et en particulier [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+L'exemple suivant montre comment créer simplement un `AnalyserNode` avec [`AudioContext`](/fr/docs/Web/API/AudioContext), puis utiliser [`requestAnimationFrame`](/fr/docs/Web/API/Window/requestAnimationFrame) et [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) (et en particulier [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
 ```js
 var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
@@ -71,7 +71,7 @@ dessiner();
 ## Paramètres
 
 - array
-  - : Le {{domxref("Uint8Array")}} dans lequel seront copiées les données relatives à la fréquence.
+  - : Le {{jsxref("Uint8Array")}} dans lequel seront copiées les données relatives à la fréquence.
 
 ## Spécifications
 

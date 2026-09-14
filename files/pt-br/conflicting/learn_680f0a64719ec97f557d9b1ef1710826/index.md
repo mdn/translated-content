@@ -19,11 +19,11 @@ Para outro conjunto (sobreposto) de links sobre recursos de aprendizado, consult
 - [A estrutura básica de uma página web](https://reference.sitepoint.com/html/page-structure) — o doctype e a 'árvore' do documento
 - [Elementos HTML fundamentais](https://reference.sitepoint.com/html/elements) — estrutura, cabeçalho, lista, elementos de formulário e mais, explicados por categoria.
 - [Tutorial para iniciantes HTML](https://htmldog.com/guides/htmlbeginner/) — um tutorial e exercícios que recapitulam o conhecimento básico aprendido acima.
-- [Elementos HTML](/pt-BR/docs/Web/HTML/Element) — um guia completo para os elementos HTML elements com detalhes de como os navegadores os suportam
+- [Elementos HTML](/pt-BR/docs/Web/HTML/Reference/Elements) — um guia completo para os elementos HTML elements com detalhes de como os navegadores os suportam
 
 ### CSS
 
-- [Iniciando com o CSS](/pt-BR/docs/CSS/Getting_Started) — um guia para iniciantes sobre CSS, cobrindo os conceitos básicos e fundamentais.
+- [Iniciando com o CSS](/pt-BR/docs/Learn_web_development/Core/Styling_basics) — um guia para iniciantes sobre CSS, cobrindo os conceitos básicos e fundamentais.
 - [Guia de referência CSS](/pt-BR/docs/Web/CSS/Reference) — um guia completo para CSS com detalhes do nível de suporte do Gecko/Firefox para cada um deles.
 - [Introdução do W3C à estilização com CSS](https://www.w3.org/MarkUp/Guide/Style) — um breve guia para estilizar páginas da web para iniciantes.
 - [Perguntas comuns sobre CSS](/pt-BR/Common_CSS_Questions) — perguntas frequentes e respostas para iniciantes.
@@ -33,14 +33,14 @@ Para outro conjunto (sobreposto) de links sobre recursos de aprendizado, consult
 
 #### Iniciante
 
-- [Iniciando com JavaScript](/pt-BR/docs/JavaScript/Getting_Started) — o que é Javascript e como ele pode ajudar você?
+- [Iniciando com JavaScript](/pt-BR/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) — o que é Javascript e como ele pode ajudar você?
 - [Guia de referência JavaScript](/pt-BR/docs/Web/JavaScript/Guide) — um guia completo e regularmente atualizado de JavaScript para todos os níveis de aprendizado, do iniciante ao avançado.
 - [Crockford no JavaScript](https://www.youtube.com/playlist?list=PL7664379246A246CB) — uma série de vídeos aprofundada sobre a linguagem JavaScript.
 - [JavaScript Elouquente](https://eloquentjavascript.net/contents.html) — um guia completo para metodologias JavaScript intermediárias e avançadas.
 
 #### Intermediário
 
-- [Uma re-introdução ao JavaScript](/pt-BR/docs/Web/JavaScript/Language_overview) — uma recapitulação da linguagem de programação JavaScript direcionada para desenvolvedores de nível intermediário.
+- [Uma re-introdução ao JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Language_overview) — uma recapitulação da linguagem de programação JavaScript direcionada para desenvolvedores de nível intermediário.
 - [Padrões de design (design patterns) essenciais no JavaScript](https://www.addyosmani.com/resources/essentialjsdesignpatterns/book/) — uma introdução à padrões de design essenciais no JavaScript
 - [Introdução à JavaScript orientado à Objeto](/pt-BR/Introduction_to_Object-Oriented_JavaScript) — aprenda sobre o modelo de objetos do JavaScript.
 - [Boas práticas de Javascript (por Christian Heilmann)](https://dev.opera.com/articles/view/javascript-best-practices/) — aprenda sobre algumas boas práticas óbvias (algumas nem tanto) quando programas em JavaScript.

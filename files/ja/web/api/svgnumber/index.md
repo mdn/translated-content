@@ -14,7 +14,6 @@ l10n:
 ## インスタンスプロパティ
 
 - {{domxref("SVGNumber.value")}}
-
   - : 数値を表す浮動小数点数です。
 
     メモ: `SVGNumber` が読み取り専用である場合、この値を変更しようとすると {{domxref("DOMException")}} が NO_MODIFICATION_ALLOWED_ERR のコードで発生します。

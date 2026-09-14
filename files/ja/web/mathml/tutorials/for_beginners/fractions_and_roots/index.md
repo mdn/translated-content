@@ -1,14 +1,12 @@
 ---
 title: MathML 分数と根号
+short-title: 分数と根号
 slug: Web/MathML/Tutorials/For_beginners/Fractions_and_roots
-original_slug: Web/MathML/Guides/Fractions_and_roots
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 6ba4f3b350be482ba22726f31bbcf8ad3c92a9c6
 ---
 
-{{MathMLRef}}
-
-{{PreviousMenuNext("Web/MathML/Guides/Text_containers", "Web/MathML/Guides/Scripts", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners")}}
 
 この記事では、テキストコンテナーを利用して、分数や根号を入れ子にしてより複雑な MathML 式を構築する方法を説明します。
 
@@ -46,10 +44,10 @@ l10n:
 ![mfrac, msqrt, mroot のスクリーンショット](mfrac-msqrt-mroot.png)
 
 - すでに `<mfrac>` 要素が分数として描画されることは知っていますね。最初の子要素（分子）は横棒で区切られた 2 つ目の子要素（分母）の上に描画されます。
-- `<msqrt>`は平方根としてレンダリングされます。子要素は [`<mrow>`](/ja/docs/Web/MathML/Tutorials/For_beginners/Getting_started#mrow_要素でのグループ化) のように並べられ、ルート記号 √ が先頭に付き、完全に上付き線で覆われます。
+- `<msqrt>`は平方根としてレンダリングされます。子要素は [`<mrow>`](/ja/docs/Web/MathML/Tutorials/For_beginners/Getting_started#mrow_要素でのグループ化) のように並べられ、ルート記号 √ が先頭に付き、上付き線で完全に覆われます。
 - 最後に、 `<mroot>` 要素は n 乗根としてレンダリングされます。最初の要素は根号に覆われ、 2 つ目の要素はルートの次数として使用され、前置上付き文字としてレンダリングされます。
 
-### アクティブラーニング: 異なる要素を入れ子にする
+### 異なる要素を入れ子にする
 
 MathML のサブツリーとその視覚的レンダリングとの関連を理解したかどうかを確認するための単純な練習です。この文書には MathML の数式が格納されており、その MathML の数式内のサブツリーに対応するすべてのサブツリーを調べる必要があります。それが終わったら、MathML 式のソースを検査し、それがあなたの予想と一致しているかどうかを確認することができます。
 
@@ -57,7 +55,7 @@ MathML のサブツリーとその視覚的レンダリングとの関連を理�
 <!doctype html>
 <html lang="ja">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>数式記号のあるマイページ</title>
     <link
       rel="stylesheet"
@@ -184,9 +182,7 @@ MathML のサブツリーとその視覚的レンダリングとの関連を理�
 
 ```css hidden
 math {
-  font-family:
-    Latin Modern Math,
-    STIX Two Math;
+  font-family: "Latin Modern Math", "STIX Two Math", math;
   font-size: 200%;
 }
 math .highlight {
@@ -206,10 +202,9 @@ const comment = document.getElementById("comment");
 const checkboxes = Array.from(options.getElementsByTagName("input"));
 const status = document.getElementById("status");
 function verifyOption(checkbox) {
-  let mathml = checkbox.dataset.highlight;
-  if (mathml) {
-    mathml = document.getElementById(mathml);
-  }
+  const mathml = checkbox.dataset.highlight
+    ? document.getElementById(checkbox.dataset.highlight)
+    : null;
   if (checkbox.checked) {
     comment.textContent = checkbox.dataset.comment;
     if (mathml) {
@@ -237,7 +232,7 @@ checkboxes.forEach((checkbox) => {
 });
 ```
 
-{{ EmbedLiveSample('Active_learning_nesting_different_elements', 700, 600, "", "") }}
+{{ EmbedLiveSample('nesting_different_elements', 700, 600, "", "") }}
 
 ## 伸縮する根号
 
@@ -300,7 +295,8 @@ checkboxes.forEach((checkbox) => {
 
 {{ EmbedLiveSample('Fraction_without_bar', 700, 200, "", "") }}
 
-> **メモ:** `linethickness` 属性を使用して任意の太さを指定することができますが、数学フォントで指定する引数から計算される既定値のままにしておく方がよいでしょう。
+> [!NOTE]
+> `linethickness` 属性を使用して任意の太さを指定することができますが、数学フォントで指定する引数から計算される既定値のままにしておく方がよいでしょう。
 
 ## まとめ
 
@@ -312,4 +308,4 @@ checkboxes.forEach((checkbox) => {
 - [`<msqrt>` 要素](/ja/docs/Web/MathML/Reference/Element/msqrt)
 - [`<mroot>` 要素](/ja/docs/Web/MathML/Reference/Element/mroot)
 
-{{PreviousMenuNext("Web/MathML/Guides/Text_containers", "Web/MathML/Guides/Scripts", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners")}}

@@ -70,4 +70,4 @@ if (!Array.isArray) {
 
 ## Veja Também
 
-- {{jsxref("Global_Objects/Array", "Array")}}
+- {{jsxref("Array")}}

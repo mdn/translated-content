@@ -17,7 +17,7 @@ Notification.tag;
 
 ### Valeur
 
-Une {{domxref("DOMString")}}.
+Une {{jsxref("String")}}.
 
 ## Spécifications
 

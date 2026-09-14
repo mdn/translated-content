@@ -3,8 +3,6 @@ title: management.uninstallSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
 ---
 
-{{AddonSidebar}}
-
 Désinstalle l'appel de l'extension.
 
 Cette API _ne requiert pas_ la [permission API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management"
@@ -22,9 +20,7 @@ var uninstallingSelf = browser.management.uninstallSelf(
 ### Paramètres
 
 - `options{{optional_inline}}`
-
   - : `object`. L'objet qui peut comporter deux propriétés, toutes deux facultatives :
-
     - `showConfirmDialog{{optional_inline}}`
       - : Boolean. Si `showConfirmDialog` est `true`, le navigateur affiche la boite de dialogue demandant à l'utilisateur de confirmer que le complément doit être désinstallé. Par défaut à `false`.
     - `dialogMessage{{optional_inline}}`
@@ -76,8 +72,6 @@ uninstalling.then(null, onCanceled);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

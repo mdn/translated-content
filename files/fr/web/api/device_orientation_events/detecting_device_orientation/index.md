@@ -135,7 +135,7 @@ function handleOrientation(event) {
 window.addEventListener("deviceorientation", handleOrientation);
 ```
 
-{{LiveSampleLink("Exemple", "Cliquez ici")}} pour ouvrir cet exemple dans une nouvelle fenêtre (en effet, [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event) ne fonctionne pas pour tous les navigateurs au sein d'une [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) embarquant du contenu d'une autre origine).
+{{LiveSampleLink("Exemple", "Cliquez ici")}} pour ouvrir cet exemple dans une nouvelle fenêtre (en effet, [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event) ne fonctionne pas pour tous les navigateurs au sein d'une [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe) embarquant du contenu d'une autre origine).
 
 {{EmbedLiveSample('', '230', '260')}}
 

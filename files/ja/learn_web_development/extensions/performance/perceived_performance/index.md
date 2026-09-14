@@ -1,14 +1,13 @@
 ---
 title: 知覚的パフォーマンス
 slug: Learn_web_development/Extensions/Performance/Perceived_performance
-original_slug: Learn/Performance/Perceived_performance
 l10n:
-  sourceCommit: c2b44ca2f6fd95a0a1009c02a77a30af7a4fe857
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance")}}
 
-**[知覚的パフォーマンス](/ja/docs/Glossary/Perceived_performance)** は、ユーザーから見てウェブサイトがどれくらい速く感じられるかを表します。ユーザーがパフォーマンスをどのように知覚するかは、具体的な統計値と同じくらい、あるいはどんな具体的な統計値よりも重要ですが、それは主観的で簡単に計測できるものではありません。知覚的パフォーマンスはユーザーの視点であり、計測される値ではありません。
+**[知覚的パフォーマンス](/ja/docs/Glossary/Perceived_performance)** は、ユーザーから見て、ウェブサイトがどれくらい速く感じられるかを表します。ユーザーがパフォーマンスをどのように知覚するかは、具体的な統計値と同じくらい、あるいはどんな具体的な統計値よりも重要ですが、それは主観的で簡単に計測できるものではありません。知覚的パフォーマンスはユーザーの視点であり、計測される値ではありません。
 
 この記事は、ユーザーの知覚と、主観的な要素を計測するために使える具体的なツールに目を通し、知覚的パフォーマンスの簡潔な紹介を提供します。
 
@@ -17,12 +16,11 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターリテラシー、
         <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >基本的なソフトウェアのインストール</a
         >、
-        <a href="/ja/docs/Learn/Getting_started_with_the_web"
+        <a href="/ja/docs/Learn_web_development/Getting_started/Your_first_website"
           >クライアントサイドのウェブ技術</a
         >の基本的な知識
       </td>
@@ -36,7 +34,7 @@ l10n:
 
 ## 概要
 
-ページの読み込みやユーザーとの対話がいかにすばやく（スムーズに）行われるかという認識は、リソースを読み込むのに必要な実際の時間以上に重要です。物理的にサイトを速く実行することはできないかもしれませんが、ユーザーにとってどれだけ速く感じられるかを改善することは十分に可能です。
+ページの読み込みやユーザーの操作に対する応答の速さ（およびスムーズさ）の体感は、リソースの取得に実際に要した時間よりもさらに重要です。サイトの物理的な実行速度を上げることは難しいかもしれませんが、ユーザーの「体感」の速度は改善できるかもしれません。
 
 知覚的なパフォーマンスを向上させるための一般的なルールは、通常、処理が完全に完了するまで（何か情報を提供するまで）ユーザーを待たせるよりも、すばやくレスポンスを提供し、定期的に状況を更新したほうが良いというものです。例 えば、ページを読み込むとき、画像や他のリソースをすべて待つよりも、テキストが到着した時点で表示する方が良いでしょう。たとえコンテンツが完全にダウンロードされていなくても、ユーザーは何かが起こっていることを確認でき、コンテンツを操作し始めることができる。
 
@@ -90,10 +88,10 @@ CSS で入力用のモーダルを表示したり、可能な場合は JS で先
 
 ### タスクの開始をより操作可能にする
 
-`keyup` を待つのではなく、`keydown` でコンテンツをリクエストすることで、コンテンツの読み込まれる負荷を 200ms 削減することができます。`keyup` イベントに、面白いが控えめな 200ms のトランジションを追加することで、さらに 200ms の読み込む時間を短縮することができます。400ms の時間を節約することはできませんが、ユーザーはコンテンツを待つまで、もとい、コンテンツを待っているように感じることはないでしょう。
+`keyup` を待つのではなく、`keydown` でコンテンツのリクエストを行うと、コンテンツの読み込み時間を 200 ミリ秒短縮できます。その `keyup` イベントに、興味深いが目立たない 200 ミリ秒のアニメーションを追加すると、さらに 200 ミリ秒の読み込み時間を短縮できます。400 ミリ秒の時間を節約しているわけではありませんが、ユーザーはコンテンツを待つまで、コンテンツを待っているという感覚を抱くことがありません。
 
 ## まとめ
 
 ユーザーが有用なコンテンツを待つ時間を短縮し、レスポンシブで魅力的なサイトを維持することで、ユーザーは、リソースの読み込みにかかる実際の時間が変わらなくても、サイトのパフォーマンスが向上しているように感じることができるのです。
 
-{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance")}}

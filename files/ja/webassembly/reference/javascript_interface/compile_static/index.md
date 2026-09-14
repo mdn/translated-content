@@ -6,7 +6,7 @@ original_slug: WebAssembly/JavaScript_interface/compile_static
 
 {{WebAssemblySidebar}}
 
-**`WebAssembly.compile()`** 関数は WebAssembly バイナリーコードを {{jsxref("WebAssembly.Module")}} の形にコンパイルします。この関数は、モジュールをインスタンス化する前にコンパイルする必要がある場合に便利です (それ以外の場合は、 {{jsxref("WebAssembly.instantiate()")}} 関数を使用してください)。</p>
+**`WebAssembly.compile()`** 関数は WebAssembly バイナリーコードを [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) の形にコンパイルします。この関数は、モジュールをインスタンス化する前にコンパイルする必要がある場合に便利です (それ以外の場合は、 [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate) 関数を使用してください)。</p>
 
 ## 構文
 
@@ -21,12 +21,12 @@ WebAssembly.compile(bufferSource);
 
 ### 返値
 
-コンパイルされたモジュールを表す {{jsxref("WebAssembly.Module")}} オブジェクトに解決する `Promise` です。
+コンパイルされたモジュールを表す [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) オブジェクトに解決する `Promise` です。
 
 ### 例外
 
 - `bufferSource` が[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ではなかった場合、 {{jsxref("TypeError")}} が発生します。
-- コンパイルに失敗した場合、プロミスは {{jsxref("WebAssembly.CompileError")}} で拒否されます。
+- コンパイルに失敗した場合、プロミスは [`WebAssembly.CompileError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/CompileError) で拒否されます。
 
 ## 例
 
@@ -44,7 +44,7 @@ fetch("simple.wasm")
 ```
 
 > [!NOTE]
-> おそらく多くの場合は {{jsxref("WebAssembly.compileStreaming()")}} を使用したほうが `compile()` よりも効率的なのでそちらの方がいいでしょう。
+> おそらく多くの場合は [`WebAssembly.compileStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming) を使用したほうが `compile()` よりも効率的なのでそちらの方がいいでしょう。
 
 ## 仕様書
 

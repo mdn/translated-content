@@ -3,8 +3,6 @@ title: commands.update()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/update
 ---
 
-{{AddonSidebar}}
-
 Changez la description ou le raccourci clavier pour la commande donnée.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -20,9 +18,7 @@ browser.commands.update(
 ### Paramètres
 
 - `details`
-
   - : `object`. Un objet avec les propriétés suivantes:
-
     - `name`
       - : `string`. e nom de la commande à mettre à jour. Cela doit correspondre au nom d'une commande existante, comme indiqué par exemple dans la propriété `name` de l'objet {{WebExtAPIRef("commands.Command")}}.
     - `description`{{optional_inline}}

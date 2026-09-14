@@ -3,8 +3,6 @@ title: RegExp.prototype.multiline
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 ---
 
-{{JSRef}}
-
 La propriété **`multiline`** indique si le drapeau (_flag_) "`m`" a été utilisé ou non pour l'expression rationnelle. `multiline` est une propriété liée à l'instance, accessible en lecture seule.
 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.multiline", "taller")}}

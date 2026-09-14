@@ -3,8 +3,6 @@ title: webRequest.getSecurityInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
 ---
 
-{{AddonSidebar}}
-
 Utilisez cette fonction pour obtenir des informations détaillées sur la connexion [TLS](/fr/docs/Glossary/TLS) associée à une demande particulière..
 
 Vous passez à cette fonction la `requestId` pour la requête en question, et quelques paramètres supplémentaires optionnels. Il retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera résolue à un objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}}.
@@ -27,9 +25,7 @@ var gettingInfo = browser.webRequest.getSecurityInfo(
 - `requestId`
   - : `string`. ID de la requête pour laquelle vous souhaitez obtenir des informations de sécurité. Vous pouvez l'obtenir à partir de l'objet de `details` qui est passé dans n'importe quel écouteur d'événement `webRequest`.
 - `options`
-
   - : `object`. Un objet qui peut contenir l'une des propriétés suivantes, toutes facultatives :
-
     - `certificateChain` {{optional_inline}}
       - : `boolean`. Si `true`, l'objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} retourné inclura toute la chaîne de certificats jusqu'à et y compris la racine de confiance. Si `false`,
         il n'inclura que le certificat du serveur. La valeur par défaut est `false`.

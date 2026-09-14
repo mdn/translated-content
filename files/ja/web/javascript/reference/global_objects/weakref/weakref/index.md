@@ -15,7 +15,8 @@ l10n:
 new WeakRef(target)
 ```
 
-> **メモ:** `WeakRef()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) との組み合わせでのみ構築されます。 `new` 無しで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `WeakRef()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) との組み合わせでのみ構築されます。 `new` 無しで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

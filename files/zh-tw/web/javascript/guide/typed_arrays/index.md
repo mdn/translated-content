@@ -3,7 +3,7 @@ title: JavaScript 型別陣列
 slug: Web/JavaScript/Guide/Typed_arrays
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Iterators_and_generators")}}
+{{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Iterators_and_generators")}}
 
 當 Webapp 有了視頻、音頻操作，及用 [WebSocket](/zh-TW/docs/Web/API/WebSockets_API) 存取原始資料等等的功能而變得越來越強大，讓 JavaScript 代碼可以快速、簡單地操作原始二進制資料的好處就越來越明顯。以前唯一的解法是視原始資料為[字串](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String)並用 [`charCodeAt()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt) 方法讀取資料緩衝的位元組。
 
@@ -15,7 +15,7 @@ JavaScript 型別陣列提供了存取二進制資料更有效率的機制。
 
 ## 緩衝與視圖：型別陣列的架構
 
-為了追求最大的可朔性與效率，JavaScript 型別陣列的實作分為**緩衝**與**視圖**。一個緩衝（以類別 {{jsxref("ArrayBuffer")}} 實作）為代表一塊資料資料的物件，它沒有任何格式，也沒有任何存取其內容的機制。想存取一個緩衝所佔的記憶體必須用一個視圖。一個視圖提供了一種前後關係 — 資料型別、起始偏移與元素的數目 — 使得資料變成真實的型別陣列。視圖以類別 {{jsxref("ArrayBufferView")}} 與其子類別實作。
+為了追求最大的可朔性與效率，JavaScript 型別陣列的實作分為**緩衝**與**視圖**。一個緩衝（以類別 {{jsxref("ArrayBuffer")}} 實作）為代表一塊資料資料的物件，它沒有任何格式，也沒有任何存取其內容的機制。想存取一個緩衝所佔的記憶體必須用一個視圖。一個視圖提供了一種前後關係 — 資料型別、起始偏移與元素的數目 — 使得資料變成真實的型別陣列。視圖以類別 {{jsxref("TypedArray")}} 與其子類別實作。
 
 ![Typed arrays in an ArrayBuffer](typed_arrays.png)
 

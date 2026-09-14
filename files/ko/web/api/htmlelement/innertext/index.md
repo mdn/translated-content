@@ -7,7 +7,8 @@ slug: Web/API/HTMLElement/innerText
 
 {{domxref("HTMLElement")}} 인터페이스의 **`innerText`** 속성은 요소와 그 자손의 렌더링 된 텍스트 콘텐츠를 나타냅니다. `innerText`는 사용자가 커서를 이용해 요소의 콘텐츠를 선택하고 클립보드에 복사했을 때 얻을 수 있는 텍스트의 근삿값을 제공합니다.
 
-> **참고:** `innerText`는 {{domxref("Node.textContent")}}와 혼동하기 쉬우나 중요한 차이점을 가지고 있습니다. 기본적으로, `innerText`는 텍스트의 렌더링 후 모습을 인식할 수 있지만 `textContent`는 그렇지 않습니다.
+> [!NOTE]
+> `innerText`는 {{domxref("Node.textContent")}}와 혼동하기 쉬우나 중요한 차이점을 가지고 있습니다. 기본적으로, `innerText`는 텍스트의 렌더링 후 모습을 인식할 수 있지만 `textContent`는 그렇지 않습니다.
 
 ## 구문
 

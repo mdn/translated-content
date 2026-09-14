@@ -45,7 +45,8 @@ document.body.innerHTML = contentString.blink();
 <blink>Hello, world</blink>
 ```
 
-> **경고:** `blink`는 더 이상 유효한 요소가 아니기 때문에 이 마크업은 유효하지 않습니다.
+> [!WARNING]
+> `blink`는 더 이상 유효한 요소가 아니기 때문에 이 마크업은 유효하지 않습니다.
 
 또한 깜빡이는 객체 사용을 피해야 합니다.
 

@@ -3,15 +3,16 @@ title: "IntersectionObserver: takeRecords() メソッド"
 short-title: takeRecords()
 slug: Web/API/IntersectionObserver/takeRecords
 l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+  sourceCommit: fe47429d64ffaacb24f5130523442aeaabf26ac6
 ---
 
 {{APIRef("Intersection Observer API")}}
 
-{{domxref("IntersectionObserver")}} の **`takeRecords()`** メソッドは {{domxref("IntersectionObserverEntry")}} オブジェクトの配列を返します。それぞれのオブジェクトは、前回明示的にこのメソッドが呼び出されるか、暗黙的にオブザーバーのコールバックが自動的に呼び出されて交差状態がチェックされたときから変更されたそれぞれの対象要素を表します。
+**`takeRecords()`** は {{domxref("IntersectionObserver")}} インターフェイスのメソッドで、 {{domxref("IntersectionObserverEntry")}} オブジェクトの配列を返します。それぞれのオブジェクトは、前回明示的にこのメソッドが呼び出されるか、暗黙的にオブザーバーのコールバックが自動的に呼び出されて交差状態がチェックされたときから変更されたそれぞれの対象要素を表します。
 
 > [!NOTE]
-> コールバックを使用してこれらの変更を監視している場合は、このメソッドを呼び出す必要はありません。このメソッドを呼び出すと処理待ちの交差リストをクリアしてしまうため、コールバックが実行されません。
+> コールバックを使用してこれらの変更を監視している場合は、このメソッドを呼び出す必要はありません。
+> このメソッドを呼び出すと処理待ちの交差リストをクリアしてしまうため、コールバックが実行されません。
 
 ## 構文
 

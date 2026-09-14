@@ -123,7 +123,7 @@ Un objeto de configuración es un [entorno](https://html.spec.whatwg.org/multipa
 
 Para representar mejor esto, podemos echar un vistazo más de cerca a cómo el campo podría ser un problema. Se puede pensar aproximadamente en un **campo** como el objeto global. Lo que es único acerca de los campos es que contienen toda la información necesaria para ejecutar código JavaScript. Esto incluye objetos como [Array](/es/docs/Web/JavaScript/Reference/Global_Objects/Array) y [Error](/es/docs/Web/JavaScript/Reference/Global_Objects/Error). Cada objeto de configuración tiene su propia "copia" de estos y no se comparten. Eso puede causar algún comportamiento inesperado en relación con las promesas. Para evitar esto, hacemos un seguimiento de algo llamado **objeto de configuración titular**. Esto representa información específica del contexto del código de usuario responsable de una determinada llamada de función.
 
-Para ilustrar esto un poco más, podemos echar un vistazo a cómo un [`<iframe>`](/es/docs/Web/HTML/Element/iframe) incrustado en un documento se comunica con su _host_. Dado que todas las API web conocen el objeto de configuración correspondiente, lo siguiente funcionará en todos los navegadores:
+Para ilustrar esto un poco más, podemos echar un vistazo a cómo un [`<iframe>`](/es/docs/Web/HTML/Reference/Elements/iframe) incrustado en un documento se comunica con su _host_. Dado que todas las API web conocen el objeto de configuración correspondiente, lo siguiente funcionará en todos los navegadores:
 
 ```html
 <!doctype html> <iframe></iframe>
@@ -197,7 +197,6 @@ En el ejemplo anterior, el texto interno del `<iframe>` se actualizará solo si 
 ## Métodos estáticos
 
 - {{JSxRef("Promise.all", "Promise.all(iterable)")}}
-
   - : Espere a que se resuelvan todas las promesas, o que se rechace alguna.
 
     Si la promesa devuelta se resuelve, se resuelve con una matriz agregada de los valores de las promesas resueltas, en el mismo orden definido en la iteración de varias promesas.
@@ -205,7 +204,6 @@ En el ejemplo anterior, el texto interno del `<iframe>` se actualizará solo si 
     Si se echaza, se rechaza con el motivo de la primera promesa en el iterable que fue rechazada.
 
 - {{JSxRef("Promise.allSettled", "Promise.allSettled(iterable)")}}
-
   - : Espera hasta que todas las promesas se hayan establecido (cada una puede resolverse o rechazarse).
 
     Devuelve una promesa que se resuelve después de que todas las promesas dadas se cumplan o se rechacen, con una matriz de objetos que describen el resultado de cada promesa.
@@ -213,7 +211,6 @@ En el ejemplo anterior, el texto interno del `<iframe>` se actualizará solo si 
 - {{JSxRef("Promise.any", "Promise.any(iterable)")}}
   - : Toma un iterable de objetos `Promise` y, tan pronto como se cumple una de las promesas en el iterable, devuelve una única promesa que se resuelve con el valor de esa promesa.
 - {{JSxRef("Promise.race", "Promise.race(iterable)")}}
-
   - : Espera hasta que alguna de las promesas se cumpla o se rechace.
 
     Si la promesa devuelta se resuelve, se resuelve con el valor de la primera promesa en el iterable que resolvió.
@@ -223,7 +220,6 @@ En el ejemplo anterior, el texto interno del `<iframe>` se actualizará solo si 
 - {{JSxRef("Promise.reject", "Promise.reject(reason)")}}
   - : Devuelve un nuevo objeto `Promise` que se rechaza por el motivo indicado.
 - {{JSxRef("Promise.resolve", "Promise.resolve(value)")}}
-
   - : Devuelve un nuevo objeto `Promise` que se resuelve con el valor dado. Si el valor tiene un método `then`, la promesa devuelta "seguirá" ese método, adoptando su estado eventual; de lo contrario, la promesa devuelta se cumplirá con el valor.
 
     Generalmente, si no sabe si un valor es una promesa o no, {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} actua en su lugar y trabaja con el valor de retorno como una promesa.
@@ -233,7 +229,6 @@ En el ejemplo anterior, el texto interno del `<iframe>` se actualizará solo si 
 Consulte la [guía de Microtask](/es/docs/Web/API/HTML_DOM_API/Microtask_guide) para obtener más información sobre cómo estos métodos utilizan la cola y los servicios de Microtask.
 
 - {{jsxref("Promise.prototype.catch()")}}
-
   - : Agrega un _callback_ del controlador de rechazo a la promesa y devuelve una nueva promesa que se resuelve en el valor de devolución del _callback_ si se llama, o en su valor de cumplimiento original si la promesa se cumple.
 
 - {{jsxref("Promise.prototype.then()")}}

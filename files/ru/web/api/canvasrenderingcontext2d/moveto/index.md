@@ -56,8 +56,7 @@ ctx.stroke();
 ctx.beginPath();
 ctx.moveTo(50,50);
 ctx.lineTo(200, 50);
-ctx.stroke()</textarea
->
+ctx.stroke()</textarea>
 ```
 
 ```js hidden

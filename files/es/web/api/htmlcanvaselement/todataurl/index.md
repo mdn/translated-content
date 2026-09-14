@@ -5,7 +5,7 @@ slug: Web/API/HTMLCanvasElement/toDataURL
 
 {{APIRef("Canvas API")}}
 
-El método **`HTMLCanvasElement.toDataURL()`** devuelve un [data URI](/es/docs/Web/URI/Schemes/data) el cual contiene una representación de la imagen en el formato especificado por el parámetro `type` (por defecto es [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). La imagen obtenida tendrá una resolución de 96 dpi.
+El método **`HTMLCanvasElement.toDataURL()`** devuelve un [data URI](/es/docs/Web/URI/Reference/Schemes/data) el cual contiene una representación de la imagen en el formato especificado por el parámetro `type` (por defecto es [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). La imagen obtenida tendrá una resolución de 96 dpi.
 
 - Si la altura o anchura del canvas es `0`, devuelve un string con `"data:,"`
 - Si el tipo solicitado no es `image/png` pero el valor devuelto empieza por `data:image/png`, entonces el formato especificado no esta soportado.
@@ -20,14 +20,14 @@ canvas.toDataURL(tipo, opcionesCodificación);
 ### Parámetros
 
 - `tipo`{{optional_inline}}
-  - : Un {{domxref("DOMString")}} indicando el formato de la imagen. El tipo por defecto es `image/png`.
+  - : Un {{jsxref("String")}} indicando el formato de la imagen. El tipo por defecto es `image/png`.
 - `opcionesCodificación`{{optional_inline}}
   - : Un {{jsxref("Number")}} entre `0` y `1` indicando la calidad de la imagen si el tipo solicitado es `image/jpeg` o `image/webp`.
     Si este argumento es cualquier otra cosa, se usa el valor por defecto de la imagen. El valor por defecto es `0.92`. Otros argumentos se ignoran.
 
 ### Valor devuelto
 
-Un {{domxref("DOMString")}} que contiene el valor [data URI](/es/docs/Web/URI/Schemes/data).
+Un {{jsxref("String")}} que contiene el valor [data URI](/es/docs/Web/URI/Reference/Schemes/data).
 
 ## Ejemplos
 
@@ -122,4 +122,4 @@ function quitarColor() {
 ## Ver también
 
 - La interfaz que lo define, {{domxref("HTMLCanvasElement")}}.
-- [Data URIs](/es/docs/Web/URI/Schemes/data) en la referencía [HTTP](/es/docs/Web/HTTP).
+- [Data URIs](/es/docs/Web/URI/Reference/Schemes/data) en la referencía [HTTP](/es/docs/Web/HTTP).

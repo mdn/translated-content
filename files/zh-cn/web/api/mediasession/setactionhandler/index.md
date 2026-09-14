@@ -16,7 +16,7 @@ navigator.mediaSession.setActionHandler(type, callback)
 ### 参数
 
 - `type`
-  - : 一个提供要监听的动作类型的 {{domxref("DOMString")}} 。它可以是 `play`、`pause`、`seekbackward`、`seekforward`、`previoustrack` 或 `nexttrack`。
+  - : 一个提供要监听的动作类型的 {{jsxref("String")}} 。它可以是 `play`、`pause`、`seekbackward`、`seekforward`、`previoustrack` 或 `nexttrack`。
 - `callback`
   - : 一个在指定动作被调用时要调用的方法。回调方法不会收到参数，并且不应该返回值。
 

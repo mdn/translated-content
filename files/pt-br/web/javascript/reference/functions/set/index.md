@@ -80,7 +80,8 @@ console.log(o.a); // 5
 
 ### Usando um nome de propriedade computada
 
-> **Nota:** **Atenção:** Propriedades computadas são uma tecnologia experimental, parte da proposta ECMAScript 6, e não é amplamente suportada por todos os browsers ainda. Ele vai retornar um syntax error en ambientes que não tem suporte.
+> [!NOTE]
+> **Atenção:** Propriedades computadas são uma tecnologia experimental, parte da proposta ECMAScript 6, e não é amplamente suportada por todos os browsers ainda. Ele vai retornar um syntax error en ambientes que não tem suporte.
 
 ```js
 var expr = "foo";

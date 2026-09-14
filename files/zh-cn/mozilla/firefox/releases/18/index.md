@@ -3,21 +3,19 @@ title: Firefox 18 for developers
 slug: Mozilla/Firefox/Releases/18
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 18 已于 2013 年 1 月 8 日发布。
 
 ## WEB 开发者需要注意的变化
 
 ### HTML
 
-- 实现了{{HTMLElement("ol")}}元素上的[`reversed`](/zh-CN/docs/Web/HTML/Element/ol#reversed)属性 ([Firefox bug 601912](https://bugzil.la/601912)).
-- 实现了{{HTMLElement("link")}}元素上的[`crossorigin`](/zh-CN/docs/Web/HTML/Element/link#crossorigin)属性 ([Firefox bug 786564](https://bugzil.la/786564)).
+- 实现了{{HTMLElement("ol")}}元素上的[`reversed`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#reversed)属性 ([Firefox bug 601912](https://bugzil.la/601912)).
+- 实现了{{HTMLElement("link")}}元素上的[`crossorigin`](/zh-CN/docs/Web/HTML/Reference/Elements/link#crossorigin)属性 ([Firefox bug 786564](https://bugzil.la/786564)).
 
 ### CSS
 
 - {{cssxref("min-width")}} 和 {{cssxref("min-height")}} 属性使用 `auto` 关键字作为初始值 (This has an effect only on flex items as it resolves to `0`, the previous initial value, for other items). ([Firefox bug 763689](https://bugzil.la/763689))
-- The cascade has been updated: now author `!important` rules override [CSS animations](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations). ([Firefox bug 783714](https://bugzil.la/783714))
+- The cascade has been updated: now author `!important` rules override [CSS animations](/zh-CN/docs/Web/CSS/Guides/Animations/Using). ([Firefox bug 783714](https://bugzil.la/783714))
 - {{cssxref("background")}}简写属性可以包含 CSS3 中的{{cssxref("background-size")}}属性了。([Firefox bug 570326](https://bugzil.la/570326))
 - 初步实现了 Flexbox.默认禁用状态，可以通过设置`layout.css.flexbox.enabled`选项激活该特性.([Firefox bug 666041](https://bugzil.la/666041))
 
@@ -29,7 +27,7 @@ Firefox 18 已于 2013 年 1 月 8 日发布。
 - 删除了 {{domxref("BlobBuilder", "MozBlobBuilder")}}。开发者应该使用 {{domxref("Blob")}} 构造函数来创建 `Blob` 对象。（[Firefox bug 744907](https://bugzil.la/744907)）
 - [`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event)事件和[页面可见性 API](/zh-CN/docs/Web/API/Page_Visibility_API)取消前缀[Firefox bug 812086](https://bugzil.la/812086)).
 - 实现了 `TextDecoder` 和 `TextEncoder`。（[Firefox bug 764234](https://bugzil.la/764234)）
-- `HTMLMediaElement.src` 被分成了两个属性：一个是标准的 `src` 属性，返回普通的字符串 {{domxref("DOMString")}},另一个是带前缀的`mozSrcObject`属性，返回 [media streams](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)（[Firefox bug 792665](https://bugzil.la/792665)）。
+- `HTMLMediaElement.src` 被分成了两个属性：一个是标准的 `src` 属性，返回普通的字符串 {{jsxref("String")}},另一个是带前缀的`mozSrcObject`属性，返回 [media streams](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)（[Firefox bug 792665](https://bugzil.la/792665)）。
 
 ### JavaScript
 

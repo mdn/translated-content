@@ -3,8 +3,6 @@ title: 學習 HTML ：指南與教學
 slug: Learn_web_development/Core/Structuring_content
 ---
 
-{{LearnSidebar}}
-
 為了建立網頁，你應該要先知道 {{Glossary('HTML')}}——用來建造網站架構的科技。 HTML 是用來辨認網頁中的內容該如何被解讀，例如說被解讀為：一個段落（paragraph）、清單（list）、文件標題（heading）、連結（link）、圖片（images）、多媒體播放器（multimedia player）、表單（form）或是任何一個可使用的「元素（elements）」，甚至是你自己定義的新元素。
 
 ## 學習途徑

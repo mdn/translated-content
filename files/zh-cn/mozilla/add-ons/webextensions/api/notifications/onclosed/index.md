@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1c0dda60cb2b680a753264b538e2c46776ecd837
 ---
 
-{{AddonSidebar}}
-
 当通知被关闭（无论是系统关闭还是用户关闭）时触发。
 
 ## 语法
@@ -31,9 +29,7 @@ browser.notifications.onClosed.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当此事件发生时调用的函数。该函数需要你传递下列参数：
-
     - `notificationId`
       - : `string`。被关闭的通知的 ID。
     - `byUser`

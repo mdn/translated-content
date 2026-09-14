@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 从页面中移除先前通过调用 {{WebExtAPIRef("tabs.insertCSS()")}} 插入的 CSS。
 
 > [!NOTE]
@@ -28,9 +26,7 @@ let removing = browser.tabs.removeCSS(
 - `tabId` {{optional_inline}}
   - `integer`。要从中移除 CSS 的标签页的 ID。默认为当前窗口中的活动标签页。
 - `details`
-
   - : 一个描述要从页面中移除的 CSS 的对象。包含以下属性：
-
     - `allFrames` {{optional_inline}}
       - `boolean`。如果为 `true`，则从当前页面的所有框架中移除 CSS。如果为 `false`，则只从顶层框架中移除。默认为 `false`。
     - `code` {{optional_inline}}

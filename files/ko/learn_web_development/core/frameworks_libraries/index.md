@@ -39,7 +39,8 @@ JavaScript 프레임워크는 최신 프론트엔드 웹 개발의 필수 부분
 
 ## 리액트 튜토리얼
 
-> **참고:** **참조**: React/ReactDOM 16.13.1과 create-react-app 3.4.1. 을 사용하여 2020년 5월에 마지막으로 테스트된 튜토리얼입니다.
+> [!NOTE]
+> **참조**: React/ReactDOM 16.13.1과 create-react-app 3.4.1. 을 사용하여 2020년 5월에 마지막으로 테스트된 튜토리얼입니다.
 >
 > 우리의 버전에 대해 여러분의 코드를 확인해야 하는 경우, 우리의 [todo-react repository](https://github.com/mdn/todo-react)에서 샘플 React app 코드의 완성된 버전을 볼 수 있습니다. 라이브 버전을 실행하려면<https://mdn.github.io/todo-react-build/>을 참조하세요.
 
@@ -60,7 +61,8 @@ JavaScript 프레임워크는 최신 프론트엔드 웹 개발의 필수 부분
 
 ## Ember tutorials
 
-> **참고:** **참조**: Ember/Ember CLI 3.18.0을 사용하여 2020년 5월에 마지막으로 테스트된 튜토리얼입니다.
+> [!NOTE]
+> **참조**: Ember/Ember CLI 3.18.0을 사용하여 2020년 5월에 마지막으로 테스트된 튜토리얼입니다.
 >
 > 우리의 버전에 대해 여러분의 코드를 확인해야 하는 경우, 우리의 [ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc)에서 샘플 Ember app 코드의 완성된 버전을 볼 수 있습니다. 라이브 버전을 실행하려면 <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> 을 참조하세요. (여기에는 튜토리얼에서 다루지 않은 몇 가지 기능도 포함됩니다.)
 
@@ -79,7 +81,8 @@ JavaScript 프레임워크는 최신 프론트엔드 웹 개발의 필수 부분
 
 ## Vue tutorials
 
-> **참고:** **참조**: Vue 2.6.11을 사용하여 2020년 5월에 마지막으로 테스트한 튜토리얼입니다.
+> [!NOTE]
+> **참조**: Vue 2.6.11을 사용하여 2020년 5월에 마지막으로 테스트한 튜토리얼입니다.
 >
 > 우리의 버전에 대해 여러분의 코드를 확인해야 하는 경우, 우리의 [todo-vue repository](https://github.com/mdn/todo-vue)에서 샘플 Vue app 코드의 완성된 버전을 볼 수 있습니다. 라이브 버전을 실행하려면 <https://mdn.github.io/todo-vue/dist/> 를 참조하세요.
 
@@ -88,7 +91,6 @@ JavaScript 프레임워크는 최신 프론트엔드 웹 개발의 필수 부분
 - [2. 첫 번째 Vue 컴포넌트 만들기](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
   - : 이제 Vue에 대해 자세히 살펴보고 우리만의 커스텀 컴포넌트를 만들겠습니다. Todo list의 각 항목을 나타내는 컴포넌트를 만드는 것으로 시작합니다. 그 과정에서, 다른 컴포넌트 내에서 컴포넌트를 호출하고, props(properties)를 통해 데이터를 전달하고 데이터 상태를 저장하는 등 중요한 개념을 학습합니다.
 - [3. Vue 컴포넌트 리스트 렌더링](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-
   - : 이 시점에서 우리는 충분히 잘 작동하는 컴포넌트를 얻었습니다. 이제 앱에 여러 `ToDoItem` 컴포넌트를 추가할 준비가 되었습니다. 이 글에서는 `App.vue` 컴포넌트에 todo 항목 데이터 셋을 추가하는 방법을 살펴보고, `v-for` 지시문(directive)을 사용하여 `ToDoItem` 컴포넌트를 반복하여 출력합니다.
 
 - [4. 새로운 todo form추가: Vue events, methods, models](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
@@ -106,7 +108,8 @@ JavaScript 프레임워크는 최신 프론트엔드 웹 개발의 필수 부분
 
 ## Svelte tutorials
 
-> **참고:** **참조**: Svelte 3.24.1 을 사용하여 2020년 8월에 마지막으로 테스트된 튜토리얼입니다.
+> [!NOTE]
+> **참조**: Svelte 3.24.1 을 사용하여 2020년 8월에 마지막으로 테스트된 튜토리얼입니다.
 >
 > 코드를 우리 버전과 비교하여 확인해야 하는 경우, [mdn-svelte-tutorial](https://github.com/opensas/mdn-svelte-tutorial) repo에서 각각의 문서 뒤에 있어야 하는 샘플 Svelte 앱 코드의 완성된 버전을 볼 수 있습니다. 라이브 버전을 실행하려면 Svelte REPL 을 참조하세요 <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>.
 

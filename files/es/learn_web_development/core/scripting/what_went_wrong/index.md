@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/What_went_wrong
 original_slug: Learn/JavaScript/First_steps/What_went_wrong
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "conflicting/Learn_web_development/Core/Scripting")}}
 
 Cuando construiste el juego "Adivina el número" en el artículo anterior, es posible que hayas descubierto que no funcionó. Tranquilo — este artículo tiene como objetivo evitar que te rasques la cabeza por este tipo de problemas brindándote algunos consejos sobre cómo encontrar y corregir errores en programas JavaScript.
 
@@ -39,7 +39,6 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
 
 1. Ve a la pestaña dónde tienes abierto `number-game-errors.html` y abre tu consola JavaScript. Deberías ver un mensaje de error con las siguientes líneas: ![](not-a-function.png)
 2. Este es un error bastante fácil de rastrear, y el navegador le brinda varios bits de información útil para ayudarte (la captura de pantalla anterior es de Firefox, pero otros navegadores proporcionan información similar). De izquierda a derecha, tenemos:
-
    - Una "x" roja para indicar que se trata de un error.
    - Un mensaje de error para indicar qué salió mal: "TypeError: guessSubmit.addeventListener no es una función"
    - Un enlace a "Más información" que te lleva a una página de MDN dónde explica detalladamente qué significa este error.
@@ -64,7 +63,8 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
 2. Ahora, si intentas ingresar un número y presionas el botón "Enviar respuesta", verás... ¡otro error! ![](variable-is-null.png)
 3. Esta vez, el error que se informa es "`TypeError: lowOrHi es nulo`", en la línea 78.
 
-   > **Nota:** [`Null`](/es/docs/Glossary/Null) es un valor especial que significa "nada" o "sin valor". Por lo tanto, `lowOrHi` ha sido declarado e iniciado, pero no con algún valor significativo — no tiene tipo ni valor.
+   > [!NOTE]
+   > [`Null`](/es/docs/Glossary/Null) es un valor especial que significa "nada" o "sin valor". Por lo tanto, `lowOrHi` ha sido declarado e iniciado, pero no con algún valor significativo — no tiene tipo ni valor.
 
    > [!NOTE]
    > Este error no apareció tan pronto como se cargó la página porque este error ocurrió dentro de una función (dentro del bloque `checkGuess() {...}`). Como pronto aprenderás con más detalle en nuestro [artículo de funciones](/es/docs/Learn/JavaScript/Building_blocks/Functions), el código dentro de las funciones se ejecuta en un ámbito separado que el código fuera de las funciones. En este caso, el código no se ejecutó y el error no se lanzó hasta que la función `checkGuess()` se ejecutó en la línea 86.
@@ -87,7 +87,8 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
    console.log(lowOrHi);
    ```
 
-   > **Nota:** [`console.log()`](/es/docs/Web/API/console/log_static) es una función de depuración realmente útil que imprime un valor en la consola. Por lo tanto, imprimirá el valor de `lowOrHi` en la consola tan pronto como intentemos configurarlo en la línea 48.
+   > [!NOTE]
+   > [`console.log()`](/es/docs/Web/API/console/log_static) es una función de depuración realmente útil que imprime un valor en la consola. Por lo tanto, imprimirá el valor de `lowOrHi` en la consola tan pronto como intentemos configurarlo en la línea 48.
 
 7. Guarda y refresca, y ahora deberías ver el resultado de `console.log()` en tu consola. ![](console-log-output.png)Efectivamente, el valor de `lowOrHi` es `null` en este punto, así que definitivamente hay un problema con la línea 48.
 8. Pensemos en cuál podría ser el problema. La línea 48 está utilizando un método [`document.querySelector()`](/es/docs/Web/API/Document/querySelector) para obtener una referencia a un elemento seleccionándolo con un selector CSS. Buscando más adelante en nuestro archivo, podemos encontrar el párrafo en cuestión:
@@ -246,4 +247,4 @@ Ahí lo tienes, los conceptos básicos para descubrir errores en programas senci
 - Hay muchos otros tipos de errores que no se enumeran aquí; estamos compilando una referencia que explica lo que significan en detalle; consulta la [referencia de error de JavaScript](/es/docs/Web/JavaScript/Reference/Errors).
 - Si encuentras algún error en tu código que no estás seguro de cómo solucionarlo después de leer este artículo, ¡puedes obtener ayuda! Solicita ayuda en la [categoría de aprendizaje del foro de discusión de MDN](https://discourse.mozilla.org/c/mdn/learn), o en la [sala de MDN Web Docs](https://chat.mozilla.org/#/room/#mdn:mozilla.org) en [Matrix](https://wiki.mozilla.org/Matrix). Dinos cuál es tu error e intentaremos ayudarte. Una copia de tu código también sería útil.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "conflicting/Learn_web_development/Core/Scripting")}}

@@ -21,11 +21,11 @@ WebExtension API を使った機能拡張には、いくつかのユーザーイ
   <tbody>
     <tr>
       <td>
-        <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">ブラウザーツールバーボタン</a>
+        <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button">ブラウザーツールバーボタン</a>
         (ブラウザーアクション)
       </td>
       <td>
-        ブラウザーツールバーのボタンで、クリック時に機能拡張にイベントを送ります。既定では全てのタブででこのボタンが表示されています。
+        ブラウザーツールバーのボタンで、クリック時に機能拡張にイベントを送ります。既定では全てのタブでこのボタンが表示されています。
       </td>
       <td>
         <img alt="ツールバーボタン（ブラウザーアクション）を表示している例" src="browser-action.png">

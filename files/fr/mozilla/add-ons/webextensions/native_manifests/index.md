@@ -3,8 +3,6 @@ title: manifests Natif
 slug: Mozilla/Add-ons/WebExtensions/Native_manifests
 ---
 
-{{AddonSidebar}}
-
 Les manifests natifs sont des fichiers JSON spécialement formatés qui sont provisionnés sur l'ordinateur de l'utilisateur par un autre moyen que le processus d'installation de l'extension. Par exemple, un manifest natif peut être fourni par un administrateur de périphérique ou par un programme d'installation d'application natif.
 
 Il existe trois types différents de manifest natif :
@@ -19,7 +17,7 @@ Il existe trois types différents de manifest natif :
       </td>
       <td>
         Activez une fonctionnalité appelée
-        <a href="/fr/Add-ons/WebExtensions/Native_messaging">native messaging</a
+        <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">native messaging</a
         >, dans laquelle une extension peut communiquer avec une application
         native installée sur l'appareil.
       </td>
@@ -126,7 +124,7 @@ Le manifest de messagerie natif contient un seul objet JSON avec les propriété
       <td>
         <p>
           Un tableau de valeurs d'<a
-            href="/fr/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID"
             >ID d'extensions</a
           >. Chaque valeur représente une extension qui est autorisée à
           communiquer avec cette application native.
@@ -135,7 +133,7 @@ Le manifest de messagerie natif contient un seul objet JSON avec les propriété
           Notez que cela signifie que vous voudrez probablement inclure la clé
           des
           <a
-            href="/fr/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
             >browser_specific_settings</a
           >
           dans le fichier manifest.json de votre extension, afin de pouvoir
@@ -180,7 +178,7 @@ Le manifest de stockage géré contient un seul objet JSON avec les propriétés
         <p>
           ID de l'extension pouvant accéder à ce stockage, donné comme ID que
           vous avez spécifié dans la clé d'<a
-            href="/fr/Add-ons/WebExtensions/manifest.json/applications"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
             >application</a
           >
           de l'extension.
@@ -306,7 +304,7 @@ Le manifest PKCS #11 est un fichier contenant un objet JSON avec les propriété
       <td>
         <p>
           Un tableau de valeurs d'<a
-            href="/fr/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID"
             >ID de l'extension</a
           >. Chaque valeur représente une extension qui est autorisée à
           interagir avec le module.
@@ -314,7 +312,7 @@ Le manifest PKCS #11 est un fichier contenant un objet JSON avec les propriété
         <p>
           Notez que cela signifie que vous voudrez probablement inclure la clé
           des
-          <a href="/fr/Add-ons/WebExtensions/manifest.json/applications"
+          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
             >applications</a
           >
           dans le fichier manifest.json de votre extension, afin de pouvoir

@@ -18,7 +18,7 @@ void gl.shaderSource(shader, source);
 - shader
   - : A {{domxref("WebGLShader")}} объект в который записывается исходный код.
 - source
-  - : A {{domxref("DOMString")}} исходный код шейдера на GLSL который будет записан.
+  - : A {{jsxref("String")}} исходный код шейдера на GLSL который будет записан.
 
 ### Возвращаемое значение
 

@@ -22,7 +22,7 @@ console.log(Array.from(result, (x) => x[0]));
 
 ## Descripción
 
-Este Symbol se utiliza para {{jsxref("String.prototype.matchAll()")}} y específicamente en {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}. Los dos ejemplos siguientes devuelven el mismo resultado:
+Este Symbol se utiliza para {{jsxref("String.prototype.matchAll()")}} y específicamente en {{jsxref("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}}. Los dos ejemplos siguientes devuelven el mismo resultado:
 
 ```js
 "abc".matchAll(/a/);
@@ -51,7 +51,7 @@ console.log(Array.from(str.matchAll(numbers)));
 //  Array ["2016", "01", "02", "2019", "03", "07"]
 ```
 
-Ver {{jsxref("String.prototype.matchAll()")}} y {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}} para más ejemplos.
+Ver {{jsxref("String.prototype.matchAll()")}} y {{jsxref("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}} para más ejemplos.
 
 ## Especificaciones
 
@@ -65,4 +65,4 @@ Ver {{jsxref("String.prototype.matchAll()")}} y {{jsxref("RegExp.@@matchAll", "R
 
 - [Polyfill de `Symbol.matchAll` en `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("String.prototype.matchAll()")}}
-- {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}
+- {{jsxref("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}}

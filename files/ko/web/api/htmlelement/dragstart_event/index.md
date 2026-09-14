@@ -107,7 +107,6 @@ document.addEventListener("dragend", (event) => {
 ## 같이 보기
 
 - 다른 드래그 앤 드롭 이벤트:
-
   - {{domxref("Document/drag_event", "drag")}}
   - {{domxref("Document/dragend_event", "dragend")}}
   - {{domxref("Document/dragover_event", "dragover")}}
@@ -116,7 +115,6 @@ document.addEventListener("dragend", (event) => {
   - {{domxref("Document/drop_event", "drop")}}
 
 - 이 이벤트의 다른 대상:
-
   - {{domxref("Window")}}: {{domxref("Window/dragstart_event", "dragstart")}} 이벤트
   - {{domxref("HTMLElement")}}: {{domxref("HTMLElement/dragstart_event", "dragstart")}} 이벤트
   - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragstart_event", "dragstart")}} 이벤트

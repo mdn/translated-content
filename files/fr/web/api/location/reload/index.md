@@ -7,7 +7,7 @@ slug: Web/API/Location/reload
 
 La méthode **`Location.reload()`** recharge la ressource depuis l'URL actuelle.
 
-Le rechargement peut être bloqué avec une exception [`DOMException`](/fr/docs/Web/API/DOMException) `SECURITY_ERROR`. Cela se produit si [l'origine](/fr/docs/Glossary/Origin) du script qui invoque `location.reload()` est différente de l'origine de la page qui possède l'objet [`Location`](/fr/docs/Web/API/Location). Voir [les règles sur l'origine](/fr/docs/Web/Security/Same-origin_policy) pour plus d'informations.
+Le rechargement peut être bloqué avec une exception [`DOMException`](/fr/docs/Web/API/DOMException) `SECURITY_ERROR`. Cela se produit si [l'origine](/fr/docs/Glossary/Origin) du script qui invoque `location.reload()` est différente de l'origine de la page qui possède l'objet [`Location`](/fr/docs/Web/API/Location). Voir [les règles sur l'origine](/fr/docs/Web/Security/Defenses/Same-origin_policy) pour plus d'informations.
 
 ## Syntaxe
 

@@ -5,9 +5,7 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{GamesSidebar}}
-
-{{Next("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기")}}
+{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
 
 이 튜토리얼을 차례차례 진행하면서 우리는 HTML5 {{htmlelement("canvas")}} 로 렌더되는 순수하게 JavaScript로만 쓰여진 간단한 **MDN 벽돌깨기** 게임을 만들 것입니다.
 
@@ -44,4 +42,4 @@ l10n:
 
 좋습니다, 이제 시작하도록 합시다. 첫 번째 챕터인 [캔버스 생성과 그리기](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it) 부터 시작합니다.
 
-{{Next("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기")}}
+{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}

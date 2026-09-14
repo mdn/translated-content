@@ -11,4 +11,4 @@ Em CSS, um seletor **pseudo-element** aplica estilos em partes do conteúdo do s
 
 ### Referência técnica
 
-- [Pseudo-elements](/pt-BR/docs/Web/CSS/Pseudo-elements)
+- [Pseudo-elements](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-elements)

@@ -21,7 +21,7 @@ l10n:
 
 ### テーマカラーをダークモードに設定
 
-次の例では、新しい `<meta>` 要素を作成して `name` 属性を [`theme-color`](/ja/docs/Web/HTML/Element/meta/name#html_仕様書で定義されている標準メタデータ名) に設定します。
+次の例では、新しい `<meta>` 要素を作成して `name` 属性を [`theme-color`](/ja/docs/Web/HTML/Reference/Elements/meta/name#html_仕様書で定義されている_meta_name) に設定します。
 `content` 属性には `#3c790a` を設定し、`media` 属性には `prefers-color-scheme: dark` と設定し、それからその要素を文書の `<head>` に追加します。
 ユーザーがオペレーティングシステムでダークモードを指定している場合、`media` プロパティを使用して異なる `theme-color` を設定することができます。
 
@@ -66,4 +66,4 @@ document.head.appendChild(meta);
 ## 関連情報
 
 - {{HTMLElement("meta")}}
-- [メディアクエリーで取りうる値](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [メディアクエリーで取りうる値](/ja/docs/Web/CSS/Guides/Media_queries/Using)

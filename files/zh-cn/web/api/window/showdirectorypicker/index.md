@@ -19,9 +19,7 @@ showDirectoryPicker(options)
 ### 参数
 
 - `options` {{optional_inline}}
-
   - : 选项对象，包含以下属性：
-
     - `id` {{optional_inline}}
       - : 通过指定 ID，浏览器可以记住不同 ID 所对应的目录。如果在另一个选择器中使用了相同的 ID，则选择器将在同一目录中打开。
     - `mode` {{optional_inline}}
@@ -38,11 +36,11 @@ showDirectoryPicker(options)
 - `AbortError` {{domxref("DOMException")}}
   - : 当用户未经选择直接关闭了目录选择器，或用户代理认为选择的目录过于敏感或者危险，或指定 `mode` 中选择的目录的 {{domxref('PermissionStatus.state')}} 不是 `"granted"`，则抛出此异常。
 - `SecurityError` {{domxref("DOMException")}}
-  - : 如果调用被[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)阻止，或者不是通过用户交互（例如按下按钮）调用，则抛出该异常。
+  - : 如果调用被[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)阻止，或者不是通过用户交互（例如按下按钮）调用，则抛出该异常。
 
 ## 安全性
 
-[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)是必需的。用户必须与页面或 UI 元素进行交互才能使该特性正常运行。
+[瞬态用户激活](/zh-CN/docs/Web/Security/Defenses/User_activation)是必需的。用户必须与页面或 UI 元素进行交互才能使该特性正常运行。
 
 ## 示例
 

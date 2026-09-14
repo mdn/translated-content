@@ -1,0 +1,326 @@
+---
+title: HTML `<select>` 選択要素
+short-title: <select>
+slug: Web/HTML/Reference/Elements/select
+l10n:
+  sourceCommit: 221ca1f7a86235a442dc8312a56e4151a85fcf29
+---
+
+**`<select>`** は [HTML](/ja/docs/Web/HTML) の要素で、選択式のメニューを提供するコントロールを表します。
+
+{{InteractiveExample("HTML デモ: &lt;select&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="pet-select">ペットを選択してください:</label>
+
+<select name="pets" id="pet-select">
+  <option value="">--1 つ選択してください--</option>
+  <option value="dog">犬</option>
+  <option value="cat">猫</option>
+  <option value="hamster">ハムスター</option>
+  <option value="parrot">オウム</option>
+  <option value="spider">クモ</option>
+  <option value="goldfish">金魚</option>
+</select>
+```
+
+```css interactive-example
+label {
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding-right: 10px;
+}
+
+select {
+  font-size: 0.9rem;
+  padding: 2px 5px;
+}
+```
+
+## 属性
+
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+
+- [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete)
+  - : 文字列で、{{Glossary("user agent", "ユーザーエージェント")}}の自動補完機能のヒントを提供します。値の完全なリストや自動補完の使い方の詳細は、 [HTML の autocomplete 属性](/ja/docs/Web/HTML/Reference/Attributes/autocomplete)を参照してください。
+- `autofocus`
+  - : 論理属性で、ページが読み込まれた時にこのフォームコントロールが入力フォーカスを持つべきであることを指定することができます。文書内で `autofocus` 属性を持つことができるフォーム要素は一つだけです。
+- [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled)
+  - : 論理属性で、ユーザーがそのコントロールを利用することができないことを示します。もしこの属性が指定されていない場合、コントロールはその設定を親要素、例えば {{htmlelement("fieldset")}} 要素から継承します。もし親要素に `disabled` 属性を持つものがなければ、そのコントロールは利用可能です。
+- [`form`](/ja/docs/Web/HTML/Reference/Attributes/form)
+  - : この `<select>` を関連付ける {{HTMLElement("form")}} 要素（_フォームオーナー_）です。この属性の値は、同じ文書内の `<form>` 要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) でなければなりません。（この属性が設定されていない場合は、 `<select>` はその祖先である `<form>` が存在すれば、それと関連付けられます。）
+
+    この属性によって、 `<select>` 要素は、`<form>` 要素の内部になくても、文書内のどこの `<form>` と結び付けることもできます。これは祖先の `<form>` を上書きすることもできます。
+
+- [`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple)
+  - : 論理属性で、リストのゼロ個以上の選択肢を選択することができることを示します。指定されていない場合は、一度に選択することができる選択肢は一つだけです。複数選択された選択肢は、 {{domxref("URLSearchParams")}} の配列の規約、つまり `name=value1&name=value2` の形式を使用して送信されます。`multiple` が指定されている場合、`size` のデフォルト値は `1` ではなく `4` になります。
+- `name`
+  - : この属性は、コントロールの名前を指定するために使用します。
+- [`required`](/ja/docs/Web/HTML/Reference/Attributes/required)
+  - : この論理属性は、フォームを送信する前に、ユーザーが少なくとも 1 つ選択肢を選択しなければならないことを示します。`<select>` には、選択肢が存在しない場合や、`multiple` が指定されておりユーザーがすべての選択肢の選択を解除した場合、この select の値がプログラムによって `""` に設定された場合、プレースホルダーラベルの選択肢のみが選択されている場合、選択された選択肢はありません。プレースホルダーラベルの選択肢以外の選択肢は、その値が空であっても有効とみなされます。
+
+    プレースホルダーラベルの選択肢とは、ユーザーが選択を行う前にボックス内に表示されるテキストのことです。例えば、上記の[試してみましょう](#試してみましょう)のデモにある「--1 つ選択してください--」などがこれにあたります。意味的には、[`placeholder`](/ja/docs/Web/HTML/Reference/Attributes/placeholder) 属性と同等とみなされ、実際の選択肢とは見なされません。これは、`<select>` の直接の子要素（`<optgroup>` 内ではない）であり、値として空文字列を持つ、選択肢リストの最初の選択肢として定義されます。これは、`size` が `1` で `multiple` が指定されていない場合にのみ適用されます。それ以外の場合は、`<select>` のレンダリング方法により、そのような `<option>` は単なる通常の選択肢となります。
+
+- [`size`](/ja/docs/Web/HTML/Reference/Attributes/size)
+  - : この属性は、一度に表示させる選択肢の数を表し、正の整数でなければなりません。値が `1` の場合、ブラウザーはドロップダウンリストを表示します。値が `1` より大きい場合、ブラウザーは指定された行数が表示されるスクロール可能なリストボックスを表示します。この属性が指定されていない場合、デフォルト値は `1` です。`multiple` 属性が指定されている場合、デフォルト値は `4` になります。ただし、下位互換性のため、{{domxref("HTMLSelectElement.size","size")}} プロパティは、デフォルト値として常に `0` を返します。
+
+## 使用上の注意
+
+通常、他のフォームコントロールと同様、`<select>` 要素には、アクセシビリティ上の理由から {{htmlelement("label")}} が関連付けられるほか、サーバーに送信される関連データ項目の名前を表す `name` 属性も指定されます。それぞれのメニューの選択肢は、`<select>` 要素内に含まれる {{htmlelement("option")}} 要素によって定義されます。
+
+それぞれの `<option>` 要素には、選択肢が選択されたときにサーバーに送信するデータの値を持つ [`value`](/ja/docs/Web/HTML/Reference/Elements/option#value) 属性があります。 `value` 属性が含まれていない場合は、デフォルトで要素の中に含まれるテキストの値が使用されます。 [`selected`](/ja/docs/Web/HTML/Reference/Elements/option#selected) 属性を`<option>` 要素に設定することで、ページが最初に読み込まれたときにデフォルトで選択状態にすることができます。 `selected` 属性が指定されていない場合、最初の `<option>` 要素がデフォルトで選択されます。
+
+`<select>` 要素は JavaScript では {{domxref("HTMLSelectElement")}} オブジェクトで表され、このオブジェクトの {{domxref("HTMLSelectElement.value", "value")}} プロパティは、選択された `<option>` の値を持っています。
+
+さらに、 {{HTMLElement("option")}} 要素を {{HTMLElement("optgroup")}} 要素の中に入れることで、ドロップダウンの中で選択肢をグループに分割することができます。また、{{HTMLElement("hr")}} 要素を含めることで、選択肢間に視覚的な区切りを追加することができます。
+
+その他の例は、[ネイティブフォームウィジェット: ドロップダウンコンテンツ](/ja/docs/Learn_web_development/Extensions/Forms/Other_form_controls#ドロップダウンコントロール)を参照してください。
+
+### ラッパー要素内の選択肢
+
+`<select>` 要素は、その直接の子要素だけでなく、すべての子孫要素である `<option>` 要素から選択肢のリストを構築します。
+つまり、選択肢が {{HTMLElement("div")}} 要素などの他の要素で囲まれていても、ドロップダウンでは選択可能な選択肢として表示され、フォームの送信時にも記載されます。
+ラッパー要素は、[カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)のスタイル設定に使用されますが、選択要素の動作には影響を与えません。つまり、グループやラベル、区切り文字を作成することはありません。
+見出しの下に選択肢をグループ化するには、{{HTMLElement("optgroup")}} を使用してください。グループが親要素である場合、{{HTMLElement("option")}} は `<optgroup>` の一部として扱われるため、グループ内でもラッパー要素を使用しても関連付けが壊れることはありません。
+
+> [!NOTE]
+> 現行の構文解析動作を持つブラウザーでは、`<select>` 内に記述されたすべての要素（ラッパー要素、{{HTMLElement("button")}}、{{HTMLElement("selectedcontent")}} を含む）が DOM 内に保持されます。
+> 一方、古いブラウザーでは、構文解析時に許可されていない要素が除去され、`<option>`、`<optgroup>`、`<hr>` の構造のみが残されます。
+> その結果、除去された要素に依存しているスタイル設定、マークアップ、またはスクリプトは、古いブラウザーでは動作しなくなります。
+
+### 複数の選択肢の選択
+
+デスクトップコンピューターでは、 `<select>` 要素に `multiple` 属性がついていて、`size` 属性の値が `1` より大きい場合に、複数の選択肢を選択する方法がいくつもあります。
+
+マウスを使用すると、<kbd>Ctrl</kbd>、<kbd>Command</kbd>、<kbd>Shift</kbd> キー（オペレーティングシステムによって異なります）を押しながらクリックすることで、複数の選択肢を選択または解除することができます。
+
+> [!WARNING]
+> キーボードから連続していない複数の選択肢を選択する仕組みは、今のところ Firefox でしか動作しないようです。
+>
+> macOS では、 <kbd>Ctrl</kbd> + <kbd>↑</kbd> および <kbd>Ctrl</kbd> + <kbd>↓</kbd> のショートカットが、 OS デフォルトの _Mission Control_ および _Application windows_ のショートカットと競合するため、動作させるためにはこれらをオフにしなければならないでしょう。
+
+キーボードを使用して、連続した複数の選択肢を選択するには以下のようにします。
+
+- `<select>` 要素にフォーカスを移動します（例えば <kbd>Tab</kbd> を使用して）。
+- <kbd>↑</kbd> および <kbd>↓</kbd> のカーソルキーを使用して、項目を上下に移動し、選択したい範囲の先頭または末尾の項目を選択する。
+- <kbd>Shift</kbd> キーを押したまま <kbd>↑</kbd> および <kbd>↓</kbd> のカーソルキーを使用して、項目を選択する範囲を増加または減少させる。
+
+キーボードを使用して、連続していない複数の選択肢を選択するには以下のようにします。
+
+- `<select>` 要素にフォーカスを移動します（例えば <kbd>Tab</kbd> を使用するなど）。
+- <kbd>Ctrl</kbd> キーを押したまま <kbd>↑</kbd> および <kbd>↓</kbd> のカーソルキーを使用して選択肢の「フォーカス」を移動します。つまり、選択したいものに移動します。「フォーカス」のある選択肢は、キーボードでリンクをフォーカスしたときと同様に、点線の輪郭線で強調されます。
+- <kbd>スペース</kbd> を押して「フォーカス」のある選択肢を選択または解除します。
+
+## CSS によるスタイル設定
+
+`<select>` 要素は、これまで CSS を使って効果的にスタイルを設定するのが困難でした。
+以下のガイドには、`<select>`要素を完全にカスタマイズ可能にする機能に関する情報が記載されています。
+
+- [カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+- [カスタマイズ可能な select リストボックス](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select_listboxes)
+
+### 従来の select のスタイル設定
+
+最新のカスタマイズ機能に対応していないブラウザー（またはそれらを使用できない古いコードベース）では、[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)や[表示されるフォント](/ja/docs/Web/CSS/Guides/Fonts)の操作に限定されています。 {{cssxref("appearance")}} プロパティを使用して、システムのデフォルトの `appearance` を削除することもできます。
+
+しかし、従来の `<select>` 要素では、ブラウザー間で一貫した結果を得ることは困難です。完全に制御したいのであれば、スタイル設定をするのに優れた機能を備えたライブラリーを使用するか、非意味的要素や JavaScript や [WAI-ARIA](/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) を使用して独自のドロップダウンメニューを実装することを検討してください。
+
+{{cssxref(":open")}} 擬似クラスを使用することで、 `<select>` 要素が開いた状態（つまり選択肢のドロップダウンリストが表示されている状態）のスタイルを設定できます。これは複数行の `<select>` 要素（[`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple) 属性が設定されているもの）には適用されません。これらはドロップダウンではなくスクロール可能なリストボックスとしてレンダリングされる傾向があるため、開いた状態がありません。
+
+`<select>` のスタイル設定についての従来の情報は、以下を参照してください。
+
+- [HTML フォームのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [HTML フォームの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
+- {{cssxref("field-sizing")}} プロパティは、 `<select>` 要素が格納する選択肢との相対的なサイズを決めるかを制御します。
+
+## アクセシビリティ
+
+`<select>` 内の `<hr>` は、純粋に装飾的なものとみなすべきです。なぜなら、現在、アクセシビリティツリー内に公開されておらず、支援技術にも公開されていないからです。
+
+## 例
+
+### 基本的な select
+
+次の例では、3 つの選択肢からなるドロップダウンメニューを作成します。2 番目の選択肢には `selected` 属性が設定されており、その選択肢がデフォルトで選択された状態になります。
+
+```html
+<select name="choice">
+  <option value="first">1 番目の値</option>
+  <option value="second" selected>2 番目の値</option>
+  <option value="third">3 番目の値</option>
+</select>
+```
+
+#### 結果
+
+{{EmbedLiveSample("Basic_select", "", "100")}}
+
+### グループ化された選択肢のある select
+
+次の例では、ドロップダウンメニューをグループ化つきで作成し、{{HTMLElement("optgroup")}} と {{HTMLElement("hr")}} を使用して、ドロップダウン内のコンテンツをユーザーが理解しやすくしています。
+
+```html
+<label for="hr-select">好きな食べ物</label> <br />
+
+<select name="foods" id="hr-select">
+  <option value="">食べ物を選んでください</option>
+  <hr />
+  <optgroup label="果物">
+    <option value="apple">りんご</option>
+    <option value="banana">バナナ</option>
+    <option value="cherry">さくらんぼ</option>
+    <option value="damson">ダムソンプラム</option>
+  </optgroup>
+  <hr />
+  <optgroup label="野菜">
+    <option value="artichoke">アーティチョーク</option>
+    <option value="broccoli">ブロッコリー</option>
+    <option value="cabbage">キャベツ</option>
+  </optgroup>
+  <hr />
+  <optgroup label="肉">
+    <option value="beef">牛肉</option>
+    <option value="chicken">鶏肉</option>
+    <option value="pork">豚肉</option>
+  </optgroup>
+  <hr />
+  <optgroup label="魚">
+    <option value="cod">タラ</option>
+    <option value="haddock">コダラ</option>
+    <option value="salmon">鮭</option>
+    <option value="turbot">カレイ</option>
+  </optgroup>
+</select>
+```
+
+#### 結果
+
+{{EmbedLiveSample("select_with_grouping_options", "", "100")}}
+
+### 高度な複数選択の機能
+
+以下の例はもっと複雑で、 `<select>` 要素で使用できる機能をもっと示しています。
+
+- `multiple` 属性により、複数の選択肢を選択できるようになります。
+- `size` 属性は `4` に設定されており、一度に 4 行が表示されることを意味します。ユーザーはスクロールしてすべての選択肢を表示できます。
+- 2 つの {{htmlelement("optgroup")}} 要素が含まれており、2 つの視覚的なグループが形成されています。通常、グループ名は太字で表示され、ネストされた選択肢はインデントされます。
+- "Hamster" の選択肢には `disabled` 属性が付与されており、その選択肢は選択できません。
+
+```html
+<label>
+  1 つ以上のペットを選択してください:
+  <select name="pets" multiple size="4">
+    <optgroup label="4 本足のペット">
+      <option value="dog">犬</option>
+      <option value="cat">猫</option>
+      <option value="hamster" disabled>ハムスター</option>
+    </optgroup>
+    <optgroup label="飛ぶペット">
+      <option value="parrot">オウム</option>
+      <option value="macaw">インコ</option>
+      <option value="albatross">アホウドリ</option>
+    </optgroup>
+  </select>
+</label>
+```
+
+#### 結果
+
+{{EmbedLiveSample("Advanced_select_with_multiple_features", "", "100")}}
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#対話型コンテンツ"
+          >対話型コンテンツ</a
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#リスト化"
+          >リスト化</a
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#ラベル付け可能"
+          >ラベル付け可能</a
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#リセット可能"
+          >リセット可能</a
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#送信可能"
+          >送信可能</a
+        >な<a href="/ja/docs/Web/HTML/Guides/Content_categories#フォーム関連コンテンツ"
+          >フォーム関連</a
+        >要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <ul>
+        <li>{{HTMLElement("option")}}、{{HTMLElement("optgroup")}}、{{HTMLElement("hr")}} 要素のいずれか。ドロップダウンボックスの場合は、その前に {{htmlelement("button")}} 要素を配置し、その内部に {{htmlelement("selectedcontent")}} 要素を含めることも可能です。</li>
+        <li>{{htmlelement("div")}}、{{htmlelement("script")}}、{{htmlelement("template")}}、{{htmlelement("noscript")}} の各要素。</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <code>multiple</code> 属性が<strong>なく</strong>、 1 よりも大きい
+        <code>size</code> 属性が<strong>ない</strong>ならば
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>、それ以外の場合は
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>
+        <code>multiple</code> 属性が<strong>なく</strong>、 1 よりも大きい
+        <code>size</code> 属性が<strong>ない</strong>ならば
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role"><code>menu</code></a>、それ以外の場合は、許可されている
+        <code>role</code> はなし
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLSelectElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{HTMLElement("option")}} 要素
+- {{HTMLElement("optgroup")}} 要素
+- [カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+- `<select>` で発生するイベント: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("Element/input_event", "input")}}

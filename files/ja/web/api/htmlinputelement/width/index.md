@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`width`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、コントロールの高さを指定します。これは、 {{htmlelement("input")}} 要素の [`width`](/ja/docs/Web/HTML/Element/input#width) 属性を反映します。
+**`width`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、コントロールの高さを指定します。これは、 {{htmlelement("input")}} 要素の [`width`](/ja/docs/Web/HTML/Reference/Elements/input#width) 属性を反映します。
 
-`width` プロパティは、 [`image`](/ja/docs/Web/HTML/Element/input/image) 型のみに有効です。これは、ピクセル単位で画像ボタンの水平方向の寸法を定義します。このプロパティの値は、レンダリングされたボタンの[コンテンツボックス](/ja/docs/Web/CSS/box-edge#content-box)の幅です。CSS ボックスモデルプロパティがこのコントロールのサイズに影響する場合、そちらが優先されます。
+`width` プロパティは、 [`image`](/ja/docs/Web/HTML/Reference/Elements/input/image) 型のみに有効です。これは、ピクセル単位で画像ボタンの水平方向の寸法を定義します。このプロパティの値は、レンダリングされたボタンの[コンテンツボックス](/ja/docs/Web/CSS/Reference/Values/box-edge#content-box)の幅です。CSS ボックスモデルプロパティがこのコントロールのサイズに影響する場合、そちらが優先されます。
 
 `width` が設定されておらず、CSS がコントロールのサイズに影響しない場合、`width` は画像の内在サイズとなります。画像が読み込まれなかった場合、値は `alt` テキストの高さになります。高さが不明な場合は `width` は `0` になります。 `width` が設定されていない場合、CSS は高さに影響を与えず、画像は読み込まれず、 {{DOMxRef("HTMLInputElement.alt", "alt")}} の値は空文字列、または `src` が設定されていません。
 
@@ -45,4 +45,4 @@ console.log(inputElement.width);
 - CSS の {{CSSXRef("inline-size")}} プロパティ
 - CSS の {{CSSXRef("width")}} プロパティ
 - CSS の {{CSSXRef("aspect-ratio")}} プロパティ
-- [CSS ボックスサイズ指定](/ja/docs/Web/CSS/CSS_box_sizing)モジュール
+- [CSS ボックスサイズ指定](/ja/docs/Web/CSS/Guides/Box_sizing)モジュール

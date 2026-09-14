@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
 
 Метод **`toLocaleDateString()`** возвращает строку с языкозависимым представлением части с датой в этой дате. Новые аргументы `locales` и `options` позволяют приложениям определять язык, чьи соглашения по форматированию должны использоваться, а также менять поведение этого метода. В старых реализациях, игнорирующих аргументы `locales` и `options`, используемая локаль и форма возвращённой строки целиком зависит от реализации.
 
-При форматировании большого количества дат лучшим вариантом будет создание объекта {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} и использование функции, предоставляемой его свойством {{jsxref("DateTimeFormat.prototype.format", "format")}}.
+При форматировании большого количества дат лучшим вариантом будет создание объекта {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} и использование функции, предоставляемой его свойством {{jsxref("Intl/DateTimeFormat/format", "format")}}.
 
 {{InteractiveExample("JavaScript Demo: Date.toLocaleDateString()", "taller")}}
 
@@ -45,13 +45,11 @@ toLocaleDateString(locales, options)
 В реализациях, поддерживающих [`Intl.DateTimeFormat` API](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat), эти параметры соответствуют параметрам конструктора [`Intl.DateTimeFormat()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat). Реализации без поддержки `Intl.DateTimeFormat` должны игнорировать оба параметра, используя локаль и формат возвращаемой строки определяемые самой реализацией.
 
 - `locales` {{optional_inline}}
-
   - : Строка с языковым тегом BCP 47 или массив таких строк. Соответствует параметру [`locales`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) конструктора `Intl.DateTimeFormat().
 
     В реализациях без поддержки `Intl.DateTimeFormat` этот параметр игнорируется и обычно используется локаль устройства.
 
 - `options` {{optional_inline}}
-
   - : Объект определяющий выходной формат. Соответствует параметру [`options`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) конструктора `Intl.DateTimeFormat()`. Опция `timeStyle` должна быть `undefined` или будет возникать {{jsxref("TypeError")}}. Если `weekday`, `year`, `month` и `day` одновременно равны `undefined`, то `year`, `month` и `day` будут установлены в `"numeric"`.
 
     В реализациях без поддержки `Intl.DateTimeFormat` этот параметр игнорируется.
@@ -75,7 +73,7 @@ console.log(date.toLocaleDateString());
 
 ### Проверка поддержки параметров `locales` и `options`
 
-Параметры `locales` и `options` поддерживаются ещё не всеми браузерами. Для проверки того, поддерживает ли их уже реализация, можно затребовать несуществующую метку языка и проверить, будет ли выброшено исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}:
+Параметры `locales` и `options` поддерживаются ещё не всеми браузерами. Для проверки того, поддерживает ли их уже реализация, можно затребовать несуществующую метку языка и проверить, будет ли выброшено исключение {{jsxref("RangeError")}}:
 
 ```js
 function toLocaleDateStringSupportsLocales() {

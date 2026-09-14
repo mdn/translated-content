@@ -28,7 +28,7 @@ TypeError: Atomics is not a constructor
 
 Была попытка использовать объект или переменную как конструктор, однако этот объект или переменная - не конструктор. Смотрите {{Glossary("constructor")}} или [`new` operator](/ru/docs/Web/JavaScript/Reference/Operators/new), чтобы получить больше информации о том, что такое конструктор.
 
-Существует множество глобальных объектов, таких как {{jsxref("String")}} или {{jsxref("Array")}}, которые можно построить с использованием `new`. Однако, некоторые глобальные объекты - нельзя, т.к. их свойства и методы статичны. Следующие стандартные встроенные объекты JavaScript - не конструкторы: {{jsxref("Math")}}, {{jsxref("JSON")}}, {{jsxref("Symbol")}}, {{jsxref("Reflect")}}, {{jsxref("Intl")}}, {{jsxref("SIMD")}}, {{jsxref("Atomics")}}.
+Существует множество глобальных объектов, таких как {{jsxref("String")}} или {{jsxref("Array")}}, которые можно построить с использованием `new`. Однако, некоторые глобальные объекты - нельзя, т.к. их свойства и методы статичны. Следующие стандартные встроенные объекты JavaScript - не конструкторы: {{jsxref("Math")}}, {{jsxref("JSON")}}, {{jsxref("Symbol")}}, {{jsxref("Reflect")}}, {{jsxref("Intl")}}, `SIMD`, {{jsxref("Atomics")}}.
 
 [Функции-генераторы](/ru/docs/Web/JavaScript/Reference/Statements/function*) также не могут быть использованы как конструкторы.
 

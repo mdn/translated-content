@@ -3,8 +3,6 @@ title: Constructeur String()
 slug: Web/JavaScript/Reference/Global_Objects/String/String
 ---
 
-{{JSRef}}
-
 Le constructeur **`String`** est utilisé afin de créer un nouvel objet [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui représente une chaîne de caractères. Lorsqu'il est appelé comme une fonction (et pas comme un constructeur, c'est-à-dire sans être précédé du mot-clé `new`), il effectue une conversion de la valeur fournie en argument en une chaîne de caractères primitive, ce qui peut être plus utile.
 
 ## Syntaxe
@@ -42,4 +40,4 @@ Ici, la fonction produit une chaîne de caractères (une valeur primitive). Tout
 
 ## Voir aussi
 
-- [L'article sur le formatage du texte dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Text_formatting)
+- [L'article sur le formatage du texte dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings)

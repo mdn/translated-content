@@ -1,16 +1,13 @@
 ---
 title: <xsl:template>
 slug: Web/XML/XSLT/Reference/Element/template
-original_slug: Web/XSLT/Reference/Element/template
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}
 
 `<xsl:template>` 要素は出力生成テンプレートを定義します。この要素は、match 属性または name 属性のいずれかを持つ必要があります。
 
-### 構文
+## 構文
 
 ```xml
 <xsl:template
@@ -30,7 +27,7 @@ l10n:
 ### 任意属性
 
 - `match`
-  - : Specifies a pattern that determines the elements for which this template should be used. It is a required attribute if there is no `name` attribute.
+  - : このテンプレートを使用すべき要素を決定するパターンを指定します。 `name` 属性がない場合は必須の属性です。
 - `name`
   - : このテンプレートの名前を指定します。テンプレートの名前は `<xsl:call-template>` 要素を使用して呼び出すことができます。
 - `mode`
@@ -46,6 +43,6 @@ l10n:
 
 XSLT, section 5.3.
 
-### Gecko のサポート
+## Gecko の対応
 
-サポート済み
+対応済み。

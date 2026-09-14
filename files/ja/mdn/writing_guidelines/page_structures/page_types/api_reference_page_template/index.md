@@ -2,12 +2,11 @@
 title: API リファレンスページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template
 l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+  sourceCommit: 6aca3e5157dbc163fe8209d9bf8cc3f2e8ec3f9d
 ---
 
-{{MDNSidebar}}
-
-> **メモ:** _この説明文全体を削除してから公開してください。_
+> [!NOTE]
+> _この説明文全体を削除してから公開してください。_
 >
 > **訳注:** このテンプレートは翻訳記事用です。新たな記事を執筆する場合は、英語版を参照してください。日本語の単独記事を立項することはできません。）
 >
@@ -40,26 +39,35 @@ l10n:
 >
 > 既定では、テンプレートの先頭に 5 つのマクロ呼び出しがあります。以下のアドバイスに従って、これらを更新または削除する必要があります。
 >
-> - `\{{APIRef("<em>GroupDataName</em>")}}` — これは、左側に現在のページに関連するリンクをすばやく参照できるように表示する、リファレンスサイドバーを生成します。 例えば、 [WebVR API](/ja/docs/Web/API/WebVR_API) のすべてのページには同じサイドバーがあり、これは API の他のページを指しています。API に適したサイドバーを生成するには、私たちの KumaScript GitHub リポジトリーに GroupData の項目を追加し、_GroupDataName_ の代わりにマクロ呼び出し内にその項目の名前を記載する必要があります。この方法については、 [API リファレンスのサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) ガイドを参照してください。
+> **訳注:** 英語版では以下のマクロは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のマクロに合わせてください。
+>
 > - `\{{SeeCompatTable}}` — これは **これは実験的な機能です。** のバナーを生成し、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。実験的なもので、その技術が Firefox の設定で隠されている場合は、 [Firefox での実験的な機能](/ja/docs/Mozilla/Firefox/Experimental_features) ページにもそのための項目を記入する必要があります。
 > - `\{{Deprecated_Header}}` — これは **非推奨** バナーを生成し、この技術が[非推奨](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)であることを示します。
 > - `\{{Non-standard_Header}}` — これは **標準外** バナーを生成し、この機能がどの仕様書にもないことを示します。
-> - `\{{SecureContext_Header}}` — これは **保護されたコンテキスト** バナーを生成し、この技術が[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用できることを示します。もしそうでないなら、マクロの呼び出しを削除してください。そうである場合は、[保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)ページ内の項目も記入してください。
-> - `\{{Interface_Overview("<em>GroupDataName</em>")}} {{Experimental_Inline}}` — このページ本文（コンストラクター、プロパティ、メソッド、イベント）を生成します。
+>
+> 下記のアドバイスに従って、以下のマクロを更新または削除してください。
+>
+> - `\{{SecureContext_Header}}` — これは **保護されたコンテキスト** バナーを生成し、この技術が[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ利用できることを示します。
+>   そうではない場合は、マクロ呼び出すを削除することができます。
+>   そうである場合は、[保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)ページ内の項目も記入してください。
+> - `\{{AvailableInWorkers}}` — これにより、**ウェブワーカーで利用可能**というメモが生成され、その技術が [ウェブワーカーのコンテキスト](/ja/docs/Web/API/Web_Workers_API) で利用可能であることを示します。
+>   ウィンドウコンテキストでのみ利用できる場合は、そのマクロの呼び出しを除去できます。
+>   もしそれがワーカーコンテキストでも利用できる、あるいはワーカーコンテキストでのみ利用できる場合、その利用状況に応じて引数を渡す必要があることがあります（利用できるすべての値については、[\\{{AvailableInWorkers}} マクロのソースコード](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)をご参照ください）。また、[ウェブワーカーで利用可能な Web API](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#ワーカーで使用できる_web_api) ページに、その項目を追加する必要があることがあります。
+> - `\{{APIRef("GroupDataName")}}` — これにより、現在のページに関連するクイックリファレンスリンクを表示する左側のサイドバーが生成されます。例えば、[WebVR API](/ja/docs/Web/API/WebVR_API) のすべてのページには同じサイドバーがあり、API 内の他のページへのリンクが掲載されています。この API 用に正しいサイドバーを生成するには、 GroupData 項目を追加し、マクロ呼び出し内の _GroupDataName_ の代わりにその項目名を記載する必要があります。この方法についての情報は、[API リファレンスサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)のガイドをご覧ください。
 >
 > **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
 >
-> **保護されたコンテキスト**、**実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
+> **保護されたコンテキスト**、**ワーカーで利用可能**、**実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
 >
 > _公開前に、忘れずにこの説明文全体を削除してください。_
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 概要の段落 - まず、インターフェイスの名前、それがどのインターフェイスに属しているか、そしてそれが何をするものなのかを述べます。これはできれば 1、2 の短い文にすべきです。対応する API ランディングページのインターフェイスの概要から、この大部分をコピーすることができます。
 
-{{InheritanceDiagram}}
+`\{{InheritanceDiagram}}`
 
-_下記の節で [domxref マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#リファレンスのページへのリンク)を使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_下記の節で [domxref マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#リファレンスのページへのリンク)を使用するには、マークダウンファイルの逆引用符とバックスラッシュを除去してください。_
 
 ## コンストラクター
 
@@ -83,10 +91,10 @@ _親インターフェイスである `\{{DOMxRef("NameOfParentInterface")}}` �
 
 プロパティごとに 1 つずつ用語と定義を記述してください。
 
-- `\{{DOMxRef("NameOfTheInterface.property1")}}` {{ReadOnlyInline}} {{Deprecated_Inline}}
+- `\{{DOMxRef("NameOfTheInterface.property1")}}` {{ReadOnlyInline}} {{Experimental_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : このプロパティの簡単な説明と、それが何をするものかを記載してください。プロパティが読み取り専用/実験的/非推奨でない場合、関連するマクロの呼び出しを削除してください。
 - `\{{DOMxRef("NameOfTheInterface.property2")}}`
-  - : このプロパティの簡単な説明と、それが何をするものかを記載してください。プロパティが読み取り専用/実験的/非推奨でない場合、関連するマクロの呼び出しを削除してください。
+  - : このプロパティの簡単な説明と、それが何をするものかを記載してください。プロパティが読み取り専用/実験的/非推奨/標準外でない場合、関連するマクロの呼び出しを削除してください。
 
 ## 静的メソッド
 
@@ -94,10 +102,10 @@ _親インターフェイスである `\{{DOMxRef("NameOfParentInterface")}}` �
 
 メソッドごとに 1 つずつ用語と定義を記述してください。
 
-- `\{{DOMxRef("NameOfTheInterface.staticMethod1()")}}` {{Experimental_Inline}} {{Deprecated_Inline}}
-  - : ここにメソッドの簡単な説明と何をするものかを記載してください。メソッドが実験的/非推奨でない場合、関連するマクロの呼び出しを削除してください。
+- `\{{DOMxRef("NameOfTheInterface.staticMethod1()")}}` {{Experimental_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : ここにメソッドの簡単な説明と何をするものかを記載してください。メソッドが実験的/非推奨/標準外でない場合、関連するマクロの呼び出しを削除してください。
 - `\{{DOMxRef("NameOfTheInterface.staticMethod2()")}}`
-  - : ここにメソッドの簡単な説明と何をするものかを記載してください。メソッドが実験的/非推奨でない場合、関連するマクロの呼び出しを削除してください。
+  - : ここにメソッドの簡単な説明と何をするものかを記載してください。メソッドが実験的/非推奨/標準外でない場合、関連するマクロの呼び出しを削除してください。
 
 ## インスタンスメソッド
 
@@ -105,10 +113,10 @@ _親インターフェイスである `\{{DOMxRef("NameOfParentInterface")}}` �
 
 メソッドごとに 1 つずつ用語と定義を記述してください。
 
-- `\{{DOMxRef("NameOfTheInterface.method1()")}}` {{Experimental_Inline}} {{Deprecated_Inline}}
-  - : ここにメソッドの簡単な説明と何をするものかを記載してください。メソッドが実験的/非推奨でない場合、関連するマクロの呼び出しを削除してください。
+- `\{{DOMxRef("NameOfTheInterface.method1()")}}` {{Experimental_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : ここにメソッドの簡単な説明と何をするものかを記載してください。メソッドが実験的/非推奨/標準外でない場合、関連するマクロの呼び出しを削除してください。
 - `\{{DOMxRef("NameOfTheInterface.method2()")}}`
-  - : ここにメソッドの簡単な説明と何をするものかを記載してください。メソッドが実験的/非推奨でない場合、関連するマクロの呼び出しを削除してください。
+  - : ここにメソッドの簡単な説明と何をするものかを記載してください。メソッドが実験的/非推奨/標準外でない場合、関連するマクロの呼び出しを削除してください。
 
 ## イベント
 
@@ -116,12 +124,14 @@ _親インターフェイスである `\{{DOMxRef("NameOfParentInterface")}}` �
 
 これらのイベントを待ち受けするには、 {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} を使用するか、このインターフェイスの `oneventname` プロパティにイベントリスナーを代入するかしてください。
 
-- [`eventname1`](#)
+- `\{{DOMxRef("NameOfTheInterface.event1", "event1")}}` {{Experimental_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : ～時に発生します（イベントがいつ発行されるかの説明を記載する）。
     `oneventname1` プロパティでも利用できます。
-- [`eventname2`](#)
+    そのイベントが実験的/非推奨/標準外のものでない場合は、関連するマクロ呼び出しを除去してください。
+- `\{{DOMxRef("NameOfTheInterface.event2", "event2")}}`
   - : ～時に発生します _(イベントがいつ発行されるかの説明を記載する)_.
     `oneventname2` プロパティでも利用できます。
+    そのイベントが実験的/非推奨/標準外のものでない場合は、関連するマクロ呼び出しを除去してください。
 
 ## 例
 
@@ -159,20 +169,20 @@ _親インターフェイスである `\{{DOMxRef("NameOfParentInterface")}}` �
 > ```md
 > ## 例
 >
-> この API の例については、 [fetch() のページ](https://example.org)を参照してください。
+> この API の例については、 [fetch() のページ](https://example.org/)を参照してください。
 > ```
 
 ## 仕様書
 
 `\{{Specifications}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、マークダウンファイルの逆引用符とバックスラッシュを除去してください。_
 
 ## ブラウザーの互換性
 
 `\{{Compat}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、マークダウンファイルの逆引用符とバックスラッシュを除去してください。_
 
 ## 関連情報
 

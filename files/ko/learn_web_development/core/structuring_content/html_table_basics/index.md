@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}
 
 이 문서에서는 행, 셀, 제목, 여러 열과 행에 걸쳐 셀을 만드는 방법, 스타일 지정 목적으로 열의 모든 셀을 그룹화하는 방법과 같은 기본 사항을 다루며 HTML 테이블을 시작하는 방법을 안내합니다.
 
@@ -16,7 +16,7 @@ l10n:
       <th scope="row">필요한 사전 지식:</th>
       <td>
         HTML의 기초 (
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         >를 봐주시기 바랍니다).
       </td>
@@ -453,7 +453,7 @@ th {
 계속 진행하기 전에 이 글에서 마지막으로 소개할 기능이 하나 더 있습니다. HTML에는 데이터 열 전체에 대한 스타일 정보를 한 곳에서 정의하는 방법, 즉 **[`<col>`](/ko/docs/Web/HTML/Element/col)** 및 **[`<colgroup>`](/ko/docs/Web/HTML/Element/colgroup)** 요소가 있습니다. 열에 스타일을 지정하는 것이 다소 번거롭고 비효율적일 수 있기 때문에 이러한 기능이 존재합니다. 일반적으로 열의 "모든" `<td>` 또는 `<th>`에 스타일링 정보를 지정하거나 {{cssxref(":nth-child")}}와 같은 복잡한 선택기를 사용해야 합니다.
 
 > [!NOTE]
-> 이와 같은 열 스타일링은 [`border`](/ko/docs/Web/CSS/border), [`background`](/ko/docs/Web/CSS/background), [`width`](/ko/docs/Web/CSS/width) 및 [`visibility`](/ko/docs/Web/CSS/visibility)와 같은 [몇 가지 속성으로 제한됩니다](https://www.w3.org/TR/CSS22/tables.html#columns). 다른 속성을 설정하려면 열의 모든 `<td>` 또는 `<th>`에 스타일을 지정하거나 {{cssxref(":nth-child")}}와 같은 복잡한 선택기를 사용해야 합니다.
+> 이와 같은 열 스타일링은 [`border`](/ko/docs/Web/CSS/Reference/Properties/border), [`background`](/ko/docs/Web/CSS/Reference/Properties/background), [`width`](/ko/docs/Web/CSS/Reference/Properties/width) 및 [`visibility`](/ko/docs/Web/CSS/Reference/Properties/visibility)와 같은 [몇 가지 속성으로 제한됩니다](https://www.w3.org/TR/CSS22/tables.html#columns). 다른 속성을 설정하려면 열의 모든 `<td>` 또는 `<th>`에 스타일을 지정하거나 {{cssxref(":nth-child")}}와 같은 복잡한 선택기를 사용해야 합니다.
 
 다음의 간단한 예를 들어보겠습니다.
 
@@ -553,4 +553,4 @@ th {
 
 이것으로 HTML 테이블의 기본 사항을 마무리했습니다. 다음 장에서는 조금 더 [고급 테이블 기능](/ko/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)을 살펴보고 시각 장애인이 테이블에 얼마나 쉽게 접근할 수 있는지 생각해 보겠습니다.
 
-{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}

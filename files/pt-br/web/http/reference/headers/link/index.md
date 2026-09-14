@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Link
 original_slug: Web/HTTP/Headers/Link
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de entidade **`Link`** provém maneiras para serializar um ou mais links em cabeçalhos HTTP. Ele é semanticamente equivalente ao elemento HTML {{HTMLElement("link")}}.
 
 ## Sintaxe

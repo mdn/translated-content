@@ -223,21 +223,21 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
     <tr>
       <td rowspan="5">18</td>
       <td>
-        {{jsxref("Operators/Property_Accessors", "멤버 접근", "#점_표기법", 1)}}
+        {{jsxref("Operators/Property_accessors", "멤버 접근", "#점_표기법", 1)}}
       </td>
       <td>좌결합성</td>
       <td><code>… . …</code></td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Operators/Property_Accessors", "계산된 멤버 접근","#괄호_표기법", 1)}}
+        {{jsxref("Operators/Property_accessors", "계산된 멤버 접근","#괄호_표기법", 1)}}
       </td>
       <td>좌결합성</td>
       <td><code>… [ … ]</code></td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Operators/new","new")}} (인자 리스트 제공)
+        {{jsxref("new")}} (인자 리스트 제공)
       </td>
       <td>없음</td>
       <td><code>new … ( … )</code></td>
@@ -264,7 +264,7 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
     <tr>
       <td>17</td>
       <td>
-        {{jsxref("Operators/new","new")}} (인자 리스트 생략)
+        {{jsxref("new")}} (인자 리스트 생략)
       </td>
       <td>우결합성</td>
       <td><code>new …</code></td>
@@ -354,7 +354,7 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
       <td><code>void …</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/delete", "delete")}}</td>
+      <td>{{jsxref("delete")}}</td>
       <td><code>delete …</code></td>
     </tr>
     <tr>
@@ -490,7 +490,7 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
       <td><code>… in …</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/instanceof", "instanceof")}}</td>
+      <td>{{jsxref("instanceof")}}</td>
       <td><code>… instanceof …</code></td>
     </tr>
     <tr>
@@ -589,7 +589,7 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
     <tr>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing"
           >널 병합 연산자</a
         >
       </td>
@@ -600,7 +600,7 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
       <td>3</td>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Conditional_operator"
           >조건 (삼항)</a
         >
       </td>
@@ -611,7 +611,7 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
       <td rowspan="18">2</td>
       <td rowspan="16">
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Assignment_Operators"
+          href="/ko/docs/Web/JavaScript/Reference/Operators"
           >할당</a
         >
       </td>
@@ -675,7 +675,7 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
     <tr>
       <td>1</td>
       <td>
-        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Comma_Operator"
+        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Comma_operator"
           >쉼표 / 시퀀스</a
         >
       </td>

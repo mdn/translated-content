@@ -1,12 +1,9 @@
 ---
 title: 410 Gone
 slug: Web/HTTP/Reference/Status/410
-original_slug: Web/HTTP/Status/410
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`410 Gone`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、元のサーバーで利用できなくなっている対象リソースにアクセスしていることを示します。この状態は永久的です。
 410 レスポンスは既定でキャッシュ可能です。
@@ -36,7 +33,7 @@ HTTP/1.1 410 Gone
 Content-Type: text/html
 Content-Length: 212
 
-<html>
+<html lang="en-US">
   <head>
     <title>Promotion expired</title>
   </head>

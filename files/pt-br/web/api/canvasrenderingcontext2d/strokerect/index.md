@@ -56,8 +56,7 @@ Edite o código abaixo e veja as alterações instantâneas no canvas:
 </div>
 <textarea id="code" class="playable-code">
 ctx.strokeStyle = "green";
-ctx.strokeRect(10, 10, 100, 100);</textarea
->
+ctx.strokeRect(10, 10, 100, 100);</textarea>
 ```
 
 ```js hidden

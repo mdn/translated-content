@@ -3,8 +3,6 @@ title: userScripts
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts
 ---
 
-{{AddonSidebar}}
-
 Utilisez cette API pour enregistrer des scripts utilisateurs, des scripts tiers conçus pour manipuler des pages web ou fournir de nouvelles fonctionnalités. L'enregistrement d'un script utilisateur indique au navigateur de joindre le script aux pages qui correspondent aux modèles d'URL spécifiés lors de l'enregistrement.
 
 Cette API offre des capacités similaires à {{WebExtAPIRef("contentScripts")}} mais avec des fonctionnalités adaptées à la gestion de scripts tiers :
@@ -42,5 +40,5 @@ Pour utiliser l'API, appelez `{{WebExtAPIRef("userScripts.register","register()"
 
 ## Voir aussi
 
-- [Working with `userScripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts)
+- [Working with `userScripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/Working_with_userScripts)
 - {{WebExtAPIRef("contentScripts","browser.contentScripts")}}

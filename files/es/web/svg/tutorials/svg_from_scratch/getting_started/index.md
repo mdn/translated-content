@@ -4,7 +4,7 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Getting_started
 original_slug: Web/SVG/Tutorial/Getting_Started
 ---
 
-{{SVGRef}}{{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}
 
 ### Un Ejemplo Simple
 
@@ -32,7 +32,6 @@ Copie el código y guárdelo como demo1.svg. Luego ábralo en Firefox. Lo verá 
 El proceso de renderizado incluye lo siguiente :
 
 1. Comenzamos con el elemento raiz del `svg`:
-
    - La declaracion de tipo de documento (doctype) usual en (X)HTML debería dejarse de lado debido a que la validación DTD based SVG conduce a mas problemas que soluciones.
    - Antes de SVG 2, para identificar la versión del SVG para otros tipos de validación se debían utilizar siempre los atributos `version` y `baseProfile` en su lugar. Los atributos `version` y `baseProfile` están obsoletos en SVG 2.
    - Debido a SVG es una especie de dialecto de XML, SVG debe unir siempre los namespaces correctamente (en el atributo xmlns). Para mayor información, vea [Namespaces Crash Course](/es/docs/Web/SVG/Namespaces_Crash_Course).
@@ -45,10 +44,9 @@ El proceso de renderizado incluye lo siguiente :
 
 - Lo primero que hay que tener en cuenta es el orden de representación de los elementos. La regla globalmente válida para los archivos SVG es que los elementos posteriores se renderizan encima de los anteriores. Cuanto más abajo esté un elemento, más visible será.
 - En la web, los archivos SVG pueden mostrarse directamente en el navegador o incrustarse en archivos HTML mediante varios métodos:
-
   - Si el HTML es XHTML y se entrega como tipo application/xhtml+xml, el SVG puede incrustarse directamente en la fuente XML.
   - El SVG también puede incrustarse directamente en HTML.
-  - Se puede utilizar con el elemento [`<img>`](/es/docs/Web/HTML/Element/img)
+  - Se puede utilizar con el elemento [`<img>`](/es/docs/Web/HTML/Reference/Elements/img)
   - Se puede hacer referencia al archivo SVG con un elemento `object`:
 
     ```html
@@ -92,4 +90,4 @@ Puede comprobar que su servidor envía las cabeceras HTTP correctas con sus arch
 
 La configuración incorrecta del servidor es una razón muy común para que SVG no se cargue, así que asegúrese de comprobar la suya. Si su servidor no está configurado para enviar las cabeceras correctas con los archivos SVG que esta sirviendo, lo más probable es que Firefox muestre el marcado de los archivos como texto o basura codificada, o incluso que pida al usuario que elija una aplicación para abrirlos.
 
-{{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}

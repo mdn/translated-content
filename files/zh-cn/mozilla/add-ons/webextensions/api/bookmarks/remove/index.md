@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 **`bookmarks.remove()`** 方法用于删除单个书签或一个空的书签文件夹。
 
 > [!WARNING]
@@ -25,7 +23,7 @@ var removingBookmark = browser.bookmarks.remove(
 ### 参数
 
 - `id`
-  - : 一个指定要移除的书签或空文件夹的 ID 的{{jsxref("string", "字符串", "", 1)}}。
+  - : 一个指定要移除的书签或空文件夹的 ID 的{{jsxref("String", "字符串", "", 1)}}。
 
 ### 返回值
 

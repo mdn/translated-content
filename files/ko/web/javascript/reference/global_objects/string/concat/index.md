@@ -62,7 +62,7 @@ var greetList = ["Hello", " ", "Venkat", "!"];
 
 ## 성능
 
-`concat()` 메서드보다 {{jsxref("Operators/Assignment_Operators", "할당 연산자", "", 1)}} (`+`, `+=`)를 사용하는게 더 좋습니다. [성능 테스트](https://web.archive.org/web/20170404182053/https://jsperf.com/concat-vs-plus-vs-join) 결과에 따르면 할당 연산자의 속도가 몇 배 빠릅니다.
+`concat()` 메서드보다 {{jsxref("Operators", "할당 연산자", "Assignment_operators", 1)}} (`+`, `+=`)를 사용하는게 더 좋습니다. [성능 테스트](https://web.archive.org/web/20170404182053/https://jsperf.com/concat-vs-plus-vs-join) 결과에 따르면 할당 연산자의 속도가 몇 배 빠릅니다.
 
 ## 명세
 
@@ -75,4 +75,4 @@ var greetList = ["Hello", " ", "Venkat", "!"];
 ## 관련문서
 
 - {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}
+- {{jsxref("Operators", "Assignment operators", "Assignment_operators", 1)}}

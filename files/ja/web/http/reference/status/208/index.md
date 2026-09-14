@@ -1,12 +1,9 @@
 ---
 title: 208 Already Reported
 slug: Web/HTTP/Reference/Status/208
-original_slug: Web/HTTP/Status/208
 l10n:
-  sourceCommit: 3f68a9604259dfa862dd741dc88ebc8fb5fa10fe
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`208 Already Reported`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、容量を節約し、競合を防ぐため、{{HTTPStatus("207", "207 Multi-Status")}} レスポンスで用いられます。
 このレスポンスは、ウェブ分散オーサリングおよびバージョン管理 ({{Glossary("WebDAV")}}) のコンテキストでのみ使用されています。
@@ -20,7 +17,7 @@ HTTP の **`208 Already Reported`** は[成功レスポンス](/ja/docs/Web/HTTP
 
 ## ステータス
 
-```plain
+```http
 208 Already Reported
 ```
 

@@ -36,7 +36,7 @@ _親インターフェイスの {{DOMxRef("IDBRequest")}} および {{DOMxRef("E
 
 ## 例
 
-この例では、高いバージョン番号のデータベースをを読み込もうとした場合に、`onupgradeneeded` ハンドラーによりデータベースの構造を更新します。動く例全体は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) アプリケーションを見てください。([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+この例では、高いバージョン番号のデータベースを読み込もうとした場合に、`onupgradeneeded` ハンドラーによりデータベースの構造を更新します。動く例全体は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) アプリケーションを見てください。([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
 
 ```js
 let db;
@@ -101,7 +101,7 @@ DBOpenRequest.onupgradeneeded = (event) => {
 ## 関連情報
 
 - [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始s: {{domxref("IDBDatabase")}}
+- トランザクションの開始: {{domxref("IDBDatabase")}}
 - トランザクションの使用: {{domxref("IDBTransaction")}}
 - キーの範囲の設定: {{domxref("IDBKeyRange")}}
 - データの取得と変更: {{domxref("IDBObjectStore")}}

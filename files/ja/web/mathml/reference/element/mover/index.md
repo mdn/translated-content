@@ -23,9 +23,9 @@ overscript には定着した訳語がないようです。superscript（上付�
 - href
   - : Used to set a hyperlink to a specified URI.
 - mathbackground
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/Web/CSS/color_value#color_keywords).
+  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/Web/CSS/Reference/Values/color_value#color_keywords).
 - mathcolor
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/Web/CSS/color_value#color_keywords).
+  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/Web/CSS/Reference/Values/color_value#color_keywords).
 
 ## 例
 
@@ -55,7 +55,7 @@ Rendering in your browser: <math><mover accent="true"><mrow><mi>x </mi><mo>+ </m
 
 {{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat}}
 

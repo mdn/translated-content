@@ -36,7 +36,7 @@ slug: Web/API/CSSStyleDeclaration
 - {{domxref("CSSStyleDeclaration.setProperty()")}}
   - : 在 CSS 声明块中修改现有属性或设置新属性。
 - {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{Deprecated_Inline}}
-  - : **仅通过 Firefox 中的 getComputedStyle 得到支持**。返回以 {{ domxref("CSSPrimitiveValue") }} 表示的属性值或 `null`（对于[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)）。
+  - : **仅通过 Firefox 中的 getComputedStyle 得到支持**。返回以 {{ domxref("CSSPrimitiveValue") }} 表示的属性值或 `null`（对于[简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties)）。
 
 ## 示例
 
@@ -44,7 +44,7 @@ slug: Web/API/CSSStyleDeclaration
 const styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
-for (let i = styleObj.length; i--; ) {
+for (let i = styleObj.length; i--;) {
   const nameString = styleObj[i];
   styleObj.removeProperty(nameString);
 }

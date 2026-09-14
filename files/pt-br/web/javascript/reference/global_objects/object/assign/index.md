@@ -222,4 +222,4 @@ if (!Object.assign) {
 ## Veja também
 
 - {{jsxref("Object.defineProperties()")}}
-- [Enumerabilidade e posse de propriedades](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerabilidade e posse de propriedades](/pt-BR/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 在程序设计中，*全局作用域*是包含并在所有其他作用域中可见的作用域。
 
 在客户端 JavaScript 中，全局作用域通常是执行所有代码的网页。

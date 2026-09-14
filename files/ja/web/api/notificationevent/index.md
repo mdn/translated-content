@@ -11,7 +11,8 @@ l10n:
 
 このインターフェイスは {{domxref("ExtendableEvent")}} インターフェイスを継承しています。
 
-> **メモ:** {{domxref("ServiceWorkerGlobalScope")}} オブジェクトで発行される持続的な通知イベントのみが、`NotificationEvent`インターフェイスを実装します。{{domxref("Notification")}} オブジェクトで発行される非持続的な通知イベントは、`Event`インターフェイスを実装します。
+> [!NOTE]
+> {{domxref("ServiceWorkerGlobalScope")}} オブジェクトで発行される持続的な通知イベントのみが、`NotificationEvent`インターフェイスを実装します。{{domxref("Notification")}} オブジェクトで発行される非持続的な通知イベントは、`Event`インターフェイスを実装します。
 
 {{InheritanceDiagram}}
 

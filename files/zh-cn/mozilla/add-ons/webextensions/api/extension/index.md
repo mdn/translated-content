@@ -5,11 +5,10 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 有关插件的工具；获取你的插件的资源包的 URL；获取你的插件页面的 [`Window`](/zh-CN/docs/Web/API/Window) 对象；获取各种设置的值。
 
-> **备注：** **该模块中的消息 API 被弃用**，取而代之的是 [`runtime`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime) 模块中相应的 API。
+> [!NOTE]
+> **该模块中的消息 API 被弃用**，取而代之的是 [`runtime`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime) 模块中相应的 API。
 
 ## 类型
 

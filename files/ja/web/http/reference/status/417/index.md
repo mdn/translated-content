@@ -1,12 +1,9 @@
 ---
 title: 417 Expectation Failed
 slug: Web/HTTP/Reference/Status/417
-original_slug: Web/HTTP/Status/417
 l10n:
-  sourceCommit: ae86913908651e6008079242691e06b5e01d1c78
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`417 Expectation Failed`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、リクエストの {{HTTPHeader("Expect")}} ヘッダーに期待された値が設定されていなかったことを示します。
 417 のレスポンスを受け取った後、クライアントは `Expect` リクエストヘッダーを付けずにリクエストを繰り返し、 {{HTTPStatus("100")}} レスポンスを待たずにリクエスト本体にファイルを含める必要があります。

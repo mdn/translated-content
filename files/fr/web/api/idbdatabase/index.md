@@ -28,7 +28,7 @@ Cet objet hérite de [EventTarget](/fr/docs/Web/API/EventTarget).
 ## Propriétés
 
 - {{domxref("IDBDatabase.name")}} {{readonlyInline}}
-  - : Une chaîne de caractères ({{domxref("DOMString")}}) qui contient le nom de la base de données connectée.
+  - : Une chaîne de caractères ({{jsxref("String")}}) qui contient le nom de la base de données connectée.
 - {{domxref("IDBDatabase.version")}} {{readonlyInline}}
   - : Un [entier de 64 bits](</fr/docs/Mozilla/Projects/NSPR/Reference/Long_Long_(64-bit)_Integers>) qui indique la version de la base de données connectée. Quand une base de données est créée, cette propriété est une chaîne de caractère vide.
 - {{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}

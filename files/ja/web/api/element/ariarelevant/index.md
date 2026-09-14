@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}{{Non-standard_Header}}
 
-**`ariaRelevant`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性の値を反映します。この属性は、ライブ領域内のアクセシビリティツリーが変更されたときにユーザーエージェントがどのような通知を発生させるかを示します。これは `aria-live` 領域内のどのような変更が関連性があり、告知されるべきかを記述するために使用します。
+**`ariaRelevant`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) 属性の値を反映します。この属性は、ライブ領域内のアクセシビリティツリーが変更されたときにユーザーエージェントがどのような通知を発生させるかを示します。これは `aria-live` 領域内のどのような変更が関連性があり、告知されるべきかを記述するために使用します。
 
 ## 値
 
@@ -25,7 +25,7 @@ l10n:
 
 ## 例
 
-この例では、IDが `text` の要素の [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性は "all" に設定されています。ariaRelevant` を使用して値を "text" に更新します。
+この例では、IDが `text` の要素の [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) 属性は "all" に設定されています。ariaRelevant` を使用して値を "text" に更新します。
 
 ```html
 <div

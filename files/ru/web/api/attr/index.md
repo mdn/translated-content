@@ -14,13 +14,12 @@ slug: Web/API/Attr
 - {{domxref("Attr.name", "name")}} {{readOnlyInline}}
   - : Имя атрибута.
 - {{domxref("Attr.namespaceURI", "namespaceURI")}} {{readOnlyInline}}
-  - : {{domxref("DOMString")}} представление URI пространства имён атрибута, или NULL если нет никакого пространства имён.
+  - : {{jsxref("String")}} представление URI пространства имён атрибута, или NULL если нет никакого пространства имён.
 - {{domxref("Attr.localName", "localName")}} {{readOnlyInline}}
-  - : {{domxref("DOMString")}} представление локальной части полного имени атрибута.
+  - : {{jsxref("String")}} представление локальной части полного имени атрибута.
 - {{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}
-  - : {{domxref("DOMString")}} представление префикс пространства имён атрибута, или NULL, если префикс не указан.
+  - : {{jsxref("String")}} представление префикс пространства имён атрибута, или NULL, если префикс не указан.
 - {{domxref("Attr.ownerElement", "ownerElement")}} {{readOnlyInline}}
-
   - : Элемент, содержащий атрибут.
 
 - {{domxref("Attr.specified", "specified")}} {{readOnlyInline}}
@@ -59,7 +58,6 @@ slug: Web/API/Attr
 - `schemaTypeInfo` {{readOnlyInline}}
   - : Сведения о типе, связанные с этим атрибутом. В то время как информация о типе, содержащаяся в этом атрибуте, гарантированно будет правильной после загрузки документа или вызова {{domxref("Document.normalizeDocument")}}, это свойство может быть ненадёжным, если узел был перемещён.
 - `specified`
-
   - : Это свойство всегда возвращает значение `true`.
 
 - `textContent`

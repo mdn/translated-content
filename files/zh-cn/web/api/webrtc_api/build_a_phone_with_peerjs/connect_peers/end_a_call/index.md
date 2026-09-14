@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("WebRTC")}}
 
-{{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading")}}
+{{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs")}}
 
 你已经快完成了！最后一件事是确保你的呼叫者有一种结束通话的方式。最优雅的方式是使用 `close()` 函数关闭连接，你可以在挂断按钮的事件侦听器中执行这个操作。
 
@@ -39,4 +39,4 @@ l10n:
 > [!WARNING]
 > 目前我们编写的代码意味着当一个连接关闭时，**只有**发起通话的人首先点击“挂断”时，两个浏览器才会更新。如果回答通话的人先点击“挂断”，则另一个呼叫者也必须点击“挂断”才能看到正确的 HTML。
 
-{{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading")}}
+{{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs")}}

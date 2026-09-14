@@ -1,11 +1,10 @@
 ---
 title: Proxy() コンストラクター
+short-title: Proxy()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Proxy()`** コンストラクターは {{jsxref("Proxy")}} オブジェクトを生成します。
 
@@ -15,7 +14,8 @@ l10n:
 new Proxy(target, handler)
 ```
 
-> **メモ:** `Proxy()` は、[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使ってのみ構築することができます。`new` なしで呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Proxy()` は、[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使ってのみ構築することができます。`new` なしで呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
 
 ### 引数
 
@@ -41,11 +41,11 @@ handler を空にすると、ほとんどすべての点でターゲットとま
 - {{jsxref("Proxy/Proxy/apply", "handler.apply()")}}
   - : 関数呼び出しのトラップです。
 - {{jsxref("Proxy/Proxy/construct", "handler.construct()")}}
-  - : {{jsxref("Operators/new", "new")}} 演算子のトラップです。
+  - : {{jsxref("new")}} 演算子のトラップです。
 - {{jsxref("Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
   - : {{jsxref("Object.defineProperty")}} のトラップです。
 - {{jsxref("Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
-  - : {{jsxref("Operators/delete", "delete")}} 演算子のトラップです。
+  - : {{jsxref("delete")}} 演算子のトラップです。
 - {{jsxref("Proxy/Proxy/get", "handler.get()")}}
   - : プロパティ値の取得のトラップです。
 - {{jsxref("Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}

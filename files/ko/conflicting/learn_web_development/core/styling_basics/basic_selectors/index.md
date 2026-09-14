@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}
 
 이 단원에서는, 일을 하면서 가장 자주 사용하게 될 가장 간단한 선택자 중 일부를 살펴봅니다.
 
@@ -21,13 +21,13 @@ l10n:
           >설치된 기본 소프트웨어</a
         >,
         <a
-          href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/ko/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >파일 작업</a
         >에 대한 기본 지식, HTML 기초 (
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         >를 공부하세요), CSS 작동 방식에 대한 아이디어 (
-        <a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 단계</a>를 공부하세요)
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics">CSS 첫 단계</a>를 공부하세요)
       </td>
     </tr>
     <tr>
@@ -117,4 +117,4 @@ ID 선택자는 점 문자가 아닌 `#`으로 시작하지만, 클래스 선택
 
 유형, 클래스 및 ID 선택자를 마무리합니다. 계속해서 [속성 선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)를 살펴봄으로써 선택자를 자세히 탐구해봅시다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}

@@ -3,8 +3,6 @@ title: Firefox 61 技術變動摘要
 slug: Mozilla/Firefox/Releases/61
 ---
 
-{{FirefoxSidebar}}
-
 此文章提供 Firefox 61 中與開發者較為相關之變動資訊。Firefox 61 預定於 [2018 年 6 月 26 日正式發表](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates)。
 
 ## Web 開發相關變動
@@ -41,7 +39,7 @@ _無變動。_
 
 - The {{domxref("Document.anchors", "anchors")}}, {{domxref("Document.applets", "applets")}}, {{domxref("Document.embeds", "embeds")}}, {{domxref("Document.forms", "forms")}}, {{domxref("Document.head", "head")}}, {{domxref("Document.images", "images")}}, {{domxref("Document.links", "links")}}, {{domxref("Document.plugins", "plugins")}}, and {{domxref("Document.scripts", "scripts")}} properties have been moved from the {{domxref("HTMLDocument")}} interface onto {{domxref("Document")}} ([Firefox bug 1415588](https://bugzil.la/1415588)).
 - The {{domxref("Node.getUserData()")}} and {{domxref("Node.setUserData()")}} methods have been removed from the platform completely ([Firefox bug 749981](https://bugzil.la/749981)).
-- {{domxref("DOMTokenList.replace()")}} now returns a {{domxref("Boolean")}} to indicate whether the replacement occurred successfully, rather than void ([Firefox bug 1444909](https://bugzil.la/1444909)).
+- {{domxref("DOMTokenList.replace()")}} now returns a {{jsxref("Boolean")}} to indicate whether the replacement occurred successfully, rather than void ([Firefox bug 1444909](https://bugzil.la/1444909)).
 
 #### DOM 事件
 
@@ -97,7 +95,6 @@ _無變動。_
 
 - 從未良好實作且已為標準所廢棄的 {{domxref("SVGViewElement")}}`.viewTarget` 屬性已經移除。（[Firefox bug 1455763](https://bugzil.la/1455763)）
 - 在標準規格中廢棄的下列屬性已經自 {{domxref("SVGSVGElement")}} 移除（[Firefox bug 1133172](https://bugzil.la/1133172)）：
-
   - `pixelUnitToMillimeterX`
   - `pixelUnitToMillimeterY`
   - `screenPixelToMillimeterX`

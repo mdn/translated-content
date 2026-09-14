@@ -38,19 +38,15 @@ try {
 ```
 
 - `try_statements`
-
   - : Las sentencias que serán ejecutadas.
 
 - `catch_statements_1`, `catch_statements_2`
-
   - : Sentencias que se ejecutan si una excepción es lanzada en el bloque `try`.
 
 - `exception_var_1`, `exception_var_2`
-
   - : Identificador que contiene un objeto de excepcion asociado a la cláusula `catch`.
 
 - `condition_1`
-
   - : Una expresión condicional.
 
 - `finally_statements`
@@ -242,9 +238,9 @@ Si el bloque `finally` retorna un valor, este valor se convierte en el valor de 
 
 El "oops" externo no es lanzado debido al retorno en el bloque finally. Lo mismo aplicaría para cualquier valor retornado del bloque catch.
 
-Vea los ejemplos para {{jsxref("Sentencias/throw", "throw")}}.
+Vea los ejemplos para {{jsxref("Statements/throw", "throw")}}.
 
 ## Vea también
 
 - {{jsxref("Error")}}
-- {{jsxref("Sentencias/throw", "throw")}}
+- {{jsxref("Statements/throw", "throw")}}

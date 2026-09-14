@@ -1,51 +1,52 @@
 ---
-title: Date.prototype.setUTCMilliseconds()
+title: "Date : méthode setUTCMilliseconds()"
+short-title: setUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode **`setUTCMilliseconds()`** des instances de {{JSxRef("Date")}} modifie les millisecondes pour cette date selon le temps universel.
 
-La méthode **`setUTCMilliseconds()`** définit les millièmes de secondes pour la date, selon UTC.
-
-{{InteractiveExample("JavaScript Demo: Date.setUTCMilliseconds()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.setUTCMilliseconds()")}}
 
 ```js interactive-example
 const date1 = new Date("2018-01-24T12:38:29.069Z");
 
 console.log(date1.getUTCMilliseconds());
-// Expected output: 69
+// Résultat attendu : 69
 
 date1.setUTCMilliseconds(420);
 
 console.log(date1.getUTCMilliseconds());
-// Expected output: 420
+// Résultat attendu : 420
 ```
 
 ## Syntaxe
 
-```js
-dateObj.setUTCMilliseconds(valeurMs);
+```js-nolint
+setUTCMilliseconds(millisecondsValue)
 ```
 
 ### Paramètres
 
-- `valeurMs`
-  - : Un entier entre 0 et 999, représentant les millièmes de secondes.
+- `millisecondsValue`
+  - : Un entier entre 0 et 999 représentant les millièmes de secondes.
 
 ### Valeur de retour
 
-Le nombre de millisecondes écoulées entre le premier janvier 1970 minuit, UTC et la date mise à jour.
+Modifie l'objet {{JSxRef("Date")}} en place et retourne son nouveau [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide). Si `millisecondsValue` vaut `NaN` (ou d'autres valeurs qui sont [contraintes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre) en `NaN`, comme `undefined`), la date est définie sur [Date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) et `NaN` est retourné.
 
 ## Description
 
-Si le paramètre indiqué est en dehors des limites attendues, la date sera mise à jour en conséquence. Par exemple, si on utilise la valeur 1005, le nombre des secondes sera incrémenté de 1, et 5 sera utilisé pour les millièmes de secondes.
+Si un paramètre que vous définissez est en dehors de la plage attendue, `setUTCMilliseconds()` tente de mettre à jour les informations de date dans l'objet {{JSxRef("Date")}} en conséquence. Par exemple, si vous utilisez 1100 pour `millisecondsValue`, les secondes stockées dans l'objet {{JSxRef("Date")}} seront incrémentées de 1, et 100 sera utilisé pour les millisecondes.
 
 ## Exemples
 
-### Utiliser `setUTCMilliseconds()`
+### Utiliser la méthode `setUTCMilliseconds()`
 
 ```js
-var leGrandJour = new Date();
+const leGrandJour = new Date();
 leGrandJour.setUTCMilliseconds(500);
 ```
 
@@ -59,5 +60,5 @@ leGrandJour.setUTCMilliseconds(500);
 
 ## Voir aussi
 
-- {{jsxref("Date.prototype.getUTCMilliseconds()")}}
-- {{jsxref("Date.prototype.setMilliseconds()")}}
+- La méthode {{JSxRef("Date.prototype.getUTCMilliseconds()")}}
+- La méthode {{JSxRef("Date.prototype.setMilliseconds()")}}

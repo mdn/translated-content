@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/contains
 original_slug: Web/XPath/Reference/Functions/contains
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 La función `contains` determina si la primera cadena del argumento contiene la segunda cadena del argumento y devuelve el booleano verdadero o falso.
 
@@ -17,7 +17,6 @@ contains( haystack , needle )
 ### Argumentos
 
 - `haystack`
-
   - : La cadena donde buscar
 
 - `needle`

@@ -3,8 +3,6 @@ title: windows.WindowState
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 ---
 
-{{AddonSidebar}}
-
 L'état de cette fenêtre du navigateur.
 
 ## Type
@@ -33,8 +31,6 @@ Compatibilité macOS : A partir de macOS 10.10, le comportement de maximisation 
 > [!NOTE]
 >
 > Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
->
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

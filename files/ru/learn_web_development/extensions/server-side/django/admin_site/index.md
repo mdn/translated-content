@@ -3,7 +3,7 @@ title: "Руководство Django часть 4: административн
 slug: Learn_web_development/Extensions/Server-side/Django/Admin_site
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Теперь, когда модели для сайта [местной библиотеки](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) созданы, добавим некоторые "настоящие" данные о книгах, используя административную панель Django Admin. Для начала мы покажем, как зарегистрировать в ней модели, потом как войти и создать какие-нибудь данные. В конце статьи мы покажем некоторые способы дальнейшего улучшения вида админ-панели.
 
@@ -108,13 +108,11 @@ Django выполняет неплохую работу по созданию б
 Можно настроить интерфейс пользователя для упрощения его использования. Некоторые доступные настройки:
 
 - List views:
-
   - добавление дополнительных отображаемых полей или информации для каждой записи.
   - добавление фильтров для отбора записей по разным критериям (например, статус выдачи книги).
   - добавление дополнительных вариантов выбора в меню действий и места расположения этого меню на форме.
 
 - Detail views
-
   - выбор отображаемых полей, их порядка, группирования и т.д.
   - добавление связанных полей к записи (например, возможности добавления и редактирования записей книг при создании записи автора).
 
@@ -322,4 +320,4 @@ class BookAdmin(admin.ModelAdmin):
 - [Writing your first Django app, part 2: Introducing the Django Admin](https://docs.djangoproject.com/en/1.10/intro/tutorial02/#introducing-the-django-admin) (Django docs)
 - [The Django Admin site](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/) (Django Docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django")}}

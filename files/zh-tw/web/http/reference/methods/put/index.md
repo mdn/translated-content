@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `PUT` 方法**用請求有效負載創建新資源或替換目標資源的表示。
 
 `PUT` 和 {{HTTPMethod("POST")}} 之間的區別在於 `PUT` 是幂等的：調用一次或多次連續調用具有相同效果（即沒有*副*作用），而連續相同的 {{HTTPMethod("POST")}} 請求可能會產生額外的效果，類似於多次下單。

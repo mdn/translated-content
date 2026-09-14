@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当标签页附加到窗口时触发，例如因为它在窗口之间移动。
 
 ## 语法
@@ -31,9 +29,7 @@ browser.tabs.onAttached.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `tabId`
       - : `integer`。附加到新窗口的标签页的 ID。
     - `attachInfo`

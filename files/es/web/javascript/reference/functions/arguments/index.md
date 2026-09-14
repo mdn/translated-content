@@ -80,7 +80,7 @@ function longestString() {
 }
 ```
 
-Puedes usar {{jsxref("Functions/arguments/lenght", "arguments.length")}} para contar con cuántos argumentos se llamó a la función. Si, en cambio, deseas contar cuántos parámetros se declara que acepta una función, inspecciona la propiedad {{jsxref("Function.length", "length")}} de esa función.
+Puedes usar {{jsxref("Functions/arguments/length", "arguments.length")}} para contar con cuántos argumentos se llamó a la función. Si, en cambio, deseas contar cuántos parámetros se declara que acepta una función, inspecciona la propiedad {{jsxref("Function.length", "length")}} de esa función.
 
 ### Usar `typeof` con `arguments`
 
@@ -102,8 +102,8 @@ console.log(typeof arguments[0]); // devuelve el tipo del primer argumento
   - : Referencia a la función en ejecución a la que pertenecen los argumentos. Prohibida en modo estricto.
 - {{jsxref("Functions/arguments/length", "arguments.length")}}
   - : El número de argumentos que se pasaron a la función.
-- {{jsxref("Functions/arguments/@@iterator", "arguments[@@iterator]")}}
-  - : Devuelve un nuevo objeto {{jsxref("Array/@@iterator", "Array iterator", "", 0)}} que contiene los valores de cada índice en `arguments`.
+- {{jsxref("Functions/arguments/Symbol.iterator", "arguments[@@iterator]")}}
+  - : Devuelve un nuevo objeto {{jsxref("Array/Symbol.iterator", "Array iterator", "", 0)}} que contiene los valores de cada índice en `arguments`.
 
 ## Ejemplos
 
@@ -157,7 +157,7 @@ let listHTML = list("u", "One", "Two", "Three");
 
 ### Parámetros `rest`, predeterminados y desestructurados
 
-El objeto `arguments` se puede utilizar junto con parámetros {{jsxref("Functions/rest_parameters", "rest")}}, {{jsxref("Functions/Default_parameters", "predeterminados")}} y {{jsxref("Operators/Destructuring_assignment", "desestructurados")}}.
+El objeto `arguments` se puede utilizar junto con parámetros {{jsxref("Functions/rest_parameters", "rest")}}, {{jsxref("Functions/Default_parameters", "predeterminados")}} y {{jsxref("Operators/Destructuring", "desestructurados")}}.
 
 ```js
 function foo(...args) {
@@ -171,7 +171,7 @@ Si bien la presencia de parámetros `rest`, predeterminados o desestructurados n
 En el código de modo estricto, el objeto `arguments` se comporta de la misma manera independientemente de que se pasen parámetros `rest`, predeterminados o desestructurados a una función. Es decir, asignar nuevos valores a las variables en el cuerpo de la función no afectará al objeto `arguments`. La asignación de nuevas variables al objeto `arguments` tampoco afectará el valor de las variables.
 
 > [!NOTE]
-> No puedes escribir una directiva `"use strict";` en el cuerpo de una definición de función que acepte parámetros `rest`, predeterminados o desestructurados. Si lo haces, generará un {{jsxref("Errors/Strict_Non_Simple_Params", "error de sintaxis")}}.
+> No puedes escribir una directiva `"use strict";` en el cuerpo de una definición de función que acepte parámetros `rest`, predeterminados o desestructurados. Si lo haces, generará un {{jsxref("Errors/Strict_non_simple_params", "error de sintaxis")}}.
 
 Las funciones no estrictas a las que se les pasan solo parámetros simples (es decir, no parámetros `rest`, predeterminados o desestructurados) sincronizarán el valor de los nuevos valores de las variables en el cuerpo de la función con el objeto `arguments`, y viceversa:
 

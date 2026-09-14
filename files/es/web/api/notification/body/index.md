@@ -18,7 +18,7 @@ var body = Notification.body;
 
 ### Valor
 
-Un {{domxref("DOMString")}}.
+Un {{jsxref("String")}}.
 
 ## Ejemplos
 

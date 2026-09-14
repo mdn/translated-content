@@ -99,7 +99,7 @@ None.
 
 ## セキュリティ要件
 
-ウェブサイトが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)にある必要があります。
+ウェブサイトが[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)にある必要があります。
 
 サイトをオリジン間分離するためには、 2 つのヘッダーを設定する必要があります。
 
@@ -153,5 +153,5 @@ if (crossOriginIsolated) {
 
 ## 関連情報
 
-- {{domxref("setTimeout()")}}
+- {{domxref("Window.setTimeout", "setTimeout()")}}
 - [Monitor your web page's total memory usage with measureUserAgentSpecificMemory() - web.dev](https://web.dev/articles/monitor-total-page-memory-usage)

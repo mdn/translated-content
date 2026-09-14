@@ -1,15 +1,14 @@
 ---
 title: Set.prototype.forEach()
+short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
 l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`forEach()`** は {{jsxref("Set")}} インターフェイスのメソッドで、指定された関数をこの集合のそれぞれの値に対して一回ずつ、挿入順で実行します。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.forEach()")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype.forEach()")}}
 
 ```js interactive-example
 function logSetElements(value1, value2, set) {
@@ -18,9 +17,9 @@ function logSetElements(value1, value2, set) {
 
 new Set(["foo", "bar", undefined]).forEach(logSetElements);
 
-// Expected output: "s[foo] = foo"
-// Expected output: "s[bar] = bar"
-// Expected output: "s[undefined] = undefined"
+// 予想される結果: "s[foo] = foo"
+// 予想される結果: "s[bar] = bar"
+// 予想される結果: "s[undefined] = undefined"
 ```
 
 ## 構文
@@ -33,9 +32,7 @@ forEach(callbackFn, thisArg)
 ### 引数
 
 - `callback`
-
   - : この集合のそれぞれの項目に対して実行する関数です。この関数は次の引数で呼び出されます。
-
     - `value`
       - : それぞれの反復処理の値です。
     - `key`
@@ -60,7 +57,7 @@ forEach(callbackFn, thisArg)
 - この**要素のキー**
 - **走査を行っている `Set` オブジェクト**
 
-しかし、 `Set` オブジェクトにキーがないので、最初の 2 つの引数は、両方とも {{jsxref("Set")}} に含まれる**値**です。これにより、他の {{jsxref("Map/foreach", "Map")}} や {{jsxref("Array/forEach", "Array")}} の `forEach()` メソッドと整合が取れています。
+しかし、 `Set` オブジェクトにキーがないので、最初の 2 つの引数は、両方とも {{jsxref("Set")}} に含まれる**値**です。これにより、他の {{jsxref("Map/forEach", "Map")}} や {{jsxref("Array/forEach", "Array")}} の `forEach()` メソッドと整合が取れています。
 
 `thisArg` 引数が `forEach()` に渡された場合、 `callback` を呼び出すときにこれが渡され、 `this` 値として使用されます。渡されなかった場合は、さもなければ、`this` 値として使用するために `undefined` 値が渡されます。 `this` の値が最終的に `callback` から見える姿は、[関数から見た `this` を決定するための通常のルール](/ja/docs/Web/JavaScript/Reference/Operators/this)に応じて決まります。
 

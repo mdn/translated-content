@@ -3,8 +3,6 @@ title: 繼承與原型鏈
 slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
 ---
 
-{{jsSidebar("Advanced")}}
-
 JavaScript 是個沒有實做 `class` 關鍵字的動態語言，所以會對那些基於類別（class-based）語言（如 Java 或 C++）背景出身的開發者來說會有點困惑。（在 ES2015 有提供 `class` 關鍵字，但那只是個語法糖，JavaScript 仍然是基於原型（prototype-based）的語言）。
 
 講到繼承，JavaScript 就只有一個建構子：物件。每個物件都有一個連著其他**原型**（prototype）的私有屬性（private property）物件。原型物件也有著自己的原型，於是原型物件就這樣鏈結，直到撞見 `null` 為止：`null` 在定義裡沒有原型、也是**原型鏈**（prototype chain）的最後一個鏈結。

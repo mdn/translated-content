@@ -3,7 +3,7 @@ title: PWA 结构
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 ---
 
-{{PWASidebar}} {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Introduction", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
+{{PWASidebar}} {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
 现在，我们已经知道了 PWA 背后的原理，让我们来看一个推荐的 PWA 结构，这个案例来自一个真实的应用。我们从分析 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 这个应用开始：为什么它要这样构建？这样做又有什么好处？
 
@@ -38,7 +38,7 @@ App Shell 概念试图尽快加载最小用户界面，然后缓存它，以便�
 
 - 可链接（Linkable）：即使行为类似于原生应用，它仍然是一个网站：你可以点击页面内的链接，也可以通过发送 URL 的方式分享网站给别人。
 - 渐进式（Progressive）：从“美好的旧式基础网站”开始，逐步添加新功能，在过程中检测其在浏览器上的可用性，并且优雅地处理不支持案例下发生的报错。举个例子，service workers 辅助下的离线模式只是提升网站体验的额外特性，但没有它网站也仍然完全可用。
-- 响应式（Responsive）：响应式网页设计也适用于渐进式网络应用程序，因为它们都主要用于移动设备。拥有浏览器的设备太多太杂，所以确保网站在不同屏幕宽度、视口和像素密度上都可以访问就变得尤为重要。[viewport meta tag](/zh-CN/docs/Web/HTML/Viewport_meta_tag)、[CSS 媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout) 和 [CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout) 等技术都可以助你实现这个目标。
+- 响应式（Responsive）：响应式网页设计也适用于渐进式网络应用程序，因为它们都主要用于移动设备。拥有浏览器的设备太多太杂，所以确保网站在不同屏幕宽度、视口和像素密度上都可以访问就变得尤为重要。[`<meta name="viewport">`](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name/viewport)、[CSS 媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)、[Flexbox](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout) 和 [CSS Grid](/zh-CN/docs/Web/CSS/Guides/Grid_layout) 等技术都可以助你实现这个目标。
 
 ## 另一种概念：流
 
@@ -311,4 +311,4 @@ var games = [
 
 下一篇文章中，我们会探讨更多的细节：Service Worker 如何帮助我们缓存 App Shell 和内容，从而让我们实现离线功能。
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Introduction", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}

@@ -35,7 +35,7 @@ Tudo isso é chamado de ideação do projeto e é um primeiro passo necessário 
 
 ## Aprendizado Ativo
 
-_Ainda não há aprendizado ativo disponível. [Por favor, considere contribuir](/pt-BR/docs/MDN/Community/Contributing/Getting_started)._
+_Ainda não há aprendizado ativo disponível. [Por favor, considere contribuir](/pt-BR/docs/MDN/Community/Getting_started)._
 
 ## Mergulho mais profundo
 
@@ -184,4 +184,4 @@ Em segundo lugar, a definição das etapas leva a novas perguntas que você prec
 
 Como você pode ver, a simples idéia "Eu quero fazer um site" gera uma longa lista de tarefas, que só cresce, quanto mais você pensa sobre isso. Logo pode parecer impressionante, mas não entre em pânico. Você não precisa responder todas as perguntas e não precisa fazer tudo na sua lista. O que importa é ter uma visão do que você quer e como chegar lá. Depois de ter essa visão clara, você precisa decidir como e quando fazê-lo. Divida as grandes tarefas em etapas pequenas e realizáveis. E essas pequenas tarefas resultarão em grandes conquistas.
 
-A partir deste artigo, você deve ser capaz de elaborar um plano básico para criar um site. Um próximo passo pode ser ler [como a Internet funciona](/pt-BR/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work).
+A partir deste artigo, você deve ser capaz de elaborar um plano básico para criar um site. Um próximo passo pode ser ler [como a Internet funciona](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work).

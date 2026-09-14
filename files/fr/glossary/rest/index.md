@@ -1,9 +1,9 @@
 ---
 title: REST
 slug: Glossary/REST
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 Representational State Transfer (**REST**) désigne un groupe de contraintes concernant l'architecture logicielle destiné à apporter aux systèmes efficacité, fiabilité et scalabilité. Un système est appelé "RESTful" lorsqu'il adhère à ces contraintes.
 
@@ -13,12 +13,7 @@ Parce que HTTP, le protocole derrière le World Wide Web (WWW), transfère des d
 
 ## Voir aussi
 
-### Apprendre
-
-- [restapitutorial.com](http://www.restapitutorial.com/)
-- [restcookbook.com](http://restcookbook.com/)
-
-### Culture générale
-
+- [restapitutorial.com <sup>(angl.)</sup>](http://www.restapitutorial.com/)
+- [restcookbook.com <sup>(angl.)</sup>](http://restcookbook.com/)
 - [REST](https://fr.wikipedia.org/wiki/Representational_state_transfer) sur Wikipédia
-- [REST Architecture](https://www.service-architecture.com/articles/web-services/representational_state_transfer_rest.html) (en)
+- [REST Architecture <sup>(angl.)</sup>](https://www.service-architecture.com/articles/web-services/representational-state-transfer-rest.html)

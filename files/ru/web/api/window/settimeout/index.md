@@ -20,12 +20,13 @@ var timeoutID = window.setTimeout(code [, delay]);
 
 - `timeoutID -` это _числовой_ ID, который может быть использован позже с {{domxref("window.clearTimeout()")}}.
 - `func -` это [функция](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function), которую требуется вызвать после `delay` миллисекунд.
-- `code` - в альтернативном варианте применения это строка, содержащая код, который вы хотите выполнить после `delay` миллисекунд (использовать этот метод **не рекомендуется** по тем же причинам, что и [eval()](/ru/docs/JavaScript/Reference/Global_Objects/eval#Don%27t_use_eval!))
+- `code` - в альтернативном варианте применения это строка, содержащая код, который вы хотите выполнить после `delay` миллисекунд (использовать этот метод **не рекомендуется** по тем же причинам, что и [eval()](/ru/docs/Web/JavaScript/Reference/Global_Objects/eval#Don%27t_use_eval!))
 - `delay` {{optional_inline}} - задержка в миллисекундах (тысячных долях секунды), после которой будет выполнен вызов функции. Реальная задержка может быть больше; см. [Notes](#notes) ниже.
 
 Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в Internet Explorer 9 и ниже. Для использования этой функциональности в таких браузерах, необходимо использовать код для совместимости (см. раздел [Аргументы колбэк-функции](#аргументы_колбэк-функции)).
 
-> **Предупреждение:** **Important:** Prior to Gecko 13, Gecko passed an extra parameter to the callback routine, indicating the "actual lateness" of the timeout in milliseconds. This non-standard parameter is no longer passed.
+> [!WARNING]
+> **Important:** Prior to Gecko 13, Gecko passed an extra parameter to the callback routine, indicating the "actual lateness" of the timeout in milliseconds. This non-standard parameter is no longer passed.
 
 ## Пример
 

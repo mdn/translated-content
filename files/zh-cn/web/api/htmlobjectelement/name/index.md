@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLObjectElement")}} 接口的 **`name`** 属性返回一个反映 [`name`](/zh-CN/docs/Web/HTML/Element/object#name) HTML 属性的字符串，指定浏览上下文的名称。
+{{domxref("HTMLObjectElement")}} 接口的 **`name`** 属性返回一个反映 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/object#name) HTML 属性的字符串，指定浏览上下文的名称。
 
 ## 值
 

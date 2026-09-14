@@ -5,8 +5,6 @@ l10n:
   sourceCommit: bb031733da9f5678de3cdc5b561123b111b3b2fc
 ---
 
-{{AddonSidebar}}
-
 与浏览器标签系统进行交互。
 
 > [!NOTE]
@@ -17,7 +15,6 @@ l10n:
 你可以在不需要任何特殊权限的情况下使用该 API 的大部分，除了：
 
 - 要访问 `Tab.url`、`Tab.title` 和 `Tab.favIconUrl`（或通过 {{WebExtAPIRef("tabs.query()")}} 过滤这些属性），需要具备 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)，或者具备匹配 `Tab.url` 的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
-
   - 自 Firefox 86 和 Chrome 50 起，基于主机权限访问这些属性得到了支持。在 Firefox 85 及更早版本中，则需要“tabs”权限。
 
 - 使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} 你必须在目标标签拥有[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)。

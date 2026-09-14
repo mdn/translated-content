@@ -190,7 +190,7 @@ l10n:
 </html>
 ```
 
-该网页包含了一些 [`script`](/zh-CN/docs/Web/HTML/Element/script) 标签。我们可以使用以下命令，利用 [Node.js](https://nodejs.org/) 和 [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line) 完成转换：
+该网页包含了一些 [`script`](/zh-CN/docs/Web/HTML/Reference/Elements/script) 标签。我们可以使用以下命令，利用 [Node.js](https://nodejs.org/) 和 [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line) 完成转换：
 
 ```bash
 cat input.html | node TeXZilla.js streamfilter > output.html

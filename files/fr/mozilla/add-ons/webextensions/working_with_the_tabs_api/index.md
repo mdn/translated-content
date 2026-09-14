@@ -3,8 +3,6 @@ title: Travailler avec l'API Tabs
 slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 ---
 
-{{AddonSidebar}}
-
 Les onglets permettent à un utilisateur d'ouvrir plusieurs pages Web dans la fenêtre de son navigateur, puis de basculer entre ces pages Web. Grâce à l'API Tabs, vous pouvez utiliser et manipuler ces onglets pour créer des utilitaires qui offrent aux utilisateurs de nouvelles façons de travailler avec des onglets ou de fournir les fonctionnalités de votre extension.
 
 Dans cet article, nous allons regarder :
@@ -173,7 +171,6 @@ Ensuite, nous allons créer les liens pour chaque onglet :
 
 1. Boucle les 5 premiers éléments de l'objet {{WebExtAPIRef("tabs.Tab")}}.
 2. Pour chaque poste, ajoutez un hyperlien vers le fragment de document.
-
    - L'étiquette du lien, c'est-à-dire son texte, est définie à l'aide du titre de l'onglet (ou de l'ID, s'il n'a pas de titre).
    - L'adresse du lien est définie à l'aide de l'ID de l'onglet.
 
@@ -531,12 +528,10 @@ browser.pageAction.onClicked.addListener(toggleCSS);
 `toggleCSS()` obtient le titre de la `pageAction` puis prend l'action décrite :
 
 - **Pour "Appliquer CSS":**
-
   - Basculer l'icône `pageAction` et le titre dans les versions "supprimer".
   - Applique le CSS en utilisant {{WebExtAPIRef("tabs.insertCSS")}}.
 
 - **Pour "Supprimer CSS":**
-
   - Basculer l'icône `pageAction` et le titre dans les versions "apply".
   - Supprime le CSS en utilisant {{WebExtAPIRef("tabs.removeCSS")}}.
 

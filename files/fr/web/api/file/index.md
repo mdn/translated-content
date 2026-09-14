@@ -42,7 +42,7 @@ Voir [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File_
 - {{domxref("File.size")}} {{readonlyinline}}
   - : Renvoie la taille du fichier en octets.
 - {{domxref("File.type")}} {{readonlyinline}}
-  - : Renvoie le type [MIME](/fr/docs/Web/HTTP/MIME_types/Common_types)du fichier.
+  - : Renvoie le type [MIME](/fr/docs/Web/HTTP/Guides/MIME_types/Common_types)du fichier.
 
 ## Méthodes
 
@@ -53,9 +53,9 @@ _L'interface `File` ne définit aucune méthode, mais hérite des méthodes de l
 - {{domxref("Blob.stream()", "Blob.stream()")}}
   - : Transforme le `File` en un {{domxref("ReadableStream")}} pouvant être utilisé pour lire le contenu du `File`.
 - {{domxref("Blob.text()", "Blob.text()")}}
-  - : Transforme le `File` en un flux (_stream_) et le lit en entier. Renvoie une {{jsxref("promise", "promesse")}} qui se résoud en une {{domxref("USVString")}} (texte).
+  - : Transforme le `File` en un flux (_stream_) et le lit en entier. Renvoie une {{jsxref("Promise", "promesse")}} qui se résoud en une {{jsxref("String")}} (texte).
 - {{domxref("Blob.arrayBuffer()", "Blob.arrayBuffer()")}}
-  - : Transforme le `File` en un flux (_stream_) et le lit en entier. Retourne une {{jsxref("promise", "promesse")}} qui se résoud en un {{domxref("ArrayBuffer")}}.
+  - : Transforme le `File` en un flux (_stream_) et le lit en entier. Retourne une {{jsxref("Promise", "promesse")}} qui se résoud en un {{jsxref("ArrayBuffer")}}.
 
 ## Spécifications
 

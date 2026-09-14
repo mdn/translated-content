@@ -34,7 +34,7 @@ Web Storage 包含如下两种机制：
 
 支持 localStorage 的浏览器将在窗口对象上具有一个名为 localStorage 的属性。但是，仅断言该属性存在可能会引发异常。如果 localStorage 确实存在，则仍然不能保证 localStorage 实际可用，因为各种浏览器都提供了禁用 localStorage 的设置。因此，浏览器可能支持 localStorage，但不适用于页面上的脚本。
 
-例如，私有浏览模式下的 Safari 浏览器为我们提供了一个空的 l ocalStorage 对象，其配额为零，实际上使它无法使用。相反，我们可能会收到合法的 QuotaExceededError，这意味着我们已经用完了所有可用的存储空间，但实际上存储空间可用。我们的功能检测应考虑这些情况。
+例如，私有浏览模式下的 Safari 浏览器为我们提供了一个空的 localStorage 对象，其配额为零，实际上使它无法使用。相反，我们可能会收到合法的 QuotaExceededError，这意味着我们已经用完了所有可用的存储空间，但实际上存储空间可用。我们的功能检测应考虑这些情况。
 
 这是一个检测 localStorage 是否同时受支持和可用的函数：
 

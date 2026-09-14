@@ -9,7 +9,7 @@ La propriété en lecture seule **Event.type** retourne une chaîne de caractèr
 
 L'argument `event` de {{ domxref("EventTarget.addEventListener()") }} et {{ domxref("EventTarget.removeEventListener()") }} n'est pas sensible à la casse.
 
-Pour une liste des types d'événements disponibles, aller voir la page [Référence des évènements](/fr/docs/Web/Events).
+Pour une liste des types d'événements disponibles, aller voir la page [Référence des évènements](/fr/docs/Web/API/Document_Object_Model/Events).
 
 ## Syntaxe
 

@@ -2,7 +2,7 @@
 title: シャドウ DOM の使用
 slug: Web/API/Web_components/Using_shadow_DOM
 l10n:
-  sourceCommit: 9d76a1d4601c8e0042732899a99b6fecde2c919d
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -13,7 +13,7 @@ l10n:
 
 ## 高水準の視点
 
-この記事は、すでにあなたが [DOM (Document Object Model)](/ja/docs/Web/API/Document_Object_Model/Introduction) の概念を理解していることを想定しています。これはツリー上の構造で、接続されたノードがマークアップ文書（ウェブ文書の場合は通常 HTML 文書）に現れるさまざまな要素や文字列を表します。例として、以下のような HTML の断片を考えてみましょう。
+この記事は、すでにあなたが [DOM (Document Object Model)](/ja/docs/Web/API/Document_Object_Model) の概念を理解していることを想定しています。これはツリー上の構造で、接続されたノードがマークアップ文書（ウェブ文書の場合は通常 HTML 文書）に現れるさまざまな要素や文字列を表します。例として、以下のような HTML の断片を考えてみましょう。
 
 ```html
 <html lang="en-US">
@@ -67,13 +67,13 @@ _シャドウ_ DOM により、通常の DOM ツリーの要素の下に隠れ�
 
 ### 属性の継承
 
-シャドウツリーと {{ HTMLElement("slot") }} 要素は、シャドウホストから [`dir`](/ja/docs/Web/HTML/Global_attributes/dir) および [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性を継承しています。
+シャドウツリーと {{ HTMLElement("slot") }} 要素は、シャドウホストから [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) および [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性を継承しています。
 
 ## シャドウ DOM の作成
 
 ### JavaScript で命令的に
 
-次のページには、2つの要素が含まれています。{{htmlelement("div")}} 要素で [`id`](/ja/docs/Web/HTML/Global_attributes/id) が `"host"` であるものと、テキストを格納する {{htmlelement("span")}} 要素です。
+次のページには、2つの要素が含まれています。{{htmlelement("div")}} 要素で [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) が `"host"` であるものと、テキストを格納する {{htmlelement("span")}} 要素です。
 
 ```html
 <div id="host"></div>
@@ -382,10 +382,10 @@ customElements.define("filled-circle", FilledCircle);
 - {{domxref("CSSStyleSheet.replace()")}}
 - {{domxref("CSSStyleSheet.replaceSync()")}}
 - {{HTMLelement("template")}}
-- [CSS スコープ化](/ja/docs/Web/CSS/CSS_scoping)モジュール
+- [CSS スコープ化](/ja/docs/Web/CSS/Guides/Scoping)モジュール
 - {{CSSXref(":host")}}
 - {{CSSXref(":host_function", ":host()")}}
 - {{CSSXref(":host-context", ":host-context()")}}
 - {{CSSXref("::slotted", "::slotted()")}}
-- [CSS シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)モジュール
+- [CSS シャドウパーツ](/ja/docs/Web/CSS/Guides/Shadow_parts)モジュール
 - {{CSSXref("::part")}}

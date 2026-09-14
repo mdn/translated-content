@@ -2,10 +2,8 @@
 title: "単語境界アサーション: \\b, \\B"
 slug: Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion
 l10n:
-  sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{JsSidebar}}
 
 **単語境界アサーション**は、文字列の現在の位置が単語境界であるかどうかを調べます。単語境界とは、次の文字が単語文字で、前の文字が単語文字でない場合、またはその逆の場合です。
 
@@ -66,8 +64,8 @@ hasThanks("Thanksgiving is around the corner."); // false
 
 ## 関連情報
 
-- [アサーション](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
-- [正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
+- [アサーション](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)ガイド
+- [正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
 - [入力境界アサーション: `^`, `$`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
 - [先読みアサーション: `(?=...)`, `(?!...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
 - [後読みアサーション: `(?<=...)`, `(?<!...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)

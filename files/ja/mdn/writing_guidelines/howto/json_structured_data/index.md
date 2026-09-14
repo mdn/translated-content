@@ -66,13 +66,16 @@ GroupData はまさにそれを行います。それぞれの API について�
   - : API の一部であるインターフェイスを掲載します。
 - `"methods"`
   - : API の一部であるメソッドを掲載します。
-    > **メモ:** `"interfaces"` に掲載されているインターフェイスのメソッドは、ここに挙げては**いけません**。そのページの `page-type` キーが `web-api-static-method` または `web-api-instance-method` の場合、自動的にサイドバーに追加されます。
+    > [!NOTE]
+    > `"interfaces"` に掲載されているインターフェイスのメソッドは、ここに挙げては**いけません**。そのページの `page-type` キーが `web-api-static-method` または `web-api-instance-method` の場合、自動的にサイドバーに追加されます。
 - `"properties"`
   - : API の一部である他のインターフェイスのプロパティを掲載します。例えば `navigator.xr` （WebXR API が `navigator` オブジェクトに追加するプロパティ）です。
-    > **メモ:** `"interfaces"` に掲載されているインターフェイスのプロパティは、ここに挙げては**いけません**。そのページの `page-type` キーが `web-api-static-property` または `web-api-instance-property` の場合、自動的にサイドバーに追加されます。
+    > [!NOTE]
+    > `"interfaces"` に掲載されているインターフェイスのプロパティは、ここに挙げては**いけません**。そのページの `page-type` キーが `web-api-static-property` または `web-api-instance-property` の場合、自動的にサイドバーに追加されます。
 - `"events"`
   - : API の一部である他のインターフェイスのイベントを掲載します。値はページのタイトルです（`Web/Events` 以下になければなりません）。
-    > **メモ:** `"interfaces"` に掲載されているインターフェイスのプロパティは、ここに挙げては**いけません**。そのページの `page-type` キーが `web-api-event` の場合、自動的にサイドバーに追加されます。
+    > [!NOTE]
+    > `"interfaces"` に掲載されているインターフェイスのプロパティは、ここに挙げては**いけません**。そのページの `page-type` キーが `web-api-event` の場合、自動的にサイドバーに追加されます。
 
 他の 2 つのキー、 `"dictionaries"` と `"callbacks"` がありますが、同じ原理で処理します。これらのエンティティを自分自身のページで文書化しなくなりましたので、これらの使用は非推奨です。また、新しい項目を追加するべきではありません（少しずつ除去していきます）。
 
@@ -122,7 +125,8 @@ GroupData はまさにそれを行います。それぞれの API について�
 
 ## SpecData: 仕様書情報
 
-> **警告:** `SpecData.json` ファイルは保守されなくなりました。正規の 仕様書情報は w3c/browser-spec と mdn/browser-compat-data の features の `spec_url` キーに保存されます。
+> [!WARNING]
+> `SpecData.json` ファイルは保守されなくなりました。正規の 仕様書情報は w3c/browser-spec と mdn/browser-compat-data の features の `spec_url` キーに保存されます。
 
 除去している `\{{SpecName}}` と `\{{Spec2}}` マクロは `SpecData.json` ファイルを使用しています。代わりに、 `\{{Specifications}}` マクロを使用して仕様表を挿入するか、仕様への（良い）リンクをハードコーディングしてください。たいていの場合、「仕様書」セクションの外で仕様書に言及したり、リンクを張ったりすることは、 MDN で適切に文書化されていないことの表れであることに注意してください。
 

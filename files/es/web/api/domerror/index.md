@@ -10,7 +10,7 @@ La interfaz **`DOMError`** describe un objeto de error que contiene un nombre de
 ## Propiedades
 
 - {{domxref("DOMError.name")}} {{readOnlyInline}}
-  - : Devuelve un {{ domxref("DOMString") }} representando uno de los tipos de errores listados a continuación.
+  - : Devuelve un {{ jsxref("String") }} representando uno de los tipos de errores listados a continuación.
 
 ## Tipos de errores
 

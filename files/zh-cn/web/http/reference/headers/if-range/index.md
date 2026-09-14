@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **`If-Range`** HTTP 请求标头用于创建具有条件的范围请求：当条件得到满足时，则发出范围请求，服务器将返回 {{HTTPStatus("206")}} `Partial Content` 状态，以及相应的内容；如果条件没有得到满足，服务器将返回完整的资源以及 {{HTTPStatus("200")}} `OK` 状态。
 
 该标头既可用 {{HTTPHeader("Last-Modified")}} 验证器，也可用 {{HTTPHeader("ETag")}} 验证器，但不能同时使用两者。

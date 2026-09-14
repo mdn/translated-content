@@ -15,7 +15,7 @@ const url = Notification.badge;
 
 ### Valeur
 
-Une {{domxref('USVString')}} contenant une URL.
+Une {{jsxref("String")}} contenant une URL.
 
 ## Spécifications
 

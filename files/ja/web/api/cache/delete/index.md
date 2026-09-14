@@ -22,9 +22,7 @@ delete(request, options)
 - `request`
   - : 削除しようとしている {{domxref("Request")}}。 これは、`Request` オブジェクトまたは URL です。
 - `options` {{optional_inline}}
-
   - : プロパティが `delete` 操作でどのように照合するかを制御するオブジェクト。 使用可能なオプションは次のとおりです。
-
     - `ignoreSearch`
       - : 論理値で、照合操作で URL のクエリー文字列を無視するかどうかを指定します。 `true` に設定すると、`http://foo.com/?value=bar` の `?value=bar` 部分を、照合の実行時に無視します。既定値は `false` です。
     - `ignoreMethod`

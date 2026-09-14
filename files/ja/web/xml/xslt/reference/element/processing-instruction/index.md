@@ -1,16 +1,13 @@
 ---
 title: <xsl:processing-instruction>
 slug: Web/XML/XSLT/Reference/Element/processing-instruction
-original_slug: Web/XSLT/Reference/Element/processing-instruction
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}
 
 `<xsl:processing-instruction>` 要素は処理命令を出力文書に書き込みます。
 
-### 構文
+## 構文
 
 `<xsl:processing-instruction name=NAME> TEMPLATE </xsl:processing-instruction>`
 
@@ -31,6 +28,6 @@ l10n:
 
 XSLT, section 7.3
 
-### Gecko のサポート
+## Gecko の対応
 
-サポート済み
+対応済み。

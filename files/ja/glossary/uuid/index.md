@@ -1,9 +1,9 @@
 ---
 title: UUID
 slug: Glossary/UUID
+l10n:
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
-
-{{GlossarySidebar}}
 
 **Universally Unique Identifier** (**UUID**) とは、あるリソースを、同じ種類の他のすべてのリソースの中から一意に識別するために使用されるラベルです。
 
@@ -18,5 +18,5 @@ UUID は 128 ビットの値で、標準的には `123e4567-e89b-12d3-a456-42661
 
 ## 関連項目
 
-- [UUID](https://ja.wikipedia.org/wiki/UUID) - Wikipedia
+- [UUID](https://ja.wikipedia.org/wiki/UUID) - ウィキペディア
 - [`Crypto.randomUUID()`](/ja/docs/Web/API/Crypto/randomUUID)

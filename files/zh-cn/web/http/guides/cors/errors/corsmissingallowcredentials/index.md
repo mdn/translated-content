@@ -3,8 +3,6 @@ title: 原因：expected 'true' in CORS header 'Access-Control-Allow-Credentials
 slug: Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials
 ---
 
-{{HTTPSidebar}}
-
 ## 原因
 
 ```plain

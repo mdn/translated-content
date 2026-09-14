@@ -10,7 +10,7 @@ l10n:
 - 第一个子元素是要注释的 MathML 表达式。
 - 后续的 `<annotation>` 或 `<annotation-xml>` 元素，后者为 XML 格式（例如 [OpenMath](https://en.wikipedia.org/wiki/OpenMath)）而保留。
 
-默认情况下，`<semantics>` 元素的第一个子元素会被渲染，而其他子元素的 [display](/zh-CN/docs/Web/CSS/display) 属性会被设置为 `none`。
+默认情况下，`<semantics>` 元素的第一个子元素会被渲染，而其他子元素的 [display](/zh-CN/docs/Web/CSS/Reference/Properties/display) 属性会被设置为 `none`。
 
 > [!NOTE]
 > 旧版 MathML 规范允许渲染器根据可用的注释来决定默认呈现方式。以下规则用于确定可见子元素，且已在某些浏览器中实现。请参阅 [MathML 4](https://w3c.github.io/mathml/) 以了解表现（Presentation）MathML 和内容（Content）MathML 之间的区别。

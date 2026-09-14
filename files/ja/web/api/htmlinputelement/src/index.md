@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`src`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、グラフィックの送信ボタンとして表示する画像のソースを指定します。これは、{{htmlelement("input")}} 要素の [`src`](/ja/docs/Web/HTML/Element/input#src) 属性を反映します。
+**`src`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、グラフィックの送信ボタンとして表示する画像のソースを指定します。これは、{{htmlelement("input")}} 要素の [`src`](/ja/docs/Web/HTML/Reference/Elements/input#src) 属性を反映します。
 
-`src` プロパティは [`image`](/ja/docs/Web/HTML/Element/input/image) 型のみに有効です。
+`src` プロパティは [`image`](/ja/docs/Web/HTML/Reference/Elements/input/image) 型のみに有効です。
 
 ## 値
 

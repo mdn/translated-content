@@ -3,8 +3,6 @@ title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
 
-{{JSRef}}
-
 La méthode **`values()`** renvoie un nouvel objet {{jsxref("Iterator")}} qui contient les valeurs de chaque élément de l'objet `Set`, dans leur ordre d'insertion.
 
 La méthode **`keys()`** est un alias pour cette méthode (afin de conserver une certaine similarité avec les objets {{jsxref("Map")}}) et se comportera exactement de la même façon en renvoyant les **valeurs** des éléments du `Set`.

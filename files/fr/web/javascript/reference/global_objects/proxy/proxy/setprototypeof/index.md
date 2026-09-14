@@ -3,8 +3,6 @@ title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 ---
 
-{{JSRef}}
-
 La méthode **`handler.setPrototypeOf()`** est une trappe pour intercepter {{jsxref("Object.setPrototypeOf()")}}.
 
 {{InteractiveExample("JavaScript Demo: handler.setPrototypeOf()", "taller", "taller")}}
@@ -123,6 +121,6 @@ Reflect.setPrototypeOf(p2, newProto);
 ## Voir aussi
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Object.setPrototypeOf()")}}
 - {{jsxref("Reflect.setPrototypeOf()")}}

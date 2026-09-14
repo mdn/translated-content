@@ -16,11 +16,11 @@ l10n:
 ## インスタンスメソッド
 
 - {{domxref("CookieStoreManager.getSubscriptions()")}} {{Experimental_Inline}}
-  - : このサービスワーカーの登録の Cookie 変更購読のリストで解決する {{jsxref("promise")}} を返します。
+  - : このサービスワーカーの登録の Cookie 変更購読のリストで解決する {{jsxref("Promise")}} を返します。
 - {{domxref("CookieStoreManager.subscribe()")}} {{Experimental_Inline}}
-  - : Cookie の変更を購読します。購読に成功したら解決する {{jsxref("promise")}} を返します。
+  - : Cookie の変更を購読します。購読に成功したら解決する {{jsxref("Promise")}} を返します。
 - {{domxref("CookieStoreManager.unsubscribe()")}} {{Experimental_Inline}}
-  - : このサービスワーカーの登録の Cookie の変更の購読を解除します。操作に成功したら解決する {{jsxref("promise")}} を返します。
+  - : このサービスワーカーの登録の Cookie の変更の購読を解除します。操作に成功したら解決する {{jsxref("Promise")}} を返します。
 
 ## 例
 

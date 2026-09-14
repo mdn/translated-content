@@ -1,15 +1,14 @@
 ---
-title: Document.getElementsByTagNameNS()
+title: "Document : méthode getElementsByTagNameNS()"
+short-title: getElementsByTagNameNS()
 slug: Web/API/Document/getElementsByTagNameNS
 l10n:
-  sourceCommit: c3a0924949863b43957b4ba2ad5e64558165672d
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("DOM")}}
 
-Cette méthode, rattachée à l'interface [`Document`](/fr/docs/Web/API/Document), renvoie une liste d'éléments dont la balise correspond à l'espace de noms indiqué.
-
-La recherche effectuée pour obtenir cette liste porte sur l'ensemble du document, y compris sa racine.
+La méthode **`getElementsByTagNameNS()`** de l'interface {{DOMxRef("Document")}} retourne une liste d'éléments ayant le nom de balise donné et appartenant à l'espace de noms défini. Le document complet est recherché, y compris le nœud racine.
 
 ## Syntaxe
 
@@ -20,100 +19,103 @@ getElementsByTagNameNS(namespace, name)
 ### Paramètres
 
 - `namespace`
-  - : L'URI de l'espace de noms des éléments à rechercher (voir [`element.namespaceURI`](/fr/docs/Web/API/Element/namespaceURI)).
+  - : L'URI de l'espace de noms des éléments à rechercher (voir {{DOMxRef("Element.namespaceURI", "element.namespaceURI")}}).
 - `name`
-  - : Le nom local des éléments à rechercher ou la valeur spéciale `*`, qui cible tous les éléments (voir [`element.localName`](/fr/docs/Web/API/Element/localName)).
+  - : Le nom local des éléments à rechercher ou la valeur spéciale `*`, qui cible tous les éléments (voir {{DOMxRef("Element.localName", "element.localName")}}).
+
+    > [!NOTE]
+    > Contrairement à {{DOMxRef("document.getElementsByTagName()")}}, les paramètres de `getElementsByTagNameNS()` sont sensibles à la casse.
 
 ### Valeur de retour
 
-Une liste [`NodeList`](/fr/docs/Web/API/NodeList) dynamique (voir la note qui suit) qui contient les éléments trouvés, dans l'ordre selon lequel ils apparaissent dans l'arbre.
-
-> [!NOTE]
-> Bien que la spécification W3C indique que la valeur renvoyée est de type `NodeList`, Firefox renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection). Opera renvoie un objet `NodeList` qui implémente une méthode `namedItem`, le rendant ainsi semblable à un objet `HTMLCollection`. À partir de janvier 2012, seuls les navigateurs WebKit renvoient un vrai objet `NodeList`. Voir [le bogue 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) pour plus de détails.
-
-> [!NOTE]
-> Les valeurs des paramètres de cette méthode sont sensibles à la casse (alors qu'elles ne l'étaient pas pour Firefox 3.5 et les versions antérieures, voir [les notes de version de Firefox 3.6](/fr/docs/Mozilla/Firefox/Releases/3.6#dom) et la note présente dans [le tableau de compatibilité de `Element.getElementsByTagNameNS()`](/fr/docs/Web/API/Element/getElementsByTagNameNS#compatibilité_des_navigateurs) pour plus de détails).
+Une collection ({{DOMxRef("HTMLCollection")}}) dynamique des éléments trouvés, dans l'ordre dans lequel ils apparaissent dans l'arbre.
 
 ## Exemples
 
 Dans l'exemple qui suit, on utilise `getElementsByTagNameNS()` à partir d'un élément parent donné puis on recherche récursivement dans le DOM les éléments enfants dont la balise correspond au paramètre `name`.
 
-On notera que lorsque `getElementsByTagName()` est appelée sur un nœud qui n'est pas `document`, c'est en réalité la méthode [`Element.getElementsByTagNameNS()`](/fr/docs/Web/API/Element/getElementsByTagNameNS) qui est utilisée.
+On notera que lorsque `getElementsByTagName()` est appelée sur un nœud qui n'est pas `document`, c'est en réalité la méthode {{DOMxRef("Element.getElementsByTagNameNS()")}} qui est utilisée.
 
 Vous pouvez enregistrer le code qui suit dans un fichier avec l'extension `.xhtml` afin d'essayer l'exemple.
 
 ```html
-<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title>Exemple <code>getElementsByTagNameNS()</code></title>
+<p>Du texte extérieur</p>
+<p>Du texte extérieur</p>
 
-    <script>
-      function getAllParaElems() {
-        const allParas = document.getElementsByTagNameNS(
-          "http://www.w3.org/1999/xhtml",
-          "p",
-        );
-        const num = allParas.length;
-        alert(`Il y a ${num} éléments &lt;p&gt; dans ce document`);
-      }
+<div id="div1">
+  <p>Du texte div1</p>
+  <p>Du texte div1</p>
+  <p>Du texte div1</p>
 
-      function div1ParaElems() {
-        const div1 = document.getElementById("div1");
-        const div1Paras = div1.getElementsByTagNameNS(
-          "http://www.w3.org/1999/xhtml",
-          "p",
-        );
-        const num = div1Paras.length;
-        alert(`Il y a ${num} éléments &lt;p&gt; dans l'élément div1`);
-      }
+  <div id="div2">
+    <p>Du texte div2</p>
+    <p>Du texte div2</p>
+  </div>
+</div>
 
-      function div2ParaElems() {
-        const div2 = document.getElementById("div2");
-        const div2Paras = div2.getElementsByTagNameNS(
-          "http://www.w3.org/1999/xhtml",
-          "p",
-        );
-        const num = div2Paras.length;
-        alert(`Il y a ${num} éléments &lt;p&gt; dans l'élément div2`);
-      }
-    </script>
-  </head>
+<p>Du texte extérieur</p>
+<p>Du texte extérieur</p>
 
-  <body style="border: solid green 3px">
-    <p>Un peu de texte externe</p>
-    <p>Un peu de texte externe</p>
+<button id="btn1">Afficher tous les éléments p du document</button>
+<br />
+<button id="btn2">Afficher tous les éléments p dans l'élément div1</button>
+<br />
+<button id="btn3">Afficher tous les éléments p dans l'élément div2</button>
+```
 
-    <div id="div1" style="border: solid blue 3px">
-      <p>Du texte pour div1</p>
-      <p>Du texte pour div1</p>
-      <p>Du texte pour div1</p>
+```css
+body {
+  border: solid green 3px;
+}
 
-      <div id="div2" style="border: solid red 3px">
-        <p>Du texte pour div2</p>
-        <p>Du texte pour div2</p>
-      </div>
-    </div>
+#div1 {
+  border: solid blue 3px;
+}
 
-    <p>Un peu de texte externe</p>
-    <p>Un peu de texte externe</p>
+#div2 {
+  border: solid red 3px;
+}
+```
 
-    <button onclick="getAllParaElems();">
-      Afficher tous les éléments <code>&lt;p&gt;</code> dans le document
-    </button>
-    <br />
+```js
+function obtenirTousLesParagraphes() {
+  const tousLesPara = document.getElementsByTagNameNS(
+    "http://www.w3.org/1999/xhtml",
+    "p",
+  );
+  const num = tousLesPara.length;
+  alert(`Il y a ${num} paragraphes dans ce document`);
+}
 
-    <button onclick="div1ParaElems();">
-      Afficher tous les éléments <code>&lt;p&gt;</code> dans l'élément
-      <code>&lt;div1&gt;</code>
-    </button>
-    <br />
+function obtenirParagraphesDiv1() {
+  const div1 = document.getElementById("div1");
+  const paraDiv1 = div1.getElementsByTagNameNS(
+    "http://www.w3.org/1999/xhtml",
+    "p",
+  );
+  const num = paraDiv1.length;
+  alert(`Il y a ${num} paragraphes dans #div1`);
+}
 
-    <button onclick="div2ParaElems();">
-      Afficher tous les éléments <code>&lt;p&gt;</code> dans l'élément
-      <code>&lt;div2&gt;</code>
-    </button>
-  </body>
-</html>
+function obtenirParagraphesDiv2() {
+  const div2 = document.getElementById("div2");
+  const paraDiv2 = div2.getElementsByTagNameNS(
+    "http://www.w3.org/1999/xhtml",
+    "p",
+  );
+  const num = paraDiv2.length;
+  alert(`Il y a ${num} paragraphes dans #div2`);
+}
+
+document
+  .getElementById("btn1")
+  .addEventListener("click", obtenirTousLesParagraphes);
+document
+  .getElementById("btn2")
+  .addEventListener("click", obtenirParagraphesDiv1);
+document
+  .getElementById("btn3")
+  .addEventListener("click", obtenirParagraphesDiv2);
 ```
 
 ## Spécifications
@@ -126,4 +128,4 @@ Vous pouvez enregistrer le code qui suit dans un fichier avec l'extension `.xhtm
 
 ## Voir aussi
 
-- [`Element.getElementsByTagNameNS()`](/fr/docs/Web/API/Element/getElementsByTagNameNS)
+- La méthode {{DOMxRef("Element.getElementsByTagNameNS()")}}

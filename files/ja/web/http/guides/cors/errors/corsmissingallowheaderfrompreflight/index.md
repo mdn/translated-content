@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 original_slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 ---
 
-{{HTTPSidebar}}
-
 ## 理由
 
 ```

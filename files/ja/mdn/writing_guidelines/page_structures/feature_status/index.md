@@ -51,18 +51,15 @@ browser-compat: api.feature
 以下のマクロは、ページヘッダーに状態バナーを表示するために使用します。
 
 - `\{{SeeCompatTable}}`
-
   - : `experimental` の状態です。これは**実験的状態**バナーを生成します。
     {{SeeCompatTable}}
 
 - `\{{Non-standard_Header}}`
-
   - : `non-standard` の状態です。これは**標準外状態**バナーを生成します。
     {{Non-standard_Header}}
 
 - `\{{Deprecated_Header}}`
   - : `deprecated` の状態です。これは**非推奨状態**バナーを生成します。
-    {{deprecated_header}}
 
 ### 定義リスト内の機能の状態アイコン
 

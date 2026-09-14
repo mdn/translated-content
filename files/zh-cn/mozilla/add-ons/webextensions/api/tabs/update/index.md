@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 导航到一个新的 URL 或修改标签页的其他属性。
 
 要使用此函数，传递要更新的标签页的 ID，以及一个包含要更新的属性的 `updateProperties` 对象。未在 `updateProperties` 中指定的属性不会被修改。
@@ -27,21 +25,17 @@ let updating = browser.tabs.update(
 - `tabId` {{optional_inline}}
   - : `integer`。默认为当前窗口中选定的标签页。
 - `updateProperties`
-
   - : `object`。标签页中要更新的一组属性。要了解更多有关这些属性的信息，请查看 {{WebExtAPIRef("tabs.Tab")}} 的文档。
-
     - `active` {{optional_inline}}
       - : `boolean`。标签页是否应该变为活动状态。不影响窗口是否被聚焦（参见 {{WebExtAPIRef('windows.update')}}）。如果设置为 `true`，非活动的突出显示的标签页将停止被突出显示。如果设置为 `false`，则不做任何操作。
     - `autoDiscardable` {{optional_inline}}
       - : `boolean`。标签页是否可以被浏览器丢弃。默认值为 `true`。当设置为 `false` 时，浏览器无法自动丢弃该标签页。但是，可以通过 {{WebExtAPIRef("tabs.discard")}} 丢弃该标签页。
     - `highlighted` {{optional_inline}}
-
       - : `boolean`。将标签页添加到当前的选择中，或从中移除。如果设置为 `true` 并且标签页未被突出显示，则默认情况下它将变为活动状态。
 
         如果只想突出显示标签页而不激活它，在 Firefox 中可以将 `highlighted` 设置为 `true`，并将 `active` 设置为 `false`。其他浏览器可能即使在这种情况下也会激活标签页。
 
     - `loadReplace` {{optional_inline}}
-
       - : `boolean`。新的 URL 是否应该替换标签页导航历史中的旧 URL（可通过“返回”按钮访问）。
 
         例如，用户使用 Ctrl+T 创建一个新的标签页。默认情况下，在 Firefox 中，这会加载“about:newtab”。然后，如果你的扩展使用 {{WebExtAPIRef("tabs.update")}} 更新此页面且没有使用 `loadReplace`，则“返回”按钮将启用，并且用户可以返回到“about:newtab”。如果扩展设置了 `loadReplace`，则“返回”按钮将被禁用，并且就像扩展提供的 URL 是该标签页访问的第一个页面一样。
@@ -59,11 +53,9 @@ let updating = browser.tabs.update(
     - `successorTabId` {{optional_inline}}
       - : `integer`。标签页的后继标签页的 ID。
     - `url` {{optional_inline}}
-
       - : `string`。要导航标签页到的 URL。
 
         由于安全原因，在 Firefox 中，这不能是特权 URL。因此，传递以下任何 URL 将失败，并设置 {{WebExtAPIRef("runtime.lastError")}} 为错误消息：
-
         - chrome: 类型的 URL
         - javascript: 类型的 URL
         - data: 类型的 URL

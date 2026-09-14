@@ -3,8 +3,6 @@ title: management.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getAll
 ---
 
-{{AddonSidebar}}
-
 Récupère un ensemble d'objets {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}}, un pour chaque extension installé.
 
 Notez que Google Chrome récupère les applications ainsi que les modules complémentaires. Dans Chrome vous pouvez distinguer les applications des extensions en utilisant la propriété `type` de {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}}.
@@ -53,8 +51,6 @@ gettingAll.then(gotAll);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

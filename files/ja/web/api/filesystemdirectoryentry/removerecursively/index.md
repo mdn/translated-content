@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e4cc8b707a1056c14a6316079798b95cb39b725f
 ---
 
-{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}
 
 {{domxref("FileSystemDirectoryEntry")}} インターフェイスの **`removeRecursively()`** メソッドは、ディレクトリーとそのコンテンツをすべて除去し、子孫のファイルとディレクトリーのサブツリー全体を階層的に反復処理します。
 
@@ -43,9 +43,7 @@ removeRecursively(successCallback, errorCallback)
 - `FileError.NOT_READABLE_ERR`
   - : ディレクトリーにアクセスできません。他のアプリケーションで使用されているか、オペレーティングシステムレベルでロックされている可能性があります。
 - `FileError.SECURITY_ERR`
-
   - : セキュリティ上の理由でディレクトリーを除去できませんでした。取りうる理由は次の通りです。
-
     - ディレクトリーやその内容は、ウェブアプリケーションからアクセスするには安全ではないかもしれません。
     - ファイルシステムを呼び出す回数が多すぎます。
     - ユーザーエージェントまたはオペレーティングシステムによって提起される、セキュリティに関する他の懸念。

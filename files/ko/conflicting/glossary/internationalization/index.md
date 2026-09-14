@@ -14,4 +14,4 @@ original_slug: Glossary/Internationalization_and_localization
 
 - [국제화 확장](/ko/docs/Mozilla/Add-ons/WebExtensions/Internationalization)
 - [국제화 API](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl)
-- [플렉스박스](/ko/docs/Learn_web_development/Core/CSS_layout/Flexbox) 및 [그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [플렉스박스](/ko/docs/Learn_web_development/Core/CSS_layout/Flexbox) 및 [그리드 레이아웃](/ko/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)

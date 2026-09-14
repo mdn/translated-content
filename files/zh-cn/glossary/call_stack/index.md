@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **调用栈**是解释器（比如 Web 浏览器中的 JavaScript 解释器）用来追踪其在调用多个{{glossary("function","函数")}}的脚本中所处位置的机制——当前正在运行的函数是哪一个，以及在该函数内部调用了哪些函数，等等。
 
 - 当脚本调用一个函数时，解释器就会把该函数添加进调用栈，然后开始执行这个函数。
@@ -65,5 +63,4 @@ greeting();
 
 - 维基百科上的 [调用栈](https://zh.wikipedia.org/wiki/调用栈)
 - [术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("Function", "函数")}}

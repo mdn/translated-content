@@ -22,14 +22,15 @@ slug: Web/API/Element/blur_event
 - 默认行为
   - : 无
 
-> **备注：** {{domxref("Document.activeElement")}} 的值随浏览器的不同而不同（[Firefox bug 452307](https://bugzil.la/452307)）：IE10 把值设为焦点将要移向的对象，而 Firefox 和 Chrome 往往把值设为 `body`。
+> [!NOTE]
+> {{domxref("Document.activeElement")}} 的值随浏览器的不同而不同（[Firefox bug 452307](https://bugzil.la/452307)）：IE10 把值设为焦点将要移向的对象，而 Firefox 和 Chrome 往往把值设为 `body`。
 
 ## 属性
 
 | 属性                               | 类型                                  | 描述                                         |
 | ---------------------------------- | ------------------------------------- | -------------------------------------------- |
 | `target` {{readonlyInline}}        | {{domxref("EventTarget")}}            | 产生该事件的对象 (DOM 树中最顶级的那个对象). |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}              | 事件类型。                                   |
+| `type` {{readonlyInline}}          | {{jsxref("String")}}                  | 事件类型。                                   |
 | `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                 | 该事件是否冒泡。                             |
 | `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                 | 该事件是否可取消默认行为。                   |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM 元素) | 无                                           |

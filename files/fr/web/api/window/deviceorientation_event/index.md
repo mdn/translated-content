@@ -1,68 +1,55 @@
 ---
-title: "Window : l'événement deviceorientation"
+title: "Window : évènement deviceorientation"
+short-title: deviceorientation
 slug: Web/API/Window/deviceorientation_event
+l10n:
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
-{{APIRef}}
+{{APIRef("Device Orientation Events")}}{{SecureContext_Header}}
 
-L'événement `deviceorientation` est déclenché lorsque des données sont disponibles, à partir d'un capteur d'orientation, sur l'orientation actuelle de l'appareil par rapport au cadre de coordonnées de la Terre. Ces données sont recueillies à partir d'un magnétomètre à l'intérieur de l'appareil. Voir [Données d'orientation et de mouvement expliquées](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) pour plus de détails.
+L'évènement **`deviceorientation`** de l'interface {{DOMxRef("Window")}} est déclenché lorsque des données récentes sont disponibles depuis un capteur d'orientation concernant l'orientation actuelle de l'appareil par rapport au repère terrestre. Ces données sont recueillies à partir d'un magnétomètre intégré à l'appareil.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Propagation</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>
-        <a href="/fr/docs/Web/API/DeviceOrientationEvent"
-          ><code>DeviceOrientationEvent</code></a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété du gestionnaire d'événements</th>
-      <td>
-        <a href="/fr/docs/Web/API/Window/ondeviceorientation"
-          ><code>window.ondeviceorientation</code></a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+Voir [Explication des données d'orientation et de mouvement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) pour plus de détails.
 
-## Exemple
+Cet évènement n'est pas annulable et ne se propage pas.
+
+## Syntaxe
+
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènements.
+
+```js-nolint
+addEventListener("deviceorientation", (event) => { })
+
+ondeviceorientation = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("DeviceOrientationEvent")}}. Hérite de {{DOMxRef("Event")}}.
+
+{{InheritanceDiagram("DeviceOrientationEvent")}}
+
+## Exemples
 
 ```js
 if (window.DeviceOrientationEvent) {
   window.addEventListener(
     "deviceorientation",
-    function (event) {
-      // alpha : rotation autour de l'axe z
-      var rotateDegrees = event.alpha;
-      // gamma : de gauche à droite
-      var leftToRight = event.gamma;
-      // bêta : mouvement avant-arrière
-      var frontToBack = event.beta;
+    (event) => {
+      const rotationsDegres = event.alpha; // alpha : rotation autour de l'axe z
+      const gaucheDroite = event.gamma; // gamma: de gauche à droite
+      const avantArriere = event.beta; // beta: mouvement avant-arrière
 
-      handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+      gererEventRotation(avantArriere, gaucheDroite, rotationsDegres);
     },
     true,
   );
 }
 
-var handleOrientationEvent = function (
-  frontToBack,
-  leftToRight,
-  rotateDegrees,
-) {
+function gererEventRotation(avantArriere, gaucheDroite, rotationsDegres) {
   // faire quelque chose d'étonnant
-};
+}
 ```
 
 ## Spécifications
@@ -75,7 +62,6 @@ var handleOrientationEvent = function (
 
 ## Voir aussi
 
-- L'événement [`devicemotion`](/fr/docs/Web/API/Window/devicemotion_event)
+- L'évènement {{DOMxRef("Window.devicemotion_event", "devicemotion")}}
 - [Détection de l'orientation des appareils.](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
 - [Explication des données d'orientation et de mouvement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
-- Simulation d'événements d'orientation sur les navigateurs de bureau avec [orientation-devtool](https://louisremi.github.com/orientation-devtool/).

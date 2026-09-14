@@ -61,16 +61,15 @@ O evento `click` event é disparado quando o botão de um dispositivo apontador 
 
 ### Internet Explorer
 
-O Internet Explorer 8 e 9 apresentam um bug onde o elemento com a propriedade {{cssxref("background-color")}} é definida como [`transparent`](/pt-BR/docs/Web/CSS/color_value#transparent_keyword) that are overlaid on top of other element(s) won't receive `click` events. Todos os eventos `click` serão disparados no elemento underlying instead. Veja uma demonstração [neste exemplo](https://jsfiddle.net/YUKma/show/).
+O Internet Explorer 8 e 9 apresentam um bug onde o elemento com a propriedade {{cssxref("background-color")}} é definida como [`transparent`](/pt-BR/docs/Web/CSS/Reference/Values/color_value#transparent_keyword) that are overlaid on top of other element(s) won't receive `click` events. Todos os eventos `click` serão disparados no elemento underlying instead. Veja uma demonstração [neste exemplo](https://jsfiddle.net/YUKma/show/).
 
 Soluções de contorno para este bug:
 
 - Somente para o IE9:
-
   - Defina o `{{cssxref("background-color")}} como: rgba(0,0,0,0)`
-  - Defina a `{{cssxref("opacity")}} como: 0` e defina explicitamente {{cssxref("background-color")}} com outro valor diferente de [`transparent`](/pt-BR/docs/Web/CSS/color_value#transparent_keyword)
+  - Defina a `{{cssxref("opacity")}} como: 0` e defina explicitamente {{cssxref("background-color")}} com outro valor diferente de [`transparent`](/pt-BR/docs/Web/CSS/Reference/Values/color_value#transparent_keyword)
 
-- Para IE8 e IE9: Defina a propriedade `filter como: alpha(opacity=0);` e o {{cssxref("background-color")}} com outro valor diferente de [`transparent`](/pt-BR/docs/Web/CSS/color_value#transparent_keyword)
+- Para IE8 e IE9: Defina a propriedade `filter como: alpha(opacity=0);` e o {{cssxref("background-color")}} com outro valor diferente de [`transparent`](/pt-BR/docs/Web/CSS/Reference/Values/color_value#transparent_keyword)
 
 ### Safari Mobile
 

@@ -3,8 +3,6 @@ title: Construction d'une extension multi-navigateur
 slug: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 ---
 
-{{AddonSidebar}}
-
 L'introduction de l'API WebExtension a créé un paysage plus homogène pour le développement des extensions des navigateurs. Cependant, parmi les navigateurs qui utilisent les API d'extensions (les principaux étant Chrome, Firefox, Opera et Edge), il existe des différences à la fois dans l'implémentation de l'API et dans la couverture des différentes fonctionnalités. Par ailleurs, Safari utilise ses propres extensions Safari Extensions JS.
 
 Maximiser la portée de votre extension de navigateur signifie la développer pour au moins deux navigateurs différents, voire plus. Cet article examine six des principaux défis rencontrés lors de la création d'une extension multi-navigateur, et dans chaque cas, suggère comment relever ce défi.
@@ -103,7 +101,7 @@ if (typeof <function> === "function") {
 
 ### Les clés de manifeste
 
-Les différences pour les clés du fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) se répartissent en trois catégories :
+Les différences pour les clés du fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) se répartissent en trois catégories :
 
 1. **Les attributs d'information sur l'extension.** Firefox et Opera incluent la clé [`developer`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#browser_compatibility) pour fournir des détails quant à la développeuse ou au développeur de l'application et la clé [`author`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#browser_compatibility).
 2. **Les fonctionnalités rattachées à l'extension.** Edge ne prenait pas en charge la clé [`commands`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#browser_compatibility) qui permet de définir des raccourcis clavier pour une extension.

@@ -3,8 +3,6 @@ title: 新增消息來源閱讀工具
 slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 ---
 
-{{FirefoxSidebar}}
-
 從 Firefox 2 起，消息來源（feed）可選用不同的 RSS 或 Atom 閱讀工具訂閱。這份文件提供新增其他閱讀程式支援的方法。
 
 ## 新增 Web 版閱讀工具

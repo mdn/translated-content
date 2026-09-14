@@ -1,49 +1,60 @@
 ---
-title: GlobalEventHandlers.onreset
+title: "HTMLFormElement : évènement reset"
+short-title: reset
 slug: Web/API/HTMLFormElement/reset_event
+l10n:
+  sourceCommit: 6ba4f3b350be482ba22726f31bbcf8ad3c92a9c6
 ---
 
-{{ ApiRef() }}
+{{APIRef("HTML DOM")}}
 
-La propriété **`GlobalEventHandlers.onreset`** contient Un gestionnaire d'évènement déclenché quand un évènement `reset` est reçu.
+L'évènement **`reset`** de l'interface {{DOMxRef("HTMLFormElement")}} se déclenche lorsqu'un élément HTML {{HTMLElement("form")}} est réinitialisé.
 
 ## Syntaxe
 
-```js
-window.onreset = funcRef;
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} ou définissez une propriété gestionnaire d'évènements.
+
+```js-nolint
+addEventListener("reset", (event) => { })
+
+onreset = (event) => { }
 ```
 
-### Paramètres
+## Type d'évènement
 
-- `funcRef` est une référence à une fonction.
+Un objet {{DOMxRef("Event")}} générique.
 
-## Exemple
+## Exemples
+
+Cet exemple utilise {{DOMxRef("EventTarget.addEventListener()")}} pour écouter les réinitialisations de formulaire, et enregistre le {{DOMxRef("Event.timeStamp")}} actuel à chaque occurrence.
+
+### HTML
 
 ```html
-<html>
-  <script>
-    function reg() {
-      window.captureEvents(Event.RESET);
-      window.onreset = hit;
-    }
-
-    function hit() {
-      alert("hit");
-    }
-  </script>
-
-  <body onload="reg();">
-    <form>
-      <input type="reset" value="reset" />
-    </form>
-    <div id="d"></div>
-  </body>
-</html>
+<form id="form">
+  <label>Champ de test&nbsp;: <input type="text" /></label>
+  <br /><br />
+  <button type="reset">Réinitialiser le formulaire</button>
+</form>
+<p id="log"></p>
 ```
 
-## Notes
+### JavaScript
 
-L'évènement `reset` est déclenché quand l'utilisateur clique sur le bouton de réinitialisation dans un formulaire (`<input type="reset"/>`).
+```js
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+
+function logReset(event) {
+  log.textContent = `Formulaire réinitialisé ! Horodatage : ${event.timeStamp}`;
+}
+
+form.addEventListener("reset", logReset);
+```
+
+### Résultat
+
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 
@@ -52,3 +63,7 @@ L'évènement `reset` est déclenché quand l'utilisateur clique sur le bouton d
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- L'élément HTML {{HTMLElement("form")}}

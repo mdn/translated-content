@@ -54,14 +54,14 @@ console.log(new Person('Joe').toSource()); // ---> new Person("Joe")
 
 Cada tipo principal do JavaScript tem seu próprio método `toSource()`. Esses objetos são:
 
-- {{jsxref("Array.prototype.toSource()")}} — objeto {{jsxref("Array")}}.
-- {{jsxref("Boolean.prototype.toSource()")}} — objeto {{jsxref("Boolean")}}.
-- {{jsxref("Date.prototype.toSource()")}} — objeto {{jsxref("Date")}}.
-- {{jsxref("Function.prototype.toSource()")}} — objeto {{jsxref("Function")}}.
-- {{jsxref("Number.prototype.toSource()")}} — objeto {{jsxref("Number")}}.
-- {{jsxref("RegExp.prototype.toSource()")}} — objeto {{jsxref("RegExp")}}.
-- {{jsxref("String.prototype.toSource()")}} — objeto {{jsxref("String")}}.
-- {{jsxref("Symbol.prototype.toSource()")}} — objeto {{jsxref("Symbol")}}.
+- {{jsxref("Array.prototype.toString()", "Array.prototype.toSource()")}} — objeto {{jsxref("Array")}}.
+- {{jsxref("Boolean.prototype.toString()", "Boolean.prototype.toSource()")}} — objeto {{jsxref("Boolean")}}.
+- {{jsxref("Date.prototype.toString()", "Date.prototype.toSource()")}} — objeto {{jsxref("Date")}}.
+- {{jsxref("Function.prototype.toString()", "Function.prototype.toSource()")}} — objeto {{jsxref("Function")}}.
+- {{jsxref("Number.prototype.toString()", "Number.prototype.toSource()")}} — objeto {{jsxref("Number")}}.
+- {{jsxref("RegExp.prototype.toString()", "RegExp.prototype.toSource()")}} — objeto {{jsxref("RegExp")}}.
+- {{jsxref("String.prototype.toString()", "String.prototype.toSource()")}} — objeto {{jsxref("String")}}.
+- {{jsxref("Symbol.prototype.toString()", "Symbol.prototype.toSource()")}} — objeto {{jsxref("Symbol")}}.
 - `Math.toSource()` — Retorna a _string_ "Math".
 
 ### Limitações em objetos cíclicos

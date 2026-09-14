@@ -10,7 +10,8 @@ l10n:
 
 **`selectionStart`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、選択テキストの先頭インデックスを表す数値です。何も選択されていない場合は、 `<input>` 要素内のテキスト入力カーソル（キャレット）の位置を返します。
 
-> **メモ:** [WHATWG のフォーム仕様書](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply)によると、 `selectionStart` プロパティは text、search、URL、tel、password の各入力型にのみ適用されます。現行のブラウザーでは、それ以外の入力型に `selectionStart` プロパティを設定すると例外が発生します。さらに、テキスト以外の入力要素で `selectionStart` プロパティにアクセスすると、このプロパティは `null` を返します。
+> [!NOTE]
+> [WHATWG のフォーム仕様書](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply)によると、 `selectionStart` プロパティは text、search、URL、tel、password の各入力型にのみ適用されます。現行のブラウザーでは、それ以外の入力型に `selectionStart` プロパティを設定すると例外が発生します。さらに、テキスト以外の入力要素で `selectionStart` プロパティにアクセスすると、このプロパティは `null` を返します。
 
 `selectionStart` が `selectionEnd` よりも大きくなった場合、両者は `selectionEnd` と扱われます。
 

@@ -69,7 +69,7 @@ let nestedProp = temp === null || temp === undefined ? undefined : temp.second;
 
 ### 함수의 호출과 Optional chaining
 
-존재하지 않을 수 있는 매서드를 호출할 때, optional chaining을 사용할 수 있다. 예를 들어, 구현 기간이나 사용자 장치에서 사용할 수 없는 기능 때문에 메서드를 사용할 수 없는 API를 사용할 경우, 유용할 수 있다.
+존재하지 않을 수 있는 메서드를 호출할 때, optional chaining을 사용할 수 있다. 예를 들어, 구현 기간이나 사용자 장치에서 사용할 수 없는 기능 때문에 메서드를 사용할 수 없는 API를 사용할 경우, 유용할 수 있다.
 
 함수 호출과 optional chaining을 사용함으로써 메서드를 찾을 수 없는 경우에 예외를 발생시키는 것 대신에 그 표현식은 자동으로 `undefined`를 반환한다:
 
@@ -83,7 +83,7 @@ let result = someInterface.customMethod?.();
 
 #### optional callbacks과 event handlers 다루기
 
-만약 객체에서 [destructuring assignment](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)로 callbacks 또는 fetch 메서드를 사용한다면, 그 존재 여부를 테스트하지 않으면 함수로 호출할 수 없는 존재 하지 않는 값을 가질 수 있다. `?.`을 사용하면, 다음 추가 테스트를 피할 수 있다:
+만약 객체에서 [destructuring assignment](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring)로 callbacks 또는 fetch 메서드를 사용한다면, 그 존재 여부를 테스트하지 않으면 함수로 호출할 수 없는 존재 하지 않는 값을 가질 수 있다. `?.`을 사용하면, 다음 추가 테스트를 피할 수 있다:
 
 ```js
 // Written as of ES2019
@@ -197,5 +197,5 @@ console.log(customerCity); // Unknown city
 
 ## 참고
 
-- The {{JSxRef("Operators/Nullish_Coalescing_Operator", "Nullish Coalescing Operator", '', 1)}}
+- The {{JSxRef("Operators/Nullish_coalescing", "Nullish Coalescing Operator", '', 1)}}
 - [TC39 proposals](https://github.com/tc39/proposals)

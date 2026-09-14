@@ -28,7 +28,7 @@ mark(name, markOptions)
 ### 参数
 
 - name
-  - : 一个表示标记名称的{{domxref("DOMString")}}。
+  - : 一个表示标记名称的{{jsxref("String")}}。
 
 ### 返回值
 

@@ -27,7 +27,7 @@ stylesheet.deleteRule(index)
 
 ### 参见
 
-- [insertRule](/zh-CN/docs/DOM/CSSStyleSheet/insertRule)
+- [insertRule](/zh-CN/docs/Web/API/CSSStyleSheet/insertRule)
 
 ### 规范
 

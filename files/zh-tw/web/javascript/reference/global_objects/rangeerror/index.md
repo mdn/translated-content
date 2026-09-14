@@ -3,8 +3,6 @@ title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
 ---
 
-{{JSRef}}
-
 **`RangeError`**物件在一個給定的值不在允許的集合或範圍內時被作為一個錯誤拋出
 
 ## 語法
@@ -28,7 +26,7 @@ new RangeError([message[, fileName[, lineNumber]]])
 
 ## 屬性
 
-- {{jsxref("RangeError.prototype")}}
+- {{jsxref("RangeError")}}
   - : 允許對一個 `RangeError` 物件增加其屬性。
 
 ## 方法
@@ -105,7 +103,7 @@ try {
 ## 參見
 
 - {{jsxref("Error")}}
-- {{jsxref("RangeError.prototype")}}
+- {{jsxref("RangeError")}}
 - {{jsxref("Array")}}
 - {{jsxref("Number.toExponential()")}}
 - {{jsxref("Number.toFixed()")}}

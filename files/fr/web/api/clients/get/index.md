@@ -16,7 +16,7 @@ self.clients.get(id).then(function (client) {
 ### Paramètres
 
 - `id`
-  - : Une {{domxref("DOMString")}} représentant l'id du client que vous souhaitez récuperer.
+  - : Une {{jsxref("String")}} représentant l'id du client que vous souhaitez récuperer.
 
 ### Valeur de retour
 

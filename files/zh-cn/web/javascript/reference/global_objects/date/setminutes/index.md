@@ -3,8 +3,6 @@ title: Date.prototype.setMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 ---
 
-{{JSRef}}
-
 **`setMinutes()`** 方法根据本地时间为一个日期对象设置分钟数。
 
 {{InteractiveExample("JavaScript Demo: Date.setMinutes()")}}

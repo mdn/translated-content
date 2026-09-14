@@ -53,7 +53,7 @@ This section provides a summary of the basic steps to add drag and drop function
 
 ### Identify what is _draggable_
 
-To make an element _draggable_ requires adding the [`draggable`](/zh-TW/docs/Web/HTML/Global_attributes#draggable) attribute plus the {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} global event handler, as shown in the following code sample
+To make an element _draggable_ requires adding the [`draggable`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#draggable) attribute plus the {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} global event handler, as shown in the following code sample
 
 ```js
 function dragstart_handler(ev) {
@@ -69,11 +69,11 @@ function dragstart_handler(ev) {
 </body>;
 ```
 
-See the [draggable attribute reference](/zh-TW/docs/Web/HTML/Global_attributes/draggable) and the [Drag operations guide](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute) for more information.
+See the [draggable attribute reference](/zh-TW/docs/Web/HTML/Reference/Global_attributes/draggable) and the [Drag operations guide](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute) for more information.
 
 ### Define the drag's data
 
-The application is free to include any number of data items in a drag operation. Each data item is a {{domxref("DOMString","string")}} of a particular `type`, typically a MIME type such as `text/html`.
+The application is free to include any number of data items in a drag operation. Each data item is a {{jsxref("String","string")}} of a particular `type`, typically a MIME type such as `text/html`.
 
 Each {{domxref("DragEvent","drag event")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property that _holds_ the event's data. This property (which is a {{domxref("DataTransfer")}} object) also has methods to _manage_ drag data. The {{domxref("DataTransfer.setData","setData()")}} method is used to add an item to the drag data, as shown in the following example.
 

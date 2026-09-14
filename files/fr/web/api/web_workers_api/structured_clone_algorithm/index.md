@@ -15,7 +15,7 @@ Il y a quelques avantages notables à utiliser l'algorithme de clonage structur�
 
 - Le clonage structuré peut copier des objets [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp).
 - Le clonage structuré peut copier des objets {{ domxref("Blob") }}, {{ domxref("File") }} et {{ domxref("FileList") }}.
-- Le clonage structuré peut copier des objets {{ domxref("ImageData") }}. Les dimensions du {{ domxref("CanvasPixelArray") }} du clone correspondront à celles de l'original, et il recevra une copie des mêmes données de pixels.
+- Le clonage structuré peut copier des objets {{ domxref("ImageData") }}. Les dimensions du {{jsxref("Uint8ClampedArray")}} du clone correspondront à celles de l'original, et il recevra une copie des mêmes données de pixels.
 - Le clonage structuré copie correctement les objets contenant des graphes de références cycliques.
 
 ## Ce qui ne marche pas avec le clonage structuré
@@ -23,30 +23,29 @@ Il y a quelques avantages notables à utiliser l'algorithme de clonage structur�
 - Les objets [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error) et [`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) ne peuvent pas être copiés par l'algorithme de clonage structuré&nbsp;; toute tentative de le faire émettra une exception `DATA_CLONE_ERR`.
 - De la même manière, toute tentative de cloner des nœuds DOM émettra une exception `DATA_CLONE_ERR`.
 - Certains paramètres d'objets ne sont pas préservés&nbsp;:
-
   - Le champ `lastIndex` des objets [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) n'est pas préservé.
   - Les descripteurs de propriétés, accesseurs et mutateurs (ainsi que les fonctionnalités de métadonnées similaires) ne sont pas copiés. Par exemple, si un objet est marqué en lecture seule _via_ un descripteur de propriété, il sera en lecture et écriture dans le clone, car c'est la condition par défaut.
   - La chaîne de prototypes n'est ni parcourue, ni copiée.
 
 ## Types supportés
 
-| Type d'objet                                                                     | Notes                                                                                                             |
-| -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| [Tous types primitifs](/fr/docs/Web/JavaScript/Data_structures#primitive_values) | À l'exception des symboles                                                                                        |
-| Objet [Booléen](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)        |                                                                                                                   |
-| Objet String                                                                     |                                                                                                                   |
-| [Date](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date)                    |                                                                                                                   |
-| [RegExp](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)                | Le champ `lastIndex` n'est pas préservé                                                                           |
-| {{ domxref("Blob") }}                                                            |                                                                                                                   |
-| {{ domxref("File") }}                                                            |                                                                                                                   |
-| {{ domxref("FileList") }}                                                        |                                                                                                                   |
-| [ArrayBuffer](/fr/docs/Web/API/ArrayBuffer)                                      |                                                                                                                   |
-| [ArrayBufferView](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)   | Ce qui implique tous les [tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays) tels que `Int32Array`, etc. |
-| {{ domxref("ImageData") }}                                                       |                                                                                                                   |
-| [Array](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)                  |                                                                                                                   |
-| [Object](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object)                | Inclut seulement les objets plats (par ex. depuis un objet littéral)                                              |
-| [Map](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map)                      |                                                                                                                   |
-| [Set](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set)                      |                                                                                                                   |
+| Type d'objet                                                                           | Notes                                                                                                             |
+| -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| [Tous types primitifs](/fr/docs/Web/JavaScript/Guide/Data_structures#primitive_values) | À l'exception des symboles                                                                                        |
+| Objet [Booléen](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)              |                                                                                                                   |
+| Objet String                                                                           |                                                                                                                   |
+| [Date](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date)                          |                                                                                                                   |
+| [RegExp](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)                      | Le champ `lastIndex` n'est pas préservé                                                                           |
+| {{ domxref("Blob") }}                                                                  |                                                                                                                   |
+| {{ domxref("File") }}                                                                  |                                                                                                                   |
+| {{ domxref("FileList") }}                                                              |                                                                                                                   |
+| [ArrayBuffer](/fr/docs/Web/API/ArrayBuffer)                                            |                                                                                                                   |
+| [ArrayBufferView](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)         | Ce qui implique tous les [tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays) tels que `Int32Array`, etc. |
+| {{ domxref("ImageData") }}                                                             |                                                                                                                   |
+| [Array](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)                        |                                                                                                                   |
+| [Object](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object)                      | Inclut seulement les objets plats (par ex. depuis un objet littéral)                                              |
+| [Map](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map)                            |                                                                                                                   |
+| [Set](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set)                            |                                                                                                                   |
 
 ## Alternative&nbsp;: copie profonde
 

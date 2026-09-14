@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/PATCH
 original_slug: Web/HTTP/Methods/PATCH
 ---
 
-{{HTTPSidebar}}
-
 O **método de requisição HTTP PATCH** aplica modificações parciais a um recurso.
 
 O método HTTP {{HTTPMethod("PUT")}} permite apenas substituições completas de um documento. Em contraste ao `PUT`, o método `PATCH` não é idempotente, ou seja, requisições sucessivas idênticas _podem_ obter efeitos distintos. Todavia, é possível realizar requisições `PATCH` de modo a serem idempotentes.
@@ -41,7 +39,7 @@ Outra indicação (implícita) da permissão de PATCH é a presença do cabeçal
     <tr>
       <th scope="row">
         Permitido em
-        <a href="/pt-BR/docs/Web/Guide/HTML/Forms">formulários HTML</a>
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Forms">formulários HTML</a>
       </th>
       <td>Não</td>
     </tr>

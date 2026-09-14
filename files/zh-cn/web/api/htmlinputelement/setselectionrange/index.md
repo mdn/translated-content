@@ -15,7 +15,7 @@ l10n:
 
 每次调用这个这个方法都会更新 {{domxref("HTMLInputElement.selectionStart")}}、{{domxref("HTMLInputElement.selectionEnd")}} 和 {{domxref("HTMLInputElement.selectionDirection")}} 属性。
 
-该元素必须是以下输入类型之一：[`password`](/zh-CN/docs/Web/HTML/Element/input/password)、[`search`](/zh-CN/docs/Web/HTML/Element/input/search)、[`tel`](/zh-CN/docs/Web/HTML/Element/input/tel)、[`text`](/zh-CN/docs/Web/HTML/Element/input/text) 或 [`url`](/zh-CN/docs/Web/HTML/Element/input/url)。否则，浏览器会抛出 `InvalidStateError` 异常。
+该元素必须是以下输入类型之一：[`password`](/zh-CN/docs/Web/HTML/Reference/Elements/input/password)、[`search`](/zh-CN/docs/Web/HTML/Reference/Elements/input/search)、[`tel`](/zh-CN/docs/Web/HTML/Reference/Elements/input/tel)、[`text`](/zh-CN/docs/Web/HTML/Reference/Elements/input/text) 或 [`url`](/zh-CN/docs/Web/HTML/Reference/Elements/input/url)。否则，浏览器会抛出 `InvalidStateError` 异常。
 
 如果你希望**全选**输入元素中的文本，你可以使用 [HTMLInputElement.select()](/zh-CN/docs/Web/API/HTMLInputElement/select) 方法。
 
@@ -35,9 +35,7 @@ setSelectionRange(selectionStart, selectionEnd, selectionDirection)
 - `selectionEnd`
   - : 被选中的最后一个字符的*下一个*位置索引，从 0 开始。如果这个值比元素的 value 长度还大，则会被看作 value 最后一个位置的索引。
 - `selectionDirection` {{optional_inline}}
-
   - : 一个表示选择方向的字符串，可能的值有：
-
     - `"forward"`
     - `"backward"`
     - `"none"` 默认值，表示方向未知或不相关。
@@ -49,7 +47,7 @@ setSelectionRange(selectionStart, selectionEnd, selectionDirection)
 ### 异常
 
 - InvalidStateError {{domxref("DOMException")}}
-  - : 如果元素不是以下输入类型之一：[`password`](/zh-CN/docs/Web/HTML/Element/input/password)、[`search`](/zh-CN/docs/Web/HTML/Element/input/search)、[`tel`](/zh-CN/docs/Web/HTML/Element/input/tel)、[`text`](/zh-CN/docs/Web/HTML/Element/input/text) 或 [`url`](/zh-CN/docs/Web/HTML/Element/input/url)，则抛出该异常。
+  - : 如果元素不是以下输入类型之一：[`password`](/zh-CN/docs/Web/HTML/Reference/Elements/input/password)、[`search`](/zh-CN/docs/Web/HTML/Reference/Elements/input/search)、[`tel`](/zh-CN/docs/Web/HTML/Reference/Elements/input/tel)、[`text`](/zh-CN/docs/Web/HTML/Reference/Elements/input/text) 或 [`url`](/zh-CN/docs/Web/HTML/Reference/Elements/input/url)，则抛出该异常。
 
 ## 示例
 

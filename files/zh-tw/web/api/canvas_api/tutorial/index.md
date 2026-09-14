@@ -56,4 +56,4 @@ slug: Web/API/Canvas_API/Tutorial
 
 由於 2013/6/17 那一週的不幸技術錯誤，所有有關本教學的歷史紀錄，包括過去所有貢獻者的紀錄都遺失了，我們深感抱歉，希望各位可以原諒這一次不幸的意外。
 
-{{ Next("Web/Guide/HTML/Canvas_tutorial/Basic_usage") }}
+{{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}

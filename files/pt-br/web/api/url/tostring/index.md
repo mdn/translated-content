@@ -5,7 +5,7 @@ slug: Web/API/URL/toString
 
 {{ApiRef("URL API")}}
 
-O método **`URL.toString()`** {{Glossary("stringifier")}} retorna a {{domxref("USVString")}} contendo toda a URL. Efetivamente esta é a versão read-only de {{domxref("URL.href")}}.
+O método **`URL.toString()`** {{Glossary("stringifier")}} retorna a {{jsxref("String")}} contendo toda a URL. Efetivamente esta é a versão read-only de {{domxref("URL.href")}}.
 
 {{AvailableInWorkers}}
 
@@ -17,7 +17,7 @@ const href = url.toString();
 
 ### Retorna o valor
 
-Uma {{domxref("USVString")}}.
+Uma {{jsxref("String")}}.
 
 ## Exemplos
 

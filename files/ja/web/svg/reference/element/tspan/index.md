@@ -1,12 +1,48 @@
 ---
 title: <tspan>
 slug: Web/SVG/Reference/Element/tspan
-original_slug: Web/SVG/Element/tspan
+l10n:
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
-{{SVGRef}}
+**`<tspan>`** は [SVG](/ja/docs/Web/SVG) の要素で、 {{SVGElement('text')}} 要素内にあるサブテキストやその他の `<tspan>` 要素を定義します。これにより、必要に応じてサブテキストのスタイルや位置を調整することができます。
 
-SVG の **`<tspan>`** 要素は、 {{SVGElement('text')}} 要素内にあるサブテキストやその他の `<tspan>` 要素を定義します。これにより、必要に応じてサブテキストのスタイルや位置を調整することができます。
+> [!NOTE]
+> `<tspan>` 要素は、既定では折り返されません。折り返すには、CSS の {{CSSXRef("white-space")}} プロパティを使用してスタイルを設定する必要があります。
+
+## 使用コンテキスト
+
+{{svginfo}}
+
+## 属性
+
+- {{SVGAttr("x")}}
+  - : テキストのベースラインの開始点の X 座標です。
+    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)) のリスト; _デフォルト値_: `0`; _アニメーション_: **可**
+- {{SVGAttr("y")}}
+  - : テキストのベースラインの開始点の Y 座標です。
+    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)) のリスト; _デフォルト値_: `0`; _アニメーション_: **可**
+- {{SVGAttr("dx")}}
+  - : テキストの位置を直前のテキスト要素から水平方向にずらします。
+    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)) のリスト; _デフォルト値_: _none_; _アニメーション_: **可**
+- {{SVGAttr("dy")}}
+  - : テキストの位置を直前のテキスト要素から垂直方向にずらします。
+    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)) のリスト; _デフォルト値_: _none_; _アニメーション_: **可**
+- {{SVGAttr("rotate")}}
+  - : それぞれの文字の向きを回転します。文字ごとに個別に回転させることができます。
+    _値の型_: [**\<list-of-number>**](/ja/docs/Web/SVG/Guides/Content_type#list-of-ts); _デフォルト値_: なし; _アニメーション_: **可**
+- {{SVGAttr("lengthAdjust")}}
+  - : テキストを`textLength` 属性で定義された幅に合わせるために伸縮する方法です。
+    _値の型_: `spacing`|`spacingAndGlyphs`; _デフォルト値_: `spacing`; _アニメーション_: **可**
+- {{SVGAttr("textLength")}}
+  - : テキストを伸縮して合わせる幅です。
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage); _デフォルト値_: _none_; _アニメーション_: **可**
+
+## DOM インターフェイス
+
+この要素は {{domxref("SVGTSpanElement")}} インターフェイスを実装しています。
+
+## 例
 
 ```css hidden
 html,
@@ -38,49 +74,6 @@ svg {
 
 {{EmbedLiveSample('Example', 100, '100%')}}
 
-## 属性
-
-- {{SVGAttr("x")}}
-  - : テキストのベースラインの開始点の X 座標です。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _既定値: none; Animatable_: **yes**
-- {{SVGAttr("y")}}
-  - : テキストのベースラインの開始点の Y 座標です。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _既定値: none; Animatable_: **yes**
-- {{SVGAttr("dx")}}
-  - : テキストの位置を直前のテキスト要素から水平方向にずらします。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: _none_; _Animatable_: **yes**
-- {{SVGAttr("dy")}}
-  - : テキストの位置を直前のテキスト要素から垂直方向にずらします。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _既定値: none; Animatable_: **yes**
-- {{SVGAttr("rotate")}}
-  - : それぞれの文字の向きを回転します。文字ごとに個別に回転させることができます。
-    _値の型_: [**\<list-of-number>**](/ja/docs/Web/SVG/Guides/Content_type#list-of-ts) ; _既定値_: none; _Animatable_: **yes**
-- {{SVGAttr("lengthAdjust")}}
-  - : テキストを`textLength` 属性で定義された幅に合わせるために伸縮する方法です。
-    _値の型_: `spacing`|`spacingAndGlyphs`; _既定値_: `spacing`; _Animatable_: **yes**
-- {{SVGAttr("textLength")}}
-  - : テキストを伸縮して合わせる幅です。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _既定値_: _none_; _Animatable_: **yes**
-
-### グローバル属性
-
-- [コア属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 特に: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [スタイル属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [条件処理属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 特に: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- Event Attributes
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Reference/Attribute#グローバルイベント属性), [グラフィックイベント属性](/ja/docs/Web/SVG/Reference/Attribute#グラフィックイベント属性)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 特に: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('dominant-baseline')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr('text-anchor')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-- Aria 属性
-  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
-
-## 使用場面
-
-{{svginfo}}
-
 ## 仕様書
 
 {{Specifications}}
@@ -88,3 +81,7 @@ svg {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{CSSXRef("white-space", "", "#svg_の_text_要素内の複数行")}}

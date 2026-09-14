@@ -3,8 +3,6 @@ title: handler.has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 ---
 
-{{JSRef}}
-
 **`handler.has()`** 方法是针对 {{jsxref("Operators/in", "in")}} 操作符的代理方法。
 
 {{InteractiveExample("JavaScript Demo: handler.has()", "taller")}}
@@ -119,6 +117,6 @@ var p = new Proxy(obj, {
 ## 其他
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Operators/in", "in")}} operator
 - {{jsxref("Reflect.has()")}}

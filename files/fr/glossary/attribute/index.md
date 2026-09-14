@@ -2,51 +2,34 @@
 title: Attribut
 slug: Glossary/Attribute
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Un **attribut** étend un {{Glossary("element", "élément")}} {{Glossary("HTML")}} ou un élément {{Glossary("XML")}}, modifiant son comportement ou fournissant des métadonnées.
 
-Un **attribut** étend un [élément](/fr/docs/Glossary/Element) HTML ou XML, changeant son comportement ou ajoutant des métadonnées.
+Un attribut a toujours la forme `nom="valeur"` (l'identifiant de l'attribut suivi de sa valeur associée). Il est possible de voir des attributs sans signe égal ni valeur. Il s'agit d'une abréviation pour fournir la chaîne vide en HTML. Cependant, cela n'est pas valide en XML&nbsp;: XML exige que tous les attributs aient une valeur explicite.
 
-Un attribut prend toujours la forme `nom="valeur"`, c'est-à-dire l'identifiant de l'attribut suivi de la valeur associée.
-
-On voit parfois des attributs sans signe égal ni valeur. Il s'agit d'un raccourci pour la chaine vide en HTML, ou pour le nom de l'attribut en XML.
-
-```html
-<input required />
-<!-- est égal à -->
-<input required="" />
-<!-- ou en XML -->
-<input required="required" />
-```
+Un certain nombre d'attributs HTML sont des {{Glossary("Boolean/HTML", "attributs booléens")}}. La valeur de ces attributs est uniquement contrôlée par la présence ou l'absence de l'attribut. Voir {{Glossary("Boolean/HTML", "attributs booléens")}} pour plus d'informations.
 
 ## Réflexion d'un attribut
 
-Les attributs peuvent être _réfléchis_ dans une propriété spécifique de l'interface du [DOM](/fr/docs/Glossary/DOM) correspondante. Cela signifie que la valeur de l'attribut peut être lue en accédant à la propriété et peut être modifiée en définissant la propriété sur une nouvelle valeur.
+Les attributs peuvent être _reflétés_ dans une propriété particulière de l'interface spécifique.
 
-Par exemple, l'attribut `placeholder` ci-dessous est réfléchi dans [`HTMLInputElement.placeholder`](/fr/docs/Web/API/HTMLInputElement#placeholder).
+Cela signifie que la valeur de l'attribut peut être lue ou modifiée directement en JavaScript via une propriété sur l'interface correspondante, et réciproquement.
+Les propriétés reflétées offrent une approche de programmation plus naturelle que l'obtention et la définition d'attributs à l'aide des méthodes {{DOMxRef("Element.getAttribute()","getAttribute()")}} et {{DOMxRef("Element.setAttribute()","setAttribute()")}} de l'interface {{DOMxRef("Element")}}.
 
-Considérons le fragment HTML suivant&nbsp;:
-
-```html
-<input placeholder="Placeholder initial" />
-```
-
-On peut vérifier la réflexion entre [`HTMLInputElement.placeholder`](/fr/docs/Web/API/HTMLInputElement#placeholder) et l'attribut avec le code JavaScript suivant&nbsp;:
-
-```js
-const input = document.querySelector("input");
-const attr = input.getAttributeNode("placeholder");
-console.log(attr.value); // Affiche `Placeholder initial`
-console.log(input.placeholder); // Affiche la même valeur que `attr.value`
-
-// Modifier la valeur de placeholder va aussi changer la valeur de l'attribut réfléchi.
-input.placeholder = "Placeholder modifié";
-console.log(attr.value); // Affiche `Placeholder modifié`
-```
+Pour plus d'informations, voir [Réflexion des attributs](/fr/docs/Web/API/Document_Object_Model/Reflected_attributes).
 
 ## Voir aussi
 
-- [Liste des attributs HTML](/fr/docs/Web/HTML/Attributes)
-- [Les attributs universels en HTML](/fr/docs/Web/HTML/Global_attributes)
+- [Référence des attributs HTML](/fr/docs/Web/HTML/Reference/Attributes)
+- [Réflexion des attributs](/fr/docs/Web/API/Document_Object_Model/Reflected_attributes)
+- Informations sur les [attributs globaux](/fr/docs/Web/HTML/Reference/Global_attributes) de HTML
+- Recommandation sur les attributs StartTag XML dans la [Recommandation XML du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/xml/#sec-starttags)
+- Termes associés du glossaire&nbsp;:
+  - {{Glossary("Element", "Élément")}}
+  - {{Glossary("Tag", "Balise")}}
+  - {{Glossary("HTML")}}
+  - {{Glossary("XML")}}
+  - {{Glossary("Boolean/HTML", "Attributs booléens")}}
+  - {{Glossary("Enumerated", "Attributs énumérés")}}

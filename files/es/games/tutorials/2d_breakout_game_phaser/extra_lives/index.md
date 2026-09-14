@@ -3,9 +3,7 @@ title: Extra lives
 slug: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
 ---
 
-{{GamesSidebar}}
-
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Win_the_game", "Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Win_the_game", "Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens")}}
 
 Este es el **paso 13** de 16 del tutorial [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente tal y cómo queda al completar la lección en [Gamedev-Phaser-Content-Kit/demos/lesson13.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson13.html).
 
@@ -134,4 +132,4 @@ Puedes consultar el código terminado de esta lección en la demo de abajo, y ju
 
 Las vidas hacen el juego más indulgente — si pierdes una vida, todavía tienes dos más con las que continuar jugando. Ahora expandiremos la apariencia del juego añadiendo [animaciones e interpolaciones](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens).
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Win_the_game", "Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Win_the_game", "Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens")}}

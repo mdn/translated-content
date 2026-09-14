@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/isNaN
 
 {{jsSidebar("Objects")}}
 
-A função **`isNaN()`** determina se o valor é {{jsxref("Global_Objects/NaN", "NaN")}} ou não. Tenha cuidado, o `cast` em `isNaN` tem regras para serem observadas. Você pode ficar interessado no {{jsxref("Number.isNaN()")}} que foi definido no ECMAScript 6 ou você pode usar `typeof` para determinar se o valor é Not-A-Number, `NaN`.
+A função **`isNaN()`** determina se o valor é {{jsxref("NaN")}} ou não. Tenha cuidado, o `cast` em `isNaN` tem regras para serem observadas. Você pode ficar interessado no {{jsxref("Number.isNaN()")}} que foi definido no ECMAScript 6 ou você pode usar `typeof` para determinar se o valor é Not-A-Number, `NaN`.
 
 {{InteractiveExample("JavaScript Demo: Standard built-in objects - isNaN()")}}
 
@@ -43,7 +43,7 @@ isNaN(value)
 
 ### A necessidade da função `isNaN`
 
-Ao contrário de todas as outras possibilidades de valores no JavaScript, não é possivel confiar nos operadores de igualdade `(== e ===)` para determina se o valor é {{jsxref("Global_Objects/NaN", "NaN")}} ou não, porque ambos, `NaN == NaN` e `NaN === NaN`, terá como valor de retorno: `false`. Daí a necessidade da funçao `isNAN`.
+Ao contrário de todas as outras possibilidades de valores no JavaScript, não é possivel confiar nos operadores de igualdade `(== e ===)` para determina se o valor é {{jsxref("NaN")}} ou não, porque ambos, `NaN == NaN` e `NaN === NaN`, terá como valor de retorno: `false`. Daí a necessidade da funçao `isNAN`.
 
 ### Origem dos valores `NaN`
 

@@ -3,10 +3,6 @@ title: Math.cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
 ---
 
-{{JSRef}}
-
-## 概述
-
 **`Math.cos()`** 函数返回一个数值的余弦值。
 
 ## 语法

@@ -1,27 +1,31 @@
 ---
-title: HTMLFormElement.action
+title: "HTMLFormElement : propriété action"
+short-title: action
 slug: Web/API/HTMLFormElement/action
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`HTMLFormElement.action`** représente l'action associée à l'élément {{HTMLElement("form")}}.
+La propriété **`action`** de l'interface {{DOMxRef("HTMLFormElement")}} représente l'action de l'élément HTML {{HTMLElement("form")}}.
 
-L'action d'un formulaire est le programme exécuté sur le serveur lorsque le formulaire est soumis. Cette propriété peut être récupérée ou définie.
+L'action d'un formulaire est le programme exécuté sur le serveur lorsque le formulaire est soumis. Cette propriété peut être lue ou définie.
 
-## Syntaxe
+## Valeur
+
+Une chaîne de caractères.
+
+## Exemples
 
 ```js
-string = form.action;
-form.action = string;
+form.action = "/cgi-bin/publish";
 ```
 
-## Exemple
+## Spécifications
 
-form.action = "/cgi-bin/publish";
+{{Specifications}}
 
-## Spécification
+## Compatibilité des navigateurs
 
-[HTML 5, Section 4.10.19.6, Form submission](https://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method)
-
-[DOM Level 2 HTML: action](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-74049184)
+{{Compat}}

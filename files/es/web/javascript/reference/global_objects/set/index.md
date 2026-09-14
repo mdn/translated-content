@@ -28,7 +28,7 @@ El método [`has`](/es/docs/Web/JavaScript/Reference/Global_Objects/Set/has) de 
 
 ## Propiedades estáticas
 
-- {{jsxref("Set.@@species", "get Set[@@species]")}}
+- {{jsxref("Set/Symbol.species", "get Set[@@species]")}}
   - : La función del constructor que se utiliza para crear objetos derivados.
 
 ## Propiedades de instancia
@@ -49,14 +49,13 @@ El método [`has`](/es/docs/Web/JavaScript/Reference/Global_Objects/Set/has) de 
 
 ### Métodos de iteración
 
-- {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}
+- {{jsxref("Set/Symbol.iterator", "Set.prototype[@@iterator]()")}}
   - : Devuelve un nuevo objeto iterador que genera los **values** de cada elemento del objeto `Set` en el orden de inserción.
 - {{jsxref("Set.prototype.values()")}}
   - : Devuelve un nuevo objeto iterador que genera los **values** de cada elemento del objeto `Set` en el orden de inserción.
 - {{jsxref("Set.prototype.values", " Set.prototype.keys()")}}
   - : Un alias para {{jsxref("Set.prototype.values()")}}.
 - {{jsxref("Set.prototype.entries()")}}
-
   - : Devuelve un nuevo objeto iterador que contiene **un arreglo de `[value, value]`** para cada elemento del objeto `Set`, en orden de inserción.
 
     Esto es similar al objeto {{jsxref("Map")}}, de modo que la _clave_ de cada entrada es la misma que su _valor_ para un `Set`.

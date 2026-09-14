@@ -41,9 +41,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers
 プロトコルハンドラーは 3 つのプロパティを持ち、すべて必須です:
 
 - `protocol`
-
   - : プロトコルを定義する文字列。次のいずれか:
-
     - 次のどれか: "bitcoin", "dat", "dweb", "geo", "gopher", "im", "ipfs", "ipns", "irc", "ircs", "magnet", "mailto", "mms", "news", "nntp", "sip", "sms", "smsto", "ssb", "ssh", "tel", "urn", "webcal", "wtai", "xmpp".
     - "web+" や "ext+"で始まるカスタム名からなる文字列。例えば: "web+foo" や "ext+foo"。カスタム名は小文字の ASCII 文字列でなければならない。拡張機能は "ext+" の形式を使うのが推奨です。
 

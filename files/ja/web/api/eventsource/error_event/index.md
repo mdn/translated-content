@@ -3,12 +3,12 @@ title: "EventSource: error イベント"
 short-title: error
 slug: Web/API/EventSource/error_event
 l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
-{{APIRef}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
-`error` は {{domxref("EventSource")}} API のイベントで、イベントソースとのコネクションを開くのに失敗した場合に発生します。
+**`error`** は {{domxref("EventSource")}} API のイベントで、イベントソースとのコネクションを開くのに失敗した場合に発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
@@ -16,10 +16,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("error", (event) => {});
+```js-nolint
+addEventListener("error", (event) => { })
 
-onerror = (event) => {};
+onerror = (event) => { }
 ```
 
 ## イベント型
@@ -33,12 +33,12 @@ const evtSource = new EventSource("sse.php");
 
 // addEventListener 版
 evtSource.addEventListener("error", (e) => {
-  console.log("An error occurred while attempting to connect.");
+  console.log("接続の試行中にエラーが発生しました。");
 });
 
 // onerror 版
 evtSource.onerror = (e) => {
-  console.log("An error occurred while attempting to connect.");
+  console.log("接続の試行中にエラーが発生しました。");
 };
 ```
 

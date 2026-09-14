@@ -1,21 +1,22 @@
 ---
-title: table.caption
+title: "HTMLTableElement : propriété caption"
+short-title: caption
 slug: Web/API/HTMLTableElement/caption
+l10n:
+  sourceCommit: ea061caed30f127a79157d07c538d26f01b8702b
 ---
 
-{{ ApiRef() }}
+{{APIRef("HTML DOM")}}
 
-### Résumé
+La propriété **`caption`** de l'interface {{DOMxRef("HTMLTableElement")}} représente le premier élément {{HTMLElement("caption")}} enfant du tableau ({{HTMLElement("table")}}) donné, ou `null` si aucun élément de ce type n'existe.
 
-**caption** renvoie la légende du tableau.
+## Valeur
 
-### Syntaxe
+Un objet {{DOMxRef("HTMLTableCaptionElement")}} ou `null`.
 
-```js
-string = table.caption;
-```
+Cette propriété peut être assignée, ce qui entraîne la suppression du premier élément {{HTMLElement("caption")}} enfant existant, le cas échéant, et l'insertion de la valeur donnée, si elle n'est pas `null`, comme premier enfant. Par conséquent, définir `null` a le même effet que d'appeler {{DOMxRef("HTMLTableElement.deleteCaption", "deleteCaption()")}}. Si la valeur assignée n'est pas un {{DOMxRef("HTMLTableCaptionElement")}} ou `null`, une {{JSxRef("TypeError")}} est levée.
 
-### Exemple
+## Exemples
 
 ```js
 if (table.caption) {
@@ -23,11 +24,18 @@ if (table.caption) {
 }
 ```
 
-### Notes
+## Spécifications
 
-Cette propriété ne renvoie rien s'il n'y a aucune légende pour le tableau.
+{{Specifications}}
 
-### Spécification
+## Compatibilité des navigateurs
 
-- [DOM Level 2 HTML&nbsp;: caption](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14594520) ([traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-14594520))
-- [Interface HTMLTableCaptionElement](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-12035137) ([traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-12035137))
+{{Compat}}
+
+## Voir aussi
+
+- La propriété {{DOMxRef("HTMLTableElement.tBodies")}}
+- La propriété {{DOMxRef("HTMLTableElement.tFoot")}}
+- La propriété {{DOMxRef("HTMLTableElement.tHead")}}
+- La méthode {{DOMxRef("HTMLTableElement.createCaption()")}}
+- La méthode {{DOMxRef("HTMLTableElement.deleteCaption()")}}

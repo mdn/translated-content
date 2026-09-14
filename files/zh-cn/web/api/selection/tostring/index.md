@@ -1,11 +1,14 @@
 ---
-title: Selection.toString()
+title: Selection：toString() 方法
+short-title: toString()
 slug: Web/API/Selection/toString
+l10n:
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{ ApiRef("DOM") }}
 
-**`Selection.toString()`** 方法返回 selection 对象当前代表的字符串。例如，当前选中的文本。
+**`Selection.toString()`** 方法会返回一个表示当前选区对象所代表内容（也就是当前被选中的文本）的字符串。
 
 ## 语法
 
@@ -19,17 +22,17 @@ toString()
 
 ### 返回值
 
-selection 对象代表的字符串。
+一个表示选区内容的字符串。
 
 ## 描述
 
-此方法返回当前被选中的文本。
+该方法会返回当前被选中的文本。
 
-在 [JavaScript](/zh-CN/docs/Web/JavaScript) 中，当 selection 对象作为字符串类型传递给函数时，此方法会被自动调用：
+在 [JavaScript](/zh-CN/docs/Web/JavaScript) 中，当某个需要字符串参数的函数接收到选区对象时，会自动调用此方法将其转换为字符串。
 
 ```js
-alert(window.getSelection()); // 被调用时
-alert(window.getSelection().toString()); // 真实情况
+alert(window.getSelection()); // 实际上会调用的方法
+alert(window.getSelection().toString()); // 实际被真正调用的方法
 ```
 
 ## 规范
@@ -40,6 +43,6 @@ alert(window.getSelection().toString()); // 真实情况
 
 {{Compat}}
 
-## 参考
+## 参见
 
-- 属于 {{domxref("Selection")}} 接口。
+- 所属的 {{domxref("Selection")}} 接口。

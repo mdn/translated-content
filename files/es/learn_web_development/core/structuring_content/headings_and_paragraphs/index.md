@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 original_slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
 
 Una de las principales funciones de HTML es dar al texto estructura y significado (también conocido como {{Glossary("semantics", "semántica")}}), de forma que un navegador pueda mostrarlo correctamente. Este articulo explica la forma en que se puede usar {{Glossary("HTML")}} para estructurar una página de texto añadiendo encabezados y párrafos, enfatizando palabras, creando listas y más.
 
@@ -120,8 +120,7 @@ Si te equivocas, siempre puedes restablecer el código anterior pulsando el bot�
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
 Mi breve relato Soy estadístico y mi nombre es Trish.
 
-Mis piernas son de cartón y estoy casada con un pez.</textarea
->
+Mis piernas son de cartón y estoy casada con un pez.</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Restablecer" />
@@ -312,8 +311,7 @@ Edita el siguiente ejemplo para crear tu propia lista HTML no ordenada.
 leche
 huevos
 pan
-hummus</textarea
->
+hummus</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Restablecer" />
@@ -473,8 +471,7 @@ Conduce hasta el final de la calle
 Gira a la derecha
 Sigue derecho por las dos primeras glorietas
 Gira a la izquierda en la tercer glorieta
-La escuela está a tu derecha, 300 metros por más adelante</textarea
->
+La escuela está a tu derecha, 300 metros por más adelante</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Restablecer" />
@@ -637,8 +634,7 @@ Almacenamiento
 
 Refrigera el hummus terminado en un recipiente sellado. Deberías poder usarlo durante aproximadamente una semana después de haberlo hecho. Si comienza a burbujear, definitivamente debes desecharlo.
 
-El hummus es apto para congelar; debes descongelarlo y usarlo en un par de meses.</textarea
->
+El hummus es apto para congelar; debes descongelarlo y usarlo en un par de meses.</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Restablecer" />
@@ -863,8 +859,7 @@ centro comercial en el centro de Milwaukee. Todos ellos
 vistiendo monos verdes y tontos sombreros, y
 al parecer estaban pasando un buen rato. Si alguien
 tiene alguna información sobre este incidente, por favor
-póngase en contacto con la policía ahora.</p></textarea
->
+póngase en contacto con la policía ahora.</p></textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Restablecer" />
@@ -1023,10 +1018,10 @@ Esta es la regla de oro: el uso de `<b>`, `<i>` o `<u>` resulta adecuado cuando 
 
 ## ¡Pon a prueba tus habilidades!
 
-Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Encontrarás más ejercicios con los que comprobar que has retenido esta información antes de seguir adelante en [Pon a prueba tus habilidades: Prueba de conocimientos básicos de HTML](/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics).
+Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Encontrarás más ejercicios con los que comprobar que has retenido esta información antes de seguir adelante en [Pon a prueba tus habilidades: Prueba de conocimientos básicos de HTML](/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics).
 
 ## Resumen
 
 ¡Eso es todo por ahora! Este artículo debería haberte dado una buena idea de cómo comenzar a marcar texto en HTML y te ha presentado algunos de los elementos más importantes en este ámbito. Hay muchos más elementos semánticos para desarrollar en esta área, y veremos muchos más en nuestro artículo [Formateo de texto avanzado](/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features), más adelante en el curso. En el siguiente artículo, veremos en detalle cómo [crear hipervínculos](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links), posiblemente el más importante elemento en la web.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}

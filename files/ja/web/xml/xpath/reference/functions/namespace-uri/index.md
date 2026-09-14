@@ -1,16 +1,15 @@
 ---
 title: namespace-uri
 slug: Web/XML/XPath/Reference/Functions/namespace-uri
-original_slug: Web/XPath/Reference/Functions/namespace-uri
+l10n:
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}{{ XsltRef() }}
 
 `namespace-uri` 関数は、指定されたノード集合内の最初のノードの名前空間 URI を表す文字列を返します。
 
-### 構文
+## 構文
 
-```
+```plain
 namespace-uri( [node-set] )
 ```
 
@@ -23,18 +22,15 @@ namespace-uri( [node-set] )
 
 指定されたノードが属する名前空間の URI を表す文字列。
 
-### 注
+## 解説
 
 - 指定されたノードが特定の名前空間を持たなければ、空文字列が返されます。
-
-<!---->
-
 - 要素ノードおよび属性ノード以外のノードに対しては、常に空文字列が返されます。
 
-### 定義
+## 仕様書
 
-[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-local-name)
+[XPath 1.0 4.1](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-local-name)
 
-### Gecko での対応
+### Gecko の対応
 
 対応済み。

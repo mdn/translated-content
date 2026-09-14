@@ -3,8 +3,6 @@ title: handler.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 ---
 
-{{JSRef}}
-
 **`handler.getPrototypeOf()`** 是一个代理（Proxy）方法，当读取代理对象的原型时，该方法就会被调用。
 
 {{InteractiveExample("JavaScript Demo: handler.getPrototypeOf()", "taller")}}
@@ -62,7 +60,7 @@ const p = new Proxy(obj, {
 - {{jsxref("Reflect.getPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 
 如果遇到了下面两种情况，JS 引擎会抛出 {{jsxref("TypeError")}} 异常：
 
@@ -137,6 +135,6 @@ Object.getPrototypeOf(p); // TypeError: expected same prototype value
 ## 参见
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Reflect.getPrototypeOf()")}}

@@ -17,10 +17,8 @@ void ctx.fill(path[, fillRule]);
 ### Paramètres
 
 - `fillRule`
-
   - : L'algorithme utilisé pour déterminer si un point est à l'intérieur ou à l'extérieur du chemin.
     Valeurs possible:
-
     - `nonzero`
       - : La [règle de remplissage extérieur/intérieur non nul](http://en.wikipedia.org/wiki/Nonzero-rule), qui est la règle par défaut.
     - `evenodd`
@@ -62,8 +60,7 @@ ctx.fill();
 </div>
 <textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.fill();</textarea
->
+ctx.fill();</textarea>
 ```
 
 ```js hidden
@@ -146,8 +143,7 @@ ctx.closePath();
 ctx.fillStyle = "lightblue";
 ctx.lineWidth = 2;
 ctx.fill("nonzero");
-ctx.stroke();</textarea
->
+ctx.stroke();</textarea>
 ```
 
 ```js hidden

@@ -162,4 +162,4 @@ try {
 
 ## Vea También
 
-- {{jsxref("Sentencias/try...catch", "try...catch")}}
+- {{jsxref("Statements/try...catch", "try...catch")}}

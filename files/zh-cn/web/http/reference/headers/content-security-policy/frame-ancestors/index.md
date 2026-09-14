@@ -3,8 +3,6 @@ title: CSP：frame-ancestors
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors
 ---
 
-{{HTTPSidebar}}
-
 HTTP 标头 {{HTTPHeader("Content-Security-Policy")}}（CSP）中的 `frame-ancestors` 指令指定了一个可以包含 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}} 或 {{HTMLElement("embed")}} 等元素的有效父级。
 
 当该指令设置为 `'none'` 时，其作用类似于 {{HTTPHeader("X-Frame-Options")}}`: DENY`（该标头被一些老版本浏览器所支持）。
@@ -46,7 +44,8 @@ Content-Security-Policy: frame-ancestors <space separated list of sources>;
 
 \<source> 可以是如下内容：
 
-> **备注：** `frame-ancestors` 指令的语法类似于其他指令的源列表（source list，如{{CSP("default-src")}}），但不允许 `'unsafe-eval'` 或`'unsafe-inline'` 。它也不会回退使用 `default-src` 的值。仅有如下的源列表是可用的：
+> [!NOTE]
+> `frame-ancestors` 指令的语法类似于其他指令的源列表（source list，如{{CSP("default-src")}}），但不允许 `'unsafe-eval'` 或`'unsafe-inline'` 。它也不会回退使用 `default-src` 的值。仅有如下的源列表是可用的：
 
 - \<host-source>
   - : 一个 Internet 主机的名称或 IP 地址，以及一个可选的 {{Glossary("URL")}} 方案和／或端口号。这些站点的地址可以包含一个可选的引导通配符（星号， `'*'），或者你可以使用通配符`（同样还是， `'*'）作为端口地址`，以示这个源的所有合法端口地址都是有效的。
@@ -54,9 +53,7 @@ Content-Security-Policy: frame-ancestors <space separated list of sources>;
     - `mail.example.com:443`: 匹配所有对于 mail.example.com 在 443 端口的访问意图。
     - `https://store.example.com`: 匹配所有使用 `https:` 访问 store.example.com 的意图。
 - \<scheme-source>
-
   - : 一个 schema 配置，比如'http:'或'https:'。注意，冒号是必要的。你同样也可以指定一个 data schema（但并不推荐）。
-
     - '`data:`' 允许 [`data:` URI](/zh-CN/docs/Web/URI/Reference/Schemes/data) 作为内容源。_这是不安全的，攻击者可以用此来注入恶意代码。请谨慎使用，并不要令其作用于脚本。_
     - `'mediastream:'` 允许 [`mediastream:` URI](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API) 作为内容源。
     - `'blob:'` 允许 [`blob:` URI](/zh-CN/docs/Web/API/Blob) 作为内容源。

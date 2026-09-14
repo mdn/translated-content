@@ -1,27 +1,35 @@
 ---
-title: HTMLFormElement.method
+title: "HTMLFormElement : propriété method"
+short-title: method
 slug: Web/API/HTMLFormElement/method
+l10n:
+  sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`HTMLFormElement.method`** représente la méthode HTTP utilisée pour soumettre un formulaire.
+La propriété **`method`** de l'interface {{DOMxRef("HTMLFormElement")}} représente la méthode {{Glossary("HTTP")}} utilisée pour soumettre l'élément HTML {{HTMLElement("form")}}.
 
-## Syntaxe
+Sauf indication explicite, la méthode par défaut est `get`.
 
-```js
-string = form.method;
-form.method = string;
-```
+## Valeur
+
+Une chaîne de caractères.
 
 ## Exemple
 
 ```js
-document.forms["myform"].method = "post";
+document.forms["my-form"].method = "post";
+
+const formElement = document.createElement("form"); // Crée un formulaire
+document.body.appendChild(formElement);
+console.log(formElement.method); // 'get'
 ```
 
 ## Spécification
 
-[HTML 5, Section 4.10.19.6, Form submission](https://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method)
+{{Specifications}}
 
-[DOM Level 2 HTML: method](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-82545539)
+## Compatibilité des navigateurs
+
+{{Compat}}

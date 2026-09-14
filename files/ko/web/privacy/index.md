@@ -77,28 +77,28 @@ l10n:
 
 ### 기본적으로 HTTPS 사용
 
-[전송 계층 보안(TLS)](/ko/docs/Web/Security/Transport_Layer_Security)은 네트워크를 통한 데이터 전송 중에 데이터를 암호화하여 보안과 개인정보 보호를 제공합니다. 이는 [HTTPS](/ko/docs/Glossary/HTTPS) 프로토콜의 기술입니다. TLS는 전송된 데이터를 제3자가 가로채어 악의적으로 사용하는 것을 방지하므로 개인정보 보호에 유리합니다.
+[전송 계층 보안(TLS)](/ko/docs/Web/Security/Defenses/Transport_Layer_Security)은 네트워크를 통한 데이터 전송 중에 데이터를 암호화하여 보안과 개인정보 보호를 제공합니다. 이는 [HTTPS](/ko/docs/Glossary/HTTPS) 프로토콜의 기술입니다. TLS는 전송된 데이터를 제3자가 가로채어 악의적으로 사용하는 것을 방지하므로 개인정보 보호에 유리합니다.
 
 모든 브라우저는 기본적으로 HTTPS를 요구하는 방향으로 나아가고 있습니다. 이는 이미 사실상 웹에서 이 프로토콜 없이는 할 수 있는 일이 거의 없기 때문입니다.
 
 관련 주제는 다음과 같습니다:
 
-- [인증서 투명성](/ko/docs/Web/Security/Certificate_Transparency)
+- [인증서 투명성](/ko/docs/Web/Security/Defenses/Certificate_Transparency)
   - : 인증서를 모니터링하고 감사하기 위한 공개 표준으로, 잘못된 인증서를 식별하는 데 사용할 수 있는 공개 로그 데이터베이스를 만듭니다.
-- [HTTP 엄격 전송 보안(HSTS)](/ko/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- [HTTP 엄격 전송 보안(HSTS)](/ko/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : HSTS는 서버가 프로토콜 다운그레이드 및 쿠키 하이재킹 공격으로부터 자신을 보호할 수 있도록 클라이언트에게 HTTPS만을 사용하여 서버와 통신할 수 있음을 알리는 데 사용됩니다.
 - [HTTP/2](/ko/docs/Glossary/HTTP_2)
   - : HTTP/2는 기술적으로 암호화를 사용하지 않아도 되지만, 대부분의 브라우저 개발자는 HTTPS와 함께 사용할 때만 지원하므로 보안/개인정보 보호를 강화하는 기능으로 생각할 수 있습니다.
 
 ### "강력한 기능"에 대한 옵트인
 
-잠재적으로 민감한 데이터와 작업에 대한 액세스를 제공하는 "강력한" 웹 API 기능은 [보안 컨텍스트](/ko/docs/Web/Security/Secure_Contexts)에서만 사용할 수 있습니다. 이는 기본적으로 HTTPS 전용을 의미합니다. 뿐만 아니라 이러한 웹 기능은 사용자 권한 시스템 뒤에 숨겨져 있습니다. 사용자는 알림 허용, 위치 데이터 액세스, 전체 화면 모드로 전환, 웹캠에서 미디어 스트림 액세스, 웹 결제 사용 등의 기능을 명시적으로 옵트인해야 합니다.
+잠재적으로 민감한 데이터와 작업에 대한 액세스를 제공하는 "강력한" 웹 API 기능은 [보안 컨텍스트](/ko/docs/Web/Security/Defenses/Secure_Contexts)에서만 사용할 수 있습니다. 이는 기본적으로 HTTPS 전용을 의미합니다. 뿐만 아니라 이러한 웹 기능은 사용자 권한 시스템 뒤에 숨겨져 있습니다. 사용자는 알림 허용, 위치 데이터 액세스, 전체 화면 모드로 전환, 웹캠에서 미디어 스트림 액세스, 웹 결제 사용 등의 기능을 명시적으로 옵트인해야 합니다.
 
 ### 추적 방지 기술
 
 브라우저는 사용자의 개인정보 보호를 자동으로 강화하는 여러 추적 방지 기능을 구현했습니다. 이들 중 다수는 최상위 도메인에서 설정된 쿠키에 접근하거나 추적 스크립트를 실행하는 등의 제3자 사이트의 능력을 차단하거나 제한합니다.
 
-- {{httpheader("Set-Cookie")}} 헤더의 [`SameSite`](/ko/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 속성의 기본값이 `Lax`로 업데이트되어 추적 및 {{glossary("CSRF")}} 공격에 대한 보호를 제공합니다. 자세한 내용은 [SameSite로 제3자 쿠키 제어](/ko/docs/Web/HTTP/Cookies#controlling_third-party_cookies_with_samesite)를 참조하십시오.
+- {{httpheader("Set-Cookie")}} 헤더의 [`SameSite`](/ko/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 속성의 기본값이 `Lax`로 업데이트되어 추적 및 {{glossary("CSRF")}} 공격에 대한 보호를 제공합니다. 자세한 내용은 [SameSite로 제3자 쿠키 제어](/ko/docs/Web/HTTP/Guides/Cookies#controlling_third-party_cookies_with_samesite)를 참조하십시오.
 - 모든 브라우저는 기본적으로 제3자 쿠키를 차단하기 시작했습니다. 자세한 내용은 [브라우저는 제3자 쿠키를 어떻게 처리합니까?](/ko/docs/Web/Privacy/Third-party_cookies#how_do_browsers_handle_third-party_cookies)를 참조하십시오.
 - 브라우저는 특정 상황에서만 제3자 쿠키를 허용하거나 현재 제3자 쿠키가 필요한 일반적인 사용 사례를 대체하는 기술을 구현하고 있습니다. 자세한 내용은 [제3자 쿠키에서 전환](/ko/docs/Web/Privacy/Third-party_cookies#transitioning_from_third-party_cookies) 및 [제3자 쿠키 대체](/ko/docs/Web/Privacy/Third-party_cookies#replacing_third-party_cookies)를 참조하십시오.
 - 여러 브라우저는 URL에서 알려진 추적 매개변수를 제거합니다. 여기에는 Firefox, Safari, Brave가 포함됩니다. 브라우저 확장 프로그램도 이를 도와줍니다. 예를 들어 [ClearURLs](https://addons.mozilla.org/en-GB/firefox/addon/clearurls/)을 참조하십시오.
@@ -171,7 +171,7 @@ l10n:
 
 제3자 리소스는 최신 웹 개발의 필수 요소로 많은 기능을 제공합니다. 그러나 사이트에 허용하는 모든 제3자 리소스는 포함 방법에 따라 동일한 권한을 가질 수 있습니다.
 
-- `<iframe>`을 통해 사이트에 포함된 제3자 콘텐츠 내에서 실행되는 JavaScript는 [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)에 의해 분리되어 최상위 브라우징 컨텍스트에 포함된 다른 스크립트 및 데이터에 접근할 수 없습니다.
+- `<iframe>`을 통해 사이트에 포함된 제3자 콘텐츠 내에서 실행되는 JavaScript는 [동일 출처 정책](/ko/docs/Web/Security/Defenses/Same-origin_policy)에 의해 분리되어 최상위 브라우징 컨텍스트에 포함된 다른 스크립트 및 데이터에 접근할 수 없습니다.
 - 그러나 {{htmlelement("script")}} 요소를 통해 페이지에 직접 포함된 제3자 스크립트는 사이트나 다른 사이트에 호스팅된 스크립트 및 데이터에 접근할 수 있습니다. 이는 사실상 퍼스트 파티(first-party) 코드로 간주됩니다. 이 방식으로 포함된 악성 스크립트는 사용자의 데이터를 비밀리에 훔쳐 제3자 서버로 전송할 수 있습니다.
 
 사이트에서 사용하는 모든 제3자 리소스를 감사하는 것이 중요합니다. 그들이 수집하는 데이터, 요청하는 대상 및 개인정보 보호 정책을 파악하십시오. 신중하게 설계된 개인정보 보호 정책은 이를 위반하는 제3자 스크립트를 사용하면 무용지물이 됩니다.
@@ -190,7 +190,7 @@ l10n:
 - 제3자 리소스를 포함할 때, 개인정보 보호에 미치는 영향을 줄이면서 동일하거나 유사한 효과를 달성할 수 있는 방법이 있는지 고려하십시오. 예를 들어, 사이트에 소셜 미디어 게시물 뷰어를 포함하는 것이 재미있을 수 있지만, 정말 필요한가요? 소셜 미디어 페이지로의 링크가 충분하지 않나요? 또한 일부 제3자 서비스는 개인정보 보호 옵션을 제공합니다. 예를 들어 YouTube의 [비디오 및 재생목록 포함 > 개인정보 보호 모드 켜기](https://support.google.com/youtube/answer/171780)를 참조하십시오.
 - 가능한 경우, 제3자에게 요청할 때 {{httpheader("Referer")}} 헤더를 받지 않도록 차단하십시오. 이는 예를 들어 외부 링크에 [rel="noreferrer"](/ko/docs/Web/HTML/Attributes/rel/noreferrer)를 포함하여 매우 세분화된 방식으로 수행할 수 있습니다. 또는 {{httpheader("Referrer-Policy")}} 헤더를 사용하여 페이지나 사이트에 대해 더 전역적으로 설정할 수 있습니다.
 
-  > [!NOTE] > [Referer 헤더: 개인정보 보호 및 보안 문제](/ko/docs/Web/Security/Referer_header:_privacy_and_security_concerns)도 참조하십시오.
+  > [!NOTE] > [Referer 헤더: 개인정보 보호 및 보안 문제](/ko/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns)도 참조하십시오.
 
 - {{httpheader("Permissions-Policy")}} HTTP 헤더를 사용하여 API "강력한 기능"(예: 알림, 위치 데이터, 웹캠에서 미디어 스트림 액세스 등)에 대한 액세스를 제어하십시오. 이는 제3자 사이트가 이러한 기능으로 예상치 못한 작업을 수행하는 것을 방지하고, 사용자가 이해하지 못할 수 있는 권한 프롬프트로 불필요하게 폭격당하지 않도록 하기 때문에 개인정보 보호에 유용합니다. 또한 {{htmlelement("iframe")}} 요소 내에 포함된 제3자 사이트 내에서 "강력한 기능" 사용을 제어할 수 있습니다.
 
@@ -212,7 +212,7 @@ l10n:
 - 사용자 데이터를 수집하기 위한 자체 솔루션을 구현하려면 무엇을 하는지 이해해야 합니다. 경험이 풍부한 서버 측 개발자 및/또는 보안 엔지니어를 고용하여 시스템을 구현하고 철저히 테스트하십시오. 더 나은 보호를 위해 다중 요소 인증(MFA)을 사용하십시오. 클라이언트 측 앱을 간소화하기 위해 [웹 인증](/ko/docs/Web/API/Web_Authentication_API) 또는 [연합 자격 증명 관리](/ko/docs/Web/API/FedCM_API)와 같은 전용 API를 사용하는 것을 고려하십시오.
 - 사용자 가입 정보를 수집할 때, 사용자의 계정 세부 정보를 쉽게 추측할 수 없도록 강력한 비밀번호를 적용하십시오. 약한 비밀번호는 보안 침해의 주요 원인 중 하나입니다. 사용자가 비밀번호 관리자를 사용하여 복잡한 비밀번호를 생성하고 저장하도록 권장하십시오. 이렇게 하면 비밀번호를 기억하는 것에 대해 걱정하지 않거나 적어두어 보안 위험을 초래하지 않습니다.
 - URL에 민감한 데이터를 포함하지 마십시오. 제3자가 URL을 가로채면(예: {{httpheader("Referer")}} 헤더를 통해) 해당 정보를 훔칠 수 있습니다. 이를 피하기 위해 `GET` 요청 대신 `POST` 요청을 사용하십시오.
-- [콘텐츠 보안 정책](/ko/docs/Web/HTTP/CSP) 및 [권한 정책](/ko/docs/Web/HTTP/Permissions_Policy)과 같은 도구를 사용하여 사이트에서 기능 사용 집합을 강제하여 취약성을 도입하기 어렵게 만드십시오. 이를 수행할 때 주의하십시오. 제3자 스크립트가 작동하는 데 의존하는 기능 사용을 차단하면 사이트 기능이 중단될 수 있습니다. 이는 제3자 리소스를 감사할 때 조사할 수 있는 사항입니다(참조: [제3자 리소스 신중하게 관리](#carefully_manage_third-party_resources)).
+- [콘텐츠 보안 정책](/ko/docs/Web/HTTP/Guides/CSP) 및 [권한 정책](/ko/docs/Web/HTTP/Permissions_Policy)과 같은 도구를 사용하여 사이트에서 기능 사용 집합을 강제하여 취약성을 도입하기 어렵게 만드십시오. 이를 수행할 때 주의하십시오. 제3자 스크립트가 작동하는 데 의존하는 기능 사용을 차단하면 사이트 기능이 중단될 수 있습니다. 이는 제3자 리소스를 감사할 때 조사할 수 있는 사항입니다(참조: [제3자 리소스 신중하게 관리](#carefully_manage_third-party_resources)).
 
 ## 참고 자료
 

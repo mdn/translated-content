@@ -1,11 +1,11 @@
 ---
 title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`TypeError`** オブジェクトは、演算が実行できなくなった時の新しいエラーを表します。特に値が期待された型ではなかった場合です (ただし、それに限りません)。
+**`TypeError`** オブジェクトは、演算が実行できなくなった時の新しいエラーを表します。特に値が期待された型ではなかった場合です（ただし、それに限りません）。
 
 `TypeError` は以下のような場合に発生します。
 
@@ -13,29 +13,33 @@ slug: Web/JavaScript/Reference/Global_Objects/TypeError
 - 変更できない値を変更しようとした場合
 - 適切ではない方法で値を使用しようとした場合
 
+`TypeError` は{{Glossary("serializable object", "シリアライズ可能オブジェクト")}}であり、{{DOMxRef("Window.structuredClone", "structuredClone()")}} で複製したり、[ワーカー](/ja/docs/Web/API/Worker)間で {{domxref("Worker/postMessage()", "postMessage()")}} を用いてコピーしたりすることができます。
+
+`TypeError` は {{jsxref("Error")}} のサブクラスです。
+
 ## コンストラクター
 
-- {{jsxref("Global_Objects/TypeError/TypeError", "TypeError()")}}
+- {{jsxref("TypeError/TypeError", "TypeError()")}}
   - : 新しい `TypeError` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{jsxref("Error.prototype.message", "TypeError.prototype.message")}}
-  - : エラーメッセージです。 ECMA-262 において {{jsxref("TypeError")}} は自身の `message` プロパティを提供するべきとされていますが、 [SpiderMonkey](/ja/docs/Mozilla/Projects/SpiderMonkey) では {{jsxref("Error.prototype.message")}} を継承しています。
-- {{jsxref("Error.prototype.name", "TypeError.prototype.name")}}
-  - : エラー名です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.fileName", "TypeError.prototype.fileName")}}
-  - : このエラーが発生したファイルのパスです。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.lineNumber", "TypeError.prototype.lineNumber")}}
-  - : このエラーが発生したファイル内の行番号です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.columnNumber", "TypeError.prototype.columnNumber")}}
-  - : このエラーが発生した行内の桁番号です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.stack", "TypeError.prototype.stack")}}
-  - : スタックトレースです。 {{jsxref("Error")}} から継承しています。
+_親である {{jsxref("Error")}} から継承したインスタンスプロパティもあります。_
+
+これらのプロパティは `TypeError.prototype` に定義されており、すべての `TypeError` インスタンスで共有されます。
+
+- {{jsxref("Object/constructor", "TypeError.prototype.constructor")}}
+  - : このインスタンスオブジェクトを作成したコンストラクター関数です。`TypeError` インスタンスの場合、初期値は {{jsxref("TypeError/TypeError", "TypeError")}} コンストラクターです。
+- {{jsxref("Error/name", "TypeError.prototype.name")}}
+  - : エラーの型の名前を表します。`TypeError.prototype.name` の場合、初期値は `"TypeError"` です。
+
+## インスタンスメソッド
+
+_親である {{jsxref("Error")}} から継承したインスタンスメソッドもあります。_
 
 ## 例
 
-### TypeError のキャッチ
+### TypeError の捕捉
 
 ```js
 try {
@@ -44,10 +48,7 @@ try {
   console.log(e instanceof TypeError); // true
   console.log(e.message); // "null has no properties"
   console.log(e.name); // "TypeError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 2
-  console.log(e.stack); // "@Scratchpad/2:2:3\n"
+  console.log(e.stack); // エラーのスタック
 }
 ```
 
@@ -55,15 +56,12 @@ try {
 
 ```js
 try {
-  throw new TypeError("Hello", "someFile.js", 10);
+  throw new TypeError("Hello");
 } catch (e) {
   console.log(e instanceof TypeError); // true
   console.log(e.message); // "Hello"
   console.log(e.name); // "TypeError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  console.log(e.stack); // エラーのスタック
 }
 ```
 

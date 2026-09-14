@@ -29,9 +29,7 @@ var detectingLanguages = browser.i18n.detectLanguage(
 - `isReliable`
   - : `真偽値`。検出された言語が確かかどうかを示します。
 - `languages`
-
   - : オブジェクトの `配列`。配列の各項目はさらに 2 個のプロパティを持ちます:
-
     - `language`
       - : {{WebExtAPIRef('i18n.LanguageCode')}}。検出された言語です。
     - `percentage`
@@ -60,7 +58,7 @@ detecting.then(onLanguageDetected);
 {{WebExtExamples}}
 
 > [!NOTE]
-> この API は、Chromium の [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n#method-detectLanguage) API を基にしています。このドキュメンテーションは、Chromium コード内の [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) に由来しています。Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。
+> この API は、Chromium の [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n#method-detectLanguage) API を基にしています。このドキュメンテーションは、Chromium コード内の [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) に由来しています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -17,7 +17,7 @@ l10n:
 - `"block"`
   - : スクロールコンテナーのブロック軸にあるスクロールバーで、行内のテキストの流れに垂直な方向の軸。標準英語のような横書き方向では `"y"` と同じになり、縦書き方向では `"x"` と同じになります。
 - `"inline"`
-  - : スクロールコンテナのインライン軸にあるスクロールバーで、行のテキストの流れに並行な方向の軸。横書き方向の場合は `"x"` と同じで、縦書き方向の場合は `"y"` と同じです。
+  - : スクロールコンテナーのインライン軸にあるスクロールバーで、行のテキストの流れに並行な方向の軸。横書き方向の場合は `"x"` と同じで、縦書き方向の場合は `"y"` と同じです。
 - `"y"`
   - : スクロールコンテナーの縦軸のスクロールバー。
 - `"x"`
@@ -40,4 +40,4 @@ l10n:
 - {{domxref("ScrollTimeline")}}
 - {{domxref("AnimationTimeline")}}, {{domxref("ViewTimeline")}}
 - [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)

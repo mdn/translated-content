@@ -1,18 +1,22 @@
 ---
 title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{Non-standard_Header}}
 
-**`InternalError` オブジェクト** は、 JavaScript エンジンで内部的に発生したエラーを示します。
+**`InternalError`** オブジェクトは、JavaScript エンジンで内部的に発生したエラーを表します。
 
-これは、以下のように何かが大きすぎる時に発生します。
+これは次のように何かが大きすぎる時に発生します。
 
-- "switch case が多すぎる"、
-- "正規表現内の括弧が多すぎる"、
-- "配列の初期化子が大きすぎる"、
-- "再帰が深すぎる"。
+- "switch case が多すぎる"
+- "正規表現内の括弧が多すぎる"
+- "配列の初期化子が大きすぎる"
+- "再帰が深すぎる"
+
+`InternalError` は {{jsxref("Error")}} のサブクラスです。
 
 ## コンストラクター
 
@@ -21,18 +25,18 @@ slug: Web/JavaScript/Reference/Global_Objects/InternalError
 
 ## インスタンスプロパティ
 
-- {{jsxref("Error.prototype.message", "InternalError.prototype.message")}}
-  - : エラーメッセージです。 {{jsxref("Error.prototype.message")}} から継承しています。
-- {{jsxref("Error.prototype.name", "InternalError.prototype.name")}}
-  - : エラー名です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.fileName", "InternalError.prototype.fileName")}}
-  - : このエラーが発生したファイルのパスです。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.lineNumber", "InternalError.prototype.lineNumber")}}
-  - : このエラーが発生したファイル内の行番号です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.columnNumber", "InternalError.prototype.columnNumber")}}
-  - : このエラーが発生した行内の桁番号です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.stack", "InternalError.prototype.stack")}}
-  - : スタックトレースです。 {{jsxref("Error")}} から継承しています。
+_親である {{jsxref("Error")}} から継承したプロパティもあります。_
+
+これらのプロパティは `InternalError.prototype` で定義されており、すべての `InternalError` インスタンスで共有されます。
+
+- {{jsxref("Object/constructor", "InternalError.prototype.constructor")}}
+  - : このインスタンスオブジェクトを作成したコンストラクター関数です。`InternalError` のインスタンスでは、初期値は {{jsxref("InternalError/InternalError", "InternalError")}} コンストラクターです。
+- {{jsxref("Error/name", "InternalError.prototype.name")}}
+  - : エラーの種類の名前を表します。`InternalError.prototype.name` の場合、初期値は `"InternalError"` です。
+
+## インスタンスメソッド
+
+_親である {{jsxref("Error")}} から継承したメソッドがあります_。
 
 ## 例
 
@@ -42,10 +46,9 @@ slug: Web/JavaScript/Reference/Global_Objects/InternalError
 
 ```js
 function loop(x) {
-  if (x >= 10) {
-    // "x >= 10" is the exit condition
-    return;
-  }
+  // "x >= 10" is the exit condition
+  if (x >= 10) return;
+
   // do stuff
   loop(x + 1); // the recursive call
 }
@@ -57,6 +60,7 @@ loop(0);
 ```js example-bad
 function loop(x) {
   if (x >= 1000000000000) return;
+
   // do stuff
   loop(x + 1);
 }
@@ -69,7 +73,7 @@ loop(0);
 
 ## 仕様書
 
-仕様の一部ではありません。
+どの標準にも含まれていません。
 
 ## ブラウザーの互換性
 

@@ -22,14 +22,14 @@ O elemento `animateColor` especifica uma transformação de cor ao longo do temp
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Atributos de eventos da animação](/pt-BR/docs/SVG/Attribute#AnimationEvent "en/SVG/Attribute#AnimationEvent") »
-- [Atributos XLink](/pt-BR/docs/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
-- [Atributos de destino do atributo da animação](/pt-BR/docs/SVG/Attribute#AnimationAttributeTarget "en/SVG/Attribute#AnimationAttributeTarget") »
-- [Atributos de cronometragem da animação](/pt-BR/docs/SVG/Attribute#AnimationTiming "en/SVG/Attribute#AnimationTiming") »
-- [Atributos de valor de animação](/pt-BR/docs/SVG/Attribute#AnimationValue "en/SVG/Attribute#AnimationValue") »
-- [Atributos de animação adicionais](/pt-BR/docs/SVG/Attribute#AnimationAddition "en/SVG/Attribute#AnimationAddition") »
+- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Reference/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Reference/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos de eventos da animação](/pt-BR/docs/Web/SVG/Reference/Attribute#AnimationEvent "en/SVG/Attribute#AnimationEvent") »
+- [Atributos XLink](/pt-BR/docs/Web/SVG/Reference/Attribute#XLink "en/SVG/Attribute#XLink") »
+- [Atributos de destino do atributo da animação](/pt-BR/docs/Web/SVG/Reference/Attribute#AnimationAttributeTarget "en/SVG/Attribute#AnimationAttributeTarget") »
+- [Atributos de cronometragem da animação](/pt-BR/docs/Web/SVG/Reference/Attribute#AnimationTiming "en/SVG/Attribute#AnimationTiming") »
+- [Atributos de valor de animação](/pt-BR/docs/Web/SVG/Reference/Attribute#AnimationValue "en/SVG/Attribute#AnimationValue") »
+- [Atributos de animação adicionais](/pt-BR/docs/Web/SVG/Reference/Attribute#AnimationAddition "en/SVG/Attribute#AnimationAddition") »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### Atributos específicos

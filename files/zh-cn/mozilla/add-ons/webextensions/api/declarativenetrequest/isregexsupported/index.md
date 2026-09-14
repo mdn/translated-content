@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 检查是否支持将某个正则表达式作为 {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}`.regexFilter` 规则的条件。
 
 ## 语法
@@ -20,7 +18,6 @@ let count = browser.declarativeNetRequest.isRegexSupported(
 ### 参数
 
 - `regexOptions`
-
   - : 一个包含要检查的正则表达式的对象。
     - `isCaseSensitive` {{optional_inline}}
       - : `boolean`。正则表达式是否区分大小写。默认值为 `true`。

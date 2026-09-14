@@ -1,11 +1,12 @@
 ---
-title: CSSTransformValue.values()
+title: "CSSTransformValue: values() メソッド"
+short-title: values()
 slug: Web/API/CSSTransformValue/values
 l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 **`CSSTransformValue.values()`** は、 CSSTransformValue オブジェクトの各位置に対応する値を格納した新しい _配列イテレーター_ オブジェクトを返します。
 

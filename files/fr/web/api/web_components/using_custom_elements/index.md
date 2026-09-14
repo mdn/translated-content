@@ -16,7 +16,7 @@ Le contrôleur des éléments personnalisés d'un document Web est l'objet {{dom
 
 Pour enregistrer un élément personnalisé sur la page, vous utilisez la méthode {{domxref ("CustomElementRegistry.define()")}}. Elle prend comme arguments :
 
-- une {{domxref("DOMString")}} représentant le nom que vous donnez à l'élément ; notez que les noms d'éléments personnalisés doivent comprendre un tiret ; ils ne peuvent pas être des mots simples ;
+- une {{jsxref("String")}} représentant le nom que vous donnez à l'élément ; notez que les noms d'éléments personnalisés doivent comprendre un tiret ; ils ne peuvent pas être des mots simples ;
 - un objet de classe définissant le comportement de l'élément ;
 - facultativement, un objet d'options contenant une propriété extends, qui indique l'élément intégré dont votre élément hérite, le cas échéant.
 
@@ -50,7 +50,7 @@ Vous en apprendrez plus à ce sujet dans notre section [Utilisation des rappels 
 Il existe deux types d'éléments personnalisés :
 
 - les **éléments personnalisés autonomes** sont indépendants : ils n'héritent pas des éléments HTML standard ; vous les utilisez sur une page en les écrivant littéralement en tant qu'élément HTML ; par exemple `<popup-info>`, ou `document.createElement("popup-info")` ;
-- les `éléments intégrés personnalisés` héritent des éléments HTML de base. Pour en créer un, vous devez spécifier quel élément ils étendent (comme indiqué dans les exemples ci-dessus), et ils sont utilisés en écrivant l'élément de base, mais en indiquant le nom de l'élément personnalisé dans l'attribut (ou la propriété) [`is`](/fr/docs/Web/HTML/Global_attributes#is) ; par exemple \<p is="word-count"> ou document.createElement("p", {is: "word-count"}).
+- les `éléments intégrés personnalisés` héritent des éléments HTML de base. Pour en créer un, vous devez spécifier quel élément ils étendent (comme indiqué dans les exemples ci-dessus), et ils sont utilisés en écrivant l'élément de base, mais en indiquant le nom de l'élément personnalisé dans l'attribut (ou la propriété) [`is`](/fr/docs/Web/HTML/Reference/Global_attributes#is) ; par exemple \<p is="word-count"> ou document.createElement("p", {is: "word-count"}).
 
 ## Passage en revue de quelques exemples simples
 

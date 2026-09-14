@@ -1,29 +1,28 @@
 ---
 title: "RegExp: lastIndex"
+short-title: lastIndex
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 l10n:
-  sourceCommit: 846e3b1aa04ecceab70d379a9cc0717893707880
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`lastIndex`** は {{jsxref("RegExp")}} インスタンスのデータプロパティで、次の照合を開始する位置を指定します。
 
-{{InteractiveExample("JavaScript Demo: RegExp.lastIndex")}}
+{{InteractiveExample("JavaScript デモ: RegExp.lastIndex")}}
 
 ```js interactive-example
-const regex1 = new RegExp("foo", "g");
-const str1 = "table football, foosball";
+const regex = /foo/g;
+const str = "table football, foosball";
 
-regex1.test(str1);
+regex.test(str);
 
-console.log(regex1.lastIndex);
-// Expected output: 9
+console.log(regex.lastIndex);
+// 予想される結果: 9
 
-regex1.test(str1);
+regex.test(str);
 
-console.log(regex1.lastIndex);
-// Expected output: 19
+console.log(regex.lastIndex);
+// 予想される結果: 19
 ```
 
 ## 値
@@ -34,14 +33,14 @@ console.log(regex1.lastIndex);
 
 ## 解説
 
-このプロパティは、正規表現インスタンスがグローバル検索を示すために `g` フラグを使用した場合、または粘着的検索を示すために `y` フラグを使用した場合にのみ設定されます。{{jsxref("RegExp.prototype.exec()", "exec()")}} が指定された入力に対して呼び出されたとき、以下の規則が適用されます。
+このプロパティは、正規表現インスタンスがグローバル検索を示すために `g` フラグを使用した場合、または粘着的検索を示すために `y` フラグを使用した場合にのみ設定されます。{{jsxref("RegExp/exec", "exec()")}} が指定された入力に対して呼び出されたとき、以下の規則が適用されます。
 
 - `lastIndex` が入力の長さよりも大きい場合、 `exec()` は一致するものを見つけられず、 `lastIndex` は 0 に設定されます。
 - `lastIndex` が入力の長さ以下であった場合、 `exec()` は `lastIndex` から一致するものを探そうとします。
   - `exec()` が一致するものを見つけた場合 `lastIndex` は入力の中の一致する文字列の末尾の位置に設定されます。
   - `exec()` が一致するものを見つけられなかった場合、 `lastIndex` は 0 に設定されます。
 
-他の正規表現関連のメソッド、{{jsxref("RegExp.prototype.test()")}}、{{jsxref("String.prototype.match()")}}、{{jsxref("String.prototype.replace()")}} などは `exec()` を呼び出しので、`lastIndex` における影響は異なります。詳細はそれぞれのページを参照してください。
+他の正規表現関連のメソッド、{{jsxref("RegExp.prototype.test()")}}、{{jsxref("String.prototype.match()")}}、{{jsxref("String.prototype.replace()")}} などは `exec()` を呼び出し、それぞれ `lastIndex` に影響を及ぼします。詳細はそれぞれのページを参照してください。
 
 ## 例
 
@@ -199,11 +198,11 @@ console.log(matchFoo("foo baz", 0)[0]); // "foo"
 
 ## 関連情報
 
-- {{JSxRef("RegExp.prototype.dotAll")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.hasIndices")}}
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
-- {{JSxRef("RegExp.prototype.multiline")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.sticky")}}
-- {{JSxRef("RegExp.prototype.unicode")}}
+- {{jsxref("RegExp.prototype.dotAll")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.hasIndices")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.multiline")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxref("RegExp.prototype.unicode")}}

@@ -3,8 +3,6 @@ title: Firefox 63 для разработчиков
 slug: Mozilla/Firefox/Releases/63
 ---
 
-{{FirefoxSidebar}}
-
 В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 63 был выпущен 23 октября 2018 года.
 
 ## Изменения для веб-разработчиков
@@ -31,13 +29,13 @@ slug: Mozilla/Firefox/Releases/63
 ### CSS
 
 - Добавлена поддержка псевдокласса {{CSSxRef(":defined")}} ([Firefox bug 1331334](https://bugzil.la/1331334)).
-- В [Flexbox-раскладку](/ru/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#the_gap_properties) добавлена поддержка {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} и {{CSSxRef("gap")}} ([Firefox bug 1398483](https://bugzil.la/1398483)).
+- В [Flexbox-раскладку](/ru/docs/Web/CSS/Guides/Box_alignment/In_flexbox#the_gap_properties) добавлена поддержка {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} и {{CSSxRef("gap")}} ([Firefox bug 1398483](https://bugzil.la/1398483)).
 - Снова включена поддержка [запросов pixel-density правила @media](/ru/docs/Web/CSS/@media/-webkit-device-pixel-ratio), у которых есть префикс -webkit ([Firefox bug 1444139](https://bugzil.la/1444139)).
-- Реализована поддержка свойств [CSS Flexible Box Layout](/ru/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}} и {{CSSxRef("align-items")}}, а также {{CSSxRef("justify-content")}} ([Firefox bug 1472843](https://bugzil.la/1472843)).
+- Реализована поддержка свойств [CSS Flexible Box Layout](/ru/docs/Web/CSS/Guides/Flexible_box_layout) (Flexbox) {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}} и {{CSSxRef("align-items")}}, а также {{CSSxRef("justify-content")}} ([Firefox bug 1472843](https://bugzil.la/1472843)).
 - Реализована функция `path` для {{CSSxRef("offset-path")}} ([Firefox bug 1429298](https://bugzil.la/1429298)).
 - Внесены [улучшения синтаксиса из спецификации Media Queries Level 4](/ru/docs/Web/JavaScript/Reference/Errors/Unexpected_type) ([Firefox bug 1472843](https://bugzil.la/1472843)).
 - Свойства `offset-*` переименованы в {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}} и {{CSSxRef("inset-inline-end")}} ([Firefox bug 1464782](https://bugzil.la/1464782)).
-- Добавлена поддержка [prefers-reduced-motion](/ru/docs/Web/CSS/@media/prefers-reduced-motion) ([Firefox bug 1365045](https://bugzil.la/1365045), [Firefox bug 1475462](https://bugzil.la/1475462)).
+- Добавлена поддержка [prefers-reduced-motion](/ru/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) ([Firefox bug 1365045](https://bugzil.la/1365045), [Firefox bug 1475462](https://bugzil.la/1475462)).
 - Свойство {{CSSxRef("resize")}} обзавелось относительно-направленными значениями (`block`, `inline`) ([Firefox bug 1464786](https://bugzil.la/1464786)).
 - Реализована flexbox-раскладка для значений `safe` и `unsafe` в {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}} и {{CSSxRef("justify-content")}} ([Firefox bug 1297774](https://bugzil.la/1297774)).
 - [Логические свойства](/ru/docs/Web/CSS/CSS_logical_properties_and_values) (там, где это необходимо) стали анимируемыми ([Firefox bug 1309752](https://bugzil.la/1309752)).
@@ -72,7 +70,6 @@ _Без изменений._
 #### DOM
 
 - Включены по умолчанию следующие элементы API {{domxref("Web_Animations_API", "Web Animations", "", "1")}} (см. [Firefox bug 1476158](https://bugzil.la/1476158)):
-
   - Свойства {{DOMxRef("Animation.ready", "ready")}} и {{DOMxRef("Animation.finished", "finished")}} {{DOMxRef("Animation")}}, указывающие на {{JSxRef("Promise")}} `ready` и `finished` объекта `Animation`.
   - Свойство {{DOMxRef("Animation.effect", "effect")}} объекта {{DOMxRef("Animation")}}.
   - Интерфейсы {{DOMxRef("KeyframeEffect")}} и {{DOMxRef("AnimationEffect")}}.
@@ -107,7 +104,7 @@ _Без изменений._
 - Интерфейс API {{domxref("Web_Audio_API", "Web Audio", "", "1")}} {{DOMxRef("AudioScheduledSourceNode")}} (и все остальные типы узлов, основанные на нём) теперь выбрасывает корректное исключение (`RangeError`), если время начала узла представляет собой отрицательное значение ([Firefox bug 1413284](https://bugzil.la/1413284)).
 - Минимальные и максимально допустимые значения {{DOMxRef("AudioParam.value", "value")}} объекта {{DOMxRef("AudioParam")}} изменены на минимальное отрицательное число с плавающей запятой одинарной точности (-340,282,346,638,528,859,811,704,183,484,516,925,440) и максимальное положительное число с плавающей запятой одинарной точности (+340,282,346,638,528,859,811,704,183,484,516,925,440) ([Firefox bug 1476695](https://bugzil.la/1476695)).
 - Включена по умолчанию поддержка метода {{DOMxRef("SourceBuffer.changeType")}}, позволяющего изменить кодеки во время активного потока. Это часть API {{domxref("Media_Source_Extensions_API", "Media Source Extensions", "", "1")}} ([Firefox bug 1481166](https://bugzil.la/1481166)).
-- Метод {{DOMxRef("AudioParam.setValueCurveAtTime()")}} обновлён, чтобы корректно принимать массив значений с плавающей запятой для указания значений параметров, которые изменяются со временем. До этого он требовал {{DOMxRef("Float32Array")}} ([Firefox bug 1421091](https://bugzil.la/1421091)).
+- Метод {{DOMxRef("AudioParam.setValueCurveAtTime()")}} обновлён, чтобы корректно принимать массив значений с плавающей запятой для указания значений параметров, которые изменяются со временем. До этого он требовал {{jsxref("Float32Array")}} ([Firefox bug 1421091](https://bugzil.la/1421091)).
 - {{DOMxRef("AudioParam.setValueCurveAtTime()")}} обновлён, чтобы возвращать правильный `TypeError`, если в массиве `values` обнаружено не конечное значение ([Firefox bug 1472095](https://bugzil.la/1472095)).
 - Кроме того, `setValueCurveAtTime()` обновлён таким образом, чтобы, когда параметр заканчивает следовать кривой значений, значение параметра устанавливалось в соответствии с последним значением в списке значений кривой ([Firefox bug 1308436](https://bugzil.la/1308436)).
 - Словарь `RTCRTPStreamStats` переименован в {{DOMxRef("RTCRtpStreamStats")}} согласно прочим словарям WebRTC и спецификации ([Firefox bug 1480498](https://bugzil.la/1480498)).
@@ -182,7 +179,6 @@ _Без изменений._
 - {{WebExtAPIRef("browserAction.getBadgeTextColor()")}} и {{WebExtAPIRef("browserAction.setBadgeTextColor()")}} позволяют получать и настраивать цвет текста значков {{WebExtAPIRef("browserAction")}} ([Firefox bug 1424620](https://bugzil.la/1424620)).
 - Объект `colors` ключа `theme` теперь поддерживает свойства `ntp_text` (для указания цвета текста в новой вкладке) и `ntp_background` (для указания цвета фона) ([Firefox bug 1347204](https://bugzil.la/1347204)).
 - Темы получили возможность настраивать цвет боковых панелей, например, боковой панели закладок ([Firefox bug 1418602](https://bugzil.la/1418602)). Соответствующие свойства:
-
   - `sidebar`: цвет фона.
   - `sidebar_text`: цвет текста.
   - `sidebar_highlight`: цвет фона выделенного элемента.

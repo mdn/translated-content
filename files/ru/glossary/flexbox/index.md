@@ -34,10 +34,10 @@ l10n:
 
 - _[CSS Flexible Box Layout Module Level 1 Specification](https://www.w3.org/TR/css-flexbox-1/)_
 - Руководство по CSS Flexbox:
-  - [Основные понятия о флексбоксе](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+  - [Основные понятия о флексбоксе](/ru/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
   - [Relationship of flexbox to other layout methods](/ru/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
-  - [Выравнивание элементов во флекс-контейнере](/ru/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+  - [Выравнивание элементов во флекс-контейнере](/ru/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
   - [Ordering flex items](/ru/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
   - [Controlling Ratios of flex items along the main axis](/ru/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-  - [Разбираемся с обёртыванием флекс-элементов](/ru/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+  - [Разбираемся с обёртыванием флекс-элементов](/ru/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
   - [Typical use cases of flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)

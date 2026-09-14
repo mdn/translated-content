@@ -5,7 +5,7 @@ slug: Web/API/NodeList/entries
 
 {{APIRef("DOM")}}
 
-La méthode **`NodeList.entries()`** renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant de parcourir toutes les paires clé / valeur contenues dans cet objet . Les valeurs sont des objets {{domxref("Node")}}.
+La méthode **`NodeList.entries()`** renvoie un {{jsxref("Iteration_protocols",'itérateur')}} permettant de parcourir toutes les paires clé / valeur contenues dans cet objet . Les valeurs sont des objets {{domxref("Node")}}.
 
 ## Syntaxe
 
@@ -15,7 +15,7 @@ list.entries();
 
 ### Valeur retournée
 
-renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}}.
+renvoie un {{jsxref("Iteration_protocols","itérateur")}}.
 
 ## Exemple
 

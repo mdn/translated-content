@@ -17,11 +17,11 @@ La propriété `XMLHttpRequest.response` contient le corps de la réponse. Elle 
     </tr>
     <tr>
       <td><code>""</code></td>
-      <td>{{domxref("DOMString")}} (valeur par défaut)</td>
+      <td>{{jsxref("String")}} (valeur par défaut)</td>
     </tr>
     <tr>
       <td><code>"arraybuffer"</code></td>
-      <td>{{domxref("ArrayBuffer")}}</td>
+      <td>{{jsxref("ArrayBuffer")}}</td>
     </tr>
     <tr>
       <td><code>"blob"</code></td>
@@ -37,7 +37,7 @@ La propriété `XMLHttpRequest.response` contient le corps de la réponse. Elle 
     </tr>
     <tr>
       <td><code>"text"</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
     </tr>
     <tr>
       <td><code>"moz-blob"</code> {{non-standard_inline}}</td>
@@ -136,8 +136,7 @@ function load(url, callback) {
 
 - {{domxref("XMLSerializer")}} : Sérialisation d'un arbre DOM en XML
 - Tutoriels MDN couvrant le `XMLHttpRequest` :
-
-  - [Ajax — Pour commencer](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+  - [Ajax — Pour commencer](/fr/docs/Learn_web_development/Core/Scripting/Network_requests)
   - [Utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
   - [HTML dans XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
   - [Fetch API](/fr/docs/Web/API/Fetch_API)

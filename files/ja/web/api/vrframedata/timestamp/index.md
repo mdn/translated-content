@@ -3,7 +3,7 @@ title: VRFrameData.timestamp
 slug: Web/API/VRFrameData/timestamp
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}
 
 **`timestamp`** は {{domxref("VRFrameData")}} インターフェイスの読み取り専用プロパティで、フレームの更新が発生した時刻を表す、常に増加するタイムスタンプ値を返します。
 

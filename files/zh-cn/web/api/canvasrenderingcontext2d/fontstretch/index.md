@@ -9,7 +9,7 @@ l10n:
 
 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 的 **`CanvasRenderingContext2D.fontStretch`** 属性指定绘制文本时字体如何被扩展或压缩。
 
-该属性对应于 CSS 中的 [`font-stretch`](/zh-CN/docs/Web/CSS/font-stretch) 属性，当使用关键字时（百分比值不支持）。
+该属性对应于 CSS 中的 [`font-stretch`](/zh-CN/docs/Web/CSS/Reference/Properties/font-stretch) 属性，当使用关键字时（百分比值不支持）。
 
 ## 值
 

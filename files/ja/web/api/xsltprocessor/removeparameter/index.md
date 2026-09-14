@@ -3,10 +3,10 @@ title: "XSLTProcessor: removeParameter() メソッド"
 short-title: removeParameter()
 slug: Web/API/XSLTProcessor/removeParameter
 l10n:
-  sourceCommit: f8e4bb60080838e2283604c6f5ace423c7dc861e
+  sourceCommit: 87440643d71bf81a5bf4b8fa21db9e3d56ead395
 ---
 
-{{APIRef("XSLT")}}
+{{APIRef("DOM")}}
 
 `removeParameter()` は {{domxref("XSLTProcessor")}} インターフェイスのメソッドで、このプロセッサーにインポートされたスタイルシートから、引数 (`<xsl:param>`) とその値を除去します。
 

@@ -5,7 +5,7 @@ slug: Web/API/CanvasRenderingContext2D/font
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.font`** – свойство Canvas 2D API, определяющее текущие стили рисуемого текста. Это строка, которая использует синтаксис [CSS font](/ru/docs/Web/CSS/font).
+**`CanvasRenderingContext2D.font`** – свойство Canvas 2D API, определяющее текущие стили рисуемого текста. Это строка, которая использует синтаксис [CSS font](/ru/docs/Web/CSS/Reference/Properties/font).
 
 ## Синтаксис
 
@@ -16,7 +16,7 @@ ctx.font = value;
 ### Опции
 
 - `value`
-  - : Строка {{domxref("DOMString")}} с разобранным CSS {{cssxref("font")}} значением. Значение по умолчанию – "10px sans-serif".
+  - : Строка {{jsxref("String")}} с разобранным CSS {{cssxref("font")}} значением. Значение по умолчанию – "10px sans-serif".
 
 ## Примеры
 

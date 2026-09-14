@@ -3,7 +3,7 @@ title: String.prototype.fixed()
 slug: Web/JavaScript/Reference/Global_Objects/String/fixed
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}
 
 ## Сводка
 

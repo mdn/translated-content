@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-{{GlossarySidebar}}
-
 **回车符和换行符**（CR 和 LF）是文本文件用于标记换行的[控制字符](https://zh.wikipedia.org/wiki/控制字符)或[字节码](https://zh.wikipedia.org/wiki/字节码)。
 
 - CR = **回车符号**（Carriage Return，`\r`，十六进制为 `0x0D`，十进制为 13），用于将光标移动到行首，并不前进至下一行。

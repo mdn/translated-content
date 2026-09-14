@@ -3,12 +3,12 @@ title: "HTMLMediaElement: srcObject プロパティ"
 short-title: srcObject
 slug: Web/API/HTMLMediaElement/srcObject
 l10n:
-  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`srcObject`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、 {{domxref("HTMLMediaElement")}} に関連付けられたメディアソースを提供するオブジェクトを設定または取得します。
+**`srcObject`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、 {{domxref("HTMLMediaElement")}} に関連付けられたメディアソースを提供するオブジェクトを設定または取得します。関連付けられていなければ `null` です。
 
 このオブジェクトは {{domxref("MediaStream")}}、{{domxref("MediaSource")}}、{{domxref("Blob")}} や（Blob から派生している） {{domxref("File")}} です。
 
@@ -17,7 +17,7 @@ l10n:
 
 ## 値
 
-{{domxref('MediaStream')}}、{{domxref('MediaSource')}}、{{domxref('Blob')}}、{{domxref('File')}} オブジェクト。（実際に何が対応されているのかは互換性一覧表を確認してください。）
+{{domxref('MediaStream')}}、{{domxref('MediaSource')}}、{{domxref('Blob')}}、{{domxref('File')}} オブジェクト。（実際に何が対応されているのかは互換性一覧表を確認してください。）関連付けられていなければ `null`。
 
 ## 使用上の注意
 
@@ -100,7 +100,7 @@ mediaSource.addEventListener("sourceopen", () => {
 });
 ```
 
-メインスレッドでは、{{domxref("Worker.message_event", "message")}} イベントハンドラーからハンドルを受け取り、 {{htmlelement("video")}} に {{domxref("HTMLMediaElement.srcObject")}} プロパティを通してそれを追加し、{{domxref("HTMLMediaElement.play()", "play")}} ビデオ追加しています。
+メインスレッドでは、{{domxref("Worker.message_event", "message")}} イベントハンドラーからハンドルを受け取り、 {{htmlelement("video")}} に `HTMLMediaElement.srcObject` プロパティを通してそれを追加し、{{domxref("HTMLMediaElement.play()", "play")}} ビデオ追加しています。
 
 ```js
 worker.addEventListener("message", (msg) => {
@@ -110,7 +110,8 @@ worker.addEventListener("message", (msg) => {
 });
 ```
 
-> **メモ:** {{domxref("MediaSourceHandle")}} は、共有ワーカーまたはサービスワーカーへの、または共有ワーカーを介した移譲は正常にはできません。
+> [!NOTE]
+> {{domxref("MediaSourceHandle")}} は、共有ワーカーまたはサービスワーカーへの、または共有ワーカーを介した移譲は正常にはできません。
 
 ## 仕様書
 

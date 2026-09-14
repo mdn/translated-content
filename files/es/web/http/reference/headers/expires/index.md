@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Expires
 original_slug: Web/HTTP/Headers/Expires
 ---
 
-{{HTTPSidebar}}
-
 El encabezado **`Expires`** contiene la fecha y hora en la que se considerará la respuesta caducada.
 
 Fechas inválidas, como el valor 0, representan una fecha en el pasado, esto significa que el recurso ya ha expirado.

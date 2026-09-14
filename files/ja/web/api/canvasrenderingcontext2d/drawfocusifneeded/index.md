@@ -1,25 +1,32 @@
 ---
-title: CanvasRenderingContext2D.drawFocusIfNeeded()
+title: "CanvasRenderingContext2D: drawFocusIfNeeded() メソッド"
+short-title: drawFocusIfNeeded()
 slug: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 **`CanvasRenderingContext2D.drawFocusIfNeeded()`** はキャンバス 2D API のメソッドで、引数で与えられた要素にフォーカスが当たった時に、現在のパスもしくは指定されたパスの周りにフォーカスリングを描画します。
 
 ## 構文
 
-```js
-void ctx.drawFocusIfNeeded(element);
-void ctx.drawFocusIfNeeded(path, element);
+```js-nolint
+drawFocusIfNeeded(element)
+drawFocusIfNeeded(path, element)
 ```
 
 ### 引数
 
-- element
+- `element`
   - : フォーカスしたかどうかをチェックする要素。
 - `path`
   - : 利用する {{domxref("Path2D")}} パス。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -46,7 +53,7 @@ const button2 = document.getElementById("button2");
 
 document.addEventListener("focus", redraw, true);
 document.addEventListener("blur", redraw, true);
-canvas.addEventListener("click", handleClick, false);
+canvas.addEventListener("click", handleClick);
 redraw();
 
 function redraw() {

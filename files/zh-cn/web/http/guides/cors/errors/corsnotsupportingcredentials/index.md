@@ -3,8 +3,6 @@ title: 原因：Credential is not supported if the CORS header 'Access-Control-A
 slug: Web/HTTP/Guides/CORS/Errors/CORSNotSupportingCredentials
 ---
 
-{{HTTPSidebar}}
-
 ## 原因
 
 ```plain

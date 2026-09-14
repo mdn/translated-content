@@ -20,17 +20,17 @@ doctype = document.implementation.createDocumentType(
 ### Paramètres
 
 - _qualifiedNameStr_
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) contenant le nom qualifié comme `svg:svg`.
+  - : est une {{jsxref("String")}} (_chaîne de caractères_) contenant le nom qualifié comme `svg:svg`.
 
 <!---->
 
 - _publicId_
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) contenant l'identifiant `PUBLIC`.
+  - : est une {{jsxref("String")}} (_chaîne de caractères_) contenant l'identifiant `PUBLIC`.
 
 <!---->
 
 - _systemId_
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) contenant les identifiants `SYSTEM`.
+  - : est une {{jsxref("String")}} (_chaîne de caractères_) contenant les identifiants `SYSTEM`.
 
 ## Exemple
 

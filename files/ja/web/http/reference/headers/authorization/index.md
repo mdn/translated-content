@@ -1,16 +1,14 @@
 ---
-title: Authorization
+title: Authorization ヘッダー
+short-title: Authorization
 slug: Web/HTTP/Reference/Headers/Authorization
-original_slug: Web/HTTP/Headers/Authorization
 l10n:
-  sourceCommit: ed041385cf874deec203e820fd415bdcd6f98a19
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`Authorization`** {{Glossary("request header", "リクエストヘッダー")}}を使用すると、ユーザーエージェントをサーバーで認証する資格情報を指定し、保護されたリソースにアクセスすることができます。
 
-`Authorization`ヘッダーは通常、ユーザーエージェントが最初の資格情報を使用しない保護されたリソースのリクエストを試みた後に送信されますが、常に送信されるわけではありません。
+`Authorization` ヘッダーは通常、ユーザーエージェントが最初の資格情報を使用しない保護されたリソースのリクエストを試みた後に送信されますが、常に送信されるわけではありません。
 サーバーは {{HTTPStatus("401", "401 Unauthorized")}} と、 1 つ以上の {{HTTPHeader("WWW-Authenticate")}} ヘッダーを含むメッセージで応答します。
 このヘッダーは、リソースにアクセスするために使用できる認証方式と、クライアントがそれらを使用するために必要な追加情報を示します。
 ユーザーエージェントは、サポートする最も安全な認証方式を提示された中から選択し、ユーザーに資格情報を要求し、その後、エンコードされた資格情報を付加したリソースを `Authorization` ヘッダーで再リクエストします。
@@ -28,7 +26,7 @@ HTTP の **`Authorization`** {{Glossary("request header", "リクエストヘッ
       <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>いいえ</td>
     </tr>
   </tbody>
@@ -58,8 +56,7 @@ Authorization: Digest username=<username>,
 ## ディレクティブ
 
 - `<auth-scheme>`
-
-  - : [認証方式](/ja/docs/Web/HTTP/Guides/Authentication#認証方式)で、視覚情報をエンコードする方法を定義します。
+  - : [認証方式](/ja/docs/Web/HTTP/Guides/Authentication#認証方式)で、資格情報をエンコードする方法を定義します。
     よく使われる方式（大文字小文字の区別なし）には、 [`Basic`](/ja/docs/Web/HTTP/Guides/Authentication#basic_認証方式)、`Digest`、`Negotiate`、`AWS4-HMAC-SHA256` などがあります。
 
     > [!NOTE]
@@ -71,7 +68,6 @@ Authorization: Digest username=<username>,
 ### Basic 認証
 
 - `<credentials>`
-
   - : 資格情報で、指定された方式によってエンコードされています。
 
     > [!NOTE]
@@ -122,7 +118,8 @@ Authorization: Digest username=<username>,
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-> **警告:** {{Glossary("Base64")}} エンコードは簡単に元に戻すことができ、元の名前とパスワードを取得することができます。そのため、 `Basic` 認証には暗号化セキュリティがありません。
+> [!WARNING]
+> {{Glossary("Base64")}} エンコードは簡単に元に戻すことができ、元の名前とパスワードを取得することができます。そのため、 `Basic` 認証には暗号化セキュリティがありません。
 > 認証を使用する際には常に {{Glossary("HTTPS")}} の使用をお勧めしますが、 `Basic` 認証を使用する場合は特にその必要性が強くなります。
 
 HTTP の Basic 認証を使用してサイトをパスワードで保護するために、 Apache または Nginx サーバーを構成する方法の例については、 [HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication)もご覧ください。

@@ -1,35 +1,35 @@
 ---
-title: Selection.type
+title: Selection：type 属性
+short-title: type
 slug: Web/API/Selection/type
+l10n:
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
-**`type`**是 {{domxref("Selection")}} 接口的只读属性，其返回的是{{domxref("DOMString")}}即描述当前选择的类型。
+{{domxref("Selection")}} 接口的 **`type`** 只读属性会返回用于描述当前选区类型的字符串。
 
-## 语法
+## 值
 
-```plain
-value = sel.type
-```
+一个用于描述当前选区类型的字符串。可能的取值包括：
 
-### Value
+- `None`
+  - : 当前尚未进行任何选择。
+- `Caret`
+  - : 选区处于折叠状态（也就是说，光标放在某处文本中，但没有选中任何范围）。
+- `Range`
+  - : 已经选中了一个范围。
 
-{{domxref("DOMString")}} 描述的是当前选择的类型。可能的值为：
+## 示例
 
-- `None`: 当前没有选择。
-- `Caret`: 选区已折叠（即 光标在字符之间，并未处于选中状态）。
-- `Range`: 选择的是一个范围。
+在这个示例中，每次创建新的选区时，事件处理函数都会被触发。`console.log(selection.type)` 会根据光标是停留在文本中的某一个点，还是已经选中了一个范围，来分别输出 `Caret` 或 `Range`。
 
-## 例子
+```js
+let selection;
 
-在下面的示例中，回调函数将在每次进行新的选择时触发。 `console.log(selection.type)` 将会输出 `Caret` 或者 `Range` ，其输出值取决于插入标记是放置在文本中的单个点还是已选择范围。
-
-```plain
-var selection;
-
-document.onselectionchange = function() {
-  console.log('New selection made');
+document.onselectionchange = () => {
+  console.log("已创建新的选区");
   selection = document.getSelection();
   console.log(selection.type);
 };
@@ -43,6 +43,6 @@ document.onselectionchange = function() {
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{domxref("Selection")}}

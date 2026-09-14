@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 542ef6cfd82288925e0a9238b47933f03e2dddca
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}
 
 **`Document.createTouchList()`** メソッドは、新しい {{DOMxRef("TouchList")}} オブジェクトを生成して返します。
 

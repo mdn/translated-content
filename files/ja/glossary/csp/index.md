@@ -13,7 +13,7 @@ CSP ([Content Security Policy](/ja/docs/Web/HTTP/Guides/CSP)) は特定の種類
 
 ### 一般知識
 
-- [Wilkipedia での Content Security Policy](https://en.wikipedia.org/wiki/Content_Security_Policy)
+- [Wikipedia での Content Security Policy](https://en.wikipedia.org/wiki/Content_Security_Policy)
 
 ### 技術知識
 

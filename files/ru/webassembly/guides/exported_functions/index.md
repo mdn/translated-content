@@ -36,7 +36,7 @@ WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
 });
 ```
 
-Здесь мы создаём таблицу (`otherTable`) из JavaScript используя конструктор {{jsxref("WebAssembly.Table")}}, после этого мы загружаем модуль `table.wasm` при помощи функции {{jsxref("WebAssembly.instantiateStreaming()")}}.
+Здесь мы создаём таблицу (`otherTable`) из JavaScript используя конструктор [`WebAssembly.Table`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Table), после этого мы загружаем модуль `table.wasm` при помощи функции [`WebAssembly.instantiateStreaming()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming).
 
 Затем мы получаем объект содержащий все функции, экспортированные из экземпляра модуля. Извлекаем ссылки на эти функции через `tbl.get(),` вызываем их и выводим результат работы в консоль. Затем мы используем `set()` чтобы таблица `otherTable` содержала ссылки на те же функции, что и таблица `tbl`.
 

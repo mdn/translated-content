@@ -1,17 +1,13 @@
 ---
 title: 308 Permanent Redirect
 slug: Web/HTTP/Reference/Status/308
-original_slug: Web/HTTP/Status/308
 l10n:
-  sourceCommit: fcb01c3c48499529a7e846d1887a091433add073
+  sourceCommit: a44f198025a4efab10df30201b59793b8e0fd38c
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`308 Permanent Redirect`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)ステータスコードで、リクエストされたリソースが {{HTTPHeader("Location")}} ヘッダーで示された URL へ完全に移動したことを示します。
 
 このステータスを受信したブラウザーは、自動的に `Location` ヘッダー内の URL のリソースをリクエストし、ユーザーを新しいページにリダイレクトします。
-このレスポンスを受け取った検索エンジンは、リンクを元の URL からリダイレクトされたリソースへと関連付けするため、 {{Glossary("SEO")}} の値を新しい URL に移行させます。
 
 リダイレクトされたリクエストでは、クライアントによってリクエストメソッドと本体が**変更されることはありません**。
 {{HTTPStatus("301", "301 Moved Permanently")}} では、リダイレクトが実行された際にリクエストメソッドと本体を変更しないことが要求されますが、古いクライアントでは、これに誤って対応して代わりに {{HTTPMethod("GET")}} メソッドを使用してしまいます。
@@ -19,7 +15,7 @@ HTTP の **`308 Permanent Redirect`** は[リダイレクトレスポンス](/ja
 > [!NOTE]
 > ウェブアプリケーションによっては、 `308 Permanent Redirect` を標準外かつ他の目的に使用していることがあります。
 > 例えば、 Google Drive はアップロードが不完全に停止したことを表すために、 `308 Resume Incomplete` レスポンスを使用します。
-> Google ドライブのドキュメント内の「[再開可能なダウンロードを実行する](https://developers.google.com/drive/api/guides/manage-uploads)」を参照してください。
+> Google ドライブのドキュメント内の「[再開可能なダウンロードを実行する](https://developers.google.com/workspace/drive/api/guides/manage-uploads)」を参照してください。
 
 ## ステータス
 

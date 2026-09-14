@@ -111,6 +111,6 @@ Mira el artículo [scripts de contenido](/es/docs/Mozilla/Add-ons/WebExtensions/
 
 Los recursos web accesibles son recursos como imágenes, HTML, CSS y JavaScript que tu puedes incluir en la extensión y los quieres hacer accesible a los scripts en segundo plano y los scripts de las páginas. Los recursos que son hechos accesibles desde la web pueden ser referenciados desde scripts de páginas web y scripts de contenido mediante un esquema especial de URI.
 
-Por ejemplo, si un script de contenido quiere insertar algunas imágenes dentro de páginas web, tu puedes incluirlos en la extensión y hacerlos accesibles desde la web. El script de contenido creará y añadirá las etiquetas [`img`](/es/docs/Web/HTML/Element/img) que referencia a las imágenes mediante el atributo `src`.
+Por ejemplo, si un script de contenido quiere insertar algunas imágenes dentro de páginas web, tu puedes incluirlos en la extensión y hacerlos accesibles desde la web. El script de contenido creará y añadirá las etiquetas [`img`](/es/docs/Web/HTML/Reference/Elements/img) que referencia a las imágenes mediante el atributo `src`.
 
 Para aprender más, vea la documentación para la el parámetro [web_accessible_resource](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) del manifest.json.

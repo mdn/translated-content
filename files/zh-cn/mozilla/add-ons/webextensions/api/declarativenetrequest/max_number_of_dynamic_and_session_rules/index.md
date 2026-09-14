@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 扩展可以添加的动态和会话作用域规则的组合最大数。
 
 在 Chrome 中，此限制适用于动态和会话作用域规则的组合。

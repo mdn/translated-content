@@ -17,14 +17,13 @@ const digest = crypto.subtle.digest(algorithm, data);
 
 ### Parámetros
 
-- _`algorithm`_ es un {{domxref("DOMString")}} definiendo la función hash a utilizar. Los valores admitidos son:
-
+- _`algorithm`_ es un {{jsxref("String")}} definiendo la función hash a utilizar. Los valores admitidos son:
   - `SHA-1` (pero no debe utilizarse en aplicaciones criptográficas)
   - `SHA-256`
   - `SHA-384`
   - `SHA-512`
 
-- _`data`_ es un {{jsxref("ArrayBuffer")}} o {{domxref("ArrayBufferView")}} que contiene los datos a ser digitalizados.
+- _`data`_ es un {{jsxref("ArrayBuffer")}} o {{jsxref("TypedArray")}} que contiene los datos a ser digitalizados.
 
 ### Valor de retorno
 

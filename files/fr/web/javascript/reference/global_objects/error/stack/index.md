@@ -1,110 +1,158 @@
 ---
-title: Error.prototype.stack
+title: "Error : propriété stack"
+short-title: stack
 slug: Web/JavaScript/Reference/Global_Objects/Error/stack
+l10n:
+  sourceCommit: 30c9f71e6a6cac4d894688cabf7e4b50af87cfe5
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{Non-standard_Header}}
 
-La propriété non-standard **`stack`** des objets {{jsxref("Error")}} fournit une trace des fonctions qui ont été appelées, dans quel ordre, depuis quelle ligne de quel fichier, et avec quels arguments. La chaine de pile remonte des appels les plus récents jusqu'aux plus anciens, ramenant à l'appel original de la portée globale.
+> [!NOTE]
+> La propriété `stack` est de facto implémentée par tous les principaux moteurs JavaScript, et [le comité de standardisation JavaScript envisage de la standardiser <sup>(angl.)</sup>](https://github.com/tc39/proposal-error-stacks). Vous ne pouvez pas vous fier au contenu précis de la chaîne de la pile à cause des incohérences d'implémentation, mais vous pouvez généralement supposer qu'elle existe et l'utiliser à des fins de débogage.
+
+La propriété non standard **`stack`** d'une instance de {{JSxRef("Error")}} fournit une trace des fonctions appelées, dans quel ordre, depuis quelle ligne et quel fichier, et avec quels arguments. La chaîne de la pile va des appels les plus récents aux plus anciens, jusqu'à l'appel initial dans la portée globale.
+
+## Valeur
+
+Une chaîne de caractères.
+
+Comme la propriété `stack` n'est pas standard, les implémentations diffèrent quant à l'endroit où elle est installée.
+
+- Sous Firefox, c'est une propriété d'accesseur sur `Error.prototype`.
+- Sous Chrome et Safari, c'est une propriété de donnée sur chaque instance d'`Error`, avec le descripteur&nbsp;:
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## Description
 
-Chaque étape sera séparée par une nouvelle ligne, la première partie de la ligne étant le nom de la fonction (si ce n'est pas un appel depuis la portée globale), suivi du signe arobase (@), de l'emplacement du fichier (sauf quand la fonction est le constructeur d'erreur lorsque l'erreur est déclenchée), de deux-points, et, s'il y a un emplacement de fichier, du numéro de ligne. (Notez que l'objet {{jsxref("Error")}} possède aussi les propriétés `fileName`, `lineNumber` et `columnNumber` pour leur récupération à partir de l'erreur déclenchée (mais seulement l'erreur, et pas sa trace)).
+Chaque moteur JavaScript utilise son propre format pour les traces de pile, mais ils sont assez cohérents dans leur structure générale. Chaque implémentation utilise une ligne distincte dans la pile pour représenter chaque appel de fonction. L'appel qui a directement causé l'erreur est placé en haut, et l'appel qui a démarré toute la chaîne d'appels est placé en bas. Voici quelques exemples de traces de pile&nbsp;:
 
-Notez que ceci est le format utilisé par Firefox. Il n'y a aucun formatage standard. Cependant Safari 6+ et Opera 12- utilisent un format très similaire. Les navigateurs utilisant le moteur JavaScript V8 (tel que Chrome, Opera 15+, Navigateur Android) et IE10+, utilisent un format différent (voir la documentation MSDN [error.stack](https://web.archive.org/web/20140210004225/http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx)).
+```js
+function toto() {
+  tata();
+}
 
-**Valeurs des arguments dans la pile :** avant Firefox 14 ([bug Firefox 744842](https://bugzil.la/744842)), le nom d'une fonction étaient suivis par les valeurs des arguments converties en une chaine de caractères entre parenthèses, immédiatement avant le signe arobase (@). Tandis qu'un objet (ou un tableau, etc.) apparaissait sous la forme convertie `"[object Object]"`, et en tant que tel, ne pouvait pas être réévalué en les objets réels, les valeurs scalaires pouvaient être récupérées (bien qu'il soit plus facile — c'est toujours possible dans Firefox 14 — d'utiliser `arguments.callee.caller.arguments`, tout comme le nom de la fonction pouvait être récupéré avec `arguments.callee.caller.name`). `"undefined"` est listé comme `"(void 0)"`. Notez que si des arguments chaines de caractères étaient passés avec des valeurs comme `"@"`, `"("`, `")"` (ou si dans les noms de fichier), vous ne pouviez pas vous reposez facilement sur ceux-ci pour découper la ligne en les parties qui la composent. Par conséquent, dans Firefox 14 et ultérieur, ceci est moins un problème.
+function tata() {
+  truc();
+}
 
-Les différents navigateurs définissent cette valeur à différents instants. Par exemple, Firefox la définit lors de la création d'un objet {{jsxref("Error")}}, tandis que PhantomJS ne la définit que lors du déclenchement de l'{{jsxref("Error")}}, et la [documentation MSDN](https://web.archive.org/web/20140210004225/http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx) semble correspondre à l'implémentation PhantomJS.
+function truc() {
+  console.log(new Error().stack);
+}
+
+toto();
+```
+
+```plain
+#### JavaScriptCore
+truc@filename.js:10:24
+tata@filename.js:6:6
+toto@filename.js:2:6
+global code@filename.js:13:4
+
+#### SpiderMonkey
+truc@filename.js:10:15
+tata@filename.js:6:3
+toto@filename.js:2:3
+@filename.js:13:1
+
+#### V8
+Error
+    at truc (filename.js:10:15)
+    at tata (filename.js:6:3)
+    at toto (filename.js:2:3)
+    at filename.js:13:1
+```
+
+V8 fournit [l'API de trace de pile <sup>(angl.)</sup>](https://v8.dev/docs/stack-trace-api) non standard pour personnaliser la trace de pile, incluant {{JSxRef("Error.captureStackTrace()")}}, {{JSxRef("Error.stackTraceLimit")}} et `Error.prepareStackTrace()`. D'autres moteurs prennent en charge cette API à des degrés divers.
+
+Différents moteurs définissent cette valeur à des moments différents. La plupart des moteurs modernes la définissent lors de la création de l'objet {{JSxRef("Error")}}. Cela signifie que vous pouvez obtenir la pile complète d'appels dans une fonction en utilisant ce qui suit&nbsp;:
+
+```js
+function toto() {
+  console.log(new Error().stack);
+}
+```
+
+Sans avoir à lever une erreur puis à l'intercepter.
+
+Les trames de pile peuvent aussi provenir d'autres éléments que des appels de fonction explicites. Par exemple, les gestionnaires d'évènements, les tâches temporisées et les gestionnaires de promesses démarrent tous leur propre chaîne d'appels. Le code source à l'intérieur des appels à {{JSxRef("Global_Objects/eval", "eval()")}} et au constructeur {{JSxRef("Function")}} apparaît aussi dans la pile&nbsp;:
+
+```js
+console.log(new Function("return new Error('Échec de la fonction')")().stack);
+console.log("====");
+console.log(eval(`new Error("échec de l'évaluation")`).stack);
+```
+
+```plain
+#### JavaScriptCore
+anonymous@
+global code@filename.js:1:65
+====
+eval code@
+eval@[native code]
+global code@filename.js:3:17
+
+#### SpiderMonkey
+anonymous@filename.js line 1 > Function:1:8
+@filename.js:1:65
+
+====
+@filename.js line 3 > eval:1:1
+@filename.js:3:13
+
+#### V8
+Error: Échec de la fonction
+    at eval (eval at <anonymous> (filename.js:1:13), <anonymous>:1:8)
+    at filename.js:1:65
+====
+Error: échec de l'évaluation
+    at eval (eval at <anonymous> (filename.js:3:13), <anonymous>:1:1)
+    at filename.js:3:13
+```
+
+Dans Firefox, vous pouvez utiliser la directive `//# sourceURL` pour nommer une source d'évaluation. Voir la documentation Firefox [Déboguer des sources évaluées <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html).
 
 ## Exemples
 
-Le code HTML suivant démontre l'utilisation de la propriété `stack`.
+### Utiliser la propriété `stack`
 
-```html
-<!doctype html>
-<meta charset="UTF-8" />
-<title>Exemple de Trace de Pile</title>
-<body>
-  <script>
-    function trace() {
-      try {
-        throw new Error("monError");
-      } catch (e) {
-        alert(e.stack);
-      }
-    }
-    function b() {
-      trace();
-    }
-    function a() {
-      b(3, 4, "\n\n", undefined, {});
-    }
-    a("premier appel, premierarg");
-  </script>
-</body>
+Le script suivant montre comment utiliser la propriété `stack` pour afficher une trace de pile dans la fenêtre de votre navigateur. Vous pouvez l'utiliser pour vérifier à quoi ressemble la structure de pile de votre navigateur.
+
+```html hidden
+<div id="output"></div>
 ```
 
-En supposant que ce code a été enregistré comme `C:\exemple.html` sur un système de fichier Windows, il produira un message d'alerte dans une nouvelle fenêtre avec le texte suivant :
-
-À partir de Firefox 30 et ultérieur, ce message contiendra le numéro de colonne ([bug Firefox 762556](https://bugzil.la/762556)) :
-
-```plain
-trace@file:///C:/exemple.html:9:17
-b@file:///C:/exemple.html:16:13
-a@file:///C:/exemple.html:19:13
-@file:///C:/exemple.html:21:9
+```css hidden
+#output {
+  white-space: pre;
+  font-family: monospace;
+}
 ```
-
-De Firefox 14 à Firefox 29 :
-
-```plain
-trace@file:///C:/exemple.html:9
-b@file:///C:/exemple.html:16
-a@file:///C:/exemple.html:19
-@file:///C:/exemple.html:21
-```
-
-Firefox 13 et antérieur aurait produit à la place le texte suivant :
-
-```plain
-Error("monError")@:0
-trace()@file:///C:/exemple.html:9
-b(3,4,"\n\n",(void 0),[object Object])@file:///C:/exemple.html:16
-a("premier appel, premierarg")@file:///C:/exemple.html:19
-@file:///C:/exemple.html:21
-```
-
-### Pile d'un code evalué
-
-À partir de Firefox 30, la pile d'erreur du code dans les appels à `Function()` et `eval()` produit désormais des piles avec des informations plus détaillées sur les numéros de lignes et de colonnes dans ces appels. Les appels de fonction sont indiqués par `"> Function"` et les appels d'`eval` par `"> eval"`. Voir [bug Firefox 332176](https://bugzil.la/332176).
 
 ```js
+function trace() {
+  throw new Error("échec de trace()");
+}
+function b() {
+  trace();
+}
+function a() {
+  b(3, 4, "\n\n", undefined, {});
+}
 try {
-  new Function("throw new Error()")();
+  a("premier appel, premier argument");
 } catch (e) {
-  console.log(e.stack);
+  document.getElementById("output").textContent = e.stack;
 }
-
-// anonymous@file:///C:/exemple.html line 7 > Function:1:1
-// @file:///C:/exemple.html:7:6
-
-try {
-  eval("eval('ÉCHEC')");
-} catch (x) {
-  console.log(x.stack);
-}
-
-// @file:///C:/exemple.html line 7 > eval line 1 > eval:1:1
-// @file:///C:/exemple.html line 7 > eval:1:1
-// @file:///C:/exemple.html:7:6
 ```
 
-Vous pouvez aussi utiliser la directive `//# sourceURL` pour nommer une source eval. Voir aussi [Déboguer des sources évaluées](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html) dans les docs [Débogueur](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html), ainsi que ce [blog post](https://fitzgeraldnick.com/weblog/59/).
+{{EmbedLiveSample("Utiliser la propriété `stack`", 700, 200)}}
 
 ## Spécifications
 
-Ne fait partie d'aucune spécification. Non-standard.
+Ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
@@ -112,6 +160,6 @@ Ne fait partie d'aucune spécification. Non-standard.
 
 ## Voir aussi
 
-- Projets externes : [TraceKit](https://github.com/csnover/TraceKit/) et [javascript-stacktrace](https://github.com/eriwen/javascript-stacktrace)
-- MSDN : docs [error.stack](https://web.archive.org/web/20140210004225/http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx)
-- [Overview of the V8 JavaScript stack trace API](https://github.com/v8/v8/wiki/Stack%20Trace%20API)
+- [TraceKit <sup>(angl.)</sup>](https://github.com/csnover/TraceKit/)
+- [stacktrace.js <sup>(angl.)</sup>](https://github.com/stacktracejs/stacktrace.js)
+- [L'API de trace de pile <sup>(angl.)</sup>](https://v8.dev/docs/stack-trace-api) dans la documentation V8

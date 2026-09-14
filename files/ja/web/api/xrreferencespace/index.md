@@ -27,12 +27,11 @@ _`XRReferenceSpace` には以下のメソッド以外に、 {{domxref("EventTarg
 ## イベント
 
 - {{domxref("XRReferenceSpace.reset_event", "reset")}}
-
   - : `reset` イベントは、追跡対象オブジェクトの原点とユーザーの環境または場所の間で不連続性が発生したことをブラウザーが検出すると、 {{domxref("XRReferenceSpace")}} オブジェクトに送信されます。 これは、例えば、ユーザーが XR 機器を再調整した後や、追跡を失って回復した後に機器が原点を自動的に調整した場合に発生する可能性があります。
 
 ## 参照空間型
 
-参照空間の種類を下表に示し、その使用例とどのインターフェースで実装されているかについての簡単な情報を示す。
+参照空間の種類を下表に示し、その使用例とどのインターフェイスで実装されているかについての簡単な情報を示す。
 
 - `bounded-floor`
   - : {{domxref("XRBoundedReferenceSpace")}} で、 `local` 型と同様ですが、返されたオブジェクトの {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} によって指定された所定の境界の外にユーザーが移動することは想定されていません。

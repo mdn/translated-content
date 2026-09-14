@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
-{{GlossarySidebar}}
-
 **实际参数**（Argument）是作为输入传递给{{Glossary("function", "函数")}}的{{glossary("value", "值")}}，可以是{{Glossary("primitive", "原始值")}}或{{Glossary("object", "对象")}}。不要将实际参数与{{Glossary("parameter", "形式参数")}}混淆：形式参数是函数定义中用于引用实际参数的名称。
 
 例如：

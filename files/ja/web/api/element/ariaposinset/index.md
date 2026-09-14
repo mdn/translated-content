@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaPosInSet`** は {{domxref("Element")}} インターフェイスのプロパティで、現在のリストアイテムまたはツリーアイテムの集合における要素の番号または位置を定義する [`aria-posinset`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) 属性の値を反映します。
+**`ariaPosInSet`** は {{domxref("Element")}} インターフェイスのプロパティで、現在のリストアイテムまたはツリーアイテムの集合における要素の番号または位置を定義する [`aria-posinset`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) 属性の値を反映します。
 
 ## 値
 

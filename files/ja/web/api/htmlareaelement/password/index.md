@@ -1,15 +1,20 @@
 ---
 title: "HTMLAreaElement: password プロパティ"
+short-title: password
 slug: Web/API/HTMLAreaElement/password
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 8cc63f7e6619446ea38f6a38c457a597a9af564b
 ---
 
 {{ApiRef("HTML DOM")}}
 
-**`HTMLAreaElement.password`** プロパティは、ドメイン名の前で指定されたパスワードが入った文字列です。
+**`password`** は {{domxref("HTMLAreaElement")}} インターフェイスのプロパティで、 `<area>` 要素の `href` のパスワード成分が入った文字列です。 URL にパスワードが存在しなかった場合、このプロパティには空文字列 (`""`) が入ります。
 
-先に [`username`](/ja/docs/Web/API/HTMLAreaElement/username) プロパティを設定せずに設定しようとすると、暗黙のうちに失敗します。
+このプロパティを設定すると、URL のパスワードを変更することができます。URL に{{domxref("HTMLAreaElement.host", "ホスト名")}}が存在しない場合、またはそのスキームが `file:` の場合、このプロパティを設定しても効果はありません。
+
+パスワードは設定時に{{Glossary("Percent-encoding", "パーセントエンコード")}}されますが、読み取り時にはパーセントデコードされません。
+
+詳細については、 {{domxref("URL.password")}} を参照してください。
 
 ## 値
 

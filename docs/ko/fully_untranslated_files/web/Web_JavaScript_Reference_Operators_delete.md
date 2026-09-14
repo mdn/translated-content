@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/delete
 
 **`delete`** **연산자** 는 객체의 속성을 제거합니다. 제거한 객체의 참조를 어디에서도 사용하지 않는다면 나중에 자원을 회수합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - delete operator")}}
+
+```js interactive-example
+const Employee = {
+  firstname: "Maria",
+  lastname: "Sanchez",
+};
+
+console.log(Employee.firstname);
+// Expected output: "Maria"
+
+delete Employee.firstname;
+
+console.log(Employee.firstname);
+// Expected output: undefined
+```
 
 ## 구문
 
@@ -46,7 +61,6 @@ delete object["property"];
 - 만약 존재하지 않는 속성을 삭제하려고 하면 delete는 어떠한 작업도 없이 true를 반환합니다.
 - 오브젝트의 프로토타입 체인에 같은 이름의 속성이 있다면, 삭제 후에, 오브젝트의 프로토타입체인을 통해 프로퍼티를 사용 할 수 있습니다. (즉, `delete`는 오직 자신의 프로퍼티만 삭제 합니다.
 - {{jsxref("Statements/var","var")}}로 선언된 어떠한 프로퍼티라도 글로벌 스코프나 펑션 스코프로부터 삭제될 수 없습니다.
-
   - 결국, `delete`는 글로벌 스코프의 어떤 함수도 삭제 할 수 없습니다. (함수 정의식이건 함수 표현식이건 삭제 불가)
   - 오브젝트의 속성으로 있는 함수인 경우(글로벌 스코프를 제외하고)는 `delete`로 삭제할 수 있습니다.
 

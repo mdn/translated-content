@@ -1,5 +1,5 @@
 ---
-title: "PushManager : la propriété statique supportedContentEncodings"
+title: "PushManager : propriété statique supportedContentEncodings"
 short-title: supportedContentEncodings
 slug: Web/API/PushManager/supportedContentEncodings_static
 l10n:

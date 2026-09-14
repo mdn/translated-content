@@ -24,7 +24,7 @@ ARIA は `table`, `grid`, `treegrid` 構造に関する情報を提供するた�
 
 DOM に存在する一連の列が連続しており、複数の行や列にまたがるセルが存在しない場合、 `aria-colindex` を各行の 1 行目に設定するだけでよくなります。列が連続していない場合は、各行の子要素または自分自身で所有する要素すべてに `aria-colindex` の値を記載します。
 
-次の例は 6 列のグリッドを表示させており、そのうち 1、2、5、6 列目がユーザーに表示されます。表を構成する列の総数は表自体で `aria-colcount="6"` として設定します。列は連続していないので、すべての [`cell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) - この場合、[`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role) と [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)要素 - には `aria-colindex` 属性が設定されています。
+次の例は 6 列のグリッドを表示させており、そのうち 1、2、5、6 列目がユーザーに表示されます。表を構成する列の総数は表自体で `aria-colcount="6"` として設定します。列は連続していないので、すべての [`cell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) - この場合、[`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) と [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)要素 - には `aria-colindex` 属性が設定されています。
 
 ```html
 <div role="grid" aria-colcount="6">
@@ -97,9 +97,9 @@ ARIA 使用の最初のルールは、「要素を再利用し、それをアク
 
 継承先のロール:
 
-- [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
 - [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-- [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
+- [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
 
 ## 仕様書
 
@@ -115,6 +115,6 @@ ARIA 使用の最初のルールは、「要素を再利用し、それをアク
 - HTML {{HTMLElement('td')}} 要素
 
 <section id="Quick_links">
-<strong><a href="/ja/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA 状態とプロパティ</a></strong>
+<strong><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Attributes">WAI-ARIA 状態とプロパティ</a></strong>
 {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/aria/Attributes")}}
 </section>

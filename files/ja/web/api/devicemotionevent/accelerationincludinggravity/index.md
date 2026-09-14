@@ -12,7 +12,8 @@ l10n:
 
 この値は {{DOMxRef("DeviceMotionEvent.acceleration")}} ほど有益な値ではありません。しかし、ジャイロスコープを持たない端末など、加速度データから重力を解除できない端末では、この値しか利用できない場合があります。
 
-> **メモ:** `accelerationIncludingGravity` の名前は誤解を招く可能性があります。このプロパティは重力の影響を含めるために加速度を表します。例えば、機器が水平な画面に横たわり、画面が上向きになっている場合、重力は Z 軸に沿って -9.8 となり、`acceleration.z` は 0、`accelerationIncludingGravity.z` は 9.8 となります。同様に、機器が水平で画面を上に向けて自由落下している場合、重力は Z 軸に沿って -9.8 となり、`acceleration.z` は -9.8、`accelerationIncludingGravity.z` は 0 となります。
+> [!NOTE]
+> `accelerationIncludingGravity` の名前は誤解を招く可能性があります。このプロパティは重力の影響を含めるために加速度を表します。例えば、機器が水平な画面に横たわり、画面が上向きになっている場合、重力は Z 軸に沿って -9.8 となり、`acceleration.z` は 0、`accelerationIncludingGravity.z` は 9.8 となります。同様に、機器が水平で画面を上に向けて自由落下している場合、重力は Z 軸に沿って -9.8 となり、`acceleration.z` は -9.8、`accelerationIncludingGravity.z` は 0 となります。
 
 ## 値
 
@@ -41,4 +42,4 @@ l10n:
 - {{DOMxRef("DeviceOrientationEvent")}}
 - {{DOMxRef("Accelerometer")}}
 - [端末の方向の検出](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [方向および動きとして示されるデータ](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- [方向と動きのデータの解説](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)

@@ -3,8 +3,6 @@ title: webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
 ---
 
-{{AddonSidebar}}
-
 Le nombre maximum de fois que `{{WebExtAPIRef("webRequest.handlerBehaviorChanged", "handlerBehaviorChanged()")}}` peut être appelé dans une période de 10 minutes.
 
 Cette propriété est en lecture seule.
@@ -18,8 +16,6 @@ Cette propriété est en lecture seule.
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

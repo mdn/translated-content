@@ -28,7 +28,6 @@ setTimeout(functionRef, delay, param1, param2, /* ... ,*/ paramN);
 - `code`
   - : Une syntaxe alternative qui permet d'inclure une chaîne de caractères plutôt qu'une fonction. Le code contenu est compilé et exécuté lorsque le minuteur expire. Cette syntaxe est **déconseillée** pour les mêmes raisons qu'[`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval) et représente un risque de sécurité.
 - `delay` {{optional_inline}}
-
   - : La durée, exprimée en millisecondes, que le minuteur devrait attendre avant l'exécution de la fonction indiquée. Si ce paramètre est absent, c'est 0 qui est utilisé comme valeur par défaut, indiquant que la fonction doit être exécutée au plus vite, c'est-à-dire au prochain cycle d'évènements.
 
     Que le paramètre soit fourni ou non, la durée attendue avant l'exécution peut être plus longue que le nombre de millisecondes exprimées, voir [les raisons pour lesquelles la durée effective est plus longue](#raisons_pour_lesquelles_la_durée_effective_est_plus_longue) ci-après.
@@ -36,7 +35,6 @@ setTimeout(functionRef, delay, param1, param2, /* ... ,*/ paramN);
     On notera également que si la valeur n'est pas un nombre, [une conversion implicite](/fr/docs/Glossary/Type_coercion) est effectuée pour transformer la valeur en un nombre. Voir [un exemple de conversion de valeur non-numérique pour la durée](#conversion_de_valeur_non-numérique_pour_le_durée) ci-après.
 
 - `param1`, …, `paramN` {{optional_inline}}
-
   - : Des arguments additionnels qui sont passés à la fonction donnée par l'argument `function`.
 
 ### Valeur de retour

@@ -3,8 +3,6 @@ title: Map.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 ---
 
-{{JSRef}}
-
 {{jsxref("Map")}} 实例的 **`delete()`** 方法从该 map 中删除指定键的元素。
 
 {{InteractiveExample("JavaScript Demo: Map.prototype.delete()")}}

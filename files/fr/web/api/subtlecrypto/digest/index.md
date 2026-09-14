@@ -17,14 +17,13 @@ const digest = crypto.subtle.digest(algorithm, data);
 
 ### Paramètres
 
-- _`algorithm`_ est une {{domxref("DOMString")}} indiquant la fonction de condensé à utiliser. Les valeurs possibles sont:
-
+- _`algorithm`_ est une {{jsxref("String")}} indiquant la fonction de condensé à utiliser. Les valeurs possibles sont:
   - `SHA-1` (ne pas utiliser pour des applications cryptographiques)
   - `SHA-256`
   - `SHA-384`
   - `SHA-512`.
 
-- _`data`_ est un {{jsxref("ArrayBuffer")}} ou un {{domxref("ArrayBufferView")}} contenant les données à traiter.
+- _`data`_ est un {{jsxref("ArrayBuffer")}} ou un {{jsxref("TypedArray")}} contenant les données à traiter.
 
 ### Valeur retournée
 
@@ -32,7 +31,7 @@ const digest = crypto.subtle.digest(algorithm, data);
 
 ## Algorithmes supportés
 
-Les algorithmes de condensé, aussi connue sous le nom de [fonctions de hachage cryptographique](/fr/docs/Glossary/Cryptographic_hash_function), transforme un bloque de données de longueur arbitraire dans un résultat de taille fixe, souvent plus petit que l'entré. Ils ont de nombreuses utilisations en cryptographie.
+Les algorithmes de condensé, aussi connue sous le nom de [fonctions de hachage cryptographique](/fr/docs/Glossary/Hash_function), transforme un bloque de données de longueur arbitraire dans un résultat de taille fixe, souvent plus petit que l'entré. Ils ont de nombreuses utilisations en cryptographie.
 
 ### SHA-1
 

@@ -7,7 +7,8 @@ slug: Web/API/HTMLCollection/item
 
 {{domxref("HTMLCollection")}} 의 메소드 `item()` 은 컬렉션 안의 특정 인덱스에 위치한 노드를 반환합니다.
 
-> **참고:**`HTMLCollection`은 실시간이기 때문에, DOM을 변경하면 컬렉션 내의 노드도 변경됩니다. 따라서, 한 노드의 인덱스 값이 항상 일정하지는 않습니다.
+> [!NOTE]
+> `HTMLCollection`은 실시간이기 때문에, DOM을 변경하면 컬렉션 내의 노드도 변경됩니다. 따라서, 한 노드의 인덱스 값이 항상 일정하지는 않습니다.
 
 ## Syntax
 

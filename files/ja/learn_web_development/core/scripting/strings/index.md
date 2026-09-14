@@ -1,13 +1,12 @@
 ---
-title: テキストの扱い — JavaScript での文字列
+title: テキスト処理 — JavaScript での文字列
+short-title: 文字列
 slug: Learn_web_development/Core/Scripting/Strings
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: fdfe2889acd02623047231e39c9dee5df1bd646e
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}
 
 次に、文字列に注目しましょう。プログラミングでは、テキストの断片をこう呼びます。この記事では、文字列の作成、文字列内の引用符のエスケープ、文字列の結合など、JavaScript を学ぶ上で実に知っておくべき文字列に関する共通事項をすべて見ていきます。
 
@@ -60,7 +59,7 @@ const badString2 = 'これはテストです;
 const badString3 = これはテストです';
 ```
 
-これらの行は動作しません。引用符で囲まれていないテキストは、変数名、プロパティ名、予約語などと解釈されるからです。ブラウザーが引用符で囲まれていないテキストを認識できない場合、エラーが発生します（"missing; before statement" など）。ブラウザーが文字列の開始を検出できても（2 つ目の引用符がないために）終了を検出できなかった場合、 "unterminated string literal" エラーが報告されます。もしプログラムでこのようなエラーが発生するのであれば、文字列をすべて調べて、引用符の欠落がないことを確認してください。
+これらの行は動作しません。引用符で囲まれていないテキストは、変数名、プロパティ名、予約語などと解釈されるからです。ブラウザーが引用符で囲まれていないテキストを認識できない場合、エラーが発生します（"missing; before statement" など）。ブラウザーが文字列の始まる位置を検出できても、（2 つ目の引用符が欠落しているため）終了位置を検出できない場合、「未終了の文字列リテラル」エラーを報告したり、コンソール上で新しい行に移動して、その場所で文字列を完了させるよう促したりすることがあります。もしプログラムでこのようなエラーが発生するのであれば、文字列をすべて調べて、引用符の欠落がないことを確認してください。
 
 以下は、 `string` という変数を定義していれば動作します。試してみましょう。
 
@@ -93,10 +92,10 @@ const badQuotes = 'これは許されません！";
 
 一重引用符で宣言された文字列と二重引用符で宣言された文字列は同じで、どちらを使用するかは個人の環境設定によりますが、一つのスタイルを選んでコードで一貫して使用するのが良い習慣です。
 
-逆引用符を使用して宣言された文字列は、[_テンプレートリテラル_](/ja/docs/Web/JavaScript/Reference/Template_literals)と呼ばれる特殊な文字列です。ほとんどの点で、テンプレートリテラルは普通の文字列と同じですが、いくつかの特別な特性があります。
+逆引用符を使用して宣言された文字列は、[_テンプレートリテラル_](/ja/docs/Web/JavaScript/Reference/Template_literals)と呼ばれる特殊な文字列です。テンプレートリテラルは、通常の文字列とほぼ同じように動作しますが、いくつかの特別な特性があります。
 
 - [JavaScript を埋め込む](#javascript_の埋め込み)ことができます。
-- テンプレートリテラルは[複数行](#multiline_strings)に渡って宣言できます。
+- テンプレートリテラルは[複数行](#複数行の文字列)に渡って宣言できます。
 
 ## JavaScript の埋め込み
 
@@ -123,24 +122,24 @@ console.log(joined); // "Hello, how are you?"
 
 実際に使用されている連結を見てみましょう。
 
-```html
+```html live-sample___string-concat
 <button>押してね</button>
 <div id="greeting"></div>
 ```
 
-```js
+```js live-sample___string-concat
 const button = document.querySelector("button");
 
 function greet() {
   const name = prompt("あなたの名前は?");
   const greeting = document.querySelector("#greeting");
-  greeting.textContent = `${name} さん、こんにちは。はじめまして！`;
+  greeting.textContent = `${name}さん、こんにちは。はじめまして！`;
 }
 
 button.addEventListener("click", greet);
 ```
 
-{{ EmbedLiveSample('Concatenation_in_context', '100%', 50) }}
+{{EmbedLiveSample('string-concat', , '50', , , , , 'allow-modals')}}
 
 ここでは {{domxref("window.prompt()", "window.prompt()")}} 関数を使用して、テキストを入力できるポップアップダイアログを表示し、ユーザーによって入力された文字列を変数へ、この場合は `name` 変数へ格納しています。そして、その名前を一般的な挨拶メッセージに挿入する文字列を表示します。
 
@@ -149,17 +148,17 @@ button.addEventListener("click", greet);
 `${}` は通常の文字列ではなく、テンプレートリテラルを使用することができます。通常の文字列は `+` 演算子を使用して連結することができます。
 
 ```js
-const greeting = "Hello";
-const name = "Chris";
-console.log(greeting + ", " + name); // "Hello, Chris"
+const greeting2 = "Hello";
+const name2 = "Bob";
+console.log(greeting2 + ", " + name2); // "Hello, Bob"
 ```
 
 しかし、通常、テンプレートリテラルを使用すると、より読みやすいコードになります。
 
 ```js
-const greeting = "Hello";
-const name = "Chris";
-console.log(`${greeting}, ${name}`); // "Hello, Chris"
+const greeting3 = "Howdy";
+const name3 = "Ramesh";
+console.log(`${greeting3}, ${name3}`); // "Howdy, Ramesh"
 ```
 
 ### 文字列内に式を含める
@@ -194,8 +193,8 @@ what you had to do, and began,
 通常の文字列を使用して同等の出力をするためには、文字列の中に改行文字 (`\n`) を記載する必要があります。
 
 ```js
-const newline = "One day you finally knew\nwhat you had to do, and began,";
-console.log(newline);
+const newline2 = "One day you finally knew\nwhat you had to do, and began,";
+console.log(newline2);
 
 /*
 One day you finally knew
@@ -234,9 +233,9 @@ console.log(bigmouth);
 では、文字列と数字を組み合わせるとどうなるのでしょうか。コンソールで試してみましょう。
 
 ```js
-const name = "フロント ";
+const coolBandName = "Front ";
 const number = 242;
-console.log(name + number); // "フロント 242"
+console.log(coolBandName + number); // "Front 242"
 ```
 
 エラーを返すと思うかもしれませんが、これはうまく動作します。数値が文字列としてどのように表示されるべきかはかなり厳密に定義されているので、ブラウザーは自動的に数値を文字列に変換し、 2 つの文字列を連結します。
@@ -267,4 +266,4 @@ console.log(name + number); // "フロント 242"
 
 以上、JavaScript で文字列のごく基本的なことを説明しました。次の記事では、JavaScript で文字列に利用できる組み込みメソッドと、それらを使用して文字列を思い通りの形に操作することができる方法を見ていきます。
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}

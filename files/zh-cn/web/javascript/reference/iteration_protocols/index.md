@@ -3,8 +3,6 @@ title: 迭代协议
 slug: Web/JavaScript/Reference/Iteration_protocols
 ---
 
-{{jsSidebar("More")}}
-
 **迭代协议**并不是新的内置实现或语法，而是*协议*。这些协议可以被任何遵循某些约定的对象来实现。
 
 迭代协议具体分为两个协议：[可迭代协议](#可迭代协议)和[迭代器协议](#迭代器协议)。
@@ -36,7 +34,6 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 所有迭代器协议的方法（`next()`、`return()` 和 `throw()`）都应返回实现 `IteratorResult` 接口的对象。它必须有以下属性：
 
 - `done` {{optional_inline}}
-
   - : 如果迭代器能够生成序列中的下一个值，则返回 `false` 布尔值。（这等价于没有指定 `done` 这个属性。）
 
     如果迭代器已将序列迭代完毕，则为 `true`。这种情况下，`value` 是可选的，如果它依然存在，即为迭代结束之后的默认返回值。
@@ -119,7 +116,7 @@ JavaScript 语言指定了产生或使用可迭代对象和迭代器的 API。
 
 ### 内置的可迭代对象
 
-{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}} 以及 {{jsxref("Intl.Segments")}} 都是内置的可迭代对象，因为它们的每个 `prototype` 对象都实现了 `[Symbol.iterator]()` 方法。此外，[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象和一些 DOM 集合类型，如 {{domxref("NodeList")}} 也是可迭代的。目前，没有内置的异步可迭代对象。
+{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}} 以及 {{jsxref("Intl/Segmenter/segment/Segments", "Intl.Segments")}} 都是内置的可迭代对象，因为它们的每个 `prototype` 对象都实现了 `[Symbol.iterator]()` 方法。此外，[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象和一些 DOM 集合类型，如 {{domxref("NodeList")}} 也是可迭代的。目前，没有内置的异步可迭代对象。
 
 [生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)返回[生成器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator)，它们是可迭代的迭代器。[异步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)返回[异步生成器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)，它们是异步可迭代的迭代器。
 
@@ -344,7 +341,7 @@ console.log(it.next().value); // 2
 
 ### 使用类定义一个可迭代对象
 
-状态封装也可以对[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)进行。
+状态封装也可以对[私有字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)进行。
 
 ```js
 class SimpleClass {

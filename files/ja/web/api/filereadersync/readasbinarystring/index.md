@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("File API")}}{{deprecated_header}}
+{{APIRef("File API")}}
 
 > [!NOTE]
 > このメソッドは非推奨であり、 {{DOMxRef("FileReaderSync.readAsArrayBuffer","readAsArrayBuffer()")}} に取って代わられました。
@@ -41,7 +41,7 @@ readAsBinaryString(Blob)
 - `NotReadableError` {{domxref("DOMException")}}
   - : 同時実行ロックなどの権限の問題でリソースを読み込めない場合に発生します。
 - `EncodingError` {{domxref("DOMException")}}
-  - : リソースがデータ URL であり、ブラウザーごとに定義された制限長を超えた場合に発生します。
+  - : リソースが data URL であり、ブラウザーごとに定義された制限長を超えた場合に発生します。
 
 ## 仕様書
 

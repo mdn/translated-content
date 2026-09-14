@@ -28,7 +28,7 @@ O `ReferenceError` acontece quando é feita uma tentativa de referenciar uma var
 
 ## Propriedades
 
-- {{jsxref("ReferenceError.prototype")}}
+- {{jsxref("ReferenceError")}}
   - : Permite a inclusão de propriedades em um objeto `ReferenceError`.
 
 ## Métodos
@@ -90,4 +90,4 @@ try {
 ## Veja também
 
 - {{jsxref("Error")}}
-- {{jsxref("ReferenceError.prototype")}}
+- {{jsxref("ReferenceError")}}

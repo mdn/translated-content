@@ -3,8 +3,6 @@ title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 ---
 
-{{JSRef}}
-
 {{jsxref("Number")}} 值的 **`valueOf()`** 方法返回该数字的值。
 
 {{InteractiveExample("JavaScript Demo: Number.valueOf()")}}

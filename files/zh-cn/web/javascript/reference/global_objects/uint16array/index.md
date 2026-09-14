@@ -3,8 +3,6 @@ title: Uint16Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
 ---
 
-{{JSRef}}
-
 `Uint16Array` 类型化数组表示 16 位无符号整数，按平台字节顺序排列。如果需要控制字节顺序，请使用 DataView 代替。内容被初始化为 0。建立后，就可以使用对象的方法或使用标准数组索引语法（即使用括号表示法）引用数组中的元素。
 
 ## 构造函数

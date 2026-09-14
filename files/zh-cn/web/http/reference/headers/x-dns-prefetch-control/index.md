@@ -3,15 +3,13 @@ title: X-DNS-Prefetch-Control
 slug: Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control
 ---
 
-{{HTTPSidebar}}
-
 **`X-DNS-Prefetch-Control`** 头控制着浏览器的 DNS 预读取功能。DNS 预读取是一项使浏览器主动去执行域名解析的功能，其范围包括文档的所有链接，无论是图片的，CSS 的，还是 JavaScript 等其他用户能够点击的 URL。
 
 因为预读取会在后台执行，所以 {{glossary("DNS")}} 很可能在链接对应的东西出现之前就已经解析完毕。这能够减少用户点击链接时的延迟。
 
-| Header type                           | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| Header type                              | {{Glossary("Response header")}} |
+| ---------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden request header")}} | no                              |
 
 ## 语法
 
@@ -45,7 +43,7 @@ DNS 请求需要的带宽非常小，但是延迟却有点高，这一点在手�
 
 ### 打开和关闭 DNS 预读取
 
-你可以通过在服务器端发送 `X-DNS-Prefetch-Control` 报头，或是在文档中使用值为 [`http-equiv`](/zh-CN/docs/Web/HTML/Global_attributes#http-equiv) 的 {{ HTMLElement("meta") }} 标签：
+你可以通过在服务器端发送 `X-DNS-Prefetch-Control` 报头，或是在文档中使用值为 [`http-equiv`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#http-equiv) 的 {{ HTMLElement("meta") }} 标签：
 
 ```plain
 <meta http-equiv="x-dns-prefetch-control" content="off">
@@ -55,7 +53,7 @@ DNS 请求需要的带宽非常小，但是延迟却有点高，这一点在手�
 
 ### 强制查询特定主机名
 
-你可以通过使用 [`rel`](/zh-CN/docs/Web/HTML/Element/link#rel) 属性值为 [link type](/zh-CN/docs/Web/HTML/Attributes/rel) 中的 `dns-prefetch` 的 {{ HTMLElement("link") }} 标签来对特定域名进行预读取：
+你可以通过使用 [`rel`](/zh-CN/docs/Web/HTML/Reference/Elements/link#rel) 属性值为 [link type](/zh-CN/docs/Web/HTML/Reference/Attributes/rel) 中的 `dns-prefetch` 的 {{ HTMLElement("link") }} 标签来对特定域名进行预读取：
 
 ```html
 <link rel="dns-prefetch" href="http://www.spreadfirefox.com/" />

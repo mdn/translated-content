@@ -85,7 +85,7 @@ console.log(Object.values("foo")); // ['f', 'o', 'o']
 
 ## See also
 
-- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

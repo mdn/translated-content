@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 允许扩展在安装之后，在运行时请求额外的权限。
 
 扩展需要权限来访问更强大的 WebExtension API。它们可以在安装时请求权限，方法是在 [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) manifest.json 键中包含它们需要的权限。在安装时请求权限的主要优点包括：

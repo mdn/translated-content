@@ -233,7 +233,6 @@ HTML 元素在撰寫時有它們特殊的規則。這些規則可以對元素及
 #### 在備註與括弧中
 
 - 常見的拉丁縮寫（ etc. 、 i.e. 、 e.g. ）可以在括號表達、或備註內使用。這些縮寫都要用半形句號（.）並緊隨著逗號或其他恰當的標點符號。
-
   - **正確**：Web browsers (e.g., Firefox) can be used ...
   - **不正確**：Web browsers e.g. Firefox can be used ...
   - **不正確**：Web browsers, e.g. Firefox, can be used ...
@@ -242,7 +241,6 @@ HTML 元素在撰寫時有它們特殊的規則。這些規則可以對元素及
 #### 在行文中
 
 - 在普通行文中（也就是備註與括號以外的文字）請使用與該縮寫相等的文字表達。
-
   - **正確**: ... web browsers, and so on.
   - **不正確**: ... web browsers, etc.
   - **正確**: Web browsers such as Firefox can be used ...

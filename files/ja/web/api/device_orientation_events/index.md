@@ -2,12 +2,12 @@
 title: 端末方向イベント
 slug: Web/API/Device_orientation_events
 l10n:
-  sourceCommit: 6754a50ec57c8c9758a65a42691878e5fd1f910a
+  sourceCommit: bcfc05aac40b47aecad69d44c54e33bf5f9b4e41
 ---
 
-{{DefaultAPISidebar("Device Orientation Events")}}
+{{DefaultAPISidebar("Device Orientation Events")}}{{securecontext_header}}
 
-端末方向イベントは、[端末の物理的な方向を検出](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation#processing_orientation_events)したり、[端末の動きを検出](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation#processing_motion_events)したりするイベントです。
+端末方向イベントは、[端末の物理的な方向を検出](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation#方向イベントの処理)したり、[端末の動きを検出](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation#モーションイベントの処理)したりするイベントです。
 
 ## 概念と使用方法
 
@@ -23,27 +23,29 @@ l10n:
 
 - ジェスチャー認識 — 例えば、「シェイク」ジェスチャーを認識し、ユーザーが機器を振ったときに入力エリアをクリアするなどのアクションを実行するために使用します。
 
+ユーザーエージェントによっては、センサーデータを提供する前に明示的な権限を要求される場合があります。そのような環境では、{{domxref("DeviceMotionEvent.requestPermission_static", "DeviceMotionEvent.requestPermission()")}} および {{domxref("DeviceOrientationEvent.requestPermission_static", "DeviceOrientationEvent.requestPermission()")}} を使用して、ボタンのクリックなどの一時的なユーザー操作を通じてこの権限をリクエストすることができます。詳細については、[権限のリクエスト](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation#権限のリクエスト)をご覧ください。
+
 > [!NOTE]
 > この API はモバイルブラウザーが広く対応しています。デスクトップ専用のブラウザーでは、ハードウェアの違いによる制約もありますが、センサーを搭載した端末でのこの API の主な用途を考えると、これらの制約が重要な意味を持つことはほとんどありません。
 
 ## インターフェイス
 
-- {{domxref("DeviceOrientationEvent")}}
-  - : 端末の物理的な方向の変化を表します。
 - {{domxref("DeviceMotionEvent")}}
   - : 端末の加速度を、回転数に加えて表します。
 - {{domxref("DeviceMotionEventAcceleration")}}
-  - : 端末が経験している加速度を、 3 軸すべてで表します。
+  - : 端末が経験している加速度を、3 軸すべてで表します。
 - {{domxref("DeviceMotionEventRotationRate")}}
-  - : 端末が回転する速度を、 3 軸すべてで表します。
+  - : 端末が回転する速度を、3 軸すべてで表します。
+- {{domxref("DeviceOrientationEvent")}}
+  - : 端末の物理的な方向の変化を表します。
 
-## イベント
+## 他のインターフェイスへの拡張
 
-- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
-  - : 地球座標フレームと比較した端末の現在の方向に関する、新しいデータが端末から利用できるときに発行されます。
-- {{domxref("Window.devicemotion_event", "devicemotion")}}
+- {{domxref("Window.devicemotion_event", "devicemotion")}} イベント
   - : 一定間隔で発行され、その時点で端末が受けている加速度の物理的な力の大きさと、端末の回転速度を示します。
-- {{domxref("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}}
+- {{domxref("Window.deviceorientation_event", "deviceorientation")}} イベント
+  - : 地球座標フレームと比較した端末の現在の方向に関する、新しいデータが端末から利用できるときに発行されます。
+- {{domxref("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}} イベント
   - : 端末の絶対的な方向が変化したときに発行されます。
 
 ## 仕様書

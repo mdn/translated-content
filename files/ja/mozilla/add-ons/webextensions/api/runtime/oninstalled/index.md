@@ -31,13 +31,9 @@ browser.runtime.onInstalled.hasListener(listener)
 ### 引数
 
 - `function`
-
   - : イベントが起こったときに呼び出されるコールバック関数です。この関数には以下の引数が渡されます:
-
     - `details`
-
       - : 以下のプロパティを持つオブジェクトです:
-
         - `id` {{optional_inline}}
           - : `string` 型。更新されたモジュール共有中の拡張機能の ID です。`reason` の値が `shared_module_update` の時のみ設定されます。
         - `previousVersion` {{optional_inline}}

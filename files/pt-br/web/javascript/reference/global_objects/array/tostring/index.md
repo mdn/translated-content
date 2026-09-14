@@ -42,4 +42,4 @@ Implementado no JavaScript 1.8.5 (Firefox 4), e compatível com a 5ª versão do
 
 ## Veja também
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}

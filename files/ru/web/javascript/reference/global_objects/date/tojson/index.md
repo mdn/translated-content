@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 
 ## Сводка
 
-Метод **`toJSON()`** возвращает представление объекта {{jsxref("Global_Objects/Date", "Date")}} в виде {{Glossary("JSON")}}.
+Метод **`toJSON()`** возвращает представление объекта {{jsxref("Date")}} в виде {{Glossary("JSON")}}.
 
 ## Синтаксис
 
@@ -17,7 +17,7 @@ dateObj.toJSON()
 
 ## Описание
 
-Экземпляры объекта {{jsxref("Global_Objects/Date", "Date")}} ссылаются на определённый момент времени. Вызов метода `toJSON()` вернёт строку, отформатированную в JSON (при помощи метода {{jsxref("Date.prototype.toISOString()", "toISOString()")}}), представляющую значение объекта {{jsxref("Global_Objects/Date", "Date")}}. Этот метод, как правило, предназначен для сериализации объектов {{jsxref("Global_Objects/Date", "Date")}} в JSON.
+Экземпляры объекта {{jsxref("Date")}} ссылаются на определённый момент времени. Вызов метода `toJSON()` вернёт строку, отформатированную в JSON (при помощи метода {{jsxref("Date.prototype.toISOString()", "toISOString()")}}), представляющую значение объекта {{jsxref("Date")}}. Этот метод, как правило, предназначен для сериализации объектов {{jsxref("Date")}} в JSON.
 
 ## Примеры
 

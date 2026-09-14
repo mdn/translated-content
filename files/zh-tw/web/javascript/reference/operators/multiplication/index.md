@@ -3,8 +3,6 @@ title: 相乘運算子（*）
 slug: Web/JavaScript/Reference/Operators/Multiplication
 ---
 
-{{jsSidebar("Operators")}}
-
 相乘運算子（`*`）是用來取得兩個運算元的乘積。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Multiplication operator")}}

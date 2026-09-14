@@ -14,7 +14,7 @@ l10n:
 `srcset` 属性和 {{domxref("HTMLImageElement.sizes", "sizes")}} 属性是响应式网站设计中至关重要的组件，可以搭配使用来创建根据展示场景使用图像的页面。
 
 > [!NOTE]
-> 如果 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 属性使用了宽度描述符，则 `sizes` 属性必须也同时存在，否则 `srcset` 将会被忽略。
+> 如果 [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) 属性使用了宽度描述符，则 `sizes` 属性必须也同时存在，否则 `srcset` 将会被忽略。
 
 ## 值
 
@@ -100,7 +100,7 @@ window.addEventListener("load", () => {
 
 {{EmbedLiveSample("示例", 640, 320)}}
 
-有关其他示例，请参阅我们的[响应式图片](/zh-CN/docs/Web/HTML/Responsive_images)指南。
+有关其他示例，请参阅我们的[响应式图片](/zh-CN/docs/Web/HTML/Guides/Responsive_images)指南。
 
 ## 规范
 
@@ -113,5 +113,5 @@ window.addEventListener("load", () => {
 ## 参见
 
 - [HTML 中的图像](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images)
-- [响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)
+- [响应式图像](/zh-CN/docs/Web/HTML/Guides/Responsive_images)
 - [图像文件类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)

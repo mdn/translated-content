@@ -13,7 +13,7 @@ MathML の `<mphantom>` 要素は、表示上は不可視だが一定の広が�
 - class, id, style
   - : Provided for use with [stylesheets](/ja/docs/Web/CSS).
 - mathbackground
-  - : 背景色。`#rgb`, `#rrggbb` および [HTML color names](/ja/docs/Web/CSS/color_value#color_keywords) を用いることができる。
+  - : 背景色。`#rgb`, `#rrggbb` および [HTML color names](/ja/docs/Web/CSS/Reference/Values/color_value#color_keywords) を用いることができる。
 
 ## 例
 

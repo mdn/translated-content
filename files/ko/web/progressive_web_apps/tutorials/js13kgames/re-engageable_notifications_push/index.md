@@ -3,7 +3,7 @@ title: 알림과 푸시를 사용해 PWA를 재참여(re-engageable)가능하게
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
 ---
 
-{{PWASidebar}}{{PreviousMenu("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
+{{PWASidebar}}{{PreviousMenu("Web/Progressive_web_apps/Guides/Making_PWAs_installable", "Web/Progressive_web_apps")}}
 
 앱을 오프라인에서 동작하도록 컨텐츠를 캐싱하는 능력은 훌륭한 기능입니다. 사용자가 홈 화면에 웹 앱을 설치하도록 허용하는 것은 더 좋습니다. 하지만, 사용자의 동작에 의존하는 대신 푸시 메시지와 알림을 사용해 새로운 컨텐츠가 있을때 이를 전달하여 사용자를 자동으로 다시 참여하도록 할 수 있습니다.
 
@@ -272,4 +272,4 @@ self.addEventListener("push", function (event) {
 
 코드를 실험해보시고, 여러분의 앱을 PWA 기능으로 개선하거나, 완전히 새로운 무언가를 구축해 보세요. PWA는 일반 웹 앱에 비해 큰 이점을 제공합니다.
 
-{{PreviousMenu("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
+{{PreviousMenu("Web/Progressive_web_apps/Guides/Making_PWAs_installable", "Web/Progressive_web_apps")}}

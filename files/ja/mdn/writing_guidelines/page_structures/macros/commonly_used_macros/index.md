@@ -70,7 +70,7 @@ MDN の特定の参照領域（JavaScript、CSS、HTML 要素、SVG など）の
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/htmlxref.rs">HTMLElement</a>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element">HTML 要素リファレンス</a> (/Web/HTML/Element)
+        <a href="/ja/docs/Web/HTML/Reference/Elements">HTML 要素リファレンス</a> (/Web/HTML/Element)
       </td>
       <td>
         <code>\{{HTMLElement("select")}}</code> は {{HTMLElement("select")}} になります。
@@ -228,7 +228,7 @@ MDN の特定の参照領域（JavaScript、CSS、HTML 要素、SVG など）の
 - [`Non-standard_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs): `\{{Non-standard_Header}}` {{Non-standard_Header}}
 - [`SeeCompatTable`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) は[実験的な機能](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)のドキュメントのページに使用してください。
   例: `\{{SeeCompatTable}}` {{SeeCompatTable}}
-- [`Deprecated_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
+- [`Deprecated_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs): `\{{Deprecated_Header}}`
 - [`SecureContext_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs).
   インターフェイスページ、 API 概要ページ、 API エントリーポイント（例: `navigator.xyz`）などのメインページで使用が、通常メソッドやプロパティページなどのサブページでは使用するべきではありません。
   例: `\{{SecureContext_Header}}` {{SecureContext_Header}}
@@ -255,7 +255,6 @@ MDN の特定の参照領域（JavaScript、CSS、HTML 要素、SVG など）の
 以下のマクロはすべてのリファレンスページに記載されていますが、すべてのページ型でも対応しています。
 
 - `\{{Compat}}` / `\{{Compat(&lt;feature>)}}` / `\{{Compat(&lt;feature>, &lt;depth>)}}`
-
   - : 引数として渡した機能の [互換性一覧表](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) を生成します。引数が指定されていない場合、フロントマターで `browser-compat` によって定義された機能が既定で指定されます。オプションの depth 引数は、どの程度の深さのサブ機能を表に追加するかを設定します。省略した場合は、既定で 1 となり、BCD から最初のレベルのサブ機能のデータのみが掲載されるという意味になります。
 
 - `\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`

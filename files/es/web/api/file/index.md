@@ -29,7 +29,6 @@ Ver [Utilizando archivos desde aplicaciones web (Using files from web applicatio
 - {{DOMxRef("File.name")}}{{ReadOnlyInline}}
   - : Retorna el nombre del archivo referenciada por el objeto `File`.
 - {{DOMxRef("File.webkitRelativePath")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-
   - : Retorna la ruta relativa de la URL del {{DOMxRef("File")}}.
 
     `File` implementa {{DOMxRef("Blob")}}, así que también cuenta con las siguientes propiedades:
@@ -48,9 +47,9 @@ _La interfaz `File` no define algún método, pero los hereda de la interfaz {{d
 - {{DOMxRef("Blob.stream()")}}
   - : Transforma el archivo `File` en un {{DOMxRef("ReadableStream")}} que puede ser usado para leer el contenido de `File`.
 - {{DOMxRef("Blob.text()")}}
-  - : Transforma el archivo `File` en una corriente (_stream_) para leerse hasta completarse. Retorna una promesa que se resuelve con un {{DOMxRef("USVString")}} (texto).
+  - : Transforma el archivo `File` en una corriente (_stream_) para leerse hasta completarse. Retorna una promesa que se resuelve con un {{jsxref("String")}} (texto).
 - {{DOMxRef("Blob.arrayBuffer()")}}
-  - : Transforma el archivo `File` en una corriente y leerlo hasta completarse. Devuelve una promesa que resuelve con un {{DOMxRef("ArrayBuffer")}}.
+  - : Transforma el archivo `File` en una corriente y leerlo hasta completarse. Devuelve una promesa que resuelve con un {{jsxref("ArrayBuffer")}}.
 
 ## Especificaciones
 

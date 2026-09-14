@@ -3,8 +3,6 @@ title: CSS 排版
 slug: Learn_web_development/Core/CSS_layout
 ---
 
-{{LearnSidebar}}
-
 基於我們已經看過了 CSS 基本原理：如何將文字賦予樣式、如何該便樣式或操作你的文字內容所處的 box 模型。現在是時候看看如何將你的 box 模型在視圖中放置於相對應的正確位置。我們已經涵蓋了必要的先備知識，接下來我們可以深入 CSS 排版，看一些不同的顯示方式，如現代的排版方式——彈性盒子、CSS 網格及定位，當然還有一些舊式的技術你可能會想要理解。
 
 ## 先備知識
@@ -27,7 +25,7 @@ slug: Learn_web_development/Core/CSS_layout
 - [常規流](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Introduction)
   - : 在我們做任何事之前，網頁上的元素會根據常規流自行排列。這篇文章解釋常規流的基礎知識，用來學習如何改變它。
 - [彈性盒子](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Flexbox)
-  - : [彈性盒子](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)是一維空間的排版方式，用來讓項目以行或列的方式排列。項目會延展或限縮來符合較大或較小的空間。這篇文章會解釋基礎原理。
+  - : [彈性盒子](/zh-TW/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases)是一維空間的排版方式，用來讓項目以行或列的方式排列。項目會延展或限縮來符合較大或較小的空間。這篇文章會解釋基礎原理。
 - [網格](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Grids)
   - : CSS 網格排版是一個二維空間的網頁排版系統。它讓你將內容排入行與列中，且它有許多功能讓你在建立複雜的排版時變得簡單明瞭。這篇文章會告訴你全部。
 - [浮動](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Floats)

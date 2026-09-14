@@ -15,7 +15,6 @@ JavaScript와 같은 프로그래밍 언어에서, 래퍼는 하나 이상의 �
 
 - 위키백과의 [래퍼 함수](https://en.wikipedia.org/wiki/Wrapper_function)
 - [MDN 웹 문서 용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("API")}}
   - {{Glossary("Class")}}
   - {{Glossary("Function")}}

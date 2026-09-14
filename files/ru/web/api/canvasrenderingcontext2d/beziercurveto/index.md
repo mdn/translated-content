@@ -81,8 +81,7 @@ ctx.fillRect(150, 70, 10, 10);
 <textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.bezierCurveTo(50, 100, 180, 10, 20, 10);
-ctx.stroke();</textarea
->
+ctx.stroke();</textarea>
 ```
 
 ```js hidden

@@ -61,7 +61,7 @@ Symbol("foo") === Symbol("foo"); // false
 
 ### new Symbol()
 
-La siguiente sintaxis con el operador {{jsxref("Operators/new", "new")}} lanzará un {{jsxref("TypeError")}}:
+La siguiente sintaxis con el operador {{jsxref("new")}} lanzará un {{jsxref("TypeError")}}:
 
 ```js
 let sym = new Symbol(); // TypeError

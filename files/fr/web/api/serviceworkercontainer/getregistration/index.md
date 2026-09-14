@@ -20,7 +20,7 @@ serviceWorkerContainer.getRegistration(scope).then(function(serviceWorkerRegistr
 
 ### Valeur retournée
 
-Une {{domxref("Promise")}} qui est résolue avec un objet {{domxref("ServiceWorkerRegistration")}} ou `undefined`.
+Une {{jsxref("Promise")}} qui est résolue avec un objet {{domxref("ServiceWorkerRegistration")}} ou `undefined`.
 
 ## Exemple
 

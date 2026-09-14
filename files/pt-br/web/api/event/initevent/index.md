@@ -9,7 +9,8 @@ O método **`Event.initEvent()`** é usado para inicializar o valor de um {{ dom
 
 Eventos inicializados desta maneira precisam ter sido criados com o método {{ domxref("Document.createEvent()") }}. Este método precisar ser chamado para definir o evento antes de ser despachado, usando {{ domxref("EventTarget.dispatchEvent()") }}. Uma vez despachado, não faz mais nada.
 
-> **Nota:** **Não use esse método mais, pois está depreciado.**
+> [!NOTE]
+> **Não use esse método mais, pois está depreciado.**
 >
 > Ao invés, use construtores de eventos específicos, como {{domxref("Event.Event", "Event()")}}. A página sobre [Criando e disparando eventos](/pt-BR/docs/Web/Events/Creating_and_triggering_events) detalha mais informações sobre o uso desses eventos.
 
@@ -20,7 +21,7 @@ event.initEvent(tipo, bubbles, cancelable);
 ```
 
 - `tipo`
-  - : É um {{domxref("DOMString")}} definido o tipo do evento.
+  - : É um {{jsxref("String")}} definido o tipo do evento.
 - `bolhas`
   - : É um {{jsxref("Boolean")}} decidindo se o evento precisa ser enviado para cima, na cadeia de eventos ou não. Uma vez definido, a propriedade read-only {{ domxref("Event.bubbles") }} irá informar o seu valor.
 - `cancelable`

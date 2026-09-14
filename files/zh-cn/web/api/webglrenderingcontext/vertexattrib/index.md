@@ -1,38 +1,38 @@
 ---
-title: WebGLRenderingContext.vertexAttrib[1234]f[v]()
+title: WebGLRenderingContext：vertexAttrib[1234]f[v]() 方法
 slug: Web/API/WebGLRenderingContext/vertexAttrib
 ---
 
 {{APIRef("WebGL")}}
 
-**`WebGLRenderingContext.vertexAttrib[1234]f[v]()`** 是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的方法，可以为顶点 attibute 变量赋值。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.vertexAttrib[1234]f[v]()`** 方法用于为通用顶点属性指定常量值。
 
 ## 语法
 
-```plain
-void gl.vertexAttrib1f(index, v0);
-void gl.vertexAttrib2f(index, v0, v1);
-void gl.vertexAttrib3f(index, v0, v1, v2);
-void gl.vertexAttrib4f(index, v0, v1, v2, v3);
+```js-nolint
+vertexAttrib1f(index, v0)
+vertexAttrib2f(index, v0, v1)
+vertexAttrib3f(index, v0, v1, v2)
+vertexAttrib4f(index, v0, v1, v2, v3)
 
-void gl.vertexAttrib1fv(index, value);
-void gl.vertexAttrib2fv(index, value);
-void gl.vertexAttrib3fv(index, value);
-void gl.vertexAttrib4fv(index, value);
+vertexAttrib1fv(index, value)
+vertexAttrib2fv(index, value)
+vertexAttrib3fv(index, value)
+vertexAttrib4fv(index, value)
 ```
 
-### Parameters
+### 参数
 
 - `index`
-  - : {{domxref("GLuint")}} 类型，指定了待修改顶点 attribute 变量的存储位置。
+  - : {{domxref("WebGL_API/Types", "GLuint")}} 类型，指定了待修改顶点属性的位置。
 - `v0, v1, v2, v3`
-  - : 浮点数类型{{jsxref("Number")}}，用于设置顶点 attibute 变量的各分量值。
+  - : 浮点数类型 {{jsxref("Number")}}，用于设置顶点属性的值。
 - `value`
-  - : {{jsxref("Float32Array")}} 类型，用于设置顶点 attibute 变量的向量值。
+  - : {{jsxref("Float32Array")}} 类型，用于设置顶点属性值的浮点向量。
 
 ### 返回值
 
-无。
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
@@ -53,6 +53,6 @@ gl.vertexAttrib3fv(a_foobar, floatArray);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("WebGLRenderingContext.getVertexAttrib()")}}

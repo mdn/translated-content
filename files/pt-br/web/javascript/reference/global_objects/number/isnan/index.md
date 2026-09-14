@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 
 ## Resumo
 
-O método **`Number.isNaN()`** determina se o valor passado é {{jsxref("Global_Objects/NaN", "NaN")}}. Versão mais robusta do original global {{jsxref("Global_Objects/isNaN", "isNaN")}}.
+O método **`Number.isNaN()`** determina se o valor passado é {{jsxref("NaN")}}. Versão mais robusta do original global {{jsxref("isNaN")}}.
 
 ## Sintaxe
 
@@ -18,13 +18,13 @@ Number.isNaN(testValue)
 ### Parâmetros
 
 - `testValue`
-  - : O valor a ser testado por {{jsxref("Global_Objects/NaN", "NaN")}}.
+  - : O valor a ser testado por {{jsxref("NaN")}}.
 
 ## Descrição
 
-Devido a ambos os operadores de igualdade, == and ===, avaliar a `false` quando está verificando se {{jsxref("Global_Objects/NaN", "NaN")}} _é_ NaN, a função `Number.isNaN` se torna necessária. Esta situação é diferente de todas as outras comparações de valor possível em JavaScript.
+Devido a ambos os operadores de igualdade, == and ===, avaliar a `false` quando está verificando se {{jsxref("NaN")}} _é_ NaN, a função `Number.isNaN` se torna necessária. Esta situação é diferente de todas as outras comparações de valor possível em JavaScript.
 
-Em comparação a função global {{jsxref("Global_Objects/isNaN", "isNaN")}}, Number.isNaN não sofre do problema de forçar a conversão do parâmetro para um número. Isso significa que ele é seguro para passar valores que, normalmente, se convertem em NaN, mas na verdade não são o mesmo valor que NaN. Isto também significa que apenas os valores do número do tipo, que são também NaN, retorna `true`.
+Em comparação a função global {{jsxref("isNaN")}}, Number.isNaN não sofre do problema de forçar a conversão do parâmetro para um número. Isso significa que ele é seguro para passar valores que, normalmente, se convertem em NaN, mas na verdade não são o mesmo valor que NaN. Isto também significa que apenas os valores do número do tipo, que são também NaN, retorna `true`.
 
 ## Exemplos
 
@@ -59,4 +59,4 @@ Number.isNaN("blabla"); // e.g. este teria sido true com isNaN
 
 ## Veja também
 
-- O {{jsxref("Global_Objects/Number", "Number")}} objeto pertence a.
+- O {{jsxref("Number")}} objeto pertence a.

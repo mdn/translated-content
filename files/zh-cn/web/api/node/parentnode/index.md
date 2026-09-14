@@ -1,45 +1,47 @@
 ---
-title: Node.parentNode
+title: Node：parentNode 属性
+short-title: parentNode
 slug: Web/API/Node/parentNode
+l10n:
+  sourceCommit: 8cdc8bb0ee320abf8a2f54a1a167d1a72ff8a2ca
 ---
 
-{{ ApiRef() }}
+{{APIRef("DOM")}}
 
-## 概述
+{{domxref("Node")}} 接口的 **`parentNode`** 只读属性返回该节点在 DOM 树中的父节点。
 
-返回指定的节点在 DOM 树中的父节点。
+`Document` 和 `DocumentFragment` [节点](/zh-CN/docs/Web/API/Node/nodeType)永远不会有父节点，因此 `parentNode` 始终会返回 `null`。如果节点刚被创建、尚未被插入到树中时，也会返回 `null`。相比之下，{{domxref("Node.parentElement")}} 只会返回 `Element` 类型的父节点。
 
-## 语法
+## 值
 
-```plain
-parentNode = node.parentNode
-```
+一个表示当前节点的父节点的 {{domxref("Node")}}。元素的父节点可能是 `Element` 节点、`Document` 节点或 `DocumentFragment` 节点。
 
-`parentNode` 是指定节点的父节点。一个元素节点的父节点可能是一个元素（`Element`）节点，也可能是一个文档（`Document`）节点，或者是个文档碎片（`DocumentFragment`）节点。
+## 示例
 
-## 例子
+### 使用 parentNode
 
-```plain
+此示例会将一个节点从树中移除（如果该节点尚在树中）。
+
+```js
 if (node.parentNode) {
-  // 从 DOM 树中删除 node 节点，除非它已经被删除了。
   node.parentNode.removeChild(node);
 }
 ```
 
-## 备注
+## 规范
 
-对于下面的[节点类型](/zh-CN/docs/Web/API/Node/nodeType): `Attr`, `Document`, `DocumentFragment`, `Entity`, `Notation`,其`parentNode`属性返回`null`.
-
-如果当前节点刚刚被建立，还没有被插入到 DOM 树中，则该节点的 `parentNode` 属性也返回 `null`.
-
-## 相关链接
-
-{{ Domxref("element.firstChild") }}, {{ Domxref("element.lastChild") }}, {{ Domxref("element.childNodes") }}, {{ Domxref("element.nextSibling") }}, {{ Domxref("element.previousSibling") }}.
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 规范
+## 参见
 
-[DOM Level 2 Core: Node.parentNode](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317)
+- {{Domxref("Node.firstChild")}}
+- {{Domxref("Node.lastChild")}}
+- {{Domxref("Node.childNodes")}}
+- {{Domxref("Node.nextSibling")}}
+- {{Domxref("Node.parentElement")}}
+- {{Domxref("Node.previousSibling")}}
+- {{Domxref("Node.removeChild")}}

@@ -36,4 +36,4 @@ SVG имеет довольно большую спецификацию. Это 
 
 Существовали планы для спецификации SVG Print, которая имела бы поддержку для множества страниц и улучшенное управление цветом. Эта работа была прекращена.
 
-{{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch", "Web/SVG/Tutorials/SVG_from_scratch/Getting_started") }}

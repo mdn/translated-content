@@ -3,8 +3,6 @@ title: browsingData.removeDownloads()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeDownloads
 ---
 
-{{AddonSidebar}}
-
 Efface l'historique de téléchargement du navigateur. Notez que cela ne supprime pas les objets téléchargés eux-mêmes, seulement les enregistrements de téléchargements dans l'historique du navigateur.
 
 Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :
@@ -78,8 +76,6 @@ browser.browsingData.removeDownloads({}).then(onRemoved, onError);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

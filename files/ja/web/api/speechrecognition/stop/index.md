@@ -1,13 +1,14 @@
 ---
-title: SpeechRecognition.stop()
+title: "SpeechRecognition: stop() メソッド"
+short-title: stop()
 slug: Web/API/SpeechRecognition/stop
 l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+  sourceCommit: 0a00e01a8c8097ea9786710c3fc703d18f0af951
 ---
 
 {{APIRef("Web Speech API")}}
 
-**`stop()`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のメソッドで、入ってくる音声の待ち受けする認識サービスを停止し、今まで認識した音声を {{domxref("SpeechRecognitionResult")}} として返します。
+**`stop()`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のメソッドで、音声認識サービスが入ってくる音声を待機するのを停止し、これまでにキャプチャした結果に基づいて {{domxref("SpeechRecognitionResult")}} を返そうとします。
 
 ## 構文
 
@@ -26,27 +27,18 @@ stop()
 ## 例
 
 ```js
-const grammar =
-  "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
 const recognition = new SpeechRecognition();
-const speechRecognitionList = new SpeechGrammarList();
-speechRecognitionList.addFromString(grammar, 1);
-recognition.grammars = speechRecognitionList;
 
 const diagnostic = document.querySelector(".output");
 const bg = document.querySelector("html");
+const startBtn = document.querySelector("button");
 
-document.body.onclick = () => {
+startBtn.onclick = () => {
   recognition.start();
   console.log("色のコマンドを受け付ける準備ができました。");
 };
 
-abortBtn.onclick = function () {
-  recognition.abort();
-  console.log("音声認識が中止されました。");
-};
-
-recognition.onspeechend = function () {
+recognition.onspeechend = () => {
   recognition.stop();
   console.log("音声認識サービスが停止されました。");
 };

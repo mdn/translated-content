@@ -3,8 +3,6 @@ title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
 ---
 
-{{jsSidebar("Objects")}}
-
 > [!WARNING]
 > Bien que `unescape(…)` ne soit pas strictement obsolète (au sens où elle n'a pas été retirée des standards), elle est définie au sein de [l'Annexe B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) du standard ECMA-262 qui commence par :
 >
@@ -13,7 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/unescape
 
 La fonction dépréciée **`unescape()`** calcule une nouvelle chaîne de caractères et remplace les séquences d'échappement hexadécimales par les caractères qu'elles représentent. Les séquences d'échappement peuvent provenir de la fonction {{jsxref("escape")}}. Cette méthode est obsolète, c'est pourquoi il est conseillé d'utiliser {{jsxref("decodeURI")}} ou {{jsxref("decodeURIComponent")}} à la place.
 
-> **Note :** `unescape()` ne doit pas être utilisée pour décoder les URI. À la place, utilisez `decodeURI`.
+> [!NOTE]
+> `unescape()` ne doit pas être utilisée pour décoder les URI. À la place, utilisez `decodeURI`.
 
 ## Syntaxe
 

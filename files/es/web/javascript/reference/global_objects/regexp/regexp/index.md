@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 
 El constructor **`RegExp`** crea un objeto de expresión regular para hacer coincidir el texto con un patrón.
 
-Para ver la introducción a las expresiones regulares, lee el {{JSxRef("../Guide/Regular_Expressions", "capítulo sobre expresiones regulares")}} en la {{JSxRef("../Guide", "Guía de JavaScript")}}.
+Para ver la introducción a las expresiones regulares, lee el [capítulo sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) en la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide).
 
 {{InteractiveExample("JavaScript Demo: RegExp Constructor")}}
 
@@ -25,8 +25,6 @@ console.log(regex1 === regex2);
 // Expected output: false
 ```
 
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
-
 ## Sintaxis
 
 Son posibles las notaciones literal, constructor y de fábrica:
@@ -40,13 +38,11 @@ RegExp(patrón[, banderas])
 ### Parámetros
 
 - `patrón`
-
   - : El texto de la expresión regular.
 
-    A partir de ES5, también puede ser otro objeto o `RegExp` literal (solo para las dos notaciones del constructor RegExp). Los patrones pueden incluir {{JSxRef("../Guide/Regular_Expressions", "caracteres especiales", "#Usar_caracteres_especiales")}} para que coincidan con un rango de valores más amplio que el de una cadena literal.
+    A partir de ES5, también puede ser otro objeto o `RegExp` literal (solo para las dos notaciones del constructor RegExp). Los patrones pueden incluir [caracteres especiales](/es/docs/Web/JavaScript/Guide/Regular_expressions#Usar_caracteres_especiales) para que coincidan con un rango de valores más amplio que el de una cadena literal.
 
 - `banderas`
-
   - : Si se especifica, `banderas` es una cadena que contiene las banderas para agregar.
 
     Alternativamente, si se proporciona un objeto para el patrón, la cadena `banderas` reemplazará cualquiera de las banderas de ese objeto (y `lastIndex` se restablecerá a `0`) (a partir de ES2015).
@@ -54,7 +50,6 @@ RegExp(patrón[, banderas])
     Si no se especifica `banderas` y se proporciona un objeto de expresiones regulares, las banderas de ese objeto (y el valor de `lastIndex`) se copiarán.
 
     `banderas` puede contener cualquier combinación de los siguientes caracteres:
-
     - `g` (coincidencia global)
       - : Encuentra todas las coincidencias en lugar de detenerse después de la primera.
     - `i` (ignorar mayúsculas y minúsculas)
@@ -99,6 +94,6 @@ El constructor del objeto de expresión regular, por ejemplo, `new RegExp('ab+c'
 
 ## Ve también
 
-- El capítulo de {{JSxRef("../Guide/Regular_Expressions", "Expresiones regulares")}} en la {{JSxRef("../Guide", "Guía de JavaScript")}}
+- El capítulo de [Expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) en la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide)
 - {{JSxRef("String.prototype.match()")}}
 - {{JSxRef("String.prototype.replace()")}}

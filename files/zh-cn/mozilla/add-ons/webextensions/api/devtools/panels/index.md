@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2e7f2f7b1a817425d451a6633e131dec6b3943bf
 ---
 
-{{AddonSidebar}}
-
 > [!NOTE]
 > 尽管这些 API 基于 [Chrome devtools API](https://developer.chrome.google.cn/docs/extensions/how-to/devtools/extend-devtools)，但 Firefox 中仍有许多特性尚未实现，因此这里未记录。要查看当前缺少哪些特性，请参阅 [devtools API 的局限性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#devtools_api_的局限性)。
 

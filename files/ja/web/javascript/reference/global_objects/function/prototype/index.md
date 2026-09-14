@@ -1,11 +1,10 @@
 ---
 title: "Function: prototype"
+short-title: prototype
 slug: Web/JavaScript/Reference/Global_Objects/Function/prototype
 l10n:
-  sourceCommit: 3dbbefa32758e2a1ca9a37c2788370c06aae2738
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`prototype`** は {{jsxref("Function")}} インスタンスのデータプロパティで、関数が [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 演算子でコンストラクターとして使用されたときに使用されます。これは新しいオブジェクトのプロトタイプになります。
 
@@ -18,7 +17,8 @@ l10n:
 
 {{js_property_attributes(1, 0, 0)}}
 
-> **メモ:** [クラス](/ja/docs/Web/JavaScript/Reference/Classes)は関数の一種なので、ここで説明するほとんどの内容はクラスの `prototype` プロパティにも当てはまります。唯一の顕著な違いは、クラスの `prototype` プロパティは書き込み不可であるということです。
+> [!NOTE]
+> [クラス](/ja/docs/Web/JavaScript/Reference/Classes)は関数の一種なので、ここで説明するほとんどの内容はクラスの `prototype` プロパティにも当てはまります。唯一の顕著な違いは、クラスの `prototype` プロパティは書き込み不可であるということです。
 
 ## 解説
 
@@ -32,7 +32,7 @@ console.log(Object.getPrototypeOf(inst) === Ctor.prototype); // true
 
 「[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#コンストラクター)」に、コンストラクター関数の `prototype` プロパティと、結果オブジェクトのプロトタイプ間の操作に関する詳しい情報があります。
 
-ある関数に `prototype` プロパティがあるというだけでは、コンストラクターとして認められるには不十分です。[ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)は `prototype` プロパティを持っていますがが、 `new` で呼び出すことはできません。
+ある関数に `prototype` プロパティがあるというだけでは、コンストラクターとして認められるには不十分です。[ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)は `prototype` プロパティを持っていますが、 `new` で呼び出すことはできません。
 
 ```js
 async function* asyncGeneratorFunction() {}

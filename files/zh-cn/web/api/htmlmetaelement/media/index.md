@@ -19,7 +19,7 @@ l10n:
 
 ### 为暗色模式设置主题色
 
-以下示例创建一个新的 `<meta>` 元素，其 `name` 属性设置为 [`theme-color`](/zh-CN/docs/Web/HTML/Element/meta/name#html_规范中定义的标准元数据名称)，`content` 属性设置为 `#3c790a`，`media` 属性设置为 `prefers-color-scheme: dark`，并把元素附加到文档 `<head>` 上。当用户在操作系统中指定暗色模式时，可以使用 `media` 属性设置不同的 `theme-color`：
+以下示例创建一个新的 `<meta>` 元素，其 `name` 属性设置为 [`theme-color`](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name#html_规范中定义的标准元数据名称)，`content` 属性设置为 `#3c790a`，`media` 属性设置为 `prefers-color-scheme: dark`，并把元素附加到文档 `<head>` 上。当用户在操作系统中指定暗色模式时，可以使用 `media` 属性设置不同的 `theme-color`：
 
 ```js
 const meta = document.createElement("meta");
@@ -61,4 +61,4 @@ document.head.appendChild(meta2);
 ## 参见
 
 - {{HTMLElement("meta")}}
-- [媒体查询的可能值](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [媒体查询的可能值](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)

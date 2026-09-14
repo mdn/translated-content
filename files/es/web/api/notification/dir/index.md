@@ -15,7 +15,7 @@ var direction = Notification.dir;
 
 ### Valor
 
-Un {{domxref("DOMString")}} especifica la dirección del texto, los posibles valores pueden ser:
+Un {{jsxref("String")}} especifica la dirección del texto, los posibles valores pueden ser:
 
 - `auto`: Aplica el comportamiento del idioma del navegador (por defecto).
 - `ltr`: El texto es desplegado de izquierda a derecha.

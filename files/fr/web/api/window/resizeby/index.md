@@ -1,24 +1,33 @@
 ---
-title: Window.resizeBy()
+title: "Window : méthode resizeBy()"
+short-title: resizeBy()
 slug: Web/API/Window/resizeBy
+l10n:
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
-La méthode **`Window.resizeBy()`** redimensionne la fenêtre actuelle d'une taille spécifié.
+La méthode **`resizeBy()`** de l'interface {{DOMxRef("Window")}} redimensionne la fenêtre actuelle à une taille définie.
 
 ## Syntaxe
 
-```js
-window.resizeBy(xDelta, yDelta);
+```js-nolint
+resizeBy(xDelta, yDelta)
 ```
 
 ### Paramètres
 
-- `xDelta` est le nombre de pixels pour agrandir la fenêtre horizontalement.
-- `yDelta` est le nombre de pixels pour agrandir la fenêtre verticalement.
+- `xDelta`
+  - : Le nombre de pixels pour agrandir la fenêtre horizontalement.
+- `yDelta`
+  - : Le nombre de pixels pour agrandir la fenêtre verticalement.
 
-## Exemple
+### Valeur de retour
+
+Aucune ({{JSxRef("undefined")}}).
+
+## Exemples
 
 ```js
 // Réduit la fenêtre
@@ -27,13 +36,13 @@ window.resizeBy(-200, -200);
 
 ## Notes
 
-Cette méthode redimensionne la fenêtre par rapport à sa taille actuelle. Pour redimensionner la fenêtre en termes absolus, utilisez {{domxref ("window.resizeTo ()")}}.
+Cette méthode redimensionne la fenêtre par rapport à sa taille actuelle. Pour redimensionner la fenêtre en termes absolus, utilisez {{DOMxRef("window.resizeTo()")}}.
 
 ### Créer et redimensionner une fenêtre externe
 
 Pour des raisons de sécurité, il n'est plus possible dans Firefox pour un site Web de modifier la taille par défaut d'une fenêtre dans un navigateur si la fenêtre n'a pas été créée par `window.open()` ou contient plusieurs onglets. Consultez le tableau de compatibilité pour plus de détails sur le changement.
 
-Même si vous créez une fenêtre avec `window.open()` **elle n'est pas redimensionnable par défaut.** Pour rendre la fenêtre redimensionnable, vous devez l'ouvrir avec le paramètre `"resizable"` .
+Même si vous créez une fenêtre avec `window.open()` **elle n'est pas redimensionnable par défaut.** Pour rendre la fenêtre redimensionnable, vous devez l'ouvrir avec le paramètre `"resizable"`.
 
 ```js
 // Créer une fenêtre redimensionnable
@@ -50,7 +59,7 @@ myExternalWindow.resizeTo(500, 500);
 myExternalWindow.resizeBy(-100, -100);
 ```
 
-La fenêtre que vous créez doit respecter la politique de même origine. Si la fenêtre que vous ouvrez n'est pas dans la même origine que la fenêtre actuelle, vous ne pourrez pas redimensionner ni accéder aux informations sur cette fenêtre / cet onglet.
+La fenêtre que vous créez doit respecter la politique de même origine. Si la fenêtre que vous ouvrez n'est pas dans la même origine que la fenêtre actuelle, vous ne pouvez pas redimensionner ni accéder aux informations sur cette fenêtre / cet onglet.
 
 ## Spécifications
 
@@ -59,3 +68,7 @@ La fenêtre que vous créez doit respecter la politique de même origine. Si la 
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+> [!NOTE]
+> Cette fonction peut ne pas redimensionner la fenêtre de manière synchrone.
+> Dans certains environnements (comme les mobiles), elle peut ne pas redimensionner la fenêtre du tout. Vous pouvez écouter l'évènement {{DOMxRef("Window/resize_event", "resize")}} pour voir si/quand la fenêtre a été redimensionnée.

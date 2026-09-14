@@ -25,7 +25,6 @@ new UIEvent(type, options)
 - `type`
   - : 이벤트 이름 문자열입니다. 대소문자를 구분하며 브라우저는 `load`, `unload`, `abort`, `error`, `select`를 사용합니다.
 - `options` {{optional_inline}}
-
   - : {{domxref("Event/Event", "Event()")}}에서 사용할 수 있는 속성에 더해 다음 속성들도 포함하는 객체입니다.
     - `detail` {{optional_inline}}
       - : 이벤트 유형에 따라 의미가 다른 숫자 값입니다. 기본 값은 `0`으로, 이 값이 표준 이벤트들에서 갖는 뜻은 {{domxref("UIEvent.detail")}} 문서에서 확인할 수 있습니다.

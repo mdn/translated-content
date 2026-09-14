@@ -29,7 +29,7 @@ l10n:
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}} (за исключением элементов, у которых атрибут [`type`](/ru/docs/Web/HTML/Element/input#type) равен `"image"`, по историческим причинам)
+- {{HTMLElement("input")}} (за исключением элементов, у которых атрибут [`type`](/ru/docs/Web/HTML/Reference/Elements/input#type) равен `"image"`, по историческим причинам)
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("select")}}

@@ -39,7 +39,7 @@ El valor predeterminado de cada componente de fecha-hora es {{jsxref("undefined"
 
 ### Valor devuelto
 
-Una cadena representando la porción de tiempo de la instancia {{jsxref("Global_Objects/Date", "Date")}} dada, conforme a las convenciones específicas del idioma.
+Una cadena representando la porción de tiempo de la instancia {{jsxref("Date")}} dada, conforme a las convenciones específicas del idioma.
 
 ## Ejemplos
 
@@ -128,7 +128,7 @@ console.log(
 
 ## Rendimiento
 
-Cuando se da formato a un gran número de fechas, es mejor crear un objeto {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} y usar su método {{jsxref("DateTimeFormat.prototype.format", "format")}}.
+Cuando se da formato a un gran número de fechas, es mejor crear un objeto {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} y usar su método {{jsxref("Intl/DateTimeFormat/format", "format")}}.
 
 ## Especificaciones
 
@@ -140,7 +140,7 @@ Cuando se da formato a un gran número de fechas, es mejor crear un objeto {{jsx
 
 ## Ver también
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toTimeString()")}}

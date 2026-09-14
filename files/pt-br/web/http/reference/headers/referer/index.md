@@ -4,11 +4,10 @@ slug: Web/HTTP/Reference/Headers/Referer
 original_slug: Web/HTTP/Headers/Referer
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de requisição HTTP **`Referer`** contém o endereço da página web anterior do qual a página atual requerida foi chamada. O `Referer` permite aos servidores identificar de onde as pessoas estão visitando eles e pode usar esses dados para análise, log e cacheamento otimizado, por exemplo.
 
-> **Aviso:** **Importante**: Apesar que esse cabeçalho tenha diversos usos inocentes, ele pode ter consequências indesejáveis para segurança e privacidade dos usuários. Veja [Referer header: privacy and security concerns](/pt-BR/docs/Web/Security/Referer_header:_privacy_and_security_concerns) para mais informações e mitigações.
+> [!WARNING]
+> **Importante**: Apesar que esse cabeçalho tenha diversos usos inocentes, ele pode ter consequências indesejáveis para segurança e privacidade dos usuários. Veja [Referer header: privacy and security concerns](/pt-BR/docs/Web/Security/Referer_header:_privacy_and_security_concerns) para mais informações e mitigações.
 
 Note que _referer_ é na verdade, uma má pronúncia da palavra "referrer"("referenciador"). Veja [HTTP referer no Wikipedia](https://pt.wikipedia.org/wiki/HTTP_referer) para mais detalhes.
 
@@ -24,7 +23,7 @@ O cabeçalho `Referer` não é enviado pelos navegadores se:
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>yes</td>
     </tr>
   </tbody>

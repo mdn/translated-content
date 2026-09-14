@@ -3,8 +3,6 @@ title: "Error: cause"
 slug: Web/JavaScript/Reference/Global_Objects/Error/cause
 ---
 
-{{JSRef}}
-
 {{jsxref("Error")}} 实例中的 **`cause`** 数据属性指示导致该错误的具体原始原因。
 
 在捕获错误时，我们可能会使用更具体或更加实用的信息对错误进行包装，再将其重新抛出。`cause` 属性就用于这一场景，以便仍然可以访问原始的错误。

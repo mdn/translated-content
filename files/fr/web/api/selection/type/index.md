@@ -5,7 +5,7 @@ slug: Web/API/Selection/type
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-La propriété en lecture simple **`type`** de l'interface {{domxref("Selection")}} retourne un {{domxref("DOMString")}} décrivant le type de la sélection courante.
+La propriété en lecture simple **`type`** de l'interface {{domxref("Selection")}} retourne un {{jsxref("String")}} décrivant le type de la sélection courante.
 
 ## Syntaxe
 
@@ -15,7 +15,7 @@ value = sel.type;
 
 ### Value
 
-Une {{domxref("DOMString")}} décrivant le type de la sélection courante. Les valeurs possibles sont :
+Une {{jsxref("String")}} décrivant le type de la sélection courante. Les valeurs possibles sont :
 
 - `None`: Aucune sélection courante.
 - `Caret`: La sélection est réduite (le curseur est dans un texte mais il n'y a pas de plage sélectionnée).

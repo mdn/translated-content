@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当书签或文件夹被移除时触发。当文件夹被递归移除时，只会为该文件夹触发一个通知，而不会为其内容触发通知。
 
 ## 语法
@@ -31,9 +29,7 @@ browser.bookmarks.onRemoved.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 事件触发时调用的函数。该函数接收以下参数：
-
     - `id`
       - : `string`。被移除项目的 ID。
     - `removeInfo`

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Arrays
 original_slug: Learn/JavaScript/First_steps/Arrays
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "conflicting/Learn_web_development/Core/Scripting")}}
 
 ## Arreglos
 
@@ -169,7 +169,7 @@ Puedes entonces acceder a elementos individuales en el arreglo mediante la notac
    > [!NOTE]
    > Lo dijimos antes, pero solo como recordatorio — ¡ las computadoras comienzan a contar desde 0!
 
-3. Ten en cuenta que un arreglo dentro de otro arreglo se llama arrelog multidimensional o matriz. Puedes acceder a los elementos de un arreglo que estén dentro de otro, encadenando dos pares de corchetes. Por ejemplo, para acceder a uno de los elementos dentro de la matriz, que a su vez, es el tercer elemento dentro de la matriz `random` (ver sección anterior), podríamos hacer algo como esto:
+3. Ten en cuenta que un arreglo dentro de otro arreglo se llama arreglo multidimensional o matriz. Puedes acceder a los elementos de un arreglo que estén dentro de otro, encadenando dos pares de corchetes. Por ejemplo, para acceder a uno de los elementos dentro de la matriz, que a su vez, es el tercer elemento dentro de la matriz `random` (ver sección anterior), podríamos hacer algo como esto:
 
    ```js
    random[2][2];
@@ -674,4 +674,4 @@ Lo único que queda por hacer es trabajar a través de la evaluación de este m�
 - [Colecciones indexadas](/es/docs/Web/JavaScript/Guide/Indexed_collections) — una guía de nivel avanzado sobre arreglos y sus primos, los arreglos tipadosa.
 - {{jsxref("Array")}}: la página de referencia del objeto `Array`, para obtener una guía de referencia detallada de las funciones analizadas en esta página y muchas más.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "conflicting/Learn_web_development/Core/Scripting")}}

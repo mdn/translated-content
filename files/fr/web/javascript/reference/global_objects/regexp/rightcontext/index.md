@@ -3,7 +3,7 @@ title: RegExp.rightContext ($')
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{non-standard_header}}
 
 La propriété non-standard **`rightContext`** est une propriété statique, accessible uniquement en lecture, qui contient la sous-chaîne suivant la correspondance la plus récente. `RegExp.$'` est un alias pour cette propriété.
 

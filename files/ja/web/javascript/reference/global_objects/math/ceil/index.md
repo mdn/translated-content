@@ -1,28 +1,27 @@
 ---
 title: Math.ceil()
+short-title: ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
 l10n:
-  sourceCommit: 910a6fedb299488ba7e94b884da7bcd71e79ec1a
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.ceil()`** は静的メソッドで、常に切り上げを行い、与えられた数以上の最小の整数を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.ceil()")}}
+{{InteractiveExample("JavaScript デモ: Math.ceil()")}}
 
 ```js interactive-example
 console.log(Math.ceil(0.95));
-// Expected output: 1
+// 予想される結果: 1
 
 console.log(Math.ceil(4));
-// Expected output: 4
+// 予想される結果: 4
 
 console.log(Math.ceil(7.004));
-// Expected output: 8
+// 予想される結果: 8
 
 console.log(Math.ceil(-7.004));
-// Expected output: -7
+// 予想される結果: -7
 ```
 
 ## 構文

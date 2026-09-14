@@ -1,14 +1,9 @@
 ---
 title: HTML 内の SVG 入門
 slug: Web/SVG/Guides/SVG_in_HTML
-original_slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 l10n:
-  sourceCommit: 07f0cf4375aaa02e1071d8bd0e8518db7609b7a9
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
-
-## 概要
 
 この記事と関連する例は、インライン [SVG](/ja/docs/Web/SVG) を使用する方法を示しています。
 
@@ -64,7 +59,7 @@ SVG が可視テキストでラベル付けできる場合、そのテキスト�
 <svg viewBox="0 0 100 125" role="img" aria-labelledby="svgTitle svgDescription">
   <title id="svgTitle">Manual</title>
   <desc id="svgDescription">
-    A non-descript twelve page booklet opened to the middle page
+    A nondescript twelve page booklet opened to the middle page
   </desc>
   <defs>
     <style>

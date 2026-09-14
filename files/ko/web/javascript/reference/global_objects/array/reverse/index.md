@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.reverse()
+short-title: reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 ---
 
@@ -7,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 
 **`reverse()`** 메서드는 배열의 순서를 반전합니다. 첫 번째 요소는 마지막 요소가 되며 마지막 요소는 첫 번째 요소가 됩니다.
 
-{{InteractiveExample("JavaScript Demo: Array.reverse()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.reverse()")}}
 
 ```js interactive-example
 const array1 = ["one", "two", "three"];

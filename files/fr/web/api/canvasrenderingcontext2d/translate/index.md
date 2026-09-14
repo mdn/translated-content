@@ -60,8 +60,7 @@ Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct s
 <textarea id="code" class="playable-code">
 ctx.translate(50, 50);
 ctx.fillRect(0,0,100,100);
-ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea
->
+ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea>
 ```
 
 ```js hidden

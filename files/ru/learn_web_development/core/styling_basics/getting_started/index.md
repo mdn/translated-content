@@ -3,7 +3,7 @@ title: Начало работы с CSS
 slug: Learn_web_development/Core/Styling_basics/Getting_started
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 В этой статье мы возьмём простой HTML-документ и применим к нему CSS, изучая некоторые практические вещи о языке.
 
@@ -114,7 +114,7 @@ li {
 
 Пока у нас есть стилизованные элементы, основанные на их именах HTML-элементов. Это работает до тех пор, пока вы хотите, чтобы все элементы этого типа в вашем документе выглядели одинаково. В большинстве случаев это не так, и вам нужно будет найти способ выбрать подмножество элементов, не меняя остальные. Самый распространённый способ сделать это — добавить класс к вашему HTML-элементу и нацелиться на этот класс.
 
-В своём HTML-документе добавьте Атрибут [class](/ru/docs/Web/HTML/Global_attributes/class) ко второму пункту списка. Ваш список теперь будет выглядеть так:
+В своём HTML-документе добавьте Атрибут [class](/ru/docs/Web/HTML/Reference/Global_attributes/class) ко второму пункту списка. Ваш список теперь будет выглядеть так:
 
 ```html
 <ul>
@@ -191,7 +191,7 @@ h1 + p {
 
 ## Стилизация элементов на основе состояния
 
-Последний тип стилей, который мы рассмотрим в этом уроке, — это возможность стилизовать элементы в зависимости от их состояния. Прямым примером этого является стиль ссылок. Когда мы создаём ссылку, мы должны нацелить элемент [`<a>`](/ru/docs/Web/HTML/Element/a) (якорь). Он имеет различные состояния в зависимости от того, посещается ли он, посещается, находится над ним, фокусируется с помощью клавиатуры или в процессе нажатия (активации). Вы можете использовать CSS для нацеливания на эти разные состояния — CSS-код ниже отображает невидимые ссылки розового цвета и посещённые ссылки зелёного цвета.
+Последний тип стилей, который мы рассмотрим в этом уроке, — это возможность стилизовать элементы в зависимости от их состояния. Прямым примером этого является стиль ссылок. Когда мы создаём ссылку, мы должны нацелить элемент [`<a>`](/ru/docs/Web/HTML/Reference/Elements/a) (якорь). Он имеет различные состояния в зависимости от того, посещается ли он, посещается, находится над ним, фокусируется с помощью клавиатуры или в процессе нажатия (активации). Вы можете использовать CSS для нацеливания на эти разные состояния — CSS-код ниже отображает невидимые ссылки розового цвета и посещённые ссылки зелёного цвета.
 
 ```css
 a:link {
@@ -258,4 +258,4 @@ body h1 + p .special {
 
 На следующем уроке мы рассмотрим структуру CSS.
 
-{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "conflicting/Learn_web_development/Core/Styling_basics")}}

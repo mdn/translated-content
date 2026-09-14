@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{jsSidebar("Statements")}}
-
 **`function*`** 声明创建一个{{Glossary("binding", "绑定")}}到给定名称的新生成器函数。生成器函数可以退出，并在稍后重新进入，其上下文（变量{{Glossary("binding", "绑定")}}）会在重新进入时保存。
 
 你也可以使用 [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)来定义生成器函数。
@@ -45,7 +43,8 @@ function* name(param0, param1, /* …, */ paramN) {
 > [!NOTE]
 > 箭头函数不能用来定义生成器函数。
 
-> **备注：** `function` 和 `*` 是两个单独的标记，因此它们可以用[空白或换行符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#空白符)分隔。
+> [!NOTE]
+> `function` 和 `*` 是两个单独的标记，因此它们可以用[空白或换行符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#空白符)分隔。
 
 ### 参数
 

@@ -1,30 +1,33 @@
 ---
 title: SVGGraphicsElement
 slug: Web/API/SVGGraphicsElement
+l10n:
+  sourceCommit: 34055723f9d2bbadfa8b0f0d27102e3adcedbd58
 ---
 
 {{APIRef("SVG")}}
 
 **`SVGGraphicsElement`** インターフェイスは、直接グループにグラフィックを描画することを主な目的とした SVG 要素を表します。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
-> [!NOTE]
-> このインターフェイスは SVG 2 で導入され、 SVG 1.1 で導入された {{domxref("SVGLocatable")}} および {{domxref("SVGTransformable")}} インターフェイスを置き換えています。
+## インスタンスプロパティ
 
-## プロパティ
+_このインターフェイスには、親である {{domxref("SVGElement")}} から継承したプロパティもあります。_
 
-_このインターフェイスは親である {{domxref("SVGElement")}} からプロパティを継承しています。_
-
+- {{domxref("SVGGraphicsElement.requiredExtensions")}} {{ReadOnlyInline}}
+  - : {{domxref("SVGStringList")}} であり、指定された要素の {{SVGAttr("requiredExtensions")}} 属性を反映します。
+- {{domxref("SVGGraphicsElement.systemLanguage")}} {{ReadOnlyInline}}
+  - : {{domxref("SVGStringList")}} であり、指定された要素の {{SVGAttr("systemLanguage")}} 属性を反映します。
 - {{domxref("SVGGraphicsElement.transform")}} {{ReadOnlyInline}}
-  - : {{domxref("SVGAnimatedTransformList")}} で、指定された要素の {{cssxref("transform")}} プロパティおよび関連する {{SVGAttr("transform")}} 属性の計算値を反映します。
+  - : {{domxref("SVGAnimatedTransformList")}} であり、指定された要素の {{cssxref("transform")}} プロパティおよび関連する {{SVGAttr("transform")}} 属性の計算値を反映します。
 
-## メソッド
+## インスタンスメソッド
 
-_このインターフェイスは親である {{domxref("SVGElement")}} からメソッドを継承しています。_
+_このインターフェイスには、親である {{domxref("SVGElement")}} から継承したメソッドもあります。_
 
 - {{domxref("SVGGraphicsElement.getBBox()")}}
-  - : {{domxref("DOMRect")}} で、現在の要素の計算上の囲みボックスを返します。
+  - : {{domxref("DOMRect")}} で、現在の要素の囲みボックスの計算値を返します。
 - {{domxref("SVGGraphicsElement.getCTM()")}}
   - : {{domxref("DOMMatrix")}} で、現在の要素の座標系をその SVG ビューポートの座標系に変換する行列を返します。
 - {{domxref("SVGGraphicsElement.getScreenCTM()")}}

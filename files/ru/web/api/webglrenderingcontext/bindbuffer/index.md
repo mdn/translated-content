@@ -16,13 +16,10 @@ void gl.bindBuffer(target, buffer);
 ### Параметры
 
 - target
-
   - : {{domxref("GLenum")}} определяет точку связывания (target). Возможные значения:
-
     - `gl.ARRAY_BUFFER`: Буфер содержащий вершинные атрибуты, такие как координаты, текстурные координаты(UV) или цвет вершины.
     - `gl.ELEMENT_ARRAY_BUFFER`: Буфер использующий для индексирования элементов.
     - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
-
       - `gl.COPY_READ_BUFFER`: Buffer for copying from one buffer object to another.
       - `gl.COPY_WRITE_BUFFER`: Buffer for copying from one buffer object to another.
       - `gl.TRANSFORM_FEEDBACK_BUFFER`: Buffer for transform feedback operations.

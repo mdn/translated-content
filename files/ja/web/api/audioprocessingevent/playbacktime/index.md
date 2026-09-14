@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef}}{{Deprecated_header}}
+{{APIRef}}
 
 **`playbackTime`** は {{domxref("AudioProcessingEvent")}} インターフェイスのプロパティで、音声が再生される時間を表します。 これは {{domxref("AudioContext")}} が使用している時間と同じ座標系です。
 

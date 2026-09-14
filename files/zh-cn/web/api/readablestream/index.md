@@ -36,7 +36,7 @@ slug: Web/API/ReadableStream
 
 下面的例子，创建了一个智能的 {{domxref("Response")}} 将从另一个资源获取的 HTML 片段流式的传输到浏览器。
 
-它演示了 {{domxref("ReadableStream")}} 与 {{domxref("Uint8Array")}} 的协同用法。
+它演示了 {{domxref("ReadableStream")}} 与 {{jsxref("Uint8Array")}} 的协同用法。
 
 ```js
 fetch("https://www.example.org")

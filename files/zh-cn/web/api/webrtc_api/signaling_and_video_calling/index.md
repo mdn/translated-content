@@ -81,7 +81,7 @@ if (sendToClients) {
 
 #### 交换会话描述信息
 
-开始处理信号的时候，用户的初始化操作会创建一个**请求（offer）** ，根据 {{Glossary("SDP")}} 协议其中会包含一个 session 描述符，并且需要把这个发送到我们称之为**接收者（callee）**那里，接受者需要返回一个包含描述符的**应答（answer）**信息。我们的服务器使用 WebSocket 来传递 `"video-offer"` `"video-answer"` 两种类型的消息数据。这些消息包含以下属性：
+开始处理信号的时候，用户的初始化操作会创建一个**请求**（offer），根据 {{Glossary("SDP")}} 协议其中会包含一个 session 描述符，并且需要把这个发送到我们称之为**接收者**（callee）那里，接受者需要返回一个包含描述符的**应答**（answer）信息。我们的服务器使用 WebSocket 来传递 `"video-offer"` `"video-answer"` 两种类型的消息数据。这些消息包含以下属性：
 
 - `type`
   - : 消息类型; `"video-offer"` 或 `"video-answer"`
@@ -553,7 +553,7 @@ function handleRemoveTrackEvent(event) {
 }
 ```
 
-此代码从`"received_video"` {{HTMLElement("video")}}元素的 [`srcobject`](/zh-CN/docs/Web/HTML/Element/video#srcobject) 属性获取传入视频 {{domxref("MediaStream.getTracks", "getTracks()")}} 方法获取流的磁道数组。
+此代码从`"received_video"` {{HTMLElement("video")}}元素的 [`srcobject`](/zh-CN/docs/Web/HTML/Reference/Elements/video#srcobject) 属性获取传入视频 {{domxref("MediaStream.getTracks", "getTracks()")}} 方法获取流的磁道数组。
 
 如果数组的长度为零，意味着流中没有剩余的磁道，则通过调用 `closeVideoCall()`结束调用。这样就可以将我们的应用程序恢复到可以启动或接收另一个呼叫的状态。请参阅 [结束通话](#结束通话) 了解 `closeVideoCall()` 的工作原理。
 
@@ -626,7 +626,7 @@ function closeVideoCall() {
 3. 通过调用{{domxref("RTCPeerConnection.close", "myPeerConnection.close()")}}.关闭 {{domxref("RTCPeerConnection")}} 。
 4. 设置 `myPeerConnection` 为 `null`，确保我们的代码知道没有正在进行的调用；当用户单击用户列表中的名称时，这很有用。
 
-然后，对于传入和传出的{{HTMLElement("video")}}元素，我们使用它们的{{domxref("Element.removeAttribute", "removeAttribute()")}} 方法删除它们的 [`srcobject`](/zh-CN/docs/Web/HTML/Element/video#srcobject)和[`src`](/zh-CN/docs/Web/HTML/Element/video#src) 属性。这就完成了流与视频元素的分离。
+然后，对于传入和传出的{{HTMLElement("video")}}元素，我们使用它们的{{domxref("Element.removeAttribute", "removeAttribute()")}} 方法删除它们的 [`srcobject`](/zh-CN/docs/Web/HTML/Reference/Elements/video#srcobject)和[`src`](/zh-CN/docs/Web/HTML/Reference/Elements/video#src) 属性。这就完成了流与视频元素的分离。
 
 最后，我们在"Hang Up"按钮上将{{domxref("HTMLElement.disabled", "disabled")}}属性设置为 `true`，使其在没有调用的情况下不可点击；然后我们将`targetUsername` 设置为 `null` ，因为我们不再与任何人交谈。这允许用户呼叫另一个用户，或接收来电。
 
@@ -666,7 +666,8 @@ myPeerConnection.onsignalingstatechange = function (event) {
 };
 ```
 
-> **备注：** `closed`的信令状态已被弃用，取而代之的是 `closed`{{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}}。我们在这里监听它以增加一点向后兼容性。
+> [!NOTE]
+> `closed`的信令状态已被弃用，取而代之的是 `closed`{{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}}。我们在这里监听它以增加一点向后兼容性。
 
 ##### ICE 收集状态
 

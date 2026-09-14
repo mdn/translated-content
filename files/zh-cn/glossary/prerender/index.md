@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 922c2b0f37e2f13887c50efe47e62bc23d94c3aa
 ---
 
-{{GlossarySidebar}}
-
 预渲染是指推测性地[预取](/zh-CN/docs/Glossary/Prefetch)并*渲染*用户可能在不久的将来导航到的页面（浏览器在后台渲染页面，相当于在一个不可见的独立标签页中）。预渲染包括下载文档的子资源并运行相关的 JavaScript。
 
 如果用户随后选择导航到该页面，内容显示几乎可以瞬间完成。

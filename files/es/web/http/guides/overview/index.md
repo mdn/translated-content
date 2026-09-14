@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Overview
 original_slug: Web/HTTP/Overview
 ---
 
-{{HTTPSidebar}}
-
 HTTP, de sus siglas en inglés: "Hypertext Transfer Protocol", es el nombre de un {{glossary("protocol", "protocolo")}} el cual nos permite realizar una petición de datos y recursos, como pueden ser documentos HTML. Es la base de cualquier intercambio de datos en la Web, y un protocolo de estructura cliente-servidor, esto quiere decir que una petición de datos es iniciada por el elemento que recibirá los datos (el cliente), normalmente un navegador Web. Así, una página web completa resulta de la unión de distintos sub-documentos recibidos, como, por ejemplo: un documento que especifique el estilo de maquetación de la página web ({{glossary("CSS")}}), el texto, las imágenes, vídeos, scripts, etc...
 
 ![Un único documento web compuesto por múltiples recursos de diferentes servidores.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/fetching-a-page.svg)

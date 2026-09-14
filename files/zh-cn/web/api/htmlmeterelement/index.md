@@ -16,17 +16,17 @@ HTML {{HTMLElement("meter")}} 元素暴露 **`HTMLMeterElement`** 接口，其�
 _还继承其父接口 {{domxref("HTMLElement")}} 的属性。_
 
 - {{domxref("HTMLMeterElement.high")}}
-  - : 一个 `double` 表示高档部分的数值下限，反映 [`high`](/zh-CN/docs/Web/HTML/Element/meter#high) 属性。
+  - : 一个 `double` 表示高档部分的数值下限，反映 [`high`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#high) 属性。
 - {{domxref("HTMLMeterElement.low")}}
-  - : 一个 `double` 表示低档部分的数值上限，反映 [`low`](/zh-CN/docs/Web/HTML/Element/meter#low) 属性。
+  - : 一个 `double` 表示低档部分的数值上限，反映 [`low`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#low) 属性。
 - {{domxref("HTMLMeterElement.max")}}
-  - : 一个 `double` 表示测量范围的上限，反映 [`max`](/zh-CN/docs/Web/HTML/Element/meter#max) 属性。
+  - : 一个 `double` 表示测量范围的上限，反映 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#max) 属性。
 - {{domxref("HTMLMeterElement.min")}}
-  - : 一个 `double` 表示测量范围的下限，反映 [`min`](/zh-CN/docs/Web/HTML/Element/meter#min) 属性。
+  - : 一个 `double` 表示测量范围的下限，反映 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#min) 属性。
 - {{domxref("HTMLMeterElement.optimum")}}
-  - : 一个 `double` 表示最佳数值，反映 [`optimum`](/zh-CN/docs/Web/HTML/Element/meter#optimum) 属性。
+  - : 一个 `double` 表示最佳数值，反映 [`optimum`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#optimum) 属性。
 - {{domxref("HTMLMeterElement.value")}}
-  - : 一个 `double` 表示当前数值，反映 [`value`](/zh-CN/docs/Web/HTML/Element/meter#value) 属性。
+  - : 一个 `double` 表示当前数值，反映 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#value) 属性。
 - {{domxref("HTMLMeterElement.labels")}} {{ReadOnlyInline}}
   - : 与此元素关联的 {{HTMLElement("label")}} 元素的 {{domxref("NodeList")}}。
 

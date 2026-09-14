@@ -9,7 +9,8 @@ l10n:
 
 **`KeyboardEvent`** 对象描述了用户与键盘的交互。每个事件都描述了用户与一个按键（或一个按键和修饰键的组合）的单个交互；事件类型（{{domxref("Element/keydown_event", "keydown")}}、{{domxref("Element/keypress_event", "keypress")}} 和 {{domxref("Element/keyup_event", "keyup")}}）用于标识不同的键盘活动类型。
 
-> **备注：** `KeyboardEvent` 只在低级别提示用户与键盘按键进行了哪些交互，并不提供交互的场景含义。当你需要处理文本输入的时候，使用 {{domxref("Element/input_event", "input")}} 事件代替。用户使用其他方式输入文本时，如使用平板电脑的手写系统或绘图板，键盘事件可能不会触发。
+> [!NOTE]
+> `KeyboardEvent` 只在低级别提示用户与键盘按键进行了哪些交互，并不提供交互的场景含义。当你需要处理文本输入的时候，使用 {{domxref("Element/input_event", "input")}} 事件代替。用户使用其他方式输入文本时，如使用平板电脑的手写系统或绘图板，键盘事件可能不会触发。
 
 {{InheritanceDiagram}}
 
@@ -94,18 +95,15 @@ l10n:
 _此接口从其父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承属性。_
 
 - {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
-
   - : 返回一个布尔值，如果按键事件发生时 <kbd>Alt</kbd>（macOS 中为 <kbd>Option</kbd> 或 <kbd>⌥</kbd>）键处于活动状态，则该值为 `true`。
 
 - {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
-
   - : 返回一个字符串，其中包含事件所代表的物理按键的代码值。
 
     > [!WARNING]
     > 这个属性会忽略用户的键盘布局，所以如果用户在 QWERTY 布局的键盘上按下“Y”位置（第一行字母按键的中间）的按键时，这个属性会返回“KeyY”，即使用户使用 QWERTZ 布局的键盘（此时用户输入的就是“Z”，其他属性也会提示“Z”）或 Dvorak 键盘（此时用户输入的就是“F”）也是如此。如果要向用户显示正确的按键，可以使用 {{domxref("Keyboard.getLayoutMap()")}}。
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
-
   - : 返回一个布尔值，如果按键事件发生时 <kbd>Ctrl</kbd> 键被按下，则该值为 `true` 。
 
 - {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
@@ -115,23 +113,19 @@ _此接口从其父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承
 - {{domxref("KeyboardEvent.location")}} {{Readonlyinline}}
   - : 返回代表键盘或其他输入设备上按键位置的数字。上面的[键盘定位](#键盘定位)中列出了标识位置的常量。
 - {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
-
   - : 返回一个布尔值，如果键事件发生时 <kbd>Meta</kbd>（在 Mac 键盘上为 <kbd>⌘ Command</kbd> ；在 Windows 键盘上为 Windows 键（<kbd>⊞</kbd>））键处于活动状态，则该值为 `true`。
 
 - {{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}
   - : 返回一个布尔值，如果按键被按住，会自动重复，则该值为 `true`。
 - {{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}
-
   - : 返回一个布尔值，如果按键事件发生时 <kbd>Shift</kbd> 键处于活动状态，则该值为 `true`。
 
 ### 过时属性
 
 - {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}} {{ReadOnlyInline}}
-
   - : 返回一个数字，代表按键的 Unicode 引用编号；该属性仅用于 `keypress` 事件。如果键的 `char` 属性包含多个字符，则返回该属性中第一个字符的 Unicode 值。在 Firefox 26 中，这将返回可打印字符的代码。
 
 - {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}} {{ReadOnlyInline}}
-
   - : 返回一个数字，该数字代表一个与系统和执行相关的数字代码，用于标识按下按键的未修改值。
 
 - {{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}
@@ -142,13 +136,10 @@ _此接口从其父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承
 _此接口也从父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承方法。_
 
 - {{domxref("KeyboardEvent.getModifierState()")}}
-
   - : 返回一个布尔值，表示事件创建时是否按下了 <kbd>Alt</kbd>、<kbd>Shift</kbd>、<kbd>Ctrl</kbd> 或 <kbd>Meta</kbd> 等修饰符键。
 
 ### 过时方法
 
-- {{domxref("KeyboardEvent.initKeyEvent()")}} {{deprecated_inline}}
-  - : 初始化一个 `KeyboardEvent` 对象。只有 Firefox 实现了这一功能，但现在已经不再支持；相反，你应该使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} 构造函数。
 - {{domxref("KeyboardEvent.initKeyboardEvent()")}} {{deprecated_inline}}
   - : 初始化一个 `KeyboardEvent` 对象。此方法已弃用，应该使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} 构造函数。
 
@@ -254,7 +245,7 @@ document.addEventListener(
 
 {{Specifications}}
 
-`KeyboardEvent` 接口规范经历了多个草案版本，首先是 DOM 事件第 2 版规范，由于未达成共识而被放弃，然后是 DOM 事件第 3 版规范。这导致了非标准初始化方法的实施，早期的 DOM 事件第 2 版，{{domxref("KeyboardEvent.initKeyEvent()")}} 被 Gecko 浏览器采用，而早期的 DOM 事件第 3 版，{{domxref("KeyboardEvent.initKeyboardEvent()")}} 则被其他浏览器采用。这两个版本都已被构造函数的现代用法所取代：{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}。
+`KeyboardEvent` 接口规范经历了多个草案版本，首先是 DOM 事件第 2 版规范，由于未达成共识而被放弃，然后是 DOM 事件第 3 版规范。这导致了非标准初始化方法的实施，早期的 DOM 事件第 2 版，`KeyboardEvent.initKeyEvent()` 被 Gecko 浏览器采用，而早期的 DOM 事件第 3 版，{{domxref("KeyboardEvent.initKeyboardEvent()")}} 则被其他浏览器采用。这两个版本都已被构造函数的现代用法所取代：{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}。
 
 ## 浏览器兼容性
 

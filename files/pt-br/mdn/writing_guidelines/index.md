@@ -21,7 +21,7 @@ Se você não tem certeza se um tópico específico deve ser abordado no MDN lei
 
 ## Como você pode ajudar
 
-Você não precisa ser capaz de programar - or escrever - para poder ajudar a MDN! Nós temos muitos caminhos por onde você pode ajudar, de uma revisão de artigos para ter certeza que fazem sentido, até contribuindo com texto, adicionando códigos de exemplo. Na verdade existem tantas formas de ajudar que nós temos uma [ferramenta para ajudá-lo a escolher tarefas para ajudar](/pt-BR/docs/MDN/Community/Contributing/Getting_started), baseada em seus interesses e na sua quantidade de tempo livre.
+Você não precisa ser capaz de programar - or escrever - para poder ajudar a MDN! Nós temos muitos caminhos por onde você pode ajudar, de uma revisão de artigos para ter certeza que fazem sentido, até contribuindo com texto, adicionando códigos de exemplo. Na verdade existem tantas formas de ajudar que nós temos uma [ferramenta para ajudá-lo a escolher tarefas para ajudar](/pt-BR/docs/MDN/Community/Getting_started), baseada em seus interesses e na sua quantidade de tempo livre.
 
 ## A comunidade MDN
 
@@ -46,7 +46,8 @@ Se você deseja contribuir para esta wiki, você deve tornar sua documentação 
 
 Alguns conteúdos mais antigos foram disponibilizados sob uma licença diferente das citadas acima; estas são indicadas no final de cada página em um [Alternate License Block](/Project:en/Examples/Alternate_License_Block).
 
-> **Aviso:** **Importante:** Nenhuma nova página deve ser criada usando licenças alternativas.
+> [!WARNING]
+> **Importante:** Nenhuma nova página deve ser criada usando licenças alternativas.
 
 Os direitos de cópia para materiais de contribuição permanecem com o(a) autor(a), a menos que ele(a) os atribua a outra pessoa.
 

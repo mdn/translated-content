@@ -13,11 +13,11 @@ Les instructions de traitement définies par l'utilisateur ne peuvent pas commen
 
 Les instructions de traitement héritent des méthodes et propriétés de [`Node`](/fr/docs/Web/API/Node).
 
-{{InheritanceDiagram(700,70)}}
+{{InheritanceDiagram}}
 
 ### Attributs
 
-- target (_cible_) (DOMString) (_chaîne de caractères_) - après le `<?` et avant un [whitespace](/fr/docs/Web/API/Document_Object_Model/Whitespace) (_espace_) le séparant des `data` (_données_)
+- target (_cible_) (DOMString) (_chaîne de caractères_) - après le `<?` et avant un [whitespace](/fr/docs/Web/CSS/Guides/Text/Whitespace) (_espace_) le séparant des `data` (_données_)
 - data (_données_) (DOMString) (_chaîne de caractères_) - premier caractère non espace après `target` et avant `?>`
 
 ### Spécification

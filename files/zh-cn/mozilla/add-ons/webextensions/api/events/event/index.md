@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
 ---
 
-{{AddonSidebar}}
-
 允许对浏览器事件添加和移除监听器的对象。
 
 ## 类型

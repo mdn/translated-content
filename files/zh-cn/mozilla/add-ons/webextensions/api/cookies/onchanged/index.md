@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAPIRef("cookies")}} API 的 `onChanged` 事件在设置或删除扩展程序可以访问的 Cookie 时触发。
 
 > [!NOTE]
@@ -41,13 +39,9 @@ browser.cookies.onChanged.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当此事件发生时调用的函数。该函数被传递以下参数：
-
     - `changeInfo`
-
       - : 包含发生变化的细节的 `object`。其属性如下：
-
         - `removed`
           - : 一个布尔值，如果删除了一个 `Cookie`，则设置为 `true`，否则为 `false`。
         - `cookie`

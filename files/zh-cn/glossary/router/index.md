@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8799df4d0dbc74bdcf0de1e7a24563a46dcb2478
 ---
 
-{{GlossarySidebar}}
-
 Web **路由器**有三种定义：
 
 1. 对于网络层，路由器是一种网络设备，用于决定将{{Glossary('Packet', '数据包')}}发送到何处。

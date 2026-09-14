@@ -3,8 +3,6 @@ title: String.prototype.repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
 ---
 
-{{JSRef}}
-
 La méthode **`repeat()`** construit et renvoie une nouvelle chaine de caractères qui contient le nombre de copie demandée de la chaine de caractères sur laquelle la méthode a été appelée, concaténées les unes aux autres.
 
 {{InteractiveExample("JavaScript Demo: String.repeat()")}}
@@ -33,8 +31,8 @@ Une nouvelle chaîne de caractères composée du nombre indiqué de copies de la
 
 ### Exceptions
 
-- {{jsxref("Erreurs/Negative_repetition_count", "RangeError")}} : le nombre de répétition doit être positif.
-- {{jsxref("Erreurs/Resulting_string_too_large", "RangeError")}} : le nombre de répétition ne doit pas être infini et la taille de la chaîne résultante ne doit pas dépasser la taille maximale pour une chaîne de caractères.
+- {{jsxref("Errors/Negative_repetition_count", "RangeError")}} : le nombre de répétition doit être positif.
+- {{jsxref("Errors/Resulting_string_too_large", "RangeError")}} : le nombre de répétition ne doit pas être infini et la taille de la chaîne résultante ne doit pas dépasser la taille maximale pour une chaîne de caractères.
 
 <!---->
 

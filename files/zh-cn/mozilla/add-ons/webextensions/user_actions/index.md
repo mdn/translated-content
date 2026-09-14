@@ -3,8 +3,6 @@ title: 用户操作
 slug: Mozilla/Add-ons/WebExtensions/User_actions
 ---
 
-{{AddonSidebar}}
-
 一些 WebExtension API 执行的功能通常是由于用户操作而执行的。例如：
 
 - 带有弹出窗口的浏览器操作会在用户单击时显示弹出窗口，但还有一个 {{WebExtAPIRef("browserAction.openPopup")}} API 允许扩展程序以编程方式打开弹出窗口。

@@ -115,7 +115,7 @@ var validate = function () {
 
 ## Fornecendo Mensagens de Erro Úteis
 
-Leia como usar [alertas ARIA para melhorar forms](/pt-BR/docs/aria/forms/alerts "aria/forms/alerts").
+Leia como usar [alertas ARIA para melhorar forms](/pt-BR/docs/Web/Accessibility/ARIA "aria/forms/alerts").
 
 > [!NOTE]
 > A ser decidido: devemos ou combinar em um artigo ou separar em técnicas, ou ambos. Além disso, é ARIA marcação apropriada para mensagens de erro em uma página carregada após a validação do lado do servidor?

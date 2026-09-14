@@ -3,8 +3,6 @@ title: tabs.MutedInfo
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo
 ---
 
-{{AddonSidebar}}
-
 Cet objet contient un booléen indiquant si l'onglet est muet et la raison du dernier changement d'état.
 
 ## Type
@@ -27,8 +25,6 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

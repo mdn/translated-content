@@ -49,7 +49,7 @@ WebAssembly 被設計來與 JavaScript 協同工作——藉由 WebAssembly 的 
 - [`WebAssembly.instantiateStreaming()`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static)
   - : The `WebAssembly.instantiateStreaming()` function is the primary API for compiling and instantiating WebAssembly code, returning both a `Module` and its first `Instance`.
 - [`WebAssembly.Memory()`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/Memory)
-  - : A `WebAssembly.Memory` object is a resizable {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}} that holds the raw bytes of memory accessed by an `Instance`.
+  - : A `WebAssembly.Memory` object is a resizable {{jsxref("Global_Objects/ArrayBuffer", "ArrayBuffer")}} that holds the raw bytes of memory accessed by an `Instance`.
 - [`WebAssembly.Table()`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/Table)
   - : A `WebAssembly.Table` object is a resizable typed array of opaque values, like function references, that are accessed by an `Instance`.
 - [`WebAssembly.CompileError()`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/CompileError)

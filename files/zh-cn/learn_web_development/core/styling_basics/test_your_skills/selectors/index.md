@@ -1,0 +1,399 @@
+---
+title: 技能测试：选择器
+short-title: 测试：选择器
+slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
+l10n:
+  sourceCommit: a623d4459e2aa00d17dc0fd6b6bc44f56c589950
+---
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
+
+这个技能测试的目的是帮助你理解 [CSS 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)。
+
+为完成这些任务，只需编辑 CSS，而无需编辑 HTML。
+
+> [!NOTE]
+> 如需帮助，请阅读我们的[技能测试](/zh-CN/docs/Learn_web_development#技能测试)使用指南。你也可以通过我们的[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)之一联系我们。
+
+## 第一个选择器
+
+要完成此任务，需要：
+
+1. 使 `<h1>` 标题变为蓝色。
+2. 使 `<h2>` 标题具有蓝色背景和白色文本。
+3. 使 `<span>` 中的文本的字体大小为 200%。
+
+任务的起始点类似如下：
+
+{{EmbedLiveSample("selectors1-start", "", "370px")}}
+
+以下是该起始点的底层代码：
+
+```html live-sample___selectors1-start live-sample___selectors1-finish
+<div class="container">
+  <h1>这是标题</h1>
+  <p>
+    蔬菜对你们<span>有益</span>，因此我建议你们多吃芜菁、韭葱、白萝卜、苋菜、塔菜、小番茄、甜瓜和红豆，以及大蒜。
+  </p>
+  <h2>一个二级标题</h2>
+  <p>
+    秋葵、甜菜叶、玉米、索科、菊苣、葫芦。欧芹、红葱头、西葫芦、塔菜、豌豆苗、蚕豆、羽衣甘蓝、蒲公英、秋葵、裙带菜、番茄。蒲公英、黄瓜、花生、豌豆、索科、西葫芦。
+  </p>
+</div>
+```
+
+```css live-sample___selectors1-start live-sample___selectors1-finish
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+/* 在这里添加样式 */
+```
+
+更新的样式应该类似如下：
+
+{{EmbedLiveSample("selectors1-finish", "", "400px")}}
+
+<details>
+<summary>点击显示答案</summary>
+
+你需要对 `h1`、`h2` 和 `span` 用选择器来更改它们的颜色或大小。
+
+```css live-sample___selectors1-finish
+h1 {
+  color: blue;
+}
+
+h2 {
+  background-color: blue;
+  color: white;
+}
+
+span {
+  font-size: 200%;
+}
+```
+
+</details>
+
+## 第二个选择器
+
+要完成此任务，需要：
+
+1. 为 id 为 `special` 的元素设置黄色背景。
+2. 为 `alert` 类的元素添加 2px 灰色边框。
+3. 为同时是 `alert` 类和 `stop` 类的元素设置红色背景。
+4. 为同时是 `alert` 类和 `go` 类的元素设置绿色背景。
+
+任务的起始点类似如下：
+
+{{EmbedLiveSample("selectors2-start", "", "480px")}}
+
+以下是该起始点的底层代码：
+
+```html live-sample___selectors2-start live-sample___selectors2-finish
+<div class="container">
+  <h1>这是标题</h1>
+  <p>
+    蔬菜对你们<span class="alert">有益</span>，因此我建议你们<span class="alert stop">多吃</span>芜菁、韭葱、白萝卜、苋菜、塔菜、小番茄、甜瓜和红豆，以及大蒜。
+  </p>
+  <h2 id="special">一个二级标题</h2>
+  <p>秋葵、甜菜叶、玉米、索科、菊苣、葫芦。</p>
+  <h2>另一个二级标题</h2>
+  <p>
+    <span class="alert go">>欧芹、红葱头</span、西葫芦、塔菜、豌豆苗、蚕豆、羽衣甘蓝、蒲公英、秋葵、裙带菜、番茄。蒲公英、黄瓜、花生、豌豆、索科、西葫芦。
+  </p>
+</div>
+```
+
+```css live-sample___class-id
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+/* 在这里添加样式 */
+```
+
+更新的样式应该类似如下：
+
+{{EmbedLiveSample("selectors2-finish", "", "480px")}}
+
+<details>
+<summary>点击查看答案</summary>
+
+这个测试检查你是否理解类选择器和 ID 选择器的区别，以及如何针对一个元素上的多个类进行选择。
+
+```css
+#special {
+  background-color: yellow;
+}
+
+.alert {
+  border: 2px solid grey;
+}
+
+.alert.stop {
+  background-color: red;
+}
+
+.alert.go {
+  background-color: green;
+}
+```
+
+</details>
+
+## 第三个选择器
+
+要完成此任务，需要：
+
+1. 设置链接样式，将链接设为橙色，访问过的链接设为绿色，并在悬停时移除下划线。
+2. 为容器内的第一个元素设置 `font-size: 150%` ，并将其第一行文字设为红色。
+3. 为表格每隔一行添加条纹效果，设置背景颜色为 `#333`，前景色为白色。
+
+任务的起始点类似如下：
+
+{{EmbedLiveSample("selectors3-start", "", "440px")}}
+
+以下是该起始点的底层代码：
+
+```html live-sample___selectors3-start live-sample___selectors3-finish
+<div class="container">
+  <p>
+    蔬菜对你们<a href="http://example.com">有益</a
+    >，因此我建议你们多吃芜菁、韭葱、白萝卜、苋菜、塔菜、小番茄、甜瓜和红豆，以及大蒜。
+  </p>
+  <p>
+    秋葵、甜菜叶、玉米、索科、菊苣、葫芦。欧芹、红葱头、西葫芦、塔菜、豌豆苗、蚕豆、羽衣甘蓝、蒲公英、秋葵、裙带菜、番茄。蒲公英、黄瓜、花生、豌豆、索科、西葫芦。
+  </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>水果</th>
+        <th>蔬菜</th>
+      </tr>
+      <tr>
+        <td>苹果</td>
+        <td>土豆</td>
+      </tr>
+      <tr>
+        <td>橙子</td>
+        <td>胡萝卜</td>
+      </tr>
+      <tr>
+        <td>西红柿</td>
+        <td>欧洲防风草</td>
+      </tr>
+      <tr>
+        <td>奇异果</td>
+        <td>洋葱</td>
+      </tr>
+      <tr>
+        <td>香蕉</td>
+        <td>甜菜</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+
+```css live-sample___selectors3-start live-sample___selectors3-finish
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  width: 300px;
+}
+
+td,
+th {
+  padding: 0.2em;
+  text-align: left;
+}
+
+/* 在这里添加样式 */
+```
+
+更新的样式应该类似如下：
+
+{{EmbedLiveSample("selectors3-finish", "", "540px")}}
+
+<details>
+<summary>点击查看答案</summary>
+
+对内容应用伪类（`:first-child`）和伪元素（`::first-line`）。设置 `a` 元素的 `:link`、`:visited` 和 `:hover` 状态，并使用 `:nth-child` 伪类为表格行创建条纹效果。
+
+```css live-sample___selectors3-finish
+.container p:first-child {
+  font-size: 150%;
+}
+
+.container p:first-child::first-line {
+  color: red;
+}
+
+a:link {
+  color: orange;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+tr:nth-child(even) {
+  background-color: #333333;
+  color: white;
+}
+```
+
+</details>
+
+## 第四个选择器
+
+要完成此任务，需要：
+
+1. 将 `<h2>` 元素后的首个段落文字设为红色。
+2. 为作为 `<ul>` 的直接子元素且类名为 `list` 的列表项设置样式，具体如下：
+   - 移除项目符号。
+   - 添加 `1px` 的灰色下边框。
+
+任务的起始点类似如下：
+
+{{EmbedLiveSample("selectors4-start", "", "500px")}}
+
+以下是该起始点的底层代码：
+
+```html live-sample___selectors4-start live-sample___selectors4-finish
+<div class="container">
+  <h2>这是标题</h2>
+  <p>这是标题后的段落。</p>
+  <p>这是第二段。</p>
+
+  <h2>另外一个标题</h2>
+  <p>这个段落紧随标题之后。</p>
+  <ul class="list">
+    <li>一</li>
+    <li>
+      二
+      <ul>
+        <li>2.1</li>
+        <li>2.2</li>
+      </ul>
+    </li>
+    <li>三</li>
+  </ul>
+</div>
+```
+
+```css live-sample___selectors4-start live-sample___selectors4-finish
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+/* 在这里添加样式 */
+```
+
+更新的样式应该类似如下：
+
+{{EmbedLiveSample("selectors4-finish", "", "500px")}}
+
+<details>
+<summary>点击查看答案</summary>
+
+这个任务旨在检查你是否理解如何使用不同的组合器。以下是一个合适的解决方案：
+
+```css live-sample___selectors4-finish
+h2 + p {
+  color: red;
+}
+
+.list > li {
+  list-style: none;
+  border-bottom: 1px solid #cccccc;
+}
+```
+
+</details>
+
+## 第五个选择器
+
+要完成该任务，请使用属性选择器解决以下挑战：
+
+1. 选择带有 `title` 属性的 `<a>` 元素，将其边框颜色设置为粉色（`border-color: pink`）。
+2. 选择带有 `href` 属性且属性值中包含 `contact` 的 `<a>` 元素，将其边框颜色设置为橙色（`border-color: orange`）。
+3. 选择 `href` 属性值以 `https` 开头的 `<a>` 元素，将其边框颜色设置为绿色（`border-color: green`）。
+
+任务的起始点类似如下：
+
+{{EmbedLiveSample("selectors5-start", "", "300px")}}
+
+以下是该起始点的底层代码：
+
+```html live-sample___selectors5-start live-sample___selectors5-finish
+<ul>
+  <li><a href="https://example.com">链接 1</a></li>
+  <li><a href="http://example.com" title="Visit example.com">链接 2</a></li>
+  <li><a href="/contact">链接 3</a></li>
+  <li><a href="../contact/index.html">链接 4</a></li>
+</ul>
+```
+
+```css live-sample___selectors5-start live-sample___selectors5-finish
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0 0 0.5em 0;
+}
+
+a {
+  display: block;
+  padding: 0.5em;
+}
+
+a {
+  border: 5px solid grey;
+}
+
+/* 在这里添加样式 */
+```
+
+更新的样式应该类似如下：
+
+{{EmbedLiveSample("selectors5-finish", "", "300px")}}
+
+<details>
+<summary>点击查看答案</summary>
+
+- 要选择带有 title 属性的元素，我们可以在方括号中添加 title（如 `a[title]`），这样会选中第二个链接，因为它是唯一带有 title 属性的链接。
+- 选择 `href` 属性中包含“contact”的 `<a>` 元素，并将其边框设为橙色（`border-color: orange`）。这里需要匹配两种情况：`/contact` 和 `../contact`。因此，我们可以使用 `*=` 来匹配 href 值中任意位置包含“contact”的链接。这样会选中第三个和第四个链接。
+- 选择 href 值以 `https` 开头的 `<a>` 元素，并将其边框设为绿色（`border-color: green`）。查找 href 值以“https”开头的链接，因此使用 `^=` 来仅选中第一个链接。
+
+```css live-sample___selectors5-finish
+a[title] {
+  border-color: pink;
+}
+a[href*="contact"] {
+  border-color: orange;
+}
+a[href^="https"] {
+  border-color: green;
+}
+```
+
+</details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}

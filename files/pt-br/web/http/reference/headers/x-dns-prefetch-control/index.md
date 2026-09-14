@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control
 original_slug: Web/HTTP/Headers/X-DNS-Prefetch-Control
 ---
 
-{{HTTPSidebar}}O cabeçalho de resposta HTTP **`X-DNS-Prefetch-Control`** controla a pré-busca de DNS, um recurso pelo qual os navegadores realizam proativamente a resolução de nomes de domínio em ambos os links que o usuário pode escolher, além de URLs para itens referenciados pelo documento, incluindo imagens , CSS, JavaScript e assim por diante.
+O cabeçalho de resposta HTTP **`X-DNS-Prefetch-Control`** controla a pré-busca de DNS, um recurso pelo qual os navegadores realizam proativamente a resolução de nomes de domínio em ambos os links que o usuário pode escolher, além de URLs para itens referenciados pelo documento, incluindo imagens , CSS, JavaScript e assim por diante.
 
 Essa pré-busca é realizada em segundo plano, de forma que o {{glossary ("DNS")}} provavelmente tenha sido resolvido quando os itens referenciados forem necessários. Isso reduz a latência quando o usuário clica em um link.
 
@@ -15,7 +15,7 @@ Essa pré-busca é realizada em segundo plano, de forma que o {{glossary ("DNS")
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
   </tbody>
@@ -53,7 +53,7 @@ Além disso, por padrão, a pré-busca de nomes de host de link incorporado não
 
 ### Ativando e desativando a pré-busca
 
-Você pode enviar o cabeçalho do lado do servidor X-DNS-Prefetch-Control ou de documentos individuais, usando o atributo [`http-equiv`](/pt-BR/docs/Web/HTML/Element/meta#http-equiv) no {{HTMLElement ("meta" )}} elemento, assim:
+Você pode enviar o cabeçalho do lado do servidor X-DNS-Prefetch-Control ou de documentos individuais, usando o atributo [`http-equiv`](/pt-BR/docs/Web/HTML/Reference/Elements/meta#http-equiv) no {{HTMLElement ("meta" )}} elemento, assim:
 
 ```html
 <meta http-equiv="x-dns-prefetch-control" content="off" />
@@ -63,7 +63,7 @@ Você pode reverter essa configuração configurando o `content` como "`on`".
 
 ### Forçando a procura de nomes de host específicos
 
-Você pode forçar a pesquisa de nomes de host específicos sem fornecer âncoras específicas usando esse nome de host com o uso de [`rel`](/pt-BR/docs/Web/HTML/Element/link#rel) no elemento {{HTMLElement ("link")}} com um tipo de link de `dns-prefetch`:
+Você pode forçar a pesquisa de nomes de host específicos sem fornecer âncoras específicas usando esse nome de host com o uso de [`rel`](/pt-BR/docs/Web/HTML/Reference/Elements/link#rel) no elemento {{HTMLElement ("link")}} com um tipo de link de `dns-prefetch`:
 
 ```html
 <link rel="dns-prefetch" href="http://www.spreadfirefox.com/" />

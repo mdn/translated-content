@@ -3,8 +3,6 @@ title: tabs.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/reload
 ---
 
-{{AddonSidebar}}
-
 Rechargez un onglet, en contournant éventuellement le cache Web local.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -23,9 +21,7 @@ var reloading = browser.tabs.reload(
 - `tabId`{{optional_inline}}
   - : `integer`. L'ID de l'onglet à recharger. Par défaut à l'onglet sélectionné de la fenêtre en cours.
 - `reloadProperties`{{optional_inline}}
-
   - : `object`.
-
     - `bypassCache`{{optional_inline}}
       - : `boolean`. Contourner le cache web local. La valeur par défaut est `false`.
 
@@ -71,8 +67,6 @@ reloading.then(onReloaded, onError);
 > [!NOTE]
 >
 > Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -15,7 +15,7 @@ someURL = ServiceWorker.scriptURL
 
 ### 值
 
-一个 {{domxref("USVString")}} (另见 [WebIDL definition of USVString](http://heycam.github.io/webidl/#idl-USVString).)
+一个 {{jsxref("String")}} (另见 [WebIDL definition of USVString](http://heycam.github.io/webidl/#idl-USVString).)
 
 ## 规范
 

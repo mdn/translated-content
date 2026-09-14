@@ -25,7 +25,8 @@ O seguinte trecho acessa o objeto {{domxref("Storage")}} local do domínio atual
 localStorage.setItem("meuGato", "Tom");
 ```
 
-> **Nota:** **Nota: Por favor veja o artigo** [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) **para um exemplo completo.**
+> [!NOTE]
+> **Nota: Por favor veja o artigo** [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) **para um exemplo completo.**
 
 ## Especificações
 

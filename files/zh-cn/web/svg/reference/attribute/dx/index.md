@@ -7,9 +7,7 @@ slug: Web/SVG/Reference/Attribute/dx
 
 对于{{SVGElement("feOffset")}}元素，它的值代表所有输入的图像的偏移量之和。这个总和被表达在由{{SVGElement("filter")}}元素的{{SVGAttr("primitiveUnits")}}属性定义的坐标系中。
 
-对于{{SVGElement("glyphRef")}}元素，它的值代表该符号在字体坐标系中 x 轴上的相对坐标。
-
-对于 {{SVGElement("text")}}、{{SVGElement("tspan")}} 和 {{SVGElement("tref")}} 元素，由于这些元素允许设置 [\<list-of-length>](/zh-CN/docs/Web/SVG/Guides/Content_type#t_值数列)，所以更复杂。
+对于 {{SVGElement("text")}}、{{SVGElement("tspan")}} 元素，由于这些元素允许设置 [\<list-of-length>](/zh-CN/docs/Web/SVG/Guides/Content_type#t_值数列)，所以更复杂。
 
 如果只提供了一个 [\<length>](/zh-CN/docs/Web/SVG/Guides/Content_type#长度)，当前文本位置会沿着坐标系内 x 轴方向偏移 [\<length>](/zh-CN/docs/Web/SVG/Guides/Content_type#长度) 。
 
@@ -32,9 +30,7 @@ slug: Web/SVG/Reference/Attribute/dx
 这些元素可以使用 dx 属性
 
 - {{ SVGElement("feOffset") }}
-- {{ SVGElement("glyphRef") }}
 - {{ SVGElement("text") }}
-- {{ SVGElement("tref") }}
 - {{ SVGElement("tspan") }}
 
 ## 规范

@@ -1,9 +1,14 @@
 ---
 title: WebAssembly.Module
 slug: WebAssembly/Reference/JavaScript_interface/Module
+l10n:
+  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
 **`WebAssembly.Module`** 对象包含已经由浏览器编译的无状态 WebAssembly 代码，可以高效地[与 Worker 共享](/zh-CN/docs/Web/API/Worker/postMessage)和多次实例化。
+
+> [!NOTE]
+> `WebAssembly.Module` 对象与 Emscripten 使用的 [`Module`](https://emscripten.org/docs/api_reference/module.html) 没有关系。
 
 ## 构造函数
 
@@ -66,6 +71,6 @@ onmessage = (e) => {
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览
 - [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
 - [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 获取指定元素的开放或封闭的影子根。如果影子根未附加到该元素，则返回 `null`。
 
 > [!NOTE]

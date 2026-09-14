@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{APIRef("HTML DOM API")}}{{deprecated_header}}
+{{APIRef("HTML DOM API")}}
 
 {{domxref("HTMLTableCellElement")}} 接口的 **`noWrap`** 属性返回一个指示单元格的文本是否可以换行的布尔值。
 
@@ -18,7 +18,7 @@ l10n:
 
 ## 示例
 
-使用 CSS `white-space` 代替，在 {{cssxref("white-space")}} 页面有一个可用的[示例](/zh-CN/docs/Web/CSS/white-space#控制表格中的换行)。
+使用 CSS `white-space` 代替，在 {{cssxref("white-space")}} 页面有一个可用的[示例](/zh-CN/docs/Web/CSS/Reference/Properties/white-space#控制表格中的换行)。
 
 ## 规范
 

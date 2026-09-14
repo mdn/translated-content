@@ -3,8 +3,6 @@ title: bookmarks.onImportEnded
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportEnded
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsque le navigateur a fini d'importer un ensemble de signets.
 
 Voir {{WebExtAPIRef("bookmarks.onImportBegan")}}.
@@ -61,8 +59,6 @@ browser.browserAction.onClicked.addListener(handleClick);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

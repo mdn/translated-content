@@ -3,8 +3,6 @@ title: Set.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Set/keys
 ---
 
-{{JSRef}}
-
 {{jsxref("Set")}} 实例的 **`keys()`** 方法是 [`values()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/values) 方法的别名。
 
 ## 语法

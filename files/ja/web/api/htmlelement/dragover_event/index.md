@@ -123,7 +123,6 @@ target.addEventListener("drop", (event) => {
 ## 関連情報
 
 - その他のドラッグ＆ドロップイベント:
-
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - {{domxref("HTMLElement/dragend_event", "dragend")}}

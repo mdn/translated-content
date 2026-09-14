@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Server-Timing
 original_slug: Web/HTTP/Headers/Server-Timing
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho **`Server-Timing`** comunica uma ou mais métricas e descrições para um dado ciclo de requisição e resposta. Ele é usado para dar uma visão superficial de qualquer métrica de tempo do servidor _backend_ (e.g. leitura e escrita de banco de dados, tempo de CPU, acesso ao sistema de arquivos, etc.) nas ferramentas do desenvolvedor no navegador do usuário ou na interface {{domxref("PerformanceServerTiming")}}.
 
 <table class="properties">
@@ -15,7 +13,7 @@ O cabeçalho **`Server-Timing`** comunica uma ou mais métricas e descrições p
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

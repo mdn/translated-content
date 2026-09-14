@@ -53,7 +53,6 @@ l10n:
 - [PHP](https://en.wikipedia.org/wiki/PHP) on Wikipedia
 - 위키북스의 [PHP 프로그래밍](https://en.wikibooks.org/wiki/PHP_Programming)
 - [MDN 웹 문서 용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("Java")}}
   - {{Glossary("JavaScript")}}
   - {{Glossary("Python")}}

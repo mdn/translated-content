@@ -11,7 +11,7 @@ l10n:
 
 ## プライバシーの考慮点
 
-訪問したリンクが漏洩するのを避けるため、現在 Chrome ベースのブラウザーでは、[`href`](/ja/docs/Web/HTML/Element/a#href) 属性を持つ {{HTMLElement("a")}} 要素、およびそのような要素の子要素に対してこの機能は無効になっています。詳細は以下を参照してください。
+訪問したリンクが漏洩するのを避けるため、現在 Chrome ベースのブラウザーでは、[`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性を持つ {{HTMLElement("a")}} 要素、およびそのような要素の子要素に対してこの機能は無効になっています。詳細は以下を参照してください。
 
 - The CSS Painting API [Privacy Considerations section](https://drafts.css-houdini.org/css-paint-api/#privacy-considerations)
 - The CSS Painting API spec issue ["CSS Paint API leaks browsing history"](https://github.com/w3c/css-houdini-drafts/issues/791)

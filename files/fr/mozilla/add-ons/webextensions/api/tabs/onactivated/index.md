@@ -3,8 +3,6 @@ title: tabs.onActivated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
 ---
 
-{{AddonSidebar}}
-
 Se déclenche lorsque l'onglet actif dans une fenêtre change. Notez que l'URL de l'onglet peut ne pas être définie au moment où cet événement s'est déclenché, mais vous pouvez écouter les événements {{WebExtAPIRef("tabs.onUpdated")}} pour être averti lorsqu'une URL est définie.
 
 ## Syntaxe
@@ -29,9 +27,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `activeInfo`
       - : [`object`](#activeinfo). ID de l'onglet qui a été activé, et ID de sa fenêtre.
 

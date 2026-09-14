@@ -1,12 +1,9 @@
 ---
 title: 206 Partial Content
 slug: Web/HTTP/Reference/Status/206
-original_slug: Web/HTTP/Status/206
 l10n:
-  sourceCommit: 783ffd9c1cf35421242e028a1b8743cf2b1918dd
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`206 Partial Content`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、[範囲リクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)へのレスポンスとして送信されます。
 レスポンス本体には、リクエストの {{HTTPHeader("Range")}} ヘッダーで指定されたリクエストされたデータ範囲が含まれます。

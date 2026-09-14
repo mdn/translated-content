@@ -13,7 +13,7 @@ l10n:
 
 ## 高层次概览
 
-本文假设你已经熟悉 [DOM（文档对象模型）](/zh-CN/docs/Web/API/Document_Object_Model/Introduction)的概念——一种连接节点的树状结构，代表标记文档（通常是在 web 文档中的 HTML 文档）中出现的不同元素和文本字符串。作为示例，请考虑以下 HTML 片段：
+本文假设你已经熟悉 [DOM（文档对象模型）](/zh-CN/docs/Web/API/Document_Object_Model)的概念——一种连接节点的树状结构，代表标记文档（通常是在 web 文档中的 HTML 文档）中出现的不同元素和文本字符串。作为示例，请考虑以下 HTML 片段：
 
 ```html
 <html lang="zh-CN">
@@ -68,7 +68,7 @@ _影子_ DOM 允许将隐藏的 DOM 树附加到常规 DOM 树中的元素上—
 
 ## 创建一个影子 DOM
 
-下面的页面包含两个元素，一个 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 属性为 `"host"` 的 {{htmlelement("div")}} 元素，以及一个包含了一些文本的 {{htmlelement("span")}} 元素：
+下面的页面包含两个元素，一个 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性为 `"host"` 的 {{htmlelement("div")}} 元素，以及一个包含了一些文本的 {{htmlelement("span")}} 元素：
 
 ```html
 <div id="host"></div>
@@ -349,10 +349,10 @@ customElements.define("filled-circle", FilledCircle);
 - {{domxref("CSSStyleSheet.replace()")}}
 - {{domxref("CSSStyleSheet.replaceSync()")}}
 - {{HTMLelement("template")}}
-- [CSS 域](/zh-CN/docs/Web/CSS/CSS_scoping)模块
+- [CSS 域](/zh-CN/docs/Web/CSS/Guides/Scoping)模块
 - {{CSSXref(":host")}}
 - {{CSSXref(":host_function", ":host()")}}
 - {{CSSXref(":host-context", ":host-context()")}}
 - {{CSSXref("::slotted", "::slotted()")}}
-- [CSS 影子部件](/zh-CN/docs/Web/CSS/CSS_shadow_parts)模块
+- [CSS 影子部件](/zh-CN/docs/Web/CSS/Guides/Shadow_parts)模块
 - {{CSSXref("::part")}}

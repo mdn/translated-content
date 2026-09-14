@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **WebRTC**（_Web 实时通信_）是一个可以用在视频聊天、音频聊天或 P2P 文件分享等 Web 应用中的 {{Glossary("API")}}。
 
 WebRTC 主要由以下几个部分组成：

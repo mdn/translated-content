@@ -3,8 +3,6 @@ title: "TypeError: 'x' is not iterable"
 slug: Web/JavaScript/Reference/Errors/is_not_iterable
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 错误信息
 
 ```plain
@@ -75,7 +73,8 @@ function* generate(a, b) {
   yield b;
 }
 
-for (let x of generate) // TypeError: generate is not iterable
+for (let x of generate)
+  // TypeError: generate is not iterable
   console.log(x);
 ```
 

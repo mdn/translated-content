@@ -77,7 +77,7 @@ function compararNumeros(a, b) {
 }
 ```
 
-O método de ordenação pode convenientemente ser usada com {{jsxref("Operators/function", "funções anônimas", "", 1)}} (e [closures](/pt-BR/docs/Web/JavaScript/Closures)):
+O método de ordenação pode convenientemente ser usada com {{jsxref("Operators/function", "funções anônimas", "", 1)}} (e [closures](/pt-BR/docs/Web/JavaScript/Guide/Closures)):
 
 ```js
 var numbers = [4, 2, 5, 1, 3];

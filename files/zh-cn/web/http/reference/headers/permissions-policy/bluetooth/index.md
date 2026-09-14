@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP {{HTTPHeader("Permissions-Policy")}} 标头的 `bluetooth` 指令控制当前文档是否被允许使用 [Web Bluetooth API](/zh-CN/docs/Web/API/Web_Bluetooth_API)。
 

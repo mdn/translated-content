@@ -16,7 +16,6 @@ Blink는 Google이 Chromium의 한 부분(따라서 {{glossary("Google Chrome", 
 - 위키백과의 [Blink](<https://en.wikipedia.org/wiki/Blink_(browser_engine)>)
 - Blink의 [FAQ](https://www.chromium.org/blink/developer-faq/)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{glossary("Google Chrome")}}
   - {{glossary("Gecko")}}
   - {{glossary("Trident")}}

@@ -42,4 +42,4 @@ b1.tabIndex = 1;
 ## 関連情報
 
 - [キーボードでナビゲート可能な JavaScript ウィジェットのアクセシビリティ](/ja/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
-- HTML の [`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) グローバル属性
+- HTML の [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) グローバル属性

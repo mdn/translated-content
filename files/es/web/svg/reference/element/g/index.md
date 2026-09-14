@@ -33,10 +33,10 @@ original_slug: Web/SVG/Element/g
 
 ### Atributos globales
 
-- [Conditional processing attributes](/es/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Core attributes](/es/docs/Web/SVG/Attribute#core) »
-- [Graphical event attributes](/es/docs/Web/SVG/Attribute#graphicalevent) »
-- [Presentation attributes](/es/docs/Web/SVG/Attribute#presentation) »
+- [Conditional processing attributes](/es/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [Core attributes](/es/docs/Web/SVG/Reference/Attribute#core) »
+- [Graphical event attributes](/es/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [Presentation attributes](/es/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

@@ -129,7 +129,7 @@ La captura de audio siempre es opcional, e incluso cuando el contenido web solic
 
 ## Uso de la transmisión capturada
 
-La {{jsxref("promise","promesa")}} devuelta por {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} se resuelve en un {{domxref("MediaStream")}} que contiene al menos un flujo de video que contiene la pantalla o el área de la pantalla, y que se ajusta o filtra según las restricciones especificadas cuando se llamó a `getDisplayMedia()`.
+La {{jsxref("Promise","promesa")}} devuelta por {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} se resuelve en un {{domxref("MediaStream")}} que contiene al menos un flujo de video que contiene la pantalla o el área de la pantalla, y que se ajusta o filtra según las restricciones especificadas cuando se llamó a `getDisplayMedia()`.
 
 ### Riesgos potenciales
 
@@ -224,7 +224,7 @@ async function startCapture() {
 }
 ```
 
-Después de borrar el contenido del registro para deshacerse de cualquier texto sobrante del intento anterior de conexión, `startCapture()` llama a {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, pasando en él, el objeto de restricciones definido por `displayMediaOptions`. Usando {{jsxref("Operators/await", "await")}}, la siguiente línea de código no se ejecuta hasta que se resuelve la {{jsxref("promise","promesa")}} devuelta por `getDisplayMedia()`. Tras la resolución, la promesa devuelve un {{domxref("MediaStream")}}, que transmitirá el contenido de la pantalla, ventana u otra región seleccionada por el usuario.
+Después de borrar el contenido del registro para deshacerse de cualquier texto sobrante del intento anterior de conexión, `startCapture()` llama a {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, pasando en él, el objeto de restricciones definido por `displayMediaOptions`. Usando {{jsxref("Operators/await", "await")}}, la siguiente línea de código no se ejecuta hasta que se resuelve la {{jsxref("Promise","promesa")}} devuelta por `getDisplayMedia()`. Tras la resolución, la promesa devuelve un {{domxref("MediaStream")}}, que transmitirá el contenido de la pantalla, ventana u otra región seleccionada por el usuario.
 
 La transmisión se conecta al elemento {{HTMLElement("video")}} almacenando el `MediaStream` devuelto en el {{domxref("HTMLMediaElement.srcObject", "srcObject")}} del elemento.
 
@@ -321,7 +321,7 @@ El producto final se ve así. Si su navegador es compatible con la API de captur
 
 ## Seguridad
 
-Para poder funcionar cuando la [Política de permisos](/es/docs/Web/HTTP/Permissions_Policy) está habilitada, necesitarás el permiso `display-capture`. Esto se puede hacer usando el encabezado {{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} o, si está usando la API de captura de pantalla en un {{HTMLElement("iframe") }}, el atributo [`allow`](/es/docs/Web/HTML/Element/iframe#allow) del elemento `<iframe>`.
+Para poder funcionar cuando la [Política de permisos](/es/docs/Web/HTTP/Permissions_Policy) está habilitada, necesitarás el permiso `display-capture`. Esto se puede hacer usando el encabezado {{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} o, si está usando la API de captura de pantalla en un {{HTMLElement("iframe") }}, el atributo [`allow`](/es/docs/Web/HTML/Reference/Elements/iframe#allow) del elemento `<iframe>`.
 
 Por ejemplo, esta línea en los encabezados HTTP habilitará la API de captura de pantalla para el documento y cualquier elemento {{HTMLElement("iframe")}} incrustado que se cargue desde el mismo origen:
 

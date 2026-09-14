@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Expect
 original_slug: Web/HTTP/Headers/Expect
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de requisição HTTP **`Expect`** indica expectativas que precisão ser cumpridas pelo servidor para lidar com a requisição apropriadamente.
 
 A única expectativa definida na especificação é `Expect: 100-continue`, para qual o servidor deve responder com:
@@ -24,7 +22,7 @@ Navegadores comuns não enviam um cabeçalho `Expect`, mas alguns clientes como 
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>sim</td>
     </tr>
   </tbody>

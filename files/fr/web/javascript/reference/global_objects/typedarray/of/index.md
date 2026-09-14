@@ -3,8 +3,6 @@ title: TypedArray.of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 ---
 
-{{JSRef}}
-
 La méthode **`TypedArray.of()`** crée un nouvel objet {{jsxref("TypedArray", "TypedArray", "#Les_objets_TypedArray")}} à partir d'un nombre variable d'arguments. Cette méthode est similaire à {{jsxref("Array.of()")}}.
 
 ## Syntaxe
@@ -41,7 +39,7 @@ Une nouvelle instance de {{jsxref("TypedArray")}}.
 Il existe de légères différences entre {{jsxref("Array.of()")}} et `TypedArray.of()` :
 
 - Si la valeur de `this` passée à `TypedArray.of` n'est pas un constructeur, `TypedArray.of` lèvera une exception {{jsxref("TypeError")}}, tandis que `Array.of` créera un nouvel objet {{jsxref("Array")}}.
-- `TypedArray.of` utilise `[[Put]]` tandis que `Array.of` utilise `[[DefineProperty]]`. Ainsi lorsque les arguments sont des objets {{jsxref("Proxy")}} la première méthode appellera {{jsxref("Objets_globaux/Proxy/handler/set", "handler.set")}} pour créer les nouveaux éléments et la seconde appellera {{jsxref("Objets_globaux/Proxy/handler/defineProperty", "handler.defineProperty")}}.
+- `TypedArray.of` utilise `[[Put]]` tandis que `Array.of` utilise `[[DefineProperty]]`. Ainsi lorsque les arguments sont des objets {{jsxref("Proxy")}} la première méthode appellera {{jsxref("Proxy/Proxy/set", "handler.set")}} pour créer les nouveaux éléments et la seconde appellera {{jsxref("Proxy/Proxy/defineProperty", "handler.defineProperty")}}.
 
 ## Exemples
 

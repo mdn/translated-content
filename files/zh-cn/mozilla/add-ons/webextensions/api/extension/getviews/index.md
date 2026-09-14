@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 返回当前扩展内运行的每个页面的 [Window](/zh-CN/docs/Web/API/Window) 对象数组。例如，这包括：
 
 - 后台页面（若定义了）
@@ -27,9 +25,7 @@ let windows = browser.extension.getViews(
 ### 参数
 
 - `fetchProperties` {{optional_inline}}
-
   - : 包含如下属性的对象：
-
     - `type` {{optional_inline}}
       - : `string`，指示要获取的视图类型的 {{WebExtAPIRef('extension.ViewType')}}。如果省略，此函数将返回所有视图。
     - `windowId` {{optional_inline}}

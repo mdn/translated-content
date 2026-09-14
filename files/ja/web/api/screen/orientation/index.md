@@ -1,6 +1,9 @@
 ---
-title: Screen.orientation
+title: "Screen: orientation プロパティ"
+short-title: orientation
 slug: Web/API/Screen/orientation
+l10n:
+  sourceCommit: 00f46adb5616d826821d63b11eac285faf1cf4a5
 ---
 
 {{APIRef("Screen Orientation API")}}
@@ -16,28 +19,25 @@ slug: Web/API/Screen/orientation
 ## 例
 
 ```js
-var orientation =
-  (screen.orientation || {}).type ||
-  screen.mozOrientation ||
-  screen.msOrientation;
-
-if (orientation === "landscape-primary") {
-  console.log("良い感じですね。");
-} else if (orientation === "landscape-secondary") {
-  console.log("うーん…。画面が上下逆です！");
-} else if (
-  orientation === "portrait-secondary" ||
-  orientation === "portrait-primary"
-) {
-  console.log("うーん…。スクリーンを横向きにした方がいいですよ");
-} else if (orientation === undefined) {
-  console.log("このブラウザーは画面方向 API に対応していません :(");
+switch (screen.orientation.type) {
+  case "landscape-primary":
+    console.log("良い感じですね。");
+    break;
+  case "landscape-secondary":
+    console.log("うーん…。画面が上下逆です！");
+    break;
+  case "portrait-secondary":
+  case "portrait-primary":
+    console.log("うーん…。スクリーンを横向きにした方がいいですよ");
+    break;
+  default:
+    console.log("このブラウザーは画面方向 API に対応していません :(");
 }
 ```
 
 ## 仕様書
 
-仕様書の一部ではありません。
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -47,4 +47,4 @@ if (orientation === "landscape-primary") {
 
 - {{DOMxRef("ScreenOrientation")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} イベント
-- [画面の方向の制御](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
+- [画面の向きの制御](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

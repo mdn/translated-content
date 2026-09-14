@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 冒烟测试（Smoke Test）是指对软件的关键功能进行的功能测试或单元测试。它是在进行更深入的测试之前进行的一种快速测试。
 
 以下是一些冒烟测试的示例问题：

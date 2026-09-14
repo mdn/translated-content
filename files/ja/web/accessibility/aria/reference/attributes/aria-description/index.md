@@ -7,7 +7,8 @@ l10n:
 
 グローバルな `aria-description` 属性は、現在の要素を説明または注釈する文字列値を定義します。
 
-> **メモ:** `aria-description` は、まだ ARIA 1.3 の W3C エディターズドラフトにあります。当面は、ARIA 1.1 からサポートされている `aria-describedby` を引き続き使用してください。
+> [!NOTE]
+> `aria-description` は、まだ ARIA 1.3 の W3C エディターズドラフトにあります。当面は、ARIA 1.1 からサポートされている `aria-describedby` を引き続き使用してください。
 
 ## 解説
 
@@ -36,10 +37,10 @@ l10n:
 - `<string>`
   - : 値は、支援技術のユーザーに伝えることを目的とした、制約のない文字列値です。
 
-## 関連インターフェース
+## 関連インターフェイス
 
 - {{domxref("Element.ariaDescription")}}
-  - : {{domxref("Element")}} インターフェースの一部である [`ariaDescription`](/ja/docs/Web/API/Element/ariaDescription) プロパティは、現在の要素を説明または注釈する文字列値を定義する `aria-description` 属性の値を反映します。
+  - : {{domxref("Element")}} インターフェイスの一部である [`ariaDescription`](/ja/docs/Web/API/Element/ariaDescription) プロパティは、現在の要素を説明または注釈する文字列値を定義する `aria-description` 属性の値を反映します。
 
 ## 関連付けられたロール
 
@@ -51,6 +52,6 @@ l10n:
 
 ## 関連情報
 
-- [HTML `title` 属性](/ja/docs/Web/HTML/Global_attributes/title)
+- [HTML `title` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/title)
 - [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 - [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)

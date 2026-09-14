@@ -39,7 +39,6 @@ const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 - `substr` (padrão)
   - : Uma {{jsxref ("String")}} que deve ser substituída por `newSubstr`. É tratada como uma string literal e não é interpretada como uma expressão regular (_`RegExp`_).
 - `newSubstr` (substituição)
-
   - : É a {{jsxref("String")}} que substitui a `substring` especificada pelo parâmetro `regexp` ou `substr`. Um número de padrões especiais para substituição são suportados; veja a seção "
 
     Especificando uma string como parâmetro
@@ -121,7 +120,7 @@ Já o código abaixo vai funcionar:
 
 ## Veja também
 
-- {{jsxref("String.prototype.replace", "String.prototype.replace()")}}
-- {{jsxref("String.prototype.match", "String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test", "RegExp.prototype.test()")}}
+- {{jsxref("String.prototype.replace()")}}
+- {{jsxref("String.prototype.match()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

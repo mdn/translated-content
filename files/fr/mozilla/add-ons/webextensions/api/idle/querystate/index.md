@@ -3,8 +3,6 @@ title: idle.queryState()
 slug: Mozilla/Add-ons/WebExtensions/API/idle/queryState
 ---
 
-{{AddonSidebar}}
-
 Renvoie `"locked"` si le système est vérouillé, `"inactif"` si l'utilisation n'a généré aucune entrée pendant un nombre de secondes spécifié, ou `"actif"` dans le cas contraire.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -52,8 +50,6 @@ querying.then(onGot);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/api/idle). Cette documentation est dérivée de [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

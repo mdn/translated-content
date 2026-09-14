@@ -23,7 +23,6 @@ Pour plus d'informations et d'exemples, consulter [utiliser des fichiers depuis 
 - {{domxref("FileReader.error")}} {{readonlyinline}}
   - : Un objet {{domxref("DOMError")}} qui représente l'erreur qui s'est produite lors de la lecture du fichier.
 - {{domxref("FileReader.readyState")}} {{readonlyinline}}
-
   - : Un nombre qui indique l'état du `FileReader`. Cette valeur est l'une des suivantes :
 
     <table class="standard-table">
@@ -64,14 +63,15 @@ Pour plus d'informations et d'exemples, consulter [utiliser des fichiers depuis 
 - {{domxref("FileReader.onprogress")}}
   - : Un gestionnaire pour l'évènement [`progress`](/fr/docs/Web/API/FileReader/progress_event). Cet évènement est déclenché lorsque la lecture du {{domxref("Blob")}} est en cours.
 
-> **Note :** `FileReader` hérite de l'interface {{domxref("EventTarget")}} et tout ces évènements peuvent donc être « écoutés » grâce à la méthode {{domxref("EventTarget.addEventListener()","addEventListener")}}.
+> [!NOTE]
+> `FileReader` hérite de l'interface {{domxref("EventTarget")}} et tout ces évènements peuvent donc être « écoutés » grâce à la méthode {{domxref("EventTarget.addEventListener()","addEventListener")}}.
 
 ## Méthodes
 
 - {{domxref("FileReader.abort()")}}
   - : Cette méthode interrompt l'opération de lecture. Après avoir renvoyé une valeur, l'état `readyState` aura la valeur `DONE`.
 - {{domxref("FileReader.readAsArrayBuffer()")}}
-  - : Cette méthode démarre la lecture du contenu pour le blob indiqué. Une fois que la lecture est terminée, l'attribut `result` contient un objet {{domxref("ArrayBuffer")}} représentant les données du fichier.
+  - : Cette méthode démarre la lecture du contenu pour le blob indiqué. Une fois que la lecture est terminée, l'attribut `result` contient un objet {{jsxref("ArrayBuffer")}} représentant les données du fichier.
 - {{domxref("FileReader.readAsBinaryString()")}} {{non-standard_inline}}
   - : Cette méthode démarre la lecture du contenu pour le blob indiqué. Une fois que la lecture est terminée, l'attribut `result` contient les données binaires brutes sous la forme d'une chaîne de caractères.
 - {{domxref("FileReader.readAsDataURL()")}}

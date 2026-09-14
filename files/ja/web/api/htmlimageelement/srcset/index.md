@@ -3,7 +3,7 @@ title: "HTMLImageElement: srcset プロパティ"
 short-title: srcset
 slug: Web/API/HTMLImageElement/srcset
 l10n:
-  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
+  sourceCommit: f4372ac9926fc2a1cbe408dae02b381b7f1909da
 ---
 
 {{APIRef("HTML DOM")}}
@@ -14,7 +14,8 @@ l10n:
 
 `srcset` プロパティは {{domxref("HTMLImageElement.sizes", "sizes")}} プロパティとともに、レスポンシブウェブサイトを設計する上で重要な要素です。これらのプロパティを併用することにより、描画状況に適した画像を使用するページを作成できます。
 
-> **メモ:** [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) 属性が幅記述子を使用した場合、`sizes` 属性も指定する必要があります。さもないと `srcset` 自体が無視されます。
+> [!NOTE]
+> [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) 属性が幅記述子を使用した場合、`sizes` 属性も指定する必要があります。さもないと `srcset` 自体が無視されます。
 
 ## 値
 
@@ -51,12 +52,14 @@ l10n:
 
 以下の HTML は、{{domxref("HTMLImageElement.src", "src")}} 属性に記述されている既定の画像リソースを 1x の画面で使用し、400 ピクセル版（`srcset` 属性で記述され、`2x` 記述子が割り当てられているもの）は 2x の画面で使用するよう示しています。
 
-```html
+```html-nolint
 <div class="box">
   <img
-    src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
+    src="/ja/docs/Web/HTML/Reference/Elements/img/clock-demo-200px.png"
     alt="Clock"
-    srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 2x" />
+    srcset="
+      /ja/docs/Web/HTML/Reference/Elements/img/clock-demo-400px.png 2x
+    " />
 </div>
 ```
 
@@ -83,11 +86,13 @@ CSS では、画像とその周囲のボックスは 200 ピクセル四方で�
 
 ```js
 window.addEventListener("load", () => {
-  let box = document.querySelector(".box");
-  let image = box.querySelector("img");
+  const box = document.querySelector(".box");
+  const image = box.querySelector("img");
 
-  let newElem = document.createElement("p");
-  newElem.innerHTML = `画像: <code>${image.currentSrc}</code>`;
+  const newElem = document.createElement("p");
+  newElem.textContent = "画像: ";
+  newElem.appendChild(document.createElement("code")).textContent =
+    image.currentSrc;
   box.appendChild(newElem);
 });
 ```
@@ -98,7 +103,7 @@ window.addEventListener("load", () => {
 
 {{EmbedLiveSample("Examples", 640, 320)}}
 
-それ以外の例については、[レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)のガイドを参照してください。
+それ以外の例については、[レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)のガイドを参照してください。
 
 ## 仕様書
 
@@ -111,5 +116,5 @@ window.addEventListener("load", () => {
 ## 関連情報
 
 - [HTML の画像](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images)
-- [レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)
+- [レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)
 - [画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Guides/Formats/Image_types)

@@ -2,10 +2,8 @@
 title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
 l10n:
-  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
-
-{{JSRef}}
 
 **`Math.atan()`** 靜態方法回傳數字的反正切值（單位為弧度），也就是說：
 
@@ -80,3 +78,4 @@ const theta = (x, y) => Math.atan(y / x);
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("atan()")}} 函式

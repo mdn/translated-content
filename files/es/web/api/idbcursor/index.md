@@ -23,7 +23,6 @@ Puede tener un número ilimitado de cursores al mismo tiempo. Siempre se obtiene
 <!---->
 
 - {{domxref("IDBCursor.delete()")}}
-
   - : Devuelve un objeto {{domxref("IDBRequest")}} y, en un hilo separado, elimina el registro en la posición del cursor, sin cambiar la posición del cursor. Esto se puede utilizar para borrar registros específicos.
 
     {{domxref("IDBCursor.update()")}}
@@ -42,8 +41,6 @@ Puede tener un número ilimitado de cursores al mismo tiempo. Siempre se obtiene
   - : Devuelve la `key` primaria efectiva actual del cursor. Si el cursor está siendo iterado o ha iterado fuera de su rango, se fija en `undefined`. La `key` principal del cursor puede ser cualquier tipo de datos.
 
 ## Constants
-
-{{ deprecated_header(13) }}
 
 > [!WARNING]
 > These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ([Error 891944 en Firefox](https://bugzil.la/891944))

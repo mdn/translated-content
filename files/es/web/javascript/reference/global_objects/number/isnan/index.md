@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 
 {{JSRef}}
 
-El método **`Number.isNaN()`** determina si el valor pasado es {{jsxref("NaN")}}. Versión más robusta de la función global {{jsxref("isNaN", "isNaN()")}}.
+El método **`Number.isNaN()`** determina si el valor pasado es {{jsxref("NaN")}}. Versión más robusta de la función global {{jsxref("isNaN()")}}.
 
 ## Sintaxis
 
@@ -20,9 +20,9 @@ Number.isNaN(value)
 
 ## Description
 
-Debido a los dos operadores de igualdad, {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} y {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}, evaluando a `false` cuando al comprobar si {{jsxref("NaN")}} _is_ {{jsxref("NaN")}}, la función `Number.isNaN()` se ha convertido en necesaria. Esta situación es diferente a las otras comparaciones de valor en JavaScript.
+Debido a los dos operadores de igualdad, {{jsxref("Operators", "==", "#Equality")}} y {{jsxref("Operators", "===", "#Identity")}}, evaluando a `false` cuando al comprobar si {{jsxref("NaN")}} _is_ {{jsxref("NaN")}}, la función `Number.isNaN()` se ha convertido en necesaria. Esta situación es diferente a las otras comparaciones de valor en JavaScript.
 
-En comparación a la función global {{jsxref("isNaN", "isNaN()")}}, `Number.isNaN()` no sufre el problema de forzar la conversión del parámetro a un número. Esto significa que ahora es seguro pasar valores que normalmente se convertirían a {{jsxref("NaN")}}, pero no son del mismo valor que {{jsxref("NaN")}}. Esto también significa que solo los valores de tipo número, que también son {{jsxref("NaN")}}, retornan `true`.
+En comparación a la función global {{jsxref("isNaN()")}}, `Number.isNaN()` no sufre el problema de forzar la conversión del parámetro a un número. Esto significa que ahora es seguro pasar valores que normalmente se convertirían a {{jsxref("NaN")}}, pero no son del mismo valor que {{jsxref("NaN")}}. Esto también significa que solo los valores de tipo número, que también son {{jsxref("NaN")}}, retornan `true`.
 
 ## Examples
 
@@ -75,4 +75,4 @@ Number.isNaN =
 ## Ver también
 
 - {{jsxref("Number")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}

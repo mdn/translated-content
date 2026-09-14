@@ -10,7 +10,8 @@ l10n:
 
 **`mousedown`** イベントは、ポインターが要素の中にあるときにポインティングデバイスのボタンが押下されたとき、その要素 ({{domxref("Element")}}) に発行されます。
 
-> **メモ:** {{domxref("Element/click_event", "click")}} イベントとの違いは、 `click` イベントが完全なクリック操作の後、つまり、同じ要素内でマウスのボタンが押されて離された後で発行されることです。 `mousedown` はボタンが最初に押された時点で発行されます。
+> [!NOTE]
+> {{domxref("Element/click_event", "click")}} イベントとの違いは、 `click` イベントが完全なクリック操作の後、つまり、同じ要素内でマウスのボタンが押されて離された後で発行されることです。 `mousedown` はボタンが最初に押された時点で発行されます。
 
 ## 構文
 
@@ -39,9 +40,9 @@ _親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
   - : このマウスイベントが発行されたときに押されていたボタンです（もしあれば）。
 - {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : [ビューポート座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#ビューポート)におけるマウスポインターの X 座標です。
+  - : [ビューポート座標](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#ビューポート)におけるマウスポインターの X 座標です。
 - {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : [ビューポート座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#ビューポート)におけるマウスポインターの Y 座標です。
+  - : [ビューポート座標](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#ビューポート)におけるマウスポインターの Y 座標です。
 - {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : このマウスイベントが発行されたときに <kbd>control</kbd> キーが押されていた場合は `true` を返します。
 - {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
@@ -65,9 +66,9 @@ _親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承
 - {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
   - : もしあれば、イベントの副ターゲットです。
 - {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : [スクリーン座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#スクリーン)におけるマウスポインターの X 座標です。
+  - : [スクリーン座標](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#スクリーン)におけるマウスポインターの X 座標です。
 - {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : [スクリーン座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#スクリーン)におけるマウスポインターの Y 座標です。
+  - : [スクリーン座標](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#スクリーン)におけるマウスポインターの Y 座標です。
 - {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
   - : このマウスイベントが発行されたときに <kbd>shift</kbd> キーが押されていた場合は `true` を返します。
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}

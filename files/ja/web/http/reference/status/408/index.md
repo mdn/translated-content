@@ -1,14 +1,11 @@
 ---
 title: 408 Request Timeout
 slug: Web/HTTP/Reference/Status/408
-original_slug: Web/HTTP/Status/408
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-{{HTTPSidebar}}
-
-HTTP の **`408 Request Timeout`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがこの未使用のコネクションをシャットダウン使用としていることを示します。
+HTTP の **`408 Request Timeout`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがこの未使用のコネクションをシャットダウンしようとしていることを示します。
 サーバーによっては、クライアントから前回のリクエストがなくても、アイドル接続時に `408` が送信されます。
 
 `408` はサーバーがコネクションを待機し続けるのではなく、閉じることを決定することを意味しているため、サーバーはレスポンスで {{HTTPHeader("Connection", "Connection: close")}} ヘッダーフィールドを送信する必要があります。
@@ -28,7 +25,7 @@ HTTP の **`408 Request Timeout`** は[クライアントエラーレスポン�
 
 ### フォーム送信でのタイムアウト
 
-次の例は、クライアントが [`<input type="file">`](/ja/docs/Web/HTML/Element/input/file) 要素で画像を使用して、 `method="post"` でフォームを送信する可能性があることを示しています。
+次の例は、クライアントが [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file) 要素で画像を使用して、 `method="post"` でフォームを送信する可能性があることを示しています。
 
 ```http
 POST /upload HTTP/1.1

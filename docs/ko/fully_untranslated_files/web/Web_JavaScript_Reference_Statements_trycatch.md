@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Statements/try...catch
 
 **`try...catch`** 문은 실행할 코드블럭을 표시하고 예외(exception)가 발생(throw)할 경우의 응답을 지정합니다.
 
-{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Try...Catch")}}
+
+```js interactive-example
+try {
+  nonExistentFunction();
+} catch (error) {
+  console.error(error);
+  // Expected output: ReferenceError: nonExistentFunction is not defined
+  // (Note: the exact output may be browser-dependent)
+}
+```
 
 ## 문법
 

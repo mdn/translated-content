@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 088b56a895d22b6df854a9f26400af7d399f289f
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`Iterator()`** 构造函数旨在用作创建迭代器的其他类的[超类](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends)。它在本身被构造时会抛出错误。
 
@@ -15,7 +15,8 @@ l10n:
 new Iterator()
 ```
 
-> **备注：** `Iterator()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造。尝试不带 `new` 调用会抛出 {{jsxref("TypeError")}}。此外，`Iterator()` 实际上不能被构造，其通常是通过 `super()` 调用在子类的构造函数中隐式构造的。
+> [!NOTE]
+> `Iterator()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造。尝试不带 `new` 调用会抛出 {{jsxref("TypeError")}}。此外，`Iterator()` 实际上不能被构造，其通常是通过 `super()` 调用在子类的构造函数中隐式构造的。
 
 ### 参数
 

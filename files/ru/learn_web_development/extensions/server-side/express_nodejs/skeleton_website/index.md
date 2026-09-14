@@ -5,7 +5,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_websi
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 Эта вторая статья в нашем [учебнике Express](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) показывает, как создать каркас проекта веб-сайта, который позже можно будет заполнить с помощью путей сайта, шаблонов представлений и обращений к базе данных.
 
@@ -19,7 +19,8 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_websi
 
 Далее показано, как вызвать генератор приложений, и даётся небольшое пояснение различных вариантов представлений и CSS. Мы поясним структуру каркаса веб-сайта. В конце мы покажем, как запустить веб-сайт, чтобы убедиться, что он работает.
 
-> **Примечание:** _Express Application Generator_ — не единственный генератор Express-приложений, и созданный проект --не единственный жизнеспособный способ организации ваших файлов и каталогов. Однако созданный сайт имеет модульную структуру, которую легко понять и расширить. О _минимальном_ Express приложении смотрите [Hello world example](https://expressjs.com/en/starter/hello-world.html) в документации Express.
+> [!NOTE]
+> _Express Application Generator_ — не единственный генератор Express-приложений, и созданный проект --не единственный жизнеспособный способ организации ваших файлов и каталогов. Однако созданный сайт имеет модульную структуру, которую легко понять и расширить. О _минимальном_ Express приложении смотрите [Hello world example](https://expressjs.com/en/starter/hello-world.html) в документации Express.
 
 ## Применение генератора приложений
 
@@ -77,7 +78,6 @@ express
 - Стиль — некоторые шаблонизаторы используют особую разметку для отображения вставленного контента внутри "обычного" HTML, а другие строят HTML, используя специальный синтаксис (например, используя отступы или блочные имена).
 - Производительность и время интерпретации.
 - Особенности — следует выбирать движок с учётом таких особенностей:
-
   - Наследование макета: позволяет определить базовый шаблон и затем наследовать только те части, которые отличаются для конкретной страницы. Это, как правило, лучший подход, чем создание шаблонов путём включения нескольких необходимых компонентов или создания шаблона с нуля каждый раз.
   - Поддержка «Include»: позволяет создавать шаблоны, включая другие шаблоны.
   - Краткий синтаксис управления переменными и циклами.
@@ -158,7 +158,6 @@ express express-locallibrary-tutorial --view=pug
    ```
 
 2. Затем запустим приложение.
-
    - В Windows используйте команду:
 
      ```bash
@@ -336,7 +335,8 @@ DEBUG=express-locallibrary-tutorial:* npm run devstart
 var app = require("../app");
 ```
 
-> **Примечание:** `require()` — это глобальная функция node для импорта модулей в текущий файл. Для модуля **app.js** указан относительный путь, а расширение файла по умолчанию (.js) опущено.
+> [!NOTE]
+> `require()` — это глобальная функция node для импорта модулей в текущий файл. Для модуля **app.js** указан относительный путь, а расширение файла по умолчанию (.js) опущено.
 
 Оставшаяся часть кода настраивает порт сервера node для HTTP (определён в переменной среды или 3000, если не определён), и начинает обработку и протоколирование соединений и ошибок сервера. Сейчас вам не требуется дополнительных сведений о коде (все в этом файле шаблонно), но, при желании, его можно посмотреть.
 
@@ -493,4 +493,4 @@ block content
 - [Express application generator](https://expressjs.com/en/starter/generator.html) (документация Express)
 - [Using template engi nes with Express](https://expressjs.com/en/guide/using-template-engines.html) (документация Express)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

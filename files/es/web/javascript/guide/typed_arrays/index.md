@@ -23,7 +23,7 @@ Para lograr la máxima flexibilidad y eficiencia, los arreglos de JavaScript div
 
 ### Vistas de arreglos tipados
 
-Las vistas de arreglos tipados tienen nombres autodescriptivos y proporcionan vistas para todos los tipos numéricos habituales tal como `Int8`, `Uint32`, `Float64` y así sucesivamente. Hay una vista de arreglo tipado especial, la `Uint8ClampedArray`. Esta fija los valores entre 0 y 255. {{JSxRef("../Data_structures", "Tipos de datos JavaScript")}}
+Las vistas de arreglos tipados tienen nombres autodescriptivos y proporcionan vistas para todos los tipos numéricos habituales tal como `Int8`, `Uint32`, `Float64` y así sucesivamente. Hay una vista de arreglo tipado especial, la `Uint8ClampedArray`. Esta fija los valores entre 0 y 255. [Tipos de datos JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures)
 
 | Tipo                            | Intervalo de valores          | Tamaño en bytes | Descripción                                                                               | Tipo de IDL web           | Tipo C equivalente               |
 | ------------------------------- | ----------------------------- | --------------- | ----------------------------------------------------------------------------------------- | ------------------------- | -------------------------------- |
@@ -113,7 +113,7 @@ console.log("La entrada 0 en el arreglo de 32 bits ahora es " + int32View[0]);
 
 La salida de esto es `"La entrada 0 en el arreglo de 32 bits ahora es 32"`.
 
-En otras palabras, los dos arreglos se ven simplemente en el mismo búfer de datos, tratándolo como formatos diferentes. Lo puedes hacer con cualquier {{JSxRef("Global_Objects/TypedArray", "tipo de vista", "#TypedArray_objects")}}.
+En otras palabras, los dos arreglos se ven simplemente en el mismo búfer de datos, tratándolo como formatos diferentes. Lo puedes hacer con cualquier {{JSxRef("TypedArray", "tipo de vista", "#TypedArray_objects")}}.
 
 ### Trabajar con complejas estructuras de datos
 

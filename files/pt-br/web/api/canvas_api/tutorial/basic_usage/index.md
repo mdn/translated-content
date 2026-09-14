@@ -144,4 +144,4 @@ Este exemplo parece assim:
 
 {{EmbedLiveSample("Um_simples_exemplo", 160, 160, "canvas_ex1.png")}}
 
-{{PreviousNext("Web/Guide/HTML/Canvas_tutorial", "Web/Guide/HTML/Canvas_tutorial/Drawing_shapes")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}

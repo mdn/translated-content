@@ -3,7 +3,7 @@ title: WebGLRenderingContext.getShaderSource()
 slug: Web/API/WebGLRenderingContext/getShaderSource
 ---
 
-{{APIRef("WebGL")}}[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 中的 **`WebGLRenderingContext.getShaderSource()`** 方法以{{domxref("DOMString")}}的形式返回了一个{{domxref("WebGLShader")}}的源码。
+{{APIRef("WebGL")}}[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 中的 **`WebGLRenderingContext.getShaderSource()`** 方法以{{jsxref("String")}}的形式返回了一个{{domxref("WebGLShader")}}的源码。
 
 ## 语法
 
@@ -18,7 +18,7 @@ DOMString gl.getShaderSource(shader);
 
 ### 返回值
 
-一个包含了指定着色器的源码的 {{domxref("DOMString")}} 。
+一个包含了指定着色器的源码的 {{jsxref("String")}} 。
 
 ## 例子
 

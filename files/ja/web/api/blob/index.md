@@ -73,7 +73,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 
 #### JavaScript
 
-このコードの例の主要な部分は `typedArrayToURL()` 関数で、与えられた型付き配列から `Blob` を作成し、それに対するオブジェクト URL を返します。データをオブジェクト URL に変換した後は、{{HTMLElement("img")}} 要素の [`src`](/ja/docs/Web/HTML/Element/img#src) 属性の値として含む、さまざまな方法で使用することができます（もちろん、データに画像が含まれていることを前提としています）。
+このコードの例の主要な部分は `typedArrayToURL()` 関数で、与えられた型付き配列から `Blob` を作成し、それに対するオブジェクト URL を返します。データをオブジェクト URL に変換した後は、{{HTMLElement("img")}} 要素の [`src`](/ja/docs/Web/HTML/Reference/Elements/img#src) 属性の値として含む、さまざまな方法で使用することができます（もちろん、データに画像が含まれていることを前提としています）。
 
 ```js
 function showViewLiveResultButton() {
@@ -142,7 +142,7 @@ const text = await new Response(blob).text();
 const text = await blob.text();
 ```
 
-`FileReader` の他のメソッドを使用することで、Blob の内容を文字列またはデータ URL として読み込むことができます。
+`FileReader` の他のメソッドを使用することで、Blob の内容を文字列または data URL として読み込むことができます。
 
 ## 仕様書
 

@@ -5,7 +5,7 @@ slug: Web/API/HTMLAnchorElement/host
 
 {{APIRef("HTML DOM")}}
 
-Свойство **`HTMLHyperlinkElementUtils.host`** – это {{domxref("USVString")}}, содержащий хост, а именно _имя хоста_ и, если _порт_ не пустой, `':'` и _порт_.
+Свойство **`HTMLHyperlinkElementUtils.host`** – это {{jsxref("String")}}, содержащий хост, а именно _имя хоста_ и, если _порт_ не пустой, `':'` и _порт_.
 
 ## Синтаксис
 

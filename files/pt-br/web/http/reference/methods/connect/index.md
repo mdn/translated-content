@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/CONNECT
 original_slug: Web/HTTP/Methods/CONNECT
 ---
 
-{{HTTPSidebar}}
-
 O **médoto HTTP `CONNECT` **começa a comunicação bidirecional com o recurso solicitado. Ele pode ser usado para abrir um túnel.
 
 Por exemplo, o método `CONNECT` pode ser utilizado para acessar websites que usam {{Glossary("SSL")}} ({{Glossary("HTTPS")}}). O cliente solicita a um servidor proxy HTTP que tunelize a conexão TCP para o destino desejado. O servidor então procede para fazer a conexão em nome do cliente. Uma vez que a conexão foi estabelecida pelo servidor, o servidor Proxy continua a proxy do fluxo TCP para e do cliente.

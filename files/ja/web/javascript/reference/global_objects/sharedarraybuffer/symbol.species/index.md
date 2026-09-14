@@ -1,15 +1,15 @@
 ---
 title: SharedArrayBuffer[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Symbol.species
 l10n:
-  sourceCommit: 7f37a62961f23677f2da16d73393bf19f5f5aeda
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`SharedArrayBuffer[Symbol.species]`** アクセサープロパティは、`SharedArrayBuffer` の各メソッドから返される値を作成するために使用されるコンストラクター（種）を返します。
 
-> **警告:** `[Symbol.species]` が存在すると、任意のコードの実行が可能になり、セキュリティ上の脆弱性が生じる可能性があります。また、ある種の最適化も非常に難しくなります。エンジンの実装者たちは、[この機能を削除するかどうか調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。可能であれば、この機能に頼ることは避けてください。
+> [!WARNING]
+> `[Symbol.species]` が存在すると、任意のコードの実行が可能になり、セキュリティ上の脆弱性が生じる可能性があります。また、ある種の最適化も非常に難しくなります。エンジンの実装者たちは、[この機能を削除するかどうか調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。可能であれば、この機能に頼ることは避けてください。
 
 ## 構文
 

@@ -1,15 +1,14 @@
 ---
 title: color
 slug: Web/SVG/Reference/Attribute/color
-original_slug: Web/SVG/Attribute/color
+l10n:
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-{{SVGRef}}
-
-**`color`** 属性は、間接的な値の候補である `currentcolor` を {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, {{SVGAttr("lighting-color")}} の各属性に与えるために使用します。
+**`color`** 属性は、間接的な値の候補である `currentColor` を {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, {{SVGAttr("lighting-color")}} の各属性に与えるために使用します。
 
 > [!NOTE]
-> プレゼンテーション属性として、`color` は CSS プロパティとして使用できます。詳しい情報は [CSS 色](/ja/docs/Web/CSS/color) を参照してください。
+> プレゼンテーション属性として、`color` は CSS プロパティとして使用できます。詳しい情報は [CSS 色](/ja/docs/Web/CSS/Reference/Properties/color) を参照してください。
 
 プレゼンテーション属性として、任意の要素に適用することができますが、上記のように SVG 要素には直接影響を与えません。
 
@@ -20,7 +19,7 @@ original_slug: Web/SVG/Attribute/color
     <tr>
       <th scope="row">値</th>
       <td>
-        <code><a href="/ja/docs/Web/CSS/color_value">&#x3C;color></a></code>
+        <code><a href="/ja/docs/Web/CSS/Reference/Values/color_value">&#x3C;color></a></code>
         | <code>inherit</code>
       </td>
     </tr>
@@ -35,7 +34,7 @@ original_slug: Web/SVG/Attribute/color
   </tbody>
 </table>
 
-<h2 id="Example">例</h2>
+## 例
 
 ```css hidden
 html,
@@ -48,12 +47,12 @@ svg {
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <g color="green">
-    <rect width="50" height="50" fill="currentcolor" />
+    <rect width="50" height="50" fill="currentColor" />
     <circle
       r="25"
       cx="70"
       cy="70"
-      stroke="currentcolor"
+      stroke="currentColor"
       fill="none"
       stroke-width="5" />
   </g>
@@ -69,3 +68,7 @@ svg {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- CSS の {{cssxref("color")}} プロパティ

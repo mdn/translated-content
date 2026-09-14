@@ -1,12 +1,9 @@
 ---
 title: 402 Payment Required
 slug: Web/HTTP/Reference/Status/402
-original_slug: Web/HTTP/Status/402
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 304469f96698fda14a08e35060057a23761daea4
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`402 Payment Required`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、将来使用するために予約されている**標準外**のレスポンスコードです。
 
@@ -30,7 +27,7 @@ HTTP の **`402 Payment Required`** は[クライアントエラーレスポン�
 POST /merchant/transfers/payment HTTP/1.1
 Host: payments.example.com
 Content-Type: application/json
-Content-Length: 402
+Content-Length: 529
 
 {
   "payment_transfer": {
@@ -39,13 +36,13 @@ Content-Length: 402
     "currency": "EUR",
     "sender_account_uri": "pan:5299920000000149;exp=2020-08;cvc=123",
     "sender": {
-      "first_name": "Brian",
-      "middle_name": "Smith",
+      "first_name": "Amelia",
+      "middle_name": "Rosenburg",
       "email": "test123@sender.example.com"
     },
     "recipient": {
-      "first_name": "John",
-      "middle_name": "Tyler",
+      "first_name": "Tyrone",
+      "middle_name": "Johnston",
       "email": "test123@example.com",
       "merchant_id": "123"
     },
@@ -60,7 +57,7 @@ Content-Length: 402
 HTTP/1.1 402 Payment Required
 Date: Tue, 02 Jul 2024 12:56:49 GMT
 Content-Type: application/json
-Content-Length: 175
+Content-Length: 194
 
 {
   "error": {

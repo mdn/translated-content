@@ -76,7 +76,7 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - [WebRTC API](/ja/docs/Web/API/WebRTC_API)
 - {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}

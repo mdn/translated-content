@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}
 
 旧式の {{domxref("CSSStyleSheet")}} インターフェイスの **`addRule()`** は古いメソッドで、新しいルールをスタイルシートに追加します。このメソッドの使用を避け、より標準的な {{domxref("CSSStyleSheet.insertRule", "insertRule()")}} メソッドを使用しましょう。
 

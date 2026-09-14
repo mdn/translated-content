@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 > [!WARNING]
 > 当前的 HTTP/1.1 规范中不再提及实体、实体标头和实体主体。这中的有些字段现在被称为{{glossary("Representation header", "表示标头")}}。
 

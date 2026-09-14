@@ -3,8 +3,6 @@ title: sessions.getRecentlyClosed()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed
 ---
 
-{{AddonSidebar}}
-
 Renvoie un ensemble d'objets {{WebExtAPIRef("sessions.Session", "Session")}}, représentant des fenêtres et des onglets qui ont été fermés dans la session du navigation actuelle (c'est à dire l'heure écoulée depuis le démarrage du navigateur).
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -67,8 +65,6 @@ browser.browserAction.onClicked.addListener(function () {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

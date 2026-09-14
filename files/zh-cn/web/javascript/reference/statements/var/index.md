@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{jsSidebar("Statements")}}
-
 **`var` 语句**用于声明一个函数作用域或全局作用域的变量，并且可以选择将其初始化为一个值。
 
 {{InteractiveExample("JavaScript Demo: Statement - Var")}}
@@ -75,7 +73,7 @@ for (var a of [1, 2, 3]);
 console.log(a); // 3
 ```
 
-在脚本中，使用 `var` 声明的变量将被添加为全局对象的不可配置属性。这意味着它的属性描述符无法被修改，也无法使用 {{JSxRef("Operators/delete", "delete")}} 删除。JavaScript 具有自动内存管理机制，因此在全局变量上使用 `delete` 运算符是没有意义的。
+在脚本中，使用 `var` 声明的变量将被添加为全局对象的不可配置属性。这意味着它的属性描述符无法被修改，也无法使用 {{JSxRef("delete")}} 删除。JavaScript 具有自动内存管理机制，因此在全局变量上使用 `delete` 运算符是没有意义的。
 
 ```js-nolint example-bad
 "use strict";
@@ -93,7 +91,8 @@ delete x; // 在严格模式下，将抛出 SyntaxError，否则静默失败。
 
 `var` 声明，无论它们出现在脚本中的什么位置，都会在执行脚本中的任何代码之前进行处理。在代码中的任何位置声明变量都相当于在顶部声明它。这也意味着变量可以在其声明之前被使用。这种行为被称为[_提升_](/zh-CN/docs/Glossary/Hoisting)，因为变量声明似乎被移动到发生该行为的函数、静态初始化块或脚本源代码的顶部。
 
-> **备注：** `var` 声明仅提升到当前脚本的顶部。如果在一个 HTML 文件中有两个 `<script>` 元素，则第一个脚本无法访问第二个脚本声明的变量，直到第二个脚本已被处理和执行。
+> [!NOTE]
+> `var` 声明仅提升到当前脚本的顶部。如果在一个 HTML 文件中有两个 `<script>` 元素，则第一个脚本无法访问第二个脚本声明的变量，直到第二个脚本已被处理和执行。
 
 ```js
 bla = 2;

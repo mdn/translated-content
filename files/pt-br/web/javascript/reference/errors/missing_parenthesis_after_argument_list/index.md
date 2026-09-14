@@ -13,7 +13,7 @@ Erro de sintaxe: Falta ) depois da lista de argumento
 
 ## Tipo de Erro
 
-{{jsxref("Erro de sintaxe")}}.
+{{jsxref("SyntaxError", "Erro de sintaxe")}}.
 
 ## O que houve de errado?
 

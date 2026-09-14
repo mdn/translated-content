@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 3966c40a3917825e6e467f1592bc7f8d59458e74
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}
 
 現在のスタイルシートセットの中で指定された名前に一致するスタイルシートを有効化し、それ以外のスタイルシートを (常に有効になるタイトルなしのものを除いて) 無効化します。
 

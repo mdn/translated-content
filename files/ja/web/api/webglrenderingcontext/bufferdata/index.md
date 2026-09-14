@@ -27,16 +27,13 @@ bufferData(target, srcData, usage, srcOffset, length)
 ### 引数
 
 - `target`
-
   - : {{domxref("WebGL_API/Types", "GLenum")}} で、結合する場所（ターゲット）を指定します。以下の値を取ることができます。
-
     - `gl.ARRAY_BUFFER`
       - : 頂点の属性を含むバッファーで、頂点座標、テクスチャ座標データや、頂点色データのようなものです。
     - `gl.ELEMENT_ARRAY_BUFFER`
       - : 要素の位置指定に使われるバッファーです。
 
     {{domxref("WebGL2RenderingContext", "WebGL 2 のコンテキスト", "", 1)}}を使用している場合は、更に以下の値を利用することができます。
-
     - `gl.COPY_READ_BUFFER`
       - : バッファーオブジェクトを他へコピーするためのバッファーです。
     - `gl.COPY_WRITE_BUFFER`
@@ -56,9 +53,7 @@ bufferData(target, srcData, usage, srcOffset, length)
   - : {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}} のいずれかで、データストアへ格納されます。
     `null` にした場合、データストアは作成されますが、内容は初期化されず未定義です。
 - `usage`
-
   - : {{domxref("WebGL_API/Types", "GLenum")}} で、データストアの最適化目的での用途を指定します。以下の値を取ることができます。
-
     - `gl.STATIC_DRAW`
       - : 内容は、アプリケーションによって一度に指定され、 WebGL 描画および画像指定コマンドのソースとして何度も使用されることを意図しています。
     - `gl.DYNAMIC_DRAW`
@@ -66,7 +61,6 @@ bufferData(target, srcData, usage, srcOffset, length)
     - `gl.STREAM_DRAW`
       - : この内容は、アプリケーションによって一度だけ指定され、 WebGL 描画および画像指定コマンドのソースとして多くても数回使用されることを意図しています。
     - {{domxref("WebGL2RenderingContext", "WebGL 2 コンテキスト", "", 1)}}を使用している場合、さらに以下の値を取ることができます。
-
       - `gl.STATIC_READ`
         - : 内容は、 WebGLからデータを読み込んで一度に指定し、アプリケーションから何度も問い合わせることを想定しています。
       - `gl.DYNAMIC_READ`

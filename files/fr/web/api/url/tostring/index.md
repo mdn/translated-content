@@ -5,7 +5,7 @@ slug: Web/API/URL/toString
 
 {{ApiRef("URL API")}}
 
-La méthode **`URL.toString()`** retourne un {{domxref("USVString")}} contenant tout l'URL. C'est en effet, une version de {{domxref("URL.href")}} en lecture seule.
+La méthode **`URL.toString()`** retourne un {{jsxref("String")}} contenant tout l'URL. C'est en effet, une version de {{domxref("URL.href")}} en lecture seule.
 
 {{AvailableInWorkers}}
 
@@ -21,7 +21,7 @@ Aucun.
 
 ### Valeur de retour
 
-Un {{domxref("USVString")}}.
+Un {{jsxref("String")}}.
 
 ## Examples
 

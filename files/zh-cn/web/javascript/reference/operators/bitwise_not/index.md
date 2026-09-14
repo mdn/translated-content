@@ -3,8 +3,6 @@ title: 按位非（~）
 slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
 ---
 
-{{jsSidebar("Operators")}}
-
 按位非运算符（`~`）将操作数的位反转。如同其他位运算符一样，它将操作数转化为 32 位的有符号整型。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Bitwise NOT")}}

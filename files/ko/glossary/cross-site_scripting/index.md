@@ -13,7 +13,7 @@ l10n:
 
 ## 같이 보기
 
-- [공격 유형: 크로스 사이트 스크립팅 (XSS)](/ko/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)
+- [공격 유형: 크로스 사이트 스크립팅 (XSS)](/ko/docs/Web/Security/Attacks#cross-site_scripting_xss)
 - 위키백과의 [크로스 사이트 스크립팅](https://en.wikipedia.org/wiki/Cross-site_scripting)
 - [OWASP의 크로스 사이트 스크립팅](https://owasp.org/www-community/attacks/xss/)
 - [크로스 사이트 스크립팅에 대한 다른 글](https://www.acunetix.com/blog/articles/dom-xss-explained/)

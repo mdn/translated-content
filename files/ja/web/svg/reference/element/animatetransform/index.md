@@ -1,16 +1,13 @@
 ---
 title: <animateTransform>
 slug: Web/SVG/Reference/Element/animateTransform
-original_slug: Web/SVG/Element/animateTransform
 l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+  sourceCommit: 12222b32eec33a7411c6de8afc8408d9aa617dd2
 ---
 
-{{SVGRef}}
+**`<animateTransform>`** は [SVG](/ja/docs/Web/SVG) の要素で、ターゲット要素に対して座標変換属性をアニメーションさせ、これにより平行移動、拡大縮小、回転、ゆがみなどのアニメーションを制御することができます。
 
-`animateTransform` 要素は、 ターゲット要素に対して座標変換属性をアニメーションさせ、これにより平行移動、拡大縮小、回転、ゆがみなどのアニメーションを制御することができます。
-
-## 使用可能な場所
+## 使用コンテキスト
 
 {{svginfo}}
 

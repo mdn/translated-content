@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaValueMin`** は {{domxref("Element")}} インターフェイスのプロパティで、範囲ウィジェットの最小許容値を定義する [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) 属性の値を反映します。
+**`ariaValueMin`** は {{domxref("Element")}} インターフェイスのプロパティで、範囲ウィジェットの最小許容値を定義する [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) 属性の値を反映します。
 
 ## 値
 

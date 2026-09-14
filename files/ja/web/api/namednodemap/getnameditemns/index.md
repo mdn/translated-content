@@ -19,7 +19,8 @@ getNamedItemNS(namespace, localName);
 
 - `namespace`
   - : 文字列で、希望する属性の名前空間 URI です。
-    > **警告:** `namespace` は名前空間の URI であり、接頭辞ではありません。
+    > [!WARNING]
+    > `namespace` は名前空間の URI であり、接頭辞ではありません。
 - `localName`
   - : 文字列で、希望する属性のローカル名です。
 

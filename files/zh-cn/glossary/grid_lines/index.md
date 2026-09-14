@@ -5,9 +5,7 @@ l10n:
   sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-{{GlossarySidebar}}
-
-**网格线**会在使用[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)时被创建。
+**网格线**会在使用[网格布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout)时被创建。
 
 ## 示例
 
@@ -56,7 +54,7 @@ l10n:
 
 {{ EmbedLiveSample('示例', '500', '250') }}
 
-网格线可以用它们的编号来寻址。在从左到右的语言比如英语中，列线 1 将位于网格的左侧，行线 1 将位于其顶部。线编号遵循文档的[书写模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)，因此在从右到左的语言中，列线 1 行将位于网格的右侧。下面的图片展示了该网格的线编号，假设语言是从左到右的。
+网格线可以用它们的编号来寻址。在从左到右的语言比如英语中，列线 1 将位于网格的左侧，行线 1 将位于其顶部。线编号遵循文档的[书写模式](/zh-CN/docs/Web/CSS/Guides/Writing_modes)，因此在从右到左的语言中，列线 1 行将位于网格的右侧。下面的图片展示了该网格的线编号，假设语言是从左到右的。
 
 ![显示带有编号的网格线的图片](1_diagram_numbered_grid_lines.png)
 
@@ -176,8 +174,8 @@ l10n:
 ### 扩展阅读
 
 - CSS 网格布局指南：
-  - [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-  - [基于网格线的 CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-  - [使用命名网格线的布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-  - [CSS 网格、逻辑值与书写方式](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+  - [网格布局的基本概念](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+  - [基于网格线的 CSS 网格布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+  - [使用命名网格线的布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
+  - [CSS 网格、逻辑值与书写方式](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
 - CSS 网格布局规范中[网格线的定义](https://drafts.csswg.org/css-grid/#grid-line-concept)

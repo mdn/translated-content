@@ -81,7 +81,7 @@ class myDate extends Date {
 
 ### Extendiendo de `null`
 
-Extender de {{jsxref("null")}} es como hacerlo de una clase normal, excepto que el objeto prototype no hereda de {{jsxref("Object.prototype")}}.
+Extender de {{jsxref("null")}} es como hacerlo de una clase normal, excepto que el objeto prototype no hereda de {{jsxref("Object")}}.
 
 ```js
 class nullExtends extends null {

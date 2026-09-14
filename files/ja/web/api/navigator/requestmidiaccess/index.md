@@ -47,7 +47,7 @@ requestMIDIAccess(MIDIOptions)
 
 この API へのアクセスは、以下の制約の対象です。
 
-- このメソッドは[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)で呼び出される必要があります。
+- このメソッドは[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)で呼び出される必要があります。
 - アクセスは [`midi`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/ja/docs/Web/HTTP/Guides/Permissions_Policy) で制限される可能性があります。
 - ユーザーがユーザーエージェント固有のメカニズムによりこの API を使用する許可を明示的に与えるか、以前に許可を与えている必要があります。なお、Permission Policy でアクセスが拒否された場合は、ユーザーがアクセスを許可することはできません。
 

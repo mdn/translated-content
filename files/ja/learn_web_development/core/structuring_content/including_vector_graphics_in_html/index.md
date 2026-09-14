@@ -1,11 +1,10 @@
 ---
 title: HTML へのベクターグラフィックの追加
+short-title: ベクターグラフィック
 slug: Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
-
-{{LearnSidebar}}
 
 ベクターグラフィックは多くの状況でとても便利です。ファイルサイズは小さく、スケーラビリティが高いため、ズームインしたり、大きなサイズに拡大したりしてもモザイクになりません。この記事では、ウェブページにそれを組み込む方法を説明します。
 
@@ -86,8 +85,7 @@ SVG にはこれまで説明したもの以外にも、いくつかの長所が�
 
 ラスターグラフィックは、前述の理由から、写真などの複雑な高精度画像に対しては、ほぼ間違いなく優れています。
 
-> [!NOTE]
-> Inkscape では、スペースを節約するためにファイルを Plain SVG として保存してください。 また、[ウェブ用の SVG を作成する方法について説明しているこの記事](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html) (英語) を参照してください。
+Inkscape などのエディターからエクスポートされたSVGグラフィックは、サイズ最適化の余地が大きなものです。ウェブに展開する前に、[SVGO](https://www.npmjs.com/package/svgo) などの SVG 最適化ツールを実行することをお勧めします。
 
 ## ページへの SVG の追加
 
@@ -119,7 +117,7 @@ SVG にはこれまで説明したもの以外にも、いくつかの長所が�
 
 ### トラブルシューティングと複数ブラウザーの対応
 
-SVG に対応していないブラウザー（IE 8 以前、Android 2.3 以前）では、 `src` 属性から PNG または JPG を参照し、 [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) 属性（最近のブラウザーのみが認識する）を使用して SVG を参照するようにすることができます。 この場合、対応しているブラウザーのみが SVG を読み込みます。古いブラウザーは代わりに PNG を読み込みます。
+SVG に対応していないブラウザー（IE 8 以前、Android 2.3 以前）では、 `src` 属性から PNG または JPG を参照し、 [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) 属性（最近のブラウザーのみが認識する）を使用して SVG を参照するようにすることができます。 この場合、対応しているブラウザーのみが SVG を読み込みます。古いブラウザーは代わりに PNG を読み込みます。
 
 ```html
 <img src="equilateral.png" alt="辺が等しい三角形" srcset="equilateral.svg" />
@@ -168,159 +166,45 @@ SVG 画像は、ウェブページのようにブラウザーで開くことが�
 ここで簡単なレビューです。
 
 ```html
-<iframe src="triangle.svg" width="500" height="500" sandbox>
-  <img src="triangle.png" alt="3つの不等辺の三角形" />
-</iframe>
+<iframe src="triangle.svg" width="500" height="500" sandbox></iframe>
 ```
 
-これは間違いなく選択するには最良の方法ではありません。
+これは絶対に最良の方法ではありません。
 
 #### 短所
 
-- ご覧のとおり、`iframe` には代替メカニズムがありますが、 `iframe` に完全に対応していない場合にのみ、ブラウザーに代替コンテンツが表示されます。
+- `<iframe>`要素は開始タグと終了タグの間に代替コンテンツを記載することができますが、これは`<iframe>`に対応していないブラウザーでのみ表示され、画像の読み込みに失敗した場合には表示されません。
 - さらに、 SVG と現在のウェブページが同じ{{glossary('origin',"オリジン")}}を持っていない限り、メインウェブページで JavaScript を使用して SVG を操作することはできません。
 
-## アクティブラーニング: SVG で遊ぶ
+## SVG の実践
 
-このアクティブラーニングの節では、 SVG をとても楽しく遊ぶことができます。 下の入力セクションでは、始めるためのサンプルをすでに提供していることがわかります。 また、[SVG 要素のリファレンス](/ja/docs/Web/SVG/Reference/Element)にアクセスして、SVG で使用できる他のおもちゃの詳細を調べて、それらを試してみることもできます。 このセクションでは、あなたの研究スキルを鍛え、楽しく学びましょう。
+この演習では、SVG を実際に操作してみてください。**Play** ボタンを押すと、MDN Playground で次の例が開き、そこで編集することができます。
 
-コードが機能しなくなった場合は、 \[リセット] ボタンを使用していつでもリセットすることができます。
+[SVG 要素リファレンス](/ja/docs/Web/SVG/Reference/Element)を参照して、豊富な組み込み機能を備えた他の要素を確認してください。
+試せる他の図形としては楕円があり、[パターン](/ja/docs/Web/SVG/Reference/Element/pattern)や[フィルター効果](/ja/docs/Web/SVG/Reference/Element/filter)の実験も可能です。
+この節では、調査スキルを磨き、新しいことを試し、楽しみながら学ぶことが目的です。
 
-```html hidden
-<h2>ライブ出力</h2>
+コードがうまく動作しない場合は、Playground の _Reset_ ボタンを使用して常にリセットできます。
 
-<div class="output" style="min-height: 50px;"></div>
-
-<h2>編集可能なコード</h2>
-<p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
-  はタブ文字を挿入します）。
-</p>
-
-<textarea id="code" class="input" style="width: 95%;min-height: 200px;">
-  <svg width="100%" height="100%">
-    <rect width="100%" height="100%" fill="red" />
-    <circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" />
-    <polygon points="120,0 240,225 0,225" fill="green"/>
-    <text x="50" y="100" font-family="Verdana" font-size="55"
-          fill="white" stroke="black" stroke-width="2">
-            Hello!
-    </text>
-  </svg>
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="リセット" />
-  <input id="solution" type="button" value="答えを表示" disabled />
-</div>
+```html live-sample___playing-with-svg
+<svg width="100%" height="100%">
+  <rect width="100%" height="100%" fill="red" />
+  <circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" />
+  <polygon points="120,0 240,225 0,225" fill="green" />
+  <text
+    x="50"
+    y="100"
+    font-family="Verdana"
+    font-size="55"
+    fill="white"
+    stroke="black"
+    stroke-width="2">
+    Hello!
+  </text>
+</svg>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
-
-h2 {
-  font-size: 16px;
-}
-
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
-
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-```
-
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-let code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "答えを表示";
-  updateCode();
-});
-
-solution.addEventListener("click", function () {
-  if (solution.value === "答えを表示") {
-    textarea.value = solutionEntry;
-    solution.value = "答えを隠す";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "答えを表示";
-  }
-  updateCode();
-});
-
-const htmlSolution = "";
-let solutionEntry = htmlSolution;
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = function (e) {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "答えを表示") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_Learning_Playing_with_SVG', 700, 540) }}
+{{ EmbedLiveSample('playing-with-SVG', 700, 300) }}
 
 ## まとめ
 
@@ -328,7 +212,7 @@ textarea.onkeyup = function () {
 
 ## 関連情報
 
-- MDN の [SVG チュートリアル](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started)
+- [SVG チュートリアル](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started) - MDN
 - [Sara Soueidan のレスポンシブ SVG 画像に関するチュートリアル](http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/) (英語)
-- [SVG のアクセシビリティ上の長所](https://www.w3.org/TR/SVG-access/) (英語)
+- [SVG のアクセシビリティ上の長所](https://css-tricks.com/svg-properties-and-css/) (英語)
 - [SVG を縮尺変更する方法](https://css-tricks.com/scale-svg/) (ラスターグラフィックほど簡単ではありません！) (英語)

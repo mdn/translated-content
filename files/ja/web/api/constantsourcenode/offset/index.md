@@ -10,7 +10,8 @@ l10n:
 
 `offset` は {{ domxref("ConstantSourceNode") }} インターフェイスの読み取り専用プロパティで、 {{domxref("AudioParam") }} オブジェクトを返し、数値で [a-rate](/ja/docs/Web/API/AudioParam#a-rate) 値を示します。これはソースから次のサンプルを取り出す際に常に返されます。
 
-> **メモ:** `offset` という名前の `AudioParam` は読み取り専用ですが、その中の `value` プロパティは読み取り専用ではありません。そのため、 `offset` の値は `ConstantSourceNode.offset.value` の値を設定することで変更することができます。
+> [!NOTE]
+> `offset` という名前の `AudioParam` は読み取り専用ですが、その中の `value` プロパティは読み取り専用ではありません。そのため、 `offset` の値は `ConstantSourceNode.offset.value` の値を設定することで変更することができます。
 >
 > ```js
 > myConstantSourceNode.offset.value = newValue;

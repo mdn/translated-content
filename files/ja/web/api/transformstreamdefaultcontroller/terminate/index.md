@@ -3,10 +3,10 @@ title: "TransformStreamDefaultController: terminate() メソッド"
 short-title: terminate()
 slug: Web/API/TransformStreamDefaultController/terminate
 l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+  sourceCommit: d8b4431bfde42f1bc195239ea1f378d763f8163e
 ---
 
-{{DefaultAPISidebar("Streams API")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 **`terminate()`** は {{domxref("TransformStreamDefaultController")}} インターフェイスのメソッドで、このストリームの読み取り可能側を閉じ、書き込み可能側をエラーにします。
 

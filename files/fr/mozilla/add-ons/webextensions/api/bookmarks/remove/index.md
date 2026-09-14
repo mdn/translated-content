@@ -3,8 +3,6 @@ title: bookmarks.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 ---
 
-{{AddonSidebar}}
-
 La méthode **`bookmarks.remove()`** supprime un seul signet ou un dossier de signets vide.
 
 > [!WARNING]
@@ -23,7 +21,7 @@ var removingBookmark = browser.bookmarks.remove(
 ### Paramètres
 
 - `id`
-  - : Un {{jsxref("string")}} spécifiant l'ID du signet ou du dossier vide à supprimer.
+  - : Un {{jsxref("String")}} spécifiant l'ID du signet ou du dossier vide à supprimer.
 
 ### Valeur retournée
 
@@ -55,8 +53,6 @@ removingBookmark.then(onRemoved, onRejected);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

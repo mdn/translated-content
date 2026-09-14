@@ -3,13 +3,11 @@ title: ゲーム開発テクニック
 slug: Games/Techniques
 ---
 
-{{GamesSidebar}}
-
 このページでは、オープンウェブ技術を使用してゲームを開発したい人のために、必要不可欠なコア技術をリストアップしています。
 
 - [asm.js 用の非同期スクリプトの使用](/ja/docs/Games/Techniques/Async_scripts)
   - : 特に中規模から大規模のゲームを作成する場合、非同期スクリプトは、ゲームの JavaScript をメインスレッドからコンパイルして、将来のゲーム実行時にキャッシュすることができるため、ユーザーにとって大幅なパフォーマンス向上となるため、活用することが不可欠なテクニックとなります。この記事では、その方法を説明します。
-- [起動パフォーマンスの最適化](/ja/docs/Web/Performance/Optimizing_startup_performance)
+- [起動パフォーマンスの最適化](/ja/docs/Web/Performance/Guides/Optimizing_startup_performance)
   - : ゲームをすばやくスムーズに起動させ、ユーザーのブラウザーや機器をロックすることなく表示させる方法。
 - [WebRTC のピアツーピアデータチャネルの使用](/ja/docs/Games/Techniques/WebRTC_data_channels)
   - : WebRTC では、音声と映像の通信に対応しているだけでなく、ピアツーピアのデータチャネルを設定して、プレイヤー間でテキストやバイナリーのデータを積極的に交換することができます。この記事では、これで何ができるかを説明し、これを簡単にするライブラリーを使用する方法を紹介します。

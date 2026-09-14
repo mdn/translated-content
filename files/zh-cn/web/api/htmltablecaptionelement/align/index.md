@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 {{domxref("HTMLTableCaptionElement")}} 接口的 **`align`** 属性是一个指示如何在 {{htmlelement("caption")}} 表格元素中水平对齐文本的字符串。
 
@@ -25,7 +25,7 @@ l10n:
 
 ## 示例
 
-使用 CSS `text-align` 替代，{{cssxref("text-align")}} 页面有一个[示例](/zh-CN/docs/Web/CSS/text-align#表格对齐)。
+使用 CSS `text-align` 替代，{{cssxref("text-align")}} 页面有一个[示例](/zh-CN/docs/Web/CSS/Reference/Properties/text-align#表格对齐)。
 
 ## 规范
 

@@ -27,7 +27,8 @@ getElementsByTagName(name)
 
 生きた {{domxref("HTMLCollection")}} であり、見つかった要素がツリーに出現する順に並んでいます。
 
-> **メモ:** [最新の W3C 仕様書](https://dom.spec.whatwg.org/#interface-document) では返値は `HTMLCollection` です。しかし、 WebKit ブラウザーではこのメソッドは {{domxref("NodeList")}} を返します。詳しくは [Firefox バグ 14869](https://bugzil.la/14869) を見てください。
+> [!NOTE]
+> [最新の W3C 仕様書](https://dom.spec.whatwg.org/#interface-document) では返値は `HTMLCollection` です。しかし、 WebKit ブラウザーではこのメソッドは {{domxref("NodeList")}} を返します。詳しくは [Firefox バグ 14869](https://bugzil.la/14869) を見てください。
 
 ## 例
 

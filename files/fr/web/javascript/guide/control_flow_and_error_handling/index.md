@@ -3,7 +3,7 @@ title: Contrôle du flux d'instructions et gestion des erreurs
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
+{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript supporte nativement un ensemble d'instructions. Ces instructions permettent de définir les logiques des algorithmes, le flux des informations, etc. Ce chapitre fournit un aperçu sur le fonctionnement de ces différentes instructions JavaScript.
 
@@ -183,7 +183,6 @@ JavaScript évalue l'instruction de commutation ci-dessus comme suit :
 
 - Le programme recherche d'abord une clause `case` dont l'étiquette correspond à la valeur de l'expression, puis il transfère le contrôle à cette clause, en exécutant les instructions associées.
 - Si aucune étiquette correspondante n'est trouvée, le programme recherche la clause optionnelle `default` :
-
   - Si une clause `default` est trouvée, le programme transfère le contrôle à cette clause, exécutant les déclarations associées.
   - Si aucune clause `default` n'est trouvée, le programme reprend l'exécution à l'instruction qui suit la fin de `switch`.
   - (Par convention, la clause `default` est écrite comme la dernière clause, mais il n'est pas nécessaire que ce soit le cas).

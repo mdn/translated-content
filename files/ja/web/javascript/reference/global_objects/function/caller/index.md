@@ -1,19 +1,21 @@
 ---
 title: Function.prototype.caller
+short-title: caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
-> **メモ:** [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では、関数の `caller` にアクセスするとエラーが発生します。 API は削除され、代替手段もありません。これは、コードが「スタックを歩く」ことを防ぐためです。これは、セキュリティリスクをもたらすだけでなく、インライン展開や末尾再帰呼び出し最適化などの最適化の可能性を大幅に制限します。より詳しい説明については、 [`arguments.callee` の非推奨化の根拠](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee#解説)をご覧ください。
+> [!NOTE]
+> [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では、関数の `caller` にアクセスするとエラーが発生します。 API は削除され、代替手段もありません。これは、コードが「スタックを歩く」ことを防ぐためです。これは、セキュリティリスクをもたらすだけでなく、インライン展開や末尾再帰呼び出し最適化などの最適化の可能性を大幅に制限します。より詳しい説明については、 [`arguments.callee` の非推奨化の根拠](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee#解説)をご覧ください。
 
 **`caller`** は {{jsxref("Function")}} インスタンスのアクセサープロパティで、この関数を呼び出した関数を返します。[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)、アロー関数、非同期関数、ジェネレーター関数では、 `caller` プロパティにアクセスすると {{jsxref("TypeError")}} が発生します。
 
 ## 解説
 
-関数 `f` が最上位のコードで呼び出された場合、 `f.caller` の値は {{jsxref("Operators/null", "null")}} に、それ以外の場合の値は `f` を呼び出した関数になります。 `f` を呼び出した関数が厳格モードの関数である場合も、 `f.caller` の値は `null` となります。
+関数 `f` が最上位のコードで呼び出された場合、 `f.caller` の値は {{jsxref("null")}} に、それ以外の場合の値は `f` を呼び出した関数になります。 `f` を呼び出した関数が厳格モードの関数である場合も、 `f.caller` の値は `null` となります。
 
 ECMAScript 仕様で規定されている唯一の動作は、 `Function.prototype` が初期 `caller` アクセサーを持っており、 `get` または `set` のリクエストに対して無条件に {{jsxref("TypeError")}} を発生させるすること（「毒薬アクセサー」として知られています）であり、実装は非厳密なプレーン関数を除いて、このセマンティクスを変更することは許可されていません。 `caller` プロパティの実際の動作は、エラーを発生させる以外にも何らかの動作がある場合、実装によって定義されています。例えば、 Chrome は自分自身でデータプロパティとして定義していますが、 Firefox と Safari は初期の毒薬である `Function.prototype.caller` アクセサーを拡張し、非厳格関数であるこれらの値を特別に処理しています。
 
@@ -59,9 +61,8 @@ ECMAScript 仕様で規定されている唯一の動作は、 `Function.prototy
 function myFunc() {
   if (myFunc.caller === null) {
     return "The function was called from the top!";
-  } else {
-    return `This function's caller was ${myFunc.caller}`;
   }
+  return `This function's caller was ${myFunc.caller}`;
 }
 ```
 

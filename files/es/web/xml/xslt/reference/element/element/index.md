@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/element
 original_slug: Web/XSLT/Reference/Element/element
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{XsltSidebar}}
 
 El elemento `<xsl:element>` genera un elemento en el documento de salida.
 

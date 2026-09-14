@@ -109,7 +109,6 @@ source.addEventListener("dragend", (event) => {
 ## 関連情報
 
 - その他のドラッグ＆ドロップイベント:
-
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragend_event", "dragend")}}
   - {{domxref("HTMLElement/dragover_event", "dragover")}}

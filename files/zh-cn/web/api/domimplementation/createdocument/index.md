@@ -16,9 +16,9 @@ doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, doc
 ### 参数
 
 - _namespaceURI_
-  - : 被创建的{{domxref("DOMString")}} 文档的 namespace URI 是 namespace URI ,如果文档不属于任何 namespace URI 就为`null`.
+  - : 被创建的{{jsxref("String")}} 文档的 namespace URI 是 namespace URI ,如果文档不属于任何 namespace URI 就为`null`.
 - _qualifiedNameStr_
-  - : {{domxref("DOMString")}} 是否包含要创建文档的限定名称，即可选的前缀和冒号，以及本地的根元素。
+  - : {{jsxref("String")}} 是否包含要创建文档的限定名称，即可选的前缀和冒号，以及本地的根元素。
 - _documentType_ {{optional_inline}}
   - : 文档的 `DocumentType` 默认为 null.
 

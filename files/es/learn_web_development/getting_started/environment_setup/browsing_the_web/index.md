@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9de3d03957f1d66f02f45400a6981372aa368c1f
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/es/docs/Learn/Common_questions")}}
 
 En este artículo se describen varios conceptos referidos a la web: Páginas web, sitios web, servidores web, y motores de búsqueda. Estos términos con frecuencia son confundidos por recién llegados a la web, o son incorrectamente usados. ¡Vamos a aprender qué significa cada uno!
 
@@ -16,7 +16,7 @@ En este artículo se describen varios conceptos referidos a la web: Páginas web
       <th scope="row">Prerrequisitos:</th>
       <td>
         Debes saber
-        <a href="/es/docs/Learn/Common_questions/How_does_the_Internet_work"
+        <a href="/es/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >¿Cómo funciona internet?</a
         >.
       </td>

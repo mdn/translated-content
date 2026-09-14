@@ -3,8 +3,6 @@ title: Detección de colisiones 2D
 slug: Games/Techniques/2D_collision_detection
 ---
 
-{{GamesSidebar}}
-
 Los algoritmos para detectar colisiones en juegos 2D dependen del tipo de formas que pueden colisionar (p. ej., Rectángulo con rectángulo, Rectángulo con círculo, Círculo con círculo). En general, tendrá una forma genérica simple que cubre la entidad conocida como _"hitbox"_, por lo que, aunque la colisión no sea perfecta en píxeles, se verá lo suficientemente bien y tendrá un rendimiento eficiente en varias entidades. Este artículo proporciona una revisión de las técnicas más comunes utilizadas para proporcionar detección de colisiones en juegos 2D.
 
 ## Hitbox alineado con el eje
@@ -53,7 +51,8 @@ rect2.bind("EnterFrame", function () {
 
 {{ EmbedLiveSample('Hitbox_alineado_con_el_eje', '700', '300') }}
 
-> **Nota:** [Aquí hay otro ejemplo sin Canvas o bibliotecas externas](https://jsfiddle.net/jlr7245/217jrozd/3/).
+> [!NOTE]
+> [Aquí hay otro ejemplo sin Canvas o bibliotecas externas](https://jsfiddle.net/jlr7245/217jrozd/3/).
 
 ## Colisión circular
 
@@ -135,7 +134,8 @@ circle2.bind("EnterFrame", function () {
 
 {{ EmbedLiveSample('Colisión_circular', '700', '300') }}
 
-> **Nota:** [Aquí hay otro ejemplo sin Canvas o bibliotecas externas.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
+> [!NOTE]
+> [Aquí hay otro ejemplo sin Canvas o bibliotecas externas.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
 
 ## Teorema del eje de separación
 

@@ -3,8 +3,6 @@ title: windows.update()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/update
 ---
 
-{{AddonSidebar}}
-
 Mises à jour des propriétés d'une fenêtre. Utilisez ceci pour déplacer, redimensionner, et (un) se concentrer sur une fenêtre, etc.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -23,9 +21,7 @@ var updating = browser.windows.update(
 - `windowId`
   - : `integer`. ID de la fenêtre à mettre à jour.
 - `updateInfo`
-
   - : `object`. Objet contenant les propriétés de mise à jour.
-
     - `drawAttention` {{optional_inline}}
       - : `boolean`. si cela est vrai, la fenêtre doit être affichée de manière à attirer l'attention de l'utilisateur sur la fenêtre, sans changer la fenêtre ciblée. L'effet dure jusqu'à ce que l'utilisateur change de focus sur la fenêtre. Cette option n'a aucun effet si la fenêtre a déjà un focus. Si cela est faux pour annuler la requête précéndete `drawAttention`.
     - `focused` {{optional_inline}}
@@ -78,8 +74,6 @@ browser.browserAction.onClicked.addListener((tab) => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
->
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

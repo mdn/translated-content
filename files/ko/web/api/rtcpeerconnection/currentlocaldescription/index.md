@@ -9,7 +9,8 @@ slug: Web/API/RTCPeerConnection/currentLocalDescription
 
 `currentLocalDescription`을 바꾸기 위해서는, 이 값을 설정하도록 연쇄 이벤트를 작동시키는 {{domxref("RTCPeerConnection.setLocalDescription()")}}를 호출하십시오. 이 연쇄 이벤트가 어떻게 값을 바꾸고, 왜 즉시 값이 바뀌지 않는지에 대해 궁금하다면, [Pending and current descriptions](/ko/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions)를 살펴보십시오.
 
-> **참고:** {{domxref("RTCPeerConnection.localDescription")}}와 다르게, `currentLocalDescription`는 연결 인터페이스의 로컬 엔드에 대한 현재 상태를 나타내는 값 입니다. `localDescription`은 연결 인터페이스가 현재 어떤 상태로 전환 중인지를 설명하는 값을 명시 할 수 있습니다.
+> [!NOTE]
+> {{domxref("RTCPeerConnection.localDescription")}}와 다르게, `currentLocalDescription`는 연결 인터페이스의 로컬 엔드에 대한 현재 상태를 나타내는 값 입니다. `localDescription`은 연결 인터페이스가 현재 어떤 상태로 전환 중인지를 설명하는 값을 명시 할 수 있습니다.
 
 ## Syntax
 
@@ -47,7 +48,8 @@ else {
 
 {{Compat}}
 
-> **참고:** `currentLocalDescription`와 {{domxref("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}}기능은 최근에 추가 되었습니다. 따라서, 이 기능을 지원하지 않는 브라우저에서는 {{domxref("RTCPeerConnection.localDescription", "localDescription")}}를 사용하십시오.
+> [!NOTE]
+> `currentLocalDescription`와 {{domxref("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}}기능은 최근에 추가 되었습니다. 따라서, 이 기능을 지원하지 않는 브라우저에서는 {{domxref("RTCPeerConnection.localDescription", "localDescription")}}를 사용하십시오.
 
 ## 참조
 

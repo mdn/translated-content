@@ -21,7 +21,7 @@ ctx.fillStyle = pattern;
 ### Значения
 
 - `color`
-  - : {{domxref("DOMString")}} строка, содержащая цвет в формате, поддерживающимся стандартом CSS ({{cssxref("&lt;color&gt;")}}).
+  - : {{jsxref("String")}} строка, содержащая цвет в формате, поддерживающимся стандартом CSS ({{cssxref("&lt;color&gt;")}}).
 - `gradient`
   - : Объект класса {{domxref("CanvasGradient")}} (линейный или круговой градиент ).
 - `pattern`

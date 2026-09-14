@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 设置页面操作的标题。当用户悬停在页面操作上时，标题会显示在工具提示中。
 
 ## 语法
@@ -20,13 +18,10 @@ browser.pageAction.setTitle(
 ### 参数
 
 - `details`
-
   - : `object`。
-
     - `tabId`
       - : `integer`。要设置标题的标签页 ID。
     - `title`
-
       - : `string` 或 `null`。工具提示文本。
 
         如果传入了 `null`，则标题将重置为在 [`page_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 清单键中指定的标题。

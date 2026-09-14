@@ -2,12 +2,10 @@
 title: JavaScript
 slug: Web/JavaScript
 l10n:
-  sourceCommit: 26e2f9883e0e73def04c0e86fec6da3ec42e66b3
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
-{{jsSidebar}}
-
-**JavaScript** (**JS**) は軽量でインタープリター型（あるいは[実行時](https://ja.wikipedia.org/wiki/実行時コンパイラ)コンパイルされる）{{Glossary("First-class Function", "第一級関数")}}を備えたプログラミング言語です。ウェブページでよく使用されるスクリプト言語として知られ、[多くのブラウザー以外の環境](https://ja.wikipedia.org/wiki/JavaScript#その他の環境での利用)、例えば {{Glossary("Node.js")}} や [Apache CouchDB](https://couchdb.apache.org/) や [Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/) などでも使用されています。 JavaScript は[プロトタイプベース](/ja/docs/Glossary/Prototype-based_programming)で、マルチパラダイムで、[シングルスレッド](/ja/docs/Glossary/Thread)で、[動的](/ja/docs/Glossary/Dynamic_typing)な言語であり、オブジェクト指向、命令型、宣言型（関数プログラミングなど）といったスタイルに対応しています。
+**JavaScript** (**JS**) は軽量でインタープリター型（あるいは{{Glossary("Just_In_Time_Compilation", "実行時コンパイルされる")}}）{{Glossary("First-class Function", "第一級関数")}}を備えたプログラミング言語です。ウェブページでよく使用されるスクリプト言語として知られ、[多くのブラウザー以外の環境](https://ja.wikipedia.org/wiki/JavaScript#その他の環境での利用)、例えば {{Glossary("Node.js")}} や [Apache CouchDB](https://couchdb.apache.org/) や [Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/) などでも使用されています。 JavaScript は[プロトタイプベース](/ja/docs/Glossary/Prototype-based_programming)で、[ガベージコレクションのある](/ja/docs/Glossary/Garbage_collection)、[動的](/ja/docs/Glossary/Dynamic_typing)な言語であり、命令型、関数型、オブジェクト指向など、複数のパラダイムに対応しています。
 
 JavaScript の動的な機能には、ランタイムオブジェクトの構築、可変引数リスト、関数変数、動的スクリプトの作成（[`eval`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) で）、オブジェクトの内包（[`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) と [`Object` ユーティリティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#静的メソッド)で）、ソースコードの復元（JavaScript 関数はそのソーステキストを格納し [`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/toString) で復元可能）が含まれます。
 
@@ -24,34 +22,32 @@ JavaScript を[プログラミング言語 Java](https://ja.wikipedia.org/wiki/J
 
 JavaScript 仕様と関連技術に関する詳細は、 [JavaScript 技術概要](/ja/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)を参照してください。
 
-## チュートリアル
+## 初心者向けチュートリアル
 
-ガイドやチュートリアルを使って JavaScript をプログラムする方法を学びましょう。
+[ウェブ開発の学習コアモジュール](/ja/docs/Learn_web_development/Core)は、現代的な、最新の JavaScript の基礎を扱います。
 
-### 完全な初心者向け
+- [初めてのウェブサイト: 操作の追加](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
+  - : この記事は、ウェブ開発がまったく初めての方を対象に、JavaScript とは何か、そしてその使用方法について簡単に解説します。
+- [JavaScript による動的スクリプティング](/ja/docs/Learn_web_development/Core/Scripting)
+  - : このモジュールでは、JavaScript 言語の中核となる基本要素に加え、関連する重要なトピックにも焦点を当てています。これらのトピックを学ぶことで、しっかりとした基礎を築くことができます。
+- [JavaScript フレームワークとライブラリー](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
+  - : JavaScript フレームワークは、現代のフロントエンドウェブ開発において不可欠な要素であり、スケーラブルでインタラクティブなウェブアプリケーションを構築するための、実績のあるツールを開発者に提供します。多くの現代企業では、フレームワークを標準的なツールセットの一部として採用しているため、現在ではフロントエンド開発の求人の多くでフレームワークの経験が要求されます。一連の記事は、フレームワークの学習を始めるための、分かりやすい入門ガイドとなります。
 
-JavaScript について学びたいと思っているが、JavaScript あるいはプログラミングについて過去に経験がないのであれば、 [JavaScript 学習エリアのトピック](/ja/docs/Learn_web_development/Core/Scripting)に向かいましょう。以下のモジュールが利用可能です。
+## JavaScript ガイド
 
-- [JavaScript の第一歩](/ja/docs/Learn_web_development/Core/Scripting)
-  - : 変数、文字列、数値、配列のような JavaScript の基本機能の解説に加え、「JavaScript とは何か」「何に似ているか」「何ができるか」といった基本的な質問に答えます。
-- [JavaScript の構成要素](/ja/docs/Learn_web_development/Core/Scripting)
-  - : 引き続き JavaScript の基本機能について、条件分岐、ループ、関数、イベントなどのよく目にするタイプのコードブロックに注意を向けつつ説明します。
-- [JavaScript のオブジェクトの紹介](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
-  - : 言語に関する知識をさらに深め、より効率的なコードを書きたいのであれば、JavaScript のオブジェクト指向の性質を理解することは重要です。このため、私たちが提供するこのモジュールが役立つでしょう。
-- [非同期 JavaScript](/ja/docs/Learn_web_development/Extensions/Async_JS)
-  - : 非同期 JavaScript について、なぜ重要なのか、どのように使用してサーバーからのリソースの読み取りなどのブロックが発生する可能性がある操作を効果的に扱うことができるのかを説明します。
-- [クライアント側ウェブ API](/ja/docs/Learn_web_development/Extensions/Client-side_APIs)
-  - : API とは何か、開発作業でよく見かける、最も一般的な API の一部の使い方を説明します。
-
-### JavaScript ガイド
+### 基礎的な言語ガイド
 
 - [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)
   - : JavaScript や他の言語でのプログラミング経験がある方を対象とした、より詳細な JavaScript 言語のガイドです。
 
 ### 中級者向け
 
-- [クライアント側の JavaScript フレームワークの理解](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
-  - : JavaScript フレームワークは、最新のフロントエンドウェブ開発に欠かせないもので、拡張性のある双方向のウェブアプリケーションを構築するための、試行錯誤されたツールを開発者に提供します。幾つかの有名なツールについて取り扱うチュートリアルに移動する前に、クライアントサイドのフレームワークがどのように動作するのか、自分のツールセットにどのように適合させるか、についての基本的な背景知識を提供します。
+- [高度な JavaScript オブジェクト](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
+  - : 言語に関する知識をさらに深め、より効率的なコードを書きたいのであれば、JavaScript のオブジェクト指向の性質を理解することは重要です。このため、私たちが提供するこのモジュールが役立つでしょう。
+- [非同期 JavaScript](/ja/docs/Learn_web_development/Extensions/Async_JS)
+  - : 非同期 JavaScript について、なぜ重要なのか、どのように使用してサーバーからのリソースの読み取りなどのブロックが発生する可能性がある操作を効果的に扱うことができるのかを説明します。
+- [クライアント側ウェブ API](/ja/docs/Learn_web_development/Extensions/Client-side_APIs)
+  - : API とは何か、開発作業でよく見かける、最も一般的な API の一部の使い方を説明します。
 - [JavaScript 言語概要](/ja/docs/Web/JavaScript/Guide/Language_overview)
   - : 他のプログラミング言語から来た人がスピードアップするために、 JavaScript の基本的な構文と意味づけの概要を説明します。
 - [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)
@@ -69,17 +65,15 @@ JavaScript について学びたいと思っているが、JavaScript あるい�
   - : よく誤解されたり過小評価されたりしているプロトタイプベースの継承に対する説明です。
 - [メモリー管理](/ja/docs/Web/JavaScript/Guide/Memory_management)
   - : JavaScript におけるメモリーのライフサイクルとガベージコレクションです。
-- [イベントループ](/ja/docs/Web/JavaScript/Reference/Execution_model)
-  - : JavaScript は「イベントループ」に基づく実行時モデルを持っています。
 
 ## リファレンス
 
 完全な [JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference)ドキュメントをご覧ください。
 
 - [標準オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects)
-  - : 標準組み込みオブジェクトである {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}} などについて理解しましょう。
+  - : 標準組み込みオブジェクトである {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}} などについて理解しましょう。
 - [式と演算子](/ja/docs/Web/JavaScript/Reference/Operators)
-  - : JavaScript の演算子である {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}} などの挙動、そして[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)などについて学びましょう。
+  - : JavaScript の演算子である {{jsxref("instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("new")}}, {{jsxref("this")}} などの挙動、そして[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)などについて学びましょう。
 - [文と宣言](/ja/docs/Web/JavaScript/Reference/Statements)
   - : {{jsxref("Statements/do...while", "do-while")}}, {{jsxref("Statements/for...in", "for-in")}}, {{jsxref("Statements/for...of", "for-of")}}, {{jsxref("Statements/try...catch", "try-catch")}}, {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/var", "var")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/if...else", "if-else")}}, {{jsxref("Statements/switch", "switch")}} などの JavaScript の文やキーワードがどのように機能するか学びましょう。
 - [関数](/ja/docs/Web/JavaScript/Reference/Functions)

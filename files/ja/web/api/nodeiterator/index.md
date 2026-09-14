@@ -22,7 +22,6 @@ _このインターフェイスが継承するプロパティはありません�
 - {{domxref("NodeIterator.root")}} {{readonlyInline}}
   - : `NodeIterator` を作成したときに指定したルートノードを表す {{domxref("Node")}} を返します。
 - {{domxref("NodeIterator.whatToShow")}} {{readonlyInline}}
-
   - : 提供しなければならない {{domxref("Node")}} の型を表す定数で構成されるビットマスクである `unsigned long` を返します。一致しないノードはスキップされますが、その子は関連があれば含まれます。
 
     使用できる値は以下のとおりです。
@@ -75,6 +74,5 @@ _このインターフェイスが継承するメソッドはありません。_
 
 - 作成するメソッド: {{domxref("Document.createNodeIterator()")}}
 - 関連インターフェイス
-
   - {{domxref("NodeFilter")}}
   - {{domxref("TreeWalker")}}

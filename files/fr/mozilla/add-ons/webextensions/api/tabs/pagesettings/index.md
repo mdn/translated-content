@@ -3,8 +3,6 @@ title: tabs.PageSettings
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/PageSettings
 ---
 
-{{AddonSidebar}}
-
 Le type **`tabs.PageSettings`** est utilisé pour contrôler le rendu d'un onglet au format PDF par la méthode {{WebExtAPIRef("tabs.saveAsPDF()")}}.
 
 Toutes ses propriétés sont facultatives.

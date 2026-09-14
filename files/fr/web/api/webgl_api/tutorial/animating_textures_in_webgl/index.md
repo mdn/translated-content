@@ -158,6 +158,6 @@ C'est tout pour ce qu'il y a à faire pour cela !
 
 ## Voir aussi
 
-- [Utilisation de l'audio et de la video dans Firefox](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Utilisation de l'audio et de la video dans Firefox](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 
 {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

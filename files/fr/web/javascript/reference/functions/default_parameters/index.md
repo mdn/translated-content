@@ -3,8 +3,6 @@ title: Valeurs par défaut des arguments
 slug: Web/JavaScript/Reference/Functions/Default_parameters
 ---
 
-{{jsSidebar("Functions")}}
-
 Cette syntaxe permet d'initialiser des paramètres lors de l'appel de la fonction si aucune valeur n'est passée ou si c'est la valeur {{jsxref("undefined")}} qui est passée.
 
 {{InteractiveExample("JavaScript Demo: Functions Default")}}
@@ -195,7 +193,7 @@ f(2); // [2, undefined]
 
 ### Paramètre par défaut et décomposition des paramètres
 
-Il est possible d'utiliser les valeurs par défaut avec [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) :
+Il est possible d'utiliser les valeurs par défaut avec [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring) :
 
 ```js
 function f([x, y] = [1, 2], { z: z } = { z: 3 }) {

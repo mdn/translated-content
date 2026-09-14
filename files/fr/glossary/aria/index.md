@@ -2,20 +2,21 @@
 title: ARIA
 slug: Glossary/ARIA
 l10n:
-  sourceCommit: fbeabaac54b4e6640b0abc1d2ac6c44d1c3d09cd
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+**ARIA**, l'acronyme pour <i lang="en">{{Glossary("Accessibility", "Accessible")}} Rich {{Glossary("Internet")}} Applications</i> en anglais (qu'on peut traduire par applications internet riches et accessibles) est une spécification technique du {{Glossary("W3C")}} développée par {{Glossary("WAI")}} pour rendre le contenu et les applications Web plus accessibles aux personnes handicapées. Elle aide particulièrement avec le contenu dynamique et les contrôles d'interface utilisateur avancés développés avec HTML, JavaScript et des technologies associées.
 
-**ARIA**, l'acronyme pour <i lang="en">Accessible Rich Internet Applications</i> en anglais (qu'on peut traduire par applications internet riches et accessibles) est une spécification technique du [W3C](/fr/docs/Glossary/W3C). ARIA décrit comment ajouter de la sémantique et d'autres métadonnées à du contenu [HTML](/fr/docs/Glossary/HTML) dans le but de répondre aux besoins des technologies d'assistance.
-
-Par exemple, on peut ajouter l'attribut `role="alert"` à une [balise](/fr/docs/Glossary/Tag) [`<p>`](/fr/docs/Web/HTML/Element/p) pour notifier à une personne malvoyante l'importance et l'urgence de l'information (pour un personne sans problème de vue, cette information pourrait être mise en exergue par un texte coloré différemment).
+Par exemple, on peut ajouter l'attribut `role="alert"` à une {{Glossary("tag", "balise")}} {{HTMLElement("p")}} pour notifier à une personne malvoyante l'importance et l'urgence de l'information (pour un personne sans problème de vue, cette information pourrait être mise en exergue par un texte coloré différemment).
 
 ## Voir aussi
 
-- [Rôles ARIA](/fr/docs/Web/Accessibility/ARIA/Roles)
-- [États et propriétés ARIA&nbsp;: attributs `aria-*`](/fr/docs/Web/Accessibility/ARIA/Attributes)
 - [ARIA](/fr/docs/Web/Accessibility/ARIA)
-- [Guides ARIA](/fr/docs/Web/Accessibility/ARIA/ARIA_Guides)
-- [La spécification WAI-ARIA](https://w3c.github.io/aria/) (en anglais)
-- [Guides pratiques pour l'utilisation de WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) (en anglais)
+- [Initiative W3C pour l'accessibilité Web (WAI) <sup>(angl.)</sup>](https://www.w3.org/WAI/)
+- [Applications Internet Riches et Accessibles (WAI-ARIA) <sup>(angl.)</sup>](https://w3c.github.io/aria/)
+- [Guide de rédaction ARIA (APG) <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/)
+- [Accessibilité](/fr/docs/Web/Accessibility)
+- [Apprendre&nbsp;: l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility)
+- Termes associés du glossaire&nbsp;:
+  - {{Glossary("Accessibility", "Accessibilité")}}
+  - {{Glossary("WAI")}}

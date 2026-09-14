@@ -25,7 +25,6 @@ createObjectStore(name, options)
 - name
   - : 被创建的 object store 的名称。请注意创建空名称的 object store 是被允许的。
 - optionalParameters {{optional_inline}}
-
   - : 可选的对象，它的属性是此方法的可选参数，其中包括以下的属性：
 
     | Attribute       | Description                                                                                                                                                                                                                                                                                              |

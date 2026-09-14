@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b49ed0d28c2cfb0f39be603a62d37bcc1ec407dc
 ---
 
-{{GlossarySidebar}}
-
 **渲染引擎**（也被称作排版引擎或浏览器引擎）是 {{glossary("Browser", "Web 浏览器")}}用于将网页的 {{glossary("HTML")}}、{{glossary("CSS")}} 和其他资源转换为屏幕上的视觉表示的组件。
 
 常见的渲染引擎包括：

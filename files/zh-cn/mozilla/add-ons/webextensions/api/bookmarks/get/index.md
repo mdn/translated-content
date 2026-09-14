@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 85126f83684f5c62f346e360248cf88f3ba4bc8d
 ---
 
-{{AddonSidebar}}
-
 **`bookmarks.get()`** 方法用于检索与给定 {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} 的 ID 或此类 ID 的数组匹配的节点。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
@@ -22,7 +20,7 @@ let getBookmarks = browser.bookmarks.get(
 ### 参数
 
 - `idOrIdList`
-  - : 一个{{jsxref("string", "字符串", "", 1)}}或字符串{{jsxref("array", "数组", "", 1)}}，指定一个或多个要检索的 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 对象的 ID。
+  - : 一个{{jsxref("String", "字符串", "", 1)}}或字符串{{jsxref("Array", "数组", "", 1)}}，指定一个或多个要检索的 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 对象的 ID。
 
 ### 返回值
 

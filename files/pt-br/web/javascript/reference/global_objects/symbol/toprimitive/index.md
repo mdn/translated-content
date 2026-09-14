@@ -69,7 +69,7 @@ console.log(obj2 + ""); // "true"    -- dica é "default"
 
 ## Veja também
 
-- {{jsxref("Date.@@toPrimitive", "Date.prototype[@@toPrimitive]")}}
-- {{jsxref("Symbol.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}
+- {{jsxref("Date/Symbol.toPrimitive", "Date.prototype[@@toPrimitive]")}}
+- {{jsxref("Symbol/Symbol.toPrimitive", "Symbol.prototype[@@toPrimitive]")}}
 - {{jsxref("Object.prototype.toString()")}}
 - {{jsxref("Object.prototype.valueOf()")}}

@@ -7,7 +7,7 @@ original_slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer
 Todo navegador web moderno inclui um poderoso conjunto de ferramentas para desenvolvedores. Essas ferramentas fazem muitas coisas, desde inspecionar o HTML, CSS e JavaScript recém carregado e quais recursos foram requeridos até mostrar quanto tempo a página precisou para carregar. Este artigo explica como usar as funções básicas das ferramentas para desenvolvedores do seu navegador.
 
 > [!NOTE]
-> Antes de você executar os exemplos abaixo, abra o [Beginner's example site](https://mdn.github.io/beginner-html-site-scripted/) (site de exemplos do iniciante) que nós criamos durante o início da série de artigos da Web ( [Getting started with the Web](/pt-BR/docs/Learn/Getting_started_with_the_web) ). Você poderá abrir isso enquanto segue os passos abaixo.
+> Antes de você executar os exemplos abaixo, abra o [Beginner's example site](https://mdn.github.io/beginner-html-site-scripted/) (site de exemplos do iniciante) que nós criamos durante o início da série de artigos da Web ( [Getting started with the Web](/pt-BR/docs/Learn_web_development/Getting_started/Your_first_website) ). Você poderá abrir isso enquanto segue os passos abaixo.
 
 ## Como abrir o devtools no seu navegador
 
@@ -18,12 +18,10 @@ O devtools está inserido no navegador em uma janela semelhante a esta:
 Como você acessa? Três modos:
 
 - _**Teclado.**_ _<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>_, exceto:
-
   - **Internet Explorer.<kbd> </kbd>**_<kbd>F12</kbd>_
   - **Mac OS X.** _<kbd>⌘</kbd> + <kbd>⌥</kbd> +<kbd> I</kbd>_
 
 - _**Menu bar.**_
-
   - **Firefox.** Menu ![](2014-01-10-13-08-08-f52b8c.png) *➤ ![](screenshot_from_2014-11-26_14-24-56.png) *➤ Web Developer ➤ Toggle Tools,_ or \_Tools ➤_ _Web Developer ➤ Toggle Tools_
   - **Chrome.** _View ➤ Developer ➤ Developer Tools_
   - **Safari.** _Develop ➤ Show Web Inspector._ Se você não consegue ver o _menu Desenvolvedor_ , vá para _Safari ➤ Preferências ➤ Avançado_ e confira o _Show Develop menu no menu bar_ checkbox.
@@ -209,5 +207,5 @@ Descubra mais sobre o console JavaScript em diferentes navegadores:
 
 ## Veja também
 
-- [Debugging HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
+- [Debugging HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
 - [Debugging CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Debugging_CSS)

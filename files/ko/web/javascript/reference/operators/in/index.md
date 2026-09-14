@@ -75,7 +75,7 @@ delete trees[3];
 3 in trees; // false를 반환합니다.
 ```
 
-만약 당신이 속성을 {{jsxref("Global_Objects/undefined", "undefined")}}로 설정하였는데 그것을 제거하지 않으면, `in` 연산자는 그 속성에 대하여 `true`를 반환합니다.
+만약 당신이 속성을 {{jsxref("undefined")}}로 설정하였는데 그것을 제거하지 않으면, `in` 연산자는 그 속성에 대하여 `true`를 반환합니다.
 
 ```js
 var myCar = {
@@ -114,4 +114,4 @@ trees[3] = undefined;
 - [`delete`](/ko/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Reflect.has()")}}
-- [속성의, 소유와 셀 수 있는 성질](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [속성의, 소유와 셀 수 있는 성질](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

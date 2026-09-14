@@ -3,8 +3,6 @@ title: Reflect.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
 
-{{JSRef}}
-
 La méthode statique **`Reflect.apply()`** permet d'appeler une fonction cible avec des arguments donnés.
 
 {{InteractiveExample("JavaScript Demo: Reflect.apply()")}}

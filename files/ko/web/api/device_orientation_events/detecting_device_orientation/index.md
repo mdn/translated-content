@@ -43,7 +43,8 @@ function handleOrientation(event) {
 }
 ```
 
-> **참고:** [parallax](https://github.com/wagerfield/parallax) 는 가속도계와 자이로스코프를 모바일에서 처리하기 위한 폴리필 입니다. 디바이스 호환성 처리를 극복하는데 유용할 수 있습니다.
+> [!NOTE]
+> [parallax](https://github.com/wagerfield/parallax) 는 가속도계와 자이로스코프를 모바일에서 처리하기 위한 폴리필 입니다. 디바이스 호환성 처리를 극복하는데 유용할 수 있습니다.
 
 ### 방향 값 설명
 

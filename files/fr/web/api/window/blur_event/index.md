@@ -1,59 +1,79 @@
 ---
-title: GlobalEventHandlers.onblur
+title: "Window : évènement blur"
+short-title: blur
 slug: Web/API/Window/blur_event
+l10n:
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{ApiRef("HTML DOM")}}
+{{APIRef("UI Events")}}
 
-La propriété **`onblur`**, rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [le gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`blur`](/fr/docs/Web/API/Element/blur_event). Elle est disponible sur les interfaces [`Element`](/fr/docs/Web/API/Element), [`Document`](/fr/docs/Web/API/Document), et [`Window`](/fr/docs/Web/API/Window).
+L'évènement **`blur`** est déclenché lorsqu'un élément perd la sélection.
 
-L'évènement `blur` est déclenché lorsqu'un élément perd le focus.
+L'opposé de `blur` est {{DOMxRef("Window/focus_event", "focus")}}.
 
-> [!NOTE]
-> Le gestionnaire d'évènement opposé à `onblur` est [`onfocus`](/fr/docs/Web/API/Window/focus_event).
+Cet évènement n'est pas annulable et ne se propage pas.
 
 ## Syntaxe
 
-```js
-cible.onblur = refFonction;
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété gestionnaire d'évènement.
+
+```js-nolint
+addEventListener("blur", (event) => { })
+
+onblur = (event) => { }
 ```
 
-### Valeur
+## Type d'évènement
 
-`refFonction` est un nom de fonction ou une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet [`FocusEvent`](/fr/docs/Web/API/FocusEvent) comme unique argument.
+Un {{DOMxRef("FocusEvent")}}. Hérite de {{DOMxRef("UIEvent")}} et {{DOMxRef("Event")}}.
 
-## Exemple
+{{InheritanceDiagram("FocusEvent")}}
 
-Cet exemple utilise `onblur` et [`onfocus`](/fr/docs/Web/API/Window/focus_event) pour changer le texte au sein d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input).
+## Exemples
 
-### HTML
+### Exemple interactif
+
+Cet exemple modifie l'apparence d'un document lorsqu'il perd la sélection. Il utilise {{DOMxRef("EventTarget.addEventListener()", "addEventListener()")}} pour surveiller les évènements {{DOMxRef("Window/focus_event", "focus")}} et `blur`.
+
+#### HTML
 
 ```html
-<input type="text" value="Cliquez ici" />
+<p id="log">Cliquez sur ce document pour lui donner la sélection.</p>
 ```
 
-### JavaScript
+#### CSS
+
+```css
+.paused {
+  background: #dddddd;
+  color: #555555;
+}
+```
+
+#### JavaScript
 
 ```js
-let input = document.querySelector("input");
+const log = document.getElementById("log");
 
-input.onblur = inputBlur;
-input.onfocus = inputFocus;
-
-function inputBlur() {
-  input.value = "Le focus a été perdu";
+function pause() {
+  document.body.classList.add("paused");
+  log.textContent = "SÉLECTION PERDUE !";
 }
 
-function inputFocus() {
-  input.value = "Le focus est là";
+function play() {
+  document.body.classList.remove("paused");
+  log.textContent =
+    "Ce document a la sélection. Cliquez en dehors du document pour la perdre.";
 }
+
+window.addEventListener("blur", pause);
+window.addEventListener("focus", play);
 ```
 
-### Résultat
+#### Résultat
 
-Essayez de cliquer à l'intérieur et en dehors du champ pour voir son contenu être modifié.
-
-{{EmbedLiveSample('')}}
+{{EmbedLiveSample("Exemple interactif")}}
 
 ## Spécifications
 
@@ -63,7 +83,9 @@ Essayez de cliquer à l'intérieur et en dehors du champ pour voir son contenu �
 
 {{Compat}}
 
+La valeur de {{DOMxRef("Document.activeElement")}} varie selon les navigateurs pendant le traitement de cet évènement ([bogue Firefox 452307 <sup>(angl.)</sup>](https://bugzil.la/452307))&nbsp;: IE10 la définit sur l'élément qui reçoit la sélection, tandis que Firefox et Chrome la définissent souvent sur le `body` du document.
+
 ## Voir aussi
 
-- L'évènement [`blur`](/fr/docs/Web/API/Element/blur_event)
-- Le gestionnaire d'évènement dual&nbsp;: [`GlobalEventHandlers.onfocus`](/fr/docs/Web/API/Window/focus_event)
+- Évènement associé&nbsp;: {{DOMxRef("Window/focus_event", "focus")}}
+- Cet évènement sur les cibles `Element`&nbsp;: évènement {{DOMxRef("Element/blur_event", "blur")}}

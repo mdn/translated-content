@@ -5,7 +5,7 @@ slug: Learn_web_development/Extensions/Client-side_APIs/Client-side_storage
 
 {{LearnSidebar}}
 
-{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 Современные веб-браузеры поддерживают несколько способов хранения данных из веб-сайтов на компьютере пользователя - с разрешения пользователя - чтобы потом получать их, когда это необходимо. Это позволяет долгосрочно хранить данные, сохранять сайты или документы для использования без подключения к сети, сохранять пользовательские настройки для вашего сайта и многое другое. В этой статье объясняются основы того, как это все работает.
 
@@ -768,4 +768,4 @@ self.addEventListener("fetch", function (e) {
 - [Cookies](/ru/docs/Web/HTTP/Guides/Cookies)
 - [Service worker API](/ru/docs/Web/API/Service_Worker_API)
 
-{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

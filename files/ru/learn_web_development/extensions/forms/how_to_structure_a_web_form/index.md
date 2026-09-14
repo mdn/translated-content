@@ -19,7 +19,8 @@ slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 
 Мы уже встречались с этим в предыдущей статье.
 
-> **Предупреждение:** **Внимание:** Строго запрещается размещать форму внутри другой формы. Такое размещение может привести к непредсказуемому поведению форм, в зависимости от браузера.
+> [!WARNING]
+> Строго запрещается размещать форму внутри другой формы. Такое размещение может привести к непредсказуемому поведению форм, в зависимости от браузера.
 
 Стоит учесть, что всегда можно использовать элементы формы вне {{HTMLElement("form")}}. Тогда по умолчанию этот элемент формы не имеет ничего общего со всеми формами. Вы можете связать его с формой с помощью атрибута `form`. В HTML5 был представлен атрибут `form` для элементов HTML форм, который позволяет явно связать элемент с формой, даже если он не заключён внутри {{ HTMLElement("form") }}.
 
@@ -281,7 +282,7 @@ slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 
 ## Протестируйте себя!
 
-Вы дошли до конца статьи, но можете ли вспомнить самую важную информацию? Далее вы можете найти тест, который поможет убедиться, что вы усвоили знания прежде чем двигаться дальше — посмотрите [Test your skills: Form structure](/ru/docs/Learn/Forms/Test_your_skills:_Form_structure).
+Вы дошли до конца статьи, но можете ли вспомнить самую важную информацию? Далее вы можете найти тест, который поможет убедиться, что вы усвоили знания прежде чем двигаться дальше — посмотрите [Test your skills: Form structure](/ru/docs/Learn_web_development/Extensions/Forms).
 
 ## Заключение
 
@@ -310,4 +311,4 @@ slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 
 - [Как создавать пользовательские виджеты форм](/ru/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [Sending forms through JavaScript](/ru/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
-- [Property compatibility table for form widgets](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Property compatibility table for form widgets](/ru/docs/Learn_web_development/Extensions/Forms)

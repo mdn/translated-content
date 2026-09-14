@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
 ---
 
-{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}
 
 [ファイルおよびディレクトリー項目 API](/ja/docs/Web/API/File_System_API) では、 `FileSystemSync` オブジェクトはファイルシステムを表します。 2 つのプロパティがあります。
 

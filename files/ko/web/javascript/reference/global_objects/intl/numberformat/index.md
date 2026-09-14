@@ -45,7 +45,7 @@ console.log(
 
 ## 정적 메서드
 
-- {{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl/NumberFormat/supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
   - : 주어진 로케일 목록 중, 런타임이 지원하는 항목을 배열로 반환합니다.
 
 ## 인스턴스 속성

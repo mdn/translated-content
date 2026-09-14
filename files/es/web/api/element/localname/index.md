@@ -18,7 +18,7 @@ name = element.localName
 
 ### Valor de Retorno
 
-{{domxref("DOMString")}} que representa la parte local del nombre cualificado del elemento.
+{{jsxref("String")}} que representa la parte local del nombre cualificado del elemento.
 
 ## Ejemplo
 

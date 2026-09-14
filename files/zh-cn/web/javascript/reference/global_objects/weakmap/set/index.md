@@ -3,8 +3,6 @@ title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 ---
 
-{{JSRef}}
-
 {{jsxref("WeakMap")}} 实例的 **`set()`** 方法根据指定的键值在该 `WeakMap` 中添加新元素。
 
 {{InteractiveExample("JavaScript Demo: WeakMap.prototype.set()")}}

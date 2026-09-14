@@ -3,8 +3,6 @@ title: Firefox 27 for developers
 slug: Mozilla/Firefox/Releases/27
 ---
 
-{{FirefoxSidebar}}
-
 Gecko 27 を搭載した Firefox 27 は米国時間 2014 年 2 月 4 日にリリースされました。このページでは、開発者に影響する Firefox 27 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -34,8 +32,8 @@ Gecko 27 を搭載した Firefox 27 は米国時間 2014 年 2 月 4 日にリ�
 
 ### HTML
 
-- デスクトッププラットフォームにおいて、{{HTMLElement("input")}} の [`type`](/ja/docs/Web/HTML/Element/input#type) 属性で値 "color" を実装しました。これは、モバイルプラットフォームですでに利用できていました。
-- {{HTMLElement("iframe")}} 要素の [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性で、`allow-popups` ディレクティブをサポートしました ([Firefox バグ 766282](https://bugzil.la/766282))。
+- デスクトッププラットフォームにおいて、{{HTMLElement("input")}} の [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性で値 "color" を実装しました。これは、モバイルプラットフォームですでに利用できていました。
+- {{HTMLElement("iframe")}} 要素の [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性で、`allow-popups` ディレクティブをサポートしました ([Firefox バグ 766282](https://bugzil.la/766282))。
 - {{cssxref("mix-blend-mode")}} プロパティを使用した HTML 要素のブレンドを実装しました。設定項目 `layout.css.mix-blend-mode.enabled` を `true` に設定しなければなりません ([Firefox バグ 902525](https://bugzil.la/902525))。
 
 ### JavaScript
@@ -43,7 +41,7 @@ Gecko 27 を搭載した Firefox 27 は米国時間 2014 年 2 月 4 日にリ�
 [EcmaScript 6](/ja/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) (Harmony) の実装が続いています!
 
 - Harmony の [spread operator](http://wiki.ecmascript.org/doku.php?id=harmony:spread) を、関数呼び出しでサポートしました ([Firefox バグ 762363](https://bugzil.la/762363))。
-- 数学関数 {{jsxref("Global_Objects/Math/hypot", "Math.hypot()")}} を実装しました ([Firefox バグ 896264](https://bugzil.la/896264))。
+- 数学関数 {{jsxref("Math.hypot()")}} を実装しました ([Firefox バグ 896264](https://bugzil.la/896264))。
 - `yield*` 演算子を実装しました ([Firefox バグ 666396](https://bugzil.la/666396))。
 - `MapIterator`、`SetIterator`、`ArrayIterator` の各オブジェクトが、仕様書に一致するようになりました ([Firefox バグ 881226](https://bugzil.la/881226))。
 - [for..of](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループが `StopIteration` を使用する SpiderMonkey の古い iterator protocol をやめて、ES6 の標準 [iterator protocol](/ja/docs/Web/JavaScript/Reference/Iteration_protocols) に準拠するようになりました。

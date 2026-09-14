@@ -3,7 +3,7 @@ title: "EventTarget: addEventListener() メソッド"
 short-title: addEventListener()
 slug: Web/API/EventTarget/addEventListener
 l10n:
-  sourceCommit: ded971d7fec855c2b81fde8809172697f2e227c1
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
@@ -12,7 +12,8 @@ l10n:
 
 対象としてよくあるものは {{domxref("Element")}}、{{domxref("Document")}}、{{domxref("Window")}} ですが、イベントに対応したあらゆるオブジェクトが対象になることができます（{{domxref("IDBRequest")}} など）。
 
-> **メモ:** `addEventListener()` メソッドは、イベントリスナーを登録するための*推奨される*方法です。以下のような長所があります。
+> [!NOTE]
+> `addEventListener()` メソッドは、イベントリスナーを登録するための*推奨される*方法です。以下のような長所があります。
 >
 > - 1 つのイベントに対して複数のハンドラーを追加することができます。これは、ライブラリーや JavaScript モジュール、あるいは他のライブラリーや拡張機能とうまく動作させる必要があるその他の種類のコードで特に有効です。
 > - `onXYZ` プロパティを使用するのとは対照的に、リスナーが起動されるときのフェーズ（キャプチャとバブリング）をより細かく制御できます。
@@ -41,35 +42,37 @@ addEventListener(type, listener, useCapture)
 ### 引数
 
 - `type`
-  - : 対象とする[イベントの種類](/ja/docs/Web/Events)を表す文字列です。
+  - : 対象とする[イベントの種類](/ja/docs/Web/API/Document_Object_Model/Events)を表す文字列です。
 - `listener`
-  - : 指定された種類のイベントが発生するときに通知（{{domxref("Event")}} インターフェイスを実装しているオブジェクト）を受け取るオブジェクト。これは `null` であるか、`handleEvent()` メソッドのあるオブジェクトか、JavaScript の[関数](/ja/docs/Web/JavaScript/Guide/Functions)のいずれかでなければなりません。コールバックについて詳しくは、[イベントリスナーのコールバック](#イベントリスナーのコールバック)を参照してください。
+  - : 指定された種類のイベントが発生するときに通知（{{domxref("Event")}} インターフェイスを実装しているオブジェクト）を受け取るオブジェクト。
+    これは `null` であるか、`handleEvent()` メソッドのあるオブジェクトか、JavaScript の[関数](/ja/docs/Web/JavaScript/Guide/Functions)のいずれかでなければなりません。
+    コールバックについて詳しくは、[イベントリスナーのコールバック](#イベントリスナーのコールバック)を参照してください。
 - `options` {{optional_inline}}
-
   - : 対象のイベントリスナーの特性を指定する、オプションのオブジェクトです。
     次のオプションが使用できます。
-
     - `capture` {{optional_inline}}
       - : 論理値で、この型のイベントが DOM ツリーで下に位置する `EventTarget` に配信 (dispatch) される前に、登録された `listener` に配信されることを示します。指定されていない場合は、既定で `false` になります。
     - `once` {{optional_inline}}
       - : 論理値で、 `listener` の呼び出しを一回のみのとしたいかどうかを値で指定します。 `true` を指定すると、 `listener` は一度実行された時に自動的に削除されます。指定されていない場合は、既定で `false` になります。
     - `passive` {{optional_inline}}
+      - : 論理値で、`true` ならば、 `listener` で指定された関数が {{domxref("Event.preventDefault", "preventDefault()")}} を呼び出さないことを示します。呼び出されたリスナーが `preventDefault()` を呼び出すと、ユーザーエージェントは何もせず、コンソールに警告を出力される可能性があります。
 
-      - : 論理値で、`true` ならば、 `listener` で指定された関数が {{domxref("Event.preventDefault", "preventDefault()")}} を呼び出さないことを示します。呼び出されたリスナーが `preventDefault()` を呼び出すと、ユーザーエージェントは何もせず、コンソールに警告を出力します。
-
-      このオプションが指定されていない場合、既定で `false` になります。ただし、Safari 以外のブラウザーでは、{{domxref("Element/wheel_event", "wheel")}}、{{domxref("Element/mousewheel_event", "mousewheel")}}、{{domxref("Element/touchstart_event", "touchstart")}}、{{domxref("Element/touchmove_event", "touchmove")}} の各イベントでは `true` になります。詳細は[パッシブリスナーの使用](#パッシブリスナーの使用)をご覧ください。
+        このオプションが指定されていない場合、既定で `false` になります。ただし、Safari 以外のブラウザーでは、{{domxref("Element/wheel_event", "wheel")}}、{{domxref("Element/mousewheel_event", "mousewheel")}}、{{domxref("Element/touchstart_event", "touchstart")}}、{{domxref("Element/touchmove_event", "touchmove")}} の各イベントでは `true` になります。詳細は[パッシブリスナーの使用](#パッシブリスナーの使用)をご覧ください。
 
     - `signal` {{optional_inline}}
-      - : {{domxref("AbortSignal")}} です。指定された `AbortSignal` オブジェクトの {{domxref("AbortController/abort()", "abort()")}} メソッドが呼び出された時に、リスナーが削除されます。指定されていない場合は、`AbortSignal` がリスナーに関連付けられません。
+      - : {{domxref("AbortSignal")}} です。その `AbortSignal` を持つ {{domxref("AbortController")}} オブジェクトの {{domxref("AbortController/abort()", "abort()")}} メソッドが呼び出された時に、リスナーが削除されます。指定されてなかった場合は、`AbortSignal` がリスナーに関連付けられません。
 
 - `useCapture` {{optional_inline}}
-
-  - : 論理値で、この型のイベントが、DOM ツリー内の下の `EventTarget` に配信される*前*に、登録された `listener` に配信されるかどうかを示します。ツリーを上方向にバブリングしているイベントは、キャプチャを使用するように指定されたリスナーを起動しません。イベントのバブリングとキャプチャは、両方の要素がそのイベントのハンドラーを登録している場合に、別の要素内に入れ子になっている要素で発生するイベントを伝播する 2 つの方法です。イベント伝播モードは、要素がイベントを受け取る順番を決定します。詳細な説明は [DOM Level 3 Events](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) と [JavaScript Event order](https://www.quirksmode.org/js/events_order.html#link4) を参照してください。
+  - : 論理値で、この型のイベントが、DOM ツリー内の下の `EventTarget` に配信される*前*に、登録された `listener` に配信されるかどうかを示します。
+    ツリーを上方向にバブリングしているイベントは、キャプチャを使用するように指定されたリスナーを起動しません。
+    イベントのバブリングとキャプチャは、両方の要素がそのイベントのハンドラーを登録している場合に、別の要素内に入れ子になっている要素で発生するイベントを伝播する 2 つの方法です。
+    イベント伝播モードは、要素がイベントを受け取る順番を決定します。
+    詳細な説明は [DOM 仕様書](https://dom.spec.whatwg.org/#introduction-to-dom-events)と [JavaScript Event order](https://www.quirksmode.org/js/events_order.html#link4) を参照してください。
     指定されていない場合、 `useCapture` は既定で `false` となります。
 
     > [!NOTE]
     > イベントターゲットに登録されたイベントリスナーは、キャプチャフェーズやバブリングフェーズではなく、ターゲットフェーズのイベントになります。
-    > キャプチャフェーズのイベントリスナーは、キャプチャフェーズ以外のイベントリスナーよりも先に呼び出されます。
+    > キャプチャフェーズのイベントリスナーは、ターゲットフェーズおよびバブリングフェーズのイベントリスナーの前に呼び出されます。
 
 - `wantsUntrusted` {{optional_inline}} {{non-standard_inline}}
   - : Firefox (Gecko) 独自の引数です。`true` の場合、このリスナーはウェブコンテンツによって発行された合成イベント (カスタムイベント) を受け取ります (ブラウザーの{{glossary("chrome", "クローム")}}では既定で `false` ですが、一般のウェブページでは `true` です)。この引数は、主にアドオンやブラウザー自身の役に立つものです。
@@ -98,61 +101,15 @@ function handleEvent(event) {
 }
 ```
 
-### オプションの対応の安全な検出
-
-DOM 仕様書の古い版では、 `addEventListener()` の第 3 引数はキャプチャーを使用するかどうかを示す論理値でした。時間の経過とともに、より多くのオプションが必要であることが明らかになりました。関数にさらに多くの引数を追加する (オプションの値を扱うときに非常に複雑になります) のではなく、第 3 引数は、イベントリスナーを削除する過程を設定するためのオプションの値を定義するさまざまなプロパティを含むことができるオブジェクトに変更されました。
-
-古いブラウザーは (あまり古くないブラウザーも含めて) 第 3 引数がまだ論理値であると仮定しているので、このシナリオをインテリジェントに処理できるようにコードを構築する必要があります。これを行うには、興味のあるオプションごとに機能検出を使用します。
-
-例えば、 `passive` オプションをチェックしたい場合は次のようにします。
-
-```js
-let passiveSupported = false;
-
-try {
-  const options = {
-    get passive() {
-      // この関数はブラウザーが passive プロパティに
-      // アクセスしようとしたときに呼び出されます。
-      passiveSupported = true;
-      return false;
-    },
-  };
-
-  window.addEventListener("test", null, options);
-  window.removeEventListener("test", null, options);
-} catch (err) {
-  passiveSupported = false;
-}
-```
-
-これは、 `options` オブジェクトを生成し、 `passive` プロパティのゲッター関数を持たせます。ゲッターは、呼ばれた場合に `passiveSupported` フラグを `true` に設定します。つまり、ブラウザーが `passive` プロパティの値を `options` オブジェクトでチェックした場合、 `passiveSupported` は `true` に設定され、そうでなければ `false` のままになります。次に `addEventListener()` を呼び出して、これらのオプションを指定して偽のイベントハンドラーをセットアップし、ブラウザーが第 3 引数としてオブジェクトを認識した場合にオプションがチェックされるようにします。その後、[`removeEventListener()`](/ja/docs/Web/API/EventTarget/removeEventListener) を呼び出して、自分たちで後始末をします。（呼ばれていないイベントリスナーでは `handleEvent()` は無視されることに注意してください。）
-
-この方法で、任意のオプションに対応しているかどうかを確認することができます。上に示したようなコードを使って、そのオプションのゲッターを追加するだけです。
-
-そして、問題のオプションを使用する実際のイベントリスナーを作成したい場合は、次のようにします。
-
-```js
-someElement.addEventListener(
-  "mouseup",
-  handleMouseUp,
-  passiveSupported ? { passive: true } : false,
-);
-```
-
-ここでは、 {{domxref("Element/mouseup_event", "mouseup")}} イベントのリスナーを `someElement` 要素に追加しています。第 3 引数の `passiveSupported` が `true` である場合、 `options` オブジェクトを `passive` を `true` に設定して指定しています。そうでない場合は、論理値を渡す必要があることがわかっているので、 `useCapture` 引数の値として `false` を渡しています。
-
-[機能検出の実装](/ja/docs/Learn_web_development/Extensions/Testing/Feature_detection)のドキュメントや [Web Incubator Community Group](https://wicg.github.io/admin/charter.html) の [`EventListenerOptions`](https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection) に関する説明で詳しく学ぶことができます。
-
 ### ハンドラー内での "this" の値
 
 イベントハンドラーが発行された要素を参照することはよくあることで、似たような要素の設定に汎用ハンドラーを使用する場合などに便利です。
 
-ハンドラー関数を `addEventListener()` を使用して要素に装着する場合、ハンドラー内の {{jsxref("Operators/this","this")}} の値は要素を参照します。ハンドラーに渡すイベント引数の `currentTarget` プロパティの値と同じになります。
+ハンドラー関数を `addEventListener()` を使用して要素に装着する場合、ハンドラー内の {{jsxref("this")}} の値は要素を参照します。ハンドラーに渡すイベント引数の `currentTarget` プロパティの値と同じになります。
 
 ```js
-my_element.addEventListener("click", function (e) {
-  console.log(this.className); // my_element の className をログ出力
+myElement.addEventListener("click", function (e) {
+  console.log(this.className); // myElement の className をログ出力
   console.log(e.currentTarget === this); // `true` をログ出力
 });
 ```
@@ -160,8 +117,8 @@ my_element.addEventListener("click", function (e) {
 注意点として、[アロー関数は自分自身で `this` コンテキストを持つことはありません](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions#メソッドとしては使用不可)。
 
 ```js
-my_element.addEventListener("click", (e) => {
-  console.log(this.className); // 警告: `this` は `my_element` ではない
+myElement.addEventListener("click", (e) => {
+  console.log(this.className); // 警告: `this` は `myElement` ではない
   console.log(e.currentTarget === this); // `false` をログ出力
 });
 ```
@@ -169,8 +126,8 @@ my_element.addEventListener("click", (e) => {
 イベントハンドラー（例えば、{{domxref("Element.click_event", "onclick")}}）が HTML ソースの要素に指定されている場合、属性値の JavaScript コードは実質的にハンドラー関数にラップされ、`addEventListener()` と整合する方法で `this` の値にバインドされます。コード内に `this` が現れた場合は、要素への参照を表します。
 
 ```html
-<table id="my_table" onclick="console.log(this.id);">
-  <!-- `this` が table にバインドされ、'my_table' がログ出力される -->
+<table id="my-table" onclick="console.log(this.id);">
+  <!-- `this` が table にバインドされ、'my-table' がログ出力される -->
   …
 </table>
 ```
@@ -183,7 +140,7 @@ my_element.addEventListener("click", (e) => {
     console.log(this.id);
   }
 </script>
-<table id="my_table" onclick="logID();">
+<table id="my-table" onclick="logID();">
   <!-- 呼び出された際、`this` はグローバルオブジェクトを指す -->
   …
 </table>
@@ -201,10 +158,10 @@ my_element.addEventListener("click", (e) => {
 class Something {
   name = "Something Good";
   constructor(element) {
-    // bind によって、修正された `this` コンテキストを `onclick2` に代入される
+    // bind によって修正された `this` コンテキストを `onclick2` に代入
     this.onclick2 = this.onclick2.bind(this);
-    element.addEventListener("click", this.onclick1, false);
-    element.addEventListener("click", this.onclick2, false); // Trick
+    element.addEventListener("click", this.onclick1);
+    element.addEventListener("click", this.onclick2); // Trick
   }
   onclick1(event) {
     console.log(this.name); // undefined（`this` が要素であるため）
@@ -224,8 +181,8 @@ class Something {
   name = "Something Good";
   constructor(element) {
     // この場合のリスナーは `this` であり、 this.handleEvent ではないことに注意
-    element.addEventListener("click", this, false);
-    element.addEventListener("dblclick", this, false);
+    element.addEventListener("click", this);
+    element.addEventListener("dblclick", this);
   }
   handleEvent(event) {
     console.log(this.name); // 'Something Good'（新しく作成されたオブジェクトに結び付けられているため）
@@ -299,17 +256,13 @@ console.log(someString); // 期待される値: 'Data' （'Data Again' とはな
 ### メモリーの問題
 
 ```js
-const elts = document.getElementsByTagName("*");
+const elems = document.getElementsByTagName("*");
 
 // ケース 1
-for (const elt of elts) {
-  elt.addEventListener(
-    "click",
-    (e) => {
-      // 何かを行う
-    },
-    false,
-  );
+for (const elem of elems) {
+  elem.addEventListener("click", (e) => {
+    // 何かを行う
+  });
 }
 
 // ケース 2
@@ -317,8 +270,8 @@ function processEvent(e) {
   // 何かを行う
 }
 
-for (const elt of elts) {
-  elt.addEventListener("click", processEvent, false);
+for (const elem of elems) {
+  elem.addEventListener("click", processEvent);
 }
 ```
 
@@ -330,20 +283,16 @@ for (const elt of elts) {
 
 イベントに既定のアクションがある場合、例えば、既定でコンテナーをスクロールする {{domxref("Element/wheel_event", "wheel")}} イベントの場合、イベントリスナーが {{domxref("Event.preventDefault()")}} を呼び出して既定のアクションをキャンセルするかどうかを事前に知ることができないため、ブラウザーは一般的にイベントリスナーが完了するまで既定のアクションを開始することができません。イベントリスナーの実行に時間がかかりすぎると、既定のアクションが実行されるまでに、{{glossary("jank", "ジャンク")}}と呼ばれる顕著な遅延が発生する可能性があります。
 
-`passive` オプションを `true` に設定することで、イベントリスナーは既定のアクションを取り消される可能性がないことを宣言します。リスナーが {{domxref("Event.preventDefault()")}} を呼び出しても、効果はありません。
+`passive` オプションを `true` に設定すると、イベントリスナーは既定のアクションを取り消さないことを宣言するため、ブラウザーはリスナーが完了するのを待たずに、既定のアクションをすぐに開始できます。リスナーが {{domxref("Event.preventDefault()")}} を呼び出しても、効果はありません。
 
-`addEventListener()` の仕様書では、`passive` オプションの既定値は常に `false` であると定義しています。しかし、パッシブリスナーのスクロールパフォーマンスの利点を古いコードで実現するために、最近のブラウザーでは {{domxref("Element/wheel_event", "wheel")}}、{{domxref("Element/mousewheel_event", "mousewheel")}}、{{domxref("Element/touchstart_event", "touchstart")}}、{{domxref("Element/touchmove_event", "touchmove")}} の各イベントの `passive` オプションの既定値が、文書レベルノード {{domxref("Window")}}、{{domxref("Document")}}、{{domxref("Document.body")}} においては `true` に変更されています。これにより、イベントリスナーが[イベントが取り消される可能性](/ja/docs/Web/API/Event/preventDefault)を防ぐことができるので、ユーザーがスクロールしている間にページのレンダリングをブロックすることはありません。
+`addEventListener()` の仕様書では、`passive` オプションのデフォルト値は常に `false` であると定義しています。しかし、パッシブリスナーのスクロールパフォーマンスの利点を古いコードで実現するために、最近のブラウザーでは {{domxref("Element/wheel_event", "wheel")}}、{{domxref("Element/mousewheel_event", "mousewheel")}}、{{domxref("Element/touchstart_event", "touchstart")}}、{{domxref("Element/touchmove_event", "touchmove")}} の各イベントの `passive` オプションのデフォルト値が、文書レベルノード {{domxref("Window")}}、{{domxref("Document")}}、{{domxref("Document.body")}} においては `true` に変更されています。これにより、イベントリスナーが[イベントが取り消される可能性](/ja/docs/Web/API/Event/preventDefault)を防ぐことができるので、ユーザーがスクロールしている間にページのレンダリングをブロックすることはありません。
 
-そのため、（既定値に頼らずに）その動作を上書きして `passive` オプションを確実に `false` にしたい場合は、明示的にこのオプションを `false` に設定する必要があります。
+そのため、（デフォルト値に頼らずに）その動作を上書きして `passive` オプションを確実に `false` にしたい場合は、明示的にこのオプションを `false` に設定する必要があります。
 
 基本的な {{domxref("Element/scroll_event", "scroll")}} イベントについて、`passive` の値を気にする必要はありません。
 取り消される可能性がないため、イベントリスナーがページのレンダリングをブロックすることはありません。
 
 パッシブリスナーの効果を示す例については[パッシブリスナーによるスクロールの性能改善](#パッシブリスナーによるスクロールの性能改善)を参照してください。
-
-### 古いブラウザーの場合
-
-`addEventListener()` の引数 `options` に対応していない古いブラウザーでは、これを使用しようとすると、[機能検出](#オプションの対応の安全な検出)を適切に使用しない限り、引数 `useCapture` が使用できなくなります。
 
 ## 例
 
@@ -355,12 +304,14 @@ for (const elt of elts) {
 
 ```html
 <table id="outside">
-  <tr>
-    <td id="t1">one</td>
-  </tr>
-  <tr>
-    <td id="t2">two</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td id="t1">one</td>
+    </tr>
+    <tr>
+      <td id="t2">two</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -376,7 +327,7 @@ function modifyText() {
 
 // イベントリスナーを table に追加
 const el = document.getElementById("outside");
-el.addEventListener("click", modifyText, false);
+el.addEventListener("click", modifyText);
 ```
 
 このコードの中で、 `modifyText()` は `click` イベントのリスナーであり、`addEventListener()` を使用して登録されています。表の中のどこかをクリックすると、ハンドラーまでバブリングし、`modifyText()` が実行されます。
@@ -393,12 +344,14 @@ el.addEventListener("click", modifyText, false);
 
 ```html
 <table id="outside">
-  <tr>
-    <td id="t1">one</td>
-  </tr>
-  <tr>
-    <td id="t2">two</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td id="t1">one</td>
+    </tr>
+    <tr>
+      <td id="t2">two</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -436,12 +389,14 @@ function modifyText() {
 
 ```html
 <table id="outside">
-  <tr>
-    <td id="t1">one</td>
-  </tr>
-  <tr>
-    <td id="t2">two</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td id="t1">one</td>
+    </tr>
+    <tr>
+      <td id="t2">two</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -449,20 +404,16 @@ function modifyText() {
 
 ```js
 // t2 のコンテンツを変更する関数
-function modifyText(new_text) {
+function modifyText(newText) {
   const t2 = document.getElementById("t2");
-  t2.firstChild.nodeValue = new_text;
+  t2.firstChild.nodeValue = newText;
 }
 
 // イベントリスナーを table に追加する関数
 const el = document.getElementById("outside");
-el.addEventListener(
-  "click",
-  function () {
-    modifyText("four");
-  },
-  false,
-);
+el.addEventListener("click", function () {
+  modifyText("four");
+});
 ```
 
 なお、リスナーは実際にイベントに応答する `modifyText()` 関数に引数を送信することができるコードをカプセル化している無名関数であることに注意してください。
@@ -473,18 +424,20 @@ el.addEventListener(
 
 ### アロー関数を使用したイベントリスナー
 
-この例はアロー関数記法を使用して実装された、簡単なイベントリスナーを紹介しています。
+この例はアロー関数記法を使用して実装されたイベントリスナーを紹介しています。
 
 #### HTML
 
 ```html
 <table id="outside">
-  <tr>
-    <td id="t1">one</td>
-  </tr>
-  <tr>
-    <td id="t2">two</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td id="t1">one</td>
+    </tr>
+    <tr>
+      <td id="t2">two</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -492,20 +445,16 @@ el.addEventListener(
 
 ```js
 // t2 の中身を変更するための関数
-function modifyText(new_text) {
+function modifyText(newText) {
   const t2 = document.getElementById("t2");
-  t2.firstChild.nodeValue = new_text;
+  t2.firstChild.nodeValue = newText;
 }
 
 // アロー関数で table にイベントリスナーを追加
 const el = document.getElementById("outside");
-el.addEventListener(
-  "click",
-  () => {
-    modifyText("four");
-  },
-  false,
-);
+el.addEventListener("click", () => {
+  modifyText("four");
+});
 ```
 
 #### 結果
@@ -572,7 +521,7 @@ el.addEventListener(
 .demo-logs {
   width: 530px;
   height: 16rem;
-  background-color: #ddd;
+  background-color: #dddddd;
   overflow-x: auto;
   padding: 1rem;
 }
@@ -629,14 +578,14 @@ function onceHandler(event) {
   log("outer、once");
 }
 function noneOnceHandler(event) {
-  log("outer、非 once、既定値\n");
+  log("outer、非 once、デフォルト値\n");
 }
 function captureHandler(event) {
   //event.stopImmediatePropagation();
   log("middle、capture");
 }
 function noneCaptureHandler(event) {
-  log("middle、非 capture、既定値");
+  log("middle、非 capture、デフォルト値");
 }
 function passiveHandler(event) {
   // パッシブイベントリスナーの呼び出しの中では preventDefault は実行できない
@@ -646,7 +595,7 @@ function passiveHandler(event) {
 function nonePassiveHandler(event) {
   event.preventDefault();
   //event.stopPropagation();
-  log("inner2、非 passive、既定値、新しいページを開かない");
+  log("inner2、非 passive、デフォルト値、新しいページを開かない");
 }
 ```
 
@@ -655,8 +604,6 @@ function nonePassiveHandler(event) {
 外側、中央、内側のコンテナーをそれぞれクリックして、オプションがどのように動作するかを確認してください。
 
 {{ EmbedLiveSample('options_の使い方の例', 600, 630) }}
-
-`options` オブジェクトで特定の値を使用する前に、ユーザーのブラウザーがその値に対応していることを確認するのが良いでしょう。これらは歴史的にすべてのブラウザーがサポートしてきたわけではない追加要素であるからです。詳細は[オプションの対応の安全な検出](#オプションの対応の安全な検出)を参照してください。
 
 ### 複数のオプションを持つイベントリスナー
 
@@ -667,11 +614,9 @@ function nonePassiveHandler(event) {
 
 #### HTML
 
-```html
+```html-nolint
 <button id="example-button">このボタンはクリックされていません。</button>
-<button id="reset-button">
-  このボタンをクリックすると、最初のボタンがリセットされます。
-</button>
+<button id="reset-button">このボタンをクリックすると、最初のボタンがリセットされます。</button>
 ```
 
 #### JavaScript
@@ -757,6 +702,8 @@ addListener();
 
 ```js
 const passive = document.querySelector("#passive");
+const container = document.querySelector("#container");
+
 passive.addEventListener("change", (event) => {
   container.removeEventListener("wheel", wheelHandler);
   container.addEventListener("wheel", wheelHandler, {
@@ -765,7 +712,6 @@ passive.addEventListener("change", (event) => {
   });
 });
 
-const container = document.querySelector("#container");
 container.addEventListener("wheel", wheelHandler, {
   passive: true,
   once: true,
@@ -816,5 +762,5 @@ function wheelHandler() {
 ## 関連情報
 
 - {{domxref("EventTarget.removeEventListener()")}}
-- [イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)
+- [イベントの作成と配信](/ja/docs/Web/API/Document_Object_Model/Events#イベントの作成と配信)
 - [イベントハンドラー内での `this` の使用方法のさらに詳細な解説](https://www.quirksmode.org/js/this.html)

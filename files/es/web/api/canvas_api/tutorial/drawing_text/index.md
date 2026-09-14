@@ -31,7 +31,7 @@ Mira algunos ejemplos [aquí](https://bugzilla.mozilla.org/attachment.cgi?id=273
 
 ### Cambiar el tipo de letra actual
 
-El atributo `mozTextStyle` contiene el estilo de texto actual. Usa la misma sintaxis que el especificado para las [tipografías CSS](/es/docs/Web/CSS/font).
+El atributo `mozTextStyle` contiene el estilo de texto actual. Usa la misma sintaxis que el especificado para las [tipografías CSS](/es/docs/Web/CSS/Reference/Properties/font).
 
 Ej:
 

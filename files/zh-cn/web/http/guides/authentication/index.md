@@ -3,8 +3,6 @@ title: HTTP 身份验证
 slug: Web/HTTP/Guides/Authentication
 ---
 
-{{HTTPSidebar}}
-
 HTTP 提供一个用于权限控制和认证的通用框架。本页介绍了通用的 HTTP 认证框架，并且展示了如何通过 HTTP 的“Basic”模式限制对你服务器的访问。
 
 ## 通用的 HTTP 认证框架

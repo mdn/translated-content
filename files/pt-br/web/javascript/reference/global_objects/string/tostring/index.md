@@ -39,5 +39,5 @@ console.log(x.toString()); // retorna 'Hello world'
 
 ## Veja também
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}
 - {{jsxref("String.prototype.valueOf()")}}

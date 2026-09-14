@@ -12,7 +12,7 @@ slug: Web/API/DOMTokenList
 - {{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}
   - : - целое число, которое представляет собой число объектов хранящееся в объекте
 - {{domxref("DOMTokenList.value")}}
-  - : Список значений {{domxref("DOMString")}}.
+  - : Список значений {{jsxref("String")}}.
 
 ## Методы
 

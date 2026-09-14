@@ -17,7 +17,6 @@ requestSubmit(submitter)
 ### 参数
 
 - `submitter` {{optional_inline}}
-
   - : 提交按钮，其属性描述了提交表单的方式。可以是 `type` 属性为 `submit` 的 {{HTMLElement("input")}} 或 {{HTMLElement("button")}} 元素。
 
     如果你省略了 `submitter` 参数，表单元素自身会作为 submitter 使用。
@@ -31,7 +30,7 @@ requestSubmit(submitter)
 - {{jsxref("TypeError")}}
   - : 如果指定的 `submitter` 不是一个提交按钮则抛出该错误。
 - `NotFoundError` {{domxref("DOMException")}}
-  - : 如果调用 `requestSubmit()` 时指定的 `submitter` 不是表单的成员则抛出该错误。submitter 必须是一个表单元素的后代或者必须具有引用表单的 [`form`](/zh-CN/docs/Web/HTML/Element/input#form) 属性。
+  - : 如果调用 `requestSubmit()` 时指定的 `submitter` 不是表单的成员则抛出该错误。submitter 必须是一个表单元素的后代或者必须具有引用表单的 [`form`](/zh-CN/docs/Web/HTML/Reference/Elements/input#form) 属性。
 
 ## 使用说明
 

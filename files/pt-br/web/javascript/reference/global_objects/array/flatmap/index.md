@@ -29,9 +29,7 @@ var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
 ### Parâmetros
 
 - `callback`
-
   - : Função que produz um elemento de uma nova Array, pegando três argumentos:
-
     - `currentValue`
       - : O valor atual sendo processo na array.
     - `index`{{optional_inline}}
@@ -108,7 +106,7 @@ arr1.reduce((acc, x) => acc.concat([x * 2]), []);
 
 ## Veja também
 
-- {{jsxref("Array.prototype.flatten()")}}
+- {{jsxref("Array.prototype.flat()", "Array.prototype.flatten()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Array.prototype.concat()")}}

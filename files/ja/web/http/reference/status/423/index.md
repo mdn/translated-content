@@ -1,12 +1,9 @@
 ---
 title: 423 Locked
 slug: Web/HTTP/Reference/Status/423
-original_slug: Web/HTTP/Status/423
 l10n:
-  sourceCommit: 783ffd9c1cf35421242e028a1b8743cf2b1918dd
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`423 Locked`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、対象のリソースがロックされている、すなわちアクセスできないことを示します。コンテンツは、 {{glossary("WebDAV")}} の XML 形式で情報を含むべきです。
 

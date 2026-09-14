@@ -3,8 +3,6 @@ title: management
 slug: Mozilla/Add-ons/WebExtensions/API/management
 ---
 
-{{AddonSidebar}}
-
 Obtenez les éléments sur les modules complémentaires installés.
 
 Avec l'API de `gestion` vous pouvez :
@@ -63,8 +61,6 @@ La plupart de ces opérations requièrent les [permissions d'APIs](/fr/docs/Mozi
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

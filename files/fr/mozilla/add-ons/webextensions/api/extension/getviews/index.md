@@ -3,8 +3,6 @@ title: extension.getViews()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getViews
 ---
 
-{{AddonSidebar}}
-
 Renvoie un tableau des objets [Window](/fr/docs/Web/API/Window) pour chacune des pages exécutées dans l'extension en cours. Cela inclut, par exemple :
 
 - la page d'arrière-plan, si une est définie
@@ -25,9 +23,7 @@ var windows = browser.extension.getViews(
 ### Paramètres
 
 - `fetchProperties`{{optional_inline}}
-
   - : `object`.
-
     - `type`{{optional_inline}}
       - : `string`. Un {{WebExtAPIRef('extension.ViewType')}} indiquant le type de vue à obtenir. Si omis, cette fonction renvoie toutes les vues.
     - `windowId`{{optional_inline}}
@@ -70,8 +66,6 @@ var windows = browser.extension.getViews({ type: "popup" });
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

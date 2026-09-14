@@ -1,57 +1,86 @@
 ---
-title: "HTMLMediaElement: ratechange"
+title: HTMLMediaElement：ratechange 事件
+short-title: ratechange
 slug: Web/API/HTMLMediaElement/ratechange_event
+l10n:
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
 {{APIRef("HTMLMediaElement")}}
 
-`ratechange` 事件將在播放速度改變時被觸發
+`ratechange` 事件將在播放速度改變時被觸發。
 
-## 基本資訊
+此事件不可取消且不會冒泡。
 
-- 規格
-  - : [HTML5 Media](https://html.spec.whatwg.org/multipage/media.html#event-media-ratechange)
-- 介面
-  - : 事件
-- 是否冒泡
-  - : 否
-- 是否可取消
-  - : 否
-- 目標
-  - : 元素
-- 預設行為
-  - : 無
+## 語法
 
-## 屬性
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名稱，或設定事件處理器屬性。
 
-| 屬性                            | 類型                       | 描述                            |
-| ------------------------------- | -------------------------- | ------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | 事件目標（DOM 樹中最頂層的目標) |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | 事件類型                        |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | 事件是否觸發冒泡                |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | 事件是否可取消                  |
+```js-nolint
+addEventListener("ratechange", (event) => { })
+
+onratechange = (event) => { }
+```
+
+## 事件類型
+
+通用的 {{domxref("Event")}}。
+
+## 範例
+
+這些範例為 HTMLMediaElement 的 `ratechange` 事件新增了一個事件監聽器，並在該事件處理器對事件觸發做出反應時顯示訊息。
+
+使用 `addEventListener()`：
+
+```js
+const video = document.querySelector("video");
+
+video.addEventListener("ratechange", (event) => {
+  console.log("播放速率已變更。");
+});
+```
+
+使用 `onratechange` 事件處理器屬性：
+
+```js
+const video = document.querySelector("video");
+
+video.onratechange = (event) => {
+  console.log("播放速率已變更。");
+};
+```
 
 ## 規範
 
 {{Specifications}}
 
+## 瀏覽器相容性
+
+{{Compat}}
+
 ## 相關事件
 
-- [`playing`](/zh-TW/docs/Web/API/HTMLMediaElement/playing_event)
-- [`waiting`](/zh-TW/docs/Web/API/HTMLMediaElement/waiting_event)
-- [`seeking`](/zh-TW/docs/Web/API/HTMLMediaElement/seeking_event)
-- [`seeked`](/zh-TW/docs/Web/API/HTMLMediaElement/seeked_event)
-- [`ended`](/zh-TW/docs/Web/API/HTMLMediaElement/ended_event)
-- [`loadedmetadata`](/zh-TW/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
-- [`loadeddata`](/zh-TW/docs/Web/API/HTMLMediaElement/loadeddata_event)
-- [`canplay`](/zh-TW/docs/Web/API/HTMLMediaElement/canplay_event)
-- [`canplaythrough`](/zh-TW/docs/Web/API/HTMLMediaElement/canplaythrough_event)
-- [`durationchange`](/zh-TW/docs/Web/API/HTMLMediaElement/durationchange_event)
-- [`timeupdate`](/zh-TW/docs/Web/API/HTMLMediaElement/timeupdate_event)
-- [`play`](/zh-TW/docs/Web/API/HTMLMediaElement/play_event)
-- [`pause`](/zh-TW/docs/Web/API/HTMLMediaElement/pause_event)
-- [`ratechange`](/zh-TW/docs/Web/API/HTMLMediaElement/ratechange_event)
-- [`volumechange`](/zh-TW/docs/Web/API/HTMLMediaElement/volumechange_event)
-- [`suspend`](/zh-TW/docs/Web/API/HTMLMediaElement/suspend_event)
-- [`emptied`](/zh-TW/docs/Web/API/HTMLMediaElement/emptied_event)
-- [`stalled`](/zh-TW/docs/Web/API/HTMLMediaElement/stalled_event)
+- HTMLMediaElement 的 {{domxref("HTMLMediaElement.playing_event", 'playing')}} 事件
+- HTMLMediaElement 的 {{domxref("HTMLMediaElement.waiting_event", 'waiting')}} 事件
+- HTMLMediaElement 的 {{domxref("HTMLMediaElement.seeking_event", 'seeking')}} 事件
+- HTMLMediaElement 的 {{domxref("HTMLMediaElement.seeked_event", 'seeked')}} 事件
+- HTMLMediaElement 的 {{domxref("HTMLMediaElement.ended_event", 'ended')}} 事件
+- HTMLMediaElement 的 {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} 事件
+- HTMLMediaElement 的 {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} 事件
+- HTMLMediaElement 的 {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} 事件
+- HTMLMediaElement 的 {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} 事件
+- HTMLMediaElement 的 {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} 事件
+- HTMLMediaElement 的 {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} 事件
+- HTMLMediaElement 的 {{domxref("HTMLMediaElement.play_event", 'play')}} 事件
+- HTMLMediaElement 的 {{domxref("HTMLMediaElement.pause_event", 'pause')}} 事件
+- HTMLMediaElement 的 {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}} 事件
+- HTMLMediaElement 的 {{domxref("HTMLMediaElement.suspend_event", 'suspend')}} 事件
+- HTMLMediaElement 的 {{domxref("HTMLMediaElement.emptied_event", 'emptied')}} 事件
+- HTMLMediaElement 的 {{domxref("HTMLMediaElement.stalled_event", 'stalled')}} 事件
+
+## 參見
+
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}

@@ -31,5 +31,5 @@ obj.disableRemotePlayback = true;
 
 ## 関連情報
 
-- [`<audio>` 要素の `disableremoteplayback` 属性](/ja/docs/Web/HTML/Element/audio#disableremoteplayback)
-- [`<video>` 要素の `disableremoteplayback` 属性](/ja/docs/Web/HTML/Element/video#disableremoteplayback)
+- [`<audio>` 要素の `disableremoteplayback` 属性](/ja/docs/Web/HTML/Reference/Elements/audio#disableremoteplayback)
+- [`<video>` 要素の `disableremoteplayback` 属性](/ja/docs/Web/HTML/Reference/Elements/video#disableremoteplayback)

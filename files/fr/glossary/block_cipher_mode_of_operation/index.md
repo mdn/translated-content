@@ -2,10 +2,8 @@
 title: Mode de fonctionnement de chiffrement par bloc
 slug: Glossary/Block_cipher_mode_of_operation
 l10n:
-  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 Un **mode de fonctionnement de chiffrement par bloc**, généralement appelé simplement «&nbsp;mode&nbsp;» dans le contexte, spécifie comment un chiffrement par bloc doit être utilisé pour chiffrer ou déchiffrer les messages qui sont plus longs que la taille du bloc.
 

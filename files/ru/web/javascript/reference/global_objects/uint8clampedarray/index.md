@@ -24,9 +24,9 @@ new Uint8ClampedArray(buffer [, byteOffset [, length]]);
   - : Возвращает размер элемента в байтах. Для Uint8ClampedArray оно равно 1.
 - Uint8ClampedArray.length
   - : Static length property whose value is 3. For the actual length (number of elements), see {{jsxref("TypedArray.prototype.length", "Uint8ClampedArray.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Uint8ClampedArray.name")}}
+- {{jsxref("Function.name", "Uint8ClampedArray.name")}}
   - : Returns the string value of the constructor name. In the case of the `Uint8ClampedArray` type: "Uint8ClampedArray".
-- {{jsxref("TypedArray.prototype", "Uint8ClampedArray.prototype")}}
+- {{jsxref("TypedArray", "Uint8ClampedArray.prototype")}}
   - : Prototype for the _TypedArray_ objects.
 
 ## Methods
@@ -38,7 +38,7 @@ new Uint8ClampedArray(buffer [, byteOffset [, length]]);
 
 ## `Uint8ClampedArray` prototype
 
-All `Uint8ClampedArray` objects inherit from {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+All `Uint8ClampedArray` objects inherit from {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Properties
 
@@ -105,7 +105,7 @@ All `Uint8ClampedArray` objects inherit from {{jsxref("TypedArray.prototype", "%
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Uint8ClampedArray.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Uint8ClampedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Uint8ClampedArray.prototype[@@iterator]()")}}
   - : Returns a new `Array Iterator` object that contains the values for each index in the array.
 
 ## Examples
@@ -144,7 +144,7 @@ var z = new Uint8ClampedArray(buffer, 1, 4);
 
 ## Compatibility notes
 
-Starting with ECMAScript 2015 (ES6), `Uint8ClampedArray` constructors require to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a `Uint8ClampedArray` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
+Starting with ECMAScript 2015 (ES6), `Uint8ClampedArray` constructors require to be constructed with a {{jsxref("new")}} operator. Calling a `Uint8ClampedArray` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
 
 ```js example-bad
 var dv = Uint8ClampedArray([1, 2, 3]);

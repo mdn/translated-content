@@ -28,7 +28,7 @@ l10n:
 
 - {{DOMxRef("CSSStyleDeclaration.cssFloat", "CSSStyleDeclaration.cssFloat")}}
   - : CSS の {{CSSxRef("float")}} プロパティの特殊な別名です。
-- {{DOMxRef("CSSStyleDeclaration.named_properties", '<code>CSSStyleDeclaration</code> の名前付きプロパティ', "", 1)}}
+- `CSSStyleDeclaration` の名前付きプロパティ
   - : 対応するすべての CSS プロパティを、ダッシュおよびキャメルケースにした属性です。
 
 ## メソッド
@@ -45,7 +45,7 @@ l10n:
 - {{DOMxRef("CSSStyleDeclaration.setProperty()")}}
   - : 宣言ブロック内の既存の CSS プロパティを変更するか、新しい CSS プロパティを生成するかします。
 - {{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()")}} {{deprecated_inline}}
-  - : **Firefox の getComputedStyle のみ対応** プロパティの値を {{DOMxRef("CSSPrimitiveValue")}} として、または[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)では `null` を返します。
+  - : **Firefox の getComputedStyle のみ対応** プロパティの値を {{DOMxRef("CSSPrimitiveValue")}} として、または[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)では `null` を返します。
 
 ## 例
 
@@ -53,7 +53,7 @@ l10n:
 const styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
-for (let i = styleObj.length; i--; ) {
+for (let i = styleObj.length; i--;) {
   const nameString = styleObj[i];
   styleObj.removeProperty(nameString);
 }

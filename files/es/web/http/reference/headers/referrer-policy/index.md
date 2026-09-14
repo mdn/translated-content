@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Referrer-Policy
 original_slug: Web/HTTP/Headers/Referrer-Policy
 ---
 
-{{HTTPSidebar}}
-
 La cabecera **`Referrer-Policy`** de HTTP determina qué datos de referente, de entre los que se envían con la cabecera {{HTTPHeader("Referer")}}, deben incluirse con las solicitudes realizadas.
 
 <table class="properties">
@@ -15,7 +13,7 @@ La cabecera **`Referrer-Policy`** de HTTP determina qué datos de referente, de 
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
   </tbody>
@@ -47,13 +45,12 @@ Referrer-Policy: unsafe-url
 - origin-when-cross-origin
   - : Se enviará un URL completo al realizarse una solicitud de origen equivalente, pero únicamente el origen para otros casos.
 - same-origin
-  - : Se enviará un referente para [orígenes de sitio equivalente](/es/docs/Web/Security/Same-origin_policy), pero las solicitudes de origen transversal no contendrán ningún dato de referente.
+  - : Se enviará un referente para [orígenes de sitio equivalente](/es/docs/Web/Security/Defenses/Same-origin_policy), pero las solicitudes de origen transversal no contendrán ningún dato de referente.
 - strict-origin
   - : Solo se enviará el origen del documento como referente a destinos que _a priori_ son igual de seguros (HTTPS → HTTPS), pero no lo recibirán destinos menos seguros (HTTPS → HTTP).
 - strict-origin-when-cross-origin
   - : Se enviará un URL completo al realizarse una solicitud de origen equivalente, se enviará únicamente el origen del documento a destinos igual de seguros _a priori_ (HTTPS → HTTPS) y no se enviará ninguna cabecera a destinos menos seguros (HTTPS → HTTP).
 - unsafe-url
-
   - : Se enviará un URL completo al realizarse una solicitud de origen equivalente o de origen transversal.
 
     > [!NOTE]
@@ -93,11 +90,10 @@ Referrer-Policy: unsafe-url
 
 - [Referente HTTP en Wikipedia](https://es.wikipedia.org/wiki/HTTP_referer)
 - Otras maneras de definir una directiva de referentes:
-
-  - Un elemento {{HTMLElement("meta")}} con un [nombre de `referrer`](/es/docs/Web/HTML/Element/meta#attr-name).
+  - Un elemento {{HTMLElement("meta")}} con un [nombre de `referrer`](/es/docs/Web/HTML/Reference/Elements/meta#attr-name).
   - Un atributo `referrerpolicy` en un elemento {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}} o {{HTMLElement("link")}}.
-  - La [relación de enlace](/es/docs/Web/HTML/Attributes/rel) `noreferrer` en un elemento a, area o link (`rel="noreferrer"`).
+  - La [relación de enlace](/es/docs/Web/HTML/Reference/Attributes/rel) `noreferrer` en un elemento a, area o link (`rel="noreferrer"`).
   - Al utilizar [Fetch](/es/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
 
-- [Directiva de origen equivalente](/es/docs/Web/Security/Same-origin_policy)
+- [Directiva de origen equivalente](/es/docs/Web/Security/Defenses/Same-origin_policy)
 - [«Un mayor control sobre sus referentes» en el blog de seguridad de Mozilla](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)

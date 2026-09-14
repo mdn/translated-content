@@ -5,7 +5,7 @@ slug: Web/API/HTMLAnchorElement/toString
 
 {{ApiRef("URL API")}}
 
-Метод **`HTMLHyperlinkElementUtils.toString()`** возвращает {{domxref("USVString")}}, содержащий URL целиком. Это версия {{domxref("HTMLHyperlinkElementUtils.href")}} только для чтения.
+Метод **`HTMLHyperlinkElementUtils.toString()`** возвращает {{jsxref("String")}}, содержащий URL целиком. Это версия {{domxref("HTMLHyperlinkElementUtils.href")}} только для чтения.
 
 ## Синтаксис
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 定义如何处理缩放更改。扩展可以将此值传递给 {{WebExtAPIRef("tabs.setZoomSettings()")}} 以控制浏览器如何处理标签页的缩放设置更改。默认值为“automatic”。
 
 ## 类型

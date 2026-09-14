@@ -24,7 +24,6 @@ Mira el artículo _[Using files from web applications](/es/docs/Web/API/File_API
 - {{domxref("FileReader.error")}} {{readonlyinline}}
   - : Un {{domxref("DOMError")}} que representa el error que ocurrió al momento de leer el archivo.
 - {{domxref("FileReader.readyState")}} {{readonlyinline}}
-
   - : Devuelve un entero que indica el estado de FileReader. Puede ser uno de los siguientes:
 
     | `EMPTY`   | `0` | No ha sido leido ningún dato aún.         |
@@ -46,7 +45,7 @@ Mira el artículo _[Using files from web applications](/es/docs/Web/API/File_API
 - {{domxref("FileReader.onloadstart")}}
   - : Un controlador para el evento [`loadstart`](/es/docs/Web/API/XMLHttpRequest/loadstart_event). Este evento se activa cada vez que comienza la lectura.
 - {{domxref("FileReader.onloadend")}}
-  - : Un controlador para el evento [`loadend`](/es/docs/Web/API/XMLHttpRequest/loadend_event). Este evento se activa cada vez que la operación de lecura se ha completado (ya sea con éxito o fallo).
+  - : Un controlador para el evento [`loadend`](/es/docs/Web/API/XMLHttpRequestEventTarget/loadend_event). Este evento se activa cada vez que la operación de lecura se ha completado (ya sea con éxito o fallo).
 - {{domxref("FileReader.onprogress")}}
   - : Un controlador para el evento [`progress`](/es/docs/Web/API/XMLHttpRequest/progress_event). Este evento se activa mientras se está leyendo el contenido del objeto {{domxref("Blob")}}.
 
@@ -58,7 +57,7 @@ Mira el artículo _[Using files from web applications](/es/docs/Web/API/File_API
 - {{domxref("FileReader.abort()")}}
   - : Interrumpe la operación de lectura. A su regreso `readyState` será `DONE`.
 - {{domxref("FileReader.readAsArrayBuffer()")}}
-  - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }} especificado, una vez terminada, el atributo `result` contiene un {{domxref("ArrayBuffer")}} representando los datos del fichero.
+  - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }} especificado, una vez terminada, el atributo `result` contiene un {{jsxref("ArrayBuffer")}} representando los datos del fichero.
 - {{domxref("FileReader.readAsBinaryString()")}}
   - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }}, una vez terminada, el atributo `result` contiene los datos binarios en bruto del archivo como una cadena.
 - {{domxref("FileReader.readAsDataURL()")}}

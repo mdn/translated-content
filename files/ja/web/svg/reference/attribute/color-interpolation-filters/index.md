@@ -1,12 +1,9 @@
 ---
 title: color-interpolation-filters
 slug: Web/SVG/Reference/Attribute/color-interpolation-filters
-original_slug: Web/SVG/Attribute/color-interpolation-filters
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`color-interpolation-filters`** 属性は、フィルター効果で行う画像操作で用いる色空間を指定します。
 
@@ -15,10 +12,10 @@ l10n:
 >
 > `color-interpolation-filters` のデフォルト値は、{{SVGAttr("color-interpolation")}} とは異なります。`color-interpolation-filters` のデフォルト値は `linearRGB` ですが、`color-interpolation` のデフォルト値は `sRGB` です。そのため、デフォルトでは、フィルター効果の操作は linearRGB 色空間で行われる一方、他のすべての色の補間は sRGB 色空間で行われます。
 >
-> この属性はフィルター関数には効果がなく、{{Glossary("sRGB")}} 色空間で処理を行います。
+> この属性はフィルター関数には効果がなく、{{Glossary("RGB", "sRGB")}} 色空間で処理を行います。
 
 > [!NOTE]
-> プレゼンテーション属性なので、`color-interpolation-filters` は CSS プロパティとして使用できます。
+> プレゼンテーション属性であるため、 `color-interpolation-filters` には対応する CSS プロパティ {{cssxref("color-interpolation-filters")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
 
 この属性は、以下の SVG 要素で使用できます。
 
@@ -77,5 +74,6 @@ l10n:
 
 ## 関連情報
 
+- SVG の {{SVGAttr("color-interpolation")}} 属性
+- CSS の {{cssxref('color-interpolation-filters')}} プロパティ
 - [sRGB の仕様書](https://webstore.iec.ch/publication/6169)
-- {{SVGAttr("color-interpolation")}}

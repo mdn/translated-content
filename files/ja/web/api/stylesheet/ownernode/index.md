@@ -9,7 +9,7 @@ l10n:
 
 **`ownerNode`** は {{domxref("StyleSheet")}} インターフェイスのプロパティで、このスタイルシートと文書内の関連付けを行うノードを返します。
 
-これは通常、 HTML の [`<link>`](/ja/docs/Web/HTML/Element/link) または [`<style>`](/ja/docs/Web/HTML/Element/style) 要素ですが、 `<?xml-stylesheet ?>` の場合は[処理命令ノード](/ja/docs/Web/API/ProcessingInstruction)を返すこともあります。
+これは通常、 HTML の [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) または [`<style>`](/ja/docs/Web/HTML/Reference/Elements/style) 要素ですが、 `<?xml-stylesheet ?>` の場合は[処理命令ノード](/ja/docs/Web/API/ProcessingInstruction)を返すこともあります。
 
 ## 値
 
@@ -33,7 +33,7 @@ l10n:
 
 ## メモ
 
-[`@import`](/ja/docs/Web/CSS/@import) などを使用して、他のスタイルシートをインクルードするスタイルシートでは、このプロパティの値は `null` になります。
+[`@import`](/ja/docs/Web/CSS/Reference/At-rules/@import) などを使用して、他のスタイルシートをインクルードするスタイルシートでは、このプロパティの値は `null` になります。
 
 ## 仕様書
 

@@ -15,7 +15,7 @@ var myLastEventId = ExtendableMessageEventInstance.lastEventId;
 
 ### Value
 
-Une {{domxref("DOMString")}}.
+Une {{jsxref("String")}}.
 
 ## Exemples
 

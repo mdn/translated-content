@@ -27,23 +27,17 @@ request(name, options, callback)
 ### 引数
 
 - `name`
-
   - : 要求するロックの識別子です。
 
 - `options` {{optional_inline}}
-
   - : 生成するロックの性質を記述するオブジェクトです。以下の値が有効です。
-
     - `mode` {{optional_inline}}
-
       - : `"exclusive"` または `"shared"` です。デフォルト値は `"exclusive"` です。
 
     - `ifAvailable` {{optional_inline}}
-
       - : `true` に設定した場合、ロックが既に確保されていない場合のみロックを獲得できます。ロックを獲得できない場合は、コールバックには `Lock` のインスタンスではなく `null` が渡されます。デフォルト値は `false` です。
 
     - `steal` {{optional_inline}}
-
       - : `true` に設定した場合、同じ名前の既に確保されているロックはすべて解放され、待機中のすべての要求よりも優先してロックを獲得します。デフォルト値は `false` です。
 
         > [!WARNING]

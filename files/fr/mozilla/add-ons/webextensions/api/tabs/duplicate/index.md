@@ -3,8 +3,6 @@ title: tabs.duplicate()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
 ---
 
-{{AddonSidebar}}
-
 Duplique un onglet dont l'identifiant est donné.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -23,9 +21,7 @@ let duplicating = browser.tabs.duplicate(
 - `tabId`
   - : `integer`. L'identifiant de l'onglet à dupliquer.
 - `duplicateProperties` Optionnel
-
   - : `object`. Un objet décrivant la façon dont l'onglet est dupliqué. Il contient les propriétés suivantes&nbsp;:
-
     - `index` Optionnel
       - : `integer`. La position du nouvel onglet dans la fenêtre. La valeur est restreinte à l'intervalle entre zéro et le nombre d'onglets dans la fenêtre.
     - `active` Optionnel
@@ -76,8 +72,6 @@ querying.then(duplicateFirstTab, onError);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

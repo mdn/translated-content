@@ -16,18 +16,14 @@ getTexParameter(target, pname)
 ### 参数
 
 - target
-
   - : 一个 {{domxref("GLenum")}} 接口类型的绑定的点 (target). 可能的值有：
-
     - `gl.TEXTURE_2D`: 一个二维纹理。
     - `gl.TEXTURE_CUBE_MAP`: 一个立方体纹理。
     - 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}接口，可能会出现以下值：
-
       - `gl.TEXTURE_3D`: 一个三维纹理。
       - `gl.TEXTURE_2D_ARRAY`: 一个二维纹理数组。
 
 - pname
-
   - : 一个{{domxref("Glenum")}}接口类型的要查询的信息。可能的值有：
 
     <table class="standard-table">

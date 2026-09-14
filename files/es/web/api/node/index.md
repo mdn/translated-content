@@ -36,7 +36,6 @@ _Además de las propiedades a continuación, `Node` hereda propiedades de su pad
 - {{DOMxRef("Node.nodeName")}} {{ReadOnlyInline}}
   - : Devuelve una cadena que contiene el nombre de `Node`. La estructura del nombre diferirá con el tipo de nodo. Por ejemplo, un {{DOMxRef("HTMLElement")}} contendrá el nombre de la etiqueta correspondiente, como `'audio'` para un {{DOMxRef("HTMLAudioElement")}}, un {{DOMxRef("Text")}} tendrá la cadena `'#text'`, o un nodo {{DOMxRef("Document")}} tendrá la cadena `'#document'`.
 - {{DOMxRef("Node.nodeType")}} {{ReadOnlyInline}}
-
   - : Devuelve un `unsigned short` que representa el tipo del nodo. Los valores posibles son:
 
     | Nombre                        | Valor |

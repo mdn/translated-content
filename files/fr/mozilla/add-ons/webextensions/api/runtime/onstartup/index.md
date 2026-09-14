@@ -3,8 +3,6 @@ title: runtime.onStartup
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onStartup
 ---
 
-{{AddonSidebar}}
-
 Lancé quand un profil ayant cette extension installée démarre une session. Cet événement n'est pas déclenché lorsqu'une navigation privée / profil privé est démarré, même si cette extension fonctionne en mode de navigation privée 'split'.
 
 ## Syntaxe
@@ -48,8 +46,6 @@ browser.runtime.onStartup.addListener(handleStartup);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
 ---
 
-{{APIRef("HTML DOM")}} {{deprecated_header}}{{non-standard_header}}
+{{APIRef("HTML DOM")}} {{non-standard_header}}
 
 Данный метод очищает действие, определённое методом {{DOMxRef("window.setImmediate")}}.
 
@@ -18,7 +18,6 @@ clearImmediate(immediateID)
 ### Параметры
 
 - `immediateID`
-
   - : ID, возвращаемый {{DOMxRef("window.setImmediate")}}.
 
 ### Возвращаемое значение

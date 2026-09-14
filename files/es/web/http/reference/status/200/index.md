@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/200
 original_slug: Web/HTTP/Status/200
 ---
 
-{{HTTPSidebar}}
-
 El código de respuesta de estado satisfactorio HTTP **`200 OK`** indica que la solicitud ha tenido éxito. Una respuesta 200 es almacenable de forma predeterminada.
 
 El significado de un éxito depende del método de solicitud HTTP:

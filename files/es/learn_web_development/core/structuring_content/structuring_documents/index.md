@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Structuring_documents
 original_slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}
 
 Además de definir partes individuales de tu página (como un párrafo o una imagen), {{Glossary("HTML")}} también dispone de elementos de bloque que se pueden utilizar para estructurar las distintas áreas de tu sito web (tal como el encabezado, el menú de navegación o la parte del contenido principal. En este artículo veras cómo planificar una estructura básica de página web y escribirás el HTML que representa esa estructura.
 
@@ -188,7 +188,7 @@ Tómate tu tiempo para revisar el código y comprenderlo — Los comentarios en 
 
 ## Elementos de diseño HTML en detalle
 
-Es bueno entender el significado global de todos los elementos definitorios de las secciones HTML en detalle; es algo en que trabajarás gradualmente a medida que comiences a tener más experiencia en el desarrollo web. En el enlace [referencia de elementos HTML](/es/docs/Web/HTML/Element) podemos entrar en un gran nivel de detalle. Por el momento, estas son las definiciones principales que deberíamos tratar de entender:
+Es bueno entender el significado global de todos los elementos definitorios de las secciones HTML en detalle; es algo en que trabajarás gradualmente a medida que comiences a tener más experiencia en el desarrollo web. En el enlace [referencia de elementos HTML](/es/docs/Web/HTML/Reference/Elements) podemos entrar en un gran nivel de detalle. Por el momento, estas son las definiciones principales que deberíamos tratar de entender:
 
 - {{HTMLElement('main')}} encierra el contenido particular a esta página. Utilizaremos `<main>` solamente una vez para cada página y lo situaremos directamente dentro del elemento {{HTMLElement('body')}}. Es mejor que no lo anidemos en otros elementos.
 - {{HTMLElement('article')}} encuadra un bloque de contenido que tiene sentido por sí mismo aparte del resto de la página (por ejemplo una entrada en un blog).
@@ -200,7 +200,7 @@ Es bueno entender el significado global de todos los elementos definitorios de l
 
 ### Envolturas no semánticas
 
-A veces hay situaciones en las que no encuentras un elemento semántico adecuado para agrupar ciertos elementos o englobar cierto contenido. Podrías querer agrupar ciertos elementos para referirte a ellos como una entidad que comparta cierto {{Glossary("CSS")}} o {{Glossary("JavaScript")}}. Para casos como esos, HTML dispone del elemento {{HTMLElement("div")}} y del elemento {{HTMLElement("span")}}. Preferentemente estos elementos se deberán utilizar con sus atributos ([`class`](/es/docs/Web/HTML/Global_attributes#class)), para conferirles algún tipo de etiquetado que permita determinarlos con facilidad.
+A veces hay situaciones en las que no encuentras un elemento semántico adecuado para agrupar ciertos elementos o englobar cierto contenido. Podrías querer agrupar ciertos elementos para referirte a ellos como una entidad que comparta cierto {{Glossary("CSS")}} o {{Glossary("JavaScript")}}. Para casos como esos, HTML dispone del elemento {{HTMLElement("div")}} y del elemento {{HTMLElement("span")}}. Preferentemente estos elementos se deberán utilizar con sus atributos ([`class`](/es/docs/Web/HTML/Reference/Global_attributes#class)), para conferirles algún tipo de etiquetado que permita determinarlos con facilidad.
 
 {{HTMLElement("span")}} es un elemento no-semántico que se utiliza en el interior de una línea. Se utiliza cuando no se nos ocurre el uso de ningún otro elemento semántico de texto en el que incluir el contenido, o si no se desea añadir ningún significado específico. Por ejemplo:
 
@@ -287,7 +287,7 @@ Quedará así:
 
 ## Planificación de una página web sencilla
 
-Una vez has planificado el contenido de una página web sencilla, el paso lógico siguiente es intentar trabajar en el contenido para todo el sitio web, las páginas que necesitas y la forma de disponer las conexiones entre ellas para producir la mejor experiencia de usuario a los visitantes. Esto se conoce con el nombre de ({{Glossary("Arquitectura de la información")}}). Una web grande y compleja necesitará mucha planificación, pero para una web sencilla compuesta por unas cuantas páginas, el proceso puede ser sencillo, ¡y divertido!.
+Una vez has planificado el contenido de una página web sencilla, el paso lógico siguiente es intentar trabajar en el contenido para todo el sitio web, las páginas que necesitas y la forma de disponer las conexiones entre ellas para producir la mejor experiencia de usuario a los visitantes. Esto se conoce con el nombre de ({{Glossary("Information_architecture", "Arquitectura de la información")}}). Una web grande y compleja necesitará mucha planificación, pero para una web sencilla compuesta por unas cuantas páginas, el proceso puede ser sencillo, ¡y divertido!.
 
 1. Ten en cuenta que habrá varios elementos comunes en muchas (si no en todas las) páginas, tal como el menú de navegación y el contenido del pie de página. Si la web está dedicada a un negocio, por ejemplo, sería una buena idea disponer de la información de contacto en el pie de página en todas las páginas. Anota lo que deseas tener en común en cada página.
 
@@ -301,7 +301,7 @@ Una vez has planificado el contenido de una página web sencilla, el paso lógic
 
    ![Una larga lista de todas las funciones que podrías incluir en tu sitio de viajes, desde buscar, hasta ofertas especiales e información específica del país](feature-list.png)
 
-4. A continuación, trata de ordenar todo este contenido por grupos, para hacerte una idea de las partes que podrían ir juntas en las diferentes páginas. Esto es muy similar a una técnica llamada {{Glossary("Clasificación de tarjetas")}}.
+4. A continuación, trata de ordenar todo este contenido por grupos, para hacerte una idea de las partes que podrían ir juntas en las diferentes páginas. Esto es muy similar a una técnica llamada {{Glossary("Card_sorting", "Clasificación de tarjetas")}}.
 
    ![Los elementos que deberían aparecer en un sitio de vacaciones ordenados en 5 categorías: Búsqueda, Especiales, Información específica del país, Resultados de búsqueda y Compra cosas](card-sorting.png)
 
@@ -326,6 +326,6 @@ En este punto, deberías tener una mejor idea sobre cómo estructurar una págin
 
 ## Ve también
 
-- [Uso de secciones y esquemas HTML](/es/docs/Web/HTML/Element/Heading_Elements): Guía avanzada de elementos semánticos HTML5 y el algoritmo de esquema HTML5.
+- [Uso de secciones y esquemas HTML](/es/docs/Web/HTML/Reference/Elements/Heading_Elements): Guía avanzada de elementos semánticos HTML5 y el algoritmo de esquema HTML5.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}

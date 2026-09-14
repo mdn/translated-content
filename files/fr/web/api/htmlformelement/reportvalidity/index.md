@@ -1,11 +1,14 @@
 ---
-title: HTMLFormElement.reportValidity()
+title: "HTMLFormElement : méthode reportValidity()"
+short-title: reportValidity()
 slug: Web/API/HTMLFormElement/reportValidity
+l10n:
+  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`HTMLFormElement.reportValidity()`** renvoie true si les contrôles enfants de l'élément répondent à leurs contraintes de validation. Lorsque la valeur `false` est renvoyée, , les événements [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) annulables sont déclenchés pour chaque enfant non valide et les problèmes de validation sont signalés à l'utilisateur. .
+La méthode **`reportValidity()`** de l'interface {{DOMxRef("HTMLFormElement")}} effectue les mêmes vérifications de validité que la méthode {{DOMxRef("HTMLFormElement.checkValidity", "checkValidity()")}}. De plus, pour chaque évènement {{DOMxRef("HTMLInputElement/invalid_event", "invalid")}} déclenché et non annulé, le navigateur affiche le problème à l'utilisateur·ice.
 
 ## Syntaxe
 
@@ -13,28 +16,20 @@ La méthode **`HTMLFormElement.reportValidity()`** renvoie true si les contrôle
 HTMLFormElement.reportValidity();
 ```
 
+### Paramètres
+
+Aucun.
+
 ### Valeur de retour
 
-{{domxref("Boolean")}}
+Retourne `true` si les valeurs des contrôles associés ne présentent aucun problème de validité&nbsp;; sinon, retourne `false`.
 
 ## Exemple
 
 ```js
-document.forms["myform"].addEventListener(
-  "invalid",
-  function () {
-    // Optional response here
-  },
-  false,
-);
-
-document.forms["myform"].addEventListener(
-  "submit",
-  function () {
-    document.forms["myform"].reportValidity();
-  },
-  false,
-);
+document.forms["my-form"].addEventListener("submit", () => {
+  document.forms["my-form"].reportValidity();
+});
 ```
 
 ## Spécifications
@@ -44,3 +39,10 @@ document.forms["myform"].addEventListener(
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La méthode {{DOMxRef("HTMLFormElement.checkValidity()")}}
+- L'élément HTML {{HTMLElement("form")}}
+- [Apprendre&nbsp;: Validation des formulaires côté client](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [Guide&nbsp;: Validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation)

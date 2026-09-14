@@ -16,9 +16,7 @@ void gl.depthFunc(func);
 ### 参数
 
 - `func`
-
   - : 是一个指定深度比较函数的 {{domxref("GLenum")}}，它设置像素将被绘制的条件。默认值是 `gl.LESS`。可能的值是：
-
     - `gl.NEVER`（永不通过）
     - `gl.LESS`（如果传入值小于深度缓冲值，则通过）
     - `gl.EQUAL`（如果传入值等于深度缓冲区值，则通过）

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **WebGL**（_Web 图形库_）是一个用于绘制交互式 2D/3D 图形的 {{Glossary("JavaScript")}} {{Glossary("API")}}。
 
 [Khronos Group](https://www.khronos.org/) 负责维护基于 {{Glossary("OpenGL")}} ES 2.0 的 WebGL。

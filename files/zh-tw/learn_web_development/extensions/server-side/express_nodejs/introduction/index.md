@@ -3,8 +3,6 @@ title: Express/Node introduction
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction
 ---
 
-{{LearnSidebar}}
-
 {{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 在這篇文章中回答了「什麼是 Node？」和「什麼是 Express」，同時概述是什麼讓 Express 框架如此特別。本文將概述主要特性、展示一些 Express 應用的主要建構模塊(雖然此時你還沒有能測試它的開發環境)

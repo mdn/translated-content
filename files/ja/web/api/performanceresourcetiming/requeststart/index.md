@@ -2,12 +2,12 @@
 title: PerformanceResourceTiming.requestStart
 slug: Web/API/PerformanceResourceTiming/requestStart
 l10n:
-  sourceCommit: b3477f90eb235d08fe196373466a725050f43862
+  sourceCommit: 5340aace9b48dc6f885fca3a90d03e7637cd0cb0
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-**`requestStart`** は読み取り専用プロパティで、ブラウザーがサーバー、キャッシュ、またはローカルリソースにリソースのリクエストを開始する直前の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。トランスポート接続が失敗してブラウザーがリクエストを終了すると、返される値は再試行要求の開始になります。
+**`requestStart`** は読み取り専用プロパティで、ブラウザーがサーバー、キャッシュ、またはローカルリソースにリソースのリクエストを開始する直前の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。トランスポート接続が失敗してブラウザーがリクエストを再試行した場合、返される値は再試行されたリクエストの開始時刻になります。
 
 `requestStart` には _end_ プロパティはありません。リクエスト時間を計測するには、 {{domxref("PerformanceResourceTiming.responseStart", "responseStart")}} - `requestStart` を計算してください（下記の例を参照してください）。
 
@@ -18,6 +18,11 @@ l10n:
 - ブラウザーがサーバーからリソースのリクエストを始める直前の時刻を表す {{domxref("DOMHighResTimeStamp")}} です。
 - リソースがキャッシュから即座に取得された場合は `0` です。
 - リソースがオリジン間リクエストで取得され、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーが使用されなかった場合は `0` となります。
+- リソースがキャンセルされたリクエストである場合は `0` です。
+
+{{domxref("PerformanceResourceTiming.firstInterimResponseStart", "firstInterimResponseStart")}} が 0 以外の値である場合、[対応しているブラウザー](#browser_compatibility)では、その値は `requestStart` と同じ値であることを示します。
+
+中間レスポンスがない場合、`requestStart` は `finalResponseHeadersStart` と同じ値になり、`firstInterimResponseStart` は 0 になります。
 
 ## 例
 

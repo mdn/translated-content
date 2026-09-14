@@ -1,56 +1,57 @@
 ---
 title: DataView.prototype.setUint8()
+short-title: setUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint8
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`setUint8()`** は {{jsxref("DataView")}} インスタンスのメソッドで、数値を受け取り、符号なし 8 ビット整数として、この `DataView` の指定されたバイトオフセットにあるバイトに格納します。
 
-**`setUint8()`** メソッドは、符号なし 8 ビット整数 (byte) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。
-
-{{InteractiveExample("JavaScript Demo: DataView.setUint8()")}}
+{{InteractiveExample("JavaScript デモ: DataView.setUint8()")}}
 
 ```js interactive-example
-// Create an ArrayBuffer with a size in bytes
+// ArrayBuffer をバイト単位のサイズで作成
 const buffer = new ArrayBuffer(16);
 
 const view = new DataView(buffer);
-view.setUint8(1, 255); // Max unsigned 8-bit integer
+view.setUint8(1, 255); // 符号なし 8 ビット整数の最大値
 
 console.log(view.getUint8(1));
-// Expected output: 255
+// 予想される結果: 255
 ```
 
 ## 構文
 
-```
-dataview.setUint8(byteOffset, value)
+```js-nolint
+setUint8(byteOffset, value)
 ```
 
 ### 引数
 
 - `byteOffset`
-  - : ビューの先頭からのバイト単位のオフセットで、データを格納する位置です。
+  - : データを格納するビューの先頭からのバイト単位のオフセットです。
 - `value`
-  - : 設定する値です。
+  - : 設定する値。値がどのようにバイト列にエンコードされるかについては、[値のエンコード方式と正規化](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#値のエンコード方式と正規化)を参照してください。
 
 ### 返値
 
-{{jsxref("undefined")}}。
+{{jsxref("undefined")}} です。
 
 ### 発生するエラー
 
 - {{jsxref("RangeError")}}
-  - : `byteOffset` がビューの末尾を超えて格納するように設定されている場合に発生します。
+  - : `byteOffset` がビューの末尾を越えて格納するように設定されたときに発生します。
 
 ## 例
 
-### setUint8 メソッドの使用
+### setUint8() の使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.setUint8(1, 3);
-dataview.getUint8(1); // 3
+const buffer = new ArrayBuffer(10);
+const dataview = new DataView(buffer);
+dataview.setUint8(0, 3);
+dataview.getUint8(0); // 3
 ```
 
 ## 仕様書
@@ -63,5 +64,7 @@ dataview.getUint8(1); // 3
 
 ## 関連情報
 
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}
+- {{jsxref("Uint8Array")}}

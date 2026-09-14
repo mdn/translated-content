@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLLabelElement.htmlFor`** 属性反映 [`for`](/zh-CN/docs/Web/HTML/Element/label#for) 内容属性的值。意味着此脚本可访问属性用于设置和读取内容属性 `for`（该属性是标签关联的控件元素的 ID）的值。
+**`HTMLLabelElement.htmlFor`** 属性反映 [`for`](/zh-CN/docs/Web/HTML/Reference/Elements/label#for) 内容属性的值。意味着此脚本可访问属性用于设置和读取内容属性 `for`（该属性是标签关联的控件元素的 ID）的值。
 
 ## 值
 

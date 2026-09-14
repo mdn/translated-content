@@ -25,7 +25,6 @@ objectStore.createIndex(nomIndex, nomCle, parametresIndexOptionnel);
 - nomCle
   - : Le nom de clé qu'utilise l'index. Il est possible d'ajouter un index sans nom de clé.
 - parametresIndexOptionnel {{optional_inline}}
-
   - : Un objet optionnel pouvant inclure une ou plusieurs des propriétés suivantes:
 
     <table class="standard-table">

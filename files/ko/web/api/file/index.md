@@ -36,7 +36,7 @@ slug: Web/API/File
 - {{domxref("File.prototype.size")}} {{readonlyinline}}
   - : `File`의 크기를 바이트 단위로 반환합니다.
 - {{domxref("File.prototype.type")}} {{readonlyinline}}
-  - : `File`의 [MIME 유형](/ko/docs/Web/HTTP/MIME_types)을 반환합니다.
+  - : `File`의 [MIME 유형](/ko/docs/Web/HTTP/Guides/MIME_types)을 반환합니다.
 
 ## 메서드
 

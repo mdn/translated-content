@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Ember_resources","Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Agora vamos apresentar o Vue, o nosso terceiro frameworks. Neste artigo, examinaremos um pouco do histórico do Vue, aprenderemos como instalá-lo e criar um novo projeto, estudaremos a estrutura de alto nível de todo o projeto e um componente individual, veremos como executar o projeto localmente e o deixaremos preparado para começar a construir o nosso exemplo.
 
@@ -15,9 +15,9 @@ Agora vamos apresentar o Vue, o nosso terceiro frameworks. Neste artigo, examina
       <td>
         <p>
           Conhecimento com as liguagens
-          <a href="/pt-BR/docs/Learn/HTML">HTML</a>,
-          <a href="/pt-BR/docs/Learn/CSS">CSS</a>, e
-          <a href="/pt-BR/docs/Learn/JavaScript">JavaScript</a>, conhecimento do
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d">HTML</a>,
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics">CSS</a>, e
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting_785964b4c0711553d2bf3130baef052c6d78a03b4ce249eeb9d1ce2be1e3c308">JavaScript</a>, conhecimento do
           <a
             href="/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/command line</a
@@ -56,7 +56,7 @@ Para uma boa comparação (mas potencialmente tendenciosa) entre o Vue e muitos 
 
 ## Installation
 
-To use Vue in an existing site, you can drop one of the following [`<script>`](/pt-BR/docs/Web/HTML/Element/script) elements onto a page. This allows you to start using Vue on existing sites, which is why Vue prides itself on being a progressive framework. This is a great option when migrating an existing project using a library like JQuery to Vue. With this method, you can use a lot of the core features of Vue, such as the attributes, custom components, and data-management.
+To use Vue in an existing site, you can drop one of the following [`<script>`](/pt-BR/docs/Web/HTML/Reference/Elements/script) elements onto a page. This allows you to start using Vue on existing sites, which is why Vue prides itself on being a progressive framework. This is a great option when migrating an existing project using a library like JQuery to Vue. With this method, you can use a lot of the core features of Vue, such as the attributes, custom components, and data-management.
 
 - Development Script (Unoptimized, but includes console warnings. Great for development
 
@@ -154,7 +154,6 @@ If everything went successfully, the CLI should have created a series of files a
 - `babel.config.js`: This is the config file for [Babel](https://babeljs.io/), which transforms modern JavaScript features being used in development code into older syntax that is more cross-browser compatible in production code. You can register additional babel plugins in this file.
 - `.browserslistrc`: This is a config for [Browserslist](https://github.com/browserslist/browserslist). You can use this to control which browsers your tooling optimizes for.
 - `public`: This directory contains static assets that are published, but not processed by [Webpack](https://webpack.js.org/) during build (with one exception; `index.html` gets some processing).
-
   - `favicon.ico`: This is the favicon for your app. Currently, it's the Vue logo.
   - `index.html`: This is the template for your app. Your Vue app is run from this HTML page, and you can use lodash template syntax to interpolate values into it.
 
@@ -162,7 +161,6 @@ If everything went successfully, the CLI should have created a series of files a
     > this is not the template for managing the layout of your application — this template is for managing static HTML that sits outside of your Vue app. Editing this file typically only occurs in advanced use cases.
 
 - `src`: This directory contains the core of your Vue app.
-
   - `main.js`: this is the entry point to your application. Currently, this file initializes your Vue application and signifies which HTML element in the `index.html` file your app should be attached to. This file is often where you register global components or additional Vue libraries.
   - `App.vue`: this is the top-level component in your Vue app. See below for more explanation of Vue components.
   - `components`: this directory is where you keep your components. Currently it just has one example component.
@@ -240,7 +238,7 @@ If you navigate to the "local" address in a new browser tab (this should be some
 
 ## Making a couple of changes
 
-Let's make our first change to the app — we'll delete the Vue logo. Open the `App.vue` file, and delete the [`<img>`](/pt-BR/docs/Web/HTML/Element/img) element from the template section:
+Let's make our first change to the app — we'll delete the Vue logo. Open the `App.vue` file, and delete the [`<img>`](/pt-BR/docs/Web/HTML/Reference/Elements/img) element from the template section:
 
 ```vue
 <img alt="Vue logo" src="./assets/logo.png" />
@@ -290,4 +288,4 @@ With a basic introduction out of the way, we'll now go further and build up our 
 
 In the next article we'll build our first custom component, and look at some important concepts such as passing props into it and saving its data state.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Ember_resources","Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}

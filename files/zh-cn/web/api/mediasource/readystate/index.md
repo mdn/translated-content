@@ -19,7 +19,7 @@ var myReadyState = mediaSource.readyState;
 
 ### 值
 
-一个 {{domxref("DOMString")}}。
+一个 {{jsxref("String")}}。
 
 ## 示例
 

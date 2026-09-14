@@ -55,5 +55,5 @@ Não é parte de nenhum padrão. Implementado no JavaScript 1.3.
 
 ## Ver também
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}
 - {{jsxref("Array.prototype.toString()")}}

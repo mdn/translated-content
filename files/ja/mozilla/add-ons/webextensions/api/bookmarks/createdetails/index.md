@@ -12,16 +12,16 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 
 ## 値の型
 
-以下のプロパティを含む {{jsxref("object")}} です。
+以下のプロパティを含む {{jsxref("Object")}} です。
 
 - `parentId`{{optional_inline}}
-  - : 新しいブックマーク / フォルダーの親フォルダーを指定する {{jsxref("string")}} です。デフォルト値はブラウザーによって異なり、Chrome の場合は「その他のブックマーク」、Firefox の場合は「未分類のブックマーク」です。
+  - : 新しいブックマーク / フォルダーの親フォルダーを指定する {{jsxref("String")}} です。デフォルト値はブラウザーによって異なり、Chrome の場合は「その他のブックマーク」、Firefox の場合は「未分類のブックマーク」です。
 - `index`{{optional_inline}}
-  - : 親要素の配下における、新しいブックマーク / フォルダーの位置を指定する {{jsxref("number")}} です。値が 0 の場合、リストの先頭に置かれます。
+  - : 親要素の配下における、新しいブックマーク / フォルダーの位置を指定する {{jsxref("Number")}} です。値が 0 の場合、リストの先頭に置かれます。
 - `title`{{optional_inline}}
-  - : `作成する`ブックマークのタイトルやフォルダーの名前を指定する {{jsxref("string")}} です。値を省略した場合、タイトルは `""` になります。
+  - : `作成する`ブックマークのタイトルやフォルダーの名前を指定する {{jsxref("String")}} です。値を省略した場合、タイトルは `""` になります。
 - `url`{{optional_inline}}
-  - : ブックマークの URL を指定する {{jsxref("string")}} です。値を省略するか `null` を指定した場合、ブックマークではなくフォルダーが作成されます。
+  - : ブックマークの URL を指定する {{jsxref("String")}} です。値を省略するか `null` を指定した場合、ブックマークではなくフォルダーが作成されます。
 
 ## ブラウザーの互換性
 
@@ -30,7 +30,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 {{WebExtExamples}}
 
 > [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

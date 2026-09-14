@@ -3,13 +3,11 @@ title: Tk
 slug: Web/HTTP/Reference/Headers/Tk
 ---
 
-{{HTTPSidebar}}
-
 **`Tk`** 响应首部显示了对相应请求的跟踪情况。
 
-| Header type                           | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| Header type                              | {{Glossary("Response header")}} |
+| ---------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden request header")}} | no                              |
 
 ## 语法
 

@@ -1,9 +1,9 @@
 ---
 title: Firefox 92 for developers
 slug: Mozilla/Firefox/Releases/92
+l10n:
+  sourceCommit: 1d3d0c10ebf5c8c55f75b9adce74d1e5001866c6
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 92 の変更点をまとめています。Firefox 92 は 2021 年 9 月 7 日にリリースされました。
 
@@ -27,10 +27,12 @@ slug: Mozilla/Firefox/Releases/92
 ### JavaScript
 
 - {{jsxref("Object.hasOwn()")}} を、プロパティがオブジェクトで定義されたものか継承されたものかを確認するために使用できるようになりました ([Firefox バグ 1721149](https://bugzil.la/1721149))。
+- 既定の 5MB のストレージ容量が、それぞれのオリジンで利用できるようになりました。前回はドメイングループ全体（{{Glossary("eTLD", "eTLD+1")}} ドメイン、例えば `*.wikipedia.org`）に適用されていたクォータです。([Firefox バグ 1064466](https://bugzil.la/1064466))。- {{domxref("Window.localStorage")}} のストレージクォータは、[IndexedDB API](/ja/docs/Web/API/IndexedDB_API) および {{domxref("Cache")}} と共有されるようになりました ([Firefox バグ 742822](https://bugzil.la/742822))。
 
 ### HTTP
 
-- {{Glossary("HTTPS RR")}} が使用可能であるときに、Firefox は自動的に HTTP リクエストを HTTPS にアップグレードします。また、HTTPS コネクションを確立するプロセスを最適化するために、_HTTPS RR_ で提供される情報を使用します。これは概念的に、{{HTTPHeader("Alt-Svc")}} ヘッダーを使用することに似ています ([Firefox バグ 1721132](https://bugzil.la/1721132))。
+- Firefox は {{Glossary("HTTPS RR")}} が使用可能であるときに、自動的に HTTP リクエストを HTTPS にアップグレードします。
+- また、HTTPS コネクションを確立するプロセスを最適化するために、_HTTPS RR_ で提供される情報を使用します。これは概念的に、{{HTTPHeader("Alt-Svc")}} ヘッダーを使用することに似ています ([Firefox バグ 1721132](https://bugzil.la/1721132))。
 
 ### API
 
@@ -38,12 +40,12 @@ slug: Mozilla/Firefox/Releases/92
 
 #### DOM
 
-- [Imperative Slotting API](/ja/docs/Web/API/HTMLSlotElement) ([Shadow Dom API](/ja/docs/Web/API/Web_components/Using_shadow_DOM) の一部) を実装しました ([Firefox バグ 1705141](https://bugzil.la/1705141))。
-- {{HTMLElement("input")}} および {{HTMLElement("textarea")}} でテキストの選択が変更されたことを、それぞれ {{domxref("HTMLInputElement.selectionchange_event", "HTMLInputElement")}} および {{domxref("HTMLTextAreaElement/selectionchange_event", "HTMLTextAreaElement")}} の `selectionchange` イベントをリッスンすることで監視できるようになりました ([Firefox バグ 1648944](https://bugzil.la/1648944))。
+- [Imperative Slotting API](/ja/docs/Web/API/HTMLSlotElement) ([Shadow DOM API](/ja/docs/Web/API/Web_components/Using_shadow_DOM) の一部) を実装しました ([Firefox バグ 1705141](https://bugzil.la/1705141))。
+- {{HTMLElement("input")}} および {{HTMLElement("textarea")}} でテキストの選択が変更されたことを、それぞれ {{domxref("HTMLInputElement.selectionchange_event", "HTMLInputElement")}} および {{domxref("HTMLTextAreaElement/selectionchange_event", "HTMLTextAreaElement")}} の `selectionchange` イベントを待ち受けすることで監視できるようになりました ([Firefox バグ 1648944](https://bugzil.la/1648944))。
 
 #### Media、WebRTC、Web Audio
 
-- スピーカーやヘッドホンのようなサウンド出力デバイスへのアクセスが、[speaker-selection](speaker-selection) 機能ポリシーで保護されるようになりました ([Firefox バグ 1577199](https://bugzil.la/1577199))。
+- スピーカーやヘッドホンのようなサウンド出力デバイスへのアクセスが、 [speaker-selection](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) 機能ポリシーで保護されるようになりました ([Firefox バグ 1577199](https://bugzil.la/1577199))。
 
 ### WebDriver conformance (Marionette)
 

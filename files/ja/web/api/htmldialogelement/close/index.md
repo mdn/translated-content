@@ -1,8 +1,9 @@
 ---
 title: "HTMLDialogElement: close() メソッド"
+short-title: close()
 slug: Web/API/HTMLDialogElement/close
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 7cd51a73ad94df604db79ccacbbe0513d0967650
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -29,67 +30,65 @@ close(returnValue)
 ## 例
 
 次の例は単純なボタンですが、クリックするとフォームを含む {{htmlelement("dialog")}} を `showModal()` メソッドで開きます。
-そこから _X_ ボタンをクリックしてダイアログを閉じたり（ {{domxref("HTMLDialogElement.close()")}} メソッドで）、submit ボタンでフォームを送信したりすることができます。
+そこから _X_ ボタンをクリックしてダイアログを閉じたり（ `HTMLDialogElement.close()` メソッドで）、submit ボタンでフォームを送信したりすることができます。
 
 ```html
-<!-- Simple pop-up dialog box, containing a form -->
+<!-- フォームを含む単純なポップアップダイアログボックス -->
 <dialog id="favDialog">
   <form method="dialog">
     <button id="close" aria-label="close" formnovalidate>X</button>
     <section>
       <p>
-        <label for="favAnimal">Favorite animal:</label>
+        <label for="favAnimal">好きな動物:</label>
         <select id="favAnimal" name="favAnimal">
           <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
+          <option>ブラインシュリンプ</option>
+          <option>レッサーパンダ</option>
+          <option>クモザル</option>
         </select>
       </p>
     </section>
     <menu>
-      <button type="reset">Reset</button>
-      <button type="submit">Confirm</button>
+      <button type="reset">リセット</button>
+      <button type="submit">確認</button>
     </menu>
   </form>
 </dialog>
 
 <menu>
-  <button id="updateDetails">Update details</button>
+  <button id="updateDetails">詳細を更新</button>
 </menu>
+```
 
-<script>
-  (() => {
-    const updateButton = document.getElementById("updateDetails");
-    const closeButton = document.getElementById("close");
-    const dialog = document.getElementById("favDialog");
-    dialog.returnValue = "favAnimal";
+```js
+const updateButton = document.getElementById("updateDetails");
+const closeButton = document.getElementById("close");
+const dialog = document.getElementById("favDialog");
+dialog.returnValue = "favAnimal";
 
-    function openCheck(dialog) {
-      if (dialog.open) {
-        console.log("Dialog open");
-      } else {
-        console.log("Dialog closed");
-      }
-    }
+function openCheck(dialog) {
+  if (dialog.open) {
+    console.log("Dialog open");
+  } else {
+    console.log("Dialog closed");
+  }
+}
 
-    // Update button opens a modal dialog
-    updateButton.addEventListener("click", () => {
-      dialog.showModal();
-      openCheck(dialog);
-    });
+// 更新ボタンでモーダルダイアログを開く
+updateButton.addEventListener("click", () => {
+  dialog.showModal();
+  openCheck(dialog);
+});
 
-    // Form close button closes the dialog box
-    closeButton.addEventListener("click", () => {
-      dialog.close("animalNotChosen");
-      openCheck(dialog);
-    });
-  })();
-</script>
+// フォームの閉じるボタンでダイアログボックスを閉じる
+closeButton.addEventListener("click", () => {
+  dialog.close("animalNotChosen");
+  openCheck(dialog);
+});
 ```
 
 \[X] ボタンが `type="submit"` であったなら、JavaScript を必要とせずにダイアログが閉じられたはずです。
-フォームを送信すると、[フォームのメソッドが `dialog`](/ja/docs/Web/HTML/Element/form#method) であれば、それが入った `<dialog>` を閉じるので、「閉じる」ボタンは必要ありません。
+フォームを送信すると、[フォームのメソッドが `dialog`](/ja/docs/Web/HTML/Reference/Elements/form#method) であれば、それが入った `<dialog>` を閉じるので、「閉じる」ボタンは必要ありません。
 
 ### 結果
 

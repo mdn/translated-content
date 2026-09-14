@@ -1,13 +1,20 @@
 ---
-title: Window.document
+title: "Window : propriété document"
+short-title: document
 slug: Web/API/Window/document
+l10n:
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-**`window.document`** renvoie une référence au [document](/fr/docs/Web/API/Document) contenu dans la fenêtre.
+La propriété **`document`** de l'interface {{DOMxRef("Window")}} retourne une référence au {{DOMxRef("Document", "document", "", 1)}} contenu dans la fenêtre.
 
-## Exemple
+## Valeur
+
+Un objet {{DOMxRef("Document")}}.
+
+## Exemples
 
 ```js
 console.log(window.document.title);

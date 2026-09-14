@@ -56,13 +56,13 @@ if (Number.parseInt === undefined) {
 
 ### Number.parseInt vs parseInt
 
-Este método tem a mesma funcionalidade que o método global {{jsxref("parseInt", "parseInt()")}}:
+Este método tem a mesma funcionalidade que o método global {{jsxref("parseInt()")}}:
 
 ```js
 Number.parseInt === parseInt; // true
 ```
 
-e é parte do ECMAScript 2015 (sua proposta é a modularização dos globais). Por favor veja {{jsxref("parseInt", "parseInt()")}} para mais detalhes e exemplos.
+e é parte do ECMAScript 2015 (sua proposta é a modularização dos globais). Por favor veja {{jsxref("parseInt()")}} para mais detalhes e exemplos.
 
 ## Especificações
 
@@ -75,4 +75,4 @@ e é parte do ECMAScript 2015 (sua proposta é a modularização dos globais). P
 ## Veja também
 
 - O objeto {{jsxref("Number")}} a qual ela pertence.
-- O método global {{jsxref("parseInt", "parseInt()")}}.
+- O método global {{jsxref("parseInt()")}}.

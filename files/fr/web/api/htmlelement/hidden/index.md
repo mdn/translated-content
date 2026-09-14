@@ -1,104 +1,64 @@
 ---
-title: HTMLElement.hidden
+title: "HTMLElement : propriété hidden"
+short-title: hidden
 slug: Web/API/HTMLElement/hidden
+l10n:
+  sourceCommit: 6ef7bc04d63cf8b512bdbea149a6cb875cc063e3
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-La propriété **`hidden`** de l'{{domxref("HTMLElement")}} est un {{jsxref("Boolean")}} qui vaut `true` si l'élément est caché, sinon sa valeur est `false`. Cela est très différent de l'utilisation de la propriété CSS {{cssxref("display")}} pour contrôler la visibilité d'un élément.
+La propriété **`hidden`** de l'interface {{DOMxRef("HTMLElement")}} reflète la valeur de l'attribut [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden) de l'élément.
 
-La propriété `hidden` s'applique à tous les modes de présentation et ne doit pas être utilisée pour cacher du contenu qui est destiné à être directement accessible par l'utilisateur.
+## Valeur
 
-Des cas d'utilisation appropriés de `hidden` comprennent :
+Cet attribut peut avoir l'une des trois valeurs suivantes&nbsp;:
 
-- du contenu qui n'est pas encore pertinent mais qui peut être nécessaire ultérieurement ;
-- du contenu qui était nécessaire antérieurement mais qui ne l'est plus ;
-- du contenu qui est réutilisé par d'autres parties de la page à la manière d'un modèle ;
-- la création d'un canevas hors écran comme tampon de dessin.
+- `true`
+  - : L'élément est caché.
+- `false`
+  - : L'élément n'est pas caché. Il s'agit de la valeur par défaut de l'attribut.
+- `"until-found"`
+  - : L'élément est _caché jusqu'à ce qu'il soit trouvé_, c'est-à-dire qu'il est caché mais sera révélé s'il est trouvé via la recherche dans la page ou atteint par navigation de fragment.
 
-Des cas inappropriés d'utilisation comprennent :
+Pour plus de détails sur l'utilisation de cet attribut, voir la page de l'attribut HTML [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden) auquel cette propriété fait référence.
 
-- le fait de cacher des panneaux dans une boîte de dialogue à onglets ;
-- le fait de cacher du contenu dans une présentation tout en ayant l'intention qu'il soit visible dans d'autres.
+## Exemples
 
-> [!NOTE]
-> Des éléments qui ne sont pas `hidden` ne doivent pas faire référence à des éléments qui le sont.
-
-## Syntaxe
-
-```js
-estCaché = HTMLElement.hidden;
-
-HTMLElement.hidden = true | false;
-```
-
-### Valeur
-
-Un Boolean qui est `true` si l'élément est caché à la vue ; sinon, la valeur est `false`.
-
-## Exemple
-
-Voici un exemple où un bloc caché est utilisé pour contenir un message de remerciement qui est affiché après qu'un utilisateur a accepté une demande inhabituelle.
-
-### JavaScript
-
-```js
-document.getElementById("boutonOk").addEventListener(
-  "click",
-  function () {
-    document.getElementById("bienvenue").hidden = true;
-    document.getElementById("impressionnant").hidden = false;
-  },
-  false,
-);
-```
-
-Ce code installe une gestionnaire pour le bouton "OK" du panneau de bienvenue, gestionnaire qui cache le panneau de bienvenue et rend le panneau de suite — ayant le curieux nom d'"impressionnant" — visible à sa place.
+Voici un exemple où un bloc caché est utilisé pour contenir un message de remerciement qui est affiché après qu'un·e utilisateur·ice a accepté une demande inhabituelle.
 
 ### HTML
 
-Le code HTML pour les deux boîtes est montré ci-dessous.
-
-#### Le panneau bienvenue
+Le code HTML contient deux panneaux&nbsp;: un panneau de bienvenue, qui demande aux utilisateur·ice·s d'accepter d'être impressionnant·e·s, et un panneau de suite, qui est initialement caché.
 
 ```html
 <div id="bienvenue" class="panneau">
-  <h1>Bienvenue à Machin.com !</h1>
-  <p>En cliquant sur "OK", vous acceptez d'être impressionnant chaque jour !</p>
+  <h1>Bienvenue sur mon site&nbsp;!</h1>
+  <p>
+    En cliquant sur «&nbsp;OK&nbsp;», vous acceptez d'être impressionnant·e
+    aujourd'hui&nbsp;!
+  </p>
   <button class="bouton" id="boutonOk">OK</button>
 </div>
-```
 
-Ce code HTML crée un panneau (dans un bloc {{HTMLElement("div")}}) qui accueille les utilisateurs sur un site et leur dit ce qu'ils acceptent en cliquant sur le bouton OK.
-
-#### Le panneau de suite
-
-Une fois que l'utilisateur a cliqué sur le bouton "OK" dans le panneau d'accueil, le code JavaScript échange les deux panneaux en changeant leurs valeurs respectives pour `hidden`. Le panneau de suite ressemble à ce qui suit en HTML:
-
-```html
 <div id="impressionnant" class="panneau" hidden>
-  <h1>Merci !</h1>
-  <p>
-    Merci <strong>vraiment</strong> beaucoup d'avoir accepté d'être
-    impressionnant aujourd'hui ! Maintenant, sortez et faites des choses
-    impressionnantes d'une façon impressionnante pour rendre le monde plus
-    impressionnant !
-  </p>
+  <h1>Merci&nbsp;!</h1>
+  <p>Merci d'avoir accepté d'être impressionnant·e aujourd'hui&nbsp;!</p>
 </div>
 ```
 
 ### CSS
 
-Le contenu est mis en forme en utilisant le CSS ci-dessous.
+Le contenu est mis en forme avec le CSS ci-dessous.
 
 ```css
 .panneau {
   font:
     16px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
-  border: 1px solid #22d;
+  border: 1px solid #2222dd;
   padding: 12px;
   width: 500px;
   text-align: center;
@@ -107,8 +67,8 @@ Le contenu est mis en forme en utilisant le CSS ci-dessous.
 .bouton {
   font:
     22px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 5px 36px;
 }
@@ -119,9 +79,20 @@ h1 {
 }
 ```
 
+### JavaScript
+
+Le JavaScript ajoute un gestionnaire d'évènement au bouton «&nbsp;OK&nbsp;», qui cache le panneau «&nbsp;bienvenue&nbsp;» et affiche le panneau «&nbsp;impressionnant&nbsp;»&nbsp;:
+
+```js
+document.getElementById("boutonOk").addEventListener("click", () => {
+  document.getElementById("bienvenue").hidden = true;
+  document.getElementById("impressionnant").hidden = false;
+});
+```
+
 ### Résultat
 
-{{ EmbedLiveSample('Exemple', 560, 200) }}
+{{EmbedLiveSample('Exemples', 560, 200)}}
 
 ## Spécifications
 
@@ -133,5 +104,5 @@ h1 {
 
 ## Voir aussi
 
-- {{domxref("Element.hidden")}}
-- {{cssxref("display")}}
+- L'attribut HTML universel [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden)
+- La propriété CSS {{CSSxRef("display")}}

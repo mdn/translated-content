@@ -2,10 +2,8 @@
 title: Math.atanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
 l10n:
-  sourceCommit: e8320dfbed49d37589d0fe759ef6506885f340f7
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.atanh()`** 靜態方法回傳一個數字的反雙曲正切值，也就是說，
 

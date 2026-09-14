@@ -1,12 +1,9 @@
 ---
 title: 428 Precondition Required
 slug: Web/HTTP/Reference/Status/428
-original_slug: Web/HTTP/Status/428
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`428 Precondition Required`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがリクエストを[条件付き](/ja/docs/Web/HTTP/Guides/Conditional_requests)にする必要があることを示します。
 

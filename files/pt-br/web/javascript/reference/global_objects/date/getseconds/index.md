@@ -21,9 +21,9 @@ Um número inteiro, entre 0 e 59, representando os segundos de uma data específ
 
 ### Usando o `getSeconds()`
 
-The second statement below assigns the value 30 to the variable `seconds`, based on the value of the {{jsxref("Global_Objects/Date", "Date")}} object `Xmas95`.
+The second statement below assigns the value 30 to the variable `seconds`, based on the value of the {{jsxref("Date")}} object `Xmas95`.
 
-No exemplo a seguir, a segunda linha atribui o valor 30 à variável `seconds`, baseado no valor do objeto {{jsxref("Global_Objects/Date", "Date")}} `Xmas95`.
+No exemplo a seguir, a segunda linha atribui o valor 30 à variável `seconds`, baseado no valor do objeto {{jsxref("Date")}} `Xmas95`.
 
 ```js
 var Xmas95 = new Date("December 25, 1995 23:15:30");

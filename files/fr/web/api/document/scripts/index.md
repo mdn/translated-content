@@ -1,29 +1,28 @@
 ---
-title: Document.scripts
+title: "Document : propriété scripts"
+short-title: scripts
 slug: Web/API/Document/scripts
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef}}
+{{APIRef("DOM")}}
 
-Retourne une liste des scripts (éléments {{HTMLElement("script")}}) présents dans le document. L'objet retourné est une liste du type {{domxref("HTMLCollection")}}.
+La propriété **`scripts`** de l'interface {{DOMxRef("Document")}} retourne une liste des éléments {{HTMLElement("script")}} dans le document. L'objet retourné est un {{DOMxRef("HTMLCollection")}}.
 
-## Syntaxe
+## Valeur
 
-```js
-var scriptList = document.scripts;
-```
+Un objet {{DOMxRef("HTMLCollection")}}. Vous pouvez l'utiliser comme un tableau pour accéder à tous les éléments de la liste.
 
-La liste `scriptList` est un objet {{domxref("HTMLCollection")}} qu'on peut utiliser comme un tableau pour accéder aux éléments qu'elle contient.
-
-## Exemple
+## Exemples
 
 Cet exemple détecte la présence d'éléments {{HTMLElement("script")}} dans le document.
 
 ```js
-var scripts = document.scripts;
+let scripts = document.scripts;
 
 if (scripts.length) {
-  alert("This page has scripts!");
+  alert("Cette page contient des scripts !");
 }
 ```
 

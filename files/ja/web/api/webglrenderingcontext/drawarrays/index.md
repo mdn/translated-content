@@ -16,9 +16,7 @@ void gl.drawArrays(mode, first, count);
 ### 引数
 
 - `mode`
-
   - : 描画するプリミティブの種類を指定する {{domxref("GLenum")}}。以下の値を取ることができます。
-
     - `gl.POINTS`: 単一の点を描画します。
     - `gl.LINE_STRIP`: 次の線へと直線を描画します。
     - `gl.LINE_LOOP`: 次の線へと直線を描画し、最後の頂点は最初のものに接続します。
@@ -48,15 +46,15 @@ void gl.drawArrays(mode, first, count);
 gl.drawArrays(gl.POINTS, 0, 8);
 ```
 
-## 仕様策定状況
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("WebGLRenderingContext.drawElements()")}}
 - {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}}

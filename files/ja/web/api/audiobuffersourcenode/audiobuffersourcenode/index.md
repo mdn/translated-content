@@ -21,9 +21,7 @@ new AudioBufferSourceNode(context, options)
 - `context`
   - : {{domxref("AudioContext")}} への参照。
 - `options` {{optional_inline}}
-
   - : 以下のオプションです。
-
     - `buffer`
       - : 再生される {{domxref("AudioBuffer")}} のインスタンス。
     - `detune`

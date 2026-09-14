@@ -3,8 +3,6 @@ title: Firefox 81 for developers
 slug: Mozilla/Firefox/Releases/81
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 81 の変更点をまとめています。Firefox 81 は 2020 年 9 月 22 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -18,11 +16,11 @@ slug: Mozilla/Firefox/Releases/81
 
 ### HTML
 
-- サンドボックス化された [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) 要素で、自動ダウンロードをブロックするようになりました ([Firefox バグ 1558394](https://bugzil.la/1558394))。
+- サンドボックス化された [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) 要素で、自動ダウンロードをブロックするようになりました ([Firefox バグ 1558394](https://bugzil.la/1558394))。
 
 #### 廃止
 
-- 非標準の `mozallowfullscreen` 属性を、[`<iframe>`](/ja/docs/Web/HTML/Element/iframe) から削除しました。代わりに `allow="fullscreen"` を検討してください ([Firefox バグ 1657599](https://bugzil.la/1657599))。
+- 非標準の `mozallowfullscreen` 属性を、[`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) から削除しました。代わりに `allow="fullscreen"` を検討してください ([Firefox バグ 1657599](https://bugzil.la/1657599))。
 
 ### CSS
 
@@ -31,7 +29,7 @@ slug: Mozilla/Firefox/Releases/81
 
 #### 廃止
 
-- 非標準の {{CSSxRef("::-moz-focus-outer")}} [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) を削除しました ([Firefox バグ 1655859](https://bugzil.la/1655859))。
+- 非標準の {{CSSxRef("::-moz-focus-outer")}} [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements) を削除しました ([Firefox バグ 1655859](https://bugzil.la/1655859))。
 
 ### JavaScript
 

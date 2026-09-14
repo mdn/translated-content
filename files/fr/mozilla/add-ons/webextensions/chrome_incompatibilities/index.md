@@ -3,8 +3,6 @@ title: Incompatibilités avec Chrome
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
 
-{{AddonSidebar}}
-
 Les extensions construites à l'aide des API WebExtension sont conçues afin d'être compatibles avec les extensions Chrome et Opera. Les extensions écrites dans ces navigateurs devraient fonctionner, autant que possible, avec très peu de changement dans Firefox.
 
 Toutefois, il existe certaines différences significatives entre Chrome, Firefox et Edge et notamment :

@@ -9,7 +9,8 @@ Escreve uma mensagem de erro para o console se a afirmação é falsa. Se a firm
 
 {{AvailableInWorkers}}
 
-> **Nota:** _O método `console.assert()` é implementado de forma diferente em Node.js._
+> [!NOTE]
+> _O método `console.assert()` é implementado de forma diferente em Node.js._
 > Especificamente, em navegadores, chamando o método console.assert() com uma afirmação falsa fará com que a mensagem a ser impressa para o console não interrompa a execução do código subsequente. Em Node.js, no entanto, uma afirmação falsa causará um _AssertionError._
 
 ## Sintaxe

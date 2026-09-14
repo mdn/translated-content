@@ -5,7 +5,8 @@ slug: Web/Media/Guides/Audio_and_video_manipulation
 
 Веб-технологии примечательны тем, что они позволяют использовать различные инструменты в совокупности. Например, можно проводить манипуляции над имеющимися в браузере аудио и видео потоками с помощью {{htmlelement("canvas")}}, [WebGL](/ru/docs/Web/API/WebGL_API) или [Web Audio API](/ru/docs/Web/API/Web_Audio_API): напрямую изменять аудио и видео, т.е. добавлять эффекты к аудио (реверберацию, компрессор), или к видео (фильтры ч/б, сепия и т.д.). В этой статье рассказывается о том, как это сделать.
 
-> **Примечание:** **Далее** ещё в процессе перевода.
+> [!NOTE]
+> **Далее** ещё в процессе перевода.
 
 ## Обработка видео
 
@@ -164,8 +165,7 @@ myVideo.playbackRate = 2;
 </div>
 <textarea id="code" class="playable-code">
 var myVideo = document.getElementById('my-video');
-myVideo.playbackRate = 2;</textarea
->
+myVideo.playbackRate = 2;</textarea>
 ```
 
 ```js hidden
@@ -259,8 +259,7 @@ filter.gain.value = 25;
 <textarea id="code" class="playable-code">
 filter.type = "lowshelf";
 filter.frequency.value = 1000;
-filter.gain.value = 25;</textarea
->
+filter.gain.value = 25;</textarea>
 ```
 
 ```js hidden

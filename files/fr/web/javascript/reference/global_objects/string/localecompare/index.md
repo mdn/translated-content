@@ -3,8 +3,6 @@ title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ---
 
-{{JSRef}}
-
 La méthode **`localeCompare()`** renvoie un nombre indiquant si la chaîne de caractères courante se situe avant, après ou est la même que la chaîne passée en paramètre, selon l'ordre lexicographique de la locale.
 
 {{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
@@ -32,11 +30,9 @@ localeCompare(chaineAComparer, locales, options);
 ### Paramètres
 
 - `chaineAComparer`
-
   - : La chaîne avec laquelle on souhaite comparer la chaîne de caractères courante.
 
 - `locales` et `options`
-
   - : Ces arguments permettent d'adapter le comportement de la fonction pour que les applications puissent indiquer la locale dont les conventions doivent être utilisées. Pour les implémentations qui ignorent les arguments `locales` et `options`, la locale et le format de la chaîne qui est renvoyée dépendent entièrement de l'implémentation.
 
     Voir [la page du constructeur `Intl.Collator()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) pour plus de détails sur ces paramètres et leur utilisation.

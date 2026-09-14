@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-**`integrity`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、このリクエストの[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)の値を保持します。
+**`integrity`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、このリクエストの[サブリソース完全性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)の値を保持します。
 
 ## 値
 
@@ -42,7 +42,7 @@ console.log(myRequest.integrity); // "sha256-abc123"
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
 - [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)

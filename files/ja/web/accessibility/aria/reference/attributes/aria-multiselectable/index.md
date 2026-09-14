@@ -46,7 +46,7 @@ l10n:
 
 このリストボックスは複数選択をサポートしているため、`listbox` ロールを持つ要素に `aria-multiselectable="true"` を設定しています。選択された全てのオプションは `aria-selected` が `true` に設定されています。選択されていないが選択可能な全てのオプションは `aria-selected` が false に設定されています。無効になっているか選択できないオプションを含めていた場合は、`aria-selected` 属性を完全に省略していたでしょう。この属性を含めると、値がないか明示的に `false` に設定されていても、支援技術のユーザーに項目が選択可能であることを示します。
 
-ARIA の使用に関する第一のルールは、「要素を再利用して ARIA のロールや状態、プロパティを**追加して**アクセシブルにする代わりに、必要なセマンティクスと動作がすでに組み込まれているネイティブ機能を使用できる場合は、そうする」というものです。[`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex)、ARIA、および JavaScript を使用してテキストを選択可能なオプションに変換することを必要とする順序なしリストを作成する代わりに、ネイティブのマルチセレクトを使用することができます。{{htmlelement('select')}} 要素にはブール値の [`multiple`](/ja/docs/Web/HTML/Element/select#multiple) 属性があります。これが含まれている場合、ユーザーは複数のオプションを選択できます。含まれていない場合、選択できるオプションは 1 つだけです。
+ARIA の使用に関する第一のルールは、「要素を再利用して ARIA のロールや状態、プロパティを**追加して**アクセシブルにする代わりに、必要なセマンティクスと動作がすでに組み込まれているネイティブ機能を使用できる場合は、そうする」というものです。[`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex)、ARIA、および JavaScript を使用してテキストを選択可能なオプションに変換することを必要とする順序なしリストを作成する代わりに、ネイティブのマルチセレクトを使用することができます。{{htmlelement('select')}} 要素にはブール値の [`multiple`](/ja/docs/Web/HTML/Reference/Elements/select#multiple) 属性があります。これが含まれている場合、ユーザーは複数のオプションを選択できます。含まれていない場合、選択できるオプションは 1 つだけです。
 
 ```html
 <label for="flagcolors"> Choose the colors for your flag. </label>
@@ -122,7 +122,7 @@ ARIA の使用に関する第一のルールは、「要素を再利用して AR
 </fieldset>
 ```
 
-`aria-selected="true"` の代わりに、[`checked`](/ja/docs/Web/HTML/Element/input/checkbox#checked) 属性を含めてください。残りはブラウザーが行います。
+`aria-selected="true"` の代わりに、[`checked`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox#checked) 属性を含めてください。残りはブラウザーが行います。
 
 ## 値
 
@@ -160,5 +160,5 @@ ARIA の使用に関する第一のルールは、「要素を再利用して AR
 - HTML {{HTMLElement('select')}} 要素
 - HTML {{HTMLElement('option')}} 要素
 - HTML {{HTMLElement('input')}} 要素
-- [multiple](/ja/docs/Web/HTML/Attributes/multiple) 属性
+- [multiple](/ja/docs/Web/HTML/Reference/Attributes/multiple) 属性
 - [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)

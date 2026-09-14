@@ -3,8 +3,6 @@ title: Location
 slug: Web/HTTP/Reference/Headers/Location
 ---
 
-{{HTTPSidebar}}
-
 **`Location`** 首部指定的是需要将页面重新定向至的地址。一般在响应码为 3xx 的响应中才会有意义。
 
 发送新请求，获取 Location 指向的新页面所采用的方法与初始请求使用的方法以及重定向的类型相关：
@@ -18,9 +16,9 @@ slug: Web/HTTP/Reference/Headers/Location
 
 [`Location`](/zh-CN/docs/Web/HTTP/Reference/Headers/Location) 与 `Content-Location`是不同的，前者（[`Location`](/zh-CN/docs/Web/HTTP/Reference/Headers/Location) ）指定的是一个重定向请求的目的地址（或者新创建的文件的 URL），而后者（ `Content-Location`）指向的是经过内容协商后的资源的直接地址，不需要进行进一步的内容协商。Location 对应的是响应，而 Content-Location 对应的是要返回的实体。
 
-| Header type                           | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| Header type                              | {{Glossary("Response header")}} |
+| ---------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden request header")}} | no                              |
 
 ## 语法
 

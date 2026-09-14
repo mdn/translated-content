@@ -21,9 +21,7 @@ removeEntry(name, options)
 - `name`
   - : 一个字符串，表示你想要移除的条目的 {{domxref('FileSystemHandle.name')}}。
 - `options` {{optional_inline}}
-
   - : 一个包含以下选项的可选对象：
-
     - `recursive` {{optional_inline}}
       - : 布尔值，默认为 `false`。当设为 `true` 时，条目将会被递归移除。
 
@@ -39,8 +37,6 @@ removeEntry(name, options)
   - : 如果句柄在 `readwrite` 模式下的 {{domxref('PermissionStatus.state')}} 不为 `'granted'`，抛出此异常。
 - `InvalidModificationError` {{domxref("DOMException")}}
   - : 如果 `recursive` 被设为 `false`，而对应的条目又有子条目时，抛出此异常。
-- `NotFoundError` {{domxref("DOMException")}}
-  - : 如果没有找到指定名称的条目，抛出此异常。
 - `NotFoundError` {{domxref("DOMException")}}
   - : 如果未找到当前条目或者未找到或匹配特定名称的条目，抛出该异常。
 

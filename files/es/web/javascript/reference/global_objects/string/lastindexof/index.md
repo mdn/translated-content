@@ -18,7 +18,6 @@ cadena.lastIndexOf(valorBusqueda[, indiceDesde])
 ### Parámetros
 
 - `valorBusqueda`
-
   - : Una cadena que representa el valor que se desea buscar.
 
 - `indiceDesde`

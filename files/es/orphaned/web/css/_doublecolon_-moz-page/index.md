@@ -4,11 +4,11 @@ slug: orphaned/Web/CSS/::-moz-page
 original_slug: Web/CSS/::-moz-page
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
 ## Resumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS `::-moz-page` se aplica a una página individual que va a ser impresa o que está en previsualización para impresión.
+El [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) CSS `::-moz-page` se aplica a una página individual que va a ser impresa o que está en previsualización para impresión.
 
 ## Especificaciones
 

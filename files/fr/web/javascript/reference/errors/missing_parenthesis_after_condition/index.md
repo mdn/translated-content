@@ -3,8 +3,6 @@ title: "SyntaxError: missing ) after condition"
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_condition
 ---
 
-{{jsSidebar("Errors")}}
-
 ## Message
 
 ```
@@ -68,4 +66,4 @@ if (done === true) {
 
 - [`if...else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Les opérateurs de comparaisons](/fr/docs/Web/JavaScript/Reference/Operators)
-- [Choisir quel code exécuter : les structures conditionnelles](/fr/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Choisir quel code exécuter : les structures conditionnelles](/fr/docs/Learn_web_development/Core/Scripting/Conditionals)

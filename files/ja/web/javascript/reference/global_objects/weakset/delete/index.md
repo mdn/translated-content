@@ -1,51 +1,52 @@
 ---
 title: WeakSet.prototype.delete()
+short-title: delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
+l10n:
+  sourceCommit: 7b63b90d24ad8945977bb9dc2735d75f72829bc1
 ---
 
-{{JSRef}}
+**`delete()`** は {{jsxref("WeakSet")}} インターフェイスのメソッドで、指定された値をこの集合から、存在すれば、取り除きます。
 
-**`delete()`** メソッドは、`WeakSet` オブジェクトから指定された要素を取り除きます。
-
-{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.delete()")}}
+{{InteractiveExample("JavaScript デモ: WeakSet.Prototype.delete()")}}
 
 ```js interactive-example
-const weakset1 = new WeakSet();
-const object1 = {};
+const weakset = new WeakSet();
+const object = {};
 
-weakset1.add(object1);
+weakset.add(object);
 
-console.log(weakset1.has(object1));
-// Expected output: true
+console.log(weakset.has(object));
+// 予想される結果: true
 
-weakset1.delete(object1);
+weakset.delete(object);
 
-console.log(weakset1.has(object1));
-// Expected output: false
+console.log(weakset.has(object));
+// 予想される結果: false
 ```
 
 ## 構文
 
-```
-ws.delete(value);
+```js-nolint
+weakSetInstance.delete(value)
 ```
 
 ### 引数
 
 - `value`
-  - : 必須。 `WeakSet` オブジェクトから取り除くオブジェクトです。
+  - : この`WeakSet` オブジェクトから取り除く値。オブジェクトの比較は、値ではなく[参照](/ja/docs/Glossary/Object_reference)によって行われます。
 
 ### 返値
 
-`WeakSet` オブジェクトの中の要素が正常に削除された場合は `true` を返します。 `value` が `WeakSet` の中で見つからなかったり、 `value` がオブジェクトではなかった場合は `false` を返します。
+`WeakSet` オブジェクト内の値が正常に取り除かれた場合、`true` を返します。`WeakSet` 内にその値が見つからない場合、`false` を返します。`value` がオブジェクトまたは [未登録シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー内の共有シンボル)でない場合は、常に `false` を返します。
 
 ## 例
 
 ### delete() メソッドの使用
 
 ```js
-var ws = new WeakSet();
-var obj = {};
+const ws = new WeakSet();
+const obj = {};
 
 ws.add(window);
 
@@ -66,4 +67,5 @@ ws.has(window); // false を返します。 window はもう WeakSet の中に�
 ## 関連情報
 
 - {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.clear()")}}
+- {{jsxref("WeakSet.prototype.add()")}}
+- {{jsxref("WeakSet.prototype.has()")}}

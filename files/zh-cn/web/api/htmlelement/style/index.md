@@ -5,7 +5,7 @@ slug: Web/API/HTMLElement/style
 
 {{APIRef("CSSOM")}}
 
-只读属性 **`style`** 以 {{domxref("CSSStyleDeclaration")}} 实时对象（Live Object）的形式返回元素的*内联*样式，该对象包含该元素的所有样式属性列表，只为元素的内联 [`style`](/zh-CN/docs/Web/HTML/Global_attributes/style) 属性中定义的属性分配值。
+只读属性 **`style`** 以 {{domxref("CSSStyleDeclaration")}} 实时对象（Live Object）的形式返回元素的*内联*样式，该对象包含该元素的所有样式属性列表，只为元素的内联 [`style`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/style) 属性中定义的属性分配值。
 
 简写属性会展开。如果设置了 `style="border-top: 1px solid black"`，会设置完整属性（{{cssxref("border-top-color")}}、{{cssxref("border-top-style")}} 和 {{cssxref("border-top-width")}}）。
 

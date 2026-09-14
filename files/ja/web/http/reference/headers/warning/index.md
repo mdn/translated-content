@@ -4,9 +4,8 @@ slug: Web/HTTP/Reference/Headers/Warning
 original_slug: Web/HTTP/Headers/Warning
 ---
 
-{{HTTPSidebar}}
-
-> **メモ:** `Warning` ヘッダーはまもなく非推奨になる予定です。詳しくは [Warning (https://github.com/httpwg/http-core/issues/139)](https://github.com/httpwg/http-core/issues/139) や [Warning: header & stale-while-revalidate (https://github.com/whatwg/fetch/issues/913)](https://github.com/whatwg/fetch/issues/913) をご覧ください。
+> [!NOTE]
+> `Warning` ヘッダーはまもなく非推奨になる予定です。詳しくは [Warning (https://github.com/httpwg/http-core/issues/139)](https://github.com/httpwg/http-core/issues/139) や [Warning: header & stale-while-revalidate (https://github.com/whatwg/fetch/issues/913)](https://github.com/whatwg/fetch/issues/913) をご覧ください。
 
 **`Warning`** は HTTP の一般ヘッダーで、可能性のある問題についてメッセージのステータスによる情報を含みます。一つのレスポンスに複数の `Warning` ヘッダーが含まれる可能性があります。
 
@@ -22,7 +21,7 @@ original_slug: Web/HTTP/Headers/Warning
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>いいえ</td>
     </tr>
@@ -38,9 +37,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 ## ディレクティブ
 
 - \<warn-code>
-
   - : 3 桁の警告番号です。最初の桁は、検証後にレスポンスを格納する際に `Warning` を削除する必要があるかどうかを示します。
-
     - `1xx` の警告コードは、新鮮さやレスポンスの検証ステータスを表し、キャッシュされる際に削除されます。
     - `2xx` の警告コードは、検証によって修正されない表現のいくつかの側面を説明しており、レスポンス全体が送信されない限り、検証後もキャッシュによって削除されないことを表します。
 
@@ -55,15 +52,15 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 
 [HTTP Warn Codes registry at iana.org](https://www.iana.org/assignments/http-warn-codes/http-warn-codes.xhtml) では、警告コードの名前空間を定義しています。
 
-| コード | テキスト                         | 説明                                                                                               |
-| ------ | -------------------------------- | -------------------------------------------------------------------------------------------------- |
-| 110    | Response is Stale                | キャッシュによって提供されたレスポンスが古くなっている (有効期限が切れている)。                    |
-| 111    | Revalidation Failed              | サーバーへ到達できなかったため、レスポンスの検証をしようとして失敗した。                           |
-| 112    | Disconnected Operation           | キャッシュがネットワークの他の部分から切断された。                                                 |
-| 113    | Heuristic Expiration             | キャッシュが 24 時間より長い保持時間を選択しており、かつレスポンスの時間が 24 時間よりも長い場合。 |
-| 199    | Miscellaneous Warning            | 任意で特定されていない警告                                                                         |
-| 214    | Transformation Applied           | コンテンツのエンコーディング、メディア種別など、表現方法の変換を行った場合にプロキシが追加します。 |
-| 299    | Miscellaneous Persistent Warning | 199 と同様だが、永続的な警告を含む場合                                                             |
+| コード | テキスト                         | 説明                                                                                                 |
+| ------ | -------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| 110    | Response is Stale                | キャッシュによって提供されたレスポンスが古くなっている (有効期限が切れている)。                      |
+| 111    | Revalidation Failed              | サーバーへ到達できなかったため、レスポンスの検証をしようとして失敗した。                             |
+| 112    | Disconnected Operation           | キャッシュがネットワークの他の部分から切断された。                                                   |
+| 113    | Heuristic Expiration             | キャッシュが 24 時間より長い保持時間を選択しており、かつレスポンスの時間が 24 時間よりも長い場合。   |
+| 199    | Miscellaneous Warning            | 任意で特定されていない警告                                                                           |
+| 214    | Transformation Applied           | コンテンツのエンコーディング、メディア種別など、表現方法の変換を行った場合にプロキシーが追加します。 |
+| 299    | Miscellaneous Persistent Warning | 199 と同様だが、永続的な警告を含む場合                                                               |
 
 ## 例
 

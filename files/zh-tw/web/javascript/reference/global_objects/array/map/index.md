@@ -3,8 +3,6 @@ title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
 
-{{JSRef}}
-
 **`map()`** 方法會建立一個新的陣列，其內容為原陣列的每一個元素經由回呼函式運算後所回傳的結果之集合。
 
 {{InteractiveExample("JavaScript Demo: Array.map()")}}
@@ -30,11 +28,9 @@ let new_array = arr.map(function callback( currentValue[, index[, array]]) {
 ### 參數
 
 - `callback`
-
   - : 呼叫 `arr` 所有元素的回呼函式。新數值會在每次執行 `callback` 時加到 `new_array`。
 
     `callback` 函式可傳入以下三個參數：
-
     - `currentValue`
       - : 原陣列目前所迭代處理中的元素。
     - `index`{{optional_inline}}

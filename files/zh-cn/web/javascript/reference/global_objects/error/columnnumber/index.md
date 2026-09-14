@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
-{{JSRef}} {{Non-standard_Header}}
+{{Non-standard_Header}}
 
 {{jsxref("Error")}} 实例的 **`columnNumber`** 数据属性包含引发此错误的文件行中的列号。
 

@@ -3,8 +3,6 @@ title: devtools.panels.create()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/create
 ---
 
-{{AddonSidebar}}
-
 Ajoute un nouveau panneau aux devtools.
 
 Cette fonction prend : un titre, une URL vers un fichier d'icône et une URL vers un fichier HTML. Il crée un nouveau panneau dans les devtools, dont le contenu est spécifié par le fichier HTML. Il renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui résout un objet [`ExtensionPanel`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel) représentant le nouveau panneau.
@@ -66,8 +64,6 @@ browser.devtools.panels
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

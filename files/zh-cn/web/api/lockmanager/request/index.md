@@ -27,23 +27,17 @@ request(name, options, callback)
 ### 参数
 
 - `name`
-
   - : 你想要请求的锁的标识符。
 
 - `options` {{optional_inline}}
-
   - : 一个描述你要创建的锁的特征的对象。有效的值为：
-
     - `mode` {{optional_inline}}
-
       - : `"exclusive"` 或 `"shared"` 之一。默认值是 `"exclusive"`。
 
     - `ifAvailable` {{optional_inline}}
-
       - : 如果为 `true`，则只有在尚未持有锁定请求时才会授予该锁定请求。如果无法授予，则将传入 `null` 而非 `Lock` 实例来调用回调。默认值为 `false`。
 
     - `steal` {{optional_inline}}
-
       - : 如果为 `true`，则任何持有的同名锁将被释放，并且请求将被授予，抢占任何排队中的锁请求。默认值为 `false`。
 
         > [!WARNING]

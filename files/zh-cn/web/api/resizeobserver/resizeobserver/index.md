@@ -16,9 +16,7 @@ new ResizeObserver(callback)
 ### 参数
 
 - `callback`
-
   - : 每当观测的元素调整大小时，调用该函数。该函数接收两个参数：
-
     - `entries`
       - : 一个 {{domxref('ResizeObserverEntry')}} 对象数组，可以用于获取每个元素改变后的新尺寸。
     - `observer`

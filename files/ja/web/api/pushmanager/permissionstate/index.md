@@ -24,9 +24,7 @@ permissionState(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : オプションの設定パラメーターを含むオブジェクト。以下のプロパティが利用可能です。
-
     - `userVisibleOnly`
       - : 論理値で、返されたプッシュサブスクリプションは、その効果がユーザーに見えるようにされたメッセージに のみ使用することを示します。
     - `applicationServerKey`

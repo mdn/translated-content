@@ -20,9 +20,9 @@ url = new URL(url, [base])
 ### Paramètres
 
 - _url_
-  - : Un {{domxref("USVString")}} représentant une URL absolue ou relative. Si l'URL est une URL relative, la base est obligatoire et sera utilisée comme URL de base. Si url est une URL absolue, une base donnée sera ignorée.
+  - : Un {{jsxref("String")}} représentant une URL absolue ou relative. Si l'URL est une URL relative, la base est obligatoire et sera utilisée comme URL de base. Si url est une URL absolue, une base donnée sera ignorée.
 - _base_ {{optional_inline}}
-  - : Un {{domxref("USVString")}} représentant l'URL de base à utiliser dans le cas où l'URL est une URL relative. Si non spécifié, il est par défaut à `''`.
+  - : Un {{jsxref("String")}} représentant l'URL de base à utiliser dans le cas où l'URL est une URL relative. Si non spécifié, il est par défaut à `''`.
 
 > [!NOTE]
 > Vous pouvez toujours utiliser un objet {{domxref ("URL")}} existant pour la base, qui se stringifie en attribut {{domxref ("DOMString.href", "href")}} de l'objet.

@@ -1,0 +1,366 @@
+---
+title: "確認テスト: 配列"
+short-title: "テスト: 配列"
+slug: Learn_web_development/Core/Scripting/Test_your_skills/Arrays
+l10n:
+  sourceCommit: b36d59a0df933597c7d3b55e363f7a59e30d3ba3
+---
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
+
+この確認テストの目的は、[配列](/ja/docs/Learn_web_development/Core/Scripting/Arrays)の記事を理解しているかどうかを評価することです。
+
+> [!NOTE]
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
+
+<!--
+## 対話型チャレンジ
+
+まず最初に、[学習パートナー](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)である [Scrimba](https://scrimba.com/home) が作成した、マージンの一括指定を使った楽しくインタラクティブな課題をご紹介します。
+
+埋め込みのスクリームを見て、指示に従ってコードを編集し、タイムライン上の課題（小さな幽霊のアイコン）を完了してください。完了したら、スクリームの再生を再開して、教師の解答が自分の解答と一致するかどうかを調べることができます。
+
+<mdn-scrim-inline url="https://scrimba.com/learn-javascript-c0v/~05e" scrimtitle="Render images from an array" survey="true"></scrim-inline>
+-->
+
+> [!NOTE]
+> この課題は、このコースではまだ明示的に扱っていない JavaScript の機能に頼っているため、やや難しい目標です。最善を尽くして、わからないことはオンラインで情報を探してください。
+
+## 配列 1
+
+この課題では、配列の基本的な練習をします。
+
+1. 3 つのアイテムの配列を作成し、それを `myArray` という変数に格納します。アイテムは、お好きなものなら何でもかまいません。好きな食べ物やバンド名などはどうでしょうか。
+2. 次に、ブラケット記法と代入を使用して、配列の最初の 2 つのアイテムを変更します。
+3. 最後に、配列の先頭に新しいアイテムを追加します。
+
+<!-- Code shared across examples -->
+
+```html hidden live-sample___arrays-1 live-sample___arrays-2 live-sample___arrays-3 live-sample___arrays-4 live-sample___arrays-1-finish live-sample___arrays-2-finish live-sample___arrays-3-finish live-sample___arrays-4-finish
+<section></section>
+```
+
+```css hidden live-sample___arrays-1 live-sample___arrays-2 live-sample___arrays-3 live-sample___arrays-4 live-sample___arrays-1-finish live-sample___arrays-2-finish live-sample___arrays-3-finish live-sample___arrays-4-finish
+* {
+  box-sizing: border-box;
+}
+
+p {
+  color: purple;
+  margin: 0.5em 0;
+}
+```
+
+<!-- Example-specific code -->
+
+この課題の出発点は次のようなものです（まだ何も見えません）。
+
+{{ EmbedLiveSample("arrays-1", "100%", 60) }}
+
+この出発点の基盤となるコードは次の通りです。
+
+```js live-sample___arrays-1
+// ここにコードを追加
+
+// 以下のコードは編集しないでください。
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = `Array: ${myArray}`;
+section.appendChild(para1);
+```
+
+更新後の出力は次のようになります。
+
+{{ EmbedLiveSample("arrays-1-finish", "100%", 60) }}
+
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
+
+最終的な JavaScript は次のようになります。
+
+```js
+const myArray = ["cats", "dogs", "chickens"];
+
+myArray[0] = "horses";
+myArray[1] = "pigs";
+
+myArray.unshift("crocodiles");
+
+// 以下のコードは編集しないでください。
+// ...
+```
+
+```js hidden live-sample___arrays-1-finish
+const myArray = ["cats", "dogs", "chickens"];
+
+myArray[0] = "horses";
+myArray[1] = "pigs";
+
+myArray.unshift("crocodiles");
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = `Array: ${myArray}`;
+section.appendChild(para1);
+```
+
+</details>
+
+## 配列 2
+
+さて、別の課題に移りましょう。ここでは、取り組むべき文字列が与えられています。
+
+この課題を完成させるには、次のようにします。
+
+1. 文字列を配列に変換してください。その過程で、 `+` という文字を取り除きます。結果を `myArray` という変数に格納しましょう
+2. 配列の要素数を、 `arrayLength` という変数に格納しましょう。
+3. 配列の末尾の要素を、 `lastItem` という変数に格納しましょう。
+
+この課題の出発点は次のようなものです（まだ何も見えません）。
+
+{{ EmbedLiveSample("arrays-2", "100%", 60) }}
+
+この出発点の基盤となるコードは次の通りです。
+
+```js live-sample___arrays-2
+const myString = "Ryu+Ken+Chun-Li+Cammy+Guile+Sakura+Sagat+Juri";
+
+// ここにコードを追加
+
+// 以下のコードは編集しないでください。
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = `Array: ${myArray}`;
+const para2 = document.createElement("p");
+para2.textContent = `この配列の長さは ${arrayLength} です。`;
+const para3 = document.createElement("p");
+para3.textContent = `この配列の最後のアイテムは "${lastItem}" です。`;
+section.appendChild(para1);
+section.appendChild(para2);
+section.appendChild(para3);
+```
+
+更新後の出力は次のようになります。
+
+{{ EmbedLiveSample("arrays-2-finish", "100%", 100) }}
+
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
+
+最終的な JavaScript は次のようになります。
+
+```js
+const myString = "Ryu+Ken+Chun-Li+Cammy+Guile+Sakura+Sagat+Juri";
+
+let myArray = myString.split("+");
+
+let arrayLength = myArray.length;
+
+let lastItem = myArray[arrayLength - 1];
+
+// 以下のコードは編集しないでください。
+// ...
+```
+
+```js hidden live-sample___arrays-2-finish
+const myString = "Ryu+Ken+Chun-Li+Cammy+Guile+Sakura+Sagat+Juri";
+let myArray = myString.split("+");
+let arrayLength = myArray.length;
+let lastItem = myArray[arrayLength - 1];
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = `Array: ${myArray}`;
+const para2 = document.createElement("p");
+para2.textContent = `この配列の長さは ${arrayLength} です。`;
+const para3 = document.createElement("p");
+para3.textContent = `この配列の最後のアイテムは "${lastItem}" です。`;
+section.appendChild(para1);
+section.appendChild(para2);
+section.appendChild(para3);
+```
+
+</details>
+
+## 配列 3
+
+このタスクでは、用意した配列を出発点として、やや逆行する作業を行います。具体的には、
+
+1. 配列の末尾の要素を削除しましょう。
+2. 配列の末尾に新たに 2 つの名前を追加しましょう。
+3. 配列の各要素を調べて、要素のインデックス番号を丸括弧で囲み、名前の後ろに追記しましょう。例: `Ryu (0)`。 なお、このやり方は配列の記事では教えていませんので、自分で調べる必要があるでしょう。
+4. 最後に、配列の各要素を `"-"` で区切って 1 つの文字列に結合し、 `myString` という変数に格納しましょう。
+
+この課題の出発点は次のようなものです（まだ何も見えません）。
+
+{{ EmbedLiveSample("arrays-3", "100%", 60) }}
+
+この出発点の基盤となるコードは次の通りです。
+
+```js live-sample___arrays-3
+const myArray = [
+  "Ryu",
+  "Ken",
+  "Chun-Li",
+  "Cammy",
+  "Guile",
+  "Sakura",
+  "Sagat",
+  "Juri",
+];
+
+// ここにコードを追加
+
+// 以下のコードは編集しないでください。
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = myString;
+section.appendChild(para1);
+```
+
+更新後の出力は次のようになります。
+
+{{ EmbedLiveSample("arrays-3-finish", "100%", 60) }}
+
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
+
+最終的な JavaScript は次のようになります。
+
+```js
+const myArray = [
+  "Ryu",
+  "Ken",
+  "Chun-Li",
+  "Cammy",
+  "Guile",
+  "Sakura",
+  "Sagat",
+  "Juri",
+];
+
+myArray.pop();
+
+myArray.push("Zangief");
+myArray.push("Ibuki");
+
+myArray.forEach((element, index) => {
+  const newElement = `${element} (${index})`;
+  myArray[index] = newElement;
+});
+
+const myString = myArray.join(" - ");
+
+// 以下のコードは編集しないでください。
+// ...
+```
+
+```js hidden live-sample___arrays-3-finish
+const myArray = [
+  "Ryu",
+  "Ken",
+  "Chun-Li",
+  "Cammy",
+  "Guile",
+  "Sakura",
+  "Sagat",
+  "Juri",
+];
+
+myArray.pop();
+
+myArray.push("Zangief");
+myArray.push("Ibuki");
+
+myArray.forEach((element, index) => {
+  const newElement = `${element} (${index})`;
+  myArray[index] = newElement;
+});
+
+const myString = myArray.join(" - ");
+
+// 以下のコードは編集しないでください。
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = myString;
+section.appendChild(para1);
+```
+
+</details>
+
+## 配列 4
+
+この配列の課題では、いくつかの鳥の名前を記載した配列を提供しています。
+
+この課題を完成させるには、次のようにします。
+
+1. `"Eagles"` 要素のインデックスを特定し、そのインデックスを用いて `"Eagles"` 要素を削除しましょう。
+2. この配列から、名前が "E" で始まる鳥だけを含む `eBirds` という名前の新しい配列を作成しましょう。ちなみに、 {{jsxref("String.prototype.startsWith()", "startsWith()")}} は文字列が特定の文字で始まるかどうかを調べるのにとても役立ちます。
+
+この課題の出発点は次のようなものです（まだ何も見えません）。
+
+{{ EmbedLiveSample("arrays-4", "100%", 60) }}
+
+この出発点の基盤となるコードは次の通りです。
+
+```js live-sample___arrays-4
+const birds = ["Parrots", "Falcons", "Eagles", "Emus", "Caracaras", "Egrets"];
+
+// ここにコードを追加
+
+// 以下のコードは編集しないでください。
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = eBirds;
+section.appendChild(para1);
+```
+
+更新後の出力は次のようになります。
+
+{{ EmbedLiveSample("arrays-4-finish", "100%", 60) }}
+
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
+
+最終的な JavaScript は次のようになります。
+
+```js
+const birds = ["Parrots", "Falcons", "Eagles", "Emus", "Caracaras", "Egrets"];
+
+const eaglesIndex = birds.indexOf("Eagles");
+birds.splice(eaglesIndex, 1);
+
+function startsWithE(bird) {
+  return bird.startsWith("E");
+}
+const eBirds = birds.filter(startsWithE);
+
+// 以下のコードは編集しないでください。
+// ...
+```
+
+```js hidden live-sample___arrays-4-finish
+const birds = ["Parrots", "Falcons", "Eagles", "Emus", "Caracaras", "Egrets"];
+
+const eaglesIndex = birds.indexOf("Eagles");
+birds.splice(eaglesIndex, 1);
+
+function startsWithE(bird) {
+  return bird.startsWith("E");
+}
+const eBirds = birds.filter(startsWithE);
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = eBirds;
+section.appendChild(para1);
+```
+
+</details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}

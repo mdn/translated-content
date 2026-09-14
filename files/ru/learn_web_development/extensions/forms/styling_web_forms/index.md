@@ -3,7 +3,7 @@ title: Стили HTML форм
 slug: Learn_web_development/Extensions/Forms/Styling_web_forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms/Advanced_styling_for_HTML_forms", "Learn/HTML/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers", "Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms")}}
 
 В этой статье Вы узнает, как использовать CSS с HTML-формами, чтобы сделать их (надеюсь) более красивыми. Удивительно, но это может быть немного сложнее. По историческим и техническим причинам виджеты форм плохо сочетаются с CSS. Из-за этих трудностей многие разработчики предпочитают создавать свои собственные HTML-виджеты, чтобы получить контроль над своим внешним видом. Однако в современных браузерах веб-дизайнеры все больше контролируют дизайн элементов формы. Давайте приступим!
 
@@ -36,7 +36,7 @@ slug: Learn_web_development/Extensions/Forms/Styling_web_forms
 
 Некоторые элементы редко могут быть стилизованы, и могут потребовать некоторых сложных уловок, иногда требующих углублённых знаний CSS3.
 
-Они включают в себя элемент {{HTMLElement ("legend")}}, но его нельзя правильно расположить на всех платформах. Флажки и переключатели также не могут быть стилизованы напрямую, однако, благодаря CSS3 вы можете обойти это. Контент [`placeholder`](/ru/docs/Web/HTML/Element/input#placeholder) не может быть стилизован каким-либо стандартным способом, однако все браузеры, которые его реализуют, также реализуют собственные псевдо-элементы CSS или псевдоклассы, которые позволяют его стилизовать.
+Они включают в себя элемент {{HTMLElement ("legend")}}, но его нельзя правильно расположить на всех платформах. Флажки и переключатели также не могут быть стилизованы напрямую, однако, благодаря CSS3 вы можете обойти это. Контент [`placeholder`](/ru/docs/Web/HTML/Reference/Elements/input#placeholder) не может быть стилизован каким-либо стандартным способом, однако все браузеры, которые его реализуют, также реализуют собственные псевдо-элементы CSS или псевдоклассы, которые позволяют его стилизовать.
 
 Мы опишем, как обрабатывать эти более конкретные случаи, в статье [«Расширенные стили для HTML-форм».](/ru/docs/Learn/Forms/Advanced_form_styling)
 
@@ -355,7 +355,7 @@ textarea {
 }
 ```
 
-The {{HTMLElement("button")}} element is really convenient with CSS; you can do whatever you want, even using [pseudo-elements](/ru/docs/Web/CSS/Pseudo-elements):
+The {{HTMLElement("button")}} element is really convenient with CSS; you can do whatever you want, even using [pseudo-elements](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements):
 
 ```css
 button {
@@ -402,7 +402,7 @@ As you can see, as long as we want to build forms with just text fields and butt
 
 [In the next article](/ru/docs/Learn/Forms/Advanced_form_styling), we will see how to handle form widgets which fall in the "bad" and "ugly" categories.
 
-{{PreviousMenuNext("Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms/Advanced_styling_for_HTML_forms", "Learn/HTML/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers", "Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms")}}
 
 ## In this module
 
@@ -416,4 +416,4 @@ As you can see, as long as we want to build forms with just text fields and butt
 - [HTML forms in legacy browsers](/ru/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 - [Styling HTML forms](/ru/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - [Advanced styling for HTML forms](/ru/docs/Learn/Forms/Advanced_form_styling)
-- [Property compatibility table for form widgets](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Property compatibility table for form widgets](/ru/docs/Learn_web_development/Extensions/Forms)

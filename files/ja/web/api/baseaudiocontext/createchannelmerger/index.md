@@ -10,7 +10,8 @@ l10n:
 
 `createChannelMerger()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{domxref("ChannelMergerNode")}} を作成します。これは複数の音声ストリームのチャンネルを一つの音声ストリームに結合します。
 
-> **メモ:** {{domxref("ChannelMergerNode.ChannelMergerNode", "ChannelMergerNode()")}} コンストラクターは {{domxref("ChannelMergerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+> [!NOTE]
+> {{domxref("ChannelMergerNode.ChannelMergerNode", "ChannelMergerNode()")}} コンストラクターは {{domxref("ChannelMergerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
 ## 構文
 

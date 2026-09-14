@@ -6,7 +6,7 @@ slug: Web/API/Navigator/getUserMedia
 > [!NOTE]
 > 此 API 已更名为 {{domxref("MediaDevices.getUserMedia()")}}。请使用那个版本进行替代！这个已废弃的 API 版本仅为了向后兼容而存在。
 
-{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
+{{APIRef("Media Capture and Streams")}}
 
 **Navigator.getUserMedia()** 方法提醒用户需要使用音频（0 或者 1）和（0 或者 1）视频输入设备，比如相机，屏幕共享，或者麦克风。如果用户给予许可，**successCallback** 回调就会被调用，{{domxref("MediaStream")}} 对象作为回调函数的参数。如果用户拒绝许可或者没有媒体可用，**errorCallback** 就会被调用，类似的，**`PermissionDeniedError`** 或者 **`NotFoundError`** 对象作为它的参数。注意，有可能以上两个回调函数都不被调用，因为不要求用户一定作出选择（允许或者拒绝）。
 
@@ -21,7 +21,6 @@ getUserMedia(constraints, successCallback, errorCallback)
 - `constraints`
   - : {{domxref("MediaStreamConstaints")}} 对象指定了请求使用媒体的类型，还有每个类型的所需要的参数。具体细节请参见 {{domxref("MediaDevices.getUserMedia()")}} 方法下面的 [constraints](/zh-CN/docs/Web/API/MediaDevices/getUserMedia#parameters) 部分。
 - `successCallback`
-
   - : 当调用成功后，successCallback 中指定的函数就被调用，包含了媒体流的 {{domxref("MediaStream")}} 对象作为它的参数，你可以把媒体流对象赋值给合适的元素，然后使用它，就像下面的例子一样：
 
     ```js
@@ -35,7 +34,6 @@ getUserMedia(constraints, successCallback, errorCallback)
     ```
 
 - `errorCallback`
-
   - : 当调用失败，errorCallback 中指定的函数就会被调用，{{domxref("MediaStreamError")}} 对象作为它唯一的参数；此对象基于 {{domxref("DOMException")}} 对象构建。错误码描述见参见以下：
 
     | 错误                    | 描述                               |

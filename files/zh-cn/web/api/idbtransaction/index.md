@@ -51,9 +51,7 @@ Transactions can fail for a fixed number of reasons, all of which (except the us
 ### Event handlers
 
 - {{domxref("IDBTransaction.onabort")}} {{readonlyInline}}
-
   - : The event handler for the `abort` event, fired when the transaction is aborted. This can happen due to:
-
     - bad requests, e.g. trying to add() the same key twice, or put() with the same index key with a uniqueness constraint and there is no error handler on the request to call preventDefault() on the event,
     - an explicit abort() call from script
     - uncaught exception in request's success/error handler,
@@ -75,8 +73,6 @@ Transactions can fail for a fixed number of reasons, all of which (except the us
   - : 返回表示作为此事务作用域一部分的 object store 的 {{domxref("IDBObjectStore")}} 对象。
 
 ## 模式常量
-
-{{deprecated_header}}
 
 > [!WARNING]
 > 这些常量将不再可用——它们在 Gecko 25 中被移除。你应该直接使用字符串常量来作为替代。 ([Firefox bug 888598](https://bugzil.la/888598))

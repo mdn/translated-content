@@ -57,7 +57,7 @@ currentTime = performance.timeOrigin + performance.now();
 詳細度（レベル2）では、スリープ中に `performance.now()` がカウント動作することが要求されています。Windows の Firefox と Windows の Chromium だけがスリープ中も動き続けているようです。他にも関連するブラウザーバグがあります。
 
 - Chrome/Chromium ([bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1206450))
-- Firefox ([bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1709767))
+- Firefox ([bug](https://bugzil.la/1709767))
 - Safari/WebKit ([bug](https://bugs.webkit.org/show_bug.cgi?id=225610))
 
 詳細は仕様の issue [hr-time#115](https://github.com/w3c/hr-time/issues/115) でも得られます。

@@ -3,8 +3,6 @@ title: 304 Not Modified
 slug: Web/HTTP/Reference/Status/304
 ---
 
-{{HTTPSidebar}}
-
 Код "HTTP **304 Not Modified**" клиента указывает, что нет необходимости повторно передавать запрошенные ресурсы. Это неявное перенаправление на кешированный ресурс. Это происходит, когда метод {{glossary("safe")}}, например {{HTTPMethod("GET")}} или {{HTTPMethod("HEAD")}} запрос или когда запрос является условным и использует {{HTTPHeader("If-None-Match")}} или {{HTTPHeader("If-Modified-Since")}}.
 
 Если эквивалентный ответ {{HTTPStatus("200")}} `OK` включал {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}} и {{HTTPHeader("Vary")}}.

@@ -31,5 +31,5 @@ CSS プロパティの効果には、一次元的なものと二次元的なも�
 
 ## 関連情報
 
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)モジュール
-- [論理的プロパティと値の基本概念](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)モジュール
+- [論理的プロパティと値の基本概念](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts)

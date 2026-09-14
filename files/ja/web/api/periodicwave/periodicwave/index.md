@@ -21,11 +21,9 @@ new PeriodicWave(context, options)
 - `context`
   - : ノードを関連付ける音声コンテキストを表す {{domxref("BaseAudioContext")}} です。
 - `options` {{optional_inline}}
-
   - : `PeriodicWave` に持たせるプロパティを定義する
     [`PeriodicWaveOptions`](https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveOptions)
     の辞書オブジェクトです。(辞書 [PeriodicWaveConstraints](https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveConstraints) で定義されるオプションも継承しています)
-
     - `real`
       - : 波形を作るための余弦 (コサイン) の項を格納した {{jsxref("Float32Array")}} です。
         ({{domxref("BaseAudioContext.createPeriodicWave")}} の引数 `real` に相当します)

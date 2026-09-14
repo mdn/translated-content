@@ -1,16 +1,13 @@
 ---
 title: <xsl:strip-space>
 slug: Web/XML/XSLT/Reference/Element/strip-space
-original_slug: Web/XSLT/Reference/Element/strip-space
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{XsltSidebar}}
+`<xsl:strip-space>` 要素は、空白を削除する必要があるソース文書内の要素を定義します。
 
-`<xsl:strip-space>` 要素は空白を削除する必要があるソースドキュメント内の要素を定義します。
-
-### 構文
+## 構文
 
 ```xml
 <xsl:strip-space elements=LIST-OF-ELEMENT-NAMES />
@@ -19,7 +16,7 @@ l10n:
 ### 必須属性
 
 - `elements`
-  - : 空白のみのテキストノードを削除する必要がある、ソース内の要素のスペース区切りリストを指定します。
+  - : ホワイトスペースのみのテキストノードを削除する必要がある、ソース内の要素の空白区切りリストを指定します。
 
 ### 任意属性
 
@@ -33,6 +30,6 @@ l10n:
 
 XSLT, section 3.4
 
-### Gecko のサポート
+## Gecko の対応
 
-サポート済み
+対応済み。

@@ -3,7 +3,7 @@ title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 `BigInt` 是一個內建的物件，提供了表示大於 2^53 的整數的功能 (2^53 是 JavaScript 原生的{{JSxRef("Number")}}能夠表示的最大值)
 
@@ -18,7 +18,8 @@ BigInt(value);
 - `value`
   - : 欲創建的數值，可以為整數或字串。
 
-> **備註：** `BigInt()` 不和 {{JSxRef("Operators/new", "new")}} 一起使用。
+> [!NOTE]
+> `BigInt()` 不和 {{JSxRef("new")}} 一起使用。
 
 ## 說明
 
@@ -44,7 +45,8 @@ const hugeBin = BigInt(
 
 `BigInt` 跟 {{JSxRef("Number")}} 很像，但在某些部分有些許不同 — 它不可以被用在內建的 {{JSxRef("Math")}} 物件方法中、而且不可以跟 `Number` 的實體混用運算子。
 
-> **警告：** {{JSxRef("Number")}} 和 `BigInt` 不能混和計算 — 他們必須被轉換到同一個型態。
+> [!WARNING]
+> {{JSxRef("Number")}} 和 `BigInt` 不能混和計算 — 他們必須被轉換到同一個型態。
 >
 > 然而，在相互轉換時要注意， `BigInt` 在被轉換成 `Number` 時可能會遺失部分精度的資訊。
 
@@ -80,7 +82,7 @@ const theFuture = previousMaxSafe + 2n;
 const multi = previousMaxSafe * 2n;
 // ↪ 18014398509481982n
 
-const subtr = multi – 10n;
+const subtr = multi - 10n;
 // ↪ 18014398509481972n
 
 const mod = multi % 10n;
@@ -89,8 +91,8 @@ const mod = multi % 10n;
 const bigN = 2n ** 54n;
 // ↪ 18014398509481984n
 
-bigN * -1n
-// ↪ –18014398509481984n
+bigN * -1n;
+// ↪ -18014398509481984n
 ```
 
 `/` 運算子也同樣的能夠運行。然而，因為型態是 `BigInt` 而不是 `BigDecimal` ，除法運算會無條件捨去小數。也就是說，回傳值不會包含小數部分。
@@ -108,7 +110,7 @@ const rounded = 5n / 2n;
 
 ### 比較
 
-一個 `BigInt` 並不嚴格等於一個 {{JSxRef("Global_Objects/Number", "Number")}}，但他們會一般相等。
+一個 `BigInt` 並不嚴格等於一個 {{JSxRef("Number")}}，但他們會一般相等。
 
 ```js
 0n === 0;
@@ -118,7 +120,7 @@ const rounded = 5n / 2n;
 // ↪ true
 ```
 
-一個 {{JSxRef("Global_Objects/Number", "Number")}} 和 `BigInt` 可以像普通運算一樣比較。
+一個 {{JSxRef("Number")}} 和 `BigInt` 可以像普通運算一樣比較。
 
 ```js
 1n < 2;
@@ -159,7 +161,7 @@ o === o; // true
 
 ### Conditional
 
-A `BigInt` behaves like a {{JSxRef("Global_Objects/Number", "Number")}} in cases where it is converted to a {{JSxRef("Global_Objects/Boolean", "Boolean")}}: via the {{JSxRef("Global_Objects/Boolean", "Boolean")}} function; when used with logical operators {{JSxRef("Operators/Logical_Operators", "Logical Operators")}} `||`, `&&`, and `!`; or within a conditional test like an {{JSxRef("Statements/if...else", "if statement")}}.
+A `BigInt` behaves like a {{JSxRef("Number")}} in cases where it is converted to a {{JSxRef("Boolean")}}: via the {{JSxRef("Boolean")}} function; when used with logical operators {{JSxRef("Operators", "Logical Operators")}} `||`, `&&`, and `!`; or within a conditional test like an {{JSxRef("Statements/if...else", "if statement")}}.
 
 ```js
 if (0n) {
@@ -198,7 +200,7 @@ Boolean(12n);
 
 ## 屬性
 
-- {{JSxRef("BigInt.prototype")}}
+- {{JSxRef("BigInt")}}
   - : 允許對一個 `BigInt` 物件增加其屬性。
 
 ## `BigInt` 物件實體
@@ -218,7 +220,7 @@ All `BigInt` instances inherit from `BigInt.prototype`. The prototype object of 
 
 ### 轉型
 
-因為在 {{JSxRef("Global_Objects/Number", "Number")}} 和 `BigInt` 之間轉換可能造成精度遺失，建議當數值會超過 2^53 時只使用 `BigInt` ，而不要在兩者之間進行轉換。
+因為在 {{JSxRef("Number")}} 和 `BigInt` 之間轉換可能造成精度遺失，建議當數值會超過 2^53 時只使用 `BigInt` ，而不要在兩者之間進行轉換。
 
 ### 加密
 

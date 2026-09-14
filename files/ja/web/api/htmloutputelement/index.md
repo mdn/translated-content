@@ -1,6 +1,8 @@
 ---
 title: HTMLOutputElement
 slug: Web/API/HTMLOutputElement
+l10n:
+  sourceCommit: af9a8ff87cfa6563c9a082162ce4ed7ba0b204e1
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,6 +11,11 @@ slug: Web/API/HTMLOutputElement
 
 {{InheritanceDiagram}}
 
+## コンストラクター
+
+- {{domxref("HTMLOutputElement.HTMLOutputElement", "HTMLOutputElement()")}} {{experimental_inline}}
+  - : 新しい `HTMLOutputElement` オブジェクトを生成します。
+
 ## インスタンスプロパティ
 
 _このインターフェイスには、親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
@@ -16,15 +23,15 @@ _このインターフェイスには、親である {{domxref("HTMLElement")}} 
 - {{domxref("HTMLOutputElement.defaultValue")}}
   - : 文字列で、要素の既定値を表します。初期値は空文字列です。
 - {{domxref("HTMLOutputElement.form")}} {{ReadOnlyInline}}
-  - : {{domxref("HTMLFormElement")}} で、コントロールに関連付けられたフォームを表し、定義されていれば HTML の [`form`](/ja/docs/Web/HTML/Element/output#form) 属性を反映します。
+  - : {{domxref("HTMLFormElement")}} で、コントロールに関連付けられたフォームを表し、定義されていれば HTML の [`form`](/ja/docs/Web/HTML/Reference/Elements/output#form) 属性を反映します。
 - {{domxref("HTMLOutputElement.htmlFor")}} {{ReadOnlyInline}}
-  - : {{domxref("DOMTokenList")}} で、HTML の [`for`](/ja/docs/Web/HTML/Element/output#for) 要素を反映し、計算値の `value` に寄与する（または他の形で影響する）同じ文書内の他の要素の ID のリストが入ります。
+  - : {{domxref("DOMTokenList")}} で、HTML の [`for`](/ja/docs/Web/HTML/Reference/Elements/output#for) 要素を反映し、計算値の `value` に寄与する（または他の形で影響する）同じ文書内の他の要素の ID のリストが入ります。
 - {{domxref("HTMLOutputElement.labels")}} {{ReadOnlyInline}}
   - : {{domxref("NodeList")}} で、この要素に関連付けられた {{HTMLElement("label")}} 要素です。
 - {{domxref("HTMLOutputElement.name")}}
-  - : 文字列で、 HTML の [`name`](/ja/docs/Web/HTML/Element/output#name) 属性を反映し、フォームデータと共に送信されるコントロールの名前が入ります。
+  - : 文字列で、 HTML の [`name`](/ja/docs/Web/HTML/Reference/Elements/output#name) 属性を反映し、フォームデータと共に送信されるコントロールの名前が入ります。
 - {{domxref("HTMLOutputElement.type")}} {{ReadOnlyInline}}
-  - : 文字列で "`output`" です。
+  - : 文字列で `"output"` です。
 - {{domxref("HTMLOutputElement.validationMessage")}} {{ReadOnlyInline}}
   - : 文字列で、（もしあれば）制約検証でコントロールが合格しなかった場合のローカライズされたメッセージを表現します。この属性はコントロールが制約検証の対象にならない場合（`willValidate` が `false` の場合）や、制約を満たしている場合は空文字列になります。
 - {{domxref("HTMLOutputElement.validity")}} {{ReadOnlyInline}}
@@ -32,7 +39,7 @@ _このインターフェイスには、親である {{domxref("HTMLElement")}} 
 - {{domxref("HTMLOutputElement.value")}}
   - : 文字列で、要素の内容の値を表します。 {{domxref("Node.textContent")}} プロパティと同様です。
 - {{domxref("HTMLOutputElement.willValidate")}} {{ReadOnlyInline}}
-  - : 論理値で、要素が制約検証の対象になるかどうかを示します。
+  - : その要素が制約検証の対象となるかどうかを示す論理値を返します。`HTMLOutputElement` オブジェクトの場合は、常に `false` になります。
 
 ## インスタンスメソッド
 
@@ -41,7 +48,6 @@ _このインターフェイスには、親である {{domxref("HTMLElement")}} 
 - {{domxref("HTMLOutputElement.checkValidity()")}}
   - : 要素の妥当性をチェックし、チェック結果を論理値で返します。
 - {{domxref("HTMLOutputElement.reportValidity()")}}
-
   - : このメソッドは、もしあれば、要素の制約に関する問題をユーザーに報告します。問題があれば、要素上で {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントを発生させ、 `false` を返します。問題がなければ `true` を返します。
 
     問題が報告された場合、ユーザーエージェントは要素にフォーカスを移し、文書のスクロール位置を変更したり、他の動作を行ったりして要素にユーザーの関心を集めることがあります。この要素に複数の問題が同時に発生した場合、ユーザーエージェントは複数の制約検証を報告することがあります。要素が表示されない場合、ユーザーエージェントはユーザーに通知する代わりに実行中のスクリプトにエラーを報告することがあります。

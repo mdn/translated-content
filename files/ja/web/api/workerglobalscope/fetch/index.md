@@ -15,7 +15,8 @@ l10n:
 
 `fetch()` メソッドは、取得しようとしているリソースのディレクティブではなく、[Content Security Policy](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) の `connect-src` ディレクティブにより制御されます。
 
-> **メモ:** `fetch()` メソッドの引数は、{{domxref("Request.Request","Request()")}} コンストラクターの引数と同一です。
+> [!NOTE]
+> `fetch()` メソッドの引数は、{{domxref("Request.Request","Request()")}} コンストラクターの引数と同一です。
 
 ## 構文
 
@@ -27,14 +28,11 @@ fetch(resource, options)
 ### 引数
 
 - `resource`
-
   - : フェッチしたいリソースを定義します。以下を指定できます。
-
     - フェッチしたいリソースの URL を表す文字列または{{Glossary("stringifier", "文字列化子")}}を持つその他のオブジェクト ({{domxref("URL")}} オブジェクトなど)。この URL には、ベース URL (ウィンドウコンテキストでは文書の {{domxref("Node.baseURI", "baseURI")}}、ワーカーコンテキストでは {{domxref("WorkerGlobalScope.location")}}) からの相対 URL も使用できます。
     - {{domxref("Request")}} オブジェクト
 
 - `options` {{optional_inline}}
-
   - : リクエストに適用したいカスタム設定をすべて格納した {{domxref("RequestInit")}} オブジェクトです。
 
 ### 返値

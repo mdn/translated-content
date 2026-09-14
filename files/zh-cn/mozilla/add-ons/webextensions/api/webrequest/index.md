@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5ebacde5e3e3500a851a2c49c7d02a7a5c6604ce
 ---
 
-{{AddonSidebar}}
-
 为发出的 HTTP 请求（包括 `ws://` 和 `wss://` 的 websocket 请求）添加针对不同阶段的事件监听器。事件监听器接收有关请求的详细信息，并可以修改或取消请求。
 
 每个事件都会在请求的特定阶段触发。事件的顺序大概是这样的：
@@ -34,26 +32,21 @@ l10n:
 你可以修改下面的事件中的一部分的请求。具体而言，包括：
 
 - 取消请求：
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 - 重定向请求：
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - 修改请求标头：
-
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
 
 - 修改响应标头：
-
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - 提供认证凭据：
-
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 要做到这一点，你需要在事件的 `addListener()` 中的 `extraInfoSpec` 参数中传递一个值为 `"blocking"` 的选项。这将让监听器变为同步的。

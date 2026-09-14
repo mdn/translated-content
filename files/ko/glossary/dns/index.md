@@ -13,5 +13,5 @@ DNS의 가장 두드러진 기능은 인간에게 친숙한 도메인 네임(예
 
 ## 같이 보기
 
-- [도메인 네임 이해하기](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [도메인 네임 이해하기](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
 - 위키백과의 [도메인 네임 시스템](https://en.wikipedia.org/wiki/Domain_Name_System)

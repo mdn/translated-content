@@ -3,8 +3,6 @@ title: idle.setDetectionInterval()
 slug: Mozilla/Add-ons/WebExtensions/API/idle/setDetectionInterval
 ---
 
-{{AddonSidebar}}
-
 Définit l'intervalle, en secondes, utilisé pour déterminer quand le système est dans un état inactif pour les événements {{WebExtAPIRef("idle.onStateChanged")}} . L'intervalle par défaut est de 60 secondes.
 
 L'intervalle de détection est spécifique à l'extension qui appelle la méthode. La modification de l'intervalle dans une extension n'affecte pas l'intervalle de détection dans une autre extension.
@@ -37,8 +35,6 @@ browser.idle.setDetectionInterval(15);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/api/idle). Cette documentation est dérivée de [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -3,8 +3,6 @@ title: extension.getExtensionTabs()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getExtensionTabs
 ---
 
-{{AddonSidebar}}
-
 > [!WARNING]
 > Cette méthode a été dépréciée. Utilisez {{WebExtAPIRef("extension.getViews()")}} à la place.
 
@@ -38,8 +36,6 @@ Cette API est également disponible en tant que `browser.extension.getExtensionT
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

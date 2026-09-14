@@ -1,12 +1,9 @@
 ---
 title: <xsl:call-template>
 slug: Web/XML/XSLT/Reference/Element/call-template
-original_slug: Web/XSLT/Reference/Element/call-template
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}
 
 `<xsl:call-template>` 要素は名前付きテンプレートを呼び出します。
 
@@ -25,7 +22,7 @@ l10n:
 
 ### 任意属性
 
-なし
+なし。
 
 ### 種類
 
@@ -35,6 +32,6 @@ l10n:
 
 XSLT, section 6.
 
-### Gecko のサポート
+## Gecko の対応
 
-サポート済み
+サポート済み。

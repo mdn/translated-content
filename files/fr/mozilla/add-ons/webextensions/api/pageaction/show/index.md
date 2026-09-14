@@ -3,8 +3,6 @@ title: pageAction.show()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 ---
 
-{{AddonSidebar}}
-
 Affiche l'action de la page pour un onglet donné. L'action de la page est affichée chaque fois que l'onglet donné est l'onglet actif.
 
 `show()` remplace la correspondance de motifs, de sorte que l'action page sera affichée dans l'onglet spécifié même si [`show_matches`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) e correspond pas à l'URL ou si [`hide_matches`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) ne correspond pas.
@@ -54,8 +52,6 @@ browser.contextMenus.onClicked.addListener(function (info, tab) {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

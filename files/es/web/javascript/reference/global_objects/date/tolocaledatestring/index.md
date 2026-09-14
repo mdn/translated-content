@@ -50,11 +50,11 @@ El valor por defecto para cada propiedad del componente fecha-hora es {{jsxref("
 
 ### Valor de retorno
 
-Una cadena que representa la parte de la fecha de la instancia {{jsxref("Global_Objects/Date", "Date")}} dada según las convenciones específicas del idioma.
+Una cadena que representa la parte de la fecha de la instancia {{jsxref("Date")}} dada según las convenciones específicas del idioma.
 
 ## Rendimiento
 
-Cuando se formatea un gran número de fechas, es mejor crear un objeto {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} y utilizar la función proporcionada por su propiedad {{jsxref("DateTimeFormat.prototype.format", "format")}}.
+Cuando se formatea un gran número de fechas, es mejor crear un objeto {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} y utilizar la función proporcionada por su propiedad {{jsxref("Intl/DateTimeFormat/format", "format")}}.
 
 ## Ejemplos
 
@@ -164,7 +164,7 @@ console.log(date.toLocaleDateString("en-US", options));
 
 ## Véase también
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
 - {{jsxref("Date.prototype.toString()")}}

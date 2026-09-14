@@ -7,8 +7,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 El método **`sort()`** ordena los elementos de un arreglo (array) _localmente_ y devuelve el arreglo ordenado. La ordenación no es necesariamente [estable](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability). El modo de ordenación por defecto responde a la posición del valor del string de acuerdo a su valor [Unicode](https://es.wikipedia.org/wiki/Unicode).
 
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone <https://github.com/mdn/interactive-examples> y envíenos una solicitud de extracción (pull request).
-
 ## Sintaxis
 
 ```
@@ -75,7 +73,7 @@ Para comparar números en lugar de strings, la función de comparación puede si
 const compareNumbers = (a, b) => a - b;
 ```
 
-El metodo `sort` puede ser usado convenientemente con {{jsxref("Operators/function", "function expressions", "", 1)}} (y [closures](/es/docs/Web/JavaScript/Closures)):
+El metodo `sort` puede ser usado convenientemente con {{jsxref("Operators/function", "function expressions", "", 1)}} (y [closures](/es/docs/Web/JavaScript/Guide/Closures)):
 
 ```js
 const numbers = [4, 2, 5, 1, 3];

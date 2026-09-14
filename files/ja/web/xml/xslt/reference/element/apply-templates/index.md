@@ -1,12 +1,9 @@
 ---
 title: <xsl:apply-templates>
 slug: Web/XML/XSLT/Reference/Element/apply-templates
-original_slug: Web/XSLT/Reference/Element/apply-templates
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}
 
 `<xsl:apply-templates>` 要素は、入力ツリー内のノードのセットを選択し、適切なテンプレートを適用するようにプロセッサーに指示します。
 
@@ -21,12 +18,12 @@ l10n:
 
 ### 必須属性
 
-なし
+なし。
 
 ### 任意属性
 
 - `select`
-  - : 処理するノードを指定する XPath 式を使用します。アスタリスク (\*) はノードセット全体を選択します。この属性が設定されていない場合は、現在のノードのすべての子ノードが選択されます。
+  - : 処理するノードを指定する XPath 式を使用します。アスタリスク (`*`) はノードセット全体を選択します。この属性が設定されていない場合は、現在のノードのすべての子ノードが選択されます。
 - `mode`
   - : 同じノードに対して複数の処理方法が定義されている場合は、それらを区別します。
 
@@ -38,6 +35,6 @@ l10n:
 
 XSLT section 5.4.
 
-### Gecko のサポート
+## Gecko の対応
 
-サポート済み
+サポート済み。

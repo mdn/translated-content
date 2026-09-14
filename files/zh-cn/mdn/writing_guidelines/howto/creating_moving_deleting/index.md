@@ -83,7 +83,8 @@ yarn content move <from-slug> <to-slug> [locale]
 
 4. 创建拉取请求。
 
-> **备注：** `yarn content move` 会自动在 `_redirects.txt` 文件中添加必要的重定向信息，这样旧的位置会重定向到新的位置。不要手动编辑 `_redirects.txt` 文件！如果你这样做，很容易出现错误。如果你需要在不移动文件的情况下添加重定向，请在 [MDN Web 文档聊天室](/zh-CN/docs/MDN/Community/Communication_channels#聊天室) 上与 MDN Web 文档团队讨论。
+> [!NOTE]
+> `yarn content move` 会自动在 `_redirects.txt` 文件中添加必要的重定向信息，这样旧的位置会重定向到新的位置。不要手动编辑 `_redirects.txt` 文件！如果你这样做，很容易出现错误。如果你需要在不移动文件的情况下添加重定向，请在 [MDN Web 文档聊天室](/zh-CN/docs/MDN/Community/Communication_channels#聊天室) 上与 MDN Web 文档团队讨论。
 
 ## 删除页面
 

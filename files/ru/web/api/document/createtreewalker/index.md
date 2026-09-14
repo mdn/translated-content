@@ -18,7 +18,6 @@ document.createTreeWalker(root, whatToShow[, filter[, entityReferenceExpansion]]
 - `root`
   - : корневой узел {{domxref("Node")}} для {{domxref("TreeWalker")}}. Чаще всего это элемент принадлежащий document.
 - `whatToShow` {{optional_inline}}
-
   - : A `unsigned long` representing a bitmask created by combining the constant properties of [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter). It is a convenient way of filtering for certain types of node. It defaults to `0xFFFFFFFF` representing the `SHOW_ALL` constant.
 
     | Константа                                                | Числовое значение                               | Описание                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -40,7 +39,7 @@ document.createTreeWalker(root, whatToShow[, filter[, entityReferenceExpansion]]
 - `filter` {{optional_inline}}
   - : A {{domxref("NodeFilter")}}, that is an object with a method `acceptNode`, which is called by the {{domxref("TreeWalker")}} to determine whether or not to accept a node that has passed the `whatToShow` check.
 - `entityReferenceExpansion` {{optional_inline}}
-  - : A {{domxref("Boolean")}} flag indicating if when discarding an {{domxref("EntityReference")}} its whole sub-tree must be discarded at the same time.
+  - : A {{jsxref("Boolean")}} flag indicating if when discarding an {{domxref("EntityReference")}} its whole sub-tree must be discarded at the same time.
 
 ### Return value
 

@@ -14,7 +14,6 @@ prop in object
 ### Parámetros
 
 - `prop`
-
   - : Una cadena o expresión númerica que representa el nombre de una propiedad o el índice de un array (lo que no sea un símbolo se forzará a string).
 
 - `object`
@@ -55,7 +54,7 @@ var color2 = "coral";
 
 ### Usando `in` con propiedades eliminadas o no definidas
 
-Si se elimina una propiedad con el operador {{jsxref("Operadores/delete", "delete")}}, el operador `in` devuelve `false` para esa propiedad.
+Si se elimina una propiedad con el operador {{jsxref("delete")}}, el operador `in` devuelve `false` para esa propiedad.
 
 ```js
 var micoche = { marca: "Honda", modelo: "Accord", año: 1998 };
@@ -67,7 +66,7 @@ delete arboles[3];
 3 in arboles; // devuelve false
 ```
 
-Si se cambia una propiedad a {{jsxref("Objetos_globales/undefined", "undefined")}} pero no se elimina, el operador `in` devuelve true para esa propiedad.
+Si se cambia una propiedad a {{jsxref("undefined")}} pero no se elimina, el operador `in` devuelve true para esa propiedad.
 
 ```js
 var micoche = { marca: "Honda", modelo: "Accord", año: 1998 };
@@ -103,4 +102,4 @@ El operador `in` devuelve `true` para propiedades en la cadena del prototipo.
 - [`delete`](/es/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Reflect.has()")}}
-- [Enumerability and ownership of properties](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

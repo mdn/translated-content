@@ -37,7 +37,7 @@ slug: Web/Media/Guides/Formats/codecs_parameter
 - `video/mp4; codecs="avc1.4d002a"`
   - : Файл [MPEG-4](/ru/docs/Web/Media/Formats/Containers#MP4) , содержащий [AVC](</ru/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)>) (H.264) видео, Основной профиль, Уровень 4.2.
 
-Как и в случае с любым параметром MIME типа , `codecs` должен заменяться на `codecs*` (обратите внимание на символ звёздочки, `*`) , если какое-либо из свойств кодека использует специальные символы для указания дополнительной информации (языковые отметки, кодировка байтов в шестнадцатеричные значения и т.д.), входящие в {{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}. Можно использовать функции JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} для кодирования списка параметров, можно использовать {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} для декодирования предварительно закодированного списка параметров.
+Как и в случае с любым параметром MIME типа , `codecs` должен заменяться на `codecs*` (обратите внимание на символ звёздочки, `*`) , если какое-либо из свойств кодека использует специальные символы для указания дополнительной информации (языковые отметки, кодировка байтов в шестнадцатеричные значения и т.д.), входящие в {{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}. Можно использовать функции JavaScript {{jsxref("encodeURI()")}} для кодирования списка параметров, можно использовать {{jsxref("decodeURI()")}} для декодирования предварительно закодированного списка параметров.
 
 > [!NOTE]
 > Когда используется параметр `codecs`, указанный список кодеков должен включать каждый кодек, используемый для содержимого файла Список также может содержать кодеки, которых нет в файле.
@@ -293,7 +293,6 @@ Thus, the syntaxes for each of the supported codecs look like this:
 - `mp4v.oo[.V]` (MPEG-4 video)
   - : Here, `oo` is again the OTI describing the contents more precisely, while `V` is the one-digit _video_ OTI.
 - `avc1.oo[.PPCCLL]` (AVC video)
-
   - : `oo` is the OTI describing the contents, while `PPCCLL` is six hexadecimal digits specifying the profile number (`PP`), constraint set flags (`CC`), and level (`LL`). See [AVC profiles](#avc_profiles) for the possible values of `PP`.
 
     The constraint set flags byte is comprised of one-bit Boolean flags, with the most significant bit being referred to as flag 0 (or `constraint_set0_flag`, in some resources), and each successive bit being numbered one higher. Currently, only flags 0 through 2 are used; the other five bits _must_ be zero. The meanings of the flags vary depending on the profile being used.

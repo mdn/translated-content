@@ -3,13 +3,11 @@ title: Actions du navigateur
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 ---
 
-{{AddonSidebar}}
-
 Une action du navigateur est un bouton que vous pouvez ajouter à la barre d'outils du navigateur. Les utilisateurs peuvent cliquer sur le bouton pour interagir avec votre extension.
 
 ![](browser-action.png)
 
-Il existe deux façons de spécifier une action du navigateur : avec une [fenêtre contextuelle](/fr/docs/Mozilla/Add-ons/WebExtensions/Popups), ou sans fenêtre contextuelle.
+Il existe deux façons de spécifier une action du navigateur : avec une [fenêtre contextuelle](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), ou sans fenêtre contextuelle.
 
 Si vous ne spécifiez pas de popup, alors lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que vous pouvez écouter à l'aide de [`browserAction.onClicked`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked):
 

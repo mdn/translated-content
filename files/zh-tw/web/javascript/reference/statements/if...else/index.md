@@ -3,8 +3,6 @@ title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
 ---
 
-{{jsSidebar("Statements")}}
-
 當條件成立的時候會執行 if 陳述式裡的程式，而不成立時則執行另外一個陳述式。
 
 {{InteractiveExample("JavaScript Demo: Statement - If...Else")}}
@@ -148,4 +146,4 @@ if (x = y) {
 
 - {{jsxref("Statements/block", "block")}}
 - {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Operators/conditional_operator", "conditional operator")}}
+- {{jsxref("Operators/Conditional_operator", "conditional operator")}}

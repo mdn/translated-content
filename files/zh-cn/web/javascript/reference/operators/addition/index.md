@@ -3,8 +3,6 @@ title: 加法（+）
 slug: Web/JavaScript/Reference/Operators/Addition
 ---
 
-{{jsSidebar("Operators")}}
-
 **加法**（**`+`**）运算符计算数字操作数或字符串连接的总和。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Addition operator")}}

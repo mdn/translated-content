@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，其底层是一个布尔值。
 
 当用户聚焦地址栏并开始输入时，浏览器会提供自动完成建议：一个基于用户不完整输入和浏览历史的网页下拉列表。

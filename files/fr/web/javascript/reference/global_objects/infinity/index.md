@@ -1,50 +1,51 @@
 ---
 title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Objects")}}
 
 La propriété globale **`Infinity`** est une valeur numérique représentant l'infini.
 
-{{js_property_attributes(0,0,0)}}
-
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - infinity")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Infinity", "shorter")}}
 
 ```js interactive-example
-const maxNumber = Math.pow(10, 1000); // Max positive number
+const maxNumber = 10 ** 1000; // Nombre positif maximum
 
 if (maxNumber === Infinity) {
-  console.log("Let's call it Infinity!");
-  // Expected output: "Let's call it Infinity!"
+  console.log("Appelons-le Infinity !");
+  // Résultat attendu : "Appelons-le Infinity !"
 }
 
 console.log(1 / maxNumber);
-// Expected output: 0
+// Résultat attendu : 0
 ```
 
-## Syntaxe
+## Valeur
 
-```js
-Infinity;
-```
+La même valeur numérique que {{JSxRef("Number.POSITIVE_INFINITY")}}.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
-`Infinity` est une propriété de _l'objet global_ , c'est-à-dire qu'elle est accessible globalement.
+`Infinity` est une propriété de _l'objet global_, c'est-à-dire qu'il s'agit d'une variable dans la portée globale.
 
-La valeur initiale d'`Infinity` est {{jsxref("Number.POSITIVE_INFINITY")}}. La valeur `Infinity` (infinité positive) est une valeur plus grande que n'importe quel nombre. Cette valeur se comporte comme l'infini mathématique&nbsp;; par exemple, tout ce qui est multiplié par `Infinity` vaut `Infinity`, et tout ce qui est divisé par `Infinity` vaut 0.
+La valeur `Infinity` (infini positif) est supérieure à tout autre nombre.
 
-D'après la spécification ECMAScript 5, `Infinity` est en lecture seule.
+Cette valeur se comporte légèrement différemment de l'infini mathématique&nbsp;; voir {{JSxRef("Number.POSITIVE_INFINITY")}} pour plus de détails.
 
 ## Exemples
 
+### Utiliser la propriété `Infinity`
+
 ```js
-console.log(Infinity); // Infinity
-console.log(Infinity + 1); // Infinity
-console.log(Math.pow(10, 1000)); // Infinity
-console.log(Math.log(0)); // -Infinity
-console.log(1 / Infinity); // 0
+console.log(Infinity); /* Infinity */
+console.log(Infinity + 1); /* Infinity */
+console.log(10 ** 1000); /* Infinity */
+console.log(Math.log(0)); /* -Infinity */
+console.log(1 / Infinity); /* 0 */
+console.log(1 / 0); /* Infinity */
 ```
 
 ## Spécifications
@@ -57,6 +58,6 @@ console.log(1 / Infinity); // 0
 
 ## Voir aussi
 
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
-- {{jsxref("Number.POSITIVE_INFINITY")}}
-- {{jsxref("Number.isFinite")}}
+- La propriété {{JSxRef("Number.NEGATIVE_INFINITY")}}
+- La propriété {{JSxRef("Number.POSITIVE_INFINITY")}}
+- La méthode {{JSxRef("Number.isFinite()")}}

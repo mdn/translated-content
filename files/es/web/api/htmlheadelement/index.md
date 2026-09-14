@@ -7,14 +7,14 @@ slug: Web/API/HTMLHeadElement
 
 La interfaz **`HTMLHeadElement`** contiene la información descriptiva, o metadata, para un documento. Este objeto hereda las propiedades y métodos descritos en la interfaz {{domxref("HTMLElement")}}.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Propiedades
 
 _Hereda las propiedades del padre, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLHeadElement.profile")}} {{deprecated_inline}}
-  - : Es un {{domxref("DOMString")}} que representa las URI de uno o más perfiles de metadatos (separados por espacios en blanco).
+  - : Es un {{jsxref("String")}} que representa las URI de uno o más perfiles de metadatos (separados por espacios en blanco).
 
 ## Métodos
 

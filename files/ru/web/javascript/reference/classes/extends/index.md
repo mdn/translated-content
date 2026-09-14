@@ -80,7 +80,7 @@ class myDate extends Date {
 
 ### Расширение `null`
 
-Расширение {{jsxref("null")}} работает как и с обычным классом, за исключением того, что прототип объекта не наследует {{jsxref("Object.prototype")}}.
+Расширение {{jsxref("null")}} работает как и с обычным классом, за исключением того, что прототип объекта не наследует {{jsxref("Object")}}.
 
 ```js
 class nullExtends extends null {

@@ -3,7 +3,7 @@ title: WebGL 찾기
 slug: Web/API/WebGL_API/By_example/Detect_WebGL
 ---
 
-{{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}
+{{PreviousNext("Web/API/WebGL_API/By_example","Web/API/WebGL_API/By_example/Clearing_with_colors")}}
 
 이 예시는 어떻게 {{Glossary("WebGL")}} 랜더링 컨텐츠를 찾고, 유저에게 결과를 보고할지를 보여줍니다.
 
@@ -66,4 +66,4 @@ window.addEventListener(
 
 이 예시 코드는 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/detect-webgl)에서도 확인 가능합니다.
 
-{{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}
+{{PreviousNext("Web/API/WebGL_API/By_example","Web/API/WebGL_API/By_example/Clearing_with_colors")}}

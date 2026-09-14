@@ -3,8 +3,6 @@ title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
 ---
 
-{{jsSidebar("Objects")}}
-
 **`eval()`** 函数会将传入的字符串当做 JavaScript 代码进行执行。
 
 {{InteractiveExample("JavaScript Demo: Standard built-in objects - eval()")}}

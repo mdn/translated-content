@@ -15,7 +15,7 @@ myVisState = WindowClient.visibilityState;
 
 ### Value
 
-une {{domxref("DOMString")}}.
+une {{jsxref("String")}}.
 
 ## Example
 

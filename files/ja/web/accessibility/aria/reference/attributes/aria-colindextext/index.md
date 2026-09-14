@@ -66,19 +66,19 @@ l10n:
 > [!NOTE]
 > 存在するすべての列が連続している場合、連続した値を推測できるため、`aria-colindex` を行に追加できますが、`aria-colindextext` は [`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) でサポートされているプロパティではありません。
 
-関連する [`aria-rowindextext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) を参照してください。
+関連する [`aria-rowindextext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext) を参照してください。
 
 ## 値
 
 - `<string>`
   - : 数値 [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) の人間が判読可能な代替テキスト
 
-## 関連インターフェース
+## 関連インターフェイス
 
 - {{domxref("Element.ariaColIndexText")}}
-  - : {{domxref("Element")}} インターフェースの一部である [`ariaColIndexText`](/ja/docs/Web/API/Element/ariaColIndexText) プロパティは、`aria-colindextext` 属性の値を反映します。
+  - : {{domxref("Element")}} インターフェイスの一部である [`ariaColIndexText`](/ja/docs/Web/API/Element/ariaColIndexText) プロパティは、`aria-colindextext` 属性の値を反映します。
 - {{domxref("ElementInternals.ariaColIndexText")}}
-  - : {{domxref("ElementInternals")}} インターフェースの一部である [`ariaColIndexText`](/ja/docs/Web/API/ElementInternals/ariaColIndexText) プロパティは、`aria-colindextext` 属性の値を反映します。
+  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaColIndexText`](/ja/docs/Web/API/ElementInternals/ariaColIndexText) プロパティは、`aria-colindextext` 属性の値を反映します。
 
 ## 関連付けられたロール
 
@@ -88,8 +88,8 @@ l10n:
 
 継承先のロール:
 
-- [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
 
 ## 仕様書
 
@@ -99,8 +99,8 @@ l10n:
 
 - [`Element.ariaColIndexText`](/ja/docs/Web/API/Element/ariaColIndexText)
 - [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex)
-- [`aria-rowindextext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext)
+- [`aria-rowindextext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext)
 - [`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount)
 - [`cell` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
-- [`columnheader` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`rowheader` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [`columnheader` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)

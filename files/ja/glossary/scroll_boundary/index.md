@@ -24,6 +24,6 @@ l10n:
 ## 関連情報
 
 - {{CSSxRef("overscroll-behavior")}} CSS プロパティ
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS オーバースクロール動作](/ja/docs/Web/CSS/CSS_overscroll_behavior)モジュール
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+- [CSS オーバースクロール動作](/ja/docs/Web/CSS/Guides/Overscroll_behavior)モジュール
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール

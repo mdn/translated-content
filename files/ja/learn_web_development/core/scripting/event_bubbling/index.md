@@ -2,12 +2,10 @@
 title: イベントのバブリング
 slug: Learn_web_development/Core/Scripting/Event_bubbling
 l10n:
-  sourceCommit: eb20babb96149f98bcbf7817b58e305c5297f2e1
+  sourceCommit: a73e5b9e881645835a254c4b3d07c48230010d29
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Test_your_skills/Events", "Learn_web_development/Core/Scripting")}}
 
 ウェブページは見出し、テキストの段落、画像、ボタンなどの「要素」で構成されており、これらの要素に発生するイベントを待ち受けすることができることを見てきました。例えば、ボタンにリスナーを追加すると、ユーザーがボタンをクリックしたときに実行することができます。
 
@@ -135,9 +133,7 @@ HTML はこのようになります。
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       このブラウザーは HTML の動画に対応していません。
       代わりに<a href="rabbit320.mp4">動画へのリンク</a>があります。
@@ -158,7 +154,7 @@ CSS を使用して、`"hidden"` クラスを設定した要素を非表示に�
 div {
   width: 100%;
   height: 100%;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 .hidden {
@@ -230,9 +226,7 @@ box.addEventListener("click", () => box.classList.add("hidden"));
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       このブラウザーは HTML の動画に対応していません。
       代わりに<a href="rabbit320.mp4">動画へのリンク</a>があります。
@@ -245,7 +239,7 @@ box.addEventListener("click", () => box.classList.add("hidden"));
 div {
   width: 100%;
   height: 100%;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 .hidden {
@@ -309,7 +303,7 @@ BUTTON 要素をクリックしました
 
 前節では、イベントバブリングが発生させる問題と、それを修正する方法について見ていきました。しかし、イベントバブリングは単に迷惑なだけではありません。具体的な例としては、**イベント委譲** があります。この方法では、ユーザーが多数の子要素のいずれかを操作したときにコードを実行したい場合、子要素にイベントリスナーを個別に設定するのではなく、子要素の親要素にイベントリスナーを設定し、子要素で発生したイベントが親要素にバブルアップされるようにします。
 
-最初の例に戻りましょう。ユーザーがボタンをクリックしたときにページ全体の背景色を設定しました。その代わりに、ページが 16 のタイルに分割されていて、ユーザーがタイルをクリックしたときに各タイルにランダムな色を設定したいとします。
+[最初の例](/ja/docs/Learn_web_development/Core/Scripting/Events#例_クリックイベントの扱い)に戻りましょう。ユーザーがボタンをクリックしたときにページ全体の背景色を設定しました。その代わりに、ページが 16 のタイルに分割されていて、ユーザーがタイルをクリックしたときに各タイルにランダムな色を設定したいとします。
 
 こちらが HTML です。
 
@@ -414,26 +408,21 @@ button.addEventListener("click", handleClick);
 
 {{embedlivesample("target and currentTarget")}}
 
-`target` プロパティは、上記の[イベント移譲](#イベント移譲)の例のように、イベント移譲でよく使用します。
-
-## スキルテスト
-
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: イベント](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Events)を参照してください。
+`target` プロパティは、上記の[イベント移譲](#イベント移譲)の例にあるように、イベント移譲でよく使用します。
 
 ## まとめ
 
-これで、この早い段階でウェブイベントについて知っておくべきことはすべてわかったはずです。
-前述したように、イベントは実のところ JavaScript のコアには属しません。ブラウザーの Web API で定義されています。
+これで、この早い段階でウェブイベントについて知っておくべきことはすべてわかったはずです。前述したように、イベントは実のところ JavaScript のコアには属しません。ブラウザーの Web API で定義されています。
 
-また、JavaScript が使用されるさまざまなコンテキストには、異なるイベントモデルがあることを理解することが重要です。Web API から、ブラウザーの WebExtensions や Node.js (サーバーサイド JavaScript) などの他の領域までです。
-これでこれらの領域をすべて理解できるとは思っていませんが、ウェブ開発を学習していく上で、イベントの基本を理解しておくことはとても役に立ちます。
-
-次に、ここ数トピックの理解度を検査する問題を探します。
+次の記事では、イベントに関するこれまでの内容をどれだけ理解し、記憶できているかを確認するためのテストをいくつかご紹介します。
 
 ## 関連情報
 
-- [domevents.dev](https://domevents.dev/) — 探究を通して DOM イベントシステムの動作について学ぶことができる、とても有益なインタラクティブな遊び場アプリです。
-- [イベントリファレンス](/ja/docs/Web/Events)
-- [Event order](https://www.quirksmode.org/js/events_order.html) （キャプチャとバブリングの議論） — Peter-Paul Koch による素晴らしい作品です。
+- [domevents.dev](https://domevents.dev/)
+  - : 探究を通して DOM イベントシステムの動作について学ぶことができる、とても有益なインタラクティブな遊び場アプリです。
+- [イベントリファレンス](/ja/docs/Web/API/Document_Object_Model/Events)
+  - : イベントの理解と対処に関する包括的なガイドです。
+- [Event order](https://www.quirksmode.org/js/events_order.html)
+  - : Peter-Paul Koch による、キャプチャとバブリングの素晴らしい詳細な議論です。
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Test_your_skills/Events", "Learn_web_development/Core/Scripting")}}

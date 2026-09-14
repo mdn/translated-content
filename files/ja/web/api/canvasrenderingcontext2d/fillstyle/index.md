@@ -97,7 +97,6 @@ setFillColor(c, m, y, k, a);
 - [キャンバス API](/ja/docs/Web/API/Canvas_API)
 - このプロパティを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
 - このプロパティで使われる値:
-
   - {{cssxref("&lt;color&gt;")}} CSS データ型
   - {{domxref("CanvasGradient")}} オブジェクト
   - {{domxref("CanvasPattern")}} オブジェクト

@@ -27,7 +27,7 @@ El evento **`offline`** se activa cuando el navegador ha perdido acceso a la red
 | Propiedad                       | Tipo                       | Descripción                                           |
 | ------------------------------- | -------------------------- | ----------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | Evento target (el objetivo más alto en el árbol DOM). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Tipo de evento.                                       |
+| `type` {{readonlyInline}}       | {{jsxref("String")}}       | Tipo de evento.                                       |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Si el evento normalmente burbujea o no.               |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Si el evento normalmente es cancelable o no.          |
 

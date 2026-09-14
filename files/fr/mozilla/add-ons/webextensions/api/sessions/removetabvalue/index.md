@@ -3,8 +3,6 @@ title: sessions.removeTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue
 ---
 
-{{AddonSidebar}}
-
 Supprime une valeur précédemment stockée par un appel à {{WebExtAPIRef("sessions.setTabValue")}}.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

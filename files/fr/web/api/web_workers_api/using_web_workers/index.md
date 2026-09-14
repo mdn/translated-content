@@ -217,7 +217,7 @@ Toutefois, la communication entre les _web workers_ est contrôlée explicitemen
 
 ## Règles de sécurité du contenu (_content security policy_, CSP)
 
-Les _workers_ disposent de leur propre contexte d'exécution, distinct de celui du document qui les a créés. Aussi, en général, les _workers_ ne sont pas gérés par la [politique de sécurité de contenu](/fr/docs/Web/HTTP/CSP) du document (ou du _worker_ parent) responsable de leur création. Ainsi, si un document est servi avec l'en-tête suivant :
+Les _workers_ disposent de leur propre contexte d'exécution, distinct de celui du document qui les a créés. Aussi, en général, les _workers_ ne sont pas gérés par la [politique de sécurité de contenu](/fr/docs/Web/HTTP/Guides/CSP) du document (ou du _worker_ parent) responsable de leur création. Ainsi, si un document est servi avec l'en-tête suivant :
 
 ```
 Content-Security-Policy: script-src 'self'
@@ -225,7 +225,7 @@ Content-Security-Policy: script-src 'self'
 
 Cette règle empêchera n'importe quel script inclus dans le document d'utiliser [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Toutefois, si le script génère un _worker_, le code exécuté par ce _worker_ pourra utiliser `eval()`.
 
-Pour appliquer une règle de sécurité au _worker_, il faudra fournir un en-tête [Content-Security-Policy](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) approprié pour la requête responsable du service du script du _worker_.
+Pour appliquer une règle de sécurité au _worker_, il faudra fournir un en-tête [Content-Security-Policy](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) approprié pour la requête responsable du service du script du _worker_.
 
 Si l'origine du script du _worker_ est un identifiant global unique (si son URL utilise le schéma `data://` ou `blob://` par exemple), le _worker_ héritera du CSP associé au document responsable de sa création.
 
@@ -303,7 +303,7 @@ L'[algorithme de clonage structurel](/fr/docs/Web/API/Web_Workers_API/Structured
 
 ### Les objets transférables - échanger des données avec transfert de la propriété
 
-Chrome 17+ et Firefox 18+ permettent également d'échanger certains types d'objet (qualifiés de transférables et qui implémentent l'interface {{domxref("Transferable")}}) avec des _workers_ et à haute performance. Les objets transférables sont passés d'un contexte à l'autre avec une opération [zero-copy](https://en.wikipedia.org/wiki/Zero-copy) qui permet d'obtenir des améliorations sensibles lors de l'échange de données volumineuses. On peut voir cela comme un passage de référence du monde C/C++ mais les données qui sont transférées depuis le contexte appelant ne sont plus disponibles dans ce contexte après le transfert. La propriété des données est transférée au nouveau contexte. Ainsi, lorsqu'on transfère un objet {{domxref("ArrayBuffer")}} depuis l'application principale vers le _worker_, l'objet {{domxref("ArrayBuffer")}} de départ est nettoyé et ne peut plus être utilisé, son contenu est (littéralement) transféré au contexte du _worker_.
+Chrome 17+ et Firefox 18+ permettent également d'échanger certains types d'objet (qualifiés de transférables et qui implémentent l'interface {{domxref("Transferable")}}) avec des _workers_ et à haute performance. Les objets transférables sont passés d'un contexte à l'autre avec une opération [zero-copy](https://en.wikipedia.org/wiki/Zero-copy) qui permet d'obtenir des améliorations sensibles lors de l'échange de données volumineuses. On peut voir cela comme un passage de référence du monde C/C++ mais les données qui sont transférées depuis le contexte appelant ne sont plus disponibles dans ce contexte après le transfert. La propriété des données est transférée au nouveau contexte. Ainsi, lorsqu'on transfère un objet {{jsxref("ArrayBuffer")}} depuis l'application principale vers le _worker_, l'objet {{jsxref("ArrayBuffer")}} de départ est nettoyé et ne peut plus être utilisé, son contenu est (littéralement) transféré au contexte du _worker_.
 
 ```js
 // Créer un fichier de 32MB et le remplir.
@@ -502,7 +502,7 @@ La plupart des fonctionnalités JavaScript standard peuvent être utilisées dan
 
 - {{domxref("Navigator")}}
 - {{domxref("XMLHttpRequest")}}
-- {{jsxref("Objets_globaux/Array", "Array")}}, {{jsxref("Objets_globaux/Date", "Date")}}, {{jsxref("Objets_globaux/Math", "Math")}} et {{jsxref("Objets_globaux/String", "String")}}
+- {{jsxref("Array")}}, {{jsxref("Date")}}, {{jsxref("Math")}} et {{jsxref("String")}}
 - {{domxref("WindowTimers.setTimeout")}} et {{domxref("WindowTimers.setInterval")}}
 
 En revanche, un _worker_ ne pourra pas directement manipuler la page parente et notamment le DOM et les objets de la page. Il faudra effectuer ce traitement indirectement, via des messages.

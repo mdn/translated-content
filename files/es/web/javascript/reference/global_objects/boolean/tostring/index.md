@@ -35,4 +35,4 @@ Este método se utiliza habitualmente en llamadas internas por JavaScript y no e
 
 ## Vea También
 
-- {{jsxref("Object.prototype.toSource()")}} {{Non-standard_inline()}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}} {{Non-standard_inline()}}

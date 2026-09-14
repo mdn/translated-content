@@ -1,12 +1,12 @@
 ---
 title: サーバーサイドウェブフレームワーク
+short-title: サーバーサイドフレームワーク
 slug: Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks
-original_slug: Learn/Server-side/First_steps/Web_frameworks
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 6aca3e5157dbc163fe8209d9bf8cc3f2e8ec3f9d
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 前の記事では、ウェブクライアントとサーバー間の通信、HTTP リクエストとレスポンスの性質、およびウェブブラウザーからのリクエストにレスポンスするためにサーバーサイドウェブアプリケーションが実行する必要があることについて説明しました。この知識をもとに、ウェブフレームワークがどのようにこれらのタスクを単純化できるかを探り、最初のサーバーサイドウェブアプリケーションのためのフレームワークをどのように選択するかを考えてみましょう。
 
@@ -16,7 +16,7 @@ l10n:
       <th scope="row">前提条件:</th>
       <td>
         HTTP リクエストを処理して応答するサーバー側コードがどのようなものかに関する基本的な理解（<a
-          href="/ja/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
           >クライアント・サーバーの概要</a
         >を参照）
       </td>
@@ -24,7 +24,7 @@ l10n:
     <tr>
       <th scope="row">目的:</th>
       <td>
-        ウェブフレームワークがどのようにサーバサイドコードの開発/保守を簡素化するかを理解し、読者が自分自身でフレームワークを選択することを考えられるようになること。
+        ウェブフレームワークがどのようにサーバーサイドコードの開発/保守を簡素化するかを理解し、読者が自分自身でフレームワークを選択することを考えられるようになること。
       </td>
     </tr>
   </tbody>
@@ -78,8 +78,8 @@ Django は開発者が URL パターンとビュー関数の間の URL マッピ
 ```python
 urlpatterns = [
     url(r'^$', views.index),
-    # example: /best/myteamname/5/
-    url(r'^(?P<team_name>\w.+?)/(?P<team_number>[0-9]+)/$', views.best),
+    # example: /best/my_team_name/5/
+    url(r'^best/(?P<team_name>\w+?)/(?P<team_number>[0-9]+)/$', views.best),
 ]
 ```
 
@@ -87,8 +87,7 @@ urlpatterns = [
 
 データはさまざまな方法で HTTP リクエストにエンコードできます。サーバーからファイルまたはデータを取得するための HTTP `GET` リクエストは、URL 引数または URL 構造内で必要なデータをエンコードすることができます。サーバー上のリソースを更新するための HTTP `POST` リクエストは、代わりに更新情報をリクエストの本文内に「POST データ」として含めます。HTTP リクエストはまた、現在のセッションまたはユーザーに関する情報をクライアント側のクッキーに含めることができます。
 
-ウェブフレームワークは、この情報にアクセスするためのプログラミング言語に適したメカニズムを提供します。
-たとえば、Django がすべてのビュー関数に渡す `HttpRequest` オブジェクトには、対象の URL にアクセスするためのメソッドとプロパティ、リクエストの種類 (HTTP `GET` など)、`GET` または `POST` 引数、cookie、セッションデータなどが含まれます。Django は URL マッパーで「キャプチャパターン」を定義することで URL の構造にエンコードされた情報を渡すこともできます (上のセクションの最後のコードを見てください)。
+ウェブフレームワークは、この情報にアクセスするためのプログラミング言語に適したメカニズムを提供します。たとえば、Django がすべてのビュー関数に渡す `HttpRequest` オブジェクトには、対象の URL にアクセスするためのメソッドとプロパティ、リクエストの種類 (HTTP `GET` など)、`GET` または `POST` 引数、cookie、セッションデータなどが含まれます。Django は URL マッパーで「キャプチャパターン」を定義することで URL の構造にエンコードされた情報を渡すこともできます (上のセクションの最後のコードを見てください)。
 
 ### データベースアクセスを抽象化および単純化する
 
@@ -152,7 +151,7 @@ def youngest(request):
 ```django
 #best/templates/best/index.html
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <body>
     {% if youngest_teams %}
@@ -176,7 +175,6 @@ def youngest(request):
 
 - **学ぶ努力:** ウェブフレームワークを学ぶための努力は、基礎となるプログラミング言語、その API の一貫性、その文書の品質、およびそのコミュニティの規模と活動に慣れているかどうかによって異なります。まったくプログラミングの経験がない場合は、 Django を検討してください (上記の基準に基づいて学ぶのが最も簡単な方法の 1 つです)。 すでに特定のウェブフレームワークやプログラミング言語に関する豊富な経験を持っている開発チームの一員であれば、それにこだわるのは理にかなっています。
 - **生産性:** 生産性とは、フレームワークに慣れれば新しい機能をどれだけ早く作成できるかを示す尺度であり、コードの作成と保守の両方の作業が含まれます (古い機能が壊れている間は新しい機能を作成できないため)。生産性に影響を与える要因の多くは、「学ぶ努力」の要因と似ています。例えばドキュメント、コミュニティ、プログラミング経験などで、その他の要因としては
-
   - _フレームワークの目的/原点_: ウェブフレームワークの中には、特定の種類の問題を解決するために最初に作成されたものもあり、同様の制約を持つウェブアプリケーションを作成するのに優れています。たとえば、 Django は新聞のウェブサイトの開発をサポートするために作成されたので、ブログやその他のものを公開するサイトに適しています。それとは対照的に、 Flask ははるかに軽量なフレームワークであり、組み込みデバイスで実行されるウェブアプリケーションを作成するのに最適です。
   - _考え方がある vs ない_: 考え方のあるフレームワークは、特定の問題を解決するための推奨される「最善の」方法があるものです。一般的な問題を解決する場合に、考え方のあるフレームワークはより生産的になる傾向がありますが、時々柔軟性が劣ります。
   - _電池が含まれている か 自分でそれを入手_: 一部のウェブフレームワークには、開発者が「デフォルトで」考えうるすべての問題に対処するツール/ライブラリーが含まれています。一方、より軽量なフレームワークには、ウェブ開発者が別々のライブラリーから問題の解決策を選んで解決することがあります (Django は前者の例で、 Flask は非常に軽量なフレームワークの例です)。すべてを含むフレームワークは、必要なものがすべて揃っているため、始めるのが簡単なことが多く、それがうまくまとまって文書化されている可能性があります。
@@ -190,18 +188,16 @@ def youngest(request):
 
 ライセンス、フレームワークが活発に開発されているかどうかなど、他にも多くの要因が考えられます。
 
-プログラミングの完全な初心者であるならば、おそらく「学びやすさ」に基づいてフレームワークを選ぶでしょう。言語自体の「使いやすさ」に加えて、高品質のドキュメント/チュートリアル、および新しいユーザーを支援する活発なコミュニティが最も貴重なリソースです。コースの後半で例を書くために [Django](https://www.djangoproject.com/) (Python) と [Express](http://expressjs.com/) (Node/JavaScript) を選択しました。これは主にそれらが習得が容易で優れたサポートがあるためです。
+プログラミングの完全な初心者であるならば、おそらく「学びやすさ」に基づいてフレームワークを選ぶでしょう。言語自体の「使いやすさ」に加えて、高品質のドキュメント/チュートリアル、および新しいユーザーを支援する活発なコミュニティが最も貴重なリソースです。コースの後半で例を書くために [Django](https://www.djangoproject.com/) (Python) と [Express](https://expressjs.com/) (Node/JavaScript) を選択しました。これは主にそれらが習得が容易で優れたサポートがあるためです。
 
-> **メモ:** [Django](https://www.djangoproject.com/) (Python) と [Express](http://expressjs.com/) (Node/JavaScript) のメインウェブサイトに行き、それらのドキュメントとコミュニティを調べてみましょう。
+> [!NOTE]
+> [Django](https://www.djangoproject.com/) (Python) と [Express](https://expressjs.com/) (Node/JavaScript) のメインウェブサイトに行き、それらのドキュメントとコミュニティを調べてみましょう。
 >
 > 1. メインサイトに移動する (上記のリンク先)
->
 >    - Documentation メニューのリンク (Documentation、Guide、API Reference、Getting Started など) をクリックします。
 >    - URL ルーティング、テンプレート、データベース/モデルの設定方法を説明したトピックはありますか？
 >    - ドキュメントは明確ですか？
->
 > 2. 各サイトのメーリングリストに移動します (コミュニティリンクからアクセス可能)。
->
 >    - 過去数日間に投稿された質問の数
 >    - 回答はいくつありますか？
 >    - 彼らは活発なコミュニティを持っていますか？
@@ -217,9 +213,7 @@ def youngest(request):
 
 ### Django (Python)
 
-[Django](https://www.djangoproject.com/) は、迅速な開発とクリーンで実用的なデザインを促進する高レベルの Python ウェブフレームワークです。
-
-経験豊富な開発者によって構築されており、ウェブ開発における面倒なことの大部分を世話します、そのため、車輪の再発明をする必要なく、アプリの作成に集中できます。無料でオープンソースです。
+[Django](https://www.djangoproject.com/) は、迅速な開発とクリーンで実用的なデザインを促進する高レベルの Python ウェブフレームワークです。経験豊富な開発者によって構築されており、ウェブ開発における面倒なことの大部分を世話します、そのため、車輪の再発明をする必要なく、アプリの作成に集中できます。無料でオープンソースです。
 
 Django は「バッテリー同梱」という哲学に従い、ほとんどの開発者が「一般的に」実行したいと思うほとんどすべてのことを提供します。すべてが含まれているので、すべて一緒に機能し、一貫した設計原理に従い、そして広範囲かつ最新のドキュメントがあります。また、高速で安全、そして非常にスケーラブルです。Python をベースにしているので、Django のコードは読みやすく、保守も簡単です。
 
@@ -227,33 +221,33 @@ Django は「バッテリー同梱」という哲学に従い、ほとんどの�
 
 ### Flask (Python)
 
-[Flask](https://flask.palletsprojects.com) は Python 用のマイクロフレームワークです。
+[Flask](https://flask.palletsprojects.com/) は Python 用のマイクロフレームワークです。
 
-最小構成ですが、 Flask は一般的に真面目なウェブサイトを作成することができます。開発サーバーとデバッガーが含まれており、[Jinja2](https://github.com/pallets/jinja) テンプレート、セキュアクッキー、[ユニットテスト](https://en.wikipedia.org/wiki/Unit_testing)、および [RESTful](http://www.restapitutorial.com/lessons/restfulresourcenaming.html) リクエストのディスパッチをサポートしています。良いドキュメントと活発なコミュニティも持っています。
+最小構成ですが、 Flask は一般的に真面目なウェブサイトを作成することができます。開発サーバーとデバッガーが含まれており、[Jinja2](https://github.com/pallets/jinja) テンプレート、セキュアクッキー、[ユニットテスト](https://en.wikipedia.org/wiki/Unit_testing)、および [RESTful](https://restapitutorial.com/) リクエストのディスパッチをサポートしています。良いドキュメントと活発なコミュニティも持っています。
 
-Flask は、特に小規模でリソースに制約のあるシステムでウェブサービスを提供する必要がある開発者 (たとえば、[Raspberry Pi](https://www.raspberrypi.org/) でウェブサーバーを実行する、[Drone コントローラー](https://www.techuseful.com/drone-definitions-learning-the-drone-lingo/)にとって非常に人気があります。
+Flask は、特に小規模でリソースに制約のあるシステムでウェブサービスを提供する必要がある開発者（たとえば、[Raspberry Pi](https://www.raspberrypi.org/) でウェブサーバーを実行する、[Drone コントローラー](https://www.techuseful.com/drone-definitions-learning-the-drone-lingo/)など）にとって非常に人気があります。
 
 ### Express (Node.js/JavaScript)
 
-[Express](http://expressjs.com/ja/) は、[Node.js](https://nodejs.org/ja/) 用の高速で、独創的で、柔軟で最小限のウェブフレームワークです (node は JavaScript を実行するためのブラウザーなしの環境です)。ウェブおよびモバイルアプリケーションに堅牢な機能を提供し、便利な HTTP ユーティリティメソッドと[ミドルウェア](/ja/docs/Glossary/Middleware)を提供します。
+[Express](https://expressjs.com/ja/) は、[Node.js](https://nodejs.org/ja/) 用の高速で、独創的で、柔軟で最小限のウェブフレームワークです (node は JavaScript を実行するためのブラウザーなしの環境です)。ウェブおよびモバイルアプリケーションに堅牢な機能を提供し、便利な HTTP ユーティリティメソッドと[ミドルウェア](/ja/docs/Glossary/Middleware)を提供します。
 
 Express はクライアントサイドの JavaScript ウェブプログラマーのサーバーサイド開発への移行が容易である、およびリソース効率が良い (基盤となるノード環境は、新しいウェブリクエストごとに別々のプロセスを生成するのではなく、スレッド内で軽量のマルチタスクを使用します) という部分で、非常に人気があります。
 
 Express は最小限のウェブフレームワークであるため、使用するすべてのコンポーネントが組み込まれているわけではありません (たとえば、データベースへのアクセス、ユーザーおよびセッションのサポートは、独立したライブラリーを通じて提供されます)。多くの優れた独立したコンポーネントがありますが、特定の目的に最適なものを見つけるのが難しい場合があります。
 
-[Feathers](https://feathersjs.com/)、[ItemsAPI](https://itemsapi.com/)、[KeystoneJS](http://keystonejs.com/)、[Kraken](https://krakenjs.com/)、[LoopBack](https://loopback.io/)、[MEAN](https://github.com/linnovate/mean)、[Sails](https://sailsjs.com/) などの、多くの一般的なサーバーサイドおよびフルスタックフレームワーク (サーバーサイドフレームワークとクライアントサイドフレームワークの両方を含む) が Express に基づいています。
+[Feathers](https://feathersjs.com/)、[ItemsAPI](https://itemsapi.com/)、[KeystoneJS](https://keystonejs.com/)、[Kraken](https://krakenjs.com/)、[LoopBack](https://loopback.io/)、[MEAN](https://github.com/linnovate/mean)、[Sails](https://sailsjs.com/) などの、多くの一般的なサーバーサイドおよびフルスタックフレームワーク (サーバーサイドフレームワークとクライアントサイドフレームワークの両方を含む) が Express に基づいています。
 
-Uber、Accenture、IBM などを含む多くの有名企業が Express を使用しています (リストは[こちら](http://expressjs.com/en/resources/companies-using-express.html))。
+Uber、Accenture、IBM などを含む多くの有名企業が Express を使用しています。
 
 ### Deno (JavaScript)
 
-[Deno](https://deno.land/)は、シンプルで現代的での安全な [JavaScript](/ja/docs/Web/JavaScript)/TypeScript ランタイムであり、 Chrome V8 と [Rust](https://www.rust-lang.org/) の上に構築されたフレームワークです。
+[Deno](https://deno.land/)は、シンプルで現代的での安全な [JavaScript](/ja/docs/Web/JavaScript)/TypeScript ランタイムであり、 Chrome V8 と [Rust](https://rust-lang.org/) の上に構築されたフレームワークです。
 
 Deno は、 Rust ベースの非同期ランタイムである [Tokio](https://tokio.rs/) を搭載しており、ウェブページをより高速に提供することができます。また、クライアントサイドで使用するバイナリーコードのコンパイラーが利用できる WebAssembly にも内部的に対応しています。 Deno は、より優れたセキュリティを自然に維持するメカニズムを提供することで、 [Node.js](/ja/docs/Learn_web_development/Extensions/Server-side/Node_server_without_framework) のループホールの一部を埋めることを目指しています。
 
 Deno は次のような機能を含んでいます。
 
-- 既定でセキュリティがあります。 Deno モジュールは、明示的に許可されていない限り、**ファイル**、**ネットワーク**、**環境**へのアクセスの[権限が制限されています](https://lyty.dev/deno/deno-permission.html)。
+- 既定でセキュリティがあります。 Deno モジュールは、明示的に許可されていない限り、**ファイル**、**ネットワーク**、**環境**へのアクセスの[権限が制限されています](https://docs.deno.com/runtime/fundamentals/security/)。
 - TypeScript 対応が**すぐに使えます**。
 - 第一級の待機メカニズム。
 - 組み込みのテスト機能とコード整形機能 (`deno fmt`)
@@ -270,7 +264,7 @@ Rails は Django と非常によく似た設計思想に従っています。 Dj
 
 もちろん、特定の設計上の決定と言語の性質により、多くの違いがあります。
 
-Rails は、[Basecamp](https://basecamp.com/)、[GitHub](https://github.com/)、[Shopify](https://shopify.com/)、[Airbnb](https://airbnb.com/)、[Twitch](https://twitch.tv/)、[SoundCloud](https://soundcloud.com/)、[Hulu](https://hulu.com/)、[Zendesk](https://zendesk.com/)、[Square](https://square.com/)、[Highrise](https://highrisehq.com/) などの有名なサイトに使用されています。
+Rails は、[Basecamp](https://basecamp.com/)、[GitHub](https://github.com/)、[Shopify](https://www.shopify.com/)、[Airbnb](https://www.airbnb.com/)、[Twitch](https://www.twitch.tv/)、[SoundCloud](https://soundcloud.com/)、[Hulu](https://www.hulu.com/welcome)、[Zendesk](https://www.zendesk.com/)、[Square](https://squareup.com/us/en) などの有名なサイトに使用されています。
 
 ### Laravel (PHP)
 
@@ -303,7 +297,7 @@ ASP.NET は、Microsoft、Xbox.com、Stack Overflow、その他多くのユー�
 Mojolicious が提供する機能のいくつかは以下の通りです。
 
 - リアルタイムウェブフレームワーク。つまり単一ファイルのプロトタイプを構造化された MVC ウェブアプリケーションに簡単に拡張できます。
-- RESTful なルート、プラグイン、コマンド、Perl 風のテンプレート、コンテンツネゴシエーション、セッション管理、フォーム検証、テストフレームワーク、静的ファイルサーバー、CGI/[PSGI](http://plackperl.org) 検出、ファーストクラス Unicode に対応。
+- RESTful なルート、プラグイン、コマンド、Perl 風のテンプレート、コンテンツネゴシエーション、セッション管理、フォーム検証、テストフレームワーク、静的ファイルサーバー、CGI/[PSGI](https://plackperl.org/) 検出、ファーストクラス Unicode に対応。
 - IPv6、TLS、SNI、IDNA、HTTP/SOCKS 5 プロキシー、UNIX ドメインソケット、Comet (ロングポーリング)、キープアライブ、コネクションプーリング、タイムアウト、Cookie、マルチパートおよび gzip 圧縮サポートを備えたフルスタックの HTTP および WebSocket クライアント/サーバー実装。
 - CSS セレクターをサポートする JSON および HTML/XML パーサーおよびジェネレーター。
 - 隠された魔法のない、とてもきれいで、移植性があり、オブジェクト指向の純粋な Perl API。
@@ -311,9 +305,9 @@ Mojolicious が提供する機能のいくつかは以下の通りです。
 
 ### Spring Boot (Java)
 
-[Spring Boot](https://spring.io/projects/spring-boot) は、[Spring](http://spring.io/) が提供している数多くのプロジェクトのうちの 1 つです。[Java](https://www.java.com) を使用してサーバーサイドのウェブ開発を行う良い出発点です。
+[Spring Boot](https://spring.io/projects/spring-boot/) は、[Spring](https://spring.io/) が提供している数多くのプロジェクトのうちの 1 つです。[Java](https://www.java.com/) を使用してサーバーサイドのウェブ開発を行う良い出発点です。
 
-[Java](https://www.java.com) をベースとした唯一のフレームワークではないことは間違いありませんが、スタンドアローンのプロダクショングレードの Spring ベースのアプリケーションを簡単に実行することができます。これは Spring プラットフォームと他社製ライブラリーの見解に基づいた見方ですが、最小限の手間と設定で始めることができます。
+[Java](https://www.java.com/) をベースとした唯一のフレームワークではないことは間違いありませんが、スタンドアローンのプロダクショングレードの Spring ベースのアプリケーションを簡単に実行することができます。これは Spring プラットフォームと他社製ライブラリーの見解に基づいた見方ですが、最小限の手間と設定で始めることができます。
 
 小さな問題にも使用できますが、その強みはクラウドアプローチを使用する大規模アプリケーションを構築することです。通常、複数のアプリケーションが互いに並行して実行され、ユーザーとのインタラクションを提供するものと、バックエンド作業を実行するもの (データベースやその他のサービスへのアクセスなど) のみがあります。ロードバランサーは、冗長性と信頼性を確保したり、ユーザーのリクエストを地理的に処理してレスポンス性を確保したりするのに役立ちます。
 
@@ -323,4 +317,4 @@ Mojolicious が提供する機能のいくつかは以下の通りです。
 
 このモジュールの次の記事では、方向を少し変えてウェブセキュリティについて考えます。
 
-{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}

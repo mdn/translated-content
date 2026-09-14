@@ -78,7 +78,7 @@ slug: Web/JavaScript/Reference/Statements/export
 ```js
 // test.js
 let k;
-export default k = 12;
+export default (k = 12);
 ```
 
 ```js

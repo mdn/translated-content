@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/regexp/match
 original_slug: Web/EXSLT/regexp/match
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}
 
 `regexp:match()` realiza la búsqueda de coincidencias de una expresión regular en una cadena, devolviendo las subcoincidencias halladas como resultado.
 

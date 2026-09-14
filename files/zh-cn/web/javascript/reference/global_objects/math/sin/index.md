@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
-
 **`Math.sin()`** 静态方法以弧度为单位返回一个数字的正弦值。
 
 {{InteractiveExample("JavaScript Demo: Math.sin()")}}

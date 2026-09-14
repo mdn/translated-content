@@ -1,15 +1,18 @@
 ---
-title: Content-Security-Policy (CSP)
+title: Content-Security-Policy (CSP) ヘッダー
 short-title: Content-Security-Policy
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy
-original_slug: Web/HTTP/Headers/Content-Security-Policy
 l10n:
-  sourceCommit: 232dc9186a6d79d7e12b3000999ad026d63e995e
+  sourceCommit: 6720d579bd658f02c56363805e97e69f93dc79f1
 ---
 
-{{HTTPSidebar}}
+HTTP の **`Content-Security-Policy`** レスポンスヘッダーは、ウェブサイト管理者が、あるページにユーザーエージェントが読み込みを許可されたリソースを管理できるようにします。
+いくつかの例外を除いて、大半のポリシーにはサーバーオリジンとスクリプトエンドポイントの指定を含んでいます。
+これは{{Glossary("cross-site scripting", "クロスサイトスクリプティング")}}攻撃を防ぐのに役立ちます。
 
-HTTP の **`Content-Security-Policy`** レスポンスヘッダーは、ウェブサイト管理者が、あるページにユーザーエージェントが読み込みを許可されたリソースを管理できるようにします。いくつかの例外を除いて、大半のポリシーにはサーバーオリジンとスクリプトエンドポイントの指定を含んでいます。これは{{Glossary("cross-site scripting", "クロスサイトスクリプティング")}}攻撃を防ぐのに役立ちます。
+違反は、[レポート API](/ja/docs/Web/API/Reporting_API) を使用して報告することができます。
+レポートは、ポリシーが適用されているページにおいて、[`ReportingObserver`](/ja/docs/Web/API/ReportingObserver) を使用して監視することができます。HTTP の {{HTTPHeader("Reporting-Endpoints")}} レスポンスヘッダーで定義され、CSP の {{CSP("report-to")}} ディレクティブを使用して選択されたサーバーエンドポイントに送信されます。
+詳しくは {{domxref("CSPViolationReport")}} を参照してください。
 
 [コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/Guides/CSP) がブラウザーにどのように配信されるか、また、その外観や、用途、展開戦略など、詳細については、ガイドをご覧ください。
 
@@ -18,10 +21,6 @@ HTTP の **`Content-Security-Policy`** レスポンスヘッダーは、ウェ�
     <tr>
       <th scope="row">ヘッダー種別</th>
       <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
-      <td>いいえ</td>
     </tr>
   </tbody>
 </table>
@@ -41,14 +40,12 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 フェッチディレクティブは、特定のリソース種別を読み込むことができる場所を制御します。
 
 - {{CSP("child-src")}}
-
   - : [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)と、{{HTMLElement("frame")}} や {{HTMLElement("iframe")}} のような要素によって読み込まれる入れ子の閲覧コンテキストのための有効なソースを定義します。
     `frame-src` および `worker-src` の[代替](#代替)となります。
 
 - {{CSP("connect-src")}}
   - : スクリプトインターフェイスによって読み込まれる URL を制限します。
 - {{CSP("default-src")}}
-
   - : 別の{{Glossary("Fetch directive", "フェッチディレクティブ")}}に対する代替として提供します。
 
     他のすべてのフェッチディレクティブの[代替](#代替)となります。
@@ -70,7 +67,6 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("prefetch-src")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 事前にフェッチされるか描画される有効なソースを指定します。
 - {{CSP("script-src")}}
-
   - : JavaScript および WebAssembly のための有効なソースを指定します。
 
     `script-src-elem` および `script-src-attr` の[代替](#代替)となります。
@@ -80,13 +76,12 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("script-src-attr")}}
   - : JavaScript のインラインイベントハンドラーのための有効なソースを指定します。
 - {{CSP("style-src")}}
-
   - : スタイルシートのための有効なソースを指定します。
 
     `style-src-elem` および `style-src-attr` の[代替](#代替)となります。
 
 - {{CSP("style-src-elem")}}
-  - : スタイルシートの {{HTMLElement("style")}} および {{HTMLElement("link")}} 要素に `rel="stylesheet"` がついたものののための有効なソースを指定します。
+  - : スタイルシートの {{HTMLElement("style")}} および {{HTMLElement("link")}} 要素に `rel="stylesheet"` がついたもののための有効なソースを指定します。
 - {{CSP("style-src-attr")}}
   - : 個々の DOM 要素に適用されるインラインスタイルの有効なソースを指定します。
 - {{CSP("worker-src")}}
@@ -116,7 +111,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("base-uri")}}
   - : 文書の {{HTMLElement("base")}} 要素で使用される URL を制限します。
 - {{CSP("sandbox")}}
-  - : {{HTMLElement("iframe")}} と [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性に類似した、リクエストされあtリソースに対してサンドボックスを有効にします。
+  - : {{HTMLElement("iframe")}} と [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性に類似した、リクエストされたリソースに対してサンドボックスを有効にします。
 
 ### ナビゲーションディレクティブ
 
@@ -132,12 +127,11 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 報告ディレクティブは CSP 違反の報告過程を制御します。 {{HTTPHeader("Content-Security-Policy-Report-Only")}} ヘッダーも参照してください。
 
 - {{CSP("report-to")}}
-
   - : CSP 違反情報を送信するための報告エンドポイントまたはエンドポイントグループを識別するトークンをブラウザーに提供します。
-    トークンが表すエンドポイントは、他にも {{HTTPHeader("Reporting-Endpoints")}} などの HTTP ヘッダーでで指定されている場合があります。
+    トークンが表すエンドポイントは、他にも {{HTTPHeader("Reporting-Endpoints")}} などの HTTP ヘッダーで指定されている場合があります。
 
     > [!WARNING]
-    > このディレクティブは [`report-uri`](#report-uri) を置き換えることを意図しています。 `report-to` に対応したブラウザーでは、 `report-uri` ディレクティブは無視されます。
+    > このディレクティブは [`report-uri`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri) を置き換えることを意図しています。 `report-to` に対応したブラウザーでは、 `report-uri` ディレクティブは無視されます。
     > ただし、`report-to` が広く対応されるようになるまでは、次のようにどちらのヘッダーも指定してください（ここで、`endpoint_name` は別個に提供されたエンドポイントの名前です）。
     >
     > ```http
@@ -146,11 +140,10 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 ### その他のディレクティブ
 
-- {{CSP("require-trusted-types-for")}} {{experimental_inline}}
-  - : DOM XSS インジェクションシンクで [Trusted
-    Types](/ja/docs/Web/API/Trusted_Types_API) を強制します。
-- {{CSP("trusted-types")}} {{experimental_inline}}
-  - : [Trusted Types](/ja/docs/Web/API/Trusted_Types_API) ポリシーのホワイトリストを指定するために使用します (Trusted Types は、アプリケーションが DOM XSS インジェクションシンクをロックダウンして、文字列の代わりにスプーフィング不可能な型付きの値のみを受け入れるようにします)。
+- {{CSP("require-trusted-types-for")}}
+  - : DOM XSS インジェクションシンクで[信頼型](/ja/docs/Web/API/Trusted_Types_API)を強制します。
+- {{CSP("trusted-types")}}
+  - : [信頼型](/ja/docs/Web/API/Trusted_Types_API)ポリシーのホワイトリストを指定するために使用します (Trusted Types は、アプリケーションが DOM XSS インジェクションシンクをロックダウンして、文字列の代わりにスプーフィング不可能な型付きの値のみを受け入れるようにします)。
 - {{CSP("upgrade-insecure-requests")}}
   - : 安全でない URL (HTTP で提供されているもの) をすべて安全な URL (HTTPS で提供されているもの) に置き換えたかのように扱うようにユーザーエージェントに指示します。
     このディレクティブは、書き換えが必要な安全でない古い URL が大量にあるウェブサイトを対象としています。
@@ -158,12 +151,11 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 ### 非推奨のディレクティブ
 
 - {{CSP("block-all-mixed-content")}} {{deprecated_inline}}
-
   - : ページが HTTPS を使用して読み込まれた際に、 HTTP を使用して資産を読み込むことを防止します。
 
 - {{CSP("report-uri")}} {{deprecated_inline}}
   - : ユーザーエージェントにコンテンツセキュリティポリシーの違反を報告するよう指示します。
-    これは [`report-to`](#report-to) ディレクティブに置き換えられました。
+    これは [`report-to`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to) ディレクティブに置き換えられました。
 
 ## フェッチディレクティブの構文
 
@@ -178,7 +170,9 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 ### 'nonce-\<ノンス値>'
 
-この値は、文字列 `nonce-` に続いて {{glossary("Base64", "base64 エンコード")}}された文字列から成ります。この文字列は、サーバーが HTTP レスポンスごとに生成するランダムな値です。例を示します。
+この値は、文字列 `nonce-` に{{Glossary("Nonce", "ノンス")}}値を続けたものです。ノンス値は [Base64](/ja/docs/Glossary/Base64#base64_文字) または [URL セーフ Base64](/ja/docs/Glossary/Base64#url_およびファイル名セーフの_base64) の文字です。
+
+この文字列は、サーバーが HTTP レスポンスごとに生成するランダムな値です。例を示します。
 
 ```plain
 'nonce-416d1177-4d12-4e3b-b7c9-f6c409789fb8'
@@ -197,10 +191,10 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 ### '\<ハッシュアルゴリズム>-<ハッシュ値>'
 
-この値は、ハッシュアルゴリズムを識別する文字列に続いて、 {{glossary("Base64", "base64 エンコード")}}された文字列から成り、ハッシュ値を表します。
+この値は、ハッシュアルゴリズムを識別する文字列に `-` を続け、ハッシュ値を続けたものです。ハッシュ値は [Base64](/ja/docs/Glossary/Base64#base64_文字) または [URL セーフ Base64](/ja/docs/Glossary/Base64#url_およびファイル名セーフの_base64) の文字です。
 
 - ハッシュアルゴリズム識別子は、`sha256`、`sha384`、`sha512` のいずれかでなければなりません。
-- ハッシュ値は、 `<script>` または `<style>` リソースの base64 エンコードされた{{glossary("Cryptographic_hash_function", "ハッシュ")}}であり、SHA-256、SHA-384、SHA-512 のいずれかのハッシュ関数を使用して計算されます。
+- ハッシュ値は、 `<script>` または `<style>` リソースの base64 エンコードされた{{glossary("hash function", "ハッシュ")}}であり、SHA-256、SHA-384、SHA-512 のいずれかのハッシュ関数を使用して計算されます。
 
 例を示します。
 
@@ -210,7 +204,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 ブラウザーが文書を受け取ると、 `<script>` および `<style>` 要素のコンテンツをハッシュ化し、その結果を CSP ディレクティブ内のハッシュと照合し、一致した場合のみリソースを読み込みます。
 
-要素が（例えば [`src`](/ja/docs/Web/HTML/Element/script#src) 属性を使用して）外部リソースを読み込んだ場合、その要素には [`integrity`](/ja/docs/Web/HTML/Element/script#integrity) 属性もなければなりません。
+要素が（例えば [`src`](/ja/docs/Web/HTML/Reference/Elements/script#src) 属性を使用して）外部リソースを読み込んだ場合、その要素には [`integrity`](/ja/docs/Web/HTML/Reference/Elements/script#integrity) 属性もなければなりません。
 
 ディレクティブにハッシュと `unsafe-inline` がある場合、ブラウザーは `unsafe-inline` を無視します。
 
@@ -260,16 +254,35 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 安全なアップグレードが許可されています。
 
 - この文書が `http://example.com` から提供され、 CSP が `'self'` であれば、 `https://example.com` からのリソースも許可します。
-- この文書が `ws://example.com` から提供され、 CSP が `'self'` であれば、 `wss://example.com` からのリソースも許可します。
+- この文書が `ws://example.org` から提供され、 CSP が `'self'` であれば、 `ws://example.org` からのリソースも許可します。
+
+### 'trusted-types-eval'
+
+デフォルトで、CSP に `default-src` または `script-src` ディレクティブが含まれている場合、引数を JavaScript として評価する JavaScript 関数は無効化されます。
+この中に、[`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) や、 {{domxref("Window.setTimeout()", "setTimeout()")}} の [`code`](/ja/docs/Web/API/Window/setTimeout#code) 引数、または {{jsxref("Function/Function()", "Function()")}} コンストラクターが含まれます。
+
+`trusted-types-eval` キーワードを使用することができますが、これは[信頼型](/ja/docs/Web/API/Trusted_Types_API)が適用されており、文字列の代わりにこれらの関数に信頼型が渡されている場合にのみ、この保護を無効にすることができます。
+これにより、文字列を JavaScript として動的に評価することができるのですが、これは入力が挿入される前に変換関数を通過した後でのみ行われます。この変換関数によって、入力を[無害化](/ja/docs/Web/Security/Attacks/XSS#sanitization)し、潜在的に危険なマークアップを除去する機会が得られます。
+
+信頼型でこれらのメソッドを使用する場合は、`trusted-types-eval` を [`'unsafe-eval'`](#unsafe-eval) の代わりに使用しなければなりません。
+これにより、信頼型に対応していないブラウザーでは、これらのメソッドへのアクセスがブロックされます。
+
+> [!NOTE]
+> 開発者は、どうしても必要な場合を除き、`trusted-types-eval` やこれらのメソッドの使用を避けるべきです。
+> 信頼型は、入力が変換関数を通過することを保証するものであり、その変換によって入力が安全になることを保証するものではありません（そして、これを適切に実現するのはとても難しい場合があります）。
+
+詳細な使用情報については、CSP ガイドの [`eval()` および類似の API](/ja/docs/Web/HTTP/Guides/CSP#eval_および同様の_api) を参照してください。
 
 ### 'unsafe-eval'
 
-既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、引数を JavaScript として評価する JavaScript の機能は無効になります。これには、[`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval)、{{domxref("Window.setTimeout()", "setTimeout()")}} の [`code`](/ja/docs/Web/API/Window/setTimeout#code) 引数、または {{jsxref("Function/Function()", "Function()")}} コンストラクターが含まれます。
+既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、引数を JavaScript として評価する JavaScript の機能は無効になります。
+これには、[`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval)、{{domxref("Window.setTimeout()", "setTimeout()")}} の [`code`](/ja/docs/Web/API/Window/setTimeout#code) 引数、または {{jsxref("Function/Function()", "Function()")}} コンストラクターが含まれます。
 
 この保護を解除するには、 `unsafe-eval` キーワードを使用することができます。これにより、 JavaScript で文字列を動的に評価できるようになります。
 
 > [!WARNING]
 > 開発者は `'unsafe-eval'` を避けるべきです。なぜなら、それは CSP が存在する目的の多くを無意味にするからです。
+> ['trusted-types-eval'](#trusted-types-eval) は、これらのメソッドの使用が不可欠な場合に、「潜在的に」より安全な代替手段を提供します。
 
 詳しい使い方の情報は、 CSP ガイドの [`eval()` と同様の API](/ja/docs/Web/HTTP/Guides/CSP#eval_and_similar_apis) を参照してください。
 
@@ -284,7 +297,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、インライン JavaScript の実行は許可されません。これには以下が含まれます。
 
 - インラインの `<script>` タグ
-- インタ印のイベントハンドラー属性
+- インラインのイベントハンドラー属性
 - `javascript:` URL
 
 同様に、 CSP で `default-src` または `style-src` ディレクティブを記載している場合、インライン CSS は読み込まれません。
@@ -311,7 +324,8 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 
 ハッシュ値がインラインイベントハンドラー属性値または `style` 属性値のハッシュと一致する場合、そのコードは実行が許可されます。
 
-> **メモ:** `'unsafe-hashes'` 値は安全ではありません。
+> [!NOTE]
+> `'unsafe-hashes'` 値は安全ではありません。
 >
 > 特に、インラインイベントハンドラー属性のコンテンツが、インライン `<script>` 要素として文書内に注入される攻撃が可能になります。インラインイベントハンドラーが以下であると仮定します。
 >
@@ -325,7 +339,7 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 
 ### 'inline-speculation-rules'
 
-既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、インライン JavaScript の実行は許可されません。 `'inline-speculation-rules'` は、ブラウザーが [`type`](/ja/docs/Web/HTML/Element/script/type) 属性が [`speculationrules`](/ja/docs/Web/HTML/Element/script/type/speculationrules) であるインライン `<script>` 要素を読み込むことを許可します。
+既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、インライン JavaScript の実行は許可されません。 `'inline-speculation-rules'` は、ブラウザーが [`type`](/ja/docs/Web/HTML/Reference/Elements/script/type) 属性が [`speculationrules`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules) であるインライン `<script>` 要素を読み込むことを許可します。
 
 詳しくは[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) を参照してください。
 
@@ -344,19 +358,19 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 
 ### 'report-sample'
 
-この式がスクリプトやスタイルを制御するディレクティブに含まれ、そのディレクティブがブラウザーにインラインスクリプト、インラインスタイル、またはイベントハンドラー属性をブロックさせる場合、ブラウザーが生成する[違反レポート](/ja/docs/Web/HTTP/Guides/CSP#違反の報告)には、ブロックされたリソースの最初の 40 文字を含む {{domxref("CSPViolationReportBody.sample", "sample")}} プロパティが含まれます。
+この式がスクリプトやスタイルを制御するディレクティブに含まれ、そのディレクティブがブラウザーにインラインスクリプト、インラインスタイル、またはイベントハンドラー属性をブロックさせる場合、ブラウザーが生成する[違反レポート](/ja/docs/Web/HTTP/Guides/CSP#違反の報告)には、ブロックされたリソースの最初の 40 文字を含む {{domxref("CSPViolationReport.sample", "sample")}} プロパティが含まれます。
 
 ## ワーカー内の CSP
 
 [ワーカー](/ja/docs/Web/API/Worker)は、一般的に文書 (もしくは親ワーカー) のコンテンツセキュリティポリシーによって管理され*ません*。ワーカーに対してコンテンツセキュリティポリシーを指定するには、ワーカースクリプト自身が要求したリクエストに対して `Content-Security-Policy` レスポンスヘッダーを設定して下さい。
 
-ワーカースクリプトのオリジンがグローバルで一意の識別子の場合 (例えば、URL がデータやブロブのスキーマの場合) は例外です。この場合、ワーカーは文書もしくは作成元のワーカーのコンテンツセキュリティポリシーを継承します。
+ワーカースクリプトのオリジンがグローバルで一意の識別子の場合（例えば、URL のスキームが data や blob の場合）は例外です。この場合、ワーカーは文書もしくは作成元のワーカーのコンテンツセキュリティポリシーを継承します。
 
 ## 複数のコンテンツセキュリティポリシー
 
-CSP では、`Content-Security-Policy` ヘッダー、{{HTTPHeader("Content-Security-Policy-Report-Only")}} ヘッダーや {{HTMLElement("meta")}} 要素を経由したものを含む、リソースに対して複数のポリシーを指定することができます。
+CSP の機構では、`Content-Security-Policy` ヘッダー、{{HTTPHeader("Content-Security-Policy-Report-Only")}} ヘッダーや {{HTMLElement("meta")}} 要素を経由したものを含む、リソースに対して複数のポリシーを指定することができます。
 
-以下の例のように、 `Content-Security-Policy` ヘッダーを複数回使うことができます。ここでは {{CSP("connect-src")}} ディレクティブに特に注意してください。 2 つ目のポリシーでは接続を許可しているにもかかわらず、 1 つ目のポリシーには `connect-src 'none'` が含まれています。追加のポリシーを追加しても、保護されたリソースの機能が*さらに制限することができる*だけで、接続は許可されず、最も厳密なポリシーとして `connect-src 'none'` が強制されます。
+以下の例のように、 `Content-Security-Policy` ヘッダーを複数回使うことができます。ここでは {{CSP("connect-src")}} ディレクティブに特に注意してください。 2 つ目のポリシーでは接続を許可しているにもかかわらず、 1 つ目のポリシーには `connect-src 'none'` が含まれています。追加のポリシーを追加しても、保護されたリソースの機能がさらに制限することができるだけで、接続は許可されず、最も厳密なポリシーとして `connect-src 'none'` が強制されます。
 
 ```http
 Content-Security-Policy: default-src 'self' http://example.com;
@@ -422,6 +436,9 @@ Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violati
 ## 関連情報
 
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
+- CSP の {{CSP("report-to")}} ディレクティブ
+- {{httpheader("Reporting-Endpoints")}}
+- {{domxref("CSPViolationReport")}}
 - [コンテンツセキュリティポリシーを学ぶ](/ja/docs/Web/HTTP/Guides/CSP)
 - [WebExtension のコンテンツセキュリティ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [Adopting a strict policy](https://csp.withgoogle.com/docs/strict-csp.html)

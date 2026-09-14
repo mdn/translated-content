@@ -40,7 +40,6 @@ localeCompare(compareString, locales, options);
 - `compareString`
   - : La cadena de caracteres contra la cual se compara la `referenceStr`.
 - `locales` y `options`
-
   - : Estos argumentos configuran el comportamiento de la función y le permiten
     a las aplicaciones especificar el idioma cuyas convenciones de formato se
     deben usar. En implementaciones que ignoran los argumentos `locales` y
@@ -77,8 +76,8 @@ es equivalente a la cadena `compareString`.
 
 Cuando se compara un gran número de cadenas, como cuando se ordenan arreglos de
 gran tamaño, es mejor crear un objeto
-{{jsxref("Global_Objects/Collator", "Intl.Collator")}} y usar la función
-provista por su propiedad {{jsxref("Collator.prototype.compare", "compare")}}.
+{{jsxref("Intl/Collator", "Intl.Collator")}} y usar la función
+provista por su propiedad {{jsxref("Intl/Collator/compare", "compare")}}.
 
 ## Ejemplos
 
@@ -175,4 +174,4 @@ console.log("2".localeCompare("10", "en-u-kn-true")); // -1
 
 ## Véase también
 
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
+- {{jsxref("Intl/Collator", "Intl.Collator")}}

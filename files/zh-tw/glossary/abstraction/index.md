@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-{{GlossarySidebar}}
-
 **抽象化**在{{Glossary("computer programming", "電腦程式設計")}}中是一種減少複雜性並在複雜的軟體系統中實現高效設計與實作的方法。它將系統的技術複雜性隱藏在更簡單的 {{Glossary("API", "API")}} 之後。
 
 ## 資料抽象化的優勢

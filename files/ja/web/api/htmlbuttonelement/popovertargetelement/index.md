@@ -10,7 +10,7 @@ l10n:
 
 **`popoverTargetElement`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、制御ボタンで制御されるポップオーバー要素を取得および設定します。
 
-これは JavaScript において HTML の [`popovertarget`](/ja/docs/Web/HTML/Element/button#popovertarget) 属性に相当するものです。
+これは JavaScript において HTML の [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性に相当するものです。
 
 ## 値
 
@@ -24,7 +24,7 @@ DOM 内でのポップオーバー要素への参照です。
 `popover` 属性は [`"manual"`](/ja/docs/Web/API/Popover_API/Using#手動のポップオーバー状態の使用) に設定されているため、ポップオーバーはボタンを使用して閉じられなければならず、ポップオーバー領域外を選択して「簡単な解除」はできません。
 
 まず、ポップオーバーの表示と非表示に使用する HTML の `<button>` 要素と、ポップオーバーとなる `<div>` 要素を定義します。
-この場合、プログラムで設定する予定であるため、HTML の `<button>` 要素に [`popovertargetaction`](/ja/docs/Web/HTML/Element/button#popovertargetaction) 属性を設定したり、`<div>` 要素に [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性を設定したりする必要はありません。
+この場合、プログラムで設定する予定であるため、HTML の `<button>` 要素に [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性を設定したり、`<div>` 要素に [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性を設定したりする必要はありません。
 
 ```html
 <button id="toggleBtn">ポップオーバーの切り替え</button>

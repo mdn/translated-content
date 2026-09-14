@@ -1,49 +1,38 @@
 ---
 title: TimeRanges
 slug: Web/API/TimeRanges
+l10n:
+  sourceCommit: 87440643d71bf81a5bf4b8fa21db9e3d56ead395
 ---
 
-{{ APIRef }}
+{{APIRef("HTML DOM")}}
 
-L'interface TimeRanges est utilisée pour représenter un ensemble de plages de temps, principalement dans le but de savoir quelles portions du média ont été mises en mémoire tampon lors du chargement avec les éléments {{ HTMLElement("audio") }} et {{ HTMLElement("video") }}.
+Lors du chargement d'une ressource média pour une utilisation avec un élément HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}}, l'interface **`TimeRanges`** est utilisée pour représenter les plages de temps de la ressource média qui ont été mises en mémoire tampon, les plages de temps qui ont été lues et les plages de temps qui sont accessibles par recherche.
 
-Un objet TimeRanges comprend une ou plusieurs plages de temps, chacune définie par une position de début et de fin. On récupère ces valeurs en utilisant les méthodes start() et end(), en passant en paramètre l'index de la plage de temps que l'on souhaite récupérer.
+Un objet `TimeRanges` comprend une ou plusieurs plages de temps, chacune définie par une position de début et de fin. On récupère ces valeurs en utilisant les méthodes `start()` et `end()`, en passant en paramètre l'index de la plage de temps que l'on souhaite récupérer.
 
-Le terme "[normalized TimeRanges object](https://www.w3.org/TR/html5/the-iframe-element.html#normalized-timeranges-object)" (objet TimeRanges normalisé) indique que les plages dans un tel objet sont ordonnées, ne se chevauchent pas, ne sont pas vides, et ne se touchent pas (les plages adjacentes sont encapsulées dans une plage plus grande).
+## Objets TimeRanges normalisés
 
-### Propriétés
+Plusieurs membres des objets {{DOMxRef("HTMLMediaElement")}} retournent un **objet TimeRanges normalisé** — que [la spécification décrit <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/media.html#normalised-timeranges-object) comme ayant les caractéristiques suivantes&nbsp;:
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Nom</th>
-      <th>Description</th>
-      <th>Type retourné</th>
-      <th>Disponibilité</th>
-    </tr>
-    <tr>
-      <td>
-        <a href="/en/DOM/TimeRanges.length"><code>TimeRanges.length</code></a>
-      </td>
-      <td>
-        <p>
-          Le nombre de plages de temps contenues dans l'objet TimeRanges.
-          <strong>Lecture seule</strong>.
-        </p>
-      </td>
-      <td><p>unsigned long</p></td>
-      <td>?</td>
-    </tr>
-  </tbody>
-</table>
+_Les plages dans un tel objet sont ordonnées, ne se chevauchent pas et ne se touchent pas (les plages adjacentes sont fusionnées en une seule plage plus grande). Une plage peut être vide (référant à un seul instant dans le temps)._
 
-### Méthodes
+## Propriétés d'instance
 
-- {{ domxref("TimeRanges.start") }}
-  - : Retourne la position de début de la plage de temps. En paramètre, l'index de la plage de temps souhaitée.
-- {{ domxref("TimeRanges.end") }}
-  - : Retourne la position de fin de la plage de temps. En paramètre, l'index de la plage de temps souhaitée.
+- {{DOMxRef("TimeRanges.length")}} {{ReadOnlyInline}}
+  - : Retourne un `unsigned long` représentant le nombre de plages de temps représentées par l'objet TimeRanges.
 
-### Spécification
+## Méthodes d'instance
 
-- [WHATWG Working Draft](https://www.whatwg.org/specs/web-apps/current-work/#timeranges)
+- {{DOMxRef("TimeRanges.start()")}}
+  - : Retourne le temps pour le début de la plage avec l'index défini.
+- {{DOMxRef("TimeRanges.end()")}}
+  - : Retourne le temps pour la fin de la plage avec l'index défini.
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

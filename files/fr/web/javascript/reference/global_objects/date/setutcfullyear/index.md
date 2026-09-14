@@ -1,60 +1,63 @@
 ---
-title: Date.prototype.setUTCFullYear()
+title: "Date : méthode setUTCFullYear()"
+short-title: setUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`setUTCFullYear()`** des instances de {{JSxRef("Date")}} modifie l'année pour cette date selon le temps universel.
 
-La méthode **`setUTCFullYear()`** définit l'année complête pour la date, selon UTC.
-
-{{InteractiveExample("JavaScript Demo: Date.setUTCFullYear()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.setUTCFullYear()")}}
 
 ```js interactive-example
 const event = new Date("December 31, 1975 23:15:30 GMT-3:00");
 
 console.log(event.getUTCFullYear());
-// Expected output: 1976
+// Résultat attendu : 1976
 
 console.log(event.toUTCString());
-// Expected output: "Thu, 01 Jan 1976 02:15:30 GMT"
+// Résultat attendu : "Thu, 01 Jan 1976 02:15:30 GMT"
 
 event.setUTCFullYear(1975);
 
 console.log(event.toUTCString());
-// Expected output: "Wed, 01 Jan 1975 02:15:30 GMT"
+// Résultat attendu : "Wed, 01 Jan 1975 02:15:30 GMT"
 ```
 
 ## Syntaxe
 
-```js
-dateObj.setUTCFullYear(valeurAnnée[, valeurMois[, valeurJour]])
+```js-nolint
+setUTCFullYear(yearValue)
+setUTCFullYear(yearValue, monthValue)
+setUTCFullYear(yearValue, monthValue, dateValue)
 ```
 
 ### Paramètres
 
-- `valeurAnnée`
-  - : Un entier indiquant la valeur numérique d'une année, par exemple, 1995.
-- `valeurMois`
-  - : Paramètre optionnel, un entier entre 0 et 11 représentant les mois de janvier à décembre.
-- `valeurJour`
-  - : Paramètre optionnel, un entier entre 1 et 31 représentant le jour du mois. Si le paramètre `valeurJour` est utilisé, il est également nécessaire d'indiquer `valeurMois`.
+- `yearValue`
+  - : Un entier représentant l'année. Par exemple, 1995.
+- `monthValue` {{Optional_Inline}}
+  - : Un entier représentant le mois&nbsp;: 0 pour janvier, 1 pour février, etc.
+- `dateValue` {{Optional_Inline}}
+  - : Un entier compris entre 1 et 31 représentant le jour du mois. Si vous définissez `dateValue`, vous devez aussi définir `monthValue`.
 
 ### Valeur de retour
 
-Le nombre de millisecondes écoulées entre le premier janvier 1970 minuit, UTC et la date mise à jour.
+Modifie l'objet {{JSxRef("Date")}} en place et retourne son nouveau [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide). Si un paramètre vaut `NaN` (ou d'autres valeurs qui sont [contraintes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre) en `NaN`, comme `undefined`), la date est définie sur [Date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) et `NaN` est retourné.
 
 ## Description
 
-Si les paramètres `valeurMois` et `valeurJour` ne sont pas utilisés, les valeurs renvoyées par les méthodes {{jsxref("Objets_globaux/Date/getUTCMonth", "getUTCMonth()")}} et {{jsxref("Objets_globaux/Date/getUTCDate", "getUTCDate()")}} seront utilisées.
+Si vous ne définissez pas les paramètres `monthValue` et `dateValue`, les valeurs retournées par les méthodes {{JSxRef("Date/getUTCMonth", "getUTCMonth()")}} et {{JSxRef("Date/getUTCDate", "getUTCDate()")}} sont utilisées.
 
-Si un des paramètres indiqué est en dehors des limites attendues, `setUTCFullYear()` tentera de mettre à jour la date en conséquence. Ainsi si on utilise la valeur 15 pour `valeurMois`, l'année sera incrémentée de 1 (année + 1), et 3 sera utilisé pour le mois.
+Si un paramètre que vous définissez est en dehors de la plage attendue, `setUTCFullYear()` tente de mettre à jour les autres paramètres et les informations de date dans l'objet {{JSxRef("Date")}} en conséquence. Par exemple, si vous définissez 15 pour `monthValue`, l'année est incrémentée de 1 (`yearValue + 1`), et 3 est utilisé pour le mois.
 
 ## Exemples
 
-### Utiliser `setUTCFullYear()`
+### Utiliser le module `setUTCFullYear()`
 
 ```js
-var leGrandJour = new Date();
+const leGrandJour = new Date();
 leGrandJour.setUTCFullYear(1997);
 ```
 
@@ -68,5 +71,5 @@ leGrandJour.setUTCFullYear(1997);
 
 ## Voir aussi
 
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
+- Le module {{JSxRef("Date.prototype.getUTCFullYear()")}}
+- Le module {{JSxRef("Date.prototype.setFullYear()")}}

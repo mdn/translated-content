@@ -3,7 +3,7 @@ title: Безопасность веб-приложения Django
 slug: Learn_web_development/Extensions/Server-side/Django/web_application_security
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Защита пользовательских данных - важная часть проектирования любого веб-сайта.Ранее мы рассматривали некоторые наиболее распространённые угрозы безопасности в теме [Веб безопасность](/ru/docs/Web/Security). В данной статье будет представлена практическая демонстрация того, как встроенные механизмы защиты Django's обрабатывают подобные угрозы.
 
@@ -15,7 +15,8 @@ slug: Learn_web_development/Extensions/Server-side/Django/web_application_securi
 
 Тема [Веб безопасность](/ru/docs/Web/Security) рассматривает значение безопасности веб-приложения для проектирования серверного приложения и некоторые из наиболее распространённых угроз, от которых вам может потребоваться защита. Одна из ключевых идей этой темы состоит в том, что практически все атаки будут успешны, если веб-приложение доверяет пользовательским данным (например данным из браузера).
 
-> **Предупреждение:** **Важно:** Наиболее важный урок, который вы должны усвоить, состоит в том - что никогда не стоит доверять переданным пользователем данным. Они включают в себя GET параметры в URL, тело POST запроса, HTTP заголовки, cookies, загруженные пользователем данные и т.д. Всегда проверяйте и обрабатывайте все входные данные. Всегда готовьтесь к худшему.
+> [!WARNING]
+> Наиболее важный урок, который вы должны усвоить, состоит в том - что никогда не стоит доверять переданным пользователем данным. Они включают в себя GET параметры в URL, тело POST запроса, HTTP заголовки, cookies, загруженные пользователем данные и т.д. Всегда проверяйте и обрабатывайте все входные данные. Всегда готовьтесь к худшему.
 
 Хорошей новостью для всех разработчиков, использующих Django, является то, что большинство известных атак обрабатывается фреймворком! Статья [Безопасность в Django](https://docs.djangoproject.com/en/2.0/topics/security/) (Django docs) описывает методы обеспечения безопасности Django и стратегии защиты веб-приложения разработанного на данном фреймворке.
 
@@ -175,7 +176,7 @@ Django имеет методы обеспечения защиты от расп
 - [Веб безопасность](/ru/docs/Web/Security) (MDN)
 - [Безопасность вашего сайта](/ru/docs/Web/Security/Practical_implementation_guides) (MDN)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}
 
 ## In this module
 

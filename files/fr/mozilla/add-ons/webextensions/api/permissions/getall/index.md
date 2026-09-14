@@ -3,8 +3,6 @@ title: permissions.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/getAll
 ---
 
-{{AddonSidebar}}
-
 Récupère un objet {{WebExtAPIRef("permissions.Permissions")}} contenant toutes les permissions actuellement acccordées à l'extension.
 
 Il s'agit d'une fonction asynchrone qui retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -44,5 +42,3 @@ browser.permissions.getAll().then((result) => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

@@ -57,7 +57,7 @@ El método `find` no transforma el array desde el cual es llamado, pero la funci
 
 - `callback` no visitará ningún elemento añadido al array después de que comience la llamada a `find`.
 - Si un elemento existente no visitado del array es modificado por `callback`, su valor que se pasa al `callback` que lo visita será el valor en el momento en que `find` visita ese índice del elemento.
-- Los elementos que sean {{jsxref("delete", "deleted")}} (eliminados) aún se visitan.
+- Los elementos que sean {{jsxref("Operators/delete", "deleted")}} (eliminados) aún se visitan.
 
 ## Ejemplos
 

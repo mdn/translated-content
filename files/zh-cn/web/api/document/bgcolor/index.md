@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 23fb12ae62339140281b9aad2c9f856e2e5a4762
 ---
 
-{{APIRef("DOM")}} {{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 已弃用的 `bgColor` 属性用于获取或设置当前文档的背景颜色。
 

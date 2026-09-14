@@ -29,7 +29,7 @@ Uma _string_ representando a data.
 
 ## Descrição
 
-Instâncias de {{jsxref("Date")}} herdam o método `toString()` de {{jsxref("Date.prototype")}}, não {{jsxref("Object.prototype")}}. `Date.prototype.toString()` retorna uma _string_ com a representação de Date no formato especificado na ECMA-262 que pode ser resumida como:
+Instâncias de {{jsxref("Date")}} herdam o método `toString()` de {{jsxref("Date")}}, não {{jsxref("Object")}}. `Date.prototype.toString()` retorna uma _string_ com a representação de Date no formato especificado na ECMA-262 que pode ser resumida como:
 
 - Dia da semana: 3 letras do nome do dia da semana em Inglês, e.g. "Sat"
 - espaço
@@ -47,14 +47,12 @@ Instâncias de {{jsxref("Date")}} herdam o método `toString()` de {{jsxref("Dat
 - espaço
 - A _string_ "GMT"
 - Sinal do deslocamento do fuso horário, pode ser:
-
   - "+" para deslocamentos positivos (0 ou maior)
   - "-" para deslocamentos negativos (menores que 0)
 
 - Dois dígitos da hora do deslocamento, e.g. "14"
 - Dois dígitos dos minutos do deslocamento, e.g. "00"
 - Opcionalmente, um nome de fuso horário consistindo de:
-
   - espaço
   - parênteses esquerdo, i.e. "("
   - Uma representação de _string_ dependente da implementação do fuso horário, que pode ser uma abreviação ou o nome completo (não há um padrão para nomes ou abreviação de fusos horários), e.g. "Line Islands Time" ou "LINT"

@@ -11,7 +11,7 @@ l10n:
 
 이것은 {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Origin")}}, 선택적으로 {{HTTPHeader("Access-Control-Request-Headers")}} 헤더 구성으로 2가지 또는 3가지의 HTTP request headers를 사용하는 {{HTTPMethod("OPTIONS")}} 요청입니다.
 
-사전 요청은 일반적인 상황에서는 브라우저에서 자동으로 발생됩니다. 그러므로 프런트엔드 개발자가 이 요청을 직접 작성할 필요는 없습니다. [단순 요청](/ko/docs/Web/HTTP/CORS#simple_requests)의 경우 [사전 실행 요청](/ko/docs/Web/HTTP/CORS#preflighted_requests)이 생략됩니다.
+사전 요청은 일반적인 상황에서는 브라우저에서 자동으로 발생됩니다. 그러므로 프런트엔드 개발자가 이 요청을 직접 작성할 필요는 없습니다. [단순 요청](/ko/docs/Web/HTTP/Guides/CORS#simple_requests)의 경우 [사전 실행 요청](/ko/docs/Web/HTTP/Guides/CORS#preflighted_requests)이 생략됩니다.
 
 예를 들어, 클라이언트는 `DELETE` 요청을 하기 전에 사전 요청을 통해 서버가 {{HTTPMethod("DELETE")}}을 허용하는지 물어볼 수 있습니다.
 

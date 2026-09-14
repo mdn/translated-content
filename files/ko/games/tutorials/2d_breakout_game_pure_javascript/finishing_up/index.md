@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{GamesSidebar}}
-
 {{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 **10개의 레슨 중 마지막 단계**입니다. 이 수업을 마친 후 비교하여 살펴볼 소스코드는 [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html)에서 찾아볼 수 있습니다.

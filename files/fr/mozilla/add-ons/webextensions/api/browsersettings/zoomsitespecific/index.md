@@ -3,8 +3,6 @@ title: browserSettings.zoomSiteSpecific
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomSiteSpecific
 ---
 
-{{AddonSidebar}}
-
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jaccente est un booléen.
 
 Cette propriété contrôle le [réglage de configuration](https://support.mozilla.org/fr/kb/editeur-configuration-firefox) `browser.zoom.siteSpecific`, qui règle comment le zoom est appliqué aux sites et onglets.

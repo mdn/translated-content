@@ -2,7 +2,7 @@
 title: XMLHttpRequest における HTML の扱い
 slug: Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest
 l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+  sourceCommit: dbf313c424a43722626f369d5a8fb6bd1a1fafb7
 ---
 
 {{DefaultAPISidebar("XMLHttpRequest API")}}
@@ -29,92 +29,6 @@ xhr.responseType = "document";
 xhr.send();
 ```
 
-## 機能の検出
-
-### 方法 1
-
-この方法は「強制的に非同期」である性質を利用するものです。 `XMLHttpRequest` オブジェクトを同期モードで開いた後、 `responseType` 設定しようとすると、機能を実装しているブラウザーではエラーを投げますが、それ以外のブラウザーではそのまま動作します。
-
-```js
-function HTMLinXHR() {
-  if (!window.XMLHttpRequest) {
-    return false;
-  }
-  const req = new window.XMLHttpRequest();
-  req.open("GET", window.location.href, false);
-  try {
-    req.responseType = "document";
-  } catch (e) {
-    return true;
-  }
-  return false;
-}
-```
-
-[JSFiddle で閲覧](https://jsfiddle.net/HTcKP/1/)
-
-この方法は同期的であり、他の資産に頼りませんが、この機能があることを示すだけで実際の機能をチェックするものではないので、次の方法 2 の方がより信頼できるかもしれません。
-
-### 方法 2
-
-ブラウザーが {{domxref("XMLHttpRequest")}} で HTML の解釈処理に対応しているかどうかを確実に検出するには、二つの課題があります。まず、 HTML 対応が非同期モードでしか有効でないことから、検出結果は非同期で受け取られることになります。第二に、 `data:` URL を使用すると同時に `data:` URL の対応にも依存することになるため、実際に HTTP を通じて文書を取得しなければならないことです。
-
-つまり、 HTML 対応を検出するには、サーバ上にテスト用の HTML 文書が必要になります。このテストファイルは小さく、整形式の XML ではないものです。
-
-```html
-<title>&amp;&<</title>
-```
-
-このファイルが `detect.html` という名前だった場合、 HTML 対応を検出する関数は次のように書くことができます。
-
-```js
-function detectHtmlInXhr(callback) {
-  if (!window.XMLHttpRequest) {
-    setTimeout(function () {
-      callback(false);
-    }, 0);
-
-    return;
-  }
-  let done = false;
-  const xhr = new window.XMLHttpRequest();
-  xhr.onreadystatechange = () => {
-    if (xhr.readyState === 4 && !done) {
-      done = true;
-      callback(
-        !!(
-          xhr.responseXML &&
-          xhr.responseXML.title &&
-          xhr.responseXML.title === "&&<"
-        ),
-      );
-    }
-  };
-  xhr.onabort = xhr.onerror = () => {
-    if (!done) {
-      done = true;
-      callback(false);
-    }
-  };
-  try {
-    xhr.open("GET", "detect.html");
-    xhr.responseType = "document";
-    xhr.send();
-  } catch (e) {
-    setTimeout(function () {
-      if (!done) {
-        done = true;
-        callback(false);
-      }
-    }, 0);
-  }
-}
-```
-
-引数の `callback` は非同期に呼び出される関数であり、 HTML 対応がある場合には唯一の引数が `true` になり、 HTML 対応がない場合は唯一の引数が `false` になります。
-
-[JSFiddle で閲覧](https://jsfiddle.net/xfvXR/1/)
-
 ## 文字エンコーディング
 
 HTTP の {{HTTPHeader("Content-Type")}} ヘッダーで文字エンコーディングが宣言されている場合は、そのエンコーディングが使用されます。そうでない場合、もしバイトオーダーマークがある場合は、そのバイトオーダーマークが示すエンコーディングを使用します。そうでない場合、もしファイルの先頭 1024 バイト以内にエンコーディングを宣言する {{HTMLElement("meta")}} 要素がある場合は、そのエンコーディングが使用されます。それもない場合、ファイルは UTF-8 としてデコードされます。
@@ -130,4 +44,4 @@ HTTP の {{HTTPHeader("Content-Type")}} ヘッダーで文字エンコーディ�
 ## 関連情報
 
 - {{domxref("XMLHttpRequest")}}
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [XMLHttpRequest の使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

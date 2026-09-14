@@ -60,8 +60,7 @@ Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel 
 <textarea id="code" class="playable-code">
 ctx.scale(10, 3);
 ctx.fillRect(10,10,10,10);
-ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea
->
+ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea>
 ```
 
 ```js hidden
@@ -108,8 +107,7 @@ Vous pouvez utiliser `ctx.scale(-1, 1)` pour retourner le contexte horizontaleme
 ctx.scale(-1, 1);
 ctx.font = "48px serif";
 ctx.fillText("Hello world!", -320, 120);
-ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea
->
+ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea>
 ```
 
 ```js hidden

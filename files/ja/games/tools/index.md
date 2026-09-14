@@ -3,8 +3,6 @@ title: ゲーム開発のためのツール
 slug: Games/Tools
 ---
 
-{{GamesSidebar}}
-
 このページにはゲーム開発ツールに関する記事へのリンクがまとまっています。ゆくゆくはフレームワークやコンパイラー、デバッグ用ツールもカバーすることを目指しています。
 
 - [asm.js](/ja/docs/Games/Tools/asm.js)
@@ -16,9 +14,7 @@ slug: Games/Tools
 - [Shumway](/ja/docs/Mozilla/Projects/Shumway)
   - : Shumway は Adobe Flash で作成されたものを JavaScript や WebGL などを用いてレンダリングします。これを利用することで Flash とオープンなウェブ標準との間の溝を埋められます。この文書では Shumway の利用方法と、バグ修正にコントリビュートする方法について解説します。
 - ゲーム開発とデバッグのためのツールチェーン
-
   - : 通常のウェブアプリのデバッグとの違いや、ツールについて解説します。多くは[開発ツール](https://firefox-source-docs.mozilla.org/devtools-user/index.html)でカバーされますが、特に有用なツールチェーンのチュートリアルはこちらです。
-
     - 基本的なツールの概要
     - [シェーダエディター](https://firefox-source-docs.mozilla.org/devtools-user/shader_editor/index.html)
     - パフォーマンスツール

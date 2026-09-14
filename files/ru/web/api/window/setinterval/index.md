@@ -17,9 +17,9 @@ var intervalID = scope.setInterval(code, delay);
 ### Параметры
 
 - `func`
-  - : {{jsxref("function")}} - функция, которая будет вызываться каждые `delay` миллисекунд. Ожидается, что функция не принимает параметры и ничего не возвращает.
+  - : {{jsxref("Operators/function", "function")}} - функция, которая будет вызываться каждые `delay` миллисекунд. Ожидается, что функция не принимает параметры и ничего не возвращает.
 - `code`
-  - : Этот необязательный синтаксис позволяет вам включать строку вместо функции, которая компилируется и выполняется каждые `delay` миллисекунд. Однако такая форма не рекомендуется по тем же причинам, которые делают {{jsxref("eval", "eval()")}} угрозой безопасности.
+  - : Этот необязательный синтаксис позволяет вам включать строку вместо функции, которая компилируется и выполняется каждые `delay` миллисекунд. Однако такая форма не рекомендуется по тем же причинам, которые делают {{jsxref("Global_Objects/eval", "eval()")}} угрозой безопасности.
 - `delay`
   - : Время в миллисекундах (одна тысячная секунды), на которое таймер выполнит задержку между вызовом функции. Если задано значение меньше 10, то будет использовано число 10. На самом деле задержка может быть больше чем указано, дополнительное объяснение приведено здесь: [Reasons for delays longer than specified](/ru/docs/Web/API/Window/setTimeout#объяснение).
 - `param1, ..., paramN` {{optional_inline}}
@@ -305,8 +305,7 @@ The following example simulates typewriter by first clearing and then slowly typ
         <p>
           Phasellus ac nisl lorem: <input type="text" /><br />
           <textarea style="width: 400px; height: 200px;">
-Nullam commodo suscipit lacus non aliquet. Phasellus ac nisl lorem, sed facilisis ligula. Nam cursus lobortis placerat. Sed dui nisi, elementum eu sodales ac, placerat sit amet mauris. Pellentesque dapibus tellus ut ipsum aliquam eu auctor dui vehicula. Quisque ultrices laoreet erat, at ultrices tortor sodales non. Sed venenatis luctus magna, ultricies ultricies nunc fringilla eget. Praesent scelerisque urna vitae nibh tristique varius consequat neque luctus. Integer ornare, erat a porta tempus, velit justo fermentum elit, a fermentum metus nisi eu ipsum. Vivamus eget augue vel dui viverra adipiscing congue ut massa. Praesent vitae eros erat, pulvinar laoreet magna. Maecenas vestibulum mollis nunc in posuere. Pellentesque sit amet metus a turpis lobortis tempor eu vel tortor. Cras sodales eleifend interdum.</textarea
-          >
+Nullam commodo suscipit lacus non aliquet. Phasellus ac nisl lorem, sed facilisis ligula. Nam cursus lobortis placerat. Sed dui nisi, elementum eu sodales ac, placerat sit amet mauris. Pellentesque dapibus tellus ut ipsum aliquam eu auctor dui vehicula. Quisque ultrices laoreet erat, at ultrices tortor sodales non. Sed venenatis luctus magna, ultricies ultricies nunc fringilla eget. Praesent scelerisque urna vitae nibh tristique varius consequat neque luctus. Integer ornare, erat a porta tempus, velit justo fermentum elit, a fermentum metus nisi eu ipsum. Vivamus eget augue vel dui viverra adipiscing congue ut massa. Praesent vitae eros erat, pulvinar laoreet magna. Maecenas vestibulum mollis nunc in posuere. Pellentesque sit amet metus a turpis lobortis tempor eu vel tortor. Cras sodales eleifend interdum.</textarea>
         </p>
         <p><input type="submit" value="Send" /></p>
       </form>

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c26709292444632dfbc4862f4b0b5f2adc5fff56
 ---
 
-{{AddonSidebar}}
-
 返回扩展的动态规则集。
 
 ## 语法
@@ -18,7 +16,6 @@ let gettingDynamicRules = browser.declarativeNetRequest.getDynamicRules();
 ### 参数
 
 - `filter` {{optional_inline}}
-
   - : 一个用于过滤返回规则列表的对象。
     - `ruleIds` {{optional_inline}}
       - : 一个包含 `integer` 的数组。要返回的规则的 ID。

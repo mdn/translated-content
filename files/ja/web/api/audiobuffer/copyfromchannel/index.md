@@ -32,9 +32,7 @@ copyFromChannel(destination, channelNumber, startInChannel)
 ### 例外
 
 - `indexSizeError`
-
   - : 入力引数のうちの一つが、受付可能な範囲の外にある場合。
-
     - `channelNumber` の値が存在しないチャンネル番号を指定している場合（つまり、チャンネルの {{domxref("AudioBuffer.numberOfChannels", "numberOfChannels")}} 以上である場合）。
     - `startInChannel` の値がソースバッファーの中に既に存在するサンプルの現在の範囲の外にある場合。つまり、現在の {{domxref("AudioBuffer.length", "length")}} より大きい場合。
 

@@ -2,10 +2,8 @@
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
 l10n:
-  sourceCommit: bb48907e64eb4bf60f17efd7d39b46c771d220a0
+  sourceCommit: 7c2fdcaace1ab622a1055b7cc710297c452ce9ee
 ---
-
-{{JSRef}}
 
 **`Array`** オブジェクトは、他のプログラミング言語の配列と同様に、[複数のアイテムの集合を単一の変数名の下に格納](/ja/docs/Learn_web_development/Core/Scripting/Arrays)することができ、[共通の配列操作を行う](#例)ためのメンバーを持っています。
 
@@ -30,7 +28,7 @@ arr.0; // 構文エラー
 
 JavaScript の構文では、数字で始まるプロパティには[ブラケット記法](/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクトとプロパティ)を使う必要があり、[ドット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使うことはできません。また、配列の添字を引用符で囲むことができますが（`years[2]` の代わりに `years['2']` のように）、ふつうはそうする必要はありません。
 
-`years[2]` の `2` は最終的に、JavaScript エンジンが内部的に `toString` メソッドで型変換することで文字列にされます。これは '2' と '02' が `years` オブジェクトの異なる場所を指すようにするためでです。このため、以下の例は `true` がログ出力されます。
+`years[2]` の `2` は最終的に、JavaScript エンジンが内部的に `toString` メソッドで型変換することで文字列にされます。これは '2' と '02' が `years` オブジェクトの異なる場所を指すようにするためです。このため、以下の例は `true` がログ出力されます。
 
 ```js
 console.log(years["2"] !== years["02"]);
@@ -111,7 +109,7 @@ const iterator = colors.keys();
 for (const key of iterator) {
   console.log(`${key}: ${colors[key]}`);
 }
-// 出力t
+// 出力
 // 0: red
 // 1: yellow
 // 2: blue
@@ -303,7 +301,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.entries()")}}
   - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)オブジェクトを返します。このオブジェクトは、配列中のそれぞれの位置に対するキー/値の組を保持しています。
 - {{jsxref("Array.prototype.every()")}}
-  - : 指定したテスト関数を配列中のすべての要素が満たした場合に `true` を返します。
+  - : 配列内で、指定されたテスト関数の条件を満たさない要素を見つけた場合は `false` を返します。それ以外の場合は `true` を返します。
 - {{jsxref("Array.prototype.fill()")}}
   - : 配列内の指定した開始位置から終了位置までの要素を固定値で埋めます。
 - {{jsxref("Array.prototype.filter()")}}
@@ -327,7 +325,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.indexOf()")}}
   - : 指定された値と等しい値を持つ最初の（添字の一番小さい）要素の添字を返します。見つからない場合、`-1` を返します。
 - {{jsxref("Array.prototype.join()")}}
-  - : 配列のすべての要素を結合した文字列を返します。
+  - : この配列内のすべての要素を、カンマまたは指定された区切り文字列で区切って連結した新しい文字列を返します。
 - {{jsxref("Array.prototype.keys()")}}
   - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)を返します。このオブジェクトは配列中の各添字のキーを保持します。
 - {{jsxref("Array.prototype.lastIndexOf()")}}
@@ -349,7 +347,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.slice()")}}
   - : 配列の一部を取り出して新しい配列として返します。
 - {{jsxref("Array.prototype.some()")}}
-  - : 指定したテスト関数を配列中の少なくとも 1 個の要素が満たした場合に `true` を返します。
+  - : 指定されたテスト関数を満たす要素が配列内に見つかった場合、`true` を返します。そうでなければ、`false` を返します。
 - {{jsxref("Array.prototype.sort()")}}
   - : 配列内で要素を整列し、配列を返します。
 - {{jsxref("Array.prototype.splice()")}}
@@ -485,7 +483,8 @@ console.log(removedItem);
 // みかん
 ```
 
-> **メモ:** `pop()` は配列の最後の項目を削除するためだけに使用できます。配列の最後にある複数の項目を削除したい場合は、次の例を参照してください。
+> [!NOTE]
+> `pop()` は配列の最後の項目を削除するためだけに使用できます。配列の最後にある複数の項目を削除したい場合は、次の例を参照してください。
 
 ### 配列の最後から複数の項目を取り除く
 
@@ -503,7 +502,7 @@ console.log(removedItems);
 
 ### 配列を最初の _N_ 項目ちょうどに切り詰める
 
-この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドはを使用して、配列 `fruits` を最初の 2 項目ちょうどに切り詰めます。
+この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、配列 `fruits` を最初の 2 項目ちょうどに切り詰めます。
 
 ```js
 const fruits = ["りんご", "バナナ", "いちご", "マンゴー", "さくらんぼ"];
@@ -528,7 +527,8 @@ console.log(removedItem);
 // りんご
 ```
 
-> **メモ:** `shift()` は最初の項目を配列から取り除く場合にのみ使用できます。複数の項目を配列の先頭から取り除く場合は、次の例を参照してください。
+> [!NOTE]
+> `shift()` は最初の項目を配列から取り除く場合にのみ使用できます。複数の項目を配列の先頭から取り除く場合は、次の例を参照してください。
 
 ### 配列の先頭から複数のアイテムを取り除く
 

@@ -2,7 +2,7 @@
 title: History API
 slug: Web/API/History_API
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
 ---
 
 {{DefaultAPISidebar("History API")}}

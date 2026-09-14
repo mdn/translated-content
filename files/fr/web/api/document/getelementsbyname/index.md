@@ -1,54 +1,66 @@
 ---
-title: document.getElementsByName()
+title: "Document : méthode getElementsByName()"
+short-title: getElementsByName()
 slug: Web/API/Document/getElementsByName
+l10n:
+  sourceCommit: f336c5b6795a562c64fe859aa9ee2becf223ad8a
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
-Renvoie une liste des éléments portant un {{domxref("element.name","name")}} donné dans le document (X)HTML.
+La méthode **`getElementsByName()`** de l'interface {{DOMxRef("Document")}} retourne une collection {{DOMxRef("NodeList")}} d'éléments ayant un attribut `name` donné dans le document.
 
 ## Syntaxe
 
-```js
-elements = document.getElementsByName(name);
+```js-nolint
+getElementsByName(name)
 ```
 
-- `elements` est une collection de {{domxref("NodeList")}}
-- `name` est la valeur de l'attribut `name` des éléments.
+### Paramètres
 
-## Exemple
+- `name`
+  - : La valeur de l'attribut `name` des éléments que nous recherchons.
+
+### Valeur de retour
+
+Une collection {{DOMxRef("NodeList")}} dynamique, ce qui signifie qu'elle se met automatiquement à jour lorsque de nouveaux éléments avec le même `name` sont ajoutés ou supprimés du document.
+
+## Exemples
 
 ```html
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
-    ...
+    <title>Exemple : utiliser document.getElementsByName</title>
   </head>
-
   <body>
-    <form name="up"><input type="text" /></form>
-    <div name="down"><input type="text" /></div>
-
-    <script>
-      var up_forms = document.getElementsByName("up");
-      console.log(up_forms[0].tagName); // retourne "FORM"
-    </script>
+    <input type="hidden" name="up" />
+    <input type="hidden" name="down" />
   </body>
 </html>
 ```
 
+```js
+const upNames = document.getElementsByName("up");
+console.log(upNames[0].tagName); // affiche "INPUT"
+```
+
 ## Notes
 
-L'attribut [`name`](/fr/docs/Web/API) est uniquement applicable aux documents (X) HTML. La méthode renvoie une collection {{domxref("NodeList")}} en cours qui contient tous les éléments avec une valeur donnée pour l'attribut name, tels que {{htmlelement("meta")}} ou {{htmlelement("object")}} ou même si le nom est placé sur des éléments qui ne supportent pas du tout un attribut `name`.
+L'attribut `name` ne peut être appliqué que dans les documents (X)HTML.
 
-La méthode **getElementsByName** fonctionne différemment dans différents navigateurs. Dans IE <10, la méthode getElementsByName () renvoie également les éléments qui ont un attribut id avec la valeur spécifiée. Vous devriez donc faire attention à ne pas utiliser la même chaîne pour le nom et l'identifiant.
+La collection {{DOMxRef("NodeList")}} retournée contient _tous_ les éléments ayant le nom (`name`) donné, tels que {{HTMLElement("meta")}}, {{HTMLElement("object")}}, et même les éléments HTML qui ne supportent pas du tout l'attribut `name`.
 
 ## Spécifications
 
 {{Specifications}}
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 ## Voir aussi
 
-- {{domxref("document.getElementById()")}} pour retourner une référence à un élément par son ID
-- {{domxref("document.getElementsByTagName()")}} pour renvoyer les références sur les éléments avec la balise de nom donnée
-- {{domxref("document.querySelector()")}} pour des sélecteurs par des requêtes comme `'div.myclass'`
+- La méthode {{DOMxRef("document.getElementById()")}} pour retourner une référence à un élément par son ID
+- La méthode {{DOMxRef("document.getElementsByTagName()")}} pour retourner les références sur les éléments avec le même [nom de balise](/fr/docs/Web/API/Element/tagName)
+- La méthode {{DOMxRef("document.querySelector()")}} pour des sélecteurs par des requêtes comme `"div.maclasse"`

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/Function
 
 {{JSRef}}
 
-El constructor **`Function`** crea un nuevo **objeto** `Function`. Llamar al constructor directamente puede crear funciones dinámicamente, pero tiene problemas de seguridad y de rendimiento similares (pero mucho menos importantes) para {{jsxref("eval")}}. Sin embargo, a diferencia de eval, el constructor `Function` crea funciones que solo se ejecutan en el ámbito global.
+El constructor **`Function`** crea un nuevo **objeto** `Function`. Llamar al constructor directamente puede crear funciones dinámicamente, pero tiene problemas de seguridad y de rendimiento similares (pero mucho menos importantes) para {{jsxref("Global_Objects/eval", "eval")}}. Sin embargo, a diferencia de eval, el constructor `Function` crea funciones que solo se ejecutan en el ámbito global.
 
 {{InteractiveExample("JavaScript Demo: Function()", "shorter")}}
 
@@ -15,8 +15,6 @@ const sum = new Function("a", "b", "return a + b");
 console.log(sum(2, 6));
 // Expected output: 8
 ```
-
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
 
 ## Sintaxis
 

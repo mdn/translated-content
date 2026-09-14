@@ -3,7 +3,7 @@ title: 키 기반 컬렉션
 slug: Web/JavaScript/Guide/Keyed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}
 
 이번 장에서는 입력된 키값을 기준으로 정렬되는 데이터의 집합(자료 구조)에 대해 소개 할 것이다. Map과 Set은 입력된 순서대로 반복적으로 접근 가능한 요소들을 포함하고 있다.
 
@@ -36,7 +36,7 @@ for (var [key, value] of sayings) {
 
 전통적으로 {{jsxref("Object", "objects", "", 1)}} 는 문자열을 값에 매핑하는 데 사용되었다. Object는 키를 값으로 설정하고, 값을 검색하고, 키를 삭제하고, 키에 저장된 내용을 검색 할 수 있게 만들어준다. 그러나 Map 객체는 더 나은 맵이 되도록 하는 몇 가지 장점을 가지고 있다.
 
-- Object의 키는 {{jsxref("Global_Objects/String","Strings")}}이며, Map의 키는 모든 값을 가질 수 있다.
+- Object의 키는 {{jsxref("String","Strings")}}이며, Map의 키는 모든 값을 가질 수 있다.
 - Object는 크기를 수동으로 추적해야하지만, Map은 크기를 쉽게 얻을 수 있다.
 - Map은 삽입된 순서대로 반복된다.
 - 객체(Object)에는 prototype이 있어 Map에 기본 키들이 있다. (이것은 map = Object.create(null) 를 사용하여 우회할 수 있다. )
@@ -138,4 +138,4 @@ Map객체의 key에 대한 동치성 비교와 Set객체의 값에 대한 동치
 - \-0과 +0은 같다고 간주한다.
 - {{jsxref("NaN")}}는 자기 자신하고 같다고 간주한다. (===와는 반대로)
 
-{{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}

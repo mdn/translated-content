@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 
 ## Сводка
 
-Свойство **`Intl.NumberFormat.prototype.format`** возвращает функцию-геттер, форматирующую число согласно локали и параметрам форматирования соответствующего объекта {{jsxref("Global_Objects/NumberFormat", "NumberFormat")}}.
+Свойство **`Intl.NumberFormat.prototype.format`** возвращает функцию-геттер, форматирующую число согласно локали и параметрам форматирования соответствующего объекта {{jsxref("Intl/NumberFormat", "NumberFormat")}}.
 
 ## Синтаксис
 
@@ -22,7 +22,7 @@ numberFormat.format(number)
 
 ## Описание
 
-Функция, возвращённая геттером `format`, форматирует число согласно локали и параметрам форматирования соответствующего объекта {{jsxref("Global_Objects/NumberFormat", "NumberFormat")}}.
+Функция, возвращённая геттером `format`, форматирует число согласно локали и параметрам форматирования соответствующего объекта {{jsxref("Intl/NumberFormat", "NumberFormat")}}.
 
 ## Примеры
 
@@ -39,7 +39,7 @@ console.log(numberFormat.format(654321.987));
 
 ### Пример: использование функции `format` вместе с `map`
 
-Использование функции, возвращённой геттером `format`, для форматирования всех чисел в массиве. Обратите внимание, что функция привязана к объекту {{jsxref("Global_Objects/NumberFormat", "NumberFormat")}}, из которого она была получена, так что её можно передавать в {{jsxref("Array.prototype.map")}} напрямую.
+Использование функции, возвращённой геттером `format`, для форматирования всех чисел в массиве. Обратите внимание, что функция привязана к объекту {{jsxref("Intl/NumberFormat", "NumberFormat")}}, из которого она была получена, так что её можно передавать в {{jsxref("Array.prototype.map")}} напрямую.
 
 ```js
 var a = [123456.789, 987654.321, 456789.123];
@@ -59,5 +59,5 @@ console.log(formatted.join("; "));
 
 ## Смотрите также
 
-- {{jsxref("NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
 - {{jsxref("Number.prototype.toLocaleString()")}}

@@ -45,7 +45,7 @@ O {{jsxref("NaN")}} cuando el primer carácter que no es un espacio en blanco no
 
 ### Number.parseFloat vs parseFloat
 
-Este método tiene la misma funcionalidad que la función global {{jsxref("parseFloat", "parseFloat()")}}:
+Este método tiene la misma funcionalidad que la función global {{jsxref("parseFloat()")}}:
 
 ```js
 Number.parseFloat === parseFloat; // true
@@ -53,7 +53,7 @@ Number.parseFloat === parseFloat; // true
 
 Este método también es parte de ECMAScript 2015. (Su propósito es la modularización de globales).
 
-Consulte {{jsxref("parseFloat", "parseFloat()")}} para obtener más detalles y ejemplos.
+Consulte {{jsxref("parseFloat()")}} para obtener más detalles y ejemplos.
 
 ## Especificaciones
 
@@ -67,4 +67,4 @@ Consulte {{jsxref("parseFloat", "parseFloat()")}} para obtener más detalles y e
 
 - [Polyfill de `Number.parseFloat` en `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("Number")}}: El objeto al que pertenece este método.
-- El método global {{jsxref("parseFloat", "parseFloat()")}}.
+- El método global {{jsxref("parseFloat()")}}.

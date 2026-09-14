@@ -1,12 +1,12 @@
 ---
 title: サーバーサイドのウェブサイトプログラミングの第一歩
+short-title: 第一歩
 slug: Learn_web_development/Extensions/Server-side/First_steps
-original_slug: Learn/Server-side/First_steps
 l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
-{{LearnSidebar}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side")}}
 
 このモジュールでは、サーバーサイドプログラミングに関する「これは何？」「クライアントサイドプログラミングとどう違うの？」「なぜ便利なの？」などのいくつかの基本的な質問について答えます。次に、最も人気のあるサーバーサイドの ウェブフレームワークの概要と、最初のサイトを作成するための最適なフレームワークの選択方法に関するガイダンスを提供します。最後に、ウェブサーバーのセキュリティに関する高度な入門記事を提供します。
 
@@ -14,7 +14,7 @@ l10n:
 
 このモジュールを開始する前に、サーバーサイドのウェブサイトプログラミングやその他のプログラミングの知識は必要ありません。
 
-しかしながら、"ウェブがどのように動作するか" を理解する必要があります。まず以下のトピックスを読むことをお勧めします:
+しかしながら、「ウェブがどのように動作するか」を理解する必要があります。まず以下のトピックを読むことをお勧めします。
 
 - [ウェブサーバーとは](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [ウェブサイトを作るのにどんなソフトウェアが必要か](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
@@ -39,3 +39,5 @@ l10n:
 ## 課題
 
 コードをまだ説明していないため、この「概要」モジュールでは課題はありません。サーバーサイドプログラミングを使用して提供できる機能の種類が何かをよく理解していることを期待しています。また、初めてのウェブサイトを作成するために使用するサーバーサイドの ウェブフレームワークについて決断していることを望みます。
+
+{{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side")}}

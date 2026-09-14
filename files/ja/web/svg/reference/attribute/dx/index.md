@@ -1,22 +1,17 @@
 ---
 title: dx
 slug: Web/SVG/Reference/Attribute/dx
-original_slug: Web/SVG/Attribute/dx
 l10n:
-  sourceCommit: 5f7c22deaa74973658257aeaa012ac2ec0be87ae
+  sourceCommit: d559e66723de93ce6c59eb5d22a29afca7265c2a
 ---
 
-{{SVGRef}}
-
-**`dx`** 属性は、要素やそのコンテンツの位置の x 軸方向のオフセットを示します。
+**`dx`** 属性は、要素またはそのコンテンツの位置を x 軸に沿ってずらすことを示します。
 
 この属性は以下の SVG 要素で使用することができます。
 
 - {{SVGElement('feDropShadow')}}
 - {{SVGElement('feOffset')}}
-- {{SVGElement('glyphRef')}}
 - {{SVGElement('text')}}
-- {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
 ## 例
@@ -64,7 +59,7 @@ line {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -89,35 +84,7 @@ line {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
-
-## glyphRef
-
-> [!WARNING]
-> SVG2 において、 {{SVGElement('glyphRef')}} は非推奨であり、使用しないでください。
-
-{{SVGElement('glyphRef')}} の場合、 `dx` はグリフの x オフセットを定義します。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -143,14 +110,22 @@ line {
     <tr>
       <th scope="row">値</th>
       <td>
+        (<strong
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        > のリスト
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >) のリスト
       </td>
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -198,37 +173,6 @@ line {
 
 {{EmbedLiveSample('text', '100%', 100)}}
 
-## tref
-
-> [!WARNING]
-> SVG2 において、 {{SVGElement('tref')}} は非推奨であり、使用しないでください。
-
-{{SVGElement('tref')}} では、 1 つの値を格納している場合、 `dx` はすべてのグリフに対する x 軸方向のシフト量を定義します。
-
-複数の値がある場合、`dx` は個々のグリフに対して、直前のグリフとの相対的な x 軸方向のシフト量を定義します。値の数がグリフの数よりも少ない場合、残りのグリフは `0` の値を使用します。値の数がグリフの数よりも多い場合は、余分な値は無視されます。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        List of
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><em>none</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
-
 ## tspan
 
 {{SVGElement('tspan')}} の場合、それが 1 つの値を格納する場合、 `dx` はすべての代替グリフに対して x 軸に沿ったシフト量を定義します。
@@ -240,14 +184,22 @@ line {
     <tr>
       <th scope="row">値</th>
       <td>
+        (<strong
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        > のリスト
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >) のリスト
       </td>
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>

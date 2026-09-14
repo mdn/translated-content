@@ -18,9 +18,7 @@ subscribe(subscriptions)
 ### 引数
 
 - `subscriptions`
-
   - : 以下が格納されたオブジェクトです。
-
     - `name`
       - : Cookie の名前を表す文字列です。
     - `url`

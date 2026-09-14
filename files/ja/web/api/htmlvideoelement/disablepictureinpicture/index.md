@@ -3,12 +3,14 @@ title: "HTMLVideoElement: disablePictureInPicture プロパティ"
 short-title: disablePictureInPicture
 slug: Web/API/HTMLVideoElement/disablePictureInPicture
 l10n:
-  sourceCommit: 4cbb657f882495b1cd18cbbaa8d1c5237bce4eb8
+  sourceCommit: 338e7cd6445f45216d4de20129acdf979aab96dd
 ---
 
 {{APIRef("Picture-in-Picture API")}}
 
 {{domxref("HTMLVideoElement")}} の **`disablePictureInPicture`** プロパティは HTML の属性を反映し、現在の要素でピクチャインピクチャ機能が無効になっているかどうかを示します。
+
+この値は、ウェブサイトからユーザーエージェントへのリクエストのみを表します。ユーザーの設定によって、最終的な動作が変わる場合があります。例えば、 Firefox ユーザーは、`media.videocontrols.picture-in-picture.respect-disablePictureInPicture` 設定を変更して、 PiP を無効にするリクエストを無視することができます。
 
 ## 値
 

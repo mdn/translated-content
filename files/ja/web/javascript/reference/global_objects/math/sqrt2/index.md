@@ -1,15 +1,14 @@
 ---
 title: Math.SQRT2
+short-title: SQRT2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`Math.SQRT2`** は静的データプロパティで、2 の平方根、約 1.414 を表します。
 
-**`Math.SQRT2`** プロパティは、 2 の平方根、約 1.414 を表します。
-
-{{InteractiveExample("JavaScript Demo: Math.SQRT2", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Math.SQRT2", "shorter")}}
 
 ```js interactive-example
 function getRoot2() {
@@ -17,7 +16,7 @@ function getRoot2() {
 }
 
 console.log(getRoot2());
-// Expected output: 1.4142135623730951
+// 予想される結果: 1.4142135623730951
 ```
 
 ## 値

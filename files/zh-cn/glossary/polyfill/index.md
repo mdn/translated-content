@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 Polyfill 是一块代码（通常是 Web 上的 JavaScript），用来为旧浏览器提供它没有原生支持的较新的功能。
 
 例如，Polyfill 可以用于在 IE7 中使用专门的 IE 滤镜模拟 `text-shadow` 的功能，或者使用 JavaScript 动态调整样式以模拟 rem 单位或媒体查询，或者其他任何你需要的功能。
