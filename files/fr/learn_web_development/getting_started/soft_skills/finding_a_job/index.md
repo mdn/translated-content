@@ -2,7 +2,7 @@
 title: Trouver un emploi
 slug: Learn_web_development/Getting_started/Soft_skills/Finding_a_job
 l10n:
-  sourceCommit: f99d00a1c3697e26a679925954e26564e7e79b98
+  sourceCommit: da7287ff61b6ea4db7f9a5e07be11263b525b7d0
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Core", "Learn_web_development/Getting_started/Soft_skills")}}
@@ -44,7 +44,7 @@ Si vous lisez ce site, vous êtes probablement intéressé·e par un emploi dans
 
 - Type exact de poste&nbsp;: souhaitez-vous être plutôt&nbsp;:
   - Web designer&nbsp;: utiliser HTML, CSS et des logiciels graphiques pour concevoir des interfaces utilisateur.
-  - Développeur·euse JavaScript&nbsp;: implémenter des fonctionnalités avec JavaScript et des frameworks.
+  - Développeur·euse JavaScript&nbsp;: implémenter des fonctionnalités avec JavaScript et des cadriciels.
   - Relations développeur·euse·s ou ingénieur·e avant-vente&nbsp;: échanger avec les client·e·s, les enthousiasmer pour la technologie, les aider à résoudre des problèmes et à développer des solutions.
   - Rédacteur·ice technique&nbsp;: rédiger la documentation pour expliquer le fonctionnement de la technologie et son utilisation.
   - Développeur·euse polyvalent·e.
@@ -189,7 +189,7 @@ Avant de commencer à postuler, voici quelques étapes utiles pour vous prépare
 - Essayez de trouver des contacts qui travaillent déjà dans l'entreprise, par exemple avec votre réseau communautaire ou sur LinkedIn, et engagez la conversation avec eux. Demandez-leur comment c'est de travailler dans cette entreprise et s'il y a des éléments spécifiques à connaître pour le poste. Si vous n'êtes pas adapté·e à ce poste, demandez s'il y a d'autres postes plus adaptés à venir prochainement. Évitez de contacter trop de personnes dans la même entreprise&nbsp;: choisissez plutôt une ou deux personnes qui semblent les plus proches du poste visé.
 - Faites d'autres recherches sur l'entreprise — lisez leur site/blog, renseignez-vous sur leur histoire et leurs objectifs. Prenez le temps d'utiliser leurs produits et de vous familiariser avec leur fonctionnement — par exemple, installez leur logiciel et utilisez-le pour créer une démo, ou développez un site qui utilise leurs API.
   > [!NOTE]
-  > Pour aller plus loin, essayez d'identifier un problème qu'ils cherchent à résoudre ou un bug dans leur produit, et proposez une solution avec une démo ou des extraits de code.
+  > Pour aller plus loin, essayez d'identifier un problème qu'ils cherchent à résoudre ou un bogue dans leur produit, et proposez une solution avec une démo ou des extraits de code.
 - Adaptez votre CV à ce poste précis. Analysez la description du poste et mettez en avant vos compétences et expériences les plus pertinentes, tout en minimisant ou supprimant les éléments moins adaptés. Mettez aussi en avant, dans votre portfolio, les démos ou exemples les plus pertinents pour ce poste, par exemple en les plaçant en haut de votre portfolio.
 
 ### Candidater à l'emploi
@@ -271,7 +271,7 @@ Les entretiens comportent inévitablement des questions basées sur l'expérienc
 
 - «&nbsp;Donnez un exemple de situation où vous avez dû faire un retour négatif à un·e collègue sur son code. Comment avez-vous géré cela&nbsp;?&nbsp;»
 - «&nbsp;Racontez une fois où vous avez découvert en cours de projet que votre approche ne fonctionne pas. Comment avez-vous réagi et quelles mesures avez-vous prises&nbsp;?&nbsp;»
-- «&nbsp;Corriger de petits bugs est souvent difficile à intégrer dans le processus d'une équipe — la pile s'accumule et finit par être négligée. Comment avez-vous géré cela dans vos équipes précédentes&nbsp;?&nbsp;»
+- «&nbsp;Corriger de petits bogues est souvent difficile à intégrer dans le processus d'une équipe — la pile s'accumule et finit par être négligée. Comment avez-vous géré cela dans vos équipes précédentes&nbsp;?&nbsp;»
 
 Préparez un ensemble d'anecdotes à utiliser pour répondre à ce type de questions. Cela devient plus facile avec l'expérience.
 
@@ -280,7 +280,7 @@ Préparez un ensemble d'anecdotes à utiliser pour répondre à ce type de quest
 Certains entretiens sont techniques et visent à tester votre capacité à résoudre des problèmes de code. Par exemple&nbsp;:
 
 - «&nbsp;Écrivez une fonction JavaScript qui prend x et y en entrée et retourne z.&nbsp;»
-- «&nbsp;Un·e collègue a écrit le composant React suivant, mais il comporte des bugs. Pouvez-vous identifier le problème et le réécrire pour le corriger&nbsp;?&nbsp;»
+- «&nbsp;Un·e collègue a écrit le composant React suivant, mais il comporte des bogues. Pouvez-vous identifier le problème et le réécrire pour le corriger&nbsp;?&nbsp;»
 - «&nbsp;Regardez ce code et décrivez ce qu'il fait.&nbsp;»
 - «&nbsp;Écrivez un algorithme qui génère les `n` premiers termes de la suite de Fibonacci, où `n` est un nombre positif.&nbsp;»
 
@@ -320,8 +320,8 @@ Soyez patient·e. Même les meilleur·e·s candidat·e·s reçoivent plusieurs r
 ## Voir aussi
 
 - [Être embauché·e <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j/~0156?via=mdn) sur Scrimba
-- [Technical Interviewing 101&nbsp;: Ultimate Guide to Acing Your Tech Interview <sup>(angl.)</sup>](https://learntocodewith.me/posts/technical-interview/) sur learntocodewith.me (2022)
-- [30 Technical Interview Questions and Tips for Answering <sup>(angl.)</sup>](https://www.coursera.org/articles/technical-interview-questions) sur Coursera (2023)
+- [101 des questions d'entretien technique&nbsp;: Le guide ultime pour réussir votre entretien technique <sup>(angl.)</sup>](https://learntocodewith.me/posts/technical-interview/) sur learntocodewith.me (2022)
+- [30 astuces pour les questions d'entretien technique et conseils pour y répondre <sup>(angl.)</sup>](https://www.coursera.org/articles/technical-interview-questions) sur Coursera (2023)
 - [Comment décrocher son premier poste de développeur·euse](/fr/blog/how-to-land-your-first-developer-job/) sur le blog MDN (2024)
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Core", "Learn_web_development/Getting_started/Soft_skills")}}
