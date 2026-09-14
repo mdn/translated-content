@@ -2,12 +2,12 @@
 title: Longue tâche
 slug: Glossary/Long_task
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: c7460aab1397829c109a88e3a58fed9b7ef9c0c5
 ---
 
-Une **longue tâche** est une tâche qui prend plus de 50 ms à s'exécuter.
+Une **longue tâche** est une tâche qui prend plus de 50ms à s'exécuter.
 
-Il s'agit d'une période ininterrompue où la {{Glossary("main thread", "file d'exécution principale")}} est occupée pendant 50 ms ou plus. Des exemples courants incluent des gestionnaires d'événements longs, des {{Glossary("reflow", "reflows")}} coûteux et d'autres re-rendus, ainsi que le travail effectué par le navigateur entre différents tours de la boucle d'événements qui dépasse 50 ms.
+Il s'agit d'une période ininterrompue où la {{Glossary("main thread", "file d'exécution principale")}} est occupée pendant 50ms ou plus. Des exemples courants incluent des gestionnaires d'évènements longs, des {{Glossary("reflow", "re-calculs de mise en page")}} coûteux et d'autres re-rendus, ainsi que le travail effectué par le navigateur entre différents tours de la boucle d'évènements qui dépasse 50ms.
 
 ## Voir aussi
 
