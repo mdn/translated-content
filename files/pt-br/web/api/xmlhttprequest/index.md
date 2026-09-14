@@ -97,7 +97,7 @@ Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpReq
       <td>
         <p>
           Retorna um objeto JavaScript de tipo
-          {{domxref("ArrayBuffer")}}, {{domxref("Blob")}} ou
+          {{jsxref("ArrayBuffer")}}, {{domxref("Blob")}} ou
           {{domxref("Document")}}, de acordo com o que estiver contido
           no <code><a href="#responseType">responseType</a>. </code>Retorna
           <code>null</code> se a request não esteja completa ou não obteve

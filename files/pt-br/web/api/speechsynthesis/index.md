@@ -12,11 +12,11 @@ A interface **`SpeechSynthesis`** da [Web Speech API](/pt-BR/docs/Web/API/Web_Sp
 _`SpeechSynthesis` também herda propriedades da sua interface pai, {{domxref("EventTarget")}}._
 
 - {{domxref("SpeechSynthesis.paused")}} {{readonlyinline}}
-  - : Um {{domxref("Boolean")}} que retorna `true` se o objeto `SpeechSynthesis` está em estado de pausa.
+  - : Um {{jsxref("Boolean")}} que retorna `true` se o objeto `SpeechSynthesis` está em estado de pausa.
 - {{domxref("SpeechSynthesis.pending")}} {{readonlyinline}}
-  - : Um {{domxref("Boolean")}} que retorna `true` se a fila de elocuções contém falas que ainda não foram reproduzidas.
+  - : Um {{jsxref("Boolean")}} que retorna `true` se a fila de elocuções contém falas que ainda não foram reproduzidas.
 - {{domxref("SpeechSynthesis.speaking")}} {{readonlyinline}}
-  - : Um {{domxref("Boolean")}} que retorna `true` se uma elocução está sendo reproduzida atualmente — mesmo que `SpeechSynthesis` esteja em estado de pausa.
+  - : Um {{jsxref("Boolean")}} que retorna `true` se uma elocução está sendo reproduzida atualmente — mesmo que `SpeechSynthesis` esteja em estado de pausa.
 
 ### Tratamento de eventos
 
