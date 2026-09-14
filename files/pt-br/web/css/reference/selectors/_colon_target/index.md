@@ -29,7 +29,11 @@ O seguinte elemento será selecionado pelo seletor `:target` quando a URL for ig
 
 ## Sintaxe
 
-{{csssyntax}}
+```css
+:target {
+  /* ... */
+}
+```
 
 ## Exemplos
 
