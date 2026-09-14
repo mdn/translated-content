@@ -13,7 +13,7 @@ var file = instanceOfFileReader.result
 
 ### Valor
 
-Una cadena de texto apropiada o un {{domxref("ArrayBuffer")}} dependiendo de cuál método de lectura haya provocado la operación de lectura. El valor es `null` si la lectura no se ha completado aún o no fue exitosa.
+Una cadena de texto apropiada o un {{jsxref("ArrayBuffer")}} dependiendo de cuál método de lectura haya provocado la operación de lectura. El valor es `null` si la lectura no se ha completado aún o no fue exitosa.
 
 Los tipos de resultados son descritos a continuación.
 

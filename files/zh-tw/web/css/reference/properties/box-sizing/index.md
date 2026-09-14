@@ -150,7 +150,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample('Box_sizes_with_content-box_and_border-box', "使用 content-box 和 border-box 的盒子尺寸", 'auto', 300)}}
+{{EmbedLiveSample('使用 content-box 和 border-box 的盒子尺寸', 'auto', 300)}}
 
 ## 規範
 

@@ -39,7 +39,7 @@ input[type="range"]::-moz-range-track {
 
 ### Résultat
 
-{{EmbedLiveSample(Exemples", 300, 50)}}
+{{EmbedLiveSample("Exemples", 300, 50)}}
 
 Une barre de progression mise en forme de cette façon devrait ressembler à&nbsp;:
 

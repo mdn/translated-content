@@ -163,7 +163,7 @@ th {
 
 #### Résultat
 
-{{EmbedLiveSample('Définir les variantes de glyphes d'Asie orientale')}}
+{{EmbedLiveSample("Définir les variantes de glyphes d'Asie orientale")}}
 
 ## Spécifications
 

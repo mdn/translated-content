@@ -1,36 +1,59 @@
 ---
 title: Element：gotpointercapture 事件
+short-title: gotpointercapture
 slug: Web/API/Element/gotpointercapture_event
+l10n:
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
-{{ApiRef("HTML DOM")}}
+{{APIRef("Pointer Events")}}
 
-**`gotpointercapture`** 事件是 GlobalEventHandlers 的属性，这个事件返回 gotpointercapture 类型的事件操作。
+**`gotpointercapture`** 事件在元素使用 [`setPointerCapture()`](/zh-CN/docs/Web/API/Element/setPointerCapture) 捕获指针时触发。
 
 ## 语法
 
-```plain
-window.ongotpointercapture = functionReference
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
+
+```js-nolint
+addEventListener("gotpointercapture", (event) => { })
+
+ongotpointercapture = (event) => { }
 ```
+
+## 事件类型
+
+{{domxref("PointerEvent")}}，继承自 {{domxref("Event")}}。
+
+{{InheritanceDiagram("PointerEvent")}}
 
 ## 示例
 
+本示例获取一个 `<p>` 元素，并监听 `gotpointercapture` 事件。随后在 `pointerdown` 事件中对该元素调用 `setPointerCapture()`，从而触发 `gotpointercapture`。
+
 ```js
-<html>
-<script>
-function overHandler(ev) {
- // Determine the target event's gotpointercapture handler
- var gotCaptureHandler = ev.target.ongotpointercapture;
-}
-function init() {
- var el=document.getElementById("target");
- el.ongotpointercapture = overHandler;
-}
-</script>
-<body onload="init();">
-<div id="target"> Touch me ... </div>
-</body>
-</html>
+const para = document.querySelector("p");
+
+para.addEventListener("gotpointercapture", () => {
+  console.log("我被捕获了！");
+});
+
+para.addEventListener("pointerdown", (event) => {
+  para.setPointerCapture(event.pointerId);
+});
+```
+
+同一示例，使用 `ongotpointercapture` 事件处理器属性：
+
+```js
+const para = document.querySelector("p");
+
+para.ongotpointercapture = () => {
+  console.log("我被捕获了！");
+};
+
+para.addEventListener("pointerdown", (event) => {
+  para.setPointerCapture(event.pointerId);
+});
 ```
 
 ## 规范
@@ -44,12 +67,13 @@ function init() {
 ## 参见
 
 - 相关事件
-  - [`lostpointercapture`](/zh-CN/docs/Web/API/Element/lostpointercapture_event)
-  - [`pointerover`](/zh-CN/docs/Web/API/Element/pointerover_event)
-  - [`pointerenter`](/zh-CN/docs/Web/API/Element/pointerenter_event)
-  - [`pointerdown`](/zh-CN/docs/Web/API/Element/pointerdown_event)
-  - [`pointermove`](/zh-CN/docs/Web/API/Element/pointermove_event)
-  - [`pointerup`](/zh-CN/docs/Web/API/Element/pointerup_event)
-  - [`pointercancel`](/zh-CN/docs/Web/API/Element/pointercancel_event)
-  - [`pointerout`](/zh-CN/docs/Web/API/Element/pointerout_event)
-  - [`pointerleave`](/zh-CN/docs/Web/API/Element/pointerleave_event)
+  - {{domxref("Element/lostpointercapture_event", "lostpointercapture")}}
+  - {{domxref("Element/pointerover_event", "pointerover")}}
+  - {{domxref("Element/pointerenter_event", "pointerenter")}}
+  - {{domxref("Element/pointerdown_event", "pointerdown")}}
+  - {{domxref("Element/pointermove_event", "pointermove")}}
+  - {{domxref("Element/pointerup_event", "pointerup")}}
+  - {{domxref("Element/pointercancel_event", "pointercancel")}}
+  - {{domxref("Element/pointerout_event", "pointerout")}}
+  - {{domxref("Element/pointerleave_event", "pointerleave")}}
+  - {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}}

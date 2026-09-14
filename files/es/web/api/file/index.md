@@ -49,7 +49,7 @@ _La interfaz `File` no define algún método, pero los hereda de la interfaz {{d
 - {{DOMxRef("Blob.text()")}}
   - : Transforma el archivo `File` en una corriente (_stream_) para leerse hasta completarse. Retorna una promesa que se resuelve con un {{jsxref("String")}} (texto).
 - {{DOMxRef("Blob.arrayBuffer()")}}
-  - : Transforma el archivo `File` en una corriente y leerlo hasta completarse. Devuelve una promesa que resuelve con un {{DOMxRef("ArrayBuffer")}}.
+  - : Transforma el archivo `File` en una corriente y leerlo hasta completarse. Devuelve una promesa que resuelve con un {{jsxref("ArrayBuffer")}}.
 
 ## Especificaciones
 

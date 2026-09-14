@@ -2,8 +2,6 @@ name: Markdownlint (global)
 
 on:
   pull_request:
-    branches:
-      - main
     paths:
       - .nvmrc
       - .markdownlint-cli2.jsonc

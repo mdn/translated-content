@@ -15,7 +15,7 @@ Las [listas](/es/docs/Learn_web_development/Core/Structuring_content/Headings_an
       <td>
         Conocimientos básicos de informática, conocimientos básicos de HTML
         (estudio
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">introducción a HTML</a
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content">introducción a HTML</a
         >), nociones de cómo trabaja con CSS (estudio
         <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">introducción a CSS</a>),
         <a href="/es/docs/Learn_web_development/Core/Text_styling/Fundamentals"

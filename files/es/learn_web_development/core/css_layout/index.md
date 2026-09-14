@@ -12,7 +12,7 @@ Llegados a este punto, hemos examinado los fundamentos básicos de CSS: cómo da
 
 Antes de comenzar este módulo, ya deberías:
 
-1. Estar familiarizado con HTML, como se expone en el módulo [Introduction to HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content).
+1. Estar familiarizado con HTML, como se expone en el módulo [Introducción a HTML](/es/docs/Learn_web_development/Core/Structuring_content).
 2. Sentirte cómodo con los fundamentos de CSS, que se discuten en [Introduction to CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics).
 3. Entender como diseñar cajas [style boxes](/es/docs/Learn_web_development/Core/Styling_basics).
 

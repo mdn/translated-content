@@ -1,48 +1,56 @@
 ---
 title: Estilizando tablas
 slug: Learn_web_development/Core/Styling_basics/Tables
-original_slug: Learn/CSS/Building_blocks/Styling_tables
+l10n:
+  sourceCommit: 56ccb15b023cb11234cd044a68d6d3a93e752326
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
+{{LearnSidebar}}
 
-Aplicar estilos a una tabla HTML no es el trabajo más interesante del mundo, pero a veces hay que hacerlo. Este artículo proporciona una guía para hacer que las tablas HTML presenten un aspecto agradable, para ello usaremos algunas de las características específicas para tablas que hemos destacado en artículos anteriores.
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics/Home_color_scheme_search", "Learn_web_development/Core/Styling_basics")}}
+
+Aplicar estilos a una tabla HTML no es el trabajo más glamuroso del mundo, pero a veces hay que hacerlo. Este artículo explica cómo hacer que las tablas HTML se vean bien, destacando algunas técnicas específicas de estilo para tablas.
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerrequisitos:</th>
+      <th scope="row">Requisitos previos:</th>
       <td>
-        Conocimientos básicos de HTML (véase
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
-          >Introducción a HTML</a
-        >) y <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics">tablas HTML</a>, y nociones de
-        cómo funciona el CSS (véase
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Introducción al CSS</a>.)
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >Sintaxis HTML básica</a
+        > y <a href="/es/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics"
+          >tablas HTML</a
+        >, <a href="/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units">Valores y unidades</a> y <a href="/es/docs/Learn_web_development/Core/Styling_basics/Sizing">Tamaño</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Aprender a aplicar estilo a tablas HTML de una forma efectiva.</td>
+      <th scope="row">Resultados del aprendizaje:</th>
+      <td>
+        <ul>
+          <li>Manejar el espaciado en tablas, incluyendo el colapso de bordes.</li>
+          <li>Destacar claramente las distintas regiones de una tabla, incluyendo encabezados, título, cabecera, cuerpo y pie.</li>
+          <li>Cómo implementar las rayas de cebra, y por qué son útiles.</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
 
 ## Una tabla HTML típica
 
-Comencemos por echar un vistazo a una tabla HTML típica. Bueno, decimos típica porque la mayoría de los ejemplos de tablas HTML son sobre zapatos, el tiempo o empleados; y hemos decidido hacer las cosas más interesantes creando una tabla sobre grupos de música punk famosos del Reino Unido. El código es el siguiente:
+Comencemos por ver una tabla HTML típica. Bueno, digo típica porque la mayoría de los ejemplos de tablas HTML tratan sobre zapatos, el clima o empleados; decidimos hacer las cosas más interesantes creando una tabla sobre bandas de punk famosas del Reino Unido. El marcado es el siguiente:
 
-```html
-<table summary="Los grupos de música punk más famosos del Reino Unido">
+```html live-sample___unstyled live-sample___punk-style live-sample___best-practice-style
+<table>
   <caption>
-    Un resumen de los grupos de música punk más famosos del Reino Unido
+    A summary of the UK's most famous punk bands
   </caption>
   <thead>
     <tr>
-      <th scope="col">Grupo</th>
-      <th scope="col">Año de formación</th>
-      <th scope="col">Número de álbumes</th>
-      <th scope="col">Canción más conocida</th>
+      <th scope="col">Band</th>
+      <th scope="col">Year formed</th>
+      <th scope="col">No. of Albums</th>
+      <th scope="col">Most famous song</th>
     </tr>
   </thead>
   <tbody>
@@ -58,9 +66,36 @@ Comencemos por echar un vistazo a una tabla HTML típica. Bueno, decimos típica
       <td>6</td>
       <td>London Calling</td>
     </tr>
-
-    ... se han eliminado algunas filas por abreviar
-
+    <tr>
+      <th scope="row">The Damned</th>
+      <td>1976</td>
+      <td>10</td>
+      <td>Smash it up</td>
+    </tr>
+    <tr>
+      <th scope="row">Sex Pistols</th>
+      <td>1975</td>
+      <td>1</td>
+      <td>Anarchy in the UK</td>
+    </tr>
+    <tr>
+      <th scope="row">Sham 69</th>
+      <td>1976</td>
+      <td>13</td>
+      <td>If The Kids Are United</td>
+    </tr>
+    <tr>
+      <th scope="row">Siouxsie and the Banshees</th>
+      <td>1976</td>
+      <td>11</td>
+      <td>Hong Kong Garden</td>
+    </tr>
+    <tr>
+      <th scope="row">Stiff Little Fingers</th>
+      <td>1977</td>
+      <td>10</td>
+      <td>Suspect Device</td>
+    </tr>
     <tr>
       <th scope="row">The Stranglers</th>
       <td>1974</td>
@@ -70,43 +105,33 @@ Comencemos por echar un vistazo a una tabla HTML típica. Bueno, decimos típica
   </tbody>
   <tfoot>
     <tr>
-      <th scope="row" colspan="2">Número total de álbumes</th>
+      <th scope="row" colspan="2">Total albums</th>
       <td colspan="2">77</td>
     </tr>
   </tfoot>
 </table>
 ```
 
-La tabla está bien creada, puede aplicársele estilo fácilmente y presenta características de accesibilidad gracias a propiedades como [`scope`](/es/docs/Web/HTML/Reference/Elements/th#scope), {{htmlelement("caption")}}, [`summary`](/es/docs/Web/HTML/Reference/Elements/table#summary), {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Por desgracia, no presenta un aspecto agradable cuando se muestra en pantalla (puedes ver el ejemplo en [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html)):
+La tabla está bien marcada, es fácil de estilizar y accesible, gracias a características como [`scope`](/es/docs/Web/HTML/Reference/Elements/th#scope), {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Por desgracia, no se ve muy bien. Con solo el estilo predeterminado del navegador se ve apretada, difícil de leer y un poco aburrida:
 
-![](table-unstyled.png)
+{{embedlivesample("unstyled", "", "200")}}
 
-Tal y como está, es aburrida y difícil de leer. Necesitamos usar algo de CSS para arreglar esto.
+Necesitamos usar algo de CSS para arreglar esto. Puedes aplicar estilos a una tabla de la forma que quieras usando CSS. Por ejemplo, creamos este diseño de aspecto bastante "punk":
 
-## Aprendizaje activo: Aplicar estilo a nuestra tabla
+```css hidden live-sample___punk-style
+/* font import */
+@import "https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap";
 
-En esta sección de aprendizaje activo vamos a aplicar estilo a nuestra tabla juntos.
-
-1. Para comenzar, crea una copia local del [código de ejemplo](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html), descarga las dos imágenes ([noise](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) y [leopardskin](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg)), y pon los tres archivos en alguna carpeta de tu ordenador.
-2. Ahora crea un archivo nuevo llamado `style.css` y guárdalo con el resto de archivos, en la misma carpeta.
-3. Enlaza el CSS al HTML copiando la línea siguiente en {{htmlelement("head")}}:
-
-   ```html
-   <link href="style.css" rel="stylesheet" type="text/css" />
-   ```
-
-### Espaciado y distribución
-
-Lo primero que hay que hacer es solucionar los aspectos de espaciado/distribución; ¡el estilo por defecto de la tabla es tan apretado! Para ello, añadimos el CSS siguiente al archivo `style.css`:
-
-```css
 /* spacing */
-
 table {
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
   border: 3px solid purple;
+}
+
+thead th {
+  line-height: 1.5;
 }
 
 thead th:nth-child(1) {
@@ -129,44 +154,10 @@ th,
 td {
   padding: 20px;
 }
-```
 
-Las partes más importantes que destacamos son:
-
-- En general es una buena idea establecer un valor {{cssxref("table-layout")}} en `fixed` para la tabla porque le proporciona un comportamiento predeterminado predecible. Normalmente se tiende a dar un tamaño de columna según la cantidad de contenido que haya en estas, lo que suele producir resultados extraños. Con `table-layout: fixed`, puedes dar a las columnas un tamaño de acuerdo con el ancho de sus celdas de encabezado y a continuación gestionar los contenidos de la forma que te parezca más adecuada. Por esto hemos seleccionado los cuatro encabezados con el selector `thead th:nth-child(n)` ({{cssxref(":nth-child")}}) (Seleccionar el descendiente enésimo que es un elemento {{htmlelement("th")}} en una secuencia dentro del elemento {{htmlelement("thead")}}) y, dados estos, asignar los porcentajes de anchura. Chris Coyier expone esta técnica con más detalle en [Fixed Table Layouts](https://css-tricks.com/fixing-tables-long-strings/).<br><br>
-
-  Hemos emparejado esto con un {{cssxref("width")}} del 100%, que significa que la tabla llenará cualquier contenedor en la que se ubique, y presentará unas buenas características adaptativas (aunque podría requerir algo más de trabajo para que se vea bien en pantallas de anchuras estrechas).
-
-- Un valor {{cssxref("border-collapse")}} de `collapse` es una buena práctica estándar para cualquier tarea de aplicación de estilo a tablas. Por defecto, cuando estableces los bordes de los elementos de la tabla, quedará un espacio entre ellos, como se muestra en la imagen siguiente. ![](no-border-collapse.png) Esto no presenta un aspecto agradable (aunque puede ser el aspecto que buscas, ¡quién sabe!). Si estableces `border-collapse: collapse;`, los bordes se reducen a uno, y así presenta un aspecto mucho más agradable: ![](border-collapse.png)
-- Hemos puesto un borde ({{cssxref("border")}}) alrededor de la tabla, que es necesario, porque vamos a poner bordes en la cabecera de la tabla y después en el pie; queda raro e inconexo si no pones ningún borde a la tabla que la delimite del resto de los elementos del exterior y quedan huecos.
-- Hemos puesto área de relleno ({{cssxref("padding")}}) en los elementos {{htmlelement("th")}} y {{htmlelement("td")}}; esto da a los datos espacio para que respiren y mejora la legibilidad de la tabla.
-
-En este punto, nuestra tabla ya presenta un aspecto mucho más agradable:
-
-![](table-with-spacing.png)
-
-### Un poco de tipografía
-
-Ahora arreglaremos un poco nuestro texto.
-
-En primer lugar, hemos ido a [Google Fonts](https://www.google.com/fonts) y hemos encontrado un tipo de letra adecuado para una tabla sobre bandas punk. Puedes buscar uno diferente si lo deseas; solo tienes que reemplazar el elemento {{htmlelement ("link")}} que te hemos proporcionado y la declaración {{cssxref ("font-family")}} personalizada por las que te proporcione Google Fonts.
-
-Primero, añade el elemento {{htmlelement ("link")}} siguiente a tu encabezado HTML, justo encima del elemento `<link>`:
-
-```html
-<link
-  href="https://fonts.googleapis.com/css?family=Rock+Salt"
-  rel="stylesheet"
-  type="text/css" />
-```
-
-Ahora añade el CSS siguiente a tu archivo `style.css`, debajo de la línea añadida anterior:
-
-```css
 /* typography */
-
 html {
-  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 thead th,
@@ -189,56 +180,22 @@ tbody td {
 tfoot th {
   text-align: right;
 }
-```
 
-En realidad aquí no hay nada que sea específico para las tablas. En general, modificamos el estilo de la letra para facilitar la lectura:
-
-- Hemos establecido una lista global de fuentes Sans Serif. Esto es puramente una elección de estilo. También hemos configurado nuestro tipo de letra personalizada en los encabezados que hay dentro de los elementos {{htmlelement ("thead")}} y {{htmlelement ("tfoot")}} para dotarlos de una encantadora sucia estética punk.
-- Hemos establecido algunos {{cssxref("letter-spacing")}} en los encabezados y las celdas, porque creemos que ayuda a la legibilidad. De nuevo es, sobre todo, una elección estilística.
-- Hemos establecido en el elemento {{htmlelement("tbody")}} el centrado del texto en las celdas de la tabla para que se queden alineadas con los encabezados. Por defecto, en {{cssxref("text-align")}} se asigna un valor `left` para las celdas, y un valor `center` para los encabezados, pero a menudo queda mejor disponer las alineaciones de texto establecidas de la misma manera en ambos. El peso predeterminado para la negrita en los tipos de letra de los encabezados basta para diferenciar su aspecto.
-- Hemos establecido el texto del encabezado alineado a la derecha en el elemento {{htmlelement ("tfoot")}} para que visualmente quede mejor asociado con sus datos.
-
-El resultado se ve un poco más limpio:
-
-![](table-with-typography.png)
-
-### Gráficos y colores
-
-Ahora, ¡a por los gráficos y los colores! Puesto que la tabla rezuma contenido y actitud punk, vamos a darle un brillante estilo imponente que le pegue. No te preocupes, no tienes que hacer tus tablas tan extremas: puedes optar por algo más sutil y de buen gusto.
-
-Empieza añadiendo el CSS siguiente a tu archivo `style.css`, de nuevo al final:
-
-```css
+/* graphics */
 thead,
 tfoot {
-  background: url(leopardskin.jpg);
+  background: url("https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/leopardskin.jpg");
   color: white;
-  text-shadow: 1px 1px 1px black;
 }
 
 thead th,
 tfoot th,
 tfoot td {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.5)
-  );
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.1), rgb(0 0 0 / 0.5));
   border: 3px solid purple;
+  text-shadow: 1px 1px 1px black;
 }
-```
 
-Una vez más, aquí no hay nada específico para las tablas, pero vale la pena señalar algunas cosas.
-
-Hemos añadido una imagen de fondo ({{cssxref("background-image")}}) a los elementos {{htmlelement("thead")}} y {{htmlelement("tfoot")}}, y hemos cambiado el ({{cssxref("color")}}) de todo el texto del encabezado y el pie de página por el blanco (y le hemos dado una sombra, {{cssxref("text-shadow")}}) para que sea legible. Siempre debes asegurarte de que tu texto contraste bien con el fondo, para que sea legible.
-
-También hemos añadido un degradado lineal a los elementos {{htmlelement("th")}} y {{htmlelement("td")}} del encabezado y el pie de página para obtener un poco de textura, y también hemos dado a esos elementos un borde púrpura brillante. Es útil tener múltiples elementos anidados disponibles para que puedas superponer estilos. Sí, podríamos haber colocado tanto la imagen de fondo como el gradiente lineal en los elementos {{htmlelement ("thead")}} y {{htmlelement ("tfoot")}} utilizando múltiples imágenes de fondo, pero decidimos hacerlo por separado por los navegadores más antiguos que no admiten múltiples imágenes de fondo o gradientes lineales.
-
-#### Rayas de cebra
-
-Queremos dedicar una sección independiente a mostrarte cómo implementar **rayas de cebra**, alternando filas de color que facilitan el análisis y la legibilidad de las diversas filas de datos de la tabla. Añade el CSS siguiente al final de tu archivo `style.css`:
-
-```css
 tbody tr:nth-child(odd) {
   background-color: #ff33cc;
 }
@@ -248,61 +205,253 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr {
-  background-image: url(noise.png);
+  background-image: url("https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/noise.png");
 }
 
 table {
   background-color: #ff33cc;
 }
-```
 
-- Ya has visto el selector {{cssxref(":nth-child")}}, que se usa para seleccionar elementos hijo específicos. También se le puede dar una fórmula como parámetro, de modo que seleccione una secuencia de elementos. La fórmula `2n-1` seleccionaría todos los elementos hijo impares (1, 3, 5, etc.), y la fórmula `2n`, todos los elementos hijo pares (2, 4, 6, etc.) Nosotros hemos utilizado las palabras clave `odd` y `even` en nuestro código, que hacen exactamente lo mismo que las fórmulas mencionadas. En este caso, damos a las filas pares y a las impares (espeluznantes) colores diferentes.
-- También hemos añadido un mosaico de fondo repetitivo a todas las filas del cuerpo de la tabla, que es solo un poco de ruido (un `.png` semitransparente con un poco de distorsión visual) para proporcionar algo de textura.
-- Por último, le hemos dado a toda la tabla un color de fondo sólido para que los navegadores que no admiten el selector `:nth-child` todavía dispongan de un fondo para las filas del cuerpo de la tabla.
-
-Esta explosión de colores da como resultado el aspecto siguiente:
-
-![](table-with-color.png)
-
-Esto puede quedar un poco exagerado y no ser de tu agrado, pero el punto que tratamos de explicar es que las tablas no tienen por qué ser aburridas ni académicas.
-
-### Aplicar estilo al título
-
-Hay una última cosa que hacer con nuestra tabla: aplicar estilo al título. Para ello, añade al final de tu archivo `style.css` lo siguiente:
-
-```css
+/* caption */
 caption {
   font-family: "Rock Salt", cursive;
   padding: 20px;
   font-style: italic;
   caption-side: bottom;
-  color: #666;
+  color: #666666;
   text-align: right;
   letter-spacing: 1px;
 }
 ```
 
-Aquí no hay nada notable, excepto la propiedad {{cssxref ("caption-side")}}, a la que se le ha dado un valor `bottom`. Esto coloca el título en la parte inferior de la tabla, lo que junto con el resto de declaraciones nos proporciona este aspecto final (puedes verlo vivo en [punk-bands-complete.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html)):
+{{embedlivesample("punk-style", "", "500")}}
 
-![](table-with-caption.png)
+Sin embargo, este diseño es bastante chillón. En este artículo, te guiaremos para marcarla siguiendo algunas buenas prácticas de diseño de tablas, tal como se describe en [Web Typography: designing tables to be read not looked at](https://alistapart.com/article/web-typography-tables/).
 
-## Aprendizaje activo: Aplica estilo a tu tabla
+## Cómo empezar a aplicar estilos a nuestra tabla
 
-En este punto, nos gustaría que tomes nuestro ejemplo de tabla HTML (¡o que uses uno propio!) y que le apliques estilo para obtener algo considerablemente mejor diseñado y menos llamativo que nuestra tabla.
+Vamos a recorrer juntos el proceso de aplicar estilos a nuestro ejemplo de tabla.
 
-## Consejos rápidos para el diseño de tablas
+1. Para empezar, haz una copia local del marcado de ejemplo [mostrado anteriormente](#una_tabla_html_típica) y guárdalo en un directorio de trabajo en algún lugar de tu computadora.
+2. A continuación, crea un archivo nuevo llamado `style.css` y guárdalo en el mismo directorio que tus otros archivos.
+3. Enlaza el CSS al HTML colocando la siguiente línea de HTML dentro de tu {{htmlelement("head")}}:
 
-Antes de seguir adelante, creemos que tendríamos que proporcionar una lista rápida de los puntos más útiles que acabamos de ilustrar:
+   ```html
+   <link href="style.css" rel="stylesheet" />
+   ```
 
-- Haz el marcado de la tabla lo más simple posible y mantén las cosas flexibles. Por ejemplo, con el uso de porcentajes, para que el diseño sea más adaptativo.
-- Usa {{cssxref("table-layout")}}`: fixed` para crear un diseño de tabla más predecible que te permita establecer con facilidad los anchos de columna configurando {{cssxref("width")}} en sus encabezados ({{htmlelement("th")}}).
-- Usa {{cssxref ("border-collapse")}}`: collapse` para que los bordes de los elementos de la tabla colapsen entre sí y proporcionen una apariencia más ordenada y más fácil de controlar.
-- Usa {{htmlelement ("thead")}}, {{htmlelement ("tbody")}} y {{htmlelement ("tfoot")}} para dividir la tabla en fragmentos lógicos y proporcionar lugares adicionales para aplicarle CSS, para superponer estilos entre sí con más facilidad, si es necesario.
-- Usa rayas de cebra en filas alternativas para facilitar la legibilidad.
-- Usa {{cssxref ("text-align")}} para alinear el texto en tus elementos {{htmlelement ("th")}} y {{htmlelement ("td")}}, para ordenar los elementos y facilitar su legibilidad.
+Carga tu HTML en un navegador para ver cómo se ve de forma predeterminada.
+
+## Actualizar la fuente
+
+Este es un punto menor, y no estrictamente relevante para el estilo de tablas, pero pensamos que la fuente predeterminada se veía un poco demasiado formal para una tabla sobre bandas punk. Comienza tu CSS agregando la siguiente regla:
+
+```css
+html {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+```
+
+## Espaciado
+
+Lo primero que tenemos que hacer con nuestra tabla es solucionar el espaciado — ¡el estilo predeterminado de las tablas es tan apretado! Para hacerlo, agrega el siguiente CSS al final de tu archivo `style.css`:
+
+```css
+table {
+  table-layout: fixed;
+  width: 90%;
+  margin: 10px auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.6em;
+}
+```
+
+Las partes más importantes a tener en cuenta son las siguientes:
+
+- Generalmente es buena idea establecer un valor {{cssxref("table-layout")}} de `fixed` en tu tabla, ya que hace que la tabla se comporte de forma un poco más predecible por defecto. Normalmente, las columnas de una tabla tienden a dimensionarse según la cantidad de contenido que contienen, lo que produce resultados extraños. Con `table-layout: fixed`, puedes dimensionar tus columnas según el ancho de sus encabezados, y luego gestionar su contenido según corresponda. Chris Coyier trata esta técnica con más detalle en [Fixed Table Layouts](https://css-tricks.com/fixing-tables-long-strings/).
+
+- Hemos combinado el diseño fijo con un {{cssxref("width")}} del `90%` y un {{cssxref("margin")}} de `10px auto`. Estas configuraciones hacen que la tabla llene la mayor parte del viewport y quede centrada horizontalmente.
+
+- Un valor {{cssxref("border-collapse")}} de `collapse` es una buena práctica estándar para cualquier tarea de estilizado de tablas. Por defecto, cuando estableces bordes en los elementos de una tabla, todos tendrán espacio entre ellos, como muestra la siguiente imagen: ![una tabla de 2 por 2 con espaciado predeterminado entre los bordes, mostrando que no hay colapso de bordes](no-border-collapse.png) Esto no se ve muy bien (aunque podría ser el aspecto que quieres, ¡quién sabe!). Con `border-collapse: collapse;` establecido, los bordes colapsan en uno solo, lo que se ve mucho mejor: ![una tabla de 2 por 2 con la propiedad border-collapse establecida en collapse, mostrando que los bordes colapsan en uno solo](border-collapse.png)
+- Hemos establecido algo de {{cssxref("padding")}} en los elementos {{htmlelement("th")}} y {{htmlelement("td")}} — esto le da a los elementos de datos algo de espacio para respirar, haciendo que la tabla se vea mucho más legible.
+
+Guarda tu código y actualiza tu navegador para ver los resultados.
+
+## Alineación
+
+A continuación, nos ocuparemos de la alineación de los diferentes tipos de datos dentro de sus celdas. Las buenas prácticas indican que debes alinear el texto a la izquierda y los números a la derecha; el siguiente CSS logrará eso, así que agrégalo ahora al final de tu archivo CSS.
+
+```css
+tr :nth-child(2),
+tr :nth-child(3) {
+  text-align: right;
+  width: 15%;
+}
+
+tr :nth-child(1),
+tr :nth-child(4) {
+  text-align: left;
+  width: 35%;
+}
+
+tfoot tr :nth-child(1) {
+  text-align: right;
+}
+
+tfoot tr :nth-child(2) {
+  text-align: left;
+}
+```
+
+Aquí hemos usado la pseudoclase {{cssxref(":nth-child")}}; un selector útil que te permite seleccionar un hijo numerado específico de un elemento, o una secuencia específica. Aquí la usamos para seleccionar elementos `<td>` específicos dentro de los elementos <th>.
+
+Fíjate en que también hemos establecido anchos específicos en las filas de la tabla, con las filas que contienen texto configuradas mucho más anchas que las que contienen números. Esta es una buena idea — las filas que contienen más contenido necesitan más espacio para tener la mayor posibilidad de que su contenido quede en una sola línea. Las filas que contienen menos contenido no necesitan tanto espacio para mostrar sus datos, y de hecho, si les das mucho espacio, los datos se pierden un poco en el espacio y por lo tanto son más difíciles de leer.
+
+También deberíamos asegurarnos de que nuestros elementos de datos estén alineados en la parte superior de sus celdas, en lugar de en el medio. Para lograr esto, podemos usar la propiedad {{cssxref("vertical-align")}}. Actualiza tu regla `th, td` existente a la siguiente:
+
+```css
+th,
+td {
+  vertical-align: top;
+  padding: 0.3em;
+}
+```
+
+De nuevo, guarda y actualiza para ver el efecto de tus últimas actualizaciones de CSS.
+
+## Agregar bordes
+
+La tabla ya se ve mucho mejor, pero deberíamos agregar algunos bordes para proporcionar separación visual entre el `<caption>` de la tabla, los datos y la fila de totales en la parte inferior. Para hacerlo, agrega las siguientes reglas a tu CSS:
+
+```css
+tfoot {
+  border-top: 1px solid #999999;
+}
+```
+
+A continuación, actualiza tu regla `table` existente a la siguiente:
+
+```css
+table {
+  table-layout: fixed;
+  width: 90%;
+  margin: 10px auto;
+  border-collapse: collapse;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+}
+```
+
+Guarda y actualiza; ¡tu tabla debería estar empezando a verse bastante legible ahora!
+
+## Rayas de cebra
+
+Queríamos dedicar una sección aparte para mostrarte cómo implementar **rayas de cebra** — filas de color alternadas que hacen que las distintas filas de datos de tu tabla sean más fáciles de interpretar y leer. Agrega el siguiente CSS al final de tu archivo `style.css`:
+
+```css
+tbody tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+```
+
+Anteriormente viste el selector {{cssxref(":nth-child")}} usado para seleccionar elementos hijo específicos. También se le puede dar una fórmula como parámetro, de modo que seleccione una secuencia de elementos. La fórmula `2n+1` seleccionaría todos los hijos con número impar (1, 3, 5, etc.) y la fórmula `2n` seleccionaría todos los hijos con número par (2, 4, 6, etc.) Hemos usado la palabra clave `odd` en nuestro código, que es un atajo para la fórmula `2n+1` (`even` es el atajo para `2n`).
+
+De nuevo, no olvides guardar y actualizar para ver el resultado.
+
+## Aplicar estilos al título
+
+Queda una última cosa por hacer con nuestra tabla — aplicar estilos al título. Para hacerlo, agrega lo siguiente al final de tu archivo `style.css`:
+
+```css
+caption {
+  padding: 1em;
+  font-style: italic;
+  caption-side: bottom;
+  letter-spacing: 1px;
+}
+```
+
+No hay nada destacable aquí, excepto por la propiedad {{cssxref("caption-side")}}, a la que se le ha dado un valor de `bottom`. Esto hace que el título se posicione en la parte inferior de la tabla.
+
+## Tabla terminada
+
+El diseño final de tu tabla debería verse así:
+
+```css hidden live-sample___best-practice-style
+html {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+table {
+  table-layout: fixed;
+  width: 90%;
+  margin: 10px auto;
+  border-collapse: collapse;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+}
+
+th,
+td {
+  vertical-align: top;
+  padding: 0.6em;
+}
+
+tr :nth-child(2),
+tr :nth-child(3) {
+  text-align: right;
+  width: 15%;
+}
+
+tr :nth-child(1),
+tr :nth-child(4) {
+  text-align: left;
+  width: 35%;
+}
+
+tfoot tr :nth-child(1) {
+  text-align: right;
+}
+
+tfoot tr :nth-child(2) {
+  text-align: left;
+}
+
+tfoot {
+  border-top: 1px solid #999999;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+
+caption {
+  padding: 1em;
+  font-style: italic;
+  caption-side: bottom;
+  letter-spacing: 1px;
+}
+```
+
+{{embedlivesample("best-practice-style", "", "520")}}
+
+## Consejos rápidos para el estilo de tablas
+
+Antes de continuar, pensamos en proporcionarte una lista rápida de los puntos más útiles ilustrados anteriormente:
+
+- Haz que el marcado de tu tabla sea lo más simple posible, y mantén las cosas flexibles.
+- Usa {{cssxref("table-layout", "table-layout: fixed")}} para crear un diseño de tabla más predecible que te permita establecer fácilmente los anchos de columna estableciendo {{cssxref("width")}} en sus encabezados ({{htmlelement("th")}}).
+- Usa {{cssxref("border-collapse", "border-collapse: collapse")}} para hacer que los bordes de los elementos de la tabla colapsen entre sí, produciendo un aspecto más prolijo y fácil de controlar.
+- Usa {{htmlelement("thead")}}, {{htmlelement("tbody")}} y {{htmlelement("tfoot")}} para dividir tu tabla en fragmentos lógicos y proporcionar lugares adicionales donde aplicar CSS, de modo que sea más fácil superponer estilos entre sí si es necesario.
+- Usa rayas de cebra para que las filas alternas sean más fáciles de leer.
+- Usa {{cssxref("text-align")}} para alinear el texto de tus elementos {{htmlelement("th")}} y {{htmlelement("td")}}, para que las cosas se vean más prolijas y sean más fáciles de seguir.
 
 ## Resumen
 
-Después de aplicar estilo a las tablas, necesitamos algo más en que ocupar nuestro tiempo. El artículo siguiente expone la depuración de documentos CSS, es decir, cómo resolver problemas como diseños de página que no presentan el aspecto que deberían, o propiedades que no se aplican cuando crees que deberían aplicarse. Esto incluye información sobre el uso de las herramientas DevTools del navegador para hallar soluciones a tus problemas.
+Con el estilo de tablas ya detrás de nosotros, necesitamos algo más para ocupar nuestro tiempo. El siguiente artículo explora la depuración de CSS — cómo resolver problemas como diseños que no se ven como deberían, o propiedades que no se aplican cuando crees que deberían hacerlo. Esto incluye información sobre el uso de las herramientas de desarrollo del navegador para encontrar soluciones a tus problemas.
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics/Home_color_scheme_search", "Learn_web_development/Core/Styling_basics")}}

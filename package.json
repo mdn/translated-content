@@ -23,7 +23,7 @@
     "lint:yml": "prettier -c \"**/*.yml\"",
     "prepare": "node scripts/npm-check.js"
   },
-  "packageManager": "npm@11.9.0",
+  "packageManager": "npm@11.19.0",
   "engines": {
     "node": ">=24"
   },
@@ -48,5 +48,8 @@
     "prettier": "^3.9.6",
     "unist-util-visit": "^5.1.0",
     "yargs": "^18.1.0"
+  },
+  "allowScripts": {
+    "lefthook": true
   }
 }
