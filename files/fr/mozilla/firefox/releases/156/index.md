@@ -3,7 +3,7 @@ title: Firefox 156 note de version pour les développeurs
 short-title: Firefox 156
 slug: Mozilla/Firefox/Releases/156
 l10n:
-  sourceCommit: 78c72a7d42bdbe19e94c98de316fb0a74b93f4e0
+  sourceCommit: 79f0b295d759e9bb6e3c49197434a1d34c449731
 ---
 
 Cet article présente les informations concernant les changements de Firefox 156 qui concernent les développeur·euse·s.
