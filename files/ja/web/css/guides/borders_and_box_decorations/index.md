@@ -3,7 +3,7 @@ title: CSS 境界とボックス装飾
 short-title: 境界とボックス装飾
 slug: Web/CSS/Guides/Borders_and_box_decorations
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 26fb7eaa7b398a35c2463fa15ab6ccfa46a9e06d
 ---
 
 **CSS 境界とボックス装飾** (CSS borders and box decorations) モジュールは、要素に境界線、角の形状、ボックスシャドウを追加するためのプロパティを提供します。このモジュールは、[CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)モジュールで導入された境界とボックス装飾を拡張し、{{cssxref("corner-shape")}} および `border-shape` プロパティ、論理的な {{cssxref("border-radius")}} プロパティ、{{cssxref("box-shadow")}} プロパティの個別指定プロパティ、部分的な境界線を作成するためのプロパティを追加します。
@@ -171,6 +171,7 @@ setCornerShape();
 - {{cssxref("border-right-color")}}
 - {{cssxref("border-right-style")}}
 - {{cssxref("border-right-width")}}
+- {{cssxref("border-shape")}}
 - {{cssxref("border-start-end-radius")}}
 - {{cssxref("border-start-start-radius")}}
 - {{cssxref("border-top")}}
@@ -198,7 +199,7 @@ setCornerShape();
 - {{cssxref("corner-top-right-shape")}}
 - {{cssxref("corner-top-shape")}}
 
-CSS 境界とボックス装飾モジュールレベル 4 は、 `border-shape`, `border-limit`, `border-clip` の各プロパティと、一緒に `border-clip-bottom`, `border-clip-left`, `border-clip-right`, `border-clip-top` の個別指定プロパティを導入しています。今のところ、これらの機能に対応しているブラウザーはありません。このモジュールは対応が進んでいる {{cssxref("border-radius")}} および {{cssxref("box-shadow")}} の成分プロパティとして、 `border-block-end-radius`, `border-block-start-radius`, `border-bottom-radius`, `border-inline-end-radius`, `border-inline-start-radius`, `border-right-radius`, `border-top-radius`, `box-shadow-blur`, `box-shadow-color`, `box-shadow-offset`, `box-shadow-position`, `box-shadow-spread` を導入しています。これらの成分プロパティもまだ対応されていません。
+CSS 境界とボックス装飾モジュールレベル 4 は、`border-limit` および `border-clip` プロパティと、一緒に `border-clip-bottom`, `border-clip-left`, `border-clip-right`, `border-clip-top` の個別指定プロパティを導入しています。今のところ、これらの機能に対応しているブラウザーはありません。このモジュールは対応が進んでいる {{cssxref("border-radius")}} および {{cssxref("box-shadow")}} の成分プロパティとして、 `border-block-end-radius`, `border-block-start-radius`, `border-bottom-radius`, `border-inline-end-radius`, `border-inline-start-radius`, `border-right-radius`, `border-top-radius`, `box-shadow-blur`, `box-shadow-color`, `box-shadow-offset`, `box-shadow-position`, `box-shadow-spread` を導入しています。これらの成分プロパティもまだ対応されていません。
 
 ### データ型
 
@@ -212,16 +213,18 @@ CSS 境界とボックス装飾モジュールレベル 4 は、 `border-shape`,
 
 - [CSS の学習: ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)
   - : 境界線やその他のボックスモデルプロパティが CSS ボックスモデルに与える影響について学びましょう。
+- [border-shape による不規則なナビゲーションメニューの作成](/ja/docs/Web/CSS/Guides/Borders_and_box_decorations/Border_shape_nav_menu)
+  - : {{cssxref("border-shape")}} プロパティを使用して、不規則なアニメーションを伴うナビゲーションメニューを作成する方法。
 
 ## 関連概念
 
 - {{cssxref("box-sizing")}} プロパティ
 - {{cssxref("box-decoration-break")}} プロパティ
 - {{cssxref("text-shadow")}} プロパティ
-- {{cssxref("url_value", "&lt;url&gt;")}} CSS 型
-- [`<color>`](/ja/docs/Web/CSS/Reference/Properties/color) データ型
-- [`<image>`](/ja/docs/Web/CSS/Reference/Values/image) データ型
-- [`<position>`](/ja/docs/Web/CSS/Reference/Properties/position) データ型
+- {{cssxref("url_value", "&lt;url&gt;")}} データ型
+- {{cssxref("&lt;color&gt;")}} データ型
+- {{cssxref("image")}} データ型
+- {{cssxref("&lt;position&gt;")}} データ型
 - [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) キーワード
 
 [CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)モジュール
