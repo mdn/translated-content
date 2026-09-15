@@ -19,7 +19,11 @@ Essa pseudo-classe é útil para realçar os campos válidos para o usuário.
 
 ## Sintaxe
 
-{{csssyntax}}
+```css
+:valid {
+  /* ... */
+}
+```
 
 ## Exemplos
 

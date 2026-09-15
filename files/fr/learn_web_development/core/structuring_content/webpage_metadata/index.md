@@ -3,14 +3,14 @@ title: Qu'y a‑t‑il dans l'en‑tête ? Métadonnées d'une page Web
 short-title: Métadonnées de la page web
 slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 l10n:
-  sourceCommit: 0d59135676db5a372b4dd692f0686e6bdfc13b51
+  sourceCommit: a2e0aee81b78bd02721fa2d9da0fa3b90b65a89f
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content")}}
 
 {{Glossary("Head", "L'en-tête")}} d'un document HTML est la partie qui n'est pas affichée par le navigateur Web lorsque la page est chargée. Elle contient des informations de métadonnées telles que le {{HTMLElement("title")}} de la page, des liens vers le {{Glossary("CSS")}} (si vous choisissez de mettre en forme votre contenu HTML avec du CSS), des liens vers des favicons personnalisés, et d'autres métadonnées (des informations sur le HTML, comme l'auteur·ice, et des mots‑clés importants décrivant le document).
 
-Les navigateurs Web utilisent les informations contenues dans {{Glossary("Head", "l'en-tête")}} pour rendre correctement le document HTML. Dans cet article, nous aborderons tout ce qui précède et bien d'autres points, afin de vous fournir une bonne base pour travailler avec le balisage.
+Les navigateurs Web utilisent les informations contenues dans {{Glossary("Head", "l'en-tête")}} pour rendre correctement le document HTML. Dans cet article, nous abordons tout ce qui précède et bien d'autres points, afin de vous fournir une bonne base pour travailler avec le balisage.
 
 <table class="standard-table">
   <tbody>
@@ -68,7 +68,7 @@ Toutefois, dans les pages plus importantes, l'en-tête peut devenir assez volumi
 
 Nous avons déjà vu l'élément HTML {{HTMLElement("title")}} en action — il peut être utilisé pour ajouter un intitulé au document. Il peut toutefois être confondu avec l'élément `{{HTMLElement("Heading_Elements", "&lt;h1&gt;")}}`, qui est utilisé pour ajouter un en‑tête de niveau supérieur au contenu du corps de la page — cet élément est parfois aussi désigné comme le titre de la page. Mais ce sont des choses différentes&nbsp;!
 
-- L'élément HTML `{{HTMLElement("Heading_Elements", "&lt;h1&gt;")}}`apparaît dans la page lorsqu'elle est chargée dans le navigateur — en général, il doit être utilisé une fois par page, pour marquer le titre du contenu de votre page (le titre d'une histoire, ou un titre d'actualité, ou ce qui convient à votre usage).
+- L'élément HTML `{{HTMLElement("Heading_Elements", "&lt;h1&gt;")}}` apparaît dans la page lorsqu'elle est chargée dans le navigateur — en général, il doit être utilisé une fois par page, pour marquer le titre du contenu de votre page (le titre d'une histoire, ou un titre d'actualité, ou ce qui convient à votre usage).
 - L'élément HTML {{HTMLElement("title")}} est une métadonnée qui représente le titre du document HTML global (et non le contenu du document).
 
 ### Inspection d'un exemple
@@ -93,11 +93,11 @@ Le contenu de `<title>` est également utilisé dans les résultats de recherche
 
 ## Métadonnées : l'élément `<meta>`
 
-Les métadonnées sont des données qui décrivent des données, et le langage HTML a une manière «&nbsp;officielle&nbsp;» d'ajouter des métadonnées à un document — l'élément HTML {{HTMLElement("meta")}}. Bien sûr, d'autres choses dont nous parlons dans cet article pourraient aussi être considérées comme des métadonnées. Il existe de nombreux types d'éléments `<meta>` que vous pouvez inclure dans l'en-tête de votre page, mais nous n'allons pas tous les expliquer à ce stade, car cela devient trop confus. À la place, nous allons expliquer quelques éléments que vous pouvez rencontrer couramment, juste pour vous donner une idée.
+Les métadonnées sont des données qui décrivent des données, et le langage HTML a une manière «&nbsp;officielle&nbsp;» d'ajouter des métadonnées à un document — l'élément HTML {{HTMLElement("meta")}}. Bien sûr, d'autres choses dont nous parlons dans cet article peuvent aussi être considérées comme des métadonnées. Il existe de nombreux types d'éléments `<meta>` que vous pouvez inclure dans l'en-tête de votre page, mais nous n'allons pas tous les expliquer à ce stade, car cela devient trop confus. À la place, nous allons expliquer quelques éléments que vous pouvez rencontrer couramment, juste pour vous donner une idée.
 
 ### Définir l'encodage des caractères du document
 
-Dans l'exemple que nous avons vu au-dessus, cette ligne était présente&nbsp;:
+Dans l'exemple que nous avons vu au-dessus, cette ligne est présente&nbsp;:
 
 ```html
 <meta charset="utf-8" />
@@ -165,10 +165,10 @@ La description est aussi utilisée dans les pages de résultats des moteurs de r
    ![Un résultat de recherche Yahoo pour « Mozilla Developer Network »](mdn-search-result.png)
 
 > [!NOTE]
-> Avec Google, vous verrez quelques sous-pages pertinentes de MDN listées sous le lien de la page d'accueil — ce sont des liens du site, ils sont configurables dans les outils de [Google Search Console](https://search.google.com/search-console/about?hl=fr) — ces outils sont donc un moyen de rendre les résultats de recherche de votre site meilleurs avec le moteur de recherche de Google.
+> Avec Google, vous voyez quelques sous-pages pertinentes de MDN listées sous le lien de la page d'accueil — ce sont des liens du site, ils sont configurables dans les outils de [Google Search Console](https://search.google.com/search-console/about?hl=fr) — ces outils sont donc un moyen de rendre les résultats de recherche de votre site meilleurs avec le moteur de recherche de Google.
 
 > [!NOTE]
-> Plusieurs fonctions `<meta>` ne sont plus utilisées. Par exemple, l'élément `<meta>` `keyword` (`<meta name="keywords" content="mettez, vos, mot-clés, ici">`) — qui est censé fournir des mots-clés pour les moteurs de recherche, afin de déterminer la pertinence de la page pour différents termes de recherche — est ignoré par les moteurs de recherche, car les polluposteurs remplissaient simplement la liste avec des centaines de mots-clés, biaisant les résultats.
+> Plusieurs fonctions `<meta>` ne sont plus utilisées. Par exemple, l'élément `<meta>` `keyword` (`<meta name="keywords" content="mettez, vos, mot-clés, ici">`) — qui est censé fournir des mots-clés pour les moteurs de recherche, afin de déterminer la pertinence de la page pour différents termes de recherche — est ignoré par les moteurs de recherche, car les polluposteurs remplissent simplement la liste avec des centaines de mots-clés, biaisant les résultats.
 
 ### Autres types de métadonnées
 
@@ -200,6 +200,8 @@ La petite favicône existe depuis de nombreuses années. Il s'agit de la premiè
 
 Vous pouvez ajouter une favicône à votre page en&nbsp;:
 
+![Une fenêtre de navigateur schématique avec deux onglets, chacun contenant une favicône à gauche du titre de la page&nbsp;: le logo MDN dans l'onglet actif "MDN Web Docs" et une icône de livre dans l'onglet « Autre page ».](favicon.svg)
+
 1. L'enregistrant dans un format pris en charge comme `.ico`, `.gif` ou `.png` quelque part dans la structure de dossiers de votre site web.
 2. Ajoutant un élément {{HTMLElement("link")}} dans le bloc {{HTMLElement("head")}} de votre HTML, qui référence le chemin vers le fichier de la favicône&nbsp;:
 
@@ -208,7 +210,7 @@ Vous pouvez ajouter une favicône à votre page en&nbsp;:
    ```
 
 > [!NOTE]
-> Dans cet exemple, le chemin vers le fichier de la favicône commence par `/`, ce qui signifie «&nbsp;chercher le fichier dans le répertoire racine de votre site&nbsp;». Cela peut se trouver à un endroit différent dans le code source, selon le système que vous utilisez pour créer votre site&nbsp;: les frameworks web réservent généralement un dossier spécial pour les fichiers à la racine du site, comme `static` ou `public`.
+> Dans cet exemple, le chemin vers le fichier de la favicône commence par `/`, ce qui signifie «&nbsp;chercher le fichier dans le répertoire racine de votre site&nbsp;». Cela peut se trouver à un endroit différent dans le code source, selon le système que vous utilisez pour créer votre site&nbsp;: les cadriciels web réservent généralement un dossier spécial pour les fichiers à la racine du site, comme `static` ou `public`.
 >
 > Ne vous inquiétez pas trop des subtilités des chemins de fichiers pour l'instant&nbsp;; vous en apprendrez plus à ce sujet plus tard (consultez [Introduction rapide aux URL et aux chemins](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links#une_brève_présentation_des_url_et_des_chemins) si vous êtes curieux·se).
 >
@@ -221,8 +223,10 @@ Voici un exemple de favicône dans un panneau de favoris&nbsp;:
 Vous pouvez également vouloir inclure différentes icônes pour différents contextes. Par exemple&nbsp;:
 
 ```html
-<link rel="icon" href="/favicon-48x48.[some hex hash].png" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.[some hex hash].png" />
+<link rel="icon" href="/favicon-48x48.[du hash hexadécimal].png" />
+<link
+  rel="apple-touch-icon"
+  href="/apple-touch-icon.[du hash hexadécimal].png" />
 ```
 
 Cela permet d'afficher une icône lorsque le site est enregistré sur l'écran d'accueil d'un appareil Apple. Vous pouvez même vouloir fournir différentes icônes pour différents appareils, afin de garantir que l'icône s'affiche correctement partout. Par exemple&nbsp;:
@@ -283,10 +287,10 @@ Si cela a été fait correctement, lorsque vous enregistrez votre HTML et actual
 ![Exemple montrant une page sur laquelle on a appliqué du CSS et du JavaScript. Le CSS a rendu la page verte, alors que le JavaScript a ajouté une liste dynamique à la page.](js-and-css.png)
 
 - Le JavaScript a ajouté une liste vide à la page. Maintenant, lorsque vous cliquez n'importe où sur la liste, une boîte de dialogue s'ouvre pour vous permettre de saisir un texte. Lorsque vous appuyez sur le bouton OK, un nouvel élément de la liste est ajouté contenant le texte saisi. Lorsque vous cliquez sur un élément de liste existant, la boîte de dialogue affiche son contenu pour vous permettre de le modifier.
-- Le CSS a rendu l'arrière-plan vert et le texte plus grand. Il a également décrit le contenu que le JavaScript a ajouté à la page (la barre rouge avec la bordure noire est le style que le CSS a ajouté à la liste générée par JS).
+- Le CSS a rendu l'arrière-plan vert et le texte plus grand. Il a également décrit le contenu que le JavaScript a ajouté à la page (la barre rouge avec la bordure noire est le style que le CSS a ajouté à la liste générée par JavaScript).
 
 > [!NOTE]
-> Si vous êtes coincé dans cet exercice et que vous ne pouvez pas obtenir le CSS / JS à appliquer, essayez de vérifier notre exemple de page [css-and-js.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/css-and-js.html) .
+> Si vous êtes coincé dans cet exercice et que vous ne pouvez pas obtenir le CSS / JavaScript à appliquer, essayez de vérifier notre exemple de page [css-and-js.html <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/css-and-js.html).
 
 ## Définition de la langue principale du document
 
