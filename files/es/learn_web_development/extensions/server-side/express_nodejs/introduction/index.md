@@ -87,7 +87,7 @@ El siguiente ejemplo crea un servidor web que escucha cualquier tipo de solicitu
 Finalmente, ve a `http://localhost:8000` en tu navegador web; deberías ver el texto "**Hello World**" en la esquina superior izquierda de una página web por lo demás vacía.
 
 > [!NOTE]
-> Si quieres experimentar con algo de código de Node.js sin necesidad de hacer ninguna instalación local, [Aside: The HTTP module](https://scrimba.com/learn-nodejs-c00ho9qqh6/~07du?via=mdn) de Scrimba <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> ofrece un recorrido interactivo sobre cómo configurar un servidor básico con el paquete HTTP de Node.
+> Si quieres experimentar con algo de código de Node.js sin necesidad de hacer ninguna instalación local, [Aside: The HTTP module](https://scrimba.com/learn-nodejs-c00ho9qqh6/~07du?via=mdn) de Scrimba <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup> ofrece un recorrido interactivo sobre cómo configurar un servidor básico con el paquete HTTP de Node.
 
 ## Frameworks web
 
@@ -535,8 +535,8 @@ Por supuesto, Express es deliberadamente un framework de aplicaciones web muy li
 
 ## Véase también
 
-- [Learn Node.js](https://scrimba.com/learn-nodejs-c00ho9qqh6?via=mdn) de Scrimba <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> ofrece una introducción divertida e interactiva a Node.js.
-- [Learn Express.js](https://scrimba.com/learn-expressjs-c062las154?via=mdn) de Scrimba <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> se basa en el enlace anterior, mostrando cómo empezar a usar el framework Express para crear sitios web del lado del servidor.
+- [Learn Node.js](https://scrimba.com/learn-nodejs-c00ho9qqh6?via=mdn) de Scrimba <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup> ofrece una introducción divertida e interactiva a Node.js.
+- [Learn Express.js](https://scrimba.com/learn-expressjs-c062las154?via=mdn) de Scrimba <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup> se basa en el enlace anterior, mostrando cómo empezar a usar el framework Express para crear sitios web del lado del servidor.
 - [Modules](https://nodejs.org/api/modules.html#modules_modules) (documentación de la API de Node)
 - [Express](https://expressjs.com/) (página de inicio)
 - [Basic routing](https://expressjs.com/en/starter/basic-routing.html) (documentación de Express)
