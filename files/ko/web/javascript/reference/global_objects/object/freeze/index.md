@@ -197,7 +197,7 @@ TypeError: 1 is not an object // ES5 code
 1                             // ES2015 code
 ```
 
-엘리먼트를 갖는 {{domxref("ArrayBufferView")}}는 메모리를 통한 뷰이므로 다른 가능한 문제를 유발 할 수 있어 {{jsxref("TypeError")}}가 발생합니다.
+엘리먼트를 갖는 {{jsxref("TypedArray")}}는 메모리를 통한 뷰이므로 다른 가능한 문제를 유발 할 수 있어 {{jsxref("TypeError")}}가 발생합니다.
 
 ```js
 > Object.freeze(new Uint8Array(0)) // 엘리먼트가 없음

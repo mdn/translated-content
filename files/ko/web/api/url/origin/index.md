@@ -5,7 +5,7 @@ slug: Web/API/URL/origin
 
 {{APIRef("URL API")}}
 
-{{domxref("URL")}} 인터페이스의 **`origin`** 읽기 전용 속성은 표현 중인 URL의 출처를 유니코드로 직렬화한 {{domxref("USVString")}}을 반환합니다. 정확한 구조는 URL의 유형에 따라 다릅니다.
+{{domxref("URL")}} 인터페이스의 **`origin`** 읽기 전용 속성은 표현 중인 URL의 출처를 유니코드로 직렬화한 {{jsxref("String")}}을 반환합니다. 정확한 구조는 URL의 유형에 따라 다릅니다.
 
 - `http` 또는 `https` URL은 스킴 뒤 `'://'`, 도메인, `':'`, 마지막으로 포트(명시적으로 지정한 경우)로 구성됩니다.
 - `file:` URL은 브라우저마다 다릅니다.
@@ -21,7 +21,7 @@ const originString = url.origin;
 
 ### 값
 
-A {{domxref("USVString")}}.
+A {{jsxref("String")}}.
 
 ## 예제
 

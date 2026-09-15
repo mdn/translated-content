@@ -5,7 +5,7 @@ slug: Web/API/HTMLAnchorElement/href
 
 {{ApiRef("URL API")}}
 
-**`HTMLHyperlinkElementUtils.href`** 속성은 온전한 URL을 값으로 가지는 {{domxref("USVString")}}입니다.
+**`HTMLHyperlinkElementUtils.href`** 속성은 온전한 URL을 값으로 가지는 {{jsxref("String")}}입니다.
 
 ## 예제
 
