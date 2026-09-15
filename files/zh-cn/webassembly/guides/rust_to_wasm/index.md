@@ -104,7 +104,7 @@ use wasm_bindgen::prelude::*;
 
 在 Rust 当中，库被称为“crates”。
 
-明白了吗？*货船*（Cargo）运送*货箱*（crates）。
+明白了吗？_货船_（Cargo）运送*货箱*（crates）。
 
 第一行包含一个 `use` 命令，用于将库中的代码导入到你的代码中。在此示例中，我们导入了 `wasm_bindgen::prelude` 模块中的所有内容。我们将在下一节中使用这些功能。
 
