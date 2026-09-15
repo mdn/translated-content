@@ -2,10 +2,6 @@
 title: "HTML-атрибут `rel`"
 short-title: rel
 slug: Web/HTML/Reference/Attributes/rel
-  - html.elements.link.rel
-  - html.elements.a.rel
-  - html.elements.area.rel
-  - html.elements.form.rel
 l10n:
   sourceCommit: db443a6062d0e858a62af2f9a3a7558335ffd2dd
 ---
