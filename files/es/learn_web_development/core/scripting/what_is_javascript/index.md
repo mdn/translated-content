@@ -105,7 +105,7 @@ Intenta hacer clic en la etiqueta de texto, ingresa un nombre en el cuadro de di
 JavaScript puede hacer mucho más que eso — exploremos qué con más detalle.
 
 > [!NOTE]
-> Antes de continuar, ¿por qué no te animas a ensuciarte las manos con un desafío de Scrimba en esta etapa temprana? Consulta [Muestra un mensaje de bienvenida](https://scrimba.com/learn-javascript-c0v/~0n?via=mdn) <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>. Si no sabes cómo escribir este código, no te preocupes en absoluto; puedes intentar hacer algunas búsquedas en la web para encontrar respuestas, o ver la solución al final del scrim.
+> Antes de continuar, ¿por qué no te animas a ensuciarte las manos con un desafío de Scrimba en esta etapa temprana? Consulta [Muestra un mensaje de bienvenida](https://scrimba.com/learn-javascript-c0v/~0n?via=mdn) <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup>. Si no sabes cómo escribir este código, no te preocupes en absoluto; puedes intentar hacer algunas búsquedas en la web para encontrar respuestas, o ver la solución al final del scrim.
 
 ## Entonces, ¿qué puede hacer realmente?
 
@@ -148,7 +148,7 @@ Las **API de terceros** no están integradas en el navegador de forma predetermi
 
 Aquí vamos a empezar a ver algo de código y, mientras lo hacemos, exploraremos lo que realmente sucede cuando ejecutas JavaScript en tu página.
 
-Repasemos brevemente la historia de lo que sucede cuando cargas una página web en un navegador (de lo que hablamos por primera vez en nuestro artículo [¿Qué es CSS?](/es/docs/Learn_web_development/Core/Styling_basics/What_is_CSS)). Cuando cargas una página web en tu navegador, estás ejecutando tu código (el HTML, el CSS y el JavaScript) dentro de un entorno de ejecución (la pestaña del navegador). Esto es como una fábrica que toma materias primas (el código) y produce un producto (la página web).
+Repasemos brevemente la historia de lo que sucede cuando cargas una página web en un navegador (de lo que hablamos por primera vez en nuestro artículo [¿Qué es CSS?](/es/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#la_aplicación_de_css_al_dom)). Cuando cargas una página web en tu navegador, estás ejecutando tu código (el HTML, el CSS y el JavaScript) dentro de un entorno de ejecución (la pestaña del navegador). Esto es como una fábrica que toma materias primas (el código) y produce un producto (la página web).
 
 ![El código HTML, CSS y JavaScript se combinan para crear el contenido de la pestaña del navegador cuando se carga la página](execution.png)
 
@@ -229,7 +229,7 @@ JavaScript se aplica a tu página HTML de una manera similar a CSS.
 Mientras que CSS usa elementos {{htmlelement("link")}} para aplicar hojas de estilo externas y elementos {{htmlelement("style")}} para aplicar hojas de estilo internas al HTML, JavaScript solo necesita un amigo en el mundo del HTML: el elemento {{htmlelement("script")}}. Aprendamos cómo funciona esto.
 
 > [!NOTE]
-> El tutorial interactivo de Scrimba [Configurando nuestro archivo JavaScript](https://scrimba.com/learn-javascript-c0v/~03?via=mdn) <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> recorre un par de formas distintas de agregar JavaScript a tu HTML.
+> El tutorial interactivo de Scrimba [Configurando nuestro archivo JavaScript](https://scrimba.com/learn-javascript-c0v/~03?via=mdn) <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup> recorre un par de formas distintas de agregar JavaScript a tu HTML.
 
 ### JavaScript interno
 
