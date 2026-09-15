@@ -1,141 +1,118 @@
 ---
-title: 编译 Rust 为 WebAssembly
+title: 从 Rust 编译为 WebAssembly
 slug: WebAssembly/Guides/Rust_to_Wasm
+l10n:
+  sourceCommit: 9e69ea9db9ec62df101e83cbc07d447e1984c57e
 ---
 
-如果你写了一些 Rust 代码，你可以把它编译成 WebAssembly！这份教程将带你编译 Rust 项目为 wasm 并在一个现存的 web 应用中使用它。
+本教程将展示如何将一个 Rust 项目编译为 WebAssembly，并在现有的 Web 应用中使用它。
 
 ## Rust 和 WebAssembly 用例
 
 Rust 和 WebAssembly 有两大主要用例：
 
-- 构建完整应用——整个 Web 应用都基于 Rust 开发！
+- 构建完整应用——整个 Web 应用都基于 Rust 开发。
 - 构建应用的组成部分——在现存的 JavaScript 前端中使用 Rust。
 
-目前，Rust 团队正专注于第二种用例，因此我们也将着重介绍它。对于第一种用例，可以参阅 [`yew`](https://github.com/DenisKolodin/yew) 这类项目。
+目前，Rust 团队主要关注后一种用例，因此本文将重点介绍后者。关于前一种情况，请参考 [`yew`](https://github.com/yewstack/yew) 和 [leptos](https://github.com/leptos-rs/leptos) 等项目。
 
-在本教程中，我们将使用 Rust 的 npm 包构建工具 `wasm-pack` 来构建一个 npm 包。这个包只包含 WebAssembly 和 JavaScript 代码，以便包的用户无需安装 Rust 就能使用。他们甚至不需要知道这里包含 WebAssembly！
+在本教程中，我们将使用 `wasm-pack`（一款用于在 Rust 中构建 JavaScript 包的工具）来构建一个包。该包将仅包含 WebAssembly 和 JavaScript 代码，因此用户无需安装 Rust。他们甚至可能不会察觉到该包是用 Rust 编写的。
 
-## 安装 Rust 环境
+## Rust 环境配置
 
-让我们看看安装 Rust 环境的所有必要步骤。
+首先，我们将搭建必要的环境。
 
 ### 安装 Rust
 
-前往 [Install Rust](https://www.rust-lang.org/install.html) 页面并跟随指示安装 Rust。这里会安装一个名为“rustup”的工具，这个工具能让你管理多个不同版本的 Rust。默认情况下，它会安装用于惯常 Rust 开发的 stable 版本 Rust Release。Rustup 会安装 Rust 的编译器 `rustc`、Rust 的包管理工具 `cargo`、Rust 的标准库 `rust-std` 以及一些有用的文档 `rust-docs`。
+前往[安装 Rust](https://rust-lang.org/zh-CN/tools/install/) 页面并跟随指示安装 Rust。这里会安装一个名为“rustup”的工具，这个工具能让你管理多个不同版本的 Rust。默认情况下，它会安装最新的稳定版 Rust，可以将其用于一般的 Rust 开发。Rustup 会安装 Rust 的编译器 `rustc`、Rust 的包管理工具 `cargo`、Rust 的标准库 `rust-std` 以及一些有用的文档 `rust-docs`。
 
 > [!NOTE]
 > 需要注意，在安装完成后，你需要把 cargo 的 `bin` 目录添加到你系统的 `PATH`。一般来说它会自动添加，但需要你重启终端后才会生效。
 
 ### wasm-pack
 
-要构建我们的包，我们需要一个额外工具 `wasm-pack`。它会帮助我们把我们的代码编译成 WebAssembly 并制造出正确的 `npm` 包。使用下面的命令可以下载并安装它：
+要构建我们的包，我们需要一个额外工具 `wasm-pack`。它会帮助我们把我们的代码编译成 WebAssembly，并生成适用于浏览器的正确打包文件。要下载并安装它，请在终端中输入以下命令：
 
 ```bash
 cargo install wasm-pack
 ```
 
-### 安装 Node.js 并获取 npm 账户
+## 构建我们的 WebAssembly 包
 
-在这个例子中我们将会构建一个 npm 包，因此你需要确保安装 Node.js 和 npm 已经安装。另外，我们将会把包发布到 npm 上，因此你还需要一个 npm 账号。它们是免费的。发布这个包并不是必须的，但是发布它非常简单，因此在本例中我们默认你会发布这个包。
-
-在 [Get npm!](https://www.npmjs.com/get-npm) 页面按照说明下载并安装 Node.js 和 npm。在选择版本时，选择一个你喜欢的版本；本例不限定特定版本。
-
-在 [npm signup page](https://www.npmjs.com/signup) 注册 npm 账户，并填写表格。
-
-接下来，在命令行中运行 `npm login`:
+万事俱备，来创建一个新的 Rust 包吧。打开你用来存放项目的目录，敲下这个命令：
 
 ```bash
-> npm login
-Username: yournpmusername
-Password:
-Email: (this IS public) you@example.com
-```
-
-你需要完善你的用户名，密码和邮箱。如果成功了，你将会看到：
-
-```bash
-Logged in as yournpmusername on https://registry.npmjs.org/.
-```
-
-如果并未正常运行，请联系 npm 解决。
-
-## 构建我们的 WebAssembly npm 包
-
-万事俱备，来创建一个新的 Rust 包吧。打开你用来存放你私人项目的目录，做这些事：
-
-```bash
-$ cargo new --lib hello-wasm
-     Created library `hello-wasm` project
+cargo new --lib hello-wasm
 ```
 
 这里会在名为 `hello-wasm` 的子目录里创建一个新的库，里面有下一步之前你所需要的一切：
 
-```shell
-+-- Cargo.toml
-+-- src
-    +-- lib.rs
+```plain
+├── Cargo.toml
+└── src
+    └── lib.rs
 ```
 
-首先，我们有一个 `Cargo.toml` 文件，这是我们配置构建的方式。如果你用过 Bundler 的 `Gemfile` 或者 npm 的 `package.json`，你应该会感到很熟悉。Cargo 的用法和它们类似。
+`Cargo.toml` 用于配置我们的构建过程。它的作用类似于 Bundler 中的 `Gemfile` 或 npm 中的 `package.json`。
 
-接下来，Cargo 在 `src/lib.rs` 生成了一些 Rust 代码：
+Cargo 还在 `src/lib.rs` 中为我们生成了部分 Rust 代码：
 
 ```rust
+pub fn add(left: u64, right: u64) -> u64 {
+    left + right
+}
+
 #[cfg(test)]
 mod tests {
+    use super::*;
+
     #[test]
     fn it_works() {
-        assert_eq!(2 + 2, 4);
+        let result = add(2, 2);
+        assert_eq!(result, 4);
     }
 }
 ```
 
-我们完全不需要使用这些测试代码，所以继续吧，我们删掉它。
+### 来写点 Rust 代码吧
 
-### 来写点 Rust 代码吧！
-
-让我们在 `src/lib.rs` 写一些代码替换掉原来的：
+我们不会使用上述所示生成的 `src/lib.rs` 代码，用这些代码替换掉原来的：
 
 ```rust
-extern crate wasm_bindgen;
-
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-extern {
+extern "C" {
     pub fn alert(s: &str);
 }
 
 #[wasm_bindgen]
 pub fn greet(name: &str) {
-    alert(&format!("Hello, {}!", name));
+    alert(&format!("你好，{}！", name));
 }
 ```
 
-这就是我们这个 Rust 项目的内容。它有三个主要部分，让我们按顺序来讲。这里将会给出一个缺少部分细节的高级说明；如果想要了解更多 Rust 知识，请查看在线书籍 [The Rust Programming Language](https://doc.rust-lang.org/book/)。
+我们的 Rust 代码主要由三个部分组成。这里我们仅做高层次的说明，并略过了一些细节；若想进一步了解 Rust，请查阅免费的在线书籍[《Rust 编程语言》](https://doc.rust-lang.org/book/)。
 
 #### 使用 `wasm-bindgen` 在 Rust 与 JavaScript 之间通信
 
 第一部分看起来像这样：
 
 ```rust
-extern crate wasm_bindgen;
-
 use wasm_bindgen::prelude::*;
 ```
 
-第一行就像在说“哇 Rust，我们在用一个叫做 wasm_bindgen 的库”。在 Rust 当中，库被称为“crates”，因为我们使用的是一个外部库，所以有 "extern"。
+在 Rust 当中，库被称为“crates”。
 
-明白了吗？ **Cargo ships crates**.
+明白了吗？*货船*（Cargo）运送*货箱*（crates）。
 
-第三行包括了一个将库中的代码引入到你的代码中的使用命令。在这个情况下，将会引入 `wasm_bindgen::prelude` 的全部模块。我们将在下一节中使用这些内容。
+第一行包含一个 `use` 命令，用于将库中的代码导入到你的代码中。在此示例中，我们导入了 `wasm_bindgen::prelude` 模块中的所有内容。我们将在下一节中使用这些功能。
 
-在我们开始下一节之前，我们将讲一讲 `wasm-bindgen`。
+在进入下一节之前，我们应该先进一步探讨 `wasm-bindgen`。
 
-`wasm-pack` 使用另一个工具 `wasm-bindgen` 来提供 JavaScript 和 Rust 类型之间的桥梁。它允许 JavaScript 使用字符串调用 Rust API，或调用 Rust 函数来捕获 JavaScript 异常。
+`wasm-pack` 利用 `wasm-bindgen` 在 JavaScript 和 Rust 类型之间架起桥梁。它允许 JavaScript 通过字符串调用 Rust API，或者让 Rust 函数捕获 JavaScript 异常。
 
-我们将在我们的包中使用 `wasm-bindgen` 的功能。事实上，这是下一节的内容！
+我们在本包中使用了 `wasm-bindgen` 的功能。事实上，这就是下一节的内容。
 
 #### 在 Rust 中调用来自 JavaScript 的外部函数
 
@@ -143,18 +120,16 @@ use wasm_bindgen::prelude::*;
 
 ```rust
 #[wasm_bindgen]
-extern {
+extern "C" {
     pub fn alert(s: &str);
 }
 ```
 
-在 `#[]` 中的内容叫做 "属性"，并以某种方式改变下面的语句。在这种情况下，下面的语句是一个 `extern`，它将告诉 Rust that 我们想调用一些外部定义的函数。这个属性告诉我们 "wasm-bindgen 知道如何找到这些函数"。
+在 `#[ ]` 中的内容叫做“属性”（attribute），并以某种方式改变下面的语句。在这种情况下，下面的语句是一个 `extern`，它将告诉 Rust 我们想调用一些外部定义的函数。这个属性告诉我们“wasm-bindgen 知道如何找到这些函数”。
 
-第三行是用 Rust 写的函数签名。它告诉我们 "`alert` 函数接受一个叫做 s 的字符串作为参数。"
+第三行是一个用 Rust 编写的函数签名。它表示“`alert` 函数接受一个参数，即名为 `s` 的字符串”。正如你可能猜到的，这就是 [JavaScript 提供的 `alert` 函数](/zh-CN/docs/Web/API/Window/alert)。我们将在下一节中调用这个函数。
 
-你可能会疑惑这个函数是什么，你的疑惑可能是正确的：这是 [the `alert` function provided by JavaScript](/zh-CN/docs/Web/API/Window/alert)！我们将在下一节中调用这个函数。
-
-当你想调用新的 JavaScript 函数时，你可以在这里写他们，`wasm-bindgen` 将负责为你设置一切。并非一切都得到支持，但我们正在努力！如果缺少某些内容，请 [file bugs](https://github.com/rustwasm/wasm-bindgen/issues/new) 。
+每当你需要调用 JavaScript 函数时，都可以将它们添加到此文件中，`wasm-bindgen` 会为你完成所有配置工作。目前并非所有功能都已支持，但我们正在努力完善。如果发现功能缺失，请[提交错误报告](https://github.com/rustwasm/wasm-bindgen/issues/new)。
 
 #### 编写能够在 JavaScript 中调用的 Rust 函数
 
@@ -163,19 +138,19 @@ extern {
 ```rust
 #[wasm_bindgen]
 pub fn greet(name: &str) {
-    alert(&format!("Hello, {}!", name));
+    alert(&format!("你好，{}！", name));
 }
 ```
 
-我们又看到了 `#[wasm_bindgen]` 属性。在这里，它并非定义一个 `extern` 块，而是 `fn，`这代表我们希望能够在 JavaScript 中使用这个 Rust 函数。这和 `extern` 正相反：我们并非引入函数，而是要把函数给外部世界使用。
+我们再次看到了 `#[wasm_bindgen]` 属性。在这种情况下，它修饰的不是 `extern` 代码块，而是一个 `fn`；这意味着我们希望这个 Rust 函数能够被 JavaScript 调用。这与 `extern` 恰恰相反：这些不是我们需要的函数，而是我们要提供给外部的函数。
 
-这个函数的名字是 `greet`，它需要一个参数，一个字符串（写作 `&str`）。它调用了我们前面在 `extern` 块中引入的 `alert` 函数。它传递了一个让我们串联字符串的 `format!` 宏的调用。
+该函数名为 `greet`，接受一个参数——一个字符串（用 `&str` 表示），即 `name`。随后，它会调用我们在上文 `extern` 代码块中定义的 `alert` 函数。它将调用传递给 `format!` 宏，该宏允许我们拼接字符串。
 
-`format!` 在这里有两个参数，一个格式化字符串和一个要填入的变量。格式化字符串是 `"Hello, {}!"` 部分。它可以包含一个或多个 `{}`，变量将会被填入其中。传递的变量是 `name`，也就是这个函数的参数。所以当我们调用 `greet("Steve")`时我们就能看到 `"Hello, Steve!"`。
+在此情况下，`format!` 宏接受两个参数：一个格式字符串和一个要填入其中的变量。格式字符串就是 `"你好，{}！"` 这部分。其中包含 `{}`，变量将在此处进行插值。我们传递的变量是 `name`，即该函数的参数，因此如果调用 `greet("小明")`，我们应该会看到 `"你好，小明！"`。
 
-上述字符串被传递到了 `alert()`，所以当我们调用这个函数时，我们应该能看到一个消息框弹出，其中的内容为“Hello, Steve!”。
+该结果会被传递给 `alert()`，因此当我们调用此函数时，会看到一个弹出框，其中显示“你好，小明！”。
 
-我们的库写完了，是时候构建它了。
+现在我们的库已经编写完成，接下来让我们构建它。
 
 ### 把我们的代码编译到 WebAssembly
 
@@ -185,10 +160,11 @@ pub fn greet(name: &str) {
 [package]
 name = "hello-wasm"
 version = "0.1.0"
-authors = ["Your Name <you@example.com>"]
-description = "A sample project with wasm-pack"
+authors = ["你的名字 <you@example.com>"]
+description = "一个使用 wasm-pack 的示例项目"
 license = "MIT/Apache-2.0"
 repository = "https://github.com/yourgithubusername/hello-wasm"
+edition = "2021"
 
 [lib]
 crate-type = ["cdylib"]
@@ -199,79 +175,119 @@ wasm-bindgen = "0.2"
 
 你需要改为自己的仓库，同时 Cargo 需要通过 `git` 来完善 `authors` 部分。
 
-最重要的是添加底下的部分。第一个部分 — `[lib]` — 告诉 Rust 为我们的包建立一个 `cdylib` 版本；在本教程中我们不会讲解它的含义。有关更多信息，请参阅 [Cargo](https://doc.rust-lang.org/cargo/guide/) 和 [Rust Linkage](https://doc.rust-lang.org/reference/linkage.html) 文档。
+需要添加的主要部分是 `[package]`。`[lib]` 部分告诉 Rust 为我们的包构建一个 `cdylib` 版本；本教程中我们将不深入探讨它的具体含义。有关更多信息，请参阅 [Cargo](https://doc.rust-lang.org/cargo/guide/) 和 [Rust Linkage](https://doc.rust-lang.org/reference/linkage.html) 文档。
 
-第二个部分是 `[dependencies]` 部分。在这里我们告诉 Cargo 我们需要依赖哪个版本的 `wasm-bindgen` ；在这个例子中，它是 `0.2.z` 版本的 (不是 `0.3.0` 或者其他版本)。
+最后一个部分是 `[dependencies]` 部分。在这里，我们需要告诉 Cargo 希望依赖哪个版本的 `wasm-bindgen`；在本例中，即任何 `0.2.z` 版本（但不包括 `0.3.0` 及以上版本）。
 
 ### 构建包
 
-现在我们已经完成了所有配置项，开始构建吧！在命令行输入以下命令：
+既然已经完成了配置，接下来我们就来构建该包。我们将把生成的代码用于原生 ES 模块和 Node.js 中。为此，我们将使用 `wasm-pack build` 中的 [`--target` 参数](https://rustwasm.github.io/docs/wasm-pack/commands/build.html#target) 来指定要生成的 WebAssembly 和 JavaScript 的类型。
+
+首先，在 `hello-wasm` 目录中运行以下命令：
 
 ```bash
-wasm-pack build --scope mynpmusername
+wasm-pack build --target web
 ```
 
-这个命令将做一系列事情 (这会花一些时间，特别是当你第一次运行 `wasm-pack`)。想了解详细情况，查看[这篇在 Mozilla Hacks 上的文章](https://hacks.mozilla.org/2018/04/hello-wasm-pack/)。简单来说，`wasm-pack build` 将做以下几件事：
+这个命令将做一系列事情。想了解详细情况，查看[这篇在 Mozilla Hacks 上的文章](https://hacks.mozilla.org/2018/04/hello-wasm-pack/)。简单来说，`wasm-pack build` 将做以下几件事：
 
 1. 将你的 Rust 代码编译成 WebAssembly。
-2. 在编译好的 WebAssembly 代码基础上运行 `wasm-bindgen`，生成一个 JavaScript 文件将 WebAssembly 文件包装成一个模块以便 npm 能够识别它。
+2. 对该 WebAssembly 运行 `wasm-bindgen`，生成一个 JavaScript 文件，将该 WebAssembly 文件封装成浏览器可识别的模块。
 3. 创建一个 `pkg` 文件夹并将 JavaScript 文件和生成的 WebAssembly 代码移到其中。
 4. 读取你的 `Cargo.toml` 并生成相应的 `package.json`。
-5. 复制你的 `README.md` (如果有的话) 到文件夹中。
+5. 复制你的 `README.md`（如果有）到文件夹中。
 
-最后的结果？你在 `pkg` 文件夹下有了一个 npm 包。
+最终生成的包位于 `pkg` 目录中。
 
-#### 对代码体积的一些说明
+## 在 web 上使用我们的包
 
-如果你检查生成的 WebAssembly 文件体积，它可能有几百 kB。我们没有让 Rust 去压缩生成的代码，从而大大减少生成包的体积。这和本次教程主题无关，但如果你想了解更多，查看 Rust WebAssembly 工作组文档上关于 [减少 .wasm 体积](https://rustwasm.github.io/book/game-of-life/code-size.html#shrinking-wasm-size) 的说明。
+既然我们已经得到了一个编译好的 Wasm 模块，那就让我们在浏览器中运行它吧。首先，我们在项目根目录下创建一个名为 `index.html` 的文件，这样最终的项目结构如下：
 
-### 把我们的包发布到 npm
+```plain
+├── Cargo.lock
+├── Cargo.toml
+├── index.html  <-- 新的 index.html 文件
+├── pkg
+│   ├── hello_wasm.d.ts
+│   ├── hello_wasm.js
+│   ├── hello_wasm_bg.wasm
+│   ├── hello_wasm_bg.wasm.d.ts
+│   └── package.json
+├── src
+│   └── lib.rs
+└── target
+    ├── CACHEDIR.TAG
+    ├── release
+    └── wasm32-unknown-unknown
+```
 
-把我们的新包发布到 npm registry:
+将以下内容放到 `index.html` 文件：
+
+```html
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>hello-wasm 示例</title>
+  </head>
+  <body>
+    <script type="module">
+      import init, { greet } from "./pkg/hello_wasm.js";
+
+      init().then(() => {
+        greet("WebAssembly");
+      });
+    </script>
+  </body>
+</html>
+```
+
+该文件中的脚本导入了 JavaScript 粘合代码，初始化了 Wasm 模块，并调用了我们用 Rust 编写的 `greet` 函数。
+
+使用本地 Web 服务器（例如 `python3 -m http.server`）托管项目根目录。如果不确定如何操作，请参阅[运行一个简单的本地 HTTP 服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#运行一个简单的本地_http_服务器)。
+
+> [!NOTE]
+> 请使用支持 `application/wasm` MIME 类型的最新 Web 服务器。较旧的 Web 服务器可能尚不支持该类型。
+
+从 Web 服务器加载 `index.html`（如果你使用的是 Python3 示例，则为：`http://localhost:8000`）。屏幕上会弹出一个提示框，显示 `你好，WebAssembly！`。我们已经成功实现了从 JavaScript 调用 Rust 以及从 Rust 调用 JavaScript。
+
+## 将我们的包发布到 npm
+
+我们正在构建一个 npm 包，因此你需要安装 Node.js 和 npm。
+
+要获取 Node.js 和 npm，请访问[获取 npm！](https://docs.npmjs.com/getting-started/) 页面并按照说明操作。本教程针对 Node.js 20 版本。若需在不同 Node 版本之间切换，可使用 [nvm](https://github.com/nvm-sh/nvm)。
+
+要在 npm 中使用 WebAssembly 模块，我们需要进行一些修改。首先，让我们将 Rust 代码重新编译，并将目标设置为 `bundler` 选项：
 
 ```bash
-cd pkg
-npm publish --access=public
+wasm-pack build --target bundler
 ```
 
 我们现在有了一个 npm 包，使用 Rust 编写，但已经被编译为 WebAssembly 了。现在这个包已经可以被 JavaScript 使用了，而且使用它完全不需要用户安装 Rust；包中的代码是 WebAssembly 代码，而不是 Rust 源码！
 
-## 在网站上使用我们的包
+### 在 web 上使用 npm 包
 
-让我们建立一个使用我们包的网站！人们通过各种打包工具使用 npm 包，在本教程中，我们将使用 `webpack`。它比其他某些打包工具稍微复杂一点，但展示了更实际的用法。
+让我们来构建一个使用我们新开发的 npm 包的网站。许多人通过各种打包工具来使用 npm 包，在本教程中，我们将使用其中一种——`webpack`。这个示例虽然稍显复杂，但展示了一个真实的应用场景。
 
-让我们离开`pkg`目录，并创建一个新目录`site`，尝试以下操作：
+让我们在 `hello-wasm` 目录下创建一个名为 `site` 的新目录来试一试。我们尚未将该包发布到 npm 注册表，因此可以使用 `npm i /path/to/package` 从本地版本进行安装。也可以使用 [`npm link`](https://docs.npmjs.com/cli/commands/npm-link/)，但在本演示中，从本地路径安装更为方便：
 
 ```bash
-cd ../..
-mkdir site
-cd site
+mkdir site && cd site
+npm i ../pkg
 ```
 
-创建一个新文件 `package.json`，然后输入如下代码：
+安装 `webpack` 开发依赖：
 
-```json
-{
-  "scripts": {
-    "serve": "webpack-dev-server"
-  },
-  "dependencies": {
-    "@mynpmusername/hello-wasm": "^0.1.0"
-  },
-  "devDependencies": {
-    "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
-  }
-}
+```bash
+npm i -D webpack@5 webpack-cli@5 webpack-dev-server@5 copy-webpack-plugin@12
 ```
 
-请注意，你需要在依赖项部分的 `@` 之后填写自己的用户名。
-
-接下来，我们需要配置 Webpack。创建 `webpack.config.js` 并输入：
+接下来配置 webpack。创建 `webpack.config.js` 并将以下内容填入：
 
 ```js
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
+
 module.exports = {
   entry: "./index.js",
   output: {
@@ -279,17 +295,55 @@ module.exports = {
     filename: "index.js",
   },
   mode: "development",
+  experiments: {
+    asyncWebAssembly: true,
+  },
+  plugins: [
+    new CopyPlugin({
+      patterns: [{ from: "index.html" }],
+    }),
+  ],
 };
 ```
 
-现在我们需要一个 HTML 文件。创建一个`index.html`并写入如下内容：
+在 `package.json` 中，可以添加 `build` 和 `serve` 脚本，这些脚本将使用我们刚刚创建的配置文件运行 webpack：
+
+```json
+{
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "serve": "webpack serve --config webpack.config.js --open"
+  },
+  "dependencies": {
+    "hello-wasm": "file:../pkg"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}
+```
+
+接下来，创建 `index.js` 文件，并填入这些内容：
+
+```js
+import * as wasm from "hello-wasm";
+
+wasm.greet("npm 中的 WebAssembly");
+```
+
+这段代码从 `node_modules` 文件夹中导入了该模块，并调用了 `greet` 函数，将字符串 `"npm 中的 WebAssembly"` 作为参数传递进去。请注意，这里并没有什么特别之处，但我们却调用了 Rust 代码。从 JavaScript 代码的角度来看，这只是一个普通的模块。
+
+最后，添加一个 HTML 文件来加载该 JavaScript 代码。创建一个 `index.html` 文件，并添加以下内容：
 
 ```html
 <!doctype html>
-<html>
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
-    <title>hello-wasm example</title>
+    <title>hello-wasm 示例</title>
   </head>
   <body>
     <script src="./index.js"></script>
@@ -297,30 +351,50 @@ module.exports = {
 </html>
 ```
 
-最后，从 HTML 文件中引用`index.js`：
+`hello-wasm/site` 目录应如下所示：
 
-```js
-const js = import("./node_modules/@yournpmusername/hello-wasm/hello_wasm.js");
-js.then((js) => {
-  js.greet("WebAssembly");
-});
+```plain
+├── node_modules
+├── index.html
+├── index.js
+├── package-lock.json
+├── package.json
+└── webpack.config.js
 ```
 
-请注意，你需要再次填写你的 npm 用户名。
-
-这将从`node_modules`文件夹导入我们的模块。这不是最佳做法，但这里只做一个演示，因此暂时就这样用。加载后，它将从该模块调用`greet`函数，并传入字符串“WebAssembly”参数。注意这里看上去没有什么特别的，但是我们正在调用 Rust 代码！就 JavaScript 代码所知，这只是一个普通模块。
-
-我们已经完成了所有的文件！让我们试一下：
+已经创建完所有文件了，让我们运行一下吧：
 
 ```bash
-npm install
 npm run serve
 ```
 
-这将启动一个 Web 服务器。访问 `http://localhost:8080`，你应该会在屏幕上看到一个内容为 `Hello, WebAssembly!` 的警告框。我们已经成功地从 JavaScript 调用了 Rust，并从 Rust 调用了 JavaScript。
+这将启动一个 Web 服务器并打开 `http://localhost:8080`。屏幕上应会显示一个包含文本 `你好，npm 中的 WebAssembly！` 的提示框。我们已成功使用 npm 调用了 Rust 模块！
 
-## 结论
+如果你希望在本地开发环境之外使用你的 WebAssembly，可以在 `hello-wasm` 目录中使用 `pack` 和 `publish` 命令发布该包：
 
-本教程到此结束。希望你觉得它有用。
+```bash
+wasm-pack pack
+npm notice
+npm notice 📦  hello-wasm@0.1.0
+npm notice Tarball Contents
+npm notice 2.9kB hello_wasm_bg.js
+npm notice 16.7kB hello_wasm_bg.wasm
+npm notice 85B hello_wasm.d.ts
+npm notice 182B hello_wasm.js
+npm notice 549B package.json
+...
+hello-wasm-0.1.0.tgz
+[INFO]: 🎒  packed up your package!
+```
 
-在这个领域，有很多工作正在推进当中。如果你希望它变得更好，可以参阅 [Rust Webassembly 工作组](https://github.com/rustwasm/team/blob/master/README.md#get-involved)。
+要发布到 npm，需要一个 [npm 账户](https://www.npmjs.com/)，并通过 [`npm login`](https://docs.npmjs.com/cli/commands/npm-login/) 授权设备。准备就绪后，可以使用 `wasm-pack` 进行发布，该工具会在后台调用 `npm publish`：
+
+```bash
+wasm-pack publish
+```
+
+## 参见
+
+- [rust-lang.org](https://rust-lang.org/zh-CN)
+- [wasm-bindgen](https://github.com/wasm-bindgen/wasm-bindgen)
+- [wasm-pack](https://github.com/wasm-bindgen/wasm-pack)
