@@ -1,12 +1,10 @@
 ---
-title: "HTML 属性: accept"
+title: "`accept` 属性 (HTML)"
 short-title: accept
 slug: Web/HTML/Reference/Attributes/accept
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 2066cc916dfdcbb782340bf0ce562b230e947cba
 ---
-
-{{HTMLSidebar}}
 
 **`accept`** 属性は、値としてカンマ区切りでファイル種別または[固有ファイル種別指定子](#unique_file_type_specifiers)を取り、どのファイル種別を受け入れるかを記述します。
 
@@ -48,7 +46,7 @@ accept プロパティは {{HTMLElement("input/file", "file")}} 型の {{htmlele
   accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 ```
 
-一方、メディアファイルを受け入れる場合は、そのメディア種別の任意の形式を含めるようにしたいかもしれません。
+一方、メディアファイルを受け入れる場合は、そのメディア種別の任意の形式を含めた方が良いかもしれません。
 
 ```html
 <input type="file" id="soundFile" accept="audio/*" />
@@ -123,10 +121,7 @@ div {
 
 これは次のような出力を生成します。
 
-{{EmbedLiveSample('A_basic_example', 650, 60)}}
-
-> [!NOTE]
-> この例は GitHub でも見ることができます。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
+{{EmbedLiveSample('A_basic_example', 650, 80)}}
 
 ユーザーの端末やオペレーティングシステムが何であろうと、ファイル入力には、ユーザーがファイルを選択するためのファイルピッカーダイアログを開くボタンが用意されます。
 
@@ -167,7 +162,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Limiting_accepted_file_types', 650, 60)}}
+{{EmbedLiveSample('Limiting_accepted_file_types', 650, 80)}}
 
 ## 仕様書
 
