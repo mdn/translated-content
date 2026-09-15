@@ -45,7 +45,7 @@ HTML contiene características disponibles para marcar citas; el elemento que ut
 
 ### Cita en bloque independiente
 
-Si una sección de contenido a nivel de bloque (ya sea un párrafo, varios párrafos, una lista, etc.) se cita desde otro lugar, debes envolverla dentro de un elemento {{htmlelement("blockquote")}} para indicarlo, e incluir una URL que apunte a la fuente de la cita dentro de un atributo [`cite`](/es/docs/Web/HTML/Reference/Elements/blockquote#cite). Por ejemplo, el siguiente marcado está tomado de la página del elemento `<blockquote>` de MDN:
+Si una sección de contenido a nivel de bloque (ya sea un párrafo, varios párrafos, una lista, etc.) se cita desde otro lugar, debes envolverla dentro de un elemento {{htmlelement("blockquote")}} para indicarlo, e incluir una URL que apunte a la fuente de la cita dentro de un atributo [`cite`](/es/docs/Web/HTML/Reference/Elements/blockquote). Por ejemplo, el siguiente marcado está tomado de la página del elemento `<blockquote>` de MDN:
 
 ```html
 <p>
@@ -92,7 +92,7 @@ El estilo predeterminado del navegador mostrará esto como texto normal entre co
 
 ### Citas
 
-El contenido del atributo [`cite`](/es/docs/Web/HTML/Reference/Elements/blockquote#cite) suena útil, pero desafortunadamente los navegadores, lectores de pantalla, etc. no hacen mucho con él. No hay forma de que el navegador muestre el contenido de `cite` sin escribir tu propia solución usando JavaScript o CSS. Si quieres que la fuente de la cita esté disponible en la página, debes hacerla disponible en el texto mediante un enlace o alguna otra forma apropiada.
+El contenido del atributo [`cite`](/es/docs/Web/HTML/Reference/Elements/blockquote) suena útil, pero desafortunadamente los navegadores, lectores de pantalla, etc. no hacen mucho con él. No hay forma de que el navegador muestre el contenido de `cite` sin escribir tu propia solución usando JavaScript o CSS. Si quieres que la fuente de la cita esté disponible en la página, debes hacerla disponible en el texto mediante un enlace o alguna otra forma apropiada.
 
 Existe un elemento {{htmlelement("cite")}}, pero está pensado para contener el título del recurso que se cita, p. ej., el nombre del libro. Sin embargo, no hay razón por la que no puedas enlazar de alguna manera el texto dentro de `<cite>` a la fuente de la cita:
 
