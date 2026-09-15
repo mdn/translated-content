@@ -30,13 +30,13 @@ Este segundo artículo de nuestro [Tutorial de Express](/es/docs/Learn_web_devel
 
 ## Visión general
 
-Este artículo muestra cómo crear un sitio web "esqueleto" usando la herramienta [Generador de aplicaciones de Express](https://expressjs.com/en/starter/generator.html), que luego puedes completar con rutas, vistas/plantillas y llamadas a base de datos específicas del sitio. En este caso, usaremos la herramienta para crear el framework de nuestro [sitio web Local Library](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website), al que más adelante le añadiremos todo el código restante que el sitio necesite. El proceso es extremadamente simple: solo requiere que invoques al generador en la línea de comandos con un nombre para el nuevo proyecto, especificando opcionalmente también el motor de plantillas del sitio y el generador de CSS.
+Este artículo muestra cómo crear un sitio web "esqueleto" usando la herramienta [Generador de aplicaciones de Express](https://expressjs.com/en/starter/generator/), que luego puedes completar con rutas, vistas/plantillas y llamadas a base de datos específicas del sitio. En este caso, usaremos la herramienta para crear el framework de nuestro [sitio web Local Library](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website), al que más adelante le añadiremos todo el código restante que el sitio necesite. El proceso es extremadamente simple: solo requiere que invoques al generador en la línea de comandos con un nombre para el nuevo proyecto, especificando opcionalmente también el motor de plantillas del sitio y el generador de CSS.
 
 Las siguientes secciones te muestran cómo invocar el generador de aplicaciones y ofrecen una breve explicación sobre las distintas opciones de vistas y CSS. También explicaremos cómo está estructurado el sitio web esqueleto. Al final, mostraremos cómo puedes ejecutar el sitio web para comprobar que funciona.
 
 > [!NOTE]
 >
-> - El _Generador de aplicaciones de Express_ no es el único generador para aplicaciones Express, y el proyecto generado no es la única forma viable de estructurar tus archivos y directorios. Sin embargo, el sitio generado tiene una estructura modular fácil de extender y comprender. Para más información sobre una aplicación Express _mínima_, consulta el [ejemplo Hello world](https://expressjs.com/en/starter/hello-world.html) (documentación de Express).
+> - El _Generador de aplicaciones de Express_ no es el único generador para aplicaciones Express, y el proyecto generado no es la única forma viable de estructurar tus archivos y directorios. Sin embargo, el sitio generado tiene una estructura modular fácil de extender y comprender. Para más información sobre una aplicación Express _mínima_, consulta el [ejemplo Hello world](https://expressjs.com/en/starter/hello-world/) (documentación de Express).
 > - El _Generador de aplicaciones de Express_ declara la mayoría de las variables usando `var`.
 >   En este tutorial hemos cambiado la mayoría a [`const`](/es/docs/Web/JavaScript/Reference/Statements/const) (y algunas a [`let`](/es/docs/Web/JavaScript/Reference/Statements/let)), porque queremos mostrar las prácticas modernas de JavaScript.
 > - Este tutorial usa la versión de _Express_ y de las demás dependencias definidas en el archivo **package.json** creado por el _Generador de aplicaciones de Express_.
@@ -88,7 +88,7 @@ También puedes elegir un motor de vistas (plantillas) usando `--view` y/o un mo
 El _Generador de aplicaciones de Express_ te permite configurar varios motores de vistas/plantillas populares, entre ellos [EJS](https://www.npmjs.com/package/ejs), [Hbs](https://github.com/pillarjs/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig) y [Vash](https://www.npmjs.com/package/vash), aunque elige Jade por defecto si no especificas una opción de vista. El propio Express también admite de forma nativa un gran número de otros lenguajes de plantillas ([aquí tienes la lista](https://github.com/expressjs/express/wiki#template-engines)).
 
 > [!NOTE]
-> Si quieres usar un motor de plantillas que no sea compatible con el generador, consulta [Uso de motores de plantillas con Express](https://expressjs.com/en/guide/using-template-engines.html) (documentación de Express) y la documentación de tu motor de vistas de destino.
+> Si quieres usar un motor de plantillas que no sea compatible con el generador, consulta [Uso de motores de plantillas con Express](https://expressjs.com/en/guide/using-template-engines/) (documentación de Express) y la documentación de tu motor de vistas de destino.
 
 En términos generales, deberías elegir un motor de plantillas que ofrezca toda la funcionalidad que necesitas y que te permita ser productivo cuanto antes — o dicho de otro modo, de la misma forma en que eliges cualquier otro componente. Algunas cosas a tener en cuenta al comparar motores de plantillas:
 
@@ -121,7 +121,7 @@ Al igual que con los motores de plantillas, deberías usar el motor de hojas de 
 
 ### ¿Qué base de datos debería usar?
 
-El código generado no usa ni incluye ninguna base de datos. Las aplicaciones _Express_ pueden usar cualquier [mecanismo de base de datos](https://expressjs.com/en/guide/database-integration.html) admitido por _Node_ (_Express_ en sí no define ningún comportamiento ni requisito adicional específico para la gestión de bases de datos).
+El código generado no usa ni incluye ninguna base de datos. Las aplicaciones _Express_ pueden usar cualquier [mecanismo de base de datos](https://expressjs.com/en/guide/database-integration/) admitido por _Node_ (_Express_ en sí no define ningún comportamiento ni requisito adicional específico para la gestión de bases de datos).
 
 Hablaremos de cómo integrar una base de datos en un artículo posterior.
 
@@ -415,7 +415,7 @@ npm install
 
 ### El archivo www
 
-El archivo **/bin/www** es el punto de entrada de la aplicación. Lo primero que hace es usar `require()` para importar el punto de entrada "real" de la aplicación (**app.js**, en la raíz del proyecto), que configura y devuelve el objeto de la aplicación [`express()`](https://expressjs.com/en/api.html).
+El archivo **/bin/www** es el punto de entrada de la aplicación. Lo primero que hace es usar `require()` para importar el punto de entrada "real" de la aplicación (**app.js**, en la raíz del proyecto), que configura y devuelve el objeto de la aplicación [`express()`](https://expressjs.com/en/api/).
 `require()` es la [forma CommonJS](https://nodejs.org/api/modules.html) de importar código JavaScript, JSON y otros archivos al archivo actual.
 Aquí especificamos el módulo **app.js** usando una ruta relativa y omitimos la extensión de archivo opcional (**.js**).
 
@@ -432,7 +432,7 @@ const app = require("../app");
 > [!NOTE]
 > Node.js 14 y versiones posteriores admiten las sentencias `import` de ES6 para importar módulos de JavaScript (ECMAScript).
 > Para usar esta función tienes que añadir `"type": "module"` a tu archivo **package.json** de Express, todos los módulos de tu aplicación deben usar `import` en lugar de `require()`, y en las _importaciones relativas_ debes incluir la extensión del archivo (para más información, consulta la [documentación de Node](https://nodejs.org/api/esm.html#introduction)).
-> Aunque usar `import` tiene ventajas, este tutorial usa `require()` para coincidir con [la documentación de Express](https://expressjs.com/en/starter/hello-world.html).
+> Aunque usar `import` tiene ventajas, este tutorial usa `require()` para coincidir con [la documentación de Express](https://expressjs.com/en/starter/hello-world/).
 
 El resto del código de este archivo configura un servidor HTTP de node con `app` en un puerto específico (definido en una variable de entorno, o 3000 si la variable no está definida), y comienza a escuchar y a reportar los errores y conexiones del servidor. Por ahora no necesitas saber nada más sobre este código (todo lo que hay en este archivo es código "repetitivo" o _boilerplate_), pero siéntete libre de revisarlo si te interesa.
 
@@ -481,7 +481,7 @@ app.set("view engine", "pug");
 ```
 
 El siguiente conjunto de funciones llama a `app.use()` para añadir a la cadena de manejo de solicitudes las bibliotecas de _middleware_ que importamos antes.
-Por ejemplo, `express.json()` y `express.urlencoded()` son necesarias para rellenar [`req.body`](https://expressjs.com/en/api.html#req.body) con los campos del formulario.
+Por ejemplo, `express.json()` y `express.urlencoded()` son necesarias para rellenar [`req.body`](https://expressjs.com/en/api/#req.body) con los campos del formulario.
 Después de estas bibliotecas, también usamos el middleware `express.static`, que hace que _Express_ sirva todos los archivos estáticos del directorio **/public** en la raíz del proyecto.
 
 ```js
@@ -558,7 +558,7 @@ Algo interesante en el código anterior es que la función callback tiene el ter
 
 ### Vistas (plantillas)
 
-Las vistas (plantillas) se guardan en el directorio **/views** (tal como se especifica en **app.js**) y tienen la extensión de archivo **.pug**. El método [`Response.render()`](https://expressjs.com/en/5x/api.html#res.render) se usa para renderizar una plantilla especificada junto con los valores de las variables con nombre pasadas en un objeto, y luego enviar el resultado como respuesta. En el siguiente código de **/routes/index.js** puedes ver cómo esa ruta renderiza una respuesta usando la plantilla "index" y pasando la variable de plantilla "title".
+Las vistas (plantillas) se guardan en el directorio **/views** (tal como se especifica en **app.js**) y tienen la extensión de archivo **.pug**. El método [`Response.render()`](https://expressjs.com/en/5x/api/#res.render) se usa para renderizar una plantilla especificada junto con los valores de las variables con nombre pasadas en un objeto, y luego enviar el resultado como respuesta. En el siguiente código de **/routes/index.js** puedes ver cómo esa ruta renderiza una respuesta usando la plantilla "index" y pasando la variable de plantilla "title".
 
 ```js
 /* GET home page. */
@@ -589,7 +589,7 @@ A continuación, empezaremos a modificar el esqueleto para que funcione como el 
 
 ## Véase también
 
-- [Express application generator](https://expressjs.com/en/starter/generator.html) (documentación de Express)
-- [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (documentación de Express)
+- [Express application generator](https://expressjs.com/en/starter/generator/) (documentación de Express)
+- [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines/) (documentación de Express)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
