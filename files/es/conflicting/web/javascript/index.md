@@ -45,7 +45,7 @@ Otra aplicación común para JavaScript es como lenguaje de programación de lad
 
 - [Rhino](/es/docs/Rhino)
   - : Información específica para la implementación de JavaScript escrita en Java (también conocido como Rhino).
-- [Recursos del lenguaje](/es/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview)
+- [Recursos del lenguaje](/es/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)
   - : Punteros a estándares JavaScript publicados.
 - [Una reintroducción a JavaScript](/es/docs/Web/JavaScript/Guide/Language_overview)
   - : [Guía de JavaScript](/es/docs/Web/JavaScript/Guide) y [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference).
