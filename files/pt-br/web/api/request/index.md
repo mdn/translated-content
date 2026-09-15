@@ -44,7 +44,7 @@ Você pode criar um novo objeto `Request` usando o construtor {{domxref("Request
 - {{domxref("Body.body")}} {{readonlyInline}}
   - : Um simples "getter" para ler o conteúdo do corpo através da interface {{domxref("ReadableStream")}}.
 - {{domxref("Body.bodyUsed")}} {{readonlyInline}}
-  - : Armazena um {{domxref("Boolean", "Booleano")}} que declara se o corpo da requisição já foi utilizado em uma resposta.
+  - : Armazena um {{jsxref("Boolean", "Booleano")}} que declara se o corpo da requisição já foi utilizado em uma resposta.
 
 ## Métodos
 
@@ -54,13 +54,13 @@ Você pode criar um novo objeto `Request` usando o construtor {{domxref("Request
 `Request` implementa {{domxref("Body")}}, então também possui os seguintes métodos disponíveis:
 
 - {{domxref("Body.arrayBuffer()")}}
-  - : Retorna um objeto do tipo promise que resolve um {{domxref("ArrayBuffer")}} com a representação do corpo da requisição.
+  - : Retorna um objeto do tipo promise que resolve um {{jsxref("ArrayBuffer")}} com a representação do corpo da requisição.
 - {{domxref("Body.blob()")}}
   - : Retorna um objeto do tipo promise que resolve um {{domxref("Blob")}} com a representação do corpo da requisição.
 - {{domxref("Body.formData()")}}
   - : Retorna um objeto do tipo promise que resolve um {{domxref("FormData")}} com a representação do corpo da requisição.
 - {{domxref("Body.json()")}}
-  - : Retorna um objeto do tipo promise que resolve um {{domxref("JSON")}} com a representação do corpo da requisição.
+  - : Retorna um objeto do tipo promise que resolve um {{jsxref("JSON")}} com a representação do corpo da requisição.
 - {{domxref("Body.text()")}}
   - : Retorna um objeto do tipo promise que resolve um {{jsxref("String")}} (texto) com a representação do corpo da requisição.
 

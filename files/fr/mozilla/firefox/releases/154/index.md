@@ -3,7 +3,7 @@ title: Firefox 154 note de version pour les développeurs
 short-title: Firefox 154
 slug: Mozilla/Firefox/Releases/154
 l10n:
-  sourceCommit: a31068ba2df086b7aba127b26d28b083537d5894
+  sourceCommit: 27ab6daefdb5b4dea6e70a00bde29b8844e7c1ff
 ---
 
 Cet article présente les informations concernant les changements de Firefox 154 qui concernent les développeur·euse·s.
@@ -91,7 +91,7 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 
 - **Valeurs en pourcentage pour `text-decoration-inset`**&nbsp;: `layout.css.text-decoration-inset-percentage.enabled`
 
-  La propriété CSS {{CSSxRef("text-decoration-inset")}} prend désormais en charge les pourcentages comme valeurs. La valeur en pourcentage définit la taille de l'indentation en pourcentage de la {{CSSxRef("font-size")}}. ([bogue Firefox 2044602 <sup>(angl.)</sup>](https://bugzil.la/2044602)).
+  La propriété CSS {{CSSxRef("text-decoration-inset")}} prend désormais en charge les pourcentages comme valeurs. La valeur en pourcentage définit la taille de l'indentation en pourcentage de la taille en incise de la boîte de décoration ou de chaque fragment de boîte individuel, en fonction de la valeur de {{CSSxRef("box-decoration-break")}}. ([bogue Firefox 2044602 <sup>(angl.)</sup>](https://bugzil.la/2044602)).
 
 - **Calculer une valeur basée sur `progress()`**&nbsp;: `layout.css.progress-function.enabled`
 
