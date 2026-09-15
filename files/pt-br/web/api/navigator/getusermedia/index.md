@@ -3,7 +3,7 @@ title: navigator.getUserMedia
 slug: Web/API/Navigator/getUserMedia
 ---
 
-{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
+{{APIRef("Media Capture and Streams")}}
 
 O método Navigator.getUserMedia() atualmente esta _deprecated_ (obsoleto), ele é responsável por pedir a permissão do usuário para usar até 1 dispositivo de entrada de vídeo (como câmera, ou tela compartilhada) e até 1 dispositivo de entrada de áudio (como o microfone) como fonte para o stream de mídia (pode ser representado por uma instância `MediaStream`).
 
