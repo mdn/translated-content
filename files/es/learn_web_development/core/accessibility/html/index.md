@@ -541,7 +541,7 @@ Si se usa un icono en lugar de texto para señalar este tipo de comportamiento d
 - [G200: Opening new windows and tabs from a link only when necessary | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
 - [G201: Giving users advanced warning when opening a new window | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 
-#### Enlaces de salto
+### Enlaces de salto
 
 Un enlace de salto, también conocido como skipnav, es un elemento `a` colocado lo más cerca posible del elemento de apertura {{HTMLElement("body")}} que enlaza al comienzo del contenido principal de la página. Este enlace permite a las personas evitar el contenido que se repite en varias páginas de un sitio web, como el encabezado y la navegación principal de un sitio.
 
@@ -552,7 +552,7 @@ Los enlaces de salto son especialmente útiles para las personas que navegan con
 - [MDN Understanding WCAG, Guideline 2.4 explanations](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
-#### Proximidad
+### Proximidad
 
 Grandes cantidades de contenido interactivo —incluidas las anclas— colocadas muy cerca visualmente unas de otras deberían tener espacio insertado para separarlas. Este espaciado es beneficioso para las personas que sufren problemas de control motor fino y que pueden activar accidentalmente el contenido interactivo equivocado mientras navegan.
 
