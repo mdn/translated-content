@@ -56,22 +56,22 @@ El siguiente ejemplo crea un servidor web que escucha cualquier tipo de solicitu
 3. Con tu editor de texto favorito, crea un archivo llamado `hello.js` y pega en él el siguiente código:
 
    ```js
-   // Load HTTP module
+   // Cargar el módulo HTTP
    const http = require("http");
 
    const hostname = "127.0.0.1";
    const port = 8000;
 
-   // Create HTTP server
+   // Crear el servidor HTTP
    const server = http.createServer((req, res) => {
-     // Set the response HTTP header with HTTP status and Content type
+     // Establecer el encabezado HTTP de la respuesta con el estado HTTP y el tipo de contenido
      res.writeHead(200, { "Content-Type": "text/plain" });
 
-     // Send the response body "Hello World"
+     // Enviar el cuerpo de la respuesta "Hello World"
      res.end("Hello World\n");
    });
 
-   // Prints a log once the server starts listening
+   // Muestra un registro cuando el servidor empieza a escuchar
    server.listen(port, hostname, () => {
      console.log(`Server running at http://${hostname}:${port}/`);
    });
@@ -297,12 +297,12 @@ const express = require("express");
 
 const router = express.Router();
 
-// Home page route
+// Ruta de la página de inicio
 router.get("/", (req, res) => {
   res.send("Wiki home page");
 });
 
-// About page route
+// Ruta de la página "acerca de"
 router.get("/about", (req, res) => {
   res.send("About this wiki");
 });
@@ -365,19 +365,19 @@ const express = require("express");
 
 const app = express();
 
-// An example middleware function
+// Una función de middleware de ejemplo
 function middlewareFunction(req, res, next) {
-  // Perform some operations
-  next(); // Call next() so Express will call the next middleware function in the chain.
+  // Realizar algunas operaciones
+  next(); // Llamar a next() para que Express invoque la siguiente función de middleware de la cadena.
 }
 
-// Function added with use() for all routes and verbs
+// Función añadida con use() para todas las rutas y verbos
 app.use(middlewareFunction);
 
-// Function added with use() for a specific route
+// Función añadida con use() para una ruta específica
 app.use("/some-route", middlewareFunction);
 
-// A middleware function added for a specific HTTP verb and route
+// Una función de middleware añadida para un verbo y una ruta HTTP específicos
 app.get("/", middlewareFunction);
 
 app.listen(3000);
@@ -504,10 +504,10 @@ const path = require("path");
 
 const app = express();
 
-// Set directory to contain the templates ('views')
+// Definir el directorio que contendrá las plantillas ('views')
 app.set("views", path.join(__dirname, "views"));
 
-// Set view engine to use, in this case 'some_template_engine_name'
+// Definir el motor de plantillas a usar, en este caso 'some_template_engine_name'
 app.set("view engine", "some_template_engine_name");
 ```
 
