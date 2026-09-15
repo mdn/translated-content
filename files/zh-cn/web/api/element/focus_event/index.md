@@ -1,32 +1,33 @@
 ---
-title: 元素：focus 事件
+title: Element：focus 事件
 slug: Web/API/Element/focus_event
+l10n:
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
-**`focus`** 事件在元素获取焦点时触发。这个事件和 {{domxref("Element/focusin_event", "focusin")}} 最大的区别仅仅在于后者会事件冒泡。
+**`focus`** 事件在元素获得焦点时触发。此事件不会冒泡，但随后触发的相关 {{domxref("Element/focusin_event", "focusin")}} 事件会冒泡。
 
-`focus` 与 {{domxref("Element/blur_event", "blur")}} 正好相反。
+与 `focus` 相反的是 {{domxref("Element/blur_event", "blur")}} 事件，该事件在元素*失去*焦点时触发。
 
-该事件不可取消，也不会冒泡。
+`focus` 事件不可取消。
 
 ## 语法
 
-在象 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称或设置事件处理器属性。
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
-```js
-addEventListener("focus", (event) => {});
+```js-nolint
+addEventListener("focus", (event) => { })
 
-onfocus = (event) => {};
+onfocus = (event) => { }
 ```
 
-## 事件属性
+## 事件类型
 
-_该接口还从其父级 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承属性。_
+{{domxref("FocusEvent")}}。继承自 {{domxref("UIEvent")}} 和 {{domxref("Event")}}。
 
-- {{domxref("FocusEvent.relatedTarget")}}
-  - : 一个 {{domxref("EventTarget")}}，表示此事件的次要目标。在某些情况下（例如切换到当前标签页或离开当前标签页），处于安全原因，该属性可能会被设置为 `null`。
+{{InheritanceDiagram("FocusEvent")}}
 
 ## 示例
 
@@ -36,9 +37,29 @@ _该接口还从其父级 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input" />
-  <input type="password" placeholder="password" />
+  <label>
+    一些文本：
+    <input type="text" placeholder="文本输入" />
+  </label>
+  <label>
+    密码：
+    <input type="password" placeholder="密码" />
+  </label>
 </form>
+```
+
+#### JavaScript
+
+```js
+const password = document.querySelector('input[type="password"]');
+
+password.addEventListener("focus", (event) => {
+  event.target.style.background = "pink";
+});
+
+password.addEventListener("blur", (event) => {
+  event.target.style.background = "";
+});
 ```
 
 #### 结果
@@ -47,14 +68,20 @@ _该接口还从其父级 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承
 
 ### 事件委托
 
-此事件有两个可以实现事件委托的方法：通过在支持的浏览器上使用 {{domxref("Element/focusin_event", "focusin")}} 事件，或者通过设置 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 的参数`useCapture` 值为 `true`。
+实现此事件的事件委托有两种方式：使用 {{domxref("Element/focusin_event", "focusin")}} 事件，或者将 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 的 `useCapture` 参数设为 `true`。
 
 #### HTML
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input" />
-  <input type="password" placeholder="password" />
+  <label>
+    一些文本：
+    <input type="text" placeholder="文本输入" />
+  </label>
+  <label>
+    密码：
+    <input type="password" placeholder="密码" />
+  </label>
 </form>
 ```
 
@@ -94,6 +121,7 @@ form.addEventListener(
 
 ## 参见
 
-- 相关的事件：{{domxref("Element/blur_event", "blur")}}、{{domxref("Element/focusin_event", "focusin")}}、{{domxref("Element/focusout_event", "focusout")}}
-- 在 `Window` 目标上的该事件：{{domxref("Window/focus_event", "focus")}} 事件
-- [Focusing: focus/blur](https://javascript.info/focus-blur)
+- {{domxref("HTMLElement.focus()")}} 方法
+- 相关事件：{{domxref("Element/blur_event", "blur")}}、{{domxref("Element/focusin_event", "focusin")}}、{{domxref("Element/focusout_event", "focusout")}}
+- `Window` 目标上的这个事件：{{domxref("Window/focus_event", "focus")}} 事件
+- [聚焦：focus/blur](https://javascript.info/focus-blur)
