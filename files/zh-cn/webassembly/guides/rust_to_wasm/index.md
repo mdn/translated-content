@@ -14,7 +14,7 @@ Rust 和 WebAssembly 有两大主要用例：
 - 构建完整应用——整个 Web 应用都基于 Rust 开发。
 - 构建应用的组成部分——在现存的 JavaScript 前端中使用 Rust。
 
-目前，Rust 团队主要关注后一种用例，因此本文将重点介绍后者。关于前一种情况，请参考 [`yew`](https://github.com/yewstack/yew) 和 [leptos](https://github.com/leptos-rs/leptos) 等项目。
+目前，Rust 团队主要关注后一种用例，因此本文将重点介绍后者。关于前一种用例，请参考 [`yew`](https://github.com/yewstack/yew) 和 [leptos](https://github.com/leptos-rs/leptos) 等项目。
 
 在本教程中，我们将使用 `wasm-pack`（一款用于在 Rust 中构建 JavaScript 包的工具）来构建一个包。该包将仅包含 WebAssembly 和 JavaScript 代码，因此用户无需安装 Rust。他们甚至可能不会察觉到该包是用 Rust 编写的。
 
