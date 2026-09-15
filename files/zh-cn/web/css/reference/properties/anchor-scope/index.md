@@ -36,7 +36,7 @@ anchor-scope: unset;
 
 ## 描述
 
-当页面中的多个[锚点元素](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Using#associating_anchor_and_positioned_elements)被赋予相同的 {{cssxref("anchor-name")}} 值，并且定位元素与该锚点名称建立关联（将该名称指定为其 {{cssxref("position-anchor")}} 属性值）时，定位元素会与源代码顺序中该锚点名称对应的_最后一个_锚点元素建立关联。
+当页面中的多个[锚点元素](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Using#associating_anchor_and_positioned_elements)被赋予相同的 {{cssxref("anchor-name")}} 值，并且定位元素与该锚点名称建立关联（将该名称指定为其 {{cssxref("position-anchor")}} 属性值）时，定位元素会与源代码顺序中该锚点名称对应的*最后一个*锚点元素建立关联。
 
 这在某些情况下可能会造成问题。例如，如果文档包含多个重复组件，每个组件都有一个与锚点连接的定位元素，那么除非每个组件使用不同的锚点名称，否则所有定位元素都会锚定到页面上的最后一个锚点。这通常不是期望的行为。
 
