@@ -1,58 +1,65 @@
 ---
-title: 技能测试：网格布局
+title: 技能测试：CSS 网格
+short-title: 测试：CSS 网格
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
+l10n:
+  sourceCommit: 143f7345a4276156679d816a153470fe1fc6f3f8
 ---
 
-此任务的目的是让你使用 CSS 网格布局，并测试你是否了解网格和网格项的行为方式。你将会完成三个包括不同的元素小任务。
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}
+
+此任务的目的是让你使用 CSS 网格布局，并测试你是否了解[网格和网格项](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Grids)的行为方式。接下来，你将完成几项小任务，这些任务会运用到你刚刚学过的内容中的不同要素。
 
 > [!NOTE]
-> 你可以在下面的交互式编辑器中试用解决方案，不过，下载代码并使用在线工具 (如 CodePen、jsFiddle 或 Glitch) 处理这些任务可能会更有帮助。
->
-> 如果你遇到了困难，可以通过[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
+> 如需帮助，请阅读我们的[技能测试](/zh-CN/docs/Learn_web_development#技能测试)使用指南。你也可以通过我们的[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)之一联系我们。
 
-## 网格布局 一
+## CSS 网格布局 1
 
-在此任务中，你需要创建一个网格，要求其中的四个子元素能自动排布。网格内要有三列并且将可用空间等分，列和行的间距均为 20px。
+在此任务中，你需要创建一个网格，要求其中的四个子元素能自动排布。网格应包含三列，这些列应平均分配可用空间，且列轨道与行轨道之间应留有 `20px` 的间距。接下来，尝试在带有 `grid` 类的父容器内添加更多子元素，并观察它们在默认情况下的表现。
 
-在三列网格布局中有四个物体放入其中。
+任务的起始点如下：
 
-尝试更新下面的实时代码以复现上面的示例：
+{{EmbedLiveSample("grid1-start", "", "220px")}}
 
-```html live-sample___grid1
+以下是起始点对应的代码：
+
+```html live-sample___grid1-start live-sample___grid1-finish
 <div class="grid">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
+  <div>一</div>
+  <div>二</div>
+  <div>三</div>
+  <div>四</div>
 </div>
 ```
 
-```css hidden live-sample___grid1
+```css live-sample___grid1-start live-sample___grid1-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
+
 .grid > * {
   background-color: #4d7298;
   border: 2px solid #77a6b6;
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
 }
-```
 
-```css live-sample___grid1
 .grid {
+  /* 在这里添加样式 */
 }
 ```
 
-{{EmbedLiveSample("grid1", "", "200px")}}
+完成的布局应该类似如下：
+
+{{EmbedLiveSample("grid1-finish", "", "160px")}}
 
 <details>
-<summary>Click here to show the solution</summary>
+<summary>点击这里查看答案</summary>
 
-Create a grid using `display: grid` with three columns using `grid-template-columns` and a `gap` between the items:
+使用 `display: grid` 创建一个网格，通过 `grid-template-columns` 设置为三列，并在项目之间添加 `gap`：
 
-```css
+```css live-sample___grid1-finish
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -62,28 +69,32 @@ Create a grid using `display: grid` with three columns using `grid-template-colu
 
 </details>
 
-## 网格布局 二
+## CSS 网格布局 2
 
-在此例中，我们已经定义好了一个 grid, 请通过修改下面两个子元素的 CSS 规则，导致它们跨过彼此的网格轨道; 第二个 item 应该在第一个 item 之上 (如下图所示).
+在此任务中，我们已经定义了一个网格。我们需要你修改这两个子元素的 CSS 规则，使每个元素都横跨多个网格轨道。第二个元素应覆盖在第一个元素之上。
 
-![盒子中的两个元素，其中一个元素覆盖在另一个元素上。](grid-task2.png)
+**附加题：** 现在，你能不改变源代码中元素的顺序，就让第一个元素显示在最上面吗？
 
-尝试更新下面的实时代码以复现上面的示例：
+任务的起始点如下：
 
-```html live-sample___grid2
+{{EmbedLiveSample("grid2-start", "", "340px")}}
+
+以下是起始点对应的代码：
+
+```html live-sample___grid2-start live-sample___grid2-finish
 <div class="grid">
-  <div class="item1">One</div>
-  <div class="item2">Two</div>
+  <div class="item1">一</div>
+  <div class="item2">二</div>
 </div>
 ```
 
-```css hidden live-sample___grid2
+```css live-sample___grid2-start live-sample___grid2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
 .grid > * {
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
 }
 
@@ -96,9 +107,7 @@ body {
   background-color: rgb(214 162 173 / 70%);
   border: 5px solid rgb(214 162 173 / 100%);
 }
-```
 
-```css live-sample___grid2
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -107,21 +116,24 @@ body {
 }
 
 .item1 {
+  /* 在这里添加样式 */
 }
 
 .item2 {
+  /* 在这里添加样式 */
 }
 ```
 
-{{EmbedLiveSample("grid2", "", "340px")}}
+完成任务以后，布局应该类似如下：
+
+{{EmbedLiveSample("grid2-finish", "", "340px")}}
 
 <details>
-<summary>Click here to show the solution</summary>
+<summary>点击这里查看答案</summary>
 
-It is possible to layer items by way of them occupying the same grid cells.
-One option is to use the shorthands below, however it would be correct to use the longhand `grid-row-start` for example.
+可以通过让元素占据相同的网格单元格来实现层叠效果。一种方法是使用下面的简写形式，不过使用如 `grid-row-start` 这样的完整写法也是正确的。
 
-```css
+```css live-sample___grid2-finish
 .item1 {
   grid-column: 1 / 4;
   grid-row: 1 / 3;
@@ -133,15 +145,15 @@ One option is to use the shorthands below, however it would be correct to use th
 }
 ```
 
-For the bonus question, one way of achieving this would be to use `order`, which we've encountered in the flexbox tutorial.
+关于附加题，实现这一效果的一种方法是使用 `order`，我们在弹性盒模型教程中已经接触过它。
 
-```css
+```css live-sample___grid2-finish
 .item1 {
   order: 1;
 }
 ```
 
-Another valid solution is to use `z-index`:
+另外一种合适的解法是使用 `z-index`：
 
 ```css
 .item1 {
@@ -151,24 +163,26 @@ Another valid solution is to use `z-index`:
 
 </details>
 
-## 网格布局 三
+## CSS 网格布局 3
 
-此 grid 中 4 个子元素，初始状态是显示的是 auto-placement. 请通过使用 grid-area 和 grid-template-areas 属性对照下图放置元素的布局。
+在此任务中，网格中包含四个直接子节点。它们目前被自动放置在网格中。
 
-![网格中显示的四个项目。](grid-task3.png)
+任务的起始点如下：
 
-尝试更新下面的实时代码以复现上面的示例：
+{{EmbedLiveSample("grid3-start", "", "200px")}}
 
-```html live-sample___grid3
+以下是起始点对应的代码：
+
+```html live-sample___grid3-start live-sample___grid3-finish
 <div class="grid">
-  <div class="one">One</div>
-  <div class="two">Two</div>
-  <div class="three">Three</div>
-  <div class="four">Four</div>
+  <div class="one">一</div>
+  <div class="two">二</div>
+  <div class="three">三</div>
+  <div class="four">四</div>
 </div>
 ```
 
-```css hidden live-sample___grid3
+```css live-sample___grid3-start live-sample___grid3-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -176,12 +190,10 @@ body {
   background-color: #4d7298;
   border: 2px solid #77a6b6;
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
 }
-```
 
-```css live-sample___grid3
 .grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -189,14 +201,16 @@ body {
 }
 ```
 
-{{EmbedLiveSample("grid3", "", "200px")}}
+要完成此任务，请使用 `grid-area` 和 `grid-template-areas` 属性，按照下图所示对项目进行布局：
+
+{{EmbedLiveSample("grid3-finish", "", "200px")}}
 
 <details>
-<summary>Click here to show the solution</summary>
+<summary>点击这里查看答案</summary>
 
-Each part of the layout needs a name using the `grid-area` property and `grid-template-areas` to lay them out. Possible areas of confusion would be not realizing you should place a `.` to leave a cell empty, or that you should repeat the name to cause an element to span more than one track:
+布局的每个部分都需要使用 `grid-area` 属性指定名称，并通过 `grid-template-areas` 进行布局。可能引起混淆的地方包括：没有意识到需要添加 `.` 来留空一个单元格，或者没有意识到需要重复名称才能让某个元素横跨多个轨道：
 
-```css
+```css live-sample___grid3-finish
 .grid {
   display: grid;
   gap: 20px;
@@ -226,69 +240,72 @@ Each part of the layout needs a name using the `grid-area` property and `grid-te
 
 </details>
 
-## 网格布局 四
+## CSS 网格布局 4
 
-此例中，你需要同时使用 Grid Layout 和 Flexbox 来完成下图所示的任务。这个过程中你不需要通过改变 HTML 来完成。
+在此任务中，你需要同时使用网格布局和弹性盒模型来重现最终的布局。列轨道与行轨道之间的间距应为 `10px`。为实现这一效果，你无需对 HTML 代码进行任何修改。
 
-![两行卡片，每个卡片有一个图像和一组标签。](grid-task4.png)
+任务的起始点如下：
 
-尝试更新下面的实时代码以复现上面的示例：
+{{EmbedLiveSample("grid4-start", "", "400px")}}
 
-```html live-sample___grid4
+以下是起始点对应的代码：
+
+```html live-sample___grid4-start live-sample___grid4-finish
 <div class="container">
   <div class="card">
     <img
-      alt="a single red balloon"
+      alt="一个红色的气球"
       src="https://mdn.github.io/shared-assets/images/examples/balloons1.jpg" />
     <ul class="tags">
-      <li>balloon</li>
-      <li>red</li>
-      <li>sky</li>
-      <li>blue</li>
-      <li>Hot air balloon</li>
+      <li>气球</li>
+      <li>红色</li>
+      <li>天空</li>
+      <li>蓝色</li>
+      <li>热气球</li>
     </ul>
   </div>
   <div class="card">
     <img
-      alt="balloons over some houses"
+      alt="一些房子上空飘着气球"
       src="https://mdn.github.io/shared-assets/images/examples/balloons2.jpg" />
     <ul class="tags">
-      <li>balloons</li>
-      <li>houses</li>
-      <li>train</li>
-      <li>harborside</li>
+      <li>气球</li>
+      <li>房子</li>
+      <li>火车</li>
+      <li>海滨</li>
     </ul>
   </div>
   <div class="card">
     <img
-      alt="close-up of balloons inflating"
+      alt="气球充气的特写镜头"
       src="https://mdn.github.io/shared-assets/images/examples/balloons3.jpg" />
     <ul class="tags">
-      <li>balloons</li>
-      <li>inflating</li>
-      <li>green</li>
-      <li>blue</li>
+      <li>气球</li>
+      <li>充气</li>
+      <li>绿色</li>
+      <li>蓝色</li>
     </ul>
   </div>
   <div class="card">
     <img
-      alt="a balloon in the sun"
+      alt="阳光下的气球"
       src="https://mdn.github.io/shared-assets/images/examples/balloons4.jpg" />
     <ul class="tags">
-      <li>balloon</li>
-      <li>sun</li>
-      <li>sky</li>
-      <li>summer</li>
-      <li>bright</li>
+      <li>气球</li>
+      <li>阳光</li>
+      <li>天空</li>
+      <li>夏季</li>
+      <li>明亮</li>
     </ul>
   </div>
 </div>
 ```
 
-```css hidden live-sample___grid4
+```css live-sample___grid4-start live-sample___grid4-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
+
 .card {
   display: grid;
   grid-template-rows: 200px min-content;
@@ -307,34 +324,34 @@ body {
 }
 
 .tags > * {
-  background-color: #999;
-  color: #fff;
+  background-color: #999999;
+  color: white;
   padding: 0.2em 0.8em;
   border-radius: 0.2em;
   font-size: 80%;
   margin: 5px;
 }
-```
 
-```css live-sample___grid4
 .container {
+  /* 在这里添加样式 */
 }
 
 .tags {
+  /* 在这里添加样式 */
 }
 ```
 
-{{EmbedLiveSample("grid4", "", "400px")}}
+完成任务以后，布局应该类似如下：
+
+{{EmbedLiveSample("grid4-finish", "", "400px")}}
 
 <details>
-<summary>Click here to show the solution</summary>
+<summary>点击这里查看答案</summary>
+由于需要对行和列进行对齐（即二维布局），因此容器必须采用网格布局。`<ul>` 需要作为弹性容器，因为标签（`<li>` 元素）不会按列排列，仅按行排列，并且通过将 `justify-content` 属性设置为 `center` 来使其在空间中居中。
 
-The container will need to be a grid layout, as we have alignment in rows and columns - two-dimensional.
-The `<ul>` needs to be a flex container as tags (`<li>` elements) are not lined up in columns, only in rows and they are centered in the space with the alignment property `justify-content` set to `center`.
+你可以尝试在容器上使用弹性盒模型，并使用百分比值来限制卡片的大小。你也可以尝试将项目设置为网格布局，但请注意，项目并非在二维空间中对齐，因此弹性盒模型并非最佳选择。
 
-You may try to use flexbox on the container and restrict the cards with percentage values. You may also try to make the items into a grid layout in which case, note that the items are not aligned in two dimensions so flexbox isn't the best choice.
-
-```css
+```css live-sample___grid4-finish
 .container {
   display: grid;
   gap: 10px;
@@ -349,3 +366,5 @@ You may try to use flexbox on the container and restrict the cards with percenta
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}
