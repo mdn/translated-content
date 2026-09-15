@@ -41,7 +41,11 @@ li:nth-child(2) {
 
 ### 형식 구문
 
-{{csssyntax}}
+```css-nolint
+:nth-child([ <An+B> | even | odd ] [of <complex-selector-list>]?) {
+  /* ... */
+}
+```
 
 ## 예제
 

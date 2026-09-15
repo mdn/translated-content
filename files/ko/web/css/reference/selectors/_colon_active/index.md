@@ -22,7 +22,11 @@ a:active {
 
 ## 구문
 
-{{csssyntax}}
+```css
+:active {
+  /* ... */
+}
+```
 
 ## 예제
 
