@@ -5,7 +5,7 @@ slug: Web/API/AbortSignal/aborted
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-A propriedade **`aborted`** é apenas para leitura e fornece um valor {{domxref("Boolean")}} indicando se as solicitações ao objeto sinal de comunicação DOM forão abortadas (`true`) ou não (`false`).
+A propriedade **`aborted`** é apenas para leitura e fornece um valor {{jsxref("Boolean")}} indicando se as solicitações ao objeto sinal de comunicação DOM forão abortadas (`true`) ou não (`false`).
 
 ## Sintaxe
 
@@ -15,7 +15,7 @@ var isAborted = abortSignal.aborted;
 
 ### Valor
 
-Um valor {{domxref("Boolean")}}
+Um valor {{jsxref("Boolean")}}
 
 ## Exemplos
 
