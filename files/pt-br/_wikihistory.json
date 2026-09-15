@@ -1226,12 +1226,6 @@
       "gsb6"
     ]
   },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_getting_started": {
-    "modified": "2020-07-16T22:39:49.009Z",
-    "contributors": [
-      "fred_melo_07"
-    ]
-  },
   "Learn_web_development/Core/Scripting": {
     "modified": "2020-07-16T22:29:54.330Z",
     "contributors": [
@@ -14431,6 +14425,12 @@
     "modified": "2020-07-16T22:27:22.550Z",
     "contributors": [
       "GiovanniHD201E"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Frameworks_libraries": {
+    "modified": "2020-07-16T22:39:49.009Z",
+    "contributors": [
+      "fred_melo_07"
     ]
   },
   "conflicting/Learn_web_development/Core/Scripting": {
