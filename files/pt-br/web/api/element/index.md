@@ -60,7 +60,7 @@ _Herda propriedades de seus parentes {{domxref("Node")}}, e seu próprio parente
 - {{domxref("Element.shadowRoot") }} {{experimental_inline}} {{readOnlyInline}}
   - : ...
 - {{ domxref("Element.tagName") }} {{readOnlyInline}}
-  - : Retorna um {{domxref("String")}} com o nome da tag para o elemento em questão.
+  - : Retorna um {{jsxref("String")}} com o nome da tag para o elemento em questão.
 - {{ domxref("Element.undoManager")}} {{experimental_inline}} {{readOnlyInline}}
   - : Retorna o {{domxref("UndoManager")}} associado com o elemento.
 - {{ domxref("Element.undoScope")}} {{experimental_inline}}
