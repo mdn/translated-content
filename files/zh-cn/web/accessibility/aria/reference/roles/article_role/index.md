@@ -64,7 +64,7 @@ l10n:
 - 事件处理器
   - : 此角色不需要存在任何事件处理器。
 - 更改属性值
-  - : 在构建 feed 时，将每个 article 角色上的 `aria-posinset` 和 `aria-setsize` 属性设置为适当的值，请注意 `aria-posinset` 从 1 开始计数。
+  - : 在构建信息流时，将每个 article 角色上的 `aria-posinset` 和 `aria-setsize` 属性设置为适当的值，请注意 `aria-posinset` 从 1 开始计数。
 
 > [!NOTE]
 > **如果可用，请始终使用原生元素。** 应使用 `<article>` 元素，而不是带有 `article` 角色的 `<div>`。
