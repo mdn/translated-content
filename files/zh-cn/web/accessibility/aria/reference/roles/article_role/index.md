@@ -51,9 +51,9 @@ l10n:
 ### 关联的 WAI-ARIA 角色、状态和属性
 
 - [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset)
-  - : 在 feed 的上下文中，基于从 1 开始的计数，表示这篇特定的文章在该 feed 中的位置。
+  - : 在信息流的上下文中，基于从 1 开始的计数，表示这篇特定的文章在该信息流中的位置。
 - [`aria-setsize`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize)
-  - : 在 feed 的上下文中，表示该 feed 中文章条目的数量。
+  - : 在信息流的上下文中，表示该信息流中文章条目的数量。
 
 ### 键盘交互
 
