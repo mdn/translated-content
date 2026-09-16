@@ -99,4 +99,4 @@ Si ves la página en español, ¡listo, tu entorno funciona!
 - **El puerto 3000 está ocupado:** seguramente quedó un servidor de una sesión anterior. Ciérralo con `lsof -ti:3000 | xargs kill` o reinicia tu computadora.
 - **Errores raros después de actualizar:** borra `yari/node_modules`, corre `yarn install` y `yarn build:prepare` de nuevo.
 
-¿Atascado? Pregúntanos en [Telegram](https://t.me/+Dr6qKQCAepw4MjFj).
+¿Atascado? Pregúntanos en nuestro [Telegram](https://t.me/+Dr6qKQCAepw4MjFj) (también está en [Charla con nosotros](./README.md#charla-con-nosotros)).
