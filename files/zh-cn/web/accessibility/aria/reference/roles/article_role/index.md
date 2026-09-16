@@ -71,7 +71,7 @@ l10n:
 
 ## 示例
 
-- 来自 WAI-ARIA 1.1 编写实践 feed 设计模式的[餐厅推荐 feed 展示](https://www.w3.org/WAI/ARIA/apg/patterns/feed/examples/feed-display.html)，及其配套的独立[文档](https://www.w3.org/WAI/ARIA/apg/patterns/feed/examples/feed/)
+- 来自 WAI-ARIA 1.1 编写实践消息来源设计模式的[餐厅推荐信息流展示](https://www.w3.org/WAI/ARIA/apg/patterns/feed/examples/feed-display.html)，及其配套的独立[文档](https://www.w3.org/WAI/ARIA/apg/patterns/feed/examples/feed/)
 
 ## 规范
 
