@@ -63,7 +63,7 @@ Tous les éléments d'un document sont dans le flux à l'exception&nbsp;:
 - des éléments avec `position: absolute` (y compris `position: fixed` qui agit de la même manière)
 - de l'élément racine (`html`)
 
-Les éléments hors du flux créent un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context) (BFC), et par conséquent, tout ce qu''ils contiennent peut être considéré comme une mini-disposition, distincte du reste de la page. L'élément racine est donc hors flux, en tant que conteneur de tout le contenu de notre document, et établit le contexte de formatage de bloc pour le document.
+Les éléments hors du flux créent un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context) (BFC), et par conséquent, tout ce qu'ils contiennent peut être considéré comme une mini-disposition, distincte du reste de la page. L'élément racine est donc hors flux, en tant que conteneur de tout le contenu de notre document, et établit le contexte de formatage de bloc pour le document.
 
 ### Les éléments flottants
 
