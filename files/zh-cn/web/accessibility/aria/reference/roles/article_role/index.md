@@ -44,7 +44,7 @@ l10n:
 
 如果文章是信息流（feed）的一部分，可以为它设置 [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) 和 [`aria-setsize`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) 属性，以表明这篇特定的文章在信息流中所处的位置。
 
-在 `application` 或其他会导致屏幕阅读器和其他辅助技术进入直通模式（pass-through mode）的部件中，可以使用 `article` 来表明这些技术应切换回将所包含的内容视为常规 Web 内容的处理方式。
+在 `application` 或其他会导致屏幕阅读器和其他辅助技术进入直通模式（pass-through mode）的微件中，可以使用 `article` 来表明这些技术应切换回将所包含的内容视为常规 Web 内容的处理方式。
 
 不应在非语义元素上添加 `article` 角色，而应使用 {{HTMLElement('article')}} 元素。用户代理会像处理 `article` 角色那样，将其转换为相应的无障碍信息。使用 {{HTMLElement('article')}} 元素还有助于搜索引擎更好地发现页面的结构。适合使用 `role="article"`（或者更推荐 `<article>`）的场景包括：博客文章、论坛帖子、针对论坛或博客文章的评论，以及社交媒体 feed 中的条目。
 
