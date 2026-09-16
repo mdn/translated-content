@@ -42,7 +42,7 @@ l10n:
 
 文章可以嵌套，这表明嵌套的文章与其所嵌套于其中的文章直接相关，但不一定与嵌套层级之外的文章相关。具体用例请参考示例。
 
-如果文章是 feed 的一部分，可以为它设置 [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) 和 [`aria-setsize`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) 属性，以表明这篇特定的文章在 feed 中所处的位置。
+如果文章是信息流（feed）的一部分，可以为它设置 [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) 和 [`aria-setsize`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) 属性，以表明这篇特定的文章在信息流中所处的位置。
 
 在 `application` 或其他会导致屏幕阅读器和其他辅助技术进入直通模式（pass-through mode）的部件中，可以使用 `article` 来表明这些技术应切换回将所包含的内容视为常规 Web 内容的处理方式。
 
