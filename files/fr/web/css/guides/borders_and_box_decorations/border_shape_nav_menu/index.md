@@ -188,7 +188,7 @@ ul {
 }
 ```
 
-Enfin, nous appliquons quelques mises à jour de style sur `:hover` et `:focus` qui, lorsqu'elles sont combinées avec les propriétés `transition` que nous avons définies précédemment, produisent des effets animés lors de l'interaction avec les éléments de navigation. Nous augmentons le `gap` défini sur la disposition flexbox du `<ul>` lorsqu'il est survolé ou sélectionné. Pour gérer l'état de sélection, nous utilisons la pseudo-classe {{CSSxRef(":has")}} pour sélectionner l'ensemble du `<ul>` lorsqu'un `<a>` à l'intérieur est sélectionné.
+Enfin, nous appliquons quelques mises à jour de style sur `:hover` et `:focus` qui, lorsqu'elles sont combinées avec les propriétés `transition` que nous avons définies précédemment, produisent des effets animés lors de l'interaction avec les éléments de navigation. Nous augmentons le `gap` défini sur la disposition de boîte flexible du `<ul>` lorsqu'il est survolé ou sélectionné. Pour gérer l'état de sélection, nous utilisons la pseudo-classe {{CSSxRef(":has")}} pour sélectionner l'ensemble du `<ul>` lorsqu'un `<a>` à l'intérieur est sélectionné.
 
 ```css live-sample___jigsaw-example
 ul:hover,
