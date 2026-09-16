@@ -1,183 +1,263 @@
 ---
 title: Modèle de mise en forme visuelle
 slug: Web/CSS/Guides/Display/Visual_formatting_model
-original_slug: Web/CSS/CSS_display/Visual_formatting_model
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-En CSS, le modèle de mise en forme visuelle est un algorithme qui traite un document afin de l'afficher sur un support visuel. Chaque élément du document est ainsi transformé en zéro, une ou plusieurs boîtes qui s'inscrivent dans [le modèle de boîtes CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model). La disposition de chaque boîte est dictée par :
+En CSS, le **modèle de mise en forme visuelle** décrit la manière dont les agents utilisateurs traitent l'arborescence du document, la transforment et l'affichent pour les supports visuels. Cela inclut les {{Glossary("continuous media", "supports continus")}}, tels qu'un écran d'ordinateur, et les [supports paginés](/fr/docs/Web/CSS/Guides/Paged_media), tels qu'un livre ou un document imprimé à l'aide des fonctions d'impression du navigateur. La plupart de ces informations s'appliquent aussi bien aux supports continus qu'aux supports paginés.
 
-- Les dimensions de la boîte qui peuvent être définies explicitement, contraintes ou non
-- Le type de la boîte : en ligne, en ligne et de niveau (_inline-level_), atomique, en bloc
-- Le mode de positionnement : dans le flux normal, en flottement ou positionnée de façon absolue
-- Les autres éléments présents dans l'arbre du document et notamment ses enfants et ses voisins
-- La taille et la position de la zone d'affichage (_viewport_)
-- Les dimensions intrinsèques des images qu'elle contient
-- Éventuellement d'autres informations externes.
+Dans le modèle de mise en forme visuelle, chaque élément de l'arborescence du document génère zéro ou plusieurs boîtes, conformément au modèle de boîte. La disposition de ces boîtes est régie par&nbsp;:
 
-Le modèle affiche une boîte par rapport au bord du bloc qui la contient. Généralement, une boîte devient le bloc contenant pour ses éléments descendants. Toutefois, une boîte n'est pas contrainte dans son bloc contenant, le contenu d'une boîte peut parfois dépasser (ce qu'on appelle en anglais _overflow_).
+- Les dimensions et le type des boîtes.
+- Le schéma de positionnement (positionnement normal, flottant et absolu).
+- Les relations entre les éléments dans l'arborescence du document.
+- Les informations externes (par exemple, la taille de la zone d'affichage, les dimensions intrinsèques des images, etc.).
+
+Une grande partie des informations relatives au modèle de formatage visuel est définie dans CSS2, cependant, divers modules de disposition CSS ont développé ces informations. En lisant les spécifications, vous trouvez souvent des références au modèle tel qu'il est défini dans CSS2, il est donc utile de bien comprendre ce modèle et les termes utilisés pour le décrire dans CSS2 lorsque vous consultez d'autres spécifications de disposition.
+
+Dans ce document, nous définissons le modèle et présentons certains des termes et concepts associés, en référençant des pages plus spécifiques pour plus de détails.
+
+## Le rôle de la zone d'affichage
+
+Dans les supports continus, la {{Glossary("viewport", "zone d'affichage")}} correspond à la zone visible de la fenêtre du navigateur. Les agents utilisateurs peuvent modifier la mise en page lorsque la taille de la zone d'affichage change — par exemple, si vous redimensionnez votre fenêtre ou si vous modifiez l'orientation d'un appareil mobile.
+
+Si la zone d'affichage est plus petite que la taille du document, l'agent utilisateur doit alors proposer un moyen de faire défiler les parties du document qui ne sont pas affichées. Le plus souvent, cela se traduit par un défilement dans la **dimension de bloc** — verticalement dans une langue écrite de gauche à droite. Cependant, vous pouvez également concevoir un élément nécessitant un défilement dans la **dimension en incise**.
 
 ## Génération de la boîte
 
-Lors de cette étape, on crée les boîtes à partir des éléments du document. Les boîtes générées sont de différents types et ces types ont un impact sur la mise en forme visuelle. Le type de boîte générée dépend de la valeur de la propriété {{cssxref("display")}}.
+La **génération de boîtes** est la partie du modèle de formatage visuel CSS qui crée des boîtes à partir des éléments du document. Les boîtes générées sont de différents types, ce qui affecte leur formatage visuel. Le type de boîte générée dépend de la valeur de la propriété CSS {{CSSxRef("display")}}.
 
-### Les éléments de bloc et les boîtes de bloc
+Initialement définie dans CSS2, la propriété `display` a été étendue dans les modules [d'affichage CSS](/fr/docs/Web/CSS/Guides/Display), [modèle de boîte flexible CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout), [modèle de grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout) et [modèle ruby CSS](/fr/docs/Web/CSS/Guides/Ruby_layout). De plus, certaines des terminologies autour de la propriété `display` ont été mises à jour et clarifiées au fil des années depuis CSS2.
 
-Un élément est dit « de bloc » lorsque [la valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing) de la propriété {{cssxref("display")}} qui lui est appliquée vaut : `block`, `list-item` ou `table`. Un élément de bloc est représenté sous la forme d'un bloc (comme un paragraphe par exemple) et les blocs sont empilés verticalement les uns sur les autres.
+CSS prend votre document source et le rend sur une toile. Pour ce faire, il génère une structure intermédiaire, **l'arbre de boîtes**, qui représente la structure de formatage du document rendu. Chaque boîte dans l'arbre de boîtes représente son élément correspondant (ou pseudo-élément) dans l'espace et/ou le temps sur la toile, tandis que chaque portion de texte dans l'arbre de boîtes représente de même le contenu de ses nœuds de texte correspondants.
 
-Chaque boîte de bloc contribue au [contexte de mise en forme des blocs](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context). Chaque élément de bloc génère au moins une boîte de niveau bloc, qu'on appelle la boîte de bloc principale. Certains éléments (comme les éléments d'une liste par exemple) génèrent d'autres boîtes afin de gérer les puces ou d'autres éléments typographiques.
+Ensuite, pour chaque élément, CSS génère zéro ou plusieurs boîtes comme défini par la valeur de la propriété `display` de cet élément.
 
-La boîte de bloc principale contient les boîtes générées par les descendants ete le contenu généré. Cette boîte participe au schéma de positionnement.
+> [!NOTE]
+> Les boîtes sont souvent désignées par leur type d'affichage — par exemple, une boîte générée par un élément avec `display: block` est appelée une «&nbsp;boîte de bloc&nbsp;» ou simplement un «&nbsp;bloc&nbsp;». Notez cependant que les boîtes de bloc, les boîtes de niveau bloc et les conteneurs de bloc sont tous subtilement différents&nbsp;; voir la section [boîtes de bloc](#les_boîtes_en_bloc) ci-dessous pour plus de détails.
 
-![venn_blocks.png](venn_blocks.png)
+### La boîte principale
 
-Une boîte de bloc peut également un conteneur de blocs. Un conteneur de blocs est une boîte qui ne contient que d'autres boîtes de bloc ou qui crée un contexte de formatage en ligne et qui ne contient alors que des boîtes en ligne. Attention, les notions de boîtes de bloc et de conteneurs de blocs ne sont pas identiques. La première décrit la façon dont la boîte se comporte avec ses parents et ses voisins et le seconde définit la façon dont elle interagit avec ses descendants. Certaines boîtes de blocs, telles que les tableaux, ne sont pas des conteneurs de blocs. Réciproquement, certains conteneurs de blocs (tels que les cellules de tableau non remplacées) ne sont pas des boîtes de bloc.
+Lorsqu'un élément génère une ou plusieurs boîtes, l'une d'entre elles est la **boîte principale**, qui contient ses boîtes descendantes et le contenu généré dans l'arbre de boîtes, et est également la boîte impliquée dans tout schéma de positionnement.
 
-Les boîtes de bloc qui sont également des conteneurs de blocs sont appelées des boîtes-bloc.
+Certains éléments peuvent générer des boîtes supplémentaires en plus de la boîte principale, par exemple `display: list-item` génère plus d'une boîte (par exemple, une **boîte de bloc principale** et une **boîte de marqueur enfant**). Et certaines valeurs (comme `none` ou `contents`) font que l'élément et/ou ses descendants ne génèrent aucune boîte.
 
-#### Les boîtes de bloc anonymes
+### Les boîtes anonymes
 
-Dans certains cas, l'algorithme doit ajouter certaines boîtes supplémentaires. Or, les sélecteurs CSS ne permettent pas de mettre en forme ou de nommer ces boîtes, elles sont donc appelées boîtes de bloc _anonymes_.
+Une **boîte anonyme** est créée lorsqu'il n'y a pas d'élément HTML à utiliser pour la boîte. Cette situation se produit, par exemple, lorsque vous déclarez `display: flex` sur un élément parent, et qu'à l'intérieur se trouve directement un texte non contenu dans un autre élément. Afin de corriger l'arbre de boîtes, une boîte anonyme est créée autour de ce texte. Elle se comporte alors comme un élément flexible, cependant, elle ne peut pas être ciblée et mise en forme comme une boîte normale, car il n'y a pas d'élément à cibler.
 
-Les sélecteurs ne permettent pas de manipuler la mise en forme de ces boîtes. Aussi, pour ces boîtes, toutes les propriétés CSS utilisant l'héritage auront la valeur {{cssxref("inherit")}} et toutes les propriétés CSS qui ne sont pas héritées auront la valeur `initial`.
-
-Les boîtes qui contiennent des blocs ne contiennent que des boîtes en ligne ou que des boîtes en blocs. Mais souvent, le document contient un mélange des deux. Dans ces cas, des boîtes de bloc anonymes sont créées autour des boîtes en lignes adjacentes.
-
-Si on prend le code HTML suivant, mis en forme avec les règles par défaut (`display:block`) :
-
-```html
-<div>
-  Some inline text
-  <p>followed by a paragraph</p>
-  followed by more inline text.
+```html live-sample___anonymous-flex
+<div class="flex">
+  Je suis enveloppé dans une boîte anonyme
+  <p>Je suis dans le paragraphe</p>
+  Je suis enveloppé dans une boîte anonyme.
 </div>
 ```
 
-On aura deux boîtes de bloc anonymes qui seront créées : une pour le texte avant le paragraphe et une pour le texte après. On aura alors la structure suivante :
-![anonymous_block-level_boxes.png](anonymous_block-level_boxes.png)
+```css live-sample___anonymous-flex
+body {
+  font: 1.2em sans-serif;
+  margin: 20px;
+}
 
-À la différence de la boîte des éléments {{HTMLElement("p")}}, les développeurs ne peuvent pas contrôler la mise en forme des boîtes anonymes. Les propriétés qui héritent des éléments parents récupèreront la valeur obtenue pour l'élément {{HTMLElement("div")}} et les autres propriétés auront la valeur `initial`.
+.flex {
+  display: flex;
+}
 
-Un autre scénario peut amener à la création de boîtes de bloc anonyme : lorsqu'une boîte en ligne contient une ou plusieurs boîtes de bloc. Dans ce cas, la boîte qui contient la boîte de bloc est divisée en deux boîtes en ligne : une avant et une après la boîte de bloc. Toutes les boîtes en ligne avant la boîte de bloc sont englobées dans une boîte de bloc anonyme et il en va de même pour les boîtes en ligne qui suivent la boîte de bloc. Aussi, la boîte de bloc devient un voisin de deux boîtes de bloc anonymes qui contiennent les éléments en ligne.
+.flex > * {
+  background-color: rebeccapurple;
+  color: white;
+}
+```
 
-S'il y a plusieurs boîtes de bloc sans contenu en ligne entre elles, les boîtes de bloc anonymes sont créées avant et après ces boîtes.
+{{EmbedLiveSample("anonymous-flex")}}
 
-Si on prend le code HTML suivant, pour lequel {{HTMLElement("p")}} aura `display:inline` et {{HTMLElement("span")}} aura `display:block` :
+Le même phénomène se produit lorsque vous avez des séquences de texte entrecoupées d'éléments de bloc. Dans l'exemple suivant, j'ai une chaîne de caractères à l'intérieur d'un `<div>`&nbsp;; au milieu de ma chaîne de caractères se trouve un élément `<p>` contenant une partie du texte.
 
-```html
-<p>
-  Some <em>inline</em> text
-  <span>followed by a paragraph</span>
-  followed by more inline text.
+```html live-sample___anonymous-block
+<div class="exemple">
+  Je suis enveloppé dans une boîte anonyme
+  <p>Je suis dans le paragraphe</p>
+  Je suis enveloppé dans une boîte anonyme.
+</div>
+```
+
+```css live-sample___anonymous-block
+body {
+  font: 1.2em sans-serif;
+  margin: 20px;
+}
+
+.exemple > * {
+  background-color: rebeccapurple;
+  color: white;
+}
+```
+
+{{EmbedLiveSample("anonymous-block")}}
+
+La chaîne de caractères est divisée en trois boîtes dans l'arbre des boîtes. La partie de la chaîne de caractères avant l'élément de paragraphe est enveloppée dans une boîte anonyme, puis nous avons le `<p>`, qui génère une boîte, et enfin une autre boîte anonyme.
+
+Une chose à garder à l'esprit concernant ces boîtes anonymes est qu'elles héritent des styles de leur parent direct, mais qu'il n'est pas possible de modifier leur apparence en les ciblant directement. Dans mes exemples, j'utilise un sélecteur d'enfants directs pour cibler les enfants du conteneur. Cela ne modifie pas les boîtes anonymes, car elles ne sont pas des «&nbsp;éléments&nbsp;» à proprement parler.
+
+Les **boîtes anonymes en incise** sont créées lorsqu'une chaîne de caractères est divisée par un élément en incise, par exemple, une phrase qui inclut une section enveloppée avec `<em></em>`. Cela divise la phrase en trois boîtes en incise — une boîte anonyme en incise avant la section mise en emphase, la section enveloppée dans l'élément `<em>`, puis une dernière boîte anonyme en incise. Comme pour les boîtes anonymes en bloc, ces boîtes anonymes en incise ne peuvent pas être mises en forme indépendamment de la manière dont le `<em>` peut l'être&nbsp;; elles héritent simplement des styles de leur conteneur.
+
+D'autres contextes de formatage créent également des boîtes anonymes. Les [dispositions en grille](/fr/docs/Web/CSS/Guides/Grid_layout) se comporte de la même manière que l'exemple des [boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) ci-dessus, en transformant les chaînes de caractères de texte en un élément de grille doté d'une boîte anonyme. La mise en page [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout) crée des boîtes de colonne anonymes autour des colonnes&nbsp;; celles-ci ne peuvent pas non plus être mises en forme ni ciblées d'une quelconque manière. La [disposition en tableau](/fr/docs/Web/CSS/Guides/Table) ajoute des boîtes anonymes pour créer une structure de tableau correcte — par exemple en ajoutant une ligne de tableau anonyme — s'il n'y a pas de boîte avec `display: table-row`.
+
+### Les boîtes en incise
+
+Les **boîtes en incise** sont les boîtes qui enveloppent chaque ligne de texte. Vous pouvez voir la différence entre les boîtes de ligne et leur bloc englobant si vous faites flotter un élément, puis le faites suivre par un bloc doté d'une couleur d'arrière-plan.
+
+Dans l'exemple suivant, les boîtes de ligne qui suivent le `<div>` flottant sont raccourcies pour envelopper l'élément flottant. L'arrière-plan de la boîte passe derrière l'élément flottant, car l'élément flottant a été retiré du flux.
+
+```html live-sample___line-boxes
+<div class="float"></div>
+<p class="suiveur">
+  Ce texte suit l'élément flottant, les boîtes de ligne sont raccourcies pour
+  lui faire de la place, mais la boîte de l'élément occupe toujours une position
+  dans le flux normal.
 </p>
 ```
 
-Deux boîtes de bloc anonymes sont créées : une pour le texte avant l'élément `<span>` et une pour le texte qui suit cet élément. On a alors la structure suivante :
+```css live-sample___line-boxes
+body {
+  font: 1.2em sans-serif;
+  margin: 20px;
+}
 
-![](anonymous_block_box_break.png)
+.float {
+  float: left;
+  width: 150px;
+  height: 150px;
+  background-color: rebeccapurple;
+  margin: 20px;
+}
 
-### Les éléments en ligne et les boîtes en ligne
+.suiveur {
+  background-color: #cccccc;
+}
+```
 
-Un élément est dit « en ligne » lorsque la valeur de sa propriété CSS {{cssxref("display")}} vaut : `inline`, `inline-block` ou `inline-table`. Visuellement, un tel élément est organisé sur des lignes qui se suivent les unes les autres avec d'autre contenu en ligne. Généralement, il s'agit du contenu d'un paragraphe (éventuellement mis en forme).
+{{EmbedLiveSample("line-boxes", "", 250)}}
 
-Les éléments en ligne génèrent des boîtes en lignes qui contribuent au contexte de mise en forme en ligne.
+## Schémas de positionnement et éléments dans le flux et hors du flux
 
-Les boîtes en lignes atomiques ne peuvent pas être divisées en plusieurs lignes au sein d'un contexte de mise en forme.
+En CSS, une boîte peut être disposée selon trois schémas de positionnement — le **flux normal**, les **éléments flottants** ou le **positionnement absolu**.
 
-```html
-<style>
-  span {
-    /* La valeur par défaut */
-    display: inline;
-  }
-</style>
-<div style="width:20em;">
-  Le texte dans le span <span>peut être divisé en plusieurs lignes</span> dans
-  une boîte en ligne.
+### Flux normal
+
+En CSS, le flux normal inclut la mise en forme de niveau bloc des boîtes de bloc, la mise en forme de niveau en incise des boîtes en incise, ainsi que le positionnement relatif et collant des boîtes de niveau bloc et de niveau en incise.
+
+Lisez-en davantage sur la [disposition dans le flux](/fr/docs/Web/CSS/Guides/Display/Flow_layout) en CSS.
+
+### Éléments flottants
+
+Dans le modèle des éléments flottants, une boîte est d'abord disposée selon le flux normal, puis retirée du flux et positionnée, généralement à gauche ou à droite. Le contenu peut s'écouler le long d'un élément flottant.
+
+Apprenez-en davantage sur les [éléments flottants](/fr/docs/Learn_web_development/Core/CSS_layout/Floats).
+
+### Positionnement absolu
+
+Dans le modèle de positionnement absolu (qui inclut également le positionnement `fixed`), une boîte est entièrement retirée du flux normal et se voit attribuer une position relative à un bloc englobant (qui est la zone d'affichage dans le cas du positionnement fixe) ou à un ou plusieurs éléments d'ancrage dans le [positionnement par des ancres CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning).
+
+Un élément est dit **hors du flux** s'il est flottant, positionné de manière absolue ou s'il s'agit de l'élément racine. Un élément est dit **dans le flux** s'il n'est pas hors du flux.
+
+Lisez la page sur la [disposition positionnée en CSS](/fr/docs/Web/CSS/Guides/Positioned_layout).
+
+## Contextes de formatage et propriété `display`
+
+Les boîtes peuvent être décrites comme ayant un **type d'affichage externe**, qui est `block` ou `inline`. Ce type d'affichage externe décrit le comportement de la boîte avec les autres éléments de la page.
+
+Les boîtes ont également un type d'affichage interne, qui détermine le comportement de leurs éléments enfants. Pour la disposition normale en bloc et en incise, ou le flux normal, ce type d'affichage est `flow`. Cela signifie que les éléments enfants sont également soit `block`, soit `inline`.
+
+Cependant, le type d'affichage interne peut être `grid` ou `flex`, auquel cas les enfants directs s'affichent comme une grille ou comme des éléments flexibles. Dans ce cas, l'élément est décrit comme créant un [contexte de formatage](/fr/docs/Web/CSS/Guides/Display/Formatting_contexts) de grille ou flexible. À bien des égards, cela ressemble à un contexte de formatage de bloc, mais les enfants se comportent comme des éléments flexibles ou de grille plutôt que comme des éléments du flux normal.
+
+Les interactions entre les boîtes de niveau bloc et de niveau en incise sont décrites dans la référence de la propriété {{CSSxRef("display")}}.
+
+De plus, les références des valeurs précises de l'affichage expliquent le fonctionnement de ces contextes de formatage en matière de disposition des boîtes.
+
+- Le module de [disposition de grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout)
+- Le module de [disposition de boîte flexible CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout)
+- Le module de [disposition multi-colonne CSS](/fr/docs/Web/CSS/Guides/Multicol_layout)
+- Le module de [disposition de tableau CSS](/fr/docs/Web/CSS/Guides/Table)
+- Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)
+
+### Contextes de formatage indépendants
+
+Les éléments participent soit au contexte de formatage de leur bloc englobant, soit établissent un contexte de formatage indépendant. Un conteneur de grille, par exemple, établit un nouveau **contexte de formatage de grille** pour ses enfants.
+
+Les **contextes de formatage indépendants** contiennent les éléments flottants, et les marges ne s'effondrent pas au-delà des limites du contexte de formatage. Par conséquent, créer un nouveau contexte de formatage de bloc peut garantir que les éléments flottants et les marges restent à l'intérieur d'une boîte. Pour ce faire, ajoutez `display: flow-root` à la boîte sur laquelle vous souhaitez créer un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context).
+
+L'exemple suivant montre l'effet de `display: flow-root`. La boîte avec l'arrière-plan noir semble envelopper l'élément flottant et le texte. Si vous supprimez `display: flow-root`, l'élément flottant dépasse du bas de la boîte, car il n'est plus contenu.
+
+```html live-sample___block-flow-root
+<div class="conteneur">
+  <div class="element">Élément flottant</div>
+  <p>Texte suivant l'élément flottant.</p>
 </div>
 ```
 
-```html
-<style>
-  span {
-    display: inline-block;
-  }
-</style>
-<div style="width:20em;">
-  Le texte dans le span
-  <span>ne peut pas être divisé en plusieurs lignes car</span> il est dans une
-  boîte de type inline-block.
-</div>
+```css hidden live-sample___block-flow-root
+body {
+  font: 1.2em sans-serif;
+  margin: 20px;
+}
+.conteneur {
+  background-color: #333333;
+  color: white;
+}
+
+.element {
+  background-color: white;
+  border: 1px solid #999999;
+  color: #333333;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
 ```
 
-#### Les boîtes en ligne anonymes
+```css live-sample___block-flow-root
+.conteneur {
+  display: flow-root;
+}
 
-Comme pour les boîtes de bloc, il existe quelques cas pour lesquels des boîtes en lignes sont automatiquement créées par le moteur CSS. Ces boîtes en ligne sont également anonymes et ne peuvent être ciblées par les sélecteurs. Pour les propriétés qui fonctionnent avec l'héritage, ces boîtes hériteront de la valeur de la propriété `relative` à l'élément parent, pour les autres, elles vaudront `initial`.
+.element {
+  margin: 10px;
+  float: left;
+}
+```
 
-La plupart du temps, une boîte en ligne anonyme est créée lorsque du texte se trouve être un enfant direct d'une boîte en bloc, ce qui crée un contexte de mise en forme en ligne. Dans ce cas, le texte est inclus dans la plus grande boîte en ligne qui puisse être et c'est cette boîte qui est la boîte anonyme. Par ailleurs, le contenu blanc qui serait retiré par la propriété {{cssxref("white-space")}} ne génère pas de boîtes en ligne car celles-ci seraient vides.
+{{EmbedLiveSample("block-flow-root", "", 250)}}
 
-### Les autres types de boîte
+### Les boîtes de bloc
 
-#### Les boîtes de ligne
+Dans les spécifications, les boîtes de bloc, les boîtes de niveau bloc et les conteneurs de bloc sont tous désignés comme des **boîtes de bloc** à certains endroits. Ces notions sont quelque peu différentes et le terme boîte de bloc ne doit être utilisé qu'en l'absence d'ambiguïté.
 
-_Les boîtes de ligne_ sont générées dans un contexte de mise en forme en ligne afin de représenter une ligne de texte. Au sein d'une boîte en bloc, un boîte de ligne s'étend d'un bord à l'autre de la boîte. Lorsqu'il y a une disposition flottante, la boîte de ligne démarre au bord le plus à droite de la partie flottante qui est située à gauche et finit à la droite du bord gauche suivant.
+#### Conteneurs de bloc
 
-Ces boîtes sont uniquement utilisées par le moteur et les développeurs web ne devraient pas avoir à s'en préoccuper.
+Un **conteneur de bloc** contient soit uniquement des boîtes de niveau en incise participant à un contexte de formatage en incise, soit uniquement des boîtes de niveau bloc participant à un contexte de formatage de bloc. C'est pourquoi nous observons le comportement expliqué ci-dessus, dans lequel des boîtes anonymes sont introduites afin de garantir que tous les éléments peuvent participer à un contexte de formatage de bloc ou en incise. Un élément est un conteneur de bloc uniquement s'il contient des boîtes de niveau bloc ou de niveau en incise.
 
-#### Les types de boîtes liés au modèle CSS
+#### Boîtes de niveau en incise et de niveau bloc
 
-En plus des boîtes en ligne et des boîtes de bloc, CSS définit plusieurs autres modèles de contenu qui peuvent être appliqués aux éléments. Ces modèles définissent des types de boîtes supplémentaires :
+Il s'agit des boîtes contenues dans le conteneur de bloc qui participent respectivement à une disposition en incise ou en bloc.
 
-- Le modèle de contenu pour les tableaux utilise des boîtes englobant les tableaux, des boîtes de tableau et des boîtes de légende
-- Le modèle de contenu à plusieurs colonnes permet de créer des boîtes de colonne entre la boîte englobante et le contenu*.*
-- Les modèles de contenu expérimentaux en grille (_CSS Grid_) ou avec les boîtes flexibles (_flexbox_) définissent d'autres types de boîtes.
+#### Boîtes de bloc
 
-## Modes de positionnement
-
-Une fois les boîtes générées, le moteur CSS doit les disposer les unes par rapport aux autres. Pour ce faire, il utilise un des algorithmes suivants :
-
-- Le mode de positionnement normal positionne les boîtes les unes après les autres
-- Le mode de positionnement flottant permet d'extraire une boîte du flux normal et de la placer sur le côté de la boîte englobante
-- Le mode de positionnement absolu permet de placer une boîte dans un système de coordonnées absolues, basée sur l'élément englobant. Un élément positionné de façon absolue peut recouvrir d'autres éléments.
-
-### Le mode normal
-
-Dans le mode de positionnement normal, les boîtes sont disposées les unes après les autres. Pour un contexte de mise en forme de bloc, elles seront empilées verticalement et pour un contexte de mise en forme en ligne, elles se suivront horizontalement. Le mode de disposition normal est déclenché lorsque la propriété CSS {{cssxref("position")}} vaut `static` ou `relative` et si la propriété CSS {{cssxref("float")}} vaut `none`.
-
-On a deux cas de figure pour le mode normal : le positionnement statique et le positionnement relatif.
-
-- En positionnement statique (obtenu avec la valeur `static` pour la propriété {{cssxref("position")}}), les boîtes sont dessinées à l'emplacement exact dicté par le flux normal.
-- En positionnement relatif (obtenu lorsque la propriété {{cssxref("position")}} vaut `relative`), les boîtes sont dessinées avec un décalage défini par les propriétés {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}}.
-
-### Le mode flottant
-
-Avec le mode de positionnement flottant, certaines boîtes sont placées au début ou à la fin de ligne courante. Le texte (et tout ce qui se trouve dans le flux normal) épouse donc le contour des boîtes flottantes (sauf si la propriété {{cssxref("clear")}} dicte un autre comportement).
-
-Pour qu'une boîte soit une boîte flottante, on utilisera la propriété {{cssxref("float")}} avec une valeur différente de `none` et la propriété {{cssxref("position")}} avec `static` ou `relative`. Si {{cssxref("float")}} vaut `left`, la boîte flottante sera positionnée au début de la ligne de la boîte englobante et si elle vaut `right`, elle sera à la fin de la ligne.
-
-### Le mode absolu
-
-En mode absolu, les boîtes sont entièrement retirées du flux normal et n'interagissent plus avec le flux. Elles sont positionnées de façon relative à leur bloc englobant grâce aux propriétés {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}}.
-
-Un élément est positionné de façon absolue lorsque la propriété {{cssxref("position")}} vaut `absolute` ou `fixed`.
-
-Pour un élément positionné de façon fixe, le bloc englobant sera la zone d'affichage (_viewport_) et la position de l'élément est absolue par rapport à la zone d'affichage. Faire défiler le contenu ne modifie pas la position de l'élément.
+Une boîte de bloc est une boîte de niveau bloc qui est également un conteneur de bloc. Comme décrit dans la propriété CSS `display`, une boîte peut être une boîte de niveau bloc sans être aussi un conteneur de bloc (il peut s'agir, par exemple, d'un conteneur flexible ou de grille).
 
 ## Voir aussi
 
-- [La référence CSS](/fr/docs/Web/CSS/Reference)
-- Concepts clés de CSS&nbsp;:
-  - [Syntaxe CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction)
-  - [Spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity)
-  - [Héritage](/fr/docs/Web/CSS/Guides/Cascade/Inheritance)
-  - [Modèle de boîte](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
-  - [Modes d'affichage](/fr/docs/Glossary/Layout_mode)
-  - [Modèles de formatage visuel](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model)
-  - [Fusion des marges](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
-  - Valeurs
-    - [Initiales](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale)
-    - [Calculées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée)
-    - [Utilisées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée)
-    - [Réelles](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_réelle)
-  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
-  - [Propriétés raccourcies](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
-  - [Éléments remplacés](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties)
+- Le guide de [syntaxe CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction)
+- [Commentaires](/fr/docs/Web/CSS/Guides/Syntax/Comments)
+- [Spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity)
+- [Héritage](/fr/docs/Web/CSS/Guides/Cascade/Inheritance)
+- [Contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
+- [Contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- [Modèle de boîte](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
+- [Modes de disposition](/fr/docs/Glossary/Layout_mode)
+- [Effondrement des marges](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
+- L'entrée de glossaire {{Glossary("Replaced elements", "Éléments remplacés")}}
+- L'interface {{DOMxRef("VisualViewport")}}
+- L'entrée de glossaire {{Glossary("Scroll container", "Conteneur de défilement")}}
