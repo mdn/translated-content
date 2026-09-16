@@ -6,6 +6,8 @@ No es obligatorio: siempre puedes contribuir desde el navegador o confiar en la 
 
 ## Qué vas a instalar
 
+> 💾 **Ojo con el espacio:** cada repositorio ocupa alrededor de 1 a 2 GB. Asegúrate de tener al menos 5 GB libres en tu disco antes de empezar.
+
 MDN se construye con tres repositorios que deben vivir **uno al lado del otro** en la misma carpeta:
 
 | Carpeta               | Qué contiene                                                                                                                        |
@@ -97,4 +99,4 @@ Si ves la página en español, ¡listo, tu entorno funciona!
 - **El puerto 3000 está ocupado:** seguramente quedó un servidor de una sesión anterior. Ciérralo con `lsof -ti:3000 | xargs kill` o reinicia tu computadora.
 - **Errores raros después de actualizar:** borra `yari/node_modules`, corre `yarn install` y `yarn build:prepare` de nuevo.
 
-¿Atascado? Pregúntanos en [Telegram](https://t.me/+Dr6qKQCAepw4MjFj) o en el canal `#spanish` del [MDN Discord](https://discord.gg/aZqEtMrbr7).
+¿Atascado? Pregúntanos en [Telegram](https://t.me/+Dr6qKQCAepw4MjFj).
