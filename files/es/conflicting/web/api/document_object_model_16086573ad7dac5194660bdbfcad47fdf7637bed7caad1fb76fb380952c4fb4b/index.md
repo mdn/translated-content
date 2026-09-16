@@ -300,7 +300,7 @@ Este ejemplo demuestra como el método [window.getComputedStyle](/es/docs/Web/AP
 
 ### Ejemplo 7: Mostrar las propiedades del objeto de evento
 
-Este ejemplo utiliza métodos del DOM para mostrar todas las propiedades del [evento](/es/docs/Web/API/Event) de [window.onload](/es/docs/conflicting/Web/API/Window/load_event) y sus valores en una tabla. Muestra además una cómoda técnica del uso de un bucle **_for...in_** para iterar sobre las propiedades de un objeto y conseguir sus valores.
+Este ejemplo utiliza métodos del DOM para mostrar todas las propiedades del [evento](/es/docs/Web/API/Event) de [window.onload](/es/docs/Web/API/Window/load_event) y sus valores en una tabla. Muestra además una cómoda técnica del uso de un bucle **_for...in_** para iterar sobre las propiedades de un objeto y conseguir sus valores.
 
 Las propiedades de los objetos de evento difieren bastante entre los navegadores, la [especificación W3C de los eventos del DOM 2](https://www.w3.org/TR/DOM-Level-2-Events/events.html) enumera las propiedades estándares, sin embargo algunos navegadores han extendido estas diferencias.
 
