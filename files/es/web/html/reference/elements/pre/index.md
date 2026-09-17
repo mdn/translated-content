@@ -82,7 +82,8 @@ Una combinación de los elementos {{HTMLElement("figure")}} y {{HTMLElement("fig
                   ||     ||
   </pre>
   <figcaption id="cow-caption">
-    Una vaca diciendo: «I'm an expert in my field.». La vaca está dibujada con caracteres de texto preformateado.
+    Una vaca diciendo: «I'm an expert in my field.». La vaca está dibujada con
+    caracteres de texto preformateado.
   </figcaption>
 </figure>
 ```
