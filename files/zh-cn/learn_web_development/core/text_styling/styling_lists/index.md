@@ -40,9 +40,7 @@ l10n:
 ```html live-sample___unstyled live-sample___initial-style live-sample___finished-style
 <h2>购物清单（无序）</h2>
 
-<p>
-  用于参考的段落。
-</p>
+<p>用于参考的段落。</p>
 
 <ul>
   <li>鹰嘴豆泥</li>
