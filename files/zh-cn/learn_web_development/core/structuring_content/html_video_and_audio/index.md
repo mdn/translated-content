@@ -1,8 +1,9 @@
 ---
-title: 视频和音频内容
+title: HTML 视频和音频
+short-title: 视频和音频
 slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: daad50a992d56b23573fdd50517c75df176747cf
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Images", "Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video", "Learn_web_development/Core/Structuring_content")}}
@@ -14,25 +15,25 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        <a
-          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
-          >已安装基本软件</a
-        >，具备<a
-          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
-          >处理文件</a
-        >的基本知识，熟悉 HTML 基础知识（如在<a
+        熟悉 HTML 基础知识（如在<a
          href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >入门 HTML </a
-        >中介绍的内容）以及 <a
-         href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images"
-          >HTML 中的图像</a
-        >。
+        >中介绍的内容），理解<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
+          >标题和段落</a
+        >和<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Lists"
+          >列表</a
+        >等文本级语义。
       </td>
     </tr>
     <tr>
-      <th scope="row">目标：</th>
+      <th scope="row">学习成果：</th>
       <td>
-        学习如何将视频和音频内容嵌入网页，并为视频添加标题/字幕。
+        <ul>
+          <li>基本的 <code>&lt;video&gt;</code> 和 <code>&lt;audio&gt;</code> 的标签语法。</li>
+          <li>视频、音频特有的属性，如 control 和 muted。</li>
+          <li>使用 <code>&lt;source&gt;</code> 元素提供不同的视频、音频源。</li>
+          <li>使用文本轨道（如原文字幕和翻译字幕）的基础方法。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -54,7 +55,7 @@ l10n:
 ```html
 <video src="rabbit320.webm" controls>
   <p>
-    你的浏览器不支持 HTML 视频。可点击<a href="rabbit320.mp4">此链接</a>观看。
+    你的浏览器不支持 HTML 视频。可点击<a href="rabbit320.webm">此链接</a>观看。
   </p>
 </video>
 ```
@@ -80,7 +81,7 @@ l10n:
 
 #### 媒体文件的内容
 
-我们先来快速的了解一下相关术语。像 MP3、MP4 还有 WebM 这些格式叫做[**容器格式**](/zh-CN/docs/Web/Media/Guides/Formats/Containers)。他们定义了构成媒体文件的音频轨道和视频轨道的储存结构，其中还包含描述这个媒体文件的元数据，以及使用什么编解码器对其通道进行编码等等。
+我们先来快速的了解一下相关术语。像 MP3、MP4 还有 WebM 这些格式叫做[**容器格式**](/zh-CN/docs/Web/Media/Guides/Formats/Containers)。它们定义了构成媒体文件的音频轨道和视频轨道的储存结构，其中还包含描述这个媒体文件的元数据，以及使用什么编解码器对其通道进行编码等等。
 
 一个包含电影的 WebM 文件，其主要包括一个主视频轨道和一个备用视角轨道，以及相应的英语和西班牙语音轨，还有英语解说音轨，如下图所示。文件还包括用于电影的闭路字幕文本轨道、西班牙语字幕以及解说的英文字幕。
 
@@ -173,11 +174,11 @@ l10n:
     - `"auto"`：页面加载后缓存媒体文件
     - `"metadata"`：仅缓冲文件的元数据
 
-你可以[在 GitHub 体验以上的例子](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)，也可以[查看源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)。注意我们在体验的版本中并没有使用 `autoplay` 属性——如果页面一加载就开始播放视频的话，就不会看到封面（poster）了。
+你可以[在 GitHub 体验以上的例子](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)，也可以[查看源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)。注意我们在体验的版本中并没有使用 `autoplay` 属性——如果页面一加载就开始播放视频的话，就不会看到封面了。
 
 ### \<audio> 元素
 
-{{htmlelement("audio")}} 元素与 {{htmlelement("video")}} 元素的使用方式几乎完全相同，只有一些细微的差别，比如下面的边框不同，一个典型的例子如下：
+{{htmlelement("audio")}} 元素的工作原理与 {{htmlelement("video")}} 元素的几乎完全相同，但存在以下几点细微差异。一个典型的例子如下：
 
 ```html
 <audio controls>
@@ -194,10 +195,10 @@ l10n:
 > [!NOTE]
 > 你可以在 GitHub [运行音频示例](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)（也可以查看[音频播放器源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)）。
 
-因为音频播放器没有视觉部件，它所占用的空间比视频播放器要小（你只需要显示出能控制音频播放的控件）。其他一些 HTML `<audio>` 与 `<video>` 的差异如下：
+因为音频播放器没有视觉组件，它所占用的空间比视频播放器要小（你只需要显示出能控制音频播放的控件）。其他一些 HTML `<audio>` 与 `<video>` 的差异如下：
 
 - {{htmlelement("audio")}} 元素不支持 `width`/`heigth` 属性——由于其并没有视觉部件，也就没有内容要设置 `width`/`height`。
-- 它同时也不支持 `poster` 属性——同样，因为没有视觉部件。
+- 它同时也不支持 `poster` 属性——同样，因为没有视觉组件。
 
 除此之外，`<audio>` 元素支持所有 `<video>` 元素的特性——你可以回顾上面的章节来了解更多的有关信息。
 
@@ -217,9 +218,9 @@ l10n:
 
 WebVTT 是一个格式，用来编写文本文件，这个文本文件包含了众多的字符串，这些字符串会带有一些元数据，它们可以用来描述这个字符串将会在视频中显示的时间，甚至可以用来描述这些字符串的样式以及定位信息（尽管有限制）。这些字符串叫做 **cue** ，你可以根据不同的需求来显示不同类型的 cue，最常见的如下：
 
-- subtitles
+- 翻译字幕（subtitle）
   - : 外语材料的翻译字幕，来帮助那些听不懂音频中说的什么的人理解音频当中的内容。
-- captions
+- 原文字幕（caption）
   - : 同步翻译对白，或是描述一些有重要信息的声音，来帮助那些不能听音频的人理解音频中的内容。
 - 定时描述
   - : 由媒体播放器朗读的文本，其向盲人或其他视力受损用户描述重要的视觉内容。
@@ -243,59 +244,64 @@ WEBVTT
 要让其与 HTML 媒体一起显示，你需要做如下工作：
 
 1. 将其保存为 `.vtt` 文件，放在服务器可以提供服务的地方（见下文），例如和 HTML 文件放在同一文件夹。
-2. 用 {{htmlelement("track")}} 标签链接 `.vtt` 文件，`<track>` 标签需放在 `<audio>` 或 `<video>` 标签当中，同时需要放在所有 `<source>` 标签之后。使用 [`kind`](/zh-CN/docs/Web/HTML/Reference/Elements/track#kind) 属性来指明是 `subtitles`、`captions` 还是 `descriptions`。然后，使用 [`srclang`](/zh-CN/docs/Web/HTML/Reference/Elements/track#srclang) 来告诉浏览器你是用什么语言来编写的 subtitles。最后，添加 [`label`](/zh-CN/docs/Web/HTML/Reference/Elements/track#label)，以帮助读者在查找时识别语言。
+2. 用 {{htmlelement("track")}} 标签链接 `.vtt` 文件，`<track>` 标签需放在 `<audio>` 或 `<video>` 标签当中，同时需要放在所有 `<source>` 标签之后。使用 [`kind`](/zh-CN/docs/Web/HTML/Reference/Elements/track#kind) 属性来指明是 `subtitles`、`captions` 还是 `descriptions`。然后，使用 [`srclang`](/zh-CN/docs/Web/HTML/Reference/Elements/track#srclang) 来告诉浏览器你是用什么语言来编写的字幕。最后，添加 [`label`](/zh-CN/docs/Web/HTML/Reference/Elements/track#label)，以帮助读者在查找时识别语言。
 
-如下是例子：
+这里有一个示例：
 
 ```html
 <video controls>
   <source src="example.mp4" type="video/mp4" />
   <source src="example.webm" type="video/webm" />
-  <track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="Spanish" />
+  <track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="西班牙语" />
 </video>
 ```
 
-为了尝试这种方法，需要在[本地 HTTP 服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)上托管文件。在浏览器的输出中，会看到一个显示字幕的视频，有点像这样：
-
-![视频播放器带有标准的控制功能，如播放、停止、音量和字幕开关。播放的视频显示了一名男子手持长矛状武器的场景，标题为“Esta hoja tiene pasado oscuro”。](video-player-with-captions.png)
-
-更多细节，包括如何添加标签，请阅读[为 HTML 视频添加标题和字幕](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。在 Github 上可以找到[与本文相关的样例](https://iandevlin.github.io/mdn/video-player-with-captions/)，它们由 Ian Devlin 编写（或者[查看源代码](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)）。这个样例使用了 JavaScript 代码，用户借此可以选择不同的字幕。注意，若想要显示字幕，你需要点击“CC”按钮，并且选择某个选项（English、Deutsch 或 Español）。
+为了尝试这种方法，需要在[本地 HTTP 服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)上托管文件。在浏览器的输出中，会看到一个显示字幕的视频。更多细节，包括如何添加标签，请阅读[为 HTML 视频添加原文字幕和翻译字幕](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。在 Github 上可以找到[与本文相关的样例](https://iandevlin.github.io/mdn/video-player-with-captions/)，它们由 Ian Devlin 编写（或者[查看源代码](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)）。这个样例使用了 JavaScript 代码，用户借此可以选择不同的字幕。注意，若想要显示字幕，你需要点击“CC”按钮，并且选择某个选项（英语、德语或西班牙语）。
 
 > [!NOTE]
 > 文本轨道还可以帮助你进行 {{glossary("SEO")}}，因为搜索引擎对文字特别感兴趣。搜索引擎甚至可以借助文本轨道直接链接到视频中的某个位置。
 
-## 主动练习：嵌入你自己的视频与音频
+## 嵌入你自己的视频与音频
 
-在这个实践学习当中，我们希望你能够走出去，并且记录一些你自己的视频和音频——如今，大多数手机都能够非常方便的记录视频和音频，并且如果你可以将它上传到你的电脑上面，你可以使用它。你可能需要做一些格式转换，如果是视频的话，你需要将它们转化为 WebM 或者 MP4，如果是音频的话，你需要将它们转化为 MP3 或者 Ogg。不过你并不需要担心，有许多的程序都能够帮你轻松解决这些问题，例如 [Miro 视频转换器](http://www.mirovideoconverter.com/)和 [Audacity](https://sourceforge.net/projects/audacity/)。我们非常希望你能够亲自动手。
+对于这个任务，何不走出去，亲自录制一些视频和音频呢？如果你有手机，可以用它来录制音频和视频，然后将文件传输到电脑上，试一试。对于视频，你可能需要进行一些格式转换，最终得到 WebM 和 MP4 格式；对于音频，则需要转换为 MP3 和 Ogg 格式。不过市面上有足够多的程序和工具，可以让你轻松完成这些操作，例如 [CloudConvert](https://cloudconvert.com/mp4-converter)（在线工具）和 [Audacity](https://sourceforge.net/projects/audacity/)（桌面应用程序）。我们期待你亲自尝试一下！
 
-如果你无法取得任何的音频或者视频，你可以使用我们为你提供的[示例音频和视频文件](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content) 来练习。同时你也可以使用我们的代码来作为参考。
+> [!NOTE]
+> 如果你无法取得任何的音频或者视频，你可以使用我们为你提供的[示例音频和视频文件](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content) 来练习。
 
 我们希望你能够：
 
 1. 将你的音频和视频文件保存在你电脑上的一个新目录中。
-2. 在相同的路径下，创建一个新的 HTML 文件，命名为 `index.html`。
+2. 在相同的路径下，基于我们的[入门模板](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)创建一个新的 HTML 文件，命名为 `index.html`。
 3. 在页面上添加 {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素；让它们显示浏览器默认的控件。
 4. 在当中添加 {{HTMLElement("source")}} 标签，并添加 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/source#type) 属性，以便于浏览器能够找到其能够支持的格式并加载它。
-5. 在 `<video>` 元素中添加 `poster` 属性，这会在视频播放之前显示。尽情创作属于自己的海报图形吧。
+5. 在标签内为这两个元素都添加一个备用 `<p>` 元素，以便在不支持该功能的浏览器中直接链接到媒体文件。
+6. 在 `<video>` 元素中添加 `poster` 属性，这会在视频播放之前显示。尽情创作属于自己的海报图形吧。
 
-另外，你可以尝试研究一下文本音轨，试着为你的视频添加一些字幕。
+<details>
+<summary>点击这里查看解答</summary>
 
-## 技能测试！
+完成的 HTML 应该看起来像这样：
 
-你已经完成了这篇教程的学习，但你是否还记得教程里最重要的内容呢？在继续之前，你可以通过一些测试来验证你是否已经掌握了这些内容，请参见[技能测试：内嵌多媒体](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding)。需要注意，这个测试中的第三个问题可能会需要一些之后讲到的技术，所以我们建议你尝试之前阅读一下[下一篇教程](/zh-CN/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)。
+```html
+<video controls poster="poster.png">
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    你的浏览器不支持 HTML 视频。可点击<a href="rabbit320.mp4">此链接</a>观看。
+  </p>
+</video>
+
+<audio controls>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    你的浏览器不支持 HTML 音频。可点击<a href="viper.mp3">此链接</a>查看。
+  </p>
+</audio>
+```
 
 ## 总结
 
-我们祝愿你可以沉浸在 Web 网站的音频和视频当中，下一篇文章，我们将会学习到[另外一种在 web 页面中嵌入内容的方法](/zh-CN/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)，比如使用 {{htmlelement("iframe")}} 或者 {{htmlelement("object")}}。
+到此结束——希望你享受了在网页中玩转视频和音频的乐趣！接下来，我们将提供一些测试题，供你检验自己对HTML视频和音频相关知识的理解和掌握程度。
 
-## 参见
-
-- HTML 媒体元素：{{htmlelement("audio")}}、{{htmlelement("video")}}、{{htmlelement("source")}} 和 {{htmlelement("track")}}
-- [向视频添加字幕和标题](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-- [音频和视频传送](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery)：使用 HTML 和 JavaScript 在网页上放置音频和视频的详细信息。
-- [音频和视频操作](/zh-CN/docs/Web/Media/Guides/Audio_and_video_manipulation)：使用 JavaScript 对音频和视频进行详细操作的指南（例如添加滤镜）。
-- [Web 媒体技术](/zh-CN/docs/Web/Media)
-- [web 上的媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)
-- [事件参考 > 媒体](/zh-CN/docs/Web/API/Document_Object_Model/Events#media)
-
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/Splash_page", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Images", "Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video", "Learn_web_development/Core/Structuring_content")}}
