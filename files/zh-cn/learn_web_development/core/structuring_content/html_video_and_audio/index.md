@@ -252,7 +252,11 @@ WEBVTT
 <video controls>
   <source src="example.mp4" type="video/mp4" />
   <source src="example.webm" type="video/webm" />
-  <track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="西班牙语" />
+  <track
+    kind="subtitles"
+    src="subtitles_es.vtt"
+    srclang="es"
+    label="西班牙语" />
 </video>
 ```
 
@@ -294,14 +298,12 @@ WEBVTT
 <audio controls>
   <source src="viper.mp3" type="audio/mp3" />
   <source src="viper.ogg" type="audio/ogg" />
-  <p>
-    你的浏览器不支持 HTML 音频。可点击<a href="viper.mp3">此链接</a>查看。
-  </p>
+  <p>你的浏览器不支持 HTML 音频。可点击<a href="viper.mp3">此链接</a>查看。</p>
 </audio>
 ```
 
 ## 总结
 
-到此结束——希望你享受了在网页中玩转视频和音频的乐趣！接下来，我们将提供一些测试题，供你检验自己对HTML视频和音频相关知识的理解和掌握程度。
+到此结束——希望你享受了在网页中玩转视频和音频的乐趣！接下来，我们将提供一些测试题，供你检验自己对 HTML 视频和音频相关知识的理解和掌握程度。
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Images", "Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video", "Learn_web_development/Core/Structuring_content")}}
