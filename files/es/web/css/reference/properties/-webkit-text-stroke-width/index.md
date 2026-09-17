@@ -47,7 +47,7 @@ Esta propiedad se especifica con el siguiente valor:
 
 ## Ejemplos
 
-### Anchos de trazo variables {#Varying_stroke_widths}
+### Anchos de trazo variables
 
 #### CSS
 
@@ -81,7 +81,7 @@ p {
 
 #### Resultado
 
-{{EmbedLiveSample("Varying_stroke_widths", "450px", "230px")}}
+{{EmbedLiveSample("Anchos_de_trazo_variables", "450px", "230px")}}
 
 ## Especificaciones
 
