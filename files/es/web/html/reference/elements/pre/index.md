@@ -12,7 +12,7 @@ El elemento **`<pre>`** de [HTML](/es/docs/Web/HTML) representa texto preformate
 
 Los espacios en blanco dentro de este elemento se muestran tal como están escritos, con una excepción. Si se incluyen uno o más caracteres de salto de línea iniciales inmediatamente después de la etiqueta de apertura `<pre>`, el _primer_ carácter de salto de línea se elimina. Esta transformación la realiza el analizador HTML y no se aplica cuando usas {{Glossary("XHTML")}}.
 
-El contenido de texto de los elementos `<pre>` se analiza como HTML, así que si quieres asegurarte de que tu contenido se mantenga como texto sin formato, puede que algunos caracteres de sintaxis, como `<`, deban escaparse usando sus respectivas {{glossary("character reference", "referencias de caracteres")}}. Consulta [escapar caracteres ambiguos](#escapar-caracteres-ambiguos) para más información.
+El contenido de texto de los elementos `<pre>` se analiza como HTML, así que si quieres asegurarte de que tu contenido se mantenga como texto sin formato, puede que algunos caracteres de sintaxis, como `<`, deban escaparse usando sus respectivas {{glossary("character reference", "referencias de caracteres")}}. Consulta [escapar caracteres ambiguos](#escapar_caracteres_ambiguos) para más información.
 
 Los elementos `<pre>` suelen contener elementos {{HTMLElement("code")}}, {{HTMLElement("samp")}} y {{HTMLElement("kbd")}}, para representar código de computadora, salida de computadora y entrada del usuario, respectivamente.
 
@@ -71,7 +71,7 @@ Una combinación de los elementos {{HTMLElement("figure")}} y {{HTMLElement("fig
 
 ```html
 <figure>
-  <pre role="img" aria-label="ASCII COW">
+  <pre role="img" aria-label="VACA ASCII">
       ___________________________
   &lt; I'm an expert in my field. &gt;
       ---------------------------
@@ -82,13 +82,12 @@ Una combinación de los elementos {{HTMLElement("figure")}} y {{HTMLElement("fig
                   ||     ||
   </pre>
   <figcaption id="cow-caption">
-    A cow saying, "I'm an expert in my field." The cow is illustrated using
-    preformatted text characters.
+    Una vaca diciendo: «I'm an expert in my field.». La vaca está dibujada con caracteres de texto preformateado.
   </figcaption>
 </figure>
 ```
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [MDN Understanding WCAG, explicaciones de la pauta 1.1](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#pauta_1.1_—_dar_alternativas_de_texto_para_contenido_no_textual)
 - [H86: Providing text alternatives for ASCII art, emoticons, and leetspeak | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H86.html)
 
 ## Ejemplos
@@ -98,7 +97,7 @@ Una combinación de los elementos {{HTMLElement("figure")}} y {{HTMLElement("fig
 #### HTML
 
 ```html
-<p>Using CSS to change the font color is easy.</p>
+<p>Usar CSS para cambiar el color de la fuente es fácil.</p>
 <pre><code>
 body {
   color: red;
@@ -148,7 +147,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
         >
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Guides/Content_categories#flow_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#contenido_de_flujo"
           >Contenido de flujo</a
         >, contenido palpable.
       </td>
@@ -156,7 +155,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
     <tr>
       <th scope="row">Contenido permitido</th>
       <td>
-        <a href="/es/docs/Web/HTML/Guides/Content_categories#phrasing_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#contenido_de_frase"
           >Contenido de redacción</a
         >.
       </td>
@@ -169,7 +168,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
       <th scope="row">Elementos padres permitidos</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/es/docs/Web/HTML/Guides/Content_categories#flow_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#contenido_de_flujo"
           >contenido de flujo</a
         >.
       </td>
