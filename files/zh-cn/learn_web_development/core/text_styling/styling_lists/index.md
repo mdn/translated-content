@@ -1,100 +1,100 @@
 ---
 title: 为列表添加样式
 slug: Learn_web_development/Core/Text_styling/Styling_lists
+l10n:
+  sourceCommit: 1b7c3c1e03f14c3878e4d8518b0f1a89bedfdc9c
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
 
-[列表](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#列表)大体上和其他文本一样，但是仍有一些你需要知道的特殊 CSS 属性，和一些可供参考的最佳实践，这篇文章将阐述这一切。
+[列表](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#列表)大体上和其他文本一样，但是仍有一些列表特有的的特殊 CSS 属性需要了解，同时还有一些最佳实践需要考虑。本文将对此进行详细说明。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>
       <td>
-        基本的计算机知识，HTML 基础（已学习
-        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
-          >HTML 介绍</a
-        >），CSS 基础（已学习
-        <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
-          >CSS 基础</a
-        >），掌握<a href="/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals"
-          >基本的 CSS 文本和字体样式</a
-        >。
+        掌握<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
+          >使用 HTML 结构化内容</a
+        >和<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS 样式基础</a>。
       </td>
     </tr>
     <tr>
-      <th scope="row">目标：</th>
-      <td>熟悉与列表相关的样式和最佳实践</td>
+      <th scope="row">学习成果：</th>
+      <td>
+        <ul>
+          <li>调整列表项之间的间距，例如通过设置边距或行高。</li>
+          <li>使用 <code>list-style</code> 属性。</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
 
 ## 一个简单的列表示例
 
-首先，让我们看一个简单的列表示例。文章中我们将看到无序、有序和描述列表——它们都具有相似的样式特性，而某些特性却又各不相同。[Github](https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) 上有无额外样式的例子（也可以查看[源码](https://github.com/mdn/learning-area/blob/main/css/styling-text/styling-lists/unstyled-list.html)）。
+让我们来看一个基本的列表示例。在本文中，我们将探讨无序列表、有序列表和说明性列表——它们的样式特性既有相似之处，也有各自独特的特点。
 
-示例列表的 HTML 代码如下：
+该列表示例的 HTML 代码如下：
 
-```html
-<h2>Shopping (unordered) list</h2>
+```html live-sample___unstyled live-sample___initial-style live-sample___finished-style
+<h2>购物清单（无序）</h2>
 
 <p>
-  Paragraph for reference, paragraph for reference, paragraph for reference,
-  paragraph for reference, paragraph for reference, paragraph for reference.
+  用于参考的段落。
 </p>
 
 <ul>
-  <li>Hummus</li>
-  <li>Pita</li>
-  <li>Green salad</li>
-  <li>Halloumi</li>
+  <li>鹰嘴豆泥</li>
+  <li>皮塔饼</li>
+  <li>绿色沙拉</li>
+  <li>哈鲁米奶酪</li>
 </ul>
 
-<h2>Recipe (ordered) list</h2>
+<h2>食谱列表（有序）</h2>
 
 <p>
-  Paragraph for reference, paragraph for reference, paragraph for reference,
-  paragraph for reference, paragraph for reference, paragraph for reference.
+  用于参考的段落。
 </p>
 
 <ol>
-  <li>Toast pita, leave to cool, then slice down the edge.</li>
+  <li>将皮塔饼烤至金黄，放凉后沿边缘切开。</li>
   <li>
-    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+    将哈鲁米奶酪放入浅底不粘锅中煎至两面金黄。
   </li>
-  <li>Wash and chop the salad.</li>
-  <li>Fill pita with salad, hummus, and fried halloumi.</li>
+  <li>将沙拉洗净切块。</li>
+  <li>将沙拉、鹰嘴豆泥和煎好的哈鲁米奶酪填入皮塔饼中。</li>
 </ol>
 
-<h2>Ingredient description list</h2>
+<h2>配料描述列表</h2>
 
 <p>
-  Paragraph for reference, paragraph for reference, paragraph for reference,
-  paragraph for reference, paragraph for reference, paragraph for reference.
+  用于参考的段落。
 </p>
 
 <dl>
-  <dt>Hummus</dt>
+  <dt>鹰嘴豆泥</dt>
   <dd>
-    A thick dip/sauce generally made from chick peas blended with tahini, lemon
-    juice, salt, garlic, and other ingredients.
+    一种浓稠的蘸酱，通常由鹰嘴豆与芝麻酱、柠檬汁、盐、大蒜及其他配料混合制成。
   </dd>
-  <dt>Pita</dt>
-  <dd>A soft, slightly leavened flatbread.</dd>
-  <dt>Halloumi</dt>
+  <dt>皮塔饼</dt>
+  <dd>一种柔软、略带发酵的扁平面包。</dd>
+  <dt>哈鲁米奶酪</dt>
   <dd>
-    A semi-hard, unripened, brined cheese with a higher-than-usual melting
-    point, usually made from goat/sheep milk.
+    一种半硬质、未经熟成、用盐水腌制的奶酪，熔点高于普通奶酪，通常由山羊奶或羊奶制成。
   </dd>
-  <dt>Green salad</dt>
-  <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
+  <dt>绿色沙拉</dt>
+  <dd>那种绿色的健康食物，我们中的许多人只是把它当作烤肉串的配菜。</dd>
 </dl>
 ```
 
-现在，如果你去到示例的展示页面，并使用[浏览器开发者工具](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)查看那些列表元素，你会注意到若干个默认的样式预设值：
+如果没有任何样式，它将渲染如下：
 
-- {{htmlelement("ul")}} 和 {{htmlelement("ol")}} 元素含有 `16px`（`1em`）的顶部和底部 {{cssxref("margin")}} 和 `40px`（`2.5em`）的 {{cssxref("padding-left")}}。
+{{embedlivesample("unstyled", "100%", 400)}}
+
+请使用[浏览器开发者工具](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)检查这些列表项，你会发现一些默认样式：
+
+- {{htmlelement("ul")}} 和 {{htmlelement("ol")}} 元素含有 `16px`（`1em`）的顶部和底部 {{cssxref("margin")}} 和 `40px`（`2.5em`）的 {{cssxref("padding-left")}}。如果将 `ul` 和 `ol` 元素的方向属性 [`dir`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/dir) 设置为从右到左（`rtl`），则 {{cssxref("padding-right")}} 将生效，其默认值为 `40px`（`2.5em`）。
 - 列表项（{{htmlelement("li")}} 元素）默认是没有设置间距的。
 - {{htmlelement("dl")}} 元素设置含有 `16px`（`1em`）的顶部和底部 {{cssxref("margin")}}，但不含内边距。
 - {{htmlelement("dd")}} 元素含有 `40px`（`2.5em`）的 {{cssxref("margin-left")}}。
@@ -102,15 +102,15 @@ slug: Learn_web_development/Core/Text_styling/Styling_lists
 
 ## 处理列表间距
 
-当为列表添加样式时，你需要调整样式，使其保持与周围元素相同的垂直间距（例如段落和图片，有时称为垂直节奏）和相互间的水平间距（你可以在 Github 上参考[完成添加样式后的示例](https://mdn.github.io/learning-area/css/styling-text/styling-lists/) ，也可以[找到源代码](https://github.com/mdn/learning-area/blob/main/css/styling-text/styling-lists/index.html)）。
+在为列表设置样式时，需要调整其样式，使其与周围元素（如段落和图片；有时称为“垂直节奏”）保持相同的垂直间距，并彼此之间保持相同的水平间距。一些典型的 CSS 样式和间距设置可能如下所示：
 
 用于文本样式和间距的 CSS 如下所示：
 
-```css
+```css live-sample___initial-style live-sample___list-style-type live-sample___list-style-position live-sample___custom-bullets live-sample___finished-style
 /* 通用样式 */
 
 html {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 10px;
 }
 
@@ -147,6 +147,10 @@ dt {
 - 规则集 4 在段落和列表项目上设置相同的 {{cssxref("line-height")}}，因此段落和每个单独的列表项目将在行之间具有相同的间距。这也将有助于保持垂直间距一致。
 - 规则集 5 和 6 适用于描述列表。我们在描述列表的术语和其描述上设置与段落和列表项相同的 `line-height`。再次强调一遍，这里很好地实现了一致性！我们还使描述术语具有粗体字体，因此它们在视觉上脱颖而出。
 
+将其应用到前面展示的 HTML 代码中，我们的代码渲染效果如下：
+
+{{embedlivesample("initial-style", "100%", 400)}}
+
 ## 列表特定样式
 
 现在我们来看一下列表的一般间距，我们来研究一些列表具有的特定属性。我们从三个属性开始了解，这三个属性可以在 {{htmlelement("ul")}} 或 {{htmlelement("ol")}} 元素上设置：
@@ -159,7 +163,18 @@ dt {
 
 像上面所提及的，{{cssxref("list-style-type")}} 属性允许你设置项目符号的类型，在我们的示例中，我们在有序列表上设置了大写罗马数字：
 
-```css
+```html hidden live-sample___list-style-type live-sample___list-style-position
+<ol>
+  <li>将皮塔饼烤至金黄，放凉后沿边缘切开。</li>
+  <li>
+    将哈鲁米奶酪放入浅底不粘锅中煎至两面金黄。
+  </li>
+  <li>将沙拉洗净切块。</li>
+  <li>将沙拉、鹰嘴豆泥和煎好的哈鲁米奶酪填入皮塔饼中。</li>
+</ol>
+```
+
+```css live-sample___list-style-type
 ol {
   list-style-type: upper-roman;
 }
@@ -167,7 +182,7 @@ ol {
 
 效果显示如下：
 
-![一个有序列表，项目符号被设置为出现在列表项之外](outer-bullets.png)
+{{embedlivesample("list-style-type", "100%", 120)}}
 
 你可以通过 {{cssxref("list-style-type")}} 参考页面查找到更多选项。
 
@@ -177,14 +192,14 @@ ol {
 
 如果值设置为 `inside`，项目符号则位于行内。
 
-```css
+```css live-sample___list-style-position live-sample___finished-style
 ol {
   list-style-type: upper-roman;
   list-style-position: inside;
 }
 ```
 
-![一个有序列表，项目符号被设置为出现在列表项之内](inner-bullets.png)
+{{embedlivesample("list-style-position", "100%", 120)}}
 
 ### 使用自定义的项目符号图片
 
@@ -192,15 +207,24 @@ ol {
 
 ```css
 ul {
-  list-style-image: url(star.svg);
+  list-style-image: url("https://mdn.github.io/shared-assets/images/examples/star-shape.png");
 }
 ```
 
 然而，这个属性在控制项目符号的位置，大小等方面是有限的。最好使用 {{cssxref("background")}} 系列属性，你将在[背景和边框](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)文章中了解更多信息。在这里我们仅做一点尝试！
 
-在我们的示例中，我们的无序列表最终样式像这样（在之前所见的顶部）：
+在我们的示例中，我们的无序列表最终样式像这样：
 
-```css
+```html hidden live-sample___custom-bullets
+<ul>
+  <li>鹰嘴豆泥</li>
+  <li>皮塔饼</li>
+  <li>绿色沙拉</li>
+  <li>哈鲁米奶酪</li>
+</ul>
+```
+
+```css live-sample___custom-bullets live-sample___finished-style
 ul {
   padding-left: 2rem;
   list-style-type: none;
@@ -208,7 +232,7 @@ ul {
 
 ul li {
   padding-left: 2rem;
-  background-image: url(star.svg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/star-shape.png");
   background-position: 0 0;
   background-size: 1.6rem 1.6rem;
   background-repeat: no-repeat;
@@ -223,11 +247,11 @@ ul li {
   - {{cssxref("background-image")}}：充当项目符号的图片文件的参照路径。
   - {{cssxref("background-position")}}：这定义了所选元素背景中的图像将出现在哪里——在我们的示例中设置为 `0 0`，这意味着项目符号将出现在每个列表项的最左上侧。
   - {{cssxref("background-size")}}：设置背景图片的大小。理想条件下，我们想要项目符号与列表项的大小相同（比列表项稍大或稍小亦可）。我们使用的尺寸为 `1.6rem`（`16px`），它非常吻合我们为项目符号设置的 `20px` 的填充，16px 加上 4px 的空格间距，可以使项目符号和列表项文本效果更好。
-  - {{cssxref("background-repeat")}}：默认条件下，背景图片不断复制直到填满整个背景空间，在我们的示例中，背景图片只需复制一次，所以我们设置值为 `no-repeat`。
+  - {{cssxref("background-repeat")}}：默认条件下，背景图片不断复制直到填满整个背景空间，在我们的示例中，背景图片只需插入一次，所以我们设置值为 `no-repeat`。
 
 效果显示如下：
 
-![一个无序列表，其项目符号设置为了小星星的图片](list_formatting.png)
+{{embedlivesample("custom-bullets", "100%", 120)}}
 
 ### list-style 简写
 
@@ -243,13 +267,20 @@ ul {
 
 可以被如下方式代替：
 
-```plain
+```css
 ul {
   list-style: square url(example.png) inside;
 }
 ```
 
 属性值可以任意顺序排列，你可以设置一个，两个或者所有三个值（不包括的属性使用的默认值是 `disc`、`none` 和 `outside`），如果指定了 `type` 和 `image`，如果由于某种原因导致图像无法加载，则 type 将用作回退。
+
+## 完整的示例
+
+在前几节中，我们向你展示了某些独立列表特性的效果。当我们将它们全部应用到最初的 HTML 列表中时，结果如下：
+
+
+{{embedlivesample("finished-style", "100%", 400)}}
 
 ## 管理列表计数
 
@@ -259,39 +290,39 @@ ul {
 
 [`start`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#start) 属性允许你从 1 以外的数字开始计数。以下示例：
 
-```html
+```html live-sample___counting-control
 <ol start="4">
-  <li>Toast pita, leave to cool, then slice down the edge.</li>
+  <li>将皮塔饼烤至金黄，放凉后沿边缘切开。</li>
   <li>
-    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+    将哈鲁米奶酪放入浅底不粘锅中煎至两面金黄。
   </li>
-  <li>Wash and chop the salad.</li>
-  <li>Fill pita with salad, hummus, and fried halloumi.</li>
+  <li>将沙拉洗净切块。</li>
+  <li>将沙拉、鹰嘴豆泥和煎好的哈鲁米奶酪填入皮塔饼中。</li>
 </ol>
 ```
 
 输出的结果如下：
 
-{{ EmbedLiveSample('start', '100%', 150) }}
+{{ EmbedLiveSample('counting-control', '100%', 150) }}
 
 ### reversed
 
 [`reversed`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#reversed) 属性将使列表反向计数。以下示例：
 
-```html
+```html live-sample___counting-control-reversed
 <ol start="4" reversed>
-  <li>Toast pita, leave to cool, then slice down the edge.</li>
+  <li>将皮塔饼烤至金黄，放凉后沿边缘切开。</li>
   <li>
-    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+    将哈鲁米奶酪放入浅底不粘锅中煎至两面金黄。
   </li>
-  <li>Wash and chop the salad.</li>
-  <li>Fill pita with salad, hummus, and fried halloumi.</li>
+  <li>将沙拉洗净切块。</li>
+  <li>将沙拉、鹰嘴豆泥和煎好的哈鲁米奶酪填入皮塔饼中。</li>
 </ol>
 ```
 
 输出的结果如下：
 
-{{ EmbedLiveSample('reversed', '100%', 150) }}
+{{ EmbedLiveSample('counting-control-reversed', '100%', 150) }}
 
 > [!NOTE]
 > 如果反向计数的列表项数比 `start` 属性的值还要多，计数将继续到零并向负数方向增加。
@@ -302,18 +333,18 @@ ul {
 
 ```html
 <ol>
-  <li value="2">Toast pita, leave to cool, then slice down the edge.</li>
+  <li value="2">将皮塔饼烤至金黄，放凉后沿边缘切开</li>
   <li value="4">
-    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+    将哈鲁米奶酪放入浅底不粘锅中煎至两面金黄。
   </li>
-  <li value="6">Wash and chop the salad.</li>
-  <li value="8">Fill pita with salad, hummus, and fried halloumi.</li>
+  <li value="6">将沙拉洗净切块。</li>
+  <li value="8">将沙拉、鹰嘴豆泥和煎好的哈鲁米奶酪填入皮塔饼中。</li>
 </ol>
 ```
 
 输出的结果如下：
 
-{{ EmbedLiveSample('value', '100%', 150) }}
+{{ EmbedLiveSample('counting-control-values', '100%', 150) }}
 
 > [!NOTE]
 > 即使使用非数字的 {{cssxref("list-style-type")}}，仍需要在 `value` 属性中使用等效的数值。
@@ -322,22 +353,15 @@ ul {
 
 在该学习环节，我们希望你使用如上所学尝试为一个嵌套式列表添加样式。我们已经提供了 HTML 代码，在此之上请完成如下任务：
 
-1. 为该无序列表提供方形项目符号。
-2. 为该无序列表项和有序列表项提供基于其字体大小 1.5 倍的行高。
-3. 为有序列表提供小写字母的项目符号。
-4. 对列表进行自由发挥，尝试不同的项目符号类型，间距，以及其他的各种属性。
+1. 点击下方代码块中的**“运行”**，在 MDN 代码演练场中编辑该示例。
+2. 将无序列表设置为方形项目符号。
+3. 将无序列表项和有序列表项的 `line-height` 设置为 `font-size` 的 `1.5` 倍。
+4. 将有序列表设置为使用小写字母项目符号。
+5. 请随意尝试这个列表示例，尽情尝试各种项目符号类型、间距，或者任何你感兴趣的设置。
 
 如果犯了错误，可以随时点击*重置*按钮进行重新设置。如果你真的遇到困难无法继续下去，点击*显示解答*按钮查看一种可能的解法。
 
-```html hidden
-<div
-  class="body-wrapper"
-  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
-  <h2>HTML 输入</h2>
-  <textarea
-    id="code"
-    class="html-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+```html live-sample___styling_lists
 <ul>
   <li>首先，点亮蜡烛。</li>
   <li>其次，打开盒子。</li>
@@ -349,91 +373,38 @@ ul {
     </ol>
   </li>
 </ul>
-  </textarea>
-
-  <h2>CSS 输入</h2>
-  <textarea
-    id="code"
-    class="css-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
-
-  <h2>输出</h2>
-  <div
-    class="output"
-    style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
-  <div class="controls">
-    <input
-      id="reset"
-      type="button"
-      value="重置"
-      style="margin: 10px 10px 0 0;" />
-    <input
-      id="solution"
-      type="button"
-      value="显示解答"
-      style="margin: 10px 0 0 10px;" />
-  </div>
-</div>
 ```
 
-```js hidden
-const htmlInput = document.querySelector(".html-input");
-const cssInput = document.querySelector(".css-input");
-const reset = document.getElementById("reset");
-const htmlCode = htmlInput.value;
-const cssCode = cssInput.value;
-const output = document.querySelector(".output");
-const solution = document.getElementById("solution");
 
-const styleElem = document.createElement("style");
-const headElem = document.querySelector("head");
-headElem.appendChild(styleElem);
+```css live-sample___styling_lists
 
-function drawOutput() {
-  output.innerHTML = htmlInput.value;
-  styleElem.textContent = cssInput.value;
-}
+```
 
-reset.addEventListener("click", () => {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
-});
+{{ EmbedLiveSample('styling_lists', "100%", 160) }}
 
-solution.addEventListener("click", () => {
-  htmlInput.value = htmlCode;
-  cssInput.value = `ul {
+<details>
+<summary>点击这里查看解答</summary>
+
+完成的 CSS 应该如下所示：
+
+```css
+ul {
   list-style-type: square;
 }
 
-ul li,
-ol li {
+li {
   line-height: 1.5;
 }
 
 ol {
   list-style-type: lower-alpha;
-}`;
-  drawOutput();
-});
-
-htmlInput.addEventListener("input", drawOutput);
-cssInput.addEventListener("input", drawOutput);
-window.addEventListener("load", drawOutput);
+}
 ```
 
-{{ EmbedLiveSample('主动学习：为嵌套式列表添加样式', 700, 800) }}
+</details>
 
 ## 总结
 
-一旦你掌握一些相关的基础原则和特定属性，列表的样式还是相对容易理解的。在下篇文章中我们将转到另一话题——[为链接提供样式](/zh-CN/docs/Learn_web_development/Core/Text_styling/Styling_links)的各种技巧。
-
-## 参见
-
-CSS 计数器提供用于自定义列表计数和样式的高级工具，但它们相当复杂。如果你想更深入了解，请查看如下资源：
-
-- {{cssxref("@counter-style")}}
-- {{cssxref("counter-increment")}}
-- {{cssxref("counter-reset")}}
+只要掌握了几个相关的基本原理和具体属性，列表的样式设置就相对容易上手。在下一篇文章中，我们将继续介绍链接的样式设置技巧。
 
 {{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
