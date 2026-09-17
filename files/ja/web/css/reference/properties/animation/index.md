@@ -178,7 +178,7 @@ animation:
 
 #### CSS
 
-まず、太陽と空を作成します。空は HTML 文書の {{cssxref(":root")}} です。 {{cssxref("overflow")}} を hidden に設定することで、ビューポートの外側にあるコンテンツ、この場合は太陽の地平線より下にある部分を非表示にします。同時に、{{cssxref("justify-content")}}  プロパティを使用して、太陽を背景の中央に配置します。太陽の色を黄色にし、{{cssxref("height")}} をビューポートの高さ (`100vh`) に設定し、{{cssxref("aspect-ratio")}} を `1` に設定して幅を高さと等しくします。さらに、{{cssxref("border-radius")}} プロパティを使用して、正方形の `<div>` を円に変えます。
+まず、太陽と空を作成します。空は HTML 文書の {{cssxref(":root")}} です。 {{cssxref("overflow")}} を hidden に設定することで、ビューポートの外側にあるコンテンツ、この場合は太陽の地平線より下にある部分を非表示にします。同時に、{{cssxref("justify-content")}} プロパティを使用して、太陽を背景の中央に配置します。太陽の色を黄色にし、{{cssxref("height")}} をビューポートの高さ (`100vh`) に設定し、{{cssxref("aspect-ratio")}} を `1` に設定して幅を高さと等しくします。さらに、{{cssxref("border-radius")}} プロパティを使用して、正方形の `<div>` を円に変えます。
 
 ```css
 :root {
