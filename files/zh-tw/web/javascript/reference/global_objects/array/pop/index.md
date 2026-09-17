@@ -24,7 +24,7 @@ console.log(plants);
 
 ## 語法
 
-```plain
+```js-nolint
 arr.pop()
 ```
 
