@@ -1,16 +1,27 @@
 ---
-title: path
+title: <path>
 slug: Web/SVG/Reference/Element/path
+l10n:
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
-**[起步](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)**
-本教程将教你开始使用 SVG 路径。
-
-path 元素是用来定义形状的通用元素。所有的基本形状都可以用 path 元素来创建。
+**`<path>`** [SVG](/zh-CN/docs/Web/SVG) 元素是用于定义形状的通用元素。所有基本形状都可以用 `<path>` 元素创建。
 
 ## 使用上下文
 
 {{svginfo}}
+
+## 属性
+
+- {{SVGAttr("d")}}
+  - : 此属性定义路径的形状。
+    _值类型_：**\<string>**；_默认值_：`''`；_动画性_：**是**
+- {{SVGAttr("pathLength")}}
+  - : 此属性用于指定路径的总长度，单位为用户单位。_值类型_：[**\<number>**](/zh-CN/docs/Web/SVG/Guides/Content_type#数字)；_默认值_：_无_；_动画性_：**是**
+
+## DOM 接口
+
+该元素实现了 {{domxref("SVGPathElement")}} 接口。
 
 ## 示例
 
@@ -33,31 +44,11 @@ svg {
 </svg>
 ```
 
-输出结果：
+{{EmbedLiveSample('示例', 100, 100)}}
 
-{{EmbedLiveSample("示例",200,215)}}
+## 规范
 
-## 属性
-
-### 全局属性
-
-- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
-- {{SVGAttr("transform")}}
-
-### 专有属性
-
-- {{SVGAttr("d")}}
-- {{SVGAttr("pathLength")}}
-
-## DOM 接口
-
-该元素实现了 [`SVGPathElement`](/zh-CN/docs/Web/API/SVGPathElement) 接口。
+{{Specifications}}
 
 ## 浏览器兼容性
 
@@ -65,10 +56,5 @@ svg {
 
 ## 参见
 
-- {{SVGElement("circle")}}
-- {{SVGElement("ellipse")}}
-- {{SVGElement("line")}}
-- {{SVGElement("polygon")}}
-- {{SVGElement("polyline")}}
-- {{SVGElement("rect")}}
-- [The MDN SVG "Getting Started" tutorial : Path](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)
+- SVG 基本形状：{{ SVGElement('circle') }}、{{ SVGElement('ellipse') }}、{{ SVGElement('line') }}、{{ SVGElement('polygon') }}、{{ SVGElement('polyline') }}、{{ SVGElement('rect') }}
+- [MDN SVG“入门”教程：路径](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)
