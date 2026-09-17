@@ -1,8 +1,9 @@
 ---
-title: animation-fill-mode
+title: "`animation-fill-mode` プロパティ (CSS)"
+short-title: animation-fill-mode
 slug: Web/CSS/Reference/Properties/animation-fill-mode
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 **`animation-fill-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 CSS アニメーションの実行の前後にどう対象にスタイルを適用するかを設定します。
@@ -134,8 +135,10 @@ animation-fill-mode: unset;
 
 ### 値
 
+このプロパティは、以下のキーワード値のカンマ区切りリストとして指定します。
+
 - `none`
-  - : アニメーションが実行されていない時は、対象にスタイルを適用しません。要素は適用されているその他の CSS 規則を使用して表示されます。これが既定値です。
+  - : アニメーションが実行されていない時は、対象にスタイルを適用しません。要素は適用されているその他の CSS 規則を使用して表示されます。これがデフォルト値です。
 - `forwards`
   - : 対象は実行の最後の[キーフレーム](/ja/docs/Web/CSS/Reference/At-rules/@keyframes)で設定された計算値を保持します。最後のキーフレームは {{cssxref("animation-direction")}} と {{cssxref("animation-iteration-count")}} の値によって変わります。
 
@@ -159,7 +162,7 @@ animation-fill-mode: unset;
     | `reverse` または `alternate-reverse` | `100%` または `to`       |
 
 - `both`
-  - : アニメーションは forwards と backwards の両方の既定に従います。よって、アニメーションの設定は実行前と実行後の両方に適用されます。
+  - : アニメーションは forwards と backwards の両方のデフォルトに従います。よって、アニメーションの設定は実行前と実行後の両方に適用されます。
 
 > [!NOTE]
 > `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/Guides/Animations/Using#複数のアニメーションプロパティ値の設定) を参照してください。
@@ -179,7 +182,7 @@ animation-fill-mode: unset;
 
 ### fill モードの設定
 
-以下の例で `animation-fill-mode` の効果を見ることができます。これは無限に繰り返されるアニメーションが、元の状態に戻るのではなく最後の状態を維持するようにすることができます（既定の状態）。
+以下の例で `animation-fill-mode` の効果を見ることができます。これは無限に繰り返されるアニメーションが、元の状態に戻るのではなく最後の状態を維持するようにすることができます（デフォルトの状態）。
 
 #### HTML
 
