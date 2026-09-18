@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 > [!NOTE]
 > `compile()` 메서드는 호환성을 위해서만 명시되어 있습니다. `compile()`을 사용하면 변경 불가능한 정규식 소스와 플래그가 변경 가능하므로 사용자의 예상을 빗나갈 수 있습니다. 대신 [`RegExp()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) 생성자를 사용하여 새 정규식 객체를 생성할 수 있습니다.
