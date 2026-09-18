@@ -42,7 +42,7 @@ filter: opacity(0);
 
 ## 语法
 
-```plain
+```css
 opacity(amount)
 ```
 

@@ -179,7 +179,7 @@ for (let i = 0; i < results.genres.length; i++) {
 
 创建 **/views/book_form.pug**，并复制下面的文本。
 
-```plain
+```pug
 extends layout
 
 block content

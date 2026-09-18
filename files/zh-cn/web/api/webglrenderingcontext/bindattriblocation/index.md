@@ -28,8 +28,8 @@ void gl.bindAttribLocation(program, index, name);
 
 ## 示例
 
-```plain
-gl.bindAttribLocation(program, colorLocation, 'vColor');
+```js
+gl.bindAttribLocation(program, colorLocation, "vColor");
 ```
 
 ## 规范

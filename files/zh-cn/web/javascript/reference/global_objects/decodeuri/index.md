@@ -58,10 +58,10 @@ decodeURI(
 
 ### 捕捉异常
 
-```plain
+```js
 try {
-  var a = decodeURI('%E0%A4%A');
-} catch(e) {
+  var a = decodeURI("%E0%A4%A");
+} catch (e) {
   console.error(e);
 }
 

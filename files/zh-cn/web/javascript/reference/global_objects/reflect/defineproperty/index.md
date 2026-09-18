@@ -39,10 +39,10 @@ Reflect.defineProperty(target, propertyKey, attributes)
 
 ### 使用 `Reflect.defineProperty()`
 
-```plain
-let obj = {}
-Reflect.defineProperty(obj, 'x', {value: 7})  // true
-obj.x                                         // 7
+```js
+let obj = {};
+Reflect.defineProperty(obj, "x", { value: 7 }); // true
+obj.x; // 7
 ```
 
 ### 检查属性是否被成功定义

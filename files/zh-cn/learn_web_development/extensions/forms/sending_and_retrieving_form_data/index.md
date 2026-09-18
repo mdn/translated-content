@@ -217,7 +217,7 @@ HTTP 请求永远不会显示给用户 (如果你想要看到它们，你需要�
 这个例子展示了如何使用 Python 完成同样的事情——在 web 页面上显示提交的数据。
 这将使用[Flask framework](http://flask.pocoo.org/)来呈现模板、处理表单数据提交等 (参见[python-example.py](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/python-example.py))。
 
-```plain
+```python
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
