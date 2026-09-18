@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-**`json()`** 是 {{DOMxRef("Response")}} 接口的方法，用于将 {{DOMxRef("Response")}} 流读取至结束。它返回一个 promise，会兑现将响应体文本解析为 {{JSxRef("JSON")}} 的结果。
+{{DOMxRef("Response")}} 接口的 **`json()`** 方法将 {{DOMxRef("Response")}} 流读取至结束。它返回一个 promise，会兑现将响应体文本解析为 {{JSxRef("JSON")}} 的结果。
 
 注意，尽管方法名为 `json()`，结果并不是 JSON，而是将 JSON 作为输入解析后得到的 JavaScript 对象。
 
