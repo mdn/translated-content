@@ -3033,6 +3033,7 @@
 /ja/docs/Web/API/EventTarget.dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/EventTarget.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
 /ja/docs/Web/API/EventTarget/attachEvent	/ja/docs/Web/API/EventTarget/addEventListener
+/ja/docs/Web/API/FetchEvent/replacesClientId	/ja/docs/Web/API/FetchEvent
 /ja/docs/Web/API/FetchEvent_clone	/ja/docs/Web/API/FetchEvent
 /ja/docs/Web/API/Fetch_API/Basic_concepts	/ja/docs/Web/API/Fetch_API/Using_Fetch
 /ja/docs/Web/API/Fetch_API/Cross-global_fetch_usage	/ja/docs/Web/API/Fetch_API/Using_Fetch
