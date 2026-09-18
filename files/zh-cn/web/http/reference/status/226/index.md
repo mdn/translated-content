@@ -16,7 +16,7 @@ HTTP **`226 IM Used`** [成功响应](/zh-CN/docs/Web/HTTP/Reference/Status#成�
 
 ## 状态
 
-```plain
+```http
 226 IM Used
 ```
 

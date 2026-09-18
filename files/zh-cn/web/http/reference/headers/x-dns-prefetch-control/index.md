@@ -13,7 +13,7 @@ slug: Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control
 
 ## 语法
 
-```plain
+```http
 X-DNS-Prefetch-Control: on
 X-DNS-Prefetch-Control: off
 ```

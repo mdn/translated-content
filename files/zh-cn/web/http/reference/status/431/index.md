@@ -11,7 +11,7 @@ slug: Web/HTTP/Reference/Status/431
 
 ## 状态
 
-```plain
+```http
 431 Request Header Fields Too Large
 ```
 

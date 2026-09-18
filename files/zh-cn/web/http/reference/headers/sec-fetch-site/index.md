@@ -13,7 +13,7 @@ slug: Web/HTTP/Reference/Headers/Sec-Fetch-Site
 
 ## 语法
 
-```plain
+```http
 Sec-Fetch-Site: cross-site
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Site: same-site

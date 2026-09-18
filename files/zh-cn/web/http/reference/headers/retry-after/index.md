@@ -14,7 +14,7 @@ slug: Web/HTTP/Reference/Headers/Retry-After
 
 ## 语法
 
-```plain
+```http
 Retry-After: <http-date>
 Retry-After: <delay-seconds>
 ```
@@ -32,7 +32,7 @@ Retry-After: <delay-seconds>
 
 不同的客户端与服务器端应用对于 Retry-After 首部的支持依然不太一致。不过，一些爬虫程序，比如谷歌的爬虫程序 Googlebot，会遵循 Retry-After 首部的规则。将其与 {{HTTPStatus(503)}} (Service Unavailable，当前服务不存在) 响应一起发送有助于互联网引擎做出判断，在宕机结束之后继续对网站构建索引。
 
-```plain
+```http
 Retry-After: Wed, 21 Oct 2015 07:28:00 GMT
 Retry-After: 120
 ```

@@ -121,7 +121,7 @@ HTTP 请求由两个部分组成：一个包含关于浏览器功能的全局元
 
 HTTP 请求如下：
 
-```plain
+```http
 GET /?say=Hi&to=Mom HTTP/2.0
 Host: foo.com
 ```
@@ -153,7 +153,7 @@ Host: foo.com
 
 当使用`POST`方法提交表单时，没有数据会附加到 URL，HTTP 请求看起来是这样的，而请求主体中包含的数据是这样的：
 
-```plain
+```http
 POST / HTTP/2.0
 Host: foo.com
 Content-Type: application/x-www-form-urlencoded

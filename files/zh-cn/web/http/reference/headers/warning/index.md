@@ -13,7 +13,7 @@ slug: Web/HTTP/Reference/Headers/Warning
 
 ## 语法
 
-```plain
+```http
 Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 ```
 
@@ -47,7 +47,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 
 ## 示例
 
-```plain
+```http
 Warning: 110 anderson/1.3.37 "Response is stale"
 
 Date: Wed, 21 Oct 2015 07:28:00 GMT
