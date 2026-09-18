@@ -12544,12 +12544,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/FetchEvent/replacesClientId": {
-    "modified": "2020-10-15T22:29:02.457Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/API/FetchEvent/request": {
     "modified": "2020-10-15T22:28:59.366Z",
     "contributors": [
@@ -44015,6 +44009,12 @@
     "contributors": [
       "tyankatsu",
       "Marsf"
+    ]
+  },
+  "conflicting/Web/API/FetchEvent": {
+    "modified": "2020-10-15T22:29:02.457Z",
+    "contributors": [
+      "Wind1808"
     ]
   },
   "conflicting/Web/API/File_System_API": {

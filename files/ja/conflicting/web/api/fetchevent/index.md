@@ -1,6 +1,7 @@
 ---
 title: FetchEvent.replacesClientId
-slug: Web/API/FetchEvent/replacesClientId
+slug: conflicting/Web/API/FetchEvent
+original_slug: Web/API/FetchEvent/replacesClientId
 l10n:
   sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
 ---
