@@ -6,7 +6,7 @@ original_slug: Learn_web_development/Core/Frameworks_libraries/Svelte_getting_st
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started","Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Frameworks_libraries_55929fef48d3a16d971374ad30a0fdfc4ca3ceb66be71d227faa78978cc54705","conflicting/Learn_web_development/Core/Frameworks_libraries_ebe196b0d819367b2a71ec1003a74c2d380a1f3f4a9f052de85d73d708fa686b", "Learn_web_development/Core/Frameworks_libraries")}}
 
 이 문서에는 [Svelte 프레임워크](https://svelte.dev/)에 대한 빠른 소개를 제공합니다.
 Svelte가 어떻게 작동하는지, 지금까지 본 나머지 프레임워크 및 도구와 Svelte가 어떻게 다른지 살펴보겠습니다. 그런 다음 개발 환경을 설정하고, 샘플 앱을 만들고, 프로젝트 구조를 이해하고, 로컬에서 실행하고 프로덕션용으로 빌드하는 방법을 배웁니다.
