@@ -22,7 +22,7 @@ console.log(date2.getUTCDay());
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.getUTCDay()
 ```
 

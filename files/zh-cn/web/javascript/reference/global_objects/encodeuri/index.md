@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/encodeURI
 
 ## 语法
 
-```plain
+```js-nolint
 encodeURI(URI)
 ```
 

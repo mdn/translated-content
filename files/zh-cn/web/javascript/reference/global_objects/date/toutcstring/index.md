@@ -16,7 +16,7 @@ console.log(event.toUTCString());
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.toUTCString()
 ```
 

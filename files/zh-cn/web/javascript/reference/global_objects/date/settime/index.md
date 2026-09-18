@@ -25,7 +25,7 @@ console.log(futureDate);
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.setTime(timeValue)
 ```
 

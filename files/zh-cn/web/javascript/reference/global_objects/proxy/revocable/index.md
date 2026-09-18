@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
 
 ## 语法
 
-```plain
+```js-nolint
 Proxy.revocable(target, handler);
 ```
 

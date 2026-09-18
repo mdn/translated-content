@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 
 ## 语法
 
-```plain
+```js-nolint
 Reflect.defineProperty(target, propertyKey, attributes)
 ```
 

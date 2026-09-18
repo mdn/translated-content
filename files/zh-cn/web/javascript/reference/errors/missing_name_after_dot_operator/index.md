@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Errors/Missing_name_after_dot_operator
 
 ## 错误提示
 
-```plain
+```js-nolint
 SyntaxError: missing name after . operator
 ```
 

@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/cullFace
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.cullFace(mode);
 ```
 

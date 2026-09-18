@@ -11,7 +11,7 @@ slug: Web/API/OscillatorNode/OscillatorNode
 
 ## 语法
 
-```plain
+```js-nolint
 var oscillatorNode = new OscillatorNode(context, options)
 ```
 

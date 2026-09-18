@@ -24,7 +24,7 @@ try {
 
 ## 语法
 
-```plain
+```js-nolint
 decodeURI(encodedURI)
 ```
 

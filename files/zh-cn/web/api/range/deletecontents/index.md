@@ -11,7 +11,7 @@ slug: Web/API/Range/deleteContents
 
 ## 语法
 
-```plain
+```js-nolint
 range.deleteContents()
 ```
 

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/round
 
 ## 语法
 
-```plain
+```js-nolint
 Math.round(x)
 ```
 

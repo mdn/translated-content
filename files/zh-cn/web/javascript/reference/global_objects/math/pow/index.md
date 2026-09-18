@@ -24,7 +24,7 @@ console.log(Math.pow(-7, 0.5));
 
 ## 语法
 
-```plain
+```js-nolint
 Math.pow(base, exponent)
 ```
 
