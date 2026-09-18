@@ -1,23 +1,23 @@
 ---
 title: AsyncGenerator.prototype.return()
+short-title: return()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/return
 l10n:
-  sourceCommit: 6bd17cb9cbc2d11163617b9f71706e93fdd743c8
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`return()`** は {{jsxref("AsyncGenerator")}} インスタンスのメソッドで、あたかも `return` 文がジェネレーター本体の中の停止中の位置に挿入されたかのように動作し、ジェネレーターを終了して、[`try...finally`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) ブロックと組み合わせた際に、ジェネレーターが任意のクリーンアップタスクを実行できるようにします。
+**`return()`** は {{jsxref("AsyncGenerator")}} インスタンスのメソッドで、あたかも `return` 文がジェネレーター本体の中の停止中の位置に挿入されたかのように動作し、ジェネレーターを終了して、[`try...finally`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch#finally_ブロック) ブロックと組み合わせた際に、ジェネレーターが任意のクリーンアップタスクを実行できるようにします。
 
 ## 構文
 
 ```js-nolint
-asyncGeneratorObject.return(value)
+asyncGeneratorInstance.return()
+asyncGeneratorInstance.return(value)
 ```
 
 ### 引数
 
-- `value`
+- `value` {{optional_inline}}
   - : 返す値です。
 
 ### 返値
@@ -27,9 +27,9 @@ asyncGeneratorObject.return(value)
 - `done`
   - : 論理値です。
     - `true`: ジェネレーター関数の制御フローが最後に達した場合。
-    - `false`: ジェネレーター関数の制御フローが最後に達しておらず、さらに値を生成できる場合。これは `return` が [`try...finally`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) で捉えられ、さらに `finally` ブロックの中に `yield` 式がある場合のみ起こりえます。
+    - `false`: ジェネレーター関数の制御フローが最後に達しておらず、さらに値を生成できる場合。これは `return` が [`try...finally`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch#finally_ブロック) で捉えられ、さらに `finally` ブロックの中に `yield` 式がある場合のみ起こりえます。
 - `value`
-  - : 引数として指定された値、または `yield` 式が [`try...finally`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) でラップされている場合、 `finally` ブロックから得られる/返す値を返します。
+  - : 引数として指定された値、または `yield` 式が [`try...finally`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch#finally_ブロック) でラップされている場合、 `finally` ブロックから得られる/返す値を返します。
 
 ## 解説
 
@@ -39,7 +39,7 @@ asyncGeneratorObject.return(value)
 
 ### return() の使用
 
-次の例は、単純な非同期ジェネレーターと `return` メソッドを示しています。
+次の例は、非同期ジェネレーターと `return` メソッドを示しています。
 
 ```js
 // An async task. Pretend it's doing something more useful
@@ -70,9 +70,9 @@ asyncGen.next().then((res) => console.log(res)); // { value: undefined, done: tr
 
 ```js
 async function* createAsyncGenerator() {
-  yield await Promise.resolve(1);
+  yield Promise.resolve(1);
   yield await Promise.resolve(2);
-  yield await Promise.resolve(3);
+  yield 3;
 }
 const asyncGen = createAsyncGenerator();
 asyncGen.next().then((res) => console.log(res)); // { value: 1, done: false }
@@ -95,4 +95,4 @@ asyncGen.return(1).then((res) => console.log(res)); // { value: 1, done: true }
 ## 関連情報
 
 - {{jsxref("Statements/async_function*", "async function*")}}
-- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)ガイド
