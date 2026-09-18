@@ -1,5 +1,6 @@
 ---
 title: Element：ariaColSpan 属性
+short-title: ariaColSpan
 slug: Web/API/Element/ariaColSpan
 l10n:
   sourceCommit: 0b5859108411e47d228a4bb9f30a5556ab17f63c
