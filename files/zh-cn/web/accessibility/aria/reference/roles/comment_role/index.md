@@ -38,7 +38,9 @@ l10n:
 
 ```html
 <p>
-  歌曲的后半段是一段缓慢上升的渐强，在<mark aria-details="thread-1 thread-2">吉他独奏的结尾</mark>处达到顶峰，随后迅速淡去。
+  歌曲的后半段是一段缓慢上升的渐强，在<mark aria-details="thread-1 thread-2"
+    >吉他独奏的结尾</mark
+  >处达到顶峰，随后迅速淡去。
 </p>
 
 <div role="comment" id="thread-1" data-author="chris">
