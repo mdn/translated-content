@@ -200,7 +200,7 @@ exports.perimeter = function (width) {
 Podemos importar este módulo usando `require()`, y luego llamar al/los método(s) exportado(s) como se muestra:
 
 ```js
-const square = require("./square"); // Here we require() the name of the file without the (optional) .js file extension
+const square = require("./square"); // Aquí usamos require() con el nombre del archivo, sin la extensión .js (opcional)
 
 console.log(`The area of a square with a width of 4 is ${square.area(4)}`);
 ```
@@ -282,7 +282,7 @@ Hay un método de enrutamiento especial, `app.all()`, que se llamará en respues
 ```js
 app.all("/secret", (req, res, next) => {
   console.log("Accessing the secret section…");
-  next(); // pass control to the next handler
+  next(); // pasa el control al siguiente manejador
 });
 ```
 
@@ -291,7 +291,7 @@ Las rutas te permiten hacer coincidir patrones particulares de caracteres en una
 A menudo es útil agrupar los manejadores de ruta de una parte concreta de un sitio y acceder a ellos usando un prefijo de ruta común (por ejemplo, un sitio con una wiki podría tener todas las rutas relacionadas con la wiki en un archivo y acceder a ellas con un prefijo de ruta _/wiki/_). En _Express_ esto se logra usando el objeto [`express.Router`](https://expressjs.com/en/guide/routing.html#express-router). Por ejemplo, podemos crear nuestra ruta de wiki en un módulo llamado **wiki.js**, y luego exportar el objeto `Router`, como se muestra abajo:
 
 ```js
-// wiki.js - Wiki route module
+// wiki.js - Módulo de rutas del wiki
 
 const express = require("express");
 
