@@ -1,79 +1,36 @@
 ---
 title: WebDriver
 slug: Web/WebDriver
+l10n:
+  sourceCommit: f83c12ab41865e0e195dd36ad9cdcad511a36957
 ---
 
-WebDriver 是远程控制接口，可以对用户代理进行控制。它提供了一个平台和中立语言协议结构，作为进程外程序远程指导 web 浏览器行为的方法。
+**WebDriver** 是一种浏览器自动化接口，允许外部程序远程检查并控制浏览器。它是一种与平台和语言无关的线协议，既支持基于命令的自动化，也支持实时、事件驱动的通信。
 
-具备编写可以在不同平台上的许多浏览器中互换运行的指令集的能力，对于向用户提供一致的体验至关重要。随着网络平台的新一轮发展，设备多样性的增加以及对技术之间真正的互操作性的要求，WebDriver 提供了[跨浏览器测试](/zh-CN/docs/Learn_web_development/Extensions/Testing/Introduction)的工具。
+WebDriver 为[跨浏览器测试](/zh-CN/docs/Learn_web_development/Extensions/Testing/Introduction)提供工具，帮助团队在多种浏览器和平台上交付一致的用户体验。它旨在让 Web 作者编写测试，以便从单独的控制进程自动化浏览器。
 
-WebDriver 所提供的是一组接口，用于发现和操作网络文档中的 DOM 元素，并控制用户代理的行为。它的主要目的是让 web 作者编写测试，从单独的控制过程中实现用户代理的自动化，但也可以用这样的方式，让浏览器内的脚本控制一个（单独的）浏览器。
-
-## 使用方法
-
-那么，WebDriver 可以让你做什么，它又是什么样子的？由于 WebDriver 是编程语言中立的，这个问题的答案取决于你所使用的 WebDriver 客户端和语言的选择。
-
-使用一个用流行的 Python 语言编写的客户端，与 WebDriver 的互动可能看起来像这样：
-
-```python
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support.expected_conditions import presence_of_element_located
-
-
-
-with webdriver.Firefox() as driver:
-
-    driver.get("http://google.com/ncr")
-    wait = WebDriverWait(driver, 10)
-    driver.find_element(By.NAME, "q").send_keys("cheese" + Keys.RETURN)
-    wait.until(presence_of_element_located((By.XPATH, '//*[@id="rcnt"]')))
-    results = driver.find_elements(By.XPATH, "//a[@href]")
-
-    for i, elem in enumerate(results):
-        print(f'#{i} {elem.text} ({elem.get_attribute("href")})')
-```
-
-它可能会输出：
-
-```plain
-#1 Cheese - Wikipedia (https://en.wikipedia.org/wiki/Cheese)
-```
+WebDriver 有两种变体：使用 HTTP 的 [WebDriver classic](/zh-CN/docs/Web/WebDriver/Reference/Classic)，以及使用 WebSocket、可进行双向事件驱动通信的 [WebDriver BiDi](/zh-CN/docs/Web/WebDriver/Reference/BiDi)。
 
 ## 参考
 
-### 命令
+浏览完整的 [WebDriver 参考](/zh-CN/docs/Web/WebDriver/Reference)文档。
 
-[命令](/zh-CN/docs/Web/WebDriver/Commands)
+- [WebDriver BiDi](/zh-CN/docs/Web/WebDriver/Reference/BiDi)
+  - : WebDriver BiDi 模块、命令和事件的参考。
 
-{{ListSubpages("/zh-CN/docs/Web/WebDriver/Commands")}}
+- [WebDriver classic](/zh-CN/docs/Web/WebDriver/Reference/Classic)
+  - : WebDriver classic 命令和超时的参考。
 
-### 类型
+- [能力](/zh-CN/docs/Web/WebDriver/Reference/Capabilities)
+  - : WebDriver 能力的参考。
 
-[类型](/zh-CN/docs/Web/WebDriver/Types)
-
-- [错误对象](/zh-CN/docs/Web/WebDriver/Errors#payload)
-- [超时对象](/zh-CN/docs/Web/WebDriver/Timeouts)
-- [WebElement](/zh-CN/docs/Web/WebDriver/WebElement)
-- [WebWindow](/zh-CN/docs/Web/WebDriver/WebWindow)
-
-### 能力
-
-[能力](/zh-CN/docs/Web/WebDriver/Capabilities)
-
-{{ListSubpages("/zh-CN/docs/Web/WebDriver/Capabilities")}}
-
-### 错误
-
-[错误](/zh-CN/docs/Web/WebDriver/Errors)
-
-{{ListSubpages("/zh-CN/docs/Web/WebDriver/Errors")}}
+- [错误](/zh-CN/docs/Web/WebDriver/Reference/Errors)
+  - : WebDriver 错误的参考。
 
 ## 规范
 
 - [WebDriver](https://w3c.github.io/webdriver/)
+- [WebDriver BiDi](https://w3c.github.io/webdriver-bidi/)
 
 ## 参见
 
