@@ -14,7 +14,7 @@ En los primeros días del diseño web, las páginas se diseñaban para llenar un
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conceptos básicos de HTML (véase
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >) y nociones de cómo funciona el CSS (véase
         <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Primeros pasos en CSS</a> y

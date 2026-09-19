@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5a2cea779777daaff451f21ca3b7f4c28a68de9e
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("String")}} 값의 **`sup()`** 메서드는 문자열을 {{HTMLElement("sup")}} 요소(`<sup>str</sup>`)에 포함하는 문자열을 생성하여 이 문자열이 위 첨자로 표시되도록 합니다.
 

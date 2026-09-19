@@ -3,7 +3,7 @@ title: Object.prototype.__lookupGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}
 
 O método **`__lookupGetter__`** retorna a função limite como uma getter para a específica propriedade.
 
