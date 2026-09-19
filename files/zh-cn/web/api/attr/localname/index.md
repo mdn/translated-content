@@ -1,47 +1,66 @@
 ---
-title: Attr.localName
+title: Attr：localName 属性
+short-title: localName
 slug: Web/API/Attr/localName
+l10n:
+  sourceCommit: ec1006afdf68a5808a48ab6301f9ccff3cd7ecc2
 ---
 
 {{APIRef("DOM")}}
 
-**`Attr.localName`** 为只读属性，返回一个属性限定名称的本名部分（去除命名空间前缀的名字）。
+{{domxref("Attr")}} 接口的 **`localName`** 只读属性返回属性*限定名*的*本地部分*，也就是去掉前面命名空间后的属性名。例如，如果限定名是 `xml:lang`，且该元素支持该命名空间，则返回的本地名是 `lang`。
+
+无论创建属性时使用何种大小写，本地名始终为小写。
 
 > [!NOTE]
-> 在之前的 DOM 规范中此 API 被定义在 {{domxref("Node")}} 接口中。
+> HTML 仅在 SVG 和 MathML 元素上支持一组固定的命名空间。它们是 `xml`（用于 `xml:lang` 属性）、`xlink`（用于 `xlink:href`、`xlink:show`、`xlink:target` 和 `xlink:title` 属性）以及 `xpath`。
+>
+> 这意味着 HTML 元素属性的本地名始终等于其限定名：冒号被当作普通字符。在 XML 中（如 SVG 或 MathML），冒号表示前缀的结束，其前面是命名空间；本地名可能与限定名不同。
 
 ## 值
 
-属性的限定名称的本名 {{jsxref("String")}} 。
+一个表示该属性限定名的本地部分的字符串。
 
 ## 示例
 
-下面的例子将弹出一个有“id”文字的警告窗口。
+当你点击相应按钮时，以下示例会显示前两个元素各自第一个属性的本地名。{{SVGElement("svg")}} 元素属于 XML 且支持命名空间，因此本地名（`lang`）与限定名 `xml:lang` 不同。{{HTMLElement("label")}} 元素属于 HTML，不支持命名空间，因此本地名和限定名都是 `xml:lang`。
 
 ### HTML
 
 ```html
-<button id="example">Click me</button>
+<svg xml:lang="en-US" class="struct" height="1" width="1">点我</svg>
+<label xml:lang="en-US" class="struct"></label>
+
+<p>
+  <button>显示 &lt;svg&gt; 的值</button>
+  <button>显示 &lt;label&gt; 的值</button>
+</p>
+
+<p>
+  属性 <code>xml:lang</code> 的本地部分：
+  <output id="result">无。</output>
+</p>
 ```
 
 ### JavaScript
 
 ```js
-const element = document.querySelector("#example");
-element.addEventListener("click", function () {
-  const attribute = element.attributes[0];
-  alert(attribute.localName);
-});
+const elements = document.querySelectorAll(".struct");
+const buttons = document.querySelectorAll("button");
+const outputEl = document.querySelector("#result");
+
+let i = 0;
+for (const button of buttons) {
+  const element = elements[i];
+  button.addEventListener("click", () => {
+    const attribute = element.attributes[0];
+    outputEl.value = attribute.localName;
+  });
+  i++;
+}
 ```
 
-{{ EmbedLiveSample('示例','100%',30) }}
-
-## 注意
-
-本文档中属性的“本名 (local name)”指的是属性“限定名称 (qualified names)”的命名空间冒号之后的部分。“限定名称”通常作为 XML 文档命名空间的一部分用在 XML 代码内。
-
-> [!NOTE]
-> 在 Gecko 1.9.2 以及跟早的版本中，HTML DOM 访问该属性将返回 HTML 节点属性的大写字符串本名（有别于 XML DOM 的 XHTML 属性）。在后来的版本中，为遵循 HTML5 标准，该属性返回 DOM 内部存储的名称，即，不论 HTML DOM 的 HTML 属性还是 XML DOM 的 XHTML 属性都是小写字符串。
+{{ EmbedLiveSample('示例','100%',100) }}
 
 ## 规范
 
@@ -51,9 +70,7 @@ element.addEventListener("click", function () {
 
 {{Compat}}
 
-## 参考
+## 参见
 
-- {{domxref("Attr.namespaceURI")}}
-- {{domxref("Attr.prefix")}}
-- {{domxref("Element.localName")}}
-- {{domxref("Node.localName")}}
+- {{domxref("Attr.name")}} 属性，返回属性的限定名；以及 {{domxref("Attr.prefix")}}，命名空间前缀。
+- {{domxref("Element.localName()")}} 属性，返回 {{domxref("Element")}} 的本地名。
