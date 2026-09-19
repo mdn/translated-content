@@ -40,7 +40,7 @@ l10n:
 这是一些 HTML：
 <div id="d1">你好，世界</div>
 <!-- 注释示例 -->
-文本 <span>文本</span> 文本<br />
+文本<span>文本</span>文本<br />
 <svg height="20" width="20">
   <circle cx="10" cy="10" r="5" stroke="black" stroke-width="1" fill="red" />
 </svg>
