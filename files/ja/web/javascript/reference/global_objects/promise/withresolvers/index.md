@@ -3,7 +3,7 @@ title: Promise.withResolvers()
 short-title: withResolvers()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/withResolvers
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: a6a2daec3965d85ef6dfc06cfd3507c1b2f886e2
 ---
 
 **`Promise.withResolvers()`** 静的メソッドは、新しい {{jsxref("Promise")}} オブジェクトと、{{jsxref("Promise/Promise", "Promise()")}} コンストラクターの実行子に渡す 2 つの引数に対応する、解決または拒否の 2 つの関数を含むオブジェクトを返します。
@@ -85,9 +85,11 @@ class NotPromise {
       (reason) => console.log("Rejected", reason),
     );
   }
+
+  static withResolvers = Promise.withResolvers;
 }
 
-const { promise, resolve, reject } = Promise.withResolvers.call(NotPromise);
+const { promise, resolve, reject } = NotPromise.withResolvers();
 resolve("hello");
 // Logs: Resolved hello
 ```
