@@ -197,7 +197,7 @@ animation:
 }
 ```
 
-次に、適用された要素をビューポートの下まで押し下げ、その後[CSSトランスフォーム](/ja/docs/Web/CSS/Guides/Transforms)を使用してその要素をデフォルトの位置に戻すアニメーション{{cssxref(「@keyframes」)}}を定義します：
+次に、適用された要素をビューポートの下まで押し下げ、その後 [CSS 座標変換](/ja/docs/Web/CSS/Guides/Transforms)を使用して、その要素をデフォルトの位置に戻すアニメーション {{cssxref("@keyframes")}} を定義します。
 
 ```css
 @keyframes sunrise {
