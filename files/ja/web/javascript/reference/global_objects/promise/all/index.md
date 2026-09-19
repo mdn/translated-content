@@ -3,7 +3,7 @@ title: Promise.all()
 short-title: all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9bda33365e40b6c609fa5190a0af9b5dc6438cf0
 ---
 
 **`Promise.all()`** は静的メソッドで、入力としてプロミスの集合の反復可能オブジェクトを取り、単一の {{jsxref("Promise")}} を返します。この返却されたプロミスは、入力されたプロミスがすべて履行されたとき（空のイテレーターが渡されたときを含む）、その履行された値の配列で、履行されます。入力されたプロミスのいずれかが拒否されると、その最初の拒否理由とともに拒否されます。
@@ -32,7 +32,7 @@ Promise.all(iterable)
 ### 引数
 
 - `iterable`
-  - : [反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)オブジェクト（プロミスの配列 ({{jsxref("Array")}}) など）。
+  - : [反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)オブジェクト（プロミスの配列 ({{jsxref("Array")}}) など）。これらの値は [await](/ja/docs/Web/JavaScript/Reference/Operators/await) されるため、他の [thenable](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) も解決されますが、thenable ではないものはそのまま返されます。
 
 ### 返値
 
@@ -47,9 +47,13 @@ Promise.all(iterable)
 `Promise.all()` メソッドは、[プロミスの並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理)メソッドのうちの一つです。このメソッドは、複数のプロミスの結果を集約するのに便利です。このメソッドは、コード全体が正常に動作するために依存している複数の関連する非同期タスクがあり、コードの実行を続ける前にそれらすべてを履行させたい場合によく使われます。
 
 > [!NOTE]
-> 日本語の技術文書では、このメソッドが複数のプロミスを並列に処理すると説明されることがありますが、実際には複数のスレッドでプロミスが処理されるわけではないことに注意してください。詳細は[プロミスの並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理)を参照してください。
+> 訳注: 日本語の技術文書では、このメソッドが複数のプロミスを並列に処理すると説明されることがありますが、実際には複数のスレッドでプロミスが処理されるわけではないことに注意してください。詳細は[プロミスの並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理)を参照してください。
 
 `Promise.all()` は、入力されたプロミスの**いずれか**が拒否されると直ちに拒否されます。それに対して、{{jsxref("Promise.allSettled()")}} が返すプロミスは、入力されたプロミスのいずれかが拒否されたかどうかに関わらず、すべての入力されたプロミスが完了するのを待ちます。入力された反復可能オブジェクトに含まれるプロミスのすべての最終結果が必要な場合は、`allSettled()` を使用してください。
+
+他のプロミス結合子と同様に、`Promise.all()` は呼び出されると、（各プロミスの `.then()` メソッドを呼び出して）すべてのプロミスを直ちに「処理済み」としてマークします。最初の拒否後に行われるその後の拒否は無視され、`unhandledrejection` イベントは起動されません。
+
+返されたプロミスが拒否されても、残りの操作がキャンセルされたり、それらのプロミスに添付されたハンドラーが解除されたりすることはありません。存続時間の長い待機中のプロミスを `Promise.all()` に繰り返し渡すと、他の入力が毎回拒否された場合でも、そのプロミスにハンドラーが蓄積される可能性があります。
 
 ## 例
 
@@ -95,6 +99,22 @@ setTimeout(() => {
 // Promise { <state>: "fulfilled", <value>: Array[4] }
 // Promise { <state>: "rejected", <reason>: Error: bad }
 ```
+
+### 結果の構造分解
+
+既知の数のタスクを一括処理する場合、[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)はとても有益です。
+
+```js
+// then() の場合
+Promise.all([p1, p2, p3]).then(([a, b, c]) => {
+  console.log(a, b, c); // 3 1337 "foo"
+});
+
+// await の場合
+const [a, b, c] = await Promise.all([p1, p2, p3]);
+```
+
+注意：元のプロミスと結果変数の順序が一致しない場合、気づきにくいバグが発生することがあります。{{jsxref("Promise.allKeyed()")}} メソッドは、まさにこの問題を解決するものです。
 
 ### Promise.all の非同期性・同期性
 
@@ -186,7 +206,7 @@ function promptForDishChoice() {
       if (dialog.returnValue === "ok") {
         resolve(dialog.querySelector("select").value);
       } else {
-        reject(new Error("User cancelled dialog"));
+        reject(new Error("ユーザーがダイアログをキャンセルしました"));
       }
     });
     document.body.appendChild(dialog);
@@ -234,6 +254,20 @@ async function getPrice() {
   ]);
   // `choice` および `prices` は元と同じ非同期関数です。
   // Promise.all() はプロミスでないものには何もしません。
+}
+```
+
+なお、次のものは、その他の望ましくない側面（変数を大量に作成したり、エラーの可能性が高いエラー処理をしたりするなど）はあるものの、同時に並行処理も実現していることに注意してください。
+
+```js
+async function getPrice() {
+  // すべての非同期処理を事前に実行する
+  const choicePromise = promptForDishChoice();
+  const pricesPromise = fetchPrices();
+
+  // それぞれのプロミスを待機する（進行中の async 操作はすべて実行を継続する）
+  const choice = await choicePromise;
+  const prices = await pricesPromise;
 }
 ```
 
@@ -301,6 +335,7 @@ Promise.all([p1.catch((error) => error), p2.catch((error) => error)]).then(
 ## 関連情報
 
 - {{jsxref("Promise")}}
+- {{jsxref("Promise.allKeyed()")}}
 - {{jsxref("Promise.allSettled()")}}
 - {{jsxref("Promise.any()")}}
 - {{jsxref("Promise.race()")}}
