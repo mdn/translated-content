@@ -151,7 +151,7 @@ Esta sección lista las interfaces más comúnmente utilizadas en el DOM. La ide
 - `element.element.getAttribute`
 - `element.addEventListener`
 - [`window.content`](/es/docs/Web/API/Window)
-- [`window.onload`](/es/docs/conflicting/Web/API/Window/load_event)
+- [`window.onload`](/es/docs/Web/API/Window/load_event)
 - [`window.dump`](/es/docs/Web/API/Window/dump)
 - [`window.scrollTo`](/es/docs/Web/API/Window/scrollTo)
 

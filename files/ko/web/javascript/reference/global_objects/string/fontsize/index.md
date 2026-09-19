@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5a2cea779777daaff451f21ca3b7f4c28a68de9e
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("String")}} 값의 **`fontcolor()`** 메서드는 해당 문자열을 특정 글꼴 크기로 표시하게 만드는 {{HTMLElement("font")}} 요소(`<font size="...">str</font>`)에 해당 문자열을 집어넣은 문자열을 생성합니다.
 

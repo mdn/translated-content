@@ -156,7 +156,7 @@ Um objeto `HTMLDocument` também da acesso á vários recursos de navegadores co
 - {{domxref("CanvasPattern")}}
 - {{domxref("TextMetrics")}}
 - {{domxref("ImageData")}}
-- {{domxref("CanvasPixelArray")}}
+- {{jsxref("Uint8ClampedArray")}}
 - {{domxref("NotifyAudioAvailableEvent")}}
 - {{domxref("HTMLAllCollection")}}
 - {{domxref("HTMLFormControlsCollection")}}

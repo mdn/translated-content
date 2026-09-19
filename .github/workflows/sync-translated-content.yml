@@ -34,17 +34,19 @@ jobs:
           - zh-tw
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
+      - parallel:
+          - name: Checkout
+            uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+            with:
+              path: mdn/translated-content
+              persist-credentials: false
 
-      - name: Checkout (content)
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          repository: mdn/content
-          path: mdn/content
-          persist-credentials: false
+          - name: Checkout (content)
+            uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+            with:
+              repository: mdn/content
+              path: mdn/content
+              persist-credentials: false
 
       - name: Setup Node.js environment
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
@@ -62,7 +64,7 @@ jobs:
       - name: Sync translated content
         env:
           CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
-          CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
+          CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/mdn/translated-content/files
           # Used by the `rari` cli to avoid rate limiting issues
           # when fetching the latest releases info from the GitHub API.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -70,6 +72,7 @@ jobs:
         run: npm run content sync-translated-content ${{ matrix.lang }}
 
       - name: Gather related upstream commits
+        working-directory: mdn/translated-content
         id: gather
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -103,6 +106,7 @@ jobs:
       - name: Create PR with sync for ${{ matrix.lang }}
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
+          path: mdn/translated-content
           commit-message: "${{ matrix.lang }}: sync translated content"
           branch: content-sync-${{ matrix.lang }}
           title: "[${{ matrix.lang }}] sync translated content"

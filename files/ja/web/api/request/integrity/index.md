@@ -3,7 +3,7 @@ title: "Request: integrity プロパティ"
 short-title: integrity
 slug: Web/API/Request/integrity
 l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
@@ -18,7 +18,7 @@ l10n:
 
 ## 例
 
-次のスニペットでは {{domxref("Request.Request()")}} コンストラクターを使用して新しいリクエストを作成し（スクリプトと同じディレクトリーにある画像ファイルに対して）、次に、そのリクエストの完全性を読み取ります。リクエストは特定の完全性なしに作成されたため、プロパティは空文字列を返します。
+次のスニペットでは {{domxref("Request/Request", "Request()")}} コンストラクターを使用して新しいリクエストを作成し（スクリプトと同じディレクトリーにある画像ファイルに対して）、次に、そのリクエストの完全性を読み取ります。リクエストは特定の完全性なしに作成されたため、プロパティは空文字列を返します。
 
 ```js
 const myRequest = new Request("flowers.jpg");

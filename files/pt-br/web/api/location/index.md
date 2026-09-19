@@ -43,7 +43,7 @@ _A inteface `Location` não herda nenhum método, mas implementa os métodos de 
 - {{domxref("Location.assign()")}}
   - : Carrega o recurso na URL fornecida como parâmetro.
 - {{domxref("Location.reload()")}}
-  - : Recarrega o recurso a partir da URL atual. Seu único parâmetro opcional é um {{domxref("Boolean")}}, que, quando verdadeiro (`true)`, faz com que a página sempre seja recarregada a partir do servidor. Se for falso (`false)` ou não especificado, o navegador pode recarregar a página a partir de seu cache.
+  - : Recarrega o recurso a partir da URL atual. Seu único parâmetro opcional é um {{jsxref("Boolean")}}, que, quando verdadeiro (`true)`, faz com que a página sempre seja recarregada a partir do servidor. Se for falso (`false)` ou não especificado, o navegador pode recarregar a página a partir de seu cache.
 - {{domxref("Location.replace()")}}
   - : Substitui o recurso atual pelo recurso presente na URL fornecida. A diferença entre o método `assign()` é que após usar `replace()` a página atual não será salva na sessão {{domxref("History")}}, ou seja, o usuário não será capaz de usar o botão _voltar_ para navegar até a página.
 - {{domxref("URLUtils.toString()")}}

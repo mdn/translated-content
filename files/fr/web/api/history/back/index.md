@@ -1,20 +1,23 @@
 ---
-title: Window.back()
+title: "History : méthode back()"
+short-title: back()
 slug: Web/API/History/back
-original_slug: Web/API/Window/back
+l10n:
+  sourceCommit: fa980709ec5dd768d46b50b8c4833cc2f8346e21
 ---
 
-{{APIRef}}{{ Non-standard_header() }}
+{{APIRef("History API")}}
 
-La méthode obsolète et non standard `back()` sur l'objet {{domxref("window")}} renvoie la fenêtre à l'élément précédent de l'historique. Il s'agissait d'une méthode spécifique à Firefox et a été supprimée dans Firefox 31.
+La méthode **`back()`** de l'interface {{DOMxRef("History")}} fait revenir le navigateur d'une page dans l'historique de session.
 
-> [!NOTE]
-> Utilisez plutôt la méthode standard {{domxref("history.back")}}.
+Elle a le même effet que d'appeler {{DOMxRef("History.go", "history.go(-1)")}}. S'il n'y a pas de page précédente, cet appel de méthode n'a aucun effet.
+
+Cette méthode est {{Glossary("asynchronous", "asynchrone")}}. Ajoutez un écouteur pour l'évènement {{DOMxRef("Window/popstate_event", "popstate")}} afin de déterminer quand la navigation est terminée.
 
 ## Syntaxe
 
-```js
-window.back();
+```js-nolint
+back()
 ```
 
 ### Paramètres
@@ -23,29 +26,40 @@ Aucun.
 
 ### Valeur de retour
 
-`undefined`.
+Aucune ({{JSxRef("undefined")}}).
 
-## Exemple
+### Exceptions
 
-Cet exemple simple gère un clic sur un bouton "Retour" en rappelant `back()`.
+- `SecurityError` {{DOMxRef("DOMException")}}
+  - : Levée si le document associé n'est pas entièrement actif. Les navigateurs limitent également la fréquence des navigations et peuvent lever cette erreur, générer un avertissement ou ignorer l'appel si celui-ci est effectué trop fréquemment.
 
-```js
-function boutonRetour() {
-  if (peutRevenirEnArriere) {
-    window.back();
-  }
-}
+## Exemples
+
+L'exemple court suivant fait en sorte qu'un bouton sur la page navigue d'une entrée en arrière dans l'historique de session.
+
+### HTML
+
+```html
+<button id="revenir-en-arriere">Aller en arrière&nbsp;!</button>
 ```
 
-## Spécification
+### JavaScript
 
-Cela ne fait partie d'aucune spécification.
+```js
+document.getElementById("revenir-en-arriere").addEventListener("click", () => {
+  history.back();
+});
+```
+
+## Spécifications
+
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-Cette méthode non standard n'a été implémentée que dans Firefox et a été supprimée dans Firefox 31.
+{{Compat}}
 
 ## Voir aussi
 
-- {{domxref("History.back()")}}
-- {{domxref("History.forward()")}}
+- L'interface {{DOMxRef("History")}}
+- [Travailler avec l'API History](/fr/docs/Web/API/History_API/Working_with_the_History_API)
