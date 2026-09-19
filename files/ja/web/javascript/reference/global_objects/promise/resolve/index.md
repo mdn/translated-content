@@ -3,7 +3,7 @@ title: Promise.resolve()
 short-title: resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: a6a2daec3965d85ef6dfc06cfd3507c1b2f886e2
 ---
 
 **`Promise.resolve()`** は静的メソッドで、 {{jsxref("Promise")}} を与えられた値で「解決」させます。値がプロミスの場合は、そのプロミスが返されます。その値が [Thenable](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) であれば、`Promise.resolve()` は `then()` メソッドを、準備した 2 つのコールバックと共に呼び出します。それ以外の場合は、その値で履行するプロミスが返されます。
@@ -133,7 +133,7 @@ p2.then(
 
 // Thenable はコールバックの後で Promise が解決した場合に
 // 例外を発生させます。
-const thenable = {
+const p3 = Promise.resolve({
   then(onFulfilled) {
     onFulfilled("Resolving");
     throw new TypeError("Throwing");
@@ -195,9 +195,12 @@ class NotPromise {
       (reason) => console.log("Rejected", reason),
     );
   }
+
+  static resolve = Promise.resolve;
 }
 
-Promise.resolve.call(NotPromise, "foo"); // Logs "Resolved foo"
+const p = NotPromise.resolve("foo"); // "Resolved foo" と出力
+// p は NotPromise インスタンス
 ```
 
 入れ子になった Thenable を平坦化する機能は `Promise()` コンストラクターの `resolve` 関数で実装されています。そのため、他のコンストラクターで呼び出すと、そのコンストラクターが `resolve` 関数をどのように実装しているかによって入れ子の Thenable が平坦化されない場合があります。
@@ -206,7 +209,7 @@ Promise.resolve.call(NotPromise, "foo"); // Logs "Resolved foo"
 const thenable = {
   then(onFulfilled, onRejected) {
     onFulfilled({
-      // Thenable は他の Thenable に履行されます
+      // Thenable は他の Thenable に履行される
       then(onFulfilled, onRejected) {
         onFulfilled(42);
       },
@@ -214,7 +217,8 @@ const thenable = {
   },
 };
 
-Promise.resolve.call(NotPromise, thenable); // "Resolved { then: [Function: then] }" と出力
+Promise.resolve(thenable); // "Resolved { then: [Function: then] }" と出力
+// p は NotPromise インスタンス
 ```
 
 ## 仕様書

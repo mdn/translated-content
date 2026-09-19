@@ -3,10 +3,10 @@ title: Promise.try()
 short-title: try()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/try
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: a6a2daec3965d85ef6dfc06cfd3507c1b2f886e2
 ---
 
-**`Promise.try()`** 静的メソッドは、あらゆる種類のコールバック（返す、発生する、同期的、非同期的）を受け取り、その結果を {{jsxref("Promise")}} でラップします。
+**`Promise.try()`** 静的メソッドは、あらゆる種類のコールバック（復帰か例外か、同期的か非同期的にかかわらず）を受け取り、その結果を {{jsxref("Promise")}} に変換します。
 
 ## 構文
 
@@ -30,25 +30,41 @@ Promise.try(func, arg1, arg2, /* …, */ argN)
 
 - `func` が同期的に値を返す場合は、すでに履行されたもの。
 - `func` が同期的にエラーを発生した場合は、すでに拒否されたもの。
-- 非同期で履行または拒否された場合、`func` はプロミスを返します。
+- 非同期で履行または拒否された場合、`func` はプロミスを返します。返値はプロミスに[解決](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve)されます。つまり、組み込みの {{jsxref("Promise")}} オブジェクトはそのままの形で返されます。
 
 ## 解説
 
 コールバックを受け取る API もあります。 コールバックは同期または非同期のどちらでも可能です。 結果をプロミスでラップすることで、すべてを統一的に処理したい場合、最もわかりやすい方法は、{{jsxref("Promise/resolve", "Promise.resolve(func())")}} でしょう。 問題は、`func()` で同期的にエラーが発生した場合、このエラーが補足されず、拒否されたプロミスに変換されないことです。
 
-一般的な手法（履行されたか拒否されたかに関わらず、関数呼び出しの結果をプロミスに持ち上げる）は、以下のようにすることが多いです。
+この式を `try...catch` で囲むことが可能です。
+
+```js
+let result;
+try {
+  result = Promise.resolve(func());
+} catch (error) {
+  result = Promise.reject(error);
+}
+```
+
+問題は、`try...catch`が式ではないため、他の関数に渡すなど、式の位置で直接使用することができないという点です。
+
+したがって、関数呼び出しの結果を、履行済みか拒否済みかを問わず、プロミスに変換する際には、一般的に次のようにするのが最適です。
 
 ```js
 new Promise((resolve) => resolve(func()));
 ```
 
-しかし、`Promise.try()` はもっと便利です。
+組み込みの `Promise()` コンストラクターの場合、実行関数から発生したエラーは自動的に捕捉され、拒否に変換されるため、これにより同期エラーも防止されます。問題は、無条件に新しい `Promise` オブジェクトが作成されてしまうことであり、`func()` がすでに `Promise` を返している場合にはこれは不要です。一方、`Promise.resolve()` は、そのような余分なプロミスのラッピングを防ぐように賢く設計されています。
+
+`Promise.try()` は、`try...catch` 手法とほぼ完全に同等ですが、より簡潔であり、式として使用できる点が異なります。
 
 ```js
 Promise.try(func);
 ```
 
-組み込みの `Promise()` コンストラクターでは、実行時に発生したエラーは自動的に捕捉され、拒否に変換されます。そのため、これらの 2 つの手法はほぼ同等ですが、`Promise.try()` の方がより簡潔で読みやすい点が異なります。
+> [!NOTE]
+> `Promise.try()` は当初、`new Promise()` と同様に、無条件に新しいプロミスを作成するように仕様化され、実装されていましたが、現在はそうではなくなりました。詳細は[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
 なお、`Promise.try()` はこれと非常に似ていますが、同等ではありません。
 
@@ -73,6 +89,9 @@ Promise.try(func, arg1, arg2);
 ```
 
 これらは同等ですが、後者は余分なクロージャの作成を避け、より効率的です。
+
+
+`Promise.try()` は汎用的であり、サブクラス化に対応しています。つまり、`Promise` のサブクラスに対して呼び出すことができ、その結果にはそのサブクラスの型のプロミスが含まれます。これを行うには、サブクラスのコンストラクターが [`Promise()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) コンストラクターと同じシグネチャを実装している必要があります。つまり、`resolve` および `reject` コールバックを引数として呼び出すことができる単一の `executor` 関数を受け入れる必要があります。
 
 ## 例
 
@@ -123,41 +142,45 @@ async function doSomething(action) {
 以下は、実際の `Promise.try()` にやや忠実な近似表現です（ただし、やはりこれはポリフィルとして使用すべきではありません）。
 
 ```js
-Promise.try = function (func) {
-  return new this((resolve, reject) => {
-    try {
-      resolve(func());
-    } catch (error) {
-      reject(error);
-    }
-  });
+Promise.try = function (func, ...args) {
+  let result;
+  try {
+    result = func(...args);
+  } catch (error) {
+    return Promise.reject.call(this, error);
+  }
+  return Promise.resolve.call(this, result);
 };
 ```
 
-`Promise.try()` の実装方法（つまり、`try...catch`）により、`this` を任意のカスタムコンストラクターに設定して `Promise.try()` を安全に呼び出すことができ、同期してエラーが発生することはありません。
+`Promise.try()` は、{{jsxref("Promise.resolve()")}} および {{jsxref("Promise.reject()")}} に委譲して返値を生成しますが、これら 2 つの関数はいずれも汎用的です。
+
+例えば、コンストラクターで `console.log` を `resolve` 関数と `reject` 関数の `executor` として渡すことで呼び出すことができます。
 
 ```js
 class NotPromise {
   constructor(executor) {
-    // The "resolve" and "reject" functions behave nothing like the native
-    // promise's, but Promise.try() just calls resolve
+    // "resolve" および "reject" 関数の挙動は、ネイティブのプロミスの
+    // ものと同様だが、Promise.try() は resolve を呼び出すだけ
     executor(
       (value) => console.log("Resolved", value),
       (reason) => console.log("Rejected", reason),
     );
   }
+
+  static try = Promise.try;
 }
 
-const p = Promise.try.call(NotPromise, () => "hello");
-// Logs: Resolved hello
+const p = NotPromise.try(() => "hello");
+// 出力: Resolved hello
+// p は NotPromise インスタンス
 
-const p2 = Promise.try.call(NotPromise, () => {
+const p2 = NotPromise.try(() => {
   throw new Error("oops");
 });
-// Logs: Rejected Error: oops
+// 出力: Rejected Error: oops
+// p は NotPromise インスタンス
 ```
-
-`Promise()` とは異なり、この `NotPromise()` コンストラクターは、executor を実行する際に例外を適切に処理しません。しかし、`throw`が発生しても、`Promise.try()` は例外を捕捉し、それを `reject()` に渡してログ出力します。
 
 ## 仕様書
 
@@ -170,6 +193,7 @@ const p2 = Promise.try.call(NotPromise, () => {
 ## 関連情報
 
 - [`Promise.try` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#promisetry)
+- [es-shims による `Promise.try` のポリフィル](https://www.npmjs.com/package/promise.try)
 - [プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)ガイド
 - {{jsxref("Promise")}}
 - [`Promise()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)
