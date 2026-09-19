@@ -164,6 +164,6 @@ Firefox 155 は、米国時間 [2026 年 9 月 1 日](https://whattrainisitnow.c
 
   MathML の [`<a>`](/ja/docs/Web/MathML/Reference/Element/a) 要素が、汎用的な [`MathMLElement`](/ja/docs/Web/API/MathMLElement) インターフェイスに代わって [`MathMLAnchorElement`](/ja/docs/Web/API/MathMLAnchorElement) インターフェイスによって DOM で適切に表現されるようになりました ([Firefox bug 2059312](https://bugzil.la/2059312))。
 
-- **`timeline-scope` の名称がデフォルトでグローバルになる**: `layout.css.scroll-driven-animations.enabled`
+- **`timeline-scope` の名前がデフォルトでグローバルになる**: `layout.css.scroll-driven-animations.enabled`
 
   名前つきタイムラインのスコープの、デフォルトの動作をグローバルに更新しました。これにより {{cssxref("timeline-scope")}} CSS プロパティと {{cssxref("scroll-timeline-name")}} または {{cssxref("view-timeline-name")}} のいずれかの値を使用して、要素およびそのサブツリーにスコープを設定できます ([Firefox bug 2024012](https://bugzil.la/2024012))。
