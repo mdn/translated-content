@@ -1,9 +1,9 @@
 ---
-title: Firefox 155 release notes for developers (Stable)
-short-title: Firefox 155 (Stable)
+title: Firefox 155 release notes for developers
+short-title: Firefox 155
 slug: Mozilla/Firefox/Releases/155
 l10n:
-  sourceCommit: 1a1ae3db9b94004fef31e64cef0f27c6116356e2
+  sourceCommit: 79f0b295d759e9bb6e3c49197434a1d34c449731
 ---
 
 このページでは、開発者に影響する Firefox 155 の変更点をまとめています。
@@ -38,6 +38,11 @@ Firefox 155 は、米国時間 [2026 年 9 月 1 日](https://whattrainisitnow.c
 - {{cssxref("font-width")}} CSS プロパティを、{{cssxref("@font-face")}} 記述子の {{cssxref("@font-face/font-width", "font-width")}} および `CSSStyleDeclaration.fontWidth` プロパティとともにサポートしました。
   これは {{cssxref("font-stretch")}} プロパティの新しい名称であり、font-stretch は旧称のエイリアスとして機能し続けます。
   計算されたスタイルの列挙では、`font-stretch` ではなく `font-width` が返るようになったことに注意してください ([Firefox bug 1911075](https://bugzil.la/1911075))。
+- [Firefox 153](/ja/docs/Mozilla/Firefox/Releases/153#css) で追加した、非標準の {{cssxref("::-webkit-scrollbar")}} 擬似要素の部分的なサポートを、ウェブ全体ではなくサイトの小規模なリストに限定しました。Firefox はこのリストを、設定項目 `layout.css.fake-webkit-scrollbar.enabled-domains` で管理します。文書のドメインはこのリストの項目に対して照合されます。どの項目にも一致しない場合は、`@supports selector(::-webkit-scrollbar)` に `false` を返します。
+
+  この制限は Firefox 153 の変更を破棄するものです。すべてのサイトにわたって `::-webkit-scrollbar` の部分的なサポートを導入することで、一部のサイトでスクロールバーの不具合が発生しました。これらのサイトは、Firefox でサポートしていないほかの`::-webkit-scrollbar-*` 擬似要素によるスタイル設定に依存していました。Firefox で機能する宣言は、スクロールバーが非表示になる `display: none` と、スクロールコンテナーでスクロールバーのオーバーレイが無効になる、値が 0 でない `width` または `height` のみです。
+
+  Firefox でスクロールバーにスタイルを設定するには、標準化された {{cssxref("scrollbar-color")}} および {{cssxref("scrollbar-width")}} を使用してください ([Firefox bug 2061547](https://bugzil.la/2061547))。
 
 ### JavaScript
 
@@ -154,3 +159,11 @@ Firefox 155 は、米国時間 [2026 年 9 月 1 日](https://whattrainisitnow.c
 - **`view-timeline` が `view-timeline-inset` を包含**: `layout.css.scroll-driven-animations.enabled`
 
   {{cssxref("view-timeline")}} ショートハンドプロパティで {{cssxref("view-timeline-inset")}} プロパティをサポートしました。このショートハンドプロパティはビューの進行タイムラインの位置を調整するために、開始値や終了値のインセット (またはオフセット) を指定できます ([Firefox bug 2046602](https://bugzil.la/2046602))。
+
+- **`MathMLAnchorElement` インターフェイス**: `mathml.a.element.enabled`
+
+  MathML の [`<a>`](/ja/docs/Web/MathML/Reference/Element/a) 要素が、汎用的な [`MathMLElement`](/ja/docs/Web/API/MathMLElement) インターフェイスに代わって [`MathMLAnchorElement`](/ja/docs/Web/API/MathMLAnchorElement) インターフェイスによって DOM で適切に表現されるようになりました ([Firefox bug 2059312](https://bugzil.la/2059312))。
+
+- **`timeline-scope` の名前がデフォルトでグローバルになる**: `layout.css.scroll-driven-animations.enabled`
+
+  名前つきタイムラインのスコープの、デフォルトの動作をグローバルに更新しました。これにより {{cssxref("timeline-scope")}} CSS プロパティと {{cssxref("scroll-timeline-name")}} または {{cssxref("view-timeline-name")}} のいずれかの値を使用して、要素およびそのサブツリーにスコープを設定できます ([Firefox bug 2024012](https://bugzil.la/2024012))。
