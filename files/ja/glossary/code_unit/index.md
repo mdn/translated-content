@@ -5,15 +5,15 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-A **code unit** is the basic component used by a character encoding system (such as UTF-8 or UTF-16). A character encoding system uses one or more code units to encode a Unicode {{Glossary("code point")}}.
+**コードユニット**とは、文字エンコーディング（UTF-8 や UTF-16 など）で使用される基本的な構成要素です。文字エンコーディングは、Unicode の{{Glossary("code point", "コードポイント")}}を符号化するために、1 つ以上のコードユニットを使用します。
 
-In {{glossary("UTF-8")}}, each code point is encoded using between one and four 8-bit code units.
+{{glossary("UTF-8")}} では、各コードポイントは 1 個から 4 個の 8 ビットコードユニットを使用して符号化されます。
 
-In {{glossary("UTF-16")}}, each code point is encoded using one or two 16-bit code units.
+{{glossary("UTF-16")}} では、各コードポイントは 1 個または 2 個の 16 ビットコードユニットを使用して符号化されます。
 
-## See also
+## 関連情報
 
-- {{glossary("Code point")}}
+- {{glossary("Code point", "コードポイント")}}
 - {{glossary("UTF-8")}}
 - {{glossary("UTF-16")}}
 - [Unicode encoding FAQ](https://www.unicode.org/faq/utf_bom.html)
