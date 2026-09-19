@@ -7,7 +7,7 @@ slug: Web/HTTP/Reference/Status/425
 
 ## 状态
 
-```plain
+```http
 425 Too Early
 ```
 

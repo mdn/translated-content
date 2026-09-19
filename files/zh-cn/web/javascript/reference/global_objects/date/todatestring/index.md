@@ -20,7 +20,7 @@ console.log(event.toDateString());
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.toDateString()
 ```
 

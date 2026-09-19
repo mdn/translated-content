@@ -24,7 +24,7 @@ console.log(event.getDate());
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.setDate(dayValue)
 ```
 

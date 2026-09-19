@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.setYear(yearValue)
 ```
 

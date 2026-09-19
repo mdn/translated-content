@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/yield*
 
 ## 语法
 
-```plain
+```js-nolint
  yield* [[expression]];
 ```
 

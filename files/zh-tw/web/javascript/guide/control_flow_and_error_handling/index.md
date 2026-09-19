@@ -223,7 +223,7 @@ console.log("Is there anything else you'd like?");
 
 使用 `throw` 陳述式拋出例外。當拋出例外時，你要指定包含在要拋出物件中的值:
 
-```plain
+```js
 throw expression;
 ```
 

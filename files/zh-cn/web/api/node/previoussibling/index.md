@@ -11,8 +11,8 @@ slug: Web/API/Node/previousSibling
 
 ### 语法
 
-```plain
-previousNode = node.previousSibling
+```js
+previousNode = node.previousSibling;
 ```
 
 ### 例子

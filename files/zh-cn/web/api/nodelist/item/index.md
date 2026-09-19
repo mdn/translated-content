@@ -11,8 +11,8 @@ slug: Web/API/NodeList/item
 
 ### 语法
 
-```plain
-nodeItem = nodeList.item(index)
+```js
+nodeItem = nodeList.item(index);
 ```
 
 - `nodeList`是一个`NodeList`对象。通常是由某个 DOM 属性或方法返回的，比如[childNodes](/zh-CN/docs/Web/API/Node/childNodes).

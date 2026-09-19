@@ -9,7 +9,7 @@ slug: Web/HTTP/Reference/Status/300
 
 ## 状态
 
-```plain
+```http
 300 Multiple Choices
 ```
 

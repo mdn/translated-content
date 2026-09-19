@@ -13,7 +13,7 @@ slug: Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control
 
 ## 语法
 
-```plain
+```http
 X-DNS-Prefetch-Control: on
 X-DNS-Prefetch-Control: off
 ```
@@ -45,8 +45,8 @@ DNS 请求需要的带宽非常小，但是延迟却有点高，这一点在手�
 
 你可以通过在服务器端发送 `X-DNS-Prefetch-Control` 报头，或是在文档中使用值为 [`http-equiv`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#http-equiv) 的 {{ HTMLElement("meta") }} 标签：
 
-```plain
-<meta http-equiv="x-dns-prefetch-control" content="off">
+```html
+<meta http-equiv="x-dns-prefetch-control" content="off" />
 ```
 
 你可以通过将 `content` 的参数设置为“`on`”来改变设置。

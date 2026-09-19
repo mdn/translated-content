@@ -24,7 +24,7 @@ console.log(Reflect.ownKeys(array1));
 
 ## 语法
 
-```plain
+```js-nolint
 Reflect.ownKeys(target)
 ```
 

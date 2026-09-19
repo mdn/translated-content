@@ -16,7 +16,7 @@ console.log(moonLanding.getUTCSeconds());
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.getUTCSeconds()
 ```
 

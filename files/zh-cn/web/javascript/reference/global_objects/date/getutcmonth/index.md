@@ -22,7 +22,7 @@ console.log(date2.getUTCMonth());
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.getUTCMonth()
 ```
 
