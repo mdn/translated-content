@@ -3,7 +3,7 @@ title: Promise.prototype.catch()
 short-title: catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
 **`catch()`** は {{jsxref("Promise")}} インスタンスのメソッドで、プロミスが拒否されたときに呼び出される関数をスケジュールします。これは即座に同等の {{jsxref("Promise")}} オブジェクトを返すので、他のプロミスのメソッドを[連鎖](/ja/docs/Web/JavaScript/Guide/Using_promises#連鎖)して呼び出すことができます。これは {{jsxref("Promise/then", "then(undefined, onRejected)")}} の省略形です。
