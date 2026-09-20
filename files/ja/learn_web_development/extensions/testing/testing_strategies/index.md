@@ -1,11 +1,12 @@
 ---
 title: テスト実行のための戦略
+short-title: テスト戦略
 slug: Learn_web_development/Extensions/Testing/Testing_strategies
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Introduction","Learn_web_development/Extensions/Testing/HTML_and_CSS", "Learn_web_development/Extensions/Testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Introduction","Learn_web_development/Extensions/Testing/HTML_and_CSS", "Learn_web_development/Extensions/Testing")}}
 
 この記事では、ブラウザー間のテストの方法として、テストするブラウザーや機器を選ぶ方法、それらのブラウザーや機器を実際にテストする方法、ユーザーグループに分かれてテストする方法について説明します。
 
@@ -163,7 +164,7 @@ A グレード:
 
 以下のようなものも、入手できれば良いオプションです。
 
-- Linux 版のブラウザーに固有のバグをテストする必要がある場合に備えて、利用できる Linux PC。Linux ユーザーは、一般的に Firefox、Opera、Chrome を使用します。もし利用できるマシンが 1 台しかない場合は、Linux と Windows を別々のパーティションで動作させるデュアルブートマシンを作成することを考えることができます。Ubuntu のインストーラーを使えば、かなり簡単に設定できます。これを支援するために、[WindowsDualBoot](https://help.ubuntu.com/community/WindowsDualBoot) を参照してください。
+- Linux 版のブラウザーに固有のバグをテストする必要がある場合に備えて、利用できる Linux PC。Linux ユーザーは、一般的に Firefox、Opera、Chrome を使用します。利用できるマシンが 1 台しかない場合は、別個のパーティションに Linux と Windows をインストールして、デュアルブート環境を作成することを考えてみることができるでしょう。
 - 低スペックのモバイル端末をいくつか用意すると、性能の低いプロセッサーでトランジションなどの機能をテストすることができます。
 
 あなたのメインの著作物は、アクセシビリティ監査ツール、スクリーンリーダー、エミュレーター/仮想マシンなど、特定の目的のために他のツールをインストールする場所にもなりえます。
@@ -186,7 +187,7 @@ A グレード:
 
 しかし、多くの場合、何らかのエミュレーターを保有しなければならないでしょう。最も一般的にテストしたい端末/ブラウザーは以下の通りです。
 
-- Android アプリを開発するための公式の [Android Studio IDE](https://developer.android.com/studio/) は、Google Chrome や古い純正 Android ブラウザーでウェブサイトをテストするには少し重いですが、しっかりとした[エミュレーター](https://developer.android.com/studio/run/emulator.html)が実行されています。もう少し軽量なものをお望みなら、Windows と Mac の両方で動作する [Andy](https://www.andyroid.net/) が合理的なオプションとなります。
+- Android アプリを開発するための公式の [Android Studio IDE](https://developer.android.com/studio/) は、Google Chrome や古い純正 Android ブラウザーでウェブサイトをテストするには少し重いですが、しっかりとした[エミュレーター](https://developer.android.com/studio/run/emulator.html)が実行されています。
 - Apple は、[XCode](https://developer.apple.com/xcode/) 開発環境の上で動作し、iPad/iPhone/Apple Watch/Apple TV をエミュレートする [Simulator](https://help.apple.com/simulator/mac/current/) というアプリを提供されています。これには iOS ネイティブのブラウザー Safari が搭載されています。これは残念ながら Mac 上でしか動作しません。
 
 他にもモバイル端末環境用のシミュレーターなどもよく見つかります。
@@ -241,9 +242,9 @@ Virtual Box を使用するには、次のことを行う必要があります�
 
 前の章で述べたように、ある種の自動化システムを使用することで、ブラウザーテストの苦労を軽減することができます。自分自身でテスト自動化システム（[Selenium](https://www.selenium.dev/)はよく選ばれるアプリです）を設定することができます。多少のセットアップが必要ですが、うまく作業を進めるととてもやりがいのあるものになるでしょう。
 
-[Sauce Labs](https://saucelabs.com/)、[Browser Stack](https://www.browserstack.com/)、[LambdaTest](https://www.lambdatest.com/) のような商用ツールもあり、テストにお金をかけたい場合は、設定を気にせずにこのようなことを行うことも可能です。
+[Sauce Labs](https://saucelabs.com/) や [Browser Stack](https://www.browserstack.com/) のような商用ツールもあり、テストにお金をかけたい場合は、設定を気にせずにこのようなことを行うことも可能です。
 
-もう一つの選択肢は、[Endtest](https://endtest.io) のようなノーコードのテスト自動化ツールを使用することです。
+もう一つの選択肢は、[Endtest](https://endtest.io/) のようなノーコードのテスト自動化ツールを使用することです。
 
 このモジュールの後のほうで、そのようなツールを使用する方法を見ていきます。
 
