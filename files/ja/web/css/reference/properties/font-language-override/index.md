@@ -1,13 +1,14 @@
 ---
-title: font-language-override
+title: "`font-language-override` プロパティ (CSS)"
+short-title: font-language-override
 slug: Web/CSS/Reference/Properties/font-language-override
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 **`font-language-override`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書体で言語に固有の字形の使用を制御します。
 
-既定では、 HTML の `lang` 属性がブラウザーにその言語に特化してデザインされた字形を表示することを指示します。例えば、多くのフォントが合字 `fi` に特別な文字を持っており、 "i" の点を "f" に統合しています。しかし、言語がトルコ語に設定された場合、その書体では統合した字形を使用しません。トルコ語では "i" に、点が付いたもの (`i`) と点が付かないもの (`ı`) の二つの種類があり、この合字を使用すると点が付いた "i" を点がない "ı" に誤った変換をしてしまいます。
+デフォルトでは、 HTML の `lang` 属性がブラウザーにその言語に特化してデザインされた字形を表示することを指示します。例えば、多くのフォントが合字 `fi` に特別な文字を持っており、 "i" の点を "f" に統合しています。しかし、言語がトルコ語に設定された場合、その書体では統合した字形を使用しません。トルコ語では "i" に、点が付いたもの (`i`) と点が付かないもの (`ı`) の二つの種類があり、この合字を使用すると点が付いた "i" を点がない "ı" に誤った変換をしてしまいます。
 
 `font-language-override` プロパティで、その書体における特定の言語の動作を上書きすることができます。これは例えば、使用している書体でその言語に対して正しい対応が行われていないときに便利です。例えば、ある書体がアゼルバイジャン語の正しい規則を持っていない場合、同様の規則に従うトルコ語の字形を強制的に使用することができます。
 
@@ -29,13 +30,13 @@ font-language-override: revert-layer;
 font-language-override: unset;
 ```
 
-`font-language-override` プロパティは、キーワード `normal` または一つの `<string>` として指定します。
-
 ### 値
+
+このプロパティは、以下のリストから 1 つの値を指定します。
 
 - `normal`
   - : `lang` 属性で指定された言語で適切なフォントの字形を使用するよう、ブラウザーに指示します。
-- {{cssxref("string")}}
+- 文字列 ({{cssxref("string")}})
   - : 文字列で指定された言語で適切なフォントの字形を使用するよう、ブラウザーに指示します。値は [OpenType language system](https://learn.microsoft.com/typography/opentype/spec/languagetags) にある言語タグと一致している必要があります。例えば、 "ENG" は英語で、 "KOR" は韓国語です。
 
 ## 公式定義
