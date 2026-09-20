@@ -1,11 +1,12 @@
 ---
-title: font
+title: "`font` プロパティ (CSS)"
+short-title: font
 slug: Web/CSS/Reference/Properties/font
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 3f221b9845703eb21db70cdc321f843d5c1c072b
 ---
 
-**`font`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、要素のフォントの様々なプロパティをすべて設定します。また、要素のフォントにシステムフォントを設定することもできます。
+**`font`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、要素のフォントの様々なプロパティをすべて設定します。また、要素のフォントにシステムフォントを設定することもできます。
 
 {{InteractiveExample("CSS デモ: font")}}
 
@@ -35,13 +36,11 @@ font: caption;
 
 ```html interactive-example
 <section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
-  </p>
+  <q id="example-element">
+    Prejudices, it is well known, are most difficult to eradicate from the heart
+    whose soil has never been loosened or fertilized by education: they grow
+    there, firm as weeds among stones.
+  </q>
 </section>
 ```
 
@@ -70,95 +69,158 @@ section {
 }
 ```
 
-他の一括指定プロパティ同様、個別の値が指定されなかった場合は、それぞれの初期値が設定されます（一括指定ではないプロパティを使用して設定された以前の値を上書きする可能性があります）。 `font` によって直接設定できない個別指定の {{cssxref("font-size-adjust")}}, {{cssxref("font-kerning")}} も初期値に設定されます。
-
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
 - {{cssxref("font-family")}}
 - {{cssxref("font-size")}}
-- {{cssxref("font-stretch")}}
+- {{cssxref("font-width")}}
 - {{cssxref("font-style")}}
 - {{cssxref("font-variant")}}
 - {{cssxref("font-weight")}}
 - {{cssxref("line-height")}}
 
+### リセットのみのサブプロパティ
+
+このプロパティは、以下の CSS プロパティを初期値にリセットします。
+
+- {{cssxref("font-feature-settings")}}
+- {{cssxref("font-kerning")}}
+- {{cssxref("font-language-override")}}
+- {{cssxref("font-optical-sizing")}}
+- {{cssxref("font-size-adjust")}}
+- {{cssxref("font-variant-alternates")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-emoji")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant-numeric")}}
+- {{cssxref("font-variant-position")}}
+- {{cssxref("font-variation-settings")}}
+
 ## 構文
 
 ```css-nolint
 /* font-size font-family */
-font: 1.2em "Fira Sans", sans-serif;
+font: 1.2em sans-serif;
 
 /* font-size/line-height font-family */
 font: 1.2em/2 "Fira Sans", sans-serif;
 
 /* font-style font-weight font-size font-family */
-font: italic bold 1.2em "Fira Sans", sans-serif;
+font: italic bold 1.2em monospace;
 
-/* font-stretch font-variant font-size font-family */
-font: ultra-condensed small-caps 1.2em "Fira Sans", sans-serif;
+/* font-width font-variant font-size font-family */
+font: ultra-condensed small-caps 1.2em Montserrat, Helvetica, sans-serif;
 
 /* システムフォント */
 font: caption;
 ```
 
-`font` プロパティはシステムフォントを選択するための単一のキーワード、又は様々なフォント関連プロパティの一括指定のどちらかで指定することができます。
-
-`font` をシステムキーワードとして指定する場合は、 `caption`, `icon`, `menu`, `message-box`, `small-caption`, `status-bar` のうちの一つでなければなりません。
-
-`font` を様々なフォント関連プロパティの一括指定とする場合は、次のようになります。
-
-- 次の値を含めなければなりません。
-  - {{cssxref("&lt;font-size&gt;")}}
-  - {{cssxref("&lt;font-family&gt;")}}
-
-- 次の値は任意で含めることができます。
-  - {{cssxref("&lt;font-style&gt;")}}
-  - {{cssxref("&lt;font-variant&gt;")}}
-  - {{cssxref("&lt;font-weight&gt;")}}
-  - {{cssxref("&lt;font-stretch&gt;")}}
-  - {{cssxref("&lt;line-height&gt;")}}
-
-- `font-style`, `font-variant`, `font-weight` は `font-size` よりも前になければなりません。
-- `font-variant` は CSS 2.1 で定義された値、つまり `normal` および `small-caps` のみ指定できます。
-- `font-stretch` は単一のキーワード値のみを指定することができます。
-- `line-height` は `font-size` の直後に、 "/" で区切って、 "`16px/3`" のように指定します。
-- `font-family` は指定される最後の値である必要があります。
-
 ### 値
 
-- `<'font-style'>`
-  - : {{cssxref("font-style")}} プロパティを参照。
-- `<'font-variant'>`
-  - : {{cssxref("font-variant")}} プロパティを参照。
-- `<'font-weight'>`
-  - : {{cssxref("font-weight")}} プロパティを参照。
-- `<'font-stretch'>`
-  - : {{cssxref("font-stretch")}} プロパティを参照。
+この値は、フォントに関連するさまざまなプロパティを指定する一括指定、または単一の `<system-font-family-name>` キーワードのどちらかです。
+
+- `<'font-style'>` {{optional_inline}}
+  - : {{cssxref("font-style")}} プロパティを参照してください。デフォルト値は `normal` です。
+- `<font-variant-css2>` {{optional_inline}}
+  - : {{cssxref("font-variant")}} プロパティの `normal` または `small-caps` のどちらかの値です。デフォルト値は `normal` です。
+- `<'font-weight'>` {{optional_inline}}
+  - : {{cssxref("font-weight")}} プロパティを参照してください。デフォルト値は `normal` です。
+- `<font-width-css3>` {{optional_inline}}
+  - : {{cssxref("font-width")}} プロパティで対応しているキーワードです。デフォルト値は `normal` です。
 - `<'font-size'>`
-  - : {{cssxref("font-size")}} プロパティを参照。
-- `<'line-height'>`
-  - : {{cssxref("line-height")}} プロパティを参照。
+  - : {{cssxref("font-size")}} プロパティを参照してください。
+- `<'line-height'>` {{optional_inline}}
+  - : {{cssxref("line-height")}} プロパティを参照してください。デフォルト値は `normal` です。
 - `<'font-family'>`
-  - : {{cssxref("font-family")}} プロパティを参照。
+  - : {{cssxref("font-family")}} プロパティを参照してください。最後の値である必要があります。
 
-#### システムフォント値
+- `<system-font-family-name>`
+  - : システムフォントを表す単一のキーワード。以下のいずれかです。
+    - `caption`
+      - : キャプション付きコントロール（ボタン、ドロップダウンなど）に使われるシステムフォント。
+    - `icon`
+      - : ラベルアイコンに使用されるシステムフォント。
+    - `menu`
+      - : メニュー（ドロップダウンメニュー、メニューリストなど）に使われるシステムフォント。
+    - `message-box`
+      - : ダイアログボックスに使われるシステムフォント。
+    - `small-caption`
+      - : 小さいコントロールのラベルに使われるシステムフォント。
+    - `status-bar`
+      - : ウィンドウのステータスバーに使われるシステムフォント。
 
-- `caption`
-  - : キャプション付きコントロールに使われるシステムフォント (ボタン、ドロップダウンなど)。
-- `icon`
-  - : ラベルアイコンに使用されるシステムフォント。
-- `menu`
-  - : メニューに使われるシステムフォント (ドロップダウンメニュー、メニューリストなど)。
-- `message-box`
-  - : ダイアログボックスに使われるシステムフォント。
-- `small-caption`
-  - : 小さいコントロールのラベルに使われるシステムフォント。
-- `status-bar`
-  - : ウィンドウのステータスバーに使われるシステムフォント。
-- 接頭辞付きのシステムフォントキーワード
-  - : ブラウザーは他にも、接頭辞付きのキーワードをいくつか実装していることがあります。 Gecko は、 `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, `-moz-field` を実装しています。
+    接頭辞をつけて実装されている標準外の値がいくつかあります。
+
+## 解説
+
+`font` プロパティの値は、システムフォントファミリー名を表す単一のキーワード、または要素のフォントに関するさまざまなプロパティをすべて設定するために使用される複数の個別指定プロパティの値のいずれかです。
+
+### システムフォントの宣言
+
+`font` を `<system-font-family-name>` キーワードとして指定する場合、プロパティの値全体を、その単一のキーワード（大文字と小文字を区別しない）に設定しなければなりません。有効な値には、`caption`, `icon`, `menu`, `message-box`, `small-caption`, `status-bar` があります。
+
+ブラウザーは、標準外の接頭辞付き値にも対応しています。
+
+- Chromium は `-webkit-control`, `-webkit-small-control`, `-webkit-mini-control` を実装しています。
+- Webkit は Chromium の値に加え、`-webkit-body`, `-webkit-pictograph`, `-webkit-ruby-text` と、いくつかの `-apple-system-*` の接頭辞のシステムフォント名に対応しています。
+-  Gecko は、 `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, `-moz-field` を実装しています。
+
+システムフォント（`<system-font-family-name>`）は、`font` プロパティでのみ設定できます。`font: icon` のような単一のキーワード値を定義すると、そのフォントのファミリー、サイズ、太さ、スタイルなどが、ブラウザーで設定されたシステムフォントに対して定義されている値に設定されます。これらの値はすべて、`font` 宣言の後で記述された個別指定宣言によって変更することができます。
+
+`font` プロパティの値において、`<system-font-family-name>` キーワードの後に `font` の個別指定指定を記述すると、その宣言は無効になります。例えば、`font: icon small` は無効です。
+
+値の中で、`<system-font-family-name>` キーワードが最初の成分以外の場所に現れた場合、そのキーワードは、標準の `font-family` 名を表す {{cssxref("ident")}} として扱われます。例えば、`font: small icon` という宣言は、`font-family` を `icon` という名前のフォントに設定します。これは、存在する場合もあれば存在しない場合もある、システムフォント以外のフォントです。また、この宣言は `font-size` を `small` に設定し、その他のすべての一括指定プロパティを初期値にリセットします。
+
+### 一括指定のフォント宣言
+
+`font` が、いくつかのフォント関連のプロパティの一括指定として指定されている場合、次のようになります。
+
+- 次の値を指定しなければなりません。
+  - {{cssxref("font-size")}}
+  - {{cssxref("font-family")}}
+
+- 次の値は任意で指定することができます。
+  - {{cssxref("font-style")}}
+  - {{cssxref("font-variant")}}
+  - {{cssxref("font-weight")}}
+  - {{cssxref("font-width")}}
+  - {{cssxref("line-height")}}
+
+他の一括指定プロパティと同様、指定されていない各成分プロパティは初期値に設定され、それによって、一括指定プロパティ以外を使用して以前に設定された値が上書きされる場合があります。さらに、この一括指定プロパティは、以下のプロパティを初期値にリセットします。これらのプロパティは、この一括指定プロパティで明示的に設定することはできません。
+
+- {{cssxref("font-feature-settings")}}
+- {{cssxref("font-kerning")}}
+- {{cssxref("font-language-override")}}
+- {{cssxref("font-optical-sizing")}}
+- {{cssxref("font-size-adjust")}}
+- {{cssxref("font-variant-alternates")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-emoji")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant-numeric")}}
+- {{cssxref("font-variant-position")}}
+- {{cssxref("font-variation-settings")}}
+
+### 一括指定プロパティの順序
+
+一括指定の `font` 宣言に含まれる個別指定の値の一部の順序は、いくつかの規則に従わなければなりません。
+
+- `font-size` および `font-family` 成分が必要です（[システムフォントの宣言](#システムフォントの宣言)の場合を除く）。
+- `font-style`, `font-variant`, `font-weight` は `font-size` よりも前になければなりません。
+- `line-height` を指定することができるのは、`font-size` を指定している場合だけです。`line-height` を指定する場合は、`font-size` の直後に記載し、2 つの値はスラッシュ (`/`) で区切って `16px / 3` のように指定する必要があります。
+- `font-family` は指定される最後の値である必要があります。
+
+### 値に制限がある成分
+
+下位互換性を確保するため、`font-variant` および `font-width` 成分の有効な値には、すべての有効な値や個別指定の同等値が含まれているわけではありません。
+
+`font-variant` 要素の有効な値は、`normal` または `small-caps` に限定されています。それ以外にも値は対応していないのですが、一括指定 `font` 宣言を使用すると、すべての`font-variant-*`の個別指定プロパティを `normal` にリセットします。対象となるのは {{cssxref("font-variation-settings")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-emoji")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}} です。
+
+`font-width` 要素の有効な値は、キーワード値（`normal`, `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`）に制限されます。個別指定の {{cssxref("font-width")}} プロパティは {{cssxref("percentage")}} 値にも対応していますが、この一括指定で指定することはできません。
 
 ## 公式定義
 
@@ -170,37 +232,93 @@ font: caption;
 
 ## 例
 
-### フォントのプロパティの設定
+### 基本的な使い方
+
+この例では、`font` ですべての {{htmlelement("p")}} 要素のフォントを定義しています。`font-size` を `12px`、`line-height` を `14px` に設定し、スラッシュ (`/`) で区切っています。また、この宣言では `font-family` を `sans-serif` に設定しています。
 
 ```css
-/* フォントの大きさを 12px に設定し、行の高さを 14px にする。
-   フォントファミリは sans-serif に設定する */
 p {
-  font: 12px/14px sans-serif;
-}
-
-/* フォントの大きさを親要素の 80% または既定値
-   (親要素がない場合) に設定する。
-   フォントファミリは sans-serif に設定する */
-p {
-  font: 80% sans-serif;
-}
-
-/* フォントの太さを太字に、
-   フォントスタイルを斜体に、
-   フォントの大きさを large に、
-   フォントファミリーは serif に設定する */
-p {
-  font: bold italic large serif;
-}
-
-/* ウィンドウのステータスバーと同じフォントに設定する */
-p {
-  font: status-bar;
+  font: 12px / 14px sans-serif;
 }
 ```
 
-### ライブサンプル
+```html-nolint hidden
+<p>
+  これは、サンセリフ体のテキストの段落です。フォントのサイズは 12px と小さめです。
+  このテキストが折り返された場合、行高が 14px とかなり狭いため、読みづらくなることがあります。
+</p>
+```
+
+{{EmbedLiveSample('basic usage','100%', '100')}}
+
+### 複数のプロパティ
+
+この例では、`font-weight` を `bold`、`font-style` を `italic`、`font-size` を `large`、`line-height` を `1.6`、`font-family` を `serif` に設定しています。
+
+```css
+p {
+  font: bold italic large / 1.6 serif;
+}
+```
+
+```html-nolint hidden
+<p>
+  この例では、フォントの太さを太字、フォントスタイルをイタリック、フォントサイズを large、行間を 1.6 に、フォントファミリを serif に設定しています。
+</p>
+```
+
+{{EmbedLiveSample('Multiple properties','100%', '100')}}
+
+### システムフォント
+
+この例では、`font` プロパティを使用してシステムフォントを設定する方法を示しています。
+
+#### CSS
+
+その段落のフォントを、ウィンドウのステータスバーと同じ `font-family`、`line-height`、`font-size` などを持つように設定し、その後、`line-height` を `1.6` に設定します。
+
+```css
+p {
+  font: status-bar;
+  line-height: 1.6;
+}
+```
+
+#### HTML
+
+この HTML には段落 ({{htmlelement("p")}}) があり、その中に複雑な [`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性値を持つリンク ({{htmlelement("a")}}) をあります。レンダリングされたリンクにカーソルを合わせたり、フォーカスを合わせたりすると、ブラウザーのステータスバーに `href` 属性の値を表示させるはずです。
+
+```html-nolint
+<p>
+  <a
+    href="/%20The%20font%20should%20be%20the%20same%20
+family%20and%20size%20and%20the%20text%20in%20the%20example."
+    >このテキストにカーソルを合わせたり、フォーカスを合わせたりしてみてください。フォントは、ステータスバーのテキストと同じフォントファミリーおよびサイズである必要があります。</a
+  >
+</p>
+```
+
+#### JavaScript
+
+HTML リンクに URL を直接記述するのは望ましくないため、リンクがクリックされた際に、存在しないページへリダイレクトされるのを防ぐスクリプトを記載しています。
+
+```js
+const aElem = document.querySelector("a");
+aElem.addEventListener("click", (e) => {
+  e.preventDefault();
+  return false;
+});
+```
+
+#### 結果
+
+{{EmbedLiveSample('System font','100%', '100')}}
+
+リンクにカーソルを合わせたり、リンクを選択したりしてみてください。フォントは、ブラウザーウィンドウの下部にあるステータスバーのテキストと同じフォントファミリーおよびサイズである必要があります。
+
+### 一括指定装飾クリエイター
+
+このライブデモでは、さまざまなラジオボタンを選択して異なる一括指定値を生成すると同時に、作成した一括指定宣言の効果を視覚的に確認することができます。
 
 ```html hidden
 <p>
@@ -216,7 +334,7 @@ p {
         name="font_style"
         checked
         value="" />
-      <label for="font-style-none">none</label><br />
+      <label for="font-style-none">省略値</label><br />
       <input
         type="radio"
         id="font-style-normal"
@@ -245,7 +363,7 @@ p {
         name="font_variant"
         checked
         value=" " />
-      <label for="font-variant-none">none</label><br />
+      <label for="font-variant-none">省略値</label><br />
       <input
         type="radio"
         id="font-variant-normal"
@@ -263,7 +381,7 @@ p {
     <div class="setPropCont">
       font-weight<br />
       <input type="radio" id="font-weight-none" name="font_weight" value="" />
-      <label for="font-weight-none">none</label><br />
+      <label for="font-weight-none">省略値</label><br />
       <input
         type="radio"
         id="font-weight-normal"
@@ -302,7 +420,7 @@ p {
         name="line_height"
         checked
         value="" />
-      <label for="line-height-none">none</label><br />
+      <label for="line-height-none">省略値</label><br />
       <input
         type="radio"
         id="line-height-1-2"
@@ -373,39 +491,41 @@ p {
     <div class="propInputCont">
       <input type="text" class="curCss" id="input_font_style" /><br />
       font-style <br />
-      optional
+      オプション
     </div>
     <div class="propInputCont">
       <input type="text" class="curCss" id="input_font_variant" /> <br />
       font-variant <br />
-      optional
+      オプション
     </div>
     <div class="propInputCont">
       <input type="text" class="curCss" id="input_font_weight" /> <br />
       font-weight <br />
-      optional
+      オプション
     </div>
     <div class="propInputCont">
       <input type="text" class="curCss mandatory" id="input_font_size" /> <br />
       font-size <br />
-      mandatory
+      必須
     </div>
     <div class="propInputCont">
       <input type="text" class="curCss" id="input_line_height" /> <br />
       line-height <br />
-      optional
+      オプション
     </div>
     <div class="propInputCont">
       <input type="text" class="curCss mandatory" id="input_font_family" />
       <br />
       font-family <br />
-      mandatory
+      必須
     </div>
   </div>
 </form>
 
-<div class="fontShortHand">This is some sample text.</div>
-<br /><br /><br /><br /><br /><br />
+<div class="fontShortHand">
+  これはサンプルテキストです。<br />
+  This is some more sample text.
+</div>
 ```
 
 ```css hidden
@@ -511,7 +631,7 @@ document.querySelectorAll("input[type='radio']").forEach((el) => {
 });
 ```
 
-{{ EmbedLiveSample('Live_sample','100%', '440px')}}
+{{EmbedLiveSample('Shorthand declaration creator','100%', '500px')}}
 
 ## 仕様書
 
@@ -525,4 +645,4 @@ document.querySelectorAll("input[type='radio']").forEach((el) => {
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- [System font stack](https://css-tricks.com/snippets/css/system-font-stack/) - CSS-Tricks (2017)
