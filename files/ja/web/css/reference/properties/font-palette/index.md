@@ -1,8 +1,9 @@
 ---
-title: font-palette
+title: "`font-palette` プロパティ (CSS)"
+short-title: font-palette
 slug: Web/CSS/Reference/Properties/font-palette
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 **`font-palette`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ユーザーエージェントがフォントに使用できる[カラーフォント](https://www.colorfonts.wtf/)に含まれる多くのパレットの一つを指定できます。ユーザーは {{cssxref("@font-palette-values")}} アットルールを使って、パレットの値を上書きしたり、新しいパレットを作成したりすることもできます。
@@ -25,14 +26,16 @@ font-palette: palette-mix(in lch, --blue, --yellow);
 
 ### 値
 
+このプロパティは、以下のリストから 1 つの値を指定します。
+
 - `normal`
-  - : フォントに使用する既定色パレットまたは既定の字体着色（フォントメーカーが設定する）を指定します。この設定では、インデックス 0 のフォント内のパレットがレンダリングされます。
+  - : フォントに使用するデフォルト色パレットまたはデフォルトの字体着色（フォントメーカーが設定する）を指定します。この設定では、インデックス 0 のフォント内のパレットがレンダリングされます。
 - `light`
   - : フォントの中で 'light' に一致する最初のパレットを指定します。フォントによっては、明るい（白に近い）背景に適用できるパレットを識別するメタデータを含むものがあります。フォントがこのメタデータを持っていない場合、 `light` の値は `normal` として動作します。
 - `dark`
   - : フォントの中で 'dark' に一致する最初のパレットを指定します。フォントによっては、位（黒に近い）背景に適用できるパレットを識別するメタデータを含むものがあります。フォントがこのメタデータを持っていない場合、この値は `normal` として動作します。
-- `<palette-identifier>`
-  - : [@font-palette-values](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values) アットルールを使用して、フォントパレットに自分自身で値を指定できるようにします。この値は [&lt;dashed-ident&gt;](/ja/docs/Web/CSS/Reference/Values/dashed-ident) 形式を使用して指定します。
+- {{cssxref("&lt;dashed-ident&gt;")}}
+  - : [@font-palette-values](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values) アットルールの `<palette-identifier>` を使用して、フォントパレットに自分自身で値を指定できるようにします。
 - {{cssxref("font-palette/palette-mix", "palette-mix()")}}
   - : 指定したパーセント値と色補間方法で、 2 つのフォントパレット値を混合して新しい `font-palette` 値を作成します。
 
