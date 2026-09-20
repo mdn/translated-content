@@ -29,7 +29,7 @@ Points forts&nbsp;:
 - La prise en charge pour {{CSSxRef("ruby-position")}} et {{CSSxRef("ruby-align")}} a été ajoutée et est disponible par défaut ([bogue Firefox 1055676 <sup>(angl.)</sup>](https://bugzil.la/1055676), [bogue Firefox 1123917 <sup>(angl.)</sup>](https://bugzil.la/1123917) et [bogue Firefox 1039006 <sup>(angl.)</sup>](https://bugzil.la/1039006)).
 - La pseudo-classe `:unresolved` a été implémentée pour les éléments personnalisés ([bogue Firefox 1111633 <sup>(angl.)</sup>](https://bugzil.la/1111633)).
 - Le style prédéfini {{CSSxRef("list-style-type", "ethiopic-numeric")}} utilise désormais un espace, au lieu d'un point, comme suffixe pour correspondre à un changement récent de la spécification ([bogue Firefox 1120721 <sup>(angl.)</sup>](https://bugzil.la/1120721)).
-- Les transitions CSS sur le contenu généré (avec {{CSSxRef("::before")}} et {{CSSxRef("::after")}}) sur à la fois un élément en ligne et le bloc qui les sépare commencent désormais comme prévu par la spécification ([bogue Firefox 1110277 <sup>(angl.)</sup>](https://bugzil.la/1110277)).
+- Les transitions CSS sur le contenu généré (avec {{CSSxRef("::before")}} et {{CSSxRef("::after")}}) sur à la fois un élément en incise et le bloc qui les sépare commencent désormais comme prévu par la spécification ([bogue Firefox 1110277 <sup>(angl.)</sup>](https://bugzil.la/1110277)).
 - La mise en œuvre des propriétés logiques CSS a fait de grands progrès. Les propriétés suivantes sont disponibles derrière le drapeau `layout.css.vertical-text.enabled` (`false` par défaut):
   - Équivalents indépendants de la direction de {{CSSxRef("width")}} et {{CSSxRef("height")}}&nbsp;: {{CSSxRef("block-size")}} et {{CSSxRef("inline-size")}} ([bogue Firefox 1117983 <sup>(angl.)</sup>](https://bugzil.la/1117983)).
   - Équivalents indépendants de la direction de {{CSSxRef("min-width")}} et {{CSSxRef("min-height")}}&nbsp;: {{CSSxRef("min-block-size")}} et {{CSSxRef("min-inline-size")}} ([bogue Firefox 1117983 <sup>(angl.)</sup>](https://bugzil.la/1117983)).
@@ -50,7 +50,7 @@ Points forts&nbsp;:
 ### JavaScript
 
 - {{JSxRef("Generator.return", "Generator.prototype.return()")}} est ajouté ([bogue Firefox 1115868 <sup>(angl.)</sup>](https://bugzil.la/1115868)).
-- {{JSxRef("Functions.set", "Setter")}} avec un {{JSxRef("Functions.rest_parameters", "paramètre rest", "", 1)}} est désormais une {{JSxRef("SyntaxError")}} ([bogue Firefox 1089632 <sup>(angl.)</sup>](https://bugzil.la/1089632)).
+- {{JSxRef("Functions.set", "Accesseur", "", 1)}} avec un {{JSxRef("Functions.rest_parameters", "paramètre rest", "", 1)}} est désormais une {{JSxRef("SyntaxError")}} ([bogue Firefox 1089632 <sup>(angl.)</sup>](https://bugzil.la/1089632)).
 - La propriété {{JSxRef("Function.name", "name")}} des fonctions est désormais configurable ([bogue Firefox 1084019 <sup>(angl.)</sup>](https://bugzil.la/1084019)).
 - Plusieurs méthodes {{JSxRef("Array")}} ont également été ajoutées pour les [tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays)&nbsp;:
   - Les méthodes {{JSxRef("TypedArray.of", "of()")}} et {{JSxRef("TypedArray.from", "from()")}} ([bogue Firefox 896608 <sup>(angl.)</sup>](https://bugzil.la/896608)).
@@ -67,7 +67,7 @@ Points forts&nbsp;:
 - Lors de la définition d'une [méthode génératrice](/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions), `set` et `get` ne sont plus des noms invalides ([bogue Firefox 1073809 <sup>(angl.)</sup>](https://bugzil.la/1073809)).
 - {{JSxRef("RegExp.prototype.source")}} retourne désormais «&nbsp;(?:)&nbsp;» au lieu d'une chaîne de caractères vide pour les expressions régulières vides ([bogue Firefox 1130798 <sup>(angl.)</sup>](https://bugzil.la/1130798)).
 - {{JSxRef("RegExp.prototype.source")}} et {{JSxRef("RegExp.prototype.toString()")}} échappent désormais correctement les motifs d'expressions régulières (par exemple, les terminaisons de ligne, «&nbsp;\n&nbsp;») ([bogue Firefox 1130860 <sup>(angl.)</sup>](https://bugzil.la/1130860)).
-- Les propriétés {{JSxRef("Regexp.global", "global")}}, {{JSxRef("Regexp.ignoreCase", "ignoreCase")}}, {{JSxRef("Regexp.multiline", "multiline")}} et {{JSxRef("Regexp.sticky", "sticky")}} sont désormais des propriétés d'accès prototype plutôt que des propriétés de données propres aux instances de `RegExp` ([bogue Firefox 1120169 <sup>(angl.)</sup>](https://bugzil.la/1120169)).
+- Les propriétés {{JSxRef("RegExp.global", "global")}}, {{JSxRef("RegExp.ignoreCase", "ignoreCase")}}, {{JSxRef("RegExp.multiline", "multiline")}} et {{JSxRef("RegExp.sticky", "sticky")}} de {{JSxRef("RegExp")}} sont désormais des propriétés d'accès prototype plutôt que des propriétés de données propres aux instances de `RegExp` ([bogue Firefox 1120169 <sup>(angl.)</sup>](https://bugzil.la/1120169)).
 - La propriété {{JSxRef("RegExp.prototype.source")}} est désormais une propriété d'accès prototype plutôt qu'une propriété de données propre aux instances de `RegExp` ([bogue Firefox 1120169 <sup>(angl.)</sup>](https://bugzil.la/1120169)). Disponible uniquement dans la version non finale, en raison du [bogue Firefox 1150297](https://bugzil.la/1150297).
 - {{JSxRef("Function.prototype.toString()")}} lève désormais une exception pour les objets {{JSxRef("Proxy")}} ([bogue Firefox 1100936 <sup>(angl.)</sup>](https://bugzil.la/1100936)).
 
