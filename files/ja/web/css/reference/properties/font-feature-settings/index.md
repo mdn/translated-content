@@ -1,8 +1,9 @@
 ---
-title: font-feature-settings
+title: "`font-feature-settings` プロパティ (CSS)"
+short-title: font-feature-settings
 slug: Web/CSS/Reference/Properties/font-feature-settings
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`font-feature-settings`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 OpenType フォントの拡張書体の特性を制御します。
@@ -30,15 +31,17 @@ font-feature-settings: "smcp", "zero";
   <div id="example-element">
     <p>Difficult waffles</p>
     <table>
-      <tr>
-        <td><span class="tabular">0O</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">3.14</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">2.71</span></td>
-      </tr>
+      <tbody>
+        <tr>
+          <td><span class="tabular">0O</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">3.14</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">2.71</span></td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </section>
@@ -73,7 +76,7 @@ section {
 ## 構文
 
 ```css
-/* 既定の設定を使用する */
+/* デフォルトの設定を使用する */
 font-feature-settings: normal;
 
 /* OpenType の特性タグの値を設定する */
@@ -101,13 +104,13 @@ font-feature-settings: unset;
 このプロパティは、キーワード `normal` または `<feature-tag-value>` 値のカンマ区切りリストとして指定します。テキストを描画するとき、 OpenType の `<feature-tag-value>` 値のリストがテキストレイアウトエンジンに渡され、フォント特性を有効または無効にします。
 
 - `normal`
-  - : テキストを既定のフォント設定でレイアウトすることを示します。これが既定値です。
+  - : テキストをデフォルトのフォント設定でレイアウトすることを示します。これがデフォルト値です。
 - `<feature-tag-value>`
   - : タグ名とオプション値からなる、空白区切りのデータ列を表します。
-
-    タグ名は {{cssxref("&lt;string&gt;")}} で、常に 4 つの {{Glossary("ASCII")}} 文字からなります。タグ名の文字数が多かったり少なかったり、 `U+20` – `U+7E` コードポイント範囲外の文字を格納している場合、記述子は無効になります。
-
-    オプション値は正の整数か、キーワード `on` または `off` にすることができます。キーワード `on` および `off` は、それぞれ値 `1` および `0` と同義語です。値が設定されていない場合は、既定で `1` になります。論理値でない OpenType 特性 （[stylistic alternates](https://learn.microsoft.com/en-ca/typography/opentype/spec/features_pt#tag-salt) など）では、この値は選択する具体的な字体を意味し、論理値の特性の場合は、その特性のオンとオフを意味します。
+    - タグ名
+      - : タグ名は {{cssxref("&lt;string&gt;")}} で、常に 4 つの {{Glossary("ASCII")}} 文字からなります。タグ名の文字数が多かったり少なかったり、 `U+20` – `U+7E` コードポイント範囲外の文字を格納している場合、記述子は無効になります。
+    - オプション値
+      - : オプション値は正の整数か、キーワード `on` または `off` にすることができます。キーワード `on` および `off` は、それぞれ値 `1` および `0` と同義語です。値が設定されていない場合は、デフォルトで `1` になります。論理値でない OpenType 特性 （[stylistic alternates](https://learn.microsoft.com/en-ca/typography/opentype/spec/features_pt#tag-salt) など）では、この値は選択する具体的な字体を意味し、論理値の特性の場合は、その特性のオンとオフを意味します。
 
 ## 公式定義
 
@@ -142,7 +145,7 @@ font-feature-settings: unset;
   font-feature-settings: "hist";
 }
 
-/* よくある合字を無効にする (既定ではオン) */
+/* よくある合字を無効にする (デフォルトではオン) */
 .no-ligatures {
   font-feature-settings: "liga" 0;
 }
