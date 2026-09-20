@@ -1,6 +1,8 @@
 ---
 title: Центр сертификации
 slug: Glossary/Certificate_authority
+l10n:
+  sourceCommit: cc2eed34ebb447ae935b1b1a1057f16b29025af0
 ---
 
 **Центр сертификации** (англ. Certificate Authority, CA) — это организация, которая {{Glossary("Signature/Security", "подписывает")}} {{Glossary("Digital certificate", "цифровые сертификаты")}} и связанные с ними {{Glossary("Key", "открытые ключи")}}, тем самым подтверждая достоверность содержащейся в них информации и самих ключей.
