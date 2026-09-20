@@ -2,10 +2,8 @@
 title: テスト
 slug: Learn_web_development/Extensions/Testing
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 6030ef1aadf967b80e2c79c3d3463cccc8ea0c95
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Testing/Introduction", "Learn_web_development/Extensions")}}
 
@@ -21,7 +19,7 @@ l10n:
 ## チュートリアル
 
 - [はじめてのブラウザー横断テスト](/ja/docs/Learn_web_development/Extensions/Testing/Introduction)
-  - : この記事ではブラウザー横断テストの概観を提供するところから始めます。その過程で「ブラウザーテストとは何か」「どんな種類の問題によく出くわすのか」「テストと、問題の特定・修正の主なアプローチは何か」といった疑問に答えたりします。
+  - : この記事ではブラウザー横断テストの概観を提供するところから始めます。その過程で「ブラウザー横断テストとは何か」「どんな種類の問題によく出くわすのか」「テストと、問題の特定・修正の主なアプローチは何か」といった疑問に答えたりします。
 - [テスト実行のための戦略](/ja/docs/Learn_web_development/Extensions/Testing/Testing_strategies)
   - : 次に、テスト実行について掘り下げ、ターゲット視聴者（例、どのブラウザー、デバイス、その他のセグメントでテストを確実にするのか）を特定し、ローファイテスト戦略（ある範囲のデバイスと仮装マシンにて必要ならアドホックテストを行う）、高度なテスト戦略（専用テストアプリを使った自動化）、ユーザーグループを使ったテストまで見て行きます。
 - [一般的な HTML と CSS の問題への対処](/ja/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS)
