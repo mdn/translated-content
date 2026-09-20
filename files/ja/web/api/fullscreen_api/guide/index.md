@@ -2,7 +2,7 @@
 title: 全画面 API のガイド
 slug: Web/API/Fullscreen_API/Guide
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: d4d05693841eba16c40260d48cd29b353d50dd03
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -16,16 +16,16 @@ l10n:
 この {{HTMLElement("video")}} 要素について考えてみましょう。
 
 ```html
-<video controls id="myvideo">
-  <source src="somevideo.webm"></source>
-  <source src="somevideo.mp4"></source>
+<video controls id="my-video">
+  <source src="somevideo.webm" />
+  <source src="somevideo.mp4" />
 </video>
 ```
 
 この video 要素を以下のように全画面化することができます。
 
 ```js
-const elem = document.getElementById("myvideo");
+const elem = document.getElementById("my-video");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 }
@@ -33,18 +33,9 @@ if (elem.requestFullscreen) {
 
 このコードでは、`requestFullscreen()` メソッドが存在するかどうかを調べてから、それを呼び出しています。
 
-### 表示の差異について
+要素が全画面モードになると、{{cssxref(":fullscreen")}} に一致するようになり、画面全体を占めるなどのデフォルトのスタイルが適用されます。また、その要素は{{glossary("top layer", "最上位レイヤー")}}に配置されます。
 
-ここで、現時点での Gecko と WebKit の実装の重要な違いに注目しておきましょう。Gecko は自動的に CSS ルール "`width: 100%; height: 100%;`" を要素に追加し、画面の内側へ引き伸ばすようにします。 WebKit はこのようなことはせず、代わりに全画面表示の要素を同じ大きさで、それ以外は真っ黒な画面の中央に配置します。 WebKit で同じ全画面表示を取得するには、自分自身で "`width: 100%; height: 100%;`" を CSS ルールに追加する必要があります。
-
-```css
-#myvideo:-webkit-full-screen {
-  width: 100%;
-  height: 100%;
-}
-```
-
-一方、 WebKit の動作を Gecko 上で模倣しようとする場合、表示したい要素を別の要素の内部に配置し、その要素を代わりに全画面化し、 CSS ルールを使用して内側の要素を表示したい外観に一致するように調整する必要があります。
+複数の要素が全画面モードでの表示をリクエストされた場合、それらはすべて {{cssxref(":fullscreen")}} に一致するようになり、すべて最上位レイヤーに配置されます。これらは互いに積み重なり、より新しくリクエストされた要素が古い要素の上に表示されます。最も新しくリクエストされた要素が表示され、{{domxref("Document.fullscreenElement")}} によって返されます。
 
 ### 通知
 
@@ -60,6 +51,8 @@ if (elem.requestFullscreen) {
 ## 全画面モードからの脱出
 
 ユーザーは常に自分自身で全画面モードを終了することができます。[ユーザーが知りたいこと](#ユーザーが知りたいこと)を参照してください。また、 {{DOMxRef("Document.exitFullscreen()")}} メソッドを呼び出すことで、プログラム的にそうすることも可能です。
+
+全画面モードで複数の要素がある場合、`exitFullscreen()` を呼び出すと、最上位の要素のみが全画面モードを終了し、その下にある要素が表示されます。<kbd>Esc</kbd> または <kbd>F11</kbd> を押すと、すべての全画面要素が終了します。
 
 ## その他の情報
 
@@ -82,98 +75,9 @@ if (elem.requestFullscreen) {
 
 ## 例
 
-この例では、ウェブページの中に動画を表示しています。<kbd>Return</kbd> または <kbd>Enter</kbd> キーを押すと、ユーザーは動画のウィンドウ表示と全画面表示を切り替えて表示することができます。
+[mdn/dom-examples GitHub リポジトリー](https://github.com/mdn/)には、全画面 API の完全な例が掲載されています。
 
-[ライブ例の表示](https://mdn.dev/archives/media/samples/domref/fullscreen.html)
-
-### Enter キーの監視
-
-ページが読み込まれると、このコードが実行され、 <kbd>Enter</kbd> キーを待ち受けるためのイベントリスナーが設定されます。
-
-```js
-document.addEventListener(
-  "keydown",
-  (e) => {
-    if (e.keyCode === 13) {
-      toggleFullScreen();
-    }
-  },
-  false,
-);
-```
-
-### 全画面モードのトグル切り替え
-
-このコードは、上図のようにユーザーが <kbd>Enter</kbd> キーを押したときに呼び出されます。
-
-```js
-function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else if (document.exitFullscreen) {
-    document.exitFullscreen();
-  }
-}
-```
-
-これは {{DOMxRef("document")}} の `fullscreenElement` 属性の値を調べることから始まります。もし `null` ならば、文書内のモードは現在ウィンドウモードなので、全画面モードに切り替える必要があります。全画面モードへの切り替えは {{DOMxRef("element.requestFullscreen()")}} を呼び出すことで行われます。
-
-もし既に全画面モードが有効な場合（`fullscreenElement` が `null` でない場合）、 {{DOMxRef("document.exitFullscreen()")}} を呼び出すことになります。
-
-## 接頭辞
-
-今のところ、すべてのブラウザーが接頭辞なしバージョンの API を実装しているわけではありません（ベンダーに依存しない全画面 API へのアクセスには [Fscreen](https://github.com/rafgraph/fscreen) を使用することができます）。以下は、接頭辞と名前の異なる形をまとめた表です。
-
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="row">標準</th>
-      <th scope="col">WebKit (Safari) / Blink (Chrome &#x26; Opera) / Edge</th>
-      <th scope="col">Gecko (Firefox)</th>
-      <th scope="col">Internet Explorer</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
-      </th>
-      <td><code>webkitIsFullScreen</code></td>
-      <td><code>mozFullScreen</code></td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Document.fullscreenEnabled")}}
-      </th>
-      <td><code>webkitFullscreenEnabled</code></td>
-      <td><code>mozFullScreenEnabled</code></td>
-      <td><code>msFullscreenEnabled</code></td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Document.fullscreenElement")}}
-      </th>
-      <td><code>webkitFullscreenElement</code></td>
-      <td><code>mozFullScreenElement</code></td>
-      <td><code>msFullscreenElement</code></td>
-    </tr>
-    <tr>
-      <th scope="row">{{DOMxRef("Document.exitFullscreen()")}}</th>
-      <td><code>webkitExitFullscreen()</code></td>
-      <td><code>mozCancelFullScreen()</code></td>
-      <td><code>msExitFullscreen()</code></td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Element.requestFullscreen()")}}
-      </th>
-      <td><code>webkitRequestFullscreen()</code></td>
-      <td><code>mozRequestFullScreen()</code></td>
-      <td><code>msRequestFullscreen()</code></td>
-    </tr>
-  </tbody>
-</table>
+[例を実行](https://mdn.github.io/dom-examples/fullscreen-api/index.html)し、[ソースコードを閲覧](https://github.com/mdn/dom-examples/tree/main/fullscreen-api)してください。
 
 ## 仕様書
 
