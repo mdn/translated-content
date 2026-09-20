@@ -238,7 +238,7 @@ document.addEventListener("keydown", (event) => {
 });
 ```
 
-```html hidden
+```html-nolint hidden
 <p>
   下記の動画要素には、花が咲く様子をタイムラプスで撮影した映像が再生されます。
   <kbd>Enter</kbd> または <kbd>Shift</kbd> + <kbd>F</kbd>（大文字の "F"）キーを押すと、全画面表示のオン／オフを切り替えることができます。
