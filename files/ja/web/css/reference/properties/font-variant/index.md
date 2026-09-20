@@ -1,11 +1,12 @@
 ---
-title: font-variant
+title: "`font-variant` プロパティ (CSS)"
+short-title: font-variant
 slug: Web/CSS/Reference/Properties/font-variant
 l10n:
   sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-**`font-variant`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、フォントのすべての変化形を設定することができます。
+**`font-variant`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントのすべての変化形を設定することができます。
 
 CSS Level 2.1 で定義された `font-variant` の `<font-variant-css2>` 値（つまり、 `normal` や `small-caps`）は、一括指定の {{cssxref("font")}} を用いて設定することもできます。
 
@@ -101,6 +102,8 @@ font-variant: unset;
 ```
 
 ### 値
+
+このプロパティは以下の値のリストをカンマ区切りで指定します。
 
 - `normal`
   - : 通常のフォントフェイスを定義します。それぞれの個別指定プロパティは `normal` の初期値になります。
