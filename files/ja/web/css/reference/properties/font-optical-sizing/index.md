@@ -1,8 +1,9 @@
 ---
-title: font-optical-sizing
+title: "`font-optical-sizing` プロパティ (CSS)"
+short-title: font-optical-sizing
 slug: Web/CSS/Reference/Properties/font-optical-sizing
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
 **`font-optical-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの描画をそれぞれの大きさでの表示に最適化して表示するかどうかを設定します。
@@ -33,7 +34,7 @@ font-optical-sizing: none;
 
 ```css interactive-example
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2");
   font-family: "Amstelvar";
   font-style: normal;
 }
@@ -69,14 +70,16 @@ font-optical-sizing: unset;
 
 ### 値
 
-- none
+このプロパティは、以下のキーワード値のどちらかとして指定します。
+
+- `none`
   - : ブラウザーは表示の最適化のために書体の形を変更しません。
-- auto
+- `auto`
   - : ブラウザーは表示の最適化のために書体の形を変更します。
 
 ## 解説
 
-光学的サイズは、光学的サイズ変化軸を持つフォントに対して既定で有効になります。光学的サイズ変化軸は {{cssxref("font-variation-settings")}} の `opsz` で表されます。
+光学的サイズは、光学的サイズ変化軸を持つフォントに対してデフォルトで有効になります。光学的サイズ変化軸は {{cssxref("font-variation-settings")}} の `opsz` で表されます。
 
 光学的サイズを使用した場合、小さな文字サイズは太いストロークと大きなセリフで表現されることが多く、逆に大きな文字サイズは太いストロークと細いストロークのコントラストが強くなり、より繊細に表現されることが多くなります。
 
@@ -105,7 +108,7 @@ font-optical-sizing: unset;
 
 ```css
 @font-face {
-  src: url("AmstelvarAlpha-VF.ttf");
+  src: url("AmstelvarAlpha-VF.woff2");
   font-family: "Amstelvar";
   font-style: normal;
 }
@@ -121,7 +124,7 @@ p {
 ```
 
 > [!NOTE]
-> 上記で参照されているフォント — 光学的サイズに対応したライセンスフリーであるもの — がテストに適しています。[GitHub からダウンロード](https://github.com/googlefonts/amstelvar/releases)できます。
+> 上記で参照されているフォント — 光学的サイズに対応したライセンスフリーであるもの — がテストに適しています。[GitHub からダウンロード](https://github.com/googlefonts/amstelvar-beta/releases)できます。
 
 ## 仕様書
 
