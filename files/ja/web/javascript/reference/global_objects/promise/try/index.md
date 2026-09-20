@@ -90,7 +90,6 @@ Promise.try(func, arg1, arg2);
 
 これらは同等ですが、後者は余分なクロージャの作成を避け、より効率的です。
 
-
 `Promise.try()` は汎用的であり、サブクラス化に対応しています。つまり、`Promise` のサブクラスに対して呼び出すことができ、その結果にはそのサブクラスの型のプロミスが含まれます。これを行うには、サブクラスのコンストラクターが [`Promise()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) コンストラクターと同じシグネチャを実装している必要があります。つまり、`resolve` および `reject` コールバックを引数として呼び出すことができる単一の `executor` 関数を受け入れる必要があります。
 
 ## 例
