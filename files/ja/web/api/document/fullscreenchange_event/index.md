@@ -3,12 +3,12 @@ title: "Document: fullscreenchange イベント"
 short-title: fullscreenchange
 slug: Web/API/Document/fullscreenchange_event
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
-{{APIRef}}
+{{APIRef("Fullscreen API")}}
 
-`fullscreenchange` イベントは、ブラウザーが全画面モードに移行したり終了したりした直後に発生します。
+**`fullscreenchange`** イベントは、ブラウザーが全画面モードに移行したり終了したりした直後に発生します。
 
 このイベントは、全画面モードに移行または終了しようとしている `Element` に送られ、それから `Document` までバブリングします。
 
@@ -20,10 +20,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("fullscreenchange", (event) => {});
+```js-nolint
+addEventListener("fullscreenchange", (event) => { })
 
-onfullscreenchange = (event) => {};
+onfullscreenchange = (event) => { }
 ```
 
 ## イベント型
@@ -38,9 +38,9 @@ onfullscreenchange = (event) => {};
 
 ユーザーが "Toggle Fullscreen Mode" ボタンをクリックすると、 `click` ハンドラーは `div` の全画面モードを切り替えます。もし `document.fullscreenElement` に値があれば、全画面モードを終了します。そうでない場合は、 div は全画面モードに配置されます。
 
-`fullscreenchange` イベントが処理される時点で、要素の状態はすでに変化していることを覚えておいてください。そのため、もし変更が全画面モードへのものであれば、 `document.fullscreenElement` は、これで全画面モードになった要素を指すことになります。他にも、 `document.fullscreenElement` が null の場合、全画面モードは取り消される可能性があります。
+`fullscreenchange` イベントが処理される時点で、要素の状態はすでに変化していることを覚えておいてください。そのため、もし変更が全画面モードへのものであれば、 `document.fullscreenElement` は、これで全画面モードになった要素を指すことになります。他にも、 `document.fullscreenElement` が `null` の場合、全画面モードは取り消される可能性があります。
 
-この例のコードで意味しているのは、ある要素が現在全画面モードである場合、 `fullscreenchange` ハンドラーは全画面要素の `id` をコンソールにログ出力するということです。もし `document.fullscreenElement` が null ならば、このコードは全画面モードを離れるための変更であることをメッセージとしてログ出力します。
+この例のコードで意味しているのは、ある要素が現在全画面モードである場合、 `fullscreenchange` ハンドラーは全画面要素の `id` をコンソールにログ出力するということです。もし `document.fullscreenElement` が `null` ならば、このコードは全画面モードを離れるための変更であることをメッセージとしてログ出力します。
 
 #### HTML
 
@@ -83,7 +83,7 @@ function log(message) {
   logger.textContent = `${logger.textContent}\n${message}`;
 }
 
-function fullscreenchanged(event) {
+function fullscreenchangeHandler(event) {
   // document.fullscreenElement は、全画面モードにある要素があれば
   // それを指します。要素がなければ、このプロパティの値は null に
   // なります。
@@ -94,7 +94,7 @@ function fullscreenchanged(event) {
   }
 }
 
-document.addEventListener("fullscreenchange", fullscreenchanged);
+document.addEventListener("fullscreenchange", fullscreenchangeHandler);
 
 // トグルボタンがクリックされたら、全画面モードを切り替える
 document.getElementById("toggle-fullscreen").addEventListener("click", () => {
