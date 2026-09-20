@@ -1,15 +1,16 @@
 ---
-title: font-variant-position
+title: "`font-variant-position` プロパティ (CSS)"
+short-title: font-variant-position
 slug: Web/CSS/Reference/Properties/font-variant-position
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
-**`font-variant-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、上付き文字または下付き文字として配置された小さな代替文字の使用を制御します。
+**`font-variant-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、上付き文字または下付き文字として配置された小さな代替字体の使用を制御します。
 
 文字は変更されないまま、フォントのベースラインから相対的に配置されます。これらの文字はふつう、 {{HTMLElement("sub")}} と {{HTMLElement("sup")}} 要素で使用されます。
 
-これらの代替文字の使用が有効の場合、一連の中のある文字がそのような字体 - 強調字体を持っていない場合、一連の文字のセット全体が代替方法を使用して、合成によって描画されます。
+これらの代替字体の使用が有効の場合、一連の中のある文字がそのような字体 - 強調字体を持っていない場合、一連の文字のセット全体が代替方法を使用して、合成によって描画されます。
 
 これらの代替字体は、フォントの他の部分と同じ em ボックスと同じベースラインを共有します。それらは単にグラフィカルに強化されており、行の高さや他のボックスの特性には影響しません。
 
@@ -29,9 +30,9 @@ font-variant-position: revert-layer;
 font-variant-position: unset;
 ```
 
-`font-variant-position` プロパティは、以下に列挙されたキーワード値のうちの一つで指定します。
-
 ### 値
+
+このプロパティは、以下のキーワード値のいずれかとして指定します。
 
 - `normal`
   - : 上付き文字および下付き文字の字体の代替を無効にします。
