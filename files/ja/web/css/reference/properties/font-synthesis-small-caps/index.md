@@ -1,8 +1,9 @@
 ---
-title: font-synthesis-small-caps
+title: "`font-synthesis-small-caps` プロパティ (CSS)"
+short-title: font-synthesis-small-caps
 slug: Web/CSS/Reference/Properties/font-synthesis-small-caps
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 **`font-synthesis-small-caps`** は [CSS](/ja/docs/Web/CSS) プロパティで、フォントファミリーにスモールキャップの書体がない場合に、ブラウザーがスモールキャップの書体を合成するかどうかを指定します。スモールキャップの字体は通常、大文字の形状を使用しますが、小文字のサイズに縮小されます。
@@ -25,6 +26,8 @@ font-synthesis-small-caps: unset;
 ```
 
 ### 値
+
+このプロパティは、以下のキーワード値のどちらかとして指定します。
 
 - `auto`
   - : 不足しているスモールキャップの書体は、必要に応じてブラウザーが合成する可能性があることを示します。
@@ -49,7 +52,7 @@ font-synthesis-small-caps: unset;
 
 ```html-nolint
 <p class="english">
-  これは既定の <span class="small-caps">small-caps</span>,
+  これはデフォルトの <span class="small-caps">small-caps</span>,
   <strong>bold</strong>, <em>oblique</em> の書体です。
 </p>
 
