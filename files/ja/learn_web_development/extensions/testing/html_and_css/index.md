@@ -3,7 +3,7 @@ title: 一般的な HTML と CSS の問題の処理
 short-title: 一般的な HTML と CSS の問題
 slug: Learn_web_development/Extensions/Testing/HTML_and_CSS
 l10n:
-  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
+  sourceCommit: f4c14731a1a157fc8d8f7357ac4d74d14a7d7fb5
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Testing/Testing_strategies","Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing")}}
@@ -46,7 +46,7 @@ HTML/CSS に起因するブラウザー間のエラーを減らす方法を見�
 基本的には、HTML と CSS のコードが整形式で、構文エラーがないかどうかをチェックすることです。
 
 > [!NOTE]
-> CSS と HTML に関する一般的な問題の 1 つは、異なる CSS ルールが互いに矛盾が生じるときに発生します。 サードパーティのコードを使用している場合、これは特に問題になる可能性があります。たとえば、CSS フレームワークを使用して、それが使用しているクラス名の 1 つが別の目的ですでに使用されているものと衝突しているとします。 または、ある種のサードパーティ API (たとえば広告バナーの生成) によって生成された HTML に、すでに別の目的で使用されているクラス名または ID が含まれていることもあります。これが起こらないようにするには、最初に使用しているツールを調べて、それらを中心にコードを設計する必要があります。また、「名前空間付き」 CSS も価値があります。ウィジェットがある場合は、それが明確なクラスを持っていることを確認してから、このクラスでウィジェット内の要素を選択するセレクターを起動します。そうすれば競合は起こりにくくなります。例えば、 `.audio-player ul a` です。
+> CSS と HTML に関する一般的な問題の 1 つは、異なる CSS ルールが互いに矛盾が生じるときに発生します。 サードパーティのコードを使用している場合、これは特に問題になる可能性があります。たとえば、CSS フレームワークを使用して、それが使用しているクラス名の 1 つが別の目的ですでに使用されているものと衝突しているとします。 または、ある種のサードパーティ API（たとえば広告バナーの生成）によって生成された HTML に、すでに別の目的で使用されているクラス名または ID が含まれていることもあります。これが起こらないようにするには、最初に使用しているツールを調べて、それらを中心にコードを設計する必要があります。また、「名前空間付き」 CSS も価値があります。ウィジェットがある場合は、それが明確なクラスを持っていることを確認してから、このクラスでウィジェット内の要素を選択するセレクターを起動します。そうすれば競合は起こりにくくなります。例えば、`.audio-player ul a` です。
 
 ### 検証
 
@@ -257,7 +257,7 @@ button:active {
 
 ![ほぼ白い背景に白い文字の見づらい錠剤型ボタン](unreadable-button.png)
 
-これを解決するために、 2 つ目の `background-color` 宣言を追加しました。これは `red` の色キーワードで指定します。これは実に古いブラウザーに対応しており、現行の輝かしい機能が動作しない場合の予備として機能します。このページを訪れたブラウザーは、まず最初の `background-color` 値を適用します。 2 つ目の `background-color` 宣言まで取得すると、 RGB カラーに対応している場合は、最初の値をこの値で上書きします。そうでない場合は、宣言全体を無視して移動します。
+これを解決するために、初期 `background-color` 宣言を追加しました。これは `red` の色キーワードで指定します。これは実に古いブラウザーに対応しており、現行の輝かしい機能が動作しない場合の予備として機能します。このページを訪れたブラウザーは、まず最初の `background-color` 値を適用します。 2 つ目の `background-color` 宣言まで取得すると、 RGB カラーに対応している場合は、最初の値をこの値で上書きします。そうでない場合は、宣言全体を無視して移動します。
 
 > [!NOTE]
 > [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)、{{cssxref("@font-face")}}、{{cssxref("@supports")}} ブロックのような他の CSS 機能についても同様で、対応していない場合、ブラウザーはそれらを無視します。
@@ -336,7 +336,7 @@ HTML と CSS で遭遇する課題は他にもたくさんあり、オンライ�
 
 サポート情報の最良の情報源としては、Mozilla Developer Network（今いる場所です）、[stackoverflow.com](https://stackoverflow.com/)、[caniuse.com](https://caniuse.com/) などがあります。
 
-Mozilla Developer Network (MDN) を使用するために、ほとんどの人は検索エンジンで情報を探そうとしている技術に "MDN" という単語を加えて検索します（例えば "MDN HTML video"）。MDN にはいくつかの有益な種類のコンテンツが収められています。
+Mozilla Developer Network (MDN) を使用するために、ほとんどの人は検索エンジンで情報を探そうとしている技術に "mdn" という単語を加えて検索します（例えば "mdn HTML video"）。MDN には様々な種類の有益なコンテンツが収められています。
 
 - クライアント側ウェブ技術のブラウザーの対応情報を参照する素材、例えば [\<video> リファレンスページ](/ja/docs/Web/HTML/Reference/Elements/video)など。
 - その他の補助的なリファレンス素材、例えば[ウェブ上のメディア型と形式のガイド](/ja/docs/Web/Media/Guides/Formats)など。
@@ -344,7 +344,7 @@ Mozilla Developer Network (MDN) を使用するために、ほとんどの人は
 
 [caniuse.com](https://caniuse.com/) は、いくつかの有益な外部リソースリンクとともに、対応する情報を提供しています。例えば、 <https://caniuse.com/#search=video> をご覧ください）テキストボックスに検索したい機能を入力してください）。
 
-[stackoverflow.com](https://stackoverflow.com/) (SO) は、質問をしたり、開発者仲間に解決策を共有してもらったり、前回の投稿を調べたり、他の開発者を助けたりすることができるフォーラムサイトです。新しい質問を投稿する前に、あなたの質問に対する答えがすでにあるかどうか見ていくことをお勧めします。例えば、SOで "disabling autofocus on HTML dialog" と検索したところ、すかさず [Disable showModal auto-focusing using HTML attributes](https://stackoverflow.com/questions/63267581/disable-showmodal-auto-focusing-using-html-attributes) がヒットしました。
+[stackoverflow.com](https://stackoverflow.com/) (SO) は、質問をしたり、開発者仲間に解決策を共有してもらったり、前回の投稿を調べたり、他の開発者を助けたりすることができるフォーラムサイトです。新しい質問を投稿する前に、あなたの質問に対する答えがすでにあるかどうか見ていくことをお勧めします。例えば、SO で "disabling autofocus on HTML dialog" と検索したところ、すかさず [Disable showModal auto-focusing using HTML attributes](https://stackoverflow.com/questions/63267581/disable-showmodal-auto-focusing-using-html-attributes) がヒットしました。
 
 それとは別に、お好きな検索エンジンで問題の答えを検索してみてください。具体的なエラーメッセージを検索すると有益なことが多いです。他にもあなたと同じ問題を抱えている開発者がいる可能性が高いからです。
 
