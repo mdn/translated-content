@@ -7,19 +7,26 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("Element")}} 接口的 **`ari aCurrent`** 属性反映 [`aria-current`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current) 属性的值，该属性指示容器或一组相关元素中表示当前项的元素。
+{{domxref("Element")}} 接口的 **`ariaCurrent`** 属性反映 [`aria-current`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current) 属性的值，该属性指示容器或一组相关元素中表示当前项的元素。
 
 ## 值
 
 具有以下值之一的字符串：
 
-- `"page"`：表示一组页面中的当前页面。
-- `"step"`：表示流程中的当前步骤。
-- `"location"`：表示当前位置，例如面包屑层级中的当前页面。
-- `"date"`：表示日期集合中的当前日期。
-- `"time"`：表示时间集合中的当前时间。
-- `"true"`：表示集合中的当前项。
-- `"false"`：不表示集合中的当前项。
+- `"page"`
+  - : 表示一组页面中的当前页面。
+- `"step"`
+  - : 表示流程中的当前步骤。
+- `"location"`
+  - : 表示当前位置，例如面包屑层级中的当前页面。
+- `"date"`
+  - : 表示日期集合中的当前日期。
+- `"time"`
+  - : 表示时间集合中的当前时间。
+- `"true"`
+  - : 表示集合中的当前项。
+- `"false"`
+  - : 不表示集合中的当前项。
 
 ## 示例
 
