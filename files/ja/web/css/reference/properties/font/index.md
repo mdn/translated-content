@@ -166,7 +166,7 @@ font: caption;
 
 - Chromium は `-webkit-control`, `-webkit-small-control`, `-webkit-mini-control` を実装しています。
 - Webkit は Chromium の値に加え、`-webkit-body`, `-webkit-pictograph`, `-webkit-ruby-text` と、いくつかの `-apple-system-*` の接頭辞のシステムフォント名に対応しています。
--  Gecko は、 `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, `-moz-field` を実装しています。
+- Gecko は、 `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, `-moz-field` を実装しています。
 
 システムフォント（`<system-font-family-name>`）は、`font` プロパティでのみ設定できます。`font: icon` のような単一のキーワード値を定義すると、そのフォントのファミリー、サイズ、太さ、スタイルなどが、ブラウザーで設定されたシステムフォントに対して定義されている値に設定されます。これらの値はすべて、`font` 宣言の後で記述された個別指定宣言によって変更することができます。
 
