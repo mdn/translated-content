@@ -3,7 +3,7 @@ title: Firefox における実験的機能
 short-title: 実験的機能
 slug: Mozilla/Firefox/Experimental_features
 l10n:
-  sourceCommit: 2cd2b1303d15452b977a309a9d4e6618d20fc0c0
+  sourceCommit: e1d75786a9ba2607af68a3fe2ef8dc3aaba99661
 ---
 
 このページには、Firefox の実験的機能および部分的に実装されている機能、および開発中または提案中のウェブプラットフォーム標準が記載されています。
@@ -11,7 +11,7 @@ l10n:
 それぞれの機能の説明には、その機能を実装または有効にする [Bugzilla のバグ](https://bugzilla.mozilla.org)へのリンクも記載されています。
 この情報により、実験的な機能を試して、正式にリリースされる前にフィードバックを提供することができます。
 
-ライフサイクルの観点では、新しい機能は通常、 [Nightly](https://www.firefox.com/ja/channel/desktop/) で最初に現れます。ここでは、早期のフィードバックや検査のために、多くの場合、既定で有効になっています。
+ライフサイクルの観点では、新しい機能は通常、 [Nightly](https://www.firefox.com/ja/channel/desktop/#nightly) で最初に現れます。ここでは、早期のフィードバックや検査のために、多くの場合、既定で有効になっています。
 大きな問題が見当たらない場合、 [Beta](https://www.firefox.com/ja/channel/desktop/#beta) および [Developer Edition](https://www.firefox.com/ja/developer/) のプレリリースビルドに含められます。最後に、承認された機能は、 [stable Release](https://www.firefox.com/ja/) チャネルで提供されます。
 リリースビルドにおいて既定で有効化された機能は、もはや実験的なものではないので、このページから除去されます。
 
@@ -75,6 +75,20 @@ HTML の [`<input type="color">`](/ja/docs/Web/HTML/Reference/Elements/input/col
 | Release            | -              | -                |
 
 - `dom.forms.html_color_picker.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### `headingoffset` および `headingreset` 属性
+
+[`headingoffset`](/ja/docs/Web/HTML/Reference/Global_attributes/headingoffset) グローバル属性は、設定された要素内の[見出し要素](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)の計算された見出しレベルを上昇させるため、コンポーネントはページ内のどこに表示されても同一の見出しマークアップを使用することができます。[`headingreset`](/ja/docs/Web/HTML/Reference/Global_attributes/headingreset) 属性は、設定された要素内の見出しに対して、親要素のオフセットが適用されるのを防ぎます（[Firefox バグ 1974383](https://bugzil.la/1974383)）。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 153            | No               |
+| Developer Edition  | 153            | No               |
+| Beta               | 153            | No               |
+| Release            | 153            | No               |
+
+- `dom.headingoffset.enabled`
   - : 有効にするには `true` に設定してください。
 
 ## CSS
@@ -148,7 +162,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 詳細については、[Firefox バグ 1807685](https://bugzil.la/1807685)、[Firefox バグ 1804573](https://bugzil.la/1804573)、[Firefox バグ 1809005](https://bugzil.la/1809005)、[Firefox バグ 1676791](https://bugzil.la/1676791), [Firefox バグ 1754897](https://bugzil.la/1754897)、[Firefox バグ 1817303](https://bugzil.la/1817303)、[Firefox バグ 1737918](https://bugzil.la/1737918) を参照してください。
 
-{{cssxref('timeline-scope')}}、{{cssxref('animation-range-start')}}、{{cssxref('animation-range-end')}} の各プロパティ（および {{cssxref('animation-range')}} 一括指定プロパティ）にはまだ対応していません。詳細については、[Firefox バグ 1676779](https://bugzil.la/1676779) を参照してください。
+{{cssxref('animation-range-start')}}、{{cssxref('animation-range-end')}} の各プロパティ（および {{cssxref('animation-range')}} 一括指定プロパティ）にはまだ対応していません。詳細については、[Firefox バグ 1676779](https://bugzil.la/1676779) を参照してください。
 
 | リリースチャンネル | 追加バージョン | デフォルトで有効 |
 | ------------------ | -------------- | ---------------- |
@@ -305,20 +319,6 @@ CSS の {{cssxref("letter-spacing")}} プロパティは、これで指定した
 - `layout.css.custom-media.enabled`
   - : 有効にするには `true` に設定してください。
 
-### CSS `attr()` 関数における `<attr-type>` 値
-
-CSS {{cssxref("attr")}} 関数は、[`<attr-type>`](/ja/docs/Web/CSS/Reference/Values/attr#attr-type) の値に対応するようになりました。これにより、属性値がどのように CSS 値として構文解析されるかを指定し、[`data-*`](/ja/docs/Web/HTML/How_to/Use_data_attributes) からそれらの値を直接取ることができるようになります。([Firefox バグ 1986631](https://bugzil.la/1986631)、[Firefox バグ 1998245](https://bugzil.la/1998245))
-
-| リリースチャンネル | 追加バージョン | デフォルトで有効 |
-| ------------------ | -------------- | ---------------- |
-| Nightly            | 152            | Yes              |
-| Developer Edition  | 149            | No               |
-| Beta               | 149            | No               |
-| Release            | 149            | No               |
-
-- `layout.css.attr.enabled`
-  - : 有効にするには `true` に設定してください。
-
 ### CSS `appearance` プロパティの `base-select` 値
 
 CSS の {{cssxref("appearance")}} プロパティの [`base-select`](/ja/docs/Web/CSS/Reference/Properties/appearance#base-select) 値は、{{htmlelement("select")}} 要素および {{cssxref("::picker()", "::picker(select)")}} 擬似要素にのみ適用され、これらを自由にスタイル設定できるようにします。現在、`<select>` 要素のスタイル設定のみに対応しています。`::picker(select)` 擬似要素のスタイル設定は、将来のバージョンで追加される予定です。この機能は、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)に関する取り組みの一環です。この機能を使用するには、2つの設定を有効にする必要があります。([Firefox バグ 1974787](https://bugzil.la/1974787))。
@@ -333,20 +333,6 @@ CSS の {{cssxref("appearance")}} プロパティの [`base-select`](/ja/docs/We
 - `dom.select.customizable_select.enabled`
   - : 有効にするには `true` に設定してください。
 - `layout.css.appearance-base.enabled`
-  - : 有効にするには `true` に設定してください。
-
-### CSS `attr()` 関数における名前空間属性
-
-CSS {{cssxref("attr")}} 関数は、[名前空間付き属性](/ja/docs/Web/CSS/Reference/Values/attr#名前空間)を受け入れるようになりました。これにより、[XML](/ja/docs/Web/XML) ベースの言語（[SVG](/ja/docs/Web/SVG) など）の要素から属性を取得し、それに応じてスタイルを設定することができます。([Firefox バグ 2014060](https://bugzil.la/2014060)。
-
-| リリースチャンネル | 追加バージョン | デフォルトで有効 |
-| ------------------ | -------------- | ---------------- |
-| Nightly            | 150            | No               |
-| Developer Edition  | 150            | No               |
-| Beta               | 150            | No               |
-| Release            | 150            | No               |
-
-- `layout.css.attr.enabled`
   - : 有効にするには `true` に設定してください。
 
 ### 段組みのコンテナー内における絶対位置指定要素と印刷
@@ -437,7 +423,7 @@ CSS の {{cssxref("line-clamp")}} プロパティは、`-webkit-` ベンダー�
 
 ### `text-decoration-inset` のパーセント値
 
-CSS の {{cssxref("text-decoration-inset")}} プロパティは、値としてパーセント値に対応するようになりました。パーセント値は {{cssxref("font-size")}} に対するインセットのサイズのパーセントで指定します。（[Firefox バグ 2044602](https://bugzil.la/2044602)）。
+CSS の {{cssxref("text-decoration-inset")}} プロパティは、値としてパーセント値に対応するようになりました。このパーセント値は、{{cssxref("box-decoration-break")}} の値に応じて、装飾ボックスのインラインサイズ、またはそれぞれのボックスフラグメントのインラインサイズに対するインセットのサイズをパーセントで指定します。（[Firefox バグ 2044602](https://bugzil.la/2044602)）。
 
 | リリースチャンネル | 追加バージョン | デフォルトで有効 |
 | ------------------ | -------------- | ---------------- |
@@ -449,19 +435,52 @@ CSS の {{cssxref("text-decoration-inset")}} プロパティは、値として�
 - `layout.css.text-decoration-inset-percentage.enabled`
   - : 有効にするには `true` に設定してください。
 
-### `progress()` に基づく値の計算
+### `view-timeline` に `view-timeline-inset` を含める
 
-CSS の {{cssxref("progress")}} 関数に対応するようになりました。これにより、ユーザーは最小値と最大値の間の値（または進行状況）に基づいて {{cssxref("number")}} を計算することができます。（[Firefox バグ 2047015](https://bugzil.la/2047015)）。
+{{cssxref("view-timeline")}} 一括指定プロパティが、{{cssxref("view-timeline-inset")}} プロパティに対応するようになりました。この短縮プロパティを使用すると、開始や終了のインセット（またはアウトセット）値を指定して、ビュー進行タイムラインの位置を調整できます。（[Firefox バグ 2046602](https://bugzil.la/2046602)）。
 
 | リリースチャンネル | 追加バージョン | デフォルトで有効 |
 | ------------------ | -------------- | ---------------- |
 | Nightly            | 155            | Yes              |
-| Developer Edition  | 154            | No               |
-| Beta               | 154            | No               |
-| Release            | 154            | No               |
+| Developer Edition  | 155            | No               |
+| Beta               | 155            | No               |
+| Release            | 155            | No               |
 
-- `layout.css.progress-function.enabled`
+- `layout.css.scroll-driven-animations.enabled`
   - : 有効にするには `true` に設定してください。
+
+### `timeline-scope` 名がデフォルトでグローバルになる
+
+名前付きタイムラインのスコープに関するデフォルトの挙動が、グローバルになるよう更新されました。これは、{{cssxref("timeline-scope")}} CSS プロパティと、{{cssxref("scroll-timeline-name")}} または {{cssxref("view-timeline-name")}} のいずれかの値を使用することで、要素およびそのサブツリーにスコープを限定することができます ([Firefox バグ 2024012](https://bugzil.la/2024012))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 155            | Yes              |
+| Developer Edition  | 155            | No               |
+| Beta               | 155            | No               |
+| Release            | 155            | No               |
+
+- `layout.css.scroll-driven-animations.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### `named-feature()` 対応クエリー
+
+`named-feature()` 関数を {{cssxref("@supports")}} アットルール内で使用すると、他の方法で検出できない構文を持つ機能がブラウザーで対応しているかどうかをテストできます。例えば、`@supports named-feature(anchor-position-follows-transforms)` などです。
+([Firefox バグ 2042977](https://bugzil.la/2042977) および [Firefox バグ 2055354](https://bugzil.la/2055354))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 156            | No               |
+| Developer Edition  | 156            | No               |
+| Beta               | 156            | No               |
+| Release            | 156            | No               |
+
+- `layout.css.anchor-positioning.follows-transforms.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### `at-rule()` 対応クエリー
+
+[`at-rule()`](/ja/docs/Web/CSS/Reference/At-rules/@supports#at-rule) 関数を {{cssxref("@supports")}} アットルールで使用すると、ブラウザーが指定された CSS アットルールを対応しているかどうかを検査できます。例えば、`@supports at-rule(@scope)` などです。また、{{cssxref("@import")}} の `supports()` 関数でも動作します。（[Firefox バグ 2060754](https://bugzil.la/2060754)）。
 
 ## SVG
 
@@ -481,6 +500,36 @@ CSS の {{cssxref("progress")}} 関数に対応するようになりました。
 | Release            | 151            | No               |
 
 - `mathml.href_link_on_non_anchor_element.disabled`
+  - : 有効にするには `true` に設定してください。
+
+### `MathMLAnchorElement` インターフェイスの実装
+
+この機能が有効になっている場合、MathML の [`<a>`](/ja/docs/Web/MathML/Reference/Element/a) 要素は、汎用的な [`MathMLElement`](/ja/docs/Web/API/MathMLElement) インターフェイスではなく、[`MathMLAnchorElement`](/ja/docs/Web/API/MathMLAnchorElement) インターフェイスによって DOM 内で正しく表されます。([Firefox バグ 2059312](https://bugzil.la/2059312))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 155            | Yes              |
+| Developer Edition  | 155            | No               |
+| Beta               | 155            | No               |
+| Release            | 155            | No               |
+
+- `mathml.a.element.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### MathML `<a>` 要素
+
+MathML の `<a>` 要素は、MathML コンテンツからハイパーリンクを作成し、HTML の {{HTMLElement("a")}} 要素と同じ URL コンポーネントのプロパティを持つ `MathMLAnchorElement` インターフェイスを公開します。
+
+このリリースでは、`rel` および `relList` IDL 属性に対応する機能が追加されました。（[Firefox バグ 2063819](https://bugzil.la/2063819)）。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 156            | Yes              |
+| Developer Edition  | 156            | No               |
+| Beta               | 156            | No               |
+| Release            | 156            | No               |
+
+- `mathml.a.element.enabled`
   - : 有効にするには `true` に設定してください。
 
 ## JavaScript
@@ -517,6 +566,23 @@ CSS の {{cssxref("progress")}} 関数に対応するようになりました。
 - `dom.multiple_import_maps.enabled`
   - : 有効にするには `true` に設定してください。
 
+### 正規表現におけるバッファー境界のアサーション
+
+[`\A`, `\z`, `\Z` のバッファー境界アサーション](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion)に対応するようになりました。
+`\A` および `\z` を使用すると、入力全体の先頭または末尾に一致することができますが、`\Z` は改行文字を無視して入力の末尾に一致します。
+これらのアサーションは、[`m`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline) フラグの影響を受けません（`^` や `$` とは異なります）。また、[Unicode 対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode)で使用できます（`u` または `v` フラグを設定した場合）でのみ使用できます。
+([Firefox バグ 2047706](https://bugzil.la/2047706))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 155            | No               |
+| Developer Edition  | —              | —                |
+| Beta               | —              | —                |
+| Release            | —              | —                |
+
+- `javascript.options.experimental.regexp_buffer_boundaries`
+  - : Nightly で有効にするには `true` に設定してください。
+
 ## API
 
 ### クラッシュレポート
@@ -544,11 +610,15 @@ CSS の {{cssxref("progress")}} 関数に対応するようになりました。
 実装内容には次のものがあります。
 
 - `customElementRegistry` プロパティ（{{domxref("Document")}}, {{domxref("Element")}}, {{domxref("ShadowRoot")}}）
-  ([Firefox バグ 2018900](https://bugzil.la/2018900))。
+  [`CustomElementRegistry()` コンストラクター](/ja/docs/Web/API/CustomElementRegistry/CustomElementRegistry) は、スコープ限定で使用するための新しい `CustomElementRegistry` オブジェクトを作成します。 ([Firefox バグ 2018900](https://bugzil.la/2018900))
+
+バージョン 156 より:
+
+- [スコープ付きカスタム要素レジストリー](/ja/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries)が対応するようになったため、シャドウルートはグローバルレジストリーで定義されたカスタム要素と競合しないカスタム要素を定義できるようになりました。([Firefox バグ 2064333](https://bugzil.la/2064333))。
 
 | リリースチャンネル | 追加バージョン | デフォルトで有効 |
 | ------------------ | -------------- | ---------------- |
-| Nightly            | 150            | No               |
+| Nightly            | 150            | Yes              |
 | Developer Edition  | 150            | No               |
 | Beta               | 150            | No               |
 | Release            | 150            | No               |
@@ -586,7 +656,7 @@ CSS の {{cssxref("progress")}} 関数に対応するようになりました。
 Linux や Intel Silicon 搭載 macOS などのその他のプラットフォームでは、nightly ビルドで有効化されています。
 この API の進捗については [Firefox バグ 1602129](https://bugzil.la/1602129) を参照してください。
 
-| リリースチャンネル | 追加バージョン | Enabled by default?                                                           |
+| リリースチャンネル | 追加バージョン | デフォルトで有効                                                              |
 | ------------------ | -------------- | ----------------------------------------------------------------------------- |
 | Nightly            | 141            | Yes                                                                           |
 | Developer Edition  | 141            | No (Yes on Windows and macOS on Apple silicon, not including service workers) |
@@ -600,7 +670,21 @@ Linux や Intel Silicon 搭載 macOS などのその他のプラットフォー�
 
 ### WebRTC とメディア
 
-[WebRTC API](/ja/docs/Web/API/WebRTC_API)、[Web Audio API](/ja/docs/Web/API/Web_Audio_API)、[Media Source Extensions API](/ja/docs/Web/API/Media_Source_Extensions_API)、[Encrypted Media Extensions API](/ja/docs/Web/API/Encrypted_Media_Extensions_API)、[Media Capture and Streams API](/ja/docs/Web/API/Media_Capture_and_Streams_API) にある以下の機能は実験的なものです。
+[WebRTC API](/ja/docs/Web/API/WebRTC_API)、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)、[メディアソース拡張 API](/ja/docs/Web/API/Media_Source_Extensions_API)、[暗号化メディア拡張 API](/ja/docs/Web/API/Encrypted_Media_Extensions_API)、[メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API) にある以下の機能は実験的なものです。
+
+#### オーディオセッション API
+
+[オーディオセッション API](/ja/docs/Web/API/Audio_Session_API) は、ウェブアプリケーションが、自身のオーディオと端末上で再生されている他のオーディオとの相互作用を制御するための仕組みを提供します。（[Firefoxのバグ 2055710](https://bugzil.la/2055710)）。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 155            | Yes              |
+| Developer Edition  | 153            | No               |
+| Beta               | 153            | No               |
+| Release            | 153            | No               |
+
+- `dom.audio_session.enabled`
+  - : 有効にするには `true` に設定してください。
 
 #### HTMLMediaElement のプロパティ: audioTracks および videoTracks
 
@@ -731,12 +815,12 @@ Firefox 149 では、従来の C++ 製 [JPEG XL](https://jpeg.org/jpegxl/) 画�
 [ウェブ共有 API](/ja/docs/Web/API/Web_Share_API) は、サイトのファイル、URL、その他のデータを共有することができます。
 この機能は、 Android ではすべてのビルドで有効になっていますが、デスクトップでは（以下で指定されていない限り）設定で隠されています。
 
-| リリースチャンネル | Version changed | Enabled by default?                         |
-| ------------------ | --------------- | ------------------------------------------- |
-| Nightly            | 71              | No (default). Yes (Windows from version 92) |
-| Developer Edition  | 71              | No                                          |
-| Beta               | 71              | No                                          |
-| Release            | 71              | No (Desktop). Yes (Android).                |
+| リリースチャンネル | 変更バージョン | デフォルトで有効                            |
+| ------------------ | -------------- | ------------------------------------------- |
+| Nightly            | 71             | No (default). Yes (Windows from version 92) |
+| Developer Edition  | 71             | No                                          |
+| Beta               | 71             | No                                          |
+| Release            | 71             | No (Desktop). Yes (Android).                |
 
 - `dom.webshare.enabled`
   - : 有効にするには `true` に設定してください。
@@ -745,14 +829,29 @@ Firefox 149 では、従来の C++ 製 [JPEG XL](https://jpeg.org/jpegxl/) 画�
 
 通知には、Windows システムおよび Nightly リリースでは、既定で [`requireInteraction`](/ja/docs/Web/API/Notification/requireInteraction) プロパティが true に設定されています。 ([Firefox バグ 1794475](https://bugzil.la/1794475)).
 
-| リリースチャンネル | Version changed | デフォルトで有効 |
-| ------------------ | --------------- | ---------------- |
-| Nightly            | 117             | Yes              |
-| Developer Edition  | 117             | No               |
-| Beta               | 117             | No               |
-| Release            | 117             | Windows only     |
+| リリースチャンネル | 変更バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 117            | Yes              |
+| Developer Edition  | 117            | No               |
+| Beta               | 117            | No               |
+| Release            | 117            | Windows only     |
 
 - `dom.webnotifications.requireinteraction.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### コンテナータイミング API
+
+コンテナータイミング API は、コンテナー要素のコンテンツが描画された時点を報告するため、ビューポート全体ではなく、ページの一部の領域のレンダリング時間を測定することができます。
+([Firefox bug 1940240](https://bugzil.la/1940240)).
+
+| リリースチャンネル | 変更バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 156            | No               |
+| Developer Edition  | 156            | No               |
+| Beta               | 156            | No               |
+| Release            | 156            | No               |
+
+- `dom.enable_container_timing`
   - : 有効にするには `true` に設定してください。
 
 ## セキュリティとプライバシー
