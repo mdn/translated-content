@@ -19,7 +19,7 @@ l10n:
 
 ## 示例
 
-在我们的 [screenLeft 和 screenTop](https://mdn.github.io/dom-examples/screenleft-screentop/) 示例中，你会看到一块已绘制圆形的 canvas。此示例使用 {{domxref("Window.screenLeft")}}/{{domxref("Window.screenTop")}} 加上 {{domxref("Window.requestAnimationFrame()")}}，即使窗口位置发生移动，也会不断将圆重绘在屏幕上的同一物理位置。
+在我们的 [screenLeft 和 screenTop](https://mdn.github.io/dom-examples/screenleft-screentop/) 示例中，你会看到一块已绘制圆形的 canvas。此示例使用 {{domxref("Window.screenLeft")}} 和 {{domxref("Window.screenTop")}} 加上 {{domxref("Window.requestAnimationFrame()")}}，即使窗口位置发生移动，也会不断将圆重绘在屏幕上的同一物理位置。
 
 更多信息请参见 {{domxref("Window.screenLeft")}}。
 
