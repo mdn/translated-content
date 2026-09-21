@@ -1,70 +1,108 @@
 ---
 title: TextDecoder
 slug: Web/API/TextDecoder
+l10n:
+  sourceCommit: ccd1540ad8c51242b318bf437dfabe2e5315b3fa
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
-**`TextDecoder`** 接口表示一个文本解码器，一个解码器只支持一种特定文本编码，例如 `UTF-8`、`ISO-8859-2`、`KOI8-R`、`GBK`，等等。解码器将字节流作为输入，并提供码位流作为输出。
-
-{{AvailableInWorkers}}
+**`TextDecoder`** 接口表示一个文本解码器，它只支持一种特定文本编码，例如 `UTF-8`、`ISO-8859-2`、`GBK`，等等。解码器接受字节数组输入，输出 JavaScript 字符串。
 
 ## 构造函数
 
 - {{DOMxRef("TextDecoder.TextDecoder", "TextDecoder()")}}
-  - : 返回一个新构造的 `TextDecoder`，它使用参数中指定的解码方法生成码位流。
+  - : 创建并返回一个新的 `TextDecoder`。
 
-## 属性
+## 实例属性
 
 _`TextDecoder` 接口不继承任何属性。_
 
-- {{DOMxRef("TextDecoder.prototype.encoding")}}{{ReadOnlyInline}}
+- {{DOMxRef("TextDecoder.encoding")}} {{ReadOnlyInline}}
   - : 一个包含的解码器名称的字符串，即描述 `TextDecoder` 将使用的方法的字符串。
-- {{DOMxRef("TextDecoder.prototype.fatal")}}{{ReadOnlyInline}}
-  - : 一个{{jsxref('Boolean', '布尔值', '', '1')}}，表示错误模式是否致命。
-- {{DOMxRef("TextDecoder.prototype.ignoreBOM")}} {{ReadOnlyInline}}
-  - : 一个{{jsxref('Boolean', '布尔值', '', '1')}}，表示是否忽略[字节顺序标记（BOM）](https://www.w3.org/International/questions/qa-byte-order-mark)标记。
+- {{DOMxRef("TextDecoder.fatal")}} {{ReadOnlyInline}}
+  - : 一个布尔值，表示错误模式是否为严重错误。
+- {{DOMxRef("TextDecoder.ignoreBOM")}} {{ReadOnlyInline}}
+  - : 一个布尔值，表示是否忽略[字节顺序标记（BOM）](https://www.w3.org/International/questions/qa-byte-order-mark)标记。
 
-## 方法
+## 实例方法
 
 _`TextDecoder` 接口不继承任何方法_。
 
-- {{DOMxRef("TextDecoder.prototype.decode()")}}
-  - : 返回一个字符串，其中包含使用特定 `TextDecoder` 对象的方法解码的文本。
+- {{DOMxRef("TextDecoder.decode()")}}
+  - : 将给定字节解码为 JavaScript 字符串，并返回它。
 
 ## 示例
 
-### 用类型化数组表示文本
+### 解码 UTF-8 文本
 
-本示例展示如何解码中文/日语字符![](2019-05-21_191907.png)，用五个不同的类型化数组表示：{{jsxref("Uint8Array")}}、{{jsxref("Int8Array")}}、{{jsxref("Uint16Array")}}、{{jsxref("Int16Array")}} 和 {{jsxref("Int32Array")}}。
+此示例展示如何解码字符“𠮷”的 UTF-8 编码形式。
 
-```js
-let utf8decoder = new TextDecoder(); // default 'utf-8' or 'utf8'
-
-let u8arr = new Uint8Array([240, 160, 174, 183]);
-let i8arr = new Int8Array([-16, -96, -82, -73]);
-let u16arr = new Uint16Array([41200, 47022]);
-let i16arr = new Int16Array([-24336, -18514]);
-let i32arr = new Int32Array([-1213292304]);
-
-console.log(utf8decoder.decode(u8arr));
-console.log(utf8decoder.decode(i8arr));
-console.log(utf8decoder.decode(u16arr));
-console.log(utf8decoder.decode(i16arr));
-console.log(utf8decoder.decode(i32arr));
+```html
+<button id="decode">解码</button>
+<button id="reset">重置</button>
+<div id="output"></div>
 ```
 
-### 处理非 UTF8 文本
+```css hidden
+div {
+  margin: 1rem 0;
+}
+```
 
-在此示例中，我们对俄语文本“Привет，мир！”进行编码，它的意思是（"Hello, world."）。在我们的 {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} 构造函数中，我们指定适用于西里尔字母的 Windows-1251 字符编码。
+```js
+const utf8decoder = new TextDecoder(); // default 'utf-8'
+const encodedText = new Uint8Array([240, 160, 174, 183]);
+
+const output = document.querySelector("#output");
+const decodeButton = document.querySelector("#decode");
+decodeButton.addEventListener("click", () => {
+  output.textContent = utf8decoder.decode(encodedText);
+});
+
+const resetButton = document.querySelector("#reset");
+resetButton.addEventListener("click", () => {
+  window.location.reload();
+});
+```
+
+{{embedlivesample("解码 UTF-8 文本")}}
+
+### 解码非 UTF-8 文本
+
+在此示例中，我们对俄语文本“Привет，мир!”（它的意思是“大家好”）进行解码。在我们的 {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} 构造函数中，我们指定 Windows-1251 字符编码。
+
+```html
+<button id="decode">解码</button>
+<button id="reset">重置</button>
+<div id="output"></div>
+```
+
+```css hidden
+div {
+  margin: 1rem 0;
+}
+```
 
 ```js
 const win1251decoder = new TextDecoder("windows-1251");
-const bytes = new Uint8Array([
+const encodedText = new Uint8Array([
   207, 240, 232, 226, 229, 242, 44, 32, 236, 232, 240, 33,
 ]);
-console.log(win1251decoder.decode(bytes)); // Привет, мир!
+
+const decoded = document.querySelector("#decoded");
+const decodeButton = document.querySelector("#decode");
+decodeButton.addEventListener("click", () => {
+  decoded.textContent = win1251decoder.decode(encodedText);
+});
+
+const resetButton = document.querySelector("#reset");
+resetButton.addEventListener("click", () => {
+  window.location.reload();
+});
 ```
+
+{{embedlivesample("解码非 UTF-8 文本")}}
 
 ## 规范
 
@@ -77,5 +115,3 @@ console.log(win1251decoder.decode(bytes)); // Привет, мир!
 ## 参见
 
 - {{DOMxRef("TextEncoder")}} 接口描述了逆操作。
-- 一个[垫片](https://code.google.com/p/stringencoding/)，允许在不支持它的浏览器使用这个接口。
-- [Node.js 从 v11.0.0 开始支持全局导出](https://nodejs.org/api/util.html#util_class_util_textdecoder)
