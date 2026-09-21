@@ -19,7 +19,6 @@ MDN 提供了用于生成链接列表的宏：
 
 - [`\{{QuickLinksWithSubpages()}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/quick_links_with_subpages.rs)
   - : 使用当前页面（或指定页面）的子页面作为目标，生成一组快速链接。这将创建最多两层深的层次化列表。页面的标题用作链接文本，摘要用作工具提示。
- 
 例如，若要插入一个包含本页面及其同级页面的有序链接列表，请按以下方式编写：
 
 ```md
