@@ -1,12 +1,18 @@
 ---
 title: dy
 slug: Web/SVG/Reference/Attribute/dy
-original_slug: Web/SVG/Attribute/dy
+l10n:
+  sourceCommit: f542ed344953b3312fc92150bba11536667e288a
 ---
 
-L'attribut **`dy`** indique un décalage sur l'axe y de la position d'un élément ou de son contenu.
+L'attribut **`dy`** indique un décalage le long de l'axe y sur la position d'un élément ou de son contenu.
 
-Sept éléments utilisent cet attribut: {{SVGElement('altGlyph')}}, {{SVGElement('feDropShadow')}}, {{SVGElement('feOffset')}}, {{SVGElement('glyphRef')}}, {{SVGElement('text')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
+Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
+
+- {{SVGElement('feDropShadow')}}
+- {{SVGElement('feOffset')}}
+- {{SVGElement('text')}}
+- {{SVGElement('tspan')}}
 
 ## Exemple
 
@@ -20,7 +26,7 @@ svg {
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Lignes indiquant la position des glyphes -->
+  <!-- Lignes matérialisant la position des glyphes -->
   <line x1="10%" x2="10%" y1="0" y2="100%" />
   <line x1="0" x2="100%" y1="30%" y2="30%" />
   <line x1="0" x2="100%" y1="80%" y2="80%" />
@@ -28,7 +34,7 @@ svg {
   <!-- Un texte de référence -->
   <text x="10%" y="30%" fill="grey">SVG</text>
 
-  <!-- Le même texte avec un décalage sur l'axe y -->
+  <!-- Le même texte, décalé le long de l'axe y -->
   <text dy="50%" x="10%" y="30%">SVG</text>
 </svg>
 ```
@@ -41,50 +47,19 @@ line {
 }
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 200)}}
-
-## altGlyph
-
-> [!WARNING]
-> Depuis {{SVGElement('altGlyph')}} est déprécié et ne devrait pas être utilisé.
-
-Pour {{SVGElement('altGlyph')}}, s'il ne contient qu'une seule valeur, `dy` définit un décalge sur l'axe y pour tous les glyphes.
-
-S'il a plusieurs valeurs, `dy` définit un décalage sur l'axe y individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent la valeur `0`. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs restantes sont ignorées.
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        Liste de
-        <strong
-          ><a href="/docs/Web/SVG/Guides/Content_type#Length">&#x3C;length></a></strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><em>aucune</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
+{{EmbedLiveSample("Exemple", '100%', 200)}}
 
 ## feDropShadow
 
-Pour {{SVGElement('feDropShadow')}}, `dy` définit le décalage x de l'ombre portée. L'unité utilisée pour résoudre la valeur est définie par l'attribut {{SVGAttr('primitiveUnits')}} de l'élément {{SVGElement('filter')}}.
+Pour {{SVGElement('feDropShadow')}}, `dy` définit le décalage en y de l'ombre portée. L'unité utilisée pour résoudre la valeur de l'attribut est déterminée par l'attribut {{SVGAttr('primitiveUnits')}} de l'élément {{SVGElement('filter')}}.
 
-<table class="standard-table">
+<table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Guides/Content_type#Number">&#x3C;number></a></strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#nombre">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -101,43 +76,15 @@ Pour {{SVGElement('feDropShadow')}}, `dy` définit le décalage x de l'ombre por
 
 ## feOffset
 
-Pour {{SVGElement('feOffset')}}, `dy` définit le décalage x de l'élément source du filtre. L'unité utilisée pour résoudre la valeur est définie par l'attribut {{SVGAttr('primitiveUnits')}} de l'élément {{SVGElement('filter')}}.
+Pour {{SVGElement('feOffset')}}, `dy` définit le décalage en y du graphique d'entrée du filtre. L'unité utilisée pour résoudre la valeur de l'attribut est déterminée par l'attribut {{SVGAttr('primitiveUnits')}} de l'élément {{SVGElement('filter')}}.
 
-<table class="standard-table">
+<table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Guides/Content_type#Number">&#x3C;number></a></strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## glyphRef
-
-> [!WARNING]
-> Depuis SVG2 {{SVGElement('glyphRef')}} est déprécié et ne devrait pas être utilisé.
-
-Pour {{SVGElement('glyphRef')}}, `dy` définit le décalage x du glyphe, dans le système métrique de la police.
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong
-          ><a href="/docs/Web/SVG/Guides/Content_type#Number">&#x3C;number></a></strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#nombre">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -154,19 +101,26 @@ Pour {{SVGElement('glyphRef')}}, `dy` définit le décalage x du glyphe, dans le
 
 ## text
 
-Pour {{SVGElement('text')}}, s'il ne contient qu'une seule valeur, `dx` définit un décalage sur l'axe x pour tous les glyphes.
+Pour {{SVGElement('text')}}, s'il contient une seule valeur, `dy` définit un décalage le long de l'axe y pour tous les glyphes.
 
-S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent une valeur de `0`. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs supplémentaires sont ignorées.
+S'il y a plusieurs valeurs, `dy` définit un décalage le long de l'axe y pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs que de glyphes, les glyphes restants utilisent la valeur `0`. S'il y a plus de valeurs que de glyphes, les valeurs superflues sont ignorées.
 
-<table class="standard-table">
+<table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        Liste de
-        <strong
-          ><a href="/docs/Web/SVG/Guides/Content_type#Length">&#x3C;length></a></strong
+        Liste de (<strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
         >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >)
       </td>
     </tr>
     <tr>
@@ -203,7 +157,7 @@ svg {
   <line x1="50" x2="50" y1="0" y2="100%" />
   <line x1="90" x2="90" y1="0" y2="100%" />
 
-  <!-- Le comportement change en fonction du nombre de valeurs de l'attribut -->
+  <!-- Le comportement change selon le nombre de valeurs de l'attribut -->
   <text dy="20" x="10" y="30">SVG</text>
   <text dy="0 10" x="50" y="30">SVG</text>
   <text dy="0 10 20" x="90" y="30">SVG</text>
@@ -220,52 +174,28 @@ line {
 
 {{EmbedLiveSample('text', '100%', 100)}}
 
-## tref
-
-> [!WARNING]
-> Depuis SVG2 {{SVGElement('tref')}} est déprécié et ne devrait pas être utilisé.
-
-Pour {{SVGElement('tref')}}, s'il ne contient qu'une seule valeur, `dx` définit un décalage sur l'axe x pour tous les glyphes.
-
-S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent une valeur de `0`. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs supplémentaires sont ignorées.
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        Liste de
-        <strong
-          ><a href="/docs/Web/SVG/Guides/Content_type#Length">&#x3C;length></a></strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><em>aucune</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
 ## tspan
 
-Pour {{SVGElement('tspan')}}, s'il ne contient qu'une seule valeur, `dx` définit un décalage sur l'axe x pour tous les glyphes.
+Pour {{SVGElement('tspan')}}, s'il contient une seule valeur, `dy` définit un décalage le long de l'axe y pour tous les glyphes de substitution.
 
-S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent une valeur de `0`. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs supplémentaires sont ignorées.
+S'il y a plusieurs valeurs, `dy` définit un décalage le long de l'axe y pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs que de glyphes, les glyphes restants utilisent la valeur `0`. S'il y a plus de valeurs que de glyphes, les valeurs superflues sont ignorées.
 
-<table class="standard-table">
+<table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        Liste de
-        <strong
-          ><a href="/docs/Web/SVG/Guides/Content_type#Length">&#x3C;length></a></strong
+        Liste de (<strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
         >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >)
       </td>
     </tr>
     <tr>

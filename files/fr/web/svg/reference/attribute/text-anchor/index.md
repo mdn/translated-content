@@ -1,23 +1,24 @@
 ---
 title: text-anchor
 slug: Web/SVG/Reference/Attribute/text-anchor
-original_slug: Web/SVG/Attribute/text-anchor
+l10n:
+  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
 ---
 
-L'attribut **`text-anchor`** est utilisé pour aligner (alignement de début, de milieu ou de fin) une chaîne de texte préformaté ou un texte auto-enveloppé dont la zone d'enveloppement est déterminée à partir de la propriété [`inline-size`](/fr/docs/Web/SVG/Attribute/inline-size) par rapport à un point donné. Elle ne s'applique pas aux autres types de texte auto-enveloppé. Pour ces cas, vous devez utiliser [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align). Pour le texte à plusieurs lignes, l'alignement a lieu pour chaque ligne.
+L'attribut **`text-anchor`** sert à aligner (au début, au milieu ou à la fin) une chaîne de texte préformaté, ou un texte à retour à la ligne automatique dont la zone de retour est déterminée par la propriété {{cssxref("inline-size")}}, par rapport à un point donné.
 
-L'attribut `text-anchor` est appliqué à chaque bloc de texte individuel dans un élément [`<text>`](/fr/docs/Web/SVG/Reference/Element/text) donné. Chaque fragment de texte a une position de texte actuelle initiale, qui représente le point du système de coordonnées de l'utilisateur résultant (selon le contexte) de l'application des attributs [`x`](/fr/docs/Web/SVG/Reference/Attribute/x) et [`y`](/fr/docs/Web/SVG/Attribute/y) sur l'élément `<text>`, toute valeur d'attribut `x` ou `y` sur un élément [`<tspan>`](/fr/docs/Web/SVG/Reference/Element/tspan), [`<tref>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) ou [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph) assigné explicitement au premier caractère rendu dans un fragment de texte, ou la détermination de la position initiale du texte actuel pour un élément [`<textPath>`](/fr/docs/Web/SVG/Element/textPath).
+Cet attribut ne s'applique pas aux autres types de texte à retour à la ligne automatique. Dans ces cas-là, il faut utiliser {{cssxref("text-align")}}. Pour un texte sur plusieurs lignes, l'alignement s'applique à chaque ligne.
+
+L'attribut `text-anchor` s'applique à chaque fragment de texte d'un élément {{SVGElement("text")}} donné. Chaque fragment de texte possède une position de texte courante initiale, qui représente le point du système de coordonnées utilisateur résultant, selon le contexte, de l'application des attributs {{SVGAttr("x")}} et {{SVGAttr("y")}} sur l'élément `<text>`, de toute valeur d'attribut `x` ou `y` portée par un élément {{SVGElement("tspan")}} et affectée explicitement au premier caractère affiché du fragment, ou de la détermination de la position de texte courante initiale pour un élément {{SVGElement("textPath")}}.
 
 > [!NOTE]
-> En tant qu'attribut de présentation, `text-anchor` peut être utilisé comme une propriété CSS.
+> En tant qu'attribut de présentation, `text-anchor` possède une propriété CSS équivalente&nbsp;: {{cssxref("text-anchor")}}. Lorsque les deux sont définies, c'est la propriété CSS qui l'emporte.
 
-Cet attribut peut être utilisé pour les éléments SVG suivants :
+Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 
-- [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph)
-- [`<text>`](/fr/docs/Web/SVG/Reference/Element/text)
-- [`<textPath>`](/fr/docs/Web/SVG/Element/textPath)
-- [`<tref>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face)
-- [`<tspan>`](/fr/docs/Web/SVG/Reference/Element/tspan)
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tspan")}}
 
 ## Exemple
 
@@ -31,17 +32,17 @@ svg {
 
 ```html
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- Matérialisation des ancrages -->
+  <!-- Matérialisation des ancres -->
   <path
     d="M60,15 L60,110 M30,40 L90,40 M30,75 L90,75 M30,110 L90,110"
     stroke="grey" />
 
-  <!-- Ancres en action -->
+  <!-- Les ancres en action -->
   <text text-anchor="start" x="60" y="40">A</text>
   <text text-anchor="middle" x="60" y="75">A</text>
   <text text-anchor="end" x="60" y="110">A</text>
 
-  <!-- Matérialisation des ancrages -->
+  <!-- Matérialisation des ancres -->
   <circle cx="60" cy="40" r="3" fill="red" />
   <circle cx="60" cy="75" r="3" fill="red" />
   <circle cx="60" cy="110" r="3" fill="red" />
@@ -71,18 +72,18 @@ svg {
       <td><code>start</code> | <code>middle</code> | <code>end</code></td>
     </tr>
     <tr>
-      <th scope="row">Animable</th>
-      <td>discrete</td>
+      <th scope="row">Animation</th>
+      <td>discrète</td>
     </tr>
   </tbody>
 </table>
 
 - `start`
-  - : Les caractères rendus sont alignés de telle sorte que le début de la chaîne de texte se trouve à la position initiale du texte courant. Pour un élément dont la valeur de propriété [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction) est `ltr` (typique de la plupart des langues européennes), le côté gauche du texte est rendu à la position initiale du texte. Pour un élément dont la valeur de la propriété direction est `rtl` (typique de l'arabe et de l'hébreu), le côté droit du texte est rendu à la position initiale du texte. Pour un élément dont la direction du texte primaire est verticale (souvent typique des textes asiatiques), le côté supérieur du texte est rendu à la position initiale du texte.
+  - : Les caractères affichés sont alignés de telle sorte que le début de la chaîne de texte se trouve à la position de texte courante initiale. Pour un élément dont la propriété {{cssxref("direction")}} vaut `ltr` (comme pour la plupart des langues européennes), le côté gauche du texte est affiché à la position de texte initiale. Pour un élément dont la propriété `direction` vaut `rtl` (comme pour l'arabe et l'hébreu), c'est le côté droit du texte. Pour un élément dont la direction principale du texte est verticale (fréquent pour les textes asiatiques), c'est le haut du texte.
 - `middle`
-  - : Les caractères rendus sont alignés de telle sorte que le milieu de la chaîne de texte se trouve à la position actuelle du texte. (Pour le texte sur un chemin, la chaîne de texte est d'abord disposée en ligne droite. Le point médian entre le début et la fin de la chaîne de texte est déterminé. Ensuite, la chaîne de texte est mappée sur le chemin avec ce point médian placé à la position actuelle du texte).
+  - : Les caractères affichés sont alignés de telle sorte que le milieu de la chaîne de texte se trouve à la position de texte courante. (Pour un texte sur un chemin, la chaîne de texte est d'abord disposée en ligne droite, conceptuellement. Le point médian entre le début et la fin de la chaîne est déterminé. La chaîne est ensuite projetée sur le chemin, ce point médian étant placé à la position de texte courante.)
 - `end`
-  - : Les caractères rendus sont décalés de telle sorte que la fin du texte rendu résultant (position finale du texte actuel avant l'application de la propriété `text-anchor`) se trouve à la position initiale du texte actuel. Pour un élément avec une valeur de propriété `direction` égale à `ltr` (typique pour la plupart des langues européennes), le côté droit du texte est rendu à la position initiale du texte. Pour un élément avec une valeur de propriété `direction` égale à `rtl` (typique pour l'arabe et l'hébreu), le côté gauche du texte est rendu à la position initiale du texte. Pour un élément dont la direction primaire du texte est verticale (souvent typique des textes asiatiques), le bas du texte est rendu à la position initiale du texte.
+  - : Les caractères affichés sont décalés de telle sorte que la fin du texte affiché obtenu (la position de texte courante finale, avant application de la propriété `text-anchor`) se trouve à la position de texte courante initiale. Pour un élément dont la propriété `direction` vaut `ltr` (comme pour la plupart des langues européennes), le côté droit du texte est affiché à la position de texte initiale. Pour un élément dont la propriété `direction` vaut `rtl` (comme pour l'arabe et l'hébreu), c'est le côté gauche du texte. Pour un élément dont la direction principale du texte est verticale (fréquent pour les textes asiatiques), c'est le bas du texte.
 
 ## Spécifications
 
@@ -91,3 +92,8 @@ svg {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- L'élément SVG {{SVGElement("text")}}
+- La propriété CSS {{cssxref('text-anchor')}}
