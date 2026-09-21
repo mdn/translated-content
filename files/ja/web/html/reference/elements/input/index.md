@@ -1,9 +1,9 @@
 ---
-title: HTML `<input>` 入力要素
+title: "`<input>` 入力要素 (HTML)"
 short-title: <input>
 slug: Web/HTML/Reference/Elements/input
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 6488b82388db9e593ec28be1d845688e29c679e1
 ---
 
 **`<input>`** は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーからデータを受け取るための、ウェブベースのフォーム用の操作可能なコントロールを作成するために使用します。端末と{{Glossary("User agent", "ユーザーエージェント")}}によりますが、広範に渡る種類のデータ入力やコントロールウィジェットが利用できます。`<input>` 要素は入力型と属性の組み合わせの数が非常に多いため、HTML の中で最も強力かつ最も複雑な要素の一つです。
@@ -617,6 +617,12 @@ label {
 - `value`
   - : 入力コントロールの値です。HTML の中で指定されると、これは初期値となり、その後で JavaScript を使用してそれぞれの {{domxref("HTMLInputElement")}} オブジェクトの `value` プロパティにアクセスすることで、いつでも変更したり受け取ったりすることができます。`value` 属性は常に省略可ですが、`checkbox`, `radio`, `hidden` においては必須だと考えてください。
 
+- `webkitdirectory`
+  - : 論理属性の `webkitdirectory` は、存在する場合、ファイル選択ダイアログのインターフェイスでユーザーが選択できる対象をディレクトリーのみに限定することを示します。詳細や例については、{{domxref("HTMLInputElement.webkitdirectory")}} を参照してください。
+
+    > [!NOTE]
+    > `webkitdirectory` は、[ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API) で定義されています。この名前が `webkitdirectory` となっているのは、もともと Chrome 独自の API だったためです。現在では、すべてのブラウザーで利用可能です。
+
 - `width`
   - : `image` 入力ボタンにのみ有効で、`width` にはグラフィックの送信ボタンを表現するために表示する画像ファイルの幅を指定します。{{HTMLElement("input/image", "image")}} 入力型を参照してください。
 
@@ -656,14 +662,6 @@ label {
         以前の検索クエリーのドロップダウンリストに表示する項目の最大数です。<strong>Safari のみ。</strong>
       </td>
     </tr>
-    <tr>
-      <td>
-        <a href="#webkitdirectory"><code>webkitdirectory</code></a>
-      </td>
-      <td>
-        論理属性で、ユーザーがディレクトリー（または <a href="#multiple"><code>multiple</code></a> も存在すれば複数のディレクトリー）を選択できるようにするかどうかを示します。
-      </td>
-    </tr>
   </tbody>
 </table>
 
@@ -681,11 +679,6 @@ label {
   - : `results` 属性は Safari のみが対応しており、 `<input>` 要素のネイティブな検索クエリーのドロップダウンメニューに表示する項目の最大数を上書きすることができる数値です。
 
     この値は、負でない 10 進数でなければならなりません。指定しない場合、または無効な値を指定した場合は、ブラウザーのデフォルトの最大項目数が使用されます。
-
-- `webkitdirectory` {{non-standard_inline}}
-  - : 論理属性の `webkitdirectory` は、もし存在する場合は、ファイル選択インターフェイスでユーザーがディレクトリーのみを選択することができることを示します。詳しい解説と例については {{domxref("HTMLInputElement.webkitdirectory")}} を参照してください。
-
-    `webkitdirectory` はもともと WebKit ベースのブラウザー向けのみに実装されたものですが、Microsoft Edge や Firefox 50 以降でも使用できます。しかし、比較的広く対応されていますが、まだ標準になっておらず、代替手段がない限りは使用するべきではありません。
 
 ## メソッド
 
