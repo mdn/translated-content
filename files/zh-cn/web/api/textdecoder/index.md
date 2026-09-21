@@ -75,7 +75,7 @@ resetButton.addEventListener("click", () => {
 ```html
 <button id="decode">解码</button>
 <button id="reset">重置</button>
-<div id="output"></div>
+<div id="decoded"></div>
 ```
 
 ```css hidden
