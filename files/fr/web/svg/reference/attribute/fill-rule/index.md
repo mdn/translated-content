@@ -1,15 +1,23 @@
 ---
 title: fill-rule
 slug: Web/SVG/Reference/Attribute/fill-rule
-original_slug: Web/SVG/Attribute/fill-rule
+l10n:
+  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
 ---
 
-L'attribut **`fill-rule`** définit l'algorithme à utiliser pour déterminer les parties qui sont considérées _à l'intérieur_ de la forme.
+L'attribut **`fill-rule`** est un attribut de présentation qui définit l'algorithme à utiliser pour déterminer la partie _intérieure_ d'une forme.
 
 > [!NOTE]
-> `fill-rule` est un attribut de présentation et peut donc être utilisé comme propriété CSS.
+> En tant qu'attribut de présentation, `fill-rule` possède une propriété CSS équivalente&nbsp;: {{cssxref("fill-rule")}}. Lorsque les deux sont définies, c'est la propriété CSS qui l'emporte.
 
-Cet attribut peut être appliqué à n'importe quel élément mais n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
+Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
+
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tspan')}}
 
 ## Exemple
 
@@ -23,18 +31,17 @@ svg {
 
 ```html
 <svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- Valeur par défaut pour fill-rule -->
+  <!-- Valeur par défaut de fill-rule -->
   <polygon
     fill-rule="nonzero"
     stroke="red"
     points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
-  Les points au centre de la forme ont 2
-  segments (matérialisés par le trait rouge)
-  Avec la règle evenodd, ils sont considérés en
-  dehors de la forme, et l'intérieur de l'étoile
-  est donc vide.
+  Le centre de la forme est séparé de l'infini
+  par deux segments de chemin (matérialisés par
+  le trait rouge). Il est donc considéré comme
+  extérieur à la forme, et n'est pas rempli.
   -->
   <polygon
     fill-rule="evenodd"
@@ -43,11 +50,11 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 200)}}
+{{EmbedLiveSample("Exemple", '100%', 200)}}
 
-## Usage
+## Notes d'utilisation
 
-<table class="standard-table">
+<table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
@@ -59,18 +66,16 @@ svg {
     </tr>
     <tr>
       <th scope="row">Animation</th>
-      <td>Yes</td>
+      <td>discrète</td>
     </tr>
   </tbody>
 </table>
 
-L'attribut `fill-rule` peut prendre deux valeurs:
+L'attribut `fill-rule` offre deux façons de déterminer l'intérieur d'une forme, c'est-à-dire la zone à remplir&nbsp;:
 
 ### nonzero
 
-La valeur `nonzero` détermine si un point est à l'intérieur d'une forme en dessinant un rayon à partir de ce point vers l'infini dans toutes les directions, puis examine les endroits où un segment de la forme traverse le rayon.
-
-À chaque fois qu'un segment traverse le rayon de gauche à droite, on ajoute un. À chaque fois qu'un segment traverse le rayon de droite à gauche, on soustrait un. Si au final, le compte est égal à zéro, le point est l'extérieur. Dans le cas contraire, il est à l'intérieur.
+La valeur `nonzero` détermine si un point appartient à l'intérieur de la forme en traçant, depuis ce point, un rayon vers l'infini dans une direction quelconque, puis en examinant les endroits où un segment de la forme croise ce rayon. En partant d'un compte à zéro, on ajoute un chaque fois qu'un segment du chemin croise le rayon de gauche à droite, et on retranche un chaque fois qu'un segment croise le rayon de droite à gauche. Une fois les croisements comptés, si le résultat est zéro, le point est à l'extérieur du chemin. Sinon, il est à l'intérieur.
 
 #### Exemple
 
@@ -84,16 +89,16 @@ svg {
 
 ```html
 <svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effet de la règle de remplissage sur les segments qui se croisent -->
+  <!-- Effet de la règle nonzero sur des segments de chemin qui se croisent -->
   <polygon
     fill-rule="nonzero"
     stroke="red"
     points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
-  Effet sur une forme dans une forme
-  lorsque le segment va dans la même direction
-  (vers la droite)
+  Effet de la règle nonzero sur une forme dans une forme,
+  les segments allant dans la même direction
+  (les deux carrés dessinés dans le sens horaire, vers la droite)
   -->
   <path
     fill-rule="nonzero"
@@ -102,9 +107,9 @@ svg {
            M130,20 h50 v50 h-50 z" />
 
   <!--
-  Effet sur une forme dans une forme
-  lorsque le segment va dans la direction opposée
-  (vers la gauche contre vers la droite)
+  Effet de la règle nonzero sur une forme dans une forme,
+  les segments allant dans des directions opposées
+  (un carré dans le sens horaire, l'autre dans le sens antihoraire)
   -->
   <path
     fill-rule="nonzero"
@@ -118,7 +123,7 @@ svg {
 
 ### evenodd
 
-La valeur `evenodd` détermine si un point est à l'intérieur d'une forme en dessinant un rayon de à partir de ce point vers l'infini dans toutes les directions, et compte le nombre de segments de la forme qui traversent ce rayon. Si ce nombre est impair (_odd_ en anglais), alors le point est à l'intérieur. Si le nombre est pair (_even_ en anglais), alors le point est à l'extérieur.
+La valeur `evenodd` détermine si un point appartient à l'intérieur de la forme en traçant, depuis ce point, un rayon vers l'infini dans une direction quelconque, et en comptant le nombre de segments de la forme que ce rayon croise. Si ce nombre est impair (_odd_ en anglais), le point est à l'intérieur&nbsp;; s'il est pair (_even_ en anglais), le point est à l'extérieur.
 
 #### Exemple
 
@@ -132,16 +137,16 @@ svg {
 
 ```html
 <svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effet de la règle de remplissage sur les segments qui se croisent -->
+  <!-- Effet de la règle evenodd sur des segments de chemin qui se croisent -->
   <polygon
     fill-rule="evenodd"
     stroke="red"
     points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
-  Effet sur une forme dans une forme
-  lorsque le segment va dans la même direction
-  (vers la droite)
+  Effet de la règle evenodd sur une forme dans une forme,
+  les segments allant dans la même direction
+  (les deux carrés dessinés dans le sens horaire, vers la droite)
   -->
   <path
     fill-rule="evenodd"
@@ -150,9 +155,9 @@ svg {
            M130,20 h50 v50 h-50 z" />
 
   <!--
-  Effet sur une forme dans une forme
-  lorsque le segment va dans la direction opposée
-  (vers la gauche contre vers la droite)
+  Effet de la règle evenodd sur une forme dans une forme,
+  les segments allant dans des directions opposées
+  (un carré dans le sens horaire, l'autre dans le sens antihoraire)
   -->
   <path
     fill-rule="evenodd"
@@ -171,3 +176,7 @@ svg {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété CSS {{cssxref("fill-rule")}}

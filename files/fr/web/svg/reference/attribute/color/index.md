@@ -1,50 +1,51 @@
 ---
 title: color
 slug: Web/SVG/Reference/Attribute/color
-original_slug: Web/SVG/Attribute/color
+l10n:
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-L'attribut `color` est utilisé pour définir indirectement une valeur potentielle (`currentColor`) pour les attributs {{ SVGAttr("fill") }}, {{ SVGAttr("stroke") }}, {{ SvgAttr("stop-color") }}, {{ SVGAttr("flood-color") }} et {{ SVGAttr("lighting-color") }}.
+L'attribut **`color`** sert à fournir une valeur indirecte potentielle, `currentColor`, pour les attributs {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}} et {{SVGAttr("lighting-color")}}.
 
 > [!NOTE]
-> `color` étant un attribut de présentation, il peut être utilisé comme propriété CSS. Voir {{ cssxref("color","CSS color") }} pour plus d'informations.
+> En tant qu'attribut de présentation, `color` possède une propriété CSS équivalente&nbsp;: {{cssxref("color")}}. Lorsque les deux sont définies, c'est la propriété CSS qui l'emporte.
 
-## Contexte d'utilisation
+Techniquement, `color` peut être appliqué à n'importe quel élément, mais il n'a aucun effet direct sur les éléments SVG.
 
-<table class="standard-table">
+## Notes d'utilisation
+
+<table class="properties">
   <tbody>
-    <tr>
-      <th scope="row">Catégories</th>
-      <td>Attribut de présentation</td>
-    </tr>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <a href="/fr/SVG/Content_type#Color"
-          >&#x3C;color></a
-        >
-        | inherit
+        <code><a href="/fr/docs/Web/CSS/Reference/Values/color_value">&#x3C;color></a></code>
+        | <code>inherit</code>
       </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td>Dépend du user-agent</td>
     </tr>
     <tr>
       <th scope="row">Animation</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Document normatif</th>
-      <td>
-        <a href="http://www.w3.org/TR/SVG11/color.html#ColorProperty"
-          >SVG 1.1 (2nd Edition)</a
-        >
-      </td>
+      <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
 ## Exemple
 
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
 ```html
-<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <g color="green">
     <rect width="50" height="50" fill="currentColor" />
     <circle
@@ -58,19 +59,16 @@ L'attribut `color` est utilisé pour définir indirectement une valeur potentiel
 </svg>
 ```
 
-{{ EmbedLiveSample('Exemple', '100%', '110') }}
+{{EmbedLiveSample("Exemple", "100%", "110")}}
 
-## Éléments
+## Spécifications
 
-Les éléments suivants peuvent utiliser l'attribut `color`:
-
-- [Éléments de contenu textuel](/fr/docs/Web/SVG/Reference/Element#éléments_de_contenu_textuel) »
-- [Éléments de formes](/fr/docs/Web/SVG/Reference/Element#éléments_de_formes) »
-- {{ SVGElement("stop") }}
-- {{ SVGElement("feFlood") }}
-- {{ SVGElement("feDiffuseLighting") }}
-- {{ SVGElement("feSpecularLighting") }}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété CSS {{cssxref("color")}}

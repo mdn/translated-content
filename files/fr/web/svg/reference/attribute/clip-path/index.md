@@ -1,15 +1,35 @@
 ---
 title: clip-path
 slug: Web/SVG/Reference/Attribute/clip-path
-original_slug: Web/SVG/Attribute/clip-path
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-L'attribut **`clip-path`** permet d'appliquer un détourage à un élément.
+L'attribut de présentation **`clip-path`** définit un chemin de détourage, ou associe un chemin de détourage existant, à l'élément auquel il se rapporte.
 
 > [!NOTE]
-> `clip-path` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> En tant qu'attribut de présentation, `clip-path` possède une propriété CSS équivalente&nbsp;: {{cssxref("clip-path")}}. Lorsque les deux sont définies, c'est la propriété CSS qui l'emporte.
 
-Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('ellipse')}}, {{SVGElement('g')}}, {{SVGElement('glyph')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('marker')}}, {{SVGElement('mask')}}, {{SVGElement('path')}}, {{SVGElement('pattern')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, {{SVGElement('symbol')}}, {{SVGElement('text')}}, {{SVGElement('use')}}
+Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
+
+- {{SVGElement('a')}}
+- {{SVGElement('circle')}}
+- {{SVGElement('clipPath')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('g')}}
+- {{SVGElement('image')}}
+- {{SVGElement('line')}}
+- {{SVGElement('marker')}}
+- {{SVGElement('mask')}}
+- {{SVGElement('path')}}
+- {{SVGElement('pattern')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('svg')}}
+- {{SVGElement('symbol')}}
+- {{SVGElement('text')}}
+- {{SVGElement('use')}}
 
 ## Exemple
 
@@ -27,7 +47,7 @@ svg {
     <circle cx=".5" cy=".5" r=".5" />
   </clipPath>
 
-  <!-- En haut à gauche: Applique un détourage précédemment crée -->
+  <!-- En haut à gauche : applique un chemin de détourage personnalisé -->
   <rect
     x="1"
     y="1"
@@ -36,8 +56,9 @@ svg {
     stroke="green"
     clip-path="url(#myClip)" />
 
-  <!-- En haut à droite: Applique un détourage sur fill-box via une forme CSS.
-       Revient à créer un détourage avec clipPathUnits="objectBoundingBox" -->
+  <!-- En haut à droite : applique une forme CSS de base sur une géométrie
+       fill-box. Cela revient au même qu'un chemin de détourage personnalisé
+       dont clipPathUnits vaut objectBoundingBox -->
   <rect
     x="11"
     y="1"
@@ -46,7 +67,7 @@ svg {
     stroke="green"
     clip-path="circle() fill-box" />
 
-  <!-- En bas à gauche: Applique un détourage sur stroke-box via une forme CSS. -->
+  <!-- En bas à gauche -->
   <rect
     x="1"
     y="11"
@@ -55,8 +76,9 @@ svg {
     stroke="green"
     clip-path="circle() stroke-box" />
 
-  <!-- En bas à droite: Applique un détourage sur view-box via une forme CSS.
-       Revient à créer un détourage avec clipPathUnits="userSpaceOnUse" -->
+  <!-- En bas à droite : applique une forme CSS de base sur une géométrie
+       view-box. Cela revient au même qu'un chemin de détourage personnalisé
+       dont clipPathUnits vaut userSpaceOnUse -->
   <rect
     x="11"
     y="11"
@@ -67,17 +89,17 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 200)}}
+{{EmbedLiveSample("Exemple", '100%', 200)}}
 
-## Notes d'usage
+## Notes d'utilisation
 
-<table class="standard-table">
+<table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        {{cssxref('url')}} | [ {{cssxref('basic-shape')}} ||
-        &#x3C;geometry-box> ] | <code>none</code>
+        {{CSSXref("url_value", "&lt;url&gt;")}} | [ {{cssxref('basic-shape')}} ||
+        <code>&#x3C;geometry-box></code> ] | <code>none</code>
       </td>
     </tr>
     <tr>
@@ -92,10 +114,10 @@ svg {
 </table>
 
 - \<geometry-box>
-  - : une information supplémentaire pour dire comment une {{cssxref('basic-shape', 'forme CSS')}} est appliquée à un élément: `fill-box` indique d'utiliser la zone de sélection de l'objet ; `stroke-box` d'utiliser la zone de sélection de l'objet en prenant en plus le contour de l'élément; `view-box` d'utiliser le document SVG parent.
+  - : Une information supplémentaire qui indique comment une {{cssxref('basic-shape')}} est appliquée à un élément&nbsp;: `fill-box` indique d'utiliser la boîte englobante de l'objet&nbsp;; `stroke-box` indique d'utiliser la boîte englobante de l'objet étendue au contour&nbsp;; `view-box` indique d'utiliser la zone d'affichage SVG la plus proche comme boîte de référence.
 
 > [!NOTE]
-> Pour plus d'informations sur la syntaxe de clip-path, voir la propriété CSS {{cssxref('clip-path')}}.
+> Pour plus de détails sur la syntaxe de `clip-path`, voir la page de référence de la propriété CSS {{cssxref('clip-path')}}.
 
 ## Spécifications
 
@@ -104,3 +126,8 @@ svg {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété CSS {{cssxref("clip-path")}}
+- [Introduction au détourage en CSS](/fr/docs/Web/CSS/Guides/Masking/Clipping)
