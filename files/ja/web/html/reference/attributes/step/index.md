@@ -1,24 +1,22 @@
 ---
-title: "HTML 属性: step"
+title: "`step` 属性 (HTML)"
 short-title: step
 slug: Web/HTML/Reference/Attributes/step
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
-
-{{HTMLSidebar}}
 
 **`step`** 属性は、が従わなければならない刻み値を指定する数値、またはキーワード `any` です。数値の入力型、たとえば {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}}, {{HTMLElement("input/range", "range")}} 型に有効です。
 
-`step` は、スピナーボタンを上下にクリックしたり、範囲上でスライダーを左右に動かしたり、異なる日付タイプを検証したりする際の*刻み間隔*を設定します。明示的に指定されていない場合、 `step` の既定値は、 `number` と `range` の場合は 1、日付/時刻入力型の場合は1単位 (分、週、月、日) になります。値は正の整数または浮動小数点数、または刻みが指定されておらず、 ([`min`](/ja/docs/Web/HTML/Reference/Attributes/min) や [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) のような他の制約を除いて) すべての値が可能であることを意味する特別な値 `any` のいずれかでなければなりません。
+`step` は、スピナーボタンを上下にクリックしたり、範囲上でスライダーを左右に動かしたり、異なる日付タイプを検証したりする際の*刻み間隔*を設定します。明示的に指定されていない場合、 `step` のデフォルト値は、 `number` と `range` の場合は 1、日付/時刻入力型の場合は1単位 (分、週、月、日) になります。値は正の整数または浮動小数点数、または刻みが指定されておらず、 ([`min`](/ja/docs/Web/HTML/Reference/Attributes/min) や [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) のような他の制約を除いて) すべての値が可能であることを意味する特別な値 `any` のいずれかでなければなりません。
 
-`number` 入力型の既定の刻み値は 1 で、刻みの基底値が整数でない場合を除き、整数のみを入力することができます。 `time` の既定の刻み値は 60 秒で、 900 は 15 分と等しくなります。
+step の基数から整数倍の刻み値の値のみが有効です。基数は指定されていれば [`min`](/ja/docs/Web/HTML/Reference/Attributes/min) で、そうでなければ [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value)、またはどちらも提供されていなければ `0` です（`week` を除きます。この step の基数は −259,200,000 であり、これは週 `1970-W01` の開始点を表します）。
 
 ## 構文
 
 <table class="no-markdown">
   <caption>
-    step の既定値
+    step のデフォルト値
   </caption>
   <thead>
     <tr>
@@ -81,7 +79,7 @@ l10n:
 <input type="number" min="10" step="2" />
 ```
 
-`step` が省略された場合、任意の整数が有効ですが、`step` が既定で 1 に設定されているため、4.2 のような実数は無効です。 4.2 が有効であるためには、
+`step` が省略された場合、任意の整数が有効ですが、`step` がデフォルトで 1 に設定されているため、4.2 のような実数は無効です。 4.2 が有効であるためには、
 
 - `step` が `any`, 0.1, 0.2 のいずれかに設定されているか、
 - `min` の値が .2 で終わる数値、例えば 0.2, 1.2, -5.2 などである必要があります。
@@ -90,7 +88,7 @@ l10n:
 
 ### `min` の step への影響
 
-`min` の値は、 `step` 属性がなくても有効な値を定義します。これは `step` の既定値が `number` 入力型では `1` であるからです。
+`min` の値は、 `step` 属性がなくても有効な値を定義します。これは `step` のデフォルト値が `number` 入力型では `1` であるからです。
 
 無効な入力の周囲に太く赤い境界を追加します。
 
@@ -115,7 +113,7 @@ input:invalid {
 
 詳しくは[クライアント側制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)と {{domxref("ValidityState.stepMismatch", "stepMismatch")}} を参照してください。
 
-## アクセシビリティの考慮
+## アクセシビリティの注意事項
 
 ユーザーがフォームに記入したり、個々のフォームコントロールを使用するのに役立つ説明を提供してください。必須の入力、任意の入力、データの書式、その他の関連する情報を示してください。 `min` 属性を使用する場合は、この最大値の要件がユーザーに理解されていることを確認してください。 {{htmlelement('label')}} 内で指示を提供すれば十分かもしれません。ラベルの外に指示を提供すれば、より柔軟な配置やデザインが可能になるので、 [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) または [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) を使用することを検討してください。
 
