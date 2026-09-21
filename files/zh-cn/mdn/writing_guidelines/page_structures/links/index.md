@@ -53,7 +53,7 @@ MDN 提供了用于生成链接列表的宏：
 
 某些参考特性包含针对相关功能的嵌套页面。例如，HTML `<input>` 元素针对不同的输入类型拥有多个嵌套页面，例如 `Web/HTML/Reference/Elements/input/range` 对应范围输入类型。
 
-如果像 `\{{HTMLElement("input/range")}}` 这样将路径信息作为第一个参数传递给宏，生成的链接将是“{{HTMLElement("input/range")}}”，这并非您想要的结果。请使用第二个参数来显示不同的链接文本。因此，若要生成指向“range”输入类型的链接，应将宏写为 `\{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}`，以生成“{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt; </code>")}}”。（请注意，如果第二个参数包含空格——例如此处 `input` 和 `type` 之间的空格——该宏会移除代码格式；因此我们已显式添加了 {{HTMLElement("code")}} 标签。）
+如果像 `\{{HTMLElement("input/range")}}` 这样将路径信息作为第一个参数传递给宏，生成的链接将是“{{HTMLElement("input/range")}}”，这并非你想要的结果。请使用第二个参数来显示不同的链接文本。因此，若要生成指向“range”输入类型的链接，应将宏写为 `\{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}`，以生成“{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt; </code>")}}”。（请注意，如果第二个参数包含空格——例如此处 `input` 和 `type` 之间的空格——该宏会移除代码格式；因此我们已显式添加了 {{HTMLElement("code")}} 标签。）
 
 ### 在 CSS 参考中使用 `CSSxRef`
 
