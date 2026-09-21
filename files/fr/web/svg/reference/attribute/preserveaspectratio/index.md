@@ -12,7 +12,7 @@ Le rapport largeur-hauteur d'une image SVG est défini par l'attribut {{SVGAttr(
 ## Syntaxe
 
 ```plain
-preserveAspectRatio="<align> [<meet or slice>]"
+preserveAspectRatio="<align> [<meetOrSlice>]"
 ```
 
 La valeur de l'attribut `preserveAspectRatio` se compose d'au plus deux mots-clés&nbsp;: une valeur d'alignement obligatoire, et un mot-clé `meet` ou `slice` facultatif.

@@ -60,10 +60,7 @@ svg {
 ```
 
 ```html live-sample___transform-single-element
-<svg
-  viewBox="-40 0 150 100"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg viewBox="-40 0 150 100" xmlns="http://www.w3.org/2000/svg">
   <g
     fill="grey"
     transform="rotate(-10 50 100)
@@ -89,7 +86,6 @@ Dans cet exemple, on applique un `transform` à l'élément racine {{SVGElement(
 <svg
   viewBox="-40 0 150 100"
   xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
   transform="rotate(-10 50 100)
                translate(-36 15.5)
                skewX(40)
