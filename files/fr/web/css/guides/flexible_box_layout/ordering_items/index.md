@@ -255,7 +255,7 @@ body {
 
 {{EmbedLiveSample("usecase-order", "", 220)}}
 
-Ces petits ajustements sont le genre de cas où la propriété `order` a du sens. Conservez le même ordre logique que l'ordre de lecture et de tabulation du document, et maintenez-le de la manière la plus accessible et structurée possible. Ensuite, utilisez `order` pour des ajustements purement visuels. Ne réorganisez pas les éléments qui reçoivent le focus clavier. Assurez-vous de toujours tester votre contenu en utilisant uniquement un clavier plutôt qu'une souris ou un écran tactile&nbsp;; cela révèle si vos choix de développement rendent la navigation plus complexe.
+Ces petits ajustements sont le genre de cas où la propriété `order` a du sens. Conservez le même ordre logique que l'ordre de lecture et de tabulation du document, et maintenez-le de la manière la plus accessible et structurée possible. Ensuite, utilisez `order` pour des ajustements purement visuels. Ne réorganisez pas les éléments qui reçoivent la sélection clavier. Assurez-vous de toujours tester votre contenu en utilisant uniquement un clavier plutôt qu'une souris ou un écran tactile&nbsp;; cela révèle si vos choix de développement rendent la navigation plus complexe.
 
 ## Voir aussi
 
