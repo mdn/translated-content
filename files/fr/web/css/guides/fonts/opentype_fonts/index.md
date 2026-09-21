@@ -1144,7 +1144,7 @@ La syntaxe générale ressemble généralement à ceci&nbsp;:
 }
 ```
 
-Selon la spécification, on peut fournir le code à quatre caractères de la caractéristique ou fournir le code suivi d'un 1 pour activer la fonctionnalité ou suivi d'un 0 pour la désactiver. Ainsi, si on dispose de caractéristiques liées à la ligatures et qui sont activées par défaut, on peut les désactiver de la façon suivante&nbsp;:
+Selon la spécification, on peut fournir le code à quatre caractères de la caractéristique ou fournir le code suivi d'un 1 pour activer la fonctionnalité ou suivi d'un 0 pour la désactiver. Ainsi, si on dispose de caractéristiques liées à la ligature et qui sont activées par défaut, on peut les désactiver de la façon suivante&nbsp;:
 
 ```css
 .sans-ligatures {
