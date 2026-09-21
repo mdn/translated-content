@@ -1,11 +1,9 @@
 ---
-title: Asynchronous （非同期）
+title: Asynchronous (非同期)
 slug: Glossary/Asynchronous
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 **非同期** (asynchronous) という用語は、 2 つ以上のオブジェクトやイベントが同時に存在しない、または起こらない、すなわち{{glossary("synchronous", "同期")}}していないことを表します。複数の関連のあることが、前回起こったことの完了に依存することなく起こるとき、それらは非同期です。
 
