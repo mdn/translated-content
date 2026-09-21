@@ -1,12 +1,20 @@
 ---
 title: cx
 slug: Web/SVG/Reference/Attribute/cx
-original_slug: Web/SVG/Attribute/cx
+l10n:
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-L'attribut **`cx`** définit la coordonnée de l'axe x pour le point central d'un élément.
+L'attribut **`cx`** définit la coordonnée sur l'axe x du point central d'un élément.
 
-Trois éléments utilisent cet attribut: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, et {{SVGElement("radialGradient")}}
+Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
+
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("radialGradient")}}
+
+> [!NOTE]
+> En tant que _propriété de géométrie_, {{cssxref("cx")}} peut aussi être utilisée comme propriété CSS pour `<circle>` et `<ellipse>`.
 
 ## Exemple
 
@@ -31,19 +39,17 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 100, 100)}}
+{{EmbedLiveSample("Exemple", 100, 100)}}
 
 ## circle
 
 Pour un élément {{SVGElement('circle')}}, `cx` définit la coordonnée x de son centre.
 
-<table class="standard-table">
+<table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/Reference/Values/length-percentage">
-        <code>&lt;length-percentage&gt;</code>
-      </a></td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">Valeur par défaut</th>
@@ -57,19 +63,17 @@ Pour un élément {{SVGElement('circle')}}, `cx` définit la coordonnée x de so
 </table>
 
 > [!NOTE]
-> À partir de SVG2, `cx` est une _propriété de géométrie_, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les cercles.
+> La coordonnée x du centre de l'élément `<circle>` peut aussi être définie avec la _propriété de géométrie_ {{cssxref("cx")}}. Si elle est définie en CSS, la valeur de la propriété `cx` l'emporte sur la valeur de l'attribut `cx`.
 
 ## ellipse
 
-Pour un élément {{SVGElement('ellipse')}}, `cx` définit la coordonnées x de son centre.
+Pour un élément {{SVGElement('ellipse')}}, `cx` définit la coordonnée x de son centre.
 
-<table class="standard-table">
+<table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/Reference/Values/length-percentage">
-        <code>&lt;length-percentage&gt;</code>
-      </a></td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">Valeur par défaut</th>
@@ -83,19 +87,19 @@ Pour un élément {{SVGElement('ellipse')}}, `cx` définit la coordonnées x de 
 </table>
 
 > [!NOTE]
-> À partir de SVG2, `cx` est une _propriété de géométrie_, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les ellipses.
+> La coordonnée x du centre de l'élément `<ellipse>` peut aussi être définie avec la _propriété de géométrie_ {{cssxref("cx")}}. Si elle est définie en CSS, la valeur de la propriété `cx` l'emporte sur la valeur de l'attribut `cx`.
 
 ## radialGradient
 
-Pour un élément {{SVGElement('radialGradient')}}, `cx` définit la coordonnées x du plus grand cercle pour le dégradé radial (c'est-à-dire du plus externe). Le dégradé sera dessiné de telle façon que la [limite du dégradé](/fr/docs/Web/SVG/Reference/Element/stop) à **100%** corresponde au périmètre de ce plus grand cercle.
+Pour un élément {{SVGElement('radialGradient')}}, `cx` définit la coordonnée x du cercle final du dégradé radial.
 
-<table class="standard-table">
+<table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/Reference/Values/length-percentage">
-        <code>&lt;length-percentage&gt;</code>
-      </a></td>
+      <td>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur">&#x3C;length></a></strong>
+      </td>
     </tr>
     <tr>
       <th scope="row">Valeur par défaut</th>
@@ -108,7 +112,7 @@ Pour un élément {{SVGElement('radialGradient')}}, `cx` définit la coordonnée
   </tbody>
 </table>
 
-#### Autre exemple
+### Exemple
 
 ```css hidden
 html,
@@ -170,7 +174,14 @@ svg {
 
 {{Specifications}}
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 ## Voir aussi
 
-- [`cy`](/fr/docs/Web/SVG/Reference/Attribute/cy)
-- [`r`](/fr/docs/Web/SVG/Attribute/r)
+- {{SVGAttr("cy")}}
+- {{SVGAttr("r")}}
+- {{SVGAttr("rx")}}
+- {{SVGAttr("ry")}}
+- Les propriétés de géométrie&nbsp;: {{cssxref("cx")}}, {{cssxref("cy")}}, {{cssxref("r")}}, {{cssxref("rx")}}, {{cssxref("ry")}}, {{cssxref("x")}}, {{cssxref("y")}}, {{cssxref("width")}} et {{cssxref("height")}}

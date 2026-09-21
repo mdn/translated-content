@@ -1,38 +1,39 @@
 ---
 title: height
 slug: Web/SVG/Reference/Attribute/height
-original_slug: Web/SVG/Attribute/height
+l10n:
+  sourceCommit: d559e66723de93ce6c59eb5d22a29afca7265c2a
 ---
 
-L'attribut **`height`** définit la longueur verticale d'un élément dans le système des coordonnées de l'utilisatrice ou l'utilisateur.
+L'attribut **`height`** définit la longueur verticale d'un élément dans le système de coordonnées utilisateur.
 
 Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 
-- [`<feBlend>`](/fr/docs/Web/SVG/Reference/Element/feBlend)
-- [`<feColorMatrix>`](/fr/docs/Web/SVG/Reference/Element/feColorMatrix)
-- [`<feComponentTransfer>`](/fr/docs/Web/SVG/Reference/Element/feComponentTransfer)
-- [`<feComposite>`](/fr/docs/Web/SVG/Reference/Element/feComposite)
-- [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Reference/Element/feConvolveMatrix)
-- [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Reference/Element/feDiffuseLighting)
-- [`<feDisplacementMap>`](/fr/docs/Web/SVG/Reference/Element/feDisplacementMap)
-- [`<feDropShadow>`](/fr/docs/Web/SVG/Reference/Element/feDropShadow)
-- [`<feFlood>`](/fr/docs/Web/SVG/Reference/Element/feFlood)
-- [`<feGaussianBlur>`](/fr/docs/Web/SVG/Reference/Element/feGaussianBlur)
-- [`<feImage>`](/fr/docs/Web/SVG/Reference/Element/feImage)
-- [`<feMerge>`](/fr/docs/Web/SVG/Reference/Element/feMerge)
-- [`<feMorphology>`](/fr/docs/Web/SVG/Reference/Element/feMorphology)
-- [`<feOffset>`](/fr/docs/Web/SVG/Reference/Element/feOffset)
-- [`<feSpecularLighting>`](/fr/docs/Web/SVG/Reference/Element/feSpecularLighting)
-- [`<feTile>`](/fr/docs/Web/SVG/Reference/Element/feTile)
-- [`<feTurbulence>`](/fr/docs/Web/SVG/Reference/Element/feTurbulence)
-- [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter)
-- [`<foreignObject>`](/fr/docs/Web/SVG/Reference/Element/foreignObject)
-- [`<image>`](/fr/docs/Web/SVG/Reference/Element/image)
-- [`<mask>`](/fr/docs/Web/SVG/Reference/Element/mask)
-- [`<pattern>`](/fr/docs/Web/SVG/Reference/Element/pattern)
-- [`<rect>`](/fr/docs/Web/SVG/Reference/Element/rect)
-- [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg)
-- [`<use>`](/fr/docs/Web/SVG/Reference/Element/use)
+- {{SVGElement('feBlend')}}
+- {{SVGElement('feColorMatrix')}}
+- {{SVGElement('feComponentTransfer')}}
+- {{SVGElement('feComposite')}}
+- {{SVGElement('feConvolveMatrix')}}
+- {{SVGElement('feDiffuseLighting')}}
+- {{SVGElement('feDisplacementMap')}}
+- {{SVGElement('feDropShadow')}}
+- {{SVGElement('feFlood')}}
+- {{SVGElement('feGaussianBlur')}}
+- {{SVGElement('feImage')}}
+- {{SVGElement('feMerge')}}
+- {{SVGElement('feMorphology')}}
+- {{SVGElement('feOffset')}}
+- {{SVGElement('feSpecularLighting')}}
+- {{SVGElement('feTile')}}
+- {{SVGElement('feTurbulence')}}
+- {{SVGElement('filter')}}
+- {{SVGElement('foreignObject')}}
+- {{SVGElement('image')}}
+- {{SVGElement('mask')}}
+- {{SVGElement('pattern')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('svg')}}
+- {{SVGElement('use')}}
 
 ## Exemple
 
@@ -46,25 +47,35 @@ svg {
 
 ```html
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Avec une hauteur de 0 ou inférieure, rien ne sera affiché -->
+  <!-- Avec une hauteur de 0 ou moins, rien n'est affiché -->
   <rect y="0" x="0" width="90" height="0" />
   <rect y="0" x="100" width="90" height="60" />
   <rect y="0" x="200" width="90" height="100%" />
 </svg>
 ```
 
-{{EmbedLiveSample("", '100%', 200)}}
+{{EmbedLiveSample("Exemple", '100%', 200)}}
 
-## `<feBlend>`
+## feBlend
 
-Pour [`<feBlend>`](/fr/docs/Web/SVG/Reference/Element/feBlend), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour {{SVGElement('feBlend')}}, `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -72,22 +83,32 @@ Pour [`<feBlend>`](/fr/docs/Web/SVG/Reference/Element/feBlend), `height` défini
       <td><code>100%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<feColorMatrix>`
+## feColorMatrix
 
-Pour [`<feColorMatrix>`](/fr/docs/Web/SVG/Reference/Element/feColorMatrix), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour {{SVGElement('feColorMatrix')}}, `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -95,22 +116,32 @@ Pour [`<feColorMatrix>`](/fr/docs/Web/SVG/Reference/Element/feColorMatrix), `hei
       <td><code>100%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<feComponentTransfer>`
+## feComponentTransfer
 
-Pour [`<feComponentTransfer>`](/fr/docs/Web/SVG/Reference/Element/feComponentTransfer), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour {{SVGElement('feComponentTransfer')}}, `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -118,22 +149,32 @@ Pour [`<feComponentTransfer>`](/fr/docs/Web/SVG/Reference/Element/feComponentTra
       <td><code>100%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<feComposite>`
+## feComposite
 
-Pour [`<feComposite>`](/fr/docs/Web/SVG/Reference/Element/feComposite), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour {{SVGElement('feComposite')}}, `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -141,22 +182,32 @@ Pour [`<feComposite>`](/fr/docs/Web/SVG/Reference/Element/feComposite), `height`
       <td><code>100%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<feConvolveMatrix>`
+## feConvolveMatrix
 
-Pour [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Reference/Element/feConvolveMatrix), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour {{SVGElement('feConvolveMatrix')}}, `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -164,22 +215,32 @@ Pour [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Reference/Element/feConvolveMatrix)
       <td><code>100%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<feDiffuseLighting>`
+## feDiffuseLighting
 
-Pour [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Reference/Element/feDiffuseLighting), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour {{SVGElement('feDiffuseLighting')}}, `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -187,22 +248,32 @@ Pour [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Reference/Element/feDiffuseLightin
       <td><code>100%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<feDisplacementMap>`
+## feDisplacementMap
 
-Pour [`<feDisplacementMap>`](/fr/docs/Web/SVG/Reference/Element/feDisplacementMap), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour {{SVGElement('feDisplacementMap')}}, `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -210,22 +281,32 @@ Pour [`<feDisplacementMap>`](/fr/docs/Web/SVG/Reference/Element/feDisplacementMa
       <td><code>100%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<feDropShadow>`
+## feDropShadow
 
-Pour [`<feDropShadow>`](/fr/docs/Web/SVG/Reference/Element/feDropShadow), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour {{SVGElement('feDropShadow')}}, `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -233,22 +314,32 @@ Pour [`<feDropShadow>`](/fr/docs/Web/SVG/Reference/Element/feDropShadow), `heigh
       <td><code>100%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<feFlood>`
+## feFlood
 
-Pour [`<feFlood>`](/fr/docs/Web/SVG/Reference/Element/feFlood), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour {{SVGElement('feFlood')}}, `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -256,22 +347,32 @@ Pour [`<feFlood>`](/fr/docs/Web/SVG/Reference/Element/feFlood), `height` défini
       <td><code>100%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<feGaussianBlur>`
+## feGaussianBlur
 
-Pour [`<feGaussianBlur>`](/fr/docs/Web/SVG/Reference/Element/feGaussianBlur), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour {{SVGElement('feGaussianBlur')}}, `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -279,22 +380,32 @@ Pour [`<feGaussianBlur>`](/fr/docs/Web/SVG/Reference/Element/feGaussianBlur), `h
       <td><code>100%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<feImage>`
+## feImage
 
-Pour [`<feImage>`](/fr/docs/Web/SVG/Reference/Element/feImage), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour {{SVGElement('feImage')}}, `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -302,22 +413,32 @@ Pour [`<feImage>`](/fr/docs/Web/SVG/Reference/Element/feImage), `height` défini
       <td><code>100%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<feMerge>`
+## feMerge
 
-Pour [`<feMerge>`](/fr/docs/Web/SVG/Reference/Element/feMerge), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour {{SVGElement('feMerge')}}, `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -325,22 +446,32 @@ Pour [`<feMerge>`](/fr/docs/Web/SVG/Reference/Element/feMerge), `height` défini
       <td><code>100%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<feMorphology>`
+## feMorphology
 
-Pour [`<feMorphology>`](/fr/docs/Web/SVG/Reference/Element/feMorphology), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour {{SVGElement('feMorphology')}}, `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -348,22 +479,32 @@ Pour [`<feMorphology>`](/fr/docs/Web/SVG/Reference/Element/feMorphology), `heigh
       <td><code>100%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<feOffset>`
+## feOffset
 
-Pour [`<feOffset>`](/fr/docs/Web/SVG/Reference/Element/feOffset), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour {{SVGElement('feOffset')}}, `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -371,22 +512,32 @@ Pour [`<feOffset>`](/fr/docs/Web/SVG/Reference/Element/feOffset), `height` défi
       <td><code>100%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<feSpecularLighting>`
+## feSpecularLighting
 
-Pour [`<feSpecularLighting>`](/fr/docs/Web/SVG/Reference/Element/feSpecularLighting), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour {{SVGElement('feSpecularLighting')}}, `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -394,22 +545,32 @@ Pour [`<feSpecularLighting>`](/fr/docs/Web/SVG/Reference/Element/feSpecularLight
       <td><code>100%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<feTile>`
+## feTile
 
-Pour [`<feTile>`](/fr/docs/Web/SVG/Reference/Element/feTile), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour {{SVGElement('feTile')}}, `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -417,22 +578,32 @@ Pour [`<feTile>`](/fr/docs/Web/SVG/Reference/Element/feTile), `height` définit 
       <td><code>100%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<feTurbulence>`
+## feTurbulence
 
-Pour [`<feTurbulence>`](/fr/docs/Web/SVG/Reference/Element/feTurbulence), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour {{SVGElement('feTurbulence')}}, `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -440,22 +611,32 @@ Pour [`<feTurbulence>`](/fr/docs/Web/SVG/Reference/Element/feTurbulence), `heigh
       <td><code>100%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<filter>`
+## filter
 
-Pour [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter), `height` définit la longueur verticale de la zone de rendu du filtre.
+Pour {{SVGElement('filter')}}, `height` définit la longueur verticale de la zone de rendu du filtre.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -463,22 +644,33 @@ Pour [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter), `height` définit 
       <td><code>120%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<foreignObject>`
+## foreignObject
 
-Pour [`<foreignObject>`](/fr/docs/Web/SVG/Reference/Element/foreignObject), `height` définit la longueur verticale de la zone de rendu pour le document référencé.
+Pour {{SVGElement('foreignObject')}}, `height` définit la longueur verticale de la zone de rendu du document référencé.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <code>auto</code>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <code>auto</code> |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -486,25 +678,36 @@ Pour [`<foreignObject>`](/fr/docs/Web/SVG/Reference/Element/foreignObject), `hei
       <td><code>auto</code> (traité comme <code>0</code>)</td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
 > [!NOTE]
-> À partir de SVG2, `height` est une propriété _géométrique_, ce qui signifie que cet attribut peut aussi être utilisé comme une propriété CSS pour `<foreignObject>`.
+> Depuis SVG2, `height` est une _propriété de géométrie_, ce qui signifie que cet attribut peut aussi être utilisé comme propriété CSS pour `<foreignObject>`.
 
-## `<image>`
+## image
 
-Pour [`<image>`](/fr/docs/Web/SVG/Reference/Element/image), `height` définit la longueur verticale de l'image.
+Pour {{SVGElement('image')}}, `height` définit la longueur verticale de l'image.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <code>auto</code> | <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <code>auto</code> |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -512,25 +715,35 @@ Pour [`<image>`](/fr/docs/Web/SVG/Reference/Element/image), `height` définit la
       <td><code>auto</code> (traité comme la hauteur intrinsèque de l'image)</td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
 > [!NOTE]
-> À partir de SVG2, `height` est une propriété _géométrique_, ce qui signifie que cet attribut peut également être utilisée comme propriété CSS pour les images.
+> Depuis SVG2, `height` est une _propriété de géométrie_, ce qui signifie que cet attribut peut aussi être utilisé comme propriété CSS pour les images.
 
-## `<mask>`
+## mask
 
-Pour [`<mask>`](/fr/docs/Web/SVG/Reference/Element/mask), `height` définit la longueur verticale de sa zone d'effet. L'effet exact de cet attribut est influencé par l'attribut [`maskUnits`](/fr/docs/Web/SVG/Attribute/maskUnits).
+Pour {{SVGElement('mask')}}, `height` définit la longueur verticale de sa zone d'effet. L'effet exact de cet attribut dépend de l'attribut {{SVGAttr('maskUnits')}}.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -538,22 +751,26 @@ Pour [`<mask>`](/fr/docs/Web/SVG/Reference/Element/mask), `height` définit la l
       <td><code>120%</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<pattern>`
+## pattern
 
-Pour [`<pattern>`](/fr/docs/Web/SVG/Reference/Element/pattern), `height` définit la longueur verticale du motif répété. L'effet exact de cet attribut est influencé par les attributs [`patternUnits`](/fr/docs/Web/SVG/Attribute/patternUnits) et [`patternTransform`](/fr/docs/Web/SVG/Attribute/patternTransform).
+Pour {{SVGElement('pattern')}}, `height` définit la longueur verticale de la tuile du motif. L'effet exact de cet attribut dépend des attributs {{SVGAttr('patternUnits')}} et {{SVGAttr('patternTransform')}}.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -561,22 +778,33 @@ Pour [`<pattern>`](/fr/docs/Web/SVG/Reference/Element/pattern), `height` défini
       <td><code>0</code></td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
-## `<rect>`
+## rect
 
-Pour [`<rect>`](/fr/docs/Web/SVG/Reference/Element/rect), `height` définit la longueur verticale du rectangle.
+Pour {{SVGElement('rect')}}, `height` définit la longueur verticale du rectangle.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <code>auto</code>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <code>auto</code> |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -584,28 +812,36 @@ Pour [`<rect>`](/fr/docs/Web/SVG/Reference/Element/rect), `height` définit la l
       <td><code>auto</code> (traité comme <code>0</code>)</td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
 > [!NOTE]
-> À partir de SVG2, `height` est une propriété _géométrique_, ce qui signifie que cet attribut peut aussi être utilisé comme une propriété CSS pour les rectangles.
+> Depuis SVG2, `height` est une _propriété de géométrie_, ce qui signifie que cet attribut peut aussi être utilisé comme propriété CSS pour les rectangles.
 
-## `<svg>`
+## svg
 
-Pour [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg), `height` définit la longueur verticale de la zone de rendu de la zone d'affichage SVG.
-
-> [!NOTE]
-> Dans un document HTML, si les deux attributs [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox) et `height` sont absents, [l'élément SVG sera rendu avec une hauteur de `150px`](https://svgwg.org/specs/integration/#svg-css-sizing).
+Pour {{SVGElement('svg')}}, `height` définit la longueur verticale de la zone de rendu de la zone d'affichage SVG.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <code>auto</code>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <code>auto</code> |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -613,25 +849,39 @@ Pour [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg), `height` définit la lon
       <td><code>auto</code> (traité comme <code>100%</code>)</td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
 > [!NOTE]
-> À partir de SVG2, `height` est une propriété _géométrique_ et peut donc être utilisée comme propriété CSS pour `<svg>`.
+> Dans un document HTML, si les attributs {{SVGAttr('viewBox')}} et `height` sont tous deux omis, [l'élément svg est affiché avec une hauteur de `150px`](https://svgwg.org/specs/integration/#svg-css-sizing)
 
-## `<use>`
+> [!NOTE]
+> Depuis SVG2, `height` est une _propriété de géométrie_, ce qui signifie que cet attribut peut aussi être utilisé comme propriété CSS pour `<svg>`.
 
-Pour [`<use>`](/fr/docs/Web/SVG/Reference/Element/use), `height` définit la longueur verticale de l'élément référencé.
+## use
+
+Pour {{SVGElement('use')}}, `height` définit la longueur verticale de l'élément référencé.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <code>auto</code>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <code>auto</code> |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -639,99 +889,22 @@ Pour [`<use>`](/fr/docs/Web/SVG/Reference/Element/use), `height` définit la lon
       <td><code>auto</code> (traité comme <code>0</code>)</td>
     </tr>
     <tr>
-      <th scope="row">Peut être animé</th>
+      <th scope="row">Animation</th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
 > [!NOTE]
-> `height` n'a pas d'effet sur les éléments `<use>`, à moins que l'élément référencé ait un attribut [`viewbox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox), c'est-à-dire que leur effet s'applique uniquement si `use` fait référence à un élément `<svg>` ou `<symbol>`.
+> `height` n'a aucun effet sur les éléments `use`, sauf si l'élément référencé possède un [viewBox](/fr/docs/Web/SVG/Reference/Attribute/viewBox) — autrement dit, il n'a d'effet que lorsque `use` fait référence à un élément `svg` ou `symbol`.
 
 > [!NOTE]
-> À partir de SVG2, `height` est une propriété _géométrique_, ce qui signifie que cet attribut peut également être utilisé comme propriété CSS sur les éléments utilisés.
+> Depuis SVG2, `height` est une _propriété de géométrie_, ce qui signifie que cet attribut peut aussi être utilisé comme propriété CSS pour les éléments utilisés.
 
 ## Spécifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">État</th>
-      <th scope="col">Commentaires</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-height">Filter Effects Module Level 1 — La définition de 'height' dans cette spécification.</a></td>
-      <td>Version de travail</td>
-      <td>Définition de <code>&lt;filter&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-height">Filter Effects Module Level 1 — La définition de 'height' dans cette spécification.</a></td>
-      <td>Version de travail</td>
-      <td>Définition des primitives de filtre</td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-height">CSS Masking Module Level&nbsp;1 — La définition de 'height' dans cette spécification.</a></td>
-      <td>Candidat au statut de recommandation</td>
-      <td>Définition de <code>&lt;mask&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://svgwg.org/svg2-draft/geometry.html#Sizing">Scalable Vector Graphics (SVG) 2 — La définition de 'height' dans cette spécification.</a></td>
-      <td>Candidat au statut de recommandation</td>
-      <td>Définition en tant que propriété géométrique</td>
-    </tr>
-    <tr>
-      <td><a href="https://svgwg.org/svg2-draft/pservers.html#PatternElementHeightAttribute">Scalable Vector Graphics (SVG) 2 — La définition de 'height' dans cette spécification.</a></td>
-      <td>Candidat au statut de recommandation</td>
-      <td>Définition de <code>&lt;pattern&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;foreignObject&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/pservers.html#PatternElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a>
-      </td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;pattern&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#ImageElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;image&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#SVGElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;svg&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#UseElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;use&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;filter&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterPrimitiveHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale des primitives de filtre</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/masking.html#MaskElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;mask&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/shapes.html#RectElementHeightAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'height' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;rect&gt;</code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
+
+## Voir aussi
+
+- La propriété CSS {{cssxref("height")}}

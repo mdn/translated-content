@@ -1,40 +1,862 @@
 ---
 title: width
 slug: Web/SVG/Reference/Attribute/width
-original_slug: Web/SVG/Attribute/width
+l10n:
+  sourceCommit: d559e66723de93ce6c59eb5d22a29afca7265c2a
 ---
 
-L'attribut **`width`** définit la longueur horizontale d'un élément dans le système des coordonnées de l'utilisatrice ou l'utilisateur.
+L'attribut **`width`** définit la longueur horizontale d'un élément dans le système de coordonnées utilisateur.
 
-Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
+## Éléments
 
-- [`<feBlend>`](/fr/docs/Web/SVG/Reference/Element/feBlend)
-- [`<feColorMatrix>`](/fr/docs/Web/SVG/Reference/Element/feColorMatrix)
-- [`<feComponentTransfer>`](/fr/docs/Web/SVG/Reference/Element/feComponentTransfer)
-- [`<feComposite>`](/fr/docs/Web/SVG/Reference/Element/feComposite)
-- [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Reference/Element/feConvolveMatrix)
-- [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Reference/Element/feDiffuseLighting)
-- [`<feDisplacementMap>`](/fr/docs/Web/SVG/Reference/Element/feDisplacementMap)
-- [`<feDropShadow>`](/fr/docs/Web/SVG/Reference/Element/feDropShadow)
-- [`<feFlood>`](/fr/docs/Web/SVG/Reference/Element/feFlood)
-- [`<feGaussianBlur>`](/fr/docs/Web/SVG/Reference/Element/feGaussianBlur)
-- [`<feImage>`](/fr/docs/Web/SVG/Reference/Element/feImage)
-- [`<feMerge>`](/fr/docs/Web/SVG/Reference/Element/feMerge)
-- [`<feMorphology>`](/fr/docs/Web/SVG/Reference/Element/feMorphology)
-- [`<feOffset>`](/fr/docs/Web/SVG/Reference/Element/feOffset)
-- [`<feSpecularLighting>`](/fr/docs/Web/SVG/Reference/Element/feSpecularLighting)
-- [`<feTile>`](/fr/docs/Web/SVG/Reference/Element/feTile)
-- [`<feTurbulence>`](/fr/docs/Web/SVG/Reference/Element/feTurbulence)
-- [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter)
-- [`<foreignObject>`](/fr/docs/Web/SVG/Reference/Element/foreignObject)
-- [`<image>`](/fr/docs/Web/SVG/Reference/Element/image)
-- [`<mask>`](/fr/docs/Web/SVG/Reference/Element/mask)
-- [`<pattern>`](/fr/docs/Web/SVG/Reference/Element/pattern)
-- [`<rect>`](/fr/docs/Web/SVG/Reference/Element/rect)
-- [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg)
-- [`<use>`](/fr/docs/Web/SVG/Reference/Element/use)
+Cet attribut peut être utilisé avec les éléments SVG décrits dans les sections ci-dessous.
 
-## Exemple
+### `<feBlend>`
+
+Pour {{SVGElement('feBlend')}}, `width` définit la longueur horizontale de la zone de rendu de la primitive.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<feColorMatrix>`
+
+Pour {{SVGElement('feColorMatrix')}}, `width` définit la longueur horizontale de la zone de rendu de la primitive.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<feComponentTransfer>`
+
+Pour {{SVGElement('feComponentTransfer')}}, `width` définit la longueur horizontale de la zone de rendu de la primitive.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<feComposite>`
+
+Pour {{SVGElement('feComposite')}}, `width` définit la longueur horizontale de la zone de rendu de la primitive.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<feConvolveMatrix>`
+
+Pour {{SVGElement('feConvolveMatrix')}}, `width` définit la longueur horizontale de la zone de rendu de la primitive.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<feDiffuseLighting>`
+
+Pour {{SVGElement('feDiffuseLighting')}}, `width` définit la longueur horizontale de la zone de rendu de la primitive.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<feDisplacementMap>`
+
+Pour {{SVGElement('feDisplacementMap')}}, `width` définit la longueur horizontale de la zone de rendu de la primitive.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<feDropShadow>`
+
+Pour {{SVGElement('feDropShadow')}}, `width` définit la longueur horizontale de la zone de rendu de la primitive.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<feFlood>`
+
+Pour {{SVGElement('feFlood')}}, `width` définit la longueur horizontale de la zone de rendu de la primitive.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<feGaussianBlur>`
+
+Pour {{SVGElement('feGaussianBlur')}}, `width` définit la longueur horizontale de la zone de rendu de la primitive.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<feImage>`
+
+Pour {{SVGElement('feImage')}}, `width` définit la longueur horizontale de la zone de rendu de la primitive.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<feMerge>`
+
+Pour {{SVGElement('feMerge')}}, `width` définit la longueur horizontale de la zone de rendu de la primitive.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<feMorphology>`
+
+Pour {{SVGElement('feMorphology')}}, `width` définit la longueur horizontale de la zone de rendu de la primitive.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<feOffset>`
+
+Pour {{SVGElement('feOffset')}}, `width` définit la longueur horizontale de la zone de rendu de la primitive.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<feSpecularLighting>`
+
+Pour {{SVGElement('feSpecularLighting')}}, `width` définit la longueur horizontale de la zone de rendu de la primitive.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<feTile>`
+
+Pour {{SVGElement('feTile')}}, `width` définit la longueur horizontale de la zone de rendu de la primitive.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<feTurbulence>`
+
+Pour {{SVGElement('feTurbulence')}}, `width` définit la longueur horizontale de la zone de rendu de la primitive.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<filter>`
+
+Pour {{SVGElement('filter')}}, `width` définit la longueur horizontale de la zone de rendu du filtre.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>120%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<foreignObject>`
+
+Pour {{SVGElement('foreignObject')}}, `width` définit la longueur horizontale de la zone de rendu du document référencé.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <code>auto</code> |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>auto</code> (traité comme <code>0</code>)</td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+> [!NOTE]
+> Depuis SVG2, `width` est une _propriété de géométrie_, ce qui signifie que cet attribut peut aussi être utilisé comme propriété CSS pour `<foreignObject>`.
+
+### `<image>`
+
+Pour {{SVGElement('image')}}, `width` définit la longueur horizontale de l'image.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <code>auto</code> |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>auto</code> (traité comme la largeur intrinsèque de l'image)</td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+> [!NOTE]
+> Depuis SVG2, `width` est une _propriété de géométrie_, ce qui signifie que cet attribut peut aussi être utilisé comme propriété CSS pour les images.
+
+### `<mask>`
+
+Pour {{SVGElement('mask')}}, `width` définit la longueur horizontale de sa zone d'effet. L'effet exact de cet attribut dépend de l'attribut {{SVGAttr('maskUnits')}}.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>120%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<pattern>`
+
+Pour {{SVGElement('pattern')}}, `width` définit la longueur horizontale de la tuile du motif. L'effet exact de cet attribut dépend des attributs {{SVGAttr('patternUnits')}} et {{SVGAttr('patternTransform')}}.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+### `<rect>`
+
+Pour {{SVGElement('rect')}}, `width` définit la longueur horizontale du rectangle.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <code>auto</code> |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>auto</code> (traité comme <code>0</code>)</td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+> [!NOTE]
+> Depuis SVG2, `width` est une _propriété de géométrie_, ce qui signifie que cet attribut peut aussi être utilisé comme propriété CSS pour les rectangles.
+
+### `<svg>`
+
+Pour {{SVGElement('svg')}}, `width` définit la longueur horizontale de la zone de rendu de la zone d'affichage SVG.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <code>auto</code> |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>auto</code> (traité comme <code>100%</code>)</td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+> [!NOTE]
+> Dans un document HTML, si les attributs {{SVGAttr('viewBox')}} et `width` sont tous deux omis, [l'élément svg est affiché avec une largeur de `300px`](https://svgwg.org/specs/integration/#svg-css-sizing)
+
+> [!NOTE]
+> Depuis SVG2, `width` est une _propriété de géométrie_, ce qui signifie que cet attribut peut aussi être utilisé comme propriété CSS pour `<svg>`.
+
+### `<use>`
+
+Pour {{SVGElement('use')}}, `width` définit la longueur horizontale de l'élément référencé.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <code>auto</code> |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>auto</code> (traité comme <code>0</code>)</td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+> [!NOTE]
+> `width` n'a aucun effet sur les éléments `use`, sauf si l'élément référencé possède un [viewBox](/fr/docs/Web/SVG/Reference/Attribute/viewBox) — autrement dit, il n'a d'effet que lorsque `use` fait référence à un élément `svg` ou `symbol`.
+
+> [!NOTE]
+> Depuis SVG2, `width` est une _propriété de géométrie_, ce qui signifie que cet attribut peut aussi être utilisé comme propriété CSS pour les éléments utilisés.
+
+## Exemples
 
 ```css hidden
 html,
@@ -44,694 +866,44 @@ svg {
 }
 ```
 
+Cet exemple comporte trois éléments {{SVGElement("rect")}} avec des valeurs de `width` différentes. Le premier `<rect>` a un `width="0"`. Les éléments SVG dont la largeur vaut `0` ou moins ne sont pas affichés.
+
 ```html
 <svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
-  <!-- Avec une largeur de 0 ou inférieure, rien ne sera affichée -->
-  <rect x="0" y="0" width="0" height="90" />
-  <rect x="0" y="100" width="60" height="90" />
-  <rect x="0" y="200" width="100%" height="90" />
+  <!-- Avec une largeur de 0 ou moins, rien n'est affiché -->
+  <rect
+    x="0"
+    y="0"
+    width="0"
+    height="90"
+    fill="red"
+    stroke-width="5"
+    stroke="black" />
+  <rect
+    x="0"
+    y="100"
+    width="60"
+    height="90"
+    fill="red"
+    stroke-width="5"
+    stroke="black" />
+  <rect
+    x="0"
+    y="200"
+    width="100%"
+    height="90"
+    fill="red"
+    stroke-width="5"
+    stroke="black" />
 </svg>
 ```
 
-{{EmbedLiveSample("", '100%', 200)}}
-
-## `<feBlend>`
-
-Pour [`<feBlend>`](/fr/docs/Web/SVG/Reference/Element/feBlend), `width` définit la longueur horizontale de la zone de rendu de la primitive.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<feColorMatrix>`
-
-Pour [`<feColorMatrix>`](/fr/docs/Web/SVG/Reference/Element/feColorMatrix), `width` définit la longueur horizontale de la zone de rendu de la primitive.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<feComponentTransfer>`
-
-Pour [`<feComponentTransfer>`](/fr/docs/Web/SVG/Reference/Element/feComponentTransfer), `width` définit la longueur horizontale de la zone de rendu de la primitive.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<feComposite>`
-
-Pour [`<feComposite>`](/fr/docs/Web/SVG/Reference/Element/feComposite), `width` définit la longueur horizontale de la zone de rendu de la primitive.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<feConvolveMatrix>`
-
-Pour [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Reference/Element/feConvolveMatrix), `width` définit la longueur horizontale de la zone de rendu de la primitive.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<feDiffuseLighting>`
-
-Pour [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Reference/Element/feDiffuseLighting), `width` définit la longueur horizontale de la zone de rendu de la primitive.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<feDisplacementMap>`
-
-Pour [`<feDisplacementMap>`](/fr/docs/Web/SVG/Reference/Element/feDisplacementMap), `width` définit la longueur horizontale de la zone de rendu de la primitive.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<feDropShadow>`
-
-Pour [`<feDropShadow>`](/fr/docs/Web/SVG/Reference/Element/feDropShadow), `width` définit la longueur horizontale de la zone de rendu de la primitive.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<feFlood>`
-
-Pour [`<feFlood>`](/fr/docs/Web/SVG/Reference/Element/feFlood), `width` définit la longueur horizontale de la zone de rendu de la primitive.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<feGaussianBlur>`
-
-Pour [`<feGaussianBlur>`](/fr/docs/Web/SVG/Reference/Element/feGaussianBlur), `width` définit la longueur horizontale de la zone de rendu de la primitive.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<feImage>`
-
-Pour [`<feImage>`](/fr/docs/Web/SVG/Reference/Element/feImage), `width` définit la longueur horizontale de la zone de rendu de la primitive.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<feMerge>`
-
-Pour [`<feMerge>`](/fr/docs/Web/SVG/Reference/Element/feMerge), `width` définit la longueur horizontale de la zone de rendu de la primitive.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<feMorphology>`
-
-Pour [`<feMorphology>`](/fr/docs/Web/SVG/Reference/Element/feMorphology), `width` définit la longueur horizontale de la zone de rendu de la primitive.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<feOffset>`
-
-Pour [`<feOffset>`](/fr/docs/Web/SVG/Reference/Element/feOffset), `width` définit la longueur horizontale de la zone de rendu de la primitive.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<feSpecularLighting>`
-
-Pour [`<feSpecularLighting>`](/fr/docs/Web/SVG/Reference/Element/feSpecularLighting), `width` définit la longueur horizontale de la zone de rendu de la primitive.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<feTile>`
-
-Pour [`<feTile>`](/fr/docs/Web/SVG/Reference/Element/feTile), `width` définit la longueur horizontale de la zone de rendu de la primitive.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<feTurbulence>`
-
-Pour [`<feTurbulence>`](/fr/docs/Web/SVG/Reference/Element/feTurbulence), `width` définit la longueur horizontale de la zone de rendu de la primitive.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<filter>`
-
-Pour [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter), `width` définit la longueur horizontale de la zone de rendu du filtre.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>120%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<foreignObject>`
-
-Pour [`<foreignObject>`](/fr/docs/Web/SVG/Reference/Element/foreignObject), `width` définit la longueur horizontale de la zone de rendu pour le document référencé.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <code>auto</code>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>auto</code> (traité comme <code>0</code>)</td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-> [!NOTE]
-> À partir de SVG2, `width` est une propriété _géométrique_, ce qui signifie que cet attribut peut aussi être utilisé comme une propriété CSS pour `<foreignObject>`.
-
-## `<image>`
-
-Pour [`<image>`](/fr/docs/Web/SVG/Reference/Element/image), `width` définit la longueur horizontale de l'image.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <code>auto</code> | <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>auto</code> (traité comme la hauteur intrinsèque de l'image)</td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-> [!NOTE]
-> À partir de SVG2, `width` est une propriété _géométrique_, ce qui signifie que cet attribut peut également être utilisé comme propriété CSS pour les images.
-
-## `<mask>`
-
-Pour [`<mask>`](/fr/docs/Web/SVG/Reference/Element/mask), `width` définit la longueur horizontale de sa zone d'effet. L'effet exact de cet attribut est influencé par l'attribut [`maskUnits`](/fr/docs/Web/SVG/Attribute/maskUnits).
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>120%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<pattern>`
-
-Pour [`<pattern>`](/fr/docs/Web/SVG/Reference/Element/pattern), `width` définit la longueur horizontale du motif répété. L'effet exact de cet attribut est influencé par les attributs [`patternUnits`](/fr/docs/Web/SVG/Attribute/patternUnits) et [`patternTransform`](/fr/docs/Web/SVG/Attribute/patternTransform).
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-## `<rect>`
-
-Pour [`<rect>`](/fr/docs/Web/SVG/Reference/Element/rect), `width` définit la longueur horizontale du rectangle.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <code>auto</code>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>auto</code> (traité comme <code>0</code>)</td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-> [!NOTE]
-> À partir de SVG2, `width` est une propriété _géométrique_, ce qui signifie que cet attribut peut aussi être utilisé comme une propriété CSS pour les rectangles.
-
-## `<svg>`
-
-Pour [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg), `width` définit la longueur horizontale de la zone de rendu de la zone d'affichage SVG.
-
-> [!NOTE]
-> Dans un document HTML, si les deux attributs [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox) et `width` sont absents, [l'élément SVG sera rendu avec une hauteur de `150px`](https://svgwg.org/specs/integration/#svg-css-sizing).
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <code>auto</code>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>auto</code> (traité comme <code>100%</code>)</td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-> [!NOTE]
-> À partir de SVG2, `width` est une propriété _géométrique_ et peut donc être utilisée comme propriété CSS pour `<svg>`.
-
-## `<use>`
-
-Pour [`<use>`](/fr/docs/Web/SVG/Reference/Element/use), `width` définit la longueur horizontale de l'élément référencé.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>
-        <code>auto</code>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>auto</code> (traité comme <code>0</code>)</td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-> [!NOTE]
-> `width` n'a pas d'effet sur les éléments `<use>`, à moins que l'élément référencé ait un attribut [`viewbox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox), c'est-à-dire que leur effet s'applique uniquement si `use` fait référence à un élément `<svg>` ou `<symbol>`.
-
-> [!NOTE]
-> À partir de SVG2, `width` est une propriété _géométrique_, ce qui signifie que cet attribut peut également être utilisé comme propriété CSS sur les éléments utilisés.
+{{EmbedLiveSample("Exemples", '100%', 200)}}
 
 ## Spécifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">État</th>
-      <th scope="col">Commentaires</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-width">Filter Effects Module Level 1 — La définition de 'width' dans cette spécification.</a></td>
-      <td>Version de travail</td>
-      <td>Définition de <code>&lt;filter&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-width">Filter Effects Module Level 1 — La définition de 'width' dans cette spécification.</a></td>
-      <td>Version de travail</td>
-      <td>Définition des primitives de filtre</td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-width">CSS Masking Module Level&nbsp;1 — La définition de 'width' dans cette spécification.</a></td>
-      <td>Candidat au statut de recommandation</td>
-      <td>Définition de <code>&lt;mask&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://svgwg.org/svg2-draft/geometry.html#Sizing">Scalable Vector Graphics (SVG) 2 — La définition de 'width' dans cette spécification.</a></td>
-      <td>Candidat au statut de recommandation</td>
-      <td>Définition en tant que propriété géométrique</td>
-    </tr>
-    <tr>
-      <td><a href="https://svgwg.org/svg2-draft/pservers.html#PatternElementWidthAttribute">Scalable Vector Graphics (SVG) 2 — La définition de 'width' dans cette spécification.</a></td>
-      <td>Candidat au statut de recommandation</td>
-      <td>Définition de <code>&lt;pattern&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;foreignObject&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/pservers.html#PatternElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a>
-      </td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;pattern&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#ImageElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;image&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#SVGElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;svg&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#UseElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;use&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;filter&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterPrimitiveWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale des primitives de filtre</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/masking.html#MaskElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;mask&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/shapes.html#RectElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;rect&gt;</code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
+
+## Voir aussi
+
+- La propriété CSS {{cssxref("width")}}
