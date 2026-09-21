@@ -68,12 +68,11 @@ document.onreadystatechange = function () {
 
 ### 在 DOMContentLoaded 之前使用 readystatechange 作为事件处理程序以插入或修改 DOM
 
-```plain
-document.addEventListener('readystatechange', event => {
-  if (event.target.readyState === 'interactive') {
+```js
+document.addEventListener("readystatechange", (event) => {
+  if (event.target.readyState === "interactive") {
     initLoader();
-  }
-  else if (event.target.readyState === 'complete') {
+  } else if (event.target.readyState === "complete") {
     initApp();
   }
 });

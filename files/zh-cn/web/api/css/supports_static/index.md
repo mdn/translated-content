@@ -9,7 +9,7 @@ slug: Web/API/CSS/supports_static
 
 ## 语法
 
-```plain
+```js-nolint
 boolValue = CSS.supports(propertyName, value);
 boolValue = CSS.supports(supportCondition);
 ```

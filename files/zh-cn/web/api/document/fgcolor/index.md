@@ -11,9 +11,9 @@ slug: Web/API/Document/fgColor
 
 ### 语法
 
-```plain
-  var color = document.fgColor;
-  document.fgColor = color;
+```js
+var color = document.fgColor;
+document.fgColor = color;
 ```
 
 ### 参数

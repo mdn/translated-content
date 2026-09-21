@@ -18,7 +18,7 @@ console.log(`?x=${encodeURIComponent("шеллы")}`);
 
 ## 语法
 
-```plain
+```js-nolint
 encodeURIComponent(str);
 ```
 

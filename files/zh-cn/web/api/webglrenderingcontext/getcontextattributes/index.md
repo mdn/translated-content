@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/getContextAttributes
 
 ## 语法
 
-```plain
+```js-nolint
 gl.getContextAttributes();
 ```
 

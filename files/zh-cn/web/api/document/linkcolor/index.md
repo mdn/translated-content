@@ -11,9 +11,9 @@ slug: Web/API/Document/linkColor
 
 ### 语法
 
-```plain
-color = document.linkColor
-document.linkColor = color
+```js
+color = document.linkColor;
+document.linkColor = color;
 ```
 
 ### 参数

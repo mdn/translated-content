@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/depthMask
 
 ## 语法
 
-```plain
+```js
 void gl.depthMask(flag);
 ```
 

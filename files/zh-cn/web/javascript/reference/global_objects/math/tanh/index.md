@@ -25,7 +25,7 @@ console.log(Math.tanh(1));
 
 ## 语法
 
-```plain
+```js-nolint
 Math.tanh(x)
 ```
 

@@ -25,7 +25,7 @@ slug: Web/HTTP/Reference/Headers/X-Frame-Options
 
 請加入以下指令到網站組態設定檔：
 
-```plain
+```apacheconf
 Header always append X-Frame-Options SAMEORIGIN
 ```
 
@@ -41,7 +41,7 @@ add_header X-Frame-Options SAMEORIGIN;
 
 請加入以下指令到網站的 Web.config 檔:
 
-```plain
+```xml
 <system.webServer>
   ...
 

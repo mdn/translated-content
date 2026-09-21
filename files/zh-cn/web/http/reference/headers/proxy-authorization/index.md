@@ -11,7 +11,7 @@ slug: Web/HTTP/Reference/Headers/Proxy-Authorization
 
 ## 语法
 
-```plain
+```http
 Proxy-Authorization: <type> <credentials>
 ```
 
@@ -29,7 +29,7 @@ Proxy-Authorization: <type> <credentials>
 
 ## 示例
 
-```plain
+```http
 Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 

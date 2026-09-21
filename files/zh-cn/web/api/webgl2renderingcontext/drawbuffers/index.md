@@ -9,7 +9,7 @@ slug: Web/API/WebGL2RenderingContext/drawBuffers
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.drawBuffers(buffers);
 ```
 

@@ -11,7 +11,7 @@ slug: Web/API/Document/releaseCapture
 
 ### 语法
 
-```plain
+```js-nolint
 document.releaseCapture()
 ```
 

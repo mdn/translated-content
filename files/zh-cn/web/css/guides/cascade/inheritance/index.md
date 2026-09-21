@@ -51,7 +51,7 @@ p {
 
 可以使用 {{cssxref("all")}} 简写属性一次控制所有属性的继承，该属性将其值应用于所有属性，例如：
 
-```plain
+```css
 font {
   all: revert;
   font-size: 200%;

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
 
 ## 語法
 
-```plain
+```js-nolint
 arr[Symbol.iterator]()
 ```
 

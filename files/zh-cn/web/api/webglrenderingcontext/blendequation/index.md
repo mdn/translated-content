@@ -11,7 +11,7 @@ slug: Web/API/WebGLRenderingContext/blendEquation
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.blendEquation(mode);
 ```
 

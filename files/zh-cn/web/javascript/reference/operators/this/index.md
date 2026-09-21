@@ -23,7 +23,7 @@ console.log(test.func());
 
 ## 语法
 
-```plain
+```js-nolint
 this
 ```
 

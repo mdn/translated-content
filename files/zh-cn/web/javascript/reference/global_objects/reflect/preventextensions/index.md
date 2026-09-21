@@ -21,7 +21,7 @@ console.log(Reflect.isExtensible(object1));
 
 ## 语法
 
-```plain
+```js-nolint
 Reflect.preventExtensions(target)
 ```
 
