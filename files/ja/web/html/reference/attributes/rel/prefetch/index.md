@@ -1,11 +1,10 @@
 ---
-title: rel=prefetch
+title: '`rel="prefetch"` 属性値 (HTML)'
+short-title: prefetch
 slug: Web/HTML/Reference/Attributes/rel/prefetch
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
-
-{{HTMLSidebar}}
 
 **`prefetch`** キーワードを {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性に設定すると、ユーザーが将来の操作でターゲットリソースを必要とする可能性が高く、したがってブラウザーはリソースを先読みしてキャッシュすることでユーザーの使い勝手を向上させることができる可能性があることをブラウザーに示唆するものです。 `<link rel="prefetch">` は同じサイトのナビゲーションリソース、または同じサイトのページで使用するサブリソースに使用されます。
 
