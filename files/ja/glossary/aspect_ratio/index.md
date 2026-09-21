@@ -2,12 +2,10 @@
 title: Aspect ratio (アスペクト比)
 slug: Glossary/Aspect_ratio
 l10n:
-  sourceCommit: 1197521ff42256b9d298144330cfd5b6e0d98c33
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{GlossarySidebar}}
-
-**アスペクト比**とは、要素または{{glossary("viewport", "ビューポート")}}の幅と高さの比のことで、比率または 2 つの数値で表します。
+**アスペクト比**とは、要素または{{glossary("viewport", "ビューポート")}}の幅と高さの比のです。2 つの数値の {{cssxref("ratio")}} で表します。
 
 アスペクト比を維持することで、画像や動画のような内在的なアスペクト比であろうと、外因的に設定されたものであろうと、要素の意図する縦横比を維持します。要素やビューポートのアスペクト比による問い合わせを行うこともでき、柔軟な部品やレイアウトを開発するのに有益です。
 
