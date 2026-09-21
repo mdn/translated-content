@@ -60,7 +60,7 @@ svg {
       <td>
         <code>[0-1]</code> |
         <strong
-          ><a href="/fr/docs/Web/SVG/Guides/Content_type#painture"
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
             >&#x3C;percentage></a
           ></strong
         >
