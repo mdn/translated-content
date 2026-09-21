@@ -1,15 +1,24 @@
 ---
 title: stroke-linejoin
 slug: Web/SVG/Reference/Attribute/stroke-linejoin
-original_slug: Web/SVG/Attribute/stroke-linejoin
+l10n:
+  sourceCommit: d19dec85109590176f946fcceef48c787d578b1e
 ---
 
-L'attribut **`stroke-linejoin`** définit la manière de dessiner la liaison entre deux segments de ligne.
+L'attribut **`stroke-linejoin`** est un attribut de présentation qui définit la forme utilisée aux coins des chemins lorsque ceux-ci sont tracés.
 
 > [!NOTE]
-> `stroke-linejoin` étant un attribut de présentation, il peut être utililsé comme propriété CSS.
+> En tant qu'attribut de présentation, `stroke-linejoin` possède une propriété CSS équivalente&nbsp;: {{cssxref("stroke-linejoin")}}. Lorsque les deux sont définies, c'est la propriété CSS qui l'emporte.
 
-Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
+Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
+
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tspan')}}
 
 ## Exemple
 
@@ -24,8 +33,8 @@ svg {
 ```html
 <svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
   <!--
-  Chemin en haut à gauche:
-  Effet de la valeur "miter"
+  Chemin en haut à gauche :
+  effet de la valeur "miter"
   -->
   <path
     d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
@@ -34,8 +43,8 @@ svg {
     stroke-linejoin="miter" />
 
   <!--
-  Chemin en haut au milieu:
-  Effet de la valeur "round"
+  Chemin au centre :
+  effet de la valeur "round"
   -->
   <path
     d="M7,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
@@ -44,8 +53,8 @@ svg {
     stroke-linejoin="round" />
 
   <!--
-  Chemin en haut à droite:
-  Effet de la valeur "bevel"
+  Chemin en haut à droite :
+  effet de la valeur "bevel"
   -->
   <path
     d="M13,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
@@ -54,9 +63,9 @@ svg {
     stroke-linejoin="bevel" />
 
   <!--
-  Chemin en bas à gauche:
-  Effet de la valeur "miter-clip"
-  se replit sur la valeur par défaut (miter) si non pris en charge
+  Chemin en bas à gauche :
+  effet de la valeur "miter-clip",
+  avec repli sur "miter" si elle n'est pas prise en charge.
   -->
   <path
     d="M3,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
@@ -65,9 +74,9 @@ svg {
     stroke-linejoin="miter-clip" />
 
   <!--
-  Chemin en bas à droite:
-  Effet de la valeur "arcs"
-  se replit sur la valeur par défaut (miter) si non pris en charge
+  Chemin en bas à droite :
+  effet de la valeur "arcs",
+  avec repli sur "miter" si elle n'est pas prise en charge.
   -->
   <path
     d="M9,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
@@ -76,8 +85,8 @@ svg {
     stroke-linejoin="arcs" />
 
   <!--
-  Lignes roses qui indiquent la position
-  du chemin pour chaque trait
+  Les lignes roses suivantes mettent en évidence
+  la position du chemin pour chaque trait
   -->
   <g id="highlight">
     <path
@@ -89,23 +98,23 @@ svg {
     <circle cx="3" cy="2" r="0.05" fill="pink" />
     <circle cx="5" cy="5.5" r="0.05" fill="pink" />
   </g>
-  <use xlink:href="#highlight" x="6" />
-  <use xlink:href="#highlight" x="12" />
-  <use xlink:href="#highlight" x="2" y="6" />
-  <use xlink:href="#highlight" x="8" y="6" />
+  <use href="#highlight" x="6" />
+  <use href="#highlight" x="12" />
+  <use href="#highlight" x="2" y="6" />
+  <use href="#highlight" x="8" y="6" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 400)}}
+{{EmbedLiveSample("Exemple", '100%', 400)}}
 
 ## Contexte d'utilisation
 
-<table class="standard-table">
+<table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <code>arcs</code> | <code>bevel</code> |<code>miter</code> |
+        <code>arcs</code> | <code>bevel</code> | <code>miter</code> |
         <code>miter-clip</code> | <code>round</code>
       </td>
     </tr>
@@ -115,7 +124,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">Animation</th>
-      <td>Oui</td>
+      <td>discrète</td>
     </tr>
   </tbody>
 </table>
@@ -123,11 +132,9 @@ svg {
 ### arcs
 
 > [!NOTE]
-> La valeur `arcs` a été introduite en SVG2 et n'est pas souvent pris en charge pour le moment, voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous pour plus de détails.
+> La valeur `arcs` n'est pas encore largement prise en charge.
 
-La valeur `arcs` indique qu'un arc est utilisé pour joindre les segments du chemin. L'arc est formé en prolongeant les bords extérieurs du trait au point de liaison, avec la même courbe que ce bord.
-
-#### Exemple
+La valeur `arcs` indique qu'un coin en arc est utilisé pour joindre les segments du chemin. La forme en arc est obtenue en prolongeant les bords extérieurs du trait au point de jonction par des arcs ayant la même courbure que ces bords extérieurs en ce point.
 
 ```css hidden
 html,
@@ -147,8 +154,8 @@ svg {
     stroke-linejoin="arcs" />
 
   <!--
-  Lignes roses qui indiquent la position
-  du chemin pour chaque trait
+  Les lignes roses suivantes mettent en évidence
+  la position du chemin pour chaque trait
   -->
   <g id="p">
     <path
@@ -169,8 +176,6 @@ svg {
 
 La valeur `bevel` indique qu'un coin biseauté est utilisé pour joindre les segments du chemin.
 
-#### Exemple
-
 ```css hidden
 html,
 body,
@@ -189,8 +194,8 @@ svg {
     stroke-linejoin="bevel" />
 
   <!--
-  Lignes roses qui indiquent la position
-  du chemin pour chaque trait
+  Les lignes roses suivantes mettent en évidence
+  la position du chemin pour chaque trait
   -->
   <g id="p">
     <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
@@ -205,12 +210,10 @@ svg {
 
 ### miter
 
-La valeur `miter` indique qu'un angle droit est utilisé pour joindre les segments du chemin. Le coin est formé en prolongeant les bords extérieurs du trait jusqu'à ce qu'ils se joignent.
+La valeur `miter` indique qu'un coin pointu est utilisé pour joindre les segments du chemin. Le coin est formé en prolongeant les bords extérieurs du trait le long des tangentes aux segments du chemin, jusqu'à ce qu'ils se croisent.
 
 > [!NOTE]
-> Si la longueur du coin dépasse {{SVGAttr('stroke-miterlimit')}}, un coin de type `bevel` est utilisé à la place.
-
-#### Exemple
+> Si {{SVGAttr('stroke-miterlimit')}} est dépassé, la jonction se replie sur `bevel`.
 
 ```css hidden
 html,
@@ -230,25 +233,22 @@ svg {
     stroke-linejoin="miter" />
 
   <!-- Effet de la valeur "miter" sur un angle aigu
-       où la limite stroke-miterlimit est dépassée -->
+       où la limite miter par défaut est dépassée -->
   <path
     d="M7,5 l0.75,-3 l0.75,3"
     stroke="black"
     fill="none"
     stroke-linejoin="miter" />
 
-  <!-- Ligne rouge pointillé qui indique la limite
-       à partir de laquelle une liaison miter devient bevel -->
+  <!-- La ligne pointillée rouge suivante indique où
+       la valeur miter se replie sur la valeur bevel -->
   <path
     d="M0,0 h10"
     stroke="red"
     stroke-dasharray="0.05"
     stroke-width="0.025" />
 
-  <!--
-  Lignes roses qui indiquent la position
-  du chemin pour chaque trait
-  -->
+  <!-- Les lignes roses suivantes mettent en évidence la position du chemin pour chaque trait -->
   <g>
     <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
     <circle cx="1" cy="5" r="0.05" fill="pink" />
@@ -272,13 +272,11 @@ svg {
 ### miter-clip
 
 > [!NOTE]
-> La valeur `miter-clip` a été introduite en SVG2 et n'est pas souvent pris en charge pour le moment, voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous pour plus de détails.
+> La valeur `miter-clip` n'est pas encore largement prise en charge.
 
-La valeur `miter-clip` indique qu'un angle droit est utilisé pour joindre les segments du chemin. Le coin est formé en prolongeant les bords extérieurs du trait jusqu'à ce qu'ils se joignent.
+La valeur `miter-clip` indique qu'un coin pointu est utilisé pour joindre les segments du chemin. Le coin est formé en prolongeant les bords extérieurs du trait le long des tangentes aux segments du chemin, jusqu'à ce qu'ils se croisent.
 
-Si la longueur du coin dépasse {{SVGAttr('stroke-miterlimit')}}, le coin tronqué à une distance égale à la moitié de la valeur de {{SVGAttr('stroke-miterlimit')}} multiplié par l'épaisseur du trait. Cela fournit un meilleur rendu que `miter` sur les angles très aigus et dans le cas d'une animation.
-
-#### Exemple
+Si {{SVGAttr('stroke-miterlimit')}} est dépassé, la pointe est tronquée à une distance égale à la moitié de la valeur de {{SVGAttr('stroke-miterlimit')}} multipliée par l'épaisseur du trait, à partir de l'intersection des segments du chemin. Cela produit un meilleur rendu que `miter` sur les jonctions très aiguës ou dans le cas d'une animation.
 
 ```css hidden
 html,
@@ -298,25 +296,21 @@ svg {
     stroke-linejoin="miter-clip" />
 
   <!-- Effet de la valeur "miter-clip" sur un angle aigu
-       où la limite stroke-miterlimit est dépassée -->
+       où la limite miter par défaut est dépassée -->
   <path
     d="M7,5 l0.75,-3 l0.75,3"
     stroke="black"
     fill="none"
     stroke-linejoin="miter-clip" />
 
-  <!-- Ligne rouge pointillé qui indique la limite
-       à partir de laquelle le coin sera tronqué -->
+  <!-- La ligne pointillée rouge suivante indique où la troncature doit avoir lieu -->
   <path
     d="M0,0 h10"
     stroke="red"
     stroke-dasharray="0.05"
     stroke-width="0.025" />
 
-  <!--
-  Lignes roses qui indiquent la position
-  du chemin pour chaque trait
-  -->
+  <!-- Les lignes roses suivantes mettent en évidence la position du chemin pour chaque trait -->
   <g>
     <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
     <circle cx="1" cy="5" r="0.05" fill="pink" />
@@ -341,8 +335,6 @@ svg {
 
 La valeur `round` indique qu'un coin arrondi est utilisé pour joindre les segments du chemin.
 
-#### Exemple
-
 ```css hidden
 html,
 body,
@@ -361,8 +353,8 @@ svg {
     stroke-linejoin="round" />
 
   <!--
-  Lignes roses qui indiquent la position
-  du chemin pour chaque trait
+  Les lignes roses suivantes mettent en évidence
+  la position du chemin pour chaque trait
   -->
   <g id="p">
     <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
@@ -382,3 +374,7 @@ svg {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété CSS {{cssxref("stroke-linejoin")}}

@@ -1,15 +1,27 @@
 ---
 title: stroke-width
 slug: Web/SVG/Reference/Attribute/stroke-width
-original_slug: Web/SVG/Attribute/stroke-width
+l10n:
+  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
 ---
 
-L'attribut **`stroke-width`** définit l'épaisseur du contour à appliquer à une forme SVG.
+L'attribut **`stroke-width`** est un attribut de présentation qui définit l'épaisseur du contour appliqué à une forme. Il s'applique à toutes les formes SVG et à tous les éléments de contenu textuel mais, comme il s'agit d'une propriété héritée, il peut être appliqué à des éléments comme {{SVGElement("g")}} et produire malgré tout l'effet voulu sur le contour des éléments descendants.
 
 > [!NOTE]
-> `stroke-width` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> En tant qu'attribut de présentation, `stroke-width` possède une propriété CSS équivalente&nbsp;: {{cssxref("stroke-width")}}. Lorsque les deux sont définies, c'est la propriété CSS qui l'emporte.
 
-Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
+Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
+
+- {{SVGElement('circle')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('line')}}
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tspan')}}
 
 ## Exemple
 
@@ -23,31 +35,33 @@ svg {
 
 ```html
 <svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
-  <!-- Épaisseur par défaut: 1 -->
+  <!-- Épaisseur de contour par défaut : 1 -->
   <circle cx="5" cy="5" r="3" stroke="green" />
 
-  <!-- Définit l'épaisseur avec un nombre -->
+  <!-- Épaisseur de contour exprimée avec un nombre -->
   <circle cx="15" cy="5" r="3" stroke="green" stroke-width="3" />
 
-  <!-- Définit l'épaisseur avec un pourcentage -->
+  <!-- Épaisseur de contour exprimée avec un pourcentage -->
   <circle cx="25" cy="5" r="3" stroke="green" stroke-width="2%" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 150)}}
+{{EmbedLiveSample("Exemple", '100%', 150)}}
 
-## Notes d'usage
+## Notes d'utilisation
 
-<table class="standard-table">
+<table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Guides/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#longueur"
+            >&#x3C;length></a
+          ></strong
         > |
         <strong
-          ><a href="/docs/Web/SVG/Guides/Content_type#Percentage"
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#pourcentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -65,9 +79,7 @@ svg {
 </table>
 
 > [!NOTE]
-> SVG2 introduit les valeurs en pourcentage pour `stroke-width`, Cependant, ce n'est pas souvent pris en charge pour le moment (_voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous_). Il est par conséquent recommandé d'utiliser les valeurs de l'intervalle `[0-1]`.
-
-Une valeur en pourcentage est toujours calculée en tant que pourcentage de la longueur diagonale {{SVGAttr('viewBox')}} normalisée.
+> Une valeur en pourcentage est toujours calculée comme un pourcentage de la longueur de la diagonale normalisée du {{SVGAttr('viewBox')}}.
 
 ## Spécifications
 
@@ -76,3 +88,7 @@ Une valeur en pourcentage est toujours calculée en tant que pourcentage de la l
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété CSS {{cssxref("stroke-width")}}

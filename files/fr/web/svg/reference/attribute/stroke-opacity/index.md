@@ -1,15 +1,27 @@
 ---
 title: stroke-opacity
 slug: Web/SVG/Reference/Attribute/stroke-opacity
-original_slug: Web/SVG/Attribute/stroke-opacity
+l10n:
+  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
 ---
 
-L'attribut **`stroke-opacity`** définit l'opacité du contour (_couleur_, _dégradé_, _motif_, etc) appliqué à une forme SVG.
+L'attribut **`stroke-opacity`** est un attribut de présentation qui définit l'opacité du serveur de peinture (_couleur_, _dégradé_, _motif_, etc.) appliqué au contour d'une forme.
 
 > [!NOTE]
-> `stroke-opacity` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> En tant qu'attribut de présentation, `stroke-opacity` possède une propriété CSS équivalente&nbsp;: {{cssxref("stroke-opacity")}}. Lorsque les deux sont définies, c'est la propriété CSS qui l'emporte.
 
-Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
+Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
+
+- {{SVGElement('circle')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('path')}}
+- {{SVGElement('line')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tspan')}}
 
 ## Exemple
 
@@ -23,32 +35,32 @@ svg {
 
 ```html
 <svg viewBox="0 0 40 10" xmlns="http://www.w3.org/2000/svg">
-  <!-- Opacité par défaut: 1 -->
+  <!-- Opacité de contour par défaut : 1 -->
   <circle cx="5" cy="5" r="4" stroke="green" />
 
-  <!-- Définit l'opacité avec un nombre entre 0 et 1-->
+  <!-- Opacité de contour exprimée avec un nombre -->
   <circle cx="15" cy="5" r="4" stroke="green" stroke-opacity="0.7" />
 
-  <!-- Définit l'opacité avec un pourcentage -->
+  <!-- Opacité de contour exprimée avec un pourcentage -->
   <circle cx="25" cy="5" r="4" stroke="green" stroke-opacity="50%" />
 
-  <!-- Définit l'opacité comme propriété CSS -->
+  <!-- Opacité de contour exprimée avec une propriété CSS -->
   <circle cx="35" cy="5" r="4" stroke="green" style="stroke-opacity: .3;" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 150)}}
+{{EmbedLiveSample("Exemple", '100%', 150)}}
 
-## Notes d'usage
+## Notes d'utilisation
 
-<table class="standard-table">
+<table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
         <code>[0-1]</code> |
         <strong
-          ><a href="/docs/Web/SVG/Guides/Content_type#Paint"
+          ><a href="/fr/docs/Web/SVG/Guides/Content_type#painture"
             >&#x3C;percentage></a
           ></strong
         >
@@ -65,10 +77,7 @@ svg {
   </tbody>
 </table>
 
-> [!NOTE]
-> SVG2 introduit les valeurs en pourcentage pour `stroke-opacity`, Cependant, ce n'est pas souvent pris en charge. pour le moment (_voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous_), il est par conséquent recommendé d'utiliser les valeurs de l'intervalle `[0-1]`.
-
-Il est important de savoir que le contour recouvre partiellement le remplissage d'une forme. Ainsi, un contour avec une opacité différente de 1 affichera partiellement le remplissage du dessous. Pour éviter cet effet, il est possible d'appliquer une opacité globale avec l'attribut {{SVGAttr('opacity')}} ou placer le contour derrière le remplissage avec {{SVGAttr('paint-order')}}.
+Il est important de savoir que le contour recouvre partiellement le remplissage d'une forme. Ainsi, un contour dont l'opacité est différente de `1` laissera partiellement apparaître le remplissage situé en dessous. Pour éviter cet effet, il est possible d'appliquer une opacité globale avec l'attribut {{SVGAttr('opacity')}}, ou de placer le contour derrière le remplissage avec l'attribut {{SVGAttr('paint-order')}}.
 
 ## Spécifications
 
@@ -77,3 +86,7 @@ Il est important de savoir que le contour recouvre partiellement le remplissage 
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété CSS {{cssxref("stroke-opacity")}}
