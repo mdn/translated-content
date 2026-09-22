@@ -194,31 +194,31 @@ L'un des effets de c'est que lorsque vous faites un lien vers MDN Web Docs sur F
 
 ## Ajouter des icônes personnalisées à un site
 
-Pour enrichir davantage le design de votre site, vous pouvez ajouter des références à des icônes personnalisées dans vos métadonnées et celles-ci sont affichées dans certains contextes. La plus couramment utilisée est la **favicône** (abréviation de «&nbsp;favorites icon&nbsp;», en référence à son utilisation dans les listes de favoris ou de signets des navigateurs).
+Pour enrichir davantage le design de votre site, vous pouvez ajouter des références à des icônes personnalisées dans vos métadonnées et celles-ci sont affichées dans certains contextes. La plus couramment utilisée est la **favicon** (abréviation de «&nbsp;favorites icon&nbsp;», en référence à son utilisation dans les listes de favoris ou de signets des navigateurs).
 
-La petite favicône existe depuis de nombreuses années. Il s'agit de la première icône de ce type&nbsp;: une icône carrée de 16 pixels utilisée à plusieurs endroits. Selon le navigateur, vous pouvez voir les favicônes affichées dans l'onglet du navigateur contenant chaque page ouverte, et à côté des pages marquées dans le panneau des signets.
+La petite favicon existe depuis de nombreuses années. Il s'agit de la première icône de ce type&nbsp;: une icône carrée de 16 pixels utilisée à plusieurs endroits. Selon le navigateur, vous pouvez voir les favicons affichées dans l'onglet du navigateur contenant chaque page ouverte, et à côté des pages marquées dans le panneau des signets.
 
-Vous pouvez ajouter une favicône à votre page en&nbsp;:
+Vous pouvez ajouter une favicon à votre page en&nbsp;:
 
-![Une fenêtre de navigateur schématique avec deux onglets, chacun contenant une favicône à gauche du titre de la page&nbsp;: le logo MDN dans l'onglet actif "MDN Web Docs" et une icône de livre dans l'onglet « Autre page ».](favicon.svg)
+![Une fenêtre de navigateur schématique avec deux onglets, chacun contenant une favicon à gauche du titre de la page&nbsp;: le logo MDN dans l'onglet actif "MDN Web Docs" et une icône de livre dans l'onglet « Autre page ».](favicon.svg)
 
 1. L'enregistrant dans un format pris en charge comme `.ico`, `.gif` ou `.png` quelque part dans la structure de dossiers de votre site web.
-2. Ajoutant un élément {{HTMLElement("link")}} dans le bloc {{HTMLElement("head")}} de votre HTML, qui référence le chemin vers le fichier de la favicône&nbsp;:
+2. Ajoutant un élément {{HTMLElement("link")}} dans le bloc {{HTMLElement("head")}} de votre HTML, qui référence le chemin vers le fichier de la favicon&nbsp;:
 
    ```html
    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
    ```
 
 > [!NOTE]
-> Dans cet exemple, le chemin vers le fichier de la favicône commence par `/`, ce qui signifie «&nbsp;chercher le fichier dans le répertoire racine de votre site&nbsp;». Cela peut se trouver à un endroit différent dans le code source, selon le système que vous utilisez pour créer votre site&nbsp;: les cadriciels web réservent généralement un dossier spécial pour les fichiers à la racine du site, comme `static` ou `public`.
+> Dans cet exemple, le chemin vers le fichier de la favicon commence par `/`, ce qui signifie «&nbsp;chercher le fichier dans le répertoire racine de votre site&nbsp;». Cela peut se trouver à un endroit différent dans le code source, selon le système que vous utilisez pour créer votre site&nbsp;: les cadriciels web réservent généralement un dossier spécial pour les fichiers à la racine du site, comme `static` ou `public`.
 >
 > Ne vous inquiétez pas trop des subtilités des chemins de fichiers pour l'instant&nbsp;; vous en apprendrez plus à ce sujet plus tard (consultez [Introduction rapide aux URL et aux chemins](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links#une_brève_présentation_des_url_et_des_chemins) si vous êtes curieux·se).
 >
-> La plupart des navigateurs et applications utilisent aujourd'hui automatiquement un fichier `favicon.ico` trouvé à la racine du site comme favicône, donc beaucoup de sites n'incluent même pas l'élément `<link>`. Un élément explicite reste utile si vous souhaitez placer votre fichier de favicône ailleurs.
+> La plupart des navigateurs et applications utilisent aujourd'hui automatiquement un fichier `favicon.ico` trouvé à la racine du site comme favicon, donc beaucoup de sites n'incluent même pas l'élément `<link>`. Un élément explicite reste utile si vous souhaitez placer votre fichier de favicon ailleurs.
 
-Voici un exemple de favicône dans un panneau de favoris&nbsp;:
+Voici un exemple de favicon dans un panneau de favoris&nbsp;:
 
-![Le panneau de signets Firefox, montrant un exemple de signet avec une favicône affichée à côté.](bookmark-favicon.png)
+![Le panneau de signets Firefox, montrant un exemple de signet avec une favicon affichée à côté.](bookmark-favicon.png)
 
 Vous pouvez également vouloir inclure différentes icônes pour différents contextes. Par exemple&nbsp;:
 
@@ -249,7 +249,7 @@ Cela permet d'afficher une icône lorsque le site est enregistré sur l'écran d
   href="/apple-touch-icon-152x152.png" />
 <!-- Résolution 2x iPhone et autres appareils: -->
 <link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" />
-<!-- favicône de base -->
+<!-- favicon de base -->
 <link rel="shortcut icon" href="favicon32.png" />
 ```
 

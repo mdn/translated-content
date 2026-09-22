@@ -3,7 +3,7 @@ title: Firefox 14 note de version pour les développeurs
 short-title: Firefox 14
 slug: Mozilla/Firefox/Releases/14
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: a23122d0e86fb376234614beb5b350b217068054
 ---
 
 Firefox 14 est sorti le 17 juillet 2012. Cet article répertorie les principaux changements utiles non seulement aux développeur·euse·s Web, mais aussi aux développeur·euse·s Firefox et Gecko ainsi qu'aux développeur·euse·s d'extensions.
