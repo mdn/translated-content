@@ -2,7 +2,7 @@
 title: "Unicode 文字クラスエスケープ: \\p{...}, \\P{...}"
 slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 l10n:
-  sourceCommit: e0d92259b485a219840367cf4e23a7069f192eec
+  sourceCommit: 7d4628c5144f459ddb081a3e58d0e56f0c2db673
 ---
 
 **Unicode 文字クラスエスケープ**は[文字クラスエスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)の一種で、Unicode プロパティで指定された一連の文字に一致します。これは [Unicode 対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode)でのみ対応しています。[`v`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) フラグが有効である場合、有限長の文字列と照合するために使用することもできます。
@@ -170,7 +170,8 @@ console.log(getPrices(str2)); // ["$19.99", "€18.99", "¥2000"]
 
 ```js
 const flag = "🇺🇳";
-console.log(flag.length); // 2
+console.log(flag.length); // 4 （2 つのコードポイントで、それぞれがサロゲートペア）
+console.log([...flag].length); // 2
 console.log(/\p{RGI_Emoji_Flag_Sequence}/v.exec(flag)); // [ '🇺🇳' ]
 ```
 

@@ -2,16 +2,14 @@
 title: async function*
 slug: Web/JavaScript/Reference/Statements/async_function*
 l10n:
-  sourceCommit: 77176b1f35f73f319bb5b959e5c90db8b5a0f9ea
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Statements")}}
+**`async function*`** 宣言は、新しい非同期ジェネレーター関数を指定された名前への{{Glossary("binding", "バインド")}}として作成します。
 
-**`async function*`** 宣言は非同期ジェネレーター関数を定義し、これは {{jsxref("AsyncGenerator")}} オブジェクトを返します。
+非同期ジェネレーター関数は、[`async function*` 式](/ja/docs/Web/JavaScript/Reference/Operators/async_function*)を使用して定義することもできます。
 
-非同期ジェネレーター関数は、{{jsxref("AsyncGeneratorFunction")}} コンストラクターや [`async function*` 式](/ja/docs/Web/JavaScript/Reference/Operators/async_function*)の構文を使用して定義することもできます。
-
-{{InteractiveExample("JavaScript デモ: Expressions - Async Function Asterisk", "taller")}}
+{{InteractiveExample("JavaScript デモ: async function* 宣言", "taller")}}
 
 ```js interactive-example
 async function* foo() {
@@ -24,7 +22,7 @@ let str = "";
 
 async function generate() {
   for await (const val of foo()) {
-    str = str + val;
+    str += val;
   }
   console.log(str);
 }
@@ -42,7 +40,7 @@ async function* name(param0) {
 async function* name(param0, param1) {
   statements
 }
-async function* name(param0, param1, /* … ,*/ paramN) {
+async function* name(param0, param1, /* …, */ paramN) {
   statements
 }
 ```
@@ -50,26 +48,29 @@ async function* name(param0, param1, /* … ,*/ paramN) {
 > [!NOTE]
 > 非同期ジェネレーター関数には、対応するアロー関数はありません。
 
+> [!NOTE]
+> `function` と `*` は別個のトークンであるため、[ホワイトスペースまたは改行文字](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#ホワイトスペース)で区切ることができます。ただし、`async` と `function` の間に改行文字を挿入することはできません。そうすると、セミコロンが[自動的に挿入される](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#自動セミコロン挿入)ため、`async` が識別子となり、残りの部分が `function*` の宣言となってしまいます。
+
 ### 引数
 
 - `name`
   - : 関数名です。
 - `param` {{optional_inline}}
-  - : 関数の構文上の引数名です。
+  - : 関数の構文上の引数名です。引数の構文については、[関数リファレンス](/ja/docs/Web/JavaScript/Guide/Functions#関数の引数)を参照してください。
 - `statements` {{optional_inline}}
   - : 関数の本体を構成する文です。
 
 ## 解説
 
-非同期ジェネレーター関数は、[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)と[ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)の機能を組み合わせたものです。関数の内部で [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) と [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) のキーワードの両方を使うことができます。これにより、ジェネレーター関数の遅延の性質を利用しながら、`await` で人間工学的に非同期タスクを処理することができるようになります。
+`async function*` 宣言は、{{jsxref("AsyncGeneratorFunction")}} オブジェクトを作成します。非同期ジェネレーター関数が呼び出されるたびに、[非同期イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)に準拠した新しい {{jsxref("AsyncGenerator")}} オブジェクトが返されます。`next()` が呼び出されるたびに、イテレーターの結果オブジェクトに解決される{{jsxref("Promise", "プロミス")}}が返されます。
 
-`function*` で宣言された通常のジェネレーター関数とは異なり、非同期ジェネレーター関数は {{jsxref("AsyncGenerator")}} オブジェクトを返します。[非同期反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)に準拠しています。`next()` を呼び出すたびに、イテレーターの結果オブジェクトに解決する {{jsxref("Promise")}} を返します。
+非同期ジェネレーター関数は、[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)と[ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)の機能を組み合わせたものです。関数の内部で [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) と [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) のキーワードの両方を使うことができます。これにより、ジェネレーター関数の遅延の性質を利用しながら、`await` で人間工学的に非同期タスクを処理することができるようになります。
 
 非同期ジェネレーターからプロミスが生成されると、イテレーターの結果のプロミスの最終的な状態は、生成されたプロミスの状態と一致します。例えば次のようになります。
 
 ```js
 async function* foo() {
-  yield Promise.reject(1);
+  yield Promise.reject(new Error("failed"));
 }
 
 foo()
@@ -77,9 +78,9 @@ foo()
   .catch((e) => console.error(e));
 ```
 
-生成されたプロミスが拒否された場合、イテレーターの結果も拒否されるため、`1` がログ出力されます。非同期ジェネレーターの解決結果の `value` プロパティは、別のプロミスにはなりません。
+生成されたプロミスが拒否された場合、イテレーターの結果も拒否されるため、`Error: failed` がログ出力されます。非同期ジェネレーターの解決結果の `value` プロパティは、別のプロミスにはなりません。
 
-`async function*` 宣言は、そのスコープの先頭に[巻き上げ](/ja/docs/Glossary/Hoisting)され、そのスコープ内のどこでも呼び出すことができます。
+`async function*` の宣言は、{{jsxref("Statements/function", "関数")}}の宣言と同様に動作します。つまり、スコープの先頭に[巻き上げ](/ja/docs/Glossary/Hoisting)られるため、そのスコープ内のどこからでも呼び出すことができ、特定のコンテキストでのみ再宣言が可能です。
 
 ## 例
 
@@ -151,11 +152,15 @@ console.log((await files.next()).value);
 
 ## 関連情報
 
-- {{jsxref("Operators/async_function*", "async function*")}} 式
-- {{jsxref("AsyncGeneratorFunction")}} オブジェクト
-- [イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("GeneratorFunction")}} オブジェクト
+- [関数](/ja/docs/Web/JavaScript/Guide/Functions)ガイド
+- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)ガイド
+- [関数](/ja/docs/Web/JavaScript/Reference/Functions)
+- {{jsxref("AsyncGeneratorFunction")}}
+- [`async function*` 式](/ja/docs/Web/JavaScript/Reference/Operators/async_function*)
+- {{jsxref("Statements/function", "function")}}
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Statements/async_function", "async function")}}
+- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} オブジェクト
-- {{jsxref("Functions", "関数", "", 1)}}
+- {{jsxref("AsyncGenerator")}}
