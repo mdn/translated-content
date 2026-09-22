@@ -1,74 +1,68 @@
 ---
-title: Grilles CSS (CSS Grid)
+title: Disposition de grille CSS
+short-title: Disposition de grille
 slug: Web/CSS/Guides/Grid_layout
-original_slug: Web/CSS/CSS_grid_layout
+l10n:
+  sourceCommit: 298079b550c76f20de6611c4ecdde4c30dc68b2b
 ---
 
-Le module **_CSS Grid layout_** (modèle de disposition en grille) est un module de la spécification CSS qui permet de créer des mises en page en divisant l'espace d'affichage en régions utilisables par une application ou en définissant des relations de taille, position et d'empilement entre les éléments HTML.
+Le module de **disposition de grille CSS** excelle à diviser une page en régions principales ou à définir la relation en termes de taille, de position et d'empilement entre les parties d'un contrôle construit à partir de primitives HTML.
 
-Comme les tableaux, la grille permet d'aligner des éléments sous forme de colonnes et de lignes mais à la différence des tableaux, la grille n'a pas de structure de contenu. Ainsi, on peut créer de nombreuses mises en page qui n'auraient pas été possibles avec les tableaux. Ainsi, les éléments fils d'un conteneur en grille peuvent être positionnés afin qu'ils se chevauchent ou qu'ils se comportent comme des éléments positionnés.
+Comme les tableaux, la disposition de grille permet à un·e auteur·ice d'aligner des éléments en colonnes et en incises. Cependant, de nombreuses mises en page sont soit possibles, soit plus faciles avec la grille CSS qu'elles ne l'étaient avec les tableaux. Par exemple, les éléments enfants d'un conteneur en grille peuvent se positionner de manière à se chevaucher et à se superposer, de manière similaire aux éléments positionnés en CSS.
 
-## Un exemple simple
+## La disposition de grille en action
 
-Dans l'exemple qui suit, on montre comment utiliser une grille avec trois pistes en colonnes pour laquelle les nouvelles lignes créées mesureront au moins 100 pixels et auront au plus la taille automatique (définie par leur contenu). Les éléments sont placés sur la grille grâce aux numéros des lignes horizontales et verticales.
+L'exemple montre une grille avec trois pistes en colonnes pour laquelle les nouvelles lignes créées mesurent au moins 100 pixels et ont au plus la taille automatique (définie par leur contenu). Les éléments sont placés sur la grille grâce aux numéros des lignes horizontales et verticales.
+
+```html hidden
+<div class="enveloppe">
+  <div class="un">Un</div>
+  <div class="deux">Deux</div>
+  <div class="trois">Trois</div>
+  <div class="quatre">Quatre</div>
+  <div class="cinq">Cinq</div>
+  <div class="six">Six</div>
+</div>
+```
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
-.wrapper {
+.enveloppe {
   max-width: 940px;
   margin: 0 auto;
 }
-
-.wrapper > div {
-  border: 2px solid rgb(233, 171, 88);
+.enveloppe > div {
+  border: 2px solid rgb(233 171 88);
   border-radius: 5px;
-  background-color: rgba(233, 171, 88, 0.5);
+  background-color: rgb(233 171 88 / 50%);
   padding: 1em;
   color: #d9480f;
 }
-```
-
-### HTML
-
-```html
-<div class="wrapper">
-  <div class="one">Un</div>
-  <div class="two">Deux</div>
-  <div class="three">Trois</div>
-  <div class="four">Quatre</div>
-  <div class="five">Cinq</div>
-  <div class="six">Six</div>
-</div>
-```
-
-### CSS
-
-```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
-.one {
+.un {
   grid-column: 1 / 3;
   grid-row: 1;
 }
-.two {
+.deux {
   grid-column: 2 / 4;
   grid-row: 1 / 3;
 }
-.three {
+.trois {
   grid-column: 1;
   grid-row: 2 / 5;
 }
-.four {
+.quatre {
   grid-column: 3;
   grid-row: 3;
 }
-.five {
+.cinq {
   grid-column: 2;
   grid-row: 4;
 }
@@ -78,77 +72,145 @@ Dans l'exemple qui suit, on montre comment utiliser une grille avec trois pistes
 }
 ```
 
-{{EmbedLiveSample("Un_exemple_simple", "100%", "440")}}
+{{EmbedLiveSample("La disposition de grille en action", "100%", 460)}}
+
+Cet exemple animé utilise {{CSSxRef("display")}}, {{CSSxRef("grid-template-columns")}}, {{CSSxRef("grid-template-rows")}} et {{CSSxRef("gap")}} pour créer la grille, et {{CSSxRef("grid-column")}} et {{CSSxRef("grid-row")}} pour positionner les éléments dans la grille. Pour voir et modifier le HTML et le CSS utilisés, cliquez sur «&nbsp;Exécuter&nbsp;» en haut à droite de l'exemple.
 
 ## Référence
 
-### Propriétés CSS
+### Propriétés
 
+- {{CSSxRef("grid-auto-columns")}}
+- {{CSSxRef("grid-auto-flow")}}
+- {{CSSxRef("grid-auto-rows")}}
 - {{CSSxRef("grid-template-columns")}}
 - {{CSSxRef("grid-template-rows")}}
 - {{CSSxRef("grid-template-areas")}}
-- {{CSSxRef("grid-template")}}
-- {{CSSxRef("grid-auto-columns")}}
-- {{CSSxRef("grid-auto-rows")}}
-- {{CSSxRef("grid-auto-flow")}}
-- {{CSSxRef("grid")}}
-- {{CSSxRef("grid-row-start")}}
+- {{CSSxRef("grid-template")}} (raccourcie)
+- {{CSSxRef("grid")}} (raccourcie)
 - {{CSSxRef("grid-column-start")}}
-- {{CSSxRef("grid-row-end")}}
 - {{CSSxRef("grid-column-end")}}
-- {{CSSxRef("grid-row")}}
-- {{CSSxRef("grid-column")}}
-- {{CSSxRef("grid-area")}}
-- {{CSSxRef("row-gap")}}
-- {{CSSxRef("column-gap")}}
-- {{CSSxRef("gap")}}
+- {{CSSxRef("grid-column")}} (raccourcie)
+- {{CSSxRef("grid-row-start")}}
+- {{CSSxRef("grid-row-end")}}
+- {{CSSxRef("grid-row")}} (raccourcie)
+- {{CSSxRef("grid-area")}} (raccourcie)
 
-### Fonctions CSS
+### Fonctions
 
-- {{CSSxRef("repeat", "repeat()")}}
-- {{CSSxRef("minmax", "minmax()")}}
-- {{CSSxRef("fit-content", "fit-content()")}}
+- {{CSSxRef("repeat()")}}
+- {{CSSxRef("minmax()")}}
+- {{CSSxRef("fit-content()")}}
 
-### Types de donnée CSS
+### Types de donnée et valeurs
 
-{{CSSxRef("&lt;flex&gt;")}}
+- {{CSSxRef("&lt;flex&gt;")}} (unité `fr`)
 
-### Termes définis dans le glossaire
+### Termes et définitions du glossaire
 
 - {{Glossary("Grid", "Grille")}}
-- {{Glossary("Grid_Lines", "Lignes")}}
-- {{Glossary("Grid_Tracks", "Pistes")}}
-- {{Glossary("Grid_Cell", "Cellules")}}
-- {{Glossary("Grid_Areas", "Zones")}}
+- {{Glossary("Grid areas", "Zones de grille")}}
+- {{Glossary("Grid axis", "Axes de la grille")}}
+- {{Glossary("Grid cell", "Cellule de la grille")}}
+- {{Glossary("Grid column", "Colonne de la grille")}}
+- {{Glossary("Grid container", "Conteneur de la grille")}}
+- {{Glossary("Grid lines", "Lignes de la grille")}}
+- {{Glossary("Grid row", "Ligne de la grille")}}
+- {{Glossary("Grid tracks", "Pistes de la grille")}}
 - {{Glossary("Gutters", "Gouttières")}}
-- {{Glossary("Grid_Axis", "Axe")}}
-- {{Glossary("Grid_Row", "Ligne horizontale")}}
-- {{Glossary("Grid_Column", "Colonnes")}}
 
 ## Guides
 
-- [Les concepts de base](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
-- [Placer les éléments sur les lignes d'une grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
-- [Le modèle de grille et les autres modèles de disposition](/fr/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
-- [Utiliser des lignes nommées sur une grille](/fr/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
-- [Définir des zones sur une grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
-- [Le placement automatique sur une grille](/fr/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
-- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
-- [Les grilles CSS, les valeurs logiques et les modes d'écriture](/fr/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
-- [Les grilles CSS et l'accessibilité](/fr/docs/Web/CSS/Guides/Grid_layout/Accessibility)
-- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/Guides/Grid_layout)
-- [Construire des dispositions courantes avec des grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
-- [Les sous-grilles (_subgrid_)](/fr/docs/Web/CSS/Guides/Grid_layout/Subgrid)
+- [Concepts de base de la disposition en grille](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+  - : Un aperçu des différentes fonctionnalités offertes par le module de disposition en grille CSS.
 
-## Ressources externes
+- [Relation de la disposition en grille avec d'autres méthodes de disposition](/fr/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
+  - : Comment la disposition en grille s'articule avec d'autres fonctionnalités CSS, y compris les boîtes flexibles, les éléments positionnés absolument et `display: contents`.
 
-- [Des exemples créés par Jen Simmons (en anglais)](https://labs.jensimmons.com/)
-- [Les grilles CSS par l'exemple - un ensemble d'exemples et de tutoriels (en anglais)](https://gridbyexample.com/)
-- [La référence Codrops sur les grilles CSS (en anglais)](https://tympanus.net/codrops/css_reference/grid/)
-- [L'inspecteur de grille dans les outils de développement Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
-- [Le bac à sable CSS Grid (en anglais)](https://mozilladevelopers.github.io/playground/)
-- [Les grilles CSS et Internet Explorer 11](https://tomrothe.de/posts/css_grid_and_ie11.html) ([prothèse - _polyfill_](https://github.com/motine/css_grid_annotator))
+- [Disposition en grille utilisant le placement basé sur les lignes](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+  - : Les lignes de la grille et comment positionner les éléments par rapport à ces lignes, y compris les propriétés `grid-area`, les numéros de ligne négatifs, le chevauchement de plusieurs cellules et la création de gouttières de grille.
+
+- [Zones de modèle de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
+  - : Positionner les éléments de la grille en utilisant des zones de modèle nommées.
+
+- [Disposition en grille utilisant des lignes de grille nommées](/fr/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
+  - : Combiner les noms et les tailles de pistes&nbsp;; positionner les éléments de la grille en définissant des lignes de grille nommées et des zones de modèle.
+
+- [Placement automatique dans la disposition en grille](/fr/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
+  - : Comment la grille positionne les éléments qui ne déclarent aucune propriété de placement.
+
+- [Aligner les éléments dans une disposition en grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
+  - : Aligner, justifier et centrer les éléments de la grille le long des deux axes d'une disposition en grille.
+
+- [Grilles, valeurs logiques et modes d'écriture](/fr/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
+  - : Examiner l'interaction entre la disposition en grille CSS, l'alignement des boîtes et les modes d'écriture, ainsi que les propriétés et valeurs logiques et physiques CSS.
+
+- [Disposition en grille et accessibilité](/fr/docs/Web/CSS/Guides/Grid_layout/Accessibility)
+  - : Examiner comment la disposition en grille CSS peut à la fois favoriser et nuire à l'accessibilité.
+
+- [Réaliser des dispositions courantes avec des grilles](/fr/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
+  - : Quelques dispositions différentes qui présentent les techniques utilisables lors de la conception de dispositions en grille CSS, notamment l'utilisation de {{CSSxRef("grid-template-areas")}}, d'un système de grille flexible à 12 colonnes et d'une liste de produits utilisant le placement automatique.
+
+- [Sous-grille](/fr/docs/Web/CSS/Guides/Grid_layout/Subgrid)
+  - : Ce que fait la sous-grille, avec les cas d'utilisation et les modèles de conception auxquels elle répond.
+
+- [Disposition en voies de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes)
+  - : Détails sur la disposition en voies de grille et son utilisation.
+
+- [Alignement des boîtes dans une disposition en grille CSS](/fr/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+  - : Fonctionnement de l'alignement des boîtes dans le contexte d'une disposition en grille.
+
+## Fonctionnalités associées
+
+Le module [d'affichage CSS](/fr/docs/Web/CSS/Guides/Display)
+
+- {{CSSxRef("display")}}
+- {{CSSxRef("order")}}
+
+Le module [d'alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment)
+
+- {{CSSxRef("align-content")}}
+- {{CSSxRef("align-items")}}
+- {{CSSxRef("align-self")}}
+- {{CSSxRef("justify-content")}}
+- {{CSSxRef("justify-items")}}
+- {{CSSxRef("justify-self")}}
+- {{CSSxRef("place-content")}}
+- {{CSSxRef("place-items")}}
+- {{CSSxRef("place-self")}}
+
+Le module [des espaces CSS](/fr/docs/Web/CSS/Guides/Gaps)
+
+- {{CSSxRef("column-gap")}}
+- {{CSSxRef("gap")}}
+- {{CSSxRef("row-gap")}}
+
+Le module [de dimensionnement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_sizing)
+
+- {{CSSxRef("aspect-ratio")}}
+- {{CSSxRef("box-sizing")}}
+- {{CSSxRef("height")}}
+- {{CSSxRef("max-height")}}
+- {{CSSxRef("max-width")}}
+- {{CSSxRef("min-height")}}
+- {{CSSxRef("min-width")}}
+- {{CSSxRef("width")}}
+- Le type de donnée {{CSSxRef("ratio")}}
+- La valeur {{CSSxRef("min-content")}}
+- La valeur {{CSSxRef("max-content")}}
+- La valeur {{CSSxRef("fit-content")}}
+- La fonction {{CSSxRef("fit-content()")}}
 
 ## Spécifications
 
 {{Specifications}}
+
+## Voir aussi
+
+- Le module [de disposition en boîte flexible CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout)
+- Le module [d'affichage CSS](/fr/docs/Web/CSS/Guides/Display)
+- [Exemples de grille <sup>(angl.)</sup>](https://gridbyexample.com/)
+- [Référence de la grille CSS <sup>(angl.)</sup>](https://tympanus.net/codrops/css_reference/grid/) sur Codrops
+- [Outils de développement Firefox&nbsp;: inspecteur de grille <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
+- [Terrain de jeu de la grille CSS <sup>(angl.)</sup>](https://mozilladevelopers.github.io/playground/css-grid/)
+- [Jardin de la grille CSS <sup>(angl.)</sup>](https://cssgridgarden.com/) — Un jeu pour apprendre la grille CSS
