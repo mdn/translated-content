@@ -1,11 +1,13 @@
 ---
-title: Shallow copy
+title: Copia superficial
 slug: Glossary/Shallow_copy
+l10n:
+  sourceCommit: b7c5617fc1d8eb00c6884a708983da21ad61b228
 ---
 
 {{GlossarySidebar}}
 
-Una **copia superficial** (_shallow copy_) de un objeto es aquella cuyas propiedades comparten las mismas {{Glossary("object reference", "references")}} (apuntando a los mismos valores subyacentes) que las del objeto original a partir del cual se creó la copia. Como resultado, al modificar el objeto original o la copia, es posible que el otro objeto también cambie. Este comportamiento contrasta con el de una {{Glossary("deep copy")}} en la que el original y la copia son totalmente independientes.
+Una **copia superficial** (_shallow copy_) de un objeto es aquella cuyas propiedades comparten las mismas {{Glossary("object reference", "referencias")}} (apuntando a los mismos valores subyacentes) que las del objeto original a partir del cual se creó la copia. Como resultado, al modificar el objeto original o la copia, es posible que el otro objeto también cambie. Este comportamiento contrasta con el de una {{Glossary("deep copy")}} en la que el original y la copia son totalmente independientes.
 
 La copia superficial suele implementarse de la siguiente manera:
 
@@ -28,9 +30,9 @@ En las copias superficiales, solo se copian las propiedades de nivel superior, n
 - Reasignar propiedades de nivel superior de la copia no afecta al objeto de origen.
 - Reasignar propiedades de objetos anidados de la copia sí afecta al objeto de origen.
 
-En JavaScript, todas las operaciones estándar integradas de copia de objetos ([spread syntax](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.prototype.concat()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/concat), [`Array.prototype.slice()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`Array.from()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/from), and [`Object.assign()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)) crean copias superficiales en lugar de copias profundas.
+En JavaScript, todas las operaciones estándar integradas de copia de objetos ([spread syntax](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.prototype.concat()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/concat), [`Array.prototype.slice()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`Array.from()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/from), y [`Object.assign()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)) crean copias superficiales en lugar de copias profundas.
 
-Considere el siguiente ejemplo, en el que se crea un objeto de lista `ingredientsList` y, a continuación, se crea un objeto `ingredientsListCopy` copiando dicho objeto `ingredientsList`.
+Considera el siguiente ejemplo, en el que se crea un objeto de tipo arreglo `ingredientsList` y, a continuación, se crea un objeto `ingredientsListCopy` copiando dicho objeto `ingredientsList`.
 
 ```js
 const ingredientsList = ["noodles", { list: ["eggs", "flour", "water"] }];
@@ -59,7 +61,7 @@ console.log(JSON.stringify(ingredientsList));
 // ["noodles",{"list":["rice flour","water"]}]
 ```
 
-## Vea también
+## Véase también
 
 - Términos de glosario relacionados:
   - {{Glossary("Deep equality")}}

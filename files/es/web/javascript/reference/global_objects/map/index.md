@@ -320,7 +320,7 @@ Estas propiedades están definidas en `Map.prototype` y las comparten todas las 
 - {{jsxref("Map.prototype.clear()")}}
   - : Remueve todas las tuplas llave-valor del objeto `Map`.
 - {{jsxref("Map.prototype.delete()")}}
-  - : Retorna `true` si un elemento en el objeto `Map` existía y ha sido removido, or `false` si el elemento no existe.`map.has(key)` regresará `false` después de esto.
+  - : Retorna `true` si un elemento en el objeto `Map` existía y ha sido removido, o `false` si el elemento no existe.`map.has(key)` retornará `false` después de esto.
 - {{jsxref("Map.prototype.entries()")}}
   - : Retorna un nuevo objeto Iterador que contiene un arreglo con dos miembros `[llave, valor]` por cada elemento en el objeto `Map` en orden de inserción.
 - {{jsxref("Map.prototype.forEach()")}}
@@ -328,15 +328,15 @@ Estas propiedades están definidas en `Map.prototype` y las comparten todas las 
 - {{jsxref("Map.prototype.get()")}}
   - : Retorna el valor asociado a la llave que se pasa como argumento, o `undefined` si no hay ninguno.
 - {{jsxref("Map.prototype.getOrInsert()")}}
-  - : Retorna el valor correspondiente a la llave especificada en el objeto Map . Si la llave no está presente, inserta una nueva entrada con la llave y un valor por defecto dado, y retorna el valor insertado.
+  - : Retorna el valor correspondiente a la llave especificada en el objeto `Map`. Si la llave no está presente, inserta una nueva entrada con la llave y un valor por defecto dado, y retorna el valor insertado.
 - {{jsxref("Map.prototype.getOrInsertComputed()")}}
-  - : Retorna el valor correspondiente a la llave especificada en el objeto Map. Si la llave no está presente, inserta una nueva entrada con la llave y un valor por defecto calculado de un callback especificado, y retorna el valor insertado.
+  - : Retorna el valor correspondiente a la llave especificada en el objeto `Map`. Si la llave no está presente, inserta una nueva entrada con la llave y un valor por defecto calculado de un callback especificado, y retorna el valor insertado.
 - {{jsxref("Map.prototype.has()")}}
   - : Retorna un booleano indicando si, en el objeto `Map` un valor ha sido asociado a la llave pasada como argumento.
 - {{jsxref("Map.prototype.keys()")}}
   - : Retorna un nuevo objeto Iterador que contiene las llaves para cada elemento en el objeto `Map`, en orden de inserción.
 - {{jsxref("Map.prototype.set()")}}
-  - : Asigna el valor en el objeto `Map` para la llave pasada como argumento. Regresa el objeto `Map`.
+  - : Asigna el valor en el objeto `Map` para la llave pasada como argumento. Retorna el objeto `Map`.
 - {{jsxref("Map.prototype.values()")}}
   - : Retorna un nuevo objeto Iterador que contiene los valores para cada elemento en un objeto `Map`, en orden de inserción.
 - [`Map.prototype[Symbol.iterator]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
@@ -469,7 +469,7 @@ console.log(original === clone); // false (útil para comparaciones superficiale
 ```
 
 > [!NOTE]
-> Tenga en cuenta que _los datos en si_ no se clonan. En otras palabras, es sólo una [copia superficial](/es/docs/Glossary/Shallow_copy) del objeto Map.
+> Tenga en cuenta que _los datos en si_ no se clonan. En otras palabras, es sólo una [copia superficial](/es/docs/Glossary/Shallow_copy) del objeto `Map`.
 
 Los objetos _Map_ pueden unirse, manteniendo la unicidad de las llaves:
 
@@ -527,7 +527,7 @@ console.log(merged.get(3)); // three
 ## Véase también
 
 - [Polyfill para `Map` en `core-js`](https://github.com/zloirock/core-js#map)
-- [es-shims polyfill para Map](https://www.npmjs.com/package/es-map)
+- [es-shims polyfill de Map](https://www.npmjs.com/package/es-map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}
