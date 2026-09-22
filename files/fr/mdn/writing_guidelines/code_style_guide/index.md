@@ -2,9 +2,8 @@
 title: Guide pour rédiger des exemples de code
 short-title: Style de code
 slug: MDN/Writing_guidelines/Code_style_guide
-original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 l10n:
-  sourceCommit: 7ff752fba26e0bb950998bb5476157ff96c7d314
+  sourceCommit: ad54ecbfce4d029128ac83686707dd500e8e7b1c
 ---
 
 Les règles qui sont décrites dans cet article concernent la mise en forme des exemples de code, quel que soit le langage de programmation concerné. Pour savoir quel contenu inclure lors de l'écriture d'exemples de code, veuillez vous référer [au guide stylistique](/fr/docs/MDN/Writing_guidelines/Writing_style_guide#exemples_de_code).
@@ -30,16 +29,73 @@ Quelques recommandations générales supplémentaires&nbsp;:
 
 - Les exemples de code doivent être courts et idéalement ne montrer que la fonctionnalité qui vous intéresse immédiatement.
 - Rédigez votre code pour qu'il soit aussi compréhensible que possible, même si ce n'est pas la façon la plus efficace de l'écrire.
-- N'incluez pas de code serveur, bibliothèques, frameworks, préprocesseurs ou autres dépendances inutiles. Ils rendent le code moins portable et plus difficile à exécuter et à comprendre. Utilisez du code natif quand c'est possible.
-- N'assumez pas la connaissance de bibliothèques, frameworks, préprocesseurs ou autres fonctionnalités non natives par les lecteur·ice·s. Par exemple, utilisez des noms de classes qui ont du sens dans l'exemple plutôt que des noms adaptés à BEM ou Bootstrap.
+- N'incluez pas de code serveur, bibliothèques, cadriciels, préprocesseurs ou autres dépendances inutiles. Ils rendent le code moins portable et plus difficile à exécuter et à comprendre. Utilisez du code natif quand c'est possible.
+- N'assumez pas la connaissance de bibliothèques, cadriciels, préprocesseurs ou autres fonctionnalités non natives par les lecteur·ice·s. Par exemple, utilisez des noms de classes qui ont du sens dans l'exemple plutôt que des noms adaptés à BEM ou Bootstrap.
 - Soyez inclusif·ive dans vos exemples de code&nbsp;: les lecteur·ice·s de MDN viennent du monde entier, avec des origines, religions, âges, genres, etc. variés. Veillez à ce que le texte des exemples reflète cette diversité et soit inclusif.
 - N'utilisez pas de fonctionnalités obsolètes pour aller plus vite (comme les éléments de présentation {{HTMLElement("big")}} ou {{DOMxRef("Document.write", "document.write()")}})&nbsp;: faites-le correctement.
 - Dans le cas de démos d'API, si vous utilisez plusieurs API ensemble, indiquez quelles API sont incluses et quelles fonctionnalités proviennent de chacune.
 
 ### Compatibilité des navigateurs
 
-Lorsque vous créez des exemples de code pour une technologie qui n'est pas encore disponible dans tous les principaux navigateurs, pensez à utiliser la [détection de fonctionnalités](/fr/docs/Learn_web_development/Extensions/Testing/Feature_detection) pour proposer un comportement de repli ou informer l'utilisateur·ice que son navigateur n'est pas encore pris en charge.
-Ne spécifiez pas les navigateurs pris en charge ni leurs versions dans les commentaires de code ou dans le texte, car ces informations deviennent rapidement obsolètes.
+Ne définissez pas les navigateurs pris en charge ni leurs versions dans les commentaires de code ou dans le texte, car ces informations deviennent rapidement obsolètes.
+
+Lors de la création d'exemples de code pour une technologie qui n'est pas encore disponible dans tous les principaux navigateurs, pensez à utiliser la [détection de fonctionnalités](/fr/docs/Learn_web_development/Extensions/Testing/Feature_detection) pour proposer un comportement de repli ou informer l'utilisateur·ice que son navigateur ne prend pas en charge la fonctionnalité démontrée.
+
+Conservez la sortie rendue des exemples de code visible même lorsque le navigateur du lecteur ne prend pas en charge la fonctionnalité démontrée. Cela permet aux lecteur·ice·s de comparer le code avec son résultat et de voir comment l'exemple se comporte sans la fonctionnalité. Affichez un message de prise en charge du navigateur à côté de la sortie rendue au lieu de le masquer ou de le supprimer pour expliquer pourquoi le résultat peut apparaître différent de la démonstration prévue.
+
+Par exemple, dans les exemples de code CSS, utilisez la [règle `@supports` avec l'opérateur `not`](/fr/docs/Web/CSS/Reference/At-rules/@supports#lopérateur_not) pour afficher un message de prise en charge du navigateur lorsque le navigateur du lecteur ne prend pas en charge la fonctionnalité démontrée.
+
+#### HTML
+
+```html live-sample___corner-shape-support
+<div>Une belle bordure incurvée</div>
+```
+
+#### CSS
+
+```css live-sample___corner-shape-support
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  width: 240px;
+  margin: 20px auto;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  background-color: cyan;
+  border-radius: 30px;
+  box-shadow: 1px 1px 3px gray;
+}
+
+@supports not (corner-shape: scoop) {
+  body::before {
+    content: "Votre navigateur ne prend pas en charge la propriété 'corner-shape'.";
+    color: black;
+    background-color: wheat;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+```
+
+```css live-sample___corner-shape-support
+div {
+  corner-shape: scoop;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("corner-shape-support", "100%", 240)}}
+
+Comparez la sortie rendue dans différents navigateurs pour voir comment l'exemple se comporte lorsque `corner-shape` est pris en charge et lorsqu'il ne l'est pas.
+
+Dans vos propres exemples, vous pouvez marquer le bloc CSS de prise en charge du navigateur comme [`hidden`](/fr/docs/MDN/Writing_guidelines/Page_structures/Live_samples#masquer_du_code) afin que ses styles s'appliquent à l'exemple en direct sans afficher le bloc de code dans l'article.
 
 ## Style et formatage du code sur MDN
 
@@ -98,9 +154,9 @@ const tommyCat = `Said Tommy the Cat as he reeled back to clear whatever foreign
 
 Les blocs de code doivent être aussi longs que nécessaire, mais pas plus. Idéalement, visez une longueur courte, entre 15 et 25 lignes. Si un bloc de code doit être beaucoup plus long, montrez la partie la plus utile et faites un lien vers un exemple complet sur un dépôt GitHub, un Gist ou un CodePen, par exemple.
 
-### Formatage du code en ligne
+### Formatage du code en incise
 
-Utilisez la syntaxe de code en ligne pour marquer les noms de fonctions, de variables et de méthodes. Par exemple&nbsp;: «&nbsp;la fonction `texteFrancais()`&nbsp;» s'écrit en markdown&nbsp;:
+Utilisez la syntaxe de code en incise pour marquer les noms de fonctions, de variables et de méthodes. Par exemple&nbsp;: «&nbsp;la fonction `texteFrancais()`&nbsp;» s'écrit en markdown&nbsp;:
 
 ```md
 la fonction `texteFrancais()`
@@ -157,4 +213,4 @@ Cela sera affiché ainsi&nbsp;:
 
 ## Règles pour l'utilisation de texte de substitution
 
-Utilisez le texte de substitution lorem-ipsum généré depuis [lipsum.com <sup>(angl.)</sup>](https://www.lipsum.com/) ou l'extension VS Code [Lorem ipsum <sup>(angl.)</sup>](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum). Le texte lorem-ipsum standard est inclus dans notre configuration du correcteur orthographique, il ne sera donc pas signalé comme faute de frappe dans les IDE ou lors des tests en relecture de code. Utiliser un texte de substitution cohérent facilite la relecture des exemples, surtout lorsqu'il apparaît plusieurs fois. Cela permet aussi de bien distinguer les exemples à but illustratif et d'éviter de distraire les lecteur·ice·s avec du contenu hors sujet.
+Utilisez le texte de substitution lorem-ipsum généré depuis [lipsum.com <sup>(angl.)</sup>](https://www.lipsum.com/) ou l'extension VS Code [Lorem ipsum <sup>(angl.)</sup>](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum). Le texte lorem-ipsum standard est inclus dans notre configuration du correcteur orthographique, il n'est donc pas signalé comme faute de frappe dans les IDE ou lors des tests en relecture de code. Utiliser un texte de substitution cohérent facilite la relecture des exemples, surtout lorsqu'il apparaît plusieurs fois. Cela permet aussi de bien distinguer les exemples à but illustratif et d'éviter de distraire les lecteur·ice·s avec du contenu hors sujet.

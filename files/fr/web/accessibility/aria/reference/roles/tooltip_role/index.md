@@ -3,7 +3,7 @@ title: "ARIA : rôle tooltip"
 short-title: tooltip
 slug: Web/Accessibility/ARIA/Reference/Roles/tooltip_role
 l10n:
-  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
+  sourceCommit: 0091c5e7d19dd48ae2a9236b89159651a19ecee1
 ---
 
 Un `tooltip` («&nbsp;info-bulle&nbsp;») est une bulle de texte contextuelle qui affiche une description pour un élément, apparaissant au survol du pointeur ou lors de la sélection clavier.
@@ -16,7 +16,7 @@ Une info-bulle devient généralement visible après un délai de une à cinq se
 
 Comme l'info-bulle ne reçoit jamais la sélection et n'est pas dans l'ordre de tabulation, elle ne peut pas contenir d'éléments interactifs comme des liens, des champs de saisie ou des boutons.
 
-Le rôle tooltip n'est pas adapté pour l'icône «&nbsp;i&nbsp;» d'information, ⓘ. Une info-bulle est directement associée à l'élément propriétaire. L'icône ⓘ n'est pas «&nbsp;décrite&nbsp;» par une information détaillée&nbsp;: c'est l'outil ou le contrôle qui l'est.
+Un `tooltip` n'est pas le rôle approprié pour l'icône «&nbsp;i&nbsp;» d'information, ⓘ. Une info-bulle est directement associée à l'élément propriétaire. Le `role="tooltip"` est inclus sur l'élément contenant le contenu de l'info-bulle, et non sur l'icône ou le contrôle qui la déclenche. Pour afficher une info-bulle lorsque l'icône ⓘ est survolée ou reçoit la sélection, donnez au déclencheur un nom accessible et référencez l'info-bulle avec `aria-describedby`, de sorte que le contenu de l'info-bulle soit annoncé lorsque le déclencheur reçoit la sélection. Comme l'information détaillée décrit le contrôle associé plutôt que l'icône ⓘ elle-même, ajoutez également `aria-describedby` sur ce contrôle, comme indiqué dans [l'exemple d'icône d'information supplémentaire](#utiliser_une_icône_dinformation_supplémentaire).
 
 L'utilisation du rôle ARIA `tooltip` complète le comportement natif des info-bulles du navigateur. Un exemple d'info-bulle native est la façon dont certains navigateurs affichent la valeur de l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) lors d'un long survol de la souris. On ne peut pas activer cette fonctionnalité par la sélection clavier ou par interaction tactile, ce qui la rend inaccessible. Si l'information est suffisamment importante pour être dans une info-bulle ou un titre, envisagez de l'inclure dans un texte visible.
 
@@ -51,6 +51,8 @@ L'info-bulle doit apparaître à la sélection ou au survol de l'élément, sans
 - L'info-bulle n'est masquée que avec JavaScript et les sélecteurs CSS. Si JavaScript n'est pas disponible, l'info-bulle est affichée.
 
 ## Exemples
+
+### Utiliser une info-bulle
 
 ```html
 <label for="password">Mot de passe&nbsp;:</label>
@@ -96,9 +98,79 @@ L'info-bulle peut être instanciée avec du CSS. Changez le nom de la classe ave
 }
 ```
 
-{{EmbedLiveSample("exemples", "", 300)}}
+{{EmbedLiveSample("Utiliser une info-bulle", "", 300)}}
 
 Le code ci-dessus masque l'info-bulle avec du CSS à l'état par défaut ou si la classe `hide-tooltip` a été ajoutée avec JavaScript (lorsque l'utilisateur·ice appuie sur <kbd>Échap</kbd>), avec une spécificité élevée pour garantir que l'info-bulle ne s'affiche pas. Quand l'élément propriétaire reçoit la sélection, il est positionné relativement et l'info-bulle devient visible. On garde l'info-bulle visible au survol, conformément à [WCAG 1.4.13](#problèmes_daccessibilité). Ici, on permet au curseur de passer du champ à l'info-bulle sans que celle-ci disparaisse, en attendant 0,5s entre les deux&nbsp;; il existe d'autres moyens d'obtenir ce résultat, comme remplir l'espace avec un élément transparent qui garde l'info-bulle visible au survol.
+
+### Utiliser une icône d'information supplémentaire
+
+Cet exemple affiche une info-bulle lorsque le bouton ⓘ est survolé ou reçoit la sélection clavier. Le bouton possède un {{Glossary("accessible name", "nom accessible")}} et référence l'info-bulle avec [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby), de sorte que le contenu de l'info-bulle est annoncé lorsque le bouton reçoit la sélection. Le champ de saisie référence également l'info-bulle avec `aria-describedby`, car l'information décrit ce contrôle, même lorsque l'info-bulle est masquée.
+
+```html
+<label for="username">Nom d'utilisateur&nbsp;:</label>
+<input id="username" aria-describedby="username-help" />
+<div class="info">
+  <button
+    type="button"
+    aria-label="Plus d'informations sur les noms d'utilisateur"
+    aria-describedby="username-help">
+    <span aria-hidden="true">ⓘ</span>
+  </button>
+  <div role="tooltip" id="username-help">
+    <p>
+      Votre nom d'utilisateur est affiché publiquement à côté de vos
+      commentaires.
+    </p>
+  </div>
+</div>
+```
+
+L'info-bulle est positionnée sous l'icône. La marge intérieure au-dessus de la bulle de texte comble l'espace jusqu'au bouton afin que le pointeur puisse se déplacer sur l'info-bulle sans la fermer.
+
+```css
+.info {
+  display: inline-block;
+  position: relative;
+}
+
+[role="tooltip"] {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 15rem;
+  padding-top: 0.5rem;
+  z-index: 1;
+}
+
+.info:hover [role="tooltip"],
+.info:focus-within [role="tooltip"] {
+  visibility: visible;
+}
+
+[role="tooltip"] p {
+  margin: 0;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  background: #222;
+  color: white;
+  box-shadow: 0 2px 6px #0004;
+}
+
+[role="tooltip"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid #222;
+  border-left: 0.5rem solid transparent;
+}
+```
+
+L'info-bulle reste visible lorsque le bouton reçoit la sélection ou lorsque le pointeur se trouve sur le bouton ou l'info-bulle. Elle est masquée lorsqu'aucune de ces conditions ne s'applique.
+
+{{EmbedLiveSample("Utiliser une icône d'information supplémentaire", "", 200)}}
 
 ## Problèmes d'accessibilité
 
