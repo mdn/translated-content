@@ -3,7 +3,7 @@ title: "Attribut HTML : `placeholder`"
 short-title: placeholder
 slug: Web/HTML/Reference/Attributes/placeholder
 l10n:
-  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
+  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
 ---
 
 L'attribut **`placeholder`** définit le texte affiché dans un contrôle de formulaire lorsque celui-ci n'a pas de valeur. Le texte d'exemple doit fournir un indice bref à l'utilisateur·ice sur le type de donnée attendu dans le contrôle.
@@ -13,7 +13,7 @@ Un texte d'exemple efficace se limite à un mot ou une courte expression qui sug
 L'attribut `placeholder` est pris en charge par les types d'entrée suivants&nbsp;: `{{HTMLElement("input/text", "text")}}`, `{{HTMLElement("input/search", "search")}}`, `{{HTMLElement("input/url", "url")}}`, `{{HTMLElement("input/tel", "tel")}}`, `{{HTMLElement("input/email", "email")}}` et `{{HTMLElement("input/password", "password")}}`. Il est également pris en charge par l'élément {{HTMLElement("textarea")}}. [L'exemple](#exemple) ci-dessous montre l'utilisation de l'attribut `placeholder` pour indiquer le format attendu d'un champ de saisie.
 
 > [!NOTE]
-> Sauf dans les éléments {{HTMLElement("textarea")}}, l'attribut `placeholder` ne peut pas contenir de retour à la ligne (LF) ou de retour chariot (CR). Si l'un ou l'autre est inclus dans la valeur, le texte d'exemple sera tronqué.
+> Sauf dans les éléments {{HTMLElement("textarea")}}, l'attribut `placeholder` ne peut pas contenir de retour à la ligne (LF) ou de retour chariot (CR). Si l'un ou l'autre est inclus dans la valeur, le texte d'exemple est tronqué.
 
 ## Problèmes d'accessibilité
 
@@ -21,7 +21,7 @@ Le texte d'exemple ne doit servir qu'à montrer un exemple du type de donnée à
 
 Le texte du `<label>` est associé visuellement et de façon programmatique à son contrôle de formulaire. Les lecteurs d'écran n'annoncent pas le contenu du texte d'exemple par défaut, mais ils annoncent le contenu de libellé&nbsp;; c'est le libellé qui informe les utilisateur·ice·s de technologies d'assistance sur la donnée attendue dans le contrôle. Les libellés améliorent aussi l'expérience utilisateur·ice pour les personnes utilisant un dispositif de pointage&nbsp;: lorsqu'une personne clique, touche ou tape sur un `<label>`, la sélection est déplacée vers le contrôle associé.
 
-Le texte d'exemple ne peut pas remplacer un libellé, même pour les personnes qui n'utilisent pas de technologie d'assistance. Le texte d'exemple est affiché avec un contraste de couleur plus faible que le texte par défaut d'un champ de formulaire. C'est intentionnel, afin d'éviter toute confusion entre le texte d'exemple et une valeur saisie. Cependant, ce manque de contraste peut poser problème aux personnes malvoyantes. De plus, le texte d'exemple disparaît du champ dès que l'utilisateur·ice commence à saisir du texte. Si ce texte contenait des instructions ou des exemples, leur disparition peut désorienter les personnes ayant des troubles cognitifs et rendre le formulaire inaccessible si le texte d'exemple faisait office de libellé.
+Le texte d'exemple ne peut pas remplacer un libellé, même pour les personnes qui n'utilisent pas de technologie d'assistance. Le texte d'exemple est affiché avec un contraste de couleur plus faible que le texte par défaut d'un champ de formulaire. C'est intentionnel, afin d'éviter toute confusion entre le texte d'exemple et une valeur saisie. Cependant, ce manque de contraste peut poser problème aux personnes malvoyantes. De plus, le texte d'exemple disparaît du champ dès que l'utilisateur·ice commence à saisir du texte. Si ce texte contient des instructions ou des exemples, leur disparition peut désorienter les personnes ayant des troubles cognitifs et rendre le formulaire inaccessible si le texte d'exemple fait office de libellé.
 
 ## Exemple
 

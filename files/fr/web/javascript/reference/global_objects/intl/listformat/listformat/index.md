@@ -204,5 +204,5 @@ L'algorithme utilisé pour déterminer la conjonction n'est pas parfait (par exe
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.ListFormat")}}
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl.ListFormat")}}
+- L'objet natif {{JSxRef("Intl")}}

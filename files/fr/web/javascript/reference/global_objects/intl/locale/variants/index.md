@@ -48,6 +48,6 @@ console.log(locale.variants); // "rozaj-biske"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}
 - [Sous-balise de variante Unicode <sup>(angl.)</sup>](https://www.unicode.org/reports/tr35/#unicode_variant_subtag_validity) dans la spécification du langage de balisage des données de locale Unicode
 - [Registre des sous-balises de langue IANA <sup>(angl.)</sup>](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)

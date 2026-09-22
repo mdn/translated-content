@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Multicol_layout/Styling_columns
 original_slug: Web/CSS/CSS_multicol_layout/Styling_columns
 ---
 
-{{CSSRef}}
-
 Les boîtes de colonne créées au sein des conteneurs multi-colonnes sont des boîtes anonymes et leur mise en forme est donc limitée. Elle n'est toutefois pas inexistante. Dans ce guide nous verrons comment modifier l'espace entre les colonnes et comment mettre en forme une ligne entre les colonnes.
 
 ## Peut-on mettre en forme les boîtes des colonnes ?

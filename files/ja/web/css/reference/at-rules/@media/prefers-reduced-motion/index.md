@@ -1,14 +1,15 @@
 ---
-title: prefers-reduced-motion
+title: CSS `prefers-reduced-motion` メディア特性
+short-title: prefers-reduced-motion
 slug: Web/CSS/Reference/At-rules/@media/prefers-reduced-motion
 l10n:
-  sourceCommit: 77445f9812d0644dfe6975234f8ff3450efcf142
+  sourceCommit: 2d5e55258ef3f001d0d9fea6b48486bd3056fca6
 ---
 
 > [!WARNING]
-> このページの下部に埋め込まれた例は、拡大縮小の動きがありますが、一部の読者には問題があるかもしれません。前庭運動障害をお持ちの方は、アニメーションを見る前に、お使いの端末のモーション軽減機能を有効にしてください。
+> このページの下部に埋め込まれた例は、拡大縮小の動きがありますが、一部の読者には問題があるかもしれません。前庭運動障害をお持ちの方は、アニメーションを見る前に、お使いの端末の動き軽減機能を有効にしてください。
 
-**`prefers-reduced-motion`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、ユーザーが余計な動きを最少化するよう要求したことを検出するために使用します。この設定は、ユーザーがモーションベースのアニメーションを削除、縮小、または置き換えるインターフェイスを推奨していることを、端末のブラウザーに伝えるために使用します。
+**`prefers-reduced-motion`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、ユーザーが余計な動きを最少化するよう要求したことを検出するために使用します。この設定は、ユーザーが動きベースのアニメーションを削除、縮小、または置き換えるインターフェイスを推奨していることを、端末のブラウザーに伝えるために使用します。
 
 このようなアニメーションは、[前庭運動障碍](https://www.a11yproject.com/posts/understanding-vestibular-disorders/)のある人に不快感を引き起こす可能性があります。大きなオブジェクトを拡大縮小したりパンなどしたりするアニメーションは、前庭運動を引き起こす可能性があります。
 
@@ -21,26 +22,27 @@ l10n:
 
 ## ユーザー設定
 
-Firefox では、 `reduce` の要求は以下の場合に尊重されます。
+`reduce` リクエストを処理するには、以下の設定を使用してください。
 
-- GTK/GNOME: Settings > Accessibility > Seeing > Reduced animation がオンになっている場合。
+- GTK/GNOME: Settings > Accessibility > Seeing > "Reduced animation" がオンになっている場合。
   - GNOME の古いバージョンでは、 GNOME Tweaks > General タブ (バージョンによっては Appearance タブ) > Animations がオフになっている場合。
   - 他にも、 `gtk-enable-animations = false` を [GTK 3 configuration file](https://wiki.archlinux.org/title/GTK#Configuration) の `[Settings]` に追加する方法もあります。
   - さらに、`gsettings set org.gnome.desktop.interface enable-animations false` を実行して、Firefox（および GTK バージョン 4 に頼っている他のプログラム）が `reduce` 設定を尊重するようにしてください。
 
-- Plasma/KDE: System Settings > Workspace Behavior -> General Behavior > "Animation speed" が正しくすべて "Instant" に設定されている場合。
+- Plasma/KDE: System Settings > Workspace Behavior > General Behavior > "Animation speed" を "Instant" に設定している場合。
   - または、`~/.config/kdeglobals` の `[KDE]` セクションに `AnimationDurationFactor=0` を追加してください。
   - あるいは、ターミナルで `kwriteconfig6 --key AnimationDurationFactor 0` を実行してください。
 - Windows 10: 設定 > 簡単操作 > ディスプレイ > アニメーションを表示する
 - Windows 11: 設定 > アクセシビリティ > 視覚効果 > アニメーション効果
-- macOS: システム設定 > アクセシビリティ > 表示 > 動きの抑制
+- macOS 15 (Sequoia) まで: システム設定 > アクセシビリティ > 表示 > 動きの抑制
+- macOS 25 (Tahoe) 以降: システム設定 > アクセシビリティ > 動き > 動きの抑制
 - iOS: 設定 > 一般 > アクセシビリティ > 視覚効果を減らす
 - Android 9 以上: 設定 > ユーザー補助 > アニメーションの削除
 - Firefox では `about:config`: 数値型の設定項目 `ui.prefersReducedMotion` を追加し、値を `1` とします。この設定の変更は直ちに効果が現れます。
 
 ## 例
 
-この例では、 `prefers-reduced-motion` を実証するために、拡大縮小アニメーションを使用しています。端末のアクセシビリティ設定でモーションの削減を有効にすると、 `prefers-reduced-motion` メディアクエリーがユーザーの意向を検出し、同じ[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)で [CSS ソースの順序](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#ソース順)では後方に位置する、モーション削減ルール内の CSS が優先されます。その結果、ボックスの[アニメーション](/ja/docs/Web/CSS/Guides/Animations/Using)は、前庭運動を誘発しない、より控えめなアニメーションである `dissolve` アニメーションにトーンダウンします。
+この例では、 `prefers-reduced-motion` を実証するために、拡大縮小アニメーションを使用しています。端末のアクセシビリティ設定で動きの削減を有効にすると、 `prefers-reduced-motion` メディアクエリーがユーザーの意向を検出し、同じ[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)で [CSS ソースの順序](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#ソース順)では後方に位置する、動き削減ルール内の CSS が優先されます。その結果、ボックスの[アニメーション](/ja/docs/Web/CSS/Guides/Animations/Using)は、前庭運動を誘発しない、より控えめなアニメーションである `dissolve` アニメーションにトーンダウンします。
 
 ### アニメーションの拡大縮小のトーンダウン
 
@@ -113,7 +115,7 @@ Firefox では、 `reduce` の要求は以下の場合に尊重されます。
 
 {{EmbedLiveSample("アニメーションの拡大縮小のトーンダウン")}}
 
-[端末](#ユーザー設定)のモーションを削減する設定を有効にして、アニメーションの拡大縮小の表示を確認することができます。この例では、キーフレームアニメーションが有効または無効になったときに、背景色とテキスト上の行を視覚的に強調表示しています。
+[端末](#ユーザー設定)の動きを削減する設定を有効にして、アニメーションの拡大縮小の表示を確認することができます。この例では、キーフレームアニメーションが有効または無効になったときに、背景色とテキスト上の行を視覚的に強調表示しています。
 
 ## 仕様書
 
@@ -126,5 +128,5 @@ Firefox では、 `reduce` の要求は以下の場合に尊重されます。
 ## 関連情報
 
 - HTTP の {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} ヘッダーによる[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#ユーザーエージェントクライアントヒント)
-- [An introduction to the reduced motion media query](https://css-tricks.com/introduction-reduced-motion-media-query/) (CSS-Tricks, 2019)
-- [Responsive design for motion](https://webkit.org/blog/7551/responsive-design-for-motion/) (WebKit Blog, 2017)
+- [An introduction to the reduced motion media query](https://css-tricks.com/introduction-reduced-motion-media-query/) - CSS-Tricks (2019)
+- [Responsive design for motion](https://webkit.org/blog/7551/responsive-design-for-motion/) - WebKit Blog (2017)

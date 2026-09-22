@@ -3,7 +3,7 @@ title: Propriété CSS `text-underline-offset`
 short-title: text-underline-offset
 slug: Web/CSS/Reference/Properties/text-underline-offset
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-underline-offset`** définit la distance de décalage d'une ligne de décoration de texte soulignée (appliquée à l'aide de {{CSSxRef("text-decoration")}}) par rapport à sa position originale.
@@ -59,9 +59,9 @@ text-underline-offset: revert-layer;
 text-underline-offset: unset;
 ```
 
-La propriété `text-underline-offset` est définie avec le mot-clé `none` ou avec une valeur de la liste suivante.
-
 ### Valeurs
+
+Cette propriété est définie par l'une des valeurs suivantes&nbsp;:
 
 - `auto`
   - : Le navigateur choisit un décalage approprié pour le soulignage.

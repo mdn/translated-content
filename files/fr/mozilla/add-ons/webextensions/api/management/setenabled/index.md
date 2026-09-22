@@ -3,8 +3,6 @@ title: management.setEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/setEnabled
 ---
 
-{{AddonSidebar}}
-
 Active ou désactive l'extension ajoutée.
 
 Cette fonction doit généralement être appelée dans le contexte d'une action utilisateur, comme le gestionnaire de clics d'un bouton. Le navigateur peut également demander à l'utilisateur de confirmer le changement.

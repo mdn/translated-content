@@ -3,7 +3,7 @@ title: Hoisting (remontée)
 short-title: Hoisting
 slug: Glossary/Hoisting
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 6af30294be537972bdac2c46fa98d63e136d589e
 ---
 
 En JavaScript, l'anglicisme **<i lang="en">hoisting</i>**, qu'on peut traduire en «&nbsp;remontée&nbsp;» (voire plus littéralement en «&nbsp;hissage&nbsp;») correspond au déplacement de la _déclaration_ de fonctions, variables ou classes en haut de leur portée avant l'exécution du code.
@@ -26,9 +26,9 @@ const x = 1;
 }
 ```
 
-Si la déclaration `const x = 2` n'était pas remontée du tout (autrement si le seul effet produit avait lieu lors de l'exécution), l'instruction `console.log(x)` devrait être capable de lire la valeur de `x` de la portée parente. Toutefois, la déclaration `const` touche quand même la portée dans laquelle elle est définie et l'instruction `console.log(x)` lit la valeur du `x` provenant de la déclaration `const x = 2`, qui n'est pas encore initialisé et déclenche donc une exception [`ReferenceError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError). Cela étant écrit, on peut considérer l'absence de remontée comme l'absence d'effet de bord utile.
+Si la déclaration `const x = 2` n'était pas remontée du tout (autrement si le seul effet produit avait lieu lors de l'exécution), l'instruction `console.log(x)` doit être capable de lire la valeur de `x` de la portée externe. Toutefois, la déclaration `const` touche quand même la portée dans laquelle elle est définie et l'instruction `console.log(x)` lit la valeur du `x` provenant de la déclaration `const x = 2`, qui n'est pas encore initialisé et déclenche donc une exception [`ReferenceError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError). Cela étant écrit, on peut considérer l'absence de remontée comme l'absence d'effet de bord utile.
 
-On notera que ce qui suit n'est pas une forme de remontée&nbsp;:
+Notez que ce qui suit n'est pas une forme de remontée&nbsp;:
 
 ```js
 {

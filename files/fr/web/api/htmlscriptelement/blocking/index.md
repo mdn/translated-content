@@ -3,7 +3,7 @@ title: "HTMLScriptElement : propriété blocking"
 short-title: blocking
 slug: Web/API/HTMLScriptElement/blocking
 l10n:
-  sourceCommit: c053b4b3bb0f34736e9f4402d4254830670af723
+  sourceCommit: 752996f4695156431af4e19feb0542a4d372ce1e
 ---
 
 {{APIRef("HTML DOM")}}
@@ -24,7 +24,7 @@ Bien que la propriété `blocking` elle-même soit en lecture seule dans le sens
 
 ```js
 const el = document.getElementById("el");
-console.log(el.blocking); // Affiche : "render"
+console.log(el.blocking); // Affiche : DOMTokenList ["render"]
 ```
 
 ## Specifications

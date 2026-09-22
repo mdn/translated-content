@@ -124,7 +124,7 @@ void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, form
 
 - `pixels`
   - : L'un des objets suivants peut être utilisé comme source de pixels pour la texture :
-    - {{domxref("ArrayBufferView")}},
+    - {{jsxref("TypedArray")}},
       - un {{jsxref("Uint8Array")}} doit être utilisé si `type` est `gl.UNSIGNED_BYTE` ;
       - un {{jsxref("Uint16Array")}} doit être utilisé si `type` est `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`, `gl.UNSIGNED_SHORT_5_5_5_1`, `gl.UNSIGNED_SHORT` ou `ext.HALF_FLOAT_OES` ;
       - un {{jsxref("Uint32Array")}} doit être utilisé si `type` est `gl.UNSIGNED_INT` ou `ext.UNSIGNED_INT_24_8_WEBGL` ;

@@ -69,5 +69,5 @@ const buf2 = buf1.slice(0);
 
 ## Voir aussi
 
-- L'objet global {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}
 - La méthode {{JSxRef("SharedArrayBuffer.prototype.slice()")}}

@@ -2,7 +2,7 @@
 title: Déboguer de l'HTML
 slug: Learn_web_development/Core/Structuring_content/Debugging_HTML
 l10n:
-  sourceCommit: 418fefaa02f8e1ea53d53cb6fc510a4dc4100dc5
+  sourceCommit: 2066cc916dfdcbb782340bf0ce562b230e947cba
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}
@@ -41,9 +41,9 @@ l10n:
 
 ## Déboguer n'est pas un problème
 
-Quand on écrit du code , tout va généralement bien, jusqu'au moment redouté où une erreur se produit — vous avez fait quelque chose d'incorrect, donc votre code ne fonctionne pas — soit pas du tout, soit pas tout à fait comme vous l'aviez souhaité. Par exemple, ce qui suit montre une erreur signalée lors d'une tentative de {{Glossary("compile", "compilation")}} d'un programme simple écrit en [Rust <sup>(angl.)</sup>](https://rust-lang.org/).
+Quand on écrit du code, tout va généralement bien, jusqu'au moment redouté où une erreur se produit — vous avez fait quelque chose d'incorrect, donc votre code ne fonctionne pas — soit pas du tout, soit pas tout à fait comme vous l'aviez souhaité. Par exemple, ce qui suit montre une erreur signalée lors d'une tentative de {{Glossary("compile", "compilation")}} d'un programme simple écrit en [Rust <sup>(angl.)</sup>](https://rust-lang.org/).
 
-![Console montrant le résultat de la compilation d'un programme Rust avec guillemet manquant dans une chaîne textuelle dans une instruction d'affichage. Le message signalé est « erreur : guillemet double manquant dans la chaîne de caractères ».](error-message.png)
+![Console montrant le résultat de la compilation d'un programme Rust avec guillemet manquant dans une chaîne de caractères textuelle dans une instruction d'affichage. Le message signalé est « erreur : guillemet double manquant dans la chaîne de caractères ».](error-message.png)
 
 Ici, le message d'erreur est relativement facile à comprendre — «&nbsp;unterminated double quote string&nbsp;»&nbsp;: il manque un guillemet double ouvrant ou fermant pour envelopper la chaîne de caractères. Si vous regardez le listage, vous pouvez voir `println!(Salut, Ô Monde!");` il manque un guillemet double. Cependant, des messages d'erreur peuvent devenir plus complexes et plus abscons au fur et à mesure que le programme grossit et, même dans des cas simples devenir intimidants à quelqu'un qui ne connaît rien du Rust.
 
@@ -85,7 +85,7 @@ Si vous chargez ce HTML dans un navigateur puis regardez le [rendu DOM](/fr/docs
 Alors pourquoi est-ce à la fois une bonne et une mauvaise chose&nbsp;? Eh bien, dans ce cas, le navigateur a produit le résultat attendu, mais comme vous allez le voir [plus loin](#à_votre_tour_étudier_le_html_avec_linspecteur_dom), ce n'est pas toujours le cas. Vous allez toujours obtenir _quelque chose_ qui fonctionne, mais le navigateur ne fait pas toujours ce qu'il faut, ce qui peut causer des problèmes. Il vaut mieux écrire un balisage correct dès le départ.
 
 > [!NOTE]
-> HTML est analysé de façon permissive parce que, lorsque le Web a été créé pour la première fois, on a décidé qu'il était plus important de permettre aux gens de publier leur contenu que de s'assurer d'une syntaxe absolument correcte. Le web n'est probablement pas aussi populaire qu'il l'est aujourd'hui, s'il avait été plus strict dans ses débuts.
+> HTML est analysé de façon permissive parce que, lorsque le Web a été créé pour la première fois, on a décidé qu'il est plus important de permettre aux gens de publier leur contenu que de s'assurer d'une syntaxe absolument correcte. Le web n'est probablement pas aussi populaire qu'il l'est aujourd'hui, s'il avait été plus strict dans ses débuts.
 
 Alors, comment trouver les erreurs de balisage&nbsp;? Plus loin, nous vous montrons comment trouver des erreurs dans le HTML à l'aide d'un outil appelé le [validateur HTML](#validation_dun_html), mais d'abord nous vous montrons comment inspecter manuellement votre HTML à l'aide d'un **inspecteur DOM**, puis nous explorons les types d'erreurs de balisage que vous pouvez rechercher, et comment le navigateur peut les interpréter.
 
@@ -158,7 +158,7 @@ Voici le moment venu d'étudier le caractère permissif du code HTML.
    ```
 
 4. Revoyons les problèmes&nbsp;:
-   - Les élements de {{HTMLElement("p", "paragraphes")}} et {{HTMLElement("li", "d'éléments de liste")}} n'ont pas de balise de fermeture. En voyant l'image ci‑dessus, cela ne semble pas avoir trop sévèrement affecté le rendu, car on voit bien où un élément se termine et où le suivant commence.
+   - Les elements de {{HTMLElement("p", "paragraphes")}} et {{HTMLElement("li", "d'éléments de liste")}} n'ont pas de balise de fermeture. En voyant l'image ci‑dessus, cela ne semble pas avoir trop sévèrement affecté le rendu, car on voit bien où un élément se termine et où le suivant commence.
    - Le premier élément {{HTMLElement("strong")}} n'a pas de balise de fermeture. C'est un peu plus problématique, car il n'est pas possible de dire où l'élément est supposé se terminer. En fait, tout le reste du texte est en gras.
    - Cette partie est mal imbriquée&nbsp;: `<strong>caractères gras <em>ou gras et italiques ?</strong> qu'est ce ?</em>`. Pas facile de dire comment il faut interpréter cela en raison du problème précédent.
    - La valeur de l'attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href) n'a pas de guillemet double fermant. C'est ce qui semble avoir posé le plus gros problème — le lien n'a pas été mentionné du tout.
@@ -201,11 +201,11 @@ Pour indiquer le HTML à valider, vous pouvez fournir une adresse web, téléver
 
 ### Valider un document HTML
 
-Dans cette tâche, nous allons vous faire essayer le validateur HTML. Vous allez valider notre [document d'exemple <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html) et voir quels résultats sont retournés. Cet exemple contient le même HTML que vous avez étudié précédemment avec l'inspecteur DOM.
+Dans cette tâche, nous allons vous faire essayer le validateur HTML. Vous allez valider le même HTML que vous avez étudié précédemment avec l'inspecteur DOM.
 
 1. D'abord, chargez le [Markup Validation Service <sup>(angl.)</sup>](https://validator.w3.org/) dans un nouvel onglet du navigateur, si ce n'est pas déjà fait.
 2. Passez à l'onglet [Validate by Direct Input <sup>(angl.)</sup>](https://validator.w3.org/#validate_by_input).
-3. Copiez tout le code du document d'exemple (pas seulement le `body`) et collez-le dans la grande zone de texte affichée dans le Markup Validation Service.
+3. Copiez le [document d'exemple](#à_votre_tour_étudier_le_html_avec_linspecteur_dom) et collez-le dans la grande zone de texte affichée dans le Markup Validation Service. Collez toute la structure du document, pas seulement le contenu du `<body>`.
 4. Appuyez sur le bouton _Check_.
 
 Cela doit vous donner une liste d'erreurs et d'autres informations.
@@ -214,10 +214,10 @@ Cela doit vous donner une liste d'erreurs et d'autres informations.
 
 #### Interprétation des messages d'erreur
 
-Les messages d'erreur sont généralement utiles, mais parfois non ; avec un peu de pratique, vous pouvez trouver comment les interpréter pour corriger votre code. Passons en revue les messages d'erreur et voyons leur signification. Chaque message est accompagné d'un numéro de ligne et de colonne pour faciliter la localisation de l'erreur.
+Les messages d'erreur sont généralement utiles, mais parfois non&nbsp;; avec un peu de pratique, vous pouvez trouver comment les interpréter pour corriger votre code. Passons en revue les messages d'erreur et voyons leur signification. Chaque message est accompagné d'un numéro de ligne et de colonne pour faciliter la localisation de l'erreur.
 
 - «&nbsp;End tag `li` implied, but there were open elements&nbsp;» (2 instances)&nbsp;: ces messages indiquent qu'un élément ouvert doit être fermé. La balise de fermeture est implicite, mais pas réellement mise. L'information ligne/colonne pointe sur la première ligne après laquelle la balise de fermeture doit réellement se situer, mais c'est un bon indice pour voir ce qui ne va pas.
-- «&nbsp;Unclosed element `strong`&nbsp;»&nbsp;: C'est facile à comprendre — un élément {{HTMLElement("strong")}} n'est pas fermé ; l'information ligne/colonne pointe directement dessus.
+- «&nbsp;Unclosed element `strong`&nbsp;»&nbsp;: C'est facile à comprendre — un élément {{HTMLElement("strong")}} n'est pas fermé&nbsp;; l'information ligne/colonne pointe directement dessus.
 - «&nbsp;End tag `strong` violates nesting rules&nbsp;»&nbsp;: signale des éléments incorrectement imbriqués et l'information ligne/colonne signale là où cela se trouve.
 - «&nbsp;End of file reached when inside an attribute value. Ignoring tag&nbsp;»&nbsp;: c'est peu clair&nbsp;; la remarque se rapporte au fait qu'il y a une valeur d'attribut improprement formée quelque part, peut-être près de la fin du fichier, car la fin du fichier apparaît dans la valeur de l'attribut. Le fait que le navigateur ne rende pas le lien est un bon indice pour dire que cet élément est en faute.
 - «&nbsp;End of file seen and there were open elements&nbsp;»&nbsp;: c'est un peu ambigu, mais se réfère au fait qu'à la base des éléments ouverts n'ont pas été proprement fermés. Les numéros de ligne pointent sur les dernières lignes du fichier et ce message d'erreur vient avec une ligne de code qui désigne un exemple d'élément ouvert&nbsp;:
@@ -233,12 +233,12 @@ Les messages d'erreur sont généralement utiles, mais parfois non ; avec un peu
 
 Si vous ne comprenez pas ce que signifie chaque message d'erreur, ne vous inquiétez pas — une bonne idée consiste à corriger quelques erreurs à la fois. Puis essayez de revalider le HTML pour voir les erreurs restantes. Parfois, la correction d'une erreur en amont permet aussi d'éliminer d'autres messages d'erreur — plusieurs erreurs sont souvent causées par un même problème, avec une sorte d'effet domino.
 
-Vous savez que toutes vos erreurs sont corrigées lorsque vous voyez une petite bannière verte indiquant qu'il n'y a aucune erreur à signaler. Au moment de la rédaction, elle affichait «&nbsp;Vérification du document terminée. Aucune erreur ou avertissement à afficher.&nbsp;»
+Vous savez que toutes vos erreurs sont corrigées lorsque vous voyez une petite bannière verte indiquant qu'il n'y a aucune erreur à signaler. Au moment de la rédaction, elle affiche «&nbsp;Vérification du document terminée. Aucune erreur ou avertissement à afficher.&nbsp;»
 
 ## Résumé
 
 Voilà, une introduction au débogage HTML, qui doit vous donner des compétences utiles sur lesquelles vous appuyer lors du débogage HTML, mais aussi du code CSS et JavaScript plus tard dans le cours. Cela marque également la fin du module _Structurer le contenu avec HTML_.
 
-Votre prochaine étape consiste à commencer à apprendre à styliser le web dans notre module [de mise en forme simple en CSS](/fr/docs/Learn_web_development/Core/Styling_basics).
+Votre prochaine étape consiste à commencer à apprendre à mettre en forme le web dans notre module [de mise en forme simple en CSS](/fr/docs/Learn_web_development/Core/Styling_basics).
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}

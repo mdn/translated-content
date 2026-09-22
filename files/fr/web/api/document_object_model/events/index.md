@@ -3,7 +3,7 @@ title: Évènements DOM
 short-title: Travailler avec des évènements
 slug: Web/API/Document_Object_Model/Events
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -229,8 +229,8 @@ Cette rubrique fournit un index des principales _sortes_ d'évènements qui peuv
       <td>Formulaire</td>
       <td>
         <p>
-          Évènements liés à la construction, la réinitialisation et la
-          soumission de formulaires.
+          Évènements liés à la construction, la réinitialisation et
+          l'envoi de formulaires.
         </p>
       </td>
       <td>
@@ -1051,7 +1051,7 @@ controller.abort(); // supprime tous les gestionnaires associés à ce contrôle
 
 La propriété IDL `onevent` (par exemple, `element.onclick = ...`) et l'attribut HTML `onevent` (par exemple, `<button onclick="...">`) ciblent tous deux le même emplacement de gestionnaire unique. Le HTML est chargé avant que JavaScript puisse accéder au même élément, donc en général JavaScript remplace ce qui est défini dans le HTML. Les gestionnaires ajoutés avec {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} sont indépendants. Utiliser `onevent` ne supprime ni ne remplace les écouteurs ajoutés avec `addEventListener()`, et inversement.
 
-Lorsqu'un évènement est déclenché, les écouteurs sont appelés en plusieurs phases. Il y a deux phases&nbsp;: _capture_ et _bulle_ (bubbling). En phase de capture, l'évènement part de l'ancêtre le plus haut et descend l'arbre DOM jusqu'à la cible. En phase de bulle, l'évènement remonte en sens inverse. Par défaut, les écouteurs écoutent en phase de bulle, mais ils peuvent écouter en phase de capture en passant `capture: true` à `addEventListener()`. Dans une même phase, les écouteurs sont appelés dans l'ordre où ils ont été enregistrés. Le gestionnaire `onevent` est enregistré la première fois qu'il devient non nul&nbsp;; les réaffectations ultérieures ne changent que sa fonction de rappel, pas sa position dans l'ordre.
+Lorsqu'un évènement est déclenché, les écouteurs sont appelés en plusieurs phases. Il y a deux phases&nbsp;: _capture_ et _propagation_. En phase de capture, l'évènement part de l'ancêtre le plus haut et descend l'arbre DOM jusqu'à la cible. En phase de bulle, l'évènement remonte en sens inverse. Par défaut, les écouteurs écoutent en phase de bulle, mais ils peuvent écouter en phase de capture en passant `capture: true` à `addEventListener()`. Dans une même phase, les écouteurs sont appelés dans l'ordre où ils ont été enregistrés. Le gestionnaire `onevent` est enregistré la première fois qu'il devient non nul&nbsp;; les réaffectations ultérieures ne changent que sa fonction de rappel, pas sa position dans l'ordre.
 
 Appeler {{DOMxRef("Event.stopPropagation()")}} empêche l'appel des écouteurs sur d'autres éléments plus loin dans la chaîne de propagation. {{DOMxRef("Event.stopImmediatePropagation()")}} empêche aussi l'appel des autres écouteurs sur le même élément.
 

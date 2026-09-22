@@ -1,51 +1,48 @@
 ---
-title: element.parentNode
+title: "Node : propriété parentNode"
+short-title: parentNode
 slug: Web/API/Node/parentNode
+l10n:
+  sourceCommit: 8cdc8bb0ee320abf8a2f54a1a167d1a72ff8a2ca
 ---
 
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **parentNode** renvoie le parent du nœud spécifié dans l'arborescence de DOM.
+La propriété en lecture seule **`parentNode`** de l'interface {{DOMxRef("Node")}} retourne le parent du nœud défini dans l'arborescence DOM.
 
-## Syntaxe
+Les [nœuds](/fr/docs/Web/API/Node/nodeType) `Document` et `DocumentFragment` ne peuvent jamais avoir de parent, donc `parentNode` retourne toujours `null`.
+Il retourne également `null` si le nœud vient d'être créé et n'est pas encore attaché à l'arbre. {{DOMxRef("Node.parentElement")}}, en revanche, ne retourne que des nœuds `Element`.
+
+## Valeur
+
+Un objet {{DOMxRef("Node")}} qui est le parent du nœud actuel. Le parent d'un élément est un nœud `Element`, un nœud `Document` ou un nœud `DocumentFragment`.
+
+## Exemples
+
+### Utiliser `parentNode`
+
+Cet exemple supprime un nœud de l'arbre, sauf s'il n'est pas déjà dans l'arbre.
 
 ```js
-parentNode = node.parentNode;
-```
-
-`parentNode` est l'élément parent du nœud courant. Le parent d'un élément est un nœud `Element`, un nœud `Document` ou un nœud `DocumentFragment`.
-
-## Exemple
-
-```js
-if (node.parentNode) {
-  // supprime un noeud de l'arbre,
-  // sauf s'il a déjà été supprimé
-  node.parentNode.removeChild(node);
+if (noeud.parentNode) {
+  noeud.parentNode.removeChild(noeud);
 }
 ```
 
-## Notes
+## Spécifications
 
-Les [nœuds](/fr/docs/Web/API/Node/nodeType) `Document` et `DocumentFragment` ne peuvent jamais avoir de parent, alors `parentNode` retournera toujours `null`.
-
-Il renvoie également `null` si le nœud vient d'être créé et n'est pas encore attaché à l'arbre.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
 {{Compat}}
 
-## Spécification
-
-- [DOM Level 2 Core: Node.parentNode](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317)
-- [DOM Level 3 Core: Node.parentNode](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317)
-
 ## Voir aussi
 
-- {{Domxref("Node.firstChild")}}
-- {{Domxref("Node.lastChild")}}
-- {{Domxref("Node.childNodes")}}
-- {{Domxref("Node.nextSibling")}}
-- {{Domxref("Node.parentElement")}}
-- {{Domxref("Node.previousSibling")}}
-- {{Domxref("Node.removeChild")}}
+- La propriété {{DOMxRef("Node.firstChild")}}
+- La propriété {{DOMxRef("Node.lastChild")}}
+- La propriété {{DOMxRef("Node.childNodes")}}
+- La propriété {{DOMxRef("Node.nextSibling")}}
+- La propriété {{DOMxRef("Node.parentElement")}}
+- La propriété {{DOMxRef("Node.previousSibling")}}
+- La propriété {{DOMxRef("Node.removeChild")}}

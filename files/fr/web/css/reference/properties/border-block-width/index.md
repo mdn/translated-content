@@ -3,7 +3,7 @@ title: Propriété CSS `border-block-width`
 short-title: border-block-width
 slug: Web/CSS/Reference/Properties/border-block-width
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-block-width`** définit la largeur des bordures logiques de bloc d'un élément, qui correspond à une largeur de bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle peut correspondre aux propriétés {{CSSxRef("border-top-width")}} et {{CSSxRef("border-bottom-width")}}, ou {{CSSxRef("border-left-width")}} et {{CSSxRef("border-right-width")}} selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
@@ -51,7 +51,7 @@ direction: rtl;
 ## Syntaxe
 
 ```css
-/* Valeurs de type <'border-width'> */
+/* Valeurs de type <'line-width'> */
 border-block-width: 5px;
 border-block-width: thick;
 
@@ -65,8 +65,8 @@ border-block-width: unset;
 
 ### Valeur
 
-- `<'border-width'>`
-  - : La largeur de la bordure. Voir {{CSSxRef("border-width")}}.
+- {{CSSxRef("&lt;line-width&gt;")}}
+  - : Définit la largeur de la bordure, soit par une valeur explicite de type {{CSSxRef("&lt;length&gt;")}} positive, soit par un mot-clé. Les mots-clés possibles sont&nbsp;: `thin`, `medium` ou `thick`. La valeur par défaut est `medium`.
 
 ## Définition formelle
 

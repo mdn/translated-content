@@ -3,7 +3,7 @@ title: "HTMLFieldSetElement : propriété validity"
 short-title: validity
 slug: Web/API/HTMLFieldSetElement/validity
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: b2c48c8b7c097aeab4bc15a388c913f466f40e25
 ---
 
 {{APIRef("HTML DOM")}}
@@ -19,7 +19,7 @@ Un objet {{DOMxRef("ValidityState")}}.
 
 ## Exemples
 
-L'exemple suivant montre qu'un `<fieldset>` est dans un état invalide lorsqu'un {{DOMxRef("ValidityState/customError", "customError")}} est défini&nbsp;; dans cet état, {{DOMxRef("HTMLFieldSetElement/checkValidity", "checkValidity()")}} renvoie `true` tandis que la propriété `validity` de `validityState` vaut `false`.
+L'exemple suivant montre qu'un `<fieldset>` est dans un état invalide lorsqu'un {{DOMxRef("ValidityState/customError", "customError")}} est défini&nbsp;; dans cet état, {{DOMxRef("HTMLFieldSetElement/checkValidity", "checkValidity()")}} retourne `true` tandis que la propriété `validity` de `validityState` vaut `false`.
 
 ```js
 const fieldSet = document.getElementById("myFieldSet");

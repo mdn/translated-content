@@ -3,8 +3,6 @@ title: bookmarks.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onCreated
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsqu'un élément de signet (un signet ou un dossier) est créé.
 
 ## Syntaxe

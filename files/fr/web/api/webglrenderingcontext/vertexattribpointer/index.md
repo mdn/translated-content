@@ -123,7 +123,7 @@ sera stocké dans le tampon des tableaux comme suit :
 
 ### Création du tampon des tableaux
 
-Tout d'abord, nous créons dynamiquement le tampon des tableaux à partir de données JSON en utilisant un {{domxref("DataView")}}. Notez l'utilisation de `true`, car WebGL s'attend à ce que nos données soient en little-endian.
+Tout d'abord, nous créons dynamiquement le tampon des tableaux à partir de données JSON en utilisant un {{jsxref("DataView")}}. Notez l'utilisation de `true`, car WebGL s'attend à ce que nos données soient en little-endian.
 
 ```js
 // Charger la géometrie avec fetch() et Response.json()

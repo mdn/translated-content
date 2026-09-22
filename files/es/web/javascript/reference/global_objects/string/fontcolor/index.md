@@ -3,7 +3,7 @@ title: String.prototype.fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}
 
 El método **`fontcolor()`** crea {{HTMLElement("font")}} elemento HTML que cambia el color de la cadena.
 

@@ -50,7 +50,7 @@ _Hérite des méthodes d'instance de sa super-classe {{JSxRef("Function")}}._
 
 - [`async function`](/fr/docs/Web/JavaScript/Reference/Statements/async_function)
 - [Expression de fonction `async`](/fr/docs/Web/JavaScript/Reference/Operators/async_function)
-- L'objet global {{JSxRef("Function")}}
-- L'objet {{JSxRef("AsyncGeneratorFunction")}}
-- L'objet {{JSxRef("GeneratorFunction")}}
+- L'objet natif {{JSxRef("Function")}}
+- L'objet natif {{JSxRef("AsyncGeneratorFunction")}}
+- L'objet natif {{JSxRef("GeneratorFunction")}}
 - {{JSxRef("Functions", "Fonctions", "", 1)}}

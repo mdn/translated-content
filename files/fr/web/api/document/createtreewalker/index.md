@@ -3,7 +3,7 @@ title: "Document : méthode createTreeWalker()"
 short-title: createTreeWalker()
 slug: Web/API/Document/createTreeWalker
 l10n:
-  sourceCommit: 30ae43a0c98ab92f750fd571d7a3a8ee8b15b4c0
+  sourceCommit: f78ca75460fbdbc7f17b6e366dad47b9760054b0
 ---
 
 {{APIRef("Document")}}
@@ -46,7 +46,7 @@ createTreeWalker(root, whatToShow, filter)
     > La constante `NodeFilter.SHOW_ATTRIBUTE` n'est efficace que lorsque la racine est un nœud d'attribut. Étant donné que le parent de tout nœud `Attr` est toujours `null`, {{DOMxRef("TreeWalker.nextNode()")}} et {{DOMxRef("TreeWalker.previousNode()")}} ne retournent jamais un nœud `Attr`. Pour parcourir les nœuds `Attr`, utilisez plutôt {{DOMxRef("Element.attributes")}}.
 
 - `filter` {{Optional_Inline}}
-  - : Une fonction de rappel ou un objet avec une méthode `acceptNode()`, qui retourne `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT`, ou `NodeFilter.FILTER_SKIP`. La fonction ou la méthode sera appelée pour chaque nœud de la sous-arborescence basée sur `root` qui est accepté comme incluse par l'indicateur `whatToShow` pour déterminer s'il faut ou non l'inclure dans la liste des nœuds itérables&nbsp;:
+  - : Une fonction de rappel ou un objet avec une méthode `acceptNode()`, qui retourne `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT`, ou `NodeFilter.FILTER_SKIP`. La fonction ou la méthode est appelée pour chaque nœud de la sous-arborescence basée sur `root` qui est accepté comme incluse par l'indicateur `whatToShow` pour déterminer s'il faut ou non l'inclure dans la liste des nœuds itérables&nbsp;:
     - Si la valeur retournée est `NodeFilter.FILTER_ACCEPT`, ce nœud est inclus.
     - Si la valeur retournée est `NodeFilter.FILTER_REJECT`, aucun nœud de la sous-arborescence basée sur ce nœud n'est inclus.
     - Si la valeur retournée est `NodeFilter.FILTER_SKIP`, ce nœud n'est pas inclus.
@@ -98,7 +98,7 @@ while (treeWalker.nextNode()) {
 
 ### Utiliser `filter`
 
-Cet exemple utilise `filter` pour échapper les contenus textuels. Pour tout nœud textuel, son contenu sera échappé en utilisant {{JSxRef("encodeURI()")}} s'il est un descendant d'un élément `.escape` mais pas d'un élément `.no-escape`.
+Cet exemple utilise `filter` pour échapper les contenus textuels. Pour tout nœud textuel, son contenu est échappé en utilisant {{JSxRef("encodeURI()")}} s'il est un descendant d'un élément `.escape` mais pas d'un élément `.no-escape`.
 
 #### HTML
 

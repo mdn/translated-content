@@ -3,8 +3,6 @@ title: notifications.TemplateType
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType
 ---
 
-{{AddonSidebar}}
-
 Ceci est une chaîne et représente le type de notification à créer. Il existe quatre types de notification : "basic", "image", "list", "progress".
 
 Ceci est passé dans {{WebExtAPIRef("notifications.create()")}} et {{WebExtAPIRef("notifications.update()")}} comme propriété de `type` {{WebExtAPIRef("notifications.NotificationOptions", "NotificationOptions")}}.

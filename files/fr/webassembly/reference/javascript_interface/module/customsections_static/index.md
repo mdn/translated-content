@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 292e29ec89933d06416419f8403241b7e34f6555
 ---
 
-{{WebAssemblySidebar}}
-
 La méthode statique **`WebAssembly.Module.customSections()`** renvoie un tableau qui contient les sections personnalisées (<i lang="en">custom sections</i>) disponibles dans un module WebAssembly et qui ont un nom donné.
 
 ## Syntaxe

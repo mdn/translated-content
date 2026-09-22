@@ -2,7 +2,7 @@
 title: キーボードイベントの code の値
 slug: Web/API/UI_Events/Keyboard_event_code_values
 l10n:
-  sourceCommit: b2a5f62d66b4e3d71704017d0fab7ad710e68057
+  sourceCommit: bb48907e64eb4bf60f17efd7d39b46c771d220a0
 ---
 
 {{DefaultAPISidebar("UI Events")}}
@@ -854,7 +854,7 @@ l10n:
       <td><code>"Help"</code>（⚠️ Firefox とは異なる）</td>
     </tr>
     <tr>
-      <th scope="row"><code>0xE03C</code>～ <code>0xE044</code></th>
+      <th scope="row"><code>0xE03C</code> ～ <code>0xE044</code></th>
       <td><code>"Unidentified"</code></td>
       <td><code>""</code></td>
     </tr>
@@ -1417,7 +1417,7 @@ macOS では、物理キーとキーイベントを判別するスキャンコ�
       <th scope="row"><code>kVK_VolumeUp (0x48)</code></th>
       <td><code>"VolumeUp"</code>（⚠️ Chromium とは異なる）</td>
       <td>
-        <code>"AudioVolumeUp" </code>（Chromium 1 より前は <code>"VolumeUp"</code>）（⚠️ Firefox とは異なる）
+        <code>"AudioVolumeUp"</code>（Chromium 1 より前は <code>"VolumeUp"</code>）（⚠️ Firefox とは異なる）
       </td>
     </tr>
     <tr>

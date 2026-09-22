@@ -1,66 +1,102 @@
 ---
-title: Node.getRootNode()
+title: "Node : méthode getRootNode()"
+short-title: getRootNode()
 slug: Web/API/Node/getRootNode
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`getRootNode()`** de l'interface {{domxref("Node")}} renvoie le contexte de la racine de l'objet, qui peut optionnellement inclure la racine "shadow" si elle est disponible.
+La méthode **`getRootNode()`** de l'interface {{DOMxRef("Node")}} retourne le contexte de la racine de l'objet, qui peut optionnellement inclure la racine d'ombre (<i lang="en">shadow root</i> en anglais) si elle est disponible.
 
 ## Syntaxe
 
-```js
-var root = node.getRootNode(options);
+```js-nolint
+getRootNode()
+getRootNode(options)
 ```
 
 ### Paramètres
 
-- options {{optional_inline}}
-  - : Un objet qui définit les options pour obtenir le noeud racine. Les options disponibles sont :
-    - `composed` : un {{jsxref('Boolean')}} (_booléen_) qui indique si la racine shadow doit être retournée (`false` (_faux_) par défaut) ou un noeud racine au-delà de la racine shadow (`true`).
+- `options` {{Optional_Inline}}
+  - : Un objet qui définit les options pour obtenir le nœud racine. Les options disponibles sont&nbsp;:
+    - `composed`&nbsp;: un booléen qui indique si la racine d'ombre doit être retournée (`false`, par défaut) ou un nœud racine au-delà de la racine d'ombre (`true`).
 
-### Retourne
+### Valeur de retour
 
-Une interface {{domxref('Node')}}.
+Un objet héritant de {{DOMxRef("Node")}}. Cela varie en fonction de l'endroit où vous appelez `getRootNode()`&nbsp;; par exemple&nbsp;:
 
-## Exemple
+- L'appel sur un élément à l'intérieur d'une page web standard retourne un objet {{DOMxRef("HTMLDocument")}} représentant l'ensemble de la page (ou {{HTMLElement("iframe")}}).
+- L'appel sur un élément à l'intérieur d'un DOM d'ombre (<i lang="en">shadow DOM</i> en anglais) retourne le {{DOMxRef("ShadowRoot")}} associé.
+- L'appel sur un élément qui n'est pas attaché à un document ou à un arbre d'ombre (<i lang="en">shadow tree</i> en anglais) retourne la racine de l'arbre DOM auquel il appartient.
 
-Le premier exemple retourne une référence au noeud HTML/document lorsqu'il est exécuté dans les navigateurs de support :
+## Exemples
+
+### Exemple 1
+
+Le premier exemple simple retourne une référence au nœud HTML/document&nbsp;:
 
 ```js
-rootNode = node.getRootNode();
+const noeudRacine = node.getRootNode();
 ```
 
-Cet exemple plus complexe montre la différence entre retourner une racine normale et une racine qui inclut la racine shadow (voir le [code source complet](<https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html>)):
+### Exemple 2
+
+Cet exemple plus complexe montre la différence entre retourner une racine normale et une racine qui inclut la racine d'ombre&nbsp;:
 
 ```html
-<!-- source: https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html -->
-<div class="js-parent">
-  <div class="js-child"></div>
+<div class="parent">
+  <div class="enfant"></div>
 </div>
-<div class="js-shadowHost"></div>
-<script>
-  // work on Chrome 54+，Opera41+
+<div class="hoteOmbre">hoteOmbre</div>
+<pre id="sortie">Sortie&nbsp;: </pre>
+```
 
-  var parent = document.querySelector(".js-parent"),
-    child = document.querySelector(".js-child"),
-    shadowHost = document.querySelector(".js-shadowHost");
+```js
+const parent = document.querySelector(".parent");
+const enfant = document.querySelector(".enfant");
+const hoteOmbre = document.querySelector(".hoteOmbre");
+const sortie = document.getElementById("sortie");
 
-  console.log(parent.getRootNode().nodeName); // #document
-  console.log(child.getRootNode().nodeName); // #document
+sortie.innerText += `\nparent's root: ${parent.getRootNode().nodeName}\n`; // #document
+sortie.innerText += `enfant's  root: ${enfant.getRootNode().nodeName}\n\n`; // #document
 
-  // create a ShadowRoot
-  var shadowRoot = shadowHost.attachShadow({ mode: "open" });
-  shadowRoot.innerHTML =
-    "<style>div{background:#2bb8aa;}</style>" +
-    '<div class="js-shadowChild">content</div>';
-  var shadowChild = shadowRoot.querySelector(".js-shadowChild");
+// créer un ShadowRoot
+const racineOmbre = hoteOmbre.attachShadow({ mode: "open" });
+racineOmbre.innerHTML =
+  '<style>div{background:#2bb8aa;}</style><div class="enfantOmbre">enfantOmbre</div>';
+const enfantOmbre = racineOmbre.querySelector(".enfantOmbre");
 
-  // The default value of composed is false
-  console.log(shadowChild.getRootNode() === shadowRoot); // true
-  console.log(shadowChild.getRootNode({ composed: false }) === shadowRoot); // true
-  console.log(shadowChild.getRootNode({ composed: true }).nodeName); // #document
-</script>
+// La valeur par défaut de composed est false
+sortie.innerText += `enfantOmbre.getRootNode() === racineOmbre: ${
+  enfantOmbre.getRootNode() === racineOmbre
+}\n`; // true
+sortie.innerText += `enfantOmbre.getRootNode({ composed:false }) === racineOmbre: ${
+  enfantOmbre.getRootNode({ composed: false }) === racineOmbre
+}\n`; // true
+sortie.innerText += `enfantOmbre.getRootNode({ composed:true }).nodeName: ${
+  enfantOmbre.getRootNode({ composed: true }).nodeName
+}\n`; // #document
+```
+
+{{EmbedLiveSample("Exemple 2", "100%", 200)}}
+
+### Exemple 3
+
+Cet exemple retourne la racine de l'arbre non monté.
+Notez que `element` ici est la racine de l'arbre (comme il n'a pas de parent), donc par définition sa racine est lui-même&nbsp;:
+
+```js
+const element = document.createElement("p");
+const enfant = document.createElement("span");
+
+element.append(enfant);
+
+const noeudRacine = enfant.getRootNode(); // <p><span></span></p>
+
+element === noeudRacine; // true
+element === element.getRootNode(); // true
 ```
 
 ## Spécifications

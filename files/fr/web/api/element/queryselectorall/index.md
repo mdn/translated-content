@@ -3,12 +3,12 @@ title: "Element : méthode querySelectorAll()"
 short-title: querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 l10n:
-  sourceCommit: 277a8954951c900ef60a5175503976284c1d328d
+  sourceCommit: 0c13af55e869cbc54830fd1a601fd05f60717375
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`querySelectorAll()`** de {{DOMxRef("Element")}} retourne une {{DOMxRef("NodeList")}} statique (non-dynamique) des éléments correspondants au groupe de sélecteurs CSS spécifiés qui sont des descendants de l'élément sur lequel la méthode a été appelée.
+La méthode **`querySelectorAll()`** de l'interface {{DOMxRef("Element")}} retourne une {{DOMxRef("NodeList")}} statique (non-dynamique) des éléments correspondants au groupe de sélecteurs CSS définis qui sont des descendants de l'élément sur lequel la méthode a été appelée.
 
 ## Syntaxe
 
@@ -19,7 +19,7 @@ querySelectorAll(selectors)
 ### Paramètres
 
 - `selectors`
-  - : Une chaîne de caractères contenant un ou plusieurs sélecteurs à comparer. Cette chaîne doit être composée de sélecteurs CSS valides&nbsp;; sinon une exception `SyntaxError` est levée.
+  - : Une chaîne de caractères contenant un ou plusieurs sélecteurs à comparer. Cette chaîne de caractères doit être composée de sélecteurs CSS valides&nbsp;; sinon une exception `SyntaxError` est levée.
 
     Notez que la spécification HTML n'exige pas que les valeurs d'attribut soient des identifiants CSS valides. Si la valeur d'un attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) n'est pas un identifiant CSS valide, vous devez l'échapper avant de l'utiliser dans un sélecteur, soit en appelant {{DOMxRef("CSS.escape_static", "CSS.escape()")}} sur la valeur, soit en utilisant l'une des techniques décrites dans [Échapper les caractères](/fr/docs/Web/CSS/Reference/Values/ident#échapper_les_caractères). Voir [Échapper les valeurs d'attribut](#échapper_les_valeurs_dattribut) pour un exemple.
 
@@ -27,10 +27,10 @@ querySelectorAll(selectors)
 
 ### Valeur de retour
 
-Une {{DOMxRef("NodeList")}} statique contenant un objet {{DOMxRef("Element")}} pour chaque nœud descendant qui correspond à au moins un des sélecteurs spécifiés au moment où la méthode est appelée.
+Une {{DOMxRef("NodeList")}} statique contenant un objet {{DOMxRef("Element")}} pour chaque nœud descendant qui correspond à au moins un des sélecteurs définis au moment où la méthode est appelée.
 
 > [!NOTE]
-> Si les sélecteurs spécifiés avec `selectors` incluent un [pseudo-élément CSS](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), la liste renvoyée est toujours vide.
+> Si les sélecteurs définis avec `selectors` incluent un [pseudo-élément CSS](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), la liste retournée est toujours vide.
 
 ### Exception
 
@@ -59,36 +59,36 @@ const refs = [
 
 ### Obtenir d'une liste de correspondances
 
-Pour obtenir une {{DOMxRef("NodeList")}} de tous les éléments {{HTMLElement("p")}} contenus dans l'élément `myBox`&nbsp;:
+Pour obtenir une {{DOMxRef("NodeList")}} de tous les éléments HTML {{HTMLElement("p")}} contenus dans l'élément `maBoite`&nbsp;:
 
 ```js
-const matches = myBox.querySelectorAll("p");
+const correspondances = maBoite.querySelectorAll("p");
 ```
 
-Cet exemple renvoie une liste de tous les éléments {{HTMLElement("div")}} dans `myBox` avec une classe `note` ou `alert`&nbsp;:
+Cet exemple retourne une liste de tous les éléments HTML {{HTMLElement("div")}} dans `maBoite` avec une classe `note` ou `alert`&nbsp;:
 
 ```js
-const matches = myBox.querySelectorAll("div.note, div.alert");
+const correspondances = maBoite.querySelectorAll("div.note, div.alert");
 ```
 
-Ici, nous obtenons une liste d'éléments `<p>` du document, dont le parent immédiat est un {{HTMLElement("div")}} qui a la classe `highlighted` et qui sont inclus dans un conteneur dont l'`id` est `test`&nbsp;:
+Ici, nous obtenons une liste d'éléments `<p>` du document, dont le parent immédiat est un {{HTMLElement("div")}} qui a la classe `surligne` et qui sont inclus dans un conteneur dont un `id` est `test`&nbsp;:
 
 ```js
-const container = document.querySelector("#test");
-const matches = container.querySelectorAll("div.highlighted > p");
+const conteneur = document.querySelector("#test");
+const correspondances = conteneur.querySelectorAll("div.surligne > p");
 ```
 
 Cet exemple utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) pour renvoyer une liste d'éléments {{HTMLElement("iframe")}} du document lesquels contiennent un attribut nommé `data-src`&nbsp;:
 
 ```js
-const matches = document.querySelectorAll("iframe[data-src]");
+const correspondances = document.querySelectorAll("iframe[data-src]");
 ```
 
-Ici, un sélecteur d'attribut est utilisé pour renvoyer une liste des éléments de la liste contenus dans une liste dont l'`id` est `userlist` et qui ont un attribut `data-active` dont la valeur est `1`&nbsp;:
+Ici, un sélecteur d'attribut est utilisé pour renvoyer une liste des éléments de la liste contenus dans une liste dont un `id` est `liste-utilisateur` et qui ont un attribut `data-active` dont la valeur est `1`&nbsp;:
 
 ```js
-const container = document.querySelector("#user-list");
-const matches = container.querySelectorAll("li[data-active='1']");
+const conteneur = document.querySelector("#liste-utilisateur");
+const correspondances = conteneur.querySelectorAll("li[data-active='1']");
 ```
 
 ### Accéder aux correspondances
@@ -98,10 +98,10 @@ Une fois que la {{DOMxRef("NodeList")}} des éléments correspondants est retour
 Sinon, vous pouvez simplement utiliser la notation de tableau standard pour accéder au contenu de la liste. Vous pouvez utiliser n'importe quelle instruction de boucle commune, telle que&nbsp;:
 
 ```js
-const highlightedItems = userList.querySelectorAll(".highlighted");
+const elementsSurlignes = listeUtilisateurs.querySelectorAll(".surligne");
 
-highlightedItems.forEach((userItem) => {
-  deleteUser(userItem);
+elementsSurlignes.forEach((elemUtilisateur) => {
+  deleteUser(elemUtilisateur);
 });
 ```
 
@@ -110,29 +110,29 @@ highlightedItems.forEach((userItem) => {
 
 ### Portée du sélecteur
 
-La méthode `querySelectorAll()` applique ses sélecteurs à l'ensemble du document&nbsp;: ils ne sont pas limités à l'élément sur lequel la méthode est appelée. Pour restreindre la portée des sélecteurs, incluez la pseudo-classe {{CSSxRef(":scope")}} au début de la chaîne de sélecteurs.
+La méthode `querySelectorAll()` applique ses sélecteurs à l'ensemble du document&nbsp;: ils ne sont pas limités à l'élément sur lequel la méthode est appelée. Pour restreindre la portée des sélecteurs, incluez la pseudo-classe {{CSSxRef(":scope")}} au début de la chaîne de caractères de sélecteurs.
 
 #### HTML
 
 Dans cet exemple, le HTML contient&nbsp;:
 
-- deux boutons&nbsp;: `#select` et `#select-scope`
-- trois éléments `<div>` imbriqués&nbsp;: `#outer`, `#subject` et `#inner`
+- deux boutons&nbsp;: `#selection` et `#selection-portee`
+- trois éléments `<div>` imbriqués&nbsp;: `#exterieur`, `#sujet` et `#interieur`
 - un élément `<pre>` utilisé pour l'affichage du résultat.
 
 ```html
-<button id="select">Sélectionner</button>
-<button id="select-scope">Sélectionner avec :scope</button>
+<button id="selection">Sélectionner</button>
+<button id="selection-portee">Sélectionner avec :scope</button>
 
-<div id="outer">
-  #outer
-  <div id="subject">
-    #subject
-    <div id="inner">#inner</div>
+<div id="exterieur">
+  #exterieur
+  <div id="sujet">
+    #sujet
+    <div id="interieur">#interieur</div>
   </div>
 </div>
 
-<pre id="output"></pre>
+<pre id="sortie"></pre>
 ```
 
 ```css hidden
@@ -153,35 +153,35 @@ button {
 
 #### JavaScript
 
-Dans le JavaScript, nous sélectionnons d'abord l'élément `#subject`.
+Dans le JavaScript, nous sélectionnons d'abord l'élément `#sujet`.
 
-Quand le bouton `#select` est pressé, nous appelons `querySelectorAll()` sur `#subject` en passant `"#outer #inner"` comme chaîne de sélecteur.
+Quand le bouton `#selection` est pressé, nous appelons `querySelectorAll()` sur `#sujet` en passant `"#exterieur #interieur"` comme chaîne de caractères de sélecteur.
 
-Quand le bouton `#select-scope` est pressé, nous appelons à nouveau `querySelectorAll()` sur `#subject`, mais cette fois en passant `":scope #outer #inner"` comme chaîne de sélecteur.
+Quand le bouton `#selection-portee` est pressé, nous appelons à nouveau `querySelectorAll()` sur `#sujet`, mais cette fois en passant `":scope #exterieur #interieur"` comme chaîne de caractères de sélecteur.
 
 ```js
-const subject = document.querySelector("#subject");
+const sujet = document.querySelector("#sujet");
 
-const select = document.querySelector("#select");
-select.addEventListener("click", () => {
-  const selected = subject.querySelectorAll("#outer #inner");
-  output.textContent = `Selection count: ${selected.length}`;
+const selection = document.querySelector("#selection");
+selection.addEventListener("click", () => {
+  const selectionne = sujet.querySelectorAll("#exterieur #interieur");
+  sortie.textContent = `Selection count: ${selectionne.length}`;
 });
 
-const selectScope = document.querySelector("#select-scope");
-selectScope.addEventListener("click", () => {
-  const selected = subject.querySelectorAll(":scope #outer #inner");
-  output.textContent = `Selection count: ${selected.length}`;
+const selectionPortee = document.querySelector("#selection-portee");
+selectionPortee.addEventListener("click", () => {
+  const selectionnee = sujet.querySelectorAll(":scope #exterieur #interieur");
+  sortie.textContent = `Selection count: ${selectionnee.length}`;
 });
 ```
 
-#### Result
+#### Résultat
 
 {{EmbedLiveSample("Portée du sélecteur", "", 300)}}
 
-Quand on clique sur «&nbsp;Sélectionner&nbsp;», le sélecteur sélectionne tous les éléments ayant un identifiant `inner` qui ont aussi un ancêtre avec l'identifiant `outer`. Notez que même si `#outer` est en dehors de l'élément `#subject`, il est tout de même utilisé dans la sélection, donc notre élément `#inner` est trouvé.
+Quand on clique sur «&nbsp;Sélectionner&nbsp;», le sélecteur sélectionne tous les éléments ayant un identifiant `interieur` qui ont aussi un ancêtre avec l'identifiant `exterieur`. Notez que même si `#exterieur` est en dehors de l'élément `#sujet`, il est tout de même utilisé dans la sélection, donc notre élément `#interieur` est trouvé.
 
-Quand on clique sur «&nbsp;Sélectionner avec :scope&nbsp;», la pseudo-classe `:scope` limite la portée du sélecteur à `#subject`, donc `#outer` n'est pas utilisé dans la correspondance du sélecteur et l'élément `#inner` n'est pas trouvé.
+Quand on clique sur «&nbsp;Sélectionner avec :scope&nbsp;», la pseudo-classe `:scope` limite la portée du sélecteur à `#sujet`, donc `#exterieur` n'est pas utilisé dans la correspondance du sélecteur et l'élément `#interieur` n'est pas trouvé.
 
 ### Échapper les valeurs d'attribut
 
@@ -194,7 +194,7 @@ Dans le code suivant, un élément {{HTMLElement("div")}} a un `id` de `"this?el
 Nous avons également trois boutons et un élément {{HTMLElement("pre")}} pour consigner les erreurs.
 
 ```html
-<div id="container">
+<div id="conteneur">
   <div id="this?element"></div>
 </div>
 
@@ -202,7 +202,7 @@ Nous avons également trois boutons et un élément {{HTMLElement("pre")}} pour 
 <button id="css-escape">CSS.escape()</button>
 <button id="manual-escape">Échappement manuel</button>
 
-<pre id="log"></pre>
+<pre id="journal"></pre>
 ```
 
 #### CSS
@@ -225,35 +225,35 @@ Les trois boutons, lorsqu'on clique dessus, essaient tous de sélectionner le `<
 - Le troisième bouton échappe explicitement le caractère `?` à l'aide d'une barre oblique inverse. Notez qu'il faut aussi échapper la barre oblique inverse elle‑même, en utilisant une autre barre oblique inverse, par exemple&nbsp;: `\\?`.
 
 ```js
-const container = document.querySelector("#container");
-const log = document.querySelector("#log");
+const conteneur = document.querySelector("#conteneur");
+const journal = document.querySelector("#journal");
 
-function random(number) {
-  return Math.floor(Math.random() * number);
+function aleatoire(nombre) {
+  return Math.floor(Math.random() * nombre);
 }
 
-function setBackgroundColor(id) {
-  log.textContent = "";
+function definirCouleurDeFond(id) {
+  journal.textContent = "";
 
   try {
-    const elements = container.querySelectorAll(`#${id}`);
-    const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
-    elements[0].style.backgroundColor = randomColor;
+    const elements = conteneur.querySelectorAll(`#${id}`);
+    const couleurAleatoire = `rgb(${aleatoire(255)} ${aleatoire(255)} ${aleatoire(255)})`;
+    elements[0].style.backgroundColor = couleurAleatoire;
   } catch (e) {
-    log.textContent = e;
+    journal.textContent = e;
   }
 }
 
 document.querySelector("#no-escape").addEventListener("click", () => {
-  setBackgroundColor("this?element");
+  definirCouleurDeFond("this?element");
 });
 
 document.querySelector("#css-escape").addEventListener("click", () => {
-  setBackgroundColor(CSS.escape("this?element"));
+  definirCouleurDeFond(CSS.escape("this?element"));
 });
 
 document.querySelector("#manual-escape").addEventListener("click", () => {
-  setBackgroundColor("this\\?element");
+  definirCouleurDeFond("this\\?element");
 });
 ```
 

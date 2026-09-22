@@ -23,7 +23,7 @@ const digest = crypto.subtle.digest(algorithm, data);
   - `SHA-384`
   - `SHA-512`.
 
-- _`data`_ est un {{jsxref("ArrayBuffer")}} ou un {{domxref("ArrayBufferView")}} contenant les données à traiter.
+- _`data`_ est un {{jsxref("ArrayBuffer")}} ou un {{jsxref("TypedArray")}} contenant les données à traiter.
 
 ### Valeur retournée
 

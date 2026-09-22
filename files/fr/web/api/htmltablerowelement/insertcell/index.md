@@ -3,17 +3,14 @@ title: "HTMLTableRowElement : méthode insertCell()"
 short-title: insertCell()
 slug: Web/API/HTMLTableRowElement/insertCell
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: ea061caed30f127a79157d07c538d26f01b8702b
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`insertCell()`** de l'interface {{DOMxRef("HTMLTableRowElement")}} insère une nouvelle cellule ({{HTMLElement("td")}}) dans une ligne de tableau ({{HTMLElement("tr")}}) et retourne une référence sur cette cellule.
+La méthode **`insertCell()`** de l'interface {{DOMxRef("HTMLTableRowElement")}} crée un élément {{HTMLElement("td")}}, l'insère à la position définie dans l'élément {{HTMLElement("tr")}} donné, et le retourne.
 
-> [!NOTE]
-> `insertCell()` insère directement la cellule dans la ligne. Il n'est pas nécessaire d'ajouter la cellule séparément avec {{DOMxRef("Node.appendChild()")}} comme cela aurait été le cas si {{DOMxRef("Document.createElement()")}} avait été utilisé pour créer le nouvel élément `<td>`.
->
-> Vous ne pouvez pas utiliser `insertCell()` pour créer un nouvel élément `<th>`.
+Cette méthode crée et insère l'élément directement, sans nécessiter d'appels séparés à des méthodes telles que {{DOMxRef("Document.createElement()")}}, {{DOMxRef("Node.insertBefore()")}} et {{DOMxRef("Node.appendChild()")}}. Cependant, vous ne pouvez pas utiliser `insertCell()` pour créer un nouvel élément `<th>`.
 
 ## Syntaxe
 
@@ -25,11 +22,16 @@ insertCell(index)
 ### Paramètres
 
 - `index` {{Optional_Inline}}
-  - : L'index de la nouvelle cellule. Si `index` vaut `-1` ou est égal au nombre de cellules, la cellule est ajoutée à la fin de la ligne. Si `index` est omis, la valeur par défaut est `-1`.
+  - : L'indice de la nouvelle cellule dans la collection {{DOMxRef("HTMLTableRowElement.cells", "cells")}}. Si `index` vaut `-1` ou est égal au nombre de cellules, la cellule est ajoutée à la fin de la ligne. Si `index` est omis, la valeur par défaut est `-1`.
 
 ### Valeur de retour
 
 Un objet {{DOMxRef("HTMLTableCellElement")}} qui référence la nouvelle cellule.
+
+### Exceptions
+
+- `IndexSizeError` {{DOMxRef("DOMException")}}
+  - : Levée si `index` est supérieur au nombre de cellules ou s'il est inférieur à `-1`.
 
 ## Exemples
 
@@ -126,4 +128,5 @@ removeButton.addEventListener("click", () => {
 ## Voir aussi
 
 - La méthode {{DOMxRef("HTMLTableElement.insertRow()")}}
+- La méthode {{DOMxRef("HTMLTableRowElement.deleteCell()")}}
 - L'élément HTML représentant les cellules&nbsp;: {{DOMxRef("HTMLTableCellElement")}}

@@ -11,7 +11,7 @@ La propriété [CSS](/fr/docs/Web/CSS) **`scroll-timeline-name`** est utilisée 
 Le nom est ensuite référencé dans une déclaration {{CSSxRef("animation-timeline")}} pour indiquer l'élément conteneur utilisé pour piloter la progression de l'animation avec l'action de défilement.
 
 > [!NOTE]
-> Si l'élément ne déborde pas de son conteneur dans la dimension de l'axe ou si le débordement est masqué ou coupé, aucune chronologie ne est créée.
+> Si l'élément ne déborde pas de son conteneur dans la dimension de l'axe ou si le débordement est masqué ou coupé, aucune chronologie n'est créée.
 
 Les propriétés {{CSSxRef("scroll-timeline-axis")}} et `scroll-timeline-name` peuvent également être définies en utilisant la propriété raccourcie {{CSSxRef("scroll-timeline")}}.
 

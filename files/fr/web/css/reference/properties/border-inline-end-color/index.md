@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-end-color`** définit la couleur de la bordure logique en ligne de fin d'un élément, qui correspond à une bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond à la propriété {{CSSxRef("border-top-color")}}, {{CSSxRef("border-right-color")}}, {{CSSxRef("border-bottom-color")}}, ou {{CSSxRef("border-left-color")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
+La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-end-color`** définit la couleur de la bordure logique en incise (<i lang="en">inline</i> en anglais) de fin d'un élément, qui correspond à une bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond à la propriété {{CSSxRef("border-top-color")}}, {{CSSxRef("border-right-color")}}, {{CSSxRef("border-bottom-color")}}, ou {{CSSxRef("border-left-color")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: border-inline-end-color")}}
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 **`VRDisplayEvent`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで、 WebVR 関連イベントのイベントオブジェクトを表します（[WebVR ウインドウ拡張機能のリスト](/ja/docs/Web/API/WebVR_API#window)を参照）。
 

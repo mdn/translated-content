@@ -3,8 +3,6 @@ title: Uint32Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array
 ---
 
-{{JSRef}}
-
 Le tableau typé **`Uint32Array`** permet de représenter un tableau d'entiers non signés représentés sur 32 bits, où l'ordre des octets correspond à celui de la plateforme utilisée. Si on souhaite contrôler l'ordre des octets utilisé (le « boutisme »), on utilisera un objet {{jsxref("DataView")}} à la place. Les éléments du tableau sont initialisés à `0`. Une fois que le tableau est construit, on peut manipuler ses différents éléments grâce aux méthodes de l'objet ou grâce à la notation usuelle (avec les crochets).
 
 ## Syntaxe
@@ -84,7 +82,7 @@ Tous les objets `Uint32Array` héritent de {{jsxref("TypedArray", "%TypedArray%.
   - : Renvoie le dernier indice (le plus élevé) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Uint32Array.prototype.map()")}}
   - : Crée un nouveau tableau dont les éléments sont les images des éléments du tableau courant par une fonction donnée. Voir également {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Uint32Array.prototype.move()")}} {{non-standard_inline}}
+- `Uint32Array.prototype.move()` {{non-standard_inline}}
   - : Ancienne version, non-standard, de {{jsxref("TypedArray.copyWithin", "Uint32Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Uint32Array.prototype.reduce()")}}
   - : Applique une fonction sur un accumulateur et chaque élément du tableau (de gauche à droite) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduce()")}}.

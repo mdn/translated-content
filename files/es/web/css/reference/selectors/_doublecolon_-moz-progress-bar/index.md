@@ -10,7 +10,11 @@ El [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) **`::
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+::-moz-progress-bar {
+  /* ... */
+}
+```
 
 ## Ejemplos
 

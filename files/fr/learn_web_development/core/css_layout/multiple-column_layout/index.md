@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 original_slug: Learn/CSS/CSS_layout/Multiple-column_Layout
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods", "Learn_web_development/Core/CSS_layout")}}
 
 Une mise en page à colonnes multiples est une méthode de disposition du contenu sur plusieurs colonnes juxtaposées, telle dans un journal. Cet article explique comment utiliser cette fonction.
 

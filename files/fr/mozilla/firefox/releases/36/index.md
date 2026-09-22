@@ -3,7 +3,7 @@ title: Firefox 36 note de version pour les développeurs
 short-title: Firefox 36
 slug: Mozilla/Firefox/Releases/36
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
 ---
 
 Firefox 36 a été publié le 24 février 2015. Cet article répertorie les principaux changements utiles non seulement pour les développeur·euse·s web, mais aussi pour les développeur·euse·s Firefox et Gecko ainsi que pour les développeur·euse·s d'extensions.

@@ -8,7 +8,7 @@ l10n:
 
 La méthode **`setTime()`** des instances de {{JSxRef("Date")}} modifie le [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) pour cette date, c'est-à-dire le nombre de millisecondes écoulées depuis [l'epoch](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), définie comme minuit au début du 1er janvier 1970, UTC.
 
-{{InteractiveExample("JavaScript Demo: Date.prototype.setTime()", "taller")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.setTime()", "taller")}}
 
 ```js interactive-example
 const launchDate = new Date("July 1, 1999, 12:00:00");

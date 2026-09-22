@@ -3,8 +3,6 @@ title: ExtensionInfo
 slug: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
 ---
 
-{{AddonSidebar}}
-
 Un objet `ExtensionInfo` contenant les informations sur l'extension.
 
 ## Type

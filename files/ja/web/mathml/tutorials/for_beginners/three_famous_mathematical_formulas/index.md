@@ -1,14 +1,12 @@
 ---
 title: "課題: 三大数式"
+short-title: 有名な数式
 slug: Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas
-original_slug: Web/MathML/Guides/Three_famous_mathematical_formulas
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: c263f06fa14ed56153e345006bb459c9df014b98
 ---
 
-{{MathMLRef}}
-
-{{PreviousMenu("Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Guides")}}
+{{PreviousMenu("Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Tutorials/For_beginners")}}
 
 この記事で指定されたいくつかの記事で学んだことを活用すれば、すでに相対的に洗練された MathML 数式を書くことができるはずです。この課題は、それを実行するチャンスです。
 
@@ -116,4 +114,4 @@ using the following expression:
 - [W3C validator](https://validator.w3.org/nu/) を使用して、 HTML/MathML マークアップの意図しない間違いを見つけてください。
 - もし行き詰まったり、手作業で MathML を書くのが苦痛に感じたりした場合は、 [MathML を書く](/ja/docs/Web/MathML/Guides/Authoring)ためのツール、たとえば [TeXZilla](https://fred-wang.github.io/TeXZilla/) など使用することもできます。
 
-{{PreviousMenu("Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Guides")}}
+{{PreviousMenu("Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Tutorials/For_beginners")}}

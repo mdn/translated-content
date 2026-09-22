@@ -2,7 +2,7 @@
 title: Fragments de texte
 slug: Web/URI/Reference/Fragment/Text_fragments
 l10n:
-  sourceCommit: b2a6a2d255b792532d1cd3edf224f204d1ab2251
+  sourceCommit: a267b5378025c50bd722e90c6a1969c41bb80bb1
 ---
 
 Les **fragments de texte** permettent de lier directement un texte spécifique d'une page web, sans que l'auteur·ice de la page ait besoin d'ajouter un ID. Ils utilisent une syntaxe spéciale dans le fragment d'URL. Cette fonctionnalité permet de créer des liens profonds vers du contenu que vous ne contrôlez pas et qui peut ne pas avoir d'ID associé. Elle rend aussi le partage de liens plus utile en pointant directement d'autres personnes vers des mots précis. Les navigateurs peuvent différer dans la façon de mettre en évidence le texte lié — en général, le texte est fait défiler dans la vue et surligné en couleur.
@@ -24,7 +24,7 @@ Le problème avec les liens vers des fragments de document spécifiques est que 
 </h2>
 ```
 
-Tous les documents ne possèdent pas de telles ancres, et même s'ils en ont, lier un titre peut être bien moins précis que de lier directement le texte cité. C'est là que les fragments de texte sont utiles&nbsp;: ils permettent à l'auteur·ice du lien de contrôler exactement le texte à cibler, sans nécessiter de balisage particulier dans le document cible. Par exemple, un moteur de recherche peut référencer une phrase précise dans ses résultats, et cliquer sur le lien amènera directement à cette phrase.
+Tous les documents ne possèdent pas de telles ancres, et même s'ils en ont, lier un titre peut être bien moins précis que de lier directement le texte cité. C'est là que les fragments de texte sont utiles&nbsp;: ils permettent à l'auteur·ice du lien de contrôler exactement le texte à cibler, sans nécessiter de balisage particulier dans le document cible. Par exemple, un moteur de recherche peut référencer une phrase précise dans ses résultats, et cliquer sur le lien amène directement à cette phrase.
 
 Cependant, les fragments de texte ont aussi une limite&nbsp;: le texte d'un document est moins stable que sa structure. Si le texte du document lié est modifié, le fragment ne correspond plus et le navigateur va en haut de la page. Cela convient pour des liens temporaires comme ceux des résultats de recherche, mais si vous souhaitez que le lien fonctionne dans le temps, les fragments de document sont plus fiables.
 
@@ -49,7 +49,7 @@ Les fragments de texte sont un type de fragment d'URL, et s'écrivent après le 
 - `-suffix` {{Optional_Inline}}
   - : Un tiret suivi d'une chaîne de caractères, définissant le texte qui doit suivre immédiatement le texte ciblé (en autorisant uniquement des espaces entre les deux). Cela aide le navigateur à sélectionner le bon texte ciblé en cas de correspondances multiples.
 
-Les navigateurs compatibles feront défiler la page et surligneront le premier fragment de texte du document lié qui correspond à la directive spécifiée. Il est possible de définir plusieurs fragments de texte à surligner dans la même URL en les séparant par des esperluettes (`&`).
+Les navigateurs compatibles font défiler la page et surlignent le premier fragment de texte du document lié qui correspond à la directive définie. Il est possible de définir plusieurs fragments de texte à surligner dans la même URL en les séparant par des esperluettes (`&`).
 
 ### Notes d'utilisation
 
@@ -58,7 +58,7 @@ Les navigateurs compatibles feront défiler la page et surligneront le premier f
 - Chaque chaîne de caractères `textStart`, `textEnd`, `prefix-` et `-suffix` doit se trouver entièrement dans le même [élément de niveau bloc](/fr/docs/Glossary/Block-level_content), mais les correspondances complètes peuvent s'étendre sur plusieurs éléments.
 - Pour des raisons de sécurité, lors de la création d'un lien vers une page d'un autre site avec cette fonctionnalité, il faut ouvrir le lien dans un contexte `noopener` — ajoutez `rel="noopener"` à vos éléments HTML {{HTMLElement("a")}}, et ajoutez `noopener` à vos appels {{DOMxRef("window.open()")}} lors de l'utilisation de cette fonctionnalité.
 - Les fragments de texte ne sont invoqués que lors de navigations initiées par l'utilisateur·ice.
-- Les fragments de texte ne s'appliquent qu'à la trame principale&nbsp;: le texte ne sera pas recherché dans les {{HTMLElement("iframe")}}, et la navigation dans un `iframe` n'invoquera pas de fragment de texte.
+- Les fragments de texte ne s'appliquent qu'à la trame principale&nbsp;: le texte n'est pas recherché dans les {{HTMLElement("iframe")}}, et la navigation dans un `iframe` n'invoque pas de fragment de texte.
 - Pour les sites qui souhaitent se désengager, les navigateurs basés sur Chromium prennent en charge une valeur d'en-tête [Document Policy <sup>(angl.)</sup>](https://wicg.github.io/document-policy/) que l'on peut envoyer pour que les agents utilisateur n'interprètent pas les fragments de texte&nbsp;:
 
   ```http
@@ -78,15 +78,15 @@ Les navigateurs compatibles feront défiler la page et surligneront le premier f
 
 ### `textStart` et `textEnd`
 
-- [https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/a#:~:text=human,URL](/fr/docs/Web/HTML/Reference/Elements/a#:~:text=human,url) scrolls to and highlights the first instance of a text string starting with `human` and ending with `URL`.
-- [https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/a#:~:text=linked%20URL,defining%20a%20value](/fr/docs/Web/HTML/Reference/Elements/a#:~:text=linked%20URL,defining%20a%20value) scrolls to and highlights the first instance of a text string starting with `linked URL` and ending with `defining a value`. Note how the highlighted text spans across multiple block-level elements.
+- [https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/a#:~:text=human,URL](/fr/docs/Web/HTML/Reference/Elements/a#:~:text=human,url) fait défiler la page jusqu'à la première occurrence d'une chaîne de caractères commençant par `human` et se terminant par `URL`, puis la surligne.
+- [https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/a#:~:text=linked%20URL,defining%20a%20value](/fr/docs/Web/HTML/Reference/Elements/a#:~:text=linked%20URL,defining%20a%20value) fait défiler la page jusqu'à la première occurrence d'une chaîne de caractères commençant par `linked URL` et se terminant par `defining a value`, puis la surligne. Notez que le texte surligné s'étend sur plusieurs éléments de niveau bloc.
 
 ### Exemples avec `prefix-` et/ou `-suffix`
 
 - [https://example.com/#:~:text=avoid-,use](https://example.com/#:~:text=avoid-,use) fait défiler et surligne la deuxième occurrence du texte `use` dans le document.
-- [https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/a#:~:text=sent-,referrer](/fr/docs/Web/HTML/Reference/Elements/a#:~:text=sent-,referrer) fait défiler et surligne la première occurrence du texte `referrer` précédée directement du texte `sent`. Il s'agit de la 5<sup>e</sup> occurrence de `referrer` dans le document&nbsp;; sans le préfixe, la première occurrence serait surlignée.
-- [https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/a#:~:text=linked%20URL,-'s%20format](/fr/docs/Web/HTML/Reference/Elements/a#:~:text=linked%20URL,-'s%20format) fait défiler et surligne la première occurrence du texte `linked URL` suivie directement du texte `'s format`. Il s'agit de la 5<sup>e</sup> occurrence de `linked URL` dans le document&nbsp;; sans le suffixe, la première occurrence serait surlignée.
-- [https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/a#:~:text=downgrade:-,The%20Referer,be%20sent,-to%20origins](/fr/docs/Web/HTML/Reference/Elements/a#:~:text=downgrade:-,The%20Referer,be%20sent,-to%20origins) fait défiler et surligne l'occurrence du texte `The Referer ... be sent` précédée de `downgrade:` et suivie de `to origins`. Cela illustre un exemple plus complexe où le préfixe/suffixe sont utilisés pour cibler précisément l'occurrence souhaitée. Essayez de retirer le préfixe, par exemple, pour voir ce qui est alors surligné.
+- [https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/a#:~:text=sent-,referrer](/fr/docs/Web/HTML/Reference/Elements/a#:~:text=sent-,referrer) fait défiler et surligne la première occurrence du texte `referrer` précédée directement du texte `sent`. Il s'agit de la 5<sup>e</sup> occurrence de `referrer` dans le document&nbsp;; sans le préfixe, la première occurrence est surlignée.
+- [https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/a#:~:text=linked%20URL,-'s%20format](/fr/docs/Web/HTML/Reference/Elements/a#:~:text=linked%20URL,-'s%20format) fait défiler et surligne la première occurrence du texte `linked URL` suivie directement du texte `'s format`. Il s'agit de la 5<sup>e</sup> occurrence de `linked URL` dans le document&nbsp;; sans le suffixe, la première occurrence est surlignée.
+- [https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/a#:~:text=downgrade%3A-,The%20Referer,be%20sent,-to%20origins](/fr/docs/Web/HTML/Reference/Elements/a#:~:text=downgrade%3A-,The%20Referer,be%20sent,-to%20origins) fait défiler et surligne l'occurrence du texte `The Referer ... be sent` précédée de `downgrade:` et suivie de `to origins`. Cela illustre un exemple plus complexe où le préfixe/suffixe sont utilisés pour cibler précisément l'occurrence souhaitée. Essayez de retirer le préfixe, par exemple, pour voir ce qui est alors surligné.
 
 ### URLs avec plusieurs fragments de texte
 
@@ -101,7 +101,7 @@ Si vous ne voyez pas un ou plusieurs de vos fragments de texte surlignés alors 
 
 ### Mise en forme des fragments de texte surlignés
 
-Les navigateurs sont libres de styliser le texte surligné comme ils le souhaitent par défaut. Le [module CSS Pseudo-Elements Level 4 <sup>(angl.)</sup>](https://drafts.csswg.org/css-pseudo/#selectordef-target-text) définit un pseudo-élément, {{CSSxRef("::target-text")}}, qui permet de personnaliser la mise en forme.
+Les navigateurs sont libres de mettre en forme le texte surligné comme ils le souhaitent par défaut. Le [module CSS Pseudo-Elements Level 4 <sup>(angl.)</sup>](https://drafts.csswg.org/css-pseudo/#selectordef-target-text) définit un pseudo-élément, {{CSSxRef("::target-text")}}, qui permet de personnaliser la mise en forme.
 
 Par exemple, dans notre [démo scroll-to-text <sup>(angl.)</sup>](https://mdn.github.io/css-examples/target-text/index.html#:~:text=From%20the%20foregoing%20remarks%20we%20may%20gather%20an%20idea%20of%20the%20importance), nous avons le CSS suivant&nbsp;:
 
@@ -116,7 +116,7 @@ Essayez de suivre le lien ci-dessus dans un navigateur compatible pour voir l'ef
 
 ### Détection de la fonctionnalité
 
-L'objet {{DOMxRef("FragmentDirective")}}, accessible via la propriété {{DOMxRef("Document.fragmentDirective")}}, permet de tester si les fragments de texte sont pris en charge dans un navigateur.
+L'objet {{DOMxRef("FragmentDirective")}}, accessible avec la propriété {{DOMxRef("Document.fragmentDirective")}}, permet de tester si les fragments de texte sont pris en charge dans un navigateur.
 
 Essayez d'exécuter ce qui suit dans les outils de développement d'un navigateur compatible, dans un onglet avec un ou plusieurs fragments de texte surlignés&nbsp;:
 
@@ -126,7 +126,7 @@ document.fragmentDirective;
 // undefined sinon
 ```
 
-Cette fonctionnalité sert principalement à la détection de prise en charge pour l'instant. À l'avenir, l'objet `FragmentDirective` pourrait inclure des informations supplémentaires.
+Cette fonctionnalité sert principalement à la détection de prise en charge pour l'instant. À l'avenir, l'objet `FragmentDirective` peut inclure des informations supplémentaires.
 
 ## Référence
 

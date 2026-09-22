@@ -2,19 +2,19 @@
 title: 307 Temporary Redirect
 slug: Web/HTTP/Reference/Status/307
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
-Le code de statut de [redirection response](/fr/docs/Web/HTTP/Reference/Status#messages_de_redirection) HTTP **`307 Temporary Redirect`** indique que la ressource demandée a été déplacée temporairement vers l'URL figurant dans l'en-tête {{HTTPHeader("Location")}}.
+Le code de statut de [réponse de redirection](/fr/docs/Web/HTTP/Reference/Status#messages_de_redirection) HTTP **`307 Temporary Redirect`** indique que la ressource demandée a été déplacée temporairement vers l'URL figurant dans l'en-tête {{HTTPHeader("Location")}}.
 
-Un navigateur recevant ce statut demandera automatiquement la ressource à l'URL indiquée dans l'en-tête `Location`, redirigeant l'utilisateur·ice vers la nouvelle page.
-Les moteurs de recherche recevant cette réponse n'attribueront pas les liens de l'URL d'origine à la nouvelle ressource, ce qui signifie qu'aucune valeur {{Glossary("SEO")}} n'est transférée vers la nouvelle URL.
+Un navigateur recevant ce statut demande automatiquement la ressource à l'URL indiquée dans l'en-tête `Location`, redirigeant l'utilisateur·ice vers la nouvelle page.
+Les moteurs de recherche recevant cette réponse n'attribuent pas les liens de l'URL d'origine à la nouvelle ressource, ce qui signifie qu'aucune valeur {{Glossary("SEO")}} n'est transférée vers la nouvelle URL.
 
 La méthode et le corps de la requête d'origine sont réutilisés pour effectuer la requête redirigée.
 Dans les cas où vous souhaitez que la méthode de la requête soit changée en {{HTTPMethod("GET")}}, utilisez plutôt {{HTTPStatus("303", "303 See Other")}}.
 Ceci est utile lorsque vous souhaitez renvoyer une réponse à une requête {{HTTPMethod("PUT")}} réussie qui n'est pas la ressource téléchargée, mais un moniteur d'état ou un message de confirmation comme «&nbsp;Téléversement de XYZ réussi&nbsp;».
 
-La différence entre `307` et {{HTTPStatus("302")}} est que `307` garantit que le client **ne changera pas** la méthode et le corps de la requête lorsque la requête redirigée est effectuée.
+La différence entre `307` et {{HTTPStatus("302")}} est que `307` garantit que le client **ne change pas** la méthode et le corps de la requête lorsque la requête redirigée est effectuée.
 Avec `302`, les anciens clients changeaient incorrectement la méthode en {{HTTPMethod("GET")}}.
 Les réponses `307` et `302` sont identiques lorsque la méthode de requête est {{HTTPMethod("GET")}}.
 

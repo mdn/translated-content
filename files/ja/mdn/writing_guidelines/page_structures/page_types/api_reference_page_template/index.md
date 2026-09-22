@@ -61,7 +61,7 @@ l10n:
 >
 > _公開前に、忘れずにこの説明文全体を削除してください。_
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 概要の段落 - まず、インターフェイスの名前、それがどのインターフェイスに属しているか、そしてそれが何をするものなのかを述べます。これはできれば 1、2 の短い文にすべきです。対応する API ランディングページのインターフェイスの概要から、この大部分をコピーすることができます。
 

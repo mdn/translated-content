@@ -3,7 +3,7 @@ title: Propriété CSS `clip-rule`
 short-title: clip-rule
 slug: Web/CSS/Reference/Properties/clip-rule
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`clip-rule`** détermine, lorsque des parties du chemin se superposent à d'autres, quels pixels dans la boîte du masque sont à l'intérieur de la forme de découpe définie par un [chemin de découpe](/fr/docs/Web/CSS/Reference/Properties/clip-path) et lesquels sont à l'extérieur.
@@ -26,6 +26,8 @@ clip-rule: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `nonzero`
   - : Pour chaque point dans la boîte du masque de découpe, un rayon est tracé dans une direction aléatoire. Chaque fois que le rayon croise une partie du chemin de découpe, un compteur est augmenté de un si la partie du chemin se déplace de la gauche vers la droite à travers le rayon, ou diminué de un si la partie du chemin se déplace de la droite vers la gauche à travers le rayon. Si le total final du compteur est zéro, le point est à l'extérieur de la forme du chemin. Sinon, il est à l'intérieur de la forme du chemin.

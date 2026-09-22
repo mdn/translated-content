@@ -105,7 +105,7 @@ USA<br />
       <th scope="row">Omission de balise</th>
       <td>
         Cet élément doit avoir une balise de début et ne doit pas avoir de
-        balise de fin. Pour les documents XHTML, on écrira cet élément
+        balise de fin. Pour les documents XHTML, on écrit cet élément
         <code>&#x3C;br/></code>.
       </td>
     </tr>

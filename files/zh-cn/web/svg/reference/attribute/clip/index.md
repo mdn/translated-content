@@ -3,8 +3,6 @@ title: clip
 slug: Web/SVG/Reference/Attribute/clip
 ---
 
-{{deprecated_header}}
-
 **`clip`** 属性是定义元素可见区域的属性。
 
 `clip` 属性的参数值与 {{ cssxref("clip","CSS clip property") }} 的参数值定义相同。指示当前用户坐标的无单位的值，可以用在 `<shape>` 的坐标值上。`auto` 值定义了一个剪切路径，其边界沿着由给定元素创建的视口的边界。

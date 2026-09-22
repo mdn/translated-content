@@ -3,8 +3,6 @@ title: vide
 slug: Web/JavaScript/Reference/Statements/Empty
 ---
 
-{{jsSidebar("Statements")}}
-
 Une **instruction vide** est utilisée pour ne fournir aucune instruction là où JavaScript en attendrait une.
 
 {{InteractiveExample("JavaScript Demo: Statement - Empty")}}

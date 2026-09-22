@@ -51,13 +51,13 @@ Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 Soit cet en-tête CSP&nbsp;:
 
 ```http
-Content-Security-Policy: frame-src https://exemple.com/
+Content-Security-Policy: frame-src https://example.com/
 ```
 
 L'élément HTML {{HTMLElement("iframe")}} suivant sera bloqué et ne se chargera pas&nbsp;:
 
 ```html
-<iframe src="https://hors-exemple.com/"></iframe>
+<iframe src="https://hors-example.com/"></iframe>
 ```
 
 ## Spécifications

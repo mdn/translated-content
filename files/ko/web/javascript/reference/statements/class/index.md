@@ -40,7 +40,7 @@ console.log(new Polygon(4, 3).area);
 
 ### 간단한 클래스 선언
 
-다음 예제는 우선 `Polygon` 클래스를 정의하고, `Square`라는 이름의 새로운 클래스가 `Polygon`을 상속합니다. 생성자 내부의 `super()`는 생성자 내에서만, 그리고 {{jsxref("Operators/this", "this")}} 키워드를 사용하기 전에만 쓸 수 있다는 점을 주의하세요.
+다음 예제는 우선 `Polygon` 클래스를 정의하고, `Square`라는 이름의 새로운 클래스가 `Polygon`을 상속합니다. 생성자 내부의 `super()`는 생성자 내에서만, 그리고 {{jsxref("this")}} 키워드를 사용하기 전에만 쓸 수 있다는 점을 주의하세요.
 
 ```js
 class Polygon {

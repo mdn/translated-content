@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{Deprecated_Header}}
-
 **`italics()`** は {{jsxref("String")}} 値のメソッドで、この文字列を {{HTMLElement("i")}} 要素に埋め込んだ文字列 (`<i>str</i>`) を生成し、この文字列がイタリック体で表示されるようにします。
 
 > [!NOTE]

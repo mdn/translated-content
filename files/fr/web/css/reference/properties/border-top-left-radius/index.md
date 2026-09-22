@@ -3,7 +3,7 @@ title: Propriété CSS `border-top-left-radius`
 short-title: border-top-left-radius
 slug: Web/CSS/Reference/Properties/border-top-left-radius
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: f78ca75460fbdbc7f17b6e366dad47b9760054b0
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-top-left-radius`** arrondit le coin supérieur gauche d'un élément en définissant le rayon (ou les rayons des axes semi-majeur et semi-mineur) de l'ellipse qui définit la courbure du coin.

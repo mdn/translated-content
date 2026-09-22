@@ -2,10 +2,8 @@
 title: 初めてのウェブサイト
 slug: Learn_web_development/Getting_started/Your_first_website
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started")}}
 
@@ -33,12 +31,12 @@ l10n:
 - [操作の追加](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
   - : JavaScript は、ウェブサイトに操作を追加するために使うプログラミング言語です。これはゲーム、ボタンが押された際のレスポンスの動作、フォームへのデータ入力、動的なスタイル設定、アニメーションなど、さまざまな場面で現れます。この記事は、JavaScriptを使い始めたり、何ができるのかを理解したりするのに役立ちます。
 
-- [サンプルコードの公開](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
+- [ウェブサイトの公開](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
   - : コードを書き終え、ウェブサイトを構成するファイルを整理したら、人々が探せるようにすべてをオンラインで公開する必要があります。この記事では、最小限の手間でサンプルウェブサイトをどのようにオンラインで公開するかを説明します。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started")}}
 
 ## 関連情報
 
-- [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN カリキュラムパートナー_</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) のフロントエンド開発者キャリアパスは、楽しい対話型のレッスンや課題、知識豊富な講師、対応しているコミュニティを通じて、有能なフロントエンドウェブ開発者になるために必要なすべてを教えてくれます。ゼロから最初のフロントエンドの仕事に就くまで。このコースの多くの部分は、無料版として単独で利用できます。
+- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN カリキュラムパートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup>
+  - : [Scrimba's](https://scrimba.com/?via=mdn) のフロントエンド開発者キャリアパスは、楽しい対話型のレッスンや課題、知識豊富な講師、対応しているコミュニティを通じて、有能なフロントエンドウェブ開発者になるために必要なすべてを教えてくれます。ゼロから最初のフロントエンドの仕事に就くまで。このコースの多くの部分は、無料版として単独で利用できます。

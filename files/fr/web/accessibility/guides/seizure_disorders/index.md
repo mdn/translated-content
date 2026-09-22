@@ -3,7 +3,7 @@ title: "Accessibilité Web : crises et réactions physiques"
 short-title: Prévenir crises et réactions physiques
 slug: Web/Accessibility/Guides/Seizure_disorders
 l10n:
-  sourceCommit: b56ef42f1aac2481bfe42bfcf6c235ceb22624c4
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 Cet article présente les concepts permettant de rendre le contenu Web accessible aux personnes souffrant de troubles vestibulaires, ainsi que les méthodes pour mesurer et prévenir les contenus susceptibles d'entraîner des crises ou d'autres réactions physiques.
@@ -18,7 +18,7 @@ Le fait que des images statiques puissent provoquer des crises et d'autres troub
 
 Bien que des images statiques puissent servir de déclencheurs, elles sont moins constantes. Le déclencheur bien établi et fort reste la lumière clignotante ou stroboscopique. Le Dr Selim Benbadis du Comprehensive Epilepsy Program de l'USF précise&nbsp;: «&nbsp;La seule chose vraiment documentée, ce sont les lumières clignotantes, qui peuvent déclencher des crises chez les patient·e·s souffrant d'épilepsie photosensible. Seuls quelques types d'épilepsie sont photosensibles, la grande majorité ne l'est pas.&nbsp;» En plus des crises provoquées par la photosensibilité, l'écoute de certains morceaux de musique peut aussi déclencher ce qu'on appelle des crises musicogènes, bien que ces crises semblent beaucoup plus rares. Pour une bonne introduction au sujet des crises musicogènes, consultez la page d'Epilepsy Ontario sur [les crises musicogènes <sup>(angl.)</sup>](https://epilepsyontario.org/musicogenic-seizures/).
 
-Les crises et l'épilepsie ne sont pas la même chose. Dans son article [«&nbsp;Une nouvelle définition de l'epilepsie&nbsp;» <sup>(angl.)</sup>](https://www.epilepsy.com/stories/revised-definition-epilepsy), la Fondation de l'Épilepsie précise&nbsp;: «&nbsp;Une crise est un événement, l'épilepsie est la maladie impliquant des crises récurrentes et non provoquées.&nbsp;» Selon la page de la Fondation de l'Épilepsie [«&nbsp;À quel point les crises sont-elles graves&nbsp;?&nbsp;» <sup>(angl.)</sup>](https://www.epilepsy.com/what-is-epilepsy/understanding-seizures/how-serious-are-seizures), «&nbsp;La mort subite inattendue en épilepsie (SUDEP) est probablement la cause la plus fréquente de décès lié à la maladie chez les personnes épileptiques. Ce n'est pas fréquent mais c'est un problème réel et il faut en connaître le risque.&nbsp;»
+Les crises et l'épilepsie ne sont pas la même chose. Dans son article [«&nbsp;Une nouvelle définition de l'epilepsie&nbsp;» <sup>(angl.)</sup>](https://www.epilepsy.com/stories/revised-definition-epilepsy), la Fondation de l'Épilepsie précise&nbsp;: «&nbsp;Une crise est un évènement, l'épilepsie est la maladie impliquant des crises récurrentes et non provoquées.&nbsp;» Selon la page de la Fondation de l'Épilepsie [«&nbsp;À quel point les crises sont-elles graves&nbsp;?&nbsp;» <sup>(angl.)</sup>](https://www.epilepsy.com/what-is-epilepsy/understanding-seizures/how-serious-are-seizures), «&nbsp;La mort subite inattendue en épilepsie (SUDEP) est probablement la cause la plus fréquente de décès lié à la maladie chez les personnes épileptiques. Ce n'est pas fréquent mais c'est un problème réel et il faut en connaître le risque.&nbsp;»
 
 En résumé, les crises peuvent bel et bien être fatales, et le rôle des développeur·euse·s et des concepteur·ice·s est crucial pour rendre le Web plus sûr pour les personnes sensibles aux déclencheurs photosensibles ou musicogènes.
 
@@ -34,7 +34,7 @@ Le même article précise que de nombreux facteurs doivent se combiner pour déc
 
 Il n'est même pas nécessaire d'avoir une image ou une vidéo pour provoquer des dommages. Un élément {{HTMLElement('div')}} configuré pour changer de couleur et de luminosité à haute fréquence, facilement réalisable avec JavaScript, peut causer de réels dommages. De plus, le scintillement peut survenir partout. Par exemple, les «&nbsp;spinners&nbsp;» couramment utilisés pour indiquer le chargement des pages peuvent facilement «&nbsp;scintiller&nbsp;» en tournant.
 
-Des préoccupations supplémentaires existent pour les personnes ayant des troubles de la motricité. Par exemple, la page du Trace Research & Development Center sur l'[outil d'analyse de l'épilepsie photosensible <sup>(angl.)</sup>](https://trace.umd.edu/peat/) indique que «&nbsp;Des crises photosensibles peuvent être provoquées par certains types de clignotements dans le contenu web ou informatique, y compris les survols de souris qui font rapidement clignoter de grandes zones de l'écran.&nbsp;»
+Des préoccupations supplémentaires existent pour les personnes ayant des troubles de la motricité. Par exemple, la page du Trace Research & Development Center sur [l'outil d'analyse de l'épilepsie photosensible <sup>(angl.)</sup>](https://trace.umd.edu/peat/) indique que «&nbsp;Des crises photosensibles peuvent être provoquées par certains types de clignotements dans le contenu web ou informatique, y compris les survols de souris qui font rapidement clignoter de grandes zones de l'écran.&nbsp;»
 
 ### Autres réactions physiques
 
@@ -79,9 +79,9 @@ L'importance du champ de vision est soulignée dans l'article sur la norme WCAG 
 
 Ce ratio de surface en pixels permet de calculer la taille relative, mais la distance compte aussi.
 
-La distance est importante car elle affecte le champ de vision total. Lorsque les utilisateur·ice·s portent des masques oculaires pour jouer, le champ de vision est probablement entièrement enveloppé par l'écran. [WebXR](/fr/docs/Web/API/WebXR_Device_API) est une spécification ouverte qui permet de vivre la réalité virtuelle dans le navigateur, sur téléphone, ordinateur ou casque. Le problème des images clignotantes dans un masque oculaire est croissant, car le masque est très proche des yeux.
+La distance est importante, car elle affecte le champ de vision total. Lorsque les utilisateur·ice·s portent des masques oculaires pour jouer, le champ de vision est probablement entièrement enveloppé par l'écran. [WebXR](/fr/docs/Web/API/WebXR_Device_API) est une spécification ouverte qui permet de vivre la réalité virtuelle dans le navigateur, sur téléphone, ordinateur ou casque. Le problème des images clignotantes dans un masque oculaire est croissant, car le masque est très proche des yeux.
 
-Les recherches indiquent généralement que l'utilisation de la VR serait en fait plus sûre que la consommation d'écran classique, grâce à des taux de rafraîchissement plus élevés. Comme le résume [Fisher et al. 2022 <sup>(angl.)</sup>](https://onlinelibrary.wiley.com/doi/full/10.1111/epi.17175)&nbsp;: «&nbsp;Les données limitées disponibles à ce jour ne soulèvent pas de préoccupations particulières concernant les crises liées à la technologie VR, bien que ce point de vue puisse évoluer avec l'expérience. Certains types de contenus VR, notamment les flashs lumineux, les motifs provocateurs ou les changements de couleur, devraient provoquer des crises, tout comme dans le monde réel.&nbsp;»
+Les recherches indiquent généralement que l'utilisation de la VR est en fait plus sûre que la consommation d'écran classique, grâce à des taux de rafraîchissement plus élevés. Comme le résume [Fisher et al. 2022 <sup>(angl.)</sup>](https://onlinelibrary.wiley.com/doi/full/10.1111/epi.17175)&nbsp;: «&nbsp;Les données limitées disponibles à ce jour ne soulèvent pas de préoccupations particulières concernant les crises liées à la technologie VR, bien que ce point de vue puisse évoluer avec l'expérience. Certains types de contenus VR, notamment les flashs lumineux, les motifs provocateurs ou les changements de couleur, doivent provoquer des crises, tout comme dans le monde réel.&nbsp;»
 
 (À noter que certain·e·s utilisateur·ice·s ne peuvent pas voir avec des curseurs clignotants et peuvent avoir des migraines, des nausées ou de la désorientation, même si le curseur clignotant occupe une très petite zone de l'écran.)
 
@@ -108,7 +108,7 @@ Il a été démontré que [certaines couleurs sont plus susceptibles de provoque
 - **Test de désaturation du rouge&nbsp;:** L'œil humain est si sensible au rouge que les ophtalmologistes utilisent ce test pour évaluer l'intégrité du nerf optique. Pour plus d'informations sur l'utilisation de ce test, voir [Red Desaturation](https://www.smartoptometry.app/red-desaturation/).
 - **Environnement rouge&nbsp;:** Des études ont montré que chez les personnes souffrant de traumatisme crânien, [la fonction cognitive est réduite dans un environnement rouge <sup>(angl.)</sup>](https://pubmed.ncbi.nlm.nih.gov/20649469/).
 
-[Rouge saturé](/fr/docs/Web/Accessibility/Guides/Colors_and_Luminance) est un cas particulier et dangereux, et il existe des tests spécifiques pour cela. En plus de l'effet d'un environnement rouge sur la fonction cognitive des personnes ayant subi un traumatisme crânien, la couleur dans la longueur d'onde du rouge semble nécessiter une attention et des tests particuliers. Le Dr Gregg Vanderheiden, lors des tests avec l'outil Photosensitive Epilepsy Analysis Tool, a constaté que les taux de crises étaient bien plus élevés que prévu. Il a été observé que nous sommes beaucoup plus sensibles au clignotement du rouge saturé. (Voir la vidéo, [The Photosensitive Epilepsy Analysis Tool <sup>(angl.)</sup>](https://www.pbs.org/video/university-place-the-photosensitive-epilepsy-analysis-tool-ep-429/).)
+[Rouge saturé](/fr/docs/Web/Accessibility/Guides/Colors_and_Luminance) est un cas particulier et dangereux, et il existe des tests spécifiques pour cela. En plus de l'effet d'un environnement rouge sur la fonction cognitive des personnes ayant subi un traumatisme crânien, la couleur dans la longueur d'onde du rouge semble nécessiter une attention et des tests particuliers. Le Dr Gregg Vanderheiden, lors des tests avec l'outil Photosensitive Epilepsy Analysis Tool, a constaté que les taux de crises est bien plus élevés que prévu. Il a été observé que nous sommes beaucoup plus sensibles au clignotement du rouge saturé. (Voir la vidéo, [The Photosensitive Epilepsy Analysis Tool <sup>(angl.)</sup>](https://www.pbs.org/video/university-place-the-photosensitive-epilepsy-analysis-tool-ep-429/).)
 
 #### Websafe ne veut pas dire sans risque de crise
 
@@ -126,7 +126,7 @@ Le «&nbsp;cd/m<sup>2</sup>&nbsp;» fait référence à la candela par mètre ca
 
 La candela est une unité SI (Système international d'unités) d'intensité lumineuse. C'est un terme photométrique, et la photométrie concerne la mesure de la lumière visible perçue par l'œil humain. L'article Wikipédia sur [«&nbsp;Candela par mètre carré&nbsp;»](https://fr.wikipedia.org/wiki/Candela_par_m%C3%A8tre_carr%C3%A9) l'explique en termes familiers pour les développeur·euse·s&nbsp;: sur un écran, et dans l'espace RGB. C'est utile, car il existe une norme spécifique supposée utilisée sur les moniteurs, les imprimantes et Internet, qui est le **sRGB** (standard Red Green Blue).
 
-> En tant que mesure de la lumière émise par unité de surface, cette unité est fréquemment utilisée pour spécifier la luminosité d'un écran. La spécification [sRGB](https://fr.wikipedia.org/wiki/SRGB) pour les moniteurs vise 80 cd/m<sup>2</sup>. Les moniteurs calibrés devraient généralement avoir une luminosité de 120 cd/m<sup>2</sup>. La plupart des écrans LCD grand public ont une luminance de 200 à 300 cd/m<sup>2</sup>. Les téléviseurs haute définition vont de 450 à environ 1500 cd/m<sup>2</sup>.
+> En tant que mesure de la lumière émise par unité de surface, cette unité est fréquemment utilisée pour définir la luminosité d'un écran. La spécification [sRGB](https://fr.wikipedia.org/wiki/SRGB) pour les moniteurs vise 80 cd/m<sup>2</sup>. Les moniteurs calibrés doivent généralement avoir une luminosité de 120 cd/m<sup>2</sup>. La plupart des écrans LCD grand public ont une luminance de 200 à 300 cd/m<sup>2</sup>. Les téléviseurs haute définition vont de 450 à environ 1500 cd/m<sup>2</sup>.
 
 À retenir&nbsp;: l'espace colorimétrique **sRGB** est un point commun entre la recherche, les outils d'évaluation et les développeur·euse·s, car il est facilement convertible depuis le code hexadécimal couramment utilisé.
 
@@ -134,13 +134,13 @@ La candela est une unité SI (Système international d'unités) d'intensité lum
 
 De nombreux·ses expert·e·s travaillent à quantifier et mesurer au mieux les types de contenus web pouvant servir de déclencheurs de crises. Cela dit, il ne faut pas oublier que la couleur relève autant de la perception humaine dans le cerveau que de la mesure de la lumière émise par un écran.
 
-En plus des variations psychologiques, il existe aussi des différences physiologiques entre nous. Il y aura des variations et des nuances dans la façon dont un·e humain·e perçoit et réagit à la couleur et à la lumière. Par exemple, Tom Jewett, maître de conférences émérite en informatique à la Cal State University Long Beach, note à propos de [la clarté dans l'échelle de couleur HSL <sup>(angl.)</sup>](https://colortutorial.design/hsb.html)&nbsp;: «&nbsp;…La distinction entre les niveaux de clarté n'est pas réellement linéaire comme l'échelle HSL le suggère&nbsp;; nous sommes beaucoup plus sensibles aux changements dans les valeurs claires qu'aux valeurs foncées.&nbsp;»
+En plus des variations psychologiques, il existe aussi des différences physiologiques entre nous. Il y a des variations et des nuances dans la façon dont un·e humain·e perçoit et réagit à la couleur et à la lumière. Par exemple, Tom Jewett, maître de conférences émérite en informatique à la Cal State University Long Beach, note à propos de [la clarté dans l'échelle de couleur HSL <sup>(angl.)</sup>](https://colortutorial.design/hsb.html)&nbsp;: «&nbsp;…La distinction entre les niveaux de clarté n'est pas réellement linéaire comme l'échelle HSL le suggère&nbsp;; nous sommes beaucoup plus sensibles aux changements dans les valeurs claires qu'aux valeurs foncées.&nbsp;»
 
 Il est important de comprendre que la lumière et ses mesures sont linéaires, mais la vision humaine et la perception humaine ne le sont pas. Les recherches et discussions se poursuivent sur la façon de relier la mesure machine de la lumière qui passe d'un écran d'ordinateur, à travers la distance jusqu'à l'œil humain, filtrée par la vision humaine, puis traitée par le cerveau humain.
 
 Même l'âge et le sexe peuvent jouer un rôle. Selon l'article de la Fondation de l'Épilepsie, [«&nbsp;Mieux comprendre la photosensibilité, l'une des conditions les plus complexes de l'épilepsie&nbsp;» <sup>(angl.)</sup>](https://www.epilepsy.com/stories/shedding-light-photosensitivity-one-epilepsys-most-complex-conditions), «&nbsp;Les enfants et les adolescent·e·s sont plus susceptibles que les adultes d'avoir une réponse anormale à la stimulation lumineuse, et la première crise induite par la lumière survient presque toujours avant 20 ans.&nbsp;» L'article poursuit avec cette statistique&nbsp;: «&nbsp;Les filles (60&nbsp;%) sont plus souvent touchées que les garçons (40&nbsp;%), bien que les crises soient plus fréquentes chez les garçons car ils sont plus susceptibles de jouer aux jeux vidéo. Les jeux vidéo contiennent souvent des stimulations lumineuses potentiellement provocatrices.&nbsp;»
 
-**Les tests utilisateur·ice·s sont très problématiques**. Naturellement, personne ne souhaite soumettre une personne sujette aux crises à des tests utilisateur·ice·s. C'est dangereux. À ce titre, l'une des choses les plus éthiques que les développeur·euse·s et concepteur·ice·s puissent faire est d'utiliser des outils développés par des expert·e·s du domaine ayant travaillé en collaboration avec des médecins. À ce jour, deux outils sont couramment disponibles et ont été développés de façon éthique et professionnelle par des chercheur·euse·s et des médecins pour les films/vidéos&nbsp;: **PEAT** et le **Harding Test**.
+**Les tests utilisateur·ice·s sont très problématiques**. Naturellement, personne ne souhaite envoyer une personne sujette aux crises à des tests utilisateur·ice·s. C'est dangereux. À ce titre, l'une des choses les plus éthiques que les développeur·euse·s et concepteur·ice·s puissent faire est d'utiliser des outils développés par des expert·e·s du domaine ayant travaillé en collaboration avec des médecins. À ce jour, deux outils sont couramment disponibles et ont été développés de façon éthique et professionnelle par des chercheur·euse·s et des médecins pour les films/vidéos&nbsp;: **PEAT** et le **Harding Test**.
 
 ### Outil d'analyse de l'épilepsie photosensible (PEAT)
 
@@ -168,7 +168,7 @@ Toutes les animations sont potentiellement dangereuses. En tant que concepteur·
 
 #### Comprendre la malveillance
 
-En tant que développeur·euse ou concepteur·ice, demandez-vous si un contenu clignotant est vraiment nécessaire sur votre page web. Même bien géré, il existe des personnes qui peuvent télécharger un contenu problématique depuis votre site et l'utiliser à des fins malveillantes. On pense que la première tentative documentée d'utiliser des ordinateurs pour provoquer des dommages physiques via l'animation a eu lieu le samedi 22 mars 2008&nbsp;: le site de l'Epilepsy Foundation a été piraté via des publications contenant des images clignotantes et des liens prétendument utiles. Des utilisateur·ice·s souffrant de troubles vestibulaires venus chercher de l'aide sur le site ont été affecté·e·s.
+En tant que développeur·euse ou concepteur·ice, demandez-vous si un contenu clignotant est vraiment nécessaire sur votre page web. Même bien géré, il existe des personnes qui peuvent télécharger un contenu problématique depuis votre site et l'utiliser à des fins malveillantes. On pense que la première tentative documentée d'utiliser des ordinateurs pour provoquer des dommages physiques avec l'animation a eu lieu le samedi 22 mars 2008&nbsp;: le site de l'Epilepsy Foundation a été piraté avec des publications contenant des images clignotantes et des liens prétendument utiles. Des utilisateur·ice·s souffrant de troubles vestibulaires venus chercher de l'aide sur le site ont été affecté·e·s.
 
 Des procédures juridiques sont en cours après que le journaliste Kurt Eichenwald, épileptique connu, a subi une crise après avoir reçu un gif animé en décembre 2016&nbsp;: le gif clignotant portait le message&nbsp;: _«&nbsp;Tu mérites une crise pour tes publications&nbsp;»_.
 
@@ -179,7 +179,7 @@ Contrôler l'exposition à la page est essentiel pour éviter qu'une personne su
 Si vous pensez qu'une image ou une animation peut provoquer des crises, contrôlez l'accès en affichant d'abord un avertissement sur le contenu, puis en le plaçant à un endroit où l'utilisateur·ice doit y accéder volontairement, par exemple en cliquant sur un bouton, ou en veillant à ce que le lien vers la page comporte un avertissement distinct et évident.
 
 Envisagez de définir des directives d'exploration pour les moteurs de recherche afin d'indiquer qu'ils ne doivent pas inclure de ressources potentiellement dangereuses dans leurs index. Vous pouvez le faire en utilisant des métadonnées dans un élément [`<meta name="robots">`](/fr/docs/Web/HTML/Reference/Elements/meta/name/robots) avec des règles restrictives comme `noindex, nofollow`.
-En n'indexant pas la page (`noindex`) et en ne suivant pas les liens de la page (`nofollow`), vous réduisez la probabilité que des utilisateur·ice·s la trouvent via une recherche&nbsp;:
+En n'indexant pas la page (`noindex`) et en ne suivant pas les liens de la page (`nofollow`), vous réduisez la probabilité que des utilisateur·ice·s la trouvent par une recherche&nbsp;:
 
 ```html
 <html lang="fr">
@@ -282,7 +282,7 @@ En appliquant le même exemple à l'audio&nbsp;:
 
 ##### Audio dans la vidéo
 
-Notez que l'audio dans les vidéos peut être contrôlé par l'attribut `muted`, même si le contenu se trouve dans l'élément {{HTMLElement('video')}} plutôt que dans {{HTMLElement('audio')}}. Cet exemple provient de la section sur l'attribut [muted <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/media.html#concept-media-muted) de la norme HTML Living Standard. Il explique que la vidéo se lance automatiquement en sourdine jusqu'à ce que l'utilisateur·ice décide d'activer le son.
+Notez que l'audio dans les vidéos peut être contrôlé par l'attribut `muted`, même si le contenu se trouve dans l'élément {{HTMLElement('video')}} plutôt que dans {{HTMLElement('audio')}}. Cet exemple provient de la section sur l'attribut [`muted` <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/media.html#concept-media-muted) de la norme HTML Living Standard. Il explique que la vidéo se lance automatiquement en sourdine jusqu'à ce que l'utilisateur·ice décide d'activer le son.
 
 ```html
 <video src="adverts.cgi?kind=video" controls autoplay loop muted></video>
@@ -290,7 +290,7 @@ Notez que l'audio dans les vidéos peut être contrôlé par l'attribut `muted`,
 
 ### Contrôler la vitesse
 
-Cela semble évident, mais comme il existe de nombreux types MIME, les mécanismes de gestion varient considérablement, et il n'existe donc pas de solution universelle. Cela est d'autant plus compliqué que la classification des fichiers influence leur gestion. Par exemple, le format .gif est généralement considéré comme une image, mais il est aussi vu comme un format vidéo dans certains milieux en raison de sa capacité à être animé. Pour une liste complète des types de médias, consultez la [page des types de médias sur IANA.org <sup>(angl.)</sup>](https://www.iana.org/assignments/media-types/media-types.xhtml).
+Cela semble évident, mais comme il existe de nombreux types MIME, les mécanismes de gestion varient considérablement, et il n'existe donc pas de solution universelle. Cela est d'autant plus compliqué que la classification des fichiers influence leur gestion. Par exemple, le format `.gif` est généralement considéré comme une image, mais il est aussi vu comme un format vidéo dans certains milieux en raison de sa capacité à être animé. Pour une liste complète des types de médias, consultez la [page des types de médias sur IANA.org <sup>(angl.)</sup>](https://www.iana.org/assignments/media-types/media-types.xhtml).
 
 Les méthodes pour les détecter ne sont pas triviales. Vous pouvez consulter la norme [MIME Sniffing <sup>(angl.)</sup>](https://mimesniff.spec.whatwg.org/) sur whatwg.org. Presque tous les types d'images peuvent être animés&nbsp;; la façon dont elles le sont varie, et donc le contrôle de l'animation aussi.
 
@@ -298,8 +298,8 @@ Les méthodes pour les détecter ne sont pas triviales. Vous pouvez consulter la
 
 - **Bitmap**&nbsp;: Animation
 - **Canvas**&nbsp;: Le tutoriel MDN sur Canvas propose une excellente section sur [les animations de base](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations). `setInterval()` est couramment utilisé pour l'animation Canvas, mais il est aussi intéressant de voir comment il interagit avec le rafraîchissement de l'écran. Voir l'article [«&nbsp;Contrôler les fps avec `requestAnimationFrame`&nbsp;?&nbsp;» <sup>(angl.)</sup>](https://stackoverflow.com/questions/19764018/controlling-fps-with-requestanimationframe) qui discute des détails de l'implémentation de `requestAnimationFrame` en lien avec le rafraîchissement de l'écran.
-- **GIFs (Raster)**&nbsp;: Difficiles à contrôler car la gestion de l'animation se fait dans le fichier gif lui-même. Pour contrôler la vitesse des GIFs, voir [«&nbsp;G152&nbsp;: Arrêter le clignotement des images gif animées après n cycles (dans les 5 secondes)&nbsp;» <sup>(angl.)</sup>](https://www.w3.org/TR/WCAG20-TECHS/G152.html) du W3C. Un excellent article Stack Overflow sur le sujet&nbsp;: [«&nbsp;Peut-on contrôler l'animation GIF avec JavaScript&nbsp;?&nbsp;» <sup>(angl.)</sup>](https://stackoverflow.com/questions/2385203/can-you-control-gif-animation-with-javascript)
-- **GIFV (Raster)**&nbsp;: Considéré comme une variante vidéo du GIF. Le format n'est pas standardisé et doit référencer un vrai fichier vidéo (par exemple, un fichier .webm) qui doit exister ailleurs.
+- **GIFs (Raster)**&nbsp;: Difficiles à contrôler, car la gestion de l'animation se fait dans le fichier gif lui-même. Pour contrôler la vitesse des GIFs, voir [«&nbsp;G152&nbsp;: Arrêter le clignotement des images gif animées après n cycles (dans les 5 secondes)&nbsp;» <sup>(angl.)</sup>](https://www.w3.org/TR/WCAG20-TECHS/G152.html) du W3C. Un excellent article Stack Overflow sur le sujet&nbsp;: [«&nbsp;Peut-on contrôler l'animation GIF avec JavaScript&nbsp;?&nbsp;» <sup>(angl.)</sup>](https://stackoverflow.com/questions/2385203/can-you-control-gif-animation-with-javascript)
+- **GIFV (Raster)**&nbsp;: Considéré comme une variante vidéo du GIF. Le format n'est pas standardisé et doit référencer un vrai fichier vidéo (par exemple, un fichier `.webm`) qui doit exister ailleurs.
 - **JPG (Raster)**
 - **MNG (Raster)**&nbsp;: Multiple-image Network Graphics est un format de fichier graphique pour les images animées. Aussi considéré par certains comme un format vidéo.
 - **PNG, APNG (Raster)**&nbsp;: Portable Network Graphics et Animated Portable Network Graphics peuvent être animés.
@@ -315,7 +315,7 @@ Les traductions et transformations peuvent animer le texte dans une div, et caus
 Dans la feuille de style ou dans l'élément HTML {{HTMLElement('style')}}, de nombreuses options peuvent se combiner pour créer une expérience puissante pour l'utilisateur·ice. La propriété `animation` mentionnée plus haut est en fait un raccourci pour toutes les propriétés d'animation, dont&nbsp;:
 
 - `animation-play-state`
-- `animation-duration` a une valeur de `<time>`&nbsp;; c'est la durée d'un cycle d'animation. Elle peut être spécifiée en secondes `(s)` ou millisecondes `(ms)`. Une valeur par défaut de `0s` indique qu'aucune animation ne doit se produire.
+- `animation-duration` a une valeur de `<time>`&nbsp;; c'est la durée d'un cycle d'animation. Elle peut être définie en secondes `(s)` ou millisecondes `(ms)`. Une valeur par défaut de `0s` indique qu'aucune animation ne doit se produire.
 - `animation-timing-function`
 
 La propriété animation est déjà puissante seule, mais combinée à d'autres propriétés et requêtes comme `prefers-reduced-motion`, elle permet de mettre en place un ensemble d'options très utiles pour l'utilisateur·ice. Définir les propriétés `animation-duration` et `transition-duration` sur une durée courte plutôt que sur `animation: none` et `transition: none` permet d'éviter les problèmes si une dépendance nécessite que l'animation s'exécute.
@@ -334,7 +334,7 @@ document.getAnimations().forEach((animation) => {
 
 #### Sources d'images pour l'animation
 
-L'une des méthodes les plus simples consiste à partir d'une image existante, à l'utiliser comme source, puis à l'animer. Vous pouvez utiliser des GIFs, JPGs, PNGs, SVGs et autres types de fichiers comme source d'image, tant qu'ils sont autorisés dans votre environnement. Les SVGs sont souvent interdits pour des raisons de sécurité. Le document MDN [Animations de base](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations) propose d'excellents exemples, utilisant plusieurs sources d'images pour le soleil, la terre et la lune, et plusieurs méthodes canvas pour contrôler la vitesse et l'animation de la terre autour du soleil, et de la lune autour de la terre. Utilisez le codepen associé à ce tutoriel pour ajuster `ctx.rotate` et voir l'effet sur l'animation.
+L'une des méthodes les plus simples consiste à partir d'une image existante, à l'utiliser comme source, puis à l'animer. Vous pouvez utiliser des GIFs, JPGs, PNGs, SVGs et autres types de fichiers comme source d'image, tant qu'ils sont autorisés dans votre environnement. Les SVGs sont souvent interdits pour des raisons de sécurité. Le document MDN [Animations de base](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations) propose d'excellents exemples, utilisant plusieurs sources d'images pour le soleil, la terre et la lune, et plusieurs méthodes canvas pour contrôler la vitesse et l'animation de la terre autour du soleil, et de la lune autour de la terre. Utilisez le CodePen associé à ce tutoriel pour ajuster `ctx.rotate` et voir l'effet sur l'animation.
 
 #### Si vous devez absolument utiliser une animation clignotante…
 
@@ -387,7 +387,7 @@ function setBackground() {
   // récupérez le deuxième paragraphe de la liste
   const secondParagraph = paragraphs[1];
 
-  // définissez le style en ligne
+  // définissez le style en incise
   secondParagraph.style.background = "red";
 }
 
@@ -400,13 +400,13 @@ Comme mentionné plus haut, l'Epilepsy Foundation of America a organisé un atel
 
 ### Proposer des styles CSS alternatifs
 
-Sachant que beaucoup d'animations et de clignotements peuvent être contrôlés via CSS, il est important d'explorer des moyens de proposer des options alternatives aux utilisateur·ice·s, et de rendre le contrôle de ces options pratique et visible.
+Sachant que beaucoup d'animations et de clignotements peuvent être contrôlés par CSS, il est important d'explorer des moyens de proposer des options alternatives aux utilisateur·ice·s, et de rendre le contrôle de ces options pratique et visible.
 
 #### Feuilles de style alternatives
 
-Les navigateurs modernes affichent les CSS alternatifs disponibles dans les feuilles de style alternatives si les utilisateur·ice·s savent où les chercher. Parfois, les styles alternatifs sont révélés via le menu Affichage, parfois dans les paramètres, parfois les deux. Tous·tes les utilisateur·ice·s ne savent pas chercher ces options via le navigateur ou les paramètres, il est donc utile de proposer des boutons ou liens évidents pour changer le style. Cela ne gêne pas la capacité du navigateur à lire les feuilles de style alternatives, ni la possibilité pour l'utilisateur·ice de définir ses préférences dans les paramètres.
+Les navigateurs modernes affichent les CSS alternatifs disponibles dans les feuilles de style alternatives si les utilisateur·ice·s savent où les chercher. Parfois, les styles alternatifs sont révélés par le menu Affichage, parfois dans les paramètres, parfois les deux. Tous·tes les utilisateur·ice·s ne savent pas chercher ces options par le navigateur ou les paramètres, il est donc utile de proposer des boutons ou liens évidents pour changer le style. Cela ne gêne pas la capacité du navigateur à lire les feuilles de style alternatives, ni la possibilité pour l'utilisateur·ice de définir ses préférences dans les paramètres.
 
-Il est important de savoir que certain·e·s utilisateur·ice·s, comme celles et ceux qui dépendent de systèmes de reconnaissance vocale, comptent souvent sur les boutons et liens classiques car leur handicap les empêche d'utiliser une souris ou de profiter des événements tactiles sur tablette.
+Il est important de savoir que certain·e·s utilisateur·ice·s, comme celles et ceux qui dépendent de systèmes de reconnaissance vocale, comptent souvent sur les boutons et liens classiques, car leur handicap les empêche d'utiliser une souris ou de profiter des évènements tactiles sur tablette.
 
 Les moyens courants d'inclure des feuilles de style alternatives dans vos documents HTML sont d'utiliser l'élément {{HTMLElement('link')}} et {{CSSxRef('@import')}}.
 
@@ -436,11 +436,11 @@ Utilisez l'élément {{HTMLElement('link')}} avec les attributs `rel="alternate 
 @import "alternate2.css";
 ```
 
-En utilisant des feuilles de style alternatives (n'oubliez pas d'ajouter les titres), vous permettez aux utilisateur·ice·s de choisir leur style via le navigateur.
+En utilisant des feuilles de style alternatives (n'oubliez pas d'ajouter les titres), vous permettez aux utilisateur·ice·s de choisir leur style par le navigateur.
 
 ### Changement de style dynamique
 
-Un problème avec le fait de compter sur le navigateur pour révéler les styles alternatifs est que tous·tes les utilisateur·ice·s ne sont pas assez technophiles pour les découvrir. Ou, à cause de leur handicap, ne peuvent pas le faire. Les boutons ou liens rendent les options visibles pour de nombreux utilisateur·ice·s reconnaissant·e·s. Il existe de nombreuses façons d'ajouter des boutons de bascule pour permettre à l'utilisateur·ice de changer de feuille de style. Cela dit, l'utilisation de feuilles de style alternatives n'est pas la seule option. Une autre consiste à manipuler le style de la page elle-même. Selon le document MDN [Utiliser des informations de style dynamiques](/fr/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information), _«&nbsp;dans la mesure du possible, il est préférable de manipuler dynamiquement les classes via la propriété [`className`](/fr/docs/Web/API/Element/className), car l'apparence finale de tous les points d'accroche de style peut être contrôlée dans une seule feuille de style&nbsp;»_. Un des meilleurs exemples est la page du W3C [«&nbsp;C29&nbsp;: Utiliser un sélecteur de style pour proposer une version alternative conforme&nbsp;» <sup>(angl.)</sup>](https://www.w3.org/TR/WCAG20-TECHS/C29.html).
+Un problème avec le fait de compter sur le navigateur pour révéler les styles alternatifs est que tous·tes les utilisateur·ice·s ne sont pas assez technophiles pour les découvrir. Ou, à cause de leur handicap, ne peuvent pas le faire. Les boutons ou liens rendent les options visibles pour de nombreux utilisateur·ice·s reconnaissant·e·s. Il existe de nombreuses façons d'ajouter des boutons de bascule pour permettre à l'utilisateur·ice de changer de feuille de style. Cela dit, l'utilisation de feuilles de style alternatives n'est pas la seule option. Une autre consiste à manipuler le style de la page elle-même. Selon le document MDN [Utiliser des informations de style dynamiques](/fr/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information), _«&nbsp;dans la mesure du possible, il est préférable de manipuler dynamiquement les classes avec la propriété [`className`](/fr/docs/Web/API/Element/className), car l'apparence finale de tous les points d'accroche de style peut être contrôlée dans une seule feuille de style&nbsp;»_. Un des meilleurs exemples est la page du W3C [«&nbsp;C29&nbsp;: Utiliser un sélecteur de style pour proposer une version alternative conforme&nbsp;» <sup>(angl.)</sup>](https://www.w3.org/TR/WCAG20-TECHS/C29.html).
 
 ### Cas extrêmes : alternatives texte seul
 
@@ -454,7 +454,7 @@ img {
 
 #### Profiter des requêtes média avec {{HTMLElement('style')}}
 
-En configurant des requêtes média, vous permettez à l'utilisateur·ice de contrôler l'affichage via le navigateur ou le système d'exploitation. Voir le document MDN [Accessibilité&nbsp;: ce que les utilisateur·ice·s peuvent faire pour naviguer plus en sécurité](/fr/docs/Web/Accessibility/Guides/Browsing_safely) pour plus de détails sur l'accès aux contrôles.
+En configurant des requêtes média, vous permettez à l'utilisateur·ice de contrôler l'affichage par le navigateur ou le système d'exploitation. Voir le document MDN [Accessibilité&nbsp;: ce que les utilisateur·ice·s peuvent faire pour naviguer plus en sécurité](/fr/docs/Web/Accessibility/Guides/Browsing_safely) pour plus de détails sur l'accès aux contrôles.
 
 #### `prefers-reduced-motion`
 
@@ -538,13 +538,13 @@ EnvironmentMQ (prévu dans Media Queries Niveau 5)
 - [`forced-colors`](/fr/docs/Web/CSS/Reference/At-rules/@media/forced-colors)
   - : Dans [`forced-colors-mode` <sup>(angl.)</sup>](https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode), l'agent utilisateur impose la palette de couleurs préférée de l'utilisateur·ice sur la page, remplaçant les couleurs choisies par l'auteur·ice. D'après le document de travail du W3C Media Queries Niveau 5 sur forced-colors&nbsp;: _«&nbsp;La fonction média forced-colors permet de détecter si l'agent utilisateur a activé un [mode couleurs forcées <sup>(angl.)</sup>](https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode) où il impose une palette de couleurs limitée choisie par l'utilisateur·ice sur la page&nbsp;»_. L'utilisateur·ice doit être informé·e de cette capacité, et elle doit fonctionner avec la valeur appropriée pour la requête média prefers-color-scheme.
 - `light-level`
-  - : D'après le document de travail du W3C Media Queries Niveau 5 sur light-level&nbsp;: _«&nbsp;La fonction média [`light-level` <sup>(angl.)</sup>](https://drafts.csswg.org/mediaqueries-5/#descdef-media-light-level) permet d'interroger le niveau de lumière ambiante dans lequel l'appareil est utilisé, pour permettre à l'auteur·ice d'adapter le style du document en conséquence.&nbsp;»_ Cela sera très utile pour celles et ceux qui ont des problèmes de motricité ou des difficultés cognitives, qui ne trouvent pas le bon «&nbsp;bouton&nbsp;» pour changer les réglages de l'écran.
+  - : D'après le document de travail du W3C Media Queries Niveau 5 sur light-level&nbsp;: _«&nbsp;La fonction média [`light-level` <sup>(angl.)</sup>](https://drafts.csswg.org/mediaqueries-5/#descdef-media-light-level) permet d'interroger le niveau de lumière ambiante dans lequel l'appareil est utilisé, pour permettre à l'auteur·ice d'adapter le style du document en conséquence.&nbsp;»_ C'est très utile pour celles et ceux qui ont des problèmes de motricité ou des difficultés cognitives, qui ne trouvent pas le bon «&nbsp;bouton&nbsp;» pour changer les réglages de l'écran.
 - prefers-contrast
   - : D'après le document de travail du W3C Media Queries Niveau 5 sur [`prefers-contrast`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast)&nbsp;: _«&nbsp;La fonction média prefers-contrast permet de détecter si l'utilisateur·ice a demandé au système d'augmenter ou de diminuer le contraste entre les couleurs adjacentes. Par exemple, beaucoup ont du mal à lire un texte dont le contraste avec le fond est faible et préfèrent un contraste plus élevé.&nbsp;»_ Parfois, trop de contraste peut créer un effet de halo autour du texte et réduire la lisibilité. Mettre le contraste sous le contrôle de l'utilisateur·ice est un vrai plus pour l'accessibilité.
 
 #### Interface `MediaQueryList`
 
-La section 4.2 des brouillons CSSWG.org s'intègre à la [boucle d'événements <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/webappapis.html#event-loop) définie dans HTML. [HTML <sup>(angl.)</sup>](https://drafts.csswg.org/cssom-view/#biblio-html) pour l'objet [`MediaQueryList` <sup>(angl.)</sup>](https://drafts.csswg.org/cssom-view/#mediaquerylist). Voir le document MDN {{DOMxRef("MediaQueryList")}} pour plus d'informations.
+La section 4.2 des brouillons CSSWG.org s'intègre à la [boucle d'évènements <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/webappapis.html#event-loop) définie dans HTML. [HTML <sup>(angl.)</sup>](https://drafts.csswg.org/cssom-view/#biblio-html) pour l'objet [`MediaQueryList` <sup>(angl.)</sup>](https://drafts.csswg.org/cssom-view/#mediaquerylist). Voir le document MDN {{DOMxRef("MediaQueryList")}} pour plus d'informations.
 
 #### Aide et support à la personnalisation
 
@@ -582,7 +582,7 @@ La propriété `literal` est issue de [WAI-Adapt&nbsp;: Aide et support <sup>(an
 
 ### Épilepsie et crises
 
-- [Mieux comprendre la photosensibilité, l'une des conditions les plus complexes de l'épilepsie <sup>(angl.)</sup>](https://www.epilepsy.com/stories/shedding-light-photosensitivity-one-epilepsys-most-complex-conditions) Epilepsy Foundation&nbsp;: _«&nbsp;Certaines personnes naissent avec une sensibilité particulière aux lumières clignotantes ou aux motifs visuels contrastés, comme les rayures, les grilles et les damiers. À cause de cette condition, leur cerveau produira des décharges de type crise lorsqu'il·elle·s sont exposé·e·s à ce type de stimulation visuelle.&nbsp;»_
+- [Mieux comprendre la photosensibilité, l'une des conditions les plus complexes de l'épilepsie <sup>(angl.)</sup>](https://www.epilepsy.com/stories/shedding-light-photosensitivity-one-epilepsys-most-complex-conditions) Epilepsy Foundation&nbsp;: _«&nbsp;Certaines personnes naissent avec une sensibilité particulière aux lumières clignotantes ou aux motifs visuels contrastés, comme les rayures, les grilles et les damiers. À cause de cette condition, leur cerveau produit des décharges de type crise lorsqu'il·elle·s sont exposé·e·s à ce type de stimulation visuelle.&nbsp;»_
 - [Oscillations gamma et épilepsie photosensible <sup>(angl.)</sup>](https://www.sciencedirect.com/science/article/pii/S0960982217304062?via%3Dihub) Current Biology [Volume 27, Numéro 9 <sup>(angl.)</sup>](https://www.sciencedirect.com/journal/current-biology/vol/27/issue/9), 8 mai 2017, Pages R336-R338&nbsp;: _«&nbsp;Certaines [images visuelles <sup>(angl.)</sup>](https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/retina-image), même sans mouvement ou clignotement, peuvent déclencher des crises chez les patient·e·s souffrant d'épilepsie photosensible.&nbsp;»_
 - [Crises photosensibles. Cedars-Sinai <sup>(angl.)</sup>](https://www.cedars-sinai.org/health-library/diseases-and-conditions/p/photosensitive-seizures.html) _«&nbsp;Les crises photosensibles sont déclenchées par des lumières clignotantes ou scintillantes. Elles peuvent aussi être déclenchées par certains motifs comme les rayures.&nbsp;»_
 - [Crises provoquées par la lumière et les motifs&nbsp;: consensus d'expert·e·s du groupe de travail de l'Epilepsy Foundation of America <sup>(angl.)</sup>](https://pubmed.ncbi.nlm.nih.gov/16146438/) Eplepsia septembre 2005, 46(9)&nbsp;:1423-5 PubMed.gov NCBI [Harding G <sup>(angl.)</sup>](https://pubmed.ncbi.nlm.nih.gov/?term=Harding%20G%5BAuthor%5D&cauthor=true&cauthor_uid=16146438), [Wilkins AJ <sup>(angl.)</sup>](https://pubmed.ncbi.nlm.nih.gov/?term=Wilkins%20AJ%5BAuthor%5D&cauthor=true&cauthor_uid=16146438), [Erba G <sup>(angl.)</sup>](https://pubmed.ncbi.nlm.nih.gov/?term=Erba%20G%5BAuthor%5D&cauthor=true&cauthor_uid=16146438), [Barkley GL <sup>(angl.)</sup>](https://pubmed.ncbi.nlm.nih.gov/?term=Barkley%20GL%5BAuthor%5D&cauthor=true&cauthor_uid=16146438), [Fisher RS <sup>(angl.)</sup>](https://pubmed.ncbi.nlm.nih.gov/?term=Fisher%20RS%5BAuthor%5D&cauthor=true&cauthor_uid=16146438)&nbsp;; [Groupe de travail Epilepsy Foundation of America <sup>(angl.)</sup>](https://pubmed.ncbi.nlm.nih.gov/?term=Epilepsy%20Foundation%20of%20America%20Working%20Group%5BCorporate%20Author%5D).

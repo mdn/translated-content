@@ -3,10 +3,10 @@ title: Caractéristique média CSS `-webkit-animation`
 short-title: -webkit-animation
 slug: Web/CSS/Reference/At-rules/@media/-webkit-animation
 l10n:
-  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 > [!NOTE]
 > Tous les navigateurs prennent en charge la propriété [`animation`](/fr/docs/Web/CSS/Reference/Properties/animation#compatibilité_des_navigateurs) sans préfixe. Seuls les navigateurs basés sur WebKit (Safari), et non Chromium, prennent en charge la caractéristique média `-webkit-animation`. Aucun navigateur ne prend en charge `animation` sans préfixe comme requête média. Utilisez plutôt la requête de fonctionnalité [`@supports (animation)`](/fr/docs/Web/CSS/Reference/At-rules/@supports).

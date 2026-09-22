@@ -3,12 +3,13 @@ title: "Document : méthode exitPictureInPicture()"
 short-title: exitPictureInPicture()
 slug: Web/API/Document/exitPictureInPicture
 l10n:
-  sourceCommit: 58d68cd4c2a6e77a90fb990924a04e5bc93cc3bd
+  sourceCommit: 61ceefea7281f267055e4481a9a610d7ac2e724e
 ---
 
 {{APIRef("Picture-in-Picture API")}}
 
-La méthode **`exitPictureInPicture()`** de l'interface {{DOMxRef("Document")}} demande qu'une vidéo contenue dans ce document, actuellement flottante, soit retirée du mode image dans l'image, restaurant l'état précédent de l'écran. Cela annule généralement les effets d'un appel précédent à {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}.
+La méthode **`exitPictureInPicture()`** de l'interface {{DOMxRef("Document")}} demande qu'une vidéo contenue dans ce document, actuellement flottante, soit retirée du mode image dans l'image, restaurant l'état précédent de l'écran.
+Cela tente d'annuler les effets d'un appel précédent à {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}, restaurant la vidéo dans le flux du site Web.
 
 ## Syntaxe
 
@@ -22,7 +23,8 @@ Aucun.
 
 ### Valeur de retour
 
-Une promesse ({{JSxRef("Promise")}}), qui est résolue une fois que {{Glossary("user agent", "l'agent utilisateur")}} a terminé de quitter le mode image dans l'image. Si une erreur se produit lors de la tentative de sortie du mode image dans l'image, le gestionnaire `catch()` de la promesse est appelé.
+Une promesse ({{JSxRef("Promise")}}), qui est résolue une fois que {{Glossary("user agent", "l'agent utilisateur")}} a terminé de quitter le mode image dans l'image.
+Si une erreur se produit lors de la tentative de sortie du mode image dans l'image, le gestionnaire `catch()` de la promesse est appelé.
 
 ### Exceptions
 
@@ -30,6 +32,8 @@ Une promesse ({{JSxRef("Promise")}}), qui est résolue une fois que {{Glossary("
   - : Levée si `document.pictureInPictureElement` est `null`.
 
 ## Exemples
+
+### Utilisation simple
 
 Cet exemple permet au document actuel de quitter le mode image dans l'image chaque fois que le bouton de la souris est cliqué à l'intérieur.
 
@@ -46,7 +50,8 @@ document.onclick = (event) => {
 };
 ```
 
-Notez que si vous souhaitez suivre quelle vidéo de votre page est actuellement en cours de lecture en mode image dans l'image, vous devez écouter les évènements `enterpictureinpicture` et `leavepictureinpicture` sur l'élément {{DOMxRef("HTMLVideoElement")}} concerné. Alternativement, vous pouvez vérifier si {{DOMxRef("Document.pictureInPictureElement")}} fait référence à l'élément {{DOMxRef("HTMLVideoElement")}} actuel.
+Notez que si vous souhaitez suivre quelle vidéo de votre page est actuellement en cours de lecture en mode image dans l'image, vous devez écouter les évènements `enterpictureinpicture` et `leavepictureinpicture` sur l'élément {{DOMxRef("HTMLVideoElement")}} concerné.
+Alternativement, vous pouvez vérifier si {{DOMxRef("Document.pictureInPictureElement")}} fait référence à l'élément {{DOMxRef("HTMLVideoElement")}} actuel.
 
 ## Spécifications
 

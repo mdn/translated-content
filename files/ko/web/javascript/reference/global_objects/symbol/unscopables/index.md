@@ -46,7 +46,7 @@ with (object1) {
 
 ### with 문에서 범위 지정하기
 
-다음 코드는 ES5 및 그 이전 버전에서는 잘 작동합니다. 하지만 ECMAScript 2015 이후부터 {{jsxref("Array.prototype.keys()")}} 메서드가 도입되었습니다. 이는 `with` 환경 내에서 "keys"가 변수가 아니라 메서드가 된다는 것을 의미합니다. 이게 바로 `@@unscopables` 심볼이 도입된 이유입니다. 내장 `@@unscopables` 설정은 `with` 문의 범위에 일부 배열 메서드가 들어가는 것을 방지하기 위해 {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}로 구현되었습니다.
+다음 코드는 ES5 및 그 이전 버전에서는 잘 작동합니다. 하지만 ECMAScript 2015 이후부터 {{jsxref("Array.prototype.keys()")}} 메서드가 도입되었습니다. 이는 `with` 환경 내에서 "keys"가 변수가 아니라 메서드가 된다는 것을 의미합니다. 이게 바로 `@@unscopables` 심볼이 도입된 이유입니다. 내장 `@@unscopables` 설정은 `with` 문의 범위에 일부 배열 메서드가 들어가는 것을 방지하기 위해 {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}로 구현되었습니다.
 
 ```js
 var keys = [];
@@ -175,6 +175,6 @@ const character = {
 
 ## 같이 보기
 
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}
 - [`with`](/ko/docs/Web/JavaScript/Reference/Statements/with)
 - [`Element.prototype.append()`](/ko/docs/Web/API/Element/append)

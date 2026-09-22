@@ -1,6 +1,6 @@
 ---
-title: Valeur d'attribut HTML `Valeur d'attribut HTML `<input type="number">``
-short-title: Valeur d'attribut HTML `<input type="number">`
+title: Valeur d'attribut HTML `<input type="number">`
+short-title: <input type="number">
 slug: Web/HTML/Reference/Elements/input/number
 l10n:
   sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
@@ -191,7 +191,7 @@ Par exemple, pour ajuster la largeur du champ afin qu'il soit juste assez large 
   id="number" />
 ```
 
-Ensuite, nous ajoutons du CSS pour réduire la largeur de l'élément avec le sélecteur d'`id` `#number`&nbsp;:
+Ensuite, nous ajoutons du CSS pour réduire la largeur de l'élément avec le sélecteur d'un `id` `#number`&nbsp;:
 
 ```css
 #number {

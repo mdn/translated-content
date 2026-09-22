@@ -1,13 +1,14 @@
 ---
-title: Firefox 120 for developers
+title: Firefox 120 開発者向けリリースノート
+short-title: Firefox 120
 slug: Mozilla/Firefox/Releases/120
 l10n:
-  sourceCommit: 692015f089ff03699f0fe58814502b157c3e92ea
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 このページでは、開発者に影響する Firefox 120 の変更点をまとめています。Firefox 120 は、米国時間 [2023 年 11 月 21 日](https://whattrainisitnow.com/release/?version=120) にリリースされました。
 
-## ウェブ開発者向けの変更点一覧
+## ウェブ開発者向けの変更点
 
 ### HTML
 
@@ -16,11 +17,11 @@ l10n:
 ### CSS
 
 - {{CSSXref("color_value/light-dark", "light-dark()")}} CSS カラー関数をサポートしました。これは、`prefers-color-scheme` メディア特性を必要とせずにライトおよびダークの色を設定できます ([Firefox bug 1856999](https://bugzil.la/1856999))。
-- 行の高さの単位 [`lh` および `rlh`](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#line_height_units) をサポートしました。これらは、たとえば複数行のテキストと背景の装飾を正確に揃えるなど、要素の行の高さに対して相対的にプロパティを設定できます ([Firefox bug 1310170](https://bugzil.la/1310170))。
+- 行の高さの単位 [`lh`](/ja/docs/Web/CSS/Reference/Values/length#lh) および [`rlh`](/ja/docs/Web/CSS/Reference/Values/length#rlh) をサポートしました。これらは、たとえば複数行のテキストと背景の装飾を正確に揃えるなど、要素の行の高さに対して相対的にプロパティを設定できます ([Firefox bug 1310170](https://bugzil.la/1310170))。
 
 #### 廃止
 
-- 背景画像を切り抜くための非標準 CSS 関数である {{cssxref("-moz-image-rect")}} を削除しました。この関数は最初に Firefox 4 で導入してから標準化されず、またほかのブラウザーは実装していません ([Firefox bug 1856999](https://bugzil.la/1853867))。
+- 背景画像を切り抜くための非標準 CSS 関数である {{cssxref("-moz-image-rect")}} を削除しました。この関数は最初に Firefox 4 で導入してから標準化されず、またほかのブラウザーは実装していません ([Firefox bug 1853867](https://bugzil.la/1853867))。
 
 ### JavaScript
 
@@ -43,21 +44,13 @@ l10n:
 
   - ISO 形式でない日時でタイムゾーン `'Z'` を受け入れるようになりました (例: `Jan 1 1970 10:00Z`) ([Firefox bug 1852422](https://bugzil.la/1852422))
 
-### SVG
-
-変更なし。
-
 ### HTTP
 
-- [`103 Early Hints`](/ja/docs/Web/HTTP/Reference/Status/103) HTTP [情報レスポンス](/ja/docs/Web/HTTP/Reference/Status#information_responses) ステータスコードが、(ページでリソースを読み込むことが必要と思われる) 特定のオリジンへの [事前接続](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect) に対して有効になりました。
+- [`103 Early Hints`](/ja/docs/Web/HTTP/Reference/Status/103) HTTP [情報レスポンス](/ja/docs/Web/HTTP/Reference/Status#情報レスポンス)ステータスコードが、(ページでリソースを読み込むことが必要と思われる) 特定のオリジンへの [事前接続](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect) に対して有効になりました。
   詳しくは [Firefox bug 1858712](https://bugzil.la/1858712) をご覧ください。
 - Firefox で [Global Privacy Control](https://globalprivacycontrol.org/) の {{HTTPHeader("Sec-GPC")}} リクエストヘッダーをサポートしました。これは、ウェブサイトやサービスが個人情報をサードパーティに販売あるいは共有することに同意しないことを示すために送信できます。
   ユーザーは (`about:config` で) 設定項目 `privacy.globalprivacycontrol.enabled` を `true` に設定することで、このヘッダーを通常のブラウジングとプライベートブラウジングの両方で有効化できます。
   {{domxref("Navigator.globalPrivacyControl")}} および {{domxref("WorkerNavigator.globalPrivacyControl")}} プロパティで、ユーザーが設定を許可しているかを JavaScript で確認できます ([Firefox bug 1856029](https://bugzil.la/1856029))。
-
-### セキュリティ
-
-変更なし。
 
 ### API
 
@@ -66,6 +59,7 @@ l10n:
 - [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) の [Minimum PIN Length Extension (`minPinLength`)](/ja/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#minpinlength) をサポートしました。これは Relying Party のサーバーが認証システムに対して、PIN を作成または登録するときに最短の長さを要求できるようにします ([Firefox bug 1844450](https://bugzil.la/1844450))。
 - {{domxref("Navigator.userActivation")}} プロパティおよび {{domxref("UserActivation")}} インターフェイスをサポートしました。
   これらはユーザーがページと対話しているか、あるいはページが読み込まれてから対話したかを確認するために使用できます ([Firefox bug 1791079](https://bugzil.la/1791079))。
+- {{domxref("PointerEvent.getCoalescedEvents()")}} メソッドは、保護されたコンテキストでのみ使用が制限されています（[Firefox バグ 1858434](https://bugzil.la/1858434)）。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -74,10 +68,6 @@ l10n:
 - `Proxy` および `Generator` オブジェクトのシリアライズをサポートしました ([Firefox bug 1841786](https://bugzil.la/1841786))。
 - `responseStarted` および `responseCompleted` イベントに、`authChallenges` プロパティ (ヘッダーに存在している認証チャレンジのリスト) を追加しました。これは、後に続く `network.authRequired` イベントを処理するの役立つでしょう ([Firefox bug 1855149](https://bugzil.la/1855149))。
 
-## アドオン開発者向けの変更点一覧
+## アドオン開発者向けの変更点
 
-変更なし。
-
-## 過去のバージョン
-
-{{Firefox_for_developers(119)}}
+- {{domxref("PointerEvent.getCoalescedEvents()")}} は保護されたコンテキストに制限されていますが（[Firefox バグ 1858434](https://bugzil.la/1858434)）、コンテンツスクリプトは、保護されたコンテキストではない文書内でこのメソッドを使用することができます（[Firefox バグ 1870498](https://bugzil.la/1870498)）。

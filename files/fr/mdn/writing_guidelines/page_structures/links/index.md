@@ -2,7 +2,7 @@
 title: Macros de liens
 slug: MDN/Writing_guidelines/Page_structures/Links
 l10n:
-  sourceCommit: 94e900db86109d76e8a1e120e3b135db0d543c87
+  sourceCommit: abc914f085fb9913c41c4cd4453da432e9d4e761
 ---
 
 MDN propose de nombreuses macros pour créer des liens toujours à jour vers le contenu MDN. Ce guide présente les macros de renvoi croisé MDN que vous pouvez utiliser pour inclure un lien unique vers une autre page ou une liste de liens vers toutes les sous-pages d'un document.
@@ -20,7 +20,7 @@ MDN propose des macros qui créent une liste de liens&nbsp;:
 - [`\{{QuickLinksWithSubpages()}}` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/quick_links_with_subpages.rs)
   - : Crée un ensemble de liens rapides utilisant les enfants de la page courante (ou de la page définie) comme destinations. Cela crée des listes hiérarchiques jusqu'à deux niveaux. Les titres des pages sont utilisés comme texte du lien et leurs résumés comme info-bulle.
 
-Par exemple, pour inclure une liste ordonnée de liens qui inclut cette page et ses pages sœurs, écrivez&nbsp;:
+Par exemple, pour inclure une liste ordonnée de liens qui inclut cette page et ses pages voisines, écrivez&nbsp;:
 
 ```md
 \{{ListSubpagesForSidebar("/fr/docs/MDN/Writing_guidelines/Page_structures/Macros", 1)}}
@@ -122,4 +122,4 @@ Par exemple, `\{{CSSxRef("background-color")}}` crée le lien "{{CSSxRef("backgr
 
 - [Utiliser les macros](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros)
 - [Macros courantes](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), y compris les macros BCD (`\{{Compat}}`) et les macros de spécification (`\{{Specifications}}`).
-- [Guide des bannières et avis](/fr/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices) incluant les macros `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}` et `\{{SecureContext_Header}}`.
+- [Guide des bannières et avis](/fr/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices) incluant les macros `\{{SeeCompatTable}}` et `\{{SecureContext_Header}}`.

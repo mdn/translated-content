@@ -391,9 +391,9 @@ Les descripteurs d'ancrage du conteneur sont définis dans le `<container-condit
 ```
 
 - `fallback`
-  - : Vérifie si un repli spécifique de positionnement est actuellement actif sur un conteneur positionné par ancre, comme défini avec la propriété {{CSSxRef("position-try-fallbacks")}}. Les valeurs valides pour `fallback` incluent toute valeur composante qui est valide pour inclusion dans une valeur de propriété `position-try-fallbacks`.
+  - : Vérifie si un repli spécifique de positionnement est actuellement actif sur un conteneur positionné par une ancre, comme défini avec la propriété {{CSSxRef("position-try-fallbacks")}}. Les valeurs valides pour `fallback` incluent toute valeur composante qui est valide pour inclusion dans une valeur de propriété `position-try-fallbacks`.
 
-    Si la valeur `fallback` nommée dans le test est actuellement active sur le conteneur positionné par ancre, le test réussit et les règles à l'intérieur du bloc `@container` sont appliquées aux descendants du conteneur positionné par une ancre.
+    Si la valeur `fallback` nommée dans le test est actuellement active sur le conteneur positionné par une ancre, le test réussit et les règles à l'intérieur du bloc `@container` sont appliquées aux descendants du conteneur positionné par une ancre.
 
 ## Syntaxe formelle
 

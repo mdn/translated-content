@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 22080a7cc403f7f45c8e85065b182c9f0d4d383c
 ---
 
-{{APIRef("UI Events")}} {{deprecated_header}}
+{{APIRef("UI Events")}}
 
 **`UIEvent.initUIEvent()`** 方法在创建 UI 事件后对其进行初始化。
 

@@ -3,7 +3,7 @@ title: Propriété CSS `direction`
 short-title: direction
 slug: Web/CSS/Reference/Properties/direction
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 > [!WARNING]
@@ -67,12 +67,14 @@ direction: unset;
 
 ### Valeurs
 
+La propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `ltr`
   - : La valeur par défaut qui correspond à une disposition de la gauche vers la droite pour le texte et les autres éléments.
 - `rtl`
   - : Le texte et les autres éléments vont de la droite vers la gauche.
 
-Afin que la propriété `direction` ait un effet sur les éléments en ligne, il faut que la valeur de la propriété {{CSSxRef("unicode-bidi")}} soit `embed` ou `override`.
+Afin que la propriété `direction` ait un effet sur les éléments en incise, il faut que la valeur de la propriété {{CSSxRef("unicode-bidi")}} soit `embed` ou `override`.
 
 ## Description
 
@@ -94,7 +96,7 @@ Les propriétés `direction` et {{CSSxRef("unicode-bidi")}} sont les deux seules
 
 ### Définir la direction de droite à gauche
 
-Dans l'exemple ci-dessous, deux chaînes de texte sont affichées avec `direction: rtl`. Le texte en arabe s'affiche correctement avec ce réglage, mais le texte en anglais affiche maintenant un point final à un emplacement inhabituel.
+Dans l'exemple ci-dessous, deux chaînes de caractères de texte sont affichées avec `direction: rtl`. Le texte en arabe s'affiche correctement avec ce réglage, mais le texte en anglais affiche maintenant un point final à un emplacement inhabituel.
 
 ```css
 blockquote {

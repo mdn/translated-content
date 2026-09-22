@@ -4,8 +4,6 @@ slug: Web/XML/XPath/Reference/Functions/substring-after
 original_slug: Web/XPath/Functions/substring-after
 ---
 
-{{XsltSidebar}}
-
 La fonction `substring-after()` retourne la partie d'une chaîne donnée suivant une sous-chaîne donnée.
 
 ### Syntaxe

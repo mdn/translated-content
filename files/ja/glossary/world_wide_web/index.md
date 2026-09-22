@@ -2,10 +2,8 @@
 title: World Wide Web
 slug: Glossary/World_Wide_Web
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 _World Wide Web_ は、一般に **WWW**, **W3**, もしくは **ウェブ** と呼ばれ、{{Glossary("Internet", "インターネット")}} を通じて公開されたウェブページが相互に接続されたシステムのことです。ウェブはインターネットと同義ではありません。ウェブは、インターネット上に構築された多くのアプリケーションの中の一つです。
 
@@ -14,7 +12,7 @@ _World Wide Web_ は、一般に **WWW**, **W3**, もしくは **ウェブ** と
 今日、「ウェブ」として知られているシステムは、いくつかの構成要素から成り立っています。
 
 - **{{Glossary("HTTP")}}** プロトコルがサーバーとクライアント間のデータ転送を管理しています。
-- ウェブの構成要素へアクセスするため、クライアントは **{{Glossary("URL")}}** (uniform resource location) もしくは {{Glossary("URI")}} (uniform resource identifier、以前は Universal Document Identifier (UDI) と呼ばれていた) と呼ばれる固有の識別子を提供します。
+- ウェブの構成要素へアクセスするため、クライアントは **{{Glossary("URL")}}** (uniform resource locator) もしくは {{Glossary("URI")}} (uniform resource identifier、以前は Universal Document Identifier (UDI) と呼ばれていた) と呼ばれる固有の識別子を提供します。
 - **{{Glossary("HTML")}}** (hypertext markup language) は、文書を公開する最も一般的な形式です。
 
 リンクする、もしくは{{Glossary("Hyperlink","ハイパーリンク")}}を介してリソースを結びつけることは、関連するドキュメントをひとまとめに識別できるようにする、ウェブの特徴的な概念です。
@@ -23,6 +21,6 @@ _World Wide Web_ は、一般に **WWW**, **W3**, もしくは **ウェブ** と
 
 ## 関連情報
 
-- [Learn the Web](/ja/docs/Learn_web_development)
+- [ウェブ開発の学習](/ja/docs/Learn_web_development)
 - [World Wide Web](https://ja.wikipedia.org/wiki/World_Wide_Web)（ウィキペディア）
 - [W3C のウェブサイト](https://www.w3.org/)

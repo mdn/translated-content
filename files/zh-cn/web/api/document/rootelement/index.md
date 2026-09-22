@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}{{Deprecated_header}}
+{{ApiRef("DOM")}}
 
 **`Document.rootElement`** 返回 {{domxref("document")}} 的根元素，如果它是 {{SVGElement("svg")}} 元素，则返回该元素；否则返回 `null`。它已被弃用，建议采用适用于获取所有文档的根元素的 {{domxref("Document.documentElement")}} 属性。
 

@@ -3,8 +3,6 @@ title: Égalité (==)
 slug: Web/JavaScript/Reference/Operators/Equality
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur d'égalité (`==`) vérifie si ses deux opérandes sont égaux et renvoie un booléen indiquant le résultat de la comparaison. À la différence de l'opérateur [d'égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality), l'opérateur d'égalité tente de convertir ses opérandes avant la comparaison si ceux-ci sont de types différents.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Equality operator")}}

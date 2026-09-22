@@ -1,95 +1,77 @@
 ---
 title: "ARIA: list ロール"
+short-title: list
 slug: Web/Accessibility/ARIA/Reference/Roles/list_role
-original_slug: Web/Accessibility/ARIA/Roles/list_role
+l10n:
+  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-ARIA のリスト (`list`) ロールは、項目のリストを識別するために使用できます。 これは通常、リスト内に含まれるリスト項目を識別するために使用するリスト項目 (`listitem`) ロールと組み合わせて使用します。
+ARIA の `list` ロールは、アイテムのリストを識別するために使用できます。 これは通常、リスト内に含まれるリストアイテムを識別するために使用する `listitem` ロールと組み合わせて使用します。
 
 ```html
-<section role="list">
-  <div role="listitem">リスト項目 1</div>
-  <div role="listitem">リスト項目 2</div>
-  <div role="listitem">リスト項目 3</div>
-</section>
+<div role="list">
+  <div role="listitem">リストアイテム 1</div>
+  <div role="listitem">リストアイテム 2</div>
+  <div role="listitem">リストアイテム 3</div>
+</div>
 ```
 
-## 説明
+## 解説
 
-外側のコンテナーとその内側の要素のリストで構成されるコンテンツは、それぞれリスト (`list`) とリスト項目 (`listitem`) のコンテナーを使用して支援技術で識別できます。 リスト (`list`) は、1 つ以上のリスト項目 (`listitem`) の子を持つか、代わりに 1 つ以上のグループ (`group`) が子として存在し、各グループ (`group`) が 1 つ以上のリスト項目 (`listitem`) を子として持つ必要があります。
+外側のコンテナーと、その中に含まれる要素のリストで構成されるコンテンツは、それぞれ `list` および `listitem` コンテナーを使用することで、支援技術に識別させることができます。`list` には、0 個以上の `listitem` 子要素のみを含めることができます。
 
-リストとリスト項目をマークアップするためにどの要素を使用するべきかについて、鉄則はありませんが、リスト項目がリストのコンテキストで意味をなすようにするべきです (例えば、買い物リスト、料理の手順、運転の指示) 。
+リストやリストアイテムをマークアップする際にどの要素を使うべきかについて、鉄則はありませんが、リストアイテムがリストというコンテキストにおいて意味をなすものであることを確認する必要があります。例えば、買い物リスト、レシピの手順、道順などが挙げられます。
 
-> [!WARNING]
-> 可能な限り、適切な意味論の HTML 要素を使用して、リストとそのリスト項目 ({{htmlelement("ul")}} や {{htmlelement("ol")}} と {{htmlelement("li")}}) をマークアップするべきです。 詳しい例は、[ベストプラクティス](#best_practices)を参照してください。
+> [!NOTE]
+> 可能な限り、適切な意味論の HTML 要素を使用して、リストとそのリストアイテム ({{HTMLElement("ul")}} や {{HTMLElement("ol")}} と {{HTMLElement("li")}}) をマークアップするべきです。 詳しい例は、[ベストプラクティス](#ベストプラクティス)を参照してください。
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
-- [listitem](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
-  - : リストやディレクトリー内の単一項目。 リスト項目ロールを持つ要素は、リスト (`list`) ロールやグループ (`group`) ロールを持つ要素内にのみ存在します。
-- [group](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
-  - : ページの目次に掲載されるほど重要ではなく、リスト内にネストされている場合はリスト項目に限定される、関連するオブジェクトのコレクションです。
-
-### キーボードインタラクション
-
-無し
-
-### 必要な JavaScript 機能
-
-無し
-
-## 例
-
-[ARIA Lists](https://www.scottohara.me/blog/2018/05/26/aria-lists.html) — Scott O'Hara によるいくつかの有用な例と考え (英語)
+- [`listitem`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
+  - : リスト内の単一のアイテムです。`listitem` ロールを持つ要素は、`list` ロールを持つ要素内にのみ存在します。
 
 ## ベストプラクティス
 
 `role="list"` と `role="listitem"` は必要な場合のみ使用してください。 例えば、HTML を制御できなくても、JavaScript で事後に動的にアクセシビリティを向上させることができる場合です。
 
-HTML の {{htmlelement("ol")}} と {{htmlelement("ul")}} とは異なり、ARIA のリスト (`list`) ロールは順序付きリストと順序無しリストを区別しません。 可能な場合は、リスト ({{htmlelement("ol")}} と {{htmlelement("ul")}}) とリスト項目 ({{htmlelement("li")}}) をマークアップするのに適切な意味論の HTML 要素を使用するべきです。 例えば、上記の例は次のように書き直すべきです。
+HTML の {{HTMLElement("ol")}} と {{HTMLElement("ul")}} とは異なり、ARIA のリスト (`list`) ロールは順序付きリストと順序無しリストを区別しません。 可能な場合は、リスト ({{HTMLElement("ol")}} と {{HTMLElement("ul")}}) とリストアイテム ({{HTMLElement("li")}}) をマークアップするのに適切な意味論の HTML 要素を使用するべきです。 例えば、上記の例は次のように書き直すべきです。
 
 ```html
 <ul>
-  <li>リスト項目 1</li>
-  <li>リスト項目 2</li>
-  <li>リスト項目 3</li>
+  <li>リストアイテム 1</li>
+  <li>リストアイテム 2</li>
+  <li>リストアイテム 3</li>
 </ul>
 ```
 
-また、リスト項目の順序が重要な場合は、順序付きリストを使用します。
+また、リストアイテムの順序が重要な場合は、順序付きリストを使用します。
 
 ```html
 <ol>
-  <li>リスト項目 1</li>
-  <li>リスト項目 2</li>
-  <li>リスト項目 3</li>
+  <li>リストアイテム 1</li>
+  <li>リストアイテム 2</li>
+  <li>リストアイテム 3</li>
 </ol>
 ```
 
 > [!NOTE]
-> ARIA のリストロールとリスト項目ロールでは、順序付きリストと順序無しリストを区別しません。
+> ARIA の `list` ロールと `listitem` ロールでは、順序付きリストと順序無しリストを区別しません。
 
-余談ですが、意味論的な HTML 要素である `ol` または `ul` を使用してプレゼンテーション ([`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role)) ロールを適用する場合、ARIA ではリスト項目 (`listitem`) 要素に親のリスト (`list`) 要素が必須であるため、各子 `li` 要素はプレゼンテーション (`presentation`) ロールを継承することに注意してください。 そのため、`li` 要素は支援技術には公開されませんが、ネストされたリストを含め、これらの `li` 要素の内部に含まれる要素は、支援技術からは見えることになります。
+余談ですが、意味論的な HTML 要素である `ol` または `ul` を使用してプレゼンテーション ([`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role)) ロールを適用する場合、ARIA では `listitem` 要素に親の `list` 要素が必須であるため、各子 `<li>` 要素は `presentation` ロールを継承することに注意してください。 そのため、`<li>` 要素は支援技術には公開されませんが、ネストされたリストを含め、これらの `<li>` 要素の内部に含まれる要素は、支援技術からは見えることになります。
 
 > [!NOTE]
-> タブ付きインターフェイスとして機能する項目のリストをマークアップする場合は、代わりにタブ (`tab`)、タブパネル (`tabpanel`)、タブリスト (`tablist`) のロールを使用するべきです。
+> タブ付きインターフェイスとして機能するアイテムのリストをマークアップする場合は、代わりに [`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role), [`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role), [`tablist`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role) の各ロールを使用するべきです。
 
 ## 仕様書
 
 {{Specifications}}
 
-## スクリーンリーダーのサポート
-
-TBD
-
 ## 関連情報
 
+- {{HTMLElement("ul")}}
+- {{HTMLElement("ol")}}
+- {{HTMLElement("li")}}
+- [ARIA: listitem ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
+- [ARIA Lists examples](https://www.scottohara.me/blog/2018/05/26/aria-lists.html) — by Scott O'Hara
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
-- {{htmlelement("ul")}}
-- {{htmlelement("ol")}}
-- {{htmlelement("li")}}
-- [ARIA: listitem ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
-- [ARIA: group ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
-
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

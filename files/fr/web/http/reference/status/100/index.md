@@ -2,7 +2,7 @@
 title: 100 Continue
 slug: Web/HTTP/Reference/Status/100
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse informative](/fr/docs/Web/HTTP/Reference/Status#réponses_informatives) HTTP **`100 Continue`** indique que la première partie d'une requête a été reçue et n'a pas encore été rejetée par le serveur.
@@ -22,7 +22,7 @@ Attendre une réponse 100 Continue peut être utile si le client anticipe une er
 ### Requête PUT avec 100 Continue
 
 La requête {{HTTPMethod("PUT")}} suivante envoie des informations à un serveur pour un téléversement de fichier.
-Le client indique qu'il poursuivra l'envoi du contenu s'il reçoit une réponse 100, afin d'éviter d'envoyer des données sur le réseau qui pourraient entraîner une erreur comme {{HTTPStatus("405")}}, {{HTTPStatus("401")}} ou {{HTTPStatus("403")}}.
+Le client indique qu'il poursuit l'envoi du contenu s'il reçoit une réponse 100, afin d'éviter d'envoyer des données sur le réseau qui pourraient entraîner une erreur comme {{HTTPStatus("405")}}, {{HTTPStatus("401")}} ou {{HTTPStatus("403")}}.
 Dans un premier temps, le client envoie uniquement les en-têtes, dont un en-tête {{HTTPHeader("Expect", "Expect: 100-continue")}}&nbsp;:
 
 ```http

@@ -23,7 +23,7 @@ Le `Referer` doit également être envoyé dans les requêtes suivant une répon
 > Voir [HTTP referer sur Wikipédia](<https://fr.wikipedia.org/wiki/Référent_(informatique)>) pour plus de détails.
 
 > [!WARNING]
-> Cet en-tête peut avoir des conséquences indésirables sur la sécurité et la vie privée des utilisateur·rice·s.
+> Cet en-tête peut avoir des conséquences indésirables sur la sécurité et la vie privée des utilisateur·ice·s.
 > Voir [Questions de sécurité et de vie privée&nbsp;: quid de l'en-tête `referer`](/fr/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns) pour plus d'informations et des pistes d'atténuation.
 
 <table class="properties">

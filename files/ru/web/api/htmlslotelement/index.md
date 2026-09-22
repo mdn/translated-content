@@ -5,8 +5,6 @@ slug: Web/API/HTMLSlotElement
 
 {{ APIRef("Web Components") }}
 
-{{Deprecated_header}}
-
 The **`HTMLContentElement`** interface represents a {{HTMLElement("content")}} HTML Element, which is used in [Shadow DOM](/ru/docs/Web/API/Web_components/Using_shadow_DOM).
 
 ## Свойства

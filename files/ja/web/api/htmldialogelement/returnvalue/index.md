@@ -9,7 +9,7 @@ l10n:
 {{ APIRef("HTML DOM") }}
 
 **`returnValue`** は {{domxref("HTMLDialogElement")}} インターフェイスのプロパティで、{{htmlelement("dialog")}} 要素が閉じたときの返値を表す文字列です。
-値を直接設定したり (`dialog.returnValue = "result"`)、 {{domxref("HTMLDialogElement.close()", "close()")}} や {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} に文字列引数として提供する形設定したりすることができます。
+値を直接設定したり (`dialog.returnValue = "result"`)、 {{domxref("HTMLDialogElement.close()", "close()")}} や {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} に文字列引数として提供する形で設定したりすることができます。
 
 ## 値
 

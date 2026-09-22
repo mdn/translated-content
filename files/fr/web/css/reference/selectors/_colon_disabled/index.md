@@ -52,7 +52,7 @@ label {
 
 ## Exemples
 
-Cet exemple montre un formulaire d'expédition basique. Il utilise l'événement [JavaScript](/fr/docs/Web/JavaScript) {{DOMxRef("HTMLElement/change_event", "change")}} pour permettre à l'utilisateur·ice d'activer/désactiver les champs de facturation.
+Cet exemple montre un formulaire d'expédition basique. Il utilise l'évènement [JavaScript](/fr/docs/Web/JavaScript) {{DOMxRef("HTMLElement/change_event", "change")}} pour permettre à l'utilisateur·ice d'activer/désactiver les champs de facturation.
 
 ### HTML
 

@@ -362,7 +362,7 @@ li {
 }
 ```
 
-Nous définissons également une règle qui sélectionne les éléments avec la classe `active-item`. Lorsque cette classe est appliquée à un élément, la règle fait en sorte qu'il soit positionné exactement au-dessus de l'élément `<article>`. Cette classe est appliquée aux éléments de la liste par JavaScript lorsque leurs liens sont cliqués, ce qui déclenche une transition de vue.
+Nous définissons également une règle qui sélectionne les éléments avec la classe `active-item`. Lorsque cette classe est appliquée à un élément, la règle fait en sorte qu'il soit positionné exactement au-dessus de l'élément `<article>`. Cette classe est appliquée aux éléments de la liste par JavaScript lorsque leurs liens sont cliqué, ce qui déclenche une transition de vue.
 
 ```css
 .active-item {
@@ -399,7 +399,7 @@ html::view-transition-new(*) {
 
 #### JavaScript
 
-Dans cet exemple, la classe `active-item` est appliquée aux éléments de la liste lorsque leurs liens sont cliqués&nbsp;; cela est réalisé avec la fonction `updateActiveItem()`&nbsp;:
+Dans cet exemple, la classe `active-item` est appliquée aux éléments de la liste lorsque leurs liens sont cliqués&nbsp;; c'est réalisé avec la fonction `updateActiveItem()`&nbsp;:
 
 ```js
 const mainElem = document.querySelector("main");

@@ -3,7 +3,7 @@ title: Plugin
 slug: Web/API/Plugin
 ---
 
-{{ApiRef("HTML DOM")}}{{deprecated_header}}
+{{ApiRef("HTML DOM")}}
 
 Plugin` インターフェイスは、 ブラウザーのプラグインに関する情報を提供します。
 

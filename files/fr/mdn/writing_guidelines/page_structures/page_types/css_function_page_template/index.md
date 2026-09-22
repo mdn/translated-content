@@ -2,7 +2,7 @@
 title: Modèle de page de fonction CSS
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template
 l10n:
-  sourceCommit: 754b68246f4e69e404309fee4a1699e047e43994
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 > [!NOTE]
@@ -54,12 +54,11 @@ l10n:
 >
 > - `\{{SeeCompatTable}}` — cela génère une bannière **Ceci est une technologie expérimentale** qui indique que la technologie est [expérimentale](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#expérimental).
 >   Si elle est expérimentale et que la technologie est cachée derrière une préférence dans Firefox, vous devez également remplir une entrée pour elle dans la page [Fonctionnalités expérimentales dans Firefox](/fr/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — cela génère une bannière **Obsolète** qui indique que l'utilisation de la technologie est [découragée](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#obsolète).
 > - `\{{Non-standard_Header}}` — cela génère une bannière **Non standard** qui indique que la fonctionnalité ne fait partie d'aucune spécification.
 >
 > Ne fournissez pas manuellement les macros d'en-tête de statut. Reportez-vous à la section [«&nbsp;Comment les statuts des fonctionnalités sont ajoutés ou mis à jour&nbsp;»](/fr/docs/MDN/Writing_guidelines/Page_structures/Feature_status#comment_les_statuts_sont-ils_ajoutés_ou_mis_à_jour) pour ajouter ces statuts à la page.
 >
-> Des exemples des bannières **Expérimentale**, **Obsolète** et **Non standard** sont présentés juste après ce bloc de notes.
+> Des exemples des bannières **Expérimentale** et **Non standard** sont présentés juste après ce bloc de notes.
 >
 > ---
 >
@@ -73,7 +72,7 @@ l10n:
 >
 > _Supprimez cette note explicative avant de publier._
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 Commencez le contenu de la page par un paragraphe introductif, qui nomme la fonction et explique ce qu'elle fait.
 Cela doit idéalement être une ou deux phrases courtes.

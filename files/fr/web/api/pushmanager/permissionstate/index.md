@@ -1,5 +1,5 @@
 ---
-title: "PushManager : la méthode permissionState()"
+title: "PushManager : méthode permissionState()"
 short-title: permissionState()
 slug: Web/API/PushManager/permissionState
 l10n:

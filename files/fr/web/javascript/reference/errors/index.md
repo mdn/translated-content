@@ -3,8 +3,6 @@ title: Référence des erreurs JavaScript
 slug: Web/JavaScript/Reference/Errors
 ---
 
-{{jsSidebar("Errors")}}
-
 _Errare ECMAScript est_…
 Vous trouverez ci-après une liste d'erreurs causées par le moteur JavaScript. Ces erreurs peuvent aider à déboguer certains problèmes mais leur signification n'est pas toujours claire. Chacune de ces pages fournit donc des explications et informations supplémentaires à propos de ces erreurs.
 

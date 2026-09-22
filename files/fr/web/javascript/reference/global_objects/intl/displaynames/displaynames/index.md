@@ -128,6 +128,6 @@ console.log(dnStd.of("en-GB")); // 'English (United Kingdom)'
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.DisplayNames")}}
+- L'objet natif {{JSxRef("Intl.DisplayNames")}}
 - La méthode {{JSxRef("Intl.supportedValuesOf()")}}
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl")}}

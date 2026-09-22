@@ -3,8 +3,6 @@ title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 ---
 
-{{JSRef}}
-
 La méthode **`toString()`** renvoie une chaîne de caractères représentant l'expression rationnelle.
 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.toString()", "taller")}}

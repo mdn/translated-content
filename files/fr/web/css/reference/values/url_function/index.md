@@ -3,7 +3,7 @@ title: Fonction CSS `url()`
 short-title: url()
 slug: Web/CSS/Reference/Values/url_function
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: b36b3e9dc1c4a60a4a382e57f1d3793164e2ca3f
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`url()`** est utilisée afin d'inclure un fichier. Le paramètre est une URL absolue, une URL relative ou un URI de donnée. La fonction **`url()`** peut être utilisée comme paramètre d'une autre fonction comme {{CSSxRef("attr")}}. Selon la propriété pour laquelle elle est utilisée, la ressource utilisée peut être une image, une police ou une feuille de style. La notation fonctionnelle `url()` correspond au type de donnée CSS `<url>`.
@@ -11,12 +11,12 @@ La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CS
 > [!NOTE]
 > Il y a une différence entre un {{Glossary("URI")}} et une {{Glossary("URL")}}. Un URI identifie une ressource. Une URL est un type d'URI qui décrit _l'emplacement_ d'une ressource. Un URI peut être une URL ou un nom ({{Glossary("URN")}}) d'une ressource.
 >
-> Pour la spécification CSS de niveau 1, la notation fonctionnelle `url()` ne décrivaient que des URL au sens strict. Pour la spécification CSS de niveau 2, la définition de `url()` a été étendue afin de décrire n'importe quel URI (que ce soit une URL ou un URN). Cela a été une source de confusion, car `url()` pouvait être utilisée pour créer un type de données `<uri>`. Cette évolution était non seulement étrange mais aussi superflue, car les URN ne sont quasiment jamais utilisées dans du CSS réel. Pour éviter cette confusion, la spécification CSS de niveau 3 est revenue à la définition initiale. Aujourd'hui, `url()` ne manipule que des vraies `<url>`.
+> Pour la spécification CSS de niveau 1, la notation fonctionnelle `url()` ne décrivaient que des URL au sens strict. Pour la spécification CSS de niveau 2, la définition de `url()` a été étendue afin de décrire n'importe quel URI (que ce soit une URL ou un URN). Cela a été une source de confusion, car `url()` pouvait être utilisée pour créer un type de données `<uri>`. Cette évolution était non seulement étrange mais aussi superflue, car les URN sont rarement utilisées dans du CSS réel. Pour éviter cette confusion, la spécification CSS de niveau 3 est revenue à la définition initiale. Aujourd'hui, `url()` ne manipule que des vraies `<url>`.
 
-Lorsque des URL relatives sont utilisées, elles sont relatives à l'URL de la feuille de style et pas à celle de la page web courante.
+Les URL relatives sont résolues par rapport à l'URL de la feuille de style, et non par rapport à l'URL de la page web. Cependant, lorsqu'un `url()` est utilisé dans le cadre d'une [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) (par exemple, `--mon-image: url(toto.jpg)`), l'URL relative n'est pas résolue immédiatement. Elle est résolue lorsque la propriété personnalisée est évaluée grâce à la substitution `var()` dans une propriété standard. L'URL de base à ce moment est la feuille de style où la référence `var()` apparaît, et non l'endroit où la propriété personnalisée a été définie.
 
 La fonction **`url()`** peut être incluse comme valeur pour les propriétés&nbsp;:
-{{CSSxRef("background")}}, {{CSSxRef("background-image")}}, {{CSSxRef("border")}}, {{CSSxRef("border-image")}}, {{CSSxRef("border-image-source")}}, {{CSSxRef("content")}}, {{CSSxRef("cursor")}}, {{CSSxRef("filter")}}, {{CSSxRef("list-style")}}, {{CSSxRef("list-style-image")}}, {{CSSxRef("mask")}}, {{CSSxRef("mask-image")}}, {{CSSxRef("offset-path")}}, {{CSSxRef("clip-path")}}, {{CSSxRef("@font-face/src")}} dans le cadre d'un bloc {{CSSxRef("@font-face")}} et {{CSSxRef("@counter-style/symbols", "@counter-style/symbols")}}.
+{{CSSxRef("background")}}, {{CSSxRef("background-image")}}, {{CSSxRef("border-image")}}, {{CSSxRef("border-image-source")}}, {{CSSxRef("content")}}, {{CSSxRef("cursor")}}, {{CSSxRef("filter")}}, {{CSSxRef("list-style")}}, {{CSSxRef("list-style-image")}}, {{CSSxRef("mask")}}, {{CSSxRef("mask-image")}}, {{CSSxRef("offset-path")}}, {{CSSxRef("clip-path")}}, {{CSSxRef("@font-face/src")}} dans le cadre d'un bloc {{CSSxRef("@font-face")}} et {{CSSxRef("@counter-style/symbols", "@counter-style/symbols")}}.
 
 ## Syntaxe
 
@@ -64,10 +64,10 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 - `<string>`
   - : Une chaîne de caractères définissant une URL, qui est une adresse relative ou absolue, ou un pointeur, vers la ressource web à inclure, ou un URI de données. Vous pouvez également utiliser une URL de hachage pour référencer l'ID d'une [forme SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes) ou d'un [filtre SVG](/fr/docs/Web/SVG/Reference/Element/filter).
 
-    Les guillemets sont généralement facultatifs&nbsp;: ils sont requis si l'URL inclut des parenthèses, des espaces ou des guillemets (à moins que ces caractères ne soient échappés), ou si l'adresse inclut des caractères de contrôle supérieurs à `0x7e`. Les règles de syntaxe des chaînes normales s'appliquent&nbsp;: les guillemets doubles ne peuvent pas apparaître à l'intérieur de guillemets doubles et les guillemets simples ne peuvent pas apparaître à l'intérieur de guillemets simples à moins d'être échappés.
+    Les guillemets sont généralement facultatifs&nbsp;: ils sont requis si l'URL inclut des parenthèses, des espaces ou des guillemets (à moins que ces caractères ne soient échappés), ou si l'adresse inclut des caractères de contrôle supérieurs à `0x7e`. Les règles de syntaxe des chaînes de caractères normales s'appliquent&nbsp;: les guillemets doubles ne peuvent pas apparaître à l'intérieur de guillemets doubles et les guillemets simples ne peuvent pas apparaître à l'intérieur de guillemets simples à moins d'être échappés.
 
 - `<url-modifier>`
-  - : Dans le futur, la fonction `url()` pourrait prendre en charge la spécification d'un modificateur, d'un identifiant ou d'une notation fonctionnelle, qui modifie le sens de la chaîne d'URL. Cela n'est pas pris en charge et n'est pas entièrement défini dans la spécification.
+  - : Dans le futur, la fonction `url()` peut prendre en charge la spécification d'un modificateur, d'un identifiant ou d'une notation fonctionnelle, qui modifie le sens de la chaîne de caractères d'URL. Cela n'est pas pris en charge et n'est pas entièrement défini dans la spécification.
 
 ## Syntaxe formelle
 

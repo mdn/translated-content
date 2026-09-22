@@ -96,7 +96,7 @@ scroll-snap-align: unset;
 
 ### Valeurs
 
-Une ou deux valeurs peuvent être définies pour la propriété `scroll-snap-align`. Si une seule valeur est définie, elle s'applique aux axes bloc et en ligne. Si deux valeurs sont définies, la première valeur contrôle l'axe bloc et la deuxième valeur contrôle l'axe en ligne.
+Une ou deux valeurs peuvent être définies pour la propriété `scroll-snap-align`. Si une seule valeur est définie, elle s'applique aux axes bloc et en incise (<i lang="en">inline</i> en anglais). Si deux valeurs sont définies, la première valeur contrôle l'axe bloc et la deuxième valeur contrôle l'axe en incise.
 
 - `none`
   - : La boîte ne définit aucune position d'accroche sur cet axe.

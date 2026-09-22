@@ -4,8 +4,6 @@ slug: Web/XML/XPath/Reference/Functions/false
 original_slug: Web/XPath/Functions/false
 ---
 
-{{XsltSidebar}}
-
 La fonction `false` retourne le booléen `false`.
 
 ### Syntaxe

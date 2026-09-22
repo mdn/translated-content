@@ -2,7 +2,7 @@
 title: Titres et paragraphes
 slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 l10n:
-  sourceCommit: d865c290ae97074157ca8fd3994015b2f393d370
+  sourceCommit: 2066cc916dfdcbb782340bf0ce562b230e947cba
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content")}}
@@ -101,7 +101,7 @@ Il vous revient de décider ce que représentent les éléments utilisés, tant 
 
 Pour répondre à cette question, regardons [text-start.html <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html) — une sympathique recette de houmous. Le corps de ce document contient actuellement plusieurs morceaux de contenu. Ils ne sont pas balisés d'aucune façon, mais sont séparés par des retours à la ligne (<kbd>Entrée</kbd>/<kbd>Retour</kbd> pour passer à la ligne suivante).
 
-Cependant, lorsque vous ouvrez le document dans votre navigateur, vous voyez que le texte apparaît comme un gros bloc&nbsp;!
+Cependant, lorsque vous [ouvrez le document dans votre navigateur <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/introduction-to-html/html-text-formatting/text-start.html), vous voyez que le texte apparaît comme un gros bloc&nbsp;!
 
 ![Une page web affichant un mur de texte non formaté, car aucun élément n'est présent pour structurer le contenu.](screen_shot_2017-03-29_at_09.20.35.png)
 
@@ -175,6 +175,6 @@ Il s'agit d'un élément HTML {{HTMLElement("span")}}. Il n'a aucune sémantique
 
 ## Résumé
 
-Ceci conclut notre étude des titres et paragraphes HTML. Ensuite, nous aborderons d'autres aspects du HTML sémantique&nbsp;: donner de l'importance aux mots.
+Ceci conclut notre étude des titres et paragraphes HTML. Ensuite, nous abordons d'autres aspects du HTML sémantique&nbsp;: donner de l'importance aux mots.
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content")}}

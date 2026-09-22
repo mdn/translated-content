@@ -38,13 +38,13 @@ Durant une transition de vue, `::view-transition-image-pair()` a {{CSSxRef("isol
 - `*`
   - : Le [sélecteur universel (`*`)](/fr/docs/Web/CSS/Reference/Selectors/Universal_selectors)&nbsp;; sélectionne tous les groupes de transition de vue sur une page.
 - `root`
-  - : Fait correspondre le pseudo-élément au groupe de capture d'instantané de transition de vue `root` par défaut créé par l'agent utilisateur pour contenir la transition de vue pour l'ensemble de la page. Ce groupe inclut tout élément non assigné à son propre groupe d'instantané de transition de vue spécifique via la propriété {{CSSxRef("view-transition-name")}}.
+  - : Fait correspondre le pseudo-élément au groupe de capture d'instantané de transition de vue `root` par défaut créé par l'agent utilisateur pour contenir la transition de vue pour l'ensemble de la page. Ce groupe inclut tout élément non assigné à son propre groupe d'instantané de transition de vue spécifique avec la propriété {{CSSxRef("view-transition-name")}}.
 - `<pt-name-selector>`
   - : Le {{CSSxRef("custom-ident")}} défini comme valeur de la propriété {{CSSxRef("view-transition-name")}}.
 - `<pt-class-selector>`
   - : Le {{CSSxRef("custom-ident")}} défini comme valeur de la propriété {{CSSxRef("view-transition-class")}} précédé d'un point (`.`).
 
-## Examples
+## Exemples
 
 ```css
 ::view-transition-image-pair(root) {
@@ -66,5 +66,5 @@ Durant une transition de vue, `::view-transition-image-pair()` a {{CSSxRef("isol
 
 ## Voir aussi
 
-- L'[API de transition de vue](/fr/docs/Web/API/View_Transition_API)
+- [L'API de transition de vue](/fr/docs/Web/API/View_Transition_API)
 - [Transitions fluides avec l'API de transition de vue <sup>(angl.)</sup>](https://developer.chrome.com/docs/web-platform/view-transitions/)

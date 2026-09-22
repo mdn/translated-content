@@ -3,7 +3,7 @@ title: Propriété CSS `letter-spacing`
 short-title: letter-spacing
 slug: Web/CSS/Reference/Properties/letter-spacing
 l10n:
-  sourceCommit: d62aeb53943b4861f18a3e895d32b020e09ce0aa
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`letter-spacing`** définit l'espacement entre les caractères du texte. Cette valeur s'ajoute à l'espacement naturel entre les caractères lors du rendu du texte. Des valeurs positives de `letter-spacing` écartent davantage les caractères, tandis que des valeurs négatives de `letter-spacing` rapprochent les caractères.
@@ -76,6 +76,8 @@ letter-spacing: unset;
 
 ### Valeurs
 
+Cette propriété est définie avec une seule valeur parmi la liste suivante&nbsp;:
+
 - `normal`
   - : L'espacement normal des lettres pour la police courante. Contrairement à une valeur de `0`, ce mot-clé permet à {{Glossary("user agent", "l'agent utilisateur")}} de modifier l'espace entre les caractères afin de justifier le texte.
 - {{CSSxRef("&lt;length-percentage&gt;")}}
@@ -94,7 +96,7 @@ Utiliser une valeur trop grande (positive ou négative) pour `letter-spacing` re
 L'espacement doit être déterminé au cas par cas, car chaque famille de polices utilise des caractères de largeurs différentes. Il n'existe pas de valeur unique qui permette de s'assurer que, quelle que soit la police utilisée, le texte soit lisible.
 
 - [Explications de MDN sur les WCAG, règle 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
-- [Comprendre le critère de succès 1.4.8 | W3C Understanding WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [Comprendre le critère de succès 1.4.8 | Comprendre le WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Problèmes d'internationalisation
 
@@ -130,11 +132,11 @@ Cet exemple montre plusieurs paragraphes avec différentes valeurs de `letter-sp
 #### HTML
 
 ```html live-sample___length-letter-spacing
-<p class="normal">Et voici l'interlettre</p>
-<p class="large-em">Et voici l'interlettre</p>
-<p class="tres-large-em">Et voici l'interlettre</p>
-<p class="court-em">Et voici l'interlettre</p>
-<p class="large-px">Et voici l'interlettre</p>
+<p class="normal">Et voici l'inter-lettre</p>
+<p class="large-em">Et voici l'inter-lettre</p>
+<p class="tres-large-em">Et voici l'inter-lettre</p>
+<p class="court-em">Et voici l'inter-lettre</p>
+<p class="large-px">Et voici l'inter-lettre</p>
 ```
 
 #### CSS

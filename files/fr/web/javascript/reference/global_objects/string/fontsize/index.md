@@ -3,8 +3,6 @@ title: String.prototype.fontsize()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 ---
 
-{{JSRef}}{{deprecated_header}}
-
 La propriété **`fontsize()`** permet de créer un élément HTML {{HTMLElement("font")}} qui permet d'afficher la chaîne de caractères dans une fonte de taille donnée.
 
 > [!NOTE]

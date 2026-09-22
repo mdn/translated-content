@@ -4,8 +4,6 @@ slug: WebAssembly/Reference/JavaScript_interface/CompileError
 original_slug: WebAssembly/JavaScript_interface/CompileError
 ---
 
-{{WebAssemblySidebar}}
-
 Le constructeur **`WebAssembly.CompileError()`** permet de créer une nouvelle instance de `CompileError` qui indique qu'une erreur s'est produite lors du décodage du code WebAssembly ou lors de sa validation.
 
 ## Syntaxe

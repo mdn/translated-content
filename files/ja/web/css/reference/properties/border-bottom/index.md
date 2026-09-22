@@ -1,11 +1,12 @@
 ---
-title: border-bottom
+title: CSS `border-bottom` プロパティ
+short-title: border-bottom
 slug: Web/CSS/Reference/Properties/border-bottom
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-**`border-bottom`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、要素の下側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)を設定します。これは {{cssxref("border-bottom-width")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-bottom-color")}} の値を設定します。
+**`border-bottom`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、要素の下側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)を設定します。これは {{cssxref("border-bottom-width")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-bottom-color")}} の値を設定します。
 
 {{InteractiveExample("CSS デモ: border-bottom")}}
 
@@ -47,22 +48,6 @@ border-bottom: 4mm ridge rgb(211 220 50 / 0.6);
 }
 ```
 
-他の一括指定プロパティと同様に、 `border-bottom` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。次のコードを考えてください。
-
-```css
-border-bottom-style: dotted;
-border-bottom: thick green;
-```
-
-これは、実際には以下と同じです。
-
-```css
-border-bottom-style: dotted;
-border-bottom: none thick green;
-```
-
-`border-bottom` の前で設定された {{cssxref("border-bottom-style")}} の値は無視されます。 {{cssxref("border-bottom-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
-
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。
@@ -97,6 +82,24 @@ border-bottom: unset;
 - {{cssxref("&lt;color&gt;")}}
   - : {{cssxref("border-bottom-color")}} を参照してください。
 
+## 解説
+
+他の一括指定プロパティと同様に、 `border-bottom` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティはデフォルト値が設定されます。次のコードを考えてください。
+
+```css
+border-bottom-style: dotted;
+border-bottom: thick green;
+```
+
+これは、実際には以下と同じです。
+
+```css
+border-bottom-style: dotted;
+border-bottom: none thick green;
+```
+
+`border-bottom` の前で設定された {{cssxref("border-bottom-style")}} の値は無視されます。 {{cssxref("border-bottom-style")}} のデフォルト値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
+
 ## 公式定義
 
 {{CSSInfo}}
@@ -107,7 +110,7 @@ border-bottom: unset;
 
 ## 例
 
-### 下の境界の適用
+### 下側の境界の適用
 
 #### HTML
 

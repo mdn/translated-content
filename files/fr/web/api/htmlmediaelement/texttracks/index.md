@@ -10,7 +10,7 @@ l10n:
 
 La propriété en lecture seule **`textTracks`** de l'interface {{DOMxRef("HTMLMediaElement")}} retourne un objet {{DOMxRef("TextTrackList")}} répertoriant tous les objets {{DOMxRef("TextTrack")}} représentant les pistes textuelles de l'élément multimédia, dans le même ordre que dans la liste des pistes textuelles.
 
-Vous pouvez détecter lorsque des pistes sont ajoutées ou supprimées d'un élément HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}} en utilisant les événements `addtrack` et `removetrack`. Cependant, ces événements ne sont pas envoyés directement à l'élément multimédia lui-même. Ils sont envoyés à l'objet de liste de pistes de l'élément {{DOMxRef("HTMLMediaElement")}} correspondant au type de piste ajouté à l'élément.
+Vous pouvez détecter lorsque des pistes sont ajoutées ou supprimées d'un élément HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}} en utilisant les évènements `addtrack` et `removetrack`. Cependant, ces évènements ne sont pas envoyés directement à l'élément multimédia lui-même. Ils sont envoyés à l'objet de liste de pistes de l'élément {{DOMxRef("HTMLMediaElement")}} correspondant au type de piste ajouté à l'élément.
 
 La liste retournée est _dynamique_&nbsp;; c'est-à-dire que, lorsque des pistes sont ajoutées ou supprimées de l'élément multimédia, le contenu de la liste change dynamiquement. Une fois que vous avez une référence à la liste, vous pouvez la surveiller pour détecter quand de nouvelles pistes textuelles sont ajoutées ou lorsque des pistes existantes sont supprimées.
 

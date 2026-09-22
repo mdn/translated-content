@@ -3,16 +3,16 @@ title: "Window : évènement resize"
 short-title: resize
 slug: Web/API/Window/resize_event
 l10n:
-  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 L'évènement **`resize`** de l'interface {{DOMxRef("Window")}} se déclenche lorsque la vue du document (fenêtre) a été redimensionnée.
 
 Cet évènement n'est pas annulable et ne se propage pas.
 
-Dans certains navigateurs plus anciens, il était possible d'enregistrer des gestionnaires d'évènements `resize` sur n'importe quel élément HTML. Il est toujours possible de définir des attributs `onresize` ou d'utiliser {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} pour définir un gestionnaire sur n'importe quel élément. Cependant, les évènements `resize` ne sont déclenchés que sur l'objet {{DOMxRef("Window")}} (c'est-à-dire retourné par {{DOMxRef("document.defaultView")}}). Seuls les gestionnaires enregistrés sur l'objet `window` recevront les évènements `resize`.
+Dans certains navigateurs plus anciens, il est possible d'enregistrer des gestionnaires d'évènements `resize` sur n'importe quel élément HTML. Il est toujours possible de définir des attributs `onresize` ou d'utiliser {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} pour définir un gestionnaire sur n'importe quel élément. Cependant, les évènements `resize` ne sont déclenchés que sur l'objet {{DOMxRef("Window")}} (c'est-à-dire retourné par {{DOMxRef("document.defaultView")}}). Seuls les gestionnaires enregistrés sur l'objet `window` reçoivent les évènements `resize`.
 
 Bien que l'évènement `resize` ne se déclenche que pour la fenêtre de nos jours, vous pouvez obtenir des notifications de redimensionnement pour d'autres éléments en utilisant l'API {{DOMxRef("ResizeObserver")}}.
 
@@ -68,7 +68,7 @@ window.onresize = journaliserTailleFenetre;
 {{EmbedLiveSample("Journaliser l'évolution de la taille de la fenêtre")}}
 
 > [!NOTE]
-> L'exemple ci-dessus est affiché dans un {{HTMLElement("iframe")}}, donc les valeurs de largeur et de hauteur rapportées concernent le `<iframe>`, et non la fenêtre dans laquelle cette page se trouve. En particulier, il sera difficile d'ajuster la taille de la fenêtre pour voir une différence dans la hauteur rapportée.
+> L'exemple ci-dessus est affiché dans un {{HTMLElement("iframe")}}, donc les valeurs de largeur et de hauteur rapportées concernent le `<iframe>`, et non la fenêtre dans laquelle cette page se trouve. En particulier, il est difficile d'ajuster la taille de la fenêtre pour voir une différence dans la hauteur rapportée.
 >
 > L'effet est plus facile à voir si vous {{LiveSampleLink("Journaliser l'évolution de la taille de la fenêtre", "affichez l'exemple dans sa propre fenêtre")}}.
 

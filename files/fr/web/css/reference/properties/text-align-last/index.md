@@ -3,7 +3,7 @@ title: Propriété CSS `text-align-last`
 short-title: text-align-last
 slug: Web/CSS/Reference/Properties/text-align-last
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-align-last`** définit la façon dont la dernière ligne d'un bloc, ou une ligne avant un retour à la ligne forcé, doit être alignée.
@@ -69,18 +69,20 @@ text-align-last: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `auto`
-  - : La ligne concernée est alignée selon la valeur de {{CSSxRef("text-align")}} sauf si {{CSSxRef("text-align")}} vaut `justify`, auquel cas, cela aura le même effet que d'utiliser la valeur `start` pour `text-align-last`.
+  - : La ligne concernée est alignée selon la valeur de {{CSSxRef("text-align")}} sauf si {{CSSxRef("text-align")}} vaut `justify`, auquel cas, cela a le même effet que d'utiliser la valeur `start` pour `text-align-last`.
 - `start`
   - : Cette valeur a le même effet que la valeur `left` si la direction du texte va de gauche à droite ou le même effet que `right` si la direction du texte va de droite à gauche.
 - `end`
   - : Cette valeur a le même effet que la valeur `right` si la direction du texte va de gauche à droite ou le même effet que `left` si la direction du texte va de droite à gauche.
 - `left`
-  - : Les contenus en ligne (<i lang="en">inline</i> en anglais) sont alignés sur le bord gauche de la boîte contenant la ligne.
+  - : Les contenus en incise (<i lang="en">inline</i> en anglais) sont alignés sur le bord gauche de la boîte contenant la ligne.
 - `right`
-  - : Les contenus en ligne (<i lang="en">inline</i> en anglais) sont alignés sur le bord droit de la boîte contenant la ligne.
+  - : Les contenus en incise (<i lang="en">inline</i> en anglais) sont alignés sur le bord droit de la boîte contenant la ligne.
 - `center`
-  - : Les contenus en ligne (<i lang="en">inline</i> en anglais) sont horizontalement centrés par rapport à la boîte contenant la ligne.
+  - : Les contenus en incise (<i lang="en">inline</i> en anglais) sont horizontalement centrés par rapport à la boîte contenant la ligne.
 - `justify`
   - : Le texte est justifié. Les bords gauche et droit du texte sont alignés avec les bord gauche et droit du paragraphe.
 

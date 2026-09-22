@@ -3,7 +3,7 @@ title: "Response : méthode bytes()"
 short-title: bytes()
 slug: Web/API/Response/bytes
 l10n:
-  sourceCommit: 562051c4ad20e9ecb5faf905286cdfca545a340d
+  sourceCommit: 59eadc10e06989e338a88f7249422609716efcb2
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
@@ -43,7 +43,7 @@ Une promesse qui est résolue avec un objet {{JSxRef("Uint8Array")}}.
 Le code ci-dessous montre comment récupérer un fichier texte, retourner le corps sous forme de {{JSxRef("Uint8Array")}}, puis le décoder en une chaîne de caractères.
 
 ```js
-const reponse = await fetch("https://www.exemple.com/textfile.txt");
+const reponse = await fetch("https://www.example.comtextfile.txt");
 const fichierTexte = await reponse.bytes();
 const chaineDeCaracteres = new TextDecoder().decode(fichierTexte);
 console.log(chaineDeCaracteres);
@@ -108,9 +108,9 @@ Si la méthode n'est pas prise en charge, il l'indique dans le journal.
 ```js
 if ("bytes" in Response.prototype) {
   const elementSelectFichier = document.getElementById("file-select");
-  elementSelectFichier.addEventListener("change", (event) => {
+  elementSelectFichier.addEventListener("change", async (event) => {
     try {
-      verifierSignature(event.target.value);
+      await verifierSignature(event.target.value);
     } catch (e) {
       log(e);
     }

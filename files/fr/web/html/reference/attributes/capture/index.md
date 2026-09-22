@@ -10,12 +10,12 @@ L'attribut **`capture`** indique, de façon optionnelle, qu'un nouveau fichier d
 
 Les valeurs possibles sont `user` et `environment`. L'attribut capture est pris en charge sur le type d'entrée `{{HTMLElement("input/file", "file")}}`.
 
-L'attribut `capture` prend comme valeur une chaîne qui spécifie quelle caméra utiliser pour la capture d'image ou de vidéo, si l'attribut [`accept`](/fr/docs/Web/HTML/Reference/Attributes/accept) indique que l'entrée doit être de l'un de ces types.
+L'attribut `capture` prend comme valeur une chaîne de caractères qui définie quelle caméra utiliser pour la capture d'image ou de vidéo, si l'attribut [`accept`](/fr/docs/Web/HTML/Reference/Attributes/accept) indique que l'entrée doit être de l'un de ces types.
 
-| Valeur        | Description                                                                             |
-| ------------- | --------------------------------------------------------------------------------------- |
-| `user`        | La caméra et/ou le microphone faisant face à l'utilisateur·ice devraient être utilisés. |
-| `environment` | La caméra et/ou le microphone orientés vers l'extérieur devraient être utilisés.        |
+| Valeur        | Description                                                                           |
+| ------------- | ------------------------------------------------------------------------------------- |
+| `user`        | La caméra et/ou le microphone faisant face à l'utilisateur·ice doivent être utilisés. |
+| `environment` | La caméra et/ou le microphone orientés vers l'extérieur doivent être utilisés.        |
 
 > [!NOTE]
 > Capture était auparavant un attribut booléen qui, lorsqu'il était présent, indiqué que les périphériques de capture de l'appareil (comme la caméra ou le micro) devaient être utilisés plutôt que de demander à l'utilisateur·ice de sélectionner un fichier.
@@ -69,7 +69,7 @@ Lorsqu'ils sont définis sur un type d'entrée de fichier, les systèmes d'explo
 
 {{EmbedLiveSample("Exemples", "100%", 200)}}
 
-Notez que ceux-ci fonctionnent mieux sur les appareils mobiles&nbsp;; si votre appareil est un ordinateur de bureau, vous obtiendrez probablement un sélecteur de fichiers classique.
+Notez que ceux-ci fonctionnent mieux sur les appareils mobiles&nbsp;; si votre appareil est un ordinateur de bureau, vous obtenez probablement un sélecteur de fichiers classique.
 
 ## Spécifications
 

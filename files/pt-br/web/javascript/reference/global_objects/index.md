@@ -54,7 +54,7 @@ Estes são objetos básicos e fundamentais nos quais todos os outros objetos sã
 - {{jsxref("InternalError")}}
 - {{jsxref("RangeError")}}
 - {{jsxref("ReferenceError")}}
-- {{jsxref("StopIteration")}}
+- `StopIteration`
 - {{jsxref("SyntaxError")}}
 - {{jsxref("TypeError")}}
 - {{jsxref("URIError")}}
@@ -88,7 +88,7 @@ Estes objetos representam coleções de dados que são ordenados pelo valor de u
 - [`Uint32Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)
 - [`Uint8Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 - [`Uint8ClampedArray`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
-- {{jsxref("ParallelArray")}} {{non-standard_inline()}}
+- `ParallelArray` {{non-standard_inline()}}
 
 ### Coleções chaveadas
 
@@ -130,8 +130,8 @@ Adições ao core do ECMAScript para funcionalidades sensíveis à linguagem.
 ### Objetos não-padrão
 
 - {{jsxref("Iterator")}} {{non-standard_inline}}
-- {{jsxref("ParallelArray")}} {{non-standard_inline}}
-- {{jsxref("StopIteration")}} {{non-standard_inline}}
+- `ParallelArray` {{non-standard_inline}}
+- `StopIteration` {{non-standard_inline}}
 
 ### Outros
 

@@ -1,39 +1,40 @@
 ---
-title: Object.seal()
+title: "Object : méthode statique seal()"
+short-title: seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode statique **`Object.seal()`** _scelle_ un objet. Sceller un objet [empêche les extensions](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) et rend les propriétés existantes non-configurables. Un objet scellé a un ensemble de propriétés fixe&nbsp;: de nouvelles propriétés ne peuvent pas être ajoutées, les propriétés existantes ne peuvent pas être supprimées, leur énumérabilité et leur capacité à être configurées ne peuvent pas être modifiées, et son prototype ne peut pas être réassigné. Les valeurs des propriétés existantes peuvent toujours être modifiées tant qu'elles sont accessibles en écriture. `seal()` retourne le même objet qui a été passé en argument.
 
-La méthode **`Object.seal()`** scelle un objet afin d'empêcher l'ajout de nouvelles propriétés, en marquant les propriétés existantes comme non-configurables. Les valeurs des propriétés courantes peuvent toujours être modifiées si elles sont accessibles en écriture.
-
-{{InteractiveExample("JavaScript Demo: Object.seal()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Object.seal()")}}
 
 ```js interactive-example
-const object1 = {
-  property1: 42,
+const object = {
+  toto: 42,
 };
 
-Object.seal(object1);
-object1.property1 = 33;
-console.log(object1.property1);
-// Expected output: 33
+Object.seal(object);
+object.toto = 33;
+console.log(object.toto);
+// Résultat attendu : 33
 
-delete object1.property1; // Cannot delete when sealed
-console.log(object1.property1);
-// Expected output: 33
+delete object.toto; // Ne peut pas supprimer lorsque scellé
+console.log(object.toto);
+// Résultat attendu : 33
 ```
 
 ## Syntaxe
 
-```js
-Object.seal(obj);
+```js-nolint
+Object.seal(obj)
 ```
 
 ### Paramètres
 
 - obj
-  - : L'objet à sceller. Ce peut être n'importe quelle valeur qui n'ait pas [un type primitif](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#types_de_données).
+  - : L'objet qui doit être scellé.
 
 ### Valeur de retour
 
@@ -41,84 +42,84 @@ L'objet qui est scellé.
 
 ## Description
 
-Par défaut, les objets sont {{jsxref("Object.isExtensible()", "extensibles", "", 1)}} (ce qui signifie que de nouvelles propriétés peuvent leur être ajoutées). Sceller un objet empêche l'ajout de nouvelles propriétés et marque les propriétés existantes comme non-configurables. Ainsi, l'ensemble de propriétés de l'objet devient fixé et immuable. Le fait de rendre les propriétés non-configurables empêche également de transformer des propriétés de données en accesseurs et vice versa. Cela n'empêche pas de modifier la valeur des propriétés. Toute tentative de suppression ou d'ajout de propriétés à un objet qui est scellé, de conversion d'une propriété de données en accesseurs ou vice versa échouera, soit de manière silencieuse soit en lançant une exception {{jsxref("TypeError")}} (la plupart du temps en {{jsxref("Strict_mode","mode strict","",1)}}.
+Sceller un objet équivaut à [empêcher les extensions](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) puis à modifier tous les [descripteurs de propriétés](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) existants pour les rendre `configurable: false`. Cela a pour effet de fixer l'ensemble des propriétés de l'objet. Rendre toutes les propriétés non configurables empêche également leur conversion de propriétés de données en accesseurs et vice versa, mais n'empêche pas la modification des valeurs des propriétés de données. Toute tentative de suppression ou d'ajout de propriétés à un objet scellé, ou de conversion d'une propriété de données en accesseur ou vice versa, échoue, soit silencieusement, soit en lançant une exception {{JSxRef("TypeError")}} (le plus souvent, bien que pas exclusivement, en {{JSxRef("Strict_mode", "mode strict", "", 1)}}).
 
-La chaîne de prototypes reste la même. Cependant, la propriété [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) ( {{deprecated_inline}} ) est scellée également.
+[Les éléments privés](/fr/docs/Web/JavaScript/Reference/Classes/Private_elements) ne sont pas des propriétés et n'ont pas le concept de descripteurs de propriétés. Les éléments privés ne peuvent pas être ajoutés ou supprimés de l'objet, que l'objet soit scellé ou non.
+
+La chaîne de prototypes reste intacte. Cependant, en raison de l'effet de [l'empêchement des extensions](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions), le `[[Prototype]]` ne peut pas être réassigné.
+
+Contrairement à {{JSxRef("Object.freeze()")}}, les objets scellés avec `Object.seal()` peuvent voir leurs propriétés existantes modifiées, tant qu'elles sont modifiables.
 
 ## Exemples
 
+### Utiliser `Object.seal()`
+
 ```js
-var obj = {
-  prop: function () {},
+const obj = {
+  prop() {},
   toto: "truc",
 };
 
-// On peut ajouter de nouvelles propriétés
-// Les propriétés existantes peuvent être
-// changées ou retirées
+// Les nouvelles propriétés peuvent être ajoutées, les propriétés
+// existantes peuvent être modifiées ou supprimées.
 obj.toto = "machin";
 obj.blop = "blip";
 delete obj.prop;
 
-var o = Object.seal(obj);
+const o = Object.seal(obj);
 
 o === obj; // true
 Object.isSealed(obj); // true
 
-// On peut toujours changer la valeur
-// d'une propriété d'un objet scellé
+// Changer les valeurs des propriétés d'un objet scellé
+// fonctionne toujours.
 obj.toto = "moh";
 
-// Mais on ne peut pas convertir les données
-// en accesseurs (ou vice versa)
+// Mais on ne peut pas convertir les propriétés de données en accesseurs,
+// ou vice versa.
 Object.defineProperty(obj, "toto", {
   get: function () {
     return "g";
   },
-});
-// lancera une TypeError
+}); // lève une TypeError
 
-// Tout autre changement que celui d'une valeur
-// ne fonctionnera pas
-
+// Maintenant toute modification, autre que celle des valeurs
+// des propriétés, échoue.
 obj.coincoin = "mon canard";
-// la propriété n'est pas ajoutée
-
+// n'ajoute pas la propriété de manière silencieuse
 delete obj.toto;
-// la propriété n'est pas supprimée
+// ne supprime pas la propriété de manière silencieuse
 
-// ...en mode strict, cela lancera des TypeErrors
-function échec() {
+// … et en mode strict,
+// cela lève une TypeError
+function echec() {
   "use strict";
-  delete obj.toto; // lance une TypeError
-  obj.tutu = "arf"; // lance une TypeError
+  delete obj.toto; // lève une TypeError
+  obj.tutu = "arf"; // lève une TypeError
 }
-échec();
+echec();
 
-// L'utilisation de la méthode Object.defineProperty ne fonctionnera pas
-
-Object.defineProperty(obj, "ohai", { value: 17 });
-// lance une TypeError
-
-Object.defineProperty(obj, "toto", { value: "eit" });
-// modifie une propriété existante
+// Tente d'ajouter une propriété avec
+// Object.defineProperty va aussi échouer.
+Object.defineProperty(obj, "ohai", {
+  value: 17,
+}); // lève une TypeError
+Object.defineProperty(obj, "toto", {
+  value: "eit",
+}); // change la valeur de la propriété existante
 ```
 
-## Notes
+### Argument d'une valeur primitive
 
-Pour ES5, si l'argument passé à la méthode n'est pas un objet (mais une valeur d'un autre type primitif), cela entraînera une exception {{jsxref("TypeError")}}. Pour ES2015, un argument qui n'est pas un objet sera traité comme un objet ordinaire scellé et la méthode renverra cet objet.
+Dans ES5, si l'argument passé à cette méthode n'est pas un objet (un primitif), cela entraîne une exception {{JSxRef("TypeError")}}. Dans ES2015, elle retourne `false` sans aucune erreur si un argument non-objet est passé, puisque les primitifs sont, par définition, immuables.
 
 ```js
 Object.seal(1);
 // TypeError : 1 n'est pas un objet (code ES5)
 
 Object.seal(1);
-// 1 (code ES2015)
+// 1                                (code ES2015)
 ```
-
-### Comparaison avec `Object.freeze()`
-
-Lorsqu'on utilise la méthode {{jsxref("Object.freeze()")}}, les propriétés existantes d'un objet gelé deviennent immuables. En revanche, avec `Object.seal()`, il est toujours possible de modifier la valeur des propriétés existantes d'un objet scellé.
 
 ## Spécifications
 
@@ -130,8 +131,8 @@ Lorsqu'on utilise la méthode {{jsxref("Object.freeze()")}}, les propriétés ex
 
 ## Voir aussi
 
-- {{jsxref("Object.isSealed()")}}
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Object.freeze()")}}
-- {{jsxref("Object.isFrozen()")}}
+- La méthode statique {{JSxRef("Object.isSealed()")}}
+- La méthode statique {{JSxRef("Object.preventExtensions()")}}
+- La méthode statique {{JSxRef("Object.isExtensible()")}}
+- La méthode statique {{JSxRef("Object.freeze()")}}
+- La méthode statique {{JSxRef("Object.isFrozen()")}}

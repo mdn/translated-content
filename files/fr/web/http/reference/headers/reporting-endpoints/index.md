@@ -37,7 +37,7 @@ Reporting-Endpoints: <endpoint>, …, <endpointN>
 
 - `<endpoint>`
   - : Un point de terminaison de signalement au format `<endpoint-name>="<URL>"`.
-    Les points de terminaison doivent posséder des URI valides dans des chaînes de caractères entre guillemets (par exemple, `my-endpoint="https://exemple.com/rapports"`) et les points de terminaison non sécurisés sont ignorés.
+    Les points de terminaison doivent posséder des URI valides dans des chaînes de caractères entre guillemets (par exemple, `my-endpoint="https://example.com/rapports"`) et les points de terminaison non sécurisés sont ignorés.
     Une liste de points de terminaison séparés par des virgules peut être fournie.
 
 ## Description
@@ -52,7 +52,7 @@ Par exemple, l'en-tête {{HTTPHeader("Content-Security-Policy")}} permet de déf
 Le point de terminaison de rapport par défaut est simplement un rapport avec le nom `"default"`, comme indiqué&nbsp;:
 
 ```http
-Reporting-Endpoints: default="https://exemple.com/rapports"
+Reporting-Endpoints: default="https://example.com/rapports"
 ```
 
 Cela _peut_ être utilisé comme point de terminaison de signalement pour les cas où l'en-tête HTTP qui déclenche un rapport n'a pas de mécanisme pour signaler le point de terminaison, comme l'en-tête {{HTTPHeader("Permissions-Policy")}}.
@@ -65,7 +65,7 @@ Il peut également être utilisé comme point de terminaison pour les rapports o
 L'exemple suivant montre comment l'en-tête de réponse `Reporting-Endpoints` est utilisé conjointement avec l'en-tête {{HTTPHeader("Content-Security-Policy")}} pour indiquer où les rapports d'infraction CSP sont envoyés&nbsp;:
 
 ```http
-Reporting-Endpoints: csp-endpoint="https://exemple.com/csp-reports"
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
 Content-Security-Policy: default-src 'self'; report-to csp-endpoint
 ```
 
@@ -74,8 +74,8 @@ Content-Security-Policy: default-src 'self'; report-to csp-endpoint
 Il est possible de définir plusieurs points de terminaison pouvant être utilisés pour différents types de rapports de violation.
 
 ```http
-Reporting-Endpoints: csp-endpoint="https://exemple.com/csp-reports",
-                     permissions-endpoint="https://exemple.com/permissions-policy-reports"
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports",
+                     permissions-endpoint="https://example.com/permissions-policy-reports"
 ```
 
 ## Spécifications

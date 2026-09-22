@@ -2,14 +2,14 @@
 title: 201 Created
 slug: Web/HTTP/Reference/Status/201
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 HTTP の **`201 Created`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、 HTTP リクエストが成功してリソースの作成が完了したことを表します。
 このステータスコードの一般的な使用例は、 {{HTTPMethod("POST")}} リクエストの結果です。
 
 新しいリソース、または新しいリソースの説明とリンクは、レスポンスが返される前に作成されます。
-新しく作成されたアイテムは、メッセージ本体に返され、位置は**最初のリクエストの URL**、またはレスポンスの {{HTTPHeader("Location")}} ヘッダーの値の URL のどちらかになります。
+新しく生成されたアイテムは、レスポンスメッセージの本体で返すことができますが、**リクエスト元の URL**、またはレスポンスに含まれる {{HTTPHeader("Location")}} ヘッダーの値にある URL によって、そのアイテムが特定できる必要があります。
 
 ## ステータス
 

@@ -6,11 +6,11 @@ l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-Le rôle `document` est destiné au contenu sélectionnable au sein des [widgets](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/widget_role) ou [applications](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/application_role) composites complexes pour lesquels les technologies d'assistance peuvent revenir à un mode de lecture.
+Le rôle `document` est destiné au contenu sélectionnable au sein des [composants](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/widget_role) ou [applications](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/application_role) composites complexes pour lesquels les technologies d'assistance peuvent revenir à un mode de lecture.
 
 ## Description
 
-Le rôle `document` est destiné au conteneur principal contenant du contenu que les utilisateur·ice·s de technologies d'assistance peuvent vouloir parcourir en mode lecture. Il n'est utile que sur les sections sélectionnables au sein des [widgets](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/widget_role) ou [applications](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/application_role) composites complexes, le rôle `document` informe les technologies d'assistance de revenir au mode de lecture&nbsp;: le rôle `document` indique aux technologies d'assistance disposant de modes de lecture ou de navigation d'utiliser le mode document pour lire le contenu contenu dans cet élément.
+Le rôle `document` est destiné au conteneur principal contenant du contenu que les utilisateur·ice·s de technologies d'assistance peuvent vouloir parcourir en mode lecture. Il n'est utile que sur les sections sélectionnables au sein des [composants](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/widget_role) ou [applications](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/application_role) composites complexes, le rôle `document` informe les technologies d'assistance de revenir au mode de lecture&nbsp;: le rôle `document` indique aux technologies d'assistance disposant de modes de lecture ou de navigation d'utiliser le mode document pour lire le contenu contenu dans cet élément.
 
 ```html
 <div role="dialog">
@@ -23,17 +23,17 @@ Le rôle `document` est destiné au conteneur principal contenant du contenu que
 </div>
 ```
 
-Cet exemple montre un [dialog](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role), un rôle de widget composite complexe, avec quelques contrôles et une section contenant un texte informatif que l'utilisateur·ice de la technologie d'assistance peut lire en mode lecture lorsqu'il est sélectionné.
+Cet exemple montre un [dialog](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role), un rôle de composant composite complexe, avec quelques contrôles et une section contenant un texte informatif que l'utilisateur·ice de la technologie d'assistance peut lire en mode lecture lorsqu'il est sélectionné.
 
-Par défaut, les pages Web sont traitées comme des documents&nbsp;; les technologies d'assistance (<abbr>TA</abbr>) entrent en mode de navigation ou de lecture lorsqu'elles accèdent à une nouvelle page Web. Ce mode peut être modifié par divers rôles, y compris les rôles de widget et d'application. Le rôle `document` ramène les <abbr>TA</abbr> en mode de navigation ou de lecture.
+Par défaut, les pages Web sont traitées comme des documents&nbsp;; les technologies d'assistance (<abbr>TA</abbr>) entrent en mode de navigation ou de lecture lorsqu'elles accèdent à une nouvelle page Web. Ce mode peut être modifié par divers rôles, y compris les rôles de composant et d'application. Le rôle `document` ramène les <abbr>TA</abbr> en mode de navigation ou de lecture.
 
-Généralement placé dans un rôle d'application ou un autre rôle de widget interactif, le rôle `document` est utilisé pour indiquer une section d'un widget composite complexe que l'utilisateur·ice de la technologie d'assistance doit lire en utilisant son mode de navigation ou de lecture virtuelle, si disponible.
+Généralement placé dans un rôle d'application ou un autre rôle de composant interactif, le rôle `document` est utilisé pour indiquer une section d'un composant composite complexe que l'utilisateur·ice de la technologie d'assistance doit lire en utilisant son mode de navigation ou de lecture virtuelle, si disponible.
 
-Parce que les <abbr>TA</abbr> avec un mode de lecture par défaut à ce mode pour tous les éléments sauf ceux avec un rôle de widget ou d'application défini, le rôle de document n'est utile que pour les éléments sélectionnables au sein d'un widget ou d'une application qui doivent être lus comme du texte enrichi statique. Ajouter `role="document"` et `tabindex="0"` à l'élément contenant le texte dans un widget permet à l'utilisateur·ice de lecteur d'écran d'appuyer sur la touche Tab pour placer la sélection sur l'élément document et lire le texte avec le curseur de lecture du lecteur d'écran.
+Parce que les <abbr>TA</abbr> avec un mode de lecture par défaut à ce mode pour tous les éléments sauf ceux avec un rôle de composant ou d'application défini, le rôle de document n'est utile que pour les éléments sélectionnables au sein d'un composant ou d'une application qui doivent être lus comme du texte enrichi statique. Ajouter `role="document"` et `tabindex="0"` à l'élément contenant le texte dans un composant permet à l'utilisateur·ice de lecteur d'écran d'appuyer sur la touche Tab pour placer la sélection sur l'élément document et lire le texte avec le curseur de lecture du lecteur d'écran.
 
-Les technologies d'assistance doivent revenir au mode document, en interceptant éventuellement les contrôles réaffectés au contexte dynamique du parent, réactivant les événements d'entrée standard, tels que les événements de clavier flèche haut ou bas, pour contrôler le curseur de lecture.
+Les technologies d'assistance doivent revenir au mode document, en interceptant éventuellement les contrôles réaffectés au contexte dynamique du parent, réactivant les évènements d'entrée standard, tels que les évènements de clavier flèche haut ou bas, pour contrôler le curseur de lecture.
 
-En contraste avec le rôle [`article`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/article_role), le rôle `document` n'a aucune relation avec d'autres éléments ayant un rôle de document, il a simplement une relation avec le widget composite contenant. Un article peut avoir des articles associés.
+En contraste avec le rôle [`article`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/article_role), le rôle `document` n'a aucune relation avec d'autres éléments ayant un rôle de document, il a simplement une relation avec le composant composite contenant. Un article peut avoir des articles associés.
 
 ### Propriétés, états et rôles WAI-ARIA associés
 
@@ -49,7 +49,7 @@ L'élément doit être rendu sélectionnable en définissant l'attribut / paire 
 
 ### Fonctionnalités JavaScript requises
 
-Aucune, sauf si cela est requis par des attributs. Par exemple, si le `document` est pliable, alors l'état et la valeur de `aria-expanded` doivent être maintenus.
+Aucune, sauf si c'est requis par des attributs. Par exemple, si le `document` est pliable, alors l'état et la valeur de `aria-expanded` doivent être maintenus.
 
 ## Exemples
 
@@ -57,7 +57,7 @@ Un exemple est Gmail et la vue de conversation unique. GMail est une application
 
 ## Bonnes pratiques
 
-Assurez-vous toujours qu'un élément avec le rôle de document est sélectionnable, en définissant l'attribut `tabindex` avec une valeur de 0. Cela l'inclura également dans l'ordre de tabulation.
+Assurez-vous toujours qu'un élément avec le rôle de document est sélectionnable, en définissant l'attribut `tabindex` avec une valeur de 0. Cela l'inclut également dans l'ordre de tabulation.
 
 ### Avantages supplémentaires
 

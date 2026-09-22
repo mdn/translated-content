@@ -2,7 +2,7 @@
 title: 標準組み込みオブジェクト
 slug: Web/JavaScript/Reference/Global_Objects
 l10n:
-  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
 本章では JavaScript の標準組み込みオブジェクトについて、それらのメソッドやプロパティと共にすべて文書化しています。

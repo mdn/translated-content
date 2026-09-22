@@ -3,8 +3,6 @@ title: tabs
 slug: Mozilla/Add-ons/WebExtensions/API/tabs
 ---
 
-{{AddonSidebar}}
-
 Permet d'interagir avec le système d'onglets du navigateur.
 
 Vous pouvez utiliser cette API pour obtenir une liste des onglets ouverts, filtrés par différents critères, ainsi que pour ouvrir, mettre à jour, déplacer, recharger et supprimer des onglets. Vous ne pouvez pas accéder directement au contenu hébergé par les onglets à l'aide de cette API, mais vous pouvez insérer du JavaScript et du CSS dans les onglets en utilisant les API {{WebExtAPIRef("tabs.executeScript()")}} ou {{WebExtAPIRef("tabs.insertCSS()")}}.

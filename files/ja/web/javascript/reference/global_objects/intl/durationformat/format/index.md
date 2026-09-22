@@ -1,11 +1,10 @@
 ---
 title: Intl.DurationFormat.prototype.format()
+short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/format
 l10n:
-  sourceCommit: 415324c4a53612154ec3186c23fc7326676e53b0
+  sourceCommit: c43e46090257fbfd33c4dd5cac0cdbd1d5d1c274
 ---
-
-{{JSRef}}
 
 **`format()`** は {{jsxref("Intl.DurationFormat")}} インスタンスのメソッドで、この {{jsxref("Intl.DurationFormat")}} オブジェクトのロケールおよび書式設定オプションに従って経過時間を書式化します。
 
@@ -79,7 +78,7 @@ new Intl.DurationFormat("en", { style: "short" }).format(duration);
 
 // スタイルを "short" に設定し、ロケールを "pt" に設定
 new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
-// "1h 46min 40s"
+// "1 h 46 min 40 s"
 
 // スタイルを "digital" に設定し、ロケールを "en" に設定
 new Intl.DurationFormat("en", { style: "digital" }).format(duration);

@@ -51,23 +51,23 @@ src:
 - `tech()`
   - : Déclaration optionnelle qui suit la valeur `url()` et donne une indication à l'agent utilisateur sur la technologie de la police. La valeur pour `tech()` peut être l'un des mots-clés décrits dans [Technologies de police](#technologies_de_police).
 - `local(<font-face-name>)`
-  - : Spécifie le nom de la police si elle est disponible sur l'appareil de l'utilisateur·rice. Les guillemets autour du nom sont optionnels.
+  - : Spécifie le nom de la police si elle est disponible sur l'appareil de l'utilisateur·ice. Les guillemets autour du nom sont optionnels.
 
     > [!NOTE]
     > Pour les polices OpenType et TrueType, `<font-face-name>` sert à faire correspondre soit le nom Postscript, soit le nom complet de la police dans la table de noms des polices locales. Le type de nom utilisé varie selon la plateforme et la police, il est donc conseillé d'inclure les deux pour garantir la correspondance sur toutes les plateformes. Les substitutions de plateforme pour un nom donné ne doivent pas être utilisées.
 
     > [!NOTE]
-    > Les polices disponibles localement peuvent avoir été préinstallées sur l'appareil de l'utilisateur·rice ou installées activement par celle·celui-ci.
+    > Les polices disponibles localement peuvent avoir été préinstallées sur l'appareil de l'utilisateur·ice ou installées activement par celle·celui-ci.
     >
-    > Alors que l'ensemble des polices préinstallées est probablement identique pour tous les utilisateur·ice·s d'un même appareil, l'ensemble des polices installées par l'utilisateur·rice ne l'est pas. En découvrant cet ensemble, un site peut donc établir une {{Glossary("fingerprinting", "empreinte")}} pour l'appareil, ce qui aide le site à suivre les utilisateur·ice·s sur le web.
+    > Alors que l'ensemble des polices préinstallées est probablement identique pour tous les utilisateur·ice·s d'un même appareil, l'ensemble des polices installées par l'utilisateur·ice ne l'est pas. En découvrant cet ensemble, un site peut donc établir une {{Glossary("fingerprinting", "empreinte")}} pour l'appareil, ce qui aide le site à suivre les utilisateur·ice·s sur le web.
     >
-    > Pour éviter cela, les agents utilisateurs peuvent ignorer les polices installées par l'utilisateur·rice lors de l'utilisation de `local()`.
+    > Pour éviter cela, les agents utilisateurs peuvent ignorer les polices installées par l'utilisateur·ice lors de l'utilisation de `local()`.
 
 - `<font-face-name>`
   - : Définit le nom complet ou le nom Postscript d'une fonte installée localement via la valeur `local()`, ce qui identifie de façon unique une fonte au sein d'une famille plus large. Le nom peut être entouré de guillemets. Le nom de la fonte [n'est pas sensible à la casse](https://drafts.csswg.org/css-fonts-3/#font-family-casing).
 
 > [!NOTE]
-> L'{{DOMxRef("Local Font Access API", "API Local Font Access", "", "nocode")}} permet d'accéder aux données des polices installées localement par l'utilisateur·rice&nbsp;: cela inclut des détails de haut niveau comme les noms, styles et familles, ainsi que les octets bruts des fichiers de police sous-jacents.
+> L'{{DOMxRef("Local Font Access API", "API Local Font Access", "", "nocode")}} permet d'accéder aux données des polices installées localement par l'utilisateur·ice&nbsp;: cela inclut des détails de haut niveau comme les noms, styles et familles, ainsi que les octets bruts des fichiers de police sous-jacents.
 
 ## Description
 

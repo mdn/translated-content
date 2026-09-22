@@ -3,20 +3,20 @@ title: En-tête Device-Memory
 short-title: Device-Memory
 slug: Web/HTTP/Reference/Headers/Device-Memory
 l10n:
-  sourceCommit: b304d8d3c870fba028df550a51f5b4258ab3ac08
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{Non-standard_Header}}
 
 > [!WARNING]
 > L'en-tête `Device-Memory` a été standardisé sous le nom {{HTTPHeader("Sec-CH-Device-Memory")}} et ce nouveau nom est désormais privilégié.
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`Device-Memory`** est utilisé dans les [indications client pour les appareils](/fr/docs/Web/HTTP/Guides/Client_hints#indications_du_client_sur_lappareil) pour indiquer la quantité approximative de mémoire RAM disponible sur l'appareil client, en gigaoctets.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Device-Memory`** est utilisé dans les [indications client pour les appareils](/fr/docs/Web/HTTP/Guides/Client_hints#indications_du_client_sur_lappareil) pour indiquer la quantité approximative de mémoire RAM disponible sur l'appareil client, en gigaoctets.
 L'en-tête fait partie de {{DOMxRef("Device Memory API", "l'API Device Memory", "", "nocode")}}.
 
 Les indications client ne sont accessibles que sur des origines sécurisées.
 Un serveur doit activer la réception de l'en-tête `Device-Memory` envoyé par le client, en envoyant d'abord l'en-tête de réponse {{HTTPHeader("Accept-CH")}}.
-Les serveurs qui activent l'indication client `Device-Memory` la spécifient généralement aussi dans l'en-tête {{HTTPHeader("Vary")}} pour informer les caches que le serveur peut envoyer différentes réponses selon la valeur de l'en-tête dans une requête.
+Les serveurs qui activent l'indication client `Device-Memory` la définissant généralement aussi dans l'en-tête {{HTTPHeader("Vary")}} pour informer les caches que le serveur peut envoyer différentes réponses selon la valeur de l'en-tête dans une requête.
 
 <table class="properties">
   <tbody>
@@ -49,7 +49,7 @@ Device-Memory: <number>
     Les valeurs ne sont rapportées qu'en puissances de deux, et sont limitées à une valeur minimale et maximale définie par l'implémentation.
     Ces bornes peuvent évoluer au fil du temps (voir [tableau de compatibilité des navigateurs](#compatibilité_des_navigateurs)).
 
-    Par exemple, si un navigateur ne rapporte pas en dessous de `2` ou au-dessus de `32`, alors la valeur sera l'une des suivantes&nbsp;: `2`, `4`, `8`, `16`, `32`.
+    Par exemple, si un navigateur ne rapporte pas en dessous de `2` ou au-dessus de `32`, alors la valeur est l'une des suivantes&nbsp;: `2`, `4`, `8`, `16`, `32`.
 
 ## Exemples
 
@@ -59,7 +59,7 @@ Le serveur doit d'abord activer la réception de l'en-tête `Device-Memory` en e
 Accept-CH: Device-Memory
 ```
 
-Ensuite, lors des requêtes suivantes, le client peut renvoyer l'en-tête `Device-Memory`&nbsp;:
+Ensuite, lors des requêtes suivantes, le client peut retourner l'en-tête `Device-Memory`&nbsp;:
 
 ```http
 Device-Memory: 1

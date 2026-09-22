@@ -1,10 +1,12 @@
 ---
-title: -webkit-text-stroke-color
+title: CSS `-webkit-text-stroke-color` プロパティ
+short-title: -webkit-text-stroke-color
 slug: Web/CSS/Reference/Properties/-webkit-text-stroke-color
-original_slug: Web/CSS/-webkit-text-stroke-color
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-**`-webkit-text-stroke-color`** は CSS のプロパティで、テキストの文字の線の[色](/ja/docs/Web/CSS/Reference/Values/color_value)を示します。このプロパティが設定されない場合、 {{cssxref("color")}} プロパティの値が使用されます。
+**`-webkit-text-stroke-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの文字の線の[色](/ja/docs/Web/CSS/Reference/Values/color_value)を示します。このプロパティが設定されていない場合、{{cssxref("color")}} プロパティの値が使用されます。
 
 ## 構文
 
@@ -12,11 +14,13 @@ original_slug: Web/CSS/-webkit-text-stroke-color
 /* <color> 値 */
 -webkit-text-stroke-color: red;
 -webkit-text-stroke-color: #e08ab4;
--webkit-text-stroke-color: rgb(200, 100, 0);
+-webkit-text-stroke-color: rgb(200 100 0);
 
 /* グローバル値 */
 -webkit-text-stroke-color: inherit;
 -webkit-text-stroke-color: initial;
+-webkit-text-stroke-color: revert;
+-webkit-text-stroke-color: revert-layer;
 -webkit-text-stroke-color: unset;
 ```
 
@@ -51,13 +55,13 @@ p {
   margin: 0;
   font-size: 4em;
   -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #ff0000; /* ライブサンプルで変更可能 */
+  -webkit-text-stroke-color: red; /* ライブサンプルで変更可能 */
 }
 ```
 
 ```js hidden
-var colorPicker = document.querySelector("input");
-colorPicker.addEventListener("change", function (evt) {
+const colorPicker = document.querySelector("input");
+colorPicker.addEventListener("change", (evt) => {
   document.querySelector("p").style.webkitTextStrokeColor = evt.target.value;
 });
 ```
@@ -76,7 +80,7 @@ colorPicker.addEventListener("change", function (evt) {
 
 ## 関連情報
 
-- [Surfin' Safari blog post announcing this feature](https://www.webkit.org/blog/85/introducing-text-stroke/)
+- [Introducing Text-Stroke](https://webkit.org/blog/85/introducing-text-stroke/) - webkit.org (2006)
 - [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
 - {{cssxref("-webkit-text-fill-color")}}
 - {{cssxref("-webkit-text-stroke-width")}}

@@ -3,8 +3,6 @@ title: Reflect.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
 ---
 
-{{JSRef}}
-
 La méthode statique **`Reflect.ownKeys()`** renvoie un tableau qui contient les clés des propriétés propres (non héritées) de l'objet `cible`.
 
 {{InteractiveExample("JavaScript Demo: Reflect.ownKeys()")}}

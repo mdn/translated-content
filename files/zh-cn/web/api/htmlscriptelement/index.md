@@ -65,7 +65,7 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
     </tr>
     <tr>
       <td><code id="async_property">async</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td rowspan="2">
         <p>
           <strong
@@ -95,7 +95,7 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
     </tr>
     <tr>
       <td><code id="defer_property">defer</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
     </tr>
     <tr>
       <td>

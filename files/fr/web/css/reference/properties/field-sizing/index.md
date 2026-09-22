@@ -3,7 +3,7 @@ title: Propriété CSS `field-sizing`
 short-title: field-sizing
 slug: Web/CSS/Reference/Properties/field-sizing
 l10n:
-  sourceCommit: cd0d465d5512de499b5da36abc5735c14897af7c
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`field-sizing`** permet de contrôler le comportement de dimensionnement des éléments qui reçoivent une taille préférée par défaut, comme les éléments de contrôle de formulaire. Cette propriété permet de remplacer le comportement de dimensionnement par défaut, afin que les contrôles de formulaire s'ajustent à la taille de leur contenu.
@@ -26,6 +26,8 @@ field-sizing: unset;
 ```
 
 ### Valeurs
+
+La propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 - `content`
   - : Permet à l'élément d'ajuster sa taille pour s'adapter à son contenu.
@@ -100,7 +102,7 @@ Remarquez les points suivants concernant le HTML&nbsp;:
 
 - Les deux premiers champs n'ont pas de restrictions de longueur définies.
 - Le troisième champ (de type `tel`) a un attribut [`maxlength`](/fr/docs/Web/HTML/Reference/Elements/input#maxlength) défini, ce qui empêche la taille du champ d'augmenter lorsque la limite de caractères est atteinte.
-- Le `<textarea>` grandit dans la direction en ligne jusqu'à atteindre la contrainte {{CSSxRef("min-width")}} (définie dans le code CSS ci-dessous), puis commence à ajouter de nouvelles lignes dans la direction bloc pour contenir les caractères supplémentaires.
+- Le `<textarea>` grandit dans la direction en incise jusqu'à atteindre la contrainte {{CSSxRef("min-width")}} (définie dans le code CSS ci-dessous), puis commence à ajouter de nouvelles lignes dans la direction bloc pour contenir les caractères supplémentaires.
 - Le champ `email` a un texte d'exemple (placeholder). Cela fait que le champ est affiché assez grand pour montrer tout le texte d'exemple. Une fois le champ sélectionné et que l'utilisateur·ice commence à saisir, le champ change de taille pour la valeur de `min-width`. Le champ `text`, qui n'a pas de texte d'exemple, s'affiche initialement à `min-width`.
 
 #### CSS

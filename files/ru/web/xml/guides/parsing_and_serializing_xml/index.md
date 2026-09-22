@@ -87,7 +87,7 @@ var sXML = oSerializer.serializeToString(doc);
 var docHTML = document.documentElement.innerHTML;
 ```
 
-В результате docHTML представляет собой {{domxref ("DOMString")}}, содержащий HTML-код содержимого документа; то есть содержимое элемента {{HTMLElement ("body")}}.
+В результате docHTML представляет собой {{jsxref("String")}}, содержащий HTML-код содержимого документа; то есть содержимое элемента {{HTMLElement ("body")}}.
 
 Вы можете получить HTML, соответствующий \<body> и его потомкам, с помощью этого кода:
 

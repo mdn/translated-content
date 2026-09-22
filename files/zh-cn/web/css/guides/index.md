@@ -88,8 +88,6 @@ CSS 弹性盒布局（通常被称为 flexbox），是一种为用户界面设�
   - : 使用网格来搭建一些常见布局。
 - [子网格](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Subgrid)
   - : 解释怎样使用子网格值，属于网格布局第二版的一部分。
-- [砌体布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Masonry_layout) {{experimental_inline}}
-  - : 对于网格布局第三版中砌体布局特性的解释。
 
 ## 对齐
 

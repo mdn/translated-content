@@ -3,8 +3,6 @@ title: browsingData.removeCache()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 ---
 
-{{AddonSidebar}}
-
 Effacer le cache du navigateur.
 
 Notez que cette fonction puisse prendre un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, elle sera ignorée. Le cache entier est toujours effacé lors de l'utilisation de cette fonction.

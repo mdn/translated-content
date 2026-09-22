@@ -3,10 +3,10 @@ title: Propriété CSS `place-items`
 short-title: place-items
 slug: Web/CSS/Reference/Properties/place-items
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`place-items`** permet d'aligner les éléments à la fois dans les directions bloc et en ligne. Elle définit les valeurs des propriétés {{CSSxRef("align-items")}} et {{CSSxRef("justify-items")}}. Si la deuxième valeur n'est pas définie, la première valeur est également utilisée pour elle.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`place-items`** permet d'aligner les éléments à la fois dans les directions bloc et en incise (<i lang="en">inline</i> en anglais). Elle définit les valeurs des propriétés {{CSSxRef("align-items")}} et {{CSSxRef("justify-items")}}. Si la deuxième valeur n'est pas définie, la première valeur est également utilisée pour elle.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: place-items")}}
 
@@ -94,8 +94,8 @@ place-items: unset;
 
 L'une des formes suivantes&nbsp;:
 
-- Une seule valeur {{CSSxRef("align-items")}}, utilisée pour définir l'alignement dans les directions bloc et en ligne.
-- Une valeur {{CSSxRef("align-items")}}, qui définit l'alignement dans la direction bloc, suivie d'une valeur {{CSSxRef("justify-items")}}, qui définit l'alignement dans la direction en ligne.
+- Une seule valeur {{CSSxRef("align-items")}}, utilisée pour définir l'alignement dans les directions bloc et en incise.
+- Une valeur {{CSSxRef("align-items")}}, qui définit l'alignement dans la direction bloc, suivie d'une valeur {{CSSxRef("justify-items")}}, qui définit l'alignement dans la direction en incise.
 
 ## Définition formelle
 
@@ -109,7 +109,7 @@ L'une des formes suivantes&nbsp;:
 
 ### Placer les éléments dans un conteneur flexible
 
-Dans un conteneur flex, {{CSSxRef("justify-self")}} ou {{CSSxRef("justify-items")}} ne s'appliquent pas, car sur l'axe principal, les éléments sont traités comme un groupe. Par conséquent, la deuxième valeur sera ignorée.
+Dans un conteneur flex, {{CSSxRef("justify-self")}} ou {{CSSxRef("justify-items")}} ne s'appliquent pas, car sur l'axe principal, les éléments sont traités comme un groupe. Par conséquent, la deuxième valeur est ignorée.
 
 ```css hidden
 div > div {
@@ -223,7 +223,7 @@ values.addEventListener("change", (evt) => {
 
 ### Placer les éléments dans un conteneur de grille
 
-Le conteneur de grille suivant contient des éléments qui sont plus petits que les zones de grille dans lesquelles ils sont placés, donc `place-items` les déplacera dans les dimensions bloc et en ligne.
+Le conteneur de grille suivant contient des éléments qui sont plus petits que les zones de grille dans lesquelles ils sont placés, donc `place-items` les déplace dans les dimensions bloc et en incise.
 
 ```css hidden
 div > div {

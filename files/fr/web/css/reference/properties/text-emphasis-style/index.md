@@ -3,7 +3,7 @@ title: Propriété CSS `text-emphasis-style`
 short-title: text-emphasis-style
 slug: Web/CSS/Reference/Properties/text-emphasis-style
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-emphasis-style`** définit le type d'emphase utilisée. Celui-ci peut également être défini par la propriété raccourcie {{CSSxRef("text-emphasis")}}.
@@ -78,7 +78,7 @@ text-emphasis-style: unset;
 - `none`
   - : Aucune marque d'emphase.
 - `filled`
-  - : La forme est remplie avec une couleur unie. Si `filled` ou `open` est absent, ce sera la valeur par défaut.
+  - : La forme est remplie avec une couleur unie. Si `filled` ou `open` est absent, c'est la valeur par défaut.
 - `open`
   - : La forme est vide.
 - `dot`
@@ -90,7 +90,7 @@ text-emphasis-style: unset;
 - `triangle`
   - : Cette valeur permet d'afficher des marques en forme de triangles. Le triangle rempli correspond au caractère `'▲'` (`U+25B2`) et le triangle ouvert au caractère `'△'` (`U+25B3`).
 - `sesame`
-  - : Cette valeur permet d'afficher des marques en forme de points sésame :`'﹅'` (`U+FE45`) pour le caractère rempli et `'﹆'` (`U+FE46`) pour le caractère ouvert.
+  - : Cette valeur permet d'afficher des marques en forme de points sésame&nbsp;:`'﹅'` (`U+FE45`) pour le caractère rempli et `'﹆'` (`U+FE46`) pour le caractère ouvert.
 - `<string>`
   - : Affiche la chaîne de caractères donnée comme marques. Les auteur·ice·s ne doivent pas définir plus d'un _caractère_ dans `<string>`. L'agent utilisateur peut tronquer ou ignorer les chaînes de caractères composées de plus d'un groupe de graphèmes.
 

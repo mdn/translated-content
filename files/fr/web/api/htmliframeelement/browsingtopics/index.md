@@ -3,17 +3,15 @@ title: "HTMLIFrameElement : propriété browsingTopics"
 short-title: browsingTopics
 slug: Web/API/HTMLIFrameElement/browsingTopics
 l10n:
-  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
 > [!WARNING]
 > Cette fonctionnalité est actuellement contestée par deux éditeurs de navigateurs. Voir la section [Positions des standards](/fr/docs/Web/API/Topics_API#positions_des_standards) pour plus de détails sur l'opposition.
 
 La propriété **`browsingTopics`** de l'interface {{DOMxRef("HTMLIFrameElement")}} est un booléen indiquant que les sujets sélectionnés pour l'utilisateur·ice actuel·le doivent être envoyés avec la requête pour la source de l'élément {{HTMLElement("iframe")}} associé dans un en-tête {{HTTPHeader("Sec-Browsing-Topics")}}. Cela reflète l'attribut HTML `browsingtopics`.
-
-Voir [Utiliser l'API Topics](/fr/docs/Web/API/Topics_API/Using) pour plus de détails.
 
 ## Valeur
 
@@ -27,7 +25,7 @@ Définir `browsingtopics` à `true` puis charger le contenu de l'`<iframe>` de m
 
 ```html
 <iframe browsingtopics title="Conteneur publicitaire" src="ad-tech1.example">
-  ...
+  …
 </iframe>
 ```
 
@@ -35,7 +33,7 @@ Afficher la valeur de `browsingTopics` via un script&nbsp;:
 
 ```js
 const iframeElem = document.querySelector("iframe");
-console.log(iframeElem.browsingTopics); // retournera true dans les navigateurs compatibles
+console.log(iframeElem.browsingTopics); // retourne true dans les navigateurs compatibles
 ```
 
 ### Écriture
@@ -43,7 +41,7 @@ console.log(iframeElem.browsingTopics); // retournera true dans les navigateurs 
 Définir un `<iframe>` minimal&nbsp;:
 
 ```html
-<iframe> ... </iframe>
+<iframe> … </iframe>
 ```
 
 Définir `browsingtopics` à `true` puis charger le contenu de l'`<iframe>` via un script&nbsp;:

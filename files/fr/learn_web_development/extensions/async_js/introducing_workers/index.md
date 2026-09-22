@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ca269eb6b25f792eeb4f53bbca3e7be3b8c0f350
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS/Sequencing_animations", "Learn_web_development/Extensions/Async_JS")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS/Sequencing_animations", "Learn_web_development/Extensions/Async_JS")}}
 
 Dans ce dernier article de notre module sur le JavaScript asynchrone, nous présenterons les <i lang="en">workers</i> (qu'on pourrait traduire en français par _travailleurs_, moins usité), qui permettent d'exécuter certaines tâches dans un [fil d'exécution](/fr/docs/Glossary/Thread) séparé.
 

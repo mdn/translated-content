@@ -3,18 +3,18 @@ title: "Window : évènement rejectionhandled"
 short-title: rejectionhandled
 slug: Web/API/Window/rejectionhandled_event
 l10n:
-  sourceCommit: 2ccbd062264d0a2a34f185a3386cb272f42c50f5
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("HTML DOM")}}
 
 L'évènement **`rejectionhandled`** est envoyé à la portée globale du script (il s'agit généralement de {{DOMxRef("window")}}, mais ça peut aussi être {{DOMxRef("Worker")}}) lorsqu'une promesse ({{JSxRef("Promise")}}) rompue est gérée tardivement, c'est-à-dire lorsqu'un gestionnaire est attaché à la promesse après que celle-ci a échoué en entraînant un évènement {{DOMxRef("Window.unhandledrejection_event", "unhandledrejection")}}.
 
-Cet évènement peut être utilisé pour le débogage et pour la résilience des applications en général. On pourra l'utiliser avec l'évènement `unhandledrejection` qui est émis lorsqu'une promesse est rompue et qu'elle n'a pas de gestionnaire d'échec à ce moment.
+Cet évènement peut être utilisé pour le débogage et pour la résilience des applications en général. On peut l'utiliser avec l'évènement `unhandledrejection` qui est émis lorsqu'une promesse est rompue et qu'elle n'a pas de gestionnaire d'échec à ce moment.
 
 ## Syntaxe
 
-On pourra utiliser le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou utiliser une propriété qui est un gestionnaire d'évènement.
+On peut utiliser le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou utiliser une propriété qui est un gestionnaire d'évènement.
 
 ```js-nolint
 addEventListener("rejectionhandled", (event) => { })
@@ -27,13 +27,6 @@ onrejectionhandled = (event) => { }
 Un objet de type {{DOMxRef("PromiseRejectionEvent")}} qui hérite de {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("PromiseRejectionEvent")}}
-
-## Propriétés de l'évènement
-
-- {{DOMxRef("PromiseRejectionEvent.promise")}} {{ReadOnlyInline}}
-  - : La promesse ({{JSxRef("Promise")}}) JavaScript qui a été rompue.
-- {{DOMxRef("PromiseRejectionEvent.reason")}} {{ReadOnlyInline}}
-  - : Une valeur ou un objet ({{JSxRef("Object")}}) qui indique la raison de l'échec de la promesse, comme celui qui serait passé à {{JSxRef("Promise.reject()")}}.
 
 ## Alias pour les gestionnaires d'évènement
 

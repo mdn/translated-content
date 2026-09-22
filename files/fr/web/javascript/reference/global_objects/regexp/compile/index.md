@@ -3,8 +3,6 @@ title: RegExp.prototype.compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 ---
 
-{{JSRef}} {{deprecated_header}}
-
 La méthode dépréciée **`compile()`** est utilisée afin de (re)compiler une expression rationnelle lors de l'exécution d'un script. Cette méthode effectue essentiellement les mêmes actions que le constructeur `RegExp`.
 
 ## Syntaxe

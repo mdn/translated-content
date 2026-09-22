@@ -22,8 +22,8 @@ L'élément {{HTMLElement("dd")}} suivant (élément **Détails de la descriptio
   <dt>Denim (finition semi-brillante)</dt>
   <dd>Plafond</dd>
 
-  <dt>Denim (finition coquille d'oeuf)</dt>
-  <dt>Evening Sky (finition coquille d'oeuf)</dt>
+  <dt>Denim (finition coquille d'œuf)</dt>
+  <dt>Evening Sky (finition coquille d'œuf)</dt>
   <dd>Appliqué sur les murs</dd>
 </dl>
 ```
@@ -127,7 +127,7 @@ Pour des exemples, voir les [exemples fournis pour l'élément `<dl>`](/fr/docs/
 
 {{Specifications}}
 
-## Compatiblité des navigateurs
+## Compatibilité des navigateurs
 
 {{Compat}}
 

@@ -3,7 +3,7 @@ title: Propriété CSS `transform-style`
 short-title: transform-style
 slug: Web/CSS/Reference/Properties/transform-style
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`transform-style`** définit si les éléments-fils d'un éléments sont positionnés dans l'espace tridimensionnel ou s'ils sont aplatis dans le plan de l'élément.
@@ -45,7 +45,7 @@ transform-style: preserve-3d;
 }
 ```
 
-Si les éléments sont aplatis, les éléments-fils n'existeront pas dans leur propre espace tridimensionnel.
+Si les éléments sont aplatis, les éléments-fils n'existent pas dans leur propre espace tridimensionnel.
 
 Comme cette propriété n'est pas héritée, elle doit être définie pour tous les descendants non-feuilles de l'élément.
 
@@ -65,6 +65,8 @@ transform-style: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 - `flat`
   - : Indique que les fils de l'éléments sont positionnés dans le plan de l'élément.
@@ -100,7 +102,7 @@ La spécification répertorie certaines [valeurs de regroupement de propriétés
 
 Dans cet exemple, nous avons un cube 3D créé à l'aide de transformations. Le conteneur parent des faces du cube a `transform-style: preserve-3d` défini par défaut, il est donc transformé dans l'espace 3D et vous pouvez le voir comme prévu.
 
-Nous fournissons également une case à cocher permettant de basculer entre cela et `transform-style: flat`. Dans cet état alternatif, les faces du cube sont toutes aplaties sur le plan de leur parent, et vous pourriez ne pas être en mesure de les voir du tout, selon le navigateur que vous utilisez.
+Nous fournissons également une case à cocher permettant de basculer entre cela et `transform-style: flat`. Dans cet état alternatif, les faces du cube sont toutes aplaties sur le plan de leur parent, et vous pouvez ne pas être en mesure de les voir du tout, selon le navigateur que vous utilisez.
 
 #### HTML
 

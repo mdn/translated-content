@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Performance API")}}{{Deprecated_Header}}
+{{APIRef("Performance API")}}
 
 > [!WARNING]
 > このプロパティのこのインターフェイスは、[Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete) で非推奨になりました。

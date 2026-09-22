@@ -16,16 +16,16 @@ La méthode statique **`Math.atanh()`** retourne l'arc tangente hyperbolique d'u
 
 ```js interactive-example
 console.log(Math.atanh(-1));
-// Sortie attendue : -Infinity
+// Résultat attendu : -Infinity
 
 console.log(Math.atanh(0));
-// Sortie attendue : 0
+// Résultat attendu : 0
 
 console.log(Math.atanh(0.5));
-// Sortie attendue : 0.549306144334055 (approximativement)
+// Résultat attendu : 0.549306144334055 (approximativement)
 
 console.log(Math.atanh(1));
-// Sortie attendue : Infinity
+// Résultat attendu : Infinity
 ```
 
 ## Syntaxe

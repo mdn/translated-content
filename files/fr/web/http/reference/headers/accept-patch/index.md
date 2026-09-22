@@ -3,10 +3,10 @@ title: En-tête Accept-Patch
 short-title: Accept-Patch
 slug: Web/HTTP/Reference/Headers/Accept-Patch
 l10n:
-  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Accept-Patch`** indique quels [types de média](/fr/docs/Web/HTTP/Guides/MIME_types) le serveur est capable de comprendre dans une requête {{HTTPMethod("PATCH")}}.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Accept-Patch`** indique quels [types de média](/fr/docs/Web/HTTP/Guides/MIME_types) le serveur est capable de comprendre dans une requête {{HTTPMethod("PATCH")}}.
 Par exemple, un serveur recevant une requête `PATCH` avec un type de média non pris en charge peut répondre avec {{HTTPStatus("415", "415 Unsupported Media Type")}} et un en-tête `Accept-Patch` référençant un ou plusieurs types de média pris en charge.
 
 L'en-tête doit apparaître dans les requêtes {{HTTPMethod("OPTIONS")}} vers une ressource qui prend en charge la méthode `PATCH`.

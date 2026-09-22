@@ -84,5 +84,5 @@ current = segments.containing(current.index + current.segment.length);
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Segmenter")}}
+- L'objet natif {{JSxRef("Intl.Segmenter")}}
 - La méthode {{JSxRef("Intl.Segmenter.prototype.segment()")}}

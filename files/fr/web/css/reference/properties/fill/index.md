@@ -3,14 +3,14 @@ title: Propriété CSS `fill`
 short-title: fill
 slug: Web/CSS/Reference/Properties/fill
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 9505c8d1370343fb65affa01657f27751ab59103
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`fill`** définit comment le contenu textuel SVG et l'intérieur des formes SVG sont remplis ou peints. Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("fill")}} de l'élément.
 
 Les zones à l'intérieur du contour de la forme ou du texte SVG sont peintes. Ce qui est «&nbsp;à l'intérieur&nbsp;» d'une forme n'est pas toujours évident. Les chemins qui définissent une forme peuvent se chevaucher. Les zones considérées comme «&nbsp;intérieures&nbsp;» à ces formes complexes sont précisées par la propriété ou l'attribut {{CSSxRef("fill-rule")}}.
 
-Si des sous-chemins sont ouverts, `fill` ferme le chemin avant de peindre, comme si une commande «&nbsp;closepath&nbsp;» était incluse pour relier le dernier point du sous-chemin au premier. Autrement dit, `fill` s'applique aux sous-chemins ouverts dans les éléments `path` (c'est-à-dire les sous-chemins sans commande closepath) et aux éléments `polyline`.
+Si des sous-chemins sont ouverts, `fill` ferme le chemin avant de peindre, comme si une commande «&nbsp;closepath&nbsp;» est incluse pour relier le dernier point du sous-chemin au premier. Autrement dit, `fill` s'applique aux sous-chemins ouverts dans les éléments `path` (c'est-à-dire les sous-chemins sans commande `closepath`) et aux éléments `polyline`.
 
 > [!NOTE]
 > La propriété `fill` ne s'applique qu'aux éléments {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}} et {{SVGElement("tspan")}} imbriqués dans un {{SVGElement("svg")}}. Elle ne s'applique pas aux autres éléments SVG, HTML ou pseudo-éléments.
@@ -45,6 +45,8 @@ fill: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme une seule valeur parmi la liste suivante ou comme deux valeurs lorsqu'on utilise `<url>`&nbsp;:
+
 - `none`
   - : Aucun `fill` n'est appliqué&nbsp;; les zones à l'intérieur du contour, s'il y en a, sont transparentes.
 
@@ -58,7 +60,7 @@ fill: unset;
   - : La couleur du remplissage, comme toute valeur CSS {{CSSxRef("color_value", "&lt;color>")}} valide.
 
 - `<url>`
-  - : Une référence URL vers un élément serveur de peinture SVG, tel qu'un {{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}} ou {{SVGElement("pattern")}}. La ressource référencée peut être suivie d'une valeur `<color>` ou `none`, qui sera utilisée en repli si le serveur de peinture référencé ne se résout pas.
+  - : Une référence URL vers un élément serveur de peinture SVG, tel qu'un {{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}} ou {{SVGElement("pattern")}}. La ressource référencée peut être suivie d'une valeur `<color>` ou `none`, qui est utilisée en repli si le serveur de peinture référencé ne se résout pas.
 
 ## Definition formelle
 
@@ -183,7 +185,7 @@ circle {
 
 {{EmbedLiveSample("Utiliser les valeurs de mot-clé pour le remplissage", 300, 170)}}
 
-Remarquez que le premier chemin a un fond transparent car le `fill` est `none`, ce qui remplace la valeur par défaut `fill` de `black`. Les cercles sont remplis avec la couleur du contour. Si vous changez la valeur en `context-fill`, les cercles seront transparents, `lightgreen` et `lightblue` au lieu de `red`, `green` et `blue`.
+Remarquez que le premier chemin a un fond transparent, car le `fill` est `none`, ce qui remplace la valeur par défaut `fill` de `black`. Les cercles sont remplis avec la couleur du contour. Si vous changez la valeur en `context-fill`, les cercles sont transparents, `lightgreen` et `lightblue` au lieu de `red`, `green` et `blue`.
 
 ### Remplissages et valeurs de repli
 

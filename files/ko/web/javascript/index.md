@@ -64,7 +64,7 @@ JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이
 - [JavaScript 데이터 구조](/ko/docs/Web/JavaScript/Guide/Data_structures)
   - : JavaScript에서 이용 가능한 데이터 구조 개요입니다.
 - [동등성 비교 및 동일성](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
-  - : JavaScript는 `===`를 사용한 완전 동등, `==`를 사용한 느슨한 동등, 그리고 {{jsxref("Global_Objects/Object/is", "Object.is()")}} 메서드의 세 가지 값 비교 연산을 제공합니다.
+  - : JavaScript는 `===`를 사용한 완전 동등, `==`를 사용한 느슨한 동등, 그리고 {{jsxref("Object.is()")}} 메서드의 세 가지 값 비교 연산을 제공합니다.
 - [속성의 열거 가능성과 소유권](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
   - : 객체 속성 그룹을 하나씩 방문하는 다양한 방법이 속성의 열거 가능성과 소유권을 처리하는 방법입니다.
 - [클로저](/ko/docs/Web/JavaScript/Guide/Closures)
@@ -88,7 +88,7 @@ JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이
 - [표준 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects)
   - : {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}} 등 표준 내장 객체를 배웁니다.
 - [표현식 및 연산자](/ko/docs/Web/JavaScript/Reference/Operators)
-  - : JavaScript 연산자 {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}의 동작, [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence) 등을 배웁니다.
+  - : JavaScript 연산자 {{jsxref("instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("new")}}, {{jsxref("this")}}의 동작, [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence) 등을 배웁니다.
 - [명령문 및 선언문](/ko/docs/Web/JavaScript/Reference/Statements)
   - : {{jsxref("Statements/do...while", "do-while")}}, {{jsxref("Statements/for...in", "for-in")}}, {{jsxref("Statements/for...of", "for-of")}}, {{jsxref("Statements/try...catch", "try-catch")}}, {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/var", "var")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/if...else", "if-else")}}, {{jsxref("Statements/switch", "switch")}} 등의 JavaScript의 구문 및 키워드 작동법을 배웁니다.
 - [함수](/ko/docs/Web/JavaScript/Reference/Functions)

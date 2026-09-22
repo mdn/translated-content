@@ -1,13 +1,14 @@
 ---
-title: Firefox 113 for developers
+title: Firefox 113 開発者向けリリースノート
+short-title: Firefox 113
 slug: Mozilla/Firefox/Releases/113
 l10n:
-  sourceCommit: 14c50bd73f6fee50b35b95b9fbb52387ff443321
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 このページでは、開発者に影響する Firefox 113 の変更点をまとめています。Firefox 113 は、米国時間 2023 年 5 月 9 日にリリースされました。
 
-## ウェブ開発者向けの変更点一覧
+## ウェブ開発者向けの変更点
 
 ### HTML
 
@@ -16,7 +17,7 @@ l10n:
 ### CSS
 
 - [`color()`](/ja/docs/Web/CSS/Reference/Values/color_value/color)、[`lab()`](/ja/docs/Web/CSS/Reference/Values/color_value/lab)、[`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch)、[`oklab()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklab)、[`oklch()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklch)、[`color-mix()`](/ja/docs/Web/CSS/Reference/Values/color_value/color-mix) 関数記法を、[`forced-color-adjust`](/ja/docs/Web/CSS/Reference/Properties/forced-color-adjust) プロパティと合わせてサポートしました。
-  関数記法について、詳しくは [CSS color 値](/ja/docs/Web/CSS/Reference/Values/color_value) の文書をご覧ください。
+  関数記法について、詳しくは [CSS 色値](/ja/docs/Web/CSS/Reference/Values/color_value) のドキュメントをご覧ください。
   ([Firefox bug 1352753](https://bugzil.la/1352753)、[Firefox bug 1813497](https://bugzil.la/1813497)、[Firefox bug 1818819](https://bugzil.la/1818819)、[Firefox bug 1824526](https://bugzil.la/1824526))
 - [`:nth-child of <selector>` 構文](/ja/docs/Web/CSS/Reference/Selectors/:nth-child#the_of_selector_syntax) で、定義したセレクターにも一致する、`An+B` 規則に基づく子要素のグループを対象にできるようになりました。
   詳しくは ([Firefox bug 1808229](https://bugzil.la/1808229)) をご覧ください。
@@ -39,7 +40,7 @@ l10n:
 #### Media、WebRTC、Web Audio
 
 - [AV1 動画コーデック](/ja/docs/Web/Media/Guides/Formats/Video_codecs#av1) を Android で有効化しました。デバイスがサポートしていれば、デコードでハードウェアアクセラレーションを使用します ([Firefox bug 1672276](https://bugzil.la/1672276))。
-- 以下の WebRTC メソッド、プロパティおよびディクショナリーをサポートしました: [`RTCRtpSender.getCapabilities()`](/ja/docs/Web/API/RTCRtpSender/getCapabilities_static)、[`RTCRtpReceiver.getCapabilities()`](/ja/docs/Web/API/RTCRtpReceiver/getCapabilities_static)、[`RTCRtpSender.setStreams()`](/ja/docs/Web/API/RTCRtpSender/setStreams)、[`RTCSctpTransport`](/ja/docs/Web/API/RTCSctpTransport)、[`RTCPeerConnection.sctp`](/ja/docs/Web/API/RTCPeerConnection/sctp)、[`RTCMediaSourceStats`](/ja/docs/Web/API/RTCMediaSourceStats)、[`RTCPeerConnection.connectionState`](/ja/docs/Web/API/RTCPeerConnection/connectionState)、[`RTCPeerConnectionStats`](/ja/docs/Web/API/RTCPeerConnectionStats)。
+- 以下の WebRTC メソッド、プロパティおよびディクショナリーをサポートしました: [`RTCRtpSender.getCapabilities()`](/ja/docs/Web/API/RTCRtpSender/getCapabilities_static)、[`RTCRtpReceiver.getCapabilities()`](/ja/docs/Web/API/RTCRtpReceiver/getCapabilities_static)、[`RTCRtpSender.setStreams()`](/ja/docs/Web/API/RTCRtpSender/setStreams)、[`RTCSctpTransport`](/ja/docs/Web/API/RTCSctpTransport)、[`RTCPeerConnection.sctp`](/ja/docs/Web/API/RTCPeerConnection/sctp)、{{domxref("RTCVideoSourceStats")}} & {{domxref("RTCAudioSourceStats")}}、[`RTCPeerConnection.connectionState`](/ja/docs/Web/API/RTCPeerConnection/connectionState)、[`RTCPeerConnectionStats`](/ja/docs/Web/API/RTCPeerConnectionStats)。
   それぞれに対応するバグ報告は、[Firefox bug 1531460](https://bugzil.la/1531460)、[Firefox bug 1510802](https://bugzil.la/1510802)、[Firefox bug 1278299](https://bugzil.la/1278299)、[Firefox bug 1804678](https://bugzil.la/1804678)、[Firefox bug 1265827](https://bugzil.la/1265827)、[Firefox bug 1531087](https://bugzil.la/1531087) です。
 
 #### 廃止
@@ -71,6 +72,8 @@ l10n:
 - {{WebExtAPIRef("declarativeNetRequest")}} API をサポートしました ([Firefox bug 1782685](https://bugzil.la/1782685))。
 - [`browser_specific_settings`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーに `gecko_android` サブキーを追加しました。このサブキーで、拡張機能と互換性がある Android 版 Firefox のバージョンの範囲を指定できます ([Firefox bug 1824237](https://bugzil.la/1824237))。
 
-## 過去のバージョン
+## その他
 
-{{Firefox_for_developers(112)}}
+- アニメーション付き [AVIF](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_image)（AV1 画像形式のファイル）画像に対応しました。
+  前回は、これらは静止画像として表示され、ウェブページ側でこれを検知して別の書式化に切り替える方法がありませんでした。
+  ([Firefox バグ 1825580](https://bugzil.la/1825580))

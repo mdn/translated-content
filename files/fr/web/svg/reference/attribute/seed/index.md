@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/seed
 original_slug: Web/SVG/Attribute/seed
 ---
 
-{{SVGRef}}
-
 « [Page de référence des attributs SVG](/fr/docs/Web/SVG/Reference/Attribute)
 
 L'attribut `seed` représente le nombre palier pour la pseudo génération d'un nombre aléatoire via la primitive {{SVGElement("feTurbulence")}}.

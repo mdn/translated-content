@@ -1,528 +1,192 @@
 ---
-title: WebKit の CSS 拡張
+title: WebKit (-webkit-) ベンダー接頭辞付きの CSS 拡張
 slug: Web/CSS/Reference/Webkit_extensions
-original_slug: Web/CSS/WebKit_Extensions
+l10n:
+  sourceCommit: 0d155984425e8964c889efb63ec39593e11bbc14
 ---
 
-Safari や Chrome のような WebKit または blink ベースのアプリケーションは、数多くの特殊な **[CSS](/ja/docs/Web/CSS) の WebKit 拡張**に対応しています。これらの拡張には一般に `-webkit-` の接頭辞が付きます。 `-webkit-` の接頭辞が付いたプロパティの多くは `-apple-` の接頭辞でも動作します。少数ながら `-epub-` の接頭辞も存在します。
+{{glossary("vendor prefix", "ベンダー接頭辞")}}は、ある機能が特定のブラウザーに固有であることを示すために使用されます。
+WebKit や Blink をベースとするユーザーエージェント（Safari や Chrome など）は、[CSS](/ja/docs/Web/CSS) に対するいくつかの拡張機能を対応しており、これらには `-webkit-` という接頭辞が付いています。
 
-## WebKit 独自のプロパティ
+## 標準化された同等物のない -webkit- 接頭辞付きプロパティ
 
 > [!NOTE]
-> ウェブサイトで使用しないでください。これらのプロパティは WebKit アプリケーションでしか動作しません。
+> これらのプロパティは、対応状況の注記に別段の記載がない限り、WebKit または Blink ベースのブラウザーで動作します。
+> 本番環境のウェブサイトでは、これらのプロパティの使用を避けるべきです。
 
-### A
+### A-C
 
-- {{CSSxRef("-webkit-animation-trigger", "-webkit-animation-trigger")}}
-- {{CSSxRef("-webkit-app-region", "-webkit-app-region")}}
-- {{CSSxRef("appearance", "-webkit-appearance")}}\*
-- {{CSSxRef("-webkit-aspect-ratio", "-webkit-aspect-ratio")}}
+- `-webkit-app-region` {{deprecated_inline}}: Safari では対応終了。
+- `-webkit-border-horizontal-spacing`
+- `-webkit-border-vertical-spacing`
+- {{CSSxRef("-webkit-box-reflect")}}: 互換性のため、すべてのブラウザーで `-webkit-` 付きで対応。
+- `-webkit-column-axis`: Chrome では未対応。
+- `-webkit-column-progression`: Chrome では未対応。
+- `-webkit-cursor-visibility`: Chrome では未対応。
 
-### B
+### D-L
 
-- {{CSSxRef("-webkit-backdrop-filter", "-webkit-backdrop-filter")}}
-- {{CSSxRef("-webkit-background-composite", "-webkit-background-composite")}}
-- {{CSSxRef("border-block-end","-webkit-border-after")}}
-- {{CSSxRef("border-block-end-color","-webkit-border-after-color")}}
-- {{CSSxRef("border-block-end-style","-webkit-border-after-style")}}
-- {{CSSxRef("border-block-end-width","-webkit-border-after-width")}}
-- {{CSSxRef("border-block-start","-webkit-border-before")}}
-- {{CSSxRef("border-block-start-color","-webkit-border-before-color")}}
-- {{CSSxRef("border-block-start-style","-webkit-border-before-style")}}
-- {{CSSxRef("border-block-start-width","-webkit-border-before-width")}}
-- {{CSSxRef("border-inline-end", "-webkit-border-end")}}
-- {{CSSxRef("border-inline-end-color","-webkit-border-end-color")}}
-- {{CSSxRef("border-inline-end-style","-webkit-border-end-style")}}
-- {{CSSxRef("border-inline-end-width","-webkit-border-end-width")}}
-- {{CSSxRef("border-image-repeat", "-webkit-border-fit")}}
-- {{CSSxRef("-webkit-border-horizontal-spacing", "-webkit-border-horizontal-spacing")}}
-- {{CSSxRef("border-inline-start", "-webkit-border-start")}}
-- {{CSSxRef("border-inline-start-color", "-webkit-border-start-color")}}
-- {{CSSxRef("border-inline-start-style", "-webkit-border-start-style")}}
-- {{CSSxRef("border-inline-start-width", "-webkit-border-start-width")}}
-- {{CSSxRef("-webkit-border-vertical-spacing", "-webkit-border-vertical-spacing")}}
-- {{CSSxRef("align-items","-webkit-box-align")}}
-- {{CSSxRef("flex-direction", "-webkit-box-direction")}}
-- {{CSSxRef("-webkit-box-flex-group", "-webkit-box-flex-group")}}
-- {{CSSxRef("flex-grow", "-webkit-box-flex")}}
-- {{CSSxRef("flex-flow", "-webkit-box-lines")}}
-- {{CSSxRef("order", "-webkit-box-ordinal-group")}}
-- {{CSSxRef("flex-direction","-webkit-box-orient")}}
-- {{CSSxRef("justify-content", "-webkit-box-pack")}}
-- {{CSSxRef("-webkit-box-reflect", "-webkit-box-reflect")}}
-
-### C
-
-- {{CSSxRef("-webkit-column-axis", "-webkit-column-axis")}}
-- {{CSSxRef("-webkit-column-break-after", "-webkit-column-break-after")}}
-- {{CSSxRef("-webkit-column-break-before", "-webkit-column-break-before")}}
-- {{CSSxRef("-webkit-column-break-inside", "-webkit-column-break-inside")}}
-- {{CSSxRef("-webkit-column-progression", "-webkit-column-progression")}}
-- {{CSSxRef("-webkit-cursor-visibility", "-webkit-cursor-visibility")}}
-
-### D-I
-
-- {{CSSxRef("-webkit-dashboard-region", "-webkit-dashboard-region")}}
-- {{CSSxRef("-webkit-font-size-delta", "-webkit-font-size-delta")}}
-- {{CSSxRef("font-smooth", "-webkit-font-smoothing")}}
-- {{CSSxRef("-webkit-highlight", "-webkit-highlight")}}
-- {{CSSxRef("-webkit-hyphenate-character", "-webkit-hyphenate-character")}}
-- {{CSSxRef("-webkit-hyphenate-limit-after", "-webkit-hyphenate-limit-after")}}
-- {{CSSxRef("-webkit-hyphenate-limit-before", "-webkit-hyphenate-limit-before")}}
-- {{CSSxRef("-webkit-hyphenate-limit-lines", "-webkit-hyphenate-limit-lines")}}
-- {{CSSxRef("-webkit-initial-letter", "-webkit-initial-letter")}}
-
-### L
-
-- {{CSSxRef("-webkit-line-align", "-webkit-line-align")}}
-- {{CSSxRef("-webkit-line-box-contain", "-webkit-line-box-contain")}}
-- {{CSSxRef("-webkit-line-clamp", "-webkit-line-clamp")}}
-- {{CSSxRef("-webkit-line-grid", "-webkit-line-grid")}}
-- {{CSSxRef("-webkit-line-snap", "-webkit-line-snap")}}
-- {{CSSxRef("-webkit-locale", "-webkit-locale")}}
-- {{CSSxRef("-webkit-logical-height", "-webkit-logical-height")}}
-- {{CSSxRef("-webkit-logical-width", "-webkit-logical-width")}}
+- `-webkit-font-smoothing`: {{CSSxRef("font-smooth")}} を参照。
+- `-webkit-hyphenate-limit-after`: Chrome では未対応。
+- `-webkit-hyphenate-limit-before`: Chrome では未対応。
+- `-webkit-hyphenate-limit-lines`: Chrome では未対応。
+- `-webkit-line-align`: Chrome では未対応。
+- `-webkit-line-box-contain`: Chrome では未対応。
+- `-webkit-line-grid`: Chrome では未対応。
+- `-webkit-line-snap`: Chrome では未対応。
+- `-webkit-locale`
+- `-webkit-logical-height`
+- `-webkit-logical-width`
 
 ### M
 
-- {{CSSxRef("-webkit-margin-after-collapse", "-webkit-margin-after-collapse")}}
-- {{CSSxRef("-webkit-margin-after", "-webkit-margin-after")}}
-- {{CSSxRef("-webkit-margin-before-collapse", "-webkit-margin-before-collapse")}}
-- {{CSSxRef("-webkit-margin-before", "-webkit-margin-before")}}
-- {{CSSxRef("-webkit-margin-bottom-collapse", "-webkit-margin-bottom-collapse")}}
-- {{CSSxRef("-webkit-margin-collapse", "-webkit-margin-collapse")}}
-- {{CSSxRef("margin-block-end", "-webkit-margin-end")}}
-- {{CSSxRef("margin-block-start", "-webkit-margin-start")}}
-- {{CSSxRef("-webkit-margin-top-collapse", "-webkit-margin-top-collapse")}}
-- {{CSSxRef("-webkit-marquee-direction", "-webkit-marquee-direction")}}
-- {{CSSxRef("-webkit-marquee-increment", "-webkit-marquee-increment")}}
-- {{CSSxRef("-webkit-marquee-repetition", "-webkit-marquee-repetition")}}
-- {{CSSxRef("-webkit-marquee-speed", "-webkit-marquee-speed")}}
-- {{CSSxRef("-webkit-marquee-style", "-webkit-marquee-style")}}
-- {{CSSxRef("-webkit-marquee", "-webkit-marquee")}}
-- {{CSSxRef("-webkit-mask-box-image-outset", "-webkit-mask-box-image-outset")}}
-- {{CSSxRef("-webkit-mask-box-image-repeat", "-webkit-mask-box-image-repeat")}}
-- {{CSSxRef("-webkit-mask-box-image-slice", "-webkit-mask-box-image-slice")}}
-- {{CSSxRef("-webkit-mask-box-image-source", "-webkit-mask-box-image-source")}}
-- {{CSSxRef("-webkit-mask-box-image-width", "-webkit-mask-box-image-width")}}
-- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image")}}
-- {{CSSxRef("-webkit-mask-repeat-x", "-webkit-mask-repeat-x")}}
-- {{CSSxRef("-webkit-mask-repeat-y", "-webkit-mask-repeat-y")}}
-- {{CSSxRef("-webkit-mask-source-type", "-webkit-mask-source-type")}}
-- {{CSSxRef("-webkit-max-logical-height", "-webkit-max-logical-height")}}
-- {{CSSxRef("-webkit-max-logical-width", "-webkit-max-logical-width")}}
-- {{CSSxRef("-webkit-min-logical-height", "-webkit-min-logical-height")}}
-- {{CSSxRef("-webkit-min-logical-width", "-webkit-min-logical-width")}}
-
-### N
-
-- {{CSSxRef("-webkit-nbsp-mode", "-webkit-nbsp-mode")}}
-
-### P
-
-- {{CSSxRef("padding-block-end","-webkit-padding-after")}}
-- {{CSSxRef("padding-block-start","-webkit-padding-before")}}
-- {{CSSxRef("padding-inline-end","-webkit-padding-end")}}
-- {{CSSxRef("padding-inline-start","-webkit-padding-start")}}
-- {{CSSxRef("-webkit-perspective-origin-x", "-webkit-perspective-origin-x")}}
-- {{CSSxRef("-webkit-perspective-origin-y", "-webkit-perspective-origin-y")}}
-- {{CSSxRef("-webkit-print-color-adjust", "-webkit-print-color-adjust")}}
-
-### R-S
-
-- {{CSSxRef("-webkit-rtl-ordering", "-webkit-rtl-ordering")}}
-- {{CSSxRef("-webkit-svg-shadow", "-webkit-svg-shadow")}}
-
-### T
-
-- {{CSSxRef("-webkit-tap-highlight-color", "-webkit-tap-highlight-color")}}
-- {{CSSxRef("-webkit-text-combine", "-webkit-text-combine")}}
-- {{CSSxRef("-webkit-text-decoration-skip", "-webkit-text-decoration-skip")}}
-- {{CSSxRef("-webkit-text-decorations-in-effect", "-webkit-text-decorations-in-effect")}}
-- {{CSSxRef("-webkit-text-fill-color", "-webkit-text-fill-color")}}
-- {{CSSxRef("-webkit-text-security", "-webkit-text-security")}}
-- {{CSSxRef("-webkit-text-stroke-color", "-webkit-text-stroke-color")}}
-- {{CSSxRef("-webkit-text-stroke-width", "-webkit-text-stroke-width")}}
-- {{CSSxRef("-webkit-text-stroke", "-webkit-text-stroke")}}
-- {{CSSxRef("-webkit-text-zoom", "-webkit-text-zoom")}}
-- {{CSSxRef("-webkit-transform-origin-x", "-webkit-transform-origin-x")}}
-- {{CSSxRef("-webkit-transform-origin-y", "-webkit-transform-origin-y")}}
-- {{CSSxRef("-webkit-transform-origin-z", "-webkit-transform-origin-z")}}
-
-### U
-
-- {{CSSxRef("-webkit-user-drag", "-webkit-user-drag")}}
-- {{CSSxRef("-webkit-user-modify", "-webkit-user-modify")}}
-
-\* 一部は標準化され、接頭辞がなくなりました。
-新しい構文が標準化されています。プロパティは新しい構文にリンクしています。古い構文は一部のブラウザーが対応しています。
-
-## 標準化過程にある WebKit の接頭辞のついたプロパティ
-
-- {{CSSxRef("appearance", "-webkit-appearance")}}
-- {{CSSxRef("-webkit-font-size-delta", "-webkit-font-size-delta")}}
-- {{CSSxRef("-webkit-mask-composite", "-webkit-mask-composite")}}
-- {{CSSxRef("-webkit-mask-position-x", "-webkit-mask-position-x")}}
-- {{CSSxRef("-webkit-mask-position-y", "-webkit-mask-position-y")}}
-- {{CSSxRef("-webkit-mask-repeat-x", "-webkit-mask-repeat-x")}}
-- {{CSSxRef("-webkit-mask-repeat-y", "-webkit-mask-repeat-y")}}
-
-## 以前は独自プロパティであったものが標準化されたもの
-
-> [!NOTE]
-> CSS の互換性を最大化するために、以下に挙げた接頭辞付きのプロパティの代わりに接頭辞のない標準のプロパティを使用してください。
-
-### A
-
-- {{CSSxRef("align-content","-webkit-align-content")}}
-- {{CSSxRef("align-items","-webkit-align-items")}}
-- {{CSSxRef("align-self","-webkit-align-self")}}
-- {{CSSxRef("animation","-webkit-animation")}}
-- {{CSSxRef("animation-delay","-webkit-animation-delay")}}
-- {{CSSxRef("animation-direction","-webkit-animation-direction")}}
-- {{CSSxRef("animation-duration","-webkit-animation-duration")}}
-- {{CSSxRef("animation-fill-mode","-webkit-animation-fill-mode")}}
-- {{CSSxRef("animation-iteration-count","-webkit-animation-iteration-count")}}
-- {{CSSxRef("animation-name","-webkit-animation-name")}}
-- {{CSSxRef("animation-play-state","-webkit-animation-play-state")}}
-- {{CSSxRef("animation-timing-function","-webkit-animation-timing-function")}}
-
-### B
-
-- {{CSSxRef("backface-visibility","-webkit-backface-visibility")}}
-- {{CSSxRef("background-clip","-webkit-background-clip")}}
-- {{CSSxRef("background-origin","-webkit-background-origin")}}
-- {{CSSxRef("background-size","-webkit-background-size")}}
-- {{CSSxRef("border-bottom-left-radius","-webkit-border-bottom-left-radius")}}
-- {{CSSxRef("border-bottom-right-radius","-webkit-border-bottom-right-radius")}}
-- {{CSSxRef("border-image","-webkit-border-image")}}
-- {{CSSxRef("border-radius","-webkit-border-radius")}}
-- {{CSSxRef("border-top-left-radius","-webkit-border-top-left-radius")}}
-- {{CSSxRef("border-top-right-radius","-webkit-border-top-right-radius")}}
-- {{CSSxRef("box-decoration-break","-webkit-box-decoration-break")}}
-- {{CSSxRef("box-shadow","-webkit-box-shadow")}}
-- {{CSSxRef("box-sizing","-webkit-box-sizing")}}
-
-### C
-
-- {{CSSxRef("clip-path","-webkit-clip-path")}}
-- {{CSSxRef("column-count","-webkit-column-count")}}
-- {{CSSxRef("column-fill","-webkit-column-fill")}}
-- {{CSSxRef("column-gap","-webkit-column-gap")}}
-- {{CSSxRef("column-rule","-webkit-column-rule")}}
-- {{CSSxRef("column-rule-color","-webkit-column-rule-color")}}
-- {{CSSxRef("column-rule-style","-webkit-column-rule-style")}}
-- {{CSSxRef("column-rule-width","-webkit-column-rule-width")}}
-- {{CSSxRef("column-span","-webkit-column-span")}}
-- {{CSSxRef("column-width","-webkit-column-width")}}
-- {{CSSxRef("columns","-webkit-columns")}}
-
-### F
-
-- {{CSSxRef("filter","-webkit-filter")}}
-- {{CSSxRef("flex","-webkit-flex")}}
-- {{CSSxRef("flex-basis","-webkit-flex-basis")}}
-- {{CSSxRef("flex-direction","-webkit-flex-direction")}}
-- {{CSSxRef("flex-flow","-webkit-flex-flow")}}
-- {{CSSxRef("flex-grow","-webkit-flex-grow")}}
-- {{CSSxRef("flex-shrink","-webkit-flex-shrink")}}
-- {{CSSxRef("flex-wrap","-webkit-flex-wrap")}}
-- {{CSSxRef("font-feature-settings", "-webkit-font-feature-settings")}}
-- {{CSSxRef("font-kerning", "-webkit-font-kerning")}}
-- {{CSSxRef("font-variant-ligatures", "-webkit-font-variant-ligatures")}}
-
-### G-J
-
-- {{CSSxRef("grid","-webkit-grid")}}
-- {{CSSxRef("grid-area","-webkit-grid-area")}}
-- {{CSSxRef("grid-auto-columns","-webkit-grid-auto-columns")}}
-- {{CSSxRef("grid-auto-flow","-webkit-grid-auto-flow")}}
-- {{CSSxRef("grid-auto-rows","-webkit-grid-auto-rows")}}
-- {{CSSxRef("grid-column","-webkit-grid-column")}}
-- {{CSSxRef("grid-column-end","-webkit-grid-column-end")}}
-- {{CSSxRef("column-gap","-webkit-grid-column-gap")}}
-- {{CSSxRef("grid-column-start","-webkit-grid-column-start")}}
-- {{CSSxRef("gap","-webkit-grid-gap")}}
-- {{CSSxRef("grid-row","-webkit-grid-row")}}
-- {{CSSxRef("grid-row-end","-webkit-grid-row-end")}}
-- {{CSSxRef("row-gap","-webkit-grid-row-gap")}}
-- {{CSSxRef("grid-row-start","-webkit-grid-row-start")}}
-- {{CSSxRef("grid-template","-webkit-grid-template")}}
-- {{CSSxRef("grid-template-areas","-webkit-grid-template-areas")}}
-- {{CSSxRef("grid-template-columns","-webkit-grid-template-columns")}}
-- {{CSSxRef("grid-template-rows","-webkit-grid-template-rows")}}
-
-### H-L
-
-- {{CSSxRef("hyphens","-webkit-hyphens")}}
-- {{CSSxRef("justify-content","-webkit-justify-content")}}
-- {{CSSxRef("justify-items","-webkit-justify-items")}}
-- {{CSSxRef("justify-self","-webkit-justify-self")}}
-- {{CSSxRef("line-break","-webkit-line-break")}}
-
-### M
-
-- {{CSSxRef("mask","-webkit-mask")}}
-- {{CSSxRef("mask-clip","-webkit-mask-clip")}}
-- {{CSSxRef("mask-composite","-webkit-mask-composite")}}
-- {{CSSxRef("mask-image","-webkit-mask-image")}}
-- {{CSSxRef("mask-origin","-webkit-mask-origin")}}
-- {{CSSxRef("mask-position","-webkit-mask-position")}}
-- {{CSSxRef("mask-repeat","-webkit-mask-repeat")}}
-- {{CSSxRef("mask-size","-webkit-mask-size")}}
-
-### O-R
-
-- {{CSSxRef("opacity","-webkit-opacity")}}
-- {{CSSxRef("order","-webkit-order")}}
-- {{CSSxRef("perspective","-webkit-perspective")}}
-- {{CSSxRef("perspective-origin","-webkit-perspective-origin")}}
-- {{CSSxRef("ruby-position","-webkit-ruby-position")}}
-
-### S
-
-- {{CSSxRef("scroll-snap-type","-webkit-scroll-snap-type")}}
-- {{CSSxRef("shape-image-threshold","-webkit-shape-image-threshold")}}
-- {{CSSxRef("shape-margin","-webkit-shape-margin")}}
-- {{CSSxRef("shape-outside","-webkit-shape-outside")}}
-
-### T
-
-- {{CSSxRef("text-decoration", "-epub-text-decoration")}}
-- {{CSSxRef("text-decoration-color", "-webkit-text-color-decoration")}}
-- {{CSSxRef("text-decoration-line", "-webkit-text-decoration-line")}}
-- {{CSSxRef("text-decoration-style", "-webkit-text-decoration-style")}}
-- {{CSSxRef("text-emphasis", "-epub-text-emphasis")}}
-- {{CSSxRef("text-emphasis","-webkit-text-emphasis")}}
-- {{CSSxRef("text-emphasis-color", "-epub-text-emphasis-color")}}
-- {{CSSxRef("text-emphasis-color","-webkit-text-emphasis-color")}}
-- {{CSSxRef("text-emphasis-position","-webkit-text-emphasis-position")}}
-- {{CSSxRef("text-emphasis-style","-epub-text-emphasis-style")}}
-- {{CSSxRef("text-emphasis-style","-webkit-text-emphasis-style")}}
-- {{CSSxRef("text-justify","-webkit-text-justify")}}
-- {{CSSxRef("text-orientation","-webkit-text-orientation")}}
-- {{CSSxRef("text-size-adjust","-webkit-text-size-adjust")}}
-- {{CSSxRef("text-underline-position","-webkit-text-underline-position")}}
-- {{CSSxRef("transform","-webkit-transform")}}
-- {{CSSxRef("transform-origin","-webkit-transform-origin")}}
-- {{CSSxRef("transform-style","-webkit-transform-style")}}
-- {{CSSxRef("transition","-webkit-transition")}}
-- {{CSSxRef("transition-delay","-webkit-transition-delay")}}
-- {{CSSxRef("transition-duration","-webkit-transition-duration")}}
-- {{CSSxRef("transition-property","-webkit-transition-property")}}
-- {{CSSxRef("transition-timing-function","-webkit-transition-timing-function")}}
-
-### U-W
-
-- {{CSSxRef("user-select","-webkit-user-select")}}
-- {{CSSxRef("word-break", "-epub-word-break")}}
-- {{CSSxRef("writing-mode", "-epub-writing-mode")}}
-
-## WebKit 以外のブラウザーで接頭辞なしのものが対応されているが、標準ではないもの
-
-以下のプロパティは 1 つ以上のブラウザーが接頭辞なしで対応していますが、標準化路線には乗っていません。
-
-- {{CSSxRef("mask-position-x","-webkit-mask-position-x")}}\*
-- {{CSSxRef("mask-position-y","-webkit-mask-position-y")}}\*
-
-\* Firefox が接頭辞なしで対応、 Safari が接頭辞付きで対応。
-
-## `-webkit-` 接頭辞付きで Firefox が対応しているもの
-
-以下のプロパティは Firefox が `-webkit-` 接頭辞付きで対応しています。多くのものは同様に接頭辞なしでも対応しています。前述の[以前は独自プロパティであったものが標準化されたもの](#以前は独自プロパティであったものが標準化されたもの)を参照してください。
-
-> [!NOTE]
-> 多数のウェブサイトが古いコードで -webkit- 接頭辞の付いたプロパティを使用しているため、 Edge や Firefox は -webkit- 接頭辞のついた多くのプロパティを -moz-, -ms-, 接頭辞なしの同等のプロパティに転送しています。
-
-### A
-
-- {{CSSxRef("align-content", "-webkit-align-content")}}
-- {{CSSxRef("align-items", "-webkit-align-items")}}
-- {{CSSxRef("align-self", "-webkit-align-self")}}
-- {{CSSxRef("animation", "-webkit-animation")}}
-- {{CSSxRef("animation-delay", "-webkit-animation-delay")}}
-- {{CSSxRef("animation-direction", "-webkit-animation-direction")}}
-- {{CSSxRef("animation-duration", "-webkit-animation-duration")}}
-- {{CSSxRef("animation-fill-mode", "-webkit-animation-fill-mode")}}
-- {{CSSxRef("animation-iteration-count", "-webkit-animation-iteration-count")}}
-- {{CSSxRef("animation-name", "-webkit-animation-name")}}
-- {{CSSxRef("animation-play-state", "-webkit-animation-play-state")}}
-- {{CSSxRef("animation-timing-function", "-webkit-animation-timing-function")}}
-- {{CSSxRef("appearance", "-webkit-appearance")}}\*
-
-### B
-
-- {{CSSxRef("backface-visibility", "-webkit-backface-visibility")}}
-- {{CSSxRef("background-clip", "-webkit-background-clip")}}
-- {{CSSxRef("background-origin", "-webkit-background-origin")}}
-- {{CSSxRef("background-size", "-webkit-background-size")}}
-- {{CSSxRef("border-bottom-left-radius", "-webkit-border-bottom-left-radius")}}
-- {{CSSxRef("border-bottom-right-radius", "-webkit-border-bottom-right-radius")}}
-- {{CSSxRef("border-image", "-webkit-border-image")}}
-- {{CSSxRef("border-radius", "-webkit-border-radius")}}
-- {{CSSxRef("box-align", "-webkit-box-align")}}
-- {{CSSxRef("box-direction", "-webkit-box-direction")}}
-- {{CSSxRef("box-flex", "-webkit-box-flex")}}
-- {{CSSxRef("box-orient", "-webkit-box-orient")}}
-- {{CSSxRef("box-pack", "-webkit-box-pack")}}
-- {{CSSxRef("box-shadow", "-webkit-box-shadow")}}
-- {{CSSxRef("box-sizing", "-webkit-box-sizing")}}
-- {{CSSxRef("border-top-left-radius", "-webkit-border-top-left-radius")}}
-- {{CSSxRef("border-top-right-radius", "-webkit-border-top-right-radius")}}
-
-### F
-
-- {{CSSxRef("filter", "-webkit-filter")}}
-- {{CSSxRef("flex", "-webkit-flex")}}
-- {{CSSxRef("flex-basis", "-webkit-flex-basis")}}
-- {{CSSxRef("flex-direction", "-webkit-flex-direction")}}
-- {{CSSxRef("flex-flow", "-webkit-flex-flow")}}
-- {{CSSxRef("flex-grow", "-webkit-flex-grow")}}
-- {{CSSxRef("flex-shrink", "-webkit-flex-shrink")}}
-- {{CSSxRef("flex-wrap", "-webkit-flex-wrap")}}
-
-### J
-
-- {{CSSxRef("justify-content", "-webkit-justify-content")}}
-
-### M
-
-- {{CSSxRef("mask", "-webkit-mask")}}
-- {{CSSxRef("mask-clip", "-webkit-mask-clip")}}
-- {{CSSxRef("-webkit-mask-composite", "-webkit-mask-composite")}}\*
-- {{CSSxRef("mask-image", "-webkit-mask-image")}}
-- {{CSSxRef("mask-origin", "-webkit-mask-origin")}}
-- {{CSSxRef("mask-position", "-webkit-mask-position")}}
-- {{CSSxRef("-webkit-mask-position-x", "-webkit-mask-position-x")}}
-- {{CSSxRef("-webkit-mask-position-y", "-webkit-mask-position-y")}}
-- {{CSSxRef("mask-repeat", "-webkit-mask-repeat")}}
-- {{CSSxRef("mask-size", "-webkit-mask-size")}}
-
-### O-P
-
-- {{CSSxRef("order", "-webkit-order")}}
-- {{CSSxRef("perspective", "-webkit-perspective")}}
-- {{CSSxRef("perspective-origin", "-webkit-perspective-origin")}}
-
-### T
-
-- {{CSSxRef("-webkit-text-fill-color", "-webkit-text-fill-color")}}
-- {{CSSxRef("text-size-adjust", "-webkit-text-size-adjust")}}
-- {{CSSxRef("-webkit-text-stroke", "-webkit-text-stroke")}}
-- {{CSSxRef("-webkit-text-stroke-color", "-webkit-text-stroke-color")}}
-- {{CSSxRef("-webkit-text-stroke-width", "-webkit-text-stroke-width")}}
-- {{CSSxRef("transform", "-webkit-transform")}}
-- {{CSSxRef("transform-origin", "-webkit-transform-origin")}}
-- {{CSSxRef("transition", "-webkit-transition")}}
-- {{CSSxRef("transition-delay", "-webkit-transition-delay")}}
-- {{CSSxRef("transition-duration", "-webkit-transition-duration")}}
-- {{CSSxRef("transition-property", "-webkit-transition-property")}}
-- {{CSSxRef("transition-timing-function", "-webkit-transition-timing-function")}}
-
-### U
-
-- {{CSSxRef("user-select", "-webkit-user-select")}}
-
-- Firefox では `-moz-` と `-webkit-` の接頭辞に対応していますが、 接頭辞のないものには対応していません。 Microsoft Edge と IE Mobile は、同様に相互運用性のためにこのプロパティを `-ms-` ではなく `-webkit-` の接頭辞付きで対応しています。
-  これらの値は、標準ではなく標準化路線にもなっていませんが、対応しています。
-  代わりにフレックスボックスプロパティを使用してください。
-
-## 非推奨の `-webkit-` プロパティ
-
-以下のプロパティはいったん -webkit- 接頭辞付きで対応していましたが、すでに `-webkit-` 接頭辞のありなしに関わらず、主要なブラウザーで対応されなくなりました。
-
-- `-webkit-alt*`
-- `-webkit-color-correction`
-- `-webkit-flow-from`
-- `-webkit-flow-into`
-- `-webkit-grid-columns` ([`grid-column`](/ja/docs/Web/CSS/Reference/Properties/grid-column) を参照)
-- `-webkit-grid-rows` ([`grid-row`](/ja/docs/Web/CSS/Reference/Properties/grid-row) を参照)
-- `-webkit-hyphenate-charset`
-- `-webkit-image-set` (`{{CSSxRef("image/image-set()", "image-set")}} を参照)
-- `-webkit-mask-attachment`
-- `-webkit-match-nearest-mail-blockquote-color`
-- {{CSSxRef("-webkit-overflow-scrolling", "-webkit-overflow-scrolling")}}
-- `-webkit-region-break-after`
-- `-webkit-region-break-before`
-- `-webkit-region-break-inside`
-- `-webkit-region-fragment`
-- `-webkit-shape-inside`
-- [-webkit-touch-callout](/ja/docs/Web/CSS/Reference/Properties/-webkit-touch-callout) (`touch-action` を参照)
-- `background-origin-x` (接頭辞なし)
-- `background-origin-y` (接頭辞なし)
-
-<p>* Safari Technology Preview ではまだ対応していますが、リリース版のブラウザーでは一般に対応していません。</p>
+- {{CSSxRef("-webkit-mask-box-image")}}: {{cssxref("mask-border")}} および {{cssxref("border-image")}} を参照。
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-outset")}}: {{cssxref("mask-border")}} および {{cssxref("border-image")}} を参照。
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-repeat")}}: {{cssxref("mask-border")}} および {{cssxref("border-image")}} を参照。
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-slice")}}: {{cssxref("mask-border")}} および {{cssxref("border-image")}} を参照。
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-source")}}: {{cssxref("mask-border")}} および {{cssxref("border-image")}} を参照。
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-width")}}: {{cssxref("mask-border")}} および {{cssxref("border-image")}} を参照。
+- {{CSSxRef("-webkit-mask-composite")}}: {{cssxref("mask-border")}} および {{cssxref("border-image")}} を参照。
+- {{CSSxRef("-webkit-mask-position-x")}}: 互換性のため、すべてのブラウザーで `-webkit-` 付きで対応。
+- {{CSSxRef("-webkit-mask-position-y")}}: 互換性のため、すべてのブラウザーで `-webkit-` 付きで対応。
+- {{CSSxRef("-webkit-mask-repeat-x")}} {{deprecated_inline}}: 対応終了。{{CSSxRef("mask-repeat")}} を参照。
+- {{CSSxRef("-webkit-mask-repeat-y")}} {{deprecated_inline}}: 対応終了。{{CSSxRef("mask-repeat")}} を参照。
+- `-webkit-mask-source-type`: Chrome では未対応。
+- `-webkit-max-logical-height`
+- `-webkit-max-logical-width`
+- `-webkit-min-logical-height`
+- `-webkit-min-logical-width`
+
+### N-Z
+
+- `-webkit-nbsp-mode`: Chrome では未対応。
+- `-webkit-perspective-origin-x`
+- `-webkit-perspective-origin-y`
+- `-webkit-rtl-ordering`
+- {{CSSxRef("-webkit-tap-highlight-color")}}: iOS 版 Safari のみで対応。
+- `-webkit-text-decoration-skip`: Chrome では未対応。
+- `-webkit-text-decorations-in-effect`
+- {{CSSxRef("-webkit-text-fill-color")}}
+- {{CSSxRef("-webkit-text-security")}}
+- {{CSSxRef("-webkit-text-stroke")}}
+- {{CSSxRef("-webkit-text-stroke-color")}}
+- {{CSSxRef("-webkit-text-stroke-width")}}
+- `-webkit-text-zoom`: Chrome では未対応。
+- {{CSSxRef("-webkit-touch-callout")}} {{deprecated_inline}}: iOS 版 Safari のみで対応。
+- `-webkit-transform-origin-x`
+- `-webkit-transform-origin-y`
+- `-webkit-transform-origin-z`
+- `-webkit-user-drag`
+- `-webkit-user-modify`
+
+## 標準化された同等物のある -webkit- 接頭辞付きプロパティ
+
+`-webkit-` 接頭辞を持つプロパティの中には、対応する標準プロパティが存在するものがあります。
+名前や構文が異なっていても、これらはもう使用すべきではありません。
+下記のそれぞれのプロパティについては、対応する標準プロパティを使用してください。
+
+### A-B
+
+- `-webkit-border-after`: {{CSSxRef("border-block-end")}} を使用してください。
+- `-webkit-border-after-color`: {{CSSxRef("border-block-end-color")}} を使用してください。
+- `-webkit-border-after-style`: {{CSSxRef("border-block-end-style")}} を使用してください。
+- `-webkit-border-after-width`: {{CSSxRef("border-block-end-width")}} を使用してください。
+- {{CSSxRef("-webkit-border-before")}}: {{CSSxRef("border-block-start")}} を使用してください。
+- `-webkit-border-before-color`: {{CSSxRef("border-block-start-color")}} を使用してください。
+- `-webkit-border-before-style`: {{CSSxRef("border-block-start-style")}} を使用してください。
+- `-webkit-border-before-width`: {{CSSxRef("border-block-start-width")}} を使用してください。
+- `-webkit-border-end`: {{CSSxRef("border-inline-end")}} を使用してください。
+- `-webkit-border-end-color`: {{CSSxRef("border-inline-end-color")}} を使用してください。
+- `-webkit-border-end-style`: {{CSSxRef("border-inline-end-style")}} を使用してください。
+- `-webkit-border-end-width`: {{CSSxRef("border-inline-end-width")}} を使用してください。
+- `-webkit-border-start`: {{CSSxRef("border-inline-start")}} を使用してください。
+- `-webkit-border-start-color`: {{CSSxRef("border-inline-start-color")}} を使用してください。
+- `-webkit-border-start-style`: {{CSSxRef("border-inline-start-style")}} を使用してください。
+- `-webkit-border-start-width`: {{CSSxRef("border-inline-start-width")}} を使用してください。
+- `-webkit-box-align`: [CSS フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)で {{CSSxRef("align-items")}} を使用してください。
+- `-webkit-box-direction`: [CSS フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)で {{CSSxRef("flex-direction")}} を使用してください。
+- {{CSSxRef("box-flex-group", "-webkit-box-flex-group")}}: [CSS フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)で {{CSSxRef("flex-basis")}}, {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}} を使用してください。
+- `-webkit-box-flex`: [CSS フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)で {{CSSxRef("flex-grow")}} を使用してください。
+- `-webkit-box-lines`: [CSS フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)で {{CSSxRef("flex-flow")}} を使用してください。
+- `-webkit-box-ordinal-group`: [CSS フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)で {{CSSxRef("order")}} を使用してください。
+- `-webkit-box-orient`: [CSS フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)で {{CSSxRef("flex-direction")}} を使用してください。
+- `-webkit-box-pack`: [CSS フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)で {{CSSxRef("justify-content")}} を使用してください。
+- {{CSSxRef("-webkit-box-reflect")}}: CSS {{cssxref("element()")}} 関数を使用してください。
+
+### C-I
+
+- `-webkit-column-break-after`: [CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout) で {{CSSxRef("break-after")}} を使用してください。
+- `-webkit-column-break-before`: [CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout) で {{CSSxRef("break-before")}} を使用してください。
+- `-webkit-column-break-inside`: [CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout) で {{CSSxRef("break-inside")}} を使用してください。
+- `-webkit-font-feature-settings`: {{CSSxRef("font-feature-settings")}} を使用してください（接頭辞付きのバージョンは Safari では未対応）。
+- `-webkit-hyphenate-character`: {{CSSxRef("hyphenate-character")}} を使用してください。
+- `-webkit-initial-letter`: {{CSSxRef("initial-letter")}} を使用してください。
+
+### J-Z
+
+- `-webkit-line-clamp`: {{CSSxRef("line-clamp")}} を使用してください。
+- `-webkit-margin-after`: {{CSSxRef("margin-block-end")}} を使用してください。
+- `-webkit-margin-before`: {{CSSxRef("margin-block-start")}} を使用してください。
+- `-webkit-margin-end`: {{CSSxRef("margin-inline-end")}} を使用してください。
+- `-webkit-margin-start`: {{CSSxRef("margin-inline-start")}} を使用してください。
+- `-webkit-padding-after`: {{CSSxRef("padding-block-end")}} を使用してください。
+- `-webkit-padding-before`: {{CSSxRef("padding-block-start")}} を使用してください。
+- `-webkit-padding-end`: {{CSSxRef("padding-inline-end")}} を使用してください。
+- `-webkit-padding-start`: {{CSSxRef("padding-inline-start")}} を使用してください。
+
+## -webkit- 接頭辞付きプロパティ値
+
+- `-webkit-fill-available`
+  - : {{CSSxRef("width")}} や {{CSSxRef("height")}} といったサイズ指定プロパティと組み合わせて使用し、要素が親コンテナ内の利用できる空間をすべて占めることができるようにします。
+    `stretch` 値は標準の代替手段として提供されますが、下位互換性を確保するため、ブラウザーでは `-webkit-fill-available` を別名として対応しています。
 
 ## 擬似クラス
 
-- {{CSSxRef(":animating-full-screen-transition", ":-webkit-animating-full-screen-transition")}}
-- {{CSSxRef(":any()", ":-webkit-any()")}}
-- {{CSSxRef(":any-link", ":-webkit-any-link")}}\*
-- {{CSSxRef(":autofill",":-webkit-autofill")}}
-- {{CSSxRef(":autofill-strong-password",":-webkit-autofill-strong-password")}}
-- {{CSSxRef(":drag",":-webkit-drag")}}
-- {{CSSxRef(":full-page-media",":-webkit-full-page-media")}}
-- {{CSSxRef(":full-screen", ":-webkit-full-screen")}}\*
-- {{CSSxRef(":full-screen-ancestor",":-webkit-full-screen-ancestor")}}
-- {{CSSxRef(":full-screen-document",":-webkit-full-screen-document")}}
-- {{CSSxRef(":full-screen-controls-hidden",":-webkit-full-screen-controls-hidden")}}
-
-\* 標準化されました。
-
 > [!NOTE]
-> セレクターのチェーンまたはグループ内に無効な擬似クラスがあった場合、セレクターのリスト全体が無効になります。
+> セレクターのチェーンやグループ内に無効な擬似クラスがある場合、セレクターリスト全体が無効となります。
+
+- `:-webkit-any()`: {{CSSxRef(":is")}} を使用してください。
+- `:-webkit-any-link`: {{CSSxRef(":any-link")}} を使用してください。
+- `:-webkit-autofill`: {{CSSxRef(":autofill")}} を使用してください。
+- `:-webkit-autofill-strong-password`: {{CSSxRef(":autofill")}} を使用してください。
+- `:-webkit-drag`
+- `:-webkit-full-page-media`: {{CSSxRef(":fullscreen")}} を使用してください。
+- `:-webkit-full-screen`: {{CSSxRef(":fullscreen")}} を使用してください。
+- `:-webkit-full-screen-ancestor`: {{CSSxRef(":fullscreen")}} を使用してください。
+- `:-webkit-full-screen-document`: {{CSSxRef(":fullscreen")}} を使用してください。
+- `:-webkit-full-screen-controls-hidden`: {{CSSxRef(":fullscreen")}} を使用してください。
 
 ## 擬似要素
 
-ウェブの互換性のため、 Blink, WebKit, Gecko のブラウザーは、 `::-webkit-` がついたすべての擬似要素を有効なものとして扱います。
+ウェブの互換性を確保するため、Blink、WebKit、Gecko 系のブラウザーでは、`::-webkit-` で始まるすべての擬似要素を有効なものとして扱います。
+セレクターの連鎖やグループ内に無効な擬似要素や擬似クラスが含まれている場合、セレクターリスト全体が無効とみなされます。
+擬似要素（擬似クラスを除く）に `-webkit-` 接頭辞を持つ場合、Blink、WebKit、および Gecko ブラウザーはそれを有効であると想定するため、セレクターリストは無効とはなりません。
 
-- {{CSSxRef("::file-selector-button","::-webkit-file-upload-button")}}\*
-- {{CSSxRef("::-webkit-inner-spin-button", "::-webkit-inner-spin-button")}}
-- {{CSSxRef("::placeholder", "::-webkit-input-placeholder")}}
-- {{CSSxRef("::-webkit-media-controls", "::-webkit-media-controls")}}
-- {{CSSxRef("::-webkit-media-controls-current-time-display", "::-webkit-media-controls-current-time-display")}}
-- {{CSSxRef("::-webkit-media-controls-enclosure", "::-webkit-media-controls-enclosure")}}
-- {{CSSxRef("::-webkit-media-controls-fullscreen-button", "::-webkit-media-controls-fullscreen-button")}}
-- {{CSSxRef("::-webkit-media-controls-mute-button", "::-webkit-media-controls-mute-button")}}
-- {{CSSxRef("::-webkit-media-controls-overlay-enclosure", "::-webkit-media-controls-overlay-enclosure")}}
-- {{CSSxRef("::-webkit-media-controls-panel", "::-webkit-media-controls-panel")}}
-- {{CSSxRef("::-webkit-media-controls-play-button", "::-webkit-media-controls-play-button")}}
-- {{CSSxRef("::-webkit-media-controls-timeline", "::-webkit-media-controls-timeline")}}
-- {{CSSxRef("::-webkit-media-controls-time-remaining-display", "::-webkit-media-controls-time-remaining-display")}}
-- {{CSSxRef("::-webkit-media-controls-toggle-closed-captions-button", "::-webkit-media-controls-toggle-closed-captions-button")}}
-- {{CSSxRef("::-webkit-media-controls-volume-control-container", "::-webkit-media-controls-volume-control-container")}}
-- {{CSSxRef("::-webkit-media-controls-volume-control-hover-background", "::-webkit-media-controls-volume-control-hover-background")}}
-- {{CSSxRef("::-webkit-media-controls-volume-slider", "::-webkit-media-controls-volume-slider")}}
-- {{CSSxRef("::-webkit-meter-bar", "::-webkit-meter-bar")}}
-- {{CSSxRef("::-webkit-meter-even-less-good-value", "::-webkit-meter-even-less-good-value")}}
-- {{CSSxRef("::-webkit-meter-inner-element", "::-webkit-meter-inner-element")}}
-- {{CSSxRef("::-webkit-meter-optimum-value", "::-webkit-meter-optimum-value")}}
-- {{CSSxRef("::-webkit-meter-suboptimum-value", "::-webkit-meter-suboptimum-value")}}
-- {{CSSxRef("-webkit-media-text-track-container", "-webkit-media-text-track-container")}}
-- {{CSSxRef("::-webkit-outer-spin-button", "::-webkit-outer-spin-button")}}
-- {{CSSxRef("::-webkit-progress-bar", "::-webkit-progress-bar")}}
-- {{CSSxRef("::-webkit-progress-inner-element", "::-webkit-progress-inner-element")}}
-- {{CSSxRef("::-webkit-progress-value", "::-webkit-progress-value")}}
-- {{CSSxRef("::-webkit-search-cancel-button", "::-webkit-search-cancel-button")}}
-- {{CSSxRef("::-webkit-search-results-button", "::-webkit-search-results-button")}}
-- {{CSSxRef("::-webkit-slider-runnable-track", "::-webkit-slider-runnable-track")}}
-- {{CSSxRef("::-webkit-slider-thumb", "::-webkit-slider-thumb")}}
-
-\* 標準化されました。
-
-> [!NOTE]
-> 一般に、セレクターのチェーンまたはグループ内に無効な擬似要素または擬似クラスがあった場合、セレクターのリスト全体が無効になります。 (擬似クラスではない) 擬似要素に -webkit- という接頭辞が付いている場合、 Firefox 63 以降, Blink, WebKit, Gecko のブラウザーはセレクターのリストを妥当とみなし、無効にしないようにします。</p>
+- `::-webkit-file-upload-button`: {{CSSxRef("::file-selector-button")}} を使用してください。
+- {{CSSxRef("::-webkit-inner-spin-button")}}
+- `::-webkit-input-placeholder`: {{CSSxRef("::placeholder")}} を使用してください。
+- {{CSSxRef("::-webkit-meter-bar")}} {{deprecated_inline}}
+- {{CSSxRef("::-webkit-meter-even-less-good-value")}}
+- {{CSSxRef("::-webkit-meter-inner-element")}}
+- {{CSSxRef("::-webkit-meter-optimum-value")}}
+- {{CSSxRef("::-webkit-meter-suboptimum-value")}}
+- {{CSSxRef("::-webkit-progress-bar")}}
+- {{CSSxRef("::-webkit-progress-inner-element")}}
+- {{CSSxRef("::-webkit-progress-value")}}
+- {{CSSxRef("::-webkit-search-cancel-button")}}
+- {{CSSxRef("::-webkit-search-results-button")}}
+- {{CSSxRef("::-webkit-slider-runnable-track")}}
+- {{CSSxRef("::-webkit-slider-thumb")}}
 
 ## メディア特性
 
-- {{CSSxRef("@media/-webkit-animation", "-webkit-animation")}}
-- {{CSSxRef("@media/-webkit-device-pixel-ratio", "-webkit-device-pixel-ratio")}}
-- {{CSSxRef("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
-- {{CSSxRef("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
-- {{CSSxRef("@media/-webkit-transition", "-webkit-transition")}}
+- {{CSSxRef("@media/-webkit-animation")}} {{deprecated_inline}}
+- {{CSSxRef("@media/-webkit-device-pixel-ratio")}}: 各ブラウザーで対応
+- {{CSSxRef("@media/-webkit-transform-2d")}} {{deprecated_inline}}
+- {{CSSxRef("@media/-webkit-transform-3d")}}: 各ブラウザーで対応
+- {{CSSxRef("@media/-webkit-transition")}} {{deprecated_inline}}
 
 ## 関連情報
 
-- [Styling Form Controls on the WebKit Trac](https://trac.webkit.org/wiki/Styling%20Form%20Controls)
-- [Microsoft CSS 拡張](/ja/docs/Web/CSS/Microsoft_Extensions)
-- [Mozilla CSS 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)
+- [Mozilla (-moz-) ベンダー接頭辞付きの CSS 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)
+- {{glossary("Vendor Prefix", "ベンダー接頭辞")}} - 用語集の項目

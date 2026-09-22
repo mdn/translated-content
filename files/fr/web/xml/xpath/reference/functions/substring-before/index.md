@@ -4,8 +4,6 @@ slug: Web/XML/XPath/Reference/Functions/substring-before
 original_slug: Web/XPath/Functions/substring-before
 ---
 
-{{XsltSidebar}}
-
 La fonction `substring-before()` retourne retourne la partie d'une chaîne donnée précédant une sous-chaîne donnée.
 
 ### Syntaxe

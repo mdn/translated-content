@@ -19,7 +19,7 @@ BigInt(value);
   - : 생성하는 객체에 할당할 숫자 값. 문자열 또는 정수를 사용할 수 있습니다.
 
 > [!NOTE]
-> `BigInt()`는 {{jsxref("Operators/new", "new")}} 연산자와 함께 사용하지 않습니다.
+> `BigInt()`는 {{jsxref("new")}} 연산자와 함께 사용하지 않습니다.
 
 ## 예제
 

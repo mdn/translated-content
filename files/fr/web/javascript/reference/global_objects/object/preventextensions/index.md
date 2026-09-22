@@ -1,33 +1,34 @@
 ---
-title: Object.preventExtensions()
+title: "Object : méthode statique preventExtensions()"
+short-title: preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode statique **`Object.preventExtensions()`** empêche l'ajout de nouvelles propriétés à un objet (c'est-à-dire empêche les extensions futures de l'objet). Elle empêche également la réaffectation du prototype de l'objet.
 
-La méthode **`Object.preventExtensions()`** permet d'empêcher l'ajout de nouvelles propriétés à un objet (i.e. d'étendre l'objet grâce à de nouvelles caractéristiques).
-
-{{InteractiveExample("JavaScript Demo: Object.preventExtensions()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Object.preventExtensions()")}}
 
 ```js interactive-example
-const object1 = {};
+const object = {};
 
-Object.preventExtensions(object1);
+Object.preventExtensions(object);
 
 try {
-  Object.defineProperty(object1, "property1", {
+  Object.defineProperty(object, "toto", {
     value: 42,
   });
 } catch (e) {
   console.log(e);
-  // Expected output: TypeError: Cannot define property property1, object is not extensible
+  // Résultat attendu : TypeError: Impossible de définir la propriété toto, l'objet n'est pas extensible
 }
 ```
 
 ## Syntaxe
 
-```js
-Object.preventExtensions(obj);
+```js-nolint
+Object.preventExtensions(obj)
 ```
 
 ### Paramètres
@@ -41,65 +42,72 @@ L'objet rendu non-extensible.
 
 ## Description
 
-Un objet est extensible si on peut lui ajouter de nouvelles propriétés. `Object.preventExtensions()` marque un objet et le rend non-extensible. Ainsi, cet objet ne pourra avoir d'autres propriétés que celles à l'instant où il a été marqué comme non-extensible. Attention, les propriétés existantes d'un objet non-extensible peuvent toujours être supprimées. Toute tentative d'ajout de nouvelles propriétés à un objet non-extensible échouera, soit de façon silencieuse, soit en levant une exception {{jsxref("TypeError")}} (le plus souvent en {{jsxref("Strict_mode", "mode strict", "", 1)}}).
+Un objet est extensible si de nouvelles propriétés peuvent lui être ajoutées.
+`Object.preventExtensions()` marque un objet comme n'étant plus extensible, de sorte qu'il n'a jamais de propriétés au-delà de celles qu'il possède au moment où il a été marqué comme non extensible. Notez que les propriétés d'un objet non extensible, en général, peuvent encore être _supprimées_. Tenter d'ajouter de nouvelles propriétés à un objet non extensible échoue, soit silencieusement, soit, en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), en lançant une {{JSxRef("TypeError")}}.
 
-`Object.preventExtensions()` n'empêche que l'ajout des propriétés directement sur l'objet, il n'empêche pas d'ajouter des propriétés sur le prototype.
+Contrairement à {{JSxRef("Object.seal()")}} et {{JSxRef("Object.freeze()")}}, `Object.preventExtensions()` invoque un comportement intrinsèque de JavaScript et ne peut pas être remplacé par une composition de plusieurs autres opérations. Il a également son homologue `Reflect` (qui n'existe que pour les opérations intrinsèques), {{JSxRef("Reflect.preventExtensions()")}}.
 
-Cette méthode rend la propriété interne `[[prototype]]` de la cible immuable, toute réaffectation de `[[prototype]]` déclenchera une exception `TypeError`. Ce comportement est spécifique à la propriété interne `[[prototype]]`, les autres propriétés de la cible restent modifiables.
+`Object.preventExtensions()` empêche uniquement l'ajout de propriétés propres. Des propriétés peuvent encore être ajoutées au prototype de l'objet.
 
-Si, grâce à cette méthode, on peut rendre un objet non-extensible, il n'existe aucune méthode pour effectuer l'action inverse (rendre un objet non-extensible à nouveau extensible).
+Cette méthode rend le `[[Prototype]]` de la cible immuable&nbsp;; toute réaffectation de `[[Prototype]]` lève une `TypeError`. Ce comportement est spécifique à la propriété interne `[[Prototype]]`&nbsp;; les autres propriétés de l'objet cible restent mutables.
+
+Il n'existe aucun moyen de rendre un objet extensible à nouveau une fois qu'il a été rendu non extensible.
 
 ## Exemples
 
+### Utiliser `Object.preventExtensions()`
+
 ```js
-// Object.preventExtensions renvoie l'objet
-// non-extensible.
-var obj = {};
-var obj2 = Object.preventExtensions(obj);
+// Object.preventExtensions retourne l'objet
+// qui n'est pas extensibles.
+const obj = {};
+const obj2 = Object.preventExtensions(obj);
 obj === obj2; // true
 
 // Par défaut, les objets sont extensibles.
-var vide = {};
+const vide = {};
 Object.isExtensible(vide); // true
 
-// ...mais cela peut être modifié.
+// Ils peuvent être rendus non extensibles
 Object.preventExtensions(vide);
-Object.isExtensible(vide) === false);
+Object.isExtensible(vide); // false
 
 // Object.defineProperty lève une exception
 // lorsqu'on tente d'ajouter de nouvelles propriétés
-var nonExtensible = { removable: true };
+const nonExtensible = { removable: true };
 Object.preventExtensions(nonExtensible);
+Object.defineProperty(nonExtensible, "new", {
+  value: 8675309,
+}); // lève une TypeError
 
-Object.defineProperty(nonExtensible, 'nouvelle', { value: 8675309 });
-/ lève une TypeError
-
-// En mode strict, toute tentative d'ajout
-// lève une exception TypeError
-function échec() {
-  'use strict';
-  nonExtensible.nouvelleProp = 'ÉCHEC'; //
+// En mode strict, toute tentative d'ajout d'une propriété
+// à un objet qui n'est pas extensible lève une exception TypeError
+function echec() {
+  "use strict";
+  // lève une TypeError
+  nonExtensible.newProperty = "FAIL";
 }
-échec();
-
-// EXTENSION (ne fonctionne que pour les moteurs
-// qui utilisent __proto__ ) :
-// Le prototype (via __proto__) d'un objet non-extensible
-// n'est pas modifiable :
-var fixed = Object.preventExtensions({});
-fixed.__proto__ = { oh: 'hey' }; // lève une TypeError
+echec();
 ```
 
-## Notes
+Le prototype d'un objet non extensible est immuable&nbsp;:
 
-Pour ES5, si l'argument passé à la méthode n'est pas un objet mais une valeur d'un autre type primitif, cela entraînera une exception {{jsxref("TypeError")}}. Pour ES2015, une valeur qui n'est pas un objet sera traitée comme un objet ordinaire qui n'est pas extensible et la méthode renverra cette valeur.
+```js
+const fixe = Object.preventExtensions({});
+// lève une TypeError
+fixe.__proto__ = { oh: "hey" };
+```
+
+### Argument d'une valeur primitive
+
+Dans ES5, si l'argument passé à cette méthode n'est pas un objet (un primitif), cela entraîne une exception {{JSxRef("TypeError")}}. Dans ES2015, elle retourne `false` sans aucune erreur si un argument non-objet est passé, puisque les primitifs sont, par définition, immuables.
 
 ```js
 Object.preventExtensions(1);
-// TypeError : 1 n'est pas un object (code ES5)
+// TypeError : 1 n'est pas un objet (code ES5)
 
 Object.preventExtensions(1);
-// 1                             (code ES2015)
+// 1                                (code ES2015)
 ```
 
 ## Spécifications
@@ -112,9 +120,9 @@ Object.preventExtensions(1);
 
 ## Voir aussi
 
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.isSealed()")}}
-- {{jsxref("Object.freeze()")}}
-- {{jsxref("Object.isFrozen()")}}
-- {{jsxref("Reflect.preventExtensions()")}}
+- La méthode statique {{JSxRef("Object.isExtensible()")}}
+- La méthode statique {{JSxRef("Object.seal()")}}
+- La méthode statique {{JSxRef("Object.isSealed()")}}
+- La méthode statique {{JSxRef("Object.freeze()")}}
+- La méthode statique {{JSxRef("Object.isFrozen()")}}
+- La méthode statique {{JSxRef("Reflect.preventExtensions()")}}

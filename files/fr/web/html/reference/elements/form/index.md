@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<form>`** représente une section du document contenant des contrôles interactifs permettant de soumettre des informations.
+L'élément [HTML](/fr/docs/Web/HTML) **`<form>`** représente une section du document contenant des contrôles interactifs permettant d'envoyer des informations.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;form&gt;", "tabbed-standard")}}
 
@@ -59,8 +59,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > Cet attribut a été retiré dans HTML5 et ne doit plus être utilisé. À la place, il faut utiliser l'attribut [`accept`](/fr/docs/Web/HTML/Reference/Elements/input#accept) de l'élément `<input type=file>`.
 
 - `accept-charset`
-  - : L'{{Glossary("character encoding", "encodage de caractères")}} accepté par le serveur.
-    La spécification autorise une seule valeur insensible à la casse `"UTF-8"`, reflétant l'omniprésence de cet encodage (historiquement, plusieurs encodages de caractères pouvaient être définis sous forme de liste séparée par des virgules ou par des espaces).
+  - : {{Glossary("character encoding", "L'encodage de caractères")}} accepté par le serveur.
+    La spécification autorise une seule valeur insensible à la casse `"UTF-8"`, reflétant l'omniprésence de cet encodage (historiquement, plusieurs encodages de caractères peuvent être définis sous forme de liste séparée par des virgules ou par des espaces).
 
 - `autocapitalize`
   - : Contrôle la mise en majuscules automatique du texte saisi et, le cas échéant, la manière dont elle s'effectue. Voir la page de l'attribut universel [`autocapitalize`](/fr/docs/Web/HTML/Reference/Global_attributes/autocapitalize) pour plus d'informations.
@@ -71,7 +71,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `on`&nbsp;: Le navigateur peut compléter automatiquement les saisies.
 
 - `name`
-  - : Le nom du formulaire. La valeur ne doit pas être une chaîne vide et doit être unique parmi les éléments `form` de la collection de formulaires à laquelle il appartient, le cas échéant. Le nom devient une propriété des objets {{DOMxRef("Window")}}, {{DOMxRef("Document")}} et {{DOMxRef("document.forms")}}, contenant une référence à l'élément formulaire.
+  - : Le nom du formulaire. La valeur ne doit pas être une chaîne de caractères vide et doit être unique parmi les éléments `form` de la collection de formulaires à laquelle il appartient, le cas échéant. Le nom devient une propriété des objets {{DOMxRef("Window")}}, {{DOMxRef("Document")}} et {{DOMxRef("document.forms")}}, contenant une référence à l'élément formulaire.
 
 - [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel)
   - : Contrôle les annotations et les types de liens créés par le formulaire. Les annotations incluent [`external`](/fr/docs/Web/HTML/Reference/Attributes/rel#external), [`nofollow`](/fr/docs/Web/HTML/Reference/Attributes/rel#nofollow), [`opener`](/fr/docs/Web/HTML/Reference/Attributes/rel#opener), [`noopener`](/fr/docs/Web/HTML/Reference/Attributes/rel#noopener) et [`noreferrer`](/fr/docs/Web/HTML/Reference/Attributes/rel#noreferrer). Les types de liens incluent [`help`](/fr/docs/Web/HTML/Reference/Attributes/rel#help), [`prev`](/fr/docs/Web/HTML/Reference/Attributes/rel#prev), [`next`](/fr/docs/Web/HTML/Reference/Attributes/rel#next), [`search`](/fr/docs/Web/HTML/Reference/Attributes/rel#search) et [`license`](/fr/docs/Web/HTML/Reference/Attributes/rel#license). La valeur de [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel) est une liste d'espaces de ces valeurs énumérées.
@@ -83,7 +83,7 @@ Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire
 - `action`
   - : L'URL qui traite l'envoi du formulaire. Cette valeur peut être remplacée par un attribut [`formaction`](/fr/docs/Web/HTML/Reference/Elements/button#formaction) sur un {{HTMLElement("button")}}, [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image). Cet attribut est ignoré lorsque `method="dialog"` est défini.
 - `enctype`
-  - : Lorsque la valeur de l'attribut `method` est `post`, cet attribut définit le [type MIME](https://fr.wikipedia.org/wiki/Type_MIME) qui sera utilisé pour encoder les données envoyées au serveur. C'est un attribut énuméré qui peut prendre les valeurs suivantes&nbsp;:
+  - : Lorsque la valeur de l'attribut `method` est `post`, cet attribut définit le [type MIME](https://fr.wikipedia.org/wiki/Type_MIME) qui est utilisé pour encoder les données envoyées au serveur. C'est un attribut énuméré qui peut prendre les valeurs suivantes&nbsp;:
     - `application/x-www-form-urlencoded`&nbsp;: la valeur par défaut si l'attribut n'est pas défini
     - `multipart/form-data`&nbsp;: la valeur utilisée par un élément {{HTMLElement("input")}} avec l'attribut `type="file"`.
     - `text/plain`&nbsp;: utilisé à des fins de débogage.
@@ -91,23 +91,23 @@ Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire
     Cette valeur peut être remplacée par un attribut [`formenctype`](/fr/docs/Web/HTML/Reference/Elements/button#formenctype) sur un {{HTMLElement("button")}}, [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image).
 
 - `method`
-  - : Cet attribut définit la méthode [HTTP](/fr/docs/Web/HTTP) qui sera utilisée pour envoyer les données au serveur.
+  - : Cet attribut définit la méthode [HTTP](/fr/docs/Web/HTTP) qui est utilisée pour envoyer les données au serveur.
     C'est un attribut énuméré qui peut prendre les valeurs suivantes (non sensibles à la casse)&nbsp;:
     - `post`&nbsp;: La méthode {{HTTPMethod("POST")}}&nbsp;; données du formulaire envoyées comme [corps de la requête](/fr/docs/Web/API/Request/body).
     - `get`&nbsp;: La méthode {{HTTPMethod("GET")}}&nbsp;; données du formulaire annexées à l'URL `action` avec un séparateur `?`. Utilisez cette méthode lorsque le formulaire {{Glossary("Idempotent", "n'a pas d'effets secondaires")}}.
-    - `dialog`&nbsp;: Lorsque le formulaire se trouve à l'intérieur d'un {{HTMLElement("dialog")}}, ferme la boîte de dialogue à la soumission.
+    - `dialog`&nbsp;: Lorsque le formulaire se trouve à l'intérieur d'un {{HTMLElement("dialog")}}, ferme la boîte de dialogue à l'envoi.
 
     Si cet attribut n'est pas défini, la valeur par défaut utilisée est `get`. Cette valeur peut-être remplacée par un attribut [`formmethod`](/fr/docs/Web/HTML/Reference/Elements/button#formmethod) sur un {{HTMLElement("button")}}, [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit) ou [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image).
 
 - `novalidate`
-  - : Cet attribut booléen indique que le formulaire ne doit pas être validé lors de sa soumission. Si cet attribut n'est pas défini (et que le formulaire est donc validé), il peut être remplacé par un attribut [`formnovalidate`](/fr/docs/Web/HTML/Reference/Elements/button#formnovalidate) sur un {{HTMLElement("button")}}, [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit) ou [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image) appartenant au formulaire.
+  - : Cet attribut booléen indique que le formulaire ne doit pas être validé lors de son envoi. Si cet attribut n'est pas défini (et que le formulaire est donc validé), il peut être remplacé par un attribut [`formnovalidate`](/fr/docs/Web/HTML/Reference/Elements/button#formnovalidate) sur un {{HTMLElement("button")}}, [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit) ou [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image) appartenant au formulaire.
 - `target`
   - : Indique où afficher la réponse après l'envoi du formulaire. C'est un nom/mot-clé pour un _contexte de navigation_ (par exemple&nbsp;: onglet, fenêtre ou iframe). Les mots-clés suivants ont des significations particulières&nbsp;:
     - `_self` (par défaut)&nbsp;: Charger dans le même contexte de navigation que le contexte actuel.
     - `_blank`&nbsp;: Charger dans un nouveau contexte de navigation sans nom. Cela a le même comportement que de définir [`rel="noopener"`](#rel) et ne définit pas [`window.opener`](/fr/docs/Web/API/Window/opener).
     - `_parent`&nbsp;: Charger dans le contexte de navigation parent du contexte actuel. S'il n'y a pas de parent, il se comporte de la même manière que `_self`.
     - `_top`&nbsp;: Charger dans le contexte de navigation de niveau supérieur (c'est‑à‑dire le contexte de navigation qui est un ancêtre du contexte actuel et qui n'a pas de parent). S'il n'y a pas de parent, il se comporte de la même manière que `_self`.
-    - `_unfencedTop`&nbsp;: Charge la réponse d'un formulaire situé à l'intérieur d'un [cadre sécurisé](/fr/docs/Web/API/Fenced_frame_API) dans la fenêtre de niveau supérieur (c'est‑à‑dire en traversant au‑delà de la racine de la fenced frame, contrairement aux autres destinations réservées). Disponible uniquement à l'intérieur des fenced frames.
+    - `_unfencedTop`&nbsp;: Charge la réponse d'un formulaire situé à l'intérieur d'un [cadre protégé](/fr/docs/Web/API/Fenced_frame_API) dans la fenêtre de niveau supérieur (c'est‑à‑dire en traversant au‑delà de la racine de la cadre protégé, contrairement aux autres destinations réservées). Disponible uniquement à l'intérieur des cadres protégés.
 
     Cette valeur peut être remplacée par un attribut [`formtarget`](/fr/docs/Web/HTML/Reference/Elements/button#formtarget) sur un {{HTMLElement("button")}}, [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image).
 
@@ -116,7 +116,7 @@ Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire
 ### HTML
 
 ```html
-<!-- Formulaire simple qui enverra une requête GET -->
+<!-- Formulaire simple qui envoi une requête GET -->
 <form>
   <label
     >Nom&nbsp;:
@@ -125,7 +125,7 @@ Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire
   <button>Sauvegarder</button>
 </form>
 
-<!-- Formulaire qui enverra une requête POST à l'URL actuelle -->
+<!-- Formulaire qui envoi une requête POST à l'URL actuelle -->
 <form method="post">
   <label
     >Nom&nbsp;:

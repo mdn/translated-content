@@ -3,7 +3,7 @@ title: Firefox 21 note de version pour les développeurs
 short-title: Firefox 21
 slug: Mozilla/Firefox/Releases/21
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Firefox 21 est sorti le 14 mai 2013. Cet article répertorie les principaux changements utiles non seulement aux développeur·euse·s Web, mais aussi aux développeur·euse·s Firefox et Gecko ainsi qu'aux développeur·euse·s d'extensions.
@@ -12,7 +12,7 @@ Firefox 21 est sorti le 14 mai 2013. Cet article répertorie les principaux chan
 
 ### HTML
 
-- L'attribut `scoped` a été ajouté à l'élément {{HTMLElement("style")}}. Il permet d'inclure des styles qui sont isolés du reste du document. Ces styles peuvent être sélectionnés par le pseudo élément CSS {{CSSxRef(":scope")}} ajouté dans Firefox 20. ([bogue Firefox 508725 <sup>(angl.)</sup>](https://bugzil.la/508725)).
+- L'attribut `scoped` a été ajouté à l'élément {{HTMLElement("style")}}. Il vous permet d'inclure des styles qui sont isolés du reste du document. Ces styles peuvent être sélectionnés par le pseudo élément CSS {{CSSxRef(":scope")}} ajouté dans Firefox 20. ([bogue Firefox 508725 <sup>(angl.)</sup>](https://bugzil.la/508725)).
 - Le nouvel élément HTML {{HTMLElement("main")}} a été implémenté ([bogue Firefox 820508 <sup>(angl.)</sup>](https://bugzil.la/820508)).
 
 ### JavaScript

@@ -28,7 +28,7 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 
 ## Accessibilité
 
-Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `s`. On peut le rendre annonçable via la propriété CSS {{CSSxRef("content")}} et grâce aux pseudo-éléments {{CSSxRef("::before")}} et {{CSSxRef("::after")}}.
+Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `s`. On peut le rendre comme pouvant être annoncé avec la propriété CSS {{CSSxRef("content")}} et grâce aux pseudo-éléments {{CSSxRef("::before")}} et {{CSSxRef("::after")}}.
 
 ```css
 s::before,

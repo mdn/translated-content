@@ -3,8 +3,6 @@ title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
 ---
 
-{{JSRef}}
-
 La méthode **`forEach()`** permet d'exécuter une fonction donnée, une fois pour chaque valeur de l'ensemble `Set`. L'ordre appliqué est celui dans lequel les valeurs ont été ajoutées à l'ensemble.
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.forEach()")}}

@@ -1,12 +1,12 @@
 ---
 title: Django 開発環境の設定
+short-title: 開発環境の設定
 slug: Learn_web_development/Extensions/Server-side/Django/development_environment
-original_slug: Learn/Server-side/Django/development_environment
 l10n:
-  sourceCommit: 4d9375ca739df44ef52cd026de9a20aaff60d9aa
+  sourceCommit: e82295d471ebda705947d0e5752421df3f85ad43
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Django がどういうものかわかったところで、Windows、Linux (Ubuntu)、および macOS で Django 開発環境をセットアップしてテストする方法を説明します。一般的なオペレーティングシステムを使っていれば、Django アプリケーションの開発が始められます。
 
@@ -29,7 +29,7 @@ Django がどういうものかわかったところで、Windows、Linux (Ubunt
 
 ## Django 開発環境の概要
 
-Django は自分のコンピューターをセットアップするのはとても簡単で、ウェブアプリケーションの開発を開始できます。このセクションでは、開発環境の内容を説明し、セットアップおよび構成オプションの一部の概要を示します。また、Ubuntu、macOS X、Windows に Django 開発環境をインストールする際の推奨される方法と、そのテスト方法について説明します。
+Django は自分のコンピューターをセットアップするのはとても簡単で、ウェブアプリケーションの開発を開始できます。この節では、開発環境の内容を説明し、セットアップおよび構成オプションの一部の概要を示します。また、Ubuntu、macOS X、Windows に Django 開発環境をインストールする際の推奨される方法と、そのテスト方法について説明します。
 
 ### Django 開発環境とは何ですか？
 
@@ -37,7 +37,7 @@ Django は自分のコンピューターをセットアップするのはとて�
 
 Django 自体が提供する主なツールは、Django プロジェクトを作成して作業するための Python スクリプトと、ローカルの（つまり、外部のウェブサーバーではなく）Django ウェブアプリケーションをあなたのコンピューター上のウェブブラウザーでテストするための簡単な開発用ウェブサーバーです。
 
-開発環境の一部を構成する他の周辺ツールがありますが、ここではカバーしません。これには、コードを編集するための[テキストエディター](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors)や IDE、自動成型するためのリンター、などがあります。すでにテキストエディターがインストールされていると仮定しています。
+開発環境の一部を構成する他の周辺ツールがありますが、ここではカバーしません。これには、コードを編集するための[テキストエディター](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors)や IDE、自動整形するためのリンター、などがあります。すでにテキストエディターがインストールされていると仮定しています。
 
 ### Django の構成オプションとは
 
@@ -48,7 +48,7 @@ Django は、インストール場所と設定の方法に関して非常に柔�
 - いくつかのデータベースのうち 1 つを使用するように構成したり、個別にインストールして構成する必要がある場合もあります。
 - メインシステムの Python 環境または分離した Python 仮想環境で実行します。
 
-これらのオプションは、それぞれわずかに異なる構成とセットアップを必要とします。以下のサブセクションでは、いくつかの選択肢について説明します。この記事の残りの部分では、いくつかオペレーティングシステムに Django をセットアップする方法を説明します。このモジュールの残りの部分は、セットアップが済んでいる想定です。
+これらのオプションは、それぞれわずかに異なる構成とセットアップを必要とします。以下のサブ節では、いくつかの選択肢について説明します。この記事の残りの部分では、いくつかオペレーティングシステムに Django をセットアップする方法を説明します。このモジュールの残りの部分は、セットアップが済んでいる想定です。
 
 > [!NOTE]
 > その他のインストールオプションについては、Django の公式ドキュメントでカバーされています。[下記で適切なドキュメント](#関連情報)にリンクしています。
@@ -56,14 +56,14 @@ Django は、インストール場所と設定の方法に関して非常に柔�
 #### どのオペレーティングシステムに対応しているか
 
 Django のウェブアプリケーションは、Python 3 プログラミング言語を実行できるほとんどすべてのマシン（Windows、MacOS X、Linux / Unix、Solaris など）で実行できます。
-ほとんどのコンピューターで開発中に Django を実行できるパフォーマンスが必要です。
+ほとんどのコンピューターは開発中に Django を実行できるパフォーマンスを持っているでしょう。
 
-この記事では、Windows、macOS X、および Linux/Unix について説明します。
+この記事では、Windows、macOS、および Linux/Unix について説明します。
 
 #### どのバージョンの Python を使うべきか
 
 対象とする Django リリースで対応している Python のバージョンを使用することができま す。
-Django 5.0 では Python 3.10 から 3.12 を使用することができます ([FAQ:Installation](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django) を参照してください)。
+Django 5.0 では Python 3.10 から 3.12 を使用することができます ([FAQ:Installation](https://docs.djangoproject.com/ja/5.0/faq/install/#what-python-version-can-i-use-with-django) を参照してください)。
 
 Django プロジェクトは、対応している Python のリリースのうち、利用できる最新版を使用することを推奨しています（そして「公式に対応しています」）。
 
@@ -79,12 +79,12 @@ Django をダウンロードする場所は 3 つあります。
 
 #### どのデータベースか
 
-Django は 4 つの主要なデータベース（PostgreSQL、MySQL、Oracle、SQLite）をサポートしています。また、他の一般的な SQL データベースや NOSQL データベースにさまざまなレベルのサポートを提供するコミュニティライブラリーもあります。 Django は Object-Relational Mapper（ORM）を使用して多くのデータベースの違いを抽象化していますが、[回避する方が良い潜在的な問題](https://docs.djangoproject.com/en/5.0/ref/databases/)がまだあります。
+Django は 4 つの主要なデータベース（PostgreSQL、MySQL、Oracle、SQLite）をサポートしています。また、他の一般的な SQL データベースや NOSQL データベースにさまざまなレベルのサポートを提供するコミュニティライブラリーもあります。 Django は Object-Relational Mapper（ORM）を使用して多くのデータベースの違いを抽象化していますが、[回避する方が良い潜在的な問題](https://docs.djangoproject.com/ja/5.0/ref/databases/)がまだあります。
 
 この記事（とこのモジュールのほとんど）では、データをファイルに保存する SQLite データベースを使用します。 SQLite は軽量データベースとしての使用を目的としており、高度な並行性はサポートできません。 ただし、主に読み取り専用のアプリケーションには最適です。
 
 > [!NOTE]
-> Django は、標準ツール（django-admin）を使用してウェブサイトプロジェクトを開始するときに、デフォルトで SQLite を使用するように設定されています。 これは、追加の設定やセットアップが不要なため、入門には最適な選択です。
+> Django は、標準ツール (_django-admin_) を使用してウェブサイトプロジェクトを開始するときに、デフォルトで SQLite を使用するように設定されています。 これは、追加の設定やセットアップが不要なため、入門には最適な選択です。
 
 #### システム全体または Python の仮想環境にインストールするには
 
@@ -101,9 +101,10 @@ Django をデフォルト/グローバル環境にインストールすると、
 
 ## Python 3 のインストール
 
-Django を使用するには、オペレーティングシステムに Python をインストールする必要があります。Python 3 を使用している場合は、Django とその他の Python アプリケーションで使用される Python パッケージ/ライブラリーの管理（インストール、更新、削除）に使用する [Python Package Index](https://pypi.org/) ツール『pip3』も必要です。
+Django を使用するには、オペレーティングシステムに Python をインストールする必要があります。
+Python 3 を使用している場合は、Django とその他の Python アプリケーションで使用される Python パッケージ/ライブラリーの管理（インストール、更新、削除）に使用する [Python Package Index](https://pypi.org/) ツール『pip3』も必要です。
 
-このセクションでは、Ubuntu Linux 16.04、macOS X、および Windows 10 の Python のバージョンを確認し、必要に応じて新しいバージョンをインストールする方法を簡単に説明します。
+この節では、Ubuntu Linux 20.04、macOS、および Windows 10 の Python のバージョンを確認し、必要に応じて新しいバージョンをインストールする方法を簡単に説明します。
 
 > [!NOTE]
 > 使用しているプラットフォームによっては、オペレーティングシステム独自のパッケージマネージャやその他のメカニズムを使って Python/pip をインストールできます。ほとんどのプラットフォームでは、 <https://www.python.org/downloads/> から必要なインストールファイルをダウンロードし、適切なプラットフォーム固有の方法を使用してインストールできます。
@@ -125,12 +126,12 @@ sudo apt install python3-pip
 ```
 
 > [!NOTE]
-> Python 3.10 は [Django 5.0 で対応している] 最も古いバージョンです(https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django)。
+> Python 3.10 は [Django 5.0 で対応している](https://docs.djangoproject.com/ja/5.0/faq/install/#what-python-version-can-i-use-with-django)最も古いバージョンです。
 > このチュートリアルでは最新版の Python を使用する必要はありませんが、使用したい場合はインターネットに手順があります。
 
 ### macOS
 
-macOS は既定では Python 3 を含んでいません（古いバージョンでは Python 2 が含まれています）。
+macOS はデフォルトでは Python 3 を含んでいません（古いバージョンでは Python 2 が含まれています）。
 端末で以下のコマンドを実行することで確認できます。
 
 ```bash
@@ -143,7 +144,7 @@ Python 3 は [python.org](https://www.python.org/) から（_pip3_ ツールと�
 
 1. 必要なインストーラーをダウンロードします。
    1. <https://www.python.org/downloads/macos/> へ移動します。
-   2. Django 5.0 が動作する最新の[対応しているバージョン](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django)の安定版リリースをダウンロードしてください。
+   2. Django 5.0 が動作する最新の[対応しているバージョン](https://docs.djangoproject.com/ja/5.0/faq/install/#what-python-version-can-i-use-with-django)の安定版リリースをダウンロードしてください。
       （執筆時点では、これは Python 3.11.8 です）。
 
 2. Finder を使用してファイルを探し、パッケージファイルをダブルクリックします。インストールの後、プロンプトが表示されます。
@@ -158,11 +159,11 @@ pip3 list
 
 ### Windows 10 または 11
 
-Windows には既定で Python は含まれていませんが、[python.org](https://www.python.org/) から pip3 ツールと一緒に簡単にインストールできます。
+Windows にはデフォルトで Python は含まれていませんが、[python.org](https://www.python.org/) から pip3 ツールと一緒に簡単にインストールできます。
 
 1. 必要なインストーラーをダウンロードします。
    1. <https://www.python.org/downloads/windows/> へ移動します。
-   2. Django 5.0 が動作する最新の[対応しているバージョン](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django)の安定版リリースをダウンロードしてください。
+   2. Django 5.0 が動作する最新の[対応しているバージョン](https://docs.djangoproject.com/ja/5.0/faq/install/#what-python-version-can-i-use-with-django)の安定版リリースをダウンロードしてください。
       （執筆時点では、これは Python 3.11.8 です）。
 
 2. ダウンロードしたファイルをダブルクリックし、インストールのプロンプトに従って Python をインストールします。
@@ -174,7 +175,7 @@ Python 3 がインストールされたことを確認するには、コマン�
 py -3 -V
 ```
 
-Windows インストーラーには、既定で pip3（Python パッケージマネージャ）が組み込まれています。次に示すようにインストールされたパッケージを一覧表示できます。
+Windows インストーラーには、デフォルトで pip3（Python パッケージマネージャ）が組み込まれています。次に示すようにインストールされたパッケージを一覧表示できます。
 
 ```bash
 py -3 -m pip list
@@ -218,7 +219,7 @@ py -3 -m pip list
 
 #### Ubuntu 仮想環境のセットアップ
 
-Python と pip をインストールした後、virtualenvwrapper（virtualenv を含む）をインストールできます。公式インストールガイドは[こちら](http://virtualenvwrapper.readthedocs.io/en/latest/install.html)、または下記の手順に従ってください。
+Python と pip をインストールした後、_virtualenvwrapper_（virtualenv を含む）をインストールできます。公式インストールガイドは[こちら](https://virtualenvwrapper.readthedocs.io/en/latest/install.html)、または下記の手順に従ってください。
 
 pip3 を使用してツールをインストールします。
 
@@ -317,7 +318,7 @@ source ~/.bash_profile
 
 #### Windows の仮想環境のセットアップ
 
-[virtualenvwrapper-win](https://pypi.org/project/virtualenvwrapper-win/) のインストールは、仮想環境情報を保存する場所（既定値があります）を設定する必要がないため、virtualenvwrapper を設定するより簡単です。コマンドプロンプトで次のコマンドを実行するだけです。
+[virtualenvwrapper-win](https://pypi.org/project/virtualenvwrapper-win/) のインストールは、仮想環境情報を保存する場所（デフォルト値があります）を設定する必要がないため、virtualenvwrapper を設定するより簡単です。コマンドプロンプトで次のコマンドを実行するだけです。
 
 ```bash
 py -3 -m pip install virtualenvwrapper-win
@@ -404,7 +405,7 @@ SCM ツールには、git、Mercurial、Perforce、SVN (Subversion)、CVS (Concu
 > [!NOTE]
 > SCM ツールを使用することは、良いソフトウェア開発の活動です。
 > この説明では、git と GitHub の基本的な使い方を提供します。
-> 詳しくは [Learning Git](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources) をご覧ください。
+> 詳しくは [Learning Git](https://docs.github.com/ja/get-started/start-your-journey/git-and-github-learning-resources) をご覧ください。
 
 ### 主要概念
 
@@ -414,7 +415,7 @@ Git（と GitHub）は、コードを格納する最上位の「バケツ」と�
 すべての作業は、リポジトリー内のコードの特定の「ブランチ」に対して行われます。
 ブランチへの変更をバックアップしたい場合は、「コミット」を作成します。「コミット」は、現在のブランチへの最後のコミット以降のすべての変更を格納します。
 
-このリポジトリーは、"main" という名前の既定ブランチで作成されます。git を使用すると、このブランチから他にもブランチを作成することができます。
+このリポジトリーは、"main" という名前のデフォルトブランチで作成されます。git を使用すると、このブランチから他にもブランチを作成することができます。
 コミットを追加してブランチを個別に進化させ、後で GitHub で "Pull Request" (PR) を使用してブランチの変更を別のブランチにマージすることができます。
 また、例えば異なることを試すために、git を使用してローカルコンピューター上でブランチを切り替えることもできます。
 
@@ -422,19 +423,16 @@ Git（と GitHub）は、コードを格納する最上位の「バケツ」と�
 
 ### GitHub でアカウントとリポジトリーを作成
 
-最初に GitHub で無料アカウントを作成します。
-無料アカウントではプライベートリポジトリーを作成することはできませんが、_public_ リポジトリー ("repos") を好きなだけ作成することができます。
-次に、このチュートリアルの残りの部分で進化させる [ローカルライブラリーウェブサイト](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) を格納するために "django_local_library" という名前のリポジトリーを作成し、構成可能な状態にします。
-
-手順は次の通りです。
+まず、GitHub でアカウントを作成します（無料です）。
+次に、"django_local_library" という名前のリポジトリーを作成・設定します。これは、このチュートリアルの以降の部分で[地域図書館のウェブサイト](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)を開発・改良していく際に、その内容を保存するためのものです。
 
 1. <https://github.com/> にアクセスし、アカウントを作成してください。
 2. ログインしたら、上のツールバーの **+** リンクをクリックし、**New repository** を選択します。
 3. このフォームのフィールドをすべて埋めてください。
    これらは必須ではありませんが、強く推奨します。
-   - リポジトリーの名前を"django_local_library" と入力します。
+   - リポジトリーの名前を "django_local_library" と入力します。
    - 新しいリポジトリーの説明を "Local Library website written in Django" と入力します。
-   - リポジトリーは "Public" を選択します (既定)。
+   - リポジトリーは "Public" を選択します (デフォルト)。
 
      > [!WARNING]
      > この設定により、すべてのソースコードが見えるようになります。
@@ -457,7 +455,7 @@ Git（と GitHub）は、コードを格納する最上位の「バケツ」と�
    "Clone" の節で、"HTTPS" タブを選択し、URL をコピーしてください。
    リポジトリー名 "django_local_library" を使用した場合、URL は `https://github.com/<git\_ユーザー\_id>/django_local_library.git` のようになります。
 
-2. コンピューターに _git_ をインストールしてください（さまざまなプラットフォーム用のバージョンは[ここ](https://git-scm.com/downloads)で探すことができます）。
+2. _git_ をローカルコンピュータにインストールしてください（[Git の公式ダウンロードガイド](https://git-scm.com/downloads/)）。
 3. コマンドプロンプト/端末を開き、上記でコピーした URL を使用してリポジトリーをクローンしてください。
 
    ```bash
@@ -522,11 +520,13 @@ Git（と GitHub）は、コードを格納する最上位の「バケツ」と�
    下記の一覧のように見ていってください。
 
    ```bash
-   > git status
-   On branch main
-   Your branch is up-to-date with 'origin/update_gitignore'.
+   git status
+   ```
+
+   ```plain
+   On branch update_gitignore
    Changes to be committed:
-     (use "git reset HEAD <file>..." to unstage)
+     (use "git restore --staged <file>..." to unstage)
 
            modified:   .gitignore
    ```
@@ -595,18 +595,18 @@ py -3 manage.py runserver
 
 サーバーが稼働したら、ローカルウェブブラウザーで `http://127.0.0.1:8000/` という URL に移動して、サイトを表示できます。次のようなサイトが表示されます。
 
-![The home page of the skeleton Django app](django_skeleton_app_homepage_django_4_0.png)
+![Django のスケルトンアプリのトップページ](django_skeleton_app_homepage_django_4_0.png)
 
 ## まとめ
 
 Django 開発環境をあなたのコンピューター上で稼働できるようになりました。
 
-テストのセクションでは、`django-admin startproject`を使用して新しい Django ウェブサイトを作成する方法と、開発用ウェブサーバー (`python3 manage.py runserver`) を使用してブラウザーで実行する方法についても簡単に説明しました。次の記事では、このプロセスを拡張して、シンプルで完全なウェブアプリケーションを構築します。
+テストの節では、`django-admin startproject`を使用して新しい Django ウェブサイトを作成する方法と、開発用ウェブサーバー (`python3 manage.py runserver`) を使用してブラウザーで実行する方法についても簡単に説明しました。次の記事では、このプロセスを拡張して、シンプルで完全なウェブアプリケーションを構築します。
 
 ## 関連情報
 
-- [Quick Install Guide](https://docs.djangoproject.com/en/5.0/intro/install/) （Django ドキュメント）
-- [How to install Django — Complete guide](https://docs.djangoproject.com/en/5.0/topics/install/) （Django ドキュメント） - Django を削除する方法ついての情報が含まれています
-- [How to install Django on Windows](https://docs.djangoproject.com/en/5.0/howto/windows/) （Django ドキュメント）
+- [Quick Install Guide](https://docs.djangoproject.com/ja/5.0/intro/install/) （Django ドキュメント）
+- [How to install Django — Complete guide](https://docs.djangoproject.com/ja/5.0/topics/install/) （Django ドキュメント） - Django を削除する方法ついての情報が含まれています
+- [How to install Django on Windows](https://docs.djangoproject.com/ja/5.0/howto/windows/) （Django ドキュメント）
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}

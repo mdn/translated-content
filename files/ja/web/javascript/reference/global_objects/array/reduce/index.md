@@ -3,7 +3,7 @@ title: Array.prototype.reduce()
 short-title: reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
 **`reduce()`** は {{jsxref("Array")}} インターフェイスのメソッドで、配列のそれぞれの要素に対して、ユーザーが提供した「縮小」コールバック関数を呼び出します。その際、直前の要素の計算結果の返値を渡します。配列のすべての要素に対して「縮小」コールバック関数を実行した最終結果は、単一の値となります。

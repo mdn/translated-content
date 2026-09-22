@@ -3,8 +3,6 @@ title: windows.create()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/create
 ---
 
-{{AddonSidebar}}
-
 Crée une nouvelle fenêtre.
 
 Lorsque vous créez la fenêtre, vous pouvez :

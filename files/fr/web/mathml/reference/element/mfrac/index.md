@@ -4,8 +4,6 @@ slug: Web/MathML/Reference/Element/mfrac
 original_slug: Web/MathML/Element/mfrac
 ---
 
-{{MathMLRef}}
-
 L'élément MathML `<mfrac>` est utilisé pour afficher des fractions.
 
 La syntaxe est la suivante : `<mfrac>numérateur dénominateur</mfrac>`.

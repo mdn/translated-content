@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Multicol_layout
 original_slug: Web/CSS/CSS_multicol_layout
 ---
 
-{{CSSRef}}
-
 **Les colonnes CSS** (_CSS Multi-column Layout_ en anglais) forment un module CSS qui définit le comportement d'une disposition en colonnes, qui permet de décrire comment le contenu doit être réparti entre les colonnes et qui détaille comment sont gérées les espaces et les règles entre les colonnes.
 
 ## Exemple simple

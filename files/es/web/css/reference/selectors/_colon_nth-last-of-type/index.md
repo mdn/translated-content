@@ -26,7 +26,11 @@ Ver {{Cssxref(":nth-last-child")}} para una explicación más detallada de su si
 
 ### Sintaxis formal
 
-{{csssyntax}}
+```css-nolint
+:nth-last-of-type(<An+B> | even | odd) {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

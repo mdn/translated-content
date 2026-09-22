@@ -73,5 +73,5 @@ console.log(result.toString()); // "P32D"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/Duration/subtract", "Temporal.Duration.prototype.subtract()")}}

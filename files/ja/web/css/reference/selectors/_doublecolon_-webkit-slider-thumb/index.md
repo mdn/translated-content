@@ -1,22 +1,26 @@
 ---
-title: ::-webkit-slider-thumb
+title: CSS `::-webkit-slider-thumb` 擬似要素
+short-title: ::-webkit-slider-thumb
 slug: Web/CSS/Reference/Selectors/::-webkit-slider-thumb
-original_slug: Web/CSS/::-webkit-slider-thumb
+l10n:
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
-{{Non-standard_header}}
+{{non-standard_header}}
 
-**`::-webkit-slider-thumb`** は CSS の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、 {{HTMLElement("input")}} の `type="range"` でユーザーが数値を変更するために「溝」の中を動かすことができる「つまみ」を表します。
+**`::-webkit-slider-thumb`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、 {{HTMLElement("input")}} の `type="range"` でユーザーが数値を変更するために「溝」の中を動かすことができる「つまみ」を表します。
 
 ## 構文
 
-```css-nolint
-::-webkit-slider-thumb {}
+```css
+::-webkit-slider-thumb {
+  /* ... */
+}
 ```
 
 ## 仕様書
 
-どの仕様書でも定義されていません。これは WebKit/Blink に固有の私有擬似要素です。
+どの仕様書でも定義されていません。
 
 ## ブラウザーの互換性
 
@@ -27,7 +31,6 @@ original_slug: Web/CSS/::-webkit-slider-thumb
 - {{cssxref("::-webkit-slider-runnable-track")}}
 - 他のブラウザーで使われている類似の擬似要素:
   - {{cssxref("::-moz-range-thumb")}}
-  - {{cssxref("::-ms-thumb")}}
 
 - [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
 - [QuirksMode: Styling and scripting sliders](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

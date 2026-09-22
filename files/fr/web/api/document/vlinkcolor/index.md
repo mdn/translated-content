@@ -3,10 +3,10 @@ title: "Document : propriété vlinkColor"
 short-title: vlinkColor
 slug: Web/API/Document/vlinkColor
 l10n:
-  sourceCommit: cac79d099b0a4e48456cb53eb2435f6acf03e188
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 La propriété **`vlinkColor`** de l'interface {{DOMxRef("Document")}} permet d'obtenir ou de définir la couleur des liens que l'utilisateur a visités dans le document.
 

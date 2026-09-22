@@ -3,8 +3,6 @@ title: extends
 slug: Web/JavaScript/Reference/Classes/extends
 ---
 
-{{jsSidebar("Classes")}}
-
 Le mot-clé **`extends`** est utilisé dans les [déclarations](/fr/docs/Web/JavaScript/Reference/Statements/class) et [expressions de classes](/fr/docs/Web/JavaScript/Reference/Operators/class) afin de signifier qu'un type représenté par une classe hérite d'un autre type.
 
 {{InteractiveExample("JavaScript Demo: Classes Extends", "taller")}}

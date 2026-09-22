@@ -38,11 +38,11 @@ En général, cet élément est affiché en italique. Cependant, il ne doit pas 
 
 Certain·e·s développeur·euse·s peuvent être dérouté·e·s par le fait que plusieurs éléments produisent apparemment des résultats visuels similaires. `<em>` et `<i>` en sont un exemple courant, car ils mettent tous deux le texte en italique. Quelle est la différence&nbsp;? Lequel doit‑on utiliser&nbsp;?
 
-Par défaut, le rendu visuel est identique. Cependant, la signification sémantique diffère. L'élément `<em>` indique une emphase sur son contenu, tandis que l'élément `<i>` marque un texte mis à l'écart de la prose normale, comme un mot étranger, les pensées d'un personnage fictif, ou lorsque le texte se réfère à la définition d'un mot plutôt qu'à son sens sémantique. (Le titre d'une œuvre, comme le nom d'un livre ou d'un film, devrait utiliser `<cite>`.)
+Par défaut, le rendu visuel est identique. Cependant, la signification sémantique diffère. L'élément `<em>` indique une emphase sur son contenu, tandis que l'élément `<i>` marque un texte mis à l'écart de la prose normale, comme un mot étranger, les pensées d'un personnage fictif, ou lorsque le texte se réfère à la définition d'un mot plutôt qu'à son sens sémantique. (Le titre d'une œuvre, comme le nom d'un livre ou d'un film, doit utiliser `<cite>`.)
 
 Cela signifie que le choix du bon élément dépend de la situation. Aucun des deux n'est destiné à un usage purement décoratif, c'est à cela que sert le style CSS.
 
-Les exemples pour `<em>` pourraient être&nbsp;:
+Les exemples pour `<em>` peuvent être&nbsp;:
 
 ```html live-sample___em-example
 <p>Fais-le <em>déjà</em>&nbsp;!</p>
@@ -51,9 +51,9 @@ Les exemples pour `<em>` pourraient être&nbsp;:
 
 {{EmbedLiveSample('em-example', "", 85)}}
 
-Une personne ou un logiciel lisant le texte prononcerait les mots en italique avec une emphase, en utilisant l'accentuation verbale.
+Une personne ou un logiciel lisant le texte prononce les mots en italique avec une emphase, en utilisant l'accentuation verbale.
 
-Les exemples pour `<i>` pourraient être&nbsp;:
+Les exemples pour `<i>` peuvent être&nbsp;:
 
 ```html live-sample___i-example
 <p>Le mot <i>the</i> est un article.</p>

@@ -79,7 +79,7 @@ console.log(view2[7]); // 4
 
 ## Voir aussi
 
-- L'objet global {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}
 - La propriété {{JSxRef("ArrayBuffer.prototype.detached")}}
 - La méthode {{JSxRef("ArrayBuffer.prototype.transfer()")}}
 - [Prothèse d'émulation de `ArrayBuffer.prototype.transferToFixedLength` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#arraybufferprototypetransfer-and-friends)

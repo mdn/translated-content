@@ -340,7 +340,7 @@ Mozilla Developer Network (MDN) を使用するために、ほとんどの人は
 
 - クライアント側ウェブ技術のブラウザーの対応情報を参照する素材、例えば [\<video> リファレンスページ](/ja/docs/Web/HTML/Reference/Elements/video)など。
 - その他の補助的なリファレンス素材、例えば[ウェブ上のメディア型と形式のガイド](/ja/docs/Web/Media/Guides/Formats)など。
-- 特定の問題を解決する有益なチュートリアル、例えば[ブラウザー横断の動画プレーヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)。
+- 特定の問題を解決する有益なチュートリアル、例えば[ブラウザーに依存しない動画プレイヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)。
 
 [caniuse.com](https://caniuse.com/) は、いくつかの有益な外部リソースリンクとともに、対応する情報を提供しています。例えば、 <https://caniuse.com/#search=video> をご覧ください）テキストボックスに検索したい機能を入力してください）。
 

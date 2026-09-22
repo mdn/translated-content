@@ -3,8 +3,6 @@ title: Motifs (Match patterns)
 slug: Mozilla/Add-ons/WebExtensions/Match_patterns
 ---
 
-{{AddonSidebar}}
-
 Les modèles de correspondance sont un moyen de spécifier des groupes d'URL : un modèle de correspondance correspond à un ensemble spécifique d'URL. Ils sont destinés à des extensions à l'aide d'API WebExtensions dans quelques endroits, notamment pour spécifier les documents dans lesquels charger des [content scripts](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts), et pour spécifier les URL à ajouter aux auditeurs [`webRequest`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).
 
 Les API qui utilisent des modèles de correspondance acceptent généralement une liste de modèles de correspondance et effectueront les actions appropriées si l'URL correspond à l'un des motifs. Voir, par exemple, la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) dans manifest.json.

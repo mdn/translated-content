@@ -3,8 +3,6 @@ title: devtools.inspectedWindow.eval()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
 ---
 
-{{AddonSidebar}}
-
 Exécute JavaScript dans la fenêtre à laquelle les devtools sont attachés.
 
 C'est un peu comme utiliser {{WebExtAPIRef("tabs.executeScript()")}} pour joindre un script de contenu, mais avec deux différences principales:

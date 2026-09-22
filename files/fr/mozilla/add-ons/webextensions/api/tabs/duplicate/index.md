@@ -3,8 +3,6 @@ title: tabs.duplicate()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
 ---
 
-{{AddonSidebar}}
-
 Duplique un onglet dont l'identifiant est donné.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

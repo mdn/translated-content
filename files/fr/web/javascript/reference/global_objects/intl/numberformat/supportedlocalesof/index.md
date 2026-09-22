@@ -62,4 +62,4 @@ console.log(Intl.NumberFormat.supportedLocalesOf(locales, options));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.NumberFormat")}}
+- L'objet natif {{JSxRef("Intl.NumberFormat")}}

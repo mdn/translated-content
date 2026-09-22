@@ -2,15 +2,13 @@
 title: 厳格モード
 slug: Web/JavaScript/Reference/Strict_mode
 l10n:
-  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
+  sourceCommit: 63fee14f8c716fb79d2b9a1bb95b7ebc95c21c58
 ---
 
-{{jsSidebar("More")}}
-
 > [!NOTE]
-> 既定の厳格でないモードを _[Sloppy モード](/ja/docs/Glossary/Sloppy_mode)_ と呼ぶのを目にすることがあるかもしれません。これは公式な用語ではありません、念のため注意してください。
+> デフォルトの厳格でないモードを _[sloppy モード](/ja/docs/Glossary/Sloppy_mode)_ と呼ぶのを目にすることがあるかもしれません。これは公式な用語ではありません、念のため注意してください。
 
-JavaScript の厳格モード (Strict mode) は、 JavaScript の自由度を制限することに**オプトイン**することによって、暗黙のうちに [Sloppy モード](/ja/docs/Glossary/Sloppy_mode)からオプトアウトする方法です。厳格モードは単なるサブセットではなく、通常のコードとは**意図的に**異なる意味を持っています。厳格モードに対応していないブラウザーは、厳格モードに対応しているブラウザーとは異なる動作をする可能性がありますので、厳格モードに関する側面に対応しているかどうかの機能テストを行わずに厳格モードを頼らないでください。厳格モードのコードと非厳格モードのコードは共存できますので、スクリプトを順次厳格モードにオプトインすることができます。
+JavaScript の厳格モード (Strict mode) は、 JavaScript の自由度を制限することに**オプトイン**することによって、暗黙のうちに「[sloppy モード](/ja/docs/Glossary/Sloppy_mode)」からオプトアウトする方法です。厳格モードは単なるサブセットではなく、通常のコードとは**意図的に**異なる意味を持っています。厳格モードのコードと非厳格モードのコードは共存できますので、スクリプトを順次厳格モードにオプトインすることができます。
 
 厳格モードでは、通常の JavaScript の意味にいくつかの変更を加えます。
 
@@ -20,7 +18,7 @@ JavaScript の厳格モード (Strict mode) は、 JavaScript の自由度を制
 
 ## 厳格モードの呼び出し
 
-厳格モードは**スクリプト全体**または**個別の関数**に適用できます。中括弧 `{}` で括られる[ブロック構文](/ja/docs/Web/JavaScript/Reference/Statements/block)には適用できません。そのような場所に適用しようとしても何も起きません。[`eval`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) のコード、 [`Function`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) のコード、[イベントハンドラー](/ja/docs/Web/HTML/Reference/Attributes#event_handler_attributes)属性、[`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) などの関数に渡す文字列は、関数の本体またはスクリプト全体であり、厳格モードを呼び出すと期待どおりに動作します。
+厳格モードは**スクリプト全体**または**個別の関数**に適用できます。中括弧 `{}` で括られる[ブロック構文](/ja/docs/Web/JavaScript/Reference/Statements/block)には適用できません。そのような場所に適用しようとしても何も起きません。[`eval`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) のコード、 [`Function`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) のコード、[イベントハンドラー](/ja/docs/Web/HTML/Reference/Attributes#イベントハンドラー属性)属性、{{domxref("Window.setTimeout", "setTimeout()")}} などの関数に渡す文字列は、関数の本体またはスクリプト全体であり、厳格モードを呼び出すと期待どおりに動作します。
 
 ### スクリプトでの厳格モード
 
@@ -29,7 +27,7 @@ JavaScript の厳格モード (Strict mode) は、 JavaScript の自由度を制
 ```js
 // スクリプト全体の厳格モード構文
 "use strict";
-const v = "こんにちは！厳格モードのスクリプト！";
+const v = "こんにちは！厳格モードのスクリプトです！";
 ```
 
 ## 関数における厳格モード
@@ -50,7 +48,7 @@ function myNotStrictFunction() {
 }
 ```
 
-`"use strict"` ディレクティブは、単純な引数を持つ関数の本体にのみ使用することができます。 `"use strict"` を[残余](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)引数のある関数で使用すると、[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params)となります。
+`"use strict"` ディレクティブは、単純な引数を持つ関数の本体にのみ使用することができます。`"use strict"` を[残余](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)引数のある関数で使用すると、[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params)となります。
 
 ```js-nolint example-bad
 function sum(a = 1, b = 2) {
@@ -66,7 +64,7 @@ function sum(a = 1, b = 2) {
 
 ```js
 function myStrictFunction() {
-  // これはモジュールなので、既定で厳格モードです
+  // これはモジュールなので、デフォルトで厳格モードです
 }
 export default myStrictFunction;
 ```
@@ -104,11 +102,13 @@ delete Object.prototype; // エラーは発生しない
 
 ### ミスからエラーへの変換
 
-厳格モードでは、従来は受け入れていた一部のミスをエラーに変更します。JavaScript は未熟な開発者にも易しいように設計され、またエラーとすべき操作の一部をエラーとして扱いません。これにより当面の問題を解決したことがありますが、後により大きな問題を引き起こしたこともあります。厳格モードではこれらのミスをエラーとして扱うことで、開発者は気づいて修正するようになります。
+厳格モードでは、従来は受け入れていた一部のミスをエラーに変更します。JavaScript は未熟な開発者にも易しいように設計され、またエラーとすべき操作の一部をエラーとして扱いません。これにより当面の問題を解決したことがありますが、後により大きな問題を引き起こしたこともあります。厳格モードではこれらのミスをエラーとして扱うことで、開発者が気づいて修正できるようになります。
 
 #### 未宣言の変数への代入
 
 厳格モードでは、偶発的にグローバル変数を作成できないようにします。厳格モードでない場合は、代入文で変数名の綴りを間違えるとグローバルオブジェクトに新しいプロパティが作成され、そしてそれは動作し続けます。厳格モードでは、代入文で偶発的にグローバル変数を作成せずにエラーが発生します。
+
+<!-- cSpell:ignore mistypeVarible -->
 
 ```js
 "use strict";
@@ -122,7 +122,7 @@ mistypeVarible = 17;
 
 #### オブジェクトプロパティへの代入の失敗
 
-厳格モードでは、代入文で暗黙的に失敗せずに例外が発生するようにします。プロパティへの代入が失敗する条件は3 つあります。
+厳格モードでは、特定の代入文では暗黙的に失敗せずにエラーが発生します。プロパティの代入を失敗させる方法は 3 つあります。
 
 - 書き込み不可のデータプロパティへの代入
 - アクセサーがゲッターのみであるプロパティへの代入
@@ -195,6 +195,8 @@ function sum(a, a, c) {
 }
 ```
 
+非厳格モードでも、関数にデフォルト引数、残余引数、構造分解引数がある場合は、引数名が重複していると構文エラーとなります。
+
 #### 古い 8 進数リテラル
 
 厳格モードでは、[`0` を先頭とした 8 進数表記や 8 進数エスケープシーケンスを禁止](/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal)します。厳格モード以外では、 `0644` のような `0` で始まる数値は、すべての桁が 8 より小さい場合、 8 進数 (`0644 === 420`) として解釈されます。初心者の開発者は、接頭辞に何の意味もないと信じて、配置用の器具として使用することがありますが、これは数字の意味を変えてしまいます。 8 進数の先頭ゼロの構文はほとんど有益なものではなく、間違って使用される可能性があるため、厳格モードでは構文エラーとなります。
@@ -214,7 +216,7 @@ const sumWithOctal = 0o10 + 8;
 console.log(sumWithOctal); // 16
 ```
 
-8 進数の拡張 {{Glossary("ASCII")}} 文字コード番号で文字を表わすために、 `"%"` と等しい `"\45"` のような 8 進数のエスケープシーケンスが使用できます。厳格モードでは、これは構文エラーになります。より正式には、 `\` に続いて `0` 以外の数字を続けたり `\0` に数字を続けたりすることは許されていません。例えば `\9` や `\07` の形は許されません。
+8 進数の拡張 {{Glossary("ASCII")}} 文字コード番号で文字を表わすために、 `"%"` と等しい `"\45"` のような 8 進数のエスケープシーケンスが使用できます。[厳格モード](/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_escape_sequence)では、これは構文エラーになります。より正式には、 `\` に続いて `0` 以外の数字を続けたり `\0` に数字を続けたりすることは許されていません。例えば `\9` や `\07` の形は許されません。
 
 #### プリミティブ値へのプロパティの設定
 
@@ -230,7 +232,7 @@ false.true = ""; // TypeError
 
 #### プロパティ名の重複
 
-厳格モードのコードでは、プロパティ名が重複すると {{jsxref("SyntaxError")}} と見なされていました。[プロパティ名の計算値](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)の導入により、実行時に重複する可能性が出てきたため、 ECMAScript 2015 ではその制限が撤廃されました。
+厳格モードのコードでは、プロパティ名が重複すると {{jsxref("SyntaxError")}} と見なされていました。[算出プロパティ名](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#算出プロパティ名)の導入により、実行時に重複する可能性が出てきたため、 ECMAScript 2015 ではその制限が撤廃されました。
 
 ```js
 "use strict";
@@ -238,7 +240,7 @@ const o = { p: 1, p: 2 }; // ECMAScript 2015 以前では構文エラー
 ```
 
 > [!NOTE]
-> これまでエラーとされていたコードをエラーでなくすこと、常に後方互換性があるものと見なされます。これは、言語がエラーを発生させることに厳格であることの良い部分であり、将来の意味づけの変更のための余地を残しています。
+> これまでエラーとされていたコードをエラーでなくすことは、常に後方互換性があるものと見なされます。これは、言語がエラーを発生させることに厳格であることの良い部分であり、将来の意味づけの変更のための余地を残しています。
 
 ### スコープ管理の単純化
 
@@ -358,9 +360,9 @@ privilegedInvoker();
 
 ```js
 "use strict";
-const f = function () {
+function f() {
   return arguments.callee;
-};
+}
 f(); // TypeError が発生
 ```
 

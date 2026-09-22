@@ -3,8 +3,6 @@ title: TypedArray.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
 ---
 
-{{JSRef}}
-
 La méthode **`findIndex()`** renvoie un **indice** d'un élément d'un tableau typé si cet élément remplit une condition définie par une fonction de test donnée. S'il n'y a aucun élément satisfaisant, -1 sera renvoyé.
 
 Voir aussi la méthode {{jsxref("TypedArray.find", "find()")}} qui renvoie la **valeur** de l'élément trouvé (au lieu de son indice).

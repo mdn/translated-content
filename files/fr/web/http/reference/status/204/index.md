@@ -2,7 +2,7 @@
 title: 204 No Content
 slug: Web/HTTP/Reference/Status/204
 l10n:
-  sourceCommit: c212cfca9809021001637344831487029f1b8887
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse de succès](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès) HTTP **`204 No Content`** indique que la requête a réussi, mais que le client n'a pas besoin de quitter la page actuelle.
@@ -14,7 +14,7 @@ Une réponse `204 No Content` en réponse à ces méthodes de requête a la sign
 - {{HTTPMethod("PUT")}}&nbsp;: L'action a réussi, et la valeur {{HTTPHeader("ETag")}} contient l'étiquette d'entité pour la nouvelle représentation de la ressource cible.
 
 Une réponse `204` peut être utilisée lors de l'implémentation d'une fonctionnalité «&nbsp;enregistrer et continuer l'édition&nbsp;» pour des applications comme les wikis.
-Dans ce cas, une requête {{HTTPMethod("PUT")}} pourrait être utilisée pour enregistrer le contenu de la page, et une réponse `204 No Content` indique au navigateur que l'éditeur ne doit pas être remplacé par un autre contenu.
+Dans ce cas, une requête {{HTTPMethod("PUT")}} peut être utilisée pour enregistrer le contenu de la page, et une réponse `204 No Content` indique au navigateur que l'éditeur ne doit pas être remplacé par un autre contenu.
 
 Notez que la réponse ne doit inclure aucun contenu ni l'en-tête {{HTTPHeader("Content-Length")}} (les navigateurs peuvent rejeter les réponses qui incluent du contenu).
 
@@ -33,7 +33,7 @@ La requête inclut un en-tête {{HTTPHeader("Authorization")}} avec un jeton pou
 
 ```http
 DELETE /image/123 HTTP/1.1
-Host: exemple.com
+Host: example.com
 Authorization: Bearer 1234abcd
 ```
 
@@ -52,13 +52,13 @@ La requête inclut un en-tête {{HTTPHeader("Authorization")}} avec un jeton pou
 
 ```http
 PUT /users/123 HTTP/1.1
-Host: exemple.com
+Host: example.com
 Content-Type: application/json
 Authorization: Bearer 1234abcd
 
 {
   "name": "Sandra Smith",
-  "email": "sandra@exemple.com"
+  "email": "sandra@example.com"
 }
 ```
 

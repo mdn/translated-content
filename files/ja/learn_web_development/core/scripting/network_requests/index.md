@@ -60,7 +60,7 @@ l10n:
 この節では、フェッチ API の例をいくつか見てみましょう。
 
 下記にある例はある程度の複雑さを持ち、Fetch APIを実際のコンテキストでどのように使用するかを示しています。これまでフェッチを使用したことがない場合は、 Scrimba の [First fetch](https://scrimba.com/frontend-path-c0j/~0lu?via=mdn) <sup>
-[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> のインタラクティブチュートリアルから始めることをお勧めします。とても単純な導入手順を追って説明する手順を提供しています。
+[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> のインタラクティブチュートリアルから始めることをお勧めします。とても単純な導入手順を追って説明する手順を提供しています。
 
 ### テキストコンテンツの読み取り
 

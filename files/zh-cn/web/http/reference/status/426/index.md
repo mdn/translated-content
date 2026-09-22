@@ -9,13 +9,13 @@ slug: Web/HTTP/Reference/Status/426
 
 ## 状态
 
-```plain
+```http
 426 Upgrade Required
 ```
 
 ## 示例
 
-```plain
+```http
 HTTP/1.1 426 Upgrade Required
 Upgrade: HTTP/3.0
 Connection: Upgrade

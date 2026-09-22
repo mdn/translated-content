@@ -109,7 +109,7 @@ for (var i = 0 in obj) {
 ## Смотрите также
 
 - {{jsxref("Statements/for...of", "for...of")}} - похожий цикл, проходящий по значениям свойств
-- {{jsxref("Statements/for_each...in", "for each in")}} - похожее выражение, но перебирает значения свойств, а не их имена (устарело)
+- `for each in` - похожее выражение, но перебирает значения свойств, а не их имена (устарело)
 - {{jsxref("Statements/for", "for")}}
 - [Генераторы](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators) (использующие синтаксис `for...in`)
 - [Перечислимость и владение свойствами](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

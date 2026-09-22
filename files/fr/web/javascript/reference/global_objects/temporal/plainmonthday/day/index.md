@@ -73,6 +73,6 @@ console.log(lastMD.toLocaleString("en-US", { calendar: "hebrew" })); // 30 Heshv
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainMonthDay")}}
+- L'objet natif {{JSxRef("Temporal.PlainMonthDay")}}
 - La méthode {{JSxRef("Temporal/PlainMonthDay/with", "Temporal.PlainMonthDay.prototype.with()")}}
 - La propriété {{JSxRef("Temporal/PlainMonthDay/monthCode", "Temporal.PlainMonthDay.prototype.monthCode")}}

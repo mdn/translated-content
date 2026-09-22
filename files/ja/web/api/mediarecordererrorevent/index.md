@@ -5,7 +5,7 @@ l10n:
   sourceCommit: bbecba9e7d688493adbdc37fc70e02d87adfe371
 ---
 
-{{APIRef("MediaStream Recording")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("MediaStream Recording")}}{{Non-standard_Header}}
 
 `MediaRecorderErrorEvent` インターフェイスは、[MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API) によって返されるエラーを表します。 発生したエラーを記述する {{domxref("DOMException")}} への参照をカプセル化した {{domxref("Event")}} オブジェクトです。
 

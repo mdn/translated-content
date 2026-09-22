@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ccbc5d4100e0a5de844e060b025883ef1611d7b8
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 Интерфейс **`VRFrameData`** из [WebVR API](/ru/docs/Web/API/WebVR_API) предоставляет всю необходимую информацию для отображения одного кадра VR-сцены, создаётся с помощью {{domxref("VRDisplay.getFrameData()")}}.
 
@@ -20,15 +20,15 @@ l10n:
 ## Свойства экземпляра
 
 - {{domxref("VRFrameData.leftProjectionMatrix")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Массив {{Domxref ("Float32Array")}}, представляющий матрицу 4x4, которая описывает проекцию отображения для левого глаза.
+  - : Массив {{jsxref("Float32Array")}}, представляющий матрицу 4x4, которая описывает проекцию отображения для левого глаза.
 - {{domxref("VRFrameData.leftViewMatrix")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Массив {{Domxref ("Float32Array")}}, представляющий матрицу 4x4, которая описывает преобразование отображения для левого глаза.
+  - : Массив {{jsxref("Float32Array")}}, представляющий матрицу 4x4, которая описывает преобразование отображения для левого глаза.
 - {{domxref("VRFrameData.pose")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Объект {{Domxref ("VRPose")}} с данными о положении устройства {{domxref ("VRDisplay")}} в текущий момент времени {{domxref ("VRFrameData.timestamp")}}.
 - {{domxref("VRFrameData.rightProjectionMatrix")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Массив {{Domxref ("Float32Array")}}, представляющий матрицу 4x4, которая описывает проекцию отображения для правого глаза
+  - : Массив {{jsxref("Float32Array")}}, представляющий матрицу 4x4, которая описывает проекцию отображения для правого глаза
 - {{domxref("VRFrameData.rightViewMatrix")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Массив {{Domxref ("Float32Array")}}, представляющий матрицу 4x4, которая описывает преобразование отображения для правого глаза.
+  - : Массив {{jsxref("Float32Array")}}, представляющий матрицу 4x4, которая описывает преобразование отображения для правого глаза.
 - {{domxref("VRFrameData.timestamp")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Постоянно увеличивающееся значение отметки времени, представляющее время, когда произошло обновление кадра.
 

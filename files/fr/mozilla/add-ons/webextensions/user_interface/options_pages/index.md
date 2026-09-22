@@ -3,8 +3,6 @@ title: Options page
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 ---
 
-{{AddonSidebar}}
-
 Une page Option vous permet de définir des préférences pour votre WebExtension que vos utilisateurs peuvent modifier. Les utilisateurs peuvent accéder à la page d'options de l'extension à partir du gestionnaire des add-ons du navigateur:
 
 {{EmbedYouTube("eODy24csH5M")}}

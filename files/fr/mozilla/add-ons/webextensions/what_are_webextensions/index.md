@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5d88855e1d963ca0b0c3c14aeaa6414f8386c64e
 ---
 
-{{AddonSidebar}}
-
 > [!NOTE]
 > Si vous connaissez déjà les concepts de base pour les extensions de navigateur, vous pouvez passer cette section et voir directement [comment s'organisent les fichiers d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Ensuite, utilisez [la documentation de référence](/fr/docs/Mozilla/Add-ons/WebExtensions#référence) pour commencer à construire votre extension. [L'atelier des extensions Firefox (en anglais)](https://extensionworkshop.com) vous permettra d'en savoir plus à propos des outils et méthodes de tests et de publication des extensions pour Firefox.
 

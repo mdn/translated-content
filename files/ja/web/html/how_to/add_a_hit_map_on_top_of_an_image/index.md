@@ -2,12 +2,11 @@
 title: 画像の上にヒットマップを追加する
 slug: Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 l10n:
-  sourceCommit: cd701f10306c8b0b9690532ff808df826818a04f
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
-
-ここでは、イメージマップを設定する方法と、最初に検討すべきいくつかの欠点を説明します。
+HTML では、{{htmlelement('area')}} および {{htmlelement('map')}} 要素を使用して、クリック可能なイメージマップを作成できます。
+この記事では、イメージマップの設定方法と、作成前に考慮すべきいくつかの注意点について記述します。
 
 <table>
 <caption>知っておくべきことは以下の通り</caption>

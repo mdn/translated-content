@@ -36,7 +36,7 @@ void gl.bufferData(cible, ArrayBufferView donneesSrc, utilisation, decalageSrc, 
 - taille
   - : Un {{domxref("GLsizeiptr")}} définissant la taille du magasin de données de l'objet tampon.
 - donneesSrc {{optional_inline}}
-  - : Un {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}} ou l'un des types de tableau typés {{domxref("ArrayBufferView")}} à copier dans le magasin de données. Si `null`, un magasin de données est quand même créé, mais son contenu n'est ni initialisé, ni défini.
+  - : Un {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}} ou l'un des types de tableau typés {{jsxref("TypedArray")}} à copier dans le magasin de données. Si `null`, un magasin de données est quand même créé, mais son contenu n'est ni initialisé, ni défini.
 - utilisation
   - : Un {{domxref("GLenum")}} indiquant le modèle d'utilisation du magasin de données. Valeurs possibles :
     - `gl.STATIC_DRAW`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent mais de ne pas changer souvent ; du contenu est écrit dans le tampon, mais non lu ;

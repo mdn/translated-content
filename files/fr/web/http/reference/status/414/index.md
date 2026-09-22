@@ -23,14 +23,14 @@ Certains systèmes implémentent `414 URI Too Long` sous la forme `414 Request-U
 
 ## Exemples
 
-### Soumission de formulaire avec GET
+### Envoi de formulaire avec GET
 
 Dans l'exemple suivant, une [méthode HTML `<form>`](/fr/docs/Web/HTML/Reference/Elements/form#method) utilise accidentellement `get` au lieu de `post`.
 Une grande quantité de données du formulaire est ajoutée à l'URL définie dans l'attribut `action` du formulaire et envoyée en tant que requête GET&nbsp;:
 
 ```http
 GET /search?feedback=it+was+the+best+of+times+it+was+the+worst+of+times… HTTP/1.1
-Host: exemple.com
+Host: example.com
 ```
 
 La limite de longueur d'URI du serveur est atteinte avec cette requête et une réponse 414 est envoyée&nbsp;:

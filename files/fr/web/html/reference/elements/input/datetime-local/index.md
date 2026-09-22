@@ -132,7 +132,7 @@ Dans les deux cas, les valeurs de date/heure et de fuseau horaire sont envoyées
 
 ## Validation
 
-Par défaut, `<input type="datetime-local">` n'applique aucune validation aux valeurs saisies. Les interfaces utilisateur ne permettent généralement pas de saisir autre chose qu'une date et une heure — ce qui est utile — mais un·e utilisateur·ice peut tout de même laisser le champ vide et soumettre, ou saisir une date et/ou une heure invalide (par exemple le 33 décembre).
+Par défaut, `<input type="datetime-local">` n'applique aucune validation aux valeurs saisies. Les interfaces utilisateur ne permettent généralement pas de saisir autre chose qu'une date et une heure — ce qui est utile — mais un·e utilisateur·ice peut tout de même laisser le champ vide et envoyer, ou saisir une date et/ou une heure invalide (par exemple le 33 décembre).
 
 Vous pouvez utiliser [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) pour restreindre les dates disponibles (voir [Définir des dates et heures maximales et minimales](#définir_des_dates_et_heures_maximales_et_minimales)), et vous pouvez utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) pour rendre la saisie de la date et de l'heure obligatoire. Ainsi, les navigateurs affichent une erreur si vous essayez d'envoyer une date en dehors de l'intervalle ou un champ vide.
 

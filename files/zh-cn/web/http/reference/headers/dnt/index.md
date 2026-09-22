@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-{{Deprecated_header}}{{non-standard_header}}
+{{non-standard_header}}
 
 > [!NOTE]
 > DNT（请勿追踪）规范已被废弃。更多信息请参阅 {{domxref("Navigator.doNotTrack")}}。

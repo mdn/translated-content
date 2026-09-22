@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/What_is_JavaScript
 original_slug: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
+{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
 
 Bienvenue dans le cours JavaScript pour débutants sur le MDN. Dans ce premier article nous donnons une description générale de JavaScript en présentant le «&nbsp;pourquoi&nbsp;» et le «&nbsp;comment&nbsp;» du JavaScript. L'objectif est que vous compreniez bien son but.
 

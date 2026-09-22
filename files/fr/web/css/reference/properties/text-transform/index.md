@@ -60,14 +60,14 @@ text-transform: math-auto;
 }
 ```
 
-La propriété `text-transform` prend en compte les règles de mappage des majuscules et minuscules spécifiques à chaque langue, telles que les suivantes&nbsp;:
+La propriété `text-transform` prend en compte les règles de correspondance des majuscules et minuscules spécifiques à chaque langue, telles que les suivantes&nbsp;:
 
 - Dans les langues turques, telles que le turc (`tr`), l'azéri (`az`), le tatar de Crimée (`crh`), le tatar de la Volga (`tt`) et le bachkir (`ba`), il existe deux types de `i`, avec et sans point, ainsi que deux paires de majuscules et minuscules&nbsp;: `i`/`İ` et `ı`/`I`.
 - En allemand (`de`), le `ß` devient `SS` en majuscule.
 - En néerlandais (`nl`), le digramme `ij` devient `IJ`, même avec `text-transform: capitalize`, qui ne met en majuscule que la première lettre d'un mot.
 - En grec (`el`), les voyelles perdent leur accent lorsque le mot entier est en majuscules (`ά`/`Α`), à l'exception de l'êta disjonctif (`ή`/`Ή`). De plus, les diphtongues dont la première voyelle est accentuée perdent l'accent et reçoivent un tréma sur la deuxième voyelle (`άι`/`ΑΪ`).
 - En grec (`el`), le sigma minuscule a deux formes&nbsp;: `σ` et `ς`. `ς` n'est utilisé que lorsque le sigma termine un mot. Lorsqu'on applique `text-transform: lowercase` à un sigma majuscule (`Σ`), le navigateur doit choisir la bonne forme minuscule en fonction du contexte.
-- En irlandais (`ga`), certaines lettres préfixées restent en minuscules lorsque la consonne initiale est en majuscule, ainsi, par exemple, `text-transform: uppercase` transformera `ar aon tslí` en `AR AON tSLÍ` et non, comme on pourrait s'y attendre, en `AR AON TSLÍ` (Firefox uniquement). Dans certains cas, un trait d'union est également supprimé lors de la conversion en majuscules&nbsp;: `an t-uisce` se transforme en `AN tUISCE` (et le trait d'union est correctement réinséré par `text-transform: lowercase`).
+- En irlandais (`ga`), certaines lettres préfixées restent en minuscules lorsque la consonne initiale est en majuscule, ainsi, par exemple, `text-transform: uppercase` transforme `ar aon tslí` en `AR AON tSLÍ` et non, comme on peut s'y attendre, en `AR AON TSLÍ` (Firefox uniquement). Dans certains cas, un trait d'union est également supprimé lors de la conversion en majuscules&nbsp;: `an t-uisce` se transforme en `AN tUISCE` (et le trait d'union est correctement réinséré par `text-transform: lowercase`).
 
 La langue est définie par l'attribut HTML [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang) ou l'attribut XML [`xml:lang`](/fr/docs/Web/SVG/Reference/Attribute/xml:lang).
 
@@ -97,10 +97,10 @@ text-transform: unset;
 ### Valeurs
 
 - `capitalize`
-  - : Est un mot-clé qui convertit la première _lettre_ de chaque mot en majuscule. Les autres caractères restent inchangés (ils conservent leur casse originale telle qu'écrite dans le texte de l'élément). Une lettre est définie comme un caractère faisant partie des catégories générales Lettre ou Nombre de l'Unicode ; ainsi, toute ponctuation ou symbole au début d'un mot est ignoré.
+  - : Est un mot-clé qui convertit la première _lettre_ de chaque mot en majuscule. Les autres caractères restent inchangés (ils conservent leur casse originale telle qu'écrite dans le texte de l'élément). Une lettre est définie comme un caractère faisant partie des catégories générales Lettre ou Nombre de l'Unicode&nbsp;; ainsi, toute ponctuation ou symbole au début d'un mot est ignoré.
 
     > [!WARNING]
-    > Dans de nombreuses langues, il est considéré comme incorrect de mettre en majuscule chaque mot d'une phrase, même dans les titres et les noms. Si vous ne connaissez pas la langue du texte auquel le style sera appliqué, vous devriez éviter d'utiliser `capitalize`. De plus, `capitalize` ne crée pas de capitalisation de titre, car il n'applique pas les règles spécifiques à la langue, comme l'omission des articles en anglais.
+    > Dans de nombreuses langues, il est considéré comme incorrect de mettre en majuscule chaque mot d'une phrase, même dans les titres et les noms. Si vous ne connaissez pas la langue du texte auquel le style est appliqué, vous devez éviter d'utiliser `capitalize`. De plus, `capitalize` ne crée pas de capitalisation de titre, car il n'applique pas les règles spécifiques à la langue, comme l'omission des articles en anglais.
 
     > [!NOTE]
     > Le mot-clé `capitalize` était mal défini dans CSS 1 et CSS 2.1. Cela a entraîné des différences entre les navigateurs dans la manière dont la première lettre était calculée (Firefox considérait `-` et `_` comme des lettres, mais les autres navigateurs ne le faisaient pas. WebKit et Gecko considéraient incorrectement les symboles basés sur les lettres comme `ⓐ` comme de vraies lettres.) En définissant précisément le comportement correct, CSS Text Level 3 a corrigé ce désordre. La ligne `capitalize` dans le tableau de compatibilité des navigateurs contient la version à partir de laquelle les différents moteurs ont commencé à prendre en charge ce comportement désormais précisément défini.
@@ -116,8 +116,8 @@ text-transform: unset;
 - `full-size-kana`
   - : Utilisé généralement pour le texte d'annotation {{HTMLElement("ruby")}}, le mot-clé convertit tous les petits caractères Kana en Kana de taille complète équivalente, pour compenser les problèmes de lisibilité aux petites tailles de police généralement utilisées dans les ruby.
 - `math-auto`
-  - : Utilisé pour rendre automatiquement le texte en italique mathématique lorsque cela est approprié. Il transforme les lettres latines et grecques, ainsi que quelques autres symboles liés aux mathématiques, en [symboles mathématiques italiques <sup>(angl.)</sup>](https://www.unicode.org/charts/PDF/U1D400.pdf) mais uniquement si cela est appliqué à un nœud de texte contenant un seul caractère. Par exemple, «&nbsp;x&nbsp;» deviendra «&nbsp;𝑥&nbsp;» (U+1D465), mais «&nbsp;exp&nbsp;» restera «&nbsp;exp&nbsp;».
-    Il est principalement utilisé pour définir le comportement des éléments {{MathMLElement("mi")}} dans MathML. Vous devriez généralement utiliser le balisage MathML qui applique automatiquement le style correct.
+  - : Utilisé pour rendre automatiquement le texte en italique mathématique lorsque c'est approprié. Il transforme les lettres latines et grecques, ainsi que quelques autres symboles liés aux mathématiques, en [symboles mathématiques italiques <sup>(angl.)</sup>](https://www.unicode.org/charts/PDF/U1D400.pdf) mais uniquement si c'est appliqué à un nœud de texte contenant un seul caractère. Par exemple, «&nbsp;x&nbsp;» devient «&nbsp;𝑥&nbsp;» (U+1D465), mais «&nbsp;exp&nbsp;» reste «&nbsp;exp&nbsp;».
+    Il est principalement utilisé pour définir le comportement des éléments {{MathMLElement("mi")}} dans MathML. Vous devez généralement utiliser le balisage MathML qui applique automatiquement le style correct.
 
 ## Accessibilité
 
@@ -342,7 +342,7 @@ strong {
 }
 ```
 
-Ça démontre comment les voyelles grecques, à l'exception de l'_eta_ disjonctive, ne doivent pas avoir d'accent, et l'accent sur la première voyelle d'une paire de voyelles devient un tréma sur la deuxième voyelle.
+Ça démontre comment les voyelles grecques, à l'exception d'un _eta_ disjonctive, ne doivent pas avoir d'accent, et l'accent sur la première voyelle d'une paire de voyelles devient un tréma sur la deuxième voyelle.
 
 {{EmbedLiveSample("Exemple avec `\"uppercase\"` (voyelles grecques)", "100%", 100)}}
 
@@ -492,7 +492,7 @@ strong {
 }
 ```
 
-Le katakana japonais demi-largeur était utilisé pour représenter le katakana dans des codes de caractères 8 bits. Contrairement aux caractères katakana réguliers (pleine largeur), une lettre avec dakuten (marque de son voisé) est représentée par deux points de code, le corps de la lettre et le dakuten. Le `full-width` combine ces deux éléments en un seul point de code lors de la conversion de ces caractères en pleine largeur.
+Le katakana japonais demi-largeur est utilisé pour représenter le katakana dans des codes de caractères 8 bits. Contrairement aux caractères katakana réguliers (pleine largeur), une lettre avec dakuten (marque de son voisé) est représentée par deux points de code, le corps de la lettre et le dakuten. Le `full-width` combine ces deux éléments en un seul point de code lors de la conversion de ces caractères en pleine largeur.
 
 {{EmbedLiveSample("Exemple avec `\"full-width\"` (katakana demi-largeur japonais)", "100%", 175)}}
 

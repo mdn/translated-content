@@ -105,6 +105,6 @@ arr instanceof Array; // false
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - [Prothèse d'émulation de `Array.isArray` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
 - [Prothèse d'émulation es-shims de `Array.isArray` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.isarray)

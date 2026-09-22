@@ -2,7 +2,7 @@
 title: 503 Service Unavailable
 slug: Web/HTTP/Reference/Status/503
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 HTTP の **`503 Service Unavailable`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)ステータスコードで、サーバーがリクエストを処理する準備ができていないことを示します。

@@ -3,8 +3,6 @@ title: TypedArray.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/at
 ---
 
-{{JSRef}}
-
 La méthode **`at()`** prend comme argument un entier et renvoie l'élément du tableau typé situé à cette position. Il est possible d'utiliser des entiers positifs et négatifs. Si l'argument est négatif, la position est relative à la fin du tableau.
 
 L'accès aux éléments d'un tableau typé en utilisant les crochets ne permet que d'utiliser des indices positifs&nbsp;: `typedarray[0]` renverra le premier élément, `typedarray[typedarray.length-1]` renverra le dernier. Avec `typedarray.at(-1)`, on peut avoir une écriture plus concise pour accéder au dernier élément. Voir les exemples ci-après.

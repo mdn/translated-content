@@ -3,8 +3,6 @@ title: tabs.TabStatus
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/TabStatus
 ---
 
-{{AddonSidebar}}
-
 Indique si l'onglet a terminé le chargement.
 
 ## Type

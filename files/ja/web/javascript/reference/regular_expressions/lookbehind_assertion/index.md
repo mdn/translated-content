@@ -2,10 +2,8 @@
 title: "後読みアサーション: (?<=...), (?<!...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion
 l10n:
-  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar}}
 
 **後読みアサーション**の「後読み」とは、それ以前の入力を指定されたパターンに照合しようとしますが、入力を消費することはありません。照合に成功した場合、入力の現在の位置はそのままです。パターン内のそれぞれのアトムは、逆順に照合します。
 

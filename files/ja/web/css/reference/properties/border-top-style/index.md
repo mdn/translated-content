@@ -1,11 +1,12 @@
 ---
-title: border-top-style
+title: CSS `border-top-style` プロパティ
+short-title: border-top-style
 slug: Web/CSS/Reference/Properties/border-top-style
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-**`border-top-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界 ({{CSSxRef("border")}}) における線のスタイルを設定します。
+**`border-top-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界線 ({{CSSxRef("border")}}) のスタイルを設定します。
 
 > [!NOTE]
 > 仕様書では、異なるスタイルの境界線を角でどのように接続するかを定義していません。
@@ -98,7 +99,7 @@ border-top-style: unset;
 
 #### HTML
 
-```html live-sample___examples
+```html
 <table>
   <tbody>
     <tr>
@@ -123,7 +124,7 @@ border-top-style: unset;
 
 #### CSS
 
-```css live-sample___examples
+```css
 /* 表の外見を定義 */
 table {
   border-width: 2px;
@@ -169,7 +170,7 @@ td {
 
 #### 結果
 
-{{EmbedLiveSample('Examples', 300, 200)}}
+{{EmbedLiveSample('例', 300, 200)}}
 
 ## 仕様書
 
@@ -181,5 +182,5 @@ td {
 
 ## 関連情報
 
-- その他のスタイルに関する境界のプロパティ: {{CSSxRef("border-left-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}}, {{CSSxRef("border-style")}}
-- その他の左側の境界に関するプロパティ: {{CSSxRef("border-top")}}, {{CSSxRef("border-top-color")}}, {{CSSxRef("border-top-width")}}
+- その他のスタイルに関する境界のプロパティ: {{CSSxRef("border-left-style")}}、{{CSSxRef("border-right-style")}}、{{CSSxRef("border-bottom-style")}}、{{CSSxRef("border-style")}}
+- その他の左側の境界に関するプロパティ: {{CSSxRef("border-top")}}、{{CSSxRef("border-top-color")}}、{{CSSxRef("border-top-width")}}

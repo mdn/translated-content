@@ -3,8 +3,6 @@ title: bookmarks.removeTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree
 ---
 
-{{AddonSidebar}}
-
 La méthode **`bookmarks.removeTree()`** supprime récursivement un dossier de signets et tout son contenu.
 
 > [!WARNING]

@@ -3,10 +3,8 @@ title: Pseudo-élément CSS `::checkmark`
 short-title: ::checkmark
 slug: Web/CSS/Reference/Selectors/::checkmark
 l10n:
-  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
+  sourceCommit: 513146a616213fee548fdcf72dc1359030eb3395
 ---
-
-{{SeeCompatTable}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::checkmark`** cible la coche (<i lang="en">checkmark</i>) placée à l'intérieur de l'élément {{HTMLElement("option")}} actuellement sélectionné d'un [élément de sélection personnalisable](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select). Il peut être utilisé pour fournir une indication visuelle de l'option sélectionnée.
 
@@ -83,12 +81,12 @@ option:not(option:last-of-type) {
 
 Le pseudo-élément `::checkmark` cible la coche placée à l'intérieur de l'élément `<option>` actuellement sélectionné d'un [élément de sélection personnalisable](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select).
 
-Il n'est disponible pour le ciblage que lorsque l'élément d'origine a un sélecteur et a une apparence de base définie sur lui via la propriété {{CSSxRef("appearance")}} avec la valeur `base-select`. Sa boîte générée apparaît avant toutes les boîtes générées par le pseudo-élément {{CSSxRef("::before")}}. L'icône peut être personnalisée à l'aide de la propriété {{CSSxRef("content")}}.
+Il n'est disponible pour le ciblage que lorsque l'élément d'origine a un sélecteur et a une apparence de base définie sur lui avec la propriété {{CSSxRef("appearance")}} avec la valeur `base-select`. Sa boîte générée apparaît avant toutes les boîtes générées par le pseudo-élément {{CSSxRef("::before")}}. L'icône peut être personnalisée à l'aide de la propriété {{CSSxRef("content")}}.
 
 Le sélecteur `::checkmark` est utile par exemple si vous souhaitez masquer la coche, utiliser une icône personnalisée ou ajuster la position de rendu de la coche à l'intérieur des éléments `<option>`.
 
 > [!NOTE]
-> Le pseudo-élément `::checkmark` n'est pas inclus dans l'arbre d'accessibilité, donc tout {{CSSxRef("content")}} généré qui lui est appliqué ne sera pas annoncé par les technologies d'assistance. Vous devez toujours vous assurer que toute nouvelle icône que vous définissez a un sens visuel pour son objectif prévu.
+> Le pseudo-élément `::checkmark` n'est pas inclus dans l'arbre d'accessibilité, donc tout {{CSSxRef("content")}} généré qui lui est appliqué n'est pas annoncé par les technologies d'assistance. Vous devez toujours vous assurer que toute nouvelle icône que vous définissez a un sens visuel pour son objectif prévu.
 
 ## Exemples
 
@@ -103,9 +101,9 @@ select,
 }
 ```
 
-En considérant que [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) est utilisé pour disposer les éléments `<option>` (ce qui est vrai dans **les implémentations actuelles** des sélections personnalisables), vous pourriez alors déplacer la coche du début de la ligne à la fin en définissant une valeur {{CSSxRef("order")}} supérieure à `0`, et en l'alignant à la fin de la ligne en utilisant une valeur {{CSSxRef("margin-left")}} `auto` (voir l'[Alignement et les marges automatiques](/fr/docs/Web/CSS/Guides/Box_alignment/In_flexbox#alignement_et_marges_automatiques)).
+En considérant que [la boîte flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout) est utilisée pour disposer les éléments `<option>` (ce qui est vrai dans **les implémentations actuelles** des sélections personnalisables), vous pouvez alors déplacer la coche du début de la ligne à la fin en définissant une valeur {{CSSxRef("order")}} supérieure à `0`, et en l'alignant à la fin de la ligne en utilisant une valeur {{CSSxRef("margin-left")}} `auto` (voir [l'alignement et les marges automatiques](/fr/docs/Web/CSS/Guides/Box_alignment/In_flexbox#alignement_et_marges_automatiques)).
 
-La valeur de la propriété {{CSSxRef("content")}} pourrait également être définie sur un emoji différent pour changer l'icône affichée.
+La valeur de la propriété {{CSSxRef("content")}} peut également être définie sur un emoji différent pour changer l'icône affichée.
 
 ```css
 option::checkmark {
@@ -131,4 +129,4 @@ Lisez la [Mise en forme de la coche de sélection actuelle](/fr/docs/Learn_web_d
 - La propriété {{CSSxRef("appearance")}}
 - Les pseudos-éléments {{CSSxRef("::picker()", "::picker(select)")}}, {{CSSxRef("::picker-icon")}}
 - Les pseudo-classes {{CSSxRef(":open")}}, {{CSSxRef(":checked")}}
-- Les [éléments de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+- [Les éléments de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select)

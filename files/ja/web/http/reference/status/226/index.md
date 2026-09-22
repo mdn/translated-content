@@ -2,7 +2,7 @@
 title: 226 IM Used
 slug: Web/HTTP/Reference/Status/226
 l10n:
-  sourceCommit: 975650c2f6ea843d6f7cbc721aee5dbc1db907b2
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 HTTP の **`226 IM Used`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、サーバーが {{HTTPMethod("GET")}} に対するレスポンスで{{Glossary("delta", "デルタ")}}を返したことを示します。

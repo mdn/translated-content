@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<sub>`** définit du texte en ligne qui doit être affiché en indice pour des raisons strictement typographiques. Les indices sont généralement rendus avec une ligne de base abaissée et un texte de plus petite taille.
+L'élément [HTML](/fr/docs/Web/HTML) **`<sub>`** définit du texte en incise qui doit être affiché en indice pour des raisons strictement typographiques. Les indices sont généralement rendus avec une ligne de base abaissée et un texte de plus petite taille.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;sub&gt;", "tabbed-shorter")}}
 
@@ -32,9 +32,9 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 
 ## Notes d'utilisation
 
-L'élément `<sub>` devrait uniquement être utilisé à des fins typographiques (afin de modifier la position du texte en raison des conventions typographiques) et non pour obtenir des effets de mise en forme.
+L'élément `<sub>` doit uniquement être utilisé à des fins typographiques (afin de modifier la position du texte en raison des conventions typographiques) et non pour obtenir des effets de mise en forme.
 
-Par exemple, utiliser `<sub>` pour mettre en forme le nom d'une entreprise qui utilise des lignes de base modifiées dans sa [marque verbale <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Wordmark) ne serait pas approprié&nbsp;; il faut plutôt utiliser le CSS. Par exemple, vous pouvez utiliser la propriété {{CSSxRef("vertical-align")}} avec une déclaration comme `vertical-align: sub` ou, pour contrôler plus précisément le décalage de la ligne de base, `vertical-align: -25%`.
+Par exemple, utiliser `<sub>` pour mettre en forme le nom d'une entreprise qui utilise des lignes de base modifiées dans sa [marque verbale <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Wordmark) n'est pas approprié&nbsp;; il faut plutôt utiliser le CSS. Par exemple, vous pouvez utiliser la propriété {{CSSxRef("vertical-align")}} avec une déclaration comme `vertical-align: sub` ou, pour contrôler plus précisément le décalage de la ligne de base, `vertical-align: -25%`.
 
 Voici certains cas d'utilisation (non exhaustifs) pour `<sub>`&nbsp;:
 
@@ -51,7 +51,7 @@ Les notes de bas de page traditionnelles sont indiquées par des chiffres rendus
 ```html
 <p>
   Selon les calculs effectués par Nakamura, Johnson et Mason<sub>1</sub>, cela
-  causera l'annulation complète des deux particules.
+  cause l'annulation complète des deux particules.
 </p>
 ```
 
@@ -149,6 +149,6 @@ Un autre exemple&nbsp;:
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement("sup")}} qui permet une mise en exposant. Il est à noter que l'élément `<sub>` et l'élément `<sup>` ne peuvent pas être utilisés simultanément. Pour afficher le symbole chimique d'un élément, il faudra utiliser [MathML](/fr/docs/Web/MathML) pour représenter à la fois le numéro atomique et le nombre de masse.
+- L'élément HTML {{HTMLElement("sup")}} qui permet une mise en exposant. Il est à noter que l'élément `<sub>` et l'élément `<sup>` ne peuvent pas être utilisés simultanément. Pour afficher le symbole chimique d'un élément, il faut utiliser [MathML](/fr/docs/Web/MathML) pour représenter à la fois le numéro atomique et le nombre de masse.
 - Les éléments MathML [`<msub>`](/fr/docs/Web/MathML/Reference/Element/msub), [`<msup>`](/fr/docs/Web/MathML/Element/msup), et [`<msubsup>`](/fr/docs/Web/MathML/Element/msubsup).
 - La propriété CSS {{CSSxRef("vertical-align")}}

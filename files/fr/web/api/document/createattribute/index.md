@@ -3,12 +3,14 @@ title: "Document : méthode createAttribute()"
 short-title: createAttribute()
 slug: Web/API/Document/createAttribute
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`createAttribute()`** de l'interface {{DOMxRef("Document")}} crée un nouveau nœud d'attribut et le renvoie. L'objet créé est un nœud implémentant l'interface {{DOMxRef("Attr")}}. Le DOM n'impose pas le type d'attribut à ajouter à un élément particulier de cette manière.
+La méthode **`createAttribute()`** de l'interface {{DOMxRef("Document")}} crée un nouveau nœud d'attribut.
+L'objet créé est un nœud implémentant l'interface {{DOMxRef("Attr")}}.
+Le DOM n'impose pas le type d'attribut à ajouter à un élément particulier de cette manière.
 
 > [!NOTE]
 > La chaîne de caractères donnée en paramètre est convertie en minuscules.
@@ -16,13 +18,14 @@ La méthode **`createAttribute()`** de l'interface {{DOMxRef("Document")}} crée
 ## Syntaxe
 
 ```js-nolint
-createAttribute(name)
+createAttribute(localName)
 ```
 
 ### Paramètres
 
-- `name`
+- `localName`
   - : Une chaîne de caractères contenant le nom de l'attribut.
+    La valeur est utilisée pour initialiser la propriété {{DOMxRef("Attr.localName", "localName")}} du nouvel attribut.
 
 ### Valeur de retour
 
@@ -31,9 +34,15 @@ Un nœud {{DOMxRef("Attr")}}.
 ### Exceptions levées
 
 - `InvalidCharacterError` {{DOMxRef("DOMException")}}
-  - : Levée si la valeur de [`name`](#name) n'est pas un [nom XML <sup>(angl.)</sup>](https://www.w3.org/TR/xml/#dt-name) valide&nbsp;; par exemple, si elle commence par un chiffre, un tiret ou un point, ou contient des caractères autres que des caractères alphanumériques, des tirets bas (`_`), des tirets (`-`) ou des points (`.`).
+  - : Levée si la valeur de [`localName`](#localname) n'est pas un nom d'attribut valide.
+    Elle doit contenir au moins un caractère et ne peut pas contenir d'espaces ASCII, `NULL`, `/`, `=` ou `>` (U+0000, U+002F, U+003D ou U+003E, respectivement).
+
+    > [!NOTE]
+    > Les versions antérieures de la spécification étaient plus restrictives, exigeant que le `localName` soit un [nom XML <sup>(angl.)</sup>](https://www.w3.org/TR/xml/#dt-name) valide.
 
 ## Exemples
+
+### Exemple simple
 
 ```js
 const noeud = document.getElementById("div1");

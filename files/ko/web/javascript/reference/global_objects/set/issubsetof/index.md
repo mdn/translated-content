@@ -37,7 +37,7 @@ isSubsetOf(other)
 > [!NOTE]
 > 부분집합 관계는 적절한 부분집합이 아니므로 `isSubsetOf()`는 `this`과 `other`에 동일한 요소가 포함되어 있으면 `true`를 반환합니다.
 
-`isSubsetOf()`는 [유사 Set](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) 객체를 `other` 매개변수로 받습니다. 사용자 코드를 호출하지 않고 `this`에 저장된 기본 데이터를 직접 검색하기 때문에 실제 {{jsxref("Operators/this", "this")}} 인스턴스여야 합니다. 그러면 그 동작은 `this`와 `other`의 크기에 따라 달라집니다.
+`isSubsetOf()`는 [유사 Set](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) 객체를 `other` 매개변수로 받습니다. 사용자 코드를 호출하지 않고 `this`에 저장된 기본 데이터를 직접 검색하기 때문에 실제 {{jsxref("this")}} 인스턴스여야 합니다. 그러면 그 동작은 `this`와 `other`의 크기에 따라 달라집니다.
 
 - `this`에 `other.size`보다 많은 요소가 있으면 `false`를 바로 반환합니다.
 - 그렇지 않으면 `this`의 요소를 순회하고 `this`의 요소 `e`로 인해 `other.has(e)`가 [거짓같은 값](/ko/docs/Glossary/Falsy) 값을 반환하는 경우 `false`를 반환합니다. 그렇지 않으면 `true`를 반환합니다.

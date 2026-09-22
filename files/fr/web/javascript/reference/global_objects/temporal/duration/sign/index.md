@@ -40,7 +40,7 @@ console.log(d3.negated().sign); // 0
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/Duration/abs", "Temporal.Duration.prototype.abs()")}}
 - La méthode {{JSxRef("Temporal/Duration/negated", "Temporal.Duration.prototype.negated()")}}
 - La propriété {{JSxRef("Temporal/Duration/blank", "Temporal.Duration.prototype.blank")}}

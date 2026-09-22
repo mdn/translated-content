@@ -3,10 +3,10 @@ title: Propriété CSS `vertical-align`
 short-title: vertical-align
 slug: Web/CSS/Reference/Properties/vertical-align
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`vertical-align`** définit l'alignement vertical d'une boîte en ligne (<i lang="en">inline</i> en anglais), en ligne et bloc (<i lang="en">inline-block</i> en anglais) ou d'une boîte de cellule de tableau.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`vertical-align`** définit l'alignement vertical d'une boîte en incise (<i lang="en">inline</i> en anglais), en incise et bloc (<i lang="en">inline-block</i> en anglais) ou d'une boîte de cellule de tableau.
 
 ## Propriétés constitutives
 
@@ -62,12 +62,12 @@ vertical-align: text-top;
 
 La propriété `vertical-align` peut être utilisée dans deux contextes&nbsp;:
 
-- Pour aligner verticalement la boîte d'un élément en ligne à l'intérieur de la boîte en ligne de son conteneur. Par exemple, elle peut être utilisée pour [positionner verticalement une image dans une ligne de texte](#alignement_vertical_sur_une_boîte_de_ligne).
+- Pour aligner verticalement la boîte d'un élément en incise à l'intérieur de la boîte en incise de son conteneur. Par exemple, elle peut être utilisée pour [positionner verticalement une image dans une ligne de texte](#alignement_vertical_sur_une_boîte_de_ligne).
 - Pour aligner verticalement [le contenu d'une cellule dans un tableau](#alignement_vertical_dune_cellule_de_tableau).
 
 Utilisez cette syntaxe raccourcie (`vertical-align`) à la place des propriétés correspondantes en forme longue, sauf si vous avez besoin de les appliquer en cascade de manière indépendante ou (sur les éléments SVG) pour assurer la compatibilité avec les anciennes implémentations SVG.
 
-Notez que `vertical-align` ne s'applique qu'aux éléments en ligne, en ligne-bloc et aux cellules de tableau&nbsp;: vous ne pouvez pas l'utiliser pour aligner verticalement des [éléments de niveau bloc](/fr/docs/Glossary/Block-level_content).
+Notez que `vertical-align` ne s'applique qu'aux éléments en incise, en bloc en incise et aux cellules de tableau&nbsp;: vous ne pouvez pas l'utiliser pour aligner verticalement des [éléments de niveau bloc](/fr/docs/Glossary/Block-level_content).
 
 ## Syntaxe
 
@@ -99,7 +99,7 @@ vertical-align: unset;
 
 La propriété `vertical-align` s'utilise avec une des valeurs suivantes.
 
-### Valeurs pour les éléments en lignes
+### Valeurs pour les éléments en incises
 
 #### Valeurs relatives au parent
 

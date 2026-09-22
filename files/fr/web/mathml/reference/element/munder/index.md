@@ -4,8 +4,6 @@ slug: Web/MathML/Reference/Element/munder
 original_slug: Web/MathML/Element/munder
 ---
 
-{{MathMLRef()}}
-
 L'élément MathML `<munder>` est utilisé pour attacher un accent ou une limite sous une expression. La syntaxe est la suivante: `<munder> base script-en-dessous </munder>`
 
 ## Attributs

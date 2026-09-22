@@ -59,5 +59,5 @@ console.log(ar.getTimeZones()); // undefined
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}
 - [La base de données IANA pour les fuseaux horaires <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database) sur Wikipedia

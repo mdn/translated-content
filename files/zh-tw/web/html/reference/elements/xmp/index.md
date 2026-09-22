@@ -3,8 +3,6 @@ title: <xmp>
 slug: Web/HTML/Reference/Elements/xmp
 ---
 
-{{deprecated_header}}
-
 **`<xmp>`** [HTML](/zh-TW/docs/Web/HTML) 元素呈現開始和結束標籤之間的文本，而不解釋其中的 HTML，並使用等寬字體。HTML2 規範建議應該以足夠寬的方式呈現，以允許每行 80 個字符。
 
 > [!NOTE]

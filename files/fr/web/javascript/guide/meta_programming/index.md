@@ -3,7 +3,7 @@ title: Métaprogrammation
 slug: Web/JavaScript/Guide/Meta_programming
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators","Web/JavaScript/Guide/Modules")}}
+{{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators","Web/JavaScript/Guide/Modules")}}
 
 À partir d'ECMAScript 2015, JavaScript fournit les objets natifs {{jsxref("Proxy")}} et {{jsxref("Reflect")}}. Ces objets permettent d'intercepter et de définir des comportements spécifiques pour certaines opérations fondamentales du langage (par exemple la recherche d'une propriété, l'affectation, l'énumération, l'appel d'une fonction, etc.). Grâce à ces deux objets, il est possible d'interagir avec le langage lui-même (on parle alors de métaprogrammation).
 
@@ -292,13 +292,13 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
     </tr>
     <tr>
       <td>
-        {{jsxref("Proxy/Proxy/enumerate", "handler.enumerate()")}}
+        <code>handler.enumerate()</code>
       </td>
       <td>
         <p>
           Lister les propriétés avec <code>for...in</code> :
           <code>for (var nom in proxy) {...}</code
-          ><br /><br />{{jsxref("Reflect.enumerate()")}}
+          ><br /><br /><code>Reflect.enumerate()</code>
         </p>
       </td>
       <td>La méthode <code>enumerate</code> doit renvoyer un objet.</td>

@@ -21,10 +21,10 @@ function calcAngle(adjacent, hypotenuse) {
 }
 
 console.log(calcAngle(8, 10));
-// Sortie attendue : 0.6435011087932843
+// Résultat attendu : 0.6435011087932843
 
 console.log(calcAngle(5, 3));
-// Sortie attendue : NaN
+// Résultat attendu : NaN
 ```
 
 ## Syntaxe

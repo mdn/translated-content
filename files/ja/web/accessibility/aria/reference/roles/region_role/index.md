@@ -1,7 +1,9 @@
 ---
 title: "ARIA: region ロール"
+short-title: region
 slug: Web/Accessibility/ARIA/Reference/Roles/region_role
-original_slug: Web/Accessibility/ARIA/Roles/region_role
+l10n:
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 **`region`** ロールは、著者が重要だと判断した文書内の領域を識別するために使います。これは汎用的なランドマークであり、他のランドマークロールが適切でない場合にナビゲーションを補助するために利用できます。
@@ -61,7 +63,7 @@ original_slug: Web/Accessibility/ARIA/Roles/region_role
   <!-- コンテンツ -->
 </div>
 
-...
+…
 
 <div role="region" aria-labelledby="please-reconsider">
   <h3 id="please-reconsider">文書構造を再検討してください</h3>

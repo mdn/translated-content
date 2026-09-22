@@ -3,10 +3,10 @@ title: "Window : évènement error"
 short-title: error
 slug: Web/API/Window/error_event
 l10n:
-  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 L'évènement `error` est déclenché sur un objet {{DOMxRef("Window")}} lorsqu'une ressource n'a pas pu être chargée ou utilisée — par exemple si un script rencontre une erreur d'exécution.
 
@@ -53,7 +53,7 @@ Cependant, pour qu'une propriété de gestionnaire d'évènement annule le compo
 window.onerror = () => true;
 ```
 
-Lorsque l'annulation est effectuée, l'erreur n'apparaîtra pas dans la console, mais le script en cours s'arrêtera toujours.
+Lorsque l'annulation est effectuée, l'erreur n'apparaît pas dans la console, mais le script en cours s'arrête toujours.
 
 #### Arguments
 
@@ -63,7 +63,7 @@ La signature du gestionnaire d'évènements est asymétrique entre `addEventList
   - : Une chaîne de caractères contenant un message d'erreur lisible décrivant le problème. Identique à {{DOMxRef("ErrorEvent.message")}}.
 
     > [!NOTE]
-    > En HTML, [l'attribut de gestionnaire d'évènement de contenu](/fr/docs/Web/HTML/Reference/Attributes#attributs_du_gestionnaire_dévènements) `onerror` sur l'élément HTML {{HTMLElement("body")}} attache les gestionnaires d'évènement `error` à `window` (_et non_ à l'élément `<body>`). Pour ce gestionnaire d'évènement, le premier paramètre est appelé `event`, et non `message`, bien qu'il contienne toujours une chaîne de caractères&nbsp;; ainsi, vous utiliseriez `<body onerror="console.error(event)">` pour consigner le message d'erreur.
+    > En HTML, [l'attribut de gestionnaire d'évènement de contenu](/fr/docs/Web/HTML/Reference/Attributes#attributs_du_gestionnaire_dévènements) `onerror` sur l'élément HTML {{HTMLElement("body")}} attache les gestionnaires d'évènement `error` à `window` (_et non_ à l'élément `<body>`). Pour ce gestionnaire d'évènement, le premier paramètre est appelé `event`, et non `message`, bien qu'il contienne toujours une chaîne de caractères&nbsp;; ainsi, vous utilisez `<body onerror="console.error(event)">` pour consigner le message d'erreur.
 
 - `source`
   - : Une chaîne de caractères contenant l'URL du script qui a généré l'erreur.
@@ -104,7 +104,7 @@ Ce comportement spécial ne se produit que pour le gestionnaire d'évènement `o
 </div>
 
 <div class="event-log">
-  <label for="eventLog">Journal des événements&nbsp;:</label>
+  <label for="eventLog">Journal des évènements&nbsp;:</label>
   <textarea
     readonly
     class="event-log-contents"

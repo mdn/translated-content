@@ -30,7 +30,11 @@ div:fullscreen {
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:fullscreen {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

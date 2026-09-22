@@ -3,8 +3,6 @@ title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
 ---
 
-{{JSRef}}
-
 La méthode **`concat()`** combine le texte de plusieurs chaînes avec la chaîne appelante et renvoie la nouvelle chaîne ainsi formée.
 
 {{InteractiveExample("JavaScript Demo: String.concat()")}}

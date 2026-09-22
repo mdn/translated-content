@@ -3,8 +3,6 @@ title: sessions.Session
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 ---
 
-{{AddonSidebar}}
-
 L'objet de `Session` représente un onglet ou une fenêtre que l'utilisateur a fermé dans la session de navigation actuelle.
 
 Les sessions sont représentées comme des objets {{WebExtAPIRef("tabs.Tab", "Tab")}} si l'onglet a été fermé mais sa fenêtre n'a pas été fermée : par exemple, parce que l'utilisateur a cliqué sur le bouton "fermer l'onglet", et cet onglet n'était pas le seul onglet de sa fenêtre.

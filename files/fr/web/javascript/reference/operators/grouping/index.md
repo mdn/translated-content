@@ -3,8 +3,6 @@ title: Opérateur de groupement
 slug: Web/JavaScript/Reference/Operators/Grouping
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur de groupement `( )` contrôle la précédence de l'évaluation dans les expressions.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Grouping operator")}}

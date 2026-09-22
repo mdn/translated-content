@@ -6,8 +6,6 @@ l10n:
   sourceCommit: b906098e63b1eb3512b4381fe7c105b67037aff1
 ---
 
-{{CSSRef}}
-
 En plus de pouvoir placer des objets de façon précise sur une grille, la spécification pour les grilles CSS définit le comportement obtenu lorsque certains (voire aucun) des objets ne sont pas placés sur la grille. Pour voir comment fonctionne le placement automatique, il suffit de créer une grille avec un ensemble d'objets.
 
 ## Placement automatique

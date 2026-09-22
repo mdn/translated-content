@@ -15,7 +15,7 @@ var myOK = response.ok;
 
 ### 值
 
-{{domxref("Boolean")}}.
+{{jsxref("Boolean")}}.
 
 ## 示例
 

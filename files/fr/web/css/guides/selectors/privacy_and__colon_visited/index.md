@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Selectors/Privacy_and_:visited
 original_slug: Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
 ---
 
-{{CSSRef}}
-
 Par le passé (avant 2010), le sélecteur CSS {{cssxref(":visited")}} permettait aux sites d'effectuer des requêtes sur l'historique de l'utilisateur grâce à la méthode {{domxref("window.getComputedStyle")}} ou à d'autre techniques, parcourant l'historique de l'utilisateur afin de connaître les sites qu'il avait visité. Cela pouvait effectué rapidement et permettait d'obtenir beaucoup d'informations sur l'identité d'un utilisateur.
 
 Afin de palier au problème, Gecko (Gecko 2) a été modifié afin de limiter la quantité d'informations qui peut être obtenue au travers des liens visités. Les autres navigateurs ont également été modifiés de façon semblable.

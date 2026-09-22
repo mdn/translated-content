@@ -30,7 +30,7 @@ Promise<Response> fetch(input[, init]);
 - _init_ {{optional_inline}}
   - : Объект с опциями, содержащий пользовательские настройки, которые вы желаете применить к запросу. Возможные варианты:
     - `method`: Метод запроса, например, `GET`, `POST`.
-    - `headers`: Заголовки, содержащиеся в объекте {{domxref("Headers")}} или в объекте литерале с побитовыми значениями ({{domxref("ByteString")}}).
+    - `headers`: Заголовки, содержащиеся в объекте {{domxref("Headers")}} или в объекте литерале с побитовыми значениями ({{jsxref("String")}}).
     - `body`: Тело запроса, которое может быть: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, или {{jsxref("String")}} объектами. Обратите внимание, что `GET` или `HEAD` запрос не может иметь тела.
     - `mode`: Режим, например, `cors`, `no-cors` или `same-origin`.
     - `credentials`: Полномочия: `omit`, `same-origin` или `include`. Для автоматической отправки куки для текущего домена, эта опция должна быть указана. Начиная с Chrome 50, это свойство также принимает экземпляр класса {{domxref("FederatedCredential")}} или {{domxref("PasswordCredential")}}.
@@ -44,7 +44,7 @@ Promise<Response> fetch(input[, init]);
 
 ### Возвращаемое значение
 
-{{domxref("Promise")}}, содержащий {{domxref("Response")}} объект (ответ на запрос).
+{{jsxref("Promise")}}, содержащий {{domxref("Response")}} объект (ответ на запрос).
 
 ### Исключения
 

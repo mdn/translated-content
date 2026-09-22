@@ -8,8 +8,6 @@ l10n:
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
-{{PWASidebar}}
-
 Les <i lang="en">service workers</i>, et par extension les PWA, sont [restreints aux contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts). Les contextes sécurisés incluent notamment les contextes TLS servis avec le protocole `https://` et les ressources servies localement (par exemple les URL avec l'hôte `127.0.0.1` ou `localhost`, servies avec le protocole `http://`). Dans cette section, nous aborderons les façons de servir une application localement et à distance avec une connexion sécurisée.
 
 Dans l'article précédent, nous avons utilisé HTML et CSS pour créer le squelette de notre application. Dans ce chapitre, nous ouvrirons le contenu statique de CycleTracker dans un navigateur, nous en verrons le contenu depuis un environnement de développement local, mais aussi depuis un serveur distant, avec une connexion sécurisée.

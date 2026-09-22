@@ -83,12 +83,12 @@ body {
 }
 ```
 
-Le CSS est utilisé pour convertir l'élément `boite-info` en un _élément positionné par ancre_ et le positionner par rapport à son ancre. On définit&nbsp;:
+Le CSS est utilisé pour convertir l'élément `boite-info` en un _élément positionné par une ancre_ et le positionner par rapport à son ancre. On définit&nbsp;:
 
 - la propriété {{CSSxRef("position")}} à `fixed`, ce qui transforme l'élément en élément positionné pour qu'il puisse être placé relativement à la position de l'ancre&nbsp;;
 - la propriété {{CSSxRef("left")}} à une fonction {{CSSxRef("anchor()")}} avec la valeur `right`. Cela rattache l'élément positionné à son ancre, en alignant son bord gauche sur le bord droit de l'ancre&nbsp;;
 - la propriété {{CSSxRef("align-self")}} à [`anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrage_sur_lancre_à_laide_de_anchor-center). Cela centre la boîte d'information par rapport au centre de l'ancre dans la direction en ligne&nbsp;;
-- la propriété {{CSSxRef("margin-left")}} à `10px`, créant un espace entre l'élément positionné par ancre et son ancre.
+- la propriété {{CSSxRef("margin-left")}} à `10px`, créant un espace entre l'élément positionné par une ancre et son ancre.
 
 ```css
 .boite-info {

@@ -1,11 +1,10 @@
 ---
 title: React アプリのコンポーネント化
+short-title: React コンポーネント
 slug: Learn_web_development/Core/Frameworks_libraries/React_components
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -41,7 +40,7 @@ l10n:
 
 ## `<Todo />` の作成
 
-コンポーネントを作る前に、そのための新しいファイルを作らなければなりません。実際は、コンポーネント用の新しいディレクトリーの作成が必要です。次のコマンドは、 `components` ディレクトリーを作成し、その中に `Todo.js` というファイルを作成します。これらを実行する前に、アプリのルートにいることを確認してください。
+要素を作成する前に、その要素用の新しいファイルを作成する必要があります。実際、要素専用のディレクトリーを作成しておくべきです。これらのコマンドを実行する前に、必ずアプリのルートにいることを確認してください。
 
 ```bash
 # `components` ディレクトリーを作成
@@ -52,7 +51,7 @@ touch src/components/Todo.jsx
 
 前回のコマンドを実行するために開発サーバーを停止した場合は、再起動することを忘れないでください。
 
-新しい `Todo.js` ファイルは今は空です。ファイルを開いて最初の行に次を入力してください。
+新しい `Todo.jsx` ファイルは今は空です。ファイルを開いて最初の行に次を入力してください。
 
 ```jsx
 function Todo() {}
@@ -60,7 +59,7 @@ function Todo() {}
 export default Todo;
 ```
 
-ここまでは問題ありませんが、このコンポーネントは何かを返さなければなりません！`src/App.js` に戻って、最初の [`<li>`](/ja/docs/Web/HTML/Reference/Elements/li) をコピーし、 `Todo.js` に貼り付けると、以下のようになります。
+ここまでは問題ありませんが、このコンポーネントは何かを返さなければなりません！`src/App.jsx` に戻って、最初の [`<li>`](/ja/docs/Web/HTML/Reference/Elements/li) をコピーし、 `Todo.jsx` に貼り付けると、以下のようになります。
 
 ```jsx
 function Todo() {
@@ -93,7 +92,7 @@ export default Todo;
 import Todo from "./components/Todo";
 ```
 
-このコンポーネントをインポートすると、`App.js` の `<li>` 要素をすべて `<Todo />` コンポーネント呼び出しに置き換えることができます。 `<ul>` は以下のようになるはずです。
+このコンポーネントをインポートすると、`App.jsx` の `<li>` 要素をすべて `<Todo />` コンポーネント呼び出しに置き換えることができます。 `<ul>` は以下のようになるはずです。
 
 ```jsx
 <ul
@@ -120,12 +119,17 @@ import Todo from "./components/Todo";
 
 完了させたいタスクの名前を追跡するために、それぞれの `<Todo />` コンポーネントが一意の名前を表示するようにしなければなりません。
 
-`App.js` では、それぞれの `<Todo />` に name プロップを与えます。先ほどのタスクの名前を使ってみましょう。
+`App.jsx` では、それぞれの `<Todo />` に name プロップを与えます。先ほどのタスクの名前を使ってみましょう。
 
 ```jsx
-<Todo name="Eat" />
-<Todo name="Sleep" />
-<Todo name="Repeat" />
+<ul
+  role="list"
+  className="todo-list stack-large stack-exception"
+  aria-labelledby="list-heading">
+  <Todo name="Eat" />
+  <Todo name="Sleep" />
+  <Todo name="Repeat" />
+</ul>
 ```
 
 ブラウザーを更新すると...以前と全く同じものが表示されます。 `<Todo />` にプロップを与えましたが、まだ使っていません。 `Todo.jsx` に戻って解決しましょう。
@@ -167,12 +171,17 @@ export default Todo;
 
 ### それは `completed` ですか？
 
-元の静的リストでは、`Eat` だけがチェックされていました。もう一度言いますが、`<Todo />` コンポーネントを構成する UI のほとんどを再利用しつつ、一つだけ変更したいのです。これは別のプロップが良い仕事をしてくれます！ `App.js` での各 `<Todo />` の呼び出しには、完了したことを示す新しいプロップを与えます。
+元の静的リストでは、`Eat` だけがチェックされていました。もう一度言いますが、`<Todo />` コンポーネントを構成する UI のほとんどを再利用しつつ、一つだけ変更したいのです。これは別のプロップが良い仕事をしてくれます！ `App.jsx` での各 `<Todo />` の呼び出しには、完了したことを示す新しいプロップを与えます。
 
 ```jsx
-<Todo name="Eat" completed />
-<Todo name="Sleep" />
-<Todo name="Repeat" />
+<ul
+  role="list"
+  className="todo-list stack-large stack-exception"
+  aria-labelledby="list-heading">
+  <Todo name="Eat" completed />
+  <Todo name="Sleep" />
+  <Todo name="Repeat" />
+</ul>
 ```
 
 先ほどと同様に、これらのプロップを実際に使用するためには `Todo.jsx` に戻る必要があります。`<input />` の `defaultChecked` 属性の値が `completed` プロップと同じになるように変更します。これで、Todo コンポーネントの `<input />` 要素は次のようになります。
@@ -199,9 +208,14 @@ export default Todo;
 私たちは、固有の `id` 属性を `<Todo />` コンポーネントを作成する前に指定していました。 それらを戻し、 `todo-i` の書式に即して `i` をその時点ごとに 1 つずつ大きく取得していくようにしましょう。 `App.jsx` 内の `Todo` コンポーネントのインスタンスを、 `id` プロパティを追加するよう、次のように更新しましょう。
 
 ```jsx
-<Todo name="Eat" id="todo-0" completed />
-<Todo name="Sleep" id="todo-1" />
-<Todo name="Repeat" id="todo-2" />
+<ul
+  role="list"
+  className="todo-list stack-large stack-exception"
+  aria-labelledby="list-heading">
+  <Todo name="Eat" id="todo-0" completed />
+  <Todo name="Sleep" id="todo-1" />
+  <Todo name="Repeat" id="todo-2" />
+</ul>
 ```
 
 > [!NOTE]
@@ -332,7 +346,7 @@ touch src/components/{Form,FilterButton}.jsx
 `components/Form.js` を開いて、以下のようにしてください。
 
 - `Form()` 関数を宣言し、ファイルの末尾にエクスポートします。
-- `<form>` タグとその間のものを `App.js` の中からコピーして、`Form()` の `return` 文の中に貼り付けます。
+- `<form>` タグとその間のものを `App.jsx` の中からコピーして、`Form()` の `return` 文の中に貼り付けます。
 
 `Form.js` ファイルは次のようになります。
 
@@ -387,7 +401,7 @@ export default FilterButton;
 
 ## すべてのコンポーネントのインポート
 
-新しいコンポーネントを使ってみましょう。さらにいくつかの `import` 文を `App.js` の上に追加して、インポートします。次に、`App()` の `return` 文を更新して、私たちのコンポーネントをレンダリングするようにします。
+新しいコンポーネントを使ってみましょう。さらにいくつかの `import` 文を `App.jsx` の上に追加して、インポートします。次に、`App()` の `return` 文を更新して、私たちのコンポーネントをレンダリングするようにします。
 
 作業が完了すると、`App.jsx` は次のようになります。
 

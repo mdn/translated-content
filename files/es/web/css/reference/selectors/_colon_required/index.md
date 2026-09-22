@@ -20,7 +20,11 @@ Esta pseudo-clase es útil para resaltar campos que deben tener datos válidos a
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:required {
+  /* ... */
+}
+```
 
 ## Ejemplos
 

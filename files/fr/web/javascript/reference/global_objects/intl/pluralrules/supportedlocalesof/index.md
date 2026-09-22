@@ -61,4 +61,4 @@ console.log(Intl.PluralRules.supportedLocalesOf(locales, options));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.PluralRules")}}
+- L'objet natif {{JSxRef("Intl.PluralRules")}}

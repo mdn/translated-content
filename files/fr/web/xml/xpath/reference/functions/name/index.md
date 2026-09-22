@@ -4,8 +4,6 @@ slug: Web/XML/XPath/Reference/Functions/name
 original_slug: Web/XPath/Functions/name
 ---
 
-{{XsltSidebar}}
-
 La fonction `name` retourne une chaîne représentant le QName du premier nœud d'un ensemble de nœuds donné.
 
 ### Syntaxe

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
-{{ ApiRef("HTML DOM") }}{{deprecated_header}}
+{{ ApiRef("HTML DOM") }}
 
 {{domxref("MimeTypeArray")}} オブジェクトを返します。このオブジェクトには、ブラウザーが認識し対応している MIME タイプを表す {{domxref("MimeType")}} オブジェクトのリストが含まれています。
 この配列を使用して、指定した形式のファイルを処理するために使用できる有効なプラグインに関する情報を取得することができます。

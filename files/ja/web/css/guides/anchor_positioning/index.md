@@ -3,7 +3,7 @@ title: CSS アンカー位置指定
 short-title: アンカー位置指定
 slug: Web/CSS/Guides/Anchor_positioning
 l10n:
-  sourceCommit: 81f8fcd666952c1782653a3675347c392cc997ca
+  sourceCommit: 879a1aece3a1d4eb28c0024f0baac6aa1b96638e
 ---
 
 **CSS アンカー位置指定** (CSS anchor positioning) モジュールでは、要素を互いに結びつける機能を定義しています。特定の要素が**アンカー要素**として定義され、**アンカー位置指定要素**は、結びつけられたアンカー要素のサイズと位置に基づいて、サイズと位置を設定することができます。
@@ -17,6 +17,7 @@ l10n:
 
 ### プロパティ
 
+- {{cssxref("anchor-scope")}}
 - {{cssxref("anchor-name")}}
 - {{cssxref("position-anchor")}}
 - {{cssxref("position-area")}}
@@ -24,8 +25,6 @@ l10n:
 - {{cssxref("position-try-order")}}
 - {{cssxref("position-try")}} 一括指定
 - {{cssxref("position-visibility")}}
-
-CSS アンカー位置指定モジュールでは、`anchor-scope` プロパティも導入されています。現在のところ、この機能を実装しているブラウザーはありません。
 
 ### アットルールと記述子
 
@@ -62,6 +61,9 @@ CSS アンカー位置指定モジュールでは、`anchor-scope` プロパテ�
 
 - [オーバーフローの扱い: 代替や条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)
   - : CSS アンカー位置指定で提供された、アンカーで位置指定された要素がコンテナーそのものやビューポートから溢れるのを防ぐためのメカニズムのガイドです。位置指定の代替オプションや、条件付きで要素を隠す方法などが含まれます。
+
+- [アンカー付きコンテナークエリーの使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
+  - : アンカー付きコンテナークエリーを使用して、アンカー位置指定要素に対して、その要素でどの代替オプションが有効かによって、条件に応じてスタイルを適用する方法について説明します。
 
 ## 関連概念
 

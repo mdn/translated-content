@@ -34,7 +34,11 @@ original_slug: Web/CSS/:nth-child
 
 ### Формальный синтаксис
 
-{{csssyntax}}
+```css-nolint
+:nth-child([ <An+B> | even | odd ] [of <complex-selector-list>]?) {
+  /* ... */
+}
+```
 
 ## Примеры
 

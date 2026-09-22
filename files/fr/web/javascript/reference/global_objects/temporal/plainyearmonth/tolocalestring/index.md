@@ -93,7 +93,7 @@ ym.toLocaleString("fr-FR", { month: "long" }); // août
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainYearMonth")}}
-- L'objet {{JSxRef("Intl.DateTimeFormat")}}
+- L'objet natif {{JSxRef("Temporal.PlainYearMonth")}}
+- L'objet natif {{JSxRef("Intl.DateTimeFormat")}}
 - La méthode {{JSxRef("Temporal/PlainYearMonth/toJSON", "Temporal.PlainYearMonth.prototype.toJSON()")}}
 - La méthode {{JSxRef("Temporal/PlainYearMonth/toString", "Temporal.PlainYearMonth.prototype.toString()")}}

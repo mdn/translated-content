@@ -137,7 +137,7 @@ Les directives de rapport contrôlent l'URL de destination pour les rapports d'e
     > Cependant, tant que `report-to` n'est pas largement supportée, il est recommandé de définir les deux en-têtes comme illustré (où `nom_point_de_terminaison` est le nom d'un point de terminaison fourni séparément)&nbsp;:
     >
     > ```http
-    > Content-Security-Policy: …; report-uri https://endpoint.exemple.com; report-to nom_point_de_terminaison
+    > Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to nom_point_de_terminaison
     > ```
 
 ### Autres directives
@@ -226,20 +226,20 @@ Si le schéma est omis, celui de l'origine du document est utilisé.
 
 Lors de la comparaison des schémas, les mises à niveau sécurisées sont autorisées. Par exemple&nbsp;:
 
-- `http://exemple.com` autorise également les ressources provenant de `https://exemple.com`
+- `http://example.com` autorise également les ressources provenant de `https://example.com`
 - `ws://exemple.org` autorise également les ressources provenant de `wss://exemple.org`.
 
 Les jokers (`'*'`) peuvent être utilisés pour les sous-domaines, l'adresse de l'hôte et le numéro de port, indiquant que toutes les valeurs légales de chacun sont valides. Par exemple&nbsp;:
 
-- `http://*.exemple.com` autorise les ressources provenant de n'importe quel sous-domaine de `exemple.com`, en HTTP ou HTTPS.
+- `http://*.example.com` autorise les ressources provenant de n'importe quel sous-domaine de `example.com`, en HTTP ou HTTPS.
 
 Les chemins qui se terminent par `/` correspondent à tout chemin dont ils sont le préfixe. Par exemple&nbsp;:
 
-- `exemple.com/api/` autorise les ressources provenant de `exemple.com/api/users/new`.
+- `example.com/api/` autorise les ressources provenant de `example.com/api/users/new`.
 
 Les chemins qui ne se terminent pas par `/` sont comparés exactement. Par exemple&nbsp;:
 
-- `https://exemple.com/file.js` autorise les ressources provenant de `https://exemple.com/file.js` mais pas de `https://exemple.com/file.js/file2.js`.
+- `https://example.com/file.js` autorise les ressources provenant de `https://example.com/file.js` mais pas de `https://example.com/file.js/file2.js`.
 
 ### `<scheme-source>`
 
@@ -256,7 +256,7 @@ Les ressources du type donné ne peuvent être chargées que depuis la même {{G
 
 Les mises à niveau sécurisées sont autorisées. Par exemple&nbsp;:
 
-- Si le document est servi depuis `http://exemple.com`, alors une CSP avec `'self'` autorise également les ressources provenant de `https://exemple.com`.
+- Si le document est servi depuis `http://example.com`, alors une CSP avec `'self'` autorise également les ressources provenant de `https://example.com`.
 - Si le document est servi depuis `ws://exemple.org`, alors une CSP avec `'self'` autorise également les ressources provenant de `wss://exemple.org`.
 
 ### `trusted-types-eval`
@@ -376,10 +376,10 @@ Le mécanisme CSP permet d'indiquer plusieurs politiques pour une ressource, not
 Vous pouvez utiliser l'en-tête `Content-Security-Policy` plusieurs fois, comme dans l'exemple ci-dessous. Portez une attention particulière à la directive {{CSP("connect-src")}} ici. Même si la deuxième politique autorise la connexion, la première politique contient `connect-src 'none'`. Ajouter des politiques supplémentaires _ne peut que restreindre davantage_ les capacités de la ressource protégée, ce qui signifie qu'aucune connexion n'est autorisée et, en tant que politique la plus stricte, `connect-src 'none'` est appliquée.
 
 ```http
-Content-Security-Policy: default-src 'self' http://exemple.com;
+Content-Security-Policy: default-src 'self' http://example.com;
                           connect-src 'none';
-Content-Security-Policy: connect-src http://exemple.com/;
-                          script-src http://exemple.com/
+Content-Security-Policy: connect-src http://example.com/;
+                          script-src http://example.com/
 ```
 
 ## Exemples

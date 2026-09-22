@@ -3,7 +3,7 @@ title: Propriété CSS `content-visibility`
 short-title: content-visibility
 slug: Web/CSS/Reference/Properties/content-visibility
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`content-visibility`** détermine si un élément affiche son contenu ou non, tout en forçant un solide jeu de restrictions permettant aux agents utilisateurs de potentiellement omettre de larges pans de la mise en page et du travail de rendu jusqu'au moment où le contenu doit être affiché. Fondamentalement, cela permet à l'agent utilisateur d'éviter le travail de rendu d'un élément (comprenant sa mise en page et sa peinture) tant qu'il n'y en a pas besoin — ce qui accélère la vitesse de chargement de la page initiale.
@@ -72,10 +72,12 @@ content-visibility: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `visible`
   - : Aucun effet. Les contenus de l'élément sont disposés et rendus normalement. C'est la valeur par défaut.
 - `hidden`
-  - : L'élément [ignore son contenu](/fr/docs/Web/CSS/Guides/Containment/Using#ignore_son_contenu). Le contenu ignoré ne doit pas être accessible aux fonctionnalités de l'agent utilisateur telles que la recherche dans la page, la navigation par ordre de tabulation, etc., ni être sélectionnable ou pouvoir recevoir la sélection. Cela est similaire à l'utilisation de `display: none` sur ces contenus.
+  - : L'élément [ignore son contenu](/fr/docs/Web/CSS/Guides/Containment/Using#ignore_son_contenu). Le contenu ignoré ne doit pas être accessible aux fonctionnalités de l'agent utilisateur telles que la recherche dans la page, la navigation par ordre de tabulation, etc., ni être sélectionnable ou pouvoir recevoir la sélection. C'est similaire à l'utilisation de `display: none` sur ces contenus.
 - `auto`
   - : L'élément active la compartimentation de la mise en page, du style et de la peinture. Si l'élément n'est pas [pertinent pour l'utilisateur·ice](/fr/docs/Web/CSS/Guides/Containment/Using#pertinent_pour_lutilisatrice_et_lutilisateur), il ignore aussi son contenu. Contrairement à la valeur hidden, le contenu ignoré doit rester accessible normalement aux fonctionnalités de l'agent utilisateur telles que la recherche dans la page, la navigation par ordre de tabulation, etc., et il doit pouvoir être sélectionné et recevoir la sélection normalement.
 
@@ -109,7 +111,7 @@ Lorsque vous animez `content-visibility` avec les [transitions CSS](/fr/docs/Web
 
 Le contenu hors écran avec la propriété `content-visibility: auto` reste dans le modèle objet du document et dans l'arbre d'accessibilité. Cela permet d'améliorer les performances de la page avec `content-visibility: auto` sans nuire à l'accessibilité.
 
-Comme les styles du contenu hors écran ne sont pas rendus, les éléments volontairement masqués avec `display: none` ou `visibility: hidden` _apparaîtront tout de même dans l'arbre d'accessibilité_.
+Comme les styles du contenu hors écran ne sont pas rendus, les éléments volontairement masqués avec `display: none` ou `visibility: hidden` _apparaissent tout de même dans l'arbre d'accessibilité_.
 Si vous ne souhaitez pas qu'un élément apparaisse dans l'arbre d'accessibilité, utilisez `aria-hidden="true"`.
 
 ## Exemples
@@ -148,7 +150,7 @@ section {
 ### Utiliser la valeur `hidden` pour gérer la visibilité manuellement
 
 L'exemple suivant montre qu'il est possible de gérer la visibilité à l'aide de JavaScript.
-La valeur ajoutée de l'utilisation de `content-visibility: hidden` par exemple à la place de `display: none` est que le contenu rendu masqué avec `content-visibility` préservera l'état de son rendu. Cela signifie que si le contenu est à nouveau affiché, il sera rendu plus rapidement qu'en modifiant la propriété `display`.
+La valeur ajoutée de l'utilisation de `content-visibility: hidden` par exemple à la place de `display: none` est que le contenu rendu masqué avec `content-visibility` préserve l'état de son rendu. Cela signifie que si le contenu est à nouveau affiché, il est rendu plus rapidement qu'en modifiant la propriété `display`.
 
 #### HTML
 
@@ -308,7 +310,7 @@ function showHide() {
 
 #### Résultat
 
-The rendered result looks like this:
+Le résultat rendu ressemble à ceci&#160;:
 
 {{EmbedLiveSample("Animer `content-visibility`", "100%", 300)}}
 

@@ -3,7 +3,7 @@ title: Propriété CSS `position`
 short-title: position
 slug: Web/CSS/Reference/Properties/position
 l10n:
-  sourceCommit: 14a91e1ff94b106c2e2a83ce252dbd380c38d7ff
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`position`** définit la façon dont un élément est positionné dans un document. Les propriétés {{CSSxRef("top")}}, {{CSSxRef("right")}}, {{CSSxRef("bottom")}} et {{CSSxRef("left")}}, et les propriétés logiques relatives au flux {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}} et {{CSSxRef("inset-inline-end")}} peuvent être utilisées pour déterminer l'emplacement final des éléments positionnés.
@@ -122,6 +122,8 @@ position: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `static`
   - : L'élément est positionné selon le [flux normal](/fr/docs/Learn_web_development/Core/CSS_layout/Introduction#normal_layout_flow) du document. Les propriétés {{CSSxRef("top")}}, {{CSSxRef("right")}}, {{CSSxRef("bottom")}}, {{CSSxRef("left")}} et {{CSSxRef("z-index")}} n'ont _aucun effet_. C'est la valeur par défaut.
 - `relative`
@@ -135,7 +137,7 @@ position: unset;
     Cette valeur crée un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) lorsque la valeur de `z-index` n'est pas `auto`. Les marges des boîtes positionnées absolument ne se [combinent pas](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing) avec d'autres marges.
 
 - `fixed`
-  - : L'élément est retiré du flux normal du document, et aucun espace n'est créé pour l'élément dans la mise en page de la page. L'élément est positionné par rapport à son [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block#identifier_le_bloc_englobant) initial, qui est la fenêtre d'affichage dans le cas des médias visuels. Sa position finale est déterminée par les valeurs de `top`, `right`, `bottom` et `left`.
+  - : L'élément est retiré du flux normal du document, et aucun espace n'est créé pour l'élément dans la mise en page de la page. L'élément est positionné par rapport à son [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block#identifier_le_bloc_englobant) initial, qui est la zone d'affichage dans le cas des médias visuels. Sa position finale est déterminée par les valeurs de `top`, `right`, `bottom` et `left`.
 
     Cette valeur crée toujours un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context). Dans les documents imprimés, l'élément est placé à la même position sur _chaque page_.
 
@@ -248,7 +250,7 @@ Les éléments positionnés relativement restent dans le flux normal du document
 </p>
 
 <p>
-  les éléments en ligne <span>comme celui-ci</span> et <span>celui-là</span> se
+  les éléments en incise <span>comme celui-ci</span> et <span>celui-là</span> se
   situent sur la même ligne avec également les nœuds de texte. S'il y a de
   l'espace sur la même ligne. Les éléments qui dépassent
   <span>passent à la ligne si possible — comme pour ce texte.</span> ou cette

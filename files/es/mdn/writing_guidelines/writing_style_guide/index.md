@@ -3,7 +3,7 @@ title: Guía de estilo de redacción
 short-title: Guía de estilo
 slug: MDN/Writing_guidelines/Writing_style_guide
 l10n:
-  sourceCommit: a886ef3867e01df856ed9b49b3b6856232cc8c75
+  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
 ---
 
 Esta guía de estilo de redacción describe cómo debe escribirse, organizarse, deletrearse y formatearse el contenido en MDN Web Docs.

@@ -120,7 +120,7 @@ console.log(Array.prototype.copyWithin.call(objetSimilaireTableau, 3, 1));
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("TypedArray.prototype.copyWithin()")}}
 - [Prothèse d'émulation de `Array.prototype.copyWithin` dans `core-js`<sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
 - [Prothèse d'émulation es-shims de `Array.prototype.copyWithin`<sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.copywithin)

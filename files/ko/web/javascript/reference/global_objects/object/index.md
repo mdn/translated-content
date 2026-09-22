@@ -25,7 +25,7 @@ JavaScript의 거의 모든 객체는 {{jsxref("Object")}}의 인스턴스입니
 
 ### 객체의 속성 삭제하기
 
-객체 자체에는 속성을 삭제하는 메서드가 없습니다(예: {{jsxref("Map.prototype.delete", "Map.prototype.delete()")}}). 삭제하기 위해서는 [delete 연산자](/ko/docs/Web/JavaScript/Reference/Operators/delete)를 사용해야 합니다.
+객체 자체에는 속성을 삭제하는 메서드가 없습니다(예: {{jsxref("Map.prototype.delete()")}}). 삭제하기 위해서는 [delete 연산자](/ko/docs/Web/JavaScript/Reference/Operators/delete)를 사용해야 합니다.
 
 ## 생성자
 
@@ -34,47 +34,47 @@ JavaScript의 거의 모든 객체는 {{jsxref("Object")}}의 인스턴스입니
 
 ## 정적 메서드
 
-- {{jsxref("Object.assign","Object.assign()")}}
+- {{jsxref("Object.assign()")}}
   - : 하나 이상의 원본 객체들로부터 모든 열거 가능한 속성들을 대상 객체로 복사합니다.
-- {{jsxref("Object.create","Object.create()")}}
+- {{jsxref("Object.create()")}}
   - : 지정한 프로토타입(prototype)의 객체 및 속성을 갖고 있는 새 객체를 생성합니다.
-- {{jsxref("Object.defineProperty","Object.defineProperty()")}}
+- {{jsxref("Object.defineProperty()")}}
   - : 지정한 서술자(descriptor)에서 서술한 속성을 객체에 추가합니다.
-- {{jsxref("Object.defineProperties","Object.defineProperties()")}}
+- {{jsxref("Object.defineProperties()")}}
   - : 지정한 서술자들에서 서술한 속성들을 객체에 추가합니다.
-- {{jsxref("Object.entries","Object.entries()")}}
+- {{jsxref("Object.entries()")}}
   - : 지정한 객체 **자신의** 모든 열거 가능한 문자열 속성들의 `[key, value]` 쌍으로 구성된 배열을 반환합니다.
-- {{jsxref("Object.freeze","Object.freeze()")}}
+- {{jsxref("Object.freeze()")}}
   - : 객체를 고정(freeze)합니다. 다른 곳의 코드에서 해당 속성을 삭제하거나 변경할 수 없게 됩니다.
-- {{jsxref("Object.fromEntries","Object.fromEntries()")}}
+- {{jsxref("Object.fromEntries()")}}
   - : `[key, value]` 쌍의 iterable로부터 새 객체를 반환합니다. ({{jsxref("Object.entries")}}의 반대입니다.)
-- {{jsxref("Object.getOwnPropertyDescriptor","Object.getOwnPropertyDescriptor()")}}
+- {{jsxref("Object.getOwnPropertyDescriptor()")}}
   - : 객체의 지정한 속성에 대한 속성 서술자를 반환합니다.
-- {{jsxref("Object.getOwnPropertyDescriptors","Object.getOwnPropertyDescriptors()")}}
+- {{jsxref("Object.getOwnPropertyDescriptors()")}}
   - : 객체 자신의 모든 속성 서술자들로 구성된 객체를 반환합니다.
-- {{jsxref("Object.getOwnPropertyNames","Object.getOwnPropertyNames()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
   - : 지정한 객체 **자신의** 모든 열거 가능하거나 불가능한 속성들의 이름으로 구성된 배열을 반환합니다.
-- {{jsxref("Object.getOwnPropertySymbols","Object.getOwnPropertySymbols()")}}
+- {{jsxref("Object.getOwnPropertySymbols()")}}
   - : 지정한 객체 자신의 모든 심볼 속성들로 구성된 배열을 반환합니다.
-- {{jsxref("Object.getPrototypeOf","Object.getPrototypeOf()")}}
+- {{jsxref("Object.getPrototypeOf()")}}
   - : 지정한 객체의 프로토타입(내부 `[[Prototype]]` 속성)을 반환합니다.
-- {{jsxref("Object.is","Object.is()")}}
+- {{jsxref("Object.is()")}}
   - : 두 값이 같은지를 비교합니다. 모든 `NaN` 값을 같다고 처리합니다. (추상 동등 비교 및 엄격한 동등 비교와 다른 점입니다.)
-- {{jsxref("Object.isExtensible","Object.isExtensible()")}}
+- {{jsxref("Object.isExtensible()")}}
   - : 객체의 확장이 가능한지 여부를 확인합니다.
-- {{jsxref("Object.isFrozen","Object.isFrozen()")}}
+- {{jsxref("Object.isFrozen()")}}
   - : 객체가 고정(freeze)되었는지 여부를 확인합니다.
-- {{jsxref("Object.isSealed","Object.isSealed()")}}
+- {{jsxref("Object.isSealed()")}}
   - : 객체가 봉인(seal)되었는지 여부를 확인합니다.
-- {{jsxref("Object.keys","Object.keys()")}}
+- {{jsxref("Object.keys()")}}
   - : 지정한 객체 **자신의** 모든 열거 가능한 문자열 속성들의 이름으로 구성된 배열을 반환합니다.
-- {{jsxref("Object.preventExtensions","Object.preventExtensions()")}}
+- {{jsxref("Object.preventExtensions()")}}
   - : 객체가 확장되지 못하도록 합니다.
-- {{jsxref("Object.seal","Object.seal()")}}
+- {{jsxref("Object.seal()")}}
   - : 다른 코드가 객체의 속성을 삭제하지 못하도록 합니다.
-- {{jsxref("Object.setPrototypeOf","Object.setPrototypeOf()")}}
+- {{jsxref("Object.setPrototypeOf()")}}
   - : 객체의 프로토타입(내부 `[[Prototype]]` 속성)을 설정합니다.
-- {{jsxref("Object.values","Object.values()")}}
+- {{jsxref("Object.values()")}}
   - : 지정한 객체 **자신의** 모든 열거 가능한 문자열 속성에 해당하는 값들로 구성된 배열을 반환합니다.
 
 ## 인스턴스 속성

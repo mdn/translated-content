@@ -1,8 +1,9 @@
 ---
-title: border-block-width
+title: CSS `border-block-width` プロパティ
+short-title: border-block-width
 slug: Web/CSS/Reference/Properties/border-block-width
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
 **`border-block-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロック方向の境界の幅を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界の幅に対応づけられます。これは {{cssxref("border-top-width")}} と {{cssxref("border-bottom-width")}}、または {{cssxref("border-left-width")}} と {{cssxref("border-right-width")}} の組み合わせのどちらかに対応し、どちらに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
@@ -50,7 +51,7 @@ direction: rtl;
 ## 構文
 
 ```css
-/* <'border-width'> 値 */
+/* <'line-width'> 値 */
 border-block-width: 5px;
 border-block-width: thick;
 
@@ -64,8 +65,8 @@ border-block-width: unset;
 
 ### 値
 
-- `<'border-width'>`
-  - : 境界の幅です。 {{cssxref("border-width")}} を参照してください。
+- {{cssxref("&lt;line-width&gt;")}}
+  - : 境界線の幅を、非負の値 {{cssxref("&lt;length&gt;")}} を明示的に指定するか、キーワード `thin`、`medium`、`thick` のいずれかで定義します。デフォルトは `medium` です。
 
 ## 公式定義
 
@@ -118,5 +119,5 @@ div {
 ## 関連情報
 
 - [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)
-- このプロパティは {{cssxref("border-top-width")}}、{{cssxref("border-right-width")}}、{{cssxref("border-bottom-width")}}、{{cssxref("border-left-width")}} のうちの一つに対応づけられます
+- このプロパティは、物理的な境界プロパティである {{cssxref("border-top-width")}}、{{cssxref("border-right-width")}}、{{cssxref("border-bottom-width")}}、{{cssxref("border-left-width")}} のいずれかに対応します。
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

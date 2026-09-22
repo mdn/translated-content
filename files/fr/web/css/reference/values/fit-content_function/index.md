@@ -3,10 +3,13 @@ title: Fonction CSS `fit-content()`
 short-title: fit-content()
 slug: Web/CSS/Reference/Values/fit-content_function
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 5e4520f9cd84f65d470ec57efef7a73bbe9fd686
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`fit-content()`** permet d'obtenir une dimension restreinte à un intervalle donné en utilisant la formule `min(taille maximale, max(taille minimale, argument))`.
+
+Elle se distingue du mot-clé {{CSSxRef("fit-content")}}, qui ne prend aucun argument et dimensionne une boîte en fonction de son contenu dans l'espace disponible.
+Seule la fonction `fit-content()` est valide dans les propriétés de dimensionnement des pistes de grille telles que {{CSSxRef("grid-template-columns")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: fit-content()")}}
 
@@ -144,5 +147,6 @@ fit-content(40%)
 - La propriété {{CSSxRef("grid-auto-columns")}}
 - La propriété {{CSSxRef("grid-auto-rows")}}
 - La propriété {{CSSxRef("grid-auto-flow")}}
+- Le mot-clé {{CSSxRef("fit-content")}}
 - [Placer les éléments sur les lignes d'une grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
 - [Modèle de grille&nbsp;: Propriétés raccourcies pour définir les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#les_propriétés_raccourcies_pour_les_grilles_css)

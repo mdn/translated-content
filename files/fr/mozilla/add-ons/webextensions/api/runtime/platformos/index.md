@@ -3,8 +3,6 @@ title: runtime.PlatformOs
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
 ---
 
-{{AddonSidebar}}
-
 Le système d'exploitation sur lequel le navigateur fonctionne.
 
 ## Type

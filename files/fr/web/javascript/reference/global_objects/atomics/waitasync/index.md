@@ -87,6 +87,6 @@ Si elle ne se résout pas en `"ok"`, la valeur dans la mémoire partagée n'éta
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Atomics")}}
+- L'objet natif {{JSxRef("Atomics")}}
 - La méthode {{JSxRef("Atomics.wait()")}}
 - La méthode {{JSxRef("Atomics.notify()")}}

@@ -89,7 +89,7 @@ console.log(language.log); // ['EN', 'FA']
 
 ### `delete` 연산자로 설정자 제거하기
 
-접근자를 삭제하려면 간단히 {{jsxref("Operators/delete", "delete")}} 연산자를 사용하세요.
+접근자를 삭제하려면 간단히 {{jsxref("delete")}} 연산자를 사용하세요.
 
 ```js
 delete language.current;
@@ -148,7 +148,7 @@ console.log(obj.baz);
 ## See also
 
 - [접근자](/ko/docs/Web/JavaScript/Reference/Functions/get)
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)

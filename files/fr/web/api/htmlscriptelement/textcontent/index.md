@@ -3,19 +3,19 @@ title: "HTMLScriptElement : propriété textContent"
 short-title: textContent
 slug: Web/API/HTMLScriptElement/textContent
 l10n:
-  sourceCommit: 65cbd4ff030e6763d6868917137d728c3ec29288
+  sourceCommit: 051d02b402b7f76c2078b12283aa18318c34c38b
 ---
 
 {{APIRef("DOM")}}
 
 > [!WARNING]
 > Cette propriété représente le contenu textuel d'un élément script, qui peut être exécutable selon le type du script.
-> Les API de ce type sont appelées [points d'injection](/fr/docs/Web/API/Trusted_Types_API#concepts_et_utilisation) et peuvent constituer un vecteur d'attaques de [cross-site scripting (XSS)](/fr/docs/Web/Security/Attacks/XSS).
+> Les API de ce type sont appelées [points d'injection](/fr/docs/Web/API/Trusted_Types_API#concepts_et_utilisation) et peuvent constituer un vecteur d'attaques de [script inter-site (XSS)](/fr/docs/Web/Security/Attacks/XSS).
 >
 > Vous pouvez atténuer ce risque en affectant systématiquement des objets {{DOMxRef("TrustedScript")}} plutôt que des chaînes de caractères et en [appliquant les types de confiance](/fr/docs/Web/API/Trusted_Types_API#utiliser_un_csp_pour_appliquer_des_types_de_confiance).
 > Voir [Considérations de sécurité](#considérations_de_sécurité) pour plus d'informations.
 
-La propriété **`textContent`** de l'interface {{DOMxRef("HTMLScriptElement")}} représente le contenu textuel en ligne de l'élément HTML {{HTMLElement("script")}}.
+La propriété **`textContent`** de l'interface {{DOMxRef("HTMLScriptElement")}} représente le contenu textuel en incise de l'élément HTML {{HTMLElement("script")}}.
 Elle se comporte de la même manière que les propriétés {{DOMxRef("HTMLScriptElement.text","text")}} et {{DOMxRef("HTMLScriptElement.innerText","innerText")}}.
 
 ## Valeur
@@ -33,7 +33,7 @@ L'affectation de la propriété accepte soit un objet {{DOMxRef("TrustedScript")
 
 La propriété **`textContent`** de l'interface {{DOMxRef("HTMLScriptElement")}} représente le contenu textuel à l'intérieur de l'élément {{HTMLElement("script")}}.
 
-Pour un script exécutable (c'est-à-dire un script dont {{DOMxRef('HTMLScriptElement/type','type')}} indique qu'il s'agit d'un module ou d'un script classique), ce texte est du code exécutable en ligne.
+Pour un script exécutable (c'est-à-dire un script dont {{DOMxRef('HTMLScriptElement/type','type')}} indique qu'il s'agit d'un module ou d'un script classique), ce texte est du code exécutable en incise.
 Pour d'autres types, il peut s'agir d'une carte d'imports, de règles de spéculation ou d'un autre type de bloc de données.
 
 Notez que si la propriété {{DOMxRef('HTMLScriptElement/src','src')}} est définie, le contenu de la propriété `textContent` est ignoré.
@@ -43,7 +43,7 @@ Lorsqu'elle est utilisée avec d'autres éléments, la propriété n'attend pas 
 
 ### Considérations de sécurité
 
-La propriété `textContent` — ainsi que les propriétés identiques `text` et `innerText` — peut constituer un vecteur d'attaques de [cross-site scripting (XSS)](/fr/docs/Web/Security/Attacks/XSS), où des chaînes de caractères potentiellement non sécurisées fournies par un·e utilisateur·ice sont exécutées.
+La propriété `textContent` — ainsi que les propriétés identiques `text` et `innerText` — peut constituer un vecteur d'attaques de [script inter-site (XSS)](/fr/docs/Web/Security/Attacks/XSS), où des chaînes de caractères potentiellement non sécurisées fournies par un·e utilisateur·ice sont exécutées.
 Par exemple, l'exemple suivant suppose que `scriptElement` est un élément `<script>` exécutable, et que `untrustedCode` a été fourni par un·e utilisateur·ice&nbsp;:
 
 ```js
@@ -54,7 +54,7 @@ scriptElement.textContent = untrustedCode; // affiche l'alerte
 Vous pouvez atténuer ces problèmes en affectant systématiquement des objets {{DOMxRef("TrustedScript")}} plutôt que des chaînes de caractères, et en [appliquant les types de confiance](/fr/docs/Web/API/Trusted_Types_API#utiliser_un_csp_pour_appliquer_des_types_de_confiance) à l'aide de la directive CSP [`require-trusted-types-for`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for).
 Cela garantit que la valeur passe par une fonction de transformation, qui a la possibilité de [nettoyer](/fr/docs/Web/Security/Attacks/XSS#nettoyage) ou de rejeter le texte avant son injection.
 
-Le comportement de la fonction de transformation dépendra du cas d'utilisation spécifique nécessitant un script fourni par un·e utilisateur·ice.
+Le comportement de la fonction de transformation dépend du cas d'utilisation spécifique nécessitant un script fourni par un·e utilisateur·ice.
 Si possible, vous devez restreindre les scripts autorisés exactement au code que vous souhaitez exécuter.
 Si cela n'est pas possible, vous pouvez autoriser ou bloquer l'utilisation de certaines fonctions dans la chaîne de caractères fournie.
 
@@ -64,7 +64,7 @@ Si cela n'est pas possible, vous pouvez autoriser ou bloquer l'utilisation de ce
 
 Pour atténuer le risque d'XSS, vous devez toujours affecter des instances de `TrustedScript` à la propriété `textContent`.
 
-Les types de confiance ne sont pas encore pris en charge par tous les navigateurs, donc définissons d'abord le [tinyfill des types de confiance](/fr/docs/Web/API/Trusted_Types_API#tinyfill_des_types_de_confiance).
+Les types de confiance ne sont pas encore pris en charge par tous les navigateurs, donc définissons d'abord la [petite prothèse d'émulation des types de confiance](/fr/docs/Web/API/Trusted_Types_API#petite_prothèse_démulation_des_types_de_confiance).
 Cela agit comme un remplacement transparent de l'API JavaScript Trusted Types&nbsp;:
 
 ```js
@@ -87,7 +87,7 @@ const policy = trustedTypes.createPolicy("inline-script-policy", {
 });
 ```
 
-Ensuite, créez l'élément script auquel vous assignerez la valeur et obtenez une référence à cet élément.
+Ensuite, créez l'élément script auquel vous assignez la valeur et obtenez une référence à cet élément.
 
 ```html
 <script id="el"></script>
@@ -101,7 +101,7 @@ const el = document.getElementById("el");
 Ensuite, utilisez l'objet `policy` pour créer un objet `trustedScript` à partir de la chaîne de caractères potentiellement non sécurisée, puis assignez le résultat à l'élément&nbsp;:
 
 ```js
-// Chaîne potentiellement malveillante
+// Chaîne de caractères potentiellement malveillante
 const untrustedScriptOne = "const num = 10;\nconsole.log(num)";
 
 // Crée une instance de TrustedScript en utilisant la politique
@@ -115,7 +115,7 @@ el.textContent = trustedScript;
 
 Cet exemple montre qu'affecter un script à chacune des propriétés textuelles, comme `textContent`, donne la même valeur lue depuis toutes les propriétés textuelles.
 
-Notez que dans ce cas, nous n'utilisons pas la politique pour créer des scripts approuvés (par souci de concision, nous supposerons que les chaînes fournies sont approuvées).
+Notez que dans ce cas, nous n'utilisons pas la politique pour créer des scripts approuvés (par souci de concision, nous supposons que les chaînes de caractères fournies sont approuvées).
 
 ```js
 // Affecte la propriété textContent

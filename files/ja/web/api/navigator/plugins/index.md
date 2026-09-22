@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 アプリケーションにインストールされているプラグインを記述した {{DOMxRef("Plugin")}} オブジェクトが含まれている {{DOMxRef("PluginArray")}} オブジェクトを返します。
 返されたオブジェクトの名前付きプロパティは列挙できません（非常に古いバージョンのブラウザーを除く）。

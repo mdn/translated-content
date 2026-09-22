@@ -3,7 +3,7 @@ title: "Content-Security-Policy : directive frame-ancestors"
 short-title: frame-ancestors
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors
 l10n:
-  sourceCommit: a2b29d9159294f1437e0adf49cdf3019e9c1c24b
+  sourceCommit: 77ea71add6054857698eb7ac1bfec8c7afe9ad4f
 ---
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** définit les parents valides pouvant intégrer une page en utilisant {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}} ou {{HTMLElement("embed")}}.

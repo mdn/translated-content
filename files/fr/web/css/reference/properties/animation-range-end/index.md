@@ -63,7 +63,7 @@ La propriété `animation-range-end`, ainsi que la propriété {{CSSxRef("animat
 
 ### Créer une chronologie de progression de vue avec une fin de plage
 
-Dans cet exemple, la propriété `animation-range-end` est appliquée à un élément animé via une chronologie de progression de vue. Cela permet à l'animation d'atteindre sa dernière étape bien avant que l'élément n'atteigne la fin de sa fenêtre d'affichage conteneur.
+Dans cet exemple, la propriété `animation-range-end` est appliquée à un élément animé via une chronologie de progression de vue. Cela permet à l'animation d'atteindre sa dernière étape bien avant que l'élément n'atteigne la fin de sa zone d'affichage conteneur.
 
 #### HTML
 
@@ -206,7 +206,7 @@ p {
 
 #### Résultat
 
-Faites défiler pour voir l'élément s'animer. Activez ensuite la case à cocher à la fin du bloc de texte puis faites défiler à nouveau. Remarquez que l'élément termine son animation lorsqu'il a parcouru 75% de la fenêtre d'affichage, et qu'il revient à son état par défaut à ce moment-là si la propriété `animation-fill-mode` n'est pas appliquée.
+Faites défiler pour voir l'élément s'animer. Activez ensuite la case à cocher à la fin du bloc de texte puis faites défiler à nouveau. Remarquez que l'élément termine son animation lorsqu'il a parcouru 75% de la zone d'affichage, et qu'il revient à son état par défaut à ce moment-là si la propriété `animation-fill-mode` n'est pas appliquée.
 
 {{EmbedLiveSample("Créer une chronologie de progression de vue avec une fin de plage", "100%", 480)}}
 

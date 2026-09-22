@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{APIRef("HTML DOM")}} {{deprecated_header}}{{non-standard_header}}
+{{APIRef("HTML DOM")}} {{non-standard_header}}
 
 このメソッドは、{{DOMxRef("window.setImmediate")}} で指定されたアクションをクリアします。
 

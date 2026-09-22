@@ -3,8 +3,6 @@ title: tabs.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/reload
 ---
 
-{{AddonSidebar}}
-
 Rechargez un onglet, en contournant éventuellement le cache Web local.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

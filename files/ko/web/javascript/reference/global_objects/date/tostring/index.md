@@ -29,7 +29,7 @@ dateObj.toString();
 
 ## 설명
 
-{{jsxref("Date")}} 객체는 `toString()` 메서드를 {{jsxref("Object.prototype")}}이 아닌 {{jsxref("Date.prototype")}}에서 상속받습니다. `Date.prototype.toString()`의 반환값은 ECMA-262에 명시되어있으며 다음과 같이 요약할 수 있습니다.
+{{jsxref("Date")}} 객체는 `toString()` 메서드를 {{jsxref("Object")}}이 아닌 {{jsxref("Date")}}에서 상속받습니다. `Date.prototype.toString()`의 반환값은 ECMA-262에 명시되어있으며 다음과 같이 요약할 수 있습니다.
 
 - 요일: 세 글자 영어 요일명. 예: "Sat"
 - 공백

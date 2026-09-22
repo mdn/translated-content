@@ -1,19 +1,19 @@
 ---
-title: Forwarded
+title: Forwarded ヘッダー
+short-title: Forwarded
 slug: Web/HTTP/Reference/Headers/Forwarded
-original_slug: Web/HTTP/Headers/Forwarded
 l10n:
-  sourceCommit: 206723d78eed4637dae1f413ce7d0876ac94bfcb
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-**`Forwarded`** リクエストヘッダーは、[リバースプロキシーサーバー](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling)（ロードバランサー、CDN、など）によって追加される可能性のある情報を格納します。この情報はリクエストの経路にプロキシーサーバーが介在している場合、変更されるか失われます。
+HTTP の **`Forwarded`** {{Glossary("request header", "リクエストヘッダー")}}は、[リバースプロキシーサーバー](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling)（ロードバランサー、CDN、など）によって追加される可能性のある情報を格納します。この情報はリクエストの経路にプロキシーサーバーが介在している場合、変更されるか失われます。
 
 例えば、クライアントが HTTP プロキシー（またはロードバランサー）を通してウェブサーバーに接続している場合、サーバーログはプロキシーの IP アドレス、ホストアドレス、プロトコルのみを格納します。このヘッダーを使用して元のリクエストの IP アドレス、 ホスト、プロトコルを特定することができます。
 このヘッダーはオプションで、サーバーへの経路上のどのプロキシーサーバーでも追加したり、変更したり、除去したりすることができます。
 
 このヘッダーはデバッグ、統計、および場所に依存するコンテンツの生成に使用されます。
 設計上、クライアントの IP アドレスのようなプライバシーに敏感な情報を公開します。
-したがって、このヘッダーを展開するときは、ユーザーのプライバシーに注意しなければなりません。
+したがって、このヘッダーを使用するときは、ユーザーのプライバシーに注意しなければなりません。
 
 このヘッダーの代替で、事実上の標準となっているものは {{HTTPHeader("X-Forwarded-For")}}, {{HTTPHeader("X-Forwarded-Host")}}, {{HTTPHeader("X-Forwarded-Proto")}} ヘッダーです。
 
@@ -32,12 +32,11 @@ l10n:
 
 ## 構文
 
-単一のプロキシーからの転送ヘッダーの構文を下記に示します。
-ディレクティブはセミコロンで区切られた `key=value` の組です。
-
 ```http
 Forwarded: by=<identifier>;for=<identifier>;host=<host>;proto=<http|https>
 ```
+
+ディレクティブはセミコロンで区切られた `key=value` の組です。
 
 クライアントとサーバーの間に複数のプロキシーサーバーがある場合、それ ぞれが自分自身で転送情報を指定することができます。
 これはヘッダーブロックの最後に新しい `Forwarded` ヘッダーを追加するか、カンマ区切りのリストで最後の `Forwarded` ヘッダーの最後に情報を追加することで可能です。

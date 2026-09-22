@@ -20,7 +20,11 @@ Los estilos definidos por la pseudo-clase `:link` serán anulados por cualquier 
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:link {
+  /* ... */
+}
+```
 
 ## Ejemplos
 

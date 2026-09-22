@@ -1,19 +1,37 @@
 ---
-title: Object.setPrototypeOf()
+title: "Object : méthode statique setPrototypeOf()"
+short-title: setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
+l10n:
+  sourceCommit: 00c3b9fb6ead031e43863460add87321f262696c
 ---
 
-{{JSRef}}
+La méthode statique **`Object.setPrototypeOf()`** définit le prototype (c'est-à-dire la propriété `[[Prototype]]` interne) de l'objet défini par un autre objet ou {{JSxRef("null")}}.
 
 > [!WARNING]
-> Étant donnée la façon dont la plupart des moteurs JavaScript optimisent les performances, modifier le `[[Prototype]]` d'un objet est une opération lente pour chaque navigateur et moteur JavaScript. Les impacts liés aux performances sur ce point sont vastes et subtiles : ils concernent pas uniquement le temps passé à effectuer `Object.setPrototypeOf`, mais peuvent concerner n'importe quel code pour n'importe quel objet dont `[[Prototype]]` a été modifié. Si vous souhaitez obtenir des performances optimales, évitez de modifier le `[[Prototype]]` d'un objet. À la place, il est conseillé de créer un objet avec le prototype voulu en utilisant {{jsxref("Object/create","Object.create()")}}
+> Changer le `[[Prototype]]` d'un objet est, par la nature des moteurs JavaScript modernes et la façon dont ils optimisent les accès aux propriétés, actuellement une opération très lente dans tous les navigateurs et moteurs JavaScript. De plus, les effets de la modification de l'héritage sont subtils et étendus, et ne se limitent pas au temps passé dans l'instruction `Object.setPrototypeOf(...)`, mais peuvent s'étendre à **_tout_** code ayant accès à un objet dont le `[[Prototype]]` a été modifié. Vous pouvez en lire davantage dans [Fondamentaux des moteurs JavaScript&nbsp;: optimisation des prototypes <sup>(angl.)</sup>](https://mathiasbynens.be/notes/prototypes).
+>
+> Parce que cette fonctionnalité fait partie du langage, il incombe toujours aux développeur·euse·s de moteurs de l'implémenter de manière performante (idéalement). Jusqu'à ce que les développeur·euse·s de moteurs résolvent ce problème, si vous vous souciez des performances, vous devez éviter de définir le `[[Prototype]]` d'un objet. À la place, créez un nouvel objet avec le `[[Prototype]]` souhaité en utilisant {{jsxref("Object.create()")}}.
 
-La méthode **`Object.setPrototypeOf()`** définit le prototype (autrement dit la propriété interne `[[Prototype]]`) d'un objet donné avec un autre objet ou {{jsxref("null")}}.
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Object.setPrototypeOf()")}}
+
+```js interactive-example
+const obj = {};
+const parent = { toto: "truc" };
+
+console.log(obj.toto);
+// Résultat attendu : undefined
+
+Object.setPrototypeOf(obj, parent);
+
+console.log(obj.toto);
+// Résultat attendu : "truc"
+```
 
 ## Syntaxe
 
-```js
-Object.setPrototypeOf(obj, prototype);
+```js-nolint
+Object.setPrototypeOf(obj, prototype)
 ```
 
 ### Paramètres
@@ -21,167 +39,102 @@ Object.setPrototypeOf(obj, prototype);
 - `obj`
   - : L'objet dont on souhaite définir le prototype.
 - `prototype`
-  - : Le nouveau prototype de l'objet (un objet ou `null`).
+  - : Le nouveau prototype de l'objet (un objet ou {{JSxRef("null")}}).
 
 ### Valeur de retour
 
-L'objet sur lequel on a défini le prototype.
+L'objet défini.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Une exception est levée dans l'un des cas suivants&nbsp;:
+    - Le paramètres `obj` est `undefined` ou `null`.
+    - Le paramètre `obj` n'est [pas extensible](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible), ou c'est un [objet exotique à prototype immuable <sup>(angl.)</sup>](https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html#sec-immutable-prototype-exotic-objects), tel que `Object.prototype` ou {{domxref("window")}}. Cependant, l'erreur n'est pas levée si le nouveau prototype est la même valeur que le prototype original de `obj`.
+    - Le paramètre `prototype` n'est pas un objet ou {{JSxRef("null")}}.
 
 ## Description
 
-Cette méthode renvoie une exception {{jsxref("TypeError")}} si l'objet dont on souhaite modifier le `[[Prototype]]` est non-extensible selon {{jsxref("Object.isExtensible")}}. Cette méthode ne fait rien si le paramètre prototype n'est ni un objet ni {{jsxref("null")}} (par exemple : un nombre, une chaîne, un booléen ou {{jsxref("undefined")}}). Dans les autres cas, cette méthode substitue le `[[Prototype]]` de `obj` avec un nouvel objet.
+`Object.setPrototypeOf()` est généralement considéré comme la manière appropriée de définir le prototype d'un objet. Vous devez toujours l'utiliser plutôt que l'accesseur obsolète [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto).
 
-`Object.setPrototypeOf()` fait partie de la spécification ECMAScript 2015. L'utilisation de cette méthode est considérée comme la façon correcte pour modifier le prototype d'un objet (contrairement à la propriété [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) plus controversée).
+Si le paramètre `obj` n'est pas un objet (par exemple, un nombre, une chaîne de caractères, etc.), cette méthode ne fait rien — sans le convertir en objet ni tenter de définir son prototype — et retourne directement `obj` en tant que valeur primitive. Si `prototype` a la même valeur que le prototype de `obj`, alors `obj` est directement retourné, sans provoquer de `TypeError` même lorsque `obj` a un prototype immuable.
+
+Pour des raisons de sécurité, certains objets intégrés sont conçus pour avoir un _prototype immuable_. Cela empêche les [attaques de pollution de prototype](/fr/docs/Web/Security/Attacks/Prototype_pollution), en particulier celles liées aux [mandataires]((https://github.com/tc39/ecma262/issues/272). Le langage de base ne définit que `Object.prototype` comme un objet exotique à prototype immuable, dont le prototype est toujours `null`. Dans les navigateurs, [`window`](/fr/docs/Web/API/Window) et [`location`](/fr/docs/Web/API/Window/location) sont deux autres exemples très courants.
+
+```js
+Object.isExtensible(Object.prototype); // true ; vous pouvez ajouter plus de propriétés
+Object.setPrototypeOf(Object.prototype, {}); // TypeError: Impossible de définir le prototype de l'objet exotique à prototype immuable '#<Object>'
+Object.setPrototypeOf(Object.prototype, null); // Pas d'erreur ; le prototype de `Object.prototype` est déjà `null`
+```
 
 ## Exemples
 
+### Héritage pseudo-classique utilisant `Object.setPrototypeOf()`
+
+L'héritage en JS utilisant les classes.
+
 ```js
-var dict = Object.setPrototypeOf({}, null);
+class Humain {}
+class SuperHero extends Humain {}
+
+const superMan = new SuperHero();
 ```
 
-## Prothèse d'émulation (_polyfill_)
-
-En utilisant la propriété [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), on peut définir `Object.setPrototypeOf` si elle n'est pas disponible :
+Cependant, si nous voulons implémenter des sous-classes sans utiliser `class`, nous pouvons faire ce qui suit&nbsp;:
 
 ```js
-// Cette prothèse ne fonctionne pas pour IE
-Object.setPrototypeOf =
-  Object.setPrototypeOf ||
-  function (obj, proto) {
-    obj.__proto__ = proto;
-    return obj;
-  };
-```
+function Humain(nom, niveau) {
+  this.nom = nom;
+  this.niveau = niveau;
+}
 
-## Ajouter une chaîne de prototypes à un objet
+function SuperHero(nom, niveau) {
+  Humain.call(this, nom, niveau);
+}
 
-En combinant `Object.getPrototypeOf()` et [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) on peut ajouter une chaîne de prototypes au nouveau prototype d'un objet :
+Object.setPrototypeOf(SuperHero.prototype, Humain.prototype);
 
-```js
-/**
- *** Object.setPrototypeOf(@object, @prototype)
- * Change le prototype d'une instance
- *
- **/
+// Définit le `[[Prototype]]` de `SuperHero.prototype`
+// à `Humain.prototype`
+// Pour définir la chaîne d'héritage de prototype
 
-Object.setPrototypeOf = function (oInstance, oProto) {
-  oInstance.__proto__ = oProto;
-  return oInstance;
+Humain.prototype.parler = function () {
+  return `${this.nom} dit bonjour.`;
 };
 
-/**
- *** Object.appendChain(@object, @prototype)
- *
- * Ajoute le premier prototype non-natif d'une chaîne au nouveau prototype.
- * Renvoie @object (si c'est une valeur primitive, elle sera transformée
- * en objet).
- *
- *** Object.appendChain(@object [, "@arg_name_1", "@arg_name_2", "@arg_name_3", "..."], "@function_body")
- *** Object.appendChain(@object [, "@arg_name_1, @arg_name_2, @arg_name_3, ..."], "@function_body")
- *
- * Ajoute le premier prototype non-natif d'une chaîne à l'objet Function.prototype
- * puis ajoute new Function(["@arg"(s)], "@function_body") à cette chaîne.
- * Renvoie la fonction.
- *
- **/
-
-Object.appendChain = function (oChain, oProto) {
-  if (arguments.length < 2) {
-    throw new TypeError("Object.appendChain - Pas suffisamment d'arguments");
-  }
-  if (typeof oProto !== "object" && typeof oProto !== "string") {
-    throw new TypeError(
-      "le deuxième argument de Object.appendChain doit être un objet ou une chaîne",
-    );
-  }
-
-  var oNewProto = oProto,
-    oReturn =
-      (o2nd =
-      oLast =
-        oChain instanceof this ? oChain : new oChain.constructor(oChain));
-
-  for (
-    var o1st = this.getPrototypeOf(o2nd);
-    o1st !== Object.prototype && o1st !== Function.prototype;
-    o1st = this.getPrototypeOf(o2nd)
-  ) {
-    o2nd = o1st;
-  }
-
-  if (oProto.constructor === String) {
-    oNewProto = Function.prototype;
-    oReturn = Function.apply(null, Array.prototype.slice.call(arguments, 1));
-    this.setPrototypeOf(oReturn, oLast);
-  }
-
-  this.setPrototypeOf(o2nd, oNewProto);
-  return oReturn;
+SuperHero.prototype.voler = function () {
+  return `${this.nom} est en train de voler.`;
 };
+
+const superMan = new SuperHero("Clark Kent", 1);
+
+console.log(superMan.voler());
+console.log(superMan.parler());
 ```
 
-### Utilisation
+La similitude entre l'héritage classique (avec les classes) et l'héritage pseudo-classique (avec la propriété `prototype` des constructeurs) comme montré ci-dessus est mentionnée dans [Chaînes d'héritage](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#construire_de_longues_chaînes_dhéritage).
 
-#### Ajouter une chaîne de prototypes à un prototype
+Comme la propriété [`prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) des constructeurs de fonctions est modifiable, vous pouvez la réaffecter à un nouvel objet créé avec [`Object.create()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/create#classical_inheritance_with_object.create) pour obtenir la même chaîne d'héritage. Il y a des points auxquels il faut faire attention lors de l'utilisation de `create()`, comme se rappeler de ré-ajouter la propriété [`constructor`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor).
+
+Dans l'exemple ci-dessous, qui utilise également des classes, `SuperHero` est fait pour hériter de `Humain` sans utiliser `extends` en utilisant `setPrototypeOf()` à la place.
+
+> [!WARNING]
+> Il n'est pas conseillé d'utiliser `setPrototypeOf()` à la place de `extends` pour des raisons de performance et de lisibilité.
 
 ```js
-function Mammifère() {
-  this.isMammifère = "oui";
-}
+class Humain {}
+class SuperHero {}
 
-function EspèceMammifère(sEspèceMammifère) {
-  this.espèce = sEspèceMammifère;
-}
+// Définit les propriétés d'instance
+Object.setPrototypeOf(SuperHero.prototype, Humain.prototype);
 
-EspèceMammifère.prototype = new Mammifère();
-EspèceMammifère.prototype.constructor = EspèceMammifère;
+// Définit les propriétés statiques
+Object.setPrototypeOf(SuperHero, Humain);
 
-var oChat = new EspèceMammifère("Felis");
-
-console.log(oChat.isMammifère); // "oui"
-
-function Animal() {
-  this.respire = "oui";
-}
-
-Object.appendChain(oChat, new Animal());
-
-console.log(oChat.respire); // "oui"
+const superMan = new SuperHero();
 ```
 
-#### Deuxième exemple : Transformer une valeur primitive en une instance de son constructeur et ajouter sa chaîne à un prototype
-
-```js
-function MySymbol() {
-  this.isSymbol = "yes";
-}
-
-var nPrime = 17;
-
-console.log(typeof nPrime); // "number"
-
-var oPrime = Object.appendChain(nPrime, new MySymbol());
-
-console.log(oPrime); // "17"
-console.log(oPrime.isSymbol); // "yes"
-console.log(typeof oPrime); // "object"
-```
-
-#### Troisième exemple : Ajouter une chaîne de prototypes à l'objet Function.prototype object et ajouter une nouvelle fonction à cette chaîne
-
-```js
-function Personne(sNom) {
-  this.identité = sNom;
-}
-
-var george = Object.appendChain(
-  new Person("George"),
-  'console.log("Salut !!");',
-);
-
-console.log(george.identité); // "George"
-george(); // "Salut !!"
-```
+L'héritage sans `extends` est mentionné dans [le sous-classement ES-6 <sup>(angl.)</sup>](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/).
 
 ## Spécifications
 
@@ -193,7 +146,10 @@ george(); // "Salut !!"
 
 ## Voir aussi
 
-- {{jsxref("Reflect.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Object.getPrototypeOf()")}}
-- [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
+- [La prothèse d'émulation de `Object.setPrototypeOf` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
+- La méthode statique {{jsxref("Reflect.setPrototypeOf()")}}
+- La méthode {{jsxref("Object.prototype.isPrototypeOf()")}}
+- La méthode statique {{jsxref("Object.getPrototypeOf()")}}
+- La propriété [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
+- [Chaînes d'héritage](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#construire_de_longues_chaînes_dhéritage)
+- [ES6 en profondeur&nbsp;: sous-classement <sup>(angl.)</sup>](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/) sur hacks.mozilla.org (2015)

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b065c09b79d18abf0f04778c9307e1c312b8c6f9
 ---
 
-{{APIRef("CSS3 Transforms")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("CSS3 Transforms")}}{{Non-standard_Header}}
 
 **`Point`** 是一个表示二维空间中点的接口。它属于非标准接口，兼容性不佳，不应使用。
 

@@ -3,7 +3,7 @@ title: Inclure des images vectorielles en HTML
 short-title: Images vectorielles
 slug: Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 l10n:
-  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
+  sourceCommit: 2066cc916dfdcbb782340bf0ce562b230e947cba
 ---
 
 Les images vectorielles sont très utiles dans de nombreuses circonstances — elles ont de petites tailles de fichier et sont très évolutives, donc elles ne deviennent pas pixelisées lorsqu'on les agrandit ou qu'on les zoome. Dans cet article, nous allons vous montrer comment en inclure une dans votre page web.
@@ -38,16 +38,28 @@ Sur le Web, vous allez voir et manipuler deux types d'image — les images **mat
 - **Les images matricielles** sont définies à l'aide d'une grille de pixels — un fichier d'image matricielle contient des informations indiquant exactement où chaque pixel doit être placé et quelle couleur il doit avoir. Parmi les formats matriciels courants sur le Web, on trouve le Bitmap (`.bmp`), le PNG (`.png`), le JPEG (`.jpg`) et le GIF (`.gif`).
 - **Les images vectorielles** sont définies à l'aide d'algorithmes — un fichier d'image vectorielle contient des définitions de formes et de tracés que l'ordinateur peut utiliser pour déterminer à quoi doit ressembler l'image une fois affichée à l'écran. Le format {{Glossary("SVG")}} nous permet de créer des graphiques vectoriels performants destinés à être utilisés sur le Web.
 
-Pour mieux saisir la différence entre les deux, prenons un exemple qui se trouve sur GitHub&nbsp;: [`vector-versus-raster.html`](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html). Sur cette page, on voit deux images qui semblent identiques à première vue, avec une étoile rouge et une ombre portée noire. Celle de gauche est une image PNG et celle de droite est une image SVG.
+Pour mieux saisir la différence entre les deux, prenons un exemple&nbsp;:
 
-La différence s'accentue lorsqu'on zoome sur la page. L'image PNG devient de plus en plus pixelisée, car le format matriciel contient des informations sur chaque pixel et lorsqu'on zoome, chaque pixel de l'image devient plus grand et occupe plusieurs pixels de l'écran, ce qui crée ce crènelage. Ce n'est pas le cas de l'image vectorielle qui est toujours nette. En effet, quelle que soit sa taille, l'ordinateur utilise les algorithmes indiqués dans l'image pour redessiner la forme et ce qui est à l'écran s'adapte à la taille demandée.
+```html live-sample___raster-vector live-sample___raster-vector-zoomed
+<img src="star.png" alt="Une étoile matricielle" />
+<img src="star.svg" role="img" alt="Une étoile vectorielle" />
+```
 
-![Deux images d'étoiles](raster-vector-default-size.png)
+Cela montre deux étoiles rouges apparemment identiques avec des ombres portées noires, côte à côte. La différence est que celle de gauche est une image matricielle (PNG), et celle de droite est une image vectorielle (SVG).
 
-![Les deux étoiles qu'on a zoomées, celle de droite est nette et celle de gauche est pixelisée/floue.](raster-vector-zoomed.png)
+{{EmbedLiveSample("raster-vector", "100%", 120)}}
 
-> [!NOTE]
-> Les deux images affichées ci-dessus sont des PNG qui illustrent le rendu des deux étoiles (l'une en SVG, l'autre en PNG) à des niveaux de zoom différent. N'hésitez surtout pas à aller sur [`vector-versus-raster.html`](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) pour voir l'exemple en direct&nbsp;!
+La différence devient évidente lorsque vous effectuez un zoom sur la page ou augmentez la taille des images. Ce qui suit montre comment les deux étoiles s'affichent avec une largeur de `300px`&nbsp;:
+
+```css hidden live-sample___raster-vector-zoomed
+img {
+  width: 300px;
+}
+```
+
+{{EmbedLiveSample("raster-vector-zoomed", "100%", 350)}}
+
+L'image PNG devient pixelisée, car elle contient des informations sur l'emplacement de chaque pixel (et sa couleur). Lorsqu'on effectue un zoom, chaque pixel est agrandi pour remplir plusieurs pixels à l'écran, ce qui donne un aspect bloc à l'image. L'image SVG, en revanche, reste nette et précise, car quelle que soit sa taille, les algorithmes sont utilisés pour déterminer les formes de l'image, les valeurs étant mises à l'échelle au fur et à mesure qu'elle devient plus grande.
 
 De plus, les fichiers des images vectorielles sont plus légers que les équivalents matriciels. En effet, ils n'ont qu'à contenir quelques déclarations de chemins/formes avec des algorithmes plutôt que des informations spécifiques pour tous les pixels.
 
@@ -109,7 +121,7 @@ Pour intégrer une image SVG à l'aide d'un élément {{HTMLElement("img")}}, il
 
 - Une syntaxe rapide et similaire aux images matricielles, avec une prise en charge native de l'attribut `alt`.
 - L'image peut être transformée en hyperlien en imbriquant l'élément `<img>` au sein d'un élément {{HTMLElement("a")}}.
-- Le fichier SVG peut être mis en cache par le navigateur, améliorant les temps de chargement pour les pages qui utiliseraient cette image par la suite.
+- Le fichier SVG peut être mis en cache par le navigateur, améliorant les temps de chargement pour les pages qui utilisent cette image par la suite.
 
 #### Inconvénients
 
@@ -138,7 +150,7 @@ background-size: contain;
 
 Comme pour la méthode HTML avec l'élément `<img>`, l'insertion de fichier SVG dans des images d'arrière-plan CSS signifie que le contenu SVG ne peut pas être manipulé avec JavaScript (et obéit aux mêmes limitations pour le CSS).
 
-Si vos images SVG ne s'affichent pas du tout, il se peut que votre serveur ne soit pas configuré correctement. Dans ce cas, [cet article vous aidera à corriger ce qui doit l'être](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started#un_mot_sur_les_serveurs_web_pour_les_fichiers_.svgz).
+Si vos images SVG ne s'affichent pas du tout, il se peut que votre serveur ne soit pas configuré correctement. Dans ce cas, [cet article vous aide à corriger ce qui doit l'être](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started#un_mot_sur_les_serveurs_web_pour_les_fichiers_.svgz).
 
 ### Inclure du code SVG dans le document HTML
 
@@ -213,7 +225,7 @@ Si vous êtes bloqué et que votre code ne fonctionne pas, vous pouvez toujours 
 
 ## Résumé
 
-Cet article vous a donné un aperçu rapide de ce que sont les images vectorielles et le format SVG, des raisons pour lesquelles il est utile de les connaître, et de la manière d'intégrer du contenu SVG dans vos pages Web. Il n'a jamais eu pour but d'être un guide complet pour apprendre le SVG, mais simplement de vous donner quelques repères afin que vous sachiez de quoi il s'agit si vous le rencontrez au cours de vos navigations sur le Web. Ne vous inquiétez donc pas si vous ne vous sentez pas encore expert en SVG. Nous avons inclus ci-dessous quelques liens qui pourraient vous aider si vous souhaitez en savoir plus sur son fonctionnement.
+Cet article vous a donné un aperçu rapide de ce que sont les images vectorielles et le format SVG, des raisons pour lesquelles il est utile de les connaître, et de la manière d'intégrer du contenu SVG dans vos pages Web. Il n'a jamais eu pour but d'être un guide complet pour apprendre le SVG, mais simplement de vous donner quelques repères afin que vous sachiez de quoi il s'agit si vous le rencontrez au cours de vos navigations sur le Web. Ne vous inquiétez donc pas si vous ne vous sentez pas encore expert en SVG. Nous avons inclus ci-dessous quelques liens qui peuvent vous aider si vous souhaitez en savoir plus sur son fonctionnement.
 
 ## Voir aussi
 

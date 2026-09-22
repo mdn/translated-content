@@ -11,7 +11,7 @@ Les éléments {{HTMLElement("input")}} de type **`email`** permettent à l'util
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="email">Entrez votre email exemple.com&nbsp;:</label>
+<label for="email">Entrez votre email example.com&nbsp;:</label>
 
 <input type="email" id="email" pattern=".+@exemple\.com" size="30" required />
 ```
@@ -87,7 +87,7 @@ Voir [la section sur l'utilisation de cet attribut ci-après](#validation_grâce
 
 L'attribut `placeholder` est une chaîne de caractères fournissant une courte indication à l'utilisateur·ice quant à l'information attendue dans le champ. Cet attribut doit être un mot ou une phrase courte qui illustre le type de donnée attendu plutôt qu'un message explicatif. Le texte ne doit pas contenir de saut à la ligne.
 
-Si le contenu du contrôle respecte une directionnalité donnée ([LTR](/fr/docs/Glossary/LTR) ou [RTL](/fr/docs/Glossary/RTL)) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode&nbsp;: voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel (en anglais)](https://www.w3.org/International/questions/qa-bidi-unicode-controls).
+Si le contenu du contrôle respecte une direction donnée ([LTR](/fr/docs/Glossary/LTR) ou [RTL](/fr/docs/Glossary/RTL)) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode&nbsp;: voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel (en anglais)](https://www.w3.org/International/questions/qa-bidi-unicode-controls).
 
 > [!NOTE]
 > On évite, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire, et qu'il peut causer certains problèmes avec le contenu. Voir [la page sur `<input>`](/fr/docs/Web/HTML/Reference/Elements/input) pour plus d'informations.
@@ -160,10 +160,10 @@ En revanche, les exemples suivants sont considérés invalides&nbsp;:
 
 Il est parfois utile de fournir une indication contextuelle sur la forme que doit prendre la donnée saisie. Cela peut être particulièrement important si la page ne propose pas d'étiquettes descriptives pour chaque {{HTMLElement("input")}}. C'est là qu'interviennent les **textes indicatifs** (<i lang="en">placeholder</i> en anglais). Un texte indicatif est une valeur qui montre la forme que doit prendre la `value` en présentant un exemple de valeur valide, affiché dans la zone d'édition lorsque la `value` de l'élément est `""`. Dès qu'une donnée est saisie dans la zone, le texte indicatif disparaît&nbsp;; si la zone est vidée, le texte indicatif réapparaît.
 
-Dans l'exemple qui suit, on utilise un élément `<input>` de type `email` avec le texte indicatif `sophie@exemple.com`. Vous pouvez manipuler l'exemple afin de voir comment ce texte disparaît/réapparaît lorsqu'on édite la valeur du champ.
+Dans l'exemple qui suit, on utilise un élément `<input>` de type `email` avec le texte indicatif `sophie@example.com`. Vous pouvez manipuler l'exemple afin de voir comment ce texte disparaît/réapparaît lorsqu'on édite la valeur du champ.
 
 ```html
-<input type="email" placeholder="sophie@exemple.com" />
+<input type="email" placeholder="sophie@example.com" />
 ```
 
 {{EmbedLiveSample('Textes indicatifs', 600, 40)}}
@@ -201,7 +201,7 @@ Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 32 caractèr
 Comme toujours, vous pouvez fournir une valeur par défaut pour une boîte de saisie `email` en définissant son attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value)&nbsp;:
 
 ```html
-<input type="email" value="default@exemple.com" />
+<input type="email" value="default@example.com" />
 ```
 
 {{EmbedLiveSample("Fournir une seule option par défaut avec value", 600, 40)}}
@@ -244,13 +244,13 @@ Les navigateurs fournissent automatiquement une validation afin de s'assurer que
 Pour en savoir plus sur le fonctionnement de la validation des formulaires et sur la manière d'utiliser les propriétés CSS {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} pour mettre en forme le champ selon que la valeur courante est valide ou non, voir [Validation des données de formulaires](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
 > [!NOTE]
-> La spécification comporte certains problèmes relatifs aux noms de domaines internationaux et à la validation des adresses électroniques en HTML. Pour plus d'informations, voir [le bug 15489 du W3C <sup>(angl.)</sup>](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489) et [whatwg/html#4562 <sup>(angl.)</sup>](https://github.com/whatwg/html/issues/4562).
+> La spécification comporte certains problèmes relatifs aux noms de domaines internationaux et à la validation des adresses électroniques en HTML. Pour plus d'informations, voir [le bogue 15489 du W3C <sup>(angl.)</sup>](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489) et [whatwg/html#4562 <sup>(angl.)</sup>](https://github.com/whatwg/html/issues/4562).
 
 ### Validation grâce à une expression régulière
 
 Si vous avez besoin que l'adresse électronique saisie soit restreinte à autre chose que «&nbsp;une chaîne de caractères qui ressemble à une adresse électronique&nbsp;», vous pouvez utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) pour définir une {{Glossary("regular expression", "expression régulière")}} à laquelle la valeur doit correspondre pour être valide. Si l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/input#multiple) est défini, chaque élément individuel de la liste séparée par des virgules doit correspondre à {{Glossary("regular expression", "l'expression régulière")}}.
 
-Par exemple, supposons que vous créez une page pour les employé·e·s de Best Startup Ever, Inc. qui leur permet de contacter leur service informatique en cas de besoin. Dans notre formulaire simplifié, l'utilisateur·ice doit saisir son adresse électronique et un message décrivant le problème rencontré. Nous voulons nous assurer que non seulement l'utilisateur·ice fournit une adresse électronique valide, mais aussi, pour des raisons de sécurité, que l'adresse soit une adresse interne à l'entreprise.
+Par exemple, supposons que vous créez une page pour les employé·e·s de <i lang="en">Best Startup Ever, Inc.</i> qui leur permet de contacter leur service informatique en cas de besoin. Dans notre formulaire simplifié, l'utilisateur·ice doit saisir son adresse électronique et un message décrivant le problème rencontré. Nous voulons nous assurer que non seulement l'utilisateur·ice fournit une adresse électronique valide, mais aussi, pour des raisons de sécurité, que l'adresse soit une adresse interne à l'entreprise.
 
 Comme les champs de type `email` sont validés à la fois selon la validation standard d'adresse électronique _et_ selon le [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) défini, cela peut être mis en place facilement. Voyons comment&nbsp;:
 

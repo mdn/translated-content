@@ -3,10 +3,10 @@ title: "HTMLTableElement : propriété cellSpacing"
 short-title: cellSpacing
 slug: Web/API/HTMLTableElement/cellSpacing
 l10n:
-  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 Il est préférable d'utiliser la propriété CSS {{CSSxRef("border-spacing")}}. La propriété obsolète **`cellSpacing`** de l'interface {{DOMxRef("HTMLTableElement")}} représente l'espacement autour des éléments HTML {{HTMLElement("th")}} et {{HTMLElement("td")}} qui constituent les cellules d'un tableau. Deux cellules sont séparées par la somme des valeurs `cellSpacing` de chacune des deux cellules.
 
@@ -14,7 +14,7 @@ Il est préférable d'utiliser la propriété CSS {{CSSxRef("border-spacing")}}.
 
 Une chaîne de caractères correspondant soit à un nombre de pixels (par exemple, `"10"`), soit à une valeur en pourcentage (par exemple, `"10%"`).
 
-Lorsque la valeur `null` est affectée, cette valeur est convertie en chaîne vide (`""`), donc `elt.cellSpacing = null` est équivalent à `elt.cellSpacing = ""`.
+Lorsque la valeur `null` est affectée, cette valeur est convertie en chaîne de caractères vide (`""`), donc `elt.cellSpacing = null` est équivalent à `elt.cellSpacing = ""`.
 
 ## Exemples
 

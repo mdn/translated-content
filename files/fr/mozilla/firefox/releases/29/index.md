@@ -3,7 +3,7 @@ title: Firefox 29 note de version pour les développeurs
 short-title: Firefox 29
 slug: Mozilla/Firefox/Releases/29
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Firefox 29 est sorti le 29 Avril, 2014. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeur·euse·s Web, mais aussi pour es développeur·euse·s Firefox et Gecko ainsi que pour les développeur·euse·s d'add-on.
@@ -67,8 +67,8 @@ _Consultez [l'article du blog Mozilla Hacks <sup>(angl.)</sup>](https://hacks.mo
 ### Interfaces/APIs/DOM
 
 - Un nouveau type de workers, {{DOMxRef("SharedWorker")}}, est désormais disponible par défaut ([bogue Firefox 924089 <sup>(angl.)</sup>](https://bugzil.la/924089)).
-- L'interface {{DOMxRef("URL")}} prend désormais en charge la propriété {{DOMxRef("URL.searchParams", "searchParams")}} retournant un objet {{DOMxRef("URLSearchParams")}}, permettant de modifier les paramètres de recherche d'une URL ([bogue Firefox 887836 <sup>(angl.)</sup>](https://bugzil.la/887836)). Le constructeur {{DOMxRef("URLSearchParams.URLSearchParams", "URLSearchParams()")}} permet une analyse plus facile des chaînes de caractères de requête.
-- La propriété {{DOMxRef("WorkerNavigator.onLine", "navigator.onLine")}} est désormais prise en charge sur {{DOMxRef("WorkerNavigator")}}, permettant de connaître le statut en ligne/hors ligne dans les workers ([bogue Firefox 925437 <sup>(angl.)</sup>](https://bugzil.la/925437)).
+- L'interface {{DOMxRef("URL")}} prend désormais en charge la propriété {{DOMxRef("URL.searchParams", "searchParams")}} retournant un objet {{DOMxRef("URLSearchParams")}}, vous permettant de modifier les paramètres de recherche d'une URL ([bogue Firefox 887836 <sup>(angl.)</sup>](https://bugzil.la/887836)). Le constructeur {{DOMxRef("URLSearchParams.URLSearchParams", "URLSearchParams()")}} permet une analyse plus facile des chaînes de caractères de requête.
+- La propriété {{DOMxRef("WorkerNavigator.onLine", "navigator.onLine")}} est désormais prise en charge sur {{DOMxRef("WorkerNavigator")}}, vous permettant de connaître le statut en ligne/hors ligne dans les workers ([bogue Firefox 925437 <sup>(angl.)</sup>](https://bugzil.la/925437)).
 - Dans le cadre de la mise en œuvre des Web Components, l'interface `HTMLShadowElement` a été implémentée derrière le paramètre `dom.webcomponents.enabled`. Activez-le à `true` si vous souhaitez l'utiliser. ([bogue Firefox 887538 <sup>(angl.)</sup>](https://bugzil.la/887538))
 - La propriété en lecture seule {{DOMxRef("HTMLIFrameElement.sandbox")}} n'est plus une chaîne de caractères mais un {{DOMxRef("DOMTokenList")}} ([bogue Firefox 845057 <sup>(angl.)</sup>](https://bugzil.la/845057)).
 - Sur {{DOMxRef("HTMLCanvasElement.getContext()")}}, la valeur `moz-webgl` n'est plus prise en charge. Utilisez la valeur standard `webgl` ([bogue Firefox 913597 <sup>(angl.)</sup>](https://bugzil.la/913597)).

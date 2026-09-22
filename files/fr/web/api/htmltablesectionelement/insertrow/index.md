@@ -3,15 +3,14 @@ title: "HTMLTableSectionElement : méthode insertRow()"
 short-title: insertRow()
 slug: Web/API/HTMLTableSectionElement/insertRow
 l10n:
-  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
+  sourceCommit: ea061caed30f127a79157d07c538d26f01b8702b
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`insertRow()`** de l'interface {{DOMxRef("HTMLTableSectionElement")}} insère une nouvelle ligne ({{HTMLElement("tr")}}) dans l'élément de section de tableau donné ({{HTMLElement("thead")}}, {{HTMLElement("tfoot")}} ou {{HTMLElement("tbody")}}), puis retourne une référence vers cette nouvelle ligne.
+La méthode **`insertRow()`** de l'interface {{DOMxRef("HTMLTableSectionElement")}} crée un élément {{HTMLElement("tr")}}, l'insère à la position définie dans l'élément de section de tableau donné ({{HTMLElement("thead")}}, {{HTMLElement("tfoot")}} ou {{HTMLElement("tbody")}}), et le retourne.
 
-> [!NOTE]
-> `insertRow()` insère la ligne directement dans la section. Il n'est pas nécessaire d'ajouter la ligne séparément comme ce serait le cas si {{DOMxRef("Document.createElement()")}} avait été utilisé pour créer le nouvel élément HTML `<tr>`.
+Cette méthode crée et insère l'élément directement, sans nécessiter d'appels séparés à des méthodes telles que {{DOMxRef("Document.createElement()")}}, {{DOMxRef("Node.insertBefore()")}}, et {{DOMxRef("Node.appendChild()")}}.
 
 ## Syntaxe
 
@@ -23,8 +22,7 @@ insertRow(index)
 ### Paramètres
 
 - `index` {{Optional_Inline}}
-  - : L'indice de la nouvelle ligne. Si `index` vaut `-1` ou est égal au nombre de lignes, la ligne est ajoutée en dernière position.
-    Si `index` est omis, il prend la valeur `-1` par défaut.
+  - : L'indice de la nouvelle ligne dans la collection {{DOMxRef("HTMLTableSectionElement.rows", "rows")}}. Si `index` vaut `-1` ou est égal au nombre de lignes, la ligne est ajoutée en dernière position. Si `index` est omis, il prend la valeur `-1` par défaut.
 
 ### Valeur de retour
 
@@ -131,3 +129,4 @@ removeButton.addEventListener("click", () => {
 
 - La méthode {{DOMxRef("HTMLTableRowElement.insertCell()")}}
 - La méthode {{DOMxRef("HTMLTableElement.insertRow()")}}
+- La méthode {{DOMxRef("HTMLTableSectionElement.deleteRow()")}}

@@ -3,7 +3,7 @@ title: "HTMLAllCollection : méthode item()"
 short-title: item()
 slug: Web/API/HTMLAllCollection/item
 l10n:
-  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
+  sourceCommit: 5b9e4bb67e5cb4bb2b780e7338a6560463e5a1a7
 ---
 
 {{APIRef("HTML DOM")}}
@@ -19,7 +19,7 @@ item(nameOrIndex)
 ### Paramètres
 
 - `nameOrIndex`
-  - : Si ce paramètre est un entier, ou une chaîne de caractères pouvant être convertie en entier, il représente alors la position de l'objet {{DOMxRef("Element")}} à retourner. Les éléments apparaissent dans une `HTMLAllCollection` dans le même ordre qu'ils apparaissent dans le code source du document. Si le paramètre est une chaîne de caractères qui ne peut pas être convertie en entier, il sera interprété comme le `name` ou `id` de l'élément à retourner.
+  - : Si ce paramètre est un entier, ou une chaîne de caractères pouvant être convertie en entier, il représente alors la position de l'objet {{DOMxRef("Element")}} à retourner. Les éléments apparaissent dans une `HTMLAllCollection` dans le même ordre qu'ils apparaissent dans le code source du document. Si le paramètre est une chaîne de caractères qui ne peut pas être convertie en entier, il est interprété comme le `name` ou `id` de l'élément à retourner.
 
 ### Valeur de retour
 

@@ -58,13 +58,13 @@ Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 Soit cet en-tête CSP&nbsp;:
 
 ```http
-Content-Security-Policy: style-src https://exemple.com/
+Content-Security-Policy: style-src https://example.com/
 ```
 
 Ces feuilles de style seront bloquées et ne se chargeront pas&nbsp;:
 
 ```html
-<link href="https://hors-exemple.com/styles/main.css" rel="stylesheet" />
+<link href="https://hors-example.com/styles/main.css" rel="stylesheet" />
 
 <style>
   #inline-style {
@@ -73,14 +73,14 @@ Ces feuilles de style seront bloquées et ne se chargeront pas&nbsp;:
 </style>
 
 <style>
-  @import "https://hors-exemple.com/styles/print.css" print;
+  @import "https://hors-example.com/styles/print.css" print;
 </style>
 ```
 
 De même que les styles chargés avec l'en-tête {{HTTPHeader("Link")}}&nbsp;:
 
 ```http
-Link: <https://hors-exemple.com/styles/stylesheet.css>;rel=stylesheet
+Link: <https://hors-example.com/styles/stylesheet.css>;rel=stylesheet
 ```
 
 Les attributs de style seront aussi bloqués&nbsp;:

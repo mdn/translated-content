@@ -1,79 +1,339 @@
 ---
-title: Disposition de flux et modes d'écriture
+title: Disposition du flux et modes d'écriture
 slug: Web/CSS/Guides/Display/Flow_layout_and_writing_modes
-original_slug: Web/CSS/CSS_display/Flow_layout_and_writing_modes
+l10n:
+  sourceCommit: 32bdfdb82cf91ce9942b694286dec62be2cc20aa
 ---
 
 La spécification CSS 2.1, qui décrit le comportement classique du flux normal, prend l'hypothèse d'un mode d'écriture horizontal. [Les propriétés liées à la disposition](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout) devraient fonctionner de façon identique pour les modes d'écritures verticaux. Dans ce guide, nous verrons comment le flux normal se comporte selon les différents modes d'écriture.
 
-Ce guide n'est pas un guide exhaustif sur l'utilisation des modes d'écriture en CSS. Son objectif est de documenter les interactions, éventuellement inattendues, entre le flux et les modes d'écriture. Pour plus de ressources à ce sujet, vous pouvez vour référer aux [ressources externes](#ressources_externes) ainsi qu'à la section [Voir aussi](#voir_aussi) en fin de page.
+Ce guide n'est pas un guide exhaustif sur l'utilisation des modes d'écriture en CSS. Son objectif est de documenter les interactions, éventuellement inattendues, entre le flux et les modes d'écriture. Pour plus de ressources à ce sujet, vous pouvez vous référer aux [ressources externes](#ressources_externes) ainsi qu'à la section [Voir aussi](#voir_aussi) en fin de page.
 
 ## La spécification des modes d'écriture
 
-Le module de spécification _CSS Writing Modes_ de niveau 3 définit l'impact du mode d'écriture sur le flux. Voici l'introduction [de la spécification](https://drafts.csswg.org/css-writing-modes-3/#text-flow) quant aux modes d'écriture :
+Le module de spécification _CSS Writing Modes_ de niveau 3 définit l'impact du mode d'écriture sur le flux. Voici l'introduction [de la spécification <sup>(angl.)</sup>](https://drafts.csswg.org/css-writing-modes-3/#text-flow) quant aux modes d'écriture&nbsp;:
 
-> « En CSS, un mode d'écriture est défini par les propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}. Ce mode est principalement défini selon sa direction en ligne (_inline_) et selon sa direction de bloc. »
+> «&nbsp;En CSS, un mode d'écriture est défini par les propriétés {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}. Ce mode est principalement défini selon sa direction en ligne et selon sa direction de bloc.&nbsp;»
 
 La spécification définit la direction en ligne comme la direction selon laquelle le contenu est ordonné sur une ligne. Cela définit le début et la fin de la direction en ligne. Le début correspond à l'emplacement du début d'une phrase sur la ligne et la fin correspond à l'emplacement où la ligne de texte se coupe pour passer sur une nouvelle ligne.
 
-La direction de bloc correspond à la direction selon laquelle les boîtes (ex. les paragraphes) s'empilent pour ce mode d'écriture. La propriété `writing-mode` contrôle la direction de bloc. Si on souhaite changer la page ou une partie de la page afin d'utiliser la direction `vertical-lr`, on pourra utiliser `writing-mode: vertical-lr` sur un élément. Cela aura pour effet de modifier la direction de bloc et, par conséquent, de modifier la direction en ligne.
+La direction de bloc correspond à la direction selon laquelle les boîtes (par exemple, les paragraphes) s'empilent pour ce mode d'écriture. La propriété `writing-mode` contrôle la direction de bloc. Si on souhaite changer la page ou une partie de la page afin d'utiliser la direction `vertical-lr`, on peut utiliser `writing-mode: vertical-lr` sur un élément. Cela a pour effet de modifier la direction de bloc et, par conséquent, de modifier la direction en ligne.
 
 Les modes d'écritures peuvent être utilisés pour respecter la façon d'écrire de certaines langues. Ils peuvent également être utilisés à des fins stylistiques (pour avoir un titre vertical par exemple).
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/creative-use.html", '100%', 720)}}
+```html live-sample___creative-use
+<div class="boite">
+  <h1>Un titre</h1>
+  <p>
+    Une nuit de novembre de l'année 1782, selon l'histoire, deux frères étaient
+    assis près de leur feu d'hiver dans la petite ville française d'Annonay,
+    regardant les volutes de fumée grise s'élever de l'âtre et se courber dans
+    la large cheminée. Leurs noms étaient Stephen et Joseph Montgolfier, ils
+    étaient papetiers de métier, et étaient connus pour posséder des esprits
+    réfléchis et un profond intérêt pour toutes les connaissances scientifiques
+    et les nouvelles découvertes.
+  </p>
+</div>
+```
 
-## La propriété `writing-mode` et le flux de bloc
+```css live-sample___creative-use
+body {
+  font: 1.2em sans-serif;
+}
+h1 {
+  writing-mode: vertical-lr;
+  float: left;
+}
+```
 
-La propriété {{cssxref("writing-mode")}} s'utilise avec les valeurs `horizontal-tb`, `vertical-rl` et `vertical-lr`. Ces valeurs contrôlent la direction selon laquelle les blocs se suivent sur la page. La valeur initiale de cette propriété est `horizontal-tb` ce qui signifie que l'axe de bloc est dirigé de haut en bas (`tb` pour _top to bottom_ qui signifie de haut en bas) et que l'axe en ligne est horizontal. Les langues qui s'écrivent de gauche à droite telles que le français ou les langues qui s'écrivent de droite à gauche telles que l'arabe utilisent toutes `horizontal-tb`.
+{{EmbedLiveSample("creative-use", "", 220)}}
 
-Voici un exemple avec `horizontal-tb`.
+## Direction du flux de bloc
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/horizontal-tb.html", '100%', 720)}}
+La propriété {{CSSxRef("writing-mode")}} accepte les valeurs `horizontal-tb`, `vertical-rl` et `vertical-lr`. Ces valeurs contrôlent la direction dans laquelle les blocs s'écoulent sur la page. La valeur initiale est `horizontal-tb`, qui est une direction de flux de bloc de haut en bas avec une direction en ligne horizontale. Les langues de gauche à droite, comme l'anglais, et les langues de droite à gauche, comme l'arabe, sont toutes `horizontal-tb`.
 
-La valeur `vertical-rl` permet d'avoir une direction de bloc de droite à gauche et une direction en ligne verticale, comme on peut le voir dans l'exemple qui suit.
+L'exemple suivant montre des blocs utilisant explicitement la valeur initiale `horizontal-tb`&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/vertical-rl.html", '100%', 720)}}
+```html live-sample___horizontal-tb
+<div class="boite">
+  <p>
+    Une nuit de novembre de l'année 1782, selon l'histoire, deux frères étaient
+    assis près de leur feu d'hiver dans la petite ville française d'Annonay,
+    regardant les volutes de fumée grise s'élever de l'âtre et se courber dans
+    la large cheminée. Leurs noms étaient Stephen et Joseph Montgolfier, ils
+    étaient papetiers de métier, et étaient connus pour posséder des esprits
+    réfléchis et un profond intérêt pour toutes les connaissances scientifiques
+    et les nouvelles découvertes.
+  </p>
+  <p>
+    Avant cette nuit—une nuit mémorable, comme elle allait le prouver—des
+    centaines de millions de personnes avaient regardé les volutes de fumée
+    s'élever de leurs feux sans en tirer une inspiration particulière.
+  </p>
+</div>
+```
 
-Dans cet autre exemple, on voit comment se comporte la troisième valeur possible pour `writing-mode` : `vertical-lr`. On a une direction de bloc horizontal de la gauche vers la droite et une direction en ligne verticale.
+```css live-sample___horizontal-tb
+body {
+  font: 1.2em sans-serif;
+}
+.boite {
+  writing-mode: horizontal-tb;
+}
+```
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/vertical-lr.html", '100%', 720)}}
+{{EmbedLiveSample("horizontal-tb", "", 240)}}
 
-## Les boîtes utilisant un mode d'écriture différent de leur parent
+Comparez cela avec la valeur `vertical-rl`, qui vous donne une direction de flux de bloc de droite à gauche avec une direction en ligne verticale, comme le montre l'exemple suivant.
 
-Lorsqu'une boîte imbriquée se voit affecter un mode d'écriture différent de son parent, une boîte en ligne s'affichera comme si elle avait `display: inline-block`.
+```html hidden live-sample___vertical-rl
+<div class="boite">
+  <p>
+    Une nuit de novembre de l'année 1782, selon l'histoire, deux frères étaient
+    assis près de leur feu d'hiver dans la petite ville française d'Annonay,
+    regardant les volutes de fumée grise s'élever de l'âtre et se courber dans
+    la large cheminée. Leurs noms étaient Stephen et Joseph Montgolfier, ils
+    étaient papetiers de métier, et étaient connus pour posséder des esprits
+    réfléchis et un profond intérêt pour toutes les connaissances scientifiques
+    et les nouvelles découvertes.
+  </p>
+  <p>
+    Avant cette nuit—une nuit mémorable, comme elle allait le prouver—des
+    centaines de millions de personnes avaient regardé les volutes de fumée
+    s'élever de leurs feux sans en tirer une inspiration particulière.
+  </p>
+</div>
+```
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/inline-change-mode.html", '100%', 720)}}
+```css live-sample___vertical-rl
+body {
+  font: 1.2em sans-serif;
+}
+.boite {
+  writing-mode: vertical-rl;
+}
+```
 
-Une boîte de bloc créera un nouveau contexte de formatage. Ainsi, si son type d'affichage intérieur vaut `flow`, le type d'affichage calculé sera `flow-root`. On peut voir ce comportement dans l'exemple qui suit où la boîte affichée avec `horizontal-tb` contient un élément flottant contenu car son élément parent crée un nouveau contexte de formatage.
+{{EmbedLiveSample("vertical-rl", "", 300)}}
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/block-change-mode.html", '100%', 720)}}
+Le dernier exemple démontre la troisième valeur possible pour `writing-mode: vertical-lr`. Cela vous donne une direction de flux de bloc de gauche à droite et une direction en ligne verticale.
+
+```html hidden live-sample___vertical-lr
+<div class="boite">
+  <p>
+    Une nuit de novembre de l'année 1782, selon l'histoire, deux frères étaient
+    assis près de leur feu d'hiver dans la petite ville française d'Annonay,
+    regardant les volutes de fumée grise s'élever de l'âtre et se courber dans
+    la large cheminée. Leurs noms étaient Stephen et Joseph Montgolfier, ils
+    étaient papetiers de métier, et étaient connus pour posséder des esprits
+    réfléchis et un profond intérêt pour toutes les connaissances scientifiques
+    et les nouvelles découvertes.
+  </p>
+  <p>
+    Avant cette nuit—une nuit mémorable, comme elle allait le prouver—des
+    centaines de millions de personnes avaient regardé les volutes de fumée
+    s'élever de leurs feux sans en tirer une inspiration particulière.
+  </p>
+</div>
+```
+
+```css live-sample___vertical-lr
+body {
+  font: 1.2em sans-serif;
+}
+.boite {
+  writing-mode: vertical-lr;
+}
+```
+
+{{EmbedLiveSample("vertical-lr", "", 300)}}
+
+## Modes d'écriture imbriqués
+
+Lorsqu'une boîte imbriquée se voit attribuer un mode d'écriture différent de celui de son parent, une boîte de niveau en ligne s'affiche comme si elle avait `display: inline-block`.
+
+```html live-sample___inline-change-mode
+<div class="boite">
+  <p>
+    Une nuit de <span>novembre</span> de l'année 1782, selon l'histoire, deux
+    frères étaient assis près de leur feu d'hiver dans la petite ville française
+    d'Annonay, regardant les volutes de fumée grise s'élever de l'âtre et se
+    courber dans la large cheminée. Leurs noms étaient Stephen et Joseph
+    Montgolfier, ils étaient papetiers de métier, et étaient connus pour
+    posséder des esprits réfléchis et un profond intérêt pour toutes les
+    connaissances scientifiques et les nouvelles découvertes.
+  </p>
+</div>
+```
+
+```css live-sample___inline-change-mode
+body {
+  font: 1.2em sans-serif;
+}
+.boite {
+  writing-mode: vertical-rl;
+}
+.boite span {
+  writing-mode: horizontal-tb;
+  padding: 10px;
+  border: 1px solid rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("inline-change-mode", "", 240)}}
+
+Une boîte de niveau bloc établit un nouveau [contexte de formatage de bloc (CFB)](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context), ce qui signifie que si son type d'affichage interne est `flow`, il obtient un type d'affichage calculé de `flow-root`. C'est illustré dans l'exemple suivant où la boîte qui s'affiche en `horizontal-tb` contient un flottant qui est contenu en raison de l'établissement d'un nouveau CFB par son parent.
+
+```html live-sample___block-change-mode
+<div class="boite">
+  <p>
+    Une nuit de novembre de l'année 1782, selon l'histoire, deux frères étaient
+    assis près de leur feu d'hiver dans la petite ville française d'Annonay,
+    regardant les volutes de fumée grise s'élever de l'âtre et se courber dans
+    la large cheminée.
+  </p>
+
+  <div>
+    <div class="flottant"></div>
+    Cette boîte doit établir un nouveau CFB.
+  </div>
+
+  <p>
+    Leurs noms étaient Stephen et Joseph Montgolfier, ils étaient papetiers de
+    métier, et étaient connus pour posséder des esprits réfléchis et un profond
+    intérêt pour toutes les connaissances scientifiques et les nouvelles
+    découvertes.
+  </p>
+</div>
+```
+
+```css live-sample___block-change-mode
+body {
+  font: 1.2em sans-serif;
+}
+.boite {
+  writing-mode: vertical-rl;
+}
+.boite > div {
+  writing-mode: horizontal-tb;
+  padding: 10px;
+  border: 1px solid rebeccapurple;
+}
+.flottant {
+  width: 100px;
+  height: 150px;
+  background-color: rebeccapurple;
+  float: left;
+}
+```
+
+{{EmbedLiveSample("block-change-mode", "", 500)}}
 
 ## Les éléments remplacés
 
-Les éléments remplacés tels que les images ne changeront pas d'oritentation selon la valeur de la propriété `writing-mode`. Toutefois, les éléments remplacés tels que les éléments de formulaires qui incluent du texte devraient utiliser le mode d'écriture courant.
+Les éléments remplacés tels que les images ne changent pas d'orientation en fonction de la propriété `writing-mode`. Cependant, les éléments remplacés tels que les contrôles de formulaire qui incluent du texte devraient correspondre au mode d'écriture en cours.
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/replaced.html", '100%', 720)}}
+```html live-sample___replaced
+<div class="boite">
+  <p>
+    Une nuit de novembre de l'année 1782, selon l'histoire, deux frères étaient
+    assis près de leur feu d'hiver dans la petite ville française d'Annonay,
+    regardant les volutes de fumée grise s'élever de l'âtre et se courber dans
+    la large cheminée.
+  </p>
+
+  <img
+    alt="une montgolfière colorée contre un ciel clair"
+    src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+
+  <p>
+    Leurs noms étaient Stephen et Joseph Montgolfier, ils étaient papetiers de
+    métier, et étaient connus pour posséder des esprits réfléchis et un profond
+    intérêt pour toutes les connaissances scientifiques et les nouvelles
+    découvertes.
+  </p>
+</div>
+```
+
+```css live-sample___replaced
+body {
+  font: 1.2em sans-serif;
+}
+.boite {
+  writing-mode: vertical-rl;
+}
+```
+
+{{EmbedLiveSample("replaced", "", 340)}}
 
 ## Les propriétés et valeurs logiques
 
-Lorsqu'on travaille avec des modes d'écriture autres que `horizontal-tb`, la plupart des propriétés et des valeurs correspondant aux dimensions physiques de l'écran semblent étranges. Ainsi, si on a une boîte qui fait 100 pixels de large, avec `horizontal-tb` cette largeur sera selon la direction en ligne. Mais avec le mode `vertical-lr` cela contrôlera la direction de bloc car elle ne tourne pas avec le texte.
+Une fois que vous travaillez dans des modes d'écriture autres que `horizontal-tb`, de nombreuses propriétés et valeurs qui sont associées aux dimensions physiques de l'écran semblent étranges. Par exemple, si vous donnez à une boîte une largeur de 100px, dans `horizontal-tb` cela contrôle la taille dans la direction en ligne. Dans `vertical-lr`, cela contrôle la taille dans la direction de bloc, car elle ne tourne pas avec le texte.
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/width.html", '100%', 720)}}
+```html live-sample___width
+<div class="boite">
+  <div class="boite1">Boîte 1</div>
+  <div class="boite2">Boîte 2</div>
+</div>
+```
 
-C'est pour cela que des propriétés _logiques_ ont fait leur apparition comme {{cssxref("block-size")}} et {{cssxref("inline-size")}}. Si on fournit `inline-size: 100px` sur un bloc, peu importe qu'on ait un mode d'écriture horizontal ou vertical, `inline-size` correspondra à la direction en ligne quoi qu'il arrive.
+```css live-sample___width
+body {
+  font: 1.2em sans-serif;
+}
+.boite1 {
+  writing-mode: horizontal-tb;
+  border: 5px solid rebeccapurple;
+  width: 100px;
+  margin: 10px;
+}
+.boite2 {
+  writing-mode: vertical-lr;
+  border: 5px solid rebeccapurple;
+  width: 100px;
+  margin: 10px;
+}
+```
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/inline-size.html", '100%', 720)}}
+{{EmbedLiveSample("width")}}
 
-Le module de spécification [CSS sur les propriétés et valeurs logiques](/fr/docs/Web/CSS/Guides/Logical_properties_and_values) contient des versions logiques des propriétés contrôlant les marges, le remplissage (_padding_) et les bordures et d'autres correspondances pour les concepts qu'on manipulait habituellement avec des directions _physiques_.
+Par conséquent, nous avons les propriétés {{CSSxRef("block-size")}} et {{CSSxRef("inline-size")}}. Si nous donnons à notre bloc une `inline-size` de 100px, peu importe que nous soyons dans un mode d'écriture horizontal ou vertical&nbsp;; `inline-size` signifie toujours la taille dans la direction en ligne.
+
+```html live-sample___inline-size
+<div class="boite">
+  <div class="boite1">Boîte 1</div>
+  <div class="boite2">Boîte 2</div>
+</div>
+```
+
+```css live-sample___inline-size
+body {
+  font: 1.2em sans-serif;
+}
+.boite1 {
+  writing-mode: horizontal-tb;
+  border: 5px solid rebeccapurple;
+  inline-size: 100px;
+  margin: 10px;
+}
+.boite2 {
+  writing-mode: vertical-lr;
+  border: 5px solid rebeccapurple;
+  inline-size: 100px;
+  margin: 10px;
+}
+```
+
+{{EmbedLiveSample("inline-size", "", 200)}}
+
+Le module [des propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values) inclut des versions logiques des propriétés qui contrôlent les marges, le padding et les bordures, ainsi que d'autres associations pour des éléments que nous avons typiquement utilisés avec des directions physiques.
 
 ## Résumé
 
-Dans la plupart des cas, la disposition de flux fonctionne comme on s'y attend lorsqu'on change le mode d'écriture du document ou d'une de ses parties. Les modes d'écritures peuvent être utilisés pour écrire correctement une langue ou pour des aspects créatifs. CSS facilite cette utilisation en introduisant des propriétés et des valeurs logiques qui fonctionnent de façon homogène quel que soit le mode d'écriture. On peut alors créer des composants qui fonctionneront avec différents modes d'écriture.
+Dans la plupart des cas, la disposition de flux fonctionne comme prévu lorsqu'on change le mode d'écriture de l'ensemble du document ou de sections individuelles. Cela peut être utilisé pour composer correctement des langues verticales ou pour des raisons créatives. Avec les propriétés et valeurs logiques CSS, la taille en mode d'écriture vertical peut être basée sur la taille en ligne et en bloc d'un élément. C'est utile pour créer des composants qui fonctionnent dans différents modes d'écriture.
 
 ## Voir aussi
 
-- [Les modes d'écritures](/fr/docs/Web/CSS/Guides/Writing_modes)
-
-## Ressources externes
-
-- _[CSS Writing Modes (en anglais)](https://24ways.org/2016/css-writing-modes/)_ par Jen Simmons sur _24 Ways_
+- [Les modes d'écriture](/fr/docs/Web/CSS/Guides/Writing_modes)
+- [Modes d'écriture et mise en page CSS <sup>(angl.)</sup>](https://www.smashingmagazine.com/2019/08/writing-modes-layout/) sur Smashing Magazine (2019)
+- [Modes d'écriture CSS <sup>(angl.)</sup>](https://24ways.org/2016/css-writing-modes/) sur 24ways.org (2016)

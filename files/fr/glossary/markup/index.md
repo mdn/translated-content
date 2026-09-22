@@ -2,7 +2,7 @@
 title: Balisage (Markup)
 slug: Glossary/Markup
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
 ---
 
 Un langage de balisage est un langage conçu pour définir et présenter du texte. {{Glossary("HTML")}} (HyperText Markup Language), est un exemple de langage de balisage.

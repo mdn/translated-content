@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{HTMLSidebar}}
 
 El elemento [HTML](/es/docs/Web/HTML) **`<param>`** define los parámetros para un elemento {{HTMLElement("object")}}.
 

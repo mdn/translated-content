@@ -3,7 +3,7 @@ title: Firefox 30 note de version pour les développeurs
 short-title: Firefox 30
 slug: Mozilla/Firefox/Releases/30
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Firefox 30 a été publié le [10 juin 2014 <sup>(angl.)</sup>](https://whattrainisitnow.com/release/?version=30). Cet article répertorie les principaux changements utiles non seulement pour les développeur·euse·s Web, mais aussi pour les développeur·euse·s Firefox et Gecko ainsi que pour les développeur·euse·s d'extensions.
@@ -47,7 +47,7 @@ _Pas de changement._
 - Le non standard, et obsolète depuis Firefox 15, `Blob.mozSlice` n'est plus supporté ([bogue Firefox 961804 <sup>(angl.)</sup>](https://bugzil.la/961804)).
 - Les non standards `ArchiveReader` et `ArchiveRequest` ne sont plus exposés au Web ([bogue Firefox 968883 <sup>(angl.)</sup>](https://bugzil.la/968883)).
 - Les [constructeurs WebIDL <sup>(angl.)</sup>](https://searchfox.org/firefox-main/source/dom/webidl/) ne peuvent plus être appelés en tant que fonctions. Ils doivent être précédés du mot-clé `new` ([bogue Firefox 916644 <sup>(angl.)</sup>](https://bugzil.la/916644)).
-- Ajout du support d'une nouvelle valeur (`alpha`) pour le deuxième paramètre, optionnel, de la méthode {{DOMxRef("HTMLCanvasElement.getContext()")}} permettant de définir si le mélange alpha doit être stocké ou non pour ce contexte. Dans le cas contraire, la valeur alpha par pixel dans ce magasin est toujours de `1.0`. Cela permet au back-end de mettre en œuvre une procédure accélérée ([bogue Firefox 982480 <sup>(angl.)</sup>](https://bugzil.la/982480)).
+- Ajout du support d'une nouvelle valeur (`alpha`) pour le deuxième paramètre, optionnel, de la méthode {{DOMxRef("HTMLCanvasElement.getContext()")}} permettant de définir si le mélange alpha doit être stocké ou non pour ce contexte. Dans le cas contraire, la valeur alpha par pixel dans ce magasin est toujours de `1.0`. Cela vous permet au back-end de mettre en œuvre une procédure accélérée ([bogue Firefox 982480 <sup>(angl.)</sup>](https://bugzil.la/982480)).
 - `WorkerGlobalScope.console` retourne maintenant pour l'objet {{DOMxRef("Console")}} normal&nbsp;; `WorkerConsole` a été supprimé ([bogue Firefox 965860 <sup>(angl.)</sup>](https://bugzil.la/965860)).
 - L'extension {{DOMxRef("WEBGL_debug_shaders")}} WebGL a été implémentée ([bogue Firefox 968374 <sup>(angl.)</sup>](https://bugzil.la/968374)).
 
@@ -69,4 +69,4 @@ _Pas de changement._
 
 ## Changements pour les développeur·euse·s de Mozilla et d'extensions
 
-- L'interface `nsIDOMWindowUtils` supporte désormais l'attribut booléen `audioMuted` et `audioVolume`, un nombre à virgule flottante dans la plage `[0.0, 1.0]`, permettant de contrôler le son produit par une fenêtre (c'est-à-dire n'importe quel onglet ou cadre intégré). Il n'y a pas d'interface utilisateur pour cela, mais est disponible pour les extensions. ([bogue Firefox 923247 <sup>(angl.)</sup>](https://bugzil.la/923247))
+- L'interface `nsIDOMWindowUtils` supporte désormais l'attribut booléen `audioMuted` et `audioVolume`, un nombre à virgule flottante dans la plage `[0.0, 1.0]`, vous permettant de contrôler le son produit par une fenêtre (c'est-à-dire n'importe quel onglet ou cadre intégré). Il n'y a pas d'interface utilisateur pour cela, mais est disponible pour les extensions. ([bogue Firefox 923247 <sup>(angl.)</sup>](https://bugzil.la/923247))

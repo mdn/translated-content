@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Shapes
 original_slug: Web/CSS/CSS_shapes
 ---
 
-{{CSSRef}}
-
 **_CSS Shapes_** est un module de spécification CSS qui décrit les formes géométriques. [Selon le niveau 1 de cette spécification](https://drafts.csswg.org/css-shapes/), les formes CSS peuvent être appliquées aux éléments flottants. Cette spécification définit différentes façon permettant de définir la forme d'un élément flottant afin que les lignes « coulent » autour de la forme plutôt qu'autour du rectangle formé par la boîte de l'élément.
 
 ## Exemple simple

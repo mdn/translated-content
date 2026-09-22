@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
 ---
 
-{{Deprecated_Header}}
-
 **`xlink:href`** 属性は、リソースを参照する [IRI](/ja/docs/Web/SVG/Guides/Content_type#iri) として参照先を定義します。そのリンクが正確に意味している内容は、そのリンクを使用している各要素のコンテキストによって異なります。
 
 > [!NOTE]

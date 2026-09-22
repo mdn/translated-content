@@ -3,7 +3,7 @@ title: Propriété CSS `animation-iteration-count`
 short-title: animation-iteration-count
 slug: Web/CSS/Reference/Properties/animation-iteration-count
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-iteration-count`** définit le nombre de fois qu'une séquence d'animation doit être jouée avant de s'arrêter.
@@ -126,20 +126,20 @@ animation-iteration-count: revert-layer;
 animation-iteration-count: unset;
 ```
 
-La propriété **`animation-iteration-count`** se définit avec une ou plusieurs valeurs séparées par des virgules.
-
 ### Valeurs
 
+La propriété **`animation-iteration-count`** se définit avec une ou plusieurs valeurs séparées par des virgules&nbsp;:
+
 - `infinite`
-  - : L'animation sera répétée indéfiniment.
+  - : L'animation est répétée indéfiniment.
 - {{CSSxRef("&lt;number&gt;")}}
-  - : Le nombre de répétitions de l'animation&nbsp;; la valeur par défaut est `1`. Vous pouvez indiquer des valeurs non entières pour jouer une partie d'un cycle d'animation&nbsp;: par exemple, `0.5` jouera la moitié du cycle. Les valeurs négatives sont invalides.
+  - : Le nombre de répétitions de l'animation&nbsp;; la valeur par défaut est `1`. Vous pouvez indiquer des valeurs non entières pour jouer une partie d'un cycle d'animation&nbsp;: par exemple, `0.5` joue la moitié du cycle. Les valeurs négatives sont invalides.
 
 > [!NOTE]
 > Lorsque vous indiquez plusieurs valeurs séparées par des virgules sur une propriété `animation-*`, elles sont appliquées aux animations dans l'ordre d'apparition des {{CSSxRef("animation-name")}}. Si le nombre d'animations et de valeurs de propriété `animation-*` ne correspond pas, voir [Définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
 
 > [!NOTE]
-> Lors de la création d'[animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations), définir une valeur `animation-iteration-count` fait répéter l'animation ce nombre de fois au fil de la progression de la chronologie. Si aucune valeur `animation-iteration-count` n'est fournie, l'animation ne se produira qu'une seule fois. La valeur `infinite` est valide pour les animations pilotées par le défilement, mais elle donne une animation qui ne fonctionne pas.
+> Lors de la création [d'animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations), définir une valeur `animation-iteration-count` fait répéter l'animation ce nombre de fois au fil de la progression de la chronologie. Si aucune valeur `animation-iteration-count` n'est fournie, l'animation ne se produit qu'une seule fois. La valeur `infinite` est valide pour les animations pilotées par le défilement, mais elle donne une animation qui ne fonctionne pas.
 
 ## Définition formelle
 
@@ -153,7 +153,7 @@ La propriété **`animation-iteration-count`** se définit avec une ou plusieurs
 
 ### Définir le nombre d'itérations
 
-Cette animation sera exécutée 10 fois.
+Cette animation est exécutée 10 fois.
 
 #### HTML
 

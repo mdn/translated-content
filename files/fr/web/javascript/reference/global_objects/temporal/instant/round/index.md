@@ -60,4 +60,4 @@ console.log(instant2.epochMilliseconds); // 0
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Instant")}}
+- L'objet natif {{JSxRef("Temporal.Instant")}}

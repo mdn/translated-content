@@ -66,7 +66,7 @@ Ainsi, la propriété de données `[Symbol.unscopables]` de `Array.prototype` fa
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - L'instruction {{JSxRef("Statements/with", "with")}}
 - La propriété {{JSxRef("Symbol.unscopables")}}
 - [Prothèse d'émulation de `Array.prototype[Symbol.unscopables]` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)

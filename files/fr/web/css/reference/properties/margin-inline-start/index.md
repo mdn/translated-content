@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`margin-inline-start`** définit la marge logique de début en ligne d'un élément, qui correspond à une marge physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond à la propriété {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}} ou {{CSSxRef("margin-left")}} selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
+La propriété [CSS](/fr/docs/Web/CSS) **`margin-inline-start`** définit la marge logique de début en incise (<i lang="en">inline</i> en anglais) d'un élément, qui correspond à une marge physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond à la propriété {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}} ou {{CSSxRef("margin-left")}} selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: margin-inline-start")}}
 
@@ -97,7 +97,7 @@ La propriété `margin-inline-start` peut prendre les mêmes valeurs que la prop
 
 ## Exemples
 
-### Définir la marge de début en ligne
+### Définir la marge de début en incise
 
 #### HTML
 
@@ -125,7 +125,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Définir la marge de début en ligne", 140, 140)}}
+{{EmbedLiveSample("Définir la marge de début en incise", 140, 140)}}
 
 ## Spécifications
 

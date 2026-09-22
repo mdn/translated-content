@@ -3,8 +3,6 @@ title: sidebarAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
 ---
 
-{{AddonSidebar}}
-
 Définit l'icône de la barre latérale.
 
 Vous pouvez spécifier une icône unique comme chemin d'accès à un fichier image ou un objet {{WebExtAPIRef('sidebarAction.ImageDataType')}}.

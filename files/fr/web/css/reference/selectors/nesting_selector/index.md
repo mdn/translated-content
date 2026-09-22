@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-Le **sélecteur d'imbrication CSS `&`** indique explicitement la relation entre les règles parentes et enfants lors de l'utilisation de [l'imbrication CSS](/fr/docs/Web/CSS/Guides/Nesting). Il rend les sélecteurs de règles enfants imbriquées _relatifs à l'élément parent_. Sans le sélecteur d'imbrication `&`, le sélecteur de règle enfant cible les éléments enfants. Les sélecteurs de règles enfants ont le même poids de [spécificité](/fr/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity) que s'ils étaient dans {{CSSxRef(":is()")}}.
+Le **sélecteur d'imbrication CSS `&`** indique explicitement la relation entre les règles parentes et enfants lors de l'utilisation de [l'imbrication CSS](/fr/docs/Web/CSS/Guides/Nesting). Il rend les sélecteurs de règles enfants imbriquées _relatifs à l'élément parent_. Sans le sélecteur d'imbrication `&`, le sélecteur de règle enfant cible les éléments enfants. Les sélecteurs de règles enfants ont le même poids de [spécificité](/fr/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity) que s'ils sont dans {{CSSxRef(":is()")}}.
 
 > [!NOTE]
 > _Règle enfant_ ne signifie pas _sélecteur d'élément enfant_. Une règle enfant peut cibler l'élément parent ou les éléments enfants selon l'utilisation du sélecteur d'imbrication `&`.
@@ -50,7 +50,7 @@ Lorsque le navigateur analyse les sélecteurs imbriqués, il ajoute automatiquem
 
 Lorsque la règle imbriquée doit être attachée (sans espace) à la règle parente, par exemple lors de l'utilisation d'une {{CSSxRef("Pseudo-classes", "pseudo-classe")}} ou de la création de [sélecteurs composés](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#sélecteur_composé), le sélecteur d'imbrication `&` doit être immédiatement préfixé pour obtenir l'effet souhaité.
 
-Prenons un exemple où l'on souhaite styliser un élément, en fournissant des styles à appliquer en permanence, et en imbriquant certains styles à appliquer uniquement au survol. Si le sélecteur d'imbrication `&` n'est pas inclus, un espace est ajouté et on obtient un ensemble de règles qui applique les styles imbriqués à tout _descendant survolé du sélecteur de la règle parente_. Ce n'est cependant pas le comportement souhaité.
+Prenons un exemple où l'on souhaite mettre en forme un élément, en fournissant des styles à appliquer en permanence, et en imbriquant certains styles à appliquer uniquement au survol. Si le sélecteur d'imbrication `&` n'est pas inclus, un espace est ajouté et on obtient un ensemble de règles qui applique les styles imbriqués à tout _descendant survolé du sélecteur de la règle parente_. Ce n'est cependant pas le comportement souhaité.
 
 ```css
 .parent-rule {
@@ -70,7 +70,7 @@ Prenons un exemple où l'on souhaite styliser un élément, en fournissant des s
 }
 ```
 
-Avec le sélecteur d'imbrication `&` ajouté sans espace, les éléments correspondant à la règle parente seront stylisés lors du survol.
+Avec le sélecteur d'imbrication `&` ajouté sans espace, les éléments correspondant à la règle parente sont mis en forme lors du survol.
 
 ```css
 .parent-rule {
@@ -150,7 +150,7 @@ Par exemple, avec la règle de style suivante, aucun contenu généré ne sera c
 }
 ```
 
-Cette limitation s'applique également aux [règles imbriquées](/fr/docs/Web/CSS/Guides/Nesting/At-rules), dont les propriétés sont implicitement englobées dans un sélecteur `&`. Par exemple, avec la règle suivante, aucun contenu généré ne sera coloré en rouge, même sur un petit écran, car la propriété `color: red` est implicitement englobée dans un sélecteur `&`, qui correspond ici à `:is(.foo::before)`.
+Cette limitation s'applique également aux [règles imbriquées](/fr/docs/Web/CSS/Guides/Nesting/At-rules), dont les propriétés sont implicitement englobées dans un sélecteur `&`. Par exemple, avec la règle suivante, aucun contenu généré n'est coloré en rouge, même sur un petit écran, car la propriété `color: red` est implicitement englobée dans un sélecteur `&`, qui correspond ici à `:is(.foo::before)`.
 
 ```css
 .foo::before {
@@ -162,7 +162,7 @@ Cette limitation s'applique également aux [règles imbriquées](/fr/docs/Web/CS
 }
 ```
 
-## Examples
+## Exemples
 
 Les deux exemples suivants produisent le même résultat. Le premier utilise des styles CSS classiques et le second utilise le sélecteur d'imbrication `&`.
 

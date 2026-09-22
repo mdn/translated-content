@@ -3,7 +3,7 @@ title: "AbortSignal : méthode throwIfAborted()"
 short-title: throwIfAborted()
 slug: Web/API/AbortSignal/throwIfAborted
 l10n:
-  sourceCommit: bc7e82aa6db60568d7146ee285918550bbe4b8ce
+  sourceCommit: e1e7e2ac2cb1e40293c32c24bc0667905e9a7a04
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
@@ -53,7 +53,7 @@ async function waitForCondition(func, targetValue, { signal } = {}) {
 ```
 
 À chaque itération de la boucle, on utilise `throwIfAborted()` pour lever la raison (`reason`) du signal si l'opération a été annulée (et sinon ne rien faire).
-Si le signal est annulé, cela provoquera le rejet de la promesse `waitForCondition()`.
+Si le signal est annulé, cela provoque le rejet de la promesse `waitForCondition()`.
 
 ## Spécifications
 

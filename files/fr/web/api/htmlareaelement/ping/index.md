@@ -20,7 +20,7 @@ Elle reflète l'attribut `ping` de l'élément {{HTMLElement("area")}}.
 ```html
 <map name="example-map" id="example-map">
   <area
-    href="https://exemple.fr"
+    href="https://example.com"
     ping="https://exemple-tracking.fr https://exemple-analytics.fr"
     alt="example" />
 </map>

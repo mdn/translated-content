@@ -2,7 +2,7 @@
 title: 421 Misdirected Request
 slug: Web/HTTP/Reference/Status/421
 l10n:
-  sourceCommit: 74109a487250280f5f4c1595e91dfb43efef544a
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`421 Misdirected Request`** indique que la requête a été adressée à un serveur qui n'est pas en mesure de produire une réponse.
@@ -24,10 +24,10 @@ Les clients peuvent réessayer la requête sur une autre connexion.
 
 ```http
 GET / HTTP/1.1
-Host: abc.exemple.com
+Host: abc.example.com
 ```
 
-Dans des cas comme un certificat générique (`*.exemple.com`) où une connexion réutilisée pour plusieurs domaines (`abc.exemple.com`, `def.exemple.com`), le serveur peut répondre avec un code 421&nbsp;:
+Dans des cas comme un certificat générique (`*.example.com`) où une connexion réutilisée pour plusieurs domaines (`abc.example.com`, `def.example.com`), le serveur peut répondre avec un code 421&nbsp;:
 
 ```http
 HTTP/1.1 421 Misdirected Request

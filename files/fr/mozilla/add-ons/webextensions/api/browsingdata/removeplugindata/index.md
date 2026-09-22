@@ -3,8 +3,6 @@ title: browsingData.removePluginData()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removePluginData
 ---
 
-{{AddonSidebar}}
-
 Efface les données stockées par les plugins du navigateur.
 
 Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, pour :

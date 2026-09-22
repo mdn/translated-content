@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Performance/Measuring_performance
 original_slug: Learn/Performance/Measuring_performance
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}
 
 La mesure des performance fournit un indicateur important pour vous aider à assurer le succès de votre application, site ou service web.
 

@@ -248,7 +248,7 @@ console.log(contacts.size); // 1
 
 ## 정적 속성
 
-- {{jsxref("Map.@@species", "get Map[@@species]")}}
+- {{jsxref("Map/Symbol.species", "get Map[@@species]")}}
   - : 파생 객체를 만드는 데 사용되는 생성자 함수입니다.
 
 ## 인스턴스 속성
@@ -273,7 +273,7 @@ console.log(contacts.size); // 1
   - : 주어진 키에 연관된 값이 `Map` 객체에 존재하는지 여부를 불리언 값으로 반환합니다.
 - {{jsxref("Map.prototype.set()")}}
   - : `Map`객체에서 전달된 키의 값을 설정합니다. `Map`객체를 반환합니다.
-- {{jsxref("Map/@@iterator", "Map.prototype[@@iterator]()")}}
+- {{jsxref("Map/Symbol.iterator", "Map.prototype[@@iterator]()")}}
   - : `Map` 객체에 삽입된 순서에 따라 `[key, value]` 두 개의 멤버 배열을 포함하는 새로운 반복자를 반환합니다.
 - {{jsxref("Map.prototype.keys()")}}
   - : `Map` 객체에 삽입된 순서에 따라 각 요소의 키를 포함하는 새로운 반복자를 반환합니다.

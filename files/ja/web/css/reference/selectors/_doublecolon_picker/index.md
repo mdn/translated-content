@@ -1,12 +1,10 @@
 ---
-title: ::picker()
+title: CSS `::picker()` 擬似要素
+short-title: ::picker()
 slug: Web/CSS/Reference/Selectors/::picker
-original_slug: Web/CSS/::picker
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
-
-{{SeeCompatTable}}
 
 `::picker()` は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、要素のピッカー部分を対象とします。例えば、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)のドロップダウンピッカーなどが該当します。
 
@@ -31,7 +29,7 @@ l10n:
 
 `::picker(select)` セレクターは、カスタマイズ可能な `<select>` 要素の子孫要素のうち、最初の `<button>` 子要素を除くすべてを対象とします。これらの子孫要素はブラウザーによってグループ化され、ピッカーとしてレンダリングされます。最初の `<button>` 子要素は、押下時にピッカーを開くためのボタンを表します。
 
-これにより、ピッカーのコンテンツすべてを単一のエンティティとして操作できます。例えば、境界線のカスタマイズ、表示・非表示時のアニメーション、既定の位置とは異なる配置などが可能です。 私たちの[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)ガイドでは、 `::picker(select)` の使用例を多数紹介しています。
+これにより、ピッカーのコンテンツすべてを単一のエンティティとして操作できます。例えば、境界線のカスタマイズ、表示・非表示時のアニメーション、デフォルトの位置とは異なる配置などが可能です。 私たちの[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)ガイドでは、 `::picker(select)` の使用例を多数紹介しています。
 
 ### ピッカーポップオーバーの動作
 
@@ -41,7 +39,7 @@ l10n:
 
 上記の暗黙的な呼び出し元/ポップオーバーの関係によるさらなる効果として、 `<select>` 要素とピッカーの間にも暗黙のアンカー参照が存在します。これは、ピッカーが [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)によって自動的に選択要素に関連付けられるということです。これにはいくつかの利点があり、特に以下の点が挙げられます。
 
-- ブラウザーの既定のスタイルでは、ピッカーはボタン（アンカー）を基準に位置決めされます。この位置は、[アンカーを基準とした要素の位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor)で説明されているようにカスタマイズできます。参考までに、関連の既定のスタイルは次の通りです：
+- ブラウザーのデフォルトのスタイルでは、ピッカーはボタン（アンカー）を基準に位置決めされます。この位置は、[アンカーを基準とした要素の位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#要素をアンカーに対して相対的に配置)で説明されているようにカスタマイズできます。参考までに、関連のデフォルトのスタイルは次の通りです。
 
   ```css
   inset: auto;
@@ -51,22 +49,25 @@ l10n:
   /* ビューポートの端に移動し、スクロールバーを追加する必要がある場合に追加する */
   max-block-size: stretch;
   overflow: auto;
-  /* 既定では、下記に配置され、右にスパンされる */
+  /* デフォルトでは、下記に配置され、右にスパンされる */
   position-area: block-end span-inline-end;
   ```
 
-- ブラウザーの既定のスタイルでは、ビューポートからオーバーフローする危険がある場合に、ピッカーの位置を再調整する位置指定の代替処理も定義されています。位置指定の代替処理については、[オーバーフロー時の代替処理と条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)ガイドで説明されています。参照までに、関連する既定の代替スタイルは以下の通りです。
+- ブラウザーのデフォルトのスタイルでは、ビューポートからオーバーフローする危険がある場合に、ピッカーの位置を再調整する位置指定の代替処理も定義されています。位置指定の代替処理については、[オーバーフロー時の代替処理と条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)ガイドで説明されています。参照までに、関連するデフォルトの代替スタイルは以下の通りです。
 
   ```css
   position-try-order: most-block-size;
   position-try-fallbacks:
-    /* First try above and span-right, */
-    /* then below but span-left, */
-    /* then above and span-left. */
+    /* まず above と span-right を試し、 */
+    /* それから below ですが span-left を試し、 */
+    /* それから above と span-left を試す。 */
     block-start span-inline-end,
     block-end span-inline-start,
     block-start span-inline-start;
   ```
+
+> [!NOTE]
+> ピッカーが `<select>` 要素にアンカーされないように、暗黙のアンカー参照を除去したい場合は、ピッカーの `position-anchor` プロパティを、現在の文書内に存在しないアンカー名（例：`--not-an-anchor-name`）に設定することで実現できます。[アンカーの関連付けを解除](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#アンカーの関連付けを解除)も参照してください。
 
 ## 例
 
@@ -81,7 +82,7 @@ select,
 }
 ```
 
-そうすれば、例えば、ピッカーの既定の黒い {{cssxref("border")}} が除去されます。
+そうすれば、例えば、ピッカーのデフォルトの黒い {{cssxref("border")}} が除去されます。
 
 ```css
 ::picker(select) {

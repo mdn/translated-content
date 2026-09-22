@@ -30,7 +30,7 @@ JavaScript の基礎知識とその活用方法について学んだところで
 </table>
 
 > [!NOTE]
-> [Write your first JavaScript variable](https://scrimba.com/learn-javascript-c0v/~04?via=mdn), Scrimba<sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> を始めましょう。JavaScript の基礎を学べる、有益なインタラクティブなレッスンを提供しています。
+> [Write your first JavaScript variable](https://scrimba.com/learn-javascript-c0v/~04?via=mdn), Scrimba<sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> を始めましょう。JavaScript の基礎を学べる、有益なインタラクティブなレッスンを提供しています。
 
 ここでは実に明確な目標を設定したいと思います。この記事の終わりまでに JavaScript を習得することや、あなたに依頼するコードをすべて理解することは期待されていません。その代わりに、 JavaScript の機能がどのように連携して動作するのか、 JavaScript を書くことがどのような感じなのか、そのイメージをつかんでもらいたいと思います。この後の記事で、ここで示した機能をすべてさらに詳しく説明しますので、すぐに理解できなくても心配しないでください。
 

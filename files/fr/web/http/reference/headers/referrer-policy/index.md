@@ -3,10 +3,10 @@ title: En-tête Referrer-Policy
 short-title: Referrer-Policy
 slug: Web/HTTP/Reference/Headers/Referrer-Policy
 l10n:
-  sourceCommit: dd868507df863ab4f37d53c960c76e20e9ee365f
+  sourceCommit: 6030ef1aadf967b80e2c79c3d3463cccc8ea0c95
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Referrer-Policy`** contrôle la quantité d'[informations de référent](/fr/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns) (envoyées avec l'en-tête {{HTTPHeader("Referer")}}) à inclure dans les requêtes.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Referrer-Policy`** contrôle la quantité [d'informations de référent](/fr/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns) (envoyées avec l'en-tête {{HTTPHeader("Referer")}}) à inclure dans les requêtes.
 En plus de l'en-tête HTTP, vous pouvez [définir cette politique en HTML](#intégration_avec_html).
 
 <table class="properties">
@@ -37,16 +37,16 @@ Referrer-Policy: unsafe-url
 ## Directives
 
 - `no-referrer`
-  - : L'en-tête {{HTTPHeader("Referer")}} sera entièrement omis. Aucune information sur le référent ne sera envoyée avec les requêtes.
+  - : L'en-tête {{HTTPHeader("Referer")}} est entièrement omis. Aucune information sur le référent n'est envoyée avec les requêtes.
 - `no-referrer-when-downgrade`
-  - : Envoie l'{{Glossary("origin")}}, le chemin et la chaîne de requête dans l'en-tête {{HTTPHeader("Referer")}} lorsque le niveau de sécurité du protocole reste le même ou s'améliore (HTTP→HTTP, HTTP→HTTPS, HTTPS→HTTPS). Il n'envoie pas l'en-tête {{HTTPHeader("Referer")}} pour les requêtes vers des destinations moins sécurisées (HTTPS→HTTP, HTTPS→file).
+  - : Envoie {{Glossary("origin", "l'origine")}}, le chemin et la chaîne de requête dans l'en-tête {{HTTPHeader("Referer")}} lorsque le niveau de sécurité du protocole reste le même ou s'améliore (HTTP→HTTP, HTTP→HTTPS, HTTPS→HTTPS). Il n'envoie pas l'en-tête {{HTTPHeader("Referer")}} pour les requêtes vers des destinations moins sécurisées (HTTPS→HTTP, HTTPS→file).
 - `origin`
-  - : N'envoie que l'{{Glossary("origin")}} dans l'en-tête {{HTTPHeader("Referer")}}.
-    Par exemple, un document à l'adresse `https://example.com/page.html` enverra le référent `https://example.com/`.
+  - : N'envoie que {{Glossary("origin", "l'origine")}} dans l'en-tête {{HTTPHeader("Referer")}}.
+    Par exemple, un document à l'adresse `https://example.com/page.html` envoie le référent `https://example.com/`.
 - `origin-when-cross-origin`
   - : Envoie l'origine, le chemin et les paramètres de requête pour les requêtes {{Glossary("Same-origin_policy", "same-origin")}} et seulement l'origine du document dans les autres cas.
 - `same-origin`
-  - : Envoie l'{{Glossary("origin")}}, le chemin et la chaîne de requête pour les requêtes {{Glossary("Same-origin_policy", "de même origine")}}. Il n'envoie pas l'en-tête {{HTTPHeader("Referer")}} pour les requêtes inter-origines.
+  - : Envoie {{Glossary("origin", "l'origine")}}, le chemin et la chaîne de requête pour les requêtes {{Glossary("Same-origin_policy", "de même origine")}}. Il n'envoie pas l'en-tête {{HTTPHeader("Referer")}} pour les requêtes inter-origines.
 - `strict-origin`
   - : N'envoie que l'origine lorsque le niveau de sécurité du protocole reste le même (HTTPS→HTTPS). Il n'envoie pas l'en-tête {{HTTPHeader("Referer")}} vers des destinations moins sécurisées (HTTPS→HTTP).
 - `strict-origin-when-cross-origin` (_valeur par défaut_)
@@ -59,7 +59,24 @@ Referrer-Policy: unsafe-url
   - : Envoie l'origine, le chemin et les paramètres de requête pour toutes les requêtes sans tenir compte du niveau de sécurité.
 
     > [!WARNING]
-    > Cette valeur divulgera des informations potentiellement confidentielles de la part des URL de ressources HTTPS vers des origines non sécurisées. Considérez les conséquences de ce paramétrage avant de vous en servir.
+    > Cette valeur divulgue des informations potentiellement confidentielles de la part des URL de ressources HTTPS vers des origines non sécurisées. Considérez les conséquences de ce paramétrage avant de vous en servir.
+
+## Effet sur l'en-tête `Origin`
+
+La politique de référent affecte également la manière dont l'agent utilisateur définit l'en-tête {{HTTPHeader("Origin")}} avec l'origine de la requête ou comme `null` (ainsi que l'en-tête {{HTTPHeader("Referer")}}).
+
+Les requêtes utilisant `GET` ou `HEAD`, ou effectuées en `cors`, `websocket` ou `webtransport` [mode](/fr/docs/Web/API/Request/mode), ne sont jamais affectées&nbsp;: si l'agent utilisateur envoie un en-tête `Origin` pour elles, il envoie l'origine de la requête, indépendamment de la politique de référent.
+
+Pour les autres requêtes — comme les envoies de formulaires HTML ou les appels `fetch()` utilisant `mode: "same-origin"` ou `"no-cors"` — l'agent utilisateur définit `Origin` à `null` lorsque la politique de référent est&nbsp;:
+
+- `no-referrer`.
+- `no-referrer-when-downgrade`, `strict-origin`, ou `strict-origin-when-cross-origin` et la requête part d'une origine `https` vers une URL qui n'est pas `https`.
+- `same-origin` et la requête est inter-origine.
+
+Toute autre valeur de politique laisse l'en-tête `Origin` défini sur l'origine de la requête.
+
+> [!NOTE]
+> Comme `fetch()` utilise par défaut `mode: "cors"`, un `fetch()` `POST` de même origine envoie toujours son véritable `Origin`, même sous `Referrer-Policy: no-referrer`. Le comportement de `Origin` à `null` ci-dessus s'applique donc principalement aux requêtes en `navigate`-mode, comme les envois de formulaires HTML, plutôt qu'aux appels `fetch()`.
 
 ## Intégration avec HTML
 
@@ -82,14 +99,14 @@ Autrement, une [relation de lien](/fr/docs/Web/HTML/Reference/Attributes/rel) d�
 ```
 
 > [!WARNING]
-> Comme vu précédemment, la relation de lien `noreferrer` s'écrit sans trait d'union. Toutefois, quand la règle de référent est spécifiée pour le document entier avec un élément {{HTMLElement("meta")}}, il faut _mettre_ le trait d'union&nbsp;: `<meta name="referrer" content="no-referrer">`.
+> Comme vu précédemment, la relation de lien `noreferrer` s'écrit sans trait d'union. Toutefois, quand la règle de référent est définie pour le document entier avec un élément {{HTMLElement("meta")}}, il faut _mettre_ le trait d'union&nbsp;: `<meta name="referrer" content="no-referrer">`.
 
 ## Intégration avec CSS
 
 CSS peut demander des ressources référencées dans des feuilles de styles. Ces ressources suivent une règle de référent aussi&nbsp;:
 
 - Les feuilles de styles CSS externes utilisant la règle par défaut (`no-referrer-when-downgrade`), moins qu'elle soit remplacée un l'en-tête HTTP `Referrer-Policy` dans la réponse de la feuille de styles CSS.
-- Pour les éléments {{HTMLElement("style")}} ou [attributs `style`](/fr/docs/Web/API/HTMLElement/style), la règle de référent du propriétaire du document est utilisée.
+- Pour les éléments HTML {{HTMLElement("style")}} ou [attributs `style`](/fr/docs/Web/API/HTMLElement/style), la règle de référent du propriétaire du document est utilisée.
 
 ## Exemples
 
@@ -159,7 +176,7 @@ Si vous voulez définir une règle à appliquer par défaut dans les cas où la 
 Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 ```
 
-Ici, `no-referrer` ne sera utilisée que si `strict-origin-when-cross-origin` n'est pas supportée par le navigateur.
+Ici, `no-referrer` n'est utilisée que si `strict-origin-when-cross-origin` n'est pas supportée par le navigateur.
 
 > [!NOTE]
 > Définir plusieurs valeurs n'est supporté que dans l'en-tête HTTP `Referrer-Policy` et non dans l'attribut `referrerpolicy`.

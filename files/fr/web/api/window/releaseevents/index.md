@@ -3,10 +3,10 @@ title: "Window : méthode releaseEvents()"
 short-title: releaseEvents()
 slug: Web/API/Window/releaseEvents
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La méthode **`releaseEvents()`** de l'interface {{DOMxRef("Window")}} libère la fenêtre de la capture des évènements d'un type spécifique.
 
@@ -41,7 +41,7 @@ window.releaseEvents(Event.KEYPRESS);
 
 ## Notes
 
-On notera que vous pouvez passer une liste d'évènements à cette méthode en utilisant la syntaxe suivante&nbsp;:
+Notez que vous pouvez passer une liste d'évènements à cette méthode en utilisant la syntaxe suivante&nbsp;:
 `window.releaseEvents(Event.KEYPRESS | Event.KEYDOWN | Event.KEYUP)`.
 
 Voir aussi {{DOMxRef("window.captureEvents")}}

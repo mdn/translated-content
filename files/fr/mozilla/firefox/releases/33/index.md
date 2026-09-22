@@ -3,7 +3,7 @@ title: Firefox 33 note de version pour les développeurs
 short-title: Firefox 33
 slug: Mozilla/Firefox/Releases/33
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Firefox 33 a été publié le 14 octobre 2014. Cet article répertorie les principaux changements utiles non seulement pour les développeur·euse·s web, mais aussi pour les développeur·euse·s Firefox et Gecko ainsi que pour les développeur·euse·s d'extensions.
@@ -64,7 +64,7 @@ Pour plus de détails, veuillez [consulter l'article sur Hacks <sup>(angl.)</sup
 - L'API {{DOMxRef("RadioNodeList")}} a été implémentée et le bouton radio sélectionné est accessible avec {{DOMxRef("RadioNodeList.value")}} ([bogue Firefox 779723 <sup>(angl.)</sup>](https://bugzil.la/779723)).
 - La {{DOMxRef("DOMMatrix")}} a été ajoutée ([bogue Firefox 1018497 <sup>(angl.)</sup>](https://bugzil.la/1018497)).
 - Une propriété non standard (mais implémentée dans d'autres navigateurs) `DOMException.stack` a été ajoutée. Elle retourne une chaîne de caractères avec une pile formatée de manière conviviale ([bogue Firefox 857648 <sup>(angl.)</sup>](https://bugzil.la/857648)), dans le même format que la propriété non standard existante {{JSxRef("Error.stack")}}.
-- Pour {{HTMLElement("canvas")}}, la méthode {{DOMxRef("CanvasPattern.setTransform()")}}, permettant de modifier un motif en utilisant la représentation {{DOMxRef("DOMMatrix")}} d'une transformation linéaire ([bogue Firefox 1019257 <sup>(angl.)</sup>](https://bugzil.la/1019257)).
+- Pour {{HTMLElement("canvas")}}, la méthode {{DOMxRef("CanvasPattern.setTransform()")}}, vous permettant de modifier un motif en utilisant la représentation {{DOMxRef("DOMMatrix")}} d'une transformation linéaire ([bogue Firefox 1019257 <sup>(angl.)</sup>](https://bugzil.la/1019257)).
 - Notre implémentation expérimentale des Media Source Extensions, derrière la préférence `media.mediasource.enabled`, activée par défaut uniquement dans Nightly et Aurora, prend désormais en charge le MP4 ([bogue Firefox 1000686 <sup>(angl.)</sup>](https://bugzil.la/1000686)).
 - Les propriétés {{DOMxRef("HTMLMediaElement.audioTracks")}} et {{DOMxRef("HTMLMediaElement.videoTracks")}} ont été implémentées de manière expérimentale. Elles sont contrôlées par la préférence `media.track.enabled`, désactivée par défaut ([bogue Firefox 744896 <sup>(angl.)</sup>](https://bugzil.la/744896)).
 - La méthode non standard `XMLHttpRequest.mozBackgroundRequest()` n'est plus accessible depuis les sites web. Seul le code interne de Firefox (code Chrome) peut l'utiliser ([bogue Firefox 1035242 <sup>(angl.)</sup>](https://bugzil.la/1035242)).

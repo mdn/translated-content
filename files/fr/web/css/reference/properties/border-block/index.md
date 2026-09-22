@@ -3,10 +3,10 @@ title: Propriété CSS `border-block`
 short-title: border-block
 slug: Web/CSS/Reference/Properties/border-block
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-block`** permet de définir les valeurs des propriétés logiques de bordure de bloc à un seul endroit dans la feuille de style.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-block`** permet de définir les valeurs des propriétés logiques de bordure de bloc à un seul endroit dans la feuille de style.
 
 {{InteractiveExample("Démonstration CSS&&nbsp;: border-block")}}
 
@@ -72,18 +72,18 @@ border-block: unset;
 
 La propriété `border-block` peut être utilisée avec une ou plusieurs de ces valeurs, quel que soit l'ordre.
 
-- `<'border-width'>`
+- {{CSSxRef("&lt;line-width&gt;")}}
   - : La largeur de la bordure. Voir {{CSSxRef("border-width")}}.
-- `<'border-style'>`
+- {{CSSxRef("&lt;line-style&gt;")}}
   - : Le style pour la ligne de la bordure. Voir {{CSSxRef("border-style")}}.
 - {{CSSxRef("&lt;color&gt;")}}
   - : La couleur de la bordure.
 
 ## Description
 
-`border-block` peut être utilisée afin de définir une ou plusieurs propriétés parmi {{CSSxRef("border-block-width")}}, {{CSSxRef("border-block-style")}} et {{CSSxRef("border-block-color")}}. La bordure est donc paramétrée de la même façon pour le début et la fin de l'axe de bloc. Les propriétés physiques correspondantes dépendront du mode d'écriture, de la direction et de l'orientation du texte. Autrement dit, cette propriété peut correspondre à {{CSSxRef("border-top")}} et {{CSSxRef("border-bottom")}} ou à {{CSSxRef("border-right")}} et {{CSSxRef("border-left")}} selon les valeurs des propriétés {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
+`border-block` peut être utilisée afin de définir une ou plusieurs propriétés parmi {{CSSxRef("border-block-width")}}, {{CSSxRef("border-block-style")}} et {{CSSxRef("border-block-color")}}. La bordure est donc paramétrée de la même façon pour le début et la fin de l'axe de bloc. Les propriétés physiques correspondantes dépendent du mode d'écriture, de la direction et de l'orientation du texte. Autrement dit, cette propriété peut correspondre à {{CSSxRef("border-top")}} et {{CSSxRef("border-bottom")}} ou à {{CSSxRef("border-right")}} et {{CSSxRef("border-left")}} selon les valeurs des propriétés {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
 
-Les bordures sur l'autre dimension peuvent être définies grâce à {{CSSxRef("border-inline")}}, (qui est la proprété raccourcie pour {{CSSxRef("border-inline-start")}} et {{CSSxRef("border-inline-end")}}).
+Les bordures sur l'autre dimension peuvent être définies grâce à {{CSSxRef("border-inline")}}, (qui est la propriété raccourcie pour {{CSSxRef("border-inline-start")}} et {{CSSxRef("border-inline-end")}}).
 
 ## Définition formelle
 

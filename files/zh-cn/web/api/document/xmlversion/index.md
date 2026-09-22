@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}
 
 返回 XML 声明中指定的版本号（例如 `<?xml version="1.0"?>`），如果声明不存在，则返回“1.0”。
 

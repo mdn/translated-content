@@ -3,8 +3,6 @@ title: L'opérateur virgule
 slug: Web/JavaScript/Reference/Operators/Comma_operator
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur **virgule** permet d'évaluer chacun de ses opérandes (de la gauche vers la droite) et de renvoyer la valeur du dernier opérande.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Comma operator")}}

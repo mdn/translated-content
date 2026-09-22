@@ -3,7 +3,7 @@ title: HTML `<video>` 動画埋め込み要素
 short-title: <video>
 slug: Web/HTML/Reference/Elements/video
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: d1aa0dbd7441564e6ce8f6706c2022a2e1912d8c
 ---
 
 **`<video>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書中に動画再生に対応するメディアプレイヤーを埋め込みます。 `<video>` を音声コンテンツのために使用することもできますが、 {{HTMLElement("audio")}} 要素の方がユーザーにとって使い勝手が良いかもしれません。
@@ -91,7 +91,11 @@ l10n:
 - `loop`
   - : 論理型の属性です。指定された場合、ブラウザーは動画の末尾に達すると、自動的に先頭に戻ります。
 - `muted`
-  - : 論理型の属性で、動画に含まれる音声を消音するかどうかの既定の設定を示します。この属性を設定すると、初期状態が消音になります。既定値は `false` であり、動画再生時に音声も再生することを表します。
+  - : 論理型の属性で、動画に含まれる音声を消音するかどうかの既定の設定を示します。この属性を設定すると、初期状態が消音になります。デフォルト値は `false` であり、動画再生時に音声も聞こえることを表します。
+
+    > [!NOTE]
+    > ミュートを解除するには、`muted="false"` を設定しても動作しません。この属性が存在している限り、音声はミュートされたままになります。ミュートを解除するには、この属性を完全に除去しなければなりません。
+
 - `playsinline`
   - : 論理属性で、動画を「インライン」で再生する、すなわち要素の再生領域内で再生するかを指定します。この属性がないことが、動画を常に全画面で再生するという意味*ではない*ことに注意してください。
 - `poster`
@@ -107,7 +111,7 @@ l10n:
     - `auto`: ユーザーが動画ファイルを使用しないと思われる場合でも、ファイル全体をダウンロードしてよいことを示します。
     - _空文字列_: これは `auto` 値と同義です。
 
-    既定値はブラウザーごとに異なります。仕様書では `metadata` を設定するよう助言しています。
+    デフォルト値はブラウザーごとに異なります。仕様書では `metadata` を設定するよう助言しています。
 
     > [!NOTE]
     >
@@ -188,7 +192,7 @@ l10n:
 
 その他の利用上の注意:
 
-- `controls` 属性を指定しないと、 video はブラウザーの標準のコントロールを含めません。 JavaScript と {{domxref("HTMLMediaElement")}} を使用して、独自のコントロールを作成することもできます。詳しくは[クロスブラウザーの動画プレイヤーの作成](/ja/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
+- `controls` 属性を指定しないと、 video はブラウザーの標準のコントロールを含めません。 JavaScript と {{domxref("HTMLMediaElement")}} を使用して、独自のコントロールを作成することもできます。詳しくは[クロスブラウザーの動画プレイヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
 - 動画（および音声）コンテンツを詳細に制御できるよう、 `HTMLMediaElement` はたくさんの種類の[イベント](/ja/docs/Web/API/HTMLMediaElement#events)を発行します。これらのイベントは、制御を可能にするだけでなく、メディアのダウンロードと再生の両方の進行状況や再生状態、再生位置を監視することができます。
 - {{cssxref("object-position")}} プロパティを用いて、要素の枠内での動画の位置を調整することができ、 {{cssxref("object-fit")}} プロパティを用いて動画の寸法がどのように枠内に合わせられるかを制御することができます。
 - 動画と同時に字幕を表示するには、 JavaScript と共に {{htmlelement("track")}} 要素と [WebVTT](/ja/docs/Web/API/WebVTT_API) を使用します。詳しくは、 [HTML 動画への字幕の追加](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)をご覧ください。

@@ -3,8 +3,6 @@ title: history.search()
 slug: Mozilla/Add-ons/WebExtensions/API/history/search
 ---
 
-{{AddonSidebar}}
-
 Recherche dans l'historique du navigateur les objets {{WebExtAPIRef("history.HistoryItem")}} correspondant aux critères donnés.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

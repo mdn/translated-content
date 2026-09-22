@@ -1,93 +1,119 @@
 ---
-title: Una función retorna valores
+title: Valores de retorno de una función
 slug: Learn_web_development/Core/Scripting/Return_values
-original_slug: Learn/JavaScript/Building_blocks/Return_values
+l10n:
+  sourceCommit: b8c317e606fff19152e9431be45986c50846b0ac
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Test_your_skills/Functions", "Learn_web_development/Core/Scripting")}}
 
-Hay un último concepto esencial para que discutamos en este curso, para cerrar nuestra visión de las funciones: — lo valores que se devuelven. Algunas funciones no devuelven un valor significativo después de su finalización, pero otras sí, y es importante comprender cuáles son sus valores, cómo utilizarlos en su código y cómo hacer que sus propias funciones personalizadas devuelvan valores útiles. Cubriremos todos estos a continuación.
+Queda un último concepto esencial sobre las funciones que debemos discutir: los valores de retorno. Algunas funciones no retornan un valor significativo, pero otras sí lo hacen. Es importante entender cuáles son esos valores, cómo usarlos en tu código y cómo hacer que las funciones retornen valores útiles. Cubriremos todo esto a continuación.
 
-| Prerequisites: | Basic computer literacy, a basic understanding of HTML and CSS, [JavaScript first steps](/es/docs/conflicting/Learn_web_development/Core/Scripting), [Functions — reusable blocks of code](/es/docs/Learn/JavaScript/Building_blocks/Functions). |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Objective:     | To understand function return values, and how to make use of them.                                                                                                                                                                               |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Prerrequisitos:</th>
+      <td>Comprensión de <a href="/es/docs/Learn_web_development/Core/Structuring_content">HTML</a> y de los <a href="/es/docs/Learn_web_development/Core/Styling_basics">fundamentos de CSS</a>, familiaridad con los conceptos básicos de funciones de JavaScript vistos en la lección anterior.</td>
+    </tr>
+    <tr>
+      <th scope="row">Resultados de aprendizaje:</th>
+      <td>
+        <ul>
+          <li>Qué son los valores de retorno.</li>
+          <li>Cómo usar los valores de retorno de funciones existentes.</li>
+          <li>Cómo agregar valores de retorno a tus propias funciones.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## ¿Qué son los valores de retorno?
 
-**Los valores de retorno** son exactamente como suenan: los valores devueltos por la función cuando se completa. Ya has alcanzado los valores de retorno varias veces, aunque es posible que no hayas pensado en ellos explícitamente. Volvamos a un código familiar:
+Los **valores de retorno** son justo lo que su nombre indica: los valores que una función retorna cuando termina su ejecución. Ya te has encontrado con valores de retorno varias veces, aunque quizás no hayas pensado en ellos de forma explícita.
+
+Volvamos a un ejemplo conocido (de un [artículo anterior](/es/docs/Learn_web_development/Core/Scripting/Functions#built-in_browser_functions) de esta serie):
 
 ```js
-var myText = "I am a string";
-var newString = myText.replace("string", "sausage");
-console.log(newString);
-// la función de cadena replace () toma una cadena,
-// sustituyendo una subcadena con otra y devoviendo
-// una cadena nueva con la sustitución realizada
+const myText = "The weather is cold";
+const newString = myText.replace("cold", "warm");
+console.log(newString); // Debería imprimir "The weather is warm"
+// la función de cadena replace() toma una cadena,
+// reemplaza una subcadena por otra y retorna
+// una nueva cadena con el reemplazo realizado
 ```
 
-Vimos exactamente este bloque de código en nuestro primer artículo de función. Estamos invocando la función [replace ()](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace) en la cadena `myText`, y le pasamos dos parámetros: la subcadena a encontrar y la subcadena con la que reemplazarla. Cuando esta función se completa (termina de ejecutarse), devuelve un valor, que es una nueva cadena con el reemplazo realizado. En el código anterior, estamos guardando este valor de retorno como el valor de la variable `newString`.
+La función [`replace()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace) se invoca sobre la cadena `myText`, y recibe dos parámetros:
 
-Si observa la página de referencia MDN de la función de reemplazo, verá una sección llamada [Valor de retorno.](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace#return_value) Es muy útil conocer y comprender qué valores devuelven las funciones, por lo que tratamos de incluir esta información siempre que sea posible.
+- La subcadena a buscar (`"cold"`).
+- La cadena por la que se reemplazará (`"warm"`).
 
-Algunas funciones no devuelven un valor de retorno como tal (en nuestras páginas de referencia, el valor de retorno aparece como `void` o `undefined` en tales casos). Por ejemplo, en la función [displayMessage ()](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html#L50) que creamos en el artículo anterior, no se devuelve ningún valor específico como resultado de la función que se invoca. Simplemente hace que aparezca un cuadro en algún lugar de la pantalla, ¡eso es todo!
+Cuando la función termina (finaliza su ejecución), retorna un valor, que es una nueva cadena con el reemplazo realizado. En el código anterior, el resultado de este valor de retorno se guarda en la variable `newString`.
 
-Generalmente, se usa un valor de retorno donde la función es un paso intermedio en un cálculo de algún tipo. Quieres llegar a un resultado final, que involucra algunos valores. Esos valores deben ser calculados por una función, que luego devuelve los resultados para que puedan usarse en la siguiente etapa del cálculo.
+Si observas la página de referencia de MDN de la función [`replace()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace), verás una sección llamada [valor de retorno](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace#valor_de_retorno). Es muy útil saber y entender qué valores retornan las funciones, por lo que intentamos incluir esta información siempre que sea posible.
 
-### Using return values in your own functions
+Algunas funciones no retornan ningún valor. (En estos casos, nuestras páginas de referencia indican el valor de retorno como [`void`](/es/docs/Web/JavaScript/Reference/Operators/void) o [`undefined`](/es/docs/Web/JavaScript/Reference/Global_Objects/undefined).) Por ejemplo, en la función [`displayMessage()`](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html#L50) que construimos en el artículo anterior, no se retorna ningún valor específico cuando se invoca la función. Simplemente hace que aparezca un cuadro en algún lugar de la pantalla, ¡eso es todo!
 
-To return a value from a custom function, you need to use ... wait for it ... the [return](/es/docs/Web/JavaScript/Reference/Statements/return) keyword. We saw this in action recently in our [random-canvas-circles.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) example. Our `draw()` function draws 100 random circles somewhere on an HTML {{htmlelement("canvas")}}:
+Generalmente, un valor de retorno se usa cuando la función es un paso intermedio dentro de algún tipo de cálculo. Quieres llegar a un resultado final, que involucra ciertos valores que deben ser calculados por una función. Después de que la función calcula el valor, puede retornarlo para que se guarde en una variable, y así puedas usar esa variable en la siguiente etapa del cálculo.
+
+## Cómo retornar un valor
+
+Para retornar un valor desde una función personalizada, necesitas usar la palabra clave [`return`](/es/docs/Web/JavaScript/Reference/Statements/return). Vimos esto en acción hace poco en nuestro ejemplo [random-canvas-circles.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html). Nuestra función `draw()` dibuja 100 círculos aleatorios en algún lugar de un {{htmlelement("canvas")}} HTML:
 
 ```js
 function draw() {
   ctx.clearRect(0, 0, WIDTH, HEIGHT);
-  for (var i = 0; i < 100; i++) {
+  for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = "rgba(255,0,0,0.5)";
+    ctx.fillStyle = "rgb(255 0 0 / 50%)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
 }
 ```
 
-Inside each loop iteration, three calls are made to the `random()` function, to generate a random value for the current circle's x coordinate, y coordinate, and radius, respectively. The `random()` function takes one parameter — a whole number — and it returns a whole random number between 0 and that number. It looks like this:
+Dentro de cada iteración del bucle, se hacen tres llamadas a la función `random()`, para generar un valor aleatorio para la _coordenada x_, la _coordenada y_ y el _radio_ del círculo actual, respectivamente. La función `random()` recibe un parámetro (un número entero) y retorna un número entero aleatorio entre `0` y ese número. Se ve así:
 
 ```js
-function randomNumber(number) {
+function random(number) {
   return Math.floor(Math.random() * number);
 }
 ```
 
-This could be written as follows:
+Esto podría escribirse de la siguiente manera:
 
 ```js
-function randomNumber(number) {
-  var result = Math.floor(Math.random() * number);
+function random(number) {
+  const result = Math.floor(Math.random() * number);
   return result;
 }
 ```
 
-But the first version is quicker to write, and more compact.
+Pero la primera versión es más rápida de escribir y más compacta.
 
-We are returning the result of the calculation `Math.floor(Math.random()*number)` each time the function is called. This return value appears at the point the function was called, and the code continues. So for example, if we ran the following line:
+Estamos retornando el resultado del cálculo `Math.floor(Math.random() * number)` cada vez que se llama a la función. Este valor de retorno aparece en el punto donde se llamó a la función, y el código continúa.
+
+Entonces, cuando ejecutas lo siguiente:
 
 ```js
 ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
 ```
 
-and the three `random()` calls returned the values 500, 200, and 35, respectively, the line would actually be run as if it were this:
+Si las tres llamadas a `random()` retornaran los valores `500`, `200` y `35`, respectivamente, la línea en realidad se ejecutaría como si fuera esta:
 
 ```js
 ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 ```
 
-The function calls on the line are run first and their return values substituted for the function calls, before the line itself is then executed.
+Las llamadas a funciones en la línea se ejecutan primero, y sus valores de retorno se sustituyen en lugar de las llamadas a funciones, antes de que la línea en sí se ejecute.
 
-## Active learning: our own return value function
+## Implementación de valores de retorno en funciones
 
-Let's have a go at writing our own functions featuring return values.
+Intentemos escribir algunas funciones que incluyan valores de retorno.
 
-1. First of all, make a local copy of the [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) file from GitHub. This is a simple HTML page containing a text {{htmlelement("input")}} field and a paragraph. There's also a {{htmlelement("script")}} element in which we have stored a reference to both HTML elements in two variables. This little page will allow you to enter a number into the text box, and display different numbers related to it in the paragraph below.
-2. Let's add some useful functions to this `<script>` element. Below the existing two lines of JavaScript, add the following function definitions:
+1. Haz una copia local del archivo [function-library.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library.html) de GitHub. Esta es una página HTML sencilla que contiene un campo de texto {{htmlelement("input")}} y un párrafo. También hay un elemento {{htmlelement("script")}}, en el que hemos guardado una referencia a ambos elementos HTML en dos variables. Esta página te permitirá ingresar un número en el cuadro de texto y mostrar debajo distintos números relacionados con él.
+
+2. Agrega algunas funciones útiles a este elemento `<script>`, debajo de las dos líneas existentes:
 
    ```js
    function squared(num) {
@@ -99,18 +125,20 @@ Let's have a go at writing our own functions featuring return values.
    }
 
    function factorial(num) {
-     var x = num;
+     if (num < 0) return undefined;
+     if (num === 0) return 1;
+     let x = num - 1;
      while (x > 1) {
-       num *= x - 1;
+       num *= x;
        x--;
      }
      return num;
    }
    ```
 
-   The `squared()` and `cubed()` functions are fairly obvious — they return the square or cube of the number given as a parameter. The `factorial()` function returns the [factorial](https://en.wikipedia.org/wiki/Factorial) of the given number.
+   Las funciones `squared()` y `cubed()` son bastante evidentes: retornan el cuadrado o el cubo del número que se pasó como parámetro. La función `factorial()` retorna el [factorial](https://es.wikipedia.org/wiki/Factorial) del número dado.
 
-3. Next, we're going to include a way to print out information about the number entered into the text input. Enter the following event handler below the existing functions:
+3. Incluye una forma de imprimir información sobre el número ingresado en el campo de texto, agregando el siguiente controlador de eventos debajo de las funciones existentes:
 
    ```js
    input.addEventListener("change", () => {
@@ -125,31 +153,35 @@ Let's have a go at writing our own functions featuring return values.
    });
    ```
 
-   Here we are creating an `onchange` event handler that runs whenever the change event fires on the text input — that is, when a new value is entered into the text input, and submitted (enter a value then press tab for example). When this anonymous function runs, the existing value entered into the input is stored in the `num` variable.\
-   Next, we do a conditional test — if the entered value is not a number, we print an error message into the paragraph. The test looks at whether the expression `isNaN(num)` returns true. We use the [isNaN()](/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function to test whether the num value is not a number — if so, it returns `true`, and if not, `false`.\
-   If the test returns `false`, the `num` value is a number, so we print out a sentence inside the paragraph element stating what the square, cube, and factorial of the number are. The sentence calls the `squared()`, `cubed()`, and `factorial()` functions to get the required values.
+4. Guarda tu código, cárgalo en un navegador y pruébalo.
 
-4. Save your code, load it in a browser, and try it out.
+A continuación, algunas explicaciones sobre la función `addEventListener()` del paso 3 anterior:
+
+- Al agregar un detector de eventos `change`, esta función se ejecuta cada vez que se dispara el evento `change` en el campo de texto, es decir, cuando se ingresa un nuevo valor en el `input` de texto y se confirma (ingresa un valor y luego quita el foco del campo presionando <kbd>Tab</kbd> o <kbd>Return</kbd>). Cuando esta función anónima se ejecuta, el valor del `input` se guarda en la constante `num`.
+- La sentencia `if` imprime un mensaje de error si el valor ingresado no es un número. La condición verifica si la expresión `isNaN(num)` retorna `true`. La función [`isNaN()`](/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN) comprueba si el valor `num` no es un número; si es así, retorna `true`, y si no, retorna `false`.
+- Si la condición retorna `false`, el valor `num` es un número y la función imprime dentro del elemento de párrafo una oración que indica el cuadrado, el cubo y el factorial del número. La oración llama a las funciones `squared()`, `cubed()` y `factorial()` para calcular los valores requeridos.
 
 > [!NOTE]
-> If you have trouble getting the example to work, feel free to check your code against the [finished version on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html) also), or ask us for help.
+> Si tienes problemas para que el ejemplo funcione, compara tu código con la [versión terminada en GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html) (también puedes [verla funcionando en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)).
 
-At this point, we'd like you to have a go at writing out a couple of functions of your own and adding them to the library. How about the square or cube root of the number, or the circumference of a circle with a radius of length `num`?
+### Agrega algunas funciones propias
 
-This exercise has brought up a couple of important points besides being a study on how to use the `return` statement. In addition, we have:
+Llegados a este punto, nos gustaría que intentaras escribir un par de funciones propias y agregarlas a la biblioteca. ¿Qué tal la raíz cuadrada o cúbica del número? ¿O la circunferencia de un círculo con un radio dado?
 
-- Looked at another example of writing error handling into our functions. It is generally a good idea to check that any necessary parameters have been provided, and in the right datatype, and if they are optional, that some kind of default value is provided to allow for that. This way, your program will be less likely to throw errors.
-- Thought about the idea of creating a function library. As you go further into your programming career, you'll start to do the same kinds of things over and over again. It is a good idea to start keeping your own library of utility functions that you use very often — you can then copy them over to your new code, or even just apply it to any HTML pages where you need it.
+Algunos consejos adicionales relacionados con funciones:
 
-## Conclusion
+- Observa otro ejemplo de cómo escribir _manejo de errores_ dentro de funciones. Generalmente, es buena idea comprobar que los parámetros necesarios estén validados, y que los parámetros opcionales tengan algún valor por defecto. De esta manera, tu programa tendrá menos probabilidades de generar errores.
+- Piensa en la idea de crear una _biblioteca de funciones_. A medida que avances en tu carrera como programador, empezarás a hacer los mismos tipos de tareas una y otra vez. Es una buena idea crear tu propia biblioteca de funciones de utilidad para realizar este tipo de tareas. Puedes copiarlas en código nuevo, o incluso aplicarlas a páginas HTML donde las necesites.
 
-So there we have it — functions are fun, very useful and, although there's a lot to talk about in regards to their syntax and functionality, fairly understandable given the right articles to study.
+## Resumen
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](/es/docs/Learn_web_development#contact_us) to ask for help.
+Y ahí lo tenemos: las funciones son divertidas, muy útiles y, aunque hay mucho que decir sobre su sintaxis y funcionalidad, son bastante comprensibles.
 
-## See also
+En el próximo artículo, te daremos algunas pruebas que podrás usar para comprobar qué tan bien has entendido y retenido toda la información que te dimos sobre funciones en los últimos artículos.
 
-- [Functions in-depth](/es/docs/Web/JavaScript/Reference/Functions) — a detailed guide covering more advanced functions-related information.
-- [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — a common JavaScript pattern is to pass a function into another function as an argument, which is then called inside the first function. This is a little beyond the scope of this course, but worth studying before too long.
+## Ver también
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
+- [Funciones en profundidad](/es/docs/Web/JavaScript/Reference/Functions): una guía detallada que cubre información más avanzada relacionada con funciones.
+- [Funciones callback en JavaScript](https://www.impressivewebs.com/callback-functions-javascript/): un patrón común en JavaScript consiste en pasar una función a otra función _como argumento_. Luego, esta se llama dentro de la primera función. Esto está un poco fuera del alcance de este curso, pero vale la pena estudiarlo más adelante.
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Test_your_skills/Functions", "Learn_web_development/Core/Scripting")}}

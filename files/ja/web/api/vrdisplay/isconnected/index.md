@@ -3,7 +3,7 @@ title: VRDisplay.isConnected
 slug: Web/API/VRDisplay/isConnected
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}
 
 **`isConnected`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、この `VRDisplay` がコンピューターに接続されているかどうかを示す論理値を返します。
 

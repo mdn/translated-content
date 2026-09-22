@@ -67,7 +67,7 @@ _Hérite des méthodes de son parent, {{DOMxRef("HTMLElement")}}._
 - {{DOMxRef("HTMLButtonElement.checkValidity()")}}
   - : Retourne `true` si la valeur de l'élément ne présente aucun problème de validité&nbsp;; sinon, retourne `false`.
 - {{DOMxRef("HTMLButtonElement.reportValidity()")}}
-  - : Effectue la même action que `checkValidity()`, mais signale également le résultat à l'utilisateur·ice si l'événement `invalid` n'a pas été annulé.
+  - : Effectue la même action que `checkValidity()`, mais signale également le résultat à l'utilisateur·ice si l'évènement `invalid` n'a pas été annulé.
 - {{DOMxRef("HTMLButtonElement.setCustomValidity()")}}
   - : Définit le message de validité personnalisé pour l'élément. Utilisez la chaîne vide pour indiquer que l'élément n'a _pas_ d'erreur de validité personnalisée.
 

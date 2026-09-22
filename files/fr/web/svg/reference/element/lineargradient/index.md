@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/linearGradient
 original_slug: Web/SVG/Element/linearGradient
 ---
 
-{{SVGRef}}
-
 L'élément **`<linearGradient>`** permet de définir des dégradés linéaires, qui pourront être utilisés comme remplissage ou contour des éléments SVG.
 
 ## Contexte d'utilisation

@@ -46,5 +46,5 @@ console.log(time1.equals(time3)); // false
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainTime")}}
 - La méthode statique {{JSxRef("Temporal/PlainTime/compare", "Temporal.PlainTime.compare()")}}

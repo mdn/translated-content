@@ -3,7 +3,7 @@ title: En-tête Cross-Origin-Embedder-Policy (COEP)
 short-title: Cross-Origin-Embedder-Policy
 slug: Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy
 l10n:
-  sourceCommit: 2d0aa21573c6ceb33aeadf94ce6cd84588b74123
+  sourceCommit: 6030ef1aadf967b80e2c79c3d3463cccc8ea0c95
 ---
 
 {{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Cross-Origin-Embedder-Policy`** (COEP) configure la politique du document courant pour le chargement et l'intégration de ressources d'origine croisée demandées en mode `no-cors`.
@@ -33,7 +33,7 @@ Définir l'en-tête plus d'une fois ou avec plusieurs jetons équivaut à défin
 La valeur `<token>` peut être l'une des suivantes&nbsp;:
 
 - `unsafe-none`
-  - : Autorise le document à charger des ressources d'origine croisée demandées en mode `no-cors` **sans** autorisation explicite via le protocole CORS ou l'en-tête {{HTTPHeader("Cross-Origin-Resource-Policy")}}.
+  - : Autorise le document à charger des ressources d'origine croisée demandées en mode `no-cors` **sans** autorisation explicite avec le protocole CORS ou l'en-tête {{HTTPHeader("Cross-Origin-Resource-Policy")}}.
     Il s'agit de la valeur par défaut.
 
 - `require-corp`
@@ -42,10 +42,10 @@ La valeur `<token>` peut être l'une des suivantes&nbsp;:
     Le chargement de ressources d'origine croisée est bloqué par COEP sauf si&nbsp;:
     - La ressource est demandée en mode `no-cors` et la réponse inclut un en-tête {{HTTPHeader("Cross-Origin-Resource-Policy")}} qui autorise son chargement dans l'origine du document.
     - La ressource est demandée en mode `cors`&nbsp;; par exemple, en HTML avec l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin), ou en JavaScript en effectuant une requête avec [`{mode="cors"}`](/fr/docs/Web/API/RequestInit#cors).
-      Notez que les requêtes effectuées en mode `cors` ne seront pas bloquées par COEP et ne déclencheront pas de violations COEP, mais doivent toujours être autorisées par CORS.
+      Notez que les requêtes effectuées en mode `cors` ne sont pas bloquées par COEP et ne déclencheront pas de violations COEP, mais doivent toujours être autorisées par CORS.
 
 - `credentialless`
-  - : Un document peut charger des ressources d'origine croisée demandées en [mode `no-cors`](/fr/docs/Web/API/Request/mode) **sans** autorisation explicite via l'en-tête {{HTTPHeader("Cross-Origin-Resource-Policy")}}.
+  - : Un document peut charger des ressources d'origine croisée demandées en [mode `no-cors`](/fr/docs/Web/API/Request/mode) **sans** autorisation explicite avec l'en-tête {{HTTPHeader("Cross-Origin-Resource-Policy")}}.
     Dans ce cas, les requêtes sont envoyées sans identifiants&nbsp;: les cookies sont omis dans la requête et ignorés dans la réponse.
 
     Le comportement de chargement cross-origin pour les autres [modes de requête](/fr/docs/Web/API/Request/mode#cors) est identique à celui de [`require-corp`](#require-corp).
@@ -87,11 +87,11 @@ Pour plus d'informations, voir {{DOMxRef("COEPViolationReport")}}.
 
 Cet exemple montre un document qui bloque le chargement des ressources demandées en mode [no-cors](/fr/docs/Web/API/Request/mode#no-cors) qui ne définissent pas un en-tête CORP approprié.
 
-Le document est un fichier HTML hébergé sur l'origine `https://exemple.com`, et inclut dans son corps un élément HTML {{HTMLElement("img")}} qui définit comme source la ressource (inter-origine) `une-image.png`.
+Le document est un fichier HTML hébergé sur l'origine `https://example.com`, et inclut dans son corps un élément HTML {{HTMLElement("img")}} qui définit comme source la ressource (inter-origine) `une-image.png`.
 Comme l'élément n'a pas [l'attribut `cross-origin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin), il est demandé en mode `no-cors`&nbsp;:
 
 ```html
-<img src="https://autre-exemple.com/une-image.png" />
+<img src="https://autre-example.com/une-image.png" />
 ```
 
 L'en-tête de réponse pour le document définit les en-têtes `Cross-Origin-Embedder-Policy` et {{HTTPHeader("Reporting-Endpoints")}} comme indiqué ci-dessous.
@@ -99,34 +99,34 @@ Comme la directive `require-corp` est définie, toutes les ressources inter-orig
 Le paramètre `report-to` définit le nom `"coep-endpoint"` comme nom du point de terminaison où les rapports doivent être envoyés, et `Reporting-Endpoints` définit comment ce nom est mis en correspondance à une URL particulière.
 
 ```http
-Reporting-Endpoints: coep-endpoint="https://un-exemple.com/coep"
+Reporting-Endpoints: coep-endpoint="https://un-example.com/coep"
 Cross-Origin-Embedder-Policy: require-corp; report-to="coep-endpoint"
 ```
 
 Pour que `une-image.png` soit chargée sans déclencher de violation, elle doit définir {{HTTPHeader("Cross-Origin-Resource-Policy")}} sur `cross-origin`.
 Si l'on omet l'en-tête ou qu'on ne l'inclut pas en tant que `cross-origin`, une violation se produit.
 
-Le rapport envoyé dans la requête `POST` de rapport sera similaire à l'objet JSON montré ci-dessous&nbsp;:
+Le rapport envoyé dans la requête `POST` de rapport est similaire à l'objet JSON montré ci-dessous&nbsp;:
 
 ```json
 [
   {
     "age": 717139,
     "body": {
-      "blockedURL": "https://autre-exemple.com/une-image.png",
+      "blockedURL": "https://autre-example.com/une-image.png",
       "destination": "image",
       "disposition": "enforce",
       "type": "corp"
     },
     "type": "coep",
-    "url": "https://exemple.com",
+    "url": "https://example.com",
     "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
   }
 ]
 ```
 
 Le `type` du rapport est `coep`, et son `url` est le document dans lequel la violation s'est produite.
-Le `body` du rapport fournit l'URL de la ressource bloquée (`blockedURL`), sa destination (`image`), le type de violation (`corp`), et indique que le rapport concernait une violation appliquée (`disposition`).
+Le `body` du rapport fournit l'URL de la ressource bloquée (`blockedURL`), sa destination (`image`), le type de violation (`corp`), et indique que le rapport concerne une violation appliquée (`disposition`).
 
 ### Fonctionnalités dépendant de l'isolation inter-origines
 
@@ -156,7 +156,7 @@ if (crossOriginIsolated) {
 
 ### Éviter le blocage COEP avec CORS
 
-Si vous activez COEP avec `require-corp` et souhaitez intégrer une ressource d'origine croisée qui prend en charge [CORS](/fr/docs/Web/HTTP/Guides/CORS), vous devrez explicitement indiquer qu'elle est demandée en mode `cors`.
+Si vous activez COEP avec `require-corp` et souhaitez intégrer une ressource d'origine croisée qui prend en charge [CORS](/fr/docs/Web/HTTP/Guides/CORS), vous devez explicitement indiquer qu'elle est demandée en mode `cors`.
 
 Par exemple, pour récupérer une image déclarée en HTML depuis un site tiers qui prend en charge CORS, vous pouvez utiliser l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) afin qu'elle soit demandée en mode `cors`&nbsp;:
 

@@ -3,8 +3,6 @@ title: String.prototype.charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 ---
 
-{{JSRef}}
-
 La méthode **`charCodeAt()`** retourne un entier compris entre 0 et 65535 qui correspond au code UTF-16 d'un caractère de la chaîne situé à une position donnée.
 
 {{InteractiveExample("JavaScript Demo: String.charCodeAt()")}}

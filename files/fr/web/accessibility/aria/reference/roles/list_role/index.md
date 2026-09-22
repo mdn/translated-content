@@ -34,7 +34,7 @@ Il n'y a pas de règles strictes concernant les éléments que vous devez utilis
 
 N'utilisez `role="list"` et `role="listitem"` que si vous devez le faire — par exemple, si vous n'avez pas le contrôle sur votre code HTML mais que vous pouvez améliorer l'accessibilité de manière dynamique, après coup, grâce à JavaScript.
 
-Contrairement aux éléments HTML {{HTMLElement("ol")}} et {{HTMLElement("ul")}}, les rôles ARIA `list` ne font pas de distinction entre les listes ordonnées et non ordonnées. Si possible, vous devez utiliser les éléments HTML sémantiques appropriés pour marquer une liste ({{HTMLElement("ol")}} et {{HTMLElement("ul")}}) et les éléments de liste ({{HTMLElement("li")}}). Par exemple, notre code ci-dessus devrait être réécrit comme suit&nbsp;:
+Contrairement aux éléments HTML {{HTMLElement("ol")}} et {{HTMLElement("ul")}}, les rôles ARIA `list` ne font pas de distinction entre les listes ordonnées et non ordonnées. Si possible, vous devez utiliser les éléments HTML sémantiques appropriés pour marquer une liste ({{HTMLElement("ol")}} et {{HTMLElement("ul")}}) et les éléments de liste ({{HTMLElement("li")}}). Par exemple, notre code ci-dessus doit être réécrit comme suit&nbsp;:
 
 ```html
 <ul>
@@ -57,10 +57,10 @@ ou utiliser une liste ordonnée si l'ordre des éléments de la liste est import
 > [!NOTE]
 > Les rôles ARIA `list` / `listitem` ne font pas de distinction entre les listes ordonnées et non ordonnées.
 
-Cela dit, notez que si vous utilisez les éléments HTML sémantiques `<ol>` ou `<ul>` et appliquez un rôle de [`presentation`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role), chaque élément enfant `<li>` hérite du rôle `presentation` car ARIA exige que les éléments `listitem` aient l'élément `list` parent. Ainsi, les éléments `<li>` ne sont pas exposés aux technologies d'assistance, mais les éléments contenus à l'intérieur de ces éléments `<li>`, y compris les listes imbriquées, sont visibles pour les technologies d'assistance.
+Cela dit, notez que si vous utilisez les éléments HTML sémantiques `<ol>` ou `<ul>` et appliquez un rôle de [`presentation`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role), chaque élément enfant `<li>` hérite du rôle `presentation`, car ARIA exige que les éléments `listitem` aient l'élément `list` parent. Ainsi, les éléments `<li>` ne sont pas exposés aux technologies d'assistance, mais les éléments contenus à l'intérieur de ces éléments `<li>`, y compris les listes imbriquées, sont visibles pour les technologies d'assistance.
 
 > [!NOTE]
-> Si vous marquez une liste d'éléments qui fonctionneront comme une interface à onglets, vous devez plutôt utiliser les rôles [`tab`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role), [`tabpanel`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role) et [`tablist`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role).
+> Si vous marquez une liste d'éléments qui fonctionnent comme une interface à onglets, vous devez plutôt utiliser les rôles [`tab`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role), [`tabpanel`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role) et [`tablist`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role).
 
 ## Spécifications
 

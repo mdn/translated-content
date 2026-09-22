@@ -3,10 +3,10 @@ title: "Window : propriété innerWidth"
 short-title: innerWidth
 slug: Web/API/Window/innerWidth
 l10n:
-  sourceCommit: 277e1432bea11473d0c638cd720130c44b26b3f4
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 La propriété en lecture seule **`innerWidth`** de l'interface {{DOMxRef("Window")}} retourne la largeur intérieure de la fenêtre en pixels, c'est-à-dire la largeur de la {{Glossary("layout viewport", "disposition de la zone d'affichage")}} de la fenêtre. Cela inclut la largeur de la barre de défilement verticale, si elle est présente.
 
@@ -27,16 +27,16 @@ La propriété `innerWidth` est disponible sur n'importe quelle fenêtre ou tout
 ## Exemples
 
 ```js
-// Cela affichera la largeur de la zone d'affichage
+// Cela affiche la largeur de la zone d'affichage
 console.log(window.innerWidth);
 
-// Cela affichera la largeur de la zone d'affichage du cadre dans un frameset
+// Cela affiche la largeur de la zone d'affichage du cadre dans un frameset
 console.log(self.innerWidth);
 
-// Cela affichera la largeur de la zone d'affichage du frameset le plus proche
+// Cela affiche la largeur de la zone d'affichage du frameset le plus proche
 console.log(parent.innerWidth);
 
-// Cela affichera la largeur de la zone d'affichage du frameset le plus éloigné
+// Cela affiche la largeur de la zone d'affichage du frameset le plus éloigné
 console.log(top.innerWidth);
 ```
 
@@ -46,7 +46,7 @@ console.log(top.innerWidth);
 
 ```html
 <p>
-  Redimensionnez la fenêtre du navigateur pour déclencher l'événement
+  Redimensionnez la fenêtre du navigateur pour déclencher l'évènement
   <code>resize</code>.
 </p>
 <p>Hauteur de la fenêtre&nbsp;: <span id="height"></span></p>

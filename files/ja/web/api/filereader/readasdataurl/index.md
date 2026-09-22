@@ -1,16 +1,18 @@
 ---
-title: FileReader.readAsDataURL()
+title: "FileReader: readAsDataURL() メソッド"
+short-title: readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
 l10n:
-  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
+  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-`readAsDataURL` メソッドは、指定された{{domxref("Blob")}} または {{domxref("File")}} の内容を読み込むために使用されます。読み込み操作が終了すると、{{domxref("FileReader.readyState", "readyState")}} が `DONE` となり、{{domxref("FileReader/loadend_event", "loadend")}} が発生します。このとき、{{domxref("FileReader.result", "result")}} 属性には、ファイルのデータを表す、base64 エンコーディングされた [data: URL](/ja/docs/Web/URI/Reference/Schemes/data) の文字列が格納されます。
+**`readAsDataURL()`** は {{domxref("FileReader")}} インターフェイスのメソッドで、指定された{{domxref("Blob")}} または {{domxref("File")}} の内容を読み込むために使用されます。読み込み操作が終了すると、{{domxref("FileReader.readyState", "readyState")}} プロパティが `DONE` となり、{{domxref("FileReader/loadend_event", "loadend")}} イベントが発生します。このとき、{{domxref("FileReader.result","result")}} プロパティには、ファイルのデータを表す、base64 エンコーディングされた [data: URL](/ja/docs/Web/URI/Reference/Schemes/data) の文字列が格納されます。
 
 > [!NOTE]
-> blob の {{domxref("FileReader.result","result")}} は、先に Base64 でエンコードされたデータの前にある Data-URL の宣言を削除しておかないと、直接 Base64 としてデコードすることができません。 Base64 でエンコードされた文字列のみを受け取る場合は、先に結果から `data:*/*;base64,` を削除しておく必要があります。
+> blob の {{domxref("FileReader.result","result")}} は、先に Base64 でエンコードされたデータの前にある Data-URL の宣言を削除しておかないと、直接 Base64 としてデコードすることができません。
+> Base64 でエンコードされた文字列のみを受け取る場合は、先に結果から `data:*/*;base64,` を削除しておく必要があります。
 
 ## 構文
 
@@ -29,29 +31,31 @@ readAsDataURL(blob)
 
 ## 例
 
-### HTML
+### 単一のファイルの読み取り
+
+#### HTML
 
 ```html
-<input type="file" onchange="previewFile()" /><br />
+<input type="file" /><br />
 <img src="" height="200" alt="画像のプレビュー" />
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
+const preview = document.querySelector("img");
+const fileInput = document.querySelector("input[type=file]");
+
+fileInput.addEventListener("change", previewFile);
+
 function previewFile() {
-  const preview = document.querySelector("img");
-  const file = document.querySelector("input[type=file]").files[0];
+  const file = fileInput.files[0];
   const reader = new FileReader();
 
-  reader.addEventListener(
-    "load",
-    () => {
-      // 画像ファイルを base64 文字列に変換します
-      preview.src = reader.result;
-    },
-    false,
-  );
+  reader.addEventListener("load", () => {
+    // 画像ファイルを base64 文字列に変換します
+    preview.src = reader.result;
+  });
 
   if (file) {
     reader.readAsDataURL(file);
@@ -59,20 +63,20 @@ function previewFile() {
 }
 ```
 
-### ライブ結果
+#### 結果
 
-{{EmbedLiveSample("Examples", "100%", 240)}}
+{{EmbedLiveSample("Reading a single file", "100%", 240)}}
 
-## 複数ファイルを読み取る例
+### 複数ファイルを読み取る
 
-### HTML
+#### HTML
 
 ```html
-<input id="browse" type="file" onchange="previewFiles()" multiple />
+<input id="browse" type="file" multiple />
 <div id="preview"></div>
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 function previewFiles() {
@@ -81,20 +85,16 @@ function previewFiles() {
 
   function readAndPreview(file) {
     // `file.name` が拡張子の基準と一致していることを確認します。
-    if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
+    if (/\.(?:jpe?g|png|gif)$/i.test(file.name)) {
       const reader = new FileReader();
 
-      reader.addEventListener(
-        "load",
-        () => {
-          const image = new Image();
-          image.height = 100;
-          image.title = file.name;
-          image.src = this.result;
-          preview.appendChild(image);
-        },
-        false,
-      );
+      reader.addEventListener("load", () => {
+        const image = new Image();
+        image.height = 100;
+        image.title = file.name;
+        image.src = reader.result;
+        preview.appendChild(image);
+      });
 
       reader.readAsDataURL(file);
     }
@@ -104,10 +104,14 @@ function previewFiles() {
     Array.prototype.forEach.call(files, readAndPreview);
   }
 }
+
+const picker = document.querySelector("#browse");
+picker.addEventListener("change", previewFiles);
 ```
 
-> [!NOTE]
-> Internet Explorer 10 以前では [`FileReader()`](/ja/docs/Web/API/FileReader) コンストラクターに対応していません。十分な互換性が必要とされるときは、[画像プレビューのクロスブラウザー対応ソリューション](https://mdn.dev/archives/media/attachments/2012/07/09/3699/2c8cb1e94f0ee05b22c1c30a3790c70d/crossbrowser_image_preview.html)または[もっと強力な例](https://mdn.dev/archives/media/attachments/2012/07/09/3698/391aef19653595a663cc601c42a67116/image_upload_preview.html)を参照してください。
+#### 結果
+
+{{EmbedLiveSample("Reading multiple files", "100%", 240)}}
 
 ## 仕様書
 
@@ -120,4 +124,4 @@ function previewFiles() {
 ## 関連情報
 
 - {{domxref("FileReader")}}
-- {{domxref("URL.createObjectURL()")}}
+- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}

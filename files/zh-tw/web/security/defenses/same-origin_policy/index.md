@@ -21,7 +21,7 @@ slug: Web/Security/Defenses/Same-origin_policy
 
 網頁能夠有限地變更來源，我們可以將 {{domxref("document.domain")}} 存為目前網域後半部，然後較短的網域就會作為之後來源檢查，譬如我們在 `http://store.company.com/dir/other.html` 的文件裡執行以下程式碼:
 
-```plain
+```js
 document.domain = "company.com";
 ```
 

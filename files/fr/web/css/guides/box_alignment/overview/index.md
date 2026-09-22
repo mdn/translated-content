@@ -3,12 +3,12 @@ title: Aperçu de l'alignement de boîte CSS
 short-title: Aperçu
 slug: Web/CSS/Guides/Box_alignment/Overview
 l10n:
-  sourceCommit: 32bdfdb82cf91ce9942b694286dec62be2cc20aa
+  sourceCommit: e1e7e2ac2cb1e40293c32c24bc0667905e9a7a04
 ---
 
 Le module [d'alignement de boîte CSS](/fr/docs/Web/CSS/Guides/Box_alignment) définit les fonctionnalités CSS relatives à l'alignement des boîtes dans les différents modèles de mise en page CSS. Le module vise à créer une méthode d'alignement cohérente dans tout le CSS. Les propriétés d'alignement des boîtes CSS offrent des capacités d'alignement horizontal et vertical complètes.
 
-Ce guide détaille les concepts généraux trouvés dans ce module. Des guides supplémentaires fournissent plus d'informations sur l'alignement des boîtes dans [les boîtes flexibles (<i lang="en">flexbox</i> en anglais)](/fr/docs/Web/CSS/Guides/Box_alignment/In_flexbox), [mise en page en grille](/fr/docs/Web/CSS/Guides/Box_alignment/In_grid_layout), [mise en page multi-colonnes](/fr/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout) et [mise en page en bloc, positionnée absolument et en tableau](/fr/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables). L'alignement du texte est couvert par les modules [de texte CSS](/fr/docs/Web/CSS/Guides/Text) et [disposition en ligne CSS](/fr/docs/Web/CSS/Guides/Inline_layout).
+Ce guide détaille les concepts généraux trouvés dans ce module. Des guides supplémentaires fournissent plus d'informations sur l'alignement des boîtes dans [les boîtes flexibles (<i lang="en">flexbox</i> en anglais)](/fr/docs/Web/CSS/Guides/Box_alignment/In_flexbox), [mise en page en grille](/fr/docs/Web/CSS/Guides/Box_alignment/In_grid_layout), [mise en page multi-colonnes](/fr/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout) et [mise en page en bloc, positionnée absolument et en tableau](/fr/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables). L'alignement du texte est couvert par les modules [de texte CSS](/fr/docs/Web/CSS/Guides/Text) et [disposition en incise CSS](/fr/docs/Web/CSS/Guides/Inline_layout).
 
 ## Concepts clés et terminologie
 
@@ -20,31 +20,31 @@ L'alignement est lié aux modes d'écriture en ce sens que lorsque nous alignons
 
 ### Deux dimensions de l'alignement
 
-Lors de l'utilisation des propriétés d'alignement des boîtes, vous alignerez le contenu sur l'un des deux axes&nbsp;: l'axe en ligne (ou principal) et l'axe de bloc (ou transversal). L'axe en ligne est l'axe le long duquel les mots d'une phrase s'écoulent dans le mode d'écriture utilisé. Pour l'anglais, par exemple, l'axe en ligne est horizontal. L'axe de bloc est l'axe le long duquel les blocs, tels que les éléments de paragraphe, sont disposés&nbsp;; il traverse l'axe en ligne.
+Lors de l'utilisation des propriétés d'alignement des boîtes, vous alignez le contenu sur l'un des deux axes&nbsp;: l'axe en incise (ou principal) et l'axe de bloc (ou transversal). L'axe en incise est l'axe le long duquel les mots d'une phrase s'écoulent dans le mode d'écriture utilisé. Pour l'anglais, par exemple, l'axe en incise est horizontal. L'axe de bloc est l'axe le long duquel les blocs, tels que les éléments de paragraphe, sont disposés&nbsp;; il traverse l'axe en incise.
 
-![L'axe en ligne est la direction gauche / droite, ou horizontale. L'axe de bloc est vertical, ou haut / bas.](two-axes.png)
+![L'axe en incise est la direction gauche / droite, ou horizontale. L'axe de bloc est vertical, ou haut / bas.](two-axes.png)
 
-Lors de l'alignement des éléments sur l'axe en ligne, vous utiliserez les propriétés qui commencent par `justify-`&nbsp;:
+Lors de l'alignement des éléments sur l'axe en incise, vous utilisez les propriétés qui commencent par `justify-`&nbsp;:
 
 - {{CSSxRef("justify-items")}}
 - {{CSSxRef("justify-self")}}
 - {{CSSxRef("justify-content")}}
 
-Lors de l'alignement des éléments sur l'axe de bloc, vous utiliserez les propriétés qui commencent par `align-`&nbsp;:
+Lors de l'alignement des éléments sur l'axe de bloc, vous utilisez les propriétés qui commencent par `align-`&nbsp;:
 
 - {{CSSxRef("align-items")}}
 - {{CSSxRef("align-self")}}
 - {{CSSxRef("align-content")}}
 
-Les boîtes flexibles ajoutent une complication supplémentaire en ce sens que ce qui précède est vrai lorsque {{CSSxRef("flex-direction")}} est défini sur `row`. Les propriétés sont inversées lorsqu'une boîte flexible est définie sur `column`. Par conséquent, lorsqu'on travaille avec des boîtes flexibles, il est généralement plus facile de penser en termes d'axe principal et d'axe transversal plutôt qu'en termes d'axe en ligne et d'axe de bloc. Les propriétés `justify-` sont toujours utilisées pour l'alignement sur l'axe principal, les propriétés `align-` sur l'axe transversal.
+Les boîtes flexibles ajoutent une complication supplémentaire en ce sens que ce qui précède est vrai lorsque {{CSSxRef("flex-direction")}} est défini sur `row`. Les propriétés sont inversées lorsqu'une boîte flexible est définie sur `column`. Par conséquent, lorsqu'on travaille avec des boîtes flexibles, il est généralement plus facile de penser en termes d'axe principal et d'axe transversal plutôt qu'en termes d'axe en incise et d'axe de bloc. Les propriétés `justify-` sont toujours utilisées pour l'alignement sur l'axe principal, les propriétés `align-` sur l'axe transversal.
 
 ### Le sujet d'alignement
 
-Le **{{Glossary("alignment subject", "sujet d'alignement")}}** est l'élément qui est aligné. Pour `justify-self` ou `align-self`, ou lors de la définition de ces valeurs en groupe avec `justify-items` ou `align-items`, il s'agira de la boîte de marge de l'élément sur lequel cette propriété est utilisée. Les propriétés `justify-content` et `align-content` diffèrent selon la méthode de mise en page.
+Le **{{Glossary("alignment subject", "sujet d'alignement")}}** est l'élément qui est aligné. Pour `justify-self` ou `align-self`, ou lors de la définition de ces valeurs en groupe avec `justify-items` ou `align-items`, il s'agit de la boîte de marge de l'élément sur lequel cette propriété est utilisée. Les propriétés `justify-content` et `align-content` diffèrent selon la méthode de mise en page.
 
 ### Le conteneur d'alignement
 
-Le **{{Glossary("alignment container", "conteneur d'alignement")}}** est la boîte dans laquelle le sujet est aligné. Il s'agira généralement du bloc contenant du sujet d'alignement. Un conteneur d'alignement peut contenir un ou plusieurs sujets d'alignement.
+Le **{{Glossary("alignment container", "conteneur d'alignement")}}** est la boîte dans laquelle le sujet est aligné. Il s'agit généralement du bloc contenant du sujet d'alignement. Un conteneur d'alignement peut contenir un ou plusieurs sujets d'alignement.
 
 L'image ci-dessous montre un conteneur d'alignement avec deux sujets d'alignement à l'intérieur.
 
@@ -74,7 +74,7 @@ Il existe trois types d'alignement détaillés dans la spécification&nbsp;; ceu
 
 À l'exception des valeurs physiques `left` et `right`, qui se rapportent aux attributs physiques de l'écran, toutes les autres valeurs, les valeurs de {{CSSxRef("self-position")}} et {{CSSxRef("content-position")}}, sont des valeurs logiques et se rapportent au mode d'écriture du contenu.
 
-Par exemple, en travaillant avec la mise en page en grille CSS, si vous utilisez le français et définissez `justify-content` sur `start`, cela déplacera les éléments dans la dimension en ligne vers le début, c'est-à-dire vers la gauche puisque les phrases en français commencent à gauche de la page. Si vous utilisiez l'arabe, une langue de droite à gauche, la même valeur `start` déplacerait les éléments vers la droite, puisque les phrases en arabe commencent à droite de la page.
+Par exemple, en travaillant avec la mise en page en grille CSS, si vous utilisez le français et définissez `justify-content` sur `start`, cela déplace les éléments dans la dimension en incise vers le début, c'est-à-dire vers la gauche puisque les phrases en français commencent à gauche de la page. Si vous utilisiez l'arabe, une langue de droite à gauche, la même valeur `start` déplace les éléments vers la droite, puisque les phrases en arabe commencent à droite de la page.
 
 ![Il y a deux boîtes, chacune contenant 3 enfants de hauteurs différentes mais de largeurs similaires. La première boîte comporte trois enfants marqués par les lettres A, B et C. Ces trois boîtes sont toutes alignées à gauche. La seconde boîte comporte trois enfants avec des lettres arabes. Ces trois boîtes sont toutes alignées à droite.](writing-mode-start.png)
 
@@ -117,7 +117,7 @@ Les exemples suivants montrent comment certaines propriétés d'alignement de bo
 
 #### Exemple d'alignement en grille CSS
 
-Dans cet exemple de mise en page en grille, il y a de l'espace supplémentaire dans le conteneur de grille après avoir disposé les pistes de largeur fixe sur l'axe en ligne (principal). Cet espace est réparti en utilisant {{CSSxRef("justify-content")}}. Sur l'axe de bloc (transversal), l'alignement des éléments à l'intérieur de leurs zones de grille est contrôlé avec {{CSSxRef("align-items")}}. Le premier élément remplace la valeur `align-items` définie sur le groupe en définissant {{CSSxRef("align-self")}} sur `center`.
+Dans cet exemple de mise en page en grille, il y a de l'espace supplémentaire dans le conteneur de grille après avoir disposé les pistes de largeur fixe sur l'axe en incise (principal). Cet espace est réparti en utilisant {{CSSxRef("justify-content")}}. Sur l'axe de bloc (transversal), l'alignement des éléments à l'intérieur de leurs zones de grille est contrôlé avec {{CSSxRef("align-items")}}. Le premier élément remplace la valeur `align-items` définie sur le groupe en définissant {{CSSxRef("align-self")}} sur `center`.
 
 ```html live-sample___grid-align-items
 <div class="box">
@@ -207,9 +207,9 @@ body {
 
 ## Alignement en cas de débordement
 
-Les mots-clés {{CSSxRef("overflow-position")}} `safe` et `unsafe` aident à définir le comportement lorsqu'un sujet d'alignement est plus grand que le conteneur d'alignement. Le mot-clé `safe` alignera sur `start` dans le cas où une valeur d'alignement définie provoquerait un débordement, l'objectif étant d'éviter «&nbsp;perte de données&nbsp;» où une partie de l'élément est en dehors des limites du conteneur et ne peut pas être consultée par défilement.
+Les mots-clés {{CSSxRef("overflow-position")}} `safe` et `unsafe` aident à définir le comportement lorsqu'un sujet d'alignement est plus grand que le conteneur d'alignement. Le mot-clé `safe` aligne sur `start` dans le cas où une valeur d'alignement définie provoque un débordement, l'objectif étant d'éviter «&nbsp;perte de données&nbsp;» où une partie de l'élément est en dehors des limites du conteneur et ne peut pas être consultée par défilement.
 
-Si vous définissez `unsafe`, l'alignement sera respecté même si cela provoque une telle perte de données.
+Si vous définissez `unsafe`, l'alignement est respecté même si cela provoque une telle perte de données.
 
 ## Espacements entre les boîtes
 

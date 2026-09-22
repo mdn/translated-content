@@ -3,7 +3,7 @@ title: Navigator.getUserMedia()
 slug: Web/API/Navigator/getUserMedia
 ---
 
-{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
+{{APIRef("Media Capture and Streams")}}
 
 La méthode obsolète **Navigator.getUserMedia()** demande à la personne la permission d'utiliser une entrée vidéo (par exemple une caméra ou un écran partagé) et une entrée audio (par exemple un microphone) comme source pour un flux média ([`MediaStream`](/fr/docs/Web/API/MediaStream)).
 

@@ -85,4 +85,4 @@ console.log(rounded.toString()); // 2024-03-10T03:00:00-04:00[America/New_York]
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.ZonedDateTime")}}
+- L'objet natif {{JSxRef("Temporal.ZonedDateTime")}}

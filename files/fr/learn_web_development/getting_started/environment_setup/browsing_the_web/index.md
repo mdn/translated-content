@@ -97,7 +97,7 @@ Cliquez sur quelques menus ou liens pour explorer différentes pages de votre si
 
 ### Serveur web
 
-Un _serveur web_ est un ordinateur hébergeant un ou plusieurs _sites web_. «&nbsp;Héberger&nbsp;» signifie que toutes les _pages web_ et leurs fichiers associés sont disponibles sur cet ordinateur. Le _serveur web_ envoie les fichiers au navigateur de l'utilisateur·rice qui tente de les charger.
+Un _serveur web_ est un ordinateur hébergeant un ou plusieurs _sites web_. «&nbsp;Héberger&nbsp;» signifie que toutes les _pages web_ et leurs fichiers associés sont disponibles sur cet ordinateur. Le _serveur web_ envoie les fichiers au navigateur de l'utilisateur·ice qui tente de les charger.
 
 Ne confondez pas _sites web_ et _serveurs web_. Si quelqu'un dit «&nbsp;Mon site ne répond plus&nbsp;», cela signifie probablement que le _serveur web_ ne répond plus, donc le _site web_ n'est pas accessible.
 
@@ -138,7 +138,7 @@ Quand vous accédez au web, beaucoup de choses se passent entre votre action (pa
 3. Parfois, la ressource demandée déclenche d'autres requêtes HTTP&nbsp;:
    1. Lors du chargement d'un site, le fichier HTML principal est d'abord demandé.
    2. Quand ce fichier est reçu, le navigateur le lit et trouve souvent des instructions pour charger d'autres fichiers (images, styles, scripts, etc.).
-4. Quand toutes les ressources sont chargées, le navigateur les analyse et les affiche à l'utilisateur·rice.
+4. Quand toutes les ressources sont chargées, le navigateur les analyse et les affiche à l'utilisateur·ice.
 
 Cette description est très simplifiée, mais c'est suffisant pour l'instant. Vous pouvez trouver une explication plus détaillée du fonctionnement du navigateur dans notre module [Standards du web](/fr/docs/Learn_web_development/Getting_started/Web_standards).
 

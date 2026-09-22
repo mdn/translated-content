@@ -3,10 +3,10 @@ title: Propriété CSS `text-overflow`
 short-title: text-overflow
 slug: Web/CSS/Reference/Properties/text-overflow
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`text-overflow`** définit la façon dont le contenu débordant masqué est signalé aux utilisateur·ice·s. Ce contenu peut être rogné, affiché avec une ellipse (`…`) ou affiché avec une chaîne de caractères personnalisée.
+La propriété [CSS](/fr/docs/Web/CSS) **`text-overflow`** définit la façon dont le contenu débordant masqué est signalé aux utilisateur·ice·s.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: text-overflow")}}
 
@@ -54,15 +54,6 @@ text-overflow: "";
 }
 ```
 
-La propriété `text-overflow` ne force pas le dépassement. Pour que le texte dépasse de son conteneur, vous devez définir d'autres propriétés CSS&nbsp;: {{CSSxRef("overflow")}} et {{CSSxRef("white-space")}}. Par exemple&nbsp;:
-
-```css
-overflow: hidden;
-white-space: nowrap;
-```
-
-La propriété `text-overflow` n'affecte que le contenu qui dépasse d'un élément conteneur de bloc dans sa direction de progression en ligne (et non le texte qui dépasse en bas d'une boîte, par exemple).
-
 ## Syntaxe
 
 ```css
@@ -78,16 +69,31 @@ text-overflow: revert-layer;
 text-overflow: unset;
 ```
 
-La propriété `text-overflow` peut être définie avec une ou deux valeurs. Si une seule valeur est donnée, elle définit le comportement du dépassement à la fin de la ligne (l'extrémité droite pour un texte de gauche à droite, l'extrémité gauche pour un texte de droite à gauche). Si deux valeurs sont données, la première définit le comportement du dépassement au début de la ligne et la seconde à la fin de la ligne. La propriété accepte soit une valeur mot-clé (`clip` ou `ellipsis`), soit une valeur `<string>`.
-
 ### Valeurs
 
+Cette propriété est définie comme une ou deux valeurs séparées par des espaces, y compris&nbsp;:
+
 - `clip`
-  - : La valeur par défaut pour cette propriété. Ce mot-clé tronque le texte à la limite de la [zone de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction), donc le tronquage peut se produire au milieu d'un caractère. Pour tronquer à la transition entre les caractères, vous pouvez définir `text-overflow` comme une chaîne de caractères vide, si cela est pris en charge par vos navigateurs cibles&nbsp;: `text-overflow: '';`.
+  - : La valeur par défaut pour cette propriété. Ce mot-clé tronque le texte à la limite de la [zone de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction), donc le découpage peut se produire au milieu d'un caractère. Pour tronquer à la transition entre les caractères, vous pouvez définir `text-overflow` comme une chaîne de caractères vide, si c'est pris en charge par vos navigateurs cibles&nbsp;: `text-overflow: '';`.
 - `ellipsis`
   - : Ce mot-clé affiche une ellipse (`'…'`, `U+2026 HORIZONTAL ELLIPSIS`) pour représenter le texte rogné. L'ellipse est affichée à l'intérieur de la [zone de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction), ce qui réduit la quantité de texte affichée. S'il n'y a pas assez de place pour afficher l'ellipse, elle est rognée.
 - {{CSSxRef("&lt;string&gt;")}}
   - : La chaîne de caractères à utiliser pour représenter le texte rogné. La chaîne de caractères est affichée à l'intérieur de la [zone de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction) et réduit la quantité de texte affichée. S'il n'y a pas assez de place pour afficher la chaîne de caractères, elle est rognée.
+
+## Description
+
+La propriété `text-overflow` définit la façon dont le contenu débordant masqué est signalé aux utilisateur·ice·s. Il peut être tronqué, afficher une ellipse (`…`) ou afficher une chaîne de caractères personnalisée.
+
+La propriété `text-overflow` ne force pas le débordement. Pour faire déborder le texte de son conteneur, vous devez définir d'autres propriétés CSS&nbsp;: {{CSSxRef("overflow")}} et {{CSSxRef("white-space")}}. Par exemple&nbsp;:
+
+```css
+overflow: hidden;
+white-space: nowrap;
+```
+
+La propriété `text-overflow` affecte uniquement le contenu qui déborde d'un élément conteneur de bloc dans sa direction de progression _en incise_ (et non, par exemple, le texte qui déborde en bas d'une boîte).
+
+La propriété `text-overflow` peut être définie avec une ou deux valeurs. Si une seule valeur est fournie, elle définit le comportement du débordement à la fin de la ligne (l'extrémité droite pour un texte de gauche à droite, l'extrémité gauche pour un texte de droite à gauche). Si deux valeurs sont fournies, la première définit le comportement du débordement à l'extrémité gauche de la ligne, et la seconde le définit à son extrémité droite. La propriété accepte soit une valeur de mot-clé (`clip` ou `ellipsis`), soit une valeur de type `<string>`.
 
 ## Définition formelle
 
@@ -107,7 +113,7 @@ Cet exemple illustre différentes valeurs pour `text-overflow`, appliquée à un
 
 ```html
 <div class="ltr">
-  <h2>Left to right text</h2>
+  <h2>Texte de gauche à droite</h2>
   <pre>clip</pre>
   <p class="overflow-clip">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -123,7 +129,7 @@ Cet exemple illustre différentes valeurs pour `text-overflow`, appliquée à un
 </div>
 
 <div class="rtl">
-  <h2>Right to left text</h2>
+  <h2>Texte de droite à gauche</h2>
   <pre>clip</pre>
   <p class="overflow-clip">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -256,7 +262,7 @@ for (let para of paras) {
 
 {{Specifications}}
 
-Une version précédente de cette interface a atteint le statut de <i lang="en">Candidate Recommendation</i> (Candidat à la recommandation). Comme certaines fonctionnalités non listées comme étant à risque devaient être supprimées, la spécification a été rétrogradée au niveau <i lang="en">Working Draft</i> (Brouillon de travail), expliquant pourquoi les navigateurs ont implémenté cette propriété sans préfixe, bien qu'elle ne soit pas à l'état de CR.
+Une version précédente de cette interface a atteint le statut de <i lang="en">Candidate Recommendation</i> (Candidat à la recommandation). Comme certaines fonctionnalités non listées comme étant à risque doivent être supprimées, la spécification a été rétrogradée au niveau <i lang="en">Working Draft</i> (Brouillon de travail), expliquant pourquoi les navigateurs ont implémenté cette propriété sans préfixe, bien qu'elle ne soit pas à l'état de CR.
 
 ## Compatibilité des navigateurs
 

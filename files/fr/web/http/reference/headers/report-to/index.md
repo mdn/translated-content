@@ -3,16 +3,16 @@ title: En-tête Report-To
 short-title: Report-To
 slug: Web/HTTP/Reference/Headers/Report-To
 l10n:
-  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Deprecated_Header}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 > [!WARNING]
 > Cet en-tête a été remplacé par l'en-tête HTTP {{HTTPHeader("Reporting-Endpoints")}}.
 > Il fait partie d'une version antérieure de la spécification de [l'API Reporting](/fr/docs/Web/API/Reporting_API) et est obsolète.
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Report-To`** permet aux administrateur·ice·s de sites de définir des groupes nommés de points de terminaison pouvant servir de destination pour les rapports d'avertissement et d'erreur, tels que les rapports d'infraction CSP, les rapports {{HTTPHeader("Cross-Origin-Opener-Policy")}}, les rapports de dépréciation, ou d'autres violations génériques.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Report-To`** permet aux administrateur·ice·s de sites de définir des groupes nommés de points de terminaison pouvant servir de destination pour les rapports d'avertissement et d'erreur, tels que les rapports d'infraction CSP, les rapports {{HTTPHeader("Cross-Origin-Opener-Policy")}}, les rapports de dépréciation, ou d'autres violations génériques.
 
 `Report-To` est souvent utilisé conjointement avec d'autres en-têtes qui sélectionnent un groupe de points de terminaison à utiliser pour un type particulier de rapport.
 Par exemple, la directive {{CSP("report-to")}} de l'en-tête {{HTTPHeader("Content-Security-Policy")}} peut être utilisée pour sélectionner le groupe utilisé pour signaler les violations CSP.
@@ -39,7 +39,7 @@ Report-To: <json-field-value>
 ```
 
 - `<json-field-value>`
-  - : Une ou plusieurs définitions de groupes de points de terminaison, définies comme un tableau JSON sans les crochets `[` et `]` entourants.
+  - : Une ou plusieurs définitions de groupes de points de terminaison, définies comme un tableau JSON sans les crochets `[` et `]` les entourant.
     Chaque objet du tableau comporte les membres suivants&nbsp;:
     - `group`
       - : Le nom du groupe de points de terminaison.
@@ -61,7 +61,7 @@ Cela définit un groupe de points de terminaison `url` identifié par le nom de 
 Report-To: { "group": "csp-endpoints",
               "max_age": 10886400,
               "endpoints": [
-                { "url": "https://exemple.com/reports" },
+                { "url": "https://example.com/reports" },
                 { "url": "https://backup.com/reports" }
               ] }
 ```
@@ -69,10 +69,10 @@ Report-To: { "group": "csp-endpoints",
 Le serveur peut ensuite définir que ce groupe doit être la cible pour l'envoi des rapports d'infraction CSP en utilisant le nom du groupe comme valeur de la directive {{CSP("report-to")}}&nbsp;:
 
 ```http
-Content-Security-Policy: script-src https://exemple.com/; report-to csp-endpoints
+Content-Security-Policy: script-src https://example.com/; report-to csp-endpoints
 ```
 
-L'en-tête ci-dessus montre que toute violation de CSP sur `script-src` entraînerait l'envoi de rapports de violation vers les deux URL listées dans `Report-To`.
+L'en-tête ci-dessus montre que toute violation de CSP sur `script-src` entraîne l'envoi de rapports de violation vers les deux URL listées dans `Report-To`.
 
 ### Définir plusieurs groupes de signalement
 
@@ -83,19 +83,19 @@ Remarquez que chaque groupe possède un nom unique et que les groupes ne sont pa
 Report-To: { "group": "csp-endpoint-1",
               "max_age": 10886400,
               "endpoints": [
-                { "url": "https://exemple.com/csp-reports" }
+                { "url": "https://example.com/csp-reports" }
               ] },
             { "group": "hpkp-endpoint",
               "max_age": 10886400,
               "endpoints": [
-                { "url": "https://exemple.com/hpkp-reports" }
+                { "url": "https://example.com/hpkp-reports" }
               ] }
 ```
 
 On peut sélectionner un groupe de points de terminaison comme cible des rapports d'infraction en utilisant son nom, de la même manière que dans l'exemple précédent&nbsp;:
 
 ```http
-Content-Security-Policy: script-src https://exemple.com/; report-to csp-endpoint-1
+Content-Security-Policy: script-src https://example.com/; report-to csp-endpoint-1
 ```
 
 ## Spécifications

@@ -211,7 +211,7 @@ En el ejemplo anterior, la función flecha no tiene su propio `this`. Se utiliza
 
 ### Relación con el modo estricto
 
-Dado que `this` proviene del contexto léxico circundante, en el {{JSxRef("Modo_estricto", "modo estricto")}} se ignoran las reglas con respecto a `this`.
+Dado que `this` proviene del contexto léxico circundante, en el {{JSxRef("Strict_mode", "modo estricto")}} se ignoran las reglas con respecto a `this`.
 
 ```js
 var f = () => {
@@ -222,10 +222,10 @@ var f = () => {
 f() === window; // o el objeto global
 ```
 
-Todas las demás reglas del {{JSxRef("Modo_estricto", "modo estricto")}} se aplican normalmente.
+Todas las demás reglas del {{JSxRef("Strict_mode", "modo estricto")}} se aplican normalmente.
 
 > [!WARNING]
-> Comprueba las notas sobre el {{JSxRef("Modo_estricto", "modo estricto")}}.
+> Comprueba las notas sobre el {{JSxRef("Strict_mode", "modo estricto")}}.
 
 ### Funciones flecha utilizadas como métodos
 

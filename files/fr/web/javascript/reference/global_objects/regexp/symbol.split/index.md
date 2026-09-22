@@ -4,8 +4,6 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split
 original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
 ---
 
-{{JSRef}}
-
 La méthode **`[@@split]()`** permet de découper une chaîne de caractères ({{jsxref("String")}}) en un tableau de sous-chaînes.
 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.split]()")}}

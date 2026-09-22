@@ -32,5 +32,5 @@ console.log(d3.blank); // true
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La propriété {{JSxRef("Temporal/Duration/sign", "Temporal.Duration.prototype.sign")}}

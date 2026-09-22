@@ -18,7 +18,7 @@ l10n:
 fillRect(x, y, width, height)
 ```
 
-`fillRect()` メソッドは塗りつぶした矩形を、 `(x, y)` を始点とし、 `width` と `height` でサイズを指定しで描画します。塗りつぶしのスタイルは、現在の `fillStyle` 属性によって決定されます。
+`fillRect()` メソッドは塗りつぶした矩形を、 `(x, y)` を始点とし、 `width` と `height` でサイズを指定して描画します。塗りつぶしのスタイルは、現在の `fillStyle` 属性によって決定されます。
 
 ### 引数
 

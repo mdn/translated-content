@@ -78,7 +78,7 @@ _Cette interface hérite également des propriétés de ses parents, {{domxref("
     > Cet attribut est obsolète : vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.
 
 - {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
-  - : Retourne une {{domxref ("DOMString")}} avec la valeur du code de la touche représentée par l'événement.
+  - : Retourne une {{jsxref("String")}} avec la valeur du code de la touche représentée par l'événement.
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
   - : Retourne un {{jsxref ("Boolean")}} qui est `true` si la touche
 
@@ -89,7 +89,7 @@ _Cette interface hérite également des propriétés de ses parents, {{domxref("
 - {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
   - : Renvoie un {{jsxref ("Boolean")}} qui est `true` si l'événement est déclenché après `compositionstart` et avant `compositionend`.
 - {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
-  - : Retourne une {{domxref ("DOMString")}} représentant la valeur de touche de la touche représentée par l'événement.
+  - : Retourne une {{jsxref("String")}} représentant la valeur de touche de la touche représentée par l'événement.
 - {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}
   - : Retourne un {{jsxref("Number")}} représentant un code numérique dépendant du système et de l'implémentation, identifiant la valeur non modifiée de la touche pressée.
 

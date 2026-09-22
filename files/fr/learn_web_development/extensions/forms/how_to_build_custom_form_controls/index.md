@@ -4,8 +4,6 @@ slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls
 original_slug: Learn/Forms/How_to_build_custom_form_controls
 ---
 
-{{LearnSidebar}}
-
 Dans de nombreux cas les [widgets de formulaires HTML disponibles](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs) ne suffisent pas. Si vous voulez composer certains widgets dans un [style avancé](/fr/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling) tels que l'élément {{HTMLElement("select")}} ou si vous voulez leur donner des comportements personnalisés, vous n'avez pas d'autre choix que de créer vos propres widgets.
 
 Dans cet article, nous verrons comment construire un tel widget. Pour cela, nous allons travailler avec un exemple : reconstruire l'élément {{HTMLElement("select")}}.
@@ -211,7 +209,7 @@ Maintenant que nous avons mis en place les fonctionnalités de base, le divertis
 }
 ```
 
-Nous n'avons pas besoin d'un élément supplémentaire pour concevoir la flèche vers le bas ; à la place, nous utilisons le pseudo-élément {{cssxref(":after:after")}}. Cependant, elle pourrait également être mise en œuvre à l'aide d'une simple image de fond sur la classe `select`.
+Nous n'avons pas besoin d'un élément supplémentaire pour concevoir la flèche vers le bas ; à la place, nous utilisons le pseudo-élément {{cssxref("::after")}}. Cependant, elle pourrait également être mise en œuvre à l'aide d'une simple image de fond sur la classe `select`.
 
 ```css
 .select:after {

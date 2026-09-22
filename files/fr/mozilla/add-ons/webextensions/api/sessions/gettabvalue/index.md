@@ -3,8 +3,6 @@ title: sessions.getTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue
 ---
 
-{{AddonSidebar}}
-
 Récupère une valeur précédemment stockée par un appel à {{WebExtAPIRef("sessions.setTabValue")}}.
 
 Vous pouvez récupérer une valeur d'un onglet même au cours d'un cycle de fermeture / restauration: si vous définissez une valeur, l'utilisateur ferme l'onglet, puis restaure l'onglet à l'aide de la fonction "restaurer l'onglet" du navigateur (par exemple, en appuyant sur Control+Shift+T), then you will be able to retrieve the value from the restored tab. vous pourrez alors récupérer la valeur de l'onglet restauré. Notez cependant qu'un onglet restauré n'obtient pas le même ID que l'original, donc l'ID que vous passez dans `getTabValue()` sera différent de l'ID que vous avez passé dans `setTabValue()`, même s'ils font tous deux référence au même onglet.

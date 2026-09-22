@@ -1,14 +1,12 @@
 ---
 title: MathML 添字要素
+short-title: 添字要素
 slug: Web/MathML/Tutorials/For_beginners/Scripts
-original_slug: Web/MathML/Guides/Scripts
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 8f65572261d1f15ade758f0bf1bc6e40cb87c716
 ---
 
-{{MathMLRef}}
-
-{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Tutorials/For_beginners")}}
 
 基本的な数学記法の復習を続け、添字つきの MathML 要素の構築に焦点を当てます。
 
@@ -66,7 +64,7 @@ l10n:
 
 `<munder>`、`<mover>`、`<munderover>` の各要素は、真下付き文字と真上付き文字を使用する以外はとてもよく似ています。詳細を説明する代わりに、以下の練習でその定義を理解してください。
 
-### アクティブラーニング: 真下・真上付き文字を理解する
+### 真下・真上付き文字を理解する
 
 次の例では、謎の要素（疑問符で書かれています）の名前を推測してください。解決策を確認するには、ボタンを押してください。
 
@@ -118,9 +116,9 @@ document.getElementById("showSolution").addEventListener("click", () => {
 });
 ```
 
-{{ EmbedLiveSample('Subtrees_of_munder_mover_munderover', 700, 400, "", "") }}
+{{ EmbedLiveSample('Recognizing under/over scripts', 700, 400, "", "") }}
 
-### アクティブラーニング: 添字要素を認識する
+### 添字要素を認識する
 
 以下のMathML式は、分数、根号、添字を入れ子にして、より複雑な式を格納しています。添字要素 `<msub>`, `<msup>`, `<msubsup>`, `<munder>`, `<mover>`, `<munderover>` でレイアウトされた要素を推測してみてください。このような要素をクリックするたびに、その要素が強調表示され、確認メッセージが表示されます。最後に、 MathML のソースを読んで、それが予想と一致しているかどうかを確認してください。
 
@@ -228,11 +226,11 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 });
 ```
 
-{{ EmbedLiveSample('Active_learning_recognize_scripted_elements', 700, 400, "", "") }}
+{{ EmbedLiveSample('Recognizing scripted elements', 700, 400, "", "") }}
 
 ## それ以外の演算子プロパティ
 
-前回、いくつかの [`<mo>` 要素のプロパティ](/ja/docs/Web/MathML/Tutorials/For_beginners/Text_containers#mo_の演算子プロパティ)、すなわち縦方向の伸縮と空間について見てきました。これで添字要素が利用できるようになったので、このリストを拡張することができます。[前回の例](#アクティブラーニング_添字要素を認識する)を多少修正することで行います。
+前回、いくつかの [`<mo>` 要素のプロパティ](/ja/docs/Web/MathML/Tutorials/For_beginners/Text_containers#mo_の演算子プロパティ)、すなわち縦方向の伸縮と空間について見てきました。これで添字要素が利用できるようになったので、このリストを拡張することができます。[前回の例](#添字要素を認識する)を多少修正することで行います。
 
 ### 水平方向の伸長
 
@@ -336,7 +334,7 @@ math {
 
 {{ EmbedLiveSample('Stretching_in_horizontal_direction', 700, 200, "", "") }}
 
-これで、下カッコ "⎵" と右向き矢印 "→" は、置換された値の幅に応じて水平方向に伸びることがわかりました。 `<mrow>` 内の伸縮しない兄弟の高さに応じて、[いくつかの縦方向の演算子は伸縮できる](/ja/docs/Web/MathML/Tutorials/For_beginners/Text_containers#active_learning_stretchy_operators) ことを思い出してください。同様に、いくつかの水平方向の演算子は `<munder>`、`<mover>`、`<munderover>` 要素内の伸縮しない兄弟の幅に応じて伸縮を行います。
+これで、下カッコ "⎵" と右向き矢印 "→" は、置換された値の幅に応じて水平方向に伸びることがわかりました。 `<mrow>` 内の伸縮しない兄弟の高さに応じて、[いくつかの縦方向の演算子は伸縮できる](/ja/docs/Web/MathML/Tutorials/For_beginners/Text_containers#伸縮演算子を確認)ことを思い出してください。同様に、いくつかの水平方向の演算子は `<munder>`、`<mover>`、`<munderover>` 要素内の伸縮しない兄弟の幅に応じて伸縮を行います。
 
 > [!NOTE]
 > 伸縮は `<munder>`、`<mover>` 、`<munderover>` 要素のどの子要素に対しても、真下付き文字や真上付き文字に限らず行うことができます。
@@ -443,7 +441,7 @@ math {
 
 {{ EmbedLiveSample('Large_operator_and_limits', 700, 200, "", "") }}
 
-予想通り、数式は中央揃えされなくなり、レンダリングは高さが最小になるように変更されました。和の記号に注目すると、シグマが小さく描画され、 `<munderover>` 要素の添字がこれで下付き・上付き添字になっていることがわかります。これは "∑" 演算子の 2 つの特性によるものです。
+予想通り、数式は中央揃えされなくなり、レンダリングは高さが最小になるように変更されました。和の記号に注目すると、シグマが小さく描画され、`<munderover>` 要素の添字がこれで下付き・上付き添字になっていることがわかります。これは "∑" 演算子の 2 つの特性によるものです。
 
 - 大きな演算子: 演算子は `<math>` タグに `display="block"` 属性がある場合、より大きな字形で描画されます。
 - 移動制限: 演算子に付けられた真下付き文字と真上付き文字は `<math>` タグに `display="block"` 属性がない場合、それぞれ下付き文字と上付き文字として表示されます。
@@ -464,4 +462,4 @@ math {
 - [`<mover>` 要素](/ja/docs/Web/MathML/Reference/Element/mover)
 - [`<munderover>` 要素](/ja/docs/Web/MathML/Reference/Element/munderover)
 
-{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Tutorials/For_beginners")}}

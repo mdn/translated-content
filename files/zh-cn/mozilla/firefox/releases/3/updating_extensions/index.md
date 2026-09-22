@@ -33,7 +33,7 @@ slug: Mozilla/Firefox/Releases/3/Updating_extensions
 There have been (and will continue to be) a number of API changes that will likely break some extensions. We're still working on compiling a complete list of these changes.
 
 > [!NOTE]
-> If your extension still uses an [`Install.js`](cn/Install.js) script instead of an [install manifest](), you need to make the transition to an install manifest now. Firefox 3 no longer supports `install.js` scripts in XPI files.
+> If your extension still uses an [`Install.js`](cn/Install.js) script instead of an [install manifest](<>), you need to make the transition to an install manifest now. Firefox 3 no longer supports `install.js` scripts in XPI files.
 
 #### Add localizations to the install manifest
 

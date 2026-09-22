@@ -3,8 +3,6 @@ title: <font>
 slug: Web/HTML/Reference/Elements/font
 ---
 
-{{Deprecated_Header}}
-
 ## 概要
 
 _HTML Font 元素_（`<font>`）定义了该内容的字体大小、顏色与表现。

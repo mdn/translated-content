@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Selectors
 original_slug: Web/CSS/CSS_selectors
 ---
 
-{{CSSRef}}
-
 **Les sélecteurs** définissent les éléments sur lesquelles s'applique un ensemble de règles CSS.
 
 ## Les sélecteurs simples

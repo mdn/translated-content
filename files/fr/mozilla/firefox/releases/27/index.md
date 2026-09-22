@@ -3,7 +3,7 @@ title: Firefox 27 note de version pour les développeurs
 short-title: Firefox 27
 slug: Mozilla/Firefox/Releases/27
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Firefox 27 est sorti le 4 Février 2014. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeur·euse·s Web, mais aussi pour les développeur·euse·s Firefox et Gecko ainsi que pour les développeur·euse·s d'extensions.
@@ -14,7 +14,7 @@ Firefox 27 est sorti le 4 Février 2014. Cet article répertorie les modificatio
 
 - Les points d'arrêt peuvent désormais être définis sur les évènements DOM.
 - JavaScript dans le panneau du débogueur peut être supprimé à l'aide du bouton { }.
-- L'inspecteur a maintenant une fonction "edit-element-html", sans avoir besoin d'un add-on.
+- L'inspecteur a maintenant une fonction `"edit-element-html"`, sans avoir besoin d'un add-on.
 - Les URL et les couleurs d'arrière-plan ont un aperçu dans l'inspecteur. Même le survol des éléments du canevas donne une fenêtre contextuelle avec un aperçu de l'image.
 - La journalisation de redistribution a été ajoutée.
 - Les styles des éléments SVG peuvent désormais être inspectés ([bogue Firefox 921191 <sup>(angl.)</sup>](https://bugzil.la/921191)).
@@ -30,7 +30,7 @@ Plus de détails dans [cet article <sup>(angl.)</sup>](https://hacks.mozilla.org
 - La valeur `true` pour {{CSSxRef("text-align")}} a été ajoutée ([bogue Firefox 929991 <sup>(angl.)</sup>](https://bugzil.la/929991)).
 - Prise en charge expérimentale de la `position: sticky` est désormais actif par défaut sur les compilations non publiées ([bogue Firefox 902992 <sup>(angl.)</sup>](https://bugzil.la/902992)). Pour les versions builds, la préférence `layout.css.sticky.enabled` doit toujours être définie sur `true.`
 - La propriété abrégée {{CSSxRef("all")}} a été ajoutée ([bogue Firefox 842329 <sup>(angl.)</sup>](https://bugzil.la/842329)).
-- La valeur globale {{CSSxRef("unset")}} a été ajoutée; il permet de réinitialiser n'importe quelle propriété CSS ([bogue Firefox 921731 <sup>(angl.)</sup>](https://bugzil.la/921731)).
+- La valeur globale {{CSSxRef("unset")}} a été ajoutée&nbsp;; il vous permet de réinitialiser n'importe quelle propriété CSS ([bogue Firefox 921731 <sup>(angl.)</sup>](https://bugzil.la/921731)).
 - Les accolades ne sont plus autorisées dans les attributs de `style` HTML: faire `<div style="{ display: none }">` fonctionnait en mode bizarreries, mais ne l'est plus ([bogue Firefox 915053 <sup>(angl.)</sup>](https://bugzil.la/915053)).
 - La propriété {{CSSxRef("overflow")}} fonctionne désormais sur {{HTMLElement("fieldset")}} ([bogue Firefox 261037 <sup>(angl.)</sup>](https://bugzil.la/261037)).
 

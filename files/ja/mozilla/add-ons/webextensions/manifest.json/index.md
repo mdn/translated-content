@@ -41,7 +41,7 @@ l10n:
 - [incognito](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito)
 - [manifest_version](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)
 - [name](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
-- [offline_enabled](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled) (Firefox では未対応)
+- [offline_enabled](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) (Firefox では未対応)
 - [omnibox](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)
 - [optional_host_permissions](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) (Manifest V3 以上)
 - [optional_permissions](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)

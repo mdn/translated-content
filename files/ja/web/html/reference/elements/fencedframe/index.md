@@ -1,8 +1,9 @@
 ---
-title: "<fencedframe>: フェンスドフレーム要素"
+title: HTML `<fencedframe>` フェンスフレーム要素
+short-title: <fencedframe>
 slug: Web/HTML/Reference/Elements/fencedframe
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 {{SeeCompatTable}}
@@ -14,25 +15,25 @@ l10n:
 - `<fencedframe>` は通常のスクリプト（例えば、ソース URL の取得や設定）によって操作したり、データにアクセスしたりできません。`<fencedframe>` の内容は、[特定の API](/ja/docs/Web/API/Fenced_frame_API#用途) を通じてのみ埋め込めます。
 - `<fencedframe>` は埋め込み元コンテキストの DOM にアクセスできず、逆に埋め込み元コンテキストも `<fencedframe>` の DOM にアクセスできません。
 
-`<fencedframe>` 要素は、より高度なプライバシー保護機能を組み込んだ {{htmlelement("iframe")}} の一種です。サードパーティ Cookie への依存やその他のプライバシー上のリスクといった、`<iframe>` の問題点に対処することを目的としています。詳しくは [Fenced frame API](/ja/docs/Web/API/Fenced_frame_API) を参照してください。
+`<fencedframe>` 要素は、より高度なプライバシー保護機能を組み込んだ `<iframe>` の一種です。サードパーティ Cookie への依存やその他のプライバシー上のリスクといった、`<iframe>` の問題点に対処することを目的としています。詳しくは[フェンスフレーム API](/ja/docs/Web/API/Fenced_frame_API) を参照してください。
 
 ## 属性
 
 この要素には、[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)に加えて、次の属性があります。
 
 - `allow` {{experimental_inline}}
-  - : `<fencedframe>` に対する [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) を指定します。これにより、リクエスト元のオリジンに基づいて `<fencedframe>` で利用可能な機能が定義されます。どの機能を制御できるかについては、後述の[フェンスドフレームで利用可能な権限ポリシー](#フェンスドフレームで利用可能な権限ポリシー)を参照してください。
+  - : `<fencedframe>` に対する [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) を指定します。これにより、リクエスト元のオリジンに基づいて `<fencedframe>` で利用可能な機能が定義されます。どの機能を制御できるかについては、後述の[フェンスフレームで利用可能な権限ポリシー](#フェンスフレームで利用可能な権限ポリシー)を参照してください。
 
 - `height` {{experimental_inline}}
-  - : フェンスドフレームの高さを CSS ピクセル単位で表す整数値です。既定値は `150` です。
+  - : フェンスフレームの高さを CSS ピクセル単位で表す整数値です。既定値は `150` です。
 - `width` {{experimental_inline}}
-  - : フェンスドフレームの幅を CSS ピクセル単位で表す整数値です。既定値は `300` です。
+  - : フェンスフレームの幅を CSS ピクセル単位で表す整数値です。既定値は `300` です。
 
-## フェンスドフレームで利用可能な権限ポリシー
+## フェンスフレームで利用可能な権限ポリシー
 
-トップレベルコンテキストからフェンスドフレームへ機能の許可・拒否を委譲すると、それ自体が通信チャネルとなり得るため、プライバシー上のリスクになります。そのため、[Permissions Policy](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) (例: [`camera`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/camera)、[`geolocation`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation)) は、フェンスドフレーム内では**利用できません**。
+最上位コンテキストからフェンスフレームへ機能の許可・拒否を委譲すると、それ自体が通信チャネルとなり得るため、プライバシー上のリスクになります。そのため、[Permissions Policy](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) (例: [`camera`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/camera)、[`geolocation`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation)) は、フェンスフレーム内では**利用できません**。
 
-フェンスドフレーム内でポリシーにより有効化できるのは、フェンスドフレーム専用に設計された次の機能のみです。
+フェンスフレーム内でポリシーにより有効化できるのは、フェンスフレーム専用に設計された次の機能のみです。
 
 - [Protected Audience API](https://privacysandbox.google.com/private-advertising/protected-audience)
   - `attribution-reporting`
@@ -45,11 +46,11 @@ l10n:
   - `shared-storage`
   - `shared-storage-select-url`
 
-現時点では、これらの機能は常に有効です。将来的には `<fencedframe>` の `allow` 属性を使って制御できるようになる予定です。なお、この方法で Privacy Sandbox の機能をブロックすると、フェンスドフレーム自体も読み込まれなくなり、通信チャネルは完全に遮断されます。
+現時点では、これらの機能は常に有効です。将来的には `<fencedframe>` の `allow` 属性を使って制御できるようになる予定です。なお、この方法で Privacy Sandbox の機能をブロックすると、フェンスフレーム自体も読み込まれなくなり、通信チャネルは完全に遮断されます。
 
-## フェンスドフレーム境界をまたぐフォーカス
+## フェンスフレーム境界をまたぐフォーカス
 
-ドキュメントのフォーカスをフェンスドフレームの境界をまたいで移動すること（外部から内部、またはその逆）は制限されています。クリックや Tab キーなどのユーザー操作による移動は許可されます（フィンガープリントのリスクがないため）。
+ドキュメントのフォーカスをフェンスフレームの境界をまたいで移動すること（外部から内部、またはその逆）は制限されています。クリックや Tab キーなどのユーザー操作による移動は許可されます（フィンガープリントのリスクがないため）。
 
 一方で、{{domxref("HTMLElement.focus()")}} のような API 呼び出しによる移動は禁止されています。これは、悪意のあるスクリプトが連続した呼び出しを使って情報を推測・漏洩する可能性があるためです。
 
@@ -162,6 +163,6 @@ frame.config = frameConfig;
 
 ## 関連情報
 
-- [フェンスドフレーム API](/ja/docs/Web/API/Fenced_frame_API)
-- [Fenced frames](https://privacysandbox.google.com/private-advertising/fenced-frame) on privacysandbox.google.com
-- [The Privacy Sandbox](https://privacysandbox.google.com/) on privacysandbox.google.com
+- [フェンスフレーム API](/ja/docs/Web/API/Fenced_frame_API)
+- [Fenced frames](https://privacysandbox.google.com/private-advertising/fenced-frame) - privacysandbox.google.com
+- [The Privacy Sandbox](https://privacysandbox.google.com/) - privacysandbox.google.com

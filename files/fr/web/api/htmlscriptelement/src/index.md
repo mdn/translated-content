@@ -113,7 +113,7 @@ el.src = trustedScriptURL;
 
 ### Lire la propriété `src`
 
-Supposons que le code s'exécute sur un site dont l'URL est «&nbsp;https://exemple.com&nbsp;».
+Supposons que le code s'exécute sur un site dont l'URL est «&nbsp;https://example.com&nbsp;».
 
 ```html
 <script id="script-with-src" type="module" src="/main.js"></script>

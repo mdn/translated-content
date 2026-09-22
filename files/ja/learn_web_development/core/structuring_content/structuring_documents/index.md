@@ -250,7 +250,7 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
 > div はとても便利に使用できるため、つい使いすぎてしまいがちです。意味的な価値を持たないので、 HTML コードを煩雑にするだけです。これらを使用するのは、意味的にもっと良い解決策がない場合に限るように注意し、使用箇所を最小限に抑えるようにしなければ、文書の更新や維持に苦労することになります。
 
 > [!NOTE]
-> Scrimba の [Semantic HTML](https://scrimba.com/learn-accessible-web-design-c031/~0b?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> はインタラクティブなチュートリアルで、意味論的マークアップの概要とその使用意義を復習できるほか、HTML コードベースを意味論的要素で改善する能力を試す課題が用意されています。
+> Scrimba の [Semantic HTML](https://scrimba.com/learn-accessible-web-design-c031/~0b?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> はインタラクティブなチュートリアルで、意味論的マークアップの概要とその使用意義を復習できるほか、HTML コードベースを意味論的要素で改善する能力を試す課題が用意されています。
 
 ### 改行と水平線
 

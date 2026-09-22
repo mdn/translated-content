@@ -3,7 +3,7 @@ title: Propriété CSS `color`
 short-title: color
 slug: Web/CSS/Reference/Properties/color
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`color`** permet de définir la valeur de couleur du texte d'un élément et de ses décorations de texte, et définit la valeur [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor). `currentColor` peut être utilisée comme valeur indirecte pour d'autres propriétés et constitue la valeur par défaut pour d'autres propriétés de couleur, telles que {{CSSxRef("border-color")}}.
@@ -110,9 +110,9 @@ color: revert-layer;
 color: unset;
 ```
 
-La propriété `color` est définie grâce à une valeur de type {{CSSxRef("&lt;color&gt;")}}.
-
 ### Valeurs
+
+Cette propriété est définie par une valeur unique choisie parmi la liste suivante&nbsp;:
 
 - {{CSSxRef("&lt;color&gt;")}}
   - : Définit la couleur des parties textuelles et décoratives de l'élément.
@@ -127,7 +127,7 @@ Le ratio de contraste est déterminé en comparant la luminosité de la couleur 
 
 - [Contrôleur de contraste WebAIM <sup>(angl.)</sup>](https://webaim.org/resources/contrastchecker/)
 - [Explications de la directive 1.4 de WCAG sur MDN](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
-- [Comprendre le critère de succès 1.4.3 | W3C Understanding WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [Comprendre le critère de succès 1.4.3 | Comprendre le WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Définition formelle
 

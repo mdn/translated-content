@@ -1,35 +1,31 @@
 ---
-title: Element.clientLeft
+title: "Element : propriété clientLeft"
+short-title: clientLeft
 slug: Web/API/Element/clientLeft
+l10n:
+  sourceCommit: 1e0a16464b11cde9eddbb9795fe74e737dba0598
 ---
 
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`Element.clientLeft`** représente la largeur de la bordure gauche d'un élément, exprimée en pixels. Cette largeur inclut l'éventuelle largeur de la barre de défilement verticale si le texte se lit de droite à gauche et s'il y a un dépassement entraînant l'apparition d'une barre de défilement à gauche. `clientLeft` n'inclut pas la marge gauche ou le remplissage (<i lang="en">padding</i>) à gauche.
-
-Lorsque la préférence [`layout.scrollbar.side`](http://kb.mozillazine.org/Layout.scrollbar.side) est paramétrée à 1 ou à 3 et que la direction du texte est de droite à gauche, **alors la barre de défilement verticale est placée à gauche** et ce placement aura donc un impact sur la valeur de `clientLeft`.
+La propriété en lecture seule **`clientLeft`** de l'interface {{DOMxRef("Element")}} retourne la largeur de la bordure gauche d'un élément en pixels. Elle inclut la largeur de la barre de défilement verticale si la direction du texte de l'élément est de droite à gauche et s'il y a un débordement entraînant l'affichage d'une barre de défilement verticale à gauche. `clientLeft` n'inclut pas la marge gauche ni le remplissage gauche.
 
 > [!NOTE]
-> Cette propriété sera arrondie en une valeur entière. Si vous souhaitez utiliser une valeur décimale, vous pouvez utiliser [`element.getBoundingClientRect()`](/fr/docs/Web/API/Element/getBoundingClientRect).
+> Lorsque un élément se voit appliquer `display: inline`, `clientLeft` retourne `0`, quelle que soit la bordure de l'élément.
 
-> [!NOTE]
-> Lorsqu'un élément se voit appliquer `display: inline`, `clientLeft` renvoie `0`, quelle que soit la bordure de l'élément.
+## Valeur
 
-## Syntaxe
+Un entier.
 
-```js
-var left = element.clientLeft;
-```
+## Exemples
 
-## Exemple
-
-Dans l'exemple qui suit, la zone du client possède un arrière-plan blanc avec une bordure `border-left` noire de 24px. La valeur de `clientLeft` correspond à la distance entre la fin de la zone de la marge et le début des zones de contenu et de remplissage : 24px.
+Dans l'exemple suivant, la zone client présente un fond blanc et une `border-left` noire de 24px. La valeur `clientLeft` correspond à la distance entre la fin de la zone de marge (en jaune) et le début des zones de remplissage et de contenu (en blanc)&nbsp;: soit 24px.
 
 ### HTML
 
 ```html
-<div id="container">
-  <div id="contained">
+<div id="conteneur">
+  <div id="contenu">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -43,13 +39,13 @@ Dans l'exemple qui suit, la zone du client possède un arrière-plan blanc avec 
 ### CSS
 
 ```css
-#container {
+#conteneur {
   margin: 3rem;
-  background-color: rgb(255, 255, 204);
+  background-color: rgb(255 255 204);
   border: 4px dashed black;
 }
 
-#contained {
+#contenu {
   margin: 1rem;
   border-left: 24px black solid;
   padding: 0px 28px;
@@ -60,7 +56,7 @@ Dans l'exemple qui suit, la zone du client possède un arrière-plan blanc avec 
 
 ### Résultat
 
-{{EmbedLiveSample("Exemple", 400, 350)}}
+{{EmbedLiveSample("Exemples", 400, 350)}}
 
 ## Spécifications
 
@@ -70,10 +66,12 @@ Dans l'exemple qui suit, la zone du client possède un arrière-plan blanc avec 
 
 {{Compat}}
 
-## Notes
+## Voir aussi
 
-`clientLeft` fut introduit avec le modèle d'objet DHTML d'Internet Explorer.
-
-La position de la barre de défilement verticale pour les textes écrits de droite à gauche dépend de la préférence [`layout.scrollbar.side`](http://kb.mozillazine.org/Layout.scrollbar.side).
-
-Les applications utilisant le moteur Gecko prennent en charge `clientLeft` depuis Gecko 1.9 (Firefox 3 l'implémente avec [le bug 111207](https://bugzilla.mozilla.org/show_bug.cgi?id=111207)). Cette propriété n'est pas prise en charge pour Firefox 2 et les versions antérieures.
+- [Déterminer les dimensions des éléments](/fr/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- La propriété {{DOMxRef("HTMLElement.offsetLeft")}}
+- La propriété {{DOMxRef("Element.scrollLeft")}}
+- La propriété {{DOMxRef("Element.clientHeight")}}
+- La propriété {{DOMxRef("Element.clientWidth")}}
+- La propriété {{DOMxRef("Element.clientTop")}}
+- La méthode {{DOMxRef("Element.getBoundingClientRect()")}}

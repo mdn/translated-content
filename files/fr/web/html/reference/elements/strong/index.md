@@ -32,7 +32,7 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 
 L'élément `<strong>` indique un contenu de haute importance, y compris lorsqu'il s'agit de choses graves ou urgentes (telles que des messages d'avertissement par exemple). Il peut s'agir d'une certaine phrase au sein d'une page ou bien de quelques mots d'une importance particulière par rapport au contenu environnant.
 
-Cet élément se traduit généralement par l'affichage du texte en gras. Toutefois, il ne doit pas être utilisé à des fins stylistiques. Pour cela, on pourra utiliser la propriété CSS {{CSSxRef("font-weight")}}. De plus, on pourra utiliser l'élément {{HTMLElement("b")}} afin d'attirer l'attention sur une portion de texte qui ne possède pas un niveau d'importance particulier ou l'élément {{HTMLElement("em")}} si on souhaite marquer un texte avec de l'emphase.
+Cet élément se traduit généralement par l'affichage du texte en gras. Toutefois, il ne doit pas être utilisé à des fins stylistiques. Pour cela, on peut utiliser la propriété CSS {{CSSxRef("font-weight")}}. De plus, on peut utiliser l'élément {{HTMLElement("b")}} afin d'attirer l'attention sur une portion de texte qui ne possède pas un niveau d'importance particulier ou l'élément {{HTMLElement("em")}} si on souhaite marquer un texte avec de l'emphase.
 
 Il est également possible d'utiliser `<strong>` pour les en-têtes de paragraphes qui représentent des notes ou des avertissements au sein d'une page.
 

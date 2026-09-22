@@ -12,13 +12,13 @@ La méthode **`toString()`** des valeurs {{JSxRef("BigInt")}} retourne une chaî
 
 ```js interactive-example
 console.log(1024n.toString());
-// Sortie attendue : "1024"
+// Résultat attendu : "1024"
 
 console.log(1024n.toString(2));
-// Sortie attendue : "10000000000"
+// Résultat attendu : "10000000000"
 
 console.log(1024n.toString(16));
-// Sortie attendue : "400"
+// Résultat attendu : "400"
 ```
 
 ## Syntaxe

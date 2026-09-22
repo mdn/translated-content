@@ -2,7 +2,7 @@
 title: 合成とクリッピング
 slug: Web/API/Canvas_API/Tutorial/Compositing
 l10n:
-  sourceCommit: 34d979bdb5bf27aa3662ac72c87a4dbe76cf0ce1
+  sourceCommit: 6f1b699dd8891431bbfe0bc3bb803f929fa6032e
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
@@ -31,7 +31,7 @@ l10n:
 
 `closePath()` の代わりに `clip()` を使用すると、パスの輪郭を描いたり塗りつぶすのではなく、パスを閉じてクリッピングパスに変換します。
 
-既定で {{HTMLElement("canvas")}} 要素には、キャンバス自体とまったく同じ大きさのクリッピングパスが存在します。言い換えると、クリッピングは行われません。
+デフォルトで {{HTMLElement("canvas")}} 要素には、キャンバス自体とまったく同じ大きさのクリッピングパスが存在します。言い換えると、クリッピングは行われません。
 
 ### `clip` の例
 
@@ -39,7 +39,7 @@ l10n:
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   ctx.fillRect(0, 0, 150, 150);
   ctx.translate(75, 75);
 
@@ -49,11 +49,11 @@ function draw() {
   ctx.clip();
 
   // 背景を描く
-  const lingrad = ctx.createLinearGradient(0, -75, 0, 75);
-  lingrad.addColorStop(0, "#232256");
-  lingrad.addColorStop(1, "#143778");
+  const linGrad = ctx.createLinearGradient(0, -75, 0, 75);
+  linGrad.addColorStop(0, "#232256");
+  linGrad.addColorStop(1, "#143778");
 
-  ctx.fillStyle = lingrad;
+  ctx.fillStyle = linGrad;
   ctx.fillRect(-75, -75, 150, 150);
 
   generateStars(ctx);
@@ -62,7 +62,7 @@ function draw() {
 function generateStars(ctx) {
   for (let j = 1; j < 50; j++) {
     ctx.save();
-    ctx.fillStyle = "#fff";
+    ctx.fillStyle = "white";
     ctx.translate(
       75 - Math.floor(Math.random() * 150),
       75 - Math.floor(Math.random() * 150),
@@ -91,7 +91,7 @@ function drawStar(ctx, r) {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js hidden
@@ -106,41 +106,35 @@ draw();
 
 ### クリッピングパスの反転
 
-逆クリッピングマスクというものはありません。しかし、キャンバス全体を長方形で埋め、スキップしたい部分に穴をあけたマスクを定義することはできます。[穴のある図形を描画する](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#shapes_with_holes) 場合は、外側の図形と逆方向に穴を描画する必要があります。下記の例では、空に穴を開けています。
+逆クリッピングマスクというものはありません。しかし、キャンバス全体を矩形で埋め、スキップしたい部分に穴をあけたマスクを定義することはできます。[穴のある図形を描画する](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#shapes_with_holes) 場合は、外側の図形と逆方向に穴を描画する必要があります。下記の例では、空に穴を開けています。
 
-長方形は描画方向を持ちませんが、あたかも時計回りに描画したかのように動作します。既定では arc コマンドも時計回りに描きますが、最後の引数で方向を変えることができます。
+矩形は描画方向を持ちませんが、あたかも時計回りに描画したかのように動作します。デフォルトでは arc コマンドも時計回りに描きますが、最後の引数で方向を変えることができます。
 
 ```html hidden
-<html lang="ja">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
-    ctx.translate(75, 75);
+  const canvas = document.getElementById("my-canvas");
+  const ctx = canvas.getContext("2d");
+  ctx.translate(75, 75);
 
-    // クリッピングパス
-    ctx.beginPath();
-    ctx.rect(-75, -75, 150, 150); // 外側の長方形
-    ctx.arc(0, 0, 60, 0, Math.PI * 2, true); // 反時計回りの穴
-    ctx.clip();
+  // クリッピングパス
+  ctx.beginPath();
+  ctx.rect(-75, -75, 150, 150); // 外側の矩形
+  ctx.arc(0, 0, 60, 0, Math.PI * 2, true); // 反時計回りの穴
+  ctx.clip();
 
-    // 背景を描画
-    const lingrad = ctx.createLinearGradient(0, -75, 0, 75);
-    lingrad.addColorStop(0, "#232256");
-    lingrad.addColorStop(1, "#143778");
+  // 背景を描画
+  const linGrad = ctx.createLinearGradient(0, -75, 0, 75);
+  linGrad.addColorStop(0, "#232256");
+  linGrad.addColorStop(1, "#143778");
 
-    ctx.fillStyle = lingrad;
-    ctx.fillRect(-75, -75, 150, 150);
+  ctx.fillStyle = linGrad;
+  ctx.fillRect(-75, -75, 150, 150);
 
-    generateStars(ctx);
-  }
+  generateStars(ctx);
 }
 ```
 
@@ -148,7 +142,7 @@ function draw() {
 function generateStars(ctx) {
   for (let j = 1; j < 50; j++) {
     ctx.save();
-    ctx.fillStyle = "#fff";
+    ctx.fillStyle = "white";
     ctx.translate(
       75 - Math.floor(Math.random() * 150),
       75 - Math.floor(Math.random() * 150),

@@ -3,14 +3,14 @@ title: "Response : propriété status"
 short-title: status
 slug: Web/API/Response/status
 l10n:
-  sourceCommit: 2064920ea85d963b8cf590dc5d5d25b377aa3d2e
+  sourceCommit: 5005f078577007161ffab6b5ffee765f8551174c
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-La propriété en lecture seule **`status`** de l'interface {{DOMxRef("Response")}} contient les [codes d'état HTTP](/fr/docs/Web/HTTP/Reference/Status) de la réponse.
+La propriété en lecture seule **`status`** de l'interface {{DOMxRef("Response")}} contient le [code d'état HTTP](/fr/docs/Web/HTTP/Reference/Status) de la réponse.
 
-Par exemple, `200` pour un succès, `404` si la ressource n'a pas pu être trouvée.
+Par exemple, `200` pour un succès ou `404` si la ressource n'a pas pu être trouvée.
 
 ## Valeur
 

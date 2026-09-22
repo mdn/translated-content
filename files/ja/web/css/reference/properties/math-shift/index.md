@@ -1,12 +1,10 @@
 ---
-title: math-shift
+title: CSS `math-shift` プロパティ
+short-title: math-shift
 slug: Web/CSS/Reference/Properties/math-shift
-original_slug: Web/CSS/math-shift
 l10n:
-  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
-
-{{SeeCompatTable}}
 
 `math-shift` プロパティは MathML 数式の中の上付き文字を通常のシフトとコンパクトシフトのどちらで上げるべきかを示します。
 
@@ -42,32 +40,44 @@ math-shift: unset;
 
 ## 例
 
-### CSS
+### 通常シフトとコンパクトシフト
+
+次の MathML は OpenType MATH テーブルを持つフォントを使って "x の 2 乗" の 2 つのバージョンを表示しています。
+`math-shift` プロパティは、`normal` および `compact` シフトを使用して上付き文字を配置するために使用されています。
+
+#### CSS
 
 ```css
 math {
+  font-size: 64pt;
+  math-shift: normal;
+}
+
+.compact-shift {
   math-shift: compact;
 }
 ```
 
-### MathML
-
-次の MathML は OpenType MATH テーブルを持つフォントを使って "x の 2 乗" の 2 つのバージョンを表示しています。 `math-shift` プロパティを実装しているブラウザーは、上付き文字を少し異なるシフトを使って上げることになります。
+#### MathML
 
 ```html
-<math style="font-size: 64pt;">
-  <msup style="math-shift: normal">
+<math>
+  <msup>
     <mi>x</mi>
     <mn>2</mn>
   </msup>
-  <msup style="math-shift: compact">
+  <msup class="compact-shift">
     <mi>x</mi>
     <mn>2</mn>
   </msup>
 </math>
 ```
 
-{{EmbedLiveSample("math-shift-example", 700, 200, "", "")}}
+#### 結果
+
+2 つ目 "2" は、シフト量がより小さく（低く）なっていることに注意してください。
+
+{{EmbedLiveSample("math-shift-example", "100%", "150px")}}
 
 ## 仕様書
 

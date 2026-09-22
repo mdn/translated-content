@@ -50,8 +50,8 @@ console.log(ancre.getAttribute("href")); // "../../.."
 Si l'attribut est défini sur une URL absolue, la propriété retourne cette URL absolue telle quelle.
 
 ```js
-ancre.href = "https://exemple.com/chemin";
-console.log(ancre.href); // "https://exemple.com/chemin"
+ancre.href = "https://example.com/chemin";
+console.log(ancre.href); // "https://example.com/chemin"
 ```
 
 Si l'attribut est défini sur une URL invalide, la propriété retourne la valeur de l'attribut telle quelle.

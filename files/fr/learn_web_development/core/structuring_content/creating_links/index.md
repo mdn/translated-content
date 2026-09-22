@@ -315,17 +315,17 @@ Deux termes que vous rencontrez sur le web sont **chemin absolu** et **chemin re
 - Chemin absolu&nbsp;: Pointe vers un emplacement défini par son emplacement absolu dans votre site (ou ailleurs sur le web). Par exemple, vous pouvez créer un lien absolu qui pointe toujours vers le même emplacement par rapport au répertoire racine du site en utilisant la barre oblique unique au début du chemin, comme nous l'avons vu précédemment&nbsp;: `/pdfs/project-brief.pdf`.
 - Chemin relatif&nbsp;: Pointe vers un emplacement qui est _relatif_ au fichier à partir duquel vous créez le lien. Dans notre exemple précédent, nous avons utilisé `projects/index.html` pour créer un lien relatif entre le fichier actuel et un fichier appelé `index.html` qui se trouve dans un sous-répertoire `projects`. Si vous déplaciez le fichier actuel à un autre emplacement, le chemin est toujours relatif à ce fichier, mais il pointe vers un emplacement absolu différent.
 
-Ces termes ne sont pas toujours utilisés de manière cohérente. Par exemple, `/pdfs/project-brief.pdf` est absolu par rapport à l'emplacement du fichier actuel, mais relatif au [nom de domaine](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name). Une URL qui inclut le nom de domaine complet, comme `https://exemple.com/pdfs/project-brief.pdf`, est absolue par rapport à l'ensemble du web.
+Ces termes ne sont pas toujours utilisés de manière cohérente. Par exemple, `/pdfs/project-brief.pdf` est absolu par rapport à l'emplacement du fichier actuel, mais relatif au [nom de domaine](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name). Une URL qui inclut le nom de domaine complet, comme `https://example.com/pdfs/project-brief.pdf`, est absolue par rapport à l'ensemble du web.
 
 ### Lien avec des URL complètes
 
 Vous pouvez définir une URL complète comme chemin, ce qui pointe toujours vers le même emplacement sur le web, peu importe où elle est utilisée. Par exemple&nbsp;:
 
 ```html
-<a href="https://www.exemple.com/projects/">projets</a>
+<a href="https://www.example.com/projects/">projets</a>
 ```
 
-Ce lien pointe toujours vers `https://www.exemple.com/projects/`, même si votre site est déplacé vers un autre domaine.
+Ce lien pointe toujours vers `https://www.example.com/projects/`, même si votre site est déplacé vers un autre domaine.
 
 ### Liens internes et externes
 
@@ -342,12 +342,12 @@ Vous ne pouvez pas référencer un emplacement sur un site différent avec un ch
 Lors de la spécification d'un lien interne, vous pouvez utiliser un chemin relatif ou absolu, ou une URL complète. Dans notre exemple, ces liens sont équivalents&nbsp;:
 
 ```html
-<a href="https://www.exemple.com/projects/">projets</a>
+<a href="https://www.example.com/projects/">projets</a>
 
 <a href="projects">projets</a>
 ```
 
-Nous recommandons la seconde option sans le nom de domaine complet, pour des raisons de portabilité. Comme nous l'avons dit précédemment, si vous définissez `https://www.exemple.com/projects/`, cela pointe toujours vers `https://www.exemple.com/projects/`. Si vous déplacez ensuite votre site vers un autre domaine, par exemple `autre-exemple.com`, tous vos liens avec l'URL complète doivent être modifiés. Si vous définissez des chemins tels que `/projects`, ils fonctionnent toujours, car ils sont toujours relatifs à la structure des répertoires.
+Nous recommandons la seconde option sans le nom de domaine complet, pour des raisons de portabilité. Comme nous l'avons dit précédemment, si vous définissez `https://www.example.com/projects/`, cela pointe toujours vers `https://www.example.com/projects/`. Si vous déplacez ensuite votre site vers un autre domaine, par exemple `autre-example.com`, tous vos liens avec l'URL complète doivent être modifiés. Si vous définissez des chemins tels que `/projects`, ils fonctionnent toujours, car ils sont toujours relatifs à la structure des répertoires.
 
 ### Fragments de documents
 
@@ -388,23 +388,23 @@ Le serveur prend simplement la partie {{DOMxRef("URL/pathname", "pathname")}} de
 > [!NOTE]
 > De nombreux serveurs génèrent du contenu pour une URL à la volée plutôt que de le récupérer à partir d'un fichier statique. Si vous utilisez un [cadre web](/fr/docs/Learn_web_development/Core/Frameworks_libraries), votre répertoire de code source peut également être très différent de ce qui est déployé sur le serveur. Lorsque vous travaillez avec votre propre site web, vous devez comprendre vos outils de construction et la configuration de votre serveur pour savoir comment les URL sont associées à vos fichiers sources.
 
-Si nous démarrons un serveur web (voir [Comment configurer un serveur de test local&nbsp;?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)) en utilisant notre dossier d'exemple comme racine, et que le {{Glossary("domain name", "nom de domaine")}} du site est défini sur `exemple.com`, notre fichier `pdfs/project-brief.pdf` est disponible à l'adresse `https://www.exemple.com/pdfs/project-brief.pdf`.
+Si nous démarrons un serveur web (voir [Comment configurer un serveur de test local&nbsp;?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)) en utilisant notre dossier d'exemple comme racine, et que le {{Glossary("domain name", "nom de domaine")}} du site est défini sur `example.com`, notre fichier `pdfs/project-brief.pdf` est disponible à l'adresse `https://www.example.com/pdfs/project-brief.pdf`.
 
 Tous les liens sont résolus par rapport à l'URL du document courant, donc&nbsp;:
 
-- Pour toutes les pages du domaine `https://exemple.com`, un lien vers `/pdfs/project-brief.pdf` crée toujours un lien vers `https://www.exemple.com/pdfs/project-brief.pdf`, dont le chemin est `/pdfs/project-brief.pdf`. Le serveur recherche le dossier `pdfs` dans le répertoire racine, puis recherche le fichier `project-brief.pdf` à l'intérieur de ce dossier.
-- Un lien vers `projects/index.html` crée un lien vers `https://www.exemple.com/projects/index.html`, mais seulement lorsqu'il est inclus dans un fichier situé dans le répertoire racine, comme le fichier `index.html` de niveau supérieur, ou `contacts.html`. Si vous l'incluiez, par exemple, dans un fichier HTML à `pdfs/index.html`, il pointe vers `https://www.exemple.com/pdfs/projects/index.html`, dont le chemin est `/pdfs/projects/index.html`, qui n'existe pas, donc vous obtenez un lien cassé.
+- Pour toutes les pages du domaine `https://example.com`, un lien vers `/pdfs/project-brief.pdf` crée toujours un lien vers `https://www.example.com/pdfs/project-brief.pdf`, dont le chemin est `/pdfs/project-brief.pdf`. Le serveur recherche le dossier `pdfs` dans le répertoire racine, puis recherche le fichier `project-brief.pdf` à l'intérieur de ce dossier.
+- Un lien vers `projects/index.html` crée un lien vers `https://www.example.com/projects/index.html`, mais seulement lorsqu'il est inclus dans un fichier situé dans le répertoire racine, comme le fichier `index.html` de niveau supérieur, ou `contacts.html`. Si vous l'incluiez, par exemple, dans un fichier HTML à `pdfs/index.html`, il pointe vers `https://www.example.com/pdfs/projects/index.html`, dont le chemin est `/pdfs/projects/index.html`, qui n'existe pas, donc vous obtenez un lien cassé.
 
 #### La page `index.html` par défaut
 
 Lorsque vous faites référence à un fichier `index.html`, vous n'avez généralement pas besoin d'inclure `index.html` dans l'URL/chemin, car les serveurs web recherchent une page d'accueil par défaut appelée `index.html` lorsqu'aucun nom de fichier n'est précisé.
 
-En reprenant notre exemple de chemin `projects/index.html`, nous pourrions simplement écrire le chemin comme `projects`, et cela crée un lien vers `https://www.exemple.com/projects/index.html`. Lors de la navigation vers la page, nous pourrions écrire l'URL comme `https://www.exemple.com/projects/` et cela nous amène toujours au bon endroit.
+En reprenant notre exemple de chemin `projects/index.html`, nous pourrions simplement écrire le chemin comme `projects`, et cela crée un lien vers `https://www.example.com/projects/index.html`. Lors de la navigation vers la page, nous pourrions écrire l'URL comme `https://www.example.com/projects/` et cela nous amène toujours au bon endroit.
 
 > [!NOTE]
-> La barre oblique finale (`/`) à la fin de l'URL est importante. Avec elle, un lien relatif vers `contacts.html` à l'intérieur de `projects/index.html` se résout en `https://www.exemple.com/projects/contacts.html` (qui se trouve dans le même dossier). Sans elle, l'URL est traitée comme un fichier, et le lien relatif se résout en `https://www.exemple.com/contacts.html` (qui est un dossier au-dessus).
+> La barre oblique finale (`/`) à la fin de l'URL est importante. Avec elle, un lien relatif vers `contacts.html` à l'intérieur de `projects/index.html` se résout en `https://www.example.com/projects/contacts.html` (qui se trouve dans le même dossier). Sans elle, l'URL est traitée comme un fichier, et le lien relatif se résout en `https://www.example.com/contacts.html` (qui est un dossier au-dessus).
 >
-> [Différents serveurs web gèrent une URL comme `https://www.exemple.com/projects` différemment <sup>(angl.)</sup>](https://github.com/slorber/trailing-slash-guide) — certains redirigent automatiquement vers l'URL avec une barre oblique finale, tandis que d'autres servent le même `index.html` sans redirection. Ce dernier comportement peut casser les liens relatifs.
+> [Différents serveurs web gèrent une URL comme `https://www.example.com/projects` différemment <sup>(angl.)</sup>](https://github.com/slorber/trailing-slash-guide) — certains redirigent automatiquement vers l'URL avec une barre oblique finale, tandis que d'autres servent le même `index.html` sans redirection. Ce dernier comportement peut casser les liens relatifs.
 
 ## Bonnes pratiques pour les liens
 
@@ -457,7 +457,7 @@ Voici quelques exemples suggérant les genres de texte pouvant être employé&nb
 </p>
 
 <p>
-  <a href="https://www.exemple.com/flux-video/" target="_blank">
+  <a href="https://www.example.com/flux-video/" target="_blank">
     Regarder la vidéo (le flux s'ouvre dans un nouvel onglet, qualité HD)
   </a>
 </p>

@@ -3,8 +3,6 @@ title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
 ---
 
-{{jsSidebar("Statements")}}
-
 L'instruction **`try...catch`** regroupe des instructions à exécuter et définit une réponse si l'une de ces instructions provoque une exception.
 
 {{InteractiveExample("JavaScript Demo: Statement - Try...Catch")}}

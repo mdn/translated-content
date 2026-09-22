@@ -3,8 +3,6 @@ title: extensionTypes
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes
 ---
 
-{{AddonSidebar}}
-
 Certains types communs utilisés dans d'autres APIs WebExtensions.
 
 ## Types

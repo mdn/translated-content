@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 在任何浏览器中，**`Navigator.appName`** 属性的值始终为“`Netscape`”。此属性仅出于兼容性目的而保留。
 

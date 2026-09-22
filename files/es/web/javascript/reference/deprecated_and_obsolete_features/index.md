@@ -47,7 +47,7 @@ Las siguientes ahora son propiedades de instancias de `RegExp`, ya no del objeto
 
 ### Propiedades de función
 
-- Las propiedades {{jsxref("Function.prototype.caller", "caller")}} y {{jsxref("Function.argument", "argument")}} están obsoletas porque filtran la función llamadora. En lugar de la propiedad arguments, debes usar el objeto {{jsxref("Functions/arguments", "arguments")}} dentro de los cierres de funciones.
+- Las propiedades {{jsxref("Function.prototype.caller", "caller")}} y `argument` están obsoletas porque filtran la función llamadora. En lugar de la propiedad arguments, debes usar el objeto {{jsxref("Functions/arguments", "arguments")}} dentro de los cierres de funciones.
 
 ### Generador heredado
 
@@ -56,12 +56,12 @@ Las siguientes ahora son propiedades de instancias de `RegExp`, ya no del objeto
 
 ### Iterador
 
-- {{jsxref("StopIteration")}} está en desuso.
+- `StopIteration` está en desuso.
 - {{jsxref("Iterator")}} está en desuso.
 
 ### Métodos de objeto
 
-- {{jsxref("Object.watch", "watch")}} y {{jsxref("Object.unwatch", "unwatch")}} están en desuso. En su lugar usa {{jsxref("Proxy")}}.
+- `watch` y `unwatch` están en desuso. En su lugar usa {{jsxref("Proxy")}}.
 - `__iterator__` está en desuso.
 - `Object.prototype.__noSuchMethod__` está en desuso. En su lugar usa {{jsxref("Proxy")}}.
 
@@ -69,7 +69,7 @@ Las siguientes ahora son propiedades de instancias de `RegExp`, ya no del objeto
 
 - {{jsxref("Date.getYear", "getYear")}} y {{jsxref("Date.setYear", "setYear")}} se ven afectados por el problema del año 2000 y se han subsumido por {{jsxref("Date.getFullYear", "getFullYear")}} y {{jsxref("Date.setFullYear", "setFullYear")}}.
 - En nuevo código, debes usar {{jsxref("Date.toISOString", "toISOString")}} en lugar del método en desuso {{jsxref("Date.toUTCString", "toGMTString")}}.
-- {{jsxref("Date.toLocaleFormat", "toLocaleFormat")}} está en desuso.
+- `toLocaleFormat` está en desuso.
 
 ### Funciones
 
@@ -92,7 +92,7 @@ Las siguientes ahora son propiedades de instancias de `RegExp`, ya no del objeto
 ### Métodos de cadena
 
 - [Métodos de envoltura HTML](/es/docs/tag/HTML%20wrapper%20methods) tal como {{jsxref("String.prototype.fontsize")}} y {{jsxref("String.prototype.big")}}.
-- {{jsxref("String.prototype.quote")}} se eliminó desde Firefox 37.
+- `String.prototype.quote` se eliminó desde Firefox 37.
 - el parámetro no estándar `flags` en {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}} y {{jsxref("String.prototype.replace")}} están en desuso.
 - {{jsxref("String.prototype.substr")}} probablemente no se eliminará pronto, pero está definido en el [Anexo B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-string.prototype.substr) del estándar ECMA-262, cuya [introducción](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) dice: "... Los programadores no deben usar o asumir la existencia de estas características y comportamientos al escribir un nuevo código ECMAScript. ..."
 
@@ -113,28 +113,28 @@ Estas características obsoletas se han eliminado por completo de JavaScript y y
 
 ### Función
 
-| Propiedad                             | Descripción                    |
-| ------------------------------------- | ------------------------------ |
-| {{jsxref("Function.arity", "arity")}} | Número de argumentos formales. |
+| Propiedad | Descripción                    |
+| --------- | ------------------------------ |
+| `arity`   | Número de argumentos formales. |
 
 ### Array
 
-| Propiedad                       | Descripción                                         |
-| ------------------------------- | --------------------------------------------------- |
-| {{jsxref("Array.observe()")}}   | Observación asincrónica de cambios en los arreglos. |
-| {{jsxref("Array.unobserve()")}} | Elimina observadores.                               |
+| Propiedad           | Descripción                                         |
+| ------------------- | --------------------------------------------------- |
+| `Array.observe()`   | Observación asincrónica de cambios en los arreglos. |
+| `Array.unobserve()` | Elimina observadores.                               |
 
 ### Número
 
-- {{jsxref("Number.toInteger()")}}
+- `Number.toInteger()`
 
 ### ParallelArray
 
-- {{jsxref("ParallelArray")}}
+- `ParallelArray`
 
 ### Declaraciones
 
-- {{jsxref("Statements/for_each...in", "for each...in")}} está obsoleta. En su lugar utiliza {{jsxref("Statements/for...of", "for...of")}}.
+- `for each...in` está obsoleta. En su lugar utiliza {{jsxref("Statements/for...of", "for...of")}}.
 - La desestructuración {{jsxref("Statements/for...in", "for...in")}} está obsoleta. En su lugar utiliza {{jsxref("Statements/for...of", "for...of")}}.
 - los bloques let y la expresiones let están obsoletas.
 

@@ -16,13 +16,13 @@ function calcAngleDegrees(x, y) {
 }
 
 console.log(calcAngleDegrees(5, 5));
-// Sortie attendue : 45
+// Résultat attendu : 45
 
 console.log(calcAngleDegrees(10, 10));
-// Sortie attendue : 45
+// Résultat attendu : 45
 
 console.log(calcAngleDegrees(0, 10));
-// Sortie attendue : 90
+// Résultat attendu : 90
 ```
 
 ## Syntaxe

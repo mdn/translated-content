@@ -12,7 +12,7 @@ L'interface **`AuthenticatorAttestationResponse`**, rattachée à l'[API Web Aut
 - `AuthenticatorAttestationResponse.clientDataJSON`
   - : Les données relatives aux client pour l'authentification telles que l'origine et le _challenge_. La propriété {{domxref("AuthenticatorAttestationResponse.clientDataJSON","clientDataJSON")}} est héritée de l'interface {{domxref("AuthenticatorResponse")}}.
 - {{domxref("AuthenticatorAttestationResponse.attestationObject")}}
-  - : Un objet {{domxref("ArrayBuffer")}} qui contient les données de l'authenticateur ainsi qu'une instruction d'attestation pour la nouvelle paire de clés.
+  - : Un objet {{jsxref("ArrayBuffer")}} qui contient les données de l'authenticateur ainsi qu'une instruction d'attestation pour la nouvelle paire de clés.
 
 ## Méthodes
 

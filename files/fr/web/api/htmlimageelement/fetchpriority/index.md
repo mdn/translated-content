@@ -3,13 +3,12 @@ title: "HTMLImageElement : propriété fetchPriority"
 short-title: fetchPriority
 slug: Web/API/HTMLImageElement/fetchPriority
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 1f00512e3c9a20b5bb927db529bb5d639e346d96
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`fetchPriority`** de l'interface {{DOMxRef("HTMLImageElement")}} représente une indication pour le navigateur sur la façon de prioriser le chargement d'une image particulière par rapport aux autres images.
-Elle reflète l'attribut [`fetchpriority`](/fr/docs/Web/HTML/Reference/Elements/img#fetchpriority) de l'élément HTML {{HTMLElement("img")}} correspondant.
+La propriété **`fetchPriority`** de l'interface {{DOMxRef("HTMLImageElement")}} représente une indication pour le navigateur sur la façon de prioriser le chargement d'une image particulière par rapport aux autres images. Elle reflète l'attribut [`fetchpriority`](/fr/docs/Web/HTML/Reference/Elements/img#fetchpriority) de l'élément HTML `<img>` correspondant.
 
 ## Valeur
 

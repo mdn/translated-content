@@ -4,8 +4,6 @@ slug: Web/MathML/Reference/Element/munderover
 original_slug: Web/MathML/Element/munderover
 ---
 
-{{MathMLRef()}}
-
 L'élément MathML `<munderover>` est utilisé pour attacher des accents et limites à la fois en-dessous et au-dessus d'une expression.
 La syntaxe est la suivante: `<munder> base script-en-dessous script-au-dessus </munder>`
 

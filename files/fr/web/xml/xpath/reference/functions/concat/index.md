@@ -4,8 +4,6 @@ slug: Web/XML/XPath/Reference/Functions/concat
 original_slug: Web/XPath/Functions/concat
 ---
 
-{{XsltSidebar}}
-
 La fonction `concat` concatène deux ou plusieurs chaînes et retourne la chaîne résultante.
 
 ### Syntaxe

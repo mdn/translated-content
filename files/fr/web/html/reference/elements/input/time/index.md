@@ -197,7 +197,7 @@ startTime.addEventListener("input", () => {
 
 {{EmbedLiveSample("Format de la valeur de l'heure", 600, 80)}}
 
-Lorsque un formulaire incluant un champ `time` est soumis, la valeur est encodée avant d'être incluse dans les données du formulaire. L'entrée de données du formulaire pour un champ de type `time` est toujours sous la forme `name=HH%3Amm`, ou `name=HH%3Amm%3Ass` si des secondes sont incluses (voir [Utiliser l'attribut `step`](#utiliser_lattribut_step)).
+Lorsque un formulaire incluant un champ `time` est envoyé, la valeur est encodée avant d'être incluse dans les données du formulaire. L'entrée de données du formulaire pour un champ de type `time` est toujours sous la forme `name=HH%3Amm`, ou `name=HH%3Amm%3Ass` si des secondes sont incluses (voir [Utiliser l'attribut `step`](#utiliser_lattribut_step)).
 
 ### Utiliser l'attribut `step`
 

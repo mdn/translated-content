@@ -1,11 +1,14 @@
 ---
-title: border-block-color
+title: CSS `border-block-color` プロパティ
+short-title: border-block-color
 slug: Web/CSS/Reference/Properties/border-block-color
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
-**`border-block-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロックの両端の境界色を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界色に対応づけられます。これは {{cssxref("border-top-color")}} および {{cssxref("border-bottom-color")}}、または {{cssxref("border-right-color")}} および {{cssxref("border-left-color")}} のどちらかに対応し、どちらに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
+**`border-block-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロック方向の両端の境界色を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界色に対応づけられます。これは {{cssxref("border-top-color")}} および {{cssxref("border-bottom-color")}} の組み合わせ、または {{cssxref("border-right-color")}} および {{cssxref("border-left-color")}} の組み合わせのどちらかに対応し、どちらに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
+
+他の方向の境界色については、 {{cssxref("border-inline-color")}} によって、 {{cssxref("border-inline-start-color")}} と {{cssxref("border-inline-end-color")}} を設定することができます。
 
 {{InteractiveExample("CSS デモ: border-block-color")}}
 
@@ -45,8 +48,6 @@ direction: rtl;
 }
 ```
 
-他の方向の境界については、 {{cssxref("border-inline-color")}} によって、 {{cssxref("border-inline-start-color")}} と {{cssxref("border-inline-end-color")}} の両方を設定することができます。
-
 ### 構文
 
 ```css
@@ -63,6 +64,8 @@ border-block-color: unset;
 
 ### 値
 
+このプロパティは、単一の `<color>` 値として指定します。
+
 - {{CSSXref("&lt;color&gt;")}}
   - : 境界線の色です。
 
@@ -76,7 +79,7 @@ border-block-color: unset;
 
 ## 例
 
-### 縦書きテキストの境界
+### 縦書きテキストの境界線
 
 #### HTML
 
@@ -104,7 +107,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("縦書きテキストの境界", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストの境界線", 140, 140)}}
 
 ## 仕様書
 
@@ -117,5 +120,5 @@ div {
 ## 関連情報
 
 - [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)
-- このプロパティは {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}} のうちの一つに対応します
+- このプロパティは、物理的な境界プロパティである {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}} のいずれかに対応します。
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

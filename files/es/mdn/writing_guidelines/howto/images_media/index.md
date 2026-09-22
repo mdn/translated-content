@@ -3,7 +3,7 @@ title: Cómo añadir imágenes, medios y recursos
 short-title: Añadir medios
 slug: MDN/Writing_guidelines/Howto/Images_media
 l10n:
-  sourceCommit: 0ff7ba5177bf2e66214bd90b58590c6bf3acb758
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 Esta página describe cómo añadir imágenes y medios a las páginas de documentación de MDN.

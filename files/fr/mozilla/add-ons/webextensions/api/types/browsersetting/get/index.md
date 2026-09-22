@@ -3,8 +3,6 @@ title: get()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get
 ---
 
-{{AddonSidebar}}
-
 La méthode `BrowserSetting.get()` obtient la valeur actuelle du paramètre du navigateur et une énumération indiquant comment la valeur du paramètre est actuellement controléee..
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

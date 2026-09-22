@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Canvas API")}}
 
-{{domxref("Window")}} 接口的 **`createImageBitmap`** 从给定的来源创建位图，也可以进行裁剪以包含源图像的一部分。它接受各种不同的图像来源，并返回一个会兑现 {{domxref("ImageBitmap")}} 的 {{domxref("Promise")}}。
+{{domxref("Window")}} 接口的 **`createImageBitmap`** 从给定的来源创建位图，也可以进行裁剪以包含源图像的一部分。它接受各种不同的图像来源，并返回一个会兑现 {{domxref("ImageBitmap")}} 的 {{jsxref("Promise")}}。
 
 ## 语法
 

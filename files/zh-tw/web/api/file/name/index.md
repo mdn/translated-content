@@ -5,8 +5,6 @@ slug: Web/API/File/name
 
 {{APIRef("File API")}}{{non-standard_header}}
 
-{{deprecated_header(7.0)}}
-
 ## 總覽
 
 回傳檔案名稱，基於安全因素，檔案路徑不包含這個屬性。

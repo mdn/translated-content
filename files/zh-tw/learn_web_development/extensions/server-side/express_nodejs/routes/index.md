@@ -154,12 +154,12 @@ app.get(/.*fish$/, function (req, res) {
 
 例如，考慮一個編碼的 URL，其中包含有關用戶和書本的信息：`http://localhost:3000/users/34/books/8989`。我們可以使用`userId`和`bookId`路徑參數，提取如下所示的信息：
 
-```plain
-app.get('/users/:userId/books/:bookId', function (req, res) {
+```js
+app.get("/users/:userId/books/:bookId", function (req, res) {
   // Access userId via: req.params.userId
   // Access bookId via: req.params.bookId
   res.send(req.params);
-})
+});
 ```
 
 路由參數的名稱，必須由「單詞字符」（AZ，az，0-9 和\_）組成。

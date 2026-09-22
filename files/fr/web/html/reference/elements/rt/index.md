@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<rt>`** indique la composante texte d'une annotation Ruby, il est notamment utilisé pour la prononciation, la traduction ou la translitération des caractères d'Asie orientale. Cet élément est toujours contenu dans un élément {{HTMLElement("ruby")}}.
+L'élément [HTML](/fr/docs/Web/HTML) **`<rt>`** indique la composante texte d'une annotation Ruby, il est notamment utilisé pour la prononciation, la traduction ou la translittération des caractères d'Asie orientale. Cet élément est toujours contenu dans un élément {{HTMLElement("ruby")}}.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;rt&gt;", "tabbed-shorter")}}
 
@@ -32,7 +32,7 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 
 ### Utiliser les annotations ruby
 
-Cet exemple fournit la translitération en Romaji pour les caractères kanji à l'intérieur de l'élément {{HTMLElement("ruby")}}&nbsp;:
+Cet exemple fournit la translittération en Romaji pour les caractères kanji à l'intérieur de l'élément {{HTMLElement("ruby")}}&nbsp;:
 
 ```html
 <ruby>

@@ -3,7 +3,7 @@ title: Propriété CSS `border-block-start-style`
 short-title: border-block-start-style
 slug: Web/CSS/Reference/Properties/border-block-start-style
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-block-start-style`** définit le style de la bordure logique de début de bloc d'un élément, qui correspond à une bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle peut correspondre à {{CSSxRef("border-top-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}} ou {{CSSxRef("border-left-style")}} selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
@@ -53,7 +53,7 @@ writing-mode: vertical-lr;
 ## Syntaxe
 
 ```css
-/* Valeurs de type <'border-style'> */
+/* Valeurs avec un mot-clé */
 border-block-start-style: dashed;
 border-block-start-style: dotted;
 border-block-start-style: groove;
@@ -70,7 +70,7 @@ Les propriétés associées sont {{CSSxRef("border-block-end-style")}}, {{CSSxRe
 
 ### Valeurs
 
-- `<'border-style'>`
+- {{CSSxRef("&lt;line-style&gt;")}}
   - : Le style utilisé pour la ligne de la bordure, voir {{CSSxRef("border-style")}}.
 
 ## Définition formelle

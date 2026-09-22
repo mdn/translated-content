@@ -1,8 +1,9 @@
 ---
-title: "<ol>: 順序付きリスト要素"
+title: HTML `<ol>` 順序付きリスト要素
+short-title: <ol>
 slug: Web/HTML/Reference/Elements/ol
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 **`<ol>`** は [HTML](/ja/docs/Web/HTML) の要素で、項目の順序付きリストを表します。ふつうは番号付きのリストとして表示されます。

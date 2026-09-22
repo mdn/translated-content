@@ -9,7 +9,7 @@ HTML-элементы {{HTMLElement("script")}} предоставляют **`HT
 
 JavaScript файлы должны обслуживаться с `application/javascript` [MIME type](/ru/docs/Web/HTTP/Guides/MIME_types), но браузеры снисходительны и блокируют их только, если скрипты обслуживаются с типом изображение (`image/*`), типом видео (`video/*`), типом аудио (`audio/*`), или `text/csv`. Если скрипт заблокирован, его элемент получает событие [`error`](/ru/docs/Web/API/HTMLElement/error_event); в противном случае, он получает событие [`success`](/ru/docs/Web/API/IDBRequest/success_event).
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Свойства
 
@@ -58,7 +58,7 @@ _Наследует свойства от своего родителя, {{domxr
     </tr>
     <tr>
       <td><code id="async_property">async</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td rowspan="2">
         <p>
           Атрибуты <code>async</code> и <code>defer</code>
@@ -135,7 +135,7 @@ _Наследует свойства от своего родителя, {{domxr
     </tr>
     <tr>
       <td><code id="defer_property">defer</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
     </tr>
     <tr>
       <td>
@@ -180,7 +180,7 @@ _Наследует свойства от своего родителя, {{domxr
     </tr>
     <tr>
       <td><code>noModule</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td>
         Это булево свойство выполняет остановку выполнения скрипта в браузере,
         поддерживающим

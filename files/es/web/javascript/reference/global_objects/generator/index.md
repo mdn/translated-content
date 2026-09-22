@@ -69,7 +69,7 @@ Firefox(SpiderMonkey) tambén implementa una versión mas temprana de generadore
 - `Generator.prototype.next()` {{non-standard_inline}}
   - : Retorna el valor ofrecido por la expresión {{jsxref("Operators/yield", "yield")}}. Esto se corresponde con el método next() en el objeto generador de ES2015.
 - `Generator.prototype.close()` {{non-standard_inline}}
-  - : Cierra el generador. Sí el método next() es llamado por la expresión {{jsxref("StopIteration")}}, un error será lanzado. Esto se corresponde con el método return() del objeto generador de ES2015.
+  - : Cierra el generador. Sí el método next() es llamado por la expresión `StopIteration`, un error será lanzado. Esto se corresponde con el método return() del objeto generador de ES2015.
 - `Generator.prototype.send()` {{non-standard_inline}}
   - : Utilizado para enviar un valor al generador. El valor es retornado por la expresion {{jsxref("Operators/yield", "yield")}}, y retorna el valor ofrecido por la siguiente expresion {{jsxref("Operators/yield", "yield")}}. `send(x)` Se corresponde a `next(x)` en el objeto generador de ECMAScript 2015.
 - `Generator.prototype.throw()` {{non-standard_inline}}
@@ -105,7 +105,7 @@ console.log(it.next());   // throws StopIteration (as the generator is now close
 
 - {{jsxref("Deprecated_and_obsolete_features", "The legacy generator function", "", 1)}}
 - {{jsxref("Deprecated_and_obsolete_features", "The legacy generator function expression", "", 1)}}
-- {{jsxref("StopIteration")}}
+- `StopIteration`
 - [The legacy Iterator protocol](/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
 
 ### Generadores ES2015

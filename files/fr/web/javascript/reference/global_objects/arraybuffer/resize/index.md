@@ -75,6 +75,6 @@ if (buffer.resizable) {
 
 ## Voir aussi
 
-- L'objet {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}
 - La propriété {{JSxRef("ArrayBuffer.prototype.resizable")}}
 - La propriété {{JSxRef("ArrayBuffer.prototype.maxByteLength")}}

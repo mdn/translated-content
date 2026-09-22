@@ -3,8 +3,6 @@ title: TypedArray.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 ---
 
-{{JSRef}}
-
 La méthode **`keys()`** renvoie un nouvel objet `Array Iterator` contenant les clés pour chaque indice du tableau typé.
 
 {{InteractiveExample("JavaScript Demo: TypedArray.keys()")}}

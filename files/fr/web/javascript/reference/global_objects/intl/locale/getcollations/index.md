@@ -48,5 +48,5 @@ console.log(locale.getCollations()); // ["pinyin", "stroke", "zhuyin", "emoji", 
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}
 - La propriété {{JSxRef("Intl.Locale.prototype.collation")}}

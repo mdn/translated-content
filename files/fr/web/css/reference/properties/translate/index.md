@@ -128,11 +128,11 @@ translate: unset;
 ### Valeurs
 
 - Une seule valeur de longueur/pourcentage ({{CSSxRef("&lt;length-percentage&gt;")}})
-  - : Une longueur ({{CSSxRef("&lt;length&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) qui définit une translation en deux dimensions. La translation est la même pour l'axe X et l'axe Y. Cela est équivalent à la fonction `translate()` (translation en deux dimensions) avec une seule valeur.
+  - : Une longueur ({{CSSxRef("&lt;length&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) qui définit une translation en deux dimensions. La translation est la même pour l'axe X et l'axe Y. C'est équivalent à la fonction `translate()` (translation en deux dimensions) avec une seule valeur.
 - Deux valeurs de longueur/pourcentage ({{CSSxRef("&lt;length-percentage&gt;")}})
-  - : Deux longueurs ({{CSSxRef("&lt;length&gt;")}}) ou pourcentages ({{CSSxRef("&lt;percentage&gt;")}}) qui définissent respectivement les composantes horizontale et verticale d'une translation en deux dimensions. Cela est équivalent à la fonction `translate()` appelée avec ces deux arguments.
+  - : Deux longueurs ({{CSSxRef("&lt;length&gt;")}}) ou pourcentages ({{CSSxRef("&lt;percentage&gt;")}}) qui définissent respectivement les composantes horizontale et verticale d'une translation en deux dimensions. C'est équivalent à la fonction `translate()` appelée avec ces deux arguments.
 - Trois valeurs
-  - : Deux valeurs de longueur/pourcentage ({{CSSxRef("&lt;length-percentage&gt;")}}) et une longueur ({{CSSxRef("&lt;length&gt;")}}) qui définissent respectivement les composantes horizontale, verticale et en profondeur de la translation en trois dimensions. Cela est équivalent à la fonction `translate3d()` appelée avec ces trois arguments.
+  - : Deux valeurs de longueur/pourcentage ({{CSSxRef("&lt;length-percentage&gt;")}}) et une longueur ({{CSSxRef("&lt;length&gt;")}}) qui définissent respectivement les composantes horizontale, verticale et en profondeur de la translation en trois dimensions. C'est équivalent à la fonction `translate3d()` appelée avec ces trois arguments.
 - `none`
   - : Cette valeur indique qu'aucune translation ne devrait être appliquée.
 

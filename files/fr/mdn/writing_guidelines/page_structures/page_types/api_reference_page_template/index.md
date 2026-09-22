@@ -2,7 +2,7 @@
 title: Modèle de sous-page de référence d'API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template
 l10n:
-  sourceCommit: 6aca3e5157dbc163fe8209d9bf8cc3f2e8ec3f9d
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 > [!NOTE]
@@ -52,7 +52,6 @@ l10n:
 > Ces macros sont ajoutées automatiquement par la chaîne d'outils (il n'est pas nécessaire de les ajouter/supprimer)&nbsp;:
 >
 > - `\{{SeeCompatTable}}` — cela génère une bannière **Ceci est une technologie expérimentale** qui indique que la technologie est [expérimentale](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#expérimental). Si elle est expérimentale et que la technologie est cachée derrière une préférence dans Firefox, vous devez également remplir une entrée pour elle dans la page [Fonctionnalités expérimentales dans Firefox](/fr/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — cela génère une bannière **Obsolète** qui indique que la technologie est [obsolète](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#obsolète).
 > - `\{{Non-standard_Header}}` — cela génère une bannière **Non standard** qui indique que la fonctionnalité ne fait partie d'aucune spécification.
 >
 > Vous devez mettre à jour ou supprimer les macros suivantes selon les conseils ci-dessous&nbsp;:
@@ -65,11 +64,11 @@ l10n:
 >
 > Ne fournissez pas manuellement les macros d'en-tête de statut. Reportez-vous à la section ["Comment les statuts des fonctionnalités sont ajoutés ou mis à jour"](/fr/docs/MDN/Writing_guidelines/Page_structures/Feature_status#comment_les_statuts_sont-ils_ajoutés_ou_mis_à_jour) pour ajouter ces statuts à la page.
 >
-> Des exemples des bannières **Contexte sécurisé**, **Disponible dans les workers**, **Expérimental**, **Obsolète** et **Non standard** sont présentés juste après ce bloc de notes.
+> Des exemples des bannières **Contexte sécurisé**, **Disponible dans les workers**, **Expérimental** et **Non standard** sont présentés juste après ce bloc de notes.
 >
 > _N'oubliez pas de supprimer cette note explicative avant de publier._
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 Le paragraphe de résumé — commencez par nommer l'interface, en indiquant à quelle API elle appartient et ce qu'elle fait. Idéalement, cela doit être une ou deux phrases courtes. Vous pouvez copier la plupart de ces informations à partir du résumé de l'interface sur la page de destination correspondante de l'API.
 

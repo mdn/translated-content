@@ -3,8 +3,6 @@ title: tabs.insertCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 ---
 
-{{AddonSidebar}}
-
 Injecter du code CSS dans une page web.
 
 Pour utiliser cette API vous devez avoir la permission "[host permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)" ou utiliser la permission "[activeTab permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)".

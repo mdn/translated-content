@@ -3,7 +3,7 @@ title: Propriété CSS `contain`
 short-title: contain
 slug: Web/CSS/Reference/Properties/contain
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`contain`** indique qu'un élément et son contenu sont, autant que possible, indépendants du reste de l'arbre du document.
@@ -101,37 +101,31 @@ contain: unset;
 
 ### Valeurs
 
-La propriété `contain` peut prendre l'une des valeurs suivantes&nbsp;:
-
-- Le mot-clé `none` **ou**
-- Un ou plusieurs des mots-clés séparés par des espaces `size` (ou `inline-size`), `layout`, `style` et `paint`, dans n'importe quel ordre **ou**
-- L'une des valeurs raccourcies `strict` ou `content`
-
-Les mots-clés ont les significations suivantes&nbsp;:
+Cette propriété est définie sous la forme d'une valeur unique (`none`, `strict` ou `content`) ou d'une liste, séparée par des espaces, comprenant un ou plusieurs des éléments suivants&nbsp;: `size` (ou `inline-size`), `layout`, `style` et `paint`, dans n'importe quel ordre&nbsp;:
 
 - `none`
   - : L'élément est affiché normalement, aucune compartimentation n'est appliquée.
 - `strict`
   - : Toutes les règles possibles de compartimentation à l'exception de `style` sont appliquées. Cela correspond à `contain: size layout paint`.
 - `content`
-  - : Toutes les règles de compartimentation, à l'exception de celles pour `size` et `style`, sont appliquées à l'élément. Cela est équivalent à `contain: layout paint`.
+  - : Toutes les règles de compartimentation, à l'exception de celles pour `size` et `style`, sont appliquées à l'élément. C'est équivalent à `contain: layout paint`.
 - `size`
   - : Cette valeur indique que l'élément peut être dimensionné sans avoir à examiner les éléments descendants pour les modifications de la taille. Cette valeur ne peut pas être combinée avec `inline-size`.
 - `inline-size`
-  - : La compartimentation de la taille en ligne est appliquée à l'élément. La taille en ligne de l'élément peut être calculée isolément, en ignorant les éléments enfants. Cette valeur ne peut pas être combinée avec `size`.
+  - : La compartimentation de la taille en incise est appliquée à l'élément. La taille en incise de l'élément peut être calculée isolément, en ignorant les éléments enfants. Cette valeur ne peut pas être combinée avec `size`.
 - `layout`
   - : Cette valeur indique qu'aucun élément en dehors de l'élément, ne peut impacter sa disposition interne et réciproquement.
 - `style`
-  - : Cette valeur indique que les propriétés ayant un effet sur un élément et ses descendants voire plus sont bien limitées à l'élément englobant.
+  - : Pour les propriétés pouvant affecter plus qu'un simple élément et ses descendants, les effets ne dépassent pas les limites de l'élément conteneur. Les compteurs et les guillemets sont limités à l'élément et à son contenu.
 - `paint`
-  - : Cette valeur indique que les éléments descendants de l'élément ne sont pas affichés en dehors de ses limites. Si un élément est en dehors de l'écran ou n'est pas visible, cette valeur assure que les éléments descendants ne sont pas visibles non plus.
+  - : Les descendants de l'élément ne s'affichent pas en dehors de ses limites. Si la boîte contenante est hors écran, le navigateur n'a pas besoin de dessiner les éléments qu'elle contient — ceux-ci doivent également être hors écran puisqu'ils sont entièrement contenus dans cette boîte. Si un descendant déborde des limites de l'élément conteneur, il est alors rogné au niveau du bord de rognage de débordement de l'élément conteneur. Par défaut, ce bord correspond à la boîte de remplissage pour les éléments non remplacés.
 
 ## Description
 
 Il existe quatre types de compartimentation CSS&nbsp;: taille, mise en page, style et peinture, qui s'appliquent à l'élément englobant.
 La propriété est une liste de mots-clés séparés par des espaces, choisie parmi un sous-ensemble des cinq valeurs standard ou l'une des deux valeurs raccourcies.
 Les modifications des propriétés compartimentées à l'intérieur de l'élément ne se propagent pas en dehors de cet élément vers le reste de la page.
-Le principal avantage de la compartimentation est que le navigateur n'a pas à recalculer ni à réafficher aussi souvent le DOM ou la mise en page, ce qui entraîne de modestes gains de performance pour le rendu des pages statiques et des gains plus importants pour les applications dynamiques.
+Le principal avantage de la compartimentation est que le navigateur n'a pas à recalculer ni à ré-afficher aussi souvent le DOM ou la mise en page, ce qui entraîne de modestes gains de performance pour le rendu des pages statiques et des gains plus importants pour les applications dynamiques.
 
 L'utilisation de la propriété `contain` est utile sur les pages comportant des groupes d'éléments censés être indépendants, car elle peut empêcher l'intérieur d'un élément d'avoir des effets secondaires en dehors de sa boîte de délimitation.
 
@@ -246,7 +240,7 @@ div {
 ```
 
 La première carte utilise la compartimentation, ce qui isole sa mise en page du reste de la page.
-On peut réutiliser cette carte à d'autres endroits de la page sans se préoccuper du recalcul de la mise en page des autres éléments.
+On peut réutiliser cette carte à d'autres endroits de la page sans se préoccuper du recalcule de la mise en page des autres éléments.
 Si des éléments flottants chevauchent les limites de la carte, les éléments du reste de la page ne sont pas affectés.
 Lorsque le navigateur recalcule le sous‑arbre de l'élément englobant, seul cet élément est recalculé. Rien à l'extérieur de l'élément compartimenté n'a besoin d'être recalculé.
 De plus, la boîte fixe utilise la carte comme conteneur de mise en page pour se positionner.
@@ -254,7 +248,7 @@ De plus, la boîte fixe utilise la carte comme conteneur de mise en page pour se
 La deuxième et la troisième carte n'ont pas de compartimentation.
 Le contexte de mise en page de la boîte fixe dans la deuxième carte est l'élément racine, de sorte que la boîte fixe est positionnée dans le coin supérieur droit de la page.
 Un flottant chevauche les limites de la deuxième carte, provoquant un décalage de mise en page inattendu sur la troisième carte, visible dans le positionnement de l'élément HTML `<h2>`.
-Lorsque le recalcul a lieu, il n'est pas limité à un conteneur.
+Lorsque le recalcule a lieu, il n'est pas limité à un conteneur.
 Cela affecte les performances et perturbe le reste de la mise en page.
 
 {{EmbedLiveSample("Compartimentation de mise en page", "100%", 350)}}
@@ -262,7 +256,7 @@ Cela affecte les performances et perturbe le reste de la mise en page.
 ### Compartimentation de style
 
 La compartimentation de style limite la portée des [compteurs](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) et des [guillemets](/fr/docs/Web/CSS/Reference/Properties/quotes) à l'élément compartimenté.
-Pour les compteurs CSS, les propriétés {{CSSxRef("counter-increment")}} et {{CSSxRef("counter-set")}} sont limitées à l'élément comme si celui‑ci était à la racine du document.
+Pour les compteurs CSS, les propriétés {{CSSxRef("counter-increment")}} et {{CSSxRef("counter-set")}} sont limitées à l'élément comme si celui‑ci est à la racine du document.
 
 #### Compartimentation et compteurs
 

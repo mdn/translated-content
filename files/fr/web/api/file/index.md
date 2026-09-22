@@ -55,7 +55,7 @@ _L'interface `File` ne définit aucune méthode, mais hérite des méthodes de l
 - {{domxref("Blob.text()", "Blob.text()")}}
   - : Transforme le `File` en un flux (_stream_) et le lit en entier. Renvoie une {{jsxref("Promise", "promesse")}} qui se résoud en une {{jsxref("String")}} (texte).
 - {{domxref("Blob.arrayBuffer()", "Blob.arrayBuffer()")}}
-  - : Transforme le `File` en un flux (_stream_) et le lit en entier. Retourne une {{jsxref("Promise", "promesse")}} qui se résoud en un {{domxref("ArrayBuffer")}}.
+  - : Transforme le `File` en un flux (_stream_) et le lit en entier. Retourne une {{jsxref("Promise", "promesse")}} qui se résoud en un {{jsxref("ArrayBuffer")}}.
 
 ## Spécifications
 

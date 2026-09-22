@@ -13,7 +13,11 @@ La [pseudo-clase CSS](/es/docs/Web/CSS) **`:blank`** selecciona elementos de ent
 
 ## Sintáxis
 
-{{CSSSyntax}}
+```css
+:blank {
+  /* ... */
+}
+```
 
 ## Especificaciones
 

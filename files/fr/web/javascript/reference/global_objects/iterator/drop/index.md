@@ -134,5 +134,5 @@ new Set([1, 2, 3]).values().drop(4).next(); // { value: undefined, done: true }
 
 - [Prothèse d'émulation de `Iterator.prototype.drop` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-helpers)
 - [Prothèse d'émulation es-shims de `Iterator.prototype.drop` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
-- L'objet {{JSxRef("Iterator")}}
+- L'objet natif {{JSxRef("Iterator")}}
 - La méthode {{JSxRef("Iterator.prototype.take()")}}

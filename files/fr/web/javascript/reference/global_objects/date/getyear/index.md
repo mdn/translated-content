@@ -3,10 +3,8 @@ title: "Date : méthode getYear()"
 short-title: getYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getYear
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 La méthode **`getYear()`** des instances de {{JSxRef("Date")}} retourne l'année pour cette date selon l'heure locale. Comme `getYear()` ne retourne pas les années complètes (problème de l'an 2000), elle est obsolète et a été remplacée par la méthode {{JSxRef("Date/getFullYear", "getFullYear()")}}.
 

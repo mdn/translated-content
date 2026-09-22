@@ -72,7 +72,7 @@ JavaScript は巨大な分野であり、学ぶべき機能やスタイル、テ
 
 ## 関連情報
 
-- [Scrimba: Learn JavaScript](https://scrimba.com/learn-javascript-c0v?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup>
+- [Scrimba: Learn JavaScript](https://scrimba.com/learn-javascript-c0v?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
   - : [Scrimba](https://scrimba.com/?via=mdn) の _Learn JavaScript_ コースでは、 140 以上のインタラクティブなコーディング課題を解きながら、ゲーム、ブラウザー拡張機能、モバイルアプリまで、自分のプロジェクトを構築しながら JavaScript を学んでいきます。 Scrimba は、知識豊富な講師陣による楽しいインタラクティブなレッスン機能を備えています。
 - [Learn JavaScript](https://learnjavascript.online/)
   - : ウェブ開発者を目指す人のための優れたリソース - 短いレッスンとインタラクティブなテスト、自動評価によるガイドで、インタラクティブな環境で JavaScript を学ぶことができます。最初の 40 レッスンは無料で、少額の一回払いでこのコースのすべてを利用することができます。

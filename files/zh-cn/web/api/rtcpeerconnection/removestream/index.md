@@ -11,7 +11,7 @@ slug: Web/API/RTCPeerConnection/removeStream
 
 ## 语法
 
-```plain
+```js-nolint
 pc.removeStream(mediaStream);
 ```
 

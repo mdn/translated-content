@@ -1,43 +1,84 @@
 ---
-title: focusin
+title: "Element : évènement focusin"
+short-title: focusin
 slug: Web/API/Element/focusin_event
+l10n:
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
-L'événement **focusin** est déclenché lorsqu'un élément est sur le point de recevoir le focus. La principale différence avec [`focus`](/fr/docs/Mozilla_event_reference/focus_%28event%29) est que **focusin** se propage.
+L'évènement **`focusin`** se déclenche lorsqu'un élément a reçu la sélection, après l'évènement {{DOMxRef("Element/focus_event", "focus")}}. Les deux évènements diffèrent, car `focusin` se propage, tandis que `focus` ne le fait pas.
 
-## Informations générales
+L'opposé de `focusin` est l'évènement {{DOMxRef("Element/focusout_event", "focusout")}}, qui se déclenche lorsque l'élément a perdu la sélection.
 
-- Spécification
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusIn)
-- Interface
-  - : {{domxref("FocusEvent")}}
-- Propagation
-  - : Oui
-- Annulable
-  - : Non
-- Cible
-  - : {{domxref("Element")}}
-- Action par défaut
-  - : Aucune
+L'évènement `focusin` n'est pas annulable.
 
-## Propriétés
+## Syntaxe
 
-| Property                           | Type                                     | Description                                |
-| ---------------------------------- | ---------------------------------------- | ------------------------------------------ |
-| `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target losing focus.                 |
-| `type` {{readonlyInline}}          | {{jsxref("String")}}                     | The type of event.                         |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Whether the event normally bubbles or not. |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Whether the event is cancellable or not.   |
-| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | Event target receiving focus.              |
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènement.
+
+```js-nolint
+addEventListener("focusin", (event) => { })
+
+onfocusin = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("FocusEvent")}}. Hérite de {{DOMxRef("UIEvent")}} et de {{DOMxRef("Event")}}.
+
+{{InheritanceDiagram("FocusEvent")}}
+
+## Exemples
+
+### Exemple interactif
+
+#### HTML
+
+```html
+<form id="formulaire">
+  <label>
+    Du texte&nbsp;:
+    <input type="text" placeholder="saisir du texte" />
+  </label>
+  <label>
+    Mot de passe&nbsp;:
+    <input type="password" placeholder="mot de passe" />
+  </label>
+</form>
+```
+
+#### JavaScript
+
+```js
+const formulaire = document.getElementById("formulaire");
+
+formulaire.addEventListener("focusin", (event) => {
+  event.target.style.background = "pink";
+});
+
+formulaire.addEventListener("focusout", (event) => {
+  event.target.style.background = "";
+});
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Exemple interactif", "100%", 50)}}
+
+## Spécifications
+
+{{Specifications}}
+
+> [!NOTE]
+> La spécification _UI Events_ décrit un [ordre des évènements de sélection](/fr/docs/Web/API/FocusEvent#ordre_des_évènements) qui est différent de ce que les navigateurs actuels implémentent.
 
 ## Compatibilité des navigateurs
 
 {{Compat}}
 
-## Evénements liés
+## Voir aussi
 
-- [`focus`](/fr/docs/Web/API/Element/focus_event)
-- [`blur`](/fr/docs/Web/API/Element/blur_event)
-- [`focusout`](/fr/docs/Web/API/Element/focusout_event)
+- Les évènements associés&nbsp;: {{DOMxRef("Element/blur_event", "blur")}}, {{DOMxRef("Element/focus_event", "focus")}}, {{DOMxRef("Element/focusout_event", "focusout")}}
+- [Sélection&nbsp;: focus/blur <sup>(angl.)</sup>](https://javascript.info/focus-blur)

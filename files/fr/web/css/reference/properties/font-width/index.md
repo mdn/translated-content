@@ -3,10 +3,8 @@ title: Propriété CSS `font-width`
 short-title: font-width
 slug: Web/CSS/Reference/Properties/font-width
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: f8759faac983abbcd8276fd45ae881bb39efdf7a
 ---
-
-{{SeeCompatTable}}
 
 > [!NOTE]
 > La propriété `font-width` est le remplacement moderne de {{CSSxRef("font-stretch")}}, qui est un alias hérité. Bien que `font-width` soit le nom préféré dans la spécification, `font-stretch` bénéficie actuellement d'une compatibilité plus large avec les navigateurs. Consultez [l'exemple de repli](#fournir_un_repli_pour_font-stretch) et le tableau de [compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails.
@@ -93,9 +91,9 @@ font-width: revert-layer;
 font-width: unset;
 ```
 
-Cette propriété peut être définie en utilisant un seul mot-clé ou une valeur {{CSSxRef("&lt;percentage&gt;")}}.
-
 ### Values
+
+Cette propriété est définie comme une seule valeur parmi la liste suivante&nbsp;:
 
 - `normal`
   - : Définit une police normalement condensée.

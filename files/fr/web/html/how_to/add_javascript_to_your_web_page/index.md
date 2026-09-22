@@ -74,7 +74,7 @@ L'accessibilité est un enjeu majeur du développement logiciel. JavaScript peut
 - **Tout le contenu d'un document doit être disponible sous forme de texte (structuré).** HTML doit être utilisé le plus possible pour stocker le contenu. Par exemple, si vous avez implémenté une super barre de chargement, n'oubliez pas de fournir les pourcentages en texte dans le HTML. De la même façon, les menus déroulants doivent être structurées en [listes non ordonnées](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs) de [liens](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links).
 - **Toutes les fonctionnalités doivent être accessibles depuis le clavier.**
   - Les utilisateur·ice·s doivent pouvoir utiliser la touche de tabulation pour naviguer entre les différents contrôles (les liens, les entrées de formulaires, etc.) en suivant un ordre logique.
-  - Si vous utilisez les événements liés au pointage (les évènements liés à la souris ou au toucher), les fonctionnalités offertes doivent également être accessibles via le clavier.
+  - Si vous utilisez les évènements liés au pointage (les évènements liés à la souris ou au toucher), les fonctionnalités offertes doivent également être accessibles via le clavier.
   - Testez votre site en utilisant uniquement le clavier.
 
 - **N'utilisez pas de limites de temps arbitraires.** Cela prend plus de temps de naviguer au clavier ou d'écouter le contenu lu par un lecteur d'écran. Il est donc impossible de prévoir combien de temps cela prendra pour qu'un·e utilisateur·ice ou pour que le navigateur accomplisse une tâche donnée.

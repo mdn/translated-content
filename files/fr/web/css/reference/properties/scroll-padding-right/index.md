@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ab63f9fa055a0d5b1b4eeac21e9a1e98c4f62c82
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`scroll-padding-right`** définit des décalages pour le bord droit dans la dimension en ligne de la _zone de visualisation optimale_ du conteneur de défilement&nbsp;: la région utilisée comme zone cible pour placer des éléments à la vue de l'utilisateur·ice. Cela permet à l'auteur·ice d'exclure des régions du conteneur de défilement qui sont masquées par d'autres contenus (comme des barres d'outils ou des barres latérales en position fixe) ou de laisser plus d'espace entre un élément ciblé et les bords du conteneur de défilement.
+La propriété [CSS](/fr/docs/Web/CSS) **`scroll-padding-right`** définit des décalages pour le bord droit dans la dimension en incise (<i lang="en">inline</i> en anglais) de la _zone de visualisation optimale_ du conteneur de défilement&nbsp;: la région utilisée comme zone cible pour placer des éléments à la vue de l'utilisateur·ice. Cela permet à l'auteur·ice d'exclure des régions du conteneur de défilement qui sont masquées par d'autres contenus (comme des barres d'outils ou des barres latérales en position fixe) ou de laisser plus d'espace entre un élément ciblé et les bords du conteneur de défilement.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: scroll-padding-right")}}
 

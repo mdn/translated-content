@@ -38,7 +38,11 @@ p::first-letter {
 
 ## Синтаксис
 
-{{csssyntax}}
+```css
+::first-letter {
+  /* ... */
+}
+```
 
 ## Пример
 

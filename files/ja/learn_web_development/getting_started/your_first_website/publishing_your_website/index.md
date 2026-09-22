@@ -1,15 +1,17 @@
 ---
 title: ウェブサイトの公開
+short-title: 公開
 slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}
 
 ウェブサイトを構成するコードやファイルの整理が終わったら、それをオンラインで公開して、人々が見つけられるようにする必要があります。この記事では、簡単なサンプルコードを手軽にオンラインに公開する方法を説明します。
+
+> [!NOTE]
+> この記事に沿って進めるには、ローカルコンピューター上にサンプルウェブサイトが利用できる必要があります。少なくとも有効な `index.html` ファイルが含まれている必要があります。まだ作成していない場合は、このモジュールの前回の記事（[ウェブサイトをどんな外見にするか](/ja/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)から順に学習しながら、ウェブサイトを作成することをお勧めします。
 
 <table>
   <tbody>
@@ -27,7 +29,7 @@ l10n:
           <li>他のホストオプションにはどのようなものがあるか。例えば、Google App Engine、GitHub、CodePen など。</li>
           <li>GitHub Pages を使用したウェブサイトの公開。</li>
           <li>ホスティング、支払方法、ウェブサイトをオンラインで公開する方法。</li>
-          <li>TLD とドメインの登録方法。</li>
+          <li>ドメインの登録方法。</li>
         </ul>
       </td>
     </tr>
@@ -40,63 +42,70 @@ l10n:
 
 ### ホストとドメイン名を手に入れる
 
-コンテンツやウェブサイトの外観をより自由にコントロールするために、多くの人はウェブホスティングとドメイン名の購入を選択します。
+コンテンツやウェブサイトの見え方をより自由に制御するために、多くのプロやビジネスは、ウェブホスティングとドメイン名の購入を選択します。
 
 - ウェブホスティングとは、ホスティング会社の[ウェブサーバー](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)上のファイルスペースを借りることです。ウェブサイトのファイルはウェブサーバー上に置きます。ウェブサーバーは、ウェブサイトのコンテンツをウェブサイトの訪問者に提供します。
-- [ドメイン名](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) は、 `https://www.mozilla.org` や `https://www.bbc.co.uk` のように、お客様のウェブサイトを見つけるための固有のアドレスです。ドメイン名は、**ドメインレジストラー**から何年でも借りることができます。
+- [ドメイン名](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) は、`https://www.mozilla.org` や `https://www.bbc.co.uk` のように、ウェブサイトを見つけるための固有のウェブアドレスです。ドメイン名は、**ドメインレジストラー**から何年でも借りることができます。
 
-多くのプロの手によるウェブサイトはこんな風にして、公開されているわけです。
+ウェブホスティングとドメイン名の両方を同じ会社から取得している場合、両者が連携するように自動的に設定される傾向があります。しかし、別個の会社から取得している場合や、ホスティング会社を別の会社に変更したい場合は、ドメイン名を正しいサーバーを指すようにするためのちょっとした設定を行う必要があります。これは、ユーザーがそのウェブアドレスにアクセスした際に、ウェブサイトが表示されるようにするためです。通常、この設定を行うのが最適で、ドメイン登録業者のウェブサイトにログインし、ドメインの[ネームサーバー](https://kinsta.com/blog/what-is-a-nameserver/)を、ホスティング会社が指定したものに設定します。
 
-さらに、ウェブサイトのファイルを実際にサーバーに転送するには、{{Glossary("FTP", "File Transfer Protocol (FTP、ファイル転送プロトコル)")}} のプログラム（詳しくは、[どのくらいコストがかかりますか: ソフトウェア](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#ソフトウェア)を参照）が必要です。 FTP プログラムの種類は様々ですが、一般的には、ホスティング会社から提供された詳細情報（通常、ユーザー名、パスワード、ホスト名）を使ってウェブサーバーに接続する必要があります。その後、プログラムはローカルファイルとウェブサーバーのファイルを 2 つのウィンドウに表示し、ファイルのやり取りを行うことができます。
+企業は、ウェブサーバーにファイルを転送するためにさまざまな仕組みを使用しています。多くの企業では複数の選択肢を持ち、代表的なものとしては次のようなものがあります。
 
-![ウェブサイトのすべてのファイルやフォルダーを表示し、サーバーにアップロードするFTPクライアント](ftp.jpg)
+- ドラッグ＆ドロップインターフェイス（これについては、後ほど [GitHub 経由での公開](#github_経由での公開)で例をご紹介します）。
+- {{Glossary("FTP", "FTP（ファイル転送プロトコル）")}}プログラム。FTP プログラムにはさまざまな種類がありますが、一般的には、ホスティング会社から指定された情報（通常はユーザー名、パスワード、ホスト名）を使用してウェブサーバーに接続する必要があります。その後、プログラムは 2 つのウィンドウにローカルファイルとウェブサーバー上のファイルを示し、ファイルのやり取りを行う方法を提供します。
+- ウェブサイトのソースコードを GitHub のリポジトリー（下記参照）に保管し、ホスティング会社にアクセス権限を付与して、ソースコードを取得し、必要に応じてビルドを行い、公開する方法。
+- 一部の企業では、ファイルの転送に使用できる[コマンドラインツール](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)を提供しています。
 
 #### ホスティングとドメインを見つけるためのヒント
 
 - MDN は、特定の商用ホスティング会社やドメイン名レジストラーを推奨してはいません。ホスティング会社やレジストラーを見つけるには、「ウェブホスティング」や「ドメイン名」で検索してください。どのレジストラーにも、希望するドメイン名が利用可能かどうかを確認する機能があります。
 - 自宅やオフィスの{{Glossary("ISP", "インターネットサービスプロバイダー")}}が、小規模なウェブサイトのための限定的なホスティングを提供している場合もあります。利用できる機能は限られていますが、初めての試みには最適かもしれません。
-- [Neocities](https://neocities.org/)、[Google Sites](https://sites.google.com/)、[Blogger](https://www.blogger.com)、[WordPress](https://wordpress.com/) のような無料のサービスもあります。有料のものもありますが、最初の実験にはこれらのリソースで十分な場合もあります。
-- ホスティングをドメインの両方を提供している会社もたくさんあります。
+- [Neocities](https://neocities.org/)、[Google Sites](https://sites.google.com/)、[WordPress](https://wordpress.com/) のような無料のサービスもあります。こうしたサービスの範囲は限定的である場合もありますが、初期の実験を行うには十分です。
 
-### GitHub や Google App Engine のようなオンラインツールの利用
+### オンラインツールの利用
 
 ウェブサイトをオンラインで公開できるツールもあります。
 
 - [GitHub](https://github.com/) は、「ソーシャルコーディング」サイトです。コードリポジトリーをアップロードして [Git](https://git-scm.com/) **バージョン管理システム**に保存することができます。このシステムは既定でオープンソースになっており、世界中の誰もが GitHub のコードを見つけ、それを使い、そこから学び、改良することができます。また、 GitHub には [GitHub Pages](https://pages.github.com/) という便利な機能があり、ウェブサイトのコードをウェブ上で公開することができます。
-- [Google App Engine](https://cloud.google.com/appengine/) Google のインフラ上でアプリケーションを構築・実行できる強力なプラットフォームです。複数階層のウェブアプリケーションをゼロから構築する場合も、静的なウェブサイトをホスティングする場合も同様です。詳細は、[Google App Engine でウェブサイトをホスティングするには](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)を参照してください。
+- [Netlify](https://www.netlify.com/) は、GitHub リポジトリーから直接静的ウェブサイトをホスティングできるウェブホスティングプラットフォームです。同時に、デプロイプレビュー、サーバーレス機能、フォーム処理など、数多くの追加機能も提供しています。
+- [Fly.io](https://fly.io/) は、アプリケーションやデータベースをユーザーの近くに展開することができるプラットフォームです。バックエンドサービスが要求されるウェブアプリケーションを保有している場合に、特に適しています。
 
-これらのオプションは通常無料ですが、限定された機能セットでしか成長させることができません。
+これらのオプションは、一般的に無料で利用できますが、機能には制限があります。
 
 ### CodePen のようなウェブベースの IDE の利用
 
-ウェブサイトの開発環境をエミュレートするウェブアプリは数多くあり、HTML、CSS、JavaScript を入力すると、そのコードの結果をウェブサイトとして表示することができます。一般的に、これらのツールは比較的簡単で、学習にも適しており、コードを共有するのにも適しています (例えば、別のオフィスにいる同僚とテクニックを共有したり、デバッグの助けを求めたりする場合など)。また、 (基本的な機能については) 無料です。レンダリングされたページを、固有のウェブアドレスでホスティングしてくれます。ただし、機能は限られており、通常はアセット (画像など) のホスティングスペースは提供されていません。
+ウェブアプリの開発環境をエミュレートするウェブアプリは数多くあり、HTML、CSS、JavaScriptを書き込むことができる上に、それらがレンダリングされて出力ペインに表示されます。一般的に、これらのツールは簡単で、学習にも適しており、コードを共有するのにも適しています（例えば、別のオフィスにいる同僚とテクニックを共有したり、デバッグの助けを求めたりする場合など）。また、（基本的な機能については）無料です。レンダリングされたページを、固有のウェブアドレスでホスティングしてくれます。ただし、機能は限られており、通常は資産（画像など）のホスティングスペースは提供されていません。
 
 これらを試してみて、一番合ったものを見つけてみましょう。
 
+- [Scrimba](https://scrimba.com/new?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
 - [JSFiddle](https://jsfiddle.net/)
-- [Glitch](https://glitch.com/)
-- [JS Bin](https://jsbin.com/)
+- [JSBin](https://jsbin.com/)
 - [CodePen](https://codepen.io/)
-
-![JS Bin のウェブベースの IDE のスクリーンショット](jsbin-screen.png)
 
 ## GitHub 経由での公開
 
-では、GitHub Pages 経由でどれくらい簡単にサイトを公開できるかを実際にやってみましょう。
+では、GitHub Pages 経由でサイトを公開する方法を試してみましょう。
 
 1. まず、 [GitHub にサインアップして](https://github.com/)、メールアドレスの認証を受けましょう。
-2. 次に ファイルを入れるための[リポジトリーを作成](https://github.com/new)しましょう。
-3. このページ上の、 _Repository name_ ボックスに _ユーザー名_.github.io と入力してください。 _ユーザー名_ はあなたのユーザー名です。例えば、私の友達の Bob Smith であれば _bobsmith.github.io_ と入力します。
-   さらに、"_Initialize this repository with a README"_ ボックスをチェックし、 _Create repository_ をクリックしてください。![](github-create-repo.png)
-4. ウェブサイトのフォルダーをリポジトリーの中にドラッグアンドドロップしたら、 _Commit changes_ をクリックしましょう。
+2. 次に ファイルを入れるための[リポジトリーを作成](https://github.com/new)しましょう。このページで次のようにします。
+   1. このページ上の、 _Repository name_ ボックスに _ユーザー名_.github.io と入力してください。 _ユーザー名_ はあなたのユーザー名です。例えば、Bob Smith であれば _bobsmith.github.io_ と入力します。
+   2. ページの最下部にある _Create repository_ ボタンをクリックしてください。
+3. 次のページで、_uploading an existing file_ というリンクを探してクリックしてください。これでファイルのアップロードページが表示されます。
+4. この時点で、ローカルファイルシステムからウェブページ上にファイルをドラッグ＆ドロップして、GitHub リポジトリーにアップロードするのが最適です。その手順は次のとおりです。
+   1. お使いのコンピューターで、ファイルエクスプローラーまたは Finder のウィンドウを開いてください。
+   2. ファイルエクスプローラーとウェブブラウザーのウィンドウの両方が見えるようにしてください。画面上でそれらを隣り合わせに配置してください。
+   3. ファイルエクスプローラーのウィンドウで、サンプルウェブサイトが含まれているフォルダーまで移動してください。
+      > [!NOTE]
+      > フォルダーの中に `index.html` ファイルがあるかを確認しましょう。
+   4. サンプルウェブサイトのファイルをすべて選択します（例えば、キーボードショートカットの <kbd>Ctrl</kbd> + <kbd>A</kbd> を使用するか、macOS では <kbd>Cmd</kbd> + <kbd>A</kbd> を使用します）。
+   5. ファイルエクスプローラーからファイルをドラッグし、GitHub ページの "Drag files here to add them to your repository" というセクションにドロップしてください。
+   6. このセクションの境界線とテキストが変化し、ファイルをドロップできる状態であることを示します。この場所でファイルをドロップしてください。
+   7. ページ下部の _Commit changes_ ボタンをクリックしてください。
+5. ウェブサイトをオンライン上で見るために、ブラウザーから _username_.github.io に移動しましょう。例えば、ユーザー名が _chrisdavidmills_ なら、[_chrisdavidmills_.github.io](https://chrisdavidmills.github.io/) に移動しましょう。
 
    > [!NOTE]
-   > フォルダーの中に `index.html` ファイルがあるかを確認しましょう。
-
-5. では、ウェブサイトをオンライン上で見るために、ブラウザーから username.github.io に移動しましょう。例えば、ユーザー名が chrisdavidmills なら、[chrisdavidmills.github.io](https://chrisdavidmills.github.io/) に移動しましょう。
-
-   > [!NOTE]
-   > ウェブサイトに使えるようになるには少し時間がかかるかもしれません。ウェブサイトがすぐに表示されない場合は、少し待ってみてください。そしてもう一度試してみましょう。
+   > ウェブサイトが公開されるまで、数分かかることがあります。すぐに表示されない場合は、数分待ってから再度試してください。
 
 もっと詳しく知りたい人は [GitHub Pages Help](https://docs.github.com/en/pages/getting-started-with-github-pages) を見てください。
 

@@ -1,32 +1,33 @@
 ---
-title: Object.getOwnPropertySymbols()
+title: "Object : méthode statique getOwnPropertySymbols()"
+short-title: getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode statique **`Object.getOwnPropertySymbols()`** retourne un tableau contenant tous les symboles des propriétés trouvées directement sur un objet donné.
 
-La méthode **`Object.getOwnPropertySymbols()`** renvoie un tableau contenant tous les symboles des propriétés trouvées directement sur un objet donné.
-
-{{InteractiveExample("JavaScript Demo: Object.getOwnPropertySymbols()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Object.getOwnPropertySymbols()")}}
 
 ```js interactive-example
-const object1 = {};
+const object = {};
 const a = Symbol("a");
 const b = Symbol.for("b");
 
-object1[a] = "localSymbol";
-object1[b] = "globalSymbol";
+object[a] = "localSymbol";
+object[b] = "globalSymbol";
 
-const objectSymbols = Object.getOwnPropertySymbols(object1);
+const objectSymbols = Object.getOwnPropertySymbols(object);
 
 console.log(objectSymbols.length);
-// Expected output: 2
+// Résultat attendu : 2
 ```
 
 ## Syntaxe
 
-```js
-Object.getOwnPropertySymbols(obj);
+```js-nolint
+Object.getOwnPropertySymbols(obj)
 ```
 
 ### Paramètres
@@ -40,25 +41,27 @@ Un tableau des symboles trouvés directement sur l'objet passé en argument.
 
 ## Description
 
-De la même façon que {{jsxref("Object.getOwnPropertyNames()")}}, il est possible d'avoir la liste des symboles des propriétés d'un objet donné sous forme d'un tableau. La méthode {{jsxref("Object.getOwnPropertyNames()")}} ne contiendra uniquement que les propriétés « nommées » d'un objet et non pas les propriétés uniquement accessibles via un symbole.
+De la même façon que {{JSxRef("Object.getOwnPropertyNames()")}}, il est possible d'obtenir toutes les propriétés symboliques d'un objet donné sous forme d'un tableau de symboles. Notez que {{JSxRef("Object.getOwnPropertyNames()")}} ne contient pas les propriétés symboliques d'un objet et uniquement les propriétés de type chaîne de caractères.
 
-Par défaut, aucun objet ne possède de propriété accessible via un symbole à l'état initial. Ainsi, `Object.getOwnPropertySymbols()` renvoie un tableau vide sauf si des propriétés nommées avec des symboles ont été définies pour l'objet.
+Comme tous les objets n'ont pas de propriétés symboliques propres initialement, `Object.getOwnPropertySymbols()` retourne un tableau vide sauf si vous avez défini des propriétés symboliques sur votre objet.
 
 ## Exemples
 
+### Utiliser `Object.getOwnPropertySymbols()`
+
 ```js
-var obj = {};
-var a = Symbol("a");
-var b = Symbol.for("b");
+const obj = {};
+const a = Symbol("a");
+const b = Symbol.for("b");
 
-obj[a] = "symboleLocal";
-obj[b] = "symboleGlobal";
+obj[a] = "localSymbol";
+obj[b] = "globalSymbol";
 
-var objectSymboles = Object.getOwnPropertySymbols(obj);
+const objectSymbols = Object.getOwnPropertySymbols(obj);
 
-console.log(objectSymboles.length); // 2
-console.log(objectSymboles); // [Symbol(a), Symbol(b)]
-console.log(objectSymboles[0]); // Symbol(a)
+console.log(objectSymbols.length); // 2
+console.log(objectSymbols); // [Symbol(a), Symbol(b)]
+console.log(objectSymbols[0]); // Symbol(a)
 ```
 
 ## Spécifications
@@ -71,5 +74,6 @@ console.log(objectSymboles[0]); // Symbol(a)
 
 ## Voir aussi
 
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Symbol")}}
+- [La prothèse d'émulation de `Object.getOwnPropertySymbols` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-symbol)
+- La méthode statique {{JSxRef("Object.getOwnPropertyNames()")}}
+- L'objet natif {{JSxRef("Symbol")}}

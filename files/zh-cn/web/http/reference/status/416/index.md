@@ -11,7 +11,7 @@ HTTP **`416 Range Not Satisfiable`** 错误状态码意味着服务器无法处�
 
 ## 状态
 
-```plain
+```http
 416 Range Not Satisfiable
 ```
 

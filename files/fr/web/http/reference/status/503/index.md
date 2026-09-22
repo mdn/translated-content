@@ -2,7 +2,7 @@
 title: 503 Service Unavailable
 slug: Web/HTTP/Reference/Status/503
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse d'erreur serveur](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_serveur) HTTP **`503 Service Unavailable`** indique que le serveur n'est pas prêt à traiter la requête.
@@ -31,7 +31,7 @@ Une page conviviale expliquant le problème doit être envoyée avec cette répo
 ### Réponse d'erreur serveur 503
 
 La requête suivante tente d'obtenir une page web, mais reçoit en retour une réponse `503`.
-Le corps de la réponse contient une page décrivant l'état du serveur avec un lien vers une page d'assistance pour les visiteurs.
+Le corps de la réponse contient une page décrivant l'état du serveur avec un lien vers une page d'assistance pour les visiteur·euse·s.
 Un identifiant est inclus dans le corps de la réponse pour illustrer une méthode pouvant aider les administrateur·ice·s de serveur à identifier la cause du problème&nbsp;:
 
 ```http

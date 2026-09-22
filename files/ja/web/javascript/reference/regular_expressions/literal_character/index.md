@@ -2,10 +2,8 @@
 title: "リテラル文字: a, b"
 slug: Web/JavaScript/Reference/Regular_expressions/Literal_character
 l10n:
-  sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
-
-{{JsSidebar}}
 
 **リテラル文字**は、入力テキスト内で一致するもの自体を示します。
 
@@ -18,7 +16,7 @@ c
 ### 引数
 
 - `c`
-  - : 下記で記述する構文文字以外の単一の文字です。
+  - : 下記で説明する構文文字以外の単一の文字です。
 
 ## 解説
 
@@ -64,7 +62,7 @@ const pattern = /<.+?>/g;
       <td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td>
     </tr>
     <tr>
-      <td><code>!#%&,:;<=>@`~</code></td>
+      <td><code>!#%&,:;&lt;=&gt;@`~</code></td>
       <td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td>
     </tr>
     <tr>
@@ -212,6 +210,6 @@ console.log(pattern.test(string)); // true
 
 ## 関連情報
 
-- [文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-- [正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
+- [文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)ガイド
+- [正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
 - [文字エスケープ: `\n`, `\u{...}`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)

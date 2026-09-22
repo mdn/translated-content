@@ -3,7 +3,7 @@ title: Requête d'une URI
 short-title: Requête
 slug: Web/URI/Reference/Query
 l10n:
-  sourceCommit: 6f149dd37e04fa257d6472e7ee1c5ee5545a405b
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 La **requête** d'une URI est la section qui vient après le [chemin](/fr/docs/Web/URI/Reference/Path).

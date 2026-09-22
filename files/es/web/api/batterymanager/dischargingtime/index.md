@@ -3,7 +3,7 @@ title: BatteryManager.dischargingTime
 slug: Web/API/BatteryManager/dischargingTime
 ---
 
-{{deprecated_header}}{{APIRef("Battery API")}}
+{{APIRef("Battery API")}}
 
 Indíca la cantidad de tiempo, en segundos,
 que restan antes de que la batería se descargue completamente.

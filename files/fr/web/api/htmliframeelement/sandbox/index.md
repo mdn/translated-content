@@ -22,7 +22,7 @@ Bien que la propriété `sandbox` elle-même soit en lecture seule dans le sens 
 <iframe
   id="el"
   title="exemple"
-  src="https://exemple.com"
+  src="https://example.com
   sandbox="allow-same-origin allow-scripts"></iframe>
 ```
 

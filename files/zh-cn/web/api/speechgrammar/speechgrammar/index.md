@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 706cbf21987296c604cc96b7f95095ed7aba6bb8
 ---
 
-{{APIRef("Web Speech API")}}{{Non-standard_Header}}{{deprecated_header}}
+{{APIRef("Web Speech API")}}{{Non-standard_Header}}
 
 {{domxref("SpeechGrammar")}} 接口的 **`SpeechGrammar()`** 构造函数创建一个新的 `SpeechGrammar` 对象实例。
 

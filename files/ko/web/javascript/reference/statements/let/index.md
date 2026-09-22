@@ -45,9 +45,9 @@ let { bar } = foo; // foo = { bar: 10, baz: 12 };
 
 ## 설명
 
-`let`을 사용하면 {{jsxref("statements/block", "블록 명령문", "", 1)}}이나 `let`을 사용한 표현식 내로 범위가 제한되는 변수를 선언할 수 있습니다. 이는 `let`이 {{jsxref("statements/var", "var")}} 키워드와 다른 점으로, `var`는 변수를 블록을 고려하지 않고 현재 함수 (또는 전역 스코프) 어디에서나 접근할 수 있는 변수를 선언합니다. 또한 `let`은 [파서가 구문을 평가해야만 변수를 값으로 초기화](#일시적_사각지대)(아래 참고)한다는 점도 `var`와 다릅니다.
+`let`을 사용하면 {{jsxref("Statements/block", "블록 명령문", "", 1)}}이나 `let`을 사용한 표현식 내로 범위가 제한되는 변수를 선언할 수 있습니다. 이는 `let`이 {{jsxref("Statements/var", "var")}} 키워드와 다른 점으로, `var`는 변수를 블록을 고려하지 않고 현재 함수 (또는 전역 스코프) 어디에서나 접근할 수 있는 변수를 선언합니다. 또한 `let`은 [파서가 구문을 평가해야만 변수를 값으로 초기화](#일시적_사각지대)(아래 참고)한다는 점도 `var`와 다릅니다.
 
-{{jsxref("statements/const", "const")}}와 마찬가지로 `let` 역시 전역 범위 선언에 사용(최상위 스코프 선언)해도 {{domxref("window")}} 객체에 새로운 속성을 추가하지 않습니다.
+{{jsxref("Statements/const", "const")}}와 마찬가지로 `let` 역시 전역 범위 선언에 사용(최상위 스코프 선언)해도 {{domxref("window")}} 객체에 새로운 속성을 추가하지 않습니다.
 
 왜 키워드의 이름이 "**let**"이 됐는지에 대한 설명은 [여기](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri)서 읽을 수 있습니다.
 

@@ -83,11 +83,11 @@ body {
 
 ### Définir des couleurs selon le thème
 
-Par défaut dans les navigateurs qui la prennent en charge, la couleur retournée par la fonction de couleur `light-dark()` dépend de la préférence de l'utilisateur·rice définie dans les paramètres du système d'exploitation (par exemple, mode clair ou sombre) ou dans les réglages de l'agent utilisateur. Vous pouvez aussi modifier ce réglage dans les {{Glossary("developer tools", "outils de développement")}} du navigateur.
+Par défaut dans les navigateurs qui la prennent en charge, la couleur retournée par la fonction de couleur `light-dark()` dépend de la préférence de l'utilisateur·ice définie dans les paramètres du système d'exploitation (par exemple, mode clair ou sombre) ou dans les réglages de l'agent utilisateur. Vous pouvez aussi modifier ce réglage dans les {{Glossary("developer tools", "outils de développement")}} du navigateur.
 
 #### HTML
 
-On inclut trois sections pour cibler les couleurs claires, sombres et celles sélectionnées selon la préférence de l'utilisateur·rice.
+On inclut trois sections pour cibler les couleurs claires, sombres et celles sélectionnées selon la préférence de l'utilisateur·ice.
 
 ```html
 <h1>La fonction CSS <code>light-dark()</code></h1>
@@ -131,10 +131,10 @@ code {
 }
 ```
 
-En plus d'activer la fonction `light-dark()`, la propriété `color-scheme` permet d'outrepasser le thème de l'utilisateur·rice pour certaines sections du document. Forcer une section à n'utiliser qu'un thème clair ou sombre se fait en définissant la propriété `color-scheme` à `light` ou `dark`.
+En plus d'activer la fonction `light-dark()`, la propriété `color-scheme` permet d'outrepasser le thème de l'utilisateur·ice pour certaines sections du document. Forcer une section à n'utiliser qu'un thème clair ou sombre se fait en définissant la propriété `color-scheme` à `light` ou `dark`.
 
 > [!NOTE]
-> Cela ne devrait généralement pas être fait, c'est uniquement à titre de démonstration. Si l'utilisateur·rice a exprimé une préférence, il ne faut généralement pas la surcharger.
+> Cela ne devrait généralement pas être fait, c'est uniquement à titre de démonstration. Si l'utilisateur·ice a exprimé une préférence, il ne faut généralement pas la surcharger.
 
 ```css
 .light {

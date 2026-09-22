@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 实现字体元素的文档对象模型（DOM）表示。HTML 字体元素 {{HTMLElement("font")}} 定义文本的字体大小、字体和颜色。
 

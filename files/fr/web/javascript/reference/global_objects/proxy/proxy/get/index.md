@@ -3,8 +3,6 @@ title: handler.get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 ---
 
-{{JSRef}}
-
 La méthode **`handler.get()`** est une trappe pour intercepter l'accès à la valeur d'une propriété.
 
 {{InteractiveExample("JavaScript Demo: handler.get()", "taller")}}

@@ -3,8 +3,6 @@ title: <frameset>
 slug: Web/HTML/Reference/Elements/frameset
 ---
 
-{{Deprecated_header}}
-
 ## 概述
 
 `<frameset>` 是一个用于包含 {{HTMLElement("frame")}} 的 HTML 元素。

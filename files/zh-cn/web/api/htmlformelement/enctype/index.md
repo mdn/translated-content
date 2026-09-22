@@ -15,9 +15,9 @@ slug: Web/API/HTMLFormElement/enctype
 
 ## 语法
 
-```plain
-string = form.enctype
-form.enctype = string
+```js
+string = form.enctype;
+form.enctype = string;
 ```
 
 ## 例子

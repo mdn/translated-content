@@ -3,7 +3,7 @@ title: CSS `rotate()` 関数
 short-title: rotate()
 slug: Web/CSS/Reference/Values/transform-function/rotate
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 80ab11f9d757b49325122071a8a6210440ec6551
 ---
 
 **`rotate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、要素を二次元平面上の特定の点を中心に、形を崩さずに回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
@@ -36,7 +36,10 @@ transform: rotate(3.142rad);
 </section>
 ```
 
-要素が回転する中心となる特定の点 — 前述 — は、**変換原点**とも呼ばれます。既定では要素の中央ですが、 {{ cssxref("transform-origin") }} プロパティを使用して独自の座標変換原点を設定することができます。
+要素が回転する中心となる特定の点 — 前述 — は、**座標変換原点**とも呼ばれます。既定では要素の中央ですが、 {{ cssxref("transform-origin") }} プロパティを使用して独自の座標変換原点を設定することができます。
+
+> [!NOTE]
+> SVG の [`transform`](/ja/docs/Web/SVG/Reference/Attribute/transform) 属性には独自の文法があり、その中では `rotate()` が、`rotate(45, 50, 50)` のように、回転の中心を示す 2 つのオプションの追加値を受け入れます。この形式は属性内でのみ有効であり、CSS では無効です。CSS の `rotate()` 関数は角度のみを受け取り、中心は {{cssxref("transform-origin")}} で設定します。
 
 ## 構文
 

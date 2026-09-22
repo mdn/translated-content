@@ -44,7 +44,7 @@ Tous les cadres intégrés chargés de façon anticipée dans le document doiven
 ### Utilisation simple
 
 L'exemple ci-dessous montre comment définir un cadre intégré (<i lang="en">iframe</i> en anglais) à chargement différé puis l'ajouter à un `<div>` dans le document.
-Le cadre ne est alors chargé que lorsqu'il est sur le point de devenir visible.
+Le cadre n'est alors chargé que lorsqu'il est sur le point de devenir visible.
 
 ```js
 // Définir une iframe avec chargement différé

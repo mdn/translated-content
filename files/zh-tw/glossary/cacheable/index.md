@@ -13,7 +13,7 @@ slug: Glossary/Cacheable
 
 同樣的,如果請求的方法和響應的狀態都可以被緩存，那請求的響應也都將可以被緩存：
 
-```plain
+```http
 GET /pageX.html HTTP/1.1
 (…)
 
@@ -23,7 +23,7 @@ GET /pageX.html HTTP/1.1
 
 {{HTTPMethod("PUT")}} 請求不能被緩存. 此外，它還將導致所有來源為 {{HTTPMethod("HEAD")}} 或 {{HTTPMethod("GET")}} 相同的 URI 緩存數據無效 :
 
-```plain
+```http
 PUT /pageX.html HTTP/1.1
 (…)
 
@@ -33,7 +33,7 @@ PUT /pageX.html HTTP/1.1
 
 指定的 {{HTTPHeader("Cache-Control")}} 頭部在響應中可以阻止緩存：
 
-```plain
+```http
 GET /pageX.html HTTP/1.1
 (…)
 

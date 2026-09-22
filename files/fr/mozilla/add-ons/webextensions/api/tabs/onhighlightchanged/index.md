@@ -3,8 +3,6 @@ title: tabs.onHighlightChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlightChanged
 ---
 
-{{AddonSidebar}}
-
 > [!WARNING]
 > Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onHighlighted")}} à la place.
 

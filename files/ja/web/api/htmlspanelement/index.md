@@ -1,21 +1,23 @@
 ---
 title: HTMLSpanElement
 slug: Web/API/HTMLSpanElement
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLSpanElement`** インターフェイスは {{HTMLElement("span")}} 要素を表し、 {{DOMxRef("HTMLElement")}} から派生していますが、それ以外のプロパティやメソッドを追加していません。
+**`HTMLSpanElement`** インターフェイスは {{HTMLElement("span")}} 要素を表します。{{DOMxRef("HTMLElement")}} から派生していますが、それ以外のプロパティやメソッドを追加していません。
 
 {{InheritanceDiagram}}
 
 ## プロパティ
 
-_このインターフェイスにはプロパティがありませんが、 {{DOMxRef("HTMLElement")}} からプロパティを継承しています。_
+_このインターフェイスにプロパティはありませんが、 {{DOMxRef("HTMLElement")}} から継承したプロパティがあります。_
 
 ## メソッド
 
-_このインターフェイスにはメソッドがありませんが、 {{DOMxRef("HTMLElement")}} からメソッドを継承しています。_
+_このインターフェイスにメソッドはありませんが、 {{DOMxRef("HTMLElement")}} から継承したメソッドがあります。_
 
 ## 仕様書
 

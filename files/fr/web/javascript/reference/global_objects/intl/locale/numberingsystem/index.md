@@ -48,6 +48,6 @@ console.log(locale.numberingSystem); // "latn"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}
 - La méthode {{JSxRef("Intl.Locale.prototype.getNumberingSystems()")}}
 - [Détails sur les systèmes de numération dans le standard Unicode <sup>(angl.)</sup>](https://github.com/unicode-org/cldr/blob/main/common/supplemental/numberingSystems.xml)

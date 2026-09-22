@@ -3,10 +3,10 @@ title: Propriété CSS `grid-row`
 short-title: grid-row
 slug: Web/CSS/Reference/Properties/grid-row
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`grid-row`** définit la taille et l'emplacement d'un élément de la grille dans une {{Glossary("grid row", "ligne de grille")}} en ajoutant une ligne, un fragment (<i lang="en">span</i> en anglais) ou rien (automatique) à son placement sur la grille, définissant ainsi les bords de début et de fin en ligne de sa {{Glossary("grid areas", "zone de grille")}}.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`grid-row`** définit la taille et l'emplacement d'un élément de la grille dans une {{Glossary("grid row", "ligne de grille")}} en ajoutant une ligne, un fragment (<i lang="en">span</i> en anglais) ou rien (automatique) à son placement sur la grille, définissant ainsi les bords de début et de fin en incise (<i lang="en">inline</i> en anglais) de sa {{Glossary("grid areas", "zone de grille")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: grid-row")}}
 
@@ -115,23 +115,23 @@ Chaque valeur `<grid-line>` peut être définie comme&nbsp;:
   - : S'il existe une ligne nommée avec `<custom-ident>-start`/`<custom-ident>-end`, la première ligne correspondante contribue au placement de l'élément sur la grille.
 
     > [!NOTE]
-    > Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant `grid-row: toto;` cela sélectionnera le début de la grille nommée correspondante (sauf si une autre ligne `toto-start`/`toto-end` a été explicitement déclarée).
+    > Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant `grid-row: toto;` cela sélectionne le début de la grille nommée correspondante (sauf si une autre ligne `toto-start`/`toto-end` a été explicitement déclarée).
 
-    Sinon, la valeur est traitée comme si on avait utilisé `<custom-ident>` et la valeur `1`.
+    Sinon, la valeur est traitée comme si on a utilisé `<custom-ident>` et la valeur `1`.
 
 - `<integer> && <custom-ident>?`
-  - : La n-ième ligne de la grille contribue au placement de l'élément sur la grille. Si un entier négatif est utilisé, le comptage sera fait depuis la fin de la grille explicite.
+  - : La n-ième ligne de la grille contribue au placement de l'élément sur la grille. Si un entier négatif est utilisé, le comptage est fait depuis la fin de la grille explicite.
 
-    Si un nom est fourni pour `<custom-ident>`, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existant avec ce nom, toutes les lignes implicites seront comptées afin de trouver la position.
+    Si un nom est fourni pour `<custom-ident>`, seules les lignes ayant ce nom sont comptées. S'il n'y a pas suffisamment de lignes existant avec ce nom, toutes les lignes implicites sont comptées afin de trouver la position.
 
     Si la valeur entière ({{CSSxRef("&lt;integer&gt;")}}) utilisée est `0`, la règle est invalide.
 
 - `span && [ <integer> || <custom-ident> ]`
   - : Un fragment de grille est utilisé pour le placement de l'élément sur la grille afin que le début de la ligne pour l'élément de la grille soit placé à n lignes du bord de fin.
 
-    Si un nom fourni pour `<custom-ident>`, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, tout les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche seront comptées afin de placer ce fragment.
+    Si un nom fourni pour `<custom-ident>`, seules les lignes ayant ce nom sont comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, toutes les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche sont comptées afin de placer ce fragment.
 
-    Si l'entier ({{CSSxRef("&lt;integer&gt;")}}) n'est pas défini, la valeur par défaut qui sera utilisée sera `1`. Les entiers négatifs ou nuls sont invalides.
+    Si l'entier ({{CSSxRef("&lt;integer&gt;")}}) n'est pas défini, la valeur par défaut qui est utilisée est `1`. Les entiers négatifs ou nuls sont invalides.
 
 ## Définition formelle
 

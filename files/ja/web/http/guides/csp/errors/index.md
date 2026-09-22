@@ -1,12 +1,12 @@
 ---
-title: CSP のエラーと警告 (Content Security Policy)
+title: コンテンツセキュリティポリシー (CSP) のエラーと警告
+short-title: エラーと警告
 slug: Web/HTTP/Guides/CSP/Errors
-original_slug: Web/HTTP/Guides/CSP/Errors
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: dc788bf0ea36cb1ebe809c82aaae2c77cb3e18c0
 ---
 
-このページは CSP のエラーと警告に関する記事を参照する親となり、概要を示したり、可能であれば問題解決の一般的な助言をしたりします。
+ブラウザーの開発者ツールのコンソールに、以下のメッセージのいずれかがログ出力されている場合は、[CSP](/ja/docs/Web/HTTP/Guides/CSP) に関する問題が発生していることを示しています。
 
 - [The page's settings blocked the loading of a resource: %1$S](/ja/docs/Web/HTTP/Guides/CSP/Errors/CSPViolation)
 - The page's settings blocked the loading of a resource at %2$S ("%1$S").
@@ -21,7 +21,7 @@ l10n:
 - Ignoring "%1$S" within script-src or style-src: nonce-source or hash-source specified
 - Ignoring "%1$S" within script-src: 'strict-dynamic' specified
 - Ignoring source "%1$S" (Only supported within script-src).
-- Keyword 'strict-dynamic' within "%1$S" with no valid nonce or hash might block all scripts from loading
+- Keyword 'strict-dynamic' within "%1$S" with no valid {{Glossary("Nonce", "nonce")}} or hash might block all scripts from loading
 - The report URI (%1$S) should be an HTTP or HTTPS URI.
 - This site (%1$S) has a Report-Only policy without a report URI. CSP will not block and cannot report violations of this policy.
 - Failed to parse unrecognized source %1$S
@@ -44,3 +44,7 @@ l10n:
 - Duplicate %1$S directives detected. All but the first instance will be ignored.
 - Directive '%1$S' has been deprecated. Please use directive 'worker-src' to control workers, or directive 'frame-src' to control frames respectively.
 - Couldn't parse invalid sandbox flag '%1$S'
+
+## 関連情報
+
+- HTTP {{HTTPHeader("Content-Security-Policy")}} ヘッダー

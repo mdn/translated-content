@@ -76,6 +76,10 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 
 - [URL API](/ja/docs/Web/API/URL_API)
 
+### ラ
+
+- [レポート API](/ja/docs/Web/API/Reporting_API)
+
 ## API 仕様書英語索引
 
 利用可能なすべての API の一覧です。

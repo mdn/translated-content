@@ -2,7 +2,7 @@
 title: Utiliser les couleurs judicieusement
 slug: Web/CSS/Guides/Colors/Using_color_wisely
 l10n:
-  sourceCommit: ca5d9f9e63b460fc0c9e15ac57d9739e10e4ea0d
+  sourceCommit: d19dec85109590176f946fcceef48c787d578b1e
 ---
 
 Choisir les bonnes couleurs pour un site web peut être délicat, surtout si vous n'avez pas de solides bases en art, en design ou au moins en théorie des couleurs. Un mauvais choix de couleur peut rendre votre site peu attrayant, ou pire, rendre le contenu illisible en raison de problèmes de contraste ou de couleurs conflictuelles. Utiliser les mauvaises couleurs peut rendre votre contenu totalement inutilisable pour les personnes ayant certains problèmes de vision, en particulier le daltonisme.

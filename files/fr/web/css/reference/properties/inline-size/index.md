@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`inline-size`** définit la taille du bloc d'un élément selon l'axe en ligne. Si {{CSSxRef("writing-mode")}} est horizontal, cela correspond à {{CSSxRef("width")}}&nbsp;; si le mode d'écriture est vertical, cela correspond à {{CSSxRef("height")}}. Une propriété associée est {{CSSxRef("block-size")}}, qui définit l'autre dimension de l'élément.
+La propriété [CSS](/fr/docs/Web/CSS) **`inline-size`** définit la taille du bloc d'un élément selon l'axe en incise (<i lang="en">inline</i> en anglais). Si {{CSSxRef("writing-mode")}} est horizontal, cela correspond à {{CSSxRef("width")}}&nbsp;; si le mode d'écriture est vertical, cela correspond à {{CSSxRef("height")}}. Une propriété associée est {{CSSxRef("block-size")}}, qui définit l'autre dimension de l'élément.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: inline-size")}}
 
@@ -90,7 +90,7 @@ La propriété `inline-size` peut prendre les mêmes valeurs que les propriété
 
 ## Exemples
 
-### Définir la taille en pixels sur l'axe en ligne
+### Définir la taille en pixels sur l'axe en incise
 
 #### HTML
 
@@ -110,7 +110,7 @@ La propriété `inline-size` peut prendre les mêmes valeurs que les propriété
 
 #### Résultat
 
-{{EmbedLiveSample("Définir la taille en pixels sur l'axe en ligne")}}
+{{EmbedLiveSample("Définir la taille en pixels sur l'axe en incise")}}
 
 ## Spécifications
 

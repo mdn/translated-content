@@ -3,8 +3,6 @@ title: Groupes et références arrière
 slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 ---
 
-{{jsSidebar("JavaScript Guide")}}
-
 Les groupes permettent de regrouper différents motifs ensemble et les groupes de capture permettent d'extraire des informations supplémentaires quant aux correspondances entre une expression rationnelle et une chaîne de caractères. Les références arrière correspondent au groupe précédemment capturé dans la même expression rationnelle.
 
 {{InteractiveExample("JavaScript Demo: RegExp Groups and backreferences")}}

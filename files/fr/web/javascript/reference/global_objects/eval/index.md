@@ -2,7 +2,7 @@
 title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
 l10n:
-  sourceCommit: fefa80c1e817377a0bbaf6a636ce6b8797f38fbb
+  sourceCommit: 051d02b402b7f76c2078b12283aa18318c34c38b
 ---
 
 > [!WARNING]
@@ -40,7 +40,7 @@ eval(script)
 ### Paramètres
 
 - `script`
-  - : Une instance de {{DOMxRef("TrustedScript")}} ou une chaîne de caractères représentant une expression JavaScript, une instruction ou une suite d'instructions JavaScript. L'expression peut inclure des variables et des propriétés d'objets existants. Elle sera analysée comme un script, donc les déclarations {{JSxRef("Statements/import", "import")}} (qui ne peuvent exister que dans des modules) ne sont pas autorisées.
+  - : Une instance de {{DOMxRef("TrustedScript")}} ou une chaîne de caractères représentant une expression JavaScript, une instruction ou une suite d'instructions JavaScript. L'expression peut inclure des variables et des propriétés d'objets existants. Elle est analysée comme un script, donc les déclarations {{JSxRef("Statements/import", "import")}} (qui ne peuvent exister que dans des modules) ne sont pas autorisées.
 
 ### Valeur de retour
 
@@ -69,7 +69,7 @@ En mode strict, déclarer une variable nommée `eval` ou réassigner `eval` est 
 const eval = 1; // SyntaxError: Unexpected eval or arguments in strict mode
 ```
 
-Si l'argument de `eval()` n'est pas une instance de {{DOMxRef("TrustedScript")}} ou une chaîne de caractères primitive, `eval()` retourne l'argument inchangé. Dans l'exemple suivant, passer un objet `String` au lieu d'une chaîne primitive fait que `eval()` retourne l'objet `String` au lieu d'évaluer la chaîne.
+Si l'argument de `eval()` n'est pas une instance de {{DOMxRef("TrustedScript")}} ou une chaîne de caractères primitive, `eval()` retourne l'argument inchangé. Dans l'exemple suivant, passer un objet `String` au lieu d'une chaîne de caractères primitive fait que `eval()` retourne l'objet `String` au lieu d'évaluer la chaîne de caractères.
 
 ```js
 eval(new String("2 + 2")); // retourne un objet String contenant "2 + 2"
@@ -94,19 +94,19 @@ eval("x + y");
 // Appel indirect utilisant l'opérateur virgule pour retourner eval
 (0, eval)("x + y");
 
-// Appel indirect via le chaînage optionnel
+// Appel indirect avec le chaînage optionnel
 eval?.("x + y");
 
 // Appel indirect utilisant une variable pour stocker et retourner eval
 const myEval = eval;
 myEval("x + y");
 
-// Appel indirect via l'accès aux membres
+// Appel indirect avec l'accès aux membres
 const obj = { eval };
 obj.eval("x + y");
 ```
 
-L'évaluation indirecte peut être vue comme si le code était évalué dans une balise `<script>` séparée. Cela signifie&nbsp;:
+L'évaluation indirecte peut être vue comme si le code est évalué dans une balise `<script>` séparée. Cela signifie&nbsp;:
 
 - L'évaluation indirecte fonctionne dans le contexte global plutôt que dans le contexte local, et le code évalué n'a pas accès aux variables locales dans le contexte où il est appelé.
 
@@ -117,11 +117,11 @@ L'évaluation indirecte peut être vue comme si le code était évalué dans une
     // Appel direct, utilise le contexte local
     console.log(eval("x + y")); // Le résultat est 6
     // Appel indirect, utilise le contexte global
-    console.log(eval?.("x + y")); // Lève une erreur car x n'est pas défini dans le contexte global
+    console.log(eval?.("x + y")); // Lève une erreur, car x n'est pas défini dans le contexte global
   }
   ```
 
-- Un `eval` indirect n'hérite pas de la rigueur du contexte environnant, et n'est en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) que si la chaîne source elle-même contient une directive `"use strict"`.
+- Un `eval` indirect n'hérite pas de la rigueur du contexte environnant, et n'est en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) que si la chaîne de caractères source elle-même contient une directive `"use strict"`.
 
   ```js
   function nonStrictContext() {
@@ -159,7 +159,7 @@ L'évaluation indirecte peut être vue comme si le code était évalué dans une
   strictContextStrictEval(); // Uncaught SyntaxError: Strict mode code may not include a with statement
   ```
 
-- Les variables déclarées avec `var` et les [déclarations de fonction](/fr/docs/Web/JavaScript/Reference/Statements/function) seraient placées dans la portée environnante si la chaîne de caractères source n'était pas interprétée en mode strict — pour l'évaluation indirecte, elles deviennent des variables globales. S'il s'agit d'une évaluation directe dans un contexte en mode strict, ou si la chaîne de caractères source `eval` elle-même est en mode strict, alors les déclarations `var` et les déclarations de fonction ne «&nbsp;fuient&nbsp;» pas dans la portée environnante.
+- Les variables déclarées avec `var` et les [déclarations de fonction](/fr/docs/Web/JavaScript/Reference/Statements/function) sont placées dans la portée environnante si la chaîne de caractères source n'est pas interprétée en mode strict — pour l'évaluation indirecte, elles deviennent des variables globales. S'il s'agit d'une évaluation directe dans un contexte en mode strict, ou si la chaîne de caractères source `eval` elle-même est en mode strict, alors les déclarations `var` et les déclarations de fonction ne «&nbsp;fuient&nbsp;» pas dans la portée environnante.
 
   ```js
   // Ni le contexte ni la chaîne de caractères source ne sont stricts,
@@ -173,8 +173,8 @@ L'évaluation indirecte peut être vue comme si le code était évalué dans une
 
   function strictContext() {
     "use strict";
-    // Le contexte est strict, mais ceci est indirect et la chaîne source
-    // n'est pas stricte, donc c est toujours global
+    // Le contexte est strict, mais ceci est indirect et la chaîne de
+    // caractères source n'est pas stricte, donc c est toujours global
     eval?.("var c = 1;");
     // Évaluation directe dans un contexte strict, donc d est limité
     eval("var d = 1;");
@@ -184,7 +184,7 @@ L'évaluation indirecte peut être vue comme si le code était évalué dans une
   console.log(d); // ReferenceError: d is not defined
   ```
 
-  Les déclarations {{JSxRef("Statements/let", "let")}} et {{JSxRef("Statements/const", "const")}} à l'intérieur de la chaîne évaluée sont toujours limitées à ce script.
+  Les déclarations {{JSxRef("Statements/let", "let")}} et {{JSxRef("Statements/const", "const")}} à l'intérieur de la chaîne de caractères évaluée sont toujours limitées à ce script.
 
 - L'évaluation directe peut avoir accès à des expressions contextuelles supplémentaires. Par exemple, dans le corps d'une fonction, on peut utiliser [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target):
 
@@ -199,9 +199,9 @@ L'évaluation indirecte peut être vue comme si le code était évalué dans une
 
 L'utilisation directe de `eval()` présente plusieurs problèmes&nbsp;:
 
-- `eval()` exécute le code qui lui est passé avec les privilèges de l'appelant. Si vous exécutez `eval()` avec une chaîne de caractères qui pourrait être affectée par une partie malveillante, vous pourriez finir par exécuter du code malveillant sur la machine de l'utilisateur·ice avec les permissions de votre page Web / extension. Plus important encore, permettre à du code tiers d'accéder à la portée dans laquelle `eval()` a été invoqué (si c'est un eval direct) peut entraîner des attaques possibles qui lisent ou modifient les variables locales. Voir [Considérations de sécurité](#considérations_de_sécurité) pour des approches qui atténuent ces risques.
+- `eval()` exécute le code qui lui est passé avec les privilèges de l'appelant. Si vous exécutez `eval()` avec une chaîne de caractères qui peut être affectée par une partie malveillante, vous pouvez finir par exécuter du code malveillant sur la machine de l'utilisateur·ice avec les permissions de votre page Web / extension. Plus important encore, permettre à du code tiers d'accéder à la portée dans laquelle `eval()` a été invoqué (si c'est un eval direct) peut entraîner des attaques possibles qui lisent ou modifient les variables locales. Voir [Considérations de sécurité](#considérations_de_sécurité) pour des approches qui atténuent ces risques.
 - `eval()` est plus lent que les autres solutions, car il doit invoquer l'interpréteur JavaScript, alors que de nombreuses autres constructions sont optimisées par les moteurs JS modernes.
-- Les interpréteurs JavaScript modernes convertissent le JavaScript en code machine Cela signifie que tout concept de nommage de variable est supprimé. Ainsi, toute utilisation de `eval()` obligera le navigateur à effectuer de longues et coûteuses recherches de noms de variables pour déterminer où la variable existe dans le code machine et définir sa valeur. De plus, de nouveaux éléments peuvent être introduits dans cette variable grâce à `eval()`, comme la modification du type de cette variable, ce qui oblige le navigateur à réévaluer tout le code machine généré pour compenser.
+- Les interpréteurs JavaScript modernes convertissent le JavaScript en code machine Cela signifie que tout concept de nommage de variable est supprimé. Ainsi, toute utilisation de `eval()` oblige le navigateur à effectuer de longues et coûteuses recherches de noms de variables pour déterminer où la variable existe dans le code machine et définir sa valeur. De plus, de nouveaux éléments peuvent être introduits dans cette variable grâce à `eval()`, comme la modification du type de cette variable, ce qui oblige le navigateur à réévaluer tout le code machine généré pour compenser.
 - Les minificateurs renoncent à toute minification si la portée dépend de manière transitive de `eval()`, car sinon `eval()` ne peut pas lire la variable correcte à l'exécution.
 
 Il existe de nombreux cas où l'utilisation de `eval()` ou de méthodes associées peut être optimisée, voire évitée.
@@ -242,7 +242,7 @@ Les deux extraits de code ci-dessus peuvent sembler fonctionner de la même mani
 
 - Si vous n'utilisez pas le mode strict, les déclarations `var` dans la source `eval()` deviennent des variables dans la portée environnante. Cela entraîne des problèmes difficiles à déboguer si la chaîne de caractères est acquise à partir d'une entrée externe, en particulier s'il existe déjà une variable portant le même nom.
 - L'évaluation directe peut lire et modifier les liaisons dans la portée environnante, ce qui peut entraîner la corruption des données locales par des entrées externes.
-- Lors de l'utilisation directe de `eval`, en particulier lorsque la source d'évaluation ne peut pas être prouvée comme étant en mode strict, le moteur — et les outils de compilation — doivent désactiver toutes les optimisations liées à la mise en ligne (<i lang="en">inlining</i> en anglais), car la source `eval()` peut dépendre de n'importe quel nom de variable dans son champ d'application environnant.
+- Lors de l'utilisation directe de `eval`, en particulier lorsque la source d'évaluation ne peut pas être prouvée comme étant en mode strict, le moteur — et les outils de compilation — doivent désactiver toutes les optimisations liées à la mise en incise (<i lang="en">inlining</i> en anglais), car la source `eval()` peut dépendre de n'importe quel nom de variable dans son champ d'application environnant.
 
 Cependant, l'utilisation indirecte de `eval()` ne permet pas de passer des liaisons supplémentaires autres que les variables globales existantes pour que la source évaluée puisse les lire. Si vous devez définir des variables supplémentaires auxquelles la source évaluée doit avoir accès, envisagez d'utiliser le constructeur `Function()`.
 
@@ -285,7 +285,7 @@ const propName = getPropName(); // retourne "a" ou "b"
 const result = obj[propName]; // obj["a"] équivaut à obj.a
 ```
 
-Vous pouvez même utiliser cette méthode pour accéder aux propriétés descendantes. Avec `eval()`, cela ressemblerait à ceci&nbsp;:
+Vous pouvez même utiliser cette méthode pour accéder aux propriétés descendantes. Avec `eval()`, cela ressemble à ceci&nbsp;:
 
 ```js
 const obj = { a: { b: { c: 0 } } };
@@ -326,11 +326,11 @@ const propPath = getPropPath(); // suppose que cela retourne "a.b.c"
 const result = setDescendantProp(obj, propPath, 1); // obj.a.b.c vaut désormais 1
 ```
 
-Cependant, sachez que l'utilisation d'accesseurs entre crochets avec une entrée non contrainte n'est pas non plus sûre : cela peut entraîner des [attaques par injection d'objet <sup>(angl.)</sup>](https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md).
+Cependant, sachez que l'utilisation d'accesseurs entre crochets avec une entrée non contrainte n'est pas non plus sûre&nbsp;: cela peut entraîner des [attaques par injection d'objet <sup>(angl.)</sup>](https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md).
 
 #### Utiliser les fonctions de rappel
 
-JavaScript dispose de [fonctions de première classe](/fr/docs/Glossary/First-class_Function), ce qui signifie que vous pouvez passer des fonctions en tant qu'arguments à d'autres API, les stocker dans des variables et des propriétés d'objets, etc. De nombreuses API DOM sont conçues dans cette optique, vous pouvez (et devriez) donc écrire&nbsp;:
+JavaScript dispose de [fonctions de première classe](/fr/docs/Glossary/First-class_Function), ce qui signifie que vous pouvez passer des fonctions en tant qu'arguments à d'autres API, les stocker dans des variables et des propriétés d'objets, etc. De nombreuses API DOM sont conçues dans cette optique, vous pouvez (et devez) donc écrire&nbsp;:
 
 ```js
 // Au lieu de setTimeout("…", 1000) utilisez :
@@ -348,28 +348,28 @@ elt.addEventListener("click", () => {
 
 #### Utiliser JSON
 
-Si la chaîne de caractères sur laquelle vous appelez `eval()` contient des données (par exemple, un tableau&nbsp;: `"[1, 2, 3]"`), par opposition à du code, vous devriez envisager de passer à {{Glossary("JSON")}}, qui permet à la chaîne de caractères d'utiliser un sous-ensemble de la syntaxe JavaScript pour représenter les données.
+Si la chaîne de caractères sur laquelle vous appelez `eval()` contient des données (par exemple, un tableau&nbsp;: `"[1, 2, 3]"`), par opposition à du code, vous devez envisager de passer à {{Glossary("JSON")}}, qui permet à la chaîne de caractères d'utiliser un sous-ensemble de la syntaxe JavaScript pour représenter les données.
 
-Notez que, la syntaxe JSON étant plus limitée que celle de JavaScript, de nombreux littéraux JavaScript valides ne seront pas analysés en tant que JSON. Par exemple, les virgules finales ne sont pas autorisées en JSON, et les noms de propriétés (clés) dans les littéraux d'objet doivent être placés entre guillemets. Veillez à utiliser un sérialiseur JSON pour générer des chaînes de caractères qui seront ensuite analysées en tant que JSON.
+Notez que, la syntaxe JSON étant plus limitée que celle de JavaScript, de nombreux littéraux JavaScript valides ne sont pas analysés en tant que JSON. Par exemple, les virgules finales ne sont pas autorisées en JSON, et les noms de propriétés (clés) dans les littéraux d'objet doivent être placés entre guillemets. Veillez à utiliser un sérialiseur JSON pour générer des chaînes de caractères qui sont ensuite analysées en tant que JSON.
 
-Il est généralement préférable de transmettre des données soigneusement contrôlées plutôt que du code arbitraire. Par exemple, une extension conçue pour extraire le contenu de pages Web pourrait définir ses règles d'extraction dans [XPath](/fr/docs/Web/XML/XPath) plutôt que dans du code JavaScript.
+Il est généralement préférable de transmettre des données soigneusement contrôlées plutôt que du code arbitraire. Par exemple, une extension conçue pour extraire le contenu de pages Web peut définir ses règles d'extraction dans [XPath](/fr/docs/Web/XML/XPath) plutôt que dans du code JavaScript.
 
 ### Considérations de sécurité
 
 Cette méthode peut être utilisée pour exécuter une entrée arbitraire avec les privilèges de l'appelant. Si l'entrée est une chaîne de caractères potentiellement dangereuse fournie par un·e utilisateur·ice, cela constitue un vecteur possible pour des attaques de [par script inter-site (XSS)](/fr/docs/Web/Security/Attacks/XSS).
 
-Par exemple, le code suivant montre comment `eval()` pourrait exécuter `codeMailveillant` fourni par un·e utilisateur·ice&nbsp;:
+Par exemple, le code suivant montre comment `eval()` peut exécuter `codeMailveillant` fourni par un·e utilisateur·ice&nbsp;:
 
 ```js example-bad
 const codeMailveillant = "alert('Code potentiellement malveillant !');";
 const vipere = eval(codeMailveillant);
 ```
 
-Les sites web dotés d'une [politique de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/Guides/CSP) qui définissent [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) ou [`default-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) empêcheront l'exécution de ce code par défaut. Si vous devez autoriser l'exécution des scripts via `eval()`, vous pouvez atténuer les risques en affectant toujours une instance de {{DOMxRef("TrustedScript")}} au lieu d'une chaîne de caractères, et en [imposant les types de confiance](/fr/docs/Web/API/Trusted_Types_API#utiliser_une_csp_pour_appliquer_des_types_approuvés) à l'aide de la directive CSP [`require-trusted-types-for`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for). Cela garantit que l'entrée est passée par une fonction de transformation.
+Les sites web dotés d'une [politique de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/Guides/CSP) qui définissent [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) ou [`default-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) empêchent l'exécution de ce code par défaut. Si vous devez autoriser l'exécution des scripts avec `eval()`, vous pouvez atténuer les risques en affectant toujours une instance de {{DOMxRef("TrustedScript")}} au lieu d'une chaîne de caractères, et en [imposant les types de confiance](/fr/docs/Web/API/Trusted_Types_API#utiliser_une_csp_pour_appliquer_des_types_approuvés) à l'aide de la directive CSP [`require-trusted-types-for`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for). Cela garantit que l'entrée est passée par une fonction de transformation.
 
-Pour permettre l'exécution de `eval()`, vous devez également définir [le mot-clé `trusted-types-eval`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) dans votre directive CSP `script-src`. Le mot-clé [`unsafe-eval`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) permet également `eval()`, mais est beaucoup moins sûr que `trusted-types-eval` car il permettrait l'exécution même sur les navigateurs qui ne prennent pas en charge les types de confiance.
+Pour permettre l'exécution de `eval()`, vous devez également définir [le mot-clé `trusted-types-eval`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) dans votre directive CSP `script-src`. Le mot-clé [`unsafe-eval`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) permet également `eval()`, mais est beaucoup moins sûr que `trusted-types-eval`, car il permet l'exécution même sur les navigateurs qui ne prennent pas en charge les types de confiance.
 
-Par exemple, la CSP requise pour votre site pourrait ressembler à ceci&nbsp;:
+Par exemple, la CSP requise pour votre site peut ressembler à ceci&nbsp;:
 
 ```http
 Content-Security-Policy: require-trusted-types-for 'script'; script-src '<your_allowlist>' 'trusted-types-eval'
@@ -436,7 +436,7 @@ eval(z); // 42
 
 ### `eval()` retourne la valeur de complétion des instructions
 
-`eval()` retourne la valeur de complétion des instructions. Pour `if`, ce serait la dernière expression ou instruction évaluée.
+`eval()` retourne la valeur de complétion des instructions. Pour `if`, c'est la dernière expression ou instruction évaluée.
 
 ```js
 const str = "if (a) { 1 + 1 } else { 1 + 2 }";
@@ -451,7 +451,7 @@ b = eval(str);
 console.log(`b vaut : ${b}`); // b vaut : 3
 ```
 
-L'exemple suivant utilise `eval()` pour évaluer la chaîne de caractères `str`. Cette chaîne de caractères consiste en des instructions JavaScript qui affectent à `z` la valeur de 42 si `x` vaut cinq, et 0 sinon. Lorsque la seconde instruction est exécutée, `eval()` entraînera l'exécution des instructions, les instructions seront évaluées et la valeur de `z` sera donc retournée, car la valeur de complétion d'une affectation est la valeur affectée.
+L'exemple suivant utilise `eval()` pour évaluer la chaîne de caractères `str`. Cette chaîne de caractères consiste en des instructions JavaScript qui affectent à `z` la valeur de 42 si `x` vaut cinq, et 0 sinon. Lorsque la seconde instruction est exécutée, `eval()` entraîne l'exécution des instructions, les instructions sont évaluées et la valeur de `z` est donc retournée, car la valeur de complétion d'une affectation est la valeur affectée.
 
 ```js
 const x = 5;

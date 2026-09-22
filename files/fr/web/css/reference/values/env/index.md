@@ -3,10 +3,10 @@ title: Fonction CSS `env()`
 short-title: env()
 slug: Web/CSS/Reference/Values/env
 l10n:
-  sourceCommit: 4607393c465f5a8bdbb36047f2ec03c2fb058af5
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`env()`** peut être utilisée pour insérer la valeur d'une [variable d'environnement](/fr/docs/Web/CSS/Guides/Environment_variables/Using) définie par l'agent utilisateur dans votre CSS.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`env()`** peut être utilisée pour insérer la valeur d'une [variable d'environnement](/fr/docs/Web/CSS/Guides/Environment_variables/Using) définie par l'agent utilisateur dans votre CSS. Alternativement, `env()` peut être utilisée pour créer des valeurs dynamiques dans des fichiers SVG externes qui sont mises à jour à l'aide de la propriété CSS {{CSSxRef("link-parameters")}}.
 
 ## Syntaxe
 
@@ -22,9 +22,15 @@ env(titlebar-area-y, 40px);
 env(viewport-segment-width 0 0, 40%);
 ```
 
+```svg
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path fill="env(--color, black)" d="..." />
+</svg>
+```
+
 ### Paramètres
 
-La fonction `env( <environment-variable>, <fallback> )` accepte les paramètres suivants&nbsp;:
+La fonction `env( <environment-variable> | <dashed-ident>, <fallback> | <declaration-value> )` accepte les paramètres suivants&nbsp;:
 
 - [`<environment-variable>`](/fr/docs/Web/CSS/Guides/Environment_variables/Using#variables_denvironnement_définies_par_le_navigateur)
   - : Un identifiant personnalisé ({{CSSxRef("&lt;custom-ident&gt;")}}) définissant le nom de la variable d'environnement à insérer. Si le nom fourni représente une variable d'environnement de type tableau, le nom est suivi d'une valeur entière ({{CSSxRef("&lt;integer&gt;")}}) identifiant l'instance spécifique à laquelle le nom fait référence. Le nom de la variable d'environnement est sensible à la casse et peut être l'un des suivants&nbsp;:
@@ -41,14 +47,20 @@ La fonction `env( <environment-variable>, <fallback> )` accepte les paramètres 
     - `viewport-segment-width`, `viewport-segment-height`, `viewport-segment-top`, `viewport-segment-right`, `viewport-segment-bottom`, `viewport-segment-left`
       - : Les dimensions et les positions de décalage de segments spécifiques de la zone d'affichage. Le mot-clé `viewport-segment-*` est suivi de deux valeurs entières ({{CSSxRef("&lt;integer&gt;")}}) séparées par un espace qui indiquent la position horizontale et verticale du segment, ou les indices. Les mots-clés `viewport-segment` ne sont définis que lorsque la zone d'affichage est composée de deux segments ou plus, comme avec les appareils pliables ou articulés.
 
+- {{CSSxRef("&lt;dashed-ident&gt;")}}
+  - : Un identifiant avec tiret (`<dashed-ident>`) est une variable définie par l'utilisateur·ice qui peut être utilisée comme identifiant dans la fonction CSS {{CSSxRef("param")}} pour mettre à jour la valeur.
+
 - `<fallback>` {{Optional_Inline}}
   - : Une valeur de secours à insérer si la variable d'environnement référencée dans le premier argument n'existe pas. Tout ce qui suit la première virgule est considéré comme la valeur de secours. Cela peut être une seule valeur, une autre fonction `env()`, ou une liste de valeurs séparées par des virgules.
+
+- `<declaration-value>` {{Optional_Inline}}
+  - : Une `<declaration-value>` est la valeur par défaut de l'attribut SVG défini dynamiquement. Si la `<declaration-value>` est omise, elle représente une valeur vide.
 
 ## Description
 
 La fonction `env()` est utilisée pour insérer la valeur d'une [variable d'environnement définie par l'agent utilisateur](/fr/docs/Web/CSS/Guides/Environment_variables/Using#variables_denvironnement_définies_par_le_navigateur) à portée globale dans votre CSS. La fonction `env()` peut être utilisée comme valeur de propriété ou à la place de toute partie d'une valeur de propriété ou d'un descripteur (par exemple, dans les [règles de requête de média](/fr/docs/Web/CSS/Reference/At-rules/@media)).
 
-La fonction accepte une variable d'environnement (`<environment-variable>`) comme premier argument. Il s'agit d'un {{CSSxRef("&lt;custom-ident&gt;")}} sensible à la casse, égal au [nom de la variable d'environnement](/fr/docs/Web/CSS/Guides/Environment_variables/Using#variables_denvironnement_définies_par_le_navigateur) à substituer, mais il peut également inclure des valeurs supplémentaires séparées par des espaces si nécessaire. Par exemple, `env(viewport-segment-width 0 0)` renverrait la largeur du segment supérieur ou gauche dans le cas d'un appareil avec plusieurs segments de zone d'affichage.
+La fonction accepte une variable d'environnement (`<environment-variable>`) comme premier argument. Il s'agit d'un {{CSSxRef("&lt;custom-ident&gt;")}} sensible à la casse, égal au [nom de la variable d'environnement](/fr/docs/Web/CSS/Guides/Environment_variables/Using#variables_denvironnement_définies_par_le_navigateur) à substituer, mais il peut également inclure des valeurs supplémentaires séparées par des espaces si nécessaire. Par exemple, `env(viewport-segment-width 0 0)` retourne la largeur du segment supérieur ou gauche dans le cas d'un appareil avec plusieurs segments de zone d'affichage.
 
 Le deuxième argument, s'il est fourni, est la valeur de secours, qui est utilisée si la variable d'environnement référencée dans le premier argument n'est pas prise en charge ou n'existe pas. La valeur de secours peut être une autre variable d'environnement, même avec sa propre valeur de secours.
 
@@ -209,7 +221,7 @@ p {
 
 ### Utiliser `env()` pour s'assurer que le contenu n'est pas masqué par les boutons de contrôle de la fenêtre dans les PWA de bureau
 
-Dans l'exemple suivant, `env()` garantit que le contenu affiché dans une Progressive Web App de bureau utilisant [l'API Window Controls Overlay](/fr/docs/Web/API/Window_Controls_Overlay_API) n'est pas masqué par les boutons de contrôle de la fenêtre du système d'exploitation. Les valeurs `titlebar-area-*` définissent un rectangle où la barre de titre aurait normalement été affichée. Sur les appareils qui ne prennent pas en charge la fonctionnalité Window Controls Overlay, comme les appareils mobiles, les valeurs de repli sont utilisées.
+Dans l'exemple suivant, `env()` garantit que le contenu affiché dans une Progressive Web App de bureau utilisant [l'API Window Controls Overlay](/fr/docs/Web/API/Window_Controls_Overlay_API) n'est pas masqué par les boutons de contrôle de la fenêtre du système d'exploitation. Les valeurs `titlebar-area-*` définissent un rectangle où la barre de titre a normalement été affichée. Sur les appareils qui ne prennent pas en charge la fonctionnalité Window Controls Overlay, comme les appareils mobiles, les valeurs de repli sont utilisées.
 
 Voici à quoi ressemble normalement une PWA installée sur un appareil de bureau&nbsp;:
 
@@ -239,7 +251,7 @@ main {
 ```
 
 > [!NOTE]
-> L'utilisation de `position:fixed` garantit que l'en-tête ne défile pas avec le reste du contenu, et reste aligné avec les boutons de contrôle de la fenêtre, même sur les appareils/navigateurs qui prennent en charge le rebond élastique (également connu sous le nom de rubber banding).
+> L'utilisation de `position:fixed` garantit que l'en-tête ne défile pas avec le reste du contenu, et reste aligné avec les boutons de contrôle de la fenêtre, même sur les appareils/navigateurs qui prennent en charge le rebond élastique (également connu sous le nom de <i lang="en">rubber banding</i>).
 
 ### Segments de la fenêtre
 

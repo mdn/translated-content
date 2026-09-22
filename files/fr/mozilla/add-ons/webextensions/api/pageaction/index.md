@@ -3,8 +3,6 @@ title: pageAction
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction
 ---
 
-{{AddonSidebar}}
-
 Une [action de page](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) est une icône cliquable dans la barre d'adresse du navigateur.
 
 ![](page-action.png)

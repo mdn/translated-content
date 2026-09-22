@@ -3,7 +3,7 @@ title: HTML 属性リファレンス
 short-title: 属性
 slug: Web/HTML/Reference/Attributes
 l10n:
-  sourceCommit: fef6630e9b90f9794d3194ea8389ff70599c6884
+  sourceCommit: b8ffa5128ed5afe5f76b8936723f91d86b8fc7df
 ---
 
 HTML 要素には**属性**が存在します。これは、ユーザーが求める基準を満たすために、要素を構成したり、さまざまな方法で動作を調整したりするための追加の値です。
@@ -91,6 +91,17 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
         {{ HTMLElement("img") }}, {{ HTMLElement("input") }}
       </td>
       <td>画像が表示できない場合の代替テキストです。</td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Attributes">aria-*</a></code>
+      </td>
+      <td>
+        All elements
+      </td>
+      <td>
+        要素のアクセシビリティツリーにおけるステートやプロパティを変更します。適用可能性は具体的な <a href="/ja/docs/Web/Accessibility/ARIA">ARIA</a> 属性によって異なります。
+      </td>
     </tr>
     <tr>
       <td>

@@ -5,7 +5,7 @@ slug: Web/API/AnalyserNode/getByteTimeDomainData
 
 {{ APIRef("Mountain View APIRef Project") }}
 
-La méthode **`getByteTimeDomainData()`** de l'interface {{ domxref("AnalyserNode") }} copie les données de forme d'onde, ou du domaine temporel, dans un tableau {{domxref("Uint8Array")}} passé en paramètre.
+La méthode **`getByteTimeDomainData()`** de l'interface {{ domxref("AnalyserNode") }} copie les données de forme d'onde, ou du domaine temporel, dans un tableau {{jsxref("Uint8Array")}} passé en paramètre.
 
 Si le tableau a moins d'éléments que la propriété {{domxref("AnalyserNode.fftSize")}}, les données en excès sont supprimées. S'il a davantage d'éléments, les éléments non utilisés sont ignorés.
 
@@ -24,7 +24,7 @@ analyseur.getByteTimeDomainData(tableauDonnees);
 
 ### Renvoie
 
-Un tableau {{domxref("Uint8Array")}}.
+Un tableau {{jsxref("Uint8Array")}}.
 
 ## Exemple
 
@@ -78,7 +78,7 @@ draw();
 ## Paramètres
 
 - array
-  - : Le tableau {{domxref("Uint8Array")}} dans lequel les données temporelles seront copiées.
+  - : Le tableau {{jsxref("Uint8Array")}} dans lequel les données temporelles seront copiées.
 
 ## Spécifications
 

@@ -3,8 +3,6 @@ title: OU exclusif binaire (^)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur binaire OU exclusif (XOR) (`^`) renvoie un nombre dont la représentation binaire est une séquence de bits où il y a un `1` pour chaque position où exactement un des bits des deux opérandes vaut `1`.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Bitwise XOR")}}

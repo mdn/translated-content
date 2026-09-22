@@ -22,12 +22,12 @@ Chaque élément avec le rôle `region` doit inclure un label décrivant la fina
 
 Le contenu d'un repère `region` doit avoir du sens s'il est séparé du contenu principal du document.
 
-L'utilisation de l'élément {{HTMLElement('section')}} communique automatiquement qu'une section possède le rôle `region` si elle a un nom accessible. Il est toujours préférable d'utiliser l'élément HTML sémantique approprié, ici `<section>`, plutôt que d'utiliser ARIA.
+L'utilisation de l'élément {{HTMLElement("section")}} communique automatiquement qu'une section possède le rôle `region` si elle a un nom accessible. Il est toujours préférable d'utiliser l'élément HTML sémantique approprié, ici `<section>`, plutôt que d'utiliser ARIA.
 
 ## Propriétés, états et rôles WAI-ARIA associés
 
 - [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) ou [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-  -&nbsp;: Utilisez cet attribut pour labelliser la région. Souvent, la valeur de `aria-labelledby` sera l'identifiant de l'élément titrant la section. Si aucun titre visible n'est présent, utilisez `aria-label`.
+  -&nbsp;: Utilisez cet attribut pour labelliser la région. Souvent, la valeur de `aria-labelledby` est l'identifiant de l'élément titrant la section. Si aucun titre visible n'est présent, utilisez `aria-label`.
 
 ## Exemples
 
@@ -50,7 +50,7 @@ N'utilisez le rôle `region` que si aucun autre élément de sectionnement de co
 
 ### Privilégier le HTML
 
-L'utilisation de l'élément HTML {{HTMLElement('section')}} communique automatiquement que l'élément possède le rôle `region` s'il a un nom accessible. Si possible, préférez utiliser l'élément sémantique `<section>` à la place du rôle `region`.
+L'utilisation de l'élément HTML {{HTMLElement("section")}} communique automatiquement que l'élément possède le rôle `region` s'il a un nom accessible. Si possible, préférez utiliser l'élément sémantique `<section>` à la place du rôle `region`.
 
 ### Labelliser les repères
 
@@ -82,7 +82,7 @@ Si une zone de contenu possède `tabindex="0"`, ajoutez `role="region"` pour ind
 
 ### SVG
 
-`role="region"` peut être déclaré sur des zones de {{SVGElement('svg')}} avec un `aria-label` pour permettre de décrire chaque section de l'image SVG.
+`role="region"` peut être déclaré sur des zones de {{SVGElement("svg")}} avec un `aria-label` pour permettre de décrire chaque section de l'image SVG.
 
 ## Spécifications
 
@@ -90,7 +90,7 @@ Si une zone de contenu possède `tabindex="0"`, ajoutez `role="region"` pour ind
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement('section')}}
+- L'élément HTML {{HTMLElement("section")}}
 - [ARIA&nbsp;: rôle `banner`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role)
 - [ARIA&nbsp;: rôle `main`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/main_role)
 - [ARIA&nbsp;: rôle `contentinfo`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role)

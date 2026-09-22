@@ -3,8 +3,6 @@ title: Proxy.revocable()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
 ---
 
-{{JSRef}}
-
 La méthode **`Proxy.revocable()`** est utilisée afin de créer un objet [`Proxy`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy) révocable.
 
 ## Syntaxe

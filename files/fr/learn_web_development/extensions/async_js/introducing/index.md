@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Async_JS/Introducing
 original_slug: Learn/JavaScript/Asynchronous/Introducing
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
+{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
 
 Dans cet article, nous expliquerons ce qu'est la programmation asynchrone, en quoi elle est nécessaire et nous aborderons brièvement certaines des façons dont les fonctions asynchrones ont été implémentées en JavaScript au fil temps.
 

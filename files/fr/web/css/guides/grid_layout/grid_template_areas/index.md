@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Grid_layout/Grid_template_areas
 original_slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 ---
 
-{{CSSRef}}
-
 {{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Line-based_placement", "Web/CSS/Guides/Grid_layout/Named_grid_lines","Web/CSS/Guides/Grid_layout")}}
 
 Dans [le guide précédent](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement), on a étudié les lignes formées par une grille et comment positionner des objets sur ces lignes. Lorsqu'on utilise une grille CSS, on a toujours ces lignes et celles-ci permettent d'avoir une disposition simple. Toutefois, il existe une autre méthode de disposition avec les grilles, qu'on peut utiliser seule ou combinée avec les lignes. Avec cette méthode, on place les éléments sur des _zones_ de la grille. Nous allons voir dans ce guide comment cela fonctionne voire comment on peut faire de l'ASCII-art en CSS avec les grilles !

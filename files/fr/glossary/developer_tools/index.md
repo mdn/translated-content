@@ -2,12 +2,12 @@
 title: Outils de développement
 slug: Glossary/Developer_Tools
 l10n:
-  sourceCommit: 13839b2979cc244034ffb1fe243240778b0cd23f
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
-Les **outils de développement** sont des programmes qui permettent à un développeur de créer, tester et déboguer un logiciel.
+Les **outils de développement** sont des programmes qui permettent à un·e développeur·euse de créer, tester et déboguer un logiciel.
 
-Les navigateurs courants fournissent des outils de développement intégrés, qui permettent d'inspecter un site web. Ils permettent aux utilisateurs d'inspecter et de déboguer les pages {{Glossary("HTML")}}, {{Glossary("CSS")}} et {{Glossary("JavaScript")}}, de mesurer le trafic réseau qu'ils provoquent et les performances, et bien plus encore.
+Les navigateurs courants fournissent des outils de développement intégrés, qui vous permettent d'inspecter un site web. Ils permettent aux utilisateur·ice·s d'inspecter et de déboguer les pages {{Glossary("HTML")}}, {{Glossary("CSS")}} et {{Glossary("JavaScript")}}, vous permettent d'inspecter le trafic réseau qu'il génère, de mesurer ses performances, et bien plus encore.
 
 ## Voir aussi
 

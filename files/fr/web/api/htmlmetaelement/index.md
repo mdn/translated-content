@@ -2,12 +2,12 @@
 title: HTMLMetaElement
 slug: Web/API/HTMLMetaElement
 l10n:
-  sourceCommit: b5a6d8bc5fd751032f70b88e7ec1ec61339937de
+  sourceCommit: 4c58f4735f986a91bee1b77e336143630df727a2
 ---
 
 {{APIRef("HTML DOM")}}
 
-L'interface **`HTMLMetaElement`** contient les métadonnées descriptives d'un document fournies en HTML via les éléments {{HTMLElement("meta")}}.
+L'interface **`HTMLMetaElement`** contient les métadonnées descriptives d'un document fournies en HTML avec les éléments {{HTMLElement("meta")}}.
 Cette interface hérite de toutes les propriétés et méthodes décrites dans l'interface {{DOMxRef("HTMLElement")}}.
 
 {{InheritanceDiagram}}
@@ -60,7 +60,7 @@ L'attribut `content` définit la taille de la zone d'affichage et est ajouté à
 ```js
 const meta = document.createElement("meta");
 meta.name = "viewport";
-meta.content = "width=device-width, initial-scale=1";
+meta.content = "width=device-width";
 document.head.appendChild(meta);
 ```
 

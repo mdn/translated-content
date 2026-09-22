@@ -1,52 +1,45 @@
 ---
-title: Age
+title: Age ヘッダー
+short-title: Age
 slug: Web/HTTP/Reference/Headers/Age
-original_slug: Web/HTTP/Headers/Age
+l10n:
+  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-**`Age`** ヘッダーには、プロキシーのキャッシュに入ってからの経過時間（秒）が含まれています。
+HTTP の **`Age`** {{Glossary("response header", "レスポンスヘッダー")}}は、オブジェクトがプロキシーのキャッシュに入ってからの経過時間を秒単位で示します。
 
-`Age` ヘッダーは通常０に近い値となっています。もし `Age: 0` であるなら、 おそらくオリジンサーバーからフェッチされただけでしょう。 それ以外の場合は、一般的にプロキシーの現在の日時と HTTP レスポンスに含まれていた{{HTTPHeader("Date")}} ヘッダーとの差分から算出されます。
+`Age` ヘッダーは通常 0 に近い値となっています。
+もし値が `0` であるなら、オブジェクトはおそらくオリジンサーバーからフェッチされただけでしょう。そうでなければ、一般的にプロキシーの現在の日時と HTTP レスポンスに含まれていた {{HTTPHeader("Date")}} ヘッダーとの差分から算出されます。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">ヘッダー種別</th>
-      <td>
-        {{Glossary("Response header","レスポンスヘッダー")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
-      </th>
-      <td>いいえ</td>
+      <td>{{Glossary("Response header","レスポンスヘッダー")}}</td>
     </tr>
   </tbody>
 </table>
 
 ## 構文
 
-```
+```http
 Age: <delta-seconds>
 ```
 
 ## ディレクティブ
 
-- \<delta-seconds>
-  - : オブジェクトがプロキシーキャッシュに入っていた時間 (秒単位) を表す負でない整数。
+- `<delta-seconds>`
+  - : オブジェクトがプロキシーキャッシュに入っていた時間（秒単位）を表す負でない整数。
 
 ## 例
 
-```
+```http
 Age: 24
 ```
 
 ## 仕様書
 
-| 仕様書                        | タイトル                                        |
-| ----------------------------- | ----------------------------------------------- |
-| {{RFC("7234", "Age", "5.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

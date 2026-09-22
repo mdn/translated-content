@@ -59,8 +59,8 @@ Pour plus d'exemples, voir {{JSxRef("Temporal/Instant/add", "add()")}}.
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Instant")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Instant")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/Instant/add", "Temporal.Instant.prototype.add()")}}
 - La méthode {{JSxRef("Temporal/Instant/since", "Temporal.Instant.prototype.since()")}}
 - La méthode {{JSxRef("Temporal/Instant/until", "Temporal.Instant.prototype.until()")}}

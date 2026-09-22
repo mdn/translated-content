@@ -4,8 +4,6 @@ slug: Web/XML/XPath/Reference/Functions/true
 original_slug: Web/XPath/Functions/true
 ---
 
-{{XsltSidebar}}
-
 La fonction `true` retourne la valeur booléenne `true`.
 
 ### Syntaxe

@@ -4,8 +4,6 @@ slug: Web/XML/XSLT/Reference/Element/output
 original_slug: Web/XSLT/Element/output
 ---
 
-{{XsltSidebar}}
-
 L'élément `<xsl:output>` contrôle les caractéristiques du document de sortie. Pour fonctionner correctement dans Netscape, cet élément doit être utilisé, avec l'attribut `method`. À partir de Netscape 7.0, `method="text"` fonctionne comme prévu.
 
 ### Syntaxe

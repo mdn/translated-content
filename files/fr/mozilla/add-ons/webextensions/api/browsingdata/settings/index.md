@@ -3,8 +3,6 @@ title: browsingData.settings()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/settings
 ---
 
-{{AddonSidebar}}
-
 Les navigateurs disposent d'une fonction "Effacer l'historique" intégrée, qui permet à l'utilisateur d'effacer différents types de données de navigation. Cela a une interface utilisateur qui permet à l'utilisateur de sélectionner le type de données à supprimer (par exemple l'historique, les téléchargements, ...) et à quelle distance remonter dans le temps pour supprimer des données.
 
 Cette fonction renvoie la valeur actuelle de ces paramètres.

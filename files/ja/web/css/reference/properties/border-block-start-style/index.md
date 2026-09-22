@@ -1,11 +1,12 @@
 ---
-title: border-block-start-style
+title: CSS `border-block-start-style` プロパティ
+short-title: border-block-start-style
 slug: Web/CSS/Reference/Properties/border-block-start-style
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
-**`border-block-start-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロックの先頭側の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応づけられます。これは {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, {{cssxref("border-left-style")}} のいずれかに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
+**`border-block-start-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロック方向先頭側の境界線のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界線のスタイルに対応づけられます。これは {{cssxref("border-top-style")}}、{{cssxref("border-right-style")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-left-style")}} のいずれかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
 {{InteractiveExample("CSS デモ: border-block-start-style")}}
 
@@ -52,7 +53,7 @@ writing-mode: vertical-lr;
 ## 構文
 
 ```css
-/* <'border-style'> 値 */
+/* キーワード値 */
 border-block-start-style: dashed;
 border-block-start-style: dotted;
 border-block-start-style: groove;
@@ -65,12 +66,12 @@ border-block-start-style: revert-layer;
 border-block-start-style: unset;
 ```
 
-関連するプロパティとしては、 {{cssxref("border-block-end-style")}}, {{cssxref("border-inline-start-style")}}, {{cssxref("border-inline-end-style")}} が要素の他の境界のスタイルを定義します。
+関連するプロパティとしては、{{cssxref("border-block-end-style")}}、{{cssxref("border-inline-start-style")}}、{{cssxref("border-inline-end-style")}} が要素の他の境界線のスタイルを定義します。
 
 ### 値
 
-- `<'border-style'>`
-  - : 境界の線のスタイルです。 {{cssxref("border-style")}} を参照してください。
+- {{cssxref("&lt;line-style&gt;")}}
+  - : 境界線のスタイルです。{{cssxref("border-style")}} を参照してください。
 
 ## 公式定義
 
@@ -123,5 +124,5 @@ div {
 ## 関連情報
 
 - [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)
-- このプロパティは {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, {{cssxref("border-left-style")}} のうちの一つに対応づけられます
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- このプロパティは物理的な境界プロパティである {{cssxref("border-top-style")}}、{{cssxref("border-right-style")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-left-style")}} のいずれかに対応します。
+- {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

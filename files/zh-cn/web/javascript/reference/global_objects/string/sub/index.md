@@ -3,8 +3,6 @@ title: String.prototype.sub()
 slug: Web/JavaScript/Reference/Global_Objects/String/sub
 ---
 
-{{deprecated_header}}
-
 {{jsxref("String")}} 值的 **`sub()`** 方法创建一个 {{HTMLElement("sub")}} 元素字符串，其中嵌入了调用的字符串（`<sub>str</sub>`），这会导致该字符串显示为下标。
 
 > [!NOTE]

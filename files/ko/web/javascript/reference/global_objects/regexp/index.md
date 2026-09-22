@@ -59,7 +59,7 @@ const re = new RegExp("\\w+");
 
 ## 정적 속성
 
-- {{jsxref("RegExp.@@species", "get RegExp[@@species]")}}
+- {{jsxref("RegExp/Symbol.species", "get RegExp[@@species]")}}
   - : 파생 객체를 생성할 때 사용하는 생성자입니다.
 - {{jsxref("RegExp.lastIndex")}}
   - : 다음 판별을 시작할 인덱스입니다.
@@ -93,15 +93,15 @@ const re = new RegExp("\\w+");
   - : 문자열 매개변수에 대해 판별을 실행합니다.
 - {{JSxRef("RegExp.prototype.toString()")}}
   - : 객체의 문자열 표현을 반환합니다. {{JSxRef("Object.prototype.toString()")}} 메서드를 재정의합니다.
-- {{JSxRef("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
+- {{JSxRef("RegExp/Symbol.match", "RegExp.prototype[@@match]()")}}
   - : 주어진 문자열에 대해 일치하는 결과를 반환합니다.
-- {{JSxRef("RegExp.prototype.@@matchAll()", "RegExp.prototype[@@matchAll]()")}}
+- {{JSxRef("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}}
   - : 주어진 문자열에 대해 일치하는 모든 결과를 반환합니다.
-- {{JSxRef("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+- {{JSxRef("RegExp/Symbol.replace", "RegExp.prototype[@@replace]()")}}
   - : 주어진 문자열 내의 일치를 새로운 문자열로 대치합니다.
-- {{JSxRef("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+- {{JSxRef("RegExp/Symbol.search", "RegExp.prototype[@@search]()")}}
   - : 주어진 문자열에 대해 일치하는 인덱스를 반환합니다.
-- {{JSxRef("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- {{JSxRef("RegExp/Symbol.split", "RegExp.prototype[@@split]()")}}
   - : 주어진 문자열을 분할해 배열로 반환합니다.
 
 ## 예제
@@ -147,7 +147,7 @@ s.match(/yes[^]*day/);
 
 ### 접착 플래그와 함께 사용하기
 
-{{JSxRef("Global_Objects/RegExp/sticky", "sticky")}} 플래그는 해당 정규 표현식이 접착 판별, 즉 {{jsxref("RegExp.prototype.lastIndex")}}에서 시작하는 일치만 확인하도록 할 수 있습니다.
+{{JSxRef("RegExp.sticky", "sticky")}} 플래그는 해당 정규 표현식이 접착 판별, 즉 {{jsxref("RegExp.prototype.lastIndex")}}에서 시작하는 일치만 확인하도록 할 수 있습니다.
 
 ```js
 let str = "#foo#";

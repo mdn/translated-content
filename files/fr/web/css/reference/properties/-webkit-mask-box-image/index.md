@@ -3,12 +3,12 @@ title: Propriété CSS `-webkit-mask-box-image`
 short-title: -webkit-mask-box-image
 slug: Web/CSS/Reference/Properties/-webkit-mask-box-image
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 {{Non-standard_Header}}
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) préfixée non standard **`-webkit-mask-box-image`** permet de définir l'image de masque pour la boîte de bordure d'un élément.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) préfixée non standard **`-webkit-mask-box-image`** définit l'image de masque pour la boîte de bordure d'un élément.
 
 > [!NOTE]
 > Cette propriété n'est pas standard et n'est pas en cours de normalisation. Il est recommandé d'utiliser la propriété {{CSSxRef("mask-border")}} à la place.

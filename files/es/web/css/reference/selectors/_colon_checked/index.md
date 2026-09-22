@@ -23,7 +23,11 @@ El usuario puede activar este estado marcando/seleccionando un elemento, o desac
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:checked {
+  /* ... */
+}
+```
 
 ## Ejemplos
 

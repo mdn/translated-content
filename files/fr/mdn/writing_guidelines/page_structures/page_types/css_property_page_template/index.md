@@ -2,7 +2,7 @@
 title: Modèle de page de propriété CSS
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
 l10n:
-  sourceCommit: d2fb8cdc9422dd2b68ff23f616d70811729f1fbd
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 > [!NOTE]
@@ -54,14 +54,13 @@ l10n:
 >
 > - `\{{SeeCompatTable}}` — Cette macro génère une bannière **Expérimentale**, qui indique que la technologie est [expérimentale](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#expérimental).
 >   Si la technologie est expérimentale et est cachée derrière une préférence dans Firefox, vous devez également remplir une entrée pour elle dans la page [Fonctionnalités expérimentales dans Firefox](/fr/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — Cette macro génère une bannière **Obsolète**, qui indique que l'utilisation de la technologie est [déconseillée](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#obsolète).
 > - `\{{Non-standard_Header}}` — Cette macro génère une bannière **Non standard** qui indique que la fonctionnalité ne fait partie d'aucune spécification.
 >
 > Ne fournissez pas manuellement les macros d'en-tête de statut&nbsp;:
 >
 > Reportez-vous à la section [«&nbsp;Comment les statuts des fonctionnalités sont ajoutés ou mis à jour&nbsp;»](/fr/docs/MDN/Writing_guidelines/Page_structures/Feature_status#comment_les_statuts_sont-ils_ajoutés_ou_mis_à_jour) pour ajouter ces statuts à la page.
 >
-> Des exemples des bannières **Expérimentale**, **Obsolète** et **Non standard** sont présentés juste après ce bloc de notes.
+> Des exemples des bannières **Expérimentale** et **Non standard** sont présentés juste après ce bloc de notes.
 >
 > ---
 >
@@ -76,10 +75,10 @@ l10n:
 >
 > _Supprimez cette note explicative avant de publier._
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 Commencez le contenu de la page par un paragraphe introductif, qui nomme la propriété et explique ce qu'elle fait.
-Cela doit idéalement être une ou deux phrases courtes.
+Cela doit idéalement être une ou deux phrases courtes. Toutes les autres explications, le cas échéant, doivent être incluses dans la section «&nbsp;Description&nbsp;».
 
 ## Exemple interactif
 
@@ -90,6 +89,16 @@ Voir la section [Exemples interactifs](/fr/docs/MDN/Writing_guidelines/Page_stru
 ## Propriétés constitutives
 
 Ajoutez cette section uniquement pour les propriétés abrégées, telles que [animation](/fr/docs/Web/CSS/Reference/Properties/animation), afin de lister toutes les propriétés longues associées.
+
+Introduisez les valeurs avec l'une des phrases suivantes, selon le cas&nbsp;:
+
+```md
+Cette propriété est un raccourci pour les propriétés CSS suivantes&nbsp;:
+
+Cette propriété est un raccourci pour les propriétés logiques suivantes&nbsp;:
+
+Cette propriété est un raccourci pour les propriétés physiques suivantes&nbsp;:
+```
 
 ## Syntaxe
 
@@ -102,7 +111,17 @@ Incluez les cas d'utilisation courants sous forme de bloc de code et décrivez l
 
 ### Valeurs
 
-Incluez un terme et une définition pour chaque sous-valeur.
+Incluez une phrase, comme l'une des suivantes, pour indiquer comment la valeur de la propriété est construite&nbsp;:
+
+```md
+Cette propriété est définie comme l'un des mots clés suivants&nbsp;:
+
+Cette propriété est définie comme une seule valeur parmi la liste suivante&nbsp;:
+
+Cette propriété est définie comme une liste de valeurs suivantes séparées par des espaces&nbsp;:
+```
+
+Suivez la phrase par une liste de définitions qui inclut un terme et une définition pour chaque sous-valeur. Si une page de référence MDN existe pour un type de valeur, ajoutez ce lien sur le terme.
 
 - `subvalue1`
   - : Incluez une description de la sous-valeur, son type de données et ce qu'elle représente.
@@ -110,11 +129,17 @@ Incluez un terme et une définition pour chaque sous-valeur.
   - : Incluez une description de la sous-valeur, son type de données et ce qu'elle représente.
 
 > [!WARNING]
-> Ne pas ajouter de [macros de statut en ligne](/fr/docs/MDN/Writing_guidelines/Page_structures/Feature_status#icônes_de_statut_dans_les_listes_de_définitions) sur les pages CSS.
+> Ne pas ajouter de [macros de statut en incise](/fr/docs/MDN/Writing_guidelines/Page_structures/Feature_status#icônes_de_statut_dans_les_listes_de_définitions) sur les pages CSS.
 
 ## Description
 
-Cette section est optionnelle et permet d'inclure une description de la propriété et d'expliquer son fonctionnement. Utilisez cette section pour expliquer les termes associés et ajouter des cas d'utilisation pour la propriété.
+Incluez une description de la propriété et expliquez son fonctionnement. Utilisez cette section pour expliquer les termes associés et ajouter des cas d'utilisation pour la propriété.
+
+Si la propriété fait partie d'une propriété raccourcie, incluez des façons alternatives de déclarer la valeur&nbsp;:
+
+```md
+La propriété `property-name`, ainsi que la propriété \{{CSSxRef("sibling-property")}}, peut également être définie en utilisant la propriété raccourcie \{{CSSxRef("shorthand-property")}}.
+```
 
 ## Définition formelle
 
@@ -138,7 +163,7 @@ Notez que nous utilisons le pluriel «&nbsp;Exemples&nbsp;» même si la page ne
 
 ### Un titre descriptif
 
-Chaque exemple doit avoir un titre H3 nommant l'exemple. Le titre doit être descriptif de ce que fait l'exemple. Par exemple, «&nbsp;Un exemple simple&nbsp;» ne dit rien sur l'exemple et n'est donc pas un bon titre. Le titre doit être concis. Pour une description plus longue, utilisez le paragraphe après le titre.
+Chaque exemple doit avoir un titre H3 nommant l'exemple. Le titre doit être descriptif de ce que fait l'exemple. Par exemple, «&nbsp;Un exemple simple&nbsp;» ne dit rien sur l'exemple et n'est donc pas un bon titre. Cela dit, «&nbsp;Exemple simple&nbsp;» est acceptable pour le premier titre d'exemple lorsqu'il ne fait que démontrer l'affectation de valeur et que des exemples plus complexes suivent. Le titre doit être concis. Pour une description plus longue, utilisez le paragraphe après le titre.
 
 Consultez notre guide sur la façon d'ajouter des [exemples de code](/fr/docs/MDN/Writing_guidelines/Page_structures/Code_examples) pour plus d'informations.
 
@@ -185,8 +210,9 @@ _Pour utiliser cette macro, supprimez les accents inversés et l'antislash dans 
 
 ## Voir aussi
 
-Incluez des liens vers des pages de référence et des guides liés à l'API actuelle. Pour plus de directives, consultez la [section Voir aussi](/fr/docs/MDN/Writing_guidelines/Writing_style_guide#section_«_voir_aussi_») dans le _Guide de style d'écriture_.
+Incluez des liens vers des pages de référence et des guides liés à l'API actuelle. Incluez également un lien vers le module CSS auquel appartient la propriété. Pour plus de directives, consultez la [section Voir aussi](/fr/docs/MDN/Writing_guidelines/Writing_style_guide#section_«_voir_aussi_») dans le _Guide de style d'écriture_.
 
 - lien1
 - lien2
+- lien_module
 - lien_externe (année)

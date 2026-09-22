@@ -1,16 +1,34 @@
 ---
-title: Object.is()
+title: "Object : méthode statique is()"
+short-title: is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`Object.is()`** détermine si deux valeurs sont [les mêmes](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#égalité_de_valeur_similaire_avec_object.is).
 
-La méthode **`Object.is()`** permet de déterminer si deux valeurs sont [les mêmes](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness).
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Object.is()")}}
+
+```js interactive-example
+console.log(Object.is("1", 1));
+// Résultat attendu : false
+
+console.log(Object.is(NaN, NaN));
+// Résultat attendu : true
+
+console.log(Object.is(-0, 0));
+// Résultat attendu : false
+
+const obj = {};
+console.log(Object.is(obj, {}));
+// Résultat attendu : false
+```
 
 ## Syntaxe
 
-```js
-Object.is(value1, value2);
+```js-nolint
+Object.is(value1, value2)
 ```
 
 ### Paramètres
@@ -26,61 +44,53 @@ Un booléen indiquant si les arguments ont la même valeur.
 
 ## Description
 
-`Object.is()` permet de déterminer si deux valeurs sont [identiques](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness). Deux valeurs sont considérées identiques si :
+`Object.is()` détermine si deux valeurs sont [les mêmes](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#égalité_de_valeur_similaire_avec_object.is). Deux valeurs sont considérées comme les mêmes si l'une des conditions suivantes est remplie&nbsp;:
 
-- elles sont toutes les deux {{jsxref("undefined")}}
-- elles sont toutes les deux {{jsxref("null")}}
+- elles sont toutes les deux {{JSxRef("undefined")}}
+- elles sont toutes les deux {{JSxRef("null")}}
 - elles sont toutes les deux `true` ou toutes les deux `false`
 - elles sont des chaînes de caractères de la même longueur et avec les mêmes caractères (dans le même ordre)
-- elles sont toutes les deux le même objet
+- elles sont toutes les deux le même objet (ce qui signifie que les deux valeurs font référence au même objet en mémoire)
+- elles sont toutes les deux des [grands entiers](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) avec la même valeur numérique
+- elles sont toutes les deux des [symboles](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) qui font référence à la même valeur symbolique
 - elles sont des nombres et
   - sont toutes les deux égales à `+0`
   - sont toutes les deux égales à `-0`
-  - sont toutes les deux égales à {{jsxref("NaN")}}
+  - sont toutes les deux égales à {{JSxRef("NaN")}}
   - sont non-nulles, ne sont pas `NaN` et ont toutes les deux la même valeur
 
-Attention, ce n'est pas la même égalité qu'avec l'opérateur {{jsxref("Operators", "==", "#égalité_simple_(==)")}}. L'opérateur == applique différentes conversions à chaque opérande (si ils ne sont pas du même type) avant de tester l'égalité (d'où le comportement `"" == false` qui donne `true`), `Object.is` ne convertit aucune des deux valeurs.
+`Object.is()` n'est pas équivalent à l'opérateur [`==`](/fr/docs/Web/JavaScript/Reference/Operators/Equality). L'opérateur `==` applique diverses conversions aux deux côtés (si elles ne sont pas du même type) avant de tester l'égalité (ce qui entraîne un comportement tel que `"" == false` donnant `true`), mais `Object.is()` ne convertit aucune des deux valeurs.
 
-Cette égalité est également différente de l'égalité stricte qu'on peut avoir avec l'opérateur {{jsxref("Operators", "===", "#égalité_stricte_(===)")}}. L'opérateur === (et également l'opérateur ==) considère que `-0` et `+0` sont égales et que {{jsxref("Number.NaN")}} n'est pas égal à {{jsxref("NaN")}}.
+`Object.is()` n'est également _pas_ équivalent à l'opérateur [`===`](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality). La seule différence entre `Object.is()` et `===` réside dans leur traitement des zéros signés et des valeurs `NaN`. L'opérateur `===` (et l'opérateur `==`) considère que les valeurs numériques `-0` et `+0` sont égales, mais considère que {{JSxRef("NaN")}} n'est pas égal à lui-même.
 
 ## Exemples
 
+### Utiliser `Object.is()`
+
 ```js
+// Cas 1 : Évaluer si le résultat est le même en utilisant ===
+Object.is(25, 25); // true
 Object.is("toto", "toto"); // true
-Object.is(window, window); // true
-
 Object.is("toto", "truc"); // false
+Object.is(null, null); // true
+Object.is(undefined, undefined); // true
+Object.is(window, window); // true
 Object.is([], []); // false
-
-var toto = { a: 1 };
-var truc = { a: 1 };
+const toto = { a: 1 };
+const truc = { a: 1 };
+const memeToto = toto;
 Object.is(toto, toto); // true
 Object.is(toto, truc); // false
+Object.is(toto, memeToto); // true
 
-Object.is(null, null); // true
-
-// Cas aux limites (cas spéciaux)
+// Cas 2 : Zéro signé
 Object.is(0, -0); // false
+Object.is(+0, -0); // false
 Object.is(-0, -0); // true
+
+// Cas 3 : NaN
 Object.is(NaN, 0 / 0); // true
-```
-
-## Prothèse d'émulation (_polyfill_)
-
-```js
-if (!Object.is) {
-  Object.is = function (v1, v2) {
-    // Algorithme SameValue
-    if (v1 === v2) {
-      //Étapes 1-5, 7-10
-      //Étapes 6.b-6.b +0 !=-0
-      return v1 !== 0 || 1 / v1 === 1 / v2;
-    } else {
-      //Étapes 6.a: NaN == NaN
-      return v1 !== v1 && v2 !== v2;
-    }
-  };
-}
+Object.is(NaN, Number.NaN); // true
 ```
 
 ## Spécifications
@@ -93,5 +103,6 @@ if (!Object.is) {
 
 ## Voir aussi
 
-- [Guide JavaScript : L'égalité en JavaScript](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) qui illustre les trois manières de comparer en JavaScript
-- {{jsxref("Operators","Les opérateurs de comparaison","",1)}}
+- [La prothèse d'émulation de `Object.is` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
+- [La prothèse d'émulation es-shims de `Object.is` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.is)
+- [Comparaisons d'égalité et de similitude](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)

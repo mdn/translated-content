@@ -3,37 +3,37 @@ title: Contextes sécurisés (Secure Contexts)
 short-title: Contextes sécurisés
 slug: Web/Security/Defenses/Secure_Contexts
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 972c6cc542e271e4c00def9465d7a0cc81011378
 ---
 
-Un **contexte sécurisé** (<i lang="en">secure context</i> en anglais) est une fenêtre de navigation (`Window`) ou un `Worker` pour lequel certains standards minimaux d'authentification et de confidentialité sont respectés. De nombreuses API Web et fonctionnalités ne sont accessibles que dans un contexte sécurisé. L'objectif principal des contextes sécurisés est d'empêcher les [attaquant·es de type MITM <sup>(angl.)</sup>](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu) d'accéder à des API puissantes qui pourraient compromettre davantage la victime d'une attaque.
+Un **contexte sécurisé** (<i lang="en">secure context</i> en anglais) est une fenêtre de navigation (`Window`) ou un `Worker` pour lequel certains standards minimaux d'authentification et de confidentialité sont respectés. De nombreuses API Web et fonctionnalités ne sont accessibles que dans un contexte sécurisé. L'objectif principal des contextes sécurisés est d'empêcher les attaquant·e·s [du monstre du milieu (MITM)](/fr/docs/Web/Security/Attacks/MITM) d'accéder à des API puissantes qui peuvent compromettre davantage la victime d'une attaque.
 
-## Pourquoi certaines fonctionnalitées devraient être limitées ?
+## Pourquoi certaines fonctionnalités doivent être limitées ?
 
-Certaines APIs du web peuvent donner beaucoup de pouvoir à un attaqueur, lui permettant par exemple:
+Certaines API du web peuvent donner beaucoup de pouvoir à un·e attaquant·e, lui permettant par exemple&nbsp;:
 
-- Entrer dans la vie privée d'un utilisateur.
-- Avoir accès à l'ordinateur d'un utilisateur.
-- Avoir accès à des données (comme l'identité de l'utilisateur).
+- Entrer dans la vie privée d'un·e utilisateur·e.
+- Avoir accès à l'ordinateur d'un·e utilisateur·e.
+- Avoir accès à des données (comme l'identité de l'utilisateur·e).
 
 ## À quel moment un context est-il considéré comme sécurisé ?
 
 Un contexte est considéré comme sécurisé lorsqu'il respecte certains standards minimaux d'authentification et de confidentialité définis dans la [spécification Secure Contexts <sup>(angl.)</sup>](https://w3c.github.io/webappsec-secure-contexts/). Un document particulier est considéré comme étant dans un contexte sécurisé lorsqu'il est le [document actif <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/browsers.html#active-document) d'un [contexte de navigation de premier niveau <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context) (c'est-à-dire une fenêtre ou un onglet) qui est lui-même sécurisé.
 
-Par exemple, même pour un document délivré via TLS dans un élément HTML {{HTMLElement("iframe")}}, son contexte **n'est pas** considéré comme sécurisé si un de ses ancêtres n'a pas aussi été délivré via TLS.
+Par exemple, même pour un document délivré par TLS dans un élément HTML {{HTMLElement("iframe")}}, son contexte **n'est pas** considéré comme sécurisé si un de ses ancêtres n'a pas aussi été délivré par TLS.
 
 Cependant, il est important de noter que si un contexte non sécurisé ouvre une nouvelle fenêtre (avec ou sans l'attribut [noopener](/fr/docs/Web/API/Window/open)), le fait que l'ouvreur ne soit pas sécurisé n'a aucun effet sur le statut sécurisé de la nouvelle fenêtre. En effet, la détermination du caractère sécurisé d'un document ne dépend que de son contexte de navigation de premier niveau — et non du contexte qui a servi à le créer.
 
 Pour qu'une ressource non locale soit considérée comme sécurisée, elle doit remplir les critères suivants&nbsp;:
 
-- Elle doit être servie via une URL `https://`.
+- Elle doit être servie par une URL `https://`.
 - Les propriétés de sécurité du canal réseau utilisé pour la délivrer ne doivent pas être considérées comme obsolètes.
 
 ## Origines potentiellement dignes de confiance
 
 Une **origine potentiellement digne de confiance** est une origine que le navigateur peut généralement considérer comme fiable pour la sécurité des données, même si, strictement parlant, elle ne remplit pas tous les critères d'un contexte sécurisé.
 
-Les ressources servies localement, comme celles avec les URL `http://127.0.0.1`, `http://localhost` et `http://*.localhost` (par exemple, `http://dev.whatever.localhost/`), ne sont pas délivrées en HTTPS, mais peuvent être considérées comme sécurisées car elles sont sur le même appareil que le navigateur. Elles sont donc potentiellement dignes de confiance. Cela est pratique pour les développeur·euses qui testent des applications en local.
+Les ressources servies localement, comme celles avec les URL `http://127.0.0.1`, `http://localhost` et `http://*.localhost` (par exemple, `http://dev.whatever.localhost/`), ne sont pas délivrées en HTTPS, mais peuvent être considérées comme sécurisées, car elles sont sur le même appareil que le navigateur. Elles sont donc potentiellement dignes de confiance. Cela est pratique pour les développeur·euse·s qui testent des applications en local.
 
 Il en va de même, en général, pour les URL `file://`.
 

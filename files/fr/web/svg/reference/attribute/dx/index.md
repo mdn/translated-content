@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/dx
 original_slug: Web/SVG/Attribute/dx
 ---
 
-{{SVGRef}}
-
 L'attribut **`dx`** indique un décalage sur l'axe x de la position d'un élément ou de son contenu.
 
 Sept éléments utilisent cet attribut: {{SVGElement('altGlyph')}}, {{SVGElement('feDropShadow')}}, {{SVGElement('feOffset')}}, {{SVGElement('glyphRef')}}, {{SVGElement('text')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}

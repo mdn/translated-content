@@ -3,7 +3,7 @@ title: Propriété CSS `mask-border-mode`
 short-title: mask-border-mode
 slug: Web/CSS/Reference/Properties/mask-border-mode
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-border-mode`** définit le mode de fusion utilisé pour [le masque de bordure](/fr/docs/Web/CSS/Reference/Properties/mask-border).
@@ -25,10 +25,12 @@ mask-border-mode: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `luminance`
-  - : Les valeurs de luminance proventant de l'image de masque sont utilisées pour le masque.
+  - : Les valeurs de luminance provenant de l'image de masque sont utilisées pour le masque.
 - `alpha`
-  - : Les valeurs du canal alpha proventant de l'image de masque sont utilisées pour le masque.
+  - : Les valeurs du canal alpha provenant de l'image de masque sont utilisées pour le masque.
 
 ## Définition formelle
 

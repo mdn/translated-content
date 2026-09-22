@@ -176,7 +176,7 @@ On commence par un groupe contenant deux chemins rectangulaires, puis on défini
 </svg>
 ```
 
-Nous écrivons ensuite du CSS pour ajouter un marqueur aux deux chemins, et également pour avoir une couleur de trait violet foncé. Cela est remplacé pour le deuxième chemin, auquel une valeur URL est donnée pour appliquer le dégradé orange-rouge comme trait. Enfin, nous définissons l'élément cercle dans l'élément marqueur pour avoir une valeur de trait de `context-stroke`.
+Nous écrivons ensuite du CSS pour ajouter un marqueur aux deux chemins, et également pour avoir une couleur de trait violet foncé. C'est remplacé pour le deuxième chemin, auquel une valeur URL est donnée pour appliquer le dégradé orange-rouge comme trait. Enfin, nous définissons l'élément cercle dans l'élément marqueur pour avoir une valeur de trait de `context-stroke`.
 
 ```css
 path {

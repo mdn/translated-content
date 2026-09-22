@@ -16,7 +16,7 @@ const isBelowThreshold = (currentValue) => currentValue < 40;
 const array = [1, 30, 39, 29, 10, 13];
 
 console.log(array.every(isBelowThreshold));
-// Sortie attendue : true
+// Résultat attendu : true
 ```
 
 ## Syntaxe
@@ -136,7 +136,7 @@ console.log(
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.forEach()")}}
 - La méthode {{JSxRef("Array.prototype.some()")}}
 - La méthode {{JSxRef("Array.prototype.find()")}}

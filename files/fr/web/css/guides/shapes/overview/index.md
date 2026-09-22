@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Shapes/Overview
 original_slug: Web/CSS/CSS_shapes/Overview_of_shapes
 ---
 
-{{CSSRef}}
-
 La spécification [CSS Shapes Level 1](https://www.w3.org/TR/css-shapes/) définit les formes géométriques en CSS. Pour ce module de niveau 1, ces formes s'appliquent aux éléments qui utilisent une disposition flottante. Dans cet article, nous verrons un aperçu de ce qu'il est possible de faire avec les formes en CSS.
 
 Si on fait flotter un élément à gauche d'un texte, on verra le texte écrit autour de cet élément en suivant un contour rectangulaire. Si on applique une forme circulaire à cet élément, le texte suivra alors le contour du cercle.

@@ -3,10 +3,10 @@ title: "Window : méthode cancelAnimationFrame()"
 short-title: cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
 l10n:
-  sourceCommit: 9bf78e9898a1bf51a67e33f8e82276fca575979d
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 La méthode **`cancelAnimationFrame()`** de l'interface {{DOMxRef("Window")}} annule une demande de trame d'animation précédemment programmée avec un appel à {{DOMxRef("window.requestAnimationFrame()")}}.
 

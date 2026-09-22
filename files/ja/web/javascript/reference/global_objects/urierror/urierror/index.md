@@ -1,25 +1,44 @@
 ---
 title: URIError() コンストラクター
+short-title: URIError()
 slug: Web/JavaScript/Reference/Global_Objects/URIError/URIError
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`URIError`** コンストラクターは、グローバルの URI 操作関数が間違った方法で使用された場合のエラーを生成します。
+**`URIError`** コンストラクターは {{jsxref("URIError")}} オブジェクトを生成します。
 
 ## 構文
 
+```js-nolint
+new URIError()
+new URIError(message)
+new URIError(message, options)
+new URIError(message, fileName)
+new URIError(message, fileName, lineNumber)
+
+URIError()
+URIError(message)
+URIError(message, options)
+URIError(message, fileName)
+URIError(message, fileName, lineNumber)
 ```
-new URIError([message[, fileName[, lineNumber]]])
-```
+
+> [!NOTE]
+> `URIError()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出せます。どちらも新しい `URIError` インスタンスを生成します。
 
 ### 引数
 
 - `message` {{optional_inline}}
   - : 人間が読むためのエラーの説明です。
-- `fileName` {{optional_inline}}
+- `options` {{optional_inline}}
+  - : 以下のプロパティを持つオブジェクトです。
+    - `cause` {{optional_inline}}
+      - : エラーの具体的な原因を示すプロパティです。
+        エラーを捕捉し、より具体的または有用なエラーメッセージを付けて再度投げる場合、このプロパティを使用して元のエラーを渡すことができます。
+- `fileName` {{optional_inline}} {{non-standard_inline}}
   - : 例外が発生したコードを含むファイルの名前です。
-- `lineNumber` {{optional_inline}}
+- `lineNumber` {{optional_inline}} {{non-standard_inline}}
   - : 例外が発生したコードの行番号です。
 
 ## 例
@@ -33,10 +52,7 @@ try {
   console.log(e instanceof URIError); // true
   console.log(e.message); // "malformed URI sequence"
   console.log(e.name); // "URIError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 2
-  console.log(e.stack); // "@Scratchpad/2:2:3\n"
+  console.log(e.stack); // このエラーのスタック
 }
 ```
 
@@ -44,15 +60,12 @@ try {
 
 ```js
 try {
-  throw new URIError("Hello", "someFile.js", 10);
+  throw new URIError("Hello");
 } catch (e) {
   console.log(e instanceof URIError); // true
   console.log(e.message); // "Hello"
   console.log(e.name); // "URIError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  console.log(e.stack); // このエラーのスタック
 }
 ```
 

@@ -3,8 +3,6 @@ title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
 ---
 
-{{JSRef}}
-
 L'objet **`WeakMap`** représente une collection de paires clé-valeur dont les clés sont des objets et pour lesquelles les références sont « faibles » et les valeurs des valeurs quelconques.
 
 Vous pouvez en savoir plus sur les `WeakMap` en lisant l'article sur [les collections à clé](/fr/docs/Web/JavaScript/Guide/Keyed_collections).

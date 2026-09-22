@@ -23,7 +23,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect
   - : Похож на {{jsxref("Object.defineProperty()")}}. Возвращает {{jsxref("Boolean")}}.
 - {{jsxref("Reflect.deleteProperty()")}}
   - : Оператор [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete) как функция. Аналогично `delete target[name]`.
-- {{jsxref("Reflect.enumerate()")}}
+- `Reflect.enumerate()`
   - : Похож на цикл [`for...in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in). Возвращает итератор с собственными перечисляемыми и наследуемыми свойствами целевого объекта.
 - {{jsxref("Reflect.get()")}}
   - : Функция, которая возвращает значение свойств.

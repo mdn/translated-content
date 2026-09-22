@@ -275,7 +275,7 @@ Ahora veamos lo que tenemos que hacer en primer lugar, para configurar una base 
    let request = window.indexedDB.open("notes_db", 1);
    ```
 
-   Esta línea crea una `solicitud` para abrir la versión `1` de una base de datos llamada `notes_db`. Si esta aún no existe, se creará para ti mediante un código posterior. Verás que este patrón de solicitud se usa con mucha frecuencia en `IndexedDB`. Las operaciones de la base de datos llevan tiempo. No deseas colgar el navegador mientras esperas los resultados, por lo que las operaciones de la base de datos son {{Glossary("asíncronas")}}, lo que significa que en lugar de ocurrir de inmediato, sucederán en algún momento en el futuro, y recibirás una notificación cuando haya terminado.
+   Esta línea crea una `solicitud` para abrir la versión `1` de una base de datos llamada `notes_db`. Si esta aún no existe, se creará para ti mediante un código posterior. Verás que este patrón de solicitud se usa con mucha frecuencia en `IndexedDB`. Las operaciones de la base de datos llevan tiempo. No deseas colgar el navegador mientras esperas los resultados, por lo que las operaciones de la base de datos son {{Glossary("Asynchronous", "asíncronas")}}, lo que significa que en lugar de ocurrir de inmediato, sucederán en algún momento en el futuro, y recibirás una notificación cuando haya terminado.
 
    Para manejar esto en IndexedDB, crea un objeto de solicitud (que se puede llamar como desees; lo llamamos `request`, por lo que es obvio para qué sirve). Luego, usa controladores de eventos para ejecutar código cuando la solicitud se completa, falla, etc., que verás en uso a continuación.
 

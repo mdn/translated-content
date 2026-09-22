@@ -3,8 +3,6 @@ title: management.onUninstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onUninstalled
 ---
 
-{{AddonSidebar}}
-
 Action quand une extension est désinstallée.
 
 L'API requière l'[API de permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management".

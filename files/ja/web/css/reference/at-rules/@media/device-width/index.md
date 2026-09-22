@@ -1,11 +1,10 @@
 ---
-title: device-width
+title: CSS `device-width` メディア特性
+short-title: device-width
 slug: Web/CSS/Reference/At-rules/@media/device-width
 l10n:
-  sourceCommit: 6ef7bc04d63cf8b512bdbea149a6cb875cc063e3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{deprecated_header}}
 
 > [!NOTE]
 > ビューポートの幅を問い合わせる場合は、代わりに [`width`](/ja/docs/Web/CSS/Reference/At-rules/@media/width) メディア特性を使用してください。

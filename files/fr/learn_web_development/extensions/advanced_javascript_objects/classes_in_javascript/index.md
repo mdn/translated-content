@@ -4,8 +4,6 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_Ja
 original_slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Les présentations ayant été faites pour les concepts du JavaScript orienté objet, cet article détaille comment il est possible de créer une classe fille qui hérite des propriétés de sa classe mère. Nous verrons ensuite quelques conseils quant à l'utilisation du JavaScript orienté objet.

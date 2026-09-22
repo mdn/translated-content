@@ -3,7 +3,7 @@ title: VRDisplay.submitFrame()
 slug: Web/API/VRDisplay/submitFrame
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}
 
 **`submitFrame()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 `VRDisplay` 内に現在表示中の {{domxref("VRLayerInit")}} の現在の状態をキャプチャします。
 

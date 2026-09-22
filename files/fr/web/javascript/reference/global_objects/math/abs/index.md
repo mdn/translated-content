@@ -16,13 +16,13 @@ function difference(a, b) {
 }
 
 console.log(difference(3, 5));
-// Sortie attendue : 2
+// Résultat attendu : 2
 
 console.log(difference(5, 3));
-// Sortie attendue : 2
+// Résultat attendu : 2
 
 console.log(difference(1.23456, 7.89012));
-// Sortie attendue : 6.6555599999999995
+// Résultat attendu : 6.6555599999999995
 ```
 
 ## Syntaxe

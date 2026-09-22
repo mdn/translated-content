@@ -21,7 +21,7 @@ console.log(multiply(5));
 
 ## 语法
 
-```plain
+```js-nolint
 function [name]([param1[ = defaultValue1 ][, ..., paramN[ = defaultValueN ]]]) {
     statements
 }

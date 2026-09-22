@@ -1,8 +1,9 @@
 ---
-title: animation-play-state
+title: "`animation-play-state` プロパティ (CSS)"
+short-title: animation-play-state
 slug: Web/CSS/Reference/Properties/animation-play-state
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 **`animation-play-state`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションが実行中か停止中かを設定します。
@@ -78,6 +79,8 @@ animation-play-state: unset;
 ```
 
 ### 値
+
+このプロパティは、以下のキーワード値のカンマ区切りリストとして指定します。
 
 - `running`
   - : **アニメーション**が現在**実行中**です。

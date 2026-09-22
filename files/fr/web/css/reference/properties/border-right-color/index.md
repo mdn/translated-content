@@ -3,7 +3,7 @@ title: Propriété CSS `border-right-color`
 short-title: border-right-color
 slug: Web/CSS/Reference/Properties/border-right-color
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-right-color`** permet de définir la couleur de la [bordure](/fr/docs/Web/CSS/Reference/Properties/border) à droite d'un élément. Elle peut aussi être définie avec les propriétés raccourcies CSS {{CSSxRef("border-color")}} ou {{CSSxRef("border-right")}}.
@@ -68,9 +68,9 @@ border-right-color: revert-layer;
 border-right-color: unset;
 ```
 
-La propriété `border-right-color` est définie comme une seule valeur.
-
 ### Valeurs
+
+Cette propriété est définie à l'aide d'une seule valeur&nbsp;:
 
 - {{CSSxRef("&lt;color&gt;")}}
   - : La couleur de la bordure à droite.
@@ -90,10 +90,10 @@ La propriété `border-right-color` est définie comme une seule valeur.
 #### HTML
 
 ```html
-<div class="maboite">
+<div class="ma-boite">
   <p>
     Une boîte avec une bordure autour. Notez le côté de la boîte qui est
-    <span class="texterouge">rouge</span>.
+    <span class="texte-rouge">rouge</span>.
   </p>
 </div>
 ```
@@ -101,13 +101,13 @@ La propriété `border-right-color` est définie comme une seule valeur.
 #### CSS
 
 ```css
-.maboite {
+.ma-boite {
   border: solid 0.3em gold;
   border-right-color: red;
   width: auto;
 }
 
-.texterouge {
+.texte-rouge {
   color: red;
 }
 ```

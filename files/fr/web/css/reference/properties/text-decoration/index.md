@@ -3,10 +3,10 @@ title: Propriété CSS `text-decoration`
 short-title: text-decoration
 slug: Web/CSS/Reference/Properties/text-decoration
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`text-decoration`** définit l'apparence des lignes décoratives sur le texte. C'est une propriété raccourcie pour {{CSSxRef("text-decoration-line")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-decoration-style")}}, et la plus récente {{CSSxRef("text-decoration-thickness")}}.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`text-decoration`** définit l'apparence des lignes décoratives sur le texte. C'est une propriété raccourcie pour {{CSSxRef("text-decoration-line")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-decoration-style")}}, et la plus récente {{CSSxRef("text-decoration-thickness")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: text-decoration")}}
 
@@ -48,7 +48,7 @@ p {
 }
 ```
 
-Ces décorations se propagent sur les différents éléments enfants. Cela signifie qu'il n'est pas possible de désactiver la décoration d'un élément descendant pour lequel un ancêtre est décoré. Par exemple, avec ce fragment de HTML `<p>Ce texte a <em>des mots mis en avant</em> dedans.</p>`, et cette règle CSS `p { text-decoration: underline; }`, on aura tout le paragraphe souligné, même si on applique la règle `em { text-decoration: none; }`, cela n'aurait aucun impact. En revanche, ajouter la règle `em { text-decoration: overline; }` entraînerait un cumul des décorations pour «&nbsp;des mots mis en avant&nbsp;».
+Ces décorations se propagent sur les différents éléments enfants. Cela signifie qu'il n'est pas possible de désactiver la décoration d'un élément descendant pour lequel un ancêtre est décoré. Par exemple, avec ce fragment de HTML `<p>Ce texte a <em>des mots mis en avant</em> dedans.</p>`, et cette règle CSS `p { text-decoration: underline; }`, on a tout le paragraphe souligné, même si on applique la règle `em { text-decoration: none; }`, cela n'a aucun impact. En revanche, ajouter la règle `em { text-decoration: overline; }` entraîne un cumul des décorations pour «&nbsp;des mots mis en avant&nbsp;».
 
 ## Propriétés constitutives
 
@@ -137,7 +137,7 @@ La propriété `text-decoration` est définie comme une ou plusieurs valeurs sé
 <p class="over">Ce texte a une ligne au dessus.</p>
 <p class="line">Ce texte est barré d'une ligne.</p>
 <p>
-  Ce <a class="plain" href="#">lien ne sera pas souligné</a>, comme les liens le
+  Ce <a class="plain" href="#">lien n'est pas souligné</a>, comme les liens le
   sont normalement. Attention à ces décorations sur les ancres cars le
   soulignement sert souvent d'indication pour un hyperlien.
 </p>

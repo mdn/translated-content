@@ -3,7 +3,7 @@ title: Propriété CSS `font-variant-alternates`
 short-title: font-variant-alternates
 slug: Web/CSS/Reference/Properties/font-variant-alternates
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-alternates`** contrôle l'utilisation des glyphes alternatifs. Ces glyphes alternatifs peuvent être référencés par des noms alternatifs définis dans {{CSSxRef("@font-feature-values")}}.
@@ -36,12 +36,9 @@ font-variant-alternates: revert-layer;
 font-variant-alternates: unset;
 ```
 
-Cette propriété peut être définie selon deux formes&nbsp;:
-
-- la première avec le mot-clé `normal`
-- la seconde avec un ou plusieurs mots-clés parmi ceux listés ci-après. S'il y a plusieurs mots-clés, ils sont séparés par des espaces. Les mots-clés peuvent être dans n'importe quel ordre.
-
 ### Valeurs
+
+Cette propriété est définie avec `normal` ou avec une liste des valeurs suivantes séparées par une virgule&nbsp;:
 
 - `normal`
   - : Ce mot-clé désactive l'utilisation de tels glyphes alternatifs.

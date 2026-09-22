@@ -1,36 +1,47 @@
 ---
-title: element.getElementsByTagName
+title: "Element : méthode getElementsByTagName()"
+short-title: getElementsByTagName()
 slug: Web/API/Element/getElementsByTagName
+l10n:
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`Element.getElementsByTagName()`** retourne une liste des éléments portant le [nom de balise](/fr/docs/Web/API/Element/tagName) donné. La recherche porte sur le sous-arbre de l'élément spécifié, à l'exception de cet élément lui-même. La liste retournée est _live_, c'est à dire qu'elle se met à jour automatiquement à chaque changement de l'arbre DOM. Par conséquent, il n'est pas nécessaire d'appeller plusieurs fois `Element.getElementsByTagName()` avec le même élément et les mêmes arguments.
+La méthode **`getElementsByTagName()`** de l'interface {{DOMxRef("Element")}} retourne une collection {{DOMxRef("HTMLCollection")}} dynamique d'éléments ayant le [nom de balise](/fr/docs/Web/API/Element/tagName) donné.
 
-Quand elle est appelée sur un élément HTML dans un document HTML, `getElementsByTagName` place son argument en minuscule avant de continuer. Cela n'est pas souhaitable lorsque vous tentez de faire correspondre des éléments SVG «&nbsp;<i lang="en">camel-case</i>&nbsp;» dans une sous-arborescence dans un document HTML. [`Element.getElementsByTagNameNS`](/fr/docs/Web/API/Element/getElementsByTagNameNS) fonctionne dans ce cas.
+Tous les descendants de l'élément défini sont recherchés, mais pas l'élément lui-même. La liste retournée est _dynamique_, ce qui signifie qu'elle se met à jour automatiquement avec l'arbre DOM. Par conséquent, il n'est pas nécessaire d'appeler `Element.getElementsByTagName()` avec le même élément et les mêmes arguments de manière répétée si le DOM change entre les appels.
 
-`Element.getElementsByTagName` est similaire à {{domxref("Document.getElementsByTagName()")}}, à part que sa recherche est limitée aux éléments qui sont des descendants de l'élément spécifié.
+Lorsqu'elle est appelée sur un élément HTML dans un document HTML, `getElementsByTagName` met en minuscules l'argument avant de le rechercher. C'est indésirable lorsqu'on essaie de faire correspondre des éléments SVG en {{Glossary("camel_case", "casse-de-chameau")}} (comme {{SVGElement("linearGradient")}}) dans un document HTML. Utilisez plutôt {{DOMxRef("Element.getElementsByTagNameNS()")}}, qui préserve la capitalisation du nom de la balise.
+
+`Element.getElementsByTagName` est similaire à {{DOMxRef("Document.getElementsByTagName()")}}, sauf qu'elle ne recherche que les éléments qui sont des descendants de l'élément défini.
 
 ## Syntaxe
 
-```js
-elements = element.getElementsByTagName(tagName);
+```js-nolint
+getElementsByTagName(tagName)
 ```
 
-- `elements` est une {{domxref("HTMLCollection")}} contenant les éléments trouvés, dans l'ordre dans lequel ils apparaissent dans le sous-arbre. Si aucun élément n'a été trouvé, la `HTMLCollection` est vide.
-- `element` est l'élément depuis lequel la recherche doit commencer. Notez que seuls les descendants de cet élément feront partie des résultats, mais pas l'élément lui-même.
-- `tagName` est le nom qualifié à rechercher. La chaîne spéciale `"*"` représente tous les éléments possibles. Pour la compatibilité avec XHTML, les minuscules doivent être utilisées.
+### Paramètres
 
-## Exemple
+- `tagName`
+  - : Le nom qualifié à rechercher. La chaîne de caractères spéciale `"*"` représente tous les éléments. Pour la compatibilité avec XHTML, les minuscules doivent être utilisées.
+
+### Valeur de retour
+
+Une collection {{DOMxRef("HTMLCollection")}} _dynamique_ d'éléments ayant un nom de balise correspondant, dans l'ordre dans lequel ils apparaissent. Si aucun élément n'est trouvé, la `HTMLCollection` est vide.
+
+## Exemples
 
 ```js
-// vérifie l'alignement sur un nombre de cellules dans un tableau.
-var table = document.getElementById("forecast-table");
-var cells = table.getElementsByTagName("td");
-for (var i = 0; i < cells.length; i++) {
-  var status = cells[i].getAttribute("data-status");
-  if (status == "open") {
-    // saisit les données
+// Vérifie le statut de chaque cellule de données dans un tableau
+const table = document.getElementById("forecast-table");
+const cells = table.getElementsByTagName("td");
+
+for (const cell of cells) {
+  const status = cell.getAttribute("data-status");
+  if (status === "open") {
+    // Saisir les données
   }
 }
 ```

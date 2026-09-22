@@ -3,8 +3,6 @@ title: Échappement des propriétés Unicode
 slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 ---
 
-{{jsSidebar("JavaScript Guide")}}
-
 Les séquences d'échappement pour les propriétés Unicode permettent de distinguer les caractères Unicodes en fonction de leurs propriétés : majuscules, minuscules, symboles mathématiques, ponctuation, etc.
 
 ## Syntaxe

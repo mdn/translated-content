@@ -1,13 +1,14 @@
 ---
-title: Firefox 118 for developers
+title: Firefox 118 開発者向けリリースノート
+short-title: Firefox 118
 slug: Mozilla/Firefox/Releases/118
 l10n:
-  sourceCommit: 7ac593ab3dc07119665f7988539f869d810a499e
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 このページでは、開発者に影響する Firefox 118 の変更点をまとめています。Firefox 118 は、米国時間 2023 年 9 月 26 日にリリースされました。
 
-## ウェブ開発者向けの変更点一覧
+## ウェブ開発者向けの変更点
 
 ### HTML
 
@@ -17,7 +18,7 @@ l10n:
 
 - {{cssxref("font-synthesis-position")}} プロパティと、{{cssxref("font-synthesis")}} ショートハンドプロパティの値 `position` をサポートしました。これらは {{cssxref("font-variant-position")}} を使用しているときに、上付き文字や下付き文字のグリフを持たないフォントでそれらを無効にすることができます ([Firefox bug 1849010](https://bugzil.la/1849010))。
 - 以下の CSS [数学関数](/ja/docs/Web/CSS/Reference/Values/Functions#math_functions) をサポートしました: [`abs()`](/ja/docs/Web/CSS/Reference/Values/abs)、[`sign()`](/ja/docs/Web/CSS/Reference/Values/sign)、[`round()`](/ja/docs/Web/CSS/Reference/Values/round)、[`mod()`](/ja/docs/Web/CSS/Reference/Values/mod)、[`rem()`](/ja/docs/Web/CSS/Reference/Values/rem)、[`pow()`](/ja/docs/Web/CSS/Reference/Values/pow)、[`sqrt()`](/ja/docs/Web/CSS/Reference/Values/sqrt)、[`hypot()`](/ja/docs/Web/CSS/Reference/Values/hypot)、[`log()`](/ja/docs/Web/CSS/Reference/Values/log)、[`exp()`](/ja/docs/Web/CSS/Reference/Values/exp) (Firefox bug [1814589](https://bugzil.la/1814589))。
-- CSS [`font-size-adjust`](/ja/docs/Web/CSS/Reference/Properties/font-size-adjust) プロパティの新しいキーワード `from-font` で、最初に使用可能なフォントから望まれた `<font-metric>` を取得できるようになりました (Firefox bug [1708240](https://bugzil.la/1708240))。
+- CSS の [`font-size-adjust`](/ja/docs/Web/CSS/Reference/Properties/font-size-adjust) プロパティの新しいキーワード `from-font` で、最初に使用可能なフォントから望まれた `<font-metric>` を取得できるようになりました (Firefox bug [1708240](https://bugzil.la/1708240))。
 - CSS の [`transform-box`](/ja/docs/Web/CSS/Reference/Properties/transform-box) プロパティで、値 `content-box` および `stroke-box` をサポートしました。値 `content-box` は [コンテンツボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成) を参照ボックスとして使用します。また、値 `stroke-box` は SVG の図形を包含するストロークのバウンディングボックスを参照ボックスとして使用します (Firefox bug [1819464](https://bugzil.la/1819464))。
 - CSS [`font-size-adjust`](/ja/docs/Web/CSS/Reference/Properties/font-size-adjust) プロパティで、最初に使用可能なフォントから望まれた `<font-metric>` を取得できるキーワード `from-font` をサポートしました (Firefox bug [1708240](https://bugzil.la/1708240))。
 
@@ -33,14 +34,6 @@ l10n:
 
 - [`<semantics>`](/ja/docs/Web/MathML/Reference/Element/semantics) および [`<maction>`](/ja/docs/Web/MathML/Reference/Element/maction) 要素が、デフォルトで最初の子要素のみ表示するようになりました。設定項目 `mathml.legacy_maction_and_semantics_implementations.disabled` を削除しました (Firefox bug [1788223](https://bugzil.la/1788223))。
 - [`mathvariant`](/ja/docs/Web/MathML/Reference/Element/mi#mathvariant) で、`normal` を除くすべての値が非推奨になりました。また、この属性を使う要素が `<mi>` に限定されました (Firefox bug [1845461](https://bugzil.la/1845461))。
-
-### SVG
-
-変更なし。
-
-### セキュリティ
-
-変更なし。
 
 ### API
 
@@ -65,14 +58,10 @@ l10n:
 
 #### Marionette
 
-- すべての [Web Authentication 拡張機能コマンド](https://www.w3.org/TR/webauthn-2/#sctn-automation) をサポートしました。これは、ユーザーが公開鍵暗号の資格情報で自身を認証できるようにします ([Firefox bug 1846574](https://bugzil.la/1846574))。
+- すべての [Web Authentication 拡張機能コマンド](https://w3c.github.io/webauthn/#sctn-automation) をサポートしました。これは、ユーザーが公開鍵暗号の資格情報で自身を認証できるようにします ([Firefox bug 1846574](https://bugzil.la/1846574))。
 
 ## アドオン開発者向けの変更点一覧
 
 ### 廃止
 
 - Manifest V3 拡張機能向けの、[`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action)、[`options_ui`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)、[`page_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)、[`sidebar_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) マニフェストキーにおける [`browser_style`](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) のサポートを廃止しました ([Firefox bug 1830711](https://bugzil.la/1830711))。Manifest V3 拡張機能で `browser_style` から移行するための情報について、詳しくは [Browser Styles' Manifest v3 migration](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration) をご覧ください。
-
-## 過去のバージョン
-
-{{Firefox_for_developers(117)}}

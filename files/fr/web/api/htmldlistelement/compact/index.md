@@ -3,10 +3,10 @@ title: "HTMLDListElement : propriété compact"
 short-title: compact
 slug: Web/API/HTMLDListElement/compact
 l10n:
-  sourceCommit: 6183d512fe034687017c4e216c7cbf54a16a528a
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`compact`** de l'interface {{DOMxRef("HTMLDListElement")}} indique que l'espacement entre les éléments de la liste doit être réduit. Le comportement exact de l'attribut `compact` dépend de l'agent utilisateur. Plutôt que d'utiliser cette propriété, envisagez d'utiliser la propriété CSS {{CSSxRef("line-height")}}.
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 {{domxref("HTMLTableRowElement")}} 接口的 **`vAlign`** 属性是一个指示如何在表格列元素（{{htmlelement("tr")}}）中垂直对齐文本的字符串。单个单元格可以覆盖它。
 

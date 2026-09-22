@@ -1,15 +1,16 @@
 ---
-title: <abbr>：缩写元素
+title: "`<abbr>` HTML 缩写元素"
+short-title: <abbr>
 slug: Web/HTML/Reference/Elements/abbr
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 **`<abbr>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示一个缩写词或首字母缩略词。
 
 在包含缩写或首字母缩写词时，应在纯文本中提供该术语的扩展形式。同时使用 `<abbr>` 元素来标记缩写。这可以告知用户缩写或首字母缩略词的含义。
 
-可选的 [`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#title) 属性可以在没有完整扩展情况下为缩写或首字母缩略词提供扩展。这为用户代理提供了如何宣告/显示内容的提示，并告知所有用户该缩写的含义。如果存在 `title` 属性则必须包含此完整描述且无其他内容。
+可选的 [`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/title) 属性可以在没有完整扩展情况下为缩写或首字母缩略词提供扩展。这为用户代理提供了如何宣告/显示内容的提示，并告知所有用户该缩写的含义。如果存在 `title` 属性则必须包含此完整描述且无其他内容。
 
 {{InteractiveExample("HTML Demo: &lt;abbr&gt;", "tabbed-shorter")}}
 
@@ -186,7 +187,7 @@ abbr {
     <tr>
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >没有对应的角色</a
         >
       </td>

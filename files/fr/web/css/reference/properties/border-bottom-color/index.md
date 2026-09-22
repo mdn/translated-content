@@ -3,7 +3,7 @@ title: Propriété CSS `border-bottom-color`
 short-title: border-bottom-color
 slug: Web/CSS/Reference/Properties/border-bottom-color
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-bottom-color`** définit la couleur de la [bordure](/fr/docs/Web/CSS/Reference/Properties/border) inférieure d'un élément. Elle peut aussi être définie avec les propriétés raccourcies CSS {{CSSxRef("border-color")}} ou {{CSSxRef("border-bottom")}}.
@@ -68,9 +68,9 @@ border-bottom-color: revert-layer;
 border-bottom-color: unset;
 ```
 
-La propriété `border-bottom-color` est définie avec une seule valeur.
-
 ### Valeurs
+
+Cette propriété est définie à l'aide d'une seule valeur&nbsp;:
 
 - {{CSSxRef("&lt;color&gt;")}}
   - : La couleur de la bordure inférieure.

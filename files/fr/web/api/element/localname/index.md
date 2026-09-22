@@ -1,26 +1,20 @@
 ---
-title: Element.localName
+title: "Element : propriété localName"
+short-title: localName
 slug: Web/API/Element/localName
+l10n:
+  sourceCommit: bc9f7bec1ab48f29d241e38a9f1598f783f6b60a
 ---
 
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`Element.localName`** renvoie la partie locale du nom qualifié d'un élément.
+La propriété en lecture seule **`localName`** de l'interface {{DOMxRef("Element")}} retourne la partie locale du nom qualifié d'un élément.
 
-> [!NOTE]
-> Dans les versions précédentes de la spécification DOM, cet API était défini dans l'interface {{domxref("Node")}}.
+## Valeur
 
-## Syntaxe
+Une chaîne de caractères représentant la partie locale du nom qualifié de l'élément.
 
-```js
-name = element.localName;
-```
-
-### Valeur renvoyée
-
-Une {{jsxref("String")}} (_chaîne de caractères_) représentant la partie locale du nom qualifié de l'élément.
-
-## Exemple
+## Exemples
 
 (Doit être servi avec un type de contenu XML, tel que `text/xml` ou `application/xhtml+xml`.)
 
@@ -28,22 +22,22 @@ Une {{jsxref("String")}} (_chaîne de caractères_) représentant la partie loca
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:svg="http://www.w3.org/2000/svg">
 <head>
-  <script type="application/javascript"><![CDATA[
-  function test() {
-    var text = document.getElementById('text');
-    var circle = document.getElementById('circle');
+  <script><![CDATA[
+function test() {
+  const text = document.getElementById("text");
+  const circle = document.getElementById("circle");
 
-    text.value = "<svg:circle> has:\n" +
-                 "localName = '" + circle.localName + "'\n" +
-                 "namespaceURI = '" + circle.namespaceURI + "'";
-  }
+  text.value = `<svg:circle> has:
+localName = "${circle.localName}"
+namespaceURI = "${circle.namespaceURI}"`;
+}
   ]]></script>
 </head>
 <body onload="test()">
   <svg:svg version="1.1"
     width="100px" height="100px"
     viewBox="0 0 100 100">
-    <svg:circle cx="50" cy="50" r="30" style="fill:#aaa" id="circle"/>
+    <svg:circle cx="50" cy="50" r="30" fill="#aaaaaa" id="circle"/>
   </svg:svg>
   <textarea id="text" rows="4" cols="55"/>
 </body>
@@ -52,19 +46,19 @@ Une {{jsxref("String")}} (_chaîne de caractères_) représentant la partie loca
 
 ## Notes
 
-Le nom local d'un noeud est la partie du nom qualifié du noeud qui arrive après le signe deux points. Les noms qualifiés sont typiquement utilisés dans XML comme partie de l'espace de noms des documents particuliers XML. Par exemple, dans le nom qualifié `ecomm:partners`, `partners` est le nom local et `ecomm` est le préfixe :
+Le nom local d'un nœud est la partie du nom qualifié du nœud qui arrive après le signe deux points. Les noms qualifiés sont typiquement utilisés dans XML comme partie de l'espace de noms des documents particuliers XML. Par exemple, dans le nom qualifié `comm:partners`, `partners` est le nom local et `comm` est le préfixe&nbsp;:
 
 ```xml
-<ecomm:business id="soda_shop" type="brick_n_mortar" xmlns:ecomm="http://example.com/ecomm">
-  <ecomm:partners>
-    <ecomm:partner id="1001">Tony's Syrup Warehouse
-    </ecomm:partner>
-  </ecomm:partner>
-</ecomm:business>
+<comm:business id="soda_shop" type="brick_n_mortar" xmlns:comm="http://example.com/comm">
+  <comm:partners>
+    <comm:partner id="1001">Entrepôt de Sirop de Tony
+    </comm:partner>
+  </comm:partners>
+</comm:business>
 ```
 
 > [!NOTE]
-> Dans Gecko 1.9.2 et antérieurs, la propriété renvoie la version majuscule du nom local pour les éléments HTML dans les DOM HTML (par opposition aux éléments XHTML dans les DOM XML). Dans les versions plus tardives, en conformité avec HTML5, la propriété renvoie dans la cas du stockage interne du DOM, en minuscule pour les éléments HTML dans les DOM HTML et les éléments XHTML dans les DOM XML. La propriété {{domxref("element.tagName","tagName")}} continue à renvoyer la casse majuscule pour les éléments HTML dans les DOM HTML.
+> Bien que la propriété retourne la casse du stockage DOM interne, qui est en minuscules, notez que la propriété {{DOMxRef("element.tagName","tagName")}} retourne des majuscules pour les éléments HTML dans les DOM HTML.
 
 ## Spécifications
 
@@ -76,7 +70,7 @@ Le nom local d'un noeud est la partie du nom qualifié du noeud qui arrive aprè
 
 ## Voir aussi
 
-- {{domxref("Element.namespaceURI")}}
-- {{domxref("Element.prefix")}}
-- {{domxref("Attr.localName")}}
-- {{domxref("Node.localName")}}
+- La propriété {{DOMxRef("Element.tagName")}}
+- La propriété {{DOMxRef("Element.namespaceURI")}}
+- La propriété {{DOMxRef("Element.prefix")}}
+- La propriété {{DOMxRef("Attr.localName")}}

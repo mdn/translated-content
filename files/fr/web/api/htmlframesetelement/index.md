@@ -2,10 +2,10 @@
 title: HTMLFrameSetElement
 slug: Web/API/HTMLFrameSetElement
 l10n:
-  sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 L'interface **`HTMLFrameSetElement`** fournit des propriétés spéciales (au-delà de celles de l'interface standard {{DOMxRef("HTMLElement")}} dont elles héritent aussi) pour manipuler les éléments {{HTMLElement("frameset")}}.
 
@@ -31,7 +31,7 @@ Les évènements de {{DOMxRef("HTMLElement")}} sont hérités.
 Les propriétés de gestionnaire d'évènements `onXYZ` suivantes de {{DOMxRef("Window")}} sont également disponibles en tant qu'alias ciblant l'objet `window`. Cependant, il est conseillé de les écouter directement sur l'objet `window` plutôt que sur `HTMLFrameSetElement`.
 
 > [!NOTE]
-> L'utilisation de `addEventListener()` sur `HTMLFrameSetElement` ne fonctionnera pas pour les gestionnaires d'évènements `onXYZ` listés ci-dessous. Écoutez les événements sur l'objet {{DOMxRef("window")}} à la place.
+> L'utilisation de `addEventListener()` sur `HTMLFrameSetElement` ne fonctionnera pas pour les gestionnaires d'évènements `onXYZ` listés ci-dessous. Écoutez les évènements sur l'objet {{DOMxRef("window")}} à la place.
 
 - {{DOMxRef("window.afterprint_event", "HTMLFrameSetElement.onafterprint")}}
   - : Déclenché après que le document associé a commencé l'impression ou que l'aperçu avant impression a été fermé.

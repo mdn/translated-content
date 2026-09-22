@@ -2,16 +2,16 @@
 title: API HTML Glisser et déposer
 slug: Web/API/HTML_Drag_and_Drop_API
 l10n:
-  sourceCommit: 58525c603c8c4696a85342ffc6e8e6661b28a1c3
+  sourceCommit: 3385bda58637833eedc9b8dc41a2804e653208a7
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 L'interface **HTML <i lang="en">Drag and Drop</i>** (pour glisser-déposer) permet à des applications d'utiliser des fonctionnalités de glisser-déposer dans le navigateur.
 
-L'utilisateur·ice pourra sélectionner des éléments _déplaçables_ à la souris et les déplacer vers un élément où on peut _déposer_ en relâchant le bouton de la souris. Une représentation translucide de l'élément _déplacé_ suit le pointeur lors de l'opération.
+L'utilisateur·ice peut sélectionner des éléments _déplaçables_ à la souris et les déplacer vers un élément où on peut _déposer_ en relâchant le bouton de la souris. Une représentation translucide de l'élément _déplacé_ suit le pointeur lors de l'opération.
 
-Vous pouvez personnaliser les éléments qui peuvent devenir _déplaçables_, le type de retour visuel que produisent les éléments _déplaçables_ et les éléments _déposables_.
+Vous pouvez personnaliser les éléments qui peuvent devenir _déplaçables_, le type de retour visuel que produisent les éléments _déplaçables_ et les éléments _pouvant être déposés_.
 
 L'aperçu de cette API inclut une description des interfaces, les étapes à suivre pour prendre en charge ces fonctionnalités dans une application et un aperçu de l'interopérabilité de ces interfaces.
 
@@ -27,7 +27,7 @@ Au cœur de l'opération de glisser-déposer, trois éléments sont impliqués&n
 
 Il n'est pas nécessaire que les trois soient sous votre contrôle, ni que vous deviez les définir vous-même&nbsp;:
 
-- Lors du déplacement de données externes dans une page, aucun élément déplaçable n'a besoin d'être défini (par exemple, il pourrait s'agir d'un fichier dans l'explorateur de fichiers du système d'exploitation).
+- Lors du déplacement de données externes dans une page, aucun élément déplaçable n'a besoin d'être défini (par exemple, il peut s'agir d'un fichier dans l'explorateur de fichiers du système d'exploitation).
 - Lors du déplacement d'éléments au sein d'une page, vous n'avez souvent pas besoin de définir des données transférées&nbsp;; vous manipulez simplement l'élément déplacé.
 - Lors du déplacement hors de la page, aucune cible de dépôt n'a besoin d'être définie.
 
@@ -37,15 +37,15 @@ Nous allons examiner comment chacun peut être défini et utilisé.
 
 Le glisser-déposer HTML utilise le [modèle d'évènements DOM](/fr/docs/Web/API/Event) et _[les évènements de déplacement](/fr/docs/Web/API/DragEvent)_ hérités des [évènements de souris](/fr/docs/Web/API/MouseEvent). Au cours des opérations de déplacement, plusieurs types d'évènements sont déclenchés, et certains évènements peuvent se produire plusieurs fois, comme les évènements {{DOMxRef("HTMLElement/drag_event", "drag")}} et {{DOMxRef("HTMLElement/dragover_event", "dragover")}}.
 
-| Évènement                                               | Se déclenche lorsque...                                                                                    |
-| ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}} | …[l'élément déplaçable](#éléments_déplaçables) commence à être déplacé.                                    |
-| {{DOMxRef("HTMLElement/drag_event", "drag")}}           | …l'élément déplaçable est en cours de déplacement, toutes les quelques centaines de millisecondes.         |
-| {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}} | …un élément déplaçable entre dans l'élément.                                                               |
-| {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}} | …un élément déplaçable quitte l'élément.                                                                   |
-| {{DOMxRef("HTMLElement/dragover_event", "dragover")}}   | …un élément déplaçable est déplacé au-dessus de l'élément, toutes les quelques centaines de millisecondes. |
-| {{DOMxRef("HTMLElement/drop_event", "drop")}}           | …l'élément est une [cible de dépôt](#cible_de_dépôt) et l'élément déplaçable y est déposé.                 |
-| {{DOMxRef("HTMLElement/dragend_event", "dragend")}}     | …l'élément déplaçable cesse d'être déplacé.                                                                |
+| Évènement                                               | Se déclenche lorsque...                                                                    |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}} | …[l'élément déplaçable](#éléments_déplaçables) commence à être déplacé.                    |
+| {{DOMxRef("HTMLElement/drag_event", "drag")}}           | …l'élément déplaçable est en cours de déplacement (déclenché de manière répétée).          |
+| {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}} | …un élément déplaçable entre dans l'élément.                                               |
+| {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}} | …un élément déplaçable quitte l'élément.                                                   |
+| {{DOMxRef("HTMLElement/dragover_event", "dragover")}}   | …un élément déplaçable est déplacé au-dessus de l'élément (déclenché de manière répétée).  |
+| {{DOMxRef("HTMLElement/drop_event", "drop")}}           | …l'élément est une [cible de dépôt](#cible_de_dépôt) et l'élément déplaçable y est déposé. |
+| {{DOMxRef("HTMLElement/dragend_event", "dragend")}}     | …l'élément déplaçable cesse d'être déplacé.                                                |
 
 > [!NOTE]
 > Les évènements `dragstart`, `drag` et `dragend` sont déclenchés sur l'élément déplacé, et ne peuvent donc pas se produire lorsqu'on fait glisser un fichier depuis le système d'exploitation vers le navigateur.
@@ -66,7 +66,7 @@ En HTML, les images, les liens et les sélections sont déplaçables par défaut
 
 {{EmbedLiveSample("draggable_element", "", 100)}}
 
-Pour les images et les liens, l'attribut `draggable` est défini par défaut sur `true`, donc vous ne le définirez sur `false` que pour désactiver le déplacement de ces éléments. Pour les éléments non déplaçables, le geste de «&nbsp;glisser&nbsp;» sélectionne généralement le texte à la place.
+Pour les images et les liens, l'attribut `draggable` est défini par défaut sur `true`, donc vous ne le définissez sur `false` que pour désactiver le déplacement de ces éléments. Pour les éléments non déplaçables, le geste de «&nbsp;glisser&nbsp;» sélectionne généralement le texte à la place.
 
 > [!NOTE]
 > Lorsqu'un élément est rendu déplaçable, le texte ou d'autres éléments à l'intérieur ne peuvent plus être sélectionnés de manière normale en cliquant et en faisant glisser avec la souris. À la place, l'utilisateur·ice doit maintenir la touche <kbd>Alt</kbd> enfoncée pour sélectionner le texte avec la souris, ou utiliser le clavier.
@@ -81,7 +81,7 @@ Pour plus d'informations, consultez le [guide des opérations de glisser-dépose
 
 Vous ne pouvez pas transférer directement des objets JavaScript vers des pages Web arbitraires, et encore moins vers des applications externes. Pour transférer des données vers et depuis la page Web, les données doivent être sérialisées sous forme de chaîne de caractères (ou sous forme de {{DOMxRef("File")}}). Dans le glisser-déposer, cette chaîne de caractères est encapsulée dans un objet {{DOMxRef("DataTransferItem")}}, qui définit également un `type` particulier — généralement un type MIME tel que `text/html` — qui définit comment la chaîne de caractères doit être interprétée.
 
-Chaque opération de glisser-déposer est associée à un _stockage de données déplacées_ qui est un objet {{DOMxRef("DataTransfer")}} accessible par la propriété {{DOMxRef("DragEvent.dataTransfer","dataTransfer")}} de {{DOMxRef("DragEvent")}}. Pour les éléments glissables par défaut tels que les images, les liens et les sélections, les données de glissement sont déjà définies par le navigateur&nbsp;; pour les éléments glissables personnalisés définis à l'aide de l'attribut `draggable`, vous devez définir vous-même les données de glissement. La seule occasion d'apporter des modifications au magasin de données se situe dans le gestionnaire {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}} — pour le `dataTransfer` de tout autre évènement de glissement, le magasin de données est non modifiable.
+Chaque opération de glisser-déposer est associée à un _stockage de données déplacées_ qui est un objet {{DOMxRef("DataTransfer")}} accessible par la propriété {{DOMxRef("DragEvent.dataTransfer","dataTransfer")}} de {{DOMxRef("DragEvent")}}. Pour les éléments glissants par défaut tels que les images, les liens et les sélections, les données de glissement sont déjà définies par le navigateur&nbsp;; pour les éléments glissants personnalisés définis à l'aide de l'attribut `draggable`, vous devez définir vous-même les données de glissement. La seule occasion d'apporter des modifications au magasin de données se situe dans le gestionnaire {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}} — pour le `dataTransfer` de tout autre évènement de glissement, le magasin de données est non modifiable.
 
 La méthode {{DOMxRef("DataTransfer.setData", "setData()")}} peut être utilisée pour ajouter un élément aux données de déplacement, comme le montre l'exemple suivant.
 

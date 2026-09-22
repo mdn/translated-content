@@ -88,5 +88,5 @@ console.log(ym2.toString()); // 2021-06-10[u-ca=chinese]
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainYearMonth")}}
+- L'objet natif {{JSxRef("Temporal.PlainYearMonth")}}
 - La méthode statique {{JSxRef("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}

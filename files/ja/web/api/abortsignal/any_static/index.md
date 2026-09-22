@@ -3,7 +3,7 @@ title: "AbortSignal: any() 静的メソッド"
 short-title: any()
 slug: Web/API/AbortSignal/any_static
 l10n:
-  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
@@ -60,7 +60,7 @@ try {
   });
   const body = await res.blob();
   // ダウンロードした内容を処理する:
-  // ...
+  // …
 } catch (e) {
   if (e.name === "AbortError") {
     // ユーザーがキャンセルした

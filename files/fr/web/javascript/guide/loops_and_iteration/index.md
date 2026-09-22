@@ -3,7 +3,7 @@ title: Boucles et itérations
 slug: Web/JavaScript/Guide/Loops_and_iteration
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
+{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 Les boucles permettent de répéter des actions simplement et rapidement. Ce chapitre du [guide JavaScript](/fr/docs/Web/JavaScript/Guide) présente les différentes instructions qu'il est possible d'utiliser en JavaScript pour effectuer des itérations.
 

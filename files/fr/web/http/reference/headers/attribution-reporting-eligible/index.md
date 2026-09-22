@@ -3,10 +3,10 @@ title: En-tête Attribution-Reporting-Eligible
 short-title: Attribution-Reporting-Eligible
 slug: Web/HTTP/Reference/Headers/Attribution-Reporting-Eligible
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Deprecated_Header}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 {{Glossary("request header", "L'en-tête de requête")}} HTTP **`Attribution-Reporting-Eligible`** indique que la réponse correspondante est éligible à l'enregistrement d'une source ou d'un déclencheur d'attribution.
 

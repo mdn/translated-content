@@ -3,8 +3,6 @@ title: topSites.get()
 slug: Mozilla/Add-ons/WebExtensions/API/topSites/get
 ---
 
-{{AddonSidebar}}
-
 Obtient un tableau contenant des informations sur les pages que l'utilisateur a visitées souvent et récemment.
 
 Les navigateurs gardent une liste des pages que l'utilisateur visite souvent et récemment. Ils utilisent cette liste pour aider l'utilisateur à retourner à ces endroits facilement. Par exemple, Firefox fournit par défaut une liste des pages les plus visitées dans la page "Nouvel onglet".

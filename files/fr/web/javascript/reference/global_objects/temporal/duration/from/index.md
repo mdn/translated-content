@@ -98,6 +98,6 @@ console.log(d2.toString()); // "PT1H30M"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - Le constructeur {{JSxRef("Temporal/Duration/Duration", "Temporal.Duration()")}}
 - La méthode {{JSxRef("Temporal/Duration/with", "Temporal.Duration.prototype.with()")}}

@@ -2,7 +2,7 @@
 title: XHTML
 slug: Glossary/XHTML
 l10n:
-  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
+  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
 ---
 
 **XHTML** est un terme historiquement utilisé pour décrire des documents [HTML](/fr/docs/Web/HTML) écrits selon les règles de syntaxe de {{Glossary("XML")}}.

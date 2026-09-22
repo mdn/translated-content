@@ -57,8 +57,8 @@ Pour plus d'exemples, voir la méthode {{JSxRef("Temporal/PlainTime/since", "sin
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainTime")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.PlainTime")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/PlainTime/add", "Temporal.PlainTime.prototype.add()")}}
 - La méthode {{JSxRef("Temporal/PlainTime/subtract", "Temporal.PlainTime.prototype.subtract()")}}
 - La méthode {{JSxRef("Temporal/PlainTime/since", "Temporal.PlainTime.prototype.since()")}}

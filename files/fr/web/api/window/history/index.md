@@ -3,10 +3,10 @@ title: "Window : propriété history"
 short-title: history
 slug: Web/API/Window/history
 l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 La propriété en lecture seule `history` de l'interface {{DOMxRef("Window")}} retourne une référence à l'objet {{DOMxRef("History")}}, qui fournit une interface pour manipuler _l'historique de session_ du navigateur (pages visitées dans l'onglet ou le cadre dans lequel la page courante est chargée).
 

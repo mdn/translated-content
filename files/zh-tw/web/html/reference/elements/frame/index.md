@@ -3,8 +3,6 @@ title: <frame>：框架元素
 slug: Web/HTML/Reference/Elements/frame
 ---
 
-{{Deprecated_Header}}
-
 **`<frame>`** [HTML](/zh-TW/docs/Web/HTML) 元素定義了另一個 HTML 文件可以顯示的特定區域。框架應該在 {{HTMLElement("frameset")}} 元素內使用。
 
 由於某些缺點，例如性能問題和對螢幕閱讀器用戶的可訪問性不足，不建議使用 `<frame>` 元素。取而代之的是使用 {{HTMLElement("iframe")}}。

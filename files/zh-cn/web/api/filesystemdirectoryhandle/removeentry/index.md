@@ -38,8 +38,6 @@ removeEntry(name, options)
 - `InvalidModificationError` {{domxref("DOMException")}}
   - : 如果 `recursive` 被设为 `false`，而对应的条目又有子条目时，抛出此异常。
 - `NotFoundError` {{domxref("DOMException")}}
-  - : 如果没有找到指定名称的条目，抛出此异常。
-- `NotFoundError` {{domxref("DOMException")}}
   - : 如果未找到当前条目或者未找到或匹配特定名称的条目，抛出该异常。
 
 ## 示例

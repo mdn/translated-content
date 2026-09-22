@@ -3,12 +3,12 @@ title: "Window : méthode requestFileSystem()"
 short-title: requestFileSystem()
 slug: Web/API/Window/requestFileSystem
 l10n:
-  sourceCommit: 0916e1754652f3a7c663ef031faa26c98f492023
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
-La méthode non standard **`requestFileSystem()`** de l'interface {{DOMxRef("Window")}} est spécifique à Google Chrome et permet à un site web ou à une application d'accéder à un système de fichiers sandboxé pour son propre usage. Le {{DOMxRef("FileSystem")}} retourné est ensuite disponible pour une utilisation avec les autres [API de système de fichiers](/fr/docs/Web/API/File_and_Directory_Entries_API).
+La méthode non standard **`requestFileSystem()`** de l'interface {{DOMxRef("Window")}} est spécifique à Google Chrome et permet à un site web ou à une application d'accéder à un système de fichiers en bac à sable pour son propre usage. Le {{DOMxRef("FileSystem")}} retourné est ensuite disponible pour une utilisation avec les autres [API de système de fichiers](/fr/docs/Web/API/File_and_Directory_Entries_API).
 
 > [!NOTE]
 > Cette méthode est préfixée par `webkit` dans tous les navigateurs qui l'implémentent.

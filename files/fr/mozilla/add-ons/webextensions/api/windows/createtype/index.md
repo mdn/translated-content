@@ -3,8 +3,6 @@ title: windows.CreateType
 slug: Mozilla/Add-ons/WebExtensions/API/windows/CreateType
 ---
 
-{{AddonSidebar}}
-
 Spécifie le type de fenêtre du navigateur à créer.
 
 ## Type

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 > [!NOTE]
 > [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では、関数の `caller` にアクセスするとエラーが発生します。 API は削除され、代替手段もありません。これは、コードが「スタックを歩く」ことを防ぐためです。これは、セキュリティリスクをもたらすだけでなく、インライン展開や末尾再帰呼び出し最適化などの最適化の可能性を大幅に制限します。より詳しい説明については、 [`arguments.callee` の非推奨化の根拠](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee#解説)をご覧ください。

@@ -3,8 +3,6 @@ title: contextualIdentities.query()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/query
 ---
 
-{{AddonSidebar}}
-
 Obtient des informations sur toutes les identités contextuelles ou sur les identités contextuelles correspondant à un argument de filtre donné.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

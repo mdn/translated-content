@@ -16,7 +16,7 @@ htmlSlotElement.name = name
 
 ### 值
 
-一个 {{domxref('DOMString')}}.
+一个 {{jsxref("String")}}.
 
 ## 例子
 

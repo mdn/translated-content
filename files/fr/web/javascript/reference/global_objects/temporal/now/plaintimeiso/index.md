@@ -55,5 +55,5 @@ console.log(timeInNewYork); // par exemple : 23:12:34.567890123
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Now")}}
-- L'objet {{JSxRef("Temporal.PlainTime")}}
+- L'objet natif {{JSxRef("Temporal.Now")}}
+- L'objet natif {{JSxRef("Temporal.PlainTime")}}

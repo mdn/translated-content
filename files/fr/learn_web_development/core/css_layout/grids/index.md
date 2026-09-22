@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Grids
 original_slug: Learn/CSS/CSS_layout/Grids
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}
 
 «&nbsp;CSS Grid Layout&nbsp;» (Trames avec les CSS) est un système de mise en page bidimensionnel. Il vous permet de disposer les contenus en lignes et en colonnes&nbsp;; il possède de nombreuses fonctionnalités simplifiant la construction de mises en page complexes. Cet article vous indique tout ce que vous devez savoir pour commencer une mise en page avec une trame.
 

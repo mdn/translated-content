@@ -28,7 +28,7 @@ Le commentaire associé est marqué à l'aide d'une structure HTML enveloppée d
 <div role="comment" id="thread-1" data-author="chris">
   <h3>Chris a dit</h3>
   <p class="comment-text">
-    Je pense vraiment que ce moment pourrait bénéficier de plus de cowbell.
+    Je pense vraiment que ce moment peut bénéficier de plus de cloche à vache.
   </p>
   <p><time datetime="2019-03-30T19:29">30 mars 2019, 19:29</time></p>
 </div>
@@ -51,7 +51,7 @@ Puisque `aria-details` peut maintenant accepter plusieurs ID, nous pouvons assoc
 <div role="comment" id="thread-1" data-author="chris">
   <h3>Chris à dit</h3>
   <p class="comment-text">
-    Je pense vraiment que ce moment pourrait bénéficier de plus de cowbell.
+    Je pense vraiment que ce moment peut bénéficier de plus de cloche à vache.
   </p>
   <p><time datetime="2019-03-30T19:29">30 mars 2019, 19:29</time></p>
 </div>
@@ -59,8 +59,8 @@ Puisque `aria-details` peut maintenant accepter plusieurs ID, nous pouvons assoc
 <div role="comment" id="thread-2" data-author="chris">
   <h3>Marcus à dit</h3>
   <p class="comment-text">
-    Le solo de guitare pourrait bénéficier d'une touche de plus de chorus, et
-    d'un volume légèrement inférieur.
+    Le solo de guitare peut bénéficier d'une touche de plus de chorus, et d'un
+    volume légèrement inférieur.
   </p>
   <p><time datetime="2019-03-29T15:35">29 mars 2019, 15:35</time></p>
 </div>
@@ -74,14 +74,14 @@ Il est possible d'imbriquer des commentaires les uns dans les autres, comme ceci
 <div role="comment" id="thread-1" data-author="chris">
   <h3>Chris à dit</h3>
   <p class="comment-text">
-    Je pense vraiment que ce moment pourrait bénéficier de plus de cowbell.
+    Je pense vraiment que ce moment peut bénéficier de plus de cloche à vache.
   </p>
   <p><time datetime="2021-03-30T19:29">30 mars 2021, 19:29</time></p>
 
   <div role="comment" data-author="marcus">
     <h3>Marcus à répondu</h3>
     <p class="comment-text">
-      Je ne sais pas pour ça. Je pense que le cowbell pourrait distraire du
+      Je ne sais pas pour ça. Je pense que la cloche à vache peut distraire du
       solo.
     </p>
     <p><time datetime="2021-03-30T21:02">30 mars 2021, 21:02</time></p>

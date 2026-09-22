@@ -1,11 +1,17 @@
 ---
-title: border-left-style
+title: "`border-left-style` CSS 属性"
+short-title: border-left-style
 slug: Web/CSS/Reference/Properties/border-left-style
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-The **`border-left-style`** [CSS](/zh-CN/docs/Web/CSS) property sets the line style of an element's left {{cssxref("border")}}.
+**`border-left-style`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素左边 {{cssxref("border")}} 的线条样式。
 
-{{InteractiveExample("CSS Demo: border-left-style")}}
+> [!NOTE]
+> 规范中没有定义不同样式的边框在边角处是如何连接的。
+
+{{InteractiveExample("CSS 演示：border-left-style")}}
 
 ```css interactive-example-choice
 border-left-style: none;
@@ -34,15 +40,15 @@ border-left-style: inset;
 ```html interactive-example
 <section id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    这是一个带有边框的盒子。
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -50,17 +56,14 @@ border-left-style: inset;
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 ```
 
-> [!NOTE]
-> The specification doesn't define how borders of different styles connect in the corners.
-
-## Syntax
+## 语法
 
 ```css
-/* Keyword values */
+/* 关键字值 */
 border-left-style: none;
 border-left-style: hidden;
 border-left-style: dotted;
@@ -72,47 +75,57 @@ border-left-style: ridge;
 border-left-style: inset;
 border-left-style: outset;
 
-/* Global values */
+/* 全局值 */
 border-left-style: inherit;
 border-left-style: initial;
+border-left-style: revert;
+border-left-style: revert-layer;
 border-left-style: unset;
 ```
 
-The `border-left-style` property is specified as a single keyword chosen from those available for the {{cssxref("border-style")}} property.
+`border-left-style` 属性指定为单个 {{cssxref("line-style")}} 关键字值。
 
-### Formal syntax
+## 形式定义
+
+{{CSSInfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
-## Examples
+## 示例
+
+### 设置 border-left-style
 
 #### HTML
 
 ```html
 <table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">dotted</td>
-    <td class="b4">dashed</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td class="b1">none</td>
+      <td class="b2">hidden</td>
+      <td class="b3">dotted</td>
+      <td class="b4">dashed</td>
+    </tr>
+    <tr>
+      <td class="b5">solid</td>
+      <td class="b6">double</td>
+      <td class="b7">groove</td>
+      <td class="b8">ridge</td>
+    </tr>
+    <tr>
+      <td class="b9">inset</td>
+      <td class="b10">outset</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
 #### CSS
 
 ```css
-/* Define look of the table */
+/* 定义表格外观 */
 table {
   border-width: 2px;
   background-color: #52e385;
@@ -122,7 +135,7 @@ td {
   padding: 3px;
 }
 
-/* border-left-style example classes */
+/* border-left-style 示例类 */
 .b1 {
   border-left-style: none;
 }
@@ -155,21 +168,19 @@ td {
 }
 ```
 
-Result
+#### 结果
 
-{{ EmbedLiveSample('Examples', 300, 200) }}
+{{EmbedLiveSample("示例", 300, 200)}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-{{cssinfo}}
-
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- The other style-related border properties: {{Cssxref("border-bottom-style")}}, {{Cssxref("border-right-style")}}, {{Cssxref("border-top-style")}}, and {{Cssxref("border-style")}}.
-- The other left-border-related properties: {{Cssxref("border-left")}}, {{Cssxref("border-left-color")}}, and {{Cssxref("border-left-width")}}.
+- 其他与样式相关的边框属性：{{Cssxref("border-bottom-style")}}、{{Cssxref("border-right-style")}}、{{Cssxref("border-top-style")}} 和 {{Cssxref("border-style")}}。
+- 其他与左边框相关的属性：{{Cssxref("border-left")}}、{{Cssxref("border-left-color")}} 和 {{Cssxref("border-left-width")}}。

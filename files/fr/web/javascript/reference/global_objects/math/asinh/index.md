@@ -16,16 +16,16 @@ La méthode statique **`Math.asinh()`** retourne le sinus hyperbolique inverse d
 
 ```js interactive-example
 console.log(Math.asinh(1));
-// Sortie attendue : 0.881373587019543
+// Résultat attendu : 0.881373587019543
 
 console.log(Math.asinh(0));
-// Sortie attendue : 0
+// Résultat attendu : 0
 
 console.log(Math.asinh(-1));
-// Sortie attendue : -0.881373587019543
+// Résultat attendu : -0.881373587019543
 
 console.log(Math.asinh(2));
-// Sortie attendue : 1.4436354751788103
+// Résultat attendu : 1.4436354751788103
 ```
 
 ## Syntaxe

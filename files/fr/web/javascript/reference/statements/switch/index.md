@@ -3,8 +3,6 @@ title: switch
 slug: Web/JavaScript/Reference/Statements/switch
 ---
 
-{{jsSidebar("Statements")}}
-
 L'instruction **`switch`** évalue une expression et, selon le résultat obtenu et le cas associé, exécute les instructions correspondantes.
 
 {{InteractiveExample("JavaScript Demo: Statement - Switch")}}

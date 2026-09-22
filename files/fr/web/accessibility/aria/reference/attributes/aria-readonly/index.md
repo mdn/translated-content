@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-readonly"
 short-title: aria-readonly
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-readonly
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
 ---
 
 L'attribut `aria-readonly` indique que l'élément n'est pas modifiable, mais reste utilisable.
@@ -12,7 +12,7 @@ L'attribut `aria-readonly` indique que l'élément n'est pas modifiable, mais re
 
 Lorsque vous souhaitez indiquer qu'un élément interactif fonctionne mais n'est pas modifiable, définissez `aria-readonly="true"`. Cela indique à l'utilisateur·ice qu'un élément interactif normalement sélectionnable et copiable a été placé en mode lecture seule (et non désactivé).
 
-Quand `aria-readonly` est défini à `true`, cela signifie que l'utilisateur·ice peut lire mais pas modifier la valeur du widget. Les éléments en lecture seule restent pertinents pour l'utilisateur·ice&nbsp;: il ne faut pas empêcher la navigation vers l'élément ou ses descendants sélectionnables, ni la copie de la valeur.
+Quand `aria-readonly` est défini à `true`, cela signifie que l'utilisateur·ice peut lire mais pas modifier la valeur du composant. Les éléments en lecture seule restent pertinents pour l'utilisateur·ice&nbsp;: il ne faut pas empêcher la navigation vers l'élément ou ses descendants sélectionnables, ni la copie de la valeur.
 
 Exemples&nbsp;:
 

@@ -3,7 +3,7 @@ title: Propriété CSS `mask-mode`
 short-title: mask-mode
 slug: Web/CSS/Reference/Properties/mask-mode
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 4ad860d817cf6d8ca24f41b3846b29e158934d27
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-mode`** détermine si le masque défini par {{CSSxRef("mask-image")}} est considéré comme un masque de luminance ou un masque alpha (transparence).
@@ -49,13 +49,13 @@ Si le masque est de type {{CSSxRef("image")}}, par défaut, les valeurs alpha de
 
 ### Comprendre la luminance
 
-Dans le cas des masques `luminance`, la visibilité de l'élément masqué dépend à la fois de l'opacité du masque et de la luminosité de la couleur des zones opaques. Les zones opaques blanches (100% de luminance) (alpha = 1) seront masquées et visibles, et les zones noires (0% de luminance) transparentes (alpha = 0) seront découpées. Les zones avec des couleurs intermédiaires entre le blanc et le noir et avec une opacité partielle seront partiellement masquées, reflétant la luminance et la transparence alpha de chaque couleur composant le masque.
+Dans le cas des masques `luminance`, la visibilité de l'élément masqué dépend à la fois de l'opacité du masque et de la luminosité de la couleur des zones opaques. Les zones opaques blanches (100% de luminance) (alpha = 1) sont masquées et visibles, et les zones noires (0% de luminance) transparentes (alpha = 0) sont découpées. Les zones avec des couleurs intermédiaires entre le blanc et le noir et avec une opacité partielle sont partiellement masquées, reflétant la luminance et la transparence alpha de chaque couleur composant le masque.
 
 L'opacité d'un masque `luminance` est déterminée par les valeurs `R`, `G`, `B` et `A` d'une couleur `rgb()` en utilisant la formule&nbsp;:
 
 `((0.2125 * R) + (0.7154 * G) + (0.0721 * B)) * A`
 
-Par exemple, la couleur `green` est `#008000` ou `rgb(0% 50% 0% / 1)`. Dans un masque `luminance`, toute zone masquée par un masque `green` solide sera `35,77%` opaque. Si le `mask-mode` pour ce masque est défini sur `alpha`, puisque `green` est une couleur entièrement opaque, la zone masquée sera `100%` opaque.
+Par exemple, la couleur `green` est `#008000` ou `rgb(0% 50% 0% / 1)`. Dans un masque `luminance`, toute zone masquée par un masque `green` solide est `35,77%` opaque. Si le `mask-mode` pour ce masque est défini sur `alpha`, puisque `green` est une couleur entièrement opaque, la zone masquée est `100%` opaque.
 
 ### Valeurs multiples
 

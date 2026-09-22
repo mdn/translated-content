@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Multicol_layout/Basic_concepts
 original_slug: Web/CSS/CSS_multicol_layout/Basic_concepts
 ---
 
-{{CSSRef}}
-
 La disposition sur plusieurs colonnes (« _Multiple-column Layout_ » ou « _multicol_ » en anglais) est un module de spécification pour organiser du contenu sur un ensemble de colonnes, à la façon des colonnes dans un journal imprimé. Dans ce guide, nous verrons comment fonctionne cette spécification et quelques cas d'exemples.
 
 ## Concepts et terminologie

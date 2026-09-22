@@ -32,7 +32,7 @@ paint-order: unset;
 
 Si aucune valeur n'est définie, l'ordre de peinture par défaut est `fill`, `stroke`, `markers`.
 
-Lorsque une seule valeur est définie, celle-ci est peinte en premier, suivie des deux autres dans leur ordre par défaut relatif. Lorsque deux valeurs sont définies, elles sont peintes dans l'ordre spécifié, suivies de la valeur non définie.
+Lorsque une seule valeur est définie, celle-ci est peinte en premier, suivie des deux autres dans leur ordre par défaut relatif. Lorsque deux valeurs sont définies, elles sont peintes dans l'ordre défini, suivies de la valeur non définie.
 
 > [!NOTE]
 > Pour cette propriété, les marqueurs sont uniquement utilisés dans le cas de formes SVG qui utilisent les propriétés `marker-*` (par exemple, {{SVGAttr("marker-start")}}) ou l'élément SVG {{SVGElement("marker")}}. Les marqueurs ne sont pas appliqués sur le texte HTML, dans ce cas, seul l'ordre entre `stroke` et `fill` importe.

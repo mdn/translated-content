@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{deprecated_header}}
-
 > [!WARNING]
 > {{CSP("report-to")}} ディレクティブは、 `report-uri` ディレクティブを置き換えるためのものであり、 `report-to` に対応するブラウザーでは、 `report-uri` ディレクティブは無視されます。
 >

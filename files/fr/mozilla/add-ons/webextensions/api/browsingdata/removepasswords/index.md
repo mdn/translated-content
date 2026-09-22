@@ -3,8 +3,6 @@ title: browsingData.removePasswords()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removePasswords
 ---
 
-{{AddonSidebar}}
-
 Efface les mots de passes enregistrés
 
 Vous pouvez utiliser le paremètre `removalOptions`, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :

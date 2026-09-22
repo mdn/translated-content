@@ -3,8 +3,6 @@ title: i18n
 slug: Mozilla/Add-ons/WebExtensions/API/i18n
 ---
 
-{{AddonSidebar}}
-
 Fonctions permettant d'internationaliser votre extension. Vous pouvez utiliser ces API pour obtenir des chaînes localisées à partir de fichiers locaux conditionnés avec votre extension, connaître la langue actuelle du navigateur et en connaître la valeur de son [En-tete "Accept-Language"](/fr/docs/Web/HTTP/Guides/Content_negotiation#the_accept-language_header).
 
 Pour plus de détails sur l'utilisation de i18n pour votre extension, voir :

@@ -3,8 +3,6 @@ title: alarms.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/clear
 ---
 
-{{AddonSidebar}}
-
 Cette méthode supprime une alarme à partir du nom passé en argument. Il s'agit d'une fonction asynchrone qui renvoie une {{jsxref("Promise")}}.
 
 ## Syntaxe

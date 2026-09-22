@@ -3,7 +3,7 @@ title: Propriété CSS `corner-right-shape`
 short-title: corner-right-shape
 slug: Web/CSS/Reference/Properties/corner-right-shape
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 {{SeeCompatTable}}
@@ -14,7 +14,7 @@ Pour une description complète du comportement des formes de coins et plusieurs 
 
 ## Propriétés constitutives
 
-La propriété `corner-right-shape` est une forme raccourcie pour les propriétés physiques suivantes&nbsp;:
+Cette propriété est une forme raccourcie pour les propriétés physiques suivantes&nbsp;:
 
 - {{CSSxRef("corner-top-right-shape")}}
 - {{CSSxRef("corner-bottom-right-shape")}}

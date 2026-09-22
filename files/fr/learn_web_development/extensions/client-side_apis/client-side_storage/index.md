@@ -4,8 +4,6 @@ slug: Learn_web_development/Extensions/Client-side_APIs/Client-side_storage
 original_slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 Les navigateurs web modernes permettent aux sites web de stocker des données sur l'ordinateur de l'utilisateur — avec sa permission — puis de les récupérer au besoin. Cela permet d'enregistrer des données pour du stockage à long terme, de sauvegarder des documents ou des sites hors-ligne, de conserver des préférences spécifiques à l'utilisateur et plus encore. Cet article explique les fondamentaux pour y parvenir.

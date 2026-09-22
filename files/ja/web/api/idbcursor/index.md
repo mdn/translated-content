@@ -47,8 +47,6 @@ l10n:
 
 ## 定数
 
-{{Deprecated_Header}}
-
 > [!WARNING]
 > これらの定数は利用できません。Gecko 25 で削除されました。代わりに文字列定数を直接使う必要があります。([Firefox バグ 891944](https://bugzil.la/891944))
 

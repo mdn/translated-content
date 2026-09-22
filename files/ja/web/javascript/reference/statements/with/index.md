@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
-{{Deprecated_Header}}
-
 > [!NOTE]
 > `with` 文の使用は推奨されません。混乱を招くバグや互換性問題の原因となる可能性があり、最適化ができなくなり、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では禁止されているからです。推奨される代替案は、プロパティをアクセスしたいオブジェクトを一時変数に割り当てることです。
 

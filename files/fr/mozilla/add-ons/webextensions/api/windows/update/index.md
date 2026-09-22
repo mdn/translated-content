@@ -3,8 +3,6 @@ title: windows.update()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/update
 ---
 
-{{AddonSidebar}}
-
 Mises à jour des propriétés d'une fenêtre. Utilisez ceci pour déplacer, redimensionner, et (un) se concentrer sur une fenêtre, etc.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

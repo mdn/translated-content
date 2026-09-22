@@ -3,7 +3,7 @@ title: Propriété CSS `caption-side`
 short-title: caption-side
 slug: Web/CSS/Reference/Properties/caption-side
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`caption-side`** place le contenu de la {{HTMLElement("caption", "légende")}} d'un tableau sur le côté défini. Les valeurs sont relatives au mode d'écriture ({{CSSxRef("writing-mode")}}) du tableau.
@@ -89,9 +89,9 @@ caption-side: revert-layer;
 caption-side: unset;
 ```
 
-La propriété `caption-side` se paramètre à l'aide d'un des mots-clés suivants.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `top`
   - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au-dessus du tableau.
@@ -99,7 +99,7 @@ La propriété `caption-side` se paramètre à l'aide d'un des mots-clés suivan
   - : Un mot-clé qui indique que la boîte de la légende doit être positionnée en dessous du tableau.
 
 > [!NOTE]
-> Le module [des propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values) définit deux valeurs logiques, `inline-start` et `inline-end`, pour placer la boîte de légende respectivement au début et à la fin de l'axe en ligne du tableau. Ces valeurs ne sont prises en charge par aucun navigateur.
+> Le module [des propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values) définit deux valeurs logiques, `inline-start` et `inline-end`, pour placer la boîte de légende respectivement au début et à la fin de l'axe de ligne du tableau. Ces valeurs ne sont prises en charge par aucun navigateur.
 
 ## Définition formelle
 

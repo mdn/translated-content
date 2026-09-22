@@ -1,15 +1,16 @@
 ---
 title: "Element : méthode removeAttributeNS()"
+short-title: removeAttributeNS()
 slug: Web/API/Element/removeAttributeNS
 l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`removeAttributeNS()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), supprime l'attribut avec l'espace de noms et ayant le nom indiqués.
+La méthode **`removeAttributeNS()`** de l'interface {{DOMxRef("Element")}} supprime l'attribut défini, associé à l'espace de noms défini de l'élément.
 
-Si vous manipulez des documents HTML et n'avez pas besoin de restreindre à un espace de noms donné, vous pouvez utiliser la méthode [`removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute) à la place.
+Si vous travaillez avec du HTML et que vous n'avez pas besoin de définir l'attribut demandé comme faisant partie d'un espace de noms spécifique, utilisez la méthode {{DOMxRef("Element.removeAttribute()", "removeAttribute()")}} à la place.
 
 ## Syntaxe
 
@@ -26,16 +27,17 @@ removeAttributeNS(namespace, attrName)
 
 ### Valeur de retour
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+Aucune ({{JSxRef("undefined")}}).
 
-## Exemple
+## Exemples
 
 ```js
-// <div id="div1" xmlns:special="http://www.mozilla.org/ns/specialspace"
-//      special:specialAlign="utterleft" width="200px" />
+// Étant donné :
+//   <div id="div1" xmlns:special="http://www.mozilla.org/ns/specialspace"
+//     special:specialAlign="utterleft" width="200px" />
 d = document.getElementById("div1");
 d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
-// l'élément est devenu : <div id="div1" width="200px" />
+// Est devenu : <div id="div1" width="200px" />
 ```
 
 ## Spécifications
@@ -48,7 +50,6 @@ d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
 
 ## Voir aussi
 
-- [`Element.removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute)
-- [`Element.hasAttributeNS()`](/fr/docs/Web/API/Element/hasAttributeNS)
-- [`Element.getAttributeNS()`](/fr/docs/Web/API/Element/getAttributeNS)
-- [`Element.setAttributeNS()`](/fr/docs/Web/API/Element/setAttributeNS)
+- La méthode {{DOMxRef("Element.hasAttributeNS()")}}
+- La méthode {{DOMxRef("Element.getAttributeNS()")}}
+- La méthode {{DOMxRef("Element.setAttributeNS()")}}

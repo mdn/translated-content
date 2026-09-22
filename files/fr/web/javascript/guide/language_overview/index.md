@@ -4,8 +4,6 @@ slug: Web/JavaScript/Guide/Language_overview
 original_slug: Web/JavaScript/Language_overview
 ---
 
-{{jsSidebar}}
-
 Pourquoi une réintroduction ? Parce que JavaScript est connu pour être source d'incompréhensions. Bien que souvent raillé comme étant un simple jouet, derrière sa simplicité désarmante se cachent certaines fonctionnalités de langage très puissantes. JavaScript est maintenant utilisé par un nombre incroyable d'applications de haut rang, ce qui montre qu'une connaissance approfondie de cette technologie est une compétence importante pour toute développeuse ou développeur web ou mobile.
 
 Il peut être utile de commencer avec un aperçu de l'histoire de ce langage. JavaScript a été créé en 1995 par Brendan Eich, alors ingénieur à Netscape. Ce langage est sorti au grand jour pour la première fois avec Netscape 2 au début de l'année 1996. Il était au départ censé s'appeler LiveScript, mais a été renommé par une décision marketing mal avisée dans le but de capitaliser sur la popularité du langage Java de Sun Microsystems, malgré le fait qu'ils n'aient que très peu en commun. Cela n'a jamais cessé d'être une source de confusion.

@@ -3,10 +3,10 @@ title: "HTMLTableRowElement : propriété vAlign"
 short-title: vAlign
 slug: Web/API/HTMLTableRowElement/vAlign
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`vAlign`** de l'interface {{DOMxRef("HTMLTableRowElement")}} est une chaîne de caractères indiquant comment aligner verticalement le texte dans une ligne de tableau ({{HTMLElement("tr")}}). Les cellules individuelles peuvent la remplacer.
 
@@ -30,7 +30,7 @@ Les valeurs possibles sont&nbsp;: `"top"`, `"middle"`, `"bottom"` ou `"baseline"
 
 ## Exemples
 
-Utilisez plutôt CSS {{CSSxRef("vertical-align")}}, qui a priorité, comme démontré dans l'[exemple d'alignement vertical des cellules de tableau](/fr/docs/Web/CSS/Reference/Properties/vertical-align#alignement_vertical_dans_une_cellule_de_tableau).
+Utilisez plutôt CSS {{CSSxRef("vertical-align")}}, qui a priorité, comme démontré dans [l'exemple d'alignement vertical des cellules de tableau](/fr/docs/Web/CSS/Reference/Properties/vertical-align#alignement_vertical_dans_une_cellule_de_tableau).
 
 ## Spécifications
 

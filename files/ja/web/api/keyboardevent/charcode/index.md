@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}
 
 **`charCode`** は {{domxref("KeyboardEvent")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Element/keypress_event", "keypress")}} イベントの間に押されたキーの Unicode 値を返します。
 

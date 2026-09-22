@@ -10,7 +10,7 @@ slug: Web/API/FontFace
 ## Constructor
 
 - {{domxref("FontFace.FontFace", "FontFace()")}}
-  - : 使用 URL 指向的外部资源或{{domxref("ArrayBuffer")}}构造并返回一个新的 `FontFace` 对象。
+  - : 使用 URL 指向的外部资源或{{jsxref("ArrayBuffer")}}构造并返回一个新的 `FontFace` 对象。
 
 ## Properties
 
@@ -33,14 +33,14 @@ _这个接口不继承任何属性。_
 - {{domxref("FontFace.status")}} {{readonlyinline}}
   - : 返回一个表示字体当前状态的可枚举值，它可能是下列之一：`"unloaded"`、`"loading"`、`"loaded"`、`"error"`。
 - {{domxref("FontFace.loaded")}} {{readonlyinline}}
-  - : 当字体完全加载或加载失败时返回该 `FontFace` 的 {{domxref("Promise")}}。
+  - : 当字体完全加载或加载失败时返回该 `FontFace` 的 {{jsxref("Promise")}}。
 
 ## 方法
 
 _这个接口不继承任何方法。_
 
 - {{domxref("FontFace.load()")}}
-  - : 加载该字体，返回该字体完全加载或加载失败时的 {{domxref("Promise")}}。
+  - : 加载该字体，返回该字体完全加载或加载失败时的 {{jsxref("Promise")}}。
 
 ## 规范
 

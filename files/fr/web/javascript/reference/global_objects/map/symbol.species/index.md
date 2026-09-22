@@ -58,5 +58,5 @@ class MaMap extends Map {
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Map")}}
+- L'objet natif {{JSxRef("Map")}}
 - La propriété statique {{JSxRef("Symbol.species")}}

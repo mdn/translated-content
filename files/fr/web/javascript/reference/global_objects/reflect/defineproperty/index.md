@@ -3,8 +3,6 @@ title: Reflect.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 ---
 
-{{JSRef}}
-
 La méthode statique **`Reflect.defineProperty()`** est semblable à {{jsxref("Object.defineProperty()")}} mais renvoie un {{jsxref("Boolean")}}.
 
 {{InteractiveExample("JavaScript Demo: Reflect.defineProperty()")}}

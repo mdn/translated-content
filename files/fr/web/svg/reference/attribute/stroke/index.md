@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/stroke
 original_slug: Web/SVG/Attribute/stroke
 ---
 
-{{SVGRef}}
-
 L'attribut **`stroke`** définit la couleur (ou n'importe quelle méthode de remplissage, comme un gradient ou motif) a utiliser pour dessiner le contour d'une forme SVG.
 
 > [!NOTE]

@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/polyline
 original_slug: Web/SVG/Element/polyline
 ---
 
-{{SVGRef}}
-
 L'élément SVG **`<polyline>`** est une forme SVG basique qui crée des lignes entre plusieurs points. Un élément `polyline` est généralement utilisé pour créer des tracés ouverts car le dernier point n'est pas nécessairement connecté avec le premier. Lorsqu'on désire réaliser des formes fermées, on privilégiera l'élément {{SVGElement("polygon")}}.
 
 ## Contexte d'utilisation

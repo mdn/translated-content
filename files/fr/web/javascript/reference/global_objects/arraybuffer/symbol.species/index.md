@@ -76,5 +76,5 @@ class MyArrayBuffer extends ArrayBuffer {
 
 ## Voir aussi
 
-- L'objet global {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}
 - L'accesseur statique {{JSxRef("Symbol.species")}}

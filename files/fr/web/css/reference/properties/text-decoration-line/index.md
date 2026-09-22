@@ -3,7 +3,7 @@ title: Propriété CSS `text-decoration-line`
 short-title: text-decoration-line
 slug: Web/CSS/Reference/Properties/text-decoration-line
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-decoration-line`** permet de définir le type de décoration appliquée au texte d'un élément, comme un soulignement ou une ligne au-dessus du texte.
@@ -86,11 +86,9 @@ text-decoration-line: revert-layer;
 text-decoration-line: unset;
 ```
 
-La propriété `text-decoration-line` est définie comme `none`, ou **une ou plusieurs** valeurs séparées par des espaces à partir de la liste ci-dessous.
-
 ### Valeurs
 
-Cette propriété peut avoir une ou plusieurs valeurs séparées par des espaces. Si aucune valeur n'est fournie, il n'y a pas de décoration ajoutée :
+Cette propriété est définie soit comme `none`, soit comme une liste de mots-clés séparés par des espaces choisis dans la liste ci-dessous&nbsp;:
 
 - `none`
   - : Aucune ligne ne décore le texte.
@@ -145,19 +143,21 @@ Cette propriété peut avoir une ou plusieurs valeurs séparées par des espaces
 
 Dans cet exemple, le premier paragraphe contient une faute d'orthographe et utilise le style du navigateur pour les erreurs d'orthographe sur le mot mal orthographié. Le deuxième paragraphe utilise le style du navigateur pour les erreurs de grammaire. Il n'y a aucun changement de style dans les navigateurs qui ne prennent pas en charge ces valeurs de `text-decoration-line`.
 
-<!-- cSpell:ignore speling -->
+<!-- cSpell:ignore fote -->
 
 ```html
-<p>Ce texte contient une <span class="spelling">fote</span> d'orthographe.</p>
-<p class="grammar">Ce texte contient des erreur grammaticales.</p>
+<p>
+  Ce texte contient une <span class="orthographe">fote</span> d'orthographe.
+</p>
+<p class="grammaire">Ce texte contient des erreur grammaticales.</p>
 ```
 
 ```css
-.spelling {
+.orthographe {
   text-decoration-line: spelling-error;
 }
 
-.grammar {
+.grammaire {
   text-decoration-line: grammar-error;
 }
 ```

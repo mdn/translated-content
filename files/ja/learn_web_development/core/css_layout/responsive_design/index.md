@@ -95,7 +95,7 @@ HTML は基本的にレスポンシブ、つまり流動的です。CSS を含�
 メディアクエリーは RWD で役立ちますが、必須のものではありません。柔軟なグリッド、相対的な単位、最小・最大の単位の値は、メディアクエリーを使用せずに使用することができます。
 
 > [!NOTE]
-> Scrimba には [Aside: Media queries](https://scrimba.com/frontend-path-c0j/~0j3?via=mdn) <sup>[_MDN 学主パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> というチュートリアルがあり、メディアクエリーのインタラクティブな入門と、基本を理解しているかテストするチャレンジを提供しています。（英語）
+> Scrimba には [Aside: Media queries](https://scrimba.com/frontend-path-c0j/~0j3?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> というチュートリアルがあり、メディアクエリーのインタラクティブな入門と、基本を理解しているかテストするチャレンジを提供しています。（英語）
 
 ## レスポンシブレイアウト技術
 
@@ -467,6 +467,6 @@ h1 {
   - [タッチイベント](/ja/docs/Web/API/Touch_events)は、タッチ画面やトラックパッド上の指（またはスタイラス）の動きを解釈する機能を提供し、複雑なタッチベースのユーザーインターフェイスの高品質な対応を可能にします。
   - [pointer](/ja/docs/Web/CSS/Reference/At-rules/@media/pointer) または [any-pointer](/ja/docs/Web/CSS/Reference/At-rules/@media/any-pointer) メディアクエリーを使用すると、タッチ対応端末で異なる CSS を読み込むことができます。
 - [CSS-Tricks guide to media queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
-- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> Scrimba では、楽しいインタラクティブなレッスンや課題、知識豊富な講師陣、そして支援的なコミュニティを通じて、有能なフロントエンドウェブ開発者になるために必要なすべてを学べます。ゼロから始めて、初めてのフロントエンド職をゲットしましょう。コースの多くの要素は、独立した無料版として利用可能です。これにはレスポンシブデザインに関するモジュールも含まれます。
+- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> Scrimba では、楽しいインタラクティブなレッスンや課題、知識豊富な講師陣、そして支援的なコミュニティを通じて、有能なフロントエンドウェブ開発者になるために必要なすべてを学べます。ゼロから始めて、初めてのフロントエンド職をゲットしましょう。コースの多くの要素は、独立した無料版として利用可能です。これにはレスポンシブデザインに関するモジュールも含まれます。
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}

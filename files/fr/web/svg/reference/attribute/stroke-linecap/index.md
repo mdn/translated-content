@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/stroke-linecap
 original_slug: Web/SVG/Attribute/stroke-linecap
 ---
 
-{{SVGRef}}
-
 L'attribut **`stroke-linecap`** définit la forme de la fin des lignes SVG.
 
 > [!NOTE]

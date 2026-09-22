@@ -68,7 +68,7 @@ checkButton.addEventListener("click", () => {
 
 {{EmbedLiveSample("Examples", "100%", 220)}}
 
-Lorsque `false`, si la valeur est manquante, inférieure à 21, supérieure à 65, ou autrement invalide, l'évènement invalid sera enregistré dans la console. Pour signaler l'erreur à l'utilisateur·rice, utilisez plutôt {{DOMxRef("HTMLInputElement.reportValidity()")}}.
+Lorsque `false`, si la valeur est manquante, inférieure à 21, supérieure à 65, ou autrement invalide, l'évènement invalid sera enregistré dans la console. Pour signaler l'erreur à l'utilisateur·ice, utilisez plutôt {{DOMxRef("HTMLInputElement.reportValidity()")}}.
 
 ## Spécifications
 

@@ -4,8 +4,6 @@ slug: WebAssembly/Reference/JavaScript_interface/Exception/getArg
 original_slug: WebAssembly/JavaScript_interface/Exception/getArg
 ---
 
-{{WebAssemblySidebar}}
-
 La méthode **`getArg()`**, rattachée au prototype d'un objet [`Exception`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception), permet d'obtenir la valeur d'un élément spécifique parmi les arguments de donnée d'une exception.
 
 Cette méthode prend comme argument une balise [`WebAssembly.Tag`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Tag) et fonctionnera uniquement si l'exception levée a été créée avec cette même balise. Dans le cas contraire, la méthode déclenchera une exception `TypeError`. On s'assure ainsi que l'exception puisse être lue seulement si le code appelant a accès à la balise. Les balies qui ne sont ni importées ni exportées dans/depuis le code WebAssembly sont internes et les exceptions correspondantes ne peuvent pas être inspectées avec cette méthode&nbsp;!

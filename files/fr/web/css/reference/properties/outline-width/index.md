@@ -3,7 +3,7 @@ title: Propriété CSS `outline-width`
 short-title: outline-width
 slug: Web/CSS/Reference/Properties/outline-width
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`outline-width`** définit l'épaisseur du contour d'un élément. Un contour est une ligne tracée autour d'un élément, à l'extérieur de la {{CSSxRef("border")}}.
@@ -65,18 +65,12 @@ outline-width: revert-layer;
 outline-width: unset;
 ```
 
-La propriété `outline-width` est définie avec une des valeurs listées ci-après.
-
 ### Valeurs
 
-- {{CSSxRef("&lt;length&gt;")}}
-  - : La largeur du contour définie en tant que `<length>`.
-- `thin`
-  - : Dépend de l'agent utilisateur. Généralement équivalent à `1px` dans les navigateurs de bureau (y compris Firefox).
-- `medium`
-  - : Dépend de l'agent utilisateur. Généralement équivalent à `3px` dans les navigateurs de bureau (y compris Firefox).
-- `thick`
-  - : Dépend de l'agent utilisateur. Généralement équivalent à `5px` dans les navigateurs de bureau (y compris Firefox).
+Cette propriété est définie par une seule valeur `<line-width>`.
+
+- {{CSSxRef("&lt;line-width&gt;")}}
+  - : Définit la largeur du contour, soit comme une longueur ({{CSSxRef("&lt;length&gt;")}}) explicite non négative, soit avec les mots-clés&nbsp;: `thin`, `medium` ou `thick`. La valeur par défaut est `medium`.
 
 ## Définition formelle
 

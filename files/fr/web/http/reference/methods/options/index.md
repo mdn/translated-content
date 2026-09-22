@@ -54,7 +54,7 @@ La cible de la requête peut être soit sous «&nbsp;la forme d'une astérisque&
   - : Indique que le client souhaite demander `OPTIONS` pour le serveur dans sa globalité, par opposition à une ressource nommée spécifique de ce serveur.
 - `<request-target>`
   - : Identifie la ressource cible de la requête lorsqu'elle est combinée avec l'information fournie dans l'en-tête {{HTTPHeader("Host")}}.
-    Il s'agit d'un chemin absolu (par exemple `/chemin/vers/fichier.html`) dans les requêtes vers un serveur d'origine, et d'une URL absolue dans les requêtes vers les serveurs mandataires (<i lang="en">proxies</i>) (par exemple `http://www.exemple.fr/chemin/vers/fichier.html`).
+    Il s'agit d'un chemin absolu (par exemple `/chemin/vers/fichier.html`) dans les requêtes vers un serveur d'origine, et d'une URL absolue dans les requêtes vers les serveurs mandataires (<i lang="en">proxies</i>) (par exemple `http://www.example.com/chemin/vers/fichier.html`).
 - `<query>` {{Optional_Inline}}
   - : Un fragment de requête optionnel précédé d'un point d'interrogation `?`.
     Souvent utilisé pour transmettre des informations sous la forme de paires `clé=valeur`.

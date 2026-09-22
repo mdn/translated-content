@@ -58,7 +58,7 @@ instant2.since(instant1).toString(); // "PT1S"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Instant")}}
+- L'objet natif {{JSxRef("Temporal.Instant")}}
 - La méthode {{JSxRef("Temporal/Instant/toString", "Temporal.Instant.prototype.toString()")}}
 - La méthode {{JSxRef("Temporal/Instant/toJSON", "Temporal.Instant.prototype.toJSON()")}}
 - La méthode {{JSxRef("Temporal/Instant/toLocaleString", "Temporal.Instant.prototype.toLocaleString()")}}

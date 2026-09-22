@@ -59,7 +59,7 @@ Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 S'il y a d'autres directives définies, `default-src` ne les affecte pas. Soit l'en-tête suivant&nbsp;:
 
 ```http
-Content-Security-Policy: default-src 'self'; script-src https://exemple.com
+Content-Security-Policy: default-src 'self'; script-src https://example.com
 ```
 
 Est identique à&nbsp;:
@@ -72,7 +72,7 @@ Content-Security-Policy: connect-src 'self';
                          manifest-src 'self';
                          media-src 'self';
                          object-src 'self';
-                         script-src https://exemple.com;
+                         script-src https://example.com;
                          style-src 'self';
                          worker-src 'self'
 ```

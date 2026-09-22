@@ -95,6 +95,6 @@ const view = new Int32Array(buffer);
 ## Voir aussi
 
 - [Guide des tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- L'objet global {{JSxRef("SharedArrayBuffer")}}
+- L'objet natif {{JSxRef("SharedArrayBuffer")}}
 - [<i lang="en">RangeError: invalid array length</i>](/fr/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)
 - [Prothèse d'émulation (<i lang="en">polyfill</i>) pour `ArrayBuffer` dans la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)

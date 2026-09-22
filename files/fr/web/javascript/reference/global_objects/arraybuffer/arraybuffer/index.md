@@ -83,5 +83,5 @@ buffer.resize(12);
 ## Voir aussi
 
 - [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- L'objet global {{JSxRef("SharedArrayBuffer")}}
+- L'objet natif {{JSxRef("SharedArrayBuffer")}}
 - [Prothèse d'émulation pour `ArrayBuffer` avec la bibliothèque `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-typed-arrays)

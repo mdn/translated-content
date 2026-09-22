@@ -76,6 +76,6 @@ console.log(maLocaleMaximisee.toString());
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}
 - La propriété {{JSxRef("Intl/Locale/baseName", "baseName")}}
 - [Sous-balises vraisemblables](https://www.unicode.org/reports/tr35/#Likely_Subtags) dans la spécification du langage de balisage des données de locale Unicode

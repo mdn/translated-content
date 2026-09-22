@@ -43,9 +43,9 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 Répartir le contenu entre différents paragraphes permet d'améliorer l'accessibilité d'une page. Les lecteurs d'écran et autres outils d'assistance fournissent des raccourcis qui permettent aux utilisateur·ice·s d'accéder rapidement au paragraphe suivant ou précédent et ainsi de naviguer plus rapidement sur la page, comme le permettent les blancs pour la navigation visuelle des autres utilisateur·ice·s.
 
-L'utilisation de paragraphes vides (des éléments HTML `<p>` sans contenu) est problématique pour les personnes qui naviguent sur une page à l'aide d'outils d'assistance. Les lecteurs d'écran, par exemple, pourraient annoncer l'élément mais pas le contenu associé ce qui peut être frustrant ou source de confusion.
+L'utilisation de paragraphes vides (des éléments HTML `<p>` sans contenu) est problématique pour les personnes qui naviguent sur une page à l'aide d'outils d'assistance. Les lecteurs d'écran, par exemple, peuvent annoncer l'élément mais pas le contenu associé ce qui peut être frustrant ou source de confusion.
 
-S'il est nécessaire d'avoir un espace supplémentaire, on pourra utiliser des propriétés {{Glossary("CSS")}} comme {{CSSxRef("margin")}} pour obtenir l'effet désiré.
+S'il est nécessaire d'avoir un espace supplémentaire, on peut utiliser des propriétés {{Glossary("CSS")}} comme {{CSSxRef("margin")}} pour obtenir l'effet désiré.
 
 ```css
 p {
@@ -81,7 +81,7 @@ Par défaut, les navigateurs séparent les paragraphes par une seule ligne vide.
 ```html
 <p>
   Séparer les paragraphes par des lignes vides est le plus facile à parcourir
-  pour les lecteurs·rices, mais ils peuvent aussi être séparés en indentant leur
+  pour les lecteur·ice·s, mais ils peuvent aussi être séparés en indentant leur
   première ligne. Cela est souvent utilisé pour prendre moins de place, par
   exemple pour économiser du papier à l'impression.
 </p>
@@ -94,7 +94,7 @@ Par défaut, les navigateurs séparent les paragraphes par une seule ligne vide.
 </p>
 
 <p>
-  Dans les écrits très anciens, les paragraphes étaient séparés par un caractère
+  Dans les écrits très anciens, les paragraphes sont séparés par un caractère
   spécial&nbsp;: ¶, le <i>pied-de-mouche</i>. Aujourd'hui, cela est considéré
   comme oppressant et difficile à lire.
 </p>

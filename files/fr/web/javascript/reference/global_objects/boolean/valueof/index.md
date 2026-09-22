@@ -14,12 +14,12 @@ La méthode **`valueOf()`** des valeurs {{JSxRef("Boolean")}} retourne la valeur
 const x = new Boolean();
 
 console.log(x.valueOf());
-// Sortie attendue : false
+// Résultat attendu : false
 
 const y = new Boolean("Mozilla");
 
 console.log(y.valueOf());
-// Sortie attendue : true
+// Résultat attendu : true
 ```
 
 ## Syntaxe

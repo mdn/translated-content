@@ -3,8 +3,6 @@ title: sessions.getWindowValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getWindowValue
 ---
 
-{{AddonSidebar}}
-
 Récupère une valeur précédemment stockée par un appel à {{WebExtAPIRef("sessions.setWindowValue")}}.
 
 Vous pouvez récupérer une valeur d'une fenêtre même sur un cycle de fermeture / restauration : si vous définissez une valeur, l'utilisateur ferme la fenêtre, puis restaure la fenêtre à l'aide de la fonction "restaurer la fenêtre" du navigateur (par exemple, en appuyant sur Control+Shift+N),vous pourrez récupérer la valeur de la fenêtre restaurée. otez cependant qu'une fenêtre restaurée n'obtient pas le même ID que l'original, donc l'ID que vous passez dans `getWindowValue()` sera différent de l'ID que vous avez passé dans `setWindowValue()`, même s'ils se réfèrent tous les deux à la même fenêtre.

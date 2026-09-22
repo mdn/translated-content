@@ -3,8 +3,6 @@ title: String.prototype.toLocaleLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 ---
 
-{{JSRef}}
-
 La méthode **`toLocaleLowerCase()`** renvoie la chaîne de caractères qui appelle la méthode en une chaîne de caractères représentées en minuscules, en tenant compte des correspondances de caractères propres aux différentes locales.
 
 {{InteractiveExample("JavaScript Demo: String.toLocaleLowerCase()")}}

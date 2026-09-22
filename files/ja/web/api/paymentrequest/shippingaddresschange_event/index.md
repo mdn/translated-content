@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 **`shippingaddresschange`** イベントは、ユーザーが配送先を選択したとき、または配送先の詳細を変更したときに {{domxref("PaymentRequest")}} オブジェクトに送られます。
 

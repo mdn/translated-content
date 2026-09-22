@@ -19,7 +19,11 @@ p:first-child {
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:first-child {
+  /* ... */
+}
+```
 
 ## Ejemplos
 

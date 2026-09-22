@@ -1,84 +1,70 @@
 ---
-title: Element.insertAdjacentText()
+title: "Element : méthode insertAdjacentText()"
+short-title: insertAdjacentText()
 slug: Web/API/Element/insertAdjacentText
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("DOM")}}
 
-La méthode `insertAdjacentText()` insère un noeud texte donné à une position donnée par rapport à l'élément sur lequel elle est appelé.
+La méthode **`insertAdjacentText()`** de l'interface {{DOMxRef("Element")}}, étant donné une position relative et une chaîne de caractères, insère un nouveau nœud texte à la position donnée par rapport à l'élément sur lequel elle est appelée.
 
 ## Syntaxe
 
-```js
-element.insertAdjacentText(position, element);
+```js-nolint
+insertAdjacentText(where, data)
 ```
 
 ### Paramètres
 
-- position
-  - : Une {{jsxref("String")}} (_chaîne de caractères_) représentant la position par rapport à l'`element` ; elle doit être l'une des chaînes suivantes :
-    - `'beforebegin'` : avant l'`element` lui-même ;
-    - `'afterbegin'` : à l'intérieur de l'`element`, avant son premier enfant ;
-    - `'beforeend'` : à l'intérieur de l'`element`, avant son dernier enfant ;
-    - `'afterend'` : après l'`element` lui-même.
+- `where`
+  - : Une chaîne de caractères représentant la position par rapport à l'élément sur lequel la méthode est appelée&nbsp;; elle doit être l'une des chaînes de caractères suivantes&nbsp;:
+    - `'beforebegin'`&nbsp;: Avant un `element` même.
+    - `'afterbegin'`&nbsp;: Juste à l'intérieur d'un `element`, avant son premier enfant.
+    - `'beforeend'`&nbsp;: Juste à l'intérieur d'un `element`, après son dernier enfant.
+    - `'afterend'`&nbsp;: Après un `element` même.
 
-- element
-  - : Une {{jsxref("String")}} (_chaîne de caractères_) représentant le texte à insérer dans l'arbre.
+- `data`
+  - : Une chaîne de caractères à partir de laquelle créer un nouveau nœud texte à insérer à la position donnée `where` par rapport à l'élément sur lequel la méthode est appelée.
 
-### Valeur renvoyée
+### Valeur de retour
 
-Vide.
+Aucune ({{JSxRef("undefined")}}).
 
 ### Exceptions
 
-| Exception     | Explication                                           |
-| ------------- | ----------------------------------------------------- |
-| `SyntaxError` | La `position` indiquée n'est pas une valeur reconnue. |
+- `SyntaxError` {{DOMxRef("DOMException")}}
+  - : Levée si `where` n'est pas une valeur reconnue.
 
 ### Visualisation des noms de position
 
 ```html
 <!-- beforebegin -->
 <p>
-  <!-- afterbegin> -->
-  machin
+  <!-- afterbegin -->
+  toto
   <!-- beforeend -->
 </p>
 <!-- afterend -->
 ```
 
 > [!NOTE]
-> Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est dans l'arbre et possède un élément parent.
+> Les positions `beforebegin` et `afterend` ne fonctionnent que si le nœud est dans l'arbre et possède un élément parent.
 
-## Exemple
+## Exemples
 
 ```js
-beforeBtn.addEventListener("click", function () {
+beforeBtn.addEventListener("click", () => {
   para.insertAdjacentText("afterbegin", textInput.value);
 });
 
-afterBtn.addEventListener("click", function () {
+afterBtn.addEventListener("click", () => {
   para.insertAdjacentText("beforeend", textInput.value);
 });
 ```
 
-Jetez un œil à notre démo [insertAdjacentText.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html) sur GitHub (voir le [code source](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html) aussi). Ici, nous avons un simple paragraphe. Vous pouvez entrer du texte dans l'élément de formulaire, puis presser les boutons _Insert before_ (_insère avant_) et _Insert after_ (_insère après_) pour l'insérer avant ou après le texte de paragraphe existant en utilisant `insertAdjacentText()`. Notez que le nœud texte existant n'y est pas ajouté — d'autres nœuds de texte sont créés contenant le nouvel ajout.
-
-## Émulation
-
-Vous pouvez utiliser une émulation de la méthode `insertAdjacentText()` dans Internet Explorer 5.5 (et peut-être antérieur) et supérieur avec le code suivant :
-
-```js
-if (!Element.prototype.insertAdjacentText)
-  Element.prototype.insertAdjacentText = function (type, txt) {
-    this.insertAdjacentHTML(
-      type,
-      (txt + "") // convertir en chaîne de caractères
-        .replace(/&/g, "&amp;") // intégrer des symboles d'esperluette
-        .replace(/</g, "&lt;"), // intégrer les symboles "plus petit que"
-    );
-  };
-```
+Consultez notre démonstration [insertAdjacentText.html <sup>(angl.)</sup>](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html) sur GitHub (voir aussi le [code source <sup>(angl.)</sup>](https://github.com/mdn/dom-examples/blob/main/insert-adjacent/insertAdjacentText.html).) Voici un simple paragraphe. Vous pouvez saisir du texte dans l'élément de formulaire, puis appuyer sur les boutons _Insert before_ (_insère avant_) et _Insert after_ (_insère après_) pour l'insérer avant ou après le texte du paragraphe existant à l'aide de `insertAdjacentText()`. Notez que le nœud texte existant n'est pas ajouté à — d'autres nœuds texte sont créés et contiennent les nouveaux ajouts.
 
 ## Spécifications
 
@@ -90,5 +76,5 @@ if (!Element.prototype.insertAdjacentText)
 
 ## Voir aussi
 
-- {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("Element.insertAdjacentHTML()")}}
+- La méthode {{DOMxRef("Element.insertAdjacentElement()")}}
+- La méthode {{DOMxRef("Element.insertAdjacentHTML()")}}

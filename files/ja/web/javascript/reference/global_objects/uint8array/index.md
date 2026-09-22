@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-**`Uint8Array`** は型付き配列で、 8 ビット符号なし整数値の配列を表します。初期化データが明示的に与えられなかった場合、中身は `0` で初期化されます。生成されると、配列内の要素はそのオブジェクトのメソッドを使用するか、配列の標準的な添字の構文（すなわち、ブラケット記法）を使用するかして参照することができます。
+**`Uint8Array`** は型付き配列で、8 ビット符号なし整数値の配列を表します。初期化データが明示的に指定されていない限り、内容は `0` に初期化されます。生成されると、配列内の要素はそのオブジェクトのメソッドを使用するか、配列の標準的な添字構文（すなわち、ブラケット記法）を使用するかして参照することができます。
 
 `Uint8Array` は非公開の {{jsxref("TypedArray")}} クラスのサブクラスです。
 
@@ -13,7 +13,7 @@ l10n:
 
 `Uint8Array` は、現時点では他の型付き配列に比べて追加のメソッドを持つ唯一の `TypedArray` サブクラスです。汎用バイト配列という性質のため、任意のバイナリーデータの処理に最も適しています。これは、 `Uint8Array` データの 16 進文字列および base64 文字列への作成、シリアライズ、変更を行う 2 種類のメソッドに対応しています。
 
-- {{jsxref("Uint8Array.fromBase64()")}}、{{jsxref("Uint8Array.prototype.toBase64()")}}ｍ{{jsxref("Uint8Array.prototype.setFromBase64()")}} は [base64](/ja/docs/Glossary/Base64) 文字列の処理を行い、 3 バイト単位で 4 文字（0–9, A–Z, a–z, "+", "/" （または URL セーフ base64 であれば "-" と "\_"）のうちのいずれか）にエンコードします。
+- {{jsxref("Uint8Array.fromBase64()")}}、{{jsxref("Uint8Array.prototype.toBase64()")}}、{{jsxref("Uint8Array.prototype.setFromBase64()")}} は [base64](/ja/docs/Glossary/Base64) 文字列の処理を行い、 3 バイト単位で 4 文字（0–9, A–Z, a–z, "+", "/" （または URL セーフ base64 であれば "-" と "\_"）のうちのいずれか）にエンコードします。
 - {{jsxref("Uint8Array.fromHex()")}}、{{jsxref("Uint8Array.prototype.toHex()")}}、{{jsxref("Uint8Array.prototype.setFromHex()")}} は 16 進文字列の処理を行い、それぞれのバイトを 2 文字（0–9 または A–F （大文字小文字の区別なし）のいずれか）にエンコードします。
 
 ## コンストラクター
@@ -23,7 +23,7 @@ l10n:
 
 ## 静的プロパティ
 
-_親である {{jsxref("TypedArray")}} から継承した静的プロパティもあります。_
+_親である {{jsxref("TypedArray")}} から継承した静的プロパティもあります_。
 
 - {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}
   - : 要素の大きさを数値で返します。`Uint8Array` の場合は `1` です。
@@ -39,14 +39,14 @@ _親である {{jsxref("TypedArray")}} から継承した静的メソッドも�
 
 ## インスタンスプロパティ
 
-_親である {{jsxref("TypedArray")}} から継承したインスタンスプロパティもあります。_
+_親である {{jsxref("TypedArray")}} から継承したインスタンスプロパティもあります_。
 
-これらのプロパティは `Uint8Array.prototype` で定義され、すべての `Uint8Array` インスタンスで共有されます。
+これらのプロパティは `Uint8Array.prototype` で定義されており、すべての `Uint8Array` インスタンスで共有されています。
 
 - {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint8Array.prototype.BYTES_PER_ELEMENT")}}
   - : 要素の大きさを数値で返します。`Uint8Array` の場合は `1` です。
 - {{jsxref("Object/constructor", "Uint8Array.prototype.constructor")}}
-  - : このインスタンスオブジェクトを作成したコンストラクター関数。Uint8Array インスタンスの場合、初期値は {{jsxref("Uint8Array/Uint8Array", "Uint8Array")}} コンストラクターです。
+  - : このインスタンスオブジェクトを構築したコンストラクター関数です。 `Uint8Array インスタンスの場合、初期値は {{jsxref("Uint8Array/Uint8Array", "Uint8Array")}} コンストラクターです。
 
 ## インスタンスメソッド
 
@@ -63,7 +63,7 @@ _親である {{jsxref("TypedArray")}} から継承したインスタンスメ�
 
 ## 例
 
-### 様々な方法で `Uint8Array` を作成
+### 様々な方法で Uint8Array を作成
 
 ```js
 // 長さから

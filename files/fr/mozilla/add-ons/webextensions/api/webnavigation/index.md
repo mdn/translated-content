@@ -3,8 +3,6 @@ title: webNavigation
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
 ---
 
-{{AddonSidebar}}
-
 Ajouter des écouteurs d'événement pour les différentes étapes d'une navigation. Une navigation se compose d'un cadre dans le navigateur passant d'une URL à l'autre, généralement (mais pas toujours) en réponse à une action de l'utilisateur comme cliquer sur un lien ou entrer une URL dans la barre d'adresse.
 
 Comparable à l'API {{WebExtAPIRef("webRequest")}}: Les navigations entrainent le navigateur à faire des requetes web, mais l'API webRequest travaille au niveau inférieur de la couche HTTP, contrairement à l'API webNavigation qui travaille directement au niveau de l'interface utilisateur du navigateur elle-même.

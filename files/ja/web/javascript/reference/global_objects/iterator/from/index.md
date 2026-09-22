@@ -3,7 +3,7 @@ title: Iterator.from()
 short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/from
 l10n:
-  sourceCommit: dc02b8a490ea0ff4ac1236546f32270ca0cc0aa5
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
 **`Iterator.from()`** は静的メソッドで、イテレーターや反復可能オブジェクトから新しい {{jsxref("Iterator")}} オブジェクトを作成します。

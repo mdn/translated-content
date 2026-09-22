@@ -3,8 +3,6 @@ title: permissions.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved
 ---
 
-{{AddonSidebar}}
-
 Activé lorsque certaines permissions sont supprimés de l'extension.
 
 ## Syntaxe

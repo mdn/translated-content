@@ -147,7 +147,7 @@ console.log(Array.prototype.indexOf.call(objetSimilaireTableau, 5));
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.findIndex()")}}
 - La méthode {{JSxRef("Array.prototype.findLastIndex()")}}
 - La méthode {{JSxRef("Array.prototype.lastIndexOf()")}}

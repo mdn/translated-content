@@ -2,10 +2,8 @@
 title: 反復処理プロトコル
 slug: Web/JavaScript/Reference/Iteration_protocols
 l10n:
-  sourceCommit: 21916b17fcbfdae0058e713dd2a1953fd88106f4
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
-
-{{jsSidebar("More")}}
 
 **反復処理プロトコル**は、新しい組み込みオブジェクトや構文ではなく**プロトコル**です。これらのプロトコルは以下のような単純な約束事によって、すべてのオブジェクトで実装することができます。
 
@@ -68,7 +66,7 @@ l10n:
 // イテレーターと反復可能の両プロトコルを満たす
 const myIterator = {
   next() {
-    // ...
+    // …
   },
   [Symbol.iterator]() {
     return this;
@@ -79,19 +77,19 @@ const myIterator = {
 このようなオブジェクトは**反復可能イテレーター**と呼ばれます。このように実装することで、反復可能オブジェクトを期待する様々な構文でイテレーターが利用できるようになります。したがって、反復可能プロトコルを実装せずにイテレータープロトコルを実装することは、ほとんど有益ではありません。（実際、ほとんどすべての構文と API はイテレーターではなく反復可能を期待しています。）[ジェネレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator)がその例です。
 
 ```js
-const aGeneratorObject = (function* () {
+const generatorObject = (function* () {
   yield 1;
   yield 2;
   yield 3;
 })();
 
-console.log(typeof aGeneratorObject.next);
+console.log(typeof generatorObject.next);
 // "function" — （正しい結果を返す）next メソッドを持っているのでイテレーター
 
-console.log(typeof aGeneratorObject[Symbol.iterator]);
+console.log(typeof generatorObject[Symbol.iterator]);
 // "function" — （正しいイテレーターを返す）[Symbol.iterator] メソッドを持っているので反復可能オブジェクト
 
-console.log(aGeneratorObject[Symbol.iterator]() === aGeneratorObject);
+console.log(generatorObject[Symbol.iterator]() === generatorObject);
 // true — Symbol.iterator メソッドは自分自身（イテレーター）を返すので、反復可能なイテレーター
 ```
 
@@ -123,7 +121,7 @@ console.log(aGeneratorObject[Symbol.iterator]() === aGeneratorObject);
 
 ### 組み込み反復可能オブジェクト
 
-{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、[`Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) （[`Intl.Segmenter.prototype.segment()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) で返される）は、すべて組み込み反復可能オブジェクトです。それらの `prototype` オブジェクトはそれぞれ `[Symbol.iterator]()` メソッドを実装しています。また、[`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) オブジェクトや {{domxref("NodeList")}} などの一部の DOM コレクション型も反復可能です。
+{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、[`Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) （[`Intl.Segmenter.prototype.segment()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) で返される）は、すべて組み込み反復可能オブジェクトです。それらの `prototype` オブジェクトはそれぞれ `[Symbol.iterator]()` メソッドを実装しています。また、[`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) オブジェクトや、一部の DOM コレクション型（{{domxref("NodeList")}} など）も反復可能です。
 JavaScript のコア言語には、非同期反復可能オブジェクトはありません。{{domxref("ReadableStream")}} などの一部のウェブ API は、`Symbol.asyncIterator` メソッドが既定で設定されています。
 
 [ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)は、反復可能なイテレーターである[ジェネレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator)を返します。[非同期ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function*)は、非同期反復可能なイテレーターである[非同期 ジェネレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)を返します。
@@ -238,7 +236,7 @@ for (const b of obj) {
 
 ## エラー処理
 
-反復処理では、イテレーターとコンシューマーの間で制御が移譲されるため、エラー処理はどちらの方向にも現れます。つまり、コンシューマーがイテレーターから発生したエラーを処理する方法と、イテレーターがコンシューマーから発生したエラーを処理する方法です。組み込みの反復処理の方法を使用して、反復可能オブジェクトが特定の不変条件を破ったためにエラーが発生する場合もあります。 組み込み構文がエラーを生成し、処理する方法を説明します。これは、イテレーターを段階的に手動で処理する場合に、自分自身でコードを作成する際のガイドラインとして使用することができます。
+反復処理では、イテレーターとコンシューマーの間で制御が移譲されるため、エラー処理はどちらの方向にも現れます。つまり、コンシューマーがイテレーターから発生したエラーを処理する方法と、イテレーターがコンシューマーから発生したエラーを処理する方法です。組み込みの反復処理の方法を使用して、反復可能オブジェクトが特定の{{Glossary("invariant", "不変条件")}}を破ったためにエラーが発生する場合もあります。 組み込み構文がエラーを生成し、処理する方法を説明します。これは、イテレーターを段階的に手動で処理する場合に、自分自身でコードを作成する際のガイドラインとして使用することができます。
 
 ### 非正規形反復可能オブジェクト
 
@@ -278,10 +276,10 @@ nonWellFormedIterable[Symbol.iterator] = () => ({});
 ```js
 try {
   for (const value of iterable) {
-    // ...
+    // …
   }
 } catch (e) {
-  // Handle the error
+  // エラーを処理
 }
 ```
 
@@ -376,7 +374,7 @@ const it = idMaker();
 console.log(it.next().value); // 0
 console.log(it.next().value); // 1
 console.log(it.next().value); // 2
-// ...
+// …
 ```
 
 ### ジェネレーターで反復可能プロトコルを定義
@@ -407,7 +405,7 @@ const it = idMaker();
 console.log(it.next().value); // 0
 console.log(it.next().value); // 1
 console.log(it.next().value); // 2
-// ...
+// …
 ```
 
 ### クラスで反復可能プロトコルを定義
@@ -429,13 +427,13 @@ class SimpleClass {
     let index = 0;
 
     return {
-      // 注: アロー関数を使用すると、`next()` の代わりに `[Symbol.iterator]()` の方を `this` が指すようになります。
+      // 注: アロー関数を使用すると、`next()` の代わりに
+      // `[Symbol.iterator]()` の方を `this` が指すようになります。
       next: () => {
-        if (index < this.#data.length) {
-          return { value: this.#data[index++], done: false };
-        } else {
+        if (index >= this.#data.length) {
           return { done: true };
         }
+        return { value: this.#data[index++], done: false };
       },
     };
   }
@@ -476,7 +474,7 @@ const someString = new String("hi");
 
 someString[Symbol.iterator] = function () {
   return {
-    // this is the iterator object, returning a single element (the string "bye")
+    // これはイテレーターオブジェクトで、単一の要素（文字列 "bye"）を返します。
     next() {
       return this._first
         ? { value: "bye", done: (this._first = false) }

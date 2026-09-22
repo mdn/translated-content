@@ -61,7 +61,7 @@ const obj = JSON.parse(jsonStr, (key, value) => {
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode statique {{JSxRef("Temporal/Duration/from", "Temporal.Duration.from()")}}
 - La méthode {{JSxRef("Temporal/Duration/toString", "Temporal.Duration.prototype.toString()")}}
 - La méthode {{JSxRef("Temporal/Duration/toLocaleString", "Temporal.Duration.prototype.toLocaleString()")}}

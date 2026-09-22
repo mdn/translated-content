@@ -3,7 +3,7 @@ title: "HTMLElement : évènement dragend"
 short-title: dragend
 slug: Web/API/HTMLElement/dragend_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -14,7 +14,7 @@ Cet évènement est annulable et peut se propager jusqu'aux objets {{DOMxRef("Do
 
 ## Syntaxe
 
-On utilisera le nom de l'évènement dans des méthodes telles que {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou on définira une propriété gestionnaire d'évènements.
+On utilise le nom de l'évènement dans des méthodes telles que {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou on définit une propriété gestionnaire d'évènements.
 
 ```js-nolint
 addEventListener("dragend", (event) => { })
@@ -27,13 +27,6 @@ ondragend = (event) => { }
 Un objet {{DOMxRef("DragEvent")}}. Hérite de l'objet {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("DragEvent")}}
-
-## Propriétés d'évènement
-
-_En plus des propriétés listées ci‑dessous, les propriétés de l'interface parente, {{DOMxRef("Event")}}, sont disponibles._
-
-- {{DOMxRef('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
-  - : Les données transférées lors d'une interaction de glisser‑déposer.
 
 ## Exemples
 

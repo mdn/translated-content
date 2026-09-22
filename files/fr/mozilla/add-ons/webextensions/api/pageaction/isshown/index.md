@@ -3,8 +3,6 @@ title: pageAction.isShown()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/isShown
 ---
 
-{{AddonSidebar}}
-
 Renvoie `true` si l'action de la page est affichée pour l'onglet donné..
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

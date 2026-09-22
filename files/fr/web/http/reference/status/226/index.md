@@ -2,14 +2,14 @@
 title: 226 IM Used
 slug: Web/HTTP/Reference/Status/226
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse de succès](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès) HTTP **`226 IM Used`** indique que le serveur retourne un {{Glossary("delta")}} en réponse à une requête {{HTTPMethod("GET")}}.
 Il est utilisé dans le contexte des _encodages delta HTTP_.
 
 IM signifie _instance manipulation_ (manipulation d'instance), ce qui fait référence à l'algorithme générant un _delta_.
-En encodage delta, un client envoie une requête {{HTTPMethod("GET")}} avec deux en-têtes&nbsp;: `A-IM:`, qui indique une préférence pour un algorithme de différenciation, et {{HTTPHeader("If-None-Match")}}, qui spécifie la version d'une ressource qu'il possède.
+En encodage delta, un client envoie une requête {{HTTPMethod("GET")}} avec deux en-têtes&nbsp;: `A-IM:`, qui indique une préférence pour un algorithme de différenciation, et {{HTTPHeader("If-None-Match")}}, qui définit la version d'une ressource qu'il possède.
 Le serveur répond avec des deltas relatifs à un document de base donné, plutôt que le document complet.
 Cette réponse utilise le code de statut `226`, un en-tête `IM:` qui décrit l'algorithme de différenciation utilisé, et peut inclure un en-tête `Delta-Base:` avec le {{HTTPHeader("ETag")}} correspondant au document de base associé au delta.
 
@@ -27,14 +27,14 @@ Cette réponse utilise le code de statut `226`, un en-tête `IM:` qui décrit l'
 
 ## Exemples
 
-### Réception d'un `208` avec l'algorithme delta `vcdiff`
+### Réception d'un `226` avec l'algorithme delta `vcdiff`
 
 Dans la requête `GET` suivante, un client demande une ressource et possède une version en cache avec l'ETag `abcd123`.
 L'en-tête `A-IM:` indique une préférence pour les algorithmes delta `vcdiff` et `diffe`&nbsp;:
 
 ```http
 GET /resource.txt HTTP/1.1
-Host: exemple.com
+Host: example.com
 A-IM: vcdiff, diffe
 If-None-Match: "abcd123"
 ```
@@ -50,7 +50,7 @@ Content-Type: text/plain
 Content-Length: 123
 Delta-Base: abcd123
 
-...
+…
 ```
 
 ## Spécifications

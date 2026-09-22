@@ -65,4 +65,4 @@ console.log(dvMV.getWeekInfo()); // { firstDay: 5, weekend: [6, 7], minimalDays:
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}

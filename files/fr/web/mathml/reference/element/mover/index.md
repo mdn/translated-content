@@ -4,8 +4,6 @@ slug: Web/MathML/Reference/Element/mover
 original_slug: Web/MathML/Element/mover
 ---
 
-{{MathMLRef()}}
-
 L'élément MathML `<mover>` est utilisé pour attacher un accent ou une limite au-dessus d'une expression. La syntaxe est la suivante: `<mover> base overscript </mover>`
 
 ## Attributs

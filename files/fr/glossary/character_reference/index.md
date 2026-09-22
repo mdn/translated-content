@@ -2,18 +2,18 @@
 title: Référence de caractère
 slug: Glossary/Character_reference
 l10n:
-  sourceCommit: ff4dc3d43e814614df60ecdb7376b59698660ac2
+  sourceCommit: db443a6062d0e858a62af2f9a3a7558335ffd2dd
 ---
 
 Une **référence de caractère** {{Glossary("HTML")}} est une {{Glossary("escape character", "séquence d'échappement")}} composée de {{Glossary("character", "caractères")}} utilisée pour représenter un autre caractère dans la page web affichée.
 
 Les références de caractères servent à remplacer les caractères réservés en HTML, comme les symboles inférieur à (`<`) et supérieur à (`>`) utilisés par l'analyseur HTML pour identifier les {{Glossary("tag", "balises")}}, ou `"` et `'` dans les attributs, qui peuvent être entourés par ces caractères.
-Elles servent aussi pour des caractères invisibles qu'il serait impossible de taper, comme les espaces insécables, les caractères de contrôle (marques gauche-droite, droite-gauche), ou pour des caractères difficiles à saisir au clavier.
+Elles servent aussi pour des caractères invisibles qu'il est impossible de taper, comme les espaces insécables, les caractères de contrôle (marques gauche-droite, droite-gauche), ou pour des caractères difficiles à saisir au clavier.
 
 Il existe trois types de références de caractères&nbsp;:
 
 - **Références de caractères nommées**
-  - : Utilisent une chaîne de nom entre une esperluette (`&`) et un point-virgule (`;`) pour désigner le caractère correspondant.
+  - : Utilisent une chaîne de caractères de nom entre une esperluette (`&`) et un point-virgule (`;`) pour désigner le caractère correspondant.
     Par exemple, `&lt;` représente le symbole inférieur à (`<`), et `&copy;` le symbole de copyright (`©`).
     La chaîne de caractères utilisée est souvent une contraction ou une initialisation en {{Glossary("Camel case","camelCase")}} du nom du caractère.
 
@@ -46,7 +46,7 @@ Un très petit sous-ensemble de références de caractères nommées utiles, ave
 | €         | `&euro;`         | U+020AC               |
 | °         | `&deg;`          | U+000B0               |
 
-La liste complète des références de caractères nommées HTML [se trouve dans la spécification HTML ici <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references).
+La liste complète des références de caractères nommées HTML [se trouve dans la spécification HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references).
 
 ## Voir aussi
 

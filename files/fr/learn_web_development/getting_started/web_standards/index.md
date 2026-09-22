@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started")}}
 
-Ce module couvre les principes fondamentaux du fonctionnement du Web à un niveau général — y compris le modèle utilisé pour la communication, les technologies principales impliquées, la façon dont ces technologies sont créées, et comment un navigateur web interprète et affiche les sites web à l'utilisateur·rice.
+Ce module couvre les principes fondamentaux du fonctionnement du Web à un niveau général — y compris le modèle utilisé pour la communication, les technologies principales impliquées, la façon dont ces technologies sont créées, et comment un navigateur web interprète et affiche les sites web à l'utilisateur·ice.
 
 Ressources générales&nbsp;:
 
@@ -24,6 +24,6 @@ Ce module est principalement théorique et ne suppose aucune connaissance pratiq
 - [Le modèle des standards du Web](/fr/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model)
   - : Cet article propose un contexte utile sur le Web et les standards du Web — comment ils sont apparus, ce que sont les technologies standard du Web, et comment elles fonctionnent ensemble.
 - [Comment les navigateurs chargent les sites web](/fr/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites)
-  - : Dans cet article, nous détaillons le processus de rendu d'un site web — une fois que le navigateur a reçu les fichiers et ressources qui composent un site, comment sont-ils assemblés pour créer l'expérience finale avec laquelle l'utilisateur·rice interagit&nbsp;?
+  - : Dans cet article, nous détaillons le processus de rendu d'un site web — une fois que le navigateur a reçu les fichiers et ressources qui composent un site, comment sont-ils assemblés pour créer l'expérience finale avec laquelle l'utilisateur·ice interagit&nbsp;?
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started")}}

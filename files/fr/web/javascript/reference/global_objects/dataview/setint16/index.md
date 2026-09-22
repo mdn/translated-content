@@ -68,6 +68,6 @@ dataview.getInt16(1); // 768
 ## Voir aussi
 
 - Le guide [des tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- L'objet {{JSxRef("DataView")}}
-- L'objet {{JSxRef("ArrayBuffer")}}
-- L'objet {{JSxRef("Int16Array")}}
+- L'objet natif {{JSxRef("DataView")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("Int16Array")}}

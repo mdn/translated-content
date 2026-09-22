@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}
 
 **`Document.createTouch()`** メソッドは、新しい {{DOMxRef("Touch")}} オブジェクトを生成して返します。
 

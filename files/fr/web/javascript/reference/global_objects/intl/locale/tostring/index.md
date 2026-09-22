@@ -68,5 +68,5 @@ console.log(maLocale.toString()); // Affiche "fr-Latn-FR-u-ca-gregory-hc-h12"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}
 - La propriété {{JSxRef("Intl/Locale/baseName", "baseName")}}

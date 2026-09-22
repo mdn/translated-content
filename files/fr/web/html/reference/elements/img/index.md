@@ -87,7 +87,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `attributionsrc` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Indique au navigateur d'envoyer un en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Eligible) avec la requête pour l'image.
 
-    Côté serveur, cela sert à déclencher l'envoi d'un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} ou {{HTTPHeader("Attribution-Reporting-Register-Trigger")}} dans la réponse afin d'enregistrer une [source d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources) ou [un déclencheur d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers). L'en-tête de réponse renvoyé dépend de la valeur de l'en-tête `Attribution-Reporting-Eligible` ayant déclenché l'enregistrement.
+    Côté serveur, cela sert à déclencher l'envoi d'un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} ou {{HTTPHeader("Attribution-Reporting-Register-Trigger")}} dans la réponse afin d'enregistrer une [source d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources) ou [un déclencheur d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers). L'en-tête de réponse retourné dépend de la valeur de l'en-tête `Attribution-Reporting-Eligible` ayant déclenché l'enregistrement.
 
     La source ou le déclencheur correspondant est éteint lorsque le navigateur reçoit la réponse contenant le fichier image.
 
@@ -142,7 +142,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
       - : La valeur par défaut qui indique qu'il n'y a pas de préférence. C'est le navigateur qui décide alors ce qui est le mieux.
 
 - [`elementtiming`](/fr/docs/Web/HTML/Reference/Attributes/elementtiming)
-  - : Indique que l'image doit être observée par l'API [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming). La valeur fournie devient un identifiant pour l'élément observé. Voir aussi la page de l'atttribut [`elementtiming`](/fr/docs/Web/HTML/Reference/Attributes/elementtiming).
+  - : Indique que l'image doit être observée par l'API [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming). La valeur fournie devient un identifiant pour l'élément observé. Voir aussi la page de l'attribut [`elementtiming`](/fr/docs/Web/HTML/Reference/Attributes/elementtiming).
 
 - `fetchpriority`
   - : Fournit une indication de la priorité relative à utiliser pour la récupération de l'image.
@@ -169,7 +169,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > Cet attribut est uniquement autorisé lorsque l'élément `<img>` est un descendant d'un élément {{HTMLElement("a")}} disposant d'un attribut `href` valide. Cela fournit une alternative lorsque la navigation se fait sans dispositif de pointage.
 
 - `loading`
-  - : Indique comment le navigateur devrait charger l'image&nbsp;:
+  - : Indique comment le navigateur doit charger l'image&nbsp;:
     - `eager`
       - : L'image est chargée immédiatement, que l'image soit située dans la {{Glossary("visual viewport", "zone d'affichage visible")}} ou non. Il s'agit de la valeur par défaut.
     - `lazy`
@@ -177,11 +177,11 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
         L'idée est d'éviter de consommer de la bande passante et des ressources réseaux avant d'être relativement certain que l'image est nécessaire. Pour la plupart des cas d'usage, cela permet d'améliorer les performances.
 
-        Bien que les attributs explicites [`width`](#width) et [`height`](#height) soient recommandés pour toutes les images afin d'éviter les décalages de mise en page, ils sont particulièrement importants pour les images chargées de manière paresseuse. Les images chargées de manière paresseuse ne sont jamais chargées si elles n'intersectent pas une partie visible d'un élément, même si leur chargement pourrait le changer, car les images non chargées ont une `width` et une `height` de `0`. Cela crée une expérience des utilisateur·ice·s encore plus perturbante lorsque le contenu visible dans la zone d'affichage se réorganise au milieu de la lecture.
+        Bien que les attributs explicites [`width`](#width) et [`height`](#height) soient recommandés pour toutes les images afin d'éviter les décalages de mise en page, ils sont particulièrement importants pour les images chargées de manière paresseuse. Les images chargées de manière paresseuse ne sont jamais chargées si elles n'intersectent pas une partie visible d'un élément, même si leur chargement peut le changer, car les images non chargées ont une `width` et une `height` de `0`. Cela crée une expérience des utilisateur·ice·s encore plus perturbante lorsque le contenu visible dans la zone d'affichage se réorganise au milieu de la lecture.
 
         Les images chargées de manière paresseuse situées dans la zone d'affichage (<i lang="en">viewport</i> en anglais) visuelle peuvent ne pas encore être visibles lorsque l'évènement {{DOMxRef("Window.load_event", "load")}} de la fenêtre est déclenché. Cela s'explique par le fait que l'évènement est déclenché en fonction des images chargées de manière anticipée — les images chargées de manière paresseuse ne sont pas prises en compte même si elles se trouvent dans la zone d'affichage visuelle lors du chargement initial de la page.
 
-        Le retardement du chargement est uniquement activé lorsque JavaScript est activé dans le navigateur. Il s'agit d'une mesure pour limiter le pistage. En effet, si les scripts sont désactivés pour le navigateur et que le chargement retardé est actif, le pistage d'un·e utilisateur·ice en fonction de sa position sur la page serait toujours possible (avec des images placées à intervalle régulier sur la page).
+        Le retardement du chargement est uniquement activé lorsque JavaScript est activé dans le navigateur. Il s'agit d'une mesure pour limiter le pistage. En effet, si les scripts sont désactivés pour le navigateur et que le chargement retardé est actif, le pistage d'un·e utilisateur·ice en fonction de sa position sur la page est toujours possible (avec des images placées à intervalle régulier sur la page).
 
 - `referrerpolicy`
   - : Une chaîne de caractères qui indique le référent à utiliser lors de la récupération de la ressource&nbsp;:
@@ -303,7 +303,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Le nombre de pixels d'espace blanc à droite et à gauche de l'image. La propriété {{Glossary("CSS")}} {{CSSxRef("margin")}}doit être utilisée à la place.
 
 - `longdesc` {{Deprecated_Inline}}
-  - : Un lien vers une description plus détaillée de l'image. Les valeurs pouvaient être une {{Glossary("URL")}} ou un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) d'un autre élément.
+  - : Un lien vers une description plus détaillée de l'image. Les valeurs peuvent être une {{Glossary("URL")}} ou un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) d'un autre élément.
 
     > [!NOTE]
     > Cet attribut est considéré comme obsolète dans la [spécification HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc). Son avenir est incertain&nbsp;; il est recommandé d'utiliser une alternative {{Glossary("WAI")}}-{{Glossary("ARIA")}} comme [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) ou [`aria-details`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details).
@@ -318,7 +318,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 `<img>` est {{Glossary("replaced elements", "un élément remplacé")}}. Sa propriété {{CSSxRef("display")}} par défaut vaut `inline`, mais ses dimensions par défaut sont définies par les valeurs intrinsèques de l'image, à la façon de `inline-block`. Il est tout à fait possible d'utiliser les propriétés {{CSSxRef("border")}}/{{CSSxRef("border-radius")}}, {{CSSxRef("padding")}}/{{CSSxRef("margin")}}, {{CSSxRef("width")}}, {{CSSxRef("height")}}, etc, sur une image.
 
-`<img>` n'a pas de ligne de base, donc lorsque les images sont utilisées dans un contexte de mise en forme en ligne avec {{CSSxRef("vertical-align", "vertical-align: baseline")}}, le bas de l'image est placé sur la ligne de base du texte.
+`<img>` n'a pas de ligne de base, donc lorsque les images sont utilisées dans un contexte de mise en forme en incise avec {{CSSxRef("vertical-align", "vertical-align: baseline")}}, le bas de l'image est placé sur la ligne de base du texte.
 
 La propriété {{CSSxRef("object-position")}} peut être utilisée afin de positionner l'image au sein de la boîte fournie par l'élément. La propriété {{CSSxRef("object-fit")}} peut être utilisée pour ajuster le dimensionnement de l'image au sein de la boîte (par exemple pour étirer ou rogner l'image dans la boîte si nécessaire).
 
@@ -342,7 +342,7 @@ La valeur d'un attribut `alt` doit fournir un texte de remplacement clair et con
 <img alt="Un manchot sur une plage." src="penguin.jpg" />
 ```
 
-Un test important pour l'accessibilité consiste à lire le contenu de l'attribut `alt` avec le texte qui précède pour vérifier si cela transmet le même sens que l'image. Par exemple, si l'image était précédée de la phrase «&nbsp;Lors de mes voyages, j'ai vu un petit animal mignon&nbsp;: », l'exemple _À ne pas faire_ pourrait être lu par un lecteur d'écran comme «&nbsp;Lors de mes voyages, j'ai vu un petit animal mignon&nbsp;: image&nbsp;», ce qui n'a pas de sens. L'exemple _À faire_ pourrait être lu comme «&nbsp;Lors de mes voyages, j'ai vu un petit animal mignon&nbsp;: Un manchot sur une plage.&nbsp;», ce qui a du sens.
+Un test important pour l'accessibilité consiste à lire le contenu de l'attribut `alt` avec le texte qui précède pour vérifier si cela transmet le même sens que l'image. Par exemple, si l'image était précédée de la phrase «&nbsp;Lors de mes voyages, j'ai vu un petit animal mignon&nbsp;:&nbsp;», l'exemple _À ne pas faire_ peut être lu par un lecteur d'écran comme «&nbsp;Lors de mes voyages, j'ai vu un petit animal mignon&nbsp;: image&nbsp;», ce qui n'a pas de sens. L'exemple _À faire_ peut être lu comme «&nbsp;Lors de mes voyages, j'ai vu un petit animal mignon&nbsp;: Un manchot sur une plage.&nbsp;», ce qui a du sens.
 
 Pour les images utilisées pour déclencher une action, par exemple des images incluses dans un élément HTML {{HTMLElement("a")}} ou {{HTMLElement("button")}}, pensez à décrire l'action déclenchée dans la valeur de l'attribut `alt`. Par exemple, vous pouvez écrire `alt="page suivante"` au lieu de `alt="flèche droite"`. Vous pouvez aussi ajouter une description complémentaire dans un attribut `title`&nbsp;; celle-ci peut être lue par les lecteurs d'écran si l'utilisateur·ice en fait la demande.
 
@@ -368,7 +368,7 @@ L'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) n'est 
 
 L'attribut `title` ne doit pas non plus être utilisé comme information de légende supplémentaire pour accompagner la description `alt` d'une image. Si une image a besoin d'une légende, utilisez les éléments {{HTMLElement("figure")}} et {{HTMLElement("figcaption")}}.
 
-La valeur de l'attribut `title` est généralement présentée à l'utilisateur·ice sous forme d'infobulle, qui apparaît peu après l'arrêt du curseur sur l'image. Bien que cela _puisse_ fournir des informations supplémentaires, il ne faut pas supposer que l'utilisateur·ice la voit&nbsp;: il·elle peut n'utiliser qu'un clavier ou un écran tactile. Si vous avez une information particulièrement importante ou précieuse pour l'utilisateur·ice, présentez-la en ligne en utilisant l'une des méthodes mentionnées ci-dessus plutôt que `title`.
+La valeur de l'attribut `title` est généralement présentée à l'utilisateur·ice sous forme d'infobulle, qui apparaît peu après l'arrêt du curseur sur l'image. Bien que cela _puisse_ fournir des informations supplémentaires, il ne faut pas supposer que l'utilisateur·ice la voit&nbsp;: il·elle peut n'utiliser qu'un clavier ou un écran tactile. Si vous avez une information particulièrement importante ou précieuse pour l'utilisateur·ice, présentez-la en incise en utilisant l'une des méthodes mentionnées ci-dessus plutôt que `title`.
 
 - [Utiliser l'attribut HTML `title` — mis à jour | Vispero <sup>(angl.)</sup>](https://vispero.com/resources/using-the-html-title-attribute-updated/)
 
@@ -386,7 +386,7 @@ Dans l'exemple qui suit, l'image est accompagnée d'un texte alternatif qui sert
 
 ### Créer un lien avec une image
 
-Cet exemple intègre l'image précédente et la transforme en lien. Pour cela, l'élément `<img>` est placé au sein d'un élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a). Ici, le texte alternatif devrait décrire la ressource vers laquelle pointe le lien.
+Cet exemple intègre l'image précédente et la transforme en lien. Pour cela, l'élément `<img>` est placé au sein d'un élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a). Ici, le texte alternatif doit décrire la ressource vers laquelle pointe le lien.
 
 ```html
 <a href="https://developer.mozilla.org">

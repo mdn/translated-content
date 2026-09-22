@@ -1,8 +1,9 @@
 ---
-title: PublicKeyCredential.response
+title: "PublicKeyCredential: response プロパティ"
+short-title: response
 slug: Web/API/PublicKeyCredential/response
 l10n:
-  sourceCommit: b7cd76af245c330c6a1a9f489602015fa0714044
+  sourceCommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
@@ -33,13 +34,13 @@ l10n:
 
 ```js
 const options = {
-  challenge: new Uint8Array(16) /* from the server */,
+  challenge: new Uint8Array(16) /* サーバーから */,
   rp: {
     name: "Example CORP",
     id: "login.example.com",
   },
   user: {
-    id: new Uint8Array(16) /* from the server */,
+    id: new Uint8Array(16) /* サーバーから */,
     name: "canand@example.com",
     displayName: "Carina Anand",
   },
@@ -56,11 +57,11 @@ navigator.credentials
   .then((pubKeyCredential) => {
     const response = pubKeyCredential.response;
     const clientExtResults = pubKeyCredential.getClientExtensionResults();
-    // Send response and client extensions to the server so that it can validate
-    // and create credentials
+    // レスポンスとクライアント拡張機能をサーバーに送信し、
+    // サーバーが検証を行って資格情報を生成できるようにする
   })
   .catch((err) => {
-    // Deal with any error
+    // エラーを処理する
   });
 ```
 

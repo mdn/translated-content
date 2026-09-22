@@ -17,7 +17,7 @@ slug: Web/HTTP/Reference/Headers/X-Content-Type-Options
 
 ## 语法
 
-```plain
+```http
 X-Content-Type-Options: nosniff
 ```
 

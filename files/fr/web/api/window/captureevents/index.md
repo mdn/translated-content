@@ -3,10 +3,10 @@ title: "Window : méthode captureEvents()"
 short-title: captureEvents()
 slug: Web/API/Window/captureEvents
 l10n:
-  sourceCommit: 3e0261cc48861db2a9b6c87f990013a200b1a259
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La méthode **`captureEvents()`** de l'interface {{DOMxRef("Window")}} ne fait rien. Son comportement d'origine a été retiré de la spécification, mais la méthode elle-même a été conservée afin de ne pas casser le code qui l'appelle.
 

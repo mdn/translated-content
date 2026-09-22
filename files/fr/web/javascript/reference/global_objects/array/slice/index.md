@@ -229,7 +229,7 @@ console.log([1, 2, , 4, 5].slice(1, 4)); // [2, vide, 4]
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.pop()")}}
 - La méthode {{JSxRef("Array.prototype.shift()")}}
 - La méthode {{JSxRef("Array.prototype.concat()")}}

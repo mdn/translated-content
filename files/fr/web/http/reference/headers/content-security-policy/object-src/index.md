@@ -55,14 +55,14 @@ Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 Soit cet en-tête CSP&nbsp;:
 
 ```http
-Content-Security-Policy: object-src https://exemple.com/
+Content-Security-Policy: object-src https://example.com/
 ```
 
 Ces éléments {{HTMLElement("object")}} et {{HTMLElement("embed")}} seront bloqués et ne se chargeront pas&nbsp;:
 
 ```html
-<embed src="https://hors-exemple.com/flash" />
-<object data="https://hors-exemple.com/plugin"></object>
+<embed src="https://hors-example.com/flash" />
+<object data="https://hors-example.com/plugin"></object>
 ```
 
 ## Spécifications

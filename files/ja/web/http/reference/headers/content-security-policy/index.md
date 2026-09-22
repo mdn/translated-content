@@ -3,10 +3,16 @@ title: Content-Security-Policy (CSP) ヘッダー
 short-title: Content-Security-Policy
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 6720d579bd658f02c56363805e97e69f93dc79f1
 ---
 
-HTTP の **`Content-Security-Policy`** レスポンスヘッダーは、ウェブサイト管理者が、あるページにユーザーエージェントが読み込みを許可されたリソースを管理できるようにします。いくつかの例外を除いて、大半のポリシーにはサーバーオリジンとスクリプトエンドポイントの指定を含んでいます。これは{{Glossary("cross-site scripting", "クロスサイトスクリプティング")}}攻撃を防ぐのに役立ちます。
+HTTP の **`Content-Security-Policy`** レスポンスヘッダーは、ウェブサイト管理者が、あるページにユーザーエージェントが読み込みを許可されたリソースを管理できるようにします。
+いくつかの例外を除いて、大半のポリシーにはサーバーオリジンとスクリプトエンドポイントの指定を含んでいます。
+これは{{Glossary("cross-site scripting", "クロスサイトスクリプティング")}}攻撃を防ぐのに役立ちます。
+
+違反は、[レポート API](/ja/docs/Web/API/Reporting_API) を使用して報告することができます。
+レポートは、ポリシーが適用されているページにおいて、[`ReportingObserver`](/ja/docs/Web/API/ReportingObserver) を使用して監視することができます。HTTP の {{HTTPHeader("Reporting-Endpoints")}} レスポンスヘッダーで定義され、CSP の {{CSP("report-to")}} ディレクティブを使用して選択されたサーバーエンドポイントに送信されます。
+詳しくは {{domxref("CSPViolationReport")}} を参照してください。
 
 [コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/Guides/CSP) がブラウザーにどのように配信されるか、また、その外観や、用途、展開戦略など、詳細については、ガイドをご覧ください。
 
@@ -15,10 +21,6 @@ HTTP の **`Content-Security-Policy`** レスポンスヘッダーは、ウェ�
     <tr>
       <th scope="row">ヘッダー種別</th>
       <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
-      <td>いいえ</td>
     </tr>
   </tbody>
 </table>
@@ -139,10 +141,9 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 ### その他のディレクティブ
 
 - {{CSP("require-trusted-types-for")}}
-  - : DOM XSS インジェクションシンクで [Trusted
-    Types](/ja/docs/Web/API/Trusted_Types_API) を強制します。
+  - : DOM XSS インジェクションシンクで[信頼型](/ja/docs/Web/API/Trusted_Types_API)を強制します。
 - {{CSP("trusted-types")}}
-  - : [Trusted Types](/ja/docs/Web/API/Trusted_Types_API) ポリシーのホワイトリストを指定するために使用します (Trusted Types は、アプリケーションが DOM XSS インジェクションシンクをロックダウンして、文字列の代わりにスプーフィング不可能な型付きの値のみを受け入れるようにします)。
+  - : [信頼型](/ja/docs/Web/API/Trusted_Types_API)ポリシーのホワイトリストを指定するために使用します (Trusted Types は、アプリケーションが DOM XSS インジェクションシンクをロックダウンして、文字列の代わりにスプーフィング不可能な型付きの値のみを受け入れるようにします)。
 - {{CSP("upgrade-insecure-requests")}}
   - : 安全でない URL (HTTP で提供されているもの) をすべて安全な URL (HTTPS で提供されているもの) に置き換えたかのように扱うようにユーザーエージェントに指示します。
     このディレクティブは、書き換えが必要な安全でない古い URL が大量にあるウェブサイトを対象としています。
@@ -169,7 +170,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 ### 'nonce-\<ノンス値>'
 
-この値は、文字列 `nonce-` にノンス値を続けたものです。ノンス値は [Base64](/ja/docs/Glossary/Base64#base64_文字) または [URL セーフ Base64](/ja/docs/Glossary/Base64#url_およびファイル名セーフの_base64) の文字です。
+この値は、文字列 `nonce-` に{{Glossary("Nonce", "ノンス")}}値を続けたものです。ノンス値は [Base64](/ja/docs/Glossary/Base64#base64_文字) または [URL セーフ Base64](/ja/docs/Glossary/Base64#url_およびファイル名セーフの_base64) の文字です。
 
 この文字列は、サーバーが HTTP レスポンスごとに生成するランダムな値です。例を示します。
 
@@ -255,14 +256,33 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - この文書が `http://example.com` から提供され、 CSP が `'self'` であれば、 `https://example.com` からのリソースも許可します。
 - この文書が `ws://example.org` から提供され、 CSP が `'self'` であれば、 `ws://example.org` からのリソースも許可します。
 
+### 'trusted-types-eval'
+
+デフォルトで、CSP に `default-src` または `script-src` ディレクティブが含まれている場合、引数を JavaScript として評価する JavaScript 関数は無効化されます。
+この中に、[`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) や、 {{domxref("Window.setTimeout()", "setTimeout()")}} の [`code`](/ja/docs/Web/API/Window/setTimeout#code) 引数、または {{jsxref("Function/Function()", "Function()")}} コンストラクターが含まれます。
+
+`trusted-types-eval` キーワードを使用することができますが、これは[信頼型](/ja/docs/Web/API/Trusted_Types_API)が適用されており、文字列の代わりにこれらの関数に信頼型が渡されている場合にのみ、この保護を無効にすることができます。
+これにより、文字列を JavaScript として動的に評価することができるのですが、これは入力が挿入される前に変換関数を通過した後でのみ行われます。この変換関数によって、入力を[無害化](/ja/docs/Web/Security/Attacks/XSS#sanitization)し、潜在的に危険なマークアップを除去する機会が得られます。
+
+信頼型でこれらのメソッドを使用する場合は、`trusted-types-eval` を [`'unsafe-eval'`](#unsafe-eval) の代わりに使用しなければなりません。
+これにより、信頼型に対応していないブラウザーでは、これらのメソッドへのアクセスがブロックされます。
+
+> [!NOTE]
+> 開発者は、どうしても必要な場合を除き、`trusted-types-eval` やこれらのメソッドの使用を避けるべきです。
+> 信頼型は、入力が変換関数を通過することを保証するものであり、その変換によって入力が安全になることを保証するものではありません（そして、これを適切に実現するのはとても難しい場合があります）。
+
+詳細な使用情報については、CSP ガイドの [`eval()` および類似の API](/ja/docs/Web/HTTP/Guides/CSP#eval_および同様の_api) を参照してください。
+
 ### 'unsafe-eval'
 
-既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、引数を JavaScript として評価する JavaScript の機能は無効になります。これには、[`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval)、{{domxref("Window.setTimeout()", "setTimeout()")}} の [`code`](/ja/docs/Web/API/Window/setTimeout#code) 引数、または {{jsxref("Function/Function()", "Function()")}} コンストラクターが含まれます。
+既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、引数を JavaScript として評価する JavaScript の機能は無効になります。
+これには、[`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval)、{{domxref("Window.setTimeout()", "setTimeout()")}} の [`code`](/ja/docs/Web/API/Window/setTimeout#code) 引数、または {{jsxref("Function/Function()", "Function()")}} コンストラクターが含まれます。
 
 この保護を解除するには、 `unsafe-eval` キーワードを使用することができます。これにより、 JavaScript で文字列を動的に評価できるようになります。
 
 > [!WARNING]
 > 開発者は `'unsafe-eval'` を避けるべきです。なぜなら、それは CSP が存在する目的の多くを無意味にするからです。
+> ['trusted-types-eval'](#trusted-types-eval) は、これらのメソッドの使用が不可欠な場合に、「潜在的に」より安全な代替手段を提供します。
 
 詳しい使い方の情報は、 CSP ガイドの [`eval()` と同様の API](/ja/docs/Web/HTTP/Guides/CSP#eval_and_similar_apis) を参照してください。
 
@@ -338,7 +358,7 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 
 ### 'report-sample'
 
-この式がスクリプトやスタイルを制御するディレクティブに含まれ、そのディレクティブがブラウザーにインラインスクリプト、インラインスタイル、またはイベントハンドラー属性をブロックさせる場合、ブラウザーが生成する[違反レポート](/ja/docs/Web/HTTP/Guides/CSP#違反の報告)には、ブロックされたリソースの最初の 40 文字を含む {{domxref("CSPViolationReportBody.sample", "sample")}} プロパティが含まれます。
+この式がスクリプトやスタイルを制御するディレクティブに含まれ、そのディレクティブがブラウザーにインラインスクリプト、インラインスタイル、またはイベントハンドラー属性をブロックさせる場合、ブラウザーが生成する[違反レポート](/ja/docs/Web/HTTP/Guides/CSP#違反の報告)には、ブロックされたリソースの最初の 40 文字を含む {{domxref("CSPViolationReport.sample", "sample")}} プロパティが含まれます。
 
 ## ワーカー内の CSP
 
@@ -416,6 +436,9 @@ Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violati
 ## 関連情報
 
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
+- CSP の {{CSP("report-to")}} ディレクティブ
+- {{httpheader("Reporting-Endpoints")}}
+- {{domxref("CSPViolationReport")}}
 - [コンテンツセキュリティポリシーを学ぶ](/ja/docs/Web/HTTP/Guides/CSP)
 - [WebExtension のコンテンツセキュリティ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [Adopting a strict policy](https://csp.withgoogle.com/docs/strict-csp.html)

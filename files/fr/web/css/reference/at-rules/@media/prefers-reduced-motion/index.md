@@ -3,11 +3,11 @@ title: Caractéristique média CSS `prefers-reduced-motion`
 short-title: prefers-reduced-motion
 slug: Web/CSS/Reference/At-rules/@media/prefers-reduced-motion
 l10n:
-  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
+  sourceCommit: 2d5e55258ef3f001d0d9fea6b48486bd3056fca6
 ---
 
 > [!WARNING]
-> Un exemple intégré en bas de cette page comporte un mouvement de mise à l'echelle qui peut être problématique pour certain·e·s lecteur·ice·s. Les personnes souffrant de troubles vestibulaires liés au mouvement peuvent activer la fonctionnalité de réduction des animations sur leur appareil avant de visualiser l'animation.
+> Un exemple intégré en bas de cette page comporte un mouvement de mise à l'échelle qui peut être problématique pour certain·e·s lecteur·ice·s. Les personnes souffrant de troubles vestibulaires liés au mouvement peuvent activer la fonctionnalité de réduction des animations sur leur appareil avant de visualiser l'animation.
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`prefers-reduced-motion`** permet de détecter si un·e utilisateur·ice a activé un réglage sur son appareil pour minimiser la quantité de mouvements non essentiels. Ce réglage indique au navigateur que l'utilisateur·ice préfère une interface qui supprime, réduit ou remplace les animations basées sur le mouvement.
 
@@ -22,33 +22,34 @@ De telles animations peuvent provoquer un inconfort chez les personnes souffrant
 
 ## Préférences utilisateurs
 
-Pour Firefox, la demande `reduce` est prise en compte si&nbsp;:
+Utilisez les paramètres suivants pour respecter la demande `reduce`&nbsp;:
 
-- Sous GTK/GNOME&nbsp;: Paramètres > Accessibilité > Vue > Réduction des animations activée.
+- Sous GTK/GNOME&nbsp;: Paramètres > Accessibilité > Vue > activer «&nbsp;Réduction des animations&nbsp;».
   - Dans les anciennes versions de GNOME&nbsp;: Outils GNOME > onglet Général (ou Apparence selon la version) > Animations désactivées.
   - Ou bien, ajouter `gtk-enable-animations = false` dans le bloc `[Settings]` du [fichier de configuration GTK 3 <sup>(angl.)</sup>](https://wiki.archlinux.org/title/GTK#Configuration).
   - Vous pouvez également essayer d'exécuter `gsettings set org.gnome.desktop.interface enable-animations false` pour que Firefox (et les autres programmes utilisant GTK version 4) respecte le réglage `reduce`.
 
-- Sous Plasma/KDE&nbsp;: Paramètres système > Comportement de l'espace de travail > Comportement général > «&nbsp;Vitesse d'animation&nbsp;» réglée complètement à droite sur «&nbsp;Instantané&nbsp;».
+- Sous Plasma/KDE&nbsp;: Paramètres système > Comportement de l'espace de travail > Comportement général > définir «&nbsp;Vitesse d'animation&nbsp;» sur «&nbsp;Instantané&nbsp;».
   - Vous pouvez aussi ajouter `AnimationDurationFactor=0` dans le bloc `[KDE]` du fichier `~/.config/kdeglobals`.
   - Ou simplement exécuter `kwriteconfig6 --key AnimationDurationFactor 0` dans votre terminal.
 - Sous Windows 10&nbsp;: Paramètres > Options d'ergonomie > Affichage > Afficher les animations dans Windows.
 - Sous Windows 11&nbsp;: Paramètres > Accessibilité > Effets visuels > Effets d'animation.
-- Sous macOS&nbsp;: Préférences Système > Accessibilité > Affichage > Réduire les animations.
+- Sous macOS jusqu'à 15 (Sequoia)&nbsp;: Préférences Système > Accessibilité > Affichage > Réduire les mouvements.
+- Sous macOS 25 (Tahoe) et versions ultérieures&nbsp;: Préférences Système > Accessibilité > Mouvement > Réduire les mouvements.
 - Sous iOS&nbsp;: Réglages > Accessibilité > Mouvement.
 - Sous Android 9+&nbsp;: Paramètres > Accessibilité > Supprimer les animations.
 - Dans Firefox `about:config`&nbsp;: Ajouter une préférence numérique nommée `ui.prefersReducedMotion` et définir sa valeur à `0` pour les animations complètes ou à `1` pour indiquer une préférence pour la réduction des animations. Les modifications prennent effet immédiatement.
 
 ## Exemples
 
-Cet exemple utilise une animation de mise à l'echelle pour illustrer `prefers-reduced-motion`. Si vous activez la réduction des animations dans les préférences d'accessibilité de votre appareil, la requête média `prefers-reduced-motion` détectera votre préférence et le CSS contenu dans la règle de réduction des animations, ayant la même [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) mais apparaissant plus tard dans l'[ordre des sources CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#ordre_des_sources), prendra le dessus. Ainsi, l'[animation](/fr/docs/Web/CSS/Guides/Animations/Using) de la boîte sera atténuée pour utiliser l'animation `dissolve`, plus douce et non déclenchante pour les troubles vestibulaires.
+Cet exemple utilise une animation de mise à l'échelle pour illustrer `prefers-reduced-motion`. Si vous activez la réduction des animations dans les préférences d'accessibilité de votre appareil, la requête média `prefers-reduced-motion` détecte votre préférence et le CSS contenu dans la règle de réduction des animations, ayant la même [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) mais apparaissant plus tard dans [l'ordre des sources CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#ordre_des_sources), prend le dessus. Ainsi, [l'animation](/fr/docs/Web/CSS/Guides/Animations/Using) de la boîte est atténuée pour utiliser l'animation `dissolve`, plus douce et non déclencheur pour les troubles vestibulaires.
 
-### Atténuer l'animation de mise à l'echelle
+### Atténuer l'animation de mise à l'échelle
 
 #### HTML
 
 ```html
-<div class="animation">animated box</div>
+<div class="animation">boîte animée</div>
 ```
 
 #### CSS
@@ -112,7 +113,7 @@ Cet exemple utilise une animation de mise à l'echelle pour illustrer `prefers-r
 
 #### Résultat
 
-{{EmbedLiveSample("Atténuer l'animation de mise à l'echelle")}}
+{{EmbedLiveSample("Atténuer l'animation de mise à l'échelle")}}
 
 Vous pouvez activer la réduction des animations sur [votre appareil](#preferences_utilisateurs) pour observer le changement d'animation. Cet exemple utilise la couleur de fond et la ligne au-dessus du texte pour mettre en évidence le passage d'une animation à l'autre selon que la préférence est activée ou non.
 
@@ -126,6 +127,6 @@ Vous pouvez activer la réduction des animations sur [votre appareil](#preferenc
 
 ## Voir aussi
 
-- {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} en-tête HTTP [indications de l'agent utilisateur](/fr/docs/Web/HTTP/Guides/Client_hints#indications_de_lagent_utilisateur)
+- L'en-tête HTTP [d'indications de l'agent utilisateur](/fr/docs/Web/HTTP/Guides/Client_hints#indications_de_lagent_utilisateur) {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}
 - [Introduction à la requête média reduced motion <sup>(angl.)</sup>](https://css-tricks.com/introduction-reduced-motion-media-query/) sur CSS-Tricks (2019)
 - [Conception réactive pour le mouvement <sup>(angl.)</sup>](https://webkit.org/blog/7551/responsive-design-for-motion/) sur le blog WebKit (2017)

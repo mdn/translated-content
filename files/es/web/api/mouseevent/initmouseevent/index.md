@@ -3,8 +3,6 @@ title: event.initMouseEvent
 slug: Web/API/MouseEvent/initMouseEvent
 ---
 
-{{Deprecated_Header}}
-
 {{APIRef("UI Events")}}
 
 > [!NOTE]

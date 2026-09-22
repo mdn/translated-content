@@ -3,7 +3,7 @@ title: Propriété CSS `flood-opacity`
 short-title: flood-opacity
 slug: Web/CSS/Reference/Properties/flood-opacity
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`flood-opacity`** définit l'opacité de la sous-région primitive du filtre en cours dans les éléments SVG {{SVGElement("feFlood")}} et {{SVGElement("feDropShadow")}} à l'intérieur d'un {{SVGElement("filter")}}. Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("flood-opacity")}} de l'élément.
@@ -110,7 +110,7 @@ Nous appliquons ensuite différentes valeurs d'opacité de remplissage aux élé
 
 {{EmbedLiveSample("Définir l'opacité du remplissage d'un filtre", 300, 220)}}
 
-Les attributs définissaient le premier carré comme totalement opaque et le second comme totalement transparent, mais ces valeurs ont été remplacées par les valeurs CSS `flood-opacity`. Les filtres vert marin sont respectivement opaques à 50% et 90%.
+Les attributs définissent le premier carré comme totalement opaque et le second comme totalement transparent, mais ces valeurs ont été remplacées par les valeurs CSS `flood-opacity`. Les filtres vert marin sont respectivement opaques à 50% et 90%.
 
 ## Spécifications
 

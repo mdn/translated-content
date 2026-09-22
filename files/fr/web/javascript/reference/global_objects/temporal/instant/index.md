@@ -106,6 +106,6 @@ Ces propriétés sont définies sur `Temporal.Instant.prototype` et partagées p
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
-- L'objet {{JSxRef("Temporal.ZonedDateTime")}}
+- L'objet natif {{JSxRef("Temporal")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.ZonedDateTime")}}

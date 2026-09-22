@@ -3,8 +3,6 @@ title: constructor
 slug: Web/JavaScript/Reference/Classes/constructor
 ---
 
-{{jsSidebar("Classes")}}
-
 La méthode **`constructor`** est une méthode qui est utilisée pour créer et initialiser un objet lorsqu'on utilise le mot clé [`class`](/fr/docs/Web/JavaScript/Reference/Statements/class).
 
 {{InteractiveExample("JavaScript Demo: Classes Constructor")}}

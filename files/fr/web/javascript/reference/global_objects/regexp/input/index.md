@@ -3,7 +3,7 @@ title: RegExp.input ($_)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/input
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{non-standard_header}}
 
 La propriété non-standard **`input`** est une propriété statique de l'expression rationnelle qui contient la chaîne de caractères sur laquelle est effectuée la recherche de correspondances. `RegExp.$_` est un alias de cette propriété.
 

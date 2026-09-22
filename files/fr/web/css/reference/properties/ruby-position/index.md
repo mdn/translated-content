@@ -3,7 +3,7 @@ title: Propriété CSS `ruby-position`
 short-title: ruby-position
 slug: Web/CSS/Reference/Properties/ruby-position
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`ruby-position`** définit la position d'un élément ruby par rapport à son élément de base. L'élément ruby peut ainsi être positionné au-dessus de l'élément (`over`), en-dessous (`under`) ou entre les caractères, sur leur droite (`inter-character`).
@@ -50,6 +50,8 @@ ruby-position: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 - `over`
   - : ![Exemple au-dessus](screen_shot_2015-03-04_at_13.02.20.png)

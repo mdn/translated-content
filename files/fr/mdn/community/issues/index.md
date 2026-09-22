@@ -2,7 +2,7 @@
 title: Créer et travailler sur des problèmes
 slug: MDN/Community/Issues
 l10n:
-  sourceCommit: 7e96b93b5b540a0cddb52fef9ae05c9db3410d73
+  sourceCommit: da7287ff61b6ea4db7f9a5e07be11263b525b7d0
 ---
 
 En tant que contributeur·ice, vous pouvez [signaler](#directives_pour_signaler_un_problème) et [travailler](#directives_pour_travailler_sur_un_problème) sur des problèmes.
@@ -17,7 +17,7 @@ Faites ce qui suit&nbsp;:
 - Si vous avez une question, vous pouvez la poser dans les [salons de discussion MDN Web Docs](/fr/docs/MDN/Community/Communication_channels#salles_de_discussion) au lieu de signaler un problème.
 - S'il existe plusieurs façons de résoudre un problème, envisagez si vous devez [en discuter](/fr/docs/MDN/Community/Communication_channels#salles_de_discussion) avec le personnel/la communauté.
   Utilisez les discussions pour obtenir différents points de vue et converger vers une action convenue. Cela aide à garder les problèmes ciblés et productifs.
-- Après avoir signalé un problème, essayez de le résoudre vous-même. Il existe un guide sur la [soumission et les révisions de demandes de tirage](/fr/docs/MDN/Community/Pull_requests) qui couvre tout ce que vous devez savoir sur le processus de contribution.
+- Après avoir signalé un problème, essayez de le résoudre vous-même. Il existe un guide sur [l'envoi et les révisions de demandes de tirage](/fr/docs/MDN/Community/Pull_requests) qui couvre tout ce que vous devez savoir sur le processus de contribution.
 
 Évitez de faire ce qui suit&nbsp;:
 
@@ -44,7 +44,7 @@ Voici quelques conseils pour ouvrir des problèmes&nbsp;:
   - **Titre du problème** doit exprimer succinctement _l'action requise_.
   - **Description du problème** doit clairement décrire le bogue et, si possible, l'action requise pour résoudre le problème.
 
-    Pour les problèmes complexes dont la résolution nécessite plusieurs étapes, décomposez le travail en tâches plus petites à l'aide d'une [liste de tâches](https://docs.github.com/fr/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists). Mettez à jour l'état d'une tâche dans la description du problème au lieu de commenter sur le problème. Cela aide les autres qui pourraient autrement avoir besoin de faire défiler les commentaires sur le problème pour déterminer l'état des différentes tâches. Les commentaires dans un problème doivent être limités aux détails ou au contexte qui aident à résoudre le problème.
+    Pour les problèmes complexes dont la résolution nécessite plusieurs étapes, décomposez le travail en tâches plus petites à l'aide d'une [liste de tâches](https://docs.github.com/fr/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists). Mettez à jour l'état d'une tâche dans la description du problème au lieu de commenter sur le problème. Cela aide les autres qui peuvent autrement avoir besoin de faire défiler les commentaires sur le problème pour déterminer l'état des différentes tâches. Les commentaires dans un problème doivent être limités aux détails ou au contexte qui aident à résoudre le problème.
 
 - Si vous vous trouvez dans l'une des situations suivantes, déplacez la conversation vers [la discussion de MDN sur GitHub <sup>(angl.)</sup>](https://github.com/orgs/mdn/discussions)&nbsp;:
   - Vous n'êtes pas sûr que le problème soit valide ou quelle action est requise.
@@ -129,13 +129,13 @@ Voici les étapes générales pour travailler sur un problème&nbsp;:
 ### Corriger les problèmes vous-même
 
 Si vous repérez un bogue — qu'il s'agisse d'un problème avec l'apparence du site Web ou d'une erreur dans la documentation — vous pouvez essayer de le corriger vous-même dans une [requête de tirage](/fr/docs/MDN/Community/Pull_requests).
-Si le bogue est mineur (comme une faute de frappe ou une légère amélioration de phrase) ou nécessite une correction rapide, vous pouvez soumettre une requête de tirage avec les modifications appropriées.
+Si le bogue est mineur (comme une faute de frappe ou une légère amélioration de phrase) ou nécessite une correction rapide, vous pouvez envoyer une requête de tirage avec les modifications appropriées.
 
 Pour tout autre type de bogue, commencez par [ouvrir un problème](#directives_pour_signaler_un_problème).
 Ajoutez un commentaire sur votre intention de travailler sur le problème et, si possible, décrivez votre solution proposée ou les étapes pour le corriger.
 
 > [!NOTE]
-> Votre temps et vos efforts pourraient être gaspillés si vous ouvrez une requête de tirage sans ouvrir d'abord un problème.
+> Votre temps et vos efforts peuvent être gaspillés si vous ouvrez une requête de tirage sans ouvrir d'abord un problème.
 > Attendez que le problème soit trié, afin que l'équipe de MDN Web Docs puisse vérifier que le problème est légitime et approuver votre solution proposée.
 
 Utilisez les [directives pour travailler sur un problème](#directives_pour_travailler_sur_un_problème), essayez de résoudre le problème en mettant à jour la source appropriée, telle que&nbsp;:
@@ -161,7 +161,7 @@ Le processus global de tri comprend certaines tâches [générales](#tâches_gé
 
 - Si un problème concerne une locale active et non-en-US, définissez l'étiquette appropriée, telle que `l10n-fr`, `l10n-zh` ou `l10n-ja`. Les équipes pour ces locales prennent en charge ces problèmes et les trient.
 
-- Vous n'avez pas besoin de trier activement les problèmes tout le temps. Réservez du temps, disons 30 minutes chaque semaine, pour trier les problèmes de manière régulière dans votre domaine de responsabilité. Le tri n'a pas besoin d'être fait dans le cadre d'une réunion synchrone ou même en même temps que tout le monde, mais il doit être fait régulièrement pour s'assurer que le backlog de bogues non triés ne devienne pas trop important.
+- Vous n'avez pas besoin de trier activement les problèmes tout le temps. Réservez du temps, disons 30 minutes chaque semaine, pour trier les problèmes de manière régulière dans votre domaine de responsabilité. Le tri n'a pas besoin d'être fait dans le cadre d'une réunion synchrone ou même en même temps que tout le monde, mais il doit être fait régulièrement pour s'assurer que le <i lang="en">backlog</i> de bogues non triés ne devienne pas trop important.
 
 - En plus de trier les problèmes entrants chaque semaine, passez en revue la liste des anciens bogues pour voir s'il y en a qui sont bloqués, qui doivent être fermés ou qui ne sont plus pertinents. L'étiquette `idle` (pour le dépôt anglais) est automatiquement définie sur les problèmes qui n'ont eu aucune activité pendant 30 jours.
   - Vérifiez les problèmes assignés qui sont toujours ouverts pour voir si l'assigné progresse. S'il n'y a pas de progrès après une semaine d'assignation, demandez-lui s'il·elle a encore le temps de travailler sur le problème. Si une autre semaine passe sans progrès, désaffectez-le et laissez un commentaire indiquant que vous rendez le problème disponible pour d'autres contributeur·ice·s intéressé·e·s.
@@ -241,20 +241,20 @@ Ensuite, définissez les étiquettes suivantes lorsque c'est possible&nbsp;:
   - `baseline`&nbsp;: Le problème signale une bannière [baseline](/fr/docs/Glossary/Baseline/Compatibility) incorrecte. Notez que les données affichées dans la bannière baseline ne proviennent pas du dépôt `mdn/content`&nbsp;; elles sont déterminées par une combinaison d'entrées provenant de [données de compatibilité des navigateurs <sup>(angl.)</sup>](https://github.com/mdn/browser-compat-data), [code front-end <sup>(angl.)</sup>](https://github.com/mdn/fred) et [web-platform-dx/web-features <sup>(angl.)</sup>](https://github.com/web-platform-dx/web-features). Vous devez presque toujours soit fermer le problème pour indiquer qu'il fonctionne comme prévu, soit le transférer vers le dépôt approprié.
 
 - Une étiquette "«&nbsp;objectif&nbsp;» pour indiquer ce que la correction tente d'accomplir&nbsp;:
-  - `goal: accuracy`&nbsp;: Le problème signale des informations incorrectes ou inexactes. Si le contenu était exact au moment de la rédaction, utilisez plutôt `goal: up-to-date`.
+  - `goal: accuracy`&nbsp;: Le problème signale des informations incorrectes ou inexactes. Si le contenu est exact au moment de la rédaction, utilisez plutôt `goal: up-to-date`.
   - `goal: clarity`&nbsp;: Le problème signale des informations trompeuses ou peu claires (mais techniquement correctes).
   - `goal: completeness`&nbsp;: Le problème signale des informations manquantes, généralement des mises en garde ou des explications importantes.
   - `goal: consistency`&nbsp;: Le problème signale des informations incohérentes. Utilisez cette étiquette uniquement pour la cohérence éditoriale, comme les exemples de code et leurs descriptions&nbsp;; si au moins un endroit est techniquement incorrect, utilisez plutôt l'étiquette `goal: accuracy`.
   - `goal: up-to-date`&nbsp;: Le problème signale des informations obsolètes, généralement en raison de changements dans la plateforme web.
   - `goal: best practices`&nbsp;: Le problème signale des modèles utilisés dans les exemples de code ou le contenu.
-  - `goal: discoverability`&nbsp;: Le problème signale des liens manquants vers du contenu connexe ou des mots-clés manquants qui aideraient les moteurs de recherche à trouver la page.
+  - `goal: discoverability`&nbsp;: Le problème signale des liens manquants vers du contenu connexe ou des mots-clés manquants qui aident les moteurs de recherche à trouver la page.
 
 - Une étiquette «&nbsp;effort&nbsp;» pour aider les contributeur·ice·s à trouver des problèmes correspondant au temps et à l'effort qu'ils peuvent consacrer. Utilisez votre meilleure estimation pour appliquer l'étiquette appropriée, car l'effort réel dépend finalement des compétences et de l'expérience du·de la contributeur·ice. En réalité, l'effort fourni peut être plus important que la quantité de travail livrée (par exemple, le travail nécessite des recherches préalables importantes) ou inversement (par exemple, il ne s'agit que d'un seul changement qui affecte de nombreuses pages).
   - `effort: small`&nbsp;: La correction est probablement inférieure à 50 lignes (correspondant à une PR de taille `xs` ou `s`).
   - `effort: medium`&nbsp;: La correction est probablement comprise entre 50 et 1000 lignes (correspondant à une PR de taille `m` ou `l`).
   - `effort: large`&nbsp;: La correction est probablement supérieure à 1000 lignes (correspondant à une PR de taille `xl`).
 
-- Une étiquette «&nbsp;acceptation de contribution&nbsp;» pour indiquer que nous invitons la communauté à soumettre des PR&nbsp;:
+- Une étiquette «&nbsp;acceptation de contribution&nbsp;» pour indiquer que nous invitons la communauté à envoyer des PR&nbsp;:
   - `good first issue`&nbsp;: Ajoutez cette étiquette si la correction du problème est vraiment simple et constitue une bonne pratique pour un·e débutant·e qui se familiarise avec le processus de contribution. Appliquez cette étiquette uniquement si _tous_ les points suivants sont vrais&nbsp;:
     - Il y a des instructions, soit de l'auteur·ice, soit du·de la triager·ice, sur ce qui doit être écrit _exactement_ (de préférence du texte littéral ou un guide étape par étape).
     - La correction cible une seule page (afin que le·la contributeur·ice puisse facilement la corriger par l'interface web).
@@ -265,7 +265,7 @@ Ensuite, définissez les étiquettes suivantes lorsque c'est possible&nbsp;:
   Si un problème n'a aucune de ces étiquettes, cela indique généralement que les contributions de la communauté ne sont pas encouragées pour ce problème. Cela peut être le cas lorsque des discussions supplémentaires sont nécessaires, que le travail nécessite quelqu'un de familier·ère avec les conventions éditoriales de MDN pour le prendre en charge, ou qu'un·e membre de l'équipe a l'intention de travailler dessus. Les contributeur·ice·s peuvent toujours travailler sur ces problèmes s'ils sont suffisamment familiers avec le processus.
 
 - État du problème&nbsp;: Si un problème n'a pas d'étiquette indiquant que nous acceptons des PR ou que le travail est en cours, ajoutez l'une des étiquettes suivantes pour indiquer ce qui le bloque&nbsp;:
-  - `needs BCD update`&nbsp;: Ajoutez cette étiquette si le problème concerne la documentation de nouvelles fonctionnalités ou comportements qui nécessiteraient d'abord des données sur leur mise en œuvre.
+  - `needs BCD update`&nbsp;: Ajoutez cette étiquette si le problème concerne la documentation de nouvelles fonctionnalités ou comportements qui nécessitent d'abord des données sur leur mise en œuvre.
   - `needs content update`&nbsp;: Ajoutez cette étiquette si la correction du problème dans un autre dépôt nécessite une correction équivalente dans le dépôt `mdn/content`.
   - `needs decision`&nbsp;: Ajoutez cette étiquette si le problème nécessite un consensus de l'équipe sur l'approche à adopter. Le consensus peut être atteint avec une discussion ou une réunion interne synchrone.
   - `needs example update`&nbsp;: Ajoutez cette étiquette si le problème implique la synchronisation des exemples de code dans un autre dépôt. Si le dépôt est externe, il doit probablement être converti en un [exemple en direct](/fr/docs/MDN/Writing_guidelines/Page_structures/Live_samples) interne ou transféré sous MDN en premier.
@@ -277,7 +277,7 @@ Une fois que vous avez analysé et validé le problème, et que vous avez appliq
 
 ### Fermer un problème comme non prévu
 
-Si un problème ne correspond à aucune tâche actionable, vous devez envisager de le fermer comme non prévu. Cliquez sur le menu déroulant à côté du bouton **Fermer le problème**, et sélectionnez **Fermer comme non prévu**. Publiez un commentaire expliquant la raison de la fermeture du problème. Ajoutez également l'une des étiquettes suivantes&nbsp;:
+Si un problème ne correspond à aucune tâche actionnable, vous devez envisager de le fermer comme non prévu. Cliquez sur le menu déroulant à côté du bouton **Fermer le problème**, et sélectionnez **Fermer comme non prévu**. Publiez un commentaire expliquant la raison de la fermeture du problème. Ajoutez également l'une des étiquettes suivantes&nbsp;:
 
 - `closed: browser bug`&nbsp;: Le problème signale un comportement inattendu dans le code du rapporteur ou dans le code de MDN, mais la cause est un bogue du navigateur. Le problème n'est également pas suffisamment significatif pour justifier une note BCD.
 - `closed: question`&nbsp;: Le problème est basé sur une erreur ou une incompréhension du rapporteur, et le contenu est déjà correct et clair. Cependant, vous devez toujours reconnaître le rapport et envisager si le contenu peut être clarifié davantage pour éviter des questions similaires à l'avenir.

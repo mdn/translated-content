@@ -1,20 +1,21 @@
 ---
-title: "@container"
+title: CSS `@container` アットルール
+short-title: "@container"
 slug: Web/CSS/Reference/At-rules/@container
 l10n:
-  sourceCommit: 6e46ba1a7ac7aa2268afd0ecd079f221ef6d9af4
+  sourceCommit: 2ce88199869b63f8da3bbeafd899400f7579cce9
 ---
 
 **`@container`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、[コンテナーコンテキスト](/ja/docs/Web/CSS/Guides/Containment/Container_queries#コンテナーコンテキストの命名)にスタイルを適用する条件付きグループルールです。
-スタイル宣言は条件によってフィルタリングされ、条件が真の場合にコンテナーに適用されます。
+スタイル宣言は条件によってフィルタリングされ、条件が真の場合にコンテナー内の要素に適用されます。
 この条件は、クエリーされたコンテナーのサイズ、[`<style-feature>`](#コンテナースタイルクエリー)、スクロール状態のいずれかが変化したときに評価されます。
 
-条件には、{{cssxref("container-name")}} と `<container-query>` のどちらか、あるいは両方を指定する必要があります。
+条件には、{{cssxref("container-name")}}、`<container-query>`、あるいはその両方を指定する必要があります。
 
-{{cssxref("container-name")}} プロパティは、クエリーコンテナーの名前のリストを指定します。これらの名前は、対象となるクエリーコンテナーをフィルターするために、`@container` ルールで使用することができます。
-`<container-query>` 内のコンテナー機能は、選択されたコンテナーに対して評価されます。
-`<container-name>` が指定されていない場合、`<container-query>` の機能は、一致する [`container-type`](/ja/docs/Web/CSS/Reference/Properties/container-type) を持つ、最も近い親のクエリーコンテナーに対して評価されます。
-`<container-query>`が指定されていない場合、名前付きコンテナーが選択されます。
+{{cssxref("container-name")}} プロパティは、クエリーコンテナーの名前のリストを指定します。これらは、`@container` ルールが対象とするコンテナーを絞り込むために使用されます。`container-name` の値のみが指定されている場合（[名前のみのコンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries#名前のみのコンテナークエリー)）、その `container-name` 値が 1 つ以上設定されているコンテナーすべてに、含まれているルールが適用されます。
+
+`<container-query>` 内のコンテナー特性は、選択されたコンテナーに対して評価されます。
+`<container-name>` が指定されていない場合、`<container-query>` の機能は、一致する [`container-type`](/ja/docs/Web/CSS/Reference/Properties/container-type) を持つ、最も近い祖先のクエリーコンテナーに対して評価されます。
 
 ## 構文
 
@@ -47,6 +48,15 @@ l10n:
   }
 }
 
+/* アンカークエリー付き */
+@container anchored(fallback: bottom) {
+  .infobox::before {
+    content: "▲";
+    bottom: 100%;
+    top: auto;
+  }
+}
+
 /* <container-name> および <scroll-state> 付き */
 @container sticky-heading scroll-state(stuck: top) {
   h2 {
@@ -68,6 +78,28 @@ l10n:
     font-size: 1.5em;
   }
 }
+
+/* 論理値の style() クエリー */
+@container style(--theme: one) or style(--theme: two) {
+  /* 一致するコンテナーのスタイル */
+}
+@container style((--theme: one) or (--theme: two)) {
+  /* 一致するコンテナーのスタイル */
+}
+@container style(--theme: one) and style(--theme: two) {
+  /* 一致するコンテナーのスタイル */
+}
+@container style((--theme: one) and (--theme: two)) {
+  /* 一致するコンテナーのスタイル */
+}
+@container not style(--theme: one) {
+  /* 一致するコンテナーのスタイル */
+}
+
+/* 範囲の style() クエリー */
+@container style(--number > 4) {
+  /* 一致するコンテナーのスタイル */
+}
 ```
 
 ### 値
@@ -76,9 +108,9 @@ l10n:
   - : オプションの `<container-name>` および `<container-query>`。
     条件が `true` の場合、この `<stylesheet>` で定義されたスタイルが適用されます。
     - `<container-name>` {{optional_inline}}
-      - : オプション。クエリーが `true` と評価された際にスタイルが適用されるコンテナーの名前を、{{cssxref("ident")}} として指定します。
+      - : クエリーの対象となるコンテナーの名前です。{{cssxref("ident")}} として指定します。クエリーの結果が `true` となった場合、宣言したスタイルがコンテナーの子孫要素に適用されます。
     - `<container-query>` {{optional_inline}}
-      - : コンテナーのサイズ、[`<style-feature>`](#コンテナースタイルクエリー)、スクロール状態のいずれかが変更された際に、クエリーコンテナーに対して評価される一連の特性を指定します。
+      - : コンテナーのサイズ、[`<style-feature>`](#コンテナースタイルクエリー)、スクロール状態、適用された position-try の代替のいずれかが変更された際に、クエリーコンテナーに対して評価される一連の特性を指定します。
 
 ### コンテナークエリー内の論理キーワード
 
@@ -86,7 +118,7 @@ l10n:
 
 - `and` は 2 つ以上の条件を結合します。
 - `or` は 2 つ以上の条件を結合します。
-- `not` は条件を否定します。コンテナークエリーあたり 1 つの 'not' 条件だけが許されており、 `and` または `or` キーワードと同時に使用することはできません。
+- `not` は条件を否定します。コンテナークエリーあたり 1 つの 'not' 条件だけが許されており、`and` または `or` キーワードと同時に使用することはできません。
 
 ```css
 @container (width > 400px) and (height > 400px) {
@@ -133,7 +165,7 @@ l10n:
 
 ### 記述子
 
-`<container-condition>` クエリーには、[サイズ](#サイズコンテナー記述子)および[スクロール状態](#スクロール状態コンテナー記述子)が入ります。
+`<container-condition>` クエリーには、[サイズ](#サイズコンテナー記述子)、[スクロール状態](#スクロール状態コンテナー記述子)、[アンカー付き](#アンカー付きコンテナー記述子)のコンテナー記述子が入ります。
 
 #### サイズコンテナー記述子
 
@@ -171,7 +203,7 @@ l10n:
 
 #### スクロール状態コンテナー記述子
 
-スクロール状態コンテナー記述子は、`scroll-state` キーワードに続く括弧のセット内の `<container-condition>` 内で指定します。例えば、
+スクロール状態コンテナー記述子は、`<container-condition>` 内で `scroll-state()` 関数の引数として指定されます。例えば、次のような形になります。
 
 ```css
 @container scroll-state(scrollable: top) {
@@ -318,7 +350,7 @@ l10n:
 
     `none` 以外の `stuck` スクロール状態クエリーでコンテナーを評価するには、そのコンテナーに `position: sticky` が設定されており、スクロールコンテナー内にある必要があります。条件が成立すると、`@container` ブロック内のルールが `position: sticky` コンテナーの子孫に適用されます。
 
-    反対の軸の 2 つの値が同時に一致することもありえます。
+    隣接する軸の 2 つの値が同時に一致する可能性があります。
 
     ```css
     @container scroll-state((stuck: top) and (stuck: left)) {
@@ -341,6 +373,27 @@ l10n:
       /* … */
     }
     ```
+
+#### アンカー付きコンテナー記述子
+
+アンカー付きコンテナ記述子は、`<container-condition>` 内で `anchored()` 関数の引数として指定します。例えば、次のような形になります。
+
+```css
+@container anchored(fallback: top) {
+  /* … */
+}
+@container anchored(fallback: flip-block flip-inline) {
+  /* … */
+}
+@container anchored(fallback: --custom-fallback) {
+  /* … */
+}
+```
+
+- `fallback`
+  - : 特定の position-try の代替が、現在 {{cssxref("position-try-fallbacks")}} プロパティで指定されたアンカー位置指定コンテナーに対して、現在有効かどうかを照会します。有効な `fallback` の代替値には、`position-try-fallbacks` プロパティの値として記載することができるすべての要素値が含まれます。
+
+    検査で指定された `fallback` 値が、アンカー位置指定されたコンテナーで現在有効である場合、検査は成功し、`@container` ブロック内のルールが、そのアンカー位置指定されたコンテナーの子孫要素に適用されます。
 
 ## 公式定義
 
@@ -469,7 +522,7 @@ span {
 }
 ```
 
-それぞれの `style()` の引数は、単一の `<style-feature>` です。 **`<style-feature>`** は、有効な CSS [宣言](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_宣言)、CSS プロパティ、[`<custom-property-name>`](/ja/docs/Web/CSS/Reference/Values/var#values) のいずれかです。
+それぞれの `style()` の引数は、単一の `<style-feature>` です。**`<style-feature>`** は、有効な CSS [宣言](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_宣言)である有効なCSS [宣言](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_宣言)（**プレーン**形式）、単独の CSS プロパティまたは [`<custom-property-name>`](/ja/docs/Web/CSS/Reference/Values/var#values)（**論理値**形式）、あるいは[範囲比較](#範囲構文)（**範囲**形式）のいずれかです。
 
 ```css
 @container style(--themeBackground),
@@ -507,6 +560,48 @@ span {
 ```
 
 グローバルな `revert` と `revert-layer` は `<style-feature>` の値としては不正なため、コンテナースタイルクエリーは偽になります。
+
+#### 範囲構文
+
+上で説明した単純な `<style-feature-name>: <value>` 方法に加え、`<style-feature>` は、`=`、`<`、`<=`、`>`、または `>=` を使用した**範囲**比較として記述することもできます。範囲構文を使用すると、`style(--columns >= 3)` や `style(--gap = 1rem)` など、単純な形式では不可能な**数値**比較をすることができる。これは、両側の解決値を数値的に比較するものだ。
+
+範囲を評価するために、ブラウザーは次の処理を行います。
+
+1. 両辺を評価します（カスタムプロパティ名については、[`var()`](/ja/docs/Web/CSS/Reference/Values/var) とともに使用された場合と同様に検索されます）。
+2. それぞれの辺を {{cssxref("&lt;number&gt;")}}、{{cssxref("&lt;percentage&gt;")}}、{{cssxref("&lt;length&gt;")}}、{{cssxref("&lt;angle&gt;")}}、{{cssxref("&lt;time&gt;")}}、{{cssxref("&lt;frequency&gt;")}}、{{cssxref("&lt;resolution&gt;")}} のいずれかとして構文解析します。いずれかの側がこれらの型のいずれかとして構文解析できない場合、または両辺の型が一致しない場合、クエリーは偽となります。
+3. それぞれの辺を計算し（`calc()` 式がある場合はそれを評価し）、数値比較を行います。
+
+つまり、キーワードのような値を比較する際には範囲構文を使用できません。`style(--theme = dark)` は、`dark` が数値型ではないため、常に偽となります。そのような場合は、通常の構文（例えば `style(--theme: dark)`）を使用してください。
+
+範囲の両辺には、カスタムプロパティ名、`var()` 参照、リテラル値、`calc()` 式のいずれかを、順序を問わず指定できます。
+
+```css
+@container style(3 = --n) {
+  /* … */
+}
+@container style(var(--n) = 3) {
+  /* … */
+}
+@container style(calc(6/2) = var(--n)) {
+  /* … */
+}
+```
+
+範囲は、3 つの値の形を取ることもでき、この場合、両方の比較演算子が同じ方向を指し、値が区間内に含まれるかどうかを検査します。
+
+```css
+@container style(0 < --n < 10) {
+  /* --n が 0 より大きく 10 未満の場合に真 */
+}
+@container style(100px > --width > 50px) {
+  /* --width が 100px 未満で 50px より大きい場合に真 */
+}
+```
+
+言い換えれば、`style(0 < --n < 10)` は `style(0 < --n) and style(--n < 10)` と同等です。中間値は、左から右へと連鎖的に検査されるのではなく、両方の境界値に対して個別に検査されます。
+
+> [!NOTE]
+> プレーン構文と範囲構文は、見た目は似ていても動作が異なります。`--n: calc(6/2)` が指定された場合、クエリー `style(--n: 3)` は**偽**となります。これは、プレーン形式ではプロパティの計算値 (`calc(6/2)`) が `3` と直接比較されるためです。これと同等の範囲クエリー `style(--n = 3)` は**真**となります。これは、範囲形式では比較を行う前に両側の値を数値的に計算するためです。詳細については、コンテナー内スタイルクエリーガイドの[スタイルクエリーにおけるプレーン構文と範囲構文の比較](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#plain_versus_range_syntax_in_style_queries)を参照してください。
 
 ### スクロール状態クエリー
 

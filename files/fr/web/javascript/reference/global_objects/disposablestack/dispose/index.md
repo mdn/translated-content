@@ -73,7 +73,7 @@ class Resource {
 ## Voir aussi
 
 - [Gestion des ressources JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
-- L'objet {{JSxRef("DisposableStack")}}
+- L'objet natif {{JSxRef("DisposableStack")}}
 - La méthode {{JSxRef("DisposableStack.prototype.adopt()")}}
 - La méthode {{JSxRef("DisposableStack.prototype.defer()")}}
 - La méthode {{JSxRef("DisposableStack.prototype.use()")}}

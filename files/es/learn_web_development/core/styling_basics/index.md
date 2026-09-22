@@ -17,7 +17,7 @@ Antes de comenzar este módulo deberías poseer:
 1. Un entendimiento básico de la utilización de una computadora y de la
    navegación web a nivel de usuario.
 2. Un entorno básico constituido en base a lo dispuesto en la guía [Instalación de software básico](/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), tanto como conocimiento acerca de la creación y la administración de archivos, como es detallado en [Dealing with files](/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files).
-3. Una familiaridad básica con html, como es establecido en el módulo [Introdución a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content).
+3. Una familiaridad básica con html, como es establecido en el módulo [Introducción a HTML](/es/docs/Learn_web_development/Core/Structuring_content).
 4. Un entendimiento elemental de CSS, como es discutido en el módulo [CSS first steps](/es/docs/conflicting/Learn_web_development/Core/Styling_basics).
 
 > [!NOTE]

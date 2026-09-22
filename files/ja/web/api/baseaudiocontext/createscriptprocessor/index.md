@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9b8fba1439f6069a90a16023e89e0f8bf363a957
 ---
 
-{{APIRef("Web Audio API")}}{{deprecated_header}}
+{{APIRef("Web Audio API")}}
 
 `createScriptProcessor()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、直接音声処理に用いられる {{domxref("ScriptProcessorNode")}} を生成します。
 

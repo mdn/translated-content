@@ -3,7 +3,7 @@ title: Fonction CSS `oklab()`
 short-title: oklab()
 slug: Web/CSS/Reference/Values/color_value/oklab
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`oklab()`** exprime une couleur donnée dans {{Glossary("color space", "l'espace de couleur")}} OKLab, qui essaie de se rapprocher de la perception de la couleur par l'œil humain.
@@ -81,9 +81,9 @@ Lors de l'utilisation de la syntaxe des couleurs relatives dans une fonction `ok
 - Les canaux `a` et `b` sont chacun résolus en un `<number>` entre `-0.4` et `0.4`, inclus.
 - Le canal `alpha` est résolu en un `<number>` entre `0` et `1`, inclus.
 
-Lors de la définition d'une couleur relative, les différents canaux de la couleur de sortie peuvent être exprimés de plusieurs manières différentes. Ci-dessous, nous étudierons quelques exemples pour illustrer ceux-ci.
+Lors de la définition d'une couleur relative, les différents canaux de la couleur de sortie peuvent être exprimés de plusieurs manières différentes. Ci-dessous, nous étudions quelques exemples pour illustrer ceux-ci.
 
-Dans les deux premiers exemples ci-dessous, nous utilisons la syntaxe des couleurs relatives. Cependant, le premier produit la même couleur que la couleur d'origine et le second produit une couleur qui n'est pas du tout basée sur la couleur d'origine. Ils ne créent pas vraiment de couleurs relatives&nbsp;! Vous seriez peu susceptible d'utiliser cela dans une base de code réelle, et utiliseriez probablement simplement une valeur de couleur absolue à la place. Nous avons inclus ces exemples comme point de départ pour apprendre la syntaxe `oklab()` relative.
+Dans les deux premiers exemples ci-dessous, nous utilisons la syntaxe des couleurs relatives. Cependant, le premier produit la même couleur que la couleur d'origine et le second produit une couleur qui n'est pas du tout basée sur la couleur d'origine. Ils ne créent pas vraiment de couleurs relatives&nbsp;! Vous êtes peu susceptible d'utiliser cela dans une base de code réelle, et utilisez probablement simplement une valeur de couleur absolue à la place. Nous avons inclus ces exemples comme point de départ pour apprendre la syntaxe `oklab()` relative.
 
 Commençons par une couleur d'origine de `hsl(0 100% 50%)` (équivalent à `red`). La fonction suivante produit la même couleur que la couleur d'origine — elle utilise les valeurs des canaux `l`, `a`, et `b` de la couleur d'origine (`0.627966`, `0.22488`, et `0.125859`) comme valeurs des canaux de sortie&nbsp;:
 
@@ -137,7 +137,7 @@ oklab(from hsl(0 100% 50%) calc(l + 0.2) calc(a - 0.08) calc(b - 0.2) / calc(alp
 ```
 
 > [!NOTE]
-> Comme les valeurs des canaux de couleur d'origine sont résolues en valeurs `<number>`, vous devez leur ajouter des nombres lors de leur utilisation dans des calculs, même dans les cas où un canal accepterait normalement `<percentage>`, `<angle>`, ou d'autres types de valeurs. L'ajout d'un `<percentage>` à un `<number>`, par exemple, ne fonctionne pas.
+> Comme les valeurs des canaux de couleur d'origine sont résolues en valeurs `<number>`, vous devez leur ajouter des nombres lors de leur utilisation dans des calculs, même dans les cas où un canal accepte normalement `<percentage>`, `<angle>`, ou d'autres types de valeurs. L'ajout d'un `<percentage>` à un `<number>`, par exemple, ne fonctionne pas.
 
 ## Syntaxe formelle
 
@@ -414,7 +414,7 @@ span {
 
 ### Utilisation des couleurs relatives avec `oklab()`
 
-Cet exemple stylise trois éléments {{HTMLElement("div")}} avec différentes couleurs de fond. Le `<div>` du milieu conserve la `--base-color` non modifiée, tandis que ceux de gauche et de droite reçoivent des variantes éclaircies et assombries de cette `--base-color`.
+Cet exemple met en forme trois éléments {{HTMLElement("div")}} avec différentes couleurs de fond. Le `<div>` du milieu conserve la `--base-color` non modifiée, tandis que ceux de gauche et de droite reçoivent des variantes éclaircies et assombries de cette `--base-color`.
 
 Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) `--base-color` est passée dans une fonction `oklab()`, et les couleurs de sortie ont leur canal de luminosité modifié pour obtenir l'effet désiré avec une fonction `calc()`. La couleur éclaircie a `0.15` (15%) ajouté au canal de luminosité, et la couleur assombrie a `0.15` (15%) soustrait du canal de luminosité.
 

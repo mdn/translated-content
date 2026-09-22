@@ -3,13 +3,13 @@ title: En-tête Cross-Origin-Opener-Policy (COOP)
 short-title: Cross-Origin-Opener-Policy
 slug: Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy
 l10n:
-  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
+  sourceCommit: d0b1c8fc4aa83c8c584a6593b0410adef7b9d4c3
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Cross-Origin-Opener-Policy`** (COOP) permet à un site web de contrôler si un nouveau document de premier niveau, ouvert avec {{DOMxRef("Window.open()")}} ou lors de la navigation vers une nouvelle page, est ouvert dans le même {{Glossary("Browsing context","groupe de contexte de navigation")}} (BCG) ou dans un nouveau groupe de contexte de navigation.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Cross-Origin-Opener-Policy`** (COOP) permet à un site web de contrôler si un nouveau document de premier niveau, ouvert avec {{DOMxRef("Window.open()")}} ou lors de la navigation vers une nouvelle page, est ouvert dans le même {{Glossary("Browsing context","groupe de contexte de navigation")}} (BCG) ou dans un nouveau groupe de contexte de navigation.
 
 Lorsqu'il est ouvert dans un nouveau BCG, toute référence entre le nouveau document et son ouvreur est rompue, et le nouveau document peut être isolé en processus de son ouvreur.
-Cela garantit que des attaquants potentiels ne peuvent pas ouvrir vos documents avec {{DOMxRef("Window.open()")}} puis utiliser la valeur retournée pour accéder à son objet global, ce qui prévient un ensemble d'attaques inter-origines appelées [XS-Leaks <sup>(angl.)</sup>](https://xsleaks.dev/).
+Cela garantit que des attaquant·e·s potentiels ne peuvent pas ouvrir vos documents avec {{DOMxRef("Window.open()")}} puis utiliser la valeur retournée pour accéder à son objet global, ce qui prévient un ensemble d'attaques inter-origines appelées [Fuites-XS <sup>(angl.)</sup>](https://xsleaks.dev/).
 
 Cela signifie aussi que tout objet ouvert par votre document dans un nouveau BCG ne peut pas y accéder avec [`window.opener`](/fr/docs/Web/API/Window/opener).
 Cela vous permet d'avoir un contrôle plus fin sur les références à une fenêtre que [`rel=noopener`](/fr/docs/Web/HTML/Reference/Attributes/rel/noopener), qui affecte les navigations sortantes mais pas les documents ouverts avec {{DOMxRef("Window.open()")}}.
@@ -41,17 +41,17 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
     Il sert à exclure un document de l'utilisation de COOP pour l'isolation des processus.
     Il s'agit de la valeur par défaut.
 
-    Lors des navigations, les documents avec `unsafe-none` ouvriront toujours et seront toujours ouverts dans un nouveau BCG — sauf si l'autre document a également `unsafe-none` (ou n'a pas de valeur de directive COOP).
+    Lors des navigations, les documents avec `unsafe-none` ouvrirent toujours et sont toujours ouverts dans un nouveau BCG — sauf si l'autre document a également `unsafe-none` (ou n'a pas de valeur de directive COOP).
 
-    Avec `Window.open()`, les documents avec `unsafe-none` ouvriront toujours les documents ayant une autre valeur dans un nouveau BCG.
+    Avec `Window.open()`, les documents avec `unsafe-none` ouvrirent toujours les documents ayant une autre valeur dans un nouveau BCG.
     Cependant, les documents avec `unsafe-none` peuvent être ouverts dans le même BCG si l'ouvreur possède la directive `same-origin-allow-popups`, `noopener-allow-popups` ou `unsafe-none`.
-    Un document avec `same-origin` ouvrira toujours un document avec `unsafe-none` dans un nouveau BCG.
+    Un document avec `same-origin` ouvre toujours un document avec `unsafe-none` dans un nouveau BCG.
 
 - `same-origin`
   - : Le document autorise le chargement dans des BCG qui utilisent COOP et ne contiennent que des documents de même origine.
     Cela sert à fournir la [compartimentation inter-origines](/fr/docs/Web/API/Window/crossOriginIsolated) pour un BCG.
 
-    Les documents avec `same-origin` n'ouvriront et ne seront ouverts dans le même BCG que si les deux documents sont de même origine et possèdent la directive `same-origin`.
+    Les documents avec `same-origin` n'ouvrirent et ne sont ouverts dans le même BCG que si les deux documents sont de même origine et possèdent la directive `same-origin`.
 
 - `same-origin-allow-popups`
   - : Cette directive est similaire à [`same-origin`](#same-origin), sauf qu'elle permet d'ouvrir des documents avec {{DOMxRef("Window.open()")}} dans le même BCG s'ils ont une valeur COOP de `unsafe-none`.
@@ -62,7 +62,7 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
     Un document avec cette directive peut ouvrir un document dans le même BCG avec {{DOMxRef("Window.open()")}} si ce dernier a une valeur COOP de `unsafe-none`.
     Dans ce cas, il n'est pas important que le document ouvert soit inter-site ou même site.
 
-    Sinon, les documents avec `same-origin-allow-popups` n'ouvriront et ne seront ouverts dans le même BCG que si les deux documents sont de même origine et possèdent la directive `same-origin-allow-popups`.
+    Sinon, les documents avec `same-origin-allow-popups` n'ouvrirent et ne sont ouverts dans le même BCG que si les deux documents sont de même origine et possèdent la directive `same-origin-allow-popups`.
 
 - `noopener-allow-popups`
   - : Les documents avec cette directive sont toujours ouverts dans un nouveau BCG, sauf lorsqu'ils sont ouverts par navigation depuis un document qui possède aussi `noopener-allow-popups`.
@@ -71,15 +71,15 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
     Cela coupe les connexions entre le nouveau document et son ouvreur, isolant le contexte de navigation pour le document courant, quelle que soit l'origine du document ouvreur.
     Cela garantit que l'ouvreur ne peut pas exécuter de scripts dans les documents ouverts et inversement — même s'ils sont de même origine.
 
-    Lors des navigations, un document avec cette directive ouvrira toujours les autres documents dans un nouveau BCG sauf s'ils sont de même origine et possèdent la directive `noopener-allow-popups`.
-    Avec {{DOMxRef("Window.open()")}}, un document avec cette directive ouvrira les documents dans un nouveau BCG sauf s'ils ont `unsafe-none`&nbsp;; dans ce cas, il n'est pas important qu'ils soient même site ou inter-site.
+    Lors des navigations, un document avec cette directive ouvre toujours les autres documents dans un nouveau BCG sauf s'ils sont de même origine et possèdent la directive `noopener-allow-popups`.
+    Avec {{DOMxRef("Window.open()")}}, un document avec cette directive ouvre les documents dans un nouveau BCG sauf s'ils ont `unsafe-none`&nbsp;; dans ce cas, il n'est pas important qu'ils soient même site ou inter-site.
 
 ## Description
 
 De manière générale, vous devez définir vos politiques de façon à ce que seules les ressources de même origine et les ressources inter-origines de confiance, qui ont besoin de pouvoir s'exécuter mutuellement, soient autorisées à s'ouvrir dans le même groupe de contexte de navigation.
 Les autres ressources doivent être isolées inter-origines dans leur propre groupe.
 
-Les sections suivantes indiquent si les documents seront ouverts dans le même BCG ou dans un nouveau BCG à la suite d'une navigation ou de l'ouverture d'une fenêtre par programme.
+Les sections suivantes indiquent si les documents sont ouverts dans le même BCG ou dans un nouveau BCG à la suite d'une navigation ou de l'ouverture d'une fenêtre par programme.
 
 > [!NOTE]
 > La spécification utilise le terme «&nbsp;fenêtre contextuelle&nbsp;» pour désigner tout document ouvert avec {{DOMxRef("Window.open()")}}, qu'il s'agisse d'une fenêtre contextuelle, d'un onglet, d'une fenêtre ou d'un autre contexte.
@@ -156,12 +156,12 @@ Considérez une origine hypothétique `example.com` qui héberge deux applicatio
 - Une application de chat à `/chat` qui permet à n'importe quel utilisateur·ice de contacter n'importe quel autre utilisateur·ice et de lui envoyer des messages.
 - Une application de gestion de mots de passe à `/passwords` qui contient tous les mots de passe de l'utilisateur·ice,es mots de passes pour différents services.
 
-Les administrateur·ice·s de l'application «&nbsp;des mots de passe&nbsp;» souhaiteraient s'assurer qu'elle ne peut pas être scriptée directement par l'application de chat, qui, de par sa nature, a une surface XSS plus importante.
-La «&nbsp;bonne solution&nbsp;» pour isoler ces applications serait de les héberger sur des origines différentes, mais dans certains cas ce n'est pas possible, et ces deux applications doivent rester sur une même origine pour des raisons historiques, commerciales ou de marque.
+Les administrateur·ice·s de l'application «&nbsp;des mots de passe&nbsp;» souhaitent s'assurer qu'elle ne peut pas être scriptée directement par l'application de chat, qui, de par sa nature, a une surface XSS plus importante.
+La «&nbsp;bonne solution&nbsp;» pour isoler ces applications, est de les héberger sur des origines différentes, mais dans certains cas ce n'est pas possible, et ces deux applications doivent rester sur une même origine pour des raisons historiques, commerciales ou de marque.
 
 L'en-tête `Cross-Origin-Opener-Policy: noopener-allow-popups` peut être utilisé pour s'assurer qu'un document ne peut pas être scripté par un document qui l'ouvre.
 
-Si `example.com/passwords` est servi avec `noopener-allow-popups`, le `WindowProxy` renvoyé par {{DOMxRef("Window.open()")}} indiquera que la fenêtre est fermée ({{DOMxRef("Window.closed")}} est `true`), de sorte que l'ouvreur ne peut pas exécuter de scripts dans l'application de gestion des mots de passe&nbsp;:
+Si `example.com/passwords` est servi avec `noopener-allow-popups`, le `WindowProxy` retourné par {{DOMxRef("Window.open()")}} indiquera que la fenêtre est fermée ({{DOMxRef("Window.closed")}} est `true`), de sorte que l'ouvreur ne peut pas exécuter de scripts dans l'application de gestion des mots de passe&nbsp;:
 
 ```js
 const handle = window.open("example.com/passwords", "passwordTab");
@@ -171,7 +171,7 @@ if (windowProxy.closed) {
 ```
 
 Notez que cela seul n'est pas considéré comme une mesure de sécurité suffisante.
-Le site devrait également faire ce qui suit&nbsp;:
+Le site doit également faire ce qui suit&nbsp;:
 
 - Utiliser Fetch Metadata pour bloquer les requêtes same-origin vers l'application la plus sensible qui ne sont pas des requêtes de navigation.
 - S'assurer que leurs cookies d'authentification sont tous `HttpOnly`.

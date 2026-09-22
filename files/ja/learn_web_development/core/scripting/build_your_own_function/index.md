@@ -180,7 +180,7 @@ btn.addEventListener("click", displayMessage());
 最後の実験を試した場合は、最後の変更を取り消してから実行してください。
 
 > [!NOTE]
-> 関数についての練習問題は、他にも Scrimba<sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> の演習 [Write your first function](https://scrimba.com/fullstack-path-c0fullstack/~04h?via=mdn) にもあります。
+> 関数についての練習問題は、他にも Scrimba<sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> の演習 [Write your first function](https://scrimba.com/fullstack-path-c0fullstack/~04h?via=mdn) にもあります。
 
 ## 引数で関数を改善
 

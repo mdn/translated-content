@@ -3,10 +3,10 @@ title: "HTMLMetaElement : propriété scheme"
 short-title: scheme
 slug: Web/API/HTMLMetaElement/scheme
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`scheme`** de l'interface {{DOMxRef("HTMLMetaElement")}} définit le schéma de la valeur dans l'attribut {{DOMxRef("HTMLMetaElement.content")}}.
 La propriété `scheme` a été créée pour permettre de fournir des informations supplémentaires afin d'interpréter la valeur de la propriété `content`. La propriété `scheme` prend comme valeur un format de schéma (par exemple, `YYYY-MM-DD`) ou un nom de format de schéma (par exemple, `ISBN`), ou un URI fournissant plus d'informations sur le format du schéma. Le schéma définit le format de la valeur de l'attribut `content`.

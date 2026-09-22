@@ -3,10 +3,10 @@ title: Propriété CSS `padding`
 short-title: padding
 slug: Web/CSS/Reference/Properties/padding
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`padding`** définit la [zone de remplissage](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_remplissage) sur les quatre côtés d'un élément en une seule fois.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`padding`** définit la [zone de remplissage](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_remplissage) sur les quatre côtés d'un élément en une seule fois.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: padding")}}
 
@@ -102,7 +102,7 @@ La propriété `padding` peut être définie en utilisant une, deux, trois ou qu
 - {{CSSxRef("&lt;length&gt;")}}
   - : La taille du remplissage en tant que valeur fixe.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : La taille du remplissage en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
+  - : La taille du remplissage en pourcentage, relative à la taille en incise (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
 
 ## Définition formelle
 

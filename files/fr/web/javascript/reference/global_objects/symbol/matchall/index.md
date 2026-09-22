@@ -3,8 +3,6 @@ title: Symbol.matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 ---
 
-{{JSRef}}
-
 Le symbole connu **`Symbol.matchAll`** renvoie un itérateur qui fournit l'ensemble des correspondances entre une expression rationnelle et une chaîne de caractères. Cette fonction est implicitement appelée par la méthode {{jsxref("String.prototype.matchAll()")}}.
 
 {{InteractiveExample("JavaScript Demo: Symbol.matchAll")}}

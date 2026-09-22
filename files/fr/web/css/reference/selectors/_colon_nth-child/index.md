@@ -3,10 +3,10 @@ title: Pseudo-classe CSS `:nth-child()`
 short-title: :nth-child()
 slug: Web/CSS/Reference/Selectors/:nth-child
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: 0c62b082755017d0773ecaaee7e74efd5e066d0b
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-child()`** permet de cibler les éléments en se basant sur l'indice des éléments dans la liste des enfants de leur parent. Autrement dit, un sélecteur utilisant cette pseudo-classe ciblera les éléments selon leur position parmi leurs voisins appartenant à un même parent.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-child()`** permet de cibler les éléments en se basant sur l'indice des éléments dans la liste des enfants de leur parent. Autrement dit, un sélecteur utilisant cette pseudo-classe cible les éléments selon leur position parmi leurs voisins appartenant à un même parent.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :nth-child", "tabbed-shorter")}}
 
@@ -77,7 +77,7 @@ li:nth-child(even) {
   - : Représente les éléments dont la position numérique au sein de la liste des voisins correspond au motif `An+B`, pour chaque entier positif `n`, où&nbsp;:
     - `A` est un incrément entier,
     - `B` est un décalage entier,
-    - `n` représente les entiers positifs à partir de 0.
+    - `n` représente les entiers positifs, à partir de 0.
 
     Autrement dit, on cible les `An+B`-ième éléments de la liste. `A` et `B` doivent tout deux être des [valeurs entières (type CSS `<integer>`)](/fr/docs/Web/CSS/Reference/Values/integer).
 
@@ -217,7 +217,7 @@ div em {
 
 #### Résultat
 
-{{EmbedLiveSample('exemple_détaillé', 550, 550)}}
+{{EmbedLiveSample("Exemple détaillé", 550, 550)}}
 
 ### Utiliser `of`
 
@@ -292,7 +292,7 @@ li:nth-child(even of .noted) {
 
 Les éléments avec `class="noted"` ont une bordure inférieure plus épaisse et les éléments 3, 10 et 17 ont un arrière-plan coloré, car ils sont les éléments _pairs_ de la liste des éléments ayant `class="noted"`.
 
-{{EmbedLiveSample('utiliser_of', 550, 120)}}
+{{EmbedLiveSample("Utiliser `of`", 550, 120)}}
 
 ### Syntaxe `of` et sélecteur du n-ième enfant
 
@@ -374,11 +374,11 @@ Dans le premier cas, on applique le style aux trois premiers éléments de la li
 
 Dans le second cas, on applique le style aux éléments ayant `class="noted"` s'ils font partie des trois premiers éléments de la liste.
 
-{{EmbedLiveSample('syntaxe_of_et_sélecteur_du_n-ième_enfant', 550, 150)}}
+{{EmbedLiveSample("Syntaxe `of` et sélecteur du n-ième enfant", 550, 150)}}
 
 ### Utiliser `of` pour corriger les tableaux à bandes alternées
 
-Il est fréquent d'utiliser des lignes alternant entre clair et sombre afin de faciliter la lecture d'un tableau et le rendre plus accessible. Toutefois, si on masque une ligne, les bandes apparaîtront comme fusionnées et empêcheront l'effet escompté. Dans cet exemple, vous pouvez voir deux tableaux qui possèdent une ligne masquée (avec `hidden`). Dans le second tableau, on gère les lignes masquées à l'aide de `of :not([hidden])`.
+Il est fréquent d'utiliser des lignes alternant entre clair et sombre afin de faciliter la lecture d'un tableau et le rendre plus accessible. Toutefois, si on masque une ligne, les bandes apparaissent comme fusionnées et empêchent l'effet escompté. Dans cet exemple, vous pouvez voir deux tableaux qui possèdent une ligne masquée (avec `hidden`). Dans le second tableau, on gère les lignes masquées à l'aide de `of :not([hidden])`.
 
 #### HTML
 
@@ -449,11 +449,11 @@ Dans le premier tableau, on utilise simplement `:nth-child(even)`, qui cible la 
 
 Dans le second tableau, on utilise la syntaxe `of` afin de cibler uniquement les lignes (`tr`) qui **ne sont pas** masquées, à l'aide de `:nth-child(even of :not([hidden]))`.
 
-{{EmbedLiveSample('utiliser_of_pour_corriger_les_tableaux_à_bandes_alternées', 550, 180)}}
+{{EmbedLiveSample("Utiliser `of` pour corriger les tableaux à bandes alternées", 550, 180)}}
 
 ### Mettre en forme une colonne de tableau
 
-Pour mettre en forme une colonne de tableau, on ne peut pas cibler l'élément [`<col>`](/fr/docs/Web/HTML/Reference/Elements/col), car les cellules du tableau n'en sont pas des enfants (alors que les cellules sont bien des enfants des lignes [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr)). Les pseudo-classes comme `:nth-child()` s'avèrent alors particulièrement utiles pour sélectionner les cellules d'une colonne.
+Pour mettre en forme une colonne de tableau, on ne peut pas cibler l'élément {{HTMLElement("col")}}, car les cellules du tableau n'en sont pas des enfants (alors que les cellules sont bien des enfants des lignes {{HTMLElement("tr")}}). Les pseudo-classes comme `:nth-child()` s'avèrent alors particulièrement utiles pour sélectionner les cellules d'une colonne.
 
 Dans cet exemple, on applique différents styles pour chaque colonne.
 
@@ -507,7 +507,7 @@ tbody tr :nth-child(3) {
 
 #### Résultat
 
-{{EmbedLiveSample('mettre_en_forme_une_colonne_de_tableau', 100, 200)}}
+{{EmbedLiveSample("Mettre en forme une colonne de tableau", 100, 200)}}
 
 ## Specifications
 

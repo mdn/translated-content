@@ -3,20 +3,20 @@ title: "Window : méthode requestAnimationFrame()"
 short-title: requestAnimationFrame()
 slug: Web/API/Window/requestAnimationFrame
 l10n:
-  sourceCommit: 90c1d8efd51c2f82d26e6b79e442f9dbcfafd048
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 La méthode **`requestAnimationFrame()`** de l'interface {{DOMxRef("Window")}} indique au navigateur qu'on souhaite exécuter une animation. Elle demande au navigateur d'appeler une fonction de rappel (<i lang="en">callback</i> en anglais) fournie par l'utilisateur·ice avant le prochain rafraîchissement.
 
-La fréquence des appels à la fonction de rappel correspondra généralement à la fréquence de rafraîchissement de l'affichage. La fréquence de rafraîchissement la plus courante est de 60 Hz (60 cycles/images par seconde), bien que 75 Hz, 120 Hz et 144 Hz soient également largement utilisés. Les appels à `requestAnimationFrame()` sont mis en pause dans la plupart des navigateurs lorsqu'ils s'exécutent dans des onglets en arrière-plan ou des {{HTMLElement("iframe")}} masqués, afin d'améliorer les performances et la durée de vie de la batterie.
+La fréquence des appels à la fonction de rappel correspond généralement à la fréquence de rafraîchissement de l'affichage. La fréquence de rafraîchissement la plus courante est de 60Hz (60 cycles/images par seconde), bien que 75Hz, 120Hz et 144Hz soient également largement utilisés. Les appels à `requestAnimationFrame()` sont mis en pause dans la plupart des navigateurs lorsqu'ils s'exécutent dans des onglets en arrière-plan ou des {{HTMLElement("iframe")}} masqués, afin d'améliorer les performances et la durée de vie de la batterie.
 
 > [!NOTE]
 > Votre fonction de rappel doit appeler `requestAnimationFrame()` à nouveau si vous souhaitez animer une autre image. `requestAnimationFrame()` ne fonctionne qu'une seule fois.
 
 > [!WARNING]
-> Assurez-vous de toujours utiliser le premier argument (ou une autre méthode pour obtenir le temps courant) afin de calculer la progression nécessaire de l'animation pour une <i lang="en">frame</i>. **Sinon, l'animation s'exécutera plus rapidement sur les écrans** avec une fréquence de rafraîchissement plus élevée. Voyez l'exemple ci-après pour une technique permettant de faire ce calcul.
+> Assurez-vous de toujours utiliser le premier argument (ou une autre méthode pour obtenir le temps courant) afin de calculer la progression nécessaire de l'animation pour une <i lang="en">frame</i>. **Sinon, l'animation s'exécute plus rapidement sur les écrans** avec une fréquence de rafraîchissement plus élevée. Voyez l'exemple ci-après pour une technique permettant de faire ce calcul.
 
 ## Syntaxe
 
@@ -40,9 +40,9 @@ Une valeur entière `unsigned long`, de l'ID de la requête, qui identifie de ma
 > [!WARNING]
 > L'identifiant de la requête est typiquement implémenté comme un compteur incrémental par fenêtre. Par conséquent, même lorsqu'il commence à compter à partir de 1, il peut déborder et finir par atteindre 0.
 > Bien que cela soit peu susceptible de poser des problèmes pour les applications de courte durée, vous devez éviter `0` comme valeur sentinelle pour les identifiants de requête invalides et préférer des valeurs inaccessibles telles que `null`.
-> La spécification ne précise pas le comportement en cas de débordement, donc les navigateurs ont des comportements divergents. En cas de débordement, la valeur pourrait soit revenir à 0, soit devenir négative, soit échouer avec une erreur.
-> Sauf si le débordement génère une exception, les identifiants de requête ne sont pas non plus vraiment uniques car il n'y a qu'un nombre fini d'entiers 32 bits pour un nombre potentiellement infini de rappels.
-> Notez cependant qu'il faudrait environ 800 jours pour atteindre ce problème en affichant à 60 Hz avec un seul appel à `requestAnimationFrame()` par image.
+> La spécification ne précise pas le comportement en cas de débordement, donc les navigateurs ont des comportements divergents. En cas de débordement, la valeur peut soit revenir à 0, soit devenir négative, soit échouer avec une erreur.
+> Sauf si le débordement génère une exception, les identifiants de requête ne sont pas non plus vraiment uniques, car il n'y a qu'un nombre fini d'entiers 32 bits pour un nombre potentiellement infini de rappels.
+> Notez cependant qu'il faut environ 800 jours pour atteindre ce problème en affichant à 60 Hz avec un seul appel à `requestAnimationFrame()` par image.
 
 ## Exemples
 
@@ -70,9 +70,9 @@ function iteration(chrono) {
 requestAnimationFrame(iteration);
 ```
 
-Les trois exemples suivants illustrent différentes approches pour définir le point zéro dans le temps, la référence pour calculer la progression de votre animation à chaque image. Si vous souhaitez synchroniser avec une horloge externe, telle que {{DOMxRef("BaseAudioContext.currentTime")}}, la précision la plus élevée disponible est la durée d'une seule image, 16,67 ms à 60 Hz. L'argument timestamp de la fonction de rappel représente la fin de l'image précédente, donc le plus tôt que vos nouvelles valeurs calculées seront rendues est dans l'image suivante.
+Les trois exemples suivants illustrent différentes approches pour définir le point zéro dans le temps, la référence pour calculer la progression de votre animation à chaque image. Si vous souhaitez synchroniser avec une horloge externe, telle que {{DOMxRef("BaseAudioContext.currentTime")}}, la précision la plus élevée disponible est la durée d'une seule image, 16,67ms à 60Hz. L'argument timestamp de la fonction de rappel représente la fin de l'image précédente, donc le plus tôt que vos nouvelles valeurs calculées sont rendues est dans l'image suivante.
 
-Cet exemple attend que la première fonction de rappel s'exécute pour définir `zero`. Si votre animation saute à une nouvelle valeur lorsqu'elle commence, vous devez structurer votre code de cette manière. Si vous n'avez pas besoin de synchroniser avec quelque chose d'externe, comme l'audio, cette approche est recommandée car certains navigateurs ont un délai de plusieurs images entre l'appel initial à `requestAnimationFrame()` et le premier appel à la fonction de rappel.
+Cet exemple attend que la première fonction de rappel s'exécute pour définir `zero`. Si votre animation saute à une nouvelle valeur lorsqu'elle commence, vous devez structurer votre code de cette manière. Si vous n'avez pas besoin de synchroniser avec quelque chose d'externe, comme l'audio, cette approche est recommandée, car certains navigateurs ont un délai de plusieurs images entre l'appel initial à `requestAnimationFrame()` et le premier appel à la fonction de rappel.
 
 ```js
 let zero;
@@ -104,7 +104,7 @@ function animer(chrono) {
 }
 ```
 
-Cet exemple utilise {{DOMxRef("performance.now()")}} au lieu de la valeur de timestamp de la fonction de rappel. Vous pourriez utiliser cela pour obtenir une précision de synchronisation légèrement supérieure, bien que le degré supplémentaire de précision soit variable et pas très significatif.
+Cet exemple utilise {{DOMxRef("performance.now()")}} au lieu de la valeur de timestamp de la fonction de rappel. Vous pouvez utiliser cela pour obtenir une précision de synchronisation légèrement supérieure, bien que le degré supplémentaire de précision soit variable et pas très significatif.
 
 > [!NOTE]
 > Cet exemple ne permet pas de synchroniser de manière fiable les rappels d'animation.

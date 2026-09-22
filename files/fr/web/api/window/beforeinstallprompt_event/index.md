@@ -3,7 +3,7 @@ title: "Window : évènement beforeinstallprompt"
 short-title: beforeinstallprompt
 slug: Web/API/Window/beforeinstallprompt_event
 l10n:
-  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef}}
@@ -12,7 +12,7 @@ L'évènement **`beforeinstallprompt`** de l'interface {{DOMxRef("Window")}} se 
 
 Il n'y a pas de moment garanti pour le déclenchement de cet évènement, mais il se produit généralement au chargement de la page.
 
-L'utilisation typique de cet évènement est lorsqu'une application web souhaite fournir sa propre interface d'installation intégrée, invitant l'utilisateur·ice à installer l'application, plutôt que celle générique fournie par le navigateur. Cela permet à l'application de donner plus de contexte sur l'application, en expliquant à l'utilisateur·ice pourquoi il·elle pourrait vouloir l'installer.
+L'utilisation typique de cet évènement est lorsqu'une application web souhaite fournir sa propre interface d'installation intégrée, invitant l'utilisateur·ice à installer l'application, plutôt que celle générique fournie par le navigateur. Cela permet à l'application de donner plus de contexte sur l'application, en expliquant à l'utilisateur·ice pourquoi il·elle peut vouloir l'installer.
 
 Dans ce scénario, le gestionnaire de cet évènement va&nbsp;:
 
@@ -36,15 +36,6 @@ onbeforeinstallprompt = (event) => { }
 Un objet {{DOMxRef("BeforeInstallPromptEvent")}}. Hérite de {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("BeforeInstallPromptEvent")}}
-
-## Propriétés de l'évènement
-
-_Hérite des propriétés de son parent, {{DOMxRef("Event")}}._
-
-- {{DOMxRef("BeforeInstallPromptEvent.platforms")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{Experimental_Inline}}
-  - : Retourne un tableau de chaînes de caractères contenant les plateformes sur lesquelles l'évènement a été déclenché. Ceci est fourni pour les agents utilisateur qui souhaitent présenter un choix de versions à l'utilisateur·ice, comme par exemple «&nbsp;web&nbsp;» ou «&nbsp;play&nbsp;», ce qui permettrait à l'utilisateur·ice de choisir entre une version web ou une version Android.
-- {{DOMxRef("BeforeInstallPromptEvent.userChoice")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{Experimental_Inline}}
-  - : Retourne une promesse ({{JSxRef("Promise")}}) qui se résout en un objet décrivant le choix de l'utilisateur·ice lorsqu'il·elle a été invité·e à installer l'application.
 
 ## Méthodes de l'évènement
 

@@ -37,7 +37,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Ref
 
 L'élément `<sup>` doit être utilisé uniquement pour des raisons typographiques&nbsp;: il sert à modifier la position du texte afin de respecter les conventions ou normes typographiques, et non simplement pour des raisons de présentation ou d'apparence.
 
-Par exemple, la mise en forme d'une [marque verbale <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Wordmark) d'entreprise ou de produit qui utilise une ligne de base surélevée doit être réalisée avec du CSS (généralement {{CSSxRef("vertical-align")}}) plutôt qu'avec `<sup>`. On utilisera par exemple `vertical-align: super` ou, pour décaler la ligne de base de 50&nbsp;%, `vertical-align: 50%`.
+Par exemple, la mise en forme d'une [marque verbale <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Wordmark) d'entreprise ou de produit qui utilise une ligne de base surélevée doit être réalisée avec du CSS (généralement {{CSSxRef("vertical-align")}}) plutôt qu'avec `<sup>`. On utilise par exemple `vertical-align: super` ou, pour décaler la ligne de base de 50&nbsp;%, `vertical-align: 50%`.
 
 Les cas d'utilisation appropriés de `<sup>` incluent (sans s'y limiter)&nbsp;:
 
@@ -171,6 +171,6 @@ Les nombres ordinaux, comme «&nbsp;quatrième&nbsp;» en français, «&nbsp;<i 
 
 ## Voir aussi
 
-- L'élément {{HTMLElement("sub")}} permet un effet de mise en indice. Il est à noter que l'élément `<sub>` et l'élément `<sup>` ne peuvent pas être utilisés simultanément. Pour afficher le symbole chimique d'un élément, il faudra utiliser [MathML](/fr/docs/Web/MathML) pour représenter à la fois le numéro atomique et le nombre de masse.
+- L'élément {{HTMLElement("sub")}} permet un effet de mise en indice. Il est à noter que l'élément `<sub>` et l'élément `<sup>` ne peuvent pas être utilisés simultanément. Pour afficher le symbole chimique d'un élément, il faut utiliser [MathML](/fr/docs/Web/MathML) pour représenter à la fois le numéro atomique et le nombre de masse.
 - Les éléments MathML {{MathMLElement("msub")}}, {{MathMLElement("msup")}} et {{MathMLElement("msubsup")}}.
 - La propriété CSS {{CSSxRef("vertical-align")}}.

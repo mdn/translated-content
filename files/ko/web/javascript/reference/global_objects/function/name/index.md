@@ -61,7 +61,7 @@ var f = function () {};
 console.log(f.name); // "f"
 ```
 
-{{jsxref("Operators/Function", "function 식", "", 1)}}에서 이름으로 함수를 정의할 수 있습니다:
+{{jsxref("Operators/function", "function 식", "", 1)}}에서 이름으로 함수를 정의할 수 있습니다:
 
 ```js
 var object = {

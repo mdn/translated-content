@@ -3,7 +3,7 @@ title: En-tête Priority
 short-title: Priority
 slug: Web/HTTP/Reference/Headers/Priority
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 5ada695d77acd2bab29ecb003effc563e5bab691
 ---
 
 L'en-tête HTTP **`Priority`** indique la préférence du client pour l'ordre de priorité auquel la réponse contenant la ressource demandée doit être envoyée, par rapport aux autres requêtes de ressources sur la même connexion.
@@ -105,7 +105,7 @@ priority = u=2
 
 > [!NOTE]
 > Les requêtes ci-dessus utilisent le format lisible par l'humain des spécifications HTTP/2 ou HTTP/3.
-> Le format HTTP/1.1 utilisé dans la plupart de cette documentation serait&nbsp;:
+> Le format HTTP/1.1 utilisé dans la plupart de cette documentation est&nbsp;:
 >
 > ```http
 > GET /style.css HTTP/1.1

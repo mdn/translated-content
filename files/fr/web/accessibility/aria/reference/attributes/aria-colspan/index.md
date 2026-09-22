@@ -35,7 +35,7 @@ Voici un extrait d'un tableau de scores d'une ligue de bowling. Chaque partie co
       -->
 
       <span role="columnheader" aria-rowspan="2">Équipe</span>
-      <span role="columnheader" aria-colspan="2">Joueur·euse</span>
+      <span role="columnheader" aria-colspan="2">joueur·se</span>
       <span role="columnheader" aria-colspan="31">Frames partie 1</span>
       <span role="columnheader" aria-colspan="31">Frames partie 2</span>
       <span role="columnheader" aria-colspan="31">Frames partie 3</span>

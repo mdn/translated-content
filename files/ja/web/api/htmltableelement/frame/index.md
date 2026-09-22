@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 {{domxref("HTMLTableElement")}} インターフェイスの **`frame`** プロパティは、文字列で表の外部の境界のうちどれを描画するかを示します。
 

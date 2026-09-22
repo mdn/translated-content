@@ -1,6 +1,8 @@
 ---
 title: ボールを動かす
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
+l10n:
+  sourceCommit: 2530db14de9ac226cf06f84540fa0101e804ca9b
 ---
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
@@ -11,7 +13,8 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 
 ## 描画ループを定義する
 
-キャンバスを毎フレーム、定期的に更新し続けるためには、何度も実行されるような関数を定義する必要があります。この関数には画像の位置を変えたりするために毎回違う値が与えらます。 JavaScript のタイミング関数、例えば {{domxref("Window.setInterval", "setInterval()")}} や {{domxref("window.requestAnimationFrame()", "requestAnimationFrame()")}} を用いれば同じ関数を何度も実行できます。
+キャンバスを毎フレーム、定期的に更新し続けるためには、何度も実行されるような関数を定義する必要があります。この関数には画像の位置を変えたりするために毎回違う値が与えらます。JavaScript のタイミング関数を用いれば、同じ関数を何度も実行できます。
+このチュートリアルの後半では、{{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} が描画にどのように役立つかを見ていきますが、まず {{domxref("Window.setInterval", "setInterval()")}} を使って、ループ処理を作成することから始めましょう。
 
 現在 HTML ファイル内にある JavaScript を、最初の 2 行を除いてすべて削除し、その下に以下のように追加してください。`draw()` 関数は `setInterval` 内で 10 ミリ秒ごとに実行されます。
 
@@ -22,7 +25,7 @@ function draw() {
 setInterval(draw, 10);
 ```
 
-無限に続く `setInterval` の性質のため、`draw()`は 10 ミリ秒おきにずっと、あるいは私たちが止めるまで呼ばれ続けます。では、ボールを描画してみましょう。 `draw()` 関数の中に下記のコードを追記してください。
+無限に続く `setInterval` の性質のため、`draw()` は 10 ミリ秒おきにずっと、あるいは私たちが止めるまで呼ばれ続けます。では、ボールを描画してみましょう。 `draw()` 関数の中に下記のコードを追記してください。
 
 ```js
 ctx.beginPath();
@@ -80,7 +83,7 @@ function draw() {
 
 コードを保存してください。問題なく動作しますが、ボールの軌跡が残ります。
 
-![](ball-trail.png)
+![ボールが通った経路を示す青い線](ball-trail.png)
 
 ## 各フレームの前にキャンバスを消去
 
@@ -105,7 +108,7 @@ function draw() {
 
 ## コードを整える
 
-これからいくつかの記事で `draw()` 関数にどんどんコマンドを追加していくので、可能な限りシンプルでクリーンにしておくと良いでしょう。まずは、ボールを描くコードを別個の関数に移動させることから始めましょう。
+これからいくつかの記事で `draw()` 関数にどんどんコマンドを追加していくので、可能な限り最小限でクリーンにしておくと良いでしょう。まずは、ボールを描くコードを別個の関数に移動させることから始めましょう。
 
 既存の draw() 関数を以下の 2 つの関数に置き換える。
 
@@ -126,11 +129,63 @@ function draw() {
 }
 ```
 
-## 自分のコードと比べる
+## 自分のコードと比べよう
 
-この記事で組み上げた自分のコードを下のライブデモで確認したり、書き換えたりしてどのように動いているかしっかり理解しましょう。
+この記事で組み上げたコードを下のライブデモで確認したり、書き換えたりしてどのように動いているかしっかり理解しましょう。
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/3x5foxb1/","","395")}}
+> [!NOTE]
+> これらのページではサンプルが自動的に動作するため、「ゲームが始まる」ボタンを追加しました。
+> これにより、ゲームが自動的に開始されて、アラートやその他のイベントが過剰に発生するのを避けることができます。
+
+```html
+<canvas id="myCanvas" width="480" height="320"></canvas>
+<button id="runButton">ゲーム開始</button>
+```
+
+```css
+canvas {
+  background: #eeeeee;
+}
+button {
+  display: block;
+}
+```
+
+```js
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+let x = canvas.width / 2;
+let y = canvas.height - 30;
+const dx = 2;
+const dy = -2;
+
+function drawBall() {
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+  x += dx;
+  y += dy;
+}
+
+function startGame() {
+  setInterval(draw, 10);
+}
+
+const runButton = document.getElementById("runButton");
+runButton.addEventListener("click", () => {
+  startGame();
+  runButton.disabled = true;
+});
+```
+
+{{embedlivesample("compare_your_code", 600, 350)}}
 
 > [!NOTE]
 > 動くボールの速さや向きを変えてみましょう。

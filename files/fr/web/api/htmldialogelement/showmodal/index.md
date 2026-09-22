@@ -3,12 +3,16 @@ title: "HTMLDialogElement : méthode showModal()"
 short-title: showModal()
 slug: Web/API/HTMLDialogElement/showModal
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 661a04e7a61abe3d8c7245f04cdd1d0bc865fe69
 ---
 
 {{ APIRef("HTML DOM") }}
 
-La méthode **`showModal()`** de l'interface {{DOMxRef("HTMLDialogElement")}} affiche la boîte de dialogue en mode modal, au-dessus de toute autre boîte de dialogue présente. Elle s'affiche dans la {{Glossary("top layer", "couche supérieure")}}, accompagnée d'un pseudo-élément {{CSSxRef('::backdrop')}}. Les éléments du même document que la boîte de dialogue, à l'exception de celle-ci et de ses descendants, deviennent _inertes_ (comme si l'attribut [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert) était spécifié). Seul le document contenant est bloqué&nbsp;: si la boîte de dialogue est affichée dans une iframe, le reste de la page reste interactif.
+La méthode **`showModal()`** de l'interface {{domxref("HTMLDialogElement")}} affiche la boîte de dialogue en mode bloquante, au-dessus de toute autre boîte de dialogue présente.
+
+Une boîte de dialogue bloquante s'affiche dans la {{glossary("top layer")}}, accompagnée d'un pseudo-élément {{cssxref('::backdrop')}}.
+Les éléments du même document que la boîte de dialogue, à l'exception de celle-ci et de ses descendants, deviennent _inertes_ (comme si l'attribut [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert) était défini).
+Seul le document contenant est bloqué&nbsp;: si la boîte de dialogue est affichée dans une iframe, le reste de la page reste interactif.
 
 ## Syntaxe
 
@@ -31,69 +35,52 @@ Aucune ({{JSxRef("undefined")}}).
 
 ## Exemples
 
-### Ouvrir une boîte de dialogue modale
+### Utilisation simple
 
-L'exemple suivant montre un bouton qui, lorsqu'il est cliqué, ouvre une boîte de dialogue modale {{HTMLElement("dialog")}} contenant un formulaire via la fonction `HTMLDialogElement.showModal()`. Lorsque la boîte de dialogue est ouverte, tout le reste du contenu du document devient inerte. Vous pouvez alors cliquer sur le bouton _Annuler_ pour fermer la boîte de dialogue (via la fonction {{DOMxRef("HTMLDialogElement.close()")}}), ou soumettre le formulaire avec le bouton de validation. Sélectionner le bouton d'annulation ferme la boîte de dialogue et déclenche un événement {{DOMxRef("HTMLDialogElement/close_event", "close")}}, mais pas un événement {{DOMxRef("HTMLDialogElement/cancel_event", "cancel")}}.
+L'exemple suivant montre un simple bouton qui, lorsqu'il est cliqué, ouvre un élément {{HTMLElement("dialog")}} avec la méthode `showModal()`.
+
+Lorsque la boîte de dialogue est ouverte, vous ne pouvez pas interagir avec le reste de la page, y compris cliquer sur le bouton _Cliquez-moi_ qui déclenche autrement une alerte.
+
+Vous pouvez cliquer sur le bouton _Fermer la boîte de dialogue_ pour fermer la boîte de dialogue (avec la méthode {{DOMxRef("HTMLDialogElement.close()", "close()")}}).
 
 #### HTML
 
 ```html
-<!-- boîte de dialogue contextuelle contenant un formulaire -->
-<dialog id="favDialog">
-  <form method="dialog">
-    <p>
-      <label for="favAnimal">Animal préféré&nbsp;:</label>
-      <select id="favAnimal" name="favAnimal">
-        <option></option>
-        <option>Crevette de saumure</option>
-        <option>Panda roux</option>
-        <option>Singes-araignées</option>
-      </select>
-    </p>
-    <div>
-      <button id="cancel" type="reset">Annuler</button>
-      <button type="submit">Valider</button>
-    </div>
-  </form>
+<dialog id="dialogue">
+  <button type="button" id="fermer">Fermer la boîte de dialogue</button>
 </dialog>
 
-<div>
-  <button id="updateDetails">Mettre à jour les informations</button>
-</div>
+<p><button id="ouvrir">Ouvrir la boîte de dialogue</button></p>
+<p><button id="alerte">Déclencher une alerte</button></p>
 ```
 
 #### JavaScript
 
 ```js
-const updateButton = document.getElementById("updateDetails");
-const cancelButton = document.getElementById("cancel");
-const dialog = document.getElementById("favDialog");
-dialog.returnValue = "favAnimal";
+const dialogue = document.getElementById("dialogue");
+const ouvrirButton = document.getElementById("ouvrir");
+const fermerButton = document.getElementById("fermer");
+const alerteButton = document.getElementById("alerte");
 
-function openCheck(dialog) {
-  if (dialog.open) {
-    console.log("Dialog open");
-  } else {
-    console.log("Dialog closed");
-  }
-}
-
-// Le bouton met à jour ouvre la boîte de dialogue modale
-updateButton.addEventListener("click", () => {
-  dialog.showModal();
-  openCheck(dialog);
+// Le bouton ouvrir ouvre une boîte de dialogue bloquante
+ouvrirButton.addEventListener("click", () => {
+  dialogue.showModal();
 });
 
-// Le bouton annuler du formulaire ferme la boîte de dialogue
-cancelButton.addEventListener("click", () => {
-  dialog.close("animalNotChosen");
-  openCheck(dialog);
+// Le bouton alerte déclenche une alerte
+alerteButton.addEventListener("click", () => {
+  alert("vous m'avez cliqué !");
+});
+
+// Le bouton fermer ferme la boîte de dialogue
+fermerButton.addEventListener("click", () => {
+  dialogue.close();
 });
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Ouvrir une boîte de dialogue modale")}}
+{{EmbedLiveSample("Utilisation simple", "100%", 250)}}
 
 ## Spécifications
 
@@ -105,4 +92,5 @@ cancelButton.addEventListener("click", () => {
 
 ## Voir aussi
 
-- L'élément HTML implémentant cette interface&nbsp;: {{HTMLElement("dialog")}}
+- L'élément HTML {{HTMLElement("dialog")}}
+- La méthode {{DOMxRef("HTMLDialogElement.show()")}}

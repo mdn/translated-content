@@ -126,21 +126,26 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Filter_effects
 
 ### 步骤 5
 
-```plain
-<feComposite in="SourceGraphic" in2="specOut"
-             operator="arithmetic"
-             k1="0" k2="1" k3="1" k4="0"
-             result="litPaint"/>
+```html
+<feComposite
+  in="SourceGraphic"
+  in2="specOut"
+  operator="arithmetic"
+  k1="0"
+  k2="1"
+  k3="1"
+  k4="0"
+  result="litPaint" />
 ```
 
 第二个 {{SVGElement('feComposite')}} 设置 `in` 为 "SourceGraphic" 和 "specOut"，即在 "SourceGraphic" 之上添加 "specOut" 的效果，复合模式为 "arithmetic"，然后保存结果为 "litPaint"。
 
 ### 步骤 6
 
-```plain
+```html
 <feMerge>
-  <feMergeNode in="offsetBlur"/>
-  <feMergeNode in="litPaint"/>
+  <feMergeNode in="offsetBlur" />
+  <feMergeNode in="litPaint" />
 </feMerge>
 ```
 

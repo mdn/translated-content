@@ -1,56 +1,115 @@
 ---
-title: image-rendering
+title: "`image-rendering` CSS 属性"
+short-title: image-rendering
 slug: Web/CSS/Reference/Properties/image-rendering
+l10n:
+  sourceCommit: d314d089e9be9ac78a91ba95ee80cad7d3cbe8c2
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`image-rendering`** 用于设置图像缩放算法。它适用于元素本身，适用于元素其他属性中的图像，也应用于子元素。
+**`image-rendering`** [CSS](/zh-CN/docs/Web/CSS) 属性设置图像缩放算法。该属性作用于元素本身、其其他属性中设置的任何图像，以及其后代元素。
 
-当页面作者指定的尺寸不是图像的原始尺寸时，{{Glossary("user agent", "用户代理")}}将缩放图像。缩放也可能由于用户互动（双指缩放）而发生。举个例子，如果有一张尺寸为 `100×100px` 的图片，但作者有意将尺寸设置为 `200×200px`（或`50×50px`），然后，图片便会根据 `image-rendering` 指定的算法，缩小或放大到新尺寸。此属性对于未缩放的图像没有影响。
+{{InteractiveExample("CSS 演示：image-rendering")}}
 
-> [!NOTE]
-> The [Canvas API](/zh-CN/docs/Web/API/Canvas_API) can provide a [fallback solution for `crisp-edges`](http://phrogz.net/tmp/canvas_image_zoom.html) through manual image data manipulation.
+```css interactive-example-choice
+image-rendering: auto;
+```
+
+```css interactive-example-choice
+image-rendering: smooth;
+```
+
+```css interactive-example-choice
+image-rendering: crisp-edges;
+```
+
+```css interactive-example-choice
+image-rendering: pixelated;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/lizard.png" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 480px;
+  object-fit: cover;
+}
+```
+
+当页面作者指定的尺寸与图像固有尺寸不同时，{{Glossary("user agent", "用户代理")}}会对图像进行缩放。用户交互（例如缩放页面）也可能导致缩放。例如，若图像的固有尺寸为 `100×100px`，但其实际尺寸为 `200×200px`（或 `50×50px`），则图像会按 `image-rendering` 指定的算法放大（或缩小）。该属性对未缩放的图像没有效果。
 
 ## 语法
 
 ```css
-/* 专有属性值 */
+/* 关键字值 */
 image-rendering: auto;
+image-rendering: smooth;
 image-rendering: crisp-edges;
 image-rendering: pixelated;
 
-/* 全局属性值 */
+/* 全局值 */
 image-rendering: inherit;
 image-rendering: initial;
+image-rendering: revert;
+image-rendering: revert-layer;
 image-rendering: unset;
 ```
 
-### 属性值
+### 值
 
 - `auto`
-  - : 自 Gecko 1.9（Firefox 3.0）起，Gecko 使用*双线性*（_bilinear_）算法进行重新采样（高质量）。
-- `smooth` {{Experimental_Inline}}
-  - : 应使用能最大化图像客观观感的算法来缩放图像。特别地，会“平滑”颜色的缩放算法是可以接受的，例如双线性插值。这适用于照片等类型的图像。
-- `high-quality` {{Experimental_Inline}}
-  - : 与 `smooth` 相同，但更倾向于高质量的缩放。如果系统资源受到限制，在考虑降低哪些图像的质量以及降低到什么程度时，`high-quality` 的图像应该优先于任何其他值的图像。
+  - : 缩放算法由用户代理决定。自 1.9 版（Firefox 3.0）起，Gecko 使用*双线性*重采样（高质量）。
+- `smooth`
+  - : 图像应使用能最大程度优化视觉效果的算法进行缩放。特别是允许“平滑”颜色的缩放算法，例如双线性插值。该值适用于照片等图像。
 - `crisp-edges`
-  - : 必须使用可有效保留对比度和图像中的边缘的算法来对图像进行缩放，并且，该算法既不会平滑颜色，又不会在处理过程中为图像引入模糊。合适的算法包括*最近邻居*（_nearest-neighbor_）算法和其他非平滑缩放算法，比如 _2×SaI_ 和 _hqx-\*_ 系列算法。此属性值适用于像素艺术作品，例如一些网页游戏中的图像。
+  - : 图像使用诸如“最近邻”等算法进行缩放，以保留图像中的对比度和边缘。通常适用于像素画或线条图等图像，不会产生模糊或颜色平滑。
 - `pixelated`
-  - : 放大图像时，使用最近邻居算法，因此，图像看着像是由大块像素组成的。缩小图像时，算法与 `auto` 相同。
+  - : 图像先使用“最近邻”或类似算法缩放到原始图像尺寸的最近整数倍，再使用平滑插值将图像调整到最终所需尺寸。这样可以在放大分辨率不是原始尺寸整数倍时，保留“像素化”外观，同时避免引入缩放伪影。
 
 > [!NOTE]
-> 早期草案中出现的 `optimizationQuality` 和 `optimizationSpeed` （来自 SVG 的对应值）分别被定义为 `smooth` 和 `pixelated`。
+> 早期草案中出现的值 `optimizeQuality` 和 `optimizeSpeed`（来自其 SVG 对应属性 {{SVGAttr("image-rendering")}}）分别被定义为 `smooth` 和 `pixelated` 的同义词。
 
-### 形式语法
+> [!NOTE]
+> [CSS 图像](/zh-CN/docs/Web/CSS/Guides/Images)模块为 `image-rendering` 属性定义了 `high-quality` 值，用于表示偏好更高质量的缩放，但目前没有任何浏览器支持该值。
+
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
+### 设置图像缩放算法
+
+在本示例中，同一图像重复显示四次，每次应用不同的 `image-rendering` 值。
+
 ```html hidden
 <div>
-  <img class="auto" alt="auto" src="blumen.jpg" />
-  <img class="pixelated" alt="pixelated" src="blumen.jpg" />
-  <img class="crisp-edges" alt="crisp-edges" src="blumen.jpg" />
+  <img
+    class="auto"
+    alt="一张白色和黄色花朵的小照片，背景是绿叶。图像比其显示尺寸大约小 33%。这种放大会使图像显得模糊，物体之间的边缘明显较软。"
+    src="blumen.jpg" />
+  <img
+    class="smooth"
+    alt="与第一张相同的照片，放大程度也相同。支持 image-rendering 属性的 smooth 值的浏览器会以尽量优化外观的方式显示该图像。"
+    src="blumen.jpg" />
+  <img
+    class="pixelated"
+    alt="与第一张相同的照片，放大程度也相同。支持 image-rendering 属性的 pixelated 值的浏览器会以非常像素化的方式显示该图像。单个像素清晰可见，边缘看起来更加锐利。"
+    src="blumen.jpg" />
+  <img
+    class="crisp-edges"
+    alt="与第一张相同的照片，放大程度也相同。支持 image-rendering 属性的 crisp-edges 值的浏览器会以非常像素化的方式显示该图像。在这些示例中，pixelated 与 crisp-edges 版本几乎看不出差别。"
+    src="blumen.jpg" />
 </div>
 ```
 
@@ -60,53 +119,43 @@ img {
 }
 ```
 
+#### CSS
+
 ```css
 .auto {
   image-rendering: auto;
 }
 
+.smooth {
+  image-rendering: smooth;
+}
+
 .pixelated {
-  -ms-interpolation-mode: nearest-neighbor;
   image-rendering: pixelated;
 }
 
 .crisp-edges {
-  image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
 ```
 
-{{EmbedLiveSample('示例')}}
+#### 结果
+
+{{EmbedLiveSample("设置图像缩放算法", 260, 260)}}
 
 ## 规范
 
 {{Specifications}}
 
-{{cssinfo}}
-
-> [!NOTE]
-> 虽然在最初此属性与 SVG 的 `image-rendering` 属性定义相近，但到现在，它们之间已有相当的差别。
-
 ## 浏览器兼容性
 
 {{Compat}}
 
-### 备注
+## 参见
 
-> [!NOTE]
-> 这是来自旧版浏览器兼容性表格的备注，保留以便查阅。可另行参阅 [Can I use](https://caniuse.com/#search=image-rendering)。
-
-Internet Explorer 7 和 8 支持非标准的 [`-ms-interpolation-mode` 属性](<http://msdn.microsoft.com/en-us/library/ie/ms530822(v=vs.85).aspx>)，有两个属性值：`bicubic` 和 `nearest-neighbor`，和大量差距：
-
-- 只应用于 `<img>` 等元素带的图片
-- IE 7 上此属性只支持无透明度的图片
-- 不能继承
-- IE 7 默认值：`nearest-neighbor` (低质量)
-- IE 8 默认值：`bicubic` (高质量)
-- IE 9 不支持此非标准属性
-
-WebKit 支持一个非标准属性：`-webkit-optimize-contrast`.
-
-WebKit Nightly 支持，见 [bug](https://bugs.webkit.org/show_bug.cgi?id=146771)
-
-Canvas 可以通过人工方式支持 [crisp-edge/optimize-contrast](http://phrogz.net/tmp/canvas_image_zoom.html) 属性。
+- {{cssxref("object-fit")}}
+- {{cssxref("object-position")}}
+- {{cssxref("image-orientation")}}
+- {{cssxref("image-resolution")}}
+- [CSS 图像](/zh-CN/docs/Web/CSS/Guides/Images)模块
+- SVG {{SVGAttr("image-rendering")}} 属性

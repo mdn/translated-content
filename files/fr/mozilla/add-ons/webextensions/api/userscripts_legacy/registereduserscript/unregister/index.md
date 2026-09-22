@@ -4,8 +4,6 @@ slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/RegisteredUserScript/
 original_slug: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister
 ---
 
-{{AddonSidebar}}
-
 La méthode `unregister()` de l'interface {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} désenregistre le script utilisateur représenté par cette instance d'interface et précédemment enregistré via {{WebExtAPIRef("userScripts.register","userScripts.register()")}}.
 
 > [!NOTE]

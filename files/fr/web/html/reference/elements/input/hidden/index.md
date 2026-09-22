@@ -3,17 +3,17 @@ title: Valeur d'attribut HTML `<input type="hidden">`
 short-title: <input type="hidden">
 slug: Web/HTML/Reference/Elements/input/hidden
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 2066cc916dfdcbb782340bf0ce562b230e947cba
 ---
 
-Les éléments {{HTMLElement("input")}} de type **`"hidden"`** permettent aux développeur·euse·s web d'inclure des données qui ne peuvent pas être vues ni modifiées par les utilisateur·ice·s lors de l'envoi d'un formulaire. Par exemple, l'identifiant du contenu actuellement commandé ou modifié, ou un jeton de sécurité unique. Les champs masqués sont totalement invisibles dans la page rendue, et il n'existe aucun moyen de les rendre visibles dans le contenu de la page.
+Les éléments {{HTMLElement("input")}} de type **`"hidden"`** permettent aux développeur·euse·s web d'inclure des données dans un formulaire qui ne sont pas accessibles visuellement aux utilisateur·ice·s lorsque le formulaire est envoyé. Par exemple, l'identifiant du contenu actuellement commandé ou modifié, ou un jeton de sécurité unique. Les champs masqués sont totalement invisibles dans la page rendue, mais sont tout de même envoyés comme n'importe quel autre champ de formulaire. Bien que les données ne soient pas présentées aux utilisateur·ice·s dans le contenu rendu, elles restent accessibles dans le code HTML et peuvent être modifiées par les utilisateur·ice·s à l'aide d'outils tels que les [outils de développement du navigateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
 
 > [!NOTE]
 > Les {{DOMxRef("Element/input_event", "input")}} et {{DOMxRef("HTMLElement/change_event", "change")}} évènements ne s'appliquent pas à ce type d'élément. Les champs masqués ne peuvent pas recevoir la sélection, même avec JavaScript (par exemple, `hiddenInput.focus()`).
 
 ## Valeur
 
-L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) de l'élément {{HTMLElement("input")}} contient une chaîne de caractères qui représente les données masquées que vous souhaitez inclure lorsque le formulaire est envoyé au serveur. Cette valeur ne peut pas être modifiée ni consultée par les utilisateur·ice·s dans l'interface utilisateur, bien qu'il·elle soit modifiable avec les outils de développement du navigateur.
+L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) de l'élément {{HTMLElement("input")}} contient une chaîne de caractères qui représente les données masquées que vous souhaitez inclure lorsque le formulaire est envoyé au serveur. Cette n'est pas présentée à l'utilisateur·ice sur l'interface utilisateur.
 
 > [!WARNING]
 > Bien que la valeur ne soit pas affichée aux utilisateur·ice·s dans le contenu de la page, elle est visible — et peut être modifiée — à l'aide des outils de développement de n'importe quel navigateur ou de la fonctionnalité «&nbsp;Afficher la source&nbsp;». Ne pas se fier aux champs `hidden` comme mécanisme de sécurité.
@@ -28,7 +28,7 @@ Il s'agit en réalité d'un des attributs communs, mais il possède une signific
 
 ## Utiliser les valeurs masquées dans les formulaires
 
-Comme indiqué ci‑dessus, les champs masqués peuvent être utilisés partout où vous souhaitez inclure, avec le formulaire envoyé au serveur, des données que l'utilisateur·ice ne peut pas voir ni modifier. Voyons quelques exemples qui illustrent leur utilisation.
+Comme indiqué ci-dessus, les champs masqués peuvent être utilisés partout où vous souhaitez inclure des données que l'utilisateur·ice ne peut pas voir dans le formulaire lorsqu'il est envoyé au serveur. Voyons quelques exemples illustrant leur utilisation.
 
 ### Suivre les modifications apportées au contenu
 
@@ -36,7 +36,7 @@ Un des usages les plus courants des champs masqués est de conserver l'informati
 
 1. L'utilisateur·ice décide d'éditer un contenu dont il·elle a la charge, par exemple un billet de blog ou une fiche produit. Il·elle commence en cliquant sur le bouton Éditer.
 2. Le contenu à modifier est extrait de la base de données et chargé dans un formulaire HTML afin que l'utilisateur·ice puisse appliquer les modifications souhaitées.
-3. Après l'édition, l'utilisateur·ice envoie le formulaire, et les données mises à jour sont renvoyées au serveur pour être actualisées en base de données.
+3. Après l'édition, l'utilisateur·ice envoie le formulaire, et les données mises à jour sont retournées au serveur pour être actualisées en base de données.
 
 L'idée est que lors de l'étape 2, l'identifiant de l'enregistrement à mettre à jour est conservé dans un champ masqué. Lorsque le formulaire est envoyé à l'étape 3, l'identifiant est automatiquement envoyé au serveur avec le contenu de l'enregistrement. Cet identifiant permet au composant serveur du site de savoir précisément quel enregistrement doit être mis à jour avec les données envoyées.
 
@@ -44,12 +44,10 @@ Vous pouvez consulter un exemple complet dans la section [Exemples](#exemples) c
 
 ### Contribuer à la sécurité d'un site web
 
-Les champs masqués sont également utilisés pour stocker et envoyer des jetons de sécurité, ou _secrets_, afin d'améliorer la sécurité d'un site web. L'idée de base est que, si un·e utilisateur·ice remplit un formulaire sensible — par exemple un formulaire sur le site de sa banque pour transférer de l'argent vers un autre compte — le secret fourni permet de prouver son identité et de garantir qu'il·elle utilise le bon formulaire pour envoyer la demande de transfert.
-
-Cela empêche un·e utilisateur·ice malveillant·e de créer un formulaire falsifié, de se faire passer pour une banque et d'envoyer le formulaire par courriel à des utilisateur·ice·s sans méfiance pour les tromper et les amener à transférer de l'argent au mauvais endroit. Ce type d'attaque s'appelle une [Falsification de requête inter-sites (CSRF)](/fr/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security#falsification_de_requête_inter-sites_csrf)&nbsp;; pratiquement tous les frameworks côté serveur réputés utilisent des secrets masqués pour prévenir de telles attaques.
+Les champs de saisie cachés sont souvent utilisés pour stocker des jetons contre les attaques de type croisement de requêtes (CSRF), qui contribuent à protéger les sites web contre les [attaques CSRF](/fr/docs/Web/Security/Attacks/CSRF).
 
 > [!NOTE]
-> Le fait de placer le secret dans un champ masqué ne le rend pas intrinsèquement sécurisé. C'est la composition et l'encodage de la clé qui assurent la sécurité. L'intérêt du champ masqué est de garder le secret associé aux données et de l'inclure automatiquement lorsque le formulaire est envoyé au serveur. Il est nécessaire d'utiliser des secrets bien conçus pour réellement sécuriser votre site web.
+> Les données placées dans un champ caché ne sont pas sécurisées par nature. Leur valeur reste visible par l'utilisateur·ice final·e. Vous devez utiliser des secrets bien conçus pour sécuriser efficacement votre site web.
 
 ## Validation
 
@@ -57,9 +55,13 @@ Les champs masqués ne participent pas à la validation des contraintes&nbsp;; i
 
 ## Exemples
 
+### Utiliser un identifiant d'enregistrement masqué
+
 Voyons comment nous pourrions implémenter une version du formulaire d'édition décrit précédemment (voir [Suivre les modifications apportées au contenu](#suivre_les_modifications_apportées_au_contenu)), en utilisant un champ masqué pour mémoriser l'identifiant de l'enregistrement modifié.
 
-Le HTML du formulaire d'édition peut ressembler un peu à ceci&nbsp;:
+#### HTML
+
+Le formulaire HTML à modifier ressemble à ceci&nbsp;:
 
 ```html
 <form>
@@ -80,9 +82,7 @@ Voici le contenu de mon meilleur billet, j'espère que ça vous plaît !
 </form>
 ```
 
-Ajoutons quelques éléments de mise en forme&nbsp;:
-
-```css
+```css hidden
 html {
   font-family: sans-serif;
 }
@@ -116,20 +116,24 @@ textarea {
 }
 ```
 
+```js hidden
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+```
+
 Le serveur affecte la valeur du champ masqué dont l'ID est `postID` à l'identifiant de l'article dans sa base de données avant d'envoyer le formulaire au navigateur de l'utilisateur·ice, et utilise cette information lorsque le formulaire est retourné pour savoir quel enregistrement de la base de données mettre à jour avec les informations modifiées. Aucun script n'est nécessaire dans le contenu pour gérer cela.
 
-La sortie ressemble à ceci&nbsp;:
+#### Résultat
 
-{{EmbedLiveSample("Exemples", "100%", 200)}}
-
-> [!NOTE]
-> Vous pouvez aussi trouver l'exemple sur GitHub (voir le [code source <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/forms/hidden-input-example/index.html), et aussi [le voir en direct <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)).
+{{EmbedLiveSample("Utiliser un identifiant d'enregistrement masqué", "100%", 200)}}
 
 Lors de l'envoi, les données du formulaire envoyées au serveur ressemblent à ceci&nbsp;:
 
 `title=Mon+meilleur+billet&content=Le+contenu+de+mon+meilleur+article.+J'espère+qu'il+vous+plaît!&postId=34657`
 
-Bien que le champ masqué soit totalement invisible, ses données sont tout de même envoyées.
+Bien que le champ masqué ne soit pas visible dans le formulaire, ses données sont tout de même envoyées.
 
 ## Résumé technique
 

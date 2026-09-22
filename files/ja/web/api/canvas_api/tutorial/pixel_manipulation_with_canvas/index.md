@@ -2,7 +2,7 @@
 title: キャンバスとピクセル操作
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 l10n:
-  sourceCommit: ec83af3d3b8879673fcdc49c2ed81b0ed73397fa
+  sourceCommit: 6ba4f3b350be482ba22726f31bbcf8ad3c92a9c6
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
@@ -11,18 +11,10 @@ l10n:
 
 ## ImageData オブジェクト
 
-{{domxref("ImageData")}} オブジェクトは、キャンバスオブジェクトの領域にあるピクセルデータを表します。これには以下の読み取り専用プロパティがあります。
+{{domxref("ImageData")}} オブジェクトは、キャンバスオブジェクトの領域にあるピクセルデータを表します。
+`data` プロパティは、生のピクセルデータを参照するためにアクセス可能な {{jsxref("Uint8ClampedArray")}}（またはリクエストされた場合は {{jsxref("Float16Array")}}）を返します。それぞれのピクセルは 4 つの 1 バイト値（赤、緑、青、アルファの順、すなわち "RGBA" 形式）で表されます。また、それぞれの色成分は 0 から 255 の間の整数で表します。さらに、それぞれの成分は配列内で連続した添字が割り当てられており、左上のピクセルの赤色成分が配列の添字 0 になります。配列の中でピクセルは左から右へ進み、さらに下へと進んでいきます。
 
-- `width`
-  - : 画像の幅をピクセル数で表します。
-- `height`
-  - : 画像の高さをピクセル数で表します。
-- `data`
-  - : `0` から `255` の間の (両端の値を含む) 整数データを RGBA の順で収めた一次元配列を表す {{jsxref("Uint8ClampedArray")}} です。
-
-`data` プロパティは、生のピクセルデータを参照するためにアクセス可能な {{jsxref("Uint8ClampedArray")}} を返します。それぞれのピクセルは 4 つの 1 バイト値（赤、緑、青、アルファの順、すなわち "RGBA" 形式）で表されます。また、それぞれの色成分は 0 から 255 の間の整数で表します。さらに、それぞれの成分は配列内で連続した添字が割り当てられており、左上のピクセルの赤色成分が配列の添字 0 になります。配列の中でピクセルは左から右へ進み、さらに下へと進んでいきます。
-
-{{jsxref("Uint8ClampedArray")}} は `height` × `width` × 4 バイトのデータがあり、添字の範囲は 0 から (`height`×`width`×4)-1 になります。
+{{jsxref("Uint8ClampedArray")}} は `height` × `width` × 4 バイトのデータがあり、添字の範囲は 0 から (`height` × `width` × 4) - 1 になります。
 
 例えば画像の 50 行目の 200 列目にあるピクセルから青色成分の値を読み取るには、以下のようにします。
 
@@ -61,7 +53,7 @@ const numBytes = imageData.data.length;
 const myImageData = ctx.createImageData(width, height);
 ```
 
-これは、特定の寸法の新たな `ImageData` オブジェクトを作成します。すべてのピクセルは透明な黒色（すべてがゼロ、すなわち rgb(0 0 0 / 0%)）に設定されます。
+これは、特定の寸法の新たな `ImageData` オブジェクトを作成します。すべてのピクセルは透明に設定されます。
 
 新たな `ImageData` オブジェクトを、　`anotherImageData` で指定したオブジェクトと同じ寸法で作成することもできます。新しいオブジェクトのピクセルは、すべて透明な黒色に設定されます。**画像データはコピーされません!**
 
@@ -84,14 +76,38 @@ const myImageData = ctx.getImageData(left, top, width, height);
 
 このメソッドは、[キャンバスを使用した動画の操作](/ja/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)の記事でも説明しています。
 
-### カラーピッカー
+### カラーピッカーの作成
 
-この例では、マウスカーソルの下にある色を表示するために [`getImageData()`](/ja/docs/Web/API/CanvasRenderingContext2D/getImageData) メソッドを使用しています。ここでは現在のマウスカーソルの位置を求めて、[`getImageData()`](/ja/docs/Web/API/CanvasRenderingContext2D/getImageData) が提供するピクセル配列で該当位置のピクセルデータを探します。最後に、色を表示するための `<div>` で背景色とテキストを設定するために、配列データを使用します。
+この例では、マウスカーソルの下にある色を表示するために [`getImageData()`](/ja/docs/Web/API/CanvasRenderingContext2D/getImageData) メソッドを使用しています。
+ここでは現在のマウスカーソルの位置を求めて、[`getImageData()`](/ja/docs/Web/API/CanvasRenderingContext2D/getImageData) が提供するピクセル配列で該当位置のピクセルデータを探します。
+最後に、色を表示するための `<div>` で背景色とテキストを設定するために、配列データを使用します。
+画像をクリックすると、同じ操作が行われますが、選択した色が使用されます。
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>元画像</th>
+      <th>ホバー時の色</th>
+      <th>選択時の色</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <canvas id="canvas" width="300" height="227"></canvas>
+      </td>
+      <td class="color-cell" id="hovered-color"></td>
+      <td class="color-cell" id="selected-color"></td>
+    </tr>
+  </tbody>
+</table>
+```
 
 ```js
 const img = new Image();
 img.crossOrigin = "anonymous";
-img.src = "./assets/rhino.jpg";
+img.src = "/shared-assets/images/examples/rhino.jpg";
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 img.addEventListener("load", () => {
@@ -101,7 +117,7 @@ img.addEventListener("load", () => {
 const hoveredColor = document.getElementById("hovered-color");
 const selectedColor = document.getElementById("selected-color");
 
-function pick(event, destination) {
+const pick = (event, destination) => {
   const bounding = canvas.getBoundingClientRect();
   const x = event.clientX - bounding.left;
   const y = event.clientY - bounding.top;
@@ -113,17 +129,33 @@ function pick(event, destination) {
   destination.textContent = rgbColor;
 
   return rgbColor;
-}
+};
 
 canvas.addEventListener("mousemove", (event) => pick(event, hoveredColor));
 canvas.addEventListener("click", (event) => pick(event, selectedColor));
 ```
 
-このコードの使い方は、次のライブ例で紹介します。
+```css hidden
+body {
+  font-family: sans-serif;
+}
+.color-cell {
+  color: white;
+}
+th {
+  width: 30%;
+}
+td {
+  font-family: monospace;
+  font-weight: bold;
+  padding-left: 1rem;
+}
+```
 
-{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-picker.html", '100%', 300)}}
+画像上の任意の場所にカーソルを合わせると、「ホバー時の色」の列に結果が表示されます。
+画像内の任意の場所をクリックすると、「選択時の色」の列に結果が表示されます。
 
-ソースコードもご覧ください。 [HTML](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/color-picker.html), [JavaScript](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/color-picker.js) です。
+{{embedlivesample("creating_a_color_picker", , 300)}}
 
 ## コンテキストへのピクセルデータの描画
 
@@ -141,18 +173,37 @@ ctx.putImageData(myImageData, dx, dy);
 ctx.putImageData(myImageData, 0, 0);
 ```
 
-### 色のグレースケール化と反転
+## 色のグレースケール化と反転
 
-この例では、すべてのピクセルに対して繰り返し処理を行い、値を変更したピクセル配列を {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}} を使ってキャンバスに戻しています。反転機能は、最大値 255 から各色を減算します。グレースケール関数は、赤、緑、青の平均値を使用します。また、例えば `x = 0.299r + 0.587g + 0.114b` という式で与えられる加重平均を使用することもできます。詳しくは Wikipedia の[グレースケール](https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB)をご覧ください。
+この例では、すべてのピクセルに対して繰り返し処理を行い、値を変更したピクセル配列を [putImageData()](/ja/docs/Web/API/CanvasRenderingContext2D/putImageData) を使ってキャンバスに戻しています。
+`invert` 関数は、最大値 255 から各色を減算します。
+`grayscale` 関数は、赤、緑、青の平均値を使用します。また、例えば `x = 0.299r + 0.587g + 0.114b` という式で与えられる加重平均を使用することもできます。
+詳しくはウィキペディアの[グレースケール](https://ja.wikipedia.org/wiki/グレースケール)をご覧ください。
+
+```html
+<canvas id="canvas" width="300" height="227"></canvas>
+<form>
+  <input type="radio" id="original" name="color" value="original" checked />
+  <label for="original">元画像</label>
+
+  <input type="radio" id="grayscale" name="color" value="grayscale" />
+  <label for="grayscale">グレースケール</label>
+
+  <input type="radio" id="inverted" name="color" value="inverted" />
+  <label for="inverted">反転</label>
+
+  <input type="radio" id="sepia" name="color" value="sepia" />
+  <label for="sepia">セピア</label>
+</form>
+```
 
 ```js
-const img = new Image();
-img.crossOrigin = "anonymous";
-img.src = "./assets/rhino.jpg";
-
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
+const img = new Image();
+img.crossOrigin = "anonymous";
+img.src = "/shared-assets/images/examples/rhino.jpg";
 img.onload = () => {
   ctx.drawImage(img, 0, 0);
 };
@@ -186,6 +237,22 @@ const grayscale = () => {
   ctx.putImageData(imageData, 0, 0);
 };
 
+const sepia = () => {
+  ctx.drawImage(img, 0, 0);
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = imageData.data;
+  for (let i = 0; i < data.length; i += 4) {
+    let r = data[i], // red
+      g = data[i + 1], // green
+      b = data[i + 2]; // blue
+
+    data[i] = Math.min(Math.round(0.393 * r + 0.769 * g + 0.189 * b), 255);
+    data[i + 1] = Math.min(Math.round(0.349 * r + 0.686 * g + 0.168 * b), 255);
+    data[i + 2] = Math.min(Math.round(0.272 * r + 0.534 * g + 0.131 * b), 255);
+  }
+  ctx.putImageData(imageData, 0, 0);
+};
+
 const inputs = document.querySelectorAll("[name=color]");
 for (const input of inputs) {
   input.addEventListener("change", (evt) => {
@@ -194,6 +261,8 @@ for (const input of inputs) {
         return invert();
       case "grayscale":
         return grayscale();
+      case "sepia":
+        return sepia();
       default:
         return original();
     }
@@ -203,60 +272,70 @@ for (const input of inputs) {
 
 このコードの使い方は、次のライブ例で紹介します。
 
-{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-manipulation.html", '100%', 300)}}
-
-ソースコードも利用できます。 — [HTML](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/color-manipulation.html), [JavaScript](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/color-manipulation.js)
+{{embedlivesample("grayscaling_and_inverting_colors", , 300)}}
 
 ## ズームとアンチエイリアス
 
 {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} メソッド、第 2 の canvas、{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} プロパティの力を借りて、画像をズームアップして詳しく見ることができます。また、{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} のない 3 番目のキャンバスも描画し、左右に並べて比較できるようにします。
 
-マウスカーソルの位置を取得して、そこから上下左右に 5 ピクセルの範囲の画像を切り取ります。そして切り取った画像を別のキャンバスにコピーして、望むサイズにリサイズします。ズーム用のキャンバスでは、元のキャンバスから切り取った 10×10 ピクセルの画像を 200×200 ピクセルにリサイズしています。
-
-```js
-zoomctx.drawImage(
-  canvas,
-  Math.min(Math.max(0, x - 5), img.width - 10),
-  Math.min(Math.max(0, y - 5), img.height - 10),
-  10,
-  10,
-  0,
-  0,
-  200,
-  200,
-);
+```html
+<table>
+  <thead>
+    <tr>
+      <th>元画像</th>
+      <th>Smoothing enabled = true</th>
+      <th>Smoothing enabled = false</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <canvas id="canvas" width="300" height="227"></canvas>
+      </td>
+      <td>
+        <canvas id="smoothed" width="200" height="200"></canvas>
+      </td>
+      <td>
+        <canvas id="pixelated" width="200" height="200"></canvas>
+      </td>
+    </tr>
+  </tbody>
+</table>
 ```
 
-ズームの例です。
+```css hidden
+body {
+  font-family: monospace;
+}
+```
+
+マウスカーソルの位置を取得して、そこから上下左右に 5 ピクセルの範囲の画像を切り取ります。
+そして切り取った画像を別のキャンバスにコピーして、望むサイズにリサイズします。ズーム用のキャンバスでは、元のキャンバスから切り取った 10×10 ピクセルの画像を 200×200 ピクセルにリサイズしています。
 
 ```js
 const img = new Image();
 img.crossOrigin = "anonymous";
-img.src = "./assets/rhino.jpg";
+img.src = "/shared-assets/images/examples/rhino.jpg";
 img.onload = () => {
-  draw(this);
+  draw(img);
 };
 
-function draw(img) {
+function draw(image) {
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
-  ctx.drawImage(img, 0, 0);
+  ctx.drawImage(image, 0, 0);
 
-  const smoothedZoomCtx = document
-    .getElementById("smoothed-zoom")
-    .getContext("2d");
-  smoothedZoomCtx.imageSmoothingEnabled = true;
+  const smoothCtx = document.getElementById("smoothed").getContext("2d");
+  smoothCtx.imageSmoothingEnabled = true;
 
-  const pixelatedZoomCtx = document
-    .getElementById("pixelated-zoom")
-    .getContext("2d");
-  pixelatedZoomCtx.imageSmoothingEnabled = false;
+  const pixelatedCtx = document.getElementById("pixelated").getContext("2d");
+  pixelatedCtx.imageSmoothingEnabled = false;
 
   const zoom = (ctx, x, y) => {
     ctx.drawImage(
       canvas,
-      Math.min(Math.max(0, x - 5), img.width - 10),
-      Math.min(Math.max(0, y - 5), img.height - 10),
+      Math.min(Math.max(0, x - 5), image.width - 10),
+      Math.min(Math.max(0, y - 5), image.height - 10),
       10,
       10,
       0,
@@ -269,28 +348,24 @@ function draw(img) {
   canvas.addEventListener("mousemove", (event) => {
     const x = event.layerX;
     const y = event.layerY;
-    zoom(smoothedZoomCtx, x, y);
-    zoom(pixelatedZoomCtx, x, y);
+    zoom(smoothCtx, x, y);
+    zoom(pixelatedCtx, x, y);
   });
 }
 ```
 
-このコードの使い方は、次のライブ例で紹介します。
-
-{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/image-smoothing.html", '100%', 300)}}
-
-ソースコードも見ることができます。 — [HTML](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/image-smoothing.html), [JavaScript](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/image-smoothing.js)
+{{embedlivesample("zooming_and_anti-aliasing", , 300)}}
 
 ## 画像の保存
 
-{{domxref("HTMLCanvasElement")}} は、画像を保存する際に役に立つ `toDataURL()` メソッドを提供します。これは、[data URL](/ja/docs/Web/URI/Reference/Schemes/data) として引数 `type` で指定した形式（既定値は [PNG](https://ja.wikipedia.org/wiki/Portable_Network_Graphics)）で表した画像を返します。返される画像の解像度は 96 dpi です。
+{{domxref("HTMLCanvasElement")}} は、画像を保存する際に役に立つ `toDataURL()` メソッドを提供します。これは、[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) として引数 `type` で指定した形式（デフォルト値は [PNG](https://ja.wikipedia.org/wiki/Portable_Network_Graphics)）で表した画像を返します。返される画像の解像度は 96 dpi です。
 
 > [!NOTE]
 > CORS を使用せずに他の {{Glossary("origin")}} から取得したピクセルがキャンバスに含まれている場合、キャンバスは**汚染**され、その内容を読み取ったり保存したりできなくなることに注意してください。
 > [セキュリティと汚染されたキャンバス](/ja/docs/Web/HTML/How_to/CORS_enabled_image#セキュリティと汚染されたキャンバス)を参照してください。
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
-  - : 既定の設定。PNG 画像を作成します。
+  - : デフォルトの設定。PNG 画像を作成します。
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
   - : JPG 画像を作成します。オプションで、品質を 0 から 1 の範囲で指定できます。1 は最高品質、0 はほとんど見分けがつかなくなりますがファイルサイズを小さくできます。
 
@@ -298,7 +373,7 @@ function draw(img) {
 
 また、キャンバスから {{domxref("Blob")}} を生成することもできます。
 
-- {{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(_callback_, _type_, _encoderOptions_)")}}
+- {{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(callback, type, encoderOptions)")}}
   - : キャンバスに含まれる画像を表す `Blob` オブジェクトを作成します。
 
 ## 関連情報
@@ -306,6 +381,5 @@ function draw(img) {
 - {{domxref("ImageData")}}
 - [キャンバスを使用した動画の操作](/ja/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [Download Canvas API-Generated Images Using toBlob](https://www.digitalocean.com/community/tutorials/js-canvas-toblob)
-- [HTML5 Canvas Tutorials](https://www.html5canvastutorials.com/)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}

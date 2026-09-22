@@ -3,7 +3,7 @@ title: Dimensionnement de boîte CSS
 short-title: Dimensionnement de boîte
 slug: Web/CSS/Guides/Box_sizing
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 04c41175b160dc00b1a1b8e4e13b2183d89fdf1a
 ---
 
 Le module de **dimensionnement de boîte CSS** permet de préciser comment les éléments s'ajustent à leur contenu ou s'intègrent dans un contexte de mise en page donné. Il définit des propriétés de dimensionnement, de dimensionnement minimum et maximum, et étend les propriétés de dimensionnement CSS avec des mots-clés représentant la {{Glossary("intrinsic size", "taille intrinsèque")}} fondée sur le contenu et la {{Glossary("extrinsic size", "taille extrinsèque")}} fondée sur le contexte.
@@ -27,6 +27,7 @@ Le [module des propriétés et valeurs logiques](/fr/docs/Web/CSS/Guides/Logical
 - {{CSSxRef("contain-intrinsic-inline-size")}}
 - {{CSSxRef("contain-intrinsic-size")}}
 - {{CSSxRef("contain-intrinsic-width")}}
+- {{CSSxRef("frame-sizing")}}
 - {{CSSxRef("height")}}
 - {{CSSxRef("max-height")}}
 - {{CSSxRef("max-width")}}

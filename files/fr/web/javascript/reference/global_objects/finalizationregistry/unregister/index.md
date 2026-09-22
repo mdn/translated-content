@@ -120,4 +120,4 @@ class Bidule {
 
 ## Voir aussi
 
-- L'objet {{JSxRef("FinalizationRegistry")}}
+- L'objet natif {{JSxRef("FinalizationRegistry")}}

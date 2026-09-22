@@ -3,7 +3,7 @@ title: "Iterator : méthode find()"
 short-title: find()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/find
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 76972cdb4d87dd72e0a2a3146af07d82c7ef7d67
 ---
 
 La méthode **`find()`** des instances de {{JSxRef("Iterator")}} est similaire à {{JSxRef("Array.prototype.find()")}}&nbsp;: elle retourne le premier élément produit par l'itérateur qui satisfait la fonction de test fournie. Si aucune valeur ne satisfait la fonction de test, {{JSxRef("undefined")}} est retourné.
@@ -33,6 +33,8 @@ Le premier élément produit par l'itérateur qui satisfait la fonction de test 
 
 L'avantage principal des aides d'itérateur par rapport aux méthodes de tableau est qu'elles sont paresseuses, c'est-à-dire qu'elles ne produisent la valeur suivante que lorsqu'elle est demandée. Cela évite des calculs inutiles et permet également de les utiliser avec des itérateurs infinis. Avec des itérateurs infinis, `find()` retourne le premier élément correspondant dès qu'il est trouvé. Si `callbackFn` retourne toujours une valeur équivalente à faux, la méthode ne retourne jamais.
 
+Appeler `find()` ferme toujours l'itérateur sous-jacent, même si la méthode retourne prématurément. L'itérateur n'est jamais laissé dans un état intermédiaire.
+
 ## Exemples
 
 ### Utiliser la méthode `find()`
@@ -55,7 +57,7 @@ console.log(fibonacci().take(10).find(estNegatif)); // undefined
 console.log(fibonacci().find(estNegatif)); // Ne se termine jamais
 ```
 
-Appeler `find()` ferme toujours l'itérateur sous-jacent, même si la méthode retourne prématurément. L'itérateur n'est jamais laissé dans un état intermédiaire.
+Cette méthode ferme l'itérateur après être retournée.
 
 ```js
 const seq = fibonacci();
@@ -75,7 +77,7 @@ console.log(seq.next()); // { value: undefined, done: true }
 
 - [Prothèse d'émulation de `Iterator.prototype.find` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-helpers)
 - [Prothèse d'émulation es-shims de `Iterator.prototype.find` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
-- L'objet {{JSxRef("Iterator")}}
+- L'objet natif {{JSxRef("Iterator")}}
 - La méthode {{JSxRef("Iterator.prototype.every()")}}
 - La méthode {{JSxRef("Iterator.prototype.some()")}}
 - La méthode {{JSxRef("Array.prototype.find()")}}

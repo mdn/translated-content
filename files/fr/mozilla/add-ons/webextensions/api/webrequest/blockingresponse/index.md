@@ -3,8 +3,6 @@ title: webRequest.BlockingResponse
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse
 ---
 
-{{AddonSidebar}}
-
 Un objet de ce type est renvoyé par les auditeurs d'événements qui ont défini le `"blocking"` dans leur argument `extraInfoSpec`.
 
 En définissant des propriétés particulières dans `BlockingResponse`, l'auditeur peut modifier les requêtes réseau.

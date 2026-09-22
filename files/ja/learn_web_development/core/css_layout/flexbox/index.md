@@ -49,7 +49,7 @@ CSS フレックスボックスレイアウトでは、以下のことができ�
 フレックスボックス機能は、1 次元レイアウトのニーズに最適なソリューションでしょう。早速みてみましょう。
 
 > [!NOTE]
-> Scrimba の入門ガイド [Flexbox](https://scrimba.com/learn-html-and-css-c0p/~017?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> は、フレックスボックスがウェブ上でどれほど一般的であり、学ぶことがなぜ重要なのかを網羅するインタラクティブなガイドを提供し、フレックスボックスの威力を示す典型的な場合を順を追って説明しています。
+> Scrimba の入門ガイド [Flexbox](https://scrimba.com/learn-html-and-css-c0p/~017?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> は、フレックスボックスがウェブ上でどれほど一般的であり、学ぶことがなぜ重要なのかを網羅するインタラクティブなガイドを提供し、フレックスボックスの威力を示す典型的な場合を順を追って説明しています。
 
 ## 簡単な例の紹介
 

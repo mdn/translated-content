@@ -22,7 +22,7 @@ for (const key of iterator) {
 
 ## 語法
 
-```plain
+```js-nolint
 arr.keys()
 ```
 

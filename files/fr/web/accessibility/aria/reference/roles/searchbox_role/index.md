@@ -6,15 +6,15 @@ l10n:
   sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-Le rôle `searchbox` indique qu'un élément est un type de `textbox` destiné à spécifier des critères de recherche.
+Le rôle `searchbox` indique qu'un élément est un type de `textbox` destiné à définir des critères de recherche.
 
 ## Description
 
-Le `searchbox` peut être utilisé à la place de [`textbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) lorsque la zone de texte se trouve à l'intérieur d'un élément avec le rôle [`search`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role). Un `searchbox` est l'équivalent sémantique de l'élément HTML {{HTMLElement('input')}} de type `search`, [`<input type="search">`](/fr/docs/Web/HTML/Reference/Elements/input/search), qui devrait être utilisé à la place si possible.
+Le `searchbox` peut être utilisé à la place de [`textbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) lorsque la zone de texte se trouve à l'intérieur d'un élément avec le rôle [`search`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role). Un `searchbox` est l'équivalent sémantique de l'élément HTML {{HTMLElement("input")}} de type `search`, [`<input type="search">`](/fr/docs/Web/HTML/Reference/Elements/input/search), qui doit être utilisé à la place si possible.
 
-Le `searchbox` doit avoir un nom accessible. Si le rôle `searchbox` est appliqué à un élément HTML {{HTMLElement('input')}}, une {{HTMLElement('label')}} associée doit être utilisée. Sinon, utilisez [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) si une étiquette visible est présente, ou [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) si une étiquette visible n'est pas présente.
+Le `searchbox` doit avoir un nom accessible. Si le rôle `searchbox` est appliqué à un élément HTML {{HTMLElement("input")}}, une {{HTMLElement("label")}} associée doit être utilisée. Sinon, utilisez [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) si une étiquette visible est présente, ou [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) si une étiquette visible n'est pas présente.
 
-Le lecteur d'écran annoncera «&nbsp;zone de recherche&nbsp;», «&nbsp;édition de recherche&nbsp;» ou «&nbsp;champ de recherche&nbsp;» plus le nom accessible. Cela peut être redondant si «&nbsp;recherche&nbsp;» est inclus dans l'étiquette.
+Le lecteur d'écran annonce «&nbsp;zone de recherche&nbsp;», «&nbsp;édition de recherche&nbsp;» ou «&nbsp;champ de recherche&nbsp;» plus le nom accessible. Cela peut être redondant si «&nbsp;recherche&nbsp;» est inclus dans l'étiquette.
 
 ## Exemples
 
@@ -39,7 +39,7 @@ La section suivante est un formulaire de recherche avec une zone de recherche et
     id="search"
     value="" />
   <label for="search">Rechercher sur ce site</label>
-  <button>Soumettre la recherche</button>
+  <button>Lancer la recherche</button>
 </form>
 <div aria-live="polite" role="region" aria-atomic="true">
   <div class="sr-only"></div>

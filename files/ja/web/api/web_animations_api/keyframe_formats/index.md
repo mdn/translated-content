@@ -2,7 +2,7 @@
 title: キーフレームの形式
 slug: Web/API/Web_Animations_API/Keyframe_Formats
 l10n:
-  sourceCommit: 6fc7b4ea58006c901f22888d54b75942395fc357
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{DefaultAPISidebar("Web Animations")}}
@@ -21,12 +21,12 @@ l10n:
        {
          // from
          opacity: 0,
-         color: "#fff",
+         color: "white",
        },
        {
          // to
          opacity: 1,
-         color: "#000",
+         color: "black",
        },
      ],
      2000,
@@ -68,7 +68,7 @@ l10n:
    element.animate(
      {
        opacity: [0, 1], // [ from, to ]
-       color: ["#fff", "#000"], // [ from, to ]
+       color: ["white", "black"], // [ from, to ]
      },
      2000,
    );
@@ -105,17 +105,20 @@ l10n:
 
 ### 暗黙の to/from キーフレーム
 
-新しいバージョンのブラウザーでは、アニメーションの始まりや終わりの状態のみ（つまり、単一のキーフレーム）を設定することができます。例えば、[この単純なアニメーション](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html)を考えてみましょう。キーフレームオブジェクトは次のようになります、
+ブラウザーは、現在の状態に基づいてアニメーションの開始状態または終了状態を推測することができます。デフォルトで、単一のキーフレームが指定された場合、それは終了状態として扱われ、開始状態は要素の現在の計算済みスタイルから推測されます。ただし、`offset` を指定することで、指定されたキーフレームをアニメーションのタイムライン上のどの位置に配置するかを指定することができます。詳細は、[`Element.animate()`](/ja/docs/Web/API/Element/animate#暗黙の開始終了キーフレーム) を参照してください。
 
 ```js
-let rotate360 = [{ transform: "rotate(360deg)" }];
+// 現在の状態から translateX(300px) へアニメーション
+logo.animate({ transform: "translateX(300px)" }, 1000);
+// translateX(300px) から現在の状態へアニメーション
+logo.animate({ transform: "translateX(300px)", offset: 0 }, 1000);
+// 現在の状態から translateX(300px) へアニメーションし、そこから現在の状態へ戻る
+logo.animate({ transform: "translateX(300px)", offset: 0.5 }, 1000);
 ```
-
-アニメーションの終わりの状態を指定しただけで、始めの状態は暗黙的に指定されています。
 
 ## 属性
 
-キーフレームは、{{cssxref("CSS_animated_properties", "animatable CSS properties")}}のいずれかのプロパティと値のペアを指定します。プロパティ名はキャメルケースを使用して指定しますので、例えば {{cssxref("background-color")}} は `backgroundColor` となり、{{cssxref("background-position-x")}} は `backgroundPositionX` となります。{{cssxref("margin")}} のような一括指定も使用できます。
+キーフレームは、[アニメーションの対象となる CSS プロパティ](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties)のプロパティと値のペアを指定します。プロパティ名は{{Glossary("camel_case", "キャメルケース")}}を使用して指定しますので、例えば {{cssxref("background-color")}} は `backgroundColor` となり、{{cssxref("background-position-x")}} は `backgroundPositionX` となります。{{cssxref("margin")}} のような一括指定も使用できます。
 
 例外的な CSS プロパティが 2 つあります。
 

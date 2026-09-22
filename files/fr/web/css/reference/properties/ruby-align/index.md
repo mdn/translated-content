@@ -3,7 +3,7 @@ title: Propriété CSS `ruby-align`
 short-title: ruby-align
 slug: Web/CSS/Reference/Properties/ruby-align
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`ruby-align`** définit la façon dont les éléments ruby sont distribués autour du texte de base.
@@ -27,14 +27,16 @@ ruby-align: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `start`
   - : Un mot-clé indiquant que les notations ruby sont alignées avec le début du texte de base.
 - `center`
   - : Un mot-clé indiquant que les notations ruby sont alignées avec le milieu du texte de base.
 - `space-between`
-  - : Un mot-clé indiquant qu'un espace supplémentaire sera distribué entre les éléments ruby.
+  - : Un mot-clé indiquant qu'un espace supplémentaire est distribué entre les éléments ruby.
 - `space-around`
-  - : Un mot-clé indiquant qu'un espace supplémentaire sera distribué entre les éléments ruby et autour d'eux.
+  - : Un mot-clé indiquant qu'un espace supplémentaire est distribué entre les éléments ruby et autour d'eux.
 
 ## Définition formelle
 

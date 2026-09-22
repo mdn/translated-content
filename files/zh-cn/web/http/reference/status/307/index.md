@@ -11,7 +11,7 @@ slug: Web/HTTP/Reference/Status/307
 
 ## 状态码
 
-```plain
+```http
 307 Temporary Redirect
 ```
 

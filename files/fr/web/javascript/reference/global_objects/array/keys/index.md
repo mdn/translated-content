@@ -84,7 +84,7 @@ for (const entry of Array.prototype.keys.call(objetSimilaireTableau)) {
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.entries()")}}
 - La méthode {{JSxRef("Array.prototype.values()")}}
 - [`Array.prototype[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)

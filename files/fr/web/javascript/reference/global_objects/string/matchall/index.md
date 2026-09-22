@@ -3,8 +3,6 @@ title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
 ---
 
-{{JSRef}}
-
 La méthode **`matchAll()`** renvoie un itérateur contenant l'ensemble des correspondances entre une chaîne de caractères d'une part et une expression rationnelle d'autre part (y compris les groupes capturants).
 
 {{InteractiveExample("JavaScript Demo: String.matchAll()")}}

@@ -3,7 +3,7 @@ title: Propriété CSS `filter`
 short-title: filter
 slug: Web/CSS/Reference/Properties/filter
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: d19dec85109590176f946fcceef48c787d578b1e
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`filter`** permet d'appliquer des filtres et d'obtenir des effets graphiques de flou, de saturation, etc. Les filtres sont généralement utilisés pour ajuster le rendu d'une image, d'un arrière-plan ou des bordures.
@@ -106,7 +106,7 @@ filter: url("file.svg#filter-element-id");
 
 ### Fonctions
 
-La propriété `filter` s'utilise avec le mot-clé `none` ou avec une à plusieurs fonctions parmi celles listées ensuite. Si le paramètre fourni à l'une de ces fonctions est invalide, la fonction reverra `none`. Sauf mention contraire, les fonctions qui acceptent une valeur exprimée en pourcentage (par exemple `34%`) acceptent également les valeurs exprimées en décimal (par exemple `0.34`).
+La propriété `filter` s'utilise avec le mot-clé `none` ou avec une à plusieurs fonctions parmi celles listées ensuite. Si le paramètre fourni à l'une de ces fonctions est invalide, la fonction retourne `none`. Sauf mention contraire, les fonctions qui acceptent une valeur exprimée en pourcentage (par exemple `34%`) acceptent également les valeurs exprimées en décimal (par exemple `0.34`).
 
 Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les filtres sont appliqués dans l'ordre.
 
@@ -118,14 +118,14 @@ Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les f
     ```
 
 - {{CSSxRef("filter-function/brightness", "brightness()")}}
-  - : Rend l'image plus claire ou plus sombre en utilisant un coefficient multiplicateur. L'effet est linéaire&nbsp;: `0%` créera une image complètement noire, `100%` ne modifiera pas l'image et les valeurs supérieures à 100% rendront l'image plus claire.
+  - : Rend l'image plus claire ou plus sombre en utilisant un coefficient multiplicateur. L'effet est linéaire&nbsp;: `0%` crée une image complètement noire, `100%` ne modifie pas l'image et les valeurs supérieures à 100% rendent l'image plus claire.
 
     ```css
     filter: brightness(2);
     ```
 
 - {{CSSxRef("filter-function/contrast", "contrast()")}}
-  - : Ajuste le contraste de l'image. Une valeur de `0%` rendra l'image grise, `100%` n'aura pas d'effet et les valeurs supérieures à `100%` renforceront le contraste.
+  - : Ajuste le contraste de l'image. Une valeur de `0%` rend l'image grise, `100%` n'a pas d'effet et les valeurs supérieures à `100%` renforcent le contraste.
 
     ```css
     filter: contrast(200%);
@@ -139,42 +139,42 @@ Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les f
     ```
 
 - {{CSSxRef("filter-function/grayscale", "grayscale()")}}
-  - : Convertit l'image en niveaux de gris. Un argument de `100%` rendra l'image uniquement avec des niveaux de gris. Un argument de `0%` ne modifiera pas l'image d'entrée. Les valeurs entre `0%` et `100%` appliquent un effet proportionnel.
+  - : Convertit l'image en niveaux de gris. Un argument de `100%` rend l'image uniquement avec des niveaux de gris. Un argument de `0%` ne modifie pas l'image d'entrée. Les valeurs entre `0%` et `100%` appliquent un effet proportionnel.
 
     ```css
     filter: grayscale(100%);
     ```
 
 - {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}
-  - : Applique une rotation de teinte. L'argument angulaire définit le nombre de degrés pour la rotation sur le cercle des teintes. Une valeur de `0deg` n'aura pas d'effet sur l'image.
+  - : Applique une rotation de teinte. L'argument angulaire définit le nombre de degrés pour la rotation sur le cercle des teintes. Une valeur de `0deg` n'a pas d'effet sur l'image.
 
     ```css
     filter: hue-rotate(90deg);
     ```
 
 - {{CSSxRef("filter-function/invert", "invert()")}}
-  - : Inverse les couleurs de l'image. Si l'argument vaut `100%`, on obtiendra le négatif complet de l'image. Si l'argument vaut `0%`, l'image sera inchangée. Les valeurs entre `0%` et `100%` ont des effets proportionnels.
+  - : Inverse les couleurs de l'image. Si l'argument vaut `100%`, on obtient le négatif complet de l'image. Si l'argument vaut `0%`, l'image est inchangée. Les valeurs entre `0%` et `100%` ont des effets proportionnels.
 
     ```css
     filter: invert(100%);
     ```
 
 - {{CSSxRef("filter-function/opacity", "opacity()")}}
-  - : Applique un niveau de transparence. Un coefficient de `0%` rendra l'image complètement transparente tandis qu'un coefficient de `100%` laissera l'image inchangée.
+  - : Applique un niveau de transparence. Un coefficient de `0%` rend l'image complètement transparente tandis qu'un coefficient de `100%` laisse l'image inchangée.
 
     ```css
     filter: opacity(50%);
     ```
 
 - {{CSSxRef("filter-function/saturate", "saturate()")}}
-  - : Sature l'image. Avec un coefficient de `0%`, l'image sera complètement désaturée. `100%` n'aura pas d'effet sur l'image. Les valeurs supérieures à `100%` augmenteront la saturation.
+  - : Sature l'image. Avec un coefficient de `0%`, l'image est complètement désaturée. `100%` n'a pas d'effet sur l'image. Les valeurs supérieures à `100%` augmentent la saturation.
 
     ```css
     filter: saturate(200%);
     ```
 
 - {{CSSxRef("filter-function/sepia", "sepia()")}}
-  - : Convertit l'image en sépia. Un coefficient de `100%` rendra l'image complètement sépia tandis qu'un coefficient `0%` n'aura pas d'effet sur l'image.
+  - : Convertit l'image en sépia. Un coefficient de `100%` rend l'image complètement sépia tandis qu'un coefficient `0%` n'a pas d'effet sur l'image.
 
     ```css
     filter: sepia(100%);

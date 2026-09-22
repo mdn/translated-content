@@ -3,10 +3,10 @@ title: Propriété CSS `border-inline`
 short-title: border-inline
 slug: Web/CSS/Reference/Properties/border-inline
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-inline`** permet de définir les valeurs individuelles des propriétés logiques de bordure en ligne à un seul endroit dans la feuille de style.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-inline`** permet de définir les valeurs individuelles des propriétés logiques de bordure en incise (<i lang="en">inline</i> en anglais) à un seul endroit dans la feuille de style.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: border-inline")}}
 
@@ -72,9 +72,9 @@ border-inline: unset;
 
 La propriété `border-inline` peut être utilisée avec une ou plusieurs de ces valeurs, quel que soit l'ordre.
 
-- `<'border-width'>`
+- {{CSSxRef("&lt;line-width&gt;")}}
   - : La largeur de la bordure. Voir {{CSSxRef("border-width")}}.
-- `<'border-style'>`
+- {{CSSxRef("&lt;line-style&gt;")}}
   - : Le style pour la ligne de la bordure. Voir {{CSSxRef("border-style")}}.
 - {{CSSxRef("&lt;color&gt;")}}
   - : La couleur de la bordure.

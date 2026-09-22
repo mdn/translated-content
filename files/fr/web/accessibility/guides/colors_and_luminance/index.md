@@ -3,7 +3,7 @@ title: "Accessibilité : Comprendre les couleurs et la luminance"
 short-title: Couleurs et luminance
 slug: Web/Accessibility/Guides/Colors_and_Luminance
 l10n:
-  sourceCommit: 7ba6358a0ff684cc67c60b76d6d972722bbf0d18
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 Comprendre la couleur, la luminance et la saturation est important pour la conception et la lisibilité pour toutes les personnes voyantes, mais c'est essentiel pour celles ayant une vision réduite, une déficience de la perception des couleurs ou des troubles neurologiques, cognitifs ou autres.
@@ -12,11 +12,11 @@ Les recommandations d'accessibilité définissent un [contraste de couleur](/fr/
 
 ## Vue d'ensemble
 
-Le choix des couleurs et leur utilisation est un aspect majeur de l'accessibilité. En surface, le sujet semble simple. Pourtant, il est complexe car la perception des couleurs dépend autant de la physiologie de l'œil et du traitement cérébral humain que de la lumière émise par un écran d'ordinateur.
+Le choix des couleurs et leur utilisation est un aspect majeur de l'accessibilité. En surface, le sujet semble simple. Pourtant, il est complexe, car la perception des couleurs dépend autant de la physiologie de l'œil et du traitement cérébral humain que de la lumière émise par un écran d'ordinateur.
 
 ### Environnement et perception
 
-L'environnement compte. La perception d'une couleur dans une pièce bien éclairée sera différente de la perception de cette même couleur sur le même écran d'ordinateur dans une pièce sombre. En matière d'accessibilité, certaines combinaisons de couleurs ont plus d'impact que d'autres. La taille de la police, le [style de police <sup>(angl.)</sup>](https://www.nngroup.com/articles/glanceable-fonts/) (certaines polices sont si fines ou fantaisistes qu'elles posent des problèmes d'accessibilité à elles seules), la couleur de fond, la taille de l'espace autour du texte, voire la densité de pixels, influent sur la façon dont la couleur est restituée à l'écran.
+L'environnement compte. La perception d'une couleur dans une pièce bien éclairée est différente de la perception de cette même couleur sur le même écran d'ordinateur dans une pièce sombre. En matière d'accessibilité, certaines combinaisons de couleurs ont plus d'impact que d'autres. La taille de la police, le [style de police <sup>(angl.)</sup>](https://www.nngroup.com/articles/glanceable-fonts/) (certaines polices sont si fines ou fantaisistes qu'elles posent des problèmes d'accessibilité à elles seules), la couleur de fond, la taille de l'espace autour du texte, voire la densité de pixels, influent sur la façon dont la couleur est restituée à l'écran.
 
 La distance de l'utilisateur·ice à l'écran, l'environnement ambiant, la santé de ses yeux, etc., influent aussi sur la façon dont la couleur est perçue. La perception de la couleur après qu'elle a atteint les yeux dépend aussi de la santé générale. Heureusement, il existe des [requêtes médias](/fr/docs/Web/CSS/Reference/At-rules/@media) qui permettent aux développeur·euse·s de proposer des styles adaptés aux préférences utilisateur·ice·s, notamment pour le [contraste](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) et le [schéma de couleurs](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme).
 
@@ -30,7 +30,7 @@ La luminance doit être déterminée avant de pouvoir calculer le contraste. Lor
 
 ### Terminologie
 
-La terminologie peut prêter à confusion car différents termes désignent parfois la même chose. «&nbsp;Luminance&nbsp;» et «&nbsp;saturation&nbsp;» sont particulièrement importants à bien distinguer. Par exemple, la «&nbsp;saturation&nbsp;» est parfois appelée «&nbsp;chroma&nbsp;». Dans d'autres contextes, «&nbsp;chroma&nbsp;» et «&nbsp;saturation&nbsp;» sont deux concepts différents. Le «&nbsp;L&nbsp;» de l'espace colorimétrique HSL est parfois appelé «&nbsp;luminosité&nbsp;», parfois «&nbsp;clarté&nbsp;». Même le nom des couleurs courantes peut prêter à débat&nbsp;: par exemple, le «&nbsp;rouge cramoisi&nbsp;» peut être décrit par la valeur hexadécimale `#990000` pour certain·e·s et `#DC143C` pour d'autres. Pour ce document, nous utiliserons la terminologie telle que définie sur la page CSS {{CSSxRef("&lt;named-color&gt;")}}.
+La terminologie peut prêter à confusion, car différents termes désignent parfois la même chose. «&nbsp;Luminance&nbsp;» et «&nbsp;saturation&nbsp;» sont particulièrement importants à bien distinguer. Par exemple, la «&nbsp;saturation&nbsp;» est parfois appelée «&nbsp;chroma&nbsp;». Dans d'autres contextes, «&nbsp;chroma&nbsp;» et «&nbsp;saturation&nbsp;» sont deux concepts différents. Le «&nbsp;L&nbsp;» de l'espace colorimétrique HSL est parfois appelé «&nbsp;luminosité&nbsp;», parfois «&nbsp;clarté&nbsp;». Même le nom des couleurs courantes peut prêter à débat&nbsp;: par exemple, le «&nbsp;rouge cramoisi&nbsp;» peut être décrit par la valeur hexadécimale `#990000` pour certain·e·s et `#DC143C` pour d'autres. Pour ce document, nous utilisons la terminologie telle que définie sur la page CSS {{CSSxRef("&lt;named-color&gt;")}}.
 
 Lorsque vous travaillez avec la couleur, il est important de savoir dans quel «&nbsp;espace colorimétrique&nbsp;» vous vous situez, car chaque espace correspond à un système de mesure différent.
 
@@ -42,7 +42,7 @@ Actuellement, l'espace {{Glossary("RGB", "RVB")}} domine dans le développement 
 
 La couleur peut être définie de nombreuses façons, comme le montre le [type de données `<color>`](/fr/docs/Web/CSS/Reference/Values/color_value), incluant RVB, RVB décimal, RVB pourcentage, HSL, HWB, LCH, Lab, et CMJN, entre autres.
 
-Pour le numérique, la plupart des technologies reposent historiquement sur l'espace colorimétrique RVB. Le modèle RVB est étendu pour inclure l'«&nbsp;alpha&nbsp;» — RGBA — afin de spécifier l'opacité d'une couleur. D'autres méthodes de mesure de la couleur utilisent d'autres espaces colorimétriques, désormais pris en charge par les écrans et navigateurs modernes. Cependant, les mesures de couleur dans l'espace RVB prédominent, notamment dans la production vidéo.
+Pour le numérique, la plupart des technologies reposent historiquement sur l'espace colorimétrique RVB. Le modèle RVB est étendu pour inclure l'«&nbsp;alpha&nbsp;» — RGBA — afin de définir l'opacité d'une couleur. D'autres méthodes de mesure de la couleur utilisent d'autres espaces colorimétriques, désormais pris en charge par les écrans et navigateurs modernes. Cependant, les mesures de couleur dans l'espace RVB prédominent, notamment dans la production vidéo.
 
 Des technologies comme [OpenGL](https://fr.wikipedia.org/wiki/OpenGL) et [Direct3D](https://fr.wikipedia.org/wiki/Direct3D) intègrent la courbe gamma sRGB, même si certains articles sur OpenGL font référence à l'utilisation de RGBA plutôt que sRGB. WebGL utilise généralement le format RGBA&nbsp;; voir un exemple d'utilisation dans [«&nbsp;Effacer avec des couleurs&nbsp;»](/fr/docs/Web/API/WebGL_API/By_example/Clearing_with_colors).
 
@@ -101,7 +101,7 @@ On peut définir les valeurs sRVB directement en pourcentage, 0% correspondant �
 
 Viennent ensuite les valeurs hexadécimales. L'hexadécimal est un système de numérotation en base 16, où l'entier 0-255 est représenté par deux chiffres allant de 0 à 15, en utilisant les chiffres 0-9 et les lettres a-f pour 10-15. Ainsi, `ff` = `255`, `00` = `0` et `d5` = `200`. Le symbole `#` précède la couleur pour indiquer qu'il s'agit d'une valeur hexadécimale.
 
-Si toutes les valeurs sont des paires de chiffres identiques, la valeur peut être représentée par un seul chiffre que le navigateur dupliquera. Ainsi, `f00` équivaut à `ff0000`. Si un quatrième groupe de chiffres est présent, cette valeur correspond au A de RGBA, le canal alpha qui définit la transparence en termes d'opacité de la couleur. Une valeur plus élevée signifie que la couleur est plus opaque et donc moins transparente. Dans les exemples ci‑dessus, la valeur alpha est `f`, `ff`, `1` et `100%` pour une opacité totale.
+Si toutes les valeurs sont des paires de chiffres identiques, la valeur peut être représentée par un seul chiffre que le navigateur duplique. Ainsi, `f00` équivaut à `ff0000`. Si un quatrième groupe de chiffres est présent, cette valeur correspond au A de RGBA, le canal alpha qui définit la transparence en termes d'opacité de la couleur. Une valeur plus élevée signifie que la couleur est plus opaque et donc moins transparente. Dans les exemples ci‑dessus, la valeur alpha est `f`, `ff`, `1` et `100%` pour une opacité totale.
 
 L'exemple montre aussi la syntaxe héritée pour [`rgb()` et `rgba()`](/fr/docs/Web/CSS/Reference/Values/color_value/rgb#exemples). La syntaxe héritée des fonctions de couleur est séparée par des virgules, avec une fonction distincte lorsque le canal alpha est inclus. Les nouvelles fonctions de couleur n'ont qu'une seule syntaxe avec des valeurs séparées par des espaces (plutôt que par des virgules), le canal alpha, s'il est présent, étant précédé d'une barre oblique. La syntaxe moderne permet de mélanger nombres et pourcentages et prend en charge le mot‑clé `none`&nbsp;; la syntaxe héritée séparée par des virgules ne le permet pas.
 
@@ -126,15 +126,15 @@ Comme indiqué précédemment, le [module de couleurs CSS](/fr/docs/Web/CSS/Guid
 En matière d'accessibilité, les normes et recommandations sont cependant rédigées majoritairement en se basant sur l'espace colorimétrique sRGB, en particulier pour les rapports de contraste de couleur.
 
 > [!NOTE]
-> Presque tous les systèmes utilisés aujourd'hui pour afficher du contenu Web supposent un encodage sRGB. À moins qu'il ne soit certain qu'un autre espace colorimétrique sera utilisé pour traiter et afficher le contenu, les auteur·ice·s devraient envisager d'utiliser l'espace colorimétrique sRGB. Si d'autres espaces colorimétriques sont utilisés, appliquez les principes des [rapports de contraste minimum <sup>(angl.)</sup>](https://webaim.org/articles/contrast/#sc143).
+> Presque tous les systèmes utilisés aujourd'hui pour afficher du contenu Web supposent un encodage sRGB. À moins qu'il ne soit certain qu'un autre espace colorimétrique est utilisé pour traiter et afficher le contenu, les auteur·ice·s doivent envisager d'utiliser l'espace colorimétrique sRGB. Si d'autres espaces colorimétriques sont utilisés, appliquez les principes des [rapports de contraste minimum <sup>(angl.)</sup>](https://webaim.org/articles/contrast/#sc143).
 
 ### Interroger les valeurs de couleur
 
-La méthode {{DOMxRef('Window.getComputedStyle()')}} retourne des valeurs en utilisant l'échelle décimale RVB ou via `color(srgb...)`. Par exemple, appeler `Window.getComputedStyle()` sur un élément HTML `<div>` avec `background-color: red` retourne `rgb(255, 0, 0)`. Cependant, lors de l'utilisation de [couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors) (par exemple `background-color: rgb(from blue 255 0 0)`), `Window.getComputedStyle()` peut retourner `color(srgb 1 0 0)`. Étant lié au matériel, `Window.getComputedStyle()` mesure la couleur en termes de RVB, pas selon la perception humaine.
+La méthode {{DOMxRef('Window.getComputedStyle()')}} retourne des valeurs en utilisant l'échelle décimale RVB ou avec `color(srgb...)`. Par exemple, appeler `Window.getComputedStyle()` sur un élément HTML `<div>` avec `background-color: red` retourne `rgb(255, 0, 0)`. Cependant, lors de l'utilisation de [couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors) (par exemple `background-color: rgb(from blue 255 0 0)`), `Window.getComputedStyle()` peut retourner `color(srgb 1 0 0)`. Étant lié au matériel, `Window.getComputedStyle()` mesure la couleur en termes de RVB, pas selon la perception humaine.
 
 ### Daltonisme rouge/vert
 
-La protanopie est une déficience de la vision des couleurs où l'œil ne possède pas de cônes sensibles au rouge&nbsp;; le sRGB peut toutefois être perçu via les cônes verts, de manière plus sombre que la vision normale. Les déficiences protan (déficit en rouge) et deutan (déficit en vert) rendent la distinction entre le rouge et le vert difficile.
+La protanopie est une déficience de la vision des couleurs où l'œil ne possède pas de cônes sensibles au rouge&nbsp;; le sRGB peut toutefois être perçu avec les cônes verts, de manière plus sombre que la vision normale. Les déficiences protan (déficit en rouge) et deutan (déficit en vert) rendent la distinction entre le rouge et le vert difficile.
 
 Les outils de développement aident à simuler ces différences directement dans le navigateur. Par exemple, l'Inspecteur d'accessibilité de Firefox permet de simuler la protanopie, la deutéranopie, la tritanopie, l'achromatopsie et la perte de contraste dans son panneau d'accessibilité.
 
@@ -150,7 +150,7 @@ La «&nbsp;forme&nbsp;» du texte importe aussi&nbsp;: les caractères fins sont
 
 ### Contraste et taille de police
 
-Les [recommandations de contraste WCAG](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan) définissent le texte «&nbsp;grand&nbsp;» comme étant un texte de `18pt` (environ `24px`) ou plus lorsque {{CSSxRef('font-weight')}} est `normal`, et `14pt` (environ `18,7px`) pour le texte en `gras`. Elles expliquent :
+Les [recommandations de contraste WCAG](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan) définissent le texte «&nbsp;grand&nbsp;» comme étant un texte de `18pt` (environ `24px`) ou plus lorsque {{CSSxRef('font-weight')}} est `normal`, et `14pt` (environ `18,7px`) pour le texte en `gras`. Elles expliquent&nbsp;:
 
 _Le texte plus grand et aux traits de caractères plus larges est plus facile à lire avec un contraste plus faible. Par conséquent, l'exigence de contraste pour les textes de grande taille est plus faible. Cela permet aux auteur·rice·s d'utiliser une gamme de couleurs plus large pour les grands textes, ce qui est utile pour la mise en page des pages, notamment les titres._
 
@@ -160,7 +160,7 @@ L'impression «&nbsp;normale&nbsp;» est généralement considérée entre 11,5p
 
 Un texte trop petit est difficile à lire, mais un texte trop grand l'est aussi. Pour des personnes ayant une vision 20/20, lorsque la taille du texte dépasse environ `96px`, la vitesse de lecture diminue. De plus, lorsqu'il existe un grand écart entre la plus petite et la plus grande taille de police sur une page, le texte le plus grand devient moins lisible si les utilisateur·ice·s agrandissent le texte le plus petit de la page, puisque la plupart des navigateurs appliquent un zoom à l'ensemble du texte.
 
-En règle générale, pour l'accessibilité, plus il y a de contraste, mieux c'est. Cela change toutefois dans le cas d'animations&nbsp;: une animation «&nbsp;moins risquée&nbsp;» signifie des images avec moins de contraste, pas davantage. Pour en savoir plus sur le contraste des couleurs dans les animations, voir [Three Flashes or Below Threshold Understanding SC 2.3.1 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html).
+En règle générale, pour l'accessibilité, plus il y a de contraste, mieux c'est. Cela change toutefois dans le cas d'animations&nbsp;: une animation «&nbsp;moins risquée&nbsp;» signifie des images avec moins de contraste, pas davantage. Pour en savoir plus sur le contraste des couleurs dans les animations, voir [Trois clignotements ou compréhension inférieure au seuil SC 2.3.1 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html).
 
 Notez également que les icônes doivent présenter un contraste suffisant pour être perçues. Voir la [technique WCAG 2.1 G207 <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Techniques/general/G207).
 
@@ -168,21 +168,21 @@ Notez également que les icônes doivent présenter un contraste suffisant pour 
 
 C'est la différence de luminance entre des couleurs qui nous permet de percevoir le contraste. La luminance relative est définie dans les WCAG comme «&nbsp;la luminosité relative de n'importe quel point dans un espace colorimétrique, normalisée à 0 pour le noir le plus foncé et à 1 pour le blanc le plus clair&nbsp;».
 
-Cette définition est exacte, mais elle peut prêter à confusion lorsqu'on la rapporte à l'espace colorimétrique RVB, dont les composantes sont des entiers entre 0 et 255. Le blanc possède une luminance relative de 100 %, le noir de 0 % (selon la plupart des sources). En appliquant la normalisation du W3C ci‑dessus, le blanc (normalisé à 1) correspondrait à `rgb(255 255 255)` et le noir (normalisé à 0) à `rgb(0 0 0)`. On peut également écrire le blanc et le noir comme `rgb(100% 100% 100%)` et `rgb(0% 0% 0%)`, ce qui peut être plus intuitif.
+Cette définition est exacte, mais elle peut prêter à confusion lorsqu'on la rapporte à l'espace colorimétrique RVB, dont les composantes sont des entiers entre 0 et 255. Le blanc possède une luminance relative de 100 %, le noir de 0 % (selon la plupart des sources). En appliquant la normalisation du W3C ci‑dessus, le blanc (normalisé à 1) correspond à `rgb(255 255 255)` et le noir (normalisé à 0) à `rgb(0 0 0)`. On peut également écrire le blanc et le noir comme `rgb(100% 100% 100%)` et `rgb(0% 0% 0%)`, ce qui peut être plus intuitif.
 
-D'où viennent donc ces valeurs de 0 à 255&nbsp;? Historiquement, les moteurs graphiques stockaient chaque canal de couleur sur un octet, ce qui donne une plage d'entiers de 0 à 255.
+D'où viennent donc ces valeurs de 0 à 255&nbsp;? Historiquement, les moteurs graphiques stockent chaque canal de couleur sur un octet, ce qui donne une plage d'entiers de 0 à 255.
 
 La luminance des couleurs primaires diffère selon la couleur. Par exemple, le jaune a une luminance plus élevée que le bleu. Cela a été conçu ainsi «&nbsp;pour obtenir l'alignement du blanc de l'écran&nbsp;», d'après le document de la NASA, [«&nbsp;Luminance Contrast in Color Graphics&nbsp; <sup>(angl.)</sup>»](https://web.archive.org/web/20250216024807/https://colorusage.arc.nasa.gov/design_lum_1.php)
 
 Un rapport de contraste entre deux couleurs n'a pas de sens sans tenir compte de leur composante de luminance&nbsp;: une fois la luminance déterminée, on peut calculer le rapport de contraste des couleurs.
 
-La perception humaine accorde plus d'importance à une différence de luminance qu'à une différence de teinte. C'est essentiel, car le contraste de luminance permet de concevoir du contenu que même les personnes daltoniennes peuvent distinguer. En tenant compte de cela, vous pouvez jouer sur la luminance&nbsp;: des couleurs difficiles à percevoir en raison d'une faible luminance peuvent devenir plus lisibles si vous les placez sur un fond présentant une luminance contrastée. Une étude intéressante de la NASA sur la couleur bleue, par exemple, a noté que cette couleur, qui présente une faible luminance, peut devenir lisible si _des précautions sont prises pour obtenir un contraste de luminance adéquat_ (Extrait de l'article, [Designing with blue <sup>(angl.)</sup>](https://web.archive.org/web/20250216024807/https://colorusage.arc.nasa.gov/blue_2.php))
+La perception humaine accorde plus d'importance à une différence de luminance qu'à une différence de teinte. C'est essentiel, car le contraste de luminance permet de concevoir du contenu que même les personnes daltoniennes peuvent distinguer. En tenant compte de cela, vous pouvez jouer sur la luminance&nbsp;: des couleurs difficiles à percevoir en raison d'une faible luminance peuvent devenir plus lisibles si vous les placez sur un fond présentant une luminance contrastée. Une étude intéressante de la NASA sur la couleur bleue, par exemple, a noté que cette couleur, qui présente une faible luminance, peut devenir lisible si _des précautions sont prises pour obtenir un contraste de luminance adéquat_ (Extrait de l'article, [Créer avec le bleu <sup>(angl.)</sup>](https://web.archive.org/web/20250216024807/https://colorusage.arc.nasa.gov/blue_2.php))
 
 Les calculs de la luminance relative ne sont pas des opérations anodines. Heureusement, il existe des [vérificateurs de contraste et de luminance en ligne <sup>(angl.)</sup>](https://www.siegemedia.com/contrast-ratio) et des instructions expliquant comment [calculer la luminance relative <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#dfn-relative-luminance).
 
 ## Perception des couleurs
 
-La couleur est notre perception de la bande étroite de lumière visible, du rouge au jaune et vert, puis au bleu. Notre sensibilité à ces différentes teintes n'est pas la même. Les cellules sensibles à la lumière dans nos [yeux <sup>(angl.)</sup>](https://www.verywellhealth.com/eye-cones-5088699), appelées cônes, sont spécialisées pour percevoir certaines couleurs plus que d'autres. Environ 65% des cônes sont _principalement_ sensibles au jaune/vert, tout en répondant aussi au rouge (nous les appellerons «&nbsp;cônes rouges&nbsp;»). 30% sont sensibles au vert, et seulement [5% sont sensibles au bleu <sup>(angl.)</sup>](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144891#sec001). Bien qu'il y ait beaucoup moins de cônes sensibles au bleu que des cônes rouges ou verts, ces cônes bleus sont très sensibles, ce qui compense partiellement leur nombre réduit.
+La couleur est notre perception de la bande étroite de lumière visible, du rouge au jaune et vert, puis au bleu. Notre sensibilité à ces différentes teintes n'est pas la même. Les cellules sensibles à la lumière dans nos [yeux <sup>(angl.)</sup>](https://www.verywellhealth.com/eye-cones-5088699), appelées cônes, sont spécialisées pour percevoir certaines couleurs plus que d'autres. Environ 65% des cônes sont _principalement_ sensibles au jaune/vert, tout en répondant aussi au rouge (nous les appelons «&nbsp;cônes rouges&nbsp;»). 30% sont sensibles au vert, et seulement [5% sont sensibles au bleu <sup>(angl.)</sup>](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144891#sec001). Bien qu'il y ait beaucoup moins de cônes sensibles au bleu que des cônes rouges ou verts, ces cônes bleus sont très sensibles, ce qui compense partiellement leur nombre réduit.
 
 Le bleu pur et profond est perçu différemment des autres couleurs, car les cônes sensibles au bleu ne contribuent pas à la luminance et ils sont bien moins nombreux que les cônes rouges ou verts.
 
@@ -210,7 +210,7 @@ En résumé, la couleur tient autant à la physiologie humaine et au traitement 
 
 Les transitions entre zones claires et zones sombres ne sont pas perçues de la même façon par nos yeux. Cela tient à la physiologie de l'œil. Cela influe sur la capacité d'un·e utilisateur·ice à lire du texte sur un fond. Il existe au moins deux types d'adaptation&nbsp;: l'adaptation locale et l'adaptation à l'environnement ambiant.
 
-L'adaptation locale se produit directement sur la «&nbsp;page&nbsp;» regardée. Par exemple, si vous avez du texte bleu à l'intérieur d'une zone grise «&nbsp;mise en évidence&nbsp;», vos yeux percevront ce même texte bleu différemment selon qu'il se trouve dans un élément HTML {{HTMLElement("div")}} noir ou blanc. Ceci s'appelle l'adaptation _locale_. Cette différence dans la perception du texte intervient même si l'éclairage ambiant de la pièce ne change pas.
+L'adaptation locale se produit directement sur la «&nbsp;page&nbsp;» regardée. Par exemple, si vous avez du texte bleu à l'intérieur d'une zone grise «&nbsp;mise en évidence&nbsp;», vos yeux perçoivent ce même texte bleu différemment selon qu'il se trouve dans un élément HTML {{HTMLElement("div")}} noir ou blanc. Ceci s'appelle l'adaptation _locale_. Cette différence dans la perception du texte intervient même si l'éclairage ambiant de la pièce ne change pas.
 
 Les développeur·euse·s web qui cherchent à améliorer la lisibilité du texte sur un fond peuvent tirer parti des principes d'adaptation locale.
 
@@ -228,7 +228,7 @@ La saturation est parfois décrite comme la «&nbsp;pureté&nbsp;» ou l'«&nbsp
 
 Sur un écran, les couleurs saturées correspondent à des longueurs d'onde particulières. La définition de la saturation varie selon l'espace colorimétrique, mais la saturation se mesure facilement. L'important est de connaître l'espace colorimétrique utilisé et d'être prêt·e à le convertir si nécessaire.
 
-Les espaces colorimétriques les plus souvent considérés pour la photosensibilité sont RVB, HSL et HSV (aussi appelé HSB). L'espace HSV, qui signifie _hue_, _saturation_ et _value_, et le synonyme HSB, qui signifie _hue_, _saturation_ et _brightness_, sont représentés en CSS par {{CSSxRef("color_value/hwb", "hwb()")}} pour _hue_, _whiteness_ et _blackness_.
+Les espaces colorimétriques les plus souvent considérés pour la photosensibilité sont RVB, HSL et HSV (aussi appelé HSB). L'espace HSV, qui signifie _teinte_ (<i lang="en">hue</i> en anglais), _saturation_ et _valeur_, et le synonyme HSB, qui signifie _teinte_, _saturation_ et _éclat_ (<i lang="en">brightness</i> en anglais), sont représentés en CSS par {{CSSxRef("color_value/hwb", "hwb()")}} pour _teinte_, _blancheur_ (<i lang="en">whiteness</i> en anglais) et _noirceur_ (<i lang="en">blackness</i> en anglais).
 
 Il est important de savoir dans quel espace colorimétrique vous travaillez. Par exemple, les couleurs saturées ont une _luminosité_ (<i lang="en">lightness</i>) de `0.5` en HSL, tandis qu'en HWB elles ont une valeur `1`. La saturation dans l'espace RVB est généralement indiquée par une valeur RVB de `255` ou `100%` pour la couleur considérée. Par exemple, un rouge saturé de valeur hexadécimale `#ff0000` correspond à `rgb(255 0 0)` et à `hsl(0 100% 50%)`. Un autre rouge saturé de valeur hexadécimale `#ff3300` correspond à `rgb(255 51 0)` et à `hsl(12 100% 50%)`. Ce sont tous deux des rouges «&nbsp;saturés&nbsp;». Ils représentent deux «&nbsp;teintes&nbsp;» différentes mais sont tous deux considérés comme des couleurs saturées.
 
@@ -247,15 +247,15 @@ Certaine(s) couleur(s) sont plus susceptibles de [provoquer des crises épilepti
 Certaines combinaisons de couleurs peuvent poser de sérieux problèmes sur un écran d'ordinateur ou un appareil mobile, et certaines combinaisons peuvent gêner certaines déficiences. La combinaison rouge/bleu en est un exemple.
 
 - Ne vous fiez jamais uniquement à la teinte pour différencier des détails. Un contraste de luminance adéquat est nécessaire.
-- Le canal vert d'un écran représente la majeure partie de la luminance (<i lang="en">light</i>), il contribuera donc généralement aux couleurs les plus claires.
+- Le canal vert d'un écran représente la majeure partie de la luminance (<i lang="en">light</i>), il contribue donc généralement aux couleurs les plus claires.
 
 ### Travailler avec le bleu
 
-Certaines personnes ne peuvent pas différencier toutes les couleurs. Certaines couleurs, comme le bleu pur, présentent une faible luminance. Les couleurs à faible luminance devraient être la couleur la plus sombre lorsqu'elles sont mises en contraste. Le bleu offre également une très faible résolution visuelle&nbsp;: il y a beaucoup moins de cônes sensibles au bleu, qui sont dispersés dans la vision périphérique et peu présents dans la vision centrale. L'œil humain perçoit le bleu avec une résolution inférieure à celle du vert et du rouge.
+Certaines personnes ne peuvent pas différencier toutes les couleurs. Certaines couleurs, comme le bleu pur, présentent une faible luminance. Les couleurs à faible luminance doivent être la couleur la plus sombre lorsqu'elles sont mises en contraste. Le bleu offre également une très faible résolution visuelle&nbsp;: il y a beaucoup moins de cônes sensibles au bleu, qui sont dispersés dans la vision périphérique et peu présents dans la vision centrale. L'œil humain perçoit le bleu avec une résolution inférieure à celle du vert et du rouge.
 
 Cela conduit à quelques recommandations pour l'utilisation du bleu&nbsp;:
 
-- Les bleus purs devraient en général être la plus sombre des deux couleurs.
+- Les bleus purs doivent en général être la plus sombre des deux couleurs.
 - Lorsque le bleu est la couleur la plus claire des deux, ajoutez du vert pour augmenter le contraste et améliorer la lisibilité.
 
 La nature de la lumière bleue provoque une mise au point à un emplacement différent sur la rétine par rapport au rouge&nbsp;; ainsi, un rouge pur et un bleu pur immédiatement adjacents peuvent «&nbsp;scintiller&nbsp;» lorsqu'ils sont côte à côte.
@@ -266,7 +266,7 @@ Toutes les teintes (<i lang="en">hue</i>) ne sont pas traitées de la même faç
 
 ### Rouge saturé
 
-Le «&nbsp;rouge saturé&nbsp;» est un cas particulier et dangereux, soumis à des tests spécifiques.
+Le «&nbsp;rouge saturé&nbsp;» est un cas particulier et dangereux, envoie à des tests spécifiques.
 
 Le concept de saturation des couleurs est difficile à appréhender si l'on ne regarde que des nombres et de la terminologie&nbsp;: jetez un œil à l'image ci‑dessous pour illustrer la saturation d'une couleur&nbsp;:
 
@@ -291,7 +291,7 @@ Des clignotements continus alternant entre des images plus claires et plus sombr
 [Harding et al. 2005 <sup>(angl.)</sup>](https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1528-1167.2005.31305.x) présentent plusieurs recommandations fondamentales&nbsp;:
 
 1. Un, deux ou trois clignotements par seconde sont acceptables, mais une séquence de clignotements n'est pas recommandée si plus de trois clignotements surviennent en une seconde.
-2. Lors de l'affichage de bandes claires et foncées, le motif ne devrait pas comporter plus de cinq paires clair‑foncé si les bandes changent de direction, oscillent, clignotent ou inversent leur contraste, ou huit paires clair‑foncé si le motif est immobile ou dérive de façon continue et régulière dans une seule direction.
+2. Lors de l'affichage de bandes claires et foncées, le motif ne doit pas comporter plus de cinq paires clair‑foncé si les bandes changent de direction, oscillent, clignotent ou inversent leur contraste, ou huit paires clair‑foncé si le motif est immobile ou dérive de façon continue et régulière dans une seule direction.
 
 Pour d'autres recommandations, voir l'article [«&nbsp;Photic- and Pattern-induced Seizures: Expert Consensus of the Epilepsy Foundation of America&nbsp;» <sup>(angl.)</sup>](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1528-1167.2005.31405.x).
 
@@ -303,7 +303,7 @@ La couleur — en particulier la teinte et la saturation — peut influencer not
 
 - **La couleur peut dépendre de la culture&nbsp;:** [Étude interculturelle sur les significations affectives de la couleur <sup>(angl.)</sup>](https://journals.sagepub.com/doi/10.1177/002202217300400201)
 - **La couleur affecte nos émotions&nbsp;:** [Couleur et émotion&nbsp;: effets de la teinte, de la saturation et de la luminosité <sup>(angl.)</sup>](https://pubmed.ncbi.nlm.nih.gov/28612080/)
-- **Des contrastes plus élevés peuvent également avoir un effet positif sur nos émotions&nbsp;:** [Variation émotionnelle en contrôlant le contraste des contenus visuels via une reconnaissance émotionnelle profonde basée sur EEG <sup>(angl.)</sup>](https://pubmed.ncbi.nlm.nih.gov/32823741/)
+- **Des contrastes plus élevés peuvent également avoir un effet positif sur nos émotions&nbsp;:** [Variation émotionnelle en contrôlant le contraste des contenus visuels avec une reconnaissance émotionnelle profonde basée sur EEG <sup>(angl.)</sup>](https://pubmed.ncbi.nlm.nih.gov/32823741/)
 - **Certaines couleurs peuvent affecter notre perception du temps&nbsp;:** [Couleur et perception du temps&nbsp;: preuve d'une surestimation temporelle des stimuli bleus <sup>(angl.)</sup>](https://pubmed.ncbi.nlm.nih.gov/29374198/)
 - **Le bleu a aussi un effet significatif sur la luminosité et l'éblouissement&nbsp;:** [Bleu, éblouissement et luminosité <sup>(angl.)</sup>](https://pubmed.ncbi.nlm.nih.gov/31288107/)
 - **Des lunettes teintées en rouge peuvent augmenter le sentiment de bonheur ou de joie&nbsp;:** [L'effet des lunettes teintées en rose sur le traitement affectif visuel <sup>(angl.)</sup>](https://pubmed.ncbi.nlm.nih.gov/31244627/)

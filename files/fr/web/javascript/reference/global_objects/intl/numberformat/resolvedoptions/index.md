@@ -124,4 +124,4 @@ console.log(usedOptions.useGrouping); // auto
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.NumberFormat")}}
+- L'objet natif {{JSxRef("Intl.NumberFormat")}}

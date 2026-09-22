@@ -3,7 +3,7 @@ title: Propriété CSS `text-size-adjust`
 short-title: text-size-adjust
 slug: Web/CSS/Reference/Properties/text-size-adjust
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 {{SeeCompatTable}}
@@ -32,16 +32,16 @@ text-size-adjust: revert-layer;
 text-size-adjust: unset;
 ```
 
-La propriété `text-size-adjust` est définie comme `none`, `auto` ou un `<percentage>`.
-
 ### Valeurs
+
+Cette propriété est définie par l'une des valeurs suivantes&nbsp;:
 
 - `none`
   - : Désactive l'algorithme d'agrandissement du texte du navigateur.
 - `auto`
   - : Active l'algorithme d'agrandissement du texte du navigateur. Cette valeur est utilisée pour annuler une valeur `none` précédemment définie avec CSS.
 - `<percentage>`
-  - : Active l'algorithme d'agrandissement du texte du navigateur, en spécifiant un pourcentage avec lequel augmenter la taille de la police.
+  - : Active l'algorithme d'agrandissement du texte du navigateur, en définissant un pourcentage avec lequel augmenter la taille de la police.
 
 ## Définition formelle
 
@@ -55,7 +55,7 @@ La propriété `text-size-adjust` est définie comme `none`, `auto` ou un `<perc
 
 ### Utilisation simple de la désactivation
 
-Comme indiqué ci-dessus, sur un site correctement conçu pour être réactif, le comportement `text-size-adjust` n'est pas nécessaire, les développeurs peuvent donc choisir de le désactiver en spécifiant une valeur de none&nbsp;:
+Comme indiqué ci-dessus, sur un site correctement conçu pour être réactif, le comportement `text-size-adjust` n'est pas nécessaire, les développeur·euse·s peuvent donc choisir de le désactiver en définissant une valeur de none&nbsp;:
 
 ```css
 p {

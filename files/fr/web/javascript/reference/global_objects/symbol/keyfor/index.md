@@ -3,8 +3,6 @@ title: Symbol.keyFor()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 ---
 
-{{JSRef}}
-
 La méthode **`Symbol.keyFor(sym)`** permet de récupérer la clé d'un symbole donné qui est partagé via le registre global des symboles.
 
 {{InteractiveExample("JavaScript Demo: Symbol.keyFor()")}}

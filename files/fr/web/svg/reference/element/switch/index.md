@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/switch
 original_slug: Web/SVG/Element/switch
 ---
 
-{{SVGRef}}
-
 L'élément `switch` évalue les attributs {{ SVGAttr("requiredFeatures") }}, {{ SVGAttr("requiredExtensions") }} et {{ SVGAttr("systemLanguage") }} de ses éléments enfants directs, dans l'ordre, puis affiche le premier élément pour lequel les attributs renvoient `true`. Tous les autres seront ignorés et donc non affichés. Si l'élément enfant est un élément conteneur tel que {{ SVGElement("g") }}, alors l'intégralité du contenu de cet enfant est soit traité/rendu soit ignoré/non rendu.
 
 Notez que la valeur des propriétés `display` et `visibility` n'ont aucun effet sur le traitement du `switch`. En particulier, appliquer une propriété `display` à `none` sur l'élément enfant d'un `switch` n'a aucun effet sur le résultat du test `true/false` associé au traitement des éléments par le `switch`.

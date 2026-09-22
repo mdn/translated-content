@@ -1,14 +1,15 @@
 ---
-title: border-right-style
+title: CSS `border-right-style` プロパティ
+short-title: border-right-style
 slug: Web/CSS/Reference/Properties/border-right-style
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`border-right-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の境界線 ({{cssxref("border")}}) のスタイルを設定します。
 
 > [!NOTE]
-> 仕様書では、異なるスタイルの境界線を角でどの様に接続するかを定義していません。
+> 仕様書では、異なるスタイルの境界線を角でどのように接続するかを定義していません。
 
 {{InteractiveExample("CSS デモ: border-right-style")}}
 
@@ -98,7 +99,7 @@ border-right-style: unset;
 
 #### HTML
 
-```html live-sample___border_styles
+```html
 <table>
   <tbody>
     <tr>
@@ -123,7 +124,7 @@ border-right-style: unset;
 
 #### CSS
 
-```css live-sample___border_styles
+```css
 /* 表の外見を定義 */
 table {
   border-width: 2px;
@@ -169,7 +170,7 @@ td {
 
 #### 結果
 
-{{ EmbedLiveSample('Border_styles') }}
+{{ EmbedLiveSample('境界のスタイル') }}
 
 ## 仕様書
 
@@ -181,5 +182,5 @@ td {
 
 ## 関連情報
 
-- その他のスタイルに関する境界のプロパティ: {{Cssxref("border-bottom-style")}}, {{Cssxref("border-left-style")}}, {{Cssxref("border-top-style")}}, {{Cssxref("border-style")}}
-- その他の右側の境界に関するプロパティ: {{Cssxref("border-right")}}, {{Cssxref("border-right-color")}}, {{Cssxref("border-right-width")}}
+- その他のスタイルに関する境界のプロパティ: {{Cssxref("border-bottom-style")}}、{{Cssxref("border-left-style")}}、{{Cssxref("border-top-style")}}、{{Cssxref("border-style")}}
+- その他の右側の境界に関するプロパティ: {{Cssxref("border-right")}}、{{Cssxref("border-right-color")}}、{{Cssxref("border-right-width")}}

@@ -9,11 +9,11 @@ l10n:
 La valeur **`importmap`** de l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/script/type) pour l'élément HTML {{HTMLElement("script")}} indique que le contenu de l'élément contient un tableau associatif d'import (<i lang="en">import map</i>).
 
 Un tableau associatif d'import est un objet JSON qui permet aux développeur·euse·s de contrôler la façon dont le navigateur résout les spécificateurs de modules lors de l'import [des modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules).
-Elle fournit une correspondance entre le texte utilisé comme spécificateur de module dans [une instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import) ou [un opérateur `import()`](/fr/docs/Web/JavaScript/Reference/Operators/import) et la valeur correspondante qui remplacera le texte lors de la résolution du spécificateur.
+Elle fournit une correspondance entre le texte utilisé comme spécificateur de module dans [une instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import) ou [un opérateur `import()`](/fr/docs/Web/JavaScript/Reference/Operators/import) et la valeur correspondante qui remplace le texte lors de la résolution du spécificateur.
 L'objet JSON doit respecter [le format de représentation JSON des tableaux associatifs d'import](#représentation_json_des_tableaux_associatifs_dimport).
 
-Un tableau associatif d'import est utilisée pour la résolution des spécificateurs de module, tant pour les imports statiques que pour les imports dynamiques. Elle doit donc être déclarée et traitée avant tout élément `<script>` important des modules utilisant des spécificateurs présents dans le tableau.
-On notera que la tableau associatif d'import s'applique uniquement aux spécificateurs de module présents dans [l'instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import) ou [l'opérateur `import()`](/fr/docs/Web/JavaScript/Reference/Operators/import)&nbsp;; elle ne s'applique pas au chemin fourni via l'attribut `src` d'un élément `<script>`.
+Un tableau associatif d'import est utilisé pour la résolution des spécificateurs de module, tant pour les imports statiques que pour les imports dynamiques. Il doit donc être déclaré et traité avant tout élément `<script>` important des modules utilisant des spécificateurs présents dans le tableau.
+Notez que le tableau associatif d'import s'applique uniquement aux spécificateurs de module présents dans [l'instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import) ou [l'opérateur `import()`](/fr/docs/Web/JavaScript/Reference/Operators/import)&nbsp;; il ne s'applique pas au chemin fourni avec l'attribut `src` d'un élément `<script>`.
 
 Pour plus d'informations, voir [la section sur l'import de modules à l'aide des tableaux associatifs d'import](/fr/docs/Web/JavaScript/Guide/Modules#importer_des_modules_avec_des_tableaux_associatifs_dimport) dans le guide sur les modules JavaScript.
 
@@ -37,7 +37,7 @@ Les navigateurs génèrent des avertissements dans la console au cas où le tabl
 ## Description
 
 Lorsqu'on importe [un module JavaScript](/fr/docs/Web/JavaScript/Guide/Modules), [l'instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import) et [l'opérateur `import()`](/fr/docs/Web/JavaScript/Reference/Operators/import) ont tous les deux un spécificateur de module qui indique le module à importer.
-Un navigateur devra résoudre ce spécificateur en une URL absolue afin d'importer le module.
+Un navigateur doit résoudre ce spécificateur en une URL absolue afin d'importer le module.
 
 Par exemple, si on prend les instructions suivantes, on a un spécificateur de module `"./modules/formes/carre.js"`, qui est un chemin relatif à l'URL du document et un second spécificateur de module `"https://example.com/formes/cercle.js"`, qui est une URL absolue.
 
@@ -46,7 +46,7 @@ import { nom as nomCercle } from "https://example.com/formes/cercle.js";
 import { nom as nomCarre, dessiner } from "./modules/formes/carre.js";
 ```
 
-Les tableaux associatifs d'import permettent d'indiquer (presque) n'importe quel texte comme spécificateur de module, le tableau fournit une correspondance qui remplacera le texte lors de la résolution du spécificateur.
+Les tableaux associatifs d'import permettent d'indiquer (presque) n'importe quel texte comme spécificateur de module, le tableau fournit une correspondance qui remplace le texte lors de la résolution du spécificateur.
 
 ### Noms simples
 
@@ -86,7 +86,7 @@ Il faut noter que dans ce cas, la propriété et le chemin correspondant doivent
 </script>
 ```
 
-On pourrait alors importer le module `cercle` de cette façon.
+On peut alors importer le module `cercle` de cette façon.
 
 ```js
 import { nom as nomCercle } from "formes/cercle.js";
@@ -110,16 +110,16 @@ Elles peuvent contenir ou finir des séparateurs de chemin, être des URL absolu
 
 Si plusieurs clés de spécificateur d'un tableau associatif peuvent correspondre, c'est la clé la plus spécifique qui est sélectionnée (celle avec la plus longue valeur).
 
-Un spécificateur de module `./toto/../js/app.js` sera converti en `./js/app.js` avant la recherche de correspondance.
-Aussi, cela signifie que la clé `./js/app.js` correspondrait au spécificateur de module, même si ce ne sont pas exactement les mêmes.
+Un spécificateur de module `./toto/../js/app.js` est converti en `./js/app.js` avant la recherche de correspondance.
+Aussi, cela signifie que la clé `./js/app.js` correspond au spécificateur de module, même si ce ne sont pas exactement les mêmes.
 
 ### Correspondances à portées limitées
 
-La clé `scopes` permet de fournir des correspondances qui seront uniquement utilisées si le module qui importe contient un chemin donné.
-Si l'URL du script qui charge le module correspond au chemin indiqué, c'est la correspondance associée à cette portée qui sera utilisée.
+La clé `scopes` permet de fournir des correspondances qui sont uniquement utilisées si le module qui importe contient un chemin donné.
+Si l'URL du script qui charge le module correspond au chemin indiqué, c'est la correspondance associée à cette portée qui est utilisée.
 Cela permet d'avoir différentes versions du module qui peuvent être utilisées selon le code qui réalise l'import.
 
-Dans l'exemple qui suit, le tableau associatif utilisera uniquement la correspondance de la portée si l'URL du module qui fait le chargement contient le chemin&nbsp;: `"/modules/formesspecifiques/"`.
+Dans l'exemple qui suit, le tableau associatif utilise uniquement la correspondance de la portée si l'URL du module qui fait le chargement contient le chemin&nbsp;: `"/modules/formesspecifiques/"`.
 
 ```html
 <script type="importmap">
@@ -137,18 +137,18 @@ Dans l'exemple qui suit, le tableau associatif utilisera uniquement la correspon
 ```
 
 Si plusieurs portées correspondent à l'URL du module, c'est la portée avec le chemin le plus spécifique qui est utilisée (autrement dit, celle pour laquelle la clé a le nom le plus long).
-Si cette portée ne contient aucun spécificateur correspondant à l'import, il passe à la prochaine portée la plus spécifique, et ainsi de suite. Le navigateur pourra finir par utiliser la correspondance de la clé `imports` si le spécificateur n'est présent dans aucune portée.
+Si cette portée ne contient aucun spécificateur correspondant à l'import, il passe à la prochaine portée la plus spécifique, et ainsi de suite. Le navigateur peut finir par utiliser la correspondance de la clé `imports` si le spécificateur n'est présent dans aucune portée.
 
 ### Tableau associatif des métadonnées d'intégrité
 
 Vous pouvez utiliser la clé `integrity` pour fournir une correspondance pour les [métadonnées d'intégrité](/fr/docs/Web/Security/Defenses/Subresource_Integrity#utilisation_de_subresource_integrity) des modules.
 Cela permet de garantir l'intégrité des modules importés dynamiquement ou statiquement.
-La clé `integrity` permet aussi de fournir une solution de repli pour les modules principaux ou préchargés, au cas où ils n'incluraient pas déjà un attribut `integrity`.
+La clé `integrity` permet aussi de fournir une solution de repli pour les modules principaux ou préchargés, au cas où ils n'incluent pas déjà un attribut `integrity`.
 
 Les clés du tableau associatif représentent les URL des modules, qui peuvent être absolues ou relatives (commençant par `/`, `./` ou `../`).
 Les valeurs du tableau associatif représentent les métadonnées d'intégrité, identiques à celles utilisées dans les valeurs de l'attribut [`integrity`](/fr/docs/Web/HTML/Reference/Elements/script#integrity).
 
-Par exemple, le tableau associatif ci-dessous définit des métadonnées d'intégrité pour le module `square.js` (directement) et pour son spécificateur simple (de façon transitive, via la clé `imports`).
+Par exemple, le tableau associatif ci-dessous définit des métadonnées d'intégrité pour le module `square.js` (directement) et pour son spécificateur simple (de façon transitive, avec la clé `imports`).
 
 ```html
 <script type="importmap">
@@ -214,7 +214,7 @@ Celles-ci sont équivalentes au tableau associatif d'import unique suivant&nbsp;
 </script>
 ```
 
-Les spécificateurs de module de chaque tableau associatif enregistrée qui étaient déjà résolus auparavant sont ignorés. Les résolutions ultérieures de ces spécificateurs donneront les mêmes résultats que leurs résolutions précédentes.
+Les spécificateurs de module de chaque tableau associatif enregistré qui sont déjà résolus auparavant sont ignorés. Les résolutions ultérieures de ces spécificateurs donnent les mêmes résultats que leurs résolutions précédentes.
 
 Par exemple, si le spécificateur de module `/app/helper.js` a déjà été résolu, le nouveau tableau associatif d'import suivant&nbsp;:
 
@@ -229,7 +229,7 @@ Par exemple, si le spécificateur de module `/app/helper.js` a déjà été rés
 </script>
 ```
 
-Sera équivalente à&nbsp;:
+est équivalente à&nbsp;:
 
 ```html
 <script type="importmap">
@@ -243,7 +243,7 @@ Sera équivalente à&nbsp;:
 
 La règle `/app/helper.js` a été ignorée et n'a pas été intégrée au tableau associatif.
 
-De même, les spécificateurs de module d'un tableau associatif enregistré qui étaient déjà associés à des URL dans le tableau associatif global sont ignorés&nbsp;; leur correspondance précédente prévaut.
+De même, les spécificateurs de module d'un tableau associatif enregistré qui sont déjà associés à des URL dans le tableau associatif global sont ignorés&nbsp;; leur correspondance précédente prévaut.
 
 Par exemple, les deux tableaux associatifs d'import suivants&nbsp;:
 
@@ -284,7 +284,7 @@ Sont équivalentes au tableau associatif d'import unique suivant&nbsp;:
 La règle `/app/helper/` a été ignorée dans le second tableau associatif.
 
 > [!NOTE]
-> Dans les navigateurs qui ne prennent pas en charge cette fonctionnalité (voir les [données de compatibilité](#compatibilité_des_navigateurs)), un [polyfill](https://github.com/guybedford/es-module-shims) peut être utilisé pour éviter les problèmes liés à la résolution des modules.
+> Dans les navigateurs qui ne prennent pas en charge cette fonctionnalité (voir les [données de compatibilité](#compatibilité_des_navigateurs)), une [prothèse d'émulation](https://github.com/guybedford/es-module-shims) peut être utilisée pour éviter les problèmes liés à la résolution des modules.
 
 ## Représentation JSON des tableaux associatifs d'import
 
@@ -293,17 +293,17 @@ Ce qui suit est une définition «&nbsp;formelle&nbsp;» de la représentation J
 Le tableau associatif d'import doit être un objet JSON valide qui définit au plus deux clés optionnelles&nbsp;: `imports` et `scopes`. Les valeurs de ces clés doivent être un objet, potentiellement vide.
 
 - `imports` {{Optional_Inline}}
-  - : La valeur doit être [un tableau associatif de spécificateur de module](#tableau_associatif_des_métadonnées_dintégrité), qui fournit les correspondances entre les spécificateurs utilisés dans les instructions `import` ou les opérateurs `import()`, et le texte qui les remplacera lors de leur résolution.
+  - : La valeur doit être [un tableau associatif de spécificateur de module](#tableau_associatif_des_métadonnées_dintégrité), qui fournit les correspondances entre les spécificateurs utilisés dans les instructions `import` ou les opérateurs `import()`, et le texte qui les remplace lors de leur résolution.
 
-    Il s'agit du tableau associatif de correspondance qui est utilisé par défaut si les spécificateurs de module ne sont pas présents (via leur nom ou via leur chemin) dans les portées décrites via l'attribut `scopes`.
+    Il s'agit du tableau associatif de correspondance qui est utilisé par défaut si les spécificateurs de module ne sont pas présents (avec leur nom ou avec leur chemin) dans les portées décrites avec l'attribut `scopes`.
     - `<module specifier map>`
-      - : Un tableau associatif de spécificateur de module est un objet JSON valide où les _clés_ correspondent au texte qui peut être présent dans le spécificateur de module lors de l'import et où les _valeurs_ correspondantes sont les URL ou les chemins qui remplaceront ce texte lorsque le spécificateur de module sera résolu en une adresse.
+      - : Un tableau associatif de spécificateur de module est un objet JSON valide où les _clés_ correspondent au texte qui peut être présent dans le spécificateur de module lors de l'import et où les _valeurs_ correspondantes sont les URL ou les chemins qui remplacent ce texte lorsque le spécificateur de module est résolu en une adresse.
 
         L'objet JSON représentant un tableau associatif de spécificateur de module doit respecter les règles suivantes&nbsp;:
         - Aucune des clés ne doit être vide.
-        - Toutes les valeurs doivent être des chaînes de caractères, qui définissent soit une URL absolue valide, soit une chaîne d'URL valide commençant par `/`, `./`, ou `../`.
-        - Si la clé finit par `/`, la valeur correspondante doit également finir par `/`. On pourra utiliser une clé se terminant par `/` comme préfixe lors de la correspondance entre les adresses de modules.
-        - L'ordre des propriétés de l'objet n'a pas d'importance, si plusieurs clés peuvent correspondre pour un même spécificateur de module, c'est la clé la plus spécifique qui est utilisée (autrement dit le spécificateur `"olive/branche/"` correspondrait avant `"olive/"`).
+        - Toutes les valeurs doivent être des chaînes de caractères, qui définissent soit une URL absolue valide, soit une chaîne de caractères d'URL valide commençant par `/`, `./`, ou `../`.
+        - Si la clé finit par `/`, la valeur correspondante doit également finir par `/`. On peut utiliser une clé se terminant par `/` comme préfixe lors de la correspondance entre les adresses de modules.
+        - L'ordre des propriétés de l'objet n'a pas d'importance, si plusieurs clés peuvent correspondre pour un même spécificateur de module, c'est la clé la plus spécifique qui est utilisée (autrement dit le spécificateur `"olive/branche/"` correspond avant `"olive/"`).
 
 - `integrity` {{Optional_Inline}}
   - : Définit un objet JSON valide dont les _clés_ sont des chaînes de caractères contenant des URL absolues ou relatives valides (commençant par `/`, `./` ou `../`),
@@ -321,7 +321,7 @@ Le tableau associatif d'import doit être un objet JSON valide qui définit au p
     S'il existe plusieurs clés de portées qui correspondent, c'est la valeur associée avec le chemin de portée le plus spécifique qui est utilisée en première pour vérifier les correspondances de spécificateur.
     Le tableau associatif de spécificateur de module décrit dans `imports` est utilisé en dernier recours s'il n'y a aucune correspondance pour le spécificateur de module dans les tableaux associatifs des portées correspondantes.
 
-    On notera que la portée ne modifie pas la façon dont une adresse est résolue. Les adresses relatives sont toujours résolues par rapport à l'URL de base du tableau associatif d'import.
+    Notez que la portée ne modifie pas la façon dont une adresse est résolue. Les adresses relatives sont toujours résolues par rapport à l'URL de base du tableau associatif d'import.
 
 ## Spécifications
 

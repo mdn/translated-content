@@ -3,10 +3,10 @@ title: "Window : propriété documentPictureInPicture"
 short-title: documentPictureInPicture
 slug: Web/API/Window/documentPictureInPicture
 l10n:
-  sourceCommit: 759102220c07fb140b3e06971cd5981d8f0f134f
+  sourceCommit: c9773fc1268b974b6c009208b259c53954c839ef
 ---
 
-{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("Document Picture-in-Picture API")}}{{SecureContext_Header}}
 
 La propriété en lecture seule **`documentPictureInPicture`** de l'interface {{DOMxRef("Window")}} retourne une référence à l'objet {{DOMxRef("DocumentPictureInPicture")}} pour le contexte de document actuel.
 

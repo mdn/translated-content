@@ -81,7 +81,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ### Attributs obsolètes
 
-Les attributs qui suivent sont dépréciés et ne devraient pas être utilisés. Ils sont uniquement documentés à des fins historiques et pour la mise à jour du code existant qui les utiliserait.
+Les attributs qui suivent sont dépréciés et ne doivent pas être utilisés. Ils sont uniquement documentés à des fins historiques et pour la mise à jour du code existant qui les utilise.
 
 - `align` {{Deprecated_Inline}}
   - : Définit l'alignement horizontal de chaque cellule du pied de tableau. Les valeurs {{Glossary("enumerated", "énumérées")}} possibles sont `left`, `center`, `right`, `justify` et `char`. Lorsque cela est pris en charge, la valeur `char` aligne le contenu textuel sur le caractère défini dans l'attribut [`char`](#char) et sur le décalage défini par l'attribut [`charoff`](#charoff). Utilisez plutôt la propriété CSS {{CSSxRef("text-align")}}, car cet attribut est obsolète.

@@ -26,7 +26,7 @@ ServiceWorkerContainer.register(scriptURL, options)
 
 ### Возвращает
 
-{{domxref("Promise")}} который резолвится в {{domxref("ServiceWorkerRegistration")}} объект.
+{{jsxref("Promise")}} который резолвится в {{domxref("ServiceWorkerRegistration")}} объект.
 
 ## Пример использования
 

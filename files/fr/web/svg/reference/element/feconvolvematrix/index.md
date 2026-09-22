@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feConvolveMatrix
 original_slug: Web/SVG/Element/feConvolveMatrix
 ---
 
-{{SVGRef}}
-
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feConvolveMatrix>`** applique une matrice de convolution d'effet de filtre. Une convolution combine les pixels de l'image en entrée avec ceux voisins pour donner une image résultante. On peut obtenir une grande variété d'opérations d'imagerie à l'aide de convolutions, dont le flou, la détection de bord, la netteté, l'estampage et le chanfreinage.
 
 Une convolution de matrice se fonde sur une matrice n par m (le noyau de convolution), qui décrit la façon dont une valeur de pixel donné de l'image en entrée est combinée avec celles des pixels de son voisinage pour aboutir à une valeur de pixel résultante. Chaque pixel du résultat est déterminé par l'application de la matrice noyau sur le pixel source correspondant et ses pixels voisins. La formule de convolution de base, appliquée à chaque valeur de couleur d'un pixel donné, est :

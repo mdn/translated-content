@@ -1,11 +1,12 @@
 ---
-title: animation-range
+title: "`animation-range` プロパティ (CSS)"
+short-title: animation-range
 slug: Web/CSS/Reference/Properties/animation-range
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-**`animation-range`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、タイムラインに沿ったアニメーションの適用範囲の先頭と末尾を設定します。つまり、タイムラインのどこでアニメーションが始まり、どこで終わるかを設定するために使用します。
+**`animation-range`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、タイムラインに沿ったアニメーションの適用範囲の先頭と末尾を設定します。つまり、タイムラインのどこでアニメーションが始まり、どこで終わるかを設定するために使用します。
 
 ## 構成要素のプロパティ
 
@@ -43,16 +44,16 @@ animation-range: cover 0% cover 200px;
 animation-range: entry 10% exit 100%;
 
 /* グローバル値 */
-animation-timeline: inherit;
-animation-timeline: initial;
-animation-timeline: revert;
-animation-timeline: revert-layer;
-animation-timeline: unset;
+animation-range: inherit;
+animation-range: initial;
+animation-range: revert;
+animation-range: revert-layer;
+animation-range: unset;
 ```
 
-`animation-range` 一括指定プロパティは、カンマで区切られた 1 つ以上の単一のアニメーション範囲として指定します。それぞれのアニメーション範囲は、`<timeline-range-name>` 値、`<length-percentage>` 値、それにキーワード `normal` で構成される、空白区切りの 1 つから 4 つの値として指定します。
-
 ### 値
+
+`animation-range` 一括指定プロパティは、カンマで区切られた 1 つ以上の単一のアニメーション範囲として指定します。それぞれのアニメーション範囲は、`<timeline-range-name>` 値、`<length-percentage>` 値、それにキーワード `normal` で構成される、空白区切りの 1 つから 4 つの値として指定します。
 
 - `<animation-range-start>`
   - : キーワード `normal`、`<length-percentage>`、{{cssxref("timeline-range-name")}}、`<timeline-range-name> <length-percentage>` のペアのいずれかで、{{cssxref("animation-range-start")}} を表します。`<timeline-range-name>` が `<length-percentage>` なしで設定された場合、`<length-percentage>` はデフォルトで `0%` になります。
@@ -74,7 +75,7 @@ animation-timeline: unset;
 値が単一の `<length-percentage>` またはキーワード `normal` の場合、この値は `<animation-range-start>` を定義し、`<animation-range-end>` は暗黙に `normal` に設定されます。例えば、
 
 - `animation-range: 20%;` は `animation-range-start: 20%; animation-range-end: normal;` と同等です。
-- `animation-range: normal;` は `animation-range-start: 0%; animation-range-end: 100%;` と同等です。
+- `animation-range: normal;` は `animation-range-start: normal; animation-range-end: normal;` と同等です。
 
 値が単一の {{cssxref("timeline-range-name")}}（次の `<length-percentage>` なし）である場合、そのタイムライン範囲名が `<animation-range-start>` と `<animation-range-end>` の両成分に適用され、それぞれ `0%` および `100%` の範囲が暗黙的に指定されます。例えば、
 
@@ -92,10 +93,10 @@ animation-timeline: unset;
 
 2 つの値を記載する場合、最初の値がキーワード `normal` または `<length-percentage>` であるときは、その値が `<animation-range-start>` を定義し、2 つ目の値が `<animation-range-end>` を定義します。例えば、
 
-- `animation-range: normal 25%;` は `animation-range-start: 0%; animation-range-end: 25%;` と同等です。
+- `animation-range: normal 25%;` は `animation-range-start: normal; animation-range-end: 25%;` と同等です。
 - `animation-range: 25% 50%;` は `animation-range-start: 25%; animation-range-end: 50%;` と同等です。
 - `animation-range: 25% contain;` は `animation-range-start: 25%; animation-range-end: contain 100%;` と同等です。
-- `animation-range: 25% normal;` は `animation-range-start: 25%; animation-range-end: 100%;` と同等です。
+- `animation-range: 25% normal;` は `animation-range-start: 25%; animation-range-end: normal;` と同等です。
 
 ### 複数のアニメーション
 
@@ -251,7 +252,7 @@ p {
 
 {{EmbedLiveSample("Examples", "100%", "480px")}}
 
-`from` または `0%` のキーフレームのプロパティ値が、アニメーションする要素に適用されるのは、ブロック境界の上端がコンテナーの下端から `10%` 離れた時点です。この時点では要素はフルサイズで完全不透明、マゼンタ色です。この位置でアニメーションが適用され、`0%` キーフレームセレクターで定義された値でスタイルが設定されます。`animation-range-end` すなわちスクロール領域の上端から 25% の位置に到達すると、元のスタイル設定に即座に戻ります。
+`from` または `0%` のキーフレームのプロパティ値が、アニメーションする要素に適用されるのは、ブロック境界の上端がコンテナーの下端から `10%` 離れた時点です。この時点では要素はフルサイズで完全不透明、マゼンタ色です。この位置でアニメーションが適用され、`0%` [キーフレームセレクター](/ja/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)で定義された値でスタイルが設定されます。`animation-range-end` すなわちスクロール領域の上端から 25% の位置に到達すると、元のスタイル設定に即座に戻ります。
 
 一般的に、[スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を作成する際には、`animation-fill-mode: both` を設定することをお勧めします。デフォルト状態へのジャンプが発生するのは、要素に {{cssxref("animation-fill-mode")}} プロパティを設定しなかったためです。このプロパティは、アニメーション実行前後の要素にスタイルを適用するために使用できます。この例では、`animation-range` の効果をより明確に可視化するため、当初このプロパティを省略していました。
 
@@ -274,5 +275,6 @@ p {
 - {{cssxref("timeline-scope")}}
 - {{cssxref("view-timeline-inset")}}
 - {{cssxref("animation-fill-mode")}}
+- [タイムライン範囲名を理解する](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)モジュール
 - [View timeline range visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

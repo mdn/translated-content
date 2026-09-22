@@ -132,7 +132,7 @@ const binQuery = searchParams.get("bin"); // 'E AXQB A', '+'가 공백으로 대
 console.log(atob(binQuery) === rawData); // false
 ```
 
-{{jsxref("encodeURIComponent", "encodeURIComponent()")}}로 값을 먼저 인코딩하면 이 문제를 피할 수 있습니다.
+{{jsxref("encodeURIComponent()")}}로 값을 먼저 인코딩하면 이 문제를 피할 수 있습니다.
 
 ```js
 const rawData = "\x13à\x17@\x1F\x80";

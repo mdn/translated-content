@@ -2,12 +2,12 @@
 title: 409 Conflict
 slug: Web/HTTP/Reference/Status/409
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`409 Conflict`** indique un conflit de requête avec l'état actuel de la ressource cible.
 
-Dans l'édition web distante via {{Glossary("WebDAV", "WebDAV")}}, les réponses 409 sont des erreurs envoyées au client afin qu'un·e utilisateur·ice puisse résoudre le conflit et soumettre à nouveau la requête.
+Dans l'édition web distante avec {{Glossary("WebDAV")}}, les réponses 409 sont des erreurs envoyées au client afin qu'un·e utilisateur·ice puisse résoudre le conflit et envoyer à nouveau la requête.
 Par exemple, un conflit se produit si une requête pour créer la collection `/a/b/c/d/` est effectuée alors que `/a/b/c/` n'existe pas, la requête doit échouer avec un code 409.
 De plus, vous pouvez recevoir une réponse 409 lors du téléversement d'un fichier plus ancien que celui déjà présent sur le serveur, ce qui provoque un conflit de gestion de versions.
 
@@ -27,7 +27,7 @@ Dans l'exemple suivant, nous souhaitons lancer un processus d'automatisation qui
 
 ```http
 POST /tasks HTTP/1.1
-Host: exemple.com
+Host: example.com
 Content-Type: application/json
 
 {

@@ -74,8 +74,8 @@ console.log(end.toString()); // 2019-10-07T07:28:48.992-04:00[America/New_York]
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.ZonedDateTime")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.ZonedDateTime")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/add", "Temporal.ZonedDateTime.prototype.add()")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/since", "Temporal.ZonedDateTime.prototype.since()")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/until", "Temporal.ZonedDateTime.prototype.until()")}}

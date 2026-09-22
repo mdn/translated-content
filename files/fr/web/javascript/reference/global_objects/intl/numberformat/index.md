@@ -180,5 +180,5 @@ Pour une liste exhaustive des options, voir la page du constructeur [`Intl.Numbe
 ## Voir aussi
 
 - [Prothèse d'émulation pour `Intl.NumberFormat` dans FormatJS <sup>(angl.)</sup>](https://formatjs.github.io/docs/polyfills/intl-numberformat/)
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl")}}
 - La méthode {{JSxRef("Number.prototype.toLocaleString()")}}

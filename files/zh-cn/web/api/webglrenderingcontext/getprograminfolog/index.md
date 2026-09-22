@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/getProgramInfoLog
 
 ## Syntax
 
-```plain
+```js-nolint
 gl.getProgramInfoLog(program);
 ```
 

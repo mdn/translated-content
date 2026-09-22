@@ -29,11 +29,11 @@ La liste d'autorisation par défaut pour `gamepad` est `*`.
 
 ### Exemple général
 
-SecureCorp Inc. souhaite désactiver l'API Gamepad dans tous les contextes de navigation sauf pour sa propre origine et celles dont l'origine est `https://exemple.com`.
+SecureCorp Inc. souhaite désactiver l'API Gamepad dans tous les contextes de navigation sauf pour sa propre origine et celles dont l'origine est `https://example.com`.
 Elle peut le faire en envoyant l'en-tête de réponse HTTP suivant pour définir une politique de permissions&nbsp;:
 
 ```http
-Permissions-Policy: gamepad=(self "https://exemple.com")
+Permissions-Policy: gamepad=(self "https://example.com")
 ```
 
 ### Avec un élément \<iframe>

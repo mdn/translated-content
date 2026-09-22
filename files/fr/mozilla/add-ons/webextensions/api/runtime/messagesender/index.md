@@ -3,8 +3,6 @@ title: runtime.MessageSender
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
 ---
 
-{{AddonSidebar}}
-
 Un objet contenant des informations sur l'expéditeur d'un message ou d'une demande de connexion ; ceci est passé à l'écouteur {{WebExtAPIRef("runtime.onMessage()")}}.
 
 C'est aussi une propriété de {{WebExtAPIRef("runtime.Port")}}, mais seulement dans l'instance de `Port` passée dans les écouteurs {{WebExtAPIRef("runtime.onConnect()")}} ou {{WebExtAPIRef("runtime.onConnectExternal()")}}.

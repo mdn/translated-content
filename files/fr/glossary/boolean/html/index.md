@@ -2,7 +2,7 @@
 title: Attribut booléen (HTML)
 slug: Glossary/Boolean/HTML
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
 ---
 
 Un **attribut booléen** en {{Glossary("HTML")}} est un {{Glossary("attribute", "attribut")}} qui représente les valeurs `true` ou `false`. Si une balise HTML contient un attribut booléen — quelle que soit la valeur de cet attribut — l'attribut est défini à `true` sur cet élément. Si une balise HTML ne contient pas l'attribut, l'attribut est défini à `false`.
@@ -19,14 +19,14 @@ Si l'attribut est présent, il peut avoir l'une des formes suivantes&nbsp;:
 Voici un exemple d'attribut booléen HTML `checked`&nbsp;:
 
 ```html
-<!-- Les cases à cocher suivantes seront cochées lors de l'affichage initial -->
+<!-- Les cases à cocher suivantes sont cochées lors de l'affichage initial -->
 <input type="checkbox" checked />
 <input type="checkbox" checked="" />
 <input type="checkbox" checked="true" />
 <input type="checkbox" checked="false" />
 <input type="checkbox" checked="n'importe quelle valeur" />
 
-<!-- La case à cocher ne sera pas cochée lors de l'affichage initial -->
+<!-- La case à cocher n'est pas cochée lors de l'affichage initial -->
 <input type="checkbox" />
 ```
 

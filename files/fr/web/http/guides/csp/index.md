@@ -35,17 +35,17 @@ La stratégie est définie comme une série de _directives_, séparées par des 
 Par exemple, considérez la CSP suivante&nbsp;:
 
 ```http
-Content-Security-Policy: default-src 'self'; img-src 'self' exemple.com
+Content-Security-Policy: default-src 'self'; img-src 'self' example.com
 ```
 
 Elle définit deux directives&nbsp;:
 
 - la directive `default-src` est réglée sur `'self'`
-- la directive `img-src` est réglée sur `'self' exemple.com`.
+- la directive `img-src` est réglée sur `'self' example.com`.
 
 ![Une CSP décomposée en ses directives.](csp-overview.svg)
 
-La première directive, `default-src`, indique au navigateur de ne charger que les ressources provenant de la même origine que le document, sauf si d'autres directives plus spécifiques définissent une politique différente pour d'autres types de ressources. La seconde, `img-src`, indique au navigateur de charger les images provenant de la même origine ou depuis `exemple.com`.
+La première directive, `default-src`, indique au navigateur de ne charger que les ressources provenant de la même origine que le document, sauf si d'autres directives plus spécifiques définissent une politique différente pour d'autres types de ressources. La seconde, `img-src`, indique au navigateur de charger les images provenant de la même origine ou depuis `example.com`.
 
 Dans la section suivante, nous examinons les outils disponibles pour contrôler le chargement des ressources, qui constituent la fonction principale d'une CSP.
 
@@ -78,7 +78,7 @@ Si l'assainissement échoue, le code malveillant injecté peut prendre diverses 
 - Une balise {{HTMLElement("script")}} qui se lie à une source malveillante&nbsp;:
 
   ```html
-  <script src="https://vilain.exemple.com/hacker.js"></script>
+  <script src="https://vilain.example.com/hacker.js"></script>
   ```
 
 - Une balise `<script>` qui inclut du JavaScript en ligne&nbsp;:
@@ -112,7 +112,7 @@ Si l'assainissement échoue, le code malveillant injecté peut prendre diverses 
 
 En contrôlant le chargement des ressources, une CSP peut fournir une protection contre toutes ces attaques. Avec une CSP, vous pouvez&nbsp;:
 
-- définir les sources autorisées pour les fichiers JavaScript et autres ressources, bloquant efficacement les chargements depuis `https://vilain.exemple.com`
+- définir les sources autorisées pour les fichiers JavaScript et autres ressources, bloquant efficacement les chargements depuis `https://vilain.example.com`
 - désactiver les balises de script embarquées
 - autoriser uniquement les balises de script qui ont le {{Glossary("Nonce", "nombre unique")}} ou le hachage correct
 - désactiver les gestionnaires d'évènements embarqués
@@ -143,13 +143,13 @@ Chaque directive de récupération est définie soit par le mot‑clé unique `'
 Par exemple, la CSP ci‑dessous définit deux directives de récupération&nbsp;:
 
 - `default-src` reçoit la seule expression de source `'self'`
-- `img-src` reçoit deux expressions de source&nbsp;: `'self'` et `exemple.com`
+- `img-src` reçoit deux expressions de source&nbsp;: `'self'` et `example.com`
 
 ![Diagramme CSP montrant les expressions de source](csp-source-expressions.svg)
 
 L'effet est le suivant&nbsp;:
 
-- les images doivent être soit de la même origine que le document, soit chargées depuis `exemple.com`
+- les images doivent être soit de la même origine que le document, soit chargées depuis `example.com`
 - toutes les autres ressources doivent être de la même origine que le document.
 
 Dans les sections suivantes, nous décrivons quelques manières d'utiliser les expressions de source pour contrôler les chargements de ressources. Notez que, bien que nous les décrivions séparément, ces expressions peuvent en général être combinées&nbsp;: par exemple, une seule directive de récupération peut inclure des nombres uniques ainsi que des noms d'hôte.
@@ -283,10 +283,10 @@ Vous pouvez également définir un ou plusieurs noms d'hôtes, éventuellement e
 Content-Security-Policy: img-src *.exemple.org
 ```
 
-Vous pouvez définir plusieurs emplacements. La directive suivante autorise uniquement les images qui sont de la même origine que le document actuel, ou qui sont servies à partir d'un sous-domaine de «&nbsp;exemple.org&nbsp;», ou qui sont servies à partir de «&nbsp;exemple.com&nbsp;»&nbsp;:
+Vous pouvez définir plusieurs emplacements. La directive suivante autorise uniquement les images qui sont de la même origine que le document actuel, ou qui sont servies à partir d'un sous-domaine de «&nbsp;exemple.org&nbsp;», ou qui sont servies à partir de «&nbsp;example.com&nbsp;»&nbsp;:
 
 ```http
-Content-Security-Policy: img-src 'self' *.exemple.org  exemple.com
+Content-Security-Policy: img-src 'self' *.exemple.org  example.com
 ```
 
 #### JavaScript embarqué
@@ -586,24 +586,24 @@ La méthode recommandée pour signaler les violations de la CSP consiste à util
 > Pour plus d'informations sur cette approche, consultez le sujet {{CSP("report-uri")}}.
 
 Un serveur peut informer les clients d'où envoyer les rapports en utilisant l'en‑tête de réponse HTTP {{HTTPHeader("Reporting-Endpoints")}}. Cet en‑tête définit une ou plusieurs URL de point de terminaison sous la forme d'une liste séparée par des virgules.
-Par exemple, pour définir un point de terminaison de rapport nommé `csp-endpoint` qui accepte les rapports à `https://exemple.com/csp-reports`, l'en‑tête de réponse du serveur peut ressembler à ceci&nbsp;:
+Par exemple, pour définir un point de terminaison de rapport nommé `csp-endpoint` qui accepte les rapports à `https://example.com/csp-reports`, l'en‑tête de réponse du serveur peut ressembler à ceci&nbsp;:
 
 ```http
-Reporting-Endpoints: csp-endpoint="https://exemple.com/csp-reports"
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
 ```
 
 Si vous souhaitez disposer de plusieurs points de terminaison gérant différents types de rapports, vous devez les définir comme suit&nbsp;:
 
 ```http
-Reporting-Endpoints: csp-endpoint="https://exemple.com/csp-reports",
-                     hpkp-endpoint="https://exemple.com/hpkp-reports"
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports",
+                     hpkp-endpoint="https://example.com/hpkp-reports"
 ```
 
 Vous pouvez ensuite utiliser la directive {{CSP("report-to")}} de l'en‑tête `Content-Security-Policy` pour indiquer qu'un point de terminaison particulier précédemment défini doit être utilisé pour le signalement.
-Par exemple, pour envoyer les rapports de violation CSP vers `https://exemple.com/csp-reports` pour la directive `default-src`, vous pourriez envoyer les en‑têtes de réponse suivants&nbsp;:
+Par exemple, pour envoyer les rapports de violation CSP vers `https://example.com/csp-reports` pour la directive `default-src`, vous pourriez envoyer les en‑têtes de réponse suivants&nbsp;:
 
 ```http
-Reporting-Endpoints: csp-endpoint="https://exemple.com/csp-reports"
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
 Content-Security-Policy: default-src 'self'; report-to csp-endpoint
 ```
 
@@ -619,17 +619,17 @@ Un objet typique peut ressembler à ceci&nbsp;:
     "blockedURL": "inline",
     "columnNumber": 39,
     "disposition": "enforce",
-    "documentURL": "https://exemple.com/csp-report",
+    "documentURL": "https://example.com/csp-report",
     "effectiveDirective": "script-src-elem",
     "lineNumber": 121,
     "originalPolicy": "default-src 'self'; report-to csp-endpoint-name",
     "referrer": "https://www.google.com/",
     "sample": "console.log(\"lo\")",
-    "sourceFile": "https://exemple.com/csp-report",
+    "sourceFile": "https://example.com/csp-report",
     "statusCode": 200
   },
   "type": "csp-violation",
-  "url": "https://exemple.com/csp-report",
+  "url": "https://example.com/csp-report",
   "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
 }
 ```

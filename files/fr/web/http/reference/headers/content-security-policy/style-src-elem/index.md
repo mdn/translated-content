@@ -57,13 +57,13 @@ Content-Security-Policy: style-src-elem <source>;
 Soit cet en-tête CSP&nbsp;:
 
 ```http
-Content-Security-Policy: style-src-elem https://exemple.com/
+Content-Security-Policy: style-src-elem https://example.com/
 ```
 
 …les feuilles de style suivantes sont bloquées et ne seront pas chargées&nbsp;:
 
 ```html
-<link href="https://hors-exemple.com/styles/main.css" rel="stylesheet" />
+<link href="https://hors-example.com/styles/main.css" rel="stylesheet" />
 
 <style>
   #inline-style {
@@ -72,14 +72,14 @@ Content-Security-Policy: style-src-elem https://exemple.com/
 </style>
 
 <style>
-  @import "https://hors-exemple.com/styles/print.css" print;
+  @import "https://hors-example.com/styles/print.css" print;
 </style>
 ```
 
 …ainsi que les styles chargés en utilisant l'en-tête {{HTTPHeader("Link")}}&nbsp;:
 
 ```http
-Link: <https://hors-exemple.com/styles/stylesheet.css>;rel=stylesheet
+Link: <https://hors-example.com/styles/stylesheet.css>;rel=stylesheet
 ```
 
 ## Spécifications

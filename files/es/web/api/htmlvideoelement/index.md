@@ -39,7 +39,7 @@ _Hereda las propiedades de los interfaces anteriores, {{domxref("HTMLMediaElemen
 - {{domxref("HTMLVideoElement.mozFrameDelay")}} {{readonlyInline}}{{non-standard_inline}}
   - : Devuelve un `double` con el tiempo, en segundos, que el último marco de video fue pintado por retrazo.
 - {{domxref("HTMLVideoElement.mozHasAudio")}} {{readonlyInline}}{{non-standard_inline}}
-  - : Devuelve un {{domxref("Boolean")}} indicando si existe algún audio asociado con el video.
+  - : Devuelve un {{jsxref("Boolean")}} indicando si existe algún audio asociado con el video.
 
 ## Métodos
 

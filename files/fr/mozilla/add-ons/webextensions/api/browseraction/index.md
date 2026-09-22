@@ -3,8 +3,6 @@ title: browserAction
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 ---
 
-{{AddonSidebar}}
-
 Ajoute un bouton à la barre d'outils du navigateur.
 
 Une [action du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) est un bouton dans la barre d'outils du navigateur.

@@ -1,11 +1,12 @@
 ---
-title: <timeline-range-name>
+title: "`<timeline-range-name>` 型 (CSS)"
+short-title: <timeline-range-name>
 slug: Web/CSS/Reference/Values/timeline-range-name
 l10n:
-  sourceCommit: f6b253c16e6b1b9fe568c082a6f9f9bbd18a1c5d
+  sourceCommit: 5f3da7dfeb0b6938fcae8a08fc08f9b8aea1ff65
 ---
 
-**`<timeline-range-name>`** は{{glossary("enumerated", "列挙型")}}のデータ型で、[ビュー進捗タイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)の中にある定義済みの名前付きタイムライン範囲のいずれかを表す CSS 識別子です。
+**`<timeline-range-name>`** は{{glossary("enumerated", "列挙型")}}のデータ型で、[ビュー進行タイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)の中にある定義済みの名前付きタイムライン範囲のいずれかを表す CSS 識別子です。
 
 `<timeline-range-name>` キーワード値は、次の個別指定プロパティおよび一括指定プロパティで使用されています。
 
@@ -18,7 +19,7 @@ l10n:
 有効な `<timeline-range-name>` 値は次の通りです。
 
 - `cover`
-  - : 名前付きビュー進行タイムラインの全範囲を表します。主体要素が最初にスクロールポートのビュー進行の可視範囲に入り始めた時点（進行度 `0%`）から、完全にその範囲から離れた時点（進行度 `100%`）までです。
+  - : 名前付きビュー進行タイムラインの全範囲を表します。主体要素が最初にスクロールポートのビュー進行の可視範囲に入り始めた時点（進行度 `0%`）から、完全にその範囲から離れた時点（進行度 `100%`）までです。これは、[ビュー進行タイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#ビュー進行タイムライン)のデフォルトの範囲です。
 - `contain`
   - : ビュー進行タイムラインを完全に包含する、またはビュー進行可視範囲が完全に包含される範囲を、主体要素が[スクロールポート](/ja/docs/Glossary/Scroll_container#スクロールポート)内に完全に含まれている範囲として表します。
     - 主体要素がスクロールポートより小さい場合は、主体要素が最初にスクロールポートに完全に収まった点（進行度 `0%`）から、スクロールポートに完全に収まらなくなった点（進行度 `100%`）までの範囲になります。
@@ -26,17 +27,22 @@ l10n:
 
 - `entry`
   - : ビュー進行タイムラインの中で、主体要素がスクロールポートに最初に進入し始める点から、完全に進入し終える点までの範囲を指定します。`0%` は `cover` 範囲の `0%` に相当します。`100%` は `contain` 範囲の `0%` に相当します。
+
 - `exit`
   - : ビュー進行タイムラインの中で、主体要素がスクロールポートから最初に退出を始める点から、完全に退出する点までの範囲を示します。`0%` は `contain` 範囲の `100%` に相当します。`100%` は `cover` 範囲の `100%` に相当します。
+
 - `entry-crossing`
   - : 主ボックスが末尾の境界を横切る範囲を表します。この範囲の始点（進行度 0%）は、要素の主ボックスの先頭の境界が、そのビュー進行可視範囲の末尾と一致する点です。範囲の終点（進行度 100%）は、要素の主ボックスの末尾の境界が、そのビュー進行可視範囲の末尾と一致する点です。範囲の大きさは、スクロール方向における要素の主ボックスのサイズです。
 
 - `exit-crossing`
   - : 主ボックスが先頭の境界を横切る範囲を表します。この範囲の始点（進行度 0%）は、要素の主ボックスの末尾の境界が、そのビュー進行可視範囲の先頭と一致する点です。範囲の終点（進行度 100%）は、要素の主ボックスの先頭の境界が、そのビュー進行可視範囲の末尾と一致する点です。範囲の大きさは、スクロール方向における要素の主ボックスのサイズです。
 
+- `scroll`
+  - : ビュー進行タイムラインが定義されている{{glossary("scroll container", "スクロールコンテナー")}}の全範囲を表します。範囲の開始点（進行度 0%）と終了点（進行度 100%）は、ビューの進行タイムラインの基盤となるスクロールコンテナーの先頭と末尾の端の位置に位置します。これは、[スクロール進行タイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#スクロール進行タイムライン) のデフォルトの範囲です。
+
 ## 形式文法
 
-{{CSSSyntaxRaw(`<timeline-range-name> = cover | contain | entry | exit | entry-crossing | exit-crossing`)}}
+{{CSSSyntaxRaw(`<timeline-range-name> = cover | contain | entry | exit | entry-crossing | exit-crossing | scroll`)}}
 
 ## 例
 
@@ -56,6 +62,8 @@ l10n:
 - {{cssxref("animation-timeline")}}
 - {{cssxref("scroll-timeline")}}
 - {{cssxref("view-timeline-inset")}}
+- {{cssxref("animation-timeline/scroll", "scroll()")}}, {{cssxref("animation-timeline/view", "view()")}}
+- [タイムライン範囲名を理解する](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - [スクロール駆動アニメーションタイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)ガイド
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)モジュール
 - [View timeline range visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

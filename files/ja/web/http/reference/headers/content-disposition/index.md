@@ -3,7 +3,7 @@ title: Content-Disposition ヘッダー
 short-title: Content-Disposition
 slug: Web/HTTP/Reference/Headers/Content-Disposition
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 HTTP の **`Content-Disposition`** ヘッダーは、コンテンツがウェブページとしてブラウザー内にインラインで表示されることを求められているか、ウェブページの一部であるのか、ダウンロードしてローカルに保存する「添付ファイル」とするかを示します。
@@ -73,7 +73,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
     `name` の値が `'_charset_'` という値である場合は、その部分が HTML フィールドではなく、明示的な文字セット情報のない部分に使用される既定の文字セットであることを示します。
 
 - `filename`
-  - : 送信されたファイルの元の名前を含む文字列が続きます。この引数は主に補助的な情報を指定します。[RFC2183](https://www.rfc-editor.org/rfc/rfc2183#section-2.3) の提案が適用されます。
+  - : 送信されたファイルの元の名前を含む文字列が続きます。この引数は主に補助的な情報を指定します。[RFC2183](https://www.rfc-editor.org/info/rfc2183/#section-2.3) の提案が適用されます。
     - 可能な限り ASCII 文字を使用すること（クライアントがパーセントエンコードしても構わないが、サーバー実装がデコードできることが条件）。
     - パス情報は、例えば `/` を `_` に置き換えるなどして、すべて削除する必要があります。
     - ディスクへの書き込み時には、既存のファイルを上書きすべきではありません。

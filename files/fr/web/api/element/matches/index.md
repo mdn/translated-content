@@ -1,81 +1,60 @@
 ---
-title: Element.matches()
+title: "Element : méthode matches()"
+short-title: matches()
 slug: Web/API/Element/matches
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}
 
-La méthode **`element.matches()`** renvoie `true` lorsque l'élément peut être sélectionné par le sélecteur défini par la chaîne passée en paramètre&nbsp;; sinon, elle renvoie `false`.
-
-> [!WARNING]
-> Certains navigateurs implémentent cette méthode sous le nom `matchesSelector()` non-standardisé et préfixé.
+La méthode **`matches()`** de l'interface {{DOMxRef("Element")}} teste si l'élément est sélectionné par le [sélecteur CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) défini.
 
 ## Syntaxe
 
-```js
-var result = element.matches(selectorString);
+```js-nolint
+matches(selectors)
 ```
 
-- `result` contient la valeur retournée `true` ou `false`.
-- `selectorString` est une chaîne définissant le sélecteur à tester sur l'élément.
+### Paramètres
 
-## Exemple
+- `selectors`
+  - : Une chaîne de caractères contenant des [sélecteurs CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) valides pour tester le {{DOMxRef("Element")}}.
+
+### Valeur de retour
+
+`true` si l'objet {{DOMxRef("Element")}} correspond aux `selectors`. Sinon, `false`.
+
+### Exceptions
+
+- `SyntaxError` {{DOMxRef("DOMException")}}
+  - : Levée si `selectors` ne peut pas être analysé comme une liste de sélecteurs CSS.
+
+## Exemples
+
+### HTML
 
 ```html
-<ul id="birds">
-  <li>perroquet amazone</li>
-  <li class="endangered">aigle des Philippines</li>
-  <li>pélican blanc</li>
+<ul id="oiseaux">
+  <li>Perroquet à ailes orange</li>
+  <li class="disparition">Aigle des Philippines</li>
+  <li>Grand pélican blanc</li>
 </ul>
+```
 
-<script type="text/javascript">
-  var birds = document.getElementsByTagName("li");
+### JavaScript
 
-  for (var i = 0; i < birds.length; i++) {
-    if (birds[i].matches(".endangered")) {
-      console.log(
-        "Le - " + birds[i].textContent + "- est en voie de disparition !",
-      );
-    }
+```js
+const oiseaux = document.querySelectorAll("li");
+
+for (const oiseau of oiseaux) {
+  if (oiseau.matches(".disparition")) {
+    console.log(`Le ${oiseau.textContent} est en voie de disparition !`);
   }
-</script>
-```
-
-Ce code affichera l'alerte "Le - aigle des Philippines - est en voie de disparition !" sur la console, puisque l'élèment possède l'attribut `class` de valeur `endangered`.
-
-## Exceptions
-
-- `SYNTAX_ERR`
-  - : Lorsque la chaîne passée en paramêtre défini sélecteur invalide.
-
-## Polyfill
-
-Pour les navigateurs qui ne supportent pas `Element.matches()` ou `Element.matchesSelector()`, mais fournissent le support de `document.querySelectorAll()`, il existe un _polyfill_&nbsp;:
-
-```js
-if (!Element.prototype.matches) {
-  Element.prototype.matches =
-    Element.prototype.matchesSelector ||
-    Element.prototype.mozMatchesSelector ||
-    Element.prototype.msMatchesSelector ||
-    Element.prototype.oMatchesSelector ||
-    Element.prototype.webkitMatchesSelector ||
-    function (s) {
-      var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-        i = matches.length;
-      while (--i >= 0 && matches.item(i) !== this) {}
-      return i > -1;
-    };
 }
 ```
 
-Cependant, étant donné la possibilité de prendre en charge les anciens navigateurs, les éléments suivants devraient suffire pour la plupart (sinon tous) des cas pratiques (c'est-à-dire le support IE9 +).
-
-```js
-if (!Element.prototype.matches) {
-  Element.prototype.matches = Element.prototype.msMatchesSelector;
-}
-```
+Ça affiche «&nbsp;L'aigle des Philippines est en voie de disparition&nbsp;!» dans la console, puisque l'élément a effectivement un attribut `class` avec la valeur `disparition`.
 
 ## Spécifications
 
@@ -87,5 +66,5 @@ if (!Element.prototype.matches) {
 
 ## Voir aussi
 
-- [La syntaxe des sélecteurs](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-- autres méthodes qui utilisent les sélecteurs : {{domxref("element.querySelector()")}} et {{domxref("element.closest()")}}.
+- Le module [des sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)
+- Les autres méthodes de {{DOMxRef("Element")}} qui utilisent des sélecteurs&nbsp;: {{DOMxRef("Element.querySelector()")}}, {{DOMxRef("Element.querySelectorAll()")}} et {{DOMxRef("Element.closest()")}}.

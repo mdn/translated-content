@@ -5,7 +5,7 @@ l10n:
   sourceCommit: e8e22a6e6d6455222c8c1a1e1346a149d300ab35
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 **`HTMLAllCollection`** 接口表示*所有*文档元素（通过索引（类似于数组）和元素的 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 访问）的集合。它由 {{domxref("document.all")}} 属性返回。
 

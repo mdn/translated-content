@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Grid_layout/Named_grid_lines
 original_slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 ---
 
-{{CSSRef}}
-
 {{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Grid_template_areas", "Web/CSS/Guides/Grid_layout/Auto-placement","Web/CSS/Guides/Grid_layout")}}
 
 Dans les articles précédents, on a vu comment placer des objets sur les lignes définies par les pistes de la grilles. On a également vu comment placer des objets sur des zones nommées. Dans ce guide, nous allons combiner ces deux concepts et apprendre à placer les objets sur des lignes avec des noms. Le nommage des lignes peut s'avérer très utile mais un aspect encore plus intéressant consiste à combiner les noms et les tailles de pistes. Cela sera plus clair lorsque nous aurons vu les différents exemples.

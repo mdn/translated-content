@@ -3,13 +3,13 @@ title: Propriété CSS `font-palette`
 short-title: font-palette
 slug: Web/CSS/Reference/Properties/font-palette
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-palette`** permet de définir l'une des nombreuses palettes contenues dans une [police de couleur <sup>(angl.)</sup>](https://www.colorfonts.wtf/) qu'un agent utilisateur peut utiliser pour la police. Les utilisateur·ice·s peuvent aussi modifier les valeurs d'une palette ou créer une nouvelle palette en utilisant la règle {{CSSxRef("@font-palette-values")}}.
 
 > [!NOTE]
-> Une palette `font-palette` est prioritaire lors de la coloration d'une police. La propriété {{CSSxRef("color")}} ne remplacera pas une palette de police, même si elle est définie avec {{CSSxRef("important", "!important")}}.
+> Une palette `font-palette` est prioritaire lors de la coloration d'une police. La propriété {{CSSxRef("color")}} ne remplace pas une palette de police, même si elle est définie avec {{CSSxRef("important", "!important")}}.
 
 ## Syntaxe
 
@@ -17,7 +17,7 @@ La propriété [CSS](/fr/docs/Web/CSS) **`font-palette`** permet de définir l'u
 /* Utilisation d'une palette définie par la police */
 font-palette: normal;
 
-/* Utilisation d'une palette définie par l'utilisateur */
+/* Utilisation d'une palette définie par l'utilisateur·ice */
 font-palette: --one;
 
 /* Création d'une nouvelle palette en mélangeant deux autres */
@@ -25,6 +25,8 @@ font-palette: palette-mix(in lch, --blue, --yellow);
 ```
 
 ### Valeurs
+
+Cette propriété est définie par une valeur unique parmi la liste suivante&nbsp;:
 
 - `normal`
   - : Définit la palette de couleurs par défaut ou la coloration par défaut des glyphes (définie par le·la créateur·ice de la police) à utiliser pour la police. Avec ce réglage, la palette à l'index 0 de la police est utilisée.
@@ -114,7 +116,7 @@ Le résultat ressemble à ceci&nbsp;:
 {{EmbedLiveSample("Animer entre deux palettes", "100%", 300)}}
 
 > [!NOTE]
-> Les navigateurs qui implémentent encore l'animation `font-palette` discrète basculeront entre les deux palettes au lieu d'animer en douceur.
+> Les navigateurs qui implémentent encore l'animation `font-palette` discrète basculent entre les deux palettes au lieu d'animer en douceur.
 
 ## Spécifications
 

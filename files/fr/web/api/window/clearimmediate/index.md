@@ -3,10 +3,10 @@ title: "Window : méthode clearImmediate()"
 short-title: clearImmediate()
 slug: Web/API/Window/clearImmediate
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
 Le méthode **`clearImmediate()`** de l'interface {{DOMxRef("Window")}} efface l'action définie par {{DOMxRef("window.setImmediate()")}}.
 

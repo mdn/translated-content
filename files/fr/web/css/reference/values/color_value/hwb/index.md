@@ -3,7 +3,7 @@ title: Fonction CSS `hwb()`
 short-title: hwb()
 slug: Web/CSS/Reference/Values/color_value/hwb
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`hwb()`** exprime un {{Glossary("color space", "espace de couleur")}} {{Glossary("RGB", "sRGB")}} donné selon sa teinte, sa blancheur et sa noirceur. Une composante alpha optionnelle représente l'opacité de la couleur.
@@ -42,7 +42,7 @@ background: hwb(0 100% 0% / 50%);
 
 ## Description
 
-Cette fonction de couleur dans l'[espace colorimétrique `sRGB`](/fr/docs/Glossary/Color_space#srgb) est définie par une valeur d'angle {{CSSxRef("&lt;hue&gt;")}}, une valeur de blancheur, une valeur de noirceur et, optionnellement, une valeur alpha représentant la transparence de la couleur.
+Cette fonction de couleur dans [l'espace colorimétrique `sRGB`](/fr/docs/Glossary/Color_space#srgb) est définie par une valeur d'angle {{CSSxRef("&lt;hue&gt;")}}, une valeur de blancheur, une valeur de noirceur et, optionnellement, une valeur alpha représentant la transparence de la couleur.
 
 Les angles correspondant à des teintes particulières diffèrent selon les espaces colorimétriques sRGB (utilisé par {{CSSxRef("color_value/hsl", "hsl()")}} et `hwb()`), CIELAB (utilisé par {{CSSxRef("color_value/lch", "lch()")}}) et Oklab (utilisé par {{CSSxRef("color_value/oklch", "oklch()")}}). `hwb()` est dans le même espace colorimétrique que `hsl()`, et a donc les mêmes angles de teinte. Consultez la page de référence {{CSSxRef("&lt;hue&gt;")}} pour plus de détails et d'exemples, ou essayez de modifier les teintes sur le [sélecteur de couleur](/fr/docs/Web/CSS/Guides/Colors#colors_in_action) pour voir le résultat.
 
@@ -129,7 +129,7 @@ Lors de l'utilisation de la syntaxe de couleur relative dans une fonction `hwb()
 
 Lors de la définition d'une couleur relative, les différents canaux de la couleur de sortie peuvent être exprimés de plusieurs façons différentes. Ci-dessous, nous allons étudier quelques exemples pour illustrer ceci.
 
-Dans les deux premiers exemples ci-dessous, nous utilisons la syntaxe de couleur relative. Cependant, le premier produit la même couleur que la couleur d'origine et le second produit une couleur qui n'est pas du tout basée sur la couleur d'origine. Ils ne créent pas vraiment de couleurs relatives&nbsp;! Il est peu probable que vous les utilisiez dans du vrai code, et vous utiliseriez plutôt une valeur de couleur absolue. Nous avons inclus ces exemples comme point de départ pour apprendre la syntaxe `hwb()` relative.
+Dans les deux premiers exemples ci-dessous, nous utilisons la syntaxe de couleur relative. Cependant, le premier produit la même couleur que la couleur d'origine et le second produit une couleur qui n'est pas du tout basée sur la couleur d'origine. Ils ne créent pas vraiment de couleurs relatives&nbsp;! Il est peu probable que vous les utilisiez dans du vrai code, et vous utilisez plutôt une valeur de couleur absolue. Nous avons inclus ces exemples comme point de départ pour apprendre la syntaxe `hwb()` relative.
 
 Commençons par une couleur d'origine `hsl(0 100% 50%)` (équivalente à `hwb(0 0% 0%)`). La fonction suivante produit la même couleur que la couleur d'origine — elle utilise les valeurs de canal `h`, `w` et `b` de la couleur d'origine (`0`, `0%` et `0%`) comme valeurs de canal de sortie&nbsp;:
 
@@ -183,7 +183,7 @@ hwb(from hsl(0 100% 50%) calc(h + 120) calc(w + 25) calc(b + 10) / calc(alpha - 
 ```
 
 > [!NOTE]
-> Parce que les valeurs de canal de couleur d'origine sont résolues en valeurs `<number>`, vous devez leur ajouter des nombres lors de leur utilisation dans des calculs, même dans les cas où un canal accepterait normalement des valeurs `<percentage>`, `<angle>` ou d'autres types de valeurs. Ajouter un `<percentage>` à un `<number>`, par exemple, ne fonctionne pas.
+> Parce que les valeurs de canal de couleur d'origine sont résolues en valeurs `<number>`, vous devez leur ajouter des nombres lors de leur utilisation dans des calculs, même dans les cas où un canal accepte normalement des valeurs `<percentage>`, `<angle>` ou d'autres types de valeurs. Ajouter un `<percentage>` à un `<number>`, par exemple, ne fonctionne pas.
 
 ## Syntaxe formelle
 
@@ -226,7 +226,7 @@ Ces variantes sont définies en utilisant des couleurs relatives — la [propri�
   --base-color: orange;
 }
 
-/* Selon la spécification, les valeurs w et b devraient être résolues en un
+/* Selon la spécification, les valeurs w et b doivent être résolues en un
    nombre entre 0-100.
    Cependant, Chrome 121+ les résout incorrectement en nombres entre 0- d'où
    l'utilisation actuelle de calculs comme w + 0.3 au lieu de w + 30 */
@@ -261,7 +261,7 @@ Ces variantes sont définies en utilisant des couleurs relatives — la [propri�
 
 La sortie est la suivante&nbsp;:
 
-{{ EmbedLiveSample("Utilisation des couleurs relatives avec `hwb()`", "100%", "200") }}
+{{EmbedLiveSample("Utilisation des couleurs relatives avec `hwb()`", "100%", 200)}}
 
 ## Spécifications
 

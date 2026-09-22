@@ -3,7 +3,7 @@ title: Propriété CSS `list-style-image`
 short-title: list-style-image
 slug: Web/CSS/Reference/Properties/list-style-image
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`list-style-image`** définit une image à utiliser comme marqueur d'élément de liste.
@@ -96,10 +96,12 @@ list-style-image: unset;
 
 ### Valeurs
 
+Cette propriété est définie avec une seule valeur parmi la liste suivante&nbsp;:
+
 - {{CSSxRef("&lt;image&gt;")}}
   - : Une image valide à utiliser comme marqueur.
 - `none`
-  - : Définit qu'aucune image n'est utilisée comme marqueur. Si cette valeur est définie, le marqueur défini dans {{CSSxRef("list-style-type")}} sera utilisé à la place. C'est la valeur par défaut pour {{CSSxRef("list-style")}}.
+  - : Définit qu'aucune image n'est utilisée comme marqueur. Si cette valeur est définie, le marqueur défini dans {{CSSxRef("list-style-type")}} est utilisé à la place. C'est la valeur par défaut pour {{CSSxRef("list-style")}}.
 
 ## Définition formelle
 

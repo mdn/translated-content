@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/ellipse
 original_slug: Web/SVG/Element/ellipse
 ---
 
-{{SVGRef}}
-
 L'élément `ellipse` est une forme basique SVG,utilisé pour créer des ellipses basées sur un centre, et ses deux rayons x et y.
 
 > [!NOTE]

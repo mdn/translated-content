@@ -3,10 +3,10 @@ title: "Document : méthode queryCommandSupported()"
 short-title: queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
 l10n:
-  sourceCommit: 22cf84fc5704222a2e2e5ac67b95b02dcfea08ff
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
 > [!NOTE]
 > Bien que la méthode {{DOMxRef("Document/execCommand", "execCommand()")}} soit obsolète, si vous décidez de l'utiliser pour les raisons mentionnées sur cette page, vous devriez envisager de vérifier la disponibilité de la commande en utilisant `queryCommandSupported()` pour garantir la compatibilité.

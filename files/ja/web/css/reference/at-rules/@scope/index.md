@@ -1,11 +1,12 @@
 ---
-title: "@scope"
+title: CSS `@scope` アットルール
+short-title: "@scope"
 slug: Web/CSS/Reference/At-rules/@scope
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
-**`@scope`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)を使用すると、特定の DOM サブツリー内の要素を選択できるようになり、セレクターを DOM 構造に密接に結合させることなく、また上書きしにくい特定のセレクターを書くことなく、要素を正確に対象とすることができます。
+**`@scope`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、使用すると特定の DOM サブツリー内の要素を選択できるようになり、セレクターを DOM 構造に密接に結合させることなく、また上書きしにくい特定のセレクターを書くことなく、要素を正確に対象とすることができます。
 
 JavaScript で `@scope` は CSS オブジェクトモデルインターフェイスの {{DOMxRef("CSSScopeRule")}} からアクセスすることができます。
 

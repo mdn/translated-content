@@ -35,8 +35,6 @@ slug: Web/API/IDBCursor
 
 ## 常量
 
-{{deprecated_header}}
-
 > [!WARNING]
 > 这些常量不再被支持。你应该使用字符串常量。([Firefox bug 891944](https://bugzil.la/891944))
 

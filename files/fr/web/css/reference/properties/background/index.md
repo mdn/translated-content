@@ -3,10 +3,10 @@ title: Propriété CSS `background`
 short-title: background
 slug: Web/CSS/Reference/Properties/background
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`background`** définit l'ensemble des propriétés de style d'arrière-plan en une seule déclaration, comme la couleur, l'image, l'origine, la taille et le mode de répétition.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`background`** définit l'ensemble des propriétés de style d'arrière-plan en une seule déclaration, comme la couleur, l'image, l'origine, la taille et le mode de répétition.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: background")}}
 
@@ -116,7 +116,7 @@ Les propriétés de composant non définies dans la déclaration raccourcie `bac
 
 Comme certaines propriétés constitutives partagent des types de valeurs, l'ordre de ces propriétés dans la propriété raccourcie est important.
 
-La valeur `<bg-size>` ne peut être incluse qu'immédiatement après `<bg-position>`, séparée par le caractère `/`. Par exemple&nbsp;: `10px 10px / 80% 80%` signifie que l'image d'arrière-plan mesure `80%` de la hauteur et de la largeur de l'élément, et sera positionnée à `10px` du haut et à `10px` de la gauche du coin supérieur gauche de l'élément. Dans `<bg-position>`, si les deux valeurs sont des longueurs, ou si l'une est une longueur et l'autre `center`, la première valeur correspond à la position horizontale et la seconde à la position verticale.
+La valeur `<bg-size>` ne peut être incluse qu'immédiatement après `<bg-position>`, séparée par le caractère `/`. Par exemple&nbsp;: `10px 10px / 80% 80%` signifie que l'image d'arrière-plan mesure `80%` de la hauteur et de la largeur de l'élément, et est positionnée à `10px` du haut et à `10px` de la gauche du coin supérieur gauche de l'élément. Dans `<bg-position>`, si les deux valeurs sont des longueurs, ou si l'une est une longueur et l'autre `center`, la première valeur correspond à la position horizontale et la seconde à la position verticale.
 
 Chaque couche d'arrière-plan peut inclure zéro, une ou deux valeurs [`<visual-box>`](/fr/docs/Web/CSS/Reference/Values/box-edge#visual-box). Si une seule valeur est incluse, elle définit à la fois {{CSSxRef("background-origin")}} et {{CSSxRef("background-clip")}}. Si deux valeurs sont présentes, la première occurrence définit `background-origin` et la seconde définit `background-clip`. Si aucune valeur `<visual-box>` n'est présente, `background-origin` prend la valeur par défaut `padding-box` et `background-clip` prend la valeur par défaut `border-box`.
 
@@ -141,13 +141,13 @@ background: repeat scroll 0% 0% / auto padding-box border-box none transparent;
 
 ### Ordre de peinture des images
 
-Si plusieurs arrière-plans séparés par des virgules sont inclus, ils créent plusieurs couches d'arrière-plan empilées les unes sur les autres. Le premier arrière-plan de la liste crée la couche supérieure. Si la couche supérieure ne contient aucune zone transparente, c'est la seule couche qui sera visible.
+Si plusieurs arrière-plans séparés par des virgules sont inclus, ils créent plusieurs couches d'arrière-plan empilées les unes sur les autres. Le premier arrière-plan de la liste crée la couche supérieure. Si la couche supérieure ne contient aucune zone transparente, c'est la seule couche qui est visible.
 
 La dernière couche est la couche inférieure. La couleur d'arrière-plan est toujours incluse dans cette couche.
 
 ### Application de l'arrière-plan du corps du document
 
-Si la valeur calculée de `background-image` de l'élément HTML {{HTMLElement("html")}} `:root` est `none` et que son `background-color` est `transparent`, le navigateur transfère les styles `background` définis sur l'élément HTML {{HTMLElement("body")}} vers la racide (`:root`) et considère que le corps (`<body>`) est comme si `background: initial` avait été appliqué. Autrement dit, l'élément `<html>` reçoit tous les styles `background` définis sur le `<body>`, et les propriétés d'arrière-plan du `<body>` sont réglées sur leurs valeurs initiales.
+Si la valeur calculée de `background-image` de l'élément HTML {{HTMLElement("html")}} `:root` est `none` et que son `background-color` est `transparent`, le navigateur transfère les styles `background` définis sur l'élément HTML {{HTMLElement("body")}} vers la racine (`:root`) et considère que le corps (`<body>`) est comme si `background: initial` a été appliqué. Autrement dit, l'élément `<html>` reçoit tous les styles `background` définis sur le `<body>`, et les propriétés d'arrière-plan du `<body>` sont réglées sur leurs valeurs initiales.
 
 En raison de ce comportement, les auteur·ice·s des spécifications recommandent de définir les styles d'arrière-plan de votre document dans le bloc de styles `body` plutôt que dans celui de `html`. Cependant, il est important de noter que l'utilisation du confinement désactive ce comportement. Lorsque la propriété {{CSSxRef("contain")}} est définie sur une valeur autre que `none` pour l'élément `<html>` ou `<body>`, la propriété `background` et ses composantes de forme longue ne se propagent pas de l'élément `<body>` vers le `<html>` racine.
 
@@ -161,10 +161,10 @@ En raison de ce comportement, les auteur·ice·s des spécifications recommanden
 
 ## Accessibilité
 
-Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assistance quant aux images d'arrière-plan. Les lecteurs d'écran ne pourront donc pas annoncer le sens de l'image aux utilisateur·ice·s. Si l'image contient des informations critiques pour la compréhension générale de la page, mieux vaudra décrire ces informations de façon sémantique dans le document.
+Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assistance quant aux images d'arrière-plan. Les lecteurs d'écran ne peuvent donc pas annoncer le sens de l'image aux utilisateur·ice·s. Si l'image contient des informations critiques pour la compréhension générale de la page, mieux vaut décrire ces informations de façon sémantique dans le document.
 
 - [MDN Comprendre le WCAG, explications de la règle 1.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.1_—_des_équivalents_textuels_doivent_être_fournis_pour_tout_contenu_non_textuel)
-- [Comprendre le critère de réussite 1.1.1 | W3C Understanding WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
+- [Comprendre le critère de réussite 1.1.1 | Comprendre le WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ## Exemples
 

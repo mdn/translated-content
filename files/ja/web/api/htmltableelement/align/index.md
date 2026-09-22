@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.align`** プロパティは、表の配置を表します。
 

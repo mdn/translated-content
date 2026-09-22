@@ -3,7 +3,7 @@ title: "Élément HTML `<th>` : l'élément d'en-tête de tableau"
 short-title: <th>
 slug: Web/HTML/Reference/Elements/th
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 3871111d7fb958626f9d926d8809222d318b8c72
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<th>`** définit une cellule comme l'en-tête d'un groupe de cellules de tableau et peut être utilisé comme enfant de l'élément {{HTMLElement("tr")}}. La nature exacte de ce groupe est définie par les attributs [`scope`](#scope) et [`headers`](#headers).
@@ -16,7 +16,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<th>`** définit une cellule comme l'en
     Stars du football extraterrestre
   </caption>
   <tr>
-    <th scope="col">Joueur·euse</th>
+    <th scope="col">joueur·se</th>
     <th scope="col">Gloobles</th>
     <th scope="col">Za'taak</th>
   </tr>
@@ -81,9 +81,9 @@ caption {
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `abbr`
-  - : Cet attribut contient une description courte et abrégée du contenu de la cellule. Certains outils utilisateurs, comme la synthèse vocale, peuvent décrire cette information avant le contenu lui-même.
+  - : Cet attribut contient une description courte et abrégée du contenu de la cellule. Certains outils utilisateur·ice·s, comme la synthèse vocale, peuvent décrire cette information avant le contenu lui-même.
 - `colspan`
-  - : Une valeur entière positive ou nulle indiquant sur combien de colonnes la cellule d'en-tête s'étend. La valeur par défaut est `1`. Les agents utilisateur ignorent les valeurs supérieures à 1000 comme incorrectes et les ramènent à la valeur par défaut `1`.
+  - : Une valeur entière positive ou nulle indiquant sur combien de colonnes la cellule d'en-tête s'étend. La valeur par défaut est `1`. Les valeurs supérieures à `1000` sont ramenées à `1000`.
 - `headers`
   - : Cet attribut est une liste de chaînes de caractères séparées par des espaces. Chacune correspond à l'attribut `id` de l'élément `<th>` qui s'applique à cet élément.
 - `rowspan`
@@ -95,14 +95,14 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `rowgroup`&nbsp;: Indique que l'en-tête appartient à un groupe de lignes et s'applique à toutes ses cellules&nbsp;;
     - `colgroup`&nbsp;: Indique que l'en-tête appartient à un groupe de colonne et concerne toutes ses cellules.
 
-    Si l'attribut `scope` n'est pas défini ou que sa valeur n'est pas `row`, `col`, `rowgroup`, ou `colgroup`, le navigateur sélectionnera automatiquement l'ensemble de cellules auquel s'applique l'en-tête.
+    Si l'attribut `scope` n'est pas défini ou que sa valeur n'est pas `row`, `col`, `rowgroup`, ou `colgroup`, le navigateur sélectionne automatiquement l'ensemble de cellules auquel s'applique l'en-tête.
 
 ### Attributs obsolètes
 
 Les attributs suivants sont obsolètes et ne doivent pas être utilisés. Ils sont documentés ci-dessous à titre de référence lors de la mise à jour de code existant et pour des raisons historiques uniquement.
 
 - `align` {{Deprecated_Inline}}
-  - : Définit l'alignement horizontal de la cellule d'en-tête. Les valeurs {{Glossary("enumerated", "énumérées")}} possibles sont `left`, `center`, `right`, `justify` et `char`. Lorsque cela est pris en charge, la valeur `char` aligne le contenu textuel sur le caractère défini dans l'attribut [`char`](#char) et sur le décalage défini par l'attribut [`charoff`](#charoff). Utilisez plutôt la propriété CSS {{CSSxRef("text-align")}}, car cet attribut est obsolète.
+  - : Définit l'alignement horizontal de la cellule d'en-tête. Les valeurs {{Glossary("enumerated", "énumérées")}} possibles sont `left`, `center`, `right`, `justify` et `char`. Lorsque c'est pris en charge, la valeur `char` aligne le contenu textuel sur le caractère défini dans l'attribut [`char`](#char) et sur le décalage défini par l'attribut [`charoff`](#charoff). Utilisez plutôt la propriété CSS {{CSSxRef("text-align")}}, car cet attribut est obsolète.
 
 - `axis` {{Deprecated_Inline}}
   - : Contient une liste de chaînes de caractères séparées par des espaces, chacune correspondant à l'attribut `id` d'un groupe de cellules auquel la cellule d'en-tête s'applique. Utilisez l'attribut [`scope`](#scope) à la place, car cet attribut est obsolète.
@@ -128,7 +128,7 @@ Les attributs suivants sont obsolètes et ne doivent pas être utilisés. Ils so
 ## Notes d'utilisation
 
 - L'élément `<th>` ne peut être utilisé qu'à l'intérieur d'un élément {{HTMLElement("tr")}}.
-- Dans des contextes simples, l'utilisation de l'attribut [`scope`](#scope) sur les cellules d'en-tête (éléments `<th>`) est redondante car [`scope`](#scope) est déduit. Cependant, certaines technologies d'assistance peuvent ne pas l'inférer correctement, donc définir explicitement la portée de l'en-tête peut améliorer l'expérience utilisateur.
+- Dans des contextes simples, l'utilisation de l'attribut [`scope`](#scope) sur les cellules d'en-tête (éléments `<th>`) est redondante, car [`scope`](#scope) est déduit. Cependant, certaines technologies d'assistance peuvent ne pas l'inférer correctement, donc définir explicitement la portée de l'en-tête peut améliorer l'expérience utilisateur.
 - Lorsque les attributs [`colspan`](#colspan) et [`rowspan`](#rowspan) sont utilisés pour étendre les cellules d'en-tête sur plusieurs colonnes et lignes, les cellules sans ces attributs définis (avec une valeur par défaut de `1`) sont automatiquement placées dans les espaces libres disponibles de la structure du tableau qui couvrent des cellules 1x1, comme illustré dans la figure suivante&nbsp;:
 
   ![Illustration démontrant l'extension de colonnes et de lignes des cellules de tableau : les cellules 1, 3 et 4 s'étendent sur deux lignes ; la cellule 2 s'étend sur deux colonnes ; les cellules 5 et 6 s'insèrent dans les cellules disponibles qui sont la deuxième et la troisième colonne de la deuxième ligne](/shared-assets/images/diagrams/html/table/column-row-span.png)
@@ -316,10 +316,10 @@ Pour des relations plus complexes entre cellules d'en-tête, l'utilisation des �
 
 #### HTML
 
-Pour améliorer l'{{Glossary("accessibility", "accessibilité")}} du [précédent exemple](#extension_de_colonnes_et_de_lignes) et permettre, par exemple, aux lecteurs d'écran d'énoncer les en-têtes associés à chaque cellule d'en-tête, l'attribut [`headers`](#headers) peut être introduit avec des attributs [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). En raison de la façon dont la colonne «&nbsp;Prononciation&nbsp;» est divisée en deux colonnes dans l'exemple, introduisant un en-tête sur «&nbsp;deux lignes&nbsp;», les technologies d'assistance comme les lecteurs d'écran peuvent ne pas être capables d'identifier à quelles autres cellules d'en-tête (éléments `th`) la cellule d'en-tête «&nbsp;Prononciation&nbsp;» est liée, et inversement. Par conséquent, l'attribut [`headers`](#headers) est utilisé sur les cellules d'en-tête «&nbsp;Prononciation&nbsp;», «&nbsp;API&nbsp;» et «&nbsp;Prononciation simplifiée&nbsp;» pour associer les cellules d'en-tête concernées en fonction des valeurs des identifiants uniques ajoutés via les attributs [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) sous forme de liste séparée par des espaces.
+Pour améliorer {{Glossary("accessibility", "l'accessibilité")}} du [précédent exemple](#extension_de_colonnes_et_de_lignes) et permettre, par exemple, aux lecteurs d'écran d'énoncer les en-têtes associés à chaque cellule d'en-tête, l'attribut [`headers`](#headers) peut être introduit avec des attributs [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). En raison de la façon dont la colonne «&nbsp;Prononciation&nbsp;» est divisée en deux colonnes dans l'exemple, introduisant un en-tête sur «&nbsp;deux lignes&nbsp;», les technologies d'assistance comme les lecteurs d'écran peuvent ne pas être capables d'identifier à quelles autres cellules d'en-tête (éléments `th`) la cellule d'en-tête «&nbsp;Prononciation&nbsp;» est liée, et inversement. Par conséquent, l'attribut [`headers`](#headers) est utilisé sur les cellules d'en-tête «&nbsp;Prononciation&nbsp;», «&nbsp;API&nbsp;» et «&nbsp;Prononciation simplifiée&nbsp;» pour associer les cellules d'en-tête concernées en fonction des valeurs des identifiants uniques ajoutés avec les attributs [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) sous forme de liste séparée par des espaces.
 
 > [!NOTE]
-> Il est recommandé d'utiliser des valeurs plus descriptives et utiles pour l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). Chaque `id` dans un document doit être unique dans ce document. Dans cet exemple, les valeurs d'`id` sont des caractères uniques pour se concentrer sur le concept de l'attribut [`headers`](#headers).
+> Il est recommandé d'utiliser des valeurs plus descriptives et utiles pour l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). Chaque `id` dans un document doit être unique dans ce document. Dans cet exemple, les valeurs d'un `id` sont des caractères uniques pour se concentrer sur le concept de l'attribut [`headers`](#headers).
 
 ```html
 <table>

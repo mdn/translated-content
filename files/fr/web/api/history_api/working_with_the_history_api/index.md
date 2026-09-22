@@ -1,45 +1,45 @@
 ---
-title: Utiliser l'API History
+title: Travailler avec l'API History
 slug: Web/API/History_API/Working_with_the_History_API
 l10n:
-  sourceCommit: 292e29ec89933d06416419f8403241b7e34f6555
+  sourceCommit: d8ecbd3de36a098b1f83f935e581993e9600a916
 ---
 
 {{DefaultAPISidebar("History API")}}
 
-L'API <i lang="en">History</i> permet à un site web d'interagir avec l'historique de la session du navigateur, c'est-à-dire la liste des pages que la personne a visitées sur une période donnée. Lorsqu'une personne visite de nouvelles pages, par exemple en cliquant sur des liens, ces nouvelles pages sont ajoutées à l'historique de la session. La personne peut alors se déplacer dans cet historique en utilisant les boutons «&nbsp;Précédent&nbsp;» et «&nbsp;Suivant&nbsp;» du navigateur.
+L'API History permet à un site web d'interagir avec l'historique de session du navigateur&nbsp;: il s'agit de la liste des pages que l'utilisateur·ice a consultées dans une fenêtre donnée. Lorsque l'utilisateur·ice consulte de nouvelles pages, par exemple en cliquant sur des liens, ces nouvelles pages sont ajoutées à l'historique de session. L'utilisateur·ice peut également parcourir l'historique dans les deux sens à l'aide des boutons «&nbsp;Précédent&nbsp;» et «&nbsp;Suivant&nbsp;» du navigateur.
 
-L'interface principale de cette API est l'interface [`History`](/fr/docs/Web/API/History) qui définit deux ensembles de méthodes&nbsp;:
+L'interface principale définie dans l'API History est l'interface {{DOMxRef("History")}}, qui définit deux ensembles de méthodes bien distincts&nbsp;:
 
-- Les méthodes pour naviguer vers une page de l'historique&nbsp;:
-  - [`History.back()`](/fr/docs/Web/API/History/back)
-  - [`History.forward()`](/fr/docs/Web/API/History/forward)
-  - [`History.go()`](/fr/docs/Web/API/History/go)
+1. Les méthodes pour naviguer vers une page de l'historique de session&nbsp;:
+   - {{DOMxRef("History.back()")}}
+   - {{DOMxRef("History.forward()")}}
+   - {{DOMxRef("History.go()")}}
 
-- Les méthodes pour modifier l'historique de la session&nbsp;:
-  - [`History.pushState()`](/fr/docs/Web/API/History/pushState)
-  - [`History.replaceState()`](/fr/docs/Web/API/History/replaceState)
+2. Les méthodes pour modifier l'historique de session&nbsp;:
+   - {{DOMxRef("History.pushState()")}}
+   - {{DOMxRef("History.replaceState()")}}
 
-Dans ce guide, nous nous intéresserons surtout au deuxième groupe, dont le comportement peut être plus complexe.
+Ce guide couvre uniquement le second ensemble de méthodes.
 
-La méthode `pushState()` permet d'ajouter une nouvelle entrée dans l'historique. La méthode `replaceState()` met à jour l'historique de la session pour la page courante. Ces deux méthodes prennent un paramètre `state` qui peut contenir n'importe quel [objet sérialisable](/fr/docs/Glossary/Serializable_object). Lorsqu'on utilise le navigateur pour accéder à cette entrée d'historique, il déclenchera un évènement [`popstate`](/fr/docs/Web/API/Window/popstate_event) qui contient l'objet d'état associé à cette entrée.
+La méthode `pushState()` ajoute une nouvelle entrée à l'historique de session, tandis que la méthode `replaceState()` met à jour l'entrée de l'historique de session correspondant à la page actuelle. Ces deux méthodes prennent un paramètre `state` qui peut contenir n'importe quel {{Glossary("Serializable_object", "objet qui peut être sérialisé")}}. Lorsque le navigateur navigue vers cette entrée de l'historique, il déclenche un évènement {{DOMxRef("Window.popstate_event", "popstate")}} qui contient l'objet d'état associé à cette entrée.
 
-L'objectif principal de cette API est d'assister les [SPA (<i lang="en">single-page applications</i>)](/fr/docs/Glossary/SPA) qui utilisent les API comme [`fetch()`](/fr/docs/Web/API/Window/fetch) pour mettre à jour la page avec du nouveau contenu plutôt que de charger une nouvelle page complète.
+L'objectif principal de ces API est de prendre en charge les sites web tels que {{Glossary("SPA", "les applications à page unique")}}, qui utilisent des API JavaScript comme {{DOMxRef("Window/fetch", "fetch()")}} pour mettre à jour la page avec un nouveau contenu au lieu de charger une nouvelle page entière.
 
-## SPA et historique de session
+## Applications à page unique et historique de session
 
-Historiquement, les sites web étaient implémentés comme des ensembles de pages. Lorsqu'une personne naviguait vers un autre endroit d'un site en cliquant sur un lien, le navigateur chargeait une nouvelle page à chaque fois.
+De manière traditionnelle, les sites web sont implémentés sous la forme d'un ensemble de pages. Lorsque les utilisateur·ice·s naviguent vers différentes parties du site en cliquant sur des liens, le navigateur charge une nouvelle page entière à chaque fois.
 
-Si cette approche peut très bien convenir pour de nombreux sites, elle possède quelques inconvénients&nbsp;:
+Cette approche convient à de nombreux sites, mais elle présente quelques inconvénients&nbsp;:
 
-- Il peut être inefficace de charger toute une page à chaque fois, alors que seule une partie de la page doit être mise à jour.
-- Il est difficile de maintenir l'état de l'application lorsqu'on navigue entre différentes pages.
+- Le chargement d'une page entière à chaque fois peut être inefficace lorsque seule une partie de la page doit être mise à jour.
+- Il est difficile de conserver l'état de l'application lors d'une navigation entre les pages.
 
-C'est pour ces raisons que certains sites sont désormais implémentés sous la forme de [SPA (<i lang="en">single-page applications</i>)](/fr/docs/Glossary/SPA), où le site est en réalité une seule page, et où lorsqu'une personne clique sur un lien, la page&nbsp;:
+Pour ces raisons, un modèle courant pour les applications web est {{Glossary("SPA", "une application à page unique")}} (SPA). Lorsqu'un utilisateur·ice clique sur un lien, l'application à page unique effectue les étapes suivantes&nbsp;:
 
-1. Empêche l'action par défaut du navigateur consistant à charger une nouvelle page
-2. Récupère avec [`fetch()`](/fr/docs/Web/API/Window/fetch) le nouveau contenu à afficher
-3. Met à jour la page avec le nouveau contenu
+1. Empêche le comportement par défaut qui consiste à charger une nouvelle page.
+2. {{DOMxRef("Window/fetch", "Récupère", "", "nocode")}} un nouveau contenu à afficher.
+3. Met à jour la page avec le nouveau contenu.
 
 Par exemple&nbsp;:
 
@@ -51,59 +51,59 @@ document.addEventListener("click", async (event) => {
     event.preventDefault();
     try {
       // Récupère le nouveau contenu
-      const response = await fetch(`creatures/${creature}.json`);
-      const json = await response.json();
+      const reponse = await fetch(`creatures/${creature}.json`);
+      const resultat = await reponse.json();
       // Met à jour la page avec le nouveau contenu
-      displayContent(json);
-    } catch (err) {
-      console.error(err);
+      afficherContenu(resultat);
+    } catch (erreur) {
+      console.error(erreur);
     }
   }
 });
 ```
 
-Dans le gestionnaire d'évènement pour le clic, si le lien contient un attribut de données `"data-creature"`, on utilise la valeur de cet attribut pour récupérer un fichier JSON qui contient les nouvelles informations à afficher sur la page.
+Dans ce gestionnaire de clic, si le lien contient un attribut de données `"data-creature"`, nous utilisons la valeur de cet attribut pour récupérer un fichier JSON contenant le nouveau contenu de la page.
 
-Le fichier JSON en question pourra ressembler à&nbsp;:
+Le fichier JSON peut se présenter comme ceci&nbsp;:
 
 ```json
 {
-  "description": "Bald eagles are not actually bald.",
+  "description": "Les pygargues à tête blanche ne sont pas réellement chauves.",
   "image": {
-    "src": "images/eagle.jpg",
-    "alt": "A bald eagle"
+    "source": "images/eagle.jpg",
+    "texteAlternatif": "Un pygargue à tête blanche"
   },
-  "name": "Eagle"
+  "nom": "Pygargue"
 }
 ```
 
-Notre fonction `displayContent()` met à jour la page avec le contenu du fichier JSON&nbsp;:
+Notre fonction `afficherContenu()` met à jour la page avec le fichier JSON&nbsp;:
 
 ```js
 // Mettre à jour la page avec le nouveau contenu
-function displayContent(content) {
-  document.title = `Creatures: ${content.name}`;
+function afficherContenu(contenu) {
+  document.title = `Créatures : ${contenu.nom}`;
 
   const description = document.querySelector("#description");
-  description.textContent = content.description;
+  description.textContent = contenu.description;
 
   const photo = document.querySelector("#photo");
-  photo.setAttribute("src", content.image.src);
-  photo.setAttribute("alt", content.image.alt);
+  photo.setAttribute("src", contenu.image.source);
+  photo.setAttribute("alt", contenu.image.texteAlternatif);
 }
 ```
 
-Le problème est que cela interfère avec le comportement normal du navigateur pour les boutons «&nbsp;Précédent&nbsp;» et «&nbsp;Suivant&nbsp;».
+Le problème est que cela rompt le comportement attendu des boutons «&nbsp;Précédent&nbsp;» et «&nbsp;Suivant&nbsp;» du navigateur.
 
-Du point de vue de la personne, elle a cliqué et la page a été mise à jour et cela ressemble donc à une nouvelle page. Si la personne clique sur le bouton «&nbsp;Précédent&nbsp;», elle s'attend à revenir à l'état tel qu'il était avant de cliquer sur le lien.
+Du point de vue de l'utilisateur·ice, un clic sur un lien met à jour la page, si bien qu'elle ressemble à une nouvelle page. Si l'utilisateur·ice appuie ensuite sur le bouton «&nbsp;Précédent&nbsp;» du navigateur, il s'attend à revenir à l'état précédant le clic sur le lien.
 
-Mais pour le navigateur, le dernier lien n'a pas chargé de nouvelle page (et donc créé de nouvelle entrée dans l'historique), et le bouton «&nbsp;Précédent&nbsp;» ramènera la personne sur la page qui était chargée avant l'ouverture de la SPA.
+Mais pour le navigateur, le dernier lien n'a pas chargé de nouvelle page, si bien que le bouton «&nbsp;Précédent&nbsp;» ramène le navigateur à la page chargée avant l'ouverture de l'application à page unique.
 
-C'est pour résoudre ce problème que nous avons les méthodes `pushState()`, `replaceState()`, et l'évènement `popstate`. Ils nous permettent de synchroniser les éléments d'historique et d'être notifié·e quand l'entrée courante de l'historique arrive sur une telle page (par exemple, parce que la personne a utilisé les boutons «&nbsp;Précédent&nbsp;» ou «&nbsp;Suivant&nbsp;»).
+C'est essentiellement le problème que résolvent `pushState()`, `replaceState()` et l'évènement `popstate`. Ils permettent de synthétiser des entrées d'historique et d'être averti·e lorsque l'entrée actuelle de l'historique de session devient l'une de ces entrées, par exemple parce que l'utilisateur·ice a appuyé sur les boutons «&nbsp;Précédent&nbsp;» ou «&nbsp;Suivant&nbsp;».
 
 ## Utiliser `pushState()`
 
-On peut ajouter une entrée dans l'historique grâce à notre gestionnaire d'évènement pour le clic&nbsp;:
+Nous pouvons ajouter une entrée d'historique au gestionnaire de clic ci-dessus comme suit&nbsp;:
 
 ```js
 document.addEventListener("click", async (event) => {
@@ -111,12 +111,12 @@ document.addEventListener("click", async (event) => {
   if (creature) {
     event.preventDefault();
     try {
-      const response = await fetch(`creatures/${creature}.json`);
-      const json = await response.json();
-      displayContent(json);
-      // On ajoute une nouvelle entrée à l'historique.
-      // Cela simule le chargement d'une nouvelle page.
-      history.pushState(json, "", creature);
+      const reponse = await fetch(`creatures/${creature}.json`);
+      const resultat = await reponse.json();
+      afficherContenu(resultat);
+      // Ajoute une nouvelle entrée à l'historique.
+      // Simule le chargement d'une nouvelle page.
+      history.pushState(resultat, "", creature);
     } catch (err) {
       console.error(err);
     }
@@ -124,73 +124,69 @@ document.addEventListener("click", async (event) => {
 });
 ```
 
-Dans cet exemple, nous appelons `pushState()` avec trois arguments&nbsp;:
+Ici, nous appelons `pushState()` avec trois arguments&nbsp;:
 
-- `json`
-  - : Il s'agit du contenu qui vient d'être récupéré. Il sera stocké avec l'entrée de l'historique et inclus plus tard dans la propriété [`state`](/fr/docs/Web/API/PopStateEvent/state) de l'argument passé au gestionnaire d'évènements `popstate`.
-- `""`
-  - : Cet argument est nécessaire pour la rétrocompatibilité avec les anciens sites et devrait toujours être une chaîne de caractères vide.
-- `creature`
-  - : Cette valeur sera utilisée comme URL pour l'entrée d'historique. Elle sera affichée dans la barre d'URL du navigateur et utilisée comme valeur pour l'en-tête [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer) des requêtes HTTP effectuées par la page. Cette valeur doit avoir la [même origine](/fr/docs/Glossary/Same-origin_policy) que la page.
+- `resultat`&nbsp;: Il s'agit du contenu que nous venons de récupérer. Il est stocké avec l'entrée de l'historique, puis inclus en tant que propriété {{DOMxRef("PopStateEvent.state", "état")}} de l'argument transmis au gestionnaire d'évènement `popstate`.
+- `""`&nbsp;: Cette valeur est nécessaire pour assurer la rétrocompatibilité avec les sites existants et doit toujours être une valeur vide.
+- `creature`&nbsp;: Cette valeur est utilisée comme URL de l'entrée. Elle apparaît dans la barre d'adresse du navigateur et sert de valeur à l'en-tête {{HTTPHeader("Referer")}} dans toutes les requêtes HTTP effectuées par la page. Notez qu'elle doit être de {{Glossary("Same-origin policy", "même origine")}} que la page.
 
 ## Utiliser l'évènement `popstate`
 
-Prenons le scénario suivant&nbsp;:
+Supposons que l'utilisateur·ice effectue les étapes suivantes&nbsp;:
 
-1. La personne clique sur un lien dans notre SPA, et nous mettons à jour la page en ajoutant une entrée d'historique A grâce à `pushState()`
-2. Elle clique ensuite sur un autre lien, et nous mettons à jour la page en ajoutant une entrée d'historique B avec `pushState()`
-3. Elle clique sur le bouton «&nbsp;Précédent&nbsp;»
+1. Clique sur un lien de notre application à page unique, si bien que nous mettons à jour la page et ajoutons l'entrée d'historique A avec `pushState()`.
+2. Clique sur un autre lien de notre application à page unique, si bien que nous mettons à jour la page et ajoutons l'entrée d'historique B avec `pushState()`.
+3. Appuie sur le bouton «&nbsp;Précédent&nbsp;».
 
-L'entrée actuelle est A, et le navigateur déclenche l'évènement `popstate`. L'argument passé au gestionnaire d'évènement contient le JSON passé `pushState()` lors de la navigation vers A. Cela signifie que nous pouvons restaurer le contenu correct avec un gestionnaire d'évènement comme celui-ci&nbsp;:
+La nouvelle entrée actuelle de l'historique est alors A, si bien que le navigateur déclenche l'évènement `popstate`, dont l'argument du gestionnaire contient le fichier JSON que nous avons transmis à `pushState()` lors de la navigation vers A. Nous pouvons donc restaurer le contenu correct avec un gestionnaire d'évènement comme celui-ci&nbsp;:
 
 ```js
-// Gestion des boutons précédent/suivant
+// Gère les boutons « Précédent » et « Suivant »
 window.addEventListener("popstate", (event) => {
-  // Si un état a été fourni, nous avons une page "simulée"
-  // et nous mettons à jour la page courante.
+  // Si un état a été fourni, nous avons une page « simulée »
+  // et nous mettons à jour la page actuelle.
   if (event.state) {
-    // On simule le chargement de la page précédente
-    displayContent(event.state);
+    // Simuler le chargement de la page précédente
+    afficherContenu(event.state);
   }
 });
 ```
 
 ## Utiliser `replaceState()`
 
-Il nous reste une brique à ajouter. Lorsqu'on charge la SPA, le navigateur ajoute une entrée d'historique. Comme il s'agit d'un chargement de page classique, l'entrée dans l'historique ne possède pas d'état associé. Prenons maintenant le scénario suivant&nbsp;:
+Il reste un élément à ajouter. Lorsque l'utilisateur·ice charge l'application à page unique, le navigateur ajoute une entrée d'historique. Comme il s'agit d'un chargement réel de page, aucune donnée d'état n'est associée à l'entrée. Supposons donc que l'utilisateur·ice effectue les étapes suivantes&nbsp;:
 
-1. On charge la SPA&nbsp;: le navigateur ajoute une entrée d'historique
-2. On clique sur un lien dans la SPA&nbsp;: le gestionnaire de clic met à jour la page et rajoute une entrée dans l'historique à l'aide de la méthode `pushState()`
-3. On clique sur le bouton «&nbsp;Précédent&nbsp;»
+1. Charge l'application à page unique, si bien que le navigateur ajoute une entrée d'historique.
+2. Clique sur un lien dans l'application à page unique, si bien que le gestionnaire de clic met à jour la page et ajoute une entrée d'historique avec `pushState()`.
+3. Appuie sur le bouton «&nbsp;Précédent&nbsp;».
 
-Nous voudrions que cela restaure l'état initial de la SPA. Mais comme il s'agit d'une navigation vers le même document, la page n'est pas rechargée, et comme l'entrée d'historique ne possède pas d'état pour la page initiale, nous ne pouvons pas utiliser `popstate` pour le restaurer.
+Nous voulons alors revenir à l'état initial de l'application à page unique, mais comme il s'agit d'une navigation dans le même document, la page n'est pas rechargée. De plus, comme l'entrée d'historique de la page initiale ne contient aucun état, nous ne pouvons pas utiliser `popstate` pour la restaurer.
 
-La solution consiste à utiliser `replaceState()` pour définir l'objet d'état pour la page initiale. Par exemple&nbsp;:
+La solution consiste à utiliser `replaceState()` pour définir l'objet d'état de la page initiale. Par exemple&nbsp;:
 
 ```js
-// On crée l'état au chargement de la page et on remplace l'entrée courante
-// de l'historique avec cet état
+// Créer l'état lors du chargement de la page et remplacer l'historique actuel par cet état
 const image = document.querySelector("#photo");
-const initialState = {
+const etatInitial = {
   description: document.querySelector("#description").textContent,
   image: {
     src: image.getAttribute("src"),
     alt: image.getAttribute("alt"),
   },
-  name: "Home",
+  name: "Accueil",
 };
-history.replaceState(initialState, "", document.location.href);
+history.replaceState(etatInitial, "", document.location.href);
 ```
 
-Au chargement de la page, on collecte tous les endroits de la page qui doivent être restaurés quand on reviendra à l'emplacement initial de la SPA. On utilise ici la même structure que le JSON qui est récupéré lors des autres navigations. Les données sont assemblées dans un objet `initialState` qui est passé à `replaceState()`, ce qui permet d'associer ces données à l'entrée courante de l'historique.
+Lors du chargement de la page, nous rassemblons toutes les parties de la page dont nous avons besoin pour la restaurer lorsque l'utilisateur·ice revient au point de départ de l'application à page unique. Cet objet a la même structure que le fichier JSON que nous récupérons lors de la gestion des autres navigations. Nous transmettons cet objet `etatInitial` à `replaceState()`, ce qui ajoute effectivement l'objet d'état à l'entrée actuelle de l'historique.
 
-Désormais, lorsqu'on reviendra au point de départ, l'évènement `popstate` contiendra les informations de l'état initial et on pourra utiliser la fonction `displayContent()` afin de mettre à jour la page.
+Lorsque l'utilisateur·ice revient à notre point de départ, l'évènement `popstate` contient cet état initial et nous pouvons utiliser notre fonction `displayContent()` pour mettre à jour la page.
 
-## Un exemple complet
+## Exemple complet de l'API History
 
-Vous pouvez trouver cet exemple dans son intégralité à l'URL <https://github.com/mdn/dom-examples/tree/main/history-api>, et voir la démo correspondante à l'adresse <https://mdn.github.io/dom-examples/history-api/>.
+Vous trouvez cet exemple complet à l'adresse <https://github.com/mdn/dom-examples/tree/main/history-api>, et vous pouvez voir la démonstration en direct à l'adresse <https://mdn.github.io/dom-examples/history-api/>.
 
 ## Voir aussi
 
-- [L'API <i lang="en">History</i>](/fr/docs/Web/API/History_API)
-- L'objet global [`history`](/fr/docs/Web/API/Window/history)
+- [L'API History](/fr/docs/Web/API/History_API)
+- L'objet global {{DOMxRef("window.history", "history")}}

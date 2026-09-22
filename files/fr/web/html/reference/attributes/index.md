@@ -3,7 +3,7 @@ title: Référence des attributs HTML
 short-title: Attributs
 slug: Web/HTML/Reference/Attributes
 l10n:
-  sourceCommit: fef6630e9b90f9794d3194ea8389ff70599c6884
+  sourceCommit: b8ffa5128ed5afe5f76b8936723f91d86b8fc7df
 ---
 
 Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateur·ice·s.
@@ -107,6 +107,17 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         Un texte alternatif à afficher lorsque l'élément ne peut pas être
         affiché.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Attributes">aria-*</a></code>
+      </td>
+      <td>
+        Tous les éléments
+      </td>
+      <td>
+        Modifie l'état ou les propriétés d'un élément dans l'arborescence d'accessibilité. L'applicabilité dépend de l'attribut <a href="/fr/docs/Web/Accessibility/ARIA">ARIA</a> spécifique.
       </td>
     </tr>
     <tr>
@@ -1456,10 +1467,10 @@ HTML5 définit des restrictions sur les valeurs autorisées des attributs boolé
 
 Pour être tout à fait explicite, les valeurs `"true"` et `"false"` ne sont pas autorisées pour les attributs booléens. Pour représenter une valeur fausse, il faudra ne pas écrire l'attribut du tout. Cette règle peut entraîner quelques incompréhensions&nbsp;: si on écrit `checked="false"` l'attribut `checked` sera présent et donc considéré comme _vrai_ (_true_).
 
-## Attributs du gestionnaire d'événements
+## Attributs du gestionnaire d'évènements
 
 > [!WARNING]
-> L'utilisation des attributs de contenu du gestionnaire d'événements est déconseillée. Le mélange de HTML et de JavaScript produit souvent du code impossible à maintenir, et l'exécution des attributs du gestionnaire d'événements peut également être bloquée par les politiques de sécurité du contenu.
+> L'utilisation des attributs de contenu du gestionnaire d'évènements est déconseillée. Le mélange de HTML et de JavaScript produit souvent du code impossible à maintenir, et l'exécution des attributs du gestionnaire d'évènements peut également être bloquée par les politiques de sécurité du contenu.
 
 > [!WARNING]
 > Bien que cela ne soit pas visible en appelant la méthode `Function.prototype.toString()` sur le gestionnaire, les attributs du gestionnaire d'évènements enveloppent implicitement le code à l'intérieur de 2 instructions `with`, et peuvent produire des résultats inattendus. Par exemple&nbsp;:
@@ -1481,9 +1492,9 @@ Pour être tout à fait explicite, les valeurs `"true"` et `"false"` ne sont pas
 > }
 > ```
 
-En plus des attributs répertoriés dans le tableau ci-dessus, les [gestionnaires d'événements](/fr/docs/Web/API/Document_Object_Model/Events#utilisation_des_propriété_onevent) globaux — tel que [`onclick`](/fr/docs/Web/API/Element/click_event) — peuvent également être définis comme étant des [attributs du contenu](#attribut_de_contenu_ou_attribut_idl) sur tous les éléments.
+En plus des attributs répertoriés dans le tableau ci-dessus, les [gestionnaires d'évènements](/fr/docs/Web/API/Document_Object_Model/Events#utilisation_des_propriété_onevent) globaux — tel que [`onclick`](/fr/docs/Web/API/Element/click_event) — peuvent également être définis comme étant des [attributs du contenu](#attribut_de_contenu_ou_attribut_idl) sur tous les éléments.
 
-Tous les attributs du gestionnaire d'événements acceptent une chaîne de caractères. La chaîne de caractères sera utilisée pour synthétiser une [fonction JavaScript](/fr/docs/Web/JavaScript/Reference/Functions) comme `function nom(/*argument*/) {corps}`, où `nom` est le nom de l'attribut , et `corps` est la valeur de l'attribut. Le gestionnaire reçoit les mêmes paramètres que son homologue du gestionnaire d'événements JavaScript — la plupart des gestionnaires ne reçoivent qu'un seul paramètre `event`, tandis que `onerror` en reçoit cinq&nbsp;: `event`, `source`, `lineno`, `colno`, `error`. Cela signifie que vous pouvez, en général, utiliser la variable `event` dans l'attribut.
+Tous les attributs du gestionnaire d'évènements acceptent une chaîne de caractères. La chaîne de caractères sera utilisée pour synthétiser une [fonction JavaScript](/fr/docs/Web/JavaScript/Reference/Functions) comme `function nom(/*argument*/) {corps}`, où `nom` est le nom de l'attribut , et `corps` est la valeur de l'attribut. Le gestionnaire reçoit les mêmes paramètres que son homologue du gestionnaire d'évènements JavaScript — la plupart des gestionnaires ne reçoivent qu'un seul paramètre `event`, tandis que `onerror` en reçoit cinq&nbsp;: `event`, `source`, `lineno`, `colno`, `error`. Cela signifie que vous pouvez, en général, utiliser la variable `event` dans l'attribut.
 
 ```html
 <div onclick="console.log(event)">Cliquez sur moi !</div>

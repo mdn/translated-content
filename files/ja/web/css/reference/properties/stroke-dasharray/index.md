@@ -1,9 +1,9 @@
 ---
-title: stroke-dasharray
+title: CSS `stroke-dasharray` プロパティ
+short-title: stroke-dasharray
 slug: Web/CSS/Reference/Properties/stroke-dasharray
-original_slug: Web/CSS/stroke-dasharray
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`stroke-dasharray`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[SVG](/ja/docs/Web/SVG) 図形のストローク描画に使用されるダッシュ（線）とすき間のパターンを定義します。指定された場合、要素の {{SVGAttr("stroke-dasharray")}} 属性を上書きします。

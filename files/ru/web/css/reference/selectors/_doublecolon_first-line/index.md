@@ -30,7 +30,11 @@ p::first-line {
 
 ## Синтаксис
 
-{{csssyntax}}
+```css
+::first-line {
+  /* ... */
+}
+```
 
 ## Пример
 

@@ -3,8 +3,6 @@ title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 ---
 
-{{JSRef}}
-
 La méthode **`has()`** renvoie un booléen indiquant si un objet donné est contenu dans l'ensemble `WeakSet`.
 
 {{InteractiveExample("JavaScript Demo: WeakSet.Prototype.has()")}}

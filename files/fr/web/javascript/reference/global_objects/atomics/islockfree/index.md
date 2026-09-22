@@ -63,4 +63,4 @@ Atomics.isLockFree(8); // true (dépend de la plateforme)
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Atomics")}}
+- L'objet natif {{JSxRef("Atomics")}}

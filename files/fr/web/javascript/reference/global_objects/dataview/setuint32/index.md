@@ -68,6 +68,6 @@ dataview.getUint32(0); // 50331648
 ## Voir aussi
 
 - Le guide [des tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- L'objet {{JSxRef("DataView")}}
-- L'objet {{JSxRef("ArrayBuffer")}}
-- L'objet {{JSxRef("Uint32Array")}}
+- L'objet natif {{JSxRef("DataView")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("Uint32Array")}}

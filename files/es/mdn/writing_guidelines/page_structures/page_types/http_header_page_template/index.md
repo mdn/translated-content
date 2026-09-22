@@ -2,7 +2,7 @@
 title: Plantilla de página de encabezado HTTP
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 > [!NOTE]
@@ -68,7 +68,7 @@ l10n:
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar._
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 La primera frase de la página debe seguir este formato:
 

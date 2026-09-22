@@ -3,8 +3,6 @@ title: webRequest.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
 ---
 
-{{AddonSidebar}}
-
 Utilisé lorsqu'une demande n'a pas pu être traitée en raison d'une erreur : par exemple, un manque de connectivité Internet.
 
 L'erreur est transmise à l'auditeur en tant que propriété d'`erreur` de l'objet [`details`](#details).

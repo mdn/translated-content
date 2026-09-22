@@ -3,10 +3,10 @@ title: Propriété CSS `math-style`
 short-title: math-style
 slug: Web/CSS/Reference/Properties/math-style
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`math-style`** indique si les équations MathML devraient être affichées en hauteur normale ou compacte.
+La propriété [CSS](/fr/docs/Web/CSS) **`math-style`** indique si les équations MathML doivent être affichées en hauteur normale ou compacte.
 
 ## Syntaxe
 
@@ -24,6 +24,8 @@ math-style: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 - `normal`
   - : La valeur initiale, indiquant un rendu normal.

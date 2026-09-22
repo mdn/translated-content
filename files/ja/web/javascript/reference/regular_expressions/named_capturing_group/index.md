@@ -2,10 +2,8 @@
 title: "名前付きキャプチャグループ: (?<name>...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Named_capturing_group
 l10n:
-  sourceCommit: a71b8929628a2187794754c202ad399fe357141b
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{JsSidebar}}
 
 **名前付きキャプチャグループ**は特定の種類の[キャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)で、グループに名前を付けることができます。グループの照合結果は、パターン内のインデックスではなく、この名前で後で識別することができます。
 
@@ -69,7 +67,7 @@ function parseLog(entry) {
     entry,
   ).groups;
   return `${author} committed on ${new Date(
-    parseInt(timestamp) * 1000,
+    parseInt(timestamp, 10) * 1000,
   ).toLocaleString()}`;
 }
 
@@ -87,9 +85,9 @@ parseLog("1560979912,Caroline"); // "Caroline committed on 6/19/2019, 5:31:52 PM
 ## 関連情報
 
 - [名前付きキャプチャグループのポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
-- [正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
+- [グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)ガイド
+- [正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
 - [キャプチャグループ: `(...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
 - [非キャプチャグループ: `(?:...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)
 - [名前付き後方参照: `\k<name>`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
-- [ESLint rule: `prefer-named-capture-group`](https://eslint.org/docs/rules/prefer-named-capture-group)
+- [ESLint rule: `prefer-named-capture-group`](https://eslint.org/docs/latest/rules/prefer-named-capture-group)

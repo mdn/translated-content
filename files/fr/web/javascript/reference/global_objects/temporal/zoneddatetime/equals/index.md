@@ -81,5 +81,5 @@ console.log(sameTimeZone("Asia/Shanghai", "Asia/Taipei")); // false
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.ZonedDateTime")}}
+- L'objet natif {{JSxRef("Temporal.ZonedDateTime")}}
 - La méthode statique {{JSxRef("Temporal/ZonedDateTime/compare", "Temporal.ZonedDateTime.compare()")}}

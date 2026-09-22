@@ -44,32 +44,32 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect
 
 ### 检测一个对象是否存在特定属性
 
-```plain
+```js
 const duck = {
-  name: 'Maurice',
-  color: 'white',
-  greeting: function() {
+  name: "Maurice",
+  color: "white",
+  greeting: function () {
     console.log(`Quaaaack! My name is ${this.name}`);
-  }
-}
+  },
+};
 
-Reflect.has(duck, 'color');
+Reflect.has(duck, "color");
 // true
-Reflect.has(duck, 'haircut');
+Reflect.has(duck, "haircut");
 // false
 ```
 
 ### 返回这个对象自身的属性
 
-```plain
+```js
 Reflect.ownKeys(duck);
 // [ "name", "color", "greeting" ]
 ```
 
 ### 为这个对象添加一个新的属性
 
-```plain
-Reflect.set(duck, 'eyes', 'black');
+```js
+Reflect.set(duck, "eyes", "black");
 // returns "true" if successful
 // "duck" now contains the property "eyes: 'black'"
 ```

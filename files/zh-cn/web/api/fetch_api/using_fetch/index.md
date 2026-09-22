@@ -391,7 +391,7 @@ addEventListener("fetch", (event) => {
 不管是请求还是响应都能够包含 body 对象。body 也可以是以下任意类型的实例。
 
 - {{jsxref("ArrayBuffer")}}
-- {{domxref("ArrayBufferView")}} (Uint8Array 等)
+- {{jsxref("TypedArray")}} (Uint8Array 等)
 - {{domxref("Blob")}}/File
 - string
 - {{domxref("URLSearchParams")}}

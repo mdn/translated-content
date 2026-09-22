@@ -3,14 +3,17 @@ title: "HTMLInputElement : évènement selectionchange"
 short-title: selectionchange
 slug: Web/API/HTMLInputElement/selectionchange_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: 81a7c1667ff8881e40435fa7fc7e968f9b6cd622
 ---
 
 {{APIRef("Selection API")}}
 
-L'évènement **`selectionchange`** de l'{{DOMxRef("Selection_API", "API Selection")}} est déclenché lorsqu'une sélection de texte à l'intérieur d'un élément HTML {{HTMLElement("input")}} change. Cela inclut les modifications de l'étendue sélectionnée de caractères ou le déplacement du caret.
+L'évènement **`selectionchange`** de {{DOMxRef("Selection_API", "l'API Selection")}} est déclenché lorsqu'une sélection de texte à l'intérieur d'un élément HTML {{HTMLElement("input")}} change. Cela inclut les modifications de l'étendue sélectionnée de caractères ou le déplacement du caret.
 
 Cet évènement n'est pas annulable.
+
+> [!NOTE]
+> Lorsque vous modifiez la sélection de manière programmatique, par exemple en appelant {{DOMxRef("HTMLInputElement.setSelectionRange()", "setSelectionRange()")}}, la sélection est mise à jour immédiatement, mais l'évènement `selectionchange` est mis en file d'attente en tant que tâche. Ses écouteurs s'exécutent plus tard, après la fin de l'exécution du script en cours. Cela contraste avec des évènements tels que `focus` et `click`, dont les écouteurs s'exécutent de manière synchrone lorsqu'ils sont déclenchés par {{DOMxRef("HTMLElement.focus()", "focus()")}} et {{DOMxRef("HTMLElement.click()", "click()")}}, respectivement.
 
 L'évènement est généralement traité en ajoutant un écouteur sur l'élément {{HTMLElement("input")}}, et dans la fonction gestionnaire on lit les propriétés `selectionStart`, `selectionEnd` et `selectionDirection` de {{DOMxRef("HTMLInputElement")}}.
 

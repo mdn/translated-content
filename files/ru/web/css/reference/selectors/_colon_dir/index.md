@@ -36,7 +36,11 @@ original_slug: Web/CSS/:dir
 
 ### Formal syntax
 
-{{csssyntax}}
+```css-nolint
+:dir([ltr | rtl]) {
+  /* ... */
+}
+```
 
 ## Пример
 

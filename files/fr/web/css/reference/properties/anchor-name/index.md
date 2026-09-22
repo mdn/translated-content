@@ -3,10 +3,10 @@ title: Propriété CSS `anchor-name`
 short-title: anchor-name
 slug: Web/CSS/Reference/Properties/anchor-name
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`anchor-name`** permet de définir un élément comme **élément d'ancre** en lui attribuant un ou plusieurs **noms d'ancre**. Chaque nom peut ensuite être utilisé comme valeur de la propriété {{CSSxRef("position-anchor")}} d'un élément positionné pour l'associer à l'ancre.
+La propriété [CSS](/fr/docs/Web/CSS) **`anchor-name`** permet de définir un élément comme **élément d'ancrage** en lui attribuant un ou plusieurs **noms d'ancrage**. Chaque nom peut ensuite être utilisé comme valeur de la propriété {{CSSxRef("position-anchor")}} d'un élément positionné pour l'associer à l'ancre.
 
 ## Syntaxe
 
@@ -28,29 +28,31 @@ anchor-name: unset;
 
 ### Valeurs
 
-- `none`
-  - : Valeur par défaut. Définir `anchor-name: none` sur un élément signifie qu'il n'est pas défini comme élément d'ancre. Si l'élément était précédemment défini comme ancre et associé à un élément positionné, définir `anchor-name: none` dissocie les deux.
+Cette propriété est définie comme une valeur unique de la liste suivante&nbsp;:
 
-- {{CSSxRef("dashed-ident")}}
+- `none`
+  - : Valeur par défaut. Définir `anchor-name: none` sur un élément signifie qu'il n'est pas défini comme élément d'ancrage. Si l'élément est précédemment défini comme ancre et associé à un élément positionné, définir `anchor-name: none` dissocie les deux.
+
+- {{CSSxRef("&lt;dashed-ident&gt;")}}
   - : Un ou plusieurs identifiants personnalisés séparés par des virgules, définissant le ou les noms de l'ancre, qui peuvent ensuite être référencés dans une propriété {{CSSxRef("position-anchor")}}.
 
 ## Description
 
-Pour positionner un élément par rapport à un élément d'ancre, l'élément positionné requiert trois caractéristiques&nbsp;: une association, une position et un emplacement. Les propriétés `anchor-name` et {{CSSxRef("position-anchor")}} fournissent une association explicite.
+Pour positionner un élément par rapport à un élément d'ancrage, l'élément positionné requiert trois caractéristiques&nbsp;: une association, une position et un emplacement. Les propriétés `anchor-name` et {{CSSxRef("position-anchor")}} fournissent une association explicite.
 
-L'élément d'ancre accepte un ou plusieurs noms d'ancre `<dashed-ident>` définis via la propriété `anchor-name`. Lorsqu'un de ces noms est ensuite utilisé comme valeur de la propriété `position-anchor` d'un élément ayant sa propriété {{CSSxRef("position")}} définie à `absolute` ou `fixed`, les deux éléments sont associés. Ils deviennent liés en définissant un emplacement sur l'élément associé par rapport à l'ancre, ce qui en fait un «&nbsp;élément positionné par ancre&nbsp;».
+L'élément d'ancrage accepte un ou plusieurs noms d'ancre `<dashed-ident>` définis avec la propriété `anchor-name`. Lorsqu'un de ces noms est ensuite utilisé comme valeur de la propriété `position-anchor` d'un élément ayant sa propriété {{CSSxRef("position")}} définie à `absolute` ou `fixed`, les deux éléments sont associés. Ils deviennent liés en définissant un emplacement sur l'élément associé par rapport à l'ancre, ce qui en fait un «&nbsp;élément positionné par une ancre&nbsp;».
 
-Si plusieurs éléments d'ancre partagent le même nom d'ancre, et que ce nom est référencé par la propriété `position-anchor` d'un élément positionné, cet élément sera associé au dernier élément d'ancre portant ce nom dans l'ordre du DOM.
+Si plusieurs éléments d'ancrage partagent le même nom d'ancre, et que ce nom est référencé par la propriété `position-anchor` d'un élément positionné, cet élément est associé au dernier élément d'ancrage portant ce nom dans l'ordre du DOM.
 
-Le positionnement par ancre modifie le [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block) des éléments positionnés par ancre, rendant leur `position` relative à leur ancre plutôt qu'au plus proche ancêtre positionné.
+Le positionnement par une ancre modifie le [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block) des éléments positionnés par une ancre, rendant leur `position` relative à leur ancre plutôt qu'au plus proche ancêtre positionné.
 
-Pour lier et placer un élément positionné à un emplacement précis par rapport à un élément d'ancre, une fonctionnalité de positionnement par ancre est nécessaire, comme la fonction {{CSSxRef("anchor()")}} (utilisée dans la valeur d'une {{Glossary("inset properties", "propriété d'encart")}}) ou la propriété {{CSSxRef("position-area")}}.
+Pour lier et placer un élément positionné à un emplacement précis par rapport à un élément d'ancrage, une fonctionnalité de positionnement par une ancre est nécessaire, comme la fonction {{CSSxRef("anchor()")}} (utilisée dans la valeur d'une {{Glossary("inset properties", "propriété d'encart")}}) ou la propriété {{CSSxRef("position-area")}}.
 
 Vous ne pouvez pas associer un élément positionné à une ancre si l'ancre est masquée, par exemple avec {{CSSxRef("display", "display: none")}} ou {{CSSxRef("visibility", "visibility: hidden")}}, ou si l'ancre fait partie du [contenu ignoré](/fr/docs/Web/CSS/Guides/Containment/Using#ignorer_son_contenu) d'un autre élément à cause de {{CSSxRef("content-visibility", "content-visibility: hidden")}}.
 
-La propriété `anchor-name` est prise en charge sur tous les éléments qui génèrent une boîte principale. Cela signifie que les [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), y compris le contenu généré avec {{CSSxRef("::before")}} et {{CSSxRef("::after")}}, ainsi que des éléments d'interface comme le curseur du champ [`range`](/fr/docs/Web/HTML/Reference/Elements/input/range) ({{CSSxRef("::-webkit-slider-thumb")}}), peuvent être des éléments d'ancre. Les pseudo-éléments sont implicitement ancrés au même élément que l'élément d'origine du pseudo-élément, sauf indication contraire.
+La propriété `anchor-name` est prise en charge sur tous les éléments qui génèrent une boîte principale. Cela signifie que les [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), y compris le contenu généré avec {{CSSxRef("::before")}} et {{CSSxRef("::after")}}, ainsi que des éléments d'interface comme le curseur du champ [`range`](/fr/docs/Web/HTML/Reference/Elements/input/range) ({{CSSxRef("::-webkit-slider-thumb")}}), peuvent être des éléments d'ancrage. Les pseudo-éléments sont implicitement ancrés au même élément que l'élément d'origine du pseudo-élément, sauf indication contraire.
 
-Pour plus d'informations sur les fonctionnalités et l'utilisation des ancres, consultez le module [Positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [Utiliser le positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
+Pour plus d'informations sur les fonctionnalités et l'utilisation des ancres, consultez le module [Positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [Utiliser le positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
 
 ## Définition formelle
 
@@ -68,7 +70,7 @@ Cet exemple associe un élément positionné à une ancre, en positionnant l'él
 
 #### HTML
 
-Nous définissons deux éléments HTML {{HTMLElement("div")}}&nbsp;: un élément d'ancre avec la classe `anchor` et un élément positionné avec la classe `infobox`.
+Nous définissons deux éléments HTML {{HTMLElement("div")}}&nbsp;: un élément d'ancrage avec la classe `ancre` et un élément positionné avec la classe `boite-info`.
 
 Nous ajoutons également du texte de remplissage autour des deux `<div>` pour que le {{HTMLElement("body")}} soit plus haut et nécessite un défilement.
 
@@ -79,9 +81,9 @@ Nous ajoutons également du texte de remplissage autour des deux `<div>` pour qu
   elementum sagittis vitae et.
 </p>
 
-<div class="anchor">⚓︎</div>
+<div class="ancre">⚓︎</div>
 
-<div class="infobox">
+<div class="boite-info">
   <p>Ceci est une boîte d'information.</p>
 </div>
 
@@ -103,7 +105,7 @@ Nous ajoutons également du texte de remplissage autour des deux `<div>` pour qu
 
 #### CSS
 
-Nous commençons par déclarer la `<div>` `anchor` comme élément d'ancre en lui attribuant un nom d'ancre via la propriété `anchor-name`&nbsp;:
+Nous commençons par déclarer la `<div>` `ancre` comme élément d'ancrage en lui attribuant un nom d'une ancre avec la propriété `anchor-name`&nbsp;:
 
 ```css hidden
 body {
@@ -111,7 +113,7 @@ body {
   margin: 0 auto;
 }
 
-.anchor {
+.ancre {
   font-size: 1.8rem;
   color: white;
   text-shadow: 1px 1px 1px black;
@@ -124,19 +126,19 @@ body {
 ```
 
 ```css
-.anchor {
-  anchor-name: --my-anchor;
+.ancre {
+  anchor-name: --mon-ancre;
 }
 ```
 
-Nous associons la seconde `<div>` à l'élément d'ancre en définissant son nom d'ancre comme valeur de la propriété {{CSSxRef("position-anchor")}} de l'élément positionné. Nous définissons ensuite&nbsp;:
+Nous associons la seconde `<div>` à l'élément d'ancrage en définissant son nom d'ancre comme valeur de la propriété {{CSSxRef("position-anchor")}} de l'élément positionné. Nous définissons ensuite&nbsp;:
 
-- la propriété {{CSSxRef("position")}} à `fixed`, ce qui convertit l'élément en _élément positionné par ancre_ pour qu'il puisse être positionné par rapport à l'ancre sur la page&nbsp;;
+- la propriété {{CSSxRef("position")}} à `fixed`, ce qui convertit l'élément en _élément positionné par une ancre_ pour qu'il puisse être positionné par rapport à l'ancre sur la page&nbsp;;
 - les propriétés {{CSSxRef("left")}} et {{CSSxRef("top")}} à des fonctions {{CSSxRef("anchor()")}} avec les valeurs `right` et `top` respectivement. Cela place le bord gauche de la boîte d'information contre le bord droit de son ancre, et son bord supérieur par rapport au bord supérieur de l'ancre&nbsp;;
 - {{CSSxRef("margin-left")}} à `10px`, pour créer un espace entre l'élément positionné et son ancre.
 
 ```css hidden
-.infobox {
+.boite-info {
   color: darkblue;
   background-color: azure;
   border: 1px solid #dddddd;
@@ -147,8 +149,8 @@ Nous associons la seconde `<div>` à l'élément d'ancre en définissant son nom
 ```
 
 ```css
-.infobox {
-  position-anchor: --my-anchor;
+.boite-info {
+  position-anchor: --mon-ancre;
   position: fixed;
   left: anchor(right);
   top: anchor(top);
@@ -177,13 +179,13 @@ Le code HTML est identique à l'exemple précédent, sauf qu'ici nous avons plus
   elementum sagittis vitae et.
 </p>
 
-<div class="anchor">⚓︎</div>
+<div class="ancre">⚓︎</div>
 
-<div class="infobox" id="infobox1">
+<div class="boite-info" id="boite-info1">
   <p>Ceci est une boîte d'information.</p>
 </div>
 
-<div class="infobox" id="infobox2">
+<div class="boite-info" id="boite-info2">
   <p>Ceci est une autre boîte d'information.</p>
 </div>
 
@@ -205,7 +207,7 @@ Le code HTML est identique à l'exemple précédent, sauf qu'ici nous avons plus
 
 #### CSS
 
-Nous déclarons la `<div>` `anchor` comme un élément d'ancre en utilisant la propriété `anchor-name`, en lui attribuant un nom d'ancre comme précédemment.
+Nous déclarons la `<div>` `ancre` comme un élément d'ancrage en utilisant la propriété `anchor-name`, en lui attribuant un nom d'ancre comme précédemment.
 
 ```css hidden
 body {
@@ -213,7 +215,7 @@ body {
   margin: 0 auto;
 }
 
-.anchor {
+.ancre {
   font-size: 1.8rem;
   color: white;
   text-shadow: 1px 1px 1px black;
@@ -226,15 +228,15 @@ body {
 ```
 
 ```css
-.anchor {
-  anchor-name: --my-anchor;
+.ancre {
+  anchor-name: --mon-ancre;
 }
 ```
 
-Chacun des deux éléments positionnés est associé à l'élément d'ancre en définissant son nom d'ancre comme valeur de la propriété {{CSSxRef("position-anchor")}} de l'élément positionné. Les deux éléments reçoivent également la position `fixed`, ce qui en fait des **éléments positionnés par ancre**. Les éléments positionnés sont ensuite placés à différents endroits autour de l'ancre à l'aide d'une combinaison de propriétés d'encart comme ci-dessus et des propriétés {{CSSxRef("align-self")}} / {{CSSxRef("justify-self")}} avec la valeur `anchor-center`, alignant la boîte d'information au centre de l'ancre dans les directions en ligne et en bloc respectivement.
+Chacun des deux éléments positionnés est associé à l'élément d'ancrage en définissant son nom d'ancre comme valeur de la propriété {{CSSxRef("position-anchor")}} de l'élément positionné. Les deux éléments reçoivent également la position `fixed`, ce qui en fait des **éléments positionnés par une ancre**. Les éléments positionnés sont ensuite placés à différents endroits autour de l'ancre à l'aide d'une combinaison de propriétés d'encart comme ci-dessus et des propriétés {{CSSxRef("align-self")}} / {{CSSxRef("justify-self")}} avec la valeur `anchor-center`, alignant la boîte d'information au centre de l'ancre dans les directions en incise et en bloc respectivement.
 
 ```css hidden
-.infobox {
+.boite-info {
   color: darkblue;
   background-color: azure;
   border: 1px solid #dddddd;
@@ -245,18 +247,18 @@ Chacun des deux éléments positionnés est associé à l'élément d'ancre en d
 ```
 
 ```css
-.infobox {
-  position-anchor: --my-anchor;
+.boite-info {
+  position-anchor: --mon-ancre;
   position: fixed;
 }
 
-#infobox1 {
+#boite-info1 {
   left: anchor(right);
   align-self: anchor-center;
   margin-left: 10px;
 }
 
-#infobox2 {
+#boite-info2 {
   bottom: anchor(top);
   justify-self: anchor-center;
   margin-bottom: 15px;
@@ -271,7 +273,7 @@ Faites défiler la page pour voir comment les deux boîtes d'information sont ra
 
 ### Plusieurs noms d'ancre
 
-Cet exemple montre qu'un élément d'ancre peut avoir plusieurs noms d'ancre.
+Cet exemple montre qu'un élément d'ancrage peut avoir plusieurs noms d'ancre.
 
 #### HTML
 
@@ -284,13 +286,13 @@ Le code HTML est identique à l'exemple précédent.
   elementum sagittis vitae et.
 </p>
 
-<div class="anchor">⚓︎</div>
+<div class="ancre">⚓︎</div>
 
-<div class="infobox" id="infobox1">
+<div class="boite-info" id="boite-info1">
   <p>Ceci est une boîte d'information.</p>
 </div>
 
-<div class="infobox" id="infobox2">
+<div class="boite-info" id="boite-info2">
   <p>Ceci est une autre boîte d'information.</p>
 </div>
 
@@ -320,7 +322,7 @@ body {
   margin: 0 auto;
 }
 
-.anchor {
+.ancre {
   font-size: 1.8rem;
   color: white;
   text-shadow: 1px 1px 1px black;
@@ -331,7 +333,7 @@ body {
   padding: 3px;
 }
 
-.infobox {
+.boite-info {
   color: darkblue;
   background-color: azure;
   border: 1px solid #dddddd;
@@ -342,22 +344,22 @@ body {
 ```
 
 ```css
-.anchor {
+.ancre {
   anchor-name: --anchor1, --anchor2;
 }
 
-.infobox {
+.boite-info {
   position: fixed;
 }
 
-#infobox1 {
+#boite-info1 {
   position-anchor: --anchor1;
   left: anchor(right);
   align-self: anchor-center;
   margin-left: 10px;
 }
 
-#infobox2 {
+#boite-info2 {
   position-anchor: --anchor2;
   bottom: anchor(top);
   justify-self: anchor-center;
@@ -384,5 +386,5 @@ Faites défiler la page pour voir comment les deux boîtes d'information sont ra
 - La propriété {{CSSxRef("position-anchor")}}
 - La propriété {{CSSxRef("anchor-scope")}}
 - L'attribut HTML [`anchor`](/fr/docs/Web/HTML/Reference/Global_attributes/anchor)
-- Le module [de position par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
-- Le guide [d'utilisation de positionnement d'ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
+- Le module [de position par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
+- Le guide [d'utilisation de positionnement avec une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)

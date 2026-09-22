@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto
 original_slug: Learn/Common_questions
 ---
 
-{{LearnSidebar}}
-
 Cette section de la zone d'apprentissage est là pour fournir des réponses aux questions fréquentes qui peuvent survenir et qui ne concernent pas nécesserairement l'apprentissage du code (par exemple les articles sur [HTML](/fr/docs/Learn_web_development/Core/Structuring_content) ou [CSS](/fr/docs/Learn_web_development/Core/Styling_basics).) Ces articles sont conçus pour être lus de manière indépendante.
 
 ## Comment le Web fonctionne

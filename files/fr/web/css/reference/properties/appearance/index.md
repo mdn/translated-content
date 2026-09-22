@@ -389,7 +389,7 @@ select {
 
 Bien que les styles {{CSSxRef("background-color")}} et {{CSSxRef("border")}} soient définis sur tous les éléments `<select>` et leurs sélecteurs, les styles `::picker(select)` n'affectent le sélecteur que lorsque le select et le sélecteur ont la propriété `appearance` définie à `base-select`. Le premier et le troisième select ont le même aspect car `menulist-button` est un mot-clé de compatibilité.
 
-Notez que, par défaut, la taille en ligne du `<select>` correspond généralement à celle de l'`<option>` ayant le plus de texte, et que le sélecteur déroulant apparaît au-dessus de la page affichée lorsqu'il est ouvert, ce qui fait qu'il n'est pas contraint par la page environnante et donc entièrement visible. Ces affirmations ne sont plus vraies lorsque `base-select` est défini.
+Notez que, par défaut, la taille en incise du `<select>` correspond généralement à celle de `<option>` ayant le plus de texte, et que le sélecteur déroulant apparaît au-dessus de la page affichée lorsqu'il est ouvert, ce qui fait qu'il n'est pas contraint par la page environnante et donc entièrement visible. Ces affirmations ne sont plus vraies lorsque `base-select` est défini.
 
 ## Spécifications
 

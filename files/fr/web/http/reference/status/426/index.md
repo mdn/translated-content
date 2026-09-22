@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`426 Upgrade Required`** indique que le serveur refuse de réaliser la requête en utilisant le protocole actuel, mais pourrait accepter de le faire après que le client passe à un autre protocole.
+Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`426 Upgrade Required`** indique que le serveur refuse de réaliser la requête en utilisant le protocole actuel, mais peut accepter de le faire après que le client passe à un autre protocole.
 
 Avec cette réponse, le serveur renvoie un en-tête {{HTTPHeader("Upgrade")}} pour indiquer le(s) protocole(s) requis.
 
@@ -23,7 +23,7 @@ Avec cette réponse, le serveur renvoie un en-tête {{HTTPHeader("Upgrade")}} po
 
 ```http
 GET /resources HTTP/1.1
-Host: exemple.com
+Host: example.com
 ```
 
 Le serveur d'origine attend que les requêtes soient effectuées en {{Glossary("HTTP_3", "HTTP/3")}}&nbsp;:

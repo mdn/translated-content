@@ -2,11 +2,11 @@
 title: 403 Forbidden
 slug: Web/HTTP/Reference/Status/403
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`403 Forbidden`** indique que le serveur a compris la requête mais a refusé de la traiter.
-Ce statut est similaire à {{HTTPStatus("401")}}, sauf que pour les réponses **`403 Forbidden`**, s'authentifier ou se réauthentifier ne change rien.
+Ce statut est similaire à {{HTTPStatus("401")}}, sauf que pour les réponses **`403 Forbidden`**, s'authentifier ou se ré-authentifier ne change rien.
 L'échec de la requête est lié à la logique applicative, comme des permissions insuffisantes pour une ressource ou une action.
 
 Les clients qui reçoivent une réponse `403` doivent s'attendre à ce que répéter la requête sans modification échoue avec la même erreur.

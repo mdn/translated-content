@@ -3,10 +3,10 @@ title: Fonction CSS `shape()`
 short-title: shape()
 slug: Web/CSS/Reference/Values/basic-shape/shape
 l10n:
-  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
+  sourceCommit: cd0970bc03cf30a9a8089954cc542a17dbe9eba3
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`shape()`** permet de définir une forme pour les propriétés {{CSSxRef("clip-path")}} et {{CSSxRef("offset-path")}}. Elle combine un point de départ initial avec une série de commandes de forme qui définissent le tracé de la forme. La fonction `shape()` fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`shape()`** permet de définir une forme pour les propriétés {{CSSxRef("border-shape")}}, {{CSSxRef("clip-path")}} et {{CSSxRef("offset-path")}}. Elle combine un point de départ initial avec une série de commandes de forme qui définissent le tracé de la forme. La fonction `shape()` fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}.
 
 ## Syntaxe
 
@@ -163,7 +163,7 @@ La fonction `shape()` permet de définir des formes complexes. Elle est similair
 Cependant, `shape()` présente plusieurs avantages par rapport à `path()`&nbsp;:
 
 - `shape()` utilise la syntaxe CSS standard, ce qui facilite la création et la modification des formes directement dans votre feuille de style. À l'inverse, `path()` utilise la syntaxe [SVG path](/fr/docs/Web/SVG/Reference/Element/path), moins intuitive si vous ne connaissez pas SVG.
-- `shape()` prend en charge divers types d'unités CSS, y compris les pourcentages, `rem` et `em`. `path()` définit les formes comme une seule chaîne et limite les unités à `px`.
+- `shape()` prend en charge divers types d'unités CSS, y compris les pourcentages, `rem` et `em`. `path()` définit les formes comme une seule chaîne de caractères et limite les unités à `px`.
 - `shape()` permet aussi l'utilisation de fonctions mathématiques CSS comme {{CSSxRef("calc")}}, {{CSSxRef("max")}} et {{CSSxRef("abs")}}, offrant plus de flexibilité.
 
 ## Syntaxe formelle
@@ -455,6 +455,7 @@ La troisième forme (`shape3`) dessine une courbe de Bézier quadratique et une 
 
 ## Voir aussi
 
+- La propriété {{CSSxRef("border-shape")}}
 - La propriété {{CSSxRef("clip-path")}}
 - La propriété {{CSSxRef("offset-path")}}
 - Le module des [formes de base](/fr/docs/Web/CSS/Guides/Shapes)

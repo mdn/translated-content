@@ -3,7 +3,7 @@ title: CSS 値と単位
 short-title: 値と単位
 slug: Web/CSS/Guides/Values_and_units
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: c8522f47d8123fe529f39851b13b9fc01345ffbf
 ---
 
 CSS 宣言はすべて、プロパティと値のペアから成っています。値には、単一のキーワード、整数、関数、異なる型の組み合わせなど、プロパティに応じてさまざまなデータ型を含めることがあります。また、値には単位を持つものもあれば、持たないものもあります。すべてのプロパティは、CSS 全体で有効な値も受け入れます。CSS 値と単位モジュールでは、CSS プロパティが受け入れる値と単位というデータの型を定義しています。このモジュールでは、CSS プロパティと関数に対して有効な値の設定するには、CSS 値定義構文、つまり形式文法を定義します。
@@ -40,6 +40,7 @@ CSS 宣言はすべて、プロパティと値のペアから成っています�
 - {{cssxref("mod()")}}
 - {{cssxref("pow()")}}
 - {{cssxref("progress()")}}
+- {{cssxref("random()")}}
 - {{cssxref("rem()")}}
 - {{cssxref("round()")}}
 - {{cssxref("sibling-count()")}}
@@ -50,7 +51,7 @@ CSS 宣言はすべて、プロパティと値のペアから成っています�
 - {{cssxref("tan()")}}
 - {{cssxref("url_function", "url()")}}
 
-CSS 値と単位モジュールでは、 `calc-mix()`, `crossorigin()`, `first-valid()`, `integrity()`, `random()`, `random-item()`, `referrerpolicy()`, `src()`, `type()`, `toggle()` の関数も導入しています。現在のところ、これらの機能に対応しているブラウザーはありません。
+CSS 値と単位モジュールでは、 `calc-mix()`, `first-valid()`, `integrity()`, `random-item()`, `src()`, `type()`, `toggle()` の各関数も導入しています。現在のところ、これらの機能に対応しているブラウザーはありません。
 
 ### データ型
 

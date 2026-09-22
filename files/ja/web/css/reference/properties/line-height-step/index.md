@@ -1,14 +1,16 @@
 ---
-title: line-height-step
+title: CSS `line-height-step` プロパティ
+short-title: line-height-step
 slug: Web/CSS/Reference/Properties/line-height-step
-original_slug: Web/CSS/line-height-step
 l10n:
-  sourceCommit: 293c903f50ef81458e5e1df61887abaf8b4d7bb9
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}
 
-**`line-height-step`** は CSS のプロパティで、行ボックスの高さにおける刻みの単位を設定します。このプロパティが設定された場合、行ボックスの高さは単位の倍数のうち最も近いものに切り上げられます。
+**`line-height-step`** は [CSS](/ja/docs/Web/CSS) のプロパティで、行ボックスの高さにおける刻みの単位を設定します。このプロパティが設定された場合、行ボックスの高さは単位の倍数のうち最も近いものに切り上げられます。
+
+## 構文
 
 ```css
 /* ポイント値 */
@@ -21,8 +23,6 @@ line-height-step: revert;
 line-height-step: revert-layer;
 line-height-step: unset;
 ```
-
-## 構文
 
 `line-height-step` プロパティは、以下のうちの一つで指定します。
 
@@ -65,7 +65,7 @@ h1 {
 
 ## 仕様書
 
-{{Specifications}}
+現時点で、この機能を対応しているブラウザーはありません。
 
 ## ブラウザーの互換性
 
@@ -76,3 +76,4 @@ h1 {
 - {{Cssxref("font")}}
 - {{Cssxref("font-size")}}
 - {{Cssxref("line-height")}}
+- [CSS Rhythmic Sizing](https://drafts.csswg.org/css-rhythm/) 仕様書

@@ -28,7 +28,7 @@ var miRespuesta = new Response(cuerpo,opciones);
   - : Un objeto que contiene las opciones de personalización para la respuesta HTTP. Las opciones posibles son:
     - `status`: El código de estado HTTP, p.e.: `200`.
     - `statusText`: El mensaje de estado asociado con el código de estado HTTP, p.e.: `OK`.
-    - `headers`: Cualquier cabecera que quieras añadir a la respuesta. Puede ser un objeto {{domxref("Headers")}} o un objeto literal de {{domxref("ByteString")}} pares claves/valor (ver [Cabeceras HTTP](/es/docs/Web/HTTP/Reference/Headers) para más información).
+    - `headers`: Cualquier cabecera que quieras añadir a la respuesta. Puede ser un objeto {{domxref("Headers")}} o un objeto literal de {{jsxref("String")}} pares claves/valor (ver [Cabeceras HTTP](/es/docs/Web/HTTP/Reference/Headers) para más información).
 
 ## Ejemplos
 

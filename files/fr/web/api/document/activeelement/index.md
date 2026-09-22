@@ -3,7 +3,7 @@ title: "Document : propriété activeElement"
 short-title: activeElement
 slug: Web/API/Document/activeElement
 l10n:
-  sourceCommit: dc9d517589ac7b74bc205f49492b0450dfdb78de
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 {{APIRef("DOM")}}
@@ -21,9 +21,9 @@ En général, une personne peut appuyer sur la touche <kbd>Tab</kbd> pour dépla
 
 Un {{DOMxRef('Element')}} profond qui a actuellement la sélection.
 
-- Si l'élément sélectionné est dans l'arbre d'ombre (<i lang="en">shadow tree</i> en anglais) dans le document actuel (par exemple, l'élément sélectioné est à l'intérieur d'un élément `iframe` et le `document` appelant contient cet iframe), alors ce sera l'élément racine de cet arbre (dans cet exemple, cet `iframe`).
-- Si l'élément sélectionné se trouve dans un arbre de document qui n'est pas issu du document actuel (par exemple, l'élément sélectionné se trouve dans le document principal, et le `document` appelant est un iframe intégré), alors ce sera `null`.
-- S'il n'y a pas d'élément sélectionné, ce sera le {{DOMxRef("Document.body")}} ou le {{DOMxRef("Document.documentElement")}}.
+- Si l'élément sélectionné est dans l'arbre d'ombre (<i lang="en">shadow tree</i> en anglais) dans le document actuel (par exemple, l'élément sélectionné est à l'intérieur d'un élément `iframe` et le `document` appelant contient cet iframe), alors ce est l'élément racine de cet arbre (dans cet exemple, cet `iframe`).
+- Si l'élément sélectionné se trouve dans un arbre de document qui n'est pas issu du document actuel (par exemple, l'élément sélectionné se trouve dans le document principal, et le `document` appelant est un iframe intégré), alors c'est `null`.
+- S'il n'y a pas d'élément sélectionné, c'est le {{DOMxRef("Document.body")}} ou le {{DOMxRef("Document.documentElement")}}.
 
 ## Exemples
 

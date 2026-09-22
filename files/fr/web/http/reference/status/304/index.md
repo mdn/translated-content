@@ -2,13 +2,13 @@
 title: 304 Not Modified
 slug: Web/HTTP/Reference/Status/304
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse de redirection](/fr/docs/Web/HTTP/Reference/Status#messages_de_redirection) HTTP **`304 Not Modified`** indique qu'il n'est pas nécessaire de retransmettre les ressources demandées.
 
 Ce code de réponse est envoyé lorsque la requête est une requête [conditionnelle](/fr/docs/Web/HTTP/Guides/Conditional_requests) {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}} avec un en-tête {{HTTPHeader("If-None-Match")}} ou {{HTTPHeader("If-Modified-Since")}} et que la condition s'évalue à «&nbsp;faux&nbsp;».
-Il confirme que la ressource en cache côté client est toujours valide et que le serveur aurait envoyé une réponse {{HTTPStatus("200", "200 OK")}} avec la ressource si la condition s'était évaluée à «&nbsp;vrai&nbsp;».
+Il confirme que la ressource en cache côté client est toujours valide et que le serveur a envoyé une réponse {{HTTPStatus("200", "200 OK")}} avec la ressource si la condition s'était évaluée à «&nbsp;vrai&nbsp;».
 Voir [mise en cache HTTP](/fr/docs/Web/HTTP/Guides/Caching) pour plus d'informations.
 
 La réponse ne doit pas contenir de corps et doit inclure les en-têtes qui auraient été envoyés dans une réponse {{HTTPStatus("200")}} équivalente, tels que&nbsp;:
@@ -44,7 +44,7 @@ curl --http1.1 -I --header 'If-Modified-Since: Tue, 21 Nov 2050 08:00:00 GMT' \
  https://developer.mozilla.org/fr/
 ```
 
-Cela produira la requête HTTP suivante&nbsp;:
+Cela produit la requête HTTP suivante&nbsp;:
 
 ```http
 GET /fr/ HTTP/1.1
@@ -54,7 +54,7 @@ Accept: */*
 If-Modified-Since: Tue, 21 Nov 2050 08:00:00 GMT
 ```
 
-La réponse serait {{HTTPStatus("200", "200 OK")}} avec la version actuelle de la ressource si celle-ci avait été modifiée après l'horodatage dans l'en-tête {{HTTPHeader("If-Modified-Since")}}.
+La réponse est {{HTTPStatus("200", "200 OK")}} avec la version actuelle de la ressource si celle-ci avait été modifiée après l'horodatage dans l'en-tête {{HTTPHeader("If-Modified-Since")}}.
 À la place, on obtient une réponse `304` qui inclut les en-têtes {{HTTPHeader("ETag")}}, {{HTTPHeader("Age")}} et {{HTTPHeader("Expires")}}, indiquant que la version en cache de la ressource est toujours à jour&nbsp;:
 
 ```http
@@ -76,7 +76,7 @@ curl --http1.1 -I --header 'If-None-Match: "b20a0973b226eeea30362acb81f9e0b3"' \
  https://developer.mozilla.org/fr/
 ```
 
-Il en résultera la requête HTTP suivante&nbsp;:
+Il en résulte la requête HTTP suivante&nbsp;:
 
 ```http
 GET /fr/ HTTP/1.1

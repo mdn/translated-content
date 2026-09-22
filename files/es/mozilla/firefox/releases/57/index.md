@@ -54,9 +54,9 @@ _No hay ningún cambio._
 
 ### JavaScript
 
-- El bucle no estándar {{jsxref("Statements/for_each...in", "for each...in")}} (E4X) fue eliminado. En su lugar, utilícese {{jsxref("Statements/for...of", "for...of")}} y consúltese [Atención: los bucles de JavaScript 1.6 «for-each-in» son obsoletos](/es/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated) para obtener ayuda en la migración. ([Error 1083470 en Firefox](https://bugzil.la/1083470)).
-- Se marcaron como obsoletos los métodos {{jsxref("Object.prototype.watch()")}} y {{jsxref("Object.unwatch", "unwatch()")}}. Se emitirá una alerta si se utilizan y serán eliminados en el futuro próximo ([Error 934669 en Firefox](https://bugzil.la/934669)).
-- Se eliminaron los objetos {{jsxref("Iterator")}} y {{jsxref("StopIteration")}} y el protocolo de iteración heredado ([Error 1098412 en Firefox](https://bugzil.la/1098412)).
+- El bucle no estándar `for each...in` (E4X) fue eliminado. En su lugar, utilícese {{jsxref("Statements/for...of", "for...of")}} y consúltese [Atención: los bucles de JavaScript 1.6 «for-each-in» son obsoletos](/es/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated) para obtener ayuda en la migración. ([Error 1083470 en Firefox](https://bugzil.la/1083470)).
+- Se marcaron como obsoletos los métodos `Object.prototype.watch()` y `unwatch()`. Se emitirá una alerta si se utilizan y serán eliminados en el futuro próximo ([Error 934669 en Firefox](https://bugzil.la/934669)).
+- Se eliminaron los objetos {{jsxref("Iterator")}} y `StopIteration` y el protocolo de iteración heredado ([Error 1098412 en Firefox](https://bugzil.la/1098412)).
 
 ### API
 
@@ -107,7 +107,7 @@ _No hay ningún cambio._
 
 ### HTML
 
-- `<link rel="preload">` (véase [Precargar contenido con rel="preload"](/es/docs/Web/HTML/Attributes/rel/preload)) fue desactivado en Firefox 57 a causa de varios problemas de compatibilidad con la web (p. ej., [Error 1405761 en Firefox](https://bugzil.la/1405761)). Se espera que para Firefox 58 quede lista la versión de reemplazo, la cual funcionará para recursos no almacenables en la antememoria.
+- `<link rel="preload">` (véase [Precargar contenido con rel="preload"](/es/docs/Web/HTML/Reference/Attributes/rel/preload)) fue desactivado en Firefox 57 a causa de varios problemas de compatibilidad con la web (p. ej., [Error 1405761 en Firefox](https://bugzil.la/1405761)). Se espera que para Firefox 58 quede lista la versión de reemplazo, la cual funcionará para recursos no almacenables en la antememoria.
 
 ### API
 

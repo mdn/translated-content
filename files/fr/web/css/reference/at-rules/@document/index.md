@@ -3,12 +3,12 @@ title: Règle CSS `@document`
 short-title: "@document"
 slug: Web/CSS/Reference/At-rules/@document
 l10n:
-  sourceCommit: e328268bb418551ab451881845881b5837c9da83
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Deprecated_Header}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
-La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@document`** restreint les règles qu'elle contient en fonction de l'URL du document. Elle est principalement conçue pour les feuilles de style utilisateur, bien qu'elle puisse être également utilisée pour les feuilles de style d'auteur.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@document`** restreint les règles qu'elle contient en fonction de l'URL du document. Elle est principalement conçue pour les feuilles de style utilisateur·ice, bien qu'elle puisse être également utilisée pour les feuilles de style du site.
 
 ## Syntaxe
 
@@ -31,12 +31,12 @@ Une règle `@document` peut définir une ou plusieurs fonctions de correspondanc
 
 Les valeurs fournies aux fonctions `url()`, `url-prefix()`, `media-document()` et `domain()` peuvent être éventuellement délimitées par des apostrophes, simples ou doubles. Les valeurs fournies à la fonction `regexp()` _doivent_ être délimitées par des apostrophes.
 
-Les valeurs échappées fournies à la fonction `regexp()` doivent être en outre échappées pour le CSS. Par exemple, un `.` (point) correspond à n'importe quel caractère dans les expressions régulières. Pour établir une correspondance avec un point littéral, vous aurez d'abord besoin de l'échapper en utilisant les règles des expressions rationnelles (en `\.`), puis d'échapper cette chaîne en utilisant les règles CSS (en `\\.`).
+Les valeurs échappées fournies à la fonction `regexp()` doivent être en outre échappées pour le CSS. Par exemple, un `.` (point) correspond à n'importe quel caractère dans les expressions régulières. Pour établir une correspondance avec un point littéral, vous avez d'abord besoin de l'échapper en utilisant les règles des expressions rationnelles (en `\.`), puis d'échapper cette chaîne de caractères en utilisant les règles CSS (en `\\.`).
 
 `@document` n'est actuellement pris en charge que dans Firefox&nbsp;; si vous souhaitez reproduire cette fonctionnalité dans un navigateur autre que Firefox, vous pouvez essayer d'utiliser [cette prothèse d'émulation <sup>(angl.)</sup>](https://github.com/An-Error94/Handy-Scripts/tree/master/%40document-polyfill) créée par @An-Error94, qui combine un script utilisateur·ice, des [attributs data-\*](/fr/docs/Web/HTML/Reference/Global_attributes/data-*), et des [sélecteurs d'attributs](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors).
 
 > [!NOTE]
-> Il existe une version préfixée de cette propriété pour Mozilla — `@-moz-document`. Cette propriété a été restreinte aux feuilles de style utilisateur ou à celles de l'agent utilisateur à partir de Firefox 59 dans Nightly et Bêta — afin d'expérimenter une méthode de réduction des risques d'injections CSS (cf. [bogue Firefox 1035091 <sup>(angl.)</sup>](https://bugzil.la/1035091)).
+> Il existe une version préfixée de cette propriété pour Mozilla — `@-moz-document`. Cette propriété a été restreinte aux feuilles de style utilisateur·ice ou à celles de l'agent utilisateur à partir de Firefox 59 dans Nightly et Bêta — afin d'expérimenter une méthode de réduction des risques d'injections CSS (cf. [bogue Firefox 1035091 <sup>(angl.)</sup>](https://bugzil.la/1035091)).
 
 ### Syntaxe formelle
 
@@ -85,4 +85,4 @@ Les valeurs échappées fournies à la fonction `regexp()` doivent être en outr
 
 ## Voir aussi
 
-- [Règles de feuille de style utilisateur par site <sup>(angl.)</sup>](https://lists.w3.org/Archives/Public/www-style/2004Aug/0135) sur la liste de diffusion www-style.
+- [Règles de feuille de style utilisateur·ice par site <sup>(angl.)</sup>](https://lists.w3.org/Archives/Public/www-style/2004Aug/0135) sur la liste de diffusion www-style.

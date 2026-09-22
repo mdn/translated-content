@@ -262,7 +262,7 @@ while (thisHeading) {
 
 ### 针对扩展中的 XML 文档进行评估
 
-以下使用位于 [chrome://yourextension/content/peopleDB.xml]() 的 XML 文档作为示例。
+以下使用位于 [chrome://yourextension/content/peopleDB.xml](<>) 的 XML 文档作为示例。
 
 ```xml
 <?xml version="1.0"?>

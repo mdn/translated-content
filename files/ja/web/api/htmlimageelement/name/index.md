@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} インターフェイスの **`name`** プロパティは非推奨で、要素の名前を指定します。これは、全ての要素で利用可能な {{domxref("Element.id", "id")}} プロパティに置き換えられました。
 

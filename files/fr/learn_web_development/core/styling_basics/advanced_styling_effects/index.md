@@ -4,8 +4,6 @@ slug: Learn_web_development/Core/Styling_basics/Advanced_styling_effects
 original_slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 ---
 
-{{LearnSidebar}}
-
 Cet article est une sorte de boîte à malices : elle introduit certaines des fonctions avancées disponibles pour styliser les boîtes, fonctions n'entrant pas dans catégories vues plus haut — comme les ombres, les mélanges de couleurs ou les filtres.
 
 <table class="standard-table">

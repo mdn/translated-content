@@ -37,7 +37,7 @@ baseline-shift: unset;
 - `super`
   - : La ligne de base dominante est déplacée à la position par défaut pour les exposants.
 - `<length-percentage>`
-  - : Rehausse (si positif) ou abaisse (si négatif) la ligne de base dominante de l'élément de contenu textuel de la longueur ou du pourcentage spécifié, le pourcentage étant relatif à la ligne de base dominante de la propriété {{CSSxRef("line-height")}} de l'élément parent de contenu textuel.
+  - : Rehausse (si positif) ou abaisse (si négatif) la ligne de base dominante de l'élément de contenu textuel de la longueur ou du pourcentage défini, le pourcentage étant relatif à la ligne de base dominante de la propriété {{CSSxRef("line-height")}} de l'élément parent de contenu textuel.
 
 ## Définition formelle
 

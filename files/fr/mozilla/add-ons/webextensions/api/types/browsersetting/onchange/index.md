@@ -3,8 +3,6 @@ title: onChange
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
 ---
 
-{{AddonSidebar}}
-
 L'événement `BrowserSetting.onChanged` est déclenché lorsque le paramètre est modifié.
 
 ## Syntaxe

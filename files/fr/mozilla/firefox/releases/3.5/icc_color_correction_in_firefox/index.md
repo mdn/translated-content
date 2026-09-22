@@ -2,10 +2,10 @@
 title: Correction de couleur ICC dans Firefox
 slug: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
 l10n:
-  sourceCommit: 1d3d0c10ebf5c8c55f75b9adce74d1e5001866c6
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
-Bien que la prise en charge de la correction des couleurs a été introduite dans Firefox 3, elle a été désactivée par défaut, ce qui nécessite quelques manipulations dans la fenêtre about:config pour l'activer. Firefox 3.5 corrige les problèmes qui ont conduit à sa désactivation par défaut dans la version précédente, et désormais, les images comportant des balises [International Color Consortium <sup>(angl.)</sup>](https://www.color.org/index.xalter) (ICC) sont, par défaut, corrigées en termes de couleurs.
+Bien que la prise en charge de la correction des couleurs a été introduite dans Firefox 3, elle a été désactivée par défaut, ce qui nécessite quelques manipulations dans la fenêtre about:config pour l'activer. Firefox 3.5 corrige les problèmes qui ont conduit à sa désactivation par défaut dans la version précédente, et désormais, les images comportant des balises [International Color Consortium <sup>(angl.)</sup>](https://www.color.org/) (ICC) sont, par défaut, corrigées en termes de couleurs.
 
 L'image ci-dessous est divisée en trois sections. Le coin supérieur gauche montre l'image telle qu'elle est affichée par Firefox 2. Le coin supérieur droit montre comment l'image s'affiche dans Firefox 3. La partie inférieure montre l'image telle qu'elle est affichée dans Photoshop.
 
@@ -101,10 +101,10 @@ Le tableau suivant répertorie les valeurs possibles.
 
 ### Mises en garde
 
-Le nouveau système de gestion des couleurs QCMS introduit dans Firefox 3.5 ne prend actuellement en charge que les profils de couleurs ICC version 2, et non la version 4. Cela peut entraîner un affichage trop sombre des images. Voir [le bogue 488800 <sup>(angl.)</sup>](https://bugzil.la/488800) et le [test des profils ICC version 4 <sup>(angl.)</sup>](https://www.color.org/version4html.xalter).
+Le nouveau système de gestion des couleurs QCMS introduit dans Firefox 3.5 ne prend actuellement en charge que les profils de couleurs ICC version 2, et non la version 4. Cela peut entraîner un affichage trop sombre des images. Voir [le bogue 488800 <sup>(angl.)</sup>](https://bugzil.la/488800) et le [test des profils ICC version 4 <sup>(angl.)</sup>](https://www.color.org/version4html/).
 
 ## Voir aussi
 
 - [Tellement de couleurs <sup>(angl.)</sup>](https://bholley.wordpress.com/2008/09/12/so-many-colors/) (article de blog)
 - [Profils de couleurs dans Firefox 3 <sup>(angl.)</sup>](https://johnresig.com/blog/color-profiles/) (article de blog)
-- [Consortium international de la couleur <sup>(angl.)</sup>](https://www.color.org/index.xalter)
+- [Consortium international de la couleur <sup>(angl.)</sup>](https://www.color.org/)

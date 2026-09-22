@@ -108,7 +108,7 @@ HTML
 - [El atributo `<img> srcset`](/es/docs/Web/HTML/Reference/Elements/img#attributes)
   - [Imagenes responsivas](/es/docs/Web/HTML/Guides/Responsive_images)
 
-- [Precargando contenido con `rel="preload"`](/es/docs/Web/HTML/Attributes/rel/preload) - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
+- [Precargando contenido con `rel="preload"`](/es/docs/Web/HTML/Reference/Attributes/rel/preload) - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
 
 CSS
 

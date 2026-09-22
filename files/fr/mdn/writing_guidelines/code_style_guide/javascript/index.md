@@ -2,16 +2,15 @@
 title: Guide pour rédiger des exemples de code JavaScript
 short-title: Exemples JavaScript
 slug: MDN/Writing_guidelines/Code_style_guide/JavaScript
-original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
 l10n:
-  sourceCommit: 359d3c9cea9b2caa691c63ed3b01714ad4416372
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Les consignes suivantes expliquent comment rédiger des exemples de code JavaScript pour MDN Web Docs. Cet article liste les règles pour écrire des exemples concis et compréhensibles par le plus grand nombre.
 
 ## Lignes directrices générales pour les exemples de code JavaScript
 
-Cette section explique les lignes directrices générales à garder à l'esprit lors de la rédaction d'exemples de code JavaScript. Les sections suivantes aborderont des points plus spécifiques.
+Cette section explique les lignes directrices générales à garder à l'esprit lors de la rédaction d'exemples de code JavaScript. Les sections suivantes abordent des points plus spécifiques.
 
 ### Choisir un format
 
@@ -125,7 +124,7 @@ En règle générale, utilisez les commentaires sur une seule ligne pour comment
   // Ceci est un commentaire sur une seule ligne bien rédigé
   ```
 
-- Si un commentaire ne commence pas immédiatement après un nouveau niveau d'indentation, ajoutez une ligne vide puis le commentaire. Cela créera un bloc de code, rendant évident ce à quoi le commentaire se rapporte. Placez aussi vos commentaires sur des lignes séparées précédant le code concerné. Exemple&nbsp;:
+- Si un commentaire ne commence pas immédiatement après un nouveau niveau d'indentation, ajoutez une ligne vide puis le commentaire. Cela crée un bloc de code, rendant évident ce à quoi le commentaire se rapporte. Placez aussi vos commentaires sur des lignes séparées précédant le code concerné. Exemple&nbsp;:
 
   ```js example-good
   function checkout(goodsPrice, shipmentPrice, taxes) {
@@ -141,7 +140,7 @@ En règle générale, utilisez les commentaires sur une seule ligne pour comment
 
 ### Affichage des journaux
 
-- Dans du code destiné à la production, il est rarement nécessaire de commenter l'affichage de données. Dans les exemples, nous utilisons souvent `console.log()`, `console.error()` ou des fonctions similaires pour afficher des valeurs importantes. Pour aider la lectrice ou le lecteur à comprendre ce qui sera affiché sans exécuter le code, vous pouvez ajouter un commentaire _après_ la fonction avec la sortie qui sera produite. Écrivez&nbsp;:
+- Dans du code destiné à la production, il est rarement nécessaire de commenter l'affichage de données. Dans les exemples, nous utilisons souvent `console.log()`, `console.error()` ou des fonctions similaires pour afficher des valeurs importantes. Pour aider la lectrice ou le lecteur à comprendre ce qui est affiché sans exécuter le code, vous pouvez ajouter un commentaire _après_ la fonction avec la sortie qui est produite. Écrivez&nbsp;:
 
   ```js example-good
   function exampleFunc(fruitBasket) {
@@ -366,7 +365,7 @@ Lorsque des [boucles](/fr/docs/Learn_web_development/Core/Scripting/Loops) sont 
   }
   ```
 
-  L'exemple ci-dessous ne suit pas les recommandations pour l'initialisation (il crée implicitement une variable globale et échouera en mode strict)&nbsp;:
+  L'exemple ci-dessous ne suit pas les recommandations pour l'initialisation (il crée implicitement une variable globale et échoue en mode strict)&nbsp;:
 
   ```js example-bad
   const chats = ["Athena", "Luna"];
@@ -397,7 +396,7 @@ Lorsque des [boucles](/fr/docs/Learn_web_development/Core/Scripting/Loops) sont 
 > N'utilisez jamais `for...in` avec les tableaux et les chaînes de caractères.
 
 > [!NOTE]
-> Envisagez de ne pas utiliser de boucle `for` du tout. Si vous utilisez un [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) (ou une [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) pour certaines opérations), privilégiez des méthodes d'itération plus sémantiques comme [`map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`every()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/every), [`findIndex()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex), [`find()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/find), [`includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) et bien d'autres.
+> Envisagez de ne pas utiliser de boucle `for` du tout. Si vous utilisez un {{JSxRef("Array")}} (ou une {{JSxRef("String")}} pour certaines opérations), privilégiez des méthodes d'itération plus sémantiques comme {{JSxRef("Array/map", "map()")}}, {{JSxRef("Array/every", "every()")}}, {{JSxRef("Array/findIndex", "findIndex()")}}, {{JSxRef("Array/find", "find()")}}, {{JSxRef("Array/includes", "includes()")}} et bien d'autres.
 
 ### Instructions conditionnelles
 
@@ -464,7 +463,7 @@ Les instructions switch peuvent être un peu piégeuses.
   }
   ```
 
-  Si vous ajoutez un `break`, il sera inatteignable. N'écrivez pas&nbsp;:
+  Si vous ajoutez un `break`, il est inatteignable. N'écrivez pas&nbsp;:
 
   ```js example-bad
   switch (espece) {
@@ -500,7 +499,7 @@ Les instructions switch peuvent être un peu piégeuses.
 
 ### Gestion des erreurs
 
-- Si certains états de votre programme génèrent des erreurs non interceptées, cela arrêtera l'exécution et peut réduire l'utilité de l'exemple. Il faut donc intercepter les erreurs avec un bloc [`try...catch`](/fr/docs/Web/JavaScript/Reference/Statements/try...catch), comme ci-dessous&nbsp;:
+- Si certains états de votre programme génèrent des erreurs non interceptées, cela arrête l'exécution et peut réduire l'utilité de l'exemple. Il faut donc intercepter les erreurs avec un bloc [`try...catch`](/fr/docs/Web/JavaScript/Reference/Statements/try...catch), comme ci-dessous&nbsp;:
 
   ```js example-good
   try {
@@ -529,7 +528,7 @@ Les instructions switch peuvent être un peu piégeuses.
 
 - Lors de la définition d'une classe, utilisez le _PascalCase_ (en commençant par une majuscule) pour le nom de la classe et le _camelCase_ (en commençant par une minuscule) pour les propriétés et méthodes de l'objet.
 
-- Lors de la définition d'une instance d'objet, que ce soit par un littéral ou via un constructeur, utilisez le _camelCase_, en commençant par une minuscule, pour le nom de l'instance. Par exemple&nbsp;:
+- Lors de la définition d'une instance d'objet, que ce soit par un littéral ou avec un constructeur, utilisez le _camelCase_, en commençant par une minuscule, pour le nom de l'instance. Par exemple&nbsp;:
 
   ```js example-good
   const hanSolo = new Person("Han Solo", 25, "il/lui");
@@ -638,7 +637,7 @@ Cette section liste nos recommandations sur les opérateurs à utiliser et dans 
 
 ### Opérateurs conditionnels
 
-Lorsque vous souhaitez affecter à une variable une valeur littérale selon une condition, utilisez l'[opérateur conditionnel (ternaire)](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator) plutôt qu'une instruction `if...else`. Cette règle s'applique aussi lors du retour d'une valeur. Écrivez&nbsp;:
+Lorsque vous souhaitez affecter à une variable une valeur littérale selon une condition, utilisez [l'opérateur conditionnel (ternaire)](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator) plutôt qu'une instruction `if...else`. Cette règle s'applique aussi lors du retour d'une valeur. Écrivez&nbsp;:
 
 ```js example-good
 const x = condition ? 1 : 2;
@@ -659,7 +658,7 @@ L'opérateur conditionnel est utile lors de la création de chaînes de caractè
 
 ### Opérateur d'égalité stricte
 
-Préférez les opérateurs d'[égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality) (triple égal) et d'inégalité stricte aux opérateurs d'égalité (double égal) et d'inégalité non stricts.
+Préférez les opérateurs [d'égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality) (triple égal) et d'inégalité stricte aux opérateurs d'égalité (double égal) et d'inégalité non stricts.
 
 Utilisez les opérateurs d'égalité stricte et d'inégalité stricte ainsi&nbsp;:
 
@@ -675,7 +674,7 @@ name == "Shilpa";
 age != 25;
 ```
 
-Si vous devez utiliser `==` ou `!=`, rappelez-vous que `== null` est le seul cas acceptable. TypeScript échouera dans tous les autres cas, nous ne voulons donc pas les avoir dans nos exemples de code. Pensez à ajouter un commentaire pour expliquer pourquoi vous en avez besoin.
+Si vous devez utiliser `==` ou `!=`, rappelez-vous que `== null` est le seul cas acceptable. TypeScript échoue dans tous les autres cas, nous ne voulons donc pas les avoir dans nos exemples de code. Pensez à ajouter un commentaire pour expliquer pourquoi vous en avez besoin.
 
 ### Raccourcis pour les tests booléens
 
@@ -696,7 +695,7 @@ Pour insérer des valeurs dans des chaînes de caractères, utilisez les [gabari
   console.log(`Salut ! Je suis ${name} !`);
   ```
 
-  N'effectuez pas de concaténation de chaînes ainsi&nbsp;:
+  N'effectuez pas de concaténation de chaînes de caractères ainsi&nbsp;:
 
   ```js example-bad
   const name = "Shilpa";
@@ -738,7 +737,7 @@ De bons noms de variables sont essentiels pour comprendre le code.
 
 Lors de la déclaration de variables et de constantes, utilisez les mots-clés [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const), pas [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var). Les exemples suivants montrent ce qui est recommandé et ce qui ne l'est pas sur MDN Web Docs&nbsp;:
 
-- Si une variable ne sera pas réaffectée, préférez `const`, comme ceci&nbsp;:
+- Si une variable n'est pas réaffectée, préférez `const`, comme ceci&nbsp;:
 
   ```js example-good
   const name = "Shilpa";
@@ -753,14 +752,14 @@ Lors de la déclaration de variables et de constantes, utilisez les mots-clés [
   console.log("Joyeux anniversaire !");
   ```
 
-- L'exemple ci-dessous utilise `let` là où il faudrait `const`. Le code fonctionnera, mais nous voulons éviter cette utilisation dans les exemples de code MDN Web Docs.
+- L'exemple ci-dessous utilise `let` là où il faut `const`. Le code fonctionne, mais nous voulons éviter cette utilisation dans les exemples de code MDN Web Docs.
 
   ```js example-bad
   let name = "Shilpa";
   console.log(name);
   ```
 
-- L'exemple ci-dessous utilise `const` pour une variable qui est réaffectée. La réaffectation provoquera une erreur.
+- L'exemple ci-dessous utilise `const` pour une variable qui est réaffectée. La réaffectation provoque une erreur.
 
   ```js example-bad
   const age = 40;
@@ -853,7 +852,7 @@ Voici une liste non exhaustive d'APIs Web à éviter et par quoi les remplacer&n
 
 ### Utiliser des APIs sûres et fiables
 
-- N'utilisez pas {{DOMxRef("Element.innerHTML")}} pour insérer du contenu purement textuel dans un élément&nbsp;: utilisez {{DOMxRef("Node.textContent")}} à la place. La propriété `innerHTML` pose des problèmes de sécurité si la personne développant ne contrôle pas le paramètre. Plus nous évitons de l'utiliser dans nos exemples, moins il y aura de failles de sécurité lorsque le code sera copié-collé.
+- N'utilisez pas {{DOMxRef("Element.innerHTML")}} pour insérer du contenu purement textuel dans un élément&nbsp;: utilisez {{DOMxRef("Node.textContent")}} à la place. La propriété `innerHTML` pose des problèmes de sécurité si la personne développant ne contrôle pas le paramètre. Plus nous évitons de l'utiliser dans nos exemples, moins il y a de failles de sécurité lorsque le code est copié-collé.
 
   L'exemple ci-dessous montre l'utilisation de `textContent`.
 
@@ -871,7 +870,7 @@ Voici une liste non exhaustive d'APIs Web à éviter et par quoi les remplacer&n
   para.innerHTML = text;
   ```
 
-- La fonction `alert()` est peu fiable. Elle ne fonctionne pas dans les exemples interactifs de MDN Web Docs qui sont dans un {{HTMLElement("iframe")}}. De plus, elle est modale pour toute la fenêtre, ce qui est gênant. Dans les exemples statiques, utilisez `console.log()` ou `console.error()`. Dans les [exemples interactifs](/fr/docs/MDN/Writing_guidelines/Page_structures/Live_samples), évitez `console.log()` et `console.error()` car ils ne sont pas affichés. Utilisez un élément d'interface dédié.
+- La fonction `alert()` est peu fiable. Elle ne fonctionne pas dans les exemples interactifs de MDN Web Docs qui sont dans un {{HTMLElement("iframe")}}. De plus, elle est bloquante pour toute la fenêtre, ce qui est gênant. Dans les exemples statiques, utilisez `console.log()` ou `console.error()`. Dans les [exemples interactifs](/fr/docs/MDN/Writing_guidelines/Page_structures/Live_samples), évitez `console.log()` et `console.error()`, car ils ne sont pas affichés. Utilisez un élément d'interface dédié.
 
 ### Utiliser la bonne méthode de journalisation
 

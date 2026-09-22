@@ -34,7 +34,7 @@ symmetricDifference(other)
 
 ![겹쳐진 2개의 원이 있는 벤 다이어그램입니다. A와 B의 대칭차는 둘 다에는 포함하지 않고 두 원중 어느 한 원에만 포함되는 영역입니다.](diagram.svg)
 
-`symmetricDifference()`는 `other` 매개변수로 [유사 Set](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) 객체를 허용합니다. 어떠한 사용자 코드 호출없이 `this`에 저장된 데이터를 직접 검색하기 때문에 {{jsxref("Operators/this", "this")}}는 실제 {{jsxref("Set")}} 인스턴스여야 합니다. 그 다음 `keys()` 메서드를 호출하여 `other`를 순회하고 `other`에서 보이지 않는 `this`의 모든 요소와 `this`에서 보이지 않는 `other`의 모든 요소로 새 집합을 구성합니다.
+`symmetricDifference()`는 `other` 매개변수로 [유사 Set](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) 객체를 허용합니다. 어떠한 사용자 코드 호출없이 `this`에 저장된 데이터를 직접 검색하기 때문에 {{jsxref("this")}}는 실제 {{jsxref("Set")}} 인스턴스여야 합니다. 그 다음 `keys()` 메서드를 호출하여 `other`를 순회하고 `other`에서 보이지 않는 `this`의 모든 요소와 `this`에서 보이지 않는 `other`의 모든 요소로 새 집합을 구성합니다.
 
 반환된 집합의 요소 순서는 먼저 `this`에 있는 요소, 그 다음에 `other`에 있는 요소입니다.
 

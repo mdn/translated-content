@@ -3,8 +3,6 @@ title: Travailler avec l'API Bookmarks
 slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
 ---
 
-{{AddonSidebar}}
-
 Les signets permettent aux utilisateurs de collecter et d'organiser des listes de pages Web, afin qu'ils puissent facilement retrouver leurs favoris. Grâce à l'API Bookmarks, vos extensions peuvent manipuler les signets de la même manière que les utilisateurs.
 
 ## Permissions

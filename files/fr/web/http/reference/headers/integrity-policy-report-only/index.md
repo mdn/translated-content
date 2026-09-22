@@ -3,10 +3,10 @@ title: En-tête Integrity-Policy-Report-Only
 short-title: Integrity-Policy-Report-Only
 slug: Web/HTTP/Reference/Headers/Integrity-Policy-Report-Only
 l10n:
-  sourceCommit: 6720d579bd658f02c56363805e97e69f93dc79f1
+  sourceCommit: 5ab391405a364e5a512b8182c376261ee8a0bf18
 ---
 
-{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Integrity-Policy-Report-Only`** permet aux administrateur·ice·s de site web de signaler les ressources chargées par l'agent utilisateur qui violeraient les garanties de [l'intégrité des sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity) si la politique d'intégrité était appliquée (en utilisant l'en-tête {{HTTPHeader("Integrity-Policy")}}).
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Integrity-Policy-Report-Only`** permet aux administrateur·ice·s de site web de signaler les ressources chargées par l'agent utilisateur qui violent les garanties de [l'intégrité des sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity) si la politique d'intégrité est appliquée (en utilisant l'en-tête {{HTTPHeader("Integrity-Policy")}}).
 
 Les violations de la politique peuvent être signalées à l'aide de [l'API Reporting](/fr/docs/Web/API/Reporting_API).
 Les rapports peuvent être observés dans la page pour laquelle la politique est appliquée, à l'aide d'un [`ReportingObserver`](/fr/docs/Web/API/ReportingObserver), et envoyés aux points de terminaison du serveur définis dans un en-tête de réponse {{HTTPHeader("Reporting-Endpoints")}} et sélectionnés à l'aide du champ [`endpoints`](#endpoints).
@@ -49,7 +49,7 @@ Les valeurs de l'en-tête sont définies comme des dictionnaires de champs struc
         Comme il s'agit de la valeur par défaut et de la seule valeur, omettre `sources` équivaut à définir `sources=(inline)`.
 
 - `endpoints` {{Optional_Inline}}
-  - : Une liste de [noms de points de terminaison de rapport](/fr/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint) qui indiquent où les rapports seront envoyés.
+  - : Une liste de [noms de points de terminaison de rapport](/fr/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint) qui indiquent où les rapports sont envoyés.
     Les points de terminaison de rapport doivent être définis dans un en-tête {{HTTPHeader("Reporting-Endpoints")}}.
 
 ## Exemples
@@ -61,8 +61,8 @@ Cet exemple montre un document qui signale à un point de terminaison de serveur
 Notez que le `integrity-endpoint` utilisé dans `Integrity-Policy-Report-Only` est défini dans l'en-tête {{HTTPHeader("Reporting-Endpoints")}}.
 
 ```http
-Reporting-Endpoints: integrity-endpoint=https://exemple.com/integrity, backup-integrity-endpoint=https://report-provider.exemple/integrity
-Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrity-endpoint, backup-integrity-endpoint)
+Reporting-Endpoints: integrity-endpoint=https://example.com/integrity, backup-integrity-endpoint=https://report-provider.exemple/integrity
+Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrity-endpoint backup-integrity-endpoint)
 ```
 
 La [charge utile du rapport](/fr/docs/Web/API/Reporting_API#points_de_terminaison_du_serveur_de_rapports) peut ressembler à ceci.
@@ -72,10 +72,10 @@ Notez que la propriété `body.reportOnly` est `true`, car ce rapport a été d�
 {
   "age": "176279",
   "type": "integrity-violation",
-  "url": "https://exemple.com",
+  "url": "https://example.com",
   "body": {
-    "documentURL": "https://exemple.com",
-    "blockedURL": "https://exemple.com/main.js",
+    "documentURL": "https://example.com",
+    "blockedURL": "https://example.com/main.js",
     "destination": "script",
     "reportOnly": "true"
   },

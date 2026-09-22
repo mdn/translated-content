@@ -3,7 +3,7 @@ title: Comment ajouter des images et des médias
 short-title: Ajouter des médias
 slug: MDN/Writing_guidelines/Howto/Images_media
 l10n:
-  sourceCommit: 0ff7ba5177bf2e66214bd90b58590c6bf3acb758
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 Cette page explique comment ajouter des images et des médias aux pages de documentation sur MDN.
@@ -15,7 +15,7 @@ Considérez ce dépôt comme une **bibliothèque de médias** que vous pouvez pa
 
 Le dépôt contient des fichiers audio, vidéo, des polices, des images telles que des photos, des schémas et des icônes, ainsi que des fichiers divers comme des PDF, des sous-titres, des profils colorimétriques, etc.
 Si aucune ressource appropriée n'est disponible dans le dépôt, vous pouvez ajouter vos propres ressources ainsi que les fichiers sources des médias que vous souhaitez inclure.
-Vous trouverez des exemples dans le [dossier HTTP de shared-assets <sup>(angl.)</sup>](https://github.com/mdn/shared-assets/tree/main/images/diagrams/http).
+Vous trouvez des exemples dans le [dossier HTTP de shared-assets <sup>(angl.)</sup>](https://github.com/mdn/shared-assets/tree/main/images/diagrams/http).
 
 Pour utiliser une ressource du dépôt shared-assets dans une page MDN, consultez la section [Utiliser des ressources partagées dans la documentation <sup>(angl.)</sup>](https://github.com/mdn/shared-assets?tab=readme-ov-file#using-shared-assets-in-documentation) du fichier README du projet.
 
@@ -23,9 +23,9 @@ Pour utiliser une ressource du dépôt shared-assets dans une page MDN, consulte
 
 De manière générale, si vous ajoutez des images, en particulier des schémas, envisagez d'utiliser un format vectoriel comme SVG pour les raisons suivantes&nbsp;:
 
-- **Les auteurs peuvent éditer le SVG directement** avec n'importe quel IDE ou outil en ligne.
-  Modifier un fichier .png implique généralement de recréer la ressource depuis zéro ou d'utiliser un logiciel de retouche d'image, ce qui est source d'erreurs et peut introduire des artefacts visuels ou de compression.
-- **Le SVG peut être comparé par Git**. À l'inverse, un fichier binaire entier est considéré comme modifié à chaque changement, donc un .png de 1 Mo augmentera la taille du dépôt de 1 Mo à chaque fusion si le fichier est modifié.
+- **Les auteur·ice·s peuvent éditer le SVG directement** avec n'importe quel IDE ou outil en ligne.
+  Modifier un fichier `.png` implique généralement de recréer la ressource depuis zéro ou d'utiliser un logiciel de retouche d'image, ce qui est source d'erreurs et peut introduire des artefacts visuels ou de compression.
+- **Le SVG peut être comparé par Git**. À l'inverse, un fichier binaire entier est considéré comme modifié à chaque changement, donc un `.png` de 1 Mo augmente la taille du dépôt de 1 Mo à chaque fusion si le fichier est modifié.
 - **Expérience utilisateur flexible**. Les SVG sont des formats vectoriels, ils ne deviennent donc pas flous quel que soit le niveau de zoom.
 
 ## Ajouter des images au dépôt de contenu
@@ -73,23 +73,23 @@ Prenons un exemple&nbsp;:
    git push -u origin mes-images
    ```
 
-6. Vous êtes maintenant prêt à créer votre [requête de tirage (<i lang="en">pull request</i> en anglais)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+6. Vous êtes maintenant prêt à créer votre [requête de tirage (<i lang="en">pull request</i> en anglais)](https://docs.github.com/fr/pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 ## Ajouter les textes alternatifs aux images
 
 Chaque image, `![]` et `<img>`, doit inclure un texte alternatif.
 Les attributs `alt` doivent être courts et fournir toutes les informations pertinentes que l'image transmet.
-Lorsque vous écrivez la description de l'image, réfléchissez aux informations précieuses de l'image et à la façon dont vous les transmettriez à quelqu'un qui peut lire le contenu de la page mais ne peut pas charger les images.
+Lorsque vous écrivez la description de l'image, réfléchissez aux informations précieuses de l'image et à la façon dont vous les transmettez à quelqu'un qui peut lire le contenu de la page mais ne peut pas charger les images.
 
 Soyez sûr que le texte alternatif de l'image est basé sur son contexte.
 Si la photo de Fluffy le chien est un avatar à côté d'un avis pour la nourriture pour chien Yuckymeat, `alt="Fluffy"` est approprié. Si la même photo fait partie de la page d'adoption de Fluffy, les informations transmises dans l'image sont pertinentes pour les futurs parents de chiens, telles que `alt="Fluffy, un terrier tricolore à poil très court, avec une balle de tennis dans la bouche."`.
-Le texte environnant indique probablement la taille et la race de Fluffy, il serait donc redondant de l'inclure.
+Le texte environnant indique probablement la taille et la race de Fluffy, il est donc redondant de l'inclure.
 Évitez de décrire l'image avec trop de détails&nbsp;: le futur parent n'a pas besoin de savoir si le chien est à l'intérieur ou à l'extérieur, ou s'il a un collier rouge et une laisse bleue.
 
 Avec les captures d'écran, écrivez ce que vous apprenez de l'image, ne détaillez pas le contenu de la capture d'écran et omettez les informations dont les lecteurs n'ont pas besoin ou qu'ils connaissent déjà.
 Par exemple, si vous êtes sur une page expliquant comment modifier les paramètres de Bing, si vous avez une capture d'écran d'un résultat de recherche Bing, n'incluez pas le terme de recherche ou le nombre de résultats, etc., car ce ne sont pas le but de l'image.
-Limitez l'attribut `alt` au sujet en question&nbsp;: comment modifier les paramètres dans Bing. L'attribut `alt` pourrait être `alt="L'icône des paramètres se trouve dans la barre de navigation sous le champ de recherche."`.
-N'incluez pas «&nbsp;capture d'écran&nbsp;» ou «&nbsp;Bing&nbsp;» car l'utilisateur·ice n'a pas besoin de savoir qu'il s'agit d'une capture d'écran et il sait déjà que c'est Bing, car il est sur une page expliquant comment modifier les paramètres de Bing.
+Limitez l'attribut `alt` au sujet en question&nbsp;: comment modifier les paramètres dans Bing. L'attribut `alt` peut être `alt="L'icône des paramètres se trouve dans la barre de navigation sous le champ de recherche."`.
+N'incluez pas «&nbsp;capture d'écran&nbsp;» ou «&nbsp;Bing&nbsp;», car l'utilisateur·ice n'a pas besoin de savoir qu'il s'agit d'une capture d'écran et il sait déjà que c'est Bing, car il est sur une page expliquant comment modifier les paramètres de Bing.
 
 La syntaxe en markdown et HTML&nbsp;:
 
@@ -105,11 +105,11 @@ Exemples&nbsp;:
 <img alt="Logo OpenWebDocs : Carle la chenille" src="carle.png" />
 ```
 
-Alors que les images purement décoratives doivent avoir un attribut `alt` vide, les images ajoutées à la documentation MDN doivent avoir une raison d'être, et nécessitent donc une description sous forme de chaîne non vide.
+Alors que les images purement décoratives doivent avoir un attribut `alt` vide, les images ajoutées à la documentation MDN doivent avoir une raison d'être, et nécessitent donc une description sous forme de chaîne de caractères qui n'est pas vide.
 
 ## Compression des images
 
-Lorsque vous ajoutez des images à une page du MDN Web Docs, vous devez vous assurer qu'elles sont compressées autant que possible (sans dégradation de la qualité) afin de réduire la taille du téléchargement pour nos lectrices et lecteurs. L'absence de compression entraînera l'échec de l'intégration continue, qui vous avertira que certaines de vos images sont trop volumineuses.
+Lorsque vous ajoutez des images à une page du MDN Web Docs, vous devez vous assurer qu'elles sont compressées autant que possible (sans dégradation de la qualité) afin de réduire la taille du téléchargement pour nos lectrices et lecteurs. L'absence de compression entraîne l'échec de l'intégration continue, qui vous avertit que certaines de vos images sont trop volumineuses.
 
 La meilleure façon de compresser les images est d'utiliser l'outil de compression intégré. Vous pouvez compresser une image de manière appropriée en utilisant la commande `filecheck` avec l'option `--save-compression`. Cette option compresse l'image autant que possible et remplace l'original par la version compressée. Par exemple, **depuis le répertoire de votre copie locale de `mdn/content`**&nbsp;:
 
@@ -126,7 +126,7 @@ Plusieurs arguments s'opposent à l'utilisation de vidéos dans la documentation
 - La vidéo est linéaire. Les gens n'ont pas tendance à lire la documentation en ligne de manière linéaire, en commençant par le début et en lisant jusqu'à la fin. _Ils scannent_. La vidéo est vraiment difficile à scanner ainsi&nbsp;: elle oblige la personne à consommer le contenu du début à la fin.
 - La vidéo est moins dense en informations que le texte. Il faut plus de temps pour consommer une vidéo expliquant quelque chose que pour lire les instructions équivalentes.
 - La vidéo est volumineuse en termes de taille de fichier et, par conséquent, plus coûteuse et moins performante que le texte.
-- La vidéo pose des problèmes d'accessibilité&nbsp;: elle est généralement plus coûteuse à produire que le texte, mais surtout à traduire ou à rendre utilisable par les utilisateurs de lecteurs d'écran.
+- La vidéo pose des problèmes d'accessibilité&nbsp;: elle est généralement plus coûteuse à produire que le texte, mais surtout à traduire ou à rendre utilisable par les utilisateur·ice·s de lecteurs d'écran.
 - Dans le prolongement du dernier point, la vidéo est beaucoup plus difficile à éditer/mettre à jour/maintenir que le contenu textuel.
 
 > [!NOTE]
@@ -134,30 +134,30 @@ Plusieurs arguments s'opposent à l'utilisation de vidéos dans la documentation
 
 Il existe de nombreux sites populaires qui fournissent de nombreux tutoriels vidéo. MDN n'est pas un site dont la majorité du contenu est de la vidéo, toutefois, il est possible d'intégrer des vidéos dans certains articles MDN selon le contexte.
 
-Sur MDN, les vidéos sont particulièrement utilisées lorsqu'on souhaite décrire une suite d'instruction ou un procédé en plusieurs étapes qu'il serait difficile d'exprimer de façon concise avec du texte. Cela s'avère notamment utile lorsqu'on tente de décrire des procédés qui utilisent plusieurs applications ou fenêtres et qui incluent des interactions avec l'interface graphique qui pourraient ne pas être simples à décrire : _«&nbsp;maintenant, cliquez sur le bouton situé en haut à gauche et qui ressemble à un canard&nbsp;»_.
+Sur MDN, les vidéos sont particulièrement utilisées lorsqu'on souhaite décrire une suite d'instruction ou un procédé en plusieurs étapes qu'il est difficile d'exprimer de façon concise avec du texte. Cela s'avère notamment utile lorsqu'on tente de décrire des procédés qui utilisent plusieurs applications ou fenêtres et qui incluent des interactions avec l'interface graphique qui peuvent ne pas être simples à décrire&nbsp;: _«&nbsp;maintenant, cliquez sur le bouton situé en haut à gauche et qui ressemble à un canard&nbsp;»_.
 
 Dans de telles situations, il est souvent plus pratique de **montrer** ce qu'on indique.
 
 ### Lignes de conduite pour les vidéos
 
-Une vidéo à destination de MDN devrait être&nbsp;:
+Une vidéo à destination de MDN doit être&nbsp;:
 
-- **Courte**&nbsp;: On essaiera d'avoir des vidéos dont la durée est inférieure à 30 secondes, idéalement inférieure à 20 secondes. Elle sera ainsi suffisamment courte pour ne pas demander un temps d'attention trop long au spectateur ou à la spectatrice.
-- **Simple**&nbsp;: On essaiera de garder un cheminement simple avec 2 à 4 fragments distincts pour que les étapes soient faciles à suivre.
+- **Courte**&nbsp;: On essaie d'avoir des vidéos dont la durée est inférieure à 30 secondes, idéalement inférieure à 20 secondes. Elle est ainsi suffisamment courte pour ne pas demander un temps d'attention trop long au spectateur ou à la spectatrice.
+- **Simple**&nbsp;: On essaie de garder un cheminement simple avec 2 à 4 fragments distincts pour que les étapes soient faciles à suivre.
 - **Silencieuse**&nbsp;: Le son permet d'avoir des vidéos plus impactantes mais demande également plus de temps pour la réalisation et l'implication d'un spectateur ou d'une spectatrice qui peut ne pas pouvoir écouter au moment où il/elle regarde la vidéo. Cela peut également rallonger la vidéo et rajoute des coûts de maintenance et de localisation.
 
-Pour expliquer quelque chose de complexe, on pourra utiliser un ensemble de vidéos courtes et de captures d'écran avec du texte. Le texte permettra ainsi d'insister sur les notions vues dans les vidéos et la personne qui consulte le contenu pourra alors choisir de suivre le texte et/ou la vidéo.
+Pour expliquer quelque chose de complexe, on peut utiliser un ensemble de vidéos courtes et de captures d'écran avec du texte. Le texte permet ainsi d'insister sur les notions vues dans les vidéos et la personne qui consulte le contenu peut alors choisir de suivre le texte et/ou la vidéo.
 
-De plus, on fera attention aux conseils suivants&nbsp;:
+De plus, on fait attention aux conseils suivants&nbsp;:
 
-- La vidéo sera uploadée sur YouTube avant d'être intégrée à la page MDN. On recommande un format 16:9 afin que tout le cadre soit rempli et qu'il n'y ait pas de barres noires. Voici quelques résolutions qui peuvent être utilisées&nbsp;: 1024×576, 1152×648 ou 1280×720.
-- La vidéo devra être enregistrée en HD afin qu'elle ait le meilleur aspect possible lors de l'<i lang="en">upload</i>.
+- La vidéo est téléversée sur YouTube avant d'être intégrée à la page MDN. On recommande un format 16:9 afin que tout le cadre soit rempli et qu'il n'y ait pas de barres noires. Voici quelques résolutions qui peuvent être utilisées&nbsp;: 1024×576, 1152×648 ou 1280×720.
+- La vidéo doit être enregistrée en HD afin qu'elle ait le meilleur aspect possible lors de l'<i lang="en">upload</i>.
 - Le curseur de la souris ne doit pas couvrir les éléments qu'on souhaite indiquer.
-- Si c'est utile, on configurera l'outil d'enregistrement afin d'enregistrer les clics et/ou le pointeur de la souris.
+- Si c'est utile, on configure l'outil d'enregistrement afin d'enregistrer les clics et/ou le pointeur de la souris.
 
 ### Lignes de conduite pour les outils de vidéo
 
-Il vous faudra un outil pour enregistrer la vidéo. Il en existe une variété allant d'outils gratuits à payants, de simples à complexes. Si vous avez déjà créé du contenu vidéo&nbsp;: parfait. Sinon, nous vous conseillons de commencer avec un outil simple, puis de choisir ensuite quelque chose de plus complexe si besoin.
+Il vous faut un outil pour enregistrer la vidéo. Il en existe une variété allant d'outils gratuits à payants, de simples à complexes. Si vous avez déjà créé du contenu vidéo&nbsp;: parfait. Sinon, nous vous conseillons de commencer avec un outil simple, puis de choisir ensuite quelque chose de plus complexe si besoin.
 
 Le tableau qui suit fournit quelques recommandations d'outils pour commencer.
 
@@ -197,13 +197,13 @@ Planifiez les tailles et le positionnement des fenêtres, notamment si vous util
 Planifiez soigneusement les étapes que vous allez enregistrer et pratiquez cette séquence d'actions plusieurs fois avant d'enregistrer&nbsp;:
 
 - Ne commencez pas une vidéo au milieu d'une suite d'étape. Veillez à ce qu'il y ait suffisamment de contexte pour que les actions illustrées aient du sens.
-- Pour chacune de vos actions, assurez-vous de les réaliser suffisamment lentement et de les mettre en évidence. Par exemple, lorsqu'on doit cliquer quelque part on pourra&nbsp;:
+- Pour chacune de vos actions, assurez-vous de les réaliser suffisamment lentement et de les mettre en évidence. Par exemple, lorsqu'on doit cliquer quelque part on peut&nbsp;:
   - Déplacer la souris sur l'icône
   - Mettre en évidence ou zoomer (selon ce qui est le plus pertinent)
   - Suspendre le mouvement pendant un instant
   - Cliquer sur l'icône
 
-- Planifiez les niveaux de zoom pour les portions de l'interface utilisateur que vous afficherez. Tout le monde ne pourra pas forcément consulter la vidéo en haute définition. Vous pourrez également zoomer sur certaines parties en post-production mais ça peut être une bonne idée de zoomer dès l'enregistrement.
+- Planifiez les niveaux de zoom pour les portions de l'interface utilisateur que vous affichez. Tout le monde ne peut pas forcément consulter la vidéo en haute définition. Vous pouvez également zoomer sur certaines parties en post-production mais ça peut être une bonne idée de zoomer dès l'enregistrement.
 
 > [!NOTE]
 > Ne zoomez pas au point que les éléments d'interfaces soient déformés ou semblent étranges.
@@ -219,33 +219,33 @@ N'oubliez pas de faire une pause d'une ou deux secondes à la fin pour montrer l
 
 #### Post-production
 
-En post-production, vous pourrez mettre en avant certains éléments notamment grâce à&nbsp;:
+En post-production, vous pouvez mettre en avant certains éléments notamment grâce à&nbsp;:
 
 - Du zoom sur certaines parties de l'écran.
 - L'atténuation de l'arrière-plan.
 
-Mettez en avant les moments clés et les détails difficiles à voir comme les clics sur une icône donnée ou la saisie d'une URL particulière. La mise en avant doit durer au moins 1 à 2 secondes et il sera généralement utile d'ajouter une courte transition (200 à 300 millisecondes) au début et à la fin de la mise en évidence.
+Mettez en avant les moments clés et les détails difficiles à voir comme les clics sur une icône donnée ou la saisie d'une URL particulière. La mise en avant doit durer au moins 1 à 2 secondes et il est généralement utile d'ajouter une courte transition (200 à 300 millisecondes) au début et à la fin de la mise en évidence.
 
-Attention à ne pas abuser de ces effets, on ne veut pas que les spectateurs aient le mal de mer à force de voir des zooms/dézooms.
+Attention à ne pas abuser de ces effets, on ne veut pas que les spectateurs aient le mal de mer à force de voir des zooms/dé-zooms.
 
 Si besoin, redimensionnez la vidéo aux proportions souhaitées.
 
 #### Téléverser et intégrer une vidéo
 
-Actuellement, les vidéos doivent être uploadées sur YouTube afin d'être affichées sur MDN, par exemple sur la chaîne [mozhacks](https://www.youtube.com/user/mozhacks/videos). Demandez à un membre de l'équipe MDN de téléverser la vidéo si vous n'avez pas un meilleur endroit où la stocker.
+Actuellement, les vidéos doivent être téléversées sur YouTube afin d'être affichées sur MDN, par exemple sur la chaîne [mozhacks <sup>(angl.)</sup>](https://www.youtube.com/user/mozhacks/videos). Demandez à un membre de l'équipe MDN de téléverser la vidéo si vous n'avez pas un meilleur endroit où la stocker.
 
 > [!NOTE]
 > Marquez la vidéo en «&nbsp;non répertoriée&nbsp;» si celle-ci n'a pas de sens particulier en dehors du contexte de la page MDN.
 
 #### Intégration
 
-Une fois la vidéo uploadée, vous pouvez intégrer la vidéo à la page avec la macro [`EmbedYouTube`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedYouTube.ejs). Elle permet d'insérer la vidéo à l'emplacement de la macro&nbsp;:
+Une fois la vidéo téléversée, vous pouvez intégrer la vidéo à la page avec la macro [`EmbedYouTube`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedYouTube.ejs). Elle permet d'insérer la vidéo à l'emplacement de la macro&nbsp;:
 
 ```plain
 \{{EmbedYouTube("you-tube-url-slug")}}
 ```
 
-Cette macro utilise un seul argument qui correspond à la fin de l'URL de la vidéo. Ainsi, pour afficher la vidéo disponible à l'URL `https://www.youtube.com/watch?v=ELS2OOUvxIw`, on appellera la macro ainsi&nbsp;:
+Cette macro utilise un seul argument qui correspond à la fin de l'URL de la vidéo. Ainsi, pour afficher la vidéo disponible à l'URL `https://www.youtube.com/watch?v=ELS2OOUvxIw`, on appelle la macro ainsi&nbsp;:
 
 ```plain
 \{{EmbedYouTube("ELS2OOUvxIw")}}
@@ -253,4 +253,4 @@ Cette macro utilise un seul argument qui correspond à la fin de l'URL de la vid
 
 ## Voir aussi
 
-- [Utiliser le format SVG à la place des images .png <sup>(angl.)</sup>](https://github.com/orgs/mdn/discussions/631) Discussion GitHub MDN
+- [Utiliser le format SVG à la place des images `.png` <sup>(angl.)</sup>](https://github.com/orgs/mdn/discussions/631) Discussion GitHub MDN

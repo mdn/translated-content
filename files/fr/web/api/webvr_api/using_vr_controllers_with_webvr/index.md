@@ -222,7 +222,7 @@ if (gp && gpPose.hasPosition) {
 }
 ```
 
-Here we alter the position of the cube on the screen according to the {{domxref("GamepadPose.position","position")}} and {{domxref("GamepadPose.orientation","orientation")}} data received from the connected controller. These values (stored in `curPos` and `curOrient`) are {{domxref("Float32Array")}}s containing the X, Y, and Z values (here we are just using \[0] which is X, and \[1] which is Y).
+Here we alter the position of the cube on the screen according to the {{domxref("GamepadPose.position","position")}} and {{domxref("GamepadPose.orientation","orientation")}} data received from the connected controller. These values (stored in `curPos` and `curOrient`) are {{jsxref("Float32Array")}}s containing the X, Y, and Z values (here we are just using \[0] which is X, and \[1] which is Y).
 
 If the `gp` variable has a `Gamepad` object inside it and it can return position values (`gpPose.hasPosition`), indicating a 6DoF controller, we modify the cube position using position and orientation values. If only the former is true, indicating a 3DoF controller, we modify the cube position using the orientation values only. If there is no gamepad connected, we don't modify the cube position at all.
 

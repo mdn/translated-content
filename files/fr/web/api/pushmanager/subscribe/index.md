@@ -1,5 +1,5 @@
 ---
-title: "PushManager : la méthode subscribe()"
+title: "PushManager : méthode subscribe()"
 short-title: subscribe()
 slug: Web/API/PushManager/subscribe
 l10n:
