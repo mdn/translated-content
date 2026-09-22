@@ -469,7 +469,7 @@ console.log(original === clone); // false (útil para comparaciones superficiale
 ```
 
 > [!NOTE]
-> Tenga en cuenta que _los datos en si_ no se clonan. En otras palabras, es sólo una [copia superficial](/en-US/docs/Glossary/Shallow_copy) del objeto Map.
+> Tenga en cuenta que _los datos en si_ no se clonan. En otras palabras, es sólo una [copia superficial](/es/docs/Glossary/Shallow_copy) del objeto Map.
 
 Los objetos _Map_ pueden unirse, manteniendo la unicidad de las llaves:
 
