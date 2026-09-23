@@ -37,7 +37,7 @@ Vous pouvez utiliser cet attribut avec les éléments SVG suivants&nbsp;:
 - `sum`
   - : Définit que l'animation s'ajoute à la valeur sous-jacente de l'attribut et aux autres animations de priorité inférieure.
 - `replace`
-  - : Définit que l'animation remplace la valeur sous-jacente de l'attribut et les autres animations de priorité inférieure. C'est la valeur par défaut, cependant le comportement est également affecté par les attributs de valeur d'animation {{SVGAttr("by")}} et {{SVGAttr("to")}}, comme décrit dans [Animation SMIL&nbsp;: Comment les attributs from, to et by affectent le comportement cumulatif](https://www.w3.org/TR/smil-animation/#FromToByAndAdditive).
+  - : Définit que l'animation remplace la valeur sous-jacente de l'attribut et les autres animations de priorité inférieure. C'est la valeur par défaut, cependant le comportement est également affecté par les attributs de valeur d'animation {{SVGAttr("by")}} et {{SVGAttr("to")}}, comme décrit dans [Animation SMIL&nbsp;: Comment les attributs from, to et by affectent le comportement cumulatif <sup>(angl.)</sup>](https://www.w3.org/TR/smil-animation/#FromToByAndAdditive).
 
 ## Spécifications
 
