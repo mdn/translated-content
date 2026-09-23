@@ -3,12 +3,12 @@ title: Référence des attributs SVG
 short-title: Attributs
 slug: Web/SVG/Reference/Attribute
 l10n:
-  sourceCommit: 55326f330a6ae829494c7606b1bd47b2c0f9d888
+  sourceCommit: 27bb49e1849433e05c964c8a645c448f184380ce
 ---
 
-Les éléments SVG peuvent être modifiés en utilisant des attributs qui spécifient comment les éléments doivent être traités ou présentés.
+Les éléments SVG peuvent être modifiés à l'aide d'attributs qui modifient la manière dont l'élément est traité ou rendu.
 
-Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des liens vers leur documentation pour vous aider à apprendre sur quels éléments ils s'appliquent et comment ils fonctionnent.
+Ci-dessous, la liste de tous les attributs disponibles en SVG, ainsi que des liens vers leur documentation pour vous aider à apprendre sur quels éléments ils s'appliquent et comment ils fonctionnent.
 
 ## Attributs SVG de A à Z
 
@@ -86,6 +86,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 - {{SVGAttr("font-style")}}
 - {{SVGAttr("font-variant")}}
 - {{SVGAttr("font-weight")}}
+- {{SVGAttr("font-width")}}
 - {{SVGAttr("fr")}}
 - {{SVGAttr("from")}}
 - {{SVGAttr("fx")}}
@@ -265,7 +266,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 - {{SVGAttr("x2")}}
 - {{SVGAttr("xChannelSelector")}}
 - {{SVGAttr("xlink:arcrole")}}
-- {{SVGAttr("xlink:href")}}{{Deprecated_Inline}}
+- {{SVGAttr("xlink:href")}} {{Deprecated_Inline}}
 - {{SVGAttr("xlink:show")}}
 - {{SVGAttr("xlink:title")}}
 - {{SVGAttr("xlink:type")}}
@@ -288,7 +289,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 
 ### Attributs génériques
 
-Les attributs de base sont des attributs globaux.
+Les attributs de base sont des attributs universels.
 
 - {{SVGAttr("autofocus")}}
 - {{SVGAttr("id")}}
@@ -301,7 +302,7 @@ Les attributs de base sont des attributs globaux.
 
 ### Attributs de traitement conditionnel
 
-Les attributs de traitement conditionnel contrôlent si l'élément sur lequel ils apparaissent est traité ou non.
+Les attributs de traitement conditionnel déterminent si les éléments auxquels ils sont associés sont traités.
 
 - {{SVGAttr("requiredExtensions")}}
 - {{SVGAttr("requiredFeatures")}}
@@ -321,8 +322,12 @@ Les attributs XLink peuvent référencer des ressources.
 
 ### Attributs de présentation
 
-> [!NOTE]
-> Tous les attributs de présentation SVG peuvent être utilisés comme propriétés CSS.
+Les attributs de présentation SVG sont des attributs SVG qui peuvent également être utilisés comme propriétés CSS sur les éléments SVG.
+Ils définissent les valeurs des propriétés CSS d'un élément avec une spécificité de `0`, de sorte que d'autres styles définis par l'auteur·ice dans une feuille de style ou l'attribut {{SVGAttr("style")}} peuvent les remplacer.
+Les valeurs des attributs de présentation sont analysées comme des valeurs CSS, et non comme des déclarations, et ne peuvent donc pas contenir `!important`.
+
+La plupart des attributs de présentation héritent lorsqu'ils sont utilisés comme propriétés CSS (par exemple, {{CSSxRef("fill")}} et {{CSSxRef("stroke")}}).
+[Les propriétés géométriques](#propriétés_géométriques) constituent la principale exception&nbsp;: leurs équivalents CSS n'héritent pas.
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}
@@ -352,6 +357,7 @@ Les attributs XLink peuvent référencer des ressources.
 - {{SVGAttr("font-style")}}
 - {{SVGAttr("font-variant")}}
 - {{SVGAttr("font-weight")}}
+- {{SVGAttr("font-width")}}
 - {{SVGAttr("glyph-orientation-horizontal")}}
 - {{SVGAttr("glyph-orientation-vertical")}}
 - {{SVGAttr("height")}}
@@ -365,6 +371,7 @@ Les attributs XLink peuvent référencer des ressources.
 - {{SVGAttr("mask-type")}}
 - {{SVGAttr("opacity")}}
 - {{SVGAttr("overflow")}}
+- {{SVGAttr("pathLength")}}
 - {{SVGAttr("pointer-events")}}
 - {{SVGAttr("r")}}
 - {{SVGAttr("rx")}}
@@ -396,6 +403,29 @@ Les attributs XLink peuvent référencer des ressources.
 - {{SVGAttr("x")}}
 - {{SVGAttr("y")}}
 
+#### Propriétés géométriques
+
+Les propriétés géométriques décrivent la position et les dimensions des formes SVG.
+Dans [SVG 2 <sup>(angl.)</sup>](https://svgwg.org/svg2-draft/geometry.html), elles constituent un sous-ensemble défini d'attributs de présentation dont les équivalents CSS ne sont pas hérités.
+
+Chaque propriété géométrique s'applique en tant qu'attribut de présentation uniquement sur certains éléments.
+Par exemple, {{SVGAttr("r")}} définit le rayon d'un {{SVGElement("circle")}}, mais n'a aucun effet sur des éléments tels que {{SVGElement("rect")}}.
+
+Les propriétés géométriques SVG sont&nbsp;:
+
+- {{CSSxRef("cx")}}
+- {{CSSxRef("cy")}}
+- {{CSSxRef("d")}}
+- {{CSSxRef("r")}}
+- {{CSSxRef("rx")}}
+- {{CSSxRef("ry")}}
+- {{CSSxRef("x")}}
+- {{CSSxRef("y")}}
+- {{CSSxRef("width")}}
+- {{CSSxRef("height")}}
+
+Pour la compatibilité élément par élément, consultez la page d'attribut de chaque propriété et la liste sur la page de l'élément {{SVGElement("g")}}.
+
 ### Attributs de filtre
 
 - Attributs pour les primitives de filtre
@@ -418,7 +448,7 @@ Les attributs XLink peuvent référencer des ressources.
 
 ### Attributs pour la gestion des évènements
 
-Tous les éléments HTML et SVG prennent en charge les attributs de gestionnaire d'évènements définis sur le mixin [`GlobalEventHandlers`](/fr/docs/Web/HTML/Reference/Global_attributes#liste_des_attributs_globaux_de_gestionnaire_dévénements).
+Tous les éléments HTML et SVG prennent en charge les attributs de gestionnaire d'évènements définis sur le mixin [`GlobalEventHandlers`](/fr/docs/Web/HTML/Reference/Global_attributes#liste_des_attributs_universels_de_gestionnaire_dévènements).
 
 Bien que les attributs de gestionnaire d'évènements, comme {{DOMxRef("Element/blur_event", "onblur")}} et {{DOMxRef("Element/auxclick_event", "onauxclick")}}, s'appliquent à tous les éléments, ils peuvent ne produire aucun effet. Par exemple, l'attribut {{DOMxRef("HTMLTrackElement/cuechange_event", "oncuechange")}} peut être appliqué à n'importe quel élément, mais il n'est pertinent que pour l'élément {{HTMLElement("track")}}.
 
