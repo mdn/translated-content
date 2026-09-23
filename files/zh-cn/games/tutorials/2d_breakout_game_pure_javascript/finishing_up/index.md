@@ -25,7 +25,7 @@ let lives = 3;
 function drawLives() {
   ctx.font = "16px Arial";
   ctx.fillStyle = "#0095DD";
-  ctx.fillText(`生命：${lives}`, canvas.width - 65, 20);
+  ctx.fillText(`生命值：${lives}`, canvas.width - 65, 20);
 }
 ```
 
