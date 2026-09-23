@@ -2,7 +2,7 @@
 title: データ型
 slug: Web/SVG/Guides/Content_type
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 69ff5fe627a17cf397ebd7b0f88a83c272c0bce5
 ---
 
 SVG は多くのデータ型を使用しています。この記事では、これらのデータ型とその構文、使用目的の説明を掲載しています。
@@ -147,7 +147,7 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
     SVG は他のオブジェクトへの _IRI_ 参照（絶対参照と相対参照の両方）を多用します。例えば、矩形を線形グラデーションで塗りつぶすには、最初に {{SVGElement("linearGradient")}} 要素を定義し、それに ID を与えます。
 
     ```html
-    <linearGradient xml:id="MyGradient">...</linearGradient>
+    <linearGradient id="MyGradient">...</linearGradient>
     ```
 
     次に、矩形の {{SVGAttr("fill")}} 属性の値として線形グラデーションを参照するには、次のようにします。
