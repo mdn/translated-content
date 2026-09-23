@@ -2,7 +2,7 @@
 title: 例
 slug: Web/SVG/Guides/Namespaces_crash_course/Example
 l10n:
-  sourceCommit: e4e57ab3ccb5f93319f8fe13848d4895d3e1e771
+  sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
 ---
 
 この例で、私たちは [XHTML](/ja/docs/Glossary/XHTML) 、 [SVG](/ja/docs/Web/SVG) 、 [JavaScript](/ja/docs/Web/JavaScript) と [DOM](/ja/docs/Web/API/Document_Object_Model) を「ほこり」の群れを動かすのにつかっています。これらのほこりは 2 つの基本的な法則によって制御されています。1 つめは、それぞれのほこりがマウスカーソルの方向に向かって移動しようとします。2 つ目はそれぞれのほこりはほこりの位置の平均から遠ざかろうとします。組み合わせることで、このとても自然に見える動きができます。
@@ -17,30 +17,28 @@ l10n:
   <title>ほこりの群</title>
   <style>
   <![CDATA[
-    label, input
-    {
-      width: 150px;
-      display: block;
-      float: left;
-      margin-bottom: 10px;
-    }
-    label
-    {
-      text-align: right;
-      width: 75px;
-      padding-right: 20px;
-    }
-    br
-    {
-      clear: left;
-    }
+label,
+input {
+  width: 150px;
+  display: block;
+  float: left;
+  margin-bottom: 10px;
+}
+label {
+  text-align: right;
+  width: 75px;
+  padding-right: 20px;
+}
+br {
+  clear: left;
+}
   ]]>
   </style>
   </head>
   <body onload='update()'>
     <svg:svg id='display' width='400' height='300'>
       <svg:circle id='cursor' cx='200'
-cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
+cy='150' r='7' fill='blue' fill-opacity='0.5'/>
     </svg:svg>
 
     <p>ほこりの群れは 2 つの基本的な法則によって制御されています。
@@ -55,9 +53,9 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
     <script>
     <![CDATA[
       // spam ボット対策
-      let email = '@riovia.net';
-      email ='nick' + email;
-      document.getElementById('email-me').href = 'mailto:'+email;
+      let email = "@riovia.net";
+      email = "nick" + email;
+      document.getElementById("email-me").href = "mailto:" + email;
     ]]>
     </script>
     このソフトは、どのような方法であっても無料で使用することができ、保証はまったくありません。
@@ -85,13 +83,12 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
 
   <script>
   <![CDATA[
-
     // ほこりの配列
     let motes;
 
     // 表示用の要素の取得。
     function Display() {
-      return document.getElementById('display');
+      return document.getElementById("display");
     }
 
     // 表示用の要素の大きさを定義。
@@ -99,8 +96,8 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
     function Dimensions() {
       // 描画用の要素
       const display = Display();
-      const width = parseInt(display.getAttributeNS(null, 'width'));
-      const height = parseInt(display.getAttributeNS(null, 'height'));
+      const width = parseInt(display.getAttributeNS(null, "width"), 10);
+      const height = parseInt(display.getAttributeNS(null, "height"), 10);
 
       return [width, height];
     }
@@ -112,9 +109,9 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       mouse_x = evt.clientX;
       mouse_y = evt.clientY;
 
-      const widget = document.getElementById('cursor');
-      widget.setAttributeNS(null,'cx',mouse_x);
-      widget.setAttributeNS(null,'cy',mouse_y);
+      const widget = document.getElementById("cursor");
+      widget.setAttributeNS(null, "cx", mouse_x);
+      widget.setAttributeNS(null, "cy", mouse_y);
     }
     document.onmousemove = OnMouseMove;
 
@@ -140,8 +137,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
     }
 
     // よりよい、整数の乱数
-    function Rand(modulo)
-    {
+    function Rand(modulo) {
       return Math.round(Math.random() * (modulo - 1));
     }
 
@@ -182,12 +178,12 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       } else if (pos[1] < this.y) {
         this.vy -= mag;
       }
-    }
+    };
 
     // Mote::capVelocity() - ほこりの速度の
     // 上限を設定。
     Mote.prototype.capVelocity = function () {
-      const max = parseInt(document.getElementById('max_velocity').value);
+      const max = parseInt(document.getElementById("max_velocity").value, 10);
 
       if (max < this.vx) {
         this.vx = max;
@@ -199,7 +195,8 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
         this.vy = max;
       } else if (-max > this.vy) {
         this.vy = -max;
-    }
+      }
+    };
 
     // Mote::capPosition() - ほこりの位置の
     // 上限下限を設定。
@@ -216,17 +213,17 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       } else if (this.y >= dims[1]) {
         this.y = dims[1] - 1;
       }
-    }
+    };
 
     // Mote::move() - ほこりの移動、スクリーンの更新。
     Mote.prototype.move = function () {
-      // カーソルの引力を適応。
-      const attract = parseInt(document.getElementById('attract_cursor').value);
+      // カーソルの引力を適応
+      const attract = parseInt(document.getElementById("attract_cursor").value, 10);
       const cursor = Cursor();
       this.applyForce(cursor, attract);
 
       // ほこりの位置の平均からの反発を適用
-      const repel = parseInt(document.getElementById('repel_peer').value);
+      const repel = parseInt(document.getElementById("repel_peer").value, 10);
       const average = AverageMotePosition();
       this.applyForce(average, -repel);
 
@@ -246,20 +243,20 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
 
       // 描画。
       if (this.elt === null) {
-        const svg = 'http://www.w3.org/2000/svg';
-        this.elt = document.createElementNS(svg, 'line');
-        this.elt.setAttributeNS(null, 'stroke', 'green');
-        this.elt.setAttributeNS(null, 'stroke-width', '3');
-        this.elt.setAttributeNS(null, 'stroke-opacity', '0.5');
+        const svg = "http://www.w3.org/2000/svg";
+        this.elt = document.createElementNS(svg, "line");
+        this.elt.setAttributeNS(null, "stroke", "green");
+        this.elt.setAttributeNS(null, "stroke-width", "3");
+        this.elt.setAttributeNS(null, "stroke-opacity", "0.5");
         Display().appendChild(this.elt);
       }
 
-      this.elt.setAttributeNS(null, 'x1', old_x);
-      this.elt.setAttributeNS(null, 'y1', old_y);
+      this.elt.setAttributeNS(null, "x1", old_x);
+      this.elt.setAttributeNS(null, "y1", old_y);
 
-      this.elt.setAttributeNS(null, 'x2', this.x);
-      this.elt.setAttributeNS(null, 'y2', this.y);
-    }
+      this.elt.setAttributeNS(null, "x2", this.x);
+      this.elt.setAttributeNS(null, "y2", this.y);
+    };
 
     function update() {
       // 最初の呼び出し?
@@ -268,8 +265,8 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       }
 
       // 幾つのほこりがあるべき ?
-      let num = parseInt( document.getElementById('num_motes').value );
-      if ( num < 0 ) {
+      let num = parseInt(document.getElementById("num_motes").value, 10);
+      if (num < 0) {
         num = 0;
       }
 
@@ -292,7 +289,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       }
 
       // これを 100 分の 1 秒ごとに再実行。
-      setTimeout('update()', 10);
+      setTimeout(() => update(), 10);
     }
   ]]>
   </script>
