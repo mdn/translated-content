@@ -2,7 +2,7 @@
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: c808a24d4e4f7bda00e7117f315965ed39b780e5
 ---
 
 {{JSRef}}
@@ -38,13 +38,13 @@ console.log(map1.size);
 
 ## Descripción
 
-Los objetos `Map` son colecciones de tuplas tipo llave-valor. Una llave en `Map` **puede aparecer solo una vez**; es única en la colección de `Map`. Un objeto `Map` es iterado por sus tuplas llave-valor —un bucle {{jsxref("Statements/for...of", "for...of")}} regresa un arreglo de `[llave, valor]` por cada iteración. La iteración sucede en _orden de inserción_, la cual corresponde al orden en el que cada tupla llave-valor fue incertada inicialmente en el _map_ por el método [`set()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Map/set) (eso es, si no había una llave con el mismo valor en el map, cuando `set()` fué llamado).
+Los objetos `Map` son colecciones de tuplas tipo llave-valor. Una llave en `Map` **puede aparecer solo una vez**; es única en la colección de `Map`. Un objeto `Map` es iterado por sus tuplas llave-valor —un bucle {{jsxref("Statements/for...of", "for...of")}} retorna un arreglo de `[llave, valor]` por cada iteración. La iteración sucede en el _orden de inserción_, la cual corresponde al orden en el que cada tupla llave-valor fue insertada inicialmente en el _map_ por el método [`set()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Map/set) (eso es, si no había una llave con el mismo valor en el map, cuando `set()` fué llamado).
 
 La especificación requiere que los _maps_ sean implementados "que, en promedio, proporcione tiempos de acceso que sean sublineales al numero de elementos en la colección". Por lo tanto, podría ser representado internamente como una tabla hash (con una busqueda O(1)), un árbol de búsqueda (con una busqueda de O(log(N))), o cualquier otra estructura de datos, mientras la complejidad sea mejor que O(N).
 
 ### Igualdad de llaves
 
-La igualdad de valores se basa en el algoritmo [Igualdad SameValueZero](/es/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#igualdad_same-value-zero). (Se solía usar [igualdad SameValue](/es/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#igualdad_same-value), el cual trataba `0` y `-0` como diferentes. Revise [compatibilidad con navegadores](#compatibilidad_con_navegadores).) Lo que significa que {{jsxref("NaN")}} es conciderado lo mismo que `NaN` (a pesar de que `NaN !== NaN`) y todos los otros valores son conciderados iguales, de acuerdo a la semantica del operador `===`.
+La igualdad de valores se basa en el algoritmo [Igualdad SameValueZero](/es/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#igualdad_same-value-zero). (Se solía usar [igualdad SameValue](/es/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#igualdad_same-value), el cual trataba `0` y `-0` como diferentes. Revise la [compatibilidad con navegadores](#compatibilidad_con_navegadores).) Lo que significa que {{jsxref("NaN")}} es considerado lo mismo que `NaN` (a pesar de que `NaN !== NaN`) y todos los otros valores son considerados iguales, de acuerdo a la semántica del operador `===`. Además, para las llaves del objeto, la igualdad se basa en la identidad del objeto. Se comparan por referencia, no por valor. Consulta [Usando el objeto Map](#usando_el_objeto_map) para más ejemplos.
 
 ### Objects vs. Maps
 
@@ -169,7 +169,7 @@ Sin embargo, hay diferencias importantes que hacen que se prefiera a `Map` en al
               La sentencia
               <a href="/es/docs/Web/JavaScript/Reference/Statements/for...in"
                 >for...in</a
-              > te permite que iteres sobre las propiedades
+              > te permite iterar sobre las propiedades
               <em>enumerables</em> de un objeto.
             </li>
           </ul>
@@ -282,11 +282,12 @@ Los métodos y propiedades tienen el mismo comportamiento que las entidades equi
 Los siguientes, son ejemplos de objetos de navegador similares a `Map`:
 
 - {{domxref("AudioParamMap")}}
-- {{domxref("RTCStatsReport")}}
+- {{domxref("CSSFontFeatureValuesMap")}}
 - {{domxref("EventCounts")}}
 - {{domxref("KeyboardLayoutMap")}}
 - {{domxref("MIDIInputMap")}}
 - {{domxref("MIDIOutputMap")}}
+- {{domxref("RTCStatsReport")}}
 
 ## Constructor
 
@@ -310,7 +311,7 @@ Estas propiedades están definidas en `Map.prototype` y las comparten todas las 
 - {{jsxref("Object/constructor", "Map.prototype.constructor")}}
   - : La funcion constructor que creó el objeto de instancia. Para las instancias de `Map` el valor inicial es el constructor {{jsxref("Map/Map", "Map")}}.
 - {{jsxref("Map.prototype.size")}}
-  - : Regresa el número de tuplas llave/valor en el objeto `Map`.
+  - : Retorna el número de tuplas llave/valor en el objeto `Map`.
 - `Map.prototype[Symbol.toStringTag]`
   - : El valor inicial de la propiedad [`[Symbol.toStringTag]`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) es la cadena de caracteres `"Map"`. Esta propiedad es usada en {{jsxref("Object.prototype.toString()")}}.
 
@@ -319,23 +320,27 @@ Estas propiedades están definidas en `Map.prototype` y las comparten todas las 
 - {{jsxref("Map.prototype.clear()")}}
   - : Remueve todas las tuplas llave-valor del objeto `Map`.
 - {{jsxref("Map.prototype.delete()")}}
-  - : Regresa `true` si un elemento en el objeto `Map` existía y ha sido removido, or `false` si el elemento no existe.`map.has(key)` regresará `false` después de esto.
+  - : Retorna `true` si un elemento en el objeto `Map` existía y ha sido removido, o `false` si el elemento no existe. `map.has(key)` retornará `false` después de esto.
 - {{jsxref("Map.prototype.entries()")}}
-  - : Regresa un nuevo objeto Iterador que contiene un arreglo con dos miembros `[llave, valor]` por cada elemento en el objeto `Map` en orden de inserción.
+  - : Retorna un nuevo objeto Iterador que contiene un arreglo con dos miembros `[llave, valor]` por cada elemento en el objeto `Map` en orden de inserción.
 - {{jsxref("Map.prototype.forEach()")}}
   - : Llama una función `callbackFn` una vez por cada tupla llave-valor presente en el objeto `Map`, en orden de inserción. Si un parametro `thisArg` es proporcionado a `forEach`, será utilizado como el valor `this` para cada llamada a la funcion callback.
 - {{jsxref("Map.prototype.get()")}}
-  - : Regresa el valor asociado a la llave que se pasa como argumento, o `undefined` si no hay ninguno.
+  - : Retorna el valor asociado a la llave que se pasa como argumento, o `undefined` si no hay ninguno.
+- {{jsxref("Map.prototype.getOrInsert()")}}
+  - : Retorna el valor correspondiente a la llave especificada en el objeto `Map`. Si la llave no está presente, inserta una nueva entrada con la llave y un valor por defecto dado, y retorna el valor insertado.
+- {{jsxref("Map.prototype.getOrInsertComputed()")}}
+  - : Retorna el valor correspondiente a la llave especificada en el objeto `Map`. Si la llave no está presente, inserta una nueva entrada con la llave y un valor por defecto calculado de un callback especificado, y retorna el valor insertado.
 - {{jsxref("Map.prototype.has()")}}
-  - : Regresa un booleano indicando si, en el objeto `Map` un valor ha sido asociado a la llave pasada como argumento.
+  - : Retorna un booleano indicando si, en el objeto `Map` un valor ha sido asociado a la llave pasada como argumento.
 - {{jsxref("Map.prototype.keys()")}}
-  - : Regresa un nuevo objeto Iterador que contiene las llaves para cada elemento en el objeto `Map`, en orden de inserción.
+  - : Retorna un nuevo objeto Iterador que contiene las llaves para cada elemento en el objeto `Map`, en orden de inserción.
 - {{jsxref("Map.prototype.set()")}}
-  - : Asigna el valor en el objeto `Map` para la llave pasada como argumento. Regresa el objeto `Map`.
+  - : Asigna el valor en el objeto `Map` para la llave pasada como argumento. Retorna el objeto `Map`.
 - {{jsxref("Map.prototype.values()")}}
-  - : Regresa un nuevo objeto Iterador que contiene los valores para cada elemento en un objeto `Map`, en orden de inserción.
+  - : Retorna un nuevo objeto Iterador que contiene los valores para cada elemento en un objeto `Map`, en orden de inserción.
 - [`Map.prototype[Symbol.iterator]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
-  - : Regresa un nuevo objeto Iterador que contiene un arreglo con dos miembros `[llave, valor]` por cada elemento en el objeto `Map`, en orden de inserción.
+  - : Retorna un nuevo objeto Iterador que contiene un arreglo con dos miembros `[llave, valor]` por cada elemento en el objeto `Map`, en orden de inserción.
 
 ## Ejemplos
 
@@ -464,7 +469,7 @@ console.log(original === clone); // false (útil para comparaciones superficiale
 ```
 
 > [!NOTE]
-> Tenga en cuenta que _los datos en si_ no se clonan.
+> Tenga en cuenta que _los datos en si_ no se clonan. En otras palabras, es sólo una [copia superficial](/es/docs/Glossary/Shallow_copy) del objeto `Map`.
 
 Los objetos _Map_ pueden unirse, manteniendo la unicidad de las llaves:
 
@@ -522,6 +527,7 @@ console.log(merged.get(3)); // three
 ## Véase también
 
 - [Polyfill para `Map` en `core-js`](https://github.com/zloirock/core-js#map)
+- [es-shims polyfill de `Map`](https://www.npmjs.com/package/es-map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}
