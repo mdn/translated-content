@@ -527,7 +527,7 @@ console.log(merged.get(3)); // three
 ## Véase también
 
 - [Polyfill para `Map` en `core-js`](https://github.com/zloirock/core-js#map)
-- [es-shims polyfill de Map](https://www.npmjs.com/package/es-map)
+- [es-shims polyfill de `Map`](https://www.npmjs.com/package/es-map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}
