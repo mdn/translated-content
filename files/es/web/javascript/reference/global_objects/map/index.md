@@ -320,7 +320,7 @@ Estas propiedades están definidas en `Map.prototype` y las comparten todas las 
 - {{jsxref("Map.prototype.clear()")}}
   - : Remueve todas las tuplas llave-valor del objeto `Map`.
 - {{jsxref("Map.prototype.delete()")}}
-  - : Retorna `true` si un elemento en el objeto `Map` existía y ha sido removido, o `false` si el elemento no existe.`map.has(key)` retornará `false` después de esto.
+  - : Retorna `true` si un elemento en el objeto `Map` existía y ha sido removido, o `false` si el elemento no existe. `map.has(key)` retornará `false` después de esto.
 - {{jsxref("Map.prototype.entries()")}}
   - : Retorna un nuevo objeto Iterador que contiene un arreglo con dos miembros `[llave, valor]` por cada elemento en el objeto `Map` en orden de inserción.
 - {{jsxref("Map.prototype.forEach()")}}
