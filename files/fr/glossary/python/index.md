@@ -2,7 +2,7 @@
 title: Python
 slug: Glossary/Python
 l10n:
-  sourceCommit: da7287ff61b6ea4db7f9a5e07be11263b525b7d0
+  sourceCommit: 964ab8ae30c5ce0a343cc6d0f28c1b94389bae89
 ---
 
 **Python** est un langage de programmation de haut-niveau, pour tous usages. Il possède une approche multi-paradigme et supporte donc des formes de programmation procédurale, orientée objet et fonctionnelle.
@@ -15,7 +15,7 @@ Python est développé sous une licence Open Source approuvée OSI, ce qui le re
 
 - [Python](<https://fr.wikipedia.org/wiki/Python_(langage)>) sur Wikipédia
 - [Le site officiel de Python, où le télécharger et l'installer <sup>(angl.)</sup>](https://www.python.org/)
-- [Un tutoriel sur Python <sup>(angl.)</sup>](http://www.tutorialspoint.com/python/index.htm)
+- [Un tutoriel sur Python <sup>(angl.)</sup>](https://www.tutorialspoint.com/python/index.htm)
 - [Tutoriel Python AlphaCodingSkills <sup>(angl.)</sup>](https://www.alphacodingskills.com/python/python-tutorial.php)
 - [Le cadriciel web Django (Python)](/fr/docs/Learn_web_development/Extensions/Server-side/Django) sur MDN
 - Termes associés du glossaire&nbsp;:

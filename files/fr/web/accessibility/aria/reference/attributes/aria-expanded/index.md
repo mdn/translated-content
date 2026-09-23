@@ -3,14 +3,14 @@ title: "ARIA : attribut aria-expanded"
 short-title: aria-expanded
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-expanded
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 8bc4e3fe45532906246a760bff0b06b7cd105c52
 ---
 
 L'attribut `aria-expanded` est défini sur un élément pour indiquer si un contrôle est développé ou réduit, et si les éléments contrôlés sont affichés ou masqués.
 
 ## Description
 
-Plusieurs widgets peuvent être développés ou réduits, notamment les menus, boîtes de dialogue et panneaux d'accordéon. Chacun de ces objets possède un élément interactif qui contrôle leur ouverture et fermeture. L'attribut `aria-expanded` s'applique à ce contrôle interactif pouvant recevoir la sélection, qui bascule la visibilité de l'objet.
+Plusieurs composants peuvent être développés ou réduits, notamment les menus, boîtes de dialogue et panneaux d'accordéon. Chacun de ces objets possède un élément interactif qui contrôle leur ouverture et fermeture. L'attribut `aria-expanded` s'applique à ce contrôle interactif pouvant recevoir la sélection, qui bascule la visibilité de l'objet.
 
 Par exemple, `aria-expanded` est appliqué à l'élément parent dans un arbre DOM pour indiquer si sa branche enfant est affichée. Le parent contrôle également la visibilité de la branche enfant associée.
 
@@ -20,25 +20,25 @@ Utilisez la propriété `aria-owns` sur les éléments qui possèdent des conten
 
 ### Boutons
 
-Un bouton qui bascule un widget doit avoir `aria-controls` défini sur l'[`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) du widget basculé et `aria-expanded` défini sur l'état actuel du widget.
+Un bouton qui bascule un composant doit avoir `aria-controls` défini sur un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) du composant basculé et `aria-expanded` défini sur l'état actuel du composant.
 
 ```html
-<button aria-expanded="false" aria-controls="widget1">
-  Afficher/masquer le widget
+<button aria-expanded="false" aria-controls="composant1">
+  Afficher/masquer le composant
 </button>
 ```
 
-Lorsque le widget est visible, l'objet de contrôle transmet cette information via `aria-expanded="true"`. Le nom accessible de l'objet de contrôle doit refléter ce changement.
+Lorsque le composant est visible, l'objet de contrôle transmet cette information avec `aria-expanded="true"`. Le nom accessible de l'objet de contrôle doit refléter ce changement.
 
 ```html
-<button aria-expanded="true" aria-controls="widget1">
-  Afficher/masquer le widget
+<button aria-expanded="true" aria-controls="composant1">
+  Afficher/masquer le composant
 </button>
 ```
 
 ### Menu
 
-Lorsqu'un [`menu`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) est affiché, le bouton qui bascule la visibilité de ce menu a comme valeur `aria-expanded="true"`. Lorsque le menu est masqué, aria-expanded peut être omis. S'il est spécifié lorsque le menu est masqué, il doit être défini à `aria-expanded="false"`. Quand un sous-menu n'est pas visible, son parent [`menuitem`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role) possède `aria-expanded`. Il doit être défini à `true` lorsque le sous-menu est visible.
+Lorsqu'un [`menu`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) est affiché, le bouton qui bascule la visibilité de ce menu a comme valeur `aria-expanded="true"`. Lorsque le menu est masqué, aria-expanded peut être omis. S'il est défini lorsque le menu est masqué, il doit être défini à `aria-expanded="false"`. Quand un sous-menu n'est pas visible, son parent [`menuitem`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role) possède `aria-expanded`. Il doit être défini à `true` lorsque le sous-menu est visible.
 
 ### Zone de liste déroulante (Combobox)
 
@@ -63,13 +63,13 @@ Par défaut, certains rôles sont masqués ou réduits et d'autres sont ouverts 
 > [!NOTE]
 > La présence de l'attribut `aria-expanded` indique un contrôle. Évitez de l'inclure sur des éléments qui ne contrôlent pas l'état développé d'autres éléments.
 
-### Éléments d'arbre (Treeitems)
+### Éléments d'arbre
 
-Chaque élément avec le rôle [`treeitem`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role) servant de nœud parent a `aria-expanded="false"` lorsque le nœud est fermé et `aria-expanded="true"` lorsqu'il est ouvert. Les nœuds finaux, sans nœuds descendants, ne doivent pas avoir l'attribut `aria-expanded` car, s'ils l'avaient, ils seraient incorrectement décrits comme nœuds parents aux technologies d'assistance.
+Chaque élément avec le rôle [`treeitem`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role) servant de nœud parent a `aria-expanded="false"` lorsque le nœud est fermé et `aria-expanded="true"` lorsqu'il est ouvert. Les nœuds finaux, sans nœuds descendants, ne doivent pas avoir l'attribut `aria-expanded` car, s'ils l'ont, ils sont incorrectement décrits comme nœuds parents aux technologies d'assistance.
 
 ### Lignes
 
-Une ligne parente dans une [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) est une ligne pouvant être développée — ou réduite — pour afficher ou masquer un ensemble de lignes enfants dans un tableau ou une grille. Chaque ligne parente a l'état `aria-expanded` défini soit sur l'élément de ligne, soit sur une cellule contenue dans la ligne. Quand les lignes enfants sont masquées, `aria-expanded="false"` est défini. `aria-expanded="true"` est défini lorsque les lignes enfants sont affichées. Les lignes qui ne contrôlent pas l'affichage de lignes enfants ne doivent pas inclure l'attribut `aria-expanded` car cela les définirait comme lignes parentes.
+Une ligne parente dans une [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) est une ligne pouvant être développée — ou réduite — pour afficher ou masquer un ensemble de lignes enfants dans un tableau ou une grille. Chaque ligne parente a l'état `aria-expanded` défini soit sur l'élément de ligne, soit sur une cellule contenue dans la ligne. Quand les lignes enfants sont masquées, `aria-expanded="false"` est défini. `aria-expanded="true"` est défini lorsque les lignes enfants sont affichées. Les lignes qui ne contrôlent pas l'affichage de lignes enfants ne doivent pas inclure l'attribut `aria-expanded`, car cela les définit comme lignes parentes.
 
 ## Valeurs
 
@@ -84,10 +84,10 @@ Une ligne parente dans une [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Referenc
 
 ## Interfaces associées
 
-- {{domxref("Element.ariaExpanded")}}
-  - : La propriété [`ariaExpanded`](/fr/docs/Web/API/Element/ariaExpanded), partie de l'interface {{domxref("Element")}}, reflète la valeur de l'attribut `aria-expanded`.
-- {{domxref("ElementInternals.ariaExpanded")}}
-  - : La propriété [`ariaExpanded`](/fr/docs/Web/API/Element/ariaExpanded), partie de l'interface {{domxref("ElementInternals")}}, reflète la valeur de l'attribut `aria-expanded`.
+- {{DOMxRef("Element.ariaExpanded")}}
+  - : La propriété [`ariaExpanded`](/fr/docs/Web/API/Element/ariaExpanded), partie de l'interface {{DOMxRef("Element")}}, reflète la valeur de l'attribut `aria-expanded`.
+- {{DOMxRef("ElementInternals.ariaExpanded")}}
+  - : La propriété [`ariaExpanded`](/fr/docs/Web/API/Element/ariaExpanded), partie de l'interface {{DOMxRef("ElementInternals")}}, reflète la valeur de l'attribut `aria-expanded`.
 
 ## Rôles associés
 

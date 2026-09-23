@@ -2,7 +2,7 @@
 title: Modèle de sous-page de référence d'API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template
 l10n:
-  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
+  sourceCommit: 743d7644188577789b102fd41c6ab75bae49f8ab
 ---
 
 > [!NOTE]
@@ -72,6 +72,8 @@ l10n:
 
 Le paragraphe de résumé — commencez par nommer l'interface, en indiquant à quelle API elle appartient et ce qu'elle fait. Idéalement, cela doit être une ou deux phrases courtes. Vous pouvez copier la plupart de ces informations à partir du résumé de l'interface sur la page de destination correspondante de l'API.
 
+Gardez le contenu introductif bref. Toutes les autres explications doivent être incluses dans la section «&nbsp;Description&nbsp;» avant la section «&nbsp;Exemples&nbsp;».
+
 `\{{InheritanceDiagram}}`
 
 _Pour utiliser la [macro domxref](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#lien_vers_des_pages_de_référence) dans les sections ci-dessous, supprimez les accents inversés et l'antislash dans le fichier markdown._
@@ -139,6 +141,10 @@ _Hérite également des évènements de son interface parente, `\{{DOMxRef("Name
   - : Déclenché lorsque (incluez la description de l'évènement).
     Disponible également avec la propriété `oneventname2`.
     Si l'évènement n'est pas expérimental/obsolète/non standard, supprimez les appels de macro correspondants.
+
+## Description
+
+Il s'agit d'une section optionnelle. Si nécessaire, incluez une explication plus détaillée de l'interface ici.
 
 ## Exemples
 

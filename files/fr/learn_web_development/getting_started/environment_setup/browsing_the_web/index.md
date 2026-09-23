@@ -2,7 +2,7 @@
 title: Naviguer sur le Web
 slug: Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 l10n:
-  sourceCommit: e81cf36acffe197d01b1ad282c3582ebd7b0b54d
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
@@ -40,7 +40,7 @@ Comme dans tout domaine, le web comporte beaucoup de jargon et de termes techniq
 Nous allons commencer par décrire différents concepts liés au Web&nbsp;: pages web, sites web, serveurs web et moteurs de recherche. Ces termes sont souvent confondus par les débutant·e·s ou mal utilisés. Assurons-nous que vous sachiez ce qu'ils signifient&nbsp;!
 
 - **Page web**
-  - : Un document affichable dans un {{Glossary("browser", "navigateur")}}. On parle aussi simplement de «&nbsp;page&nbsp;». Ces documents sont écrits en {{Glossary("HTML")}} (que nous verrons plus en détail plus loin).
+  - : Un document affichable dans un {{Glossary("browser", "navigateur")}}. On parle aussi simplement de «&nbsp;page&nbsp;». Ces documents sont écrits en {{Glossary("HTML")}} (que nous voyons plus en détail plus loin).
 - **Site web**
   - : Un ensemble de pages web regroupées en une seule ressource, reliées entre elles par des liens. On parle aussi de «&nbsp;site&nbsp;».
 - **Serveur web**
@@ -50,7 +50,7 @@ Nous allons commencer par décrire différents concepts liés au Web&nbsp;: page
 - **Moteur de recherche**
   - : Un service web qui aide à trouver d'autres pages web, comme Google, Bing, Yahoo ou DuckDuckGo. Les moteurs de recherche sont généralement accessibles avec un navigateur web (par exemple, vous pouvez effectuer des recherches directement dans la barre d'adresse de Firefox, Chrome, etc.) ou par une page web (par exemple, [bing.com](https://www.bing.com/) ou [duckduckgo.com](https://duckduckgo.com/)).
 
-Prenons une analogie — une bibliothèque publique. Voici ce que vous feriez généralement en la visitant&nbsp;:
+Prenons une analogie — une bibliothèque publique. Voici ce que vous faites généralement en la visitant&nbsp;:
 
 1. Trouver un index de recherche et chercher le titre du livre voulu.
 2. Noter le numéro de catalogue du livre.
@@ -93,7 +93,7 @@ Quand vous chargez votre site préféré, la page principale (ou _page d'accueil
 Cliquez sur quelques menus ou liens pour explorer différentes pages de votre site favori. Notez comment l'adresse affichée change à chaque navigation.
 
 > [!NOTE]
-> Il existe aussi des {{Glossary("SPA", "<em>applications monopage</em>")}}&nbsp;: un site constitué d'une seule page HTML, mise à jour dynamiquement. Dans ce cas, l'adresse web peut ne pas changer lors de la navigation.
+> Il existe aussi des {{Glossary("SPA", "applications à page unique")}}&nbsp;: un site constitué d'une seule page HTML, mise à jour dynamiquement. Dans ce cas, l'adresse web peut ne pas changer lors de la navigation.
 
 ### Serveur web
 
@@ -150,7 +150,7 @@ Si vous connaissez un site spécialisé dans le sujet qui vous intéresse, comme
 
 Par exemple, pour une information sur une fonctionnalité web, tapez son nom dans la recherche MDN. Essayez par exemple `box model`, `fetch()`, ou `élément video`. Si vous ne trouvez pas, élargissez la recherche à un moteur généraliste.
 
-Pour une solution à un problème précis, comme «&nbsp;comment afficher la suite de Fibonacci en JavaScript&nbsp;» ou «&nbsp;comment savoir si un nombre est premier en JavaScript&nbsp;», cherchez sur un site comme [Stack Overflow](https://stackoverflow.com/), une communauté dédiée à l'entraide en programmation. Là encore, essayez un moteur généraliste si besoin.
+Pour une solution à un problème précis, comme «&nbsp;comment afficher la suite de Fibonacci en JavaScript&nbsp;» ou «&nbsp;comment savoir si un nombre est premier en JavaScript&nbsp;», cherchez sur un site comme [Stack Overflow <sup>(angl.)</sup>](https://stackoverflow.com/), une communauté dédiée à l'entraide en programmation. Là encore, essayez un moteur généraliste si besoin.
 
 Avant d'aller plus loin, essayez de chercher quelques sujets qui vous intéressent. Testez des recherches plus ou moins précises et différents termes pour voir ce qui fonctionne le mieux. Consultez nos [astuces de recherche](#astuces_de_recherche) pour d'autres conseils.
 
@@ -161,7 +161,7 @@ Les résultats de recherche générés par l'IA sont très populaires. Ils offre
 Pour apprendre à coder, les IA peuvent être utiles de plusieurs façons&nbsp;:
 
 - Effectuer des recherches classiques, comme ci-dessus.
-- Trouver des bugs dans un bloc de code. Si votre code ne fonctionne pas, collez-le dans une IA avec une question du type «&nbsp;Où est l'erreur dans ce code&nbsp;?&nbsp;»
+- Trouver des bogues dans un bloc de code. Si votre code ne fonctionne pas, collez-le dans une IA avec une question du type «&nbsp;Où est l'erreur dans ce code&nbsp;?&nbsp;»
 - Générer une version optimisée d'un code. Pratique si vous voulez une version plus efficace ou plus robuste.
 - Conseiller sur une stratégie. Par exemple, demander non seulement où est le bogue, mais aussi comment le corriger.
 
@@ -185,7 +185,7 @@ Il faut donc toujours vérifier les réponses et ne pas tout croire sans recul.
 - Ajoutez le langage utilisé dans la recherche, comme dans les exemples ci-dessus. Si vous tapez juste «&nbsp;comment afficher la suite de Fibonacci&nbsp;», vous avez des solutions en Python, C++, Java, Ruby, etc. — pas très utile si vous apprenez JavaScript&nbsp;!
 - Quand vous trouvez une réponse utile, mettez-la en favori ou copiez-la pour la retrouver plus tard. Vous êtes surpris·e de rencontrer plusieurs fois le même problème.
 - Si votre code affiche un message d'erreur, essayez de le chercher tel quel. D'autres ont sûrement déjà rencontré ce problème et partagé la solution.
-- Privilégiez les sites recommandés comme MDN ou [Stack Overflow](https://stackoverflow.com/).
+- Privilégiez les sites recommandés comme MDN ou [Stack Overflow <sup>(angl.)</sup>](https://stackoverflow.com/).
 - Il existe de nombreuses techniques avancées pour améliorer vos recherches. Taper simplement `fourmis poisson fromage` retourne des résultats contenant n'importe lequel de ces mots. Mais la plupart des moteurs acceptent des syntaxes comme&nbsp;:
   - `"fourmis poisson fromage"` (avec les guillemets) ne retourne que les résultats contenant exactement cette phrase.
   - `fourmis fromage -poisson` retourne les résultats contenant «&nbsp;fourmis&nbsp;» et/ou «&nbsp;fromage&nbsp;» mais pas «&nbsp;poisson&nbsp;».
@@ -193,6 +193,6 @@ Il faut donc toujours vérifier les réponses et ne pas tout croire sans recul.
   - `intitle:fromage` ne retourne que les résultats ayant «&nbsp;fromage&nbsp;» dans le titre principal.
 
   > [!NOTE]
-  > Il existe bien d'autres techniques selon les moteurs. Essayez d'en trouver d'autres — quelques ressources utiles&nbsp;: [Affiner les recherches Google](https://support.google.com/websearch/answer/2466433?hl=fr), [Syntaxe avancée sur DuckDuckGo](https://duckduckgo.com/duckduckgo-help-pages/results/syntax) et [Microsoft&nbsp;: options de recherche avancée](https://support.microsoft.com/fr-fr/topic/advanced-search-options-b92e25f1-0085-4271-bdf9-14aaea720930).
+  > Il existe bien d'autres techniques selon les moteurs. Essayez d'en trouver d'autres — quelques ressources utiles&nbsp;: [Affiner les recherches Google](https://support.google.com/websearch/answer/2466433?hl=fr), [Syntaxe avancée sur DuckDuckGo <sup>(angl.)</sup>](https://duckduckgo.com/duckduckgo-help-pages/results/syntax) et [Microsoft&nbsp;: options de recherche avancée](https://support.microsoft.com/fr-fr/topic/advanced-search-options-b92e25f1-0085-4271-bdf9-14aaea720930).
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
