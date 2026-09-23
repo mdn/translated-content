@@ -1,46 +1,53 @@
 ---
-title: Via
+title: Via ヘッダー
+short-title: Via
 slug: Web/HTTP/Reference/Headers/Via
-original_slug: Web/HTTP/Headers/Via
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-一般ヘッダーの **`Via`** は、フォワードプロキシーとリバースプロキシーの両方のプロキシーによって追加され、リクエストヘッダーとレスポンスヘッダーに表示されます。 メッセージ転送の追跡、要求ループの回避、および要求/応答チェーンに沿った送信者のプロトコル機能の識別に使用されます。
+**`Via`** は{{glossary("request header", "リクエスト")}}・{{glossary("response header", "レスポンスヘッダー")}}で、{{Glossary("Proxy_server", "プロキシー")}}（フォワードプロキシーとリバースプロキシーの両方）によって追加されます。
+メッセージ転送の追跡、リクエストループの回避、リクエスト/レスポンスチェーンに沿った送信者のプロトコル能力の識別に使用されます。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">ヘッダー種別</th>
-      <td>{{Glossary("General header")}}</td>
+      <td>
+        {{Glossary("Request header", "リクエストヘッダー")}},
+        {{Glossary("Response header", "レスポンスヘッダー")}}
+      </td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
-      <td>yes</td>
+      <td>はい</td>
     </tr>
   </tbody>
 </table>
 
 ## 構文
 
-```
-Via: [ <protocol-name> "/" ] <protocol-version> <host> [ ":" <port> ]
-or
-Via: [ <protocol-name> "/" ] <protocol-version> <pseudonym>
+```http
+Via: [<protocol-name>/]<protocol-version> <host>[:<port>]
+Via: [<protocol-name>/]<protocol-version> <pseudonym>
 ```
 
 ## ディレクティブ
 
-- \<protocol-name>
-  - : オプション。"HTTP"など、使用するプロトコル名。
-- \<protocol-version>
-  - : "1.1"など、使用されているプロトコルのバージョン。
-- \<host> and \<port>
-  - : パブリックプロキシーの URL とポート。
-- \<pseudonym>
-  - : 内部プロキシーの名前/エイリアス。
+- `<protocol-name>` {{optional_inline}}
+  - : "HTTP" など、使用されているプロトコル名。
+- `<protocol-version>`
+  - : "1.1" など、使用されているプロトコルのバージョン。
+- `<host>`
+  - : 公開プロキシーのURLと、オプションの`<port>`。
+    ホスト名が指定されていない場合は、`<pseudonym>` を使用する必要があります。
+- `<pseudonym>`
+  - : 内部プロキシーの名前/別名です。
+    仮名が指定されていない場合は、`<host>` を使用する必要があります。
 
 ## 例
 
-```
+```http
 Via: 1.1 vegur
 Via: HTTP/1.1 GWA
 Via: 1.0 fred, 1.1 p.example.net
@@ -48,9 +55,7 @@ Via: 1.0 fred, 1.1 p.example.net
 
 ## 仕様書
 
-| Specification                   | Title                                                              |
-| ------------------------------- | ------------------------------------------------------------------ |
-| {{RFC("7230", "Via", "5.7.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+{{Specifications}}
 
 ## ブラウザーの互換
 
