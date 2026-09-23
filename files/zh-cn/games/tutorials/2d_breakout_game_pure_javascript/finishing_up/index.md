@@ -90,7 +90,7 @@ clearInterval(interval); // Chrome 需要这一行来结束游戏
 requestAnimationFrame(draw);
 ```
 
-现在 `draw()` 函数在 `requestAnimationFrame()` 的循环中被反复调用，之先前做法最大的不同是，我们将帧率的控制权交给浏览器，而不是固定的 10 毫秒。浏览器会在适当的时机同步帧率，并且只在必要的时候才刷新渲染的图形。这使得我们的动画比之前的 `setInterval()` 方法更加流畅且高效。
+现在 `draw()` 函数在 `requestAnimationFrame()` 的循环中被反复调用，与先前做法最大的不同是，我们将帧率的控制权交给浏览器，而不是固定的 10 毫秒。浏览器会在适当的时机同步帧率，并且只在必要的时候才刷新渲染的图形。这使得我们的动画比之前的 `setInterval()` 方法更加流畅且高效。
 
 ## 比较你的代码
 
