@@ -9,7 +9,7 @@ SVG では、ビットマップ記述言語と同様のツールを使用する�
 
 フィルターはレイヤーのように機能します。作成するときは、段階的に適用して効果を試してみてください。
 
-この要素には、クリッピング領域を作成するのに役立つさまざまな属性があります。フィルタータグの間に、希望する効果を実装するためのプリミティブを定義することができます。これらのプリミティブの 1 つが [`<feGaussianBlur>`](/en-US/docs/Web/SVG/Reference/Element/feGaussianBlur) です。キーワード [`SourceAlpha`](https://drafts.csswg.org/filter-effects-1/#attr-valuedef-in-sourcealpha) は、このプリミティブの入力を識別するもので、この場合は入力 `in` です。適用するぼかしの量は `stdDeviation` 属性を使用して行います。
+この要素には、クリッピング領域を作成するのに役立つさまざまな属性があります。フィルタータグの間に、希望する効果を実装するためのプリミティブを定義することができます。これらのプリミティブの 1 つが [`<feGaussianBlur>`](/ja/docs/Web/SVG/Reference/Element/feGaussianBlur) です。キーワード [`SourceAlpha`](https://drafts.csswg.org/filter-effects-1/#attr-valuedef-in-sourcealpha) は、このプリミティブの入力を識別するもので、この場合は入力 `in` です。適用するぼかしの量は `stdDeviation` 属性を使用して行います。
 
 ### SVG フィルターの例
 
