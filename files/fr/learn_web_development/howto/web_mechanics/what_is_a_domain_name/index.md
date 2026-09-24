@@ -45,7 +45,7 @@ _Ce contenu a besoin d'être enrichi, [n'hésitez pas à contribuer !](/fr/docs/
 
 Un nom de domaine est composé de plusieurs parties, séparées par des points. Ces différents composants sont lus **de droite à gauche** :
 
-![Anatomy of the MDN domain name](structure_fr.png)
+![Anatomie du nom de domaine MDN](structure.png)
 
 Chacune de ces parties fournit des informations sur le nom de domaine dans son ensemble.
 
