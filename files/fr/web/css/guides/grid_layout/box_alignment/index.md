@@ -1,57 +1,61 @@
 ---
-title: L'alignement des boîtes avec les grilles CSS
+title: Aligner les éléments dans une disposition de grille CSS
+short-title: Aligner les éléments
 slug: Web/CSS/Guides/Grid_layout/Box_alignment
-original_slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Auto-placement", "Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes","Web/CSS/Guides/Grid_layout")}}
+La [disposition en grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout) implémente [l'alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment), qui est la même norme que [les boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) utilise pour aligner les éléments dans son conteneur flexible. Le module d'alignement détaille comment l'alignement doit fonctionner dans toutes les méthodes de disposition.
 
-Si vous connaissez [les boîtes flexibles (flexbox)](/fr/docs/Web/CSS/Guides/Flexible_box_layout) vous savez déjà comment aligner les éléments flexibles à l'intérieur d'un conteneur flexible. Ces propriétés d'alignement, initialement spécifiée dans la spécification des boîtes flexibles, sont désormais spécifiées dans une nouvelle spécification [Box Alignment Level 3](https://drafts.csswg.org/css-align/). Cette spécification détaille le fonctionnement de l'alignement pour les différentes méthodes de disposition.
+Dans ce guide, nous examinons comment les propriétés d'alignement des boîtes sont utilisées pour aligner les éléments dans une disposition de grille.
 
-Chaque méthode de disposition qui implémente cette nouvelle spécification se comportera légèrement différemment selon les différences de contraintes et de fonctionnalités (et aussi selon le comportement historique). On ne pourra donc pas avoir un alignement exactement homogène. La spécification pour l'alignement des boîtes détaille le fonctionnement de chaque méthode mais malheureusement, à l'heure actuelle, aucun navigateur ne prend en charge cette spécification. À l'heure actuelle, les navigateurs respectent les règles de cette spécification pour l'alignement et la répartition de l'espace lorsqu'on utilise une disposition en grille. Dans cet article, nous verrons comment celles-ci fonctionnent. On retrouvera de nombreux points communs avec les boîtes flexibles pour le fonctionnement de ces propriétés et valeurs. Toutefois, les grilles fonctionnant sur deux axes et les boîtes flexibles sur un seul, il faudra faire attention à quelques différences. Commençons par analyser les deux axes utilisés lorsqu'il s'agit d'aligner des objets sur une grille.
+Vous pouvez remarquer des similitudes avec la façon dont ces propriétés et valeurs fonctionnent dans les boîtes flexibles. Comme la grille est bidimensionnelle et que la boîte flexible est unidimensionnelle, il existe quelques petites différences auxquelles vous devez faire attention. Pour cette raison, nous commençons par examiner les deux axes que nous utilisons pour aligner les éléments dans une grille.
 
 ## Les deux axes d'une grille
 
-Lorsqu'on manipule une grille, on dispose de deux axes sur lesquels aligner les objets. L'axe de bloc et l'axe en ligne. L'axe de bloc est l'axe selon lequel les blocs sont disposés quand on a une disposition en bloc (_block layout_). Par exemple, si on a deux paragraphes sur une page, par défaut, ils s'affichent l'un en dessous de l'autre.
+Lorsque vous travaillez avec une disposition en grille, vous disposez de deux axes sur lesquels aligner les éléments — _l'axe de bloc_ et _l'axe en incise_. [L'axe de bloc](/fr/docs/Glossary/Flow_relative_values#direction_de_bloc) est l'axe selon lequel les blocs sont disposés dans une disposition en bloc. Si vous avez deux paragraphes sur votre page, ils s'affichent l'un en dessous de l'autre, c'est donc cette direction que nous décrivons comme l'axe de bloc.
 
-![](7_block_axis.png)
+![L'axe de bloc est vertical.](block_axis.png)
 
-**L'axe en ligne est orthogonal à l'axe de bloc. C'est la direction selon laquelle progresse le texte.**
+[L'axe en incise](/fr/docs/Glossary/Flow_relative_values#direction_en_incise) est perpendiculaire à l'axe de bloc, c'est la direction selon laquelle le texte s'écoule dans un flux en incise régulier.
 
-![](7_inline_axis.png)
+![Les axes en incise / rangée sont horizontaux.](7_inline_axis.png)
 
-Grâce aux propriétés et à leurs valeurs, nous serons en mesure d'aligner le contenu de la grillle par rapport à ces deux axes.
+Nous pouvons aligner le contenu à l'intérieur des zones de grille, ainsi que les pistes de la grille elles-mêmes sur ces deux axes.
 
-## Aligner des objets sur l'axe de bloc (_block axis_)
+## Aligner des objets sur l'axe de bloc
 
-Les propriétés {{cssxref("align-self")}} et {{cssxref("align-items")}} permettent de contrôler l'alignement selon l'axe de bloc. Lorsqu'on utilise ces propriétés, on modifie l'alignement de l'objet au sein de la zone de grille sur laquelle il est placé.
+Les propriétés {{CSSxRef("align-self")}} et {{CSSxRef("align-items")}} permettent de contrôler l'alignement selon l'axe de bloc. Lorsqu'on utilise ces propriétés, on modifie l'alignement de l'objet au sein de la zone de grille sur laquelle il est placé.
 
-### Utiliser align-items
+### Utiliser `align-items`
 
-Dans l'exemple suivant, on a quatre zones sur la grille. On peut utiliser la propriété {{cssxref("align-items")}} sur le conteneur de la grille afin d'aligner les objets avec l'une des valeurs suivantes :
+Dans l'exemple suivant, nous avons quatre {{Glossary("grid areas", "zones de grille")}} dans notre grille. Nous pouvons utiliser la propriété {{CSSxRef("align-items")}} sur le {{Glossary("grid container", "conteneur de grille")}} pour aligner les éléments en utilisant les valeurs `normal`, `stretch`, ou {{CSSxRef("self-position")}} ou {{CSSxRef("baseline-position")}}&nbsp;:
 
-- `auto`
 - `normal`
+- `stretch`
 - `start`
 - `end`
 - `center`
-- `stretch`
 - `baseline`
 - `first baseline`
 - `last baseline`
+- `auto` (seulement `align-self`)
+
+La valeur par défaut est `normal`, qui se résout en `stretch` pour les conteneurs de grille.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -61,10 +65,10 @@ Dans l'exemple suivant, on a quatre zones sur la grille. On peut utiliser la pro
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-rows: 100px;
   grid-template-areas:
     "a a a a b b b b"
@@ -73,51 +77,51 @@ Dans l'exemple suivant, on a quatre zones sur la grille. On peut utiliser la pro
     "c c c c d d d d";
   align-items: start;
 }
-.item1 {
+.element1 {
   grid-area: a;
 }
-.item2 {
+.element2 {
   grid-area: b;
 }
-.item3 {
+.element3 {
   grid-area: c;
 }
-.item4 {
+.element4 {
   grid-area: d;
 }
 ```
 
 ```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
+<div class="enveloppe">
+  <div class="element1">Élément 1</div>
+  <div class="element2">Élément 2</div>
+  <div class="element3">Élément 3</div>
+  <div class="element4">Élément 4</div>
 </div>
 ```
 
-{{EmbedLiveSample('Utiliser_align-items', '500', '450')}}
+{{EmbedLiveSample("Utiliser `align-items`", 500, 450)}}
 
-Lorsqu'on utilise `align-self: start`, la hauteur de chaque `<div>` sera déterminée par le contenu du `<div>`. En revanche, si on n'utilise pas {{cssxref("align-self")}}, chaque `<div>` sera étiré afin de remplir la zone de la grille.
+Gardez à l'esprit qu'une fois que vous définissez `align-items: start`, la hauteur de chaque élément enfant `<div>` est déterminée par le contenu de `<div>`. Cela contraste avec l'omission complète de {{CSSxRef("align-items")}}, auquel cas la hauteur de chaque `<div>` s'étire pour remplir sa zone de grille.
 
-La propriété {{cssxref("align-items")}} définit en fait la valeur de la propriété {{cssxref("align-self")}} pour tous les éléments fils de la grille. Cela signifie qu'on peut avoir un réglage plus fin sur chacun des objets de la grille en utilisant `align-self` pour les objets.
+La propriété `align-items` définit la valeur de la propriété {{CSSxRef("align-self")}} pour tous les éléments fils de la grille. Cela signifie qu'on peut avoir un réglage plus fin sur chacun des objets de la grille en utilisant `align-self` pour les objets.
 
-### Utiliser align-self
+### Utiliser `align-self`
 
-Dans le prochain exemple, on utilise la propriété `align-self` afin d'illustrer les différentes valeurs pour l'alignement. La première zone illustre le comportement par défaut pour `align-self` : l'objet est étiré. Le deuxième objet utilise la valeur `start`, le troisième utilise `end` et le quatrième utilise `center`.
+Dans l'exemple suivant, nous utilisons la propriété `align-self`, pour illustrer les différentes valeurs d'alignement. La première zone montre le comportement par défaut de `align-self`, qui dans ce cas se résout en `stretch`. Le deuxième élément, possède une valeur `align-self` de `start`, le troisième `end` et le quatrième `center`.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -127,10 +131,10 @@ Dans le prochain exemple, on utilise la propriété `align-self` afin d'illustre
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-rows: 100px;
   grid-template-areas:
     "a a a a b b b b"
@@ -138,70 +142,70 @@ Dans le prochain exemple, on utilise la propriété `align-self` afin d'illustre
     "c c c c d d d d"
     "c c c c d d d d";
 }
-.item1 {
+.element1 {
   grid-area: a;
 }
-.item2 {
+.element2 {
   grid-area: b;
   align-self: start;
 }
-.item3 {
+.element3 {
   grid-area: c;
   align-self: end;
 }
-.item4 {
+.element4 {
   grid-area: d;
   align-self: center;
 }
 ```
 
 ```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
+<div class="enveloppe">
+  <div class="element1">Élément 1</div>
+  <div class="element2">Élément 2</div>
+  <div class="element3">Élément 3</div>
+  <div class="element4">Élément 4</div>
 </div>
 ```
 
-{{EmbedLiveSample('Utiliser_align-self', '500', '450')}}
+{{EmbedLiveSample("Utiliser `align-self`", 500, 450)}}
 
-### Gestion des objets avec un ratio intrinsèque
+### Gestion des objets avec un rapport intrinsèque
 
-La spécification indique que le comportement par défaut pour {{cssxref("align-self")}} est d'étirer l'objet sauf si celui-ci possède un ratio intrinsèque. Dans ce cas, le comportement par défaut correspond à la valeur `start`. En effet, si le comportement par défaut était le même pour les éléments avec un ratio intrinsèque (une image matricielle par exemple), l'étirement distordrait l'objet.
+Le comportement par défaut de {{CSSxRef("align-self")}} consiste à hériter de la propriété `align-items` du conteneur de grille, pour laquelle la valeur par défaut `normal` consiste à étirer les éléments, sauf ceux qui possèdent un {{Glossary("aspect ratio", "rapport d'aspect")}} intrinsèque, auquel cas ils se comportent comme `start`. La raison de ce choix, est que si les éléments avec un rapport d'aspect sont étirés, ils se déforment.
 
-Bien que ce comportement ait récemment été clarifié dans la spécification, il n'est pas encore implémenté dans les différents navigateurs. Pour le moment, il faut donc s'assurer d'utiliser {{cssxref("align-self")}} et {{cssxref("justify-self")}} avec les valeurs `start` pour les éléments concernés comme les images. Cela correspondra au comportement par défaut lorsqu'il aura été implémenté.
+## Justifier les objets sur l'axe en incise
 
-## Justifier les objets sur l'axe en ligne (_inline axis_)
+Alors que les propriétés `align-items` et `align-self` alignent les éléments sur l'axe de bloc, {{CSSxRef("justify-items")}} et {{CSSxRef("justify-self")}} alignent les éléments sur l'axe incise. Les valeurs disponibles sont similaires à celles de la propriété `align-self` (à savoir `normal`, `stretch`, {{CSSxRef("&lt;self-position&gt;")}} et {{CSSxRef("&lt;baseline-position&gt;")}}), auxquelles s'ajoutent `left` et `right`. Les valeurs incluent&nbsp;:
 
-{{cssxref("align-items")}} et {{cssxref("align-self")}} gèrent l'alignement des objets sur l'axe de bloc. {{cssxref("justify-items")}} et {{cssxref("justify-self")}} permettent quant à eux de gérer l'alignement sur l'axe en ligne. Les valeurs disponibles sont les mêmes que pour `align-self` :
-
-- `auto`
 - `normal`
 - `start`
 - `end`
+- `left`
+- `right`
 - `center`
 - `stretch`
 - `baseline`
 - `first baseline`
 - `last baseline`
+- `auto` (`justify-self` only)
 
-Juste après, on voit le même exemple qu'avec {{cssxref("align-items")}} où on a utilisé la propriété {{cssxref("justify-self")}}.
+Vous pouvez voir le même exemple qu'avec {{CSSxRef("align-items")}}, ci-dessous. Cette fois, nous appliquons la propriété {{CSSxRef("justify-self")}}.
 
-Là encore, la valeur par défaut `stretch` pour les objets qui n'ont pas de ratio intrinsèque. Cela signifie que, par défaut, les objets de la grille couvriront l'ensemble de la zone de grille sur laquelle ils sont placés. Dans l'exemple qui suit, le premier objet illustre cet alignement par défaut.
+Là encore, la valeur par défaut est `stretch` sauf pour les éléments avec un rapport d'aspect intrinsèque. Cela signifie que, par défaut, les éléments de la grille couvrent leur zone de grille, sauf si vous modifiez l'alignement. Dans cet exemple, le premier élément illustre la valeur d'alignement par défaut `stretch`&nbsp;:
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -211,10 +215,10 @@ Là encore, la valeur par défaut `stretch` pour les objets qui n'ont pas de rat
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-rows: 100px;
   grid-template-areas:
     "a a a a b b b b"
@@ -222,58 +226,61 @@ Là encore, la valeur par défaut `stretch` pour les objets qui n'ont pas de rat
     "c c c c d d d d"
     "c c c c d d d d";
 }
-.item1 {
+.element1 {
   grid-area: a;
 }
-.item2 {
+.element2 {
   grid-area: b;
   justify-self: start;
 }
-.item3 {
+.element3 {
   grid-area: c;
   justify-self: end;
 }
-.item4 {
+.element4 {
   grid-area: d;
   justify-self: center;
 }
 ```
 
 ```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
+<div class="enveloppe">
+  <div class="element1">Élément 1</div>
+  <div class="element2">Élément 2</div>
+  <div class="element3">Élément 3</div>
+  <div class="element4">Élément 4</div>
 </div>
 ```
 
-{{EmbedLiveSample('Justifier_les_objets_sur_laxe_en_ligne_inline_axis', '500', '450')}}
+{{EmbedLiveSample("Justifier les objets sur l'axe en incise", 500, 450)}}
 
-Comme pour {{cssxref("align-self")}} et {{cssxref("align-items")}}, on peut utiliser la propriété {{cssxref("justify-items")}} sur le conteneur de la grille afin de régler la valeur de {{cssxref("justify-self")}} pour l'ensemble des objets de la grille.
+Comme pour `align-self` et `align-items`, vous pouvez appliquer `justify-items` au conteneur de grille pour définir une valeur `justify-self` pour tous les éléments de grille du conteneur.
 
-Les propriétés {{cssxref("justify-self")}} et {{cssxref("justify-items")}} ne sont pas disponibles lorsqu'on utilise les boîtes flexibles car celles-ci s'étendent uniquement sur une dimension. Pour aligner les éléments sur l'axe principale d'une boîte flexible, on utilisera la propriété {{cssxref("justify-content")}}.
+> [!NOTE]
+> Les propriétés `justify-self` et `justify-items` ne sont pas implémentées avec les boîtes flexibles. Cela est dû à la nature unidimensionnelle des [boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout), ainsi qu'au fait que plusieurs éléments peuvent se trouver sur l'axe, ce qui rend impossible la justification d'un seul élément. Pour aligner les éléments sur l'axe principal, l'axe en incise, avec les boîtes flexibles, vous utilisez la propriété {{CSSxRef("justify-content")}}.
 
 ### Propriétés raccourcies
 
-La propriété {{CSSxRef("place-items")}} est une propriété raccourcie qui synthétise {{CSSxRef("align-items")}} et {{CSSxRef("justify-items")}}. {{CSSxRef("place-self")}} est une propriété raccourcie qui synthétise {{CSSxRef("align-self")}} et {{CSSxRef("justify-self")}}.
+La propriété {{CSSxRef("place-items")}} est le raccourci pour `align-items` et `justify-items`.
 
-## Centrer un objet sur une zone
+La propriété {{CSSxRef("place-self")}} est le raccourci pour `align-self` et `justify-self`.
 
-En combinant les propriétés `align-*` et `justify-*`, on peut facilement centrer un objet sur sa zone de grille.
+## Centrer un élément dans une zone
+
+En combinant les propriétés `align-*` et `justify-*`, on peut facilement centrer un élément sur sa zone de grille.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -283,16 +290,16 @@ En combinant les propriétés `align-*` et `justify-*`, on peut facilement centr
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-rows: 200px;
   grid-template-areas:
     ". a a ."
     ". a a .";
 }
-.item1 {
+.element1 {
   grid-area: a;
   align-self: center;
   justify-self: center;
@@ -300,20 +307,20 @@ En combinant les propriétés `align-*` et `justify-*`, on peut facilement centr
 ```
 
 ```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
+<div class="enveloppe">
+  <div class="element1">Élément 1</div>
 </div>
 ```
 
-{{EmbedLiveSample('Centrer_un_objet_sur_une_zone', '500', '480')}}
+{{EmbedLiveSample("Centrer un élément dans une zone", 500, 430)}}
 
 ## Aligner les pistes d'une grille sur l'axe de bloc
 
-Si on a des pistes qui n'occupent pas tout l'espace du conteneur, on pourra aligner les pistes au sein du conteneur. Là aussi, on peut obtenir cet alignement sur l'axe des colonnes et l'axe des lignes : {{cssxref("align-content")}} permet d'aligner les pistes selon l'axe des colonnes et {{cssxref("justify-content")}} permettant d'aligner sur l'axe en ligne.
+Si vous avez une situation où vos pistes de grille utilisent une zone plus petite que le conteneur de la grille, vous pouvez aligner les pistes de grille elles-mêmes à l'intérieur de ce conteneur. La propriété {{CSSxRef("align-content")}} aligne les pistes sur l'axe de bloc et {{CSSxRef("justify-content")}} aligne sur l'axe en incise. Comme pour les propriétés `*-items` et `*-item`, la propriété {{CSSxRef("place-content")}} est un raccourci pour `align-content` et `justify-content`.
 
-La propriété {{cssxref("place-content")}} est une propriété raccourcie pour {{cssxref("align-content")}} et {{cssxref("justify-content")}}.
+Les valeurs pour `align-content`, `justify-content` et `place-content` incluent toutes les valeurs {{CSSxRef("content-distribution")}} et {{CSSxRef("content-position")}}. La propriété `align-content` accepte également les valeurs {{CSSxRef("baseline-position")}} et, comme les autres propriétés `justify-*`, `justify-content` accepte également `left` et `right`.
 
-Les valeurs disponibles pour {{cssxref("align-content")}}, {{cssxref("justify-content")}} et {{cssxref("place-content")}} sont :
+Les mots-clés valides pour `place-content` incluent&nbsp;:
 
 - `normal`
 - `start`
@@ -326,25 +333,29 @@ Les valeurs disponibles pour {{cssxref("align-content")}}, {{cssxref("justify-co
 - `baseline`
 - `first baseline`
 - `last baseline`
+- `left`
+- `right`
 
-Dans l'exemple qui suit, on a un conteneur qui mesure 500 pixels de haut sur 500 pixels de large. On définit trois pistes de ligne et trois pistes de colonnes qui mesurent chacune 100 pixels et avec une gouttière de 10 pixels. On a donc un espace disponible dans le conteneur dans chaque direction.
-
-La propriété `align-content` s'applique sur le conteneur de la grille car elle porte sur l'ensemble de la grille. Pour une disposition en grille, la valeur par défaut est `start` : cela indique que les pistes commencent à partir du coin en haut à gauche de la grille.
+La propriété `align-content` s'applique sur le conteneur de la grille, car elle porte sur l'ensemble de la grille.
 
 ### Alignement par défaut
 
+Dans cet exemple, le conteneur de grille de 500px sur 500px a trois pistes de lignes et trois pistes de colonnes de 100px avec une gouttière de 10px. Cela signifie qu'il y a de l'espace à l'intérieur du conteneur de la grille dans les directions de bloc et en incise.
+
+Par défaut, nos pistes de grille se trouvent dans le coin supérieur gauche de la grille, alignées sur les lignes de grille de départ, car le comportement par défaut dans la disposition en grille est `start`&nbsp;:
+
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -354,259 +365,268 @@ La propriété `align-content` s'applique sur le conteneur de la grille car elle
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
-  grid-gap: 10px;
+  gap: 10px;
   grid-template-areas:
     "a a b"
     "a a b"
     "c d d";
 }
-.item1 {
+.element1 {
   grid-area: a;
 }
-.item2 {
+.element2 {
   grid-area: b;
 }
-.item3 {
+.element3 {
   grid-area: c;
 }
-.item4 {
+.element4 {
   grid-area: d;
 }
 ```
 
 ```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
+<div class="enveloppe">
+  <div class="element1">Élément 1</div>
+  <div class="element2">Élément 2</div>
+  <div class="element3">Élément 3</div>
+  <div class="element4">Élément 4</div>
 </div>
 ```
 
-{{EmbedLiveSample('Alignement_par_défaut', '500', '520')}}
+{{EmbedLiveSample("Alignement par défaut", 500, 500)}}
 
-### Utiliser align-content: end
+### Définir `align-content: end`
 
-Si on ajoute `align-content` avec la valeur `end` sur le conteneur, les pistes seront déplacées à la fin du conteneur selon l'axe des colonnes.
-
-```css hidden
-* {
-  box-sizing: border-box;
-}
-
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-}
-
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
-}
-```
+Utiliser le même CSS et HTML, dans cet exemple nous ajoutons `align-content` avec une valeur de `end` au conteneur, de sorte que toutes les pistes se déplacent vers la ligne de fin du conteneur de la grille dans la dimension de bloc&nbsp;:
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
-  height: 500px;
-  width: 500px;
-  grid-gap: 10px;
-  grid-template-areas:
-    "a a b"
-    "a a b"
-    "c d d";
+.enveloppe {
   align-content: end;
 }
-.item1 {
-  grid-area: a;
-}
-.item2 {
-  grid-area: b;
-}
-.item3 {
-  grid-area: c;
-}
-.item4 {
-  grid-area: d;
-}
 ```
-
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
-</div>
-```
-
-{{EmbedLiveSample('Utiliser_align-content_end', '500', '520')}}
-
-### Utiliser align-content: space-between
-
-Pour cette propriété, on peut également utiliser des valeurs qu'on manipule avec les boîtes flexibles : `space-between`, `space-around` et `space-evenly` qui permettent de répartir l'espace. Si on utilise {{cssxref("align-content")}} avec `space-between` pour notre exemple, on voit alors que les éléments sont espacés de façon équitable.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-```
 
-```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
-  grid-gap: 10px;
+  gap: 10px;
   grid-template-areas:
     "a a b"
     "a a b"
     "c d d";
+}
+.element1 {
+  grid-area: a;
+}
+.element2 {
+  grid-area: b;
+}
+.element3 {
+  grid-area: c;
+}
+.element4 {
+  grid-area: d;
+}
+```
+
+```html
+<div class="enveloppe">
+  <div class="element1">Élément 1</div>
+  <div class="element2">Élément 2</div>
+  <div class="element3">Élément 3</div>
+  <div class="element4">Élément 4</div>
+</div>
+```
+
+{{EmbedLiveSample("Définir `align-content: end`", 500, 500)}}
+
+### Définir `align-content: space-between`
+
+Nous pouvons également appliquer les valeurs de distribution de l'espace {{CSSxRef("content-distribution")}} `space-between`, `space-around`, `space-evenly` et `stretch`. Dans cet exemple, nous définissons {{CSSxRef("align-content")}}, qui aligne les pistes sur l'axe de bloc, sur `space-between`, ce qui espace les pistes&nbsp;:
+
+```css
+.enveloppe {
   align-content: space-between;
 }
-.item1 {
-  grid-area: a;
-}
-.item2 {
-  grid-area: b;
-}
-.item3 {
-  grid-area: c;
-}
-.item4 {
-  grid-area: d;
-}
 ```
-
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
-</div>
-```
-
-{{EmbedLiveSample('Utiliser_align-content_space-between', '500', '1570')}}
-
-On notera qu'en utilisant ces valeurs pour répartir l'espace, cela peut agrandir les objets de la grille. Si un objet s'étale sur plusieurs pistes, un espace sera ajouté entre chaque piste afin que l'objet qui doit être agrandi puisse absorber cet espace. Aussi, si vous choisissez d'utiliser ces valeurs, assurez-vous que le contenu des pistes puisse absorber cet espace supplémentaire ou que les propriétés d'alignement les renvoient au début de la piste plutôt que de les étirer.
-
-Dans l'image qui suit, on a a placé une grille en utilisant `align-content: start` et une autre grille qui utilise `align-content: space-between`. On peut voir la façon dont les objets 1 et 2 (qui s'étalent sur deux lignes) ont gagné en hauteur pour combler l'espace entre les pistes.
-
-![](7_space-between.png)
-
-## Justifier les pistes sur l'axe des lignes
-
-Sur l'axe des lignes, on peut utiliser {{cssxref("justify-content")}} de la même façon qu'on utilisait {{cssxref("align-content")}} pour l'axe des colonnes.
-
-Avec le même exemple, on utilise {{cssxref("justify-content")}} avec la valeur `space-around`. Là encore, les pistes qui s'étalent sur plus d'une colonne gagnent en largeur.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-```
 
-```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
-  grid-gap: 10px;
+  gap: 10px;
   grid-template-areas:
     "a a b"
     "a a b"
     "c d d";
+}
+.element1 {
+  grid-area: a;
+}
+.element2 {
+  grid-area: b;
+}
+.element3 {
+  grid-area: c;
+}
+.element4 {
+  grid-area: d;
+}
+```
+
+```html
+<div class="enveloppe">
+  <div class="element1">Élément 1</div>
+  <div class="element2">Élément 2</div>
+  <div class="element3">Élément 3</div>
+  <div class="element4">Élément 4</div>
+</div>
+```
+
+{{EmbedLiveSample("Définir `align-content: space-between`", 500, 500)}}
+
+Si un élément s'étend sur plusieurs pistes de la grille, l'utilisation d'une valeur de distribution de l'espace entraîne probablement un agrandissement des éléments de votre grille, car l'espace ajouté entre les pistes est ajouté à l'élément qui s'étend. Par conséquent, si vous utilisez ces valeurs, assurez-vous que le contenu des pistes peut absorber l'espace supplémentaire ou que vous avez utilisé des propriétés d'alignement sur les éléments, afin qu'ils se déplacent vers le début ou la fin plutôt que de s'étirer.
+
+Dans l'image ci-dessous, nous avons placé la grille avec deux valeurs différentes de `align-content` pour comparer `start` et `space-between`. Vous pouvez voir comment les deux premiers éléments, qui s'étendent sur deux pistes de lignes, ont pris de la hauteur supplémentaire dans l'exemple `space-between`, car ils gagnent l'espace qui existe en raison de l'espace libre qui a été distribué _entre_ les trois lignes&nbsp;:
+
+![Démonstration de la façon dont les éléments deviennent plus grands si nous utilisons space-between.](7_space-between.png)
+
+## Justifier les pistes sur l'axe en incise
+
+Nous pouvons utiliser `justify-content` pour effectuer le même type d'alignement sur l'axe en incise que nous avons utilisé `align-content` pour l'axe en bloc.
+
+En utilisant le même exemple, nous définissons {{CSSxRef("justify-content")}} sur `space-around`. Cela provoque une fois de plus que les pistes qui s'étendent sur plus d'une piste de colonne gagnent de l'espace supplémentaire&nbsp;:
+
+```css
+.enveloppe {
   align-content: space-between;
   justify-content: space-around;
 }
-.item1 {
-  grid-area: a;
-}
-.item2 {
-  grid-area: b;
-}
-.item3 {
-  grid-area: c;
-}
-.item4 {
-  grid-area: d;
-}
 ```
-
-```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
-</div>
-```
-
-{{EmbedLiveSample('Justifier_les_pistes_sur_laxe_des_lignes', '500', '500')}}
-
-## Alignement et marges automatiques
-
-Pour aligner les objets dans une zone, on peut également utiliser des marges automatiques. Si vous avez déjà utiliser `auto` pour les marges droite et gauche d'un conteneur de bloc, vous savez qu'une telle marge absorbe l'espace disponible. En utilisant `auto` pour les deux côtés, le bloc est contraint au milieu car les deux marges occupent le plus d'espace possible.
-
-Dans l'exemple qui suit, pour l'objet 1, on utilise une marge à gauche avec `auto`. On peut alors voir le contenu poussé à droite de la zone (la marge à gauche occupant le plus d'espace possible).
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
+
+.enveloppe {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  height: 500px;
+  width: 500px;
+  gap: 10px;
+  grid-template-areas:
+    "a a b"
+    "a a b"
+    "c d d";
+}
+.element1 {
+  grid-area: a;
+}
+.element2 {
+  grid-area: b;
+}
+.element3 {
+  grid-area: c;
+}
+.element4 {
+  grid-area: d;
+}
+```
+
+```html
+<div class="enveloppe">
+  <div class="element1">Élément 1</div>
+  <div class="element2">Élément 2</div>
+  <div class="element3">Élément 3</div>
+  <div class="element4">Élément 4</div>
+</div>
+```
+
+{{EmbedLiveSample("Justifier les pistes sur l'axe en incise", 500, 500)}}
+
+## Alignement et marges automatiques
+
+Une autre façon d'aligner les éléments dans leur zone consiste à utiliser des marges automatiques. Si vous avez déjà centré une disposition dans la zone d'affichage, ou tout élément de niveau bloc dans son conteneur, vous l'avez peut-être fait en définissant sur `auto` les marges droite et gauche de l'élément que vous voulez centrer. La marge automatique absorbe tout l'espace disponible. Définir la marge sur `auto` des deux côtés pousse l'élément de niveau bloc au centre, car les deux marges tentent de prendre tout l'espace.
+
+Dans l'exemple suivant, la propriété {{CSSxRef("margin-left")}} de l'élément 1 est définie sur `auto`. Le contenu est ainsi poussé vers le côté droit de la zone, car la marge automatique occupe l'espace disponible restant après l'attribution de l'espace nécessaire au contenu&nbsp;:
+
+```css hidden
+* {
+  box-sizing: border-box;
+}
+
+.enveloppe {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -616,52 +636,62 @@ Dans l'exemple qui suit, pour l'objet 1, on utilise une marge à gauche avec `au
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
-  grid-gap: 10px;
+  gap: 10px;
   grid-template-areas:
     "a a b"
     "a a b"
     "c d d";
 }
-.item1 {
+.element1 {
   grid-area: a;
   margin-left: auto;
 }
-.item2 {
+.element2 {
   grid-area: b;
 }
-.item3 {
+.element3 {
   grid-area: c;
 }
-.item4 {
+.element4 {
   grid-area: d;
 }
 ```
 
 ```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
+<div class="enveloppe">
+  <div class="element1">Élément 1</div>
+  <div class="element2">Élément 2</div>
+  <div class="element3">Élément 3</div>
+  <div class="element4">Élément 4</div>
 </div>
 ```
 
-{{EmbedLiveSample('Alignement_et_marges_automatiques', '500', '500')}}
+{{EmbedLiveSample("Alignement et marges automatiques", 500, 500)}}
 
-On peut voir comment l'objet est aligné grâce à [l'outil de mise en évidence des grilles dans Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html).
+Utilisez l'inspecteur de grilles dans les outils de développement de votre navigateur pour voir comment l'élément est aligné&nbsp;:
 
-![](7_auto_margins.png)
+![Une image montrant les marges automatiques en utilisant le surligneur de grille de Firefox.](7_auto_margins.png)
 
 ## L'alignement et les modes d'écriture
 
-Dans tout ces exemples, nous avons travaillé en français ou en anglais, des langues qui s'écrivent de gauche à droite. Cela signifie que les lignes de début de notre grille étaient situées en haut et à gauche lorsqu'on raisonnait avec des directions _physiques_.
+Tous ces exemples sont en français, une langue qui s'écrit de gauche à droite. Cela signifie que nos lignes de départ se trouvent en haut et à gauche de notre grille lorsque nous raisonnons en directions physiques.
 
-Les spécifications pour les grilles CSS et les boîtes flexibles sont conçues pour fonctionner avec les différents modes d'écriture. Cela signifie que si on travaille avec une langue qui s'écrit de droite à gauche (comme l'arabe), le début de la grille serait en haut à droite. Cela signifie également que la valeur par défaut `justify-content: start` placerait les pistes du côté droit de la grille. En revanche, si on utilise les marges automatiques avec `margin-right` ou `margin-left` ou si on utilise le positionnement absolu avec les valeurs `top`, `right`, `bottom` et `left`, on ne tiendra pas compte des modes d'écritures. Dans le guide suivant, nous verrons plus en détails comment les grilles et l'alignement interagissent avec les modes d'écriture. Cet aspect est fondamental si vous souhaitez développer des sites qui puissent être affichés dans plusieurs langues ou si vous souhaitez mélanger certaines langues ou modes d'écriture pour une application.
+La disposition en grille CSS et l'alignement des boîtes CSS fonctionnent avec les modes d'écriture en CSS. Lorsqu'une langue qui s'écrit de droite à gauche, comme l'arabe, s'affiche, le début de la grille se trouve en haut à droite, de sorte que la valeur par défaut `justify-content: start` fait commencer les pistes de la grille sur le côté droit de la grille.
 
-{{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Auto-placement", "Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes","Web/CSS/Guides/Grid_layout")}}
+Définir des {{Glossary("physical properties", "propriétés physiques")}}, par exemple en définissant des marges automatiques avec {{CSSxRef("margin-right")}} ou {{CSSxRef("margin-left")}}, ou en positionnant des éléments de manière absolue avec les décalages {{CSSxRef("top")}}, {{CSSxRef("right")}}, {{CSSxRef("bottom")}} et {{CSSxRef("left")}}, ne respecte pas les modes d'écriture. Dans le guide [grilles, valeurs logiques et modes d'écriture](/fr/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes), nous examinons plus en détail cette interaction entre la disposition en grille CSS, l'alignement des boîtes et les modes d'écriture. Il est important de la comprendre si vous développez des sites qui s'affichent ensuite dans plusieurs langues ou si vous voulez mélanger des langues ou des modes d'écriture dans une même conception.
+
+## Voir aussi
+
+- [Concepts de base de la disposition en grille](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [Relation de la disposition en grille avec les autres méthodes de disposition](/fr/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
+- [Disposition en grille fondée sur les lignes](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [Zones de modèle de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
+- [Disposition en grille utilisant des lignes de grille nommées](/fr/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
+- [Placement automatique dans une disposition en grille](/fr/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
+- [Alignement des boîtes dans une disposition en grille CSS](/fr/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
