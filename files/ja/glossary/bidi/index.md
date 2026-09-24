@@ -1,18 +1,21 @@
 ---
 title: BiDi (双方向)
 slug: Glossary/BiDi
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+**BiDi** (BiDirectional、双方向) は、右書き (right-to-left, RTL) および左書き (left-to-right, LTR) の両方のテキストを含む文書を説明します。
 
-**BiDi** (BiDirectional、双方向) は、{{glossary("rtl","右から左")}}および{{glossary("ltr","左から右")}}に向かって書くテキストの両方を含む文書を指します。両方の方向性が同じパラグラフで発生しても、各言語のテキストは適切な方向性で表示されなくてはなりません。
+ユーザーインターフェイスは BiDi コンテンツを正しく表示させるべきですが、多くの場合それができていません。その一例として、名前 Sarah のヘブライ語訳 שרה の綴りが挙げられます。これは（右から左へ）シン（ש）、レシュ（ר）、ヘ（ה）と綴られます。多くのプログラムでは、これらの文字が逆の順序で表示されてしまいます。
 
-## より詳しく知る
+左から右への表示順序を右から左への表示順序に反転させることはできますが、そうすると双方向スクリプトを正しく表示させる機能が犠牲になります。少なくとも一方のスクリプトは常に誤って表示されてしまいます。双方向スクリプトに対応していれば、書き込み方向に関係なく、同じページ上で異なるスクリプトの文字を混在させることが可能になります。
 
-### 一般知識
+Unicode 標準は、完全な BiDi 対応のための基盤を提供しており、左から右および右から左のスクリプトの混合がどのようにエンコードされ、表示されるかについて詳細な規則を定めています。
 
-- Wikipedia 上の [双方向テキスト](https://ja.wikipedia.org/wiki/双方向テキスト)
+## 関連情報
 
-### 技術文書
-
-- [Bidi アプリの開発](/ja/docs/Web/Apps/Build/Localization/Developing_Bidi_Apps)
+- 関連用語:
+  - {{glossary("Unicode")}}
+- [双方向テキスト](https://ja.wikipedia.org/wiki/双方向テキスト) - ウィキペディア
+- [UAX#9: Unicode Bi-directional Algorithm](https://www.unicode.org/reports/tr9)
