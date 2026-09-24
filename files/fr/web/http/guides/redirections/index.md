@@ -116,7 +116,7 @@ Dans ce cas, le serveur peut renvoyer une réponse {{HTTPStatus("303")}} (See Ot
 
 ### Réponses temporaires aux longues requêtes
 
-Certaines requêtes peuvent nécessiter plus de temps sur le serveur comme parfois des requêtes {{HTTPHeader("DELETE")}} qui sont planifiés pour un traitement ultérieur. Dans ce cas, la réponse est un {{HTTPStatus("303")}} (See Other) qui renvoie à une page indiquant que l'action a été programmée, et informe éventuellement de l'avancement de l'action, ou permet de l'annuler.
+Certaines requêtes peuvent nécessiter plus de temps sur le serveur comme parfois des requêtes {{HTTPMethod("DELETE")}} qui sont planifiés pour un traitement ultérieur. Dans ce cas, la réponse est un {{HTTPStatus("303")}} (See Other) qui renvoie à une page indiquant que l'action a été programmée, et informe éventuellement de l'avancement de l'action, ou permet de l'annuler.
 
 ## Configuration des redirections dans les serveurs les plus courants
 
