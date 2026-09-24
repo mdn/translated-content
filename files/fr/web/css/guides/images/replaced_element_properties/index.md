@@ -24,7 +24,6 @@ Par ailleurs, certains éléments comme :
 - {{HTMLElement("audio")}}
 - {{HTMLElement("canvas")}}
 - {{HTMLElement("object")}}
-- {{HTMLElement("applet")}}
 
 sont des éléments remplacés dans certains cas spécifiques. De même un élément {{HTMLElement("input")}} peut être un élément remplacé dans certains cas (lorsqu'il est de type `"image"` notamment).
 

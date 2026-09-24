@@ -134,12 +134,6 @@ function load(url, callback) {
 
 ## Voir aussi
 
-- {{domxref("XMLSerializer")}} : Sérialisation d'un arbre DOM en XML
-- Tutoriels MDN couvrant le `XMLHttpRequest` :
-  - [Ajax — Pour commencer](/fr/docs/Learn_web_development/Core/Scripting/Network_requests)
-  - [Utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-  - [HTML dans XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-  - [Fetch API](/fr/docs/Web/API/Fetch_API)
-
-- [HTML5 Rocks — New Tricks in XMLHttpRequest2](https://www.html5rocks.com/en/tutorials/file/xhr2/)
-- Directive Feature-Policy {{httpheader("Feature-Policy/sync-xhr", "sync-xhr")}}
+- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- Obtenir du texte et des données HTML/XML&nbsp;: {{DOMxRef("XMLHttpRequest.responseText")}} et
+  {{DOMxRef("XMLHttpRequest.responseXML")}}

@@ -22,7 +22,7 @@ Nous examinerons ces deux scénarios et la manière de les mettre en œuvre.
 
 ### Images progressives
 
-Les images — qu'elles soient intégrés à l'aide de {{HTMLElement("img")}} ou de {{HTMLElement("image")}} — ne supportent pas un concept similaire aux cadres. Cependant, il existe des moyens de présenter une image de faible qualité pendant qu'elle est encore en cours de chargement. Il faut pour cela créer vos images en utilisant des formats progressifs, tels que le progressif {{Glossary("JPEG")}} ou l'entrelacé {{Glossary("PNG")}}.
+Les images — qu'elles soient intégrés à l'aide de {{HTMLElement("img")}} ou de {{HTMLElement("picture")}} — ne supportent pas un concept similaire aux cadres. Cependant, il existe des moyens de présenter une image de faible qualité pendant qu'elle est encore en cours de chargement. Il faut pour cela créer vos images en utilisant des formats progressifs, tels que le progressif {{Glossary("JPEG")}} ou l'entrelacé {{Glossary("PNG")}}.
 
 Une fois que votre image a été convertie en forme progressive, vous pouvez simplement l'utiliser comme d'habitude.
 

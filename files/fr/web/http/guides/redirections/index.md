@@ -10,7 +10,7 @@ La redirection d'URL est une technique pour donner à une page, un formulaire ou
 
 En HTTP, une redirection est déclenchée par le serveur en envoyant des réponses spéciales à une requête : _les redirections_. Les redirections HTTP sont des réponses avec un code d'état de `3xx`. Un navigateur, lorsqu'il reçoit une réponse de redirection, utilise la nouvelle URL fournie et la charge immédiatement : la plupart du temps, la redirection est transparente pour l'utilisateur, si ce n'est un petit impact de performance.
 
-![](httpredirect.png)
+![Une requête effectuée par le client vers le serveur. Le serveur répond avec « 301:moved permanently » et la nouvelle URL de la ressource. Le client effectue une requête GET pour la nouvelle URL qui est retournée par le serveur avec une réponse 200 OK.](httpredirect.svg)
 
 Il existe plusieurs types de redirections et elles se répartissent en trois catégories : les redirections permanentes, les temporaires et les spéciales.
 
@@ -116,7 +116,7 @@ Dans ce cas, le serveur peut renvoyer une réponse {{HTTPStatus("303")}} (See Ot
 
 ### Réponses temporaires aux longues requêtes
 
-Certaines requêtes peuvent nécessiter plus de temps sur le serveur comme parfois des requêtes {{HTTPHeader("DELETE")}} qui sont planifiés pour un traitement ultérieur. Dans ce cas, la réponse est un {{HTTPStatus("303")}} (See Other) qui renvoie à une page indiquant que l'action a été programmée, et informe éventuellement de l'avancement de l'action, ou permet de l'annuler.
+Certaines requêtes peuvent nécessiter plus de temps sur le serveur comme parfois des requêtes {{HTTPMethod("DELETE")}} qui sont planifiés pour un traitement ultérieur. Dans ce cas, la réponse est un {{HTTPStatus("303")}} (See Other) qui renvoie à une page indiquant que l'action a été programmée, et informe éventuellement de l'avancement de l'action, ou permet de l'annuler.
 
 ## Configuration des redirections dans les serveurs les plus courants
 
