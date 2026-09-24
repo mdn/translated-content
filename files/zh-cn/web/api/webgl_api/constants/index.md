@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("WebGL")}}
 
-**WebGL 常量**是 [WebGL：web 中的 2D 的 3D 图形](/zh-CN/docs/Web/API/WebGL_API) 里传给函数或由函数返回的一组取值。所有常量的类型都是 {{domxref("WebGL_API/Types", "GLenum")}}。
+**WebGL 常量**是 [WebGL：web 中的 2D 的 3D 图形](/zh-CN/docs/Web/API/WebGL_API)里传给函数或由函数返回的一组取值。所有常量的类型都是 {{domxref("WebGL_API/Types", "GLenum")}}。
 
 标准 WebGL 常量安装在 {{domxref("WebGLRenderingContext")}} 和 {{domxref("WebGL2RenderingContext")}} 对象上，因此你可以写成 `gl.CONSTANT_NAME`：
 
