@@ -25,7 +25,7 @@ const debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
 const vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 ```
 
-[WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial) 提供了更多入门信息、示例和资源。
+[WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial)提供了更多入门信息、示例和资源。
 
 ## 目录
 
