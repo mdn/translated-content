@@ -2,14 +2,14 @@
 title: API de Sistema de Archivos
 slug: Web/API/File_System_API
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: d571e753a6e1aa3f37c775f0308690bc738cdbe6
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
 
-La **API de Sistema de Archivos**, con extensiones proporcionadas a través de la [**File System Acces API**](https://wicg.github.io/file-system-acces/) para acceder a los archivos del sistema de archivos del dispositivo, permite funciones de lectura, escritura y gestión de archivos.
+La **API de Sistema de Archivos**, con extensiones proporcionadas a través de la [**File System Access API**](https://wicg.github.io/file-system-access/) para acceder a los archivos del sistema de archivos del dispositivo, permite funciones de lectura, escritura y gestión de archivos.
 
-Ver [Relationship to other file-related APIs](/es/docs/Web/API/File_API#relationship_to_other_file-related_apis) para una comparación entre esta API, la [File and Directory Entries API](/es/docs/Web/API/File_and_Directory_Entries_API) y la [File API](/es/docs/Web/API/File_API).
+Consulta [Relación con otras API de archivos](/es/docs/Web/API/File_API#relationship_to_other_file-related_apis) para ver una comparación entre esta API, la [File and Directory Entries API](/es/docs/Web/API/File_and_Directory_Entries_API) y la [File API](/es/docs/Web/API/File_API).
 
 ## Conceptos y uso
 
@@ -17,14 +17,14 @@ Esta API permite interactuar con archivos en el dispositivo local de un usuario 
 
 La mayor parte de la interacción con archivos y directorios se realiza a través de manejadores. Una clase padre {{domxref('FileSystemHandle')}} ayuda a definir dos clases hijas: {{domxref('FileSystemFileHandle')}} y {{domxref('FileSystemDirectoryHandle')}}, para archivos y directorios respectivamente.
 
-Los manejadores representan un archivo o directorio en el sistema del usuario. Primero, puede acceder a ellos mostrando al usuario un selector de archivos o directorios mediante métodos como {{domxref('window.showOpenFilePicker()')}} y {{domxref('window.showDirectoryPicker()')}}. Una vez que se invocan, aparece el selector de archivos y el usuario selecciona un archivo o un directorio. Una vez que esto se ha realizado de forma exitosa, se devuelve un manejador.
+Los manejadores representan un archivo o directorio en el sistema del usuario. Primero, puedes acceder a ellos mostrando al usuario un selector de archivos o directorios mediante métodos como {{domxref('window.showOpenFilePicker()')}} y {{domxref('window.showDirectoryPicker()')}}. Una vez que se invocan, aparece el selector de archivos y el usuario selecciona un archivo o un directorio. Una vez que esto se ha realizado de forma exitosa, se devuelve un manejador.
 
-También puede acceder a los manejadores de archivos a través de:
+También puedes acceder a los manejadores de archivos a través de:
 
-- El metodo {{domxref('DataTransferItem.getAsFileSystemHandle()')}} de la {{domxref('HTML Drag and Drop API', '', '', 'nocode')}}.
+- El método {{domxref('DataTransferItem.getAsFileSystemHandle()')}} de la {{domxref('HTML Drag and Drop API', '', '', 'nocode')}}.
 - La [File Handling API](https://developer.chrome.com/docs/capabilities/web-apis/file-handling).
 
-Cada manejador proporciona su propia funcionalidad, y existen algunas diferencias dependiendo del que se solicite (véase la sección [interfaces](#interfaces) para obtener detalles específicos). A continuación, se puede acceder a los datos del archivo o a la información (incluidos los hijos) del directorio seleccionado. Esta API abre nuevas posibilidades funcionales que hasta ahora no existían en la web. No obstante, la seguridad ha sido una prioridad a la hora de diseñar la API, y el acceso a los datos de archivos y directorios no está permitido a menos que el usuario lo autorice expresamente (tenga en cuenta que este no es el caso del [sistema de archivos de origen privado](#sistema_de_archivos_de_origen_privado), ya que no es visible para el usuario.)
+Cada manejador proporciona su propia funcionalidad, y existen algunas diferencias dependiendo del que uses (véase la sección [interfaces](#interfaces) para obtener detalles específicos). Después, puedes acceder a los datos del archivo o a la información (incluidos los hijos) del directorio seleccionado. Esta API abre nuevas posibilidades funcionales que hasta ahora no existían en la web. No obstante, la seguridad ha sido una prioridad a la hora de diseñar la API, y el acceso a los datos de archivos y directorios no está permitido a menos que el usuario lo autorice expresamente (ten en cuenta que este no es el caso del [sistema de archivos de origen privado](#sistema_de_archivos_de_origen_privado), ya que no es visible para el usuario).
 
 > [!NOTE]
 > Las diferentes excepciones que pueden producirse al utilizar las funciones de esta API se enumeran en las páginas pertinentes, tal y como se define en la especificación. Sin embargo, la situación se complica debido a la interacción entre la API y el sistema operativo subyacente. Se ha propuesto incluir en la especificación una [lista de correspondencias de errores](https://github.com/whatwg/fs/issues/57), que incluye información útil relacionada.
@@ -39,7 +39,7 @@ El sistema de archivos de origen privado (OPFS por sus siglas en inglés) es un 
 A continuación se presentan algunos posibles casos de uso:
 
 - Aplicaciones con cargador persistente
-  - Cuando se selecciona un archivo o directorio para cargar (subir al servidor), puede copiar el archivo en un entorno de pruebas local y cargar (subir al servidor) una fragmento cada vez.
+  - Cuando se selecciona un archivo o directorio para cargar (subir al servidor), puedes copiar el archivo en un entorno de pruebas local y cargar (subir al servidor) un fragmento cada vez.
   - La aplicación puede reiniciar las cargas después de una interrupción, como el cierre o bloqueo del navegador, la interrupción de la conectividad o el apagado del ordenador o computadora.
 
 - Videojuegos u otras aplicaciones con gran cantidad de recursos multimedia.
@@ -50,18 +50,18 @@ A continuación se presentan algunos posibles casos de uso:
   - La aplicación puede escribir en archivos en su ubicación original (por ejemplo, sobrescribiendo solo las etiquetas ID3/EXIF y no todo el archivo).
 
 - Reproductor de vídeo sin conexión a internet
-  - La aplicación puede descargar archivos grandes (>1 GB) para verlos mas tarde.
-  - La aplicación puede acceder a archivos descargados parcialmente (para que puedas ver el primer capitulo de tu DVD, incluso si la aplicación aun esta descargando el resto del contenido o si la aplicación no completó la descarga porque tuviste que salir corriendo para coger el tren).
+  - La aplicación puede descargar archivos grandes (>1 GB) para verlos más tarde.
+  - La aplicación puede acceder a archivos descargados parcialmente (para que puedas ver el primer capítulo de tu DVD, incluso si la aplicación aún está descargando el resto del contenido o si la aplicación no completó la descarga porque tuviste que salir corriendo para coger el tren).
 
 - Cliente de correo web sin conexión a internet
   - El cliente descarga los archivos adjuntos y los almacena de forma local.
   - El cliente almacena en caché los archivos adjuntos para su posterior carga.
 
-Lea nuestro [Origin private file system](/es/docs/Web/API/File_System_API/Origin_private_file_system) Para obtener instrucciones sobre como utilizarlo.
+Lee nuestra guía [Sistema de archivos de origen privado](/es/docs/Web/API/File_System_API/Origin_private_file_system) para obtener instrucciones sobre cómo usarlo.
 
 ### Guardar archivos
 
-- En el caso de los manejadores asíncronos, utilice la interfaz {{domxref('FileSystemWritableFileStream')}}. Una vez que los datos que desea guardar estén en formato {{domxref('Blob')}}, objeto {{jsxref("String")}}, literal de cadena o {{jsxref('ArrayBuffer', 'buffer')}}, puede abrir un flujo y guardar los datos en un archivo. Este puede ser un archivo existente o uno nuevo.
+- En el caso de los manejadores asíncronos, usa la interfaz {{domxref('FileSystemWritableFileStream')}}. Una vez que los datos que quieres guardar estén en formato {{domxref('Blob')}}, objeto {{jsxref("String")}}, literal de cadena o {{jsxref('ArrayBuffer', 'buffer')}}, puedes abrir un flujo y guardar los datos en un archivo. Este puede ser un archivo existente o uno nuevo.
 - En el caso del {{domxref('FileSystemSyncAccessHandle')}} síncrono, los cambios se escriben en un archivo utilizando el método {{domxref('FileSystemSyncAccessHandle.write', 'write()')}}. De manera opcional, también se puede llamar a {{domxref('FileSystemSyncAccessHandle.flush','flush()')}} si se necesita que los cambios se guarden en el disco en un momento específico (de lo contrario, se puede dejar que el sistema operativo subyacente se encargue de ello cuando lo considere oportuno, lo que debería funcionar correctamente en la mayoría de los casos).
 
 ## Interfaces
@@ -71,13 +71,13 @@ Lea nuestro [Origin private file system](/es/docs/Web/API/File_System_API/Origin
 - {{domxref("FileSystemHandle")}}
   - : Un objeto que representa una entrada de archivo o directorio. Varios manejadores pueden representar la misma entrada. En la mayoría de los casos, no se trabaja directamente con `FileSystemHandle`, sino con sus interfaces hijas {{domxref('FileSystemFileHandle')}} y {{domxref('FileSystemDirectoryHandle')}}.
 - {{domxref("FileSystemFileHandle")}}
-  - : Poporciona un manejador para una entrada del sistema de archivos.
+  - : Proporciona un manejador para una entrada del sistema de archivos.
 - {{domxref("FileSystemDirectoryHandle")}}
-  - : Poporciona un manejador para un directorio del sistema de archivos.
+  - : Proporciona un manejador para un directorio del sistema de archivos.
 - {{domxref("FileSystemObserver")}} {{experimental_inline}}
   - : Proporciona un mecanismo para observar los cambios en los archivos o directorios seleccionados.
 - {{domxref("FileSystemSyncAccessHandle")}}
-  - : Proporciona un manejador síncrono para una entrada del sistema de archivos, que opera in situ en un único archivo del disco. La naturaleza síncrona de las lecturas y escrituras de archivos permite un mayor rendimiento para métodos críticos en contextos en los que las operaciones asíncronas conllevan una gran sobrecarga, por ejemplo, [WebAssembly](/es/docs/WebAssembly). Solo se puede acceder a esta clase dentro de [Web Workers](/es/docs/Web/API/Web_Workers_API) dedicados para archivos dentro del [Sistema de archivos de origen pivado](#sitema_de_archivos_de_origen_privado).
+  - : Proporciona un manejador síncrono para una entrada del sistema de archivos, que opera in situ en un único archivo del disco. La naturaleza síncrona de las lecturas y escrituras de archivos permite un mayor rendimiento para métodos críticos en contextos en los que las operaciones asíncronas conllevan una gran sobrecarga, por ejemplo, [WebAssembly](/es/docs/WebAssembly). Solo se puede acceder a esta clase dentro de [Web Workers](/es/docs/Web/API/Web_Workers_API) dedicados para archivos dentro del [sistema de archivos de origen privado](#sistema_de_archivos_de_origen_privado).
 - {{domxref("FileSystemWritableFileStream")}}
   - : Un objeto {{domxref('WritableStream')}} con métodos adicionales útiles, que opera sobre un único archivo en el disco.
 
@@ -92,7 +92,7 @@ Lea nuestro [Origin private file system](/es/docs/Web/API/File_System_API/Origin
 - {{domxref("DataTransferItem.getAsFileSystemHandle()")}}
   - : Devuelve una {{jsxref('Promise')}} que se resuelve con un {{domxref('FileSystemFileHandle')}} si el elemento arrastrado es un archivo, o con un {{domxref('FileSystemDirectoryHandle')}} si el elemento arrastrado es un directorio.
 - {{domxref("StorageManager.getDirectory()")}}
-  - : Se utiliza para obtener una referencia a un objeto {{domxref("FileSystemDirectoryHandle")}} que permite acceder a un directorio y a su contenido, almacenado en el [origin private file system](/es/docs/Web/API/File_System_API/Origin_private_file_system). Devuelve una {{jsxref('Promise')}} que se resuelve con un objeto {{domxref("FileSystemDirectoryHandle")}}.
+  - : Se utiliza para obtener una referencia a un objeto {{domxref("FileSystemDirectoryHandle")}} que permite acceder a un directorio y a su contenido, almacenado en el [sistema de archivos de origen privado](/es/docs/Web/API/File_System_API/Origin_private_file_system). Devuelve una {{jsxref('Promise')}} que se resuelve con un objeto {{domxref("FileSystemDirectoryHandle")}}.
 
 ## Ejemplos
 
@@ -142,14 +142,16 @@ El siguiente ejemplo devuelve un manejador de directorio con el nombre especific
 const dirName = "directoryToGetName";
 
 // Suponiendo que tenemos un manejador de directorios: 'currentDirHandle'
-const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
+const subDir = await currentDirHandle.getDirectoryHandle(dirName, {
+  create: true,
+});
 ```
 
 La siguiente función asíncrona utiliza `resolve()` para encontrar la ruta de un archivo seleccionado, en relación con un manejador de directorios especificado.
 
 ```js
 async function returnPathDirectories(directoryHandle) {
-  // Obten un manejador de archivos mostrando un selector de archivos.
+  // Obtén un manejador de archivos mostrando un selector de archivos.
   const [handle] = await self.showOpenFilePicker();
   if (!handle) {
     // El usuario canceló o no pudo abrir un archivo.
@@ -224,7 +226,7 @@ La siguiente función, que maneja eventos asíncronos, está contenida dentro de
 
 ```js
 onmessage = async (e) => {
-  // Recuperar el mensaje enviado al trabajo desde el script principal.
+  // Recuperar el mensaje enviado al worker desde el script principal.
   const message = e.data;
 
   // Obtener manejador para el archivo boceto (borrador) en OPFS.
@@ -247,13 +249,13 @@ onmessage = async (e) => {
   // Persistir los cambios en el disco.
   accessHandle.flush();
 
-  // Cerrar siempre FileSystemSyncAccesHandle cuando haya terminado.
+  // Cerrar siempre FileSystemSyncAccessHandle al terminar.
   accessHandle.close();
 };
 ```
 
 > [!NOTE]
-> En versiones anteriores de la especificacion, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, y {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} se especificaron de forma poco ergonómica como métodos asíncronos. Esto ya ha sido [modificado](https://github.com/whatwg/fs/issues/7), pero algunos navegadores aun admiten las versiones asíncronas.
+> En versiones anteriores de la especificación, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, y {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} se especificaron de forma poco ergonómica como métodos asíncronos. Esto ya ha sido [modificado](https://github.com/whatwg/fs/issues/7), pero algunos navegadores aún admiten las versiones asíncronas.
 
 ## Especificaciones
 
