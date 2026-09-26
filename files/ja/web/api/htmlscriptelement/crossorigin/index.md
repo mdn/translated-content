@@ -3,7 +3,7 @@ title: "HTMLScriptElement: crossOrigin プロパティ"
 short-title: crossOrigin
 slug: Web/API/HTMLScriptElement/crossOrigin
 l10n:
-  sourceCommit: cc756217fbcb8214730fe736973ec15f3592a246
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("HTML DOM")}}
