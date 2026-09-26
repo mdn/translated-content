@@ -1,38 +1,35 @@
 ---
-title: DOMRect.DOMRect()
+title: DOMRect：DOMRect() 构造函数
+short-title: DOMRect()
 slug: Web/API/DOMRect/DOMRect
+l10n:
+  sourceCommit: dc82e604c805cd2eae887a371111e902c8c52241
 ---
 
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-**`DOMRect()`** 构造函数生成一个新的 {{domxref("DOMRect")}} 对象。
+**`DOMRect()`** 构造函数创建一个新的 {{domxref("DOMRect")}} 对象。
 
 ## 语法
 
-```js
-var myDOMRect = new DOMRect(x, y, width, height);
+```js-nolint
+new DOMRect(x, y, width, height)
 ```
 
 ### 参数
 
-- x
-  - : `DOMRect` 原点的 `x` 坐标。
-- y
+- {{domxref("DOMRect.x", "x")}}
+  - : `DOMRect` 原点的 x 坐标。
+- {{domxref("DOMRect.y", "y")}}
   - : `DOMRect` 原点的 y 坐标。
-- width
+- {{domxref("DOMRect.width", "width")}}
   - : `DOMRect` 的宽度。
-- height
+- {{domxref("DOMRect.height", "height")}}
   - : `DOMRect` 的高度。
 
-## 例子
+### 返回值
 
-想生成一个新 `DOMRect`，你可以运行一行这样的代码：
-
-```js
-myDOMRect = new DOMRect(0, 0, 100, 100);
-// running 'myDOMRect' in the console would then return
-// DOMRect { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
-```
+一个新的 {{domxref("DOMRect")}} 对象。
 
 ## 规范
 
@@ -42,7 +39,8 @@ myDOMRect = new DOMRect(0, 0, 100, 100);
 
 {{Compat}}
 
-## 更多
+## 参见
 
 - {{domxref("DOMPoint")}}
 - {{domxref("DOMRect")}}
+- {{domxref("DOMRect.fromRect_static", "DOMRect.fromRect()")}}
