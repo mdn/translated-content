@@ -1,35 +1,20 @@
 ---
-title: FetchEvent.respondWith()
+title: "FetchEvent: respondWith() メソッド"
+short-title: respondWith()
 slug: Web/API/FetchEvent/respondWith
 l10n:
-  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
+  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
-**`respondWith()`** は {{domxref("FetchEvent")}} インターフェイスのメソッドで、ブラウザー既定の fetch 処理を抑止して、自分自身で {{domxref("Response")}} 用のプロミスを提供できるようにします。
+**`respondWith()`** は {{domxref("FetchEvent")}} インターフェイスのメソッドで、ブラウザーデフォルトの fetch 処理を抑止して、自分自身で {{domxref("Response")}} 用のプロミスを提供できるようにします。
 
 たいていの場合、受信者が理解できるどんなレスポンスでも提供できます。例えば、{{HTMLElement('img')}} がリクエストを開始した場合、レスポンス本体には画像データが必要です。セキュリティの理由から、グローバルルールが少しあります。
 
-- {{domxref("Response.type", "type")}} が "`opaque`" （不透明）の {{domxref("Response")}} オブジェクトを返すことができるのは、 {{domxref("fetchEvent.request")}} オブジェクトの {{domxref("request.mode", "mode")}} が "`no-cors`" の場合だけです。これはプライベートなデータの漏洩を防ぎます。
-- {{domxref("Response.type", "type")}} が "`opaqueredirect`" （不透明なリダイレクト）の {{domxref("Response")}} オブジェクトを返すことができるのは、{{domxref("fetchEvent.request")}} オブジェクトの {{domxref("request.mode", "mode")}} が "`manual`" の場合だけです。
-- {{domxref("fetchEvent.request")}} オブジェクトの {{domxref("request.mode", "mode")}} が "`same-origin`" の場合、{{domxref("Response.type", "type")}} が "`cors`" の {{domxref("Response")}} オブジェクトを返すことはできません。
-
-### リソースの最終 URL を指定する
-
-Firefox 59 以降、サービスワーカーが {{domxref("FetchEvent.respondWith()")}} に {{domxref("Response")}} を提供すると、{{domxref("Response.url")}} 値は最終的に解決された URL として、ネットワークリクエストに介入する際に伝搬されるようになりました。{{domxref("Response.url")}} 値が空文字列の場合は、{{domxref("Request.url","FetchEvent.request.url")}} が最終的な URL として使用されます。
-
-かつては {{domxref("Request.url","FetchEvent.request.url")}} がすべての場合に最終 URL として使われていました。与えられた {{domxref("Response.url")}} は実際には無視されていました。
-
-つまり、例えば、サービスワーカーがスタイルシートやワーカースクリプトに介入すると、与えられた {{domxref("Response.url")}} が、サブリソースが読み込む相対的な {{cssxref("@import")}} や {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} の代わりに使われます ([Firefox バグ 1222008](https://bugzil.la/1222008))。
-
-たいていのネットワークリクエストに対して、最終 URL を観測できないためこの変更は影響ありません。しかし、少しだけ関係する場合があります。
-
-- {{domxref("Window/fetch", "fetch()")}} が介入された場合、結果の {{domxref("Response.url")}} で最終 URL を観測できます。
-- [ワーカー](/ja/docs/Web/API/Web_Workers_API)スクリプトが介入された場合、最終 URL は [`self.location`](/ja/docs/Web/API/WorkerGlobalScope/location) をセットするのに使われ、ワーカースクリプトの相対 URL の代わりのベース URL として使われます。
-- スタイルシートが介入された場合、最終 URL は相対的な {{cssxref("@import")}} 読み込みの代わりのベース URL として使われます。
-
-{{domxref("Window","Window")}} と {{domxref("HTMLIFrameElement","iframe")}} のナビゲーションリクエストはこの最終 URL を使わ「ない」ことに注意してください。HTML 仕様のナビゲーションのリダイレクトの処理方法では、{{domxref("Window.location")}} のためにリクエスト URL を使います。これは、オフラインの時に、ユーザーに見える URL を変更することなくサイトが「代替の」ウェブページを提供できるということを意味します。
+- {{domxref("Response.type", "type")}} が `"opaque"` （不透明）の {{domxref("Response")}} オブジェクトを返すことができるのは、 {{domxref("fetchEvent.request")}} オブジェクトの {{domxref("request.mode", "mode")}} が `"no-cors"` の場合だけです。これはプライベートなデータの漏洩を防ぎます。
+- {{domxref("Response.type", "type")}} が `"opaqueredirect"` （不透明なリダイレクト）の {{domxref("Response")}} オブジェクトを返すことができるのは、{{domxref("fetchEvent.request")}} オブジェクトの {{domxref("request.mode", "mode")}} が `"manual"` の場合だけです。
+- {{domxref("fetchEvent.request")}} オブジェクトの {{domxref("request.mode", "mode")}} が `"same-origin"` の場合、{{domxref("Response.type", "type")}} が `"cors"` の {{domxref("Response")}} オブジェクトを返すことはできません。
 
 ## 構文
 
@@ -53,13 +38,31 @@ respondWith(response)
 - `InvalidStateError` {{domxref("DOMException")}}
   - : イベントが配信されていないか、`respondWith()` が既に呼び出されています。
 
+## 構文
+
+### リソースの最終 URL を指定する
+
+Firefox 59 以降、サービスワーカーが `FetchEvent.respondWith()` に {{domxref("Response")}} を提供すると、{{domxref("Response.url")}} 値は最終的に解決された URL として、ネットワークリクエストに介入する際に伝搬されるようになりました。{{domxref("Response.url")}} 値が空文字列の場合は、{{domxref("Request.url","FetchEvent.request.url")}} が最終的な URL として使用されます。
+
+かつては {{domxref("Request.url","FetchEvent.request.url")}} がすべての場合に最終 URL として使われていました。与えられた {{domxref("Response.url")}} は実際には無視されていました。
+
+つまり、例えば、サービスワーカーがスタイルシートやワーカースクリプトに介入すると、与えられた {{domxref("Response.url")}} が、サブリソースが読み込む相対的な {{cssxref("@import")}} や {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} の代わりに使われます ([Firefox バグ 1222008](https://bugzil.la/1222008))。
+
+たいていのネットワークリクエストに対して、最終 URL を観測できないためこの変更は影響ありません。しかし、少しだけ関係する場合があります。
+
+- {{domxref("Window/fetch", "fetch()")}} が介入された場合、結果の {{domxref("Response.url")}} で最終 URL を観測できます。
+- [ワーカー](/ja/docs/Web/API/Web_Workers_API)スクリプトが介入された場合、最終 URL は [`self.location`](/ja/docs/Web/API/WorkerGlobalScope/location) をセットするのに使われ、ワーカースクリプトの相対 URL の代わりのベース URL として使われます。
+- スタイルシートが介入された場合、最終 URL は相対的な {{cssxref("@import")}} 読み込みの代わりのベース URL として使われます。
+
+{{domxref("Window","Window")}} と {{domxref("HTMLIFrameElement","iframe")}} のナビゲーションリクエストはこの最終 URL を使わ「ない」ことに注意してください。HTML 仕様のナビゲーションのリダイレクトの処理方法では、{{domxref("Window.location")}} のためにリクエスト URL を使います。これは、オフラインの時に、ユーザーに見える URL を変更することなくサイトが「代替の」ウェブページを提供できるということを意味します。
+
 ## 例
 
 この fetch イベントはキャッシュ API からのレスポンスを返そうとし、ない場合にはネットワークにフォールバックします。
 
 ```js
 addEventListener("fetch", (event) => {
-  // 既定の動作を抑止し、リクエストを自分で処理します。
+  // デフォルトの動作を抑止し、リクエストを自分で処理します。
   event.respondWith(
     (async () => {
       // キャッシュからレスポンスを取得しようとします。
@@ -87,6 +90,4 @@ addEventListener("fetch", (event) => {
 ## 関連情報
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)（英語）
-- {{jsxref("Promise")}}
 - [フェッチ API](/ja/docs/Web/API/Fetch_API)
