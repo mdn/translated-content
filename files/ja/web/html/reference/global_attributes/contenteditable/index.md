@@ -1,9 +1,9 @@
 ---
-title: HTML contenteditable グローバル属性
+title: "`contenteditable` グローバル属性 (HTML)"
 short-title: contenteditable
 slug: Web/HTML/Reference/Global_attributes/contenteditable
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 **`contenteditable`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、ユーザーによる要素の編集が可能かを示す列挙型属性です。可能である場合、ブラウザーは要素のウィジェットを編集可能なものに変更します。
@@ -20,7 +20,7 @@ l10n:
 
 ```css interactive-example
 blockquote {
-  background: #eee;
+  background: #eeeeee;
   border-radius: 5px;
   margin: 16px 0;
 }
@@ -63,7 +63,7 @@ blockquote p::after {
 
 {{Glossary("caret", "キャレット")}}の挿入文字列を描画するのに使用される色は、 {{cssxref("caret-color")}} プロパティで設定できます。
 
-`contenteditable` 属性を使用して編集可能になった要素、つまりインタラクティブになった要素は、フォーカスを当てることができます。また、キーボードの連続したナビゲーションに参加することができます。しかし、`contenteditable` 属性を持つ要素が他の `contenteditable` 要素の中に入れ子になっている場合、既定値ではタブ操作の順番に追加されません。`tabindex` 値 ([`tabindex="0"`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex)) を指定することにより、ネストした `contenteditable` 要素をキーボードナビゲーションシーケンスに追加することができるようになります。
+`contenteditable` 属性を使用して編集可能になった要素、つまり操作可能になった要素は、フォーカスを得ることができます。また、キーボードの連続したナビゲーションに参加することができます。しかし、`contenteditable` 属性を持つ要素が他の `contenteditable` 要素の中に入れ子になっている場合、既定値ではタブ操作の順番に追加されません。`tabindex` 値 ([`tabindex="0"`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex)) を指定することにより、ネストした `contenteditable` 要素をキーボードナビゲーションシーケンスに追加することができるようになります。
 
 コンテンツが `contenteditable="true"` に対応する要素に貼り付けられた場合、すべての書式は保持されます。コンテンツが `contenteditable="plaintext-only"` に対応する要素に貼り付けられた場合、すべての書式は除去されます。
 
@@ -113,7 +113,7 @@ h2 {
   margin-bottom: 0;
 }
 .copying {
-  font-family: Georgia, serif;
+  font-family: "Georgia", serif;
   margin: 1rem;
   padding: 1rem;
   border: solid black 1px;

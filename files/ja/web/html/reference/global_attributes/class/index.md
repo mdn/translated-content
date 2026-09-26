@@ -1,9 +1,9 @@
 ---
-title: HTML class グローバル属性
+title: "`class` グローバル属性 (HTML)"
 short-title: class
 slug: Web/HTML/Reference/Global_attributes/class
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 **`class`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) は、要素のクラスを [ASCII ホワイトスペース](/ja/docs/Glossary/Whitespace#html_での使い方)で区切って並べたリストです。
@@ -48,7 +48,7 @@ l10n:
 
 クラスを使用すると、CSS および JavaScript で、[クラスセレクター](/ja/docs/Web/CSS/Reference/Selectors/Class_selectors)または {{domxref("document.getElementsByClassName()")}} などの関数を使用して、特定の要素を選択してアクセスすることができます。
 
-仕様書ではクラスの名前に関する要求事項はありませんが、ウェブ開発者は、要素の表示ではなく、要素の意味的な目的を記述する名前を使用することが推奨されています。例えば、 _italics_ ではなく _attribute_ を使用して属性を記述します。ただし、このクラスの要素は _italics_ で表示される場合もあります。意味的な名前は、ページの表示が変更されても論理的な意味を保ちます。
+仕様書ではクラスの名前に関する要求事項はありませんが、ウェブ開発者は、要素の表示ではなく、要素の意味的な目的を記述する名前を使用することが推奨されています。例えば、「属性」が _italics_ （イタリック）で表示される場合であっても、記述するのに _italics_ よりも _attribute_ と使うということです。意味的な名前は、ページの外見が変更されても論理的な意味を保ちます。
 
 ## 仕様書
 
