@@ -1,239 +1,251 @@
 ---
-title: Conceptos básicos de HTML
+title: "HTML: Crear el contenido"
+short-title: Crear el contenido
 slug: Learn_web_development/Getting_started/Your_first_website/Creating_the_content
-original_slug: Learn/Getting_started_with_the_web/HTML_basics
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{LearnSideBar}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content","Learn_web_development/Getting_started/Your_first_website")}}
+HTML (**H**yper**T**ext **M**arkup **L**anguage, lenguaje de marcado de hipertexto) es el código que se usa para estructurar una página web y su contenido. Este artículo ofrece una comprensión básica de HTML y de su funcionamiento, y te muestra cómo crear el contenido básico de tu primer sitio web.
 
-El Lenguaje de Marcado de Hipertexto (HTML) es el código que se utiliza para estructurar y desplegar una página web y sus contenidos. Por ejemplo, sus contenidos podrían ser párrafos, una lista con viñetas, o imágenes y tablas de datos. Como lo sugiere el título, este artículo te dará una comprensión básica de HTML y cúal es su función.
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Prerrequisitos:</th>
+      <td>
+        Familiaridad básica con el sistema operativo de tu computadora, el software básico que usarás para crear un sitio web y los sistemas de archivos.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Resultados del aprendizaje:</th>
+      <td>
+        <ul>
+          <li>El propósito y la función de HTML.</li>
+          <li>Las partes básicas de la sintaxis de HTML: etiquetas de apertura y de cierre, elementos, atributos, head y body.</li>
+          <li>Elementos HTML comunes, como párrafos, encabezados, imágenes, listas y enlaces.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-## Entonces, ¿qué es HTML en realidad?
+## Entonces, ¿qué es HTML?
 
-HTML no es un lenguaje de programación; es un _lenguaje de marcado_ que define la estructura de tu contenido. HTML consiste en una serie de elementos que usarás para encerrar diferentes partes del contenido para que se vean o comporten de una determinada manera. Las etiquetas de encierre pueden hacer de una palabra o una imagen un hipervínculo a otro sitio, se pueden cambiar palabras a cursiva, agrandar o achicar la letra, etc. Por ejemplo, toma la siguiente línea de contenido:
+HTML es un _lenguaje de marcado_ formado por una serie de **{{Glossary("element", "elementos")}}** que se usan para envolver (o encerrar) el contenido de texto, con el fin de definir su estructura y hacer que se comporte de cierta manera.
 
-```html
-Mi gato es muy gruñon
+Veamos un ejemplo: al mostrarse en una página web, el siguiente contenido aparecerá todo en la misma línea, porque no tiene ningún tipo de estructura:
+
+```plain
+Instrucciones para la vida:
+Comer
+Dormir
+Repetir
 ```
 
-Si quieres especificar que se trata de un párrafo, podrías encerrar el texto con la etiqueta de párrafo ({{htmlelement("p")}}):
+Si envolvemos este contenido con los siguientes elementos HTML, podemos convertir esa única línea en un párrafo ({{htmlelement("p")}}) y tres viñetas ({{htmlelement("li")}}):
 
-```html
-<p>Mi gato es muy gruñon</p>
+```html live-sample___basic-html
+<p>Instrucciones para la vida:</p>
+
+<ul>
+  <li>Comer</li>
+  <li>Dormir</li>
+  <li>Repetir</li>
+</ul>
 ```
 
-### Anatomía de un elemento HTML
+Este HTML se muestra así en un navegador web:
 
-Explora este párrafo en mayor profundidad.
+{{EmbedLiveSample("basic-html", "100%", "140px")}}
 
-![elementos de gato gruñon](grumpy-cat-small.png)
-
-Las partes principales del elemento son:
-
-1. **La etiqueta de apertura**: consiste en el nombre del elemento (en este caso, p), encerrado por **paréntesis angulares** (< >) de apertura y cierre. Establece dónde comienza o empieza a tener efecto el elemento —en este caso, dónde es el comienzo del párrafo—.
-2. **La etiqueta de cierre**: es igual que la etiqueta de apertura, excepto que incluye una barra de cierre (/) antes del nombre de la etiqueta. Establece dónde termina el elemento —en este caso dónde termina el párrafo—.
-3. **El contenido**: este es el contenido del elemento, que en este caso es sólo texto.
-4. **El elemento**: la etiqueta de apertura, más la etiqueta de cierre, más el contenido equivale al elemento.
-
-Los elementos pueden también tener atributos, que se ven así:
-
-![atributo html](grumpy-cat-attribute-small.png)
-
-Los atributos contienen información adicional acerca del elemento, la cual no quieres que aparezca en el contenido real del elemento. Aquí `class` es el _nombre_ del atributo y `editor-note` el _valor_ del atributo. En este caso, el atributo `class` permite darle al elemento un nombre identificativo, que se puede utilizar luego para apuntarle al elemento información de estilo y demás cosas.
-
-Un atributo debe tener siempre:
-
-1. Un espacio entre este y el nombre del elemento (o del atributo previo, si el elemento ya posee uno o más atributos).
-2. El nombre del atributo, seguido por un signo de igual (**=**).
-3. Comillas de apertura y de cierre, encerrando el valor del atributo.
-
-Los atributos siempre se incluyen en la etiqueta de apertura de un elemento, nunca en la de cierre.
+Además de estructurar texto, HTML tiene muchos otros usos: hacer que un texto o una imagen enlacen a otras páginas web, incrustar imágenes o videos, crear tablas de datos, etc.
 
 > [!NOTE]
-> El atributo con valores simples que no contengan espacios en blanco ASCII (o cualesquiera de los caracteres `"` `'` `` ` `` `=` `<` `>`) pueden permanecer sin entrecomillar, pero se recomienda entrecomillar todos los valores de atributo, ya que esto hace que el código sea más consistente y comprensible.
+> [HTML tags](https://scrimba.com/frontend-path-c0j/~0g?via=mdn) de Scrimba <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup> es una lección interactiva para practicar los conceptos básicos de HTML, incluidos los encabezados.
 
-### Anidar elementos
+## Crear tu primer documento HTML
 
-Puedes también colocar elementos dentro de otros elementos —esto se llama **anidamiento**—. Si, por ejemplo, quieres resaltar una palabra del texto (en el ejemplo la palabra «muy»), podemos encerrarla en un elemento {{htmlelement("strong")}}, que significa que dicha palabra se debe enfatizar:
+Veamos cómo se combinan los distintos elementos para formar una página HTML. En esta sección, crearás un archivo HTML básico y verás de qué partes se compone.
 
-```html
-<p>Mi gato es <strong>muy</strong> gruñon.</p>
-```
-
-Debes asegurarte que los elementos estén correctamente anidados: en el ejemplo de abajo, creaste la etiqueta de apertura del elemento {{htmlelement("p")}} primero, luego la del elemento {{htmlelement("strong")}}, por lo tanto, debes cerrar esta etiqueta primero, y luego la de \<p>. Esto es incorrecto:
-
-```html
-<p>Mi gato es <strong>muy gruñon.</p></strong>
-```
-
-Los elementos deben abrirse y cerrarse ordenadamente, de forma tal que se encuentren claramente dentro o fuera el uno del otro. Si estos se encuentran solapados, el navegador web tratará de adivinar lo que intentas decirle, pero puede que obtengas resultados inesperados. Así que, ¡no lo hagas!
-
-### Elementos vacíos
-
-Algunos elementos no poseen contenido, y son llamados **elementos vacíos**. Toma, por ejemplo, el elemento {{htmlelement("img")}} de nuestro HTML:
-
-```html
-<img src="images/firefox-icon.png" alt="Mi imagen de prueba" />
-```
-
-Posee dos atributos, pero no hay etiqueta de cierre `</img>` ni contenido encerrado. Esto es porque un elemento de imagen no encierra contenido al cual afectar. Su propósito es desplegar una imagen en la página HTML, en el lugar en que aparece.
-
-### Anatomía de un documento HTML
-
-Hasta ahora has visto lo básico de elementos HTML individuales, pero estos no son muy útiles por sí solos. Ahora verás cómo los elementos individuales son combinados para formar una página HTML entera. Vuelve a visitar el código de tu ejemplo en `index.html` (que viste por primera vez en el artículo [Manejo de archivos](/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)):
+1. Dentro de tu carpeta `web-projects`, crea otra carpeta nueva llamada `first-website`.
+2. Dentro de `first-website`, crea un archivo nuevo llamado `index.html` e inserta en él el siguiente código, exactamente como se muestra:
 
 ```html
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <title>Mi pagina de prueba</title>
+    <meta name="viewport" content="width=device-width" />
+    <title>Mi página de prueba</title>
   </head>
   <body>
-    <img src="images/firefox-icon.png" alt="Mi imagen de prueba" />
+    <img src="" alt="Mi imagen de prueba" />
   </body>
 </html>
 ```
 
-Tienes:
+Aquí tenemos lo siguiente:
 
-- `<!DOCTYPE html>` — el tipo de documento. Es un preámbulo requerido. Anteriormente, cuando HTML era joven (cerca de 1991/2), los tipos de documento actuaban como vínculos a un conjunto de reglas que el código HTML de la página debía seguir para ser considerado bueno, lo que podía significar la verificación automática de errores y algunas otras cosas de utilidad. Sin embargo, hoy día es simplemente un artefacto antiguo que a nadie le importa, pero que debe ser incluido para que todo funcione correctamente. Por ahora, eso es todo lo que necesitas saber.
-- `<html></html>` — el elemento {{htmlelement("html")}}. Este elemento encierra todo el contenido de la página entera y, a veces, se le conoce como el elemento raíz (_root element_).
-- `<head></head>` — el elemento {{htmlelement("head")}}. Este elemento actúa como un contenedor de todo aquello que quieres incluir en la página HTML que _no_ es contenido visible por los visitantes de la página. Incluye cosas como palabras clave ({{Glossary("keyword", "keywords")}}), una descripción de la página que quieres que aparezca en resultados de búsquedas, código CSS para dar estilo al contenido, declaraciones del juego de caracteres, etc.
-- `<meta charset="utf-8">` — {{htmlelement("meta")}}. Este elemento establece el juego de caracteres que tu documento usará en `utf-8`, que incluye casi todos los caracteres de todos los idiomas humanos. Básicamente, puede manejar cualquier contenido de texto que puedas incluir. No hay razón para no establecerlo, y puede evitar problemas en el futuro.
-- `<title></title>` — el elemento {{htmlelement("title")}} establece el título de tu página, que es el título que aparece en la pestaña o en la barra de título del navegador cuando la página es cargada, y se usa para describir la página cuando es añadida a los marcadores o como favorita.
-- `<body></body>` — el elemento {{htmlelement("body")}}. Encierra _todo_ el contenido que deseas mostrar a los usuarios web que visiten tu página, ya sea texto, imágenes, videos, juegos, pistas de audio reproducibles, y demás.
-
-## Imágenes
-
-Presta atención nuevamente al elemento _imagen_ {{htmlelement("img")}}:
-
-```html
-<img src="images/firefox-icon.png" alt="Mi imagen de prueba" />
-```
-
-Como ya se dijo antes, incrusta una imagen en la página, en la posición en que aparece. Lo logra a través del atributo `src` (source), el cual contiene el _path (ruta o ubicación)_ de tu archivo de imagen.
-
-También se incluye un atributo `alt` (alternative) el cual contiene un texto que debería describir la imagen, y que podría ser accedido por usuarios que no pueden ver la imagen, quizás porque:
-
-1. Son ciegos o tienen deficiencias visuales. Los usuarios con impedimentos visuales usualmente utilizan herramientas llamadas _Lectores de pantalla (Screen Readers),_ los cuales les leen el texto contenido en el atributo alt.
-2. Se produjo algún error en el código que impide que la imagen sea cargada. Como ejemplo, modifica deliberadamente la ubicación dentro del atributo `src` para que este sea incorrecto. Si guardas y recargas la página, deberías ver algo así en lugar de la imagen:
-
-![atributo html](alt-text-example.png)
-
-La frase clave acerca del texto alt de arriba es «texto que debería describir la imagen». El texto alt debe proporcionarle al lector la suficiente información como para que este tenga una buena idea de qué muestra la imagen. Por lo que tu texto actual «Mi imagen de prueba» no es para nada bueno. Un texto mucho mejor para el logo de Firefox sería: _«El logo de Firefox: un zorro en llamas rodeando la Tierra»_.
-
-Prueba a dar con mejores textos alt para tu imagen.
+- `<!doctype html>`: el [doctype](/es/docs/Glossary/Doctype) es un preámbulo obligatorio. Hace mucho tiempo, cuando HTML era joven (hacia 1991/92), los doctypes servían como enlaces a un conjunto de reglas que la página HTML debía seguir para considerarse HTML correcto, lo que podía implicar la comprobación automática de errores y otras cosas útiles. Sin embargo, hoy en día no hacen mucho y básicamente solo se necesitan para asegurarse de que el documento se comporte correctamente. Por ahora, eso es todo lo que necesitas saber.
+- `<html></html>`: el elemento {{htmlelement("html")}} envuelve todo el contenido de la página y a veces se le llama **elemento raíz**. También incluye el [atributo](/es/docs/Glossary/Attribute) `lang`, que establece el idioma principal del documento.
+- `<head></head>`: el elemento {{htmlelement("head")}} actúa como contenedor de todo lo que quieres incluir en la página HTML que _no_ es el contenido que muestras a quienes visitan tu página. Esto incluye cosas como las {{Glossary("keyword", "palabras clave")}} y la descripción de la página que quieres que aparezcan en los resultados de búsqueda, el {{glossary("CSS")}} para dar estilo al contenido, las declaraciones del conjunto de caracteres, etc.
+- `<meta charset="utf-8">`: este elemento establece que el documento debe usar el conjunto de caracteres [UTF-8](/es/docs/Glossary/UTF-8), que incluye la mayoría de los caracteres de la gran mayoría de los idiomas escritos. Básicamente, así puede manejar cualquier contenido de texto que le pongas. No hay ningún motivo para no establecerlo, y puede ayudar a evitar algunos problemas más adelante.
+- `<meta name="viewport" content="width=device-width">`: este [elemento viewport](/es/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts#mobile_viewports) garantiza que la página se muestre con el ancho del viewport del navegador, lo que evita que los navegadores móviles muestren las páginas más anchas que el viewport y luego las reduzcan.
+- `<title></title>`: el elemento {{htmlelement("title")}} establece el título de tu página, que es el que aparece en la pestaña del navegador donde se carga la página. También se usa para describir la página cuando la guardas en marcadores o favoritos.
+- `<body></body>`: el elemento {{htmlelement("body")}} contiene _todo_ el contenido que quieres mostrar a los usuarios cuando visitan tu página, ya sea texto, imágenes, videos, juegos, pistas de audio reproducibles o cualquier otra cosa. Por ahora solo contiene un elemento `<img>`, pero más adelante agregaremos más contenido.
 
 > [!NOTE]
-> Descubre más acerca de la accesibilidad en el [módulo de aprendizaje sobre la accesibilidad](/es/docs/Web/Accessibility).
+> La mayoría de los elementos HTML constan de una **etiqueta de apertura** (por ejemplo, `<body>`), seguida del contenido del elemento y de una **etiqueta de cierre** (por ejemplo, `</body>`). Algunos elementos HTML también tienen **atributos**, que contienen ajustes o información adicional sobre el elemento; fíjate, por ejemplo, en `charset`, `name` y `src` en nuestro código de ejemplo.
 
-## Marcado de texto
+## Incrustar imágenes
 
-Esta sección cubrirá algunos de los elementos HTML básicos que usarás para el marcado de texto.
+Centremos ahora la atención en el elemento {{htmlelement("img")}}:
+
+```html
+<img src="" alt="Mi imagen de prueba" />
+```
+
+Este elemento incrusta una imagen en nuestra página, en la posición en la que aparece. Lo hace mediante el atributo `src` (source, fuente), que contiene la ruta al archivo de imagen que queremos incrustar.
+
+También hemos incluido un atributo `alt` (alternativo). En el [atributo `alt`](/es/docs/Web/HTML/Reference/Elements/img#creación_de_descripciones_alternativas_significativas) especificas un texto descriptivo para los usuarios que no pueden ver la imagen, posiblemente por los siguientes motivos:
+
+1. Tienen una discapacidad visual. Los usuarios con una discapacidad visual importante suelen usar herramientas llamadas lectores de pantalla, que les leen en voz alta el texto alternativo.
+2. Algo salió mal y la imagen no se muestra. Si el atributo `src` no contiene una ruta válida a una imagen, se muestra en su lugar el texto alternativo:
+
+   ![Las palabras: my test image](alt-text-example.png)
+
+El texto alternativo que escribas debe darle a quien lo lee suficiente información para hacerse una buena idea de lo que transmite la imagen. En este ejemplo, nuestro texto actual, «Mi imagen de prueba», no es bueno, porque no transmite información descriptiva sobre la imagen. Una alternativa mucho mejor para nuestro logotipo de Firefox sería «El logotipo de Firefox: un zorro en llamas que rodea la Tierra».
+
+> [!NOTE]
+> Los elementos como `<img>` no tienen contenido ni etiqueta de cierre, por lo que se llaman elementos **vacíos** (o **{{glossary("void element", "void")}}**). A veces se escriben con una **barra final** al final de su única etiqueta (`<img />`), pero es opcional.
+
+Ahora hagamos que se muestre tu imagen.
+
+1. Dentro de la carpeta `first-website`, crea una carpeta nueva llamada `images` y coloca en ella la imagen que elegiste en el artículo anterior.
+2. En el valor del atributo `src` de la etiqueta `<img>`, escribe la ruta a tu imagen. Está dentro de una carpeta llamada `images`, que está en el mismo directorio que tu archivo `index.html`, así que la ruta será `images/` más el nombre de tu imagen. Por ejemplo, si tu imagen se llama `firefox-icon.png`, el atributo `src` quedaría así: `src="images/firefox-icon.png"`.
+3. Reemplaza el valor del atributo `alt` (`Mi imagen de prueba`) por un texto que describa mejor tu imagen.
+4. Abre tu archivo `index.html` en un navegador web. Deberías ver tu imagen. Si no es así, compara tu elemento `<img>` con nuestro código; asegúrate de que no le falte nada de la sintaxis, como las comillas. Comprueba que el nombre del archivo de imagen sea correcto.
+
+Si la imagen es muy grande y no cabe en la pantalla, no te preocupes. Solucionaremos este problema en el próximo artículo.
+
+> [!NOTE]
+> Descubre más sobre cómo usar el atributo `alt` en las imágenes en distintas situaciones en nuestro [tutorial de multimedia accesible](/es/docs/Learn_web_development/Core/Accessibility/Multimedia) y en [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/).
+
+## Marcar texto
+
+En esta sección verás algunos elementos HTML esenciales que usarás para marcar texto.
+
+> [!NOTE]
+> [The basics of semantic HTML](https://scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn) de Scrimba <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup> es una lección interactiva que ofrece una descripción útil de HTML, con especial énfasis en por qué es importante su aspecto _semántico_.
 
 ### Encabezados
 
-Los elementos de encabezado permiten especificar que ciertas partes del contenido son encabezados, o subencabezados del contenido. De la misma forma que un libro tiene un título principal, y que a su vez puede tener títulos por cada capítulo individual, y subtítulos dentro de ellos, un documento HTML puede tenerlos también. HTML posee seis niveles de encabezados, {{htmlelement("h1")}}–{{htmlelement("h6")}}, aunque probablemente solo llegues a usar 3-4 como mucho:
+Los elementos de encabezado te permiten indicar que ciertas partes de tu contenido son encabezados o subencabezados. Del mismo modo que un libro tiene un título principal, títulos de capítulos y subtítulos, un documento HTML también puede tenerlos. HTML tiene 6 niveles de encabezado, {{htmlelement("Heading_Elements", "&lt;h1&gt;–&lt;h6&gt;")}}, aunque normalmente solo usarás de 3 a 4 como máximo:
 
 ```html
+<!-- 4 niveles de encabezado: -->
 <h1>Mi título principal</h1>
-<h2>Mi título de nivel superior</h2>
-<h3>Mi subtítulo</h3>
-<h4>Mi sub-subtítulo</h4>
+<h2>Mi encabezado de nivel superior</h2>
+<h3>Mi subencabezado</h3>
+<h4>Mi sub-subencabezado</h4>
 ```
 
-Intenta ahora añadir un título apropiado para tu página HTML, antes de tu elemento {{htmlelement("img")}}.
-
 > [!NOTE]
-> Verás que el encabezamiento de nivel 1 tiene un estilo implícito. No utilices elementos de encabezado para hacer el texto más grande o más oscuro, porque este elemento se utiliza por [accesibilidad](/es/docs/Learn_web_development/Core/Accessibility/HTML#contenido_del_texto) y otras [razones como el posicionamiento en buscadores](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#¿por_qué_necesitamos_estructura) (_Search Engine Optimization, SEO_). Intenta crear una secuencia significativa de encabezados en tus páginas, sin saltarte niveles.
+> Todo lo que está en HTML entre `<!--` y `-->` es un **comentario HTML**. El navegador ignora los comentarios al mostrar el código. Es decir, no son visibles en la página, solo en el código. Los comentarios HTML sirven para agregar notas sobre tu código o tu lógica, que pueden ser útiles para otras personas que trabajen en el mismo código, o para ti, si vuelves a él al cabo de 6 meses y no recuerdas lo que hiciste.
+
+Agrega el título de tu página a la página HTML justo encima de tu elemento {{htmlelement("img")}}, dentro de las etiquetas `<h1> ... </h1>`. Guarda el archivo y ábrelo en un navegador para ver el resultado.
 
 ### Párrafos
 
-Como se explicó más arriba, los elementos {{htmlelement("p")}} se utilizan para encerrar párrafos de texto; los usarás frecuentemente para el marcado de contenido de texto regular:
+Los elementos de párrafo {{htmlelement("p")}} sirven para contener párrafos de texto; los usarás a menudo al marcar contenido de texto normal:
 
 ```html
-<p>Este es un simple parrafo</p>
+<p>Este es un único párrafo</p>
 ```
 
-Agrega uno o algunos párrafos a tu texto de ejemplo (deberías tenerlo de cuando estudiaste [_¿Cuál será la apariencia de tu sitio web?_](/es/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)), colocados directamente debajo del elemento \<img>.
+Agrega el texto de ejemplo del artículo anterior en uno o varios párrafos, justo debajo de tu elemento {{htmlelement("img")}}. Guárdalo y mira tu página en un navegador.
 
 ### Listas
 
-Mucho del contenido web está dado por listas, así que HTML tiene elementos especiales para ellas. El marcado de listas se realiza siempre en al menos dos elementos. Los dos tipos de listas más comunes son las listas ordenadas y las desordenadas:
+Gran parte del contenido de la web son listas, y HTML tiene elementos especiales para ellas. El marcado de una lista siempre consta de al menos 2 elementos. Los tipos de lista más comunes son las listas ordenadas y las no ordenadas:
 
-1. **Las listas desordenadas** son aquellas en las que el orden de los items no es relevante, como en una lista de compras. Estas son encerradas en un elemento {{htmlelement("ul")}} (_unordered list_).
-2. **Las listas ordenadas** son aquellas en las que el orden sí es relevante, como en una receta. Estas son encerradas en un elemento {{htmlelement("ol")}} (_ordered list_).
+1. Las **listas no ordenadas** son para listas en las que el orden de los elementos no importa, como una lista de la compra. Se envuelven en un elemento {{htmlelement("ul")}}.
+2. Las **listas ordenadas** son para listas en las que el orden de los elementos sí importa, como los pasos de una receta de cocina. Se envuelven en un elemento {{htmlelement("ol")}}.
 
-Cada elemento de la lista se coloca dentro de un elemento {{htmlelement("li")}} _(list item_).
+Cada elemento de la lista se coloca dentro de un elemento {{htmlelement("li")}} (elemento de lista).
 
-Por ejemplo, si quieres transformar parte del siguiente párrafo en una lista:
+Por ejemplo, si quisiéramos convertir en una lista parte del siguiente fragmento de párrafo:
 
 ```html
 <p>
-  En Mozilla, somos una comunidad de tecnólogos, pensadores, y constructores que
-  trabajan juntos...
+  En Mozilla, somos una comunidad global de tecnólogos, pensadores y creadores
+  que trabajan juntos…
 </p>
 ```
 
-Podrías hacer lo siguiente:
+Podríamos modificar el marcado así:
 
 ```html
-<p>En Mozilla, somos una comunidad de</p>
+<p>En Mozilla, somos una comunidad global de</p>
 
 <ul>
   <li>tecnólogos</li>
   <li>pensadores</li>
-  <li>constructores</li>
+  <li>creadores</li>
 </ul>
 
-<p>trabajando juntos...</p>
+<p>que trabajan juntos…</p>
 ```
 
-Intenta agregar una lista ordenada o desordenada en tu página de ejemplo.
+Prueba a agregar una lista ordenada o no ordenada a tu página de ejemplo y mira el resultado en un navegador.
 
-## Vínculos
+## Crear enlaces
 
-Los vínculos o enlaces son muy importantes —son los que hacen de la web, la web—. Para implementar un vínculo, necesitas usar un vínculo simple — {{htmlelement("a")}} — la _a_ es la abreviatura de la palabra inglesa «anchor» («_ancla_»). Para convertir algún texto dentro de un párrafo en un vínculo, sigue estos pasos:
+Los enlaces son muy importantes: ¡son lo que hace que la web sea una red! Para agregar un enlace, tenemos que usar un elemento {{htmlelement("a")}}; «a» es la abreviatura de «anchor» (ancla). Para convertir en enlace un texto de tu párrafo, sigue estos pasos:
 
-1. Elige algún texto. Nosotros elegimos «Manifesto Mozilla».
-2. Encierra el texto en un elemento \<a>, así:
-
-   ```html
-   <a>Manifesto Mozilla</a>
-   ```
-
-3. Proporciónale al elemento \<a> un atributo href, así:
+1. Elige un texto. Nosotros elegimos el texto «Manifiesto de Mozilla».
+2. Envuelve el texto en un elemento {{htmlelement("a")}}, como se muestra a continuación:
 
    ```html
-   <a href="">Manifesto Mozilla</a>
+   <a>Manifiesto de Mozilla</a>
    ```
 
-4. Completa el valor de este atributo con la dirección web con la que quieras conectar al vínculo:
+3. Dale al elemento {{htmlelement("a")}} un atributo `href`, como se muestra a continuación:
 
    ```html
-   <a href="https://www.mozilla.org/es-AR/about/manifesto/"
-     >Manifesto Mozilla</a
-   >
+   <a href="">Manifiesto de Mozilla</a>
    ```
 
-Podrías obtener resultados inesperados si al comienzo de la dirección web omites la parte `https://` o `http://` llamada _protocolo_. Así que luego del marcado del vínculo, haz clic en él para asegurarte que te dirige a la dirección deseada.
+4. Rellena el valor de este atributo con la dirección web a la que quieres que apunte el enlace:
+
+   ```html
+   <a href="https://www.mozilla.org/en-US/about/manifesto/">
+     Manifiesto de Mozilla
+   </a>
+   ```
+
+Puedes obtener resultados inesperados si omites la parte `https://` o `http://`, llamada _protocolo_, al principio de la dirección web. Después de crear un enlace, haz clic en él para asegurarte de que te lleva adonde querías.
 
 > [!NOTE]
-> `href` podría parecer, en principio, una opción un tanto oscura para un nombre de atributo. Si tienes problemas para recordarla, recuerda que se refiere a _**h**ypertext **ref**erence_ (referencia de hipertexto).
+> Al principio, `href` puede parecer un nombre de atributo bastante extraño. Significa _**h**ypertext **ref**erence_ (referencia de hipertexto).
 
-Ahora agrega un vínculo a tu página, si es que aún no lo hiciste.
+Agrega ahora un enlace a tu página, si todavía no lo hiciste.
 
 ## Conclusión
 
-Si lograste seguir todas las instrucciones de este artículo, deberías terminar con una página que se vea así (también puedes [verla aquí](https://mdn.github.io/beginner-html-site/)):
+Si seguiste todas las instrucciones de este artículo, deberías terminar con una página como la de abajo (también puedes [verla aquí](https://mdn.github.io/beginner-html-site/)):
 
-![Una captura de pantalla de la página web que muestra el logo de Firefox, un encabezado que dice «mozilla es genial» y dos párrafos de texto de relleno.](finished-test-page-small.png)
+![Captura de pantalla de una página web que muestra un logotipo de Firefox, un encabezado que dice Mozilla is cool y dos párrafos de texto de relleno](finished-test-page-small.png)
 
-Si te estancas en algún paso, puedes comparar tu trabajo con el [código de ejemplo terminado](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) en Github.
+Si te atascas, siempre puedes comparar tu trabajo con nuestro [código de ejemplo terminado](https://github.com/mdn/beginner-html-site/blob/main/index.html) en GitHub.
 
-Aquí realmente solo has rasguñado la superficie de HTML. Para aprender más, ve a la [página de Aprendizaje HTML](/es/docs/Learn_web_development/Core/Structuring_content).
+Aquí solo hemos arañado la superficie de HTML. Más adelante en el curso aprenderás mucho más en nuestro módulo principal [Estructurar contenido con HTML](/es/docs/Learn_web_development/Core/Structuring_content).
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content","Learn_web_development/Getting_started/Your_first_website")}}
+## Véase también
+
+- [Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup>
+  - : El curso _Learn HTML and CSS_ de [Scrimba](https://scrimba.com?via=mdn) te enseña HTML y CSS mediante la creación y publicación de cinco proyectos geniales, con lecciones y desafíos interactivos y divertidos impartidos por profesores expertos.
+
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
