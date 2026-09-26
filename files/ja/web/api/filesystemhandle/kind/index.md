@@ -1,13 +1,14 @@
 ---
-title: FileSystemHandle.kind
+title: "FileSystemHandle: kind プロパティ"
+short-title: kind
 slug: Web/API/FileSystemHandle/kind
 l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
-{{domxref("FileSystemHandle")}} の読み取り専用プロパティ **`kind`** は、エントリーの種類を返します。`'file'` (対応するエントリーがファイルである場合) または `'directory'` が返ります。これは、ディレクトリーの中身について反復するとき、ファイルとディレクトリーを区別するために用いられます。
+**`kind`** は {{domxref("FileSystemHandle")}} インターフェイスの読み取り専用プロパティで、項目の種類を返します。`'file'` (対応する項目がファイルである場合) または `'directory'` が返ります。これは、ディレクトリーの中身について反復処理するとき、ファイルとディレクトリーを区別するために用いられます。
 
 ## 値
 
@@ -46,5 +47,5 @@ async function getFile() {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [ファイルシステム API](/ja/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)
