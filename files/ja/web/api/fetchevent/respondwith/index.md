@@ -38,7 +38,7 @@ respondWith(response)
 - `InvalidStateError` {{domxref("DOMException")}}
   - : イベントが配信されていないか、`respondWith()` が既に呼び出されています。
 
-## 構文
+## 解説
 
 ### リソースの最終 URL を指定する
 
