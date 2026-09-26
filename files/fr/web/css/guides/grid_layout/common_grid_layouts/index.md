@@ -128,7 +128,7 @@ Une fois notre disposition mobile en place, nous pouvons maintenant ajouter une 
 }
 ```
 
-Vous pouvez voir la disposition se former dans la valeur de {{CSSxRef("grid-template-areas")}}. Un `en-tete` s'étend sur deux colonnes, tout comme la `navigation`. Sur la troisième ligne, nous plaçons la barre latérale (`lateral`)` à côté du `contenu`. Nous plaçons le contenu de la `publicite` sur la quatrième ligne afin qu'il apparaisse sous la barre latérale. Le `pied-page` se trouve à côté sous le contenu. Nous utilisons [la disposition en boîte flexible CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout) sur la navigation pour espacer uniformément les éléments de navigation sur une ligne.
+Vous pouvez voir la disposition se former dans la valeur de {{CSSxRef("grid-template-areas")}}. Un `en-tete` s'étend sur deux colonnes, tout comme la `navigation`. Sur la troisième ligne, nous plaçons la barre latérale (`lateral`) à côté du `contenu`. Nous plaçons le contenu de la `publicite` sur la quatrième ligne afin qu'il apparaisse sous la barre latérale. Le `pied-page` se trouve à côté sous le contenu. Nous utilisons [la disposition en boîte flexible CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout) sur la navigation pour espacer uniformément les éléments de navigation sur une ligne.
 
 Nous pouvons maintenant ajouter un dernier point d'arrêt pour les écrans plus larges capables d'afficher une disposition à trois colonnes.
 
