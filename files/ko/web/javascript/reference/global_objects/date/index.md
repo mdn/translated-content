@@ -138,7 +138,7 @@ UTC를 기준으로 하는 읽기/쓰기 메서드도 존재합니다.
     반환합니다. {{jsxref("JSON.stringify()")}}에서 사용합니다.
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
   - : `Date`의 날짜 부분을 나타내는 문자열을 시스템에 설정된 현재 지역의 형식으로 반환합니다.
-- {{jsxref("Date.prototype.toLocaleFormat()")}}
+- `Date.prototype.toLocaleFormat()`
   - : 형식 문자열을 사용해서 `Date`를 나타내는 문자열을 생성합니다.
 - {{jsxref("Date.prototype.toLocaleString()")}}
   - : `Date`를 나타내는 문자열을 현재 지역의 형식으로 반환합니다.
