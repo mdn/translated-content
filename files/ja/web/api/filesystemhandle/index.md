@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
-**`FileSystemHandle`** は{{domxref('File System API', 'ファイルシステム API', '', 'nocode')}}  のインターフェイスで、ファイルまたはディレクトリーの項目を表すオブジェクトです。複数のハンドルが同じ項目を表す可能性もあります。ほとんどの場面では、`FileSystemHandle` を直接扱う場面はほとんどなく、子インターフェイスの {{domxref('FileSystemFileHandle')}} や {{domxref('FileSystemDirectoryHandle')}} を扱います。
+**`FileSystemHandle`** は{{domxref('File System API', 'ファイルシステム API', '', 'nocode')}} のインターフェイスで、ファイルまたはディレクトリーの項目を表すオブジェクトです。複数のハンドルが同じ項目を表す可能性もあります。ほとんどの場面では、`FileSystemHandle` を直接扱う場面はほとんどなく、子インターフェイスの {{domxref('FileSystemFileHandle')}} や {{domxref('FileSystemDirectoryHandle')}} を扱います。
 
 ## FileSystemHandle がもととなるインターフェイス
 
