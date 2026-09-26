@@ -3,7 +3,7 @@ title: Cache-Control ヘッダー
 short-title: Cache-Control
 slug: Web/HTTP/Reference/Headers/Cache-Control
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: d15e4dc0a813a9accd0e36b818bdadc8ac3ab413
 ---
 
 HTTP の **`Cache-Control`** は、[キャッシュ](/ja/docs/Web/HTTP/Guides/Caching)をブラウザーや共有キャッシュ（プロキシーや CDN など）において制御するためのディレクティブ（指示）を、リクエストとレスポンスの両方で保持します。
@@ -46,26 +46,26 @@ Cache-Control: <ディレクティブ>, <ディレクティブ>, ...
 
 標準的な `Cache-Control` ディレクティブは以下のように定義されています。
 
-| リクエスト       | レスポンス               |
-| ---------------- | ------------------------ |
-| `max-age`        | `max-age`                |
-| `max-stale`      | -                        |
-| `min-fresh`      | -                        |
-| -                | `s-maxage`               |
-| `no-cache`       | `no-cache`               |
-| `no-store`       | `no-store`               |
-| `no-transform`   | `no-transform`           |
-| `only-if-cached` | -                        |
-| -                | `must-revalidate`        |
-| -                | `proxy-revalidate`       |
-| -                | `must-understand`        |
-| -                | `private`                |
-| -                | `public`                 |
-| -                | `immutable`              |
-| -                | `stale-while-revalidate` |
-| `stale-if-error` | `stale-if-error`         |
+| リクエスト                            | レスポンス                                          |
+| ------------------------------------- | --------------------------------------------------- |
+| [`max-age`](#max-age_2)               | [`max-age`](#max-age)                               |
+| [`max-stale`](#max-stale)             | -                                                   |
+| [`min-fresh`](#min-fresh)             | -                                                   |
+| -                                     | [`s-maxage`](#s-maxage)                             |
+| [`no-cache`](#no-cache_2)             | [`no-cache`](#no-cache)                             |
+| [`no-store`](#no-store_2)             | [`no-store`](#no-store)                             |
+| [`no-transform`](#no-transform_2)     | [`no-transform`](#no-transform)                     |
+| [`only-if-cached`](#only-if-cached)   | -                                                   |
+| -                                     | [`must-revalidate`](#must-revalidate)               |
+| -                                     | [`proxy-revalidate`](#proxy-revalidate)             |
+| -                                     | [`must-understand`](#must-understand)               |
+| -                                     | [`private`](#private)                               |
+| -                                     | [`public`](#public)                                 |
+| -                                     | [`immutable`](#immutable)                           |
+| -                                     | [`stale-while-revalidate`](#stale-while-revalidate) |
+| [`stale-if-error`](#stale-if-error_2) | [`stale-if-error`](#stale-if-error)                 |
 
-注意: [互換性一覧表](#ブラウザーの互換性)で対応状況を確認してください。解釈できないユーザーエージェントはこれらを無視します。
+注意: 対応状況を[互換性一覧表](#ブラウザーの互換性)で確認してください。解釈できないユーザーエージェントはこれらを無視します。
 
 ## 用語集
 
@@ -132,9 +132,15 @@ Cache-Control: s-maxage=604800
 Cache-Control: no-cache
 ```
 
-キャッシュに、保存されているコンテンツを再利用する際に、必ず更新がないかどうかをチェックさせたい場合は、 `no-cache` を使用する必要があります。これは、キャッシュがオリジンサーバーに各リクエストを再検証することを要求することで実現されます。
+キャッシュに、保存されているコンテンツを再利用する際に、更新がないかどうかを必ずチェックさせたい場合は、`no-cache` が使用すべきディレクティブです。これは、キャッシュがオリジンサーバーに各リクエストを再検証することを要求することで実現されます。
 
-`no-cache` はキャッシュにレスポンスを保存することを許可しますが、再利用する前に再検証することを要求します。もし、「キャッシュさせない」の意味が実際には「保存させない」であるなら、`no-store` が使用すべきディレクティブです。
+なお、`no-cache` は「キャッシュをしない」という意味ではありません。`no-cache` はキャッシュにレスポンスを保存することを許可しますが、再利用する前に再検証することを要求します。もし、「キャッシュさせない」の意味が実際には「保存させない」であるなら、`no-store` が使用すべきディレクティブです。
+
+> [!NOTE]
+> `no-cache` ディレクティブは、<kbd>戻る</kbd>ボタンなどを使用した履歴ナビゲーションにおける再検証を保証するものではありません。
+> 前方/後方キャッシュ ({{Glossary('bfcache')}}) が使用されている場合、ブラウザーは再検証を行わずにページのスナップショットを復元します。
+> bfcache を使用していない場合でも、ブラウザーは再検証を行わずにキャッシュされたレスポンスを返すことがあります。
+> これは [仕様で許可されて](https://httpwg.org/specs/rfc7234.html#history.lists)<sup>(英語)</sup>いる振る舞いです。なぜなら、履歴ナビゲーションは通常、前回訪問したページに対する新しいリクエストではなく、過去のセッションのスナップショットを復元するものとして扱われるからです。
 
 #### `must-revalidate`
 
@@ -147,6 +153,12 @@ Cache-Control: max-age=604800, must-revalidate
 ```
 
 HTTP では、キャッシュがオリジンサーバーから切り離されたときに、[古いレスポンス](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)を再利用できます。 `must-revalidate` はそれを防ぐための方法で、キャッシュは保存されたレスポンスを元のサーバーで再検証するか、それが検証不可能な場合は 504 (Gateway Timeout) のレスポンスを生成します。
+
+> [!NOTE]
+> `must-revalidate` ディレクティブは、<kbd>戻る</kbd>ボタンなどを使用した履歴ナビゲーションにおける再検証を保証するものではありません。
+> 前方/後方キャッシュ ({{Glossary('bfcache')}}) が使用されている場合、ブラウザーは再検証を行わずにページのスナップショットを復元します。
+> bfcache を使用していない場合でも、ブラウザーは再検証を行わずにキャッシュされたレスポンスを返すことがあります。
+> これは [仕様で許可されて](https://httpwg.org/specs/rfc7234.html#history.lists)<sup>(英語)</sup>いる振る舞いです。なぜなら、履歴ナビゲーションは通常、前回訪問したページに対する新しいリクエストではなく、過去のセッションのスナップショットを復元するものとして扱われるからです。
 
 #### `proxy-revalidate`
 
@@ -300,6 +312,12 @@ Cache-Control: max-age=0
 
 `max-age` の値が負数（`-1` など）である場合、または整数ではない場合（`3599.99` など）、キャッシュの動作は特定されません。キャッシュは、値が `0` であるかのように処理することが推奨されます
 
+> [!NOTE]
+> `max-age` ディレクティブは、<kbd>戻る</kbd>ボタンなどを使用した履歴ナビゲーションにおける再検証を保証するものではありません。
+> 前方/後方キャッシュ ({{Glossary('bfcache')}}) が使用されている場合、ブラウザーは再検証を行わずにページのスナップショットを復元します。
+> bfcache を使用していない場合でも、ブラウザーは再検証を行わずにキャッシュされたレスポンスを返すことがあります。
+> これは [仕様で許可されて](https://httpwg.org/specs/rfc7234.html#history.lists)<sup>(英語)</sup>いる振る舞いです。なぜなら、履歴ナビゲーションは通常、前回訪問したページに対する新しいリクエストではなく、過去のセッションのスナップショットを復元するものとして扱われるからです。
+
 #### `max-stale`
 
 `max-stale=N` リクエストディレクティブは、クライアントが _N_ 秒以内に[期限切れ](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)となるレスポンスを格納することを示すものです。
@@ -448,7 +466,7 @@ Cache-Control: max-age=0, must-revalidate
 ## 関連情報
 
 - [HTTP キャッシュ](/ja/docs/Web/HTTP/Guides/Caching)
-- [Caching Tutorial for Web Authors and Webmasters](https://www.mnot.net/cache_docs/)
+- [Caching Tutorial for Web Authors and Webmasters](https://mnot.net/cache_docs/)
 - [Caching best practices & max-age gotchas](https://jakearchibald.com/2016/caching-best-practices/)
 - [Cache-Control for Civilians](https://csswizardry.com/2019/03/cache-control-for-civilians/)
 - [RFC 9111 – HTTP Caching](https://httpwg.org/specs/rfc9111.html)
