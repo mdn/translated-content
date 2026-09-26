@@ -3,10 +3,10 @@ title: "HTMLScriptElement: attributionSrc プロパティ"
 short-title: attributionSrc
 slug: Web/API/HTMLScriptElement/attributionSrc
 l10n:
-  sourceCommit: dd6f6e705b7df9d505c93023593a6bae96bef9db
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{non-standard_header}}
 
 **`attributionSrc`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、{{htmlelement("script")}} 要素の [`attributionsrc`](/ja/docs/Web/HTML/Reference/Elements/script#attributionsrc) 属性をプログラムで取得・設定し、その属性値を反映します。`attributionsrc` はブラウザーにスクリプトリソースリクエストと一緒に {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信することを指定します。
 
