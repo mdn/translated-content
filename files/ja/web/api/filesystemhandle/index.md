@@ -2,37 +2,37 @@
 title: FileSystemHandle
 slug: Web/API/FileSystemHandle
 l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+  sourceCommit: 6c592023efa1f762eaa1eb1f36241750626be51c
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
-{{domxref('File System Access API')}} の **`FileSystemHandle`** インターフェイスは、ファイルまたはディレクトリーのエントリーを表すオブジェクトです。複数のハンドルが同じエントリーを表す可能性もあります。`FileSystemHandle` を直接扱う場面はほとんどなく、子インターフェイスの {{domxref('FileSystemFileHandle')}} や {{domxref('FileSystemDirectoryHandle')}} を扱うでしょう。
+**`FileSystemHandle`** は{{domxref('File System API', 'ファイルシステム API', '', 'nocode')}}  のインターフェイスで、ファイルまたはディレクトリーの項目を表すオブジェクトです。複数のハンドルが同じ項目を表す可能性もあります。ほとんどの場面では、`FileSystemHandle` を直接扱う場面はほとんどなく、子インターフェイスの {{domxref('FileSystemFileHandle')}} や {{domxref('FileSystemDirectoryHandle')}} を扱います。
 
 ## FileSystemHandle がもととなるインターフェイス
 
 以下が、`FileSystemHandle` インターフェイスがもととなっているインターフェイスの一覧です。
 
 - {{domxref("FileSystemFileHandle")}}
-  - : ファイルエントリーのハンドルを表します。
+  - : ファイル項目のハンドルを表します。
 - {{domxref("FileSystemDirectoryHandle")}}
-  - : ディレクトリーエントリーへのハンドルを提供します。
+  - : ディレクトリー項目へのハンドルを提供します。
 
 ## インスタンスプロパティ
 
 - {{domxref('FileSystemHandle.kind','kind')}} {{ReadOnlyInline}}
-  - : エントリーの種類を返します。`'file'` (対応するエントリーがファイルのとき) または `'directory'` です。
+  - : 項目の種類を返します。対応する項目がファイルの時は `'file'`、そうでなければ `'directory'` です。
 - {{domxref('FileSystemHandle.name', 'name')}} {{ReadOnlyInline}}
-  - : 対応するエントリーの名前を返します。
+  - : 対応する項目の名前を返します。
 
 ## インスタンスメソッド
 
 - {{domxref('FileSystemHandle.isSameEntry()', 'isSameEntry()')}}
-  - : 2 個の{{domxref("FileSystemHandle", "ハンドル")}}を比較し、対応するエントリー (ファイルまたはディレクトリー) が一致するかを調べます。
+  - : 2 つのハンドルを比較し、対応する項目 (ファイルまたはディレクトリー) が一致するかを調べます。
 - {{domxref('FileSystemHandle.queryPermission()', 'queryPermission()')}} {{Experimental_Inline}}
   - : 現在のハンドルの現在の許可の状態を取得します。
 - {{domxref('FileSystemHandle.remove', 'remove()')}} {{Experimental_Inline}} {{Non-standard_Inline}}
-  - : 下層のファイルシステムからハンドルが表すエントリーを除去することを要求します。
+  - : 下層のファイルシステムからハンドルが表す項目を削除することを要求します。
 - {{domxref('FileSystemHandle.requestPermission', 'requestPermission()')}} {{Experimental_Inline}}
   - : ファイルハンドルについて、読み取りまたは読み書きの許可を要求します。
 
@@ -64,7 +64,7 @@ async function getFile() {
 
 ```js
 // fileHandle は FileSystemFileHandle
-// withWrite は書き込みなら true に設定される boolean
+// withWrite は書き込みなら true に設定される論理値
 
 async function verifyPermission(fileHandle, withWrite) {
   const opts = {};
@@ -87,9 +87,9 @@ async function verifyPermission(fileHandle, withWrite) {
 }
 ```
 
-### エントリーを比較する
+### 項目を比較する
 
-以下の関数は、1 個のエントリーをエントリーの配列と比較し、一致するエントリーをすべて取り除いた新しい配列を返します。
+以下の関数は、1 個の項目を項目の配列と比較し、一致する項目をすべて取り除いた新しい配列を返します。
 
 ```js
 function removeMatches(fileEntry, entriesArr) {
@@ -109,5 +109,5 @@ function removeMatches(fileEntry, entriesArr) {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [ファイルシステム API](/ja/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)
