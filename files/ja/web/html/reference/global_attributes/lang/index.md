@@ -1,15 +1,15 @@
 ---
-title: HTML lang グローバル属性
+title: "`lang` グローバル属性 (HTML)"
 short-title: lang
 slug: Web/HTML/Reference/Global_attributes/lang
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 8ed465762d06fa17f7cc6adb3e2be9b57df03e9b
 ---
 
 **`lang`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、要素の言語を定義するために使用します。 編集不可能な要素の場合は書かれている言語、または編集可能な要素の場合はユーザーが書くべき言語です。この属性には、単一の {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}を記述します。
 
 > [!NOTE]
-> `lang` の既定値は空文字列であり、これは言語が不明であることを意味します。したがって、この属性には常に適切な値を指定することをお勧めします。
+> どこにも言語の指定が示されていない場合、その言語の状態は不明となります。特に[アクセシビリティの注意事項](#アクセシビリティの注意事項)があるため、この属性には常に適切な値を指定することが推奨されます。
 
 {{InteractiveExample("HTML デモ: lang", "tabbed-shorter")}}
 
@@ -35,15 +35,22 @@ p::before {
 }
 ```
 
-属性値が空文字列 (`lang=""`) の場合、言語は _unknown_ に設定されます。言語タグが BCP47 に準拠していない場合は、_invalid_ に設定されます。
+## 値
 
-`lang` 属性が設定されていても、 `xml:lang` 属性が優先されるため、考慮されない場合があります。
+この属性には、単一の {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}が含まれています。属性の値が空文字 (`lang=""`) の場合、言語は「不明」に設定されます。また、言語タグが BCP47 に準拠していない場合は、「無効」に設定されます。
+
+`xml:lang` 属性が同時に指定されている場合、HTML 仕様では、`lang` 属性と `xml:lang` 属性の値が大文字と小文字を区別せずに等しくなければならないと要求されています。この場合、`xml:lang` 属性が優先されます。
 
 CSS の {{cssxref(":lang")}} 擬似クラスでは、無効な 2 つの言語名は、その名前が異なれば異なるものになります。つまり、`:lang(es)` は `lang="es-ES"` と `lang="es-419"` の両方に一致しますが、 `:lang(xyzzy)` は `lang="xyzzy-Zorp!"` とは一致しません。
 
-## アクセシビリティの考慮
+### 継承
 
-WCAG 成功基準 3.1.1 では、ページの言語が「プログラムによって決定される」方法で（つまり、**`lang`** 属性を介して）指定することが**要件となっています**。
+要素に `lang` または `xml:lang` 属性がない場合、その要素は[親要素](/ja/docs/Web/API/Node/parentElement)の言語を継承します。親ノードが {{domxref("ShadowRoot/host", "host")}} である場合は、{{domxref("ShadowRoot/host", "host")}} の言語を継承します。
+言語が設定されている祖先要素がない場合、[`<meta http-equiv="content-language">`](/ja/docs/Web/HTML/Reference/Elements/meta/http-equiv#content-language) または HTTP の {{HTTPHeader("Content-Language")}} ヘッダーによって言語を指定することも可能です。これらの手がかりから単一のコンテンツ言語を特定できない場合、デフォルトは空文字列（コンテンツ言語として「不明」が指定されます）となります。
+
+## アクセシビリティの注意事項
+
+WCAG 成功基準 3.1.1 の**要件**として、ページの言語が「プログラムによって決定される」方法で（つまり、**`lang`** 属性を介して）指定することが求められています。
 
 WCAG 成功基準 3.1.2 では、言語が異なる**部分**があるページには、それらの部分の言語も指定することを要件となっています。この場合も、**`lang`** 属性がそのための正しい方法です。
 
@@ -140,7 +147,7 @@ WCAG 成功基準 3.1.2 では、言語が異なる**部分**があるページ�
     </li>
     <li>
       <a
-        href="/en-US/docs/Web/HTML/Reference/Global_attributes/lang"
+        href="/ja/docs/Web/HTML/Reference/Global_attributes/lang"
         rel="nofollow"
         id="translations-add">
         Add a translation
@@ -149,10 +156,6 @@ WCAG 成功基準 3.1.2 では、言語が異なる**部分**があるページ�
   </ul>
 </div>
 ```
-
-## 継承
-
-要素に `lang` 属性が設定されていない場合、その要素は[親ノード](/ja/docs/Glossary/Node/DOM)に設定された `lang` 値を継承し、その親ノードも同様に親ノードから継承し、といった具合に継承されます。
 
 ## 仕様書
 
