@@ -3,12 +3,12 @@ title: SVG 効果の HTML コンテンツへの適用
 short-title: HTML での SVG 効果
 slug: Web/SVG/Guides/Applying_SVG_effects_to_HTML_content
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: fd216f3c4358f24fef043d32b28d6e980a78afc0
 ---
 
-最近のブラウザーは、 [SVG](/ja/docs/Web/SVG) を [CSS](/ja/docs/Web/CSS) スタイルの中で使用して、 HTML コンテンツに対してグラフィカルな効果を適用することに対応しています。
+[SVG](/ja/docs/Web/SVG) を [CSS](/ja/docs/Web/CSS) スタイルの中で使用して、 HTML コンテンツに対してグラフィカルな効果を適用することができます。
 
-SVG をスタイルで指定するには、同一文書内または外部のスタイルシートで指定することができます。使用できるプロパティは [`mask`](/ja/docs/Web/CSS/Reference/Properties/mask), [`clip-path`](/ja/docs/Web/CSS/Reference/Properties/clip-path), [`filter`](/ja/docs/Web/CSS/Reference/Properties/filter) の 3 つです。
+SVG をスタイルで指定するには、同一文書内または外部のスタイルシートで指定することができます。使用できるプロパティは {{cssxref("mask")}}, {{cssxref("clip-path")}}, {{cssxref("filter")}} の 3 つです。
 
 > [!NOTE]
 > 外部ファイル内の SVG を参照する場合、参照側の文書と[同じオリジン](/ja/docs/Web/Security/Defenses/Same-origin_policy)でなければなければなりません。
@@ -17,12 +17,10 @@ SVG をスタイルで指定するには、同一文書内または外部のス�
 
 SVG 効果を CSS スタイルで適用するには、まず最初に 適用する SVG を参照する CSS スタイルを作る必要があります。
 
-```html
-<style>
-  p {
-    mask: url(#my-mask);
-  }
-</style>
+```css
+p {
+  mask: url("#my-mask");
+}
 ```
 
 上の例では、すべての段落が、 [ID](/ja/docs/Web/SVG/Reference/Element/mask) に `my-mask` を持つ [SVG の `<mask>`](/ja/docs/Web/HTML/Reference/Global_attributes/id) によってマスクされます。
@@ -46,12 +44,15 @@ SVG 効果を CSS スタイルで適用するには、まず最初に 適用す�
 
 ```css
 .target {
-  mask: url(#mask-1);
+  mask: url("#mask-1");
 }
 p {
   width: 300px;
-  border: 1px solid #000;
+  border: 1px solid black;
   display: inline-block;
+}
+p.target {
+  background: lime;
 }
 ```
 
@@ -60,7 +61,7 @@ p {
 実際に SVG の効果を HTML に適用する場合、次のように単純に上で定義した `target` スタイルをその要素に割り当てるだけです。
 
 ```html
-<p class="target" style="background:lime;">
+<p class="target">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 </p>
@@ -83,7 +84,7 @@ p {
 この例では、 SVG を HTML コンテンツを切り抜くために使用する方法を実演します。リンクの反応範囲ごと切り取られていることに注目してください。
 
 ```html
-<p class="target" style="background:lime;">
+<p class="target">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 </p>
@@ -96,7 +97,7 @@ p {
   Ut enim ad minim veniam.
 </p>
 
-<button onclick="toggleRadius()">曲率を切り替え</button>
+<button>半径を切り替え</button>
 
 <svg height="0">
   <clipPath id="clipping-path-1" clipPathUnits="objectBoundingBox">
@@ -108,12 +109,15 @@ p {
 
 ```css
 .target {
-  clip-path: url(#clipping-path-1);
+  clip-path: url("#clipping-path-1");
 }
 p {
   width: 300px;
-  border: 1px solid #000;
+  border: 1px solid black;
   display: inline-block;
+}
+p.target {
+  background: lime;
 }
 ```
 
@@ -122,10 +126,13 @@ p {
 SVG にリアルタイムで変更を加えることができ、その変更は HTML のレンダリングに即座に反映されることに注目してください。たとえば、次のコードで上で定義したクリップパスの円の大きさを変更することができます。
 
 ```js
+const circle = document.getElementById("circle");
+
 function toggleRadius() {
-  const circle = document.getElementById("circle");
   circle.r.baseVal.value = 0.4 - circle.r.baseVal.value;
 }
+
+document.querySelector("button").addEventListener("click", toggleRadius);
 ```
 
 {{EmbedLiveSample('Example_Clipping', 650, 200)}}
@@ -135,7 +142,7 @@ function toggleRadius() {
 この例では HTML コンテンツに対して SVG を使用してフィルターを適用する方法を実演します。いくつかのフィルターを定義し、CSS を使って 3 つの要素それぞれに対して、通常の状態とマウスをホバーした状態の2つの状態にフィルターを適用します。
 
 ```html
-<p class="target" style="background: lime;">
+<p class="target">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 </p>
@@ -148,6 +155,12 @@ function toggleRadius() {
   >
   Ut enim ad minim veniam.
 </p>
+```
+
+```css hidden
+p.target {
+  background: lime;
+}
 ```
 
 同じようにしてあらゆる SVG フィルターが適用できます。たとえば、ガウスぼかし効果を適用する場合は次のように書きます。
@@ -180,10 +193,11 @@ function toggleRadius() {
 <svg height="0">
   <filter id="f3">
     <feConvolveMatrix
-      filterRes="100 100"
-      style="color-interpolation-filters:sRGB"
+      color-interpolation-filters="sRGB"
       order="3"
-      kernelMatrix="0 -1 0   -1 4 -1   0 -1 0"
+      kernelMatrix="0 -1 0
+                   -1 4 -1
+                    0 -1 0"
       preserveAlpha="true" />
   </filter>
   <filter id="f4">
@@ -198,10 +212,10 @@ function toggleRadius() {
   <filter id="f5">
     <feColorMatrix
       values="1 0 0 0 0
-                           0 1 0 0 0
-                           0 0 1 0 0
-                           0 1 0 0 0"
-      style="color-interpolation-filters:sRGB" />
+              0 1 0 0 0
+              0 0 1 0 0
+              0 1 0 0 0"
+      color-interpolation-filters="sRGB" />
   </filter>
 </svg>
 ```
@@ -210,22 +224,22 @@ function toggleRadius() {
 
 ```css
 p.target {
-  filter: url(#f3);
+  filter: url("#f3");
 }
 p.target:hover {
-  filter: url(#f5);
+  filter: url("#f5");
 }
 em.target {
-  filter: url(#f1);
+  filter: url("#f1");
 }
 em.target:hover {
-  filter: url(#f4);
+  filter: url("#f4");
 }
 pre.target {
-  filter: url(#f2);
+  filter: url("#f2");
 }
 pre.target:hover {
-  filter: url(#f3);
+  filter: url("#f3");
 }
 ```
 
@@ -233,7 +247,7 @@ pre.target:hover {
 
 ### 例: ぼかし文字
 
-文字にぼかしを入れるには、 [`blur()`](/ja/docs/Web/CSS/Reference/Values/filter-function/blur) という CSS フィルターがあります。 SVG のフィルターを用いても同じ効果が実現できます。
+文字にぼかしを入れるには、{{cssxref("filter-function/blur")}} という CSS フィルターがあります。 SVG のフィルターを用いても同じ効果が実現できます。
 
 ```html
 <p class="blur">Time to clean my glasses</p>
@@ -250,7 +264,7 @@ SVG と CSS のフィルターは、同じクラス内で適用できます。
 
 ```css
 .blur {
-  filter: url(#wherearemyglasses);
+  filter: url("#wherearemyglasses");
 }
 ```
 
@@ -267,7 +281,7 @@ SVG 要素と HTML の組み合わせでテキストを作成することで、�
 ```html
 <svg height="60" width="200">
   <text x="0" y="15" fill="blue" transform="rotate(30 20,50)">
-    Example text
+    テキストの例
   </text>
 </svg>
 ```
@@ -280,7 +294,7 @@ SVG 要素と HTML の組み合わせでテキストを作成することで、�
 
 ```css
 .target {
-  clip-path: url(resources.svg#c1);
+  clip-path: url("resources.svg#c1");
 }
 ```
 
