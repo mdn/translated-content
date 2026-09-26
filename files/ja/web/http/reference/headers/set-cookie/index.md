@@ -3,7 +3,7 @@ title: Set-Cookie ヘッダー
 short-title: Set-Cookie
 slug: Web/HTTP/Reference/Headers/Set-Cookie
 l10n:
-  sourceCommit: ac513ee8e865b8de037adee906d10fd888004cce
+  sourceCommit: d8b9ef6d4342a26e188204a479eede5f057aceab
 ---
 
 HTTP の **`Set-Cookie`** は{{Glossary("response header", "レスポンスヘッダー")}}で、サーバーからユーザーエージェントへクッキーを送信するために使用され、ユーザーエージェントはそれを後でサーバーに送り返すことができます。
@@ -71,9 +71,15 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `Domain=<domain-value>` {{optional_inline}}
   - : クッキーが送信されるホストを定義します。
 
-    現在のドメインのみ、またはより上位のドメインを値として設定できます。ただし、パブリック接尾辞の場合はこの限りではありません。ドメインを設定すると、そのドメインだけでなく、そのドメインのすべてのサブドメインでもクッキーが利用できるようになります。
+    ドメインを設定すると、そのドメインおよびそのすべてのサブドメインでクッキーが利用できるようになります。
+    省略された場合、そのクッキーは送信元ホストにのみ返されます（つまり、「ホスト限定クッキー」となります）。
+    これは、ホスト名を設定する場合よりも制限が厳しいと言えます。そのクッキーは当該ホストのサブドメインでは利用できないからです。
 
-    省略された場合、この属性はサブドメインを記載せずに、既定で現在の文書 URL のホストに設定されます。
+    この値は、`Set-Cookie` レスポンスヘッダーを送信するサーバーのドメイン、またはそのサーバーのドメインの上位ドメインでなければなりません。
+    `com`、`co.uk`、`github.io` などの[公的接尾辞](https://publicsuffix.org/)とすることはできません。
+    例えば、`api.example.com` からのレスポンスでは、`Domain=api.example.com` または `Domain=example.com` を設定できますが、`Domain=beta.api.example.com`、`Domain=other.example.com`、あるいは `Domain=com` を設定することはできません。
+    同様に、`shop.example.co.uk` からのレスポンスでは、`Domain=shop.example.co.uk` または `Domain=example.co.uk` を設定できますが、`co.uk` は公的接尾辞であるため、`Domain=co.uk` を設定することはできません。
+    これらのルールに違反するクッキーは無視されます。
 
     以前の仕様とは異なり、ドメイン名の先頭のドット (`.example.com`) は無視されます。
 
@@ -146,7 +152,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
         この値を使用する際には、`Secure` 属性も同時に設定する必要があります。
 
 - `Secure` {{optional_inline}}
-  - : クッキーが、リクエストが SSL と HTTPS プロトコルを使用して行われた場合にのみサーバーに送信されることを示します。ただし HTTP クッキーは、例えば情報が暗号化されないなど、保護されていない仕組みを継承しているので、機密な情報や敏感な情報を転送したり格納したりしないようにしてください。
+  - : これは、`https:` スキームでのリクエストがあった場合のみ（localhost を除く）クッキーをサーバーに送信することを示しており、そのため、[中間者攻撃 (MITM)](/ja/docs/Web/Security/Attacks/MITM) に対する耐性が高くなります。
 
     > [!NOTE]
     > `Secure` を設定すると、クッキー内の機密情報（セッションキー、ログイン情報など）へのアクセスがすべて防げると思わないでください。
