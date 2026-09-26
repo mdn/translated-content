@@ -15,7 +15,11 @@ input:enabled {
 
 ## 구문
 
-{{csssyntax}}
+```css
+:enabled {
+  /* ... */
+}
+```
 
 ## 예제
 
