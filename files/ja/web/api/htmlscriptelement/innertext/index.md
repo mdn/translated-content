@@ -1,7 +1,7 @@
 ---
-title: "HTMLScriptElement: text プロパティ"
-short-title: text
-slug: Web/API/HTMLScriptElement/text
+title: "HTMLScriptElement: innerText プロパティ"
+short-title: innerText
+slug: Web/API/HTMLScriptElement/innerText
 l10n:
   sourceCommit: 65cbd4ff030e6763d6868917137d728c3ec29288
 ---
@@ -15,8 +15,8 @@ l10n:
 > このリスクを軽減するには、文字列の代わりに常に {{domxref("TrustedScript")}} オブジェクトを割り当て、[信頼型の適用](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)を行うようにしてください。
 > 詳しくは、[セキュリティの注意事項](#セキュリティの注意事項)を参照してください。
 
-**`innerText`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、{{HTMLElement("script")}} 要素のインラインテキストコンテンツを表します。
-その動作は、{{domxref("HTMLScriptElement.textContent","textContent")}} および {{domxref("HTMLScriptElement.innerText","innerText")}} プロパティと同様です。
+**`innerText`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、{{HTMLElement("script")}} 要素のテキストコンテンツを表します。
+その動作は、{{domxref("HTMLScriptElement.textContent","textContent")}} および {{domxref("HTMLScriptElement.text","text")}} プロパティと同様です。
 
 ## 値
 
@@ -29,14 +29,17 @@ l10n:
 - `TypeError`
   - : [信頼型](/ja/docs/Web/API/Trusted_Types_API)が [CSP によって強制されている](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)場合で、かつデフォルトのポリシーが定義されていないときに、プロパティが文字列に設定されると、この例外が発生します。
 
-## Description
+## 解説
 
-**`text`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、{{HTMLElement("script")}} 要素内のテキストコンテンツを表します。
+**`innerText`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、{{HTMLElement("script")}} 要素内のテキストコンテンツを表します。
 
 実行可能なスクリプト（つまり、{{domxref('HTMLScriptElement/type','type')}} によってモジュールまたはクラシックスクリプトであることが示されているスクリプト）の場合、このテキストはインラインで実行可能なコードとなります。
 その他の型の場合、インポートマップ、投機ルール、またはその他の種類のデータブロックを表します。
 
-なお、{{domxref('HTMLScriptElement/src','src')}} プロパティが設定されている場合、`text` プロパティのコンテンツは無視されることに注意してください。
+なお、{{domxref('HTMLScriptElement/src','src')}} プロパティが設定されている場合、`innerText` プロパティのコンテンツは無視されることに注意してください。
+
+`innerText` プロパティは {{domxref("HTMLElement.innerText","HTMLElement")}} にも定義されているため、他の要素でも使用できます。
+他の要素で使用する場合、このプロパティは {{domxref("TrustedScript")}} を代入することを想定も強制もしません。
 
 ### セキュリティの注意事項
 
@@ -56,5 +59,4 @@ l10n:
 
 ## 関連情報
 
-- {{domxref("HTMLScriptElement.textContent")}}
-- {{domxref("HTMLScriptElement.innerText")}}
+- {{domxref("HTMLElement.innerText")}}
