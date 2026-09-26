@@ -1,36 +1,38 @@
 ---
-title: FileSystemHandle.queryPermission()
+title: "FileSystemHandle: queryPermission() メソッド"
+short-title: queryPermission()
 slug: Web/API/FileSystemHandle/queryPermission
 l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+  sourceCommit: b88824d7b19a323e623181768ad5dcbe2ee9e84a
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
-{{domxref("FileSystemHandle")}} インターフェイスの **`queryPermission()`** メソッドは、現在のハンドルの現在の許可の状態を取得します。
+**`queryPermission()`** は {{domxref("FileSystemHandle")}} インターフェイスのメソッドで、現在のハンドルの現在の許可の状態を取得します。
 
 ## 構文
 
 ```js-nolint
-queryPermission(fileSystemHandlePermissionDescriptor)
+queryPermission(descriptor)
 ```
 
 ### 引数
 
-- FileSystemHandlePermissionDescriptor {{optional_inline}}
-  - : 取得する対象の許可モードを指定するオブジェクトです。以下の設定ができます。
-    - `'mode'`: `'read'` または `'readwrite'` の値を取りえます。
+- `descriptor` {{optional_inline}}
+  - : 問い合わせる権限モードを指定するオブジェクトです。オプションは以下の通りです。
+    - `'mode'` {{optional_inline}}
+      - : `'read'`, `'write'`, `'readwrite'` のいずれかを取ります。
 
 ### 返値
 
-`'granted'`、`'denied'`、`'prompt'` のいずれかの {{domxref('PermissionStatus.state')}} です。
+{{jsxref("Promise")}} であり、{{domxref('PermissionStatus.state')}} に解決します。その値は `'granted'`, `'denied'`, `'prompt'` のいずれかです。また、下記の例外のいずれかで拒否されることもあります。
 
-`"prompt"` が返った場合は、ウェブサイトはハンドルを用いた操作を行う前に `requestPermission()` を呼ぶ必要があるでしょう。`"denied"` が返った場合は、すべての操作が拒否されるでしょう。通常、ローカルファイルシステムのハンドルファクトリーから返されたハンドルは、初期状態で読み取りの許可状態として `"granted"` を返すでしょう。しかし、ユーザーが許可を取り消した場合以外に、IndexedDB から取得したハンドルも `"prompt"` を返す可能性が高いでしょう。
+これが "prompt" で解決された場合、ハンドルに対する操作を行う前に、ウェブサイトは `requestPermission()` を呼び出す必要があります。これが "denied" で解決された場合は、いかなる操作も拒否されます。通常、ローカルファイルシステムのハンドルファクトリーによって返されるハンドルは、読み取り権限の状態について、最初は "granted" で解決されます。ただし、ユーザーがその権限を取り消した場合を除き、IndexedDB から取得したハンドルも "prompt" を返す可能性が高いでしょう。
 
 ### 例外
 
 - {{jsxref("TypeError")}}
-  - : `mode` が `'read'` でも `'readwrite'` でもない値に設定されたとき投げられます。
+  - : `mode` が `'read'` でも `'readwrite'` でもない値に設定されたときに発生します。
 
 ## 例
 
@@ -71,5 +73,5 @@ async function verifyPermission(fileHandle, withWrite) {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [ファイルシステム API](/ja/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)
