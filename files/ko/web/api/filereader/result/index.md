@@ -15,7 +15,7 @@ var file = instanceOfFileReader.result;
 
 ## Value
 
-읽기 작업에 사용된 함수에 의해 string 또는 {{domxref("ArrayBuffer")}} 가 된다.
+읽기 작업에 사용된 함수에 의해 string 또는 {{jsxref("ArrayBuffer")}} 가 된다.
 
 ## 명세서
 

@@ -5,7 +5,7 @@ slug: Web/API/URL/host
 
 {{ApiRef("URL API")}}
 
-{{domxref("URL")}} 인터페이스의 **`host`** 속성은 URL의 호스트, 즉 {{domxref("URL.hostname", "hostname")}}와 함께, {{glossary("port", "포트")}}가 존재하는 경우 `':'`과 그 뒤의 {{domxref("URL.port", "port")}}를 포함하는 {{domxref("USVString")}} 문자열입니다.
+{{domxref("URL")}} 인터페이스의 **`host`** 속성은 URL의 호스트, 즉 {{domxref("URL.hostname", "hostname")}}와 함께, {{glossary("port", "포트")}}가 존재하는 경우 `':'`과 그 뒤의 {{domxref("URL.port", "port")}}를 포함하는 {{jsxref("String")}} 문자열입니다.
 
 {{AvailableInWorkers}}
 
@@ -18,7 +18,7 @@ url.host = newHost;
 
 ### 값
 
-{{domxref("USVString")}}.
+{{jsxref("String")}}.
 
 ## 예제
 
