@@ -133,7 +133,7 @@ Firefox 40 では、IndexedDB トランザクションは、パフォーマン�
 
 オブジェクトストアに保存された値は、このデータ値によって編成および取り出しされます。オブジェクトストアは **[キージェネレーター](#キージェネレーター)**、_[キーパス](#キーパス)_、明示的に指定した値の、3 種類の生成源のいずれかからキーを得られます。キーは、自身の前にあるものより大きな数値を持つデータ型であることが必要です。オブジェクトストア内の各レコードはオブジェクトストア内で一意のキーを持たなければならず、オブジェクトストア内で複数のレコードが同じキーを持つことはできません。
 
-キーは [文字列](/ja/docs/Web/JavaScript/Reference/Global_Objects/String)、[date](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date)、浮動小数点数数、[`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) または [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) のビュー（[`Uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) など）で表されるバイナリーデータ、[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)のいずれかの型を使用できます。配列のキーの長さは、`0`（空の配列）から無限大まで可能です。また、配列の中に配列を内包することができます。
+キーは [文字列](/ja/docs/Web/JavaScript/Reference/Global_Objects/String)、[date](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date)、浮動小数点数数、[`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) または [`TypedArray`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) のビュー（[`Uint8Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) など）で表されるバイナリーデータ、[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)のいずれかの型を使用できます。配列のキーの長さは、`0`（空の配列）から無限大まで可能です。また、配列の中に配列を内包することができます。
 
 代わりに、[インデックス](#インデックス)を使用してオブジェクトストア内のレコードを検索することもできます。
 
