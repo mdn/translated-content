@@ -302,7 +302,7 @@ faitLe();
 // retourne ["essai", "z", "final"], pas ["final", "essai", "z"] ou ["essai", "z"]
 ```
 
-La même logique s'applique aux autres instructions de contrôle de flux. Ici, la fonction est d'abord prévue pour lever la valeur `"catch"`, mais retourne à la place la valeur `"finally"`.
+La même logique s'applique aux autres instructions de contrôle de flux. Ici, la fonction est d'abord prévue pour lever la valeur `"attrapé"`, mais retourne à la place la valeur `"final"`.
 
 ```js
 function faitLe() {
