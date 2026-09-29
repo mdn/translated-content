@@ -1,11 +1,14 @@
 ---
-title: font-variant-ligatures
+title: "`font-variant-ligatures` CSS 属性"
+short-title: font-variant-ligatures
 slug: Web/CSS/Reference/Properties/font-variant-ligatures
+l10n:
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
-**`font-variant-ligatures`** 属性控制着其所应用元素文本的 {{Glossary("ligature", "ligatures")}} 与 {{Glossary("contextual forms")}} 。会使文字最终的表现形式更加统一。
+**`font-variant-ligatures`** [CSS](/zh-CN/docs/Web/CSS) 属性控制它所作用元素的文本内容使用哪些{{Glossary("ligature", "连字")}}和上下文形式。这样可以使最终文本的形式更加协调。
 
-{{InteractiveExample("CSS Demo: font-variant-ligatures")}}
+{{InteractiveExample("CSS 演示：font-variant-ligatures")}}
 
 ```css interactive-example-choice
 font-variant-ligatures: normal;
@@ -22,7 +25,7 @@ font-variant-ligatures: common-ligatures;
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
-    <p>Difficult waffles</p>
+    <p>难做的华夫饼</p>
   </div>
 </section>
 ```
@@ -44,10 +47,10 @@ section {
 }
 ```
 
-## Syntax
+## 语法
 
 ```css
-/* Keyword values */
+/* 关键字值 */
 font-variant-ligatures: normal;
 font-variant-ligatures: none;
 font-variant-ligatures: common-ligatures; /* <common-lig-values> */
@@ -59,98 +62,103 @@ font-variant-ligatures: no-historical-ligatures; /* <historical-lig-values> */
 font-variant-ligatures: contextual; /* <contextual-alt-values> */
 font-variant-ligatures: no-contextual; /* <contextual-alt-values> */
 
-/* Global values */
+/* 两个关键字值 */
+font-variant-ligatures: no-contextual common-ligatures;
+
+/* 四个关键字值 */
+font-variant-ligatures: common-ligatures no-discretionary-ligatures
+  historical-ligatures contextual;
+
+/* 全局值 */
 font-variant-ligatures: inherit;
 font-variant-ligatures: initial;
+font-variant-ligatures: revert;
+font-variant-ligatures: revert-layer;
 font-variant-ligatures: unset;
 ```
 
-`font-variant-ligatures`取值为下列关键字之一。
+### 值
 
-### Values
+此属性指定为单个关键字，或由下列值组成、以空格分隔的列表：
 
 - `normal`
-  - : 默认值，表示在渲染时会使用常用的连字，连字的效果取决于字体，语言和脚本。
+  - : 此关键字启用正确渲染所需的常规连字和上下文形式。具体启用哪些连字和形式，取决于字体、语言和文字体系。这是默认值。
 - `none`
-  - : 不使用任何连字，包括常规的形式
-- _\<common-lig-values>_
-  - : These values control the most common ligatures, like for `fi`, `ffi`, `th` or similar. They correspond to the OpenType values `liga` and `clig`. Two values are possible:
-    - `common-ligatures` activating these ligatures. Note that the keyword `normal` activates these ligatures.
-    - `no-common-ligatures` deactivating these ligatures.
+  - : 此关键字指定禁用所有连字和上下文形式，常用连字也不例外。
+- _`<common-lig-values>`_
+  - : 这些值控制最常见的连字，例如 `fi`、`ffi`、`th` 或类似组合。它们对应于 OpenType 值 `liga` 和 `clig`。可以取以下两个值：
+    - `common-ligatures` 启用这些连字。注意，关键字 `normal` 会启用这些连字。
+    - `no-common-ligatures` 禁用这些连字。
 
-- _\<discretionary-lig-values>_
-  - : These values control specific ligatures, specific to the font and defined by the type designer. They correspond to the OpenType values `dlig`. Two values are possible:
-    - `discretionary-ligatures` activating these ligatures.
-    - `no-discretionary-ligatures` deactivating the ligatures. Note that the keyword `normal` usually deactivates these ligatures.
+- _`<discretionary-lig-values>`_
+  - : 这些值控制专属于字体、由字体设计师定义的特定连字。它们对应于 OpenType 值 `dlig`。可以取以下两个值：
+    - `discretionary-ligatures` 启用这些连字。
+    - `no-discretionary-ligatures` 禁用这些连字。注意，关键字 `normal` 通常会禁用这些连字。
 
-- _\<historical-lig-values>_
-  - : These values control the ligatures used historically, in old books, like the German tz digraph being displayed as ꜩ. They correspond to the OpenType values `hlig`. Two values are possible:
-    - `historical-ligatures` activating these ligatures.
-    - `no-historical-ligatures` deactivating the ligatures. Note that the keyword `normal` usually deactivates these ligatures.
+- _`<historical-lig-values>`_
+  - : 这些值控制历史上使用的连字，例如旧书中把德语二合字母 tz 显示为 ꜩ。它们对应于 OpenType 值 `hlig`。可以取以下两个值：
+    - `historical-ligatures` 启用这些连字。
+    - `no-historical-ligatures` 禁用这些连字。注意，关键字 `normal` 通常会禁用这些连字。
 
-- _\<contextual-alt-values>_
-  - : These values control whether letters adapt to their context—that is, whether they adapt to the surrounding letters. These values correspond to the OpenType values `calt`. Two values are possible:
-    - `contextual` specifies that the contextual alternates are to be used. Note that the keyword `normal` usually activates these ligatures too.
-    - `no-contextual` prevents their use.
+- _`<contextual-alt-values>`_
+  - : 这些值控制字母是否适应当前所处的上下文，也就是是否根据周围的字母进行调整。这些值对应于 OpenType 值 `calt`。可以取以下两个值：
+    - `contextual` 指定使用上下文替代形式。注意，关键字 `normal` 通常也会启用这些连字。
+    - `no-contextual` 阻止使用这些形式。
 
-## Formal definition
+## 形式定义
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### Setting font ligatures and contextual forms
+### 设置字体连字和上下文形式
 
 #### HTML
 
 ```html
 <link href="//fonts.googleapis.com/css?family=Lora" rel="stylesheet" />
 <p class="normal">
-  normal<br />
+  默认<br />
   if fi ff tf ft jf fj
 </p>
 <p class="none">
-  none<br />
+  无<br />
   if fi ff tf ft jf fj
 </p>
 <p class="common-ligatures">
-  common-ligatures<br />
+  常用连字<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-common-ligatures">
-  no-common-ligatures<br />
+  禁用常用连字<br />
   if fi ff tf ft jf fj
 </p>
 <p class="discretionary-ligatures">
-  discretionary-ligatures<br />
+  任意连字<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-discretionary-ligatures">
-  no-discretionary-ligatures<br />
+  禁用任意连字<br />
   if fi ff tf ft jf fj
 </p>
 <p class="historical-ligatures">
-  historical-ligatures<br />
+  历史连字<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-historical-ligatures">
-  no-historical-ligatures<br />
+  禁用历史连字<br />
   if fi ff tf ft jf fj
 </p>
 <p class="contextual">
-  contextual<br />
+  上下文替代<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-contextual">
-  no-contextual<br />
-  if fi ff tf ft jf fj
-</p>
-<p class="contextual">
-  contextual<br />
+  禁用上下文替代<br />
   if fi ff tf ft jf fj
 </p>
 ```
@@ -159,7 +167,7 @@ font-variant-ligatures: unset;
 
 ```css
 p {
-  font-family: Lora, serif;
+  font-family: "Lora", serif;
 }
 .normal {
   font-variant-ligatures: normal;
@@ -200,20 +208,26 @@ p {
 .no-contextual {
   font-variant-ligatures: no-contextual;
 }
-
-.contextual {
-  font-variant-ligatures: contextual;
-}
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('Setting_font_ligatures_and_contextual_forms', '', '700') }}
+{{ EmbedLiveSample('设置字体连字和上下文形式', '', '700') }}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{cssxref("font-variant")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-emoji")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-numeric")}}
+- {{cssxref("font-variant-position")}}
+- [CSS 字体](/zh-CN/docs/Web/CSS/Guides/Fonts)模块
