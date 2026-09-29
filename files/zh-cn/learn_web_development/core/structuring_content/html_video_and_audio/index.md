@@ -122,7 +122,7 @@ l10n:
 <video controls>
   <source src="rabbit320.mp4" type="video/mp4" />
   <source src="rabbit320.webm" type="video/webm" />
-  <p>你的浏览器不支持此视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>
+  <p>你的浏览器不支持此视频。可点击<a href="rabbit320.mp4">此链接</a>观看。</p>
 </video>
 ```
 
@@ -148,7 +148,7 @@ l10n:
   poster="poster.png">
   <source src="rabbit320.mp4" type="video/mp4" />
   <source src="rabbit320.webm" type="video/webm" />
-  <p>你的浏览器不支持此视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>
+  <p>你的浏览器不支持此视频。可点击<a href="rabbit320.mp4">此链接</a>观看。</p>
 </video>
 ```
 
@@ -298,7 +298,7 @@ WEBVTT
 <audio controls>
   <source src="viper.mp3" type="audio/mp3" />
   <source src="viper.ogg" type="audio/ogg" />
-  <p>你的浏览器不支持 HTML 音频。可点击<a href="viper.mp3">此链接</a>查看。</p>
+  <p>你的浏览器不支持 HTML 音频。可点击<a href="viper.mp3">此链接</a>收听。</p>
 </audio>
 ```
 
