@@ -1,6 +1,7 @@
 ---
 title: キャンバスを作ってその上に描画する
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas
+original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 l10n:
   sourceCommit: 36decb5c06d8c61ea011824b4c4446b04a4cf3a7
 ---

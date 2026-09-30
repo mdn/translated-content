@@ -1,6 +1,7 @@
 ---
 title: VRStageParameters.sizeY
-slug: Web/API/VRStageParameters/sizeY
+slug: Web/API/VRStageParameters/sizeZ
+original_slug: Web/API/VRStageParameters/sizeY
 l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
