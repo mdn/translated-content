@@ -92,7 +92,7 @@ Aquí tenemos lo siguiente:
 - `<html></html>`: el elemento {{htmlelement("html")}} envuelve todo el contenido de la página y a veces se le llama **elemento raíz**. También incluye el [atributo](/es/docs/Glossary/Attribute) `lang`, que establece el idioma principal del documento.
 - `<head></head>`: el elemento {{htmlelement("head")}} actúa como contenedor de todo lo que quieres incluir en la página HTML que _no_ es el contenido que muestras a quienes visitan tu página. Esto incluye cosas como las {{Glossary("keyword", "palabras clave")}} y la descripción de la página que quieres que aparezcan en los resultados de búsqueda, el {{glossary("CSS")}} para dar estilo al contenido, las declaraciones del conjunto de caracteres, etc.
 - `<meta charset="utf-8">`: este elemento establece que el documento debe usar el conjunto de caracteres [UTF-8](/es/docs/Glossary/UTF-8), que incluye la mayoría de los caracteres de la gran mayoría de los idiomas escritos. Básicamente, así puede manejar cualquier contenido de texto que le pongas. No hay ningún motivo para no establecerlo, y puede ayudar a evitar algunos problemas más adelante.
-- `<meta name="viewport" content="width=device-width">`: este [elemento viewport](/es/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts#mobile_viewports) garantiza que la página se muestre con el ancho del viewport del navegador, lo que evita que los navegadores móviles muestren las páginas más anchas que el viewport y luego las reduzcan.
+- `<meta name="viewport" content="width=device-width">`: este [elemento viewport](/es/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts) garantiza que la página se muestre con el ancho del viewport del navegador, lo que evita que los navegadores móviles muestren las páginas más anchas que el viewport y luego las reduzcan.
 - `<title></title>`: el elemento {{htmlelement("title")}} establece el título de tu página, que es el que aparece en la pestaña del navegador donde se carga la página. También se usa para describir la página cuando la guardas en marcadores o favoritos.
 - `<body></body>`: el elemento {{htmlelement("body")}} contiene _todo_ el contenido que quieres mostrar a los usuarios cuando visitan tu página, ya sea texto, imágenes, videos, juegos, pistas de audio reproducibles o cualquier otra cosa. Por ahora solo contiene un elemento `<img>`, pero más adelante agregaremos más contenido.
 
@@ -221,7 +221,7 @@ Los enlaces son muy importantes: ¡son lo que hace que la web sea una red! Para 
 4. Rellena el valor de este atributo con la dirección web a la que quieres que apunte el enlace:
 
    ```html
-   <a href="https://www.mozilla.org/en-US/about/manifesto/">
+   <a href="https://www.mozilla.org/es-ES/about/manifesto/">
      Manifiesto de Mozilla
    </a>
    ```
