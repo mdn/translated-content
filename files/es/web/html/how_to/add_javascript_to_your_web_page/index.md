@@ -54,7 +54,7 @@ También puedes añadir código JavaScript entre las etiquetas `<script>`, en lu
 
 ```html
 <script>
-  console.log("Some code");
+  console.log("Algo de código");
 </script>
 ```
 
