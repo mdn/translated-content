@@ -9,7 +9,7 @@ l10n:
 
 La **API de Sistema de Archivos**, con extensiones proporcionadas a través de la [**File System Access API**](https://wicg.github.io/file-system-access/) para acceder a los archivos del sistema de archivos del dispositivo, permite funciones de lectura, escritura y gestión de archivos.
 
-Consulta [Relación con otras API de archivos](/es/docs/Web/API/File_API#relationship_to_other_file-related_apis) para ver una comparación entre esta API, la [File and Directory Entries API](/es/docs/Web/API/File_and_Directory_Entries_API) y la [File API](/es/docs/Web/API/File_API).
+Consulta [Relación con otras API de archivos](/es/docs/Web/API/File_API) para ver una comparación entre esta API, la [File and Directory Entries API](/es/docs/Web/API/File_and_Directory_Entries_API) y la [File API](/es/docs/Web/API/File_API).
 
 ## Conceptos y uso
 
