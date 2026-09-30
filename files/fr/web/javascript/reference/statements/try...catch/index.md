@@ -1,132 +1,113 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
+l10n:
+  sourceCommit: 203acfabc8a27b2a64757df33586b3c29abb730f
 ---
 
-L'instruction **`try...catch`** regroupe des instructions à exécuter et définit une réponse si l'une de ces instructions provoque une exception.
+L'instruction **`try...catch`** est composée d'une clause `try` et soit d'une clause `catch`, soit d'une clause `finally`, soit des deux. Le code dans la clause `try` est exécuté en premier, et s'il génère une exception, le code dans la clause `catch` est exécuté. Le code dans la clause `finally` est toujours exécuté avant que le flux de contrôle ne quitte l'ensemble de la construction.
 
-{{InteractiveExample("JavaScript Demo: Statement - Try...Catch")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: instruction try...catch")}}
 
 ```js interactive-example
 try {
   nonExistentFunction();
 } catch (error) {
   console.error(error);
-  // Expected output: ReferenceError: nonExistentFunction is not defined
-  // (Note: the exact output may be browser-dependent)
+  // Résultat attendu : ReferenceError: nonExistentFunction is not defined
+  // (Note : le résultat exact peut dépendre du navigateur)
 }
 ```
 
 ## Syntaxe
 
-```js
+```js-nolint
 try {
-  instructions_try
-}
-catch (exception_var_1 if condition_1) { // non-standard
-  instructions_catch_1
-}
-…
-catch (exception_var_2) {
-  instructions_catch_2
-}
-finally {
-  instructions_finally
+  tryStatements
+} catch (exceptionVar) {
+  catchStatements
+} finally {
+  finallyStatements
 }
 ```
 
-- `instructions_try`
-  - : Les instructions qu'on souhaite exécuter.
-- `instructions_catch_1`, `instructions_catch_2`
-  - : Les instructions à exécuter si une exception est levée dans le bloc `try`.
-- `exception_var_1`, `exception_var_2`
-  - : Un identifiant qui permet de récupérer la valeur de l'exception associée à la clause `catch`.
-- `condition_1`
-  - : Une expression conditionnelle.
-- `instructions_finally`
-  - : Les instructions à exécuter une fois que l'instruction `try` est terminée. Ces instructions s'exécuteront, qu'il y ait eu une exception ou non.
+- `tryStatements`
+  - : L'instruction à exécuter.
+- `catchStatements`
+  - : L'instruction à exécuter si une exception est levée dans la clause `try`.
+- `exceptionVar` {{Optional_Inline}}
+  - : Un [identifiant ou un modèle](#lier_la_clause_catch) optionnel pour contenir l'exception capturée pour la clause `catch` associé. Si la clause `catch` n'utilise pas la valeur de l'exception, vous pouvez omettre `exceptionVar` et ses parenthèses environnantes.
+- `finallyStatements`
+  - : Les instructions qui sont exécutées avant que le flux de contrôle ne quitte la construction `try...catch...finally`. Ces instructions s'exécutent indépendamment du fait qu'une exception ait été levée ou interceptée.
 
 ## Description
 
-L'instruction `try` est composée d'un bloc `try` contenant une ou plusieurs instructions, d'au moins une clause `catch` ou d'une clause `finally` ou des deux. On peut donc avoir les trois formes suivantes pour cette instruction :
+L'instruction `try` commence toujours par une clause `try`. Ensuite, une clause `catch` ou une clause `finally` doit être présente. Il est également possible d'avoir à la fois une clause `catch` et une clause `finally`. Cela nous donne trois formes pour l'instruction `try`&nbsp;:
 
-1. `try…catch`
-2. `try…finally`
-3. `try…catch…finally`
+- `try...catch`
+- `try...finally`
+- `try...catch...finally`
 
-Une clause `catch` contient les instructions à exécuter si une exception est levée par une instruction du bloc `try`. On souhaite généralement que le bloc `try` se déroule sans problème. Si toutefois une erreur se produit, on veut pouvoir contrôler ce qui se passe et on transmet donc le contrôle au bloc `catch`. Si une instruction contenue dans le bloc `try` (ou une fonction appelée depuis le bloc `try`) renvoie une exception, le contrôle sera immédiatement passé à la clause `catch`. Si aucune exception n'est levée, la clause `catch` ne sera pas utilisée.
+Contrairement à d'autres constructions telles que [`if`](/fr/docs/Web/JavaScript/Reference/Statements/if...else) ou [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for), les clauses `try`, `catch` et `finally` doivent être des _blocs_, et non des instructions uniques.
 
-La clause `finally` s'exécute après le bloc `try` et après le bloc `catch` (si celui-ci a été déclenché) mais avant les instructions qui suivent. Les instructions de cette clause sont toujours exécutées, qu'il y ait eu ou non une exception de déclenchée et/ou d'interceptée.
+```js-nolint example-bad
+try faireQuelqueChose(); // SyntaxError
+catch (e) console.log(e);
+```
 
-Il est possible d'imbriquer plusieurs instructions `try`. Si un `try` imbriqué ne possède pas de clause `catch`, la clause `catch` du `try` du niveau supérieur sera utilisée (et ainsi de suite).
+Une clause `catch` contient des instructions qui définissent ce qu'il faut faire si une exception est levée dans la clause `try`. Si une instruction de la clause `try` (ou d'une fonction appelée depuis la clause `try`) lève une exception, le contrôle est immédiatement transféré à la clause `catch`. Si aucune exception n'est levée dans la clause `try`, la clause `catch` est ignorée.
 
-Pour plus d'informations sur les exceptions et les erreurs en JavaScript, voir le chapitre du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#les_instructions_utilisées_pour_les_exceptions) correspondant.
+La clause `finally` s'exécute toujours avant que le flux de contrôle ne quitte la construction `try...catch...finally`. Elle s'exécute toujours, que une exception ait été levée ou interceptée.
 
-### Clause `catch` inconditionnelle
+Vous pouvez imbriquer une ou plusieurs instructions `try`. Si une instruction `try` interne n'a pas de clause `catch`, la clause `catch` de l'instruction `try` englobante est utilisé à la place.
 
-Lorsqu'une seule clause `catch` inconditionnelle est utilisée, le bloc `catch` est utilisée pour n'importe quelle exception qui est levée. Ainsi, dans le fragment de code qui suit, pour toute exception produite, le contrôle de l'exécution passera à la clause `catch`.
+Vous pouvez également utiliser l'instruction `try` pour gérer les exceptions JavaScript. Consultez le [Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#les_instructions_pour_gérer_les_exceptions) pour plus d'informations sur les exceptions JavaScript.
+
+### Lier la clause `catch`
+
+Lorsqu'une exception est levée dans la clause `try`, `exceptionVar` (c'est-à-dire le `e` dans `catch (e)`) contient la valeur de l'exception. Vous pouvez utiliser cette {{Glossary("binding", "liaison")}} pour obtenir des informations sur l'exception qui a été levée. Cette {{Glossary("binding", "liaison")}} n'est disponible que dans la {{Glossary("Scope", "portée")}} de la clause `catch`.
+
+Il n'est pas nécessaire que ce soit un seul identifiant. Vous pouvez utiliser un [modèle de déstructuration](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring) pour affecter plusieurs identifiants à la fois.
 
 ```js
 try {
-  throw "monException"; // génère une exception
-} catch (e) {
-  // les instructions utilisées pour gérer les
-  // exceptions
-  logErreurs(e); // on transfère l'objet de l'exception à une méthode
-  // gestionnaire
+  throw new TypeError("oups");
+} catch ({ name, message }) {
+  console.log(name); // "TypeError"
+  console.log(message); // "oups"
 }
 ```
 
-La clause `catch` définit un identifiant (dans l'exemple précédent, c'est `e`) qui contient la valeur définie par l'instruction `throw`. Ce bloc `catch` est en quelque sorte unique en JavaScript car l'identifiant est créé lors de l'entrée dans le bloc `catch`, la valeur est alors ajoutée à la portée courant et la durée de vie de l'identifiant est limitée au bloc `catch`. Une fois que le bloc `catch` a été exécuté, l'identifiant n'est plus disponible.
+Les liaisons créées par la clause `catch` vivent dans la même portée que la clause `catch`, donc toutes les variables déclarées dans la clause `catch` ne peuvent pas avoir le même nom que les liaisons créées par la clause `catch`. (Il y a [une exception à cette règle](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#instructions), mais c'est une syntaxe obsolète.)
 
-### Clauses `catch` conditionnelles
-
-{{non-standard_header}}
-
-Il est aussi possible d'utiliser une ou plusieurs clauses `catch` conditionnelles afin de gérer des exceptions spécifiques. Dans ce cas, selon l'exception produite, la clause `catch` appropriée sera utilisée. Dans l'exemple qui suit, le code contenu dans le bloc `try` peut produire trois exceptions : {{jsxref("TypeError")}}, {{jsxref("RangeError")}}, et {{jsxref("EvalError")}}. Lorsqu'une exception se produit, le contrôle de l'exécution est passé à la clause `catch` correspondante. SI l'exception qui est déclenchée ne correspond à aucune des conditions, le contrôle passera à la clause `catch` non-conditionnelle si elle est trouvée..
-
-Si on utilise une clause `catch` inconditionnelle avec une ou plusieurs clauses `catch` conditionnelles, la clause inconditionnelle doit être spécifiée en dernière. Si ce n'est pas le cas, la clause `catch` inconditionnelle interceptera tous les types d'exceptions avant les autres clauses.
-
-```js
+```js-nolint example-bad
 try {
-    maRoutine(); // peut déclencher trois types d'exceptions
-} catch (e if e instanceof TypeError) {
-    // les instructions pour gérer TypeError
-} catch (e if e instanceof RangeError) {
-    // les instructions pour gérer RangeError
-} catch (e if e instanceof EvalError) {
-    // les instructions pour gérer EvalError
-} catch (e) {
-    // les instructions pour gérer les autres exceptions
+  throw new TypeError("oups");
+} catch ({ name, message }) {
+  var name; // SyntaxError: Identifier 'name' has already been declared
+  let message; // SyntaxError: Identifier 'message' has already been declared
 }
 ```
 
-Dans le fragment de code qui suit, on aura le même fonctionnement mais en utilisant uniquement des fonctionnalités standard (selon ECMAScript). Ce code est plus long mais fonctionne pour tous les environnements conformes à ECMAScript :
+La liaison de l'exception est modifiable. Par exemple, vous pouvez vouloir normaliser la valeur de l'exception pour vous assurer qu'il s'agit d'un objet {{JSxRef("Error")}}.
 
 ```js
 try {
-  maRoutine(); // may throw three types of exceptions
+  throw "Oups ; ce n'est pas un objet Error";
 } catch (e) {
-  if (e instanceof TypeError) {
-    // les instructions pour gérer TypeError
-  } else if (e instanceof RangeError) {
-    // les instructions pour gérer RangeError
-  } else if (e instanceof EvalError) {
-    // les instructions pour gérer EvalError
-  } else {
-    // les instructions pour gérer les autres exceptions
+  if (!(e instanceof Error)) {
+    e = new Error(e);
   }
+  console.error(e.message);
 }
 ```
 
-### L'identifiant de l'exception
-
-Lorsqu'une exception est levée dans le bloc `try`, `exception_var` (par exemple le `e` dans « `catch (e)` ») contient la valeur définie par l'instruction {{jsxref("Statements/throw","throw")}}. Cet identifiant peut être utilisé pour accéder aux propriétés de l'objet et ainsi obtenir des informations sur l'exception qui a eu lieu. Cet identifiant est local à la clause `catch`, il est créé lorsqu'on rentre dans la clause `catch` et n'est plus disponible une fois que la clause a fini son exécution.
+Si vous n'avez pas besoin de la valeur de l'exception, vous pouvez l'omettre ainsi que les parenthèses englobantes.
 
 ```js
-function isValidJSON(txt) {
+function estDuJSONValide(texte) {
   try {
-    JSON.parse(txt);
+    JSON.parse(texte);
     return true;
   } catch {
     return false;
@@ -136,113 +117,207 @@ function isValidJSON(txt) {
 
 ### La clause `finally`
 
-La clause `finally` contient les instructions à exécuter après que les instructions du bloc `try` et éventuellement celles de la clause `catch` aient été exécutées mais avant que les instructions suivant l'instruction `try` soient exécutées. La clause `finally` est exécutée dans tous les cas (si on a eu une exception ou non). Si une exception est levée et qu'il n'y a pas de clause `catch`, les instructions de la clause `finally` sont tout de même exécutées.
+La clause `finally` contient des instructions à exécuter après l'exécution des clauses `try` et `catch`, mais avant les instructions suivant la clause `try...catch...finally`. Le flux de contrôle entre toujours dans la clause `finally`, qui peut se dérouler de l'une des manières suivantes&nbsp;:
 
-Cela peut paraître étrange qu'un bloc de code qui s'exécute même lorsqu'il y a une exception… Il faut comprendre que le code qui suit le bloc try...catch ne sera **pas** exécuté. Aussi, le bloc `finally` permet de contenir toutes les instructions de clôture/nettoyage nécessaire. On évite donc de dupliquer ce code qui doit toujours être utilisé.
+- Immédiatement après que le flux de contrôle quitte la clause `try` dans une construction `try...finally` (soit après la dernière instruction ou une instruction `throw`, `return`, `break`, ou `continue`)&nbsp;;
+- Immédiatement après que le flux de contrôle quitte la clause `catch` dans une construction `try...catch...finally`&nbsp;;
+- Immédiatement après que le flux de contrôle quitte la clause `try` dans une construction `try...catch...finally`, sauf s'il quitte avec une instruction `throw` (auquel cas le flux de contrôle entre dans la clause `catch` en premier).
 
-La clause `finally` peut être utilisée afin d'exécuter les actions nécessaires pour que le script « échoue correctement » en cas d'erreur. On peut par exemple tirer parti de `finally` pour fermer un flux, libérer une ressource, etc. Dans l'exemple suivant, exécuté côté serveur, le script accède à un fichier. Si une exception se produit lorsque le fichier est ouvert, la clause `finally` permet de fermer le fichier avant que le script échoue. Le code contenu dans le bloc `finally` sera exécuté même si on a une instruction `return` dans la section `try` ou dans la section `catch`.
+Si la clause `finally` est exécutée après une instruction de contrôle de flux (`return`, `throw`, `break`, `continue`) dans la clause `try` ou `catch`, l'effet de cette instruction est différé jusqu'après la dernière instruction exécutée dans la clause `finally`. Par exemple, si une exception est levée depuis la clause `try`, même lorsqu'il n'y a pas de clause `catch` pour gérer l'exception, la clause `finally` s'exécute toujours, et l'exception est levée immédiatement après l'exécution de la clause `finally`.
+
+Cependant, il existe une exception à cette règle&nbsp;: si la dernière instruction exécutée dans la clause `finally` est elle-même une instruction de contrôle de flux, cette instruction remplace l'effet de la précédente (pas de différé)&nbsp;; voir [retourner depuis une clause `finally`](#retourner_depuis_une_clause_finally) pour des exemples. Il est généralement déconseillé d'utiliser des instructions de contrôle de flux (`return`, `throw`, `break`, `continue`) dans la clause `finally`, car elles peuvent remplacer l'effet des instructions de contrôle de flux exécutées précédemment, ce qui est rarement souhaité. La plupart du temps, la clause `finally` doit être réservée au code de nettoyage qui ne modifie pas la logique principale.
+
+## Exemples
+
+### Clause `catch` inconditionnelle
+
+Lorsqu'une clause `catch` est utilisée, la clause `catch` est exécutée lorsqu'une exception est levée depuis la clause `try`. Par exemple, lorsque l'exception se produit dans le code suivant, le contrôle est transféré à la clause `catch`.
+
+```js
+try {
+  throw new Error("Mon exception"); // génère une exception
+} catch (e) {
+  // les instructions pour gérer toutes les exceptions
+  journaliserMesErreurs(e); // passe l'objet exception au gestionnaire d'erreurs
+}
+```
+
+La clause `catch` définit un identifiant (`e` dans l'exemple ci-dessus) qui contient la valeur de l'exception&nbsp;; cette valeur n'est disponible que dans la {{Glossary("Scope", "portée")}} de la clause `catch`.
+
+### Clauses `catch` conditionnelles
+
+Vous pouvez créer des «&nbsp;clauses `catch` conditionnelles&nbsp;» en combinant des clauses `try...catch` avec des structures `if...else if...else`, comme ceci&nbsp;:
+
+```js
+try {
+  maRoutine(); // peut lever trois types d'exceptions
+} catch (e) {
+  if (e instanceof TypeError) {
+    // les instructions pour gérer les exceptions de type TypeError
+  } else if (e instanceof RangeError) {
+    // les instructions pour gérer les exceptions de type RangeError
+  } else if (e instanceof EvalError) {
+    // les instructions pour gérer les exceptions de type EvalError
+  } else {
+    // les instructions pour gérer toutes les autres exceptions non définies
+    journaliserMesErreurs(e); // passe l'objet exception au gestionnaire d'erreurs
+  }
+}
+```
+
+Un cas d'utilisation courant pour cela est de ne capturer (et de faire taire) qu'un petit sous-ensemble d'erreurs attendues, puis de relancer l'erreur dans les autres cas&nbsp;:
+
+```js
+try {
+  maRoutine();
+} catch (e) {
+  if (e instanceof RangeError) {
+    // les instructions pour gérer cette erreur attendue très courante
+  } else {
+    throw e; // relance l'erreur inchangée
+  }
+}
+```
+
+Cela peut imiter la syntaxe d'autres langages, comme Java&nbsp;:
+
+```java
+try {
+  maRoutine();
+} catch (RangeError e) {
+  // les instructions pour gérer cette erreur attendue très courante
+}
+// Les autres erreurs sont implicitement relancées
+```
+
+### Clauses `try` imbriquées
+
+Tout d'abord, voyons ce qui se passe avec ceci&nbsp;:
+
+```js
+try {
+  try {
+    throw new Error("oups");
+  } finally {
+    console.log("final");
+  }
+} catch (ex) {
+  console.error("externe", ex.message);
+}
+
+// Journaux :
+// "final"
+// "externe" "oups"
+```
+
+Maintenant, si nous avons déjà intercepté l'exception dans la clause `try` interne en ajoutant une clause `catch`&nbsp;:
+
+```js
+try {
+  try {
+    throw new Error("oups");
+  } catch (ex) {
+    console.error("interne", ex.message);
+  } finally {
+    console.log("final");
+  }
+} catch (ex) {
+  console.error("externe", ex.message);
+}
+
+// Journaux :
+// "interne" "oups"
+// "final"
+```
+
+Et maintenant, relançons l'erreur.
+
+```js
+try {
+  try {
+    throw new Error("oups");
+  } catch (ex) {
+    console.error("interne", ex.message);
+    throw ex;
+  } finally {
+    console.log("final");
+  }
+} catch (ex) {
+  console.error("externe", ex.message);
+}
+
+// Journaux :
+// "interne" "oups"
+// "final"
+// "externe" "oups"
+```
+
+Une exception donnée n'est interceptée qu'une seule fois par le bloc `catch` le plus proche, à moins qu'elle ne soit relancée. Bien entendu, toute nouvelle exception levée dans le bloc «&nbsp;interne&nbsp;» (car le code du bloc `catch` peut effectuer une opération qui en lance une) est interceptée par le bloc «&nbsp;externe&nbsp;».
+
+### Libérer des ressources avec `finally`
+
+L'exemple suivant illustre un cas d'utilisation de la clause `finally`. Le code ouvre un fichier, puis exécute des instructions qui utilisent ce fichier&nbsp;; la clause `finally` garantit que le fichier est toujours fermé après son utilisation, même si une exception a été levée.
 
 ```js
 ouvrirMonFichier();
 try {
-  // on utilise une ressource
-  écrireDansMonFichier(mesDonnées);
+  // mobilise une ressource
+  ecrireMonFichier(laDonnee);
 } finally {
-  fermerMonFichier(); // on ferme toujours la ressource
+  fermerMonFichier(); // toujours fermer la ressource
+  // toute exception non interceptée est différée ici
 }
 ```
 
-## Exemples
-
-### Blocs `try` imbriqués
-
-Tout d'abord, on utilise ce fragment de code, qui produit le résultat suivant :
+De la même manière, l'effet de toute instruction `return` dans la clause `try` est différé à la fin de la clause `finally`, bien que l'expression de la valeur de retour soit évaluée avant d'entrer dans la clause `finally`.
 
 ```js
-try {
+function ecritureSecuriseeDeMonFichier() {
+  ouvrirMonFichier();
   try {
-    throw new Error("oups");
+    return ecrireMonFichier(laDonnee); // l'appel de fonction est évalué
   } finally {
-    console.log("finally");
+    fermerMonFichier(); // toujours fermer la ressource
+    // le retour est différé ici
   }
-} catch (ex) {
-  console.error("externe", ex.message);
 }
-
-// Produira dans la console :
-// "finally"
-// "externe" "oups"
 ```
 
-Et maintenant, si on a déjà intercepté l'exception avec une clause `catch` dans le bloc imbriqué :
+### Retourner depuis une clause `finally`
+
+L'exemple suivant illustre le comportement des instructions de contrôle de flux dans la clause `finally`. Lorsque le flux de contrôle sort de la clause `try` par la première instruction `return`, l'expression de la valeur de retour (`order.sort()`) est évaluée avant d'entrer dans la clause `finally`, et la fonction est prévue pour retourner cette valeur après l'exécution de la clause `finally`. Cependant, l'instruction `return` dans la clause `finally` remplace l'effet de l'instruction `return` précédente, y compris sa valeur de retour.
 
 ```js
-try {
+function faitLe() {
+  const ordre = ["z"];
   try {
-    throw new Error("oups");
-  } catch (ex) {
-    console.error("interne", ex.message);
+    ordre.push("essai");
+    return ordre.sort(); // "z" est maintenant après "essai"
   } finally {
-    console.log("finally");
+    ordre.push("final");
+    return ordre;
   }
-} catch (ex) {
-  console.error("externe", ex.message);
 }
-
-// Produira dans la console:
-// "interne" "oups"
-// "finally"
+faitLe();
+// retourne ["essai", "z", "final"], pas ["final", "essai", "z"] ou ["essai", "z"]
 ```
 
-Ensuite, si on propage l'erreur à nouveau :
+La même logique s'applique aux autres instructions de contrôle de flux. Ici, la fonction est d'abord prévue pour lever la valeur `"attrapé"`, mais retourne à la place la valeur `"final"`.
 
 ```js
-try {
+function faitLe() {
   try {
-    throw new Error("oups");
-  } catch (ex) {
-    console.error("interne", ex.message);
-    throw ex;
+    throw "essai"; // fait entrer le flux de contrôle dans la clause `catch`
+  } catch {
+    throw "attrapé"; // fait entrer le flux de contrôle dans la clause `finally`
   } finally {
-    console.log("finally");
+    return "final"; // retourne "final" au lieu de lever "attrapé"
   }
-} catch (ex) {
-  console.error("externe", ex.message);
 }
-
-// Produira dans la console :
-// "interne" "oups"
-// "finally"
-// "externe" "oups"
+faitLe(); // retourne "final"
 ```
 
-Toute exception ne sera interceptée qu'une seule fois par le bloc `catch` le plus « proche » à moins qu'elle ne soit retransmise à nouveau. Bien entendu, toute exception qui aura été levée par le bloc interne (il se peut que les instructions d'une clause catch provoquent une erreur) sera interceptée par le bloc externe.
-
-### Valeur de retour et bloc `finally`
-
-Lorsque le bloc `finally` renvoie une valeur, c'est cette valeur qui devient la valeur de retour pour l'ensemble du bloc `try-catch-finally` et ce, peu importe, s'il y a des instructions {{jsxref("Statements/return","return")}} dans les blocs `try` et `catch`. Cela inclue également les exceptions levées dans le bloc `catch` :
-
-```js
-try {
-  try {
-    throw new Error("oups");
-  } catch (ex) {
-    console.error("interne", ex.message);
-    throw ex;
-  } finally {
-    console.log("finally");
-    return;
-  }
-} catch (ex) {
-  console.error("externe", ex.message);
-}
-
-// Produira dans la console :
-// "interne" "oups"
-// "finally"
-```
-
-Le "oups" externe n'est pas renvoyé car l'instruction `return` est utilisée dans la clause `finally` du bloc interne. Cela aurait également été le cas avec n'importe quelle valeur renvoyée par le bloc `catch`.
+Encore une fois, les instructions de contrôle de flux sont déconseillées dans la clause `finally`, car cet effet est probablement non souhaité.
 
 ## Spécifications
 
@@ -254,5 +329,5 @@ Le "oups" externe n'est pas renvoyé car l'instruction `return` est utilisée da
 
 ## Voir aussi
 
-- {{jsxref("Error")}}
-- {{jsxref("Statements/throw", "throw")}}
+- L'objet {{JSxRef("Error")}}
+- L'instruction {{JSxRef("Statements/throw", "throw")}}

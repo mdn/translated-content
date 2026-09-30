@@ -3,24 +3,24 @@ title: En-tête Accept-Encoding
 short-title: Accept-Encoding
 slug: Web/HTTP/Reference/Headers/Accept-Encoding
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} et {{Glossary("response header", "réponse")}} HTTP **`Accept-Encoding`** indique le codage du contenu (généralement un algorithme de compression) que l'émetteur peut comprendre.
-Dans les requêtes, le serveur utilise la [négociation de contenu](/fr/docs/Web/HTTP/Guides/Content_negotiation) pour sélectionner l'un des encodages proposés par le client et informe ce dernier de son choix via l'en-tête de réponse {{HTTPHeader("Content-Encoding")}}.
+{{Glossary("request header", "L'en-tête de requête")}} et {{Glossary("response header", "réponse")}} HTTP **`Accept-Encoding`** indique le codage du contenu (généralement un algorithme de compression) que l'émetteur peut comprendre.
+Dans les requêtes, le serveur utilise la [négociation de contenu](/fr/docs/Web/HTTP/Guides/Content_negotiation) pour sélectionner l'un des encodages proposés par le client et informe ce dernier de son choix avec l'en-tête de réponse {{HTTPHeader("Content-Encoding")}}.
 Dans les réponses, il fournit des informations sur les codages de contenu que le serveur peut comprendre dans les messages vers la ressource demandée, afin que l'encodage puisse être utilisé dans les requêtes ultérieures vers cette ressource.
 Par exemple, `Accept-Encoding` est inclus dans une réponse {{HTTPStatus("415", "415 Unsupported Media Type")}} si une requête vers une ressource (par exemple, {{HTTPMethod("PUT")}}) utilise un encodage non pris en charge.
 
 Même si le client et le serveur prennent en charge les mêmes algorithmes de compression, le serveur peut choisir de ne pas compresser le corps d'une réponse si la valeur `identity` est également acceptable.
 Cela se produit dans deux cas courants&nbsp;:
 
-1. Les données sont déjà compressées, donc une seconde compression ne réduira pas la taille des données transmises, et peut même parfois l'augmenter. C'est le cas des formats d'images déjà compressés (comme JPEG).
+1. Les données sont déjà compressées, donc une seconde compression ne réduit pas la taille des données transmises, et peut même parfois l'augmenter. C'est le cas des formats d'images déjà compressés (comme JPEG).
 2. Le serveur est surchargé et ne peut pas allouer de ressources de calcul pour effectuer la compression. Par exemple, Microsoft recommande de ne pas compresser si un serveur utilise plus de 80% de sa puissance de calcul.
 
 Tant que les directives `identity;q=0` ou `*;q=0` n'interdisent pas explicitement la valeur `identity` (c'est-à-dire aucune compression), le serveur ne doit jamais retourner une erreur {{HTTPStatus("406", "406 Not Acceptable")}}.
 
 > [!NOTE]
-> L'IANA maintient [une liste officielle des codages de contenu <sup>(angl.)</sup>](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding).
+> L'IANA maintient [une liste officielle des codages de contenu <sup>(angl.)</sup>](https://www.iana.org/assignments/http-parameters#content-coding).
 > Les encodages `bzip` et `bzip2` ne sont pas standards, mais peuvent être utilisés dans certains cas, notamment pour la compatibilité avec des systèmes anciens.
 
 <table class="properties">
