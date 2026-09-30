@@ -91,4 +91,4 @@ window.addEventListener("unhandledrejection", function (event) {
 
 - [Promise 拒绝事件](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#promise_拒绝事件)
 - {{domxref("Window/rejectionhandled_event", "rejectionhandled")}} 事件
-- {{domxref("Promise")}}
+- {{jsxref("Promise")}}

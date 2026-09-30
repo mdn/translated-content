@@ -20,7 +20,7 @@ encode(string)
 
 ### 返回值
 
-一个 {{domxref("Uint8Array")}} 对象。
+一个 {{jsxref("Uint8Array")}} 对象。
 
 ## 示例
 

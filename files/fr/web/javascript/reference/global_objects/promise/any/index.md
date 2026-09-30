@@ -3,7 +3,7 @@ title: "Promise : méthode statique any()"
 short-title: any()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/any
 l10n:
-  sourceCommit: cbf7f4b55e2c0bc0c096773435b159edcaa8c9e2
+  sourceCommit: 9bda33365e40b6c609fa5190a0af9b5dc6438cf0
 ---
 
 La méthode statique **`Promise.any()`** prend comme argument un itérable contenant des promesses et retourne une unique promesse ({{JSxRef("Promise")}}). La promesse retournée est complétée (<i lang="en">fulfilled</i> en anglais) dès qu'une des promesses de l'itérable est complétée, avec la valeur de cette première promesse complétée. Elle est rompue (<i lang="en">rejected</i> en anglais) lorsque toutes les promesses de l'itérable sont rompues (y compris lorsque l'itérable est vide), avec un objet {{JSxRef("AggregateError")}} contenant un tableau des raisons de rejet.
@@ -50,6 +50,8 @@ Contrairement à {{JSxRef("Promise.all()")}}, qui retourne un _tableau_ de valeu
 De plus, contrairement à {{JSxRef("Promise.race()")}}, qui retourne la première valeur _complétée_ (qu'il s'agisse d'un accomplissement ou d'un rejet), cette méthode retourne la première valeur _accomplie_. Elle ignore toutes les promesses rompues jusqu'à la première promesse qui est complétée.
 
 À l'instar d'autres combinateurs de promesses, `Promise.any()` marque immédiatement toutes les promesses comme «&nbsp;gérées&nbsp;» lorsqu'elle est appelée (en appelant leurs méthodes `.then()`). Les rejets survenant après la première exécution sont ignorés et ne déclenchent aucun évènement `unhandledrejection`.
+
+Compléter la promesse retournée ne supprime pas les autres opérations ni ne désabonne les gestionnaires attachés à leurs promesses. Passer de manière répétée une promesse en attente de longue durée à `Promise.any()` peut accumuler des gestionnaires sur cette promesse même lorsqu'une autre entrée est complétée chaque fois.
 
 ## Exemples
 

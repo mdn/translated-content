@@ -9,7 +9,7 @@ slug: Web/HTTP/Reference/Status/429
 
 ## 状态
 
-```plain
+```http
 429 Too Many Requests
 ```
 

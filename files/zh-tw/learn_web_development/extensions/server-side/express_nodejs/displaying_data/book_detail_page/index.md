@@ -96,12 +96,12 @@ block content
 > [!NOTE]
 > 與該書相關的種類列表，在模板中的實作，如以下代碼。除了最後一本書之外，在與本書相關的每個種類之後，都會添加一個逗號。
 >
-> ```plain
->   p #[strong Genre:]
+> ```pug
+>   p #[strong Genre: ]
 >     each val, index in book.genre
 >       a(href=val.url) #{val.name}
 >       if index < book.genre.length - 1
->         |,
+>         |,&nbsp;
 > ```
 
 ## 它看起來像是?

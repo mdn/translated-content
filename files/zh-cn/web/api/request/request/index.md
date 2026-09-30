@@ -26,7 +26,7 @@ new Request(input, options)
 - _init_ {{optional_inline}}
   - : 一个可选对象，包含希望被包括到请求中的各种自定义选项。可用的选项如下：
     - `method`: 请求的方法，例如：`GET`, `POST`。
-    - `headers`: 任何你想加到请求中的头，其被放在{{domxref("Headers")}}对象或内部值为{{domxref("ByteString")}} 的对象字面量中。
+    - `headers`: 任何你想加到请求中的头，其被放在{{domxref("Headers")}}对象或内部值为{{jsxref("String")}} 的对象字面量中。
     - `body`: 任何你想加到请求中的 body，可以是{{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{jsxref("String")}}，或{{domxref("ReadableStream")}}对象。注意`GET` 和 `HEAD` 请求没有 body。
     - `mode`: 请求的模式，比如 `cors`, `no-cors`, `same-origin`, 或 `navigate`。默认值为 `cors`。
     - `credentials`: 想要在请求中使用的 credentials：: `omit`, `same-origin`, 或 `include`。默认值应该为`omit`。但在 Chrome 中，Chrome 47 之前的版本默认值为 `same-origin` ，自 Chrome 47 起，默认值为 `include`。

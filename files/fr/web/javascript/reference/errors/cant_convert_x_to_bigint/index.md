@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
 ---
 
-{{jsSidebar("Errors")}}
-
 L'exception JavaScript <i lang="en">"x can't be converted to BigInt"</i> se produit lorsqu'on essaie de convertir [un symbole](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol), [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null), ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) en une valeur [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt), ou si une opération qui s'applique à un paramètre `BigInt` reçoit un nombre.
 
 ## Message

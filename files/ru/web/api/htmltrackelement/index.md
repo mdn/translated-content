@@ -22,7 +22,7 @@ _Наследует свойства своего родителя, {{domxref("H
 - {{domxref("HTMLTrackElement.label")}}
   - : Тип данных {{jsxref("String")}} , так как отображает значение HTML-атрибута [`label`](/ru/docs/Web/HTML/Reference/Elements/track#label). Определяет видимый пользователю заголовок трека.
 - {{domxref("HTMLTrackElement.default")}}
-  - : Тип данных {{domxref("Boolean")}}, отображает значение HTML-атрибута [`default`](/ru/docs/Web/HTML/Reference/Elements/track#default). Указывает, что это текстовый трек по умолчанию, если пользовательские настройки не определят другой трек, как более уместный.
+  - : Тип данных {{jsxref("Boolean")}}, отображает значение HTML-атрибута [`default`](/ru/docs/Web/HTML/Reference/Elements/track#default). Указывает, что это текстовый трек по умолчанию, если пользовательские настройки не определят другой трек, как более уместный.
 - {{domxref("HTMLTrackElement.readyState")}} {{ReadOnlyInline}}
   - : Возвращает значение типа `unsigned short`, которое показывает доступность трека для чтения:
 

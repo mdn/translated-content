@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 65cbd4ff030e6763d6868917137d728c3ec29288
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}
+{{ApiRef("DOM")}}
 
 > [!WARNING]
 > `document.write()` メソッドの使用は強く避けるべきです。

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 **`offset`** は {{domxref("VREyeParameters")}} インターフェイスの読み取り専用プロパティで、は、ユーザーの目と目の間の中心点から目の中心までのオフセットを表します。単位はメートルです。
 

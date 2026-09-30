@@ -87,7 +87,7 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
 
 - `source`
   - : 其中一个对象可以用作纹理对象的源：
-    - {{domxref("ArrayBufferView")}},
+    - {{jsxref("TypedArray")}},
     - {{domxref("ImageBitmap")}},
     - {{domxref("ImageData")}},
     - {{domxref("HTMLImageElement")}},

@@ -161,7 +161,7 @@ body {
 
 此 CSS 结果与示例 1 相同，column-count 设置为 3。
 
-```plain
+```css
 .container {
   columns: 3;
 }
@@ -169,7 +169,7 @@ body {
 
 此 CSS 结果与示例 2 相同，column-width 为 200px。
 
-```plain
+```css
 .container {
   columns: 200px;
 }
@@ -177,7 +177,7 @@ body {
 
 此 CSS 结果与示例 3 相同，同时设置 column-count 和 column-width。
 
-```plain
+```css
 .container {
   columns: 2 200px;
 }

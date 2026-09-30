@@ -3,7 +3,7 @@ title: VRLayerInit
 slug: Web/API/VRLayerInit
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}
 
 **`VRLayerInit`** 辞書は [WebVR API](/ja/docs/Web/API/WebVR_API) の辞書で、 VR ディスプレイに表示したいコンテンツレイヤー （{{domxref("HTMLCanvasElement")}} または {{domxref("OffscreenCanvas")}}） を表します。
 

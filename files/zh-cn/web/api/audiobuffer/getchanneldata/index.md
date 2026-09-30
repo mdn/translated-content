@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioBuffer") }} 接口的 **`getChannelData()`** 方法返回一个 {{domxref("Float32Array")}}，其中包含与通道（由通道参数定义，0 表示第一个通道）关联的 PCM 数据。
+{{ domxref("AudioBuffer") }} 接口的 **`getChannelData()`** 方法返回一个 {{jsxref("Float32Array")}}，其中包含与通道（由通道参数定义，0 表示第一个通道）关联的 PCM 数据。
 
 ## 语法
 
@@ -22,7 +22,7 @@ getChannelData(channel)
 
 ### 返回值
 
-一个 {{domxref("Float32Array")}}。
+一个 {{jsxref("Float32Array")}}。
 
 ## 示例
 

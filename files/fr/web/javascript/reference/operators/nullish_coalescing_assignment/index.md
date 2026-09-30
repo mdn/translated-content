@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 71cf0cb885d46d83af054ae4df350248e246f006
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur d'**affectation de coalescence des nuls (`??=`)**, également connu sous le nom d'opérateur **affectation logique nulle**, évalue uniquement l'opérande de droite et l'attribue à gauche si l'opérande de gauche est [nulle](/fr/docs/Glossary/Nullish) (`null` ou `undefined`).
 
 {{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing assignment")}}

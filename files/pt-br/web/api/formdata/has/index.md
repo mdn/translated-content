@@ -25,7 +25,7 @@ formData.has(name);
 
 ### Retorna
 
-Um {{domxref("Boolean")}}.
+Um {{jsxref("Boolean")}}.
 
 ## Exemplo
 

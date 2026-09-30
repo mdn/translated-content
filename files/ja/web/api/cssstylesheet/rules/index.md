@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}
 
 **`rules`** は {{domxref("CSSStyleSheet")}} インターフェイスの非推奨の古いプロパティです。機能的には推奨される {{domxref("CSSStyleSheet.cssRules", "cssRules")}} プロパティと同じで、
 スタイルシートを構成する CSS ルールのライブ更新されるリストにアクセスすることができます。

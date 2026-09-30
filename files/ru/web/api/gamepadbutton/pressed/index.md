@@ -25,7 +25,7 @@ if (gp.buttons[0].pressed == true) {
 
 ## Значение
 
-{{domxref("boolean")}}.
+{{jsxref("Boolean")}}.
 
 ## Спецификации
 

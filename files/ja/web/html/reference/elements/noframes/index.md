@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{deprecated_header}}
-
 **`<noframes>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("frame")}} 要素に対応していない（または対応を無効化した）ブラウザーのためのコンテンツを提供します。よく使われるほとんどのブラウザーがフレームに対応していますが、一部のモバイルブラウザーやテキストモードブラウザーなどの例外もあります。
 
 `<noframes>` の中では HTML 文書の body 要素内で利用できる HTML 要素が使用できますが、フレームを使用するための {{HTMLElement("frameset")}} 要素および {{HTMLElement("frame")}} 要素は意味がないので例外です。

@@ -24,7 +24,7 @@ slug: Web/API/MediaList
 - {{domxref("MediaList.deleteMedium()")}}
   - : 从 `MediaList` 中移除一个媒体查询。
 - {{domxref("MediaList.item()")}}
-  - : 一个获取函数，返回一个{{domxref("CSSOMString")}}，表示文本形式的媒体查询，需要提供媒体查询在 `MediaList` 中的索引位置。
+  - : 一个获取函数，返回一个{{jsxref("String")}}，表示文本形式的媒体查询，需要提供媒体查询在 `MediaList` 中的索引位置。
 
 ## 示例
 

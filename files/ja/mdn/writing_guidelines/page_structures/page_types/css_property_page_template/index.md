@@ -64,7 +64,7 @@ l10n:
 >
 > _この説明文全体を削除してから公開してください。_
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 ページのコンテンツは導入段落から始めましょう。プロパティ名から始め、それが何をするのかを買いてください。
 これはできれば 1 つか 2 つの短い文章にしてください。

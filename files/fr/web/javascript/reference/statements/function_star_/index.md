@@ -3,8 +3,6 @@ title: function*
 slug: Web/JavaScript/Reference/Statements/function*
 ---
 
-{{jsSidebar("Statements")}}
-
 La déclaration **`function*`** (le mot-clé `function` suivi par un astérisque) permet de définir un générateur (aussi appelé une fonction génératrice) (un générateur est un objet {{jsxref("Generator")}}).
 
 {{InteractiveExample("JavaScript Demo: Statement - Function*")}}

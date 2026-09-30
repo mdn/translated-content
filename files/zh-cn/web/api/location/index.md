@@ -41,7 +41,7 @@ _`Location` 没有继承任何方法_，但实现了来自{{domxref("URLUtils")}
 - {{domxref("Location.assign()")}}
   - : 加载给定 URL 的内容资源到这个 Location 对象所关联的对象上。
 - {{domxref("Location.reload()")}}
-  - : 重新加载来自当前 URL 的资源。他有一个特殊的可选参数，类型为 {{domxref("Boolean")}}，该参数为 true 时会导致该方法引发的刷新一定会从服务器上加载数据。如果是 `false`或没有制定这个参数，浏览器可能从缓存当中加载页面。
+  - : 重新加载来自当前 URL 的资源。他有一个特殊的可选参数，类型为 {{jsxref("Boolean")}}，该参数为 true 时会导致该方法引发的刷新一定会从服务器上加载数据。如果是 `false`或没有制定这个参数，浏览器可能从缓存当中加载页面。
 - {{domxref("Location.replace()")}}
   - : 用给定的 URL 替换掉当前的资源。与 `assign()` 方法不同的是用 `replace()`替换的新页面不会被保存在会话的历史 {{domxref("History")}}中，这意味着用户将不能用后退按钮转到该页面。
 - {{domxref("Location.toString()")}}

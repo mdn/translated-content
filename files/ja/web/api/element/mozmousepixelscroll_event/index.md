@@ -6,7 +6,7 @@ l10n:
   sourceCommit: d0b23f3f26637aa405ee9ee0a0892fc6e9b742ef
 ---
 
-{{APIRef}}{{deprecated_header}}{{ Non-standard_header() }}
+{{APIRef}}{{ Non-standard_header() }}
 
 Firefox 専用の、標準外、かつ廃止予定の **MozMousePixelScroll`** イベントは、マウスホイールなどが操作されたときに {{domxref("Element")}} で非同期に発生します。これは {{ domxref("MouseScrollEvent") }} インターフェイスで表されます。
 

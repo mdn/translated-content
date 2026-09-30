@@ -2,7 +2,7 @@
 title: Google Chrome
 slug: Glossary/Google_Chrome
 l10n:
-  sourceCommit: 74e7902b0875b6378d77df6d2d925a2d09d19f5d
+  sourceCommit: da7287ff61b6ea4db7f9a5e07be11263b525b7d0
 ---
 
 Google Chrome est un {{Glossary("Browser", "navigateur")}} Web gratuit développé par Google. Il est basé sur le projet open source [Chromium <sup>(angl.)</sup>](https://www.chromium.org/). Certaines différences clés sont décrites sur le [wiki de Chromium <sup>(angl.)</sup>](https://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome).

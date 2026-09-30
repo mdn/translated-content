@@ -4,8 +4,6 @@ slug: Web/XML/XPath/Reference/Functions/function-available
 original_slug: Web/XPath/Functions/function-available
 ---
 
-{{XsltSidebar}}
-
 La fonction `function-available` détermine si une fonction donnée est disponible et retourne le booléen `true` ou `false`.
 
 ### Syntaxe

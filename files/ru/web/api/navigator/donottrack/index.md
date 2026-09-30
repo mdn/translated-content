@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}} {{Non-standard_Header}}
+{{APIRef("HTML DOM")}} {{Non-standard_Header}}
 
 Свойство **`Navigator.doNotTrack`** возвращает настройку пользователя «Не отслеживать», которая указывает, просит ли пользователь веб-сайты и рекламодателей не использовать отслеживание.
 

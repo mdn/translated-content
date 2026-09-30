@@ -3,7 +3,7 @@ title: Fonction CSS `color-mix()`
 short-title: color-mix()
 slug: Web/CSS/Reference/Values/color_value/color-mix
 l10n:
-  sourceCommit: 138b6273756ffe17de769b760cd2dd23e1301c7d
+  sourceCommit: b01888f5bfa93e23fdf398afc3073d61d6d3c832
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`color-mix()`** prend une ou plusieurs valeurs de type {{CSSxRef("&lt;color&gt;")}} et retourne le résultat de leur mélange selon des proportions données, dans un espace de couleur donné.
@@ -23,9 +23,10 @@ color-mix(in lab, plum 60%, #123456 50%)
 color-mix(in lch increasing hue, hsl(200deg 50% 80%), coral)
 color-mix(in lch longer hue, hsl(200deg 50% 80%) 44%, coral 16%)
 
-/* Avec plus de deux couleurs */
+/* Avec une liste de couleurs en argument */
 color-mix(in oklab, teal, olive, blue)
 color-mix(in oklab, teal 20%, olive 30%, blue 50%)
+color-mix(in oklab, teal, olive, blue, purple)
 ```
 
 ### Valeurs
@@ -70,6 +71,18 @@ L'espace colorimétrique doit être l'un des espaces colorimétriques disponible
 La catégorie [`<rectangular-color-space>`](/fr/docs/Web/CSS/Reference/Values/color-interpolation-method#rectangular-color-space) inclut [`srgb`](/fr/docs/Glossary/Color_space#srgb), [`srgb-linear`](/fr/docs/Glossary/Color_space#srgb-linear), [`display-p3`](/fr/docs/Glossary/Color_space#display-p3), [`a98-rgb`](/fr/docs/Glossary/Color_space#a98-rgb), [`prophoto-rgb`](/fr/docs/Glossary/Color_space#prophoto-rgb), [`rec2020`](/fr/docs/Glossary/Color_space#rec2020), [`lab`](/fr/docs/Glossary/Color_space#cielab_color_spaces), [`oklab`](/fr/docs/Glossary/Color_space#oklab), [`xyz`](/fr/docs/Glossary/Color_space#xyz_color_spaces), [`xyz-d50`](/fr/docs/Glossary/Color_space#xyz) et [`xyz-d65`](/fr/docs/Glossary/Color_space#xyz-d50).
 
 La catégorie `<polar-color-space>` inclut [`hsl`](/fr/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb`](/fr/docs/Web/CSS/Reference/Values/color_value/hwb), [`lch`](/fr/docs/Web/CSS/Reference/Values/color_value/lch) et [`oklch`](/fr/docs/Web/CSS/Reference/Values/color_value/oklch). Avec ces espaces, vous pouvez éventuellement suivre le nom de l'espace colorimétrique avec une {{CSSxRef("&lt;hue-interpolation-method&gt;")}}. Cette valeur par défaut est `shorter hue`, mais peut également être définie sur `longer hue`, `increasing hue` ou `decreasing hue`.
+
+### Espace colorimétrique par défaut et méthode d'interpolation
+
+Lors du mélange de couleurs sans définir d'espace colorimétrique ni de méthode d'interpolation de teinte, l'espace colorimétrique `oklab` est utilisé, avec `shorter` comme méthode d'interpolation de teinte.
+
+Les trois déclarations suivantes sont équivalentes&nbsp;:
+
+```css
+background-color: color-mix(red, blue);
+background-color: color-mix(in oklab, red, blue);
+background-color: color-mix(in oklab shorter hue, red, blue);
+```
 
 ### Couleurs proportionnelles
 
@@ -165,11 +178,72 @@ La valeur totale des deux couleurs dans une fonction `color-mix()` est de 100%, 
 
 Lorsqu'on mélange des couleurs sans espace colorimétrique ni méthode d'interpolation des teintes, c'est l'espace colorimétrique `oklab` qui est utilisé, avec la méthode d'interpolation des teintes `shorter`. Les trois déclarations suivantes sont équivalentes&nbsp;:
 
-```css
-background-color: color-mix(red, blue);
-background-color: color-mix(in oklab, red, blue);
-background-color: color-mix(in oklab shorter hue, red, blue);
+### Mélanger une liste de couleurs
+
+Cet exemple montre comment passer une liste d'arguments de couleur à `color-mix()`. La fonction accepte un nombre quelconque de couleurs, pas seulement deux, et chacune d'elles peut éventuellement se voir attribuer un pourcentage.
+
+#### HTML
+
+```html
+<ul>
+  <li>1 couleur</li>
+  <li>3 couleurs, avec pourcentages</li>
+  <li>4 couleurs, sans pourcentages</li>
+</ul>
 ```
+
+#### CSS
+
+Le premier {{HTMLElement("li")}} mélange une seule couleur, ce qui revient à cette couleur. Le deuxième mélange trois couleurs dont les pourcentages totalisent 100 %. Le troisième mélange quatre couleurs sans pourcentage, donc chacune obtient une part égale.
+
+```css hidden
+ul {
+  display: flex;
+  list-style-type: none;
+  font-size: 150%;
+  gap: 10px;
+  border: 2px solid;
+  padding: 10px;
+}
+
+li {
+  padding: 10px;
+  flex: 1;
+  box-sizing: border-box;
+  font-family: monospace;
+  text-align: center;
+}
+```
+
+```css
+li:nth-child(1) {
+  background-color: color-mix(in oklab, teal);
+}
+
+li:nth-child(2) {
+  background-color: color-mix(in oklab, teal 20%, olive 30%, blue 50%);
+}
+
+li:nth-child(3) {
+  background-color: color-mix(in oklab, teal, olive, blue, purple);
+}
+```
+
+```css hidden
+@supports not (color: color-mix(in oklab, red, white, blue)) {
+  body::before {
+    content: "Votre navigateur ne prend pas en charge les listes de couleurs dans la fonction color-mix().";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Mélanger une liste de couleurs", "100%", 180)}}
 
 ### Ajouter de la transparence
 

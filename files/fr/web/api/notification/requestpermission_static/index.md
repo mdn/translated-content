@@ -35,7 +35,7 @@ Notification.requestPermission(callback);
 
 ### Retour
 
-Une {{jsxref ("Promise", "Promesse")}} qui se résout en une {{domxref ("DOMString")}} avec la permission choisie par l'utilisateur. Les valeurs possibles pour cette chaîne sont:
+Une {{jsxref ("Promise", "Promesse")}} qui se résout en une {{jsxref("String")}} avec la permission choisie par l'utilisateur. Les valeurs possibles pour cette chaîne sont:
 
 - `granted`
 - `denied`

@@ -1,14 +1,14 @@
 ---
-title: "`ruby-overhang` CSS プロパティ"
+title: CSS `ruby-overhang` プロパティ
 short-title: ruby-overhang
 slug: Web/CSS/Reference/Properties/ruby-overhang
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 **`ruby-overhang`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{htmlelement("ruby")}} の注釈が周囲のテキストからはみ出すかどうかを指定します。
 
-{{InteractiveExample("CSS Demo: ruby-overhang")}}
+{{InteractiveExample("CSS デモ: ruby-overhang")}}
 
 ```css interactive-example-choice
 ruby-overhang: auto;
@@ -49,6 +49,8 @@ ruby-overhang: unset;
 ```
 
 ### 値
+
+このプロパティは、以下のキーワード値のいずれかで指定します。
 
 - `auto`
   - : ルビの注釈コンテナーが、対応するベースコンテナーよりも長い場合、注釈が隣接するテキストと部分的に重なることがあります。

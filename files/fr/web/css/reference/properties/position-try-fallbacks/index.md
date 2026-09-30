@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`position-try-fallbacks`** permet de définir une liste d'une ou plusieurs **options de repli de position** pour les éléments positionnés par ancre afin qu'ils soient placés par rapport à leurs éléments d'ancrage associés. Lorsque l'élément dépasse autrement son bloc contenant modifié par les marges internes, le navigateur essaie de placer l'élément positionné dans ces différentes positions de repli, dans l'ordre fourni, jusqu'à ce qu'il trouve une valeur qui empêche le débordement de son conteneur ou de la zone d'affichage.
+La propriété [CSS](/fr/docs/Web/CSS) **`position-try-fallbacks`** permet de définir une liste d'une ou plusieurs **options de repli de position** pour les éléments positionnés par une ancre afin qu'ils soient placés par rapport à leurs éléments d'ancrage associés. Lorsque l'élément dépasse autrement son bloc contenant modifié par les marges internes, le navigateur essaie de placer l'élément positionné dans ces différentes positions de repli, dans l'ordre fourni, jusqu'à ce qu'il trouve une valeur qui empêche le débordement de son conteneur ou de la zone d'affichage.
 
 > [!NOTE]
 > La propriété raccourcie {{CSSxRef("position-try")}} peut être utilisée pour définir les valeurs de {{CSSxRef("position-try-order")}} et `position-try-fallbacks` dans une seule déclaration.
@@ -75,7 +75,7 @@ La propriété `position-try-fallbacks` peut être définie soit avec la valeur 
 
 ## Description
 
-Les éléments positionnés par ancre doivent toujours apparaître dans un endroit pratique pour que l'utilisateur·ice puisse interagir avec eux, si possible, quel que soit l'endroit où leur ancre est positionnée. Pour empêcher l'élément positionné de déborder de la zone d'affichage, il est souvent nécessaire de changer sa position lorsque son ancre se rapproche du bord de son élément contenant ou de la zone d'affichage.
+Les éléments positionnés par une ancre doivent toujours apparaître dans un endroit pratique pour que l'utilisateur·ice puisse interagir avec eux, si possible, quel que soit l'endroit où leur ancre est positionnée. Pour empêcher l'élément positionné de déborder de la zone d'affichage, il est souvent nécessaire de changer sa position lorsque son ancre se rapproche du bord de son élément contenant ou de la zone d'affichage.
 
 C'est réalisé en fournissant une ou plusieurs options de repli de position dans la propriété `position-try-fallbacks`. Si la position initiale de l'élément positionné déborde, le navigateur essaie chaque option de repli&nbsp;; la première option de repli qui ne provoque pas de débordement de l'élément contenant est appliquée. Par défaut, le navigateur les essaie dans l'ordre dans lequel elles apparaissent dans la liste, en appliquant la première qui empêche l'élément positionné de déborder.
 
@@ -84,7 +84,7 @@ Si aucune option ne permet de placer l'élément positionné complètement à l'
 > [!NOTE]
 > Dans certaines situations, vous pouvez vouloir simplement masquer les éléments positionnés qui débordent, ce qui peut être réalisé en utilisant la propriété {{CSSxRef("position-visibility")}}. Dans la plupart des cas, cependant, il est préférable de les garder à l'écran et utilisables.
 
-Pour des informations détaillées sur les fonctionnalités d'ancre et l'utilisation des essais de position de repli, regardez le module [sur le positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [des options de repli et masquage conditionnel pour le débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding).
+Pour des informations détaillées sur les fonctionnalités d'ancre et l'utilisation des essais de position de repli, regardez le module [sur le positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [des options de repli et masquage conditionnel pour le débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding).
 
 ### Valeurs prédéfinies de &lt;try-tactic&gt;
 
@@ -122,7 +122,7 @@ Cet exemple montre l'utilisation simple de quelques options de repli `<try-tacti
 
 #### HTML
 
-Le HTML inclut deux éléments HTML {{HTMLElement("div")}} qui deviennent une ancre et un élément positionné par ancre&nbsp;:
+Le HTML inclut deux éléments HTML {{HTMLElement("div")}} qui deviennent une ancre et un élément positionné par une ancre&nbsp;:
 
 ```html
 <div class="ancre">⚓︎</div>
@@ -371,5 +371,5 @@ Voir la page de référence {{CSSxRef("@position-try")}}.
 - La propriété {{CSSxRef("position-area")}}
 - Le type de donnée {{CSSxRef("position-area_value", "&lt;position-area&gt;")}}
 - Le guide [des options de repli et de masquage conditionnel en cas de débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)
-- Le guide [d'utilisation du positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
-- Le module [de positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
+- Le guide [d'utilisation du positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
+- Le module [de positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)

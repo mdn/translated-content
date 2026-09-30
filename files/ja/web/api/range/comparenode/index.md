@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_Header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
 **`Range.compareNode()`** は {{DOMxRef("Node")}} の位置を示す定数を返します。
 

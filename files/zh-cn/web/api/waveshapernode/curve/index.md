@@ -5,7 +5,7 @@ slug: Web/API/WaveShaperNode/curve
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("WaveShaperNode") }} 接口的 `curve` 属性是一个描述要被应用的畸变的{{domxref("Float32Array")}} 数组。
+{{ domxref("WaveShaperNode") }} 接口的 `curve` 属性是一个描述要被应用的畸变的{{jsxref("Float32Array")}} 数组。
 
 数组的中间元素被应用于每个信号数值 `0`，第一个应用于信号数值 `-1`，最后一个应用于信号数值 `1`；小于 `-1` 或者大于 `1` 的数值分别按照 `-1` 和 `1` 来处理。
 
@@ -24,7 +24,7 @@ distortion.curve = myCurveDataArray; // myCurveDataArray is a Float32Array
 
 ### Value
 
-一个 {{domxref("Float32Array")}}.
+一个 {{jsxref("Float32Array")}}.
 
 ## 示例
 

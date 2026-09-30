@@ -27,7 +27,7 @@ slug: Web/API/Response
 - {{domxref("Response.statusText")}} {{readonlyinline}}
   - : Строка, соответствующая коду ответа (например, `OK` для кода `200`).
 - {{domxref("Response.trailers")}}
-  - : A {{domxref("Promise")}} resolving to a {{domxref("Headers")}} object, associated with the response with {{domxref("Response.headers")}} for values of the HTTP {{HTTPHeader("Trailer")}} header.
+  - : A {{jsxref("Promise")}} resolving to a {{domxref("Headers")}} object, associated with the response with {{domxref("Response.headers")}} for values of the HTTP {{HTTPHeader("Trailer")}} header.
 - {{domxref("Response.type")}} {{readonlyinline}}
   - : The type of the response (e.g., `basic`, `cors`).
 - {{domxref("Response.url")}} {{readonlyinline}}
@@ -42,7 +42,7 @@ slug: Web/API/Response
 - {{domxref("Body.body")}} {{readonlyInline}}
   - : A simple getter exposing a {{domxref("ReadableStream")}} of the body contents.
 - {{domxref("Body.bodyUsed")}} {{readonlyInline}}
-  - : Stores a {{domxref("Boolean")}} that declares whether the body has been used in a response yet.
+  - : Stores a {{jsxref("Boolean")}} that declares whether the body has been used in a response yet.
 
 ## Методы
 
@@ -58,7 +58,7 @@ slug: Web/API/Response
 `Response` implements {{domxref("Body")}}, so it also has the following methods available to it:
 
 - {{domxref("Body.arrayBuffer()")}}
-  - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with an {{domxref("ArrayBuffer")}}.
+  - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with an {{jsxref("ArrayBuffer")}}.
 - {{domxref("Body.blob()")}}
   - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with a {{domxref("Blob")}}.
 - {{domxref("Body.formData()")}}

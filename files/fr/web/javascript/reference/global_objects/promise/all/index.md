@@ -3,7 +3,7 @@ title: "Promise : méthode statique all()"
 short-title: all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
 l10n:
-  sourceCommit: cbf7f4b55e2c0bc0c096773435b159edcaa8c9e2
+  sourceCommit: 9bda33365e40b6c609fa5190a0af9b5dc6438cf0
 ---
 
 La méthode statique **`Promise.all()`** prend en entrée un itérable de promesses et retourne une seule promesse ({{JSxRef("Promise")}}). Cette promesse retournée est complétée (<i lang="en">fulfilled</i> en anglais) lorsque toutes les promesses de l'entrée sont complétées (y compris lorsqu'un itérable vide est passé), avec un tableau des valeurs de complétion. Elle est rompue (<i lang="en">rejected</i> en anglais) lorsqu'une des promesses de l'entrée est rompue, avec la raison de ce premier rejet.
@@ -49,6 +49,8 @@ La méthode `Promise.all()` est l'une des [méthodes de concurrence des promesse
 `Promise.all()` rompt immédiatement dès qu'une **des** promesses d'entrée est rompue. En revanche, la promesse retournée par {{JSxRef("Promise.allSettled()")}} attends que toutes les promesses d'entrée soient exécutées, qu'une d'entre elles soit rompue ou non. Utilisez `allSettled()` si vous avez besoin du résultat final de chaque promesse de l'itérable d'entrée.
 
 À l'instar d'autres combinateurs de promesses, `Promise.all()` marque immédiatement toutes les promesses comme «&nbsp;gérées&nbsp;» lorsqu'il est appelé (en appelant leurs méthodes `.then()`). Les rejets survenant après le premier rejet sont ignorés et ne déclenchent aucun évènement `unhandledrejection`.
+
+Rompre une promesse ne supprime pas les autres opérations ni ne désabonne les gestionnaires attachés à leurs promesses. Passer de manière répétée une promesse en attente de longue durée à `Promise.all()` peut accumuler des gestionnaires sur cette promesse même lorsqu'une autre entrée est rompue chaque fois.
 
 ## Exemples
 

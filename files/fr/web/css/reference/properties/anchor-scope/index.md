@@ -40,7 +40,7 @@ Cette propriété est définie comme le mot-clé `none` ou `all` ou une liste s�
 
 ## Description
 
-Lorsque plusieurs [éléments d'ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#associer_des_éléments_dancre_et_positionnés) sur une page reçoivent la même valeur {{CSSxRef("anchor-name")}} et qu'un élément positionné est associé à ce nom d'ancre (en le définissant comme valeur de sa propriété {{CSSxRef("position-anchor")}}), l'élément positionné est associé au _dernier_ élément d'ancre dans l'ordre du code source portant ce nom d'ancre.
+Lorsque plusieurs [éléments d'ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#associer_des_éléments_dancre_et_positionnés) sur une page reçoivent la même valeur {{CSSxRef("anchor-name")}} et qu'un élément positionné est associé à ce nom d'ancre (en le définissant comme valeur de sa propriété {{CSSxRef("position-anchor")}}), l'élément positionné est associé au _dernier_ élément d'ancrage dans l'ordre du code source portant ce nom d'ancre.
 
 Cela peut poser problème dans certaines situations. Par exemple, si un document contient plusieurs composants répétés, chacun avec un élément positionné rattaché à une ancre, tous les éléments positionnés sont rattachés à la dernière ancre de la page, sauf si chaque composant utilise un nom d'ancre différent. Ce n'est probablement pas le comportement souhaité.
 
@@ -48,7 +48,7 @@ La propriété `anchor-scope` permet de corriger ce problème en limitant la vis
 
 - `anchor-scope: all` définit la portée de sorte que _toutes_ les valeurs de `anchor-name` définies dans le sous-arbre ne puissent être associées qu'à des éléments positionnés dans ce même sous-arbre. Par exemple, si l'on inclut plusieurs ancres dans un document, toutes avec `anchor-name: --mon-ancre`, et qu'on les place dans des conteneurs séparés, puis qu'on applique `anchor-scope: all` à chaque conteneur, alors un élément positionné à l'intérieur d'un de ces conteneurs et ayant `--mon-ancre` comme valeur de sa propriété `position-anchor` est positionné par rapport à l'ancre du même conteneur.
 
-  De plus, si l'on crée un autre élément positionné en dehors des conteneurs et qu'on lui donne le même nom d'ancre ou un autre, il n'est pas positionné par ancre par rapport à aucune des ancres, peu importe si les ancres possèdent ces noms dans leur propriété `anchor-name`. `anchor-scope: all` limite la portée des ancres pour les conteneurs sur lesquels il est appliqué à _toutes_ les ancres, quel que soit le `anchor-name`, uniquement aux éléments positionnés à l'intérieur des mêmes conteneurs.
+  De plus, si l'on crée un autre élément positionné en dehors des conteneurs et qu'on lui donne le même nom d'ancre ou un autre, il n'est pas positionné par une ancre par rapport à aucune des ancres, peu importe si les ancres possèdent ces noms dans leur propriété `anchor-name`. `anchor-scope: all` limite la portée des ancres pour les conteneurs sur lesquels il est appliqué à _toutes_ les ancres, quel que soit le `anchor-name`, uniquement aux éléments positionnés à l'intérieur des mêmes conteneurs.
 
 - `anchor-scope: <dashed-ident>#` définit la portée de sorte que les valeurs de `anchor-name` définies, lorsqu'elles sont définies dans le sous-arbre, ne puissent être associées qu'à des éléments positionnés dans ce même sous-arbre. Si l'on reprend l'exemple précédent mais qu'on change la valeur de `anchor-scope` sur les conteneurs pour `--mon-ancre`&nbsp;:
   - Les éléments positionnés avec `position-anchor: --mon-ancre` sont limités à la portée imposée par le paramètre `anchor-scope`. Ils ne sont positionnés par rapport aux ancres que s'ils sont placés à l'intérieur des conteneurs.
@@ -60,9 +60,9 @@ La propriété `anchor-scope` permet de corriger ce problème en limitant la vis
 
 Si, par exemple, vous avez trois valeurs `anchor-name` définies dans un sous-arbre (par exemple, `--ancre1`, `--ancre2` et `--ancre3`), définir `anchor-scope: --ancre1, --ancre2, --ancre3` sur l'élément de plus haut niveau du sous-arbre est équivalent à définir `anchor-scope: all`.
 
-Les portées d'ancre n'affectent que les [associations d'ancre explicites](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#associer_explicitement_une_ancre_en_css), c'est-à-dire celles établies entre un élément d'ancre avec un `anchor-name` défini et un élément positionné faisant référence au nom d'ancre de l'élément d'ancre dans sa valeur `position-anchor`. Les portées d'ancre n'affectent pas les [associations d'ancre implicites](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#associer_implicitement_une_ancre).
+Les portées d'ancre n'affectent que les [associations d'ancre explicites](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#associer_explicitement_une_ancre_en_css), c'est-à-dire celles établies entre un élément d'ancrage avec un `anchor-name` défini et un élément positionné faisant référence au nom d'ancre de l'élément d'ancrage dans sa valeur `position-anchor`. Les portées d'ancre n'affectent pas les [associations d'ancre implicites](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#associer_implicitement_une_ancre).
 
-Pour plus d'informations sur les fonctionnalités et l'utilisation des ancres, consultez le module [Positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [Utilisation du positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
+Pour plus d'informations sur les fonctionnalités et l'utilisation des ancres, consultez le module [Positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [Utilisation du positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
 
 ## Définition formelle
 
@@ -76,13 +76,13 @@ Pour plus d'informations sur les fonctionnalités et l'utilisation des ancres, c
 
 ### Utilisation simple
 
-Cet exemple montre comment fonctionne la portée d'ancre à un niveau basique. Il montre comment un élément d'ancre à l'intérieur d'un conteneur avec une portée peut être limité à n'avoir que des éléments positionnés à l'intérieur du même conteneur associés à lui.
+Cet exemple montre comment fonctionne la portée d'ancre à un niveau basique. Il montre comment un élément d'ancrage à l'intérieur d'un conteneur avec une portée peut être limité à n'avoir que des éléments positionnés à l'intérieur du même conteneur associés à lui.
 
 #### HTML
 
-Nous définissons un élément HTML {{HTMLElement("section")}} sur lequel nous allons définir une portée d'ancre. Celui-ci contient deux éléments HTML {{HTMLElement("div")}}, un qui est transformé en ancre et un qui est un élément positionné par ancre.
+Nous définissons un élément HTML {{HTMLElement("section")}} sur lequel nous allons définir une portée d'ancre. Celui-ci contient deux éléments HTML {{HTMLElement("div")}}, un qui est transformé en ancre et un qui est un élément positionné par une ancre.
 
-Nous incluons également un troisième `<div>` en dehors du `<section>`, qui est aussi transformé en élément positionné par ancre.
+Nous incluons également un troisième `<div>` en dehors du `<section>`, qui est aussi transformé en élément positionné par une ancre.
 
 ```html live-sample___basic-usage
 <section class="portee">
@@ -97,7 +97,7 @@ Nous incluons également un troisième `<div>` en dehors du `<section>`, qui est
 
 Nous commençons par définir `anchor-scope: --mon-ancre` sur le `<section>`. Cela limite sa portée de sorte que les descendants du `<section>` ayant un nom d'ancre `--mon-ancre` ne puissent être associés qu'à des éléments positionnés qui sont aussi des descendants du `<section>`.
 
-Pour tester cela, nous déclarons le `<div>` `ancre` comme élément d'ancre en lui attribuant un {{CSSxRef("anchor-name")}} de `--mon-ancre`. Nous positionnons ensuite absolument les éléments `.positionne`, les associons à l'ancre en définissant leur {{CSSxRef("position-anchor")}} à `--mon-ancre`, et les positionnons à droite de l'ancre en définissant leur {{CSSxRef("position-area")}} à `right`&nbsp;:
+Pour tester cela, nous déclarons le `<div>` `ancre` comme élément d'ancrage en lui attribuant un {{CSSxRef("anchor-name")}} de `--mon-ancre`. Nous positionnons ensuite absolument les éléments `.positionne`, les associons à l'ancre en définissant leur {{CSSxRef("position-anchor")}} à `--mon-ancre`, et les positionnons à droite de l'ancre en définissant leur {{CSSxRef("position-area")}} à `right`&nbsp;:
 
 ```css hidden live-sample___basic-usage
 .portee {
@@ -153,9 +153,9 @@ Cet exemple montre les effets des différentes valeurs de `anchor-scope` en vous
 
 #### HTML
 
-Nous définissons trois éléments HTML {{HTMLElement("section")}} sur lesquels nous allons définir une portée d'ancre. Chaque `<section>` contient deux éléments HTML {{HTMLElement("div")}}, un qui est transformé en ancre et un qui est un élément positionné par ancre.
+Nous définissons trois éléments HTML {{HTMLElement("section")}} sur lesquels nous allons définir une portée d'ancre. Chaque `<section>` contient deux éléments HTML {{HTMLElement("div")}}, un qui est transformé en ancre et un qui est un élément positionné par une ancre.
 
-Nous incluons également un `<div>` supplémentaire en dehors des éléments `<section>`, qui est aussi transformé en élément positionné par ancre. Celui-ci a des paramètres de positionnement d'ancre différents des autres.
+Nous incluons également un `<div>` supplémentaire en dehors des éléments `<section>`, qui est aussi transformé en élément positionné par une ancre. Celui-ci a des paramètres de positionnement d'ancre différents des autres.
 
 Enfin, nous incluons un {{HTMLElement("form")}} contenant trois différents [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio) pour permettre de définir différentes valeurs de `anchor-scope` sur les éléments `<section>`.
 
@@ -243,9 +243,9 @@ form {
 }
 ```
 
-Ensuite, nous positionnons nos éléments `.positionne` par rapport à un élément d'ancre. Nous les positionnons absolument, leur donnons une valeur {{CSSxRef("position-anchor")}} de `--mon-ancre` pour les associer à une ancre, et les positionnons par rapport à l'ancre avec une valeur {{CSSxRef("position-area")}} de `right`.
+Ensuite, nous positionnons nos éléments `.positionne` par rapport à un élément d'ancrage. Nous les positionnons absolument, leur donnons une valeur {{CSSxRef("position-anchor")}} de `--mon-ancre` pour les associer à une ancre, et les positionnons par rapport à l'ancre avec une valeur {{CSSxRef("position-area")}} de `right`.
 
-L'élément `.positionne2` est positionné de façon similaire, sauf qu'il reçoit l'autre nom d'ancre disponible comme valeur de `position-anchor` — `--autre-ancre` — et il est positionné en bas de l'ancre. Nous lui donnons aussi une valeur {{CSSxRef("bottom")}} de `5px`, de sorte que si le positionnement par ancre ne fonctionne pas, il est positionné en bas du `<body>`. Cet élément n'est contenu dans aucun élément avec une portée, il n'est donc positionné par ancre que lorsque certaines valeurs de `anchor-scope` sont définies sur les éléments avec portée, comme expliqué plus loin.
+L'élément `.positionne2` est positionné de façon similaire, sauf qu'il reçoit l'autre nom d'ancre disponible comme valeur de `position-anchor` — `--autre-ancre` — et il est positionné en bas de l'ancre. Nous lui donnons aussi une valeur {{CSSxRef("bottom")}} de `5px`, de sorte que si le positionnement par une ancre ne fonctionne pas, il est positionné en bas du `<body>`. Cet élément n'est contenu dans aucun élément avec une portée, il n'est donc positionné par une ancre que lorsque certaines valeurs de `anchor-scope` sont définies sur les éléments avec portée, comme expliqué plus loin.
 
 ```css live-sample___comparing-values
 .positionne {
@@ -287,9 +287,9 @@ L'exemple s'affiche comme suit&nbsp;:
 
 Observez l'effet initial de positionnement appliqué aux éléments positionnés avec `anchor-scope: all` défini sur les éléments `<section>`, puis essayez de sélectionner les autres valeurs disponibles pour voir leur effet. Vous devez observer les comportements suivants&nbsp;:
 
-- `all`&nbsp;: La portée pour le positionnement des éléments par rapport aux éléments d'ancre descendants des éléments `<section>` est limitée aux éléments positionnés qui sont eux-mêmes descendants des éléments `<section>`, quel que soit la valeur de `anchor-name` utilisée pour les associer. Ainsi, les éléments positionnés à l'intérieur des éléments `<section>` («&nbsp;Position 1 à 3&nbsp;») sont positionnés par ancre comme prévu, mais l'élément positionné en dehors des éléments `<section>` («&nbsp;Position 4&nbsp;») ne l'est pas. Il est hors de la portée.
-- `--mon-ancre`&nbsp;: La portée pour le positionnement des éléments par rapport aux éléments d'ancre descendants des éléments `<section>` est limitée aux éléments positionnés qui sont eux-mêmes descendants des éléments `<section>`, uniquement si la valeur d'ancre `--mon-ancre` est utilisée pour les associer. Ainsi, les éléments positionnés à l'intérieur des éléments `<section>` («&nbsp;Position 1 à 3&nbsp;») sont positionnés par ancre comme prévu, et l'élément positionné en dehors des éléments `<section>` («&nbsp;Position 4&nbsp;») est aussi positionné par ancre comme prévu. Dans le premier cas, les éléments positionnés sont à l'intérieur de la portée définie, et dans le second cas, l'élément positionné n'est pas affecté par la portée définie, car il utilise un nom d'ancre hors de la portée (`--autre-ancre`). L'élément «&nbsp;Position 4&nbsp;» est positionné par rapport au dernier élément d'ancre dans le code source qui possède le nom d'ancre correspondant.
-- `none`&nbsp;: Aucune portée d'ancre n'est définie sur les éléments `<section>`, tous les éléments positionnés sont donc positionnés par rapport au dernier élément d'ancre dans l'ordre du code source.
+- `all`&nbsp;: La portée pour le positionnement des éléments par rapport aux éléments d'ancre descendants des éléments `<section>` est limitée aux éléments positionnés qui sont eux-mêmes descendants des éléments `<section>`, quel que soit la valeur de `anchor-name` utilisée pour les associer. Ainsi, les éléments positionnés à l'intérieur des éléments `<section>` («&nbsp;Position 1 à 3&nbsp;») sont positionnés par une ancre comme prévu, mais l'élément positionné en dehors des éléments `<section>` («&nbsp;Position 4&nbsp;») ne l'est pas. Il est hors de la portée.
+- `--mon-ancre`&nbsp;: La portée pour le positionnement des éléments par rapport aux éléments d'ancre descendants des éléments `<section>` est limitée aux éléments positionnés qui sont eux-mêmes descendants des éléments `<section>`, uniquement si la valeur d'ancre `--mon-ancre` est utilisée pour les associer. Ainsi, les éléments positionnés à l'intérieur des éléments `<section>` («&nbsp;Position 1 à 3&nbsp;») sont positionnés par une ancre comme prévu, et l'élément positionné en dehors des éléments `<section>` («&nbsp;Position 4&nbsp;») est aussi positionné par une ancre comme prévu. Dans le premier cas, les éléments positionnés sont à l'intérieur de la portée définie, et dans le second cas, l'élément positionné n'est pas affecté par la portée définie, car il utilise un nom d'ancre hors de la portée (`--autre-ancre`). L'élément «&nbsp;Position 4&nbsp;» est positionné par rapport au dernier élément d'ancrage dans le code source qui possède le nom d'ancre correspondant.
+- `none`&nbsp;: Aucune portée d'ancre n'est définie sur les éléments `<section>`, tous les éléments positionnés sont donc positionnés par rapport au dernier élément d'ancrage dans l'ordre du code source.
 
 ## Spécifications
 
@@ -303,5 +303,5 @@ Observez l'effet initial de positionnement appliqué aux éléments positionnés
 
 - La propriété {{CSSxRef("anchor-name")}}
 - La propriété {{CSSxRef("position-anchor")}}
-- Le module [Positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
-- Le guide [Utilisation du positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
+- Le module [Positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
+- Le guide [d'utilisation du positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)

@@ -25,7 +25,7 @@ if (gp.buttons[0].pressed == true) {
 
 ## 值
 
-一个 {{domxref("boolean")}} (布尔值)。
+一个 {{jsxref("Boolean")}} (布尔值)。
 
 ## 规范
 

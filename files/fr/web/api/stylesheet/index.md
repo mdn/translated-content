@@ -10,7 +10,7 @@ Un objet qui implémente l'interface `StyleSheet` représente une seule feuille 
 ## Propriétés
 
 - {{domxref("StyleSheet.disabled")}}
-  - : Un booléen ({{domxref("Boolean")}}) indiquant si la feuille de style est appliquée ou non.
+  - : Un booléen ({{jsxref("Boolean")}}) indiquant si la feuille de style est appliquée ou non.
 - {{domxref("StyleSheet.href")}} {{readonlyInline}}
   - : Une chaîne de caractères ({{jsxref("String")}}) représentant l'emplacement de la feuille de style.
 - {{domxref("StyleSheet.media")}} {{readonlyInline}}

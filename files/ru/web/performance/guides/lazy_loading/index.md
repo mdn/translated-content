@@ -3,7 +3,7 @@ title: Lazy loading
 slug: Web/Performance/Guides/Lazy_loading
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
+{{QuickLinksWithSubPages("/ru/docs/Web/Performance")}}
 
 **Lazy loading (ленивая загрузка)** - это стратегия, направленная на определение ресурсов как неблокирующих (не критических) для того, чтобы отложить загрузку этих ресурсов на тот момент, когда они действительно необходимы. Так можно сократить длину [критических этапов рендеринга](/ru/docs/Web/Performance/Guides/Critical_rendering_path), что приводит к уменьшению времени загрузки приложения.
 

@@ -3,7 +3,7 @@ title: Content-Digest ヘッダー
 short-title: Content-Digest
 slug: Web/HTTP/Reference/Headers/Content-Digest
 l10n:
-  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
+  sourceCommit: e5a63f8d002dcac9654be79bd03bfda262dd4d89
 ---
 
 HTTP の **`Content-Digest`** {{Glossary("request header", "リクエスト")}}・{{Glossary("response header", "レスポンスヘッダー")}}は、メッセージのコンテンツにハッシュアルゴリズムを適用して計算された{{Glossary("hash function", "ダイジェスト")}}を提供します。
@@ -38,6 +38,8 @@ Content-Digest: <digest-algorithm>=<digest-value>
 Content-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>, …
 ```
 
+`Content-Digest` は構造化フィールド辞書 ({{rfc("9651","Structured Field Values for HTTP")}}) であり、そのキーは `<digest-algorithm>` で、値は `<digest-value>` です。
+
 ## ディレクティブ
 
 - `<digest-algorithm>`
@@ -45,98 +47,144 @@ Content-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-val
     安全であると見なされる登録済みのダイジェストアルゴリズムは、`sha-512` と `sha-256` の 2 つだけです。
     安全でない（古い）登録済みダイジェストアルゴリズムは、`md5`、`sha` (SHA-1)、`unixsum`、`unixcksum`、`adler` (ADLER32)、`crc32c` です。
 - `<digest-value>`
-  - : `<digest-algorithm>` を使用することで算出された、メッセージコンテンツのバイト単位のダイジェスト。
-    ダイジェストアルゴリズムの選択によって、使用するエンコード方式も決まります。`sha-512` や `sha-256` は {{Glossary("base64")}} エンコード方式を使用しますが、`unixsum` などの一部の古いダイジェストアルゴリズムは10進整数を使用します。
-    仕様の以前の草案とは異なり、標準の Base64 エンコードされたダイジェストバイトは、[辞書構文](https://www.rfc-editor.org/info/rfc8941/#name-byte-sequences)の一部としてコロン (`:`, ASCII 0x3A) で囲まれています。
-
-## 解説
-
-以前の仕様では `Digest` ヘッダーが定義されていましたが、ダイジェストが適用される範囲が明確でなかったため、問題が生じました。
-仕様上、ダイジェストがリソース表現全体に適用されるのか、それとも HTTP メッセージの特定のコンテンツに適用されるのかを判別することが困難でした。
-そのため、HTTP メッセージのコンテンツダイジェストとリソースの表現ダイジェストをそれぞれ伝達するために、2 つの別個のヘッダー（`Content-Digest` および `Repr-Digest`）が定義されました。
+  - : `<digest-algorithm>` を使用して生成されたメッセージコンテンツのダイジェストを、{{Glossary("base64")}} でエンコードし、コロン (`:`, ASCII 0x3A) で囲んだもの。このエンコード方式は、仕様書において[バイトシーケンス](https://www.rfc-editor.org/info/rfc9651/#name-byte-sequences)と呼ばれています。
 
 ## 例
 
-### SHA-256 Content-Digest に対するユーザーエージェントのリクエスト
+これらすべての例において、エンドポイントは、要求されていないダイジェストヘッダーを送信するように設定されています。送信者は、必要に応じて {{HTTPHeader("Want-Content-Digest")}} および {{HTTPHeader("Want-Repr-Digest")}} フィールドを使用して、ハッシュアルゴリズムの環境設定とともに `Content-Digest` または `Repr-Digest` をリクエストすることができます。
 
-次の例では、ユーザーエージェントが、SHA-256 を推奨し、次いで優先度の低い SHA-1 を使用して、メッセージコンテンツのダイジェストをリクエストしています。
+### レスポンス内の SHA-256 Content-Digest
+
+ユーザーエージェントが次のようにリソースをリクエストしたとします。
 
 ```http
 GET /items/123 HTTP/1.1
 Host: example.com
-Want-Content-Digest: sha-256=10, sha=3
 ```
 
 サーバーは、SHA-256 アルゴリズムを使用してメッセージのコンテンツの `Content-Digest` を返します。
+ダイジェストは、メッセージ本体 `{"hello": "mdn"}` の正確なバイト数（16 バイト。末尾の改行は明示的に含まれない）に基づいて計算されます。
 
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
+Content-Length: 16
+Content-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
 
-{"hello": "world"}
+{"hello": "mdn"}
 ```
 
 ### Content-Digest と Repr-Digest の値が同一である場合
 
-ユーザーエージェントが、`Want-Content-Digest` フィールドを指定せずにリソースをリクエストする場合、
+ユーザーエージェントが次のようにリソースをリクエストしたとします。
 
 ```http
 GET /items/123 HTTP/1.1
 Host: example.com
 ```
 
-このサーバーは、レスポンスに要求されていないダイジェストヘッダーを送信するように設定されています。
-`Repr-Digest` フィールドと `Content-Digest` フィールドの値が一致しているのは、同じアルゴリズムが使用されており、リソース全体が 1 つのメッセージで送信されているためです。
+サーバーは、SHA-256 アルゴリズムを使用してメッセージコンテンツの `Content-Digest` および `Repr-Digest` を返します。
+`Repr-Digest` フィールドと `Content-Digest` フィールドの値が一致するのは、これらが同じバイト列 `{"hello": "mdn"}`（16 バイト）に対して同じアルゴリズムを用いて計算されているためであり、この場合、表現全体が 1 つのメッセージで送信されます。
 
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 19
-Content-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
-Repr-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
+Content-Length: 16
+Content-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
+Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
 
-{"hello": "world"}
+{"hello": "mdn"}
 ```
 
 ### Content-Digest と Repr-Digest の値が一致しない場合
 
-前回の例と同じリクエストを繰り返し、{{HTTPMethod("GET")}} の代わりに {{HTTPMethod("HEAD")}} メソッドを使用した場合、`Repr-Digest` および `Content-Digest` フィールドの内容は異なります。
+ユーザーエージェントがリソースの一部だけを、次のような[範囲リクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)でリクエストしたとします。
 
 ```http
 GET /items/123 HTTP/1.1
 Host: example.com
+Range: bytes=0-7
 ```
 
-`Repr-Digest` の値は以前と同じですが、メッセージの本体がないため、サーバーからは異なる `Content-Digest` が送信されます。
+サーバーは {{HTTPStatus("206", "206 Partial Content")}} レスポンスを返し、その中にはリクエストされたバイト数のみ、`{"hello"`（8 バイト）がメッセージのコンテンツとして含まれます。
+`Content-Digest` はこれらのバイト列のみが対象になるのに対し、`Repr-Digest` は表現全体である `{"hello": "mdn"}`（16 バイト）が対象となるため、この 2 つの値は異なります。
+
+```http
+HTTP/1.1 206 Partial Content
+Content-Type: application/json
+Content-Range: bytes 0-7/16
+Content-Digest: sha-256=:pKQv0IAKChzGfyfxu5TNqcnvxIzaG4XICf6NQnB1YhY=:
+Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
+```
+
+### gzip 圧縮された表現のダイジェスト
+
+このリクエストでは、クライアントは {{httpheader("Accept-Encoding")}} ヘッダーを使用して、gzip 圧縮を受け入れることを示しています。
+
+```http
+GET /items/123 HTTP/1.1
+Host: example.com
+Accept-Encoding: gzip
+```
+
+サーバーのレスポンスには {{httpheader("Content-Encoding")}} ヘッダーが含まれており、メッセージのバイト列がリソースの gzip 形式の表現から取得されたものであることを示しています。
+ダイジェストは、元の非圧縮テキストではなく、gzip エンコードされたバイト列に対して計算されます。
+ここでは、16 バイトの JSON 本体 `{"hello": "mdn"}` が gzip 圧縮されて 36 バイトの表現となり、`Content-Digest` および `Repr-Digest` は、その 36 バイトに対して計算されます（読みやすいように、ここでは 16 進数で示しています）。
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Encoding: gzip
+Content-Length: 36
+Content-Digest: sha-256=:6Gx6u1ZhhahDLs06Zc6ZEqXxUy8RNjy18CaMucjKOFk=:
+Repr-Digest: sha-256=:6Gx6u1ZhhahDLs06Zc6ZEqXxUy8RNjy18CaMucjKOFk=:
+1F 8B 08 00 00 00 00 00 02 FF AB 56 CA 48 CD C9 C9 57 B2 52 50 CA 4D C9 53 AA 05 00 35 D8 1D 91 10 00 00 00
+```
+
+### コンテンツがない場合の Content-Digest 処理
+
+{{HTTPMethod("HEAD")}} メソッドを {{HTTPMethod("GET")}} の代わりに使用して同じリソースをリクエストした場合、レスポンスにはコンテンツが含まれません。
+
+```http
+HEAD /items/123 HTTP/1.1
+Host: example.com
+```
+
+`Repr-Digest` の値は以前と同じです。これは、常に完全な表現である `{"hello": "mdn"}` に適用されるためです。
+ただし、サーバーはレスポンスにコンテンツを送信しないため、`Content-Digest` ヘッダーを省略できます。
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
+```
+
+コンテンツがない場合に `Content-Digest` を省略する代わりに、サーバーは空文字列に対して明示的にこれを計算することができます。
+[RFC 9530 のセクション 6.3](https://www.rfc-editor.org/info/rfc9530/#section-6.3) によると、これにより、受信者は、特にダイジェストが HTTP メッセージの署名によって提供されている場合、単にヘッダーが省略されたことだけでなく、コンテンツが追加または除去されていないことを検証できるようになります。
 
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Digest: sha-256=:47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=:
-Repr-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
+Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
 ```
 
 ### ユーザーエージェントがリクエストで Content-Digest を送信する場合
 
 次の例では、ユーザーエージェントが SHA-512 を使用してメッセージ内容のダイジェストを送信します。
-`Content-Digest` と `Repr-Digest` の両方を送信しますが、これらは `Content-Encoding` の違いにより互いに異なります。
+ダイジェストは、メッセージ本文の正確なバイト数、`{"recipient":"Alex","amount":900000000}`（39 バイト、末尾の改行は明示的に含まない）に基づいて計算されます。
+この単一のリクエストで表現全体が送信されるため、`Content-Digest` と `Repr-Digest` の値は同じになります。
 
 ```http
 POST /bank_transfer HTTP/1.1
 Host: example.com
-Content-Encoding: zstd
-Content-Digest: sha-512=:ABC…=:
-Repr-Digest: sha-512=:DEF…=:
+Content-Type: application/json
+Content-Length: 39
+Content-Digest: sha-512=:PlrIZYU3M76B30wGsL0h6O79BoxHTdAG+RnMPjOyECTSJCN/KnYdOrSCCWjxV3ckkyvdRmZ52//M3WbehCXcPw==:
+Repr-Digest: sha-512=:PlrIZYU3M76B30wGsL0h6O79BoxHTdAG+RnMPjOyECTSJCN/KnYdOrSCCWjxV3ckkyvdRmZ52//M3WbehCXcPw==:
 
-{
- "recipient": "Alex",
- "amount": 900000000
-}
+{"recipient":"Alex","amount":900000000}
 ```
-
-サーバーは、受信したコンテンツのダイジェストを計算し、その結果を `Content-Digest` または `Repr-Digest` ヘッダーと比較することで、メッセージの整合性を検証する場合があります。
-上記の例と同様に、リクエストでは、`Repr-Digest` の方がサーバーにとって有用です。これは、デコードされた表現に基づいて計算されるため、さまざまなシナリオにおいてより一貫性が高くなるからです。
 
 ## 仕様書
 

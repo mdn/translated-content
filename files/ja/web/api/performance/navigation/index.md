@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Performance API")}}{{Deprecated_Header}}
+{{APIRef("Performance API")}}
 
 古い **`Performance.navigation`** は読み取り専用プロパティで、指定された閲覧コンテキスト内で発生するナビゲーションの種類を表す {{domxref("PerformanceNavigation")}} オブジェクトを返します。リソースを取得するまでに必要なリダイレクトの数などです。
 

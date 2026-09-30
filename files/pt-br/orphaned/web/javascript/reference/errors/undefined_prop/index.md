@@ -18,7 +18,7 @@ ReferenceError: reference to undefined property "x" (Firefox)
 
 ## O que está errado?
 
-O script tentou acessar uma propriedade de objeto que não existe. Existem duas maneiras de acessar propriedades; veja a página de referência {{jsxref ("Operators / Property_Accessors", "property accessors", 0, 1)}} para saber mais sobre eles.
+O script tentou acessar uma propriedade de objeto que não existe. Existem duas maneiras de acessar propriedades; veja a página de referência {{jsxref("Operators/Property_accessors", "property accessors", "", 1)}} para saber mais sobre eles.
 
 ## Exemplos
 
@@ -52,4 +52,4 @@ if (foo.hasOwnProperty("bar")) {
 
 ## Veja também
 
-- {{jsxref("Operators/Property_accessors", "property accessors", 0, 1)}}
+- {{jsxref("Operators/Property_accessors", "property accessors", "", 1)}}

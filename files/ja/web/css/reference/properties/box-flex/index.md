@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 > [!WARNING]
 > このプロパティは XUL ボックスモデルの部品を制御するためのものです。古い CSS Flexible Box Layout Module の草稿の '`box-flex`' (このプロパティの元になったもの) または '`-webkit-box-flex`' (草稿の元になったもの) の動作のどちらとも一致しません。現在の標準についての情報は [フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) を参照してください。

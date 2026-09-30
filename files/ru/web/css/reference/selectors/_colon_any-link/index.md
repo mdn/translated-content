@@ -17,7 +17,11 @@ original_slug: Web/CSS/:any-link
 
 ## Синтаксис
 
-{{csssyntax}}
+```css
+:any-link {
+  /* ... */
+}
+```
 
 ## Пример
 

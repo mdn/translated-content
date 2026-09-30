@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 62b2885cf645395c39081f8ffa8f6023d7d1bc0b
 ---
 
-{{jsSidebar("Statements")}}
-
 L'instruction **`if…else`** exécute une instruction si une condition donnée est [équivalente à vrai](/fr/docs/Glossary/Truthy). Si la condition est [équivalente à faux](/fr/docs/Glossary/Falsy), ce sera l'instruction de la clause optionnelle `else` qui sera exécutée.
 
 {{InteractiveExample("JavaScript Demo: Statement - If...Else")}}

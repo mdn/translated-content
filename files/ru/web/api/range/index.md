@@ -14,7 +14,7 @@ Range может быть создан с помощью метода {{ domxref
 Нет унаследованных свойств.
 
 **{{domxref("Range.collapsed")}} {{readonlyInline}}**
-Возвращает {{domxref("Boolean")}} указывающий, находятся ли начало и конец диапазона
+Возвращает {{jsxref("Boolean")}} указывающий, находятся ли начало и конец диапазона
 на одной и той же позиции.
 
 - {{domxref("Range.startContainer")}} {{readonlyInline}}

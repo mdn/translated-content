@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9a6462fba2d1527b1d9e550cda954eafdccb5d58
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 **`vAlign`** は {{domxref("HTMLTableCellElement")}} インターフェイスのプロパティで、{{htmlelement("th")}} または {{htmlelement("td")}} の表のセル内でテキストを垂直方向にどのように配置するかを示す文字列です。
 

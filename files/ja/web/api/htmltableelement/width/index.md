@@ -6,7 +6,7 @@ l10n:
   sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.width`** プロパティは、表の推奨される幅を表します。
 

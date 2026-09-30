@@ -38,7 +38,7 @@ Tú puedes crear un nuevo objeto `Response` usando el constructor{{domxref("Resp
 - {{domxref("Body.body")}} {{readonlyInline}}
   - : Un simple método get que expone un {{domxref("ReadableStream")}} de los contenidos del body.
 - {{domxref("Body.bodyUsed")}} {{readonlyInline}}
-  - : Almacena un {{domxref("Boolean")}} en el cuál declara si el body ya fue enviado como respuesta anteriormente.
+  - : Almacena un {{jsxref("Boolean")}} en el cuál declara si el body ya fue enviado como respuesta anteriormente.
 
 ## Methods
 
@@ -53,7 +53,7 @@ Tú puedes crear un nuevo objeto `Response` usando el constructor{{domxref("Resp
 <!---->
 
 - {{domxref("Body.arrayBuffer()")}}
-  - : Toma un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve con un {{domxref("ArrayBuffer")}}.
+  - : Toma un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve con un {{jsxref("ArrayBuffer")}}.
 - {{domxref("Body.blob()")}}
   - : Toma un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve con un {{domxref("Blob")}}.
 - {{domxref("Body.formData()")}}

@@ -156,6 +156,6 @@ function initBricks() {
 
 ## 下一步
 
-有些东西丢失了 球不经停，经过砖块 - 我们需要适当的[碰撞检测](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection)。
+有些东西丢失了 球不经停，经过砖块 - 我们需要适当的[碰撞检测](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)。
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Game_over", "Games/Tutorials/2D_breakout_game_Phaser/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Game_over", "Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field")}}

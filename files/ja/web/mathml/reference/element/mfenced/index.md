@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c263f06fa14ed56153e345006bb459c9df014b98
 ---
 
-{{Deprecated_Header}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 **`<mfenced>`** [MathML](/ja/docs/Web/MathML) 要素は、式に任意の開始・終了括弧（丸括弧など）や区切り文字（カンマやセミコロンなど）を追加する機能を提供します。
 

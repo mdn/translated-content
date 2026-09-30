@@ -20,7 +20,7 @@ var myAutoIncrement = objectStore.autoIncrement;
 
 ## Valeur
 
-Un {{domxref("Boolean","booléen")}} .
+Un {{jsxref("Boolean", "booléen")}} .
 
 - `true`
   - : Le magasin d'objet relié s'incrémente automatiquement.

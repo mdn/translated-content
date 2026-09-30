@@ -6,7 +6,7 @@ l10n:
   sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}
 
 **`KeyboardEvent.initKeyboardEvent()`** メソッドは、キーボードイベントオブジェクトの属性を初期化します。このメソッドは DOM Level 3 Events の草案で導入されましたが、より新しい草案では非推奨とされています。Gecko はこの機能に対応していません。このメソッドを実験的に実装すると、既存のウェブアプリが壊れてしまうからです（[Firefox バグ 999645](https://bugzil.la/999645) を参照してください）。
 ウェブアプリケーションは、もしコンストラクターが使用できるのであれば、代わりに使用する必要があります。

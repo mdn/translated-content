@@ -21,7 +21,7 @@ _Esta interfaz también heredará propiedades de su antecesor, {{domxref("EventT
 - {{domxref("EventSource.url")}} {{readonlyinline}}
   - : Un valor {{jsxref("String")}} representando la URL de la fuente.
 - {{domxref("EventSource.withCredentials")}} {{readonlyinline}}
-  - : Un valor {{domxref("Boolean")}} indicando si el objecto `EventSource` ha sido instanciado con credeciales CORS disponibles (true) o no (false, valor por defecto).
+  - : Un valor {{jsxref("Boolean")}} indicando si el objecto `EventSource` ha sido instanciado con credeciales CORS disponibles (true) o no (false, valor por defecto).
 
 ### Manejadores de Eventos
 

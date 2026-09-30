@@ -3,12 +3,12 @@ title: "Request: duplex プロパティ"
 short-title: duplex
 slug: Web/API/Request/duplex
 l10n:
-  sourceCommit: 3a9a6f9dd92859dca2f928c59b34d9177adb9ae5
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 {{APIRef("Fetch API")}}{{SeeCompatTable}}
 
-**`duplex`** は {{domxref("Request")}} インターフェイスの読み取り専用のプロパティで、全二重モードを返します。このモードは、ブラウザーがレスポンスを処理する前にリクエスト全体を送信する必要があるかどうかを決定します。
+**`duplex`** は {{domxref("Request")}} インターフェイスの読み取り専用のプロパティで、双方向通信モードを返します。このモードは、ブラウザーがレスポンスを処理する前にリクエスト全体を送信する必要があるかどうかを決定します。
 
 ## 値
 
@@ -23,7 +23,7 @@ l10n:
 
 ## 例
 
-### リクエストの全二重モードをチェック
+### リクエストの双方向通信モードをチェック
 
 ```js
 const stream = new ReadableStream({/* ... */});

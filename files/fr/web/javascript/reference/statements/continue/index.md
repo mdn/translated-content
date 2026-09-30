@@ -3,8 +3,6 @@ title: continue
 slug: Web/JavaScript/Reference/Statements/continue
 ---
 
-{{jsSidebar("Statements")}}
-
 L'instruction **`continue`** arrête l'exécution des instructions pour l'itération de la boucle courante ou de la boucle étiquetée. L'exécution est reprise à l'itération suivante.
 
 {{InteractiveExample("JavaScript Demo: Statement - Continue")}}

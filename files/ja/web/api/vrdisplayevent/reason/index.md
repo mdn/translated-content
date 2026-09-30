@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 **`reason`** は {{domxref("VRDisplayEvent")}} インターフェイスの読み取り専用プロパティで、イベントが発生した理由を人間可読な形で返します。
 

@@ -3,7 +3,7 @@ title: Время загрузки страницы и ресурсов
 slug: Web/Performance/Guides/Navigation_and_resource_timings
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
+{{QuickLinksWithSubPages("/ru/docs/Web/Performance")}}
 
 **Тайминги навигации (Navigation timings)** - это показатели, указывающие временные метки, в которые произошли события навигации. **Тайминги ресурсов (Resource timings)** - это детальные показатели по времени загрузки ресурсов.
 

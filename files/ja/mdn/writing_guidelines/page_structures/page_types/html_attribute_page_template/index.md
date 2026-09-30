@@ -60,7 +60,7 @@ HTML 属性は、特定の要素にのみ適用される**要素固有の属性*
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 >
-> {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+> {{SeeCompatTable}}{{Non-standard_Header}}
 >
 > まず、その属性と、その使い方について読者に説明します。
 > 例えば、**`name-of-the-attribute`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) describes or manipulates [insert usage description].

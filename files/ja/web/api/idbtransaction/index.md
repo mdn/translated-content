@@ -79,8 +79,6 @@ Firefox 40 以降、IndexedDB のトランザクションはパフォーマン�
 
 ## モード定数
 
-{{ deprecated_header(13) }}
-
 > [!WARNING]
 > これらの定数はもう利用可能ではありません。Gecko 25 で削除されました。かわりに、これらの文字列定数を直接使用するべきです。([Firefox バグ 888598](https://bugzil.la/888598))
 

@@ -3,8 +3,6 @@ title: Supérieur strict (>)
 slug: Web/JavaScript/Reference/Operators/Greater_than
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur supérieur strict (`>`) renvoie `true` si l'opérande gauche est strictement supérieur à l'opérande droit et `false` sinon.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Greater than operator")}}

@@ -3,8 +3,6 @@ title: Instructions
 slug: Web/JavaScript/Reference/Statements
 ---
 
-{{jsSidebar("Statements")}}
-
 Les applications JavaScript sont composées de plusieurs instructions organisées grâce à une syntaxe. Une instruction peut s'étaler sur plusieurs lignes et on peut avoir plusieurs instructions sur une seule ligne si chaque instruction est séparée de la suivante par un point-virgule.
 
 ## Instructions et déclarations, par catégorie

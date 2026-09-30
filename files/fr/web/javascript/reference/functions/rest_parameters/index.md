@@ -3,8 +3,6 @@ title: Paramètres du reste (Rest parameters)
 slug: Web/JavaScript/Reference/Functions/rest_parameters
 ---
 
-{{jsSidebar("Functions")}}
-
 Cette syntaxe permet de représenter un nombre indéfini d'arguments sous forme d'un tableau.
 
 {{InteractiveExample("JavaScript Demo: Functions Rest Parameters")}}

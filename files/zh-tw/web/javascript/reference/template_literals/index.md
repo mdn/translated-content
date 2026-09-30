@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Template_literals
 
 ## 語法
 
-```plain
+```js-nolint
 `string text`
 
 `string text line 1

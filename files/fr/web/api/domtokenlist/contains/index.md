@@ -5,7 +5,7 @@ slug: Web/API/DOMTokenList/contains
 
 {{APIRef("DOM")}}
 
-La méthode **`contains()`** de l'interface {{domxref("DOMTokenList")}} renvoie un {{domxref("Boolean")}} (_booléen_) — `true` (_vrai_) si la liste sous-jacente contient le symbole donné, sinon `false` (_faux_).
+La méthode **`contains()`** de l'interface {{domxref("DOMTokenList")}} renvoie un {{jsxref("Boolean")}} (_booléen_) — `true` (_vrai_) si la liste sous-jacente contient le symbole donné, sinon `false` (_faux_).
 
 ## Syntaxe
 
@@ -20,7 +20,7 @@ tokenList.contains(token);
 
 ### Valeur renvoyée
 
-Un {{domxref("Boolean")}} (_booléen_)— `true` (_vrai_) si la liste sous-jacente contient la marque donnée, sinon `false` (_faux_).
+Un {{jsxref("Boolean")}} (_booléen_)— `true` (_vrai_) si la liste sous-jacente contient la marque donnée, sinon `false` (_faux_).
 
 ## Exemples
 

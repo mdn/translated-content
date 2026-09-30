@@ -22,7 +22,7 @@ worker.postMessage(message, [transfer]);
 - _transfer_ {{optional_inline}}
   - : Необязательный [`array`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array) с передаваемыми ({{domxref("Transferable")}}) объектами (из тех, что были указаны в `message`) на которые передаются права собственности. Если право на объект передаётся, он становится непригодным (_neutered_) в контексте, из которого был отправлен, и становится доступным только в `worker`, которому он был отправлен.
 
-    Переданные (`transferable`) объекты могут быть экземплярами классов {{domxref("ArrayBuffer")}}, {{domxref("MessagePort")}} или {{domxref("ImageBitmap")}}. null не является допустимым значением для передачи прав.
+    Переданные (`transferable`) объекты могут быть экземплярами классов {{jsxref("ArrayBuffer")}}, {{domxref("MessagePort")}} или {{domxref("ImageBitmap")}}. null не является допустимым значением для передачи прав.
 
 ### Возвращаемое значение
 

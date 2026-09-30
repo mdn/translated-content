@@ -20,7 +20,12 @@ a::before {
 
 ## Синтаксис
 
-{{csssyntax}}
+```css-nolint
+::before {
+  content: /* value */;
+  /* properties */
+}
+```
 
 > [!NOTE]
 > В CSS3 появилась запись `::before` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Браузеры также поддерживают запись `:before`, введённую в CSS2.

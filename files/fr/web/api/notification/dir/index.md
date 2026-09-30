@@ -15,7 +15,7 @@ Notification.dir;
 
 ### Valeur
 
-Une {{domxref ("DOMString")}} spécifiant la direction du texte. Les valeurs possibles sont:
+Une {{jsxref("String")}} spécifiant la direction du texte. Les valeurs possibles sont:
 
 - `auto`: adopte le comportement de réglage de la langue du navigateur (par défaut).
 - `ltr`: de gauche à droite.

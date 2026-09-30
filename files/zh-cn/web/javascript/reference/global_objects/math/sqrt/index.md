@@ -26,7 +26,7 @@ console.log(calcHypotenuse(0, 0));
 
 ## 语法
 
-```plain
+```js-nolint
 Math.sqrt(x)
 ```
 

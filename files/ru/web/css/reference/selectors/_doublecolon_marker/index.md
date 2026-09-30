@@ -31,7 +31,11 @@ original_slug: Web/CSS/::marker
 
 ## Syntax
 
-{{CSSSyntax}}
+```css
+::marker {
+  /* ... */
+}
+```
 
 ## Examples
 

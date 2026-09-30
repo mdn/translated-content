@@ -15,13 +15,13 @@ let matrix = xrRigidTransform.matrix;
 
 ### 値
 
-{{domxref("XRRigidTransform.position", "position")}} プロパティと {{domxref("XRRigidTransform.orientation", "orientation")}} プロパティで記述される 4x4 変換行列を表す 16 個のエントリーを含む {{domxref("Float32Array")}}。
+{{domxref("XRRigidTransform.position", "position")}} プロパティと {{domxref("XRRigidTransform.orientation", "orientation")}} プロパティで記述される 4x4 変換行列を表す 16 個のエントリーを含む {{jsxref("Float32Array")}}。
 
 ## 使用上の注意
 
 ### 行列のフォーマット
 
-WebGL で使用されるすべての 4x4 変換行列は、16 要素の {{domxref("Float32Array")}} に格納されます。 値は、列優先の順序で配列に格納されます。 つまり、各列は上から下に向かって配列に書き込まれ、その後、1 つ右側の列に移動して、次の列が配列に書き込まれます。 したがって、配列 \[a0, a1, a2, ..., a13, a14, a15] の場合、行列は次のようになります。
+WebGL で使用されるすべての 4x4 変換行列は、16 要素の {{jsxref("Float32Array")}} に格納されます。 値は、列優先の順序で配列に格納されます。 つまり、各列は上から下に向かって配列に書き込まれ、その後、1 つ右側の列に移動して、次の列が配列に書き込まれます。 したがって、配列 \[a0, a1, a2, ..., a13, a14, a15] の場合、行列は次のようになります。
 
 <math display="block"><semantics><mrow><mo>[</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mtd><mtd><mi>a</mi><mo stretchy="false">[</mo><mn>4</mn><mo stretchy="false">]</mo></mtd><mtd><mi>a</mi><mo stretchy="false">[</mo><mn>8</mn><mo stretchy="false">]</mo></mtd><mtd><mi>a</mi><mo stretchy="false">[</mo><mn>12</mn><mo stretchy="false">]</mo></mtd></mtr><mtr><mtd><mi>a</mi><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mtd><mtd><mi>a</mi><mo stretchy="false">[</mo><mn>5</mn><mo stretchy="false">]</mo></mtd><mtd><mi>a</mi><mo stretchy="false">[</mo><mn>9</mn><mo stretchy="false">]</mo></mtd><mtd><mi>a</mi><mo stretchy="false">[</mo><mn>13</mn><mo stretchy="false">]</mo></mtd></mtr><mtr><mtd><mi>a</mi><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mtd><mtd><mi>a</mi><mo stretchy="false">[</mo><mn>6</mn><mo stretchy="false">]</mo></mtd><mtd><mi>a</mi><mo stretchy="false">[</mo><mn>10</mn><mo stretchy="false">]</mo></mtd><mtd><mi>a</mi><mo stretchy="false">[</mo><mn>14</mn><mo stretchy="false">]</mo></mtd></mtr><mtr><mtd><mi>a</mi><mo stretchy="false">[</mo><mn>3</mn><mo stretchy="false">]</mo></mtd><mtd><mi>a</mi><mo stretchy="false">[</mo><mn>7</mn><mo stretchy="false">]</mo></mtd><mtd><mi>a</mi><mo stretchy="false">[</mo><mn>11</mn><mo stretchy="false">]</mo></mtd><mtd><mi>a</mi><mo stretchy="false">[</mo><mn>15</mn><mo stretchy="false">]</mo></mtd></mtr><mtr><mtd></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\begin{bmatrix} a[0] &#x26; a[4] &#x26; a[8] &#x26; a[12]\\ a[1] &#x26; a[5] &#x26; a[9] &#x26; a[13]\\ a[2] &#x26; a[6] &#x26; a[10] &#x26; a[14]\\ a[3] &#x26; a[7] &#x26; a[11] &#x26; a[15]\\ \end{bmatrix}</annotation></semantics></math>
 

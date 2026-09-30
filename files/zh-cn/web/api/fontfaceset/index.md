@@ -26,7 +26,7 @@ slug: Web/API/FontFaceSet
 - {{domxref("FontFaceSet.add","FontFaceSet.add()")}}
   - : 向字体集添加一个字体。
 - {{domxref("FontFaceSet.check","FontFaceSet.check()")}}
-  - : 一个{{domxref("Boolean")}} 用于表示一个字体是否加载完成，但它不回初始化你的加载。
+  - : 一个{{jsxref("Boolean")}} 用于表示一个字体是否加载完成，但它不回初始化你的加载。
 - {{domxref("FontFaceSet.clear", "FontFaceSet.clear()")}}
   - : 移除字体集的所有字体。
 - {{domxref("FontFaceSet.delete","FontFaceSet.delete()")}}

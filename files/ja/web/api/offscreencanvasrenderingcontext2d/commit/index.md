@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ffff697fbd3004c3da50323ef4d868b3ad47e4d0
 ---
 
-{{APIRef("Canvas API")}}{{AvailableInWorkers}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}{{non-standard_header}}
 
 **`OffscreenCanvasRenderingContext2D.commit()`** は[キャンバス 2D API](/ja/docs/Web/API/OffscreenCanvasRenderingContext2D) のメソッドで、レンダリングコンテキストのビットマップを、関連付けられた `OffscreenCanvas` オブジェクトのプレースホルダー {{HtmlElement("canvas")}} 要素のビットマップにコピーするためのものでした。
 コピー操作は同期的に行われます。このメソッドを呼び出す必要はありません。転送はイベントループの実行中に自動的に行われるためです。

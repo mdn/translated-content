@@ -11,7 +11,7 @@ slug: Web/API/HTMLElement/contentEditable
 - `false` - содержимое элемента не доступно для редактирования.
 - `inherit` - наследуется значение данного свойства от родительского элемента.
 
-Вы можете использовать свойство {{domxref("HTMLElement.isContentEditable")}}, чтобы проверить {{domxref("Boolean")}} значение этого свойства.
+Вы можете использовать свойство {{domxref("HTMLElement.isContentEditable")}}, чтобы проверить {{jsxref("Boolean")}} значение этого свойства.
 
 ## Синтаксис
 

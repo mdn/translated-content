@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}{{AvailableInWorkers}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`cancelBubble`** は {{domxref("Event")}} インターフェイスのプロパティで、非推奨です。代わりに {{domxref("Event.stopPropagation()")}} を使用してください。
 イベントハンドラーから戻る前にこの値を `true` に設定すると、イベントの伝播を防ぐことができます。それ以降の実装では、この値を `false` に設定しても何も起こりません。

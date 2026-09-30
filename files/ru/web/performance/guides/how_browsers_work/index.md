@@ -3,7 +3,7 @@ title: Как работают браузеры
 slug: Web/Performance/Guides/How_browsers_work
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
+{{QuickLinksWithSubPages("/ru/docs/Web/Performance")}}
 
 Пользователи хотят использовать приложения, в которых загрузка контента происходит быстро, а взаимодействие - плавно. Разработчик должен стараться оптимизировать своё приложение как минимум по этим двум показателям.
 

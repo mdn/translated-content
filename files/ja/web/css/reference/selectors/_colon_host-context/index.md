@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-{{deprecated_header}}
-
 **`:host-context()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、シャドウホスト（シャドウルートを保有する要素）とその DOM 上の祖先のセレクターに基づいて、[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) 内の要素のスタイルを別々に設定することができます。
 
 通常、シャドウ DOM 内の要素は、その外部の DOM から分離されています。`:host-context()` を使用すると、このシャドウ DOM の「外側を覗き見」して、要素の親要素のいずれかが特定の CSS セレクターと一致するかどうかを確認することができます。例えば、`<body>` に `.dark-theme` クラスが適用されている場合、シャドウルート内の要素に別のテキストの色を適用することができます。

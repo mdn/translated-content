@@ -170,6 +170,6 @@ L'élément apparaît sous son ancre, même s'il est initialement positionné au
 - La propriété {{CSSxRef("position-try-order")}}
 - La règle {{CSSxRef("@position-try")}}
 - Le type de donnée {{CSSxRef("position-area_value", "&lt;position-area&gt;")}}
-- Le module [de positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
-- Le guide [d'utilisation du positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
+- Le module [de positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
+- Le guide [d'utilisation du positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
 - Le guide [des options de repli et de masquage conditionnel en cas de débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)

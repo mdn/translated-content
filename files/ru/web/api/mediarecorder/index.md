@@ -30,7 +30,7 @@ The **`MediaRecorder`** это интерфейс [MediaStream Recording API](/r
 ## Методы
 
 - {{domxref("MediaRecorder.canRecordMimeType()", "MediaRecorder.isTypeSupported()")}}
-  - : Возвращает {{domxref("Boolean")}} значение показывающее поддерживается ли MIME тип текущим user agent.
+  - : Возвращает {{jsxref("Boolean")}} значение показывающее поддерживается ли MIME тип текущим user agent.
 - {{domxref("MediaRecorder.pause()")}}
   - : Приостанавливает запись медиа.
 - {{domxref("MediaRecorder.requestData()")}}

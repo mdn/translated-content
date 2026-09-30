@@ -122,7 +122,7 @@ Cache-Control: stale-if-error=<秒數>
 
 對於那些不會更新的檔案，你可以在回應中使用下列這個激進的標頭。比如說用在圖片、CSS 檔案，以及 JavaScript 檔案。附帶一提，也可以看看 `Expires` 標頭。
 
-```plain
+```http
 Cache-Control: public, max-age=604800, immutable
 ```
 
@@ -131,11 +131,11 @@ Cache-Control: public, max-age=604800, immutable
 `no-cache`、`max-age=0, must-revalidate` 是同樣的意思。
 表示客戶端可以儲存資源，但使用它前必須做驗證。這表示每次都會發生 HTTP 請求，不過只要沒過期就不用下載完整內容
 
-```plain
+```http
 Cache-Control: no-cache
 ```
 
-```plain
+```http
 Cache-Control: max-age=0, must-revalidate
 ```
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
 ---
 
-{{APIRef("Web Audio API")}}{{Deprecated_Header}}
+{{APIRef("Web Audio API")}}
 
 {{domxref("ScriptProcessorNode")}} インターフェイスの `audioprocess` イベントは、スクリプトプロセッサーの入力バッファーが処理される準備ができた時発火します。
 

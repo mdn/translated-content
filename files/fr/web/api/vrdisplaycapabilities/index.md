@@ -12,13 +12,13 @@ Cet interface est accessible à partir de la propriété {{domxref("VRDisplay.ca
 ## Properties
 
 - {{domxref("VRDisplayCapabilities.canPresent")}} {{readonlyInline}}
-  - : Retourne un objet {{domxref("Boolean")}} qui décrit si l'écran RV est capable de présenter du contenu (e.g. en utilisant un visiocasque).
+  - : Retourne un objet {{jsxref("Boolean")}} qui décrit si l'écran RV est capable de présenter du contenu (e.g. en utilisant un visiocasque).
 - {{domxref("VRDisplayCapabilities.hasExternalDisplay")}} {{readonlyInline}}
-  - : Retourne un objet {{domxref("Boolean")}} indiquant si l'écran RV est séparé de l'écran primaire de l'appareil.
+  - : Retourne un objet {{jsxref("Boolean")}} indiquant si l'écran RV est séparé de l'écran primaire de l'appareil.
 - {{domxref("VRDisplayCapabilities.hasOrientation")}} {{readonlyInline}}
-  - : Retourne un objet {{domxref("Boolean")}} indiquant si l'écran RV peut suivre le mouvement de l'appareil et retourne de l'information sur l'orientation.
+  - : Retourne un objet {{jsxref("Boolean")}} indiquant si l'écran RV peut suivre le mouvement de l'appareil et retourne de l'information sur l'orientation.
 - {{domxref("VRDisplayCapabilities.hasPosition")}} {{readonlyInline}}
-  - : Retourne un objet {{domxref("Boolean")}} indiquant si l'écran RV peut suivre le mouvement de l'appareil et retourne de l'information sur l'orientation.
+  - : Retourne un objet {{jsxref("Boolean")}} indiquant si l'écran RV peut suivre le mouvement de l'appareil et retourne de l'information sur l'orientation.
 - {{domxref("VRDisplayCapabilities.maxLayers")}} {{readonlyInline}}
   - : Retourne un nombre indiquant le nombre maximal de {{domxref("VRLayer")}}s que l'écran RV peut présenter en même temps (e.g. la longueur maximale du tableau que {{domxref("Display.requestPresent()")}} peut accepter.)
 

@@ -331,13 +331,13 @@ LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR（对于一个有 16 帧的音频片段）
 你可以通过如下方法获取需要的音频数据：
 
 - {{domxref("AnalyserNode.getFloatFrequencyData()")}}
-  - : 返回一个{{domxref("Float32Array")}} 数组，其中包含传递到此音频节点声音的实时频率数据。
+  - : 返回一个{{jsxref("Float32Array")}} 数组，其中包含传递到此音频节点声音的实时频率数据。
 - {{domxref("AnalyserNode.getByteFrequencyData()")}}
-  - : 返回一个{{domxref("Uint8Array")}} 无符号字节数组 (unsigned byte array)，其中包含传递到此音频节点声音的实时频率数据。
+  - : 返回一个{{jsxref("Uint8Array")}} 无符号字节数组 (unsigned byte array)，其中包含传递到此音频节点声音的实时频率数据。
 - {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
-  - : 返回一个{{domxref("Float32Array")}} 数组，其中包含传递到此音频节点声音的实时波形，时间数据。
+  - : 返回一个{{jsxref("Float32Array")}} 数组，其中包含传递到此音频节点声音的实时波形，时间数据。
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
-  - : 返回一个{{domxref("Uint8Array")}} 无符号字节数组 (unsigned byte array)，其中包含传递到此音频节点声音的实时波形，时间数据。
+  - : 返回一个{{jsxref("Uint8Array")}} 无符号字节数组 (unsigned byte array)，其中包含传递到此音频节点声音的实时波形，时间数据。
 
 > [!NOTE]
 > 更多信息可以参考我们的这篇文章：[基于 Web Audio API 实现音频可视化效果](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)。

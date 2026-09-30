@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("DOM")}}{{Deprecated_header}}
+{{APIRef("DOM")}}
 
 **`CustomEvent.initCustomEvent()`** メソッドは {{domxref("CustomEvent")}} オブジェクトを初期化します。
 イベントが既に配信されている場合は、このメソッドは何もしません。

@@ -20,7 +20,7 @@ L'interface CSS est une interface et aucun objet de ce type ne peut être créé
 _Aucun héritage de méthode statique_.
 
 - {{domxref("CSS.supports()")}}
-  - : Retourne un {{domxref("Boolean")}} qui indique si la paire _propriété/valeur_, ou si la condition, passée en paramètre est supportée.
+  - : Retourne un {{jsxref("Boolean")}} qui indique si la paire _propriété/valeur_, ou si la condition, passée en paramètre est supportée.
 
 <!---->
 

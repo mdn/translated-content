@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 **`DOMError`** インターフェイスは、エラー名を含んでいるエラーオブジェクトを表します。
 

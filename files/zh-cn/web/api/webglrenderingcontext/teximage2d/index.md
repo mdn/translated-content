@@ -186,7 +186,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 
 - `pixels`
   - : 下列对象之一可以用作纹理的像素源：
-    - {{domxref("ArrayBufferView")}},
+    - {{jsxref("TypedArray")}},
       - {{jsxref("Uint8Array")}} 如果 `type` 是 `gl.UNSIGNED_BYTE`则必须使用
       - {{jsxref("Uint16Array")}} 如果 `type` 是 `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`, `gl.UNSIGNED_SHORT_5_5_5_1`, `gl.UNSIGNED_SHORT` 或`ext.HALF_FLOAT_OES`则必须使用
       - {{jsxref("Uint32Array")}} 如果`type` 是 `gl.UNSIGNED_INT` 或`ext.UNSIGNED_INT_24_8_WEBGL`则必须使用

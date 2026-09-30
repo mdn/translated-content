@@ -62,7 +62,7 @@ FileReader FileReader();
 - {{domxref("FileReader.abort()")}}
   - : Отмена операции чтения. После вызова, значение `readyState` станет равным `DONE`.
 - {{domxref("FileReader.readAsArrayBuffer()")}}
-  - : Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут `result` будет содержать данные файла в виде {{domxref("ArrayBuffer")}}.
+  - : Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут `result` будет содержать данные файла в виде {{jsxref("ArrayBuffer")}}.
 - {{domxref("FileReader.readAsBinaryString()")}}
   - : Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут `result` будет содержать бинарные данные файла в виде строки.
 - {{domxref("FileReader.readAsDataURL()")}}

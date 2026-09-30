@@ -4,8 +4,6 @@ slug: Web/XML/XSLT/Reference/Element/template
 original_slug: Web/XSLT/Element/template
 ---
 
-{{XsltSidebar}}
-
 L'élément `<xsl:template>` définit un modèle produisant une sortie. Au moins l'un des atttributs match et set doit posséder une valeur.
 
 ### Syntaxe

@@ -1,19 +1,18 @@
 ---
 title: AsyncGenerator.prototype.next()
+short-title: next()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/next
 l10n:
-  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`next()`** メソッドは、シーケンス内の次の値を返します。
+**`next()`** は {{jsxref("AsyncGenerator")}} インスタンスのメソッドで、シーケンス内の次の値を返します。
 
 ## 構文
 
 ```js-nolint
-asyncGeneratorObject.next()
-asyncGeneratorObject.next(value)
+next()
+next(value)
 ```
 
 ### 引数
@@ -36,7 +35,7 @@ asyncGeneratorObject.next(value)
 
 ### next() の使用
 
-次の例は、単純なジェネレーターと `next` メソッドが返すオブジェクトを示しています。
+次の例は、ジェネレーターと `next` メソッドが返すオブジェクトを示しています。
 
 ```js
 // 非同期タスクです。実際にはもっと有益なことを使用していることを
@@ -106,4 +105,4 @@ main();
 ## 関連情報
 
 - {{jsxref("Statements/async_function*", "async function*")}}
-- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)ガイド

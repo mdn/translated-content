@@ -36,7 +36,11 @@ original_slug: Web/CSS/::cue
 
 ## Синтаксис
 
-{{CSSSyntax}}
+```css-nolint
+::cue | ::cue(<selector>) {
+  /* ... */
+}
+```
 
 ## Пример
 

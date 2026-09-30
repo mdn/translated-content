@@ -6,27 +6,27 @@ l10n:
   sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
-[Le positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) inclut des mécanismes pour fournir des [options de repli](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding). Ce sont des positions alternatives que le navigateur peut essayer de placer pour un élément positionné par ancre, par rapport à son ancre, afin de le remettre à l'écran si l'élément positionné commence à déborder de la zone d'affichage (<i lang="en">viewport</i> en anglais).
+[Le positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) inclut des mécanismes pour fournir des [options de repli](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding). Ce sont des positions alternatives que le navigateur peut essayer de placer pour un élément positionné par une ancre, par rapport à son ancre, afin de le remettre à l'écran si l'élément positionné commence à déborder de la zone d'affichage (<i lang="en">viewport</i> en anglais).
 
-**Les requêtes de conteneurs ancrés** augmentent encore l'utilité des options de repli du positionnement par ancre en permettant un style différent de l'élément positionné par ancre, en fonction de la position de repli dans laquelle il est placé. Ce guide montre comment utiliser les requêtes de conteneurs ancrés et fournit quelques exemples.
+**Les requêtes de conteneurs ancrés** augmentent encore l'utilité des options de repli du positionnement par une ancre en permettant un style différent de l'élément positionné par une ancre, en fonction de la position de repli dans laquelle il est placé. Ce guide montre comment utiliser les requêtes de conteneurs ancrés et fournit quelques exemples.
 
 > [!NOTE]
-> Pour des informations sur les principes de base du positionnement par ancre CSS, voir [Utiliser le positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
+> Pour des informations sur les principes de base du positionnement par une ancre CSS, voir [Utiliser le positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
 
 ## Résumé des fonctionnalités
 
-Lors du positionnement d'une infobulle (<i lang="en">tooltip</i> en anglais) par rapport à un élément d'interface utilisateur en utilisant le positionnement par ancre, il est utile de fournir des options de repli `position-try`, avec la propriété {{CSSxRef("position-try-fallbacks")}}. Celles-ci peuvent être utilisées pour garantir que l'infobulle reste affichée à l'écran aussi longtemps que possible.
+Lors du positionnement d'une infobulle (<i lang="en">tooltip</i> en anglais) par rapport à un élément d'interface utilisateur en utilisant le positionnement par une ancre, il est utile de fournir des options de repli `position-try`, avec la propriété {{CSSxRef("position-try-fallbacks")}}. Celles-ci peuvent être utilisées pour garantir que l'infobulle reste affichée à l'écran aussi longtemps que possible.
 
 Par exemple, si l'infobulle est placée au-dessus de l'élément d'interface utilisateur auquel elle est ancrée par défaut, si l'utilisateur·ice fait défiler vers le haut, vous pouvez utiliser des options de repli pour déplacer l'infobulle en dessous de l'élément juste avant qu'elle ne sorte de l'écran.
 
-Un problème que cela ne résout pas à lui seul est la mise à jour du style de l'élément positionné par ancre pour s'adapter aux différentes options de repli. Par exemple, il est courant d'inclure une petite flèche sur l'infobulle qui pointe vers l'élément d'ancrage auquel elle est associée, améliorant l'expérience utilisateur·ice en rendant l'association visuelle plus claire. Lorsque l'infobulle se déplace vers une position différente, la position et l'orientation de la flèche doivent également changer, sinon cela donne un rendu incorrect.
+Un problème que cela ne résout pas à lui seul est la mise à jour du style de l'élément positionné par une ancre pour s'adapter aux différentes options de repli. Par exemple, il est courant d'inclure une petite flèche sur l'infobulle qui pointe vers l'élément d'ancrage auquel elle est associée, améliorant l'expérience utilisateur·ice en rendant l'association visuelle plus claire. Lorsque l'infobulle se déplace vers une position différente, la position et l'orientation de la flèche doivent également changer, sinon cela donne un rendu incorrect.
 
-Pour résoudre ce problème, vous pouvez utiliser les requêtes de conteneurs ancrés. Celles-ci étendent la fonctionnalité des [requêtes de conteneurs CSS](/fr/docs/Web/CSS/Guides/Containment/Container_queries) pour vous permettre de détecter lorsqu'une option de repli spécifique est appliquée à un élément positionné par ancre, et d'appliquer du CSS à ses descendants en conséquence. Plus précisément, les requêtes de conteneurs ancrés reposent sur deux fonctionnalités&nbsp;:
+Pour résoudre ce problème, vous pouvez utiliser les requêtes de conteneurs ancrés. Celles-ci étendent la fonctionnalité des [requêtes de conteneurs CSS](/fr/docs/Web/CSS/Guides/Containment/Container_queries) pour vous permettre de détecter lorsqu'une option de repli spécifique est appliquée à un élément positionné par une ancre, et d'appliquer du CSS à ses descendants en conséquence. Plus précisément, les requêtes de conteneurs ancrés reposent sur deux fonctionnalités&nbsp;:
 
-- La propriété {{CSSxRef("container-type")}} avec la valeur `anchored`&nbsp;: Appliquez ceci à l'élément positionné par ancre pour commencer à détecter quand différentes options de repli sont appliquées.
+- La propriété {{CSSxRef("container-type")}} avec la valeur `anchored`&nbsp;: Appliquez ceci à l'élément positionné par une ancre pour commencer à détecter quand différentes options de repli sont appliquées.
 - La règle {{CSSxRef("@container")}} avec la fonction `anchored()`&nbsp;: Celle-ci reçoit un descripteur [`fallback`](/fr/docs/Web/CSS/Reference/At-rules/@container#fallback) comme argument. La valeur du descripteur est une valeur `position-try-fallbacks`.
 
-Par exemple, disons que nous avons un élément d'infobulle positionné par ancre qui est positionné au-dessus de son ancre par défaut avec une valeur {{CSSxRef("position-area")}} qui est `top`, mais qui a une valeur {{CSSxRef("position-try-fallbacks")}} définie à `flip-block`. Cela provoque le basculement de l'infobulle dans le sens du bloc vers le bas de son ancrage lorsqu'elle commence à déborder du haut de la zone d'affichage. Si nous voulons détecter quand le repli est appliqué à l'infobulle, nous devons d'abord définir `container-type: anchored` dessus pour le transformer en requête de conteneur ancré.
+Par exemple, disons que nous avons un élément d'infobulle positionné par une ancre qui est positionné au-dessus de son ancre par défaut avec une valeur {{CSSxRef("position-area")}} qui est `top`, mais qui a une valeur {{CSSxRef("position-try-fallbacks")}} définie à `flip-block`. Cela provoque le basculement de l'infobulle dans le sens du bloc vers le bas de son ancrage lorsqu'elle commence à déborder du haut de la zone d'affichage. Si nous voulons détecter quand le repli est appliqué à l'infobulle, nous devons d'abord définir `container-type: anchored` dessus pour le transformer en requête de conteneur ancré.
 
 ```css
 .infobulle {
@@ -53,7 +53,7 @@ Le test de requête — `anchored(fallback: flip-block)` — retourne vrai (`tru
 
 ## Exemple d'utilisation simple
 
-Cet exemple inclut un élément d'ancre qui a une boîte d'information (<i lang="en">infobox</i> en anglais) positionnée par rapport à lui.
+Cet exemple inclut un élément d'ancrage qui a une boîte d'information (<i lang="en">infobox</i> en anglais) positionnée par rapport à lui.
 Initialement, la boîte d'information est positionnée au-dessus de l'ancre et inclut une flèche pointant vers le bas vers l'ancre. Nous incluons un repli de position afin que la boîte d'information se déplace en dessous de l'ancre lorsque le contenu défile suffisamment pour que la boîte d'information commence à sortir du haut de la fenêtre. De plus, nous utilisons une requête de conteneur ancrée pour changer les styles une fois que le repli est activé, déplaçant la flèche et la pointant vers le haut à la place.
 
 L'ancre et la boîte d'information sont représentées par deux éléments HTML {{HTMLElement("div")}}, comme indiqué ci-dessous. Ils sont entourés de contenu textuel dans le rendu final pour provoquer le défilement de la page, mais nous l'avons caché pour plus de concision&nbsp;:
@@ -114,7 +114,7 @@ L'ancre et la boîte d'information sont représentées par deux éléments HTML 
 </p>
 ```
 
-Dans notre CSS, nous commençons par définir le `<div>` d'ancre comme un élément d'ancre en lui donnant un {{CSSxRef("anchor-name")}} de `--mon-ancre`.
+Dans notre CSS, nous commençons par définir le `<div>` d'ancrage comme un élément d'ancrage en lui donnant un {{CSSxRef("anchor-name")}} de `--mon-ancre`.
 
 ```css hidden live-sample___basic-example
 * {
@@ -181,7 +181,7 @@ p {
 }
 ```
 
-Ensuite, nous donnons au `<div>` `boite-information` une valeur de {{CSSxRef("position")}} à `fixed` et une valeur {{CSSxRef("position-anchor")}} de `--mon-ancre` pour l'associer à l'élément d'ancre. Nous donnons ensuite à la boîte d'information une valeur {{CSSxRef("position-area")}} de `top` pour la positionner au-dessus de l'élément d'ancre et une valeur {{CSSxRef("position-try-fallbacks")}} de `bottom` afin que la boîte d'information soit déplacée en dessous de l'ancre lorsqu'elle commence à déborder du haut de la fenêtre lors du défilement du contenu vers le haut.
+Ensuite, nous donnons au `<div>` `boite-information` une valeur de {{CSSxRef("position")}} à `fixed` et une valeur {{CSSxRef("position-anchor")}} de `--mon-ancre` pour l'associer à l'élément d'ancrage. Nous donnons ensuite à la boîte d'information une valeur {{CSSxRef("position-area")}} de `top` pour la positionner au-dessus de l'élément d'ancrage et une valeur {{CSSxRef("position-try-fallbacks")}} de `bottom` afin que la boîte d'information soit déplacée en dessous de l'ancre lorsqu'elle commence à déborder du haut de la fenêtre lors du défilement du contenu vers le haut.
 
 Enfin, nous définissons une valeur de {{CSSxRef("container-type")}} à `anchored` sur la boîte d'information pour la désigner comme un conteneur de requêtes ancrées, ce qui signifie que nous pouvons maintenant détecter quand différents `position-try-fallbacks` sont actifs sur la boîte d'information avec la règle {{CSSxRef("@container")}}, et mettre à jour les styles de ses descendants en conséquence.
 
@@ -226,11 +226,11 @@ L'exemple ressemble à ceci&nbsp;:
 
 Essayez de faire défiler la démonstration afin que l'ancre se rapproche du haut de la fenêtre et notez comment, non seulement la boîte d'information se déplace sous l'ancre pour rester à l'écran, mais le style se met également à jour afin que l'icône de flèche fonctionne toujours pour la nouvelle position de la boîte d'information.
 
-Si vous faites défiler l'ancre vers le bas de la fenêtre, la boîte d'information remonte au-dessus de celle-ci. Nous n'avons pas besoin de définir une valeur supplémentaire `position-try-fallbacks` de `top` pour y parvenir, car `position-area: top` est la position par défaut de la boîte d'information. Si les replis fournis n'empêchent pas l'élément positionné par ancre de déborder, le navigateur revient à sa position par défaut.
+Si vous faites défiler l'ancre vers le bas de la fenêtre, la boîte d'information remonte au-dessus de celle-ci. Nous n'avons pas besoin de définir une valeur supplémentaire `position-try-fallbacks` de `top` pour y parvenir, car `position-area: top` est la position par défaut de la boîte d'information. Si les replis fournis n'empêchent pas l'élément positionné par une ancre de déborder, le navigateur revient à sa position par défaut.
 
 ## Exemple de repli multiples
 
-Cet exemple montre plusieurs replis de position et des requêtes de conteneur ancrées en action, et aborde également le problème de ce qu'il faut faire si vous souhaitez utiliser des requêtes de conteneur ancrées pour définir des styles sur l'élément positionné par ancre lui-même, plutôt que sur ses descendants, en utilisant un élément englobant supplémentaire. L'exemple inclut également un peu de JavaScript qui vous permet de déplacer l'élément ancre autour de l'écran en utilisant la souris ou le clavier pour vérifier les différents replis.
+Cet exemple montre plusieurs replis de position et des requêtes de conteneur ancrées en action, et aborde également le problème de ce qu'il faut faire si vous souhaitez utiliser des requêtes de conteneur ancrées pour définir des styles sur l'élément positionné par une ancre lui-même, plutôt que sur ses descendants, en utilisant un élément englobant supplémentaire. L'exemple inclut également un peu de JavaScript qui vous permet de déplacer l'élément ancre autour de l'écran en utilisant la souris ou le clavier pour vérifier les différents replis.
 
 Le HTML de cet exemple inclut deux éléments HTML {{HTMLElement("div")}} pour représenter l'ancre et la boîte d'information. Le `<div>` de classe `ancre` inclut un attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) pour le rendre accessible au clavier, tandis que le `<div>` de classe `boite-information` inclut un élément englobant `<div>` supplémentaire pour appliquer les styles de la boîte d'information, afin que nous puissions le mettre en forme avec la règle `@container`.
 
@@ -406,7 +406,7 @@ Cet exemple s'affiche ainsi&nbsp;:
 
 {{EmbedLiveSample("multiple-fallbacks", "100%", 350)}}
 
-Essayez de déplacer l'élément d'ancre autour de la zone d'affichage en procédant ainsi&nbsp;:
+Essayez de déplacer l'élément d'ancrage autour de la zone d'affichage en procédant ainsi&nbsp;:
 
 - En cliquant avec la souris (ou en touchant l'écran si vous êtes sur un appareil tactile) à l'endroit où vous souhaitez déplacer l'ancre.
 - En utilisant les touches <kbd>Z</kbd>, <kbd>Q</kbd>, <kbd>S</kbd> et <kbd>D</kbd> pour déplacer l'ancre vers le haut, la gauche, le bas et la droite, respectivement.
@@ -418,5 +418,5 @@ Lorsque vous rapprochez l'élément ancre des bords de l'écran, notez comment l
 - [Requêtes de conteneurs CSS](/fr/docs/Web/CSS/Guides/Containment/Container_queries)
 - [Utiliser les requêtes de taille et de style du conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
 - [Utiliser les requêtes d'état de défilement du conteneur](/fr/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)
-- Le module [de positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
+- Le module [de positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
 - [Apprendre&nbsp;: positionnement CSS](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning)

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: e8e22a6e6d6455222c8c1a1e1346a149d300ab35
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 **`HTMLAllCollection`** インターフェイスは文書のすべての要素の集合を表します。（配列風の）インデックスと要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) によってアクセスします。これは {{domxref("document.all")}} プロパティで返されます。
 

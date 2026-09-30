@@ -3,8 +3,6 @@ title: Fonctions fléchées
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
 
-{{jsSidebar("Functions")}}
-
 Une **expression de fonction fléchée** (_arrow function_ en anglais) permet d'avoir une syntaxe plus courte que [les expressions de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function) et ne possède pas ses propres valeurs pour [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments), [`super`](/fr/docs/Web/JavaScript/Reference/Operators/super), ou [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target). Les fonctions fléchées sont souvent [anonymes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name) et ne sont pas destinées à être utilisées pour déclarer des méthodes.
 
 {{InteractiveExample("JavaScript Demo: Functions =>")}}

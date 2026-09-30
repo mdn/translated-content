@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{Deprecated_Header}}
-
 **`mathsize`** は[グローバル属性](/ja/docs/Web/MathML/Reference/Global_attributes)で、MathML 要素の[フォントサイズ](/ja/docs/Web/CSS/Reference/Properties/font-size)を設定します。
 
 > [!NOTE]

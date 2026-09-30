@@ -10,7 +10,7 @@ l10n:
 
 **`random()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、指定された範囲内でランダムな値を生成します。また、必要に応じて、その範囲内の値を指定された増分の間隔の値に制限することもできます。これは、{{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;frequency&gt;")}}、{{cssxref("angle")}}、{{CSSxRef("&lt;time&gt;")}}、 {{CSSxRef("&lt;resolution&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;integer&gt;")}} をプロパティ値内で指定する際に使用できます。
 
-{{InteractiveExample("CSS Demo: random()")}}
+{{InteractiveExample("CSS デモ: random()")}}
 
 ```html interactive-example
 <div class="box"></div>

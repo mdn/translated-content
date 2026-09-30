@@ -24,7 +24,11 @@ Veja {{Cssxref(":nth-child")}} para uma explicação mais detalhada de sua sinta
 
 ### Sintaxe formal
 
-{{csssyntax}}
+```css-nolint
+:nth-of-type(<An+B> | even | odd) {
+  /* ... */
+}
+```
 
 ## Exemplos
 

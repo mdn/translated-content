@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 **`VRStageParameters`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで，ルームスケール体験に対応している機器用にステージエリアを記述する値を表現しています。
 

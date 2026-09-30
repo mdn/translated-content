@@ -3,8 +3,6 @@ title: callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
 ---
 
-{{jsSidebar("Functions")}}
-
 La propriété **`arguments.callee`** contient la fonction en cours d'exécution.
 
 ## Description

@@ -3,17 +3,15 @@ title: CSS `font-width` プロパティ
 short-title: font-width
 slug: Web/CSS/Reference/Properties/font-width
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: f8759faac983abbcd8276fd45ae881bb39efdf7a
 ---
-
-{{SeeCompatTable}}
 
 > [!NOTE]
 > `font-width` プロパティは、古い別名である {{cssxref("font-stretch")}} の新しい置き換えです。`font-width` は仕様書の推奨される名前ですが、`font-stretch` のほうが今のところより広くブラウザーが対応しています。詳しくは[フォールバックの例](#font-stretch_による代替の提供)と[ブラウザーの互換性](#ブラウザーの互換性)の表を参照してください。
 
 **`font-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントから通常、圧縮、引き伸ばしのフェイスを選択します。
 
-{{InteractiveExample("CSS Demo: font-width")}}
+{{InteractiveExample("CSS デモ: font-width")}}
 
 ```css interactive-example-choice
 font-width: condensed;
@@ -92,9 +90,9 @@ font-width: revert-layer;
 font-width: unset;
 ```
 
-このプロパティは、単一のキーワードまたは単一の {{cssxref("&lt;percentage&gt;")}} 値として指定することができます。
-
 ### 値
+
+このプロパティは、以下のいずれかの単一の値で指定します。
 
 - `normal`
   - : 通常体のフォントフェイスを指定します。

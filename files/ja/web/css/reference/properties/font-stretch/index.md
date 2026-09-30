@@ -1,8 +1,9 @@
 ---
-title: font-stretch
+title: "`font-stretch` プロパティ (CSS)"
+short-title: font-stretch
 slug: Web/CSS/Reference/Properties/font-stretch
 l10n:
-  sourceCommit: 3c91c067a4d36b532a4bce72e5d8a2c5a9279db5
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 > [!NOTE]
@@ -89,9 +90,9 @@ font-stretch: revert-layer;
 font-stretch: unset;
 ```
 
-このプロパティは、単一のキーワードまたは単一の {{cssxref("&lt;percentage&gt;")}} 値として指定することができます。
-
 ### 値
+
+このプロパティは、以下のリストにある単一の値として指定します。
 
 - `normal`
   - : 通常体のフォントフェイスを指定します。

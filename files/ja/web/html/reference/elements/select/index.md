@@ -66,7 +66,7 @@ select {
 
 ## 使用上の注意
 
-通常、他のフォームコントロールと同様、`<select>` 要素には、アクセシビリティ上の理由から {{htmlelement(「label」)}} が関連付けられるほか、サーバーに送信される関連データ項目の名前を表す `name` 属性も指定されます。それぞれのメニューの選択肢は、`<select>` 要素内に含まれる {{htmlelement("option")}} 要素によって定義されます。
+通常、他のフォームコントロールと同様、`<select>` 要素には、アクセシビリティ上の理由から {{htmlelement("label")}} が関連付けられるほか、サーバーに送信される関連データ項目の名前を表す `name` 属性も指定されます。それぞれのメニューの選択肢は、`<select>` 要素内に含まれる {{htmlelement("option")}} 要素によって定義されます。
 
 それぞれの `<option>` 要素には、選択肢が選択されたときにサーバーに送信するデータの値を持つ [`value`](/ja/docs/Web/HTML/Reference/Elements/option#value) 属性があります。 `value` 属性が含まれていない場合は、デフォルトで要素の中に含まれるテキストの値が使用されます。 [`selected`](/ja/docs/Web/HTML/Reference/Elements/option#selected) 属性を`<option>` 要素に設定することで、ページが最初に読み込まれたときにデフォルトで選択状態にすることができます。 `selected` 属性が指定されていない場合、最初の `<option>` 要素がデフォルトで選択されます。
 

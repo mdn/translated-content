@@ -20,7 +20,7 @@ console.log(view.getUint8(1));
 
 ## 语法
 
-```plain
+```js-nolint
 dataview.setUint8(byteOffset, value)
 ```
 

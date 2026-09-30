@@ -3,8 +3,6 @@ title: Affectation après division (/=)
 slug: Web/JavaScript/Reference/Operators/Division_assignment
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur de division et d'affectation (`/=`) divise la variable fournie par l'opérande gauche par la valeur indiquée par l'opérande droit puis affecte le résultat à la variable représentée par l'opérande gauche.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Division assignment operator")}}

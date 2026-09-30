@@ -121,7 +121,7 @@ Cette propriété est définie comme un ou deux des mot-clés suivants&nbsp;:
 - `stretch`
   - : Si la somme des dimensions des éléments sur l'axe perpendiculaire à l'axe principal est inférieure à la dimension du conteneur et que l'élément est dimensionné automatiquement, celui-ci est agrandi (tout en respectant les éventuelles contraintes dictées par {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} ou autres) afin que l'ensemble des éléments remplissent le conteneur sur cet axe.
 - `anchor-center`
-  - : Dans le cas des éléments [positionnés par ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning), aligne l'élément au centre de l'élément ancre associé dans la direction de bloc. Voir [Centrer sur l'ancre avec `anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_avec_anchor-center).
+  - : Dans le cas des éléments [positionnés par une ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning), aligne l'élément au centre de l'élément ancre associé dans la direction de bloc. Voir [Centrer sur l'ancre avec `anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_avec_anchor-center).
 - `safe`
   - : Si la taille d'un élément dépasse du conteneur avec l'alignement fourni par la valeur, l'élément est en réalité aligné comme si la valeur `start` avait été utilisée.
 - `unsafe`

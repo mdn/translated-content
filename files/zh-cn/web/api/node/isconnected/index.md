@@ -5,7 +5,7 @@ slug: Web/API/Node/isConnected
 
 {{APIRef("DOM")}}
 
-**`isConnected`** 是 {{domxref("Node")}} 的一个只读属性接口。无论节点是否与 DOM 树连接，该属性都会返回一个{{domxref("Boolean", "布尔值")}}。例如：{{domxref("Document")}} 对象与一般 DOM 树连接，{{domxref("ShadowRoot")}} 与 shadow DOM 连接。
+**`isConnected`** 是 {{domxref("Node")}} 的一个只读属性接口。无论节点是否与 DOM 树连接，该属性都会返回一个{{jsxref("Boolean", "布尔值")}}。例如：{{domxref("Document")}} 对象与一般 DOM 树连接，{{domxref("ShadowRoot")}} 与 shadow DOM 连接。
 
 ## 语法
 
@@ -15,7 +15,7 @@ var isItConnected = nodeObjectInstance.isConnected
 
 ### 返回值
 
-返回 {{domxref("Boolean", "布尔值")}} — 如果该节点与 DOM 树连接则返回 `true`, 否则返回 `false`。
+返回 {{jsxref("Boolean", "布尔值")}} — 如果该节点与 DOM 树连接则返回 `true`, 否则返回 `false`。
 
 ## 样例
 

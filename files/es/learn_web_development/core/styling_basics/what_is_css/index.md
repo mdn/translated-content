@@ -25,7 +25,7 @@ Hemos aprendido los conceptos básicos de CSS, para qué sirve y cómo escribir 
           >trabajar con archivos</a
         >
         y conceptos básicos de HTML (véase
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">Introducción a HTML</a
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content">Introducción a HTML</a
         >).
       </td>
     </tr>

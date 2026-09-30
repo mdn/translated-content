@@ -3,8 +3,6 @@ title: OU binaire (|)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur OU binaire (`|`) renvoie un nombre dont la représentation binaire est une séquence de bits où il y a un `1` pour chaque position où au moins un des bits des deux opérandes vaut `1`.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Bitwise OR")}}

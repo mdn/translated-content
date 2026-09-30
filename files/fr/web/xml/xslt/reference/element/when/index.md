@@ -4,8 +4,6 @@ slug: Web/XML/XSLT/Reference/Element/when
 original_slug: Web/XSLT/Element/when
 ---
 
-{{XsltSidebar}}
-
 L'élément `<xsl:when>` apparaît toujours dans un élément `<xsl:choose>`, et se comporte comme une structure conditionelle 'case'.
 
 ### Syntaxe

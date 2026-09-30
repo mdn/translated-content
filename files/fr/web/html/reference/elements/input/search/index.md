@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="search">`
 short-title: <input type="search">
 slug: Web/HTML/Reference/Elements/input/search
 l10n:
-  sourceCommit: 1474534461893381d54c502e655f334b5568e597
+  sourceCommit: 8a13259a44523cd17b4fe347088b62c6d7a35265
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`search`** sont des champs de texte conçus pour que l'utilisateur·ice puisse saisir des requêtes de recherche. Ils sont fonctionnellement identiques aux champs [`text`](/fr/docs/Web/HTML/Reference/Elements/input/text), mais peuvent être mis en forme différemment par {{Glossary("user agent", "l'agent utilisateur")}}.
@@ -33,7 +33,7 @@ label {
 
 ## Valeur
 
-L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) contient une chaîne de caractères représentant la valeur contenue dans le champ de recherche. Vous pouvez récupérer cette valeur en utilisant la propriété [`HTMLInputElement.value`](/fr/docs/Web/API/HTMLInputElement/value) en JavaScript.
+L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) contient une chaîne de caractères représentant la valeur contenue dans le champ de recherche. Vous pouvez récupérer cette valeur en utilisant la propriété {{DOMxRef("HTMLInputElement.value")}} en JavaScript.
 
 ```js
 termesRecherche = monChampSearch.value;
@@ -215,7 +215,7 @@ Voici le résultat obtenu grâce à ce fragment HTML&nbsp;:
 Il n'y a aucune différence visuelle avec l'exemple précédent mais avec cette deuxième version, les personnes qui utilisent un lecteur d'écran disposent de plus d'informations.
 
 > [!NOTE]
-> Voir [Panneaux/points de repère](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics#signpostslandmarks) pour plus d'informations à propos de ces fonctionnalités relatives à l'accessibilité.
+> Voir [Panneaux/points de repère](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics#panneauxpoints_de_repère) pour plus d'informations à propos de ces fonctionnalités relatives à l'accessibilité.
 
 ### Paramétrer la taille physique
 
@@ -264,7 +264,7 @@ input:valid ~ span::after {
 }
 ```
 
-Vous pouvez ici voir qu'on utilise un élément {{HTMLElement("span")}} placé après l'élément de formulaire, qui sert de conteneur pour les icônes. Cela était nécessaire, car certains types d'éléments de saisie, sur certains navigateurs, n'affichent pas correctement les icônes placées directement après eux.
+Vous pouvez ici voir qu'on utilise un élément {{HTMLElement("span")}} placé après l'élément de formulaire, qui sert de conteneur pour les icônes. C'est nécessaire, car certains types d'éléments de saisie, sur certains navigateurs, n'affichent pas correctement les icônes placées directement après eux.
 
 ### Rendre le champ obligatoire
 
@@ -492,7 +492,7 @@ button {
   flex: 1;
   height: 30px;
   padding: 0 1em;
-  background: #333;
+  background: #333333;
   border: 0;
   color: white;
 }

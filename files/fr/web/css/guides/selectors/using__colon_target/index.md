@@ -10,7 +10,7 @@ Afin d'aider à identifier la destination d'un lien qui mène vers une portion s
 
 La pseudo-classe {{cssxref(":target")}} permet de mettre en forme l'élément ciblé par le fragment d'identifiant de l'URL du document. Ainsi l'URL `https://developer.mozilla.org/fr/docs/Utiliser_la_pseudo-classe_:target_dans_un_selecteur#Exemple` contient le fragment d'identifiant `#Exemple`. En HTML, les identifiants correspondent aux valeurs des attributs `id` et `name`, puisque les deux partagent le même espace de nommage. Ainsi l'URL dans l'exemple devrait pointer vers le titre « Exemple » de ce document.
 
-Imaginons qu'on souhaite mettre en forme n'importe quel élément {{HTMLElement("h2")}} qui serait la cible de l'URL mais qu'on ne souhaite pas qu'un autre type d'élément ait un style particulier lorsqu'il est ciblé. On peut obtenir cet effet assez simplement :
+Imaginons qu'on souhaite mettre en forme n'importe quel élément `{{htmlelement("Heading_Elements", "&lt;h2&gt;")}}` qui serait la cible de l'URL mais qu'on ne souhaite pas qu'un autre type d'élément ait un style particulier lorsqu'il est ciblé. On peut obtenir cet effet assez simplement :
 
 ```css
 h2:target {

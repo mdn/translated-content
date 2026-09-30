@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{ApiRef}} {{Deprecated_Header}}
+{{ApiRef}}
 
 **`Navigator.vendorSub`** プロパティの値は、どのブラウザーでも常に空文字列です。
 

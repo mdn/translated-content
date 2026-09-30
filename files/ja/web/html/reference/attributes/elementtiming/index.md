@@ -1,12 +1,10 @@
 ---
-title: "HTML 属性: elementtiming"
+title: "`elementtiming` 属性 (HTML)"
 short-title: elementtiming
 slug: Web/HTML/Reference/Attributes/elementtiming
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
-
-{{HTMLSidebar}}
 
 **`elementtiming`** 属性は、ある要素が {{domxref("PerformanceObserver")}} オブジェクトで `"element"` 型を使用したものによる追跡のためのフラグを立てていることを示すために使用されます。詳細は、 {{domxref("PerformanceElementTiming")}} インターフェイスを参照してください。
 
@@ -14,7 +12,7 @@ l10n:
 
 DOM では、この属性は {{domxref("Element.elementTiming")}} として反映されます。
 
-## 使用方法
+## 使い方のメモ
 
 `elementtiming` に指定された値は、観測された要素の識別子になります。
 

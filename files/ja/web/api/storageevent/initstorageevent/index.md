@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
-{{ ApiRef("Web Storage API") }}{{deprecated_header}}
+{{ ApiRef("Web Storage API") }}
 
 **`StorageEvent.initStorageEvent()`** メソッドは {{ domxref("StorageEvent") }} の値を初期化するために使用します。
 

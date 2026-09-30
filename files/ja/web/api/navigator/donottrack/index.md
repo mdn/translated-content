@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b0870830e4c02596ca6c501f8f8b468a917eafc2
 ---
 
-{{ApiRef("HTML DOM")}}{{Deprecated_header}}
+{{ApiRef("HTML DOM")}}
 
 **`Navigator.doNotTrack`** プロパティは、ユーザーの Do Not Track 設定を返します。これは、ユーザーがウェブサイトと広告主に対して追跡しないよう要求しているかどうかを示します。
 

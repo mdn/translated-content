@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5a2cea779777daaff451f21ca3b7f4c28a68de9e
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("String")}} 값의 **`strike()`** 메서드는 문자열을 취소선 처리된 텍스트로 표시하게 만드는 {{HTMLElement("strike")}} 요소(`<strike>str</strike>`)에 포함하는 문자열을 생성합니다.
 

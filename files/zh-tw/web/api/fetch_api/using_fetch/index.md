@@ -408,7 +408,7 @@ The most common response properties you'll use are:
 
 - {{domxref("Response.status")}} — An integer (default value 200) containing the response status code.
 - {{domxref("Response.statusText")}} — A string (default value "OK"), which corresponds to the HTTP status code message.
-- {{domxref("Response.ok")}} — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a {{domxref("Boolean")}}.
+- {{domxref("Response.ok")}} — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a {{jsxref("Boolean")}}.
 
 They can also be created programmatically via JavaScript, but this is only really useful in {{domxref("ServiceWorker_API", "ServiceWorkers")}}, when you are providing a custom response to a received request using a {{domxref("FetchEvent.respondWith","respondWith()")}} method:
 
@@ -434,8 +434,8 @@ The {{domxref("Response.Response","Response()")}} constructor takes two optional
 
 Both requests and responses may contain body data. A body is an instance of any of the following types:
 
-- {{domxref("ArrayBuffer")}}
-- {{domxref("ArrayBufferView")}} (Uint8Array and friends)
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("TypedArray")}} (Uint8Array and friends)
 - {{domxref("Blob")}}/File
 - string
 - {{domxref("URLSearchParams")}}

@@ -27,7 +27,7 @@ HTTP **`Content-Security-Policy-Report-Only`**响应头允许 web 开发人员�
 
 ## 语法
 
-```plain
+```http
 Content-Security-Policy-Report-Only: <policy-directive>; <policy-directive>
 ```
 
@@ -41,13 +41,13 @@ CSP {{CSP("report-uri")}} 指令需要跟这个 header 一起用，否则这个 
 
 这个 header 报告 (统计) 将会发生的违规行为。你可以使用这个 header 去迭代你的内容安全政策。你观察你的网站的行为，查看违反报告，然后通过 {{HTTPHeader("Content-Security-Policy")}} 头选择所需的政策。
 
-```plain
+```http
 Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 
 如果你希望收到报告，而且还想执行一项策略，使用{{HTTPHeader("Content-Security-Policy")}} 头跟{{CSP("report-uri")}} 指令。
 
-```plain
+```http
 Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 

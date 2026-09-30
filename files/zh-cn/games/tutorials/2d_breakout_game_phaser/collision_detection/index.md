@@ -41,7 +41,7 @@ class ExampleScene extends Phaser.Scene {
 
 就这样！重新加载代码，你应该会看到新的碰撞检测如预期般运行。
 
-如果使用[纯 JavaScript](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)，你可能会以为需要自行编写更多计算代码来实现碰撞检测。这正是使用框架的好处：你可以把许多枯燥的代码交给 Phaser，专注于制作游戏中更有趣的部分。
+如果使用[纯 JavaScript](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)，你可能会以为需要自行编写更多计算代码来实现碰撞检测。这正是使用框架的好处：你可以把许多枯燥的代码交给 Phaser，专注于制作游戏中更有趣的部分。
 
 ## 比较你的代码
 
@@ -174,6 +174,6 @@ const game = new Phaser.Game(config);
 
 ## 下一步
 
-现在我们已经可以击中砖块并将其移除，这为游戏玩法增加了不错的内容。如果能统计被摧毁的砖块，并据此增加[得分](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)，就更好了。
+现在我们已经可以击中砖块并将其移除，这为游戏玩法增加了不错的内容。如果能统计被摧毁的砖块，并据此增加[得分](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win)，就更好了。
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/The_score")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win")}}

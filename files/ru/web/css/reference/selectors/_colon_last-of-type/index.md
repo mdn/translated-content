@@ -21,7 +21,11 @@ p:last-of-type {
 
 ## Синтаксис
 
-{{csssyntax}}
+```css
+:last-of-type {
+  /* ... */
+}
+```
 
 ## Пример
 

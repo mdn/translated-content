@@ -17,7 +17,7 @@ Un objeto `GamepadButton` se devuelve al solicitar cualquier valor del array dev
 - {{domxref("GamepadButton.value")}} {{readonlyInline}}
   - : Un valor doble usado para representar el estado actual de botones análogos, así como los gatillos de muchos gamepads modernos. Los valores se normalizan al rango 0.0 —1.0, donde 0.0 representa un botón que no está presionado, y 1.0 representa un botón que está completamente presionado.
 - {{domxref("GamepadButton.pressed")}} {{readonlyInline}}
-  - : Un valor {{domxref("Boolean")}} que indica el estado el botón, ya sea que actualmente se encuentre presionado (`true`) o sin presionar (`false`).
+  - : Un valor {{jsxref("Boolean")}} que indica el estado el botón, ya sea que actualmente se encuentre presionado (`true`) o sin presionar (`false`).
 
 ## Ejemplo
 

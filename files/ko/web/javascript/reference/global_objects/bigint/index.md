@@ -63,7 +63,7 @@ const theFuture = previousMaxSafe + 2n;
 const multi = previousMaxSafe * 2n;
 // ↪ 18014398509481982n
 
-const subtr = multi – 10n;
+const subtr = multi - 10n;
 // ↪ 18014398509481972n
 
 const mod = multi % 10n;
@@ -72,8 +72,8 @@ const mod = multi % 10n;
 const bigN = 2n ** 54n;
 // ↪ 18014398509481984n
 
-bigN * -1n
-// ↪ –18014398509481984n
+bigN * -1n;
+// ↪ -18014398509481984n
 ```
 
 `/` 연산자도 정수 연산에서 예상할 수 있는 결과를 동일하게 도출합니다. 그러나 `BigInt`는 `BigDecimal`이 아니므로, 연산의 결과는 언제나 소수점 이하를 버립니다. 즉, 정수가 아닌 결과는 나오지 않습니다.

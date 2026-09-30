@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9a9dcd5848aaf1c4226f746539e6218c48647249
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 **`getVRDisplays()`** は {{domxref("Navigator")}} インターフェイスのメソッドで、コンピューターに接続されている利用可能な VR ディスプレイを表す {{domxref("VRDisplay")}} オブジェクトの配列へ解決するためのプロミスを返します。
 

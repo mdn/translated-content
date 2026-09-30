@@ -1,18 +1,17 @@
 ---
-title: rel="alternate stylesheet"
+title: '`rel="alternate stylesheet"` 属性値 (HTML)'
+short-title: alternate stylesheet
 slug: Web/HTML/Reference/Attributes/rel/alternate_stylesheet
 l10n:
-  sourceCommit: 0389dd29e0827791ad9d2f6b8cda217c121f9c19
+  sourceCommit: a516a9818e8cef06c626d436ee1d73fc6d87ec51
 ---
-
-{{HTMLSidebar}}
 
 **`alternate stylesheet`** キーワードペアは、 {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性の値として使用されると、ターゲットリソースが代替スタイルシートであることを示します。ウェブページに**代替スタイルシート**を指定すると、ユーザーのニーズや設定に応じて複数のバージョンのページを見る方法を提供します。
 
 > [!NOTE]
-> この機能は、ブラウザーの拡張機能なしではあまり対応していません。ユーザーの既存の環境設定に合わせて別の表示を提供するには、 CSS の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#media_features)である {{cssxref("@media/prefers-color-scheme","prefers-color-scheme")}} および {{cssxref("@media/prefers-contrast","prefers-contrast")}} を参照してください。
+> この機能は、ブラウザーは拡張機能なしではあまり対応していません。ユーザーの既存の環境設定に合わせて別の表示を提供するには、 CSS の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)である {{cssxref("@media/prefers-color-scheme","prefers-color-scheme")}} および {{cssxref("@media/prefers-contrast","prefers-contrast")}} を参照してください。
 
-Firefox では、 [`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性の値を表示している［表示］ > ［ページスタイル］のサブメニューを使用して、ユーザーに代替{{glossary("stylesheet", "スタイルシート")}}を選択させることができます。それ以外のブラウザーでは、この機能を有効にするために拡張機能が必要です。また、ウェブページでユーザーがスタイルを切り替えることができるように、独自のユーザーインターフェイスを提供することもできます。
+Firefox では、[`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性の値を表示している［表示］ > ［ページスタイル］のサブメニューを使用して、ユーザーに代替{{glossary("style sheet", "スタイルシート")}}を選択させることができます。それ以外のブラウザーでは、この機能を有効にするために拡張機能が必要です。また、ウェブページでユーザーがスタイルを切り替えることができるように、独自のユーザーインターフェイスを提供することもできます。
 
 ## 例
 

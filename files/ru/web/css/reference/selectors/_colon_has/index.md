@@ -28,7 +28,11 @@ var test = document.querySelector('a:has(> img)');
 
 ## Синтаксис
 
-{{CSSSyntax}}
+```css-nolint
+:has(<relative-selector-list>) {
+  /* ... */
+}
+```
 
 ## Примеры
 

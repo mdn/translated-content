@@ -3,7 +3,7 @@ title: "Array : méthode findLastIndex()"
 short-title: findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9f46f08d20b21498293cbf6b84f508103272ec6f
 ---
 
 La méthode **`findLastIndex()`** des instances de {{JSxRef("Array")}} parcourt le tableau dans l'ordre inverse et retourne l'indice du premier élément qui satisfait la fonction de test fournie.
@@ -59,7 +59,7 @@ La méthode `findLastIndex()` est [générique](/fr/docs/Web/JavaScript/Referenc
 
 ### Trouver l'indice du dernier nombre premier dans le tableau
 
-Dans l'exemple qui suit, on trouve l'indice du dernier élément du tableau qui est un nombre premier (ou on renvoie `-1` si le tableau ne contient pas de nombre premier)&nbsp;:
+Dans l'exemple qui suit, on trouve l'indice du dernier élément du tableau qui est un nombre premier (ou on retourne `-1` si le tableau ne contient pas de nombre premier)&nbsp;:
 
 ```js
 function estPremier(element) {
@@ -79,7 +79,7 @@ console.log([4, 5, 7, 8, 9, 11, 12].findLastIndex(estPremier)); // 5
 ```
 
 > [!NOTE]
-> L'implémentation de `estPremier()` est fournie à titre d'exemple seulement. Pour une application réelle, préférez un algorithme fortement mémoïsé tel que le [Crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne) afin d'éviter des calculs répétés.
+> L'implémentation de `estPremier()` est fournie à titre d'exemple seulement. Pour une application réelle, préférez un algorithme fortement {{Glossary("Memoization", "mémoïsé")}} tel que le [Crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne) afin d'éviter des calculs répétés.
 
 ### Utiliser le troisième argument de `callbackFn`
 
@@ -117,7 +117,7 @@ const semblableTableau = {
   0: 2,
   1: 7.3,
   2: 4,
-  3: 3, // ignored by findLastIndex() since length is 3
+  3: 3, // ignoré par findLastIndex() puisque length vaut 3
 };
 console.log(
   Array.prototype.findLastIndex.call(semblableTableau, (x) =>

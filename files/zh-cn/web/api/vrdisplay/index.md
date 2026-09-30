@@ -22,9 +22,9 @@ slug: Web/API/VRDisplay
 - {{domxref("VRDisplay.displayName")}} {{readonlyInline}}
   - : 返回一个不反人类的名称来标识此 `VRDisplay`。
 - {{domxref("VRDisplay.isConnected")}} {{readonlyInline}}
-  - : 返回一个 {{domxref("Boolean")}} 值，指示 `VRDisplay` 是否连接到计算机。
+  - : 返回一个 {{jsxref("Boolean")}} 值，指示 `VRDisplay` 是否连接到计算机。
 - {{domxref("VRDisplay.isPresenting")}} {{readonlyInline}}
-  - : 返回一个 {{domxref("Boolean")}} 值，指示 `VRDisplay` 当前是否由内容被呈现。
+  - : 返回一个 {{jsxref("Boolean")}} 值，指示 `VRDisplay` 当前是否由内容被呈现。
 - {{domxref("VRDisplay.stageParameters")}} {{readonlyInline}}
   - : 如果 VR 设备支持房间规模测验，则返回一个包含房间尺寸参数的 {{domxref("VRStageParameters")}} 对象。
 

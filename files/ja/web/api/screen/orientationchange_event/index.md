@@ -6,7 +6,7 @@ l10n:
   sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
-{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Screen Orientation API")}}{{Non-standard_Header}}
 
 `orientationchange` イベントは、端末の向きが変化したときに発行されます。
 

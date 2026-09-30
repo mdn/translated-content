@@ -2,7 +2,7 @@
 title: Iterator
 slug: Web/JavaScript/Reference/Global_Objects/Iterator
 l10n:
-  sourceCommit: d43ba33e72afa135ce782e2c0ca19fe32a93bb13
+  sourceCommit: 5b9e4bb67e5cb4bb2b780e7338a6560463e5a1a7
 ---
 
 L'objet **`Iterator`** est un objet qui respecte le [protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérateur_») en fournissant une méthode `next()` qui retourne un objet résultat d'itérateur. Tous les itérateurs intégrés héritent de la classe `Iterator`. La classe `Iterator` fournit une méthode [`[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator) qui retourne l'objet itérateur lui-même, rendant l'itérateur également [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»). Elle propose aussi des méthodes utilitaires pour manipuler les itérateurs.
@@ -142,9 +142,9 @@ const monIterateur = Iterator.from({
   - : Crée un nouvel objet `Iterator` à partir d'une liste d'objets itérables. Le nouvel itérateur produit les valeurs de chacun des itérables d'entrée, en séquence.
 - {{JSxRef("Iterator.from()")}}
   - : Crée un nouvel objet `Iterator` à partir d'un itérateur ou d'un objet itérable.
-- {{JSxRef("Iterator.zip()")}} {{Experimental_Inline}}
+- {{JSxRef("Iterator.zip()")}}
   - : Crée un nouvel objet `Iterator` qui agrège les éléments de plusieurs objets itérables en produisant des tableaux contenant les éléments à la même position.
-- {{JSxRef("Iterator.zipKeyed()")}} {{Experimental_Inline}}
+- {{JSxRef("Iterator.zipKeyed()")}}
   - : Crée un nouvel objet `Iterator` qui agrège les éléments de plusieurs objets itérables en produisant des objets contenant les éléments à la même position, avec des clés définies par l'entrée.
 
 ## Propriétés d'instance

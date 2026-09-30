@@ -3,7 +3,7 @@ title: VRDisplay.getLayers()
 slug: Web/API/VRDisplay/getLayers
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}
 
 **`getLayers()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 `VRDisplay` が現在表示しているレイヤーを返します。
 

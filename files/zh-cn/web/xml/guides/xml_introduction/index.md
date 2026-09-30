@@ -102,7 +102,7 @@ XML 通常被用作描述，但是还有很多方法去展示 XML 数据。如�
 
 一个展示 XML 输出的方法是将 [CSS](/zh-CN/docs/Web/CSS) 应用于文档，用 `xml-stylesheet` 去处理指令。
 
-```plain
+```xml
 <?xml-stylesheet type="text/css" href="stylesheet.css"?>
 ```
 

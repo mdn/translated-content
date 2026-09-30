@@ -10,7 +10,7 @@ l10n:
 
 **`::search-text`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、ユーザーエージェントの「検索」または「ページ内検索」などのテキスト検索機能によって特定された検索結果にスタイルを適用します。
 
-{{InteractiveExample("CSS Demo: ::search-text", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: ::search-text", "tabbed-shorter")}}
 
 ```css interactive-example
 p::search-text {
@@ -109,7 +109,7 @@ HTML は、基本的なテキストの段落で構成されています。簡潔
 
 #### CSS
 
-CSSでは、まず `::search-text` 擬似要素のスタイル設定から始めます。この擬似要素に対して、{{cssxref("background-color")}}、{{cssxref(("color")}}、{{cssxref("text-shadow")}} という独自のスタイルを適用します。
+CSSでは、まず `::search-text` 擬似要素のスタイル設定から始めます。この擬似要素に対して、{{cssxref("background-color")}}、{{cssxref("color")}}、{{cssxref("text-shadow")}} という独自のスタイルを適用します。
 
 ```css hidden live-sample___custom-search-results
 html {

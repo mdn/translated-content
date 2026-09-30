@@ -58,7 +58,7 @@ _Наследует свойства от своего родителя, {{domxr
     </tr>
     <tr>
       <td><code id="async_property">async</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td rowspan="2">
         <p>
           Атрибуты <code>async</code> и <code>defer</code>
@@ -135,7 +135,7 @@ _Наследует свойства от своего родителя, {{domxr
     </tr>
     <tr>
       <td><code id="defer_property">defer</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
     </tr>
     <tr>
       <td>
@@ -180,7 +180,7 @@ _Наследует свойства от своего родителя, {{domxr
     </tr>
     <tr>
       <td><code>noModule</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td>
         Это булево свойство выполняет остановку выполнения скрипта в браузере,
         поддерживающим

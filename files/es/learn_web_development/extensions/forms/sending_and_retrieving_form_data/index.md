@@ -14,7 +14,7 @@ En este artículo se analiza lo que sucede cuando un usuario envía un formulari
       <th scope="row">Requisitos previos:</th>
       <td>
         Conocimientos básicos de informática, una
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content"
           >comprensión de HTML</a
         >
         , y conocimientos básicos de

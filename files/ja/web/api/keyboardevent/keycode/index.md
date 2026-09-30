@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}
 
 非推奨の **`KeyboardEvent.keyCode`** 読み取り専用プロパティは、押されたキーの変更されていない値を識別するシステムおよび実装に依存する数値コードを表します。
 

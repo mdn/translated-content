@@ -3,7 +3,7 @@ title: VRLayerInit.rightBounds
 slug: Web/API/VRLayerInit/rightBounds
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}
 
 **`rightBounds`** は {{domxref("VRLayerInit")}} インターフェイス（辞書）のプロパティで、 {{domxref("VRDisplay")}} によってコンテンツが表示されるキャンバスの右側のテクスチャ境界を定義します。
 

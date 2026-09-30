@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 **`hasPosition`** は {{domxref("VRDisplayCapabilities")}} インターフェイスの読み取り専用プロパティで、その VR ディスプレイがトラッキング機能を備えていて位置情報を返すことができるれば `true` を返します。
 

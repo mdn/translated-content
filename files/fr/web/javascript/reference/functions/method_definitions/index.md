@@ -3,8 +3,6 @@ title: Définir une méthode
 slug: Web/JavaScript/Reference/Functions/Method_definitions
 ---
 
-{{JsSidebar("Functions")}}
-
 Avec ECMAScript 2015 (ES6), il est possible d'utiliser une notation plus courte pour définir des méthodes au sein des littéraux objets. On peut ainsi définir plus rapidement une fonction qui sera utilisée comme méthode.
 
 {{InteractiveExample("JavaScript Demo: Functions Definitions")}}

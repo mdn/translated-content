@@ -3,7 +3,7 @@ title: Propriété CSS `row-rule-color`
 short-title: row-rule-color
 slug: Web/CSS/Reference/Properties/row-rule-color
 l10n:
-  sourceCommit: b6de98eb9cd52ce7e37f22a340352f0af4c9d597
+  sourceCommit: 9b7a110e601556b82af6b5d46f01c757c5a11719
 ---
 
 {{SeeCompatTable}}
@@ -97,7 +97,7 @@ La propriété `row-rule-color` accepte une liste de valeurs séparées par des 
 
 La propriété `row-rule-color` définit les couleurs des lignes tracées dans les espaces entre les lignes dans les conteneurs [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grilles](/fr/docs/Web/CSS/Guides/Grid_layout) comportant plus d'une ligne.
 
-La valeur est une liste de composants séparés par des virgules, qui peut inclure des types `<line-color>`, `<repeated-line-color>` et `<auto-repeat-line-color>`.
+La valeur est une liste de composants séparés par des virgules, qui peut inclure des types `<line-color>`, `<repeat-line-color>` et `<auto-repeat-line-color>`.
 
 La propriété `row-rule-color`, ainsi que les propriétés {{CSSxRef("row-rule-width")}} et {{CSSxRef("row-rule-style")}}, peut être définie à l'aide de la propriété raccourcie {{CSSxRef("row-rule")}}. La propriété `row-rule-color`, ainsi que la propriété {{CSSxRef("column-rule-color")}}, peut également être définie à l'aide de la propriété raccourcie {{CSSxRef("rule-color")}}.
 

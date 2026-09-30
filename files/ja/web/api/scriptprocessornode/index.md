@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
 ---
 
-{{APIRef("Web Audio API")}}{{Deprecated_Header}}
+{{APIRef("Web Audio API")}}
 
 `ScriptProcessorNode` インターフェイスは、JavaScript を使って音声を生成、処理、または分析することを可能にします。
 

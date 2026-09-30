@@ -27,7 +27,7 @@ Si eres un principiante, el desarrollo web puede ser un desafío: iremos de la m
 - Principiante
   - : Si eres un principiante en el desarrollo web, te recomendamos que empieces trabajando con nuestro módulo [Cómo empezar con la web](/es/docs/Learn_web_development/Getting_started/Your_first_website), que proporciona una introducción práctica al desarrollo web.
 - Mas allá de lo básico
-  - : Si ya tienes un poco de conocimiento, el siguiente paso es aprender {{glossary("HTML")}} y {{glossary("CSS")}} en detalle: comience con nuestra [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) y pase a nuestro módulo [Primeros pasos con CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics).
+  - : Si ya tienes un poco de conocimiento, el siguiente paso es aprender {{glossary("HTML")}} y {{glossary("CSS")}} en detalle: comience con nuestra [Introducción a HTML](/es/docs/Learn_web_development/Core/Structuring_content) y pase a nuestro módulo [Primeros pasos con CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics).
 - Pasando al código
   - : Si ya te sientes cómodo con HTML y CSS, o si estás principalmente interesado en la codificación, querrá pasar a {{glossary("JavaScript")}} o al desarrollo del lado del servidor. Comience con nuestros módulos [Primeros pasos de JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting) y [Primeros pasos del lado del servidor](/es/docs/Learn_web_development/Extensions/Server-side/First_steps).
 - _Frameworks_ y herramientas

@@ -10,7 +10,7 @@ slug: Web/HTTP/Reference/Status/400
 
 ## 状态
 
-```plain
+```http
 400 Bad Request
 ```
 

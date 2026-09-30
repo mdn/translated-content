@@ -11,7 +11,7 @@ slug: Web/HTTP/Reference/Status/408
 
 ## 状态
 
-```plain
+```http
 408 Request Timeout
 ```
 

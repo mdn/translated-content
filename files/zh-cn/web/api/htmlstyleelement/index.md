@@ -20,11 +20,11 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}**, and implemen
 - {{domxref("HTMLStyleElement.type")}}
   - : Is a {{jsxref("String")}} representing the type of style being applied by this statement.
 - {{domxref("HTMLStyleElement.disabled")}}
-  - : Is a {{domxref("Boolean")}} value representing whether or not the stylesheet is disabled (true) or not (false).
+  - : Is a {{jsxref("Boolean")}} value representing whether or not the stylesheet is disabled (true) or not (false).
 - {{domxref("LinkStyle.sheet")}} {{readonlyInline}}
   - : Returns the {{domxref("StyleSheet")}} object associated with the given element, or `null` if there is none
 - {{domxref("HTMLStyleElement.scoped")}} {{non-standard_inline}} {{Deprecated_Inline}}
-  - : Is a {{domxref("Boolean")}} value indicating if the element applies to the whole document (`false`) or only to the parent's sub-tree (`true`).
+  - : Is a {{jsxref("Boolean")}} value indicating if the element applies to the whole document (`false`) or only to the parent's sub-tree (`true`).
 
 ## 方法
 

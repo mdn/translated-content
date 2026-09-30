@@ -12,7 +12,11 @@ original_slug: Web/CSS/:focus-visible
 
 ## Синтаксис
 
-{{CSSSyntax}}
+```css
+:focus-visible {
+  /* ... */
+}
+```
 
 ## Пример
 

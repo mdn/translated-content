@@ -3,7 +3,7 @@ title: "Promise : méthode statique race()"
 short-title: race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 l10n:
-  sourceCommit: cbf7f4b55e2c0bc0c096773435b159edcaa8c9e2
+  sourceCommit: 9bda33365e40b6c609fa5190a0af9b5dc6438cf0
 ---
 
 La méthode statique **`Promise.race()`** prend en entrée un itérable de promesses et retourne une seule {{JSxRef("Promise")}}. Cette promesse retournée se résout avec l'état final de la première promesse qui est acquittée (<i lang="en">settle</i> en anglais).
@@ -48,6 +48,8 @@ La méthode `Promise.race()` est l'une des méthodes de [concurrence des promess
 Si l'itérable contient une ou plusieurs valeurs qui ne sont pas des promesses et/ou une promesse déjà acquittée, alors `Promise.race()` s'acquitte avec la première de ces valeurs trouvées dans l'itérable.
 
 Comme pour les autres combinateurs de promesses, `Promise.race()` marque immédiatement toutes les promesses comme «&nbsp;gérées&nbsp;» lorsqu'elle est appelée (en appelant leurs méthodes `.then()`). Les rejets ultérieurs après le premier acquittement sont ignorés et ne déclenchent aucun évènement `unhandledrejection`.
+
+Acquitter la promesse retournée ne supprime pas les autres opérations ni ne désabonne les gestionnaires attachés à leurs promesses. Si vous faites concourir de manière répétée une promesse en attente de longue durée contre des promesses de courte durée, des gestionnaires peuvent s'accumuler sur la promesse en attente même après chaque course.
 
 ## Exemples
 
@@ -198,9 +200,9 @@ const data = Promise.race([
   .catch((err) => displayError(err));
 ```
 
-Si la promesse `data` est complétée, elle contient les données récupérées depuis `/api`&nbsp;; sinon, elle est rompue si `fetch` reste en attente pendant 5 secondes et perd la course face au minuteur `setTimeout`.
+Si la promesse `data` est complétée, elle contient les données récupérées depuis `/api`&nbsp;; sinon, elle est rompue si `fetch` reste en attente pendant 5 secondes et perd la course face au minuteur `setTimeout`. `Promise.race` capture et ignore les résultats de l'acquittement des promesses perdantes, donc le rejet `"Délai d'attente de la requête dépassé"` ne se propage pas comme un rejet non géré.
 
-Notez qu'il n'est pas nécessaire de nettoyer explicitement le rejet du délai d'attente (par exemple en annulant le délai) lorsque la promesse `fetch` se termine en premier. `Promise.race` capture et ignore les résultats de l'acquittement des promesses perdantes, donc le rejet `"Délai d'attente de la requête dépassé"` ne se propage pas comme un rejet non géré.
+La fin d'une promesse n'annule pas automatiquement l'autre&nbsp;; le résultat de l'autre est simplement ignoré. Cela ne pose pas de problème dans ce petit exemple, mais cela maintient les ressources telles que les connexions réseau et les minuteurs actives plus longtemps que nécessaire. Pour libérer les ressources plus tôt, annulez le `fetch` si le délai d'attente l'emporte, ou effacez le délai d'attente si le `fetch` l'emporte. Dans la mesure du possible — y compris pour `fetch` — préférez utiliser l'API {{DOMxRef("AbortController")}}.
 
 ### Détecter l'état d'une promesse avec `Promise.race()`
 

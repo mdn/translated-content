@@ -5,7 +5,7 @@ l10n:
   sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_header}}
+{{APIRef("CSSOM")}}
 
 **`cssText`** は {{domxref("CSSValue")}} インターフェイスのプロパティで、 CSS プロパティの現在の計算値を表します。
 

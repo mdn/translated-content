@@ -15,7 +15,7 @@ var pausado = audioOVideo.paused
 
 ### Valor
 
-Es un {{domxref("Boolean")}}. Mostrara **true** si está pausado y **false** en caso contrario.
+Es un {{jsxref("Boolean")}}. Mostrara **true** si está pausado y **false** en caso contrario.
 
 ## Ejemplo
 
