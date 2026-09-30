@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
 これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) の 10 ステップ中 **8 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html)で見ることができます。
 
@@ -274,6 +274,6 @@ runButton.addEventListener("click", () => {
 
 ## 次のステップ
 
-この時点でもこのゲームはかなりよく見えます。次のレッスンでは[マウス操作](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls)を追加することでゲームの魅力を広げます。
+この時点でもこのゲームはかなりよく見えます。次のレッスンでは[マウス操作](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls)を追加することでゲームの魅力を広げます。
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
