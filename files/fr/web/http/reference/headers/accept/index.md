@@ -3,10 +3,10 @@ title: En-tête Accept
 short-title: Accept
 slug: Web/HTTP/Reference/Headers/Accept
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: e3a2272d272f21ea38e5fff9bd6ccec2d0dfb1a8
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} et {{Glossary("response header", "de réponse")}} HTTP **`Accept`** indique quels types de contenu, exprimés sous forme de [types MIME](/fr/docs/Web/HTTP/Guides/MIME_types), l'émetteur·rice est capable de comprendre.
+{{Glossary("request header", "L'en-tête de requête")}} et {{Glossary("response header", "de réponse")}} HTTP **`Accept`** indique quels types de contenu, exprimés sous forme de [types MIME](/fr/docs/Web/HTTP/Guides/MIME_types), l'émetteur·rice est capable de comprendre.
 Dans les requêtes, le serveur utilise la [négociation de contenu](/fr/docs/Web/HTTP/Guides/Content_negotiation) pour sélectionner l'une des propositions et informe le client du choix avec l'en-tête de réponse {{HTTPHeader("Content-Type")}}.
 Dans les réponses, il fournit des informations sur les types de contenu que le serveur peut comprendre dans les messages vers la ressource demandée, afin que le type de contenu puisse être utilisé dans les requêtes ultérieures vers la ressource.
 

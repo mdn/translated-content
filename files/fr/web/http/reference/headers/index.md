@@ -3,7 +3,7 @@ title: En-têtes HTTP
 short-title: En-têtes
 slug: Web/HTTP/Reference/Headers
 l10n:
-  sourceCommit: 366bcbeeeb196a0bc34eaa4e6cdbf244c4ee8354
+  sourceCommit: 346e46c6e10334bf60df2a0a4ef58ebea4c80a4e
 ---
 
 Les **en-têtes HTTP** permettent au client et au serveur de transmettre des informations supplémentaires avec un message dans une requête ou une réponse.
@@ -533,7 +533,7 @@ Voir la documentation de [l'API Topics](/fr/docs/Web/API/Topics_API) pour plus d
 - {{HTTPHeader("X-Forwarded-Proto")}} {{Non-standard_Inline}}
   - : Identifie le protocole (HTTP ou HTTPS) utilisé par le client pour se connecter à l'intermédiaire (<i lang="en">proxy</i> ou un <i lang="en">load balancer</i>).
 - {{HTTPHeader("X-DNS-Prefetch-Control")}} {{Non-standard_Inline}}
-  - : Contrôle la récupération proactive du DNS, utilisée par les navigateurs pour résoudre en avance les noms de domaine que la personne peut atteindre avec les liens, images, fichiers CSS ou JavaScript, etc.
+  - : Contrôle la récupération anticipée des DNS, une fonctionnalité grâce à laquelle les navigateurs effectuent de manière proactive la résolution des noms de domaine, tant pour les liens et URL que l'utilisateur·ice peut choisir de suivre que pour les éléments référencés par le document, notamment les images, les feuilles de style CSS, les scripts JavaScript, etc.
 - {{HTTPHeader("X-Robots-Tag")}} {{Non-standard_Inline}}
   - : L'en-tête HTTP [`X-Robots-Tag`](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag?hl=fr) indique comment une page web doit être indexée par les moteurs de recherche public. En pratique, cet en-tête est équivalent à [`<meta name="robots" content="…">`](/fr/docs/Web/HTML/Reference/Elements/meta/name/robots).
 

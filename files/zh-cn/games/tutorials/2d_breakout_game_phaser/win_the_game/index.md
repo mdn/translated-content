@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4483da6501d1c735a0e1ac1e95775e2fe1766dc3
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/The_score", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
 
 这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的**第 12 步**。在我们的游戏中实现获胜非常简单：如果你摧毁了所有砖块，那么你就赢了。
 
@@ -175,4 +175,4 @@ const game = new Phaser.Game(config);
 
 失败和获胜都已经实现，所以我们游戏的核心玩法已经完成。现在来添加一些额外内容——我们会给玩家三条[生命](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)，而不是一条。
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/The_score", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}

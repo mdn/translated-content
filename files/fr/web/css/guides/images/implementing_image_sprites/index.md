@@ -1,28 +1,30 @@
 ---
-title: Les sprites CSS
+title: Implémenter des images sprites en CSS
+short-title: Implémenter des images sprites
 slug: Web/CSS/Guides/Images/Implementing_image_sprites
-original_slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-Les _sprites_ sont utilisées dans de nombreuses applications web où de multiples images sont utilisées. Au lieu d'avoir une image par fichier, on économise de la bande passante et de la mémoire en les envoyant toute dans le même fichier, ainsi, le nombre de requêtes HTTP diminue. On utilise alors `background-position` pour choisir l'image qu'on souhaite utiliser.
+Les **images <i lang="en">sprites</i>** sont utilisées dans de nombreuses applications web où de multiples images sont utilisées. Au lieu d'inclure chaque image comme un fichier séparé, il est beaucoup plus économique en mémoire et en bande passante de les envoyer sous forme d'une seule image&nbsp;; on utilise la position de fond comme moyen de distinguer les images individuelles dans le même fichier image, ce qui réduit le nombre de requêtes HTTP.
 
 > [!NOTE]
-> Avec HTTP/2, il peut être plus judicieux d'utiliser de nombreuses « petites » requêtes.
+> Lorsque HTTP/2 est utilisé, il peut en effet s'avérer plus économe en bande passante d'envoyer plusieurs petites requêtes.
 
 ## Implémentation
 
-Supposons qu'une image est affichée pour chaque élement de la classe `toolbtn` :
+Supposons qu'une image est affichée pour chaque élément de la classe `btn-outil`&nbsp;:
 
 ```css
-.toolbtn {
-  background: url("myfile.png");
+.btn-outil {
+  background: url("monfichier.png");
   display: inline-block;
   height: 20px;
   width: 20px;
 }
 ```
 
-Une position peut être ajoutée avec les valeurs x et y après {{cssxref("url()")}} pour décaler l'image de fond ({{cssxref("background")}}). Cela fonctionne aussi avec {{cssxref("background-position")}}. Par exemple :
+Une position d'arrière-plan peut être ajoutée soit sous la forme de deux valeurs x et y après {{CSSxRef("url_value", "&lt;url&gt;")}} dans la propriété d'arrière-plan, soit sous la forme {{CSSxRef("background-position")}}. Par exemple&nbsp;:
 
 ```css
 #btn1 {
@@ -34,16 +36,10 @@ Une position peut être ajoutée avec les valeurs x et y après {{cssxref("url()
 }
 ```
 
-L'élément avec l'ID « btn1 » bouge vers la gauche de 20 pixels et l'élément avec l'ID « btn2 » vers la gauche de 40 pixels (en présumant que ces deux éléments aient aussi la classe `toolbtn`).
+Cela fait glisser le point de départ de l'image de fond pour l'élément avec l'ID `btn1` de 20 pixels vers la gauche et l'élément avec l'ID `btn2` de 40 pixels vers la gauche (en présumant qu'ils ont la classe `btn-outil` assignée et sont affectés par la règle d'image ci-dessus).
 
-De la même manière, vous pouvez faire un effet de transition au survol :
-
-```css
-#btn:hover {
-  background-position: <pixels shifted right>px <pixels shifted down>px;
-}
-```
+De la même manière, vous pouvez également créer des états de survol en ciblant `#btn:hover`.
 
 ## Voir aussi
 
-- [Une démonstration sur CSS Tricks](https://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/)
+- [Démonstration complète et fonctionnelle sur CSS Tricks <sup>(angl.)</sup>](https://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/)
