@@ -23,7 +23,7 @@ Si tienes algo de experiencia práctica con JavaScript o has seguido la guía, p
 const bigDay = new Date(2019, 6, 19);
 console.log(bigDay.toLocaleDateString());
 if (bigDay.getTime() < Date.now()) {
-  console.log("Once upon a time...");
+  console.log("Érase una vez...");
 }
 ```
 
@@ -442,7 +442,7 @@ class BadIdeas {
 
 Los métodos, los [getters y los setters](#campos_de_acceso) también pueden ser privados. Son útiles cuando la clase tiene que hacer algo complejo internamente que ninguna otra parte del código debería poder llamar.
 
-Por ejemplo, imagina que creas [elementos personalizados de HTML](/es/docs/Web/API/Web_components/Using_custom_elements) que deben hacer algo algo complicado cuando se hace clic en ellos, se tocan o se activan de otra forma. Además, esas cosas algo complicadas que ocurren al hacer clic en el elemento deben limitarse a esta clase, porque ninguna otra parte del JavaScript accederá a ellas (ni debería).
+Por ejemplo, imagina que creas [elementos personalizados de HTML](/es/docs/Web/API/Web_components/Using_custom_elements) que deben hacer algo un tanto complicado cuando se hace clic en ellos, se tocan o se activan de otra forma. Además, esas cosas algo complicadas que ocurren al hacer clic en el elemento deben limitarse a esta clase, porque ninguna otra parte del JavaScript accederá a ellas (ni debería).
 
 ```js
 class Counter extends HTMLElement {
