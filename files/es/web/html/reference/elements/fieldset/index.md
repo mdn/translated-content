@@ -126,8 +126,8 @@ Este ejemplo muestra un `<fieldset>` deshabilitado con dos controles dentro. Obs
           >Contenido de flujo</a
         >,
         raíz de seccionamiento, elemento
-        <a href="/es/docs/Web/HTML/Guides/Content_categories#contenido_asociado_a_formularios"
-          >listado</a
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#enumerado"
+          >enumerado</a
         >,
         <a
           href="/es/docs/Web/HTML/Guides/Content_categories#contenido_asociado_a_formularios"
