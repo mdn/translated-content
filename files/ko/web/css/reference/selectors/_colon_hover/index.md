@@ -20,7 +20,11 @@ a:hover {
 
 ## 구문
 
-{{csssyntax}}
+```css
+:hover {
+  /* ... */
+}
+```
 
 ## 예제
 
