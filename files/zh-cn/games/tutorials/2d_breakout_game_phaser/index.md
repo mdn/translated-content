@@ -18,7 +18,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 1. [初始化框架](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework)
 2. [移动小球](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball)
 3. [物理](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics)
-4. [从墙上弹开](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls)
+4. [从墙壁反弹](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls)
 5. [球板和控制](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)
 6. [游戏结束](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
 7. [建立砖块](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)

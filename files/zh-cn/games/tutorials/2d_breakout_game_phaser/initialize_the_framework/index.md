@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Scaling")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball")}}
 
 这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的的第一步。在开始编写游戏功能之前，我们需要创建一个用于渲染游戏的基本结构。这可以通过 HTML 来实现——Phaser 框架会生成所需的 {{htmlelement("canvas")}} 元素。
 
@@ -120,6 +120,6 @@ const game = new Phaser.Game(config);
 
 ## 下一步
 
-现在我们已经设置好了基本的 HTML 代码，并简单了解了 Phaser 的初始化，接下来让我们进入第二课，学习[缩放](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework)。
+现在我们已经设置好了基本的 HTML 代码，并简单了解了 Phaser 的初始化，接下来让我们进入第二课，学习如何[渲染一个球并移动它](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball)。
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball")}}
