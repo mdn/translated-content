@@ -685,10 +685,10 @@ adjustBackgroundPlayback();
 
 ## Conservar los estilos de la animación
 
-Al animar elementos, un caso de uso habitual es conservar el estado final de la animación una vez terminada. Un método que a veces se usa para esto es establecer el [modo de relleno](/es/docs/Web/API/KeyframeEffect/KeyframeEffect#fill) de la animación en `forwards`. Sin embargo, no se recomienda usar los modos de relleno para conservar el efecto de una animación de forma indefinida, por dos motivos:
+Al animar elementos, un caso de uso habitual es conservar el estado final de la animación una vez terminada. Un método que a veces se usa para esto es establecer el [modo de relleno](/es/docs/Web/API/KeyframeEffect/KeyframeEffect) de la animación en `forwards`. Sin embargo, no se recomienda usar los modos de relleno para conservar el efecto de una animación de forma indefinida, por dos motivos:
 
 - El navegador tiene que mantener el estado de la animación mientras sigue activa, así que la animación sigue consumiendo recursos aunque ya no esté animando. Ten en cuenta que esto se atenúa en parte porque el navegador [elimina automáticamente las animaciones de relleno](#eliminación_automática_de_animaciones_de_relleno).
-- Los estilos que aplican las animaciones tienen una [mayor precedencia en la cascada](/es/docs/Web/CSS/Guides/Cascade/Introduction#cascading_order) que los estilos especificados, por lo que puede ser difícil sobrescribirlos cuando hace falta.
+- Los estilos que aplican las animaciones tienen una [mayor precedencia en la cascada](/es/docs/Web/CSS/Guides/Cascade/Introduction) que los estilos especificados, por lo que puede ser difícil sobrescribirlos cuando hace falta.
 
 Una mejor opción es usar el método {{domxref("Animation.commitStyles()")}}. Este método escribe los valores calculados de los estilos actuales de la animación en el atributo [`style`](/es/docs/Web/HTML/Reference/Global_attributes/style) de su elemento de destino, y a partir de ahí se pueden volver a aplicar estilos al elemento con normalidad.
 
