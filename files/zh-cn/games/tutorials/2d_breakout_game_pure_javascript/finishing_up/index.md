@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
 ---
 
-{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
 
 本篇为 [Gamedev Canvas 教程](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 个步骤中的**第 10 步也是最后一步**。在你完成了本节教程之后，你可以在 [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html) 看到源码。
 
@@ -300,4 +300,4 @@ runButton.addEventListener("click", () => {
 
 你也可以回到[本教程的目录页](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)。祝编程愉快！
 
-{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}

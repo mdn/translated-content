@@ -87,6 +87,6 @@ const game = new Phaser.Game(config);
 
 ## 下一步
 
-现在我们已经设置好了游戏的缩放，让我们继续第三课，并弄清楚如何[加载资源并将其显示在屏幕上](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen)。
+现在我们已经设置好了游戏的缩放，让我们继续第三课，并弄清楚如何[加载资源并将其显示在屏幕上](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball)。
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball")}}

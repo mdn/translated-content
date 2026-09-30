@@ -2,7 +2,7 @@
 title: Solucionar conflictos
 slug: Learn_web_development/Core/Styling_basics/Handling_conflicts
 l10n:
-  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
+  sourceCommit: f99d00a1c3697e26a679925954e26564e7e79b98
 ---
 
 {{LearnSidebar}}
@@ -196,7 +196,7 @@ CSS proporciona cinco valores de propiedad universales especiales para controlar
 - {{cssxref("inherit")}}
   - : Establece que el valor de la propiedad aplicado a un elemento seleccionado sea el mismo que el de su elemento padre. En la práctica, esto "activa la herencia".
 - {{cssxref("initial")}}
-  - : Establece que el valor de la propiedad aplicado a un elemento seleccionado sea el [valor inicial](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing) de esa propiedad.
+  - : Establece que el valor de la propiedad aplicado a un elemento seleccionado sea el [valor inicial](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing#valor_inicial) de esa propiedad.
 - {{cssxref("revert")}}
   - : Restablece el valor de la propiedad aplicado a un elemento seleccionado al estilo predeterminado del navegador, en lugar de los valores predeterminados aplicados a esa propiedad. Este valor se comporta como {{cssxref("unset")}} en muchos casos.
 - {{cssxref("revert-layer")}}

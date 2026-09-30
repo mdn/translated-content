@@ -1,6 +1,6 @@
 ---
 title: 純粋な JavaScript を使った二次元ブロック崩しゲーム
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript
 l10n:
   sourceCommit: 4483da6501d1c735a0e1ac1e95775e2fe1766dc3
 ---

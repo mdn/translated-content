@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 1a0be468b9e7c88a09ea3438a81341c4f6a619a6
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Win_the_game", "Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens")}}
 
 这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的**第 13 步**。在本文中，我们将实现一个生命系统，让玩家失去 3 条生命之前都能继续游戏，而不是仅失去一条生命后就结束，从而延长游戏乐趣。
 
@@ -319,4 +319,4 @@ const game = new Phaser.Game(config);
 
 生命机制让游戏变得容错率更高：失去一条生命后，你仍有两条生命可以继续游戏。接下来，让我们通过添加[动画和补间](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)来丰富游戏的视觉与质感。
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Win_the_game", "Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens")}}

@@ -11,6 +11,7 @@ Guía para colaborar traduciendo y manteniendo el contenido de MDN Web Docs al e
 - [Abrir un Pull Request](#abrir-un-pull-request)
   - [Opción A: Desde GitHub (sin instalar nada)](#opción-a-desde-github-sin-instalar-nada)
   - [Opción B: Desde tu computadora (recomendada para cambios grandes)](#opción-b-desde-tu-computadora-recomendada-para-cambios-grandes)
+- [Levanta el entorno local (opcional)](#levanta-el-entorno-local-opcional)
 - [Traducir un documento](#traducir-un-documento)
 - [Imágenes y otros archivos](#imágenes-y-otros-archivos)
 - [Mantener el `l10n.sourceCommit` al día](#mantener-el-l10nsourcecommit-al-día)
@@ -116,6 +117,12 @@ No necesitas levantar un servidor local para traducir: el bot genera una URL de 
 7. Abre <https://github.com/TU_USUARIO/translated-content> y crea el PR hacia `mdn/translated-content:main`.
 
 Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
+
+---
+
+## Levanta el entorno local (opcional)
+
+Si quieres **ver tus traducciones renderizadas en tu propia computadora** mientras trabajas, sigue nuestra guía paso a paso: [Levanta el entorno local de MDN](./entorno-local.md). No es obligatorio para contribuir (el bot genera una previsualización en cada PR), pero es más cómodo para revisar enlaces, macros y formato en vivo.
 
 ---
 

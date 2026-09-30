@@ -19,7 +19,11 @@ original_slug: Web/CSS/:first
 
 ## 구문
 
-{{csssyntax}}
+```css
+:first {
+  /* ... */
+}
+```
 
 ## 예제
 
