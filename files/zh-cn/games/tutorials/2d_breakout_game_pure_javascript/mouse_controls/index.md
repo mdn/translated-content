@@ -230,6 +230,6 @@ runButton.addEventListener("click", () => {
 
 ## 下一步
 
-现在我们已经拥有一个完整的游戏。接下来，我们会通过一些小调整来结束这一系列课程——[收尾工作](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up)。
+现在我们已经拥有一个完整的游戏。接下来，我们会通过一些小调整来结束这一系列课程——[收尾工作](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives)。
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}

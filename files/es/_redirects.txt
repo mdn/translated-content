@@ -1258,7 +1258,7 @@
 /es/docs/Learn/HTML/Howto	/es/docs/Learn_web_development/Howto/Solve_HTML_problems
 /es/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages	/es/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /es/docs/Learn/HTML/Howto/Use_data_attributes	/es/docs/Web/HTML/How_to/Use_data_attributes
-/es/docs/Learn/HTML/Introduccion_a_HTML	/es/docs/conflicting/Learn_web_development/Core/Structuring_content
+/es/docs/Learn/HTML/Introduccion_a_HTML	/es/docs/Learn_web_development/Core/Structuring_content
 /es/docs/Learn/HTML/Introduccion_a_HTML/Advanced_text_formatting	/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features
 /es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks	/es/docs/Learn_web_development/Core/Structuring_content/Creating_links
 /es/docs/Learn/HTML/Introduccion_a_HTML/Debugging_HTML	/es/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML
@@ -1271,7 +1271,7 @@
 /es/docs/Learn/HTML/Introduccion_a_HTML/estructura	/es/docs/Learn_web_development/Core/Structuring_content/Structuring_documents
 /es/docs/Learn/HTML/Introduccion_a_HTML/iniciar	/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
 /es/docs/Learn/HTML/Introduccion_a_HTML/texto	/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
-/es/docs/Learn/HTML/Introduction_to_HTML	/es/docs/conflicting/Learn_web_development/Core/Structuring_content
+/es/docs/Learn/HTML/Introduction_to_HTML	/es/docs/Learn_web_development/Core/Structuring_content
 /es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting	/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features
 /es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks	/es/docs/Learn_web_development/Core/Structuring_content/Creating_links
 /es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML	/es/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML
@@ -1284,7 +1284,7 @@
 /es/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics	/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
 /es/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links	/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links
 /es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML	/es/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata
-/es/docs/Learn/HTML/Multimedia_and_embedding	/es/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b
+/es/docs/Learn/HTML/Multimedia_and_embedding	/es/docs/Learn_web_development/Core/Structuring_content
 /es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web	/es/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 /es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML	/es/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images	/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images
@@ -2772,7 +2772,7 @@
 /es/docs/Web/Guide/HTML/Forms/My_first_HTML_form	/es/docs/Learn_web_development/Extensions/Forms/Your_first_form
 /es/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data	/es/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 /es/docs/Web/Guide/HTML/Forms/Styling_HTML_forms	/es/docs/Learn_web_development/Extensions/Forms/Styling_web_forms
-/es/docs/Web/Guide/HTML/Introduction_alhtml	/es/docs/conflicting/Learn_web_development/Core/Structuring_content
+/es/docs/Web/Guide/HTML/Introduction_alhtml	/es/docs/Learn_web_development/Core/Structuring_content
 /es/docs/Web/Guide/HTML/categorias_de_contenido	/es/docs/Web/HTML/Guides/Content_categories
 /es/docs/Web/Guide/Mobile	/es/docs/conflicting/Learn/CSS/CSS_layout/Responsive_Design
 /es/docs/Web/Guide/Movil	/es/docs/conflicting/Learn/CSS/CSS_layout/Responsive_Design
@@ -4141,7 +4141,9 @@
 /es/docs/Zoom_a_página_completa	/es/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
 /es/docs/conflicting/Games/Tools	/es/docs/Games/Tools
 /es/docs/conflicting/Learn_web_development/Core/Frameworks_libraries	/es/docs/Learn_web_development/Core/Frameworks_libraries
+/es/docs/conflicting/Learn_web_development/Core/Structuring_content	/es/docs/Learn_web_development/Core/Structuring_content
 /es/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics	/es/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
+/es/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b	/es/docs/Learn_web_development/Core/Structuring_content
 /es/docs/conflicting/Learn_web_development/Core/Styling_basics_3fe7b053115cdfdcdb658e88312276a96d81de42552c60589901728cd9cfb3b3	/es/docs/Learn_web_development/Core/Styling_basics
 /es/docs/conflicting/Learn_web_development/Core/Styling_basics_caad113ab4b172ad3cd3f6b04d466fd25bbbea60c1a37548c663858321ca18f3	/es/docs/Learn_web_development/Core/Styling_basics
 /es/docs/conflicting/Learn_web_development/Extensions/Forms	/es/docs/Learn_web_development/Extensions/Forms

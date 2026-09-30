@@ -3,7 +3,7 @@ title: "HTMLScriptElement: integrity プロパティ"
 short-title: integrity
 slug: Web/API/HTMLScriptElement/integrity
 l10n:
-  sourceCommit: 49d15be653576c5f73ec527ee976c5881171b53c
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
 {{APIRef("HTML DOM")}}
@@ -22,7 +22,6 @@ l10n:
 <script
   id="el"
   src="https://example.com/example-framework.js"
-  type="text/javascript"
   integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
   crossorigin="anonymous"></script>
 ```

@@ -3,7 +3,7 @@ title: En-tête Cache-Control
 short-title: Cache-Control
 slug: Web/HTTP/Reference/Headers/Cache-Control
 l10n:
-  sourceCommit: 50da788b972b99730b4aeb8fec8fde3bde10975d
+  sourceCommit: d15e4dc0a813a9accd0e36b818bdadc8ac3ab413
 ---
 
 {{Glossary("request header", "L'en-tête de requête")}} et {{Glossary("response header", "de réponse")}} HTTP **`Cache-Control`** contient des _directives_ (c'est-à-dire des instructions), dans les requêtes et dans les réponses, pour contrôler [la mise en cache](/fr/docs/Web/HTTP/Guides/Caching) dans les navigateurs et caches partagés (par exemple les mandataires (<i lang="en">proxies</i> en anglais), CDN).
@@ -33,7 +33,7 @@ l10n:
 ## Syntaxe
 
 ```http
-Cache-Control: <directive>, <directive>, ...
+Cache-Control: <directive>, <directive>, …
 ```
 
 Les directives pour la mise en cache suivent les règles suivantes&nbsp;:
@@ -46,24 +46,24 @@ Les directives pour la mise en cache suivent les règles suivantes&nbsp;:
 
 Le tableau qui suit indique les directives standard pour `Cache-Control`&nbsp;:
 
-| Requête                             | Réponse                                             |
-| ----------------------------------- | --------------------------------------------------- |
-| [`max-age`](#max-age)               | [`max-age`](#max-age)                               |
-| [`max-stale`](#max-stale)           | -                                                   |
-| [`min-fresh`](#min-fresh)           | -                                                   |
-| -                                   | [`s-maxage`](#s-maxage)                             |
-| [`no-cache`](#no-cache)             | [`no-cache`](#no-cache)                             |
-| [`no-store`](#no-store)             | [`no-store`](#no-store)                             |
-| [`no-transform`](#no-transform)     | [`no-transform`](#no-transform)                     |
-| [`only-if-cached`](#only-if-cached) | -                                                   |
-| -                                   | [`must-revalidate`](#must-revalidate)               |
-| -                                   | [`proxy-revalidate`](#proxy-revalidate)             |
-| -                                   | [`must-understand`](#must-understand)               |
-| -                                   | [`private`](#private)                               |
-| -                                   | [`public`](#public)                                 |
-| -                                   | [`immutable`](#immutable)                           |
-| -                                   | [`stale-while-revalidate`](#stale-while-revalidate) |
-| [`stale-if-error`](#stale-if-error) | [`stale-if-error`](#stale-if-error)                 |
+| Requête                               | Réponse                                             |
+| ------------------------------------- | --------------------------------------------------- |
+| [`max-age`](#max-age_2)               | [`max-age`](#max-age)                               |
+| [`max-stale`](#max-stale)             | -                                                   |
+| [`min-fresh`](#min-fresh)             | -                                                   |
+| -                                     | [`s-maxage`](#s-maxage)                             |
+| [`no-cache`](#no-cache_2)             | [`no-cache`](#no-cache)                             |
+| [`no-store`](#no-store_2)             | [`no-store`](#no-store)                             |
+| [`no-transform`](#no-transform_2)     | [`no-transform`](#no-transform)                     |
+| [`only-if-cached`](#only-if-cached)   | -                                                   |
+| -                                     | [`must-revalidate`](#must-revalidate)               |
+| -                                     | [`proxy-revalidate`](#proxy-revalidate)             |
+| -                                     | [`must-understand`](#must-understand)               |
+| -                                     | [`private`](#private)                               |
+| -                                     | [`public`](#public)                                 |
+| -                                     | [`immutable`](#immutable)                           |
+| -                                     | [`stale-while-revalidate`](#stale-while-revalidate) |
+| [`stale-if-error`](#stale-if-error_2) | [`stale-if-error`](#stale-if-error)                 |
 
 Voir [le tableau de compatibilité](#compatibilité_des_navigateurs) pour leur prise en charge respective. Les agents utilisateurs qui ne reconnaissent pas une directive doivent l'ignorer.
 
