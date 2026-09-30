@@ -120,6 +120,6 @@ const game = new Phaser.Game(config);
 
 ## 下一步
 
-现在我们已经设置好了基本的 HTML 代码，并简单了解了 Phaser 的初始化，接下来让我们进入第二课，学习[缩放](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling)。
+现在我们已经设置好了基本的 HTML 代码，并简单了解了 Phaser 的初始化，接下来让我们进入第二课，学习[缩放](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework)。
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Scaling")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework")}}

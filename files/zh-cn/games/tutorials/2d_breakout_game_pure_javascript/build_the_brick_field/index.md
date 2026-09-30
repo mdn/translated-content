@@ -107,6 +107,6 @@ drawBricks();
 
 ## 下一节
 
-现在，我们有砖啦！但是球根本就没有和它们互动——接下来的第七章我们将让球和砖产生碰撞：[碰撞检测](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)。
+现在，我们有砖啦！但是球根本就没有和它们互动——接下来的第七章我们将让球和砖产生碰撞：[碰撞检测](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)。
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}

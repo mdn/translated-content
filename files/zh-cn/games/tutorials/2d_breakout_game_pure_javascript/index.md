@@ -19,13 +19,13 @@ l10n:
 
 全部教程——[MDN 打砖块游戏](http://breakout.enclavegames.com/lesson10.html) 的各个版本我们正一起管理并托管到 [GitHub](https://github.com/end3r/Canvas-gamedev-workshop) 上：
 
-1. [创建、绘制画布](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
+1. [创建、绘制画布](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas)
 2. [让球动起来](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)
 3. [反弹的墙](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls)
 4. [键盘操作](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)
 5. [游戏结束](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over)
 6. [创建砖块](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
-7. [撞击处理](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)
+7. [撞击处理](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)
 8. [统计得分、获得胜利](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)
 9. [鼠标控制](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls)
 10. [完成](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up)
@@ -41,4 +41,4 @@ l10n:
 
 好，让我们开始吧。第一步——[创建、绘制画布](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
 
-{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
+{{Next("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas")}}

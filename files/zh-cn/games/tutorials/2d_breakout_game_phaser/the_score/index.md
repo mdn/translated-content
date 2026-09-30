@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4483da6501d1c735a0e1ac1e95775e2fe1766dc3
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Collision_detection", "Games/Tutorials/2D_breakout_game_Phaser/Win_the_game")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Win_the_game")}}
 
 这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的**第 11 步**。在本文中，我们会给游戏添加一个记分系统。记分也可以让游戏更有趣——你可以尝试打破自己或朋友的最高分。
 
@@ -200,6 +200,6 @@ const game = new Phaser.Game(config);
 
 ## 下一步
 
-我们现在有了一个得分系统，但是如果你无法获胜，那么玩游戏和记录分数又有什么意义呢？让我们看看如何添加胜利状态，让我们可以[赢得游戏](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game)。
+我们现在有了一个得分系统，但是如果你无法获胜，那么玩游戏和记录分数又有什么意义呢？让我们看看如何添加胜利状态，让我们可以[赢得游戏](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win)。
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Collision_detection", "Games/Tutorials/2D_breakout_game_Phaser/Win_the_game")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win")}}
