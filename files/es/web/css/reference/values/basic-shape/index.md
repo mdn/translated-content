@@ -3,7 +3,7 @@ title: Tipo CSS `<basic-shape>`
 short-title: <basic-shape>
 slug: Web/CSS/Reference/Values/basic-shape
 l10n:
-  sourceCommit: 6edb918a9e6bd17858d48dcfa5d76aa5ed5b9659
+  sourceCommit: 2e0b9415ed31484a4830e214eff9e06e408c7261
 ---
 
 El [tipo de dato](/es/docs/Web/CSS/Reference/Values/Data_types) [CSS](/es/docs/Web/CSS) **`<basic-shape>`** representa una forma que se usa en las propiedades {{cssxref("border-shape")}}, {{cssxref("clip-path")}}, {{cssxref("offset-path")}} y {{cssxref("shape-outside")}}.
@@ -152,7 +152,7 @@ polygon( <'fill-rule'>? [ round <length> ]? , [ <length-percentage> <length-perc
 El primer parámetro, opcional, puede contener uno o ambos de los siguientes elementos, separados por un espacio:
 
 - Un valor SVG de {{SVGAttr("fill-rule")}}, `nonzero` o `evenodd`, que especifica el algoritmo con el que se rellena la forma del polígono.
-- La palabra clave [`round`](/es/docs/Web/CSS/Reference/Values/basic-shape/polygon#round) seguida de un valor {{cssxref("length")}}, separados por un espacio. Indica que el polígono debe tener esquinas redondeadas, y el `<length>` especifica el radio de las esquinas.
+- La palabra clave [`round`](/es/docs/Web/CSS/Reference/Values/basic-shape/polygon) seguida de un valor {{cssxref("length")}}, separados por un espacio. Indica que el polígono debe tener esquinas redondeadas, y el `<length>` especifica el radio de las esquinas.
 
 Cada par de coordenadas consta de dos valores `<length-percentage>` separados por un espacio. Estos valores representan las coordenadas en el eje x y en el eje y de un vértice del polígono.
 
@@ -174,13 +174,13 @@ La función {{cssxref("basic-shape/shape","shape()")}} define una forma mediante
 shape( <'fill-rule'>? from <coordinate-pair> , <shape-command># )
 ```
 
-El parámetro `from <coordinate-pair>` representa el punto de partida del primer comando de forma, y `<shape-command>` define uno o más comandos de forma, que son similares a los [comandos de trazado SVG](/es/docs/Web/SVG/Reference/Attribute/d#path_commands). La función `shape()` no es un valor válido para la propiedad {{cssxref("shape-outside")}}.
+El parámetro `from <coordinate-pair>` representa el punto de partida del primer comando de forma, y `<shape-command>` define uno o más comandos de forma, que son similares a los [comandos de trazado SVG](/es/docs/Web/SVG/Reference/Attribute/d). La función `shape()` no es un valor válido para la propiedad {{cssxref("shape-outside")}}.
 
 ## Descripción
 
 Al crear una forma, la caja de referencia la define la propiedad que usa los valores `<basic-shape>`. De forma predeterminada, el sistema de coordenadas de la forma tiene su origen en la esquina superior izquierda de la caja de margen del elemento, con el eje x hacia la derecha y el eje y hacia abajo. Todas las longitudes expresadas en porcentajes se resuelven a partir de las dimensiones de la caja de referencia.
 
-La caja de referencia predeterminada es la [`margin-box`](/es/docs/Web/CSS/Reference/Values/box-edge#margin-box), como se muestra en la imagen siguiente. La imagen muestra un círculo creado con `shape-outside: circle(50%)` y resalta las distintas partes del modelo de caja tal como se ven en las herramientas de desarrollo de un navegador. Aquí, la forma se define respecto a la caja de margen.
+La caja de referencia predeterminada es la [`margin-box`](/es/docs/Web/CSS/Reference/Values/box-edge), como se muestra en la imagen siguiente. La imagen muestra un círculo creado con `shape-outside: circle(50%)` y resalta las distintas partes del modelo de caja tal como se ven en las herramientas de desarrollo de un navegador. Aquí, la forma se define respecto a la caja de margen.
 
 ![Imagen de un círculo inspeccionado con el inspector de formas de las herramientas de desarrollo de Firefox. Las distintas partes del modelo de caja aparecen resaltadas.](shapes-reference-box.png)
 
@@ -205,7 +205,7 @@ Cada valor de las listas de las dos funciones `<basic-shape>` se interpola segú
 
 - **Ambas formas son de tipo `polygon()`**: la interpolación se aplica entre cada par de valores correspondientes si usan el mismo `<fill-rule>` y tienen el mismo número de pares de coordenadas separados por comas.
 
-- **Ambas formas son de tipo `path()`**: la interpolación se aplica a cada parámetro como un {{cssxref("&lt;number&gt;")}} si las cadenas de trazado de ambas formas coinciden en el número, el tipo y el orden de los [comandos de datos del trazado](/es/docs/Web/SVG/Reference/Attribute/d#path_commands).
+- **Ambas formas son de tipo `path()`**: la interpolación se aplica a cada parámetro como un {{cssxref("&lt;number&gt;")}} si las cadenas de trazado de ambas formas coinciden en el número, el tipo y el orden de los [comandos de datos del trazado](/es/docs/Web/SVG/Reference/Attribute/d).
 
 - **Ambas formas son de tipo `shape()`**: la interpolación se aplica entre cada par de valores correspondientes si tienen la misma palabra clave de comando y usan la misma palabra clave `<by-to>`. Si `shape()` se usa en la propiedad {{cssxref("clip-path")}}, las dos formas se interpolan si además tienen el mismo `<fill-rule>`.
   - Si usan `<curve-command>` o `<smooth-command>`, el número de puntos de control debe coincidir para que haya interpolación.
