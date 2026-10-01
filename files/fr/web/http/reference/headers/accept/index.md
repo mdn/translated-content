@@ -41,7 +41,7 @@ Accept: <media-type>/<MIME_subtype>
 Accept: <media-type>/*
 Accept: */*
 
-// Multiple types, weighted with the quality value syntax
+// Types multiples, pondéré selon la syntaxe de la valeur de qualité
 Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*;q=0.8
 ```
 
@@ -50,7 +50,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*
 - `<media-type>/<subtype>`
   - : Un type MIME unique et déterminé [MIME type](/fr/docs/Web/HTTP/Guides/MIME_types), comme par exemple `text/html`.
 - `<media-type>/*`
-  - : un type MIME type ne comprenant pas de sous-type. `image/*` prendra en charge `image/png`, `image/svg`, `image/gif` et tous autres types d'image.
+  - : un type MIME type ne comprenant pas de sous-type. `image/*` prend en charge `image/png`, `image/svg`, `image/gif` et tous autres types d'image.
 - `*/*`
   - : Tout type MIME
 - `;q=` (facteur de pondération q)

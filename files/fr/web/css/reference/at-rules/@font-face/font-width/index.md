@@ -13,7 +13,7 @@ l10n:
 
 Le descripteur [CSS](/fr/docs/Web/CSS) **`font-width`** permet aux auteur·ice·s de définir une police normale, condensée ou étendue pour les polices définies dans la règle {{CSSxRef("@font-face")}}.
 
-Pour une famille de polices particulière, les auteur·ice·s peuvent télécharger différentes variantes de la police correspondant aux différents styles de la même famille de polices, puis utiliser le descripteur `font-width` pour spécifier explicitement la largeur de la variante de la police. Les valeurs disponibles pour le descripteur `font-width` sont les mêmes que celles de la propriété correspondante {{CSSxRef("font-width")}}.
+Pour une famille de polices particulière, les auteur·ice·s peuvent télécharger différentes variantes de la police correspondant aux différents styles de la même famille de polices, puis utiliser le descripteur `font-width` pour définir explicitement la largeur de la variante de la police. Les valeurs disponibles pour le descripteur `font-width` sont les mêmes que celles de la propriété correspondante {{CSSxRef("font-width")}}.
 
 ## Syntaxe
 

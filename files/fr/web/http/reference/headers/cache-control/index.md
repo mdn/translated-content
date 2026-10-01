@@ -74,7 +74,7 @@ Cette section définit les termes utilisés dans ce document, certains provenant
 - Cache (HTTP)
   - : Une implémentation qui contient les requêtes et les réponses afin de les réutiliser pour les requêtes suivantes. Il peut s'agir d'un cache partagé ou d'un cache privé.
 - Cache partagé
-  - : Un cache qui existe entre le serveur d'origine et les clients (par exemple un <i lang="en">proxy</i> ou un CDN). Il stocke une seule réponse pour la réutiliser avec plusieurs utilisatrices et utilisateurs (les équipes de développement devraient donc éviter de stocker du contenu personnalisé dans un cache partagé).
+  - : Un cache qui existe entre le serveur d'origine et les clients (par exemple un <i lang="en">proxy</i> ou un CDN). Il stocke une seule réponse pour la réutiliser avec plusieurs utilisateur·ice·s (les équipes de développement doivent donc éviter de stocker du contenu personnalisé dans un cache partagé).
 - Cache privé
   - : Un cache qui existe au niveau du client. On parle également de cache local ou de cache du navigateur. Il peut stocker et réutiliser du contenu personnalisé pour une personne.
 - Stockage de la réponse
@@ -109,7 +109,7 @@ Cela indique que les caches peuvent stocker cette réponse et la réutiliser pou
 Notez que `max-age` ne correspond pas au temps écoulé depuis que la réponse a été reçue, il s'agit du temps écoulé depuis que la réponse a été générée sur le serveur d'origine.
 Ainsi, si les autres caches situés sur la route réseau empruntée par la réponse stockent la réponse pendant 100 secondes (en l'indiquant avec l'en-tête de réponse `Age`), le cache du navigateur déduit 100 secondes de la [durée de fraîcheur](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_et_durabilité_en_fonction_de_lâge).
 
-Si la valeur de `max-age` est négative (par exemple, `-1`) ou n'est pas un entier (par exemple, `3599.99`), alors le comportement de la mise en cache n'est pas défini. Il est recommandé aux caches de traiter la valeur comme si elle valait `0` (cela est indiqué dans la section [Calcul de la durée de fraîcheur <sup>(angl.)</sup>](https://httpwg.org/specs/rfc9111.html#calculating.freshness.lifetime) de la spécification HTTP).
+Si la valeur de `max-age` est négative (par exemple, `-1`) ou n'est pas un entier (par exemple, `3599.99`), alors le comportement de la mise en cache n'est pas défini. Il est recommandé aux caches de traiter la valeur comme si elle vaut `0` (cela est indiqué dans la section [Calcul de la durée de fraîcheur <sup>(angl.)</sup>](https://httpwg.org/specs/rfc9111.html#calculating.freshness.lifetime) de la spécification HTTP).
 
 ```http
 Cache-Control: max-age=604800

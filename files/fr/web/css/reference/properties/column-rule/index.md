@@ -160,7 +160,7 @@ Si le nombre d'espaces entre les colonnes est supérieur au nombre de styles, la
 
 ### Répéter automatiquement les styles de ligne
 
-La fonction `repeat()` accepte également `auto` comme premier argument au lieu d'un entier positif. Avec `auto` comme premier argument, les valeurs [`<gap-rule>`](#gap-rule) passées comme arguments suivants sont répétées autant de fois que nécessaire pour remplir les valeurs de toutes les règles qui ne sont pas explicitement spécifiées par d'autres composants de la valeur de la propriété.
+La fonction `repeat()` accepte également `auto` comme premier argument au lieu d'un entier positif. Avec `auto` comme premier argument, les valeurs [`<gap-rule>`](#gap-rule) passées comme arguments suivants sont répétées autant de fois que nécessaire pour remplir les valeurs de toutes les règles qui ne sont pas explicitement définies par d'autres composants de la valeur de la propriété.
 
 ```css
 column-rule:
@@ -185,7 +185,7 @@ Le mot-clé `auto` au sein de la fonction `repeat()` crée un répéteur automat
 
 ### Exemple simple
 
-Dans cet exemple, nous définissons une seule règle pour les lignes tracées entre les éléments flex.
+Dans cet exemple, nous définissons une seule règle pour les lignes tracées entre les éléments flexibles.
 
 #### HTML
 
@@ -276,7 +276,7 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("auto", "", "180")}}
+{{EmbedLiveSample("auto", "", 180)}}
 
 ```css hidden live-sample___basic live-sample___repeat live-sample___func live-sample___auto
 @layer no-support {

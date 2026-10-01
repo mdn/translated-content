@@ -73,7 +73,7 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
   - : Indique la fonction identité (c'est-à-dire sans modification ni compression). Cette valeur est toujours considérée comme acceptable, même si elle est omise.
 - `*` (joker)
   - : Correspond à tout codage de contenu non déjà listé dans l'en-tête. C'est la valeur par défaut si l'en-tête n'est pas présent. Cette directive n'implique pas que tout algorithme est pris en charge, mais indique qu'aucune préférence n'est exprimée.
-- `;q=` (pondération qvalues)
+- `;q=` (pondération de valeurs q)
   - : Toute valeur est placée dans un ordre de préférence exprimé à l'aide d'une [valeur de qualité](/fr/docs/Glossary/Quality_values) relative appelée _poids_.
 
 ## Exemples
