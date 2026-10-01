@@ -290,6 +290,6 @@ ul {
 - La propriété {{CSSxRef("column-rule-color")}}
 - La propriété {{CSSxRef("column-rule-width")}}
 - La propriété {{CSSxRef("column-rule-style")}}
-- La propriété raccourcie {{CSSxRef("rule-rule")}}
+- La propriété raccourcie {{CSSxRef("rule-width")}}
 - La propriété raccourcie {{CSSxRef("rule")}}
 - Le module [d'espacement CSS](/fr/docs/Web/CSS/Guides/Gaps)
