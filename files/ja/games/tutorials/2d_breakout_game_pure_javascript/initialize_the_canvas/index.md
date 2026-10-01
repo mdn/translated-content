@@ -8,7 +8,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
 
-これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) の 10 ステップ中 **1 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html)で見ることができます。
+これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) の 10 ステップ中 **1 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html)で見ることができます。
 
 ゲームの機能を書き始める前に、ゲームを内部でレンダリングするための基本的な構造を作成する必要があります。これは、HTML と {{htmlelement("canvas")}} 要素を使用して行うことができます。
 
@@ -144,6 +144,6 @@ ctx.closePath();
 
 ## 次のステップ
 
-ここまでで基本的な HTML を組み上げキャンバスについて少し学習しました。それでは、第 2 章に進み、[どうやってゲーム内のボールを動かすか](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)を学びましょう。
+ここまでで基本的な HTML を組み上げキャンバスについて少し学習しました。それでは、第 2 章に進み、[どうやってゲーム内のボールを動かすか](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball)を学びましょう。
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball")}}

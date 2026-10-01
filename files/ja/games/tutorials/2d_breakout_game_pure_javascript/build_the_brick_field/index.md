@@ -5,9 +5,9 @@ l10n:
   sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
 
-これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) の 10 ステップ中 **6 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html)で見ることができます。
+これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) の 10 ステップ中 **6 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html)で見ることができます。
 
 ゲームプレイの仕組みを修正した結果、負けることができるようになりました。これは、ゲームがようやくゲームらしくなってきたという意味で、とてもいいことです。しかし、壁やパドルでボールを跳ね返すだけでは、すぐに飽きられてしまいます。ブロック崩しに必要なのは、ボールでレンガを破壊すること。
 
@@ -254,4 +254,4 @@ runButton.addEventListener("click", () => {
 
 というわけでついにブロックができました。でもボールはブロックに全く反応しません。第 7 章、[衝突検出](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)ではこれを変えます。
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}
