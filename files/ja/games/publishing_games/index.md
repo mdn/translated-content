@@ -9,7 +9,7 @@ HTML ゲームはモバイルアプリなどのネイティブゲームに比べ
 
 ## ゲームの配信
 
-[チュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)を一つまたは[二つ](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser)実行し、HTML ゲームを作成しました。素晴らしいですね！[ゲームの配布](/ja/docs/Games/Publishing_games/Game_distribution)新しく作成したゲームを配信する方法について、知っておく必要があるすべてが記載されています。これには、オンラインで自らホストすること、オープンなマーケットプレイスに提出すること、 Google Play や iOS App Store などの閉じられたマーケットプレイスに提出することが含まれます。
+[チュートリアル](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)を一つまたは[二つ](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser)実行し、HTML ゲームを作成しました。素晴らしいですね！[ゲームの配布](/ja/docs/Games/Publishing_games/Game_distribution)新しく作成したゲームを配信する方法について、知っておく必要があるすべてが記載されています。これには、オンラインで自らホストすること、オープンなマーケットプレイスに提出すること、 Google Play や iOS App Store などの閉じられたマーケットプレイスに提出することが含まれます。
 
 ## ゲームの宣伝
 

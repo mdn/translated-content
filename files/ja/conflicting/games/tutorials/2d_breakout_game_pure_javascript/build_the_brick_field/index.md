@@ -6,9 +6,9 @@ l10n:
   sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
 
-これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) の 10 ステップ中 **7 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html)で見ることができます。
+これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) の 10 ステップ中 **7 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html)で見ることができます。
 
 ブロックはすでに画面の内側へ現れていますが、ボールがその中を通過していくので、ゲームはまだそれほど面白くはありません。レンガを跳ね返して壊せるように、衝突判定を追加することを考えなければなりません。
 
@@ -293,6 +293,6 @@ runButton.addEventListener("click", () => {
 
 ## 次のステップ
 
-着実にゴールに近づいています。では、先に進みましょう。第 8 章ではどのように[得点と勝ち負けを記録するか](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)を見てみます。
+着実にゴールに近づいています。では、先に進みましょう。第 8 章ではどのように[得点と勝ち負けを記録するか](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win)を見てみます。
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win")}}

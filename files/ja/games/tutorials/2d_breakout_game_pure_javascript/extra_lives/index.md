@@ -8,7 +8,7 @@ l10n:
 
 {{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
 
-これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) の 10 ステップ中 **10 ステップ目、最後のステップ**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html)で見ることができます。
+これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) の 10 ステップ中 **10 ステップ目、最後のステップ**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html)で見ることができます。
 
 私たちが書いているゲームには、常に改良の余地があります。例えば、プレイヤーに複数のライフを提供することができます。1 人や 2 人がミスをしても、ゲームを完了させることができるのです。また、コードのレンダリングを改善することもできます。
 
@@ -299,6 +299,6 @@ runButton.addEventListener("click", () => {
 
 おめでとうございます。これで全てのレッスンを終えました。ここまでで、キャンバス操作の基本と二次元のゲームの裏にあるロジックを学んだはずです。フレームワークを学びゲーム開発を続ける良い時期です。このシリーズに対応する [Phaser を使った二次元ブロックくずしゲーム](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser)や[デバイス回転方向を使った二次元迷路ゲーム](/ja/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation)チュートリアルを見てみると良いでしょう。 [MDN のゲームセクション](/ja/docs/Games)で発想やより多くの知識を探してみても良いでしょう。
 
-また、[このチュートリアルシリーズの目次](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)を見返せます。コーディングを楽しみましょう。
+また、[このチュートリアルシリーズの目次](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)を見返せます。コーディングを楽しみましょう。
 
 {{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
