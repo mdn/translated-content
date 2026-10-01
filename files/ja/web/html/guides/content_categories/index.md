@@ -2,7 +2,7 @@
 title: コンテンツカテゴリー
 slug: Web/HTML/Guides/Content_categories
 l10n:
-  sourceCommit: fce59e0706ab0114d9968c23722dccfacaebf998
+  sourceCommit: ba3c8980510073ee92674aa71cb2c8c5b71294ab
 ---
 
 ほとんどの [HTML](/ja/docs/Web/HTML) 要素は 1 つ以上の**コンテンツカテゴリー**に属していて、カテゴリーごとに共通した特徴を持つ要素を分類しています。これは緩やかなグループ分けです（実際にはこれらのカテゴリーの要素間の関係を作成していません）。しかし、これらは、特にその複雑な詳細に遭遇したときに、カテゴリーの共有動作とその関連ルールを定義し記述するのに役立ちます。[どのカテゴリーにも属さない要素も](#カテゴリーに属さない要素)存在します。
@@ -332,8 +332,8 @@ l10n:
 - {{HTMLElement("audio")}}: [`controls`](/ja/docs/Web/HTML/Reference/Elements/audio#controls) 属性が存在する場合
 - {{HTMLElement("dl")}}: この要素の子に 1 つ以上の名前と値のグループを含む場合
 - {{HTMLElement("input")}}: [type](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性が hidden の状態ではない場合
-- {{HTMLElement("ol")}}: 子要素に 1 つ以上の {{HTMLElement("li")}} 要素を含む場合
-- {{HTMLElement("ul")}}: 子要素に 1 つ以上の {{HTMLElement("li")}} 要素を含む場合
+- {{HTMLElement("ol")}}: その子要素に 1 つ以上の {{HTMLElement("li")}} 要素を含む場合
+- {{HTMLElement("ul")}}: その子要素に 1 つ以上の {{HTMLElement("li")}} 要素を含む場合
 
 ## カテゴリーに属さない要素
 
