@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Pointer Events")}}
 
-`pointerover` 事件会在指针设备移入元素的命中测试边界时被激发。
+`pointerover` 事件会在定点设备移入元素的命中测试边界时被激发。
 
 `pointerover` 事件具有和 {{domxref("Element/mouseover_event", "mouseover")}} 事件相同的问题。如果目标元素拥有子元素，`pointerout` 和 `pointerover` 事件在指针移动到这些子元素的边界之上时也会激发，而不仅仅是在目标元素本身上激发。通常来说，{{domxref("Element/pointerenter_event", "pointerenter")}} 和 {{domxref("Element/pointerleave_event", "pointerleave")}} 事件的行为更合理，因为它们不受指针移入子元素的影响。
 

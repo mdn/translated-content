@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Pointer Events")}}
 
-`pointerleave` 事件会在指针设备移出元素的命中测试边界时激发。对于触控笔设备，该事件会在触控笔离开数位板可探测的悬停范围时激发。另外，`pointerleave` 的运作方式与 {{domxref("Element/mouseleave_event", "mouseleave")}} 相同，并且会在同一时间被派发。视情况，它们也会与 {{domxref("Element/mouseout_event", "mouseout")}} 和 {{domxref("Element/pointerout_event", "pointerout")}} 事件在同一时间被派发。
+`pointerleave` 事件会在定点设备移出元素的命中测试边界时激发。对于触控笔设备，该事件会在触控笔离开数位板可探测的悬停范围时激发。另外，`pointerleave` 的运作方式与 {{domxref("Element/mouseleave_event", "mouseleave")}} 相同，并且会在同一时间被派发。视情况，它们也会与 {{domxref("Element/mouseout_event", "mouseout")}} 和 {{domxref("Element/pointerout_event", "pointerout")}} 事件在同一时间被派发。
 
 ## 语法
 

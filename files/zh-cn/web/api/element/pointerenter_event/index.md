@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Pointer Events")}}
 
-`pointerenter` 事件会在指针设备移入元素以及其子孙元素的命中测试边界时激发，也包括由来自不支持悬停的设备的 {{domxref("Element/pointerdown_event", "pointerdown")}} 事件导致的情形（参见 {{domxref("Element/pointerdown_event", "pointerdown")}}）。另外，`pointerenter` 的运作方式与 {{domxref("Element/mouseenter_event", "mouseenter")}} 相同，并且会在同一时间被派发。视情况，它们也会与 {{domxref("Element/mouseover_event", "mouseover")}} 和 {{domxref("Element/pointerover_event", "pointerover")}} 事件在同一时间被派发。
+`pointerenter` 事件会在定点设备移入元素以及其子孙元素的命中测试边界时激发，也包括由来自不支持悬停的设备的 {{domxref("Element/pointerdown_event", "pointerdown")}} 事件导致的情形（参见 {{domxref("Element/pointerdown_event", "pointerdown")}}）。另外，`pointerenter` 的运作方式与 {{domxref("Element/mouseenter_event", "mouseenter")}} 相同，并且会在同一时间被派发。视情况，它们也会与 {{domxref("Element/mouseover_event", "mouseover")}} 和 {{domxref("Element/pointerover_event", "pointerover")}} 事件在同一时间被派发。
 
 ## 语法
 
