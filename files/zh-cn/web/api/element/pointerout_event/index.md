@@ -10,7 +10,7 @@ l10n:
 
 `pointerout` 事件会因为某些原因被激发，包括：指针设备移出了元素的*命中测试*边界；在不支持悬停的设备上激发了 {{domxref("Element/pointerup_event", "pointerup")}} 事件（参见 {{domxref("Element/pointerup_event", "pointerup")}}）；在激发 {{domxref("Element/pointercancel_event", "pointercancel")}} 事件后被激发（参见 {{domxref("Element/pointercancel_event", "pointercancel")}}）；触控笔离开了数位板可探测的悬停范围。
 
-`pointerout` 事件具有和 {{domxref("Element/mouseout_event", "mouseout")}} 事件一样的问题。如果目标元素拥有子元素，`pointerout` 和 `pointerover` 事件在指针移入这些子元素时也会被激发，而不仅仅是在移入目标元素本身时被激发。通常来说，{{domxref("Element/pointerenter_event", "pointerenter")}} 和 {{domxref("Element/pointerleave_event", "pointerleave")}} 事件的行为更合理，因为它们不受指针移入子元素的影响。
+`pointerout` 事件具有和 {{domxref("Element/mouseout_event", "mouseout")}} 事件相同的问题。如果目标元素拥有子元素，`pointerout` 和 `pointerover` 事件在指针移动到这些子元素的边界之上时也会激发，而不仅仅是在目标元素本身上激发。通常来说，{{domxref("Element/pointerenter_event", "pointerenter")}} 和 {{domxref("Element/pointerleave_event", "pointerleave")}} 事件的行为更合理，因为它们不受指针移入子元素的影响。
 
 ## 语法
 
@@ -36,7 +36,7 @@ onpointerout = (event) => { }
 const para = document.querySelector("p");
 
 para.addEventListener("pointerout", (event) => {
-  console.log("指针移出了");
+  console.log("指针移出");
 });
 ```
 
@@ -46,7 +46,7 @@ para.addEventListener("pointerout", (event) => {
 const para = document.querySelector("p");
 
 para.onpointerout = (event) => {
-  console.log("指针移出了");
+  console.log("指针移出");
 };
 ```
 
