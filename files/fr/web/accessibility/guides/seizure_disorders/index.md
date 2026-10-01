@@ -3,7 +3,7 @@ title: "Accessibilité Web : crises et réactions physiques"
 short-title: Prévenir crises et réactions physiques
 slug: Web/Accessibility/Guides/Seizure_disorders
 l10n:
-  sourceCommit: 1474534461893381d54c502e655f334b5568e597
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 Cet article présente les concepts permettant de rendre le contenu Web accessible aux personnes souffrant de troubles vestibulaires, ainsi que les méthodes pour mesurer et prévenir les contenus susceptibles d'entraîner des crises ou d'autres réactions physiques.
@@ -138,7 +138,7 @@ En plus des variations psychologiques, il existe aussi des différences physiolo
 
 Il est important de comprendre que la lumière et ses mesures sont linéaires, mais la vision humaine et la perception humaine ne le sont pas. Les recherches et discussions se poursuivent sur la façon de relier la mesure machine de la lumière qui passe d'un écran d'ordinateur, à travers la distance jusqu'à l'œil humain, filtrée par la vision humaine, puis traitée par le cerveau humain.
 
-Même l'âge et le sexe peuvent jouer un rôle. Selon l'article de la Fondation de l'Épilepsie, [«&nbsp;Mieux comprendre la photosensibilité, l'une des conditions les plus complexes de l'épilepsie&nbsp;» <sup>(angl.)</sup>](https://www.epilepsy.com/stories/shedding-light-photosensitivity-one-epilepsys-most-complex-conditions), «&nbsp;Les enfants et les adolescent·e·s sont plus susceptibles que les adultes d'avoir une réponse anormale à la stimulation lumineuse, et la première crise induite par la lumière survient presque toujours avant 20 ans.&nbsp;» L'article poursuit avec cette statistique&nbsp;: «&nbsp;Les filles (60&nbsp;%) sont plus souvent touchées que les garçons (40&nbsp;%), bien que les crises soient plus fréquentes chez les garçons car ils sont plus susceptibles de jouer aux jeux vidéo. Les jeux vidéo contiennent souvent des stimulations lumineuses potentiellement provocatrices.&nbsp;»
+Même l'âge et le sexe peuvent jouer un rôle. Selon l'article de la Fondation de l'Épilepsie, [«&nbsp;Mieux comprendre la photosensibilité, l'une des conditions les plus complexes de l'épilepsie&nbsp;» <sup>(angl.)</sup>](https://www.epilepsy.com/stories/shedding-light-photosensitivity-one-epilepsys-most-complex-conditions), «&nbsp;Les enfants et les adolescent·e·s sont plus susceptibles que les adultes d'avoir une réponse anormale à la stimulation lumineuse, et la première crise induite par la lumière survient presque toujours avant 20 ans.&nbsp;» L'article poursuit avec cette statistique&nbsp;: «&nbsp;Les filles (60%) sont plus souvent touchées que les garçons (40%), bien que les crises soient plus fréquentes chez les garçons, car ils sont plus susceptibles de jouer aux jeux vidéo. Les jeux vidéo contiennent souvent des stimulations lumineuses potentiellement provocatrices.&nbsp;»
 
 **Les tests utilisateur·ice·s sont très problématiques**. Naturellement, personne ne souhaite envoyer une personne sujette aux crises à des tests utilisateur·ice·s. C'est dangereux. À ce titre, l'une des choses les plus éthiques que les développeur·euse·s et concepteur·ice·s puissent faire est d'utiliser des outils développés par des expert·e·s du domaine ayant travaillé en collaboration avec des médecins. À ce jour, deux outils sont couramment disponibles et ont été développés de façon éthique et professionnelle par des chercheur·euse·s et des médecins pour les films/vidéos&nbsp;: **PEAT** et le **Harding Test**.
 
@@ -290,7 +290,7 @@ Notez que l'audio dans les vidéos peut être contrôlé par l'attribut `muted`,
 
 ### Contrôler la vitesse
 
-Cela semble évident, mais comme il existe de nombreux types MIME, les mécanismes de gestion varient considérablement, et il n'existe donc pas de solution universelle. Cela est d'autant plus compliqué que la classification des fichiers influence leur gestion. Par exemple, le format `.gif` est généralement considéré comme une image, mais il est aussi vu comme un format vidéo dans certains milieux en raison de sa capacité à être animé. Pour une liste complète des types de médias, consultez la [page des types de médias sur IANA.org <sup>(angl.)</sup>](https://www.iana.org/assignments/media-types/media-types.xhtml).
+Cela semble évident, mais comme il existe de nombreux types MIME, les mécanismes de gestion varient considérablement, et il n'existe donc pas de solution universelle. Cela est d'autant plus compliqué que la classification des fichiers influence leur gestion. Par exemple, le format `.gif` est généralement considéré comme une image, mais il est aussi vu comme un format vidéo dans certains milieux en raison de sa capacité à être animé. Pour une liste complète des types de médias, consultez la [page des types de médias sur IANA.org <sup>(angl.)</sup>](https://www.iana.org/assignments/media-types).
 
 Les méthodes pour les détecter ne sont pas triviales. Vous pouvez consulter la norme [MIME Sniffing <sup>(angl.)</sup>](https://mimesniff.spec.whatwg.org/) sur whatwg.org. Presque tous les types d'images peuvent être animés&nbsp;; la façon dont elles le sont varie, et donc le contrôle de l'animation aussi.
 
@@ -396,7 +396,7 @@ document.querySelector("input").addEventListener("click", setBackground);
 
 #### Éviter les rouges saturés pour le contenu clignotant
 
-Comme mentionné plus haut, l'Epilepsy Foundation of America a organisé un atelier en août 2004 pour établir un consensus d'expert·e·s sur les crises photosensibles. Parmi les résultats&nbsp;: _«&nbsp;Un flash est dangereux s'il a une luminance d'au moins 20 cd/m2, se produit à une fréquence d'au moins 3 Hz, et occupe un angle visuel solide d'au moins 0,006 stéradian (environ 10&nbsp;% du champ visuel central ou 25&nbsp;% de la surface de l'écran à une distance d'affichage typique). Une transition vers ou depuis un rouge saturé est aussi considérée comme un risque.&nbsp;»_ Il·Elle·s notent aussi dans ce consensus&nbsp;: _«&nbsp;Indépendamment de la luminance, une transition vers ou depuis un rouge saturé est aussi considérée comme un risque.&nbsp;»_
+Comme mentionné plus haut, l'Epilepsy Foundation of America a organisé un atelier en août 2004 pour établir un consensus d'expert·e·s sur les crises photosensibles. Parmi les résultats&nbsp;: _«&nbsp;Un flash est dangereux s'il a une luminance d'au moins 20 cd/m2, se produit à une fréquence d'au moins 3 Hz, et occupe un angle visuel solide d'au moins 0,006 stéradian (environ 10% du champ visuel central ou 25% de la surface de l'écran à une distance d'affichage typique). Une transition vers ou depuis un rouge saturé est aussi considérée comme un risque.&nbsp;»_ Il·Elle·s notent aussi dans ce consensus&nbsp;: _«&nbsp;Indépendamment de la luminance, une transition vers ou depuis un rouge saturé est aussi considérée comme un risque.&nbsp;»_
 
 ### Proposer des styles CSS alternatifs
 
@@ -525,7 +525,7 @@ La fonction média {{CSSxRef("@media/update", "update")}} permet d'interroger la
 EnvironmentMQ (prévu dans Media Queries Niveau 5)
 
 - `light-level`
-  - : [`light-level` <sup>(angl.)</sup>](https://drafts.csswg.org/mediaqueries-5/#light-level) a trois valeurs valides&nbsp;: dim, normal et washed. La spécification évite de définir ces niveaux en lux, car les appareils avec capteur de lumière ajustent généralement la luminosité automatiquement. Les spécifications notent aussi la différence de technologie, comme l'e-ink, lisible en plein jour, versus les cristaux liquides, qui ne le sont pas.
+  - : [`light-level` <sup>(angl.)</sup>](https://drafts.csswg.org/mediaqueries-5/#light-level) a trois valeurs valides&nbsp;: `dim`, `normal` et `washed`. La spécification évite de définir ces niveaux en lux, car les appareils avec capteur de lumière ajustent généralement la luminosité automatiquement. Les spécifications notent aussi la différence de technologie, comme l'e-ink, lisible en plein jour, versus les cristaux liquides, qui ne le sont pas.
 - `environment-blending`
   - : D'après le document de travail du W3C Media Queries Niveau 5&nbsp;: _«&nbsp;La fonction média [`environment-blending` <sup>(angl.)</sup>](https://drafts.csswg.org/mediaqueries-5/#descdef-media-environment-blending) permet d'interroger les caractéristiques de l'affichage de l'utilisateur·ice pour que l'auteur·ice puisse ajuster le style du document. L'auteur·ice peut choisir d'adapter les visuels et/ou la mise en page selon la technologie d'affichage pour améliorer l'attrait ou la lisibilité.&nbsp;»_
 
@@ -536,11 +536,11 @@ EnvironmentMQ (prévu dans Media Queries Niveau 5)
 - `inverted-colors`
   - : Selon la section [User Preference Media Features <sup>(angl.)</sup>](https://drafts.csswg.org/mediaqueries-5/#mf-user-preferences), «&nbsp;La fonction média [`inverted-colors` <sup>(angl.)</sup>](https://drafts.csswg.org/mediaqueries-5/#descdef-media-inverted-colors) indique si le contenu est affiché normalement ou si les couleurs sont inversées&nbsp;».
 - [`forced-colors`](/fr/docs/Web/CSS/Reference/At-rules/@media/forced-colors)
-  - : Dans [`forced-colors-mode` <sup>(angl.)</sup>](https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode), l'agent utilisateur impose la palette de couleurs préférée de l'utilisateur·ice sur la page, remplaçant les couleurs choisies par l'auteur·ice. D'après le document de travail du W3C Media Queries Niveau 5 sur forced-colors&nbsp;: _«&nbsp;La fonction média forced-colors permet de détecter si l'agent utilisateur a activé un [mode couleurs forcées <sup>(angl.)</sup>](https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode) où il impose une palette de couleurs limitée choisie par l'utilisateur·ice sur la page&nbsp;»_. L'utilisateur·ice doit être informé·e de cette capacité, et elle doit fonctionner avec la valeur appropriée pour la requête média prefers-color-scheme.
+  - : Dans [`forced-colors-mode` <sup>(angl.)</sup>](https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode), l'agent utilisateur impose la palette de couleurs préférée de l'utilisateur·ice sur la page, remplaçant les couleurs choisies par l'auteur·ice. D'après le document de travail du W3C Media Queries Niveau 5 sur `forced-colors`&nbsp;: _«&nbsp;La fonction média `forced-colors` permet de détecter si l'agent utilisateur a activé un [mode couleurs forcées <sup>(angl.)</sup>](https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode) où il impose une palette de couleurs limitée choisie par l'utilisateur·ice sur la page&nbsp;»_. L'utilisateur·ice doit être informé·e de cette capacité, et elle doit fonctionner avec la valeur appropriée pour la requête média `prefers-color-scheme`.
 - `light-level`
   - : D'après le document de travail du W3C Media Queries Niveau 5 sur light-level&nbsp;: _«&nbsp;La fonction média [`light-level` <sup>(angl.)</sup>](https://drafts.csswg.org/mediaqueries-5/#descdef-media-light-level) permet d'interroger le niveau de lumière ambiante dans lequel l'appareil est utilisé, pour permettre à l'auteur·ice d'adapter le style du document en conséquence.&nbsp;»_ C'est très utile pour celles et ceux qui ont des problèmes de motricité ou des difficultés cognitives, qui ne trouvent pas le bon «&nbsp;bouton&nbsp;» pour changer les réglages de l'écran.
-- prefers-contrast
-  - : D'après le document de travail du W3C Media Queries Niveau 5 sur [`prefers-contrast`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast)&nbsp;: _«&nbsp;La fonction média prefers-contrast permet de détecter si l'utilisateur·ice a demandé au système d'augmenter ou de diminuer le contraste entre les couleurs adjacentes. Par exemple, beaucoup ont du mal à lire un texte dont le contraste avec le fond est faible et préfèrent un contraste plus élevé.&nbsp;»_ Parfois, trop de contraste peut créer un effet de halo autour du texte et réduire la lisibilité. Mettre le contraste sous le contrôle de l'utilisateur·ice est un vrai plus pour l'accessibilité.
+- `prefers-contrast`
+  - : D'après le document de travail du W3C Media Queries Niveau 5 sur [`prefers-contrast`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast)&nbsp;: _«&nbsp;La fonction média `prefers-contrast` permet de détecter si l'utilisateur·ice a demandé au système d'augmenter ou de diminuer le contraste entre les couleurs adjacentes. Par exemple, beaucoup ont du mal à lire un texte dont le contraste avec le fond est faible et préfèrent un contraste plus élevé.&nbsp;»_ Parfois, trop de contraste peut créer un effet de halo autour du texte et réduire la lisibilité. Mettre le contraste sous le contrôle de l'utilisateur·ice est un vrai plus pour l'accessibilité.
 
 #### Interface `MediaQueryList`
 
@@ -560,14 +560,14 @@ La propriété `literal` est issue de [WAI-Adapt&nbsp;: Aide et support <sup>(an
 - [Accessibilité&nbsp;: comprendre la couleur et la luminance](/fr/docs/Web/Accessibility/Guides/Colors_and_Luminance)
 - [Appliquer des effets SVG au contenu HTML](/fr/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
 - [Animations de base](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations) (Tutoriel Canvas)
-- L'API {{DOMxRef("Canvas_API", "Canvas", , 1)}}
+- L'API {{DOMxRef("Canvas_API", "Canvas",, 1)}}
 - La méthode {{DOMxRef("CanvasRenderingContext2D.drawImage()")}}
 - Le type de donnée CSS {{CSSxRef("&lt;color&gt;")}}
 - L'interface {{DOMxRef("MediaQueryList")}}
-- L'interface {{DOMxRef("Document_Object_Model", "Document Object Model", , 1)}}
+- L'interface {{DOMxRef("Document_Object_Model", "Document Object Model",, 1)}}
 - [Utiliser des informations de style dynamiques](/fr/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
 - [WebGL&nbsp;: graphismes 2D et 3D pour le web](/fr/docs/Web/API/WebGL_API)
-- L'API {{DOMxRef("WebVR_API", "WebVR", , 1)}}
+- L'API {{DOMxRef("WebVR_API", "WebVR",, 1)}}
 
 ### Couleur
 

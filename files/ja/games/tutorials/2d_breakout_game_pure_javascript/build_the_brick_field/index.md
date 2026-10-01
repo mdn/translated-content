@@ -1,6 +1,6 @@
 ---
 title: ブロックのかたまりを作る
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field
 l10n:
   sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
 ---
@@ -252,6 +252,6 @@ runButton.addEventListener("click", () => {
 
 ## 次のステップ
 
-というわけでついにブロックができました。でもボールはブロックに全く反応しません。第 7 章、[衝突検出](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)ではこれを変えます。
+というわけでついにブロックができました。でもボールはブロックに全く反応しません。第 7 章、[衝突検出](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)ではこれを変えます。
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}

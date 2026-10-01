@@ -3,17 +3,17 @@ title: En-tête Accept-Post
 short-title: Accept-Post
 slug: Web/HTTP/Reference/Headers/Accept-Post
 l10n:
-  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Accept-Post`** indique quels [types de média](/fr/docs/Web/HTTP/Guides/MIME_types) sont acceptés par le serveur dans une requête {{HTTPMethod("POST")}}.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Accept-Post`** indique quels [types de média](/fr/docs/Web/HTTP/Guides/MIME_types) sont acceptés par le serveur dans une requête {{HTTPMethod("POST")}}.
 Par exemple, un serveur recevant une requête `POST` avec un type de média non pris en charge peut répondre avec {{HTTPStatus("415", "415 Unsupported Media Type")}} et un en-tête `Accept-Post` référençant un ou plusieurs types de média pris en charge.
 
 L'en-tête doit apparaître dans les requêtes {{HTTPMethod("OPTIONS")}} vers une ressource qui prend en charge la méthode `POST`.
 Un en-tête `Accept-Post` dans une réponse à n'importe quelle méthode de requête signifie implicitement qu'un `POST` est autorisé sur la ressource cible de la requête.
 
 > [!NOTE]
-> L'IANA maintient [une liste des codages de contenu officiels <sup>(angl.)</sup>](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding).
+> L'IANA maintient [une liste des codages de contenu officiels <sup>(angl.)</sup>](https://www.iana.org/assignments/http-parameters#content-coding).
 > Les codages `bzip` et `bzip2` ne sont pas standards mais peuvent être utilisés dans certains cas, notamment pour la compatibilité avec des systèmes anciens.
 
 <table class="properties">
@@ -37,7 +37,7 @@ Accept-Post: <media-type>/<subtype>, <media-type>/<subtype>
 ```
 
 > [!NOTE]
-> L'en-tête `Accept-Post` définit une plage de média de la même manière que {{HTTPHeader("Accept")}}, sauf qu'il n'a pas de notion de préférence via les arguments `q` ({{Glossary("quality values", "valeurs de qualité")}}).
+> L'en-tête `Accept-Post` définit une plage de média de la même manière que {{HTTPHeader("Accept")}}, sauf qu'il n'a pas de notion de préférence avec les arguments `q` ({{Glossary("quality values", "valeurs de qualité")}}).
 > Cela s'explique par le fait que `Accept-Post` est un en-tête de réponse tandis que `Accept` est un en-tête de requête.
 
 ## Directives

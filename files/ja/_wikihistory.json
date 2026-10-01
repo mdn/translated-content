@@ -177,93 +177,6 @@
       "chrisdavidmills"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript": {
-    "modified": "2019-03-18T21:43:11.446Z",
-    "contributors": [
-      "wbamberg",
-      "nekomanma"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls": {
-    "modified": "2019-11-06T08:46:38.148Z",
-    "contributors": [
-      "dlwe",
-      "wbamberg",
-      "nekomanma"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field": {
-    "modified": "2019-05-06T04:51:12.232Z",
-    "contributors": [
-      "yumetodo",
-      "wbamberg",
-      "nekomanma"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection": {
-    "modified": "2019-05-08T10:17:55.946Z",
-    "contributors": [
-      "yumetodo",
-      "wbamberg",
-      "nekomanma"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it": {
-    "modified": "2019-01-17T02:47:34.580Z",
-    "contributors": [
-      "wbamberg",
-      "nekomanma"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up": {
-    "modified": "2019-05-06T05:03:22.259Z",
-    "contributors": [
-      "yumetodo",
-      "wbamberg",
-      "wiperS200",
-      "nekomanma"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over": {
-    "modified": "2019-05-08T10:04:10.317Z",
-    "contributors": [
-      "yumetodo",
-      "wbamberg",
-      "nekomanma"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls": {
-    "modified": "2019-05-06T05:03:49.956Z",
-    "contributors": [
-      "yumetodo",
-      "wbamberg",
-      "nekomanma"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball": {
-    "modified": "2019-03-18T21:43:03.857Z",
-    "contributors": [
-      "wbamberg",
-      "Muramatz",
-      "nekomanma"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls": {
-    "modified": "2019-05-08T10:00:17.453Z",
-    "contributors": [
-      "yumetodo",
-      "wbamberg",
-      "nekomanma"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win": {
-    "modified": "2019-05-08T10:19:02.245Z",
-    "contributors": [
-      "yumetodo",
-      "wbamberg",
-      "nekomanma"
-    ]
-  },
   "Games/Tutorials/2D_breakout_game_Phaser": {
     "modified": "2019-03-23T22:38:29.447Z",
     "contributors": [
@@ -276,6 +189,77 @@
     "contributors": [
       "wbamberg",
       "chikoski"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript": {
+    "modified": "2019-03-18T21:43:11.446Z",
+    "contributors": [
+      "wbamberg",
+      "nekomanma"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls": {
+    "modified": "2019-11-06T08:46:38.148Z",
+    "contributors": [
+      "dlwe",
+      "wbamberg",
+      "nekomanma"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field": {
+    "modified": "2019-05-06T04:51:12.232Z",
+    "contributors": [
+      "yumetodo",
+      "wbamberg",
+      "nekomanma"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives": {
+    "modified": "2019-05-06T05:03:22.259Z",
+    "contributors": [
+      "yumetodo",
+      "wbamberg",
+      "wiperS200",
+      "nekomanma"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over": {
+    "modified": "2019-05-08T10:04:10.317Z",
+    "contributors": [
+      "yumetodo",
+      "wbamberg",
+      "nekomanma"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas": {
+    "modified": "2019-01-17T02:47:34.580Z",
+    "contributors": [
+      "wbamberg",
+      "nekomanma"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball": {
+    "modified": "2019-03-18T21:43:03.857Z",
+    "contributors": [
+      "wbamberg",
+      "Muramatz",
+      "nekomanma"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls": {
+    "modified": "2019-05-08T10:00:17.453Z",
+    "contributors": [
+      "yumetodo",
+      "wbamberg",
+      "nekomanma"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win": {
+    "modified": "2019-05-08T10:19:02.245Z",
+    "contributors": [
+      "yumetodo",
+      "wbamberg",
+      "nekomanma"
     ]
   },
   "Glossary": {
@@ -15586,97 +15570,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/MediaTrackSupportedConstraints": {
-    "modified": "2019-03-23T22:04:01.194Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/aspectRatio": {
-    "modified": "2019-03-23T22:03:14.284Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/autoGainControl": {
-    "modified": "2019-03-23T22:03:12.248Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/channelCount": {
-    "modified": "2019-03-23T22:03:09.133Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/deviceId": {
-    "modified": "2019-03-23T22:03:10.682Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/echoCancellation": {
-    "modified": "2019-03-23T22:03:11.516Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/facingMode": {
-    "modified": "2020-10-15T21:58:39.626Z",
-    "contributors": [
-      "mfuji09",
-      "e53e04ac"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/frameRate": {
-    "modified": "2019-03-23T22:03:13.806Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/groupId": {
-    "modified": "2019-03-23T22:03:10.262Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/height": {
-    "modified": "2019-03-23T22:03:22.060Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/latency": {
-    "modified": "2019-03-23T22:03:15.767Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/noiseSuppression": {
-    "modified": "2019-03-23T22:03:14.676Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/sampleRate": {
-    "modified": "2019-03-23T22:03:08.985Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/sampleSize": {
-    "modified": "2019-03-23T22:03:14.994Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/volume": {
-    "modified": "2019-03-23T22:03:20.461Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
   "Web/API/Media_Capture_and_Streams_API": {
     "modified": "2019-03-18T21:45:05.461Z",
     "contributors": [
@@ -19941,7 +19834,7 @@
       "rootx"
     ]
   },
-  "Web/API/VRStageParameters/sizeY": {
+  "Web/API/VRStageParameters/sizeZ": {
     "modified": "2019-03-18T21:15:34.709Z",
     "contributors": [
       "rootx"
@@ -43480,6 +43373,22 @@
       "Uemmra3"
     ]
   },
+  "conflicting/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field": {
+    "modified": "2019-05-08T10:17:55.946Z",
+    "contributors": [
+      "yumetodo",
+      "wbamberg",
+      "nekomanma"
+    ]
+  },
+  "conflicting/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls": {
+    "modified": "2019-05-06T05:03:49.956Z",
+    "contributors": [
+      "yumetodo",
+      "wbamberg",
+      "nekomanma"
+    ]
+  },
   "conflicting/Glossary/Denial_of_Service": {
     "modified": "2020-01-07T12:39:20.859Z",
     "contributors": [
@@ -44100,6 +44009,97 @@
     "modified": "2020-10-15T22:18:26.930Z",
     "contributors": [
       "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/getSupportedConstraints": {
+    "modified": "2019-03-23T22:03:10.682Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/getSupportedConstraints_036b6d917bc30e618b18e857d046b5e65494a7985c17fd4f0045da80a43db2aa": {
+    "modified": "2019-03-23T22:03:14.994Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/getSupportedConstraints_073d36d9f5d1cd8505730c60022d505e18efda72f77d60848a4fb91d4e8d5f1b": {
+    "modified": "2019-03-23T22:03:11.516Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/getSupportedConstraints_122eb0088e7e2e5d17bbc73fb5c94121c0eac534492846160bfdd3134290a8d8": {
+    "modified": "2019-03-23T22:03:10.262Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/getSupportedConstraints_1be6aa285fbe85b33c3dd92e099cd151ba1b3eab58ad7a9bf2bb06497688902c": {
+    "modified": "2019-03-23T22:03:15.767Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/getSupportedConstraints_23d4662221a4204fee1a02b514d7c58cc5bb4d891a99ae177cef0fb034fb4602": {
+    "modified": "2019-03-23T22:03:09.133Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/getSupportedConstraints_43302edf837ee04ac1dce0cf15d8b95c37335ae4c5c80fc8546de42294aa1abe": {
+    "modified": "2019-03-23T22:03:14.676Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/getSupportedConstraints_5c1dfc0d303c9aba0e87edeb55c382c807f631a9781439cd49b76b790b1c7101": {
+    "modified": "2019-03-23T22:03:22.060Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/getSupportedConstraints_649594291ee242f49575567ff7dfdc52345f047ffa217c6aebb07ce86ec176ba": {
+    "modified": "2019-03-23T22:04:01.194Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/getSupportedConstraints_87724a3b0ed0879310156615adc5b750917a6e18aae728d5fdd86d04c3b22ad2": {
+    "modified": "2019-03-23T22:03:14.284Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/getSupportedConstraints_c39d3e552a92f832a03e1af5cd6ed6978b44b495e4cf77dea65d559588300cc1": {
+    "modified": "2019-03-23T22:03:08.985Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/getSupportedConstraints_cda5074df495fd9a8d5978e1e7e7f1abf063d6e5bbf6e2f1ea334b79c048b232": {
+    "modified": "2019-03-23T22:03:12.248Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/getSupportedConstraints_dc25908ed995d16c892e4f7e2bf4040fc23003061b60c4dbcf26513b215ca414": {
+    "modified": "2020-10-15T21:58:39.626Z",
+    "contributors": [
+      "mfuji09",
+      "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/getSupportedConstraints_dc7397c9333a8db6a625c9d91b5417eb9e288870a6fae9c1e2c93301c6001122": {
+    "modified": "2019-03-23T22:03:13.806Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/getSupportedConstraints_ed6fb1ac537bc8838ac357b853c8cacc7c245e16d65b2c91f5360de24477397c": {
+    "modified": "2019-03-23T22:03:20.461Z",
+    "contributors": [
+      "e53e04ac"
     ]
   },
   "conflicting/Web/API/SVGElement": {

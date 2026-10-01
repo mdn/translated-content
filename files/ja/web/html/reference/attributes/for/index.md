@@ -1,12 +1,10 @@
 ---
-title: "HTML 属性: for"
+title: "`for` 属性 (HTML)"
 short-title: for
 slug: Web/HTML/Reference/Attributes/for
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
-
-{{HTMLSidebar}}
 
 **`for`** 属性は {{htmlelement("label")}} と {{htmlelement("output")}} で利用できる属性です。 `<label>` 要素上で使用された場合、このラベルが説明するフォーム要素を示します。 `<output>` 要素上で使用された場合、その出力欄で使用される値を表す要素間の関係を明示的に示すことができます。
 
@@ -61,7 +59,7 @@ firstNameEl.addEventListener("input", updateOutput);
 lastNameEl.addEventListener("input", updateOutput);
 ```
 
-## 使用方法
+## 使い方のメモ
 
 `<label>` の属性として使用された場合、 `for` 属性はそのラベルが関連するフォーム要素の `id` 値を保持します。
 

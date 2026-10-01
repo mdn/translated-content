@@ -1,11 +1,12 @@
 ---
-title: テスト自動化環境のセットアップ
+title: 自分のテスト自動化環境のセットアップ
+short-title: 自動化環境のセットアップ
 slug: Learn_web_development/Extensions/Testing/Your_own_automation_environment
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 6030ef1aadf967b80e2c79c3d3463cccc8ea0c95
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
+{{PreviousMenu("Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
 
 この記事では、 Selenium/WebDriver や selenium-webdriver for Node のようなテストライブラリーを使って、自動化環境のインストールとテストを実行する方法を説明します。またローカルテスト環境と、以前の記事で見てきたような商用アプリとを統合する方法についても見て行きます。
 
@@ -15,12 +16,7 @@ l10n:
       <th scope="row">前提条件:</th>
       <td>
         <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、<a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a> 言語の主要部に通じていること。
-        <a
-          href="/ja/docs/Learn_web_development/Extensions/Testing/Introduction"
-          >ブラウザー横断テストの基本</a
-        >および<a href="/ja/docs/Learn_web_development/Extensions/Testing/Automated_testing"
-        >自動化テスト</a
-        >について高水準の考えを持っていること。
+        <a href="/ja/docs/Learn_web_development/Extensions/Testing/Introduction">ブラウザー横断テストの基本</a>および<a href="/ja/docs/Learn_web_development/Extensions/Testing/Automated_testing">自動化テスト</a>について高水準の考えを持っていること。
       </td>
     </tr>
     <tr>
@@ -71,10 +67,10 @@ macOS システムとほとんどの Linux システムで `PATH` 変数を設�
 1. `.zprofile` （または `bash` シェルを使用している場合はまだ `bash_profile` を開きます。
    > [!NOTE]
    > 隠しファイルが表示されていない場合は表示させる必要があります。 [Show/Hide hidden files in macOS](https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) または [Show hidden folders in Ubuntu](https://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-file-manager-nautilus-on-ubuntu) を参照してください。
-2. ファイルの一番下に以下を貼り付けます（パスはあなたのマシンで実際に使用されているものに更新してください）。
+2. ファイルの一番下に以下を貼り付けます（パスは自分のマシンで実際に使用されているものに更新してください）。
 
    ```bash
-   #Add WebDriver browser drivers to PATH
+   # WebDriver ブラウザードライバーを PATH へ追加
    export PATH=$PATH:/Users/bob
    ```
 
@@ -88,7 +84,7 @@ macOS システムとほとんどの Linux システムで `PATH` 変数を設�
    端末に表示されるはずです。
 
 > [!NOTE]
-> Windows で `PATH` 変数を設定するには、[How can I add a new folder to my system path?](https://www.itprotoday.com/) の指示に従ってください。
+> Windows で `PATH` 変数を設定するには、[How can I add a new folder to my system path?](https://stackoverflow.com/questions/44272416/add-a-folder-to-the-path-environment-variable-in-windows-10-with-screenshots)<sup>(英語)</sup> の指示に従ってください。
 
 すべてが動作していることを確認するために、簡単なテストをしてみましょう。
 
@@ -137,8 +133,8 @@ Firefox のインスタンスが自動的に開くのが確認できるはずで
    ```js
    const { Builder, Browser, By, Key } = require("selenium-webdriver");
 
-   const driver_fx = new Builder().forBrowser(Browser.FIREFOX).build();
-   const driver_chr = new Builder().forBrowser(Browser.CHROME).build();
+   const driverFx = new Builder().forBrowser(Browser.FIREFOX).build();
+   const driverChr = new Builder().forBrowser(Browser.CHROME).build();
 
    async function searchTest(driver) {
      try {
@@ -156,8 +152,8 @@ Firefox のインスタンスが自動的に開くのが確認できるはずで
      }
    }
 
-   searchTest(driver_fx);
-   searchTest(driver_chr);
+   searchTest(driverFx);
+   searchTest(driverChr);
    ```
 
 3. 端末で、自分のプロジェクトフォルダー内にいることを確認し、以下のコマンドを入力してください。
@@ -476,7 +472,7 @@ const { Builder, Browser, By, Key } = require("selenium-webdriver");
 2. アトミックなテストを書きます。各テストはひとつのことだけをテストするようにし、 どのテストファイルがどの基準をテストしているのかを簡単に把握できるようにします。例えば、上で見た `duck_test.js` のテストは、検索結果ページのタイトルが正しく設定されているかどうかという単一のことをテストするだけなので、とても良いものです。このテストにもっと良い名前をつけて、テストを追加したときに、このテストが何をするのかがわかりやすいようにすることもできます。おそらく、 `results_page_title_set_correctly.js` が少し良いでしょうか？
 3. 自律的なテストコードを書きましょう。各テストは自分自身で動作し、他のテストに依存して動作しないようにしましょう。
 
-さらに、テスト結果/報告についても言及すべきでしょう。上記の例では単純な `console.log()` 文を使って結果を報告していますが、これはすべて JavaScript で行っているため、 [Mocha](https://mochajs.org/) や [Chai](https://www.chaijs.com/)、他にも好きなテスト実行・報告システムを使用することができます。
+さらに、テスト結果/報告についても言及すべきでしょう。上記の例では単純な `console.log()` 文を使って結果を報告していますが、これはすべて JavaScript で行っているため、 [Mocha](https://mochajs.org/) や [Chai](https://www.chaijs.com/)、他にも好きなテスト実行・報告システムを使用することができます。簡単な例を見てみましょう。
 
 1. 例えば、 [`mocha_test.js`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/selenium/mocha_test.js) のローカルコピーを自分のプロジェクトディレクトリー内に作ってみてください。それを `test` というサブフォルダーに入れてください。この例では長いプロミスの連鎖を使用して、テストに必要なすべての段階を実行しています - WebDriver が使用するプロミスベースのメソッドは正しく作業するために解決する必要があります。
 2. 自分のプロジェクトディレクトリーで以下のコマンドを実行して、 mocha テストハーネスをインストールします。
@@ -570,7 +566,7 @@ BrowserStack REST API や他にもいくつかの機能を使用して、自分�
 
 1. [axios](https://www.npmjs.com/package/axios) モジュールをインストールするために、プロジェクトのディレクトリーから次のコマンドを実行します。
 
-   ```js
+   ```bash
    npm install axios
    ```
 
@@ -583,7 +579,10 @@ BrowserStack REST API や他にもいくつかの機能を使用して、自分�
 3. これで、 `capabilities` オブジェクトを更新して、プロジェクト名を含めることができます。 閉じ中括弧の前に以下の行を追加し、前の行の終わりにカンマを追加することを忘れないでください（BrowserStack オートメーションダッシュボードの異なるウィンドウでテストを整理するために、ビルド名とプロジェクト名を変えることができます）。
 
    ```js
-   project: "DuckDuckGo test 2";
+   const capabilities = {
+     // …
+     project: "DuckDuckGo test 2",
+   };
    ```
 
 4. 次に、現在のセッションの `sessionId` にアクセスして、リクエストをどこに送ればよいかを知る必要があります （後で説明するように、この ID はリクエスト URL に記載されます）。以下の行を `driver` オブジェクトを作成するブロック（`const driver = new Builder()` で始まるもの）のすぐ下に記載してください。
@@ -598,7 +597,7 @@ BrowserStack REST API や他にもいくつかの機能を使用して、自分�
    });
    ```
 
-5. 最後に、コードの下部付近にある `if ... else` ブロックを更新し、検査が成功したか失敗したかに応じて適切な API 呼び出しを BrowserStack に送信するようにします。
+5. 最後に、コードの下部付近にある `if...else` ブロックを更新し、検査が成功したか失敗したかに応じて適切な API 呼び出しを BrowserStack に送信するようにします。
 
    ```js
    if (title === "webdriver at DuckDuckGo") {
@@ -631,6 +630,7 @@ Selenium テストを Sauce Labs 上でリモートで実行する方法の例�
 
    ```js
    const { Builder, By, Key } = require("selenium-webdriver");
+
    const username = "YOUR-USER-NAME";
    const accessKey = "YOUR-ACCESS-KEY";
 
@@ -790,7 +790,7 @@ Sauce Labs や BrowserStack のようなサービスを使用したくない場�
 
 ## Selenium と CI ツールのインテグレーション
 
-別の点として、 Selenium と LambdaTest や Sauce Labs のような関連ツールを継続的インテグレーション（CI）ツールと統合することも可能です。これは、 CI ツールを介してテストを実行し、テストが合格した場合にのみ新しい変更をコードリポジトリーにコミットできることを意味しているので便利です。
+別の点として、 Selenium と Sauce Labs のような関連ツールを{{glossary("continuous integration","継続的インテグレーション")}} (CI) ツールと統合することも可能です。これは、CI ツールを介してテストを実行し、テストが合格した場合にのみ新しい変更をコードリポジトリーにコミットできることを意味しているので便利です。
 
 この記事でこの分野を詳しく見ていくのは範囲外ですが、 Travis CI で始めることを提案します - これはおそらく最も簡単に取得できるCIツールであり、 GitHub や Node のようなウェブツールとの統合もあります。
 
@@ -798,13 +798,10 @@ Sauce Labs や BrowserStack のようなサービスを使用したくない場�
 
 - [Travis CI for complete beginners](https://docs.travis-ci.com/user/for-beginners)
 - [Building a Node.js project](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/) (with Travis)
-- [Using LambdaTest with Travis CI](https://www.lambdatest.com/support/docs/travis-ci-with-lambdatest/)
-- [Using LambdaTest with CircleCI](https://www.lambdatest.com/support/docs/circleci-integration-with-lambdatest/)
-- [Using LambdaTest with Jenkins](https://www.lambdatest.com/support/docs/jenkins-with-lambdatest/)
 - [Using Sauce Labs with Travis CI](https://docs.travis-ci.com/user/sauce-connect/)
 
 > [!NOTE]
-> **コードレス自動化**で継続的なテストを行いたい場合は、 [Endtest](https://www.endtest.io) や [TestingBot](https://testingbot.com) を使用することができます。
+> **コードレス自動化**で継続的なテストを行いたい場合は、 [Endtest](https://endtest.io/) や [TestingBot](https://testingbot.com/) を使用することができます。
 
 ## まとめ
 

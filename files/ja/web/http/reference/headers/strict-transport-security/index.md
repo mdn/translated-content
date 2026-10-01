@@ -3,7 +3,7 @@ title: Strict-Transport-Security ヘッダー
 short-title: Strict-Transport-Security
 slug: Web/HTTP/Reference/Headers/Strict-Transport-Security
 l10n:
-  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
+  sourceCommit: 8b0250d2e2bd4676046dbb441da91f7cefc32507
 ---
 
 HTTP の **`Strict-Transport-Security`** は{{Glossary("response header", "レスポンスヘッダー")}}で（しばしば {{Glossary("HSTS")}} と略されます）、ブラウザーに、その{{Glossary("host", "ホスト")}}は HTTPS のみを使用してアクセスすべきであり、今後 HTTP を使用してアクセスしようとした場合は自動的に HTTPS にアップグレードされるべきであるという情報を通知します。
@@ -15,10 +15,6 @@ HSTS はホストをドメイン名のみで識別します。
     <tr>
       <th scope="row">ヘッダー種別</th>
       <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
-      <td>いいえ</td>
     </tr>
   </tbody>
 </table>
@@ -51,7 +47,7 @@ HTTPS レスポンスに `Strict-Transport-Security` ヘッダーが含まれて
 HSTS は、リクエストに使用されたポートに関係なく、ホストの全ポートに適用されます。
 
 `http` の URL を読み込む前に、ブラウザーはドメイン名を HSTS ホストリストと照合します。
-ドメイン名が HSTS ホストと大文字小文字を区別しない一致をする場合、または `includeSubDomains` を指定したホストのサブドメインである場合、ブラウザーは URL スキームを `https` に置換します。
+ドメイン名を HSTS ホストと大文字小文字を区別せず一致する場合、または `includeSubDomains` を指定したホストのサブドメインである場合、ブラウザーは URL スキームを `https` に置換します。
 URL がポート 80 を指定している場合、ブラウザーはこれを 443 に変更します。
 その他の明示的なポート番号は変更されず、ブラウザーは HTTPS を使用してそのポートに接続します。
 
@@ -136,7 +132,7 @@ Google は [HSTS 事前読み込みサービス](https://hstspreload.org/)を行
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 ```
 
-ドメインに対して `max-age` を 1 年に設定することは許容されますが、 https://hstspreload.org で説明されているように、推奨値は 2 年です。
+HSTS の先読みで受け入れられる最小値は、`max-age` で 1 年です。次の例では 2 年を使用していますが、これは https://hstspreload.org のヘッダー例に示されている値です。
 
 以下の例では、`max-age` を 2 年に設定し、`preload` を付加しています。これは Chromium、Edge、Firefox などの主要なウェブブラウザーの HSTS 事前読み込みリストに含めるために必要です。
 

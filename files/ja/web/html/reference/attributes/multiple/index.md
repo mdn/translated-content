@@ -1,12 +1,10 @@
 ---
-title: "HTML 属性: multiple"
+title: "`multiple` 属性 (HTML)"
 short-title: multiple
 slug: Web/HTML/Reference/Attributes/multiple
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
-
-{{HTMLSidebar}}
 
 論理属性の **`multiple`** 属性は、設定されている場合、フォームコントロールが 1 つ以上の値を受け入れることを意味します。この属性は {{HTMLElement("input/email", "email")}} と {{HTMLElement("input/file", "file")}} の入力型と {{HTMLElement("select")}} に対して有効です。ユーザーが複数の値を選択する方法は、フォームコントロールに依存します。
 
@@ -82,7 +80,9 @@ input:invalid {
 
 `multiple` を指定すると、ほとんどのブラウザーでは 1 行のドロップダウンではなく、スクロールするリストボックスが表示されます。
 
-## アクセシビリティの考慮
+複数選択された選択肢は、{{domxref("URLSearchParams")}} の配列の方式、すなわち `name=value1&name=value2` のように送信されます。
+
+## アクセシビリティの注意事項
 
 ユーザーがフォームに記入する方法を理解し、個々のフォームコントロールを使用するための指示を提供してください。入力が必須であるか任意であるか、データの書式、その他の関連する情報です。 `multiple` 属性を使用する場合は、ユーザーに複数の値が許可されていることを知らせ、「複数のメールアドレスをカンマ区切りで入力してください」などのように、複数の値を入力する方法を指示してください。
 

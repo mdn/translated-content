@@ -19,13 +19,13 @@ l10n:
 
 모든 강의 내용과 우리가 함께 만드는 [MDN 벽돌깨기 게임](http://breakout.enclavegames.com/lesson10.html)의 다른 버전들은 [GitHub](https://github.com/end3r/Canvas-gamedev-workshop)에서 찾을 수 있습니다.
 
-1. [캔버스 생성과 그리기](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
+1. [캔버스 생성과 그리기](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas)
 2. [공 움직이기](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)
 3. [벽으로 부터 튕겨나오기](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls)
 4. [패들과 키보드 컨트롤](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)
 5. [게임 오버](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over)
 6. [벽돌 필드 만들기](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
-7. [충돌 감지](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)
+7. [충돌 감지](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)
 8. [점수 추적과 승리](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)
 9. [마우스 컨트롤](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls)
 10. [마무리](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up)
@@ -42,4 +42,4 @@ l10n:
 
 좋습니다, 이제 시작하도록 합시다. 첫 번째 챕터인 [캔버스 생성과 그리기](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it) 부터 시작합니다.
 
-{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
+{{Next("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas")}}

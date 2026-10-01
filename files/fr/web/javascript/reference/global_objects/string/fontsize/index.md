@@ -6,18 +6,18 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 La propriété **`fontsize()`** permet de créer un élément HTML {{HTMLElement("font")}} qui permet d'afficher la chaîne de caractères dans une fonte de taille donnée.
 
 > [!NOTE]
-> L'élément \<font> a été retiré dans [HTML5](/fr/docs/Glossary/HTML5) et ne devrait plus être utilisé. Les propriétés [CSS](/fr/docs/Web/CSS) permettent de modifier les aspects de mise en forme et doivent donc être utilisées à la place.
+> Toutes [les méthodes d'encapsulation HTML](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#méthodes_dencapsulation_html) sont obsolètes et ne sont standardisées que pour des raisons de compatibilité. Dans le cas de `fontsize()`, l'élément `<font>` lui-même a été retiré de la spécification HTML et ne devrait plus être utilisé. Les développeur·euse·s web doivent utiliser les propriétés [CSS](/fr/docs/Web/CSS) à la place.
 
 ## Syntaxe
 
-```js
-str.fontsize(taille);
+```js-nolint
+fontsize(size)
 ```
 
 ### Paramètres
 
-- `taille`
-  - : Un entier compris entre 1 et 7 ou une chaîne de caractère représentant un nombre signé entre 1 et 7.
+- `size`
+  - : Un entier compris entre 1 et 7 ou une chaîne de caractères représentant un nombre signé entre 1 et 7.
 
 ### Valeur de retour
 
@@ -25,7 +25,7 @@ Une chaîne de caractères représentant un élément HTML {{HTMLElement("font")
 
 ## Description
 
-Lorsque le paramètre utilisé est un entier, la taille de la chaîne `str` correspondra à l'une des 7 tailles définies. Lorsque le paramètre utilisé est une chaîne de caractères (par exemple "-2"), la taille de la fonte sera ajustée relativement à la taille définie par l'élément {{HTMLElement("basefont")}}.
+La méthode `fontsize()` se contente de joindre les parties de la chaîne de caractères sans aucune validation ni normalisation. Cependant, pour créer des éléments {{HTMLElement("font")}} valides, lorsque vous définissez la taille sous forme d'entier, vous définissez la taille de la fonte de `str` sur l'une des 7 tailles définies. Vous pouvez définir `taille` sous forme de chaîne de caractères telle que `"-2"` ou `"+3"` pour ajuster la taille de la fonte de `str` par rapport à 3, la valeur par défaut.
 
 ## Exemples
 
@@ -55,5 +55,7 @@ document.getElementById("IdElement").style.fontSize = "0.7em";
 
 ## Voir aussi
 
-- {{jsxref("String.prototype.big()")}}
-- {{jsxref("String.prototype.small()")}}
+- [La prothèse d'émulation de `String.prototype.fontsize` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [La prothèse d'émulation es-shims de `String.prototype.fontsize` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-string-html-methods)
+- [Les méthodes d'encapsulation HTML](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#méthodes_dencapsulation_html)
+- L'élément HTML {{HTMLElement("font")}}
