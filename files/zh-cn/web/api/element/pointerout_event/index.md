@@ -14,7 +14,7 @@ l10n:
 
 ## 语法
 
-在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 的方法中使用此事件名称，或者给事件处理器属性赋值。
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用此事件名称，或设置事件处理器属性。
 
 ```js-nolint
 addEventListener("pointerout", (event) => { })
