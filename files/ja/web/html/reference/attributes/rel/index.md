@@ -1,14 +1,14 @@
 ---
-title: HTML `rel` 属性
+title: "`rel` 属性 (HTML)"
 short-title: rel
 slug: Web/HTML/Reference/Attributes/rel
 l10n:
-  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 **`rel`** 属性は、リンク先のリソースと現在の文書との関係を定義します。 {{htmlelement('link')}}、{{htmlelement('a')}}、{{htmlelement('area')}}、{{htmlelement('form')}} で有効で、対応する値は属性が見つかった要素に依存します。
 
-関係の種類は `rel` 属性の値によって決まりますが、 `rel` 属性が存在する場合は、一連の固有のキーワードが順不同で空白で区切られたものであることが必要です。意味を表現しないクラス名とは異なり、 `rel` 属性は機械と人間の両方にとって意味のあるトークンを表現しなければなりません。現在、 `rel` 属性の値として登録されているのは、 [IANA link relation registry](https://www.iana.org/assignments/link-relations/link-relations.xhtml)、[HTML Living Standard](https://html.spec.whatwg.org/multipage/links.html#linkTypes)、そして Living Standard が[提案している](https://html.spec.whatwg.org/multipage/links.html#other-link-types) microformats wiki の自由に編集可能な [existing-rel-values ページ](https://microformats.org/wiki/existing-rel-values)です。上記の 3 つの情報源のいずれにも存在しない `rel` 属性が使用された場合、 HTML バリデーター（[W3C Markup Validation Service](https://validator.w3.org/) など）によっては警告を生成します。
+関係の種類は `rel` 属性の値によって決まりますが、 `rel` 属性が存在する場合は、一連の固有のキーワードが順不同で空白で区切られたものであることが必要です。意味を表現しないクラス名とは異なり、 `rel` 属性は機械と人間の両方にとって意味のあるトークンを表現しなければなりません。現在、 `rel` 属性の値として登録されているのは、 [IANA link relation registry](https://www.iana.org/assignments/link-relations)、[HTML Living Standard](https://html.spec.whatwg.org/multipage/links.html#linkTypes)、そして Living Standard が[提案している](https://html.spec.whatwg.org/multipage/links.html#other-link-types) microformats wiki の自由に編集可能な [existing-rel-values ページ](https://microformats.org/wiki/existing-rel-values)です。上記の 3 つの情報源のいずれにも存在しない `rel` 属性が使用された場合、 HTML バリデーター（[W3C Markup Validation Service](https://validator.w3.org/) など）によっては警告を生成します。
 
 次の表は、既存のキーワードの中でも特に重要なものです。空白で区切られた値の中のすべてのキーワードは、その値の中で一意でなければなりません。
 
