@@ -1,9 +1,9 @@
 ---
-title: "HTML 属性: form"
+title: "`form` 属性 (HTML)"
 short-title: form
 slug: Web/HTML/Reference/Attributes/form
 l10n:
-  sourceCommit: 6afda999d054c2ba12d13d129b13eb35952b4fbe
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 `form` は HTML の属性で、フォーム関連要素を、同じ文書内の {{htmlelement("form")}} 要素に関連付けます。この属性は、{{htmlelement("button")}}、{{htmlelement("fieldset")}}、{{htmlelement("input")}}、{{htmlelement("object")}}、{{htmlelement("output")}}、{{htmlelement("select")}}、{{htmlelement("textarea")}} の各要素に適用されます。
@@ -115,7 +115,7 @@ Hello, World!</textarea>
 </form>
 <form id="parentForm">
   <button form="targetForm" type="submit" name="submitTarget" value="Target">
-    Submit target form
+    ターゲットフォームを送信
   </button>
 </form>
 ```
