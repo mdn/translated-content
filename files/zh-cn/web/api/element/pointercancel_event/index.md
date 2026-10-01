@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Pointer Events")}}
 
-当浏览器判断可能不再会有指针事件发生，或者在激发 {{domxref("Element/pointerdown_event", "pointerdown")}} 事件后指针被用于平移、缩放或滚动来操作视口，便会激发 **`pointercancel`** 事件。
+**`pointercancel`** 事件会在浏览器判断可能不再会有指针事件发生，或者在激发 {{domxref("Element/pointerdown_event", "pointerdown")}} 事件后指针被用于平移、缩放或滚动来操作视口时激发。
 
 一些会触发 `pointercancel` 事件的情况的例子：
 
