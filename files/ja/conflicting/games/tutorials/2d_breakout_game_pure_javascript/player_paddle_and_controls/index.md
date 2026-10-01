@@ -6,9 +6,9 @@ l10n:
   sourceCommit: 1a0be468b9e7c88a09ea3438a81341c4f6a619a6
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}
 
-これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) の 10 ステップ中 **9 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html)で見ることができます。
+これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) の 10 ステップ中 **9 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html)で見ることができます。
 
 ゲーム自体は実際に完成したので、磨き上げにかかりましょう。既にキーボード操作を追加していますが、マウス操作も簡単に追加できます。
 
@@ -233,4 +233,4 @@ runButton.addEventListener("click", () => {
 
 これでゲームを完成したので、このレッスンシリーズを締めくくるために、さらにいくつかの細かい調整を加えていきます。では、[仕上げ](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives)に入りましょう。
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}

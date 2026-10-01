@@ -5,9 +5,9 @@ l10n:
   sourceCommit: 1a0be468b9e7c88a09ea3438a81341c4f6a619a6
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
 
-これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) の 10 ステップ中 **3 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html)で見ることができます。
+これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) の 10 ステップ中 **3 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html)で見ることができます。
 
 ボールが移動するのを見るのは楽しいですが、すばやく画面の内側へ消えてしまうので、ボールの楽しみが半減してしまいます。この問題を解決するために、衝突判定（詳しくは[後ほど](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)説明します）を実装して、ボールをキャンバスの 4 つの辺で跳ね返らせるようにしましょう。
 
@@ -164,4 +164,4 @@ runButton.addEventListener("click", () => {
 
 ボールが動き、かつゲームボードに留まるようになることまでこぎつけました。第 4 章では操作できるパドルを実装してみます。[パドルとキーボード操作](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls)を見てみましょう。
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}

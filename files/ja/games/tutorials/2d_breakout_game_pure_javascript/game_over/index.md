@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
 
-これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) の 10 ステップ中 **5 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html)で見ることができます。
+これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) の 10 ステップ中 **5 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html)で見ることができます。
 
 ボールが壁に当たって跳ねているのを見たり、パドルを移動させたりできるのは楽しいのですが、それ以外は何もせず、ゲームの進行や最終目標がありません。ゲームプレイの観点からは、負けることがあってもいいのではないでしょうか。ブロック崩しで負けるのは、パドルでボールを飛ばして画面の下端へ到達させたらゲームオーバーです。
 
@@ -196,6 +196,6 @@ runButton.addEventListener("click", () => {
 
 ## 次のステップ
 
-今のところかなり順調に進歩してきていて、ゲームも負けるようになったことでもっと遊ぶ価値が感じられるようになってきました。第 6 章の[ブロックのかたまりを作る](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)に進み、ボールが壊せるブロックを作りましょう。
+今のところかなり順調に進歩してきていて、ゲームも負けるようになったことでもっと遊ぶ価値が感じられるようになってきました。第 6 章の[ブロックのかたまりを作る](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)に進み、ボールが壊せるブロックを作りましょう。
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}
