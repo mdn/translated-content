@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
 
 Voici la **5<sup>e</sup> étape** sur 10 du [Gamedev Canvas tutorial](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Vous pouvez trouver le code source comme il devrait être après avoir terminé cette leçon sur [Gamedev-Canvas-workshop/lesson5.html <sup>(angl.)</sup>](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html).
 
@@ -198,4 +198,4 @@ runButton.addEventListener("click", () => {
 
 Nous avons déja bien avancé et notre jeu est devenu plus intéressant depuis que vous pouvez perdre ! Mais il manque encore quelque chose. Rendons-nous au sixième chapitre — [Créer le champs de briques](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field) — et créons quelques briques que la balle pourra détruire.
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}

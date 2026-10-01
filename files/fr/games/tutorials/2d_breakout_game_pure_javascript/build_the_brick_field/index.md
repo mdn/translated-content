@@ -253,6 +253,6 @@ runButton.addEventListener("click", () => {
 
 ## Prochaines étapes
 
-Nous avons donc maintenant des briques&nbsp;! Mais la balle n'interagit pas du tout avec elles — nous allons changer cela dans le chapitre sept&nbsp;: [Détection des collisions](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection).
+Nous avons donc maintenant des briques&nbsp;! Mais la balle n'interagit pas du tout avec elles — nous allons changer cela dans le chapitre sept&nbsp;: [Détection des collisions](/fr/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field).
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}

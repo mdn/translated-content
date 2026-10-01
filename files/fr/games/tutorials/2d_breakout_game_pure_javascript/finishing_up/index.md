@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
 ---
 
-{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
 
 C'est la dernière étape de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Vous pouvez trouver le code source tel qu'il devrait être après avoir terminé cette leçon sur [Gamedev-Canvas-workshop/lesson10.html <sup>(angl.)</sup>](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).
 
@@ -300,4 +300,4 @@ Vous avez terminé toutes les leçons — félicitations&nbsp;! À ce stade, vou
 
 Vous pouvez également revenir à la [page d'accueil](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) de cette série de tutoriels. Amusez-vous bien à coder&nbsp;!
 
-{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
