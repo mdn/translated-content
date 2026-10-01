@@ -31,7 +31,7 @@ container-type: unset;
 
 ### Valeurs
 
-Cette propriété est définie par une ou deux valeurs de mots-clés issues de la liste suivante. Dans le cas où deux valeurs sont spécifiées, l'une doit être `scroll-state` et l'autre doit être `inline-size` ou `size`&nbsp;:
+Cette propriété est définie par une ou deux valeurs de mots-clés issues de la liste suivante. Dans le cas où deux valeurs sont définies, l'une doit être `scroll-state` et l'autre doit être `inline-size` ou `size`&nbsp;:
 
 - `anchored`
   - : Établit un conteneur de requête pour les requêtes de conteneur ancré sur le conteneur. Dans ce cas, la taille de l'élément n'est pas calculée de façon isolée&nbsp;; aucune [compartimentation](/fr/docs/Web/CSS/Guides/Containment/Using) n'est appliquée.

@@ -68,11 +68,11 @@ p {
 
 #### Résultat
 
-Lorsque vous remplacez les couleurs de la palette normale ou de la palette de base à l'index 0, il n'est pas nécessaire de déclarer quelle palette de base utiliser. Cela ne doit être fait que si vous remplacez une autre palette de base. Si vous remplacez toutes les couleurs, il n'est pas non plus nécessaire de spécifier la palette de base à utiliser.
+Lorsque vous remplacez les couleurs de la palette normale ou de la palette de base à l'index 0, il n'est pas nécessaire de déclarer quelle palette de base utiliser. Cela ne doit être fait que si vous remplacez une autre palette de base. Si vous remplacez toutes les couleurs, il n'est pas non plus nécessaire de définir la palette de base à utiliser.
 
 {{EmbedLiveSample("remplacer_les_couleurs_dune_palette_existante")}}
 
-## Specifications
+## Spécifications
 
 {{Specifications}}
 

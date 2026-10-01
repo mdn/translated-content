@@ -23,10 +23,10 @@ symbols: indic-numbers;
 Le descripteur `symbols` est défini comme une liste d'une ou plusieurs valeurs `<symbol>` séparées par des espaces.
 
 - `<symbol>`
-  - : Spécifie le symbole à utiliser dans le système de compteur. Chaque symbole de la liste peut être une {{CSSxRef("&lt;string&gt;")}}, une {{CSSxRef("&lt;image&gt;")}} ou un {{CSSxRef("&lt;custom-ident&gt;")}}. La valeur `<image>` peut être définie comme une {{CSSxRef("url_value", "&lt;url&gt;")}} ou une {{CSSxRef("&lt;gradient&gt;")}}.
+  - : Définit le symbole à utiliser dans le système de compteur. Chaque symbole de la liste peut être une {{CSSxRef("&lt;string&gt;")}}, une {{CSSxRef("&lt;image&gt;")}} ou un {{CSSxRef("&lt;custom-ident&gt;")}}. La valeur `<image>` peut être définie comme une {{CSSxRef("url_value", "&lt;url&gt;")}} ou une {{CSSxRef("&lt;gradient&gt;")}}.
 
 > [!NOTE]
-> Lorsqu'on utilise un {{Glossary("identifier", "identifiant")}} pour un symbole, il faut noter que les caractères non alphabétiques {{Glossary("ASCII")}} comme `*`, `"` et `\` ne sont pas considérés comme des identifiants. Ils doivent être soit entourés de guillemets comme une chaîne, soit échappés.
+> Lorsqu'on utilise un {{Glossary("identifier", "identifiant")}} pour un symbole, il faut noter que les caractères non alphabétiques {{Glossary("ASCII")}} comme `*`, `"` et `\` ne sont pas considérés comme des identifiants. Ils doivent être soit entourés de guillemets comme une chaîne de caractères, soit échappés.
 
 ## Description
 
@@ -36,7 +36,7 @@ Lorsque la valeur du descripteur {{CSSxRef('@counter-style/system', 'system')}} 
 
 Bien qu'un espace entre les symboles entre guillemets ne soit pas obligatoire, cela rend le CSS plus lisible. Pour utiliser un guillemet comme symbole, il faut soit échapper le caractère guillemet, soit entourer le caractère de guillemets différents, comme `"'"`.
 
-Lorsque vous définissez des symboles avec des identifiants au lieu de chaînes de caractères, veillez à respecter les règles de syntaxe des identifiants. Par exemple, comme indiqué ci-dessus, les caractères non alphabétiques ASCII comme `*` ne sont pas des identifiants et doivent être entourés de guillemets ou échappés. Les caractères d'échappement hexadécimal sont suivis d'un espace. Cet espace peut ressembler à celui qui sépare deux identifiants, mais il permet aux chiffres de suivre les caractères échappés en hexadécimal. Cela signifie que deux espaces doivent être inclus après un identifiant échappé en hexadécimal pour le séparer du suivant. Par exemple, il est préférable d'utiliser la chaîne `"\2A 1"` plutôt que `\2A  1` avec deux espaces, car vos outils de code pourraient supprimer les doubles espaces. Il est généralement plus sûr de mettre entre guillemets les identifiants qui doivent être échappés ou d'utiliser des chaînes de caractères.
+Lorsque vous définissez des symboles avec des identifiants au lieu de chaînes de caractères, veillez à respecter les règles de syntaxe des identifiants. Par exemple, comme indiqué ci-dessus, les caractères non alphabétiques ASCII comme `*` ne sont pas des identifiants et doivent être entourés de guillemets ou échappés. Les caractères d'échappement hexadécimal sont suivis d'un espace. Cet espace peut ressembler à celui qui sépare deux identifiants, mais il permet aux chiffres de suivre les caractères échappés en hexadécimal. Cela signifie que deux espaces doivent être inclus après un identifiant échappé en hexadécimal pour le séparer du suivant. Par exemple, il est préférable d'utiliser la chaîne de caractères `"\2A 1"` plutôt que `\2A  1` avec deux espaces, car vos outils de code peuvent supprimer les doubles espaces. Il est généralement plus sûr de mettre entre guillemets les identifiants qui doivent être échappés ou d'utiliser des chaînes de caractères.
 
 ## Définition formelle
 

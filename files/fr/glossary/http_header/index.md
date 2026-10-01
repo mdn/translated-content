@@ -12,7 +12,7 @@ Traditionnellement, les en-têtes sont classés en catégories, mais cette class
 - {{Glossary("Request header", "en-tête de requête")}}&nbsp;: en-têtes contenant des informations supplémentaires sur la ressource à récupérer ou sur le client lui-même.
 - {{Glossary("Response header", "en-tête de réponse")}}&nbsp;: en-têtes contenant des informations supplémentaires à propos de la réponse, telles que son emplacement, ou à propos du serveur lui-même (nom, version…).
 - {{Glossary("Representation header", "en-tête de représentation")}}&nbsp;: métadonnées sur la ressource dans le corps du message (par exemple, encodage, type de média, etc.).
-- {{Glossary("Fetch metadata request header", "en-tête de requête de métadonnées de récupération")}}&nbsp;: en-têtes fournissant des informations sur le contexte dans lequel la requête est effectuée.
+- {{Glossary("Fetch metadata request header", "en-tête de métadonnées de requête de récupération")}}&nbsp;: en-têtes fournissant des informations sur le contexte dans lequel la requête est effectuée.
 
 Requête basique avec un seul en-tête&nbsp;:
 
@@ -60,7 +60,7 @@ X-Cache-Info: cached
   - {{Glossary("Request header", "En-tête de requête")}}
   - {{Glossary("Response header", "En-tête de réponse")}}
   - {{Glossary("Representation header", "En-tête de représentation")}}
-  - {{Glossary("Fetch metadata request header", "En-tête de requête de métadonnées de récupération")}}
+  - {{Glossary("Fetch metadata request header", "En-tête de métadonnées de requête de récupération")}}
   - {{Glossary("Forbidden request header", "En-tête de requête interdit")}}
   - {{Glossary("Forbidden response header name", "Nom d'en-tête de réponse interdit")}}
   - {{Glossary("CORS-safelisted request header", "En-tête de requête autorisé par CORS")}}

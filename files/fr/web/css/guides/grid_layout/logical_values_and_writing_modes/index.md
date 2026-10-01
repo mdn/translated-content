@@ -419,7 +419,7 @@ Si vous changez la direction de votre texte, pour des pages entières ou pour ce
 
 ### L'étrange ordre des valeurs pour `grid-area`
 
-Vous pouvez utiliser la propriété {{CSSxRef("grid-area")}} pour spécifier les quatre lignes d'une zone de grille en une seule valeur. Lorsqu'on découvre cette propriété pour la première fois, on est souvent surpris que les valeurs ne suivent pas le même ordre que le raccourci pour {{CSSxRef("margin")}} — qui suit le sens horaire&nbsp;: haut, droite, bas, gauche.
+Vous pouvez utiliser la propriété {{CSSxRef("grid-area")}} pour définir les quatre lignes d'une zone de grille en une seule valeur. Lorsqu'on découvre cette propriété pour la première fois, on est souvent surpris que les valeurs ne suivent pas le même ordre que le raccourci pour {{CSSxRef("margin")}} — qui suit le sens horaire&nbsp;: haut, droite, bas, gauche.
 
 L'ordre des valeurs de `grid-area` est&nbsp;:
 

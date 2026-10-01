@@ -42,7 +42,7 @@ input[type="color"]::-moz-color-swatch {
 
 {{EmbedLiveSample("Exemples", 300, 50)}}
 
-## Specifications
+## Spécifications
 
 Ce pseudo-élément ne fait partie d'aucun standard.
 
