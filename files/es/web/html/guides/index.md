@@ -1,7 +1,7 @@
 ---
 title: Guías HTML
 short-title: Guías
-slug: es/es/web/html/guides
+slug: Web/HTML/Guides
 l10n:
   sourceCommit: 1f73b512daca27339931eca233376957a7a7a4fd
 ---
