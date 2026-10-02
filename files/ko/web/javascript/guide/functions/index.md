@@ -169,7 +169,7 @@ square = function (n) {
 };
 ```
 
-함수의 인수는 문자열과 숫자에 제한되지 않습니다. 여러분은 함수에 전체 객체를 전달할 수 있습니다. [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_objects#objects_and_properties)에서 정의된 `showProps()` 함수는 인수로 객체를 받는 함수의 예입니다.
+함수의 인수는 문자열과 숫자에 제한되지 않습니다. 여러분은 함수에 전체 객체를 전달할 수 있습니다. [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_objects#객체와_속성)에서 정의된 `showProps()` 함수는 인수로 객체를 받는 함수의 예입니다.
 
 함수는 자신을 호출할 수 있습니다. 예를 들어, 팩토리얼을 재귀적으로 계산하는 함수가 있습니다.
 
@@ -731,7 +731,7 @@ JavaScript에는 몇 가지 최상위 레벨의 내장 함수가 있습니다:
 - {{jsxref("isNaN()")}}
   - : **`isNaN()`** 함수는 {{jsxref("NaN")}}인지 아닌지 결정합니다.
     > [!NOTE]
-    > `isNaN` 함수 안의 강제 변환은 [흥미로운](/ko/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description) 규칙을 가지고 있습니다.
+    > `isNaN` 함수 안의 강제 변환은 [흥미로운](/ko/docs/Web/JavaScript/Reference/Global_Objects/isNaN#설명) 규칙을 가지고 있습니다.
     >
     > {{jsxref("Number.isNaN()")}}을 이용해 값이 NaN인지 확인할 수 있습니다.
     >
