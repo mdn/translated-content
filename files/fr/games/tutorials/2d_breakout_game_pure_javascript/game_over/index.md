@@ -1,6 +1,6 @@
 ---
 title: Fin de partie
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over
 l10n:
   sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
 ---

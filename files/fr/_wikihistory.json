@@ -132,7 +132,13 @@
       "groovecoder"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript": {
+  "Games/Tutorials/2D_breakout_game_Phaser": {
+    "modified": "2019-06-20T04:41:51.709Z",
+    "contributors": [
+      "Zyrass"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript": {
     "modified": "2020-06-27T08:09:27.078Z",
     "contributors": [
       "PascalLeMerrer",
@@ -142,7 +148,7 @@
       "mboultoureau"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls": {
     "modified": "2020-06-27T07:15:09.503Z",
     "contributors": [
       "PascalLeMerrer",
@@ -152,7 +158,7 @@
       "eerrtrr"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field": {
     "modified": "2020-06-28T04:40:48.007Z",
     "contributors": [
       "PascalLeMerrer",
@@ -162,15 +168,22 @@
       "socadance"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection": {
-    "modified": "2020-06-28T03:56:54.608Z",
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives": {
+    "modified": "2020-06-27T06:26:41.729Z",
     "contributors": [
-      "PascalLeMerrer",
-      "NadjaRbgt",
-      "Antoine-92"
+      "PascalLeMerrer"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over": {
+    "modified": "2020-06-27T09:56:22.821Z",
+    "contributors": [
+      "PascalLeMerrer",
+      "ms-studio",
+      "wbamberg",
+      "GaryJULIEN"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas": {
     "modified": "2020-06-27T09:58:29.574Z",
     "contributors": [
       "PascalLeMerrer",
@@ -180,28 +193,7 @@
       "mboultoureau"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up": {
-    "modified": "2020-06-27T06:26:41.729Z",
-    "contributors": [
-      "PascalLeMerrer"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over": {
-    "modified": "2020-06-27T09:56:22.821Z",
-    "contributors": [
-      "PascalLeMerrer",
-      "ms-studio",
-      "wbamberg",
-      "GaryJULIEN"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls": {
-    "modified": "2020-06-28T04:14:12.215Z",
-    "contributors": [
-      "PascalLeMerrer"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball": {
     "modified": "2020-06-27T10:00:36.942Z",
     "contributors": [
       "PascalLeMerrer",
@@ -213,29 +205,19 @@
       "Cotting"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls": {
-    "modified": "2020-06-27T09:45:30.950Z",
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls": {
+    "modified": "2020-06-28T04:14:12.215Z",
     "contributors": [
-      "PascalLeMerrer",
-      "ms-studio",
-      "jgil83000",
-      "wbamberg",
-      "eerrtrr"
+      "PascalLeMerrer"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win": {
     "modified": "2020-06-28T04:10:36.923Z",
     "contributors": [
       "PascalLeMerrer",
       "ms-studio",
       "NadjaRbgt",
       "Camrifof"
-    ]
-  },
-  "Games/Tutorials/2D_breakout_game_Phaser": {
-    "modified": "2019-06-20T04:41:51.709Z",
-    "contributors": [
-      "Zyrass"
     ]
   },
   "Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation": {
@@ -38525,6 +38507,24 @@
     "modified": "2020-10-15T21:52:22.760Z",
     "contributors": [
       "SphinxKnight"
+    ]
+  },
+  "conflicting/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field": {
+    "modified": "2020-06-28T03:56:54.608Z",
+    "contributors": [
+      "PascalLeMerrer",
+      "NadjaRbgt",
+      "Antoine-92"
+    ]
+  },
+  "conflicting/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls": {
+    "modified": "2020-06-27T09:45:30.950Z",
+    "contributors": [
+      "PascalLeMerrer",
+      "ms-studio",
+      "jgil83000",
+      "wbamberg",
+      "eerrtrr"
     ]
   }
 }

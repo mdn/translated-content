@@ -1,6 +1,7 @@
 ---
 title: Contrôle à la souris
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls
+original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 l10n:
   sourceCommit: 1a0be468b9e7c88a09ea3438a81341c4f6a619a6
 ---

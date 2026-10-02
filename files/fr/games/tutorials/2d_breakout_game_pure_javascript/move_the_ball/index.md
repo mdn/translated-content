@@ -1,6 +1,6 @@
 ---
 title: Déplacer la balle
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball
 l10n:
   sourceCommit: 2530db14de9ac226cf06f84540fa0101e804ca9b
 ---

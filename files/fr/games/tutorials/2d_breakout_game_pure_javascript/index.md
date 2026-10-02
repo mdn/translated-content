@@ -1,6 +1,6 @@
 ---
 title: Jeu de casse-briques 2D en pur JavaScript
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript
 ---
 
 {{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}

@@ -1,6 +1,7 @@
 ---
 title: Détection de collisions
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
+slug: conflicting/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field
+original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 l10n:
   sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
 ---
