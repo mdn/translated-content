@@ -128,6 +128,6 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 ## Prochaines étapes
 
-Maintenant, nous avons mis en place le code HTML de base et avons appris un peu sur Canvas, passons au deuxième chapitre et étudions comment [Déplacer une balle sur notre jeu](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball).
+Maintenant, nous avons mis en place le code HTML de base et avons appris un peu sur Canvas, passons au deuxième chapitre et étudions comment [Déplacer une balle sur notre jeu](/fr/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball).
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball")}}
