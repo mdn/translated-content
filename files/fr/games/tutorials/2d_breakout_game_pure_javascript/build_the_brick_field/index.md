@@ -1,258 +1,496 @@
 ---
 title: Créer un champ de briques
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field
 l10n:
-  sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
+  sourceCommit: 69937a446786abf5a58d4214b4192597d0b3cdc6
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win")}}
 
-Il s'agit de la **6<sup>e</sup> étape** sur 10 du [Gamedev Canvas tutorial](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Vous pouvez trouver le code source après avoir complété cette leçon sur [Gamedev-Canvas-workshop/lesson6.html <sup>(angl.)</sup>](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html).
+C'est la **6<sup>e</sup> étape sur** 11 de [créer un jeu casse-briques en utilisant uniquement JavaScript](/fr/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Voyons comment créer un groupe de briques, les afficher à l'écran à l'aide d'une boucle et les supprimer lorsque la balle les touche. Construire le champ de briques est un peu plus compliqué que d'ajouter un seul objet à l'écran.
 
-Après avoir modifié les mécaniques de jeu, nous pouvons maintenant perdre — c'est une bonne chose, car cela signifie que le jeu commence enfin à ressembler à un vrai jeu. Cependant, cela deviendra vite ennuyeux si tout ce que vous faites est de faire rebondir la balle sur les murs et la raquette. Ce dont un jeu de casse-briques a vraiment besoin, ce sont des briques à détruire avec la balle, et c'est ce que nous allons créer maintenant&nbsp;!
+## Dessiner les briques
 
-## Définir les variables des briques
-
-L'objectif principal de cette leçon est d'afficher quelques lignes de code pour les briques, en utilisant une boucle imbriquée qui parcourt un tableau à deux dimensions. Mais d'abord, nous devons définir quelques variables pour indiquer des informations sur les briques, comme leur largeur, leur hauteur, le nombre de lignes et de colonnes, etc. Ajoutez les lignes suivantes à votre code sous les variables que vous avez déjà déclarées dans votre programme.
+Toutes les briques utilisent la même image, nous pouvons donc la créer et la décoder une seule fois, puis la partager entre elles. Ajoutez une carte statique `assets` et un champ `url` à `ObjetJeu`, et remplacez son constructeur et sa méthode `precharger()`&nbsp;:
 
 ```js
-const brickRowCount = 3;
-const brickColumnCount = 5;
-const brickWidth = 75;
-const brickHeight = 20;
-const brickPadding = 10;
-const brickOffsetTop = 30;
-const brickOffsetLeft = 30;
-```
-
-Ici nous avons défini dans l'ordre le nombre de lignes et de colonnes de briques, mais également une hauteur, une largeur et un espacement (<i lang="en">padding</i> en anglais) entre les briques pour qu'elles ne se touchent pas entre elles et qu'elles ne commencent pas a être tracées sur le bord du canevas.
-
-Nous allons placer nos briques dans un tableau à deux dimensions. Il contiendra les colonnes de briques (c), qui à leur tour contiendront les lignes de briques (r) qui chacune contiendront un objet défini par une position `x` et `y` pour afficher chaque brique sur l'écran.
-Ajoutez le code suivant juste en-dessous des variables&nbsp;:
-
-```js
-const bricks = [];
-for (let c = 0; c < brickColumnCount; c++) {
-  bricks[c] = [];
-  for (let r = 0; r < brickRowCount; r++) {
-    bricks[c][r] = { x: 0, y: 0 };
+class ObjetJeu {
+  static assets = new Map();
+  url;
+  // …
+  constructor(url, ctx) {
+    this.url = url;
+    this.ctx = ctx;
   }
-}
-```
-
-Le code ci-dessus va parcourir les lignes et les colonnes et créer de nouvelles briques. REMARQUE&nbsp;: les objets briques seront également utilisés plus tard afin de détecter les collisions.
-
-## Logique de dessin des briques
-
-Maintenant créons une fonction pour parcourir toutes les briques dans le tableau et les dessiner sur l'écran. Notre code pourrait ressembler à ça&nbsp;:
-
-```js
-function drawBricks() {
-  for (let c = 0; c < brickColumnCount; c++) {
-    for (let r = 0; r < brickRowCount; r++) {
-      bricks[c][r].x = 0;
-      bricks[c][r].y = 0;
-      ctx.beginPath();
-      ctx.rect(0, 0, brickWidth, brickHeight);
-      ctx.fillStyle = "#0095DD";
-      ctx.fill();
-      ctx.closePath();
+  async precharger() {
+    if (!ObjetJeu.assets.has(this.url)) {
+      const asset = new Image();
+      asset.src = this.url;
+      ObjetJeu.assets.set(
+        this.url,
+        asset.decode().then(() => asset),
+      );
+    }
+    this.asset = await ObjetJeu.assets.get(this.url);
+    if (this.taille.w === undefined) {
+      this.taille.w = this.asset.width;
+      this.taille.h = this.asset.height;
     }
   }
+  // …
 }
 ```
 
-Une nouvelle fois, nous parcourons les colonnes et les lignes pour attribuer une position `x` et `y` à chaque brique, et nous dessinons les briques — de taille `brickWidth` x `brickHeight` — sur le canevas, pour chaque itération de la boucle. Le problème est que nous les affichons toutes au même endroit, aux coordonnées `(0,0)`. Ce dont nous avons besoin d'inclure ce sont quelques calculs qui vont définir la position `x` et `y` de chaque brique à chaque passage dans la boucle&nbsp;:
+Le cache associe chaque URL à une promesse qui se résout avec l'image décodée. Le premier appel à `precharger()` pour une URL crée l'image et commence à la décoder&nbsp;; les appels suivants attendent la même promesse et reçoivent la même image. Chaque objet a toujours sa propre position et taille.
+
+Comme la `Balle` et la `Raquette`, la `Brique` repose également sur la classe `ObjetJeu`. Une brique n'a pas de position ou de taille par défaut et doit être définie explicitement dans le constructeur. Comme les briques ont des dimensions explicites, nous pouvons utiliser les paramètres supplémentaires `dWidth` et `dHeight` de {{DOMxRef("CanvasRenderingContext2D/drawImage", "ctx.drawImage()")}}, qui redimensionnent automatiquement l'image si elle n'a pas déjà les dimensions souhaitées.
 
 ```js
-const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
-const brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
-```
-
-Chaque position `brickX` est déterminée par `brickWidth` + `brickPadding`, multiplié par le nombre de colonnes, `c`, plus `brickOffsetLeft`&nbsp;; la logique pour `brickY` est identique excepté qu'on utilise pour les ligne les valeurs `r`, `brickHeight` et `brickOffsetTop`. Maintenant chaque brique peut être placée à sa position correcte en lignes et colonnes, avec un espacement entre chaque brique, et un décalage par rapport aux bords gauche et supérieur du canevas.
-
-La version finale de la fonction `drawBricks()`, après avoir assigné les valeurs `brickX` et `brickY` comme coordonnées, plutôt que `(0,0)` à chaque fois, va ressembler à ceci — ajouter la fonction ci-dessous après `drawPaddle()`&nbsp;:
-
-```js
-function drawBricks() {
-  for (let c = 0; c < brickColumnCount; c++) {
-    for (let r = 0; r < brickRowCount; r++) {
-      const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
-      const brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
-      bricks[c][r].x = brickX;
-      bricks[c][r].y = brickY;
-      ctx.beginPath();
-      ctx.rect(brickX, brickY, brickWidth, brickHeight);
-      ctx.fillStyle = "#0095DD";
-      ctx.fill();
-      ctx.closePath();
-    }
+class Brique extends ObjetJeu {
+  constructor(url, ctx, x, y, w, h) {
+    super(url, ctx);
+    this.pos = { x, y };
+    this.taille = { w, h };
+  }
+  dessiner() {
+    const { left, top } = this.boiteDeCollision;
+    this.ctx.drawImage(this.asset, left, top, this.taille.w, this.taille.h);
   }
 }
 ```
 
-## Afficher les briques
+Vous devez également [récupérer l'image de la brique](https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/brick.png) et la sauvegarder dans votre répertoire `/img`.
 
-La dernière chose à faire dans cette leçon est d'ajouter un appel à `drawBricks()` quelque part dans la fonction `draw()`, préférablement au début, entre le nettoyage du canevas et le dessin de la balle. Ajoutez la ligne suivante juste en dessous de `drawBall()`&nbsp;:
+Nous plaçons tout le code pour dessiner les briques à l'intérieur d'une fonction `initialiserBriques` afin de le séparer du reste du code. Ajoutez un appel à `initialiserBriques` sous `elementsCollision.push(raquette);`&nbsp;:
 
 ```js
-drawBricks();
+// …
+const raquette = new Raquette("img/paddle.png", ctx);
+elementsCollision.push(raquette);
+const briques = initialiserBriques();
+// …
 ```
 
-## Comparez votre code
+Assurez-vous également que le jeu attend que les briques soient préchargées avant de commencer le jeu, en ajoutant `, ...briques` au tableau à l'intérieur de `Promise.all()`. Ces appels partagent la promesse de décodage mise en cache, donc l'image de la brique n'est décodée qu'une seule fois.
 
-À ce stade, le jeu a gagné un peu en intérêt&nbsp;:
+Passons maintenant à la fonction elle-même. Ajoutez la fonction `initialiserBriques` à la fin du fichier `script.js`. Pour commencer, nous ajoutons l'objet `dispositionBriques`, car il nous est très utile très bientôt&nbsp;:
+
+```js
+function initialiserBriques() {
+  const dispositionBriques = {
+    width: 50,
+    height: 20,
+    count: {
+      row: 3,
+      col: 7,
+    },
+    offset: {
+      top: 50,
+      left: 60,
+    },
+    padding: 10,
+  };
+  const briques = [];
+  // continuer d'ajouter le code ici...
+  return briques;
+}
+```
+
+Cet objet `dispositionBriques` contient toutes les informations dont nous avons besoin&nbsp;: la largeur et la hauteur d'une seule brique, le nombre de lignes et de colonnes de briques que nous voyons à l'écran, le décalage par le haut et par la gauche (l'emplacement sur le canevas où nous commençons à dessiner les briques) et l'espacement entre chaque ligne et colonne de briques.
+
+Maintenant, commençons à créer les briques elles-mêmes. Nous pouvons boucler à travers les lignes et les colonnes pour créer une nouvelle brique à chaque itération — ajoutez la boucle imbriquée suivante sous la ligne de code précédente&nbsp;:
+
+```js
+for (let c = 0; c < dispositionBriques.count.col; c++) {
+  for (let r = 0; r < dispositionBriques.count.row; r++) {
+    const briqueX =
+      c * (dispositionBriques.width + dispositionBriques.padding) +
+      dispositionBriques.offset.left;
+    const briqueY =
+      r * (dispositionBriques.height + dispositionBriques.padding) +
+      dispositionBriques.offset.top;
+
+    const nouvelleBrique = new Brique(
+      "img/brick.png",
+      ctx,
+      briqueX,
+      briqueY,
+      dispositionBriques.width,
+      dispositionBriques.height,
+    );
+    briques.push(nouvelleBrique);
+  }
+}
+```
+
+Chaque position `briqueX` est calculée comme `dispositionBriques.width` plus `dispositionBriques.padding`, multipliée par le numéro de colonne, `c`, plus le `dispositionBriques.offset.left`&nbsp;; la logique pour le `briqueY` est identique sauf qu'elle utilise les valeurs pour le numéro de ligne, `r`, `dispositionBriques.height` et `dispositionBriques.offset.top`. Maintenant, chaque brique peut être placée à sa place correcte, avec un espacement entre chaque brique, et dessinée avec un décalage par rapport aux bords gauche et supérieur du canevas.
+
+Enfin, nous pouvons dessiner ces briques à l'écran à l'intérieur de la fonction `actualiser()`. Ajoutez ce qui suit sous l'appel à `raquette.dessiner()`&nbsp;:
+
+```js
+for (const brique of briques) {
+  brique.dessiner();
+}
+```
+
+Si vous rechargez `index.html` à ce stade, vous devez voir les briques affichées à l'écran, à une distance égale les unes des autres.
+
+## Détecter la collision Brique/Balle
+
+Passons au défi suivant — la détection des collisions entre la balle et les briques. Heureusement, nous avons déjà implémenté un système de collision très générique, donc nous pouvons simplement y connecter nos briques.
+
+Tout d'abord, enregistrez chaque brique en tant qu'élément de collision, juste en dessous de l'appel à `initialiserBriques()`&nbsp;:
+
+```js
+const briques = initialiserBriques();
+for (const brique of briques) {
+  elementsCollision.push(brique);
+}
+```
+
+Ajoutez une méthode `enCollision()` à chaque brique, qui se supprime elle-même des collections `briques` et `elementsCollision`&nbsp;:
+
+```js
+class Brique extends ObjetJeu {
+  // …
+  enCollision() {
+    briques.splice(briques.indexOf(this), 1);
+    elementsCollision.splice(elementsCollision.indexOf(this), 1);
+  }
+}
+```
+
+La brique doit disparaître le plus rapidement possible, afin que la balle ne rebondisse pas dessus.
+
+Et c'est tout&nbsp;! Rechargez votre code, et vous devez voir la nouvelle détection des collisions fonctionner comme prévu.
+
+## Comparer votre code
+
+Voici ce que vous devez avoir jusqu'à présent, en cours d'exécution en direct. Pour voir son code source, cliquez sur le bouton «&nbsp;Exécuter&nbsp;».
 
 ```html hidden
-<canvas id="myCanvas" width="480" height="320"></canvas>
-<button id="runButton">Démarrer le jeu</button>
+<canvas id="canvas-jeu" width="480" height="320"></canvas>
 ```
 
 ```css hidden
-canvas {
-  background: #eeeeee;
+* {
+  padding: 0;
+  margin: 0;
 }
-button {
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+canvas {
   display: block;
+  width: min(100vw, 150vh);
+  height: auto;
+  touch-action: none;
 }
 ```
 
 ```js hidden
-const canvas = document.getElementById("myCanvas");
+const canvas = document.getElementById("canvas-jeu");
 const ctx = canvas.getContext("2d");
-const ballRadius = 10;
+let derniereChronologie = null;
 
-let x = canvas.width / 2;
-let y = canvas.height - 30;
+const collisionMurBase = {
+  left: -Infinity,
+  right: Infinity,
+  top: -Infinity,
+  bottom: Infinity,
+};
 
-let dx = 2;
-let dy = -2;
+const elementsCollision = [
+  { boiteDeCollision: { ...collisionMurBase, right: 0 } },
+  { boiteDeCollision: { ...collisionMurBase, left: canvas.width } },
+  { boiteDeCollision: { ...collisionMurBase, bottom: 0 } },
+];
 
-const paddleHeight = 10;
-const paddleWidth = 75;
-
-let paddleX = (canvas.width - paddleWidth) / 2;
-let rightPressed = false;
-let leftPressed = false;
-
-let interval = 0;
-
-const brickRowCount = 3;
-const brickColumnCount = 5;
-const brickWidth = 75;
-const brickHeight = 20;
-const brickPadding = 10;
-const brickOffsetTop = 30;
-const brickOffsetLeft = 30;
-
-let bricks = [];
-for (let c = 0; c < brickColumnCount; c++) {
-  bricks[c] = [];
-  for (let r = 0; r < brickRowCount; r++) {
-    bricks[c][r] = { x: 0, y: 0 };
+class ObjetJeu {
+  static assets = new Map();
+  url;
+  asset;
+  ctx;
+  taille = { w: undefined, h: undefined };
+  pos = { x: 0, y: 0 };
+  origine = { x: 0.5, y: 0.5 };
+  constructor(url, ctx) {
+    this.url = url;
+    this.ctx = ctx;
   }
-}
-
-document.addEventListener("keydown", keyDownHandler);
-document.addEventListener("keyup", keyUpHandler);
-
-function keyDownHandler(e) {
-  if (e.key === "Right" || e.key === "ArrowRight") {
-    rightPressed = true;
-  } else if (e.key === "Left" || e.key === "ArrowLeft") {
-    leftPressed = true;
+  async precharger() {
+    if (!ObjetJeu.assets.has(this.url)) {
+      const asset = new Image();
+      asset.src = this.url;
+      ObjetJeu.assets.set(
+        this.url,
+        asset.decode().then(() => asset),
+      );
+    }
+    this.asset = await ObjetJeu.assets.get(this.url);
+    if (this.taille.w === undefined) {
+      this.taille.w = this.asset.width;
+      this.taille.h = this.asset.height;
+    }
   }
-}
-
-function keyUpHandler(e) {
-  if (e.key === "Right" || e.key === "ArrowRight") {
-    rightPressed = false;
-  } else if (e.key === "Left" || e.key === "ArrowLeft") {
-    leftPressed = false;
+  get boiteDeCollision() {
+    const left = this.pos.x - this.taille.w * this.origine.x;
+    const top = this.pos.y - this.taille.h * this.origine.y;
+    return {
+      left,
+      right: left + this.taille.w,
+      top,
+      bottom: top + this.taille.h,
+    };
   }
+  dessiner() {
+    const { left, top } = this.boiteDeCollision;
+    this.ctx.drawImage(this.asset, left, top);
+  }
+  enCollision() {}
 }
 
-function drawBall() {
-  ctx.beginPath();
-  ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
-}
-function drawPaddle() {
-  ctx.beginPath();
-  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
-}
-function drawBricks() {
-  for (let c = 0; c < brickColumnCount; c++) {
-    for (let r = 0; r < brickRowCount; r++) {
-      let brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
-      let brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
-      bricks[c][r].x = brickX;
-      bricks[c][r].y = brickY;
-      ctx.beginPath();
-      ctx.rect(brickX, brickY, brickWidth, brickHeight);
-      ctx.fillStyle = "#0095DD";
-      ctx.fill();
-      ctx.closePath();
+class Balle extends ObjetJeu {
+  pos = { x: undefined, y: undefined };
+  vel = { x: 150, y: -150 };
+  deplacer(dt) {
+    this.pos.x += this.vel.x * dt;
+    this.pos.y += this.vel.y * dt;
+  }
+  enCollision({ x, y }) {
+    if (x) {
+      this.vel.x = -this.vel.x;
+    }
+    if (y) {
+      this.vel.y = -this.vel.y;
     }
   }
 }
 
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawBricks();
-  drawBall();
-  drawPaddle();
-
-  if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+class Raquette extends ObjetJeu {
+  origine = { x: 0.5, y: 1 };
+  constructor(url, ctx) {
+    super(url, ctx);
+    this.pos = { x: ctx.canvas.width / 2, y: ctx.canvas.height - 5 };
   }
-  if (y + dy < ballRadius) {
-    dy = -dy;
-  } else if (y + dy > canvas.height - ballRadius) {
-    if (x > paddleX && x < paddleX + paddleWidth) {
-      if ((y -= paddleHeight)) {
-        dy = -dy;
-      }
-    } else {
-      alert("GAME OVER");
-      document.location.reload();
-      clearInterval(interval); // Nécessaire pour que Chrome termine le jeu
-    }
-  }
-
-  if (rightPressed && paddleX < canvas.width - paddleWidth) {
-    paddleX += 7;
-  } else if (leftPressed && paddleX > 0) {
-    paddleX -= 7;
-  }
-
-  x += dx;
-  y += dy;
 }
 
-function startGame() {
-  interval = setInterval(draw, 10);
+class Brique extends ObjetJeu {
+  constructor(url, ctx, x, y, w, h) {
+    super(url, ctx);
+    this.pos = { x, y };
+    this.taille = { w, h };
+  }
+  dessiner() {
+    const { left, top } = this.boiteDeCollision;
+    this.ctx.drawImage(this.asset, left, top, this.taille.w, this.taille.h);
+  }
+  enCollision() {
+    briques.splice(briques.indexOf(this), 1);
+    elementsCollision.splice(elementsCollision.indexOf(this), 1);
+  }
 }
 
-const runButton = document.getElementById("runButton");
-runButton.addEventListener("click", () => {
-  startGame();
-  runButton.disabled = true;
+const balle = new Balle(
+  "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/ball.png",
+  ctx,
+);
+const raquette = new Raquette(
+  "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/paddle.png",
+  ctx,
+);
+elementsCollision.push(raquette);
+const briques = initialiserBriques();
+for (const brique of briques) {
+  elementsCollision.push(brique);
+}
+
+canvas.addEventListener("pointermove", (event) => {
+  if (raquette.taille.w === undefined) {
+    return;
+  }
+  const limites = canvas.getBoundingClientRect();
+  const x = ((event.clientX - limites.left) * canvas.width) / limites.width;
+  raquette.pos.x = Math.max(
+    raquette.taille.w / 2,
+    Math.min(canvas.width - raquette.taille.w / 2, x),
+  );
 });
+
+Promise.all([balle, raquette, ...briques].map((obj) => obj.precharger())).then(
+  () => {
+    balle.pos.x = raquette.pos.x;
+    balle.pos.y = raquette.boiteDeCollision.top - balle.taille.h / 2;
+    requestAnimationFrame(actualiser);
+  },
+);
+
+function actualiser(chronologie) {
+  const dt =
+    derniereChronologie === null
+      ? 0
+      : (chronologie - derniereChronologie) / 1000;
+  derniereChronologie = chronologie;
+  deplacerBalle(dt);
+
+  ctx.fillStyle = "#eeeeee";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  balle.dessiner();
+  raquette.dessiner();
+  for (const brique of briques) {
+    brique.dessiner();
+  }
+
+  requestAnimationFrame(actualiser);
+}
+
+function obtenirCollision(deplacement, velocite, obstacle, dt) {
+  const largeur = deplacement.right - deplacement.left;
+  const hauteur = deplacement.bottom - deplacement.top;
+  const deplacementPos = { x: deplacement.left, y: deplacement.top };
+  const gauche = obstacle.left - largeur;
+  const droite = obstacle.right;
+  const haut = obstacle.top - hauteur;
+  const bas = obstacle.bottom;
+  const touche = { time: dt, x: null, y: null };
+
+  function verifierFace(axes, coordonnes, min, max, direction) {
+    if (velocite[axes] * direction <= 0) {
+      return;
+    }
+    const temps = (coordonnes - deplacementPos[axes]) / velocite[axes];
+    if (temps < 0 || temps > touche.time) {
+      return;
+    }
+    const autreAxe = axes === "x" ? "y" : "x";
+    const autrePosition = deplacementPos[autreAxe] + velocite[autreAxe] * temps;
+    if (autrePosition < min || autrePosition > max) {
+      return;
+    }
+    if (temps < touche.time) {
+      touche.x = null;
+      touche.y = null;
+    }
+    touche.time = temps;
+    touche[axes] = coordonnes;
+  }
+
+  verifierFace("x", gauche, haut, bas, 1);
+  verifierFace("x", droite, haut, bas, -1);
+  verifierFace("y", haut, gauche, droite, 1);
+  verifierFace("y", bas, gauche, droite, -1);
+
+  return touche.x === null && touche.y === null ? null : touche;
+}
+
+function deplacerBalle(dt) {
+  while (dt > 0) {
+    // Évite de déclencher à plusieurs reprises l'accesseur
+    const boiteCollisionBalle = balle.boiteDeCollision;
+    let momentTouche = dt;
+    let toucheX = null;
+    let toucheY = null;
+    let contacts = [];
+
+    for (const elementCollision of elementsCollision) {
+      const touche = obtenirCollision(
+        boiteCollisionBalle,
+        balle.vel,
+        elementCollision.boiteDeCollision,
+        momentTouche,
+      );
+      if (touche === null) {
+        continue;
+      }
+      if (touche.time < momentTouche) {
+        toucheX = null;
+        toucheY = null;
+        contacts = [];
+      }
+      momentTouche = touche.time;
+      toucheX = touche.x ?? toucheX;
+      toucheY = touche.y ?? toucheY;
+      contacts.push({ elementCollision, touche });
+    }
+
+    balle.deplacer(momentTouche);
+    dt -= momentTouche;
+
+    const balleEstHorsLimites = balle.boiteDeCollision.bottom > canvas.height;
+    if (balleEstHorsLimites) {
+      // Logique de fin de jeu
+      location.reload();
+      return;
+    }
+
+    if (contacts.length === 0) {
+      break;
+    }
+    // Attache la position au point de contact pour éviter les erreurs d'arrondi
+    if (toucheX !== null) {
+      balle.pos.x = toucheX + balle.taille.w / 2;
+    }
+    if (toucheY !== null) {
+      balle.pos.y = toucheY + balle.taille.h / 2;
+    }
+
+    balle.enCollision({ x: toucheX !== null, y: toucheY !== null });
+    for (const { elementCollision, touche } of contacts) {
+      elementCollision.enCollision?.({
+        x: touche.x !== null,
+        y: touche.y !== null,
+      });
+    }
+  }
+}
+
+function initialiserBriques() {
+  const dispositionBriques = {
+    width: 50,
+    height: 20,
+    count: {
+      row: 3,
+      col: 7,
+    },
+    offset: {
+      top: 50,
+      left: 60,
+    },
+    padding: 10,
+  };
+  const briques = [];
+  for (let c = 0; c < dispositionBriques.count.col; c++) {
+    for (let r = 0; r < dispositionBriques.count.row; r++) {
+      const briqueX =
+        c * (dispositionBriques.width + dispositionBriques.padding) +
+        dispositionBriques.offset.left;
+      const briqueY =
+        r * (dispositionBriques.height + dispositionBriques.padding) +
+        dispositionBriques.offset.top;
+
+      const nouvelleBrique = new Brique(
+        "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/brick.png",
+        ctx,
+        briqueX,
+        briqueY,
+        dispositionBriques.width,
+        dispositionBriques.height,
+      );
+      briques.push(nouvelleBrique);
+    }
+  }
+  return briques;
+}
 ```
 
-{{EmbedLiveSample("Comparez votre code", 600, 360)}}
-
-> [!NOTE]
-> Essayez de changer le nombre de briques dans une colonne ou dans une ligne ou bien leur position.
+{{EmbedLiveSample("Comparer votre code", "", 480,,,,, "allow-modals")}}
 
 ## Prochaines étapes
 
-Nous avons donc maintenant des briques&nbsp;! Mais la balle n'interagit pas du tout avec elles — nous allons changer cela dans le chapitre sept&nbsp;: [Détection des collisions](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection).
+Nous pouvons frapper les briques et les supprimer, ce qui est déjà un bel ajout à la jouabilité. Il est encore mieux de [suivre le score et de gagner](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win) lorsque toutes les briques sont détruites.
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win")}}
