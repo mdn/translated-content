@@ -1,92 +1,108 @@
 ---
-title: Suivre le score et gagner
-slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win
+title: Vie supplémentaire
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives
 l10n:
   sourceCommit: 69937a446786abf5a58d4214b4192597d0b3cdc6
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Animations_and_tweens")}}
 
-C'est la **7<sup>e</sup> étape** sur 11 du [tutoriel de création d'un jeu de casse-briques en pur JavaScript](/fr/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Dans cet article, nous allons ajouter un système de score à notre jeu. Avoir un score peut rendre le jeu plus intéressant — vous pouvez essayer de battre votre propre meilleur score ou celui de votre ami. Nous ajoutons également une condition de victoire, qui est si vous parvenez à détruire toutes les briques.
+C'est la **8<sup>e</sup> étape** sur 11 du [tutoriel sur la création d'un jeu de casse-briques en utilisant uniquement JavaScript](/fr/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Dans cet article, nous allons mettre en œuvre un système de vies, afin que le·la joueur·euse puisse continuer à jouer jusqu'à ce qu'il perde trois vies, et pas seulement une, ce qui rend le jeu plus agréable pendant plus longtemps.
 
-## Ajouter le texte du score à l'affichage du jeu
+## Nouvelles variables
 
-Ajoutons une nouvelle variable juste après `let derniereChronologie` pour stocker le score&nbsp;:
+Ajoutons deux nouvelles variables sous `let score = 0;` pour stocker le nombre de vies et si le message de vie perdue doit être affiché&nbsp;:
 
 ```js
-let score = 0;
+let vies = 3;
+let afficherTexteViesPerdues = false;
 ```
 
-Ajoutez une fonction `dessinerScore()` pour afficher le score actuel sur le canvas&nbsp;:
+## Dessiner les étiquettes de texte
+
+Le dessin des textes ressemble à ce que nous avons déjà fait dans la leçon [Suivre le score et gagner](/fr/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win). Remplacez `dessinerScore()` par une fonction `dessinerStatut()` qui dessine le score, les vies restantes et un message lorsque le·la joueur·euse perd une vie&nbsp;:
 
 ```js
-function dessinerScore() {
+function dessinerStatut() {
   ctx.font = "18px Arial";
   ctx.fillStyle = "#0095dd";
   ctx.textBaseline = "top";
   ctx.textAlign = "left";
   ctx.fillText(`Points : ${score}`, 5, 5);
-}
-```
 
-La méthode {{DOMxRef("CanvasRenderingContext2D/fillText", "ctx.fillText()")}} prend le texte à rendre ainsi que les coordonnées x et y où le dessiner. Dans notre cas, le texte du score est bleu, de taille 18 pixels, et utilise la police Arial. Définir `textBaseline` sur `"top"` positionne le haut du texte à la coordonnée y donnée.
+  ctx.textAlign = "right";
+  ctx.fillText(`Vies : ${vies}`, canvas.width - 5, 5);
 
-Appelez `dessinerScore()` à l'intérieur de `actualiser()`, après avoir dessiné les briques&nbsp;:
-
-```js
-function actualiser(chronologie) {
-  // ...
-  for (const brique of briques) {
-    brique.draw();
-  }
-  dessinerScore();
-
-  requestAnimationFrame(actualiser);
-}
-```
-
-## Mettre à jour le score lorsque les briques sont détruites
-
-Nous augmentons le nombre de points chaque fois que la balle touche une brique. Ajoutez `score += 10;` à la méthode `enCollision()` existante de la brique, après avoir supprimé la brique des deux tableaux&nbsp;:
-
-```js
-class Brique extends ObjetJeu {
-  // ...
-  enCollision() {
-    briques.splice(briques.indexOf(this), 1);
-    elementsCollision.splice(elementsCollision.indexOf(this), 1);
-    score += 10;
+  if (afficherTexteViesPerdues) {
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(
+      "Vie perdue, cliquez pour continuer",
+      canvas.width / 2,
+      canvas.height / 2,
+    );
   }
 }
 ```
 
-C'est tout pour l'instant — rechargez votre `index.html` et vérifiez que le score se met à jour à chaque fois qu'une brique est touchée.
+Les trois étiquettes partagent la même police et la même couleur. Nous utilisons `textAlign` et `textBaseline` pour positionner le score en haut à gauche, les vies en haut à droite et le message de vie perdue au centre (si `afficherTexteViesPerdues` est `true`).
 
-## Comment gagner ?
+Dans `actualiser()`, remplacez l'appel à `dessinerScore()` par `dessinerStatut()`.
 
-Ajoutons le code suivant dans votre fonction `actualiser()`, après l'appel à `dessinerScore()`&nbsp;:
+## Le code de gestion des vies
+
+Pour implémenter les vies dans notre jeu, commençons par changer le comportement lorsque la balle sort des limites. Au lieu de redémarrer immédiatement&nbsp;:
 
 ```js
-if (briques.length === 0) {
-  alert("Vous avez gagné, félicitations !");
+if (balleEstHorsLimites) {
+  // Logique de fin de partie
   location.reload();
   return;
 }
 ```
 
-Si il n'y a plus de briques, alors nous affichons le message de victoire, en redémarrant le jeu une fois que l'alerte est fermée.
-
-Mettez également à jour la condition `while` dans `deplacerBalle()` pour arrêter le mouvement de la balle dès que la dernière brique est détruite&nbsp;:
+Nous appelons une nouvelle fonction nommée `balleSortirEcran()`&nbsp;; supprimez les lignes précédentes (montrées ci-dessus) et remplacez-les par la ligne suivante&nbsp;:
 
 ```js
-function deplacerBalle(dt) {
-  while (dt > 0 && briques.length > 0) {
-    // ... mouvement et code de collision existants ...
-  }
+if (balleEstHorsLimites) {
+  balleSortirEcran();
+  return;
 }
 ```
 
-Cela empêche la balle de sortir des limites pendant le temps restant dans l'image après que le·la joueur·euse a déjà gagné·e.
+Le `return` arrête le traitement du mouvement et des collisions restants pour cette image après que la balle quitte l'écran.
+
+Nous voulons diminuer le nombre de vies chaque fois que la balle quitte le canevas. Ajoutez la fonction `balleSortirEcran()` à votre code&nbsp;:
+
+```js
+function balleSortirEcran() {
+  vies--;
+  if (vies === 0) {
+    // Logique de fin de partie
+    location.reload();
+    return;
+  }
+
+  raquette.pos.x = canvas.width / 2;
+  balle.pos.x = raquette.pos.x;
+  balle.pos.y = raquette.hitbox.top - balle.taille.h / 2;
+  balle.vel = { x: 0, y: 0 };
+  afficherTexteViesPerdues = true;
+  canvas.addEventListener(
+    "pointerdown",
+    () => {
+      afficherTexteViesPerdues = false;
+      balle.vel = { x: 150, y: -150 };
+      derniereChronologie = null;
+    },
+    { once: true },
+  );
+}
+```
+
+Au lieu d'afficher instantanément l'alerte lorsque vous perdez une vie, nous soustrayons d'abord une vie du nombre actuel et vérifions si c'est une valeur non nulle. Si oui, alors le·la joueur·euse a encore des vies et peut continuer à jouer — il voit le message de vie perdue, les positions de la balle et de la raquette sont réinitialisées à l'écran, et lors de la prochaine entrée (clic ou toucher) le message est masqué et la balle recommence à bouger.
+
+Lorsque le nombre de vies disponibles atteint zéro, la partie est terminée et le message d'alerte de fin de partie est affiché.
 
 ## Comparer votre code
 
@@ -121,6 +137,8 @@ const canvas = document.getElementById("canvas-jeu");
 const ctx = canvas.getContext("2d");
 let derniereChronologie = null;
 let score = 0;
+let vies = 3;
+let afficherTexteViesPerdues = false;
 
 const collisionMurBase = {
   left: -Infinity,
@@ -135,7 +153,7 @@ const elementsCollision = [
   { boiteDeCollision: { ...collisionMurBase, bottom: 0 } },
 ];
 
-class ObjetJeu {
+class ObjectJeu {
   static assets = new Map();
   url;
   asset;
@@ -148,15 +166,15 @@ class ObjetJeu {
     this.ctx = ctx;
   }
   async precharger() {
-    if (!ObjetJeu.assets.has(this.url)) {
+    if (!ObjectJeu.assets.has(this.url)) {
       const asset = new Image();
       asset.src = this.url;
-      ObjetJeu.assets.set(
+      ObjectJeu.assets.set(
         this.url,
         asset.decode().then(() => asset),
       );
     }
-    this.asset = await ObjetJeu.assets.get(this.url);
+    this.asset = await ObjectJeu.assets.get(this.url);
     if (this.taille.w === undefined) {
       this.taille.w = this.asset.width;
       this.taille.h = this.asset.height;
@@ -179,7 +197,7 @@ class ObjetJeu {
   enCollision() {}
 }
 
-class Balle extends ObjetJeu {
+class Balle extends ObjectJeu {
   pos = { x: undefined, y: undefined };
   vel = { x: 150, y: -150 };
   deplacer(dt) {
@@ -196,15 +214,15 @@ class Balle extends ObjetJeu {
   }
 }
 
-class Raquette extends ObjetJeu {
-  origine = { x: 0.5, y: 1 };
+class Raquette extends ObjectJeu {
+  origin = { x: 0.5, y: 1 };
   constructor(url, ctx) {
     super(url, ctx);
     this.pos = { x: ctx.canvas.width / 2, y: ctx.canvas.height - 5 };
   }
 }
 
-class Brique extends ObjetJeu {
+class Brique extends ObjectJeu {
   constructor(url, ctx, x, y, w, h) {
     super(url, ctx);
     this.pos = { x, y };
@@ -270,7 +288,7 @@ function actualiser(chronologie) {
   for (const brique of briques) {
     brique.dessiner();
   }
-  dessinerScore();
+  dessinerStatut();
 
   if (briques.length === 0) {
     alert("Vous avez gagné le jeu, félicitations !");
@@ -281,11 +299,49 @@ function actualiser(chronologie) {
   requestAnimationFrame(actualiser);
 }
 
-function dessinerScore() {
+function dessinerStatut() {
   ctx.font = "18px Arial";
   ctx.fillStyle = "#0095dd";
   ctx.textBaseline = "top";
-  ctx.fillText(`Points : ${score}`, 5, 5);
+  ctx.textAlign = "left";
+  ctx.fillText(`Points: ${score}`, 5, 5);
+
+  ctx.textAlign = "right";
+  ctx.fillText(`Vies : ${vies}`, canvas.width - 5, 5);
+
+  if (afficherTexteViesPerdues) {
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(
+      "Vie perdue, cliquez pour continuer",
+      canvas.width / 2,
+      canvas.height / 2,
+    );
+  }
+}
+
+function balleSortieEcran() {
+  vies--;
+  if (vies === 0) {
+    // Logique de fin de partie
+    location.reload();
+    return;
+  }
+
+  raquette.pos.x = canvas.width / 2;
+  balle.pos.x = raquette.pos.x;
+  balle.pos.y = raquette.boiteDeCollision.top - balle.taille.h / 2;
+  balle.vel = { x: 0, y: 0 };
+  afficherTexteViesPerdues = true;
+  canvas.addEventListener(
+    "pointerdown",
+    () => {
+      afficherTexteViesPerdues = false;
+      balle.vel = { x: 150, y: -150 };
+      derniereChronologie = null;
+    },
+    { once: true },
+  );
 }
 
 function obtenirCollision(deplacement, velocite, obstacle, dt) {
@@ -298,16 +354,17 @@ function obtenirCollision(deplacement, velocite, obstacle, dt) {
   const bas = obstacle.bottom;
   const touche = { temps: dt, x: null, y: null };
 
-  function verifierFace(axe, coordonne, min, max, direction) {
+  function verifierFace(axe, coordonnee, min, max, direction) {
     if (velocite[axe] * direction <= 0) {
       return;
     }
-    const temps = (coordonne - deplacementPos[axe]) / velocite[axe];
+    const temps = (coordonnee - deplacementPos[axe]) / velocite[axe];
     if (temps < 0 || temps > touche.temps) {
       return;
     }
-    const autreAxe = axe === "x" ? "y" : "x";
-    const autrePosition = deplacementPos[autreAxe] + velocite[autreAxe] * temps;
+    const autresAxes = axe === "x" ? "y" : "x";
+    const autrePosition =
+      deplacementPos[autresAxes] + velocite[autresAxes] * temps;
     if (autrePosition < min || autrePosition > max) {
       return;
     }
@@ -316,7 +373,7 @@ function obtenirCollision(deplacement, velocite, obstacle, dt) {
       touche.y = null;
     }
     touche.temps = temps;
-    touche[axe] = coordonne;
+    touche[axe] = coordonnee;
   }
 
   verifierFace("x", gauche, haut, bas, 1);
@@ -330,7 +387,7 @@ function obtenirCollision(deplacement, velocite, obstacle, dt) {
 function deplacerBalle(dt) {
   while (dt > 0 && briques.length > 0) {
     // Évite de déclencher à plusieurs reprises l'accesseur
-    const boiteDeCollisionBalle = balle.boiteDeCollision;
+    const boiteCollisionBalle = balle.boiteDeCollision;
     let tempsTouche = dt;
     let toucheX = null;
     let toucheY = null;
@@ -338,7 +395,7 @@ function deplacerBalle(dt) {
 
     for (const elementCollision of elementsCollision) {
       const touche = obtenirCollision(
-        boiteDeCollisionBalle,
+        boiteCollisionBalle,
         balle.vel,
         elementCollision.boiteDeCollision,
         tempsTouche,
@@ -360,10 +417,9 @@ function deplacerBalle(dt) {
     balle.deplacer(tempsTouche);
     dt -= tempsTouche;
 
-    const balleEstHorsLimites = balle.boiteDeCollision.bottom > canvas.height;
-    if (balleEstHorsLimites) {
-      // Logique de fin de partie
-      location.reload();
+    const balleEstHorsEcran = balle.boiteDeCollision.bottom > canvas.height;
+    if (balleEstHorsEcran) {
+      balleQuitteEcran();
       return;
     }
 
@@ -378,7 +434,7 @@ function deplacerBalle(dt) {
       balle.pos.y = toucheY + balle.taille.h / 2;
     }
 
-    balle.enCollision?.({ x: toucheX !== null, y: toucheY !== null });
+    balle.enCollision({ x: toucheX !== null, y: toucheY !== null });
     for (const { elementCollision, touche } of contacts) {
       elementCollision.enCollision?.({
         x: touche.x !== null,
@@ -431,6 +487,6 @@ function initialiserBriques() {
 
 ## Prochaines étapes
 
-Les défaites et les victoires sont toutes deux implémentées, ce qui signifie que le cœur de la jouabilité de notre jeu est terminé. Maintenant, ajoutons quelque chose en plus — nous donnons au·à la joueur·euse trois [vies](/fr/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives) au lieu d'une seule.
+Les vies rendent le jeu plus indulgent — si vous perdez une vie, il vous en reste encore deux et vous pouvez continuer à jouer. Maintenant, développons l'apparence et la sensation du jeu en ajoutant [des animations et des interpolations](/fr/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Animations_and_tweens).
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Animations_and_tweens")}}
