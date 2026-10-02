@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4483da6501d1c735a0e1ac1e95775e2fe1766dc3
 ---
 
-{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
+{{Next("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas")}}
 
 このステップバイステップのチュートリアルでは **MDN ブロック崩し**ゲームを作ります。これは完全に純粋な JavaScript だけで書かれ、 HTML の {{htmlelement("canvas")}} で表示されます。
 
