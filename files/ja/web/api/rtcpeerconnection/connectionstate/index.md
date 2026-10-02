@@ -19,7 +19,7 @@ l10n:
 接続の現在の状態を表す文字列です。この値は、以下のいずれかになります。
 
 - `new`
-  - : 接続の {{Glossary("ICE")}} トランスポート（{{domxref("RTCIceTransport")}} または {{domxref("RTCDtlsTransport")}} オブジェクト）のうち、少なくとも 1 つが `new` 状態であり、かつそれらのいずれも  `connecting`、`checking`、`failed`、`disconnected` のいずれでもない場合、あるいは接続のすべてのトランスポートが `closed` 状態にある場合です。
+  - : 接続の {{Glossary("ICE")}} トランスポート（{{domxref("RTCIceTransport")}} または {{domxref("RTCDtlsTransport")}} オブジェクト）のうち、少なくとも 1 つが `new` 状態であり、かつそれらのいずれも `connecting`、`checking`、`failed`、`disconnected` のいずれでもない場合、あるいは接続のすべてのトランスポートが `closed` 状態にある場合です。
 - `connecting`
   - : 現在、1 つ以上の {{Glossary("ICE")}} トランスポートが接続を確立しようとしています。
     つまり、それらの {{DOMxRef("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} が `checking` または `connected` のいずれかであり、かつ `failed` 状態にあるトランスポートが存在していません。
