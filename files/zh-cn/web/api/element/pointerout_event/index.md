@@ -1,47 +1,53 @@
 ---
-title: GlobalEventHandlers.onpointerout
+title: Element：pointerout 事件
+short-title: pointerout
 slug: Web/API/Element/pointerout_event
+l10n:
+  sourceCommit: 827686870ee416d6f01739a48931618b61f4ce4e
 ---
 
-{{ApiRef("HTML DOM")}}
+{{APIRef("Pointer Events")}}
 
-一个{{domxref("GlobalEventHandlers","global event handler")}} 用于处理 `pointerout` 事件。
+`pointerout` 事件会因为某些原因被激发，包括：定点设备移出了元素的*命中测试*边界；在不支持悬停的设备上激发了 {{domxref("Element/pointerup_event", "pointerup")}} 事件（参见 {{domxref("Element/pointerup_event", "pointerup")}}）；在激发 {{domxref("Element/pointercancel_event", "pointercancel")}} 事件后被激发（参见 {{domxref("Element/pointercancel_event", "pointercancel")}}）；触控笔离开了数位板可探测的悬停范围。
+
+`pointerout` 事件具有和 {{domxref("Element/mouseout_event", "mouseout")}} 事件相同的问题。如果目标元素拥有子元素，`pointerout` 和 `pointerover` 事件在指针移动到这些子元素的边界之上时也会激发，而不仅仅是在目标元素本身上激发。通常来说，{{domxref("Element/pointerenter_event", "pointerenter")}} 和 {{domxref("Element/pointerleave_event", "pointerleave")}} 事件的行为更合理，因为它们不受指针移入子元素的影响。
 
 ## 语法
 
-在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用此事件名称，或设置事件处理器属性。
 
-```js
-addEventListener("pointerout", (event) => {});
+```js-nolint
+addEventListener("pointerout", (event) => { })
 
-onpointerout = (event) => {};
+onpointerout = (event) => { }
 ```
 
-### 返回值
+## 事件类型
 
-- `outHandler`
-  - : 元素`targetElement`的指针输出事件处理程序。
+{{domxref("PointerEvent")}}。继承自 {{domxref("Event")}}。
+
+{{InheritanceDiagram("PointerEvent")}}
 
 ## 示例
 
-这个例子展示了两种方式来使用 onpointerout 设置元素的 pointerout 事件处理程序。
+使用 `addEventListener()`：
 
 ```js
-<html>
-<script>
-function outHandler(ev) {
- // Process the pointerout event
-}
-function init() {
- var el=document.getElementById("target1");
- el.onpointerout = outHandler;
-}
-</script>
-<body onload="init();">
-<div id="target1"> Touch me ... </div>
-<div id="target2" onpointerout="outHandler(event)"> Touch me ... </div>
-</body>
-</html>
+const para = document.querySelector("p");
+
+para.addEventListener("pointerout", (event) => {
+  console.log("指针移出了");
+});
+```
+
+使用 `onpointerout` 事件处理器属性：
+
+```js
+const para = document.querySelector("p");
+
+para.onpointerout = (event) => {
+  console.log("指针移出了");
+};
 ```
 
 ## 规范
@@ -55,12 +61,14 @@ function init() {
 ## 参见
 
 - 相关事件
-  - [`gotpointercapture`](/zh-CN/docs/Web/API/Element/gotpointercapture_event)
-  - [`lostpointercapture`](/zh-CN/docs/Web/API/Element/lostpointercapture_event)
-  - [`pointerover`](/zh-CN/docs/Web/API/Element/pointerover_event)
-  - [`pointerenter`](/zh-CN/docs/Web/API/Element/pointerenter_event)
-  - [`pointerdown`](/zh-CN/docs/Web/API/Element/pointerdown_event)
-  - [`pointermove`](/zh-CN/docs/Web/API/Element/pointermove_event)
-  - [`pointerup`](/zh-CN/docs/Web/API/Element/pointerup_event)
-  - [`pointercancel`](/zh-CN/docs/Web/API/Element/pointercancel_event)
-  - [`pointerleave`](/zh-CN/docs/Web/API/Element/pointerleave_event)
+  - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
+  - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
+  - {{domxref('Element/pointerover_event', 'pointerover')}}
+  - {{domxref('Element/pointerenter_event', 'pointerenter')}}
+  - {{domxref('Element/pointerdown_event', 'pointerdown')}}
+  - {{domxref('Element/pointermove_event', 'pointermove')}}
+  - {{domxref('Element/pointerup_event', 'pointerup')}}
+  - {{domxref('Element/pointercancel_event', 'pointercancel')}}
+  - {{domxref('Element/pointerleave_event', 'pointerleave')}}
+  - {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}}
+  - {{domxref("Element/mouseout_event", "mouseout")}}
