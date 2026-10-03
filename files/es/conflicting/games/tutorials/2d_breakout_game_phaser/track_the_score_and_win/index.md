@@ -1,6 +1,7 @@
 ---
 title: Win the game
-slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
+slug: conflicting/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win
+original_slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 ---
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/The_score", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}

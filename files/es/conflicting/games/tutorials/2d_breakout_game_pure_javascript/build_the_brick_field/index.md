@@ -1,6 +1,7 @@
 ---
 title: Detección de colisiones
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
+slug: conflicting/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field
+original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 ---
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}

@@ -1,6 +1,7 @@
 ---
 title: Controles del ratón
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls
+original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 ---
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up")}}

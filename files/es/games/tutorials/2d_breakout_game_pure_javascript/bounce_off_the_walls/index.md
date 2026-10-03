@@ -1,6 +1,6 @@
 ---
 title: Rebota en las paredes
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls
 ---
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}

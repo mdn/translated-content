@@ -1,6 +1,6 @@
 ---
 title: Fin del juego
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over
 ---
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
