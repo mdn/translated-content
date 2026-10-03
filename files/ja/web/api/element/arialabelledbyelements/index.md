@@ -37,7 +37,7 @@ l10n:
 
 ### アクセシブル名の取得
 
-この例は、`ariaLabelledByElements` が `aria-labelledby` を使用して定義された ARIA ラベルを取得するために使用できることを示してしています。
+この例は、`ariaLabelledByElements` が `aria-labelledby` を使用して定義された ARIA ラベルを取得するために使用できることを示しています。
 
 #### HTML
 

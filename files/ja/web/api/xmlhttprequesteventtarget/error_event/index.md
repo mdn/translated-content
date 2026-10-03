@@ -130,7 +130,7 @@ xhrButtonAbort.addEventListener("click", () => {
 
 ### XMLHttpRequestUpload の使い方
 
-`error` イベントを使用して、アップロードに問題を検出するすることができます。ファイルをアップロードして進捗バーを表示する完全なサンプルコードについては、メインの {{domxref("XMLHttpRequestUpload")}} ページを参照してください。
+`error` イベントを使用して、アップロードに問題を検出することができます。ファイルをアップロードして進捗バーを表示する完全なサンプルコードについては、メインの {{domxref("XMLHttpRequestUpload")}} ページを参照してください。
 
 ```js
 // 中止時には進捗バーを非表示にする
