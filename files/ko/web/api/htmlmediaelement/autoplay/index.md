@@ -24,7 +24,7 @@ var autoplay = HTMLMediaElement.autoplay;
 
 ### 값
 
-미디어가 재생 가능할 정도로 로드되고 문제 없이 재생 가능할 때 자동 재생 여부를 {{domxref("Boolean")}} `true` 로 반환한다.
+미디어가 재생 가능할 정도로 로드되고 문제 없이 재생 가능할 때 자동 재생 여부를 {{jsxref("Boolean")}} `true` 로 반환한다.
 
 > [!NOTE]
 > 특정 브라우저는 사용자 설정을 통해 `autoplay` 프로퍼티를 무시하고 비디오/오디오 자동 재생을 막는 기능을 제공합니다. 자동 재생을 위해 `autoplay` 프로퍼티를 맹신하지 마세요.

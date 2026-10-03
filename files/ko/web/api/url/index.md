@@ -19,41 +19,41 @@ slug: Web/API/URL
 ## 속성
 
 - {{domxref("URL.hash", "hash")}}
-  - : `'#'`과 URL의 프래그먼트 식별자를 담은 {{domxref("USVString")}}입니다.
+  - : `'#'`과 URL의 프래그먼트 식별자를 담은 {{jsxref("String")}}입니다.
 - {{domxref("URL.host", "host")}}
-  - : URL의 도메인(호스트 이름), `':'`, 포트를 담은 {{domxref("USVString")}}입니다.
+  - : URL의 도메인(호스트 이름), `':'`, 포트를 담은 {{jsxref("String")}}입니다.
 - {{domxref("URL.hostname", "hostname")}}
-  - : URL의 도메인을 담은 {{domxref("USVString")}}입니다.
+  - : URL의 도메인을 담은 {{jsxref("String")}}입니다.
 - {{domxref("URL.href", "href")}}
   - : 전체 URL을 반환하는 문자열화 속성입니다.
 - {{domxref("URL.origin", "origin")}} {{readonlyInline}}
-  - : URL의 {{glossary("origin", "출처")}}, 즉 스킴, 도메인, 포트를 담은 {{domxref("USVString")}}입니다.
+  - : URL의 {{glossary("origin", "출처")}}, 즉 스킴, 도메인, 포트를 담은 {{jsxref("String")}}입니다.
 - {{domxref("URL.password", "password")}}
-  - : 도메인 이름 이전에 지정된 비밀번호를 담은 {{domxref("USVString")}}입니다.
+  - : 도메인 이름 이전에 지정된 비밀번호를 담은 {{jsxref("String")}}입니다.
 - {{domxref("URL.pathname", "pathname")}}
-  - : `'/'`와 URL의 경로를 담은 {{domxref("USVString")}}입니다.
+  - : `'/'`와 URL의 경로를 담은 {{jsxref("String")}}입니다.
 - {{domxref("URL.port", "port")}}
-  - : URL의 포트 번호를 담은 {{domxref("USVString")}}입니다.
+  - : URL의 포트 번호를 담은 {{jsxref("String")}}입니다.
 - {{domxref("URL.protocol", "protocol")}}
-  - : URL의 {{glossary("protocol", "프로토콜")}} 스킴을 담은 {{domxref("USVString")}}입니다. 마지막 `':'`을 포함합니다.
+  - : URL의 {{glossary("protocol", "프로토콜")}} 스킴을 담은 {{jsxref("String")}}입니다. 마지막 `':'`을 포함합니다.
 - {{domxref("URL.search", "search")}}
-  - : URL의 매개변수 문자열을 나타내는 {{domxref("USVString")}}입니다. 어떤 매개변수라도 존재하는 경우 `'?'` 문자로 시작해, 모든 매개변수를 포함합니다.
+  - : URL의 매개변수 문자열을 나타내는 {{jsxref("String")}}입니다. 어떤 매개변수라도 존재하는 경우 `'?'` 문자로 시작해, 모든 매개변수를 포함합니다.
 - {{domxref("URL.searchParams", "searchParams")}} {{readonlyInline}}
   - : `search` 속성의 매개변수 각각에 접근할 수 있는 {{domxref("URLSearchParams")}} 객체입니다.
 - {{domxref("URL.username","username")}}
-  - : 도메인 이름 이전에 지정된 사용자 이름을 담은 {{domxref("USVString")}}입니다.
+  - : 도메인 이름 이전에 지정된 사용자 이름을 담은 {{jsxref("String")}}입니다.
 
 ## 메서드
 
 - {{domxref("URL.toString", "toString()")}}
-  - : 전체 URL을 담은 {{domxref("USVString")}}을 반환합니다. {{domxref("URL.href")}}와 동일하나, `toString()`으로는 URL을 편집할 수 없습니다.
+  - : 전체 URL을 담은 {{jsxref("String")}}을 반환합니다. {{domxref("URL.href")}}와 동일하나, `toString()`으로는 URL을 편집할 수 없습니다.
 - {{domxref("URL.toJSON", "toJSON()")}}
-  - : 전체 URL을 담은 {{domxref("USVString")}}을 반환합니다. {{domxref("URL.href")}}와 동일한 문자열을 반환합니다.
+  - : 전체 URL을 담은 {{jsxref("String")}}을 반환합니다. {{domxref("URL.href")}}와 동일한 문자열을 반환합니다.
 
 ## 정적 메서드
 
 - {{domxref("URL.createObjectURL", "createObjectURL()")}}
-  - : 고유한 블롭 URL, 즉 `blob:` 을 스킴으로 하고, 브라우저 내의 객체를 가리키는 고유한 불투명 문자열을 그 뒤에 붙인 {{domxref("DOMString")}}을 반환합니다.
+  - : 고유한 블롭 URL, 즉 `blob:` 을 스킴으로 하고, 브라우저 내의 객체를 가리키는 고유한 불투명 문자열을 그 뒤에 붙인 {{jsxref("String")}}을 반환합니다.
 - {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}
   - : 이전에 {{domxref("URL.createObjectURL()")}}로 생성한 객체 URL을 취소합니다.
 

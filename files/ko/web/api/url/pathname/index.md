@@ -5,7 +5,7 @@ slug: Web/API/URL/pathname
 
 {{ApiRef("URL API")}}
 
-{{domxref("URL")}} 인터페이스의 **`pathname`** 속성은 URL의 경로와 그 앞의 `/`로 이루어진 {{domxref("USVString")}}을 반환합니다. 경로가 없는 경우 빈 문자열을 반환합니다.
+{{domxref("URL")}} 인터페이스의 **`pathname`** 속성은 URL의 경로와 그 앞의 `/`로 이루어진 {{jsxref("String")}}을 반환합니다. 경로가 없는 경우 빈 문자열을 반환합니다.
 
 {{AvailableInWorkers}}
 
@@ -18,7 +18,7 @@ url.pathname = newPath;
 
 ### 값
 
-{{domxref("USVString")}}.
+{{jsxref("String")}}.
 
 ## 예제
 
