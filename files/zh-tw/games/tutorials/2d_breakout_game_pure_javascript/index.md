@@ -19,7 +19,7 @@ l10n:
 
 所有課程——以及我們一起構建的不同版本的 [MDN 打磚塊遊戲](https://breakout.enclavegames.com/lesson10.html)——都在 [GitHub 上提供](https://github.com/end3r/Gamedev-Canvas-workshop)：
 
-1. [創建 Canvas 並在其上繪圖](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
+1. [創建 Canvas 並在其上繪圖](/zh-TW/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas)
 2. [移動球](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)
 3. [從牆壁反彈](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls)
 4. [球拍和鍵盤控制](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)
@@ -41,4 +41,4 @@ l10n:
 
 好的，讓我們開始吧！前往第一章[創建 Canvas 並在其上繪圖](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)。
 
-{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
+{{Next("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas")}}
