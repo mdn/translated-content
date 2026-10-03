@@ -1,43 +1,54 @@
 ---
-title: Response.blob()
+title: Response：blob() 方法
+short-title: blob()
 slug: Web/API/Response/blob
+l10n:
+  sourceCommit: 562051c4ad20e9ecb5faf905286cdfca545a340d
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-{{domxref("Response")}} mixin 的 **`blob()`**方法使用一个 {{domxref("Response")}} 流，并将其读取完成。它返回一个使用{{domxref("Blob")}}解决的 promise。
+{{domxref("Response")}} 接口的 **`blob()`** 方法将 {{domxref("Response")}} 流读取至结束。它返回一个会兑现 {{domxref("Blob")}} 的 promise。
 
-## 句法
+## 语法
 
-```js
-response.blob().then(function (myBlob) {
-  // do something with myBlob
-});
+```js-nolint
+blob()
 ```
 
 ### 参数
 
-None.
+无。
+
+> [!NOTE]
+> 若 {{domxref("Response")}} 的 {{domxref("Response.type")}} 为 `"opaque"`，则得到的 {{domxref("Blob")}} 的 {{domxref("Blob.size")}} 为 `0`，{{domxref("Blob.type")}} 为空字符串 `""`，这会使其对 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} 等方法*毫无用处*。
 
 ### 返回值
 
-A promise that resolves with a {{domxref("Blob")}}.
+一个 promise，会兑现一个 {{domxref("Blob")}}，其数据为响应体的字节，媒体类型为响应 `Content-Type` 标头的值。
 
-## 例子
+### 异常
 
-在我们 [fetch request example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) (run [fetch request live](https://mdn.github.io/fetch-examples/fetch-request/)) 中，我们使用[Request.Request](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter)构造方法创建了一个新的 request 对象，然后使用它来获取一个 JPG 文件。当 fetch 成功的时候，我们使用 blob() 从 response 中读取一个[Blob](/zh-CN/docs/Web/API/Blob)对象，并使用[URL.createObjectURL](/zh-CN/docs/Web/API/URL/createObjectURL_static) 将它放入一个 object URL，然后把 URL 设置为[img](/zh-CN/docs/Web/HTML/Reference/Elements/img)元素的 src 属性以显示这张图片。
+- `AbortError` {{domxref("DOMException")}}
+  - : 请求已被[中止](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch#取消请求)。
+- {{jsxref("TypeError")}}
+  - : 由于以下原因之一而抛出：
+    - 响应体[已被扰乱或锁定](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch#锁定和扰乱的流)。
+    - 解码响应体内容时出错（例如，因为 {{httpheader("Content-Encoding")}} 标头不正确）。
+
+## 示例
+
+在我们的 [fetch 请求示例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request)（[在线运行 fetch 请求](https://mdn.github.io/dom-examples/fetch/fetch-request/)）中，我们使用 {{domxref("Request.Request","Request()")}} 构造函数创建新请求，然后用它来获取一张 JPG。获取成功后，我们使用 `blob()` 从响应中读取 {{domxref("Blob")}}，再用 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} 将其放入对象 URL，最后把该 URL 设为 {{htmlelement("img")}} 元素的源以显示图像。
 
 ```js
-var myImage = document.querySelector("img");
+const myImage = document.querySelector("img");
 
-var myRequest = new Request("flowers.jpg");
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
-  .then(function (response) {
-    return response.blob();
-  })
-  .then(function (myBlob) {
-    var objectURL = URL.createObjectURL(myBlob);
+  .then((response) => response.blob())
+  .then((myBlob) => {
+    const objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
 ```
@@ -52,6 +63,6 @@ fetch(myRequest)
 
 ## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
+- [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)
