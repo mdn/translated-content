@@ -9,7 +9,7 @@ Les jeux en HTML ont un avantage certain face à ceux écrits dans un langage na
 
 ## Distribuer votre jeu
 
-Vous avez déjà suivi un [tutoriel](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) ou [deux](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser) et vous avez créé un jeu en HTML — c'est génial&nbsp;! L'article [Distribuer votre jeu](/fr/docs/Games/Publishing_games/Game_distribution) vous indique tout ce que vous devez savoir sur les moyens de partager votre toute dernière création — y compris comment vous pouvez l'héberger en ligne, le proposer sur les boutiques en ligne ouvertes, et le soumettre aux stores propriétaires comme Google Play ou iOS App Store.
+Vous avez déjà suivi un [tutoriel](/fr/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) ou [deux](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser) et vous avez créé un jeu en HTML — c'est génial&nbsp;! L'article [Distribuer votre jeu](/fr/docs/Games/Publishing_games/Game_distribution) vous indique tout ce que vous devez savoir sur les moyens de partager votre toute dernière création — y compris comment vous pouvez l'héberger en ligne, le proposer sur les boutiques en ligne ouvertes, et le soumettre aux stores propriétaires comme Google Play ou iOS App Store.
 
 ## Promouvoir votre jeu
 

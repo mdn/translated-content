@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f4c14731a1a157fc8d8f7357ac4d74d14a7d7fb5
 ---
 
-Vous avez suivi un [tutoriel](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) ou [deux](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser) et créé un jeu en HTML — c'est génial&nbsp;! Cet article couvre tout ce que vous avez besoin de savoir sur la façon de distribuer votre nouveau jeu dans la nature. Que vous l'hébergiez en ligne vous-même, que vous le proposiez sur des plateformes ouvertes, ou encore que vous le mettiez à disposition sur des plateformes privées comme Google Play ou l'App Store iOS d'Apple.
+Vous avez suivi un [tutoriel](/fr/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) ou [deux](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser) et créé un jeu en HTML — c'est génial&nbsp;! Cet article couvre tout ce que vous avez besoin de savoir sur la façon de distribuer votre nouveau jeu dans la nature. Que vous l'hébergiez en ligne vous-même, que vous le proposiez sur des plateformes ouvertes, ou encore que vous le mettiez à disposition sur des plateformes privées comme Google Play ou l'App Store iOS d'Apple.
 
 ## Avantages du HTML par rapport à du natif
 
