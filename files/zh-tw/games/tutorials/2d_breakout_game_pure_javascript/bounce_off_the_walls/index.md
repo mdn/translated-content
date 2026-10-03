@@ -162,6 +162,6 @@ runButton.addEventListener("click", () => {
 
 ## 下一步
 
-我們現在已經到了球既移動又保持在遊戲板上的階段。在第四章中，我們將看看如何實現可控的球拍——請參見[球拍和鍵盤控制](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)。
+我們現在已經到了球既移動又保持在遊戲板上的階段。在第四章中，我們將看看如何實現可控的球拍——請參見[球拍和鍵盤控制](/zh-TW/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls)。
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
