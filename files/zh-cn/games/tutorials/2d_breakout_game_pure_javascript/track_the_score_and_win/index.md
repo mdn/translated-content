@@ -1,6 +1,6 @@
 ---
 title: 跟踪得分和获胜
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win
 l10n:
   sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
 ---
