@@ -69,6 +69,8 @@ ruby {
 
 다음 예제는 {{htmlelement("ruby")}} 요소를 사용해 한자의 발음을 표기합니다.
 
+### 루비를 지원하는 경우
+
 ```html
 <ruby> 漢 <rt>한</rt> 字 <rt>자</rt> </ruby>
 ```
@@ -81,7 +83,9 @@ body {
 
 결과는 다음과 같습니다.
 
-{{EmbedLiveSample("with-ruby", 600, 60)}}
+{{EmbedLiveSample("루비를 지원하는 경우", 600, 60)}}
+
+### 루비를 지원하지 않는 경우
 
 브라우저가 루비를 지원하지 않는 경우엔 다음처럼 보일 것입니다.
 
@@ -95,7 +99,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("without-ruby", 600, 60)}}
+{{EmbedLiveSample("루비를 지원하지 않는 경우", 600, 60)}}
 
 ## 명세
 
