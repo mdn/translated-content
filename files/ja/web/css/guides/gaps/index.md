@@ -3,12 +3,15 @@ title: CSS 隙間
 short-title: 隙間
 slug: Web/CSS/Guides/Gaps
 l10n:
-  sourceCommit: 34838ae7d32e78bfe01dbf2c266257ef0f8305c4
+  sourceCommit: 8a13259a44523cd17b4fe347088b62c6d7a35265
 ---
 
-**CSS 隙間**モジュールを使用すると、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)レイアウトにおいて、アイテム間の間隔（または「隙間」）を指定できます。[CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)モジュールでは、もともと段組みコンテナー内で段間を制御する間隔や段間罫が定義されていました。本モジュールは、隙間装飾と呼ばれるこれらの視覚的な区切り要素を拡張し、グリッドにも適用できるようにしています。
+**CSS 隙間**モジュールを使用すると、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)レイアウトにおいて、アイテム間の間隔（または「隙間」）を指定できます。[CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)モジュールでは、もともと段組みコンテナー内で段間を制御する間隔や段間罫が定義されていました。本モジュールは、隙間装飾と呼ばれるこれらの視覚的な区切り要素を拡張し、グリッドとフレックスボックスにも適用できるようにしています。
 
 {{cssxref("margin")}} や {{cssxref("padding")}} は個々のボックスの周囲の視覚的な余白を指定するものですが、このモジュールのプロパティを使用すると、{{glossary("gutters", "溝")}}や隙間を含むレイアウトにおいて、特定のレイアウトコンテキスト内の隣接するボックス間の空間を指定することができます。これは、最初や最後のボックスとコンテナーの端との間と、兄弟ボックス間の間隔が異なる場合に、特定のレイアウトコンテキスト内の隣接するボックス間の間隔を指定することができます。すべての隙間、または一部の隙間に罫線を表示させ、完全にアニメーション可能な罫線の幅、色、インセットを定義することができます。
+
+隙間の装飾は、1 つまたは複数の隙間装飾区間として隙間の内部に描画され、これらの区間は任意の 2 つの隣接するアイテムの間に生じます。
+すべての区間が描画されると、列間罫と行間罫はコンテナーの高さと幅全体に及びます。{{cssxref("rule-visibility-items")}} プロパティは、アイテムで占められていない領域の周囲に区間を描画するかどうかを定義します。{{cssxref("rule-break")}} プロパティは、行が隙間と交差した際に折り返すかどうかを決定し、{{cssxref("rule-inset")}} は、行が折り返された場合の区間の開始位置と終了位置を定義します。折り返されない場合、{{cssxref("rule-overlap")}} プロパティが線の描画順序を定義します。
 
 ## 隙間の実演
 
@@ -140,10 +143,6 @@ l10n:
   </legend>
   <div id="controls">
     <p>
-      <label for="colCount">段数:</label>
-      <input type="number" min="0" max="5" value="5" id="colCount" />
-    </p>
-    <p>
       <input type="checkbox" checked id="colSpan" />
       <label for="colSpan">署名欄をすべての段にまたがらせる</label>
     </p>
@@ -151,41 +150,69 @@ l10n:
       <input type="checkbox" id="blockSpan" />
       <label for="blockSpan">引用をすべての段にまたがらせる</label>
     </p>
-    <p class="code">
-      <input type="range" min="0" max="10" value="1" step="0.5" id="gapSize" />
-      <label for="gapSize">column-gap: </label><output id="gap">1em;</output>
-    </p>
-    <p class="code">
-      <input
-        type="range"
-        min="0"
-        max="10"
-        value="0.25"
-        step="0.25"
-        id="columnRuleWidth" />
-      <label for="columnRuleWidth">column-rule-width: </label
-      ><output id="ruleWidth">0.25em;</output>
-    </p>
-    <p class="code">
-      <label for="colColor">column-rule-color:</label>
-      <input type="color" id="colColor" />
-    </p>
-    <p class="code">
-      <label for="columnRuleStyle">column-rule-style:</label>
-      <select id="columnRuleStyle">
-        <option>none</option>
-        <option>hidden</option>
-        <option>dotted</option>
-        <option selected>dashed</option>
-        <option>solid</option>
-        <option>double</option>
-        <option>groove</option>
-        <option>ridge</option>
-        <option>inset</option>
-        <option>outset</option>
-        <option></option>
-      </select>
-    </p>
+    <section>
+      <p>
+        <label for="colCount">段数</label>
+        <input type="number" min="0" max="5" value="5" id="colCount" />
+      </p>
+      <p>
+        <label for="colHeight">column-height:</label>
+        <input
+          type="number"
+          min="0"
+          max="100"
+          value="20"
+          id="colHeight"
+          step="5" /><label for="colHeight">vh</label>
+      </p>
+      <p>
+        <label for="colColor">rule-color:</label>
+        <input type="color" id="colColor" value="#FF0000" />
+      </p>
+      <p>
+        <label for="columnRuleStyle">rule-style:</label>
+        <select id="columnRuleStyle">
+          <option>none</option>
+          <option>hidden</option>
+          <option>dotted</option>
+          <option>dashed</option>
+          <option>solid</option>
+          <option selected>double</option>
+          <option>groove</option>
+          <option>ridge</option>
+          <option>inset</option>
+          <option>outset</option>
+          <option></option>
+        </select>
+      </p>
+      <p>
+        <input type="range" min="0" max="4" value="1" step="0.5" id="gapSize" />
+        <label for="gapSize">gap: </label
+        ><output id="gap" class="output">1em</output>
+      </p>
+      <p>
+        <input
+          type="range"
+          min="0"
+          max="3"
+          value="0.3"
+          step="0.1"
+          id="columnRuleWidth" />
+        <label for="columnRuleWidth">rule-width: </label
+        ><output id="ruleWidth" class="output">0.3em</output>
+      </p>
+      <p>
+        <input
+          type="range"
+          min="-50"
+          max="200"
+          value="0"
+          step="5"
+          id="ruleInset" />
+        <label for="ruleInset">rule-inset: </label
+        ><output id="inset" class="output">0%</output>
+      </p>
+    </section>
   </div>
 </fieldset>
 ```
@@ -209,6 +236,9 @@ const ruleWidth = document.getElementById("ruleWidth");
 const columnRuleStyle = document.getElementById("columnRuleStyle");
 const ruleStyle = document.getElementById("ruleStyle");
 const columnRuleColor = document.getElementById("colColor");
+const colHeight = document.getElementById("colHeight");
+const ruleInset = document.getElementById("ruleInset");
+const inset = document.getElementById("inset");
 
 // JavaScript が有効な場合はオプションを表示
 option.style.display = "revert";
@@ -221,18 +251,28 @@ colCount.addEventListener("change", () => {
   page.style.columnCount = colCount.value;
 });
 
-gapSize.addEventListener("change", () => {
+colHeight.addEventListener("input", () => {
+  page.style.columnHeight = `${colHeight.value}vh`;
+});
+
+gapSize.addEventListener("input", () => {
   page.style.gap = `${gapSize.value}em`;
-  gap.innerText = `${gapSize.value}em;`;
+  gap.innerText = `${gapSize.value}em`;
+});
+ruleInset.addEventListener("input", () => {
+  page.style.ruleInset = `${ruleInset.value}%`;
+  inset.innerText = `${ruleInset.value}%`;
 });
 
-columnRuleWidth.addEventListener("change", () => {
+columnRuleWidth.addEventListener("input", () => {
   page.style.columnRuleWidth = `${columnRuleWidth.value}em`;
-  ruleWidth.innerText = `${columnRuleWidth.value}em;`;
+  page.style.ruleWidth = `${columnRuleWidth.value}em`;
+  ruleWidth.innerText = `${columnRuleWidth.value}em`;
 });
 
-columnRuleStyle.addEventListener("change", () => {
+columnRuleStyle.addEventListener("input", () => {
   page.style.columnRuleStyle = columnRuleStyle.value;
+  page.style.ruleStyle = columnRuleStyle.value;
 });
 
 colSpan.addEventListener("change", () => {
@@ -243,8 +283,9 @@ blockSpan.addEventListener("change", () => {
   setColSpan(blockSpan, blockquote);
 });
 
-columnRuleColor.addEventListener("change", () => {
-  page.style.columnRuleColor = colColor.value;
+columnRuleColor.addEventListener("input", () => {
+  page.style.columnRuleColor = columnRuleColor.value;
+  page.style.ruleColor = columnRuleColor.value;
 });
 
 function showAndHideMenu() {
@@ -274,7 +315,9 @@ function setColSpan(control, element) {
 article {
   column-count: 5;
   gap: 1em;
-  column-rule: 0.25em dashed currentcolor;
+  column-rule: 0.3em double red;
+  rule: 0.3em double red;
+  column-height: 20vh;
 }
 .title {
   column-span: all;
@@ -287,45 +330,6 @@ p {
   margin: 0 0 1em 0;
   line-height: 1.4;
 }
-.code {
-  font-style: monospace;
-}
-.breakInside * {
-  break-inside: avoid;
-}
-#options {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background: white;
-  display: none;
-}
-fieldset p {
-  margin-bottom: 0.25em;
-}
-legend {
-  position: relative;
-  top: 0;
-  transition: 200ms;
-}
-legend.closed {
-  top: 0.75em;
-}
-legend.closed + #controls {
-  display: none;
-}
-legend {
-  background-color: #dedede;
-  padding: 0.5em;
-}
-legend > button {
-  all: unset;
-  cursor: pointer;
-}
-legend.closed {
-  margin: -1em;
-  display: inline-block;
-}
 blockquote {
   font-weight: bold;
   font-style: italic;
@@ -336,6 +340,50 @@ blockquote p::after {
   content: '"';
   vertical-align: baseline;
   color: red;
+}
+
+@layer form {
+  #options {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: white;
+    display: none;
+    padding: 0.5em 1em;
+  }
+  section {
+    font-family: monospace;
+  }
+  fieldset p {
+    margin-bottom: 0.25em;
+  }
+  legend {
+    position: relative;
+    top: 0;
+    transition: 200ms;
+  }
+  legend.closed {
+    top: 0.75em;
+  }
+  legend.closed + #controls {
+    display: none;
+  }
+  legend {
+    background-color: #dedede;
+    padding: 0.5em;
+  }
+  legend > button {
+    all: unset;
+    cursor: pointer;
+  }
+  legend.closed {
+    margin: -1em;
+    display: inline-block;
+  }
+  .output {
+    display: inline-block;
+    width: 2em;
+  }
 }
 ```
 
