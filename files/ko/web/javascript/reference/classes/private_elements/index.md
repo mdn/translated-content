@@ -107,7 +107,7 @@ private static 메소드는 generator, async 그리고 async generator 함수가
 ```js
 class ClassWithPrivateStaticMethod {
   static #privateStaticMethod() {
-    return 42
+    return 42;
   }
 
   static publicStaticMethod1() {
