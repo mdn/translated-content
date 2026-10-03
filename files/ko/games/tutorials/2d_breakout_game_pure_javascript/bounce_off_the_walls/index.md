@@ -5,11 +5,11 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
 
 이 글은 [Gamedev Canvas 튜토리얼](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)에 포함된 10단계 중 3단계 글입니다. 이 글을 다 읽고 난 뒤 완성된 소스코드는 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html)에서 확인해볼 수 있습니다.
 
-공이 움직이는 걸 보니 기쁩니다! 하지만 기쁨을 즐길 틈도 없이 공이 스크린 밖으로 사라져버리네요. 이 문제를 해결하기 위해 공이 캔버스의 4군데 모서리에 다달았을 때 튕겨나올 수 있도록 간단한 충돌 감지 기능(더 자세한 내용은 [다음 글](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)에서 다시 설명할 예정입니다)을 구현해야 합니다.
+공이 움직이는 걸 보니 기쁩니다! 하지만 기쁨을 즐길 틈도 없이 공이 스크린 밖으로 사라져버리네요. 이 문제를 해결하기 위해 공이 캔버스의 4군데 모서리에 다달았을 때 튕겨나올 수 있도록 간단한 충돌 감지 기능(더 자세한 내용은 [다음 글](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)에서 다시 설명할 예정입니다)을 구현해야 합니다.
 
 ## 간단한 충돌 감지
 
