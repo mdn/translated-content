@@ -41,8 +41,7 @@ Firefox 157 は、米国時間 [2026 年 9 月 29 日](https://whattrainisitnow.
 #### WebDriver BiDi
 
 - `browser.setDownloadBehavior` コマンドを、`type="allowed"` を指定して呼び出す場合は `destinationFolder` 引数が必須になるように更新しました。
-  これにより仕様に準拠します。フォルダーの指定が必須でないデフォルトの動作に戻すためには、クライアントが 
-  null を指定して `browser.setDownloadBehavior` を呼び出すことが必要です ([Firefox bug 2069952](https://bugzil.la/2069952))。
+  これにより仕様に準拠します。フォルダーの指定が必須でないデフォルトの動作に戻すためには、クライアントが null を指定して `browser.setDownloadBehavior` を呼び出すことが必要です ([Firefox bug 2069952](https://bugzil.la/2069952))。
 
 ## アドオン開発者向けの変更点一覧
 
