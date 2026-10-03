@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 
 Это 3-й этап из 10 [Gamedev Canvas tutorial](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Вы можете найти исходный код как он должен выглядеть после завершения этого урока в [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html).
 
-Приятно наблюдать за нашим мяч, но он быстро исчезает с экрана, удовольствие длится недолго! Чтобы продлить, мы реализуем некоторое очень простое обнаружение столкновений (о которых будет рассказано [далее](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection) более подробно), чтобы сделать отскок мяча от четырёх краёв холста.
+Приятно наблюдать за нашим мяч, но он быстро исчезает с экрана, удовольствие длится недолго! Чтобы продлить, мы реализуем некоторое очень простое обнаружение столкновений (о которых будет рассказано [далее](/ru/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field) более подробно), чтобы сделать отскок мяча от четырёх краёв холста.
 
 ## Простое обнаружение столкновений
 
@@ -103,6 +103,6 @@ if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
 
 ## Следующий шаг
 
-Теперь мы добрались до стадии, где наш мяч одновременно двигается и остаётся на игровом поле. В четвёртой главе мы рассмотрим реализацию управления — см. [Paddle and keyboard controls](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls).
+Теперь мы добрались до стадии, где наш мяч одновременно двигается и остаётся на игровом поле. В четвёртой главе мы рассмотрим реализацию управления — см. [Paddle and keyboard controls](/ru/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls).
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}

@@ -3,7 +3,7 @@ title: Стилизация вашего Angular-приложения
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_styling
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Angular_item_component", "Learn_web_development/Core/Frameworks_libraries")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Теперь, когда мы создали базовую структуру приложения и начали отображать что-то полезное, давайте переключимся и рассмотрим статью, посвященную тому, как Angular работает со стилями.
 
@@ -166,7 +166,7 @@ ul li {
 
 Наш краткий обзор стилизации Angular-приложения завершён, поэтому давайте вернёмся к разработке функциональности нашего приложения. В следующей статье мы создадим компонент для задач, в котором можно будет проверять, редактировать и удалять задачи.
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Angular_item_component", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 ## В это модуле
 

@@ -17,13 +17,13 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 
 Все уроки и версии игры [MDN Breakout](http://breakout.enclavegames.com/lesson10.html) доступны в [GitHub](https://github.com/end3r/Canvas-gamedev-workshop):
 
-1. [Создание Canvas и рисование на нем](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
+1. [Создание Canvas и рисование на нем](/ru/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas)
 2. [Движение мяча](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)
 3. [Реакция при столкновении со стеной](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls)
 4. [Управление](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)
 5. [Конец игры](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over)
 6. [Построение поля кирпичей](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
-7. [Реакция при столкновении](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)
+7. [Реакция при столкновении](/ru/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)
 8. [Счёт и выигрыш](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)
 9. [Контроль мышью](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls)
 10. [Заключение](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up)
@@ -40,4 +40,4 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 
 Ладно, давайте начнём! Перейдите к первой главе — [Создание Canvas и рисование на нем](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it).
 
-{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
+{{Next("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas")}}

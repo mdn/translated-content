@@ -3,7 +3,7 @@ title: Счёт и выигрыш
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
 Это 8й шаг из 10 в [Gamedev Canvas tutorial](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Вы можете найти исходный код для этого урока по ссылке [Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html).
 
@@ -102,6 +102,6 @@ function collisionDetection() {
 
 ## Следующие шаги
 
-На данный момент игра выглядит довольно хорошо. В следующем уроке вы расширите привлекательность игры, добавив [Mouse controls](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls).
+На данный момент игра выглядит довольно хорошо. В следующем уроке вы расширите привлекательность игры, добавив [Mouse controls](/ru/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls).
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
