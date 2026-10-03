@@ -1,6 +1,6 @@
 ---
 title: 使用純 JavaScript 製作 2D 打磚塊遊戲
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
