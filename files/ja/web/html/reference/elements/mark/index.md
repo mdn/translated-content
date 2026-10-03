@@ -1,42 +1,38 @@
 ---
-title: "<mark>: テキストマーク要素"
+title: "`<mark>` テキストマーク要素 (HTML)"
+short-title: <mark>
 slug: Web/HTML/Reference/Elements/mark
-original_slug: Web/HTML/Element/mark
 l10n:
-  sourceCommit: 17813cceb76950fea2acc1a39eb64ae3c57f038c
+  sourceCommit: 15e1155ab8a0587405601cc4753bb789cd6ac47c
 ---
 
-{{HTMLSidebar}}
-
-**`<mark>`** は [HTML](/ja/docs/Web/HTML) の要素で、周囲の文脈での関連性によって参照したり表記したりする目的で**マーク付け**されたり**強調表示**されたりするテキストを表します。
+**`<mark>`** は [HTML](/ja/docs/Web/HTML) の要素で、周囲の文脈での関連性によって参照したり表記したりする目的で**マーク付け**したり**強調表示**したりするテキストを表します。
 
 {{InteractiveExample("HTML デモ: &lt;mark&gt;", "tabbed-shorter")}}
 
-```html interactive-example
-<p>Search results for "salamander":</p>
+```html-nolint interactive-example
+<p>「サンショウウオ」の検索結果:</p>
 
 <hr />
 
 <p>
-  Several species of <mark>salamander</mark> inhabit the temperate rainforest of
-  the Pacific Northwest.
+  太平洋岸北西部の温帯雨林には、数種の<mark>サンショウウオ</mark>が生息してしています。
 </p>
 
 <p>
-  Most <mark>salamander</mark>s are nocturnal, and hunt for insects, worms, and
-  other small creatures.
+  ほとんどの <mark>サンショウウオ</mark>は夜行性で、昆虫やミミズ、その他の小さな生き物を捕食します。
 </p>
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 mark {
+  /* ここにスタイルを追加 */
 }
 ```
 
 ## 属性
 
-この要素には [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) 以外の属性はありません。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)以外の属性はありません。
 
 ## 使用上のメモ
 
@@ -49,9 +45,9 @@ mark {
 > [!NOTE]
 > `<mark>` 要素と {{HTMLElement("strong")}} 要素を混同しないよう注意してください。`<mark>` は*関連性*のあるコンテンツを表すために使用されますが、`<strong>` は*重要性*のある文字列の区間を表します。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
-`mark` 要素が存在することは、多くの読み上げ技術の既定の設定ではアナウンスされません。CSS の {{cssxref("::before")}} および {{cssxref("::after")}} 擬似要素と共に {{cssxref("content")}} プロパティを使うことでアナウンスさせることができます。
+`mark` 要素が存在することは、多くの読み上げ技術の既定の設定ではアナウンスされません。CSS の {{cssxref("content")}} プロパティを {{cssxref("::before")}} および {{cssxref("::after")}} 擬似要素と共に使うことでアナウンスさせることができます。
 
 ```css
 mark::before,
@@ -76,8 +72,7 @@ mark::after {
 
 スクリーンリーダーを使用する人によっては、特に冗長になるコンテンツのアナウンスを意図的に無効にしていることがあります。このため、この手法を悪用しないようにすることは重要であり、コンテンツが強調されていることを知らないと理解に影響するような場面でのみ使用するようにしてください。
 
-- [Tweaking Text Level Styles, Reprised](https://adrianroselli.com/2025/04/tweaking-text-level-styles-reprised.html) Adrian Roselli 著（2025）
-- [Short note on making your mark (more accessible)](https://vispero.com/resources/short-note-on-making-your-mark-more-accessible/) Vispero 著（2017）
+- [Tweaking Text Level Styles, Reprised](https://adrianroselli.com/2025/04/tweaking-text-level-styles-reprised.html) - Adrian Roselli (2025)
 
 ## 例
 
