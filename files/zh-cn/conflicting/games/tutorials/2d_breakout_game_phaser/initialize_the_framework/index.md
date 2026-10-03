@@ -1,6 +1,7 @@
 ---
 title: 缩放
-slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
+slug: conflicting/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
+original_slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
 l10n:
   sourceCommit: 4483da6501d1c735a0e1ac1e95775e2fe1766dc3
 ---

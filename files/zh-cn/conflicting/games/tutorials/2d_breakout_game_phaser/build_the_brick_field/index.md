@@ -1,64 +1,48 @@
 ---
-title: 记分
-slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
+title: 碰撞检测
+slug: conflicting/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
+original_slug: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
 l10n:
   sourceCommit: 4483da6501d1c735a0e1ac1e95775e2fe1766dc3
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/The_score")}}
 
-这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的**第 11 步**。在本文中，我们会给游戏添加一个记分系统。记分也可以让游戏更有趣——你可以尝试打破自己或朋友的最高分。
+这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的**第 10 步**。接下来要处理的是球和砖块之间的碰撞检测。幸运的是，我们可以使用物理引擎来检查单个对象之间（例如球和球板）的碰撞，也可以检查一个对象与一组对象之间的碰撞。
 
-我们将使用一个单独的属性来存储分数，并用 Phaser 的 `text()` 方法将其显示在屏幕上。
+## 砖块与球的碰撞检测
 
-## 新属性
-
-在之前定义的属性后面添加两个新属性：
+物理引擎让一切简单得多，我们只需添加两小段代码。首先，在 `update()` 方法中添加一行，用于检测球和砖块之间的碰撞，如下所示：
 
 ```js
 class ExampleScene extends Phaser.Scene {
-  // ……之前的属性定义……
-  scoreText;
-  score = 0;
-  // ……类的其余部分……
+  // ...
+  update() {
+    this.physics.collide(this.ball, this.paddle);
+    this.physics.collide(this.ball, this.bricks, (ball, brick) =>
+      this.hitBrick(ball, brick),
+    );
+    this.paddle.x = this.input.x || this.scale.width * 0.5;
+    // ...
+  }
+  // ...
 }
 ```
 
-## 将得分文本添加到游戏显示中
-
-现在在 `create()` 方法的末尾添加这一行：
-
-```js
-this.scoreText = this.add.text(5, 5, "得分：0", {
-  font: "18px Arial",
-  color: "#0095dd",
-});
-```
-
-`text()` 方法可以接受四个参数：
-
-- 用于绘制文本的 x 和 y 坐标。
-- 将要渲染的实际文本。
-- 用于渲染文本的字体样式。
-
-最后一个参数看起来很像 CSS 样式。在我们的例子中，得分文本将显示为蓝色，大小为 18 像素，并使用 Arial 字体。
-
-## 当砖块被摧毁时更新得分
-
-每当球击中砖块时，我们都会增加分数，并更新 `scoreText` 来显示当前得分。这可以通过 `setText()` 方法完成——将下面看到的两行新代码添加到 `hitBrick()` 方法中：
+球的位置会与组中所有砖块的位置进行计算。第三个可选参数是在发生碰撞时执行的函数。Phaser 调用该函数时会传入两个参数：第一个是我们明确传给 `collide` 方法的球，第二个是 `bricks` 组中与球发生碰撞的那一块砖。这里我们在名为 `hitBrick()` 的方法中实现相应行为。在 `ExampleScene` 类的末尾、结束花括号 `}` 之前创建这个新方法，如下所示：
 
 ```js
 class ExampleScene extends Phaser.Scene {
   // ...
   hitBrick(ball, brick) {
     brick.destroy();
-    this.score += 10;
-    this.scoreText.setText(`得分：${this.score}`);
   }
 }
 ```
 
-现在就完成了——重新加载你的 `index.html`，并检查每次击中砖块时得分都会更新。
+就这样！重新加载代码，你应该会看到新的碰撞检测如预期般运行。
+
+如果使用[纯 JavaScript](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)，你可能会以为需要自行编写更多计算代码来实现碰撞检测。这正是使用框架的好处：你可以把许多枯燥的代码交给 Phaser，专注于制作游戏中更有趣的部分。
 
 ## 比较你的代码
 
@@ -80,8 +64,6 @@ class ExampleScene extends Phaser.Scene {
   ball;
   paddle;
   bricks;
-  scoreText;
-  score = 0;
 
   preload() {
     this.load.setBaseURL(
@@ -115,11 +97,6 @@ class ExampleScene extends Phaser.Scene {
     this.paddle.body.setImmovable(true);
 
     this.initBricks();
-
-    this.scoreText = this.add.text(5, 5, "Points: 0", {
-      font: "18px Arial",
-      color: "#0095dd",
-    });
   }
   update() {
     this.physics.collide(this.ball, this.paddle);
@@ -173,8 +150,6 @@ class ExampleScene extends Phaser.Scene {
 
   hitBrick(ball, brick) {
     brick.destroy();
-    this.score += 10;
-    this.scoreText.setText(`得分：${this.score}`);
   }
 }
 
@@ -200,6 +175,6 @@ const game = new Phaser.Game(config);
 
 ## 下一步
 
-我们现在有了一个得分系统，但是如果你无法获胜，那么玩游戏和记录分数又有什么意义呢？让我们看看如何添加胜利状态，让我们可以[赢得游戏](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win)。
+现在我们已经可以击中砖块并将其移除，这为游戏玩法增加了不错的内容。如果能统计被摧毁的砖块，并据此增加[得分](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win)，就更好了。
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win")}}

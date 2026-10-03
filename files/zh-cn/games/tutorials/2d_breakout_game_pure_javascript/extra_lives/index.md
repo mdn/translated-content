@@ -1,6 +1,7 @@
 ---
 title: 收尾工作
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives
+original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 l10n:
   sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
 ---

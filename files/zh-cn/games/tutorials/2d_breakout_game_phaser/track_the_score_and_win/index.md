@@ -1,6 +1,7 @@
 ---
 title: 赢得游戏
-slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
+slug: Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win
+original_slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 l10n:
   sourceCommit: 4483da6501d1c735a0e1ac1e95775e2fe1766dc3
 ---
