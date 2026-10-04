@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-{{Glossary("response Header", "L'en-tête de réponse")}} HTTP **`Timing-Allow-Origin`** définit les origines qui sont autorisées à voir les valeurs des attributs récupérés avec les fonctionnalités de [l'API Resource Timing](/fr/docs/Web/API/Performance_API/Resource_timing), qui sont autrement signalées comme nulles en raison des restrictions cross-origin.
+{{Glossary("response Header", "L'en-tête de réponse")}} HTTP **`Timing-Allow-Origin`** définit les origines qui sont autorisées à voir les valeurs des attributs récupérés avec les fonctionnalités de [l'API Resource Timing](/fr/docs/Web/API/Performance_API/Resource_timing), qui sont autrement signalées comme nulles en raison des restrictions inter-origine.
 
 <table class="properties">
   <tbody>
