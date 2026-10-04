@@ -1,6 +1,6 @@
 ---
 title: 撞擊牆壁
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls
 l10n:
   sourceCommit: 14acf1aa7885157debdf1b6111f4bd10c064ec60
 ---
