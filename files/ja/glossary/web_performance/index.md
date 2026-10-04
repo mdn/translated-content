@@ -1,11 +1,9 @@
 ---
-title: Web performance (ウェブの性能)
+title: Web performance (ウェブパフォーマンス)
 slug: Glossary/Web_performance
 l10n:
-  sourceCommit: 50e5edd07155de2eec2a8b6b2ad95820748cfec7
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 **ウェブパフォーマンス**とは、コンテンツのリクエストが行われてから、リクエストされたコンテンツがユーザーのブラウザーに表示されるまでの客観的な時間であり、客観的なレンダリング時間、読み込み時間と主観的な読み込み時間および実行時間の使い心地のことです。
 
@@ -13,6 +11,6 @@ l10n:
 
 ## 関連情報
 
-- [ウェブの性能について知る](/ja/docs/Learn_web_development/Extensions/Performance)
+- [ウェブパフォーマンス](/en-US/docs/Web/Performance)ガイド
 - 関連用語項目:
   - {{Glossary("Perceived performance", "知覚パフォーマンス")}}
