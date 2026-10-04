@@ -1,161 +1,297 @@
 ---
 title: 构建砖块区域
 slug: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
+l10n:
+  sourceCommit: 69937a446786abf5a58d4214b4192597d0b3cdc6
 ---
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Game_over", "Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 的**第 9 步**。在[Gamedev-Phaser-Content-Kit / demos / lesson09.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson09.html)完成本课后，你可以找到源代码。
+这是[使用 Phaser 创建打砖块游戏教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 12 个步骤中的**第 7 步**。让我们探索如何创建一组砖块，通过循环将它们绘制到屏幕上，并在球击中它们时将其移除。构建砖块区域比向屏幕添加单个对象稍微复杂一些，不过使用 Phaser 实现可能比使用纯 JavaScript 更简单。
 
-建立砖块比将单个对象添加到屏幕要复杂一点，尽管使用 Phaser 还是比纯 JavaScript 更容易。我们来探讨如何创建一组砖块，并使用循环在屏幕上打印。
+## 新属性
 
-## 定义新变量
-
-首先，我们定义所需的变量 - 在以前的变量定义中添加以下内容：
+首先，在之前的属性定义下方添加新的 `bricks` 属性：
 
 ```js
-var bricks;
-var newBrick;
-var brickInfo;
+class ExampleScene extends Phaser.Scene {
+  // ……之前的属性定义……
+  bricks;
+  // ……类的其余部分……
+}
 ```
 
-该`bricks`变量将用于创建一个组，`newBrick`将在循环的每次迭代中添加到组中的新对象，`brickInfo`并将存储我们需要的所有数据。
+`bricks` 属性将用于创建一组砖块，让我们可以同时管理多个砖块。
 
-## 渲染砖图像
+## 渲染砖块图像
 
-接下来，我们加载砖的图像 - `load.image()`在其他地方添加以下调用：
+接下来，加载砖块图像——在其他 `load.image()` 调用下方添加以下调用：
 
 ```js
-function preload() {
+class ExampleScene extends Phaser.Scene {
   // ...
-  game.load.image("brick", "img/brick.png");
-}
-```
-
-你还需要[从 Github 抓取砖图像](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/brick.png)并将其保存在你的`/img`目录中。
-
-## 画砖
-
-我们将将所有用于绘制砖块的代码放在一个`initBricks`函数中，以使其与其余代码分离。`initBricks`在`create()`函数末尾添加一个调用：
-
-```js
-function create() {
+  preload() {
+    // ...
+    this.load.image("brick", "img/brick.png");
+  }
   // ...
-  initBricks();
 }
 ```
 
-现在到函数本身。`initBricks()`在我们的游戏代码末尾添加功能，就在关闭\</ script>标签之前，如下所示。首先我们已经包括了这个 `brickInfo`对象，因为这很快就会派上用场：
+你还需要[下载砖块图像](https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/brick.png)，并将其保存在你的 `/img` 目录中。
+
+## 绘制砖块
+
+我们会将绘制砖块的所有代码放在 `initBricks` 方法中，使其与其余代码分离。在 `create()` 方法末尾添加对 `initBricks` 的调用：
 
 ```js
-function initBricks() {
-  brickInfo = {
-    width: 50,
-    height: 20,
-    count: {
-      row: 7,
-      col: 3,
-    },
-    offset: {
-      top: 50,
-      left: 60,
-    },
-    padding: 10,
-  };
+class ExampleScene extends Phaser.Scene {
+  // ...
+  create() {
+    // ...
+    this.initBricks();
+  }
+  // ...
 }
 ```
 
-这个`brickInfo`对象将包含我们需要的所有信息：单个砖的宽度和高度，我们将在屏幕上看到的砖的行数和列数，顶部和左边的偏移量（画布上我们将开始绘制的位置）砖块）和每一列和砖块之间的填充。
-
-现在，让我们开始创建砖块 - 首先添加一个空组来包含砖块，在`initBricks()`函数底部添加以下行：
+现在来编写方法本身。在 `ExampleScene` 类的末尾、右花括号 `}` 之前添加 `initBricks` 方法，如下所示。首先，添加 `bricksLayout` 对象，它很快就会派上用场：
 
 ```js
-bricks = game.add.group();
-```
-
-我们可以循环遍历行和列，以便在每次迭代中创建新的砖块 - 在上一行代码下面添加以下嵌套循环：
-
-```js
-for (c = 0; c < brickInfo.count.col; c++) {
-  for (r = 0; r < brickInfo.count.row; r++) {
-    // create new brick and add it to the group
+class ExampleScene extends Phaser.Scene {
+  // ...
+  initBricks() {
+    const bricksLayout = {
+      width: 50,
+      height: 20,
+      count: {
+        row: 3,
+        col: 7,
+      },
+      offset: {
+        top: 50,
+        left: 60,
+      },
+      padding: 10,
+    };
   }
 }
 ```
 
-这样我们将创建我们需要的确切数量的砖，并将它们全部包含在一个组中。现在我们需要在嵌套循环结构中添加一些代码来绘制每个砖块。填写内容如下图所示：
+`bricksLayout` 保存了我们需要的所有信息：单个砖块的宽度和高度、屏幕上砖块的行数和列数、顶部和左侧的偏移量（开始绘制砖块的画布位置），以及各行和各列砖块之间的间距。
+
+现在，让我们开始创建砖块本身——首先，在 `initBricks()` 方法底部添加以下行，创建一个空组来容纳砖块：
 
 ```js
-for (c = 0; c < brickInfo.count.col; c++) {
-  for (r = 0; r < brickInfo.count.row; r++) {
-    var brickX = 0;
-    var brickY = 0;
-    newBrick = game.add.sprite(brickX, brickY, "brick");
-    game.physics.enable(newBrick, Phaser.Physics.ARCADE);
-    newBrick.body.immovable = true;
-    newBrick.anchor.set(0.5);
-    bricks.add(newBrick);
+this.bricks = this.add.group();
+```
+
+我们可以循环遍历行和列，在每次迭代中创建一个新砖块——在上一行代码下方添加以下嵌套循环：
+
+```js
+for (let c = 0; c < bricksLayout.count.col; c++) {
+  for (let r = 0; r < bricksLayout.count.row; r++) {
+    // 创建新砖块并将其添加到组中
   }
 }
 ```
 
-在这里，我们循环遍历行和列，创建新的砖块并将其放在屏幕上。新创建的砖块为 Arcade 物理引擎启用，它的身体被设置为不可移动（所以当球被击中时它不会移动），我们还将锚点放在中间并添加砖到集团。
-
-目前的问题是，我们在一个地方绘制所有的砖，坐标（0,0）。我们需要做的是将每个砖块绘制在自己的 x 和 y 位置。更新`brickX`和`brickY`行如下：
+这样，我们就能创建所需数量的砖块，并将它们全部放在一个组中。现在，需要在嵌套循环结构中添加一些代码来绘制每个砖块。按如下所示填入内容：
 
 ```js
-var brickX = r * (brickInfo.width + brickInfo.padding) + brickInfo.offset.left;
-var brickY = c * (brickInfo.height + brickInfo.padding) + brickInfo.offset.top;
-```
+for (let c = 0; c < bricksLayout.count.col; c++) {
+  for (let r = 0; r < bricksLayout.count.row; r++) {
+    const brickX = 0;
+    const brickY = 0;
 
-每个`brickX`位置都是`brickInfo.width`加`brickInfo.padding`号乘以行号`r`，加上`brickInfo.offset.left`; 用于所述逻辑`brickY`是不同之处在于它使用的值列号相同`c`，`brickInfo.height`和`brickInfo.offset.top`。现在每个砖都可以放置在正确的位置，每个砖块之间填充，并从左侧和顶部画布边缘偏移绘制。
-
-## 检查 initBricks() 代码
-
-这是功能的完整代码`initBricks()`：
-
-```js
-function initBricks() {
-  brickInfo = {
-    width: 50,
-    height: 20,
-    count: {
-      row: 7,
-      col: 3,
-    },
-    offset: {
-      top: 50,
-      left: 60,
-    },
-    padding: 10,
-  };
-  bricks = game.add.group();
-  for (c = 0; c < brickInfo.count.col; c++) {
-    for (r = 0; r < brickInfo.count.row; r++) {
-      var brickX =
-        r * (brickInfo.width + brickInfo.padding) + brickInfo.offset.left;
-      var brickY =
-        c * (brickInfo.height + brickInfo.padding) + brickInfo.offset.top;
-      newBrick = game.add.sprite(brickX, brickY, "brick");
-      game.physics.enable(newBrick, Phaser.Physics.ARCADE);
-      newBrick.body.immovable = true;
-      newBrick.anchor.set(0.5);
-      bricks.add(newBrick);
-    }
+    const newBrick = this.add.sprite(brickX, brickY, "brick");
+    this.physics.add.existing(newBrick);
+    newBrick.body.setImmovable(true);
+    this.bricks.add(newBrick);
   }
 }
 ```
 
-如果你现在重新加载`index.html`，你应该看到在屏幕上打印的砖块彼此相距甚远。
+这里，我们循环遍历行和列，创建新砖块并将其放在屏幕上。为新创建的砖块启用 Arcade 物理引擎，将其物理体设置为不可移动（这样它就不会在被球击中时移动），然后将其添加到组中。
+
+目前的问题是，所有砖块都绘制在同一个位置，即坐标 (0, 0) 处。我们需要将每个砖块绘制在各自的 x 和 y 位置。按如下所示更新 `brickX` 和 `brickY` 所在的行：
+
+```js
+const brickX =
+  c * (bricksLayout.width + bricksLayout.padding) + bricksLayout.offset.left;
+const brickY =
+  r * (bricksLayout.height + bricksLayout.padding) + bricksLayout.offset.top;
+```
+
+每个 `brickX` 位置的计算方式是：将 `bricksLayout.width` 与 `bricksLayout.padding` 相加，乘以列号 `c`，再加上 `bricksLayout.offset.left`。`brickY` 的计算逻辑相同，只是使用行号 `r`、`bricksLayout.height` 和 `bricksLayout.offset.top`。现在，每个砖块都能放在正确的位置，砖块之间留有间距，整个砖块区域与画布左侧和顶部边缘之间也留有偏移量。
+
+此时重新加载 `index.html`，你应该能看到砖块已绘制到屏幕上，彼此之间的间距均匀。
+
+## 砖块与球的碰撞检测
+
+接下来是另一个挑战——检测球与砖块之间的碰撞。幸运的是，我们不仅可以使用物理引擎检查两个单独对象（例如球和球板）之间的碰撞，还可以检查对象与组之间的碰撞。
+
+首先，在 `update()` 方法中添加一行代码，检测球与砖块之间的碰撞，如下所示：
+
+```js
+class ExampleScene extends Phaser.Scene {
+  // ...
+  update() {
+    this.physics.collide(this.ball, this.paddle);
+    this.physics.collide(this.ball, this.bricks, (ball, brick) =>
+      this.hitBrick(ball, brick),
+    );
+    this.paddle.x = this.input.x || this.scale.width * 0.5;
+    // ...
+  }
+  // ...
+}
+```
+
+这里会将球的位置与组中所有砖块的位置进行比较。第三个参数是可选的，用于指定发生碰撞时执行的函数。Phaser 调用此函数时会传入两个参数：第一个是球，也就是我们显式传给 `collide` 方法的对象；第二个是砖块组中与球发生碰撞的那个砖块。这里，我们在名为 `hitBrick()` 的方法中实现相应行为。在 `ExampleScene` 类的末尾、右花括号 `}` 之前创建这个新方法，如下所示：
+
+```js
+class ExampleScene extends Phaser.Scene {
+  // ...
+  hitBrick(ball, brick) {
+    brick.destroy();
+  }
+}
+```
+
+这样就完成了！重新加载代码，你应该能看到新的碰撞检测按预期工作。
 
 ## 比较你的代码
 
-你可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
+以下是你目前应该得到的结果，可以实时运行。若要查看其源代码，请点击“运行”按钮。
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/cck2b9e8/","","400")}}
+```html hidden
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.js"></script>
+```
+
+```css hidden
+* {
+  padding: 0;
+  margin: 0;
+}
+```
+
+```js hidden
+class ExampleScene extends Phaser.Scene {
+  ball;
+  paddle;
+  bricks;
+
+  preload() {
+    this.load.setBaseURL(
+      "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser",
+    );
+
+    this.load.image("ball", "ball.png");
+    this.load.image("paddle", "paddle.png");
+    this.load.image("brick", "brick.png");
+  }
+  create() {
+    this.physics.world.checkCollision.down = false;
+
+    this.ball = this.add.sprite(
+      this.scale.width * 0.5,
+      this.scale.height - 25,
+      "ball",
+    );
+    this.physics.add.existing(this.ball);
+    this.ball.body.setVelocity(150, -150);
+    this.ball.body.setCollideWorldBounds(true, 1, 1);
+    this.ball.body.setBounce(1);
+
+    this.paddle = this.add.sprite(
+      this.scale.width * 0.5,
+      this.scale.height - 5,
+      "paddle",
+    );
+    this.paddle.setOrigin(0.5, 1);
+    this.physics.add.existing(this.paddle);
+    this.paddle.body.setImmovable(true);
+
+    this.initBricks();
+  }
+  update() {
+    this.physics.collide(this.ball, this.paddle);
+    this.physics.collide(this.ball, this.bricks, (ball, brick) =>
+      this.hitBrick(ball, brick),
+    );
+
+    this.paddle.x = this.input.x || this.scale.width * 0.5;
+    const ballIsOutOfBounds = !Phaser.Geom.Rectangle.Overlaps(
+      this.physics.world.bounds,
+      this.ball.getBounds(),
+    );
+    if (ballIsOutOfBounds) {
+      // 游戏结束逻辑
+      location.reload();
+    }
+  }
+
+  initBricks() {
+    const bricksLayout = {
+      width: 50,
+      height: 20,
+      count: {
+        row: 3,
+        col: 7,
+      },
+      offset: {
+        top: 50,
+        left: 60,
+      },
+      padding: 10,
+    };
+
+    this.bricks = this.add.group();
+    for (let c = 0; c < bricksLayout.count.col; c++) {
+      for (let r = 0; r < bricksLayout.count.row; r++) {
+        const brickX =
+          c * (bricksLayout.width + bricksLayout.padding) +
+          bricksLayout.offset.left;
+        const brickY =
+          r * (bricksLayout.height + bricksLayout.padding) +
+          bricksLayout.offset.top;
+
+        const newBrick = this.add.sprite(brickX, brickY, "brick");
+        this.physics.add.existing(newBrick);
+        newBrick.body.setImmovable(true);
+        this.bricks.add(newBrick);
+      }
+    }
+  }
+
+  hitBrick(ball, brick) {
+    brick.destroy();
+  }
+}
+
+const config = {
+  type: Phaser.CANVAS,
+  width: 480,
+  height: 320,
+  scene: ExampleScene,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
+  backgroundColor: "#eeeeee",
+  physics: {
+    default: "arcade",
+  },
+};
+
+const game = new Phaser.Game(config);
+```
+
+{{EmbedLiveSample("比较你的代码", "", 480, , , , , "allow-modals")}}
 
 ## 下一步
 
-有些东西丢失了 球不经停，经过砖块 - 我们需要适当的[碰撞检测](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)。
+现在我们已经可以击中并移除砖块，这让游戏玩法更加丰富。如果能[记录分数并在所有砖块被摧毁时获胜](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win)，游戏就会更有趣。
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Game_over", "Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win")}}
