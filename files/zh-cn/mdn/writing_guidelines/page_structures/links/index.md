@@ -12,7 +12,7 @@ MDN 提供了大量宏，用于创建始终保持最新的 MDN 内容链接。�
 MDN 提供了用于生成链接列表的宏：
 
 - [`\{{SubpagesWithSummaries}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/subpages_with_summaries.rs)
-  - ：插入一个定义列表（{{HTMLElement("dl")}}），列出当前页面的子页面，其中每个页面的标题作为 {{HTMLElement("dt")}} 项，其首段内容作为 {{HTMLElement("dd")}} 项。
+  - : 插入一个定义列表（{{HTMLElement("dl")}}），列出当前页面的子页面，其中每个页面的标题作为 {{HTMLElement("dt")}} 项，其首段内容作为 {{HTMLElement("dd")}} 项。
 
 - [`\{{ListSubpagesForSidebar()}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/list_subpages_for_sidebar.rs)
   - : 若不带参数调用，则插入指向当前页面子页面的有序链接列表。第一个参数是链接树父页面的别名。链接文本将以代码形式显示。将第二个参数设置为 `true` 或 `1` 会将链接转换为纯文本。将第三个参数设置为 `true` 或 `1` 会在列表顶部添加一个指向别名（父）页面的链接，链接文本为“概述”。
