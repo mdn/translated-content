@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4483da6501d1c735a0e1ac1e95775e2fe1766dc3
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/The_score")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win")}}
 
 这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的**第 10 步**。接下来要处理的是球和砖块之间的碰撞检测。幸运的是，我们可以使用物理引擎来检查单个对象之间（例如球和球板）的碰撞，也可以检查一个对象与一组对象之间的碰撞。
 
@@ -41,7 +41,7 @@ class ExampleScene extends Phaser.Scene {
 
 就这样！重新加载代码，你应该会看到新的碰撞检测如预期般运行。
 
-如果使用[纯 JavaScript](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)，你可能会以为需要自行编写更多计算代码来实现碰撞检测。这正是使用框架的好处：你可以把许多枯燥的代码交给 Phaser，专注于制作游戏中更有趣的部分。
+如果使用[纯 JavaScript](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)，你可能会以为需要自行编写更多计算代码来实现碰撞检测。这正是使用框架的好处：你可以把许多枯燥的代码交给 Phaser，专注于制作游戏中更有趣的部分。
 
 ## 比较你的代码
 

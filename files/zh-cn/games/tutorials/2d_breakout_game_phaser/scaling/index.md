@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4483da6501d1c735a0e1ac1e95775e2fe1766dc3
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball")}}
 
 这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的**第 2 步**。我们将处理缩放，也就是游戏画布如何在不同的屏幕尺寸上进行缩放。我们可以在初始化期间配置 `scale`，让游戏缩放以适应任意屏幕尺寸，这样之后就不用再担心它了。
 

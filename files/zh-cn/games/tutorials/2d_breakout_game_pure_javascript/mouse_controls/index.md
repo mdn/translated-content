@@ -5,9 +5,9 @@ l10n:
   sourceCommit: 1a0be468b9e7c88a09ea3438a81341c4f6a619a6
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}
 
-这是 [Gamedev Canvas 教程](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 个步骤中的**第 9 步**。完成本课程后，你可以在 [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html) 找到本节对应的源代码。
+这是 [Gamedev Canvas 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) 10 个步骤中的**第 9 步**。完成本课程后，你可以在 [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html) 找到本节对应的源代码。
 
 游戏本身其实已经完成了，所以接下来让我们对它进行润色。我们已经添加了键盘控制，不过也可以很容易地添加鼠标控制。
 
