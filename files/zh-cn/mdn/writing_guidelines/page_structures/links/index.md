@@ -115,5 +115,5 @@ MDN 提供了用于生成链接列表的宏：
 ## 参见
 
 - [使用宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros)
-- [经常使用的宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Commonly_used_macros)，包括 BCD 宏（`\{{Compat}}`）和规范宏（`\{{Specifications}}`）。
+- [经常使用的宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)，包括 BCD 宏（`\{{Compat}}`）和规范宏（`\{{Specifications}}`）。
 - [横幅和通知指南](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)，包括 `\{{SeeCompatTable}}` 和 `\{{SecureContext_Header}}` 宏。
