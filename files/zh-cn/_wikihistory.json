@@ -179,14 +179,6 @@
       "xgqfrms-GitHub"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript": {
-    "modified": "2019-03-23T22:19:01.932Z",
-    "contributors": [
-      "wbamberg",
-      "jiii",
-      "jswisher"
-    ]
-  },
   "Games/Tutorials/2D_breakout_game_Phaser": {
     "modified": "2019-03-23T22:13:33.607Z",
     "contributors": [
@@ -280,6 +272,14 @@
     "contributors": [
       "wbamberg",
       "j787701730"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript": {
+    "modified": "2019-03-23T22:19:01.932Z",
+    "contributors": [
+      "wbamberg",
+      "jiii",
+      "jswisher"
     ]
   },
   "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls": {
@@ -42600,50 +42600,6 @@
     "modified": "2020-10-15T22:15:29.365Z",
     "contributors": [
       "Cyandev"
-    ]
-  },
-  "conflicting/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field": {
-    "modified": "2019-01-17T01:43:12.147Z",
-    "contributors": [
-      "wbamberg",
-      "j787701730"
-    ]
-  },
-  "conflicting/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework": {
-    "modified": "2019-01-17T01:43:02.878Z",
-    "contributors": [
-      "wbamberg",
-      "hnliuzesen",
-      "j787701730"
-    ]
-  },
-  "conflicting/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball": {
-    "modified": "2019-01-17T01:43:00.734Z",
-    "contributors": [
-      "wbamberg",
-      "j787701730"
-    ]
-  },
-  "conflicting/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win": {
-    "modified": "2019-01-17T01:43:17.617Z",
-    "contributors": [
-      "wbamberg",
-      "j787701730"
-    ]
-  },
-  "conflicting/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field": {
-    "modified": "2019-01-17T02:24:24.007Z",
-    "contributors": [
-      "wbamberg",
-      "DHecarim",
-      "ziyunfei",
-      "Trendymen"
-    ]
-  },
-  "conflicting/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls": {
-    "modified": "2020-03-04T06:03:22.539Z",
-    "contributors": [
-      "zmx0142857"
     ]
   }
 }

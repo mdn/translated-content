@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}
 
-这是 [Gamedev Canvas 教程](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 个步骤中的**第 5 步**。在你完成了本节教程之后，你可以在 [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html) 看到源码。
+这是 [Gamedev Canvas 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) 10 个步骤中的**第 5 步**。在你完成了本节教程之后，你可以在 [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html) 看到源码。
 
 看着球从墙上反弹，并且能够移动球板很有趣，但除此之外，游戏什么都不会发生，也没有进度或最终目标。从游戏玩法的角度来看，最好能让玩家输掉游戏。在打砖块游戏中，输掉游戏的逻辑是：如果你没有用球板接住球，让球到达屏幕底部边缘，那么游戏就结束了。
 
@@ -196,6 +196,6 @@ runButton.addEventListener("click", () => {
 
 ## 下一步
 
-到目前为止，我们做得相当不错。现在你会输掉游戏，游戏也开始变得更值得玩了！但它仍然缺少一些东西。让我们继续进入第六章——[构建砖块区域](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)——并创建一些砖块让球去摧毁。
+到目前为止，我们做得相当不错。现在你会输掉游戏，游戏也开始变得更值得玩了！但它仍然缺少一些东西。让我们继续进入第六章——[构建砖块区域](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)——并创建一些砖块让球去摧毁。
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}

@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
 
-这是 [Gamedev Canvas 教程](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 个步骤中的**第 3 步**。在你完成了本节教程之后，你可以在 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html) 看到源码。
+这是 [Gamedev Canvas 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) 10 个步骤中的**第 3 步**。在你完成了本节教程之后，你可以在 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html) 看到源码。
 
 看到小球在移动确实很棒，但它很快就会从屏幕上消失，这限制了我们玩游戏的乐趣！为了解决这个问题，我们将实现一些碰撞检测功能（相关内容将在[后续步骤](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)进行更详细的讲解），让小球能够从画布的四个边缘弹回来。
 
@@ -164,4 +164,4 @@ runButton.addEventListener("click", () => {
 
 现在，我们的球既能在游戏板上移动，又能停留在上面。在教程第四步中，我们将探讨如何实现可控制的球板——请参阅[球板和键盘控制](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls)。
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
