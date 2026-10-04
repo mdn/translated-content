@@ -52,8 +52,7 @@ Tk: U  (mis à jour)
 - `C`
   - : Suivi avec consentement. Le serveur d'origine pense avoir reçu un consentement préalable pour le suivi de cet·te utilisateur·ice, agent utilisateur ou appareil.
 - `P`
-  - : Consentement potentiel. Le serveur d'origine ne sait pas, en temps réel, s'il a
-    reçu un consentement préalable pour le suivi de cet·te utilisateur·ice, agent utilisateur ou appareil, mais promet de ne pas utiliser ou partager de données `DNT:1` jusqu'à ce que ce consentement ait été déterminé.
+  - : Consentement potentiel. Le serveur d'origine ne sait pas, en temps réel, s'il a reçu un consentement préalable pour le suivi de cet·te utilisateur·ice, agent utilisateur ou appareil, mais promet de ne pas utiliser ou partager de données `DNT:1` jusqu'à ce que ce consentement ait été déterminé.
     Il promet en outre de supprimer ou d'anonymiser de manière permanente dans les 48 heures toute donnée `DNT:1` reçue pour laquelle ce consentement n'a pas été reçu.
 - `D`
   - : Ne tient pas compte de DNT. Le serveur d'origine ne peut ou ne veut pas respecter une préférence de suivi reçue de l'agent utilisateur demandeur.
