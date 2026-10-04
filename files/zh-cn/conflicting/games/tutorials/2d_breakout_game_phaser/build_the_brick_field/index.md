@@ -1,6 +1,7 @@
 ---
 title: 碰撞检测
-slug: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
+slug: conflicting/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
+original_slug: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
 l10n:
   sourceCommit: 4483da6501d1c735a0e1ac1e95775e2fe1766dc3
 ---

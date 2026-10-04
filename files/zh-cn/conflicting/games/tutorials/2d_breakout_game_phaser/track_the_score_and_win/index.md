@@ -1,64 +1,34 @@
 ---
-title: 记分
-slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
+title: 赢得游戏
+slug: conflicting/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win
+original_slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 l10n:
   sourceCommit: 4483da6501d1c735a0e1ac1e95775e2fe1766dc3
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
 
-这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的**第 11 步**。在本文中，我们会给游戏添加一个记分系统。记分也可以让游戏更有趣——你可以尝试打破自己或朋友的最高分。
+这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的**第 12 步**。在我们的游戏中实现获胜非常简单：如果你摧毁了所有砖块，那么你就赢了。
 
-我们将使用一个单独的属性来存储分数，并用 Phaser 的 `text()` 方法将其显示在屏幕上。
+## 如何获胜？
 
-## 新属性
-
-在之前定义的属性后面添加两个新属性：
-
-```js
-class ExampleScene extends Phaser.Scene {
-  // ……之前的属性定义……
-  scoreText;
-  score = 0;
-  // ……类的其余部分……
-}
-```
-
-## 将得分文本添加到游戏显示中
-
-现在在 `create()` 方法的末尾添加这一行：
-
-```js
-this.scoreText = this.add.text(5, 5, "得分：0", {
-  font: "18px Arial",
-  color: "#0095dd",
-});
-```
-
-`text()` 方法可以接受四个参数：
-
-- 用于绘制文本的 x 和 y 坐标。
-- 将要渲染的实际文本。
-- 用于渲染文本的字体样式。
-
-最后一个参数看起来很像 CSS 样式。在我们的例子中，得分文本将显示为蓝色，大小为 18 像素，并使用 Arial 字体。
-
-## 当砖块被摧毁时更新得分
-
-每当球击中砖块时，我们都会增加分数，并更新 `scoreText` 来显示当前得分。这可以通过 `setText()` 方法完成——将下面看到的两行新代码添加到 `hitBrick()` 方法中：
+将以下新代码添加到你的 `update()` 方法中：
 
 ```js
 class ExampleScene extends Phaser.Scene {
   // ...
-  hitBrick(ball, brick) {
-    brick.destroy();
-    this.score += 10;
-    this.scoreText.setText(`得分：${this.score}`);
+  update() {
+    // ...
+    if (this.bricks.countActive() === 0) {
+      alert("你赢得了游戏，恭喜！");
+      location.reload();
+    }
   }
+  // ...
 }
 ```
 
-现在就完成了——重新加载你的 `index.html`，并检查每次击中砖块时得分都会更新。
+我们使用 `this.bricks` 的 `countAlive()` 方法，统计仍然存在的砖块数量。如果没有存在的砖块了，那么我们就显示获胜消息，并在警告框被关闭后重新开始游戏。
 
 ## 比较你的代码
 
@@ -136,6 +106,10 @@ class ExampleScene extends Phaser.Scene {
       // 游戏结束的逻辑
       location.reload();
     }
+    if (this.bricks.countActive() === 0) {
+      alert("你赢得了游戏，恭喜！");
+      location.reload();
+    }
   }
 
   initBricks() {
@@ -200,6 +174,6 @@ const game = new Phaser.Game(config);
 
 ## 下一步
 
-我们现在有了一个得分系统，但是如果你无法获胜，那么玩游戏和记录分数又有什么意义呢？让我们看看如何添加胜利状态，让我们可以[赢得游戏](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win)。
+失败和获胜都已经实现，所以我们游戏的核心玩法已经完成。现在来添加一些额外内容——我们会给玩家三条[生命](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)，而不是一条。
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}

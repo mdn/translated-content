@@ -187,94 +187,6 @@
       "jswisher"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls": {
-    "modified": "2019-03-23T22:15:46.459Z",
-    "contributors": [
-      "wbamberg",
-      "xrr2016",
-      "varcat",
-      "jackblackevo",
-      "jiii"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field": {
-    "modified": "2019-01-17T01:49:49.827Z",
-    "contributors": [
-      "wbamberg",
-      "DHecarim",
-      "SphinxKnight"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection": {
-    "modified": "2019-01-17T02:24:24.007Z",
-    "contributors": [
-      "wbamberg",
-      "DHecarim",
-      "ziyunfei",
-      "Trendymen"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it": {
-    "modified": "2019-03-23T22:16:30.455Z",
-    "contributors": [
-      "Somehow",
-      "wbamberg",
-      "DHecarim",
-      "ziyunfei",
-      "jiii"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up": {
-    "modified": "2020-03-04T06:46:31.914Z",
-    "contributors": [
-      "zmx0142857"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over": {
-    "modified": "2020-10-06T22:02:12.248Z",
-    "contributors": [
-      "phone-burner",
-      "wbamberg",
-      "xrr2016",
-      "varcat",
-      "usernameisMan"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls": {
-    "modified": "2020-03-04T06:03:22.539Z",
-    "contributors": [
-      "zmx0142857"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball": {
-    "modified": "2019-03-23T22:16:32.351Z",
-    "contributors": [
-      "wbamberg",
-      "SwithunHan",
-      "Ende93",
-      "Heroor",
-      "xrr2016",
-      "jiii",
-      "ziyunfei"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls": {
-    "modified": "2019-01-17T00:34:32.812Z",
-    "contributors": [
-      "wbamberg",
-      "xrr2016",
-      "varcat",
-      "longzhengxiong",
-      "lixuanh"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win": {
-    "modified": "2019-01-17T03:03:35.918Z",
-    "contributors": [
-      "wbamberg",
-      "DHecarim"
-    ]
-  },
   "Games/Tutorials/2D_breakout_game_Phaser": {
     "modified": "2019-03-23T22:13:33.607Z",
     "contributors": [
@@ -312,13 +224,6 @@
       "j787701730"
     ]
   },
-  "Games/Tutorials/2D_breakout_game_Phaser/Collision_detection": {
-    "modified": "2019-01-17T01:43:12.147Z",
-    "contributors": [
-      "wbamberg",
-      "j787701730"
-    ]
-  },
   "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives": {
     "modified": "2019-01-17T01:43:04.678Z",
     "contributors": [
@@ -339,13 +244,6 @@
       "wbamberg",
       "hnliuzesen",
       "Haruhi"
-    ]
-  },
-  "Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen": {
-    "modified": "2019-01-17T01:43:00.734Z",
-    "contributors": [
-      "wbamberg",
-      "j787701730"
     ]
   },
   "Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball": {
@@ -377,26 +275,84 @@
       "j787701730"
     ]
   },
-  "Games/Tutorials/2D_breakout_game_Phaser/Scaling": {
-    "modified": "2019-01-17T01:43:02.878Z",
-    "contributors": [
-      "wbamberg",
-      "hnliuzesen",
-      "j787701730"
-    ]
-  },
-  "Games/Tutorials/2D_breakout_game_Phaser/The_score": {
+  "Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win": {
     "modified": "2019-01-17T01:43:04.496Z",
     "contributors": [
       "wbamberg",
       "j787701730"
     ]
   },
-  "Games/Tutorials/2D_breakout_game_Phaser/Win_the_game": {
-    "modified": "2019-01-17T01:43:17.617Z",
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls": {
+    "modified": "2019-03-23T22:15:46.459Z",
     "contributors": [
       "wbamberg",
-      "j787701730"
+      "xrr2016",
+      "varcat",
+      "jackblackevo",
+      "jiii"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field": {
+    "modified": "2019-01-17T01:49:49.827Z",
+    "contributors": [
+      "wbamberg",
+      "DHecarim",
+      "SphinxKnight"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives": {
+    "modified": "2020-03-04T06:46:31.914Z",
+    "contributors": [
+      "zmx0142857"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over": {
+    "modified": "2020-10-06T22:02:12.248Z",
+    "contributors": [
+      "phone-burner",
+      "wbamberg",
+      "xrr2016",
+      "varcat",
+      "usernameisMan"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas": {
+    "modified": "2019-03-23T22:16:30.455Z",
+    "contributors": [
+      "Somehow",
+      "wbamberg",
+      "DHecarim",
+      "ziyunfei",
+      "jiii"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball": {
+    "modified": "2019-03-23T22:16:32.351Z",
+    "contributors": [
+      "wbamberg",
+      "SwithunHan",
+      "Ende93",
+      "Heroor",
+      "xrr2016",
+      "jiii",
+      "ziyunfei"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls": {
+    "modified": "2019-01-17T00:34:32.812Z",
+    "contributors": [
+      "wbamberg",
+      "xrr2016",
+      "varcat",
+      "longzhengxiong",
+      "lixuanh"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win": {
+    "modified": "2019-01-17T03:03:35.918Z",
+    "contributors": [
+      "wbamberg",
+      "DHecarim"
     ]
   },
   "Glossary": {
@@ -42644,6 +42600,50 @@
     "modified": "2020-10-15T22:15:29.365Z",
     "contributors": [
       "Cyandev"
+    ]
+  },
+  "conflicting/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field": {
+    "modified": "2019-01-17T01:43:12.147Z",
+    "contributors": [
+      "wbamberg",
+      "j787701730"
+    ]
+  },
+  "conflicting/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework": {
+    "modified": "2019-01-17T01:43:02.878Z",
+    "contributors": [
+      "wbamberg",
+      "hnliuzesen",
+      "j787701730"
+    ]
+  },
+  "conflicting/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball": {
+    "modified": "2019-01-17T01:43:00.734Z",
+    "contributors": [
+      "wbamberg",
+      "j787701730"
+    ]
+  },
+  "conflicting/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win": {
+    "modified": "2019-01-17T01:43:17.617Z",
+    "contributors": [
+      "wbamberg",
+      "j787701730"
+    ]
+  },
+  "conflicting/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field": {
+    "modified": "2019-01-17T02:24:24.007Z",
+    "contributors": [
+      "wbamberg",
+      "DHecarim",
+      "ziyunfei",
+      "Trendymen"
+    ]
+  },
+  "conflicting/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls": {
+    "modified": "2020-03-04T06:03:22.539Z",
+    "contributors": [
+      "zmx0142857"
     ]
   }
 }

@@ -1,6 +1,7 @@
 ---
 title: Load the assets and print them on screen
-slug: Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen
+slug: conflicting/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball
+original_slug: Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen
 ---
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework", "Games/Workflows/2D_Breakout_game_Phaser/Move the ball")}}
