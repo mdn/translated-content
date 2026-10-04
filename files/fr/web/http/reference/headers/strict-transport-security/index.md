@@ -47,8 +47,7 @@ L'hôte est identifié uniquement par son nom de domaine. Une adresse IP ne peut
 HSTS s'applique à tous les ports de l'hôte, quel que soit le port utilisé pour la requête.
 
 Avant de charger une URL `http`, le navigateur vérifie le nom de domaine par rapport à sa liste d'hôtes HSTS.
-Si le nom de domaine correspond, sans tenir compte de la casse, à un hôte HSTS ou est un sous-domaine de l'un de ceux qui ont défini `includeSubDomains`,
-alors le navigateur remplace le schéma de l'URL par `https`.
+Si le nom de domaine correspond, sans tenir compte de la casse, à un hôte HSTS ou est un sous-domaine de l'un de ceux qui ont défini `includeSubDomains`, alors le navigateur remplace le schéma de l'URL par `https`.
 Si l'URL définit le port 80, le navigateur le change en 443.
 Tout autre numéro de port explicite reste inchangé, et le navigateur se connecte à ce port en utilisant HTTPS.
 
@@ -61,8 +60,7 @@ Si un avertissement ou une erreur TLS, telle qu'un certificat invalide, se produ
 
 ### Expiration
 
-Chaque fois que le navigateur reçoit un en-tête `Strict-Transport-Security`, il met à jour le temps d'expiration HSTS de l'hôte en
-ajoutant `max-age` au temps actuel.
+Chaque fois que le navigateur reçoit un en-tête `Strict-Transport-Security`, il met à jour le temps d'expiration HSTS de l'hôte en ajoutant `max-age` au temps actuel.
 L'utilisation d'une valeur fixe pour `max-age` peut empêcher l'expiration de HSTS, car chaque réponse suivante repousse l'expiration plus loin dans le futur.
 
 Si l'en-tête `Strict-Transport-Security` est absent dans une réponse d'un hôte qui en a précédemment envoyé un, l'en-tête précédent reste en vigueur jusqu'à son expiration.
@@ -89,8 +87,7 @@ Si `max-age=0`, `includeSubDomains` n'a aucun effet, car le domaine qui a défin
 
 Si l'hôte accepte les requêtes HTTP non sécurisées, il doit répondre par une redirection permanente (comme le code d'état {{HTTPStatus("301")}}) ayant une URL `https` dans l'en-tête {{HTTPHeader("Location")}}.
 La redirection ne doit pas inclure l'en-tête `Strict-Transport-Security` puisque la requête a utilisé HTTP non sécurisé, mais l'en-tête doit être envoyé uniquement par HTTPS.
-Après que le navigateur a suivi la redirection et effectué une nouvelle requête en utilisant HTTPS, la réponse
-doit inclure l'en-tête `Strict-Transport-Security` pour s'assurer que les tentatives futures de chargement d'une URL `http` utilisent immédiatement HTTPS, sans nécessiter de redirection.
+Après que le navigateur a suivi la redirection et effectué une nouvelle requête en utilisant HTTPS, la réponse doit inclure l'en-tête `Strict-Transport-Security` pour s'assurer que les tentatives futures de chargement d'une URL `http` utilisent immédiatement HTTPS, sans nécessiter de redirection.
 
 Une faiblesse de HSTS est qu'il ne prend effet que lorsque le navigateur a établi au moins une connexion sécurisée avec l'hôte et a reçu l'en-tête `Strict-Transport-Security`.
 Si le navigateur charge une URL `http` non sécurisée avant de savoir que l'hôte est un hôte HSTS, la requête initiale est vulnérable aux attaques réseau.
@@ -117,7 +114,7 @@ Le [préchargement](#précharger_strict_transport_security) atténue ce problèm
 
 ### Précharger Strict Transport Security
 
-Google maintient [un service de préchargement HSTS](https://hstspreload.org/).
+Google maintient [un service de préchargement HSTS <sup>(angl.)</sup>](https://hstspreload.org/).
 En suivant les directives et en envoyant avec succès votre domaine, vous pouvez vous assurer que les navigateurs se connectent à votre domaine uniquement par des connexions sécurisées.
 Bien que le service soit hébergé par Google, tous les navigateurs utilisent cette liste de préchargement.
 Cependant, elle ne fait pas partie de la spécification HSTS et ne doit pas être considérée comme officielle.
