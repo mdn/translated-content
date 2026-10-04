@@ -1,13 +1,13 @@
 ---
 title: 创建、绘制画布
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas
 l10n:
   sourceCommit: 2530db14de9ac226cf06f84540fa0101e804ca9b
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball")}}
 
-本篇是[游戏开发 Canvas 教程](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 节教程中的第一节。如果你完成了本篇教程之后，你可以在 [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html) 看到源码。
+本篇是[游戏开发 Canvas 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) 10 节教程中的第一节。如果你完成了本篇教程之后，你可以在 [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html) 看到源码。
 
 在我们开始编写游戏功能之前，我们可以通过 HTML 的 {{htmlelement("canvas")}} 元素创建支撑游戏的基本结构。
 
@@ -143,6 +143,6 @@ ctx.closePath();
 
 ## 下一节
 
-现在我们已经创建了基本的 HTML 和关于画布的基本知识。我们继续第二节，如何让球在游戏中动起来——[让球动起来](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)。
+现在我们已经创建了基本的 HTML 和关于画布的基本知识。我们继续第二节，如何让球在游戏中动起来——[让球动起来](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball)。
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball")}}

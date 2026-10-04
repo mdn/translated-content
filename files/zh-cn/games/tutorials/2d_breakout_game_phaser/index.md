@@ -22,7 +22,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 5. [球板和控制](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)
 6. [游戏结束](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
 7. [建立砖块](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
-8. [记录得分和赢得游戏](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
+8. [记录得分和赢得游戏](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win)
 9. [额外生命](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)
 10. [动画与补间](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
 11. [按钮](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
