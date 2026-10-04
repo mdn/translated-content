@@ -7,7 +7,7 @@ l10n:
 ---
 
 {{Glossary("request header", "L'en-tête de requête")}} HTTP **`Service-Worker`** est inclus dans les requêtes pour la ressource de script d'un <i lang="en">service worker</i>.
-Cet en-tête aide les administrateurs à consigner les requêtes de script de <i lang="en">service worker</i> à des fins de surveillance.
+Cet en-tête aide les administrateur·ice·s à consigner les requêtes de script de <i lang="en">service worker</i> à des fins de surveillance.
 
 <table class="properties">
   <tbody>
