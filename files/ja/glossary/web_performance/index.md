@@ -11,6 +11,6 @@ l10n:
 
 ## 関連情報
 
-- [ウェブパフォーマンス](/en-US/docs/Web/Performance)ガイド
+- [ウェブパフォーマンス](/ja/docs/Web/Performance)ガイド
 - 関連用語項目:
   - {{Glossary("Perceived performance", "知覚パフォーマンス")}}
