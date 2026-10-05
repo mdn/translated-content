@@ -1,37 +1,29 @@
 ---
 title: 'ReferenceError: assignment to undeclared variable "x"'
 slug: Web/JavaScript/Reference/Errors/Undeclared_var
+l10n:
+  sourceCommit: 6190afbbd086e1db1158730d10a4c7896fc8f0c2
 ---
 
-{{jsSidebar("Errors")}}
-
-JavaScript の [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)独自の例外 "Assignment to undeclated variable" は、値が宣言されていない変数に代入されたときに発生します。
+JavaScript の[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)独自の例外 "Assignment to undeclared variable" は、値が宣言されていない変数に代入されたときに発生します。
 
 ## エラーメッセージ
 
-```js
-ReferenceError: assignment to undeclared variable "x" (Firefox)
-ReferenceError: "x" is not defined (Chrome)
-ReferenceError: Variable undefined in strict mode (Edge)
+```plain
+ReferenceError: x is not defined (V8-based)
+ReferenceError: assignment to undeclared variable x (Firefox)
+ReferenceError: Can't find variable: x (Safari)
 ```
 
-## エラーの種類
+## エラー型
 
-[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) でのみ、{{jsxref("ReferenceError")}} の警告が出ます。
+[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) でのみ、{{jsxref("ReferenceError")}} の警告が出ます。
 
 ## エラーの原因
 
-宣言していない変数に値を代入しています。つまり、 `var` キーワードを使用せずに代入をしています。宣言した変数と宣言していない変数の間には、予想外の結果を招くいくつかの違いがあります。それが、 strict モードで JavaScript がエラーを発生させる理由です。
-
-宣言した変数と宣言していない変数について、3 つの注意点があります。
-
-- 宣言した変数は、それが宣言された実行コンテキストに制限されます。宣言していない変数は常にグローバルです。
-- 宣言した変数は、コードが実行される前に生成されます。宣言していない変数は、それに割り当てるコードが実行されるまで存在しません。
-- 宣言した変数は、その実行コンテキスト (関数かグローバル) で設定不可能なプロパティです。 宣言していない変数は、設定可能です (たとえば、削除できます)。
-
-詳細や具体例は、[`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) 参照ページを見てください。
-
-[strict モードのコード](/ja/docs/Web/JavaScript/Reference/Strict_mode) でのみ、宣言していない変数割り当てエラーが発生します。非 strict コードでは、それらは暗黙裡に無視されます。
+`x = ...` という形式の代入文がありますが、`x` は `var`、`let`、または `const` キーワードを使って事前に宣言されていません。
+このエラーは、[厳格モードのコード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ発生します。
+厳格モード以外のコードでは、宣言されていない変数への代入を行うと、グローバルスコープ上に暗黙的にプロパティが生成されます。
 
 ## 例
 
@@ -49,16 +41,19 @@ foo(); // ReferenceError: assignment to undeclared variable bar
 
 ### 有効な場合
 
-"bar" を宣言済みの変数にするために、その前に [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) キーワードを追加します。
+"bar" を宣言済みの変数にするために、その前に [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let), [`const`](/ja/docs/Web/JavaScript/Reference/Statements/var), [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) のいずれかのキーワードを追加します。
 
 ```js example-good
 function foo() {
   "use strict";
-  var bar = true;
+  const bar = true;
 }
 foo();
 ```
 
 ## 関連情報
 
-- [Strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)
+- [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)
+- [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var)
+- [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let)
+- [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const)
