@@ -1,9 +1,9 @@
 ---
-title: HTML `<noembed>` 埋め込みフォールバック要素
+title: "`<noembed>` 埋め込みフォールバック要素 (HTML)"
 short-title: <noembed>
 slug: Web/HTML/Reference/Elements/noembed
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
 **`<noembed>`** は [HTML](/ja/docs/Web/HTML) の要素で、廃止された、標準外の方法であり、 {{HTMLElement("embed")}} 要素に対応していないブラウザーや、ユーザーが仕様とした種類の[埋め込みコンテンツ](/ja/docs/Web/HTML/Guides/Content_categories#埋め込みコンテンツ)に対応していないブラウザーで代替または「フォールバック」コンテンツを提供するものです。これは HTML 4.01 で非推奨となり、代替コンテンツは {{HTMLElement("object")}} 要素の開始タグと終了タグの間に配置されるようになりました。
@@ -19,7 +19,7 @@ l10n:
 
 ```html
 <embed
-  type="vide/webm"
+  type="video/webm"
   src="/media/examples/flower.mp4"
   width="200"
   height="200" />

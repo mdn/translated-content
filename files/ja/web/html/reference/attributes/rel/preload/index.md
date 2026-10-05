@@ -1,8 +1,9 @@
 ---
-title: rel="preload"
+title: '`rel="preload"` 属性値 (HTML)'
+short-title: preload
 slug: Web/HTML/Reference/Attributes/rel/preload
 l10n:
-  sourceCommit: 8799c26ef12a653ea2ab7d22a958fb46a649ca60
+  sourceCommit: fc7c0c6df803d5ce26e7b2a72725a7d021ed0694
 ---
 
 `preload` は {{htmlelement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性の値で、その HTML の {{htmlelement("head")}} の中で読み取りリクエストを宣言し、ページのライフサイクルの早期の、ブラウザーの主なレンダリング機構が起動する前に読み取りを始めたい、すぐに必要なリソースを指定することができます。これにより、そのリソースがより早く利用でき、ページのレンダリングがブロックされにくくなり、性能が向上します。名前には _load_ という言葉が含まれていますが、これはスクリプトを読み込んで実行するのではなく、ダウンロードとキャッシュをより高い優先度で行うようにスケジュールするだけです。
@@ -67,9 +68,9 @@ l10n:
 > `font` および `fetch` の事前読み込みには、 `crossorigin` 属性を設定する必要があります。下記の [CORS を使用した取得](#cors_を使用した取得)を参照してください。
 
 > [!NOTE]
-> 使用されると予想されるこれらの値やウェブ機能について、もっと詳細のことは、 HTML の仕様書、 [Link type "preload"](https://html.spec.whatwg.org/#match-preload-type) を参照してください。また、フェッチの仕様書で管理されている `as` 属性の値の完全な一覧は、 [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) を参照してください。
+> 使用されると予想されるこれらの値やウェブ機能について、もっと詳細のことは、 HTML の仕様書、 [Link type "preload"](https://html.spec.whatwg.org/multipage/links.html#link-type-preload) を参照してください。また、フェッチの仕様書で管理されている `as` 属性の値の完全な一覧は、[Link type "preload" destinations](https://html.spec.whatwg.org/multipage/links.html#preload-destination) を参照してください。
 
-## MIME タイプを含める
+## MIME タイプの指定
 
 `<link>` 要素は [`type`](/ja/docs/Web/HTML/Reference/Elements/link#type) 要素を受け付け、要素が指す先のリソースの MIME タイプを指定することができます。これは特にリソースの事前読み込み時に便利です。 — ブラウザーは `type` 属性の値を使用して対応しているリソースであるかどうかを確認し、その場合だけダウンロードを開始し、そうでない場合は開始しないようにすることができます。
 

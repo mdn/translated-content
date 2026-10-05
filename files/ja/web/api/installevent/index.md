@@ -2,12 +2,12 @@
 title: InstallEvent
 slug: Web/API/InstallEvent
 l10n:
-  sourceCommit: 21d3e89589aaf9e5cfa667de679134513ab833f3
+  sourceCommit: 513146a616213fee548fdcf72dc1359030eb3395
 ---
 
-{{APIRef("Service Workers API")}}{{Non-standard_Header}}
+{{APIRef("Service Workers API")}}
 
-{{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}} ハンドラーに引数として渡される `InstallEvent` インターフェイスは、{{domxref("ServiceWorkerGlobalScope")}} の {{domxref("ServiceWorker")}} で配信されるインストールアクションを表します。{{domxref("ExtendableEvent")}} の子として、{{domxref("FetchEvent")}} のような機能イベントがインストール中に配信されないようにします。
+{{DOMxRef("ServiceWorkerGlobalScope.install_event", "install")}} イベントハンドラー関数に引数として渡される `InstallEvent` インターフェイスは、{{domxref("ServiceWorkerGlobalScope")}} の {{domxref("ServiceWorker")}} で配信されるインストールアクションを表します。{{domxref("ExtendableEvent")}} の子として、{{domxref("FetchEvent")}} のような機能イベントがインストール中に配信されないようにします。
 
 このインターフェイスは {{domxref("ExtendableEvent")}} インターフェイスを継承しています。
 
@@ -15,19 +15,19 @@ l10n:
 
 ## コンストラクター
 
-- {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}}
   - : 新しい `InstallEvent` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-_祖先である {{domxref("Event")}} からプロパティを継承しています_。
-
-- {{domxref("InstallEvent.activeWorker")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 現在ページを制御している {{domxref("ServiceWorker")}} を返します。
+_親である {{domxref("ExtendableEvent")}} から継承したプロパティがあります_。
 
 ## インスタンスメソッド
 
-_祖先である {{domxref("Event")}} からメソッドを継承しています_。
+_親である {{domxref("ExtendableEvent")}} から継承したメソッドがあります_。
+
+- {{domxref("InstallEvent.addRoutes()", "addRoutes()")}}
+  - : 1 つ以上の静的ルートを指定します。これらは、サービスワーカーの起動前であっても使用する、指定されたリソースを取得するためのルールを定義します。
 
 ## 例
 
@@ -52,30 +52,33 @@ self.addEventListener("install", (event) => {
   ];
 
   console.log(
-    "Handling install event. Resources to pre-fetch:",
+    "インストールイベントの処理中。事前取得するリソース:",
     urlsToPrefetch,
   );
 
   event.waitUntil(
     caches
       .open(CURRENT_CACHES["prefetch"])
-      .then((cache) => {
-        return cache
-          .addAll(
-            urlsToPrefetch.map((urlToPrefetch) => {
-              return new Request(urlToPrefetch, { mode: "no-cors" });
-            }),
-          )
-          .then(() => {
-            console.log("All resources have been fetched and cached.");
-          });
+      .then((cache) =>
+        cache.addAll(
+          urlsToPrefetch.map(
+            (urlToPrefetch) => new Request(urlToPrefetch, { mode: "no-cors" }),
+          ),
+        ),
+      )
+      .then(() => {
+        console.log("すべてのリソースが取得され、キャッシュされました。");
       })
       .catch((error) => {
-        console.error("Pre-fetching failed:", error);
+        console.error("事前取得に失敗しました：", error);
       }),
   );
 });
 ```
+
+## 仕様書
+
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -83,6 +86,7 @@ self.addEventListener("install", (event) => {
 
 ## 関連情報
 
+- [`install` イベント](/ja/docs/Web/API/ServiceWorkerGlobalScope/install_event)
 - {{domxref("NotificationEvent")}}
 - {{jsxref("Promise")}}
 - [フェッチ API](/ja/docs/Web/API/Fetch_API)

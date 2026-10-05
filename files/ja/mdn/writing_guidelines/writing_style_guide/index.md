@@ -151,8 +151,8 @@ MDN は幅広く、多様な読者を抱えています。
 <!-- markdownlint-disable descriptive-link-text -->
 
 - **正**: 「[フレックスアイテムの並べ替え方法](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)について学びましょう。」
-- **誤**: 「詳しく学ぶには[ここ](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)をクリックしてください。
-- **誤**: 「詳しく学ぶには[この記事](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)を読んでください。
+- **誤**: 「詳しく学ぶには[ここ](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)をクリックしてください。」
+- **誤**: 「詳しく学ぶには[この記事](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)を読んでください。」
 
 <!-- markdownlint-enable descriptive-link-text -->
 
