@@ -67,7 +67,7 @@ content-range: bytes 0-1023/146515
 (contenu binaire)
 ```
 
-### Plage qui satisfaisante
+### Plage qui est satisfaite
 
 Si le serveur ne peut pas satisfaire la requête de plage demandée, il doit répondre avec le statut {{HTTPStatus("416", "416 Range Not Satisfiable")}}, et le `Content-Range` doit indiquer `*` pour la plage ainsi que la taille totale de la ressource.
 
