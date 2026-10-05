@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Content-Range`** est utilisé dans les [requêtes de plage](/fr/docs/Web/HTTP/Guides/Range_requests) pour indiquer où le contenu du corps de la réponse se situe par rapport à une ressource complète.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Content-Range`** est utilisé dans les [requêtes de plage](/fr/docs/Web/HTTP/Guides/Range_requests) pour indiquer où le contenu du corps de la réponse se situe par rapport à une ressource complète.
 
 Il doit uniquement être inclus dans {{HTTPStatus("206", "206 Partial Content")}} ou {{HTTPStatus("416", "416 Range Not Satisfiable")}}.
 
@@ -67,7 +67,7 @@ content-range: bytes 0-1023/146515
 (contenu binaire)
 ```
 
-### Plage non satisfaisable
+### Plage qui satisfaisante
 
 Si le serveur ne peut pas satisfaire la requête de plage demandée, il doit répondre avec le statut {{HTTPStatus("416", "416 Range Not Satisfiable")}}, et le `Content-Range` doit indiquer `*` pour la plage ainsi que la taille totale de la ressource.
 
