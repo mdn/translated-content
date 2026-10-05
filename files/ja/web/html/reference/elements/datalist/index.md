@@ -1,9 +1,9 @@
 ---
-title: HTML `<datalist>` データリスト要素"
+title: "`<datalist>` データリスト要素 (HTML)"
 short-title: <datalist>
 slug: Web/HTML/Reference/Elements/datalist
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
 ---
 
 **`<datalist>`** は [HTML](/ja/docs/Web/HTML) の要素で、この要素には {{HTMLElement("option")}} 要素の集合が含まれ、他のコントロール内で選択できる許容または推奨オプションを表します。

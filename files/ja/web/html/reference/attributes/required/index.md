@@ -1,9 +1,9 @@
 ---
-title: "HTML 属性: required"
+title: "`required` 属性 (HTML)"
 short-title: required
 slug: Web/HTML/Reference/Attributes/required
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 [論理](/ja/docs/Glossary/Boolean/HTML)属性の **`required`** 属性は、存在する場合、所有するフォームを送信する前にユーザーが入力に値を指定しなければならないことを示します。
@@ -18,6 +18,8 @@ l10n:
 
 > [!NOTE]
 > [`aria-required="true"`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) を設定すると、ある要素（任意の要素）が必須であることをスクリーンリーダーに伝えますが、その要素が任意であるかどうかには関係ありません。
+
+## 解説
 
 ### 属性の相互作用
 
