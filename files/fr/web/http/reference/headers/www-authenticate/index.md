@@ -75,7 +75,7 @@ WWW-Authenticate: <challengeN>
 ## Directives
 
 - `<auth-scheme>`
-  - : Un jeton insensible à la casse indiquant le [schéma d'authentification](/fr/docs/Web/HTTP/Guides/Authentication#authentication_schemes) utilisé.
+  - : Un jeton insensible à la casse indiquant le [schéma d'authentification](/fr/docs/Web/HTTP/Guides/Authentication#schémas_dauthentification) utilisé.
     Certains des types les plus courants sont [`Basic`](/fr/docs/Web/HTTP/Guides/Authentication#schéma_dauthentification_de_base), `Digest`, `Negotiate` et `AWS4-HMAC-SHA256`.
     L'IANA maintient une [liste des schémas d'authentification <sup>(angl.)</sup>](https://www.iana.org/assignments/http-authschemes), mais il existe d'autres schémas proposés par les services d'hébergement.
 - `<auth-param>` {{Optional_Inline}}
