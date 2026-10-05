@@ -32,7 +32,7 @@ l10n:
   - : 変更の影響を受けたノードを、 `MutationRecord.type` に応じて返します。
     - `attributes` の場合、属性が変更された要素となります。
     - `characterData` の場合、`CharacterData` ノードとなります。
-    - `childList` の場合、子ノードが変更されたノードとなります。 
+    - `childList` の場合、子ノードが変更されたノードとなります。
 - {{domxref("MutationRecord.type")}} {{ReadOnlyInline}}
   - : 変更の種類の文字列です。属性の変更の場合は `attributes`、`CharacterData` ノードへの変更の場合は `characterData`、ノードのツリーへの変更の場合は `childList` です。
 
