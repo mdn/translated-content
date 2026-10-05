@@ -1,66 +1,52 @@
 ---
-title: 'SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecated'
+title: 'SyntaxError: "0"-prefixed octal literals are deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_octal_literal
-original_slug: Web/JavaScript/Reference/Errors/Deprecated_octal
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
+JavaScript の[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ発生する例外 "0-prefixed octal literals are deprecated; use the "0o" prefix instead" は、非推奨の 8 進リテラル（`0` の後に数字が続く形式）が使用されている場合に発生します。
 
-## メッセージ
+## エラーメッセージ
 
+```plain
+SyntaxError: Octal literals are not allowed in strict mode. (V8-based)
+SyntaxError: Decimals with leading zeros are not allowed in strict mode. (V8-based)
+SyntaxError: Unexpected number (V8-based)
+SyntaxError: "0"-prefixed octal literals are deprecated; use the "0o" prefix instead (Firefox)
+SyntaxError: Decimal integer literals with a leading zero are forbidden in strict mode (Safari)
 ```
-SyntaxError:
-"0"-prefixed octal literals and octal escape sequences are deprecated;
-for octal literals use the \"0o\" prefix instead
-```
 
-## エラータイプ
+## エラー型
 
-[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ {{jsxref("SyntaxError")}}。
+[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ {{jsxref("SyntaxError")}}。
 
-## 何がうまくいかなかったのか？
+## エラーの原因
 
-8 進文字と 8 進エスケープシーケンスは非推奨で、strict モードでは {{jsxref("SyntaxError")}} をスローします。ECMAScript 2015 以降では、標準文法として 0 から始まり大文字、または小文字のラテン文字 "O" (`0o` or `0O)` が続く文法を使用します。
+8 進文字と 8 進エスケープシーケンスは非推奨で、厳格モードでは {{jsxref("SyntaxError")}} をスローします。ECMAScript 2015 以降では、標準文法として 0 から始まり大文字、または小文字のラテン文字 "O" (`0o` または `0O`) が続く文法を使用します。
+
+先頭のゼロは、リテラルが有効な8進リテラルの構文を満たしていない場合（リテラルに数字の `8` や `9` が含まれている場合や、小数点がある場合など）であっても、常に禁止されています。数値リテラルは、その `0` が単位の桁である場合にのみ、`0` で始まることができます。
 
 ## 例
 
 ### "0" 接頭辞付きの 8 進文字
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 
 03;
 
-// SyntaxError: "0"-prefixed octal literals and octal escape sequences
-// are deprecated
-```
-
-### 8 進エスケープシーケンス
-
-```js example-bad
-"use strict";
-
-"\251";
-
-// SyntaxError: "0"-prefixed octal literals and octal escape sequences
-// are deprecated
+// SyntaxError: "0"-prefixed octal literals are deprecated; use the "0o" prefix instead
 ```
 
 ### 有効な 8 進数
 
-0 に "o" か "O" が続くものを使用します:
+0 に "o" か "O" が続くものを使用します。
 
 ```js example-good
 0o3;
 ```
 
-8 進エスケープシーケンスの代わりに、16 進エスケープシーケンスを使用できます:
-
-```js example-good
-"\xA9";
-```
-
 ## 関連情報
 
-- [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#octal)
-- [Warning: 08/09 is not a legal ECMA-262 octal constant](/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal)
+- [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#8_進数)
