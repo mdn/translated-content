@@ -6,19 +6,19 @@ l10n:
   sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`horizontal-viewport-segments`** permet de détecter si l'appareil possède un nombre spécifié de segments de zone d'affichage disposés horizontalement (côte à côte).
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`horizontal-viewport-segments`** permet de détecter si l'appareil possède un nombre définit de segments de zone d'affichage disposés horizontalement (côte à côte).
 
-En lien avec l'[API Viewport Segments](/fr/docs/Web/API/Viewport_segments_API), la caractéristique `vertical-viewport-segments` permet de créer des conceptions adaptatives qui fonctionnent bien sur les appareils à multiples zones d'affichage — des appareils dont l'écran est divisé en segments logiquement séparés, comme les appareils pliables ou à charnière.
+En lien avec [l'API Viewport Segments](/fr/docs/Web/API/Viewport_segments_API), la caractéristique `vertical-viewport-segments` permet de créer des conceptions adaptatives qui fonctionnent bien sur les appareils à multiples zones d'affichage — des appareils dont l'écran est divisé en segments logiquement séparés, comme les appareils pliables ou à charnière.
 
 ## Syntaxe
 
 La caractéristique `horizontal-viewport-segments` se définit comme une valeur {{CSSxRef("integer", "entière")}} de `1` ou plus, représentant le nombre de segments horizontaux de la zone d'affichage de l'appareil.
 
-- La valeur sera `1` pour&nbsp;:
+- La valeur est `1` pour&nbsp;:
   - Un appareil non pliable (par exemple, un smartphone ou une tablette à écran unique classique)
   - Un appareil pliable, déplié ou fermé (en [posture de l'appareil `continuous`](/fr/docs/Web/API/Device_Posture_API#continuous)).
   - Un appareil à deux écrans à charnière ou un appareil pliable actuellement plié et orienté verticalement, avec les segments l'un au-dessus de l'autre.
-- La valeur sera `2` pour un appareil à deux écrans à charnière ou un appareil pliable actuellement plié (en [posture de l'appareil `folded`](/fr/docs/Web/API/Device_Posture_API#folded)) et orienté horizontalement, avec les segments côte à côte.
+- La valeur est `2` pour un appareil à deux écrans à charnière ou un appareil pliable actuellement plié (en [posture de l'appareil `folded`](/fr/docs/Web/API/Device_Posture_API#folded)) et orienté horizontalement, avec les segments côte à côte.
 - La valeur peut être supérieure à `2` pour les appareils pliables comportant plus d'un pli.
 
 ## Exemples
@@ -32,21 +32,21 @@ On définit la largeur du conteneur de gauche comme étant égale à la largeur 
 Pour calculer la largeur occupée par le pli entre les deux, on soustrait le décalage du bord gauche du conteneur de droite à celui du bord droit du conteneur de gauche (`calc(env(viewport-segment-left 1 0) - env(viewport-segment-right 0 0));`).
 
 ```css
-.wrapper {
+.enveloppe {
   height: 100%;
   display: flex;
 }
 
 @media (horizontal-viewport-segments: 2) {
-  .wrapper {
+  .enveloppe {
     flex-direction: row;
   }
 
-  .list-view {
+  .vue-liste {
     width: env(viewport-segment-width 0 0);
   }
 
-  .fold {
+  .pli {
     width: calc(
       env(viewport-segment-left 1 0) - env(viewport-segment-right 0 0)
     );
@@ -54,7 +54,7 @@ Pour calculer la largeur occupée par le pli entre les deux, on soustrait le dé
     height: 100%;
   }
 
-  .detail-view {
+  .vue-detail {
     width: env(viewport-segment-width 1 0);
   }
 }
@@ -73,5 +73,5 @@ Consultez notre [démo de l'API Viewport Segments <sup>(angl.)</sup>](https://md
 ## Voir aussi
 
 - La caractéristique média {{CSSxRef("@media/vertical-viewport-segments", "vertical-viewport-segments")}}
-- L'[API Viewport Segments](/fr/docs/Web/API/Viewport_segments_API)
+- [L'API Viewport Segments](/fr/docs/Web/API/Viewport_segments_API)
 - [Expérimentation des API Foldable <sup>(angl.)</sup>](https://developer.chrome.com/blog/foldable-apis-ot) sur developer.chrome.com (2024)

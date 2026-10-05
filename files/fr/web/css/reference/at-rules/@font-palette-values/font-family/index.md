@@ -6,7 +6,7 @@ l10n:
   sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-family`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-palette-values")}} est utilisé pour spécifier à quelle famille de police les valeurs de palette doivent s'appliquer. Cette valeur doit correspondre exactement à celle utilisée lors de la définition de la propriété CSS {{CSSxRef("font-family")}}.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-family`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-palette-values")}} est utilisé pour définir à quelle famille de police les valeurs de palette doivent s'appliquer. Cette valeur doit correspondre exactement à celle utilisée lors de la définition de la propriété CSS {{CSSxRef("font-family")}}.
 
 ## Syntaxe
 
@@ -98,7 +98,7 @@ h2 {
 }
 ```
 
-## Specifications
+## Spécifications
 
 {{Specifications}}
 

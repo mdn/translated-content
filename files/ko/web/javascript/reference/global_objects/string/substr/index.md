@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("String")}} 값의 **`substr()`** 메서드는 지정된 인덱스에서 시작하여 그 다음에 지정된 문자 수만큼 확장되는 이 문자열의 일부를 반환합니다.
 

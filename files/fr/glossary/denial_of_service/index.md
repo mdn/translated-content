@@ -2,12 +2,12 @@
 title: Déni de service (DoS)
 slug: Glossary/Denial_of_Service
 l10n:
-  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
+  sourceCommit: 13ef67a4ffbdb929415dfa1b3d65ab1aa9ebe5da
 ---
 
 Le **Déni de Service** (ou <abbr>DoS</abbr> pour<i lang="en">Denial of Service</i> en anglais) est une attaque réseau qui empêche l'utilisation légitime des ressources d'un {{Glossary("server", "serveur")}} en surchargeant celui-ci de requêtes.
 
-Les ordinateurs disposent de ressources limitées, puissance de calcul ou mémoire par exemple. Lorsqu'elles atteignent leurs limites, le programme peut se bloquer ou planter, ce qui le rend indisponible. Une attaque DoS consiste en diverses techniques pour saturer ces ressources et faire en sorte qu'un serveur ou un réseau ne soit plus disponible pour ses utilisateurs légitimes, ou au moins pour faire fonctionner le serveur plus lentement.
+Les ordinateurs disposent de ressources limitées, puissance de calcul ou mémoire par exemple. Lorsqu'elles atteignent leurs limites, le programme peut se bloquer ou planter, ce qui le rend indisponible. Une attaque DoS consiste en diverses techniques pour saturer ces ressources et faire en sorte qu'un serveur ou un réseau ne soit plus disponible pour ses utilisateur·ice·s légitimes, ou au moins pour faire fonctionner le serveur plus lentement.
 
 Il existe également des attaques {{Glossary("Distributed Denial of Service", "Déni de service distribué (DDoS)")}} dans lesquelles une multitude de serveurs sont utilisés pour épuiser la capacité de calcul d'un ordinateur attaqué.
 
@@ -17,8 +17,8 @@ Les attaques DoS sont plus une catégorie d'attaques qu'un type particulier d'at
 
 - attaque sur la bande passante
 - saturation par des requêtes sur des services
-- attaque SYN flooding
-- attaque ICMP flood
+- attaque SYN par saturation
+- attaque ICMP saturé
 - attaque pair-à-pair
 - attaque DoS permanente
 - attaque par saturation au niveau application
@@ -26,4 +26,4 @@ Les attaques DoS sont plus une catégorie d'attaques qu'un type particulier d'at
 ## Voir aussi
 
 - [Attaque par déni de service](https://fr.wikipedia.org/wiki/Attaque_par_déni_de_service) sur Wikipédia
-- [Déni de service <sup>(angl.)</sup>](https://www.owasp.org/index.php/Denial_of_Service) sur OWASP
+- [Déni de service <sup>(angl.)</sup>](https://community.owasp.org/attacks/Denial_of_Service) sur OWASP

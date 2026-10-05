@@ -1,9 +1,9 @@
 ---
-title: HTML `<input type="search">` 属性値
+title: '`<input type="search">` 属性値 (HTML)'
 short-title: <input type="search">
 slug: Web/HTML/Reference/Elements/input/search
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 8a13259a44523cd17b4fe347088b62c6d7a35265
 ---
 
 {{HTMLElement("input")}} 要素の **`search`** 型は、ユーザーが検索クエリーを入力するために設計されたテキスト入力欄です。 [`text`](/ja/docs/Web/HTML/Reference/Elements/input/text) 入力欄と機能的には同じですが、{{Glossary("user agent", "ユーザーエージェント")}}は別なスタイルを適用するかもしれません。
@@ -183,14 +183,14 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### 検索フォームのラベルとアクセシビリティ
 
-検索フォームの一つの問題はアクセシビリティです。一般的なデザインの慣例では、検索フィールドにハラベルがなく（虫眼鏡のアイコンや同類のものはあります）、よく見えるユーザーには、その配置から検索フォームの目的が明確に分かります（[この例ではよくあるパターンを示しています](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/))。
+検索フォームの一つの問題はアクセシビリティです。一般的なデザインの慣例では、検索フィールドにハラベルがなく（虫眼鏡のアイコンや同類のものはあります）、よく見えるユーザーには、その配置から検索フォームの目的が明確に分かります（[この例は、典型的な視覚的パターンを示しています](#アクセシブルな検索フォーム)）。
 
 ただし、これによりスクリーンリーダーのユーザーには、検索入力欄が何であるかについて音声による案内が一切示されないため、混乱を招く可能性があります。視覚的なデザインに影響を与えずにこの問題を回避する方法の一つとして、[ランドマーク要素](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/landmark_role)を使用することが挙げられます。
 
 - 検索機能全体を {{HTMLElement("search")}} 要素で囲んでください。これにより、支援技術が読み上げたり、すばやく移動したりできるランドマーク領域が作成されます。もし `<input>` がすでに `<form>` 内に含まれている場合は、代わりに `<form>` 要素に [`role="search"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) を追加することも可能です。これにより、`<form>` 自体も検索ランドマークとなります。`<search>` 要素はネイティブな HTML の意味づけを使用しますが、`role="search"` の方がより広く対応しており、すでに `<form>` ラッパーを持っている場合には、入力が簡潔になる場合があります。
 - これで十分ではない場合、 {{HTMLElement("input")}} 自身の [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性を使用することができます。これはスクリーンリーダーによって読み上げられ説明的なテキストラベルです。これは非視覚的な `<label>` と同等のものです。
 
-例を見てみましょう。
+最小限の例を見てみましょう。
 
 ```html
 <search>
@@ -356,11 +356,11 @@ input:valid ~ span::after {
 }
 ```
 
-This renders like so:
+これは次のように表示されます。
 
 {{ EmbedLiveSample('Input_value_length', 600, 40) }}
 
-4 文字未満でフォームを送信しようとすると、適切なエラーメッセージが表示されます（ブラウザーによって異なります)。 8 文字を超えて入力しようとしても、ブラウザーが許しません。
+4 文字未満でフォームを送信しようとすると、適切なエラーメッセージが表示されます（ブラウザーによって異なります）。 8 文字を超えて入力しようとしても、ブラウザーが許しません。
 
 ### パターンの指定
 
@@ -410,7 +410,106 @@ input:valid ~ span::after {
 
 ## 例
 
-[website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) の例ので使用した検索フォーム（[ライブで見る](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）が良い例です。
+### アクセシブルな検索フォーム
+
+この例は、検索フォームを含む典型的な {{htmlelement("nav")}} メニューを示しています。[WAI-ARIA](/ja/docs/Web/Accessibility/ARIA) の機能を活用することで、支援技術 (AT) を利用するユーザーにとって、このフォームをより利用しやすくしています。
+
+#### HTML
+
+メインナビゲーションのアイテムは、リンクのリストで構成されています。検索 {{htmlelement("form")}} に [`role="search"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) 属性が指定されており、これにより `<form>` が検索ランドマークとなり、支援技術 (AT) にその存在が通知されます。同時に、`<input type="search">` 要素には [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) を付与し、スクリーンリーダーによって読み上げられる明確なラベルを設定しています。
+
+```html live-sample___accessible-search
+<nav>
+  <ul>
+    <li><a href="#">ホーム</a></li>
+    <li><a href="#">紹介</a></li>
+    <li><a href="#">連絡先</a></li>
+  </ul>
+  <form role="search">
+    <input
+      type="search"
+      name="q"
+      placeholder="検索クエリー"
+      aria-label="Search through site content" />
+    <button>検索</button>
+  </form>
+</nav>
+```
+
+```css hidden live-sample___accessible-search
+html {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 10px;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+}
+
+nav li {
+  text-align: center;
+  flex: 1;
+}
+
+nav a {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 1.2;
+}
+
+nav form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+input {
+  font-size: 1.6rem;
+}
+
+input[type="search"] {
+  flex: 3;
+  height: 30px;
+}
+
+button {
+  flex: 1;
+  height: 30px;
+  padding: 0 1em;
+  background: #333333;
+  border: 0;
+  color: white;
+}
+```
+
+HTML を理解する上で関係がないため、簡潔さを期して、この例の CSS と JavaScript は非表示にしています。下記ライブサンプルにある "Play" ボタンを押すと、それらを調べることができます。
+
+```js hidden live-sample___accessible-search
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+```
+
+#### 結果
+
+{{embedlivesample("accessible-search", "100%", "70")}}
 
 ## 技術的概要
 
@@ -451,14 +550,6 @@ input:valid ~ span::after {
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
-    </tr>
-     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
       <td>
         <code>list</code> 属性がない場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role">searchbox</a></code><br />

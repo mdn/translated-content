@@ -1,9 +1,9 @@
 ---
-title: HTML anchor グローバル属性
+title: "`anchor` グローバル属性 (HTML)"
 short-title: anchor
 slug: Web/HTML/Reference/Global_attributes/anchor
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 {{Non-standard_Header}}{{SeeCompatTable}}
@@ -76,7 +76,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -87,7 +87,7 @@ CSS を使用して、 `infobox` 要素をアンカー位置指定要素に変�
 
 - {{cssxref("position")}} プロパティを `fixed` にし、位置指定要素に変換することで、アンカー位置から相対的に位置指定できるようになります。
 - {{cssxref("left")}} プロパティを {{cssxref("anchor()")}} 関数に指定し、その値を `right` とします。これにより、位置指定要素がアンカーに固定され、左端がアンカーの右端と揃うように位置指定されます。
-- {{cssxref("align-self")}} プロパティを [`anchor-center`](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) に設定します。これにより、情報ボックスがアンカーのインライン方向の中央に配置されます。
+- {{cssxref("align-self")}} プロパティを [`anchor-center`](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#anchor-center_を使用してアンカーの中央に配置) に設定します。これにより、情報ボックスがアンカーのインライン方向の中央に配置されます。
 - {{cssxref("margin-left")}} を `10px` に設定し、アンカーが指定された要素とアンカーの間に空間を作成します。
 
 ```css

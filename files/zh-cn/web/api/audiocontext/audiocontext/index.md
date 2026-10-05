@@ -9,7 +9,7 @@ slug: Web/API/AudioContext/AudioContext
 
 ## 语法
 
-```plain
+```js-nolint
 var audioContext = new AudioContext(options)
 ```
 

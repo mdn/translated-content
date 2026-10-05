@@ -2,37 +2,35 @@
 title: CookieChangeEvent
 slug: Web/API/CookieChangeEvent
 l10n:
-  sourceCommit: 6a4893e8a50995d47cf60ea4e081dc5d39a0d9a0
+  sourceCommit: f336c5b6795a562c64fe859aa9ee2becf223ad8a
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}
 
-[「Cookie Store API」](/ja/docs/Web/API/Cookie_Store_API)の **`CookieChangeEvent`** インターフェイスは、Cookie が何か変更された時 {{domxref("CookieStore")}} で発火する {{domxref("CookieStore.change_event", "change")}} イベントのイベント型です。Cookie の変更は、Cookie と種類 (`"changed"` または `"deleted"`) からなります。
-
-`CookieChangeEvent` を発生させる Cookie の変更は、以下のものがあります。
-
-- Cookie が新規作成され、すぐには削除されません。この場合の `type` は `"changed"` です。
-- Cookie が新規作成され、すぐに削除されます。この場合の `type` は `"deleted"` です。
-- Cookie が削除されます。この場合の `type` は `"deleted"` です。
+**`CookieChangeEvent`** は{{domxref("Cookie Store API", "クッキーストアー API", "", "nocode")}} のインターフェイスで、Cookie が作成されたり削除されたりしたときに {{domxref("CookieStore")}} で発行される {{domxref("CookieStore.change_event", "change")}} イベントのイベント型です。
 
 > [!NOTE]
-> 同じ名前・ドメイン・パスの他の Cookie が挿入されることにより置き換えられる Cookie は無視され、変更イベントを発生させません。
+> 同じ名前・ドメイン・パスの他の Cookie が挿入されることにより置き換えられる Cookie は無視され、変更イベントは発生しません。
 
 {{InheritanceDiagram}}
 
 ## コンストラクター
 
-- {{domxref("CookieChangeEvent.CookieChangeEvent", "CookieChangeEvent()")}} {{Experimental_Inline}}
+- {{domxref("CookieChangeEvent.CookieChangeEvent", "CookieChangeEvent()")}}
   - : 新しい `CookieChangeEvent` を生成します。
 
 ## インスタンスプロパティ
 
-_このインターフェイスは、{{domxref("Event")}} からもプロパティを継承します。_
+_このインターフェイスには {{domxref("Event")}} から継承したプロパティもあります。_
 
-- {{domxref("CookieChangeEvent.changed")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 1 個以上の変更された Cookie が格納された配列を返します。
-- {{domxref("CookieChangeEvent.deleted")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 1 個以上の削除された Cookie が格納された配列を返します。
+- {{domxref("CookieChangeEvent.changed")}} {{ReadOnlyInline}}
+  - : 新しく作成されたすべてのクッキーを一覧にした配列です。なお、有効期限が過去の日付に設定されて作成されたクッキーは、直ちに削除されるため、この一覧には含まれません。
+- {{domxref("CookieChangeEvent.deleted")}} {{ReadOnlyInline}}
+  - : 有効期限が切れたか、明示的に削除されたために除去されたすべてのクッキーを一覧表示する配列です。なお、これには有効期限が過去の日付に設定されていたクッキーも含まれます。
+
+## インスタンスメソッド
+
+_このインターフェイスには {{domxref("Event")}} から継承したメソッドもあります。_
 
 ## 例
 
@@ -43,11 +41,11 @@ cookieStore.addEventListener("change", (event) => {
   console.log(event);
 });
 
-const one_day = 24 * 60 * 60 * 1000;
+const oneDay = 24 * 60 * 60 * 1000;
 cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",
-  expires: Date.now() + one_day,
+  expires: Date.now() + oneDay,
   domain: "example.com",
 });
 ```

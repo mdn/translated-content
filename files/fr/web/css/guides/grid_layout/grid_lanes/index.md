@@ -2,14 +2,16 @@
 title: Disposition des lignes de grille
 slug: Web/CSS/Guides/Grid_layout/Grid_lanes
 l10n:
-  sourceCommit: b02c4fe0f8c485fa3fd0af10005310aaecef64ca
+  sourceCommit: 6ddfa5bed55ec6dc6f506ea9d894c2b449617e55
 ---
 
 {{SeeCompatTable}}
 
 Le niveau 3 de la spécification [disposition en grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout) définit la **disposition des lignes de grille**, accessible à l'aide des valeurs {{CSSxRef("display")}} `grid-lanes` et `inline-grid-lanes`. Ce guide explique le fonctionnement de la disposition des lignes de grille et son utilisation.
 
-La disposition des lignes de grille est une méthode de disposition dans laquelle un axe utilise une disposition en grille stricte classique, le plus souvent les colonnes, tandis que l'autre utilise un algorithme d'empilement. Sur l'axe d'empilement, plutôt que de conserver une grille stricte qui laisse des espaces après les éléments les plus courts, les éléments de la ligne suivante remontent pour remplir les espaces.
+La disposition des lignes de grille est une méthode de disposition dans laquelle un axe utilise une disposition en grille stricte et l'autre utilise un algorithme d'empilement. Chaque élément est placé dans la ligne qui dispose du plus grand espace disponible, produisant une disposition compacte sans pistes strictes sur l'axe d'empilement.
+
+La disposition des lignes de grille est souvent appelée _disposition en maçonnerie_, car elle ressemble à la façon dont les briques sont posées dans un mur, comblant les espaces aussi efficacement que possible.
 
 ## Créer une disposition des lignes de grille
 

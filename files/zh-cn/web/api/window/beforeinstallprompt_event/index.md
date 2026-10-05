@@ -9,7 +9,7 @@ slug: Web/API/Window/beforeinstallprompt_event
 
 ## 句法
 
-```plain
+```js-nolint
 window.addEventListener("beforeinstallprompt", function(event) { ... });
 
 window.onbeforeinstallprompt = function(event) { ...};

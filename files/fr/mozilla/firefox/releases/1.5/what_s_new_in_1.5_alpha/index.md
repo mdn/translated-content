@@ -2,7 +2,7 @@
 title: Quoi de neuf dans Deer Park Alpha
 slug: Mozilla/Firefox/Releases/1.5/What_s_new_in_1.5_alpha
 l10n:
-  sourceCommit: d19dec85109590176f946fcceef48c787d578b1e
+  sourceCommit: f5ea8950d5cc7bc42691e0bb8a3e634160814bac
 ---
 
 Cette page est basée en grande partie sur [https://www.squarefree.com/burningedg...eases/](https://www.squarefree.com/burningedge/releases/) (merci Jesse).

@@ -2,10 +2,10 @@
 title: dominant-baseline
 slug: Web/SVG/Reference/Attribute/dominant-baseline
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`dominant-baseline`** 属性は、ボックス内のテキストとインラインレベルのコンテンツを整列させるために使用される主要ベースラインを指定します。また、ボックスの整列コンテキストでベースライン揃えに参加するすべてのボックスの既定の整列ベースラインも示します。
+**`dominant-baseline`** 属性は、ボックス内のテキストとインラインレベルのコンテンツを整列させるために使用される主要ベースラインを指定します。また、ボックスの整列コンテキストでベースライン揃えに参加するすべてのボックスのデフォルトの整列ベースラインも示します。
 
 これは、変倍ベースライン表を決定または再決定するために使用します。変倍ベースライン表は、 3 つの部分からなる複合値です。
 
@@ -24,7 +24,6 @@ l10n:
 
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 
 ## 例
@@ -38,9 +37,9 @@ svg {
 
 text {
   font:
-    bold 14px Verdana,
-    Helvetica,
-    Arial,
+    bold 14px "Helvetica",
+    "Verdana",
+    "Arial",
     sans-serif;
 }
 ```
@@ -65,14 +64,14 @@ text {
       <th scope="row">値</th>
       <td>
         <code>auto</code>
-        <a href="https://www.w3.org/TR/css3-values/#comb-one">|</a>
+        <a href="/ja/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax#単一バー">|</a>
         <code>text-bottom</code> | <code>alphabetic</code> |
         <code>ideographic</code> | <code>middle</code> | <code>central</code> |
         <code>mathematical</code> | <code>hanging</code> | <code>text-top</code>
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>auto</code></td>
     </tr>
     <tr>

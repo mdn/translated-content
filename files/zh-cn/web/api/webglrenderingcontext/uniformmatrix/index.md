@@ -11,7 +11,7 @@ slug: Web/API/WebGLRenderingContext/uniformMatrix
 
 ## 语法
 
-```plain
+```js-nolint
 WebGLRenderingContext.uniformMatrix2fv(location, transpose, value);
 WebGLRenderingContext.uniformMatrix3fv(location, transpose, value);
 WebGLRenderingContext.uniformMatrix4fv(location, transpose, value);

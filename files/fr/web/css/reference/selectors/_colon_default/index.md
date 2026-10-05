@@ -42,21 +42,21 @@ input:default {
     de confidentialité.</label
   >
 
-  <input type="submit" value="Soumettre le formulaire" />
+  <input type="submit" value="Envoyer le formulaire" />
 </form>
 ```
 
-Ce sélecteur est spécifié par WHATWG HTML dans [le paragraphe 4.16.3 <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default) et peut être utilisé par les éléments {{HTMLElement("button")}}, [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox), [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio) et {{HTMLElement("option")}}&nbsp;:
+Ce sélecteur est définit par WHATWG HTML dans [le paragraphe 4.16.3 <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default) et peut être utilisé par les éléments {{HTMLElement("button")}}, [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox), [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio) et {{HTMLElement("option")}}&nbsp;:
 
 - Un élément `<option>` par défaut est le premier qui possède l'attribut `selected` ou le premier qui est activé selon l'ordre du DOM.
-- Les éléments `<input type="checkbox">` et `<input type="radio">` seront ciblés s'ils possèdent l'attribut `checked`.
+- Les éléments `<input type="checkbox">` et `<input type="radio">` sont ciblés s'ils possèdent l'attribut `checked`.
 - L'élément `<button>` est ciblé si c'est le bouton d'envoi par défaut d'un formulaire, c'est-à-dire le premier bouton (selon l'ordre du DOM) appartenant au formulaire (cela vaut également pour les éléments {{HTMLElement("input")}} dont le type permet d'envoyer des formulaires tels que `image` ou `submit`).
 
 ## Syntaxe
 
 ```css
 :default {
-  /* ... */
+  /* … */
 }
 ```
 
@@ -68,16 +68,16 @@ Ce sélecteur est spécifié par WHATWG HTML dans [le paragraphe 4.16.3 <sup>(an
 <fieldset>
   <legend>Saison préférée</legend>
 
-  <input type="radio" name="season" id="spring" />
+  <input type="radio" name="saison" id="spring" />
   <label for="spring">Printemps</label>
 
-  <input type="radio" name="season" id="summer" checked />
+  <input type="radio" name="saison" id="summer" checked />
   <label for="summer">Eté</label>
 
-  <input type="radio" name="season" id="fall" />
+  <input type="radio" name="saison" id="fall" />
   <label for="fall">Automne</label>
 
-  <input type="radio" name="season" id="winter" />
+  <input type="radio" name="saison" id="winter" />
   <label for="winter">Hiver</label>
 </fieldset>
 ```
@@ -108,6 +108,6 @@ input:default + label {
 
 ## Voir aussi
 
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn_web_development/Extensions/Forms)
+- [Table de compatibilité des propriétés pour les composants de formulaire](/fr/docs/Learn_web_development/Extensions/Forms)
 - [Mise en forme des formulaires](/fr/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - Éléments HTML associés&nbsp;: {{HTMLElement("button")}}, [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox), [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio) et {{HTMLElement("option")}}

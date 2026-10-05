@@ -2,12 +2,12 @@
 title: 一括指定プロパティ
 slug: Web/CSS/Guides/Cascade/Shorthand_properties
 l10n:
-  sourceCommit: 41d437c9dfc5417430d9632ce7196f5817048cbc
+  sourceCommit: 9dad06197b9a4c09d7c1e03b5aac47458a30cb2e
 ---
 
-**一括指定プロパティ** (shorthand property) は、他のいくつかの CSS プロパティを一度に設定できる CSS プロパティです。一括指定プロパティを用いると、もっと簡単に (そして普通はもっと読みやすく) スタイルシートが書け、時間や労力を節約することができます。
+**一括指定プロパティ** (shorthand property) は、他のいくつかの CSS プロパティを一つの宣言で設定できる CSS プロパティです。一括指定プロパティを用いると、もっと簡単に（そして普通はもっと読みやすく）スタイルシートが書け、時間や労力を節約することができます。
 
-CSS 仕様書では、同じ主題に作用する共通のプロパティの定義をグループ化するために、一括指定プロパティを定義しています。例えば、 {{cssxref("background")}} プロパティは {{cssxref("background-color")}}、 {{cssxref("background-image")}}、 {{cssxref("background-repeat")}}、{{cssxref("background-position")}} の値を定義することができる一括指定プロパティです。同様に、フォントに関連したプロパティは一括指定の {{cssxref("font")}} を使用して定義することができ、ボックスの周囲のマージンは一括指定の {{cssxref("margin")}} を使用して定義することができます。
+CSS 仕様書では、同じ主題に作用する共通のプロパティの定義をグループ化するために、一括指定プロパティを定義しています。例えば、 {{cssxref("background")}} プロパティは {{cssxref("background-color")}}、 {{cssxref("background-image")}}、 {{cssxref("background-repeat")}}、{{cssxref("background-position")}} の値を定義することができる一括指定プロパティです。
 
 ## 注意すべき場合
 
@@ -37,20 +37,20 @@ p {
 
 ここで重要なのは 2 つのケースです。
 
-- {{cssxref("border-style")}}, {{cssxref("margin")}}, {{cssxref("padding")}} など、ボックスの辺に関連したプロパティ。
+- {{cssxref("border-style")}}, {{cssxref("margin")}}, {{cssxref("padding")}} など、ボックスの辺に関連したプロパティ
 - {{cssxref("border-radius")}} のように、ボックスの角に関連するプロパティ
 
 #### ボックスの辺
 
-ボックスの境界に関するプロパティを扱う一括指定 ({{cssxref("border-style")}}, {{cssxref("margin")}}, {{cssxref("padding")}}) は、それぞれの辺を表すために、一貫して 1 ～ 4 つの値の構文を使用します。
+ボックスの辺に関するプロパティを扱う一括指定 ({{cssxref("border-style")}}, {{cssxref("margin")}}, {{cssxref("padding")}}) は、それぞれの辺を表すために、一貫して 1 ～ 4 つの値の構文を使用します。
 
 - **値 1 つの構文:** `border-width: 1em` — 1 つの値ですべての辺を表します。 ![値 1 つの構文におけるボックスの辺](border1.png)
 
-- **値 2 つの構文:** `border-width: 1em 2em` — 最初の値は垂直、すなわち上下の辺を、次の値は水平、すなわち左右の辺を表します。 ![値 2 つの構文におけるボックスの辺](border2.png)
+- **値 2 つの構文:** `border-width: 1em 2em` — 1 つ目の値は上下の辺を、2 つ目の値は左右の辺を表します。 ![値 2 つの構文におけるボックスの辺](border2.png)
 
-- **値 3 つの構文:** `border-width: 1em 2em 3em` — 最初の値は上辺、 2 番目の値は水平、すなわち左右の辺、 3 番目の値は下辺を表します。 ![値 3 つの構文におけるボックスの辺](border3.png)
+- **値 3 つの構文:** `border-width: 1em 2em 3em` — 1 つ目の値は上辺、2 つ目の値は左右の辺、 3 つ目の値は下辺を表します。 ![値 3 つの構文におけるボックスの辺](border3.png)
 
-- **値 4 つの構文:** `border-width: 1em 2em 3em 4em` — 4 つの値がそれぞれ上、右、下、左の辺を表し、これは上を起点に時計回りの順です。 ![値 4 つの構文におけるボックスの辺](border4.png) Top-Right-Bottom-Left の頭文字は、 _trouble_ の子音 TRBL の順と一致します。また、時計の上で針が回転する順番として覚えることもできます。 `1em` は 12 時の位置で始まり、 3 時の位置で `2em`、それから 6 時の位置で `3em`、そして 9 時の位置で `4em` です。
+- **値 4 つの構文:** `border-width: 1em 2em 3em 4em` — 4 つの値がそれぞれ上、右、下、左の辺を表します。これは上を起点に時計回りの順です。 ![値 4 つの構文におけるボックスの辺](border4.png) Top-Right-Bottom-Left の頭文字は、 _trouble_ の子音 TRBL の順と一致します。また、時計の上で針が回転する順番として覚えることもできます。 `1em` は 12 時の位置で始まり、 3 時の位置で `2em`、それから 6 時の位置で `3em`、そして 9 時の位置で `4em` です。
 
 #### ボックスの角
 
@@ -58,12 +58,12 @@ p {
 
 - **値 1 つの構文:** `border-radius: 1em` — 1 つの値がすべての角を表現します。 ![値 1 つの構文におけるボックスの角](corner1.png)
 
-- **値 2 つの構文:** `border-radius: 1em 2em` — 最初の値は左上と右下の角、 2 番目の値は右上と左下の角を表します。 ![値 2 つの構文におけるボックスの角](corner2.png)
+- **値 2 つの構文:** `border-radius: 1em 2em` — 1 つ目値は左上と右下の角を表し、 2 つ目の値は右上と左下の角を表します。 ![値 2 つの構文におけるボックスの角](corner2.png)
 
-- **値 3 つの構文:** `border-radius: 1em 2em 3em` — 最初の値は左上、 2 番目の値は右上と左下、 3 番目の値は右下の角をそれぞれ表します。 ![値 3 つの構文におけるボックスの角](corner3.png)
+- **値 3 つの構文:** `border-radius: 1em 2em 3em` — 1 つ目の値は左上の角を表し、 2 つ目の値は右上と左下の角を表し、 3 つ目の値は右下の角を表します。 ![値 3 つの構文におけるボックスの角](corner3.png)
 
 - **値 4 つの構文:**
-  `border-radius: 1em 2em 3em 4em` — 4 つの値がそれぞれ左上、右上、右下、左下を表し、これは左上を起点にした時計回りの順です。 ![値 4 つの構文におけるボックスの角](corner4.png)
+  `border-radius: 1em 2em 3em 4em` — 4 つの値がそれぞれ左上、右上、右下、左下の角を表し、これは左上を起点にした時計回りの順です。 ![値 4 つの構文におけるボックスの角](corner4.png)
 
 ## background プロパティ
 

@@ -14,7 +14,7 @@ A la hora de dar estilo a los [enlaces](/es/docs/Learn_web_development/Core/Stru
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de informática, conceptos básicos de HTML (véase
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >), conocimientos básicos de CSS (véase
         <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Introducción al CSS</a>),

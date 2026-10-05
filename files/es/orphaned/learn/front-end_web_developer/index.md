@@ -71,8 +71,8 @@ Las evaluaciones de cada módulo están diseñadas para comprobar tu conocimient
 
 #### Módulos
 
-- [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) (15 a 20 horas de lectura/ejercicios)
-- [Multimedia e inserción](/es/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b) (15 a 20 horas de lectura/ejercicios)
+- [Introducción a HTML](/es/docs/Learn_web_development/Core/Structuring_content) (15 a 20 horas de lectura/ejercicios)
+- [Multimedia e inserción](/es/docs/Learn_web_development/Core/Structuring_content) (15 a 20 horas de lectura/ejercicios)
 - [tablas HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) (5 a 10 horas de lectura/ejercicios)
 
 ### Estilo y diseño con CSS
@@ -81,7 +81,7 @@ Tiempo para completar: 90 a 120 horas
 
 #### Prerrequisitos
 
-Es recomendable que tengas conocimientos básicos de HTML antes de comenzar a aprender CSS. Primero deberías estudiar [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) por lo menos.
+Es recomendable que tengas conocimientos básicos de HTML antes de comenzar a aprender CSS. Primero deberías estudiar [Introducción a HTML](/es/docs/Learn_web_development/Core/Structuring_content) por lo menos.
 
 #### ¿Cómo sabré que estoy listo para seguir adelante?
 
@@ -104,7 +104,7 @@ Tiempo para completar: 135 a 185 horas
 
 #### Prerrequisitos
 
-Es recomendable que tengas conocimientos básicos de HTML antes de comenzar a aprender JavaScript. Primero deberías estudiar [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) por lo menos.
+Es recomendable que tengas conocimientos básicos de HTML antes de comenzar a aprender JavaScript. Primero deberías estudiar [Introducción a HTML](/es/docs/Learn_web_development/Core/Structuring_content) por lo menos.
 
 #### ¿Cómo sabré que estoy listo para seguir adelante?
 

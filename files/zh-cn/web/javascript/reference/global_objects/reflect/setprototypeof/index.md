@@ -24,7 +24,7 @@ console.log(Reflect.setPrototypeOf(Object.freeze(object2), null));
 
 ## 语法
 
-```plain
+```js-nolint
 Reflect.setPrototypeOf(target, prototype)
 ```
 

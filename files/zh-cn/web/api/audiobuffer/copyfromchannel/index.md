@@ -9,7 +9,7 @@ slug: Web/API/AudioBuffer/copyFromChannel
 
 ## 语法
 
-```plain
+```js-nolint
 myArrayBuffer.copyFromChannel(destination,channelNumber,startInChannel);
 ```
 

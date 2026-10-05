@@ -25,7 +25,7 @@ console.log(Math.asinh(2));
 
 ## 语法
 
-```plain
+```js-nolint
 Math.asinh(x)
 ```
 

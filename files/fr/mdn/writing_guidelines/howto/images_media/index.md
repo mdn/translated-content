@@ -3,7 +3,7 @@ title: Comment ajouter des images et des médias
 short-title: Ajouter des médias
 slug: MDN/Writing_guidelines/Howto/Images_media
 l10n:
-  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
 Cette page explique comment ajouter des images et des médias aux pages de documentation sur MDN.
@@ -73,7 +73,7 @@ Prenons un exemple&nbsp;:
    git push -u origin mes-images
    ```
 
-6. Vous êtes maintenant prêt à créer votre [requête de tirage (<i lang="en">pull request</i> en anglais)](https://docs.github.com/fr/pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+6. Vous êtes maintenant prêt à créer votre [requête de tirage (<i lang="en">pull request</i> en anglais)](https://docs.github.com/fr/pull-requests/how-tos/create-pull-requests/creating-a-pull-request).
 
 ## Ajouter les textes alternatifs aux images
 

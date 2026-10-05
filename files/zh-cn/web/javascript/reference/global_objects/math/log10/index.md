@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/log10
 
 ## 语法
 
-```plain
+```js-nolint
 Math.log10(x)
 ```
 

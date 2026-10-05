@@ -24,7 +24,7 @@ console.log(pets.includes("at"));
 
 ## 語法
 
-```plain
+```js-nolint
 arr.includes(searchElement[, fromIndex])
 ```
 

@@ -7,7 +7,7 @@ slug: Web/API/WebGLRenderingContext/getShaderSource
 
 ## 语法
 
-```plain
+```js-nolint
 DOMString gl.getShaderSource(shader);
 ```
 

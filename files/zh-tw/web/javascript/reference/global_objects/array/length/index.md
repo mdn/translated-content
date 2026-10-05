@@ -32,7 +32,7 @@ console.log(namelistB.length);
 
 你可以透過改變 `length` 屬性來改變陣列的長度。當你透過 `length` 屬性來增加陣列的長度時，陣列中實際的元素也會隨之增加。舉例來說，當你將 array.length 由 2 增加為 3，則改動後該陣列即擁有 3 個元素，該新增的元素則會是一個不可迭代(non-iterable)的空槽(empty slot)。
 
-```plain
+```js
 const arr = [1, 2];
 console.log(arr);
 // [ 1, 2 ]
@@ -41,7 +41,7 @@ arr.length = 5; // 將arr的length由2改成5
 console.log(arr);
 // [ 1, 2, <3 empty items> ]
 
-arr.forEach(element => console.log(element)); // 空元素無法被迭代
+arr.forEach((element) => console.log(element)); // 空元素無法被迭代
 // 1
 // 2
 ```

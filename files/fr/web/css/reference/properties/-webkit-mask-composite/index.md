@@ -60,7 +60,7 @@ La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-mask-composite`** définit la 
 - `destination-atop`
   - : Les pixels de l'image source sont affichés. Les pixels de l'image de destination sont uniquement utilisés s'ils ne chevauchent pas des portions non-transparentes de l'image source. Cela fait que l'image de destination n'a aucun effet.
 - `xor`
-  - : Les pixels qui se chevauchent deviennent complètement transparents s'ils étaient complètement opaques.
+  - : Les pixels qui se chevauchent deviennent complètement transparents s'ils sont complètement opaques.
 
 ## Définition formelle
 
@@ -83,7 +83,7 @@ La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-mask-composite`** définit la 
 
 ## Spécifications
 
-Cette propriété ne fait partie d'aucun standard. Cette propriété est spécifiée avec {{CSSxRef("mask-composite")}} utilisant des valeurs différentes.
+Cette propriété ne fait partie d'aucun standard. Cette propriété est définie avec {{CSSxRef("mask-composite")}} utilisant des valeurs différentes.
 
 ## Compatibilité des navigateurs
 

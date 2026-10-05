@@ -41,8 +41,8 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
   - : Ce descripteur permet d'avoir un contrôle avancé sur les fonctionnalités typographiques relatives aux polices OpenType.
 - {{CSSxRef("@font-face/font-variation-settings", "font-variation-settings")}}
   - : Ce descripteur permet d'avoir un contrôle de bas niveau sur les variations des polices OpenType et TrueType en indiquant les noms des axes et des fonctionnalités à faire varier.
-- {{cssxref("@font-face/font-width", "font-width")}}
-  - : Permet aux auteur·ice·s de définir une police normale, condensée ou étendue pour les polices spécifiées.
+- {{CSSxRef("@font-face/font-width", "font-width")}}
+  - : Permet aux auteur·ice·s de définir une police normale, condensée ou étendue pour les polices définies.
 - {{CSSxRef("@font-face/line-gap-override", "line-gap-override")}}
   - : Définit la métrique pour l'interlignage de la police.
 - {{CSSxRef("@font-face/size-adjust", "size-adjust")}}

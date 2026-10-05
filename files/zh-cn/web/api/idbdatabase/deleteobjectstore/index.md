@@ -13,7 +13,7 @@ slug: Web/API/IDBDatabase/deleteObjectStore
 
 ## 语法
 
-```plain
+```js-nolint
 dbInstance.deleteObjectStore(name);
 ```
 

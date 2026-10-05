@@ -11,7 +11,7 @@ slug: Web/HTTP/Reference/Headers/DNT
 
 ## 語法
 
-```plain
+```http
 DNT: 0
 DNT: 1
 ```

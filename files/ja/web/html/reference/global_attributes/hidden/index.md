@@ -1,9 +1,9 @@
 ---
-title: HTML hidden グローバル属性
+title: "`hidden` グローバル属性 (HTML)"
 short-title: hidden
 slug: Web/HTML/Reference/Global_attributes/hidden
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 **`hidden`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は {{Glossary("enumerated", "列挙型")}}属性であり、ブラウザーがその要素の中身を表示すべきではないことを示します。例えば、ログイン処理が完了するまで使用できないページの要素を非表示にするために使用することができます。
@@ -76,7 +76,7 @@ _hidden until found_ の状態では、要素は非表示になりますが、�
 - この要素はページレイアウトに参加します
 - 要素の margin, borders, padding, background がレンダリングされます
 
-また、その要素を明らかにするためには、[レイアウトコンテインメント](/ja/docs/Web/CSS/Guides/Containment)の影響を受けている必要があります。これは、_hidden until found_ 状態の要素の `display` 値が `none`、`contents`、`inline` の何れかである場合、その要素はページまたはフラグメントナビゲーションでの検索によって明らかにされないことを意味しています。
+また、その要素を明らかにするためには、[レイアウト抑制](/ja/docs/Web/CSS/Guides/Containment)の影響を受けている必要があります。これは、_hidden until found_ 状態の要素の `display` 値が `none`、`contents`、`inline` のいずれかである場合、その要素はページまたはフラグメントナビゲーションでの検索によって明らかにされないことを意味しています。
 
 ## 使用上のメモ
 
@@ -143,7 +143,7 @@ div {
 
 <div>隠されていません</div>
 <div id="until-found-box" hidden="until-found">Hidden until found</div>
-<div>隠されていません</div>
+<div>こちらも隠されていません</div>
 ```
 
 ```html hidden

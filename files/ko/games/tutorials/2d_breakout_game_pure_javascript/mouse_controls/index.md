@@ -47,6 +47,6 @@ function mouseMoveHandler(e) {
 
 ## 다음 단계
 
-이제 우리는 완전한 게임을 할 수 있게 되었습니다. 우리는 몇 가지 작은 코드만으로 이 레슨을 마치게 될 것 입니다! — [마지막](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up).
+이제 우리는 완전한 게임을 할 수 있게 되었습니다. 우리는 몇 가지 작은 코드만으로 이 레슨을 마치게 될 것 입니다! — [마지막](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives).
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}

@@ -1,8 +1,9 @@
 ---
-title: attr()
+title: "`attr()` 関数 (CSS)"
+short-title: attr()
 slug: Web/CSS/Reference/Values/attr
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: e2c34c75df6238fbeff790100cea1ab7e552e49e
 ---
 
 > [!NOTE]
@@ -25,7 +26,7 @@ blockquote::after {
 ```
 
 ```html interactive-example
-<blockquote cite="https://mozilla.org/en-US/about/">
+<blockquote cite="https://mozilla.org/ja/about/">
   Mozilla is working to put control of the internet back in the hands of the
   people using it.
 </blockquote>
@@ -55,6 +56,9 @@ attr(data-size type(<length> | <percentage>))
 attr(data-count type(<number>), 0)
 attr(data-width px, inherit)
 attr(data-something, "default")
+
+/* 名前空間付き */
+attr(color|myAttr type(*), red)
 ```
 
 ### 引数
@@ -69,6 +73,19 @@ attr(<attr-name> <attr-type>? , <fallback-value>?)
 
 - `<attr-name>`
   - : 選択した HTML 要素から取得すべき値の属性名です。
+    - 名前空間
+      - : 属性名には名前空間 ([`namespace`](/ja/docs/Web/CSS/Guides/Namespaces)) を含めることができ、これにより [XML](/ja/docs/Web/XML) ベースのマークアップ言語（ [SVG](/ja/docs/Web/SVG) や [MathML](/ja/docs/Web/MathML) など）の要素を対象とすることができるようになります。
+
+        ```css
+        @namespace svg url("http://www.w3.org/2000/svg");
+        a {
+          fill: attr(svg|myAttr type(*), green);
+        }
+        ```
+
+        > [!NOTE]
+        > 名前空間が指定されていない場合（`attr(foo)` のように識別子のみが指定された場合）、null の名前空間が暗黙的に適用されます。名前空間付きの属性は稀であるため、通常はこの動作が望ましいものです。属性セレクターと同様に、`<attr-name>` の大文字小文字の区別は、文書の言語によって異なります。
+
 - `<attr-type>`
   - : 属性値が CSS 値に構文解析される方法を指定します。これは、`raw-string` キーワード、{{cssxref("type()")}} 関数、または CSS のサイズ単位（`<attr-unit>` 識別子を使用して指定）です。省略した場合は、既定で `raw-string` になります。
     - `raw-string`
@@ -84,10 +101,10 @@ attr(<attr-name> <attr-type>? , <fallback-value>?)
     - {{cssxref("type()")}}
       - : `type()`関数は、値をどのデータ型に解釈するかを指定する `<syntax>` を引数として取ります。
         > [!NOTE]
-        > [セキュリティ上の理由](#制限およびセキュリティ) により、 {{CSSxRef("url_value", "&lt;url&gt;")}} は `attr()` のデータ型として使用できません。
+        > [セキュリティ上の理由](#制限およびセキュリティ)により、{{CSSxRef("url_value", "&lt;url&gt;")}} は `attr()` のデータ型として使用できません。
 
     - `<attr-unit>`
-      - : `<attr-unit>` 識別子は、数値が持つべき単位（ある場合）を指定します。これは、`%` 文字（パーセント値）、または [CSS の距離単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#distance_units) （`px`、`rem`、`deg`、`s` など）です。
+      - : `<attr-unit>` 識別子は、数値が持つべき単位（ある場合）を指定します。これは、`%` 文字（パーセント値）、または [CSS の寸法の単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#寸法の単位) （`px`、`rem`、`deg`、`s` など）です。
 
         ```css
         attr(data-size rem)
@@ -110,9 +127,11 @@ attr(<attr-name> <attr-type>? , <fallback-value>?)
 
 ### 制限およびセキュリティ
 
-`attr()` 関数は、スタイル設定を意図していない属性や機密情報（例えば、ページ上のスクリプトで使用されるセキュリティトークン）が含まれている属性を参照することが可能です。通常、これは問題ありませんが、URL で使用するとセキュリティ上の脅威となる可能性があります。そのため、 `attr()` を使用して URL を動的に構築することはできません。
+`attr()` 関数は、スタイル設定を意図していない属性や機密情報（例えば、ページ上のスクリプトで使用されるセキュリティトークン）が含まれている属性を参照することが可能です。通常、これは問題ありませんが、URL で使用するとセキュリティ上の脅威となる可能性があります。
 
-```html
+そのため、 `attr()` を使用して URL を動的に構築することはできません。
+
+```html example-bad
 <!-- これは動作しません -->
 <span data-icon="https://example.org/icons/question-mark.svg">help</span>
 ```
@@ -123,16 +142,16 @@ span[data-icon] {
 }
 ```
 
-ただし、この制限は `<url>` 型が厳密に要求される場所にのみ適用されます。
-{{CSSxRef("image/image-set","image-set()")}} などの一部の関数は、後で URL として解釈される `<string>` 値を受け入れることができ、ブラウザーの対応状況次第では、そのようなコンテキストで `attr()` が機能することを許可しています。
+この制限は `<url>` 型が厳密に要求される場所にのみ適用されます。
+`attr()` を使用する値は、「`attr()` 汚染」としてマークされます。 `attr()` 汚染された値を `<url>` として、または `<url>` 内で使用すると、宣言は[計算値の時点において無効 (IACVT)](https://www.bram.us/2024/02/26/css-what-is-iacvt/) となります。
 
-```css
+例えば、{{CSSxRef("image/image-set","image-set()")}} のような、`<url>` に解決される値を受け取る関数も動作しません。
+
+```css example-bad
 span[data-icon] {
   background: image-set(attr(data-icon));
 }
 ```
-
-`attr()` を使用する値は、「`attr()` 汚染」としてマークされます。 `attr()` 汚染された値を `<url>` として、または `<url>` 内で使用すると、宣言は[「計算値の時点において無効」（略して IACVT）](https://www.bram.us/2024/02/26/css-what-is-iacvt/)となります。
 
 ### 後方互換性
 
@@ -208,7 +227,7 @@ if (!CSS.supports("x: attr(x type(*))")) {
 }
 ```
 
-### 形式文法
+## 形式文法
 
 {{CSSSyntax}}
 
@@ -298,7 +317,7 @@ p::after {
 
 {{EmbedLiveSample("color 値", "100%", 50)}}
 
-### 距離の単位の使用
+### 寸法の単位の使用
 
 {{SeeCompatTable}}
 

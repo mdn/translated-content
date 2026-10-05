@@ -18,7 +18,7 @@ slug: Web/CSS/Reference/Properties/bottom
 
 ## 语法
 
-```plain
+```css
 /* <length> values */
 bottom: 3px;
 bottom: 2.4em;

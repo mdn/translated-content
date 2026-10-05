@@ -1,12 +1,10 @@
 ---
-title: "HTML 属性: disabled"
+title: "`disabled` 属性 (HTML)"
 short-title: disabled
 slug: Web/HTML/Reference/Attributes/disabled
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
 ---
-
-{{HTMLSidebar}}
 
 **`disabled`** は論理属性で、存在する場合、その要素は変更不可、フォーカス不可、フォームへの送信不可となります。ユーザーはそのコントロールやフォームコントロールの子孫を編集したり、フォーカスしたりすることができません。
 
@@ -68,13 +66,13 @@ Firefox は他のブラウザーとは異なり、ページを再読み込みし
 無効にされたフィールドはその値を変更することができないので、 [`required`](/ja/docs/Web/HTML/Reference/Attributes/required) は `disabled` 属性も指定されている入力に対しては効果がありません。さらに、要素が変更不可になるので、[`pattern`](/ja/docs/Web/HTML/Reference/Attributes/pattern) のような他のほとんどの属性も、コントロールが有効になるまで効果がありません。
 
 > [!NOTE]
-> `disabled` 属性が指定されている入力フィールドでは、 `required` 属性は許可されません。
+> `disabled` 属性が指定されている入力フィールドでは、`required` 属性は許可されません。
 
 ### ユーザビリティ
 
 ブラウザーは無効なフォームコントロールを灰色で表示します。無効なフォームコントロールは不変であり、フォーカスやマウスクリックなどの閲覧イベントを受け取らず、フォームと一緒に送信されないためです。
 
-対応している要素に {{cssxref(':disabled')}} 擬似クラスが存在する場合、それに一致するようになります。この属性が含まれていない場合は `{{cssxref(':enabled')}}` 擬似クラスが一致します。要素が disabled 属性に対応していない場合は、この属性は何の効果も持たず、 `:disabled` および `:enabled` 擬似クラスにも一致しません。
+対応している要素に {{cssxref(':disabled')}} 擬似クラスが存在する場合、それに一致するようになります。この属性が含まれていない場合は {{cssxref(':enabled')}} 擬似クラスに一致します。要素が disabled 属性に対応していない場合は、この属性は何の効果も持たず、 `:disabled` にもび `:enabled` 擬似クラスにも一致しません。
 
 ### 制約検証
 

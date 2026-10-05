@@ -12,7 +12,7 @@ slug: Web/HTTP/Reference/Headers/Last-Modified
 
 ## 语法
 
-```plain
+```http
 Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 ```
 
@@ -37,7 +37,7 @@ Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 
 ## 示例
 
-```plain
+```http
 Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 

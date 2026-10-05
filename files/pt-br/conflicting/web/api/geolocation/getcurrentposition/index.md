@@ -10,7 +10,7 @@ slug: conflicting/Web/API/Geolocation/getCurrentPosition
 _A interface `PositionOptions` não herda_ **qualquer propriedade**.
 
 - {{domxref("PositionOptions.enableHighAccuracy")}}
-  - : É um {{domxref("Boolean")}} que indica se a aplicação deve receber os melhores (mais exatos) resultados possíveis. Se o valor for `true` e o dispositivo puder disponibilizar uma posição mais exata, ele o fará. Note que isto pode resultar em respostas mais lentas ou aumentar o consumo de bateria. (GPS em um dispositivo mobile). Se o valor for `false`, o dispositivo toma a liberdade de salvar os recursos respondendo mais rapidamente e/ou utilizando menos bateria. Default: `false`
+  - : É um {{jsxref("Boolean")}} que indica se a aplicação deve receber os melhores (mais exatos) resultados possíveis. Se o valor for `true` e o dispositivo puder disponibilizar uma posição mais exata, ele o fará. Note que isto pode resultar em respostas mais lentas ou aumentar o consumo de bateria. (GPS em um dispositivo mobile). Se o valor for `false`, o dispositivo toma a liberdade de salvar os recursos respondendo mais rapidamente e/ou utilizando menos bateria. Default: `false`
 - {{domxref("PositionOptions.timeout")}}
   - : É um valor `long` positivo que representa o tamanho máximo do tempo (em milissegundos) que o dispositivo deve levar para retornar uma posição. O valor default é [`Infinity`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Infinity), o que significa que `getCurrentPosition()` não terá retorno até que a posição esteja disponível.
 - {{domxref("PositionOptions.maximumAge")}}

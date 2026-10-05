@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/scissor
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.scissor(x, y, width, height);
 ```
 

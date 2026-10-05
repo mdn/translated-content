@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5a2cea779777daaff451f21ca3b7f4c28a68de9e
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("String")}} 값의 **`bold()`** 메서드는 문자열을 굵게 보이게 하는 {{HTMLElement("b")}} 요소(`<b>str</b>`)에 해당 문자열을 집어넣은 문자열을 생성합니다.
 

@@ -2,12 +2,13 @@
 title: Argument (実引数)
 slug: Glossary/Argument
 l10n:
-  sourceCommit: d842f8c32316dbe36cff9fc5e0e777602e32d958
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+**実引数**は、{{Glossary("function", "関数")}}の入力として渡される{{Glossary("value", "値")}}（{{Glossary("primitive", "プリミティブ")}}または{{Glossary("object", "オブジェクト")}}）です。関数定義内で実引数を参照するために使用される名前である{{Glossary("parameter","仮引数")}}と混同しないでください。
 
-**実引数**は{{Glossary("function", "関数")}}の入力として渡される{{Glossary("value", "値")}}（{{Glossary("primitive", "プリミティブ")}}または{{Glossary("object", "オブジェクト")}}）です。
+> [!NOTE]
+> （訳注）日本語では、実引数 (argunment) と仮引数 (parameter) をまとめて**引数**と呼ぶのが一般的です。MDN の翻訳記事では、区別が必要な場面を除いて「引数」の用語を使用しています。
 
 例:
 
@@ -30,7 +31,7 @@ const argument1 = "foo";
 const argument2 = [1, 2, 3];
 example(argument1, argument2); // 2 つの実引数を渡す
 
-// この関数は単一の値を取るので、渡された第 2 引数は無視される。
+// この関数は単一の値を取るので、渡された第二引数は無視される。
 function example(parameter) {
   console.log(parameter); // 出力 = foo
 }
@@ -38,5 +39,9 @@ function example(parameter) {
 
 ## 関連情報
 
-- [仮引数と実引数の違い](http://ja.wikipedia.org/wiki/引数)（ウィキペディア）
-- {{glossary("JavaScript")}} の {{jsxref("Functions/arguments","arguments")}} オブジェクト
+- [仮引数と実引数の違い](http://ja.wikipedia.org/wiki/引数) - ウィキペディア
+- JavaScript の {{jsxref("Functions/arguments", "arguments")}} オブジェクト
+- 関連用語:
+  - {{Glossary("Function", "関数")}}
+  - {{Glossary("Parameter", "仮引数")}}
+  - {{glossary("JavaScript")}}

@@ -11,7 +11,7 @@ slug: Web/API/Window/fullScreen
 
 ## 语法
 
-```plain
+```js
 isInFullScreen = windowRef.fullScreen;
 ```
 

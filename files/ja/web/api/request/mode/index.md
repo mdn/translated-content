@@ -3,7 +3,7 @@ title: "Request: mode プロパティ"
 short-title: mode
 slug: Web/API/Request/mode
 l10n:
-  sourceCommit: 0129176c2bb0e16af7577067191f0889326fad73
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
@@ -30,7 +30,7 @@ l10n:
 - `navigate`
   - : ナビゲーションに対応しているモードです。 `navigate` 値は HTML ナビゲーションでのみ使用されることを意図しています。 navigate リクエストは文書内のナビゲーションをするときだけ作成されます。
 
-#### 既定のモード
+#### デフォルトのモード
 
 リクエストは様々な方法で開始されますが、リクエストのモードは、それが開始された具体的な手段によって異なります。
 
@@ -44,7 +44,7 @@ l10n:
 
 ```js
 const myRequest = new Request("flowers.jpg");
-const myMode = myRequest.mode; // 既定では "cors" を返す
+const myMode = myRequest.mode; // デフォルトでは "cors" を返す
 ```
 
 ## 仕様書
