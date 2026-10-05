@@ -36,7 +36,7 @@ TE: gzip
 TE: trailers
 ```
 
-Plusieurs directives dans une liste séparée par des virgules avec des {{glossary("quality values", "valeurs de qualité")}} comme poids&nbsp;:
+Plusieurs directives dans une liste séparée par des virgules avec des {{Glossary("quality values", "valeurs de qualité")}} comme poids&nbsp;:
 
 ```http
 TE: trailers, deflate;q=0.5
@@ -53,7 +53,7 @@ TE: trailers, deflate;q=0.5
 - `trailers`
   - : Indique que le client ne supprime pas les champs de «&nbsp;remorque&nbsp;» dans un [codage de transfert par tranches](/fr/docs/Web/HTTP/Reference/Headers/Transfer-Encoding#chunked).
 - `q`
-  - : Lorsque plusieurs codages de transfert sont acceptables, le paramètre `q` ({{glossary("quality values", "valeurs de qualité")}}) permet de classer les codages par préférence.
+  - : Lorsque plusieurs codages de transfert sont acceptables, le paramètre `q` ({{Glossary("quality values", "valeurs de qualité")}}) permet de classer les codages par préférence.
 
 Notez que `chunked` est toujours pris en charge par les destinataires HTTP/1.1, vous n'avez donc pas besoin de le définir en utilisant l'en-tête `TE`.
 Voir l'en-tête {{HTTPHeader("Transfer-Encoding")}} pour plus de détails.

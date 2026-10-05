@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`NEL`** est utilisé pour configurer la journalisation des requêtes réseau.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`NEL`** est utilisé pour configurer la journalisation des requêtes réseau.
 
 <table class="properties">
   <tbody>
