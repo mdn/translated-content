@@ -15,7 +15,7 @@ Si une implémentation ou une configuration serveur est stricte concernant la ge
 L'en-tête `Content-Type` diffère de {{HTTPHeader("Content-Encoding")}} en ce que `Content-Encoding` aide le destinataire à comprendre comment décoder les données vers leur forme originale.
 
 > [!NOTE]
-> Cette valeur peut être ignorée si les navigateurs effectuent de la [détection du type MIME](/fr/docs/Web/HTTP/Guides/MIME_types#détection_du_type_mime_mime_sniffing) (ou de la détection de contenu) sur les réponses.
+> Cette valeur peut être ignorée si les navigateurs effectuent de la [détection du type MIME](/fr/docs/Web/HTTP/Guides/MIME_types#détection_du_type_mime) (ou de la détection de contenu) sur les réponses.
 > Pour empêcher les navigateurs d'utiliser la détection du type MIME, définissez la valeur de l'en-tête {{HTTPHeader("X-Content-Type-Options")}} à `nosniff`.
 > Consultez [Vérification du type MIME](/fr/docs/Web/Security/Practical_implementation_guides/MIME_types) pour plus de détails.
 
