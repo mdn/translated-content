@@ -192,7 +192,7 @@ l10n:
   </tbody>
 </table>
 
-ユーザーエージェントが対応している形式は、 {{domxref('BarcodeDetector/getSupportedFormats_static','getSupportedFormats()')} メソッドで確認することができます。
+ユーザーエージェントが対応している形式は、 {{domxref('BarcodeDetector/getSupportedFormats_static','getSupportedFormats()')}} メソッドで確認することができます。
 
 ## インターフェイス
 
