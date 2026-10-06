@@ -17,8 +17,6 @@ _親の {{domxref("HTMLElement")}} からプロパティを継承しています
 
 - {{domxref("HTMLLegendElement.form")}} {{ReadOnlyInline}}
   - : この凡例 (legend) が所属するフォームを表す {{domxref("HTMLFormElement")}} です。この凡例の親が fieldset 要素であれば、この属性は親 fieldset 要素の **form** 属性と同じ値を返します。それ以外の場合は、null を返します。
-- {{domxref("HTMLLegendElement.accessKey")}}
-  - : 文字列で、この要素にアクセスするための単一の文字のアクセスキーを表します。
 - {{domxref("HTMLLegendElement.align")}} {{deprecated_inline}}
   - : 文字列で、フォームのセットに対する相対的な配置を表します。
 
