@@ -394,5 +394,3 @@ JavasCript でより低レベルでの音声操作が可能です。これを利
 - [AudioContext](/ja/docs/Web/API/AudioContext)
 - More info on [Spatial Audio](/ja/docs/Web/API/BaseAudioContext/createPanner)
 - [ウェブメディア技術](/ja/docs/Web/Media)
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Apps/Fundamentals/")}}

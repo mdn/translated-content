@@ -144,6 +144,6 @@ l10n:
   - {{domxref("Content Index API", "コンテンツインデックス API", "", "nocode")}}
   - {{domxref("Cookie Store API", "クッキーストア API", "", "nocode")}}
   - {{domxref("Notifications API", "通知 API", "", "nocode")}}
-  - {{domxref("Payment Handler API", "決済ハンドラー API", "", "nocode")}}
+  - {{domxref("Web-based Payment Handler API", "ウェブベースの決済ハンドラー API", "", "nocode")}}
   - {{domxref("Push API", "プッシュ API", "", "nocode")}}
   - {{domxref("Web Periodic Background Synchronization API", "ウェブ定期バックグラウンド同意 API", "", "nocode")}}
