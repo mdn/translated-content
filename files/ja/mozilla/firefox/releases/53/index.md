@@ -59,7 +59,7 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 
 ### DOM
 
-- リンクの {{domxref("HTMLAnchorElement/pathname", "pathname")}} および {{domxref("HTMLAnchorElement/search", "search")}} プロパティは、以前、）（{{HTMLElement("a")}} や {{HTMLELement("link")}} 要素のインターフェイスと同様に）URL の誤った部分を返していました。例えば、URL `http://z.com/x?a=true&b=false` の場合、`pathname` は `"/x?a=true&b=false"` を返し、`search` は `""` を返していましたが、本来はそれぞれ `"/x"` と `"?a=true&b=false"` を返すはずでした。この問題は修正されました ([Firefox バグ 1310483](https://bugzil.la/1310483))。
+- リンクの {{domxref("HTMLAnchorElement/pathname", "pathname")}} および {{domxref("HTMLAnchorElement/search", "search")}} プロパティは、以前、（{{HTMLElement("a")}} や {{HTMLELement("link")}} 要素のインターフェイスと同様に）URL の誤った部分を返していました。例えば、URL `http://z.com/x?a=true&b=false` の場合、`pathname` は `"/x?a=true&b=false"` を返し、`search` は `""` を返していましたが、本来はそれぞれ `"/x"` と `"?a=true&b=false"` を返すはずでした。この問題は修正されました ([Firefox バグ 1310483](https://bugzil.la/1310483))。
 - {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} コンストラクターが、init オブジェクトとして文字列や一連の文字列を受け入れるようになりました ([Firefox バグ 1330678](https://bugzil.la/1330678))。
 - [Selection API](/ja/docs/Web/API/Selection_API) の {{domxref("Selection.setBaseAndExtent()")}} メソッドを実装しました ([Firefox バグ 1321623](https://bugzil.la/1321623))。
 - `file` 型の {{htmlelement("input")}} の `value` に["fakepath"](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly) を追加する機能を、Gecko に実装しました。ほかのブラウザーと同等になります ([Firefox バグ 1274596](https://bugzil.la/1274596))。
