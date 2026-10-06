@@ -18,8 +18,6 @@ slug: Web/API/Plugin
   - : プラグインのファイルのファイル名。
 - {{domxref("Plugin.name")}} {{readonlyinline}}
   - : プラグインの名称。
-- {{domxref("Plugin.version")}} {{readonlyinline}}
-  - : プラグインのバージョン番号文字列。
 
 ## メソッド
 

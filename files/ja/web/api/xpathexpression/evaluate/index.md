@@ -36,15 +36,15 @@ XPath 式の評価結果を表す {{domxref("XPathResult")}} オブジェクト�
 
 #### INVALID_EXPRESSION_ERR
 
-式が {{domxref("XPathEvaluator")}} の規則に従っていなかった場合、 `INVALID_EXPRESSION_ERR` 型の {{domxref("XPathException")}} が発生します。
+式が {{domxref("XPathEvaluator")}} の規則に従っていなかった場合、 `INVALID_EXPRESSION_ERR` 型の {{domxref("DOMException")}} が発生します。
 
 #### TYPE_ERR
 
-結果を指定した型に変換できなかた場合、 `TYPE_ERR` 型の {{domxref("XPathException")}} が発生します。
+結果を指定した型に変換できなかた場合、 `TYPE_ERR` 型の {{domxref("DOMException")}} が発生します。
 
 #### NAMESPACE_ERR
 
-指定した {{domxref("XPathNSResolver")}} で解決できない名前空間接頭辞が式に格納されていた場合、 `NAMESPACE_ERROR` 型の {{domxref("DOMException")}} が発生します。
+指定した `XPathNSResolver` で解決できない名前空間接頭辞が式に格納されていた場合、 `NAMESPACE_ERROR` 型の {{domxref("DOMException")}} が発生します。
 
 #### WRONG_DOCUMENT_ERR
 
