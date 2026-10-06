@@ -16,7 +16,7 @@ l10n:
 1. インストール時に、URL パターンに一致するページ内へ。
    - : `manifest.json` の [`content_scripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) キーを使用して、URL が[指定されたパターンに一致する](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)ページをロードするたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。
 2. 実行時に、URL パターンに一致するページ内へ。
-   - : {{WebExtAPIRef("scripting.registerContentScripts()")}} または（Firefox であればマニフェスト V2 の） {{WebExtAPIRef("contentScripts")}} を使って、URL が[指定されたパターンに一致する](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)ページを読み込むたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。これは方法 1 と似ていますが、実行時にコンテンツスクリプトを追加/削除できる点が異なります。）
+   - : {{WebExtAPIRef("scripting.registerContentScripts()")}} または（Firefox であればマニフェスト V2 の） {{WebExtAPIRef("contentScripts")}} を使って、URL が[指定されたパターンに一致する](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)ページを読み込むたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。（これは方法 1 と似ていますが、実行時にコンテンツスクリプトを追加/削除できる点が異なります。）
 3. 実行時に、特定のタブへ。
    - : {{WebExtAPIRef("scripting.executeScript()")}} または（マニフェスト V2 のみ） {{WebExtAPIRef("tabs.executeScript()")}} を使用すると、必要なときにコンテンツスクリプトを特定のタブに読み込むことができます。（ユーザーが[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)をクリックした場合など。）
 
