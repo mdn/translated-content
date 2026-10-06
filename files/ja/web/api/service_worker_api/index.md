@@ -94,7 +94,7 @@ l10n:
 ## インターフェイス
 
 - {{DOMxRef("Cache")}}
-  - : {{DOMxRef("ServiceWorker")}} のライフライクルの一部としてキャッシュされる、{{DOMxRef("Request")}} / {{DOMxRef("Response")}} オブジェクトのペアのためのストレージです。
+  - : {{DOMxRef("ServiceWorker")}} のライフサイクルの一部としてキャッシュされる、{{DOMxRef("Request")}} / {{DOMxRef("Response")}} オブジェクトのペアのためのストレージです。
 - {{DOMxRef("CacheStorage")}}
   - : {{DOMxRef("Cache")}} オブジェクトのストレージです。これは {{DOMxRef("ServiceWorker")}} がアクセスできるすべての名前付きキャッシュのへの目録を提供し、文字列の名前から対応する {{DOMxRef("Cache")}} へのマップを保持します。
 - {{DOMxRef("Client")}}

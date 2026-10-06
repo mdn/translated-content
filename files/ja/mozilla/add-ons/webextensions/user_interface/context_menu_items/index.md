@@ -17,7 +17,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 
 ## コンテキストメニュー項目の指定
 
-コンテキストメニューを、 {{WebExtAPIRef("contextMenus")}} API を使ってブログラムから管理できます。しかし、この API の恩恵を受けるには、 manifest.json にて `contextMenus` 権限を要求する必要があります。
+コンテキストメニューを、 {{WebExtAPIRef("contextMenus")}} API を使ってプログラムから管理できます。しかし、この API の恩恵を受けるには、 manifest.json にて `contextMenus` 権限を要求する必要があります。
 
 ```json
 "permissions": ["contextMenus"]

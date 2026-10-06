@@ -691,7 +691,7 @@ Another obvious improvement would be to add a "ringing" feature, so that instead
 - [WebRTC API](/ja/docs/Web/API/WebRTC_API)
 - [ウェブメディア技術](/ja/docs/Web/Media)
 - [Guide to media types and formats on the web](/ja/docs/Web/Media/Guides/Formats)
-- [目エディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
 - [メディア能力 API](/ja/docs/Web/API/Media_Capabilities_API)
 - [MediaStream 州力 API](/ja/docs/Web/API/MediaStream_Recording_API)
 - The [Perfect Negotiation](/ja/docs/Web/API/WebRTC_API/Perfect_negotiation) pattern
