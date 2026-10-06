@@ -15,7 +15,7 @@ Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート�
 - [グラデーションの利用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
   - : Firefox 3.6 では `-moz-linear-gradient` および `-moz-radial-gradient` プロパティが {{Cssxref("background")}} において対応が追加されました。
 - [複数の背景](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
-  - : {{cssxref("background")}} プロパティ（および {{Cssxref("background-color")}}、{{Cssxref("background-image")}}、{{Cssxref("background-position")}}、{{Cssxref("background-repeat")}}、{{Cssxref("background-attachment")}} が複数の背景に対応しました。これによりひとつのレイヤーの中で他に重なるような背景を指定できます。
+  - : {{cssxref("background")}} プロパティ（および {{Cssxref("background-color")}}、{{Cssxref("background-image")}}、{{Cssxref("background-position")}}、{{Cssxref("background-repeat")}}、{{Cssxref("background-attachment")}}）が複数の背景に対応しました。これによりひとつのレイヤーの中で他に重なるような背景を指定できます。
 - [Mozilla 独自のメディア特性](/ja/docs/Web/CSS/Reference/Mozilla_extensions#media_features)
   - : Mozilla 独自のシステムメトリックスに複数のメディア特性が追加されました。このメディア特性により、タッチサポートのような機能の有効性の確認を、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)を使用してより安全に行えるようになりました。
 - [背景画像のスケーリング](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
