@@ -2,7 +2,7 @@
 title: Gérer les conflits
 slug: Learn_web_development/Core/Styling_basics/Handling_conflicts
 l10n:
-  sourceCommit: f99d00a1c3697e26a679925954e26564e7e79b98
+  sourceCommit: 8530cf97b809705c3524e733afcb69124b305b2e
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model", "Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade", "Learn_web_development/Core/Styling_basics")}}
@@ -201,19 +201,11 @@ CSS fournit 5 valeurs spéciales et universelles pour les propriétés afin de c
 - {{CSSxRef("unset")}}
   - : Réinitialise la propriété avec sa valeur naturelle. Autrement dit, si la propriété est naturellement héritée, ce mot-clé est synonyme de `inherit`, sinon, il est synonyme de `initial`.
 
-> [!NOTE]
-> Voir [la section sur les types d'origine](/fr/docs/Web/CSS/Guides/Cascade/Introduction#types_dorigine) pour plus d'informations sur ces valeurs et leur fonctionnement.
-
 ### Jouer avec les propriétés de contrôle de l'héritage
 
-Utilisons un exemple avec une liste de liens pour observer comment ces valeurs fonctionnent. Dans l'éditeur qui suit, vous pouvez éditer le CSS et voir l'effet de vos changements. Utilisez cette interactivité pour mieux comprendre le comportement de HTML et de CSS.
+Dans cette section, vous allez expérimenter avec les valeurs universelles des propriétés pour mieux comprendre leurs effets. Manipuler le code est vraiment le meilleur moyen d'acquérir une compréhension plus approfondie de HTML et de CSS.
 
-Dans notre exemple&nbsp;:
-
-1. Le deuxième élément de la liste a la classe `ma-classe-1`. La couleur de l'élément `<a>` qui y est imbriqué est donc fixée avec `inherit`. Si vous retirez la règle, quel effet cela a-t-il sur la couleur du lien&nbsp;?
-2. Comprenez-vous pourquoi les troisième et quatrième liens ont cette couleur&nbsp;? Le troisième lien utilise la valeur `initial` et c'est donc la valeur initiale de la propriété (ici le noir) et non la valeur par défaut du navigateur (le bleu) qui est utilisée. Pour le quatrième, on utilise `unset`, ce qui signifie que le texte du lien utilise la couleur de l'élément parent&nbsp;: vert.
-3. Lequel de ces liens change de couleur si vous ciblez les liens pour y définir une couleur `a { color: red; }`&nbsp;?
-4. Après avoir lu la section qui suit, revenez à cet exemple et renommez la propriété `color` en `all`. Voyez comment le deuxième lien passe à la ligne et est précédé d'une puce. D'après vous, quelles propriétés sont héritées&nbsp;?
+Le HTML suivant définit une liste de liens&nbsp;:
 
 ```html live-sample___keywords
 <ul>

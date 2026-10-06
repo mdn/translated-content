@@ -3,7 +3,7 @@ title: "Testez vos compétences : Images et éléments de formulaire"
 short-title: "Test : Images et formulaires"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 l10n:
-  sourceCommit: a623d4459e2aa00d17dc0fd6b6bc44f56c589950
+  sourceCommit: bfead5c281d92a213f0191746fd98a6bdc4dc457
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
@@ -65,13 +65,13 @@ img {
 
 ## Images et formulaires n°2
 
-Dans cette tâche, vous avez un formulaire de base.
+Dans cette tâche, vous avez un champ de recherche et un bouton.
 
 Pour compléter la tâche&nbsp;:
 
 1. Utilisez des sélecteurs d'attributs pour cibler le champ de recherche et le bouton à l'intérieur de `.mon-formulaire`.
-2. Faites en sorte que le champ de formulaire et le bouton utilisent la même taille de texte que le reste du formulaire.
-3. Donnez au champ de formulaire et au bouton un padding de `10px`.
+2. Faites en sorte que le champ de formulaire et le bouton utilisent la même taille de texte que le reste du conteneur.
+3. Donnez au champ de formulaire et au bouton un remplissage de `10px`.
 4. Donnez au bouton un arrière-plan de `rebeccapurple`, un premier plan blanc, pas de bordure et des coins arrondis de 5px.
 
 Le point de départ de la tâche ressemble à ceci&nbsp;:
@@ -81,13 +81,13 @@ Le point de départ de la tâche ressemble à ceci&nbsp;:
 Voici le code sous-jacent pour ce point de départ&nbsp;:
 
 ```html live-sample___images-forms2-start live-sample___images-forms2-finish
-<form action="" class="mon-formulaire" method="post">
+<div class="mon-formulaire">
   <div>
     <label for="fldSearch">Mots-clés</label>
     <input id="fldSearch" name="keywords" type="search" />
-    <input name="btnSubmit" type="submit" value="Rechercher" />
+    <input name="btnSubmit" type="button" value="Rechercher" />
   </div>
-</form>
+</div>
 ```
 
 ```css live-sample___images-forms2-start live-sample___images-forms2-finish
@@ -120,7 +120,7 @@ Voici un exemple de solution pour cette tâche&nbsp;:
   font-size: inherit;
 }
 
-.mon-formulaire input[type="submit"] {
+.mon-formulaire input[type="button"] {
   padding: 10px;
   font-size: inherit;
   background-color: rebeccapurple;
@@ -149,35 +149,33 @@ Le point de départ de la tâche ressemble à ceci&nbsp;:
 Voici le code sous-jacent pour ce point de départ&nbsp;:
 
 ```html hidden live-sample___forms-2
-<form>
-  <h2>Modifiez vos préférences</h2>
-  <ul>
-    <li>
-      <label for="courriel">Courriel&nbsp;:</label>
-      <input type="email" id="courriel" name="courriel" />
-    </li>
-    <li>
-      <label for="site-web">Site web&nbsp;:</label>
-      <input type="url" id="site-web" name="site-web" />
-    </li>
-    <li>
-      <label for="telephone">Numéro de téléphone&nbsp;:</label>
-      <input type="tel" id="telephone" name="telephone" />
-    </li>
-    <li>
-      <label for="nourriture">Nourriture préférée&nbsp;:</label>
-      <select name="nourriture" id="nourriture">
-        <option>Salade</option>
-        <option>Curry</option>
-        <option>Pizza</option>
-        <option>Fajitas</option>
-      </select>
-    </li>
-    <li>
-      <button>Mettre à jour les préférences</button>
-    </li>
-  </ul>
-</form>
+<h2>Modifiez vos préférences</h2>
+<ul>
+  <li>
+    <label for="courriel">Courriel&nbsp;:</label>
+    <input type="email" id="courriel" name="courriel" />
+  </li>
+  <li>
+    <label for="site-web">Site web&nbsp;:</label>
+    <input type="url" id="site-web" name="site-web" />
+  </li>
+  <li>
+    <label for="telephone">Numéro de téléphone&nbsp;:</label>
+    <input type="tel" id="telephone" name="telephone" />
+  </li>
+  <li>
+    <label for="nourriture">Nourriture préférée&nbsp;:</label>
+    <select name="nourriture" id="nourriture">
+      <option>Salade</option>
+      <option>Curry</option>
+      <option>Pizza</option>
+      <option>Fajitas</option>
+    </select>
+  </li>
+  <li>
+    <button type="button">Mettre à jour les préférences</button>
+  </li>
+</ul>
 ```
 
 ```css live-sample___forms-2

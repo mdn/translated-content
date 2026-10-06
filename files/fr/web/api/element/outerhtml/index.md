@@ -3,7 +3,7 @@ title: "Element : propriété outerHTML"
 short-title: outerHTML
 slug: Web/API/Element/outerHTML
 l10n:
-  sourceCommit: 65cbd4ff030e6763d6868917137d728c3ec29288
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
 {{APIRef("DOM")}}
@@ -70,7 +70,7 @@ console.log(ancre.outerHTML); // sortie : "<a href='https://developer.mozilla.or
 ```
 
 Certains navigateurs sérialisent également les caractères `<` et `>` sous forme de `&lt;` et `&gt;` lorsqu'ils apparaissent dans les valeurs d'attribut (voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs)).
-Ceci permet de prévenir une vulnérabilité potentielle ([mutation XSS <sup>(angl.)</sup>](https://www.securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass.html)) dans laquelle un·e attaquant·e peut créer une entrée contournant une [fonction d'assainissement](/fr/docs/Web/Security/Attacks/XSS#assainissement), permettant une attaque de type script inter-site (XSS).
+Ceci permet de prévenir une vulnérabilité potentielle ([mutation XSS <sup>(angl.)</sup>](https://securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass.html)) dans laquelle un·e attaquant·e peut créer une entrée contournant une [fonction d'assainissement](/fr/docs/Web/Security/Attacks/XSS#assainissement), permettant une attaque de type script inter-site (XSS).
 
 ### Considérations du DOM d'ombre
 

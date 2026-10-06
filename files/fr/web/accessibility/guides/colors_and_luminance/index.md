@@ -3,7 +3,7 @@ title: "Accessibilité : Comprendre les couleurs et la luminance"
 short-title: Couleurs et luminance
 slug: Web/Accessibility/Guides/Colors_and_Luminance
 l10n:
-  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
+  sourceCommit: 15e1155ab8a0587405601cc4753bb789cd6ac47c
 ---
 
 Comprendre la couleur, la luminance et la saturation est important pour la conception et la lisibilité pour toutes les personnes voyantes, mais c'est essentiel pour celles ayant une vision réduite, une déficience de la perception des couleurs ou des troubles neurologiques, cognitifs ou autres.
@@ -117,7 +117,7 @@ Comme indiqué précédemment, une couleur dans un même espace colorimétrique 
 
 Le RVB est orienté matériel, reflétant l'utilisation historique des écrans cathodiques. De nombreux·ses développeur·euse·s et designer·euse·s préfèrent l'intuitivité de la notation {{CSSxRef("color_value/hsl", "hsl()")}}. Heureusement, les navigateurs convertissent automatiquement le RVB en HSL et les outils de développement proposent souvent une conversion en un clic.
 
-Outre les outils de développement, de nombreux utilitaires peuvent convertir le RVB en HSL pour vous et fournir à la fois la notation hexadécimale RVB et la syntaxe des fonctions CSS. Un excellent exemple est l'outil de Tom Jewett, [«&nbsp;mini color selector&nbsp;» <sup>(angl.)</sup>](https://colortutorial.design/microColorsC.html), qui propose des options HSL, RVB et hexadécimal pour vérifier le contraste directement dans le navigateur. Notez que les sélecteurs de couleur des outils de développement et cet outil fournissent tous des valeurs de contraste WCAG&nbsp;: [contraste de couleur <sup>(angl.)</sup>](https://webaim.org/resources/contrastchecker/).
+Outre les outils de développement, de nombreux utilitaires peuvent convertir le RVB en HSL pour vous et fournir à la fois la notation hexadécimale RVB et la syntaxe des fonctions CSS. De nombreux sélecteurs de couleur fournissent également le [contraste de couleur <sup>(angl.)</sup>](https://webaim.org/resources/contrastchecker/) WCAG.
 
 ![Sélecteur de couleurs avec HSL et RGB et valeurs de contraste.](microcolorsc.jpg)
 
