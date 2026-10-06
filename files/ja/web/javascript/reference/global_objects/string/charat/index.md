@@ -51,7 +51,7 @@ Unicode のコードポイントは `0` から `1114111` (`0x10FFFF`) までの�
 
 ### 文字列の中の様々な位置の文字の表示
 
-次の例は、`"Brave new world"`` という文字列の中の様々な位置の文字を表示します。
+次の例は、`"Brave new world"` という文字列の中の様々な位置の文字を表示します。
 
 ```js
 const anyString = "Brave new world";

@@ -36,7 +36,7 @@ XPath 式の評価結果を表す {{domxref("XPathResult")}} オブジェクト�
 
 #### INVALID_EXPRESSION_ERR
 
-式が {{domxref("XPathEvaluator")}} の規則に従っていなかった場合、 `INVALID_EXPRESSION_ERR`` 型の {{domxref("XPathException")}} が発生します。
+式が {{domxref("XPathEvaluator")}} の規則に従っていなかった場合、 `INVALID_EXPRESSION_ERR` 型の {{domxref("XPathException")}} が発生します。
 
 #### TYPE_ERR
 
