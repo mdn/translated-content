@@ -56,7 +56,7 @@ getHighEntropyValues(hints)
     なお、この情報は、 {{HTTPHeader("Accept-CH")}} ヘッダーでサーバーが明示的にリクエストした場合、 {{HTTPHeader("Sec-CH-UA-Bitness")}} ヘッダーでサーバーに送ることができます。
 - `formFactor`
   - : 端末のフォームファクターを格納する文字列。例えば、`"Tablet"` または「VR」など。
-    サーバーが {{HTTPHeader("Accept-CH")}} ヘッダーで明示的にリクエストした場合、この情報は {{HTTPHeader("Sec-CH-UA-Form-Factor")}} ヘッダーでサーバーに送信される可能性があることに注意してください。
+    サーバーが {{HTTPHeader("Accept-CH")}} ヘッダーで明示的にリクエストした場合、この情報は {{HTTPHeader("Sec-CH-UA-Form-Factors")}} ヘッダーでサーバーに送信される可能性があることに注意してください。
 - `fullVersionList`
   - : `"brand"` と `"version"` というプロパティを持つオブジェクトの配列で、それぞれブラウザー名とフルバージョンを表します。
     例えば、 `{"brand": "Google Chrome", "version": "103.0.5060.134"}, {"brand": "Chromium", "version": "103.0.5060.134"}` です。
