@@ -23,7 +23,7 @@ RangeError: Invalid count value (Chrome)
 
 {{jsxref("String.prototype.repeat()")}} メソッドを使用しています。`count` 引数は、文字列の繰り返し回数を指定します。 これは 0 から正の {{jsxref("Infinity")}} 未満の値である必要があり、負の数は使用できません。有効値の範囲は \[0, +∞) のように表現することができます。
 
-結果の文字列は、文字列サイズの最大値以上にはできません。これは JavaScript エンジンによって異なります。 Firefox (SpiderMonkey) の最大文字列数は、 228 -1 （`0xFFFFFFF）`です。
+結果の文字列は、文字列サイズの最大値以上にはできません。これは JavaScript エンジンによって異なります。 Firefox (SpiderMonkey) の最大文字列数は、 228 -1 （`0xFFFFFFF`）です。
 
 ## 例
 

@@ -91,7 +91,7 @@ DOM 内のすべてのノードは、{{domxref("Node")}} インターフェイ�
 | ------------------------------------ | ----------------------------------------------------- | ------------------------------------------ | ---------------------------------------------------- |
 | {{domxref("Document")}}              | `"#document"`                                         | `null`                                     | `null`                                               |
 | {{domxref("DocumentType")}}          | その [`name`](#documenttype) （`"html"` など）        | `null`                                     | `null`                                               |
-| {{domxref("Element")}}               | その [`tagName`](#element) （"HTML"`, `"BODY"` など） | `null`                                     | すべての子孫のテキストノードをツリー順に結合したもの |
+| {{domxref("Element")}}               | その [`tagName`](#element) （`"HTML"`, `"BODY"` など） | `null`                                     | すべての子孫のテキストノードをツリー順に結合したもの |
 | {{domxref("Text")}}                  | `"#text"`                                             | その [`data`](#characterdata)              | その [`data`](#characterdata)                        |
 | {{domxref("CDATASection")}}          | `"#cdata-section"`                                    | その [`data`](#characterdata)              | その [`data`](#characterdata)                        |
 | {{domxref("Comment")}}               | `"#comment"`                                          | その [`data`](#characterdata)              | その [`data`](#characterdata)                        |
