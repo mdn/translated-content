@@ -40,7 +40,7 @@ XPath 式の評価結果を表す {{domxref("XPathResult")}} オブジェクト�
 
 #### TYPE_ERR
 
-結果を指定した型に変換できなかた場合、 `TYPE_ERR` 型の {{domxref("DOMException")}} が発生します。
+結果を指定した型に変換できなかった場合、 `TYPE_ERR` 型の {{domxref("DOMException")}} が発生します。
 
 #### NAMESPACE_ERR
 
