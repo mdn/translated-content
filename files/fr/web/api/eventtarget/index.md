@@ -10,7 +10,7 @@ l10n:
 `EventTarget` est une interface DOM implémentée par des objets qui peuvent recevoir des évènements et peuvent avoir des écouteurs pour eux.
 En d'autres termes, toute cible d'évènements implémente les méthodes associées à cette interface.
 
-{{DOMxRef ("Element")}}, {{DOMxRef ("Document")}} et {{DOMxRef ("Window")}} sont les cibles d'évènements les plus fréquentes, mais d'autres objets peuvent également être des cibles d'évènements. Par exemple {{DOMxRef ("XMLHttpRequest")}}, {{DOMxRef ("AudioNode")}}, {{DOMxRef ("AudioContext")}} et autres.
+{{DOMxRef("Element")}}, {{DOMxRef("Document")}} et {{DOMxRef("Window")}} sont les cibles d'évènements les plus fréquentes, mais d'autres objets peuvent également être des cibles d'évènements. Par exemple {{DOMxRef("XMLHttpRequest")}}, {{DOMxRef("AudioNode")}}, {{DOMxRef("AudioContext")}} et autres.
 
 De nombreuses cibles d'évènements (y compris des éléments, des documents et des fenêtres) supporte également la définition de [gestionnaires d'évènements](/fr/docs/Web/API/Document_Object_Model/Events) par les propriétés et attributs `onevent`.
 
