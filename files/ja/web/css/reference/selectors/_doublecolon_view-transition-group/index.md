@@ -44,7 +44,7 @@ l10n:
 - `*`
   - : [全称セレクター (`*`)](/ja/docs/Web/CSS/Reference/Selectors/Universal_selectors)です。ページ上のすべてのビュー遷移グループを選択します。
 - `root`
-  - : {{cssxref("view-transition-name")}} を {{cssxref(":root")}} に適用すると、擬似要素が、ページ全体のビュー遷移を含むためにユーザーエージェントによって作成されたデフォルトの `root` ビュー遷移グループに一致するようにします。すなわち、 `view-transition-name` プロパティによって自分自身を固有のビュー遷移グループに割り当てていない要素を意味します）。
+  - : {{cssxref("view-transition-name")}} を {{cssxref(":root")}} に適用すると、擬似要素が、ページ全体のビュー遷移を含むためにユーザーエージェントによって作成されたデフォルトの `root` ビュー遷移グループに一致するようにします。すなわち、 `view-transition-name` プロパティによって自分自身を固有のビュー遷移グループに割り当てていない要素を意味します。
 - `<pt-name-selector>`
   - : 一連の {{cssxref("custom-ident")}} で、{{cssxref("view-transition-name")}} プロパティの値です。
 - `<pt-class-selector>`

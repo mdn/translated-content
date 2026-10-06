@@ -999,7 +999,7 @@ export const b = 1;
 
 これらは、モジュールの動作に問題があるときに助けになるかもしれないヒントです。もし他にあれば自由にリストに追加してください。
 
-- 前に説明したので繰り返しになりますが、`.mjs` ファイルは `text/javascript` という MIME タイプ（または JavaScript 互換であるそれ以外のタイプ、ただし `text/javascript` を推奨）で読み込まれる必要があり、そうでなければ厳密な MIME タイプチェックによって "The server responded with a non-JavaScript MIME type" （サーバーが非 JavaScript の MIME タイプを返しました（のようなエラーが発生するでしょう。
+- 前に説明したので繰り返しになりますが、`.mjs` ファイルは `text/javascript` という MIME タイプ（または JavaScript 互換であるそれ以外のタイプ、ただし `text/javascript` を推奨）で読み込まれる必要があり、そうでなければ厳密な MIME タイプチェックによって "The server responded with a non-JavaScript MIME type" （サーバーが非 JavaScript の MIME タイプを返しました）のようなエラーが発生するでしょう。
 - HTML ファイルをローカルから（例えば `file://` の URL を使って）読み込もうとすると、JavaScript モジュールのセキュリティ要件によって CORS エラーが発生するでしょう。動作検証はサーバー経由で行う必要があります。GitHub は `.mjs` ファイルを正しい MIME 型で返すため理想的です。
 - `.mjs` は比較的新しい拡張子であり、OS によってはそれを認識しないか、何か別のものに置き換えようとしてしまうかもしれません。例えば macOS は、通知することなく `.mjs` ファイルに `.js` を追加して自動的に拡張子を隠すことがわかりました。そのため、実際にやってくるファイルは全て `x.mjs.js` のようなものでした。ファイル拡張子を自動的に隠すことをオフにして、`.mjs` を受け入れるように設定すると問題は無くなります。
 
