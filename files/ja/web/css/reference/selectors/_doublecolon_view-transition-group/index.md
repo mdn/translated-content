@@ -50,7 +50,7 @@ l10n:
 - `<pt-class-selector>`
   - : 一連の {{cssxref("custom-ident")}} で、{{cssxref("view-transition-class")}} プロパティの値の前にピリオド (`.`) を置いたものです。
 
-名前付きビュー遷移擬似要素の{{cssxref("specificity", "詳細度")}}は、[要素型セレクターの詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity#type_列)と等しくなります。ただし、全称セレクターが使用されている場合は、詳細度はゼロとなります。
+名前付きビュー遷移擬似要素の[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)は、[要素型セレクターの詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity#type_列)と等しくなります。ただし、全称セレクターが使用されている場合は、詳細度はゼロとなります。
 
 ## 例
 
