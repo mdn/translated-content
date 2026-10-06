@@ -908,7 +908,7 @@ input.custom {
 
 {{cssxref("field-sizing")}} プロパティは、フォーム入力欄のサイズ設定の動作を制御することができます（つまり、デフォルトでは推奨されるサイズが設定されています）。このプロパティを使用すると、デフォルトの動作を上書きして、フォームコントロールがコンテンツに合わせてサイズを調整できるようになります。
 
-このプロパティは通常、コンテンツを収縮包装し、テキストが入力されるにつれて大きくなるフォームフィールドを形成するために使用します。これは、直接テキスト入力を受け入れる入力型（例えば、[`text`](/ja/docs/Web/HTML/Reference/Elements/input/text)、[`url`](/ja/docs/Web/HTML/Reference/Elements/input/url)、[`file`](/ja/docs/Web/HTML/Reference/Elements/input/file) 入力型、{{htmlelement("textarea")}} 要素で動作します。
+このプロパティは通常、コンテンツを収縮包装し、テキストが入力されるにつれて大きくなるフォームフィールドを形成するために使用します。これは、直接テキスト入力を受け入れる入力型（例えば [`text`](/ja/docs/Web/HTML/Reference/Elements/input/text) や [`url`](/ja/docs/Web/HTML/Reference/Elements/input/url)）、[`file`](/ja/docs/Web/HTML/Reference/Elements/input/file) 入力型、{{htmlelement("textarea")}} 要素で動作します。
 
 ### object-position と object-fit
 
