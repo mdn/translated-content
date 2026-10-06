@@ -54,7 +54,7 @@ l10n:
 
 ## ガイドとチュートリアル
 
-[能力と制約と設定](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)の記事では、**制約**と**能力**、メディア設定の概念について説明しています。また、[制約エクササイザ―](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints#例_制約エクササイザ―)を記載しており、コンピューターの A/V 入力機器（ウェブカメラやマイクなど）からの音声と映像のトラックに対して異なる制約集合を適用した結果を試してみることができます。
+[能力と制約と設定](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)の記事では、**制約**と**能力**、メディア設定の概念について説明しています。また、[制約エクササイザー](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints#例_制約エクササイザー)を記載しており、コンピューターの A/V 入力機器（ウェブカメラやマイクなど）からの音声と映像のトラックに対して異なる制約集合を適用した結果を試してみることができます。
 
 [getUserMedia() による写真の撮影](/ja/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) の記事では、[`getUserMedia()`](/ja/docs/Web/API/MediaDevices/getUserMedia) を使用して、 `getUserMedia()` に対応しているコンピューターや携帯電話のカメラにアクセスし、それで写真を撮る方法を示しています。
 
