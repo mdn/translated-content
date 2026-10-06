@@ -539,7 +539,7 @@ Git（と GitHub）は、コードを格納する最上位の「バケツ」と�
    ```
 
 7. この時点では、リモートリポジトリーは変更されていません。
-   update_gitignore` ブランチを "origin" リポジトリー (GitHub) にプッシュするには、以下のコマンドを使用します。
+   `update_gitignore` ブランチを "origin" リポジトリー (GitHub) にプッシュするには、以下のコマンドを使用します。
 
    ```bash
    git push origin update_gitignore

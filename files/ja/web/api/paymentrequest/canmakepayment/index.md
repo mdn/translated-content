@@ -32,7 +32,7 @@ canMakePayment()
 
 ## 例
 
-次の例では、Apple Pay と Example Pay の両方に対応した `PaymentRequest` オブジェクトを非同期に構築する [デモからの抜粋](https://rsolomakhin.github.io/samples/paymentrequest/can-make-payment/) があります。canMakePayment()`の呼び出しを機能検出でラップし、`Promise`の解像度に応じて適切なコールバックを呼び出しています。
+次の例では、Apple Pay と Example Pay の両方に対応した `PaymentRequest` オブジェクトを非同期に構築する [デモからの抜粋](https://rsolomakhin.github.io/samples/paymentrequest/can-make-payment/) があります。`canMakePayment()`の呼び出しを機能検出でラップし、`Promise`の解像度に応じて適切なコールバックを呼び出しています。
 
 ```js
 async function initPaymentRequest() {
