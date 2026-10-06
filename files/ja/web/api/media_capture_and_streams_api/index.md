@@ -27,19 +27,14 @@ l10n:
 
 - {{domxref("CanvasCaptureMediaStreamTrack")}}
 - {{domxref("InputDeviceInfo")}}
-- {{domxref("MediaDeviceKind")}}
 - {{domxref("MediaDeviceInfo")}}
 - {{domxref("MediaDevices")}}
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStreamEvent")}}
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStreamTrackEvent")}}
-- {{domxref("MediaTrackCapabilities")}}
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaTrackSettings")}}
-- {{domxref("MediaTrackSupportedConstraints")}}
-- {{domxref("NavigatorUserMedia")}}
-- {{domxref("NavigatorUserMediaError")}}
 - {{domxref("OverconstrainedError")}}
 - {{domxref("URL")}}
 
