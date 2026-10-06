@@ -19,7 +19,7 @@ l10n:
   - : `<dialog>` 要素を閉じるために使用できるユーザー操作の種類を指定します。この属性は、ダイアログが閉じられる可能性のある 3 つの方法を区別します。
     - 「簡単な解除のユーザー操作」。ユーザーがダイアログの外側をクリックまたはタップすると、`<dialog>` が閉じられます。これは、[「自動」状態のポップオーバーにおける「簡単な解除」動作](/ja/docs/Web/API/Popover_API/Using#自動状態と「簡単な解除」) と同等です。
     - 「プラットフォーム固有のユーザー操作」。例えば、デスクトッププラットフォームでは <kbd>Esc</kbd> キーを押す操作、モバイルプラットフォームでは「戻る」または「閉じる」ジェスチャーなど。
-    - 開発者が指定した機構（例：{{htmlelement("button")}} に [`click`](/ja/docs/Web/API/Element/click_event) ハンドラーを設定し、そこで {{domxref("HTMLDialogElement.close()")}} を呼び出したり、 {{htmlelement("form")}} を送信したりする。
+    - 開発者が指定した機構（例：{{htmlelement("button")}} に [`click`](/ja/docs/Web/API/Element/click_event) ハンドラーを設定し、そこで {{domxref("HTMLDialogElement.close()")}} を呼び出したり、 {{htmlelement("form")}} を送信したりする）。
 
     利用可能な値は次の通りです。
     - `any`

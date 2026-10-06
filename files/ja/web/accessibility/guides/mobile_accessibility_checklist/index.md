@@ -62,7 +62,7 @@ l10n:
   ```
 
 - [ARIA ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles)、例えば `banner`、`complementary`、`contentinfo`、`main`、`navigation`、`search` などは、アプリや文書の構造を記述するために使用するべきです。
-- タッチイベントハンドラーは、次のことを保証してください（[WCAG 2.1: Pointer Cancellation](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html)。
+- タッチイベントハンドラーは、次のことを保証してください（[WCAG 2.1: Pointer Cancellation](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html)）。
   - down イベントは、機能のどの部分の実行にも使用しないでください。
   - 上記が失敗した場合、機能の完了は up イベントで行われ、完了前に措置を中止したり、完了後に措置を元に戻すためのメカニズムが利用できます。
   - 上記が失敗した場合、 up イベントは down イベントで開始されたすべての措置を元に戻すことができる必要があります。
