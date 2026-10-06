@@ -161,7 +161,7 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
   - : オリジンサーバーはリクエストが[条件付き](/ja/docs/Web/HTTP/Guides/Conditional_requests)になることを要求しています。
     このレスポンスは、クライアントがリソースの状態を {{HTTPMethod("GET")}} し、それを変更してサーバーに {{HTTPMethod("PUT")}} するまでの間に、第三者がサーバー上の状態を変更することで競合が発生する「更新の損失」の問題を防ぐためのものです。
 - {{HTTPStatus(429, "429 Too Many Requests")}}
-  - : ユーザーは一定の時間内に大量のリクエストを送信しました（{{Glossary("Rate_limit","レート制限" )}}。
+  - : ユーザーは一定の時間内に大量のリクエストを送信しました（{{Glossary("Rate_limit","レート制限")}}）。
 - {{HTTPStatus(431, "431 Request Header Fields Too Large")}}
   - : ヘッダーフィールドが大きすぎるため、サーバーはリクエストの処理を望みません。
     ヘッダーフィールドのサイズを削減した後に、リクエストを再送信できます。

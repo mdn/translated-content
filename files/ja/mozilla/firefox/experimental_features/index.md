@@ -876,7 +876,7 @@ Firefox 149 では、従来の C++ 製 [JPEG XL](https://jpeg.org/jpegxl/) 画�
 
 ### `<meta name="rating">` によるアダルトコンテンツの制限
 
-標準外の [`<meta name="rating">`](/ja/docs/Web/HTML/Reference/Elements/meta) は、ウェブページに記載することで、そのページのコンテンツが制限付き/成人向けであることを示すことができます。執筆時点では、`content` 属性に設定可能な値は 2 つあり、`adult`（[Google 定義](https://developers.google.com/search/docs/specialty/explicit/guidelines# add-metadata) と `RTA-5042-1996-1400-1577-RTA` ([ASACP 定義](https://www.rtalabel.org/?content=howto#top)) の 2 つが利用可能であり、これらは同等の効果を持ちます（将来的に追加される可能性があります）。
+標準外の [`<meta name="rating">`](/ja/docs/Web/HTML/Reference/Elements/meta) は、ウェブページに記載することで、そのページのコンテンツが制限付き/成人向けであることを示すことができます。執筆時点では、`content` 属性に設定可能な値は 2 つあり、`adult` ([Google 定義](https://developers.google.com/search/docs/specialty/explicit/guidelines#add-metadata)) と `RTA-5042-1996-1400-1577-RTA` ([ASACP 定義](https://www.rtalabel.org/?content=howto#top)) の 2 つが利用可能であり、これらは同等の効果を持ちます（将来的に追加される可能性があります）。
 
 次の `<meta>` 要素は同等です。
 
