@@ -32,7 +32,7 @@ onpointermove = (event) => { }
 
 {{InheritanceDiagram("PointerEvent")}}
 
-## 用法备注
+## 使用说明
 
 {{domxref("PointerEvent")}} 类型的事件提供了全部你需要知道的关于用户与定点设备交互的信息，包括位置、移动距离、按钮状态等等。
 
