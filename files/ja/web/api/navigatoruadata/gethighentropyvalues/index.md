@@ -50,7 +50,7 @@ getHighEntropyValues(hints)
     なお、この情報は {{HTTPHeader("Sec-CH-UA-Platform")}} ヘッダーでサーバーに送信できることができます（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#低エントロピーヒント)）。
 - `architecture`
   - : プラットフォームアーキテクチャを格納した文字列。例えば `"x86"` です。
-    なお、この情報は、 {{HTTPHeader("Sec-CH-UA-Arch")}} ヘッダーでサーバーが明示的にリクエストされた後に、 {{HTTPHeader("Accept-CH")}} へ送ることができることができます。
+    なお、この情報は、 {{HTTPHeader("Sec-CH-UA-Arch")}} ヘッダーでサーバーが明示的にリクエストされた後に、 {{HTTPHeader("Accept-CH")}} へ送ることができます。
 - `bitness`
   - : アーキテクチャのビット数を格納した文字列。例えば `"32"` または `"64"` です。
     なお、この情報は、 {{HTTPHeader("Accept-CH")}} ヘッダーでサーバーが明示的にリクエストした場合、 {{HTTPHeader("Sec-CH-UA-Bitness")}} ヘッダーでサーバーに送ることができます。
