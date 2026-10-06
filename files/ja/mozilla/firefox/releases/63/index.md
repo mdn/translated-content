@@ -77,7 +77,7 @@ _変更なし。_
 - {{domxref("Element.toggleAttribute()")}} メソッドを実装しました ([Firefox バグ 1469592](https://bugzil.la/1469592))。
 - 以前は非標準であった {{domxref("Event.returnValue")}} プロパティを、互換性のためにサポートしました ([Firefox バグ 1452569](https://bugzil.la/1452569))。
 - ウェブ互換性を向上するために {{domxref("Window.event")}} プロパティを実装しました。現在は標準化されています ([Firefox バグ 218415](https://bugzil.la/218415))。ただし複数のウェブ互換性の問題 (例えば [Firefox バグ 1479964](https://bugzil.la/1479964)) により、すぐに設定項目 `dom.window.event.enabled` で Nightly 以外のチャンネルでは無効化しました ([Firefox バグ 1493869](https://bugzil.la/1493869))。
-- Firefox の動作を Edge や Chrome に合わせるため、{{domxref("NavigatorID.platform", "navigator.platform")}} プロパティが 64 ビット版 Windows で実行している場合でも `"Win32"` を返すようになりました ([Firefox バグ 1472618](https://bugzil.la/1472618))。
+- Firefox の動作を Edge や Chrome に合わせるため、{{domxref("Navigator/platform", "navigator.platform")}} プロパティが 64 ビット版 Windows で実行している場合でも `"Win32"` を返すようになりました ([Firefox バグ 1472618](https://bugzil.la/1472618))。
 - Firefox 63 より前のバージョンでは、`rel="noopener"` を持つ新しいウィンドウを開くリンク、および [`noopener`](/ja/docs/Web/API/Window/open#noopener) 機能を有効にして {{domxref("Window.open()")}} を呼び出した場合にすべてのウィンドウ機能を無効にしており、必要な標準機能を明示的に再有効化しなければなりませんでした。Firefox 63 ではこれらのウィンドウでほかのウィンドウと同じ機能が有効になり、不要な機能を明示的に無効化しなければなりません ([Firefox バグ 1419960](https://bugzil.la/1419960))。
 
 #### DOM イベント
@@ -107,9 +107,9 @@ _変更なし。_
 - {{domxref("AudioParam.setValueCurveAtTime()")}} メソッドを、引数の値が次第に変わることを示すために浮動小数点数値の配列を受け入れるように更新しました。以前は {{jsxref("Float32Array")}} であることが必要でした ([Firefox バグ 1421091](https://bugzil.la/1421091))。
 - また {{domxref("AudioParam.setValueCurveAtTime()")}} が、`values` の配列に有限ではない値が存在する場合に、`TypeError` を正しく返すようになりました ([Firefox バグ 1472095](https://bugzil.la/1472095))。
 - さらに `setValueCurveAtTime()` で、時間が経過した後に指定した値のカーブに従って引数が終了したとき、引数の値がカーブの値のリストの最後の値に設定されるようになりました ([Firefox バグ 1308436](https://bugzil.la/1308436))。
-- ほかのディクショナリーや仕様書に合わせて、`RTCRTPStreamStats` ディクショナリーを {{domxref("RTCRtpStreamStats")}} に改名しました ([Firefox バグ 1480498](https://bugzil.la/1480498))。
-- `RTCRtpStreamStats` ディクショナリーの {{domxref("RTCRtpStreamStats.kind", "kind")}} プロパティをサポートしました ([Firefox バグ 1481851](https://bugzil.la/1481851))。
-- {{domxref("RTCRtpStreamStats")}} ディクショナリーの {{domxref("RTCRtpStreamStats.isRemote", "isRemote")}} プロパティが推奨になりました。Firefox 65 で削除する予定です。このプロパティにアクセスすると、コンソールに警告を表示します。詳しくは [Advancing WebRTC ブログの投稿](https://blog.mozilla.org/webrtc/getstats-isremote-65/) をご覧ください ([Firefox バグ 1393306](https://bugzil.la/1393306))。
+- ほかのディクショナリーや仕様書に合わせて、`RTCRTPStreamStats` ディクショナリーを `RTCRtpStreamStats` に改名しました ([Firefox バグ 1480498](https://bugzil.la/1480498))。
+- `RTCRtpStreamStats` ディクショナリーの `kind` プロパティをサポートしました ([Firefox バグ 1481851](https://bugzil.la/1481851))。
+- `RTCRtpStreamStats` ディクショナリーの `isRemote` プロパティが推奨になりました。Firefox 65 で削除する予定です。このプロパティにアクセスすると、コンソールに警告を表示します。詳しくは [Advancing WebRTC ブログの投稿](https://blog.mozilla.org/webrtc/getstats-isremote-65/) をご覧ください ([Firefox バグ 1393306](https://bugzil.la/1393306))。
 
 #### Canvas と WebGL
 
