@@ -6,7 +6,7 @@ original_slug: WebAssembly/JavaScript_interface/Instance/exports
 
 {{WebAssemblySidebar}}
 
-**`exports`** は [`WebAssembly.Instance`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instance) オブジェクトプロトタイプの読み取り専用プロパティで、 WebAssembly モジュールインスタンスからエクスポートされたすべての関数をメンバ－として持つオブジェクトを返します。これらは、 JavaScript からアクセスして使用することができます。
+**`exports`** は [`WebAssembly.Instance`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instance) オブジェクトプロトタイプの読み取り専用プロパティで、 WebAssembly モジュールインスタンスからエクスポートされたすべての関数をメンバーとして持つオブジェクトを返します。これらは、 JavaScript からアクセスして使用することができます。
 
 ```js
 instance.exports;
