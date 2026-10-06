@@ -326,7 +326,7 @@ The above HTML snippets render like so:
 
 #### 例のセットアップ
 
-- ローカルマシンで行うので行うのであれば、次のようにします。
+- ローカルマシンで行うのであれば、次のようにします。
   1. 前の節で挙げた HTML ページの例をコピーし、コードエディター内の新しいファイルに貼り付けてください。この[基本的な HTML テンプレート](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)は、GitHub リポジトリーにもあります。
   2. [手順](#例の手順)に記載されている変更をページに加えましょう。
   3. ファイルを`index.html`として保存し、新しいブラウザーのタブで読み込んで結果を確認しましょう。
