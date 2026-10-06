@@ -668,7 +668,7 @@ label {
 - `incremental` {{non-standard_inline}}
   - : 論理属性 `incremental` は WebKit および Blink 拡張で（そのため Safari, Opera, Chrome, などが対応）、もし存在すれば、{{Glossary("User agent", "ユーザーエージェント")}}に入力をライブ検索として処理します。ユーザーがフィールドの値を編集すると、ユーザーエージェントは {{domxref("HTMLInputElement/search_event", "search")}} イベントを検索ボックスを表す {{domxref("HTMLInputElement")}} オブジェクトへ送信します。これにより、ユーザーが検索を編集するたびに、コードからリアルタイムに検索結果を更新することができます。
 
-    `incremental` が指定されていない場合、{{domxref("HTMLInputElement/search_event", "search")}} イベントはユーザーが明示的に検索を実行した時のみ（フィールドを編集中に <kbd>Enter</kbd> または <kbd>Return</kbd> キーを押すなど) 送信されます。
+    `incremental` が指定されていない場合、{{domxref("HTMLInputElement/search_event", "search")}} イベントはユーザーが明示的に検索を実行した時のみ（フィールドを編集中に <kbd>Enter</kbd> または <kbd>Return</kbd> キーを押すなど）送信されます。
 
     `search` イベントは発生頻度が制限されているため、実装により定義された間隔よりも頻繁に送信されることはありません。
 
@@ -929,7 +929,7 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 
 ### ラベル
 
-ラベルは支援テキストを `<input>` に関連付けるために必要です。{{HTMLElement("label")}} 要素は、フォームの入力欄を説明するために、(レイアウト方法はさておき）*常に*適切な手段です。`<label>` を使用して `<input>` や {{HTMLElement("textarea")}} に何を入力するべきかを説明することは、決して悪い考えではありません。
+ラベルは支援テキストを `<input>` に関連付けるために必要です。{{HTMLElement("label")}} 要素は、フォームの入力欄を説明するために、（レイアウト方法はさておき）*常に*適切な手段です。`<label>` を使用して `<input>` や {{HTMLElement("textarea")}} に何を入力するべきかを説明することは、決して悪い考えではありません。
 
 #### 関連付けられたラベル
 
