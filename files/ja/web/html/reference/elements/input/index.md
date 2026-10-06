@@ -1184,7 +1184,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>、リスト化、サブミット可能、リセット可能、フォーム関連要素、<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>。<a href="#type"><code>type</code></a> の値が <code>hidden</code> でない場合はラベル付け可能要素、知覚可能コンテンツ。

@@ -119,7 +119,7 @@ processor.doLoad();
 
 ### 動画と WebGL
 
-[WebGL](/ja/docs/Web/API/WebGL_API) はキャンバスを使用してハードウェアアクセラレーションによる三次元や二次元の描画を行う強力な API です。 {{htmlelement("video")}} 要素と組み合わせることで、動画をテクチャとして利用できます。つまり三次元空間上に動画を配置し、再生できます。
+[WebGL](/ja/docs/Web/API/WebGL_API) はキャンバスを使用してハードウェアアクセラレーションによる三次元や二次元の描画を行う強力な API です。 {{htmlelement("video")}} 要素と組み合わせることで、動画をテクスチャとして利用できます。つまり三次元空間上に動画を配置し、再生できます。
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 

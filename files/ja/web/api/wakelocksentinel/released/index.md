@@ -19,7 +19,7 @@ var released = sentinel.released;
 
 ## 例
 
-この例は、 **`released`** の値が {{domxref("WakeLockSentinel")}} のライフライクルの中でどのように変化するかを示します。
+この例は、 **`released`** の値が {{domxref("WakeLockSentinel")}} のライフサイクルの中でどのように変化するかを示します。
 
 ```js
 const sentinel = await navigator.wakeLock.request("screen");

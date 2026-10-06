@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-**`ViewTimeline`** は{{domxref("Web Animations API", "ウェブアニメーション API", "", "nocode")}} で、ビュー進捗ライムラインを表します（詳しくは [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を参照してください）。
+**`ViewTimeline`** は{{domxref("Web Animations API", "ウェブアニメーション API", "", "nocode")}} で、ビュー進捗タイムラインを表します（詳しくは [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を参照してください）。
 
 `ViewTimeline` インスタンスを {{domxref("Animation.Animation", "Animation()")}} コンストラクターまたは {{domxref("Element.animate()", "animate()")}} メソッドに渡すと、アニメーションの進行を制御するタイムラインとして指定します。
 

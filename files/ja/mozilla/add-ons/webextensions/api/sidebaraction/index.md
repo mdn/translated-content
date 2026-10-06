@@ -21,9 +21,9 @@ sidebarAction API は Opera の [sidebarAction API](https://dev.opera.com/extens
 ## 関数
 
 - {{WebExtAPIRef("sidebarAction.setPanel()")}}
-  - : サイドバーのバネルを設定します。
+  - : サイドバーのパネルを設定します。
 - {{WebExtAPIRef("sidebarAction.getPanel()")}}
-  - : サイドバーのバネルを取得します。
+  - : サイドバーのパネルを取得します。
 - {{WebExtAPIRef("sidebarAction.setTitle()")}}
   - : サイドバーのタイトルを設定します。これはブラウザーがサイドバーを一覧するあらゆる UI、例えばメニューに表示されます。
 - {{WebExtAPIRef("sidebarAction.getTitle()")}}

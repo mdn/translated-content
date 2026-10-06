@@ -64,7 +64,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime
 - {{WebExtAPIRef("runtime.sendMessage()")}}
   - : 拡張機能自身や別の拡張機能のイベントリスナーに 1 つのメッセージを送信します。 {{WebExtAPIRef('runtime.connect')}} と似ていますが、 {{WebExtAPIRef("runtime.sendMessage()")}} では 1 つのメッセージを送るだけで、オプションで応答可能です。
 - {{WebExtAPIRef("runtime.sendNativeMessage()")}}
-  - : 拡張機能からネイティプアプリケーションに 1 つのメッセージを送信します。
+  - : 拡張機能からネイティブアプリケーションに 1 つのメッセージを送信します。
 - {{WebExtAPIRef("runtime.getPlatformInfo()")}}
   - : 現在のプラットフォーム情報を返します。
 - {{WebExtAPIRef("runtime.getBrowserInfo()")}}
