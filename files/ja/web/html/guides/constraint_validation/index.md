@@ -436,7 +436,7 @@ CSS の擬似クラスで、要素の外見を制御することができます�
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}
   - {{HTMLElement("select")}}
-  - 送信ボタン（{{HTMLElement("button")}} 要素の `submit` 型、または `input` 要素の {{HTMLElement("input/submit", "submit")}} 型。それ以外のボタンは制約検証の対象にはなりません。
+  - 送信ボタン（{{HTMLElement("button")}} 要素の `submit` 型、または `input` 要素の {{HTMLElement("input/submit", "submit")}} 型で作成したもの）。それ以外のボタンは制約検証の対象にはなりません。
   - {{HTMLElement("textarea")}}
 
 - [`ValidityState`](/ja/docs/Web/API/ValidityState) インターフェイスは、上記の要素型の `validity` プロパティによって返されるオブジェクトを説明します。入力された値が無効になる可能性がある様々な方法を表しています。これらを合わせると、要素の値が有効でない場合に、なぜ検証に失敗するのかを説明することができます。
