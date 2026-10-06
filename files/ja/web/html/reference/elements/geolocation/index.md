@@ -227,7 +227,7 @@ l10n:
 このスクリプトでは、まず出力用 `<p>` 要素への参照を取得します。次に `typeof HTMLGeolocationElement === "function"` を検査し、`<geolocation>` 要素に対応しているかどうかを判定します。
 
 - 対応している場合、まず `<geolocation>` 要素への参照を取得し、次に {{domxref("HTMLGeolocationElement.location_event", "location")}} イベントリスナーを追加します。
-  ボタンが押されデータが取得されると、リスナーは（緯度、経度）座標を出力先の `<p>` に表示します（{{domxref("HTMLGeolocationElement.position", "position")}} プロパティから取得）。データ取得に失敗した場合はエラーメッセージを表示します {{domxref("HTMLGeolocationElement.error", "error")}} プロパティから取得）。
+  ボタンが押されデータが取得されると、リスナーは（緯度、経度）座標を出力先の `<p>` に表示します（{{domxref("HTMLGeolocationElement.position", "position")}} プロパティから取得）。データ取得に失敗した場合はエラーメッセージを表示します（{{domxref("HTMLGeolocationElement.error", "error")}} プロパティから取得）。
 - 対応していない場合、代替の `<button>` 要素への参照を取得し、同じデータを取得して出力しますが、ボタンに `click` イベントリスナーを適用し、データを取得するために {{domxref("Geolocation.getCurrentPosition()")}} 呼び出しを使用している点が異なります。
 
 ```js
