@@ -35,13 +35,13 @@ Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました�
 
 #### 新しい WebAPI
 
-- Network Information API: {{ domxref("window.navigator.connection") }} の実験的サポートが追加されました。（接頭辞付き）
-- WebTelephony API: {{ domxref("window.navigator.mozTelephony") }} が実装されました。デバイス上での電話の発信、応答、管理をするためのサポートを提供します。
-- WebSMS API: モバイルデバイスで SMS テキストメッセージを送信できる {{ domxref("window.navigator.mozSms") }} が利用可能になりました。
+- Network Information API: {{domxref("Navigator.connection", "window.navigator.connection")}} の実験的サポートが追加されました。（接頭辞付き）
+- WebTelephony API: `window.navigator.mozTelephony` が実装されました。デバイス上での電話の発信、応答、管理をするためのサポートを提供します。
+- WebSMS API: モバイルデバイスで SMS テキストメッセージを送信できる `window.navigator.mozSms` が利用可能になりました。
 
 ### SVG
 
-- {{ domxref("SVGTests") }} DOM API に対応しました。([Firefox バグ 607854](https://bugzil.la/607854))
+- `SVGTests` DOM API に対応しました。([Firefox バグ 607854](https://bugzil.la/607854))
 - {{ domxref("SVGStringList") }} DOM インターフェイスが非標準の `length` プロパティに対応しました。([Firefox バグ 711958](https://bugzil.la/711958))
 
 ### MathML
