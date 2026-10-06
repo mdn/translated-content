@@ -63,7 +63,7 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 - {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} コンストラクターが、init オブジェクトとして文字列や一連の文字列を受け入れるようになりました ([Firefox バグ 1330678](https://bugzil.la/1330678))。
 - [Selection API](/ja/docs/Web/API/Selection_API) の {{domxref("Selection.setBaseAndExtent()")}} メソッドを実装しました ([Firefox バグ 1321623](https://bugzil.la/1321623))。
 - `file` 型の {{htmlelement("input")}} の `value` に["fakepath"](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly) を追加する機能を、Gecko に実装しました。ほかのブラウザーと同等になります ([Firefox バグ 1274596](https://bugzil.la/1274596))。
-- 非推奨の {{domxref("Node.rootNode")}} プロパティを置き換える、{{domxref("Node.getRootNode()")}} を実装しました ([Firefox バグ 1269155](https://bugzil.la/1269155))。
+- 非推奨の `Node.rootNode` プロパティを置き換える、{{domxref("Node.getRootNode()")}} を実装しました ([Firefox バグ 1269155](https://bugzil.la/1269155))。
 - {{domxref("Plugin")}} および {{domxref("PluginArray")}} オブジェクト特有のプロパティが、enumerable ではなくなりました ([Firefox バグ 1270366](https://bugzil.la/1270366))。
 - {{domxref("MimeTypeArray")}} オブジェクトの名前付きプロパティが、enumerable ではなくなりました ([Firefox バグ 1270364](https://bugzil.la/1270364))。
 - [権限 API](/ja/docs/Web/API/Permissions_API) の {{domxref("Permissions.query()")}} で使用するパーミッション名で、新たに `persistent-storage` が使用可能になりました ([Firefox バグ 1270038](https://bugzil.la/1270038))。これは [Storage API](https://storage.spec.whatwg.org/) による、持続的なボックス (すなわち [persistent storage](https://storage.spec.whatwg.org/#persistence)) をオリジンに許可します。
@@ -98,7 +98,7 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 
 - {{domxref("RTCPeerConnection")}} の {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} および {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} メソッドが、{{domxref("RTCSessionDescription")}} を直接返すのではなく、`RTCSessionDescriptionInit` 辞書に従うオブジェクトを返す {{jsxref("Promise")}} を返すようになりました。既存のコードは引き続き動作しますが、新しいコードはよりシンプルに記述できます。
 - 同様に、{{domxref("RTCPeerConnection")}} の {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} および {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} メソッドが、`RTCSessionDescriptionInit` 辞書に従うオブジェクトを受け入れるようになりました。既存のコードは引き続き動作しますが、シンプルにできます。
-- {{domxref("RTCPeerConnection.addIceCandidate()")}} が、{{domxref("RTCIceCandidateInit")}} 辞書に従うオブジェクトを受け入れるようになりました。これは既存のコードと互換性がありますが、上記の変更点と並んで使用するとコードをよりシンプルに記述できます ([Firefox バグ 1263312](https://bugzil.la/1263312))。
+- {{domxref("RTCPeerConnection.addIceCandidate()")}} が、初期化オブジェクトを入力として受け入れるようになりました。これは既存のコードと互換性がありますが、上記の変更点と並んで使用するとコードをよりシンプルに記述できます ([Firefox バグ 1263312](https://bugzil.la/1263312))。
 - {{domxref("RTCDTMFSender")}} を使用する {{Glossary("DTMF")}} のサポートを、デフォルトで有効にしました。詳細や動作について、[Using DTMF with WebRTC](/ja/docs/Web/API/WebRTC_API/Using_DTMF) をご覧ください。
 
 ### HTTP/ネットワーク

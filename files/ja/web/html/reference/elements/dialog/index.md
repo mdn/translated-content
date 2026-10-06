@@ -814,7 +814,7 @@ closeBtn.addEventListener("click", () => {
 
 - {{domxref("HTMLDialogElement")}} インターフェイス
 - {{domxref("HTMLDialogElement/close_event", "close")}} イベント（`HTMLDialogElement` インターフェイス）
-- {{domxref("HTMLElement/cancel_event", "cancel")}} イベント（`HTMLDialogElement` インターフェイス）
+- {{domxref("HTMLDialogElement/cancel_event", "cancel")}} イベント（`HTMLDialogElement` インターフェイス）
 - {{domxref("HTMLDialogElement/open", "open")}} プロパティ（`HTMLDialogElement` インターフェイス）
 - [`inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert) グローバル属性（HTML 要素）
 - CSS の {{CSSXref("::backdrop")}} 擬似要素

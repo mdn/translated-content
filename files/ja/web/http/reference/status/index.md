@@ -25,7 +25,7 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
   - : これは暫定レスポンスで、その時点までのすべてに問題がなく、クライアントはリクエストを継続してよい、またもしリクエストが完了している場合はレスポンスを無視してよいことを示します。
 - {{HTTPStatus(101, "101 Switching Protocols")}}
   - : このコードはクライアントからの {{HTTPHeader("Upgrade")}} リクエストヘッダーのレスポンスとして送信され、サーバーはプロトコルを切り替えていることを示します。
-- {{HTTPStatus(102, "102 Processing")}} {{deprecated_inline}}
+- `102 Processing` {{deprecated_inline}}
   - : このコードは {{Glossary("WebDAV")}} のコンテキストで使用され、サーバーはリクエストを受け取って処理しているが、まだレスポンスを提供できないことを示します。
 - {{HTTPStatus(103, "103 Early Hints")}}
   - : このステータスコードは、主に {{HTTPHeader("Link")}} ヘッダーと共に使用することを意図しており、サーバーがレスポンスを準備している間、ユーザーエージェントにリソースの[事前読み込み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)を開始させたり、ページがリソースを必要とする元のサーバーに[事前接続](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect)させたりします。
