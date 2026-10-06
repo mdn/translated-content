@@ -87,16 +87,16 @@ DOM 内のすべてのノードは、{{domxref("Node")}} インターフェイ�
 
 それぞれのノード型は、保持するデータを独自の方法で表します。`Node` インターフェイス自体には、データに関連する 3 つのプロパティが定義されており、以下の表に要約します。
 
-| ノード型                             | {{domxref("Node/nodeName", "nodeName")}}              | {{domxref("Node/nodeValue", "nodeValue")}} | {{domxref("Node/textContent", "textContent")}}       |
-| ------------------------------------ | ----------------------------------------------------- | ------------------------------------------ | ---------------------------------------------------- |
-| {{domxref("Document")}}              | `"#document"`                                         | `null`                                     | `null`                                               |
-| {{domxref("DocumentType")}}          | その [`name`](#documenttype) （`"html"` など）        | `null`                                     | `null`                                               |
+| ノード型                             | {{domxref("Node/nodeName", "nodeName")}}               | {{domxref("Node/nodeValue", "nodeValue")}} | {{domxref("Node/textContent", "textContent")}}       |
+| ------------------------------------ | ------------------------------------------------------ | ------------------------------------------ | ---------------------------------------------------- |
+| {{domxref("Document")}}              | `"#document"`                                          | `null`                                     | `null`                                               |
+| {{domxref("DocumentType")}}          | その [`name`](#documenttype) （`"html"` など）         | `null`                                     | `null`                                               |
 | {{domxref("Element")}}               | その [`tagName`](#element) （`"HTML"`, `"BODY"` など） | `null`                                     | すべての子孫のテキストノードをツリー順に結合したもの |
-| {{domxref("Text")}}                  | `"#text"`                                             | その [`data`](#characterdata)              | その [`data`](#characterdata)                        |
-| {{domxref("CDATASection")}}          | `"#cdata-section"`                                    | その [`data`](#characterdata)              | その [`data`](#characterdata)                        |
-| {{domxref("Comment")}}               | `"#comment"`                                          | その [`data`](#characterdata)              | その [`data`](#characterdata)                        |
-| {{domxref("ProcessingInstruction")}} | その [`target`](#characterdata)                       | その [`data`](#characterdata)              | その [`data`](#characterdata)                        |
-| {{domxref("Attr")}}                  | その [`name`](#attr)                                  | その [`value`](#attr)                      | その [`value`](#attr)                                |
+| {{domxref("Text")}}                  | `"#text"`                                              | その [`data`](#characterdata)              | その [`data`](#characterdata)                        |
+| {{domxref("CDATASection")}}          | `"#cdata-section"`                                     | その [`data`](#characterdata)              | その [`data`](#characterdata)                        |
+| {{domxref("Comment")}}               | `"#comment"`                                           | その [`data`](#characterdata)              | その [`data`](#characterdata)                        |
+| {{domxref("ProcessingInstruction")}} | その [`target`](#characterdata)                        | その [`data`](#characterdata)              | その [`data`](#characterdata)                        |
+| {{domxref("Attr")}}                  | その [`name`](#attr)                                   | その [`value`](#attr)                      | その [`value`](#attr)                                |
 
 ### Document
 
