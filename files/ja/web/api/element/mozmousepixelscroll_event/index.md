@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}{{ Non-standard_header() }}
 
-Firefox 専用の、標準外、かつ廃止予定の **MozMousePixelScroll`** イベントは、マウスホイールなどが操作されたときに {{domxref("Element")}} で非同期に発生します。これは {{ domxref("MouseScrollEvent") }} インターフェイスで表されます。
+Firefox 専用の、標準外、かつ廃止予定の **`MozMousePixelScroll`** イベントは、マウスホイールなどが操作されたときに {{domxref("Element")}} で非同期に発生します。これは {{ domxref("MouseScrollEvent") }} インターフェイスで表されます。
 
 > [!NOTE]
 > この標準外の旧式のイベントは使用しないでください。代わりに、常に標準の {{domxref("Element.wheel_event", "wheel")}} イベントを使用してください。

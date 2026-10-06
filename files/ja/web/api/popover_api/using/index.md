@@ -206,7 +206,7 @@ document.addEventListener("keydown", (event) => {
 });
 ```
 
-JavaScript のポップオーバーのプロパティ、機能検出、`togglePopover()' メソッドの動作は、[トグルヘルプ UI の例](https://mdn.github.io/dom-examples/popover-api/toggle-help-ui/)（[ソース](https://github.com/mdn/dom-examples/tree/main/popover-api/toggle-help-ui)）をご覧ください。
+JavaScript のポップオーバーのプロパティ、機能検出、`togglePopover()` メソッドの動作は、[トグルヘルプ UI の例](https://mdn.github.io/dom-examples/popover-api/toggle-help-ui/)（[ソース](https://github.com/mdn/dom-examples/tree/main/popover-api/toggle-help-ui)）をご覧ください。
 
 ## 入れ子のポップオーバー
 

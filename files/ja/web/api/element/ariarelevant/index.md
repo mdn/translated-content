@@ -25,7 +25,7 @@ l10n:
 
 ## 例
 
-この例では、IDが `text` の要素の [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) 属性は "all" に設定されています。ariaRelevant` を使用して値を "text" に更新します。
+この例では、IDが `text` の要素の [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) 属性は "all" に設定されています。`ariaRelevant` を使用して値を "text" に更新します。
 
 ```html
 <div
