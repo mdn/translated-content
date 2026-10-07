@@ -55,7 +55,7 @@ function f(foo, values) {
 }
 ```
 
-如果是在 ECMAScript 5 环境调用`f([1,2,3], obj)`，则`with`语句中变量`values`将指向函数的第二个参数`values`。但是，ECMAScript 6 标准给[`Array.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype)添加了一个新属性`values`，所有数组实例将继承这个属性。所以在 ECMAScript 6 环境中，`with`语句中变量`values`将指向`[1,2,3].values`。
+如果是在 ECMAScript 5 环境调用`f([1,2,3], obj)`，则`with`语句中变量`values`将指向函数的第二个参数`values`。但是，ECMAScript 6 标准给[`Array.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)添加了一个新属性`values`，所有数组实例将继承这个属性。所以在 ECMAScript 6 环境中，`with`语句中变量`values`将指向`[1,2,3].values`。
 
 ## 示例
 
