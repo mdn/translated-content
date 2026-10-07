@@ -3,7 +3,7 @@ title: Le placement automatique dans une disposition en grille
 short-title: Utiliser le placement automatique
 slug: Web/CSS/Guides/Grid_layout/Auto-placement
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: d6179808aed77188b778b9fbeaa89097978bc318
 ---
 
 La [disposition en grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout) contient des règles qui contrôlent ce qui se passe lorsque vous créez une grille et que vous ne placez pas explicitement certains ou tous les éléments enfants dans la grille. Lorsque vous n'avez pas besoin d'un contrôle explicite sur le placement du contenu, ce «&nbsp;placement automatique&nbsp;» est le moyen le plus simple de créer une grille pour un ensemble d'éléments.

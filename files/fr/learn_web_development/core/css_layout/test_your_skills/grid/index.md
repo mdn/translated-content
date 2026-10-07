@@ -3,19 +3,19 @@ title: "Testez vos compétences : Grilles CSS"
 short-title: "Test : Grille CSS"
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
 l10n:
-  sourceCommit: 143f7345a4276156679d816a153470fe1fc6f3f8
+  sourceCommit: 927616b242c2110394495ee32f2e1a64df34052e
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}
 
-Le but de ce test de compétences est de vous aider à évaluer si vous comprenez comment [une grille et des éléments de grille](/fr/docs/Learn_web_development/Core/CSS_layout/Grids) se comportent. Vous allez travailler sur plusieurs petites tâches qui utilisent différents éléments du contenu que vous venez de voir.
+Ce test de compétences a pour objectif de vous aider à évaluer si vous comprenez comment [une grille et des éléments de grille](/fr/docs/Learn_web_development/Core/CSS_layout/Grids) se comportent. Vous allez travailler sur plusieurs petites tâches qui utilisent différents éléments du contenu que vous venez de voir.
 
 > [!NOTE]
 > Pour obtenir de l'aide, lisez notre guide d'utilisation [Testez vos compétences](/fr/docs/Learn_web_development#testez_vos_compétences). Vous pouvez également nous contacter en utilisant l'un de nos [canaux de communication](/fr/docs/MDN/Community/Communication_channels).
 
 ## Disposition en grille 1
 
-Dans cette tâche, nous vous demandons de créer une grille dans laquelle les quatre éléments enfants sont automatiquement placés. La grille doit comporter trois colonnes qui partagent également l'espace disponible, avec un écart de `20px` entre les pistes de colonnes et de lignes. Ensuite, essayez d'ajouter d'autres éléments enfants à l'intérieur du conteneur parent ayant la classe `grid` et observez leur comportement par défaut.
+Dans cette tâche, nous vous demandons de créer une grille dans laquelle quatre éléments enfants sont automatiquement placés. La grille doit comporter trois colonnes qui partagent également l'espace disponible, avec un écart de `20px` entre les pistes de colonnes et de rangées. Ensuite, essayez d'ajouter d'autres éléments enfants à l'intérieur du conteneur parent ayant la classe `grid` et observez leur comportement par défaut.
 
 Le point de départ de la tâche ressemble à ceci&nbsp;:
 
@@ -50,7 +50,7 @@ body {
 }
 ```
 
-La disposition finale devrait ressembler à ceci&nbsp;:
+La disposition finale doit ressembler à ceci&nbsp;:
 
 {{EmbedLiveSample("grid1-finish", "", 160)}}
 
@@ -124,15 +124,15 @@ body {
 }
 ```
 
-La disposition devrait ressembler à ceci après avoir terminé la tâche&nbsp;:
+La disposition doit ressembler à ceci après avoir terminé la tâche&nbsp;:
 
 {{EmbedLiveSample("grid2-finish", "", 340)}}
 
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
 
-Il est possible de superposer des éléments en les faisant occuper les mêmes cellules de la grille.
-Une option consiste à utiliser les raccourcis ci-dessous, mais il serait correct d'utiliser les propriétés longues comme `grid-row-start`, par exemple.
+Il est possible que plusieurs éléments occupent les mêmes cellules de la grille et se superposent les uns aux autres.
+Une option consiste à utiliser les raccourcis ci-dessous&nbsp;; cependant, il est correct d'utiliser les propriétés longues comme `grid-row-start`, par exemple.
 
 ```css live-sample___grid2-finish
 .item1 {
@@ -146,7 +146,7 @@ Une option consiste à utiliser les raccourcis ci-dessous, mais il serait correc
 }
 ```
 
-Pour la question bonus, une façon d'y parvenir est d'utiliser `order`, que nous avons rencontré dans le tutoriel sur les boîtes flexibles.
+Pour la question bonus, une façon d'y parvenir est d'utiliser la propriété `order`, que nous avons rencontrée dans le tutoriel sur les boîtes flexibles.
 
 ```css live-sample___grid2-finish
 .item1 {
@@ -209,7 +209,7 @@ Pour compléter cette tâche, utilisez les propriétés `grid-area` et `grid-tem
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
 
-Chaque partie de la disposition doit avoir un nom en utilisant la propriété `grid-area` et `grid-template-areas` pour les disposer. Les points de confusion possibles seraient de ne pas réaliser que vous devez placer un `.` pour laisser une cellule vide, ou que vous devez répéter le nom pour qu'un élément occupe plus d'une piste&nbsp;:
+Chaque partie de la disposition doit avoir un nom en utilisant la propriété `grid-area` et `grid-template-areas` pour les disposer. Les points de confusion possibles sont de ne pas réaliser que vous devez placer un `.` pour laisser une cellule vide, ou que vous devez répéter le nom pour qu'un élément occupe plus d'une piste&nbsp;:
 
 ```css live-sample___grid3-finish
 .grid {
@@ -243,7 +243,7 @@ Chaque partie de la disposition doit avoir un nom en utilisant la propriété `g
 
 ## Disposition en grille 4
 
-Dans cette tâche, vous devrez utiliser à la fois la disposition en grille et la disposition flexible pour recréer la disposition finale. L'espacement entre les colonnes et les lignes doit être de `10px`. Vous n'avez pas besoin de modifier le HTML pour y parvenir.
+Dans cette tâche, vous devez utiliser à la fois la disposition en grille et la disposition flexible pour recréer la disposition finale. L'espacement entre les colonnes et les rangées doit être de `10px`. Vous n'avez pas besoin de modifier le HTML pour y parvenir.
 
 Le point de départ de la tâche ressemble à ceci&nbsp;:
 
@@ -349,10 +349,8 @@ La disposition devrait ressembler à ceci après avoir terminé la tâche&nbsp;:
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
 
-Le conteneur devra être une disposition en grille, car nous avons un alignement en lignes et en colonnes — bidimensionnel.
-Le `<ul>` doit être un conteneur flexible, car les balises (éléments `<li>`) ne sont pas alignées en colonnes, seulement en lignes et elles sont centrées dans l'espace avec la propriété d'alignement `justify-content` définie sur `center`.
-
-Vous pouvez essayer d'utiliser les boîtes flexibles sur le conteneur et de restreindre les cartes avec des valeurs en pourcentage. Vous pouvez également essayer de transformer les éléments en une disposition en grille, mais notez que les éléments ne sont pas alignés en deux dimensions, donc les boîtes flexibles ne sont pas le meilleur choix.
+Le conteneur doit être une disposition en grille, car les cartes sont alignées en deux dimensions — rangées et colonnes.
+Le `<ul>` doit être un conteneur flexible, car les balises (éléments `<li>`) sont alignées dans une seule dimension — uniquement les rangées — et elles sont centrées dans l'espace avec la propriété d'alignement `justify-content` définie sur `center`.
 
 ```css live-sample___grid4-finish
 .container {
