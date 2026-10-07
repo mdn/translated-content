@@ -1,105 +1,478 @@
 ---
-title: Terminando
+title: Vidas extra
 slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
+l10n:
+  sourceCommit: 69937a446786abf5a58d4214b4192597d0b3cdc6
 ---
 
-{{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Animations_and_tweens")}}
 
-Este es el último de los 10 pasos del [Gamedev Canvas tutorial](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente tal y como quedará al terminar esta lección en [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).
+Este es el **paso 8** de 11 del [tutorial para crear un juego de Breakout con JavaScript puro](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). En este artículo implementaremos un sistema de vidas, para que el jugador pueda seguir jugando hasta perder tres vidas, y no solo una, lo que hace que el juego resulte divertido durante más tiempo.
 
-Siempre es posible mejorar cualquier juego que hagamos. Por ejemplo, podemos dar vidas al jugador. Así, aunque pierda la bola una o dos veces, todavía puede intentar derribar todo el muro. También podemos mejorar los aspectos gráficos.
+## Nuevas variables
 
-## Dar vidas al jugador
-
-Dar vidas es bastante sencillo. Primero, añade una variable para guardar el número de vidas que tiene en cada momento. Ponla después de las que ya tienes:
+Añade dos variables nuevas debajo de `let score = 0;` para guardar el número de vidas y si se debe mostrar el mensaje de vida perdida:
 
 ```js
-var lives = 3;
+let lives = 3;
+let showLifeLostText = false;
 ```
 
-Mostrar por pantalla el número de vidas es prácticamente lo mismo que mostrar el contador de puntos. Añade la función siguiente detrás de la función `drawScore()`:
+## Dibujar las etiquetas de texto
+
+Dibujar los textos se parece a algo que ya hicimos en la lección [Llevar la puntuación y ganar](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win). Reemplaza `drawScore()` por una función `drawStatus()` que dibuje la puntuación, las vidas restantes y un mensaje cuando el jugador pierda una vida:
 
 ```js
-function drawLives() {
-  ctx.font = "16px Arial";
-  ctx.fillStyle = "#0095DD";
-  ctx.fillText("Lives: " + lives, canvas.width - 65, 20);
+function drawStatus() {
+  ctx.font = "18px Arial";
+  ctx.fillStyle = "#0095dd";
+  ctx.textBaseline = "top";
+  ctx.textAlign = "left";
+  ctx.fillText(`Puntos: ${score}`, 5, 5);
+
+  ctx.textAlign = "right";
+  ctx.fillText(`Vidas: ${lives}`, canvas.width - 5, 5);
+
+  if (showLifeLostText) {
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(
+      "Vida perdida, haz clic para continuar",
+      canvas.width / 2,
+      canvas.height / 2,
+    );
+  }
 }
 ```
 
-En lugar de terminar el juego inmediatamente, restaremos una vida hasta que ya no quede ninguna. También podemos colocar la bola y la paleta en la posición inicial cuando el jugador empiece con la vida siguiente. En la función <code style="font-style: normal; font-weight: normal;">draw()</code> cambia las dos líneas siguientes...
+Las tres etiquetas comparten la misma fuente y el mismo color. Usamos `textAlign` y `textBaseline` para colocar la puntuación arriba a la izquierda, las vidas arriba a la derecha y el mensaje de vida perdida en el centro (si `showLifeLostText` es `true`).
+
+En `update()`, reemplaza la llamada a `drawScore()` por `drawStatus()`.
+
+## El código para gestionar las vidas
+
+Para implementar las vidas en nuestro juego, primero cambiemos el comportamiento cuando la pelota sale de los límites. En lugar de reiniciar de inmediato:
 
 ```js
-alert("GAME OVER");
-document.location.reload();
-```
-
-... por estas otras:
-
-```js
-lives--;
-if (!lives) {
-  alert("GAME OVER");
-  document.location.reload();
-} else {
-  x = canvas.width / 2;
-  y = canvas.height - 30;
-  dx = 2;
-  dy = -2;
-  paddleX = (canvas.width - paddleWidth) / 2;
+if (ballIsOutOfBounds) {
+  // Lógica de fin del juego
+  location.reload();
+  return;
 }
 ```
 
-Ahora, cuando la bola toca el fondo, restamos una vida. Si no queda ninguna, el jugador pierde y termina la partida. Si queda alguna, entonces colocamos la bola y la paleta en el centro, y hacemos que la bola vaya en la nueva dirección correcta y a la velocidad inicial.
-
-### Sacar por pantalla el contador de vidas
-
-Tienes que añadir una llamada a `drawLives()` dentro de `draw()` debajo de la llamada a `drawScore()`:
+Llamaremos a una nueva función llamada `ballLeaveScreen()`; elimina las líneas anteriores (mostradas arriba) y reemplázalas por la siguiente línea:
 
 ```js
-drawLives();
+if (ballIsOutOfBounds) {
+  ballLeaveScreen();
+  return;
+}
 ```
 
-## Mejorar el refresco con requestAnimationFrame()
+El `return` detiene el procesamiento del resto del movimiento y de las colisiones de este fotograma después de que la pelota sale de la pantalla.
 
-Ahora vamos a ocuparnos de algo que no es particular de este juego, sino de la forma en la que se muestran las imágenes en pantalla.
-
-{{domxref("window.requestAnimationFrame", "requestAnimationFrame")}} ayuda al navegador a refrescar la imagen mejor que con el método {{domxref("windowTimers.setInterval()", "setInterval()")}} que estamos utilizando. Cambia la línea siguiente...
+Queremos reducir el número de vidas cada vez que la pelota sale del canvas. Añade la función `ballLeaveScreen()` a tu código:
 
 ```js
-setInterval(draw, 10);
+function ballLeaveScreen() {
+  lives--;
+  if (lives === 0) {
+    // Lógica de fin del juego
+    location.reload();
+    return;
+  }
+
+  paddle.pos.x = canvas.width / 2;
+  ball.pos.x = paddle.pos.x;
+  ball.pos.y = paddle.hitbox.top - ball.size.h / 2;
+  ball.vel = { x: 0, y: 0 };
+  showLifeLostText = true;
+  canvas.addEventListener(
+    "pointerdown",
+    () => {
+      showLifeLostText = false;
+      ball.vel = { x: 150, y: -150 };
+      lastTimestamp = null;
+    },
+    { once: true },
+  );
+}
 ```
 
-...por esta otra:
+En lugar de mostrar inmediatamente la alerta cuando pierdes una vida, primero restamos una vida del número actual y comprobamos si el valor es distinto de cero. Si lo es, el jugador todavía tiene vidas y puede seguir jugando: verá el mensaje de vida perdida, las posiciones de la pelota y la paleta se restablecerán en la pantalla, y con la siguiente entrada (un clic o un toque) el mensaje se ocultará y la pelota empezará a moverse de nuevo.
 
-```js
-draw();
-```
-
-Y, ahora, al final de la función draw(), justo antes de la llave que la cierra, añade la línea siguiente, que hará que la función `draw()` se llame a sí misma una y otra vez:
-
-```js
-requestAnimationFrame(draw);
-```
-
-Ahora draw() se ejecuta una y otra vez con un bucle `requestAnimationFrame()` pero, en lugar de hacerlo cada 10 milisegundos, dejamos que sea el navegadro quien decida cada cuánto tiempo. El navegador sincronizará el refresco, es decir, el número de fotogramas por segundo, a lo que sea capaz la máquina que está ejecutando el juego. De este modo la animación será más eficiente y más suave que el viejo método `setInterval()`.
+Cuando el número de vidas disponibles llega a cero, el juego termina y se muestra el mensaje de alerta de fin del juego.
 
 ## Compara tu código
 
-Ya hemos terminado. ¡La versión final del juego está lista para publicar!
+Esto es lo que deberías tener hasta ahora, funcionando en vivo. Para ver su código fuente, haz clic en el botón "Play".
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/9temh0ta/","","320")}}
+```html hidden
+<canvas id="game-canvas" width="480" height="320"></canvas>
+```
 
-> [!NOTE]
-> Cambia el número de vidas y el ángulo de la trayectoria de la bola cuando golpea la paleta.
+```css hidden
+* {
+  padding: 0;
+  margin: 0;
+}
 
-## Game over - de momento!
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
 
-Enhorabuena, has terminado todas las lecciones. Ya has aprendido las técnicas básicas de manipulación del \<canvas> y la lógica que hay detrás de los juegos 2D sencillos.
+canvas {
+  display: block;
+  width: min(100vw, 150vh);
+  height: auto;
+  touch-action: none;
+}
+```
 
-Ahora sería un buen momento para aprender a utilizar entornos de desarrollo (frameworks) y de continuar con el desarrollo de juegos. Puedes echar un vistazo a estas otra forma de realizar el mismo juego que has visto en [2D breakout game using Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser), o de echar un vistazo al tutorial [Cyber Orb built in Phaser](/es/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation). También puedes leer el contenido de [Games section on MDN](/es/docs/Games) para inspirarte y seguir aprendiendo.
+```js hidden
+const canvas = document.getElementById("game-canvas");
+const ctx = canvas.getContext("2d");
+let lastTimestamp = null;
+let score = 0;
+let lives = 3;
+let showLifeLostText = false;
 
-También puedes volve al [índice de este tutorial](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). ¡Diviértete programando!
+const baseWallHitbox = {
+  left: -Infinity,
+  right: Infinity,
+  top: -Infinity,
+  bottom: Infinity,
+};
 
-{{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
+const colliders = [
+  { hitbox: { ...baseWallHitbox, right: 0 } },
+  { hitbox: { ...baseWallHitbox, left: canvas.width } },
+  { hitbox: { ...baseWallHitbox, bottom: 0 } },
+];
+
+class GameObject {
+  static assets = new Map();
+  url;
+  asset;
+  ctx;
+  size = { w: undefined, h: undefined };
+  pos = { x: 0, y: 0 };
+  origin = { x: 0.5, y: 0.5 };
+  constructor(url, ctx) {
+    this.url = url;
+    this.ctx = ctx;
+  }
+  async preload() {
+    if (!GameObject.assets.has(this.url)) {
+      const asset = new Image();
+      asset.src = this.url;
+      GameObject.assets.set(
+        this.url,
+        asset.decode().then(() => asset),
+      );
+    }
+    this.asset = await GameObject.assets.get(this.url);
+    if (this.size.w === undefined) {
+      this.size.w = this.asset.width;
+      this.size.h = this.asset.height;
+    }
+  }
+  get hitbox() {
+    const left = this.pos.x - this.size.w * this.origin.x;
+    const top = this.pos.y - this.size.h * this.origin.y;
+    return {
+      left,
+      right: left + this.size.w,
+      top,
+      bottom: top + this.size.h,
+    };
+  }
+  draw() {
+    const { left, top } = this.hitbox;
+    this.ctx.drawImage(this.asset, left, top);
+  }
+  onCollide() {}
+}
+
+class Ball extends GameObject {
+  pos = { x: undefined, y: undefined };
+  vel = { x: 150, y: -150 };
+  move(dt) {
+    this.pos.x += this.vel.x * dt;
+    this.pos.y += this.vel.y * dt;
+  }
+  onCollide({ x, y }) {
+    if (x) {
+      this.vel.x = -this.vel.x;
+    }
+    if (y) {
+      this.vel.y = -this.vel.y;
+    }
+  }
+}
+
+class Paddle extends GameObject {
+  origin = { x: 0.5, y: 1 };
+  constructor(url, ctx) {
+    super(url, ctx);
+    this.pos = { x: ctx.canvas.width / 2, y: ctx.canvas.height - 5 };
+  }
+}
+
+class Brick extends GameObject {
+  constructor(url, ctx, x, y, w, h) {
+    super(url, ctx);
+    this.pos = { x, y };
+    this.size = { w, h };
+  }
+  draw() {
+    const { left, top } = this.hitbox;
+    this.ctx.drawImage(this.asset, left, top, this.size.w, this.size.h);
+  }
+  onCollide() {
+    bricks.splice(bricks.indexOf(this), 1);
+    colliders.splice(colliders.indexOf(this), 1);
+    score += 10;
+  }
+}
+
+const ball = new Ball(
+  "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/ball.png",
+  ctx,
+);
+const paddle = new Paddle(
+  "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/paddle.png",
+  ctx,
+);
+colliders.push(paddle);
+const bricks = initBricks();
+for (const brick of bricks) {
+  colliders.push(brick);
+}
+
+canvas.addEventListener("pointermove", (event) => {
+  if (paddle.size.w === undefined) {
+    return;
+  }
+  const bounds = canvas.getBoundingClientRect();
+  const x = ((event.clientX - bounds.left) * canvas.width) / bounds.width;
+  paddle.pos.x = Math.max(
+    paddle.size.w / 2,
+    Math.min(canvas.width - paddle.size.w / 2, x),
+  );
+});
+
+Promise.all([ball, paddle, ...bricks].map((obj) => obj.preload())).then(() => {
+  ball.pos.x = paddle.pos.x;
+  ball.pos.y = paddle.hitbox.top - ball.size.h / 2;
+  requestAnimationFrame(update);
+});
+
+function update(timestamp) {
+  const dt = lastTimestamp === null ? 0 : (timestamp - lastTimestamp) / 1000;
+  lastTimestamp = timestamp;
+  moveBall(dt);
+
+  ctx.fillStyle = "#eeeeee";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ball.draw();
+  paddle.draw();
+  for (const brick of bricks) {
+    brick.draw();
+  }
+  drawStatus();
+
+  if (bricks.length === 0) {
+    alert("¡Ganaste el juego, felicidades!");
+    location.reload();
+    return;
+  }
+
+  requestAnimationFrame(update);
+}
+
+function drawStatus() {
+  ctx.font = "18px Arial";
+  ctx.fillStyle = "#0095dd";
+  ctx.textBaseline = "top";
+  ctx.textAlign = "left";
+  ctx.fillText(`Puntos: ${score}`, 5, 5);
+
+  ctx.textAlign = "right";
+  ctx.fillText(`Vidas: ${lives}`, canvas.width - 5, 5);
+
+  if (showLifeLostText) {
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(
+      "Vida perdida, haz clic para continuar",
+      canvas.width / 2,
+      canvas.height / 2,
+    );
+  }
+}
+
+function ballLeaveScreen() {
+  lives--;
+  if (lives === 0) {
+    // Lógica de fin del juego
+    location.reload();
+    return;
+  }
+
+  paddle.pos.x = canvas.width / 2;
+  ball.pos.x = paddle.pos.x;
+  ball.pos.y = paddle.hitbox.top - ball.size.h / 2;
+  ball.vel = { x: 0, y: 0 };
+  showLifeLostText = true;
+  canvas.addEventListener(
+    "pointerdown",
+    () => {
+      showLifeLostText = false;
+      ball.vel = { x: 150, y: -150 };
+      lastTimestamp = null;
+    },
+    { once: true },
+  );
+}
+
+function getCollision(moving, velocity, obstacle, dt) {
+  const width = moving.right - moving.left;
+  const height = moving.bottom - moving.top;
+  const movingPos = { x: moving.left, y: moving.top };
+  const left = obstacle.left - width;
+  const right = obstacle.right;
+  const top = obstacle.top - height;
+  const bottom = obstacle.bottom;
+  const hit = { time: dt, x: null, y: null };
+
+  function checkFace(axis, coordinate, min, max, direction) {
+    if (velocity[axis] * direction <= 0) {
+      return;
+    }
+    const time = (coordinate - movingPos[axis]) / velocity[axis];
+    if (time < 0 || time > hit.time) {
+      return;
+    }
+    const otherAxis = axis === "x" ? "y" : "x";
+    const otherPosition = movingPos[otherAxis] + velocity[otherAxis] * time;
+    if (otherPosition < min || otherPosition > max) {
+      return;
+    }
+    if (time < hit.time) {
+      hit.x = null;
+      hit.y = null;
+    }
+    hit.time = time;
+    hit[axis] = coordinate;
+  }
+
+  checkFace("x", left, top, bottom, 1);
+  checkFace("x", right, top, bottom, -1);
+  checkFace("y", top, left, right, 1);
+  checkFace("y", bottom, left, right, -1);
+
+  return hit.x === null && hit.y === null ? null : hit;
+}
+
+function moveBall(dt) {
+  while (dt > 0 && bricks.length > 0) {
+    // Evitar que el getter se dispare repetidamente
+    const ballHitbox = ball.hitbox;
+    let hitTime = dt;
+    let hitX = null;
+    let hitY = null;
+    let contacts = [];
+
+    for (const collider of colliders) {
+      const hit = getCollision(ballHitbox, ball.vel, collider.hitbox, hitTime);
+      if (hit === null) {
+        continue;
+      }
+      if (hit.time < hitTime) {
+        hitX = null;
+        hitY = null;
+        contacts = [];
+      }
+      hitTime = hit.time;
+      hitX = hit.x ?? hitX;
+      hitY = hit.y ?? hitY;
+      contacts.push({ collider, hit });
+    }
+
+    ball.move(hitTime);
+    dt -= hitTime;
+
+    const ballIsOutOfBounds = ball.hitbox.bottom > canvas.height;
+    if (ballIsOutOfBounds) {
+      ballLeaveScreen();
+      return;
+    }
+
+    if (contacts.length === 0) {
+      break;
+    }
+    // Ajustar la posición al punto de contacto para evitar errores de coma flotante
+    if (hitX !== null) {
+      ball.pos.x = hitX + ball.size.w / 2;
+    }
+    if (hitY !== null) {
+      ball.pos.y = hitY + ball.size.h / 2;
+    }
+
+    ball.onCollide({ x: hitX !== null, y: hitY !== null });
+    for (const { collider, hit } of contacts) {
+      collider.onCollide?.({ x: hit.x !== null, y: hit.y !== null });
+    }
+  }
+}
+
+function initBricks() {
+  const bricksLayout = {
+    width: 50,
+    height: 20,
+    count: {
+      row: 3,
+      col: 7,
+    },
+    offset: {
+      top: 50,
+      left: 60,
+    },
+    padding: 10,
+  };
+  const bricks = [];
+  for (let c = 0; c < bricksLayout.count.col; c++) {
+    for (let r = 0; r < bricksLayout.count.row; r++) {
+      const brickX =
+        c * (bricksLayout.width + bricksLayout.padding) +
+        bricksLayout.offset.left;
+      const brickY =
+        r * (bricksLayout.height + bricksLayout.padding) +
+        bricksLayout.offset.top;
+
+      const newBrick = new Brick(
+        "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/brick.png",
+        ctx,
+        brickX,
+        brickY,
+        bricksLayout.width,
+        bricksLayout.height,
+      );
+      bricks.push(newBrick);
+    }
+  }
+  return bricks;
+}
+```
+
+{{EmbedLiveSample("compara tu código", "", 480, , , , , "allow-modals")}}
+
+## Próximos pasos
+
+Las vidas hicieron que el juego sea más indulgente: si pierdes una vida, todavía te quedan dos más y puedes seguir jugando. Ahora ampliemos el aspecto y la sensación del juego añadiendo [animaciones y tweens](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Animations_and_tweens).
+
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Animations_and_tweens")}}
