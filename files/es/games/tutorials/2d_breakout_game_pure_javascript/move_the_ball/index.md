@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
-Este es el **2.º paso** de los 11 del tutorial [Crear un juego de Breakout con JavaScript puro](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). En este artículo veremos cómo añadir sprites a nuestro mundo de juego. Nuestro juego tendrá una pelota que rueda por la pantalla, rebota en una paleta y destruye ladrillos para ganar puntos.
+Este es el **paso 2** de los 11 del [tutorial para crear un juego Breakout con JavaScript puro](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). En este artículo veremos cómo añadir sprites a nuestro mundo de juego. Nuestro juego tendrá una pelota que rueda por la pantalla, rebota en una paleta y destruye ladrillos para ganar puntos.
 
 Manejar la pelota implica dos pasos: cargar el recurso de la pelota y dibujarlo en la posición correcta mientras se mueve. Técnicamente, vamos a pintar la pelota en la pantalla, borrarla y volver a pintarla en una posición ligeramente distinta en cada fotograma para dar la impresión de movimiento, igual que funciona el movimiento en el cine.
 
@@ -166,7 +166,7 @@ Recarga `index.html` y deberías ver la pelota rodando por la pantalla.
 
 ## Compara tu código
 
-Esto es lo que deberías tener hasta ahora, en funcionamiento. Para ver su código fuente, haz clic en el botón "Play".
+Esto es lo que deberías tener hasta ahora, funcionando en vivo. Para ver su código fuente, haz clic en el botón "Play".
 
 Si no ves la pelota, prueba a recargar la página: probablemente la pelota ya se salió de la pantalla.
 
@@ -253,7 +253,7 @@ function update(timestamp) {
 
 {{EmbedLiveSample("compara tu código", "", 480, , , , , "allow-modals")}}
 
-## Siguientes pasos
+## Próximos pasos
 
 Ahora podemos pasar a la siguiente lección y ver cómo hacer que la pelota [rebote en las paredes](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls).
 
