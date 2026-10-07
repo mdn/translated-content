@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens", "Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay")}}
 
-Este es el **undécimo paso** de los 12 del [tutorial para crear un juego Breakout con Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). En lugar de empezar el juego de inmediato, podemos dejar esa decisión en manos del jugador añadiendo un botón de inicio que pueda pulsar. Veamos cómo hacerlo.
+Este es el **paso 11** de los 12 del [tutorial para crear un juego Breakout con Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). En lugar de empezar el juego de inmediato, podemos dejar esa decisión en manos del jugador añadiendo un botón de inicio que pueda pulsar. Veamos cómo hacerlo.
 
 ## Propiedades nuevas
 
