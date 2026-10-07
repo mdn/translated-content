@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
 
-Este es el **8.º paso** de los 12 del [tutorial para crear un juego Breakout con Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). En este artículo añadiremos un sistema de puntuación a nuestro juego. Tener una puntuación puede hacer el juego más interesante: puedes intentar superar tu propia puntuación máxima o la de tus amigos. También añadimos una condición de victoria, que se cumple si consigues destruir todos los ladrillos.
+Este es el **paso 8** de los 12 del [tutorial para crear un juego Breakout con Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). En este artículo añadiremos un sistema de puntuación a nuestro juego. Tener una puntuación puede hacer el juego más interesante: puedes intentar superar tu propia puntuación máxima o la de tus amigos. También añadimos una condición de victoria, que se cumple si consigues destruir todos los ladrillos.
 
 Usaremos una propiedad aparte para guardar la puntuación y el método `text()` de Phaser para mostrarla en la pantalla.
 
@@ -222,7 +222,7 @@ const game = new Phaser.Game(config);
 
 {{EmbedLiveSample("compara tu código", "", 480, , , , , "allow-modals")}}
 
-## Siguientes pasos
+## Próximos pasos
 
 Ya están implementadas tanto la derrota como la victoria, así que la mecánica principal de nuestro juego está terminada. Ahora añadamos algo extra: daremos al jugador tres [vidas](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives) en lugar de una.
 
