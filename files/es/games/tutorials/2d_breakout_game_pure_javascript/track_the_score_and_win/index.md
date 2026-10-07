@@ -3,7 +3,7 @@ title: Poner un contador y terminar ganando
 slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
 Este es el **octavo** capítulo de 10, del [Gamedev Canvas tutorial](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente como debería quedar tras este capítulo en [Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html).
 
@@ -102,6 +102,6 @@ Puedes comparar tu código con este:
 
 ## Pasos siguientes
 
-El juego, ahora mismo, ya tiene buena pinta. En la siguiente lección conseguirás que sea más atractivo porque añadirás el [Control del ratón](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls).
+El juego, ahora mismo, ya tiene buena pinta. En la siguiente lección conseguirás que sea más atractivo porque añadirás el [Control del ratón](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls).
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}

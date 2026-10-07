@@ -48,6 +48,6 @@ Puedes verificar el código final de esta lección en la demostración en vivo a
 
 ## Pasos siguientes
 
-Ahora que hemos configurado el escalamiento de nuestro juego, continuemos con la tercera lección y descubramos cómo [cargar los assets e imprimirlos en la pantalla](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen).
+Ahora que hemos configurado el escalamiento de nuestro juego, continuemos con la tercera lección y descubramos cómo [cargar los assets e imprimirlos en la pantalla](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball).
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball")}}

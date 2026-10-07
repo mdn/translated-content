@@ -48,6 +48,6 @@ Aquí tienes el código para comparar:
 
 ## Pasos siguientes
 
-Ya tenemos el juego terminado, pero aún lo podemos mejorar con algunos trucos [Finalizando](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up).
+Ya tenemos el juego terminado, pero aún lo podemos mejorar con algunos trucos [Finalizando](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives).
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}

@@ -21,7 +21,7 @@ En nuestro primer módulo de JavaScript, primero respondemos algunas preguntas f
 Antes de comenzar este módulo, no necesitas ningún conocimiento previo de JavaScript, pero debes estar familiarizado con HTML y CSS. Es recomendable trabajar con los siguientes módulos antes de comenzar con JavaScript:
 
 - [Introducción a la Web](/es/docs/Learn_web_development/Getting_started/Your_first_website) (que incluye una [introducción básica a JavaScript](/es/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity).
-- [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content).
+- [Introducción a HTML](/es/docs/Learn_web_development/Core/Structuring_content).
 - [Introducción a CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics).
 
 > [!NOTE]
