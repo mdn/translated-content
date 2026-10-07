@@ -98,7 +98,7 @@ console.log(view2[7]); // undefined
 buffer2.resize(8);
 console.log(view2[7]); // 0
 
-// 将缓冲区复制到一个大小在 maxByteLength 內但更大的缓冲区
+// 将缓冲区复制到一个大小在 maxByteLength 内但更大的缓冲区
 const buffer3 = buffer2.transfer(12);
 console.log(buffer3.byteLength); // 12
 
