@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Extra_lives", "Games/Tutorials/2D_breakout_game_Phaser/Buttons")}}
 
-Este es el **décimo paso** de los 12 del [tutorial para crear un juego Breakout con Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Veremos cómo implementar animaciones y tweens de Phaser en nuestro juego, para que se vea más vistoso y lleno de vida. El resultado será una experiencia mejor y más entretenida.
+Este es el **paso 10** de los 12 del [tutorial para crear un juego Breakout con Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Veremos cómo implementar animaciones y tweens de Phaser en nuestro juego, para que se vea más vistoso y lleno de vida. El resultado será una experiencia mejor y más entretenida.
 
 ## Animaciones
 
