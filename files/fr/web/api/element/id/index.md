@@ -3,12 +3,12 @@ title: "Element : propriété id"
 short-title: id
 slug: Web/API/Element/id
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 88c33ab5f4ccd88d13a0a5272de45d4d33f9f636
 ---
 
 {{APIRef("DOM")}}
 
-La propriété **`id`** de l'interface {{DOMxRef("Element")}} représente l'identifiant de l'élément, reflétant l'attribut universel [**`id`**](/fr/docs/Web/HTML/Reference/Global_attributes/id).
+La propriété **`id`** de l'interface {{DOMxRef("Element")}} reflète le contenu de l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) de l'élément.
 
 Si la valeur `id` n'est pas une chaîne de caractères vide, elle doit être unique dans un document.
 

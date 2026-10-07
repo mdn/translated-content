@@ -67,7 +67,7 @@ JavaScript には、一般的な `Error` コンストラクターの他に、中
 これらのプロパティはそれぞれの `Error` インスタンス自身のプロパティです。
 
 - {{jsxref("Error/cause", "cause")}}
-  - : 現在のエラーがなぜ発生したのかを示すエラーの原因。通常は捕捉した別のエラー。ユーザーが生成した `Error` オブジェクトでは、コンストラクターの第二引数で `cause` プロパティとして渡された値です」。
+  - : 現在のエラーがなぜ発生したのかを示すエラーの原因。通常は捕捉した別のエラー。ユーザーが生成した `Error` オブジェクトでは、コンストラクターの第二引数で `cause` プロパティとして渡された値です。
 - {{jsxref("Error/columnNumber", "columnNumber")}} {{non-standard_inline}}
   - : 標準外の Mozilla のプロパティで、このエラーが発生した行内の桁番号です。
 - {{jsxref("Error/fileName", "fileName")}} {{non-standard_inline}}

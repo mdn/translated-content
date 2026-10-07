@@ -1,11 +1,14 @@
 ---
-title: RTCPeerConnection.canTrickleIceCandidates
+title: "RTCPeerConnection: canTrickleIceCandidates プロパティ"
+short-title: canTrickleIceCandidates
 slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
+l10n:
+  sourceCommit: 77d90a23ee0a3b5486a7963f68ad4e56efb06a7b
 ---
 
 {{APIRef("WebRTC")}}
 
-**{{domxref("RTCPeerConnection")}}** は読み取り専用のプロパティで、リモートピアーが[トリクル ICE 候補](https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice)を受け入れることができるかどうかを示す論理値を返します。
+**`canTrickleIceCandidates`** は {{domxref("RTCPeerConnection")}} インターフェイスの読み取り専用プロパティで、リモートピアーが[トリクル ICE 候補](https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice)を受け入れることができるかどうかを示す論理値を返します。
 
 **ICE トリクリング**とは、最初の提案や回答がすでに相手に送られた後も、候補を送り続けるプロセスのことです。
 
@@ -35,17 +38,17 @@ function waitToCompleteIceGathering(pc) {
   });
 }
 
-// The following code might be used to handle an offer from a peer when
-// it isn't known whether it supports trickle ICE.
+// 以下のコードは、ピアがトリクル ICE に対応しているかどうかが不明な場合に、
+// そのピアからのオファーを処理するために使用されることがあります。
 async function newPeer(remoteOffer) {
   await pc.setRemoteDescription(remoteOffer);
   const offer = await pc.createOffer();
   await pc.setLocalDescription(offer);
   if (pc.canTrickleIceCandidates) return pc.localDescription;
   const answer = await waitToCompleteIceGathering(pc);
-  sendAnswerToPeer(answer); //To peer via signaling channel
+  sendAnswerToPeer(answer); // シグナルチャネルを介して覗き見る
 }
-// Handle error with try/catch
+// try/catch でエラー処理
 
 pc.addEventListener(
   "icecandidate",

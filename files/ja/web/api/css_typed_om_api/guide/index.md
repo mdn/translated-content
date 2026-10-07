@@ -246,7 +246,7 @@ for (const value of ofInterest) {
 - {{domxref("CSSStyleValue/parse_static", "CSSStyleValue.parse()")}}
 - {{domxref("CSSStyleValue/parseAll_static", "CSSStyleValue.parseAll()")}}
 
-前述の通り、 `StylePropertyMapReadOnly.get('--customProperty')`は {{domxref('CSSUnparsedValue')}} を返します。CSSUnparsedValue` オブジェクトのインスタンスは、継承された {{domxref('CSSStyleValue/parse_static', 'CSSStyleValue.parse()')}} と {{domxref('CSSStyleValue/parseAll_static', 'CSSStyleValue.parseAll()')}} メソッドで解釈することが可能です。
+前述の通り、 `StylePropertyMapReadOnly.get('--customProperty')`は {{domxref('CSSUnparsedValue')}} を返します。`CSSUnparsedValue` オブジェクトのインスタンスは、継承された {{domxref('CSSStyleValue/parse_static', 'CSSStyleValue.parse()')}} と {{domxref('CSSStyleValue/parseAll_static', 'CSSStyleValue.parseAll()')}} メソッドで解釈することが可能です。
 
 いくつかのカスタムプロパティ、座標変換、`calc()`、その他の機能を持つ CSS の例を見てみましょう。ここでは、 {{domxref("console/log_static", "console.log()")}} に出力される短い JavaScript スニペットを用いて、それらの型が何であるかを見ていきます。
 

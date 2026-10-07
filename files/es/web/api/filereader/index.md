@@ -1,69 +1,138 @@
 ---
 title: FileReader
 slug: Web/API/FileReader
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{ APIRef("File API") }}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-## Sumario
+La interfaz **`FileReader`** permite a las aplicaciones web leer de forma asíncrona el contenido de archivos (o búferes de datos sin procesar) almacenados en el equipo del usuario, usando objetos {{domxref("File")}} o {{domxref("Blob")}} para indicar el archivo o los datos que se van a leer.
 
-El objeto FileReader permite que las aplicaciones web lean ficheros (o información en buffer) almacenados en el cliente de forma asíncrona, usando los objetos {{domxref("File")}} o {{domxref("Blob")}} dependiendo de los datos que se pretenden leer.
+Los objetos File se pueden obtener de un objeto {{domxref("FileList")}}, que se devuelve cuando el usuario selecciona archivos con el elemento `<input type="file">`, o del objeto {{domxref("DataTransfer")}} de una operación de arrastrar y soltar. `FileReader` solo puede acceder al contenido de los archivos que el usuario ha seleccionado de forma explícita; no se puede usar para leer un archivo a partir de su ruta en el sistema de archivos del usuario. Para leer archivos del sistema de archivos del cliente a partir de su ruta, usa la [File System Access API](/es/docs/Web/API/File_System_API). Para leer archivos del lado del servidor, usa {{domxref("Window/fetch", "fetch()")}}, con permisos [CORS](/es/docs/Web/HTTP/Guides/CORS) si la lectura es entre orígenes distintos.
 
-El objeto File puede ser obtenido desde un objeto {{domxref("FileList")}} devuelto como resultado de la selección de archivos por parte del usuario en un elemento {{HTMLElement("input")}}, desde el objeto [`DataTransfer`](/es/docs/Web/API/DataTransfer) producido por una operación de arrastre (drag and drop) o desde la API mozGetAsFile () en un {{domxref("HTMLCanvasElement")}}.
+{{InheritanceDiagram}}
 
 ## Constructor
 
-```
-FileReader FileReader();
-```
+- {{domxref("FileReader.FileReader", "FileReader()")}}
+  - : Devuelve un nuevo objeto `FileReader`.
 
-Mira el artículo _[Using files from web applications](/es/docs/Web/API/File_API/Using_files_from_web_applications)_ para más detalles y ejemplos.
+Para ver detalles y ejemplos, consulta [Uso de archivos desde aplicaciones web](/es/docs/Web/API/File_API/Using_files_from_web_applications).
 
-## Propiedades
+## Propiedades de instancia
 
-- {{domxref("FileReader.error")}} {{readonlyinline}}
-  - : Un {{domxref("DOMError")}} que representa el error que ocurrió al momento de leer el archivo.
-- {{domxref("FileReader.readyState")}} {{readonlyinline}}
-  - : Devuelve un entero que indica el estado de FileReader. Puede ser uno de los siguientes:
+- {{domxref("FileReader.error")}} {{ReadOnlyInline}}
+  - : Un objeto {{domxref("DOMException")}} que representa el error que se produjo al leer el archivo.
+- {{domxref("FileReader.readyState")}} {{ReadOnlyInline}}
+  - : Un número que indica el estado del `FileReader`. Su valor es uno de los siguientes:
 
-    | `EMPTY`   | `0` | No ha sido leido ningún dato aún.         |
-    | --------- | --- | ----------------------------------------- |
-    | `LOADING` | `1` | La información está siendo leída.         |
-    | `DONE`    | `2` | Se ha completado la solicitud de lectura. |
+    | Nombre    | Valor | Descripción                                    |
+    | --------- | ----- | ---------------------------------------------- |
+    | `EMPTY`   | `0`   | Todavía no se han cargado datos.               |
+    | `LOADING` | `1`   | Los datos se están cargando en este momento.   |
+    | `DONE`    | `2`   | Se ha completado toda la solicitud de lectura. |
 
-- {{domxref("FileReader.result")}} {{readonlyinline}}
-  - : El contenido del fichero. Esta propieda es válida solo cuando la propiedad FileReader.readyState es 2, es decir, cuando la lectura ha finalizado. El formato de la información depende de los métodos usados al iniciar la operación de lectura.
+- {{domxref("FileReader.result")}} {{ReadOnlyInline}}
+  - : El contenido del archivo. Esta propiedad solo es válida una vez que la operación de lectura ha terminado, y el formato de los datos depende del método que se haya usado para iniciar la operación de lectura.
 
-### Controladores de eventos
-
-- {{domxref("FileReader.onabort")}}
-  - : Un controlador para el evento [`abort`](/es/docs/Web/API/HTMLMediaElement/abort_event). Este evento se activa cada vez que se interrumpe la operación de lectura.
-- {{domxref("FileReader.onerror")}}
-  - : Un controlador para el evento [`error`](/es/docs/Web/API/HTMLElement/error_event). Este evento se activa cada vez que la operación de lectura encuentra un error.
-- {{domxref("FileReader.onload")}}
-  - : Un controlador para el evento [`load`](/es/docs/Web/API/Window/load_event). Este evento se activa cada vez que la operación de lectura se ha completado satisfactoriamente.
-- {{domxref("FileReader.onloadstart")}}
-  - : Un controlador para el evento [`loadstart`](/es/docs/Web/API/XMLHttpRequest/loadstart_event). Este evento se activa cada vez que comienza la lectura.
-- {{domxref("FileReader.onloadend")}}
-  - : Un controlador para el evento [`loadend`](/es/docs/Web/API/XMLHttpRequestEventTarget/loadend_event). Este evento se activa cada vez que la operación de lecura se ha completado (ya sea con éxito o fallo).
-- {{domxref("FileReader.onprogress")}}
-  - : Un controlador para el evento [`progress`](/es/docs/Web/API/XMLHttpRequest/progress_event). Este evento se activa mientras se está leyendo el contenido del objeto {{domxref("Blob")}}.
-
-> [!NOTE]
-> Como `FileReader` hereda de {{domxref("EventTarget")}}, todos esos eventos también pueden ser escuchados usando el método {{domxref("EventTarget.addEventListener()","addEventListener")}}.
-
-## Métodos
+## Métodos de instancia
 
 - {{domxref("FileReader.abort()")}}
-  - : Interrumpe la operación de lectura. A su regreso `readyState` será `DONE`.
+  - : Cancela la operación de lectura. Al finalizar, el estado `readyState` será `DONE`.
 - {{domxref("FileReader.readAsArrayBuffer()")}}
-  - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }} especificado, una vez terminada, el atributo `result` contiene un {{jsxref("ArrayBuffer")}} representando los datos del fichero.
-- {{domxref("FileReader.readAsBinaryString()")}}
-  - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }}, una vez terminada, el atributo `result` contiene los datos binarios en bruto del archivo como una cadena.
+  - : Inicia la lectura del contenido del objeto {{domxref("Blob")}} especificado; una vez finalizada, el atributo `result` contiene un {{jsxref("ArrayBuffer")}} que representa los datos del archivo.
+- {{domxref("FileReader.readAsBinaryString()")}} {{deprecated_inline}}
+  - : Inicia la lectura del contenido del objeto {{domxref("Blob")}} especificado; una vez finalizada, el atributo `result` contiene los datos binarios sin procesar del archivo como una cadena de texto.
 - {{domxref("FileReader.readAsDataURL()")}}
-  - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }}, una vez terminada, el atributo `result` contiene un `data:` URL que representa los datos del fichero.
+  - : Inicia la lectura del contenido del objeto {{domxref("Blob")}} especificado; una vez finalizada, el atributo `result` contiene una URL `data:` que representa los datos del archivo.
 - {{domxref("FileReader.readAsText()")}}
-  - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }}, una vez terminada, el atributo `result` contiene el contenido del fichero como una cadena de texto.
+  - : Inicia la lectura del contenido del objeto {{domxref("Blob")}} especificado; una vez finalizada, el atributo `result` contiene el contenido del archivo como una cadena de texto. Se puede especificar opcionalmente un nombre de codificación.
+
+## Eventos
+
+Para detectar estos eventos, usa {{domxref("EventTarget/addEventListener", "addEventListener()")}} o asigna un detector de eventos a la propiedad `oneventname` de esta interfaz. Cuando `FileReader` ya no se utilice, elimina los detectores de eventos con {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} para evitar fugas de memoria.
+
+- {{domxref("FileReader/abort_event", "abort")}}
+  - : Se dispara cuando se ha abortado una lectura, por ejemplo, porque el programa llamó a {{domxref("FileReader.abort()")}}.
+- {{domxref("FileReader/error_event", "error")}}
+  - : Se dispara cuando la lectura falla debido a un error.
+- {{domxref("FileReader/load_event", "load")}}
+  - : Se dispara cuando una lectura se ha completado con éxito.
+- {{domxref("FileReader/loadend_event", "loadend")}}
+  - : Se dispara cuando una lectura ha finalizado, ya sea con éxito o no.
+- {{domxref("FileReader/loadstart_event", "loadstart")}}
+  - : Se dispara cuando ha comenzado una lectura.
+- {{domxref("FileReader/progress_event", "progress")}}
+  - : Se dispara periódicamente a medida que se leen los datos.
+
+## Ejemplos
+
+### Uso de FileReader
+
+Este ejemplo lee y muestra el contenido de un archivo de texto directamente en el navegador.
+
+#### HTML
+
+```html
+<h1>Lector de archivos</h1>
+<input type="file" id="file-input" />
+<div id="message"></div>
+<pre id="file-content"></pre>
+```
+
+#### JavaScript
+
+```js
+const fileInput = document.getElementById("file-input");
+const fileContentDisplay = document.getElementById("file-content");
+const messageDisplay = document.getElementById("message");
+
+fileInput.addEventListener("change", handleFileSelection);
+
+function handleFileSelection(event) {
+  const file = event.target.files[0];
+  fileContentDisplay.textContent = ""; // Borra el contenido del archivo anterior
+  messageDisplay.textContent = ""; // Borra los mensajes anteriores
+
+  // Valida la existencia y el tipo de archivo
+  if (!file) {
+    showMessage("No se ha seleccionado ningún archivo. Elige uno.", "error");
+    return;
+  }
+
+  if (!file.type.startsWith("text")) {
+    showMessage(
+      "Tipo de archivo no compatible. Por favor, selecciona un archivo de texto.",
+      "error",
+    );
+    return;
+  }
+
+  // Lee el archivo
+  const reader = new FileReader();
+  reader.onload = () => {
+    fileContentDisplay.textContent = reader.result;
+  };
+  reader.onerror = () => {
+    showMessage(
+      "Error al leer el archivo. Por favor, inténtalo de nuevo.",
+      "error",
+    );
+  };
+  reader.readAsText(file);
+}
+
+// Muestra un mensaje al usuario
+function showMessage(message, type) {
+  messageDisplay.textContent = message;
+  messageDisplay.style.color = type === "error" ? "red" : "green";
+}
+```
+
+### Resultado
+
+{{EmbedLiveSample("Uso de FileReader", 640, 300)}}
 
 ## Especificaciones
 
@@ -73,8 +142,9 @@ Mira el artículo _[Using files from web applications](/es/docs/Web/API/File_API
 
 {{Compat}}
 
-## See also
+## Véase también
 
-- [Usando archivos desde aplicaciónes web](/es/docs/Web/API/File_API/Using_files_from_web_applications)
-- {{ domxref("File") }}
-- {{ domxref("Blob") }}
+- [Uso de archivos desde aplicaciones web](/es/docs/Web/API/File_API/Using_files_from_web_applications)
+- {{domxref("File")}}
+- {{domxref("Blob")}}
+- {{domxref("FileReaderSync")}}

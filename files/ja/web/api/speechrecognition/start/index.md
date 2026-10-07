@@ -74,7 +74,7 @@ const startBtn = document.querySelector("button");
 const diagnostic = document.querySelector(".output");
 ```
 
-次に、`click` イベントハンドラ－を `<button>` に追加します。クリックされると、{{domxref("HTMLAudioElement.Audio", "Audio()")}} コンストラクタ－を使用して新しい {{htmlelement("audio")}} 要素を作成し、MP3 ファイルを読み込みます。MP3 の再生準備が整うと（{{domxref("HTMLMediaElement.canplay_event", "canplay")}} イベントで判定）、 {{domxref("HTMLMediaElement.captureStream", "captureStream()")}} メソッドで {{domxref("MediaStream")}} としてキャプチャし、 {{domxref("MediaStream.getAudioTracks", "getAudioTracks()")}} で音声の {{domxref("MediaStreamTrack")}} を抽出します。
+次に、`click` イベントハンドラーを `<button>` に追加します。クリックされると、{{domxref("HTMLAudioElement.Audio", "Audio()")}} コンストラクターを使用して新しい {{htmlelement("audio")}} 要素を作成し、MP3 ファイルを読み込みます。MP3 の再生準備が整うと（{{domxref("HTMLMediaElement.canplay_event", "canplay")}} イベントで判定）、 {{domxref("HTMLMediaElement.captureStream", "captureStream()")}} メソッドで {{domxref("MediaStream")}} としてキャプチャし、 {{domxref("MediaStream.getAudioTracks", "getAudioTracks()")}} で音声の {{domxref("MediaStreamTrack")}} を抽出します。
 
 次に音声を再生し（認識を行うために必要）、`MediaStreamTrack` を `start()` メソッドに渡して認識を開始します。
 

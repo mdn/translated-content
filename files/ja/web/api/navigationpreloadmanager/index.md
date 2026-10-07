@@ -47,7 +47,7 @@ l10n:
 
 #### ナビゲーションの事前読み込みの機能を検出して有効化
 
-下記では、最初の {{domxref("ServiceWorkerRegistration.navigationPreload")}} を使用して、この機能に対応してしているかどうかを判断した後、サービスワーカーの activate イベントハンドラーでナビゲーションの事前読み込みを有効にしています（この関数は、サービスワーカー用の `NavigationPreloadManager` を返すか、機能に対応していない場合は `undefined` を返します）。
+下記では、最初の {{domxref("ServiceWorkerRegistration.navigationPreload")}} を使用して、この機能に対応しているかどうかを判断した後、サービスワーカーの activate イベントハンドラーでナビゲーションの事前読み込みを有効にしています（この関数は、サービスワーカー用の `NavigationPreloadManager` を返すか、機能に対応していない場合は `undefined` を返します）。
 
 ```js
 addEventListener("activate", (event) => {

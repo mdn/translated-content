@@ -87,7 +87,7 @@ function startCapture(displayMediaOptions) {
 
 {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} に渡される制約オブジェクトは、結果のストリームを設定するために使用されるオブジェクトです。
 
-options オブジェクトに渡す `video` と `audio` オブジェクトには、それらの映像トラックに特定の制約を追加することもできます。[共有画面トラックのプロパティ](/ja/docs/Web/API/MediaTrackConstraints#instance_properties_of_shared_screen_tracks)では、 {{domxref("MediaTrackConstraints")}}、{{domxref("MediaTrackSupportedConstraints")}}、{{domxref("MediaTrackSettings")}} に追加された画面キャプチャストリームの構成に関する制約について参照できます。
+options オブジェクトに渡す `video` と `audio` オブジェクトには、それらの映像トラックに特定の制約を追加することもできます。[共有画面トラックのプロパティ](/ja/docs/Web/API/MediaTrackConstraints#instance_properties_of_shared_screen_tracks)では、 {{domxref("MediaTrackConstraints")}}、{{domxref("MediaDevices.getSupportedConstraints()")}} が返す対応している制約、{{domxref("MediaTrackSettings")}} に追加された画面キャプチャストリームの構成に関する制約について参照できます。
 
 キャプチャするコンテンツが選択されるまで、どのような制約も適用されません。制約は、結果のストリームに表示される内容を変更します。たとえば、動画に {{domxref("MediaTrackConstraints.width", "width")}} 制約を指定すると、ユーザーが共有する領域を選択した後に動画を拡大縮小することによって適用されます。ソース自体のサイズに制約を設けるものではありません。
 
@@ -240,7 +240,7 @@ async function startCapture() {
 }
 ```
 
-前回の接続の際に残ったテキストを取り除くためにログの内容をクリアした後、`startCapture()` は {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} を呼び出し、そこに `displayMediaOptions` で定義された制約オブジェクトを渡します。jsxref("Operators/await", "await")}} を使用して、次のコード行は `getDisplayMedia()` が返す {{jsxref("Promise")}} が解決するまで実行されません。解決後、プロミスは {{domxref("MediaStream")}} を返し、ユーザーが選択した画面、ウィンドウ、その他の領域の内容をストリームとして出力します。
+前回の接続の際に残ったテキストを取り除くためにログの内容をクリアした後、`startCapture()` は {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} を呼び出し、そこに `displayMediaOptions` で定義された制約オブジェクトを渡します。{{jsxref("Operators/await", "await")}} を使用して、次のコード行は `getDisplayMedia()` が返す {{jsxref("Promise")}} が解決するまで実行されません。解決後、プロミスは {{domxref("MediaStream")}} を返し、ユーザーが選択した画面、ウィンドウ、その他の領域の内容をストリームとして出力します。
 
 このストリームは、返された `MediaStream` を要素の {{domxref("HTMLMediaElement.srcObject", "srcObject")}} に格納することによって {{HTMLElement("video")}} 要素に接続されています。
 

@@ -57,7 +57,7 @@ l10n:
 - {{cssxref("@property/initial-value","initial-value")}} 記述子は、`syntax` 記述子の値が全称構文定義（`syntax: "*"`）である場合のみ省略可能です。
   `initial-value` 記述子が必須である場合にこれが省略されると、ルール全体が無効となって無視されます。
 - `syntax` 記述子の値が全称構文定義でない場合、{{cssxref("@property/initial-value","initial-value")}} 記述子は[計算上独立した](https://drafts.css-houdini.org/css-properties-values-api-1/#computationally-independent)値でなければなりません。
-  これは、値が CSS に依存しない「グローバル」定義を除き、他の値に依存せずに計算値に変換することが可能というということです。
+  これは、値が CSS に依存しない「グローバル」定義を除き、他の値に依存せずに計算値に変換することが可能ということです。
   例えば、`10px` は計算上独立しており、計算値に変換されても変化しません。`2in` も有効です。`1in` は常に `96px` と等価だからです。しかし、`3em` は無効です。なぜなら `em` の値は親要素の {{cssxref("font-size")}} に依存するからです。
 - 未知の記述子は無効であり無視されますが、`@property` ルールが無効化することはありません。
 

@@ -3,7 +3,7 @@ title: Comment ajouter des images et des médias
 short-title: Ajouter des médias
 slug: MDN/Writing_guidelines/Howto/Images_media
 l10n:
-  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
+  sourceCommit: 15e1155ab8a0587405601cc4753bb789cd6ac47c
 ---
 
 Cette page explique comment ajouter des images et des médias aux pages de documentation sur MDN.
@@ -181,10 +181,6 @@ Si vous utilisez macOS, Quicktime Player est disponible et dispose de quelques f
 5. Effectuez les actions que vous souhaitez enregistrer.
 6. Appuyez sur le bouton _Stop_.
 7. Choisissez _Fichier_ > _Exporter en tant que…_ > _1080p_ à partir du menu principal afin d'avoir une définition suffisamment élevée.
-
-#### Autres ressources
-
-- [Comment ajouter des boîtes de légende personnalisées aux <i lang="en">screencasts</i> dans Screenflow <sup>(angl.)</sup>](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
 
 ### Étapes de création d'une vidéo
 

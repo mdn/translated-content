@@ -6,7 +6,7 @@ l10n:
   sourceCommit: dc18e207e48c04447d979a731129d1ae253a2109
 ---
 
-{{Glossary("request header", "L'en-tête de requête")}} et {{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Transfer-Encoding`** définit la forme de codage utilisée pour transférer des messages entre les nœuds du réseau.
+{{Glossary("request header", "L'en-tête de requête")}} et {{Glossary("response header", "de réponse")}} HTTP **`Transfer-Encoding`** définit la forme de codage utilisée pour transférer des messages entre les nœuds du réseau.
 
 `Transfer-Encoding` est un [en-tête de point à point](/fr/docs/Web/HTTP/Reference/Headers#en-têtes_de_point_à_point_hop-by-hop_headers), qui s'applique à un message entre deux nœuds, et non à une ressource elle-même.
 Chaque segment d'une connexion multi-nœuds peut utiliser différentes valeurs `Transfer-Encoding`.

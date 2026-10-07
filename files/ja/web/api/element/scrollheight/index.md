@@ -50,7 +50,7 @@ window.getComputedStyle(element).overflowY !== "hidden";
 
 ### ユーザーがテキストを読んだかどうかをチェック
 
-{{domxref("Element.scroll_event", "scroll")}} イベントに関連付けることで、この等価性はユーザーがテキストを読んだかどうかを判断するのに役立ちます ({{domxref("element.scrollTop")}} および {{domxref("element.clientHeight")}} プロパティも参照してください）。
+{{domxref("Element.scroll_event", "scroll")}} イベントに関連付けることで、この等価性はユーザーがテキストを読んだかどうかを判断するのに役立ちます（{{domxref("element.scrollTop")}} および {{domxref("element.clientHeight")}} プロパティも参照してください）。
 
 以下のデモにあるチェックボックスは無効になっており、テキストエリアの内容が最後までスクロールするまでチェックして同意を表すことができなくなっています。
 

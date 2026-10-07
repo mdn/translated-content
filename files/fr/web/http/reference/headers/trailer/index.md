@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-{{Glossary("request header", "L'en-tête de requête")}} et {{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Trailer`** permet à l'expéditeur d'inclure des champs supplémentaires à la fin des blocs de messages afin de fournir des métadonnées qui peuvent être générées de manière dynamique pendant l'envoi du corps du message.
+{{Glossary("request header", "L'en-tête de requête")}} et {{Glossary("response header", "de réponse")}} HTTP **`Trailer`** permet à l'expéditeur d'inclure des champs supplémentaires à la fin des blocs de messages afin de fournir des métadonnées qui peuvent être générées de manière dynamique pendant l'envoi du corps du message.
 
 > [!NOTE]
 > L'en-tête de requête {{HTTPHeader("TE")}} doit être défini sur `trailers` pour autoriser les champs de type «&nbsp;remorque&nbsp;».

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`From`** contient une adresse e-mail Internet d'un·e administrateur·ice qui contrôle un agent utilisateur automatisé.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`From`** contient une adresse e-mail Internet d'un·e administrateur·ice qui contrôle un agent utilisateur automatisé.
 
 Si vous exécutez un agent utilisateur robotisé (un robot d'indexation web, par exemple), l'en-tête `From` doit être envoyé dans les requêtes afin que vous puissiez être contacté·e en cas de problème, comme un robot envoyant des requêtes excessives, indésirables ou invalides.
 

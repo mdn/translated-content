@@ -47,4 +47,4 @@ console.log(newDoc.customElementRegistry); // null
 - La propriété {{DOMxRef("Element.customElementRegistry")}}
 - L'interface {{DOMxRef("CustomElementRegistry")}}
 - La propriété {{DOMxRef("window.customElements")}}
-- [Utiliser les éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements)
+- [Les registres d'éléments personnalisés avec une portée](/fr/docs/Web/API/Web_components/Using_custom_elements#registres_déléments_personnalisés_avec_une_portée) dans [Utiliser les éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements)

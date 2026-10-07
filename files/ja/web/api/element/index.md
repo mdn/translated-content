@@ -260,7 +260,7 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
 - {{DOMxRef("Element.getHTML()")}}
   - : 要素の DOM コンテンツを HTML 文字列として返します。オプションで、シャドウ DOM が含まれます。
 - {{DOMxRef("Element.hasAttribute()")}}
-  - : 要素が指定された指定された属性を持っているか否かを示す論理値を返します。
+  - : 要素が指定された属性を持っているか否かを示す論理値を返します。
 - {{DOMxRef("Element.hasAttributeNS()")}}
   - : 要素が指定された名前空間内に指定された属性を持っているか否かを示す論理値を返します。
 - {{DOMxRef("Element.hasAttributes()")}}

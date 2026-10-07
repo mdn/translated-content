@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
-**keys`** は {{domxref("KeyboardLayoutMap")}} インターフェイスの読み取り専用プロパティで、配列の各インデックスのキーを格納した新しい配列イテレーターオブジェクトを返します。
+**`keys`** は {{domxref("KeyboardLayoutMap")}} インターフェイスの読み取り専用プロパティで、配列の各インデックスのキーを格納した新しい配列イテレーターオブジェクトを返します。
 
 ## 値
 
