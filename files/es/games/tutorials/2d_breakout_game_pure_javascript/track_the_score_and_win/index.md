@@ -1,107 +1,423 @@
 ---
-title: Poner un contador y terminar ganando
+title: Llevar la puntuación y ganar
 slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win
+l10n:
+  sourceCommit: 69937a446786abf5a58d4214b4192597d0b3cdc6
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}
 
-Este es el **octavo** capítulo de 10, del [Gamedev Canvas tutorial](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente como debería quedar tras este capítulo en [Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html).
+Este es el **7.º paso** de los 11 del [tutorial para crear un juego Breakout con JavaScript puro](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). En este artículo añadiremos un sistema de puntuación a nuestro juego. Tener una puntuación puede hacer el juego más interesante: puedes intentar superar tu propia puntuación máxima o la de tus amigos. También añadimos una condición de victoria, que se cumple si consigues destruir todos los ladrillos.
 
-Destruir los ladrillos mola, pero para que el juego sea aún mejor, podría dar puntos cada vez que el jugador rompe un ladrillo, y mostrar un contador.
+## Añadir el texto de la puntuación a la pantalla del juego
 
-## El contador
-
-Si puedes ver el contador mientras juegas, puede que consigas impresionar a tus amigos. Necesitas una variable para guardar el contador. Añade esto a tu JavaScript, después de las otras definiciones de variables:
+Añade una variable nueva justo después de `let lastTimestamp` para guardar la puntuación:
 
 ```js
-var score = 0;
+let score = 0;
 ```
 
-También necesitas una función `drawScore()` para enseñar el contador por pantalla. Añade esto después de la función `collisionDetection()`:
+Añade una función `drawScore()` que dibuje la puntuación actual en el canvas:
 
 ```js
 function drawScore() {
-  ctx.font = "16px Arial";
-  ctx.fillStyle = "#0095DD";
-  ctx.fillText("Score: " + score, 8, 20);
+  ctx.font = "18px Arial";
+  ctx.fillStyle = "#0095dd";
+  ctx.textBaseline = "top";
+  ctx.textAlign = "left";
+  ctx.fillText(`Puntos: ${score}`, 5, 5);
 }
 ```
 
-Dibujar texto en el \<canvas> es similar a dibujar un círculo o cualquier otra figura. La definición del tipo de letra (fuente) se hace igual que en CSS, puedes fijar el tamaño y fuente con el método {{domxref("CanvasRenderingContext2D.font","font()")}} method. Despúes utilizas {{domxref("CanvasRenderingContext2D.fillStyle()","fillStyle()")}} para fijar el color y {{domxref("CanvasRenderingContext2D.fillText","fillText()")}} para escribir el texto y el lugar en el que se va a dibujar. El primer parámetro es el texto en si y los otros dos son las coordenadas.
+El método {{domxref("CanvasRenderingContext2D/fillText", "ctx.fillText()")}} recibe el texto que se va a renderizar y las coordenadas x e y en las que se dibuja. En nuestro caso, el texto de la puntuación será azul, de 18 píxeles y con la fuente Arial. Establecer `textBaseline` en `"top"` coloca la parte superior del texto en la coordenada y indicada.
 
-Para sumar un punto cada vez que se rompe un ladrillo, añade la línea que está marcada aquí debajo:
+Llama a `drawScore()` dentro de `update()`, después de dibujar los ladrillos:
 
 ```js
-function collisionDetection() {
-  for (c = 0; c < brickColumnCount; c++) {
-    for (r = 0; r < brickRowCount; r++) {
-      var b = bricks[c][r];
-      if (b.status == 1) {
-        if (
-          x > b.x &&
-          x < b.x + brickWidth &&
-          y > b.y &&
-          y < b.y + brickHeight
-        ) {
-          dy = -dy;
-          b.status = 0;
-          score++;
-        }
-      }
-    }
+function update(timestamp) {
+  // ...
+  for (const brick of bricks) {
+    brick.draw();
+  }
+  drawScore();
+
+  requestAnimationFrame(update);
+}
+```
+
+## Actualizar la puntuación al destruir ladrillos
+
+Aumentaremos el número de puntos cada vez que la pelota golpee un ladrillo. Añade `score += 10;` al método `onCollide()` que ya tiene el ladrillo, después de quitar el ladrillo de los dos arrays:
+
+```js
+class Brick extends GameObject {
+  // ...
+  onCollide() {
+    bricks.splice(bricks.indexOf(this), 1);
+    colliders.splice(colliders.indexOf(this), 1);
+    score += 10;
   }
 }
 ```
 
-Llamando a `drawScore()` (dibujar contador) desde la función `draw()` hace que se muestre el contador actualizado en la pantalla. Añade la línea siguiente en `draw()`, justo debajo de la llamada a `drawPaddle()`:
+Eso es todo por ahora: recarga tu `index.html` y comprueba que la puntuación se actualiza cada vez que golpeas un ladrillo.
+
+## ¿Cómo se gana?
+
+Añade el siguiente código nuevo a tu función `update()`, después de la llamada a `drawScore()`:
 
 ```js
-drawScore();
+if (bricks.length === 0) {
+  alert("¡Ganaste el juego, felicidades!");
+  location.reload();
+  return;
+}
 ```
 
-## Mostrar un mensaje de victoria cuando se hayan destruido todos los ladrillos
+Si ya no quedan ladrillos, mostramos el mensaje de victoria y reiniciamos el juego cuando se cierra la alerta.
 
-Lo de sumar puntos funciona, pero tiene un final. ¿Qué ocurrirá cuando no queden ladrillos? Precisamente ese es el principal objetivo del juego, tendrás que dibujar un mensaje de victoria. Añade las líneas marcadas a tu función `collisionDetection()`:
+Actualiza también la condición del `while` en `moveBall()` para que la pelota deje de moverse en cuanto se destruya el último ladrillo:
 
 ```js
-function collisionDetection() {
-  for (c = 0; c < brickColumnCount; c++) {
-    for (r = 0; r < brickRowCount; r++) {
-      var b = bricks[c][r];
-      if (b.status == 1) {
-        if (
-          x > b.x &&
-          x < b.x + brickWidth &&
-          y > b.y &&
-          y < b.y + brickHeight
-        ) {
-          dy = -dy;
-          b.status = 0;
-          score++;
-          if (score == brickRowCount * brickColumnCount) {
-            alert("YOU WIN, CONGRATULATIONS!");
-            document.location.reload();
-          }
-        }
-      }
-    }
+function moveBall(dt) {
+  while (dt > 0 && bricks.length > 0) {
+    // ... código existente de movimiento y colisiones ...
   }
 }
 ```
 
-Gracias a esto, los jugadores pueden ganar cuando rompen todos los ladrillos, que es muy importante. La función `document.location.reload()` vuelve a cargar la página y el juego empieza de nuevo, una vez se hace clic sobre el botón del alert().
+Esto evita que la pelota se salga de los límites durante el tiempo que queda del fotograma después de que el jugador ya haya ganado.
 
 ## Compara tu código
 
-Puedes comparar tu código con este:
+Esto es lo que deberías tener hasta ahora, funcionando en vivo. Para ver su código fuente, haz clic en el botón "Play".
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/mvfkcydz/","","320")}}
+```html hidden
+<canvas id="game-canvas" width="480" height="320"></canvas>
+```
 
-> [!NOTE]
-> Añade más puntos por ladrillo y muestra el contador cuando salga el alert() del final del juego con victoria.
+```css hidden
+* {
+  padding: 0;
+  margin: 0;
+}
 
-## Pasos siguientes
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
 
-El juego, ahora mismo, ya tiene buena pinta. En la siguiente lección conseguirás que sea más atractivo porque añadirás el [Control del ratón](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls).
+canvas {
+  display: block;
+  width: min(100vw, 150vh);
+  height: auto;
+  touch-action: none;
+}
+```
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
+```js hidden
+const canvas = document.getElementById("game-canvas");
+const ctx = canvas.getContext("2d");
+let lastTimestamp = null;
+let score = 0;
+
+const baseWallHitbox = {
+  left: -Infinity,
+  right: Infinity,
+  top: -Infinity,
+  bottom: Infinity,
+};
+
+const colliders = [
+  { hitbox: { ...baseWallHitbox, right: 0 } },
+  { hitbox: { ...baseWallHitbox, left: canvas.width } },
+  { hitbox: { ...baseWallHitbox, bottom: 0 } },
+];
+
+class GameObject {
+  static assets = new Map();
+  url;
+  asset;
+  ctx;
+  size = { w: undefined, h: undefined };
+  pos = { x: 0, y: 0 };
+  origin = { x: 0.5, y: 0.5 };
+  constructor(url, ctx) {
+    this.url = url;
+    this.ctx = ctx;
+  }
+  async preload() {
+    if (!GameObject.assets.has(this.url)) {
+      const asset = new Image();
+      asset.src = this.url;
+      GameObject.assets.set(
+        this.url,
+        asset.decode().then(() => asset),
+      );
+    }
+    this.asset = await GameObject.assets.get(this.url);
+    if (this.size.w === undefined) {
+      this.size.w = this.asset.width;
+      this.size.h = this.asset.height;
+    }
+  }
+  get hitbox() {
+    const left = this.pos.x - this.size.w * this.origin.x;
+    const top = this.pos.y - this.size.h * this.origin.y;
+    return {
+      left,
+      right: left + this.size.w,
+      top,
+      bottom: top + this.size.h,
+    };
+  }
+  draw() {
+    const { left, top } = this.hitbox;
+    this.ctx.drawImage(this.asset, left, top);
+  }
+  onCollide() {}
+}
+
+class Ball extends GameObject {
+  pos = { x: undefined, y: undefined };
+  vel = { x: 150, y: -150 };
+  move(dt) {
+    this.pos.x += this.vel.x * dt;
+    this.pos.y += this.vel.y * dt;
+  }
+  onCollide({ x, y }) {
+    if (x) {
+      this.vel.x = -this.vel.x;
+    }
+    if (y) {
+      this.vel.y = -this.vel.y;
+    }
+  }
+}
+
+class Paddle extends GameObject {
+  origin = { x: 0.5, y: 1 };
+  constructor(url, ctx) {
+    super(url, ctx);
+    this.pos = { x: ctx.canvas.width / 2, y: ctx.canvas.height - 5 };
+  }
+}
+
+class Brick extends GameObject {
+  constructor(url, ctx, x, y, w, h) {
+    super(url, ctx);
+    this.pos = { x, y };
+    this.size = { w, h };
+  }
+  draw() {
+    const { left, top } = this.hitbox;
+    this.ctx.drawImage(this.asset, left, top, this.size.w, this.size.h);
+  }
+  onCollide() {
+    bricks.splice(bricks.indexOf(this), 1);
+    colliders.splice(colliders.indexOf(this), 1);
+    score += 10;
+  }
+}
+
+const ball = new Ball(
+  "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/ball.png",
+  ctx,
+);
+const paddle = new Paddle(
+  "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/paddle.png",
+  ctx,
+);
+colliders.push(paddle);
+const bricks = initBricks();
+for (const brick of bricks) {
+  colliders.push(brick);
+}
+
+canvas.addEventListener("pointermove", (event) => {
+  if (paddle.size.w === undefined) {
+    return;
+  }
+  const bounds = canvas.getBoundingClientRect();
+  const x = ((event.clientX - bounds.left) * canvas.width) / bounds.width;
+  paddle.pos.x = Math.max(
+    paddle.size.w / 2,
+    Math.min(canvas.width - paddle.size.w / 2, x),
+  );
+});
+
+Promise.all([ball, paddle, ...bricks].map((obj) => obj.preload())).then(() => {
+  ball.pos.x = paddle.pos.x;
+  ball.pos.y = paddle.hitbox.top - ball.size.h / 2;
+  requestAnimationFrame(update);
+});
+
+function update(timestamp) {
+  const dt = lastTimestamp === null ? 0 : (timestamp - lastTimestamp) / 1000;
+  lastTimestamp = timestamp;
+  moveBall(dt);
+
+  ctx.fillStyle = "#eeeeee";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ball.draw();
+  paddle.draw();
+  for (const brick of bricks) {
+    brick.draw();
+  }
+  drawScore();
+
+  if (bricks.length === 0) {
+    alert("¡Ganaste el juego, felicidades!");
+    location.reload();
+    return;
+  }
+
+  requestAnimationFrame(update);
+}
+
+function drawScore() {
+  ctx.font = "18px Arial";
+  ctx.fillStyle = "#0095dd";
+  ctx.textBaseline = "top";
+  ctx.fillText(`Puntos: ${score}`, 5, 5);
+}
+
+function getCollision(moving, velocity, obstacle, dt) {
+  const width = moving.right - moving.left;
+  const height = moving.bottom - moving.top;
+  const movingPos = { x: moving.left, y: moving.top };
+  const left = obstacle.left - width;
+  const right = obstacle.right;
+  const top = obstacle.top - height;
+  const bottom = obstacle.bottom;
+  const hit = { time: dt, x: null, y: null };
+
+  function checkFace(axis, coordinate, min, max, direction) {
+    if (velocity[axis] * direction <= 0) {
+      return;
+    }
+    const time = (coordinate - movingPos[axis]) / velocity[axis];
+    if (time < 0 || time > hit.time) {
+      return;
+    }
+    const otherAxis = axis === "x" ? "y" : "x";
+    const otherPosition = movingPos[otherAxis] + velocity[otherAxis] * time;
+    if (otherPosition < min || otherPosition > max) {
+      return;
+    }
+    if (time < hit.time) {
+      hit.x = null;
+      hit.y = null;
+    }
+    hit.time = time;
+    hit[axis] = coordinate;
+  }
+
+  checkFace("x", left, top, bottom, 1);
+  checkFace("x", right, top, bottom, -1);
+  checkFace("y", top, left, right, 1);
+  checkFace("y", bottom, left, right, -1);
+
+  return hit.x === null && hit.y === null ? null : hit;
+}
+
+function moveBall(dt) {
+  while (dt > 0 && bricks.length > 0) {
+    // Evita invocar el getter repetidamente
+    const ballHitbox = ball.hitbox;
+    let hitTime = dt;
+    let hitX = null;
+    let hitY = null;
+    let contacts = [];
+
+    for (const collider of colliders) {
+      const hit = getCollision(ballHitbox, ball.vel, collider.hitbox, hitTime);
+      if (hit === null) {
+        continue;
+      }
+      if (hit.time < hitTime) {
+        hitX = null;
+        hitY = null;
+        contacts = [];
+      }
+      hitTime = hit.time;
+      hitX = hit.x ?? hitX;
+      hitY = hit.y ?? hitY;
+      contacts.push({ collider, hit });
+    }
+
+    ball.move(hitTime);
+    dt -= hitTime;
+
+    const ballIsOutOfBounds = ball.hitbox.bottom > canvas.height;
+    if (ballIsOutOfBounds) {
+      // Lógica de fin del juego
+      location.reload();
+      return;
+    }
+
+    if (contacts.length === 0) {
+      break;
+    }
+    // Ajusta la posición al punto de contacto para evitar errores de coma flotante
+    if (hitX !== null) {
+      ball.pos.x = hitX + ball.size.w / 2;
+    }
+    if (hitY !== null) {
+      ball.pos.y = hitY + ball.size.h / 2;
+    }
+
+    ball.onCollide({ x: hitX !== null, y: hitY !== null });
+    for (const { collider, hit } of contacts) {
+      collider.onCollide?.({ x: hit.x !== null, y: hit.y !== null });
+    }
+  }
+}
+
+function initBricks() {
+  const bricksLayout = {
+    width: 50,
+    height: 20,
+    count: {
+      row: 3,
+      col: 7,
+    },
+    offset: {
+      top: 50,
+      left: 60,
+    },
+    padding: 10,
+  };
+  const bricks = [];
+  for (let c = 0; c < bricksLayout.count.col; c++) {
+    for (let r = 0; r < bricksLayout.count.row; r++) {
+      const brickX =
+        c * (bricksLayout.width + bricksLayout.padding) +
+        bricksLayout.offset.left;
+      const brickY =
+        r * (bricksLayout.height + bricksLayout.padding) +
+        bricksLayout.offset.top;
+
+      const newBrick = new Brick(
+        "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/brick.png",
+        ctx,
+        brickX,
+        brickY,
+        bricksLayout.width,
+        bricksLayout.height,
+      );
+      bricks.push(newBrick);
+    }
+  }
+  return bricks;
+}
+```
+
+{{EmbedLiveSample("compara tu código", "", 480, , , , , "allow-modals")}}
+
+## Siguientes pasos
+
+Ya están implementadas tanto la derrota como la victoria, así que la mecánica principal de nuestro juego está terminada. Ahora añadamos algo extra: daremos al jugador tres [vidas](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives) en lugar de una.
+
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}
