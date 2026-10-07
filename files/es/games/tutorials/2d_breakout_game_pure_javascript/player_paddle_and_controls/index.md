@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over")}}
 
-Este es el **4.º paso** de los 11 del tutorial [Crear un juego de Breakout con JavaScript puro](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Ya tenemos la pelota moviéndose y rebotando en las paredes, pero enseguida se vuelve aburrido: ¡no hay interactividad! Necesitamos una forma de introducir la jugabilidad, así que en este artículo crearemos una paleta que se pueda mover y con la que golpear la pelota.
+Este es el **paso 4** de los 11 del [tutorial para crear un juego Breakout con JavaScript puro](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Ya tenemos la pelota moviéndose y rebotando en las paredes, pero enseguida se vuelve aburrido: ¡no hay interactividad! Necesitamos una forma de introducir la jugabilidad, así que en este artículo crearemos una paleta que se pueda mover y con la que golpear la pelota.
 
 ## Dibujar la paleta
 
@@ -314,7 +314,7 @@ Ahora la pelota empezará justo desde el centro de la paleta.
 
 ## Compara tu código
 
-Esto es lo que deberías tener hasta ahora, en funcionamiento. Para ver su código fuente, haz clic en el botón "Play".
+Esto es lo que deberías tener hasta ahora, funcionando en vivo. Para ver su código fuente, haz clic en el botón "Play".
 
 ```html hidden
 <canvas id="game-canvas" width="480" height="320"></canvas>
@@ -548,7 +548,7 @@ function moveBall(dt) {
 
 {{EmbedLiveSample("compara tu código", "", 480, , , , , "allow-modals")}}
 
-## Siguientes pasos
+## Próximos pasos
 
 Ya podemos mover la paleta y hacer que la pelota rebote en ella, pero ¿de qué sirve si de todos modos la pelota rebota en el borde inferior de la pantalla? Introduzcamos la posibilidad de perder, también conocida como la lógica de [fin del juego](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over).
 
