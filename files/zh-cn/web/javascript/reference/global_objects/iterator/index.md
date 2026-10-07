@@ -41,7 +41,7 @@ const nameToDeposit = new Map([
 const totalDeposit = [...nameToDeposit.values()].reduce((a, b) => a + b);
 ```
 
-这首先将 {{jsxref("Map.prototype.values()")}} 返回的迭代器器转换为数组，然后使用 {{jsxref("Array.prototype.reduce()")}} 方法计算总和。然而，这既创建了一个中间数组，又重复了数组两次。相反，你可以使用迭代器本身的 `reduce()` 方法：
+这首先将 {{jsxref("Map.prototype.values()")}} 返回的迭代器转换为数组，然后使用 {{jsxref("Array.prototype.reduce()")}} 方法计算总和。然而，这既创建了一个中间数组，又重复了数组两次。相反，你可以使用迭代器本身的 `reduce()` 方法：
 
 ```js
 const totalDeposit = nameToDeposit.values().reduce((a, b) => a + b);

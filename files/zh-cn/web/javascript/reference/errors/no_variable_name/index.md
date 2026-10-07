@@ -26,7 +26,7 @@ SyntaxError: Unexpected token = (Chrome)
 var = "foo";
 ```
 
-为变量起一个合适的明确确实不是一件容易的事情。这种经历每个人都遇到过。
+为变量起一个合适的名字确实不是一件容易的事情。这种经历每个人都遇到过。
 
 ```js example-good
 var ohGodWhy = "foo";
