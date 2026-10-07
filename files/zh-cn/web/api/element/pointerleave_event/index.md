@@ -3,7 +3,7 @@ title: Element：pointerleave 事件
 short-title: pointerleave
 slug: Web/API/Element/pointerleave_event
 l10n:
-  sourceCommit: 827686870ee416d6f01739a48931618b61f4ce4e
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("Pointer Events")}}

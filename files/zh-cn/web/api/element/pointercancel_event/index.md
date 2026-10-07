@@ -3,7 +3,7 @@ title: Element：pointercancel 事件
 short-title: pointercancel
 slug: Web/API/Element/pointercancel_event
 l10n:
-  sourceCommit: 827686870ee416d6f01739a48931618b61f4ce4e
+  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
 ---
 
 {{APIRef("Pointer Events")}}
