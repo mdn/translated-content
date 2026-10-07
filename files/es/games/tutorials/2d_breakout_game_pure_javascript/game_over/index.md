@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}
 
-Este es el **quinto paso** de los 11 del [tutorial para crear un juego Breakout con JavaScript puro](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Para que el juego sea más interesante, podemos introducir la posibilidad de perder: si no golpeas la pelota antes de que llegue al borde inferior de la pantalla, se acaba el juego.
+Este es el **paso 5** de los 11 del [tutorial para crear un juego Breakout con JavaScript puro](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Para que el juego sea más interesante, podemos introducir la posibilidad de perder: si no golpeas la pelota antes de que llegue al borde inferior de la pantalla, se acaba el juego.
 
 ## Cómo perder
 
