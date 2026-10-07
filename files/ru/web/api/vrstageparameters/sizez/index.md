@@ -1,7 +1,6 @@
 ---
 title: "VRStageParameters: свойство sizeY"
 slug: Web/API/VRStageParameters/sizeZ
-original_slug: Web/API/VRStageParameters/sizeY
 l10n:
   sourceCommit: ccbc5d4100e0a5de844e060b025883ef1611d7b8
 ---
