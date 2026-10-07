@@ -20,8 +20,8 @@ Para sacar el máximo provecho de esta serie de artículos, deberías tener cono
 Todas las lecciones - y las diferentes versiones del [juego MDN Breakout](https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/lesson16.html) que estamos construyendo juntos - están [disponibles en GitHub](https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/):
 
 1. [Inicializar el framework](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework)
-2. [Escalar](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling)
-3. [Cargar los archivos e imprimirlos en pantalla](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen)
+2. [Escalar](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework)
+3. [Cargar los archivos e imprimirlos en pantalla](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball)
 4. [Mover la bola](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball)
 5. [Físicas](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics)
 6. [Rebote en las paredes](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls)
