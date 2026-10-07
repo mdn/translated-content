@@ -1,6 +1,7 @@
 ---
 title: Terminando
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives
+original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 ---
 
 {{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}

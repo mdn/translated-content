@@ -1,6 +1,7 @@
 ---
 title: The score
-slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
+slug: Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win
+original_slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
 ---
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win")}}

@@ -1,6 +1,7 @@
 ---
 title: Scaling
-slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
+slug: conflicting/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
+original_slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
 ---
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
