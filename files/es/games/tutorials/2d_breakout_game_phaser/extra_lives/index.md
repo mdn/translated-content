@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens")}}
 
-Este es el **paso 9** de 12 del [tutorial para crear un juego de Breakout con Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). En este artículo implementaremos un sistema de vidas, para que el jugador pueda seguir jugando hasta perder tres vidas, y no solo una, lo que hace que el juego resulte divertido durante más tiempo.
+Este es el **paso 9** de los 12 del [tutorial para crear un juego Breakout con Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). En este artículo implementaremos un sistema de vidas, para que el jugador pueda seguir jugando hasta perder tres vidas, y no solo una, lo que hace que el juego resulte divertido durante más tiempo.
 
 ## Nuevas propiedades
 
