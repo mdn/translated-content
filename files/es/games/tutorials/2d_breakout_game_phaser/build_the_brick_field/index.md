@@ -1,5 +1,5 @@
 ---
-title: Construye el muro de ladrillos
+title: Construir el muro de ladrillos
 slug: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
 l10n:
   sourceCommit: 69937a446786abf5a58d4214b4192597d0b3cdc6
