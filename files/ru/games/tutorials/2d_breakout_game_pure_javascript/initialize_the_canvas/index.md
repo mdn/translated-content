@@ -1,7 +1,6 @@
 ---
 title: Создание Canvas и рисование на нём
 slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 ---
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
