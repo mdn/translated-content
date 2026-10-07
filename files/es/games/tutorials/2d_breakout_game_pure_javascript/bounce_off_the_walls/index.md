@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
 
-Este es el **paso 3** de 11 del [tutorial para crear un juego de Breakout con JavaScript puro](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Ahora que ya introdujimos la física del movimiento, podemos empezar a implementar la detección de colisiones en el juego. Primero veremos las paredes.
+Este es el **paso 3** de los 11 del [tutorial para crear un juego Breakout con JavaScript puro](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Ahora que ya introdujimos la física del movimiento, podemos empezar a implementar la detección de colisiones en el juego. Primero veremos las paredes.
 
 ## Rebotar en los límites del mundo
 
