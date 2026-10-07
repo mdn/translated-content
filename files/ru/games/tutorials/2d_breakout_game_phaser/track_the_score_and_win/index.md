@@ -1,7 +1,6 @@
 ---
 title: Очки
 slug: Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win
-original_slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
 ---
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Collision_detection", "Games/Tutorials/2D_breakout_game_Phaser/Win_the_game")}}
