@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball")}}
 
-Este es el **primer paso** de los 12 del [tutorial para crear un juego Breakout con Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Antes de empezar a escribir la funcionalidad del juego, necesitamos crear una estructura básica para renderizarlo. Esto se hace inicializando el framework Phaser en un documento HTML básico: Phaser generará el elemento {{htmlelement("canvas")}} necesario.
+Este es el **paso 1** de los 12 del [tutorial para crear un juego Breakout con Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Antes de empezar a escribir la funcionalidad del juego, necesitamos crear una estructura básica para renderizarlo. Esto se hace inicializando el framework Phaser en un documento HTML básico: Phaser generará el elemento {{htmlelement("canvas")}} necesario.
 
 ## El HTML del juego
 
@@ -132,7 +132,7 @@ const game = new Phaser.Game(config);
 
 {{EmbedLiveSample("compara tu código", "", 480, , , , , "allow-modals")}}
 
-## Siguientes pasos
+## Próximos pasos
 
 Ahora que hemos preparado el HTML básico y aprendido un poco sobre la inicialización de Phaser, sigamos con la segunda lección y veamos cómo [renderizar una pelota y moverla](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball).
 
