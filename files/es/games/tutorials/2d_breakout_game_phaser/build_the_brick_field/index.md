@@ -1,6 +1,7 @@
 ---
 title: Collision detection
-slug: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
+slug: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
+original_slug: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
 ---
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/The_score")}}
