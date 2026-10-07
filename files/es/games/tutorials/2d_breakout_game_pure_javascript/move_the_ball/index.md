@@ -1,142 +1,260 @@
 ---
-title: Mueve la bola
+title: Mover la pelota
 slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball
+l10n:
+  sourceCommit: 69937a446786abf5a58d4214b4192597d0b3cdc6
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
-Este es el segundo paso de los 10 del [tutorial de Canvas para el desarrollo de juegos](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente como debería quedar después de completar la lección en [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html).
+Este es el **2.º paso** de los 11 del tutorial [Crear un juego de Breakout con JavaScript puro](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). En este artículo veremos cómo añadir sprites a nuestro mundo de juego. Nuestro juego tendrá una pelota que rueda por la pantalla, rebota en una paleta y destruye ladrillos para ganar puntos.
 
-Ya sabes cómo dibujar una pelota, lo has aprendido en el artículo anterior. Ahora vamos a hacer que se mueva. Técnicamente, estaremos pintando la pelota en la pantalla, borrándola y luego pintándola de nuevo en una posición ligeramente diferente cada fotograma para dar la impresión de movimiento, igual que se hace en las películas.
+Manejar la pelota implica dos pasos: cargar el recurso de la pelota y dibujarlo en la posición correcta mientras se mueve. Técnicamente, vamos a pintar la pelota en la pantalla, borrarla y volver a pintarla en una posición ligeramente distinta en cada fotograma para dar la impresión de movimiento, igual que funciona el movimiento en el cine.
 
 ## Definir un bucle de dibujo
 
-Para actualizar el dibujo del lienzo en cada fotograma, necesitamos definir una función de dibujo que se ejecutará una y otra vez, cambiando una serie de variables para modificar la posición de cada personaje (sprite). Para que una misma función se ejecute una y otra vez puedes utilizar una función de sincronización de JavaScript, como {{domxref("WindowTimers.setInterval()", "setInterval()")}} or {{domxref("window.requestAnimationFrame()", "requestAnimationFrame()")}}.
+Para actualizar constantemente el dibujo del canvas en cada fotograma, necesitamos definir una función de dibujo que se ejecute una y otra vez, con un conjunto distinto de valores de las variables cada vez para cambiar la posición de los sprites, etc.
 
-Elimina todo el código JavaScript que tienes ahora mismo en de tu archivo HTML, excepto las dos primeras líneas, y añade lo siguiente debajo de ellas. La función draw() se ejecutará dentro de setInterval cada 10 milisegundos:
+Puede que quieras usar {{domxref("Window.setInterval", "setInterval()")}} para programar que la función se ejecute cada pocos milisegundos (por ejemplo, 10, lo que serían 100 fotogramas por segundo). Funciona, pero causa problemas:
 
-```js
-function draw() {
-  // código para dibujar
-}
-setInterval(draw, 10);
-```
+1. Los temporizadores no son exactos, así que no puedes dar por hecho que la función se llamará exactamente a intervalos de 10 milisegundos.
+2. Si tu función de dibujo es lenta y tarda más de 10 milisegundos en pintar el fotograma, se perderá el siguiente ciclo, y estos retrasos se acumulan, lo que hace que el tiempo del juego se desincronice con el tiempo real.
 
-Gracias a la naturaleza infinita de setInterval, la función draw () se llamará cada 10 milisegundos por siempre, o hasta que lo detengamos. Ahora, vamos a dibujar la bola. A grega lo siguiente dentro de tu función draw ():
+Aun así, puedes usar `setInterval` (o `setTimeout`), que tiene la ventaja de que permite configurar la tasa de fotogramas, pero tendrás que implementar cierta lógica para regular los tiempos de espera y evitar los problemas anteriores. Para simplificar, usaremos {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}, que hace que el navegador llame automáticamente a la función de dibujo la próxima vez que pueda volver a pintar. La función recibe una marca de tiempo que nos indica cuánto tiempo ha pasado desde el último fotograma, así que podemos decidir la distancia que debería haber recorrido la pelota mientras tanto.
+
+Reemplaza el contenido de tu archivo `script.js` por lo siguiente:
 
 ```js
-ctx.beginPath();
-ctx.arc(50, 50, 10, 0, Math.PI * 2);
-ctx.fillStyle = "#0095DD";
-ctx.fill();
-ctx.closePath();
-```
+const canvas = document.getElementById("game-canvas");
+const ctx = canvas.getContext("2d");
 
-Prueba tu código actualizado ahora — la bola debería repintarse en cada fotograma (frame).
+requestAnimationFrame(update);
 
-## Hacer que se mueva
+function update(timestamp) {
+  ctx.fillStyle = "#eeeeee";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  // sigue añadiendo cosas aquí...
 
-Aunque la bola se está dibujando cada 10 milisegundos no se nota porque no hay movimiento, se dibuja una y otra vez en el mismo sitio.Vamos a cambiar eso. En primer lugar, en lugar de dibujar siempre en la posición (50, 50) definiremos un punto de inicio en la parte central inferior del lienzo en las variables llamadas x e y, a continuación, las utilizaremos para definir la posición en la que se dibuja el círculo.
-
-Primero, agrega las dos líneas siguientes a la función draw (), para definir x e y:
-
-```js
-var x = canvas.width / 2;
-var y = canvas.height - 30;
-```
-
-A continuación actualiza la función `draw()` para usar las variables x e y en el método {{domxref("CanvasRenderingContext2D.arc()","arc()")}}, como se muestra en la siguiente línea resaltada:
-
-```js
-function draw() {
-  ctx.beginPath();
-  ctx.arc(x, y, 10, 0, Math.PI * 2);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
+  requestAnimationFrame(update);
 }
 ```
 
-Ahora viene la parte importante: queremos añadir un valor pequeño a x e y después de que cada fotograma se haya dibujado para que parezca que la pelota se está moviendo. Definamos estos valores pequeños como dx y dy, y establezcamos sus valores en 2 y -2 respectivamente. Agrega lo siguiente debajo de sus definiciones de variables x e y:
+Ahora el juego ya se ejecuta en un bucle cuando recargas el HTML. Sin embargo, todavía no hemos definido ninguna parte móvil, así que aún no tiene ningún efecto visible.
+
+## Cargar el sprite de la pelota
+
+Todos nuestros objetos del juego (pelota, paleta y ladrillos) se implementarán como clases, para que puedan encapsular su estado y exponer su comportamiento.
+
+Nuestra pelota estará representada por una imagen PNG. Usaremos {{domxref("CanvasRenderingContext2D/drawImage", "ctx.drawImage()")}} para dibujar el PNG en el canvas. Entre los muchos tipos de datos de entrada que acepta, usaremos un {{domxref("HTMLImageElement")}}, porque se encarga automáticamente de obtener y decodificar la imagen.
+
+> [!NOTE]
+> Por supuesto, puedes dibujar un círculo relleno directamente en el canvas con {{domxref("CanvasRenderingContext2D/arcTo", "ctx.arcTo()")}} y {{domxref("CanvasRenderingContext2D/fill", "ctx.fill()")}}, pero en un juego real tu pelota probablemente sea más compleja que un simple círculo, así que tarde o temprano querrás usar una imagen aparte de todos modos.
+
+Primero define la clase:
 
 ```js
-var dx = 2;
-var dy = -2;
-```
-
-Lo último que hay que hacer es actualizar x e y con nuestras variables dx y dy en cada fotograma, de modo que la bola será pintada en la nueva posición en cada actualización. Agrega las dos nuevas líneas siguientes indicadas a continuación a la función draw ():
-
-```js
-function draw() {
-  ctx.beginPath();
-  ctx.arc(x, y, 10, 0, Math.PI * 2);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
-  x += dx;
-  y += dy;
+class Ball {
+  asset;
+  ctx;
+  size = { w: undefined, h: undefined };
+  constructor(url, ctx) {
+    this.asset = new Image();
+    this.asset.src = url;
+    this.ctx = ctx;
+  }
+  async preload() {
+    await this.asset.decode();
+    if (this.size.w === undefined) {
+      this.size.w = this.asset.width;
+      this.size.h = this.asset.height;
+    }
+  }
 }
 ```
 
-Guarda el código de nuevo y pruébalo en tu navegador. Esto funciona bien, aunque parece que la bola está dejando un rastro detrás de ella:
+El constructor {{domxref("HTMLImageElement/Image", "Image()")}} crea un `HTMLImageElement` sin añadirlo al DOM (no vamos a mostrar el propio elemento `<img>`, solo lo usaremos para pintar en el canvas). La asignación a {{domxref("HTMLImageElement/src", "src")}} inicia la solicitud de la imagen `ball.png`. La función `preload()` llama a {{domxref("HTMLImageElement/decode", "decode()")}}, que devuelve una promesa que se cumple cuando la imagen correspondiente se ha obtenido y decodificado correctamente. Cuando eso ocurre, podemos guardar las dimensiones de la imagen para cálculos posteriores.
 
-![](ball-trail.png)
-
-## Borrar el lienzo antes de cada fotograma
-
-La bola está dejando un rastro porque estamos pintando un nuevo círculo en cada fotograma sin borrar el anterior. No te preocupes, porque hay un método para borrar todo el contenido de lienzo: {{domxref("CanvasRenderingContext2D.clearRect ()", "clearRect ()")}}. Este método tiene cuatro parámetros: las coordenadas x e y de la esquina superior izquierda de un rectángulo y las coordenadas x e y de la esquina inferior derecha de un rectángulo. En todo el área definida por ese rectángulo se borrará cualquier cosa que se haya pintado antes.
-
-Añade la siguiente nueva línea resaltada a la función draw():
+Reemplaza la llamada `requestAnimationFrame(update);` que está encima de la definición de la función `update` por lo siguiente:
 
 ```js
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.beginPath();
-  ctx.arc(x, y, 10, 0, Math.PI * 2);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
-  x += dx;
-  y += dy;
+const ball = new Ball("img/ball.png", ctx);
+
+Promise.all([ball].map((obj) => obj.preload())).then(() =>
+  requestAnimationFrame(update),
+);
+```
+
+Llamamos a `Promise.all([ball].map((obj) => obj.preload()))`, que obtiene una única promesa que se cumple cuando todos los recursos se precargan correctamente. Cuando eso ocurre, empezamos a dibujar con `requestAnimationFrame(update)`.
+
+Por supuesto, para cargar la imagen, esta debe estar disponible en el directorio de tu código. [Descarga la imagen de la pelota de nuestro sitio de recursos](https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/ball.png) y guárdala en un directorio `/img`, en la misma ubicación que tu archivo `index.html`.
+
+Ahora, para mostrarla en la pantalla, llamamos a `drawImage()` y le pasamos tanto la imagen `ball` como las coordenadas x e y del canvas donde queremos añadirla. Añade lo siguiente a tu clase `Ball`:
+
+```js
+class Ball {
+  // …
+  draw() {
+    this.ctx.drawImage(this.asset, 50 - this.size.w / 2, 50 - this.size.h / 2);
+  }
 }
 ```
 
-Guarda tu código y vuelve a probarlo. Esta vez verás el movimiento de la bola sin dejar rastro. Cada 10 milisegundos se borra todo el lienzo, se dibuja el círculo azul (nuestra pelota) en una posición determinada y los valores x e y se actualizan para el siguiente fotograma.
+> [!NOTE]
+> Las coordenadas que pasas a `drawImage()` son las de la _esquina superior izquierda_ de la imagen. En la práctica, suele ser más cómodo seguir el _centro_ de los objetos, para que todas las direcciones se puedan procesar de la misma forma (sobre todo para la [detección de colisiones](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls)). Por eso, indicamos las coordenadas deseadas para el _centro_ de la pelota como `(50, 50)` y restamos `width / 2` y `height / 2` para obtener la ubicación correspondiente de la esquina superior izquierda.
 
-## Limpiar el código
+¡Eso es todo! Si cargas tu archivo `index.html`, verás la imagen ya cargada y dibujada en el canvas.
 
-Vamos a añadir más y más comandos a la función draw () en los próximos artículos, por lo que es bueno mantenerlo lo más simple y limpio posible. Comencemos moviendo el código de dibujo de la bola a una función separada.
+## Actualizar la posición de la pelota en cada fotograma
 
-Reemplaza la función draw() con las dos funciones siguientes:
+Por ahora, cada llamada a `ball.draw()` pinta la pelota exactamente en el mismo lugar, así que la pelota parece inmóvil. Podemos mantener campos de estado separados que sigan la posición y la velocidad del centro de la pelota. Justo debajo de las declaraciones de campos existentes en `class Ball`, añade las definiciones de `pos` y `vel`, y reemplaza el método `draw()` para que use esas coordenadas:
 
 ```js
-function drawBall() {
-  ctx.beginPath();
-  ctx.arc(x, y, 10, 0, Math.PI * 2);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
-}
-
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawBall();
-  x += dx;
-  y += dy;
+class Ball {
+  // …
+  size = { w: undefined, h: undefined };
+  pos = { x: 50, y: 50 };
+  vel = { x: 150, y: 150 };
+  // …
+  draw() {
+    this.ctx.drawImage(
+      this.asset,
+      this.pos.x - this.size.w / 2,
+      this.pos.y - this.size.h / 2,
+    );
+  }
 }
 ```
+
+La velocidad se establece en 150 píxeles por segundo en ambos ejes. Actualizaremos la posición de la pelota en cada llamada a `update()`. Tenemos que calcular cuánto desplazarla desde la última posición, con la fórmula `dx = vx * dt`, donde `vx` es su velocidad en el eje x y `dt` es el tiempo transcurrido desde la última llamada a `update()`. Como la función `update()` recibe cada vez un `timestamp`, podemos compararlo con el de la iteración anterior para obtener `dt`. Añade lo siguiente a la clase:
+
+```js
+class Ball {
+  // …
+  move(dt) {
+    this.pos.x += this.vel.x * dt;
+    this.pos.y += this.vel.y * dt;
+  }
+}
+```
+
+Este método suma el desplazamiento calculado a las coordenadas de la pelota en el canvas, en cada fotograma. Más adelante añadiremos más lógica a esta función, como la detección de colisiones.
+
+Añade lo siguiente justo después de `const ctx`:
+
+```js
+let lastTimestamp = null;
+```
+
+Dentro de la función `update()`, ahora podemos llamar a `ball.move()` y a `ball.draw()` para que la clase se actualice a sí misma, mientras que la función `update()` solo lleva la cuenta del tiempo:
+
+```js
+const dt = lastTimestamp === null ? 0 : (timestamp - lastTimestamp) / 1000;
+lastTimestamp = timestamp;
+ball.move(dt);
+
+ctx.fillStyle = "#eeeeee";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+ball.draw();
+```
+
+En el primer fotograma, `lastTimestamp` es `null`, así que `dt` es cero y la pelota se queda en su posición inicial. En los fotogramas siguientes, `dt` es el tiempo transcurrido desde el fotograma anterior, en segundos. Las marcas de tiempo están en milisegundos, así que dividimos su diferencia entre 1000 para que coincida con las unidades de la velocidad.
+
+Recarga `index.html` y deberías ver la pelota rodando por la pantalla.
+
+> [!NOTE]
+> El canvas no se borra automáticamente cada vez que se llama a `update()`. La posición anterior de la pelota desaparece porque volvemos a dibujar todo el fondo con `ctx.fillRect(0, 0, canvas.width, canvas.height)`, que se pinta encima de cualquier contenido existente. Si quitas esa línea, verás que la pelota deja un rastro.
 
 ## Compara tu código
 
-Puedes comprobar el código terminado de este artículo en la demostración en vivo a continuación, y jugar con ella para entender mejor cómo funciona:
+Esto es lo que deberías tener hasta ahora, en funcionamiento. Para ver su código fuente, haz clic en el botón "Play".
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/3x5foxb1/","","415")}}
+Si no ves la pelota, prueba a recargar la página: probablemente la pelota ya se salió de la pantalla.
 
-> [!NOTE]
-> Intenta cambiar la velocidad de la bola en movimiento o la dirección hacia la que se mueve.
+```html hidden
+<canvas id="game-canvas" width="480" height="320"></canvas>
+```
+
+```css hidden
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+canvas {
+  display: block;
+  width: min(100vw, 150vh);
+  height: auto;
+}
+```
+
+```js hidden
+const canvas = document.getElementById("game-canvas");
+const ctx = canvas.getContext("2d");
+let lastTimestamp = null;
+
+class Ball {
+  asset;
+  ctx;
+  size = { w: undefined, h: undefined };
+  pos = { x: 50, y: 50 };
+  vel = { x: 150, y: 150 };
+  constructor(url, ctx) {
+    this.asset = new Image();
+    this.asset.src = url;
+    this.ctx = ctx;
+  }
+  async preload() {
+    await this.asset.decode();
+    if (this.size.w === undefined) {
+      this.size.w = this.asset.width;
+      this.size.h = this.asset.height;
+    }
+  }
+  draw() {
+    this.ctx.drawImage(
+      this.asset,
+      this.pos.x - this.size.w / 2,
+      this.pos.y - this.size.h / 2,
+    );
+  }
+  move(dt) {
+    this.pos.x += this.vel.x * dt;
+    this.pos.y += this.vel.y * dt;
+  }
+}
+
+const ball = new Ball(
+  "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/ball.png",
+  ctx,
+);
+
+Promise.all([ball].map((obj) => obj.preload())).then(() =>
+  requestAnimationFrame(update),
+);
+
+function update(timestamp) {
+  const dt = lastTimestamp === null ? 0 : (timestamp - lastTimestamp) / 1000;
+  lastTimestamp = timestamp;
+  ball.move(dt);
+
+  ctx.fillStyle = "#eeeeee";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ball.draw();
+
+  requestAnimationFrame(update);
+}
+```
+
+{{EmbedLiveSample("compara tu código", "", 480, , , , , "allow-modals")}}
 
 ## Siguientes pasos
 
-Hemos dibujado nuestra bola y hemos hecho que se mueva, pero cuando supera el borde del canvas, desaparece. En el tercer capítulo exploraremos como hacer que [rebote en las paredes](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls).
+Ahora podemos pasar a la siguiente lección y ver cómo hacer que la pelota [rebote en las paredes](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls).
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
