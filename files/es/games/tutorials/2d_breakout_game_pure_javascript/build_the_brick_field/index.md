@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win")}}
 
-Este es el **6.º paso** de los 11 del [tutorial para crear un juego Breakout con JavaScript puro](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Veamos cómo crear un grupo de ladrillos, dibujarlos en la pantalla con un bucle y eliminarlos cuando la pelota los golpea. Construir el muro de ladrillos es un poco más complicado que añadir un solo objeto a la pantalla.
+Este es el **paso 6** de los 11 del [tutorial para crear un juego Breakout con JavaScript puro](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Veamos cómo crear un grupo de ladrillos, dibujarlos en la pantalla con un bucle y eliminarlos cuando la pelota los golpea. Construir el muro de ladrillos es un poco más complicado que añadir un solo objeto a la pantalla.
 
 ## Dibujar los ladrillos
 
