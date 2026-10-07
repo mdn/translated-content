@@ -3,12 +3,15 @@ title: "FormData : méthode values()"
 short-title: values()
 slug: Web/API/FormData/values
 l10n:
-  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
+  sourceCommit: b264328c7abee284014e09d5bfe1bab88898b27a
 ---
 
 {{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
-La méthode **`FormData.values()`** retourne un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) permettant de passer en revue toutes les valeurs contenues dans le {{domxref("FormData")}}. Les valeurs sont des chaînes de caractères ou des objets {{domxref("Blob")}}.
+La méthode **`FormData.values()`** retourne un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) permettant de passer en revue toutes les valeurs contenues dans le {{DOMxRef("FormData")}}. Les valeurs sont des chaînes de caractères ou des objets {{DOMxRef("Blob")}}.
+
+> [!NOTE]
+> Les clés de `FormData` ne sont pas nécessairement uniques. Un formulaire peut contenir plusieurs éléments portant le même nom, de sorte que les valeurs partageant une même clé apparaissent chacune lors de l'itération. Pour récupérer toutes les valeurs associées à une seule clé, utilisez la méthode {{DOMxRef("FormData.getAll()", "getAll()")}} (ou {{DOMxRef("FormData.get()", "get()")}} pour uniquement la première valeur).
 
 ## Syntaxe
 
@@ -18,7 +21,7 @@ values()
 
 ### Valeur de retour
 
-Un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) des valeurs du {{domxref("FormData")}}.
+Un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) des valeurs du {{DOMxRef("FormData")}}.
 
 ## Exemples
 
