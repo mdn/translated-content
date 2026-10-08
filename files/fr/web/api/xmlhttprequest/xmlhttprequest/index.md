@@ -1,42 +1,37 @@
 ---
-title: XMLHttpRequest()
+title: "XMLHttpRequest : constructeur XMLHttpRequest()"
+short-title: XMLHttpRequest()
 slug: Web/API/XMLHttpRequest/XMLHttpRequest
+l10n:
+  sourceCommit: 5e270e3cdab4f3c8ad3f5752976c72c6e8312eb9
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers("window_and_worker_except_service")}}
 
-Le constructeur **`XMLHttpRequest()`** crée un nouvel objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest).
-
-Pour plus de détails sur l'utilisation de `XMLHttpRequest`, voir la page [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
+Le constructeur **`XMLHttpRequest()`** crée un nouvel objet {{DOMxRef("XMLHttpRequest")}}.
 
 ## Syntaxe
 
-```js
-new XMLHttpRequest();
+```js-nolint
+new XMLHttpRequest()
+// Non standard
+new XMLHttpRequest(options)
 ```
 
 ### Paramètres
 
-Aucun.
+Aucun paramètre standard n'est défini. Cependant, Firefox permet un paramètre non standard&nbsp;:
+
+- `options` {{Non-standard_Inline}}
+  - : Un objet qui peut contenir les indicateurs suivants&nbsp;:
+    - `mozAnon`
+      - : Un booléen. Si ce drapeau vaut `true`, il empêche le navigateur d'exposer la {{Glossary("origin")}} et les informations d'authentification de l'utilisateur·ice lors de la récupération des ressources. Plus important encore, cela signifie que les {{Glossary("Cookie", "cookies")}} ne sont pas envoyés, sauf s'ils sont ajoutés de façon explicite en utilisant `setRequestHeader`.
+    - `mozSystem`
+      - : Un booléen. Si ce drapeau vaut `true`, la politique de même origine n'est pas appliquée à la requête.
 
 ### Valeur de retour
 
-Un nouvel objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest). L'objet doit être au minimum initialisé par l'appel de la méthode [`open()`](/fr/docs/Web/API/XMLHttpRequest/open) avant d'appeler [`send()`](/fr/docs/Web/API/XMLHttpRequest/send) pour envoyer la requête au serveur.
-
-## La syntaxe de Firefox non standard
-
-Firefox 16 a ajouté à ce constructeur un paramètre non standard qui peut activer le mode anonyme (voir le [bug 692677](https://bugzilla.mozilla.org/show_bug.cgi?id=692677)). Définir une valeur de `true` pour le drapeau `mozAnon` est analogue au comportement du constructeur [`AnonXMLHttpRequest()`](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) décrit dans les versions antérieures de la spécification de `XMLHttpRequest`.
-
-```js
-const request = new XMLHttpRequest(paramsDictionary);
-```
-
-### Paramètres (non standard)
-
-- `objParameters`
-  - : Un drapeau qui peut être activé&nbsp;:
-    - `mozAnon`
-      - : Un booléen. Si ce drapeau vaut `true`, il empêchera le navigateur d'exposer [l'origine](/fr/docs/Glossary/Origin) et [des informations d'authentification](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) lors de la récupération des ressources. Plus important encore, cela signifie que les [cookies](/fr/docs/Glossary/Cookie) ne seront pas envoyés, sauf s'ils sont ajoutés de façon explicite en utilisant la méthode `setRequestHeader()`.
+Un nouvel objet {{DOMxRef("XMLHttpRequest")}}. L'objet doit être au minimum initialisé par l'appel de la méthode {{DOMxRef("XMLHttpRequest.open", "open()")}} avant d'appeler {{DOMxRef("XMLHttpRequest.send", "send()")}} pour envoyer la requête au serveur.
 
 ## Spécifications
 
@@ -48,5 +43,5 @@ const request = new XMLHttpRequest(paramsDictionary);
 
 ## Voir aussi
 
-- [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [HTML dans `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
+- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [HTML dans XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
