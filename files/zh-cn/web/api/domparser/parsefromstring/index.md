@@ -9,14 +9,14 @@ l10n:
 
 > [!WARNING]
 > 此方法将它的输入当做 HTML 解析，将结果写入 DOM。
-> 此类 API 也被称为 [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage)，并且如果其输入来自一个攻击者，可能会导致[跨站点脚本（XSS）](/en-US/docs/Web/Security/Attacks/XSS)攻击。
+> 此类 API 也被称为 [injection sinks](/zh-CN/docs/Web/API/Trusted_Types_API#concepts_and_usage)，并且如果其输入来自一个攻击者，可能会导致[跨站点脚本（XSS）](/zh-CN/docs/Web/Security/Attacks/XSS)攻击。
 >
-> 你可以通过始终传递 `TrustedHTML` 而不是字符串，并且[强制执行可信类型](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types)来缓解这种风险。参见[安全考量](#security_considerations)以获得更多信息。
+> 你可以通过始终传递 `TrustedHTML` 而不是字符串，并且[强制执行可信类型](/zh-CN/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types)来缓解这种风险。参见[安全考量](#security_considerations)以获得更多信息。
 
 {{domxref("DOMParser")}} 接口的 **`parseFromString()`** 方法解析一段包含 HTML 或者 XML 的输入，返回一个具有 {{domxref("Document/contentType","contentType")}} 属性规定的类型的 {{domxref("Document")}}。
 
 > [!NOTE]
-> [`Document.parseHTMLUnsafe()`](/en-US/docs/Web/API/Document/parseHTMLUnsafe_static) 静态方法提供了另一种便捷的、将 HTML 标记解析至 {{domxref("Document")}} 的方法。
+> [`Document.parseHTMLUnsafe()`](/zh-CN/docs/Web/API/Document/parseHTMLUnsafe_static) 静态方法提供了另一种便捷的、将 HTML 标记解析至 {{domxref("Document")}} 的方法。
 
 ## 语法
 
@@ -49,10 +49,10 @@ parseFromString(input, mimeType)
 
 ### 异常
 
-- [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
+- [`TypeError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
   - : 可以由以下原因引起：
     - `mimeType` 提供了一个[不被允许的](#mimetype)值。
-    - `input` 提供了一个字符串类型的值，同时[可信类型](/en-US/docs/Web/API/Trusted_Types_API)正在[由 CSP 强制执行](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types)且没有默认策略被定义。
+    - `input` 提供了一个字符串类型的值，同时[可信类型](/zh-CN/docs/Web/API/Trusted_Types_API)正在[由 CSP 强制执行](/zh-CN/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types)且没有默认策略被定义。
 
 ## 描述
 
@@ -67,16 +67,16 @@ parseFromString(input, mimeType)
 这允许你导入 XML 文件，验证其结构，然后导出数据。
 如果输入不是格式良好的 XML，返回文档中会包含一个描述了解析错误的 `<parsererror>` 节点。
 
-不允许的 `mimeType` 值会导致抛出 [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)。
+不允许的 `mimeType` 值会导致抛出 [`TypeError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypeError)。
 
 ### 安全考量
 
 此方法将其输入解析为隔离的内存中的 DOM，禁止 {{htmlelement("script")}} 且停止事件监听器。
 尽管返回的文档本质上是惰性的，在该文档中的事件监听器和脚本会在被插入到可见 DOM 后被允许工作。
-因此，如果潜在的危险输入没有经过清洗就被解析为 `Document`，然后被注入到可见的/活动的 DOM 中（代码可在这里运行）的话，此方法会导致[跨站点脚本攻击（XSS）](/en-US/docs/Web/Security/Attacks/XSS)。
+因此，如果潜在的危险输入没有经过清洗就被解析为 `Document`，然后被注入到可见的/活动的 DOM 中（代码可在这里运行）的话，此方法会导致[跨站点脚本攻击（XSS）](/zh-CN/docs/Web/Security/Attacks/XSS)。
 
-你应该通过始终传递 {{domxref("TrustedHTML")}} 对象而不是字符串、使用 [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) 指令以[强制执行可信类型](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types)来缓解这种威胁。
-这确保了输入经过转换函数处理，因为转换函数有机会在其被注入前[清洗](/en-US/docs/Web/Security/Attacks/XSS#sanitization)输入以移除潜在的危险标签（例如 {{htmlelement("script")}} 和事件处理器属性）。
+你应该通过始终传递 {{domxref("TrustedHTML")}} 对象而不是字符串、使用 [`require-trusted-types-for`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) 指令以[强制执行可信类型](/zh-CN/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types)来缓解这种威胁。
+这确保了输入经过转换函数处理，因为转换函数有机会在其被注入前[清洗](/zh-CN/docs/Web/Security/Attacks/XSS#sanitization)输入以移除潜在的危险标签（例如 {{htmlelement("script")}} 和事件处理器属性）。
 
 使用 `TrustedHTML` 让只在几处审核和检查清洗过的代码成为可能，而不是将清洗函数分散在每一个注入点。
 在使用 `TrustedHTML` 时，你应该不需要额外传入清洗函数。
@@ -91,7 +91,7 @@ parseFromString(input, mimeType)
 在此案例中我们会安全地解析一个潜在的危险 HTML 输入，然后将其注入到可见页面的 DOM 中。
 
 为了缓解 XSS 风险，我们会从包含 HTML 的字符串创建一个 `TrustedHTML` 对象。
-可信类型仍未被所有浏览器支持，所以第一步我们定义一个[可信类型 tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill)，
+可信类型仍未被所有浏览器支持，所以第一步我们定义一个[可信类型 tinyfill](/zh-CN/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill)，
 作为该 JavaScript API 的透明替换。
 
 ```js
