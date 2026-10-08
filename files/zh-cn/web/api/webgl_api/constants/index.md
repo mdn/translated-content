@@ -18,7 +18,7 @@ const gl = canvas.getContext("webgl");
 gl.getParameter(gl.LINE_WIDTH);
 ```
 
-[使用 WebGL 扩展](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions) 也会提供一些常量。下文给出一份[列表](#webgl_扩展中定义的常量)。
+[使用 WebGL 扩展](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions)也会提供一些常量。下文给出一份[列表](#webgl_扩展中定义的常量)。
 
 ```js
 const debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
