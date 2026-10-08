@@ -2,7 +2,7 @@
 title: WebP
 slug: Glossary/WebP
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 1ac2997717ee7e899121ab045cf5b391e1e15518
 ---
 
 **WebP** は可逆圧縮と不可逆圧縮の両方に対応している画像形式で、Google が開発しました。

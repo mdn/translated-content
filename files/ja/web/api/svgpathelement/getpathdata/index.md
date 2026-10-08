@@ -22,7 +22,7 @@ getPathData(options)
 - `options` {{optional_inline}}
   - : パスデータ取得プロセスの側面を制御するためのオプションオブジェクト。このオブジェクトは次のプロパティを含む場合があります。
     - `normalize` {{optional_inline}}
-      - : 返されるパス区間の並びを、[絶対コマンド](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド)の基本セット（`'M'`, `'L'`, `'C'` and `'Z'`）に変換し、値をそれに応じて調整するするかどうかを示す論理値です。
+      - : 返されるパス区間の並びを、[絶対コマンド](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド)の基本セット（`'M'`, `'L'`, `'C'` and `'Z'`）に変換し、値をそれに応じて調整するかどうかを示す論理値です。
 
 ### 返値
 

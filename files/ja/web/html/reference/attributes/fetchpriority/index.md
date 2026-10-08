@@ -1,9 +1,9 @@
 ---
-title: "HTML 属性: fetchpriority"
+title: "`fetchpriority` 属性 (HTML)"
 short-title: fetchpriority
 slug: Web/HTML/Reference/Attributes/fetchpriority
 l10n:
-  sourceCommit: 1889aacdd5cb4dd3e6e5a5ef2f305fda0985c89b
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 **`fetchpriority`** 属性は、開発者が特定の画像を読み込みプロセスの早期に取得することで、ユーザー体験への影響を増加または減少させることを、ブラウザーが内部優先度を割り当てる際に行う合理的な推測の範囲を超えて、指定することができます。
@@ -41,4 +41,4 @@ l10n:
 
 ## 関連情報
 
-- SVG の [`fetchpriority`](/ja/docs/Web/SVG/Reference/Attribute/fetchpriority) 属性
+- SVG {{svgattr("fetchpriority")}} 属性

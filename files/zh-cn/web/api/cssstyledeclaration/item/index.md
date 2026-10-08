@@ -9,7 +9,7 @@ slug: Web/API/CSSStyleDeclaration/item
 
 ## 语法
 
-```plain
+```js
 var propertyName = style.item(index);
 ```
 
@@ -23,7 +23,7 @@ var propertyName = style.item(index);
 
 使用以下的 javascript 语法可以通过索引从 style 的节点列表中获取对应值：
 
-```plain
+```js
 var propertyName = style[index];
 ```
 

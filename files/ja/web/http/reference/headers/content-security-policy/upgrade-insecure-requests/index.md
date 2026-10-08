@@ -1,14 +1,12 @@
 ---
-title: "CSP: upgrade-insecure-requests"
+title: "Content-Security-Policy: upgrade-insecure-requests ディレクティブ"
+short-title: upgrade-insecure-requests
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`upgrade-insecure-requests`** ディレクティブは、ユーザーエージェントに、すべてのサイトの安全でない URL（HTTP 経由で提供される URL）をセキュリティで保護された URL（HTTPS を介して提供されるもの）で置き換えられたかのように処理するよう指示します。このディレクティブは、書き換えが必要な安全ではない古い URL が多数存在するウェブサイトのためのものです。
-
-> [!NOTE]
-> `upgrade-insecure-requests` ディレクティブは、 {{CSP("block-all-mixed-content")}} よりも前に処理され、もし設定されていれば後者は何もしません。どちらかのディレクティブを設定することをお勧めしますが、 HTTP にリダイレクトした後で HTTPS を強制することができない古いブラウザーで HTTPS を強制させたくない限り、両方を指定することはできません。
 
 `upgrade-insecure-requests` ディレクティブは、第三者のサイトのリンクを経由してサイトにアクセスしたユーザーが最上位のナビゲーション用に HTTPS にアップグレードされることを保証しないため、 {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) ヘッダーを置換せず、ユーザーがSSLストリッピング攻撃の対象にならないように、適切な `max-age` を設定するようにしてください。
 
@@ -64,7 +62,7 @@ Content-Security-Policy: upgrade-insecure-requests; default-src https:
 Content-Security-Policy-Report-Only: default-src https:; report-uri /endpoint
 ```
 
-このようにして、安全なサイト上の安全でない要求は引き続きアップグレードされますが、監視ポリシーに違反した場合だけが、安全でないリソースがエンドポイントに報告されます。
+こうすることで、保護されたサイト上の保護されていないリクエストは引き続きアップグレードされますが、監視ポリシーに違反した分のみがエンドポイントに保護されていないリソースとして報告されます。
 
 ## 仕様書
 

@@ -2,7 +2,7 @@
 title: Le fourre-tout du contenu MDN
 slug: MDN/Kitchensink
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: 32ba792708c61221f9ddf725c0a52dba573414bc
 ---
 
 > [!WARNING]
@@ -454,5 +454,4 @@ La macro [`AvailableInWorkers` <sup>(angl.)</sup>](https://github.com/mdn/rari/b
   - : Informations sur une alarme particulière.
 
 {{Non-standard_Header}}
-{{Deprecated_Header}}
 [![Iceberg pic](iceberg.jpg)](iceberg.jpg)

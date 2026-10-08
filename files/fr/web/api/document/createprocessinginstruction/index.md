@@ -25,7 +25,7 @@ createProcessingInstruction(target, data)
 
 ### Valeur de retour
 
-Un nœud ({{JSxRef("ProcessingInstruction")}}).
+Un nœud ({{DOMxRef("ProcessingInstruction")}}).
 
 ### Exceptions
 

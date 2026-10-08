@@ -3,7 +3,7 @@ title: "Element : propriété customElementRegistry"
 short-title: customElementRegistry
 slug: Web/API/Element/customElementRegistry
 l10n:
-  sourceCommit: 9c4d4cb78a55340b46855e47aba76729a59e11ce
+  sourceCommit: 57ea7eecce9dee3bd3a874ce184a48cf993c0699
 ---
 
 {{APIRef("Web Components")}}
@@ -58,4 +58,4 @@ console.log(el.customElementRegistry === monRegistre); // true
 - La propriété {{DOMxRef("Document.customElementRegistry")}}
 - La propriété {{DOMxRef("ShadowRoot.customElementRegistry")}}
 - L'interface {{DOMxRef("CustomElementRegistry")}}
-- [Utiliser les éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements)
+- [Les registres d'éléments personnalisés avec une portée](/fr/docs/Web/API/Web_components/Using_custom_elements#registres_déléments_personnalisés_avec_une_portée) dans [Utiliser les éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements)

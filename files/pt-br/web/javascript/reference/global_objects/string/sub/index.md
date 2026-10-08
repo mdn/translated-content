@@ -3,7 +3,7 @@ title: String.prototype.sub()
 slug: Web/JavaScript/Reference/Global_Objects/String/sub
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}
 
 O método `sub()` cria um elemento HTML [`<sub>`](/pt-BR/docs/Web/HTML/Element/sub) que faz com que uma string seja exibida como subscrito (texto pequeno).
 

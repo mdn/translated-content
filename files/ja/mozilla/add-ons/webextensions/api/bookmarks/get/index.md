@@ -19,7 +19,7 @@ browser.bookmarks.get(
 ### 引数
 
 - `idOrIdList`
-  - : 取得したい {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} オブジェクトの ID を指定した {{jsxref("String")}} または {{jsxref("String")}} の {\[jsxref("array")}} です。
+  - : 取得したい {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} オブジェクトの ID を指定した {{jsxref("String")}} または {{jsxref("String")}} の {{jsxref("Array")}} です。
 - `callback`
   - : ノードが取得された際に実行される {{jsxref("Operators/function", "function")}} です。この関数には以下の引数が渡ります。
     - `results`

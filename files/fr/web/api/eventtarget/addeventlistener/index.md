@@ -3,7 +3,7 @@ title: "EventTarget : méthode addEventListener()"
 short-title: addEventListener()
 slug: Web/API/EventTarget/addEventListener
 l10n:
-  sourceCommit: 26fb7eaa7b398a35c2463fa15ab6ccfa46a9e06d
+  sourceCommit: bacd00c353f643d8f5be0ce769015b1a66b4251a
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
@@ -15,9 +15,7 @@ Les cibles courantes sont {{DOMxRef("Element")}}, ses enfants, {{DOMxRef("Docume
 > [!NOTE]
 > La méthode `addEventListener()` est la manière _recommandée_ d'enregistrer un écouteur d'évènements. Les avantages sont les suivants&nbsp;:
 >
-> - Elle permet d'ajouter plusieurs gestionnaires pour un évènement. Cela est particulièrement
->   utile pour les bibliothèques, les modules JavaScript ou tout autre type
->   de code qui doit bien fonctionner avec d'autres bibliothèques ou extensions.
+> - Elle permet d'ajouter plusieurs gestionnaires pour un évènement. Cela est particulièrement utile pour les bibliothèques, les modules JavaScript ou tout autre type de code qui doit bien fonctionner avec d'autres bibliothèques ou extensions.
 > - Contrairement à l'utilisation d'une propriété `onXYZ`, elle offre un contrôle plus précis de la phase lors de laquelle l'écouteur est activé (capture vs. propagation).
 > - Elle fonctionne sur n'importe quelle cible d'évènement, pas seulement les éléments HTML ou SVG.
 
@@ -57,7 +55,7 @@ addEventListener(type, listener, useCapture)
     - `passive` {{Optional_Inline}}
       - : Un booléen qui, si `true`, indique que la fonction définie par `listener` n'appelle jamais {{DOMxRef("Event.preventDefault", "preventDefault()")}}. Si un écouteur passif appelle `preventDefault()`, rien ne se passe et un avertissement peut apparaître dans la console.
 
-        Si cette option n'est pas définie, elle vaut `false` — sauf dans les navigateurs autres que Safari, où elle vaut `true` pour les évènements {{DOMxRef("Element/wheel_event", "wheel")}}, {{DOMxRef("Element/mousewheel_event", "mousewheel")}}, {{DOMxRef("Element/touchstart_event", "touchstart")}} et {{DOMxRef("Element/touchmove_event", "touchmove")}}. Voir [Utiliser les écouteurs passifs](#utiliser_les_écouteurs_passifs) pour en savoir plus.
+        Si cette option n'est pas définie, elle vaut `false` — sauf qu'elle vaut `true` pour les évènements {{DOMxRef("Element/wheel_event", "wheel")}}, {{DOMxRef("Element/mousewheel_event", "mousewheel")}}, {{DOMxRef("Element/touchstart_event", "touchstart")}} et {{DOMxRef("Element/touchmove_event", "touchmove")}} sur {{DOMxRef("Window")}}, {{DOMxRef("Document")}}, {{DOMxRef("Document.documentElement")}} et {{DOMxRef("Document.body")}}. Voir [Utiliser les écouteurs passifs](#utiliser_les_écouteurs_passifs) pour en savoir plus.
 
     - `signal` {{Optional_Inline}}
       - : Un objet {{DOMxRef("AbortSignal")}}. L'écouteur est supprimé lorsque la méthode {{DOMxRef("AbortController/abort()", "abort()")}} du {{DOMxRef("AbortController")}} propriétaire du signal est appelée. Si non défini, aucun `AbortSignal` n'est associé à l'écouteur.
@@ -281,7 +279,7 @@ Si un évènement possède une action par défaut — par exemple, un évènemen
 
 En définissant l'option `passive` à `true`, un écouteur d'évènement déclare qu'il n'annule pas l'action par défaut, ce qui permet au navigateur de lancer immédiatement l'action par défaut sans attendre la fin de l'écouteur. Si l'écouteur appelle malgré tout {{DOMxRef("Event.preventDefault()")}}, cela n'aura aucun effet.
 
-La spécification de `addEventListener()` définit la valeur par défaut de l'option `passive` à `false`. Cependant, pour améliorer les performances de défilement dans du code existant, les navigateurs modernes ont changé la valeur par défaut de l'option `passive` à `true` pour les évènements {{DOMxRef("Element/wheel_event", "wheel")}}, {{DOMxRef("Element/mousewheel_event", "mousewheel")}}, {{DOMxRef("Element/touchstart_event", "touchstart")}} et {{DOMxRef("Element/touchmove_event", "touchmove")}} sur les nœuds de niveau document comme {{DOMxRef("Window")}}, {{DOMxRef("Document")}} et {{DOMxRef("Document.body")}}. Cela empêche l'écouteur d'évènement [d'annuler l'évènement](/fr/docs/Web/API/Event/preventDefault), et donc de bloquer l'affichage de la page pendant le défilement.
+Pour bénéficier des améliorations de performance de défilement apportées par les écouteurs passifs dans du code existant, la spécification de `addEventListener()` définit la valeur par défaut de l'option `passive` à `true` pour les évènements {{DOMxRef("Element/wheel_event", "wheel")}}, {{DOMxRef("Element/mousewheel_event", "mousewheel")}}, {{DOMxRef("Element/touchstart_event", "touchstart")}} et {{DOMxRef("Element/touchmove_event", "touchmove")}} sur {{DOMxRef("Window")}}, {{DOMxRef("Document")}}, {{DOMxRef("Document.documentElement")}} et {{DOMxRef("Document.body")}}. Pour les autres évènements et cibles, la valeur par défaut est `false`. Un écouteur passif ne peut pas [annuler l'évènement](/fr/docs/Web/API/Event/preventDefault), donc le navigateur n'a pas besoin d'attendre sa fin avant de faire défiler.
 
 Ainsi, si vous souhaitez annuler ce comportement et garantir que l'option `passive` est `false`, vous devez explicitement définir cette option à `false` (plutôt que de compter sur la valeur par défaut).
 

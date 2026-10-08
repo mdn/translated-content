@@ -7,7 +7,7 @@ slug: Web/HTTP/Reference/Status/405
 
 ## 状态码
 
-```plain
+```http
 405 Method Not Allowed
 ```
 

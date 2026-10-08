@@ -1,9 +1,9 @@
 ---
-title: HTML `<input type="file">` 属性値
+title: '`<input type="file">` 属性値 (HTML)'
 short-title: <input type="file">
 slug: Web/HTML/Reference/Elements/input/file
 l10n:
-  sourceCommit: 30221c85132f8cb77ca73fbb033100cc2f10bba7
+  sourceCommit: 6488b82388db9e593ec28be1d845688e29c679e1
 ---
 
 {{HTMLElement("input")}} 要素の **`type="file"`** 型は、ユーザーが一つまたは複数のファイルを端末のストレージから選択することができるようにします。選択されると、ファイルは[フォーム投稿](/ja/docs/Learn_web_development/Extensions/Forms)を使用してサーバーにアップロードしたり、JavaScript コードと[ファイル API](/ja/docs/Web/API/File_API/Using_files_from_web_applications) を使用して操作したりすることができます。
@@ -65,13 +65,12 @@ label {
 
 [`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple) 論理属性が指定されていると、ファイル入力フィールドはユーザーに複数のファイルを選択することを許します。
 
-## 標準外の属性
-
-上記に挙げた属性に加え、以下の標準外の属性が一部のブラウザーで利用できます。実装していないブラウザーではコードが機能する可能性が制限されるため、できれば使用することを避けてください。
-
-### `webkitdirectory`
+### webkitdirectory
 
 論理属性の `webkitdirectory` は、もし存在する場合は、ファイル選択インターフェイスでユーザーがディレクトリーのみを選択することができることを示します。詳しい解説と例については {{domxref("HTMLInputElement.webkitdirectory")}} を参照してください。
+
+> [!NOTE]
+> `webkitdirectory` は、[ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API) で定義されています。この名前が `webkitdirectory` となっているのは、もともと Chrome 独自の API だったためです。現在では、すべてのブラウザーで利用可能です。
 
 ## 固有ファイル型指定子
 
@@ -114,9 +113,6 @@ div {
 これは以下のような出力になります。
 
 {{EmbedLiveSample('A_basic_example', 650, 90)}}
-
-> [!NOTE]
-> この例は GitHub にもあります。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
 
 ユーザーの端末やオペレーティングシステムに関わらず、ファイル入力フィールドにはユーザーがファイルを選択することができるファイル選択ダイアログを開くボタンがあります。
 
@@ -180,9 +176,6 @@ div {
 
 {{EmbedLiveSample('Limiting_accepted_file_types', 650, 90)}}
 
-> [!NOTE]
-> この例は GitHub にもあります。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html)を確認してください。
-
 同じように見えるかもしれませんが、この入力フィールドでファイルを選択しようとすると、このファイル選択ダイアログでは `accept` の値で指定されたファイル形式しか選択できません。 (細かい動きはブラウザーやオペレーティングシステムによって異なります)。
 
 `accept` 属性は選択されたファイルの形式を検証しません。単にブラウザーにユーザーが正しいファイル形式を選択するためのガイドするためのヒントを出すだけです。 (多くの場合) ユーザーがファイル選択ダイアログオプションを切り替えることで、ファイル選択ダイアログがこの設定を上書きして任意のファイルを選択することができるので、不正なファイル形式を選択する可能性があります。
@@ -199,7 +192,7 @@ div {
 const elem = document.createElement("input");
 elem.type = "file";
 elem.addEventListener("cancel", () => {
-  console.log("Cancelled.");
+  console.log("Canceled.");
 });
 elem.addEventListener("change", () => {
   if (elem.files.length === 1) {
@@ -222,12 +215,13 @@ elem.click();
 
 ## 例
 
+### 完全な file の例
+
 この例では、この例では、 `HTMLInputElement.files` プロパティで利用できるファイル情報を利用する、さらに高度なファイル選択ダイアログを示し、またいくつか巧妙なテクニックを示します。
 
-> [!NOTE]
-> この例の完全なソースコードは GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-example.html) ([ライブ版もあります](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)) で見ることができます。 CSS については説明しません。 JavaScript が中心です。
+#### HTML
 
-最初に、 HTML を見てみましょう。
+HTML はこのようなものです。
 
 ```html-nolint
 <form method="post" enctype="multipart/form-data">
@@ -308,9 +302,9 @@ form button:active {
 }
 ```
 
-これは以前見たものに似ています。特筆するべきものはありません。
+これは先ほど見た内容と似ているため、ここでは詳しく説明しません。また、この例に適用されている CSS は、ファイル入力の仕組みやそれを支える JavaScript を理解する上で関係がないため、非表示にしています。
 
-次に、JavaScript を一通り見てみましょう。
+#### JavaScript
 
 スクリプトの最初の行で、フォームの入力フィールド自体と `.preview` クラスが設定された {{htmlelement("div")}} 要素の参照を取得します。次に {{htmlelement("input")}} 要素を非表示にします。 — これは、ファイル入力フィールドが概して醜く、スタイル付けをするのが難しく、ブラウザー間でデザインに一貫性がないからです。 {{htmlelement("label")}} をクリックすることで `input` 要素をアクティブ化することができるので、 `input` 要素を見かけは非表示にしてラベルをボタンらしくしたほうが、ユーザーがファイルをアップロードしたいときの操作が分かります。
 
@@ -430,7 +424,7 @@ button.addEventListener("click", (e) => {
 });
 ```
 
-この例は次のようにできます。使ってみましょう。
+#### 結果
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
 
@@ -471,12 +465,6 @@ button.addEventListener("click", (e) => {
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>

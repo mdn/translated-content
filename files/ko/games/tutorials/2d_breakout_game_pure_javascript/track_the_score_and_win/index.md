@@ -3,7 +3,7 @@ title: 점수 추가와 승패 판정 방법
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
 이번 단계는 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 8번째 단계입니다. [Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html)에서 이번 단계의 소스 코드를 확인할 수 있습니다.
 
@@ -102,6 +102,6 @@ function collisionDetection() {
 
 ## 다음 단계
 
-게임은 현재 꽤 멋지게 보입니다. 다음 단계에서는, [Mouse controls (마우스로 패들 조종하는 방법)](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls)을 통해서 게임을 즐길 수 있습니다.
+게임은 현재 꽤 멋지게 보입니다. 다음 단계에서는, [Mouse controls (마우스로 패들 조종하는 방법)](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls)을 통해서 게임을 즐길 수 있습니다.
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}

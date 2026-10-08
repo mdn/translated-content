@@ -22,7 +22,7 @@ En {{Glossary( "CSS")}} los selectores se utilizan para delimitar los elementos 
           href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >, conocimientos básicos de HTML (véase
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">Introducción a HTML</a
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content">Introducción a HTML</a
         >) y una idea de cómo funciona el CSS (véase
         <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Primeros pasos con CSS</a>).
       </td>

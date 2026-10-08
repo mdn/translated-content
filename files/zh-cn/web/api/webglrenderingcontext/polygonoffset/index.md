@@ -11,7 +11,7 @@ The offset is added before the depth test is performed and before the value is w
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.polygonOffset(factor, units);
 ```
 

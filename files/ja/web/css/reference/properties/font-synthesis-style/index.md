@@ -1,8 +1,9 @@
 ---
-title: font-synthesis-style
+title: "`font-synthesis-style` プロパティ (CSS)"
+short-title: font-synthesis-style
 slug: Web/CSS/Reference/Properties/font-synthesis-style
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 **`font-synthesis-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントファミリーに斜体書体がない場合に、ブラウザーが斜体書体を合成するかどうかを指定します。
@@ -26,6 +27,8 @@ font-synthesis-style: unset;
 ```
 
 ### 値
+
+このプロパティは、以下のキーワード値のいずれかとして指定します。
 
 - `auto`
   - : 不足している斜体書体は、必要に応じてブラウザーが合成する可能性があることを示します。
@@ -52,7 +55,7 @@ font-synthesis-style: unset;
 
 ```html-nolint
 <p class="english">
-  これは既定の <em>oblique typeface</em> と
+  これはデフォルトの <em>oblique typeface</em> と
   <strong>bold typeface</strong> です。
 </p>
 

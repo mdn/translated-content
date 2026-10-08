@@ -19,7 +19,7 @@ slug: Mozilla/Firefox/Releases/76
 #### ネットワークモニター
 
 - ネットワーク要求の一覧で列の境目をダブルクリックすると、境目の左側の列を内容に合わせてリサイズするようになりました ([Firefox バグ 1615102](https://bugzil.la/1615102))。
-- ネットワーク要求のコンテキストメニュー項目「_コピー > [cURL としてコピー](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#copy_as_curl)_ で新たなオプション `--globoff` が利用可能になりました。これはコピーした URL に各括弧文字が含まれている場合に、cURL の globbing (ワイルドカードのマッチング) を抑制します ([Firefox バグ 1549773](https://bugzil.la/1549773))。
+- ネットワーク要求のコンテキストメニュー項目「_コピー > [cURL としてコピー](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#copy_as_curl)_」で新たなオプション `--globoff` が利用可能になりました。これはコピーした URL に各括弧文字が含まれている場合に、cURL の globbing (ワイルドカードのマッチング) を抑制します ([Firefox バグ 1549773](https://bugzil.la/1549773))。
 - [WebSocket 要求](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/inspecting_web_sockets/index.html) の詳細ペインにある _メッセージ_ タブに、制御フレームを表示する新たなフィルターである _Control_ を追加しました。また、フィルターが選択リストにグループ分けされました ([Firefox バグ 1566780](https://bugzil.la/1566780))。
 
 #### ウェブコンソール

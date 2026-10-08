@@ -1,9 +1,9 @@
 ---
-title: HTML `<img>` 画像埋め込み要素
+title: "`<img>` 画像埋め込み要素 (HTML)"
 short-title: <img>
 slug: Web/HTML/Reference/Elements/img
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 74a39db9d03ec63426b0740dc0bd3cb85e5461a4
 ---
 
 **`<img>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書に画像を埋め込みます。
@@ -23,49 +23,6 @@ l10n:
 }
 ```
 
-上記の例では、 `<img>` 要素の使い方を示しています。
-
-- `src` 属性は、埋め込みたい画像へのパスを保持します。[`srcset`](/ja/docs/Web/API/HTMLImageElement/srcset) 属性が利用できる場合、`src` 属性は必須ではありません。ただし、`src` 属性または `srcset` 属性の少なくとも一方は指定しなければなりません。
-- `alt` 属性は、この画像のテキストによる代替情報を保持します。これは必須であり、アクセシビリティに**非常に役立つ**ものです。スクリーンリーダーは、この属性値をユーザーに読み上げるので、画像の意味が分かります。また、ネットワークエラーやコンテンツのブロック、リンク切れ等の理由で画像が読み込めなかった場合にも代替テキストが表示されます。
-
-他にも、様々な目的で指定できる属性がたくさんあります。
-
-- セキュリティとプライバシーのための[リファラー](/ja/docs/Web/HTTP/Reference/Headers/Referrer-Policy)/{{glossary("CORS")}} 制御。 [`crossorigin`](#crossorigin) および [`referrerpolicy`](#referrerpolicy) を参照してください。
-- [`width`](#width) と [`height`](#height) の両方を使用して画像の固有の寸法を設定すると、画像を読み込む前に場所を確保し、コンテンツのレイアウトが移動することを防ぐことができます。
-- [`sizes`](#sizes) および [`srcset`](#srcset) を使用したレスポンシブ画像のヒント ({{htmlelement("picture")}} 要素と[レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)のチュートリアルもご覧ください)。
-
-## 対応している画像形式
-
-HTML 標準では、対応する画像形式を指定していないので、{{glossary("user agent", "ユーザーエージェント")}}によって対応する画像形式は異なります。
-
-> [!NOTE]
-> [画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Guides/Formats/Image_types) には、画像ファイルとウェブブラウザーの対応に関する包括的な情報があります。
-> この節は概要のみです。
-
-ウェブで最もよく使われる画像ファイル形式は、以下の通りです。
-
-- [APNG (Animated Portable Network Graphics)](/ja/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics) — 可逆性のあるアニメーションシーケンスに適しています（GIF はパフォーマンスが劣る）
-- [AVIF (AV1 Image File Format)](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_画像) — 高い性能により、画像とアニメーションの両方に適しています。
-- [GIF (Graphics Interchange Format)](/ja/docs/Web/Media/Guides/Formats/Image_types#gif_graphics_interchange_format) — シンプルな画像やアニメーションに適しています。
-- [JPEG (Joint Photographic Expert Group image)](/ja/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image) — 静止画の非可逆圧縮に適しています（現在最も普及しています）。
-- [PNG (Portable Network Graphics)](/ja/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) — 静止画の可逆圧縮に適しています（JPEG より若干画質が良い）。
-- [SVG (Scalable Vector Graphics)](/ja/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics) — ベクター画像形式。異なるサイズでも正確に描画する必要がある画像に使用します。
-- [WebP (Web Picture format)](/ja/docs/Web/Media/Guides/Formats/Image_types#webp_画像) — 画像とアニメーションの両方に優れた選択です。
-
-[WebP](/ja/docs/Web/Media/Guides/Formats/Image_types#webp_画像) や [AVIF](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_画像) などは、PNG、JPEG、GIF よりはるかに性能が良く、静止画と動画の両方で使えるのでおすすめします。
-
-SVG は、異なるサイズでも正確に描画する必要がある画像に推奨される形式であることに変わりはありません。
-
-## 画像読み込みエラー
-
-画像の読み込みまたは描画の間にエラーが発生した場合で、かつ `onerror` イベントハンドラーが {{domxref("HTMLElement/error_event", "error")}} イベントを扱うよう設定されていた場合は、イベントハンドラーが呼び出されます。これは例えば次のように、様々な状況で発生します。
-
-- `src` または `srcset` 属性が空 (`""`) または `null` である。
-- 指定された `src` の {{glossary("URL")}} が現在ユーザーがいるページの URL と同じである。
-- 指定された画像が何らかの理由で読み込みが妨害され、中止された。
-- 指定された画像のメタデータが、寸法を受け取ることができないなどの理由で読み込みが中止され、かつ `<img>` 要素の属性に寸法が指定されていなかった場合。
-- 指定された画像が、{{glossary("user agent", "ユーザーエージェント")}}が対応している形式ではない場合。
-
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
@@ -78,7 +35,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     >
     > - 視覚ブラウザー以外のブラウザー（視覚障碍者向けのものを含む）で閲覧された場合
     > - ユーザーが画像を非表示に設定している場合（帯域の節約、プライバシー上の理由）
-    > - 画像が無効であったり[未対応の画像形式](#対応している画像形式)であったりした場合
+    > - 画像が無効であったり[未対応の画像形式](/ja/docs/Web/Media/Guides/Formats/Image_types)であったりした場合
     >
     > このような場合、ブラウザーは、画像をこの要素の `alt` 属性で定義された文字列に置き換えます。このような理由から、 `alt` には可能な限り役に立つ値を指定するべきです。
 
@@ -86,7 +43,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
     この属性は画像をテキストにコピー＆ペーストした場合や、リンクされた画像をブックマークに保存したときにも使用されます。
 
-- `attributionsrc` {{deprecated_inline}}
+- `attributionsrc` {{deprecated_inline}} {{non-standard_inline}}
   - : ブラウザーに画像リクエストとともに {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信するように指定します。
 
     サーバー側では、この機能を使用して、{{httpheader("Attribution-Reporting-Register-Source")}} または {{httpheader("Attribution-Reporting-Register-Trigger")}} ヘッダーをレスポンスで送信し、それぞれ画像ベースの[帰属ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources)または[帰属トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers)を登録します。どのレスポンスヘッダーを送り返すべきかは、登録をトリガーした `Attribution-Reporting-Eligible` ヘッダーの値によって異なります。
@@ -187,7 +144,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
   - : リソースを読み込む際に、どのリファラーを使用するかを示す文字列です。
     - `no-referrer`: {{HTTPHeader("Referer")}} ヘッダーを送信しないことを表します。
     - `no-referrer-when-downgrade`: ある{{Glossary("origin", "オリジン")}}へ{{Glossary("TLS")}} ({{Glossary("HTTPS")}}) を使用せずに移動した場合に、 {{HTTPHeader("Referer")}} ヘッダーを送信しないことを表します。
-    - `origin`: 送られるリファラーは、参照しているページページのオリジン、すなわち[スキーム](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "ホスト名")}}、{{Glossary("port", "ポート番号")}}のみとなります。
+    - `origin`: 送られるリファラーは、参照しているページのオリジン、すなわち[スキーム](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "ホスト名")}}、{{Glossary("port", "ポート番号")}}のみとなります。
     - `origin-when-cross-origin`: 異なるオリジンへの移動では、リファラーをスキーム、ホスト、ポートのみに制限します。同一のオリジンへの移動では、リファラーのフルパスを含めます。
     - `same-origin`: リファラーは{{glossary("Same-origin policy", "同じオリジン")}}に対しては送信されますが、オリジン間リクエストではリファラー情報が入りません。
     - `strict-origin`: プロトコルのセキュリティレベルが同等 (HTTPS→HTTPS) である場合は、リファラーとしてこの文書のオリジンが送信されますが、安全性の低い宛先 (HTTPS→HTTP) には送信されません。
@@ -307,9 +264,34 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 - `vspace` {{deprecated_inline}}
   - : 画像の上下に挿入する空間の幅をピクセル単位で指定します。代わりに CSS の {{cssxref('margin')}} プロパティを使用してください。
 
+## 使用上のメモ
+
+それぞれの `<img>` 要素には、少なくとも 2 つの属性が必要です。最も一般的なもののは、`src` と `alt` です。
+
+- `src` 属性は、埋め込みたい画像へのパスを保持します。[`srcset`](/ja/docs/Web/API/HTMLImageElement/srcset) 属性が利用できる場合、`src` 属性は必須ではありません。ただし、`src` 属性または `srcset` 属性の少なくとも一方は指定しなければなりません。
+- `alt` 属性は、この画像のテキストによる代替情報を保持します。これは必須であり、アクセシビリティに**非常に有用**なものです。スクリーンリーダーは、この属性値をユーザーに読み上げるので、画像の意味が分かります。また、ネットワークエラーやコンテンツのブロック、リンク切れ等の理由で画像が読み込めなかった場合にも代替テキストが表示されます。
+
+それ以外にも、さまざまな目的を達成するための属性が数多くあります。
+
+- セキュリティとプライバシーのための[リファラー](/ja/docs/Web/HTTP/Reference/Headers/Referrer-Policy)/{{glossary("CORS")}} 制御。 [`crossorigin`](#crossorigin) および [`referrerpolicy`](#referrerpolicy) を参照してください。
+- [`width`](#width) と [`height`](#height) の両方を使用して画像の固有の寸法を設定すると、画像を読み込む前に場所を確保し、コンテンツのレイアウトが移動することを防ぐことができます。
+- [`sizes`](#sizes) および [`srcset`](#srcset) を使用したレスポンシブ画像のヒント ({{htmlelement("picture")}} 要素と[レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)のチュートリアルもご覧ください)。
+
+[画像ファイルのファイル形式と形式に関するガイド](/ja/docs/Web/Media/Guides/Formats/Image_types)には、対応している画像形式に関する情報や、それぞれの形式をどのような場面で使用するべきかについての一般的な推奨事項が記載されています。
+
+## 画像読み込みエラー
+
+画像の読み込みまたは描画の間にエラーが発生した場合で、かつ `onerror` イベントハンドラーが {{domxref("HTMLElement/error_event", "error")}} イベントを扱うよう設定されていた場合は、イベントハンドラーが呼び出されます。これは例えば次のように、様々な状況で発生します。
+
+- `src` または `srcset` 属性が空 (`""`) または `null` である。
+- 指定された `src` の {{glossary("URL")}} が現在ユーザーがいるページの URL と同じである。
+- 指定された画像が何らかの理由で読み込みが妨害され、中止された。
+- 指定された画像のメタデータが、寸法を受け取ることができないなどの理由で読み込みが中止され、かつ `<img>` 要素の属性に寸法が指定されていなかった場合。
+- 指定された画像が、{{glossary("user agent", "ユーザーエージェント")}}が対応している形式ではない場合。
+
 ## CSS でのスタイル設定
 
-`<img>` は{{ glossary("replaced elements", "置換要素")}}です。 {{cssxref("display")}} の値がデフォルトで `inline` ですが、デフォルトの寸法は埋め込まれた画像の内部的な値で定義されます。画像には {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}}, などのプロパティを設定することができます。
+`<img>` は{{ glossary("replaced elements", "置換要素")}}です。 {{cssxref("display")}} の値がデフォルトで `inline` ですが、デフォルトの寸法は `inline-block` であった場合と同様に、埋め込まれた画像の内部的な値で定義されます。画像には {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}}, などのプロパティを設定することができます。
 
 `<img>` にはベースラインがありません。つまり {{cssxref("vertical-align", "vertical-align: baseline")}} を伴うインライン整形コンテキスト内で使用したときに、画像の下端はコンテナーのベースラインに揃えられます。
 
@@ -419,7 +401,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 {{EmbedLiveSample("Using_the_srcset_and_sizes_attributes", "100%", 350)}}
 
 > [!NOTE]
-> その場で大きさを変更してみるには、{{LiveSampleLink('Using_the_srcset_and_sizes_attributes', 'この例を別なページで表示')}}させる必要があり、そうすればコンテンツ領域の大きさを実際に使用することができます。
+> その場で大きさを変更してみるには、{{LiveSampleLink('Using_the_srcset_and_sizes_attributes', 'この例を別なページで表示')}}させる必要があります。そうすればコンテンツ領域の大きさを変更することができます。
 
 ## セキュリティとプライバシーの考慮事項
 

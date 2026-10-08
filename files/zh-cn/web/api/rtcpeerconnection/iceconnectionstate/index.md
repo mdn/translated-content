@@ -9,8 +9,8 @@ slug: Web/API/RTCPeerConnection/iceConnectionState
 
 ## 语法
 
-```plain
- var state = peerConnection.iceConnectionState;
+```js
+var state = peerConnection.iceConnectionState;
 ```
 
 ### 返回值

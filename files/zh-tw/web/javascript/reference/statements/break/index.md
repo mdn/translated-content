@@ -23,7 +23,7 @@ console.log(i);
 
 ## 語法
 
-```plain
+```js-nolint
 break [label];
 ```
 

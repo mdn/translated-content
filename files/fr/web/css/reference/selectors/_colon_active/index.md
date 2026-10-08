@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:active`** permet de cibler un élément lorsque celui-ci est activé par l'utilisateur. Elle permet de fournir un _feedback_ indiquant que l'activation a bien été détectée par le navigateur. Lorsqu'on a une interaction avec un pointeur, il s'agit généralement du moment entre l'appui sur le pointeur et le relâchement de celui-ci.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:active`** permet de cibler un élément lorsque celui-ci est activé par l'utilisateur·ice. Elle permet de fournir un _feedback_ indiquant que l'activation a bien été détectée par le navigateur. Lorsqu'on a une interaction avec un pointeur, il s'agit généralement du moment entre l'appui sur le pointeur et le relâchement de celui-ci.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :active", "tabbed-shorter")}}
 
@@ -32,12 +32,12 @@ La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/f
 <button class="joinBtn">S'abonner</button>
 ```
 
-La pseudo-classe `:active` est également activée lorsque l'utilisateur·ice emploie la touche de tabulation. Elle est souvent utilisée sur les éléments HTML {{HTMLElement("a")}} et {{HTMLElement("button")}} mais n'est pas restreinte à ceux-ci. Les éléments ciblés par cette pseudo-classe incluent les éléments qui contiennent l'élément activé et les éléments de formulaires activés via leur élément {{HTMLElement("label")}} associé.
+La pseudo-classe `:active` est également activée lorsque l'utilisateur·ice emploie la touche de tabulation. Elle est souvent utilisée sur les éléments HTML {{HTMLElement("a")}} et {{HTMLElement("button")}} mais n'est pas restreinte à ceux-ci. Les éléments ciblés par cette pseudo-classe incluent les éléments qui contiennent l'élément activé et les éléments de formulaires activés avec leur élément HTML {{HTMLElement("label")}} associé.
 
-La mise en forme associée peut être surchargée par les autres pseudo-classes pour les liens : {{CSSxRef(":link")}}, {{CSSxRef(":hover")}} et {{CSSxRef(":visited")}} lorsqu'elles sont utilisées dans des règles qui suivent. Afin de mettre en forme les liens de façon correcte, la règle avec `:active` doit être écrite après les autres : `:link` — `:visited` — `:hover` — `:active`.
+La mise en forme associée peut être surchargée par les autres pseudo-classes pour les liens : {{CSSxRef(":link")}}, {{CSSxRef(":hover")}} et {{CSSxRef(":visited")}} lorsqu'elles sont utilisées dans des règles qui suivent. Afin de mettre en forme les liens de façon correcte, la règle avec `:active` doit être écrite après les autres&nbsp;: `:link` — `:visited` — `:hover` — `:active`.
 
 > [!NOTE]
-> Pour les systèmes qui utilisent une souris avec plusieurs boutons, CSS 3 spécifie que la pseudo-classe `:active` ne doit s'appliquer qu'au bouton principal. Pour les souris de droitiers, c'est généralement le bouton le plus à gauche.
+> Pour les systèmes qui utilisent une souris avec plusieurs boutons, CSS 3 définit que la pseudo-classe `:active` ne doit s'appliquer qu'au bouton principal. Pour les souris de droitiers, c'est généralement le bouton le plus à gauche.
 
 ## Syntaxe
 
@@ -76,10 +76,9 @@ p:active {
 
 ```html
 <p>
-  Ce paragraphe contient un lien :
+  Ce paragraphe contient un lien&nbsp;:
   <a href="#">Ce lien devient rouge quand vous cliquez dessus.</a>
-  Le paragraphe sera sur un fond gris quand vous cliquerez dessus ou sur le
-  lien.
+  Le paragraphe est sur un fond gris quand vous cliquez dessus ou sur le lien.
 </p>
 ```
 
@@ -105,9 +104,9 @@ form button {
 
 ```html
 <form>
-  <label for="mon-button">Un bouton :</label>
+  <label for="mon-button">Un bouton&nbsp;:</label>
   <button id="mon-button" type="button">
-    Cliquez sur moi ou sur mon libellé !
+    Cliquez sur moi ou sur mon libellé&nbsp;!
   </button>
 </form>
 ```

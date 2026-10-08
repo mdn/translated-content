@@ -9,7 +9,7 @@ slug: Web/API/GamepadEvent/GamepadEvent
 
 ## 语法
 
-```plain
+```js-nolint
 var gamepadEvent = new GamepadEvent(typeArg, options)
 ```
 

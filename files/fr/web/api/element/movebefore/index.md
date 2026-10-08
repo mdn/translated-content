@@ -3,7 +3,7 @@ title: "Element : méthode moveBefore()"
 short-title: moveBefore()
 slug: Web/API/Element/moveBefore
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 725b7287559af48539da6e570fb85cae8c29041e
 ---
 
 {{APIRef("DOM")}}
@@ -29,20 +29,20 @@ Aucune ({{JSxRef("undefined")}}).
 
 ### Exceptions
 
-- `HierarchyRequestError` {{JSxRef("TypeError")}}
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
   - : Levée dans l'une des situations suivantes&nbsp;:
     - Le `movedNode` défini ne fait pas partie du DOM, et vous essayez de le déplacer à l'intérieur d'un nœud qui fait partie du DOM, ou vice versa.
     - Le `movedNode` défini est un ancêtre de l'élément sur lequel `moveBefore()` est appelé.
     - Vous essayez de déplacer `movedNode` entre deux documents différents.
     - Le `movedNode` défini n'est pas un nœud {{DOMxRef("Element")}} ou {{DOMxRef("CharacterData")}}.
-- `NotFoundError` {{JSxRef("TypeError")}}
+- `NotFoundError` {{DOMxRef("DOMException")}}
   - : Le `referenceNode` défini n'est pas un enfant du nœud sur lequel vous appelez `moveBefore()`, c'est-à-dire le nœud dans lequel vous essayez de déplacer `movedNode`.
-- `TypeError` {{JSxRef("TypeError")}}
+- `TypeError` {{DOMxRef("DOMException")}}
   - : Le deuxième argument n'a pas été fourni.
 
 ## Description
 
-La méthode `moveBefore()` déplace un nœud donné vers un nouvel emplacement dans le DOM. Elle fournit une fonctionnalité similaire à la méthode {{DOMxRef("Node.insertBefore()")}}, sauf qu'elle ne supprime pas puis ne réinsère le nœud. Cela signifie que l'état du nœud (qui serait réinitialisé si on le déplaçait avec `insertBefore()` et des mécanismes similaires) est préservé après le déplacement. Cela inclut&nbsp;:
+La méthode `moveBefore()` déplace un nœud donné vers un nouvel emplacement dans le DOM. Elle fournit une fonctionnalité similaire à la méthode {{DOMxRef("Node.insertBefore()")}}, sauf qu'elle ne supprime pas puis ne réinsère le nœud. Cela signifie que l'état du nœud (qui est réinitialisé si on le déplaçait avec `insertBefore()` et des mécanismes similaires) est préservé après le déplacement. Cela inclut&nbsp;:
 
 - L'état [d'animation](/fr/docs/Web/CSS/Guides/Animations) et [de transition](/fr/docs/Web/CSS/Guides/Transitions).
 - L'état de chargement d'un {{HTMLElement("iframe")}}.
@@ -125,7 +125,7 @@ Nous fournissons un style rudimentaire pour l'apparence et l'espacement des boî
 
 #### JavaScript
 
-Dans notre script, nous attachons un écouteur d'évènement `click` au `<button>` avec {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}. Lorsque le bouton est cliqué, nous vérifions si le {{DOMxRef("Element.nextElementSibling", "nextElementSibling")}} de notre `<div>` `deplace` est le premier élément `<section>`. Si c'est le cas, nous invoquons `moveBefore()` sur `<article>` `enveloppe` et spécifions de déplacer le `<div>` avant le deuxième `<section>`. Sinon, nous utilisons `moveBefore()` pour déplacer le `<div>` avant le premier `<section>`.
+Dans notre script, nous attachons un écouteur d'évènement `click` au `<button>` avec {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}. Lorsque le bouton est cliqué, nous vérifions si le {{DOMxRef("Element.nextElementSibling", "nextElementSibling")}} de notre `<div>` `deplace` est le premier élément `<section>`. Si c'est le cas, nous invoquons `moveBefore()` sur `<article>` `enveloppe` et définissons le déplacement du `<div>` avant le deuxième `<section>`. Sinon, nous utilisons `moveBefore()` pour déplacer le `<div>` avant le premier `<section>`.
 
 ```js live-sample___movebefore-basic
 const enveloppe = document.getElementById("enveloppe");

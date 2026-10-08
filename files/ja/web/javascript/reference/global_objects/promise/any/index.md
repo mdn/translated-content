@@ -3,7 +3,7 @@ title: Promise.any()
 short-title: any()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/any
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9bda33365e40b6c609fa5190a0af9b5dc6438cf0
 ---
 
 **`Promise.any()`** は静的メソッドで、入力としてプロミスの反復可能オブジェクトを取り、単一の {{jsxref("Promise")}} を返します。この返されたプロミスは、入力のプロミスのいずれかが履行されたときに、この最初の履行値で履行されます。入力のプロミスがすべて拒否された場合（空の反復可能オブジェクトが渡された場合を含む）、拒否理由の配列を格納した {{jsxref("AggregateError")}} で、拒否されます。
@@ -31,7 +31,7 @@ Promise.any(iterable)
 ### 引数
 
 - `iterable`
-  - : プロミスの[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)（{{jsxref("Array")}} など）です。
+  - : プロミスの[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)（{{jsxref("Array")}} など）です。これらの値は [await](/ja/docs/Web/JavaScript/Reference/Operators/await) されるため、他の [thenable](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) も解決されますが、thenable ではないものはそのまま返されます。
 
 ### 返値
 
@@ -46,11 +46,15 @@ Promise.any(iterable)
 `Promise.any()` メソッドは[プロミスの並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理)メソッドの 1 つです。このメソッドは、最初に履行されたプロミスを返すのに有益なものです。最初のプロミスが履行された後は短絡的に処理するので、一つを見つけると、他のプロミスが完了するのを待つことはありません。
 
 > [!NOTE]
-> 日本語の技術文書では、このメソッドが複数のプロミスを並列に処理すると説明されることがありますが、実際には複数のスレッドでプロミスが処理されるわけではないことに注意してください。詳細は[プロミスの並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理)を参照してください。
+> 訳注: 日本語の技術文書では、このメソッドが複数のプロミスを並列に処理すると説明されることがありますが、実際には複数のスレッドでプロミスが処理されるわけではないことに注意してください。詳細は[プロミスの並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理)を参照してください。
 
 {{jsxref("Promise.all()")}} が履行された値の配列を返すのとは異なり、 1 つの履行値だけを取得します（少なくとも 1 つのプロミスが履行されることを想定しています）。これは、履行されるプロミスが 1 つだけ必要で、どれが履行されるかは気にしない場合、有益なことがあります。もう一つの異なる形に注意してください。このメソッドは、_空の反復可能オブジェクト_ を受け取ると拒否します。なぜなら、正直に言うと、反復処理オブジェクトには、履行されるアイテムが格納されていないからです。`Promise.any()` と `Promise.all()` を {{jsxref("Array.prototype.some()")}} と {{jsxref("Array.prototype.every()")}} で比較することができます。
 
 また、 {{jsxref("Promise.race()")}} が最初の _決定された_ 値（履行されたか拒否されたか）を返すのとは異なり、このメソッドは最初の _履行された_ 値を返します。このメソッドは、最初に履行されたプロミスまでのすべての拒否されたプロミスを無視します。
+
+他のプロミス結合子と同様に、`Promise.any()` は呼び出されると（各プロミスの `.then()` メソッドを呼んで）、すべてのプロミスを直ちに「処理済み」としてマークします。最初の履行後に発生したその後の拒否は無視され、`unhandledrejection` イベントは発生しません。
+
+返されたプロミスが履行されても、残りの操作が取り消されたり、それらのプロミスに添付されたハンドラーが解除されたりすることはありません。長期間待機中のプロミスを `Promise.any()` に繰り返し渡すと、それぞれの入力が履行された場合でも、そのプロミスにハンドラーが蓄積される可能性があります。
 
 ## 例
 

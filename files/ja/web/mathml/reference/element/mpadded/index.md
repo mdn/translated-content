@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
-**`<mpadded>`** は [MathML](/ja/docs/Web/MathML) の要素で、余白を追加したり、囲まれたコンテンツの位置やサイズの全体的な調整を設定したりするために使用します。。
+**`<mpadded>`** は [MathML](/ja/docs/Web/MathML) の要素で、余白を追加したり、囲まれたコンテンツの位置やサイズの全体的な調整を設定したりするために使用します。
 
 ## 属性
 

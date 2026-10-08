@@ -62,7 +62,7 @@ L'API Performance définit les interfaces suivantes&nbsp;:
 - [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming)
   - : Mesure les métriques liées aux chargements réseau comme les horodatages de début et de fin pour les redirections, les récupérations de ressources, les requêtes DNS, les appels réseau, etc.
 - [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming)
-  - : Expose les métriques du serveur qui sont envoyées dans la réponse via l'en-tête [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing).
+  - : Expose les métriques du serveur qui sont envoyées dans la réponse via l'en-tête [`Server-Timing`](/fr/docs/Web/HTTP/Reference/Headers/Server-Timing).
 - [`TaskAttributionTiming`](/fr/docs/Web/API/TaskAttributionTiming)
   - : Identifie le type de tâche et le conteneur responsable de la tâche longue.
 - [`VisibilityStateEntry`](/fr/docs/Web/API/VisibilityStateEntry)

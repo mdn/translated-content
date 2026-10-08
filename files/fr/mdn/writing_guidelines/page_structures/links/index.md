@@ -2,7 +2,7 @@
 title: Macros de liens
 slug: MDN/Writing_guidelines/Page_structures/Links
 l10n:
-  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
+  sourceCommit: abc914f085fb9913c41c4cd4453da432e9d4e761
 ---
 
 MDN propose de nombreuses macros pour créer des liens toujours à jour vers le contenu MDN. Ce guide présente les macros de renvoi croisé MDN que vous pouvez utiliser pour inclure un lien unique vers une autre page ou une liste de liens vers toutes les sous-pages d'un document.
@@ -20,7 +20,7 @@ MDN propose des macros qui créent une liste de liens&nbsp;:
 - [`\{{QuickLinksWithSubpages()}}` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/quick_links_with_subpages.rs)
   - : Crée un ensemble de liens rapides utilisant les enfants de la page courante (ou de la page définie) comme destinations. Cela crée des listes hiérarchiques jusqu'à deux niveaux. Les titres des pages sont utilisés comme texte du lien et leurs résumés comme info-bulle.
 
-Par exemple, pour inclure une liste ordonnée de liens qui inclut cette page et ses pages sœurs, écrivez&nbsp;:
+Par exemple, pour inclure une liste ordonnée de liens qui inclut cette page et ses pages voisines, écrivez&nbsp;:
 
 ```md
 \{{ListSubpagesForSidebar("/fr/docs/MDN/Writing_guidelines/Page_structures/Macros", 1)}}

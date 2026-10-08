@@ -209,7 +209,7 @@ Maintenant que nous avons mis en place les fonctionnalités de base, le divertis
 }
 ```
 
-Nous n'avons pas besoin d'un élément supplémentaire pour concevoir la flèche vers le bas ; à la place, nous utilisons le pseudo-élément {{cssxref(":after:after")}}. Cependant, elle pourrait également être mise en œuvre à l'aide d'une simple image de fond sur la classe `select`.
+Nous n'avons pas besoin d'un élément supplémentaire pour concevoir la flèche vers le bas ; à la place, nous utilisons le pseudo-élément {{cssxref("::after")}}. Cependant, elle pourrait également être mise en œuvre à l'aide d'une simple image de fond sur la classe `select`.
 
 ```css
 .select:after {

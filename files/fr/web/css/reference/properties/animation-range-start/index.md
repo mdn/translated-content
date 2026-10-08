@@ -3,7 +3,7 @@ title: Propriété CSS `animation-range-start`
 short-title: animation-range-start
 slug: Web/CSS/Reference/Properties/animation-range-start
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-range-start`** définit le point sur la chronologie où une animation doit commencer.
@@ -22,6 +22,11 @@ animation-range-start: contain;
 animation-range-start: cover 20%;
 animation-range-start: contain 100px;
 
+/* Plusieurs valeurs */
+animation-range-start:
+  cover 20%,
+  contain 100px;
+
 /* Valeurs globales */
 animation-range-start: inherit;
 animation-range-start: initial;
@@ -31,6 +36,8 @@ animation-range-start: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme une liste de valeurs séparées par des virgules. Chaque valeur peut être l'une des suivantes&nbsp;:
 
 - `normal`
   - : Représente le début de la chronologie. Il s'agit de la valeur par défaut.
@@ -44,10 +51,12 @@ animation-range-start: unset;
 ## Description
 
 Les valeurs autorisées pour la propriété `animation-range-start` sont `normal`, une {{CSSxRef("length-percentage")}}, un `<timeline-range-name>`, ou un `<timeline-range-name>` suivi d'une `<length-percentage>`. Si la valeur {{CSSxRef("timeline-range-name")}} n'inclut pas de `<length-percentage>`, le pourcentage par défaut est `0%`.
-Voir {{CSSxRef("animation-range")}} pour une description détaillée des valeurs disponibles.
-Consultez également le [Visualiseur de plage de chronologie de vue <sup>(angl.)</sup>](https://scroll-driven-animations.style/tools/view-timeline/ranges/) qui montre la signification des différentes valeurs dans un format visuel facile à comprendre.
 
-La propriété `animation-range-start` est incluse dans la propriété raccourcie {{CSSxRef("animation")}} uniquement comme valeur de réinitialisation. Cela signifie qu'utiliser la propriété raccourcie `animation` réinitialise toute valeur précédemment déclarée de `animation-range-start` de même ou moindre spécificité à `normal`&nbsp;; la propriété raccourcie ne peut pas être utilisée pour définir une nouvelle valeur de `animation-range-start`. Lors de la création d'[animations pilotées par le défilement CSS](/fr/docs/Web/CSS/Guides/Scroll-driven_animations), il faut déclarer `animation-range-start` après toute déclaration de la propriété raccourcie `animation` pour éviter de réinitialiser la valeur à `normal`.
+Voir {{CSSxRef("animation-range")}} pour une description détaillée des valeurs disponibles.
+
+Lorsque plusieurs valeurs séparées par des virgules sont définies, elles s'appliquent aux animations dans l'ordre d'apparition des valeurs de {{CSSxRef("animation-name")}}. Voir [Définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
+
+La propriété `animation-range-start` est incluse dans la propriété raccourcie {{CSSxRef("animation")}} uniquement comme valeur de réinitialisation. Cela signifie qu'utiliser la propriété raccourcie `animation` réinitialise toute valeur précédemment déclarée de `animation-range-start` de même ou moindre spécificité à `normal`&nbsp;; la propriété raccourcie ne peut pas être utilisée pour définir une nouvelle valeur de `animation-range-start`. Lors de la création [d'animations pilotées par le défilement CSS](/fr/docs/Web/CSS/Guides/Scroll-driven_animations), il faut déclarer `animation-range-start` après toute déclaration de la propriété raccourcie `animation` pour éviter de réinitialiser la valeur à `normal`.
 
 La propriété `animation-range-start`, ainsi que la propriété {{CSSxRef("animation-range-end")}}, peuvent aussi être définies à l'aide de la propriété raccourcie {{CSSxRef("animation-range")}}.
 

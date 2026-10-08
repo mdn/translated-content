@@ -3,7 +3,7 @@ title: En-tête Permissions-Policy
 short-title: Permissions-Policy
 slug: Web/HTTP/Reference/Headers/Permissions-Policy
 l10n:
-  sourceCommit: 7a2016c1eec26048dce86e8af0b2127395db7f46
+  sourceCommit: 75b6c08573c39a7d6557c911502912f1a3c7da9f
 ---
 
 {{SeeCompatTable}}
@@ -36,7 +36,7 @@ Permissions-Policy: <directive>=<allowlist>
 Permissions-Policy: <directive>=<allowlist>;report-to=<endpoint>
 
 # Directives multiples, avec et sans points de terminaison de signalement
-Permissions-Policy: <directive>=<allowlist>, <directive>=<allowlist>;report-to=<endpoint>, ...
+Permissions-Policy: <directive>=<allowlist>, <directive>=<allowlist>;report-to=<endpoint>, …
 ```
 
 L'en-tête peut être utilisé pour définir les listes d'autorisations pour une ou plusieurs directives, et éventuellement un paramètre `report-to` par directive indiquant le point de terminaison du serveur auquel envoyer les rapports de violation de politique.
@@ -232,7 +232,10 @@ Vous pouvez définir&nbsp;:
 - {{HTTPHeader("Permissions-Policy/summarizer", "summarizer")}} {{Experimental_Inline}}
   - : Contrôle l'accès à [l'API Summarizer](/fr/docs/Web/API/Summarizer_API).
 
-- {{HTTPHeader('Permissions-Policy/usb', 'usb')}} {{Experimental_Inline}}
+- {{HTTPHeader("Permissions-Policy/unload", "unload")}} {{Experimental_Inline}} {{Non-standard_Inline}}
+  - : Contrôle si le document courant est autorisé à exécuter des gestionnaires d'évènements {{DOMxRef("Window/unload_event", "unload")}}.
+
+- {{HTTPHeader("Permissions-Policy/usb", "usb")}} {{Experimental_Inline}}
   - : Contrôle si le document courant est autorisé à utiliser [l'API WebUSB](/fr/docs/Web/API/WebUSB_API).
 
 - {{HTTPHeader("Permissions-Policy/web-share", "web-share")}} {{Experimental_Inline}}
@@ -378,7 +381,7 @@ Le [contenu du signalement](/fr/docs/Web/API/Reporting_API#points_de_terminaison
       "columnNumber": 29,
       "disposition": "enforce",
       "lineNumber": 44,
-      "message": "Permissions policy violation: geolocation access has been blocked because of a permissions policy applied to the current document.",
+      "message": "Violation des politiques de permissions : l'accès à la géolocalisation a été bloqué en raison d'une politique de permissions appliquée au document courant.",
       "featureId": "geolocation",
       "sourceFile": "https://example.com/"
     },

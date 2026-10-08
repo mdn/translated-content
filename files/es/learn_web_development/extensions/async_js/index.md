@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/Asynchronous
 
 {{LearnSidebar}}
 
-En este módulo echamos un vistazo a {{Glossary("JavaScript")}} {{Glossary("asíncrono")}}, por qué es importante y cómo se puede utilizar para manejar eficazmente las posibles operaciones de bloqueo, como recuperar recursos desde un servidor
+En este módulo echamos un vistazo a {{Glossary("JavaScript")}} {{Glossary("Asynchronous", "asíncrono")}}, por qué es importante y cómo se puede utilizar para manejar eficazmente las posibles operaciones de bloqueo, como recuperar recursos desde un servidor
 
 ## Prerrequisitos
 

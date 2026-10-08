@@ -1,20 +1,22 @@
 ---
-title: Contrôler les proportions des boîtes flexibles le long de l'axe principal
+title: Contrôler les proportions des éléments flexibles le long de l'axe principal
+short-title: Contrôler les proportions des éléments flexibles
 slug: Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios
-original_slug: Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-Dans ce guide, nous verrons les trois propriétés appliquées aux éléments flexibles qui permettent de contrôler leurs tailles et flexibilités le long de l'axe principal : {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}} et {{cssxref("flex-basis")}}. Comprendre le fonctionnement de ces propriétés est primordial pour maîtriser les boîtes flexibles.
+Dans ce guide, nous abordons les trois propriétés qui contrôlent la taille et la flexibilité des éléments flexibles le long de l'axe principal&nbsp;: {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}} et {{CSSxRef("flex-basis")}}. Bien comprendre comment ces propriétés interagissent avec les éléments qui s'agrandissent et qui rétrécissent est essentiel pour maîtriser la [disposition des boîtes flexibles CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout).
 
 ## Un premier aperçu
 
-Ces trois propriétés contrôlent différents aspects relatifs à la flexibilité des éléments :
+Nos trois propriétés contrôlent les aspects suivants de la flexibilité d'un élément flexible&nbsp;:
 
-- `flex-grow` : quelle proportion de l'espace libre peut-on allouer en supplément à cet élément ?
-- `flex-shrink` : quelle proportion de l'espace peut être retirée à cet élément ?
-- `flex-basis` : quelle est la taille de l'élément avant tout agrandissement/réduction ?
+- `flex-grow`&nbsp;: quelle part de l'espace libre positif cet élément occupe-t-il&nbsp;?
+- `flex-shrink`&nbsp;: quelle part d'espace libre négatif peut être retirée de cet élément&nbsp;?
+- `flex-basis`&nbsp;: quelle est la taille de l'élément avant qu'il ne s'étende ou ne se rétrécisse&nbsp;?
 
-Ces propriétés sont généralement définies via la propriété raccourcie {{cssxref("flex")}}. Le code suivant définira `flex-grow` avec la valeur `2`, `flex-shrink` avec la valeur `1` et `flex-basis` avec la valeur `auto`.
+Ces propriétés sont généralement exprimées à l'aide de la propriété raccourcie {{CSSxRef("flex")}}. Le code suivant définit la propriété `flex-grow` sur `2`, `flex-shrink` sur `1` et `flex-basis` sur `auto`.
 
 ```css
 .item {
@@ -22,160 +24,348 @@ Ces propriétés sont généralement définies via la propriété raccourcie {{c
 }
 ```
 
-Dans l'article sur [les concepts de base relatifs aux boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts), nous avons pu introduire ces propriétés. Ici, nous les étudierons en profondeur afin de comprendre comment le navigateur les interprète.
-
 ## Les concepts majeurs relatifs à l'axe principal
 
-Avant de rentrer dans le détail des propriétés, définissons certains concepts clés qui interviennent lorsqu'on travaille sur les proportions le long de l'axe principal. Ces concepts se basent sur la taille _naturelle_ des éléments flexibles (avant tout redimensionnement) et sur la notion d'espace libre.
+Pour bien comprendre les propriétés `flex`, il est utile de connaître la _taille naturelle_ des éléments flexibles avant tout agrandissement ou rétrécissement. De plus, il est important de comprendre le concept _d'espace libre_, qui correspond à la différence entre la somme des tailles naturelles de tous les éléments flexibles situés le long de l'axe principal et la taille de cet axe principal lui-même.
 
-### Le dimensionnement des objets flexibles
+### Dimensionner des éléments flexibles
 
-Afin de connaître l'espace disponible pour l'organisation des éléments flexibles, le navigateur doit connaître la taille de l'élément. Comment faire lorsque les éléments ne sont pas dimensionnés avec une largeur ou une hauteur exprimée dans une unité de longueur absolue ?
+Pour déterminer l'espace disponible pour la mise en page des éléments flexibles, le navigateur doit d'abord connaître la taille de l'élément. Comment cette taille est-elle calculée pour les éléments auxquels aucune largeur ni hauteur n'est attribuée à l'aide d'une unité de longueur absolue&nbsp;?
 
-CSS permet d'utiliser les valeurs {{cssxref('width','min-content','#min-content')}} et {{cssxref('width','max-content','#max-content')}} — ces mots-clés sont définis [dans la spécification CSS pour le dimensionnement intrinsèque et extrinsèque](https://drafts.csswg.org/css-sizing-3/#width-height-keywords) et ces valeurs peuvent être utilisées comme [unité de longueurs](/fr/docs/Web/CSS/Reference/Values/length).
+En CSS, les mots-clés {{CSSxRef("min-content")}} et {{CSSxRef("max-content")}} peuvent être utilisés à la place d'une unité {{CSSxRef("length")}}. En général, `min-content` correspond à la plus petite taille qu'un élément peut avoir tout en pouvant contenir le mot le plus long, tandis que `max-content` correspond à la taille dont l'élément a besoin pour contenir tout le contenu sans retour à la ligne.
 
-Dans l'exemple qui suit, on a deux paragraphes qui contiennent chacun une chaîne de caractères. La largeur du premier paragraphe est `min-content`. Si le navigateur utilisé prend en charge ce mot-clé, on peut voir que le texte passe à la ligne dès que c'est possible, sans dépasser de la boîte. Autrement dit, la longueur `min-content` correspond à la taille du plus grand mot du paragraphe.
+L'exemple ci-dessous contient deux éléments de paragraphe avec des chaînes de caractères de texte différentes. Le premier paragraphe a une largeur de `min-content`. Notez que le texte a utilisé toutes les possibilités de retour à la ligne automatique dont il dispose, devenant ainsi aussi petit que possible sans déborder. Il s'agit de la taille `min-content` de cette chaîne de caractères. En substance, c'est le mot le plus long de la chaîne de caractères qui détermine la taille.
 
-Dans le second paragraphe, on utilise la valeur `max-content` et on voit le résultat opposé. Le texte prend autant de place que possible et aucun saut à la ligne supplémentaire n'est introduit. Le texte dépasserait de la boîte si le conteneur était trop étroit.
+Le deuxième paragraphe, dont la valeur est `max-content`, fonctionne à l'inverse. Il s'agrandit autant que nécessaire pour contenir le contenu sans recourir aux possibilités de retour à la ligne automatique. Il déborde de la boîte qui le contient si celle-ci est trop étroite.
 
-{{EmbedGHLiveSample("css-examples/flexbox/ratios/min-max-content.html", '100%', 750)}}
+```html live-sample___min-max-content
+<p class="min-content">
+  Je suis dimensionné avec min-content et je profite donc de toutes les
+  possibilités de retour à la ligne automatique.
+</p>
+<p class="max-content">
+  Je suis dimensionné avec max-content et je ne profite donc d'aucune des
+  possibilités de retour à la ligne automatique.
+</p>
+```
 
-Si votre navigateur ne prend pas en charge ces mots-clés, les paragraphes seront affichés normalement. La capture d'écran qui suit illustre le résultat obtenu avec un navigateur compatible :
+```css live-sample___min-max-content
+.min-content {
+  width: min-content;
+  border: 2px dotted rgb(96 139 168);
+}
+.max-content {
+  width: max-content;
+  border: 2px dotted rgb(96 139 168);
+}
+```
 
-![Le premier paragraphe est aussi large que le plus long mot qu'il contient alors que le second est étendu sur une seule ligne et dépasse.](ratios-size.png)
+{{EmbedLiveSample("min-max-content", "", 260)}}
 
-Pour la suite de cet article, gardez à l'esprit l'impact de `min-content` et `max-content` lorsque nous verrons les propriétés `flex-grow` et `flex-shrink`.
+Gardez à l'esprit ce comportement ainsi que les effets des propriétés `min-content` et `max-content` lorsque nous abordons les propriétés `flex-grow` et `flex-shrink` plus loin dans cet article.
 
 ### Espace libre positif et négatif
 
-Pour étudier ces propriétés, nous devons définir le concept d'**espace libre positif et négatif**. Lorsqu'un conteneur flexible possède un espace libre positif, il dispose de plus d'espace qu'il n'est nécessaire pour afficher les éléments flexibles qu'il contient. Si on a, par exemple, un conteneur dont la largeur mesure 500 pixels, la propriété {{cssxref("flex-direction")}} qui vaut `row` et trois éléments qui mesurent chacun 100 pixels, il reste alors 200 pixels d'espace libre positif qui pourrait être réparti entre les éléments si on le souhaitait.
+Il faut également comprendre le concept **d'espace libre positif et négatif**. Lorsqu'un conteneur flexible dispose d'un _espace libre positif_, cela signifie qu'il dispose de plus d'espace que nécessaire pour afficher les éléments flexibles qu'il contient. Par exemple, un conteneur de `500px` de large, dont la propriété {{CSSxRef("flex-direction")}} est définie sur `row` et qui contient trois éléments flexibles de `100px` de large, dispose de `200px` d'espace libre positif. Cet espace libre positif peut être réparti entre les éléments si l'on souhaite remplir le conteneur.
 
-![Une image illustrant l'espace restant après que les éléments aient été affichés.](basics7.png)
+![Une image illustrant l'espace restant après que les éléments aient été affichés.](basics7.svg)
 
-L'espace libre négatif est l'espace supplémentaire qui aurait été nécessaire pour contenir tous les éléments à l'intérieur du conteneur flexible. Si on dispose d'un conteneur dont la largeur mesure 500 pixels et trois éléments flexibles dont chacun mesure 200, l'espace total occupé mesure 600 pixels et on a donc 100 pixels d'espace libre négatif. Cet espace pourrait être retiré des éléments afin qu'ils soient contenus dans le conteneur.
+Un conteneur flexible dispose d'un _espace libre négatif_ lorsque la somme des tailles naturelles des éléments flexibles est supérieure à l'espace disponible dans le conteneur flexible. Si les trois éléments flexibles de l'exemple ci-dessus, placé dans un conteneur de `500px` de large, mesurent chacun `200px` de large au lieu de `100px`, leur largeur naturelle combinée est de `600px`, ce qui entraîne un espace libre négatif de `100px`. Cet espace peut être supprimé des éléments pour qu'ils s'adaptent au conteneur, sinon les éléments débordent.
 
 ![Les objets dépassent du conteneur.](ratios1.png)
 
-C'est cette distribution de l'espace libre qu'il est nécessaire de comprendre afin d'étudier les différentes propriétés relatives aux propriétés flexibles.
+Nous devons comprendre cette répartition de l'espace libre positif et la suppression de l'espace libre négatif pour mieux appréhender les composants de la propriété raccourcie `flex`.
 
-Les exemples étudiés par la suite utilisent la propriété {{cssxref("flex-direction")}} avec la valeur `row`, ce sera donc leur largeur qui sera leur dimension principale. Vous pouvez modifier les exemples afin d'utiliser `flex-direction: column` (dans ce cas, l'axe principal sera celui des colonnes et la dimension principale sera la hauteur).
+Dans les exemples suivants, la propriété {{CSSxRef("flex-direction")}} est définie sur `row`, la taille des éléments est donc déterminée par leur largeur. Nous calculons l'espace libre positif et négatif en comparant la largeur totale de tous les éléments à celle du conteneur. Vous pouvez également tester chaque exemple avec `flex-direction: column`. L'axe principal est alors la colonne, et vous comparez la hauteur des éléments à celle de leur conteneur pour calculer l'espace libre positif et négatif.
 
 ## La propriété `flex-basis`
 
-La propriété {{cssxref("flex-basis")}} définit la taille initiale de l'élément flexible avant la répartition de l'espace. La valeur initiale de cette propriété est `auto`. Si `flex-basis` vaut `auto`, le navigateur vérifie si la taille de l'élément est définie de façon absolue et utilise cette valeur pour `flex-basis` (par exemple si on indique dans la feuille de style que l'élément mesure 200 pixels, c'est cette mesure qui sera utilisée comme valeur pour `flex-basis` pour cet élément).
+La propriété {{CSSxRef("flex-basis")}} définit la taille initiale d'un élément flexible avant toute répartition de l'espace libre positif ou négatif. La valeur initiale de cette propriété est `auto`. Cette propriété accepte les mêmes valeurs que les propriétés {{CSSxRef("width")}} et {{CSSxRef("height")}}, ainsi que le mot-clé `content`.
 
-Si la taille initiale de l'élément n'est pas définie de façon absolue, `auto` correspondra à la taille déterminée automatique. C'est là qu'on comprend mieux l'utilité de `min-` et `max-content`, car la boîte flexible utilisera `max-content` comme valeur pour `flex-basis`. Dans l'exemple suivant, nous verrons comment en tirer parti.
+Si `flex-basis` est défini sur `auto`, la taille initiale de l'élément correspond à la taille {{CSSxRef("length-percentage")}} de la taille principale, si celle-ci a été définie. Par exemple, si l'élément a une propriété `width: 200px`, alors `200px` correspond à la valeur `flex-basis` de cet élément. Les valeurs en pourcentage sont relatives à la taille principale interne du conteneur flexible. Si `width: 50%` est défini, la valeur `flex-basis` de cet élément correspond à la moitié de la largeur de la boîte de contenu du conteneur. Si aucune taille n'est définie, ce qui signifie que l'élément est dimensionné automatiquement, alors `auto` correspond à la taille de son contenu (voir la section ci-dessus sur le dimensionnement [`min-` et `max-content`](#dimensionner_des_éléments_flexibles)), ce qui signifie que la `flex-basis` correspond à la taille `max-content` de l'élément.
 
-Dans cet exemple, on crée un ensemble de boîtes inflexibles avec la valeur `0` pour `flex-grow` et `flex-shrink`. On peut voir comment le premier objet, ayant une largeur explicite de 150 pixels, occupe une `flex-basis` de `150px` tandis que les deux autres objets qui n'ont pas de largeur sont dimensionnés en fonction de la largeur de leur contenu.
+Cet exemple contient trois éléments flexibles qui ne sont pas adaptables, avec `flex-grow` et `flex-shrink` tous deux définis sur `0`. Le premier élément, qui a une largeur explicite de `150px`, prend une valeur `flex-basis` de `150px`, tandis que les deux autres éléments n'ont pas de largeur définie et sont donc dimensionnés en fonction de la largeur de leur contenu ou de leur `max-content`.
 
-{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-basis.html", '100%', 500)}}
+```html live-sample___flex-basis
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+</div>
+```
 
-En plus du mot-clé `auto`, on peut également utiliser le mot-clé `content` comme valeur pour `flex-basis`. Ainsi, `flex-basis` sera calculée en fonction de la taille du contenu, même s'il y a une largeur explicitement définie sur l'objet. Ce mot-clé est plus récent et est moins largement pris en charge. Toutefois, on peut obtenir le même effet en utilisant le mot-clé `auto` et en s'assurant que l'objet n'a pas de largeur définie, ainsi, le dimensionnement automatique sera effectué en fonction du contenu.
+```css live-sample___flex-basis
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 0 0 auto;
+}
 
-Si on souhaite que la boîte flexible ignore complètement la taille du contenu lors de la répartition de l'espace, on pourra utiliser `flex-basis` avec la valeur `0`. En résumé, cela revient à indiquer que tout l'espace est disponible et peut être réparti proportionnellement. Nous verrons des exemples utilisant cette valeur lorsque nous étudierons `flex-grow`.
+.boite {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+}
+
+.boite :first-child {
+  width: 150px;
+}
+```
+
+{{EmbedLiveSample("flex-basis")}}
+
+En plus du mot-clé `auto` et de toute autre valeur valide de {{CSSxRef("width")}}, vous pouvez utiliser le mot-clé `content` comme valeur de `flex-basis`. Cela a pour effet que la valeur de `flex-basis` est basée sur la taille du contenu, même si une largeur (`width`) est définie pour l'élément. Cela produit le même effet que de supprimer toute largeur définie et d'utiliser `auto` comme valeur de `flex-basis`. Semblable à la propriété `max-content`, la valeur `content` permet de calculer n'importe quel {{CSSxRef("aspect-ratio")}} en fonction de la taille de l'axe transversal.
+
+Pour ignorer complètement la taille de l'élément flexible lors de la répartition de l'espace, définissez `flex-basis` sur `0` et attribuez une valeur qui n'est pas nulle à `flex-grow`. Découvrons d'abord la propriété `flex-grow` avant de voir cette valeur en action.
 
 ## La propriété `flex-grow`
 
-La propriété {{cssxref("flex-grow")}} définit **le coefficient d'agrandissement flexible**, qui détermine la façon dont l'objet flexible grandira par rapport aux autres objets flexibles du même conteneur lorsque l'espace libre sera distribué.
+La propriété {{CSSxRef("flex-grow")}} définit le **coefficient d'agrandissement flexible**, qui détermine la façon dont un élément flexible grandit par rapport aux autres éléments flexibles du conteneur flexible lorsque l'espace libre positif est distribué.
 
-Si tous les objets possèdent la même valeur pour le coefficient `flex-grow`, l'espace sera réparti également entre chacun. Dans ce cas, on utilisera généralement la valeur `1`. Ceci étant dit, on pourrait tout aussi bien utiliser la valeur `88`, `100` ou `1.2` — ce coefficient est un simple ratio. Si le coefficient est le même pour tous les objets et qu'il reste de l'espace libre dans le conteneur, cet espace sera réparti équitablement.
+Si tous les objets possèdent le même coefficient `flex-grow`, l'espace libre positif est réparti également entre eux. Dans ce scénario, la pratique courante consiste à définir `flex-grow: 1`, mais vous pouvez leur attribuer n'importe quelle valeur, telle que `88`, `100` ou `1.2`&nbsp;; c'est une proportion. Si le coefficient est le même pour tous les objets flexibles du conteneur et qu'il reste de l'espace libre positif, cet espace est réparti équitablement.
 
 ### Combiner `flex-grow` et `flex-basis`
 
-Les choses se compliquent lorsque `flex-grow` et `flex-basis` interagissent. Prenons un exemple où trois objets flexibles ont chacun des contenus de longueurs différentes et auxquels on applique la règle suivante :
+L'interaction entre `flex-grow` et `flex-basis` peut prêter à confusion. Prenons le cas de trois éléments flexibles de longueurs de contenu différentes, auxquels s'appliquent les règles `flex` suivantes&nbsp;:
 
-`flex: 1 1 auto;`
+```css
+.classe {
+  flex: 1 1 auto;
+}
+```
 
-Dans ce cas, `flex-basis` vaut `auto` et les objets n'ont pas de largeur explicite définie : ils sont donc dimensionnés automatiquement. Cela signifie que la boîte flexible utilisera la taille `max-content` des éléments. Après avoir disposé les objets, il reste de l'espace libre dans le conteneur flexible (ce qui correspond à la zone hachurée de la figure suivante) :
+Dans ce cas, la valeur de `flex-basis` est `auto` et aucune largeur n'est définie pour les éléments, qui sont donc redimensionnés automatiquement. Cela signifie que la valeur de `flex-basis` utilisée correspond à la taille `max-content` de chaque élément. Une fois les éléments disposés, il reste un espace libre positif dans le conteneur flexible, représenté sur l'image ci-dessous par la zone hachurée&nbsp;; cette zone hachurée correspond à l'espace libre positif qui est réparti entre les trois éléments en fonction de leurs facteurs `flex-grow`&nbsp;:
 
-![Une image illustrant l'espace libre positif avec une zone hachurée.](ratios2.png)
+![Trois éléments occupant un peu plus de la moitié de la largeur, le reste de la largeur étant hachuré](ratios2.png)
 
-On utilise ici une valeur `flex-basis` égale à la taille du contenu, l'espace disponible qui peut être distribué est donc égal à la taille du conteneur (ici sa largeur) moins la taille des éléments. Cet espace est partagé équitablement entre les différents objets. Ainsi, l'objet le plus grand finira avec une taille plus grande, car sa taille de départ est plus importante bien que la même quantité d'espace restant ait été affectée aux autres objets :
+Nous travaillons avec une valeur `flex-basis` égale à la taille du contenu. Cela signifie que l'espace disponible à répartir est soustrait de l'espace total disponible (la largeur du conteneur flexible) et que l'espace restant est ensuite réparti à parts égales entre les trois éléments. L'élément le plus grand reste le plus grand, car il part d'une taille plus importante, même s'il dispose du même espace disponible que les autres&nbsp;:
 
-![L'espace positif est réparti entre les éléments.](ratios3.png)
+![La zone hachurée a été divisée en trois parties, chaque élément se voyant attribuer une portion.](ratios3.png)
 
-Si on souhaite obtenir trois objets de la même taille alors qu'ils ont des tailles initiales différentes, on pourra utiliser :
+Pour créer trois éléments de taille identique, même si les éléments d'origine ont des tailles différentes, définissez la propriété `flex-basis` sur `0`&nbsp;:
 
-`flex: 1 1 0;`
+```css
+.classe {
+  flex: 1 1 0;
+}
+```
 
-Ici, on indique que, lors de la phase de répartition de l'espace, la taille des objets vaut `0` — tout l'espace peut être utilisé. Or, les trois objets ayant tous le même coefficient `flex-grow`, ils récupèrent chacun la même quantité d'espace. On obtient donc trois objets flexibles de même largeur.
+Ici, pour le calcul de la répartition de l'espace, nous définissons la taille de chaque élément sur `0`. Cela signifie que tout l'espace est disponible pour la répartition. Comme tous les éléments ont le même facteur `flex-grow`, ils se voient attribuer chacun une part d'espace égale. On obtient ainsi trois éléments flexibles de largeurs égales.
 
-Vous pouvez modifier le coefficient `flex-grow` pour le passer de 1 à 0 dans l'exemple qui suit pour observer la façon dont les objets se comportent :
+Essayez de modifier le facteur `flex-grow` de 1 à 0 dans cet exemple interactif pour observer la différence de comportement&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-grow.html", '100%', 520)}}
+```html live-sample___flex-grow
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois a plus de contenu</div>
+</div>
+```
+
+```css live-sample___flex-grow
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 0;
+}
+
+.boite {
+  width: 400px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+}
+```
+
+{{EmbedLiveSample("flex-grow")}}
 
 ### Affecter différents coefficients `flex-grow` aux éléments
 
-Notre compréhension du fonctionnement de `flex-grow` avec `flex-basis` nous permet de mieux contrôler chacun des éléments en leur affectant différents coefficients `flex-grow`. Si on conserve la valeur `0` pour `flex-basis` afin que tout l'espace soit distribué, on pourra affecter différentes valeurs de `flex-grow` afin qu'ils grandissent différemment. Dans l'exemple qui suit, on utilise les valeurs suivantes :
+Utiliser `flex-grow` et `flex-basis` ensemble nous permet de contrôler la taille des éléments individuellement en leur affectant différents facteurs `flex-grow`. Si nous conservons `flex-basis` à `0` afin que tout l'espace puisse être distribué, nous pouvons créer des éléments flexibles de tailles différentes en attribuant à chaque élément un facteur `flex-grow` différent.
 
-- `1` pour le premier élément
-- `1` pour le deuxième élément
-- `2` pour le troisième
+Dans l'exemple ci-dessous, nous utilisons `1` comme facteur `flex-grow` pour les deux premiers éléments et le doublons à `2` pour le troisième élément. Avec `flex-basis: 0` défini sur tous les éléments, l'espace disponible est réparti comme suit&nbsp;:
 
-On utilise `flex-basis` avec la valeur `0` ce qui signifie que l'espace disponible est réparti de la façon suivante. On additionne les différents facteurs `flex-grow` puis on divise l'espace libre du conteneur par cette somme (dans notre exemple, elle vaut 4). Ensuite, on répartit l'espace en fonction des différents coefficients individuels : le premier objet récupère une part d'espace, le deuxième en récupère également une et le dernier récupère deux parts. Autrement dit, le troisième objet sera deux fois plus grand que le premier et le deuxième objet.
+1. Les valeurs des facteurs `flex-grow` de tous les éléments flexibles voisins sont additionnées (le total est de 4 dans ce cas).
+2. L'espace libre positif dans le conteneur flexible est divisé par cette valeur totale.
+3. L'espace libre est réparti en fonction des valeurs individuelles. Dans ce cas, le premier élément obtient une part, le deuxième une part et le troisième deux parts. Cela signifie que le troisième élément est deux fois plus grand que le premier et le deuxième éléments.
 
-{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-grow-ratios.html", '100%', 520)}}
+```html live-sample___flex-grow-ratios
+<div class="boite">
+  <div class="un">Un</div>
+  <div class="deux">Deux</div>
+  <div class="trois">Trois</div>
+</div>
+```
 
-Rappelons qu'on peut utiliser n'importe quelle valeur positive pour ces facteurs. C'est le rapport entre ces différents facteurs qui importe. Vous pouvez aussi bien utiliser des nombres entiers ou des nombres décimaux. Pour tester cela, vous pouvez changer les coefficients précédents afin de plutôt utiliser respectivement `.25`, `.25` et `.50` — vous obtiendrez alors le même résultat.
+```css live-sample___flex-grow-ratios
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 0;
+}
+
+.boite {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+}
+
+.un {
+  flex: 1 1 0;
+}
+
+.deux {
+  flex: 1 1 0;
+}
+
+.trois {
+  flex: 2 1 0;
+}
+```
+
+{{EmbedLiveSample("flex-grow-ratios")}}
+
+N'oubliez pas que vous pouvez utiliser n'importe quelle valeur positive ici. C'est le rapport entre les éléments qui importe. Vous pouvez utiliser des nombres élevés ou des décimales&nbsp;; c'est à vous de choisir. Pour vérifier cela, remplacez les valeurs `flex-grow` de l'exemple ci-dessus par `.25`, `.25` et `.50`. Vous devez obtenir le même résultat.
 
 ## La propriété `flex-shrink`
 
-La propriété {{cssxref("flex-shrink")}} définit **le coefficient de rétrécissement flexible** qui détermine la façon dont l'objet flexible se réduit relatviement aux autres objets du conteneur flexible lorsque l'espace négatif est distribué.
+La propriété {{CSSxRef("flex-shrink")}} définit le **coefficient de rétrécissement flexible**, qui détermine la façon dont l'élément flexible se réduit par rapport aux autres éléments flexibles dans le conteneur flexible lorsque l'espace négatif est distribué.
 
-Cette propriété est utilisée lorsque le navigateur calcule les valeurs `flex-basis` des différents objets flexibles et obtient des valeurs qui dépassent la taille du conteneur flexible. Tant que `flex-shrink` possède une valeur positive, les éléments pourront rétrécir afin de ne pas dépasser du conteneur.
+Cette propriété s'applique aux situations où la valeur combinée de `flex-basis` des éléments flexibles est trop grande pour tenir dans le conteneur flexible et déborde autrement. Tant que la valeur de `flex-shrink` d'un élément est positive, l'élément rétrécit pour ne pas dépasser du conteneur.
 
-Ainsi, si `flex-grow` gère la façon dont on peut ajouter de l'espace disponible, `flex-shrink` gère la façon dont on retire de l'espace aux boîtes des objets afin qu'ils ne dépassent pas de leur conteneur.
+Alors que `flex-grow` est utilisé pour ajouter de l'espace disponible aux éléments qui peuvent croître, `flex-shrink` est utilisé pour retirer de l'espace afin de garantir que les éléments tiennent dans leur conteneur sans déborder.
 
-Dans le prochain exemple, on dispose de trois éléments dans le conteneur flexible. Chacun mesure 200 pixels de large dans un conteneur qui mesure 500 pixels de large. Si `flex-shrink` vaut `0`, les éléments ne sont pas autorisés à rétrécir et ils dépassent donc de la boîte.
+Dans cet exemple, il y a trois éléments flexibles de `200px` de large dans un conteneur de `500px` de large. Avec `flex-shrink` réglé sur `0`, les éléments ne sont pas autorisés à rétrécir, ce qui les fait déborder du conteneur.
 
-{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink.html", '100%', 500)}}
+```html live-sample___flex-shrink
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois a plus de contenu</div>
+</div>
+```
 
-En passant la valeur de `flex-shrink` à `1`, on peut voir que la taille de chaque élément diminue de la même façon afin que l'ensemble des objets tiennent dans la boîte. Les éléments ont désormais une taille inférieure à leur taille initiale.
+```css live-sample___flex-shrink
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 0 0 auto;
+  width: 200px;
+}
+
+.boite {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+}
+```
+
+{{EmbedLiveSample("flex-shrink")}}
+
+Changez la valeur de `flex-shrink` à `1`&nbsp;; chaque élément rétrécit de la même manière, permettant à tous les éléments de tenir dans le conteneur. L'espace libre négatif a été retiré proportionnellement de chaque élément, rendant chaque élément flexible plus petit que sa largeur initiale.
 
 ### Combiner `flex-shrink` et `flex-basis`
 
-On pourrait dire et penser que `flex-shrink` fonctionne de la même façon que `flex-grow`. Toutefois, deux arguments viennent contrecarrer cette analogie.
+Il peut sembler que `flex-shrink` fonctionne de la même manière que `flex-grow`, en rétrécissant plutôt qu'en agrandissant les éléments. Cependant, il y a quelques différences importantes à noter.
 
-Le premier, expliqué de façon subtile dans la spécification est la différence de comportement entre `flex-shrink` et l'espace libre négatif et celui de `flex-grow` avec l'espace libre positif :
+Le concept de [taille de base flexible](#quest-ce_qui_détermine_la_taille_de_base_dun_élément) affecte la manière dont l'espace négatif est distribué entre les éléments flexibles. Le coefficient de rétrécissement flexible est multiplié par la taille de base flexible lors de la distribution de l'espace négatif. Cela distribue l'espace négatif en proportion de la capacité de rétrécissement de l'élément. Ainsi, par exemple, un petit élément ne se rétrécit pas à zéro avant qu'un élément plus grand n'ait été réduit de manière significative.
 
-> "Note : Le coefficient `flex-shrink` est multiplié par la taille de base (`flex-basis`) lors de la distribution de l'espace négatif. Ainsi, l'espace négatif est distribué proportionnellement au rétrécissement possible de l'élément. Autrement dit, un petit élément ne sera pas réduit à une taille nulle avant qu'un plus grand élément n'ait été réduit de façon notable."
+Les petits éléments ne se rétrécissent pas en dessous de leur taille `min-content`, qui est la plus petite taille que l'élément peut avoir s'il utilise toutes les opportunités de retour à la ligne souple disponibles.
 
-Le second argument s'explique par l'impossibilité de réduire les petits éléments à une taille nulle lors de la suppression de l'espace libre négatif. Les éléments seront au maximum rétrécis jusqu'à obtenir leur taille `min-content` — c'est-à-dire la taille qu'ils obtiennent s'ils utilisent tous les emplacements de rupture de ligne possibles.
+Cet exemple démontre le plancher `min-content`, avec le `flex-basis` résolvant à la taille du contenu. Si vous changez la largeur du conteneur flexible, par exemple en l'augmentant à `700px`, puis réduisez la largeur de l'élément flexible, vous pouvez voir que les deux premiers éléments vont se replier. Cependant, ils ne deviennent jamais plus petits que leur taille `min-content`. Lorsque le conteneur devient petit, l'espace n'est retiré que du troisième élément lorsqu'il est encore rétréci.
 
-On peut observer ce seuil avec `min-content` dans l'exemple qui suit où `flex-basis` est résolu avec la taille du contenu. Si on change la largeur du conteneur flexible (en l'augmentant à 700 pixels par exemple) puis en réduisant la largeur de l'élément flexible, on peut voir que les deux premiers objets passent à la ligne. Toutefois, ils ne deviennent pas plus petits que `min-content`. Lorsque la boîte se réduit, l'espace est simplement retiré du troisième élément.
+```html live-sample___flex-shrink-min-content
+<div class="boite">
+  <div>Élément un</div>
+  <div>Élément deux</div>
+  <div>Élément trois a plus de contenu et donc une taille plus grande</div>
+</div>
+```
 
-{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink-min-content.html", '100%', 500)}}
+```css live-sample___flex-shrink-min-content
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 auto;
+}
 
-En pratique, cette méthode de rétrécissement fournit des résultats prévisibles, car on ne souhaite pas que le contenu disparaisse entièrement ou que les boîtes soient plus petites que leur contenu minimal. Les règles présentées ci-avant sont donc pertinentes lorsqu'on souhaite rétrécir des objets afin qu'ils rentrent dans un conteneur.
+.boite {
+  border: 2px dotted rgb(96 139 168);
+  width: 500px;
+  display: flex;
+}
+```
 
-### Utiliser différents coefficients `flex-shrink` pour différents éléments
+{{EmbedLiveSample("flex-shrink-min-content")}}
 
-Comme avec `flex-grow`, on peut utiliser différents coefficients `flex-shrink`. Cela permet de modifier le comportement par défaut et on peut ainsi avoir un élément qui se réduit plus ou moins rapidement que ses voisins (voire qui ne se réduit pas du tout).
+En pratique, ce comportement de réduction donne des résultats satisfaisants. Il empêche le contenu de disparaître complètement et de devenir plus petit que sa taille minimale. Les règles ci-dessus sont pertinentes pour les contenus qui doivent être réduits afin de s'adapter à leur conteneur.
 
-Dans l'exemple suivant, le premier objet possède un coefficient `flex-shrink` égal à 1, le deuxième a un coefficient égal à `0` (il ne rétrécira pas du tout) et le troisième est paramétré avec `4`. Ainsi, le troisième élément rétrécit plus vite que le premier. N'hésitez pas à utiliser différentes valeurs pour observer le résultat obtenu. De la même façon qu'avec `flex-grow`, on peut utiliser nombres entiers ou des nombres décimaux, utilisez ce qui vous paraît le plus pertinent.
+### Donner différents coefficients `flex-shrink` à des éléments
 
-{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink-ratios.html", '100%', 570)}}
+Tout comme pour `flex-grow`, vous pouvez attribuer des coefficients `flex-shrink` différents aux éléments flexibles. Cela permet de modifier le comportement par défaut si, par exemple, vous souhaitez qu'un élément rétrécisse plus ou moins rapidement que ses éléments voisins, voire qu'il ne rétrécisse pas du tout.
 
-## Maîtriser le dimensionnement des objets flexibles
+Dans cet exemple, le premier élément a un coefficient `flex-shrink` de `1`, le deuxième de `0` (il ne rétrécit donc pas du tout) et le troisième de `4`, ce qui donne un total de `5` coefficients de rétrécissement. Le troisième élément rétrécit donc environ quatre fois plus vite que le premier, mais aucun des deux ne rétrécit en dessous de sa largeur `min-content`. Jouez avec les différentes valeurs&nbsp;: comme pour `flex-grow`, vous pouvez également utiliser ici des décimales ou des nombres plus grands.
 
-Comprendre le dimensionnement des objets flexibles revient avant tout à comprendre les différentes étapes qui sont déroulées et notamment celles-ci que nous avons pu étudier dans ces guides :
+```html live-sample___flex-shrink-ratios
+<div class="boite">
+  <div class="un">Un</div>
+  <div class="deux">Deux</div>
+  <div class="trois">Trois</div>
+</div>
+```
 
-### Quelle est la taille de base de l'objet ?
+```css live-sample___flex-shrink-ratios
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  width: 200px;
+}
 
-1. Si `flex-basis` vaut `auto` et que l'objet possède une dimension explicitement définie, c'est cette dimension qui sera utilisée.
-2. Si `flex-basis` vaut `auto` ou `content` (pour les navigateurs qui prennent en charge cette valeur), c'est la taille du contenu qui déterminera la taille de base de l'élément
-3. Si `flex-basis` est exprimée avec une valeur de longueur non nulle, c'est cette valeur qui sera la taille de base de l'élément.
-4. Si `flex-basis` vaut `0`, la taille de l'élément n'est pas pris en compte lors de la répartition de l'espace.
+.boite {
+  display: flex;
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+}
 
-### De l'espace est-il disponible ?
+.un {
+  flex: 1 1 auto;
+}
 
-Les objets ne s'étendent pas s'il n'y a pas d'espace libre positif et ne se réduisent pas s'il n'y a pas d'espace libre négatif.
+.deux {
+  flex: 1 0 auto;
+}
 
-1. Si on prend tous les objets et qu'on somme leur dimension principale (la largeur si on travaille en ligne ou la hauteur si on travaille en colonne) et qu'on obtient une quantité inférieure à la dimension principale du conteneur, on aura alors un espace libre positif et c'est la propriété `flex-grow` qui entrera en jeu.
-2. Si cette somme dépasse la taille du conteneur flexible, on aura alors un espace libre négatif et c'est la propriété `flex-shrink` qui sera utilisée.
+.trois {
+  flex: 2 4 auto;
+}
+```
 
-### Les autres façons de distribuer l'espace
+{{EmbedLiveSample("flex-shrink-ratios")}}
 
-Si on ne souhaite pas ajouter d'espace aux objets, on pourra tout aussi bien répartir cet espace libre entre les objets ou autour grâce aux propriétés d'alignement vu dans [le guide sur l'alignement](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items). La propriété {{cssxref("justify-content")}} permettra de répartir cet espace entre les objets ou autour d'eux. Les marges automatiques peuvent être utilisées sur les objets flexibles afin d'absorber l'espace et de créer des gouttières entre ces objets.
+## Maîtriser le dimensionnement des éléments flexibles
 
-Tout ces outils relatifs aux boîtes flexibles vous permettent d'accomplir la plupart des dispositions et n'auront plus de secret au fur et à mesure de vos essais et expérimentations.
+Pour comprendre le fonctionnement du dimensionnement des éléments flexibles, vous devez tenir compte des facteurs ci-dessous, que nous avons abordés dans ces guides&nbsp;:
+
+### Quelle est la taille de base de l'élément ?
+
+- Si `flex-basis` est défini sur `auto` et que l'élément a une largeur définie, la taille est basée sur cette largeur.
+- Si `flex-basis` est défini sur `auto`, mais que l'élément n'a pas de largeur définie, la taille est basée sur la taille du contenu de l'élément.
+- Si `flex-basis` est une longueur ou un pourcentage, mais pas zéro, la taille de l'élément est basée sur cette valeur (au moins à `min-content`).
+- Si `flex-basis` vaut `0`, la taille de l'élément n'est pas prise en compte pour le calcul de la répartition de l'espace.
+
+### Y-a-t-il de l'espace disponible ?
+
+Les éléments peuvent s'étendre uniquement s'il y a un espace libre positif, et ils ne se réduisent que s'il y a un espace libre négatif.
+
+- Si on additionne les largeurs de tous les éléments (ou les hauteurs si on travaille en colonne), ce total est-il **inférieur** à la largeur totale (ou à la hauteur) du conteneur&nbsp;:? Si c'est le cas, il y a un espace libre positif, et `flex-grow` entrent en jeu.
+- Si on additionne les largeurs de tous les éléments (ou les hauteurs si on travaille en colonne), ce total est-il **supérieur** à la largeur totale (ou à la hauteur) du conteneur&nbsp;:? Si c'est le cas, il y a un espace libre négatif, et `flex-shrink` entrent en jeu.
+
+### Quelles sont les autres façons de répartir l'espace ?
+
+Si vous ne souhaitez pas ajouter d'espace aux éléments, rappelez-vous que vous pouvez gérer l'espace libre entre ou autour des éléments en utilisant les propriétés d'alignement décrites dans le guide sur l'alignement des éléments dans un conteneur flexibles. La propriété {{CSSxRef("justify-content")}} permet de répartir l'espace libre entre ou autour des éléments. Vous pouvez également utiliser des marges automatiques sur les éléments flexibles pour absorber l'espace et créer des écarts entre les éléments.
+
+Avec toutes ces propriétés flexibles à votre disposition, vous pouvez constater que la plupart des tâches de mise en page sont possibles, bien que cela puisse nécessiter un peu d'expérimentation au début.

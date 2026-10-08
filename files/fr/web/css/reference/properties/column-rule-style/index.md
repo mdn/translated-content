@@ -91,7 +91,7 @@ La propriété `column-rule-style` accepte une liste de valeurs séparées par d
   - : La fonction {{CSSxRef("repeat()")}}, avec le premier argument étant un entier ({{CSSxRef("&lt;integer&gt;")}}) de `1` ou plus, et les arguments suivants étant des valeurs {{CSSxRef("&lt;line-style&gt;")}}. L'entier définit combien de fois les valeurs `<line-style>` doivent être répétées.
 
 - `<auto-repeat-line-style>`
-  - : La fonction {{CSSxRef("repeat()")}}, avec `auto` comme premier argument et une ou plusieurs valeurs `<line-style>` comme arguments suivants. Les valeurs `<line-style>` fournies sont répétées autant de fois que nécessaire pour remplir les valeurs de toutes les règles de colonne qui ne sont pas spécifiées explicitement par d'autres composants de la valeur de la propriété.
+  - : La fonction {{CSSxRef("repeat()")}}, avec `auto` comme premier argument et une ou plusieurs valeurs `<line-style>` comme arguments suivants. Les valeurs `<line-style>` fournies sont répétées autant de fois que nécessaire pour remplir les valeurs de toutes les règles de colonne qui ne sont pas définies explicitement par d'autres composants de la valeur de la propriété.
 
 ## Description
 

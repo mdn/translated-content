@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/deleteFramebuffer
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.deleteFramebuffer(framebuffer);
 ```
 

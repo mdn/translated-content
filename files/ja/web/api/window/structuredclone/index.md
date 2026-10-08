@@ -8,10 +8,15 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`structuredClone()`** は {{domxref("Window")}} のメソッドで、指定された値の[ディープコピー](/ja/docs/Glossary/Deep_copy)を、[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を用いて生成します。
+**`structuredClone()`** は {{domxref("Window")}} のメソッドで、値の[ディープコピー](/ja/docs/Glossary/Deep_copy)を、[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を用いて生成します。
 
 このメソッドでは、元の値の[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)を、新しいオブジェクトにクローンするのではなく、移譲することもできます。
 移譲されたオブジェクトは元のオブジェクトから切り離され、新しいオブジェクトに関連付けられます。元のオブジェクトからはもうアクセスできなくなります。
+
+> [!NOTE]
+> Firefox 148 までは、`structuredClone.call(iframe.contentWindow)` が、iframe のレルムではなく、呼び出し側の[レルム](/ja/docs/Web/JavaScript/Reference/Execution_model#レルム)内に誤ってオブジェクトを作成していました。Firefox 149 では、オブジェクトを `this` レルム内でインスタンス化するように実装が変更されたため、このメソッドの動作は仕様と一致するようになりました。
+>
+> すべてのブラウザーにおいて、`structuredClone(value)` を直接呼び出すと、呼び出し側のレルム内にある値が複製されます。Firefox 149 以降、[ウェブ拡張機能のコンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) では、`window.structuredClone(value)` を呼び出してページのレルム内にある値を複製したり、`globalThis.structuredClone(value)` を呼び出してコンテンツスクリプトのレルムに複製したりできます。情報については、[コンテンツスクリプトにおける `structuredClone`](/ja/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#structuredclone) を参照してください。
 
 ## 構文
 
@@ -66,7 +71,7 @@ console.assert(clone.itself === clone); // 循環参照も保持されている
 > データを保存する前にバッファーが変更されるのを避けるために、バッファーをクローンしてそのデータを検証することができます。
 > また、データを「移譲」すれば、元のバッファーに手を加えようとしても失敗するので、偶発的な悪用を防ぐことができます。
 
-以下のコードは、配列のクローンを作成し、その基礎となるリソースを新しいオブジェクトに移譲する方法を示しています。
+このコードは、配列のクローンを作成し、その基礎となるリソースを新しいオブジェクトに移譲する方法を示しています。
 返値において、元の `uInt8Array.buffer` はクリアされます。
 
 ```js
@@ -80,12 +85,12 @@ console.log(uInt8Array.byteLength); // 0
 ```
 
 任意の数のオブジェクトを複製し、それらのオブジェクトの任意のサブセットを移譲することができます。
-例えば、以下のコードでは、渡された値から `arrayBuffer1` を移譲しますが、`arrayBuffer2` は移譲しません。
+例えば、このコードでは、渡された値から `arrayBuffer` を移譲しますが、`arrayBuffer2` は移譲しません。
 
 ```js
 const transferred = structuredClone(
-  { x: { y: { z: arrayBuffer1, w: arrayBuffer2 } } },
-  { transfer: [arrayBuffer1] },
+  { x: { y: { z: arrayBuffer, w: arrayBuffer2 } } },
+  { transfer: [arrayBuffer] },
 );
 ```
 
@@ -115,14 +120,14 @@ console.log(mushrooms1.amanita); // ["muscaria"]
 
 ```js
 // バイト単位のサイズを指定して ArrayBuffer を作成
-const buffer1 = new ArrayBuffer(16);
+const buffer = new ArrayBuffer(16);
 
 const object1 = {
-  buffer: buffer1,
+  buffer,
 };
 
 // バッファーが格納されているオブジェクトを複製し、それを移譲
-const object2 = structuredClone(object1, { transfer: [buffer1] });
+const object2 = structuredClone(object1, { transfer: [buffer] });
 
 // 複製したバッファーから配列を作成する
 const int32View2 = new Int32Array(object2.buffer);

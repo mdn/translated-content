@@ -24,7 +24,7 @@ Firefox 14 は 米国時間 2012 年 7 月 17 日にリリースされました�
 - {{domxref("Blob.Blob", "Blob()")}} コンストラクターがワーカーで利用できるようになりました ([Firefox バグ 736686](https://bugzil.la/736686)).
 - [Mutation Observers](/ja/docs/Web/API/MutationObserver) のサポートが導入されました。これは、パフォーマンスに関する多くの問題がある DOM3 の Mutation Events の置き換えとして設計されました。
 - {{domxref("HTMLImageElement")}} インターフェイスの `x` プロパティおよび `y` プロパティは Firefox 7.0 で削除されましたが、互換性の理由でこのリリースから復活しました。
-- {{domxref("Document")}} のメソッドである `execCommandShowHelp()` と `queryCommandText()` は、今まで何もしませんでしたが、削除されました。`
+- {{domxref("Document")}} のメソッドである `execCommandShowHelp()` と `queryCommandText()` は、今まで何もしませんでしたが、削除されました。
 - `GeoPositionAddress` インターフェイスは、 [Geolocation](/ja/docs/Web/API/Geolocation_API) API で廃止された仕様の一部であり、削除されました。
 - {{domxref("Storage", "localStorage/sessionStorage")}} がプロパティアクセスを通した宣言されていないキーに対して `null` ではなく `undefined` を正しく返すようになりました。
 - {{domxref("ImageData")}} オブジェクトが実装されました ([Firefox バグ 550309](https://bugzil.la/550309))。

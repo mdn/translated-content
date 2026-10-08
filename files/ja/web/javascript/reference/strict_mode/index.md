@@ -396,7 +396,7 @@ f(); // TypeError が発生
 - [`with`](/ja/docs/Web/JavaScript/Reference/Statements/with) 文
 - [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) の変数名への使用 `delete myVariable`
 - [`eval`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) や [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) を変数名や関数の引数名に使用
-- 新しい[予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#予約語)の使用（将来的な言語機能を見据えて): `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, `yield`
+- 新しい[予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#予約語)の使用（将来的な言語機能を見据えて）: `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, `yield`
 - 関数の 2 つの引数を同じ名前で定義 `function f(a, b, b) {}`
 - オブジェクトリテラルで、同じプロパティ名を二重に宣言 `{a: 1, b: 3, a: 7}`。この制限は後に取り除かれました（[バグ 1041128](https://bugzil.la/1041128)）。
 

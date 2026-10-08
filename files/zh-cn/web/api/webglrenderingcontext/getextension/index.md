@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/getExtension
 
 ## 语法
 
-```plain
+```js-nolint
 gl.getExtension(name);
 ```
 

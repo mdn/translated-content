@@ -63,7 +63,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*
 
 ### デフォルトの Accept リクエストヘッダーの使用
 
-コマンドラインツール、例えば [curl](https://curl.se/) や [wget](https://www.gnu.org/software/wget/)）で発行される HTTP リクエストでは、`Accept` ヘッダーのデフォルト値として `*/*` が使用されます。
+コマンドラインツール（例えば [curl](https://curl.se/) や [wget](https://www.gnu.org/software/wget/)）で発行される HTTP リクエストでは、`Accept` ヘッダーのデフォルト値として `*/*` が使用されます。
 
 ```http
 GET / HTTP/1.1

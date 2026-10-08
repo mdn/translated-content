@@ -7,7 +7,7 @@ slug: Web/HTTP/Reference/Status/412
 
 ## 状态码
 
-```plain
+```http
 412 Precondition Failed
 ```
 

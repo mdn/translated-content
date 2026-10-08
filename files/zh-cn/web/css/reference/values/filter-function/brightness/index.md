@@ -35,7 +35,7 @@ filter: brightness(0);
 
 ## 语法
 
-```plain
+```css
 brightness(amount)
 ```
 

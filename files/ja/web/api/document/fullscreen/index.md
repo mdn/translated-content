@@ -3,7 +3,7 @@ title: "Document: fullscreen プロパティ"
 short-title: fullscreen
 slug: Web/API/Document/fullscreen
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
 {{APIRef("Fullscreen API")}}

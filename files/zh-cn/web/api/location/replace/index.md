@@ -13,7 +13,7 @@ slug: Web/API/Location/replace
 
 ## 语法
 
-```plain
+```js-nolint
 object.replace(url);
 ```
 

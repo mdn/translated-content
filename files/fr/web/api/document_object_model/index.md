@@ -2,7 +2,7 @@
 title: Référence du DOM
 slug: Web/API/Document_Object_Model
 l10n:
-  sourceCommit: 20d58a48bad972cddca0630fa0fbc06fd1b23244
+  sourceCommit: ca1468a4faabb0d62b0f08a723281a79dd8ceaf5
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -50,7 +50,7 @@ Un **arbre DOM** est une [structure arborescente](https://fr.wikipedia.org/wiki/
 
 Il possède un arbre DOM qui ressemble à ceci&nbsp;:
 
-![Le DOM comme représentation arborescente d'un document ayant une racine et des nœuds contenant du contenu](using_the_w3c_dom_level_1_core-doctree.jpg)
+![Le DOM comme représentation arborescente d'un document ayant une racine et des nœuds contenant du contenu](example-dom-tree.svg)
 
 Bien que l'arbre ci-dessus soit similaire à l'arbre DOM du document, ils ne sont pas identiques, car l'arbre DOM réel préserve les [espaces blancs](/fr/docs/Web/CSS/Guides/Text/Whitespace).
 
@@ -512,7 +512,7 @@ document.getElementById("t-daddy").addEventListener("click", () => {
 
 ### Afficher les propriétés de l'objet évènement
 
-Cet exemple utilise les méthodes du DOM pour afficher toutes les propriétés {{DOMxRef("Window.click_event", "click")}} de l'objet d'évènement et leurs valeurs dans un tableau. Il montre aussi une technique utile utilisant une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) pour parcourir les propriétés d'un objet et obtenir leurs valeurs.
+Cet exemple utilise les méthodes du DOM pour afficher toutes les propriétés {{DOMxRef("Element.click_event", "click")}} de l'objet d'évènement et leurs valeurs dans un tableau. Il montre aussi une technique utile utilisant une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) pour parcourir les propriétés d'un objet et obtenir leurs valeurs.
 
 Les propriétés des objets évènement diffèrent grandement selon les navigateurs. La [norme WHATWG DOM <sup>(angl.)</sup>](https://dom.spec.whatwg.org/) liste les propriétés standard, mais de nombreux navigateurs en ajoutent d'autres.
 

@@ -120,10 +120,10 @@ console.log(newstr);
 
 对于不同的平台（Unix，Windows 等等），其默认的行结束符是不一样的。而下面的划分方式适用于所有平台。
 
-```plain
-let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
-let lines = text.split(/\r\n|\r|\n/)
-console.log(lines) // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
+```js
+const text = "Some text\nAnd some more\r\nAnd yet\nThis is the end";
+const lines = text.split(/\r?\n/);
+console.log(lines); // [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
 
 注意：在正则表达式中，以竖线分割的子模式的顺序会影响匹配结果。

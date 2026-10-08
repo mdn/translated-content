@@ -3,7 +3,7 @@ title: En-tête Proxy-Authenticate
 short-title: Proxy-Authenticate
 slug: Web/HTTP/Reference/Headers/Proxy-Authenticate
 l10n:
-  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 {{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Proxy-Authenticate`** définit la méthode [d'authentification](/fr/docs/Web/HTTP/Guides/Authentication) (ou {{Glossary("Challenge", "challenge")}}) à utiliser pour accéder à une ressource derrière un {{Glossary("proxy server", "serveur mandataire")}}.
@@ -52,7 +52,7 @@ Proxy-Authenticate: Basic realm="Dev", charset="UTF-8"
 - `<auth-scheme>`
   - : Un jeton insensible à la casse indiquant le [schéma d'authentification](/fr/docs/Web/HTTP/Guides/Authentication#authentication_schemes) utilisé.
     Parmi les types les plus courants sont [`Basic`](/fr/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` et `AWS4-HMAC-SHA256`.
-    L'IANA maintient une [liste des schémas d'authentification <sup>(angl.)</sup>](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), mais il existe d'autres schémas proposés par les services hôtes.
+    L'IANA maintient une [liste des schémas d'authentification <sup>(angl.)</sup>](https://www.iana.org/assignments/http-authschemes), mais il existe d'autres schémas proposés par les services hôtes.
 - `<auth-param>` {{Optional_Inline}}
   - : Un paramètre d'authentification dont le format dépend du `<auth-scheme>`.
     `<realm>` est décrit ci-dessous, car c'est un paramètre courant parmi de nombreux schémas d'authentification.

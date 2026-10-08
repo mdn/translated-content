@@ -3,14 +3,14 @@ title: "Request: clone() メソッド"
 short-title: clone()
 slug: Web/API/Request/clone
 l10n:
-  sourceCommit: 5045ba92ac9503b2a00ec85efae4b7d613a64b58
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`clone()`** は {{domxref("Request")}} インターフェイスのメソッドで、現在の `Request` オブジェクトのコピーを生成します。
 
-基礎となる {{domxref("ReadableStream.tee")}} API と同様に、複製された `Response` の {{domxref("Request.body", "body")}} は 2 つの本体のうち速い方のコンシューマーの速度で背圧を通知し、未読データは制限や背圧なしに遅い方のコンシューマーによる `body` に内部でキューイングされます。
+基礎となる {{domxref("ReadableStream.tee")}} API と同様に、複製された `Request` の {{domxref("Request.body", "body")}} は 2 つの本体のうち速い方のコンシューマーの速度で背圧を通知し、未読データは制限や背圧なしに遅い方のコンシューマーによる `body` に内部でキューイングされます。
 ストリームから `Request` を作成し、それを `clone` するときには注意が必要です。
 
 `clone()` は、リクエスト本体が既に使用されている場合、 {{jsxref("TypeError")}} を発生させます。実際、`clone()` が存在する主な理由は、（一度しか使用しない場合に）本体オブジェクトを複数回使用することを可能にするためです。

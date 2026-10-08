@@ -3,7 +3,7 @@ title: "Request: credentials プロパティ"
 short-title: credentials
 slug: Web/API/Request/credentials
 l10n:
-  sourceCommit: d6528c3d7881662e6aaa77cd2a1a49e3af349088
+  sourceCommit: 4c442059c45e50cd19c024edd0ed76693df27191
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
@@ -22,6 +22,7 @@ l10n:
   - : リクエストに資格情報を記載したり、レスポンスに資格情報を含めたりしません。
 - `same-origin`
   - : 同一オリジンリクエストにのみ、資格情報を送信したり含めたりします。
+    これがデフォルトです。
 - `include`
   - : オリジン間のリクエストであっても、常に資格情報を含めます。
 
@@ -31,7 +32,7 @@ l10n:
 
 ```js
 const request = new Request("flowers.jpg");
-const credentials = request.credentials; // 既定で "same-origin" を返す
+const credentials = request.credentials; // デフォルトで "same-origin" を返す
 ```
 
 ## 仕様書

@@ -13,7 +13,7 @@ slug: Web/API/WebGLRenderingContext/clear
 
 ## 句法
 
-```plain
+```js-nolint
 void gl.clear(mask);
 ```
 

@@ -2,43 +2,46 @@
 title: EventTarget
 slug: Web/API/EventTarget
 l10n:
-  sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
+  sourceCommit: bacd00c353f643d8f5be0ce769015b1a66b4251a
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
-`EventTarget` est une interface DOM implémentée par des objets qui peuvent recevoir des événements et peuvent avoir des écouteurs pour eux.
+`EventTarget` est une interface DOM implémentée par des objets qui peuvent recevoir des évènements et peuvent avoir des écouteurs pour eux.
+En d'autres termes, toute cible d'évènements implémente les méthodes associées à cette interface.
 
-{{domxref ("Element")}}, {{domxref ("Document")}} et {{domxref ("Window")}} sont les cibles d'événements les plus fréquentes, mais d'autres objets peuvent également être des cibles d'événements. Par exemple {{domxref ("XMLHttpRequest")}}, {{domxref ("AudioNode")}}, {{domxref ("AudioContext")}} et autres.
+{{DOMxRef("Element")}}, {{DOMxRef("Document")}} et {{DOMxRef("Window")}} sont les cibles d'évènements les plus fréquentes, mais d'autres objets peuvent également être des cibles d'évènements. Par exemple {{DOMxRef("XMLHttpRequest")}}, {{DOMxRef("AudioNode")}}, {{DOMxRef("AudioContext")}} et autres.
 
-De nombreuses cibles d'événements (y compris des éléments, des documents et des fenêtres) supporte également la définition de [gestionnaires d'événements](/fr/docs/Web/API/Document_Object_Model/Events) via les propriétés et attributs `onevent`.
+De nombreuses cibles d'évènements (y compris des éléments, des documents et des fenêtres) supporte également la définition de [gestionnaires d'évènements](/fr/docs/Web/API/Document_Object_Model/Events) par les propriétés et attributs `onevent`.
 
 {{InheritanceDiagram}}
 
 ## Constructeur
 
-- {{domxref("EventTarget.EventTarget()", "EventTarget()")}}
+- {{DOMxRef("EventTarget.EventTarget()", "EventTarget()")}}
   - : Crée une nouvelle instance d'objet `EventTarget`.
 
 ## Méthodes
 
-- {{domxref("EventTarget.addEventListener()")}}
-  - : Enregistre un gestionnaire d'événements d'un type d'événement spécifique sur `EventTarget`.
-- {{domxref("EventTarget.removeEventListener()")}}
-  - : Supprime un écouteur d'événement de `EventTarget`.
-- {{domxref("EventTarget.dispatchEvent()")}}
-  - : Envoie un événement à cet `EventTarget`.
+- {{DOMxRef("EventTarget.addEventListener()")}}
+  - : Enregistre un gestionnaire d'évènements d'un type d'évènement spécifique sur `EventTarget`.
+- {{DOMxRef("EventTarget.removeEventListener()")}}
+  - : Supprime un écouteur d'évènement de `EventTarget`.
+- {{DOMxRef("EventTarget.dispatchEvent()")}}
+  - : Envoie un évènement à cet `EventTarget`.
+- {{DOMxRef("EventTarget.when()")}} {{Experimental_Inline}}
+  - : Retourne un objet {{DOMxRef("Observable")}} représentant un flux d'évènements déclenchés sur la cible d'évènements sur laquelle il est appelé.
 
 ## Spécifications
 
 {{Specifications}}
 
-## Compatiblité des navigateurs
+## Compatibilité des navigateurs
 
 {{Compat}}
 
 ## Voir aussi
 
-- [Référence d'événement](/fr/docs/Web/API/Document_Object_Model/Events) - les événements disponibles sur la plateforme.
-- [Guide du développeur d'événements](/fr/docs/Web/API/Document_Object_Model/Events)
-- {{domxref("Event")}} interface
+- [Référence d'évènement](/fr/docs/Web/API/Document_Object_Model/Events) - les évènements disponibles sur la plateforme.
+- [Guide du·de la développeur·euse d'évènements](/fr/docs/Web/API/Document_Object_Model/Events)
+- L'interface {{DOMxRef("Event")}}

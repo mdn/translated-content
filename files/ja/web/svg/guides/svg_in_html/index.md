@@ -2,7 +2,7 @@
 title: HTML 内の SVG 入門
 slug: Web/SVG/Guides/SVG_in_HTML
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 69ff5fe627a17cf397ebd7b0f88a83c272c0bce5
 ---
 
 この記事と関連する例は、インライン [SVG](/ja/docs/Web/SVG) を使用する方法を示しています。
@@ -26,8 +26,8 @@ HTML ファイルにインライン SVG を記述するには、 SVG ファイ�
         <stop class="begin" offset="0%" stop-color="red" />
         <stop class="end" offset="100%" stop-color="black" />
       </linearGradient>
-      <rect x="0" y="0" width="100" height="100" style="fill:url(#gradient)" />
-      <circle cx="50" cy="50" r="30" style="fill:url(#gradient)" />
+      <rect x="0" y="0" width="100" height="100" fill="url(#gradient)" />
+      <circle cx="50" cy="50" r="30" fill="url(#gradient)" />
     </svg>
   </body>
 </html>
@@ -65,54 +65,18 @@ SVG が可視テキストでラベル付けできる場合、そのテキスト�
     <style>
       rect {
         fill: #cccccc;
-        stroke: #666;
+        stroke: #666666;
         transform-origin: top;
       }
     </style>
   </defs>
 
-  <rect
-    width="36"
-    height="60"
-    x="13"
-    y="18"
-    ry="2"
-    style="transform: skewy(24deg)" />
-  <rect
-    width="39"
-    height="60"
-    x="11"
-    y="20"
-    ry="2"
-    style="transform: skewy(18deg)" />
-  <rect
-    width="42"
-    height="90"
-    x="8"
-    y="22"
-    ry="2"
-    style="transform: skewy(12deg)" />
-  <rect
-    width="36"
-    height="60"
-    x="50"
-    y="18"
-    ry="2"
-    style="transform: skewy(-24deg)" />
-  <rect
-    width="39"
-    height="60"
-    x="50"
-    y="20"
-    ry="2"
-    style="transform: skewy(-18deg)" />
-  <rect
-    width="42"
-    height="90"
-    x="50"
-    y="22"
-    ry="2"
-    style="transform: skewy(-12deg)" />
+  <rect width="36" height="60" x="13" y="18" ry="2" transform="skewY(24deg)" />
+  <rect width="39" height="60" x="11" y="20" ry="2" transform="skewY(18deg)" />
+  <rect width="42" height="90" x="8" y="22" ry="2" transform="skewY(12deg)" />
+  <rect width="36" height="60" x="50" y="18" ry="2" transform="skewY(-24deg)" />
+  <rect width="39" height="60" x="50" y="20" ry="2" transform="skewY(-18deg)" />
+  <rect width="42" height="90" x="50" y="22" ry="2" transform="skewY(-12deg)" />
 </svg>
 ```
 

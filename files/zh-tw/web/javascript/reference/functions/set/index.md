@@ -24,7 +24,7 @@ console.log(language.log);
 
 ## 語法
 
-```plain
+```js-nolint
 {set prop(val) { . . . }}
 {set [expression](val) { . . . }}
 ```

@@ -3,7 +3,7 @@ title: "ARIA : rôle tabpanel"
 short-title: tabpanel
 slug: Web/Accessibility/ARIA/Reference/Roles/tabpanel_role
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: be161fc654b6a638ddbcca733c17c4a083e23778
 ---
 
 Le rôle `tabpanel` est un conteneur pour les ressources du contenu superposé associé à un onglet (`tab`).
@@ -38,11 +38,19 @@ Veillez à définir des styles pour un `tabpanel` lorsqu'il reçoit la sélectio
 
 Les carrousels peuvent être créés avec ce modèle d'onglets&nbsp;: les contrôles de sélection de diapositive peuvent être balisés comme des onglets (`tabs`) dans une `tablist`, la diapositive étant représentée par un élément `tabpanel`.
 
-### Propriétés, états et rôles associés
+Si un panneau d'onglet est vide (par exemple, parce que ses données sont encore en cours de chargement ou que l'enregistrement est vide), il existe trois options&nbsp;:
 
-- [`tab`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
+- Garder le panneau vide accessible et sélectionnable avec `tabindex="0"` et préserver son nom accessible
+- Afficher un contenu expliquant l'état, tel que «&nbsp;Chargement...&nbsp;» ou «&nbsp;Aucun résultat&nbsp;»
+- Supprimer l'onglet et le panneau du DOM
+
+Il n'existe aucune exigence ARIA spécifique aux panneaux vides. Le choix entre ces approches relève principalement d'une décision de conception produit. En général, évitez les panneaux vides, car ils sont déroutants à la fois pour les utilisateur·ice·s voyants et pour les utilisateur·ice·s de lecteurs d'écran (les lecteurs d'écran peuvent annoncer le nom du panneau suivi de rien). Supprimer l'onglet et le panneau évite un élément supplémentaire à parcourir, mais peut être déroutant si les utilisateur·ice·s s'attendent à ce que cet onglet existe (par exemple, parce que le même ensemble d'onglets est apparu plusieurs fois) ou si l'onglet apparaît plus tard (par exemple, parce qu'il est encore en cours de chargement).
+
+### Rôles et attributs associés
+
+- Le rôle [`tab`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
   - : Contrôle la visibilité du `tabpanel` associé.
-- [`tablist`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)
+- Le rôle [`tablist`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)
   - : Groupe d'éléments `tab`.
 - [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
   - : Fournit un nom accessible. Référence l'onglet qui contrôle le panneau.

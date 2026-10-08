@@ -11,7 +11,7 @@ slug: Web/HTTP/Reference/Headers/SourceMap
 
 ## 语法
 
-```plain
+```http
 SourceMap: <url>
 X-SourceMap: <url> (deprecated)
 ```

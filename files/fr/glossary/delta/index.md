@@ -25,4 +25,4 @@ Plus généralement, vous recevez le delta et l'utilisez pour mettre à jour une
 let newX = oldX + deltaX;
 ```
 
-Par exemple, les événements de la molette de la souris ({{DOMxRef("WheelEvent")}} offrent la quantité de déplacement de la roue depuis le dernier événement dans son {{DOMxRef("WheelEvent.deltaX", "deltaX")}}, {{DOMxRef("WheelEvent.deltaY", "deltaY")}}, et {{DOMxRef("WheelEvent.deltaZ", "deltaZ")}}, par exemple.
+Par exemple, les évènements de la molette de la souris ({{DOMxRef("WheelEvent")}}) offrent la quantité de déplacement de la roue depuis le dernier évènement dans son {{DOMxRef("WheelEvent.deltaX", "deltaX")}}, {{DOMxRef("WheelEvent.deltaY", "deltaY")}}, et {{DOMxRef("WheelEvent.deltaZ", "deltaZ")}}, par exemple.

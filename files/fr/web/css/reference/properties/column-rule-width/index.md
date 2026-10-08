@@ -89,7 +89,7 @@ La propriété `column-rule-width` accepte une liste de valeurs séparées par d
   - : La fonction {{CSSxRef("repeat()")}}, avec le premier argument étant un entier ({{CSSxRef("&lt;integer&gt;")}}) de `1` ou plus, et une ou plusieurs valeurs {{CSSxRef("&lt;line-width&gt;")}} comme arguments suivants. L'entier définit combien de fois les valeurs `<line-width>` doivent être répétées.
 
 - `<auto-repeat-line-width>`
-  - : La fonction {{CSSxRef("repeat()")}}, avec `auto` comme premier argument et une ou plusieurs valeurs `<line-width>` comme arguments suivants. Les valeurs `<line-width>` fournies sont répétées autant de fois que nécessaire pour remplir les valeurs de toutes les règles de colonne qui ne sont pas spécifiées explicitement par d'autres composants de la valeur de la propriété.
+  - : La fonction {{CSSxRef("repeat()")}}, avec `auto` comme premier argument et une ou plusieurs valeurs `<line-width>` comme arguments suivants. Les valeurs `<line-width>` fournies sont répétées autant de fois que nécessaire pour remplir les valeurs de toutes les règles de colonne qui ne sont pas définies explicitement par d'autres composants de la valeur de la propriété.
 
 ## Description
 
@@ -150,7 +150,7 @@ Si le nombre de gouttières est supérieur au nombre de largeurs, la liste des l
 
 ### Répéter automatiquement les largeurs de ligne
 
-La fonction `repeat()` accepte également `auto` comme premier argument au lieu d'un entier positif. Avec `auto` comme premier argument, la liste des valeurs `<line-width>` passées en arguments suivants est répétée autant de fois que nécessaire pour remplir les valeurs de toutes les règles de colonne qui ne sont pas spécifiées explicitement par d'autres composants de la valeur de la propriété.
+La fonction `repeat()` accepte également `auto` comme premier argument au lieu d'un entier positif. Avec `auto` comme premier argument, la liste des valeurs `<line-width>` passées en arguments suivants est répétée autant de fois que nécessaire pour remplir les valeurs de toutes les règles de colonne qui ne sont pas définies explicitement par d'autres composants de la valeur de la propriété.
 
 ```css
 column-rule-width: 10px, repeat(auto, thin), 10px;
@@ -172,7 +172,7 @@ Le mot-clé `auto` dans la fonction `repeat()` crée un répéteur automatique q
 
 ### Exemple simple
 
-Dans cet exemple, nous définissons une seule règle pour les lignes tracées entre les éléments flex.
+Dans cet exemple, nous définissons une seule règle pour les lignes tracées entre les éléments flexibles.
 
 #### HTML
 
@@ -290,6 +290,6 @@ ul {
 - La propriété {{CSSxRef("column-rule-color")}}
 - La propriété {{CSSxRef("column-rule-width")}}
 - La propriété {{CSSxRef("column-rule-style")}}
-- La propriété raccourcie {{CSSxRef("rule-rule")}}
+- La propriété raccourcie {{CSSxRef("rule-width")}}
 - La propriété raccourcie {{CSSxRef("rule")}}
 - Le module [d'espacement CSS](/fr/docs/Web/CSS/Guides/Gaps)

@@ -3,7 +3,7 @@ title: Critères d'inclusion sur MDN Web Docs
 short-title: Critères d'inclusion
 slug: MDN/Writing_guidelines/Criteria_for_inclusion
 l10n:
-  sourceCommit: 77ea71add6054857698eb7ac1bfec8c7afe9ad4f
+  sourceCommit: f4c221962681b1472cd57da60379ad7825fe5081
 ---
 
 Cet article décrit en détail les critères pour qu'un contenu soit inclus sur MDN Web Docs, le processus de candidature pour ajouter une nouvelle documentation, ainsi que les attentes et consignes pour les parties qui postulent.
@@ -44,7 +44,7 @@ En lien avec le point précédent, nous ne voulons pas non plus passer du temps 
 
 ### Ne pas avoir de ressource documentaire établie ailleurs
 
-Il existe de nombreuses bibliothèques et frameworks qui ne sont pas des standards du Web mais qui sont construits sur des technologies du Web et sont très populaires dans l'industrie. Nous ne documentons aucune de celles-ci car, en général, elles disposent déjà de ressources documentaires officielles. Il est insensé de concurrencer la ressource officielle d'un framework populaire&nbsp;: c'est une perte de temps et cela risque de semer la confusion chez les développeur·euse·s qui cherchent à apprendre la technologie.
+Il existe de nombreuses bibliothèques et cadriciels (<i lang="en">frameworks</i> en anglais) qui ne sont pas des standards du Web mais qui sont construits sur des technologies du Web et sont très populaires dans l'industrie. Nous ne documentons aucune de celles-ci car, en général, elles disposent déjà de ressources documentaires officielles. Il est insensé de concurrencer la ressource officielle d'un cadriciel populaire&nbsp;: c'est une perte de temps et cela risque de semer la confusion chez les développeur·euse·s qui cherchent à apprendre la technologie.
 
 ### Avoir une communauté prête à écrire et à maintenir la documentation
 

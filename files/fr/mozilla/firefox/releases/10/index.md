@@ -3,10 +3,10 @@ title: Firefox 10 note de version pour les développeurs
 short-title: Firefox 10
 slug: Mozilla/Firefox/Releases/10
 l10n:
-  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
+  sourceCommit: a23122d0e86fb376234614beb5b350b217068054
 ---
 
-Firefox 10 est sorti le 31 janvier 2012. Cet article fournit des informations sur les nouvelles fonctionnalités et les principaux bugs corrigés dans cette version, ainsi que des liens vers une documentation plus détaillée pour les développeur·euse·s web et les développeur·euse·s de modules complémentaires.
+Firefox 10 est sorti le 31 janvier 2012. Cet article fournit des informations sur les nouvelles fonctionnalités et les principaux bogues corrigés dans cette version, ainsi que des liens vers une documentation plus détaillée pour les développeur·euse·s web et les développeur·euse·s de modules complémentaires.
 
 > [!NOTE]
 > Firefox 10 est la première version de ce navigateur à avoir deux chiffres. Cela peut poser des problèmes avec certains scripts de détection de l'UA. Assurez-vous de les vérifier, ainsi que ceux contenus dans les logiciels tiers que vous intégrez dans vos pages, comme les bibliothèques. Pour plus d'informations à ce sujet, consultez l'article [Firefox passe à deux chiffres sur hacks.mozilla.org <sup>(angl.)</sup>](https://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/).

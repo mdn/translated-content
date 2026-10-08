@@ -7,7 +7,7 @@ HTTP 实体报头 **`Link`** 提供了序列化 HTTP 头部链接的方法。它
 
 ## 语法
 
-```plain
+```http
 Link: < uri-reference >; param1=value1; param2="value2"
 ```
 

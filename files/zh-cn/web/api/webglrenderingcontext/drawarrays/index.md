@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/drawArrays
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.drawArrays(mode, first, count);
 ```
 

@@ -3,7 +3,7 @@ title: "Window: fetch() メソッド"
 short-title: fetch()
 slug: Web/API/Window/fetch
 l10n:
-  sourceCommit: 80d3325431bf238f06c986c2dc78944ac5227372
+  sourceCommit: f6e66d18205c93fcaeb2ea9ad51541b5b4d7d2b1
 ---
 
 {{APIRef("Fetch API")}}
@@ -47,140 +47,23 @@ fetch(resource, options)
 - `AbortError` {{domxref("DOMException")}}
   - : {{domxref("AbortController")}} の {{domxref("AbortController.abort", "abort()")}} メソッドの呼び出しによりリクエストが中止された。
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : [トピック API](/ja/docs/Web/API/Topics_API) を使用することが、[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} によって特別に禁止されており、そして `fetch()` リクエストが `browsingTopics: true` で行われたときに発生します。
+  - : 次の場合に発生します。
+    - [トピック API](/ja/docs/Web/API/Topics_API) を使用することが、[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} によって特別に禁止されており、`browsingTopics` が `true` に設定されていたとき。
+    - [プライベートステートトークン API](/ja/docs/Web/API/Private_State_Token_API) の操作は、仕様上、{{httpheader('Permissions-Policy/private-state-token-issuance','private-state-token-issuance')}} または {{httpheader('Permissions-Policy/private-state-token-redemption','private-state-token-redemption')}} を含む[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によって明示的に禁止されており、かつ `privateToken` オプションが指定され、その中に許可されていない `privateToken.operation` の種類が含まれている場合です。
 - {{jsxref("TypeError")}}
   - : 以下の理由で発生する可能性があります。
-
-<table>
-  <thead>
-    <tr>
-      <th scope="col">理由</th>
-      <th scope="col">失敗する例</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>権限ポリシーによるブロック</td>
-      <td><a href="/ja/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</a> の使用は、<a href="/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/attribution-reporting"><code>attribution-reporting</code></a> {{httpheader("Permissions-Policy")}} で、<code>fetch()</code> リクエストが <code>attributionReporting</code> を指定して行われました。</td>
-    </tr>
-    <tr>
-      <td>ヘッダー名が無効である。</td>
-      <td>
-        <pre>
-// "C ontent-Type" に空白がある
-const headers = {
-  'C ontent-Type': 'text/xml',
-  'Breaking-Bad': '<3',
-};
-fetch('https://example.com/', { headers });
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        ヘッダーの値が無効である。ヘッダーオブジェクトは正確に 2 つの要素を含まなければならない。
-      </td>
-      <td>
-        <pre>
-const headers = [
-  ['Content-Type', 'text/html', 'extra'],
-  ['Accept'],
-];
-fetch('https://example.com/', { headers });
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        URL またはスキームが無効であるか、フェッチが対応していないスキームを使用しているか、または特定のリクエストモードに対応していないスキームを使用している。
-      </td>
-      <td>
-        <pre>
-fetch('blob://example.com/', { mode: 'cors' });
-        </pre>
-      </td>
-    </tr>
-      <td>URL に資格情報が入っている。</td>
-      <td>
-        <pre>
-fetch('https://user:password@example.com/');
-        </pre>
-      </td>
-    <tr>
-      <td>リファラー URL が不正である。</td>
-      <td>
-        <pre>
-fetch('https://example.com/', { referrer: './abc\u0000df' });
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>モードが不正（<code>navigate</code> や <code>websocket</code>）。</td>
-      <td>
-        <pre>
-fetch('https://example.com/', { mode: 'navigate' });
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        リクエストキャッシュモードが "only-if-cached" で、かつリクエストモードが "same-origin" 以外の場合。
-      </td>
-      <td>
-        <pre>
-fetch('https://example.com/', {
-  cache: 'only-if-cached',
-  mode: 'no-cors',
-});
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        リクエストメソッドが無効な名前トークンである場合、または禁止されたヘッダー（<code>'CONNECT'</code>, <code>'TRACE'</code>, <code>'TRACK'</code>）の 1 つである場合。
-      </td>
-      <td>
-        <pre>
-fetch('https://example.com/', { method: 'CONNECT' });
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        リクエストモードが "no-cors" であり、リクエストメソッドが CORS セーフリストに掲載されているメソッド（<code>'GET'</code>, <code>'HEAD'</code>, <code>'POST'</code>）でない場合。
-      </td>
-      <td>
-        <pre>
-fetch('https://example.com/', {
-  method: 'CONNECT',
-  mode: 'no-cors',
-});
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        リクエストメソッドが <code>'GET'</code> または <code>'HEAD'</code> で、本体が null でないか、 undefined でない場合。
-      </td>
-      <td>
-        <pre>
-fetch('https://example.com/', {
-  method: 'GET',
-  body: new FormData(),
-});
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>fetch がネットワークエラーを発生した場合。</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+    - リクエストされた URL が無効である。
+    - リクエストされた URL に資格情報（ユーザー名とパスワード）が含まれている。
+    - `options` の値として渡された {{domxref("RequestInit")}} オブジェクトに、無効な値を持つプロパティが含まれている。
+    - リクエストが権限ポリシーによってブロックされている。
+    - ネットワークエラーが発生している（例えば、端末がネットワークに接続していないため）。
+    - `privateToken` 初期化オプションが指定されており、`privateToken.operation` の種類が `send-redemption-record` であるにもかかわらず、`privateToken.issues` 配列が空であるか設定されていないか、または指定された `issuers` のうち 1 つ以上が信頼できない HTTPS URL であるため。
 
 ## 例
 
-[Fetch Request の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request)（[Fetch Request のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-request/)を参照）では、 {{domxref("Request")}} オブジェクトを関連するコンストラクターで作成しています。その後で `fetch()` を呼び出して取得しています。画像を読み取っているため、レスポンスで {{domxref("Response.blob()")}} を実行して正しい MIME タイプを指定して正しく扱われるようにし、オブジェクト URL を作成して {{htmlelement("img")}} 要素に追加して表示させています。
+[フェッチリクエストの例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request)（[フェッチリクエストのライブ版](https://mdn.github.io/dom-examples/fetch/fetch-request/)を参照）では、 {{domxref("Request")}} オブジェクトを関連するコンストラクターで作成しています。
+その後で `fetch()` を呼び出して取得しています。
+画像を読み取っているため、レスポンスで {{domxref("Response.blob()")}} を実行して正しい MIME タイプを指定して正しく扱われるようにし、オブジェクト URL を作成して {{htmlelement("img")}} 要素に追加して表示させています。
 
 ```js
 const myImage = document.querySelector("img");
@@ -201,7 +84,7 @@ window
   });
 ```
 
-[Fetch Request with init の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request-with-init)（[Fetch Request init のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-request-with-init)）では上記の内容に加えて、`fetch()` を呼び出すとき、初期化オブジェクト `init` を渡しています。
+[Fetch Request with init の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request-with-init)（[Fetch Request init のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-request-with-init/)）では上記の内容に加えて、`fetch()` を呼び出すとき、初期化オブジェクト `init` を渡しています。
 この場合、{{HTTPHeader("Cache-Control")}} 値を設定することで、どのようなキャッシュレスポンスであれば問題ないかを示すことができます。
 
 ```js
@@ -219,7 +102,7 @@ const options = {
 const req = new Request("flowers.jpg", options);
 
 fetch(req).then((response) => {
-  // ...
+  // …
 });
 ```
 
@@ -240,6 +123,8 @@ const options = {
 
 const req = new Request("flowers.jpg", options);
 ```
+
+「[fetch の使用方法](/ja/docs/Web/API/Fetch_API/Using_Fetch)」の記事では、`fetch()` の使用例をさらに詳しく提供しています。
 
 ## 仕様書
 

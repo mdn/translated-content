@@ -14,7 +14,7 @@ Antes de comenzar este módulo, deberías:
 
 1. Estar familiarizado y tener conocimiento básico sobre el uso de computadores e internet básico (p.ej. navegando, consumiendo contenido en Internet.)
 2. Un entorno básico de trabajo configurado, como se detalla en la sección de [Instalación de software básico](/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), y saber como crear y administrar archivos, o lo puedes ver en el módulo [Manejando los archivos](/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files).
-3. Conocimiento básico de HTML, como se muestra en [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content).
+3. Conocimiento básico de HTML, como se muestra en [Introducción a HTML](/es/docs/Learn_web_development/Core/Structuring_content).
 
 > [!NOTE]
 > Si estás trabajando en un computador/tablet/otro dispositivo en el cual no puedes crear o almacenar tus propios archivos, podrías probar (la mayoría) de los ejemplos de código en un editor de código en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).

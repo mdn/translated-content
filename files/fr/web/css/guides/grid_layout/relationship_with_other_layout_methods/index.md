@@ -1,35 +1,37 @@
 ---
-title: Le modèle de grille et les autres modèles de disposition
+title: Relation entre la disposition de grille et les autres méthodes de disposition
+short-title: La grille et les autres dispositions
 slug: Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods
-original_slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
+l10n:
+  sourceCommit: 98066c71788a31f0f8726f5bf3d4a2acf4a6ff88
 ---
 
-Le mode de disposition en grille a été conçu afin de pouvoir fonctionner avec les autres composantes de CSS pour construire un système complet de disposition. Dans ce guide, nous expliquerons comment intégrer une grille CSS parmi d'autres techniques que vous pourriez déjà utiliser.
+La [disposition de grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout) est conçue pour fonctionner en complément d'autres éléments du CSS, dans le cadre d'un système complet de disposition. Ce guide explique comment la disposition de grille s'intègre aux autres techniques.
 
-## Les grilles et les boîtes flexibles (_flexbox_)
+## Les grilles et les boîtes flexibles
 
-La différence fondamentale, entre les grilles et [les boîtes flexibles CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout), est que les boîtes flexibles permettent d'organiser du contenu sur une dimension (sur une ligne ou sur une colonne). Les grilles ont été conçues pour une organisation bi-dimensionnelle. Les deux spécifications partagent cependant quelques points communs et si vous savez utiliser les boîtes flexibles, vous retrouverez quelques concepts qui vous aideront à appréhender les grilles CSS.
+La différence fondamentale entre la disposition de grille CSS et [la disposition de boîtes flexibles CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout) est que la disposition de boîtes flexibles a été conçue pour une disposition sur une dimension — soit une ligne _ou_ une colonne. La grille a été conçue pour une disposition sur deux dimensions — lignes et colonnes en même temps. Les deux spécifications utilisent les fonctionnalités [d'alignement des boîtes](/fr/docs/Web/CSS/Guides/Box_alignment). Si vous avez déjà appris à utiliser la disposition de boîtes flexibles, les similitudes doivent vous aider à comprendre la grille.
 
 ### Disposition sur une dimension ou sur deux dimensions
 
-Voyons un exemple simple pour illustrer la différence entre une disposition sur un seul axe et une disposition sur deux axes.
+Un exemple simple peut illustrer la différence entre une disposition sur une dimension et une disposition sur deux dimensions.
 
-Dans le premier exemple, on utilise un boîte flexible pour organiser un ensemble de boîte. Le conteneur contient 5 objets fils et on utilise des propriétés afin qu'ils puissent être agrandis/rétrécis avec une base (`flex-basis`) de 150 pixels.
+Dans ce premier exemple, nous utilisons la disposition de boîtes flexibles pour disposer un ensemble de boîtes. Nous avons cinq éléments fils dans notre conteneur, et nous avons donné aux propriétés flexibles de ces éléments une valeur de base de 150 pixels afin qu'ils puissent grandir et rétrécir.
 
-On utilise aussi la propriété {{cssxref("flex-wrap")}} avec la valeur `wrap`, afin de créer une nouvelle ligne si le conteneur devient trop étroit pour conserver `flex-basis`.
+Nous avons également défini la propriété {{CSSxRef("flex-wrap")}} à `wrap`, afin que si l'espace dans le conteneur devient trop étroit pour maintenir la base flexible, les éléments s'enroulent sur une nouvelle ligne.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -39,7 +41,7 @@ On utilise aussi la propriété {{cssxref("flex-wrap")}} avec la valeur `wrap`, 
 ```
 
 ```html
-<div class="wrapper">
+<div class="enveloppe">
   <div>Un</div>
   <div>Deux</div>
   <div>Trois</div>
@@ -49,38 +51,38 @@ On utilise aussi la propriété {{cssxref("flex-wrap")}} avec la valeur `wrap`, 
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   width: 500px;
   display: flex;
   flex-wrap: wrap;
 }
-.wrapper > div {
+.enveloppe > div {
   flex: 1 1 150px;
 }
 ```
 
-{{EmbedLiveSample('Disposition_sur_une_dimension_ou_sur_deux_dimensions', '500', '230')}}
+{{EmbedLiveSample("Disposition sur une dimension ou sur deux dimensions", 500, 115)}}
 
-On peut voir ici que deux objets sont passés sur une nouvelle ligne. Ces objets partagent l'espace disponible sur cette nouvelle ligne et ne s'alignent pas par rapport aux objets de la ligne au-dessus. En effet, lorsque des éléments flexibles passent sur une nouvelle ligne (ou colonne), celle-ci forme un nouveau conteneur et l'espace de ce conteneur est distribué entre les objets.
+Dans l'image, vous pouvez voir que deux éléments ont été enroulés sur une nouvelle ligne. Ces éléments partagent l'espace disponible et ne sont pas alignés sous les éléments ci-dessus. C'est parce que lorsque vous enroulez des éléments flexibles, chaque nouvelle ligne (ou colonne lorsque vous travaillez par colonne) est une ligne flexible indépendante dans le conteneur flexible. La distribution de l'espace se produit sur la ligne flexible.
 
-On se demande alors comment faire pour aligner ces éléments… C'est là qu'intervient la disposition en deux dimensions, pour contrôler l'alignement des lignes et des colonnes : voici la grille.
+Une question courante est alors de savoir comment aligner ces éléments. C'est là que vous souhaitez une méthode de disposition en deux dimensions&nbsp;: vous souhaitez contrôler l'alignement par ligne et colonne, et c'est là que la grille intervient.
 
 ### La même disposition avec une grille CSS
 
-Dans cet exemple, on crée la même disposition en utilisant la grille CSS. Ici, on a trois pistes `1fr`. Il n'est pas nécessaire de paramétrer quoi que ce soit sur les objets, ils se disposeront eux-mêmes dans chaque cellule formée par la grille. On peut alors voir que les objets restent dans une grille stricte, avec les lignes et les colonnes qui sont alignées. Avec cinq éléments, on a donc un espace restant à la fin de la deuxième ligne.
+Dans cet exemple, on crée la même disposition en utilisant la grille CSS. Ici, on a trois pistes `1fr`. Il n'est pas nécessaire de paramétrer quoi que ce soit sur les objets, ils se disposent eux-mêmes dans chaque cellule formée par la grille. On peut alors voir que les objets restent dans une grille stricte, avec les lignes et les colonnes qui sont alignées. Avec cinq éléments, on a donc un espace restant à la fin de la deuxième ligne.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -90,7 +92,7 @@ Dans cet exemple, on crée la même disposition en utilisant la grille CSS. Ici,
 ```
 
 ```html
-<div class="wrapper">
+<div class="enveloppe">
   <div>Un</div>
   <div>Deux</div>
   <div>Trois</div>
@@ -100,49 +102,47 @@ Dans cet exemple, on crée la même disposition en utilisant la grille CSS. Ici,
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 ```
 
-{{EmbedLiveSample('La_même_disposition_avec_une_grille_CSS', '300', '170')}}
+{{EmbedLiveSample("La même disposition avec une grille CSS", 300, 115)}}
 
-Lorsqu'il s'agit de choisir entre les grilles ou les boîtes flexibles, vous pouvez vous poser les questions suivantes :
+Une question importante à se poser lorsqu'on choisit entre la grille et les boîtes flexibles est&nbsp;:
 
-- Ai-je uniquement besoin de contrôler la disposition selon des colonnes **ou** selon des lignes ? Si oui, mieux vaudra utiliser des boîtes flexibles.
-- Ai-je besoin de contrôler la disposition selon des colonnes **et** selon des lignes ? Si oui, mieux vaudra utiliser une grille CSS.
+- Avons-nous besoin de contrôler la disposition par ligne _ou_ par colonne&nbsp;? Si oui, utilisez la disposition de boîtes flexibles.
+- Avons-nous besoin de contrôler la disposition par ligne _et_ par colonne&nbsp;? Si oui, utilisez la disposition en grille.
 
 ### Organiser l'espace ou organiser le contenu ?
 
-En plus de la distinction sur le nombre de dimensions, on peut prendre un autre angle de vue pour choisir entre les boîtes flexibles et les grilles. Les boîtes flexibles permettent de répartir l'espace de façon équitable autour des éléments d'un conteneur. C'est la taille du contenu qui détermine l'espace occupé par chacun des éléments. Si les objets passent sur une nouvelle ligne, leur espacement sera calculé en fonction de leurs tailles et de l'espace disponible sur cette ligne.
+Outre la distinction entre unidimensionnel et bidimensionnel, il existe une autre façon de déterminer s'il vaut mieux utiliser les boîtes flexibles ou la grille pour une disposition. Les boîtes flexibles fonctionnent à partir du contenu. Le cas d'utilisation idéal pour les boîtes flexibles est celui où vous disposez d'un ensemble d'éléments et que vous souhaitez les espacer de manière uniforme dans un conteneur. Vous laissez la taille du contenu déterminer l'espace individuel occupé par chaque élément. Si les éléments passent à la ligne suivante, leur espacement est déterminé en fonction de leur taille et de l'espace disponible _sur cette ligne_.
 
-En revanche, les grilles organisent le contenu dans l'espace. Lorsqu'on utilise les grilles CSS, on crée un « plan » et on place les éléments sur ce plan (ou on indique un placement automatique, strict, sur cette grille). Il est possible de créer des pistes (_tracks_) qui réagissent à la taille du contenu mais cela modifierait alors l'ensemble de la piste.
+La grille fonctionne en partant de la disposition. Lorsque vous utilisez la disposition de grille CSS, vous créez une grille, puis vous y placez des éléments, ou vous laissez les règles de placement automatique placer les éléments dans les cellules de la grille selon cette structure rigide. Il est possible de créer des pistes qui s'adaptent à la taille du contenu, mais cela modifie également l'ensemble de la piste.
 
-Si vous utilisez les boîtes flexibles et souhaitez bloquer certains des aspects autour de la flexibilité, vous aurez probablement besoin d'une grille CSS. Par exemple, si vous définissez un objet flexible avec un pourcentage en largeur pour aligner l'objet avec les éléments du dessus, une grille pourrait être plus adaptée.
+Si vous utilisez les boîtes flexibles et que vous vous retrouvez à désactiver une partie de cette flexibilité, vous devez probablement utiliser la disposition de grille CSS. Par exemple, si vous définissez une largeur sur un élément flexible pour l'aligner avec d'autres éléments d'une ligne supérieure, une grille est sans doute un meilleur choix.
 
-### L'alignement des boîtes
+### Alignement des boîtes
 
-Une des fonctionnalités les plus attendues pour les boîtes flexibles était celle qui permettait enfin de contrôler l'alignement correctement. On pouvait simplement centrer une boîte sur une page. Les éléments flexibles pouvaient être étirés en hauteur dans leurs conteneurs et on pouvait donc obtenir des colonnes avec des hauteurs égales. Il était désormais possible d'éviter des contournements pour obtenir ce résultat.
+La plupart des fonctionnalités d'alignement des grilles ont été définies dans la [disposition de boîtes flexibles CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout). Ces fonctionnalités permettent un contrôle d'alignement correct pour la première fois et permettent de centrer une boîte sur la page. Les éléments flexibles peuvent s'étendre à la hauteur du conteneur flexible, ce qui signifie que des colonnes de hauteur égale sont possibles. Ces propriétés sont définies dans le module [d'alignement de boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment) et sont utilisées dans plusieurs modes de disposition, y compris la disposition en grille.
 
-Les propriétés d'alignement ont été ajoutées à la spécification pour les boîtes flexibles dans une nouvelle spécification intitulée _[Box Alignment Level 3](https://drafts.csswg.org/css-align/)_. Cela signifie qu'elles peuvent être utilisées dans d'autres modules, y compris dans les grilles CSS. À l'avenir, elles pourront éventuellement s'appliquer aux autres méthodes de disposition.
+Nous prenons un bon coup d'œil à [Aligner les éléments dans la disposition en grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Box_alignment) plus tard. Pour l'instant, voici une comparaison entre les exemples de boîte flexible et de grille.
 
-Dans un autre article de cette série, nous verrons comment utiliser l'alignement des boîtes dans une disposition en grille. Pour le moment, voici un exemple simple qui permet de comparer les boîtes flexibles et les grilles.
-
-Dans le premier exemple, on utilise les boîtes flexibles avec un conteneur qui dispose de trois objets. La propriété {{cssxref("min-height")}} est définie et paramètre la hauteur du conteneur flexible. {{cssxref("align-items")}} vaut `flex-end` pour le conteneur flexible et les objets s'empileront donc jusqu'à l'extrémité du conteneur flexible. On utilise également la propriété {{cssxref("align-self")}} sur `box1` afin de surcharger la valeur par défaut et d'étirer jusqu'à la hauteur du conteneur et jusqu'à `box2` afin que `box1` soit alignée avec le début du conteneur flexible.
+Dans le premier exemple, qui utilise la disposition de boîtes flexibles, nous avons un conteneur avec trois éléments à l'intérieur. La propriété {{CSSxRef("min-height")}} du conteneur est définie, ce qui définit la hauteur du conteneur flexible. Nous avons défini la propriété {{CSSxRef("align-items")}} sur le conteneur flexible à `flex-end` afin que les éléments soient alignés à la fin du conteneur flexible. Nous avons également défini la propriété {{CSSxRef("align-self")}} sur `boite1` afin qu'elle remplace la valeur par défaut et s'étende à la hauteur du conteneur et sur `boite2` afin qu'elle soit alignée au début du conteneur flexible.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -152,45 +152,45 @@ Dans le premier exemple, on utilise les boîtes flexibles avec un conteneur qui 
 ```
 
 ```html
-<div class="wrapper">
-  <div class="box1">Un</div>
-  <div class="box2">Deux</div>
-  <div class="box3">Trois</div>
+<div class="enveloppe">
+  <div class="boite1">Un</div>
+  <div class="boite2">Deux</div>
+  <div class="boite3">Trois</div>
 </div>
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: flex;
   align-items: flex-end;
   min-height: 200px;
 }
-.box1 {
+.boite1 {
   align-self: stretch;
 }
-.box2 {
+.boite2 {
   align-self: flex-start;
 }
 ```
 
-{{EmbedLiveSample('Lalignement_des_boîtes', '300', '230')}}
+{{EmbedLiveSample("Alignement des boîtes", 300, 200)}}
 
-### L'alignement sur les grilles CSS
+### Alignement sur les grilles CSS
 
-Dans cet exemple, on utilise une grille pour créer la même disposition. Cette fois on utilise les propriétés d'alignement des boîtes. On aligne donc par rapport à `start` et `end` plutôt que par rapport à `flex-start` et `flex-end`. Dans le cas d'une disposition en grille, on aligne les éléments à l'intérieur de leur zone de grille. Dans ce cas, il s'agit d'une seule cellule mais on pourrait très bien construire une zone composée de plusieurs cellules.
+Cet exemple utilise une grille pour créer la même disposition. On utilise les propriétés d'alignement des boîtes comme elles s'appliquent à une disposition en grille. On aligne par rapport à `start` et `end`. (On peut utiliser les synonymes {{CSSxRef("content-position")}} `flex-start` et `flex-end`.) Dans le cas d'une disposition en grille, on aligne les éléments à l'intérieur de leur zone de grille. Dans ce cas, il s'agit d'une seule cellule mais on peut très bien construire une zone composée de plusieurs cellules.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -200,56 +200,56 @@ Dans cet exemple, on utilise une grille pour créer la même disposition. Cette 
 ```
 
 ```html
-<div class="wrapper">
-  <div class="box1">Un</div>
-  <div class="box2">Deux</div>
-  <div class="box3">Trois</div>
+<div class="enveloppe">
+  <div class="boite1">Un</div>
+  <div class="boite2">Deux</div>
+  <div class="boite3">Trois</div>
 </div>
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: end;
   grid-auto-rows: 200px;
 }
-.box1 {
+.boite1 {
   align-self: stretch;
 }
-.box2 {
+.boite2 {
   align-self: start;
 }
 ```
 
-{{EmbedLiveSample('Lalignement_sur_les_grilles_CSS', '200', '310')}}
+{{EmbedLiveSample("Alignement sur les grilles CSS", 200, 205)}}
 
 ### L'unité `fr` et `flex-basis`
 
-On a vu avant l'unité `fr` qui permet d'affecter aux pistes de la grille une portion de l'espace disponible dans le conteneur. L'unité `fr`, lorsqu'elle est combinée avec la fonction {{cssxref("minmax()", "minmax()")}} permet d'obtenir un comportement proche des propriétés `flex` utilisées pour les boîtes flexibles, tout en permettant de créer une disposition sur deux dimensions.
+Nous avons déjà vu comment l'unité `fr` fonctionne pour attribuer une proportion de l'espace disponible dans le conteneur de grille à nos pistes de grille. L'unité `fr`, lorsqu'elle est combinée avec la fonction {{CSSxRef("minmax()")}} peut nous offrir un comportement très similaire à celui des propriétés `flex` dans les boîtes flexibles, tout en permettant la création d'une disposition en deux dimensions.
 
-Si on revient sur l'exemple illustrant la différence entre une disposition à une dimension et une disposition à deux dimensions. On voit qu'il y a une différence sur la façon dont les deux dispositions fonctionnent en mode _responsive_ (lorsque les dimensions de la zone d'affichage varient). Avec la disposition flexible, si on redimensionne la disposition ajustera le nombre d'éléments sur chaque ligne en fonction de l'espace disponible. S'il y a beaucoup d'espace, les cinq éléments pourront tenir sur une seule ligne et si l'espace est réduit, on pourra avoir jusqu'à un seul élément par ligne.
+Si l'on revient à l'exemple où nous avons illustré la différence entre les dispositions à une et à deux dimensions, on constate une différence dans la manière dont ces deux dispositions s'adaptent aux différentes tailles d'écran. Avec la disposition flexible, lorsque l'on agrandit ou réduit la fenêtre, la boîte flexible s'adapte parfaitement en ajustant le nombre d'éléments dans chaque ligne en fonction de l'espace disponible. Si l'espace est important, les cinq éléments peuvent tenir sur une seule ligne. Si le conteneur est très étroit, il se peut qu'il n'y ait de la place que pour un seul élément.
 
-En revanche, avec la grille, on a toujours trois pistes qui forment trois colonnes. Les pistes s'élargiront ou se rétrécieront mais il y en aura toujours trois car c'est le nombre de pistes déclaré à la définition de la grille.
+En comparaison, la version grille comporte toujours trois pistes de colonnes. Les pistes elles-mêmes s'étendent/rétrécissent, mais elles sont toujours au nombre de trois puisque c'est ce que nous avons demandé lors de la définition de notre grille.
 
-#### Des pistes qui se remplissent automatiquement
+#### Pistes de grille remplies automatiquement
 
-On peut créer un effet semblable aux boîtes flexibles tout en gardant l'arrangement en lignes et colonnes grâce à la notation `repeat` et aux propriétés `auto-fill` et `auto-fit`.
+Nous pouvons utiliser la grille pour créer un effet similaire à celui de boîtes flexibles, tout en conservant le contenu organisé en rangées et colonnes strictes, en définissant la disposition des pistes à l'aide de la notation de répétition et des propriétés `auto-fill` et `auto-fit`.
 
-Dans l'exemple qui suit, on utilise le mot-clé `auto-fill` à la place d'un entier dans la fonction `repeat` et on définit la taille d'une piste à 200 pixels. Cela signifie que la grille créera autant de pistes de 200 pixels en colonnes qu'il est possible d'en placer dans le conteneur.
+Dans l'exemple suivant, nous avons utilisé le mot-clé `auto-fill` à la place d'un nombre entier dans la notation de répétition et défini la liste des pistes à 200 pixels. Cela signifie que la grille crée autant de pistes de 200 pixels de large que le conteneur peut en contenir.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -259,7 +259,7 @@ Dans l'exemple qui suit, on utilise le mot-clé `auto-fill` à la place d'un ent
 ```
 
 ```html
-<div class="wrapper">
+<div class="enveloppe">
   <div>Un</div>
   <div>Deux</div>
   <div>Trois</div>
@@ -267,32 +267,32 @@ Dans l'exemple qui suit, on utilise le mot-clé `auto-fill` à la place d'un ent
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(auto-fill, 200px);
 }
 ```
 
-{{EmbedLiveSample('Des_pistes_qui_se_remplissent_automatiquement', '500', '170')}}
+{{EmbedLiveSample("Pistes de grille remplies automatiquement", 500, 60)}}
 
 ### Avoir un nombre de pistes flexible
 
-L'exemple précédent ne se comporte pas comme celui avec les boîtes flexibles. Dans l'exemple avec les boîtes flexibles, les objets qui sont plus larges que la base de 200 pixels avant de passer à la ligne. On peut obtenir le même effet sur une grille en combinant le mot-clé `auto-fill` et la fonction {{cssxref("minmax()", "minmax()")}}.
+L'exemple précédent ne se comporte pas comme celui avec les boîtes flexibles. Dans l'exemple avec les boîtes flexibles, les objets qui sont plus larges que la base de 200 pixels avant de passer à la ligne. On peut obtenir le même effet sur une grille en combinant le mot-clé `auto-fill` et la fonction {{CSSxRef("minmax()")}}.
 
-Dans l'exemple qui suit, on crée des pistes qui sont remplies automatiquement avec `minmax`. On souhaite que les pistes mesurent au moins 200 pixels, avec un maximum de `1fr`. Lorsque le navigateur a calculé la quantité de colonnes qui tiendraient dans le conteneur (en tenant compte des espaces), il utilisera le maximum `1fr` afin de répartir l'espace restant entre les objets.
+Dans cet exemple, nous créons des pistes à remplissage automatique à l'aide de `minmax`. Nous souhaitons que nos pistes aient une largeur minimale de 200 pixels, alors nous définissons la valeur maximale à `1fr`. Une fois que le navigateur a déterminé combien de fois 200 pixels peuvent tenir dans le conteneur — en tenant également compte des espaces de la grille — il considère la valeur maximale `1fr` comme une instruction visant à répartir l'espace restant entre les éléments.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -302,7 +302,7 @@ Dans l'exemple qui suit, on crée des pistes qui sont remplies automatiquement a
 ```
 
 ```html
-<div class="wrapper">
+<div class="enveloppe">
   <div>Un</div>
   <div>Deux</div>
   <div>Trois</div>
@@ -310,38 +310,38 @@ Dans l'exemple qui suit, on crée des pistes qui sont remplies automatiquement a
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 ```
 
-{{EmbedLiveSample('Avoir_un_nombre_de_pistes_flexible', '500', '170')}}
+{{EmbedLiveSample("Avoir un nombre de pistes flexible", 500, 60)}}
 
-On peut désormais créer une grille qui dispose d'un nombre flexible de pistes, elles-mêmes flexibles tout en ayant des éléments qui sont disposés sur la grille par rapport à des lignes et à des colonnes.
+Grâce à la disposition en grille, nous pouvons créer une grille comportant un nombre dynamique de pistes flexibles et disposer les éléments sur cette grille en les alignant par rangées et par colonnes.
 
 ## Les grilles et les éléments positionnés de façon absolue
 
-La grille peut interagir avec les éléments positionnés de façon absolue. Cela peut s'avérer utile si on souhaite positionner un élément dans une grille ou dans une zone donnée de la grille. La spécification définit le comportement lorsqu'une grille est un bloc englobant et que la grille est le parent d'un élément positionné de façon absolue.
+La grille interagit avec les éléments [positionnés de façon absolue](/fr/docs/Web/CSS/Reference/Properties/position#positionnement_absolu), ce qui peut être utile si vous souhaitez positionner un élément dans une grille ou une zone de grille. La spécification définit le comportement lorsqu'un conteneur de grille est un bloc englobant et un parent de l'élément positionné de façon absolue.
 
 ### Avoir une grille comme bloc englobant
 
-Pour qu'une grille soit un bloc englobant, il faut utiliser la propriété `position` avec la valeur `relative` (comme on ferait pour un bloc classique). Une fois que c'est fait, si on utilise `position:` `absolute` sur un objet de la grille, son bloc englobant sera la grille. Si l'élément a une position donnée sur la grille, le conteneur sera la zone de la grille sur laquelle il est placé.
+Pour faire du conteneur de grille un [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block), vous devez ajouter la propriété {{CSSxRef("position")}} au conteneur avec la valeur `relative`, comme vous le faites pour créer un bloc englobant pour tout autre élément positionné de façon absolue. Une fois cette opération effectuée, si vous donnez à un élément de grille la valeur `position: absolute`, son bloc englobant est le conteneur de grille ou, si l'élément possède également une position dans la grille, la zone de la grille dans laquelle vous le placez.
 
-Dans l'exemple ci-après, on a un conteneur avec quatre enfants. Le troisième élément est positionné en absolu et est placé sur la grille. La grille, le conteneur, a `position:` `relative` et devient donc le contexte de positionnement pour cet objet.
+Dans l'exemple ci-dessous, une enveloppe contient quatre éléments enfants. Le troisième élément est positionné de façon absolue et placé dans la grille à l'aide d'un placement fondé sur les lignes. Le conteneur de grille possède `position: relative` et devient donc le contexte de positionnement de cet élément.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -351,27 +351,27 @@ Dans l'exemple ci-après, on a un conteneur avec quatre enfants. Le troisième �
 ```
 
 ```html
-<div class="wrapper">
-  <div class="box1">Un</div>
-  <div class="box2">Deux</div>
-  <div class="box3">
+<div class="enveloppe">
+  <div class="boite1">Un</div>
+  <div class="boite2">Deux</div>
+  <div class="boite3">
     Ce bloc est positionné de façon absolue. Dans cet exemple la grille est le
     bloc englobant et les valeurs de décalage pour la position sont calculées
     depuis les bords extérieurs de la zone dans laquelle a été placé l'élément.
   </div>
-  <div class="box4">Quatre</div>
+  <div class="boite4">Quatre</div>
 </div>
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
-  grid-gap: 20px;
+  gap: 20px;
   position: relative;
 }
-.box3 {
+.boite3 {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -382,38 +382,38 @@ Dans l'exemple ci-après, on a un conteneur avec quatre enfants. Le troisième �
 }
 ```
 
-{{EmbedLiveSample('Avoir_une_grille_comme_bloc_englobant', '500', '330')}}
+{{EmbedLiveSample("Avoir une grille comme bloc englobant", 500, 330)}}
 
-On peut voir que l'élément prend la zone de la grille entre les lignes 2 et 4, après la ligne 1. Ensuite, il est décalé dans cette zone grâce aux propriétés `top` et `left`. Toutefois, il a été retiré du flux, comme d'habitude pour les éléments positionnés en absolu et les règles de placement automatique placent des objets dans la même zone. L'objet n'entraîne pas non plus la création d'une ligne supplémentaire sur la ligne 3.
+Vous voyez que l'élément occupe la zone allant de la ligne de colonne 2 à la ligne 4 et commence après la ligne 1. Ensuite, vous le décalez dans cette zone à l'aide des propriétés du haut et de gauche. Cependant, comme c'est habituel pour les éléments positionnés de façon absolue, il est retiré du flux et les règles de placement automatique placent alors des éléments dans le même espace. L'élément ne provoque pas non plus la création d'une ligne supplémentaire jusqu'à la ligne 3.
 
-Si on retire `position:` `absolute` des règles sur `.box3`, on peut voir le résultat qu'on aurait obtenu sans ce positionnement absolu.
+Si vous retirez `position: absolute` des règles de `.boite3`, vous voyez comment l'élément s'affiche sans ce positionnement.
 
 ### Utiliser une grille comme parent
 
-Si l'élément positionné de façon absolue est contenue dans une grille mais que celle-ci ne crée pas de nouveau contexte de positionnement, l'élément sera retiré du flux comme dans l'exemple précédent. Les contextes de positionnement sont créés comme avec les autres méthodes de disposition. Dans l'exemple, si on retire `position:` `relative` dans le code précédent, le contexte de positionnement est fourni par la zone d'affichage (le _viewport_) :
+Si l'élément enfant positionné de façon absolue a un conteneur de grille comme parent, mais que ce conteneur ne crée pas de nouveau contexte de positionnement, il est retiré du flux comme dans l'exemple précédent. Le _contexte de positionnement_ désigne l'élément par rapport auquel l'élément positionné de façon absolue calcule sa position. Le contexte de positionnement correspond à l'élément qui crée un contexte de positionnement, comme dans les autres méthodes de disposition. Dans notre cas, si nous retirons `position: relative` de l'enveloppe ci-dessus, le contexte de positionnement est la zone d'affichage, comme le montre cette image.
 
-![Image of grid container as parent](2_abspos_example.png)
+![Image du conteneur de grille en tant que parent](2_abspos_example.png)
 
 Là encore, l'élément ne participe plus à la disposition de la grille pour le dimensionnement ou pour le placement des autres éléments.
 
-### Utiliser une zone de grille comme parent
+### Une zone de grille comme parent
 
-Si l'élément positionné de façon absolu est imbriqué dans une zone de la grille, on peut créer un contexte de positionnement pour cette zone. Dans l'exemple qui suit, on utilise la même grille qu'avant sauf que l'élément est imbriqué dans la zone `.box3` de la grille.
+Si l'élément positionné de façon absolue est imbriqué dans une zone de grille, vous pouvez créer un contexte de positionnement sur cette zone. Dans cet exemple, nous reprenons la même grille, mais cette fois, nous imbriquons un élément dans `.boite3` de la grille.
 
-On indique que `.box3` a une position relative puis on positionne l'élément avec des propriétés de décalage. Dans ce cas, le contexte de positionnement est la zone de la grille.
+Nous donnons un positionnement relatif à `.boite3`, puis nous positionnons le sous-élément à l'aide des propriétés de décalage. Dans ce cas, le contexte de positionnement est la zone de grille.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -423,10 +423,10 @@ On indique que `.box3` a une position relative puis on positionne l'élément av
 ```
 
 ```html
-<div class="wrapper">
-  <div class="box1">Un</div>
-  <div class="box2">Deux</div>
-  <div class="box3">
+<div class="enveloppe">
+  <div class="boite1">Un</div>
+  <div class="boite2">Deux</div>
+  <div class="boite3">
     Trois
     <div class="abspos">
       Ce bloc est positionné de façon absolue. Dans cet exemple la zone de la
@@ -434,18 +434,18 @@ On indique que `.box3` a une position relative puis on positionne l'élément av
       bords de la zone de la grille.
     </div>
   </div>
-  <div class="box4">Quatre</div>
+  <div class="boite4">Quatre</div>
 </div>
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
-  grid-gap: 20px;
+  gap: 20px;
 }
-.box3 {
+.boite3 {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -456,44 +456,44 @@ On indique que `.box3` a une position relative puis on positionne l'élément av
   position: absolute;
   top: 40px;
   left: 40px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  color: #000;
+  background-color: rgb(255 255 255 / 50%);
+  border: 1px solid rgb(0 0 0 / 50%);
+  color: black;
   padding: 10px;
 }
 ```
 
-{{EmbedLiveSample('Utiliser_une_zone_de_grille_comme_parent', '500', '420')}}
+{{EmbedLiveSample("Une zone de grille comme parent", 500, 420)}}
 
-## Utiliser une grille et `display:` `contents`
+## Les grilles et `display: contents`
 
-Une autre combinaison notable, en termes de disposition, peut être l'utilisation de `display:` `contents` avec les grilles CSS. La valeur `contents` de la propriété {{cssxref("display")}} est une nouvelle valeur, décrite comme suit dans la [spécification Display](https://drafts.csswg.org/css-display/#box-generation) :
+Une dernière interaction mérite d'être mentionnée&nbsp;: celle entre la disposition de grille CSS et `display: contents`, définie dans le module [d'affichage CSS](/fr/docs/Web/CSS/Guides/Display). Lorsque la propriété {{CSSxRef("display")}} prend la valeur `contents`, l'élément lui-même ne génère aucune boîte, mais ses éléments enfants et ses pseudo-éléments continuent d'en générer normalement. Ainsi, pour la génération des boîtes et la disposition, l'élément est traité comme un élément remplacé par ses éléments enfants et ses pseudo-éléments dans l'arbre du document.
 
-> L'élément même ne génère aucune boîte mais ses éléments fils, ainsi que les pseudo-éléments, génèrent des boîtes normales. Afin de générer les boîtes et la disposition, l'élément doit être traité comme s'il avait été remplacé par ses éléments fils et ses pseudo-éléments dans l'arbre du document.
+Si vous définissez `display: contents` pour un élément, la boîte qu'il crée normalement disparaît et les boîtes des éléments enfants apparaissent comme si elles remontent d'un niveau. Ainsi, les éléments enfants d'un élément de grille peuvent devenir des éléments de grille. Cela semble étrange&nbsp;? Voici un exemple.
 
-Si on utilise `display:` `contents` sur un élément, la boîte qu'il aurait normalement créé disparaîtra et les boîtes des éléments qui sont ses enfants apparaîtront comme si elles avaient grimpé d'un niveau. Cela signifie que les éléments fils d'un élément d'une grille peuvent, à leur tour, devenir des éléments de cette grille. Un peu perdu-e ? Voici un exemple. Dans le code qui suit, on a une grille dont le premier élément s'étend sur les trois pistes. Cet élément contient trois éléments imbriqués. Ces derniers n'étant pas des enfants directs de la grille, ils ne s'inscrivent pas dans la disposition en grille et sont affichés avec la disposition classique.
+### Disposition de grille avec des éléments enfants imbriqués
 
-### Utiliser display contents avant
+Dans cet exemple, le premier élément de la grille s'étend sur les trois pistes de colonnes. Il contient trois éléments imbriqués. Comme ces éléments ne sont pas des enfants directs, ils ne font pas partie de la disposition de grille et s'affichent donc selon une disposition en blocs classique.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.box {
+.boite {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-.nested {
+.imprique {
   border: 2px solid #ffec99;
   border-radius: 5px;
   background-color: #fff9db;
@@ -502,56 +502,56 @@ Si on utilise `display:` `contents` sur un élément, la boîte qu'il aurait nor
 ```
 
 ```html
-<div class="wrapper">
-  <div class="box box1">
-    <div class="nested">a</div>
-    <div class="nested">b</div>
-    <div class="nested">c</div>
+<div class="enveloppe">
+  <div class="boite boite1">
+    <div class="imprique">a</div>
+    <div class="imprique">b</div>
+    <div class="imprique">c</div>
   </div>
-  <div class="box box2">Deux</div>
-  <div class="box box3">Trois</div>
-  <div class="box box4">Quatre</div>
-  <div class="box box5">Cinq</div>
+  <div class="boite boite2">Deux</div>
+  <div class="boite boite3">Trois</div>
+  <div class="boite boite4">Quatre</div>
+  <div class="boite boite5">Cinq</div>
 </div>
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
 }
-.box1 {
+.boite1 {
   grid-column-start: 1;
   grid-column-end: 4;
 }
 ```
 
-{{EmbedLiveSample('Utiliser_display_contents_avant', '400', '420')}}
+{{EmbedLiveSample("Disposition de grille avec des éléments enfants imbriqués", 400, 420)}}
 
-### Utiliser display contents après
+### Utiliser `display: contents`
 
-Si on ajoute `display:` `contents` aux règles qui ciblent `box1`, la boîte de cet élément disparaîtra et ses sous-éléments deviendront alors des éléments de la grille qui se placeront selon les règles de placement automatiques pour la grille.
+Si vous ajoutez maintenant `display: contents` aux règles de `boite1`, la boîte de cet élément disparaît et les sous-éléments deviennent des éléments de grille qu'organisent les règles de placement automatique.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.box {
+.boite {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-.nested {
+.imprique {
   border: 2px solid #ffec99;
   border-radius: 5px;
   background-color: #fff9db;
@@ -560,39 +560,39 @@ Si on ajoute `display:` `contents` aux règles qui ciblent `box1`, la boîte de 
 ```
 
 ```html
-<div class="wrapper">
-  <div class="box box1">
-    <div class="nested">a</div>
-    <div class="nested">b</div>
-    <div class="nested">c</div>
+<div class="enveloppe">
+  <div class="boite boite1">
+    <div class="imprique">a</div>
+    <div class="imprique">b</div>
+    <div class="imprique">c</div>
   </div>
-  <div class="box box2">Deux</div>
-  <div class="box box3">Trois</div>
-  <div class="box box4">Quatre</div>
-  <div class="box box5">Cinq</div>
+  <div class="boite boite2">Deux</div>
+  <div class="boite boite3">Trois</div>
+  <div class="boite boite4">Quatre</div>
+  <div class="boite boite5">Cinq</div>
 </div>
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
 }
-.box1 {
+.boite1 {
   grid-column-start: 1;
   grid-column-end: 4;
   display: contents;
 }
 ```
 
-{{EmbedLiveSample('Utiliser_display_contents_après', '400', '330')}}
+{{EmbedLiveSample("Utiliser `display: contents`", 400, 330)}}
 
-Cela permet que des éléments imbriqués agissent comme s'ils faisaient partie de la grille. C'est également une méthode de contournement pour certains problèmes qui seront résolus par les « sous-grilles » (_subgrids_) lorsqu'elles seront implémentées. Vous pouvez également utiliser `display:` `contents` de façon similaire avec les boîtes flexibles afin que les éléments imbriqués deviennent des éléments flexibles.
+Cette méthode permet aux éléments imbriqués dans la grille de fonctionner comme des éléments de la grille. Vous pouvez également utiliser `display: contents` de la même manière avec les boîtes flexibles pour que les éléments imbriqués deviennent des éléments flexibles.
 
-Comme on a pu le voir dans cet article, la disposition avec les grilles CSS n'est qu'un outil parmi d'autres. Il ne faut pas hésiter à combiner différentes méthodes de disposition afin d'obtenir les résultats souhaités.
+Comme vous le voyez dans ce guide, la disposition de grille CSS n'est qu'un outil parmi d'autres. N'hésitez pas à la combiner avec d'autres méthodes de disposition pour obtenir les effets souhaités.
 
 ## Voir aussi
 
-- [Guides sur _Flexbox_](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox)
-- [Guides sur la disposition multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout)
+- [Les guides des boîtes flexibles](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox)
+- [Les guides sur la disposition multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout)

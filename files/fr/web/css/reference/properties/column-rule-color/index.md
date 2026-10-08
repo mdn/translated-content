@@ -84,7 +84,7 @@ La propriété `column-rule-color` accepte une liste de valeurs séparées par d
   - : La fonction {{CSSxRef("repeat()")}}, avec un entier ({{CSSxRef("&lt;integer&gt;")}}) de `1` ou plus comme premier argument et une ou plusieurs valeurs `<color>` comme arguments suivants. L'entier ({{CSSxRef("&lt;integer&gt;")}}) définit combien de fois les valeurs `<color>` doivent être répétées.
 
 - `<auto-repeat-line-color>`
-  - : La fonction {{CSSxRef("repeat()")}}, avec `auto` comme premier argument et une ou plusieurs valeurs `<color>` comme arguments suivants. Les valeurs `<color>` fournies sont répétées autant de fois que nécessaire pour remplir les valeurs de toutes les règles de colonne qui ne sont pas spécifiées explicitement par d'autres composants de la valeur de la propriété.
+  - : La fonction {{CSSxRef("repeat()")}}, avec `auto` comme premier argument et une ou plusieurs valeurs `<color>` comme arguments suivants. Les valeurs `<color>` fournies sont répétées autant de fois que nécessaire pour remplir les valeurs de toutes les règles de colonne qui ne sont pas définies explicitement par d'autres composants de la valeur de la propriété.
 
 ## Description
 
