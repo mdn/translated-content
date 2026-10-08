@@ -3,7 +3,7 @@ title: Propriété CSS `color`
 short-title: color
 slug: Web/CSS/Reference/Properties/color
 l10n:
-  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`color`** permet de définir la valeur de couleur du texte d'un élément et de ses décorations de texte, et définit la valeur [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor). `currentColor` peut être utilisée comme valeur indirecte pour d'autres propriétés et constitue la valeur par défaut pour d'autres propriétés de couleur, telles que {{CSSxRef("border-color")}}.
@@ -123,7 +123,7 @@ Cette propriété est définie par une valeur unique choisie parmi la liste suiv
 
 Il est important de vérifier le contraste entre la couleur utilisée pour le texte et celle utilisée pour l'arrière-plan afin que les personnes ayant une vision faible ou lisant le document dans de mauvaises conditions puissent correctement lire le document.
 
-Le ratio de contraste est déterminé en comparant la luminosité de la couleur du texte et celle de la couleur d'arrière-plan. Afin de respecter [les règles d'accessibilité (WCAG) <sup>(angl.)</sup>](https://www.w3.org/WAI/standards-guidelines/wcag/), on doit avoir un ratio de 4.5:1 pour les textes «&nbsp;normaux&nbsp;» et un ratio de 3:1 pour les textes plus grands comme les titres (un texte est considéré comme «&nbsp;grand&nbsp;» s'il est en [gras](/fr/docs/Web/CSS/Reference/Properties/font-weight) et qu'une lettre mesure plus de 18.66px ou bien si une lettre mesure plus de 24 pixels).
+Le rapport de contraste est déterminé en comparant la luminosité de la couleur du texte et celle de la couleur d'arrière-plan. Afin de respecter [les règles d'accessibilité (WCAG) <sup>(angl.)</sup>](https://www.w3.org/WAI/standards-guidelines/wcag/), on doit avoir un rapport de 4.5:1 pour les textes «&nbsp;normaux&nbsp;» et un rapport de 3:1 pour les textes plus grands comme les titres (un texte est considéré comme «&nbsp;grand&nbsp;» s'il est en [gras](/fr/docs/Web/CSS/Reference/Properties/font-weight) et qu'une lettre mesure plus de 18.66px ou bien si une lettre mesure plus de 24 pixels).
 
 - [Contrôleur de contraste WebAIM <sup>(angl.)</sup>](https://webaim.org/resources/contrastchecker/)
 - [Explications de la directive 1.4 de WCAG sur MDN](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
@@ -186,7 +186,7 @@ p {
 ## Voir aussi
 
 - Le type de donnée {{CSSxRef("&lt;color&gt;")}}
-- Les autres propriétés relatives aux couleurs&nbsp;: {{CSSxRef("background-color")}}, {{CSSxRef("border-color")}}, {{CSSxRef("outline-color")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-emphasis-color")}}, {{CSSxRef("text-shadow")}}, {{CSSxRef("caret-color")}}, {{CSSxRef("column-rule-color")}} et {{CSSxRef("color-adjust")}}
+- Les autres propriétés relatives aux couleurs&nbsp;: {{CSSxRef("background-color")}}, {{CSSxRef("border-color")}}, {{CSSxRef("outline-color")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-emphasis-color")}}, {{CSSxRef("text-shadow")}}, {{CSSxRef("caret-color")}}, {{CSSxRef("column-rule-color")}} et {{CSSxRef("print-color-adjust")}}
 - L'attribut SVG {{SVGAttr("color")}}
 - La fonction {{CSSxRef("color_value/color", "color()")}}
 - [Appliquer des couleurs aux éléments HTML grâce à CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)

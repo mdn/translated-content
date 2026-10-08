@@ -3,12 +3,12 @@ title: Propriété CSS `-moz-float-edge`
 short-title: -moz-float-edge
 slug: Web/CSS/Reference/Properties/-moz-float-edge
 l10n:
-  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 {{Non-standard_Header}}
 
-La propriété [CSS](/fr/docs/Web/CSS) non standard **`-moz-float-edge`** définit si les propriétés de hauteur et de larguer d'un élément incluent la marge, la bordure et/ou le remplissage (_padding_).
+La propriété [CSS](/fr/docs/Web/CSS) non standard **`-moz-float-edge`** définit si les propriétés de hauteur et de larguer d'un élément incluent la marge, la bordure et/ou le remplissage.
 
 ## Syntaxe
 
@@ -20,10 +20,14 @@ La propriété [CSS](/fr/docs/Web/CSS) non standard **`-moz-float-edge`** défin
 /* Valeurs globales */
 -moz-float-edge: inherit;
 -moz-float-edge: initial;
+-moz-float-edge: revert;
+-moz-float-edge: revert-layer;
 -moz-float-edge: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 - `content-box`
   - : Les propriétés de hauteur et de largeur incluent le contenu, mais pas le remplissage, la bordure et la marge.
@@ -43,7 +47,7 @@ La propriété [CSS](/fr/docs/Web/CSS) non standard **`-moz-float-edge`** défin
 ### HTML
 
 ```html
-<div class="box">
+<div class="boite">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </div>
 ```
@@ -51,7 +55,7 @@ La propriété [CSS](/fr/docs/Web/CSS) non standard **`-moz-float-edge`** défin
 ### CSS
 
 ```css
-.box {
+.boite {
   display: block;
   height: 5px;
   margin: 0.5em auto 0.5em auto;
