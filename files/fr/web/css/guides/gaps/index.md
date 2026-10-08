@@ -3,7 +3,7 @@ title: Espacements CSS
 short-title: Espacements
 slug: Web/CSS/Guides/Gaps
 l10n:
-  sourceCommit: 8a13259a44523cd17b4fe347088b62c6d7a35265
+  sourceCommit: 04dfe418f2942ae739d41592c22fafa3679fc03c
 ---
 
 Le module des **espacements CSS** vous permet de définir l'espacement, ou les «&nbsp;enjambements&nbsp;», entre les éléments dans les mises en page [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [de boîte flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grille](/fr/docs/Web/CSS/Guides/Grid_layout). Le module de [mise en page multi-colonnes CSS](/fr/docs/Web/CSS/Guides/Multicol_layout) définit à l'origine les espacements et les règles qui contrôlent l'espacement entre les colonnes dans les conteneurs multi-colonnes. Ce module étend ces séparateurs visibles, appelés _décorations d'espacement_, aux grilles et aux boîtes flexibles.
@@ -109,13 +109,13 @@ Dans cet exemple, le poème de 2021 prononcé lors de la cérémonie d'investitu
   </p>
 
   <p>
-    Ainsi, alors qu'autrefois nous nous demandions « comment pourrions-nous bien
-    triompher de la catastrophe ? », nous affirmons désormais : « comment la
-    catastrophe pourrait-elle bien triompher de nous ? » Nous ne reviendrons pas
-    en arrière, vers ce qui était, mais nous avançerons vers ce qui sera, un
-    pays meurtri mais intact, bienveillant mais audacieux, farouche et libre.
-    Nous ne nous laisserons ni faire rebrousser chemin ni freiner par
-    l'intimidation.
+    Ainsi, alors qu'autrefois nous nous demandions «&nbsp;comment pourrions-nous
+    bien triompher de la catastrophe&nbsp;?&nbsp;», nous affirmons
+    désormais&nbsp;: «&nbsp;comment la catastrophe pourrait-elle bien triompher
+    de nous&nbsp;?&nbsp;» Nous ne reviendrons pas en arrière, vers ce qui était,
+    mais nous avançons vers ce qui sera, un pays meurtri mais intact,
+    bienveillant mais audacieux, farouche et libre. Nous ne nous laisserons ni
+    faire rebrousser chemin ni freiner par l'intimidation.
   </p>
 
   <p>
@@ -480,6 +480,8 @@ Lorsque la règle de colonne est plus grande que l'espacement des colonnes, la l
 
 ## Guides
 
+- [Définir les espaces CSS](/fr/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+  - : Guide pour comprendre et définir les espaces dans les mises en page en grille, en boîtes flexibles et en colonnes multiples, y compris la manière dont les valeurs en pourcentage sont résolues.
 - [Les mises en forme des colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)
   - : Guide pour mettre en forme les colonnes et gérer l'espacement entre les colonnes.
 - [Gérer les sauts de contenu dans une mise en page multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout/Handling_content_breaks)

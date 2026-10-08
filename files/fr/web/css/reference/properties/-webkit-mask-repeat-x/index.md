@@ -3,7 +3,7 @@ title: Propriété CSS `-webkit-mask-repeat-x`
 short-title: -webkit-mask-repeat-x
 slug: Web/CSS/Reference/Properties/-webkit-mask-repeat-x
 l10n:
-  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 {{Non-standard_Header}}
@@ -32,10 +32,12 @@ La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-mask-repeat-x`** définit la f
 
 ### Valeurs
 
+Cette propriété est définie par une ou plusieurs valeurs séparées par une virgule&nbsp;:
+
 - `repeat`
   - : L'image de masque est répétée horizontalement.
 - `no-repeat`
-  - : L'image de masque n'est pas répétée horizontalement, seul un exemplaire est dessiné selon l'axe horizontal. Le contenu restant sur l'axe horizontal pour les éléments masqués n'est pas affiché.
+  - : L'image de masque n'est pas répétée horizontalement&nbsp;; seul un exemplaire de l'image de masque est dessiné dans cette direction. Le reste du contenu de l'élément masqué n'est pas affiché.
 - `space`
   - : L'image est répétée tant que possible sans être rognée. La première et la dernière images sont accolées aux bords droit et gauche de l'élément et l'espace restant est réparti entre les copies de l'image. La propriété {{CSSxRef("mask-position")}} est ignorée sauf si une seule image peut être affichée sans qu'il n'y ait de rognage. On a uniquement du rognage s'il n'y a pas suffisamment d'espace pour afficher une seule image.
 - `round`

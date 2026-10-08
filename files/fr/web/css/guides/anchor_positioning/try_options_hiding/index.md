@@ -3,7 +3,7 @@ title: Options de repli et masquage conditionnel au débordement
 short-title: Traiter le débordement
 slug: Web/CSS/Guides/Anchor_positioning/Try_options_hiding
 l10n:
-  sourceCommit: 7c56e442e76d472eff1c6a06eb5432bb11a47f3e
+  sourceCommit: 892eb917bee599a9d6cae7d33ed783129dbb39b3
 ---
 
 Lorsque vous utilisez la [position par une ancres CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning), il est important de veiller à ce que les éléments positionnés par une ancre apparaissent toujours à un endroit pratique pour que l'utilisateur·ice puisse interagir avec eux, si possible, quel que soit l'emplacement de l'ancre. Par exemple, lorsque vous faites défiler la page, les ancres et leurs éléments positionnés associés se déplacent vers le bord de la fenêtre d'affichage. Lorsqu'un élément positionné commence à déborder de la fenêtre, vous voulez changer sa position pour le remettre dans l'écran, par exemple du côté opposé de l'ancre.

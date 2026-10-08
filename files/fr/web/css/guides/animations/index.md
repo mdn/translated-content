@@ -3,7 +3,7 @@ title: Animations CSS
 short-title: Animations
 slug: Web/CSS/Guides/Animations
 l10n:
-  sourceCommit: b8a45c83bfb5aa8b99ddcd564e7e9c66be5daffc
+  sourceCommit: 4aba58b4ad2745a73054f60b6d649d8e29b7b44d
 ---
 
 Le module des **animations CSS** permet d'animer les valeurs des propriétés CSS, comme `background-position` et `transform`, au fil du temps à l'aide d'étapes intermédiaires (<i lang="en">keyframes</i> en anglais). Chaque étape décrit comment l'élément animé doit être affiché à un moment donné de la séquence d'animation. Vous pouvez utiliser les propriétés du module d'animations pour contrôler la durée, le nombre de répétitions, le délai de démarrage et d'autres aspects d'une animation.
@@ -242,8 +242,6 @@ Cliquez sur «&nbsp;Exécuter&nbsp;» dans l'exemple ci-dessus pour voir ou modi
 - {{CSSxRef("animation-timeline")}}
 - {{CSSxRef("animation-timing-function")}}
 
-Le module d'animations CSS niveau 2 introduit également les propriétés `animation-trigger`, `animation-trigger-exit-range`, `animation-trigger-exit-range-end`, `animation-trigger-exit-range-start`, `animation-trigger-range`, `animation-trigger-range-end`, `animation-trigger-range-start`, `animation-trigger-timeline` et `animation-trigger-type`. Actuellement, aucun navigateur ne prend en charge ces fonctionnalités.
-
 ### Règles @
 
 - {{CSSxRef("@keyframes")}}
@@ -277,6 +275,30 @@ Toutes les animations, même celles d'une durée de 0 seconde, déclenchent des 
 
 ## Concepts associés
 
+- Le module [des déclencheurs d'animation CSS](/fr/docs/Web/CSS/Guides/Animation_triggers)
+  - {{CSSxRef("animation-trigger")}}
+  - {{CSSxRef("timeline-trigger")}} (raccourcie)
+  - {{CSSxRef("timeline-trigger-activation-range")}} (raccourcie)
+    - {{CSSxRef("timeline-trigger-activation-range-end")}}
+    - {{CSSxRef("timeline-trigger-activation-range-start")}}
+  - {{CSSxRef("timeline-trigger-active-range")}} (raccourcie)
+    - {{CSSxRef("timeline-trigger-active-range-end")}}
+    - {{CSSxRef("timeline-trigger-active-range-start")}}
+  - {{CSSxRef("timeline-trigger-name")}}
+  - {{CSSxRef("timeline-trigger-source")}}
+  - {{CSSxRef("trigger-scope")}}
+- Le module [des animations pilotées par le défilement CSS](/fr/docs/Web/CSS/Guides/Scroll-driven_animations)
+  - {{CSSxRef("animation-range")}} (raccourcie)
+    - {{CSSxRef("animation-range-end")}}
+    - {{CSSxRef("animation-range-start")}}
+  - {{CSSxRef("scroll-timeline")}} (raccourcie)
+    - {{CSSxRef("scroll-timeline-axis")}}
+    - {{CSSxRef("scroll-timeline-name")}}
+  - {{CSSxRef("timeline-scope")}}
+  - {{CSSxRef("view-timeline")}} (raccourcie)
+    - {{CSSxRef("view-timeline-axis")}}
+    - {{CSSxRef("view-timeline-inset")}}
+    - {{CSSxRef("view-timeline-name")}}
 - La propriété CSS {{CSSxRef("will-change")}}
 - Le type de donnée {{CSSxRef("&lt;easing-function&gt;")}}
 - Les requêtes média {{CSSxRef("@media/prefers-reduced-motion", "prefers-reduced-motion")}}
@@ -288,8 +310,9 @@ Toutes les animations, même celles d'une durée de 0 seconde, déclenchent des 
 
 ## Voir aussi
 
-- Le module [d'animations pilotées par le défilement CSS](/fr/docs/Web/CSS/CSS_scroll-driven_animations).
-- Propriétés du module CSS [transitions](/fr/docs/Web/CSS/Guides/Transitions) pour déclencher des animations en fonction des actions utilisateur·ice·s.
+- Le module [d'animations pilotées par le défilement CSS](/fr/docs/Web/CSS/CSS_scroll-driven_animations)
+- Le module [des déclencheurs d'animation CSS](/fr/docs/Web/CSS/Guides/Animation_triggers)
+- Le module [des transitions CSS](/fr/docs/Web/CSS/Guides/Transitions)
 - La propriété {{CSSxRef("interpolate-size")}} et la fonction {{CSSxRef("calc-size()")}} pour permettre des animations vers et depuis des [valeurs de taille intrinsèque](/fr/docs/Glossary/Intrinsic_Size).
 - L'élément HTML {{HTMLElement("canvas")}} avec [l'API canvas](/fr/docs/Web/API/Canvas_API) et [l'API WebGL](/fr/docs/Web/API/WebGL_API) pour dessiner des graphiques et des animations.
 - L'interface {{DOMxRef("SVGAnimationElement")}} pour tous les éléments d'animation SVG, incluant {{DOMxRef("SVGAnimateElement")}}, {{DOMxRef("SVGSetElement")}}, {{DOMxRef("SVGAnimateColorElement")}}, {{DOMxRef("SVGAnimateMotionElement")}} et {{DOMxRef("SVGAnimateTransformElement")}}.
