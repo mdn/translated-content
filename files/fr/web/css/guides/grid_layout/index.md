@@ -3,12 +3,12 @@ title: Disposition de grille CSS
 short-title: Disposition de grille
 slug: Web/CSS/Guides/Grid_layout
 l10n:
-  sourceCommit: 298079b550c76f20de6611c4ecdde4c30dc68b2b
+  sourceCommit: 04dfe418f2942ae739d41592c22fafa3679fc03c
 ---
 
 Le module de **disposition de grille CSS** excelle à diviser une page en régions principales ou à définir la relation en termes de taille, de position et d'empilement entre les parties d'un contrôle construit à partir de primitives HTML.
 
-Comme les tableaux, la disposition de grille permet à un·e auteur·ice d'aligner des éléments en colonnes et en incises. Cependant, de nombreuses mises en page sont soit possibles, soit plus faciles avec la grille CSS qu'elles ne l'étaient avec les tableaux. Par exemple, les éléments enfants d'un conteneur en grille peuvent se positionner de manière à se chevaucher et à se superposer, de manière similaire aux éléments positionnés en CSS.
+Comme les tableaux, la disposition de grille permet à un·e auteur·ice d'aligner des éléments en colonnes et en incises. Cependant, de nombreuses mises en page sont soit possibles, soit plus faciles avec la grille CSS qu'elles ne le sont avec les tableaux. Par exemple, les éléments enfants d'un conteneur en grille peuvent se positionner de manière à se chevaucher et à se superposer, de manière similaire aux éléments positionnés en CSS.
 
 ## La disposition de grille en action
 
@@ -160,6 +160,9 @@ Cet exemple animé utilise {{CSSxRef("display")}}, {{CSSxRef("grid-template-colu
 - [Alignement des boîtes dans une disposition en grille CSS](/fr/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
   - : Fonctionnement de l'alignement des boîtes dans le contexte d'une disposition en grille.
 
+- [Définir les espaces CSS](/fr/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+  - : Guide pour comprendre et définir les espaces dans les mises en page en grille, en boîtes flexibles et en colonnes multiples, y compris la manière dont les valeurs en pourcentage sont résolues.
+
 ## Fonctionnalités associées
 
 Le module [d'affichage CSS](/fr/docs/Web/CSS/Guides/Display)
@@ -181,9 +184,19 @@ Le module [d'alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment)
 
 Le module [des espaces CSS](/fr/docs/Web/CSS/Guides/Gaps)
 
-- {{CSSxRef("column-gap")}}
-- {{CSSxRef("gap")}}
-- {{CSSxRef("row-gap")}}
+- {{CSSxRef("gap")}} (raccourcie)
+  - {{CSSxRef("column-gap")}}
+  - {{CSSxRef("row-gap")}}
+- {{CSSxRef("rule")}} (raccourcie)
+  - {{CSSxRef("column-rule")}}
+  - {{CSSxRef("row-rule")}}
+- {{CSSxRef("rule-break")}}
+- {{CSSxRef("rule-color")}}
+- {{CSSxRef("rule-inset")}}
+- {{CSSxRef("rule-overlap")}}
+- {{CSSxRef("rule-style")}}
+- {{CSSxRef("rule-visibility-items")}}
+- {{CSSxRef("rule-width")}}
 
 Le module [de dimensionnement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_sizing)
 

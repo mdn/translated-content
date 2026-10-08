@@ -73,7 +73,7 @@ l10n:
 
 `v` モードでない場合の文字クラスは、ほとんどの文字を[文字通り](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)に解釈し、格納する文字に関する制限はあまりありません。例えば、`.` は[ワイルドカード](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard)ではなく、ドット文字のリテラルです。文字通りに現れることができない文字は、`\`、`]`、`-` だけです。
 
-- 文字クラスでは、`\b`、`\B`、[後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)を除き、ほとんどのエスケープシーケンスに対応しています。`\b` は[単語境界](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)の代わりにバックスペース文字を示し、他の 2 種類は構文エラーが発生します。`\` をリテラルとして使用して使用するには、`\\` とエスケープしてください。
+- 文字クラスでは、`\b`、`\B`、[後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)を除き、ほとんどのエスケープシーケンスに対応しています。`\b` は[単語境界](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)の代わりにバックスペース文字を示し、他の 2 種類は構文エラーが発生します。`\` をリテラルとして使用するには、`\\` とエスケープしてください。
 - `]` 文字は文字クラスの終わりを示します。リテラルとして使用するには、`\]` とエスケープしてください。
 - ダッシュ (`-`) 文字は、2 つの文字の間に使用すると範囲を示します。文字クラスの先頭や末尾に現れる場合は、リテラル文字です。範囲の境界で使用する場合もリテラル文字です。例えば、`[a-]` は `a` と `-` に一致し、`[!--]` は `!` から `-` に一致し、`[--9]` は `-` から `9` に一致します。また、文字どおり任意の場所で使用したい場合は、`\-` でエスケープすることもできます。
 

@@ -1,12 +1,10 @@
 ---
-title: "HTML 属性: capture"
+title: "`capture` 属性 (HTML)"
 short-title: capture
 slug: Web/HTML/Reference/Attributes/capture
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
-
-{{HTMLSidebar}}
 
 **`capture`** 属性は、オプションとして、新しいファイルをキャプチャすることと、 [`accept`](/ja/docs/Web/HTML/Reference/Attributes/accept) 属性で定義された種類の新しいメディアをどの機器でキャプチャするかを指定します。
 

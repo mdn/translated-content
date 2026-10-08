@@ -149,7 +149,7 @@ verseChoose.value = "Verse 1";
 
 #### 例をサーバーから提供する
 
-現代のブラウザーは、ローカルファイルから例を実行しただけでは、 HTTP リクエストを動作させません。これは、セキュリティ上の制約があるためです（ウェブセキュリティについては、[ウェブサイトのセキュリティ](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)をお読みください)。
+現代のブラウザーは、ローカルファイルから例を実行しただけでは、 HTTP リクエストを動作させません。これは、セキュリティ上の制約があるためです（ウェブセキュリティについては、[ウェブサイトのセキュリティ](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)をお読みください）。
 
 これを回避するには、ローカルのウェブサーバーでこの例を動作させてテストする必要があります。この方法を探すには、[ローカルテストサーバーを設定するためのガイド](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)を読んでください。
 

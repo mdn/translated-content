@@ -62,7 +62,7 @@ fetch(id, requests, options)
 
 ## 例
 
-下記の例は `fetch()` を使用してバックグラウンドフェッチ操作を行う方法を方法を示しています。アクティブな {{domxref('ServiceWorker', 'サービスワーカー', "", "nocode")}}で、 {{domxref('ServiceWorkerRegistration.backgroundFetch')}} プロパティを使用して `BackgroundFetchManager` オブジェクトにアクセスし、その `fetch()` メソッドを呼び出しています。
+下記の例は `fetch()` を使用してバックグラウンドフェッチ操作を行う方法を示しています。アクティブな {{domxref('ServiceWorker', 'サービスワーカー', "", "nocode")}}で、 {{domxref('ServiceWorkerRegistration.backgroundFetch')}} プロパティを使用して `BackgroundFetchManager` オブジェクトにアクセスし、その `fetch()` メソッドを呼び出しています。
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {

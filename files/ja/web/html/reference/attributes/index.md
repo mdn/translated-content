@@ -3,7 +3,7 @@ title: HTML 属性リファレンス
 short-title: 属性
 slug: Web/HTML/Reference/Attributes
 l10n:
-  sourceCommit: b8ffa5128ed5afe5f76b8936723f91d86b8fc7df
+  sourceCommit: 2e0b9415ed31484a4830e214eff9e06e408c7261
 ---
 
 HTML 要素には**属性**が存在します。これは、ユーザーが求める基準を満たすために、要素を構成したり、さまざまな方法で動作を調整したりするための追加の値です。
@@ -989,7 +989,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/referralpolicy">referrerpolicy</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/referrerpolicy">referrerpolicy</a></code>
       </td>
       <td>
         {{ HTMLElement("a") }}, {{ HTMLElement("area") }},

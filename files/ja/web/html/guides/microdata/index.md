@@ -3,10 +3,8 @@ title: HTML でのマイクロデータの使用
 short-title: マイクロデータ
 slug: Web/HTML/Guides/Microdata
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 057d13e47e8335a52d3c687cf27231527ef758c1
 ---
-
-{{HTMLSidebar}}
 
 マイクロデータは {{glossary("WHATWG")}} HTML 標準の一部であり、ウェブページ上の既存のコンテンツ内でメタデータを入れるために使用されます。検索エンジンやウェブクローラーは、ウェブページからマイクロデータを抽出して処理し、ユーザーへ高度な閲覧操作を提供するために使用することができます。検索エンジンは、ウェブページ上の情報を理解し、ユーザーにより関連性の高い結果を提供することを可能にするため、この構造化されたデータを直接利用できることから大きな利益を得ます。マイクロデータは、値をプロパティに割り当てるためにアイテムと名前と値の組み合わせを記述するためのサポート語彙を使用します。マイクロデータは、機械可読なタグとともに HTML 要素に注釈する試みで、古い RDFa やマイクロフォーマットの同様のアプローチよりも簡単な方法を提供します。
 
@@ -149,7 +147,7 @@ Google、Microsoft、Yahoo! のような主要な検索エンジンの管理者�
 {{ EmbedLiveSample('HTML', '', '100') }}
 
 > [!NOTE]
-> HTML からマイクロデータを抽出するための手軽なツールとして、 Google の[構造化データテストツール](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)があります。上に示した HTML 上で試してみてください。
+> HTML からマイクロデータ構造を抽出して検証するのに手軽なツールとして、[スキーママークアップ検証ツール](https://validator.schema.org/)があります。上に示した HTML 上で試してみてください。
 
 ### 関連情報
 

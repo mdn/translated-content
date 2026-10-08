@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Last-Modified`** contient la date et l'heure auxquelles le serveur d'origine estime que la ressource a été modifiée pour la dernière fois.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Last-Modified`** contient la date et l'heure auxquelles le serveur d'origine estime que la ressource a été modifiée pour la dernière fois.
 Il est utilisé comme validateur dans les [requêtes conditionnelles](/fr/docs/Web/HTTP/Guides/Conditional_requests) ({{HTTPHeader("If-Modified-Since")}} ou {{HTTPHeader("If-Unmodified-Since")}}) pour déterminer si une ressource demandée est identique à celle déjà stockée par le client.
 Il est moins précis qu'un {{HTTPHeader("ETag")}} pour déterminer le contenu d'un fichier, mais peut être utilisé comme mécanisme de rechange si les ETags ne sont pas disponibles.
 

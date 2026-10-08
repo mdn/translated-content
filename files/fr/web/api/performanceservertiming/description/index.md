@@ -24,4 +24,4 @@ serverTiming.description;
 ## Voir aussi
 
 - [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming)
-- [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing)
+- [`Server-Timing`](/fr/docs/Web/HTTP/Reference/Headers/Server-Timing)

@@ -3,7 +3,7 @@ title: "ARIA : rôle tooltip"
 short-title: tooltip
 slug: Web/Accessibility/ARIA/Reference/Roles/tooltip_role
 l10n:
-  sourceCommit: 0091c5e7d19dd48ae2a9236b89159651a19ecee1
+  sourceCommit: b7e9f482c51817d3a885e26092f8219fd0d9d278
 ---
 
 Un `tooltip` («&nbsp;info-bulle&nbsp;») est une bulle de texte contextuelle qui affiche une description pour un élément, apparaissant au survol du pointeur ou lors de la sélection clavier.
@@ -152,9 +152,9 @@ L'info-bulle est positionnée sous l'icône. La marge intérieure au-dessus de l
   margin: 0;
   padding: 0.75rem;
   border-radius: 0.25rem;
-  background: #222;
+  background: #222222;
   color: white;
-  box-shadow: 0 2px 6px #0004;
+  box-shadow: 0 2px 6px #0000044;
 }
 
 [role="tooltip"]::before {
@@ -163,7 +163,7 @@ L'info-bulle est positionnée sous l'icône. La marge intérieure au-dessus de l
   top: 0;
   right: 0.5rem;
   border-right: 0.5rem solid transparent;
-  border-bottom: 0.5rem solid #222;
+  border-bottom: 0.5rem solid #222222;
   border-left: 0.5rem solid transparent;
 }
 ```

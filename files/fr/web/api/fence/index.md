@@ -2,7 +2,7 @@
 title: Fence
 slug: Web/API/Fence
 l10n:
-  sourceCommit: e316526e520d8163e9151dca8973eb777b5285e0
+  sourceCommit: 3a839eeed13a60d34db1d39a5ce1594050d56ab0
 ---
 
 {{APIRef("Fenced Frame API")}}
@@ -18,12 +18,12 @@ Les objets `Fence` sont accessibles avec la propriété {{DOMxRef("Window.fence"
 
 ## Méthodes d'instance
 
-- {{DOMxRef("Fence.getNestedConfigs", "getNestedConfigs()")}} {{Experimental_Inline}}
+- {{DOMxRef("Fence.getNestedConfigs", "getNestedConfigs()")}} {{Deprecated_Inline}}
   - : Retourne les {{DOMxRef("FencedFrameConfig")}} chargés dans les `<fencedframe>` imbriqués à l'intérieur du `<fencedframe>` courant.
-- {{DOMxRef("Fence.reportEvent", "reportEvent()")}} {{Experimental_Inline}}
-  - : Déclenche l'envoi de données de rapport avec un [signal](/fr/docs/Web/API/Beacon_API) vers une ou plusieurs URL spécifiques enregistrées avec la méthode {{DOMxRef("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} de [l'API Protected Audience](https://privacysandbox.google.com/private-advertising/protected-audience?hl=fr), dans le but de collecter les résultats d'enchères publicitaires.
-- {{DOMxRef("Fence.setReportEventDataForAutomaticBeacons", "setReportEventDataForAutomaticBeacons()")}} {{Experimental_Inline}}
-  - : Définit les données d'évènement envoyées lorsqu'une navigation a lieu dans un `<fencedframe>`. Ces données sont envoyées avec un signal automatique vers une ou plusieurs URL spécifiques enregistrées avec la méthode {{DOMxRef("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} de [l'API Protected Audience](https://privacysandbox.google.com/private-advertising/protected-audience?hl=fr), afin de collecter les données de rapport pour les résultats d'enchères publicitaires.
+- {{DOMxRef("Fence.reportEvent", "reportEvent()")}} {{Deprecated_Inline}}
+  - : Déclenche l'envoi de données de rapport avec un [signal](/fr/docs/Web/API/Beacon_API) vers une ou plusieurs URL spécifiques enregistrées avec la méthode `registerAdBeacon()` de [l'API Protected Audience](https://privacysandbox.google.com/private-advertising/protected-audience?hl=fr), dans le but de collecter les résultats d'enchères publicitaires.
+- {{DOMxRef("Fence.setReportEventDataForAutomaticBeacons", "setReportEventDataForAutomaticBeacons()")}} {{Deprecated_Inline}}
+  - : Définit les données d'évènement envoyées lorsqu'une navigation a lieu dans un `<fencedframe>`. Ces données sont envoyées avec un signal automatique vers une ou plusieurs URL spécifiques enregistrées avec la méthode `registerAdBeacon()` de [l'API Protected Audience](https://privacysandbox.google.com/private-advertising/protected-audience?hl=fr), afin de collecter les données de rapport pour les résultats d'enchères publicitaires.
 
 ## Exemples
 
@@ -31,7 +31,7 @@ Les objets `Fence` sont accessibles avec la propriété {{DOMxRef("Window.fence"
 window.fence.reportEvent({
   eventType: "click",
   eventData: JSON.stringify({ clickX: "123", clickY: "456" }),
-  destination: ["buyer", "seller"],
+  destination: ["acheteur", "vendeur"],
 });
 ```
 

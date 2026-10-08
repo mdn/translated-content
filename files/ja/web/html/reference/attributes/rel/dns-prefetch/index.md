@@ -1,11 +1,10 @@
 ---
-title: rel="dns-prefetch"
+title: '`rel="dns-prefetch"` 属性値 (HTML)'
+short-title: dns-prefetch
 slug: Web/HTML/Reference/Attributes/rel/dns-prefetch
 l10n:
-  sourceCommit: 0389dd29e0827791ad9d2f6b8cda217c121f9c19
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
-
-{{HTMLSidebar}}
 
 **`dns-prefetch`** キーワードを {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性に指定すると、ユーザーがターゲットリソースのオリジンにあるリソースを必要としている可能性が高く、したがってブラウザーがそのオリジンの DNS 解決を先取りして実行することでユーザーの使い勝手が向上する可能性が高いというヒントをブラウザーに与えます。
 

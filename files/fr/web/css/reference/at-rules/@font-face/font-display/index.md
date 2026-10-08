@@ -3,7 +3,7 @@ title: Descripteur de règle CSS `font-display`
 short-title: font-display
 slug: Web/CSS/Reference/At-rules/@font-face/font-display
 l10n:
-  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
+  sourceCommit: 91e08923c809ca8deded3e3294f49bbe1a4a00b3
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-display`** pour la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-face")}} détermine comment une police est affichée en fonction de son état de téléchargement et de disponibilité.
@@ -55,11 +55,9 @@ La chronologie d'affichage de la police est basée sur un minuteur qui commence 
 
 ```css
 @font-face {
-  font-family: FonteExemple;
-  src:
-    url("/chemin/vers/fonts/example-font.woff") format("woff"),
-    url("/chemin/vers/fonts/example-font.eot") format("embedded-opentype");
-  font-weight: 400;
+  font-family: "ExampleFont";
+  src: url("/path/to/fonts/example-font.woff2") format("woff2");
+  font-weight: normal;
   font-style: normal;
   font-display: fallback;
 }

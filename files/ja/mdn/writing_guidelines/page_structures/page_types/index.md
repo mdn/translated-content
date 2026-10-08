@@ -123,7 +123,7 @@ MDN ページの種類を明確に識別するために、フロントマター�
 - [`count()` メソッド](/ja/docs/Web/API/IDBIndex/count)（[IDBIndex](/ja/docs/Web/API/IDBIndex) インターフェイス、[IndexedDB API](/ja/docs/Web/API/IndexedDB_API) の一部）
 - [capabilities プロパティ](/ja/docs/Web/API/VRDisplay/capabilities)（[VRDisplay](/ja/docs/Web/API/VRDisplay) インターフェイス、[WebVR API](/ja/docs/Web/API/WebVR_API) の一部）
 - [Request() コンストラクター](/ja/docs/Web/API/Request/Request)（[Request](/ja/docs/Web/API/Request) インターフェイス、[Fetch API](/ja/docs/Web/API/Fetch_API) の一部）
-- [vrdisplaypresentchange イベント](/ja/docs/Web/API/Window/vrdisplaypresentchange_event) ([WebVR API](/ja/docs/Web/API/WebVR_API) の一部、 [Window](/ja/docs/Web/API/Window) インターフェイスにぶら下がっている）
+- [vrdisplaypresentchange イベント](/ja/docs/Web/API/Window/vrdisplaypresentchange_event)（[WebVR API](/ja/docs/Web/API/WebVR_API) の一部、 [Window](/ja/docs/Web/API/Window) インターフェイスにぶら下がっている）
 
 #### テンプレート
 

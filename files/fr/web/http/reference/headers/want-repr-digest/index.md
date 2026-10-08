@@ -1,0 +1,65 @@
+---
+title: En-tête Want-Repr-Digest
+short-title: Want-Repr-Digest
+slug: Web/HTTP/Reference/Headers/Want-Repr-Digest
+l10n:
+  sourceCommit: 879be34803b4be7357ed5607ac90a7be413fb969
+---
+
+{{Glossary("request header", "L'en-tête de requête")}} et {{Glossary("response header", "de réponse")}} HTTP **`Want-Repr-Digest`** **indique** une préférence pour que le destinataire envoie un en-tête d'intégrité {{HTTPHeader("Repr-Digest")}} dans les messages associés à l'URI de la requête et aux métadonnées de la représentation.
+
+L'en-tête inclut les préférences d'algorithmes de hachage que le destinataire peut utiliser dans les messages suivants.
+Les préférences ne servent que d'indication, et le destinataire peut ignorer les choix d'algorithmes, ou les en-têtes d'intégrité dans leur ensemble.
+
+Certaines implémentations peuvent envoyer des en-têtes `Repr-Digest` non sollicités sans nécessiter un en-tête `Want-Repr-Digest` dans un message précédent.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Type d'en-tête</th>
+      <td>{{Glossary("Request header", "En-tête de requête")}}, {{Glossary("Response header", "En-tête de réponse")}}, {{Glossary("Representation header", "En-tête de représentation")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden request header", "En-tête de requête interdit")}}</th>
+      <td>Non</td>
+    </tr>
+  </tbody>
+</table>
+
+## Syntaxe
+
+```http
+Want-Repr-Digest: <algorithm>=<preference>
+Want-Repr-Digest: <algorithm>=<preference>, …, <algorithmN>=<preferenceN>
+```
+
+## Directives
+
+- `<algorithm>`
+  - : L'algorithme demandé pour créer un condensé de la représentation.
+    Seuls deux algorithmes de condensé enregistrés sont considérés comme sécurisés&nbsp;: `sha-512` et `sha-256`.
+    Les algorithmes de condensé enregistrés non sécurisés (anciens) sont&nbsp;: `md5`, `sha` (SHA-1), `unixsum`, `unixcksum`, `adler` (ADLER32) et `crc32c`.
+- `<preference>`
+  - : Un entier de 0 à 9 où `0` signifie «&nbsp;non acceptable&nbsp;», et les valeurs de `1` à `9` indiquent une préférence ascendante, relative et pondérée.
+    Contrairement aux versions antérieures des spécifications, le poids n'est _pas_ déclaré avec la [valeur de qualité](/fr/docs/Glossary/Quality_values) `q`.
+
+## Exemples
+
+```http
+Want-Repr-Digest: sha-512=8, sha-256=6, adler=0, sha=1
+Want-Repr-Digest: sha-512=10, sha-256=1, md5=0
+```
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+Cet en-tête n'a pas d'intégration dans les navigateurs définie par les spécifications («&nbsp;compatibilité des navigateurs&nbsp;» ne s'applique pas).
+Les développeur·euse·s peuvent définir et obtenir des en-têtes HTTP en utilisant `fetch()` afin de fournir un comportement d'implémentation spécifique à l'application.
+
+## Voir aussi
+
+- Les en-têtes de condensé {{HTTPHeader("Content-Digest")}}, {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Content-Digest")}}
+- Le guide du SDK [des signatures numériques pour les API <sup>(angl.)</sup>](https://developer.ebay.com/develop/guides/digital-signatures-for-apis) utilise les `Content-Digest` pour les signatures numériques dans les appels HTTP (developer.ebay.com)

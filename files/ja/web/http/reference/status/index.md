@@ -25,7 +25,7 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
   - : これは暫定レスポンスで、その時点までのすべてに問題がなく、クライアントはリクエストを継続してよい、またもしリクエストが完了している場合はレスポンスを無視してよいことを示します。
 - {{HTTPStatus(101, "101 Switching Protocols")}}
   - : このコードはクライアントからの {{HTTPHeader("Upgrade")}} リクエストヘッダーのレスポンスとして送信され、サーバーはプロトコルを切り替えていることを示します。
-- {{HTTPStatus(102, "102 Processing")}} {{deprecated_inline}}
+- `102 Processing` {{deprecated_inline}}
   - : このコードは {{Glossary("WebDAV")}} のコンテキストで使用され、サーバーはリクエストを受け取って処理しているが、まだレスポンスを提供できないことを示します。
 - {{HTTPStatus(103, "103 Early Hints")}}
   - : このステータスコードは、主に {{HTTPHeader("Link")}} ヘッダーと共に使用することを意図しており、サーバーがレスポンスを準備している間、ユーザーエージェントにリソースの[事前読み込み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)を開始させたり、ページがリソースを必要とする元のサーバーに[事前接続](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect)させたりします。
@@ -161,7 +161,7 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
   - : オリジンサーバーはリクエストが[条件付き](/ja/docs/Web/HTTP/Guides/Conditional_requests)になることを要求しています。
     このレスポンスは、クライアントがリソースの状態を {{HTTPMethod("GET")}} し、それを変更してサーバーに {{HTTPMethod("PUT")}} するまでの間に、第三者がサーバー上の状態を変更することで競合が発生する「更新の損失」の問題を防ぐためのものです。
 - {{HTTPStatus(429, "429 Too Many Requests")}}
-  - : ユーザーは一定の時間内に大量のリクエストを送信しました（{{Glossary("Rate_limit","レート制限" )}}。
+  - : ユーザーは一定の時間内に大量のリクエストを送信しました（{{Glossary("Rate_limit","レート制限")}}）。
 - {{HTTPStatus(431, "431 Request Header Fields Too Large")}}
   - : ヘッダーフィールドが大きすぎるため、サーバーはリクエストの処理を望みません。
     ヘッダーフィールドのサイズを削減した後に、リクエストを再送信できます。

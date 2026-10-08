@@ -37,7 +37,7 @@ VR ハードウェアに付随するゲームパッドには、２つの種類�
 
 ここではいくつかのコードを紹介します。まず、Gamepad API を使用して VR ゲームパッドへの基本的なアクセス方法を見ていきましょう。いくつかのおかしなニュアンスを心に留めておきましょう、それは後から調べる価値があるものです。
 
-シンプルな例を紹介します。-[vr-controller-basic-info](https://github.com/mdn/webvr-tests/blob/main/webvr/vr-controller-basic-info/index.html) のソースコード ([see it running live here also](https://mdn.github.io/webvr-tests/webvr/vr-controller-basic-info/)) を御覧ください。この例は VR ディスプレイやコンピューターと接続したゲームゲームパッドへ情報を出力するシンプルなものです。
+シンプルな例を紹介します。-[vr-controller-basic-info](https://github.com/mdn/webvr-tests/blob/main/webvr/vr-controller-basic-info/index.html) のソースコード ([see it running live here also](https://mdn.github.io/webvr-tests/webvr/vr-controller-basic-info/)) を御覧ください。この例は VR ディスプレイやコンピューターと接続したゲームパッドへ情報を出力するシンプルなものです。
 
 ### ディスプレイの情報を取得
 
@@ -83,11 +83,11 @@ function reportDisplays() {
 }
 ```
 
-この関数は最初にプロミスベースの {{domxref("Navigator.getVRDisplays()")}} メソッドを使用し、接続されたディスプレイを表す {{domxref("VRDisplay")}} オブジェクトを含む配列を使用して解決します。次に、各ディスプレイの {{domxref("VRDisplay.displayId")}} と {{domxref("VRDisplay.displayName")}} 値、およびそのディスプレイに関連付けられた {{domxref("VRCapabilities")}} オブジェクトに格納されている多くの有用な値が表示されます。これらのうち最も有益なのは {{domxref("VRCapabilities.hasOrientation", "hasOrientation")}} と {{domxref("VRCapabilities.hasPosition", "hasPosition")}} で、これにより機器が向きと位置のデータを返すことができるかどうかを検出し、それに応じてアプリを設定することができます。
+この関数は最初にプロミスベースの {{domxref("Navigator.getVRDisplays()")}} メソッドを使用し、接続されたディスプレイを表す {{domxref("VRDisplay")}} オブジェクトを含む配列を使用して解決します。次に、各ディスプレイの {{domxref("VRDisplay.displayId")}} と {{domxref("VRDisplay.displayName")}} 値、およびそのディスプレイに関連付けられた {{domxref("VRDisplayCapabilities")}} オブジェクトに格納されている多くの有用な値が表示されます。これらのうち最も有益なのは {{domxref("VRDisplayCapabilities.hasOrientation", "hasOrientation")}} と {{domxref("VRDisplayCapabilities.hasPosition", "hasPosition")}} で、これにより機器が向きと位置のデータを返すことができるかどうかを検出し、それに応じてアプリを設定することができます。
 
 この関数に含まれる最後の行は {{domxref("Window.setTimeout", "setTimeout()")}} 呼び出しで、 1 秒後に `reportGamepads()` 関数を実行します。なぜこのようなことが必要なのでしょうか？まず第一に、 VR コントローラーは関連する VR ヘッドセットがアクティブになって初めて準備が整います。そのため、`getVRDisplays()`が呼び出されてディスプレイ情報を返した後に、この関数を呼び出す必要があります。 2 つ目として、ゲームパッド API は WebVR API よりもずっと古く、プロミスベースではありません。後ほど説明しますが、`getGamepads()` メソッドは同期型で、`Gamepad` オブジェクトをすぐに返すだけです - コントローラーが情報を報告する準備ができるまで待つことはありません。少し待たないと、返された情報は正確ではないかもしれません（少なくとも、我々のテストではそうでした）。
 
-### ゲームゲームパッドの情報を取得
+### ゲームパッドの情報を取得
 
 `reportGamepads()` 関数は、このような構成になっています。
 
