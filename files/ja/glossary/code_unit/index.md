@@ -1,38 +1,19 @@
 ---
-title: Code unit (コード単位)
+title: Code unit
 slug: Glossary/Code_unit
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+**コードユニット**とは、文字エンコーディング（UTF-8 や UTF-16 など）で使用される基本的な構成要素です。文字エンコーディングは、Unicode の{{Glossary("code point", "コードポイント")}}を符号化するために、1 つ以上のコードユニットを使用します。
 
-**コード単位** とは、文字エンコーディングシステムで用いられる（UTF-8 や UTF-16 などの）基本的構成要素です。文字エンコーディングシステムは Unicode {{Glossary("code point","コードポイント")}}をエンコードするためにひとつもしくは複数のコード単位を用います。
+{{glossary("UTF-8")}} では、各コードポイントは 1 個から 4 個の 8 ビットコードユニットを使用して符号化されます。
 
-UTF-16 （JavaScript 文字列で用いられるエンコーディングシステム）では、コード単位は 16 ビットの値です。このことはつまり、文字列にインデックスを付けたり、文字列の長さを取得するためのオペレーションは、これらの 16 ビット単位で操作されることを意味します。これらの単位は我々が文字列と考えるものと常に 1 対 1 で関連付けるわけではありません。
-
-例えば、強調表示のような発音記号を含む文字列は、 2 つの Unicode コードポイントを用いて表されることがあります。
-
-```js
-const myString = "\u006E\u0303";
-console.log(myString); // ñ
-console.log(myString.length); // 2
-```
-
-また、 Unicode で定義されている全てのコードポイントが 16 ビットに収まるわけではないため、多くの Unicode コードポイントは _サロゲートペア_ と呼ばれる UTF-16 コード単位のペアでエンコードされています：
-
-```js
-const face = "🥵";
-console.log(face.length); // 2
-```
-
-JavaScript の {{jsxref("String")}} オブジェクトの {{jsxref("String/codePointAt", "codePointAt()")}} メソッドは、そのエンコードされた形から Unicode コードポイントを取得することができます。
-
-```js
-const face = "🥵";
-console.log(face.codePointAt(0)); // 129397
-```
+{{glossary("UTF-16")}} では、各コードポイントは 1 個または 2 個の 16 ビットコードユニットを使用して符号化されます。
 
 ## 関連情報
 
+- {{glossary("Code point", "コードポイント")}}
+- {{glossary("UTF-8")}}
+- {{glossary("UTF-16")}}
 - [Unicode encoding FAQ](https://www.unicode.org/faq/utf_bom.html)

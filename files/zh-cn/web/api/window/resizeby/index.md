@@ -11,7 +11,7 @@ slug: Web/API/Window/resizeBy
 
 ## 语法
 
-```plain
+```js-nolint
 window.resizeBy(xDelta, yDelta)
 ```
 

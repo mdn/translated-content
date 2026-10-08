@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5a2cea779777daaff451f21ca3b7f4c28a68de9e
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("String")}} 값의 **`blink()`** 메서드는 `<blink>`요소(`<blink>str</blink>`)에 해당 문자열을 집어넣은 문자열을 생성하여 해당 문자열을 깜빡이게 만듭니다.
 

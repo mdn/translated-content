@@ -292,11 +292,11 @@ Ball.prototype.update = function () {
 
 ## 參見
 
-- [Canvas 線上教學](/zh-TW/docs/Web/API/Canvas_API/Tutorial) — 2D canvas 初學者指南
+- [Canvas 線上教學](/zh-TW/docs/Web/API/Canvas_API/Tutorial)——2D canvas 初學者指南
 - [requestAnimationFrame()](/zh-TW/docs/Web/API/Window/requestAnimationFrame)
 - [2D 碰撞偵測](/zh-TW/docs/Games/Techniques/2D_collision_detection)
 - [3D 碰撞偵測](/zh-TW/docs/Games/Techniques/3D_collision_detection)
-- [只使用 JavaScript 的 2D 打磚塊遊戲](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — 2D 遊戲開發初學者的絕佳線上教學
-- [剖析器 (Phaser) 的 2D 打磚塊遊戲](/zh-TW/docs/Games/Tutorials/2D_breakout_game_Phaser) — 以 JavaScript 遊戲函式庫建構 2D 遊戲的基本概念
+- [只使用 JavaScript 的 2D 打磚塊遊戲](/zh-TW/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)——2D 遊戲開發初學者的絕佳線上教學
+- [剖析器 (Phaser) 的 2D 打磚塊遊戲](/zh-TW/docs/Games/Tutorials/2D_breakout_game_Phaser)——以 JavaScript 遊戲函式庫建構 2D 遊戲的基本概念
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

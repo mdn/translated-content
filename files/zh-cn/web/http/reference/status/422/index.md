@@ -10,7 +10,7 @@ HTTP 422 状态码表示服务器理解请求实体的内容类型，并且请�
 
 ## 状态码
 
-```plain
+```http
 422 Unprocessable Entity
 ```
 

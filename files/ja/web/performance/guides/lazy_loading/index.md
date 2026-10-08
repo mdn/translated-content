@@ -2,7 +2,7 @@
 title: 遅延読み込み
 slug: Web/Performance/Guides/Lazy_loading
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 8db892b3e7ca294621898441e7db2481e0e6d939
 ---
 
 **遅延読み込み** (Lazy loading) とは、リソースをノンブロッキング（クリティカルでない）ものとして識別し、必要なときだけこれらを読み込む戦略のことです。[クリティカルレンダリングパス](/ja/docs/Web/Performance/Guides/Critical_rendering_path)の長さを短縮する方法であり、ページのロード時間の短縮につながります。
@@ -56,13 +56,13 @@ JavaScript、CSS、HTML は小さな塊に分割して送信することがで�
 
 [link 要素](/ja/docs/Web/HTML/Reference/Elements/link) も参照してください。
 
-### 画像と iframe
+### 画像、iframe、動画、音声
 
-ウェブページには、データ使用量やページの読み込み速度に影響する画像がたくさん格納されていることがとてもよくあります。これらの画像のほとんどは画面外にあり（[クリティカルではない](/ja/docs/Web/Performance/Guides/Critical_rendering_path)）、それらを表示するためにはスクロールなど、ユーザーの操作を必要とします。
+ウェブページには、データ使用量やページの読み込み速度に影響する画像がたくさん格納されていることがとてもよくあります。これらの画像のほとんどは画面外にあり（[クリティカルではない](/ja/docs/Web/Performance/Guides/Critical_rendering_path)）、それらを表示するためにはスクロールなど、ユーザーの操作を必要とします。同様に、多くの iframe や動画、音声ファイルは、最初は画面外にあることがあります。
 
 #### loading 属性
 
-[`loading`](/ja/docs/Web/HTML/Reference/Elements/img#loading) 属性を {{HTMLElement("img")}} 要素に（または [`loading`](/ja/docs/Web/HTML/Reference/Elements/iframe#loading) 属性を {{HTMLElement("iframe")}} 要素に）設定することで、ユーザーが近くにスクロールするまで、画面に表示されている画像や iframe の読み込みを延期するように、ブラウザーに指示することができます。
+[`loading`](/ja/docs/Web/HTML/Reference/Elements/img#loading) 属性を {{HTMLElement("img")}}、{{HTMLElement("iframe")}}、{{HTMLElement("video")}}、{{HTMLElement("audio")}} 要素に設定すると、要素が画面外にある場合に、ユーザーがその付近までスクロールするまで、リンクされたリソースの読み込みを遅らせるようブラウザーに指示することができます。
 これにより、クリティカルでないリソースは必要な場合のみ読み込まれるようになり、ページの初期読み込みが高速化され、ネットワーク使用量が縮小する可能性があります。
 
 ```html
@@ -70,7 +70,7 @@ JavaScript、CSS、HTML は小さな塊に分割して送信することがで�
 <iframe loading="lazy" src="video-player.html" title="..."></iframe>
 ```
 
-`load` イベントは、積極的に読み込まれたコンテンツがすべて読み込まれたときに発行されます。このとき、{{Glossary("visual viewport", "視覚ビューポート")}}の範囲内にまだ読み込まれていない遅延読み込みされた画像または iframe があることは十分に考えられます（というか、あり得ます）。
+`load` イベントは、積極的に読み込まれたコンテンツがすべて読み込まれたときに発行されます。このとき、{{Glossary("visual viewport", "視覚ビューポート")}}の範囲内にまだ読み込まれていない遅延読み込みされた画像、iframe、動画、音声があることは十分に考えられます（というか、あり得ます）。
 
 指定された画像の読み込みが完了したかどうかは、論理型の {{domxref("HTMLImageElement.complete", "complete")}} プロパティの値を調べることで判断することができます。
 
@@ -80,10 +80,10 @@ JavaScript、CSS、HTML は小さな塊に分割して送信することがで�
 
 #### イベントハンドラー
 
-ブラウザーとの互換性が重要な場合、いくつかのオプションがあります。
+ブラウザーの互換性が重要な場合、いくつかのオプションがあります。
 
 - [交差オブザーバーのポリフィル](https://github.com/w3c/IntersectionObserver)
-- スクロール、リサイズ、方向転換イベントハンドラーのフォールバックで、特定の要素がビューポート内にあるかどうかを判断します。
+- スクロール、リサイズ、向きの変化イベントハンドラーで、特定の要素がビューポート内にあるかどうかを判断する代替処理を行う
 
 ## 仕様書
 
@@ -93,3 +93,4 @@ JavaScript、CSS、HTML は小さな塊に分割して送信することがで�
 
 - [Render blocking CSS](https://web.dev/articles/critical-rendering-path/render-blocking-css)
 - [Browser-level image lazy loading for the web](https://web.dev/articles/browser-level-image-lazy-loading)
+- [It's time to lazy-load offscreen iframes!](https://web.dev/articles/iframe-lazy-loading)

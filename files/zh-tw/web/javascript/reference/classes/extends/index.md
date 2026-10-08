@@ -34,7 +34,7 @@ console.log(new DateFormatter("August 19, 1975 23:15:30").getFormattedDate());
 
 ## 語法
 
-```plain
+```js-nolint
 class ChildClass extends ParentClass { ... }
 ```
 

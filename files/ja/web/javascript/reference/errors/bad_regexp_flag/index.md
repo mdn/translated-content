@@ -1,52 +1,59 @@
 ---
 title: 'SyntaxError: invalid regular expression flag "x"'
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
-
-JavaScript の例外 "invalid regular expression flag" は、正規表現リテラルにおいて 2 番目のスラッシュの後に定義されたフラグが、 `g`, `i`, `m`, `s`, `u`, `y` のどれでもないときに発生します。
+JavaScript の例外 "invalid regular expression flag" は、正規表現リテラルにおいて 2 番目のスラッシュの後に定義されたフラグが、 `g`, `i`, `m`, `s`, `u`, `y` のどれでもないときに発生します。また、式に有効なフラグが複数の場合や、[`u`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) フラグと [`v`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) フラグが同時に使用されている場合にも、この例外が発生する可能性があります。
 
 ## エラーメッセージ
 
-```js
-SyntaxError: Syntax error in regular expression (Edge)
-SyntaxError: invalid regular expression flag "x" (Firefox)
-SyntaxError: Invalid regular expression flags (Chrome)
+```plain
+SyntaxError: Invalid flags supplied to RegExp constructor 'x' (V8-based)
+SyntaxError: Invalid regular expression flags (V8-based)
+SyntaxError: invalid regular expression flag x (Firefox)
+SyntaxError: Invalid flags supplied to RegExp constructor. (Safari)
+SyntaxError: Invalid regular expression: invalid flags (Safari)
 ```
 
-## エラーの種類
+## エラー型
 
 {{jsxref("SyntaxError")}}
 
 ## エラーの原因
 
-コード内に、不正な正規表現フラグがあります。スラッシュで囲まれたパターンで構成される正規表現リテラルでは、フラグは 2 番目のフラグの後に定義されます。 {{jsxref("RegExp")}} オブジェクトのコンストラクター関数 (2 つ目の引数) で定義することもできます。正規表現フラグは個別に使うこともできれば、好きな順序で複数使うこともできますが、 ECMAScript では 6 つしかありません。
+正規表現に不正なフラグが含まれているか、有効なフラグが表現内で複数回使用されています。
 
-正規表現にフラグを含めるには、次の構文を使用します。
+有効な（許可されている）フラグは、`d`、`g`、`i`、`m`、`s`、`u`、`v`、`y` です。これらの詳細については、[正規表現 > フラグを使った高度な検索](/ja/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags)で解説されています。
 
-```js
-var re = /pattern/flags;
-```
-
-または、
-
-```js
-var re = new RegExp("pattern", "flags");
-```
-
-| フラグ | 説明                                                                                                          |
-| ------ | ------------------------------------------------------------------------------------------------------------- |
-| `g`    | グローバル検索                                                                                                |
-| i      | 大文字小文字を区別した検索                                                                                    |
-| m      | 複数行検索                                                                                                    |
-| s      | `.` で改行文字に一致できるようにする (ECMAScript 2018 で追加)                                                 |
-| u      | Unicode。パターンを Unicode コードポイントの並びとして扱う。                                                  |
-| y      | 対象の文字列の現在の位置から一致を探す "sticky" 検索。 {{jsxref("RegExp.sticky", "sticky")}} を見てください。 |
+[`u`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) フラグと [`v`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) フラグは相互に排他的であるため、同時に使用することはできません。それぞれの動作の違いについては、リファレンスを参照してください。
 
 ## 例
 
-有効な正規表現フラグは 6 つしかありません。
+スラッシュで囲まれたパターンで構成される正規表現リテラルでは、フラグは 2 つ目のスラッシュの後に定義されます。
+正規表現のフラグは、別個に、あるいは組み合わせて、任意の順序で使用できます。
+この構文は、正規表現リテラルを使用してフラグを宣言する方法を示しています。
+
+```js
+const re = /pattern/flags;
+```
+
+また、{{jsxref("RegExp")}} オブジェクトのコンストラクター関数（第二引数）でも定義することができます。
+
+```js
+const re = new RegExp("pattern", "flags");
+```
+
+こちらは、正しいフラグのみを使用している例です。
+
+```js example-good
+/foo/g;
+/foo/gims;
+/foo/uy;
+```
+
+次は、無効なフラグ `b`、`a`、`r` を使用する例です。
 
 ```js example-bad
 /foo/bar;
@@ -54,11 +61,11 @@ var re = new RegExp("pattern", "flags");
 // SyntaxError: invalid regular expression flag "b"
 ```
 
-正規表現を生成するつもりでなくても、 2 つのスラッシュを含む式は正規表現リテラルとして解釈されます。
+次のコードは、`W`、`e`、`b` が有効なフラグではないため、正しくありません。
 
 ```js example-bad
-let obj = {
-  url: /docs/Web
+const obj = {
+  url: /docs/Web,
 };
 
 // SyntaxError: invalid regular expression flag "W"
@@ -67,22 +74,11 @@ let obj = {
 文字列を生成する場合、文字列リテラルを生成するためには単一引用符、または二重引用符を追加します。
 
 ```js example-good
-let obj = {
+const obj = {
   url: "/docs/Web",
 };
 ```
 
-### 有効な正規表現フラグ
-
-JavaScript で使用できる 6 つの正規表現フラグについては、上述の表を見てください。
-
-```js example-good
-/foo/g;
-/foo/gims;
-/foo/uy;
-```
-
 ## 関連情報
 
-- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)
-- [XRegEx flags](https://xregexp.com/flags/) – regular expression library that provides four new flags (`n`, `s`, `x`, `A`)
+- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)ガイド

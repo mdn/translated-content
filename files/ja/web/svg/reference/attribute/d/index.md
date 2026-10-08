@@ -2,7 +2,7 @@
 title: d
 slug: Web/SVG/Reference/Attribute/d
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 **`d`** 属性は描かれるパスを定義します。
@@ -52,7 +52,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -65,7 +65,7 @@ svg {
 ## CSS プロパティとして d を使用
 
 `d` はプレゼンテーション属性であるため、 CSS を使用して変更することもできます。
-このプロパティは、 [`path()`](/ja/docs/Web/CSS/Reference/Values/basic-shape/path) または `none` のいずれかをとります。
+このプロパティは、{{cssxref("basic-shape/path")}} または `none` のいずれかをとります。
 
 以下の例では、要素の上にマウスを置いた際に、新しいパスを適用する方法を示しています。
 新しいパスは古いパスと同じですが、ハートを横切る線が追加されます。
@@ -775,14 +775,14 @@ _楕円円弧曲線_ は楕円の一部として定義される曲線です。�
             <code><var>angle</var></code> は X 軸に対する楕円の角度（度単位）です。
           </li>
           <li>
-            <code><var>large-arc-flag</var></code> と <code><var>sweep-flag</var></code> は、他の引数によって描画可能な 4 つの可能な円弧のうち、どの円弧を描くかを選択可能にします。
+            <code><var>large-arc-flag</var></code> と <code><var>sweep-flag</var></code> を使用すると、描画される円弧を選択することができます。他の引数を使用することで、4 種類の円弧を描画することが可能です。
             <ul>
               <li>
                 <code><var>large-arc-flag</var></code> では大きい円弧 (<code>1</code>)
-                を描くか、小さい円弧 (<code>0</code>) を描くかを選択し、
+                か、小さい円弧 (<code>0</code>) かを選択し、
               </li>
               <li>
-                <code><var>sweep-flag</var></code> では時計回りの円弧 (<code>1</code>) を描くか、反時計周りの円弧 (<code>0</code>) を描くかを選択します。
+                <code><var>sweep-flag</var></code> では時計回りの円弧 (<code>1</code>) か、反時計周りの円弧 (<code>0</code>) かを選択します。
               </li>
             </ul>
           </li>
@@ -811,7 +811,7 @@ _楕円円弧曲線_ は楕円の一部として定義される曲線です。�
             <code><var>angle</var></code> は X 軸に対する楕円の角度（度単位）です
           </li>
           <li>
-            <code><var>large-arc-flag</var></code> と <code><var>sweep-flag</var></code> は、他の引数によって描画可能な 4 つの可能な円弧のうち、どの円弧を描くかを選択可能にします。
+            <code><var>large-arc-flag</var></code> と <code><var>sweep-flag</var></code> を使用すると、描画される円弧を選択することができます。他の引数を使用することで、4 種類の円弧を描画することが可能です。
             <ul>
               <li>
                 <code><var>large-arc-flag</var></code> では大きい円弧 (<code>1</code>) を描くか、小さい円弧 (<code>0</code>) を描くかを選択し,

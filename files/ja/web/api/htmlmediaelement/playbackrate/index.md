@@ -38,5 +38,5 @@ console.log(obj.playbackRate); // 予想される結果: 1
 ## 関連情報
 
 - {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.playbackRate` プロパティを定義しているインターフェイス
-- 負の `playbackRate` に対応するバグ報告（[Firefox](https://bugzil.la/1468019) および [Blink](https://crbug.com/40410591)（Chrome など）
+- 負の `playbackRate` に対応するバグ報告（[Firefox](https://bugzil.la/1468019) および [Blink](https://crbug.com/40410591)（Chrome など））
 - The Web Hypertext Application Technology Working Group (WHATWG) [issue to require support for negative `playbackRate`](https://github.com/whatwg/html/issues/3754)

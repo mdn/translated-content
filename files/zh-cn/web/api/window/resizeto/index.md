@@ -11,7 +11,7 @@ slug: Web/API/Window/resizeTo
 
 ## 语法
 
-```plain
+```js-nolint
 window.resizeTo(aWidth, aHeight)
 ```
 

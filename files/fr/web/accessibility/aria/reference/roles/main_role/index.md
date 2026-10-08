@@ -25,7 +25,7 @@ En classifiant et en étiquetant les sections d'une page, les informations struc
 
 Il ne doit y avoir qu'un seul rôle de repère `main` par document.
 
-L'élément {{HTMLElement("main")}} a un rôle de `main`. Les développeur·euse·s devraient utiliser le HTML sémantique — dans ce cas {{HTMLElement("main")}} — plutôt que d'utiliser l'ARIA.
+L'élément {{HTMLElement("main")}} a un rôle de `main`. Les développeur·euse·s doivent utiliser le HTML sémantique — dans ce cas {{HTMLElement("main")}} — plutôt que d'utiliser l'ARIA.
 
 ### Propriétés, états et rôles ARIA associés
 
@@ -33,7 +33,7 @@ L'élément {{HTMLElement("main")}} a un rôle de `main`. Les développeur·euse
   - : L'attribut `aria-owns` établit des relations dans la couche d'accessibilité qui ne sont pas présentes dans le DOM. Les documents et les applications peuvent être imbriqués dans le DOM, ce qui peut entraîner la présence de plusieurs éléments principaux en tant que descendants du DOM. Si tel est le cas, incluez `aria-owns` pour identifier la relation du principal à son ancêtre document ou application.
 
 - [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou `aria-labelledby`
-  - : Identifiez le nom accessible avec [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) si un en-tête visible est présent. Sinon, inclure un [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) peut être utile pour orienter les utilisateur·ice·s de technologies d'assistance, en particulier dans les applications à page unique où les changements de contenu principal se produisent sans générer d'événement de chargement de page.
+  - : Identifiez le nom accessible avec [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) si un en-tête visible est présent. Sinon, inclure un [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) peut être utile pour orienter les utilisateur·ice·s de technologies d'assistance, en particulier dans les applications à page unique où les changements de contenu principal se produisent sans générer d'évènement de chargement de page.
 
 ## Exemple
 

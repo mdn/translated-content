@@ -1,12 +1,25 @@
 ---
 title: <animate>
 slug: Web/SVG/Reference/Element/animate
-original_slug: Web/SVG/Element/animate
+l10n:
+  sourceCommit: 3064cbe8212ea919874fb21120a89657afccba25
 ---
 
-L'élément SVG **`<animate>`** permet d'animer un attribut d'un élément au fil du temps.
+L'élément [SVG](/fr/docs/Web/SVG) **`<animate>`** fournit un moyen d'animer un attribut d'un élément au fil du temps.
 
-## Exemple
+## Contexte d'utilisation
+
+{{SVGInfo}}
+
+## Attributs
+
+Cet élément n'inclut que les attributs universels.
+
+## Interface DOM
+
+Cet élément implémente l'interface {{DOMxRef("SVGAnimateElement")}}.
+
+## Exemples
 
 ```css hidden
 html,
@@ -30,65 +43,19 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('', 150, '100%')}}
+{{EmbedLiveSample("Exemples", 150, "100%")}}
 
-## Attributs
+## Problèmes d'accessibilité
 
-### Attributs d'animation
+Les animations clignotantes et scintillantes peuvent poser problème aux personnes ayant des préoccupations cognitives telles que le trouble déficitaire de l'attention avec hyperactivité (<abbr>TDAH</abbr>). De plus, certains types de mouvements peuvent déclencher des troubles vestibulaires, l'épilepsie, la migraine et la sensibilité scotopique.
 
-- [Attribut pour le minutage d'une animation](/fr/docs/Web/SVG/Reference/Attribute#timing_de_lanimation)
-  - [`begin`](/fr/docs/Web/SVG/Attribute/begin)
-  - [`dur`](/fr/docs/Web/SVG/Attribute/dur)
-  - [`end`](/fr/docs/Web/SVG/Attribute/end)
-  - [`min`](/fr/docs/Web/SVG/Attribute/min)
-  - [`max`](/fr/docs/Web/SVG/Attribute/max)
-  - [`restart`](/fr/docs/Web/SVG/Attribute/restart)
-  - [`repeatCount`](/fr/docs/Web/SVG/Attribute/repeatCount)
-  - [`repeatDur`](/fr/docs/Web/SVG/Attribute/repeatDur)
-  - [`fill`](/fr/docs/Web/SVG/Reference/Attribute/fill)
-- [Attributs de valeur pour une animation](/fr/docs/Web/SVG/Reference/Attribute#valeurs_de_lanimation)
-  - [`calcMode`](/fr/docs/Web/SVG/Attribute/calcMode)
-  - [`values`](/fr/docs/Web/SVG/Attribute/values)
-  - [`keyTimes`](/fr/docs/Web/SVG/Attribute/keyTimes)
-  - [`keySplines`](/fr/docs/Web/SVG/Attribute/keySplines)
-  - [`from`](/fr/docs/Web/SVG/Attribute/from)
-  - [`to`](/fr/docs/Web/SVG/Attribute/to)
-  - [`by`](/fr/docs/Web/SVG/Attribute/by)
-- [Autres attributs relatifs aux animations](/fr/docs/Web/SVG/Reference/Attribute#attributs_danimation)
-  - [`attributeName`](/fr/docs/Web/SVG/Attribute/attributeName)
-  - [`additive`](/fr/docs/Web/SVG/Attribute/additive)
-  - [`accumulate`](/fr/docs/Web/SVG/Attribute/accumulate)
-- [Attributs pour les évènements relatifs aux animations](/fr/docs/Web/SVG/Reference/Attribute#événements_danimation)
-  - [`onbegin`](/fr/docs/Web/SVG/Attribute/onbegin)
-  - [`onend`](/fr/docs/Web/SVG/Attribute/onend)
-  - [`onrepeat`](/fr/docs/Web/SVG/Attribute/onrepeat)
+Considérez la possibilité de fournir un mécanisme pour mettre en pause ou désactiver l'animation, ainsi que d'utiliser la [Requête Média pour le Mouvement Réduit](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) ou l'équivalent [d'indice client de l'agent utilisateur](/fr/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} afin de créer une expérience complémentaire pour les utilisateur·ice·s ayant exprimé une préférence pour l'absence d'animations.
 
-### Attributs universels
-
-- [Attributs fondamentaux](/fr/docs/Web/SVG/Reference/Attribute)
-  - [`id`](/fr/docs/Web/SVG/Attribute/id)
-- [Attributs de mise en forme](/fr/docs/Web/SVG/Reference/Attribute)
-  - [`class`](/fr/docs/Web/SVG/Attribute/class)
-  - [`style`](/fr/docs/Web/SVG/Reference/Attribute/style)
-- [Attributs relatifs aux évènements](/fr/docs/Web/SVG/Reference/Attribute#attributs_dévénement)
-  - [Attributs pour les évènements universels](/fr/docs/Web/SVG/Reference/Attribute#attributs_dévénement_globaux)
-  - [Attributs pour les évènements des éléments du document](/fr/docs/Web/SVG/Reference/Attribute#attributs_dévénement_des_éléments_du_document)
-
-## Notes d'utilisation
-
-Cet élément implémente l'interface [`SVGAnimateElement`](/fr/docs/Web/API/SVGAnimateElement).
-
-## Accessibilité
-
-Les animations de clignotement ou de flash peuvent être problématiques pour les personnes avec des troubles de l'attention. De plus, certains types de mouvement peuvent déclencher des troubles vestibulaires, des crises d'épilepsie, des migraines ou une sensibilité scotopique.
-
-Veillez à fournir un mécanisme pour suspendre ou désactiver les animations, par exemple en utilisant [la caractéristique média `@prefers-reduced-motion`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) pour proposer une expérience alternative aux personnes qui ont exprimé une préférence pour l'absence d'animations.
-
-- [Concevoir des animations web plus sûres, tenant compte de la sensibilité aux mouvements, un article <i lang="en">A List Apart</i> (en anglais)](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
-- [Une introduction aux requêtes média pour la réduction des mouvements sur CSS-Tricks (en anglais)](https://css-tricks.com/introduction-reduced-motion-media-query/)
-- [Conception adaptative et gestion du mouvement sur le blog WebKit (en anglais)](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [Guide MDN pour la compréhension de la règle 2.2 du WCAG](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
-- [Comprendre le critère de réussite 2.2.2, un guide du W3C pour la compréhension de WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
+- [Concevoir des animations web plus sûres pour la sensibilité au mouvement · Un article A List Apart <sup>(angl.)</sup>](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
+- [Une introduction à la requête média pour le mouvement réduit | CSS-Tricks <sup>(angl.)</sup>](https://css-tricks.com/introduction-reduced-motion-media-query/)
+- [Design réactif pour le mouvement | WebKit <sup>(angl.)</sup>](https://webkit.org/blog/7551/responsive-design-for-motion/)
+- [Comprendre les WCAG sur le MDN, explications de la règle 2.2](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#règle_2.2_—_temps_suffisant_donner_aux_utilisateurs_et_utilisatrices_assez_de_temps_pour_lire_et_utiliser_le_contenu)
+- [Comprendre le critère de succès 2.2.2 | Comprendre le WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
 ## Spécifications
 

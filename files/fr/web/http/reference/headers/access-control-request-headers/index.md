@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`Access-Control-Request-Headers`** est utilisé par les navigateurs lors de l'émission d'une {{Glossary("preflight request", "requête préliminaire")}} pour indiquer au serveur quels [en-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers) le client pourrait envoyer lors de la requête réelle (par exemple avec {{DOMxRef("Window/fetch", "fetch()")}} ou {{DOMxRef("XMLHttpRequest.setRequestHeader()")}}). L'en-tête côté serveur complémentaire {{HTTPHeader("Access-Control-Allow-Headers")}} répondra à cet en-tête côté navigateur.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Access-Control-Request-Headers`** est utilisé par les navigateurs lors de l'émission d'une {{Glossary("preflight request", "requête préliminaire")}} pour indiquer au serveur quels [en-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers) le client peut envoyer lors de la requête réelle (par exemple avec {{DOMxRef("Window/fetch", "fetch()")}} ou {{DOMxRef("XMLHttpRequest.setRequestHeader()")}}). L'en-tête côté serveur complémentaire {{HTTPHeader("Access-Control-Allow-Headers")}} répond à cet en-tête côté navigateur.
 
 <table class="properties">
   <tbody>

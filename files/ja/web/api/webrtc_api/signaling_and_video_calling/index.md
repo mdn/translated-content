@@ -350,7 +350,7 @@ The first three of these event handlers are required; you have to handle them to
   - : This handler for the {{domxref("RTCPeerConnection.track_event", "track")}} event is called by the local WebRTC layer when a track is added to the connection. This lets you connect the incoming media to an element to display it, for example. See [Receiving new streams](#receiving_new_streams) for details.
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "onnegotiationneeded")}}
   - : This function is called whenever the WebRTC infrastructure needs you to start the session negotiation process anew. Its job is to create and send an offer, to the callee, asking it to connect with us. See [Starting negotiation](#starting_negotiation) to see how we handle this.
-- {{domxref("RTCPeerConnection.removetrack_event", "onremovetrack")}}
+- {{domxref("MediaStream/removetrack_event", "onremovetrack")}}
   - : This counterpart to `ontrack` is called to handle the {{domxref("MediaStream/removetrack_event", "removetrack")}} event; it's sent to the `RTCPeerConnection` when the remote peer removes a track from the media being sent. See [Handling the removal of tracks](#handling_the_removal_of_tracks).
 - {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "oniceconnectionstatechange")}}
   - : The {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} event is sent by the ICE layer to let you know about changes to the state of the ICE connection. This can help you know when the connection has failed, or been lost. We'll look at the code for this example in [ICE connection state](#ice_connection_state) below.
@@ -691,7 +691,7 @@ Another obvious improvement would be to add a "ringing" feature, so that instead
 - [WebRTC API](/ja/docs/Web/API/WebRTC_API)
 - [ウェブメディア技術](/ja/docs/Web/Media)
 - [Guide to media types and formats on the web](/ja/docs/Web/Media/Guides/Formats)
-- [目エディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
 - [メディア能力 API](/ja/docs/Web/API/Media_Capabilities_API)
 - [MediaStream 州力 API](/ja/docs/Web/API/MediaStream_Recording_API)
 - The [Perfect Negotiation](/ja/docs/Web/API/WebRTC_API/Perfect_negotiation) pattern

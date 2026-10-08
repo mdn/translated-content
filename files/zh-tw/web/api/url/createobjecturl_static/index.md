@@ -13,7 +13,7 @@ slug: Web/API/URL/createObjectURL_static
 
 ## 語法
 
-```plain
+```js-nolint
 objectURL = URL.createObjectURL(blob);
 ```
 

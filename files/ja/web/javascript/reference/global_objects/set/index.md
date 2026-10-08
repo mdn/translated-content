@@ -139,7 +139,7 @@ interface GPUSupportedFeatures {
 };
 ```
 
-`Set` 風オブジェクトは、読み取り専用か読み書き可能かのどちらかです（上記の IDL で `readonly` キーワードを確認してください。
+`Set` 風オブジェクトは、読み取り専用か読み書き可能かのどちらかです（上記の IDL で `readonly` キーワードを確認してください）。
 
 - 読み取り専用の `Set` 風オブジェクトには {{jsxref("Set/size", "size")}}, and the methods: {{jsxref("Set/entries", "entries()")}}, {{jsxref("Set/forEach", "forEach()")}}, {{jsxref("Set/has", "has()")}}, {{jsxref("Set/keys", "keys()")}}, {{jsxref("Set/values", "values()")}}, [`Symbol.iterator()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) の各メソッドがあります。
 - 読み書き可能な `Set` 風オブジェクトには、それに加えて {{jsxref("Set/clear", "clear()")}}, {{jsxref("Set/delete", "delete()")}}, {{jsxref("Set/add", "add()")}} の各メソッドがあります。

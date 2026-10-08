@@ -22,11 +22,11 @@ console.log(buffer.maxByteLength);
 
 ## Description
 
-La propriété `maxByteLength` est un accesseur dont le mutateur associé vaut `undefined`, ce qui signifie que cette propriété est en lecture seule. La valeur est déterminée lors de la construction du tableau, via l'option `maxByteLength` du constructeur {{JSxRef("ArrayBuffer/ArrayBuffer", "ArrayBuffer()")}}, et ne peut pas être modifiée.
+La propriété `maxByteLength` est un accesseur dont le mutateur associé vaut `undefined`, ce qui signifie que cette propriété est en lecture seule. La valeur est déterminée lors de la construction du tableau, avec l'option `maxByteLength` du constructeur {{JSxRef("ArrayBuffer/ArrayBuffer", "ArrayBuffer()")}}, et ne peut pas être modifiée.
 
-Cette propriété retourne 0 si cet `ArrayBuffer` a été détaché. Si cet `ArrayBuffer` a été construit sans valeur `maxByteLength` définie, cette propriété retourne une valeur égale à celle de la propriété {{JSxRef("ArrayBuffer/byteLength", "byteLength")}} de l'`ArrayBuffer`.
+Cette propriété retourne 0 si cet `ArrayBuffer` a été détaché. Si cet `ArrayBuffer` a été construit sans valeur `maxByteLength` définie, cette propriété retourne une valeur égale à celle de la propriété {{JSxRef("ArrayBuffer/byteLength", "byteLength")}} de `ArrayBuffer`.
 
-## Examples
+## Exemples
 
 ### Utiliser `maxByteLength`
 
@@ -38,15 +38,15 @@ const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
 buffer.maxByteLength; // 16
 ```
 
-## Specifications
+## Spécifications
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
 {{Compat}}
 
-## See also
+## Voir aussi
 
 - L'objet natif {{JSxRef("ArrayBuffer")}}
 - La propriété {{JSxRef("ArrayBuffer.prototype.byteLength")}}

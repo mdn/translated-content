@@ -24,7 +24,7 @@ console.log(getFee(null));
 
 ## 語法
 
-```plain
+```js-nolint
 condition ? exprIfTrue : exprIfFalse
 ```
 

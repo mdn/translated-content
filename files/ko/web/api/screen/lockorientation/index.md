@@ -3,7 +3,7 @@ title: Screen.lockOrientation
 slug: Web/API/Screen/lockOrientation
 ---
 
-{{APIRef("CSSOM View")}}{{Deprecated_header}}
+{{APIRef("CSSOM View")}}
 
 `lockOrientation` 함수는 지정된 방향으로 화면을 고정시킨다.
 

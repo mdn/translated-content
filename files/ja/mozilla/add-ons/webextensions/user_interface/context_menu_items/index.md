@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 
 ![Example of content menu items added by a WebExtension, from the context-menu-demo example](context_menu_example.png)
 
-このオプションは、特定のブラウザーやウェブページのコンテキストに関連する機能を公開するために使用します。例えば、ユーザーが画像をクリックしたときにグラフィックエディターを開く機能を表示したり、ページの一部が選択されたときに、ページの内容を保存する機能を提供したりすることができます。メニューには、ただのメニュー項目、チェックボックス項目、ラジオボタングループ、セパレーターを追加することができます。 {{WebExtAPIRef("contextMenus.create")}} を使ってコンテキストメニュー項目を追加すると、すべてのブラウザータブに表示されますが、 {{WebExtAPIRef("contextMenus.remove")}} で削除して非表示にすることが可能です。
+このオプションは、特定のブラウザーやウェブページのコンテキストに関連する機能を公開するために使用します。例えば、ユーザーが画像をクリックしたときにグラフィックエディターを開く機能を表示したり、ページの一部が選択されたときに、ページの内容を保存する機能を提供したりすることができます。メニューには、ただのメニュー項目、チェックボックス項目、ラジオボタングループ、セパレーターを追加することができます。 {{WebExtAPIRef("menus.create")}} を使ってコンテキストメニュー項目を追加すると、すべてのブラウザータブに表示されますが、 {{WebExtAPIRef("menus.remove")}} で削除して非表示にすることが可能です。
 
 対応しているコンテキストのすべての一覧は {{WebExtAPIRef("menus.ContextType")}} にあり、ブラウザー UI のブックマーク項目など、ウェブページ外のコンテキストも含まれます。例えば、"[Open bookmark in Container Tab](https://github.com/Rob--W/bookmark-container-tab)" 拡張機能は、ユーザーがブックマーク URL を新しいコンテナータブで開くことを可能にするメニュー項目を追加します。
 
@@ -17,7 +17,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 
 ## コンテキストメニュー項目の指定
 
-コンテキストメニューを、 {{WebExtAPIRef("contextMenus")}} API を使ってブログラムから管理できます。しかし、この API の恩恵を受けるには、 manifest.json にて `contextMenus` 権限を要求する必要があります。
+コンテキストメニューを、 {{WebExtAPIRef("contextMenus")}} API を使ってプログラムから管理できます。しかし、この API の恩恵を受けるには、 manifest.json にて `contextMenus` 権限を要求する必要があります。
 
 ```json
 "permissions": ["contextMenus"]

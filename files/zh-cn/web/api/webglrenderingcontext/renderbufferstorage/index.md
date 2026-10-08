@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/renderbufferStorage
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.renderbufferStorage(target, internalFormat, width, height);
 ```
 

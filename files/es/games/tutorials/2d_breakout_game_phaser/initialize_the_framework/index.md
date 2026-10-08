@@ -73,6 +73,6 @@ Aquí está el código fuente completo de la primera lección, ejecutándose en 
 
 ## Pasos siguientes
 
-Ahora hemos configurado el HTML básico y aprendido un poco sobre la inicialización de Phaser, continuemos con la segunda lección y aprendamos sobre [scaling](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling).
+Ahora hemos configurado el HTML básico y aprendido un poco sobre la inicialización de Phaser, continuemos con la segunda lección y aprendamos sobre [scaling](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework).
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Scaling")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework")}}

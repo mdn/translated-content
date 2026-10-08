@@ -1,16 +1,19 @@
 ---
-title: HTML `<template>` コンテンツテンプレート要素
+title: "`<template>` コンテンツテンプレート要素 (HTML)"
 short-title: <template>
 slug: Web/HTML/Reference/Elements/template
 l10n:
-  sourceCommit: 29e6ba9d844b835a1f00346ef1a78fa5d9e7c1a8
+  sourceCommit: a447d93f8c264d39c49e9f465ad780a81e92ed71
 ---
 
-**`<template>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("HTML")}} のフラグメントを保持し、後で JavaScript を使用して使用したり、シャドウ DOM の中に直接生成したりするためのメカニズムとして機能します。
+**`<template>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("HTML")}} フラグメントを保持するための仕組みとして機能します。これらのフラグメントは、後で JavaScript を通じて使用できます。また、即座に生成されてシャドウ DOM に挿入されます。あるいは、`<template for="..." >` を使用して、{{glossary("Out_of_order_patching", "順不同パッチ処理")}}で使用できます。
 
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+
+- `for` {{experimental_inline}}
+  - : `for` 属性は、`<template for="...">` による順不同パッチ処理で使用され、同等の `<?start id="...">` または `<?marker "...">` マーカーと照合されます。詳細は、[順不同パッチ処理の節](#順不同パッチ処理)および[例の節](#例)を参照してください。
 
 - `shadowrootmode`
   - : 親要素の[シャドウルート](/ja/docs/Glossary/Shadow_tree)を生成します。
@@ -72,7 +75,7 @@ l10n:
 
 `<template>` 要素の構文解析の仕組み上、テンプレート内の `<html>`、`<head>`、`<body>` の開始タグおよび終了タグは、すべてパーサーから構文エラーとして無視されます。したがって、`<template><head><title>Test</title></head></template>` は `<template><title>Test</title></template>` と同等です。
 
-`<template>` 要素の用途は主に 2 つあります。
+`<template>` 要素の用途は主に 3 つあります。
 
 ### テンプレート文書フラグメント
 
@@ -92,6 +95,26 @@ l10n:
 同様に、宣言的シャドウルートが複数ある場合、最初のシャドウルートのみが {{domxref("ShadowRoot")}} で置き換えられ、それ以降は {{domxref("HTMLTemplateElement")}} オブジェクトとして解釈できます。
 
 `shadowroot` という接頭辞の付いたその他の属性を使用すると、スロットの割り当て方法を制御するなど、`ShadowRoot` を宣言的にカスタマイズすることができます。
+
+### 順不同パッチ処理
+
+> [!NOTE]
+> この用途はまだ実験段階であり、対応しているブラウザーは限られています。
+> ブラウザーの対応状況については、[ブラウザーの互換性](#ブラウザーの互換性)の表をご覧ください。
+
+従来、HTML は順序通りに配信され、上から下へと読み込まれ、処理され、表示されます。この順序を変更するには、CSS を使って要素を非表示にしたり並び替えたりするか、JavaScript で HTML によって生成された DOM を後から更新することができます。しかし、多くのページは複数の部分で構成されており、それらはレンダリングの準備が整う時点が異なったり、ユーザーに早めに配信すべき重要な部分であったりする場合があります。
+
+`<template>` 要素を使用すると、HTML の{{glossary("Out_of_order_patching", "順不同パッチ処理")}}配信を行うことができます。これは、[処理命令](/ja/docs/Web/API/ProcessingInstruction)マーカーを `<template>` 要素のコンテンツに置き換えることを指します（**パッチ処理**とも呼ばれます）。
+
+例えば、`<?marker name="my-identifier">` という処理命令マーカーは、HTML のかなり後方に記述された `<template for="my-identifier">` 要素のコンテンツでパッチを当てることができます。詳細は、[パッチ処理における `<template for>` の使用](#using_template_for_for_patching) の例を参照してください。
+
+`<?marker>` 処理命令マーカーに加え、`<?start>` と `<?end>` のペアを使用して一時的なコンテンツを囲むことができます（例えば：`<?start name="my-identifier">読み込み中...<?end>`）。このコンテンツは、`<template for="my-identifier">` が処理され、セクション全体が置き換えられるまで一時的に表示されます。[範囲パッチ処理における `<template for>` の使用](#using_template_for_for_range_patching) の例を参照してください。
+
+HTML で記述する場合、処理命令は末尾に `?` を付けても付けなくても可能です。指定されていない場合は、ブラウザーが DOM を解釈する際に `?` を追加します。したがって、`<?start?>` と `<?start>` の両方が有効であり、どちらも `<?start?>` として構文解析されます。一方、XML はより厳格な仕様となっており、末尾に `?` を付けることが要求されます。
+
+`for` 属性が、マーカー処理命令の `name` のいずれとも一致しない場合、`<template>` のコンテンツは DOM 内で非表示のままとなり、どのパッチでも使用されません。
+
+要素が DOM の無関係な部分を更新してしまうのを防ぐため、`<template for="...">` 要素は、親要素である `<template>` の DOM ツリー内にあるマーカーに対してのみパッチを適用できます。唯一の例外は、`<body>` 要素の直接の子要素である `<template>` 要素です。これらは `<head>` 要素に対してもパッチを適用することができるため、`<title>` やその他の `<head>` 要素の更新が可能になります。
 
 ## 例
 
@@ -210,7 +233,7 @@ document
 
 {{EmbedGHLiveSample("dom-examples/shadow-dom/shadowrootmode/scoping.html", "", "120")}}
 
-### フォーカスを譲渡を伴う宣言的シャドウ DOM
+### フォーカスの譲渡を伴う宣言的シャドウ DOM
 
 この例では、`shadowrootdelegatesfocus` を宣言的に作成したシャドウルートに適用し、フォーカスにどのような効果があるかを示します。
 
@@ -495,6 +518,125 @@ container.appendChild(secondClone);
 
 {{EmbedLiveSample(' Data on the DocumentFragment is not cloned')}}
 
+### `<template for>` を使用してパッチ処理をする
+
+この例では、`<?marker name="placeholder">` 処理命令をプレースホルダーとして使用し、後で `<template for="placeholder">` を使ってコンテンツを埋め込んでいます。
+
+```html-nolint
+<body>
+  <div>
+    <?marker name="placeholder">
+  </div>
+  ...
+  <template for="placeholder">Lorem Ipsum...</template>
+  ...
+</body>
+```
+
+これにより、最初は空の `<div>` がレンダリングされます。その後、`<template>` 要素が構文解析・処理されると、次のように更新されます。
+
+```html-nolint
+  <div>
+    Lorem Ipsum...
+  </div>
+```
+
+### `<template for>` を使用して範囲パッチ処理する
+
+この例では、`<?start>` および `<?end>` 処理命令を使用してプレースホルダーのコンテンツを範囲指定しています。このコンテンツは最初に表示され、その後 `<template for>` のコンテンツに置き換えられます。
+
+```html-nolint
+<body>
+  <div>
+    <?start name="placeholder">
+    読み込み中...
+    <?end>
+  </div>
+  ...
+  <template for="placeholder">Lorem Ipsum...</template>
+  ...
+</body>
+```
+
+最初は、`<div>` が `読み込み中...` というプレースホルダーコンテンツと共に表示されます。その後、`<template>` が構文解析・処理されると、次のように更新されます。
+
+```html-nolint
+  <div>
+    Lorem Ipsum...
+  </div>
+```
+
+この例では、処理命令には子要素や入れ子がないことも示しています。`<?start>` および `<?end>` 処理命令は、`<template for>` との関連性の意味では関連付けられてはいますが、別個の[ノード](/ja/docs/Web/API/Node)であり、開始タグや終了タグではありません。したがって、これらには `読み込み中...` というコンテンツが子要素として含まれているわけではありません（インデントがないことからもわかります）。
+
+### `<template for>` を使用して `<head>` 要素にパッチ処理する
+
+この例は、`<body>` 要素の直接の子要素である `<template for>` 要素が、`<head>` のマーカーにパッチを適用できることを示しています。
+
+```html-nolint
+<head>
+  ...
+  <?start name="title"><title>読み込み中...</title><?end>
+  <?start name="meta-description"><meta name="description" contents="読み込み中..."><?end>
+  ...
+</head>
+<body>
+  ...
+  <template for="title"><title>このページの実際のタイトル</title></template>
+  <template for="meta-description"><meta name="description" contents="これは意味のある説明です..."></template>
+  ...
+</body>
+```
+
+`<template>` 要素の構文解析が完了すると、次のような結果になります。
+
+```html-nolint
+<head>
+  ...
+  <title>このページの実際のタイトル</title>
+  <meta name="description" contents="これは意味のある説明です...">
+  ...
+</head>
+<body>
+  ...
+</body>
+```
+
+### `<template for>` にマーカーを記述して、後でコンテンツにパッチを当て直すことができるようにする
+
+`<template for>` 要素の内部にマーカーを同時に挿入して、新しいプレースホルダーを作成することで、同じコンテンツを複数回パッチ適用することも可能になります。既存の `name` 属性は再利用できます。
+
+例えば、`<template for>` を使って{{glossary("SPA", "シングルページアプリケーション (SPA)")}} を構築する場合、それぞれのルートの更新時に `<title>` にパッチを適用することができることがあるでしょう。その場合は、このように実装できます。
+
+```html-nolint
+<head>
+  ...
+  <?start name="title">
+  <title>読み込み中...</title>
+  <?end>
+  ...
+</head>
+<body>
+  ...
+  <template for="title"><?start name="title"><title>このページの実際のタイトル</title><?end></template>
+  ...
+</body>
+```
+
+`<template>` 要素が構文解析されると、次のような結果になります。
+
+```html-nolint
+<head>
+  ...
+  <?start name="title"><title>このページの実際のタイトル</title><?end>
+  ...
+</head>
+<body>
+  ...
+</body>
+```
+
+その後、新しい `<template for="title">` を DOM に挿入して、再び `<title>` を置き換えることも可能です。
+
 ## 技術的概要
 
 <table class="properties">
@@ -571,9 +713,9 @@ container.appendChild(secondClone);
 ## 関連情報
 
 - [`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) および [`exportparts`](/ja/docs/Web/HTML/Reference/Global_attributes/exportparts) 属性
-- {{HTMLElement("slot")}} 要素
-- {{CSSXref(":host")}}、{{cssxref(":host()")}}、{{cssxref(":host-context()")}} 擬似クラス
-- {{CSSXref("::part")}}、{{CSSXref("::slotted")}} 擬似要素
+- {{HTMLElement("slot")}} 要素 (HTML)
+- {{CSSXref(":has-slotted")}}、{{CSSXref(":host")}}、{{CSSXref(":host_function", ":host()")}}、{{CSSXref(":host-context", ":host-context()")}} 擬似クラス (CSS)
+- {{CSSXref("::part")}}、{{CSSXref("::slotted")}} 擬似要素 (CSS)
 - [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) インターフェイス
 - [テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)
 - [CSS スコープ化](/ja/docs/Web/CSS/Guides/Scoping)モジュール

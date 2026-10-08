@@ -3,11 +3,11 @@ title: Pour commencer avec le MDN Web Docs
 short-title: Pour commencer
 slug: MDN/Community/Getting_started
 l10n:
-  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
+  sourceCommit: da7287ff61b6ea4db7f9a5e07be11263b525b7d0
 ---
 
 Nous sommes une communauté ouverte de développeur·euse·s, rédacteur·ice·s techniques et apprenant·e·s qui construisent des ressources pour un Web meilleur, indépendamment de la marque, du navigateur ou de la plateforme.
-Tout le monde peut contribuer, et chaque personne qui contribue a un impact sur des millions de lecteurs.
+Tout le monde peut contribuer, et chaque personne qui contribue a un impact sur des millions de lecteur·ice·s.
 Découvrez comment contribuer et stimuler l'innovation sur le Web ouvert.
 
 ## Que puis-je faire pour aider ?
@@ -34,7 +34,7 @@ Si vous êtes nouveau sur GitHub, nous vous encourageons à suivre les cours gra
 - [Utiliser Markdown <sup>(angl.)</sup>](https://github.com/skills/communicate-using-markdown)
 
 > [!NOTE]
-> Le cours «&nbsp;Introduction à GitHub&nbsp;» devrait suffire pour vous aider à démarrer.
+> Le cours «&nbsp;Introduction à GitHub&nbsp;» doit suffire pour vous aider à démarrer.
 > N'hésitez pas à passer à l'étape suivante et à revenir aux autres documents plus tard.
 
 Nous vous recommandons également de lire le matériel d'apprentissage suivant&nbsp;:

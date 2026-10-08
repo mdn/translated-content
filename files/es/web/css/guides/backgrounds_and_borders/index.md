@@ -137,6 +137,6 @@ Para ver el código de este ejemplo, [vea la fuente en GitHub](https://github.co
 - Herramientas interactivas que le permiten crear visualmente imágenes de bordes, esquinas redondeadas y sombras de caja:
   - [Generador de bordes con imágenes](/es/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
   - [Generador de bordes con radio](/es/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
-  - [Generador de sombra de caja](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
+  - [Generador de sombra de caja](/es/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)
 - [Aplicando color a elementos HTML usando CSS](/es/docs/Web/CSS/CSS_colors/Applying_color), incluso para bordes.
 - La función de filtro [`drop-shadow()`](/es/docs/Web/CSS/filter-function/drop-shadow) que aplica un efecto de sombra a la imagen de entrada. La función es utilizada por las propiedades {{cssxref("filter")}} y {{cssxref("backdrop-filter")}}.

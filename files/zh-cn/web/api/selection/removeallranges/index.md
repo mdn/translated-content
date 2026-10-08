@@ -9,7 +9,7 @@ slug: Web/API/Selection/removeAllRanges
 
 ## 语法
 
-```plain
+```js-nolint
 sel.removeAllRanges();
 ```
 

@@ -20,16 +20,16 @@ pad: "+" 5;
 Ce descripteur accepte les deux valeurs suivantes, séparées par un espace et pouvant être définies dans n'importe quel ordre&nbsp;:
 
 - {{CSSxRef("integer")}}
-  - : Spécifie la longueur minimale que toutes les représentations de marqueur doivent atteindre. La valeur doit être positive ou nulle. Pour le descripteur `pad`, cette valeur est aussi appelée _longueur de remplissage_.
+  - : Définit la longueur minimale que toutes les représentations de marqueur doivent atteindre. La valeur doit être positive ou nulle. Pour le descripteur `pad`, cette valeur est aussi appelée _longueur de remplissage_.
 
 - [`<symbol>`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#symbol)
-  - : Spécifie le symbole à utiliser pour le remplissage si la longueur minimale définie par `<integer>` n'est pas atteinte. Pour le descripteur `pad`, cette valeur est aussi appelée _symbole de remplissage_.
+  - : Définit le symbole à utiliser pour le remplissage si la longueur minimale définie par `<integer>` n'est pas atteinte. Pour le descripteur `pad`, cette valeur est aussi appelée _symbole de remplissage_.
 
 ## Description
 
-Utilisez le descripteur `pad` lorsque vous souhaitez que les représentations des marqueurs aient une longueur minimale. Si une représentation de marqueur est plus courte que la longueur de remplissage définie, elle sera complétée avec le symbole de remplissage indiqué. Les représentations de marqueur plus longues que la longueur minimale sont affichées sans remplissage supplémentaire.
+Utilisez le descripteur `pad` lorsque vous souhaitez que les représentations des marqueurs aient une longueur minimale. Si une représentation de marqueur est plus courte que la longueur de remplissage définie, elle est complétée avec le symbole de remplissage indiqué. Les représentations de marqueur plus longues que la longueur minimale sont affichées sans remplissage supplémentaire.
 
-Le descripteur `pad` prend un `<integer>` pour la longueur minimale du marqueur et un `<symbol>` pour le remplissage. Un cas d'utilisation courant du descripteur `pad` est lorsque vous souhaitez qu'une liste commence la numérotation par `01`, puis `02`, `03`, `04`, etc., au lieu de simplement `1`, `2`, `3`, `4`. En définissant le descripteur `pad` comme `pad: 2 "0"` dans ce cas, le navigateur garantit que le compteur fait au moins deux caractères et ajoute un remplissage avec `0` pour atteindre la longueur minimale de deux caractères si nécessaire. Les compteurs qui ont déjà deux caractères ou plus dans cet exemple seront affichés normalement, sans remplissage.
+Le descripteur `pad` prend un `<integer>` pour la longueur minimale du marqueur et un `<symbol>` pour le remplissage. Un cas d'utilisation courant du descripteur `pad` est lorsque vous souhaitez qu'une liste commence la numérotation par `01`, puis `02`, `03`, `04`, etc., au lieu de simplement `1`, `2`, `3`, `4`. En définissant le descripteur `pad` comme `pad: 2 "0"` dans ce cas, le navigateur garantit que le compteur fait au moins deux caractères et ajoute un remplissage avec `0` pour atteindre la longueur minimale de deux caractères si nécessaire. Les compteurs qui ont déjà deux caractères ou plus dans cet exemple sont affichés normalement, sans remplissage.
 
 ## Définition formelle
 

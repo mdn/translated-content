@@ -105,7 +105,7 @@ function getUsers(request) {
 
 [URL クエリー文字列の独自解析](https://github.com/BlackFan/client-side-prototype-pollution)を行う多くのライブラリーは、クエリー文字列を介して深いオブジェクト構造を指定できるようにしており、`?__proto__[test]=test` や `?__proto__.test=test` のように動的なプロパティ変更を用いてオブジェクトを構築するため、特に脆弱です。ライブラリーは一般的に、アプリケーションコードよりも脆弱です。これは、有効なキーを許可リストに登録することができず、汎用性を確保するために動的なプロパティ変更を使用する必要がある場合が多いためです。
 
-なお、[JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) では、`__proto__` プロパティは単なる通常のプロパティ名に過ぎないため、`{"__proto__": {"test": "value"}}` のような JSON 本体を解析しても、単に `__proto__` というプロパティを持つオブジェクトが生成されるだけであり、直ちに問題となることはありません。しかし、その後ののコードで、{{jsxref("Object.assign()")}} や [`for...in` ループ](/ja/docs/Web/JavaScript/Reference/Statements/for...in)などを通じて、そのオブジェクトが別のオブジェクトにマージされた場合、暗黙のプロパティ代入操作によってセッターが呼び出されます。通常、動的なプロパティへのアクセスは 1 段階のみであるため、実際には `Object.prototype` は変更されませんが、対象オブジェクトのプロトタイプは変更されます。なお、[スプレッド演算](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)はこの種の攻撃の影響を受けません。スプレッド演算はセッターを呼び出さないためです。
+なお、[JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) では、`__proto__` プロパティは単なる通常のプロパティ名に過ぎないため、`{"__proto__": {"test": "value"}}` のような JSON 本体を解析しても、単に `__proto__` というプロパティを持つオブジェクトが生成されるだけであり、直ちに問題となることはありません。しかし、その後のコードで、{{jsxref("Object.assign()")}} や [`for...in` ループ](/ja/docs/Web/JavaScript/Reference/Statements/for...in)などを通じて、そのオブジェクトが別のオブジェクトにマージされた場合、暗黙のプロパティ代入操作によってセッターが呼び出されます。通常、動的なプロパティへのアクセスは 1 段階のみであるため、実際には `Object.prototype` は変更されませんが、対象オブジェクトのプロトタイプは変更されます。なお、[スプレッド演算](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)はこの種の攻撃の影響を受けません。スプレッド演算はセッターを呼び出さないためです。
 
 ```js
 // 単なる `__proto__` というプロパティを持つオブジェクト

@@ -1,12 +1,10 @@
 ---
-title: "HTML 属性: size"
+title: "`size` 属性 (HTML)"
 short-title: size
 slug: Web/HTML/Reference/Attributes/size
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
-
-{{HTMLSidebar}}
 
 **`size`** 属性は、 {{htmlelement('input')}} 要素の幅と {{htmlelement('select')}} 要素の高さを定義します。 `input` については、 `type` 属性が {{HTMLElement("input/text", "text")}} または {{HTMLElement("input/password", "password")}} の場合は文字数です。これは 0 以上の整数でなければなりません。
 

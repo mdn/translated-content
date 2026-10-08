@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/activeTexture
 
 ## 句法
 
-```plain
+```js-nolint
 void gl.activeTexture(texture);
 ```
 

@@ -9,7 +9,7 @@ l10n:
 
 Un exemple humain est le téléphone — au cours d'un appel téléphonique vous avez tendance à répondre à la personne immédiatement.
 
-De nombreuses commandes de programmation sont synchrones — par exemple quand vous tapez un calcul, l'environnement vous retourne le résultat immédiatement, à moins que vous ne spécifiiez expressément de ne pas le faire.
+De nombreuses commandes de programmation sont synchrones — par exemple quand vous tapez un calcul, l'environnement vous retourne le résultat immédiatement, à moins que vous ne définissiez expressément de ne pas le faire.
 
 ## Voir aussi
 

@@ -88,7 +88,7 @@ header {
 
 向 `<main>` 元素添加 [`id` 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id)后，该元素可成为直达内容链接的目标。
 
-```plain
+```html
 <body>
   <a href="#main-content">Skip to main content</a>
 

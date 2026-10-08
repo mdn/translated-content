@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/encodeURI
 
 ## 语法
 
-```plain
+```js-nolint
 encodeURI(URI)
 ```
 
@@ -24,7 +24,7 @@ encodeURI(URI)
 
 假定一个 URI 是完整的 URI，那么无需对那些保留的并且在 URI 中有特殊意思的字符进行编码。
 
-```plain
+```url
 http://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+has+spaces#anchor
 ```
 

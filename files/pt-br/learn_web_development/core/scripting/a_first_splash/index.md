@@ -213,41 +213,41 @@ O lugar em que começaremos a escrever nosso código será dentro da tag {{htmle
 Vamos começar. Primeiramente, adicione as seguintes linhas na sua tag {{htmlelement("script")}} :
 
 ```js
-var numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+var randomNumber = Math.floor(Math.random() * 100) + 1;
 
-var palpites = document.querySelector(".palpites");
-var ultimoResultado = document.querySelector(".ultimoResultado");
-var baixoOuAlto = document.querySelector(".baixoOuAlto");
+var guesses = document.querySelector(".guesses");
+var lastResult = document.querySelector(".lastResult");
+var lowOrHi = document.querySelector(".lowOrHi");
 
-var envioPalpite = document.querySelector(".envioPalpite");
-var campoPalpite = document.querySelector(".campoPalpite");
+var guessSubmit = document.querySelector(".guessSubmit");
+var guessField = document.querySelector(".guessField");
 
-var contagemPalpites = 1;
-var botaoReinicio;
+var guessCount = 1;
+var resetButton;
 ```
 
 Aqui estamos setando as variáveis que precisamos para guardar os dados que nosso programa irá utilizar. Variáveis são basicamente recipientes para valores (como números, ou strings ou textos). Variáveis são criadas com a palavra-chave `var` seguida de um nome para sua variável. Você pode atribuir um valor para sua variável com um sinal de igual (`=`) seguido do valor que você quer dar a ela.
 
 No nosso exemplo:
 
-- À primeira variável — `numeroAleatorio` — é atribuído um número aleatório entre 1 e 100, calculado usando um algoritmo matemático.
+- À primeira variável — `randomNumber` — é atribuído um número aleatório entre 1 e 100, calculado usando um algoritmo matemático.
 - As próximas três variáveis são criadas para guardar uma referência para os parágrafos resultantes em nosso HTML, e são usadas para inserir valores nos parágrafos no código:
 
   ```html
-  <p class="palpites"></p>
-  <p class="ultimoResultado"></p>
-  <p class="baixoOuAlto"></p>
+  <p class="guesses"></p>
+  <p class="lastResult"></p>
+  <p class="lowOrHi"></p>
   ```
 
 - As próximas duas variáveis armazenam referências para o campo de texto e o botão de envio e são usados para controlar o envio do palpite.
 
   ```html
-  <label for="campoPalpite">Digite seu palpite: </label
-  ><input type="text" id="campoPalpite" class="campoPalpite" />
-  <input type="submit" value="Enviar palpite" class="envioPalpite" />
+  <label for="guessField">Digite seu palpite: </label
+  ><input type="text" id="guessField" class="guessField" />
+  <input type="submit" value="Enviar palpite" class="guessSubmit" />
   ```
 
-- As últimas duas variáveis (contagemPalpites e botaoReinicio) são usadas para armazenar a contagem dos palpites do usuário, e o outro é uma referência para o botão de reset, que não existe ainda (mas irá existir).
+- As últimas duas variáveis (guessCount e resetButton) são usadas para armazenar a contagem dos palpites do usuário, e o outro é uma referência para o botão de reset, que não existe ainda (mas irá existir).
 
 > [!NOTE]
 > Você irá aprender muito mais sobre variáveis a partir do [próximo artigo](/pt-BR/docs/user:chrisdavidmills/variables).
@@ -257,7 +257,7 @@ No nosso exemplo:
 Em seguida, adicione o seguinte código abaixo do JavaScript anterior:
 
 ```js
-function conferirPalpite() {
+function checkGuess() {
   alert("Eu sou um placeholder");
 }
 ```
@@ -271,7 +271,7 @@ Tente salvar o seu código agora e atualizá-lo no navegador.
 Vá até o [console JavaScript](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), e insira a seguinte linha:
 
 ```js
-conferirPalpite();
+checkGuess();
 ```
 
 Você deverá ver um alerta aparecer dizendo "Eu sou um placeholder"; nós definimos uma função em nosso código que cria um alerta a qualquer hora em que a chamarmos.
@@ -431,126 +431,126 @@ Quando estamos rodando testes de verdadeiro/falso (por exemplo, condicinais inte
 
 ### Condicionais
 
-Voltando à nossa função `conferirPalpite()`, imagino que seja seguro dizer que não queremos que ela apenas exiba uma mensagem de teste (placeholder). Nós queremos verificar se o palpite do jogador está correto ou não, e responder apropriadamente.
+Voltando à nossa função `checkGuess()`, imagino que seja seguro dizer que não queremos que ela apenas exiba uma mensagem de teste (placeholder). Nós queremos verificar se o palpite do jogador está correto ou não, e responder apropriadamente.
 
-Neste ponto, substitua sua função `conferirPalpite()` atual por esta versão:
+Neste ponto, substitua sua função `checkGuess()` atual por esta versão:
 
 ```js
-function conferirPalpite() {
-  var palpiteUsuario = Number(campoPalpite.value);
-  if (contagemPalpites === 1) {
-    palpites.textContent = "Palpites anteriores: ";
+function checkGuess() {
+  var userGuess = Number(guessField.value);
+  if (guessCount === 1) {
+    guesses.textContent = "Palpites anteriores: ";
   }
-  palpites.textContent += palpiteUsuario + " ";
+  guesses.textContent += userGuess + " ";
 
-  if (palpiteUsuario === numeroAleatorio) {
-    ultimoResultado.textContent = "Parabéns! Você acertou!";
-    ultimoResultado.style.backgroundColor = "green";
-    baixoOuAlto.textContent = "";
-    configFimDeJogo();
-  } else if (contagemPalpites === 10) {
-    ultimoResultado.textContent = "!!!FIM DE JOGO!!!";
-    baixoOuAlto.textContent = "";
-    configFimDeJogo();
+  if (userGuess === randomNumber) {
+    lastResult.textContent = "Parabéns! Você acertou!";
+    lastResult.style.backgroundColor = "green";
+    lowOrHi.textContent = "";
+    setGameOver();
+  } else if (guessCount === 10) {
+    lastResult.textContent = "!!!FIM DE JOGO!!!";
+    lowOrHi.textContent = "";
+    setGameOver();
   } else {
-    ultimoResultado.textContent = "Errado!";
-    ultimoResultado.style.backgroundColor = "red";
-    if (palpiteUsuario < numeroAleatorio) {
-      baixoOuAlto.textContent = "Seu palpite está muito baixo!";
-    } else if (palpiteUsuario > numeroAleatorio) {
-      baixoOuAlto.textContent = "Seu palpite está muito alto!";
+    lastResult.textContent = "Errado!";
+    lastResult.style.backgroundColor = "red";
+    if (userGuess < randomNumber) {
+      lowOrHi.textContent = "Seu palpite está muito baixo!";
+    } else if (userGuess > randomNumber) {
+      lowOrHi.textContent = "Seu palpite está muito alto!";
     }
   }
 
-  contagemPalpites++;
-  campoPalpite.value = "";
-  campoPalpite.focus();
+  guessCount++;
+  guessField.value = "";
+  guessField.focus();
 }
 ```
 
 Isso é bastante código — ufa! Vamos abordar cada seção e explicar o que faz.
 
-- A primeira linha (linha 2 no código acima) declara uma variável chamada `palpiteUsuario` e define seu valor igual ao valor inserido pelo jogador no campo de texto. Nós também rodamos esse valor através do método embutido `Number()`, apenas para ter certeza de que o valor inserido é um número.
-- Em seguida, encontramos nosso primero bloco de código condicional (linhas 3–5 no código acima). Um bloco de código condicional lhe permite executar código seletivamente, dependendo se uma condição é verdadeira ou não. Se parece um pouco com uma função, mas não é. A forma mais simples de um bloco condicional começa com a palavra chave `if`, depois os parênteses, depois as chaves. Dentro dos parênteses nós incluímos um teste. Se o teste retornar `true`(verdadeiro), o código dentro das chaves é executado. Caso contrário, não é executado, e seguimos para a próxima parte do código. Neste caso, o teste está verificando se a variável `contagemPalpites` é igual a `1` (isto é, se essa é ou não a primeira tentativa do jogador):
+- A primeira linha (linha 2 no código acima) declara uma variável chamada `userGuess` e define seu valor igual ao valor inserido pelo jogador no campo de texto. Nós também rodamos esse valor através do método embutido `Number()`, apenas para ter certeza de que o valor inserido é um número.
+- Em seguida, encontramos nosso primero bloco de código condicional (linhas 3–5 no código acima). Um bloco de código condicional lhe permite executar código seletivamente, dependendo se uma condição é verdadeira ou não. Se parece um pouco com uma função, mas não é. A forma mais simples de um bloco condicional começa com a palavra chave `if`, depois os parênteses, depois as chaves. Dentro dos parênteses nós incluímos um teste. Se o teste retornar `true`(verdadeiro), o código dentro das chaves é executado. Caso contrário, não é executado, e seguimos para a próxima parte do código. Neste caso, o teste está verificando se a variável `guessCount` é igual a `1` (isto é, se essa é ou não a primeira tentativa do jogador):
 
   ```js
-  contagemPalpites === 1;
+  guessCount === 1;
   ```
 
-  Se a condição for verdadeira, nós tornamos o conteúdo do parágrafo de palpites, `<p class="palpites"></p>` igual a "Palpites anteriores: ". Caso contrário, o texto não é exibido.
+  Se a condição for verdadeira, nós tornamos o conteúdo do parágrafo de palpites, `<p class="guesses"></p>` igual a "Palpites anteriores: ". Caso contrário, o texto não é exibido.
 
-- A linha 6 acrescenta o valor atual de `palpiteUsuario` ao final do parágrafo `palpites`, mais um espaço em branco para que haja espaçamento entre cada palpite mostrado.
+- A linha 6 acrescenta o valor atual de `userGuess` ao final do parágrafo `guesses`, mais um espaço em branco para que haja espaçamento entre cada palpite mostrado.
 - O próximo bloco (linhas 8–24 acima) fazem as seguintes conferências:
-  - O primeiro `if(){ }` confere se o palpite do jogador é igual ao número aleatório (`numeroAleatorio`) definido no topo do nosso JavaScript. Se for, o jogador adivinhou corretamente o número e venceu o jogo. Então mostramos ao jogador uma mensagem de parabenização com uma agradável cor verde, limpamos o conteúdo do parágrado que informa sobre o palpite ser alto ou baixo `<p class="baixoOuAlto"></p>`, e executamos uma função chamada `configFimDeJogo()`, que iremos discutir mais tarde.
+  - O primeiro `if(){ }` confere se o palpite do jogador é igual ao número aleatório (`randomNumber`) definido no topo do nosso JavaScript. Se for, o jogador adivinhou corretamente o número e venceu o jogo. Então mostramos ao jogador uma mensagem de parabenização com uma agradável cor verde, limpamos o conteúdo do parágrado que informa sobre o palpite ser alto ou baixo `<p class="lowOrHi"></p>`, e executamos uma função chamada `setGameOver()`, que iremos discutir mais tarde.
   - Agora nós encadeamos outro teste ao final deste anterior usando uma estrutura `else if(){ }`. Este confere se o palpite do jogador é sua última tentativa. Se for, o programa faz o mesmo que no bloco anterior, porém com uma mensagem de fim de jogo ao invés do texto de parabenização.
   - O bloco final encadeado ao final do código (`else { }`) contém código que só é executado se nenhum dos outros dois testes retornar verdadeiro (ou seja, o jogador não acertou o número, porém ainda tem mais tentativas restantes). Neste caso nós dizemos a ele que está errado, e então rodamos outro teste condicional para checar se o palpite foi maior ou menor do que a resposta certa, exibindo então uma mensagem apropriada para informá-lo se foi maior ou menor.
 
-- As próximas três linhas da função (linhas 26–28) nos deixa preparados para o próximo palpite ser submetido. Nós somamos 1 à variável `contagemPalpites` para que o jogador use sua tentativa (`++` é uma operação de incremento — incrementa em 1), e o campo de texto do formulário de inserção seja esvaziado e focado novamente, pronto para que o próximo palpite seja inserido.
+- As próximas três linhas da função (linhas 26–28) nos deixa preparados para o próximo palpite ser submetido. Nós somamos 1 à variável `guessCount` para que o jogador use sua tentativa (`++` é uma operação de incremento — incrementa em 1), e o campo de texto do formulário de inserção seja esvaziado e focado novamente, pronto para que o próximo palpite seja inserido.
 
 ### Eventos
 
-Neste ponto temos uma função `conferirPalpite()` bem implementada, mas ela não irá fazer nada pois nós não a chamamos ainda. Idealmente nós queremos que ela seja acionada quando o botão "Enviar palpite" for pressionado, e para fazer isso precisamos usar um evento. Eventos são ações que acontencem no navegador, como um botão sendo clicado, ou uma página carregada, ou um vídeo tocando; ações as quais podemos responder executando blocos de código. Os construtores que monitoram os acontecimentos de eventos são chamados de **event listeners**, e os blocos de código executados em resposta ao acontecimento do evento são chamados de **event handlers**.
+Neste ponto temos uma função `checkGuess()` bem implementada, mas ela não irá fazer nada pois nós não a chamamos ainda. Idealmente nós queremos que ela seja acionada quando o botão "Enviar palpite" for pressionado, e para fazer isso precisamos usar um evento. Eventos são ações que acontencem no navegador, como um botão sendo clicado, ou uma página carregada, ou um vídeo tocando; ações as quais podemos responder executando blocos de código. Os construtores que monitoram os acontecimentos de eventos são chamados de **event listeners**, e os blocos de código executados em resposta ao acontecimento do evento são chamados de **event handlers**.
 
-Adicione a seguinte linha abaixo da chave de fechamento da sua função `conferirPalpite()`:
+Adicione a seguinte linha abaixo da chave de fechamento da sua função `checkGuess()`:
 
 ```js
-envioPalpite.addEventListener("click", conferirPalpite);
+guessSubmit.addEventListener("click", checkGuess);
 ```
 
-Aqui nós estamos adicionando um _event listener_ ao botão `envioPalpite`. Esse é um método que aceita a inserção de dois valores (chamados de argumentos) — o tipo de envento que estamos monitorando (neste caso o evento `click`) como um _string_ (sequência de texto), e o código que queremos executar quando o evento ocorrer (neste caso a função `conferirPalpite()` — note que não temos que especificar os parênteses quando estivermos escrevendo dentro de {{domxref("EventTarget.addEventListener", "addEventListener()")}}).
+Aqui nós estamos adicionando um _event listener_ ao botão `guessSubmit`. Esse é um método que aceita a inserção de dois valores (chamados de argumentos) — o tipo de envento que estamos monitorando (neste caso o evento `click`) como um _string_ (sequência de texto), e o código que queremos executar quando o evento ocorrer (neste caso a função `checkGuess()` — note que não temos que especificar os parênteses quando estivermos escrevendo dentro de {{domxref("EventTarget.addEventListener", "addEventListener()")}}).
 
-Tente agora salvar e atualizar seu código, e seu exemplo deve funcionar agora, até um ponto. O único problema agora é que se você acertar o palpite ou ficar sem mais tentativas o jogo irá falhar, porque ainda não definimos a função `configFimDeJogo()` que deve ser executada uma vez que o jogo terminar. Vamos adicionar agora o código restante e completar a funcionalidade do nosso exemplo.
+Tente agora salvar e atualizar seu código, e seu exemplo deve funcionar agora, até um ponto. O único problema agora é que se você acertar o palpite ou ficar sem mais tentativas o jogo irá falhar, porque ainda não definimos a função `setGameOver()` que deve ser executada uma vez que o jogo terminar. Vamos adicionar agora o código restante e completar a funcionalidade do nosso exemplo.
 
 ### Finalizando a funcionalidade do jogo
 
-Vamos adicionar a função `configFimDeJogo()` ao final do nosso código e então explorá-lo. Adicione agora isso, abaixo do restante do seu JavaScript:
+Vamos adicionar a função `setGameOver()` ao final do nosso código e então explorá-lo. Adicione agora isso, abaixo do restante do seu JavaScript:
 
 ```js
-function configFimDeJogo() {
-  campoPalpite.disabled = true;
-  envioPalpite.disabled = true;
-  botaoReinicio = document.createElement("button");
-  botaoReinicio.textContent = "Iniciar novo jogo";
-  document.body.appendChild(botaoReinicio);
-  botaoReinicio.addEventListener("click", reiniciarJogo);
+function setGameOver() {
+  guessField.disabled = true;
+  guessSubmit.disabled = true;
+  resetButton = document.createElement("button");
+  resetButton.textContent = "Iniciar novo jogo";
+  document.body.appendChild(resetButton);
+  resetButton.addEventListener("click", resetGame);
 }
 ```
 
 - As primeiras duas linhas desabilitam a entrada de texto do formulário e o clique do botão, definindo a propriedade _disabled_ (desabilitado) de cada um como `true` (verdadeiro). Isso é necessário, pois se não o fizermos, o usuário poderia submeter mais palpites depois do jogo ter terminado, o que iria bagunçar as coisas.
 - As próximas três linhas geram um novo elemento {{htmlelement("button")}}, define o texto de seu rótulo como "Iniciar novo jogo", e o adiciona ao final do nosso HTML existente.
-- A linha final define um monitor de evento (_event listener_) em nosso botão, para que quando seja clicado, uma função chamada `reiniciarJogo()` seja executada.
+- A linha final define um monitor de evento (_event listener_) em nosso botão, para que quando seja clicado, uma função chamada `resetGame()` seja executada.
 
 Agora precisamos definir essa função também! Adicione o seguinte código, novamente ao final do nosso JavaScript:
 
 ```js
-function reiniciarJogo() {
-  contagemPalpites = 1;
+function resetGame() {
+  guessCount = 1;
 
-  var reiniciarParas = document.querySelectorAll(".resultadoParas p");
-  for (var i = 0; i < reiniciarParas.length; i++) {
-    reiniciarParas[i].textContent = "";
+  var resetParas = document.querySelectorAll(".resultParas p");
+  for (var i = 0; i < resetParas.length; i++) {
+    resetParas[i].textContent = "";
   }
 
-  botaoReinicio.parentNode.removeChild(botaoReinicio);
+  resetButton.parentNode.removeChild(resetButton);
 
-  campoPalpite.disabled = false;
-  envioPalpite.disabled = false;
-  campoPalpite.value = "";
-  campoPalpite.focus();
+  guessField.disabled = false;
+  guessSubmit.disabled = false;
+  guessField.value = "";
+  guessField.focus();
 
-  ultimoResultado.style.backgroundColor = "white";
+  lastResult.style.backgroundColor = "white";
 
-  numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+  randomNumber = Math.floor(Math.random() * 100) + 1;
 }
 ```
 
 Esse longo bloco de código redefine completamente tudo do modo como era no início do jogo, para que o jogador possa jogá-lo novamente. Ele:
 
-- Coloca o valor da variável `contagemPalpites` novamente igual a 1.
+- Coloca o valor da variável `guessCount` novamente igual a 1.
 - Limpa todos os parágrafos de informativos.
 - Remove o botão resete do nosso código.
 - Habilita os elementos do formulários, esvazia e direciona o foco ao campo de texto, pronto para que um novo palpite seja inserido.
-- Remove a cor de fundo do parágrafo `ultimoResultado`.
+- Remove a cor de fundo do parágrafo `lastResult`.
 - Gera um novo número aleatório para que o jogador não esteja tentando adivinhar o mesmo número novamente!
 
 **Neste ponto você deve ter um jogo (simples) completamente funcional — parabéns!**
@@ -575,44 +575,44 @@ O que aconteceu? Os números de 1 a 20 foram exibidos no seu console. Isso acont
 2. **Uma condição de saída**: Aqui nós especificamos `i < 21` — o loop irá continuar rodando até que `i` não seja mais menor que 21. Quando `i` alcançar 21, o loop não será mais executado.
 3. **Incremento**: Nós especificamos `i++`, que siginifica "adicione 1 à i". O loop irá rodar uma vez para cada valor de `i`, até que `i` alcance o valor de 21 (como abordado acima). Nesse caso, nós estamos simplesmente imprimindo o valor de `i` no console em cada iteração usando {{domxref("Console.log", "console.log()")}}.
 
-Agora vamos olhar o loop em nosso jogo de adivinhar o número — o código seguinte pode ser encontrado dentro da função `reiniciarJogo()`:
+Agora vamos olhar o loop em nosso jogo de adivinhar o número — o código seguinte pode ser encontrado dentro da função `resetGame()`:
 
 ```js
-var reiniciarParas = document.querySelectorAll(".resultadoParas p");
-for (var i = 0; i < reiniciarParas.length; i++) {
-  reiniciarParas[i].textContent = "";
+var resetParas = document.querySelectorAll(".resultParas p");
+for (var i = 0; i < resetParas.length; i++) {
+  resetParas[i].textContent = "";
 }
 ```
 
-Esse código cria uma variável contendo uma lista de todos os parágrafos dentro de `<div class="resultadoParas">` usando o método {{domxref("Document.querySelectorAll", "querySelectorAll()")}}, e então faz o loop em cada um, removendo o conteúdo de texto dos mesmos.
+Esse código cria uma variável contendo uma lista de todos os parágrafos dentro de `<div class="resultParas">` usando o método {{domxref("Document.querySelectorAll", "querySelectorAll()")}}, e então faz o loop em cada um, removendo o conteúdo de texto dos mesmos.
 
 ### Uma pequena discussão sobre objetos
 
-Vamos adicionar uma melhoria final antes de chegarmos a essa discussão. Adicione a linha seguinte logo abaixo da linha `var botaoReinicio;` próximo ao topo do seu JavaScript, em seguida salve nosso arquivo:
+Vamos adicionar uma melhoria final antes de chegarmos a essa discussão. Adicione a linha seguinte logo abaixo da linha `var resetButton;` próximo ao topo do seu JavaScript, em seguida salve nosso arquivo:
 
 ```js
-campoPalpite.focus();
+guessField.focus();
 ```
 
 Essa linha usa o método {{domxref("HTMLElement.focus", "focus()")}} para automaticamente colocar o cursor dentro campo de texto do {{htmlelement("input")}} assim que a página carrega, significando que o usuário já pode começar a digitar o primeiro palpite, e não precisa clicar no campo do formulário primeiro. É apenas uma pequena adição, mas melhora a usabilidade — dando ao usuário uma boa dica visual do que ele deve fazer para jogar o jogo.
 
 Vamos analisar o que está acontencedo aqui com um pouco mais de detalhes. Em JavaScript, tudo é um objeto. Um objeto é uma coleção de funcionalidades relacionadas armazenadas em um único agrupamento. Você pode criar seus próprios objetos, mas isso é bastante avançado e nós não iremos abordar até mais tarde no curso. Por agora, vamos apenas discutir brevemente os objetos pré-construídos presentes em seu navegador, que lhe permite fazer várias coisas úteis.
 
-Neste caso particular, nós primeiro criamos a variável `campoPalpite` que armazena uma referência ao campo de inserção de texto do formulário em nosso HTML — a linha seguinte pode ser achada entre nossas declarações de variáveis próximas ao topo:
+Neste caso particular, nós primeiro criamos a variável `guessField` que armazena uma referência ao campo de inserção de texto do formulário em nosso HTML — a linha seguinte pode ser achada entre nossas declarações de variáveis próximas ao topo:
 
 ```js
-var campoPalpite = document.querySelector(".campoPalpite");
+var guessField = document.querySelector(".guessField");
 ```
 
 Para pegar essa referência, usamos o método {{domxref("document.querySelector", "querySelector()")}} do objeto {{domxref("document")}}. `querySelector()` pega um pedaço de informação — um [seletor CSS](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) que seleciona o elemento ao qual você quer referenciar.
 
-Como agora `campoPalpite` contém referência ao elemento {{htmlelement("input")}}, ele terá agora acesso a um número de propriedades (basicamente variáveis armazenadas dentro de objetos, sendo que alguns não podem ter seus valores alterados) e métodos (basicamente, funções armazenadas dentro de objetos). Um método disponível para elementos de inserção `<input>`, é o `focus()`, então agora podemos usar essa linha para focar o campo de inserção de texto:
+Como agora `guessField` contém referência ao elemento {{htmlelement("input")}}, ele terá agora acesso a um número de propriedades (basicamente variáveis armazenadas dentro de objetos, sendo que alguns não podem ter seus valores alterados) e métodos (basicamente, funções armazenadas dentro de objetos). Um método disponível para elementos de inserção `<input>`, é o `focus()`, então agora podemos usar essa linha para focar o campo de inserção de texto:
 
 ```js
-campoPalpite.focus();
+guessField.focus();
 ```
 
-Variáveis que não contém referências a elementos de formulário não terão `focus()` disponível para elas. Por exemplo, a variável `palpites` contém referência de um elemento {{htmlelement("p")}}, e `contagemPalpites` contém um número.
+Variáveis que não contém referências a elementos de formulário não terão `focus()` disponível para elas. Por exemplo, a variável `guesses` contém referência de um elemento {{htmlelement("p")}}, e `guessCount` contém um número.
 
 ### Brincando com objetos do navegador
 
@@ -620,20 +620,20 @@ Vamos brincar um pouco com alguns objetos do navegador.
 
 1. Primeiro abra seu programa em um navegador.
 2. Em seguida, abra as [ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), e certifique-se de que a aba do console JavaScript esteja aberta.
-3. Digite `campoPalpite` e o console irá lhe mostrar que a variável contém um elemento {{htmlelement("input")}}. Você também irá notar que o console completa automaticamente os nomes de objetos existentes dentro do ambiente de execução, incluindo suas variáveis!
+3. Digite `guessField` e o console irá lhe mostrar que a variável contém um elemento {{htmlelement("input")}}. Você também irá notar que o console completa automaticamente os nomes de objetos existentes dentro do ambiente de execução, incluindo suas variáveis!
    1. Agora digite o seguinte:
 
       ```js
-      campoPalpite.value = "Olá";
+      guessField.value = "Olá";
       ```
 
       A propriedade `value` representa o valor atual inserido no campo de texto. Você verá que inserindo esse comando, nós mudamos o valor desse objeto!
 
-4. Agora tente digitar `palpites` e pressione _return_. O console irá mostrar que a variável contém um elemento {{htmlelement("p")}}.
+4. Agora tente digitar `guesses` e pressione _return_. O console irá mostrar que a variável contém um elemento {{htmlelement("p")}}.
 5. Agora tente inserir a linha seguinte:
 
    ```js
-   palpites.value;
+   guesses.value;
    ```
 
    O navegador irá retornar `undefined`, porque `value` não existe em parágrafos.
@@ -641,16 +641,16 @@ Vamos brincar um pouco com alguns objetos do navegador.
 6. Para mudar o texto dentro de um parágrafo, você precisa da propriedade {{domxref("Node.textContent", "textContent")}}. Tente isso:
 
    ```js
-   palpites.textContent = "Onde está meu parágrafo?";
+   guesses.textContent = "Onde está meu parágrafo?";
    ```
 
 7. Agora algo divertido. Tente inserir as linhas abaixo, uma por uma:
 
    ```js
-   palpites.style.backgroundColor = "yellow";
-   palpites.style.fontSize = "200%";
-   palpites.style.padding = "10px";
-   palpites.style.boxShadow = "3px 3px 6px black";
+   guesses.style.backgroundColor = "yellow";
+   guesses.style.fontSize = "200%";
+   guesses.style.padding = "10px";
+   guesses.style.boxShadow = "3px 3px 6px black";
    ```
 
    Cada elemento em uma página tem uma propriedade `style`, que contém um objeto no qual estão inseridos em suas propriedades todos os estilos incorporados de CSS aplicados ao respectivo elemento. Isso nos permite configurar dinamicamente novos estilos CSS nos elementos usando JavaScript.

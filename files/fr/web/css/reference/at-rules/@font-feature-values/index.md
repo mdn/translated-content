@@ -70,7 +70,7 @@ Chaque bloc `@font-feature-values` peut contenir une liste de blocs de valeurs d
 }
 ```
 
-## Specifications
+## Spécifications
 
 {{Specifications}}
 

@@ -1,8 +1,9 @@
 ---
-title: animation-timing-function
+title: "`animation-timing-function` プロパティ (CSS)"
+short-title: animation-timing-function
 slug: Web/CSS/Reference/Properties/animation-timing-function
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`animation-timing-function`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションがそれぞれの周期の中でどのように進行するかを設定します。
@@ -138,7 +139,7 @@ animation-timing-function: unset;
     - `linear`
       - : `cubic-bezier(0.0, 0.0, 1.0, 1.0)` と同じで、等しい速度でアニメーションします。
     - `ease`
-      - : `cubic-bezier(0.25, 0.1, 0.25, 1.0)` と同じで、既定値であり、アニメーションの中央に向けて変化量が増加し、最後に向けて減少します。
+      - : `cubic-bezier(0.25, 0.1, 0.25, 1.0)` と同じで、デフォルト値であり、アニメーションの中央に向けて変化量が増加し、最後に向けて減少します。
     - `ease-in`
       - : `cubic-bezier(0.42, 0, 1.0, 1.0)` と同じで、プロパティのアニメーションの変化の速度はゆっくり始まり、終了まで加速します。
     - `ease-out`

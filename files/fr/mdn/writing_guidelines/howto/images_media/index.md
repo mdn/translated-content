@@ -3,7 +3,7 @@ title: Comment ajouter des images et des médias
 short-title: Ajouter des médias
 slug: MDN/Writing_guidelines/Howto/Images_media
 l10n:
-  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
+  sourceCommit: 15e1155ab8a0587405601cc4753bb789cd6ac47c
 ---
 
 Cette page explique comment ajouter des images et des médias aux pages de documentation sur MDN.
@@ -73,7 +73,7 @@ Prenons un exemple&nbsp;:
    git push -u origin mes-images
    ```
 
-6. Vous êtes maintenant prêt à créer votre [requête de tirage (<i lang="en">pull request</i> en anglais)](https://docs.github.com/fr/pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+6. Vous êtes maintenant prêt à créer votre [requête de tirage (<i lang="en">pull request</i> en anglais)](https://docs.github.com/fr/pull-requests/how-tos/create-pull-requests/creating-a-pull-request).
 
 ## Ajouter les textes alternatifs aux images
 
@@ -181,10 +181,6 @@ Si vous utilisez macOS, Quicktime Player est disponible et dispose de quelques f
 5. Effectuez les actions que vous souhaitez enregistrer.
 6. Appuyez sur le bouton _Stop_.
 7. Choisissez _Fichier_ > _Exporter en tant que…_ > _1080p_ à partir du menu principal afin d'avoir une définition suffisamment élevée.
-
-#### Autres ressources
-
-- [Comment ajouter des boîtes de légende personnalisées aux <i lang="en">screencasts</i> dans Screenflow <sup>(angl.)</sup>](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
 
 ### Étapes de création d'une vidéo
 

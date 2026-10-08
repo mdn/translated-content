@@ -84,7 +84,7 @@ console.log("the generated content is: ", result); // returns 'none'
 
 特定の既知のケースにおいて、返される値は意図的に明示的に不正となります。
 具体的には、いわゆる CSS 履歴漏洩のセキュリティ課題を避けるため、ブラウザーはリンクの `:visited` 擬似セレクターを適用する際に、使用済みリンクの値について明示的に「嘘」をつき、ユーザーがリンク先サイトを一度も訪問したことがないかのように常に値を返したり、適用可能なスタイルを制限していたりすることがあります。
-これを実装する方法の例の詳細については、 <https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/> および <https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/>）を参照してください。
+これを実装する方法の例の詳細については、 <https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/> および <https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/>を参照してください。
 
 ## 仕様書
 

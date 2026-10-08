@@ -3,18 +3,18 @@ title: "Window: postMessage() メソッド"
 short-title: postMessage()
 slug: Web/API/Window/postMessage
 l10n:
-  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
+  sourceCommit: 6030ef1aadf967b80e2c79c3d3463cccc8ea0c95
 ---
 
 {{ApiRef("HTML DOM")}}
 
 **`window.postMessage()`** は、 {{domxref("Window")}} オブジェクト間で安全にオリジン間通信を可能にするためのメソッドです。例えば、ポップアップとそれを表示したページの間や、iframe とそれが埋め込まれたページの間での通信に使うことができます。
 
-通常、異なった複数のページでのスクリプトはそれらが実行されたページが同じ[オリジン](/ja/docs/Web/API/Location/origin)である場合に限りお互いにアクセスすることが可能です（「[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)」とも呼ばれます）。正しく使用した `window.postMessage` はこの制限を安全に回避するための制御された仕組みを提供します。
+通常、異なった複数のページでのスクリプトはそれらが実行されたページが同じ[オリジン](/ja/docs/Web/API/Location/origin)である場合に限りお互いにアクセスすることが可能です（「[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)」とも呼ばれます）。正しく使用した `window.postMessage()` はこの制限を安全に回避するための制御された仕組みを提供します。
 
 さらに、アクセスするスクリプトは、アクセスする文書のウィンドウオブジェクトを事前に取得しておく必要があります。これは、ポップアップの場合は [`window.open()`](/ja/docs/Web/API/Window/open)、iframe の場合は [`iframe.contentWindow`](/ja/docs/Web/API/HTMLIFrameElement/contentWindow) などのメソッドを使用して行うことができます。
 
-大まかには、ウィンドウが他のウィンドウへの参照を取得できる場合（`targetWindow = window.opener` など）、 `targetWindow.postMessage()` を使って {{domxref("MessageEvent")}} をそのウィンドウ上で配信することができます。受け取ったウィンドウでは必要に応じて自由に[イベントを処理](/ja/docs/Web/API/Document_Object_Model/Events)することができます。 `window.postMessage()` に渡された引数 ("message") は[イベントオブジェクトを通して対象のウィンドウに公開されます](#配信されるイベント)。
+大まかには、ウィンドウが他のウィンドウへの参照を取得できる場合（`targetWindow = window.opener` など）、 `targetWindow.postMessage()` を使って {{domxref("MessageEvent")}} をそのウィンドウ上で配信することができます。受け取ったウィンドウでは必要に応じて自由に[イベントを処理](/ja/docs/Web/API/Document_Object_Model/Events#イベントハンドラーの登録)することができます。 `window.postMessage()` に渡された引数 ("message") は[イベントオブジェクトを通して対象のウィンドウに公開されます](#配信されるイベント)。
 
 ## 構文
 
@@ -31,11 +31,13 @@ postMessage(message, options)
 - `message`
   - : 他のウィンドウに送られるデータ。データは{{domxref("Web_Workers_API/Structured_clone_algorithm", "構造化複製アルゴリズム", "", 1)}}に従ってシリアル化されます。つまり、手動でシリアル化することなく様々なデータオブジェクトを宛先に安全に渡すことができます。
 - `targetOrigin` {{optional_Inline}}
-  - : イベントを配信するこのウィンドウの[オリジン](/ja/docs/Glossary/Origin)を指定します。イベントが配信されるためには、オリジンが完全に一致する必要があります （スキーム、ホスト名、およびポートを含む）。省略した場合は、メソッドを呼び出しているオリジンが既定値となります。この仕組みにより、メッセージの送信先を制御することができます。例えば、 `postMessage()` を使用してパスワードを送信する場合、悪意のある第三者によるパスワードの傍受を防ぐため、この引数は、パスワードを含むメッセージの意図した受信者と同じオリジンを持つ URI であることが絶対に必要です。 `*` を指定することもできますが、これは、メッセージを、あらゆるオリジンを持つリスナーに配信できることを意味します。
+  - : イベントを配信するこのウィンドウの[オリジン](/ja/docs/Glossary/Origin)を指定します。イベントが配信されるためには、オリジンが完全に一致する必要があります （スキーム、ホスト名、およびポートを含む）。省略した場合は `"/"`、すなわちメソッドを呼び出しているオリジンがデフォルト値となります。この仕組みにより、メッセージの送信先を制御することができます。例えば、 `postMessage()` を使用してパスワードを送信する場合、悪意のある第三者によるパスワードの傍受を防ぐため、この引数は、パスワードを含むメッセージの意図した受信者と同じオリジンを持つ URI であることが絶対に必要です。 `*` を指定することもできますが、これは、メッセージを、あらゆるオリジンを持つリスナーに配信できることを意味します。
     > [!NOTE]
     > 他のウィンドウの文書がどこにあるものか知っている場合は、 `*` ではなく、常に特定の `targetOrigin` を指定してください。特定のターゲットを指定しないと、悪意のあるサイトに送信したデータが開示されてしまいます。
+    >
+    > [`data:`](/ja/docs/Web/URI/Reference/Schemes/data) URL はオリジンが不透明であるため、`data:` URL を持つコンテキストにメッセージを送信するには、`"*"` を指定しなければなりません。
 - `transfer` {{optional_inline}}
-  - : オプションで、所有権を移譲する[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)の[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)。これらのオブジェクトの所有権は出力先に渡され、送信側では使用できなくなります。これらの移譲可能オブジェクトはメッセージに添付する必要があります。そうしないと、移動はされますが、受信側では実際にはアクセスできなくなります。
+  - : オプションで、所有権を移譲する[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)の[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)。これらのオブジェクトの所有権は出力先に渡され、送信側では使用できなくなります。これらの転送可能なオブジェクトは自動的に送信されるわけではありません。メッセージ内に含まれているか、あるいは {{domxref("MessagePort")}} を介した {{domxref("MessageEvent.ports")}} など、それ以外にも受信者がアクセスできる状態である必要があります。
 - `options` {{optional_inline}}
   - : 次のプロパティを含むオプションのオブジェクトです。
     - `transfer` {{optional_inline}}
@@ -52,15 +54,11 @@ postMessage(message, options)
 `window` は以下の JavaScript を実行することで、配信されたメッセージを受け取ることができます。
 
 ```js
-window.addEventListener(
-  "message",
-  (event) => {
-    if (event.origin !== "http://example.org:8080") return;
+window.addEventListener("message", (event) => {
+  if (event.origin !== "http://example.org:8080") return;
 
-    // …
-  },
-  false,
-);
+  // …
+});
 ```
 
 配信されたメッセージには、以下のプロパティがあります。
@@ -68,7 +66,7 @@ window.addEventListener(
 - `data`
   - : 他のウィンドウから渡されたメッセージを保持しているオブジェクト。
 - `origin`
-  - : `postMessage` が呼び出されたときにメッセージを送るウィンドウの{{Glossary("origin", "オリジン")}}。この文字列は、プロトコルと "://"、ホスト名（存在する場合）、そして、 ":" の後に続くポート番号（既定のポートと指定したポートが異なる場合）が連結されたものです。典型的なオリジンの例は `https://example.org` (この場合のポートは `443`)、`http://example.net` (この場合のポートは `80`)、そして `http://example.com:8080`。このオリジン生成元はそのウィンドウの現在もしくは将来のオリジンであることを保証*していない*ことに注意してください。 `postMessage` が呼び出された時とは異なる場所に移動しているかもしれません。
+  - : `postMessage` が呼び出されたときにメッセージを送るウィンドウの{{Glossary("origin", "オリジン")}}。この文字列は、プロトコルと "://"、ホスト名（存在する場合）、そして、 ":" の後に続くポート番号（デフォルトのポートと指定したポートが異なる場合）が連結されたものです。典型的なオリジンの例は `https://example.org` (この場合のポートは `443`)、`http://example.net` (この場合のポートは `80`)、そして `http://example.com:8080`。このオリジン生成元はそのウィンドウの現在もしくは将来のオリジンであることを保証*していない*ことに注意してください。 `postMessage` が呼び出された時とは異なる場所に移動しているかもしれません。
 - `source`
   - : メッセージを送った {{domxref("window")}} オブジェクトへの参照。これを使うことでオリジンの異なる二つのウィンドウ間で双方向の通信を確立することができます。
 
@@ -127,18 +125,14 @@ popup.postMessage(
 //これはポップアップに送るメッセージのキューに追加します。
 popup.postMessage("hello there!", "http://example.com");
 
-window.addEventListener(
-  "message",
-  (event) => {
-    // このメッセージの送信者は信頼している者か？（例えば、最初開いたものと違
-    // うかもしれません）。
-    if (event.origin !== "http://example.com") return;
+window.addEventListener("message", (event) => {
+  // このメッセージの送信者は信頼している者か？（例えば、最初開いたものと違
+  // うかもしれません）。
+  if (event.origin !== "http://example.com") return;
 
-    // event.source は popup
-    // event.data は "hi there yourself! the secret response is: rheeeeet!"
-  },
-  false,
-);
+  // event.source は popup
+  // event.data は "hi there yourself! the secret response is: rheeeeet!"
+});
 ```
 
 ```js
@@ -159,7 +153,7 @@ window.addEventListener("message", (event) => {
   // の postMessage を呼び出し、targetOrigin に event.origin を指定すること
   // です。
   event.source.postMessage(
-    "hi there yourself! the secret response " + "is: rheeeeet!",
+    "hi there yourself! the secret response is: rheeeeet!",
     event.origin,
   );
 });

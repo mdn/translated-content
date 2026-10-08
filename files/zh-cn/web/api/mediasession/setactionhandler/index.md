@@ -9,8 +9,8 @@ slug: Web/API/MediaSession/setActionHandler
 
 ## 语法
 
-```plain
-navigator.mediaSession.setActionHandler(type, callback)
+```js
+navigator.mediaSession.setActionHandler(type, callback);
 ```
 
 ### 参数

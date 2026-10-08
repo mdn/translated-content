@@ -216,7 +216,7 @@ selectElem.addEventListener("change", () => {
 
 ## Voir aussi
 
-- Le module des [fonctions d'évolution CSS](/fr/docs/Web/CSS/CSS_easing_functions)
+- Le module des [fonctions d'évolution CSS](/fr/docs/Web/CSS/Guides/Easing_functions)
 - Le module des [animations CSS](/fr/docs/Web/CSS/Guides/Animations)
 - Le module des [transitions CSS](/fr/docs/Web/CSS/Guides/Transitions)
 - [Un site pour générer des fonctions d'évolution `linear()` <sup>(angl.)</sup>](https://linear-easing-generator.netlify.app/)

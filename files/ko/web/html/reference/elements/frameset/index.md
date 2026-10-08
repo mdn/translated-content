@@ -4,8 +4,6 @@ slug: Web/HTML/Reference/Elements/frameset
 original_slug: Web/HTML/Element/frameset
 ---
 
-{{Deprecated_header}}
-
 ## 요약
 
 `<frameset>`은 HTML element로써 {{HTMLElement("frame")}} element을 포함하고 사용된다.

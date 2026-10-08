@@ -1,11 +1,12 @@
 ---
-title: font-variant-emoji
+title: "`font-variant-emoji` プロパティ (CSS)"
+short-title: font-variant-emoji
 slug: Web/CSS/Reference/Properties/font-variant-emoji
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
-**`font-variant-emoji`** は [CSS](/ja/docs/Web/CSS) のプロパティで、絵文字の表示についての既定の表現を指定します。
+**`font-variant-emoji`** は [CSS](/ja/docs/Web/CSS) のプロパティで、絵文字の表示についてのデフォルトの表現を指定します。
 
 従来は、変化形セレクター（テキストの場合は `U+FE0E`、絵文字の場合は `U+FE0F`）をこの点に付加することで行われていました。このプロパティの影響を受けるのは、[Unicode emoji presentation sequence](https://www.unicode.org/emoji/charts/emoji-variants.html) に掲載されている絵文字だけです。
 
@@ -26,9 +27,9 @@ font-variant-emoji: revert-layer;
 font-variant-emoji: unset;
 ```
 
-`font-variant-emoji` プロパティは、下記の一覧から 1 つのキーワード値を使用して指定します。
-
 ### 値
+
+このプロパティは、以下のキーワード値のいずれかで指定します。
 
 - `normal`
   - : ブラウザーが絵文字を表示する方法を選べます。これは多くの場合、オペレーティングシステムの設定に従います。
@@ -99,6 +100,7 @@ font-variant-emoji: unset;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-family: "Noto Color Emoji", "Segoe UI Emoji", "Apple Color Emoji";
   }
   .emoji > div {
     font-size: 2rem;

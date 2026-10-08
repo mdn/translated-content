@@ -2,7 +2,7 @@
 title: Request
 slug: Web/API/Request
 l10n:
-  sourceCommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
+  sourceCommit: ad1fac9d8dd0c9ab8f560e98c5c923559617ba54
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
@@ -25,15 +25,19 @@ l10n:
 - {{domxref("Request.cache")}} {{ReadOnlyInline}}
   - : リクエストのキャッシュモード (`default`, `reload`, `no-cache` など) が入ります。
 - {{domxref("Request.credentials")}} {{ReadOnlyInline}}
-  - : リクエストの認証情報 (`omit`, `same-origin`, `include` など) が入ります。既定値は `same-origin` です。
+  - : リクエストに資格情報を含めるかどうかを制御する値 (`omit`, `same-origin`, `include` など) が入ります。デフォルト値は `same-origin` です。
 - {{domxref("Request.destination")}} {{ReadOnlyInline}}
   - : 文字列で、リクエストされたコンテンツの型を表します。
+- {{domxref("Request.duplex")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : リクエストの多重モード。これは、ブラウザーがレスポンスを処理する前にリクエスト全体を送信しなければならないかどうかを決定するものです。
 - {{domxref("Request.headers")}} {{ReadOnlyInline}}
   - : リクエストに関連付けられた {{domxref("Headers")}} オブジェクトが入ります。
 - {{domxref("Request.integrity")}} {{ReadOnlyInline}}
   - : リクエストの[サブリソース完全性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)の値を保持します（`sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=` など）。
 - {{domxref("Request.isHistoryNavigation")}} {{ReadOnlyInline}}
   - : 論理値で、このリクエストが履歴のナビゲーションであるかどうかを示します。
+- {{domxref("Request.isReloadNavigation")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : 論理値で、リクエストがユーザーによる再読み込みであるかどうかを示します。
 - {{domxref("Request.keepalive")}} {{ReadOnlyInline}}
   - : リクエストの `keepalive` 設定（`true` または `false`）が入ります。これは、リクエストが完全に完了する前に開始ページが読み込まれなかった場合に、ブラウザーが関連付けられたリクエストを維持するかどうかを示します。
 - {{domxref("Request.method")}} {{ReadOnlyInline}}
@@ -48,6 +52,8 @@ l10n:
   - : リファラに関するポリシー (`no-referrer` など) が入ります。
 - {{domxref("Request.signal")}} {{ReadOnlyInline}}
   - : リクエストに関連付けられた {{domxref("AbortSignal")}} を返します。
+- {{domxref("Request.targetAddressSpace")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : リクエストの宛先アドレス空間を返します。これにより、そのリクエストがループバック、ローカル、パブリックのいずれであるかが示されます。
 - {{domxref("Request.url")}} {{ReadOnlyInline}}
   - : リクエストの URL が入ります。
 
@@ -67,6 +73,8 @@ l10n:
   - : リクエストの本体を {{JSxRef("JSON")}} で解釈した結果で解決するプロミスを返します。
 - {{domxref("Request.text()")}}
   - : リクエストの本体のテキスト表現で解決するプロミスを返します。
+- {{domxref("Request.textStream()")}} {{experimental_inline}}
+  - : {{domxref("ReadableStream")}} を返します。これは、リクエスト本文のコンテンツを UTF-8 形式のチャンク単位で読み取るために使用することができます。
 
 > [!NOTE]
 > リクエスト本体の機能は一度しか実行することができません。それ以降の呼び出しは、TypeError で拒否され、本体ストリームがすでに使用されていることを示すエラーが表示されます。
@@ -115,11 +123,10 @@ const bodyUsed = request.bodyUsed;
 ```js
 fetch(request)
   .then((response) => {
-    if (response.status === 200) {
-      return response.json();
-    } else {
+    if (response.status !== 200) {
       throw new Error("API サーバーで問題が発生しました。");
     }
+    return response.json();
   })
   .then((response) => {
     console.debug(response);

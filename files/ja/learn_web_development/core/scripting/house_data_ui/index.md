@@ -135,7 +135,7 @@ fetchHouseData();
 - `bedroomSelect`: "choose-bedrooms" の `<select>` 要素
 - `bathroomSelect`: "choose-bathrooms" の `<select>` 要素
 - `form`: `<select>` 要素を含む、全体的な `<form>` 要素
-- `resultCount`: "result-count" の `<p>` 要素は。検索のたびに返された結果の数を表示するように更新されます。
+- `resultCount`: "result-count" の `<p>` 要素は、検索のたびに返された結果の数を表示するように更新されます。
 - `output`: "output" の `<section>` 要素で、検索結果を表示します。
 - `houses`: 最初は空ですが、取得したJSONデータを解析して作成された住宅データオブジェクトがここに格納されます。
 

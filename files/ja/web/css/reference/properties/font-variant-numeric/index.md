@@ -1,11 +1,14 @@
 ---
-title: font-variant-numeric
+title: "`font-variant-numeric` プロパティ (CSS)"
+short-title: font-variant-numeric
 slug: Web/CSS/Reference/Properties/font-variant-numeric
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 **`font-variant-numeric`** は [CSS](/ja/docs/Web/CSS) のプロパティで、数字、分数、序数記号の表記を制御するために使用します。
+
+<!-- Source Sans Pro は重ねた分数に対応していません -->
 
 {{InteractiveExample("CSS デモ: font-variant-numeric", "taller")}}
 
@@ -40,8 +43,6 @@ font-variant-numeric: proportional-nums;
 ```css interactive-example-choice
 font-variant-numeric: diagonal-fractions;
 ```
-
-<!-- Source Sans Pro は重ねた分数に対応していません -->
 
 ```html interactive-example
 <section id="default-example">
@@ -117,12 +118,9 @@ font-variant-numeric: revert-layer;
 font-variant-numeric: unset;
 ```
 
-このプロパティは 2 つの形のうちの 1 つを取ります。
-
-- キーワード値 `normal`
-- 以下の一覧にあるその他の値を空白区切り、自由な順番で
-
 ### 値
+
+このプロパティは、`normal` または、以下の値の空白区切りリストのどちらかで指定します。
 
 - `normal`
   - : このキーワードは、別形式の表記の使用を無効にします。

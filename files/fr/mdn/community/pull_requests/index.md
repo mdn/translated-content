@@ -2,7 +2,7 @@
 title: Requêtes de tirage propositions et révisions
 slug: MDN/Community/Pull_requests
 l10n:
-  sourceCommit: b3cd597b58940518a7712487ce94efc0881cb549
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
 Ce document explique comment les contributeur·ice·s apportent des modifications à MDN Web Docs, comment ces changements sont relus et publiés sur le site.
@@ -76,7 +76,7 @@ Lorsque vous êtes prêt·e à ouvrir une requête de tirage, suivez ces recomma
   Si vous ne savez pas comment résoudre le problème, demandez de l'aide.
 - **Résolvez les conflits de fusion** avec la branche principale&nbsp;: c'est à vous de les corriger.
   Vous pouvez le faire en fusionnant la branche `mdn/main` dans votre branche.
-  Pour plus d'informations, consultez la [documentation GitHub sur la mise à jour de votre branche](https://docs.github.com/fr/pull-requests/proposing-changes-to-your-work-with-pull-requests/keeping-your-pull-request-in-sync-with-the-base-branch#about-keeping-your-pull-request-in-sync).
+  Pour plus d'informations, consultez la [documentation GitHub sur la mise à jour de votre branche](https://docs.github.com/fr/pull-requests/how-tos/create-pull-requests/keeping-your-pull-request-in-sync-with-the-base-branch#about-keeping-your-pull-request-in-sync).
 - **Soyez réactif·ive aux retours.**
   Cela signifie être prêt·e à modifier la requête selon les retours de relecture.
   Si une relecture a lieu et que les changements ne sont pas faits, la requête peut être fermée.

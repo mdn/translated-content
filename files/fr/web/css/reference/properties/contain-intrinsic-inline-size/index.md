@@ -34,7 +34,7 @@ contain-intrinsic-inline-size: unset;
 
 ### Valeurs
 
-Les valeurs suivantes peuvent être spécifiées pour la taille en incise intrinsèque d'un élément&nbsp;:
+Les valeurs suivantes peuvent être définies pour la taille en incise intrinsèque d'un élément&nbsp;:
 
 - `none`
   - : L'élément n'a pas de taille en incise intrinsèque.
@@ -48,8 +48,8 @@ Les valeurs suivantes peuvent être spécifiées pour la taille en incise intrin
 
 La propriété est généralement appliquée aux éléments susceptibles de déclencher la compartimentation de taille, tels que {{CSSxRef("contain", "contain: size")}} et {{CSSxRef("content-visibility")}}.
 
-La compartimentation de taille permet à un agent utilisateur de disposer un élément comme s'il avait une taille fixe, évitant des recalcules de mise en page inutiles en évitant le re-rendu des éléments enfants pour déterminer la taille réelle (améliorant ainsi l'expérience utilisateur).
-Par défaut, la compartimentation de taille considère les éléments comme s'ils n'avaient pas de contenu et peut contracter la mise en page de la même manière que si les contenus n'avaient ni largeur ni hauteur.
+La compartimentation de taille permet à un agent utilisateur de disposer un élément comme s'il a une taille fixe, évitant des recalcules de mise en page inutiles en évitant le re-rendu des éléments enfants pour déterminer la taille réelle (améliorant ainsi l'expérience utilisateur).
+Par défaut, la compartimentation de taille considère les éléments comme s'ils n'ont pas de contenu et peut contracter la mise en page de la même manière que si les contenus n'ont ni largeur ni hauteur.
 La propriété `contain-intrinsic-inline-size` permet aux auteur·ice·s de définir une valeur appropriée à utiliser comme taille en incise pour la mise en page.
 
 La valeur `auto <length>` permet de mémoriser la taille en incise d'un élément si celui‑ci a déjà été «&nbsp;rendu normalement&nbsp;» (avec ses éléments enfants), puis d'utiliser cette valeur mémorisée à la place de la valeur définie lorsque l'élément omet son contenu.
@@ -68,7 +68,7 @@ La valeur mémorisée n'est pas utilisée si les éléments enfants sont en cour
 
 ### Définir la taille en incise intrinsèque
 
-Le HTML ci‑dessous définit un élément «&nbsp;contained_element&nbsp;» qui sera soumis à une contrainte de taille, et qui contient un élément enfant.
+Le HTML ci‑dessous définit un élément «&nbsp;contained_element&nbsp;» qui est envoyé à une contrainte de taille, et qui contient un élément enfant.
 
 ```html
 <div id="contained_element">
@@ -76,7 +76,7 @@ Le HTML ci‑dessous définit un élément «&nbsp;contained_element&nbsp;» qui
 </div>
 ```
 
-Le CSS ci‑dessous règle {{CSSxRef("content-visibility")}} de `contained_element` sur `auto`, donc si l'élément est masqué il sera contraint en taille.
+Le CSS ci‑dessous règle {{CSSxRef("content-visibility")}} de `contained_element` sur `auto`, donc si l'élément est masqué il est contraint en taille.
 La taille de bloc intrinsèque et la taille en incise intrinsèque utilisées lorsque l'élément est contraint sont définies simultanément à l'aide de `contain-intrinsic-block-size` et `contain-intrinsic-inline-size`, respectivement.
 
 ```css

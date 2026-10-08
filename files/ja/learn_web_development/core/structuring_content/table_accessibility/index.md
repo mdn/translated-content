@@ -430,7 +430,7 @@ l10n:
 
 `<th>` 要素は、データセル (`<td>`) の見出しとして、あるいはより複雑な表では他の見出しセル (`<th>`) の見出しとして提供することができます。これにより、複数の見出しを説明する階層的またはグループ化された見出しを作成することができます。
 
-`headers` 属性は、セル（`<td>` または `<th>`）を 1 つ以上の見出しセルに関連付けるために使用されます。空白区切りの空白区切りの{{Glossary("string", "文字列")}}の順不同リストを指定します。文字列の順序は関係ありません。それぞれの文字列は、セルが関連付けられた `<th>` 要素の一意の `id` と一致する必要があります。
+`headers` 属性は、セル（`<td>` または `<th>`）を 1 つ以上の見出しセルに関連付けるために使用されます。空白区切りの{{Glossary("string", "文字列")}}の順不同リストを指定します。文字列の順序は関係ありません。それぞれの文字列は、セルが関連付けられた `<th>` 要素の一意の `id` と一致する必要があります。
 
 この方法では、HTML 表のそれぞれのセルの位置を、スプレッドシートのように、そのセルが属する列と行の見出しに基づいてより明確に定義します。これを適切に機能させるには、表に列見出しと行見出しの両方を記載する必要があります。
 
@@ -629,7 +629,7 @@ l10n:
 </table>
 ```
 
-最終的な例は GitHub で確認することもこともできます。
+最終的な例は GitHub で確認することもできます。
 
 - 最初の例は [items-sold-scope.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-scope.html) で確認できます（[ライブ実行でも確認できます](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)）。
 - 2 つ目の例は [items-sold-headers.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-headers.html) で確認できます（[ライブ実行でも確認できます](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)）。

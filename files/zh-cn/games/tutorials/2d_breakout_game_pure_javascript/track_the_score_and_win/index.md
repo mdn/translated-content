@@ -1,13 +1,13 @@
 ---
 title: 跟踪得分和获胜
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win
 l10n:
   sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}
 
-这是 [Gamedev Canvas 教程](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 个步骤中的**第 8 步**。完成本课后，你可以在 [Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html) 查看本节对应的源码。
+这是 [Gamedev Canvas 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) 10 个步骤中的**第 8 步**。完成本课后，你可以在 [Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html) 查看本节对应的源码。
 
 打掉砖块确实很酷，但如果游戏能在每次击中砖块时给玩家加分，并持续统计总分，就会更有成就感。
 
@@ -274,6 +274,6 @@ runButton.addEventListener("click", () => {
 
 ## 下一步
 
-目前来看，游戏效果相当不错。在下一课中，我们会通过加入[鼠标控制](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls)来进一步提升可玩性。
+输赢机制都已实现，因此我们游戏的核心玩法已经完成。现在让我们添加一些额外内容——我们将给玩家三条[生命](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives)，而不是一条。
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}

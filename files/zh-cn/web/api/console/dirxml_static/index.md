@@ -9,7 +9,7 @@ slug: Web/API/console/dirxml_static
 
 ## 语法
 
-```plain
+```js-nolint
 console.dirxml(object);
 ```
 

@@ -3,7 +3,7 @@ title: 機能検出の実装
 short-title: 機能検出
 slug: Learn_web_development/Extensions/Testing/Feature_detection
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
@@ -39,7 +39,7 @@ l10n:
 
 ```js
 if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(function (position) {
+  navigator.geolocation.getCurrentPosition((position) => {
     // Google Maps API を用いて現在位置をマップ上に表示します
   });
 } else {
@@ -57,7 +57,7 @@ if ("geolocation" in navigator) {
 
 JavaScriptで _[element.style.プロパティ](/ja/docs/Web/API/HTMLElement/style)_ （例 `paragraph.style.rotate`）の存在をテストすることで、 CSS 機能のテストを書くことができます。
 
-古典的な例は、ブラウザーの[サブグリッド](/ja/docs/Web/CSS/Guides/Grid_layout/Subgrid)の対応をテストすることです。 [`grid-template-columns`](/ja/docs/Web/CSS/Reference/Properties/grid-template-columns) と [`grid-template-rows`](/ja/docs/Web/CSS/Reference/Properties/grid-template-rows) のサブグリッドの値として `subgrid` に対応しているブラウザーの場合、レイアウトでサブグリッドを使用することができます。そうでないブラウザーでは、通常のグリッドを使用することができて、動作はうまくいきますが、見た目はあまりよくありません。
+古典的な例としては、ブラウザーで [サブグリッド](/ja/docs/Web/CSS/Guides/Grid_layout/Subgrid) に対応しているかをテストする場合が挙げられます。 `subgrid` 値を {{cssxref("grid-template-columns")}} および {{cssxref("grid-template-rows")}} において対応しているブラウザーでは、レイアウトにサブグリッドを使用することができます。対応していないブラウザーでは、問題なく動作する通常のグリッドを使用することになりますが、見た目はあまりよくありません。
 
 この例を用いると、値が対応している場合はサブグリッドのスタイルシートを、対応していない場合は通常のグリッドのスタイルシートを含めることができます。そのためには、 HTML ファイルの見出しに 2 つのスタイルシートを含めることができます。 1 つはすべてのスタイル設定、もう 1 つはサブグリッドに対応していない場合の既定レイアウトを実装するものです。
 
@@ -83,7 +83,7 @@ if (CSS.supports("grid-template-columns", "subgrid")) {
 
 #### @supports
 
-CSS にはネイティブの機能検出メカニズムがあります。 {{cssxref("@supports")}} アットルールです。これは[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)と同じように動作しますが、解像度や画面の内側、縦横比などのメディア特性に応じて CSS を選択的に適用するのではなく、 `CSS.supports()` と同じように、 CSS 機能が対応しているかどうかによって CSS を選択的に適用します。
+CSS にはネイティブの機能検出メカニズムがあります。 {{cssxref("@supports")}} アットルールです。これは[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)と同じように動作しますが、解像度、画面幅、{{glossary("aspect ratio", "アスペクト比")}}などのメディア特性に応じて CSS を選択的に適用するのではなく、 `CSS.supports()` と同じように、CSS 機能が対応しているかどうかによって CSS を選択的に適用します。
 
 例えば、前回の例を書き換えて `@supports` を使用することができます。
 
@@ -145,11 +145,11 @@ JavaScript の機能検出テストの例をすでに見ました。一般的に
     この例では、[キャンバス API](/ja/docs/Web/API/Canvas_API) の対応を検出する方法を示しています。
 
     ```js
-    function supports_canvas() {
+    function supportsCanvas() {
       return !!document.createElement("canvas").getContext;
     }
 
-    if (supports_canvas()) {
+    if (supportsCanvas()) {
       // Create and draw on canvas elements
     }
     ```
@@ -170,7 +170,7 @@ JavaScript の機能検出テストの例をすでに見ました。一般的に
 また、 {{domxref("Window.matchMedia")}} の JavaScript 機能についても触れておきたいと思います。これは、 JavaScript 内でメディアクエリーテストを実行するためのプロパティです。このように見ていきます。
 
 ```js
-if (window.matchMedia("(max-width: 480px)").matches) {
+if (window.matchMedia("(width <= 480px)").matches) {
   // run JavaScript in here.
 }
 ```
@@ -178,16 +178,13 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 例えば、 [Snapshot](https://github.com/chrisdavidmills/snapshot) デモでは、 Brick JavaScript ライブラリーを選択的に適用し、 UI レイアウトを処理するために使用していますが、小さな画面レイアウト（480px 幅以下）の場合のみ使用しています。最初に `media` 属性を使用して、ページ幅が 480px 以下の場合にのみ Brick CSS を使用します。
 
 ```html
-<link
-  href="dist/brick.css"
-  rel="stylesheet"
-  media="all and (max-width: 480px)" />
+<link href="dist/brick.css" rel="stylesheet" media="(width <= 480px)" />
 ```
 
 そして、 JavaScript で何度か `matchMedia()` を使用することで、小さな画面レイアウトにいる場合にのみ Brick のナビゲーション機能を実行することができます（広い画面レイアウトでは、すべてを一度に見ることができるので、異なるビュー間を移動する必要はありません）。
 
 ```js
-if (window.matchMedia("(max-width: 480px)").matches) {
+if (window.matchMedia("(width <= 480px)").matches) {
   deck.shuffleTo(1);
 }
 ```

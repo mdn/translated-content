@@ -158,7 +158,7 @@ function draw() {
 draw();
 ```
 
-結果のグラフは。次のようになります。
+結果のグラフは次のようになります。
 
 {{EmbedLiveSample("Example_A_simple_line_graph", "", "160")}}
 

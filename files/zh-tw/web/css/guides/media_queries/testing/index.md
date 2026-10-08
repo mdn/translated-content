@@ -13,7 +13,7 @@ DOM 提供了一個用程式去測試 media query 的方法：那就是透過 {{
 
 以下範例將取得偵測螢幕方向的 MediaQueryList 物件：
 
-```plain
+```js
 var mql = window.matchMedia("(orientation: portrait)");
 ```
 
@@ -57,7 +57,7 @@ function handleOrientationChange(mql) {
 
 當我們不需要接受通知時，只需要呼叫 removeListener 方法，然後傳入欲移除的 listener 即可：
 
-```plain
+```js
 mql.removeListener(handleOrientationChange);
 ```
 

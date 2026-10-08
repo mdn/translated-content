@@ -27,7 +27,7 @@ console.log(Reflect.apply("".charAt, "ponies", [3]));
 
 ## 语法
 
-```plain
+```js-nolint
 Reflect.apply(target, thisArgument, argumentsList)
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: Règles d'écriture
+title: Directives de rédaction
 slug: MDN/Writing_guidelines
 l10n:
   sourceCommit: f99d00a1c3697e26a679925954e26564e7e79b98

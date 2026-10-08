@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`Accept-Language`** indique quelles sont les langues que le client est capable de comprendre, et quelle variante locale est préférée.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Accept-Language`** indique quelles sont les langues que le client est capable de comprendre, et quelle variante locale est préférée.
 En utilisant la [négociation de contenu](/fr/docs/Web/HTTP/Guides/Content_negotiation), le serveur choisit alors l'une des propositions, l'utilise et informe le client de son choix par l'entête de réponse {{HTTPHeader("Content-Language")}}.
 Les navigateurs définissent les valeurs requises pour cet en-tête en fonction de la langue active de leur interface utilisateur.
 Les utilisateur·ice·s peuvent aussi définir des langues préférées supplémentaires dans les paramètres du navigateur.
@@ -14,7 +14,7 @@ Les utilisateur·ice·s peuvent aussi définir des langues préférées supplém
 L'en-tête `Accept-Language` liste généralement les mêmes locales que la propriété {{DOMxRef("navigator.languages")}}, avec des valeurs `q` ([valeurs de qualité](/fr/docs/Glossary/Quality_values)) décroissantes. Certains navigateurs, comme Chrome et Safari, ajoutent des balises de repli ne contenant que la langue dans `Accept-Language`. Par exemple, `en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7` lorsque `navigator.languages` vaut `["en-US", "zh-CN"]`. Pour des raisons de confidentialité (réduction de la {{Glossary("fingerprinting", "prise d'empreinte")}}), `Accept-Language` et `navigator.languages` peuvent ne pas inclure la liste complète des préférences utilisateur·ice·s. Par exemple, dans Safari (toujours) et le mode navigation privée de Chrome, une seule langue est listée.
 
 Cet en-tête sert d'indication lorsque le serveur ne peut pas déterminer la langue du contenu cible autrement (par exemple, utiliser une URL spécifique qui dépend d'une décision explicite de l'utilisateur·ice).
-Le serveur ne doit jamais passer outre un choix explicite de langue de l'utilisateur·ice. Le contenu d'`Accept-Language` est souvent hors du contrôle de l'utilisateur·ice (par exemple lors d'un voyage).
+Le serveur ne doit jamais passer outre un choix explicite de langue de l'utilisateur·ice. Le contenu de `Accept-Language` est souvent hors du contrôle de l'utilisateur·ice (par exemple lors d'un voyage).
 Un·e utilisateur·ice peut aussi vouloir visiter une page dans une langue différente de celle de l'interface utilisateur.
 
 Le serveur peut retourner un code d'erreur {{HTTPStatus("406", "406 Not Acceptable")}} lorsqu'il ne peut pas servir de contenu dans une langue correspondante, mais cela est rarement mis en œuvre.

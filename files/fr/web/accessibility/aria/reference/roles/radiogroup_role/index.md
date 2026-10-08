@@ -3,7 +3,7 @@ title: "ARIA : rôle radiogroup"
 short-title: radiogroup
 slug: Web/Accessibility/ARIA/Reference/Roles/radiogroup_role
 l10n:
-  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
+  sourceCommit: 705109e85b6c5a9142260c58a617ef295b3b1316
 ---
 
 Le rôle `radiogroup` représente un groupe de boutons `radio`.
@@ -20,14 +20,14 @@ Lorsque vous utilisez des éléments non sémantiques comme boutons radio, vous 
 
 Certaines implémentations de `radiogroup` initialisent le groupe avec tous les boutons non sélectionnés. Une fois qu'un bouton radio est sélectionné, il n'est généralement pas possible de revenir à un état où aucun bouton n'est sélectionné.
 
-Le `radiogroup` doit avoir un nom accessible, soit par une étiquette visible référencée par [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby), soit par une étiquette définie avec [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). Si des éléments fournissent des informations supplémentaires sur le groupe, ils sont référencés par le `radiogroup` avec la propriété [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
+Un nom accessible est fortement recommandé pour le rôle `radiogroup`, bien qu'il ne soit pas requis par ARIA. Fournissez-le soit par une étiquette visible référencée par [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby), soit par une étiquette définie par [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). Si des éléments fournissent des informations supplémentaires sur le groupe, ils sont référencés par le `radiogroup` avec la propriété [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
 ## Propriétés, états et rôles WAI-ARIA associés
 
 - le rôle [`radio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
   - : Un des boutons sélectionnables d'un groupe, dans un `radiogroup`, où un seul bouton peut être sélectionné à la fois.
 - [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) / [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-  - : Le `radiogroup` doit avoir un nom accessible, soit par une étiquette visible référencée par `aria-labelledby`, soit par une étiquette définie avec `aria-label`.
+  - : Fournit un nom accessible pour le `radiogroup` soit par une étiquette visible référencée par `aria-labelledby`, soit par une étiquette définie avec `aria-label`. Cela est fortement recommandé, bien qu'il ne soit pas requis par ARIA.
 - [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
   - : Référence vers des éléments fournissant des informations supplémentaires sur le `radiogroup`.
 - [`aria-required`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)

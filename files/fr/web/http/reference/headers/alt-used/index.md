@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`Alt-Used`** est utilisé pour identifier le service alternatif utilisé, tout comme le champ d'en-tête HTTP {{HTTPHeader("Host")}} identifie l'hôte et le port de l'origine.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Alt-Used`** est utilisé pour identifier le service alternatif utilisé, tout comme le champ d'en-tête HTTP {{HTTPHeader("Host")}} identifie l'hôte et le port de l'origine.
 
 Cela permet aux services alternatifs de détecter les boucles, de différencier le trafic à des fins d'équilibrage de charge, et plus généralement de s'assurer qu'il est possible d'identifier la destination prévue du trafic, car introduire cette information après la mise en service d'un protocole s'est avéré problématique.
 

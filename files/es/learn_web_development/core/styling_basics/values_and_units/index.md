@@ -22,7 +22,7 @@ Todas las propiedades que se utilizan en CSS tienen un valor o un conjunto de va
         <a href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >, HTML básico (véase
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content"
           >Introducción a HTML</a
         >) y nociones de cómo funciona el CSS (véase
         <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Primeros pasos con el CSS</a>).

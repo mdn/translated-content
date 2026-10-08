@@ -8,7 +8,7 @@ l10n:
 
 {{SecureContext_Header}}
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Clear-Site-Data`** envoie un signal au client pour qu'il supprime toutes les données de navigation de certains types (cookies, stockage, cache) associées au site web demandeur.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Clear-Site-Data`** envoie un signal au client pour qu'il supprime toutes les données de navigation de certains types (cookies, stockage, cache) associées au site web demandeur.
 Il permet aux développeur·euse·s web d'avoir davantage de contrôle sur les données stockées par les navigateurs pour leurs origines.
 
 <table class="properties">
@@ -43,13 +43,13 @@ Clear-Site-Data: "*"
     Selon le navigateur, cela peut également supprimer des éléments tels que des pages pré-rendues, {{Glossary("bfcache","cache arrière-avant")}}, des caches de scripts, des caches de shaders WebGL ou des suggestions de la barre d'adresse.
 
 - `"clientHints"` {{Experimental_Inline}}
-  - : Indique que le serveur supprimera toutes les [indications client](/fr/docs/Web/HTTP/Guides/Client_hints) (demandées via {{HTTPHeader("Accept-CH")}}) stockées pour l'origine de l'URL de la réponse.
+  - : Indique que le serveur supprimera toutes les [indications client](/fr/docs/Web/HTTP/Guides/Client_hints) (demandées avec {{HTTPHeader("Accept-CH")}}) stockées pour l'origine de l'URL de la réponse.
 
     > [!NOTE]
     > Dans les navigateurs qui prennent en charge le type de données `"clientHints"`, les indications client sont également effacées lorsque les types `"cache"`, `"cookies"` ou `"*"` sont définis. `"clientHints"` n'est donc nécessaire que lorsque aucun de ces autres types n'est défini.
 
 - `"cookies"`
-  - : Le serveur signale que le client doit supprimer tous les cookies pour l'origine de l'URL de la réponse. Les identifiants d'authentification HTTP sont également effacés. Cela affecte l'ensemble du domaine enregistré, y compris les sous-domaines. Ainsi, `https://example.com` ainsi que `https://stage.example.com`, auront leurs cookies supprimés.
+  - : Le serveur signale que le client doit supprimer tous les cookies pour l'origine de l'URL de la réponse. Les identifiants d'authentification HTTP sont également effacés. Cela affecte l'ensemble du domaine enregistré, y compris les sous-domaines. Ainsi, `https://example.com` ainsi que `https://stage.example.com`, ont leurs cookies supprimés.
 
 - `"executionContexts"` {{Experimental_Inline}}
   - : Le serveur signale que le client doit recharger tous les contextes de navigation pour l'origine de l'URL de la réponse ({{DOMxRef("Location.reload")}}).
@@ -68,16 +68,16 @@ Clear-Site-Data: "*"
     - Enregistrements de service worker (pour chaque enregistrement de service worker, exécuter {{DOMxRef("ServiceWorkerRegistration.unregister")}}),
     - Bases de données Web SQL (obsolètes),
     - [Données de l'API File and Directory Entries](/fr/docs/Web/API/File_and_Directory_Entries_API),
-    - Données de plugin (Flash via [`NPP_ClearSiteData` <sup>(angl.)</sup>](https://wiki.mozilla.org/NPAPI:ClearSiteData)).
+    - Données de plugin (Flash avec [`NPP_ClearSiteData` <sup>(angl.)</sup>](https://wiki.mozilla.org/NPAPI:ClearSiteData)).
 
 - `"*"` (joker)
-  - : Le serveur signale que le client doit supprimer tous les types de données pour l'origine de l'URL de la réponse. Si de nouveaux types de données sont ajoutés dans de futures versions de cet en-tête, ils seront également couverts.
+  - : Le serveur signale que le client doit supprimer tous les types de données pour l'origine de l'URL de la réponse. Si de nouveaux types de données sont ajoutés dans de futures versions de cet en-tête, ils sont également couverts.
 
 ## Exemples
 
 ### Se déconnecter d'un site
 
-Si un·e utilisateur·ice se déconnecte de votre site ou service, vous pouvez souhaiter supprimer les données stockées localement, y compris tout contenu préchargé ou pré‑rendu pour des {{DOMxRef("Speculation Rules API", "navigations spéculées", "", "nocode")}}.
+Si un·e utilisateur·ice se déconnecte de votre site ou service, vous pouvez souhaiter supprimer les données stockées localement, y compris tout contenu préchargé ou pré‑rendu pour des {{DOMxRef("Speculation Rules API", "navigations spéculatives", "", "nocode")}}.
 Pour ce faire, ajoutez l'en-tête `Clear-Site-Data` à la page qui confirme que la déconnexion du site a été effectuée avec succès (`https://example.com/logout`, par exemple)&nbsp;:
 
 ```http
@@ -86,7 +86,7 @@ Clear-Site-Data: "cache", "cookies", "storage", "executionContexts", "prefetchCa
 
 ### Suppression des cookies
 
-Si cet en-tête est renvoyé dans la réponse à `https://example.com/clear-cookies`, tous les cookies du même domaine `https://example.com` et de ses sous-domaines (par exemple `https://stage.example.com`) seront supprimés.
+Si cet en-tête est retourné dans la réponse à `https://example.com/clear-cookies`, tous les cookies du même domaine `https://example.com` et de ses sous-domaines (par exemple `https://stage.example.com`) sont supprimés.
 
 ```http
 Clear-Site-Data: "cookies"
@@ -94,7 +94,7 @@ Clear-Site-Data: "cookies"
 
 ### Suppression des spéculations
 
-Si cet en‑tête est renvoyé dans la réponse à `https://example.com/change-state.json`, tous les pré‑rendus des {{DOMxRef("Speculation Rules API", "navigations spéculées", "", "nocode")}} sur le même domaine `https://example.com` et ses sous‑domaines (par exemple `https://stage.example.com`) seront supprimés.
+Si cet en‑tête est retourné dans la réponse à `https://example.com/change-state.json`, tous les pré‑rendus des {{DOMxRef("Speculation Rules API", "navigations spéculatives", "", "nocode")}} sur le même domaine `https://example.com` et ses sous‑domaines (par exemple `https://stage.example.com`) sont supprimés.
 
 ```http
 Clear-Site-Data: "prerenderCache"
@@ -108,11 +108,11 @@ Clear-Site-Data: "prefetchCache", "prerenderCache"
 
 Il existe des cas où il est approprié d'effacer l'un ou l'autre, ou les deux.
 
-Par exemple, une application rendue côté client qui récupère des données via JavaScript peut utiliser `prerenderCache` lors d'un changement d'état pour supprimer les pages pré‑rendues, tout en conservant le HTML préchargé pour l'utiliser lorsque la page est rendue (ou pré‑rendue de nouveau).
+Par exemple, une application rendue côté client qui récupère des données avec JavaScript peut utiliser `prerenderCache` lors d'un changement d'état pour supprimer les pages pré‑rendues, tout en conservant le HTML préchargé pour l'utiliser lorsque la page est rendue (ou pré‑rendue de nouveau).
 
-En revanche, si le document HTML préchargé contient des données obsolètes mais que la page pré‑rendue correspondante est conçue pour actualiser les données lorsqu'elle est affichée, vous n'aurez peut‑être pas besoin d'utiliser `prerenderCache` mais souhaiterez probablement utiliser la directive `prefetchCache`&nbsp;: ainsi, le HTML obsolète ne sera pas utilisé lors d'un futur pré‑rendu.
+En revanche, si le document HTML préchargé contient des données obsolètes mais que la page pré‑rendue correspondante est conçue pour actualiser les données lorsqu'elle est affichée, vous n'avez peut‑être pas besoin d'utiliser `prerenderCache` mais souhaitez probablement utiliser la directive `prefetchCache`&nbsp;: ainsi, le HTML obsolète n'est pas utilisé lors d'un futur pré‑rendu.
 
-Enfin, si le document HTML préchargé contient des données obsolètes et que les pages pré‑rendues ne rafraîchissent pas non plus leur contenu, il est préférable de spécifier à la fois `prefetchCache` et `prerenderCache`.
+Enfin, si le document HTML préchargé contient des données obsolètes et que les pages pré‑rendues ne rafraîchissent pas non plus leur contenu, il est préférable de définir à la fois `prefetchCache` et `prerenderCache`.
 
 ## Spécifications
 

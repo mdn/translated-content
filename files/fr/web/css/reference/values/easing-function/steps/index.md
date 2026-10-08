@@ -107,5 +107,5 @@ steps(0, jump-none)
 ## Voir aussi
 
 - Autres fonctions d'assouplissement&nbsp;: {{CSSxRef("easing-function/cubic-bezier", "cubic-bezier()")}} et {{CSSxRef("easing-function/linear", "linear()")}}
-- Le module des [fonctions d'assouplissement CSS](/fr/docs/Web/CSS/CSS_easing_functions)
+- Le module des [fonctions d'assouplissement CSS](/fr/docs/Web/CSS/Guides/Easing_functions)
 - [Fonction en escalier <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Step_function) sur Wikipédia

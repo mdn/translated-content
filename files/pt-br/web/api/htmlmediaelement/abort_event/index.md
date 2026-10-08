@@ -26,7 +26,7 @@ O evento **`abort`** é disparado quando o carregamento de um recurso foi interr
 | ------------------------------- | ---------------------------- | ------------------------------------------------------------- |
 | `target` {{readOnlyInline}}     | `{{domxref("EventTarget")}}` | O evento alvo (O mais elevado da árvore DOM).                 |
 | `type` {{readOnlyInline}}       | `{{jsxref("String")}}`       | O tipo de evento.                                             |
-| `bubbles` {{readOnlyInline}}    | `{{domxref("Boolean")}}`     | O evento é normalmente _bubble_?                              |
-| `cancelable` {{readOnlyInline}} | `{{domxref("Boolean")}}`     | É possível cancelar o evento?                                 |
+| `bubbles` {{readOnlyInline}}    | `{{jsxref("Boolean")}}`      | O evento é normalmente _bubble_?                              |
+| `cancelable` {{readOnlyInline}} | `{{jsxref("Boolean")}}`      | É possível cancelar o evento?                                 |
 | `view` {{readOnlyInline}}       | `{{domxref("WindowProxy")}}` | `{{domxref("document.defaultView")}}` (`window` do documento) |
 | `detail` {{readOnlyInline}}     | `long` (`float`)             | 0.                                                            |
