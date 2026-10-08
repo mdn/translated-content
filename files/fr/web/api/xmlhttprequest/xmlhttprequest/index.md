@@ -25,7 +25,7 @@ Aucun paramètre standard n'est défini. Cependant, Firefox permet un paramètre
 - `options` {{Non-standard_Inline}}
   - : Un objet qui peut contenir les indicateurs suivants&nbsp;:
     - `mozAnon`
-      - : Un booléen. Si ce drapeau vaut `true`, il empêche le navigateur d'exposer la {{Glossary("origin")}} et les informations d'authentification de l'utilisateur·ice lors de la récupération des ressources. Plus important encore, cela signifie que les {{Glossary("Cookie", "cookies")}} ne sont pas envoyés, sauf s'ils sont ajoutés de façon explicite en utilisant `setRequestHeader`.
+      - : Un booléen. Si ce drapeau vaut `true`, il empêche le navigateur d'exposer {{Glossary("origin", "l'origine")}} et les informations d'authentification de l'utilisateur·ice lors de la récupération des ressources. Plus important encore, cela signifie que les {{Glossary("Cookie", "cookies")}} ne sont pas envoyés, sauf s'ils sont ajoutés de façon explicite en utilisant `setRequestHeader`.
     - `mozSystem`
       - : Un booléen. Si ce drapeau vaut `true`, la politique de même origine n'est pas appliquée à la requête.
 
