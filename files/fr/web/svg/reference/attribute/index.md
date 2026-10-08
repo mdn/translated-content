@@ -3,7 +3,7 @@ title: Référence des attributs SVG
 short-title: Attributs
 slug: Web/SVG/Reference/Attribute
 l10n:
-  sourceCommit: 27bb49e1849433e05c964c8a645c448f184380ce
+  sourceCommit: 8ae90c06d95ae6d0ccae0feb06ccab676fafbd24
 ---
 
 Les éléments SVG peuvent être modifiés à l'aide d'attributs qui modifient la manière dont l'élément est traité ou rendu.
@@ -103,6 +103,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG, ainsi que des lie
 
 - {{SVGAttr("height")}}
 - {{SVGAttr("href")}}
+- {{SVGAttr("hreflang")}}
 
 ### I
 
@@ -155,6 +156,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG, ainsi que des lie
 
 ### O
 
+- {{SVGAttr("offset")}}
 - {{SVGAttr("opacity")}}
 - {{SVGAttr("operator")}}
 - {{SVGAttr("order")}}
@@ -170,6 +172,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG, ainsi que des lie
 - {{SVGAttr("patternContentUnits")}}
 - {{SVGAttr("patternTransform")}}
 - {{SVGAttr("patternUnits")}}
+- {{SVGAttr("ping")}}
 - {{SVGAttr("pointer-events")}}
 - {{SVGAttr("points")}}
 - {{SVGAttr("pointsAtX")}}
@@ -183,8 +186,10 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG, ainsi que des lie
 
 - {{SVGAttr("r")}}
 - {{SVGAttr("radius")}}
+- {{SVGAttr("referrerpolicy")}}
 - {{SVGAttr("refX")}}
 - {{SVGAttr("refY")}}
+- {{SVGAttr("rel")}}
 - {{SVGAttr("repeatCount")}}
 - {{SVGAttr("repeatDur")}}
 - {{SVGAttr("requiredExtensions")}}
@@ -235,6 +240,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG, ainsi que des lie
 - {{SVGAttr("text-overflow")}}
 - {{SVGAttr("text-rendering")}}
 - {{SVGAttr("textLength")}}
+- {{SVGAttr("title")}}
 - {{SVGAttr("to")}}
 - {{SVGAttr("transform")}}
 - {{SVGAttr("transform-origin")}}
@@ -265,8 +271,10 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG, ainsi que des lie
 - {{SVGAttr("x1")}}
 - {{SVGAttr("x2")}}
 - {{SVGAttr("xChannelSelector")}}
+- {{SVGAttr("xlink:actuate")}}
 - {{SVGAttr("xlink:arcrole")}}
 - {{SVGAttr("xlink:href")}} {{Deprecated_Inline}}
+- `xlink:role`
 - {{SVGAttr("xlink:show")}}
 - {{SVGAttr("xlink:title")}}
 - {{SVGAttr("xlink:type")}}
@@ -318,7 +326,7 @@ Les attributs XLink peuvent référencer des ressources.
 - {{SVGAttr("xlink:arcrole")}} {{Deprecated_Inline}}
 - {{SVGAttr("xlink:title")}} {{Deprecated_Inline}}
 - {{SVGAttr("xlink:show")}} {{Deprecated_Inline}}
-- `xlink:actuate` {{Deprecated_Inline}}
+- {{SVGAttr("xlink:actuate")}} {{Deprecated_Inline}}
 
 ### Attributs de présentation
 
@@ -431,7 +439,7 @@ Pour la compatibilité élément par élément, consultez la page d'attribut de 
 - Attributs pour les primitives de filtre
   - : {{SVGAttr("height")}}, {{SVGAttr("result")}}, {{SVGAttr("width")}}, {{SVGAttr("x")}}, {{SVGAttr("y")}}
 - Attributs pour les fonctions de transfert
-  - : {{SVGAttr("type")}}, {{SVGAttr("tableValues")}}, {{SVGAttr("slope")}}, {{SVGAttr("intercept")}}, {{SVGAttr("amplitude")}}, {{SVGAttr("exponent")}}, `offset`
+  - : {{SVGAttr("type")}}, {{SVGAttr("tableValues")}}, {{SVGAttr("slope")}}, {{SVGAttr("intercept")}}, {{SVGAttr("amplitude")}}, {{SVGAttr("exponent")}}, {{SVGAttr("offset")}}
 
 ### Attributs d'animation
 

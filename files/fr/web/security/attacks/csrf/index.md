@@ -2,7 +2,7 @@
 title: Falsification de requête inter-sites (CSRF)
 slug: Web/Security/Attacks/CSRF
 l10n:
-  sourceCommit: 75016e5d37ecff3b11de4c2ef6665178f654797e
+  sourceCommit: dd70ed064388b0fac4338321f727c8840a508b64
 ---
 
 Dans une attaque de falsification de requête inter-sites (<i lang="en">cross-site request forgery</i>, CSRF), un·e attaquant·e amène l'utilisateur·ice ou le navigateur à émettre une requête HTTP vers le site visé depuis un site malveillant. La requête inclut les informations d'identification de l'utilisateur·ice et amène le serveur à exécuter une action nuisible, pensant que l'utilisateur·ice l'a voulue.
@@ -72,7 +72,7 @@ Pour les envois de formulaire, le jeton CSRF est généralement inclus dans un c
 
 Pour une API JavaScript comme `fetch()`, le jeton peut être placé dans un cookie ou intégré à la page, puis JavaScript extrait la valeur et l'envoie dans un en‑tête supplémentaire.
 
-Les cadriciels web modernes proposent généralement une prise en charge intégrée des jetons CSRF&nbsp;: par exemple, [Django <sup>(angl.)</sup>](https://www.djangoproject.com/) permet de protéger les formulaires à l'aide de la balise [`csrf_token` <sup>(angl.)</sup>](https://docs.djangoproject.com/en/5.1/ref/csrf/). Cette balise génère un champ de formulaire caché supplémentaire contenant le jeton, que le cadriciel vérifie ensuite côté serveur.
+Les cadriciels web modernes proposent généralement une prise en charge intégrée des jetons CSRF&nbsp;: par exemple, [Django <sup>(angl.)</sup>](https://www.djangoproject.com/) permet de protéger les formulaires à l'aide de la balise [`csrf_token` <sup>(angl.)</sup>](https://docs.djangoproject.com/en/stable/ref/csrf/). Cette balise génère un champ de formulaire caché supplémentaire contenant le jeton, que le cadriciel vérifie ensuite côté serveur.
 
 Pour tirer parti de cette protection, vous devez comprendre tous les endroits de votre site où vous utilisez des requêtes HTTP modifiant l'état et vous assurer d'utiliser la défense fournie par votre cadriciel choisi.
 
