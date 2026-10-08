@@ -15,7 +15,7 @@ La propriété en lecture seule **`response`** de l'interface {{DOMxRef("XMLHttp
 Un objet approprié en fonction de la valeur de {{DOMxRef("XMLHttpRequest.responseType", "responseType")}}.
 Vous pouvez tenter de demander que les données soient fournies dans un format spécifique en définissant la valeur de `responseType` après avoir appelé {{DOMxRef("XMLHttpRequest.open", "open()")}} pour initialiser la requête, mais avant d'appeler {{DOMxRef("XMLHttpRequest.send", "send()")}} pour envoyer la requête au serveur.
 
-La valeur est `null` si la requête n'est pas encore terminée ou a échoué, à l'exception du cas où l'on lit des données textuelles en utilisant un `responseType` de `"text"` ou la chaîne de caractères vide (`""`), la réponse peut contenir la réponse partielle tant que la requête est encore dans l'état `LOADING` {{DOMxRef("XMLHttpRequest.readyState", "readyState")}} (3).
+La valeur est `null` si la requête n'est pas encore terminée ou a échoué, à l'exception du cas où l'on lit des données textuelles en utilisant un `responseType` de `"text"` ou la chaîne de caractères vide (`""`), la réponse peut contenir la réponse partielle tant que la requête est encore dans l'état {{DOMxRef("XMLHttpRequest.readyState", "readyState")}} `LOADING` (3).
 
 ## Exemples
 
