@@ -1,9 +1,9 @@
 ---
 title: W3C
 slug: Glossary/W3C
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 _World Wide Web Consortium_ (W3C) は、{{Glossary("World Wide Web", "ウェブに関する")}}ルールや枠組みを整備する国際団体です。
 
@@ -11,9 +11,7 @@ W3C は 350 を超える加盟組織から成り、加盟組織は連帯して�
 
 それぞれの標準は、草案 (Working Draft; WD)、勧告候補 (Candidate Recommendation; CR)、勧告案 (Proposed Recommendation; PR)、そして W3C 勧告 (W3C Recommendation; REC) の 4 つの段階を経て成熟していきます。
 
-## 詳細情報
+## 関連情報
 
-### 一般知識
-
-- [W3C のウェブサイト](https://www.w3.org/)
-- ウィキペディアの [W3C](https://ja.wikipedia.org/wiki/World_Wide_Web_Consortium) の記事
+- [W3C ウェブサイト](https://www.w3.org/)
+- [W3C](https://ja.wikipedia.org/wiki/World_Wide_Web_Consortium) - ウィキペディア
