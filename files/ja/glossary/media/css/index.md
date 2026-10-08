@@ -2,10 +2,8 @@
 title: メディア (CSS)
 slug: Glossary/Media/CSS
 l10n:
-  sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{GlossarySidebar}}
 
 {{Glossary("CSS")}} (Cascading Style Sheets) の文脈において、**メディア**という用語は{{Glossary("Engine/Rendering", "レンダリングエンジン")}}によって描画される文書の出力先を参照します。
 
