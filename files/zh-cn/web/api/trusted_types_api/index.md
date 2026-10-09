@@ -79,7 +79,7 @@ element.innerHTML = trustedHTML;
 上面描述的 API 允许你清洗数据，但是并不能确保你的代码永远不会直接将输入传给注入汇点：也就是说，它并不阻止你直接给
 `innerHTML` 传递字符串。
 
-为了确保所有被传递的输入都是可信类型，你需要再你的 [CSP](/zh-CN/docs/Web/HTTP/Guides/CSP) 中包含
+为了确保所有被传递的输入都是可信类型，你需要在你的 [CSP](/zh-CN/docs/Web/HTTP/Guides/CSP) 中包含
 {{CSP("require-trusted-types-for")}} 指令。当这个指令被设置时，向注入汇点传递字符串会导致 `TypeError` 异常。
 
 ```js example-bad
@@ -91,7 +91,7 @@ element.innerHTML = userInput; // 抛出 TypeError
 
 另外，{{CSP("trusted-types")}} CSP 指令可以用于控制你的代码被允许创建哪种策略。当你使用
 {{domxref("TrustedTypePolicyFactory/createPolicy", "trustedTypes.createPolicy()")}}
-创建一个策略时，你给策略传递了一个名称。`trusted-types` CSP 指令列出了可被接受的策略名称，这样如果一个策略的名称不在
+创建一个策略时，你需要给策略传递了一个名称。`trusted-types` CSP 指令列出了可被接受的策略名称，这样如果一个策略的名称不在
 `trusted-types` 中，`createPolicy()` 会抛出异常。这会阻止你的 Web 应用程序代码创建你所不期望的策略。
 
 ### 默认策略
@@ -146,7 +146,7 @@ element.innerHTML = userInput;
 此段落提供了“直接”的注入汇点接口列表。
 
 这些是在执行时更偏好可信类型检查的 API 属性和方法。它们可以被传递可信类型（`TrustedHTML`、`TrustedScript` 或
-`TrustedScriptURL`）或字符串，以及在强制执行可信类型被启用且没有默认策略被定义时必须被传递可信类型。
+`TrustedScriptURL`）或字符串，以及在强制执行可信类型且没有默认策略被定义时必须被传递可信类型。
 
 #### TrustedHTML
 
@@ -190,52 +190,56 @@ element.innerHTML = userInput;
 
 ### 间接注入汇点
 
-_Indirect injection sinks_ are sinks where untrusted strings are injected into the DOM via an intermediate mechanism that doesn't accept or enforce trusted types.
-These differ from the "direct" [Injection sink interfaces](#injection_sink_interfaces) listed in the previous section, which run trusted type checks on injected strings when they are called.
+_间接注入汇点_ 是一种通过中间机制向 DOM 注入未受信任的字符串的汇点，它们并不接受或强制执行可信类型。
+这与前文段落中列出的“直接”的[注入汇点接口](#注入汇点接口)不同，它们在调用时对注入的字符串运行可信类型检查。
 
-For example, the following code sets script element source indirectly.
-First a text node is created using a string provided by a user, and then a {{htmlelement("script")}} element is constructed and the text node is appended as a child element.
-Next the script element is added to the document as a child of the {{htmlelement("body")}} element — at this point scripts defined in the original string may be executed.
+例如，下面的代码就间接地设置了 script 元素的内容。
+首先，根据用户提供的一段字符串创建一个文本节点，然后构造一个 {{htmlelement("script")}} 并将文本节点添加为其子元素。
+再将 script 元素添加到文档中 {{htmlelement("body")}} 元素的子节点——此时，从原本的字符串定义来的脚本就可能被执行。
 
 ```js
-// Create a text node
+// 创建文本节点
 const untrustedString =
   "console.log('A potentially malicious script from an untrusted source!');";
 const textNode = document.createTextNode(untrustedString);
 
-// Create a script element and append the text node
+// 创建 script 元素并添加文本节点
 const script = document.createElement("script");
 script.appendChild(textNode);
 
-// Add the script into the document, where it can run
+// 将 script 元素添加到文档中，从而可以执行
 document.body.appendChild(script);
 ```
 
-When the text node is created there is no reason for the browser to assume it is intended to be used as a trusted type source, so trusted types are serialized to string, and are not enforced.
+当文本节点被创建后，浏览器就不会再寻求可信类型的来源了。所以可信类型会被序列化为字符串，且不再被强制。
 
-Instead, browsers run the checks when the script element becomes executable — i.e., in this example, when `document.body.appendChild(script)` is called to add the script element to the document.
+相反，浏览器会在 script 元素变得可执行时进行检查——例如在这个例子中，是在调用
+`document.body.appendChild(script)` 来将 script 元素添加到文档中时。
 
-The browser will first check if the string used as the script content is trusted.
-Any operation that allows the text source of a {{htmlelement("script")}} to be modified without explicitly setting a {{domxref("TrustedScript")}} makes it untrusted.
-The {{domxref("Node.appendChild()")}} method used above is just one example (a number of others are listed in the WPT Live tests at <https://wpt.live/trusted-types/script-enforcement-001.html>).
+浏览器会首先检查作为脚本内容的字符串是否可被信任。任何没有将 {{htmlelement("script")}} 的文本内容显式设置为
+{{domxref("TrustedScript")}} 的操作都会让其变得不可信。
+上面用到的 {{domxref("Node.appendChild()")}} 就是一个例子（一些其他的例子在 WPT 在线测试
+<https://wpt.live/trusted-types/script-enforcement-001.html> 中被列出）。
 
-If the string is not trusted and trusted types are enforced, the browser will attempt to obtain a `TrustedScript` from a [default policy](#the_default_policy) to use for source instead.
-If a default policy is not defined, or does not return a `TrustedScript`, the operation will throw an exception.
+如果字符串并不可信，并且可信类型被强制执行，浏览器会尝试使用[默认策略](#默认策略)获取一个 `TrustedScript`
+来使用，而不是原字符串。如果没有定义默认策略，或者默认策略没有返回 `TrustedScript`，该操作会引发异常。
 
 ### 可信类型 tinyfill
 
-The _Trusted Types tinyfill_ helps you work with browsers that don't support the Trusted Types API itself.
+_可信类型 tinyfill_ 帮助你在还不支持可信类型 API 的浏览器上工作。
 
-The tinyfill is just this:
+tinyfill 类似于：
 
 ```js
 if (typeof trustedTypes === "undefined")
   trustedTypes = { createPolicy: (n, rules) => rules };
 ```
 
-That is, it provides an implementation of `trustedTypes.createPolicy()` which just returns the [`policyOptions`](/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#policyoptions) object it was passed. The `policyOptions` object defines sanitization functions for data, and these functions are expected to return strings.
+这段代码提供了 `trustedTypes.createPolicy()` 的一个实现：直接返回接收到的
+[`policyOptions`](/zh-CN/docs/Web/API/TrustedTypePolicyFactory/createPolicy#policyoptions) 对象自身。
+`policyOptions` 对象定义了对数据的清洗函数，这些函数的期望返回类型是字符串。
 
-With this tinyfill in place, suppose we create a policy:
+在已有 tinyfill 之后，假如我们创建一个策略：
 
 ```js
 const policy = trustedTypes.createPolicy("my-policy", {
@@ -243,70 +247,72 @@ const policy = trustedTypes.createPolicy("my-policy", {
 });
 ```
 
-In browsers that support trusted types, this will return a `TrustedTypePolicy`, which will create a `TrustedHTML` object when we call `policy.createHTML()`. The `TrustedHTML` object can then be passed to an injection sink, and we can enforce that the sink received a trusted type, rather than a string.
+在支持可信类型的浏览器中，这会返回一个 `TrustedTypePolicy`，然后在我们调用 `policy.createHTML()` 时创建一个
+`TrustedHTML` 对象。`TrustedHTML` 对象然后可以被传递给注入汇点，然后我们可以强制汇点接收可信类型而不是字符串。
 
-In browsers that don't support trusted types, this code will return an object with a `createHTML()` function that sanitizes its input and returns it as a string. The sanitized string can then be passed to an injection sink.
+在不支持可信类型的浏览器中，这段代码会返回一个拥有 `createHTML()`
+函数的对象，清洗其输入并返回字符串。清洗后的字符串可以被传递给注入汇点。
 
 ```js
 const userInput = "I might be XSS";
 const element = document.querySelector("#container");
 
 const trustedHTML = policy.createHTML(userInput);
-// In supporting browsers, trustedHTML is a TrustedHTML object.
-// In non-supporting browsers, trustedHTML is a string.
+// 在支持的浏览器中，trustedHTML 是一个 TrustedHTML 对象。
+// 在不支持的浏览器中，trustedHTML 是一个字符串。
 
 element.innerHTML = trustedHTML;
-// In supporting browsers, this will throw if trustedHTML
-// is not a TrustedHTML object.
+// 在支持的浏览器中，如果 trustedHTML 不是 TrustedHTML 对象，这会抛出错误
 ```
 
-Either way, the injection sink gets sanitized data, and because we could enforce the use of the policy in the supporting browser, we know that this code path goes through the sanitization function in the non-supporting browser, too.
+不管怎么说，注入汇点都获得了清洗过的数据。我们不仅在支持的浏览器中使用了可信策略，在不支持的浏览器中也确保数据通过了清洗函数。
 
-This means that, as long as you have tested your code on a supporting browser with the `require-trusted-types-for` CSP directive, then the tinyfill is enough to give the same protection even in browsers which don't support the Trusted Types API.
+这说明，只要你在启用 `require-trusted-types-for` CSP 指令的支持的浏览器中测试过你的代码，那么这个 tinyfill
+足够在不支持可信类型 API 的浏览器上提供相同的保护。
 
-This is because the enforcement forces you to refactor your code to ensure that all data is passed through the Trusted Types API (and therefore has been through a sanitization function) before being passed to an injection sink.
-If you then run the refactored code in a different browser without enforcement, it will still go through the same code paths, and give you the same protection.
+因为这个 CSP 指令强制你重构代码来确保所有数据在被传入注入汇点前都通过了可信类型 API（且再通过一个清洗函数）。然后哪怕你在另一个不同的、没有启用该 CSP 指令的浏览器运行重构过的代码，数据仍然会通过相同的路径，并获得相同的保护。
 
 ## 接口
 
 - {{domxref("TrustedHTML")}}
-  - : Represents a string to insert into an injection sink that will render it as HTML.
+  - : 表示一个用于插入到注入汇点、渲染为 HTML 的字符串。
 - {{domxref("TrustedScript")}}
-  - : Represents a string to insert into an injection sink that could lead to the script being executed.
+  - : 表示一个用于插入到注入汇点、作为脚本执行的字符串。
 - {{domxref("TrustedScriptURL")}}
-  - : Represents a string to insert into an injection sink that will parse it as a URL of an external script resource.
+  - : 表示一个用于插入到注入汇点、被解析为外部脚本资源 URL 的字符串。
 - {{domxref("TrustedTypePolicy")}}
-  - : Defines the functions used to create the above Trusted Type objects.
+  - : 定义包含用于创建以上可信类型对象的函数的策略。
 - {{domxref("TrustedTypePolicyFactory")}}
-  - : Creates policies and verifies that Trusted Type object instances were created via one of the policies.
+  - : 创建策略，并且验证可信类型对象的实例是由其的一个策略创建的。
 
 ### 对其他接口的扩展
 
 - {{domxref("Window.trustedTypes")}}
-  - : Returns the {{domxref("TrustedTypePolicyFactory")}} object associated with the global object in the main thread.
-    This is the entry point for using the API in the Window thread.
+  - : 返回与主线程中的全局对象相关联的 {{domxref("TrustedTypePolicyFactory")}} 对象。这是在 Window 线程中使用此 API 的入口点。
 - {{domxref("WorkerGlobalScope.trustedTypes")}}.
-  - : Returns the {{domxref("TrustedTypePolicyFactory")}} object associated with the global object in a worker.
+  - : 返回与 worker 中的全局对象相关联的 {{domxref("TrustedTypePolicyFactory")}} 对象。
 
 ### 对 HTTP 的扩展
 
 #### `Content-Security-Policy` 指令
 
 - {{CSP("require-trusted-types-for")}}
-  - : Enforces that Trusted Types are passed to DOM XSS [injection sinks](#理念与使用).
+  - : 强制只有可信类型被传入至 DOM XSS [注入汇点](#理念与使用).
 - {{CSP("trusted-types")}}
-  - : Used to specify an allowlist of Trusted Types policy names.
+  - : 用于指定允许的可信类型策略名称列表。
 
 #### `Content-Security-Policy` 关键字
 
-- [`trusted-types-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval)
-  - : Allows [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) and similar functions to be used but only when Trusted Types are supported and enforced.
+- [`trusted-types-eval`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval)
+  - : 仅在可信类型被允许和强制执行时，允许使用 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 和类似函数。
 
 ## 示例
 
-In the below example we create a policy that will create {{domxref("TrustedHTML")}} objects using {{domxref("TrustedTypePolicyFactory.createPolicy()")}}. We can then use {{domxref("TrustedTypePolicy.createHTML()")}} to create a sanitized HTML string to be inserted into the document.
+在下面的例子中，我们创建了一个会使用 {{domxref("TrustedTypePolicyFactory.createPolicy()")}} 创建
+{{domxref("TrustedHTML")}} 对象的策略。然后我们可以使用 {{domxref("TrustedTypePolicy.createHTML()")}}
+来创建一个清洗过的、可被插入到文档中的 HTML 字符串。
 
-The sanitized value can then be used with {{domxref("Element.innerHTML")}} to ensure that no new HTML elements can be injected.
+清洗过的值可以被赋给 {{domxref("Element.innerHTML")}} 来确保没有新的 HTML 元素被注入。
 
 ```html
 <div id="myDiv"></div>
@@ -328,7 +334,7 @@ console.log(escaped instanceof TrustedHTML); // true
 el.innerHTML = escaped;
 ```
 
-Read more about this example, and discover other ways to sanitize input in the article [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types).
+在文章 [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types) 中阅读关于此例子的更多信息，以及探索其他清洗输入的方式。
 
 ## 规范
 
