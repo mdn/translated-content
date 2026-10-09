@@ -1,11 +1,9 @@
 ---
-title: Main Axis (主軸)
+title: Main axis (主軸)
 slug: Glossary/Main_Axis
 l10n:
-  sourceCommit: 3c5185e55298c2ca14e4e63913a50bb81e3c5609
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{GlossarySidebar}}
 
 {{glossary("flexbox")}} における主軸は、{{cssxref("flex-direction")}} プロパティの設定方向によって定義されます。`flex-direction` が取り得る値は以下の 4 つです。
 
