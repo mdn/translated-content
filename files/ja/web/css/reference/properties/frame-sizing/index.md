@@ -47,7 +47,7 @@ frame-sizing: unset;
 
 セキュリティおよびプライバシー上の理由から、{{htmlelement("iframe")}} 要素は、デフォルトで、埋め込まれている文書内のコンテンツのサイズに関する情報を親文書に対して一切公開しません。
 
-{{htmlelement(「iframe」)}} 要素のサイズをそのコンテンツに基づいてレスポンシブに調整できるようにするには、埋め込み文書に [`<meta name="responsive-embedded-sizing">`](/ja/docs/Web/HTML/Reference/Elements/meta/name/responsive-embedded-sizing) タグを記載することで、親文書とのサイズ情報の共有を有効にすることができます。これにより、`<iframe>` に `frame-sizing` プロパティを設定することで、埋め込み文書の実際のコンテンツサイズ（仕様書では **内部レイアウトの内在サイズ** と呼ばれていますが、当ドキュメントでは「レイアウトサイズ」と略称しています）と同じ水平または垂直サイズを発生させることができます。その結果、文書のコンテンツは埋め込み先の `<iframe>` にシームレスに収まり、不要なスクロールバーの表示を避けることができます。
+{{htmlelement("iframe")}} 要素のサイズをそのコンテンツに基づいてレスポンシブに調整できるようにするには、埋め込み文書に [`<meta name="responsive-embedded-sizing">`](/ja/docs/Web/HTML/Reference/Elements/meta/name/responsive-embedded-sizing) タグを記載することで、親文書とのサイズ情報の共有を有効にすることができます。これにより、`<iframe>` に `frame-sizing` プロパティを設定することで、埋め込み文書の実際のコンテンツサイズ（仕様書では **内部レイアウトの内在サイズ** と呼ばれていますが、当ドキュメントでは「レイアウトサイズ」と略称しています）と同じ水平または垂直サイズを発生させることができます。その結果、文書のコンテンツは埋め込み先の `<iframe>` にシームレスに収まり、不要なスクロールバーの表示を避けることができます。
 
 `frame-sizing` プロパティには `content-width` または `content-height` を指定することで、`<iframe>` 要素の `width` または `height` を、それぞれ埋め込まれた文書のレイアウト幅またはレイアウト高さに発生させることができます。
 
