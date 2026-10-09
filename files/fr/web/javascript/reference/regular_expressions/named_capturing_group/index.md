@@ -34,7 +34,7 @@ Tous les noms doivent être uniques dans un même motif. Plusieurs groupes captu
 /(?<name>)(?<name>)/; // SyntaxError: Invalid regular expression: Duplicate capture group name
 ```
 
-Cette restriction est assouplie si les groupes capturant nommés en double ne figurent pas dans la même [alternative de disjonction](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction), de sorte qu'un seul groupe capturant nommé puisse correspondre pour une même chaîne de caractères en entrée. Cette fonctionnalité est récente; vérifiez la [compatibilité des navigateurs](#compatibilité_des_navigateurs) avant de l'utiliser.
+Cette restriction est assouplie si les groupes capturant nommés en double ne figurent pas dans la même [alternative de disjonction](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction), de sorte qu'un seul groupe capturant nommé puisse correspondre pour une même chaîne de caractères en entrée. Cette fonctionnalité est récente&nbsp;; vérifiez la [compatibilité des navigateurs](#compatibilité_des_navigateurs) avant de l'utiliser.
 
 ```js
 /(?<year>\d{4})-\d{2}|\d{2}-(?<year>\d{4})/;
