@@ -25,7 +25,7 @@ font-variant-ligatures: common-ligatures;
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
-    <p>难做的华夫饼</p>
+    <p>Difficult waffles</p>
   </div>
 </section>
 ```
@@ -138,11 +138,11 @@ font-variant-ligatures: unset;
   if fi ff tf ft jf fj
 </p>
 <p class="discretionary-ligatures">
-  任意连字<br />
+  可选连字<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-discretionary-ligatures">
-  禁用任意连字<br />
+  禁用可选连字<br />
   if fi ff tf ft jf fj
 </p>
 <p class="historical-ligatures">
