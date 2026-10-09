@@ -32,7 +32,7 @@ for (let p of obj) {
 }
 ```
 
-做为替代你必须使用 {{jsxref("Object.keys")}} 或 {{jsxref("Object.entries")}} 来迭代对象的属性或属性值。
+作为替代，你必须使用 {{jsxref("Object.keys")}} 或 {{jsxref("Object.entries")}} 来迭代对象的属性或属性值。
 
 ```js example-good
 var obj = { France: "Paris", England: "London" };
