@@ -152,7 +152,7 @@ Pour rechercher littéralement un caractère spécial, comme `"*"`, échappez-le
 > Pour faire correspondre un caractère spécial, vous pouvez souvent l'encadrer dans une [classe de caractères](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) au lieu de l'échapper, par exemple `/a[*]b/`.
 
 De même, si vous écrivez un littéral d'expression rationnelle et devez faire correspondre une barre oblique (`/`), échappez-la (sinon, elle termine le motif).
-Pour rechercher la chaîne de caractères `"/example"` suivie d'une ou plusieurs lettres, utilisez `/\/example\/[a-z]+/i`—les barres obliques inverses devant les barres obliques les rendent littérales.
+Pour rechercher la chaîne de caractères `"/example"` suivie d'une ou plusieurs lettres, utilisez `/\/example\/[a-z]+/i` — les barres obliques inverses devant les barres obliques les rendent littérales.
 
 Pour faire correspondre une barre oblique inverse littérale, vous devez échapper la barre oblique inverse.
 Par exemple, pour faire correspondre la chaîne de caractères «&nbsp;C:\\&nbsp;» où «&nbsp;C:&nbsp;» peut être n'importe quelle lettre, vous utilisez `/[A-Z]:\\/` — la première barre oblique inverse échappe celle qui suit, donc l'expression recherche une seule barre oblique inverse littérale.
