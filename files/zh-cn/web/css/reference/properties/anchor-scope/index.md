@@ -10,15 +10,15 @@ l10n:
 ## 语法
 
 ```css
-/* Single values */
+/* 单值 */
 anchor-scope: none;
 anchor-scope: all;
 anchor-scope: --anchor-name;
 
-/* Multiple <dashed-ident> values */
+/* 多 <dashed-ident> 值 */
 anchor-scope: --anchor-name, --another-name;
 
-/* Global values */
+/* 全局值 */
 anchor-scope: inherit;
 anchor-scope: initial;
 anchor-scope: revert;
@@ -30,9 +30,12 @@ anchor-scope: unset;
 
 此属性指定为关键字 `none` 或 `all`，或以逗号分隔的 `<dashed-ident>` 值列表：
 
-- `none` -：不限制元素的锚点范围。这是默认值。
-- `all` -：设置范围，使子树中设置的_任何_ `anchor-name` 值只能由同一子树中的定位元素绑定。
-- {{cssxref("dashed-ident", "&lt;dashed-ident&gt;#")}} -：表示锚点名称的一个或多个以逗号分隔的 {{cssxref("dashed-ident")}}。设置范围，使指定的 `anchor-name` 值在子树中设置时，只能由同一子树中的定位元素绑定。
+- `none`
+  - : 不限制元素的锚点范围。这是默认值。
+- `all`
+  - : 设置范围，使子树中设置的_任何_ `anchor-name` 值只能由同一子树中的定位元素绑定。
+- {{cssxref("dashed-ident", "&lt;dashed-ident&gt;#")}}
+  - : 表示锚点名称的一个或多个以逗号分隔的 {{cssxref("dashed-ident")}}。设置范围，使指定的 `anchor-name` 值在子树中设置时，只能由同一子树中的定位元素绑定。
 
 ## 描述
 
@@ -42,7 +45,7 @@ anchor-scope: unset;
 
 `anchor-scope` 属性可以将 `anchor-name` 值的可见性（或称“范围”）限制在特定子树中，从而解决此问题。结果是，每个定位元素只能锚定到设置了该范围的元素所在子树中的元素。
 
-- `anchor-scope: all` 设置范围，使子树中设置的_任何_ `anchor-name` 值只能由同一子树中的定位元素绑定。假设文档中包含多个锚点，它们都设置了 `anchor-name: --my-anchor`，并且分别放在不同容器中。然后我们在每个容器上设置 `anchor-scope: all`。如果在其中一个容器中添加定位元素，并将其 `position-anchor` 属性值设为 `--my-anchor`，它就会相对于同一容器中的锚点进行定位。
+- `anchor-scope: all` 设置范围，使子树中设置的*任何* `anchor-name` 值只能由同一子树中的定位元素绑定。假设文档中包含多个锚点，它们都设置了 `anchor-name: --my-anchor`，并且分别放在不同容器中。然后我们在每个容器上设置 `anchor-scope: all`。如果在其中一个容器中添加定位元素，并将其 `position-anchor` 属性值设为 `--my-anchor`，它就会相对于同一容器中的锚点进行定位。
 
   此外，如果在容器外创建另一个定位元素，并为其指定相同或不同的锚点名称，则无论这些锚点的 `anchor-name` 值中是否包含相应名称，该元素都不会相对于任何锚点进行锚点定位。`anchor-scope: all` 会对设置它的容器限制_所有_锚点的锚点范围（与 `anchor-name` 无关），使其只能作用于同一容器中的定位元素。
 
@@ -54,7 +57,7 @@ anchor-scope: unset;
 
 例如，如果子树中设置了三个 `anchor-name` 值（比如 `--anchor1`、`--anchor2` 和 `--anchor3`），在该子树的顶层元素上设置 `anchor-scope: --anchor1, --anchor2, --anchor3`，其效果等同于设置 `anchor-scope: all`。
 
-锚点范围只影响[显式锚点关联](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Using#explicit_css_anchor_association)，也就是在设置了 `anchor-name` 的锚点元素与通过 `position-anchor` 值引用该锚点元素名称的定位元素之间建立的关联。锚点范围不影响[隐式锚点关联](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Using#implicit_anchor_association)。
+锚点范围只影响[显式锚点关联](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Using#显式_css_锚点关联)，也就是在设置了 `anchor-name` 的锚点元素与通过 `position-anchor` 值引用该锚点元素名称的定位元素之间建立的关联。锚点范围不影响[隐式锚点关联](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Using#隐式锚点关联)。
 
 有关锚点功能及其用法的更多信息，请参阅 [CSS 锚点定位](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning)模块和[使用 CSS 锚点定位](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Using)指南。
 
@@ -135,7 +138,7 @@ anchor-scope: unset;
 
 示例渲染结果如下：
 
-{{ EmbedLiveSample("basic_usage", "100%", "225") }}
+{{ EmbedLiveSample("basic-usage", "100%", "225") }}
 
 注意，第一个定位元素位于锚点右侧。由于它位于设置了 `anchor-scope: --my-anchor` 的 `<section>` 元素内，因此处于相对于 `--my-anchor` 锚点定位的范围内。
 
@@ -290,3 +293,9 @@ updateScope("all");
 {{Compat}}
 
 ## 参见
+
+- [CSS 锚点定位](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning)模块
+- [溢出的回退选项和条件隐藏](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)指南
+- [学习：定位](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Positioning)
+- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values)模块
+- [学习：在 CSS 中调整大小](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Sizing)
