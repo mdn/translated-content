@@ -50,7 +50,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
 
 只有在 -2<sup>53</sup> + 1 到 2<sup>53</sup> - 1 范围内（闭区间）的整数才能在不丢失精度的情况下被表示（可通过 {{jsxref("Number.MIN_SAFE_INTEGER")}} 和 {{jsxref("Number.MAX_SAFE_INTEGER")}} 获得），因为尾数只能容纳 53 位（包括前导 1）。
 
-有关这部份的更多详细信息，请参阅 [ECMAScript 标准](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-ecmascript-language-types-number-type)。
+有关这部分的更多详细信息，请参阅 [ECMAScript 标准](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-ecmascript-language-types-number-type)。
 
 ### Number 强制转换
 
@@ -80,7 +80,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
 
 #### 整数转换
 
-某些操作需要整数作为参数，尤其是那些与数组/字符串索引、日期/时间组件和数字进制相关的操作。在执行上述数值强制转换步骤后，结果将被[截断](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)为整数（即舍弃小数部份）。如果数值为 ±Infinity，则按原样返回。如果数值是 `NaN` 或 `-0`，则返回为 `0`。因此，结果总是整数（不包括 `-0`）或 ±Infinity。
+某些操作需要整数作为参数，尤其是那些与数组/字符串索引、日期/时间组件和数字进制相关的操作。在执行上述数值强制转换步骤后，结果将被[截断](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)为整数（即舍弃小数部分）。如果数值为 ±Infinity，则按原样返回。如果数值是 `NaN` 或 `-0`，则返回为 `0`。因此，结果总是整数（不包括 `-0`）或 ±Infinity。
 
 值得注意的是，当转换到整数时，`undefined` 和 `null` 都会变成 `0`，因为 `undefined` 被转换为 `NaN`，`NaN` 也变成了 `0`。
 
