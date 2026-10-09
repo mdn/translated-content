@@ -38,12 +38,10 @@ onfocus = (event) => { }
 ```html
 <form id="form">
   <label>
-    一些文本：
-    <input type="text" placeholder="文本输入" />
+    一些文本：<input type="text" placeholder="文本输入" />
   </label>
   <label>
-    密码：
-    <input type="password" placeholder="密码" />
+    密码：<input type="password" placeholder="密码" />
   </label>
 </form>
 ```
@@ -75,12 +73,10 @@ password.addEventListener("blur", (event) => {
 ```html
 <form id="form">
   <label>
-    一些文本：
-    <input type="text" placeholder="文本输入" />
+    一些文本：<input type="text" placeholder="文本输入" />
   </label>
   <label>
-    密码：
-    <input type="password" placeholder="密码" />
+    密码：<input type="password" placeholder="密码" />
   </label>
 </form>
 ```
