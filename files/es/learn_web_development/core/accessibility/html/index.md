@@ -3,7 +3,7 @@ title: "HTML: Una buena base para la accesibilidad"
 short-title: HTML accesible
 slug: Learn_web_development/Core/Accessibility/HTML
 l10n:
-  sourceCommit: 1b7c3c1e03f14c3878e4d8518b0f1a89bedfdc9c
+  sourceCommit: 306f0d17c10c4bfa8179b81fe676102ea0b0b6fa
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/Test_your_skills/HTML", "Learn_web_development/Core/Accessibility")}}
