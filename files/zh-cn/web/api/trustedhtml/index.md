@@ -7,9 +7,8 @@ l10n:
 
 {{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
-{{domxref("Trusted Types API", "", "", "nocode")}} 的 **`TrustedHTML`** 接口标识一个可以被开发者插入到
-[injection sink](/zh-CN/docs/Web/API/Trusted_Types_API#concepts_and_usage)
-中、渲染为 HTML 的字符串。它们通过 {{domxref("TrustedTypePolicy.createHTML()")}} 创建，自身没有构造方法。
+{{domxref("Trusted Types API", "", "", "nocode")}} 的 **`TrustedHTML`** 接口标识一个可以被开发者插入到[注入落点](/zh-CN/docs/Web/API/Trusted_Types_API#理念与使用)中、渲染为 HTML 的字符串。它们通过
+{{domxref("TrustedTypePolicy.createHTML()")}} 创建，自身没有构造方法。
 
 `TrustedHTML` 对象的值在其创建时设置且不允许被 JavaScript 修改，因为其没有暴露 setter 方法。
 

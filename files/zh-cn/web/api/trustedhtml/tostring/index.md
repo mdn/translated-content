@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
-{{domxref("TrustedHTML")}} 接口的 **`toString()`** 方法返回一个可以被安全地注入到 injection sink 中的字符串。
+{{domxref("TrustedHTML")}} 接口的 **`toString()`** 方法返回一个可以被安全地注入到注入落点中的字符串。
 
 ## 语法
 
