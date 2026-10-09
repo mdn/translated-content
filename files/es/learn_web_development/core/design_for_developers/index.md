@@ -2,7 +2,7 @@
 title: Diseño para desarrolladores
 slug: Learn_web_development/Core/Design_for_developers
 l10n:
-  sourceCommit: 673746e15e5052c4fe39944f3d93d2e2d3227b3f
+  sourceCommit: 73a73bc44e12181c778910f3b7d73962e0dd9a29
 ---
 
 {{LearnSidebar}}
@@ -21,7 +21,7 @@ Además, a los desarrolladores de interfaz (_front-end_) a menudo se les asigna 
 Antes de comenzar este módulo, debes estar familiarizado con [HTML](/es/docs/Learn_web_development/Core/Structuring_content) y [CSS](/es/docs/Learn_web_development/Core/Styling_basics).
 
 > [!NOTE]
-> Si estás trabajando en una computadora/tableta/otro dispositivo donde no tienes la capacidad de crear tus propios archivos, podrías probar (la mayoría de) los ejemplos de código en un programa de codificación en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
+> Si estás trabajando en una computadora, tableta u otro dispositivo donde no puedes crear archivos, puedes probar el código en un editor en línea como [CodePen](https://codepen.io/) o [JSFiddle](https://jsfiddle.net/).
 
 ## Lecciones
 
@@ -76,7 +76,7 @@ Resultados del aprendizaje:
 
 ## Véase también
 
-- [Aprende los fundamentos del diseño de la interfaz de usuario](https://scrimba.com/learn/design?via=mdn) (en Inglés), Scrimba <sup>Socio del curso</sup>
+- [Aprende los fundamentos del diseño de la interfaz de usuario](https://scrimba.com/intro-to-ui-design-fundamentals-c0q?via=mdn) (en Inglés), Scrimba <sup>Socio del curso</sup>
 - [La forma del diseño](https://shapeofdesignbook.com/chapters/00-introduction/) (en Inglés), Frank Chimero
 - [Diseñando para la Web](https://designingfortheweb.co.uk/) (en Inglés), Mark Boulton
 - [Diseño para la Web](https://designforweb.org/) (en Inglés), Prisca Schmarsow + otros colaboradores
