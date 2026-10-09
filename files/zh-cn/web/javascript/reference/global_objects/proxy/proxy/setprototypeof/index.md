@@ -37,7 +37,7 @@ var p = new Proxy(target, {
 - {{jsxref("Object.setPrototypeOf()")}}
 - {{jsxref("Reflect.setPrototypeOf()")}}
 
-### Invariants
+### 不变量
 
 如果违反了下列规则，则 proxy 将抛出一个 {{jsxref("TypeError")}}：
 
@@ -47,7 +47,7 @@ var p = new Proxy(target, {
 
 如果你不想为你的对象设置一个新的原型，你的 handler 的 `setPrototypeOf` 方法可以返回 false，也可以抛出异常。
 
-The former approach means that any operation that performs such mutation, that throws an exception on failure to mutate, will have to create the exception itself. For example, {{jsxref("Object.setPrototypeOf()")}} will create and throw a `TypeError` itself. If the mutation is performed by an operation that _doesn't_ ordinarily throw in case of failure, such as {{jsxref("Reflect.setPrototypeOf()")}}, no exception will be thrown.
+前一种做法意味着，那些在修改失败时会抛出异常的操作必须自己创建这个异常。例如，{{jsxref("Object.setPrototypeOf()")}} 会自行创建并抛出 `TypeError`。如果这次修改是由通常不会在失败时抛出异常的操作执行的，例如 {{jsxref("Reflect.setPrototypeOf()")}}，那么不会抛出任何异常。
 
 ```js
 var handlerReturnsFalse = {
@@ -64,7 +64,7 @@ Object.setPrototypeOf(p1, newProto); // throws a TypeError
 Reflect.setPrototypeOf(p1, newProto); // returns false
 ```
 
-The latter approach will cause _any_ operation that attempts to mutate, to throw. This approach is required if you want even non-throwing operations to throw on failure, or you want to throw a custom exception value.
+后一种做法会让_任何_尝试修改的操作都抛出异常。如果你希望即使是不抛出异常的操作在失败时也能抛出异常，或者你想抛出自定义的异常值，就必须采用这种做法。
 
 ```js
 var handlerThrows = {
