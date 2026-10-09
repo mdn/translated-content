@@ -16,7 +16,7 @@ l10n:
 
 - [`isTrusted`](/ja/docs/Web/API/Event/isTrusted) 属性が `true` に設定されており、かつ
 - 次のいずれかの種類:
-  - [`keydown`](/ja/docs/Web/API/Element/keydown_event)（ただし、<kbd>Esc</kbd>キー、ブラウザーが予約しているショートカット、およびキーボードによって異なる特定のキー（<kbd>Caps Lock</kbd>、<kbd>Num Lock</kbd>、<kbd>Print Screen</kbd>など）は除く。これらのキーはユーザーによる活性化を発生させません。この動作はブラウザーによって異なる場合があります。
+  - [`keydown`](/ja/docs/Web/API/Element/keydown_event)（ただし、<kbd>Esc</kbd>キー、ブラウザーが予約しているショートカット、およびユーザーによる活性化を発生させない特定のキー（キーボードによって異なり、<kbd>Caps Lock</kbd>、<kbd>Num Lock</kbd>、<kbd>Print Screen</kbd>など）は除く。この動作はブラウザーによって異なる場合があります。）
 
   - [`mousedown`](/ja/docs/Web/API/Element/mousedown_event)
   - [`pointerdown`](/ja/docs/Web/API/Element/pointerdown_event) (`pointerType` が "mouse" であるとき)
