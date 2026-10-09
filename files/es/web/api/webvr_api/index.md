@@ -1,126 +1,135 @@
 ---
 title: WebVR API
 slug: Web/API/WebVR_API
+l10n:
+  sourceCommit: b3cd597b58940518a7712487ce94efc0881cb549
 ---
 
-{{SeeCompatTable}}{{APIRef("WebVR API")}}
-
-WebVR proporciona soporte para la exposición de dispositivos de realidad virtual — por ejemplo el visualizador de Oculus Rift o HTC Vive — para aplicaciones web, permitiendo a los desarrolladores traducir la información de posición y movimiento del visualizador al movimiento alrededor de una escena en 3D. Esto tiene numerosas aplicaciones interesantes, desde visitas virtuales de productos y aplicaciones de capacitación interactiva hasta juegos inmersivos en primera persona.
-
-## Concepts and usage
-
-Any VR devices attached to your computer will be returned by the {{domxref("Navigator.getVRDisplays()")}} method; each one will be represented by a {{domxref("VRDisplay")}} object.
-
-![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"](hw-setup.png)
-
-{{domxref("VRDisplay")}} is the central interface in the WebVR API — via its properties and methods you can access functionality to:
-
-- Retrieve useful information to allow us to identify the display, what capabilities it has, controllers associated with it, and more.
-- Retrieve {{domxref("VRFrameData", "frame data")}} for each frame of content you you want to present in a display, and submit those frames for display at a consistent rate.
-- Start and stop presenting to the display.
-
-A typical (simple) WebVR app would work like so:
-
-1. {{domxref("Navigator.getVRDisplays()")}} is used to get a reference to your VR display.
-2. {{domxref("VRDisplay.requestPresent()")}} is used to start presenting to the VR display.
-3. WebVR's dedicated {{domxref("VRDisplay.requestAnimationFrame()")}} method is used to run the app's rendering loop at the correct refresh rate for the display.
-4. Inside the rendering loop, you grab the data required to display the current frame ({{domxref("VRDisplay.getFrameData()")}}), draw the displayed scene twice — once for the view in each eye, then submit the rendered view to the display to show to the user ({{domxref("VRDisplay.submitFrame()")}}).
-
-In addition, WebVR 1.1 adds a number of events on the {{domxref("Window")}} object to allow JavaScript to respond to changes to the status of the display.
+{{Non-standard_header}}
 
 > [!NOTE]
-> You can find a lot more out about how the API works in our [Using the WebVR API](/es/docs/Web/API/WebVR_API/Using_the_WebVR_API) and [WebVR Concepts](/es/docs/Web/API/WebVR_API/Concepts) articles.
+> La API WebVR ha sido reemplazada por la [API WebXR](/es/docs/Web/API/WebXR_Device_API). WebVR nunca llegó a ratificarse como estándar, se implementó y habilitó por defecto en muy pocos navegadores y admitía un número reducido de dispositivos.
 
-### Using controllers: Combining WebVR with the Gamepad API
+WebVR permite exponer dispositivos de realidad virtual (RV) a las aplicaciones web, por ejemplo, visores montados en la cabeza como el Oculus Rift o el HTC Vive, lo que permite a los desarrolladores convertir la información de posición y movimiento del visor en desplazamientos dentro de una escena 3D. Esto tiene numerosas e interesantes aplicaciones, desde recorridos virtuales de productos y aplicaciones de formación interactivas hasta juegos inmersivos en primera persona.
 
-Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the [Gamepad API](/es/docs/Web/API/Gamepad_API), and specifically the [Gamepad Extensions API](/es/docs/Web/API/Gamepad_API#experimental_gamepad_extensions) that adds API features for accessing [controller pose](/es/docs/Web/API/GamepadPose), [haptic actuators](/es/docs/Web/API/GamepadHapticActuator), and more.
+## Conceptos y uso
+
+El método {{DOMxRef("Navigator.getVRDisplays()")}} devuelve cualquier dispositivo de RV conectado a tu computadora; cada uno estará representado por un objeto {{DOMxRef("VRDisplay")}}.
+
+![Boceto de una persona en una silla con unas gafas etiquetadas como "Head mounted display (HMD)", frente a un monitor con una cámara web etiquetada como "Position sensor"](hw-setup.png)
+
+{{DOMxRef("VRDisplay")}} es la interfaz central de la API WebVR; a través de sus propiedades y métodos puedes acceder a funcionalidades para:
+
+- Obtener información útil que nos permita identificar el visor, qué capacidades tiene, controladores asociados a él y más.
+- Obtener los [datos de cada fotograma](/es/docs/Web/API/VRFrameData) de contenido que quieras presentar en un visor, y enviar esos fotogramas para mostrarlos a un ritmo constante.
+- Iniciar y detener la presentación de contenido en el visor.
+
+Una aplicación WebVR típica (sencilla) funcionaría así:
+
+1. Se usa {{DOMxRef("Navigator.getVRDisplays()")}} para obtener una referencia al visor de RV.
+2. Se usa {{DOMxRef("VRDisplay.requestPresent()")}} para empezar a presentar contenido en el visor de RV.
+3. Se usa el método propio de WebVR {{DOMxRef("VRDisplay.requestAnimationFrame()")}} para ejecutar el bucle de renderizado de la aplicación a la frecuencia de actualización adecuada para el visor.
+4. Dentro del bucle de renderizado, obtienes los datos necesarios para mostrar el fotograma en curso ({{DOMxRef("VRDisplay.getFrameData()")}}), dibujas la escena dos veces (una por cada ojo) y luego envías la vista renderizada al visor para mostrarla al usuario ({{DOMxRef("VRDisplay.submitFrame()")}}).
+
+Además, WebVR 1.1 añade varios eventos al objeto {{DOMxRef("Window")}} para que JavaScript pueda responder a los cambios en el estado del visor.
 
 > [!NOTE]
-> Our [Using VR controllers with WebVR](/es/docs/Web/API/WebVR_API/Using_VR_controllers_with_WebVR) article explains the basics of how to use VR controllers with WebVR apps.
+> Encontrarás mucha más información sobre cómo funciona la API en nuestros artículos [Uso de la API WebVR](/es/docs/Web/API/WebVR_API/Using_the_WebVR_API) y [Conceptos de WebVR](/es/docs/Web/API/WebVR_API/Concepts).
 
-## WebVR Interfaces
+### Disponibilidad de la API
 
-- {{domxref("VRDisplay")}}
-  - : Represents any VR device supported by this API. It includes generic information such as device IDs and descriptions, as well as methods for starting to present a VR scene, retrieving eye parameters and display capabilities, and other important functionality.
-- {{domxref("VRDisplayCapabilities")}}
-  - : Describes the capabilities of a {{domxref("VRDisplay")}} — it's features can be used to perform VR device capability tests, for example can it return position information.
-- {{domxref("VRDisplayEvent")}}
-  - : Represents the event object of WebVR-related events (see the [window object extensions](#window) listed below).
-- {{domxref("VRFrameData")}}
-  - : Represents all the information needed to render a single frame of a VR scene; constructed by {{domxref("VRDisplay.getFrameData()")}}.
-- {{domxref("VRPose")}}
-  - : Represents the position state at a given timestamp (which includes orientation, position, velocity, and acceleration.)
-- {{domxref("VREyeParameters")}}
-  - : Provides access to all the information required to correctly render a scene for each given eye, including field of view information.
-- {{domxref("VRFieldOfView")}}
-  - : Represents a field of view defined by 4 different degree values describing the view from a center point.
-- {{domxref("VRLayerInit")}}
-  - : Represents a layer to be presented in a {{domxref("VRDisplay")}}.
-- {{domxref("VRStageParameters")}}
-  - : Represents the values describing the the stage area for devices that support room-scale experiences.
+La API WebVR, que nunca se ratificó como estándar web, ha quedado obsoleta en favor de la [API WebXR](/es/docs/Web/API/WebXR_Device_API), que avanza con buen ritmo hacia el final de su proceso de estandarización. Por eso, deberías intentar actualizar el código existente para que use la API más reciente. En general, la transición debería ser bastante sencilla.
 
-### Extensions to other interfaces
+Además, en algunos dispositivos o navegadores, WebVR requiere que la página se cargue en un contexto seguro, a través de una conexión HTTPS. Si la página no es totalmente segura, los métodos y funciones de WebVR no estarán disponibles. Puedes comprobarlo fácilmente verificando si el método {{domxref("Navigator.getVRDisplays", "getVRDisplays()")}} de {{domxref("Navigator")}} es `NULL`:
 
-The WebVR API extends the following APIs, adding the listed features.
+```js
+if (!navigator.getVRDisplays) {
+  console.error("WebVR no está disponible");
+} else {
+  /* Usar WebVR */
+}
+```
+
+### Uso de controladores: combinación de WebVR con la API Gamepad
+
+Muchas configuraciones de hardware de WebVR incluyen controladores que acompañan al visor. Pueden usarse en aplicaciones WebVR mediante la [API Gamepad](/es/docs/Web/API/Gamepad_API) y, en concreto, mediante la [API de extensiones de Gamepad](/es/docs/Web/API/Gamepad_API#extensiones_experimentales_de_los_gamepads), que añade características a la API para acceder a la [pose del controlador](/es/docs/Web/API/GamepadPose), los [actuadores hápticos](/es/docs/Web/API/GamepadHapticActuator) y más.
+
+> [!NOTE]
+> Nuestro artículo [Uso de controladores de RV con WebVR](/es/docs/Web/API/WebVR_API/Using_VR_controllers_with_WebVR) explica los conceptos básicos para usar controladores de RV en aplicaciones WebVR.
+
+## Interfaces de WebVR
+
+- {{DOMxRef("VRDisplay")}}
+  - : Representa cualquier dispositivo de RV compatible con esta API. Incluye información genérica, como los ID y las descripciones del dispositivo, además de métodos para empezar a presentar una escena de RV, obtener los parámetros de los ojos y las capacidades del visor, y otras funcionalidades importantes.
+- {{DOMxRef("VRDisplayCapabilities")}}
+  - : Describe las capacidades de un {{DOMxRef("VRDisplay")}}; sus características sirven para comprobar qué puede hacer el dispositivo de RV, por ejemplo, si es capaz de devolver información de posición.
+- {{DOMxRef("VRDisplayEvent")}}
+  - : Representa el objeto de evento de los eventos relacionados con WebVR (consulta los [eventos de Window](#eventos_de_window) enumerados más abajo).
+- {{DOMxRef("VRFrameData")}}
+  - : Representa toda la información necesaria para renderizar un solo fotograma de una escena de RV; se construye mediante {{DOMxRef("VRDisplay.getFrameData()")}}.
+- {{DOMxRef("VRPose")}}
+  - : Representa el estado de posición en una marca de tiempo determinada (que incluye orientación, posición, velocidad y aceleración).
+- {{DOMxRef("VREyeParameters")}}
+  - : Proporciona acceso a toda la información necesaria para renderizar correctamente una escena para cada ojo, incluida la información del campo de visión.
+- {{DOMxRef("VRFieldOfView")}}
+  - : Representa un campo de visión definido por 4 valores distintos en grados que describen la vista desde un punto central.
+- {{DOMxRef("VRLayerInit")}}
+  - : Representa una capa que se presentará en un {{DOMxRef("VRDisplay")}}.
+- {{DOMxRef("VRStageParameters")}}
+  - : Representa los valores que describen el área del escenario para dispositivos que admiten experiencias a escala de sala.
+
+### Extensiones a otras interfaces
+
+La API WebVR amplía las siguientes API y añade las características que se indican.
 
 #### Gamepad
 
-- {{domxref("Gamepad.displayId")}} {{readonlyInline}}
-  - : _Returns the {{domxref("VRDisplay.displayId")}} of the associated {{domxref("VRDisplay")}} — the `VRDisplay` that the gamepad is controlling the displayed scene of._
+- {{DOMxRef("Gamepad.displayId")}} {{ReadOnlyInline}}
+  - : _Devuelve el {{DOMxRef("VRDisplay.displayId")}} del {{DOMxRef("VRDisplay")}} asociado, es decir, el `VRDisplay` cuya escena controla el gamepad._
 
 #### Navigator
 
-- {{domxref("Navigator.activeVRDisplays")}} {{readonlyInline}}
-  - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is `true`).
-- {{domxref("Navigator.getVRDisplays()")}}
-  - : Returns a promise that resolves to an array of {{domxref("VRDisplay")}} objects representing any available VR displays connected to the computer.
+- {{DOMxRef("Navigator.activeVRDisplays")}} {{ReadOnlyInline}}
+  - : Devuelve un array con todos los objetos {{DOMxRef("VRDisplay")}} que están presentando contenido en este momento ({{DOMxRef("VRDisplay.isPresenting")}} es `true`).
+- {{DOMxRef("Navigator.getVRDisplays()")}}
+  - : Devuelve una promesa que se resuelve con un array de objetos {{DOMxRef("VRDisplay")}} que representan los visores de RV disponibles conectados a la computadora.
 
-#### Window events
+#### Eventos de Window
 
-- {{domxref("Window.onvrdisplaypresentchange")}}
-  - : Represents an event handler that will run when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa (when the [`vrdisplaypresentchange`](/es/docs/Web/Reference/Events/vrdisplaypresentchange) event fires).
-- {{domxref("Window.onvrdisplayconnect")}}
-  - : Represents an event handler that will run when a compatible VR display has been connected to the computer (when the [`vrdisplayconnect`](/es/docs/Web/Reference/Events/vrdisplayconnect) event fires).
-- {{domxref("Window.onvrdisplaydisconnect")}}
-  - : Represents an event handler that will run when a compatible VR display has been disconnected from the computer (when the [`vrdisplaydisconnect`](/es/docs/Web/Reference/Events/vrdisplaydisconnect) event fires).
-- {{domxref("Window.onvrdisplayactivate")}}
-  - : Represents an event handler that will run when a display is able to be presented to (when the [`vrdisplayactivate`](/es/docs/Web/Reference/Events/vrdisplayactivate) event fires), for example if an HMD has been moved to bring it out of standby, or woken up by being put on.
-- {{domxref("Window.onvrdisplaydeactivate")}}
-  - : Represents an event handler that will run when a display can no longer be presented to (when the [`vrdisplaydeactivate`](/es/docs/Web/Reference/Events/vrdisplaydeactivate) event fires), for example if an HMD has gone into standby or sleep mode due to a period of inactivity.
+- {{DOMxRef("Window.vrdisplaypresentchange_event", "vrdisplaypresentchange")}}
+  - : Se dispara cuando cambia el estado de presentación de un visor de RV, es decir, cuando pasa de presentar contenido a no hacerlo, o viceversa.
+- {{DOMxRef("Window.vrdisplayconnect_event", "vrdisplayconnect")}}
+  - : Se dispara cuando se conecta a la computadora un visor de RV compatible.
+- {{DOMxRef("Window.vrdisplaydisconnect_event", "vrdisplaydisconnect")}}
+  - : Se dispara cuando se desconecta de la computadora un visor de RV compatible.
+- {{DOMxRef("Window.vrdisplayactivate_event", "vrdisplayactivate")}}
+  - : Se dispara cuando ya se puede presentar contenido en un visor.
+- {{DOMxRef("Window.vrdisplaydeactivate_event", "vrdisplaydeactivate")}}
+  - : Se dispara cuando ya no se puede presentar contenido en un visor.
 
-#### Unimplemented window events
+## Ejemplos
 
-The following events are listed in the spec, but do not currently seem to be implemented anywhere as yet.
+Puedes encontrar varios ejemplos en estos lugares:
 
-- {{domxref("Window.onvrdisplayblur")}}
-  - : Represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware (when the [`vrdisplayblur`](/es/docs/Web/Reference/Events/vrdisplayblur) event fires) — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience.
-- {{domxref("Window.onvrdisplayfocus")}}
-  - : Represents an event handler that will run when presentation to a display has resumed after being blurred (when the [`vrdisplayfocus`](/es/docs/Web/Reference/Events/vrdisplayfocus) event fires).
-
-## Examples
-
-You can find a number of examples at these locations:
-
-- [webvr-tests](https://github.com/mdn/webvr-tests) — very simple examples to accompany the MDN WebVR documentation.
-- [Carmel starter kit](https://github.com/facebook/Carmel-Starter-Kit) — nice simple, well-commented examples that go along with Carmel, Facebook's WebVR browser.
-- [WebVR.info samples](https://webvr.info/samples/) — slightly more in-depth examples plus source code
-- [WebVR.rocks Firefox demos](https://webvr.rocks/firefox#demos) — showcase examples
-- [A-Frame homepage](https://aframe.io/) — examples showing A-Frame usage
+- [webvr-tests](https://github.com/mdn/webvr-tests): ejemplos muy sencillos que acompañan la documentación de WebVR en MDN.
+- [Carmel starter kit](https://github.com/facebookarchive/Carmel-Starter-Kit): ejemplos sencillos y bien comentados que acompañan a Carmel, el navegador WebVR de Facebook.
+- [WebVR.info samples](https://webvr.info/samples/): ejemplos algo más detallados, junto con el código fuente
+- [Página principal de A-Frame](https://aframe.io/): ejemplos que muestran el uso de A-Frame
 
 ## Especificaciones
 
-Esta API se especificó en la antigua [API de WebVR](https://immersive-web.github.io/webvr/spec/1.1/) que fue reemplazada por la [API del dispositivo WebXR](https://immersive-web.github.io/webxr/). Ya no está en camino de convertirse en un estándar.
+Esta API se especificó en la antigua [API WebVR](https://immersive-web.github.io/webvr/spec/1.1/), que ha sido reemplazada por la [WebXR Device API](https://immersive-web.github.io/webxr/). Ya no está en camino de convertirse en un estándar.
 
-Hasta que todos los navegadores hayan implementado las nuevas [API de WebXR](/es/docs/Web/API/WebXR_Device_API/Fundamentals), se recomienda confiar en _frameworks_, como [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), o [Three.js](https://threejs.org/), o un [polyfill](https://github.com/immersive-web/webxr-polyfill), para desarrollar aplicaciones WebXR que funcionen en todos los navegadores [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
+Hasta que todos los navegadores hayan implementado las nuevas [API WebXR](/es/docs/Web/API/WebXR_Device_API/Fundamentals), se recomienda recurrir a frameworks como [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/) o [Three.js](https://threejs.org/), o a un [polyfill](https://github.com/immersive-web/webxr-polyfill), para desarrollar aplicaciones WebXR que funcionen en todos los navegadores. Para más información, consulta la guía [Porting from WebVR to WebXR](https://developers.meta.com/horizon/documentation/web/port-vr-xr/) de Meta.
 
 ## Compatibilidad con navegadores
 
 {{Compat}}
 
-## See also
+## Véase también
 
-- [vr.mozilla.org](https://vr.mozilla.org) — The main Mozilla landing pad for WebVR, with demos, utilities, and other information.
-- [A-Frame](https://aframe.io/) — Open source web framework for building VR experiences.
-- [webvr.info](https://webvr.info) — Up-to-date information about WebVR, browser setup, and community.
-- [threejs-vr-boilerplate](https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate) — A useful starter template for writing WebVR apps into.
-- [Web VR polyfill](https://github.com/googlevr/webvr-polyfill/) — JavaScript implementation of WebVR.
+- [A-Frame](https://aframe.io/): framework web de código abierto para crear experiencias de RV.
+- [webvr.info](https://webvr.info/): información actualizada sobre WebVR, la configuración de navegadores y la comunidad.
+- [threejs-vr-boilerplate](https://github.com/MozillaReality/vr-web-examples/tree/master/threejs-vr-boilerplate): una plantilla de inicio útil sobre la que escribir aplicaciones WebVR.
+- [Web VR polyfill](https://github.com/immersive-web/webvr-polyfill): implementación de WebVR en JavaScript.
+- [WebVR Directory](https://webvr.directory/): lista de sitios WebVR de calidad.
