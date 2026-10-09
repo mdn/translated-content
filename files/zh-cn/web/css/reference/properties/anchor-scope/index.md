@@ -242,7 +242,7 @@ form {
 
 接下来，我们将 `.positioned` 元素相对于锚点元素进行定位。我们将它们绝对定位，将 {{cssxref("position-anchor")}} 值设为 `--my-anchor` 以与锚点建立关联，并将 {{cssxref("position-area")}} 值设为 `right`，使其相对于锚点定位。
 
-`.positioned2` 元素的定位方式类似，不过它将另一个可用锚点名称 `--another-anchor` 作为 `position-anchor` 值，并改为定位在锚点的 `bottom`。我们还将其 {{cssxref("bottom")}} 值设为 `5px`，这样如果锚点定位未生效，它就会定位在 `<body>` 底部。该元素不包含在任何范围元素中，因此只有在范围元素上设置某些 `anchor-scope` 值时才会进行锚点定位，后文会对此进行说明。
+`.positioned2` 元素的定位方式类似，不过它将另一个可用锚点名称 `--another-anchor` 作为 `position-anchor` 值，并改为定位在锚点的 `bottom`。我们还将其 {{cssxref("bottom")}} 值设为 `5px`，这样如果锚点定位未生效，它就会定位在 `<body>` 底部。该元素不包含在任何域限元素中，因此只有在域限元素上设置某些 `anchor-scope` 值时才会进行锚点定位，后文会对此进行说明。
 
 ```css live-sample___comparing-values
 .positioned {
