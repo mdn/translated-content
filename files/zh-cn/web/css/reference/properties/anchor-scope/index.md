@@ -33,7 +33,7 @@ anchor-scope: unset;
 - `none`
   - : 不限制元素的锚点范围。这是默认值。
 - `all`
-  - : 设置范围，使子树中设置的_任何_ `anchor-name` 值只能由同一子树中的定位元素绑定。
+  - : 设置范围，使子树中设置的*任何* `anchor-name` 值只能由同一子树中的定位元素绑定。
 - {{cssxref("dashed-ident", "&lt;dashed-ident&gt;#")}}
   - : 表示锚点名称的一个或多个以逗号分隔的 {{cssxref("dashed-ident")}}。设置范围，使指定的 `anchor-name` 值在子树中设置时，只能由同一子树中的定位元素绑定。
 
