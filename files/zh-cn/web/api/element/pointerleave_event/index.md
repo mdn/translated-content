@@ -1,50 +1,54 @@
 ---
-title: GlobalEventHandlers.onpointerleave
+title: Element：pointerleave 事件
+short-title: pointerleave
 slug: Web/API/Element/pointerleave_event
+l10n:
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Pointer Events")}}
 
-就像在{{domxref("Element")}}或{{domxref("Window")}}中点击类似，在某目标区域内，发生触点（鼠标指针，触摸等）行为时会触发源于 `pointerleave` 事件{{domxref("GlobalEventHandlers","global event handler", "", 1)}}行为。这个事件本身属于 [Pointer Events API](/zh-CN/docs/Web/API/Pointer_events) 的一部分。
+`pointerleave` 事件会在定点设备移出元素的命中测试边界时激发。对于触控笔设备，该事件会在触控笔离开数位板可探测的悬停范围时激发。另外，`pointerleave` 的运作方式与 {{domxref("Element/mouseleave_event", "mouseleave")}} 相同，并且会在同一时间被派发。视情况，它们也会与 {{domxref("Element/mouseout_event", "mouseout")}} 和 {{domxref("Element/pointerout_event", "pointerout")}} 事件在同一时间被派发。
 
 ## 语法
 
-```plain
-var leaveHandler = EventTarget.onpointerleave;
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用此事件名称，或设置事件处理器属性。
 
-EventTarget.onpointerleave = leaveHandler;
+```js-nolint
+addEventListener("pointerleave", (event) => { })
+
+onpointerleave = (event) => { }
 ```
 
-### 返回值
+## 事件类型
 
-- `leaveHandler`
-  - : `pointerleave` 事件会执行{{domxref("EventListener")}} 监听器会委托执行用以发送给目标。
+{{domxref("PointerEvent")}}。继承自 {{domxref("Event")}}。
 
-## 样例
+{{InheritanceDiagram("PointerEvent")}}
 
-这个样例展示了两种使用 `onpointerleave` 来设置元素 `pointerleave` 事件处理器的方式。
+## 示例
+
+使用 `addEventListener()`：
 
 ```js
-<html>
-<script>
-function leaveHandler(ev) {
- // 执行 pointerleave event 事件
-}
-function init() {
- var el=document.getElementById("target1");
- el.onpointerleave = leaveHandler;
-}
-</script>
-<body onload="init();">
-<div id="target1"> Touch me ... </div>
-<div id="target2" onpointerleave="leaveHandler(event)"> Touch me ... </div>
-</body>
-</html>
+const para = document.querySelector("p");
+
+para.addEventListener("pointerleave", (event) => {
+  console.log("指针离开了元素");
+});
 ```
 
-查看 [Using Pointer Events](/zh-CN/docs/Web/API/Pointer_events/Using_Pointer_Events) 以了解更多详情。
+使用 `onpointerleave` 事件处理器属性：
 
-## 规格
+```js
+const para = document.querySelector("p");
+
+para.onpointerleave = (event) => {
+  console.log("指针离开了元素");
+};
+```
+
+## 规范
 
 {{Specifications}}
 
@@ -52,15 +56,17 @@ function init() {
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - 相关事件
-  - [`gotpointercapture`](/zh-CN/docs/Web/API/Element/gotpointercapture_event)
-  - [`lostpointercapture`](/zh-CN/docs/Web/API/Element/lostpointercapture_event)
-  - [`pointerover`](/zh-CN/docs/Web/API/Element/pointerover_event)
-  - [`pointerenter`](/zh-CN/docs/Web/API/Element/pointerenter_event)
-  - [`pointerdown`](/zh-CN/docs/Web/API/Element/pointerdown_event)
-  - [`pointermove`](/zh-CN/docs/Web/API/Element/pointermove_event)
-  - [`pointerup`](/zh-CN/docs/Web/API/Element/pointerup_event)
-  - [`pointercancel`](/zh-CN/docs/Web/API/Element/pointercancel_event)
-  - [`pointerout`](/zh-CN/docs/Web/API/Element/pointerout_event)
+  - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
+  - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
+  - {{domxref('Element/pointerover_event', 'pointerover')}}
+  - {{domxref('Element/pointerenter_event', 'pointerenter')}}
+  - {{domxref('Element/pointerdown_event', 'pointerdown')}}
+  - {{domxref('Element/pointermove_event', 'pointermove')}}
+  - {{domxref('Element/pointerup_event', 'pointerup')}}
+  - {{domxref('Element/pointercancel_event', 'pointercancel')}}
+  - {{domxref('Element/pointerout_event', 'pointerout')}}
+  - {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}}
+  - {{domxref("Element/mouseleave_event", "mouseleave")}}
