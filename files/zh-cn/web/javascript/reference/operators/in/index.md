@@ -5,19 +5,17 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-如果指定的属性在指定的对象或其原型链中，则 **`in`** **运算符**返回 `true`。
+如果指定的属性在指定的对象或其原型链中，则 **`in`** 运算符返回 `true`。
 
-`in` 运算符不能用于搜索其他集合中的值。要测试数组中是否存在某个值，请使用
-{{jsxref("Array.prototype.includes()")}}。对于集合，请使用
-{{jsxref("Set.prototype.has()")}}。
+`in` 运算符不能用于搜索其他集合中的值。要测试数组中是否存在某个值，请使用 {{jsxref("Array.prototype.includes()")}}。对于集合，请使用 {{jsxref("Set.prototype.has()")}}。
 
-{{InteractiveExample("JavaScript Demo: Expressions - in operator")}}
+{{InteractiveExample("JavaScript 演示：in 运算符")}}
 
 ```js interactive-example
 const car = { make: "Honda", model: "Accord", year: 1998 };
 
 console.log("make" in car);
-// Expected output: true
+// 期望输出：true
 
 delete car.make;
 if ("make" in car === false) {
@@ -25,12 +23,12 @@ if ("make" in car === false) {
 }
 
 console.log(car.make);
-// Expected output: "Suzuki"
+// 期望输出："Suzuki"
 ```
 
 ## 语法
 
-```plain
+```js-nolint
 prop in object
 #prop in object
 ```
@@ -38,7 +36,7 @@ prop in object
 ### 参数
 
 - `prop`
-  - : 表示属性名的字符串或 symbol（非 symbol 类型将被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)）。也可以是[私有元素标识符](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)。
+  - : 表示属性名的字符串或 symbol（非 symbol 类型将被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)）。也可以是[私有元素标识符](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)。
 - `object`
   - : 要检查的对象，检查它（或其原型链）是否包含具有指定名称（`prop`）的属性。
 
