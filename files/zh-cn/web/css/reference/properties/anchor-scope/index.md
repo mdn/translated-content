@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
-**`anchor-scope`** [CSS](/zh-CN/docs/Web/CSS) 属性可以将定位元素与锚点元素建立关联的范围限制在特定子树中。
+**`anchor-scope`** [CSS](/zh-CN/docs/Web/CSS) 属性可以将定位元素与锚点元素建立关联的作用域限制在特定子树中。
 
 ## 语法
 
@@ -31,11 +31,11 @@ anchor-scope: unset;
 此属性指定为关键字 `none` 或 `all`，或以逗号分隔的 `<dashed-ident>` 值列表：
 
 - `none`
-  - : 不限制元素的锚点范围。这是默认值。
+  - : 不限制元素的锚点作用域。这是默认值。
 - `all`
-  - : 设置范围，使子树中设置的*任何* `anchor-name` 值只能由同一子树中的定位元素绑定。
+  - : 设置作用域，使子树中设置的*任何* `anchor-name` 值只能由同一子树中的定位元素绑定。
 - {{cssxref("dashed-ident", "&lt;dashed-ident&gt;#")}}
-  - : 表示锚点名称的一个或多个以逗号分隔的 {{cssxref("dashed-ident")}}。设置范围，使指定的 `anchor-name` 值在子树中设置时，只能由同一子树中的定位元素绑定。
+  - : 表示锚点名称的一个或多个以逗号分隔的 {{cssxref("dashed-ident")}}。设置作用域，使指定的 `anchor-name` 值在子树中设置时，只能由同一子树中的定位元素绑定。
 
 ## 描述
 
@@ -43,21 +43,21 @@ anchor-scope: unset;
 
 这在某些情况下可能会造成问题。例如，如果文档包含多个重复组件，每个组件都有一个与锚点连接的定位元素，那么除非每个组件使用不同的锚点名称，否则所有定位元素都会锚定到页面上的最后一个锚点。这通常不是期望的行为。
 
-`anchor-scope` 属性可以将 `anchor-name` 值的可见性（或称“范围”）限制在特定子树中，从而解决此问题。结果是，每个定位元素只能锚定到设置了该范围的元素所在子树中的元素。
+`anchor-scope` 属性可以将 `anchor-name` 值的可见性（或称“作用域”）限制在特定子树中，从而解决此问题。结果是，每个定位元素只能锚定到设置了该作用域的元素所在子树中的元素。
 
-- `anchor-scope: all` 设置范围，使子树中设置的*任何* `anchor-name` 值只能由同一子树中的定位元素绑定。假设文档中包含多个锚点，它们都设置了 `anchor-name: --my-anchor`，并且分别放在不同容器中。然后我们在每个容器上设置 `anchor-scope: all`。如果在其中一个容器中添加定位元素，并将其 `position-anchor` 属性值设为 `--my-anchor`，它就会相对于同一容器中的锚点进行定位。
+- `anchor-scope: all` 设置作用域，使子树中设置的*任何* `anchor-name` 值只能由同一子树中的定位元素绑定。假设文档中包含多个锚点，它们都设置了 `anchor-name: --my-anchor`，并且分别放在不同容器中。然后我们在每个容器上设置 `anchor-scope: all`。如果在其中一个容器中添加定位元素，并将其 `position-anchor` 属性值设为 `--my-anchor`，它就会相对于同一容器中的锚点进行定位。
 
-  此外，如果在容器外创建另一个定位元素，并为其指定相同或不同的锚点名称，则无论这些锚点的 `anchor-name` 值中是否包含相应名称，该元素都不会相对于任何锚点进行锚点定位。`anchor-scope: all` 会对设置它的容器限制_所有_锚点的锚点范围（与 `anchor-name` 无关），使其只能作用于同一容器中的定位元素。
+  此外，如果在容器外创建另一个定位元素，并为其指定相同或不同的锚点名称，则无论这些锚点的 `anchor-name` 值中是否包含相应名称，该元素都不会相对于任何锚点进行锚点定位。`anchor-scope: all` 会对设置它的容器限制*任意*锚点的锚点作用域（与 `anchor-name` 无关），使其只能作用于同一容器中的定位元素。
 
-- `anchor-scope: <dashed-ident>#` 设置范围，使子树中设置的指定 `anchor-name` 值只能由同一子树中的定位元素绑定。回到上一项中的示例，将容器上的 `anchor-scope` 值改为 `--my-anchor`：
-  - 设置了 `position-anchor: --my-anchor` 的定位元素会受到 `anchor-scope` 设置所施加范围的限制。只有放在容器中的定位元素才会相对于这些锚点进行定位。
-  - 但是，具有不同 `position-anchor` 名称（例如 `--another-anchor`）的定位元素_可以_相对于其中一个锚点进行定位，无论它位于容器内还是容器外，前提是将 `--another-anchor` 锚点名称添加到锚点的 `anchor-name` 属性中。`anchor-scope` 属性只限制 `--my-anchor` 锚点名称的范围，因此不会影响其他锚点名称。
+- `anchor-scope: <dashed-ident>#` 设置作用域，使子树中设置的指定 `anchor-name` 值只能由同一子树中的定位元素绑定。回到上一项中的示例，将容器上的 `anchor-scope` 值改为 `--my-anchor`：
+  - 设置了 `position-anchor: --my-anchor` 的定位元素会受到 `anchor-scope` 设置所施加作用域的限制。只有放在容器中的定位元素才会相对于这些锚点进行定位。
+  - 但是，具有不同 `position-anchor` 名称（例如 `--another-anchor`）的定位元素*可以*相对于其中一个锚点进行定位，无论它位于容器内还是容器外，前提是将 `--another-anchor` 锚点名称添加到锚点的 `anchor-name` 属性中。`anchor-scope` 属性只限制 `--my-anchor` 锚点名称的作用域，因此不会影响其他锚点名称。
 
     如果多个锚点被赋予 `--another-anchor` 锚点名称，则具有该 `position-anchor` 值的定位元素会相对于源代码顺序中具有该名称的最后一个锚点进行定位。
 
 例如，如果子树中设置了三个 `anchor-name` 值（比如 `--anchor1`、`--anchor2` 和 `--anchor3`），在该子树的顶层元素上设置 `anchor-scope: --anchor1, --anchor2, --anchor3`，其效果等同于设置 `anchor-scope: all`。
 
-锚点范围只影响[显式锚点关联](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Using#显式_css_锚点关联)，也就是在设置了 `anchor-name` 的锚点元素与通过 `position-anchor` 值引用该锚点元素名称的定位元素之间建立的关联。锚点范围不影响[隐式锚点关联](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Using#隐式锚点关联)。
+锚点作用域只影响[显式锚点关联](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Using#显式_css_锚点关联)，也就是在设置了 `anchor-name` 的锚点元素与通过 `position-anchor` 值引用该锚点元素名称的定位元素之间建立的关联。锚点作用域不影响[隐式锚点关联](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Using#隐式锚点关联)。
 
 有关锚点功能及其用法的更多信息，请参阅 [CSS 锚点定位](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning)模块和[使用 CSS 锚点定位](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Using)指南。
 
@@ -73,11 +73,11 @@ anchor-scope: unset;
 
 ### 基本用法
 
-此示例演示锚点范围的基本工作方式。它展示了如何将范围容器中的锚点元素限制为只能与同一范围容器中的定位元素连接。
+此示例演示锚点作用域的基本工作方式。它展示了如何将域限容器中的锚点元素限制为只能与同一域限容器中的定位元素连接。
 
 #### HTML
 
-我们指定一个要设置锚点范围的 {{htmlelement("section")}} 元素。它包含两个 {{htmlelement("div")}} 元素，一个用作锚点，另一个用作锚点定位元素。
+我们指定一个要设置锚点作用域的 {{htmlelement("section")}} 元素。它包含两个 {{htmlelement("div")}} 元素，一个用作锚点，另一个用作锚点定位元素。
 
 我们还在 `<section>` 外添加第三个 `<div>`，也将其用作锚点定位元素。
 
@@ -92,7 +92,7 @@ anchor-scope: unset;
 
 #### CSS
 
-我们首先在 `<section>` 上设置 `anchor-scope: --my-anchor`。这会限制其范围，使 `<section>` 的后代锚点元素在名称为 `--my-anchor` 时，只能由同样是 `<section>` 后代的定位元素绑定。
+我们首先在 `<section>` 上设置 `anchor-scope: --my-anchor`。这会限制其作用域，使 `<section>` 的后代锚点元素在名称为 `--my-anchor` 时，只能由同样是 `<section>` 后代的定位元素绑定。
 
 为了进行测试，我们将 `anchor` `<div>` 的 {{cssxref("anchor-name")}} 设置为 `--my-anchor`，将其声明为锚点元素。然后将 `.positioned` 元素绝对定位，将其 {{cssxref("position-anchor")}} 值设为 `--my-anchor` 以连接到锚点，并将其 {{cssxref("position-area")}} 值设为 `right`，使其定位在锚点右侧：
 
@@ -140,9 +140,9 @@ anchor-scope: unset;
 
 {{ EmbedLiveSample("basic-usage", "100%", "225") }}
 
-注意，第一个定位元素位于锚点右侧。由于它位于设置了 `anchor-scope: --my-anchor` 的 `<section>` 元素内，因此处于相对于 `--my-anchor` 锚点定位的范围内。
+注意，第一个定位元素位于锚点右侧。由于它位于设置了 `anchor-scope: --my-anchor` 的 `<section>` 元素内，因此处于相对于 `--my-anchor` 锚点定位的作用域内。
 
-但是，第二个定位元素没有相对于锚点进行定位。它不是 `<section>` 元素的后代，因此位于锚点范围之外。
+但是，第二个定位元素没有相对于锚点进行定位。它不是 `<section>` 元素的后代，因此位于锚点作用域之外。
 
 ### 比较不同的 `anchor-scope` 值
 
@@ -150,7 +150,7 @@ anchor-scope: unset;
 
 #### HTML
 
-我们指定三个要设置锚点范围的 {{htmlelement("section")}} 元素。每个 `<section>` 包含两个 {{htmlelement("div")}} 元素，一个用作锚点，另一个用作锚点定位元素。
+我们指定三个要设置锚点作用域的 {{htmlelement("section")}} 元素。每个 `<section>` 包含两个 {{htmlelement("div")}} 元素，一个用作锚点，另一个用作锚点定位元素。
 
 我们还在 `<section>` 元素外添加另一个 `<div>`，也将其用作锚点定位元素。它的锚点定位设置与其他元素不同。
 
