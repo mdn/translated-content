@@ -9,7 +9,7 @@ slug: Web/HTTP/Reference/Status/500
 
 ## 状态
 
-```plain
+```http
 500 Internal Server Error
 ```
 

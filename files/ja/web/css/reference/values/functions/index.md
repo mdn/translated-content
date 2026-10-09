@@ -3,7 +3,7 @@ title: CSS 値関数
 short-title: 関数
 slug: Web/CSS/Reference/Values/Functions
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: d35a7643766c8f8d1d92044ca771dbf8dc843906
 ---
 
 **CSS 値関数**は、 [CSS](/ja/docs/Web/CSS) プロパティで使用される[値](/ja/docs/Web/CSS/Guides/Values_and_units)を返すために、特別なデータ処理や計算を呼び出す文です。 CSS の値関数はより複雑な[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)を表し、返値を計算するためにいくつかの入力引数を取ることがあります。
@@ -110,14 +110,14 @@ CSS における {{CSSxRef("&lt;transform-function&gt;")}} [データ型](/ja/do
 - {{cssxref("clamp()")}}
   - : 最小値、中央値、最大値を取り、その中央値を計算します。
 
-### 段階値関数関数
+### 段階値関数
 
 - {{cssxref("round()")}}
   - : 四捨五入法に基づき、丸めた数値を計算します。
 - {{cssxref("mod()")}}
   - : ある数値を別の数で割ったときのモジュラス（除数と同じ符号を持つ）を計算します。
 - {{cssxref("progress()")}}
-  - : 2 つの値（開始値と終了値）の間にある値の位置を算出します。結果は 0 から 1 の間の数値で表され、開始値と終了値の間の進捗を表します。
+  - : 2 つの値（開始値と終了値）の間にある値の位置を計算します。結果は、開始値と終了値の間での進行度を表し、0 は開始、1 は終了を表します。
 - {{cssxref("rem()")}}
   - : ある数値を別の数で割ったときの余り（被除数と同じ符号を持つ）を計算します。
 
@@ -208,7 +208,9 @@ CSS の {{CSSxRef("color_value","&lt;color&gt;")}} [データ型](/ja/docs/Web/C
 - {{CSSxRef("color_value/contrast-color", "contrast-color()")}}
   - : 指定された色に対して、色のコントラストが最大の色を返します。
 - {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}}
-  - : 端末に依存しない方法で CMYK の色を定義します。
+  - : 機器に依存しない方法で CMYK の色を定義します。
+- {{CSSXref("color_value/alpha", "alpha()")}}
+  - : アルファ（透過率）チャンネルが変更された色を返します。
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
   - : 現在の配色に基づいて、指定された 2 色のうちの 1 色を返します。
 - {{cssxref("dynamic-range-limit-mix()")}}
@@ -285,7 +287,7 @@ CSS カウンター関数は一般に {{CSSxRef("content")}} プロパティと�
 - {{cssxref("ray()")}}
   - : {{cssxref("offset-path")}} で有効であり、アニメーションする要素が従うことができる線の区間を定義します。
 - {{CSSxRef("superellipse()")}}
-  - : 楕円の曲率を定義します。{{cssxref("corner-shape-value")}} を指定するために使用できます。これは {{cssxref("corner-shape")}} およびその[構成要素のプロパティ](/ja/docs/Web/CSS/Reference/Properties/corner-shape#構成要素のプロパティ)や[関連プロパティ](/ja/docs/Web/CSS/Reference/Properties/corner-shape#properties_that_follow_the_corner_shape)と組み合わせて使用されます。
+  - : 楕円の曲率を定義します。{{cssxref("corner-shape-value")}} を指定するために使用できます。これは {{cssxref("corner-shape")}} およびその[構成要素のプロパティ](/ja/docs/Web/CSS/Reference/Properties/corner-shape#構成要素のプロパティ)や[関連プロパティ](/ja/docs/Web/CSS/Reference/Properties/corner-shape#角の形状に従うプロパティ)と組み合わせて使用されます。
 
 ## 参照関数
 
@@ -373,6 +375,7 @@ CSS フォント関数は {{CSSxRef("font-variant-alternates")}} プロパティ
 - {{cssxref("-moz-image-rect")}} {{non-standard_inline}} {{deprecated_inline}}
 - {{cssxref("abs")}}
 - {{cssxref("acos")}}
+- {{cssxref("alpha")}}
 - {{cssxref("anchor")}}
 - {{cssxref("anchor-size")}}
 - {{cssxref("asin")}}
@@ -389,7 +392,7 @@ CSS フォント関数は {{CSSxRef("font-variant-alternates")}} プロパティ
 - {{cssxref("color_value/color-mix", "color-mix()")}}
 - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}
 - {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("color_value/contrast-color", "contrast-color()")}} {{experimental_inline}}
+- {{cssxref("color_value/contrast-color", "contrast-color()")}}
 - {{cssxref("cos")}}
 - {{cssxref("counter")}}
 - {{cssxref("counters")}}
@@ -402,7 +405,7 @@ CSS フォント関数は {{CSSxRef("font-variant-alternates")}} プロパティ
 - {{cssxref("basic-shape/ellipse", "ellipse()")}}
 - {{cssxref("env")}}
 - {{cssxref("exp")}}
-- {{cssxref("fit-content_function", "fit-content()")}}
+- {{cssxref("fit-content()")}}
 - {{cssxref("filter-function/grayscale", "grayscale()")}}
 - {{cssxref("color_value/hsl", "hsl()")}}
 - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
@@ -435,8 +438,9 @@ CSS フォント関数は {{CSSxRef("font-variant-alternates")}} プロパティ
 - {{cssxref("transform-function/perspective", "perspective()")}}
 - {{cssxref("basic-shape/polygon", "polygon()")}}
 - {{cssxref("pow")}}
-- {{cssxref("progress")}} {{experimental_inline}}
+- {{cssxref("progress")}}
 - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
+- {{cssxref("random")}}
 - {{cssxref("ray")}}
 - {{cssxref("basic-shape/rect", "rect()")}}
 - {{cssxref("rem")}}
@@ -460,8 +464,8 @@ CSS フォント関数は {{CSSxRef("font-variant-alternates")}} プロパティ
 - {{cssxref("animation-timeline/scroll", "scroll()")}}
 - {{cssxref("filter-function/sepia", "sepia()")}}
 - {{cssxref("basic-shape/shape", "shape()")}}
-- {{cssxref("sibling-count")}} {{experimental_inline}}
-- {{cssxref("sibling-index")}} {{experimental_inline}}
+- {{cssxref("sibling-count")}}
+- {{cssxref("sibling-index")}}
 - {{cssxref("sign")}}
 - {{cssxref("sin")}}
 - {{cssxref("transform-function/skew", "skew()")}}

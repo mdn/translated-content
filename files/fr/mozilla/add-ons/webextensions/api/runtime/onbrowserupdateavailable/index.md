@@ -1,45 +1,46 @@
 ---
 title: runtime.onBrowserUpdateAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onBrowserUpdateAvailable
+l10n:
+  sourceCommit: 32ba792708c61221f9ddf725c0a52dba573414bc
 ---
 
-Lancé lorsqu'une mise à jour pour le navigateur est disponible, mais qu'elle n'est pas installée immédiatement car un redémarrage du navigateur est requi.
+> [!WARNING]
+> Cet évènement a été obsolète. Utilisez plutôt {{WebExtAPIRef("runtime.onRestartRequired")}}.
+
+Déclenchée lorsqu'une mise à jour pour le navigateur est disponible, mais qu'elle n'est pas installée immédiatement, car un redémarrage du navigateur est requis.
 
 ## Syntaxe
 
-```js
-browser.runtime.onBrowserUpdateAvailable.addListener(listener);
-browser.runtime.onBrowserUpdateAvailable.removeListener(listener);
-browser.runtime.onBrowserUpdateAvailable.hasListener(listener);
+```js-nolint
+browser.runtime.onBrowserUpdateAvailable.addListener(listener)
+browser.runtime.onBrowserUpdateAvailable.removeListener(listener)
+browser.runtime.onBrowserUpdateAvailable.hasListener(listener)
 ```
 
-Les événements ont trois fonctions :
+Les évènements ont trois fonctions&nbsp;:
 
 - `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
+  - : Ajoute un écouteur à cet évènement.
 - `removeListener(listener)`
-  - : Arrestez d'écouter un événement. L'argument `listener` est l'écouteur à supprimer.
+  - : Arrête d'écouter un évènement. L'argument `listener` est l'écouteur à supprimer.
 - `hasListener(listener)`
-  - : Vérifie si un `écouteur` est enregistré pour cet événement. Retourne `true` s'il écoute, sinon `false`.
+  - : Vérifie si un `listener` est enregistré pour cet évènement. Retourne `true` s'il écoute, sinon `false`.
 
-## Syntaxe addListener
+## Syntaxe de `addListener`
 
 ### Paramètres
 
 - `function`
-  - : Une fonction de rappel qui sera appelée lorsque cet événement se produira.
-
-## Compatibilité des navigateurs
-
-{{Compat}}
+  - : La fonction appelée lorsque cet évènement se produit.
 
 ## Exemples
 
-Ecoutez cet événement :
+Écoutez cet évènement&nbsp;:
 
 ```js
 function handleBrowserUpdateAvailable() {
-  // handle event
+  // gérer l'évènement
 }
 
 browser.runtime.onBrowserUpdateAvailable.addListener(
@@ -49,9 +50,12 @@ browser.runtime.onBrowserUpdateAvailable.addListener(
 
 {{WebExtExamples}}
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 > [!NOTE]
->
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime` <sup>(angl.)</sup>](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json` <sup>(angl.)</sup>](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

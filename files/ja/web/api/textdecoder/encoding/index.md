@@ -24,7 +24,7 @@ l10n:
   ['iso-8859-5'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-5),
   ['iso-8859-6'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-6),
   ['iso-8859-7'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-7),
-  ['iso-8859-8'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-8)'`,
+  ['iso-8859-8'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-8),
   ['iso-8859-8i'](https://en.wikipedia.org/wiki/ISO-8859-8-I),
   ['iso-8859-10'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-10),
   ['iso-8859-13'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-13),

@@ -9,7 +9,7 @@ HTTP **`100 Continue`** 信息型状态响应码表示目前为止一切正常�
 
 ## 状态码
 
-```plain
+```http
 100 Continue
 ```
 

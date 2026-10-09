@@ -9,7 +9,7 @@ slug: Web/API/CSSStyleDeclaration/getPropertyPriority
 
 ## Syntax
 
-```plain
+```js-nolint
 var priority = style.getPropertyPriority(property);
 ```
 

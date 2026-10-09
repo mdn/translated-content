@@ -457,7 +457,7 @@ class PopupInfo extends HTMLElement {
 
 ### カスタム組み込み要素
 
-ここで、もう 1 つの組み込み要素の例を見てみましょう。この例は、組み込みの {{HTMLElement("ul")}} 要素を拡張して、リストアイテムが展開・収納するするようにします。
+ここで、もう 1 つの組み込み要素の例を見てみましょう。この例は、組み込みの {{HTMLElement("ul")}} 要素を拡張して、リストアイテムが展開・収納するようにします。
 
 - [この例のライブ実行を確認](https://mdn.github.io/web-components-examples/expanding-list-web-component/)
 - [ソースコードを参照](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component)

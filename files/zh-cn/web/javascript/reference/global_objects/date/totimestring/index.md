@@ -17,7 +17,7 @@ console.log(event.toTimeString());
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.toTimeString()
 ```
 

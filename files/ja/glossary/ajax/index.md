@@ -2,10 +2,8 @@
 title: Ajax
 slug: Glossary/AJAX
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 **AJAX** （Asynchronous JavaScript and XML、非同期 JavaScript と XML）は、ウェブアプリケーションが非同期 HTTP リクエストを行うことでサーバーからコンテンツを取得し、その新しいコンテンツを使用してページの関連部分を更新するウェブ開発技術です。更新が必要な部分のみがリクエストされるため、ページの応答性が向上します。
 
@@ -22,4 +20,4 @@ Ajax は{{Glossary("SPA", "単一ページアプリケーション")}}の作成�
 - 関連用語:
   - {{Glossary("SPA", "単一ページアプリケーション")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- [AJAX](https://ja.wikipedia.org/wiki/AJAX) (ウィキペディア)
+- [AJAX](https://ja.wikipedia.org/wiki/AJAX) - ウィキペディア

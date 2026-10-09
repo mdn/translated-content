@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Speech API")}}
 
-**`grammars`** は {{domxref("SpeechRecognition")}} インターフェイスのプロバティで、現在の `SpeechRecognition` が理解できる文法を表す {{domxref("SpeechGrammar")}} オブジェクトの集合を返します。
+**`grammars`** は {{domxref("SpeechRecognition")}} インターフェイスのプロパティで、現在の `SpeechRecognition` が理解できる文法を表す {{domxref("SpeechGrammar")}} オブジェクトの集合を返します。
 
 > [!NOTE]
 > ウェブ音声 API から文法の概念が削除されました。関連機能は仕様書に残っており、下位互換性のため対応ブラウザーでは認識されますが、音声認識サービスには影響しません。

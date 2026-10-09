@@ -3,7 +3,7 @@ title: Règle CSS `@supports`
 short-title: "@supports"
 slug: Web/CSS/Reference/At-rules/@supports
 l10n:
-  sourceCommit: 4179ddfb7690019d23f529cbd316c35d2381c75c
+  sourceCommit: ef4050055cbb6ba03fc245947b47d35252bd2376
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@supports`** permet de définir des déclarations CSS qui dépendent du support de certaines fonctionnalités CSS par le navigateur.
@@ -80,7 +80,7 @@ Les fonctions prises en charge dans la syntaxe fonctionnelle sont décrites dans
 #### `at-rule()`
 
 Cette fonction vérifie si un navigateur prend en charge la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) définie.
-L'exemple suivant retourne vrai et applique le style CSS si le navigateur prend en charge la règle {{cssxref("@keyframes")}}&nbsp;:
+L'exemple suivant retourne vrai et applique le style CSS si le navigateur prend en charge la règle {{CSSxRef("@keyframes")}}&nbsp;:
 
 ```css
 @supports at-rule(@keyframes) {
@@ -109,24 +109,24 @@ L'exemple suivant retourne vrai et applique le style CSS contenu si le navigateu
 
 Le tableau ci-dessous décrit les technologies de police (`<font-tech>`), y compris les technologies de police couleur (`<color-font-tech>`), les technologies de fonctionnalités de police (`<font-features-tech>`) et d'autres technologies disponibles pouvant être interrogées avec la fonction `font-tech()`&nbsp;:
 
-| Technology                     | Supports                                                                                      |
-| :----------------------------- | :-------------------------------------------------------------------------------------------- |
-| **`<color-font-tech>`**        |                                                                                               |
-| `color-colrv0`                 | Multi-colored glyphs via COLR version 0 table                                                 |
-| `color-colrv1`                 | Multi-colored glyphs via COLR version 1 table                                                 |
-| `color-svg`                    | SVG multi-colored tables                                                                      |
-| `color-sbix`                   | Standard bitmap graphics tables                                                               |
-| `color-cbdt`                   | Color bitmap data tables                                                                      |
-| **`<font-features-tech>`**     |                                                                                               |
-| `features-opentype`            | OpenType `GSUB` and `GPOS` tables                                                             |
-| `features-aat`                 | TrueType `morx` and `kerx` tables                                                             |
-| `features-graphite`            | Graphite features, namely `Silf`, `Glat`, `Gloc`, `Feat`, and `Sill` tables                   |
-| **Other `<font-tech>` values** |                                                                                               |
-| `incremental-patch`            | Incremental font loading using the patch subset method                                        |
-| `incremental-range`            | Incremental font loading using the range request method                                       |
-| `incremental-auto`             | Incremental font loading using method negotiation                                             |
-| `variations`                   | Font variations in TrueType and OpenType fonts to control the font axis, weight, glyphs, etc. |
-| `palettes`                     | Font palettes by means of `font-palette` to select one of many color palettes in the font     |
+| Technologie                      | Prise en charge                                                                                                            |
+| :------------------------------- | :------------------------------------------------------------------------------------------------------------------------- |
+| **`<color-font-tech>`**          |                                                                                                                            |
+| `color-colrv0`                   | Plusieurs glyphes multicolores avec la table COLR version 0.                                                               |
+| `color-colrv1`                   | Plusieurs glyphes multicolores avec la table COLR version 1.                                                               |
+| `color-svg`                      | Tables SVG multicolores.                                                                                                   |
+| `color-sbix`                     | Tables de graphiques bitmap standard.                                                                                      |
+| `color-cbdt`                     | Tables de données bitmap en couleur.                                                                                       |
+| **`<font-features-tech>`**       |                                                                                                                            |
+| `features-opentype`              | Tables OpenType `GSUB` et `GPOS`.                                                                                          |
+| `features-aat`                   | Tables TrueType `morx` et `kerx`.                                                                                          |
+| `features-graphite`              | Tables de fonctionnalités Graphite, à savoir `Silf`, `Glat`, `Gloc`, `Feat` et `Sill`.                                     |
+| **Autres `<font-tech>` valeurs** |                                                                                                                            |
+| `incremental-patch`              | Chargement incrémentiel de la police en utilisant la méthode du sous-ensemble de correctifs.                               |
+| `incremental-range`              | Chargement incrémentiel de la police en utilisant la méthode de requête de plage.                                          |
+| `incremental-auto`               | Chargement incrémentiel de la police en utilisant la négociation de méthode.                                               |
+| `variations`                     | Variations de police dans les polices TrueType et OpenType pour contrôler l'axe de la police, le poids, les glyphes, etc.  |
+| `palettes`                       | Palettes de polices au moyen de `font-palette` pour sélectionner l'une des nombreuses palettes de couleurs dans la police. |
 
 #### `font-format()`
 
@@ -140,15 +140,32 @@ L'exemple suivant retourne vrai et applique le style CSS contenu si le navigateu
 
 Le tableau suivant décrit les formats disponibles (valeurs `<font-format>`) pouvant être interrogés avec cette fonction&nbsp;:
 
-| Format              | Description                     | File extensions |
-| :------------------ | :------------------------------ | :-------------- |
-| `collection`        | OpenType Collection             | `.otc`, `.ttc`  |
-| `embedded-opentype` | Embedded OpenType               | `.eot`          |
-| `opentype`          | OpenType                        | `.ttf`, `.otf`  |
-| `svg`               | SVG Font (deprecated)           | `.svg`, `.svgz` |
-| `truetype`          | TrueType                        | `.ttf`          |
-| `woff`              | WOFF 1.0 (Web Open Font Format) | `.woff`         |
-| `woff2`             | WOFF 2.0 (Web Open Font Format) | `.woff2`        |
+| Format              | Description                     | Extensions de fichier |
+| :------------------ | :------------------------------ | :-------------------- |
+| `collection`        | Collection OpenType             | `.otc`, `.ttc`        |
+| `embedded-opentype` | Intégration OpenType            | `.eot`                |
+| `opentype`          | OpenType                        | `.ttf`, `.otf`        |
+| `svg`               | SVG Font (obsolète)             | `.svg`, `.svgz`       |
+| `truetype`          | TrueType                        | `.ttf`                |
+| `woff`              | WOFF 1.0 (Web Open Font Format) | `.woff`               |
+| `woff2`             | WOFF 2.0 (Web Open Font Format) | `.woff2`              |
+
+#### La fonction `named-feature()`
+
+Cette fonction prend un mot-clé prédéfini et évalue si le navigateur prend en charge la fonctionnalité nommée définie. Cela permet de tester la prise en charge de fonctionnalités qui ne peuvent pas être vérifiées à l'aide des autres fonctions `@supports`.
+
+```css
+@supports named-feature(anchor-position-follows-transform) {
+}
+```
+
+> [!NOTE]
+> D'autres fonctionnalités seront ajoutées rarement et uniquement lorsqu'il y a une réelle demande pour tester une fonctionnalité spécifique qui n'est pas couverte par des méthodes de test plus générales.
+
+- `anchor-position-follows-transforms`
+  - : Cette fonction `named-feature()` vérifie si le navigateur prend en charge le [positionnement par ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning) sensible aux transformations.
+- `single-axis-scroll-container`
+  - : Cette fonction `named-feature()` vérifie si le navigateur prend en charge la possibilité d'avoir des conteneurs de défilement à axe unique, où un axe est soit {{CSSxRef("overflow#scroll", "scroll")}}, soit {{CSSxRef("overflow#auto", "auto")}}, soit {{CSSxRef("overflow#hidden", "hidden")}} et l'autre est {{CSSxRef("overflow#clip", "clip")}}.
 
 ### L'opérateur `not`
 
@@ -175,7 +192,7 @@ Comme pour les autres opérateurs, on peut appliquer l'opérateur `not` à une d
 
 ### L'opérateur `and`
 
-L'opérateur `and` peut être utilisé pour former une nouvelle expression à partir de deux expressions. L'expression résultante est la conjonction des deux expressions originelles. Autrement dit, le résultat de cette nouvelle expression est VRAI si et seulement si les deux expressions de départ sont vraies et FAUX sinon. Dans l'exemple suivant, l'expression complète n'est pas vérifiée que si les deux expressions sont vérifiées&nbsp;:
+L'opérateur `and` peut être utilisé pour former une nouvelle expression à partir de deux expressions. L'expression résultante est la conjonction des deux expressions originelles. Autrement dit, le résultat de cette nouvelle expression est vrai si et seulement si les deux expressions de départ sont vraies et FAUX sinon. Dans l'exemple suivant, l'expression complète n'est pas vérifiée que si les deux expressions sont vérifiées&nbsp;:
 
 ```css
 @supports (display: table-cell) and (display: list-item) {
@@ -194,7 +211,7 @@ Plusieurs conjonctions peuvent être juxtaposées sans nécessiter plus de paren
 
 ### L'opérateur `or`
 
-L'opérateur `or` peut être utilisé pour former une nouvelle expression à partir de deux expressions. L'expression résultante est la disjonction des deux expressions originelles. Autrement dit, le résultat de cette nouvelle expression est VRAI si au moins une des deux expressions est vraie. Dans l'exemple qui suit, l'expression complète est vérifiée si au moins une des deux (ce peuvent être les deux) expressions est vérifiée&nbsp;:
+L'opérateur `or` peut être utilisé pour former une nouvelle expression à partir de deux expressions. L'expression résultante est la disjonction des deux expressions originelles. Autrement dit, le résultat de cette nouvelle expression est vrai si au moins une des deux expressions est vraie. Dans l'exemple qui suit, l'expression complète est vérifiée si au moins une des deux (ce peuvent être les deux) expressions est vérifiée&nbsp;:
 
 ```css
 @supports (transform-style: preserve) or (-moz-transform-style: preserve) {
@@ -257,7 +274,7 @@ Plusieurs disjonctions peuvent être juxtaposées sans nécessiter plus de paren
 Les règles conditionnelles CSS permettent de tester le support d'un sélecteur comme {{CSSxRef(":has",":has()")}}.
 
 ```css
-/* Cette règle ne sera pas appliquée dans les navigateurs qui ne supportent pas :has() */
+/* Cette règle n'est pas appliquée dans les navigateurs qui ne supportent pas :has() */
 ul:has(> li li) {
   /* Le CSS est appliqué lorsque la pseudo-classe :has(…) est supportée */
 }
@@ -273,7 +290,7 @@ ul:has(> li li) {
 /* Remarque&nbsp;: à ce jour, aucun navigateur ne supporte l'argument `of` de :nth-child(…) */
 @supports selector(:nth-child(1n of a, b)) {
   /* Cette règle doit être dans le bloc @supports, sinon
-     elle sera partiellement appliquée dans les navigateurs qui ne supportent pas
+     elle est partiellement appliquée dans les navigateurs qui ne supportent pas
      l'argument `of` de :nth-child(…) */
   :is(:nth-child(1n of ul, ol) a, details > summary) {
     /* CSS appliqué lorsque le sélecteur :is(…) et
@@ -324,7 +341,7 @@ L'exemple suivant applique le style CSS si le navigateur prend en charge le form
 
 ### Tester la prise en charge d'une règle @
 
-L'exemple suivant applique un ensemble de styles de schéma de couleurs portée si le navigateur prend en charge la règle {{cssxref("@scope")}}&nbsp;:
+L'exemple suivant applique un ensemble de styles de schéma de couleurs portée si le navigateur prend en charge la règle {{CSSxRef("@scope")}}&nbsp;:
 
 ```css
 @supports at-rule(@scope) {

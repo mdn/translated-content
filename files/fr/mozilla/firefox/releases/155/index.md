@@ -3,7 +3,7 @@ title: Firefox 155 note de version pour les développeurs
 short-title: Firefox 155
 slug: Mozilla/Firefox/Releases/155
 l10n:
-  sourceCommit: 1a1ae3db9b94004fef31e64cef0f27c6116356e2
+  sourceCommit: 79f0b295d759e9bb6e3c49197434a1d34c449731
 ---
 
 Cet article présente les informations concernant les changements de Firefox 155 qui concernent les développeur·euse·s.
@@ -45,6 +45,11 @@ Pas de changements notables.
   Il s'agit du nouveau nom de la propriété {{CSSxRef("font-stretch")}}, qui continue de fonctionner comme alias hérité.
   Notez que l'énumération des styles calculés retourne désormais `font-width` plutôt que `font-stretch`.
   ([bogue Firefox 1911075 <sup>(angl.)</sup>](https://bugzil.la/1911075)).
+- Prise en charge partielle du pseudo-élément non standard {{CSSxRef("::-webkit-scrollbar")}}, ajoutée dans [Firefox 153](/fr/docs/Mozilla/Firefox/Releases/153#css), est désormais limitée à une petite liste de sites plutôt qu'à l'ensemble du web. Firefox maintient cette liste dans la préférence `layout.css.fake-webkit-scrollbar.enabled-domains`. Le domaine du document est comparé aux entrées de la liste&nbsp;; s'il ne correspond à aucune entrée, `@supports selector(::-webkit-scrollbar)` retourne `false`.
+
+  Cette restriction annule le changement introduit dans Firefox 153, qui a ajouté une prise en charge partielle de `::-webkit-scrollbar` sur tous les sites et provoque des barres de défilement cassées sur certains sites. Ces sites s'appuient sur le style avec d'autres pseudo-éléments `::-webkit-scrollbar-*`, que Firefox ne prend pas en charge. Les seules déclarations sur lesquelles Firefox agit sont `display: none`, qui masque la barre de défilement, et une `width` ou `height` non nulle, qui désactive les barres de défilement superposées pour ce conteneur de défilement.
+
+  Utilisez plutôt les propriétés standard {{CSSxRef("scrollbar-color")}} et {{CSSxRef("scrollbar-width")}} pour mettre en forme les barres de défilement dans Firefox. ([bogue Firefox 2061547 <sup>(angl.)</sup>](https://bugzil.la/2061547)).
 
 ### JavaScript
 
@@ -181,3 +186,11 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 - **`view-timeline` inclut `view-timeline-inset`**&nbsp;: `layout.css.scroll-driven-animations.enabled`
 
   La propriété raccourcie {{CSSxRef("view-timeline")}} prend désormais en charge la propriété {{CSSxRef("view-timeline-inset")}}. Le raccourci permet de définir les valeurs d'encart (ou d'écart) de début et/ou de fin pour ajuster la position de la chronologie dans la progression de la vue. ([bogue Firefox 2046602 <sup>(angl.)</sup>](https://bugzil.la/2046602)).
+
+- **L'interface `MathMLAnchorElement`**&nbsp;: `mathml.a.element.enabled`
+
+  L'élément MathML [`<a>`](/fr/docs/Web/MathML/Reference/Element/a) est désormais correctement représenté dans le DOM par l'interface [`MathMLAnchorElement`](/fr/docs/Web/API/MathMLAnchorElement) plutôt que par l'interface générique [`MathMLElement`](/fr/docs/Web/API/MathMLElement). ([bogue Firefox 2059312 <sup>(angl.)</sup>](https://bugzil.la/2059312)).
+
+- **Les noms de `timeline-scope` sont désormais globaux par défaut**&nbsp;: `layout.css.scroll-driven-animations.enabled`
+
+  Le comportement par défaut de la portée des chronologies nommées a été mis à jour pour être global. Cela peut être limité à des éléments, et à leur sous-arbre, en utilisant la propriété CSS {{CSSxRef("timeline-scope")}} et la valeur de soit {{CSSxRef("scroll-timeline-name")}} soit {{CSSxRef("view-timeline-name")}} ([bogue Firefox 2024012 <sup>(angl.)</sup>](https://bugzil.la/2024012)).

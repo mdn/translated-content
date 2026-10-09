@@ -3,7 +3,7 @@ title: Images, média et éléments de formulaire
 short-title: Images, média, formulaires
 slug: Learn_web_development/Core/Styling_basics/Images_media_forms
 l10n:
-  sourceCommit: 3143a6094e7b87cf1a96b61f9551fb4d95049777
+  sourceCommit: bfead5c281d92a213f0191746fd98a6bdc4dc457
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Size_decorate_content_panel", "Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics")}}
@@ -238,24 +238,24 @@ Les éléments qui permettent la saisie de texte, tels que `<input type="text">`
 
 Dans l'exemple suivant, nous avons mis en forme certains champs de texte en utilisant CSS. Vous pouvez voir que des éléments tels que les bordures, les marges et le remplissage s'appliquent comme prévu. Nous utilisons des sélecteurs d'attributs pour cibler les différents types de champs de saisie.
 
-Essayez de modifier l'exemple pour changer l'apparence du formulaire en ajustant les bordures, en ajoutant des couleurs de fond aux champs et en modifiant les polices et les marges.
+Essayez de modifier l'exemple pour changer l'apparence des contrôles en ajustant les bordures, en ajoutant des couleurs de fond aux champs et en modifiant les polices et les marges.
 
 ```html live-sample___form
-<form>
+<div class="controles">
   <div><label for="nom">Nom</label> <input id="nom" type="text" /></div>
   <div>
     <label for="courriel">Courriel</label> <input id="courriel" type="email" />
   </div>
 
-  <div class="boutons"><input type="submit" value="Envoyer" /></div>
-</form>
+  <div class="boutons"><input type="button" value="Envoyer" /></div>
+</div>
 ```
 
 ```css hidden live-sample___form
 body {
   font-family: sans-serif;
 }
-form > div {
+.controles > div {
   display: flex;
 }
 
@@ -277,7 +277,7 @@ input[type="email"] {
   width: 80%;
 }
 
-input[type="submit"] {
+input[type="button"] {
   border: 3px solid #333333;
   background-color: #999999;
   border-radius: 5px;
@@ -286,8 +286,8 @@ input[type="submit"] {
   color: white;
 }
 
-input[type="submit"]:hover,
-input[type="submit"]:focus {
+input[type="button"]:hover,
+input[type="button"]:focus {
   background-color: #333333;
 }
 ```

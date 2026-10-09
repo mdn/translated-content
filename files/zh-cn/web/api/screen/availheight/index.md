@@ -11,8 +11,8 @@ slug: Web/API/Screen/availHeight
 
 ## 语法
 
-```plain
-iAvail = window.screen.availHeight
+```js
+iAvail = window.screen.availHeight;
 ```
 
 ## 示例

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`Host`** définit le nom d'hôte et le numéro de port du serveur auquel la requête est envoyée.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Host`** définit le nom d'hôte et le numéro de port du serveur auquel la requête est envoyée.
 
 Si aucun port n'est inclus, le port par défaut pour le service demandé est implicite (par exemple, `443` pour une URL HTTPS, et `80` pour une URL HTTP).
 

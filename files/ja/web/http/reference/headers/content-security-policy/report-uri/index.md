@@ -1,8 +1,9 @@
 ---
-title: "CSP: report-uri"
+title: "Content-Security-Policy: report-uri ディレクティブ"
+short-title: report-uri
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 8f567ac62deb241e61b525d36088d626fc6a8a84
 ---
 
 > [!WARNING]
@@ -51,7 +52,8 @@ Content-Security-Policy: report-uri <uri> <uri>;
 
 レポートの JSON オブジェクトは、 HTTP の `POST` 操作で、 {{HTTPHeader("Content-Type")}} を `application/csp-report` として送信されます。
 
-> [!NOTE] 違反レポートは攻撃者によって制御されたデータであるとみなすべきです。
+> [!NOTE]
+> 違反レポートは攻撃者によって制御されたデータであるとみなすべきです。
 > コンテンツは、格納またはレンダリングする前に正規化する必要があります。
 > これは、 [script-sample](#script-sample) プロパティが指定されている場合、特に当てはまります。
 
@@ -116,7 +118,7 @@ CSP を適用できるブラウザーであれば、この文書に来た際に�
 {
   "csp-report": {
     "blocked-uri": "http://example.com/css/style.css",
-    "disposition": "report",
+    "disposition": "enforce",
     "document-uri": "http://example.com/signup.html",
     "effective-directive": "style-src-elem",
     "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports",
@@ -130,7 +132,7 @@ CSP を適用できるブラウザーであれば、この文書に来た際に�
 ご覧の通り、レポートには `blocked-uri` に違反リソースへのフルパスが含まれます。
 これは常にそうであるとは限りません。
 例えば、`signup.html` が `http://anothercdn.example.com/stylesheet.css` から CSS を読み込もうとした場合、ブラウザーはオリジン (`http://anothercdn.example.com`) のみを記載し、オリジン間リソースに関する機密情報の漏洩を防ぐために、フルパスは記載しません。
-CSP仕様書には、この動作について[説明が記載されています](https://www.w3.org/TR/CSP/#security-violation-reports)。
+CSP 仕様書には、この動作についての[説明があります](https://w3c.github.io/webappsec-csp/#security-violation-reports)。
 
 ### Content-Security-Policy-Report-Only の CSP 違反レポート
 
@@ -174,32 +176,40 @@ Content-Security-Policy: default-src https:; report-uri /csp-violation-report-en
 <?php
 
 // Start configure
-$log_file = dirname(__FILE__) . '/csp-violations.log';
+$log_file = dirname(__FILE__) . "/csp-violations.log";
 $log_file_size_limit = 1000000; // bytes - once exceeded no further entries are added
-$email_address = 'admin@example.com';
-$email_subject = 'Content-Security-Policy violation';
+$email_address = "admin@example.com";
+$email_subject = "Content-Security-Policy violation";
 // End configuration
 
-$current_domain = preg_replace('/www\./i', '', $_SERVER['SERVER_NAME']);
-$email_subject = $email_subject . ' on ' . $current_domain;
+$current_domain = preg_replace("/www\./i", "", $_SERVER["SERVER_NAME"]);
+$email_subject = $email_subject . " on " . $current_domain;
 
 http_response_code(204); // HTTP 204 No Content
 
-$json_data = file_get_contents('php://input');
+$json_data = file_get_contents("php://input");
 
 // We pretty print the JSON before adding it to the log file
-if ($json_data = json_decode($json_data)) {
-  $json_data = json_encode($json_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+if (($json_data = json_decode($json_data))) {
+  $json_data = json_encode(
+    $json_data,
+    JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES,
+  );
 
   if (!file_exists($log_file)) {
     // Send an email
-    $message = "The following Content-Security-Policy violation occurred on " .
+    $message =
+      "The following Content-Security-Policy violation occurred on " .
       $current_domain . ":\n\n" .
       $json_data .
       "\n\nFurther CPS violations will be logged to the following log file, but no further email notifications will be sent until this log file is deleted:\n\n" .
       $log_file;
-    mail($email_address, $email_subject, $message,
-         'Content-Type: text/plain;charset=utf-8');
+    mail(
+      $email_address,
+      $email_subject,
+      $message,
+      "Content-Type: text/plain;charset=utf-8",
+    );
   } else if (filesize($log_file) > $log_file_size_limit) {
     exit(0);
   }

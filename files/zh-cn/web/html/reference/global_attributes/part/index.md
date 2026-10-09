@@ -1,11 +1,13 @@
 ---
-title: part
+title: "`part` HTML 全局属性"
 slug: Web/HTML/Reference/Global_attributes/part
+l10n:
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
-**part** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) 包含一个以元素中 part 属性名称组成的列表，该列表以空格分隔。通过 Part 的名称，可以使用 CSS 伪元素“::part”来选择 shadow 树中指定元素并设置其样式。
+**`part`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)包含该元素的部件名称的空格分隔列表。部件名称允许 CSS 通过 {{CSSxRef("::part")}} 伪元素选择并设置影子树中特定元素的样式。
 
-参见用例 [Shadow part 实例](https://mdn.github.io/web-components-examples/shadow-part/).
+用法示例见 [`exportparts` 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/exportparts)。
 
 ## 规范
 
@@ -15,6 +17,12 @@ slug: Web/HTML/Reference/Global_attributes/part
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- 所有 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+- [`exportparts`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/exportparts) HTML 属性
+- {{HTMLElement("template")}} 和 {{HTMLElement("slot")}} HTML 元素
+- {{CSSXref("::part")}} 和 {{CSSXref("::slotted")}} CSS 伪元素
+- [`ShadowRoot`](/zh-CN/docs/Web/API/ShadowRoot) 接口
+- {{DOMxRef("Element.part")}} 属性
+- [使用模板和插槽](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)
+- [CSS 域](/zh-CN/docs/Web/CSS/Guides/Scoping)模块

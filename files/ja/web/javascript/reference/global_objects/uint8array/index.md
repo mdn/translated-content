@@ -46,7 +46,7 @@ _親である {{jsxref("TypedArray")}} から継承したインスタンスプ�
 - {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint8Array.prototype.BYTES_PER_ELEMENT")}}
   - : 要素の大きさを数値で返します。`Uint8Array` の場合は `1` です。
 - {{jsxref("Object/constructor", "Uint8Array.prototype.constructor")}}
-  - : このインスタンスオブジェクトを構築したコンストラクター関数です。 `Uint8Array インスタンスの場合、初期値は {{jsxref("Uint8Array/Uint8Array", "Uint8Array")}} コンストラクターです。
+  - : このインスタンスオブジェクトを構築したコンストラクター関数です。 `Uint8Array` インスタンスの場合、初期値は {{jsxref("Uint8Array/Uint8Array", "Uint8Array")}} コンストラクターです。
 
 ## インスタンスメソッド
 

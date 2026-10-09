@@ -17,7 +17,7 @@ var renderTime = PerformanceElementTiming.renderTime;
 
 Un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) avec le temps de rendu de l'élément.
 
-Pour les images, il s'agira de l'**horodatage du rendu de l'image**. Ceci est défini comme le moment du rendu suivant le chargement complet de l'image. Si la vérification de l'autorisation de temporisation échoue (comme défini par l'en-tête [Timing-allow-origin](/fr/docs/Web/HTTP/Headers/Timing-Allow-Origin)), ceci retournera 0.
+Pour les images, il s'agira de l'**horodatage du rendu de l'image**. Ceci est défini comme le moment du rendu suivant le chargement complet de l'image. Si la vérification de l'autorisation de temporisation échoue (comme défini par l'en-tête [Timing-allow-origin](/fr/docs/Web/HTTP/Reference/Headers/Timing-Allow-Origin)), ceci retournera 0.
 
 Pour les nœuds de texte, il s'agira de l'**horodatage du rendu du texte**. Ceci est défini comme le moment où l'élément est affiché à l'écran.
 

@@ -9,7 +9,7 @@ slug: Web/API/HTMLAudioElement/Audio
 
 ## 语法
 
-```plain
+```js-nolint
 audioObj = new Audio(url);
 ```
 

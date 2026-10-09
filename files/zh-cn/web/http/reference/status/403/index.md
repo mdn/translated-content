@@ -9,7 +9,7 @@ slug: Web/HTTP/Reference/Status/403
 
 ## 状态
 
-```plain
+```http
 403 Forbidden
 ```
 

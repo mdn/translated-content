@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
 
 ## 语法
 
-```plain
+```js-nolint
 Math.atanh(x)
 ```
 

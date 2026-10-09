@@ -28,7 +28,7 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 - {{ cssxref("text-decoration-line", "-moz-text-decoration-line") }}
   - : このプロパティはテキスト装飾の種類を指定します。
 - {{ cssxref("text-decoration-style", "-moz-text-decoration-style") }}
-  - : このプロパティは、テキスト装飾で使用する下線、上線、取り消し線などのなどのスタイルを指定します。スタイルには単一線、二重線、破線、点線などがあります。
+  - : このプロパティは、テキスト装飾で使用する下線、上線、取り消し線などのスタイルを指定します。スタイルには単一線、二重線、破線、点線などがあります。
 - {{ cssxref("hyphens", "-moz-hyphens") }}
   - : このプロパティは行の折り返しが発生する際、単語のハイフネーションを制御するプロパティです。
 - {{ cssxref("-moz-orient", "-moz-orient") }}

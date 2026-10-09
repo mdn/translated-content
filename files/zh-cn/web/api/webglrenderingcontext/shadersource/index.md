@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/shaderSource
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.shaderSource(shader, source);
 ```
 

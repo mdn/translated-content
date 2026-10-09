@@ -9,7 +9,7 @@ slug: Web/API/CSSStyleDeclaration/getPropertyValue
 
 ## 语法
 
-```plain
+```js-nolint
 var value = style.getPropertyValue(property);
 ```
 

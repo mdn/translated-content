@@ -3,12 +3,12 @@ title: Guide de style rédactionnel
 short-title: Style rédactionnel
 slug: MDN/Writing_guidelines/Writing_style_guide
 l10n:
-  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
+  sourceCommit: f4c221962681b1472cd57da60379ad7825fe5081
 ---
 
 Ce guide de style rédactionnel décrit comment le contenu doit être rédigé, organisé, orthographié et mis en forme sur MDN Web Docs.
 
-Ces directives visent à assurer la cohérence de la langue et du style sur l'ensemble du site. Cela dit, nous nous intéressons davantage au contenu qu'à sa mise en forme, vous n'avez donc pas à apprendre l'intégralité du guide de style avant de contribuer. Toutefois, ne soyez pas surpris·e si une autre personne modifie ensuite votre travail pour le conformer à ce guide. Les relecteur·ice·s peuvent aussi vous renvoyer vers ce guide lors de la soumission d'une proposition de contenu.
+Ces directives visent à assurer la cohérence de la langue et du style sur l'ensemble du site. Cela dit, nous nous intéressons davantage au contenu qu'à sa mise en forme, vous n'avez donc pas à apprendre l'intégralité du guide de style avant de contribuer. Toutefois, ne soyez pas surpris·e si une autre personne modifie ensuite votre travail pour le conformer à ce guide. Les relecteur·ice·s peuvent aussi vous renvoyer vers ce guide lors de l'envoi d'une proposition de contenu.
 
 > [!NOTE]
 > Les aspects linguistiques de ce guide s'appliquent principalement à la documentation en **anglais**. D'autres langues peuvent, et sont encouragées à, créer leur propre guide de style. Ceux-ci doivent être publiés comme sous-pages de la page de l'équipe de localisation correspondante. Cependant, ce guide reste à consulter pour la mise en forme et l'organisation du contenu.
@@ -92,6 +92,7 @@ Nous recommandons fortement de rendre le texte aussi inclusif que possible.
 Certains termes, bien qu'ils n'aient pas l'intention d'être offensants, peuvent aliéner des lecteur·ice·s de certains horizons, tels que&nbsp;:
 
 - Évitez **maître** et **esclave**, préférez **principal** et **réplica**.
+- Évitez **soumettre**, **soumission**, **soumis**, préférez le verbe **envoyer**.
 - Remplacez **liste blanche** et **liste noire** par **liste d'autorisation** et **liste d'interdiction**.
 - **Sanity** doit être remplacé par **cohérence**.
 - À la place de **dummy**, utilisez **exemple**.
@@ -185,7 +186,7 @@ La liste de contrôle suivante est utile lors de la rédaction et de la relectur
   - **Vérifiez la structure de la page**&nbsp;: Vérifiez que la page est structurée correctement pour son [type de page](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types). Assurez-vous que toutes les sections sont présentes et correctement remplies.
   - **Assurez l'exhaustivité**&nbsp;: Vérifiez que rien ne manque. Assurez-vous que tous les paramètres sont listés et expliqués. Couvrez les exceptions éventuelles — c'est un endroit où manquent souvent des informations.
   - **Développez tous les concepts**&nbsp;: Il est facile de donner une explication rapide. Assurez-vous que toutes les nuances sont couvertes. Y a-t-il des cas particuliers&nbsp;? Des restrictions connues dont le lectorat doit être informé&nbsp;?
-  - **Ajoutez des exemples**&nbsp;: Il doit y avoir des exemples couvrant tous les paramètres ou au moins ceux que les personnes débutantes à intermédiaires utilisont, ainsi que ceux avancés qui demandent des explications supplémentaires. Chaque exemple doit être précédé d'un aperçu de ce qu'il fait, des connaissances nécessaires, etc. Après l'exemple (ou entre des parties), ajoutez du texte expliquant le fonctionnement du code. Ne négligez pas les détails ni la gestion des erreurs. Gardez à l'esprit que les utilisateur·ice·s copient vos exemples et que votre code finit en production.
+  - **Ajoutez des exemples**&nbsp;: Il doit y avoir des exemples couvrant tous les paramètres ou au moins ceux que les personnes débutantes à intermédiaires utilisent, ainsi que ceux avancés qui demandent des explications supplémentaires. Chaque exemple doit être précédé d'un aperçu de ce qu'il fait, des connaissances nécessaires, etc. Après l'exemple (ou entre des parties), ajoutez du texte expliquant le fonctionnement du code. Ne négligez pas les détails ni la gestion des erreurs. Gardez à l'esprit que les utilisateur·ice·s copient vos exemples et que votre code finit en production.
     Voir nos [recommandations pour les exemples de code](/fr/docs/MDN/Writing_guidelines/Code_style_guide) pour plus d'informations.
   - **Expliquez les cas d'usage**&nbsp;: S'il existe des cas d'usage fréquents pour la fonctionnalité décrite, parlez-en. Au lieu de supposer qu'une personne déduit qu'une méthode peut résoudre un problème courant, ajoutez une section avec un exemple et une explication.
   - **Ajoutez des informations sur les images**&nbsp;: Incluez un texte [`alt`](/fr/docs/Web/HTML/Reference/Elements/img#alt) approprié sur toutes les images et schémas. Ce texte, ainsi que les légendes, comptent, car les robots d'indexation ne lisent pas les images, donc le texte `alt` leur décrit le contenu.
@@ -287,7 +288,7 @@ Certains mots doivent toujours être capitalisés, comme les marques qui incluen
 
 - Boolean (nommé d'après le logicien [George Boole <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/George_Boole))
 - JavaScript (marque d'Oracle Corporation, à écrire comme trademarké)
-- Python, TypeScript, Django et autres langages et frameworks
+- Python, TypeScript, Django et autres langages et cadriciels
 
 Certains outils et projets ont leur capitalisation de marque. Cela peut être tout en minuscules («&nbsp;npm&nbsp;» ou «&nbsp;webpack&nbsp;»), tout en majuscules («&nbsp;UNIX&nbsp;», «&nbsp;GNOME&nbsp;», «&nbsp;VIM&nbsp;») ou en casse mixte («&nbsp;TypeScript&nbsp;», «&nbsp;macOS&nbsp;», «&nbsp;jQuery&nbsp;»).
 
@@ -324,7 +325,7 @@ Utilisez les pluriels français, pas les formes influencées par le latin ou le 
 
 ### Apostrophes et guillemets
 
-N'utilisez pas de guillemets ou d'apostrophes «&nbsp;courbes&nbsp;». Sur MDN Web Docs, utilisez uniquement des guillemets droits et des apostrophes droites. En effet, nous devons choisir une seule forme pour la cohérence. Si des caractères courbes se glissent dans des extraits de code, même en ligne, des personnes pourraient les copier en pensant qu'ils fonctionnent, ce qui n'est pas le cas.
+N'utilisez pas de guillemets ou d'apostrophes «&nbsp;courbes&nbsp;». Sur MDN Web Docs, utilisez uniquement des guillemets droits et des apostrophes droites. En effet, nous devons choisir une seule forme pour la cohérence. Si des caractères courbes se glissent dans des extraits de code, même en ligne, des personnes peuvent les copier en pensant qu'ils fonctionnent, ce qui n'est pas le cas.
 
 - **Correct**&nbsp;: N'utilisez pas les «&nbsp;apostrophes courbes&nbsp;».
 - **Incorrect**&nbsp;: N&rsquo;utilisez pas les &ldquo;apostrophes courbes.&rdquo;
@@ -335,8 +336,8 @@ La liste suivante décrit des situations courantes où il faut connaître les r�
 
 - **Après une proposition introductive**&nbsp;: Une proposition subordonnée introductive se trouve généralement au début d'une phrase. Utilisez une virgule après cette proposition pour la séparer de la proposition principale suivante.
   - Exemple 1&nbsp;:
-    - **Correct**&nbsp;: «&nbsp;Dans cet exemple, vous apprendrez à utiliser une virgule.&nbsp;»
-    - **Incorrect**&nbsp;: «&nbsp;Dans cet exemple vous apprendrez à utiliser une virgule.&nbsp;»
+    - **Correct**&nbsp;: «&nbsp;Dans cet exemple, vous apprenez à utiliser une virgule.&nbsp;»
+    - **Incorrect**&nbsp;: «&nbsp;Dans cet exemple vous apprenez à utiliser une virgule.&nbsp;»
   - Exemple 2&nbsp;:
     - **Correct**&nbsp;: «&nbsp;Si vous cherchez des recommandations, consultez notre guide de style.&nbsp;»
     - **Incorrect**&nbsp;: «&nbsp;Si vous cherchez des recommandations consultez notre guide de style.&nbsp;»
@@ -410,11 +411,11 @@ Dans le dépôt, nous maintenons plusieurs listes de mots, situées dans [`.vsco
 
 Voici nos recommandations pour certains termes techniques&nbsp;:
 
-- **Éléments HTML**&nbsp;: Utilisez le terme «&nbsp;élément&nbsp;» pour parler des éléments HTML et XML, plutôt que «&nbsp;balise&nbsp;». En outre, l'élément doit être entouré de chevrons «&nbsp;<>&nbsp;» et stylé avec des accents graves (backticks). Par exemple, utiliser \<input\> entre accents graves l'affiche comme `<input>` comme attendu.
+- **Éléments HTML**&nbsp;: Utilisez le terme «&nbsp;élément&nbsp;» pour parler des éléments HTML et XML, plutôt que «&nbsp;balise&nbsp;». En outre, l'élément doit être entouré de chevrons «&nbsp;<>&nbsp;» et mis en forme avec des accents graves (<i lang="en">backticks</i> en anglais). Par exemple, utiliser \<input\> entre accents graves l'affiche comme `<input>` comme attendu.
   - **Correct**&nbsp;: l'élément `<span>`
   - **Incorrect**&nbsp;: la balise span
 
-  Sur MDN, vous pouvez en option indiquer l'élément HTML avec la macro [`HTMLElement`](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references), qui stylise l'élément, ajoute les chevrons «&nbsp;<>&nbsp;» et crée un lien vers sa page de référence.
+  Sur MDN, vous pouvez en option indiquer l'élément HTML avec la macro [`HTMLElement`](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references), qui met en forme l'élément, ajoute les chevrons «&nbsp;<>&nbsp;» et crée un lien vers sa page de référence.
   - **Avec accents graves**&nbsp;: `<span>`
   - **Avec la macro**&nbsp;: {{HTMLElement("span")}}
 
@@ -498,7 +499,7 @@ De manière générale, si vous envisagez d'ajouter un lien externe, assurez-vou
 - **Bons liens externes**&nbsp;: Ils mènent à des ressources pertinentes, durables et largement fiables. Préférez des liens vers un contenu&nbsp;:
   - Unique ou indispensable (par exemple, une RFC de l'IETF)
   - Nécessaire pour l'attribution ou la citation (par exemple, dans le cadre d'une licence Creative Commons)
-  - Plus susceptible d'être maintenu que s'il était recopié sur MDN Web Docs (par exemple, des notes de version d'un fournisseur)
+  - Plus susceptible d'être maintenu que s'il est recopié sur MDN Web Docs (par exemple, des notes de version d'un fournisseur)
   - Libre ou communautaire, comme MDN Web Docs
 
 - **Mauvais liens externes**&nbsp;: Ils manquent de pertinence, de maintenabilité, d'accessibilité, ou posent des obstacles aux lecteur·ice·s. Évitez les liens vers un contenu&nbsp;:
@@ -519,7 +520,7 @@ De manière générale, si vous envisagez d'ajouter un lien externe, assurez-vou
 
 Un raccourcisseur d'URL peut être utile pour raccourcir des liens longs en adresses plus courtes et mémorisables. Cependant, ils masquent la destination. De plus, pour certains services, la destination peut être modifiée après création, ce qui peut être utilisé de manière malveillante.
 
-N'utilisez pas de liens créés avec des raccourcisseurs tiers ouverts. Par exemple, si `https://monliencourt.lien/tototata` est une URL courte générée par une personne et redirige vers `https://example.com/unlientroplong/details/show?page_id=tototata`, utilisez l'URL longue d'`example.com`.
+N'utilisez pas de liens créés avec des raccourcisseurs tiers ouverts. Par exemple, si `https://monliencourt.lien/tototata` est une URL courte générée par une personne et redirige vers `https://example.com/unlientroplong/details/show?page_id=tototata`, utilisez l'URL longue de `example.com`.
 
 <!-- markdownlint-disable search-replace -->
 
@@ -539,7 +540,7 @@ Gardez à l'esprit les recommandations suivantes lors de la création de sous-ti
 
 - **N'ajoutez pas de sous-sections uniques.** Ne subdivisez pas un sujet en un seul sous-sujet.
   C'est deux sous-titres ou plus, ou aucun.
-- **N'utilisez pas de styles, classes ou macros en ligne dans les titres.** Vous pouvez toutefois utiliser des accents graves pour indiquer des termes de code (par exemple, «&nbsp;Utiliser l'interface `TotoTata`&nbsp;»).
+- **N'utilisez pas de styles, classes ou macros en incise dans les titres.** Vous pouvez toutefois utiliser des accents graves pour indiquer des termes de code (par exemple, «&nbsp;Utiliser l'interface `TotoTata`&nbsp;»).
 - **Évitez les «&nbsp;chocs de titres&nbsp;».** Ce sont des titres immédiatement suivis d'un sous-titre, sans texte entre les deux.
   Ce n'est pas esthétique et ne fournit pas de texte introductif au début de la section.
 
@@ -625,8 +626,8 @@ Pour maintenir la cohérence, gardez à l'esprit les points suivants lors de l'a
   - **Correct**&nbsp;: {{CSSxRef(":checked")}}, {{CSSxRef(":indeterminate")}}&nbsp;: Sélecteurs CSS pour mettre en forme des cases à cocher
 - N'utilisez pas la conjonction «&nbsp;and&nbsp;» avant le dernier élément d'une série.
   - **Correct**&nbsp;: {{CSSxRef("background-color")}}, {{CSSxRef("border-color")}}, {{CSSxRef("color")}}, {{CSSxRef("caret-color")}}, {{CSSxRef("column-rule-color")}}, {{CSSxRef("outline-color")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-emphasis-color")}}, {{CSSxRef("text-shadow")}}&nbsp;: Autres propriétés liées à la couleur
-- Pour les liens externes, essayez d'indiquer la source et l'année de publication ou de mise à jour entre parenthèses quand c'est pertinent. Cela renseigne la destination et aide la maintenance. Pour un article sur [l'attente au niveau supérieur](https://v8.dev/features/top-level-await) sur v8.dev (2019)&nbsp;:
-  - **Correct**&nbsp;: [Top-level await <sup>(angl.)</sup>](https://v8.dev/features/top-level-await) sur v8.dev (2019)
+- Pour les liens externes, essayez d'indiquer la source et l'année de publication ou de mise à jour entre parenthèses quand c'est pertinent. Cela renseigne la destination et aide la maintenance. Pour un article sur un [`await` de niveau supérieur <sup>(angl.)</sup>](https://v8.dev/features/top-level-await) sur v8.dev (2019)&nbsp;:
+  - **Correct**&nbsp;: [`await` de niveau supérieur <sup>(angl.)</sup>](https://v8.dev/features/top-level-await) sur v8.dev (2019)
 - Pour les livres, vous pouvez aussi fournir les auteur·ice·s. Évitez de le faire pour des billets de blog ou dépôts GitHub.
 
 #### Ordre des liens
@@ -670,7 +671,7 @@ Gardez à l'esprit&nbsp;:
 
   Beaucoup de pages plus anciennes ne respectent pas encore cette règle. Mettez-les à jour au besoin. Nous avançons progressivement.
 
-- **Règles générales**&nbsp;: Décider quoi documenter et comment structurer le contenu est l'une des premières étapes. Écrire une table des matières peut aider à ordonner l'information. Couvrez d'abord les concepts simples, puis les plus avancés. Traitez d'abord le conceptuel, ensuite l'actionnel.
+- **Règles générales**&nbsp;: Décider quoi documenter et comment structurer le contenu est l'une des premières étapes. Écrire une table des matières peut aider à ordonner l'information. Couvrez d'abord les concepts simples, puis les plus avancés. Traitez d'abord le conceptuel, ensuite ce qui concerne l'action.
 
   Recommandations pour les titres de page, sections et sous-sections&nbsp;:
   - **Du plus large au plus précis**&nbsp;: Comme indiqué dans [Niveaux de titres](#niveaux_de_titres), descendez de `##` vers `####` sans sauter. Utilisez les niveaux élevés pour les titres introductifs généraux et des titres plus spécifiques pour les niveaux inférieurs.
@@ -709,6 +710,6 @@ Pour améliorer vos compétences en rédaction et en édition, les ressources su
   - [Erreurs courantes en anglais <sup>(angl.)</sup>](https://brians.wsu.edu/common-errors-in-english-usage/) sur brians.wsu.edu
   - [FAQ grammaire anglaise <sup>(angl.)</sup>](https://websites.umich.edu/~jlawler/aue.html) sur alt-usage-english.org
   - [Langue anglaise et usage <sup>(angl.)</sup>](https://english.stackexchange.com/) sur english.stackexchange.com&nbsp;: questions-réponses sur l'usage
-  - [Merriam-Webster's Concise Dictionary of English Usage <sup>(angl.)</sup>](https://books.google.com/books?id=UDIjAQAAIAAJ) sur google.com/books (publié en 2002)&nbsp;: conseils argumentés et accessibles&nbsp;; utile pour des personnes non natives, notamment pour les prépositions
-  - [On Writing Well <sup>(angl.)</sup>](https://www.harpercollins.com/products/on-writing-well-william-zinsser) de William Zinsser sur harpercollins.com (2016)
-  - [Style: Lessons in Clarity and Grace <sup>(angl.)</sup>](https://books.google.com/books?id=QjskvgEACAAJ) de Joseph Williams et Gregory Colomb sur google.com/books (2019)
+  - [Dictionnaire concis de l'usage de l'anglais de Merriam-Webster <sup>(angl.)</sup>](https://books.google.com/books?id=UDIjAQAAIAAJ) sur google.com/books (publié en 2002)&nbsp;: conseils argumentés et accessibles&nbsp;; utile pour des personnes non natives, notamment pour les prépositions
+  - [Comment bien écrire <sup>(angl.)</sup>](https://www.harpercollins.com/products/on-writing-well-william-zinsser) de William Zinsser sur harpercollins.com (2016)
+  - [Style&nbsp;: leçons de clarté et d'élégance <sup>(angl.)</sup>](https://books.google.com/books?id=QjskvgEACAAJ) de Joseph Williams et Gregory Colomb sur google.com/books (2019)

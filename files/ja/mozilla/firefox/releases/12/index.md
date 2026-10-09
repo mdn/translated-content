@@ -30,18 +30,18 @@ Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました�
 - エディター (フォーム) 上で IME を使った文字入力を行っている場合、従来は確定後に `input` イベントが発生していましたが、Firefox 12 では、IME で編集中の文字列が変更されたことを示す `compositionupdate` イベントの直後にも `input` イベントが発生するようになりました。これにより、`input` イベントハンドラーを使って、日本語入力中にも未確定文字列を含めたフォームの入力内容を取得することが可能となりました。
 - DOM 4 仕様で定義されている {{ domxref("DOMError") }} が実装されました。
 - {{ domxref("Document.createNodeIterator()") }} メソッドが DOM 4 仕様に適合するように更新されました。これにより、`whatToShow` および `filter` 引数がオプションになり、非標準の 4 番目の引数である `entityReferenceExpansion` が削除されます。
-- {{ domxref("Blob") }} インターフェイスの `slice()` メソッドは符号付き 64 ビット整数の範囲外の `start` の値と `end` の値を正しく受け取れないバグによる影響を受けていましたが、この問題は修正されました。`
+- {{ domxref("Blob") }} インターフェイスの `slice()` メソッドは符号付き 64 ビット整数の範囲外の `start` の値と `end` の値を正しく受け取れないバグによる影響を受けていましたが、この問題は修正されました。
 - {{ domxref("element.getBoundingClientRect()") }} メソッドが要素の矩形の境界を算出するときに [CSS transforms](/ja/docs/Web/CSS/Guides/Transforms/Using) の効果を考慮するようになりました。
 
 #### 新しい WebAPI
 
-- Network Information API: {{ domxref("window.navigator.connection") }} の実験的サポートが追加されました。（接頭辞付き）
-- WebTelephony API: {{ domxref("window.navigator.mozTelephony") }} が実装されました。デバイス上での電話の発信、応答、管理をするためのサポートを提供します。
-- WebSMS API: モバイルデバイスで SMS テキストメッセージを送信できる {{ domxref("window.navigator.mozSms") }} が利用可能になりました。
+- Network Information API: {{domxref("Navigator.connection", "window.navigator.connection")}} の実験的サポートが追加されました。（接頭辞付き）
+- WebTelephony API: `window.navigator.mozTelephony` が実装されました。デバイス上での電話の発信、応答、管理をするためのサポートを提供します。
+- WebSMS API: モバイルデバイスで SMS テキストメッセージを送信できる `window.navigator.mozSms` が利用可能になりました。
 
 ### SVG
 
-- {{ domxref("SVGTests") }} DOM API に対応しました。([Firefox バグ 607854](https://bugzil.la/607854))
+- `SVGTests` DOM API に対応しました。([Firefox バグ 607854](https://bugzil.la/607854))
 - {{ domxref("SVGStringList") }} DOM インターフェイスが非標準の `length` プロパティに対応しました。([Firefox バグ 711958](https://bugzil.la/711958))
 
 ### MathML

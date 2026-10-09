@@ -8,7 +8,7 @@ l10n:
 
 {{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas", "Web/MathML/Tutorials/For_beginners")}}
 
-基本的な数式表記がすべてわかったら、あとは行列のような式や他にも高度な数式レイアウトを使用することができる表形式レイアウトを考えることができます。
+基本的な数式表記がすべてわかったら、あとは行列のような式や他の高度な数式レイアウトに使用できる表形式レイアウトを考えます。
 
 ## MathML 表形式要素
 

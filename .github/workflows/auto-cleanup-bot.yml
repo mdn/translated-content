@@ -27,17 +27,19 @@ jobs:
           - zh-cn
           - zh-tw
     steps:
-      - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
+      - parallel:
+          - name: Checkout
+            uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+            with:
+              path: mdn/translated-content
+              persist-credentials: false
 
-      - name: Checkout (content)
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          repository: mdn/content
-          path: mdn/content
-          persist-credentials: false
+          - name: Checkout (content)
+            uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+            with:
+              repository: mdn/content
+              path: mdn/content
+              persist-credentials: false
 
       - name: Setup Node.js environment
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
@@ -46,6 +48,7 @@ jobs:
           package-manager-cache: false
 
       - name: Install
+        working-directory: mdn/translated-content
         run: npm ci
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
@@ -61,7 +64,7 @@ jobs:
       - name: Fix flaws
         env:
           CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
-          CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
+          CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/mdn/translated-content/files
           # Used by the `rari` cli to avoid rate limiting issues
           # when fetching the latest releases info from the GitHub API.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -70,17 +73,19 @@ jobs:
           npm run content fix-flaws -- --locale "${{ matrix.lang }}"
 
       - name: Lint Markdown files
+        working-directory: mdn/translated-content
         run: |
           npx markdownlint-cli2 --fix "**/${{ matrix.lang }}/**/*.md"
           node ./scripts/check-url-locale.js --fix "files/${{ matrix.lang }}"
           ls -d 2>/dev/null "files/${{ matrix.lang }}" "docs/${{ matrix.lang }}" | xargs npx autocorrect-node --fix
           npx prettier -w "**/${{ matrix.lang }}/**/*.md"
-          cd ${{ github.workspace }}/mdn/content && npm run fix:fm -- --config-file ${{ github.workspace }}/.front-matter-config.json "${{ github.workspace }}/files/${{ matrix.lang }}"
+          cd ${{ github.workspace }}/mdn/content && npm run fix:fm -- --config-file ${{ github.workspace }}/mdn/translated-content/.front-matter-config.json "${{ github.workspace }}/mdn/translated-content/files/${{ matrix.lang }}"
 
       - name: Create PR with only fixable issues
         if: success()
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
+          path: mdn/translated-content
           commit-message: "${{ matrix.lang }}: auto-fix content issues"
           branch: content-autofix-${{ matrix.lang }}
           title: "[${{ matrix.lang }}] auto-fix content issues"
@@ -98,6 +103,7 @@ jobs:
         if: failure()
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
+          path: mdn/translated-content
           commit-message: "${{ matrix.lang }}: auto-fix content issues"
           branch: content-autofix-${{ matrix.lang }}
           title: "[${{ matrix.lang }}] auto-fix content issues"

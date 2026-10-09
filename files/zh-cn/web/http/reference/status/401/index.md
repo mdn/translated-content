@@ -11,13 +11,13 @@ slug: Web/HTTP/Reference/Status/401
 
 ## 状态
 
-```plain
+```http
 401 Unauthorized
 ```
 
 ## 响应示例
 
-```plain
+```http
 HTTP/1.1 401 Unauthorized
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 WWW-Authenticate: Basic realm="Access to staging site"

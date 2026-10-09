@@ -38,7 +38,7 @@ Você pode criar um novo objeto `Response` usando o construtor {{domxref("Respon
 - {{domxref("Body.body")}} {{readonlyInline}}
   - : Um simples "getter" para ler do conteúdo do corpo através da interface {{domxref("ReadableStream")}}.
 - {{domxref("Body.bodyUsed")}} {{readonlyInline}}
-  - : Armazena um {{domxref("Boolean")}} que indica se o corpo já foi utilizado em uma resposta.
+  - : Armazena um {{jsxref("Boolean")}} que indica se o corpo já foi utilizado em uma resposta.
 
 ## Métodos
 
@@ -52,7 +52,7 @@ Você pode criar um novo objeto `Response` usando o construtor {{domxref("Respon
 `Response` implementa {{domxref("Body")}}, por isso também tem as seguintes propriedades disponíveis:
 
 - {{domxref("Body.arrayBuffer()")}}
-  - : Recebe um "stream" {{domxref("Response")}} e lê até a conclusão. Retorna uma "promise" que resolve com um {{domxref("ArrayBuffer")}}.
+  - : Recebe um "stream" {{domxref("Response")}} e lê até a conclusão. Retorna uma "promise" que resolve com um {{jsxref("ArrayBuffer")}}.
 - {{domxref("Body.blob()")}}
   - : Recebe um "stream" {{domxref("Response")}} e lê até a conclusão. Retorna uma "promise" que resolve com um {{domxref("Blob")}}.
 - {{domxref("Body.formData()")}}

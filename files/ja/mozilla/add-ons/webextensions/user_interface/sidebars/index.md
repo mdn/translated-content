@@ -36,7 +36,7 @@ browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
 
 ## サイドバーの設定
 
-サイドバーを設定するには、 [`sidebar_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) キーを manifest.json に設定して、既定のドキュメントを、既定ののタイトルおよびアイコンとともに設定してください。
+サイドバーを設定するには、 [`sidebar_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) キーを manifest.json に設定して、既定のドキュメントを、既定のタイトルおよびアイコンとともに設定してください。
 
 ```json
 "sidebar_action": {

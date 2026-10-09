@@ -2,7 +2,7 @@
 title: Collaboration et travail d'équipe
 slug: Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork
 l10n:
-  sourceCommit: 4cea855517e39f4510cd110ced815b7643203321
+  sourceCommit: da7287ff61b6ea4db7f9a5e07be11263b525b7d0
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Research_and_learning", "Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Getting_started/Soft_skills")}}
@@ -48,7 +48,7 @@ Le secteur du web a un fort esprit communautaire, ce qui signifie que vous inter
 
 Vous devez rejoindre certains de ces groupes, dire bonjour, faire connaissance, partager des ressources, poser des questions et proposer votre aide. Faire partie de la communauté présente de nombreux avantages&nbsp;:
 
-- Rencontrer des contacts utiles qui deviennent peut-être des ami·e·s, futur·e·s collègues ou employeurs·euses.
+- Rencontrer des contacts utiles qui deviennent peut-être des ami·e·s, futur·e·s collègues ou employeurs·euse·s.
 - Apprendre de nouvelles techniques et technologies et obtenir de l'aide sur vos problèmes techniques.
 - S'entraîner à expliquer comment fonctionne le code et à répondre aux questions des autres.
 - Découvrir des ressources, des rencontres et l'actualité du secteur.
@@ -109,7 +109,7 @@ Si vous ne savez pas ce qu'est l'open source, pourquoi ou comment commencer à c
 
 ## Travail d'équipe et relectures entre pairs
 
-Vous devez souvent travailler en équipe avec d'autres développeur·euse·s, chaque membre ayant des fonctions différentes. Nous verrons les différents rôles et stratégies de travail dans [Flux de travail et processus](/fr/docs/Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes), mais pour l'instant, réfléchissez à ce que signifie travailler en équipe&nbsp;:
+Vous devez souvent travailler en équipe avec d'autres développeur·euse·s, chaque membre ayant des fonctions différentes. Nous voyons les différents rôles et stratégies de travail dans [Flux de travail et processus](/fr/docs/Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes), mais pour l'instant, réfléchissez à ce que signifie travailler en équipe&nbsp;:
 
 - Être collectivement responsable du projet — succès comme échecs.
 - Travailler ensemble pour planifier non seulement ce que vous allez faire, mais aussi comment vous allez collaborer pour y parvenir. Quel processus utiliser&nbsp;? Comment mesurer le succès&nbsp;? Combien de temps avez-vous&nbsp;? Quels objectifs doivent être atteints, et quand&nbsp;?

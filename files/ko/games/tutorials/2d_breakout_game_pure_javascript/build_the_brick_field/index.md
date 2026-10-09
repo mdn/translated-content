@@ -109,6 +109,6 @@ drawBricks();
 
 ## 다음 단계
 
-이제 우리에겐 벽돌이 있습니다! 하지만 공은 벽돌들과의 반응이 없습니다. 우리는 다음 단계에서 이 문제에 대해 다룰 것입니다: [충돌 감지](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)
+이제 우리에겐 벽돌이 있습니다! 하지만 공은 벽돌들과의 반응이 없습니다. 우리는 다음 단계에서 이 문제에 대해 다룰 것입니다: [충돌 감지](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}

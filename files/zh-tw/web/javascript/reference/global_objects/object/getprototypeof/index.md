@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 
 ## 表達式
 
-```plain
+```js-nolint
 Object.getPrototypeOf(obj)
 ```
 

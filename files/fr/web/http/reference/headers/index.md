@@ -3,7 +3,7 @@ title: En-têtes HTTP
 short-title: En-têtes
 slug: Web/HTTP/Reference/Headers
 l10n:
-  sourceCommit: 366bcbeeeb196a0bc34eaa4e6cdbf244c4ee8354
+  sourceCommit: 346e46c6e10334bf60df2a0a4ef58ebea4c80a4e
 ---
 
 Les **en-têtes HTTP** permettent au client et au serveur de transmettre des informations supplémentaires avec un message dans une requête ou une réponse.
@@ -11,8 +11,8 @@ En HTTP/1.X, un en-tête est un nom insensible à la casse suivi d'un deux-point
 En HTTP/2 et versions ultérieures, les en-têtes sont affichés en minuscules dans les outils de développement (`accept: */*`), et précédés d'un deux-points pour un groupe spécial de [pseudo-en-têtes](/fr/docs/Web/HTTP/Guides/Messages#pseudo-en-têtes) (`:status: 200`).
 Vous trouvez plus d'informations sur la syntaxe dans chaque version du protocole sur la page [Messages HTTP](/fr/docs/Web/HTTP/Guides/Messages).
 
-Des en-têtes propriétaires personnalisés ont historiquement été utilisés avec le préfixe `X-`, mais cette convention a été dépréciée en 2012 en raison des inconvénients qu'elle a causés lorsque des champs non standard sont devenus standard dans la [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648)&nbsp;; d'autres sont listés dans le [registre IANA des noms de champs HTTP <sup>(angl.)</up>](https://www.iana.org/assignments/http-fields/http-fields.xhtml), dont le contenu original a été défini dans la [RFC 4229 <sup>(angl.)</up>](https://datatracker.ietf.org/doc/html/rfc4229).
-Le registre IANA répertorie les en-têtes, y compris [des informations sur leur statut <sup>(angl.)</up>](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status).
+Des en-têtes propriétaires personnalisés ont historiquement été utilisés avec le préfixe `X-`, mais cette convention a été dépréciée en 2012 en raison des inconvénients qu'elle a causés lorsque des champs non standard sont devenus standard dans la [RFC 6648 <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/rfc6648)&nbsp;; d'autres sont listés dans le [registre IANA des noms de champs HTTP <sup>(angl.)</sup>](https://www.iana.org/assignments/http-fields), dont le contenu original a été défini dans la [RFC 4229 <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/rfc4229).
+Le registre IANA répertorie les en-têtes, y compris [des informations sur leur statut <sup>(angl.)</sup>](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status).
 
 Les en-têtes peuvent être groupés selon leur contexte&nbsp;:
 
@@ -94,6 +94,8 @@ Pour plus d'informations à ce sujet, voir [l'article sur la négociation de con
   - : L'en-tête de réponse de _négociation de contenu de requête_ qui indique quels [types de média](/fr/docs/Web/HTTP/Guides/MIME_types) le serveur est capable de comprendre dans une requête {{HTTPMethod("PATCH")}}.
 - {{HTTPHeader("Accept-Post")}}
   - : L'en-tête de réponse de _négociation de contenu de requête_ qui indique quels [types de média](/fr/docs/Web/HTTP/Guides/MIME_types) le serveur est capable de comprendre dans une requête {{HTTPMethod("POST")}}.
+- {{HTTPHeader("Accept-Query")}}
+  - : L'en-tête de réponse de _négociation de contenu de requête_ qui indique quels [types de média](/fr/docs/Web/HTTP/Guides/MIME_types) le serveur est capable de comprendre dans une requête {{HTTPMethod("QUERY")}}.
 
 ## Contrôles
 
@@ -175,11 +177,11 @@ Pour plus d'informations, voir [la documentation CORS](/fr/docs/Web/HTTP/Guides/
 
 ## Signatures de message
 
-- {{HTTPHeader("Accept-Signature")}}
-  - : L'en-tête de requête [`Accept-Signature` <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc9421/#section-5.1) demande une réponse signée ou une requête ultérieure, en spécifiant les composants à signer et les paramètres de signature.
-- {{HTTPHeader("Signature")}}
+- `Accept-Signature`
+  - : L'en-tête de requête [`Accept-Signature` <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc9421/#section-5.1) demande une réponse signée ou une requête ultérieure, en définissant les composants à signer et les paramètres de signature.
+- `Signature`
   - : L'en-tête [`Signature` <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc9421/#section-4.2) contient une ou plusieurs valeurs de signature étiquetées. Chaque étiquette correspond à une entrée dans `Signature-Input`.
-- {{HTTPHeader("Signature-Input")}}
+- `Signature-Input`
   - : L'en-tête [`Signature-Input` <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc9421/#section-4.1) identifie la liste ordonnée des composants du message couverts par chaque signature et ses métadonnées, telles que l'heure de création et l'identifiant de clé.
 
 > [!NOTE]
@@ -296,7 +298,7 @@ Les en-têtes de requêtes qui suivent ne sont pas à strictement parler des en-
 - {{HTTPHeader("Sec-Purpose")}}
   - : Indique le but de la requête lorsque celui-ci n'est pas une utilisation immédiate par l'agent utilisateur. Cet en-tête prend actuellement une seule valeur possible&nbsp;: `prefetch`, qui indique que la ressource est récupérée de façon préventive, pour préparer une éventuelle navigation future vers celle-ci.
 - {{HTTPHeader("Service-Worker-Navigation-Preload")}}
-  - : Un en-tête de requête envoyé de façon préventive pour récupérer (via {{DOMxRef("Window/fetch", "fetch()")}}) une ressource au démarrage d'un <i lang="en">service worker</i>. La valeur, définie via {{DOMxRef("NavigationPreloadManager.setHeaderValue()")}}, peut être utilisée afin d'informer un serveur qu'une ressource différente (que celle fournie pour une opération `fetch()` normale) doit être renvoyée.
+  - : Un en-tête de requête envoyé de façon préventive pour récupérer (avec {{DOMxRef("Window/fetch", "fetch()")}}) une ressource au démarrage d'un <i lang="en">service worker</i>. La valeur, définie par {{DOMxRef("NavigationPreloadManager.setHeaderValue()")}}, peut être utilisée afin d'informer un serveur qu'une ressource différente (que celle fournie pour une opération `fetch()` normale) doit être retourné.
 
 ## En-têtes d'accès au stockage lors du fetch
 
@@ -531,7 +533,7 @@ Voir la documentation de [l'API Topics](/fr/docs/Web/API/Topics_API) pour plus d
 - {{HTTPHeader("X-Forwarded-Proto")}} {{Non-standard_Inline}}
   - : Identifie le protocole (HTTP ou HTTPS) utilisé par le client pour se connecter à l'intermédiaire (<i lang="en">proxy</i> ou un <i lang="en">load balancer</i>).
 - {{HTTPHeader("X-DNS-Prefetch-Control")}} {{Non-standard_Inline}}
-  - : Contrôle la récupération proactive du DNS, utilisée par les navigateurs pour résoudre en avance les noms de domaine que la personne peut atteindre avec les liens, images, fichiers CSS ou JavaScript, etc.
+  - : Contrôle la récupération anticipée des DNS, une fonctionnalité grâce à laquelle les navigateurs effectuent de manière proactive la résolution des noms de domaine, tant pour les liens et URL que l'utilisateur·ice peut choisir de suivre que pour les éléments référencés par le document, notamment les images, les feuilles de style CSS, les scripts JavaScript, etc.
 - {{HTTPHeader("X-Robots-Tag")}} {{Non-standard_Inline}}
   - : L'en-tête HTTP [`X-Robots-Tag`](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag?hl=fr) indique comment une page web doit être indexée par les moteurs de recherche public. En pratique, cet en-tête est équivalent à [`<meta name="robots" content="…">`](/fr/docs/Web/HTML/Reference/Elements/meta/name/robots).
 
@@ -545,5 +547,5 @@ Voir la documentation de [l'API Topics](/fr/docs/Web/API/Topics_API) pour plus d
 ## Voir aussi
 
 - [Page Wikipédia sur la liste des en-têtes HTTP <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
-- [Registre des en-têtes par l'IANA <sup>(angl.)</sup>](https://www.iana.org/assignments/http-fields/http-fields.xhtml)
+- [Registre des en-têtes par l'IANA <sup>(angl.)</sup>](https://www.iana.org/assignments/http-fields)
 - [Groupe de travail HTTP <sup>(angl.)</sup>](https://httpwg.org/specs/)

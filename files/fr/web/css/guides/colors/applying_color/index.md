@@ -3,7 +3,7 @@ title: Appliquer des couleurs aux éléments HTML avec CSS
 short-title: Appliquer des couleurs
 slug: Web/CSS/Guides/Colors/Applying_color
 l10n:
-  sourceCommit: a516a9818e8cef06c626d436ee1d73fc6d87ec51
+  sourceCommit: 13d38933aaeea619fe441656e9d8e1bec263331b
 ---
 
 Avec [CSS](/fr/docs/Web/CSS), il existe de nombreuses façons d'ajouter de la couleur à vos [éléments](/fr/docs/Web/HTML/Reference/Elements) [HTML](/fr/docs/Web/HTML) afin d'obtenir l'apparence souhaitée. Ce guide est une introduction à l'utilisation de CSS pour appliquer des couleurs aux éléments HTML. Il inclut [des listes des propriétés CSS qui définissent une couleur dans leurs valeurs](#propriétés_qui_peuvent_avoir_une_couleur) et explique comment utiliser les couleurs [dans les feuilles de style](#spécification_des_couleurs_dans_les_feuilles_de_style) et [d'autres façons](#autres_facons_dutiliser_la_couleur).

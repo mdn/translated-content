@@ -31,7 +31,7 @@ console.log(regex2.dotAll);
 - U+2028 LINE SEPARATOR
 - U+2029 PARAGRAPH SEPARATOR
 
-これは事実上、ドットが任意の UTF-16 コード単位に一致することを意味します。ただし、 Unicode 基本多言語面 (BMP) 外にある文字、いわゆるアストラル文字（アストラル文字は[サロゲートペア](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)で表され、 1 つではなく 2 つの `.` パターンでの一致が必要となります。
+これは事実上、ドットが任意の UTF-16 コード単位に一致することを意味します。ただし、 Unicode 基本多言語面 (BMP) 外にある文字、いわゆるアストラル文字には一致しません。アストラル文字は[サロゲートペア](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)で表されるため、 1 つではなく 2 つの `.` パターンで一致させる必要があります。
 
 ```js
 "😄".match(/(.)(.)/s);

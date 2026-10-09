@@ -1,19 +1,25 @@
 ---
 title: "SyntaxError: missing formal parameter"
 slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
+JavaScript の例外 "missing formal parameter" は、関数宣言時に有効な引数が欠けている場合に発生します。
 
-```js
+## エラーメッセージ
+
+```plain
 SyntaxError: missing formal parameter (Firefox)
+SyntaxError: Unexpected number '3'. Expected a parameter pattern or a ')' in parameter list. (Safari)
+SyntaxError: Unexpected string literal "x". Expected a parameter pattern or a ')' in parameter list. (Safari)
 ```
 
-## エラータイプ
+## エラー型
 
 {{jsxref("SyntaxError")}}
 
-## 何がうまくいかなかったのか？
+## エラーの原因
 
 "Formal parameter" とは「関数の引数」のことです。関数宣言で、有効な引数を忘れています。関数定義において、引数は[識別子](/ja/docs/Glossary/Identifier)でなければならず、数字や文字列、オブジェクトのような値であってはいけません。関数の宣言と関数の呼び出しは、異なる 2 つのステップです。宣言時には引数として識別子が求められ、関数を呼び出すときだけ、関数が使用する値を提供します。
 
@@ -25,20 +31,20 @@ SyntaxError: missing formal parameter (Firefox)
 
 関数を定義するとき、関数の引数は識別子でなければなりません。引数として値を提供しているため、これらの関数宣言はすべて失敗します。
 
-```js example-bad
+```js-nolint example-bad
 function square(3) {
   return number * number;
-};
+}
 // SyntaxError: missing formal parameter
 
 function greet("Howdy") {
   return greeting;
-};
+}
 // SyntaxError: missing formal parameter
 
 function log({ obj: "value"}) {
   console.log(arg)
-};
+}
 // SyntaxError: missing formal parameter
 ```
 
@@ -65,11 +71,9 @@ square(2); // 4
 
 greet("Howdy"); // "Howdy"
 
-log({ obj: "value" }); // Object { obj: "value" }
+log({ obj: "value" }); // { obj: "value" }
 ```
 
 ## 関連情報
 
-- 形式的な引数に関係するその他のエラー:
-  - [SyntaxError: Malformed formal parameter](/ja/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter)
-  - [SyntaxError: redeclaration of formal parameter "x"](/ja/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter)
+- [SyntaxError: redeclaration of formal parameter "x"](/ja/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter)

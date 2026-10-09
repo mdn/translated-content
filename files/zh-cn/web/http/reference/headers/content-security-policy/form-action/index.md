@@ -17,7 +17,7 @@ HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) 的 **`form-action`** 指�
 
 `form-action` 策略允许设定一个或多个源：
 
-```plain
+```http
 Content-Security-Policy: form-action <source>;
 Content-Security-Policy: form-action <source> <source>;
 ```

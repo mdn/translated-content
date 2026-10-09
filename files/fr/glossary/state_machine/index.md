@@ -7,14 +7,14 @@ l10n:
 
 Une machine d'état est une abstraction mathématique utilisée pour concevoir des algorithmes. Une machine d'état lit un ensemble d'entrées et passe à un état différent en fonction de ces entrées.
 
-Un état est une description de l'état d'un système en attente d'exécution d'une transition. Une transition est un ensemble d'actions à exécuter lorsqu'une condition est remplie ou qu'un événement est reçu. Dans un diagramme d'état, les cercles représentent chaque état possible et les flèches représentent les transitions entre les états.
+Un état est une description de l'état d'un système en attente d'exécution d'une transition. Une transition est un ensemble d'actions à exécuter lorsqu'une condition est remplie ou qu'un évènement est reçu. Dans un diagramme d'état, les cercles représentent chaque état possible et les flèches représentent les transitions entre les états.
 
 En regardant l'état final, vous pouvez discerner quelque chose sur la série d'entrées menant à cet état.
 
 Il existe deux types de machines d'état de base&nbsp;:
 
 - machine déterministe à états finis
-  - : Ce type ne permet qu'une seule transition possible pour toute entrée autorisée. C'est comme l'{{Glossary("Statement", "état")}} du «&nbsp;if&nbsp;» dans `if x == true then doThis else doThat`. L'ordinateur doit exécuter l'_une_ des deux options.
+  - : Ce type ne permet qu'une seule transition possible pour toute entrée autorisée. C'est comme {{Glossary("Statement", "l'état")}} du «&nbsp;if&nbsp;» dans `if x == true then doThis else doThat`. L'ordinateur doit exécuter _l'une_ des deux options.
 - machine non déterministe à états finis
   - : Étant donné un état, une entrée peut conduire à plus d'un état différent.
 

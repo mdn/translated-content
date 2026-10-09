@@ -41,7 +41,7 @@ console.log(sanitize("NotANumber"));
 - 数値への変換に失敗した（`parseInt("blabla")` や `Number(undefined)` 等の明示的なもの、`Math.abs(undefined)` のような暗黙的なもの）
 - 結果が実数値にならない算術演算（`Math.sqrt(-1)` など）
 - 不確定形（`0 * Infinity`、`1 ** Infinity`、`Infinity / Infinity`、`Infinity - Infinity`、など）
-- オペランドが `NaN` である、または `NaN` を取得するメソッドや式（`7 ** NaN`、`7 * "blabla"` など。このことは `NaN` が伝染性を持つことを意味します。
+- オペランドが `NaN` である、または `NaN` を取得するメソッドや式（`7 ** NaN`、`7 * "blabla"` など）。このことは `NaN` が伝染性を持つことを意味します。
 - 不正な値を数値として表す必要があるその他の場合（不正な [Date](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) である `new Date("blabla").getTime()`、`"".charCodeAt(1)` など）
 
 `NaN` とその挙動は JavaScript が発明したものではありません。浮動小数点演算におけるその意味づけ（`NaN !== NaN` を含む）は [IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) によって指定されています。`NaN` の挙動には以下が含まれます。

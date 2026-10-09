@@ -33,7 +33,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 - `hidden`
   - : `boolean`. タブが隠されている(非表示)かどうか。
 - `highlighted`
-  - : `boolean`. タブがハイライトされているかどうかどうか。 An active tab is always highlighted, but some browsers may allow additional tabs to be highlighted, for example by clicking them while holding <kbd>Ctrl</kbd> or <kbd>⌘ Command</kbd> keys.
+  - : `boolean`. タブがハイライトされているかどうか。 An active tab is always highlighted, but some browsers may allow additional tabs to be highlighted, for example by clicking them while holding <kbd>Ctrl</kbd> or <kbd>⌘ Command</kbd> keys.
 
     Firefox for Android doesn't support highlighting multiple tabs, and Firefox desktop requires the `browser.tabs.multiselect` preference.
 

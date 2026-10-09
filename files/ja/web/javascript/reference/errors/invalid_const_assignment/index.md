@@ -1,22 +1,21 @@
 ---
 title: 'TypeError: invalid assignment to const "x"'
 slug: Web/JavaScript/Reference/Errors/Invalid_const_assignment
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Errors")}}
 
 JavaScript の例外 "invalid assignment to const" は、定数を変更しようとしたときに発生します。 JavaScript の [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const) で宣言すると、再代入や再宣言を行うことができません。
 
 ## エラーメッセージ
 
-```js
-TypeError: invalid assignment to const "x" (Firefox)
-TypeError: Assignment to constant variable. (Chrome)
-TypeError: Assignment to const (Edge)
-TypeError: Redeclaration of const 'x' (IE)
+```plain
+TypeError: Assignment to constant variable. (V8-based)
+TypeError: invalid assignment to const 'x' (Firefox)
+TypeError: Attempted to assign to readonly property. (Safari)
 ```
 
-## エラータイプ
+## エラー型
 
 {{jsxref("TypeError")}}
 
@@ -33,7 +32,7 @@ TypeError: Redeclaration of const 'x' (IE)
 ```js example-bad
 const COLUMNS = 80;
 
-// ...
+// …
 
 COLUMNS = 120; // TypeError: invalid assignment to const `COLUMNS'
 ```
@@ -51,16 +50,16 @@ const COLUMNS = 80;
 const WIDE_COLUMNS = 120;
 ```
 
-#### `const`、`let`、`var`
+#### const、let、var
 
 定数を宣言するつもりがなかったのであれば、 const を使用しないでください。ブロックスコープの変数であれば [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) で、グローバルスコープの変数であれば [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) で宣言してください。
 
 ```js example-good
 let columns = 80;
 
-// ...
+// …
 
-let columns = 120;
+columns = 120;
 ```
 
 #### スコープ
@@ -75,7 +74,7 @@ function setupBigScreenEnvironment() {
 }
 ```
 
-### `const` と不変性
+### const と不変性
 
 `const` 宣言は、値への読み取り専用の参照を作成します。それが保持している値が不変であることを意味するものでは**なく**、変数識別子に再代入できないだけです。たとえば、コンテンツがオブジェクトである場合、オブジェクト自体はまだ変更可能であることを意味します。 つまり、変数に格納されている値を変更することはできないということです。
 
@@ -88,7 +87,7 @@ obj = { foo: "baz" }; // TypeError: invalid assignment to const `obj'
 
 ```js example-good
 obj.foo = "baz";
-obj; // Object { foo: "baz" }
+obj; // { foo: "baz" }
 ```
 
 ## 関連情報

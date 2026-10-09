@@ -35,7 +35,7 @@ filter: grayscale(1);
 
 ## 语法
 
-```plain
+```css
 grayscale(amount)
 ```
 

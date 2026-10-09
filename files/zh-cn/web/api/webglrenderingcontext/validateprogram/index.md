@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/validateProgram
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.validateProgram(program);
 ```
 

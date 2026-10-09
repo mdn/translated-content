@@ -2,7 +2,7 @@
 title: Falsification de requête inter-sites (CSRF)
 slug: Web/Security/Attacks/CSRF
 l10n:
-  sourceCommit: 75016e5d37ecff3b11de4c2ef6665178f654797e
+  sourceCommit: dd70ed064388b0fac4338321f727c8840a508b64
 ---
 
 Dans une attaque de falsification de requête inter-sites (<i lang="en">cross-site request forgery</i>, CSRF), un·e attaquant·e amène l'utilisateur·ice ou le navigateur à émettre une requête HTTP vers le site visé depuis un site malveillant. La requête inclut les informations d'identification de l'utilisateur·ice et amène le serveur à exécuter une action nuisible, pensant que l'utilisateur·ice l'a voulue.
@@ -72,9 +72,9 @@ Pour les envois de formulaire, le jeton CSRF est généralement inclus dans un c
 
 Pour une API JavaScript comme `fetch()`, le jeton peut être placé dans un cookie ou intégré à la page, puis JavaScript extrait la valeur et l'envoie dans un en‑tête supplémentaire.
 
-Les frameworks web modernes proposent généralement une prise en charge intégrée des jetons CSRF&nbsp;: par exemple, [Django <sup>(angl.)</sup>](https://www.djangoproject.com/) permet de protéger les formulaires à l'aide de la balise [`csrf_token` <sup>(angl.)</sup>](https://docs.djangoproject.com/en/5.1/ref/csrf/). Cette balise génère un champ de formulaire caché supplémentaire contenant le jeton, que le framework vérifie ensuite côté serveur.
+Les cadriciels web modernes proposent généralement une prise en charge intégrée des jetons CSRF&nbsp;: par exemple, [Django <sup>(angl.)</sup>](https://www.djangoproject.com/) permet de protéger les formulaires à l'aide de la balise [`csrf_token` <sup>(angl.)</sup>](https://docs.djangoproject.com/en/stable/ref/csrf/). Cette balise génère un champ de formulaire caché supplémentaire contenant le jeton, que le cadriciel vérifie ensuite côté serveur.
 
-Pour tirer parti de cette protection, vous devez comprendre tous les endroits de votre site où vous utilisez des requêtes HTTP modifiant l'état et vous assurer d'utiliser la défense fournie par votre framework choisi.
+Pour tirer parti de cette protection, vous devez comprendre tous les endroits de votre site où vous utilisez des requêtes HTTP modifiant l'état et vous assurer d'utiliser la défense fournie par votre cadriciel choisi.
 
 ### Métadonnées Fetch
 
@@ -97,11 +97,11 @@ app.post("/transfer", (req, res) => {
 });
 ```
 
-Voir {{Glossary("Fetch metadata request header", "l'en-tête de requête de métadonnées Fetch")}} pour la liste complète des en‑têtes de métadonnées <i lang="en">Fetch</i>, et [<i lang="en">Fetch Metadata</i>](/fr/docs/Web/HTTP/Guides/Fetch_metadata) pour un guide d'utilisation.
+Voir {{Glossary("Fetch metadata request header", "l'en-tête de métadonnées de requête de récupération")}} pour la liste complète des en‑têtes de métadonnées <i lang="en">Fetch</i>, et [les métadonnées de récupération](/fr/docs/Web/HTTP/Guides/Fetch_metadata) pour un guide d'utilisation.
 
 ### Éviter les requêtes simples
 
-Les navigateurs distinguent deux types de requêtes HTTP&nbsp;: les [_requêtes simples_](/fr/docs/Web/HTTP/Guides/CORS#simple_requests) et les autres.
+Les navigateurs distinguent deux types de requêtes HTTP&nbsp;: les [_requêtes simples_](/fr/docs/Web/HTTP/Guides/CORS#requêtes_simples) et les autres.
 
 Les requêtes simples, qui sont le type de requête émise par l'envoi d'un élément `<form>`, peuvent être effectuées inter-sites sans être bloquées. Puisque les formulaires peuvent émettre des requêtes inter-sites depuis les débuts du web, il est important pour la compatibilité qu'ils puissent toujours le faire. C'est pourquoi nous devons implémenter d'autres stratégies pour protéger les formulaires contre CSRF, comme l'utilisation d'un jeton CSRF.
 
@@ -162,7 +162,7 @@ La valeur `Lax` assouplit cette restriction&nbsp;: les cookies sont inclus dans 
 Cependant, `Lax` offre une protection nettement plus faible que `Strict`&nbsp;:
 
 - Un·e attaquant·e peut déclencher une navigation de premier niveau. Par exemple, au début de cet article, nous montrons une attaque CSRF où l'attaquant·e envoie un formulaire vers la cible&nbsp;: c'est considéré comme une navigation de premier niveau. Si le formulaire était envoyé avec `GET`, alors la requête inclut tout de même des cookies avec `SameSite=Lax`.
-- Même si le serveur vérifie que la requête n'a pas été envoyée avec `GET`, certains frameworks web prennent en charge la «&nbsp;surcharge de méthode&nbsp;» (<i lang="en">method override</i>)&nbsp;: cela permet à un·e attaquant·e d'envoyer une requête avec `GET` tout en la faisant apparaître côté serveur comme si elle utilisait `POST`.
+- Même si le serveur vérifie que la requête n'a pas été envoyée avec `GET`, certains cadriciels web prennent en charge la «&nbsp;surcharge de méthode&nbsp;» (<i lang="en">method override</i>)&nbsp;: cela permet à un·e attaquant·e d'envoyer une requête avec `GET` tout en la faisant apparaître côté serveur comme si elle utilisait `POST`.
 
 De façon générale, vous devez essayer d'utiliser `Strict` pour certains cookies et `Lax` pour d'autres&nbsp;:
 
@@ -179,7 +179,7 @@ Nous pouvons résumer les défenses ci‑dessus ainsi&nbsp;:
 
 - Comprendre où, dans votre site, vous implémentez des requêtes modifiant l'état qui utilisent des cookies de session pour déterminer quel·le utilisateur·ice a émis la requête.
 - Mettre en œuvre au moins une des défenses principales décrites dans ce document&nbsp;:
-  - Si vous utilisez des éléments `<form>` pour émettre ces requêtes, assurez‑vous d'utiliser un framework qui prend en charge les jetons CSRF et utilisez‑le.
+  - Si vous utilisez des éléments `<form>` pour émettre ces requêtes, assurez‑vous d'utiliser un cadriciel qui prend en charge les jetons CSRF et utilisez‑le.
   - Si vous utilisez des API JavaScript comme `fetch()` ou `XMLHttpRequest` pour émettre des requêtes modifiant l'état, assurez‑vous qu'elles ne soient pas des requêtes simples.
   - Quel que soit le mécanisme utilisé pour émettre les requêtes, envisagez d'utiliser les métadonnées Fetch pour interdire les requêtes inter-sites.
 - Éviter d'utiliser la méthode `GET` pour émettre des requêtes modifiant l'état.

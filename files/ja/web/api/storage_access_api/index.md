@@ -2,7 +2,7 @@
 title: ストレージアクセス API
 slug: Web/API/Storage_Access_API
 l10n:
-  sourceCommit: 1296e665fd82a80bb17123725dcbf1f08b89ab4e
+  sourceCommit: f4c14731a1a157fc8d8f7357ac4d74d14a7d7fb5
 ---
 
 {{DefaultAPISidebar("Storage Access API")}}{{securecontext_header}}

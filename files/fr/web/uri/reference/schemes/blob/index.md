@@ -3,7 +3,7 @@ title: URLs d'objets
 short-title: "blob:"
 slug: Web/URI/Reference/Schemes/blob
 l10n:
-  sourceCommit: ca1647a3e2b77cdf9df220244998f25b86629048
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 Les **URLs d'objets (ou blob)**, c'est-à-dire les URLs préfixées par le schéma `blob:`, permettent d'intégrer des objets {{DOMxRef("Blob")}} et {{DOMxRef("MediaSource")}} avec d'autres API conçues uniquement pour être utilisées avec des URLs, comme l'élément HTML {{HTMLElement("img")}}. Les URLs blob peuvent aussi être utilisées pour naviguer ou déclencher le téléchargement de données générées localement. Elles sont conçues comme des identifiants opaques (c'est-à-dire qu'il ne faut pas les écrire à la main) et doivent être gérées avec les fonctions {{DOMxRef("URL.createObjectURL_static", "URL.createObjectURL()")}} et {{DOMxRef("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}}.
@@ -19,7 +19,7 @@ blob:<origin>/<uuid>
 - `blob:`
   - : Le schéma de l'URL.
 - `<origin>`
-  - : L'[origine](/fr/docs/Web/API/URL/origin) du créateur de cette URL. Si l'origine du créateur est opaque, cette partie est définie par l'implémentation.
+  - : [L'origine](/fr/docs/Web/API/URL/origin) du créateur de cette URL. Si l'origine du créateur est opaque, cette partie est définie par l'implémentation.
 - `<uuid>`
   - : Un {{Glossary("UUID")}}.
 
@@ -42,11 +42,11 @@ img.addEventListener("load", () => {
 document.body.appendChild(img);
 ```
 
-Révoquer l'URL blob immédiatement après l'affichage de l'image la rendrait inutilisable pour les interactions utilisateur·ice·s (clic droit pour enregistrer l'image, ouverture dans un nouvel onglet, etc.). Pour les applications de longue durée, il faut révoquer les URLs d'objet uniquement lorsque la ressource n'est plus accessible par l'utilisateur·ice (par exemple, lorsque l'image est retirée du DOM).
+Révoquer l'URL blob immédiatement après l'affichage de l'image la rend inutilisable pour les interactions utilisateur·ice·s (clic droit pour enregistrer l'image, ouverture dans un nouvel onglet, etc.). Pour les applications de longue durée, il faut révoquer les URLs d'objet uniquement lorsque la ressource n'est plus accessible par l'utilisateur·ice (par exemple, lorsque l'image est retirée du DOM).
 
 ### Partitionnement du stockage
 
-L'accès aux ressources via des URLs blob est soumis aux mêmes restrictions que les autres mécanismes de stockage, c'est-à-dire le [partitionnement d'état](/fr/docs/Web/Privacy/Guides/State_Partitioning). Les URLs blob ont une origine de créateur associée (stockée dans l'URL elle-même) et ne peuvent être récupérées que depuis des environnements où la clé de stockage correspond à celle de l'environnement créateur. Les _navigations_ vers une URL blob ne sont pas soumises à cette restriction, bien que les navigateurs puissent appliquer des mesures de confidentialité comme [`noopener`](/fr/docs/Web/HTML/Reference/Attributes/rel/noopener) pour les navigations inter-sites vers une URL blob.
+L'accès aux ressources par des URLs blob est soumis aux mêmes restrictions que les autres mécanismes de stockage, c'est-à-dire le [partitionnement d'état](/fr/docs/Web/Privacy/Guides/State_Partitioning). Les URLs blob ont une origine de créateur associée (stockée dans l'URL elle-même) et ne peuvent être récupérées que depuis des environnements où la clé de stockage correspond à celle de l'environnement créateur. Les _navigations_ vers une URL blob ne sont pas soumises à cette restriction, bien que les navigateurs puissent appliquer des mesures de confidentialité comme [`noopener`](/fr/docs/Web/HTML/Reference/Attributes/rel/noopener) pour les navigations inter-sites vers une URL blob.
 
 ### Utilisation des URLs d'objet pour les flux média
 
@@ -94,4 +94,4 @@ canvas.toBlob((blob) => {
 - [Utiliser des URLs d'objet pour afficher des images](/fr/docs/Web/API/File_API/Using_files_from_web_applications#utiliser_des_url_dobjets_pour_afficher_des_images)
 - La méthode API {{DOMxRef("URL.createObjectURL_static", "URL.createObjectURL()")}}
 - La méthode API {{DOMxRef("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}}
-- [Liste IANA des schémas URI <sup>(angl.)</sup>](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
+- [Liste IANA des schémas URI <sup>(angl.)</sup>](https://www.iana.org/assignments/uri-schemes)
