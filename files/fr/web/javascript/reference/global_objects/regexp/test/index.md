@@ -1,105 +1,123 @@
 ---
-title: RegExp.prototype.test()
+title: "RegExp : méthode test()"
+short-title: test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-La méthode **`test()`** vérifie s'il y a une correspondance entre un texte et une expression rationnelle. Elle retourne `true` en cas de succès et `false` dans le cas contraire.
+La méthode **`test()`** des instances de {{JSxRef("RegExp")}} exécute une recherche avec cette expression rationnelle pour trouver une correspondance entre l'expression rationnelle et une chaîne de caractères définie. Elle retourne `true` s'il y a une correspondance&nbsp;; `false` dans le cas contraire.
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.test", "taller")}}
+Les objets JavaScript {{JSxRef("RegExp")}} sont **avec état** lorsqu'ils ont les indicateurs {{JSxRef("RegExp/global", "global")}} ou {{JSxRef("RegExp/sticky", "sticky")}} définis (par exemple, `/toto/g` ou `/toto/y`). Ils stockent un {{JSxRef("RegExp/lastIndex", "lastIndex")}} à partir de la correspondance précédente. En utilisant cela en interne, `test()` peut être utilisé pour itérer sur plusieurs correspondances dans une chaîne de caractères de texte (avec des groupes de capture).
+
+{{InteractiveExample("Démonstration JavaScript&nbsp;: RegExp.prototype.test()", "taller")}}
 
 ```js interactive-example
-const str = "table football";
+const str = "table tototball";
 
-const regex = new RegExp("foo*");
-const globalRegex = new RegExp("foo*", "g");
+const regex = /fo+/;
+const globalRegex = /fo+/g;
 
 console.log(regex.test(str));
-// Expected output: true
+// Résultat attendu : true
 
 console.log(globalRegex.lastIndex);
-// Expected output: 0
+// Résultat attendu : 0
 
 console.log(globalRegex.test(str));
-// Expected output: true
+// Résultat attendu : true
 
 console.log(globalRegex.lastIndex);
-// Expected output: 9
+// Résultat attendu : 9
 
 console.log(globalRegex.test(str));
-// Expected output: false
+// Résultat attendu : false
 ```
 
 ## Syntaxe
 
-```js
-regexObj.test(chaîne);
+```js-nolint
+test(str)
 ```
 
 ### Paramètres
 
-- `chaîne`
-  - : La chaîne de caractères qu'on souhaite comparer à l'expression rationnelle.
+- `str`
+  - : La chaîne de caractères contre laquelle comparer l'expression rationnelle. Toutes les valeurs sont [converties en chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#conversion_en_chaîne_de_caractères), donc l'omission de ce paramètre ou le passage de `undefined` entraîne la recherche de la chaîne de caractères `"undefined"` par `test()`, ce qui est rarement souhaité.
 
 ### Valeur de retour
 
-Un booléen : `true` ou `false` selon qu'une correspondance a été trouvée entre la chaîne de caractères et la chaîne passée en argument.
+`true` si une correspondance est trouvée entre l'expression rationnelle et la chaîne de caractères `str`. Sinon, `false`.
 
 ## Description
 
-On utilisera `test()` dès qu'on souhaite savoir si une partie d'une chaîne de caractères correspond à une expression rationnelle (similaire à la méthode {{jsxref("String.prototype.search()")}}). Pour obtenir plus d'informations (mais une exécution moins rapide), on utilisera la méthode {{jsxref("RegExp.prototype.exec()", "exec()")}} (similaire à la méthode {{jsxref("String.prototype.match()")}}). Comme avec {{jsxref("RegExp.prototype.exec()", "exec()")}} (et même en combinant les deux), des appels successifs à `test()` sur une même instance d'une expression rationnelle permettent de rechercher après la dernière occurence. Cette méthode est différente de `search` car elle renvoie un booléen et non la position de la correspondance si elle est trouvée (ou `-1` sinon).
+Utilisez `test()` chaque fois que vous voulez savoir si un motif est trouvé dans une chaîne de caractères. `test()` retourne un booléen, contrairement à la méthode {{JSxRef("String.prototype.search()")}} (qui retourne l'index d'une correspondance, ou `-1` si aucune correspondance n'est trouvée).
+
+Pour obtenir plus d'informations (mais avec une exécution plus lente), utilisez la méthode {{JSxRef("RegExp/exec", "exec()")}}. (Ceci est similaire à la méthode {{JSxRef("String.prototype.match()")}}.)
+
+Comme avec `exec()` (ou en combinaison avec elle), des appels successifs à `test()` sur une même instance d'une expression rationnelle globale permettent de rechercher après la dernière correspondance.
 
 ## Exemples
 
 ### Utiliser `test()`
 
-Voici un exemple simple qui illustre comment détecter si la chaîne `coucou` est contenue au début d'une chaîne :
+Cet exemple teste si `"bonjour"` est contenu au tout début d'une chaîne de caractères, renvoyant un résultat booléen.
 
 ```js
-const chaine = "coucou le monde !";
-const resultat = /^coucou/.test(chaine);
+const chaine = "bonjour le monde !";
+const resultat = /^bonjour/.test(chaine);
+
 console.log(resultat); // true
 ```
 
-L'exemple ci-dessous affiche un message qui dépend du succès du test :
+L'exemple suivant affiche un message qui dépend du succès du test&nbsp;:
 
 ```js
-function testinput(regex, chaine) {
-  var midstring;
-  if (regex.test(chaine)) {
-    midstring = " contient ";
-  } else {
-    midstring = " ne contient pas ";
-  }
-  console.log(str + midstring + re.source);
+function testerEntree(re, chaine) {
+  const moitieChaine = re.test(chaine) ? "contient" : "ne contient pas";
+  console.log(`${chaine} ${moitieChaine} ${re.source}`);
 }
-
-testinput(/^coucou/, "coucou le monde"); // coucou le monde contient coucou
-testinput(/^coucou/, "salut le monde"); // salut le monde ne contient pas coucou
 ```
 
-### Utiliser `test()` avec le marqueur global (`/g`)
+### Utiliser `test()` avec une expression rationnelle ayant l'indicateur « global »
 
-Si l'expression rationnelle utilise le marqueur global (`g`), la méthode `test()` avancera la propriété {{jsxref("RegExp.lastIndex", "lastIndex")}} associée à l'expression rationnelle. Ainsi, si on utilise `test()` ensuite, la recherche commencera à partir de la nouvelle valeur de `lastIndex` (de même {{jsxref("RegExp.prototype.exec()","exec()")}} fera également avancer la propriété `lastIndex`). On notera que la propriété `lastIndex` ne sera pas réinitialisée si la recherche est effectuée sur une autre chaîne de caractères.
+Lorsqu'une expression rationnelle a [l'indicateur global](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) de défini, `test()` fait avancer la {{JSxRef("RegExp/lastIndex", "lastIndex")}} de l'expression rationnelle. ({{JSxRef("RegExp.prototype.exec()")}} fait également avancer la propriété `lastIndex`.)
+
+Les appels ultérieurs à `test(str)` reprennent la recherche dans `str` à partir de `lastIndex`. La propriété `lastIndex` continuer d'augmenter chaque fois que `test()` retourne `true`.
+
+> [!NOTE]
+> Tant que `test()` retourne `true`, `lastIndex` n'est _pas_ réinitialisé — même lors du test d'une chaîne de caractères différente&nbsp;!
+
+Lorsque `test()` retourne `false`, la propriété `lastIndex` de l'expression rationnelle appelante est réinitialisée à `0`.
+
+L'exemple suivant illustre ce comportement&nbsp;:
 
 ```js
-var regex = /toto/g;
+const regex = /toto/g; // l'indicateur "global" est défini
 
-// regex.lastIndex se situe à 0
+// regex.lastIndex est à 0
 regex.test("toto"); // true
 
-// regex.lastIndex se situe désormais à 4
+// regex.lastIndex est maintenant à 3
 regex.test("toto"); // false
-```
 
-Avec le même mécanisme, on peut utiliser une boucle pour compter le nombre de mots contenus dans une chaîne de caractères
+// regex.lastIndex est à 0
+regex.test("tructoto"); // true
 
-```js
-function compterMots(texte) {
-  for (var regex = /\w+/g, nbMots = 0; regex.test(texte); nbMots++);
-  return nbMots;
-}
+// regex.lastIndex est à 6
+regex.test("tototruc"); // false
 
-console.log(compterMots("Ah que coucou Bob")); // 4
+// regex.lastIndex est à 0
+regex.test("tototructoto"); // true
+
+// regex.lastIndex est à 3
+regex.test("tototructoto"); // true
+
+// regex.lastIndex est à 9
+regex.test("tototructoto"); // false
+
+// regex.lastIndex est à 0
+// (...et ainsi de suite)
 ```
 
 ## Spécifications
@@ -112,5 +130,5 @@ console.log(compterMots("Ah que coucou Bob")); // 4
 
 ## Voir aussi
 
-- Le chapitre sur [les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) du [guide JavaScript](/fr/docs/Web/JavaScript/Guide)
-- {{jsxref("RegExp")}}
+- Le guide [des expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
+- L'objet natif {{JSxRef("RegExp")}}
