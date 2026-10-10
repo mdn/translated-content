@@ -151,7 +151,7 @@ function estInterrompu(interrompu) {
 }
 ```
 
-Lorsque le bouton est cliqué, nous appliquons immédiatement la classe `fade-out` à la barre d'outils, ce qui la fait disparaître en douceur. Nous exécutons ensuite `scroll(0, 1000)` sur la fenêtre pour faire défiler son contenu de 1000 pixels vers le bas, en attendant la résolution de sa promesse tout en stockant le `result` dans une constante. Lorsque la promesse est résolue, nous appelons `isInterrupted()` pour indiquer que l'opération de défilement est terminée et si elle a été interrompue. Enfin, nous appliquons la classe `fade-in` à la barre d'outils, ce qui la fait réapparaître en douceur.
+Lorsque le bouton est cliqué, nous appliquons immédiatement la classe `fade-out` à la barre d'outils, ce qui la fait disparaître en douceur. Nous exécutons ensuite `scroll(0, 1000)` sur la fenêtre pour faire défiler son contenu de 1000 pixels vers le bas, en attendant la résolution de sa promesse tout en stockant le `resultat` dans une constante. Lorsque la promesse est résolue, nous appelons `estInterrompu()` pour indiquer que l'opération de défilement est terminée et si elle a été interrompue. Enfin, nous appliquons la classe `fade-in` à la barre d'outils, ce qui la fait réapparaître en douceur.
 
 ```js
 btnDefilement.addEventListener("click", async () => {
