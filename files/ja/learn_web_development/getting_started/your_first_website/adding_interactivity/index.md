@@ -88,7 +88,7 @@ listItems.forEach((item) => {
 
 ## "Hello world!" の手順を追って説明
 
-JavaScript で記述を始めるにあたって、サンプルウェブサイトに _Hello world!_ の例を追加する手順を順を追って追ってみましょう。（[_Hello world!_](https://ja.wikipedia.org/wiki/Hello_world) は、プログラミング入門の標準例です。）
+JavaScript で記述を始めるにあたって、サンプルウェブサイトに _Hello world!_ の例を追加する手順を、順を追って見ていきましょう。（[_Hello world!_](https://ja.wikipedia.org/wiki/Hello_world) は、プログラミング入門の標準例です。）
 
 > [!WARNING]
 > これまでこのコースに沿って進めてきていない場合は、[このサンプルコードをダウンロードして](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/main)作業を進めてください。
@@ -230,7 +230,7 @@ JavaScript を使用して、見出しのテキストを `Hello world!` に変�
 
 この例を実行してユーザー名を入力するダイアログボックスが出たとき、*キャンセル*ボタンを押してみてください。結果として "null さん、Mozilla はかっこいいよ。" というタイトルが表示されるでしょう。これはプロンプトをキャンセルしたときに、値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) に設定されるためです。JavaScriptでは、_null_ は値が存在しないことを表す特殊な値です。
 
-また、名前を入力せずに _OK_ を押してみてください。結果として " さん、Mozilla はかっこいいよ。" というタイトルが表示されます。これは `myName` を空文字列の設定したからです。
+また、名前を入力せずに _OK_ を押してみてください。結果として " さん、Mozilla はかっこいいよ。" というタイトルが表示されます。これは `myName` を空文字列に設定したからです。
 
 これらの問題を避けるために、ユーザーが名前を空白で入力していないことを調べる条件分岐を追加します。`setUserName()` 関数を次のように更新してください。
 
@@ -256,7 +256,7 @@ function setUserName() {
 
 行き詰まったら、自分の作業を [GitHub 上の完成したサンプルコード](https://github.com/mdn/beginner-html-site-scripted/blob/main/scripts/main.js)と比べてみてください。
 
-この記事では、JavaScript に少し触れただけです。このコースの後半で学ぶコアモジュール [JavaScript による動的スクリプティング](/ja/docs/Learn_web_development/Core/Scripting)」は、さらに多くのことを学べるでしょう。
+この記事では、JavaScript に少し触れただけです。このコースの後半にあるコアモジュール「[JavaScript による動的スクリプティング](/ja/docs/Learn_web_development/Core/Scripting)」で、さらに多くのことを学べます。
 
 ## 関連情報
 
