@@ -14,5 +14,5 @@ _HTTPS RR_ を使用すると、 HTTPS を使用してサービスに接続す�
 
 - {{RFC(9460, "Service Binding and Parameter Specification via the DNS (SVCB and HTTPS Resource Records)")}}
 - [Strict Transport Security vs. HTTPS Resource Records: the showdown](https://emilymstark.com/2020/10/24/strict-transport-security-vs-https-resource-records-the-showdown.html) (Emily M. Stark blog)
-- Related glossary terms:
+- 関連用語:
   - {{glossary("TLS")}}
