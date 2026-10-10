@@ -59,8 +59,8 @@ La méthode {{JSxRef("RegExp/compile", "compile()")}} est dépréciée. Il est r
 
 Les syntaxes regex suivantes sont dépréciées et ne sont disponibles qu'en [mode insensible à Unicode](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#mode_insensible_à_unicode). En mode sensible à Unicode, elles sont toutes des erreurs de syntaxe&nbsp;:
 
-- [Les assertions en avant](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) peuvent avoir des [quantificateurs](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier).
-- [Les références arrière](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) qui ne se réfèrent pas à un groupe capturant existant deviennent des [échappements octaux hérités](#séquences_déchappements).
+- [Les assertions anticipées](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) peuvent avoir des [quantificateurs](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier).
+- [Les rétro-références](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) qui ne se réfèrent pas à un groupe capturant existant deviennent des [échappements octaux hérités](#séquences_déchappements).
 - Dans les [classes de caractères](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_class), les plages de caractères où une limite est une classe de caractères font que le `-` devient un caractère littéral.
 - Une séquence d'échappement non reconnue devient un [«&nbsp;échappement d'identité&nbsp;»](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape).
 - Les séquences d'échappement dans les [classes de caractères](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_class) de la forme `\cX` où `X` est un chiffre ou `_` sont décodées de la même manière que celles avec des lettres {{Glossary("ASCII")}}&nbsp;: `\c0` est identique à `\cP` lorsqu'on prend le modulo 32. De plus, si la forme `\cX` est rencontrée n'importe où où `X` n'est pas l'un des caractères reconnus, alors la barre oblique inversée est traité comme un caractère littéral.
@@ -90,7 +90,7 @@ Les syntaxes regex suivantes sont dépréciées et ne sont disponibles qu'en [mo
 
 ### Séquences d'échappement
 
-- Les séquences d'échappement octales (\ suivies d'un, deux ou trois chiffres octaux) sont dépréciées dans les littéraux de chaînes de caractères et d'expressions régulières.
+- Les séquences d'échappement octales (\ suivies d'un, deux ou trois chiffres octaux) sont dépréciées dans les littéraux de chaînes de caractères et d'expressions rationnelles.
 - Les fonctions {{JSxRef("escape()")}} et {{JSxRef("unescape()")}} sont dépréciées. Utilisez {{JSxRef("encodeURI()")}}, {{JSxRef("encodeURIComponent()")}}, {{JSxRef("decodeURI()")}} ou {{JSxRef("decodeURIComponent()")}} pour encoder et décoder les séquences d'échappement des caractères spéciaux.
 
 ### Instructions
@@ -130,13 +130,13 @@ Ces fonctionnalités obsolètes ont été entièrement supprimées de JavaScript
 
 Les éléments suivants sont désormais des propriétés des instances de `RegExp`, et non plus du constructeur `RegExp`&nbsp;:
 
-| Propriété                                                               | Description                                                                                                                                      |
-| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{JSxRef("RegExp/global", "global")}}                                   | Indique si l'expression régulière doit être testée contre toutes les correspondances possibles dans une chaîne, ou seulement contre la première. |
-| {{JSxRef("RegExp/ignoreCase", "ignoreCase")}}                           | Indique si la casse doit être ignorée lors de la tentative de correspondance dans une chaîne.                                                    |
-| {{JSxRef("RegExp/lastIndex", "lastIndex")}}                             | L'index à partir duquel commencer la prochaine correspondance.                                                                                   |
-| {{JSxRef("RegExp/multiline", "multiline")}} (également via `RegExp.$*`) | Indique si la recherche doit s'effectuer sur plusieurs lignes.                                                                                   |
-| {{JSxRef("RegExp/source", "source")}}                                   | Le texte du motif.                                                                                                                               |
+| Propriété                                                                | Description                                                                                                                                                    |
+| ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{JSxRef("RegExp/global", "global")}}                                    | Indique si l'expression régulière doit être testée contre toutes les correspondances possibles dans une chaîne de caractères, ou seulement contre la première. |
+| {{JSxRef("RegExp/ignoreCase", "ignoreCase")}}                            | Indique si la casse doit être ignorée lors de la tentative de correspondance dans une chaîne de caractères.                                                    |
+| {{JSxRef("RegExp/lastIndex", "lastIndex")}}                              | L'index à partir duquel commencer la prochaine correspondance.                                                                                                 |
+| {{JSxRef("RegExp/multiline", "multiline")}} (également avec `RegExp.$*`) | Indique si la recherche doit s'effectuer sur plusieurs lignes.                                                                                                 |
+| {{JSxRef("RegExp/source", "source")}}                                    | Le texte du motif.                                                                                                                                             |
 
 La méthode `valueOf()` n'est plus spécialisée pour `RegExp`. Elle utilise {{JSxRef("Object.prototype.valueOf()")}}, qui retourne elle-même.
 
@@ -152,7 +152,7 @@ La méthode `valueOf()` n'est plus spécialisée pour `RegExp`. Elle utilise {{J
 | `__parent__`                 | Pointe vers le contexte d'un objet.                                                                                          | Pas de remplacement direct                                                                                                                                                            |
 | `__iterator__`               | Utilisé avec les [itérateurs hérités](#générateurs_et_itérateurs_hérités).                                                   | [`Symbol.iterator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) et les nouveaux [protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) |
 | `__noSuchMethod__`           | Une méthode appelée lorsqu'une propriété inexistante est appelée en tant que méthode.                                        | {{JSxRef("Proxy")}}                                                                                                                                                                   |
-| `Object.prototype.eval()`    | Évalue une chaîne de code JavaScript dans le contexte de l'objet défini.                                                     | Pas de remplacement direct                                                                                                                                                            |
+| `Object.prototype.eval()`    | Évalue une chaîne de caractères de code JavaScript dans le contexte de l'objet défini.                                       | Pas de remplacement direct                                                                                                                                                            |
 | `Object.observe()`           | Observation asynchrone des changements d'un objet.                                                                           | {{JSxRef("Proxy")}}                                                                                                                                                                   |
 | `Object.unobserve()`         | Supprime les observateurs.                                                                                                   | {{JSxRef("Proxy")}}                                                                                                                                                                   |
 | `Object.getNotifier()`       | Crée un objet notificateur qui permet de déclencher de manière synthétique un changement observable avec `Object.observe()`. | Pas de remplacement direct                                                                                                                                                            |
