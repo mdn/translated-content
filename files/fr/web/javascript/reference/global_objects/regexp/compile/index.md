@@ -42,7 +42,7 @@ L'exemple suivant montre comment recompiler une expression rationnelle avec un n
 
 ```js
 const regexObj = /toto/gi;
-regexObj.compile("new toto", "g");
+regexObj.compile("nouveau toto", "g");
 ```
 
 ## Spécifications
