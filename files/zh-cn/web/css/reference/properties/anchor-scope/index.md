@@ -298,8 +298,7 @@ updateScope("all");
 
 ## 参见
 
+- {{cssxref("anchor-name")}}
+- {{cssxref("position-anchor")}}
 - [CSS 锚点定位](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning)模块
-- [溢出的回退选项和条件隐藏](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)指南
-- [学习：定位](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Positioning)
-- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values)模块
-- [学习：在 CSS 中调整大小](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Sizing)
+- [使用 CSS 锚点定位](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Using)指南
