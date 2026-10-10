@@ -10,7 +10,7 @@ l10n:
 _HTTPS RR_ を使用すると、 HTTPS を使用してサービスに接続するプロセスを最適化できます。
 さらに、 _HTTPS RR_ の存在は、そのオリジン上の有用な {{Glossary("HTTP")}} リソースがすべて HTTPS 経由でアクセス可能であることを示しており、これはつまり、ブラウザーがそのドメインへの接続を HTTP から HTTPS へ安全にアップグレードできることを意味します。
 
-## See also
+## 関連情報
 
 - {{RFC(9460, "Service Binding and Parameter Specification via the DNS (SVCB and HTTPS Resource Records)")}}
 - [Strict Transport Security vs. HTTPS Resource Records: the showdown](https://emilymstark.com/2020/10/24/strict-transport-security-vs-https-resource-records-the-showdown.html) (Emily M. Stark blog)
