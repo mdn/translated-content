@@ -1,48 +1,47 @@
 ---
-title: RegExp.prototype.global
+title: "RegExp : propriété global"
+short-title: global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-La propriété **`global`** indique si le marqueur (_flag_) "`g`" est utilisé pour l'expression rationnelle. `global` est une propriété accessible en lecture seule pour une expression rationnelle donnée.
+La propriété d'accesseur **`global`** des instances de {{JSxRef("RegExp")}} retourne si l'indicateur `g` est utilisé pour cette expression rationnelle.
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.global")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: RegExp.prototype.global")}}
 
 ```js interactive-example
-const regex1 = new RegExp("foo", "g");
+const regex1 = /toto/g;
 
 console.log(regex1.global);
-// Expected output: true
+// Résultat attendu : true
 
-const regex2 = new RegExp("bar", "i");
+const regex2 = /truc/i;
 
 console.log(regex2.global);
-// Expected output: false
+// Résultat attendu : false
 ```
-
-{{js_property_attributes(0,0,1)}}
 
 ## Description
 
-La valeur de `global` est un booléen. Elle vaut `true` si le flag "`g`" a été utilisé, `false` sinon. Le _flag_ "`g`" indique que l'expression rationnelle recherchera toutes les correspondances possibles d'une chaîne de caractères. Lorsqu'une expression rationnelle utilise à la fois les marqueurs `global` et `sticky` (respectivement `"g"` et `"y"`), elle ignorera le marqueur `global`.
+`RegExp.prototype.global` a pour valeur `true` sur l'indicateur `g` est utilisé&nbsp;; sinon, `false`. L'indicateur `g` indique que l'expression rationnelle doit être testée sur toutes les correspondances possibles dans une chaîne de caractères. Chaque appel à {{JSxRef("RegExp/exec", "exec()")}} met à jour sa propriété {{JSxRef("RegExp/lastIndex", "lastIndex")}}, de sorte que l'appel suivant à `exec()` commence au caractère suivant.
 
-Cette propriété ne peut pas être modifiée directement.
+Certaines méthodes, telles que {{JSxRef("String.prototype.matchAll()")}} et {{JSxRef("String.prototype.replaceAll()")}}, vérifient que, si le paramètre est une expression rationnelle, elle est globale. Les méthodes [`[Symbol.match]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match) et [`[Symbol.replace]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace) de l'expression rationnelle (appelées par {{JSxRef("String.prototype.match()")}} et {{JSxRef("String.prototype.replace()")}}) ont également des comportements différents lorsque l'expression rationnelle est globale.
+
+L'accesseur en écriture de `global` est `undefined`. Vous ne pouvez pas modifier cette propriété directement.
 
 ## Exemples
 
+### Utiliser `global`
+
 ```js
-var regex = new RegExp("toto", "g");
+const globalRegex = /toto/g;
 
-console.log(regex.global); // true
+const chaine = "totoexempletoto";
+console.log(chaine.replace(globalRegex, "")); // exemple
 
-var str = "totoexempletoto";
-var str1 = str.replace(regex, "");
-
-console.log(str1); // affichera "exemple" dans la console
-
-var regex1 = new RegExp("toto");
-var str2 = str.replace(regex1, "");
-
-console.log(str2); // affichera "exempletoto" dans la console
+const nonGlobalRegex = /toto/;
+console.log(chaine.replace(nonGlobalRegex, "")); // exempletoto
 ```
 
 ## Spécifications
@@ -55,8 +54,11 @@ console.log(str2); // affichera "exempletoto" dans la console
 
 ## Voir aussi
 
-- {{jsxref("RegExp.prototype.ignoreCase")}}
-- {{jsxref("RegExp.prototype.lastIndex")}}
-- {{jsxref("RegExp.prototype.multiline")}}
-- {{jsxref("RegExp.prototype.source")}}
-- {{jsxref("RegExp.prototype.sticky")}}
+- La propriété {{JSxRef("RegExp.prototype.lastIndex")}}
+- La propriété {{JSxRef("RegExp.prototype.dotAll")}}
+- La propriété {{JSxRef("RegExp.prototype.hasIndices")}}
+- La propriété {{JSxRef("RegExp.prototype.ignoreCase")}}
+- La propriété {{JSxRef("RegExp.prototype.multiline")}}
+- La propriété {{JSxRef("RegExp.prototype.source")}}
+- La propriété {{JSxRef("RegExp.prototype.sticky")}}
+- La propriété {{JSxRef("RegExp.prototype.unicode")}}
