@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0f96a043fc900d79fbd064b5628db17072843714
 ---
 
-La méthode statique **`RegExp.escape()`** [échappe](/fr/docs/Web/JavaScript/Reference/Regular_expressions#escape_sequences) tous les caractères potentiellement syntaxiques d'une expression rationnelle dans une chaîne de caractères, et retourne une nouvelle chaîne de caractères qui peut être utilisée en toute sécurité comme motif [littéral](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) pour le constructeur {{JSxRef("RegExp/RegExp", "RegExp()")}}.
+La méthode statique **`RegExp.escape()`** [échappe](/fr/docs/Web/JavaScript/Reference/Regular_expressions#séquences_déchapement) tous les caractères potentiellement syntaxiques d'une expression rationnelle dans une chaîne de caractères, et retourne une nouvelle chaîne de caractères qui peut être utilisée en toute sécurité comme motif [littéral](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) pour le constructeur {{JSxRef("RegExp/RegExp", "RegExp()")}}.
 
 Lors de la création dynamique d'un {{JSxRef("RegExp")}} avec du contenu fourni par l'utilisateur·ice, envisagez d'utiliser cette fonction pour assainir l'entrée (à moins que l'entrée ne soit réellement destinée à contenir une syntaxe d'expression rationnelle). De plus, n'essayez pas de réimplémenter sa fonctionnalité en, par exemple, utilisant {{JSxRef("String.prototype.replaceAll()")}} pour insérer un `\` avant tous les caractères de syntaxe. `RegExp.escape()` est conçu pour utiliser des séquences d'échappement qui fonctionnent dans beaucoup plus de cas limites/contextes que ce que du code fait main est susceptible d'atteindre.
 
