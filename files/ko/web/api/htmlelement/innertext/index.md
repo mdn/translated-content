@@ -19,7 +19,7 @@ htmlElement.innerText = string;
 
 ### 값
 
-요소의 렌더링 된 텍스트 콘텐츠를 나타내는 {{domxref("DOMString")}}. 요소 자체가 [렌더링 중](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered)이 아니라면 {{domxref("Node.textContent")}} 속성의 값과 동일합니다.
+요소의 렌더링 된 텍스트 콘텐츠를 나타내는 {{jsxref("String")}}. 요소 자체가 [렌더링 중](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered)이 아니라면 {{domxref("Node.textContent")}} 속성의 값과 동일합니다.
 
 ## 예제
 

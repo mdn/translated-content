@@ -5,7 +5,7 @@ slug: Web/API/MediaDevices/enumerateDevices
 
 {{APIRef("WebRTC")}}
 
-{{domxref("MediaDevices")}}의 **`enumerateDevices()`** 메서드는 사용(또는 접근)이 가능한 미디어 입력장치나 출력장치들의 리스트를 가져옵니다. 예를 들면 마이크, 카메라, 헤드셋 등의 미디어 입/출력 장치 리스트를 불러오는 것 이죠. 이 메서드는 {{domxref("Promise")}}를 반환하는데, 이 Promise가 resolve되면 장치(device)정보가 들어있는 {{domxref("MediaDeviceInfo")}} 배열(array)을 확인할 수 있습니다.
+{{domxref("MediaDevices")}}의 **`enumerateDevices()`** 메서드는 사용(또는 접근)이 가능한 미디어 입력장치나 출력장치들의 리스트를 가져옵니다. 예를 들면 마이크, 카메라, 헤드셋 등의 미디어 입/출력 장치 리스트를 불러오는 것 이죠. 이 메서드는 {{jsxref("Promise")}}를 반환하는데, 이 Promise가 resolve되면 장치(device)정보가 들어있는 {{domxref("MediaDeviceInfo")}} 배열(array)을 확인할 수 있습니다.
 
 ## Syntax (구문)
 
@@ -15,7 +15,7 @@ var enumeratorPromise = navigator.mediaDevices.enumerateDevices();
 
 ### Return value ( 반환값 )
 
-반환받는 {{ domxref("Promise") }}는 모든 장치 리스트를 가져오는 것에 성공하면 {{domxref("MediaDeviceInfo")}}객체 배열(array)를 받습니다. 배열에 들어있는 객체들은 각각의 장치정보를 가지고 있습니다.
+반환받는 {{jsxref("Promise")}}는 모든 장치 리스트를 가져오는 것에 성공하면 {{domxref("MediaDeviceInfo")}}객체 배열(array)를 받습니다. 배열에 들어있는 객체들은 각각의 장치정보를 가지고 있습니다.
 
 장치 리스트를 가져오는 것이 실패하면, promise는 rejected처리 됩니다.
 
