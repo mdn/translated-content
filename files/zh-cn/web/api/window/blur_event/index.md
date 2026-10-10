@@ -2,12 +2,12 @@
 title: Window：blur 事件
 slug: Web/API/Window/blur_event
 l10n:
-  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
+  sourceCommit: 8b77a013c518ef1b62534a8446a60732d582a24b
 ---
 
 {{APIRef("UI Events")}}
 
-**`blur`** 事件在元素失去焦点时触发。
+**`blur`** 事件在窗口失去焦点（例如用户将焦点从页面移至地址栏）时触发。在此之前，焦点可能位于文档的视口或其中的某个元素上。
 
 与 `blur` 相反的是 {{domxref("Window/focus_event", "focus")}}。
 
@@ -80,8 +80,6 @@ window.addEventListener("focus", play);
 ## 浏览器兼容性
 
 {{Compat}}
-
-处理此事件期间，{{DOMxRef("Document.activeElement")}} 的值因浏览器而异（[Firefox bug 452307](https://bugzil.la/452307)）：IE10 将其设为焦点将要移向的元素，而 Firefox 和 Chrome 往往将其设为文档的 `body`。
 
 ## 参见
 
