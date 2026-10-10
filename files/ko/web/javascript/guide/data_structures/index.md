@@ -101,7 +101,7 @@ console.log(42 / -0); // -Infinity
 
 {{jsxref("NaN")}} ("**N**ot **a** **N**umber")는 산술 연산의 결과를 숫자로 표현할 수 없을 때, 일반적으로 발생하는 특별한 종류의 숫자 값입니다. 또한, "NaN" 자기 자신과 같지 않은 JavaScript의 유일한 값이기도 합니다.
 
-숫자는 개념적으로 "수학적인 값"이고 항상 암시적으로 부동 소수점으로 인코딩되지만, JavaScript는 [비트 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators)를 제공합니다. 비트 연산자를 적용할 때 숫자는 먼저 32비트 정수로 변환됩니다.
+숫자는 개념적으로 "수학적인 값"이고 항상 암시적으로 부동 소수점으로 인코딩되지만, JavaScript는 [비트 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#비트_연산자)를 제공합니다. 비트 연산자를 적용할 때 숫자는 먼저 32비트 정수로 변환됩니다.
 
 > [!NOTE]
 > [비트 마스킹](<https://ko.wikipedia.org/wiki/마스크_(컴퓨팅)>)을 사용해서 하나의 숫자 안에 다수의 불리언 값을 나타낼 때 비트 연산자를 사용할 수 있긴 하지만 이건 보통 나쁜 방법으로 여겨집니다. JavaScript는 일련의 불리언 값들을 나타내는 방법을 (배열이나 불리언 속성 값을 할당한 객체로) 제공합니다. 비트 마스킹은 코드를 읽고, 이해하고, 유지하기 힘들게 만듭니다.
@@ -200,7 +200,7 @@ JavaScript에서의 객체는 속성의 컬렉션으로 볼 수 있습니다. [�
 
 객체의 [prototype](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)은 다른 객체 또는 `null`을 가리킵니다. 이는 개념적으로 객체의 숨겨진 속성이며, 일반적으로 `[[Prototype]]`으로 표시됩니다. 객체의 `[[Prototype]]`속성은 객체 자체에서도 접근할 수 있습니다.
 
-객체는 임시 키-값 쌍이므로, 종종 맵으로 사용됩니다. 그러나 인체 공학, 보안 및 성능 문제가 있을 수 있습니다. 대신 임의의 데이터를 저장하려면, {{jsxref("Map")}}을 사용하세요. [`Map` 참조](/ko/docs/Web/JavaScript/Reference/Global_Objects/Map#objects_vs._maps)에는 키-값 연결을 저장하기 위한 일반 객체와 Map 간의 장단점에 대한 자세한 설명이 포함되어 있습니다.
+객체는 임시 키-값 쌍이므로, 종종 맵으로 사용됩니다. 그러나 인체 공학, 보안 및 성능 문제가 있을 수 있습니다. 대신 임의의 데이터를 저장하려면, {{jsxref("Map")}}을 사용하세요. [`Map` 참조](/ko/docs/Web/JavaScript/Reference/Global_Objects/Map#객체_vs_맵)에는 키-값 연결을 저장하기 위한 일반 객체와 Map 간의 장단점에 대한 자세한 설명이 포함되어 있습니다.
 
 ### 날짜
 
@@ -222,7 +222,7 @@ JavaScript에서의 객체는 속성의 컬렉션으로 볼 수 있습니다. [�
 
 보통 DOM 노드에 데이터를 연결할 땐 해당 객체에 직접 속성을 추가하거나 `data-*` 특성을 사용하겠지만, 동일한 컨텍스트에서 이렇게 추가한 데이터를 모든 스크립트에서 다 사용할 수 있다는 문제가 있습니다. `Map`과 `WeakMap`을 사용하면 비공개 데이터를 객체에 쉽게 바인딩 할 수 있습니다.
 
-`WeakMap` 및 `WeakSet`은 가비지 컬렉션이 가능한 객체 또는 [등록되지 않은 기호](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry)만 키로 허용하며, 키가 컬렉션에 남아있어도 가비지 컬렉션할 수 있습니다. 특히 [메모리 사용량 최적화](/ko/docs/Web/JavaScript/Guide/Memory_management#data_structures_aiding_memory_management)에 사용됩니다.
+`WeakMap` 및 `WeakSet`은 가비지 컬렉션이 가능한 객체 또는 [등록되지 않은 기호](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#전역_심볼_레지스트리의_공유_심볼)만 키로 허용하며, 키가 컬렉션에 남아있어도 가비지 컬렉션할 수 있습니다. 특히 [메모리 사용량 최적화](/ko/docs/Web/JavaScript/Guide/Memory_management#메모리_관리를_돕는_데이터_구조)에 사용됩니다.
 
 ### 구조화된 자료: JSON
 
