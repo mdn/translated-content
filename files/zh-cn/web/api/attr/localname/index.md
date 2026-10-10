@@ -36,9 +36,7 @@ l10n:
   <button>显示 &lt;label&gt; 的值</button>
 </p>
 
-<p>
-  属性 <code>xml:lang</code> 的本地部分：<output id="result">无。</output>
-</p>
+<p>属性 <code>xml:lang</code> 的本地部分：<output id="result">无。</output></p>
 ```
 
 ### JavaScript
