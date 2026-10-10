@@ -1,6 +1,6 @@
 ---
 title: 벽돌 만들기
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field
 l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---

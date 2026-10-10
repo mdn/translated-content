@@ -1,6 +1,6 @@
 ---
 title: 게임 오버
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over
 ---
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
