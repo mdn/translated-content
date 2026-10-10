@@ -7,7 +7,7 @@ l10n:
 
 **HTTPS RR**（**_HTTPS リソースレコード_**）は、{{Glossary("HTTPS")}} を介してサービスにアクセスするための設定情報やパラメータを提供する DNS レコードの一種です。
 
-An _HTTPS RR_ can be used to optimize the process of connecting to a service using HTTPS.
+_HTTPS RR_ を使用すると、 HTTPS を使用してサービスに接続するプロセスを最適化できます。
 Further, the presence of an _HTTPS RR_ signals that all useful {{Glossary("HTTP")}} resources on the origin are reachable over HTTPS, which in turn means that a browser can safely upgrade connections to the domain from HTTP to HTTPS.
 
 ## See also
