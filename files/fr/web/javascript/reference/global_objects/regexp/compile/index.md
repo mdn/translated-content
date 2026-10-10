@@ -1,42 +1,48 @@
 ---
-title: RegExp.prototype.compile()
+title: "RegExp : méthode compile()"
+short-title: compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
+l10n:
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-La méthode dépréciée **`compile()`** est utilisée afin de (re)compiler une expression rationnelle lors de l'exécution d'un script. Cette méthode effectue essentiellement les mêmes actions que le constructeur `RegExp`.
+> [!NOTE]
+> La méthode `compile()` n'est définie que pour des raisons de compatibilité. L'utilisation de `compile()` rend la source et les drapeaux de l'expression rationnelle, autrement immuables, mutables, ce qui peut perturber les attentes de l'utilisateur·ice. Vous pouvez utiliser le constructeur {{JSxRef("RegExp/RegExp", "RegExp()")}} pour créer un nouvel objet expression rationnelle à la place.
+
+La méthode **`compile()`** des instances de {{JSxRef("RegExp")}} est utilisée pour recompiler une expression rationnelle avec une nouvelle source et de nouveaux drapeaux après que l'objet `RegExp` a déjà été créé.
 
 ## Syntaxe
 
-```js
-regexObj.compile(motif, flags);
+```js-nolint
+compile(pattern, flags)
 ```
 
 ### Paramètres
 
-- `motif`
+- `pattern`
   - : Le texte de l'expression rationnelle.
 - `flags`
-  - : S'ils sont utilisés, les drapeaux (_flags_) peuvent être combinés avec les valeurs suivantes :
-    - `g`
-      - : correspondance globale
-    - `i`
-      - : ignorer la casse
-    - `m`
-      - : multiligne : on traite les caractères de début et de fin (^ et $) de façon à travailler sur plusieurs lignes (ils correspondent au début et à la fin de chaque ligne et non au début ou à la fin de la chaîne entière)
-    - `y`
-      - : adhérence : ne recherche les correspondances qu'à partir de l'indice fourni par la propriété `lastIndex` de l'expression rationnelle dans la chaîne cible (la recherche n'est pas effectuée pour les indices suivants).
+  - : Toute combinaison des [valeurs d'indicateurs](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp#indicateurs).
 
-## Description
+### Valeur de retour
 
-La méthode `compile` est dépréciée. Pour obtenir le même effet, on utilisera le constructeur `RegExp`.
+Aucune ({{JSxRef("undefined")}}).
+
+### Exceptions
+
+- {{JSxRef("TypeError")}}
+  - : Lève une exception si la valeur de `this` n'est pas une instance du constructeur `RegExp` du domaine actuel.
+    Cela inclut une sous-classe de `RegExp` et le constructeur `RegExp` d'un domaine différent.
 
 ## Exemples
 
-Dans l'exemple qui suit, on voit comment réinitialiser le motif et les drapeaux d'une expression rationnelle grâce à la méthode `compile()`.
+### Utiliser `compile()`
+
+L'exemple suivant montre comment recompiler une expression rationnelle avec un nouveau motif et un nouveau drapeau.
 
 ```js
-var regexObj = new RegExp("toto", "gi");
-regexObj.compile("nouveau toto", "g");
+const regexObj = /toto/gi;
+regexObj.compile("new toto", "g");
 ```
 
 ## Spécifications
@@ -49,4 +55,4 @@ regexObj.compile("nouveau toto", "g");
 
 ## Voir aussi
 
-- {{jsxref("RegExp")}}
+- L'objet natif {{JSxRef("RegExp")}}
