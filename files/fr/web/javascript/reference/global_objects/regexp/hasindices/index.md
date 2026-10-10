@@ -1,53 +1,56 @@
 ---
-title: RegExp.prototype.hasIndices
+title: "RegExp : propriété hasIndices"
+short-title: hasIndices
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-La propriété **`hasIndices`** indique si le marqueur "`d`" a été utilisé ou non avec l'expression rationnelle. `hasIndices` est une propriété en lecture seule, rattachée à une instance d'expression rationnelle.
+La propriété d'accesseur **`hasIndices`** des instances de {{JSxRef("RegExp")}} retourne si l'indicateur `d` est utilisé pour cette expression rationnelle.
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.hasIndices")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: RegExp.prototype.hasIndices")}}
 
 ```js interactive-example
-const regex1 = new RegExp("foo", "d");
+const regex1 = /toto/d;
 
 console.log(regex1.hasIndices);
-// Expected output: true
+// Résultat attendu : true
 
-const regex2 = new RegExp("bar");
+const regex2 = /truc/;
 
 console.log(regex2.hasIndices);
-// Expected output: false
+// Résultat attendu : false
 ```
-
-{{JS_Property_Attributes(0, 0, 1)}}
 
 ## Description
 
-La valeur de `hasIndices` est un [`booléen`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) qui vaut `true` si le marqueur "`d`" a été utilisé et `false` sinon. Le marqueur "`d`" indique que le résultat des correspondances d'une expression rationnelle devrait contenir les indices de début et fin des fragments de chaîne pour chaque groupe capturant.
+`RegExp.prototype.hasIndices` a pour valeur `true` si l'indicateur `d` est utilisé&nbsp;; sinon, `false`. L'indicateur `d` indique que le résultat d'une correspondance d'expression rationnelle doit contenir les indices de début et de fin des sous-chaînes de caractères de chaque groupe capturant. Il ne modifie en rien l'interprétation ou le comportement de correspondance de l'expression rationnelle, mais fournit uniquement des informations supplémentaires dans le résultat de la correspondance.
 
-Cette propriété ne peut être modifiée directement.
+Cet indicateur affecte principalement la valeur de retour de {{JSxRef("RegExp/exec", "exec()")}}. Si l'indicateur `d` est présent, le tableau retourné par `exec()` possède une propriété supplémentaire `indices` comme décrit dans la [valeur de retour](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec#valeur_de_retour) de la méthode `exec()`. Comme toutes les autres méthodes liées aux expressions rationnelles (telles que {{JSxRef("String.prototype.match()")}}) appellent `exec()` en interne, elles retournent également les indices si l'expression rationnelle possède l'indicateur `d`.
+
+L'accesseur en écriture de `hasIndices` est `undefined`. Vous ne pouvez pas modifier cette propriété directement.
 
 ## Exemples
 
 ### Utiliser `hasIndices`
 
 ```js
-const str1 = "toto truc toto";
+const chaine1 = "toto truc toto";
 
-const regex1 = new RegExp("toto", "gd");
+const regex1 = /toto/dg;
 
-console.log(regex1.hasIndices); // Affiche : true
+console.log(regex1.hasIndices); // true
 
-console.log(regex1.exec(str1).indices[0]); // Affiche : Array [0, 3]
-console.log(regex1.exec(str1).indices[0]); // Affiche : Array [8, 11]
+console.log(regex1.exec(chaine1).indices[0]); // [0, 3]
+console.log(regex1.exec(chaine1).indices[0]); // [8, 11]
 
-const str2 = "toto truc toto";
+const chaine2 = "toto truc toto";
 
-const regex2 = new RegExp("toto");
+const regex2 = /toto/;
 
-console.log(regex2.hasIndices); // Affiche : false
+console.log(regex2.hasIndices); // false
 
-console.log(regex2.exec(str2).indices); // Affiche : undefined
+console.log(regex2.exec(chaine2).indices); // undefined
 ```
 
 ## Spécifications
@@ -60,12 +63,12 @@ console.log(regex2.exec(str2).indices); // Affiche : undefined
 
 ## Voir aussi
 
-- [`RegExp.lastIndex`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex)
-- [`RegExp.prototype.exec()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)
-- [`RegExp.prototype.dotAll`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll)
-- [`RegExp.prototype.global`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global)
-- [`RegExp.prototype.ignoreCase`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase)
-- [`RegExp.prototype.multiline`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline)
-- [`RegExp.prototype.source`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/source)
-- [`RegExp.prototype.sticky`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)
-- [`RegExp.prototype.unicode`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)
+- La propriété {{JSxRef("RegExp.prototype.lastIndex")}}
+- La méthode {{JSxRef("RegExp.prototype.exec()")}}
+- La propriété {{JSxRef("RegExp.prototype.dotAll")}}
+- La propriété {{JSxRef("RegExp.prototype.global")}}
+- La propriété {{JSxRef("RegExp.prototype.ignoreCase")}}
+- La propriété {{JSxRef("RegExp.prototype.multiline")}}
+- La propriété {{JSxRef("RegExp.prototype.source")}}
+- La propriété {{JSxRef("RegExp.prototype.sticky")}}
+- La propriété {{JSxRef("RegExp.prototype.unicode")}}
