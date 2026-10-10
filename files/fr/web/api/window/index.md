@@ -2,7 +2,7 @@
 title: Window
 slug: Web/API/Window
 l10n:
-  sourceCommit: 6b9bb948a570848254e2023fda959cf86721f8e4
+  sourceCommit: d678295b8c67d19354bca1db406af1b6bc8cf1c6
 ---
 
 {{APIRef("HTML DOM")}}
@@ -76,7 +76,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
 - {{DOMxRef("Window.location")}}
   - : Obtient ou définit l'emplacement (URL courante) de l'objet window.
 - {{DOMxRef("Window.locationbar")}} {{ReadOnlyInline}}
-  - : Retourne l'objet locationbar.
+  - : Retourne l'objet `locationbar`.
 - {{DOMxRef("Window.menubar")}} {{ReadOnlyInline}}
   - : Retourne l'objet menubar.
 - {{DOMxRef("Window.mozInnerScreenX")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
@@ -108,14 +108,14 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
 - {{DOMxRef("Window.performance")}} {{ReadOnlyInline}}
   - : Retourne un objet {{DOMxRef("Performance")}}, qui inclut les attributs {{DOMxRef("Performance.timing", "timing")}} et {{DOMxRef("Performance.navigation", "navigation")}}, chacun fournissant des données [liées aux performances](/fr/docs/Web/API/Performance_API/Navigation_timing). Voir aussi [Utiliser Navigation Timing](/fr/docs/Web/API/Performance_API/Navigation_timing) pour plus d'informations et d'exemples.
 - {{DOMxRef("Window.personalbar")}} {{ReadOnlyInline}}
-  - : Retourne l'objet personalbar.
+  - : Retourne l'objet `personalbar`.
 - {{DOMxRef("Window.scheduler")}} {{ReadOnlyInline}}
   - : Retourne l'objet {{DOMxRef("Scheduler")}} associé au contexte courant. Point d'entrée pour utiliser [l'API Prioritized Task Scheduling](/fr/docs/Web/API/Prioritized_Task_Scheduling_API).
 - {{DOMxRef("Window.screen")}} {{ReadOnlyInline}}
   - : Retourne une référence à l'objet screen associé à la fenêtre.
-- {{DOMxRef("Window.screenX")}} and {{DOMxRef("Window.screenLeft")}} {{ReadOnlyInline}}
+- {{DOMxRef("Window.screenX")}} et {{DOMxRef("Window.screenLeft")}} {{ReadOnlyInline}}
   - : Les deux propriétés Retournent la distance horizontale entre le bord gauche de la fenêtre du navigateur de l'utilisateur·ice et le bord gauche de l'écran.
-- {{DOMxRef("Window.screenY")}} and {{DOMxRef("Window.screenTop")}} {{ReadOnlyInline}}
+- {{DOMxRef("Window.screenY")}} et {{DOMxRef("Window.screenTop")}} {{ReadOnlyInline}}
   - : Les deux propriétés Retournent la distance verticale entre le bord supérieur de la fenêtre du navigateur de l'utilisateur·ice et le bord supérieur de l'écran.
 - {{DOMxRef("Window.scrollbars")}} {{ReadOnlyInline}}
   - : Retourne l'objet scrollbars.
@@ -129,7 +129,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
   - : Retourne le nombre de pixels déjà défilés verticalement dans le document.
 - {{DOMxRef("Window.self")}} {{ReadOnlyInline}}
   - : Retourne une référence à l'objet window lui-même.
-- {{DOMxRef("Window.sessionStorage")}}
+- {{DOMxRef("Window.sessionStorage")}} {{ReadOnlyInline}}
   - : Retourne une référence à l'objet de stockage de session utilisé pour stocker des données accessibles uniquement par l'origine qui les a créées.
 - {{DOMxRef("Window.sharedStorage")}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Retourne l'objet {{DOMxRef("WindowSharedStorage")}} pour l'origine courante. Point d'entrée principal pour écrire des données dans le stockage partagé avec [l'API Shared Storage](/fr/docs/Web/API/Shared_Storage_API).
@@ -322,9 +322,9 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 ### Évènements de ciblage
 
 - {{DOMxRef("Window/blur_event", "blur")}}
-  - : Se déclenche lorsqu'un élément perd la sélection.
+  - : Se déclenche lorsqu'une fenêtre perd la sélection.
 - {{DOMxRef("Window/focus_event", "focus")}}
-  - : Se déclenche lorsqu'un élément reçoit la sélection.
+  - : Se déclenche lorsqu'une fenêtre reçoit la sélection.
 
 ### Évènements de manette de jeu
 

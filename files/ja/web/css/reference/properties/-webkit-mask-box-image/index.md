@@ -1,54 +1,79 @@
 ---
-title: -webkit-mask-box-image
+title: "`-webkit-mask-box-image` プロパティ (CSS)"
+short-title: -webkit-mask-box-image
 slug: Web/CSS/Reference/Properties/-webkit-mask-box-image
-original_slug: Web/CSS/-webkit-mask-box-image
+l10n:
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-{{ CSSRef() }} {{ Non-standard_header() }}
+{{ Non-standard_header() }}
 
-`-webkit-mask-box-image` はマスク画像を要素の境界ボックスに設定します。
+標準外で接頭辞付きの **`-webkit-mask-box-image`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、要素の境界ボックスのマスク画像を設定します。
 
-- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値): なし
-- 適用先: すべての要素
-- [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance): なし
-- メディア: {{cssxref("Media/Visual", "visual")}}
-- [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値): 指定通り
+> [!NOTE]
+> このプロパティは標準外であり、標準化路線にありません。代わりに {{CSSXref("mask-border")}} プロパティを使用することを検討してください。
+
+## 構成要素のプロパティ
+
+このプロパティは以下の CSS プロパティの一括指定です。
+
+- {{cssxref("mask-border-source", "-webkit-mask-border-source")}}
+- {{cssxref("mask-border-outset", "-webkit-mask-border-outset")}}
+- {{cssxref("mask-border-repeat", "-webkit-mask-border-repeat")}}
+
+この値には、マスクの境界線として使用される `<image>` が記載されており、オプションで 4 つの境界線の外側へのオフセット値と、最大 2 つの境界線の繰り返しスタイルを指定できます。
 
 ## 構文
 
-```
--webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>]
-```
+```css
+/* デフォルト */
+-webkit-mask-box-image: none;
 
-ここで、
+/* image */
+-webkit-mask-box-image: url("image.png");
 
-- \<mask-box-image>
-  - : `{{cssxref("url()", "&lt;uri&gt;")}} | <gradient> | none`
-- \<top> \<right> \<bottom> \<left>
-  - : `<length> | <percentage>`
-- \<x-repeat> \<y-repeat>
-  - : `repeat | stretch | round | space`
+/* image edge-offset */
+-webkit-mask-box-image: url("image.png") 10 20 20 10;
+-webkit-mask-box-image: url("image.png") 10px 20px 20px 10px;
+
+/* image repeat-style */
+-webkit-mask-box-image: url("image.png") space repeat;
+
+/* image edge-offset repeat-style */
+-webkit-mask-box-image: url("image.png") 10px 20px 20px 10px space repeat;
+
+/* グローバル値 */
+-webkit-mask-box-image: inherit;
+-webkit-mask-box-image: initial;
+-webkit-mask-box-image: revert;
+-webkit-mask-box-image: revert-layer;
+-webkit-mask-box-image: unset;
+```
 
 ### 値
 
-- \<uri>
-  - : マスク画像として使用する画像リソースの位置です。
-- \<gradient>
-  - : マスク画像として使用する `-webkit-gradient` 関数です。
-- none
+- {{cssxref("image")}}
+  - : マスク画像として使用する画像リソースの場所、{{cssxref("gradient")}}、またはその他の {{cssxref("image")}} の値。
+- `none`
   - : 境界ボックスにマスク画像がないことを示すために使用します。
-- \<length>
+- {{cssxref("length")}}
   - : マスク画像のオフセットの大きさです。利用可能な単位は {{cssxref("&lt;length&gt;")}} を参照してください。
-- \<percentage>
+- {{cssxref("percentage")}}
   - : マスク画像のオフセットで、境界ボックスの対応する長さ（幅または高さ）に対するパーセント値です。
-- repeat
+- {{cssxref("number")}}
+  - : マスク画像のオフセットのピクセル単位でのサイズ。
+- `repeat`
   - : マスク画像は、境界ボックスの範囲に必要な回数だけ繰り返されます。マスク画像が境界ボックスに均等に配置できない場合は、部分画像を含むことがあります。
-- stretch
+- `stretch`
   - : マスク画像は、境界ボックスを正確に含むように引き伸ばされます。
-- round
+- `round`
   - : マスク画像は多少引き伸ばされ、境界ボックスの端にマスク画像の一部が残らないように繰り返されます。
-- space
+- `space`
   - : マスク画像は引き伸ばされることなく何度でも繰り返されます。境界ボックスの端に、部分的なマスク画像は置かれません。
+
+アウトセット値（エッジオフセット）は、画像の上辺、右辺、下辺、左辺からの距離を、その順序で定義します。値は {{cssxref("length")}}、{{cssxref("number")}}、または {{cssxref("percentage")}} の形式で設定でき、数値はピクセル単位の長さとして解釈されます。
+
+境界繰り返しスタイルが含む場合、それらは `<repeat-x> <repeat-y>` の順序で解釈されます。値が 1 つしか宣言されていない場合、その値は両方の軸で同じになります。{{cssxref("background-repeat")}} と似ていますが、`cover` および `contain` の値は対応していません。
 
 ## 公式定義
 
@@ -59,14 +84,14 @@ original_slug: Web/CSS/-webkit-mask-box-image
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{CSSSyntaxRaw(`-webkit-mask-box-image = <mask-image-source> [ <mask-image-offset>{4} <mask-border-repeat>{1,2} ]`)}}
 
 ## 例
 
 ### 画像の設定
 
 ```css
-.exampleone {
+.example-one {
   -webkit-mask-box-image: url("mask.png");
 }
 ```
@@ -74,8 +99,8 @@ original_slug: Web/CSS/-webkit-mask-box-image
 ### 画僧のオフセットと塗りつぶし
 
 ```css
-.exampletwo {
-  -webkit-mask-box-image: url("logo.png") 100 100 0 0 round round;
+.example-two {
+  -webkit-mask-box-image: url("logo.png") 100px 100px 0px 0px round round;
 }
 ```
 
@@ -89,4 +114,6 @@ Not part of any standard.
 
 ## 関連情報
 
-{{ cssxref("mask") }}, {{ cssxref("mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }},{{ cssxref("mask-clip") }},{{ cssxref("mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("mask-repeat") }}
+- CSS {{ cssxref("mask-border") }} プロパティ
+- CSS {{ cssxref("border-image") }} プロパティ
+- [Safari CSS reference: `-webkit-mask-box-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW14)

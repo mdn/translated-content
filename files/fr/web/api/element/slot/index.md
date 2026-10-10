@@ -3,12 +3,12 @@ title: "Element : propriété slot"
 short-title: slot
 slug: Web/API/Element/slot
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 88c33ab5f4ccd88d13a0a5272de45d4d33f9f636
 ---
 
 {{APIRef("Shadow DOM")}}
 
-La propriété **`slot`** de l'interface {{DOMxRef("Element")}} retourne le nom de l'emplacement du DOM d'ombre dans lequel l'élément est inséré.
+La propriété **`slot`** de l'interface {{DOMxRef("Element")}} retourne le nom de l'emplacement du DOM d'ombre dans lequel l'élément est inséré. Elle reflète l'attribut de contenu [`slot`](/fr/docs/Web/HTML/Reference/Global_attributes/slot) de l'élément.
 
 Un emplacement est un espace réservé à l'intérieur d'un [composant web](/fr/docs/Web/API/Web_components) que les utilisateur·ice·s peuvent remplir avec leur propre balisage (voir [Utiliser les modèles et les emplacements](/fr/docs/Web/API/Web_components/Using_templates_and_slots) pour plus d'informations).
 

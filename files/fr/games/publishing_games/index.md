@@ -2,19 +2,19 @@
 title: Publier des jeux
 slug: Games/Publishing_games
 l10n:
-  sourceCommit: 21addd31954b2629ab3e186dacdf7edca813dc7d
+  sourceCommit: 69937a446786abf5a58d4214b4192597d0b3cdc6
 ---
 
 Les jeux en HTML ont un avantage certain face à ceux écrits dans un langage natif en terme de publication et de distribution — vous avez en effet la liberté de distribuer, promouvoir et monétiser votre jeu sur Internet au lieu de voir chaque version de votre jeu emprisonnée au sein d'un store propriétaire. En étant sur le web, vous bénéficiez automatiquement d'un jeu multi plate-formes. Cette série d'articles vous présente les options dont vous disposez afin de publier et de distribuer votre jeu et de gagner quelque chose en attendant de faire de votre jeu un incontournable.
 
 ## Distribuer votre jeu
 
-Vous avez déjà suivi un [tutoriel](/fr/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) ou [deux](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser) et vous avez créé un jeu en HTML — c'est génial&nbsp;! L'article [Distribuer votre jeu](/fr/docs/Games/Publishing_games/Game_distribution) vous indique tout ce que vous devez savoir sur les moyens de partager votre toute dernière création — y compris comment vous pouvez l'héberger en ligne, le proposer sur les boutiques en ligne ouvertes, et le soumettre aux stores propriétaires comme Google Play ou iOS App Store.
+Vous avez déjà suivi un [tutoriel](/fr/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) ou [deux](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser) et vous avez créé un jeu en HTML — c'est génial&nbsp;! L'article [Distribuer votre jeu](/fr/docs/Games/Publishing_games/Game_distribution) vous indique tout ce que vous devez savoir sur les moyens de partager votre toute dernière création — y compris comment vous pouvez l'héberger en ligne, le proposer sur les boutiques en ligne ouvertes, et l'envoyer aux magasins propriétaires comme Google Play ou iOS App Store.
 
 ## Promouvoir votre jeu
 
-Développer et finaliser un jeu ne suffit pas. Vous devez informer le monde que vous avez réalisé quelque chose d'intéressant, avec lequel les gens auront plaisir à jouer. Il y a de nombreux moyens de [Promouvoir votre jeu](/fr/docs/Games/Publishing_games/Game_promotion) — beaucoup d'entre-eux sont gratuits — et donc, même si vous avez du mal à gagner votre vie en tant que développeur indépendant avec un budget nul, vous disposez malgré tout de nombreux moyens d'informer les gens de votre nouveau super jeu. Faire la promotion de votre jeu vous aidera beaucoup notamment si vous souhaitez le monétiser par la suite, il est donc important de le faire correctement.
+Développer et finaliser un jeu ne suffit pas. Vous devez informer le monde que vous avez réalisé quelque chose d'intéressant, avec lequel les gens ont plaisir à jouer. Il y a de nombreux moyens de [Promouvoir votre jeu](/fr/docs/Games/Publishing_games/Game_promotion) — beaucoup d'entre-eux sont gratuits — et donc, même si vous avez du mal à gagner votre vie en tant que développeur·euse indépendant·e avec un budget nul, vous disposez malgré tout de nombreux moyens d'informer les gens de votre nouveau super jeu. Faire la promotion de votre jeu vous aidera beaucoup notamment si vous souhaitez le monétiser par la suite, il est donc important de le faire correctement.
 
 ## Monétiser votre jeu
 
-Après avoir passé beaucoup de temps à coder, publier et promouvoir votre jeu, vous penserez sans doute à un moyen de rémunérer votre travail. [Monétiser son jeu](/fr/docs/Games/Publishing_games/Game_monetization) est essentiel à quiconque considère que le travail qu'il a réalisé pour créer son jeu est fait sérieusement par un développeur de jeux indépendant désormais capable de vivre de ses créations. Découvrez quelles sont vos options. La technologie est suffisamment avancée, la question est de savoir quelle approche sera la meilleure pour vous.
+Après avoir passé beaucoup de temps à coder, publier et promouvoir votre jeu, vous pensez sans doute à un moyen de rémunérer votre travail. [Monétiser son jeu](/fr/docs/Games/Publishing_games/Game_monetization) est essentiel à quiconque considère que le travail qu'il a réalisé pour créer son jeu est fait sérieusement par un·e développeur·euse de jeux indépendant·e désormais capable de vivre de ses créations. Découvrez quelles sont vos options. La technologie est suffisamment avancée, la question est de savoir quelle approche est la meilleure pour vous.

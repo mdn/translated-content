@@ -3,7 +3,7 @@ title: "Element : méthode getHTML()"
 short-title: getHTML()
 slug: Web/API/Element/getHTML
 l10n:
-  sourceCommit: 5d6f5187d1c657edec7e735d3cc5ad36907e2030
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
 {{APIRef("DOM")}}
@@ -16,7 +16,7 @@ Les options peuvent être utilisées pour inclure des racines d'ombre imbriquée
 Sans arguments, les nœuds enfants qui sont des racines d'ombre ne sont pas sérialisés, et cette méthode se comporte de la même manière que la lecture de la valeur de {{DOMxRef("Element.innerHTML")}}.
 
 Notez que certains navigateurs sérialisent les caractères `<` et `>` en `&lt;` et `&gt;` lorsqu'ils apparaissent dans les valeurs d'attribut (voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs)).
-Ceci est pour prévenir une vulnérabilité de sécurité potentielle ([mutation XSS <sup>(angl.)</sup>](https://www.securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass.html)) dans laquelle un·e attaquant·e peut créer une entrée qui contourne une [fonction d'assainissement](/fr/docs/Web/Security/Attacks/XSS#assainissement), permettant une attaque de type script inter-site (XSS).
+Ceci est pour prévenir une vulnérabilité de sécurité potentielle ([mutation XSS <sup>(angl.)</sup>](https://securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass.html)) dans laquelle un·e attaquant·e peut créer une entrée qui contourne une [fonction d'assainissement](/fr/docs/Web/Security/Attacks/XSS#assainissement), permettant une attaque de type script inter-site (XSS).
 
 ## Syntaxe
 

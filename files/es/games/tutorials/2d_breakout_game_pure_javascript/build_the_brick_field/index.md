@@ -1,6 +1,6 @@
 ---
 title: Construye el muro de ladrillos
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field
 ---
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
@@ -125,6 +125,6 @@ Compara tu código con este:
 
 ## Pasos siguientes
 
-¡Así que ahora tenemos ladrillos! Un gran avance pero... la pelota no los rompe, simplemente los atraviesa. En el siguiente capítulo lo arreglaremos: [Detección de colisiones](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection).
+¡Así que ahora tenemos ladrillos! Un gran avance pero... la pelota no los rompe, simplemente los atraviesa. En el siguiente capítulo lo arreglaremos: [Detección de colisiones](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field).
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}

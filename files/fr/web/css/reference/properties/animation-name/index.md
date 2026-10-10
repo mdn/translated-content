@@ -3,7 +3,7 @@ title: Propriété CSS `animation-name`
 short-title: animation-name
 slug: Web/CSS/Reference/Properties/animation-name
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-name`** définit les noms d'une ou plusieurs règles {{CSSxRef("@keyframes")}} qui décrivent l'animation à appliquer à un élément. Plusieurs règles `@keyframes` sont indiquées sous forme de liste de noms séparés par des virgules. Si le nom indiqué ne correspond à aucune règle `@keyframes`, aucune propriété n'est animée.
@@ -101,12 +101,14 @@ animation-name: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme une ou plusieurs valeurs séparées par des virgules&nbsp;:
+
 - `none`
   - : Un mot-clé spécial indiquant aucune image clé (<i lang="en">keyframe</i> en anglais). Il peut être utilisé pour désactiver une animation sans changer l'ordre des autres identifiants, ou pour désactiver les animations provenant de la cascade.
 - {{CSSxRef("&lt;custom-ident&gt;")}}
   - : Un identifiant sans guillemets qui désigne l'animation. Cet identifiant est composé d'une combinaison de lettres sensibles à la casse de `a` à `z`, de chiffres de `0` à `9`, de tirets bas (`_`) et/ou de tirets (`-`). Le premier caractère qui n'est pas un tiret doit être une lettre. De plus, deux tirets sont interdits au début de l'identifiant. Enfin, l'identifiant ne peut pas être `none`, `unset`, `initial` ou `inherit`.
 - {{CSSxRef("&lt;string&gt;")}}
-  - : Une série de caractères suivant les mêmes règles que les identifiants personnalisés, comme décrit ci-dessus, sauf qu'ils sont entourés de guillemets doubles (") ou simples ('). Si vous utilisez une chaîne entre guillemets à la fois pour `animation-name` et pour le nom de la règle {{CSSxRef("@keyframes")}} correspondante, `none`, les mots-clés globaux et les noms commençant par un underscore ou deux tirets sont valides, bien que non recommandés.
+  - : Une série de caractères suivant les mêmes règles que les identifiants personnalisés, comme décrit ci-dessus, sauf qu'ils sont entourés de guillemets doubles (") ou simples ('). Si vous utilisez une chaîne de caractères entre guillemets à la fois pour `animation-name` et pour le nom de la règle {{CSSxRef("@keyframes")}} correspondante, `none`, les mots-clés globaux et les noms commençant par un underscore ou deux tirets sont valides, bien que non recommandés.
 
 > [!NOTE]
 > Lorsque vous indiquez plusieurs valeurs séparées par des virgules sur une propriété `animation-*`, elles sont appliquées aux animations dans l'ordre d'apparition des `animation-name`. Si le nombre d'animations et de valeurs de propriété `animation-*` ne correspond pas, voir [Définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
