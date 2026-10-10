@@ -6,11 +6,11 @@ l10n:
   sourceCommit: 421a9c26127cf11e33e72184b14656c9d406294d
 ---
 
-**`unknown command`** 错误是一种 [WebDriver 错误](/zh-CN/docs/Web/WebDriver/Reference/Errors)，当驱动程序不识别该命令/HTTP 端点时会出现。
+**unknown command** 错误是一种当驱动程序不识别该命令/HTTP 端点时会出现的 [WebDriver 错误](/zh-CN/docs/Web/WebDriver/Reference/Errors)。
 
 ## 示例
 
-`/session/{session id}/foo` 端点不存在，将返回 `unknown command` 错误，HTTP 状态码为 [`404 Not Found`](/zh-CN/docs/Web/HTTP/Reference/Status/404)：
+`/session/{session id}/foo` 端点不存在，将返回 unknown command 错误，HTTP 状态码为 [`404 Not Found`](/zh-CN/docs/Web/HTTP/Reference/Status/404)：
 
 ```bash
 curl -i -d '{}' http://localhost:4444/session/foo
