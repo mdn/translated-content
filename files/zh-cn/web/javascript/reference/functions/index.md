@@ -209,7 +209,6 @@ new GeneratorFunction (arg1, arg2, ... argN, functionBody)
 
 - [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments): 一个包含了传递给当前执行函数参数的类似于数组的对象。
 - [`arguments.callee`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee) {{Deprecated_Inline}}: 当前正在执行的函数。
-- `arguments.caller` {{Deprecated_Inline}}：调用当前执行函数的函数。
 - [`arguments.length`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length): 传给函数的参数的数目。
 
 ## 方法函数定义
