@@ -28,8 +28,8 @@ l10n:
 ### HTML
 
 ```html
-<svg xml:lang="en-US" class="struct" height="1" width="1">点我</svg>
-<label xml:lang="en-US" class="struct"></label>
+<svg xml:lang="zh-CN" class="struct" height="1" width="1">点我</svg>
+<label xml:lang="zh-CN" class="struct"></label>
 
 <p>
   <button>显示 &lt;svg&gt; 的值</button>
@@ -37,8 +37,7 @@ l10n:
 </p>
 
 <p>
-  属性 <code>xml:lang</code> 的本地部分：
-  <output id="result">无。</output>
+  属性 <code>xml:lang</code> 的本地部分：<output id="result">无。</output>
 </p>
 ```
 
