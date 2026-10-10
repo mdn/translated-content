@@ -2,7 +2,7 @@
 title: Cómo los navegadores cargan los sitios web
 slug: Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites
 l10n:
-  sourceCommit: bca4bdeae2c1e3e673c3c138b7003220b164596e
+  sourceCommit: cab1109a0c225299a9fb2b3402bcd4a1931b8ab7
 ---
 
 {{LearnSidebar}}
@@ -46,7 +46,7 @@ Para resumir la [visión general de las tecnologías web](/es/docs/Learn_web_dev
 
 Cuando el usuario navega a una nueva página web (haciendo clic en un enlace o introduciendo una dirección web en la barra de direcciones del navegador), se envían varias solicitudes HTTP y se devuelven varios archivos en las respuestas HTTP. Los archivos recibidos en estas respuestas son procesados por el navegador y unidos en una página web con la que el usuario puede interactuar. Este proceso de ensamblar las piezas en una página web se llama **renderización**.
 
-Las siguientes secciones proporcionan una explicación de alto nivel de cómo un navegador renderiza una página web. Ten en cuenta que esta es una descripción muy simplificada y que los diferentes navegadores manejarán el proceso de diferentes maneras. Sin embargo, esto te dará una idea de los conceptos básicos detrás de cómo funcionan las cosas.
+Las siguientes secciones proporcionan una explicación de alto nivel de cómo un navegador renderiza una página web. Ten en cuenta que esta es una descripción simplificada y que los diferentes navegadores manejarán el proceso de diferentes maneras. Sin embargo, esto te dará una idea de cómo funcionan las cosas.
 
 ## Manejo de HTML
 
@@ -61,7 +61,7 @@ Para empezar, el archivo HTML que contiene el contenido de la página web y defi
 </p>
 ```
 
-Cada elemento, atributo y parte de texto en el HTML se convierte en un **nodo DOM** en la estructura de árbol. Los nodos se definen por su relación con otros nodos DOM. Algunos elementos son padres de nodos hijos y los nodos hijos tienen hermanos. El navegador analizaría el HTML anterior y crearía el siguiente árbol DOM a partir de él:
+Cada elemento, atributo y parte de texto en el HTML se convierte en un **nodo DOM** en la estructura de árbol. Los nodos se definen por su relación con otros nodos DOM. Algunos elementos son padres de nodos hijos y los nodos hijos tienen hermanos. El navegador analizará este HTML y creará el siguiente árbol DOM a partir de él:
 
 ```plain
 P
@@ -74,7 +74,7 @@ P
     └─ "JavaScript"
 ```
 
-En el DOM, el nodo correspondiente a nuestro elemento `<p>` es un padre. Sus hijos son un nodo de texto y los tres nodos correspondientes a nuestros elementos `<span>`. Los nodos `SPAN` también son padres, con nodos de texto como sus hijos. Cuando el navegador renderiza el árbol DOM anterior, se verá así:
+En este árbol DOM, el nodo correspondiente a nuestro elemento `<p>` es un padre. Sus hijos incluyen un nodo de texto y los tres nodos correspondientes a nuestros elementos `<span>`. Los nodos `SPAN` también son padres, con nodos de texto como sus hijos. Cuando el navegador renderiza este árbol DOM, se verá así:
 
 {{EmbedLiveSample('Handling the HTML', '100%', 55)}}
 
@@ -92,7 +92,7 @@ Ciertos elementos HTML, cuando se analizan, activarán más solicitudes HTTP:
 
 ## Análisis de CSS y renderización de la página
 
-A continuación, veamos cómo se maneja el CSS.
+A continuación, se procesa el CSS.
 
 1. El navegador analiza el CSS que se encuentra en la página (ya sea incluido en el archivo HTML o obtenido de hojas de estilo externas) y clasifica las diferentes reglas de estilo CSS en diferentes "contenedores" según a qué elementos HTML (representados en el DOM como elementos llamados **nodos**) se aplicarán. Luego, el navegador adjunta estilos a los diferentes elementos según sea necesario (este paso intermedio se llama árbol de renderizado).
 2. El árbol de renderizado se presenta en la estructura en la que debería aparecer después de que se hayan aplicado las reglas. Esto incluye cualquier imagen y otros archivos multimedia que se van a incrustar en la página.
@@ -128,7 +128,7 @@ La salida actualizada es la siguiente:
 
 ## Manejo de JavaScript
 
-Cualquier JavaScript que se encuentre en la página (ya sea incluido en el archivo HTML u obtenido de archivos de script externos) se analiza, interpreta, compila y ejecuta. Esto sucede en algún momento antes de que se complete la renderización final de la página; después de todo, algún JavaScript puede afectar la renderización, por ejemplo, agregando nodos al DOM o modificando los existentes.
+Después de procesar el CSS, cualquier JavaScript que se encuentre en la página (ya sea incluido en el archivo HTML u obtenido de archivos de script externos) se analiza, interpreta, compila y ejecuta. Esto sucede en algún momento antes de que se complete la renderización final de la página; después de todo, algún JavaScript puede afectar la renderización, por ejemplo, agregando nodos al DOM o modificando los existentes.
 
 Volviendo a nuestro ejemplo, digamos que el siguiente JavaScript se encuentra en el archivo HTML:
 
@@ -180,5 +180,10 @@ Por otro lado, la web también es un entorno de programación increíble, por mu
 - La entrega de aplicaciones a través de la web es simple y poderosa. No necesitas llevar a tus usuarios a través de un complicado proceso de instalación: simplemente los diriges a una dirección web y listo.
 - Las actualizaciones de las aplicaciones suelen ser sencillas. En muchos casos, los visitantes pueden ver nuevas versiones de una aplicación cuando vuelven a cargar la pestaña de su navegador. No necesitas preocuparte de que los visitantes descarguen e instalen regularmente actualizaciones de software.
 - La comunidad web es vibrante y útil. Como comentamos más adelante en nuestro artículo de [Investigación y aprendizaje](/es/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning), hay muchos lugares a los que puedes acudir para pedir ayuda, y excelentes recursos disponibles para aprender.
+
+## Véase también
+
+- [Cuándo y cómo reportar errores a los navegadores](/es/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs)
+  - : Si algo no funciona como esperas en un navegador, podría tratarse de un error del navegador. Este artículo explica cómo averiguar si lo es y, en ese caso, cómo reportarlo.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}

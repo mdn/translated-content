@@ -2,7 +2,7 @@
 title: Configuración del entorno
 slug: Learn_web_development/Getting_started/Environment_setup
 l10n:
-  sourceCommit: 9b80c652eda0b516f3ed7f9be3b90f59aa9982e1
+  sourceCommit: e3a2272d272f21ea38e5fff9bd6ccec2d0dfb1a8
 ---
 
 {{LearnSidebar}}
@@ -21,7 +21,7 @@ Este módulo no asume ningún conocimiento técnico previo, más allá del uso b
 
 Si necesitas repasar estos conceptos básicos, te recomendamos los siguientes recursos, según el sistema operativo que estés utilizando:
 
-- [Windows help and learning](https://support.microsoft.com/windows), Microsoft (2025)
+- [Windows help and learning](https://support.microsoft.com/en-us/windows/), Microsoft (2025)
 - [macOS User Guide](https://support.apple.com/guide/mac-help/welcome/mac), Apple (2025)
 - [Official Ubuntu documentation](https://help.ubuntu.com/), ubuntu.com (2025)
 
@@ -37,5 +37,3 @@ Si necesitas repasar estos conceptos básicos, te recomendamos los siguientes re
   - : Este artículo analiza algunos problemas de los que debes ser consciente con los sistemas de archivos, para que puedas configurar una estructura de archivos sensata para tu sitio web.
 - [Curso intensivo de línea de comandos](/es/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)
   - : Este artículo proporciona una introducción a la terminal, los comandos esenciales que deberás introducir en ella, cómo encadenar comandos y cómo añadir tus propias herramientas de interfaz de línea de comandos (CLI).
-
-## Véase también

@@ -3,7 +3,7 @@ title: ¿Qué hay en la cabecera? Metadatos de la página web
 short-title: Metadatos de la página web
 slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 l10n:
-  sourceCommit: 0d59135676db5a372b4dd692f0686e6bdfc13b51
+  sourceCommit: a2e0aee81b78bd02721fa2d9da0fa3b90b65a89f
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content")}}
@@ -198,6 +198,8 @@ Un efecto de esto es que cuando enlazas a MDN Web Docs en Facebook, el enlace ap
 Para enriquecer aún más el diseño de tu sitio, puedes añadir referencias a iconos personalizados en tus metadatos, que se mostrarán en determinados contextos. El más usado de ellos es el **favicon** (abreviatura de "favorites icon", en referencia a su uso en las listas de "favoritos" o "marcadores" de los navegadores).
 
 El humilde favicon existe desde hace muchos años. Es el primer ícono de este tipo: un ícono cuadrado de 16 píxeles que se usa en varios lugares. Es posible que veas (según el navegador) favicons mostrados en la pestaña del navegador que contiene cada página abierta, y junto a las páginas marcadas en el panel de marcadores.
+
+![Una ventana de navegador esquemática con dos pestañas, cada una con un favicon a la izquierda del título de la página: el logotipo de MDN en la pestaña activa "MDN Web Docs" y un icono de libro en la pestaña "Another page".](favicon.svg)
 
 Se puede añadir un favicon a tu página de la siguiente manera:
 

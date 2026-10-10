@@ -1,26 +1,27 @@
 ---
-title: XMLHttpRequest.withCredentials
+title: "XMLHttpRequest : propriété withCredentials"
+short-title: withCredentials
 slug: Web/API/XMLHttpRequest/withCredentials
+l10n:
+  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers("window_and_worker_except_service")}}
 
-La propriété **`XMLHttpRequest.withCredentials`** est un booléen qui indique si une requête `Access-Control` entre plusieurs sites devrait être réalisée avec des informations d'authentification (_credentials_) telles que des cookies, des en-têtes d'autorisation ou des certificats clients. Activer `withCredentials` n'aura aucun impact sur les requêtes effectuées sur un même site.
+La propriété **`withCredentials`** de l'interface {{DOMxRef("XMLHttpRequest")}} est une valeur booléenne qui indique si les requêtes `Access-Control` inter-sites doivent être effectuées en utilisant des informations d'identification telles que des cookies, des en-têtes d'authentification ou des certificats client TLS. La définition de `withCredentials` n'a aucun effet sur les requêtes de même origine.
 
-Cette propriété est également utilisée afin d'indiquer lorsque les cookies doivent être ignorés pour une réponse. Par défaut, la valeur est à `false`. Une requête `XMLHttpRequest` d'un autre domaine ne pourra pas définir de cookies pour cet autre domaine à moins que `withCredentials` vaille `true` avant la requête.
-
-Les cookies tiers obtenus lorsque `withCredentials` vaut `true` continuent de respecter la règle de même origine et ne peuvent donc pas être manipulés en script via [`document.cookie`](/fr/docs/Web/API/Document/cookie) ou depuis les en-têtes de la réponse.
+De plus, ce drapeau est également utilisé pour indiquer quand les cookies doivent être ignorés dans la réponse. La valeur par défaut est `false`. Les réponses `XMLHttpRequest` provenant d'un domaine différent ne peuvent pas définir de valeurs de cookie pour leur propre domaine à moins que `withCredentials` ne soit défini sur `true` avant d'effectuer la requête. Les [cookies tiers](/fr/docs/Web/Privacy/Guides/Third-party_cookies) obtenus en définissant `withCredentials` sur `true` respectent toujours la politique de même origine et ne peuvent donc pas être accessibles par le script demandeur avec {{DOMxRef("Document.cookie")}} ou à partir des en-têtes de réponse.
 
 > [!NOTE]
-> Cette propriété n'a aucun impact pour les requêtes effectuées sur le même site.
+> Cela n'affecte jamais les requêtes de même origine.
 
 > [!NOTE]
-> Les réponses `XMLHttpRequest` provenant d'un domaine différent ne peuvent pas définir de cookies pour ce domaine à moins d'avoir `withCredentials` à `true` avant l'envoi de la requête (quelle que soit la valeur de l'en-tête `Access-Control-`).
+> Les réponses `XMLHttpRequest` provenant d'un domaine différent _ne peuvent pas_ définir de valeurs de cookie pour leur propre domaine à moins que `withCredentials` ne soit défini sur `true` avant d'effectuer la requête, indépendamment des valeurs des en-têtes `Access-Control-`.
 
 ## Exemples
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open("GET", "http://example.com/", true);
 xhr.withCredentials = true;
 xhr.send(null);

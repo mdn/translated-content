@@ -48,7 +48,7 @@ myHeaders.get("Content-Type"); // Returns 'image/jpeg'
 ```js
 myHeaders.append("Accept-Encoding", "deflate");
 myHeaders.append("Accept-Encoding", "gzip");
-myHeaders.getAll("Accept-Encoding"); // Returns [ "deflate", "gzip" ]
+myHeaders.get("Accept-Encoding"); // Returns 'deflate, gzip'
 ```
 
 要使用新值覆盖旧值，请使用{{domxref("Headers.set")}}。

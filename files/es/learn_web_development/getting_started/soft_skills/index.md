@@ -2,7 +2,7 @@
 title: Habilidades blandas
 slug: Learn_web_development/Getting_started/Soft_skills
 l10n:
-  sourceCommit: 9cb5158a90dfff3140735af4dada772d00168e77
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
 {{LearnSidebar}}

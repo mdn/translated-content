@@ -112,7 +112,6 @@ try {
 
 ## 参见
 
-- [Components.stack](/zh-CN/docs/Components.stack)
 - 外部项目：[TraceKit](https://github.com/csnover/TraceKit/) and [javascript-stacktrace](https://github.com/eriwen/javascript-stacktrace)
 - MSDN：[error.stack](http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx) docs
 - [Overview of the V8 JavaScript stack trace API](https://github.com/v8/v8/wiki/Stack%20Trace%20API)
