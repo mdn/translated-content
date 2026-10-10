@@ -4,9 +4,9 @@ slug: conflicting/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}
 
-Este es el noveno paso de 10 del [tutorial Canvas para el desarrollo de juegos](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código y pegarle un vistazo después de completar esta lección [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html).
+Este es el noveno paso de 10 del [tutorial Canvas para el desarrollo de juegos](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Puedes encontrar el código y pegarle un vistazo después de completar esta lección [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html).
 
 El juego en sí está terminado, así que ahora vamos a pulirlo. Ya le hemos puesto el control del teclado y ahora le añadiremos el control del ratón.
 
@@ -50,4 +50,4 @@ Aquí tienes el código para comparar:
 
 Ya tenemos el juego terminado, pero aún lo podemos mejorar con algunos trucos [Finalizando](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives).
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}

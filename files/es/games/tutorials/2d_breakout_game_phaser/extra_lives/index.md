@@ -23,7 +23,7 @@ Estas almacenarán las vidas, el texto que muestra el número de vidas restante,
 
 ## Definiendo las nuevas etiquetas de texto
 
-Definir los textos es parecido a algo que ya hicimos en la lección de la [puntuación](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score). Añade las siguientes líneas debajo de la definición de `scoreText` dentro de la función `create()`:
+Definir los textos es parecido a algo que ya hicimos en la lección de la [puntuación](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win). Añade las siguientes líneas debajo de la definición de `scoreText` dentro de la función `create()`:
 
 ```js
 livesText = game.add.text(game.world.width - 5, 5, "Lives: " + lives, {

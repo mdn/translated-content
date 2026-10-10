@@ -18,15 +18,15 @@ Para aprovechar al máximo esta serie de artículos necesitas tener ya un conoci
 Todas las lecciones y las diferentes versiones del [famoso juego MDN](http://breakout.enclavegames.com/lesson10.html) que estamos construyendo juntos están [disponibles en GitHub](https://github.com/end3r/Canvas-gamedev-workshop):
 
 1. [Crea el lienzo (canvas) y dibuja en él](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas)
-2. [Mueve la bola](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)
-3. [Rebota en las paredes](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls)
-4. [Control de la pala y el teclado](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)
-5. [Fin del juego](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over)
-6. [Construye el muro de ladrillos](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
+2. [Mueve la bola](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball)
+3. [Rebota en las paredes](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls)
+4. [Control de la pala y el teclado](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls)
+5. [Fin del juego](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over)
+6. [Construye el muro de ladrillos](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)
 7. [Detección de colisiones](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)
-8. [Cuenta los puntos y gana](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)
+8. [Cuenta los puntos y gana](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win)
 9. [Controles del ratón](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls)
-10. [Finalizando](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up)
+10. [Finalizando](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives)
 
 Empezar con JavaScript puro es la mejor forma de adquirir un conocimiento sólido sobre desarrollo de juegos. Después, puedes escoger cualquier entorno de desarrollo (framework) que te guste y usarlo para tus proyectos. Los frameworks son simplemente herramientas construidas con el lenguaje JavaScript; por tanto aunque planees trabajar con ellas, es bueno aprender primero sobre el mismo lenguaje para saber exactamente qué es lo que hay por debajo. Los frameworks aceleran el tiempo de desarrollo y ayudan a tener en cuenta las partes aburridas del juego, pero si algo no funciona como esperas, siempre puedes intentar depurarlo o simplemente escribir tu solución en JavaScript puro.
 
@@ -38,6 +38,6 @@ Empezar con JavaScript puro es la mejor forma de adquirir un conocimiento sólid
 
 ## Siguientes pasos
 
-Vale, ¡vamos a empezar! Dirígete hacia el primer tema — [Crea el lienzo (canvas) y dibuja en él](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it).
+Vale, ¡vamos a empezar! Dirígete hacia el primer tema — [Crea el lienzo (canvas) y dibuja en él](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas).
 
 {{Next("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas")}}
