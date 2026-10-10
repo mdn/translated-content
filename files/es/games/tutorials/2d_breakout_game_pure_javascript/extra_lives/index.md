@@ -6,7 +6,7 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 
 {{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
 
-Este es el último de los 10 pasos del [Gamedev Canvas tutorial](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente tal y como quedará al terminar esta lección en [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).
+Este es el último de los 10 pasos del [Gamedev Canvas tutorial](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Puedes encontrar el código fuente tal y como quedará al terminar esta lección en [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).
 
 Siempre es posible mejorar cualquier juego que hagamos. Por ejemplo, podemos dar vidas al jugador. Así, aunque pierda la bola una o dos veces, todavía puede intentar derribar todo el muro. También podemos mejorar los aspectos gráficos.
 
@@ -100,6 +100,6 @@ Enhorabuena, has terminado todas las lecciones. Ya has aprendido las técnicas b
 
 Ahora sería un buen momento para aprender a utilizar entornos de desarrollo (frameworks) y de continuar con el desarrollo de juegos. Puedes echar un vistazo a estas otra forma de realizar el mismo juego que has visto en [2D breakout game using Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser), o de echar un vistazo al tutorial [Cyber Orb built in Phaser](/es/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation). También puedes leer el contenido de [Games section on MDN](/es/docs/Games) para inspirarte y seguir aprendiendo.
 
-También puedes volve al [índice de este tutorial](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). ¡Diviértete programando!
+También puedes volve al [índice de este tutorial](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). ¡Diviértete programando!
 
 {{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}

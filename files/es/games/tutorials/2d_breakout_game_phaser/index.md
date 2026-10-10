@@ -28,15 +28,15 @@ Todas las lecciones - y las diferentes versiones del [juego MDN Breakout](https:
 7. [Paleta y controles del jugador](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)
 8. [Fin del juego](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
 9. [Construir el campo de ladrillos](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
-10. [Detección de colisiones](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection)
-11. [Puntuación](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
+10. [Detección de colisiones](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
+11. [Puntuación](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win)
 12. [Ganar la partida](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game)
 13. [Vidas extra](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)
 14. [Animaciones y keyframes intermedios](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
 15. [Botones](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
 16. [Aleatorización del juego](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
 
-Como nota sobre las vías de aprendizaje - comenzar con JavaScript puro es la mejor manera de obtener un conocimiento sólido del desarrollo de juegos web. Si aún no estás familiarizado con el desarrollo de juegos en JavaScript puro, te sugerimos que primero trabajes con la contraparte de esta serie, [Breakout: juego en 2D usando JavaScript puro](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript).
+Como nota sobre las vías de aprendizaje - comenzar con JavaScript puro es la mejor manera de obtener un conocimiento sólido del desarrollo de juegos web. Si aún no estás familiarizado con el desarrollo de juegos en JavaScript puro, te sugerimos que primero trabajes con la contraparte de esta serie, [Breakout: juego en 2D usando JavaScript puro](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript).
 
 Después de eso, puedes elegir cualquier framework que te guste y usarlo para tus proyectos; nosotros hemos elegido Phaser porque es un buen framework sólido, con un buen soporte y comunidad disponible, y un buen conjunto de plugins. Los frameworks aceleran el tiempo de desarrollo y ayudan a ocuparse de las partes aburridas, permitiéndote concentrarte en las cosas divertidas. Sin embargo, los frameworks no siempre son perfectos, así que si sucede algo inesperado o quieres escribir alguna funcionalidad que el framework no proporciona, necesitarás algunos conocimientos de JavaScript puro.
 

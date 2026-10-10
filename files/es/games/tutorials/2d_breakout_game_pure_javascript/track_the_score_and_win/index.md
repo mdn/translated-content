@@ -5,7 +5,7 @@ slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
-Este es el **octavo** capítulo de 10, del [Gamedev Canvas tutorial](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente como debería quedar tras este capítulo en [Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html).
+Este es el **octavo** capítulo de 10, del [Gamedev Canvas tutorial](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Puedes encontrar el código fuente como debería quedar tras este capítulo en [Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html).
 
 Destruir los ladrillos mola, pero para que el juego sea aún mejor, podría dar puntos cada vez que el jugador rompe un ladrillo, y mostrar un contador.
 

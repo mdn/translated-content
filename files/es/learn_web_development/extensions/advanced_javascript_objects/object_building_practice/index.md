@@ -278,7 +278,7 @@ Esperamos que se haya divertido escribiendo su propio mundo de pelotas que choca
 - [requestAnimationFrame()](/es/docs/Web/API/Window/requestAnimationFrame)
 - [2D detección de colisiones](/es/docs/Games/Techniques/2D_collision_detection)
 - [3D detección de colisiones](/es/docs/Games/Techniques/3D_collision_detection)
-- [2D juego de ruptura usando sólo JavaScript](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — un gran tutorial para principiantes sobre como construir un juego 2D.
+- [2D juego de ruptura usando sólo JavaScript](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) — un gran tutorial para principiantes sobre como construir un juego 2D.
 - [2D juego de ruptura usando Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser) — explica los conceptos fundamentales para construir un juego 2D usando una librería de juegos de JavaScript.
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
