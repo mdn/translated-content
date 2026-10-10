@@ -1,9 +1,23 @@
 ---
 title: <animate>
 slug: Web/SVG/Reference/Element/animate
+l10n:
+  sourceCommit: 3064cbe8212ea919874fb21120a89657afccba25
 ---
 
-动画元素放在形状元素的内部，用来定义一个元素的某个属性如何踩着时点改变。在指定持续时间里，属性从开始值变成结束值。
+**`<animate>`** [SVG](/zh-CN/docs/Web/SVG) 元素用于随时间对元素的某个属性做动画。
+
+## 使用上下文
+
+{{svginfo}}
+
+## 属性
+
+此元素仅包含全局属性。
+
+## DOM 接口
+
+该元素实现了 {{domxref("SVGAnimateElement")}} 接口。
 
 ## 示例
 
@@ -29,36 +43,19 @@ svg {
 </svg>
 ```
 
-<p>{{EmbedLiveSample('示例', 150, '100%')}}</p>
+{{EmbedLiveSample('示例', 150, '100%')}}
 
-## 属性
+## 无障碍考虑
 
-### 动画属性
+眨眼和闪烁的动画对存在认知问题（例如注意缺陷多动障碍（ADHD））的人可能造成困扰。此外，某些运动可能诱发前庭障碍、癫痫、偏头痛和暗点敏感性。
 
-- [动画时间属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画时间属性)
-  - : {{SVGAttr("begin")}}、{{SVGAttr("dur")}}、{{SVGAttr("end")}}、{{SVGAttr("min")}}、{{SVGAttr("max")}}、{{SVGAttr("restart")}}、{{SVGAttr("repeatCount")}}、{{SVGAttr("repeatDur")}}、{{SVGAttr("fill")}}
-- [动画取值属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画取值属性)
-  - : {{SVGAttr("calcMode")}}、{{SVGAttr("values")}}、{{SVGAttr("keyTimes")}}、{{SVGAttr("keySplines")}}、{{SVGAttr("from")}}、{{SVGAttr("to")}}、{{SVGAttr("by")}}
-- [其他动画属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画额外属性)
-  - : 最主要的有：{{SVGAttr("attributeName")}}、{{SVGAttr("additive")}}、{{SVGAttr("accumulate")}}
-- [动画事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画事件属性)
-  - : 最主要的有：{{SVGAttr("onbegin")}}、{{SVGAttr("onend")}}、{{SVGAttr("onrepeat")}}
+考虑提供一种暂停或禁用动画的机制，并使用[减少动画媒体查询](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion)或等效的[用户代理客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#用户代理客户端提示) {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}，为已表明希望没有动画体验的用户提供互补体验。
 
-## 使用说明
-
-该元素实现了 {{domxref("SVGAnimateElement")}} 接口。
-
-## 无障碍说明
-
-对于存在认知问题（如，患有注意缺陷多动障碍 (ADHD)）的人来说，闪烁动画可能会引发一些问题。此外，某些动画可能会引起前庭相关疾病、癫痫、偏头痛和光敏综合征（Scotopic sensitivity）。
-
-考虑提供一种暂停或禁用动画的机制，并配合使用[偏好减少动画的媒体查询](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion)来为不喜欢动画的用户提供更舒适的体验。
-
-- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
-- [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
-- [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN Understanding WCAG, Guideline 2.2 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
-- [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
+- [为运动敏感设计更安全的网页动画 · A List Apart 文章](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
+- [减少动画媒体查询简介 | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
+- [面向运动的响应式设计 | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
+- [MDN 对 WCAG 的理解：对指南 2.2 的解读](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#指南_2.2_—_足够的时间_为用户提供足够的时间来阅读和使用内容)
+- [理解成功标准 2.2.2 | W3C 对 WCAG 2.0 的解读](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
 ## 规范
 
