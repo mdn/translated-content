@@ -34,5 +34,5 @@ WebDriver 有两种变体：使用 HTTP 的 [WebDriver classic](/zh-CN/docs/Web/
 
 ## 参见
 
-- [跨浏览器测试](/zh-CN/docs/Learn_web_development/Extensions/Testing)
+- [测试](/zh-CN/docs/Learn_web_development/Extensions/Testing)
 - [Selenium 文档](https://www.selenium.dev/documentation/)
