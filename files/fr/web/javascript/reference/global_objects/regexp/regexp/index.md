@@ -1,72 +1,86 @@
 ---
 title: Constructeur RegExp()
+short-title: RegExp()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-Le constructeur **`RegExp`** crée une expression rationnelle pour manipuler les correspondances trouvées dans un texte par rapport à un motif.
+Le constructeur **`RegExp()`** crée des objets {{JSxRef("RegExp")}}.
 
-Pour une introduction au sujet des expressions rationnelles, nous vous conseillons de lire [le chapitre sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide).
+Pour une introduction aux expressions rationnelles, lisez le [chapitre sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) dans le [guide JavaScript](/fr/docs/Web/JavaScript/Guide).
 
-{{InteractiveExample("JavaScript Demo: RegExp Constructor")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: constructeur RegExp()")}}
 
 ```js interactive-example
 const regex1 = /\w+/;
 const regex2 = new RegExp("\\w+");
 
 console.log(regex1);
-// Expected output: /\w+/
+// Résultat attendu : /\w+/
 
 console.log(regex2);
-// Expected output: /\w+/
+// Résultat attendu : /\w+/
 
 console.log(regex1 === regex2);
-// Expected output: false
+// Résultat attendu : false
 ```
 
 ## Syntaxe
 
-Il est possible d'utiliser des syntaxes littérales, d'utiliser un constructeur ou la fonction directement&nbsp;:
-
-```js
-/motif/marqueurs
-new RegExp(motif[, marqueurs])
-RegExp(motif[, marqueurs])
+```js-nolint
+new RegExp(pattern)
+new RegExp(pattern, flags)
+RegExp(pattern)
+RegExp(pattern, flags)
 ```
+
+> [!NOTE]
+> `RegExp()` peut être appelé avec ou sans {{JSxRef("new")}}, mais parfois avec des effets différents. Voir la section [Valeur de retour](#valeur_de_retour).
 
 ### Paramètres
 
-- `motif`
-  - : Le texte de l'expression rationnelle.
+- `pattern`
+  - : Le texte de l'expression rationnelle. Il peut également s'agir d'un autre objet `RegExp`.
 
-    Avec ES5, ce peut être un autre objet `RegExp` ou une valeur littérale (uniquement lorsqu'on utilise la notation avec la fonction / le constructeur). Un motif peut contenir [des caractères spéciaux](/fr/docs/Web/JavaScript/Guide/Regular_expressions) pour cibler un ensemble plus large de valeurs que ce que permet une chaîne de caractère littérale.
+- `flags` {{Optional_Inline}}
+  - : Si définit, `flags` est une chaîne de caractères qui contient les indicateurs à ajouter. Par ailleurs, si un objet `RegExp` est fourni pour `pattern`, la chaîne de caractères `flags` remplace tous les indicateurs de cet objet (et `lastIndex` est réinitialisé à `0`).
 
-- `marqueurs`
-  - : Si cet argument est utilisé, c'est une chaîne de caractères qui contient les marqueurs à ajouter à l'expression rationnelle.
+    `flags` peut contenir n'importe quelle combinaison des caractères suivants&nbsp;:
+    - [`d` (indices)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices)
+      - : Génère des indices pour les correspondances de sous-chaînes de caractères.
+    - [`g` (global)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global)
+      - : Trouve toutes les correspondances plutôt que de s'arrêter après la première correspondance.
+    - [`i` (ignore case)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase)
+      - : Lors de la correspondance, les différences de casse sont ignorées.
+    - [`m` (multiline)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline)
+      - : Traite les assertions de début et de fin (`^` et `$`) comme fonctionnant sur plusieurs lignes. En d'autres termes, correspond au début ou à la fin de _chaque_ ligne (délimitée par `\n` ou `\r`), et pas seulement au tout début ou à la toute fin de l'ensemble de la chaîne de caractères d'entrée.
+    - [`s` (dotAll)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll)
+      - : Permet à `.` de correspondre aux sauts de ligne.
+    - [`u` (unicode)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)
+      - : Traite `pattern` comme une séquence de points de code Unicode.
+    - [`v` (unicodeSets)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets)
+      - : Une amélioration de l'indicateur `u` qui permet la notation d'ensemble dans les classes de caractères ainsi que les propriétés des chaînes de caractères.
+    - [`y` (sticky)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)
+      - : Correspond uniquement à partir de l'index indiqué par la propriété `lastIndex` de cette expression rationnelle dans la chaîne de caractères cible. N'essaie pas de correspondre à partir d'index ultérieurs.
 
-    Si c'est un objet qui est fourni pour le motif, les marqueurs fournis par ce deuxième paramètre remplaceront les marqueurs provenant de l'objet (et `lastIndex` sera réinitialisé à `0`) (ES2015).
+### Valeur de retour
 
-    Si `marqueurs` n'est pas indiqué comme argument et que le premier paramètre est un objet représentant une expression rationnelle, les marqueurs de ce dernier (y compris `lastIndex`) seront recopiés sur la nouvelle instance.
+`RegExp(pattern)` retourne `pattern` directement si toutes les conditions suivantes sont remplies&nbsp;:
 
-    `marqueurs` peut contenir toute combinaison avec les caractères suivants&nbsp;:
-    - `d` (indices)
-      - : Génère les indices des positions pour les sous-chaînes correspondantes.
-    - `g` (recherche globale)
-      - : Trouve l'ensemble des correspondances plutôt que de s'arrêter à la première.
-    - `i` (sensibilité à la casse)
-      - : Si le marqueur `u` est également activé, active le repliage de casse Unicode (<i lang="en">case folding</i>).
-    - `m` (multiligne)
-      - : Les caractères (`^` et `$`) fonctionnent sur plusieurs lignes. Autrement dit, ils correspondent aux débuts et aux fins de chaque ligne (délimitées par `\n` ou `\r`) et pas uniquement au début ou à la fin de la chaîne de caractère étudiée.
-    - `s` ("dotAll")
-      - : Permet à `.` de correspondre à des nouvelles lignes.
-    - `u` (unicode)
-      - : Traite `motif` comme une séquence de codets Unicode (voir aussi [les chaînes de caractères binaires](/fr/docs/Web/API/Window/btoa)).
-    - `y` (adhérence)
-      - : Ne cherche les correspondances dans la chaîne cible qu'à partir de l'indice porté par la propriété `lastIndex` de l'expression rationnelle. N'effectue pas de recherche sur des indices antérieurs.
+- `RegExp()` est appelé sans [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new)&nbsp;;
+- [`pattern` est une expression rationnelle](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp#gestion_spéciale_pour_les_expressions_rationnelles)&nbsp;;
+- `pattern.constructor === RegExp` (généralement signifiant que ce n'est pas une sous-classe)&nbsp;;
+- `flags` est `undefined`.
+
+Dans tous les autres cas, appeler `RegExp()` avec ou sans `new` crée un nouvel objet `RegExp`. Si `pattern` est une expression rationnelle, la [source](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/source) du nouvel objet est `pattern.source`&nbsp;; sinon, sa source est `pattern` [converti en chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#conversion_en_chaîne_de_caractères). Si le paramètre `flags` n'est pas `undefined`, les [`flags`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) du nouvel objet prennent la valeur du paramètre&nbsp;; sinon, ses `flags` sont `pattern.flags` (si `pattern` est une expression rationnelle).
 
 ### Exceptions
 
-- Si `motif` ne peut être interprété comme une expression rationnelle valide, une exception [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) sera levée.
-- Si `marqueurs` contient des caractères répétés ou en dehors de ceux autorisés, une exception [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) sera levée.
+- {{JSxRef("SyntaxError")}}
+  - : Levée dans l'un des cas suivants&nbsp;:
+    - `pattern` ne peut pas être interprété comme une expression rationnelle valide.
+    - `flags` contient des caractères répétés ou des caractères en dehors de ceux autorisés.
 
 ## Exemples
 
@@ -74,8 +88,8 @@ RegExp(motif[, marqueurs])
 
 Il existe deux façons de créer un objet `RegExp`&nbsp;: en utilisant _une notation littérale_ ou _un constructeur_.
 
-- **Pour la notation littérale**, les paramètres sont encadrés de barres obliques et on n'utilise pas de guillemets ou de quotes.
-- **Pour le constructeur**, les paramètres sont délimités entre guillemets/quotes et pas avec des barres obliques.
+- La _notation littérale_ prend un motif entre deux barres obliques, suivi d'indicateurs optionnels, après la deuxième barre oblique.
+- La _fonction constructeur_ prend soit une chaîne de caractères, soit un objet `RegExp` comme premier paramètre et une chaîne de caractères d'indicateurs optionnels comme second paramètre.
 
 Les trois expressions suivantes permettent de créer la même expression rationnelle&nbsp;:
 
@@ -85,9 +99,27 @@ new RegExp(/ab+c/, "i"); // Notation littérale
 new RegExp("ab+c", "i"); // Constructeur
 ```
 
-La notation littérale provoque la compilation de l'expression rationnelle lorsque l'expression est évaluée. On utilisera la notation littérale lorsque l'expression rationnelle demeure constante. Ainsi, si on utilise une notation littérale pour construire une expression rationnelle utilisée dans une boucle, l'expression rationnelle ne sera pas recompilée à chaque itération.
+Avant de pouvoir utiliser des expressions rationnelles, elles doivent être compilées. Ce processus leur permet d'effectuer des correspondances plus efficacement. Il existe deux façons de compiler et d'obtenir un objet `RegExp`.
 
-L'utilisation du constructeur (`new RegExp('ab+c')`) causera une compilation à l'exécution pour l'expression rationnelle. On utilisera le constructeur lorsqu'on sait que le motif changera ou qu'on ne connait pas, par avance le motif (par exemple s'il provient d'autre source).
+Les résultats de la notation littérale entraînent la compilation de l'expression rationnelle lorsque l'expression est évaluée. En revanche, le constructeur de l'objet `RegExp`, `new RegExp('ab+c')`, entraîne une compilation à l'exécution de l'expression rationnelle.
+
+Utilisez une chaîne de caractères comme premier argument du constructeur `RegExp()` lorsque vous souhaitez [construire l'expression rationnelle à partir d'une entrée dynamique](#construire_une_expression_rationnelle_à_partir_dentrées_dynamiques).
+
+### Construire une expression rationnelle à partir d'entrées dynamiques
+
+```js
+const petitDejeuners = [
+  "bacon",
+  "œufs",
+  "flocons d'avoine",
+  "toast",
+  "céréales",
+];
+const commande = "Je voudrais du bacon et des œufs, s'il vous plaît";
+
+commande.match(new RegExp(`\\b(${petitDejeuners.join("|")})\\b`, "g"));
+// Retourne ['bacon', 'œufs']
+```
 
 ## Spécifications
 
@@ -99,7 +131,7 @@ L'utilisation du constructeur (`new RegExp('ab+c')`) causera une compilation à 
 
 ## Voir aussi
 
-- [Le chapitre sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) dans [le guide JavaScript](/fr/docs/Web/JavaScript/Guide)
-- [`String.prototype.match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match)
-- [`String.prototype.replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
-- [Une prothèse d'émulation pour certaines fonctionnalités `RegExp` (`dotAll`, marqueur d'adhérence, groupes de capture nommés, etc.) sur `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [La prothèse d'émulation pour de nombreuses fonctionnalités modernes de `RegExp` (`dotAll`, indicateur `sticky`, groupes de capture nommés, etc.) dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- Le guide [des expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
+- La méthode {{JSxRef("String.prototype.match()")}}
+- La méthode {{JSxRef("String.prototype.replace()")}}
