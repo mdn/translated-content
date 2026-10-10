@@ -18976,38 +18976,6 @@
       "jvalencia"
     ]
   },
-  "conflicting/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework": {
-    "modified": "2019-01-17T02:28:53.459Z",
-    "contributors": [
-      "wbamberg",
-      "proncaglia"
-    ]
-  },
-  "conflicting/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win": {
-    "modified": "2020-04-05T22:13:29.758Z",
-    "contributors": [
-      "KevinPiola",
-      "carlosgocereceda",
-      "serarroy"
-    ]
-  },
-  "conflicting/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field": {
-    "modified": "2019-03-18T20:48:38.662Z",
-    "contributors": [
-      "juanedsa",
-      "wbamberg",
-      "profesooooor",
-      "emolinerom"
-    ]
-  },
-  "conflicting/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls": {
-    "modified": "2019-01-17T00:34:40.600Z",
-    "contributors": [
-      "wbamberg",
-      "profesooooor",
-      "emolinerom"
-    ]
-  },
   "conflicting/Glossary/Doctype": {
     "modified": "2019-01-17T00:20:06.485Z",
     "contributors": [
