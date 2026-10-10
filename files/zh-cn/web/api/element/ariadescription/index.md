@@ -1,5 +1,5 @@
 ---
-title: "Element：ariaDescription 属性"
+title: Element：ariaDescription 属性
 short-title: ariaDescription
 slug: Web/API/Element/ariaDescription
 l10n:
@@ -16,7 +16,7 @@ l10n:
 
 ## 示例
 
-在这个示例中，拥有 `close-button` ID 的元素的 `aria-description` 属性被设置为字符串 "关于此元素更详细的描述"。 使用 `ariaDescription` 可以更新该值。
+在这个示例中，拥有 `close-button` ID 的元素的 `aria-description` 属性被设置为字符串 "关于此元素更详细的描述"。使用 `ariaDescription` 可以更新该值。
 
 ```html
 <button
