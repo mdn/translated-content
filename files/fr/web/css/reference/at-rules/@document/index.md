@@ -21,7 +21,7 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
 }
 ```
 
-Une règle `@document` peut définir une ou plusieurs fonctions de correspondance. Si l'une quelconque des règles s'applique à l'URL donnée, la règle prendra effet sur cette URL. Les fonctions disponibles sont&nbsp;:
+Une règle `@document` peut définir une ou plusieurs fonctions de correspondance. Si l'une quelconque des règles s'applique à l'URL donnée, la règle prend effet sur cette URL. Les fonctions disponibles sont&nbsp;:
 
 - `url()`, qui établit une correspondance avec une URL exacte.
 - `url-prefix()`, qui établit une correspondance si l'URL du document commence par la valeur fournie.
@@ -31,7 +31,7 @@ Une règle `@document` peut définir une ou plusieurs fonctions de correspondanc
 
 Les valeurs fournies aux fonctions `url()`, `url-prefix()`, `media-document()` et `domain()` peuvent être éventuellement délimitées par des apostrophes, simples ou doubles. Les valeurs fournies à la fonction `regexp()` _doivent_ être délimitées par des apostrophes.
 
-Les valeurs échappées fournies à la fonction `regexp()` doivent être en outre échappées pour le CSS. Par exemple, un `.` (point) correspond à n'importe quel caractère dans les expressions régulières. Pour établir une correspondance avec un point littéral, vous avez d'abord besoin de l'échapper en utilisant les règles des expressions rationnelles (en `\.`), puis d'échapper cette chaîne de caractères en utilisant les règles CSS (en `\\.`).
+Les valeurs échappées fournies à la fonction `regexp()` doivent être en outre échappées pour le CSS. Par exemple, un `.` (point) correspond à n'importe quel caractère dans les expressions rationnelles. Pour établir une correspondance avec un point littéral, vous avez d'abord besoin de l'échapper en utilisant les règles des expressions rationnelles (en `\.`), puis d'échapper cette chaîne de caractères en utilisant les règles CSS (en `\\.`).
 
 `@document` n'est actuellement pris en charge que dans Firefox&nbsp;; si vous souhaitez reproduire cette fonctionnalité dans un navigateur autre que Firefox, vous pouvez essayer d'utiliser [cette prothèse d'émulation <sup>(angl.)</sup>](https://github.com/An-Error94/Handy-Scripts/tree/master/%40document-polyfill) créée par @An-Error94, qui combine un script utilisateur·ice, des [attributs data-\*](/fr/docs/Web/HTML/Reference/Global_attributes/data-*), et des [sélecteurs d'attributs](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors).
 

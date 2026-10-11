@@ -101,7 +101,7 @@ Notez que plusieurs propriétés de `RegExp` ont à la fois un nom long et un no
 - [`RegExp.$1`, …, `RegExp.$9`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n) {{Deprecated_Inline}}
   - : Propriétés statiques en lecture seule contenant des correspondances de sous-chaînes de caractère entre parenthèses.
 - [`RegExp.input` (`$_`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input) {{Deprecated_Inline}}
-  - : Une propriété statique qui contient la dernière chaîne de caractères contre laquelle une expression régulière a été correctement appariée.
+  - : Une propriété statique qui contient la dernière chaîne de caractères contre laquelle une expression rationnelle a été correctement appariée.
 - [`RegExp.lastMatch` (`$&`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch) {{Deprecated_Inline}}
   - : Une propriété statique en lecture seule qui contient la dernière sous-chaîne de caractères appariée.
 - [`RegExp.lastParen` (`$+`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastParen) {{Deprecated_Inline}}

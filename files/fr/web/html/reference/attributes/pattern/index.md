@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
-L'attribut **`pattern`** indique une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_expressions) que doit respecter la valeur du contrôle du formulaire. Si une valeur non nulle (qui n'est pas `null`) ne respecte pas les contraintes portées par `pattern`, la propriété {{DOMxRef("ValidityState.patternMismatch", "patternMismatch")}} en lecture seule, rattachée à l'objet {{DOMxRef("ValidityState")}}, vaudra `true`.
+L'attribut **`pattern`** indique une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_expressions) que doit respecter la valeur du contrôle du formulaire. Si une valeur non nulle (qui n'est pas `null`) ne respecte pas les contraintes portées par `pattern`, la propriété {{DOMxRef("ValidityState.patternMismatch", "patternMismatch")}} en lecture seule, rattachée à l'objet {{DOMxRef("ValidityState")}}, vaut `true`.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: pattern", "tabbed-shorter")}}
 
@@ -45,20 +45,20 @@ L'attribut `pattern` peut être utilisé pour les champs de type `{{HTMLElement(
 
 L'attribut `pattern`, lorsqu'il est défini, est une expression rationnelle que l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) du champ doit respecter pour réussir la [validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Il doit s'agir d'une expression rationnelle JavaScript valide, comme utilisée par le type {{JSxRef("RegExp")}}, et documentée dans notre [guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions).
 
-L'expression rationnelle du motif est compilée avec l'indicateur [`"v"`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#classe_de_caractères_en_mode_v). Cela rend l'expression [compatible Unicode](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#mode_compatible_unicode) et modifie la façon dont les classes de caractères sont interprétées. Cela permet l'intersection et la soustraction d'ensembles dans les classes de caractères. En plus de `]` et `\`, les caractères suivants doivent être échappés avec un antislash `\` s'ils sont littéraux&nbsp;: `(`, `)`, `[`, `{`, `}`, `/`, `-`, `|`. Avant mi-2023, l'indicateur `"u"` était utilisé&nbsp;; si vous mettez à jour un ancien code, consultez la référence [`unicodeSets`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets).
+L'expression rationnelle du motif est compilée avec l'indicateur [`"v"`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#classe_de_caractères_en_mode_v). Cela rend l'expression [compatible Unicode](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#mode_compatible_unicode) et modifie la façon dont les classes de caractères sont interprétées. Cela permet l'intersection et la soustraction d'ensembles dans les classes de caractères. En plus de `]` et `\`, les caractères suivants doivent être échappés avec un antislash `\` s'ils sont littéraux&nbsp;: `(`, `)`, `[`, `{`, `}`, `/`, `-`, `|`. Avant mi-2023, l'indicateur `"u"` est utilisé&nbsp;; si vous mettez à jour un ancien code, consultez la référence [`unicodeSets`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets).
 
-L'expression rationnelle du motif doit correspondre à l'intégralité de la valeur du champ, et non à une sous-chaîne — comme si `^(?:` était ajouté au début du motif et `)$` à la fin.
+L'expression rationnelle du motif doit correspondre à l'intégralité de la valeur du champ, et non à une sous-chaîne de caractères — comme si `^(?:` est ajouté au début du motif et `)$` à la fin.
 
 Il ne faut pas entourer le texte du motif de barres obliques. Aucune expression rationnelle n'est appliquée si la valeur de l'attribut est absente, vide ou invalide.
 
-Certains types de champs prenant en charge l'attribut pattern, notamment `{{HTMLElement("input/email", "email")}}` et `{{HTMLElement("input/url", "url")}}`, ont des syntaxes de valeur attendues qui doivent être respectées. Si l'attribut pattern n'est pas présent et que la valeur ne correspond pas à la syntaxe attendue pour ce type, la propriété en lecture seule {{DOMxRef("ValidityState.typeMismatch", "typeMismatch")}} de l'objet {{DOMxRef("ValidityState")}} vaudra `true`.
+Certains types de champs prenant en charge l'attribut pattern, notamment `{{HTMLElement("input/email", "email")}}` et `{{HTMLElement("input/url", "url")}}`, ont des syntaxes de valeur attendues qui doivent être respectées. Si l'attribut pattern n'est pas présent et que la valeur ne correspond pas à la syntaxe attendue pour ce type, la propriété en lecture seule {{DOMxRef("ValidityState.typeMismatch", "typeMismatch")}} de l'objet {{DOMxRef("ValidityState")}} vaut `true`.
 
 ### Validation des contraintes
 
-Si la valeur du champ n'est pas la chaîne de caractères vide et qu'elle ne correspond pas entièrement à l'expression rationnelle, une violation de contrainte est signalée par la propriété {{DOMxRef("ValidityState.patternMismatch", "patternMismatch")}} de l'objet {{DOMxRef("ValidityState")}}, qui vaudra true.
+Si la valeur du champ n'est pas la chaîne de caractères vide et qu'elle ne correspond pas entièrement à l'expression rationnelle, une violation de contrainte est signalée par la propriété {{DOMxRef("ValidityState.patternMismatch", "patternMismatch")}} de l'objet {{DOMxRef("ValidityState")}}, qui vaut true.
 
 > [!NOTE]
-> Si l'attribut `pattern` est défini sans valeur, sa valeur est implicitement la chaîne de caractères vide. Ainsi, toute valeur non vide pour l'attribut value entraînera une violation de contrainte.
+> Si l'attribut `pattern` est défini sans valeur, sa valeur est implicitement la chaîne de caractères vide. Ainsi, toute valeur non vide pour l'attribut value entraîne une violation de contrainte.
 
 ### Considérations d'utilisabilité et d'accessibilité
 
@@ -66,7 +66,7 @@ Lorsque vous utilisez un attribut `pattern`, fournissez une description du motif
 
 Il est déconseillé de se reposer uniquement sur l'attribut `title` pour l'affichage visuel du texte, car de nombreux agents utilisateurs n'exposent pas cet attribut de manière accessible. Bien que certains navigateurs affichent une info-bulle au survol d'un élément avec un titre, cela exclut les utilisateur·ice·s au clavier ou sur écran tactile. C'est l'une des raisons pour lesquelles il est nécessaire d'inclure des informations expliquant comment remplir le contrôle pour respecter les exigences.
 
-Bien que certains navigateurs utilisent le contenu de `title` pour afficher des messages d'erreur, ils peuvent aussi l'afficher au survol même sans erreur. Il faut donc veiller à ne pas formuler le titre comme si une erreur était survenue.
+Bien que certains navigateurs utilisent le contenu de `title` pour afficher des messages d'erreur, ils peuvent aussi l'afficher au survol même sans erreur. Il faut donc veiller à ne pas formuler le titre comme si une erreur est survenue.
 
 ## Exemples
 
@@ -105,7 +105,7 @@ Avec le fragment de code HTML suivant&nbsp;:
 
 Ici, nous avons 3 sections pour un numéro de téléphone nord-américain avec une étiquette implicite englobant les trois composants du numéro de téléphone, s'attendant respectivement à 3 chiffres, 3 chiffres et 4 chiffres, comme défini par l'attribut `pattern` défini sur chacun.
 
-Si les valeurs saisies sont trop longues ou trop courtes ou si elles contiennent des caractères qui ne sont pas des chiffres, la valeur de l'attribut `patternMismatch` sera `true`. On aura également l'activation de la pseudo-classe CSS {{CSSxRef(":invalid")}}.
+Si les valeurs saisies sont trop longues ou trop courtes ou si elles contiennent des caractères qui ne sont pas des chiffres, la valeur de l'attribut `patternMismatch` est `true`. Nous avons également l'activation de la pseudo-classe CSS {{CSSxRef(":invalid")}}.
 
 ```css
 input:invalid {
@@ -115,11 +115,11 @@ input:invalid {
 
 {{EmbedLiveSample("Correspondance d'un numéro de téléphone", 300, 80)}}
 
-En utilisant les attributs [`minlength`](/fr/docs/Web/HTML/Reference/Attributes/minlength) et [`maxlength`](/fr/docs/Web/HTML/Reference/Attributes/maxlength) à la place, on aurait eu les propriétés {{DOMxRef("ValidityState.tooLong")}} ou {{DOMxRef("ValidityState.tooShort")}} qui auraient valu `true`.
+En utilisant les attributs [`minlength`](/fr/docs/Web/HTML/Reference/Attributes/minlength) et [`maxlength`](/fr/docs/Web/HTML/Reference/Attributes/maxlength) à la place, nous avons les propriétés {{DOMxRef("ValidityState.tooLong")}} ou {{DOMxRef("ValidityState.tooShort")}} qui valent `true`.
 
 ### Indiquer un motif
 
-On pourra utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) afin d'indiquer une expression rationnelle qui devra être respectée par la valeur saisie pour que celle-ci soit considérée comme valide (voir [ce guide sur la validation avec les expressions rationnelles](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation#validation_selon_une_expression_régulière) pour une introduction).
+Vous pouvez utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) afin d'indiquer une expression rationnelle qui doit être respectée par la valeur saisie pour que celle-ci soit considérée comme valide (voir [ce guide sur la validation avec les expressions rationnelles](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation#validation_selon_une_expression_rationnelle) pour une introduction).
 
 L'exemple qui suit permet de restreindre les valeurs saisies entre 4 et 8 caractères qui doivent également être des lettres minuscules.
 

@@ -14,13 +14,13 @@ Ce chapitre décrit les expressions rationnelles en JavaScript. Il fournit un ap
 
 Il est possible de construire une expression rationnelle de deux façons&nbsp;:
 
-- Utiliser un littéral d'expression régulière, qui correspond à un motif contenu entre deux barres obliques, par exemple&nbsp;:
+- Utiliser un littéral d'expression rationnelle, qui correspond à un motif contenu entre deux barres obliques, par exemple&nbsp;:
 
   ```js
   const re = /ab+c/;
   ```
 
-  Lorsque les littéraux d'expression régulière sont utilisés, l'expression est compilée lors du chargement du script. Il est préférable d'utiliser cette méthode lorsque l'expression régulière reste constante, afin d'avoir de meilleurs performances.
+  Lorsque les littéraux d'expression rationnelle sont utilisés, l'expression est compilée lors du chargement du script. Il est préférable d'utiliser cette méthode lorsque l'expression rationnelle reste constante, afin d'avoir de meilleurs performances.
 
 - Ou en appelant le constructeur de l'objet {{JSxRef("RegExp")}}, par exemple&nbsp;:
 
@@ -167,7 +167,7 @@ La fonction {{JSxRef("RegExp.escape()")}} retourne une nouvelle chaîne de carac
 Les parenthèses autour de n'importe quelle partie du motif d'expression rationnelle font que cette partie de la sous-chaîne de caractères correspondante est mémorisée.
 Une fois mémorisée, la sous-chaîne de caractères peut être rappelée pour une autre utilisation. Voir [les groupes et les rétro-références](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#utiliser_les_groupes) pour plus de détails.
 
-## Utiliser les expressions régulières en JavaScript
+## Utiliser les expressions rationnelles en JavaScript
 
 Les expressions rationnelles s'utilisent avec les méthodes {{JSxRef("RegExp/test", "test()")}} et {{JSxRef("RegExp/exec", "exec()")}} de {{JSxRef("RegExp")}}, ainsi qu'avec les méthodes {{JSxRef("String/match", "match()")}}, {{JSxRef("String/matchAll", "matchAll()")}}, {{JSxRef("String/replace", "replace()")}}, {{JSxRef("String/replaceAll", "replaceAll()")}}, {{JSxRef("String/search", "search()")}} et {{JSxRef("String/split", "split()")}} de {{JSxRef("String")}}.
 
@@ -452,12 +452,12 @@ form.addEventListener("submit", (event) => {
 ## Outils
 
 - [RegExr <sup>(angl.)</sup>](https://regexr.com/)
-  - : Un outil en ligne pour apprendre, créer et tester des expressions régulières.
+  - : Un outil en ligne pour apprendre, créer et tester des expressions rationnelles.
 - [Testeur Regex <sup>(angl.)</sup>](https://regex101.com/)
-  - : Un constructeur/débogueur d'expressions régulières en ligne.
+  - : Un constructeur/débogueur d'expressions rationnelles en ligne.
 - [Tutoriel interactif Regex <sup>(angl.)</sup>](https://regexlearn.com/)
   - : Un tutoriel interactif en ligne, une feuille de référence et un terrain de jeu.
 - [Visualiseur Regex <sup>(angl.)</sup>](https://extendsclass.com/regex-tester.html)
-  - : Un testeur visuel d'expressions régulières en ligne.
+  - : Un testeur visuel d'expressions rationnelles en ligne.
 
 {{PreviousNext("Web/JavaScript/Guide/Representing_dates_times", "Web/JavaScript/Guide/Indexed_collections")}}

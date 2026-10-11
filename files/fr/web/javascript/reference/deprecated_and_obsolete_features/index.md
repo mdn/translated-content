@@ -130,13 +130,13 @@ Ces fonctionnalités obsolètes ont été entièrement supprimées de JavaScript
 
 Les éléments suivants sont désormais des propriétés des instances de `RegExp`, et non plus du constructeur `RegExp`&nbsp;:
 
-| Propriété                                                                | Description                                                                                                                                                    |
-| ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{JSxRef("RegExp/global", "global")}}                                    | Indique si l'expression régulière doit être testée contre toutes les correspondances possibles dans une chaîne de caractères, ou seulement contre la première. |
-| {{JSxRef("RegExp/ignoreCase", "ignoreCase")}}                            | Indique si la casse doit être ignorée lors de la tentative de correspondance dans une chaîne de caractères.                                                    |
-| {{JSxRef("RegExp/lastIndex", "lastIndex")}}                              | L'index à partir duquel commencer la prochaine correspondance.                                                                                                 |
-| {{JSxRef("RegExp/multiline", "multiline")}} (également avec `RegExp.$*`) | Indique si la recherche doit s'effectuer sur plusieurs lignes.                                                                                                 |
-| {{JSxRef("RegExp/source", "source")}}                                    | Le texte du motif.                                                                                                                                             |
+| Propriété                                                                | Description                                                                                                                                                      |
+| ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{JSxRef("RegExp/global", "global")}}                                    | Indique si l'expression rationnelle doit être testée contre toutes les correspondances possibles dans une chaîne de caractères, ou seulement contre la première. |
+| {{JSxRef("RegExp/ignoreCase", "ignoreCase")}}                            | Indique si la casse doit être ignorée lors de la tentative de correspondance dans une chaîne de caractères.                                                      |
+| {{JSxRef("RegExp/lastIndex", "lastIndex")}}                              | L'index à partir duquel commencer la prochaine correspondance.                                                                                                   |
+| {{JSxRef("RegExp/multiline", "multiline")}} (également avec `RegExp.$*`) | Indique si la recherche doit s'effectuer sur plusieurs lignes.                                                                                                   |
+| {{JSxRef("RegExp/source", "source")}}                                    | Le texte du motif.                                                                                                                                               |
 
 La méthode `valueOf()` n'est plus spécialisée pour `RegExp`. Elle utilise {{JSxRef("Object.prototype.valueOf()")}}, qui retourne elle-même.
 
@@ -203,7 +203,7 @@ La méthode `valueOf()` n'est plus spécialisée pour `RegExp`. Elle utilise {{J
 
 - `for each...in` est obsolète. Utilisez {{JSxRef("Statements/for...of", "for...of")}} à la place.
 - Les blocs `let` et les expressions `let` sont obsolètes.
-- Les closures d'expression (`function () 1` comme raccourci de `function () { return 1; }`) sont obsolètes. Utilisez des {{JSxRef("Operators/function", "function")}} régulières ou des {{JSxRef("Functions/Arrow_functions", "fonctions fléchées", "", 1)}} à la place.
+- Les closures d'expression (`function () 1` comme raccourci de `function () { return 1; }`) sont obsolètes. Utilisez des {{JSxRef("Operators/function", "function")}} rationnelles ou des {{JSxRef("Functions/Arrow_functions", "fonctions fléchées", "", 1)}} à la place.
 
 ### Acquisition du texte source
 

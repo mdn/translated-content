@@ -7,7 +7,7 @@ l10n:
 
 Une **classe de caractères Unicode échappés** (<i lang="en">unicode character class escape</i> en anglais) est un type de [classe de caractères échappés](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape) qui correspond à un ensemble de caractères défini par une propriété Unicode. Elle n'est prise en charge qu'en [mode compatible Unicode](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). Lorsque l'indicateur [`v`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) est activé, il peut également être utilisé pour correspondre à des chaînes de caractères de longueur finie.
 
-{{InteractiveExample("Démonstration JavaScript&nbsp;: Expression régulière avec classe de caractères Unicode échappés", "taller")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Expression rationnelle avec classe de caractères Unicode échappés", "taller")}}
 
 ```js interactive-example
 const sentence = "Un billet pour 大阪 coûte ¥2000 👌.";

@@ -63,9 +63,9 @@ L'entrée de formulaire échoue à la [validation des contraintes](/fr/docs/Web/
 
 ### `pattern`
 
-L'attribut `pattern`, lorsqu'il est défini, est une expression régulière que la valeur de l'élément [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) doit correspondre pour que la valeur passe la [validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Il doit s'agir d'une expression régulière JavaScript valide, telle qu'utilisée par le type {{JSxRef("RegExp")}}, et comme documenté dans notre [guide sur les expressions régulières](/fr/docs/Web/JavaScript/Guide/Regular_expressions)&nbsp;; le drapeau `'u'` est défini lors de la compilation de l'expression régulière afin que le modèle soit traité comme une séquence de points de code Unicode, au lieu de {{Glossary("ASCII")}}. Aucune barre oblique ne doit être définie autour du texte du modèle.
+L'attribut `pattern`, lorsqu'il est défini, est une expression rationnelle que la valeur de l'élément [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) doit correspondre pour que la valeur passe la [validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Il doit s'agir d'une expression rationnelle JavaScript valide, telle qu'utilisée par le type {{JSxRef("RegExp")}}, et comme documenté dans notre [guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)&nbsp;; le drapeau `'u'` est défini lors de la compilation de l'expression rationnelle afin que le modèle soit traité comme une séquence de points de code Unicode, au lieu de {{Glossary("ASCII")}}. Aucune barre oblique ne doit être définie autour du texte du modèle.
 
-Si le motif défini n'est pas défini ou est invalide, aucune expression régulière n'est appliquée et cet attribut est complètement ignoré.
+Si le motif défini n'est pas défini ou est invalide, aucune expression rationnelle n'est appliquée et cet attribut est complètement ignoré.
 
 > [!NOTE]
 > Utilisez l'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#title) pour définir un texte que la plupart des navigateurs affichent comme info-bulle pour expliquer les exigences de correspondance du motif. Vous devez également inclure d'autres textes explicatifs à proximité.
@@ -364,7 +364,7 @@ Si vous essayez d'envoyer une valeur qui est plus petite que 4 caractères, vous
 
 ### Indiquer un motif
 
-L'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) permet d'indiquer une expression rationnelle que doit respecter la valeur saisie pour être considérée valide (cf. [Validation selon une expression régulière](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation#validation_selon_une_expression_régulière) pour une introduction).
+L'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) permet d'indiquer une expression rationnelle que doit respecter la valeur saisie pour être considérée valide (cf. [Validation selon une expression rationnelle](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation#validation_selon_une_expression_rationnelle) pour une introduction).
 
 Regardons un exemple. Imaginons que nous voulions fournir un formulaire de recherche par identifiant de produit, et que les identifiants soient tous des codes composés de deux lettres suivies de quatre chiffres. L'exemple suivant couvre ce cas&nbsp;:
 
