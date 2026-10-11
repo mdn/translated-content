@@ -7,9 +7,9 @@ l10n:
 ---
 
 > [!NOTE]
-> La méthode `compile()` n'est définie que pour des raisons de compatibilité. L'utilisation de `compile()` rend la source et les drapeaux de l'expression rationnelle, autrement immuables, mutables, ce qui peut perturber les attentes de l'utilisateur·ice. Vous pouvez utiliser le constructeur {{JSxRef("RegExp/RegExp", "RegExp()")}} pour créer un nouvel objet expression rationnelle à la place.
+> La méthode `compile()` n'est définie que pour des raisons de compatibilité. L'utilisation de `compile()` rend la source et les indicateurs de l'expression rationnelle, autrement immuables, mutables, ce qui peut perturber les attentes de l'utilisateur·ice. Vous pouvez utiliser le constructeur {{JSxRef("RegExp/RegExp", "RegExp()")}} pour créer un nouvel objet expression rationnelle à la place.
 
-La méthode **`compile()`** des instances de {{JSxRef("RegExp")}} est utilisée pour recompiler une expression rationnelle avec une nouvelle source et de nouveaux drapeaux après que l'objet `RegExp` a déjà été créé.
+La méthode **`compile()`** des instances de {{JSxRef("RegExp")}} est utilisée pour recompiler une expression rationnelle avec une nouvelle source et de nouveaux indicateurs après que l'objet `RegExp` a déjà été créé.
 
 ## Syntaxe
 
@@ -38,7 +38,7 @@ Aucune ({{JSxRef("undefined")}}).
 
 ### Utiliser `compile()`
 
-L'exemple suivant montre comment recompiler une expression rationnelle avec un nouveau motif et un nouveau drapeau.
+L'exemple suivant montre comment recompiler une expression rationnelle avec un nouveau motif et un nouvel indicateur.
 
 ```js
 const regexObj = /toto/gi;

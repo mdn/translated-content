@@ -21,7 +21,7 @@ Une **assertion de limite de mot** (<i lang="en">word boundary assertion</i> en 
 Un caractère de mot inclut les éléments suivants&nbsp;:
 
 - Les lettres (A-Z, a-z), les chiffres (0-9) et le caractère de soulignement (\_).
-- Si l'expression rationnelle est [sensible à l'Unicode](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#mode_sensible_à_lunicode) et que le drapeau [`i`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) est défini, d'autres caractères Unicode qui sont canoniquement transformés en l'un des caractères ci-dessus par la [normalisation de casse <sup>(angl.)</sup>](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt).
+- Si l'expression rationnelle est [sensible à l'Unicode](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#mode_sensible_à_lunicode) et que l'indicateur [`i`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) est défini, d'autres caractères Unicode qui sont canoniquement transformés en l'un des caractères ci-dessus par la [normalisation de casse <sup>(angl.)</sup>](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt).
 
 Les caractères de mot sont également reconnus par [_l'échappement de classe de caractères_](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape) `\w`.
 

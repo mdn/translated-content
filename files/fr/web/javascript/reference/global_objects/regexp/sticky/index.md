@@ -28,7 +28,7 @@ console.log(regex.test(str));
 
 ## Description
 
-`RegExp.prototype.sticky` a pour valeur `true` si le drapeau `y` a été utilisé&nbsp;; sinon, `false`. Le drapeau `y` indique que l'expression rationnelle tente de correspondre à la chaîne de caractères cible uniquement à partir de l'index indiqué par la propriété {{JSxRef("RegExp/lastIndex", "lastIndex")}} (et contrairement à une expression rationnelle globale, elle ne tente pas de correspondre à partir d'index ultérieurs).
+`RegExp.prototype.sticky` a pour valeur `true` si l'indicateur `y` a été utilisé&nbsp;; sinon, `false`. L'indicateur `y` indique que l'expression rationnelle tente de correspondre à la chaîne de caractères cible uniquement à partir de l'index indiqué par la propriété {{JSxRef("RegExp/lastIndex", "lastIndex")}} (et contrairement à une expression rationnelle globale, elle ne tente pas de correspondre à partir d'index ultérieurs).
 
 L'accesseur de définition de `sticky` est `undefined`. Vous ne pouvez pas modifier cette propriété directement.
 
@@ -51,7 +51,7 @@ Pour la méthode {{JSxRef("RegExp/exec", "exec()")}}, une expression rationnelle
 - {{JSxRef("String.prototype.match()")}} (avec lequel appelle [`RegExp.prototype[Symbol.match]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match))&nbsp;: `y`, `g` et `gy` sont tous différents.
   - Pour `y` des expressions rationnelles&nbsp;: retourner le résultat de `exec()` et met à jour la propriété `lastIndex` de l'expression rationnelle.
   - Pour `g` ou `gy` des expressions rationnelles&nbsp;: retourner un tableau de tous les résultats de `exec()`.
-- {{JSxRef("String.prototype.search()")}} (avec lequel appelle [`RegExp.prototype[Symbol.search]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search))&nbsp;: le drapeau `g` est toujours sans importance.
+- {{JSxRef("String.prototype.search()")}} (avec lequel appelle [`RegExp.prototype[Symbol.search]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search))&nbsp;: l'indicateur `g` est toujours sans importance.
   - Pour `y` ou `gy` des expressions rationnelles&nbsp;: toujours retourner `0` (si le tout début de la chaîne de caractères correspond) ou `-1` (si le début ne correspond pas), sans mettre à jour la propriété `lastIndex` de l'expression rationnelle lorsqu'elle se termine.
   - Pour `g` des expressions rationnelles&nbsp;: retourner l'index de la première correspondance dans la chaîne de caractères, ou `-1` si aucune correspondance n'est trouvée.
 - {{JSxRef("String.prototype.split()")}} (avec lequel appelle [`RegExp.prototype[Symbol.split]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split))&nbsp;: `y`, `g` et `gy` ont tous le même comportement.
