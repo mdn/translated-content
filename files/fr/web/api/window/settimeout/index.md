@@ -43,12 +43,12 @@ setTimeout(func, delay, param1, param2, /* …, */ paramN)
 
     Note&nbsp;:
     - Le délai a une valeur maximale de 2147483647ms — la spécification de valeurs supérieures peut entraîner un débordement ou l'utilisation d'une valeur égale à 0.
-      Voir [valeur maximale du délai](#maximum_delay_value) ci-dessous pour plus d'informations.
+      Voir [valeur maximale du délai](#valeur_maximale_du_délai) ci-dessous pour plus d'informations.
     - Le délai réel peut être plus long que celui défini.
       Par exemple, définir `delay` à 0 exécute dans le cycle d'évènement suivant plutôt que «&nbsp;immédiatement&nbsp;».
-      Voir [Raisons pour lesquelles les délais peuvent être plus longs que définis](#reasons_for_longer_delays_than_specified) pour plus d'informations.
+      Voir [Raisons pour lesquelles les délais peuvent être plus longs que définis](#raisons_pour_lesquelles_les_délais_peuvent_être_plus_longs_que_prévu) pour plus d'informations.
     - Si la valeur n'est pas un nombre, une [coercition de type](/fr/docs/Glossary/Type_coercion) implicite est effectuée silencieusement sur la valeur pour la convertir en nombre.
-      Cela peut entraîner des résultats inattendus et surprenants — voir [Les valeurs de délai non numériques sont silencieusement converties en nombres](#non-number_delay_values_are_silently_coerced_into_numbers) pour un exemple.
+      Cela peut entraîner des résultats inattendus et surprenants — voir [Les valeurs de délai non numériques sont silencieusement converties en nombres](#les_valeurs_de_délai_non_numériques_sont_converties_en_nombres_silencieusement) pour un exemple.
     - Les valeurs négatives se comportent de la même manière que 0.
 
 - `param1`, …, `paramN` {{Optional_Inline}}
@@ -112,7 +112,7 @@ Si l'ordre d'exécution d'une méthode asynchrone a de l'importance, vous pouvez
 ### Les fonctions sont appelées avec le `this` global
 
 Les fonctions passées à `setTimeout()` sont exécutées avec la sémantique d'appel de fonction normale pour déterminer la référence de [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this).
-Ce problème est expliqué en détail dans la [référence JavaScript](/fr/docs/Web/JavaScript/Reference/Operators/this#callbacks).
+Ce problème est expliqué en détail dans la [référence JavaScript](/fr/docs/Web/JavaScript/Reference/Operators/this#fonctions_de_rappel).
 
 Pour les fonctions qui ne sont pas fléchées, le contexte `this` est défini sur l'objet [`globalThis`](/fr/docs/Web/JavaScript/Reference/Global_Objects/globalThis) (un alias pour [`window`](/fr/docs/Web/API/Window/window) dans les navigateurs).
 
@@ -389,7 +389,7 @@ const id = setTimeout(codeNonFiable, 1000);
 
 Les sites dotés d'une [politique de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/Guides/CSP) qui définit [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) ou [`default-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) empêchent par défaut l'exécution de ce code.
 Vous pouvez définir [`unsafe-eval`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) dans votre CSP pour autoriser l'exécution de `setTimeout()`, mais cela est dangereux car cela désactive l'une des principales protections de la CSP.
-Voir [JavaScript intégré](/fr/docs/Web/HTTP/Guides/CSP#inline_javascript) dans le guide sur la CSP.
+Voir [JavaScript intégré](/fr/docs/Web/HTTP/Guides/CSP#javascript_en_incise) dans le guide sur la CSP.
 
 Si vous devez autoriser l'exécution des scripts au moyen de `setTimeout()` vous pouvez atténuer ces problèmes en assignant toujours des objets {{DOMxRef("TrustedScript")}} au lieu de chaînes de caractères, et en [imposant les types de confiance](/fr/docs/Web/API/Trusted_Types_API#utiliser_une_csp_pour_appliquer_les_types_de_confiance) au moyen de la directive CSP [`require-trusted-types-for`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for).
 Cela garantit que l'entrée passe par une fonction de transformation.
