@@ -196,7 +196,7 @@ const id = setInterval(codeNonSecurise, 1000);
 Les sites web dotés d'une [politique de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/Guides/CSP) qui définit [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) ou [`default-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) empêchent par défaut l'exécution de ce code.
 Vous pouvez définir [`unsafe-eval`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) dans votre CSP pour autoriser l'exécution de `setInterval()`, mais cette pratique est dangereuse, car elle désactive l'une des principales protections de la CSP.
 
-Voir [JavaScript intégré](/fr/docs/Web/HTTP/Guides/CSP#inline_javascript) dans le guide sur la CSP.
+Voir [JavaScript intégré](/fr/docs/Web/HTTP/Guides/CSP#javascript_en_incise) dans le guide sur la CSP.
 
 Si vous devez autoriser l'exécution des scripts avec `setInterval()`, vous pouvez atténuer ces problèmes en assignant toujours des objets {{DOMxRef("TrustedScript")}} plutôt que des chaînes de caractères et en [imposant les types de confiance](/fr/docs/Web/API/Trusted_Types_API#utiliser_une_csp_pour_appliquer_les_types_de_confiance) au moyen de la directive CSP [`require-trusted-types-for`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for).
 Cela garantit que l'entrée passe par une fonction de transformation.
