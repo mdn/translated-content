@@ -13,7 +13,7 @@ Fetch est le remplaçant moderne de {{DOMxRef("XMLHttpRequest")}}&nbsp;: contrai
 
 Avec l'API Fetch, vous effectuez une requête en appelant {{DOMxRef("Window/fetch", "fetch()")}}, qui est disponible en tant que fonction globale dans les contextes {{DOMxRef("Window", "window")}} et {{DOMxRef("WorkerGlobalScope", "worker")}}. Vous lui passez un objet {{DOMxRef("Request")}} ou une chaîne de caractères contenant l'URL à récupérer, ainsi qu'un argument optionnel pour configurer la requête.
 
-La fonction `fetch()` retourne une promesse ({{JSxRef("Promise")}}) qui est résolue avec un objet {{DOMxRef("Response")}} représentant la réponse du serveur. Vous pouvez alors vérifier le statut de la requête et extraire le corps de la réponse dans différents formats, y compris texte et JSON, en appelant la méthode appropriée sur la réponse.
+La fonction `fetch()` retourne une promesse ({{JSxRef("Promise")}}) qui est complétée avec un objet {{DOMxRef("Response")}} représentant la réponse du serveur. Vous pouvez alors vérifier le statut de la requête et extraire le corps de la réponse dans différents formats, y compris texte et JSON, en appelant la méthode appropriée sur la réponse.
 
 Voici une fonction minimale qui utilise `fetch()` pour récupérer des données JSON depuis un serveur&nbsp;:
 
@@ -36,7 +36,7 @@ async function getData() {
 
 Nous déclarons une chaîne de caractères contenant l'URL puis appelons `fetch()`, en passant l'URL sans options supplémentaires.
 
-La fonction `fetch()` rejette la promesse en cas de certaines erreurs, mais pas si le serveur répond avec un statut d'erreur comme {{HTTPStatus("404")}}&nbsp;: nous vérifions donc aussi le statut de la réponse et lançons une exception si ce n'est pas OK.
+La fonction `fetch()` rompt la promesse en cas de certaines erreurs, mais pas si le serveur répond avec un statut d'erreur comme {{HTTPStatus("404")}}&nbsp;: nous vérifions donc aussi le statut de la réponse et lançons une exception si ce n'est pas OK.
 
 Sinon, nous récupérons le contenu du corps de la réponse au format {{Glossary("JSON")}} en appelant la méthode {{DOMxRef("Response.json()", "json()")}} de l'interface `Response`, et affichons l'une de ses valeurs. Notez que, comme `fetch()` elle-même, `json()` est asynchrone, tout comme toutes les autres méthodes d'accès au contenu du corps de la réponse.
 
@@ -292,7 +292,7 @@ post(requete2);
 
 Pour rendre une requête annulable, créez un {{DOMxRef("AbortController")}}, et assignez son {{DOMxRef("AbortSignal")}} à la propriété `signal` de la requête.
 
-Pour annuler la requête, appelez la méthode {{DOMxRef("AbortController.abort()", "abort()")}} du contrôleur. L'appel à `fetch()` rejette la promesse avec une exception `AbortError`.
+Pour annuler la requête, appelez la méthode {{DOMxRef("AbortController.abort()", "abort()")}} du contrôleur. L'appel à `fetch()` rompt la promesse avec une exception `AbortError`.
 
 ```js
 const controleur = new AbortController();
@@ -317,7 +317,7 @@ btnAnnuler.addEventListener("click", () => {
 });
 ```
 
-Si la requête est annulée après que l'appel à `fetch()` a été accompli mais avant que le corps de la réponse n'ait été lu, alors toute tentative de lecture du corps de la réponse rejette avec une exception `AbortError`.
+Si la requête est annulée après que l'appel à `fetch()` a été complétée mais avant que le corps de la réponse n'ait été lu, alors toute tentative de lecture du corps de la réponse se rompt avec une exception `AbortError`.
 
 ```js
 async function recuperer() {
@@ -336,11 +336,11 @@ async function recuperer() {
 
 ## Traiter la réponse
 
-Dès que le navigateur a reçu le statut de la réponse et les en-têtes du serveur (et potentiellement avant que le corps de la réponse lui-même ait été reçu), la promesse retournée par `fetch()` est tenue avec un objet {{DOMxRef("Response")}}.
+Dès que le navigateur a reçu le statut de la réponse et les en-têtes du serveur (et potentiellement avant que le corps de la réponse lui-même ait été reçu), la promesse retournée par `fetch()` est complétée avec un objet {{DOMxRef("Response")}}.
 
 ### Vérifier le statut de la réponse
 
-La promesse retournée par `fetch()` est rejetée en cas de certaines erreurs, comme une erreur réseau ou un mauvais schéma. Cependant, si le serveur répond avec une erreur comme {{HTTPStatus("404")}}, alors `fetch()` est tenue avec un objet `Response`, il faut donc vérifier le statut avant de lire le corps de la réponse.
+La promesse retournée par `fetch()` est rompue en cas de certaines erreurs, comme une erreur réseau ou un mauvais schéma. Cependant, si le serveur répond avec une erreur comme {{HTTPStatus("404")}}, alors `fetch()` est complétée avec un objet `Response`, il faut donc vérifier le statut avant de lire le corps de la réponse.
 
 La propriété {{DOMxRef("Response.status")}} donne le code de statut numérique, et la propriété {{DOMxRef("Response.ok")}} retourne `true` si le statut est dans la [plage 200](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès).
 
@@ -409,7 +409,7 @@ L'interface `Response` fournit plusieurs méthodes pour récupérer l'intégrali
 - {{DOMxRef("Response.json()")}}
 - {{DOMxRef("Response.text()")}}
 
-Toutes ces méthodes sont asynchrones et retournent une promesse ({{JSxRef("Promise")}}) qui est tenue avec le contenu du corps.
+Toutes ces méthodes sont asynchrones et retournent une promesse ({{JSxRef("Promise")}}) qui est complétée avec le contenu du corps.
 
 Dans cet exemple, on récupère une image et on la lit comme un {{DOMxRef("Blob")}}, que l'on peut ensuite utiliser pour créer une URL d'objet&nbsp;:
 
