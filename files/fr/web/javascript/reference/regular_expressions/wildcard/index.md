@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-Un **joker** (<i lang="en">wildcard</i> en anglais) correspond à tous les caractères sauf les terminaisons de ligne. Il correspond également aux terminaisons de ligne si le drapeau `s` est défini.
+Un **joker** (<i lang="en">wildcard</i> en anglais) correspond à tous les caractères sauf les terminaisons de ligne. Il correspond également aux terminaisons de ligne si l'indicateur `s` est défini.
 
 ## Syntaxe
 
@@ -15,7 +15,7 @@ Un **joker** (<i lang="en">wildcard</i> en anglais) correspond à tous les carac
 
 ## Description
 
-`.` correspond à tous les caractères sauf les [terminaisons de ligne](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#terminateurs_de_ligne). Si le drapeau [`s`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll) est défini, `.` correspond également aux terminaisons de ligne.
+`.` correspond à tous les caractères sauf les [terminaisons de ligne](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#terminateurs_de_ligne). Si l'indicateur [`s`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll) est défini, `.` correspond également aux terminaisons de ligne.
 
 L'ensemble exact de caractères auquel correspond `.` dépend du fait que l'expression soit ou non [sensible à l'Unicode](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#mode_sensible_à_lunicode). Si elle l'est, `.` correspond à n'importe quel point de code Unicode&nbsp;; sinon, elle correspond à n'importe quelle unité de code UTF-16. Par exemple&nbsp;:
 

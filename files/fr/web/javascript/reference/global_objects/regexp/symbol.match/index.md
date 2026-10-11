@@ -38,7 +38,7 @@ regexp[Symbol.match](str)
 
 ### Valeur de retour
 
-Un tableau ({{JSxRef("Array")}}) dont le contenu dépend de la présence ou de l'absence du drapeau global (`g`), ou {{JSxRef("null")}} si aucune correspondance n'est trouvée.
+Un tableau ({{JSxRef("Array")}}) dont le contenu dépend de la présence ou de l'absence de l'indicateur global (`g`), ou {{JSxRef("null")}} si aucune correspondance n'est trouvée.
 
 - Si l'indicateur `g` est utilisé, tous les résultats correspondant à l'expression rationnelle complète sont retournés, mais les groupes capturés ne sont pas inclus.
 - Si l'indicateur `g` n'est pas utilisé, seule la première correspondance complète et ses groupes capturés associés sont retournés. Dans ce cas, `match()` retourne le même résultat que {{JSxRef("RegExp.prototype.exec()")}} (un tableau avec quelques propriétés supplémentaires).

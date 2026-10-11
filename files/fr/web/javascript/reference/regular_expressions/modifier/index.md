@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-Un **modificateur** (<i lang="en">modifier</i> en anglais) remplace les paramètres [d'indicateur](/fr/docs/Web/JavaScript/Reference/Regular_expressions#indicateurs_dexpressions_rationnelles) dans une partie spécifique d'une expression régulière. Il peut être utilisé pour activer ou désactiver des indicateurs qui modifient la signification de certains éléments de syntaxe des expressions régulières. Ces indicateurs sont [`i`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase), [`m`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline), et [`s`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll).
+Un **modificateur** (<i lang="en">modifier</i> en anglais) remplace les paramètres [d'indicateur](/fr/docs/Web/JavaScript/Reference/Regular_expressions#indicateurs_dexpressions_rationnelles) dans une partie spécifique d'une expression rationnelle. Il peut être utilisé pour activer ou désactiver des indicateurs qui modifient la signification de certains éléments de syntaxe des expressions rationnelles. Ces indicateurs sont [`i`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase), [`m`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline), et [`s`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll).
 
 ## Syntaxe
 

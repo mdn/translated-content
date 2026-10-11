@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8f53af45fae665627a95ac50e177b15d0228b920
 ---
 
-La propriété d'accesseur **`multiline`** des instances de {{JSxRef("RegExp")}} indique si le drapeau `m` est utilisé avec cette expression rationnelle.
+La propriété d'accesseur **`multiline`** des instances de {{JSxRef("RegExp")}} indique si l'indicateur `m` est utilisé avec cette expression rationnelle.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: RegExp.prototype.multiline", "taller")}}
 

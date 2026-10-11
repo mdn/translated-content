@@ -226,7 +226,7 @@ console.log(4, fixedMultiline); // corrige « greon » => « green » mais ne mo
 
 ### Faire correspondre le début de l'entrée en utilisant le caractère de contrôle `^`
 
-Utiliser `^` pour faire correspondre le début de l'entrée. Dans cet exemple, nous pouvons obtenir les fruits qui commencent par «&nbsp;A&nbsp;» grâce à une expression régulière `/^A/`. Pour sélectionner les fruits appropriés, nous pouvons utiliser la méthode [`filter`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) avec une fonction [fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+Utiliser `^` pour faire correspondre le début de l'entrée. Dans cet exemple, nous pouvons obtenir les fruits qui commencent par «&nbsp;A&nbsp;» grâce à une expression rationnelle `/^A/`. Pour sélectionner les fruits appropriés, nous pouvons utiliser la méthode [`filter`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) avec une fonction [fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ```js
 const fruits = ["Pomme", "Pastèque", "Orange", "Avocat", "Fraise"];
@@ -243,7 +243,7 @@ Dans le deuxième exemple, `^` sert à la fois à faire correspondre le début d
 ```js
 const fruits = ["Pomme", "Pastèque", "Orange", "Avocat", "Fraise"];
 
-// Sélectionne les fruits qui ne commencent pas par 'A' avec l'expression régulière /^[^A]/.
+// Sélectionne les fruits qui ne commencent pas par 'A' avec l'expression rationnelle /^[^A]/.
 // Cet exemple présente les deux significations du symbole '^' :
 // 1) Faire correspondre le début de l'entrée
 // 2) Une classe de caractères niée ou complémentée : [^A]
@@ -258,7 +258,7 @@ Voir plus d'exemples dans la [référence sur l'assertion de limite d'entrée](/
 
 ### Faire correspondre une limite de mot
 
-Dans cet exemple, l'expression régulière correspond aux noms de fruits contenant un mot qui se termine par «&nbsp;ge&nbsp;» ou «&nbsp;rt&nbsp;».
+Dans cet exemple, l'expression rationnelle correspond aux noms de fruits contenant un mot qui se termine par «&nbsp;ge&nbsp;» ou «&nbsp;rt&nbsp;».
 
 ```js
 const fruitsAvecDescription = ["Pomme rouge", "Orange orange", "Avocat vert"];
@@ -275,7 +275,7 @@ Voir plus d'exemples dans la [référence sur l'assertion de limite de mot](/fr/
 
 ### Assertion anticipée
 
-Dans cet exemple, l'expression régulière correspond au mot «&nbsp;premier&nbsp;» uniquement s'il est suivi du verbe «&nbsp;teste&nbsp;», sans inclure «&nbsp;teste&nbsp;» dans le résultat de la correspondance.
+Dans cet exemple, l'expression rationnelle correspond au mot «&nbsp;premier&nbsp;» uniquement s'il est suivi du verbe «&nbsp;teste&nbsp;», sans inclure «&nbsp;teste&nbsp;» dans le résultat de la correspondance.
 
 ```js
 const expressionPremierTeste = /premier(?= teste)/gi;
@@ -324,7 +324,7 @@ console.log(orangeSansCitron.match(expressionSansOrange)); // [ ' Oui, je ne veu
 
 ### Assertion de précédence
 
-Dans cet exemple, l'expression régulière remplace le mot «&nbsp;orange&nbsp;» par «&nbsp;pomme&nbsp;» uniquement s'il est précédé du mot «&nbsp;mûre&nbsp;».
+Dans cet exemple, l'expression rationnelle remplace le mot «&nbsp;orange&nbsp;» par «&nbsp;pomme&nbsp;» uniquement s'il est précédé du mot «&nbsp;mûre&nbsp;».
 
 ```js
 const oranges = ["mûre orange A", "verte orange B", "mûre orange C"];
