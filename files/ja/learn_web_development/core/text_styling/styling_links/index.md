@@ -2,10 +2,8 @@
 title: リンクのスタイル設定
 slug: Learn_web_development/Core/Text_styling/Styling_links
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 19c36d7464c349372e38f9b39bf3e7de73687397
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
 
@@ -25,7 +23,7 @@ l10n:
       <th scope="row">学習成果:</th>
       <td>
         <ul>
-          <li>既定のリンクスタイルがウェブのユーザビリティにとって重要である理由を理解すること。これらは見慣れているもので、ユーザーがリンクを認識しやすくなります。</li>
+          <li>デフォルトのリンクスタイルがウェブのユーザビリティにとって重要である理由を理解すること。これらは見慣れているもので、ユーザーがリンクを認識しやすくなります。</li>
           <li>リンクの状態のスタイル設定: <code>:hover</code>, <code>:focus</code>, <code>:visited</code>, <code>:active</code></li>
           <li>リンク状態がアクセシビリティとユーザビリティに必要である理由を理解すること。</li>
           <li>リンクにアイコンを加えること。</li>
@@ -38,7 +36,7 @@ l10n:
 
 ### リンク状態
 
-最初に理解するべきことはリンク状態の概念です。リンクが存在できる様々な状態のことで、それらは様々な[擬似クラス](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#擬似クラス)を使ってスタイル設定することができます。
+最初に理解するべきことはリンク状態の概念です。すなわち、リンクが存在できる様々な状態のことです。様々な[擬似クラス](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)を使ってスタイル設定することができます。
 
 - **リンク**: リンク先があるリンク（つまり、単なる名前付きアンカーではないもの）で、{{cssxref(":link")}} 擬似クラスを使用してスタイル設定します。
 - **訪問済み**: 既に訪問済みの（ブラウザーの履歴に存在する）リンクで、{{cssxref(":visited")}} 擬似クラスを使用してスタイル設定します。
@@ -46,17 +44,16 @@ l10n:
 - **フォーカス**: フォーカスしたときのリンク（例えば、 <kbd>Tab</kbd> キーなどを使用してキーボードユーザーによって移動してきたか、 {{domxref("HTMLElement.focus()")}} を使用してプログラムでフォーカスした）。これは {{cssxref(":focus")}} 擬似クラスを使用してスタイル設定します。
 - **アクティブ**: アクティブ化している（例えばクリックされている）ときのリンクで、{{cssxref(":active")}} 擬似クラスを使用してスタイル設定します。
 
-## 既定のスタイル
+## デフォルトのスタイル
 
-下記の例は、既定ではリンクがどのように見え、どのように動作するかを示しています。ただし、CSS はテキストをより目立たせるために拡大し、中央に配置しています。この例では、既定のスタイル設定の見た目や 動作と、より多くの CSS スタイルが適用されているこのページの他のリンクの見た目や 動作を比較することができます。
+下記の例は、デフォルトではリンクがどのように見え、どのように動作するかを示しています。ただし、CSS はテキストをより目立たせるために拡大し、中央に配置しています。この例のデフォルトのスタイルの外観や動作を、このページ内の他のリンク（より多くの CSS スタイルが適用されているもの）と比較してみてください。デフォルトのリンクには、以下の特性があります。
 
 - リンクには下線が引かれています。
 - 未訪問のリンクは青になります。
 - 訪問済みのリンクは紫になります。
 - リンクにポインターを当てると、マウスポインターが小さな手のアイコンに変わります。
 - フォーカスされたリンクには輪郭線が表示されます。このページのリンクはキーボードでタブキーを押すことでフォーカスできるはずです。
-
-- アクティブなリンクは赤です。クリック時にマウスボタンを押しっぱなしにしてみてください。
+- アクティブなリンクは赤です。リンクをクリックする際に、マウスボタンを押し続けてみてください。
 
 ```html
 <p><a href="#">単純なリンク</a></p>
@@ -72,25 +69,25 @@ p {
 {{ EmbedLiveSample('Default_styles', '100%', 130) }}
 
 > [!NOTE]
-> このページのリンク例はすべて、それぞれのウィンドウの一番上にリンクしています。 空のフラグメント（`href="#"`）を使用しているのは、単純な例を作成し、それぞれの {{HTMLElement("iframe")}} に格納されているライブサンプルが壊れないようにするためです。
+> このページのリンク例はすべて、埋め込まれたウィンドウの一番上にリンクしています。 空のフラグメント (`href="#"`) を使用しているのは、単純な例を作成し、それぞれの {{HTMLElement("iframe")}} に格納されているライブサンプルが壊れないようにするためです。
 
-興味深いことに、これらの既定のスタイルは、1990 年代半ばのブラウザーの初期の頃のものとほぼ同じです。 これは、ユーザーがこの動作を知っており、予期するようになったためです。リンクのスタイルが異なると、多くの人が混乱してしまうでしょう。 これは、リンクのスタイルを設定してはいけないという意味ではなく、予想される動作から大きく外れてはいけないということです。 少なくとも次のことをするべきです。
+興味深いことに、これらのデフォルトのスタイルは、1990 年代半ばのブラウザーの初期の頃のものとほぼ同じです。 これは、ユーザーがこの動作を知っており、予期するようになったためです。リンクのスタイルが異なると、人々が混乱してしまうでしょう。 これは、リンクのスタイルを設定してはいけないという意味ではなく、予想される動作から大きく外れてはいけないということです。 少なくとも次のことをするべきです。
 
 - 下線をリンクのみに使用し、他のものには使用しないようにします。リンクに下線を付けたくない場合は、少なくとも他の方法でリンクを目立たせてしてください。
 - ホバー/フォーカスしたときに何らかの方法で反応するようにし、アクティブ化したときには少し異なる方法で反応するようにしてください。
 
-既定のスタイルは、次の CSS プロパティを使用してオフにしたり変更したりできます。
+デフォルトのスタイルは、次の CSS プロパティを使用してオフにしたり変更したりできます。
 
 - {{cssxref("color")}} でテキストの色を設定します。
 - {{cssxref("cursor")}} でマウスポインターのスタイルを設定します。よっぽどの理由がない限り、これはオフにしないでください。
-- {{cssxref("outline")}} でテキストの輪郭線を設定します。輪郭線を境界線に似ていますが、唯一の違いは、境界線はボックス内の空間を占めるのに対し、輪郭線は空間を占めずに背景の上に置かれるだけという点です。輪郭線はアクセシビリティの向上に役立つので、他の方法でリンクがフォーカスされたことを表さない限り、除去しないでください。
+- {{cssxref("outline")}} でテキストの輪郭線を設定します。輪郭線を境界線に似ていますが、唯一の違いは、境界線はボックス内の空間を占めるのに対し、輪郭線は空間を占めずに背景の上に置かれるだけという点です。輪郭線は背景の上に表示されます。輪郭線はアクセシビリティの観点から有益な補助機能であるため、フォーカスされているリンクを示す別のメソッドを追加しない限り、これを除去すべきではありません。
 
 > [!NOTE]
 > リンクのスタイルは上記のプロパティに限定されているわけではありません。好きなプロパティを自由に使用できます。
 
 ## リンクのスタイル設定
 
-既定の状態を少し詳しく見てきたので、典型的なリンクのスタイル設定のセットを見てみましょう。
+デフォルトの状態についてある程度詳しく見てきたところで、次に、代表的なリンクスタイルのセットを見ていきましょう。
 
 まず始めに、空のルールセットを書き出します。
 
@@ -170,156 +167,95 @@ CSS を適用するためのサンプル HTML も提供します。
 
 {{ EmbedLiveSample('Styling_some_links', '100%', 200) }}
 
-では、ここでは何が行われたのでしょうか？確かにこれは既定のスタイル設定とは異なって見えますが、それでもユーザーが何が起こっているのか分かりやすい慣れ親しんだ使い勝手を提供しています。
+では、ここでは何が行われたのでしょうか？確かにこれはデフォルトのスタイル設定とは異なって見えますが、それでもユーザーが何が起こっているのか分かりやすい慣れ親しんだ使い勝手を提供しています。
 
 - 最初の 2 つのルールは、この場ではさほど興味深いものではありません。
-- 3 番目のルールは `a` セレクターを使って既定のテキストの下線とフォーカスの輪郭線（ブラウザーによって異なります）を取り除きます。
+- 3 番目のルールは `a` セレクターを使ってデフォルトのテキストの下線とフォーカスの輪郭線（ブラウザーによって異なります）を取り除きます。
 - 次に、`a:link` セレクターと `a:visited` セレクターを使用して、未訪問リンクと訪問済みリンクに 2 つのカラーバリエーションを設定して区別できるようにします。
 - 次の 2 つのルールでは、`a:focus` と `a:hover` を使用して、フォーカスされたリンクとホバーされたリンクを異なる背景色に設定し、さらにリンクを目立たせるために下線を使用します。
 - 最後に、`a:active` は、リンクがアクティブになっている間に反転色にするために使用され、重要なことが起こっていることが分かりやすくします。
 
-## アクティブラーニング: 自分のリンクをスタイル設定する
+## 自分のリンクをスタイル設定する
 
-このアクティブラーニングセッションでは、空のルールセットに自分で宣言を追加して、リンクを本当にかっこよく見せてください。 想像力を駆使して、ワイルドに。上記の例と同じように、よりかっこよく機能的なものを思いつくことができると確信しています。
+この課題では、空のルールセットに自分で宣言を追加して、リンクを本当にかっこよく見せてください。 想像力を駆使して、ワイルドに。上記の例と同じように、よりかっこよく機能的なものを思いつくことができると確信しています。
 
-間違えた場合は、<kbd>リセット</kbd>ボタンを使用していつでもリセットできます。 本当に立ち往生してしまったら、上に示した例を挿入するために<kbd>答えを表示</kbd>ボタンを押してください。
+1. 下記コードブロック内の **Play** をクリックして、MDN Playground の例を編集してください。
+2. リンクには、常に適用されるデフォルトのスタイルを設定してください。文字色だけにこだわる必要はありませんが、リンクであることが一目でわかるようにしてください。
+3. 訪問済みリンクには、設定したデフォルトのリンクスタイルとは少し異なる色を適用してください。
+4. リンクのフォーカス状態およびホバー状態には、他のリンクよりも目立つように、明確なスタイルを適用してください。同時に、リンクにフォーカスが当たったり、マウスオーバーしたりした際のデフォルトの下線を除去してください。
+5. アクティブ状態に、また別のスタイルを適用してください。
 
-```html hidden
-<div
-  class="body-wrapper"
-  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
-  <h2>HTML 入力</h2>
-  <textarea
-    id="code"
-    class="html-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-<p><a href="#">Mozilla Firefox</a>、<a href="#">Google Chrome</a>、<a href="#">Microsoft Edge</a> など、利用できるブラウザーが複数あります。</p>
-  </textarea>
+間違えてしまった場合は、MDN Playground の「リセット」ボタンをクリックすると、作業内容をリセットできます。どうしても解決できない場合は、出力例の下記にある解答を参照してください。
 
-  <h2>CSS 入力</h2>
-  <textarea
-    id="code"
-    class="css-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-a {
-
-}
-
-a:link {
-
-}
-
-a:visited {
-
-}
-
-a:focus {
-
-}
-
-a:hover {
-
-}
-
-a:active {
-
-}
-  </textarea>
-
-  <h2>出力</h2>
-  <div
-    class="output"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
-  <div class="controls">
-    <input
-      id="reset"
-      type="button"
-      value="リセット"
-      style="margin: 10px 10px 0 0;" />
-    <input
-      id="solution"
-      type="button"
-      value="答えを表示"
-      style="margin: 10px 0 0 10px;" />
-  </div>
-</div>
+```html-nolint live-sample___link_styling
+<p>
+  <a href="https://www.mozilla.org/firefox/new/" target="_blank">Mozilla Firefox</a>、
+  <a href="https://www.google.co.uk/chrome/" target="_blank">Google Chrome</a>、
+  <a href="https://www.microsoft.com/edge" target="_blank">Microsoft Edge</a> など、利用できるブラウザーが複数あります。
+</p>
 ```
 
-```js hidden
-const htmlInput = document.querySelector(".html-input");
-const cssInput = document.querySelector(".css-input");
-const reset = document.getElementById("reset");
-const htmlCode = htmlInput.value;
-const cssCode = cssInput.value;
-const output = document.querySelector(".output");
-const solution = document.getElementById("solution");
-
-const styleElem = document.createElement("style");
-const headElem = document.querySelector("head");
-headElem.appendChild(styleElem);
-
-function drawOutput() {
-  output.innerHTML = htmlInput.value;
-  styleElem.textContent = cssInput.value;
-}
-
-reset.addEventListener("click", () => {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
-});
-
-solution.addEventListener("click", () => {
-  htmlInput.value = htmlCode;
-  cssInput.value = `p {
+```css-nolint hidden live-sample___link_styling
+p {
   font-size: 1.2rem;
   font-family: sans-serif;
   line-height: 1.4;
 }
 
+```
+
+```css live-sample___link_styling
 a {
-  outline-color: transparent;
-  text-decoration: none;
-  padding: 2px 1px 0;
 }
 
-a:link {
+a:visited {
+}
+
+a:focus,
+a:hover {
+}
+
+a:active {
+}
+```
+
+{{ EmbedLiveSample('link_styling', "100%", 100) }}
+
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
+
+完成した CSS は、次のようになるはずです。
+
+```css
+a {
+  outline-color: transparent;
+  padding: 2px 1px 0;
   color: #265301;
 }
 
 a:visited {
-  color: #437A16;
+  color: #437a16;
 }
 
+a:hover,
 a:focus {
-  border-bottom: 1px solid;
-  background: #BAE498;
-}
-
-a:hover {
-  border-bottom: 1px solid;
-  background: #CDFEAA;
+  background: #bae498;
+  text-decoration: none;
 }
 
 a:active {
   background: #265301;
-  color: #CDFEAA;
-}`;
-  drawOutput();
-});
-
-htmlInput.addEventListener("input", drawOutput);
-cssInput.addEventListener("input", drawOutput);
-window.addEventListener("load", drawOutput);
+  color: #cdfeaa;
+}
 ```
 
-{{ EmbedLiveSample('Active_learning_Style_your_own_links', 700, 800) }}
+</details>
 
 ## リンクにアイコンを含める
 
-リンクにアイコンを表記することで、リンク先がどのようなコンテンツであるかをより分かりやすく提供するのが一般的です。実に単純な例ですが、外部リンク（他のサイトにつながるリンク）にアイコンを追加する例を見てみましょう。このようなアイコンは、通常、箱から小さな矢印が出ているように見えます。この例では、[icons8.com からの外部リンクアイコン](https://icons8.jp/icon/741/external-link)を使用します。
+リンク先にどのようなコンテンツがあるかを示すために、リンクにアイコンを付加するのは一般的な手法です。ここでは、外部リンク（他のサイトへつながるリンク）にアイコンを追加する基本的な例を見てみましょう。外部リンクのアイコンは、通常、枠の外を指す矢印が使われます。この例では、[icons8.com の外部リンクアイコン](https://icons8.com/icon/741/external-link)を使用します。
 
-欲しい効果が得られる HTML と CSS を見てみましょう。 まず、スタイル設定する簡単な HTML です。
+まず、スタイル設定する簡単な HTML です。
 
 ```html-nolint
 <p>
@@ -327,7 +263,7 @@ window.addEventListener("load", drawOutput);
 </p>
 ```
 
-次に、CSS です。
+次に、目的の効果を実現するためのいくらかの CSS です。
 
 ```css
 body {
@@ -350,13 +286,13 @@ a[href^="http"]::after {
 
 {{ EmbedLiveSample('Including_icons_on_links', '100%', 150) }}
 
-それでは、ここで何が起こっているのでしょうか？ これまで見てきたのと同じ情報なので、CSS の大部分はスキップします。 しかし最後のルールは興味深いもので、{{cssxref("::after")}} 擬似要素を使用しています。`0.8rem x 0.8rem` の擬似要素が、アンカーテキストの後にインライングロックとして置かれています。アイコンは擬似要素の {{cssxref("background")}} として描画されます。
+それでは、ここで何が起こっているのでしょうか？ CSS の大部分は、前回の例と同じなので省略します。しかし、最後のルールは興味深いものです。ここでは、{{cssxref("::after")}} という擬似要素セレクターを使用しています。`0.8em x 0.8em` の擬似要素は、アンカーテキストの後にインラインブロックとしてレンダリングされ、その {{cssxref("background-image")}} プロパティで参照されているアイコンが、擬似要素の背景に配置されます。同時に、アイコンとその直前の単語の間に空間を作成するために、{{cssxref("margin-left")}} も指定しています。
 
 ここでは[相対的な単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#相対長の単位)である `em` を使用しています。アイコンのサイズはアンカーのテキストサイズに比例します。アンカーのテキストサイズが変更された場合、アイコンのサイズもそれに応じて調整されます。
 
-最後んび。どうやって外部リンクだけを選択したのでしょうか？ [HTML のリンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)を適切に記述しているのなら、絶対 URL を使用しているのは外部リンクだけであるはずです。自分のサイトの他の部分にリンクするには（最初のリンクのように）相対リンクを使用したほうが効率的です。"http" というテキストは（2 番目と 3 番目のリンクのように）外部リンクにのみ現れるので、これを[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#属性セレクター)で選択できます。`a[href^="http"]` は {{htmlelement("a")}} 要素のうち、[`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性が "http" で始まるものに限り選択します。
+最後んび。どうやって外部リンクだけを選択したのでしょうか？ [HTML のリンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)を適切に記述しているのなら、絶対 URL を使用しているのは外部リンクだけであるはずです。自分のサイトの他の部分にリンクするには（最初のリンクのように）相対リンクを使用したほうが効率的です。"http" というテキストは（2 番目と 3 番目のリンクのように）外部リンクにのみ現れるので、これを[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)で選択できます。`a[href^="http"]` は {{htmlelement("a")}} 要素のうち、[`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性が "http" で始まるものに限り選択します。
 
-以上です。上のアクティブラーニングの節を再検討して、この新しいテクニックを試してみてください！
+以上です。上の課題の節を復習して、この新しいテクニックを試してみてください！
 
 > [!NOTE]
 > [背景](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)や[レスポンシブウェブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)にまだ慣れていなくても心配しないでください。 これらは他の場所で説明します。
@@ -365,7 +301,7 @@ a[href^="http"]::after {
 
 この記事でこれまで説明してきたツールは、他にも使用することができます。例えば、ホバーのような状態は、リンクだけでなく、多くの異なる要素をスタイル設定するために使用することができます。段落やリストアイテムなどのホバー状態をスタイル設定することができます。
 
-さらに、状況によっては、リンクはボタンのような外見になったり動作したりするようスタイル設定することが一般的です。ウェブサイトのナビゲーションメニューは、一連のリンクとしてマークアップすることができ、これはユーザーにサイトの他の一部へのアクセスを提供する一連のコントロールボタンやタブのように見えるようにスタイル設定することができます。それでは、その方法を探ってみましょう。
+また、リンクはボタンと同様に動作するようにスタイル設定されることがよくあります。ウェブサイトのナビゲーションメニューは、一連のリンクとしてマークアップすることができ、これはユーザーにサイトの他の一部へのアクセスを提供する一連のコントロールボタンやタブのように見えるようにスタイル設定することができます。それでは、その方法を探ってみましょう。
 
 まず、いくらかの HTML です。
 
@@ -432,11 +368,11 @@ CSS には、コンテナーとそこに含まれるリンクのスタイル設�
   - フレックスアイテム間の溝は、コンテナーの幅の `0.625%` です。
 - 3 番目のルールはリンクをスタイル設定しています。
   - 最初の宣言である `flex: 1` は、アイテムの幅が調整されることを表しますので、コンテナーの利用可能な空間をすべて使用します。
-  - 次に、既定の {{cssxref("text-decoration")}} および {{cssxref("outline")}} を無効にしています。外見を邪魔されたくありませんので。
+  - 次に、デフォルトの {{cssxref("text-decoration")}} および {{cssxref("outline")}} を無効にしています。外見を邪魔されたくありませんので。
   - 最後の 3 つの宣言は、それぞれのリンク内のテキストを中央に配置すること、{{cssxref("line-height")}} を 3 に設定してボタンに高さを与えること（これはテキストを上下中央に配置するという利点もあります）、そしてテキストの色を黒に設定することです。
 
 ## まとめ
 
-この記事が、今のところは、リンクについて知っておく必要があるすべての情報を提供してくれることを願っています。 テキストのスタイル設定モジュールの最後の記事では、ウェブサイトでのカスタムフォント（またの名をウェブフォント）の使用方法について詳しく説明しています。
+この記事が、今のところは、リンクについて知っておく必要があるすべての情報を提供してくれることを願っています。 テキストのスタイル設定モジュールの最後の記事では、ウェブサイトでのカスタムウェブフォントの使用方法について詳しく説明しています。
 
 {{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
