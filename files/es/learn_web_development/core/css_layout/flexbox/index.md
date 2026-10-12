@@ -1,30 +1,38 @@
 ---
 title: Flexbox
 slug: Learn_web_development/Core/CSS_layout/Flexbox
-original_slug: Learn/CSS/CSS_layout/Flexbox
+l10n:
+  sourceCommit: c55a38c71a356502e6d3df5e246b6e89f9e83498
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Position", "Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
-[Flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout) es un método de diseño de página unidimensional para compaginar elementos en filas o columnas. Los elementos de contenido se ensanchan para rellenar el espacio adicional y se encogen para caber en espacios más pequeños. En este artículo expondremos todas sus características básicas.
+[Flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout) es un método de diseño unidimensional para disponer elementos en filas o columnas. Los elementos se _flexionan_ (se expanden) para ocupar el espacio adicional o se encogen para caber en espacios más pequeños. Este artículo explica todos los fundamentos.
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerrequisitos:</th>
+      <th scope="row">Requisitos previos:</th>
       <td>
-        Los conceptos básicos de HTML (véase
         <a href="/es/docs/Learn_web_development/Core/Structuring_content"
-          >Introducción al HTML</a
-        >) y nociones de cómo funciona el CSS (véase
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Introducción al CSS</a>).
+          >Estructurar el contenido con HTML</a
+        >,
+        <a href="/es/docs/Learn_web_development/Core/Styling_basics">Fundamentos de estilo con CSS</a>,
+        <a href="/es/docs/Learn_web_development/Core/Text_styling/Fundamentals">Estilos fundamentales de texto y fuentes</a>,
+        y estar familiarizado con los <a href="/es/docs/Learn_web_development/Core/CSS_layout/Introduction">conceptos fundamentales del diseño con CSS</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objetivo:</th>
+      <th scope="row">Resultados de aprendizaje:</th>
       <td>
-        Aprender a usar el sistema de compaginación con elementos flexbox para
-        crear compaginaciones web.
+        <ul>
+          <li>El propósito de flexbox: disponer de forma flexible un conjunto de elementos de bloque o en línea en una dimensión.</li>
+          <li>La terminología de flex: contenedor flexible, elemento flexible, eje principal y eje transversal.</li>
+          <li>Entender qué te da <code>display: flex</code> de forma predeterminada.</li>
+          <li>Cómo hacer que el contenido pase a nuevas filas y columnas.</li>
+          <li>El dimensionamiento flexible y el orden de los elementos flexibles.</li>
+          <li>Justificar y alinear el contenido.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -32,104 +40,315 @@ original_slug: Learn/CSS/CSS_layout/Flexbox
 
 ## ¿Por qué flexbox?
 
-Durante mucho tiempo, las únicas herramientas fiables con compatibilidad cruzada entre navegadores disponibles para crear diseños CSS fueron cosas como la [flotación](/es/docs/Learn_web_development/Core/CSS_layout/Floats) y el [posicionamiento](/es/docs/Learn/CSS/CSS_layout/Positioning). Están bien y funcionan, pero de alguna manera también limitan bastante y frustran.
+El diseño de caja flexible de CSS te permite:
 
-Con tales herramientas resulta difícil, si no imposible, lograr obtener en cualquier forma conveniente y flexible un diseño de página sencillo con unos requisitos como los siguientes:
+- Centrar verticalmente un bloque de contenido dentro de su padre.
+- Hacer que todos los hijos de un contenedor ocupen la misma cantidad del ancho o la altura disponibles, sea cual sea el ancho o la altura disponibles.
+- Hacer que todas las columnas de un diseño de varias columnas tengan la misma altura, aunque contengan cantidades distintas de contenido.
 
-- Centrar verticalmente un bloque de contenido dentro de su elemento padre.
-- Hacer que todos los elementos secundarios de un contenedor ocupen una cantidad igual del ancho/alto disponible, independientemente del ancho/alto que haya disponible.
-- Hacer que todas las columnas en una compaginación en columnas múltiples adopten la misma altura incluso si contienen cantidades diferentes de contenido.
+Las características de flexbox pueden ser la solución perfecta para tus necesidades de diseño unidimensional. ¡Vamos a profundizar y descubrirlo!
 
-Como verás en las secciones siguientes, los elementos flexbox facilitan mucho algunas tareas de compaginación. ¡Vamos a profundizar en ello!
+> [!NOTE]
+> El scrim introductorio [Flexbox](https://scrimba.com/learn-html-and-css-c0p/~017?via=mdn) de Scrimba <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup> ofrece una guía interactiva que explica lo habitual que es flexbox en la web y, por tanto, por qué es tan importante aprenderlo, y te guía por un caso de uso típico que demuestra la potencia de flexbox.
 
 ## Presentación de un ejemplo sencillo
 
-En este artículo, te guiaremos por una serie de ejercicios para ayudarte a comprender cómo funcionan los elementos flexbox. Para comenzar, debes hacer una copia local del primer archivo de inicio [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) de nuestro repositorio de GitHub. Cárgalo en un navegador moderno (como Firefox o Chrome) y echa un vistazo al código en tu editor de código. Puedes [verlo en vivo aquí](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html).
+En este artículo harás una serie de ejercicios que te ayudarán a entender cómo funciona flexbox. Para empezar, haz una copia local del HTML y el CSS. Cárgala en un navegador moderno (como Firefox o Chrome) y echa un vistazo al código en tu editor de código. También puedes hacer clic en el botón «Play» para abrirlo en el Playground.
 
-Verás que hay un elemento {{htmlelement ("header")}} con un encabezado de nivel superior en él, y un elemento {{htmlelement ("section")}} que contiene tres elementos {{htmlelement ("article")}}. Los usaremos para crear una compaginación bastante habitual de tres columnas.
+```html live-sample___flexbox_0
+<header>
+  <h1>Ejemplo sencillo de flexbox</h1>
+</header>
+<section>
+  <article>
+    <h2>Primer artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Segundo artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Tercer artículo</h2>
+    <p>Contenido…</p>
+  </article>
+</section>
+```
 
-![](flexbox-example1.png)
+```css live-sample___flexbox_0
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+section {
+  zoom: 0.8;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+/* Añade tu CSS de flexbox debajo de aquí */
+```
+
+{{EmbedLiveSample("flexbox_0", "100", "415")}}
+
+Verás que tenemos un elemento {{htmlelement("header")}} con un encabezado de nivel superior dentro y un elemento {{htmlelement("section")}} que contiene tres elementos {{htmlelement("article")}}. Vamos a usarlos para crear un diseño bastante estándar de tres columnas.
 
 ## Especificar qué elementos colocar como cajas flexibles
 
-Para comenzar, vamos a seleccionar qué elementos se van a presentar como cajas flexibles. Para ello, establecemos un valor especial de {{cssxref ("display")}} en el elemento padre de los elementos que deseas editar. En este caso, queremos compaginar los elementos {{htmlelement ("article")}}, por lo que lo establecemos en {{htmlelement ("section")}} (que se convierte en un contenedor flexible):
+Para empezar, tenemos que seleccionar qué elementos se van a disponer como cajas flexibles. Para ello, establecemos un valor especial de {{cssxref("display")}} en el elemento padre de los elementos que quieres modificar. En este caso queremos disponer los elementos {{htmlelement("article")}}, así que lo establecemos en el {{htmlelement("section")}}:
 
-```css
+```html hidden live-sample___flexbox_1
+<header>
+  <h1>Ejemplo sencillo de flexbox</h1>
+</header>
+<section>
+  <article>
+    <h2>Primer artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Segundo artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Tercer artículo</h2>
+    <p>Contenido…</p>
+  </article>
+</section>
+```
+
+```css hidden live-sample___flexbox_1
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+section {
+  zoom: 0.8;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+/* Añade tu CSS de flexbox debajo de aquí */
+```
+
+```css live-sample___flexbox_1
 section {
   display: flex;
 }
 ```
 
-Esto hace que el elemento `<section>` se convierta en **contenedor flex**, y sus hijos en **elementos flexibles**. El resultado de esto debería ser algo así:
+Esto hace que el elemento `<section>` se convierta en un **contenedor flexible** y que sus hijos se conviertan en **elementos flexibles**. Este es su aspecto:
 
-![](flexbox-example2.png)
+{{EmbedLiveSample("flexbox_1", "100", "210")}}
 
-Así, esta declaración única nos da todo lo que necesitamos. Increíble, ¿verdad? Tenemos nuestra compaginación en columnas múltiples con columnas de igual tamaño, y todas las columnas tienen la misma altura. Esto se debe a que los valores por defecto que se han asignado a los elementos flexibles (los elementos secundarios del contenedor flexible) están pensados para resolver problemas comunes como este. Veremos más sobre el tema más adelante.
+Esta única declaración nos da todo lo que necesitamos. Increíble, ¿verdad? Tenemos un diseño de varias columnas con columnas del mismo tamaño, y todas tienen la misma altura. Esto se debe a que los valores predeterminados que se dan a los elementos flexibles (los hijos del contenedor flexible) están pensados para resolver problemas habituales como este.
 
-Para que quede claro, reiteremos lo que está sucediendo aquí. El elemento al que le hemos dado un valor de {{cssxref("display")}} de `flex` actúa como un elemento a nivel de bloque en términos de cómo interactúa con el resto de la página, pero sus elementos secundarios se presentan como elementos flexibles. La siguiente sección explicará con más detalle qué significa esto. Ten en cuenta también que puede usar un valor de `display` de `inline-flex` si desea diseñar los elementos secundarios de un elemento como elementos flexibles, pero hacer que ese elemento se comporte como un elemento en línea.
+Repasemos lo que ocurre aquí. Añadir un valor `flex` de {{cssxref("display")}} a un elemento lo convierte en un contenedor flexible. El contenedor se muestra como [contenido de bloque](/es/docs/Glossary/Block-level_content) en cuanto a cómo interactúa con el resto de la página. Cuando el elemento se convierte en un contenedor flexible, sus hijos se convierten en elementos flexibles (y se disponen como tales).
+
+Puedes hacer que el contenedor sea en línea con un [valor `display` exterior](/es/docs/Web/CSS/Reference/Properties/display#display-outside) (p. ej., `display: inline flex`), que afecta a cómo se dispone el propio contenedor en la página.
+El valor heredado `inline-flex` de display también muestra el contenedor en línea.
+En este tutorial nos centraremos en cómo se comporta el contenido del contenedor, pero, si quieres ver el efecto del diseño en línea frente al de bloque, puedes echar un vistazo a la [comparación de valores](/es/docs/Web/CSS/Reference/Properties/display) en la página de la propiedad `display`.
+
+Las siguientes secciones explican con más detalle qué son los elementos flexibles y qué ocurre dentro de un elemento cuando lo conviertes en un contenedor flexible.
 
 ## El modelo flexible
 
-Cuando los elementos se presentan como cajas flexibles, se distribuyen con respecto a dos ejes:
+Cuando los elementos se disponen como elementos flexibles, se disponen a lo largo de dos ejes:
 
-![](flex_terms.png)
+![Tres elementos flexibles en un idioma de izquierda a derecha, dispuestos uno al lado de otro en un contenedor flexible. El eje principal (el eje del contenedor flexible en la dirección en la que se disponen los elementos flexibles) es horizontal. Los extremos del eje son main-start y main-end, y están a la izquierda y a la derecha, respectivamente. El eje transversal es vertical, perpendicular al eje principal. Cross-start y cross-end están arriba y abajo, respectivamente. La longitud del elemento flexible a lo largo del eje principal, en este caso el ancho, se llama tamaño principal (main size), y la longitud del elemento flexible a lo largo del eje transversal, en este caso la altura, se llama tamaño transversal (cross size).](flex_terms.png)
 
-- El **eje principal** (**main axis**) es el eje que corre en la dirección en que se colocan los elementos flexibles (por ejemplo, según se disponen las filas en una página o hacia abajo según se disponen las columnas en una página). El inicio y el final de este eje se denominan **inicio principal** (**main start**) y **final principal** (**main end**).
-- El **eje transversal** (**cross axis**) es el eje que corre perpendicular a la dirección en la que se colocan los elementos flexibles. El inicio y el final de este eje se denominan **inicio transversal** (**cross start**) y **extremo cruzado** (**cross end**).
-- El elemento padre que tiene establecido `display: flex` (el elemento {{htmlelement ("section")}} en nuestro ejemplo) se llama **contenedor flexible**.
-- Los elementos que se presentan como cajas flexibles dentro del contenedor flexible se denominan **elementos flexibles** (son los elementos {{htmlelement ("article")}} de nuestro ejemplo).
+- El **eje principal** es el eje que va en la dirección en la que se disponen los elementos flexibles (por ejemplo, como una fila a lo ancho de la página o una columna hacia abajo). Los puntos de inicio y final de este eje se llaman **inicio principal** (_main start_) y **final principal** (_main end_). La longitud de un elemento flexible a lo largo del eje principal es el **tamaño principal** (_main size_).
+- El **eje transversal** es el eje perpendicular a la dirección en la que se disponen los elementos flexibles. Los puntos de inicio y final de este eje se llaman **inicio transversal** (_cross start_) y **final transversal** (_cross end_). La longitud de un elemento flexible a lo largo del eje transversal es el **tamaño transversal** (_cross size_).
+- El elemento padre que tiene establecido `display: flex` (el {{htmlelement("section")}} de nuestro ejemplo) se llama **contenedor flexible**.
+- Los elementos dispuestos como cajas flexibles dentro del contenedor flexible se llaman **elementos flexibles** (los elementos {{htmlelement("article")}} de nuestro ejemplo).
 
-Ten presente esta terminología al avanzar por las secciones posteriores. Si en algún momento te confundes con el uso de estos conceptos, siempre puedes volver atrás a consultarlos.
+Ten en cuenta esta terminología al avanzar por las secciones siguientes. Siempre puedes volver a consultarla si te confundes con alguno de los términos que se usan.
 
 ## ¿Columnas o filas?
 
-Los elementos flexbox proporcionan una propiedad llamada {{cssxref ("flex-direction")}} que especifica en qué dirección corre el eje principal (en qué dirección están dispuestos los elementos hijo de un elemento flexbox); por defecto, está establecido en el valor `row`, por lo que se presenta en una fila en la dirección en que se escribe el idioma predeterminado de tu navegador (de izquierda a derecha, en el caso de un navegador en español).
+Flexbox ofrece una propiedad llamada {{cssxref("flex-direction")}} que especifica en qué dirección va el eje principal (en qué dirección se disponen los hijos de flexbox). De forma predeterminada está establecida en `row`, lo que hace que se dispongan en una fila en la dirección en la que funciona el idioma predeterminado de tu navegador (de izquierda a derecha, en el caso de un navegador en español).
 
-Añade la declaración siguiente a tu regla {{htmlelement ("section")}}:
+Prueba a añadir la siguiente declaración a tu regla de {{htmlelement("section")}}:
 
 ```css
 flex-direction: column;
 ```
 
-Observa que esto vuelve a colocar los elementos en una disposición en columna, al igual que antes de añadir cualquier CSS. Antes de continuar, elimina esta declaración de tu ejemplo.
+Verás que esto vuelve a poner los elementos en un diseño de columna, como estaban antes de añadir ningún CSS. Antes de seguir, borra esta declaración de tu ejemplo.
 
 > [!NOTE]
-> También puedes compaginar elementos flexibles en una dirección inversa utilizando los valores `row-reverse` y `column-reverse`. ¡Experimenta también con estos valores!
+> También puedes disponer los elementos flexibles en dirección inversa con los valores `row-reverse` y `column-reverse`. ¡Experimenta también con estos valores!
 
-## Delimitar
+## Ajuste de línea
 
-Un problema que surge cuando tienes una cantidad fija de ancho o alto en tu diseño es que los hijos de un elemento flexbox eventualmente desbordan el contenedor y rompen el diseño. Echa un vistazo a nuestro ejemplo [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html) e intenta [verlo en vivo](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html) (toma una copia local de este archivo si deseas seguir este ejemplo):
+Un problema que surge cuando tienes un ancho o una altura fijos en tu diseño es que, al final, los hijos de flexbox desbordan su contenedor y rompen el diseño. En el siguiente ejemplo tenemos 5 elementos {{htmlelement("article")}}, que no caben porque tienen un `min-width` de `400px`, así que hay desplazamiento horizontal.
 
-![](flexbox-example3.png)
-
-Aquí vemos que los elementos hijo se salen de su contenedor. Una forma de solucionar esto es añadir la declaración siguiente a tu regla {{htmlelement ("section")}}:
-
-```css
-flex-wrap: wrap;
+```html hidden live-sample___flex-wrap_0
+<header>
+  <h1>Ejemplo sencillo de flexbox</h1>
+</header>
+<section>
+  <article>
+    <h2>Primer artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Segundo artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Tercer artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Cuarto artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Quinto artículo</h2>
+    <p>Contenido…</p>
+  </article>
+</section>
 ```
 
-Añade también la declaración siguiente a tu regla {{htmlelement ("article")}}:
-
-```css
-flex: 200px;
+```css hidden live-sample___flex-wrap_0
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  min-width: 400px;
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  display: flex;
+  flex-direction: row;
+  zoom: 0.8;
+}
 ```
 
-Pruébalo; observa que al haberlo incluido el aspecto de la compaginación resulta mucho más agradable:
+{{EmbedLiveSample("flex-wrap_0", "100", "230")}}
 
-![](flexbox-example4.png) Ahora hay varias filas y en cada fila caben tantos elementos hijo de un elemento flexbox como sean necesarios, y cualquier desbordamiento hace saltar el elemento hacia la línea siguiente. La declaración `flex: 200px` que hemos establecido en los artículos significa que cada uno tendrá al menos 200 px de ancho; discutiremos esta propiedad con más detalle más adelante. Observa también que los últimos elementos hijo de la última fila se agrandan hasta rellenar toda la fila.
+Aquí vemos que los hijos efectivamente se salen de su contenedor. De forma predeterminada, el navegador intenta colocar todos los elementos flexibles en una sola fila si `flex-direction` está establecido en `row`, o en una sola columna si `flex-direction` está establecido en `column`.
 
-Pero aquí podemos hacer mucho más. En primer lugar, cambia el valor de tu propiedad {{cssxref ("flex-direction")}} a `row-reverse`; ahora verás que todavía tienes tu compaginación en diversas filas, pero comienza desde la esquina opuesta de la ventana del navegador y fluye al revés.
+```html hidden live-sample___flex-wrap_1
+<header>
+  <h1>Ejemplo sencillo de flexbox</h1>
+</header>
+<section>
+  <article>
+    <h2>Primer artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Segundo artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Tercer artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Cuarto artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Quinto artículo</h2>
+    <p>Contenido…</p>
+  </article>
+</section>
+```
 
-## Propiedades abreviadas de flex-flow
+```css hidden live-sample___flex-wrap_1
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  min-width: 400px;
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  display: flex;
+  flex-direction: row;
+  zoom: 0.8;
+}
+```
 
-En este punto vale la pena señalar que hay una propiedad abreviada para {{cssxref ("flex-direction")}} y {{cssxref ("flex-wrap")}}: {{cssxref ("flex-flow")}}. Así, por ejemplo, puedes reemplazar:
+Una forma de solucionarlo es añadir la siguiente declaración a tu regla de {{htmlelement("section")}}:
+
+```css live-sample___flex-wrap_1
+section {
+  flex-wrap: wrap;
+}
+```
+
+Verás que el diseño se ve mucho mejor con esto:
+
+{{EmbedLiveSample("flex-wrap_1", "100", "430")}}
+
+Ahora tenemos varias filas. En cada fila caben tantos hijos de flexbox como resulta razonable. Lo que desborda pasa a la línea siguiente.
+
+Pero aquí podemos hacer más cosas. En primer lugar, prueba a cambiar el valor de tu propiedad {{cssxref("flex-direction")}} a `row-reverse`. Ahora verás que sigues teniendo el diseño de varias filas, pero empieza desde la esquina opuesta de la ventana del navegador y fluye al revés.
+
+## La forma abreviada flex-flow
+
+En este punto, vale la pena señalar que existe una forma abreviada de {{cssxref("flex-direction")}} y {{cssxref("flex-wrap")}}: {{cssxref("flex-flow")}}. Así, por ejemplo, puedes sustituir
 
 ```css
 flex-direction: row;
 flex-wrap: wrap;
 ```
 
-con
+por
 
 ```css
 flex-flow: row wrap;
@@ -137,67 +356,274 @@ flex-flow: row wrap;
 
 ## Dimensionamiento flexible de elementos flexibles
 
-Volvamos ahora a nuestro primer ejemplo y veamos cómo podemos controlar qué proporción de espacio ocupan los elementos flexibles. Inicia tu copia local de [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) o toma una copia de [flexbox1.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html) como nuevo punto de partida ([consúltalo en vivo](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
+Volvamos ahora a nuestro primer ejemplo y veamos cómo podemos controlar qué proporción del espacio ocupan los elementos flexibles en comparación con los demás elementos flexibles.
 
-Primero, añade la regla siguiente al final de tu CSS:
+```html hidden live-sample___flexbox_2
+<header>
+  <h1>Ejemplo sencillo de flexbox</h1>
+</header>
+<section>
+  <article>
+    <h2>Primer artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Segundo artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Tercer artículo</h2>
+    <p>Contenido…</p>
+  </article>
+</section>
+```
 
-```css
+```css hidden live-sample___flexbox_2
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  zoom: 0.8;
+  display: flex;
+}
+```
+
+En tu copia local, añade la siguiente regla al final de tu CSS:
+
+```css live-sample___flexbox_2
 article {
   flex: 1;
 }
 ```
 
-Este es un valor de proporción sin unidades que especifica la cantidad de espacio disponible sobre el eje principal que ocupa cada elemento flexible. En este caso, damos a cada elemento {{htmlelement ("article")}} un valor de 1, lo que significa que todos ocuparán una cantidad igual del espacio libre restante después de que se hayan establecido elementos como el área de relleno y el margen. Es una proporción, lo que significa que dar a cada elemento flexible un valor de 400000 tendría exactamente el mismo efecto.
+{{EmbedLiveSample("flexbox_2", "100", "210")}}
 
-Ahora añade la regla siguiente debajo de la anterior:
+Es un valor de proporción sin unidades que indica cuánto espacio disponible a lo largo del eje principal ocupará cada elemento flexible en comparación con los demás. En este caso, damos a cada elemento {{htmlelement("article")}} el mismo valor (un valor de `1`), lo que significa que todos ocuparán la misma cantidad del espacio sobrante que queda después de establecer propiedades como el relleno y el margen. Este valor se reparte proporcionalmente entre los elementos flexibles: dar a cada elemento flexible un valor de `400000` tendría exactamente el mismo efecto.
 
-```css
+```html hidden live-sample___flexbox_3
+<header>
+  <h1>Ejemplo sencillo de flexbox</h1>
+</header>
+<section>
+  <article>
+    <h2>Primer artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Segundo artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Tercer artículo</h2>
+    <p>Contenido…</p>
+  </article>
+</section>
+```
+
+```css hidden live-sample___flexbox_3
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  zoom: 0.8;
+  display: flex;
+}
+article {
+  flex: 1;
+}
+```
+
+Ahora añade la siguiente regla debajo de la anterior:
+
+```css live-sample___flexbox_3
 article:nth-of-type(3) {
   flex: 2;
 }
 ```
 
-Al actualizar verás que el tercer {{htmlelement ("article")}} ocupa ahora el doble del ancho disponible que los otros dos; ahora hay cuatro unidades de proporción disponibles en total. Los primeros dos elementos flexibles tienen una cada uno, por lo que ocupan 1/4 del espacio disponible cada uno. El tercero tiene dos unidades, por lo que ocupa 2/4 del espacio disponible (o 1/2).
+{{EmbedLiveSample("flexbox_3", "100", "210")}}
 
-También puedes especificar un valor de tamaño mínimo dentro del valor flexible. Actualiza las reglas para tu artículo de la manera siguiente:
+Ahora, al recargar, verás que el tercer {{htmlelement("article")}} ocupa el doble del ancho disponible que los otros dos. Ahora hay en total cuatro unidades de proporción disponibles (porque 1 + 1 + 2 = 4). Los dos primeros elementos flexibles tienen una unidad cada uno, así que cada uno ocupa 1/4 del espacio disponible. El tercero tiene dos unidades, así que ocupa 2/4 del espacio disponible (o la mitad).
 
-```css
-article {
-  flex: 1 200px;
+También puedes especificar un valor de tamaño mínimo dentro del valor de flex. Prueba a actualizar tus reglas de article existentes así:
+
+```html hidden live-sample___flexbox_4
+<header>
+  <h1>Ejemplo sencillo de flexbox</h1>
+</header>
+<section>
+  <article>
+    <h2>Primer artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Segundo artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Tercer artículo</h2>
+    <p>Contenido…</p>
+  </article>
+</section>
+```
+
+```css hidden live-sample___flexbox_4
+body {
+  font-family: sans-serif;
+  margin: 0;
 }
-
-article:nth-of-type(3) {
-  flex: 2 200px;
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  zoom: 0.8;
+  display: flex;
 }
 ```
 
-Esto establece básicamente que «a cada elemento flexible se le da primero 200px del espacio disponible. Después de eso, el resto del espacio disponible se reparte de acuerdo con las unidades de proporción». Actualiza y observa de qué modo se reparte ahora el espacio.
+```css live-sample___flexbox_4
+article {
+  flex: 1 100px;
+}
 
-![](flexbox-example1.png)
+article:nth-of-type(3) {
+  flex: 2 100px;
+}
+```
 
-El valor real del elemento flexbox se puede ver en su flexibilidad/adaptabilidad: si cambias el tamaño de la ventana del navegador o añades otro elemento {{htmlelement ("article")}}, el diseño continúa funcionando bien.
+Esto básicamente dice: «A cada elemento flexible se le darán primero `100px` del espacio disponible. Después, el resto del espacio disponible se repartirá según las unidades de proporción». Verás una diferencia en cómo se reparte el espacio.
 
-## flex: forma completa y abreviada
+{{EmbedLiveSample("flexbox_4", "100", "210")}}
 
-{{cssxref ("flex")}} es una propiedad abreviada que puede especificar hasta tres valores diferentes:
+Todos los elementos flexibles tienen un ancho mínimo de 100 píxeles, establecido con 'flex'. El valor de flex de los dos primeros elementos flexibles es 1, y el del tercero es 2. Esto divide el espacio restante del contenedor flexible en 4 unidades de proporción. Se asigna una unidad a cada uno de los dos primeros elementos flexibles y 2 unidades al tercero, lo que hace que el tercer elemento flexible sea más ancho que los otros dos, que tienen el mismo ancho.
 
-- El valor de proporción sin unidades que ya hemos comentado. Se puede especificar individualmente usando la propiedad {{cssxref ("flex-grow")}}.
-- Un segundo valor de proporción sin unidades, {{cssxref ("flex-shrink")}}, que entra en juego cuando los elementos flexibles desbordan el contenedor. Especifica cuánto de la cantidad desbordada se quita al tamaño de cada elemento flexible para evitar que el contenedor se desborde. Esta es una característica bastante avanzada de flexbox, y no la vamos a exponer en detalle en este artículo.
-- El valor de tamaño mínimo que ya hemos visto. Se puede especificar individualmente usando el valor {{cssxref ("flex-basis")}}.
+El verdadero valor de flexbox se ve en su flexibilidad y su capacidad de adaptación. Si cambias el tamaño de la ventana del navegador o añades otro elemento {{htmlelement("article")}}, el diseño sigue funcionando perfectamente.
 
-Recomendamos no usar las propiedades flex sin abreviar a menos que realmente tengas que hacerlo (por ejemplo, para anular algo establecido previamente). Comportan mucho código añadido y suelen aportar confusión.
+## flex: forma abreviada frente a forma completa
+
+{{cssxref("flex")}} es una propiedad abreviada que puede especificar hasta tres valores distintos:
+
+- El valor de proporción sin unidades que vimos antes. Se puede especificar por separado con la propiedad completa {{cssxref("flex-grow")}}.
+- Un segundo valor de proporción sin unidades, {{cssxref("flex-shrink")}}, que entra en juego cuando los elementos flexibles desbordan su contenedor. Este valor especifica cuánto se encogerá un elemento para evitar el desbordamiento. Es una característica bastante avanzada de flexbox y no la trataremos más en este artículo.
+- El valor de tamaño mínimo que vimos antes. Se puede especificar por separado con el valor completo {{cssxref("flex-basis")}}.
+
+Te recomendamos no usar las propiedades completas de flex a menos que de verdad sea necesario (por ejemplo, para sobrescribir algo establecido antes). Hacen que haya que escribir mucho código adicional y pueden resultar algo confusas.
 
 ## Alineación horizontal y vertical
 
-También puedes usar las funciones de los elementos flexbox para alinear elementos flexibles sobre el eje principal o transversal. Exploremos este aspecto a partir de un ejemplo nuevo: [flex-align0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html) ([consúltalo en vivo](https://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)), que vamos a convertir en una barra de herramientas/botones ordenada y flexible. En este momento puedes ver una barra de menú horizontal, con algunos botones pegados en línea a la esquina superior izquierda.
+También puedes usar las características de flexbox para alinear los elementos flexibles a lo largo del eje principal o del eje transversal. Veámoslo con un nuevo ejemplo:
 
-![](flexbox-example5.png)
+```html live-sample___flex-align_0
+<div>
+  <button>Sonreír</button>
+  <button>Reír</button>
+  <button>Guiñar</button>
+  <button>Encogerse</button>
+  <button>Sonrojarse</button>
+</div>
+```
 
-Primero, toma una copia local de este ejemplo.
+```css live-sample___flex-align_0
+body {
+  font-family: sans-serif;
+  width: 90%;
+  max-width: 960px;
+  margin: 10px auto;
+}
+div {
+  height: 100px;
+  border: 1px solid black;
+}
+button {
+  font-size: 18px;
+  line-height: 1.5;
+  width: 15%;
+}
+/* Añade tu CSS de flexbox debajo de aquí */
+```
 
-Ahora, añade a la parte inferior del CSS del ejemplo lo siguiente:
+Vamos a convertir esto en una barra de herramientas o de botones ordenada y flexible. Por ahora verás una barra de menú horizontal con algunos botones apretados en la esquina superior izquierda.
 
-```css
+{{EmbedLiveSample("flex-align_0", "100", "125")}}
+
+Primero, haz una copia local de este ejemplo.
+
+Ahora añade lo siguiente al final del CSS del ejemplo:
+
+```html hidden live-sample___flex-align_1
+<div>
+  <button>Sonreír</button>
+  <button>Reír</button>
+  <button>Guiñar</button>
+  <button>Encogerse</button>
+  <button>Sonrojarse</button>
+</div>
+```
+
+```css hidden live-sample___flex-align_1
+body {
+  font-family: sans-serif;
+  width: 90%;
+  max-width: 960px;
+  margin: 10px auto;
+}
+div {
+  height: 100px;
+  border: 1px solid black;
+}
+button {
+  font-size: 18px;
+  line-height: 1.5;
+  width: 15%;
+}
+/* Añade tu CSS de flexbox debajo de aquí */
+```
+
+```css live-sample___flex-align_1
 div {
   display: flex;
   align-items: center;
@@ -205,39 +631,80 @@ div {
 }
 ```
 
-Actualiza la página y observa que los botones ahora están convenientemente centrados, horizontal y verticalmente. Lo hemos hecho a partir de dos propiedades nuevas.
+{{EmbedLiveSample("flex-align_1", "100", "125")}}
 
-{{cssxref ("align-items")}} controla dónde se ubican los elementos flexibles en el eje transversal.
+Recarga la página y verás que los botones ahora están bien centrados en horizontal y en vertical. Lo hemos conseguido con dos propiedades nuevas. Los elementos flexibles se colocan en el centro del eje transversal estableciendo la propiedad `align-items` en `center`. Los elementos flexibles se espacian de forma uniforme a lo largo del eje principal estableciendo la propiedad `justify-content` en `space-around`.
 
-- Por defecto, el valor es `stretch`, que ensancha todos los elementos flexibles para rellenar el elemento primario en la dirección del eje transversal. Si el elemento padre no tiene un ancho fijo en la dirección del eje transversal, todos los elementos flexibles son tan largos como los elementos flexibles más largos. Así es como nuestro primer ejemplo obtuvo columnas de igual altura por defecto.
-- El valor `center` que utilizamos en nuestro código anterior mantiene las dimensiones intrínsecas de los elementos pero los centra sobre el eje transversal. Es por eso que los botones de nuestro ejemplo ahora están centrados verticalmente.
-- También puedes tener valores como `flex-start` y `flex-end`, que alinean todos los elementos al inicio y al final del eje transversal, respectivamente. Consulta {{cssxref ("align-items")}} para conocer todos los detalles al respecto.
+La propiedad {{cssxref("align-items")}} controla dónde se sitúan los elementos flexibles en el eje transversal.
 
-Puedes anular el comportamiento {{cssxref ("align-items")}} para elementos flexibles individuales aplicándoles la propiedad {{cssxref ("align-self")}}. Por ejemplo, añade a tu CSS lo siguiente:
+- De forma predeterminada, el valor es `normal`, que en flexbox se comporta como `stretch`. Esto estira todos los elementos flexibles para que llenen el padre en la dirección del eje transversal. Si el padre no tiene un tamaño fijo en la dirección del eje transversal, todos los elementos flexibles serán tan altos (o anchos) como el elemento flexible más alto (o ancho). Así es como nuestro primer ejemplo tenía de forma predeterminada columnas de la misma altura.
+- El valor `center` que usamos en el código anterior hace que los elementos mantengan sus dimensiones intrínsecas, pero se centren a lo largo del eje transversal. Por eso los botones de nuestro ejemplo actual están centrados verticalmente.
+- También puedes usar valores como `flex-start`, `self-start` o `start` y `flex-end`, `self-end` o `end`, que alinearán todos los elementos al inicio y al final del eje transversal, respectivamente. Los valores `baseline` alinearán los elementos flexibles por su línea base; básicamente, la parte inferior de la primera línea de texto de cada elemento flexible se alineará con la parte inferior de la primera línea del elemento con mayor distancia entre el inicio transversal y esa línea base. Consulta {{cssxref("align-items")}} para ver todos los detalles.
 
-```css
+Puedes sobrescribir el comportamiento de {{cssxref("align-items")}} en elementos flexibles concretos aplicándoles la propiedad {{cssxref("align-self")}}. Por ejemplo, prueba a añadir lo siguiente a tu CSS:
+
+```html hidden live-sample___flex-align_2
+<div>
+  <button>Sonreír</button>
+  <button>Reír</button>
+  <button>Guiñar</button>
+  <button>Encogerse</button>
+  <button>Sonrojarse</button>
+</div>
+```
+
+```css hidden live-sample___flex-align_2
+body {
+  font-family: sans-serif;
+  width: 90%;
+  max-width: 960px;
+  margin: 10px auto;
+}
+div {
+  height: 100px;
+  border: 1px solid black;
+}
+button {
+  font-size: 18px;
+  line-height: 1.5;
+  width: 15%;
+}
+div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/* Añade tu CSS de flexbox debajo de aquí */
+```
+
+```css live-sample___flex-align_2
 button:first-child {
   align-self: flex-end;
 }
 ```
 
-Observa qué efecto tiene esto y retíralo de nuevo al terminar.
+{{EmbedLiveSample("flex-align_2", "100", "125")}}
 
-{{cssxref ("justify-content")}} controla dónde se ubican los elementos flexibles sobre el eje principal.
+Fíjate en el efecto que tiene y quítalo de nuevo cuando termines.
 
-- El valor por defecto es `flex-start`, que asienta todos los elementos al comienzo del eje principal.
-- Puedes usar `flex-end` para que se asienten al final.
-- `center` también es un valor de `justify-content` (para alinear contenido), que asienta los elementos flexibles sobre el centro del eje principal.
-- El valor `space-around` que hemos usado antes es útil porque distribuye todos los elementos de manera uniforme sobre el eje principal y deja un poco de espacio en cada extremo.
-- Hay otro valor, `space-between`, que es muy similar a `space-around`, pero no deja espacio en los extremos.
+{{cssxref("justify-content")}} controla dónde se sitúan los elementos flexibles en el eje principal.
 
-Te animamos a jugar con estos valores para ver cómo funcionan antes de continuar.
+- El valor predeterminado es `normal`, que se comporta como `start` y hace que todos los elementos se sitúen al inicio del eje principal.
+- Puedes usar `end` o `flex-end` para que se sitúen al final.
+- Los valores `left` y `right` se comportan como `start` o `end` según la dirección del modo de escritura.
+- `center` también es un valor de `justify-content`. Hará que los elementos flexibles se sitúen en el centro del eje principal.
+- El valor que usamos antes, `space-around`, es útil: reparte todos los elementos de forma uniforme a lo largo del eje principal, dejando un poco de espacio en ambos extremos.
+- Hay otro valor, `space-between`, muy parecido a `space-around`, salvo que no deja espacio en los extremos.
+
+La propiedad {{cssxref("justify-items")}} se ignora en los diseños de flexbox.
+
+Te animamos a jugar con estos valores para ver cómo funcionan antes de seguir.
 
 ## Ordenar los elementos flexibles
 
-Los elementos flexbox también tienen una función para cambiar el orden de disposición de los elementos flexibles, sin que ello afecte a su orden en el código fuente. Esto es algo que resulta imposible de hacer con los métodos de compaginación tradicionales.
+Flexbox también tiene una característica para cambiar el orden de disposición de los elementos flexibles sin afectar al orden del código fuente. Es otra cosa imposible de hacer con los métodos de diseño tradicionales.
 
-El código para esto es simple: añade el siguiente CSS al código de ejemplo de la barra de controles:
+Prueba a añadir el siguiente CSS al código de tu ejemplo de la barra de botones:
 
 ```css
 button:first-child {
@@ -245,14 +712,14 @@ button:first-child {
 }
 ```
 
-Actualiza, y observa que el botón «Smile» se ha movido al final del eje principal. Observemos cómo funciona esto con un poco más de detalle:
+Recarga y verás que el botón «Sonreír» se ha movido al final del eje principal. Veamos con un poco más de detalle cómo funciona:
 
-- Por defecto, todos los elementos flexibles tienen un valor {{cssxref ("order")}} de 0.
-- Los elementos flexibles que tengan establecidos los valores de orden más altos aparecerán más tarde en el orden de visualización que los elementos que tengan valores de orden más bajos.
-- Los artículos flexibles con el mismo valor de orden aparecerán en su orden de origen. Luego, si hay cuatro elementos cuyos valores de orden se han establecido en 2, 1, 1 y 0, respectivamente, su orden de visualización será 4°, 2°, 3° y, por último, 1°.
-- El tercer elemento aparece después del segundo porque tiene el mismo valor de orden y está después de él en el orden del código de origen.
+- De forma predeterminada, todos los elementos flexibles tienen un valor de {{cssxref("order")}} de `0`.
+- Los elementos flexibles con valores de orden más altos aparecerán más tarde en el orden de visualización que los elementos con valores de orden más bajos.
+- Los elementos flexibles con el mismo valor de orden aparecerán en su orden del código fuente. Así que, si tienes cuatro elementos cuyos valores de orden se han establecido en `2`, `1`, `1` y `0`, respectivamente, su orden de visualización sería 4.º, 2.º, 3.º y 1.º.
+- El 3.º elemento aparece después del 2.º porque tiene el mismo valor de orden y va después en el orden del código fuente.
 
-Puedes establecer valores de orden negativos para que los elementos aparezcan antes que los elementos establecidos con el valor 0. Por ejemplo, puedes hacer que el botón «Blush» aparezca al comienzo del eje principal utilizando la regla siguiente:
+Puedes establecer valores de orden negativos para que los elementos aparezcan antes que los elementos cuyo valor es `0`. Por ejemplo, podrías hacer que el botón «Sonrojarse» apareciera al inicio del eje principal con la siguiente regla:
 
 ```css
 button:last-child {
@@ -260,15 +727,95 @@ button:last-child {
 }
 ```
 
+Aunque puedes cambiar el orden con `order`, el orden de tabulación sigue siendo el mismo que el orden del código. ¡Cambiar el orden de los elementos que pueden recibir el foco puede afectar negativamente a la usabilidad para quienes usan el teclado!
+
 ## Cajas flexibles anidadas
 
-Los elementos flexbox permiten crear algunos diseños de página bastante complejos. Es perfectamente aceptable configurar un elemento flexible para que también sea un contenedor flexible, de modo que los elementos secundarios también se dispongan como cajas flexibles. Echa un vistazo a complex-flexbox.html ([consúltalo en vivo](https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
+Con flexbox se pueden crear diseños bastante complejos. Es perfectamente válido que un elemento flexible sea también un contenedor flexible, para que sus hijos también se dispongan como cajas flexibles.
 
-![](flexbox-example7.png)
-
-El HTML para ello es bastante simple. Hay un elemento {{htmlelement ("section")}} que contiene tres elementos {{htmlelement ("article")}}. El tercer elemento {{htmlelement ("article")}} contiene tres elementos {{htmlelement ("div")}}:
-
+```html hidden live-sample___flex-nesting
+<header>
+  <h1>Ejemplo complejo de flexbox</h1>
+</header>
+<section>
+  <article>
+    <h2>Primer artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <h2>Segundo artículo</h2>
+    <p>Contenido…</p>
+  </article>
+  <article>
+    <div>
+      <button>Sonreír</button>
+      <button>Reír</button>
+      <button>Guiñar</button>
+      <button>Encogerse</button>
+      <button>Sonrojarse</button>
+    </div>
+    <div>
+      <p>Contenido del primer párrafo…</p>
+    </div>
+    <div>
+      <p>Contenido del segundo párrafo…</p>
+    </div>
+  </article>
+</section>
 ```
+
+```css hidden live-sample___flex-nesting
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  display: flex;
+  zoom: 0.8;
+}
+article {
+  flex: 1 170px;
+}
+article:nth-of-type(3) {
+  flex: 3 170px;
+  display: flex;
+  flex-flow: column;
+}
+article:nth-of-type(3) div:first-child {
+  flex: 1 100px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+button {
+  flex: 1 auto;
+  margin: 5px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+```
+
+{{EmbedLiveSample("flex-nesting", "100", "290")}}
+
+Este diseño complejo tiene algunos elementos flexibles que también son contenedores flexibles. Su HTML es bastante sencillo. Tenemos un elemento {{htmlelement("section")}} que contiene tres elementos {{htmlelement("article")}}. El tercer {{htmlelement("article")}} contiene tres elementos {{htmlelement("div")}}, y el primer {{htmlelement("div")}} contiene cinco elementos {{htmlelement("button")}}:
+
+```plain
 section - article
           article
           article - div - button
@@ -278,9 +825,9 @@ section - article
                           button
 ```
 
-Veamos el código que hemos usado para esta compaginación.
+Veamos el código que hemos usado para el diseño.
 
-En primer lugar, configuramos los elementos secundarios de {{htmlelement ("section")}} para que se presenten como cajas flexibles.
+En primer lugar, hacemos que los hijos del {{htmlelement("section")}} se dispongan como cajas flexibles.
 
 ```css
 section {
@@ -288,21 +835,21 @@ section {
 }
 ```
 
-A continuación, establecemos algunos valores flexibles en los elementos {{htmlelement ("article")}}. Presta una atención especial a la segunda regla: configuramos el tercer elemento {{htmlelement ("article")}} para que sus hijos también se presenten como elementos flexibles, pero esta vez los disponemos en una columna.
+A continuación, establecemos algunos valores de flex en los propios elementos {{htmlelement("article")}}. Fíjate especialmente en la segunda regla: hacemos que los hijos del tercer {{htmlelement("article")}} también se dispongan como elementos flexibles, pero esta vez los disponemos en columna.
 
 ```css
 article {
-  flex: 1 200px;
+  flex: 1 100px;
 }
 
 article:nth-of-type(3) {
-  flex: 3 200px;
+  flex: 3 100px;
   display: flex;
   flex-flow: column;
 }
 ```
 
-A continuación, seleccionamos el primer elemento {{htmlelement ("div")}}. Primero usamos `flex:1 100px;` para darle una altura mínima efectiva de 100 px, luego configuramos sus elementos secundarios (los elementos {{htmlelement ("button")}}) para que también se presenten como elementos flexibles. Aquí los colocamos en una fila que los delimita y los alineamos en el centro del espacio disponible, como hicimos en el ejemplo del botón individual que vimos antes.
+A continuación, seleccionamos el primer {{htmlelement("div")}}. Primero usamos `flex: 1 100px;` para darle en la práctica una altura mínima de `100px`, y después hacemos que sus hijos (los elementos {{htmlelement("button")}}) también se dispongan como elementos flexibles. Aquí los disponemos en una fila con ajuste de línea y los alineamos en el centro del espacio disponible, como hicimos con el ejemplo de los botones que vimos antes.
 
 ```css
 article:nth-of-type(3) div:first-child {
@@ -314,7 +861,7 @@ article:nth-of-type(3) div:first-child {
 }
 ```
 
-Por último, establecemos un tamaño para el botón, pero lo más interesante es que le damos un valor flexible de 1 auto. Esto tiene un efecto muy interesante, que puedes observar si cambias el tamaño del ancho de la ventana de tu navegador. Los botones ocuparán tanto espacio como puedan y se asentarán tantos en la misma línea como quepan, pero cuando ya no quepan con comodidad en la misma línea, saltarán de línea y crearán líneas nuevas.
+Por último, damos algo de tamaño al botón, esta vez con un valor de flex de `1 auto`. Esto tiene un efecto muy interesante, que verás si pruebas a cambiar el ancho de la ventana del navegador. Los botones ocuparán todo el espacio que puedan. Cabrán en una línea tantos como sea cómodo; a partir de ahí, pasarán a una nueva línea.
 
 ```css
 button {
@@ -325,22 +872,18 @@ button {
 }
 ```
 
-## Compatibilidad entre navegadores
-
-La compatibilidad de los elementos flexbox está garantizada para la mayoría de los navegadores nuevos: Firefox, Chrome, Opera, Microsoft Edge e Internet Explorer 11, las versiones más recientes de Android/iOS, etc. Sin embargo, todavía hay navegadores antiguos en uso que no admiten las propiedades flexbox (o lo hacen, pero admiten una versión muy antigua y desactualizada).
-
-Esto no importa demasiado mientras estás aprendiendo y experimentando; pero cuando consideras usar propiedades flexbox en un sitio web real, debes hacer pruebas y asegurarte de que tu experiencia de usuario sea lo suficientemente aceptable en tantos navegadores como sea posible.
-
-Las propiedades flexbox son un poco más complicadas que otras características de CSS. Por ejemplo, si un navegador no soporta sombras en CSS, es probable que el sitio todavía sea utilizable. Sin embargo, si no es compatible con las funciones flexbox, probablemente el diseño completo se romperá, y el sitio web se inutilizará.
-
-Expusimos estrategias para superar problemas de compatibilidad entre navegadores en nuestro módulo [Pruebas de compatibilidad del navegador](/es/docs/Learn_web_development/Extensions/Testing).
-
-## Pon a prueba tus habilidades
-
-Hemos cubierto mucho terreno en este artículo. ¿Recuerdas la información más importante? Encontrarás más pruebas para comprobar si retienes esta información antes de seguir en [Test your skills: Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox_skills).
-
 ## Resumen
 
-Con esto concluye nuestro recorrido por los conceptos básicos de las propiedades flexbox. Esperamos que te hayas divertido y que juegues con ello mientras avanzas en tu aprendizaje. A continuación, veremos otro aspecto importante de los diseños CSS: las rejillas CSS.
+Con esto termina nuestro recorrido por los fundamentos de flexbox. Esperamos que te hayas divertido y que juegues bastante con él a medida que avances en tu aprendizaje. En el siguiente artículo te daremos algunas pruebas que puedes usar para comprobar si has entendido y retenido toda esta información.
 
-{{PreviousMenuNext("conflicting/Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
+## Véase también
+
+- [Conceptos básicos de flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Alinear elementos en un contenedor flexible](/es/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [Ordenar los elementos flexibles](/es/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)
+- [Controlar las proporciones de los elementos flexibles a lo largo del eje principal](/es/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
+- Módulo de [diseño de caja flexible de CSS](/es/docs/Web/CSS/Guides/Flexible_box_layout)
+- [Guía de flexbox de CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/): un artículo que lo explica todo sobre flexbox de forma visualmente atractiva
+- [Flexbox Froggy](https://flexboxfroggy.com/): un juego educativo para aprender y entender mejor los fundamentos de flexbox
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Position", "Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox", "Learn_web_development/Core/CSS_layout")}}
