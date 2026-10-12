@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("Document")}} 接口的 **`fonts`** 属性返回该文档的 {{domxref("FontFaceSet")}} 接口。
 
-此特性是 [CSS 字体加载 API](/zh-CN/docs/Web/API/CSS_Font_Loading_API) 的一部分。
+此特性属于 [CSS 字体加载 API](/zh-CN/docs/Web/API/CSS_Font_Loading_API)。
 
 ## 值
 
@@ -22,8 +22,7 @@ l10n:
 
 ```js
 document.fonts.ready.then((fontFaceSet) => {
-  // 任何需要在所有已用字体加载完成后才执行的操作
-  // 都可以放在这里。
+  // 任何需要在所有已用字体加载完成后才执行的操作都可以放在这里。
   const fontFaces = [...fontFaceSet];
   console.log(fontFaces);
   // 若站点未使用某些字体，它们可能仍处于未加载状态
