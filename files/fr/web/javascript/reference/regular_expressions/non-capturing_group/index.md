@@ -100,6 +100,6 @@ Les [groupes de capture nommés](/fr/docs/Web/JavaScript/Reference/Regular_expre
 ## Voir aussi
 
 - Le guide [des groupes et rétro-références](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
-- [Expressions régulières](/fr/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Expressions rationnelles](/fr/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Groupe de capture&nbsp;: `(...)`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
 - [Groupe de capture nommé&nbsp;: `(?<name>...)`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)

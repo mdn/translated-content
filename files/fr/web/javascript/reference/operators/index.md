@@ -34,7 +34,7 @@ Les mots-clés de base et les expressions générales en JavaScript. Ces express
 - {{JSxRef("Operators/async_function*", "async function*")}}
   - : Les mots-clés `async function*` définissent une expression de fonction génératrice asynchrone.
 - {{JSxRef("RegExp", "/ab+c/i")}}
-  - : Syntaxe littérale des expressions régulières.
+  - : Syntaxe littérale des expressions rationnelles.
 - {{JSxRef("Template_literals", "`string`")}}
   - : Syntaxe des littéraux gabarits.
 - {{JSxRef("Operators/Grouping", "( )")}}

@@ -21,7 +21,7 @@ Vous êtes encouragé·e·s à lire le [guide des expressions rationnelles](/fr/
 En supposant un alphabet fini (comme les 26 lettres de l'alphabet anglais, ou l'ensemble des caractères Unicode), tous les langages réguliers peuvent être générés par les fonctionnalités ci-dessus. Bien sûr, de nombreux modèles sont très fastidieux à exprimer de cette manière (comme «&nbsp;10 chiffres&nbsp;» ou «&nbsp;un caractère qui n'est pas un espace&nbsp;»), donc les expressions rationnelles JavaScript incluent de nombreux raccourcis, présentés ci-dessous.
 
 > [!NOTE]
-> Les expressions rationnelles JavaScript ne sont en fait pas régulières, en raison de l'existence des [rétro-références](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) (les expressions rationnelles doivent avoir des états finis). Cependant, elles restent une fonctionnalité très utile.
+> Les expressions rationnelles JavaScript ne sont en fait pas rationnelles, en raison de l'existence des [rétro-références](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) (les expressions rationnelles doivent avoir des états finis). Cependant, elles restent une fonctionnalité très utile.
 
 ### Créer des expressions rationnelles
 
@@ -75,7 +75,7 @@ Les assertions sont des constructions qui vérifient si la chaîne de caractère
 
 ### Atomes
 
-Les atomes sont les unités les plus élémentaires d'une expression régulière. Chaque atome _consomme_ un ou plusieurs caractères dans la chaîne de caractères, et échoue soit la correspondance, soit permet au motif de continuer à correspondre avec l'atome suivant.
+Les atomes sont les unités les plus élémentaires d'une expression rationnelle. Chaque atome _consomme_ un ou plusieurs caractères dans la chaîne de caractères, et échoue soit la correspondance, soit permet au motif de continuer à correspondre avec l'atome suivant.
 
 - [Rétro-référence&nbsp;: `\1`, `\2`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)
   - : Correspond à un sous-motif précédemment capturé avec un groupe capturant.
@@ -90,7 +90,7 @@ Les atomes sont les unités les plus élémentaires d'une expression régulière
 - [Caractère littéral&nbsp;: `a`, `b`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)
   - : Correspond à un caractère spécifique.
 - [Modificateur&nbsp;: `(?ims-ims:...)`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Modifier)
-  - : Remplace les paramètres d'indicateur dans une partie spécifique d'une expression régulière.
+  - : Remplace les paramètres d'indicateur dans une partie spécifique d'une expression rationnelle.
 - [Rétro-référence nommée&nbsp;: `\k<name>`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
   - : Correspond à un sous-motif précédemment capturé avec un groupe capturant nommé.
 - [Groupe capturant nommé&nbsp;: `(?<name>...)`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)

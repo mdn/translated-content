@@ -29,7 +29,7 @@ Use-As-Dictionary: match="<url-pattern>", match-dest=("<destination1>")
 ## Directives
 
 - `match`
-  - : Une valeur de type chaîne de caractères contenant un [modèle d'URL](/fr/docs/Web/API/URL_Pattern_API)&nbsp;: seules les ressources dont les URL correspondent à ce modèle peuvent utiliser cette ressource comme dictionnaire. Les groupes de capture des expressions régulières ne sont pas autorisés, donc {{DOMxRef("URLPattern.hasRegExpGroups")}} doit être `false`.
+  - : Une valeur de type chaîne de caractères contenant un [modèle d'URL](/fr/docs/Web/API/URL_Pattern_API)&nbsp;: seules les ressources dont les URL correspondent à ce modèle peuvent utiliser cette ressource comme dictionnaire. Les groupes de capture des expressions rationnelles ne sont pas autorisés, donc {{DOMxRef("URLPattern.hasRegExpGroups")}} doit être `false`.
 - `match-dest`
   - : Une liste de chaînes de caractères séparées par des espaces, chaque chaîne de caractères étant entre guillemets et l'ensemble de la valeur étant entre parenthèses, qui fournit une liste de [destinations de requête de récupération](/fr/docs/Web/API/Request/destination) que les requêtes doivent correspondre si elles veulent utiliser ce dictionnaire.
 - `id`
