@@ -2,10 +2,8 @@
 title: リストのスタイル設定
 slug: Learn_web_development/Core/Text_styling/Styling_lists
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 1b7c3c1e03f14c3878e4d8518b0f1a89bedfdc9c
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
 
@@ -33,87 +31,84 @@ l10n:
   </tbody>
 </table>
 
-## 簡単なリストの例
+## 基本的なリストの例
 
-はじめに、簡単なリストの例を見てみましょう。この記事を通して、順序なしリスト、順序付きリスト、そして説明リストを見ていきます。これらはどれも似たようなスタイル設定を機能持っていますが、リストの種類に特有のものもあります。 [スタイル設定していない例](https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html)は Github にあります ([ソースコード](https://github.com/mdn/learning-area/blob/main/css/styling-text/styling-lists/unstyled-list.html)もチェックしてください) 。
+基本的なリストの例を見てみましょう。この記事を通して、順序なしリスト、順序付きリスト、そして説明リストを見ていきます。これらはどれも似たようなスタイル設定を機能持っていますが、リストの種類に特有のものもあります。
 
 そのリストの例の HTML はこんな感じです。
 
-```html
-<h2>Shopping (unordered) list</h2>
+```html live-sample___unstyled live-sample___initial-style live-sample___finished-style
+<h2>買い物リスト（順序なし）</h2>
 
 <p>
-  Paragraph for reference, paragraph for reference, paragraph for reference,
-  paragraph for reference, paragraph for reference, paragraph for reference.
+  参考のための段落、参考のための段落、参考のための段落、参考のための段落、参考のための段落、参考のための段落。
 </p>
 
 <ul>
-  <li>Hummus</li>
-  <li>Pita</li>
-  <li>Green salad</li>
-  <li>Halloumi</li>
+  <li>フムス</li>
+  <li>ピタパン</li>
+  <li>グリーンサラダ</li>
+  <li>ハロウミチーズ</li>
 </ul>
 
-<h2>Recipe (ordered) list</h2>
+<h2>レシピリスト（順序付き）</h2>
 
 <p>
-  Paragraph for reference, paragraph for reference, paragraph for reference,
-  paragraph for reference, paragraph for reference, paragraph for reference.
+  参考のための段落、参考のための段落、参考のための段落、参考のための段落、参考のための段落、参考のための段落。
 </p>
 
 <ol>
-  <li>Toast pita, leave to cool, then slice down the edge.</li>
+  <li>ピタパンをトーストし、冷ましてから、縁に沿ってスライスします。</li>
   <li>
-    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+    浅めのテフロン加工のフライパンで、ハロウミチーズを両面がきつね色になるまで焼きます。
   </li>
-  <li>Wash and chop the salad.</li>
-  <li>Fill pita with salad, hummus, and fried halloumi.</li>
+  <li>サラダを洗って、刻んでください。</li>
+  <li>ピタパンにサラダ、フムス、揚げたハロウミチーズをつけて詰めます。</li>
 </ol>
 
-<h2>Ingredient description list</h2>
+<h2>原材料の説明リスト</h2>
 
 <p>
-  Paragraph for reference, paragraph for reference, paragraph for reference,
-  paragraph for reference, paragraph for reference, paragraph for reference.
+  参考のための段落、参考のための段落、参考のための段落、参考のための段落、参考のための段落、参考のための段落。
 </p>
 
 <dl>
-  <dt>Hummus</dt>
+  <dt>フムス</dt>
   <dd>
-    A thick dip/sauce generally made from chick peas blended with tahini, lemon
-    juice, salt, garlic, and other ingredients.
+    ひよこ豆をタヒニ、レモン汁、塩、ニンニク、それ以外にも材料をつけて作る、濃厚なディップ／ソース。
   </dd>
-  <dt>Pita</dt>
-  <dd>A soft, slightly leavened flatbread.</dd>
-  <dt>Halloumi</dt>
+  <dt>ピタパン</dt>
+  <dd>柔らかく、ほんのり発酵させたフラットブレッド。</dd>
+  <dt>ハロウミチーズ</dt>
   <dd>
-    A semi-hard, unripened, brined cheese with a higher-than-usual melting
-    point, usually made from goat/sheep milk.
+    通常より融点が高く、半硬質で熟成させていない塩水漬けのチーズ。通常、山羊や羊の乳から作られる。
   </dd>
-  <dt>Green salad</dt>
-  <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
+  <dt>グリーンサラダ</dt>
+  <dd>ケバブの飾りとして使用することが多い、あの緑色のヘルシーな食材。</dd>
 </dl>
 ```
 
-ここで実際の例に行き、[ブラウザーの開発者ツール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)を使用してリスト要素を調べると、次のようないくつかの既定のスタイル設定に気付くでしょう。
+何もスタイル設定しない場合、これは次のように表示されます。
 
-- {{htmlelement("ul")}} 要素と {{htmlelement("ol")}} 要素の上下の {{cssxref("margin")}} は `16px` (`1em`)、{{cssxref("padding-left")}} は `40px` (`2.5em`) です。書字方向属性の [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) が右書き（`rtl`）に設定されている場合、 `ul` および `ol` 要素では、 {{cssxref("padding-right")}} が効果を発揮し、その既定値は `40px` (`2.5em`) です。
-- リスト項目 ({{htmlelement("li")}} 要素) には、間隔の設定に関する既定はありません。
+{{embedlivesample("unstyled", "100%", 400)}}
+
+ここで実際の例に行き、[ブラウザーの開発者ツール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)を使用してリスト要素を調べると、次のようないくつかのデフォルトのスタイル設定に気付くでしょう。
+
+- {{htmlelement("ul")}} 要素と {{htmlelement("ol")}} 要素の上下の {{cssxref("margin")}} は `16px` (`1em`)、{{cssxref("padding-left")}} は `40px` (`2.5em`) です。書字方向属性の [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) が右書き (`rtl`) に設定されている場合、 `ul` および `ol` 要素では、 {{cssxref("padding-right")}} が効果を発揮し、そのデフォルト値は `40px` (`2.5em`) です。
+- リストアイテム ({{htmlelement("li")}} 要素) には、間隔の設定に関するデフォルトはありません。
 - {{htmlelement("dl")}} 要素の上下の {{cssxref("margin")}} は `16px` (`1em`) ですが、パディングの設定はありません。
 - {{htmlelement("dd")}} 要素の {{cssxref("margin-left")}} は `40px` (`2.5em`) です。
 - 参照用に含めた {{htmlelement("p")}} 要素には、さまざまな種類のリストと同じ `16px` (`1em`) の上下の {{cssxref("margin")}} があります。
 
 ## リストの間隔の扱い
 
-リストをスタイル設定するときは、 (段落や画像などの) 周囲の要素と同じ垂直方向の間隔 (バーティカルリズム (vertical rhythm) とも呼ばれる) と、互いに同じ水平方向の間隔を維持するようにスタイルを調整する必要があります (Github で[スタイル設定が完成した例](https://mdn.github.io/learning-area/css/styling-text/styling-lists/)を見ることができ、[ソースコード](https://github.com/mdn/learning-area/blob/main/css/styling-text/styling-lists/index.html)も見つけることができます) 。
+リストのスタイル設定を行う際は、周囲の要素（段落や画像など。これは「垂直リズム」と呼ばれることもあります）と同じ垂直方向の間隔を保ち、リスト同士の間隔も均一になるようにスタイルを調整する必要があります。典型的な CSS のスタイル設定や文字の間隔の例は、次のようなものになります。
 
-テキストのスタイル設定と間隔調整に使用する CSS は次のとおりです。
-
-```css
+```css live-sample___initial-style live-sample___list-style-type live-sample___list-style-position live-sample___custom-bullets live-sample___finished-style
 /* General styles */
 
 html {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 10px;
 }
 
@@ -147,22 +142,37 @@ dt {
 
 - 1 番目のルールはサイト全体のフォントと 10px の基準フォントサイズを設定します。 これらはページ上のすべてのものに継承されます。
 - 2 番目と 3 番目のルールでは、見出し、さまざまなリストの種類 (リスト要素の子はこれらを継承) 、および段落に相対フォントサイズを設定します。 つまり、各段落とリストのフォントサイズ、上下の間隔は同じになり、バーティカルリズムを一定に保つのに役立ちます。
-- 4 番目では、段落とリスト項目に同じ {{cssxref("line-height")}} を設定しているため、段落と各個々のリスト項目のラインの間隔は同じになります。 これは、バーティカルリズムを一定に保つのにも役立ちます。
-- 説明リストには 5 番目と 6 番目のルールが適用されます。 説明リストの用語と説明には、段落とリスト項目の場合と同じ `line-height` を設定します。 繰り返しますが、一貫性があることは良いことです！ また、説明する用語は太字にして、視覚的に目立つようにしています。>
+- 4 番目では、段落とリストアイテムに同じ {{cssxref("line-height")}} を設定しているため、段落と各個々のリストアイテムのラインの間隔は同じになります。 これは、バーティカルリズムを一定に保つのにも役立ちます。
+- 説明リストには 5 番目と 6 番目のルールが適用されます。 説明リストの用語と説明には、段落とリストアイテムの場合と同じ `line-height` を設定します。 繰り返しますが、一貫性があることは良いことです！ また、説明する用語は太字にして、視覚的に目立つようにしています。>
+
+先ほど示した HTML にこのコードを適用すると、次のように表示されます。
+
+{{embedlivesample("initial-style", "100%", 400)}}
 
 ## リスト固有のスタイル設定
 
 リストの一般的な間隔調整テクニックを見てきました。 次に、リスト固有のプロパティを調べてみましょう。 最初に知っておくべき 3 つのプロパティがあり、それらは {{htmlelement("ul")}} や {{htmlelement("ol")}} 要素に設定できます。
 
 - {{cssxref("list-style-type")}}: リストに使用する行頭記号の種類を設定します。 例えば、順序なしリストの場合は正方形や丸の行頭記号、順序付きリストの場合は数字、文字、ローマ数字などです。
-- {{cssxref("list-style-position")}}: 行頭記号をリスト項目の内側に表示するか、その外側の各項目の先頭より前に表示するかを設定します。
-- {{cssxref("list-style-image")}}: 行頭記号に簡単な正方形や円ではなく、カスタム画像を使うことができます。
+- {{cssxref("list-style-position")}}: 行頭記号をリストアイテムの内側に表示するか、その外側の各項目の先頭より前に表示するかを設定します。
+- {{cssxref("list-style-image")}}: 行頭記号に基本的な正方形や円ではなく、カスタム画像を使うことができます。
 
 ### 行頭記号のスタイル設定
 
-前述のように、{{cssxref("list-style-type")}} プロパティを使用して、行頭記号 (bullet point) に使用する行頭記号 (bullet) の種類を設定できます。 この例では、順序付きリストで大文字のローマ数字を使用するように設定しています。
+前述のように、{{cssxref("list-style-type")}} プロパティを使用して、行頭記号 (bullet point) に使用する行頭記号 (bullet) の種類を設定できます。 この例では、順序付きリストで大文字のローマ数字を使用するように設定してみます。
 
-```css
+```html hidden live-sample___list-style-type live-sample___list-style-position
+<ol>
+  <li>ピタパンをトーストし、冷ましてから、縁に沿ってスライスします。</li>
+  <li>
+    浅めのテフロン加工のフライパンで、ハロウミチーズを両面がきつね色になるまで焼きます。
+  </li>
+  <li>サラダを洗って、刻んでください。</li>
+  <li>ピタパンにサラダ、フムス、揚げたハロウミチーズをつけて詰めます。</li>
+</ol>
+```
+
+```css live-sample___list-style-type
 ol {
   list-style-type: upper-roman;
 }
@@ -170,32 +180,32 @@ ol {
 
 これにより、次のようになります。
 
-![行頭記号がリスト項目テキストの外側に表示されるように設定された順序付きリスト。](outer-bullets.png)
+{{embedlivesample("list-style-type", "100%", 120)}}
 
 それ以外のオプションを見るには、 {{cssxref("list-style-type")}} のリファレンスページを参照してください。
 
 ### 行頭記号の位置
 
-{{cssxref("list-style-position")}} プロパティは、行頭記号をリスト項目の内側に表示するか、その外側の各項目の先頭より前に表示するかを設定します。 既定値は `outside` です。 これは、上で見たように、行頭記号をリスト項目の外側に配置します。
+{{cssxref("list-style-position")}} プロパティは、行頭記号をリストアイテムの内側に表示するか、その外側の各項目の先頭より前に表示するかを設定します。 デフォルト値は `outside` です。 これは、上で見たように、行頭記号をリストアイテムの外側に配置します。
 
 値を `inside` に設定すると、行頭記号を行の内側に配置します。
 
-```css
+```css live-sample___list-style-position live-sample___finished-style
 ol {
   list-style-type: upper-roman;
   list-style-position: inside;
 }
 ```
 
-![行頭記号がリスト項目のテキストの内側に表示されるように設定された順序付きリスト。](inner-bullets.png)
+{{embedlivesample("list-style-position", "100%", 120)}}
 
 ### 独自の行頭記号画像の使用
 
-{{cssxref("list-style-image")}} プロパティを使用すると、行頭記号に独自の画像を使用することができます。構文は次のようにとても簡単です。
+{{cssxref("list-style-image")}} プロパティを使用すると、行頭記号に独自の画像を使用することができます。構文は次のようなものです。
 
 ```css
 ul {
-  list-style-image: url(star.svg);
+  list-style-image: url("https://mdn.github.io/shared-assets/images/examples/star-shape.png");
 }
 ```
 
@@ -203,7 +213,16 @@ ul {
 
 完成した例では、 (既に上で見たものの上に) 次のように順序なしリストを設定しました。
 
-```css
+```html hidden live-sample___custom-bullets
+<ul>
+  <li>フムス</li>
+  <li>ピタパン</li>
+  <li>グリーンサラダ</li>
+  <li>ハロウミチーズ</li>
+</ul>
+```
+
+```css live-sample___custom-bullets live-sample___finished-style
 ul {
   padding-left: 2rem;
   list-style-type: none;
@@ -211,7 +230,7 @@ ul {
 
 ul li {
   padding-left: 2rem;
-  background-image: url(star.svg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/star-shape.png");
   background-position: 0 0;
   background-size: 1.6rem 1.6rem;
   background-repeat: no-repeat;
@@ -220,17 +239,17 @@ ul li {
 
 ここでは次のことを行いました。
 
-- {{htmlelement("ul")}} の {{cssxref("padding-left")}} を既定の `40px` から `20px` に減らし、リスト項目にも同じ量を設定します。 これにより、リスト項目は全体的にはまだ順序リスト項目や説明リストの説明文が並んでいますが、リスト項目には背景画像が入るように多少のパディングが入っています。これをしないと、背景画像がリスト項目のテキストと重なってしまい、見た目がごちゃごちゃしてしまいます。
-- 既定で行頭記号が表示されないように、{{cssxref("list-style-type")}} を `none` に設定します。 代わりに、行頭記号を処理するために {{cssxref("background")}} プロパティを使用します。
-- 各順序なしリスト項目に行頭記号を挿入しました。 関連するプロパティは次のとおりです。
+- {{htmlelement("ul")}} の {{cssxref("padding-left")}} をデフォルトの `40px` から `20px` に減らし、リストアイテムにも同じ量を設定します。 これにより、リストアイテムは全体的にはまだ順序リストアイテムや説明リストの説明文が並んでいますが、リストアイテムには背景画像が入るように多少のパディングが入っています。これをしないと、背景画像がリストアイテムのテキストと重なってしまい、見た目がごちゃごちゃしてしまいます。
+- デフォルトで行頭記号が表示されないように、{{cssxref("list-style-type")}} を `none` に設定します。 代わりに、行頭記号を処理するために {{cssxref("background")}} プロパティを使用します。
+- 各順序なしリストアイテムに行頭記号を挿入しました。 関連するプロパティは次のとおりです。
   - {{cssxref("background-image")}}: 行頭記号として使用する画像ファイルへのパスを参照します。
-  - {{cssxref("background-position")}}: これは選択した要素の背景のどこに画像を表示するかを定義します。 この場合は `0 0` としています。 つまり、各リスト項目の左上に行頭記号が表示されます。
-  - {{cssxref("background-size")}}: 背景画像のサイズを設定します。 行頭記号のサイズをリスト項目と同じサイズ (または、ごくわずかに大きいか小さい) にすることをお勧めします。 サイズは `1.6rem` (`16px`) を使用しています。 これは、行頭記号を内部に配置できる `20px` のパディングに非常によく合っています — 行頭記号とリスト項目のテキストの間に 16px + 4px のスペースがあるとうまくいきます。
-  - {{cssxref("background-repeat")}}: 既定では、背景画像は利用可能な背景スペースを埋めつくすまで繰り返します。 それぞれの場合に画像のコピーを 1 つだけ挿入したいので、これを `no-repeat` の値に設定します。
+  - {{cssxref("background-position")}}: これは選択した要素の背景のどこに画像を表示するかを定義します。 この場合は `0 0` としています。 つまり、各リストアイテムの左上に行頭記号が表示されます。
+  - {{cssxref("background-size")}}: 背景画像のサイズを設定します。 行頭記号のサイズをリストアイテムと同じサイズ (または、ごくわずかに大きいか小さい) にすることをお勧めします。 サイズは `1.6rem` (`16px`) を使用しています。 これは、行頭記号を内部に配置できる `20px` のパディングに非常によく合っています — 行頭記号とリストアイテムのテキストの間に 16px + 4px のスペースがあるとうまくいきます。
+  - {{cssxref("background-repeat")}}: デフォルトでは、背景画像は利用可能な背景スペースを埋めつくすまで繰り返します。 それぞれの場合に画像のコピーを 1 つだけ挿入したいので、これを `no-repeat` の値に設定します。
 
 これにより、次のような結果が得られます。
 
-![行頭記号が小さな星の画像として設定された順序なしリスト](list_formatting.png)
+{{embedlivesample("custom-bullets", "100%", 120)}}
 
 ### list-style 一括指定
 
@@ -239,7 +258,7 @@ ul li {
 ```css
 ul {
   list-style-type: square;
-  list-style-image: url(example.png);
+  list-style-image: url("example.png");
   list-style-position: inside;
 }
 ```
@@ -248,11 +267,17 @@ ul {
 
 ```css
 ul {
-  list-style: square url(example.png) inside;
+  list-style: square url("example.png") inside;
 }
 ```
 
-値は任意の順序でリストすることができ、1 つ、2 つ、または 3 つすべてを使用できます (含まれていないプロパティーに使用される既定値は `disc`、`none`、`outside` です) 。 `type` と `image` の両方が指定されている場合、画像が何らかの理由でロードできない場合に、`type` を代替として使用します。
+値は任意の順序でリストすることができ、1 つ、2 つ、または 3 つすべてを使用できます (含まれていないプロパティーに使用されるデフォルト値は `disc`、`none`、`outside` です) 。 `type` と `image` の両方が指定されている場合、画像が何らかの理由でロードできない場合に、`type` を代替として使用します。
+
+## 完全な例
+
+これまでの数節で、リストの個々の機能の効果について示しました。これらすべてを最初の HTML リストに適用すると、次のような結果になります。
+
+{{embedlivesample("finished-style", "100%", 400)}}
 
 ## リストの数え方の制御
 
@@ -260,91 +285,86 @@ ul {
 
 ### start
 
-[`start`](/ja/docs/Web/HTML/Reference/Elements/ol#start) 属性を使用すると、1 以外の数からリストを数え始めます。 次の例では、
+[`start`](/ja/docs/Web/HTML/Reference/Elements/ol#start) 属性を使用すると、1 以外の数からリストを数え始めます。次の例では、
 
-```html
+```html live-sample___counting-control
 <ol start="4">
-  <li>Toast pita, leave to cool, then slice down the edge.</li>
+  <li>ピタパンをトーストし、冷ましてから、縁に沿ってスライスします。</li>
   <li>
-    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+    浅めのテフロン加工のフライパンで、ハロウミチーズを両面がきつね色になるまで焼きます。
   </li>
-  <li>Wash and chop the salad.</li>
-  <li>Fill pita with salad, hummus, and fried halloumi.</li>
+  <li>サラダを洗って、刻んでください。</li>
+  <li>ピタパンにサラダ、フムス、揚げたハロウミチーズをつけて詰めます。</li>
 </ol>
 ```
 
-この出力が得られます。
+この結果が得られます。
 
-{{ EmbedLiveSample('start', '100%', 150) }}
+{{ EmbedLiveSample('counting-control', '100%', 150) }}
 
 ### reversed
 
 [`reversed`](/ja/docs/Web/HTML/Reference/Elements/ol#reversed) 属性はリストのカウントアップではなくカウントダウンを開始します。 次の例では、
 
-```html
+```html live-sample___counting-control-reversed
 <ol start="4" reversed>
-  <li>Toast pita, leave to cool, then slice down the edge.</li>
+  <li>ピタパンをトーストし、冷ましてから、縁に沿ってスライスします。</li>
   <li>
-    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+    浅めのテフロン加工のフライパンで、ハロウミチーズを両面がきつね色になるまで焼きます。
   </li>
-  <li>Wash and chop the salad.</li>
-  <li>Fill pita with salad, hummus, and fried halloumi.</li>
+  <li>サラダを洗って、刻んでください。</li>
+  <li>ピタパンにサラダ、フムス、揚げたハロウミチーズをつけて詰めます。</li>
 </ol>
 ```
 
 この出力が得られます。
 
-{{ EmbedLiveSample('reversed', '100%', 150) }}
+{{ EmbedLiveSample('counting-control-reversed', '100%', 150) }}
 
 > [!NOTE]
-> 逆方向のリストに `start` 属性の値より多くのリスト項目がある場合、カウントは引き続きゼロになり、その後負の値になります。
+> 逆方向のリストに `start` 属性の値より多くのリストアイテムがある場合、カウントは引き続きゼロになり、その後負の値になります。
 
 ### 値
 
-[`value`](/ja/docs/Web/HTML/Reference/Elements/ol#value) 属性を使用すると、リスト項目を特定の数値に設定できます。 次の例では、
+[`value`](/ja/docs/Web/HTML/Reference/Elements/li#value) 属性を使用すると、リストアイテムを特定の数値に設定できます。 次の例では、
 
-```html
+```html counting-control-values
 <ol>
-  <li value="2">Toast pita, leave to cool, then slice down the edge.</li>
+  <li value="2">ピタパンをトーストし、冷ましてから、縁に沿ってスライスします。</li>
   <li value="4">
-    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+    浅めのテフロン加工のフライパンで、ハロウミチーズを両面がきつね色になるまで焼きます。
   </li>
-  <li value="6">Wash and chop the salad.</li>
-  <li value="8">Fill pita with salad, hummus, and fried halloumi.</li>
+  <li value="6">サラダを洗って、刻んでください。</li>
+  <li value="8">ピタパンにサラダ、フムス、揚げたハロウミチーズをつけて詰めます。</li>
 </ol>
 ```
 
 この出力が得られます。
 
-{{ EmbedLiveSample('value', '100%', 150) }}
+{{ EmbedLiveSample('counting-control-values', '100%', 150) }}
 
 > [!NOTE]
 > 数値以外の {{cssxref("list-style-type")}} を使用している場合でも、`value` 属性に同等の数値を使用する必要があります。
 
-## アクティブラーニング: ネストしたリストのスタイル設定
+## 実習: 入れ子になったリストのスタイル設定
 
-このアクティブラーニングセッションでは、上で学んだことを取り入れて、ネストしたリストをスタイル設定してください。 HTML を提供してあるので、次のことを行います。
+さて、また新しい課題をこなす時が来ました。今回は、以上学んだことを活かして、入れ子になったリストのスタイル設定に挑戦してみてください。
 
-1. 順序なしリストに正方形の行頭記号を付けます。
-2. 順序なしリスト項目と順序付きリスト項目のフォントサイズの 1.5 のラインの高さを指定します。
-3. 順序付きリストに小文字のアルファベットの行頭記号を付けます。
-4. 行頭記号の種類、間隔、その他見つけられるものは何でも試して、好きなだけリストの例を試してみてください。
+1. 下記コードブロック内の **"Play"** をクリックして、MDN Playground で例を編集してください。
+2. 順序なしリストに正方形の行頭記号をスタイル設定します。
+3. 順序なしリストのアイテムと順序付きリストのアイテムに、`font-size` の `1.5` 倍の `line-height` を設定します。
+4. 順序付きリストに小文字のアルファベットの行頭記号を設定します。
+5. リストの例を、箇条書きの種類や間隔など、お好きなように自由に試してみてください。
 
-間違えた場合は、_リセット_ ボタンを使用していつでもリセットできます。 本当に立ち往生したら、答えを見るために _答えを見る_ ボタンを押してください。
+間違えてしまった場合は、MDN Playground の「リセット」ボタンをクリックすると、作業内容をリセットできます。どうしても解決できない場合は、出力例の下記にある解答を参照してください。
 
-```html-nolint hidden
-<div
-  class="body-wrapper"
-  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
-  <h2>HTML 入力</h2>
-  <textarea
-    id="code"
-    class="html-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+```html live-sample___styling_lists
 <ul>
   <li>First, light the candle.</li>
   <li>Next, open the box.</li>
-  <li>Finally, place the three magic items in the box, in this exact order, to complete the spell:
+  <li>
+    Finally, place the three magic items in the box, in this exact order, to
+    complete the spell:
     <ol>
       <li>The book of spells</li>
       <li>The shiny rod</li>
@@ -352,80 +372,34 @@ ul {
     </ol>
   </li>
 </ul>
-  </textarea>
-
-  <h2>CSS 入力</h2>
-  <textarea
-    id="code"
-    class="css-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
-
-  <h2>出力</h2>
-  <div
-    class="output"
-    style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
-  <div class="controls">
-    <input
-      id="reset"
-      type="button"
-      value="リセット"
-      style="margin: 10px 10px 0 0;" />
-    <input
-      id="solution"
-      type="button"
-      value="答えを見る"
-      style="margin: 10px 0 0 10px;" />
-  </div>
-</div>
 ```
 
-```js hidden
-const htmlInput = document.querySelector(".html-input");
-const cssInput = document.querySelector(".css-input");
-const reset = document.getElementById("reset");
-const htmlCode = htmlInput.value;
-const cssCode = cssInput.value;
-const output = document.querySelector(".output");
-const solution = document.getElementById("solution");
+```css live-sample___styling_lists
 
-const styleElem = document.createElement("style");
-const headElem = document.querySelector("head");
-headElem.appendChild(styleElem);
+```
 
-function drawOutput() {
-  output.innerHTML = htmlInput.value;
-  styleElem.textContent = cssInput.value;
-}
+{{ EmbedLiveSample('styling_lists', "100%", 160) }}
 
-reset.addEventListener("click", () => {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
-});
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
-solution.addEventListener("click", () => {
-  htmlInput.value = htmlCode;
-  cssInput.value = `ul {
+完成した CSS は、次のようになるはずです。
+
+```css
+ul {
   list-style-type: square;
 }
 
-ul li,
-ol li {
+li {
   line-height: 1.5;
 }
 
 ol {
   list-style-type: lower-alpha;
-}`;
-  drawOutput();
-});
-
-htmlInput.addEventListener("input", drawOutput);
-cssInput.addEventListener("input", drawOutput);
-window.addEventListener("load", drawOutput);
+}
 ```
 
-{{ EmbedLiveSample('Active_learning_Styling_a_nested_list', 700, 800) }}
+</details>
 
 ## まとめ
 
