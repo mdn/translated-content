@@ -50,7 +50,7 @@ function compilePath(path) {
 
 ```js example-bad
 const { createProgram } = await import.defer("typescript");
-// typescript 模块现在已经被求值。
+// typescript 模块现在已经被执行。
 ```
 
 ## 规范
