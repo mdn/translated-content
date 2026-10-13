@@ -9,7 +9,7 @@ l10n:
 
 **`import.defer()`** 语法的行为与普通的 [`import()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import) 语法类似，但它返回的是一个[延迟模块命名空间对象](/zh-CN/docs/Web/JavaScript/Reference/Statements/import/defer#延迟模块命名空间对象)。模块及其依赖会先被获取并链接，但它们的同步执行会延迟到访问命名空间的属性时才发生。
 
-关于延迟求值（包括它与顶层 `await` 的交互）的更多信息，请参阅 [`import defer`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import/defer) 声明形式。
+关于延迟执行（包括它与顶层 `await` 的交互）的更多信息，请参阅 [`import defer`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import/defer) 声明形式。
 
 ## 语法
 
