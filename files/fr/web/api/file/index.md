@@ -1,21 +1,23 @@
 ---
 title: File
 slug: Web/API/File
+l10n:
+  sourceCommit: 0a24354d9ac0cac0b9c6f47de27cbf758c9f32f4
 ---
 
-{{APIRef}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-L'interface **`File`** fournit des informations sur des fichiers et permet au code JavaScript d'une page web d'accéder à leurs contenus.
+L'interface **`File`** fournit des informations sur des fichiers et permet au code JavaScript d'une page web d'accéder à leur contenu.
 
-Les objets `File` sont généralements obtenus à partir de&nbsp;:
+Les objets `File` sont généralement obtenus à partir d'un objet {{DOMxRef("FileList")}} retourné lorsque l'utilisateur·ice sélectionne des fichiers à l'aide de l'élément HTML {{HTMLElement("input")}}, ou à partir de l'objet {{DOMxRef("DataTransfer")}} d'une opération de glisser-déposer.
 
-- l'objet {{domxref("FileList")}} retourné lorsque qu'un utilisateur ou une utilisatrice sélectionne des fichiers grâce à un élément {{HTMLElement("input")}}&nbsp;;
-- l'objet {{domxref("DataTransfer")}} d'une opération de glisser-déposer&nbsp;;
-- l'API `mozGetAsFile()` de l'élément {{domxref("HTMLCanvasElement")}}.
+Un objet `File` est un type spécifique de {{DOMxRef("Blob")}}, et peut être utilisé dans n'importe quel contexte où un Blob peut l'être. En particulier, les API suivantes acceptent à la fois des objets `Blob` et `File`&nbsp;:
 
-Dans Gecko, le code privilégié peut créer des objets `File` représentant tout fichier local sans nécessiter une interaction de l'utilisateur ou de l'utilisatrice (voir [Notes d'implémentation](#notes_dimplémentation) pour plus d'informations.)
-
-Un objet `File` est un genre spécifique de {{domxref("Blob")}}, et peut être utilisé dans tout contexte où un blob peut l'être. En particulier, {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, et {{domxref("XMLHttpRequest", "", "send()")}} acceptent indifféremment des `Blob`s et des `File`s.
+- {{DOMxRef("FileReader")}}
+- {{DOMxRef("URL.createObjectURL_static", "URL.createObjectURL()")}}
+- {{DOMxRef("Window.createImageBitmap()")}} et {{DOMxRef("WorkerGlobalScope.createImageBitmap()")}}
+- l'option [`body`](/fr/docs/Web/API/RequestInit#body) de {{DOMxRef("Window/fetch", "fetch()")}}
+- {{DOMxRef("XMLHttpRequest.send()")}}
 
 Voir [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications) pour plus d'informations et des exemples.
 
@@ -23,39 +25,25 @@ Voir [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File_
 
 ## Constructeur
 
-- {{domxref("File.File", "File()")}}
-  - : Renvoie un `File` nouvellement construit.
+- {{DOMxRef("File.File", "File()")}}
+  - : Retourne un `File` nouvellement construit.
 
-## Propriétés
+## Propriétés d'instance
 
-- {{domxref("File.lastModified")}} {{readonlyinline}}
-  - : Renvoie le temps de dernière modification du fichier, exprimé en millisecondes écoulées depuis l'ère UNIX (1er janvier 1970 à minuit).
-- {{domxref("File.lastModifiedDate")}} {{readonlyinline}} {{deprecated_inline}}
-  - : Renvoie la {{jsxref("Date")}} de dernière modification du fichier.
-- {{domxref("File.name")}} {{readonlyinline}}
-  - : Renvoie le nom du fichier.
-- {{domxref("File.webkitRelativePath")}} {{readonlyinline}} {{non-standard_inline}}
-  - : Renvoie le chemin auquel l'URL du {{domxref("File")}} est relative.
+_L'interface `File` hérite également des propriétés de l'interface {{DOMxRef("Blob")}}._
 
-`File` implémente {{domxref("Blob")}}, et ainsi possède les propriétés suivantes&nbsp;:
+- {{DOMxRef("File.lastModified")}} {{ReadOnlyInline}}
+  - : Retourne le temps de dernière modification du fichier, exprimé en millisecondes écoulées depuis l'ère UNIX (1er janvier 1970 à minuit).
+- {{DOMxRef("File.lastModifiedDate")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+  - : Retourne la {{JSxRef("Date")}} de dernière modification du fichier référencé par l'objet `File`.
+- {{DOMxRef("File.name")}} {{ReadOnlyInline}}
+  - : Retourne le nom du fichier référencé par l'objet `File`.
+- {{DOMxRef("File.webkitRelativePath")}} {{ReadOnlyInline}}
+  - : Retourne le chemin auquel l'URL du `File` est relative.
 
-- {{domxref("File.size")}} {{readonlyinline}}
-  - : Renvoie la taille du fichier en octets.
-- {{domxref("File.type")}} {{readonlyinline}}
-  - : Renvoie le type [MIME](/fr/docs/Web/HTTP/Guides/MIME_types/Common_types)du fichier.
+## Méthodes d'instance
 
-## Méthodes
-
-_L'interface `File` ne définit aucune méthode, mais hérite des méthodes de l'interface {{domxref("Blob")}}&nbsp;:_
-
-- {{domxref("Blob.slice()", "Blob.slice([start[, end[, contentType]]])")}}
-  - : Renvoie un nouvel objet `Blob` contenant les données du blob source comprises dans l'intervalle d'octets spécifié.
-- {{domxref("Blob.stream()", "Blob.stream()")}}
-  - : Transforme le `File` en un {{domxref("ReadableStream")}} pouvant être utilisé pour lire le contenu du `File`.
-- {{domxref("Blob.text()", "Blob.text()")}}
-  - : Transforme le `File` en un flux (_stream_) et le lit en entier. Renvoie une {{jsxref("Promise", "promesse")}} qui se résoud en une {{jsxref("String")}} (texte).
-- {{domxref("Blob.arrayBuffer()", "Blob.arrayBuffer()")}}
-  - : Transforme le `File` en un flux (_stream_) et le lit en entier. Retourne une {{jsxref("Promise", "promesse")}} qui se résoud en un {{jsxref("ArrayBuffer")}}.
+_L'interface `File` hérite également des méthodes de l'interface {{DOMxRef("Blob")}}._
 
 ## Spécifications
 
@@ -65,24 +53,7 @@ _L'interface `File` ne définit aucune méthode, mais hérite des méthodes de l
 
 {{Compat}}
 
-### Notes d'implémentation
-
-- Dans Gecko, vous pouvez utiliser API depuis du code chrome. Voir [Using the DOM File API in chrome code](/fr/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) pour plus de détails. Pour l'utiliser depuis du code chrome, JSM, ou portée Bootstrap, vous devez l'importer en utilisant `Cu.importGlobalProperties(['File']);`
-- À partir de Gecko 6.0, le code privilégié (par exemple au sein d'une extension) peut passer un objet `nsIFile` au constructeur DOM `File` pour spécifier le fichier à référencer.
-- À partir de Gecko 8.0, vous pouvez utiliser `new File` pour créer des objets `File` depuis des composants XPCOM au lieu de devoir instancier les objets `nsIDOMFile` directement. Contrairement à {{domxref("Blob")}}, le constructeur prend le nom de fichier comme second argument. Le nom de fichier peut être une chaîne quelconque.
-
-```
-new File(
-  Array parts,
-  String filename,
-  BlobPropertyBag properties
-);
-```
-
-- Les propriétés et méthodes non standard suivantes ont été retirées de Gecko 7&nbsp;: {{domxref("File.fileName")}}, {{domxref("File.fileSize")}}, {{domxref("File.getAsBinary()")}}, {{domxref("File.getAsDataURL()")}}, {{domxref("File.getAsText()","File.getAsText(string encoding)")}} ([bug Firefox 661876](https://bugzil.la/661876)). Les propriétés standard {{domxref("File.name")}}, {{domxref("Blob.size")}}, et les méthodes de {{domxref("FileReader")}} devraient être utilisées à la place.
-
 ## Voir aussi
 
 - [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
-- {{domxref("FileReader")}}
-- [Using the DOM File API in chrome code](/fr/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) (pour du code privilégié s'exécutant dans Gecko, tel que des extensions de Firefox)
+- L'interface {{DOMxRef("FileReader")}}
