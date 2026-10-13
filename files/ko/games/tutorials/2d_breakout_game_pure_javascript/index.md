@@ -25,7 +25,7 @@ l10n:
 4. [패들과 키보드 컨트롤](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)
 5. [게임 오버](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over)
 6. [벽돌 필드 만들기](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
-7. [충돌 감지](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)
+7. [충돌 감지](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
 8. [점수 추적과 승리](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)
 9. [마우스 컨트롤](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls)
 10. [마무리](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up)
@@ -40,6 +40,6 @@ l10n:
 
 ## 다음 단계
 
-좋습니다, 이제 시작하도록 합시다. 첫 번째 챕터인 [캔버스 생성과 그리기](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it) 부터 시작합니다.
+좋습니다, 이제 시작하도록 합시다. 첫 번째 챕터인 [캔버스 생성과 그리기](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas) 부터 시작합니다.
 
 {{Next("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas")}}
