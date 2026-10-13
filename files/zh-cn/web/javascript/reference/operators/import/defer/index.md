@@ -46,7 +46,7 @@ function compilePath(path) {
 }
 ```
 
-不要立即解构返回的命名空间，因为这会触发求值：
+不要立即解构返回的命名空间，因为这会触发执行：
 
 ```js example-bad
 const { createProgram } = await import.defer("typescript");
