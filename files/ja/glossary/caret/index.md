@@ -27,7 +27,7 @@ l10n:
 - [`<input type="text">`](/ja/docs/Web/HTML/Reference/Elements/input/text)
 - [`<input type="password">`](/ja/docs/Web/HTML/Reference/Elements/input/password)
 - [`<input type="search">`](/ja/docs/Web/HTML/Reference/Elements/input/search)
-- [`<input type="date">`](/ja/docs/Web/HTML/Reference/Elements/input/date), [`<input type="time">`](/ja/docs/Web/HTML/Reference/Elements/input/time),  [`<input type="datetime-local">`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local)
+- [`<input type="date">`](/ja/docs/Web/HTML/Reference/Elements/input/date), [`<input type="time">`](/ja/docs/Web/HTML/Reference/Elements/input/time), [`<input type="datetime-local">`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local)
 - [`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number), [`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range)
 - [`<input type="email">`](/ja/docs/Web/HTML/Reference/Elements/input/email), [`<input type="tel">`](/ja/docs/Web/HTML/Reference/Elements/input/tel), [`<input type="url">`](/ja/docs/Web/HTML/Reference/Elements/input/url)
 - {{HTMLElement("textarea")}}

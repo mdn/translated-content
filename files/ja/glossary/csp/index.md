@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-**CSP** ([Content Security Policy](/ja/docs/Web/HTTP/Guides/CSP)) は、特定の種類のウェブサイト関連攻撃（{{Glossary("Cross-site_scripting", "クロスサイトスクリプティング")}}、[クリックジャッキング](/en-US/docs/Web/Security/Attacks/Clickjacking)、データインジェクションなど）を検出して軽減するのに使われます。
+**CSP** ([Content Security Policy](/ja/docs/Web/HTTP/Guides/CSP)) は、特定の種類のウェブサイト関連攻撃（{{Glossary("Cross-site_scripting", "クロスサイトスクリプティング")}}、[クリックジャッキング](/ja/docs/Web/Security/Attacks/Clickjacking)、データインジェクションなど）を検出して軽減するのに使われます。
 
 実装は {{Glossary("HTTP")}} の {{HTTPHeader("Content-Security-Policy")}} というヘッダーを元にしています。
 
