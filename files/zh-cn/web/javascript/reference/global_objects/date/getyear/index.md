@@ -3,7 +3,7 @@ title: Date.prototype.getYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getYear
 ---
 
-**`getYear()`** 方法返回指定的本地日期的年份。因为 `getYear()` 不返回千禧年（"year 2000 problem"），所以这个方法不再被使用，现在替换为 {{jsxref("Date.getFullYear", "getFullYear")}}。
+**`getYear()`** 方法返回指定的本地日期的年份。因为 `getYear()` 不返回千禧年（“2000 年问题”），所以这个方法不再被使用，现在替换为 {{jsxref("Date.getFullYear", "getFullYear")}}。
 
 ## 语法
 
@@ -28,8 +28,8 @@ getYear()
 第二个语句将值 95 赋给变量 `year`。
 
 ```js
-var Xmas = new Date("December 25, 1995 23:15:00");
-var year = Xmas.getYear(); // returns 95
+const xmas = new Date("1995-12-25");
+const year = xmas.getYear(); // 返回 95
 ```
 
 ### 年份大于 1999
@@ -37,8 +37,8 @@ var year = Xmas.getYear(); // returns 95
 第二个语句将值 100 赋给变量 `year`。
 
 ```js
-var Xmas = new Date("December 25, 2000 23:15:00");
-var year = Xmas.getYear(); // returns 100
+const xmas = new Date("2000-12-25");
+const year = xmas.getYear(); // 返回 100
 ```
 
 ### 年份小于 1900
@@ -46,8 +46,8 @@ var year = Xmas.getYear(); // returns 100
 第二个语句将值 -100 赋给变量 `year`。
 
 ```js
-var Xmas = new Date("December 25, 1800 23:15:00");
-var year = Xmas.getYear(); // returns -100
+const xmas = new Date("1800-12-25");
+const year = xmas.getYear(); // 返回 -100
 ```
 
 ### 设置和获取 1900 年到 1999 年之间的年份
@@ -55,9 +55,9 @@ var year = Xmas.getYear(); // returns -100
 第三个语句将值 95 赋给变量 `year`，表示 1995 年。
 
 ```js
-var Xmas = new Date("December 25, 2015 23:15:00");
-Xmas.setYear(95);
-var year = Xmas.getYear(); // returns 95
+const xmas = new Date("2015-12-25");
+xmas.setYear(95);
+const year = xmas.getYear(); // 返回 95
 ```
 
 ## 规范
