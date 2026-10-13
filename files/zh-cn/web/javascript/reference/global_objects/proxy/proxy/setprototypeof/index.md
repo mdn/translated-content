@@ -64,7 +64,7 @@ Object.setPrototypeOf(p1, newProto); // throws a TypeError
 Reflect.setPrototypeOf(p1, newProto); // returns false
 ```
 
-后一种做法会让_任何_尝试修改的操作都抛出异常。如果你希望即使是不抛出异常的操作在失败时也能抛出异常，或者你想抛出自定义的异常值，就必须采用这种做法。
+后一种做法会让*任何*尝试修改的操作都抛出异常。如果你希望即使是不抛出异常的操作在失败时也能抛出异常，或者你想抛出自定义的异常值，就必须采用这种做法。
 
 ```js
 var handlerThrows = {
