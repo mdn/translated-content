@@ -28,7 +28,7 @@ import.defer(moduleName, options)
 
 在模块图加载并链接完成，且所有立刻执行的[顶层 `await` 依赖](/zh-CN/docs/Web/JavaScript/Reference/Statements/import/defer#顶层_await)完成执行之后，返回一个会兑现为[延迟模块命名空间对象](/zh-CN/docs/Web/JavaScript/Reference/Statements/import/defer#延迟模块命名空间对象)的 promise。
 
-与普通的 [`import()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import#返回值) 一样，如果模块或其依赖无法加载、解析或链接，该 Promise 会被拒绝。如果某个急切求值的模块抛出错误，它也会被拒绝。而仍处于延迟阶段的求值错误，则会由触发求值的命名空间操作以同步方式抛出。
+与普通的 [`import()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import#返回值) 一样，如果模块或其依赖无法加载、解析或链接，该 promise 会被拒绝。如果某个立刻执行的模块抛出错误，它也会被拒绝。而仍处于延迟阶段的执行错误，则会由触发执行的命名空间操作以同步方式抛出。
 
 ## 示例
 
