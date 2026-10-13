@@ -41,7 +41,7 @@ import.defer(moduleName, options)
 const ts = await import.defer("typescript");
 
 function compilePath(path) {
-  // typescript 模块子图的求值从这里开始
+  // typescript 模块子图的执行从这里开始
   const program = ts.createProgram([path], {});
 }
 ```
