@@ -40,13 +40,13 @@ Cette propriété est définie avec une ou deux valeurs séparées par des espac
 
 - `none`
   - : Définit que le contenu n'est pas tronqué. Ce mot-clé ne peut pas être combiné avec les autres valeurs. C'est la valeur par défaut.
-- {{CSSxRef("integer")}} {{Optional_Inline}}
+- {{CSSxRef("&lt;integer&gt;")}} {{Optional_Inline}}
   - : Définit le nombre de lignes après lesquelles le contenu est tronqué. Il doit être supérieur à 0.
 - `<'block-ellipsis'>` {{Optional_Inline}}
   - : Définit le contenu inséré dans la dernière ligne. Elle peut prendre l'une des valeurs suivantes&nbsp;:
-    - `no-ellipsis` : Aucune ellipse (caractère U+2026) n'est ajoutée si le texte est tronqué en raison du nombre de lignes défini.
-    - `auto` : Affiche un caractère d'ellipse (U+2026) si le texte est tronqué.
-    - {{CSSxRef("string")}} : Affiche la chaîne de caractères définie à la fin de la ligne affectée. Les navigateurs peuvent tronquer cette chaîne de caractères si elle est très longue. Une chaîne de caractères vide se comporte comme la valeur `no-ellipsis`.
+    - `no-ellipsis`&nbsp;: Aucune ellipse (caractère U+2026) n'est ajoutée si le texte est tronqué en raison du nombre de lignes défini.
+    - `auto`&nbsp;: Affiche un caractère d'ellipse (U+2026) si le texte est tronqué.
+    - {{CSSxRef("&lt;string&gt;")}}&nbsp;: Affiche la chaîne de caractères définie à la fin de la ligne affectée. Les navigateurs peuvent tronquer cette chaîne de caractères si elle est très longue. Une chaîne de caractères vide se comporte comme la valeur `no-ellipsis`.
 
 > [!NOTE]
 > Si `<'block-ellipsis'>` est défini sans un `<integer>`, il s'applique uniquement lorsque le contenu est tronqué en raison de la hauteur du conteneur.

@@ -86,7 +86,7 @@ Cette propriété est définie par une valeur unique choisie parmi la liste suiv
 - `normal`
   - : Pour les dispositions à plusieurs colonnes, définit l'espace à `1em`&nbsp;; sinon `0`. C'est la valeur par défaut.
 - {{CSSxRef("&lt;line-width&gt;")}}
-  - : Définit la taille de l'espace en utilisant les mots-clés `thin`, `medium` ou `thick`, ou une longueur ({{CSSxRef("length")}}) positive.
+  - : Définit la taille de l'espace en utilisant les mots-clés `thin`, `medium` ou `thick`, ou une longueur ({{CSSxRef("&lt;length&gt;")}}) positive.
 - {{CSSxRef("length-percentage")}}
   - : Définit une valeur non négative de type {{CSSxRef("&lt;length&gt;")}} ou {{CSSxRef("&lt;percentage&gt;")}}. Les pourcentages sont relatifs à la taille en incise (<i lang="en">inline</i> en anglais) de la boîte de contenu.
 

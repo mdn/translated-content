@@ -107,7 +107,7 @@ Cette propriété est définie avec une ou deux valeurs parmi la liste suivante&
   - : Définit l'espace à `1em` dans les mises en page multi-colonnes et à `0` dans tous les autres contextes. C'est la valeur par défaut.
 - {{CSSxRef("&lt;line-width&gt;")}}
   - : Définit la taille de l'espace en utilisant les mots-clés `thin`, `medium` ou `thick`, ou une valeur positive de type {{CSSxRef("&lt;length&gt;")}}.
-- {{CSSxRef("length-percentage")}}
+- {{CSSxRef("&lt;length-percentage&gt;")}}
   - : Définit l'espace comme une valeur non négative de type {{CSSxRef("&lt;length&gt;")}} ou {{CSSxRef("&lt;percentage&gt;")}}.
 
 ## Description
