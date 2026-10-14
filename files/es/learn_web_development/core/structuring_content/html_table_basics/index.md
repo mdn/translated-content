@@ -17,7 +17,7 @@ Este artículo te ayudará a comenzar con las tablas HTML. Vamos a exponer conce
       <td>
         Familiaridad básica con HTML, como se cubre en
         <a href="/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
-          >Primeros pasos con HTML</a
+          >Sintaxis básica de HTML</a
         >.
       </td>
     </tr>
