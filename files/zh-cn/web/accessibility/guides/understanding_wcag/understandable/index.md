@@ -345,4 +345,4 @@ l10n:
   1. [可感知性](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
   2. [可操作性](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
   3. 可理解性
-  4. [健壮性](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)
+  4. [鲁棒性](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)
