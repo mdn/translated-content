@@ -3,10 +3,12 @@ title: Propriété CSS `flex-wrap`
 short-title: flex-wrap
 slug: Web/CSS/Reference/Properties/flex-wrap
 l10n:
-  sourceCommit: ae836b44d9faa0e9f581631ed1dcccd2a502b618
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`flex-wrap`** définit si les éléments flexibles sont forcés sur une seule ligne ou peuvent passer à la ligne sur plusieurs lignes. Si le retour à la ligne est autorisé, elle définit la direction dans laquelle les lignes sont empilées.
+
+La propriété raccourcie {{CSSxRef("flex-flow")}} permet de définir à la fois les propriétés {{CSSxRef("flex-direction")}} et `flex-wrap`, qui définissent respectivement les axes principal et transversal du conteneur flexible.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: flex-wrap")}}
 
@@ -54,8 +56,6 @@ flex-wrap: wrap balance;
   margin: 10px;
 }
 ```
-
-La propriété raccourcie {{CSSxRef("flex-flow")}} permet de définir à la fois les propriétés {{CSSxRef("flex-direction")}} et `flex-wrap`, qui définissent respectivement les axes principal et transversal du conteneur flexible.
 
 ## Syntaxe
 

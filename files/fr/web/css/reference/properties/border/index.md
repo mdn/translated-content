@@ -3,7 +3,7 @@ title: Propriété CSS `border`
 short-title: border
 slug: Web/CSS/Reference/Properties/border
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 3f221b9845703eb21db70cdc321f843d5c1c072b
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border`** permet de définir la bordure d'un élément. Elle définit les valeurs de {{CSSxRef("border-width")}}, {{CSSxRef("border-style")}}, et {{CSSxRef("border-color")}}.
