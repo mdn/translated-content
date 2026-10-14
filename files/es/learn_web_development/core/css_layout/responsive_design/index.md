@@ -28,7 +28,7 @@ El _diseño web adaptable_ (RWD, _responsive web design_) es un enfoque de dise�
         <ul>
           <li>Qué es el diseño adaptable: diseñar los diseños web para que sean flexibles y funcionen bien en distintos tamaños de pantalla, resoluciones, etc.</li>
           <li>La relación entre las herramientas de diseño modernas, como grid y flexbox, y el diseño adaptable.</li>
-          <li>Los conceptos en los que se basa el uso de las consultas de medios para el diseño adaptable, incluidos el enfoque «primero móvil» (_mobile first_) y los puntos de ruptura.</li>
+          <li>Los conceptos en los que se basa el uso de las consultas de medios para el diseño adaptable, incluidos el enfoque «primero móvil» (<em>mobile first</em>) y los puntos de ruptura.</li>
           <li>Por qué hace falta <code>&lt;meta viewport=""&gt;</code> para que los documentos web se muestren correctamente en los dispositivos móviles.</li>
         </ul>
       </td>
