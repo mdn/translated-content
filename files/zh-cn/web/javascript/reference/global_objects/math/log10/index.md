@@ -1,5 +1,6 @@
 ---
 title: Math.log10()
+short-title: log10()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log10
 l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
@@ -13,7 +14,7 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.log10()")}}
+{{InteractiveExample("JavaScript 演示：Math.log10()")}}
 
 ```js interactive-example
 console.log(Math.log10(100000));
@@ -46,7 +47,7 @@ Math.log10(x)
 
 ## 描述
 
-由于 `log10()` 是 `Math` 的静态方法，因此你始终以 `Math.log10()` 的形式使用它，而不是把它作为你创建的 `Math` 对象的方法（`Math` 不是构造函数）。
+由于 `log10()` 是 `Math` 的静态方法，因此你始终应以 `Math.log10()` 的形式使用它，而不是把它作为你创建的 `Math` 对象的方法（`Math` 不是构造函数）。
 
 该函数等价于 `Math.log(x) / Math.log(10)`。对于 `log10(e)`，请使用常量 {{jsxref("Math.LOG10E")}}，其值为 1 / {{jsxref("Math.LN10")}}。
 
