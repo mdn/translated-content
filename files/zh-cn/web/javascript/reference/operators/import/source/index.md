@@ -9,7 +9,7 @@ l10n:
 
 **`import.source()`** 语法的行为与普通的 [`import()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import) 语法类似，但它返回的是一个表示模块已编译源代码的对象。模块会被获取并编译，但其依赖不会被加载，模块也不会被链接或求值。它可以在之后通过命令式方式进行求值，例如使用[动态导入](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)或 [`WebAssembly.instantiate()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static)。
 
-要使用 `import.source()`，目标模块必须属于支持源阶段导入的类型。目前，只有 WebAssembly 模块支持源阶段导入，并会返回 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象。JavaScript 模块源对象将由 [ECMAScript Module Phase Imports](https://github.com/tc39/proposal-esm-phase-imports) 提案引入。
+要使用 `import.source()`，目标模块必须属于支持源阶段导入的类型。目前，只有 WebAssembly 模块支持源阶段导入，并会返回 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象。JavaScript 模块源对象将由 [ECMAScript 模块阶段导入](https://github.com/tc39/proposal-esm-phase-imports)提案引入。
 
 有关源阶段导入语义的更多信息，请参阅 [`import source`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import/source) 声明形式。
 
