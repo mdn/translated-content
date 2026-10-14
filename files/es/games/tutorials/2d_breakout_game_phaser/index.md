@@ -18,7 +18,7 @@ Para aprovechar al máximo esta serie de artículos, deberías tener ya conocimi
 > [!NOTE]
 > Esta guía tiene una guía hermana: [Juego Breakout 2D con JavaScript puro](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Las dos siguen prácticamente los mismos pasos y llegan a resultados visualmente idénticos.
 
-Elegimos Phaser para este proyecto porque es compatible con los navegadores, tiene una comunidad activa y un buen conjunto de complementos. Los frameworks aceleran el desarrollo y se encargan de las partes aburridas, para que puedas concentrarte en lo divertido. Sin embargo, los frameworks no siempre son perfectos, así que si ocurre algo inesperado o quieres escribir alguna funcionalidad que el framework no ofrece, necesitarás algunos conocimientos de JavaScript puro.
+Elegimos Phaser para este proyecto porque tiene buena compatibilidad con los navegadores, una comunidad activa y un buen conjunto de complementos. Los frameworks aceleran el desarrollo y se encargan de las partes aburridas, para que puedas concentrarte en lo divertido. Sin embargo, los frameworks no siempre son perfectos, así que si ocurre algo inesperado o quieres escribir alguna funcionalidad que el framework no ofrece, necesitarás algunos conocimientos de JavaScript puro.
 
 ## Detalles de las lecciones
 
