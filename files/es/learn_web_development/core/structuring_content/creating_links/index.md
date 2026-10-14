@@ -542,7 +542,7 @@ Este es un ejemplo que incluye cc, bcc, asunto y cuerpo:
 > Los valores de cada campo tienen que estar codificados como URL, con los caracteres no imprimibles (caracteres invisibles como tabulaciones, retornos de carro y saltos de página) y los espacios {{Glossary("Percent-encoding", "codificados por porcentaje")}}.
 > Fíjate también en el uso del signo de interrogación (`?`) para separar la URL principal de los valores de los campos, y del ampersand (&) para separar cada campo en la URL `mailto:`.
 > Es la notación estándar de consulta de las URL.
-> Lee sobre [el método GET](/es/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data) para entender para qué se usa más habitualmente la notación de consulta de las URL.
+> Lee sobre [el método GET](/es/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#el_método_get) para entender para qué se usa más habitualmente la notación de consulta de las URL.
 
 Estos son algunos otros ejemplos de URL `mailto`:
 
