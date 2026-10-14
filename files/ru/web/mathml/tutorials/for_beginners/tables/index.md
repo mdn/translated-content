@@ -223,13 +223,13 @@ l10n:
                 <mn>1</mn>
               </mtd>
               <mtd>
-                <mtext>если </mtext>
+                <mtext>если </mtext>
                 <mi>a</mi>
-                <mtext> — квадратичный вычет по модулю </mtext>
+                <mtext> — квадратичный вычет по модулю </mtext>
                 <mi>p</mi>
-                <mtext> и </mtext>
+                <mtext> и </mtext>
                 <mi>a</mi>
-                <mtext> не кратно </mtext>
+                <mtext> не кратно </mtext>
                 <mi>p</mi>
                 <mo>;</mo>
               </mtd>
@@ -240,9 +240,9 @@ l10n:
                 <mn>1</mn>
               </mtd>
               <mtd>
-                <mtext>если </mtext>
+                <mtext>если </mtext>
                 <mi>a</mi>
-                <mtext> не является квадратичным вычетом по модулю </mtext>
+                <mtext> не является квадратичным вычетом по модулю </mtext>
                 <mi>p</mi>
                 <mo>;</mo>
               </mtd>
@@ -252,9 +252,9 @@ l10n:
                 <mn>0</mn>
               </mtd>
               <mtd>
-                <mtext>если </mtext>
+                <mtext>если </mtext>
                 <mi>a</mi>
-                <mtext> кратно </mtext>
+                <mtext> кратно </mtext>
                 <mi>p</mi>
                 <mo>.</mo>
               </mtd>
