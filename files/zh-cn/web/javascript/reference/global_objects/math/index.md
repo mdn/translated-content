@@ -68,7 +68,7 @@ l10n:
 - {{jsxref("Math.cosh()")}}
   - : 返回一个数的双曲余弦值。
 - {{jsxref("Math.exp()")}}
-  - : 返回 e<sup>x</sup>，其中 `x` 为参数，`e` 是欧拉常数（`2.718`...，自然对数的底数）。
+  - : 返回 e<sup>x</sup>，其中 `x` 为参数，`e` 是欧拉数（`2.718`…，自然对数的底数）。
 - {{jsxref("Math.expm1()")}}
   - : 返回 `exp(x) - 1` 的值。
 - {{jsxref("Math.floor()")}}
