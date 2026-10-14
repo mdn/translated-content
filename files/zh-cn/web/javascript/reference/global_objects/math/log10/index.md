@@ -17,16 +17,16 @@ l10n:
 
 ```js interactive-example
 console.log(Math.log10(100000));
-// Expected output: 5
+// 预期输出：5
 
 console.log(Math.log10(2));
-// Expected output: 0.3010299956639812
+// 预期输出：0.3010299956639812
 
 console.log(Math.log10(1));
-// Expected output: 0
+// 预期输出：0
 
 console.log(Math.log10(0));
-// Expected output: -Infinity
+// 预期输出：-Infinity
 ```
 
 ## 语法
