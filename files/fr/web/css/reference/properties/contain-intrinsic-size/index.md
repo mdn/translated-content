@@ -3,7 +3,7 @@ title: Propriété CSS `contain-intrinsic-size`
 short-title: contain-intrinsic-size
 slug: Web/CSS/Reference/Properties/contain-intrinsic-size
 l10n:
-  sourceCommit: 61f27416f7cfa79bd102042eeb3e44fe629d9c95
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`contain-intrinsic-size`** définit la taille d'un élément que le navigateur utilise pour la mise en page lorsque l'élément est envoyé à la [compartimentation de la taille](/fr/docs/Web/CSS/Guides/Containment/Using#compartimentation_de_la_taille).
