@@ -36,7 +36,7 @@ l10n:
       <td>3.1.2 局部语言（AA）</td>
       <td>
         <p>
-          如果页面内容包含与主要语言不同的单词或短语，请在包裹这些单词或短语的元素上使用 <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/lang">lang</a> 属性，为其设置适当的语言。例如，如果没有可用的语义元素，可以使用 {{htmlelement("span")}}。
+          如果页面内容包含与主要语言不同的单词或短语，请在包裹这些单词或短语的元素上使用 <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/lang">lang</a> 属性，为其设置适当的语言（例如，如果没有可用的语义元素，可以使用 {{htmlelement("span")}}）。
         </p>
         <p>
           对于不因语言而变化的单词或短语（例如专有名称、不属于特定语言的技术术语），无需设置不同的语言。
