@@ -90,7 +90,7 @@ Hay varios tipos de valores numéricos que puedes acabar usando en CSS. Todos lo
       </td>
       <td>
         Un <code>&#x3C;number></code> representa un número decimal: puede tener o
-        no una coma decimal con una parte fraccionaria. Por
+        no un punto decimal con una parte fraccionaria. Por
         ejemplo, <code>0.255</code>, <code>128</code> o <code>-1.2</code>.
       </td>
     </tr>
