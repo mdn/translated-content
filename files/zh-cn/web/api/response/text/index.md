@@ -22,7 +22,7 @@ text()
 
 ### 返回值
 
-一个 promise，会兑现一个 {{jsxref("String")}}。
+一个会兑现 {{jsxref("String")}} 的 promise。
 
 ### 异常
 
@@ -30,8 +30,8 @@ text()
   - : 请求已被[中止](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch#取消请求)。
 - {{jsxref("TypeError")}}
   - : 由于以下原因之一而抛出：
-    - 响应体[已被扰乱或锁定](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch#锁定和扰乱的流)。
-    - 解码响应体内容时出错（例如，因为 {{httpheader("Content-Encoding")}} 标头不正确）。
+    - 响应主体[已被扰乱或锁定](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch#锁定和扰乱的流)。
+    - 解码主体内容时出错（例如，因为 {{httpheader("Content-Encoding")}} 标头不正确）。
 
 ## 示例
 
@@ -80,6 +80,6 @@ function getData(pageId) {
 
 ## 参见
 
-- [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)
