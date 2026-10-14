@@ -54,7 +54,7 @@ svg {
 - [为运动敏感设计更安全的网页动画 · A List Apart 文章](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [减少动画媒体查询简介 | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [面向运动的响应式设计 | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN 对 WCAG 的理解：对指南 2.2 的解读](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#指南_2.2_—_足够的时间_为用户提供足够的时间来阅读和使用内容)
+- [MDN 对 WCAG 的理解：对准则 2.2 的解读](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#准则_2.2——足够的时间：为用户提供足够的时间来阅读和使用内容)
 - [理解成功标准 2.2.2 | W3C 对 WCAG 2.0 的解读](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
 ## 规范
