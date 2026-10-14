@@ -3,7 +3,7 @@ title: "KeyboardEvent: getModifierState() メソッド"
 short-title: getModifierState()
 slug: Web/API/KeyboardEvent/getModifierState
 l10n:
-  sourceCommit: b2a5f62d66b4e3d71704017d0fab7ad710e68057
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
 {{APIRef("UI Events")}}
