@@ -3,7 +3,7 @@ title: URLs de ressource
 short-title: "resource:"
 slug: Web/URI/Reference/Schemes/resource
 l10n:
-  sourceCommit: 466ca1db767535c1aa9984b4e6c0db41b3a53475
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 {{Non-standard_Header}}
@@ -39,7 +39,7 @@ Dans cet article, nous abordons les URIs ressources qui sont utilisées par Fire
 
 ## Menaces
 
-Étant donné que les informations partagées par les URLs `resource:` sont accessibles par les sites web, une page web pourrait être en mesure d'exécuter un script pour inspecter les ressources internes à Firefox telles que les préférences par défaut, ce qui pourrait constituer un problème important de confidentialité et de sécurité.
+Étant donné que les informations partagées par les URLs `resource:` sont accessibles par les sites web, une page web peut être en mesure d'exécuter un script pour inspecter les ressources internes à Firefox telles que les préférences par défaut, ce qui peut constituer un problème important de confidentialité et de sécurité.
 
 Par exemple, [ce script sur Browserleaks <sup>(angl.)</sup>](https://www.browserleaks.com/firefox) détaille les éléments accessibles de Firefox lorsque l'on appelle l'URL ressource. Le code de ce script est accessible à l'adresse <https://browserleaks.com/firefox#more>.
 
@@ -55,14 +55,14 @@ De plus, certaines valeurs par défaut diffèrent selon les versions ou les inst
 
 ## Solution
 
-Afin de résoudre ce problème, Mozilla a modifié le comportement du chargement des URLs ressource via [bug Firefox 863246 <sup>(angl.)</sup>](https://bugzil.la/863246), rendu disponible à partir de [Firefox 57 (Quantum)](/fr/docs/Mozilla/Firefox/Releases/57).
+Afin de résoudre ce problème, Mozilla a modifié le comportement du chargement des URLs ressource avec le [bogue Firefox 863246 <sup>(angl.)</sup>](https://bugzil.la/863246), rendu disponible à partir de [Firefox 57 (Quantum)](/fr/docs/Mozilla/Firefox/Releases/57).
 
 Auparavant, les sites web étaient capables d'accéder à n'importe quelle URI `resource:`, celles de Firefox mais aussi celles des modules complémentaires. Ce comportement est désormais interdit par défaut.
 
-Firefox nécessite néanmoins le chargement des ressources au sein d'un contenu web dans certains cas. Ainsi lorsque l'on souhaite accéder au code source d'une page à l'aide de "Code source de la page", un appel à `viewsource.css` via une URI `resource:` est nécessaire. Les ressources auxquelles le contenu web a besoin d'accéder ont été déplacées sous `resource://content-accessible/`, une partie isolée et ne contenant que des ressources n'étant pas confidentielles. De cette manière, il est possible d'exposer des ressources tout en réduisant la plupart des menaces.
+Firefox nécessite néanmoins le chargement des ressources au sein d'un contenu web dans certains cas. Ainsi lorsque l'on souhaite accéder au code source d'une page à l'aide du «&nbsp;Code source de la page&nbsp;», un appel à `viewsource.css` par une URI `resource:` est nécessaire. Les ressources auxquelles le contenu web a besoin d'accéder ont été déplacées sous `resource://content-accessible/`, une partie isolée et ne contenant que des ressources n'étant pas confidentielles. De cette manière, il est possible d'exposer des ressources tout en réduisant la plupart des menaces.
 
 > [!NOTE]
-> Il est recommandé de ne plus utiliser les URLs de type ressource lors du développement web ou de celui d'un module. Leur utilisation était peu fiable et la plupart ne fonctionnent plus.
+> Il est recommandé de ne plus utiliser les URLs de type ressource lors du développement web ou de celui d'un module. Leur utilisation est peu fiable et la plupart ne fonctionnent plus.
 
 ## Spécifications
 
@@ -76,4 +76,4 @@ Firefox nécessite néanmoins le chargement des ressources au sein d'un contenu 
 
 - [URIs](/fr/docs/Web/URI)
 - [Qu'est-ce qu'une URL&nbsp;?](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
-- [Liste des schémas URI maintenue par l'IANA <sup>(angl.)</sup>](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) (`resource:` est [défini ici <sup>(angl.)</sup>](https://www.iana.org/assignments/uri-schemes/prov/resource))
+- [Liste des schémas URI maintenue par l'IANA <sup>(angl.)</sup>](https://www.iana.org/assignments/uri-schemes) (`resource:` est [défini ici <sup>(angl.)</sup>](https://www.iana.org/assignments/uri-schemes/prov/resource))

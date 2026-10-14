@@ -1,37 +1,33 @@
 ---
 title: Element：beforescriptexecute 事件
+short-title: beforescriptexecute
 slug: Web/API/Element/beforescriptexecute_event
+l10n:
+  sourceCommit: d19dec85109590176f946fcceef48c787d578b1e
 ---
 
-{{APIRef}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}
 
 > [!WARNING]
-> 此事件是早期版本的规范中的一个提案。不要依赖它。
+> 此事件曾是规范早期版本中的提案。请勿依赖它。
 
-**`beforescriptexecute`** 事件在一个脚本被执行前触发，取消此事件可以阻止该脚本的执行。
+**`beforescriptexecute`** 事件在脚本即将执行时触发。取消该事件可阻止脚本执行。
 
-这是一个 Gecko（Firefox）特有的私有事件。
+这是 Gecko（Firefox）特有的专有事件。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">是否冒泡</th>
-      <td>是</td>
-    </tr>
-    <tr>
-      <th scope="row">是否可取消</th>
-      <td>是</td>
-    </tr>
-    <tr>
-      <th scope="row">接口</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">事件处理器属性</th>
-      <td>无</td>
-    </tr>
-  </tbody>
-</table>
+## 语法
+
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
+
+```js-nolint
+addEventListener("beforescriptexecute", (event) => { })
+
+onbeforescriptexecute = (event) => { }
+```
+
+## 事件类型
+
+通用的 {{domxref("Event")}}。
 
 ## 规范
 

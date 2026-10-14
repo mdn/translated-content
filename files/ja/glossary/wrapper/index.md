@@ -2,10 +2,8 @@
 title: Wrapper (ラッパー)
 slug: Glossary/Wrapper
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 JavaScript のようなプログラミング言語において、ラッパー (wrapper) は 1 つ以上の他の関数を呼び出すための関数であり、時には純粋に利便性のために、時にはプロセス中でまったく異なるタスクに合わせるために使用されます。
 
@@ -13,7 +11,7 @@ JavaScript のようなプログラミング言語において、ラッパー (w
 
 ## 関連情報
 
-- [Wrapper function](https://en.wikipedia.org/wiki/Wrapper_function) (Wikipedia, 英語)
+- [ラッパー関数](https://ja.wikipedia.org/wiki/ラッパー関数) （ウィキペディア）
 - 関連用語:
   - {{Glossary("API")}}
   - {{Glossary("Class", "クラス")}}

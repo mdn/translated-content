@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}
 
 이번 단계는 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 여섯 번째 학습입니다. [Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html)에서 이번 학습의 소스코드를 확인할 수 있습니다.
 
@@ -109,6 +109,6 @@ drawBricks();
 
 ## 다음 단계
 
-이제 우리에겐 벽돌이 있습니다! 하지만 공은 벽돌들과의 반응이 없습니다. 우리는 다음 단계에서 이 문제에 대해 다룰 것입니다: [충돌 감지](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)
+이제 우리에겐 벽돌이 있습니다! 하지만 공은 벽돌들과의 반응이 없습니다. 우리는 다음 단계에서 이 문제에 대해 다룰 것입니다: [충돌 감지](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}

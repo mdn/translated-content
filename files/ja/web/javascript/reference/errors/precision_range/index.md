@@ -1,24 +1,22 @@
 ---
 title: "RangeError: precision is out of range"
 slug: Web/JavaScript/Reference/Errors/Precision_range
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
-
-JavaScript の例外 "precision is out of range" は、 `toFixed` または `toPrecision` に 0 から 20 (または 21) までの範囲外の数値が渡された場合に発生します。
+JavaScript の例外 "precision is out of range" は、`toExponential`, `toFixed`, `toPrecision` に許可された範囲外の数値が渡された場合に発生します。
 
 ## エラーメッセージ
 
-```js
-RangeError: The number of fractional digits is out of range (Edge)
-RangeError: The precision is out of range (Edge)
-RangeError: precision {0} out of range (Firefox)
-RangeError: toExponential() argument must be between 0 and 20 (Chrome)
-RangeError: toFixed() digits argument must be between 0 and 20 (Chrome)
-RangeError: toPrecision() argument must be between 1 and 21 (Chrome)
+```plain
+RangeError: toExponential() argument must be between 0 and 100 (V8-based & Safari)
+RangeError: toFixed() digits argument must be between 0 and 100 (V8-based & Safari)
+RangeError: toPrecision() argument must be between 1 and 100 (V8-based & Safari)
+RangeError: precision -1 out of range (Firefox)
 ```
 
-## エラーの種類
+## エラー型
 
 {{jsxref("RangeError")}}
 
@@ -26,17 +24,9 @@ RangeError: toPrecision() argument must be between 1 and 21 (Chrome)
 
 これらのメソッドのいずれかで、 範囲外の精度を引数を使用しています。
 
-- {{jsxref("Number.prototype.toExponential()")}}
-- {{jsxref("Number.prototype.toFixed()")}}
-- {{jsxref("Number.prototype.toPrecision()")}}
-
-これらのメソッドで許可されている範囲は、通常 0 と 20（または 21）の間です。しかし、ECMAScript 仕様では、この範囲の拡張が認められています。
-
-| メソッド                                       | Firefox (SpiderMonkey) | Chrome, Opera (V8) |
-| ---------------------------------------------- | ---------------------- | ------------------ |
-| {{jsxref("Number.prototype.toExponential()")}} | 0 から 100             | 0 から 20          |
-| {{jsxref("Number.prototype.toFixed()")}}       | -20 から 100           | 0 から 20          |
-| {{jsxref("Number.prototype.toPrecision()")}}   | 1 から 100             | 1 から 21          |
+- {{jsxref("Number.prototype.toExponential()")}}: 引数は 0 以上 100 以下である必要があります。
+- {{jsxref("Number.prototype.toFixed()")}}: 引数は 0 以上 100 以下である必要があります。
+- {{jsxref("Number.prototype.toPrecision()")}}: 引数は 1 以上 100 以下である必要があります。
 
 ## 例
 

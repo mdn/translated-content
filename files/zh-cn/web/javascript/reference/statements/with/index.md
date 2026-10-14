@@ -29,7 +29,7 @@ JavaScript 查找某个未使用命名空间的变量时，会通过作用域链
 
 ### 性能方面的利与弊
 
-**利**：`with` 语句可以在不造成性能损失的情況下，减少变量的长度。其造成的附加计算量很少。使用 'with' 可以减少不必要的指针路径解析运算。需要注意的是，很多情況下，也可以不使用 with 语句，而是使用一个临时变量来保存指针，来达到同样的效果。
+**利**：`with` 语句可以在不造成性能损失的情况下，减少变量的长度。其造成的附加计算量很少。使用 'with' 可以减少不必要的指针路径解析运算。需要注意的是，很多情况下，也可以不使用 with 语句，而是使用一个临时变量来保存指针，来达到同样的效果。
 
 **弊**：`with` 语句使得程序在查找变量值时，都是先在指定的对象中查找。所以那些本来不是这个对象的属性的变量，查找起来将会很慢。如果是在对性能要求较高的场合，'with' 下面的 statement 语句中的变量，只应该包含这个指定对象的属性。
 
@@ -55,7 +55,7 @@ function f(foo, values) {
 }
 ```
 
-如果是在 ECMAScript 5 环境调用`f([1,2,3], obj)`，则`with`语句中变量`values`将指向函数的第二个参数`values`。但是，ECMAScript 6 标准给[`Array.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype)添加了一个新属性`values`，所有数组实例将继承这个属性。所以在 ECMAScript 6 环境中，`with`语句中变量`values`将指向`[1,2,3].values`。
+如果是在 ECMAScript 5 环境调用 `f([1,2,3], obj)`，则 `with` 语句中变量 `values` 将指向函数的第二个参数 `values`。但是，ECMAScript 6 标准给 [`Array.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array) 添加了一个新属性 `values`，所有数组实例将继承这个属性。所以在 ECMAScript 6 环境中，`with` 语句中变量 `values` 将指向 `[1,2,3].values`。
 
 ## 示例
 

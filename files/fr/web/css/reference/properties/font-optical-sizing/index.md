@@ -3,7 +3,7 @@ title: Propriété CSS `font-optical-sizing`
 short-title: font-optical-sizing
 slug: Web/CSS/Reference/Properties/font-optical-sizing
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-optical-sizing`** définit si le rendu du texte est optimisé pour l'affichage à différentes tailles.
@@ -35,7 +35,7 @@ font-optical-sizing: none;
 
 ```css interactive-example
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2");
   font-family: "Amstelvar";
   font-style: normal;
 }
@@ -110,7 +110,7 @@ Lorsque le dimensionnement optique est utilisé, les petites tailles de texte so
 
 ```css
 @font-face {
-  src: url("AmstelvarAlpha-VF.ttf");
+  src: url("AmstelvarAlpha-VF.woff2");
   font-family: "Amstelvar";
   font-style: normal;
 }
@@ -126,7 +126,7 @@ p {
 ```
 
 > [!NOTE]
-> La police utilisée dans cet exemple — qui possède un dimensionnement optique et est disponible sous licence libre — est un bon moyen de tester. Vous pouvez le trouver [en téléchargement sur GitHub <sup>(angl.)</sup>](https://github.com/googlefonts/amstelvar/releases).
+> La police utilisée dans cet exemple — qui possède un dimensionnement optique et est disponible sous licence libre — est un bon moyen de tester. Vous pouvez le trouver [en téléchargement sur GitHub <sup>(angl.)</sup>](https://github.com/googlefonts/amstelvar-beta/releases).
 
 ## Spécifications
 

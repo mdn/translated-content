@@ -3,10 +3,10 @@ title: Propriété CSS `contain-intrinsic-height`
 short-title: contain-intrinsic-height
 slug: Web/CSS/Reference/Properties/contain-intrinsic-height
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`contain-intrinsic-height`** définit la hauteur d'un élément que le navigateur peut utiliser pour la mise en page lorsque l'élément est soumis à la [compartimentation de la taille](/fr/docs/Web/CSS/Guides/Containment/Using#compartimentation_de_la_taille).
+La propriété [CSS](/fr/docs/Web/CSS) **`contain-intrinsic-height`** définit la hauteur d'un élément que le navigateur peut utiliser pour la mise en page lorsque l'élément est envoyé à la [compartimentation de la taille](/fr/docs/Web/CSS/Guides/Containment/Using#compartimentation_de_la_taille).
 
 ## Syntaxe
 
@@ -44,13 +44,13 @@ Les valeurs suivantes peuvent être définies pour un élément.
 
 La propriété est généralement appliquée avec des éléments qui peuvent déclencher la compartimentation de la taille, tels que {{CSSxRef("contain", "contain: size")}} et {{CSSxRef("content-visibility")}}, et peut également être définie en utilisant la [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) {{CSSxRef("contain-intrinsic-size")}}.
 
-Le confinement de la taille permet à un agent utilisateur de présenter un élément comme s'il avait une taille fixe, ce qui permet d'éviter les modifications inutiles en évitant de rendre à nouveau les éléments enfants pour déterminer la taille réelle (améliorant ainsi l'expérience de l'utilisateur·ice).
-Par défaut, la compartimentation de taille considère les éléments comme s'ils n'avaient pas de contenu et peut contracter la mise en page de la même manière que si les contenus n'avaient ni hauteur (ni largeur).
+Le confinement de la taille permet à un agent utilisateur de présenter un élément comme s'il a une taille fixe, ce qui permet d'éviter les modifications inutiles en évitant de rendre à nouveau les éléments enfants pour déterminer la taille réelle (améliorant ainsi l'expérience de l'utilisateur·ice).
+Par défaut, la compartimentation de taille considère les éléments comme s'ils n'ont pas de contenu et peut contracter la mise en page de la même manière que si les contenus n'ont ni hauteur (ni largeur).
 La propriété `contain-intrinsic-height` permet aux auteur·ice·s de définir une valeur appropriée à utiliser comme hauteur pour la mise en page.
 
 La valeur `auto <length>` permet de mémoriser la hauteur de l'élément si celui‑ci a déjà été «&nbsp;rendu normalement&nbsp;» (avec ses éléments enfants), puis d'utiliser cette valeur mémorisée à la place de la hauteur définie lorsque l'élément omet son contenu.
 Cela permet aux éléments hors écran avec {{CSSxRef("content-visibility", "content-visibility: auto")}} de bénéficier de la compartimentation de taille sans que les développeur·euse·s aient à être aussi précis·e·s dans leurs estimations de la taille des éléments.
-La valeur mémorisée n'est pas utilisée si les éléments enfants sont en cours de rendu (si la compartimentation de taille est activée, la longueur (`<length>`) sera utilisée).
+La valeur mémorisée n'est pas utilisée si les éléments enfants sont en cours de rendu (si la compartimentation de taille est activée, la longueur (`<length>`) est utilisée).
 
 ## Définition formelle
 
@@ -66,26 +66,26 @@ En complément de l'exemple ci‑dessous, la page {{CSSxRef("contain-intrinsic-s
 
 ### Définir la hauteur intrinsèque
 
-Le HTML ci‑dessous définit un élément «&nbsp;contained_element&nbsp;» qui sera soumis à une contrainte de taille, et qui contient un élément enfant.
+Le HTML ci‑dessous définit un élément «&nbsp;element_conteneur&nbsp;» qui est envoyé à une contrainte de taille, et qui contient un élément enfant.
 
 ```html
-<div id="contained_element">
-  <div class="child_element"></div>
+<div id="element_conteneur">
+  <div class="element_enfant"></div>
 </div>
 ```
 
-Le CSS ci‑dessous règle {{CSSxRef("content-visibility")}} de `contained_element` sur `auto`, donc si l'élément est masqué il sera contraint en taille.
+Le CSS ci‑dessous règle {{CSSxRef("content-visibility")}} de `element_conteneur` sur `auto`, donc si l'élément est masqué il est contraint en taille.
 La largeur et la hauteur utilisées lorsque l'élément est contraint sont définies simultanément à l'aide de `contain-intrinsic-width` et `contain-intrinsic-height`, respectivement.
 
 ```css
-#contained_element {
+#element_conteneur {
   border: 2px solid green;
   width: 151px;
   content-visibility: auto;
   contain-intrinsic-width: 152px;
   contain-intrinsic-height: 52px;
 }
-.child_element {
+.element_enfant {
   border: 1px solid red;
   background: blue;
   height: 50px;

@@ -3,7 +3,7 @@ title: Propriété CSS `flex-grow`
 short-title: flex-grow
 slug: Web/CSS/Reference/Properties/flex-grow
 l10n:
-  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
+  sourceCommit: d78544a841b0e266a6efc169c044573f5e0b4e7d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`flex-grow`** définit le facteur de grossissement, qui indique quelle part de [**l'espace libre positif**](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios), s'il y en a, doit être attribuée à la [taille principale](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox#aparté_sur_le_modèle_flex) de l'élément flexible.
@@ -81,7 +81,7 @@ Cette propriété définit la part de l'espace restant dans le conteneur flexibl
 
 La [taille principale](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox#aparté_sur_le_modèle_flex) correspond soit à la largeur, soit à la hauteur de l'élément, selon la valeur de {{CSSxRef("flex-direction")}}.
 
-L'espace restant, ou espace libre positif, correspond à la taille du conteneur flexible moins la taille totale de tous les éléments flexibles. Si tous les éléments voisins ont le même facteur d'agrandissement, alors tous reçoivent la même part de l'espace restant. La pratique courante consiste à définir `flex-grow: 1`, mais définir le facteur d'agrandissement de tous les éléments flexibles à `88`, `100`, `1.2` ou toute autre valeur supérieure à `0` produit le même résultat&nbsp;: la valeur est un ratio.
+L'espace restant, ou espace libre positif, correspond à la taille du conteneur flexible moins la taille totale de tous les éléments flexibles. Si tous les éléments voisins ont le même facteur d'agrandissement, alors tous reçoivent la même part de l'espace restant. La pratique courante consiste à définir `flex-grow: 1`, mais définir le facteur d'agrandissement de tous les éléments flexibles à `88`, `100`, `1.2` ou toute autre valeur supérieure à `0` produit le même résultat&nbsp;: la valeur est une proportion.
 
 Si les valeurs `flex-grow` diffèrent, l'espace libre positif est réparti selon le rapport défini par les différents facteurs d'agrandissement flexibles. Les valeurs du facteur `flex-grow` de tous les éléments voisins flexibles sont additionnées. L'espace libre positif du conteneur flexible, s'il existe, est ensuite divisé par ce total. La taille principale de chaque élément flexible dont la valeur `flex-grow` est supérieure à `0` augmente de ce quotient multiplié par son propre facteur d'agrandissement.
 

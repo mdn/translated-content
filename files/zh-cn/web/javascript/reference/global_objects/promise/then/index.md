@@ -102,7 +102,7 @@ Promise.reject(1).then(2, 2).then(console.log, console.log); // 1
 
 ```js
 Promise.resolve("foo")
-  // 1. 接收 "foo" 并与 "bar" 拼接，并将其结果做为下一个 resolve 返回。
+  // 1. 接收 "foo" 并与 "bar" 拼接，并将其结果作为下一个 resolve 返回。
   .then(
     (string) =>
       new Promise((resolve, reject) => {

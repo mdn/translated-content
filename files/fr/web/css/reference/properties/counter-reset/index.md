@@ -3,10 +3,10 @@ title: Propriété CSS `counter-reset`
 short-title: counter-reset
 slug: Web/CSS/Reference/Properties/counter-reset
 l10n:
-  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
+  sourceCommit: a326384789bf2f13f96506d4e2fdb4688d873cd0
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`counter-reset`** permet de créer des compteurs CSS nommés [compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) et de les initialiser à une valeur précise. Elle permet de créer des compteurs qui comptent à partir de un jusqu'au nombre d'éléments, ainsi que ceux qui comptent à rebours du nombre d'éléments jusqu'à un.
+La propriété [CSS](/fr/docs/Web/CSS) **`counter-reset`** permet de créer des compteurs CSS nommés [compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) et d'initialiser leurs valeurs. Elle permet de créer à la fois des compteurs réguliers et inversés.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: counter-reset")}}
 
@@ -66,23 +66,25 @@ h2::before {
 ## Syntaxe
 
 ```css
-/* On réinitialise nom-compteur à 0 */
-counter-reset: nom-compteur;
-
-/* On réinitialise nom-compteur à -3 */
-counter-reset: nom-compteur -3;
-
-/* Crée un compteur inversé avec une valeur initiale par défaut */
-counter-reset: reversed(nom-compteur);
-
-/* Crée un compteur inversé et l'initialise à "-1" */
-counter-reset: reversed(nom-compteur) -1;
-
-/* Crée des compteurs inversés et réguliers en même temps */
-counter-reset: reversed(pages) 10 elements 1 reversed(sections) 4;
-
-/* On annule toute réinitialisation qui aurait pu être déclarée avec des règles moins spécifiques */
+/* Valeur avec un mot-clé */
 counter-reset: none;
+
+/* Counters réguliers avec des valeurs initiales par défaut */
+counter-reset: mon-compteur;
+counter-reset: autre-compteur;
+
+/* Counters réguliers avec une valeur initiale */
+counter-reset: mon-compteur -3;
+counter-reset: autre-compteur 15;
+
+/* Counters inversés */
+counter-reset: reversed(mon-compteur);
+counter-reset: reversed(mon-compteur) 3;
+counter-reset: reversed(autre-compteur) 15;
+
+/* Plusieurs compteurs */
+counter-reset: mon-compteur -3 autre-compteur 15;
+counter-reset: reversed(pages) items 1 reversed(sections) 4;
 
 /* Valeurs globales */
 counter-reset: inherit;
@@ -94,51 +96,49 @@ counter-reset: unset;
 
 ### Valeurs
 
-La propriété `counter-reset` accepte une liste d'un ou plusieurs noms de compteurs séparés par des espaces ou le mot-clé `none`. Pour les noms de compteurs, les compteurs réguliers utilisent le format `<counter-name>`, et les compteurs inversés utilisent `reversed(<counter-name>)`, où `<counter-name>` est un {{CSSxRef("&lt;custom-ident&gt;")}} ou `list-item` pour le compteur intégré de {{HTMLElement("ol")}}. Chaque nom de compteur peut être suivi en option d'un `<integer>` pour définir sa valeur initiale.
+Cette propriété est définie comme une liste de noms de compteurs ou de compteurs inversés séparés par des espaces, chacun pouvant être suivi d'un `<integer>` optionnel, ou du mot-clé `none`&nbsp;:
 
 - {{CSSxRef("&lt;custom-ident&gt;")}}
-  - : Définit le nom du compteur à créer et à initialiser en utilisant le format {{CSSxRef("&lt;custom-ident&gt;")}}. La notation fonctionnelle `reversed()` peut être utilisée pour marquer le compteur comme inversé.
+  - : Définit le nom du compteur à créer et à initialiser. La notation fonctionnelle `reversed()` peut être utilisée pour créer un compteur inversé.
 - {{CSSxRef("&lt;integer&gt;")}}
-  - : La valeur avec laquelle on souhaite réinitialiser le compteur pour chaque occurrence de l'élément.
-    La valeur par défaut est `0`.
+  - : Définit la valeur initiale à attribuer au compteur nouvellement créé.
+    Si elle n'est pas définie, la valeur par défaut est `0` pour les compteurs réguliers. La valeur initiale des compteurs inversés est calculée automatiquement.
 - `none`
-  - : Un mot-clé indiquant qu'il ne faut pas réinitialiser le compteur.
-    Cette valeur peut être utilisée pour masquer des réinitialisations provenant de règles moins spécifiques.
+  - : Définit qu'aucun compteur n'est créé.
 
 ## Description
 
-La propriété `counter-reset` permet de créer à la fois des compteurs réguliers et, dans les navigateurs qui le prennent en charge, des compteurs inversés. Vous pouvez créer plusieurs compteurs réguliers et inversés, chacun étant séparé par un espace. Les compteurs peuvent être un nom seul ou une paire nom-valeur séparée par un espace.
+La propriété `counter-reset` peut être utilisée pour créer et initialiser des [compteurs](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) nommés ou des compteurs inversés afin de numéroter les éléments dans l'ordre croissant ou décroissant.
+
+La valeur `none` peut être utilisée pour remplacer une déclaration `counter-reset` dans une règle ayant une spécificité inférieure.
 
 > [!WARNING]
-> Il existe [une différence entre les propriétés `counter-reset` et `counter-set`](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters#difference_entre_counter-set_et_counter-reset). Après avoir créé un compteur avec `counter-reset`, vous pouvez ajuster sa valeur avec la propriété {{CSSxRef("counter-set")}}. Cela peut sembler contre-intuitif car, malgré son nom, la propriété `counter-reset` sert à créer et initialiser des compteurs, tandis que la propriété `counter-set` sert à réinitialiser la valeur d'un compteur existant.
+> Il existe [une différence entre les propriétés `counter-reset` et `counter-set`](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters#difference_entre_counter-set_et_counter-reset). Après avoir créé un compteur avec `counter-reset`, vous pouvez ajuster sa valeur avec la propriété {{CSSxRef("counter-set")}}. Cela peut sembler contre-intuitif car, malgré son nom, la propriété `counter-reset` crée et initialise des compteurs, tandis que la propriété `counter-set` réinitialise la valeur des compteurs existants.
 
-Définir `counter-increment: none` sur un sélecteur avec une spécificité plus élevée annule la création du compteur nommé définie sur des sélecteurs de spécificité inférieure.
+Plusieurs noms de compteurs ou paires nom-valeur peuvent être séparés par des espaces. Pour les noms de compteurs, les compteurs réguliers utilisent le format `<counter-name>` et les compteurs inversés utilisent le format `reversed(<counter-name>)`, où `<counter-name>` est un {{CSSxRef("custom-ident", "&lt;custom-ident&gt;")}} ou `list-item` pour le compteur intégré {{HTMLElement("ol")}}.
 
 ### Valeurs initiales par défaut
 
-Les valeurs initiales par défaut des compteurs réguliers et inversés permettent de mettre en œuvre les deux schémas de numérotation les plus courants&nbsp;: compter à partir de un jusqu'au nombre d'éléments, et compter à rebours du nombre d'éléments jusqu'à un. En incluant une valeur de compteur pour un compteur nommé, votre compteur peut compter vers le haut ou vers le bas, en commençant à une valeur entière.
+Déclarer des compteurs réguliers et inversés sans inclure un entier permet de mettre en œuvre les deux schémas de numérotation les plus courants&nbsp;: compter à partir de `1` jusqu'au nombre d'éléments et compter à rebours du nombre d'éléments jusqu'à `1`, avec des incréments ou des décréments de `1`. En définissant une valeur initiale pour un compteur nommé, vous pouvez modifier sa valeur de départ. L'incrément ou le décrément peut être ajusté en utilisant la propriété {{CSSxRef("counter-increment")}}.
 
-Les compteurs réguliers ont pour valeur initiale `0` si aucune valeur de réinitialisation n'est fournie. Par défaut, les compteurs réguliers sont incrémentés de un, ce qui peut être ajusté avec la propriété {{CSSxRef("counter-increment")}}.
+L'exemple suivant crée trois compteurs. Les compteurs `chapitre` et `page` sont définis à la valeur initiale par défaut de `0`, tandis que `section` est défini à `4`&nbsp;:
 
 ```css
 h1 {
-  /* Crée les compteurs "chapitre" et "page" et les définit à leur valeur
-    initiale par défaut.
-    Crée le compteur "section" et le définit à "4". */
   counter-reset: chapitre section 4 page;
 }
 ```
 
-### Compteurs inversés
+Les compteurs inversés créés sans un `<integer>` ont une valeur initiale calculée automatiquement. Le navigateur compte le nombre d'éléments dans l'ensemble, la valeur initiale calculée garantissant que si la propriété `counter-increment` est définie sur `-1`, décrémentant ainsi le compteur nommé de `1` pour chaque élément, le compteur est à `1` sur le dernier élément de l'ensemble.
 
-Lorsque vous créez des compteurs inversés sans valeur, le compteur commence avec la valeur égale au nombre d'éléments du groupe, en comptant à rebours pour que le dernier élément du groupe soit `1`. Par défaut, les compteurs inversés sont décrémentés de un&nbsp;; cela peut aussi être modifié avec la propriété `counter-increment`.
+L'exemple suivant crée deux compteurs inversés, `chapitre` et `section`, et un compteur régulier, `pages`. Le compteur `section` commence à `10`, et `pages` utilise la valeur initiale par défaut de `0`. La valeur initiale du compteur `chapitre` est calculée automatiquement. Le compteur est décrémenté de `1` chaque fois qu'un `<h2>` est rencontré, donc sa valeur est `1` sur le dernier `<h2>`.
 
 ```css
 h1 {
-  /* Crée les compteurs inversés "chapitre" et "section".
-    Définit "chapitre" au nombre d'éléments et "section" à "10".
-    Crée le compteur "pages" avec la valeur initiale par défaut. */
   counter-reset: reversed(chapitre) reversed(section) 10 pages;
+}
+h2 {
+  counter-increment: chapitre -1;
 }
 ```
 
@@ -162,6 +162,8 @@ Dans cet exemple, la propriété `counter-reset` est utilisée pour définir une
 
 #### HTML
 
+Nous incluons une liste ordonnée ({{HTMLElement("ol")}}) contenant cinq éléments de liste ({{HTMLElement("li")}}).
+
 ```html
 <ol>
   <li>Premier</li>
@@ -184,13 +186,17 @@ ol {
 
 #### Résultat
 
-{{EmbedLiveSample("Remplacer le compteur `list-item`", 140, 300)}}
+{{EmbedLiveSample("Remplacer le compteur `list-item`", 140, 150)}}
 
-Avec `counter-reset`, vous définissez le compteur implicite `list-item` pour commencer à compter à partir de `3` pour chaque `ol`. Ainsi, le premier élément est numéroté 4, le deuxième est numéroté 5, etc., ce qui revient au même effet que d'écrire [`<ol start="4">`](/fr/docs/Web/HTML/Reference/Elements/ol#start) en HTML.
+Le premier élément est numéroté `4`. Ce qui revient au même effet que d'écrire [`<ol start="4">`](/fr/docs/Web/HTML/Reference/Elements/ol#start) en HTML.
 
 ### Utiliser un compteur inversé
 
-Dans l'exemple suivant, un compteur inversé nommé «&nbsp;priorite&nbsp;» est déclaré. Ce compteur est utilisé pour numéroter cinq tâches.
+Dans cet exemple, la fonction `reversed()` est utilisée pour créer un compteur inversé nommé `priorite` qui numérote cinq tâches.
+
+#### HTML
+
+Nous incluons une liste non ordonnée ({{HTMLElement("ul")}}) contenant cinq éléments de liste ({{HTMLElement("li")}}).
 
 ```html
 <ul class="stack">
@@ -200,6 +206,23 @@ Dans l'exemple suivant, un compteur inversé nommé «&nbsp;priorite&nbsp;» est
   <li>Tâche D</li>
   <li>Tâche E</li>
 </ul>
+```
+
+#### CSS
+
+Nous créons un compteur inversé nommé `priorite` sur le `<ul>` et supprimons les puces par défaut. Nous décrémentons le compteur de `1` sur chaque `<li>`. Nous utilisons ensuite du contenu généré pour afficher la valeur du compteur avant le contenu de chaque élément de liste.
+
+```css
+.stack {
+  counter-reset: reversed(priorite);
+  list-style: none;
+}
+li {
+  counter-increment: priorite -1;
+}
+li::before {
+  content: counter(priorite) ". ";
+}
 ```
 
 ```css hidden
@@ -214,21 +237,11 @@ Dans l'exemple suivant, un compteur inversé nommé «&nbsp;priorite&nbsp;» est
 }
 ```
 
-```css
-li::before {
-  content: counter(priorite) ". ";
-  counter-increment: priorite -1;
-}
-
-.stack {
-  counter-reset: reversed(priorite);
-  list-style: none;
-}
-```
+#### Résultat
 
 {{EmbedLiveSample("Utiliser un compteur inversé", 140, 150)}}
 
-Dans le résultat, les éléments sont numérotés dans l'ordre inverse de 5 à 1. Remarquez que dans le code, la valeur initiale du compteur n'est pas définie. Le navigateur calcule automatiquement la valeur initiale au moment de la mise en page en utilisant la valeur d'incrémentation du compteur.
+Les éléments sont numérotés dans l'ordre inverse de `5` à `1`. Notez que la valeur initiale du compteur n'est pas définie. Le navigateur calcule automatiquement la valeur initiale au moment de la mise en page.
 
 ## Spécifications
 

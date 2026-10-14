@@ -3,7 +3,7 @@ title: Propriété CSS `margin-block`
 short-title: margin-block
 slug: Web/CSS/Reference/Properties/margin-block
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`margin-block`** définit les marges logiques de début et de fin de bloc d'un élément, qui correspondent à des marges physiques selon le mode d'écriture, la direction et l'orientation du texte de l'élément.

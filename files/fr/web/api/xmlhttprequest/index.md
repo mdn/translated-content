@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers("window_and_worker_except_service")}}
 
-Les objets `XMLHttpRequest` (XHR) permettent d'interagir avec des serveurs. On peut récupérer des données à partir d'une URL sans avoir à rafraîchir complètement la page. Cela permet à une page web d'être mise à jour sans perturber les actions de l'utilisateur·ice.
+Les objets `XMLHttpRequest` (XHR) permettent d'interagir avec des serveurs. Vous pouvez récupérer des données à partir d'une URL sans avoir à rafraîchir complètement la page. Cela permet à une page web d'être mise à jour sans perturber les actions de l'utilisateur·ice.
 
 {{InheritanceDiagram}}
 
