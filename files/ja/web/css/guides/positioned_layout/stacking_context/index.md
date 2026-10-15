@@ -2,7 +2,7 @@
 title: 重ね合わせコンテキスト
 slug: Web/CSS/Guides/Positioned_layout/Stacking_context
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 15e1155ab8a0587405601cc4753bb789cd6ac47c
 ---
 
 **重ね合わせコンテキスト** (Stacking context) は、ビューポートまたはウェブページに面していると想定されるユーザーに対する仮想的な Z 軸に沿って並べられた HTML 要素の三次元の概念化です。重ね合わせコンテキストは、Z 軸（画面上の「奥行き」のサイズと考えてください）に沿って要素が互いに重なり合う方法を決定します。重ね合わせコンテキストは、重なり合うコンテンツがどのようにレンダリングされるかの視覚的な順序を決定します。
@@ -24,7 +24,7 @@ l10n:
 - {{cssxref("position")}} の値が `fixed` または `sticky` の要素。
 - {{cssxref("container-type")}} の値が[コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)のために `size` または `inline-size` に設定されているもの。
 - [フレックスアイテム](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)であり、 {{cssxref("z-index")}} の値が `auto` 以外の要素。
-- [グリッドアイテム](<>)であり、 {{cssxref("z-index")}} の値が `auto` 以外の要素。
+- [グリッドアイテム](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#z-index_によるアイテムのレイヤー化)であり、 {{cssxref("z-index")}} の値が `auto` 以外の要素。
 - {{cssxref("opacity")}} の値が `1` 未満である要素。
 - {{cssxref("mix-blend-mode")}} の値が `normal` 以外の要素。
 - 以下のプロパティのいずれかが `none` 以外の値を持つ要素。
@@ -104,7 +104,7 @@ l10n:
 </article>
 ```
 
-すべてのコンテナー要素は、{{cssxref("opacity")}} が `1` 未満であり、{{cssxref("position")}} が `relative` または `absolute` のいずれかに設定されています。これらのプロパティ値の組み合わせは、要素が `z-index` 値が `auto` 以外の場合に、重ね合わせコンテキストを生成します。
+すべてのコンテナー要素は、{{cssxref("opacity")}} が `1` 未満であり（重ね合わせコンテキストを生成します）、{{cssxref("position")}} が `relative` または `absolute` のどちらかに設定されています（これは要素が `z-index` 値が `auto` 以外の場合にも重ね合わせコンテキストを生成します）。
 
 ```css hidden
 * {
@@ -202,7 +202,6 @@ article {
 └── 記事 #3
   │
   ├── セクション #4
-  ├────  記事 #3 のコンテンツ
   ├── セクション #5
   └── セクション #6
 ```

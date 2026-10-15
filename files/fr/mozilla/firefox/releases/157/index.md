@@ -3,7 +3,7 @@ title: Firefox 157 note de version pour les développeurs
 short-title: Firefox 157
 slug: Mozilla/Firefox/Releases/157
 l10n:
-  sourceCommit: 91c6fa25d660ab9d0f8b60b19b103518cc3c1603
+  sourceCommit: 892eb917bee599a9d6cae7d33ed783129dbb39b3
 ---
 
 Cet article présente les informations concernant les changements de Firefox 157 qui concernent les développeur·euse·s.
@@ -36,12 +36,16 @@ Pas de changements notables.
 
 #### Général
 
-- Dorénavant, les préférences recommandées sont restaurées à une étape différente afin d'éviter qu'elles ne soient restaurées dans le mauvais profil.
+- Dorénavant, les préférences recommandées sont restaurées à une étape différente lors de l'arrêt.
   ([bogue Firefox 2066531 <sup>(angl.)</sup>](https://bugzil.la/2066531)).
 
 #### WebDriver BiDi
 
 - La commande `browser.setDownloadBehavior` est mise à jour pour exiger le paramètre `destinationFolder` lors de l'appel de la commande avec `type="allowed"`, ce qui nous aligne avec la spécification. Afin de restaurer le comportement par défaut sans devoir définir un dossier, les clients doivent appeler `browser.setDownloadBehavior` avec `null` à la place. ([bogue Firefox 2069952 <sup>(angl.)</sup>](https://bugzil.la/2069952)).
+
+## Changements pour les développeur·euse·s d'extensions
+
+- {{WebExtAPIRef("alarms.clearAll()")}} se complète désormais avec `undefined` au lieu d'un booléen. ([bogue Firefox 2067229 <sup>(angl.)</sup>](https://bugzil.la/2067229))
 
 ## Fonctionnalités web expérimentales
 
@@ -51,7 +55,7 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 
 - **`export * from "mod"` inclut l'exportation par défaut**&nbsp;: `javascript.options.experimental.export_star_default`
 
-  La [proposition d'exportation par défaut `*` de TC39 <sup>(angl.)</sup>](https://tc39.es/proposal-export-star-default/) permet à [`export * from "mod"`](/fr/docs/Web/JavaScript/Reference/Statements/export#re-exporting__aggregating) de fournir également l'exportation par défaut du module, qu'elle omet actuellement.
+  La [proposition d'exportation par défaut `*` de TC39 <sup>(angl.)</sup>](https://tc39.es/proposal-export-star-default/) permet à [`export * from "mod"`](/fr/docs/Web/JavaScript/Reference/Statements/export#réexportation_agrégée) de fournir également l'exportation par défaut du module, qu'elle omet actuellement.
   Notez que cette préférence peut uniquement être définie dans les compilations Nightly. ([bogue Firefox 2065611 <sup>(angl.)</sup>](https://bugzil.la/2065611)).
 
 - **L'option `navigate` pour les notifications**&nbsp;: `dom.webnotifications.navigate.enabled`
@@ -65,4 +69,4 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 
 - **Encapsulation de clé dans Web Crypto**&nbsp;: `dom.webcrypto.encapsulation.enabled`
 
-  [L'API Web Crypto](/fr/docs/Web/API/Web_Crypto_API) prend en charge ML-KEM, un algorithme qui permet à deux parties de s'accorder sur une clé secrète partagée. Il est conçu pour rester sécurisé contre les attaques par ordinateurs quantiques. {{DOMxRef("SubtleCrypto")}} a les nouvelles méthodes `encapsulateKey()`, `encapsulateBits()`, `decapsulateKey()` et `decapsulateBits()`, avec des {{DOMxRef("CryptoKey.usages", "usages de clé")}} correspondants. Les noms d'algorithme pris en charge incluent `ML-KEM-512`, `ML-KEM-768` et `ML-KEM-1024`. {{DOMxRef("SubtleCrypto.importKey()")}} et {{DOMxRef("SubtleCrypto.exportKey()")}} acceptent également les nouveaux formats de clé `raw-public` et `raw-seed`. Cette fonctionnalité est activée par défaut dans les versions Nightly. ([bogue Firefox 1943614 <sup>(angl.)</sup>](https://bugzil.la/1943614)).
+  [L'API Web Crypto](/fr/docs/Web/API/Web_Crypto_API) prend en charge ML-KEM, un algorithme qui permet à deux parties de s'accorder sur une clé secrète partagée. Il est conçu pour rester sécurisé contre les attaques par ordinateurs quantiques. {{DOMxRef("SubtleCrypto")}} a les nouvelles méthodes `encapsulateKey()`, `encapsulateBits()`, `decapsulateKey()` et `decapsulateBits()`, avec des {{DOMxRef("CryptoKey.usages", "usages")}} correspondants. Les noms d'algorithme pris en charge incluent `ML-KEM-512`, `ML-KEM-768` et `ML-KEM-1024`. {{DOMxRef("SubtleCrypto.importKey()")}} et {{DOMxRef("SubtleCrypto.exportKey()")}} acceptent également les nouveaux formats de clé `raw-public` et `raw-seed`. Cette fonctionnalité est activée par défaut dans les versions Nightly. ([bogue Firefox 1943614 <sup>(angl.)</sup>](https://bugzil.la/1943614)).

@@ -51,7 +51,7 @@ bind(thisArg, arg1, arg2, /* …, */ argN)
 绑定函数可以通过调用 `boundFn.bind(thisArg, /* more args */)` 进一步进行绑定，从而创建另一个绑定函数 `boundFn2`。新绑定的 `thisArg` 值会被忽略，因为 `boundFn2` 的目标函数是 `boundFn`，而 `boundFn` 已经有一个绑定的 `this` 值了。当调用 `boundFn2` 时，它会调用 `boundFn`，而 `boundFn` 又会调用 `fn`。`fn` 最终接收到的参数按顺序为：`boundFn` 绑定的参数、`boundFn2` 绑定的参数，以及 `boundFn2` 接收到的参数。
 
 ```js
-"use strict"; // 防止 `this` 被封装到到包装对象中
+"use strict"; // 防止 `this` 被封装到包装对象中
 
 function log(...args) {
   console.log(this, ...args);

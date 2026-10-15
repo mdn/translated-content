@@ -34,7 +34,7 @@ Promise.allSettledKeyed(object)
   - `value`
     - : `status` が `"fulfilled"` の場合にのみ存在します。プロミスの履行値です。
   - `reason`
-    - : `status` が `"rejected"` の場合にのみ存在します。プロミスが拒否された理由です。。
+    - : `status` が `"rejected"` の場合にのみ存在します。プロミスが拒否された理由です。
 
   渡された `object` が空ではないものの、待機中のプロミスが含まれていない場合でも、返されるプロミスは同期的ではなく、非同期で履行されます。
 

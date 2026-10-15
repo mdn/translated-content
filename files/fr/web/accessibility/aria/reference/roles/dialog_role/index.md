@@ -4,10 +4,10 @@ short-title: dialog
 slug: Web/Accessibility/ARIA/Reference/Roles/dialog_role
 original_slug: Web/Accessibility/ARIA/Roles/dialog_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 705109e85b6c5a9142260c58a617ef295b3b1316
 ---
 
-Le rôle `dialog` est utilisé pour marquer un dialogue ou une fenêtre d'application basée sur HTML qui sépare le contenu ou l'interface utilisateur du reste de l'application ou de la page web. Les dialogues sont généralement placés au-dessus du reste du contenu de la page à l'aide d'un superposition. Les dialogues peuvent être soit non modaux (il est toujours possible d'interagir avec le contenu en dehors du dialogue) ou modaux (seul le contenu dans le dialogue peut être interagi avec).
+Le rôle `dialog` est utilisé pour marquer un dialogue ou une fenêtre d'application basée sur HTML qui sépare le contenu ou l'interface utilisateur du reste de l'application ou de la page web. Les dialogues sont généralement placés au-dessus du reste du contenu de la page à l'aide d'un superposition. Les boîtes de dialogue peuvent être soit non bloquantes (il est toujours possible d'interagir avec le contenu en dehors du dialogue) ou bloquantes (seul le contenu dans le dialogue peut être interagi avec).
 
 ```html
 <div
@@ -29,16 +29,16 @@ Le rôle `dialog` est utilisé pour marquer un dialogue ou une fenêtre d'applic
 
 Un `dialog` est une fenêtre descendante de la fenêtre principale d'une application web. Pour les pages HTML, la fenêtre principale de l'application est l'ensemble du document web, c'est-à-dire l'élément body.
 
-Baliser un élément de dialogue avec le rôle `dialog` aide la technologie d'assistance à identifier le contenu du dialogue comme étant regroupé et séparé du reste du contenu de la page. Cependant, ajouter `role="dialog"` seul n'est pas suffisant pour rendre un dialogue accessible. De plus, les éléments suivants doivent être pris en compte&nbsp;:
+Baliser un élément de dialogue avec le rôle `dialog` aide la technologie d'assistance à identifier le contenu du dialogue comme étant regroupé et séparé du reste du contenu de la page. Cependant, ajouter `role="dialog"` seul n'est pas suffisant pour rendre un dialogue accessible. De plus, les éléments suivants sont importants&nbsp;:
 
-- Le dialogue doit être correctement étiqueté
+- L'étiquetage du dialogue est fortement recommandé
 - La gestion de la sélection du clavier doit être effectuée correctement
 
-Les sections ci-dessous décrivent comment ces deux exigences peuvent être satisfaites.
+Les sections ci-dessous décrivent ces deux aspects de l'accessibilité des dialogues.
 
 ### Étiquetage
 
-Bien qu'il ne soit pas nécessaire que le dialogue lui-même puisse recevoir la sélection, il doit tout de même être étiqueté. L'étiquette donnée au dialogue fournit des informations contextuelles pour les contrôles interactifs à l'intérieur du dialogue. En d'autres termes, l'étiquette du dialogue agit comme une étiquette de regroupement pour les contrôles à l'intérieur (similaire à la façon dont un élément `<legend>` fournit une étiquette de regroupement pour les contrôles à l'intérieur d'un élément `<fieldset>`).
+Bien qu'il ne soit pas nécessaire que le dialogue lui-même puisse recevoir la sélection, il doit tout de même être étiqueté. Un nom accessible n'est pas une exigence du rôle ARIA `dialog`. L'étiquette donnée au dialogue fournit des informations contextuelles pour les contrôles interactifs à l'intérieur du dialogue. En d'autres termes, l'étiquette du dialogue agit comme une étiquette de regroupement pour les contrôles à l'intérieur (similaire à la façon dont un élément `<legend>` fournit une étiquette de regroupement pour les contrôles à l'intérieur d'un élément `<fieldset>`).
 
 Si un dialogue a déjà une barre de titre visible, le texte à l'intérieur de cette barre peut être utilisé pour étiqueter le dialogue lui-même. La meilleure façon d'y parvenir est d'utiliser l'attribut [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) sur l'élément `role="dialog"`. De plus, si le dialogue contient un texte descriptif supplémentaire en plus du titre du dialogue, ce texte peut être associé au dialogue à l'aide de l'attribut [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby). Cette approche est illustrée dans l'extrait de code ci-dessous&nbsp;:
 
@@ -72,7 +72,7 @@ Un dialogue a des exigences particulières concernant la gestion de la sélectio
 - Après la fermeture du dialogue, la sélection clavier doit être déplacée vers l'endroit où il se trouvait avant d'entrer dans le dialogue. Sinon, la sélection peut être perdue au début de la page.
 - Pour la plupart des dialogues, le comportement attendu est que l'ordre de tabulation du dialogue _s'enroule_, ce qui signifie que lorsque l'utilisateur·ice passe d'un élément sélectionnable à l'autre dans le dialogue, le premier élément sélectionnable est sélectionné après que le dernier ait été atteint. En d'autres termes, l'ordre de tabulation doit être contenu dans le dialogue et par celui-ci.
 - Si le dialogue peut être déplacé ou redimensionné, assurez-vous que ces actions doivent être réalisables par les utilisateur·ice·s de clavier ainsi que par les utilisateur·ice·s de souris. De même, si un dialogue fournit des fonctionnalités spéciales comme des barres d'outils ou des menus contextuels, ceux-ci doivent être accessibles et utilisables par les utilisateur·ice·s de clavier.
-- Les dialogues peuvent être modaux ou non modaux. Lorsqu'un dialogue _modal_ apparaît à l'écran, il n'est pas possible d'interagir avec le contenu de la page en dehors du dialogue. En d'autres termes, l'interface utilisateur principale de l'application ou le contenu de la page est considéré comme temporairement désactivé tant que le dialogue modal est affiché. Pour les dialogues _non modaux_, il est toujours possible d'interagir avec le contenu en dehors du dialogue pendant que celui-ci est affiché. Notez que pour les dialogues non modaux, il doit y avoir un raccourci clavier global qui permet de déplacer la sélection entre les dialogues ouverts et la page principale.
+- Les dialogues peuvent être bloquants ou non bloquants. Lorsqu'un dialogue _bloquant_ apparaît à l'écran, il n'est pas possible d'interagir avec le contenu de la page en dehors du dialogue. En d'autres termes, l'interface utilisateur principale de l'application ou le contenu de la page est considéré comme temporairement désactivé tant que le dialogue bloquant est affiché. Pour les dialogues _non bloquants_, il est toujours possible d'interagir avec le contenu en dehors du dialogue pendant que celui-ci est affiché. Notez que pour les dialogues non bloquants, il doit y avoir un raccourci clavier global qui permet de déplacer la sélection entre les dialogues ouverts et la page principale.
 
 ### Propriétés, états et rôles ARIA associés
 
@@ -87,7 +87,7 @@ Lorsque le rôle `dialog` est utilisé, l'agent utilisateur doit faire ce qui su
 
 - Exposer l'élément en tant que dialogue dans l'API d'accessibilité du système d'exploitation.
 
-Lorsque le dialogue est correctement étiqueté et que la sélection est déplacée vers un élément (souvent un élément interactif, tel qu'un bouton) à l'intérieur du dialogue, les lecteurs d'écran doivent annoncer le rôle accessible du dialogue, son nom et éventuellement sa description, tout en annonçant l'élément focalisé.
+Lorsque le dialogue est correctement étiqueté et que la sélection est déplacée vers un élément (souvent un élément interactif, tel qu'un bouton) à l'intérieur du dialogue, les lecteurs d'écran doivent annoncer le rôle accessible du dialogue, son nom et éventuellement sa description, tout en annonçant l'élément sélectionné.
 
 > [!NOTE]
 > Les opinions peuvent différer sur la manière dont la technologie d'assistance doit gérer cette technique, et l'ordre des annonces peut différer en fonction de la technologie d'assistance utilisée. Les informations fournies ci-dessus sont l'une de ces opinions et peuvent changer à mesure que la spécification est définie.
@@ -137,7 +137,7 @@ Lorsque le dialogue est correctement étiqueté et que la sélection est déplac
 
 > [!NOTE]
 > Quand il est possible d'empêcher les utilisateur·ice·s de clavier de déplacer la sélection vers des éléments en dehors de la boîte de dialogue, les utilisateur·ice·s de lecteurs d'écran peuvent toujours être en mesure de naviguer vers ce contenu à l'aide du curseur virtuel de leur lecteur d'écran.
-> Il est important pour les développeur·euse·s de s'assurer que le contenu en dehors de la boîte de dialogue modale est inaccessible à tous les utilisateur·ice·s pendant que la boîte de dialogue modale est active.
+> Il est important pour les développeur·euse·s de s'assurer que le contenu en dehors de la boîte de dialogue bloquante est inaccessible à tous les utilisateur·ice·s pendant que la boîte de dialogue bloquante est active.
 
 ## Spécifications
 

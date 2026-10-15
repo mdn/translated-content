@@ -44,13 +44,13 @@ l10n:
 - `*`
   - : [全称セレクター (`*`)](/ja/docs/Web/CSS/Reference/Selectors/Universal_selectors)です。ページ上のすべてのビュー遷移グループを選択します。
 - `root`
-  - : {{cssxref("view-transition-name")}} を {{cssxref(":root")}} に適用すると、擬似要素が、ページ全体のビュー遷移を含むためにユーザーエージェントによって作成されたデフォルトの `root` ビュー遷移グループに一致するようにします。すなわち、 `view-transition-name` プロパティによって自分自身を固有のビュー遷移グループに割り当てていない要素を意味します）。
+  - : {{cssxref("view-transition-name")}} を {{cssxref(":root")}} に適用すると、擬似要素が、ページ全体のビュー遷移を含むためにユーザーエージェントによって作成されたデフォルトの `root` ビュー遷移グループに一致するようにします。すなわち、 `view-transition-name` プロパティによって自分自身を固有のビュー遷移グループに割り当てていない要素を意味します。
 - `<pt-name-selector>`
   - : 一連の {{cssxref("custom-ident")}} で、{{cssxref("view-transition-name")}} プロパティの値です。
 - `<pt-class-selector>`
   - : 一連の {{cssxref("custom-ident")}} で、{{cssxref("view-transition-class")}} プロパティの値の前にピリオド (`.`) を置いたものです。
 
-名前付きビュー遷移擬似要素の{{cssxref("specificity", "詳細度")}}は、[要素型セレクターの詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity#type_列)と等しくなります。ただし、全称セレクターが使用されている場合は、詳細度はゼロとなります。
+名前付きビュー遷移擬似要素の[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)は、[要素型セレクターの詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity#type_列)と等しくなります。ただし、全称セレクターが使用されている場合は、詳細度はゼロとなります。
 
 ## 例
 

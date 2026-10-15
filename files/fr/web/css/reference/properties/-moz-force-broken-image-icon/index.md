@@ -3,7 +3,7 @@ title: Propriété CSS `-moz-force-broken-image-icon`
 short-title: -moz-force-broken-image-icon
 slug: Web/CSS/Reference/Properties/-moz-force-broken-image-icon
 l10n:
-  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 {{Non-standard_Header}}
@@ -25,6 +25,8 @@ La propriété [CSS](/fr/docs/Web/CSS) étendue **`-moz-force-broken-image-icon`
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme l'une des valeurs suivantes&nbsp;:
 
 - {{CSSxRef("&lt;integer&gt;")}}
   - : Une valeur de 1 indique qu'une icône d'image brisée est affichée même si l'image possède un attribut {{HTMLElement("img", "<code>alt</code>", "#alt")}}. `0` indique que seul l'attribut `alt` doit être affiché.

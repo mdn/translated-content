@@ -2,7 +2,7 @@
 title: Element
 slug: Web/API/Element
 l10n:
-  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
+  sourceCommit: 5351b03470685486d841a3340c6971351058194f
 ---
 
 {{APIRef("DOM")}}
@@ -63,7 +63,7 @@ _`Element` hérite des propriétés de son interface parente, {{DOMxRef("Node")}
   - : Un objet `Element`, l'élément immédiatement suivant celui donné dans l'arbre, ou `null` s'il n'y a pas de nœud voisin.
 - {{DOMxRef("Element.outerHTML")}}
   - : Une chaîne de caractères représentant le balisage de l'élément, y compris son contenu. Lorsqu'elle est utilisée comme un mutateur, elle remplace l'élément par des nœuds analysés à partir de la chaîne de caractères donnée.
-- {{DOMxRef("Element.part")}}
+- {{DOMxRef("Element.part")}} {{ReadOnlyInline}}
   - : Représente l'identifiant de partie(s) de l'élément (c'est-à-dire, défini en utilisant l'attribut `part`), retourné en tant que {{DOMxRef("DOMTokenList")}}.
 - {{DOMxRef("Element.prefix")}} {{ReadOnlyInline}}
   - : Une chaîne de caractères représentant le préfixe de l'espace de noms de l'élément, ou `null` si aucun préfixe n'est défini.
@@ -136,7 +136,7 @@ _L'interface `Element` inclut également les propriétés suivantes._
   - : Une chaîne de caractères reflétant l'attribut [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live), qui indique qu'un élément est mis à jour et décrit les types de mises à jour que les agents utilisateurs, les technologies d'assistance et l'utilisateur·ice peuvent attendre de la région dynamique.
 - {{DOMxRef("Element.ariaModal")}}
   - : Une chaîne de caractères reflétant l'attribut [`aria-modal`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal), qui indique si un élément est bloquante lorsqu'il est affiché.
-- {{DOMxRef("Element.ariaMultiline")}}
+- {{DOMxRef("Element.ariaMultiLine")}}
   - : Une chaîne de caractères reflétant l'attribut [`aria-multiline`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline), qui indique si une zone de texte accepte plusieurs lignes de saisie ou seulement une seule ligne.
 - {{DOMxRef("Element.ariaMultiSelectable")}}
   - : Une chaîne de caractères reflétant l'attribut [`aria-multiselectable`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable), qui indique que l'utilisateur·ice peut sélectionner plusieurs éléments parmi les descendants sélectionnables actuels.

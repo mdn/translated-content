@@ -7,7 +7,7 @@ l10n:
 
 Un **identifiant de langue BCP 47** est une chaîne de caractères qui définit précisément une langue humaine en indiquant la langue de base, mais aussi éventuellement le système d'écriture et le dialecte. Par exemple, `fr` désigne le français, mais `fr-FR` et `fr-CA` précisent respectivement le français de France et le français du Canada.
 
-Les identifiants de langue BCP 47 sont utilisés partout sur la plateforme web où une fonctionnalité a été conçue pour produire des résultats différents selon la langue définie, permettant la prise en charge de l'{{Glossary("internationalization", "internationalisation")}}.
+Les identifiants de langue BCP 47 sont utilisés partout sur la plateforme web où une fonctionnalité a été conçue pour produire des résultats différents selon la langue définie, permettant la prise en charge de {{Glossary("internationalization", "l'internationalisation")}}.
 
 Exemples&nbsp;:
 
@@ -39,6 +39,6 @@ La sous-étiquette d'écriture précède la sous-étiquette de région si les de
 ## Voir aussi
 
 - [Liste des principales sous-étiquettes de langue](https://fr.wikipedia.org/wiki/%C3%89tiquette_d%27identification_de_langues_IETF#Exemples)
-- [RFC 5646&nbsp;: Étiquettes pour l'identification des langues <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/rfc5646)&nbsp;: où les identifiants de langue BCP 47 sont spécifiés.
+- [RFC 5646&nbsp;: Étiquettes pour l'identification des langues <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/rfc5646)&nbsp;: où les identifiants de langue BCP 47 sont définies.
 - [Choisir une étiquette de langue <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-choosing-language-tags)&nbsp;: guide W3C pour choisir la bonne étiquette de langue.
 - [Recherche de sous-étiquettes BCP 47 <sup>(angl.)</sup>](https://r12a.github.io/app-subtags/)&nbsp;: rechercher les codes de sous-étiquette pour une langue.

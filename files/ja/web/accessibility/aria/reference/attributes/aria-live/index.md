@@ -3,7 +3,7 @@ title: aria-live
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-live
 original_slug: Web/Accessibility/ARIA/Attributes/aria-live
 l10n:
-  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+  sourceCommit: 93e3c303704c560ce28cc7764ff0069e67c48e79
 ---
 
 {{AccessibilitySidebar}}
@@ -89,3 +89,4 @@ l10n:
 - [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
 - [`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
 - [`alert` role](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)
+- {{domxref("Document.ariaNotify()")}}, {{domxref("Element.ariaNotify()")}}

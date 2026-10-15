@@ -14,7 +14,7 @@ Un élément de niveau bloc commence toujours sur une nouvelle ligne. En mode d'
 > Le comportement ci-dessus de la mise en page en bloc change si le {{CSSxRef("writing-mode")}} du bloc conteneur est défini sur une valeur autre que [la valeur par défaut](/fr/docs/Web/CSS/Reference/Properties/writing-mode#définition_formelle).
 
 > [!NOTE]
-> Les éléments HTML (pour <i lang="en">HyperText Markup Language</i> en anglais) étaient historiquement classés comme éléments «&nbsp;de niveau bloc&nbsp;» ou «&nbsp;en ligne&nbsp;». Cette caractéristique de présentation est désormais spécifiée par CSS.
+> Les éléments HTML (pour <i lang="en">HyperText Markup Language</i> en anglais) étaient historiquement classés comme éléments «&nbsp;de niveau bloc&nbsp;» ou «&nbsp;en incise&nbsp;». Cette caractéristique de présentation est désormais définie par CSS.
 
 ## Exemples
 
@@ -43,7 +43,7 @@ p {
 ## Voir aussi
 
 - Terme associé du glossaire&nbsp;:
-  - {{Glossary("Inline-level content", "Contenu de niveau en ligne")}}
+  - {{Glossary("Inline-level content", "Contenu de niveau en incise")}}
 - [Contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context)
 - La propriété CSS {{CSSxRef("display")}}
 - La propriété CSS {{CSSxRef("writing-mode")}}

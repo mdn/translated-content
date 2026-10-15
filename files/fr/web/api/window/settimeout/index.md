@@ -1,83 +1,86 @@
 ---
-title: setTimeout()
+title: "Window : méthode setTimeout()"
+short-title: setTimeout()
 slug: Web/API/Window/setTimeout
-original_slug: Web/API/setTimeout
+l10n:
+  sourceCommit: 051d02b402b7f76c2078b12283aa18318c34c38b
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode globale **`setTimeout()`** permet de définir un minuteur qui exécute une fonction ou un code donné après la fin du délai indiqué.
+> [!WARNING]
+> Lorsqu'on utilise le paramètre `code`, cette méthode exécute dynamiquement sa valeur en tant que JavaScript.
+> Les API de ce type sont connues sous le nom de [points d'injection](/fr/docs/Web/API/Trusted_Types_API#concepts_et_utilisation) et constituent potentiellement un vecteur pour les attaques de [scripts inter-sites (XSS)](/fr/docs/Web/Security/Attacks/XSS).
+>
+> Vous pouvez atténuer ce risque en assignant toujours des objets {{DOMxRef("TrustedScript")}} au lieu de chaînes de caractères et en [appliquant les types de confiance](/fr/docs/Web/API/Trusted_Types_API#utiliser_une_csp_pour_appliquer_les_types_de_confiance).
+> Consultez la section [Considérations de sécurité](#considérations_de_sécurité) pour plus d'informations.
+
+La méthode **`setTimeout()`** de l'interface {{DOMxRef("Window")}} définit un minuteur qui exécute une fonction ou un morceau de code défini une fois que le minuteur expire.
 
 ## Syntaxe
 
-```js
-setTimeout(code);
-setTimeout(code, delay);
+```js-nolint
+setTimeout(code)
+setTimeout(code, delay)
 
-setTimeout(functionRef);
-setTimeout(functionRef, delay);
-setTimeout(functionRef, delay, param1);
-setTimeout(functionRef, delay, param1, param2);
-setTimeout(functionRef, delay, param1, param2, /* ... ,*/ paramN);
+setTimeout(func)
+setTimeout(func, delay)
+setTimeout(func, delay, param1)
+setTimeout(func, delay, param1, param2)
+setTimeout(func, delay, param1, param2, /* …, */ paramN)
 ```
 
 ### Paramètres
 
-- `functionRef`
-  - : Une [fonction](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) à exécuter lorsque le délai du minuteur est expiré.
+- `func`
+  - : Un objet {{JSxRef("Function")}} à exécuter après l'expiration du minuteur.
 - `code`
-  - : Une syntaxe alternative qui permet d'inclure une chaîne de caractères plutôt qu'une fonction. Le code contenu est compilé et exécuté lorsque le minuteur expire. Cette syntaxe est **déconseillée** pour les mêmes raisons qu'[`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval) et représente un risque de sécurité.
-- `delay` {{optional_inline}}
-  - : La durée, exprimée en millisecondes, que le minuteur devrait attendre avant l'exécution de la fonction indiquée. Si ce paramètre est absent, c'est 0 qui est utilisé comme valeur par défaut, indiquant que la fonction doit être exécutée au plus vite, c'est-à-dire au prochain cycle d'évènements.
+  - : Un objet {{DOMxRef("TrustedScript")}} ou une chaîne de caractères contenant du code arbitraire qui est compilé et exécuté après `delay` millisecondes.
+    Cela peut être utilisé à la place de passer une fonction, mais est _fortement déconseillé_ pour les mêmes raisons qui font de l'utilisation de {{JSxRef("Global_Objects/eval", "eval()")}} un risque de sécurité.
+- `delay` {{Optional_Inline}}
+  - : Un entier non négatif indiquant combien de temps le minuteur doit attendre avant que la fonction ou le code défini ne soit exécuté, en millisecondes.
+    La valeur par défaut est 0 si elle n'est pas définie.
 
-    Que le paramètre soit fourni ou non, la durée attendue avant l'exécution peut être plus longue que le nombre de millisecondes exprimées, voir [les raisons pour lesquelles la durée effective est plus longue](#raisons_pour_lesquelles_la_durée_effective_est_plus_longue) ci-après.
+    Note&nbsp;:
+    - Le délai a une valeur maximale de 2147483647ms — la spécification de valeurs supérieures peut entraîner un débordement ou l'utilisation d'une valeur égale à 0.
+      Voir [valeur maximale du délai](#valeur_maximale_du_délai) ci-dessous pour plus d'informations.
+    - Le délai réel peut être plus long que celui défini.
+      Par exemple, définir `delay` à 0 exécute dans le cycle d'évènement suivant plutôt que «&nbsp;immédiatement&nbsp;».
+      Voir [Raisons pour lesquelles les délais peuvent être plus longs que définis](#raisons_pour_lesquelles_les_délais_peuvent_être_plus_longs_que_prévu) pour plus d'informations.
+    - Si la valeur n'est pas un nombre, une [coercition de type](/fr/docs/Glossary/Type_coercion) implicite est effectuée silencieusement sur la valeur pour la convertir en nombre.
+      Cela peut entraîner des résultats inattendus et surprenants — voir [Les valeurs de délai non numériques sont silencieusement converties en nombres](#les_valeurs_de_délai_non_numériques_sont_converties_en_nombres_silencieusement) pour un exemple.
+    - Les valeurs négatives se comportent de la même manière que 0.
 
-    On notera également que si la valeur n'est pas un nombre, [une conversion implicite](/fr/docs/Glossary/Type_coercion) est effectuée pour transformer la valeur en un nombre. Voir [un exemple de conversion de valeur non-numérique pour la durée](#conversion_de_valeur_non-numérique_pour_le_durée) ci-après.
-
-- `param1`, …, `paramN` {{optional_inline}}
-  - : Des arguments additionnels qui sont passés à la fonction donnée par l'argument `function`.
+- `param1`, …, `paramN` {{Optional_Inline}}
+  - : Des arguments supplémentaires qui sont transmis à la fonction définie par `func`.
 
 ### Valeur de retour
 
-Un entier positif `timeoutID` qui identifie le minuteur créé par l'appel à `setTimeout()`. Cette valeur peut être passée à [`clearTimeout()`](/fr/docs/Web/API/Window/clearTimeout) pour annuler le minuteur.
+Un entier positif (typiquement dans la plage de 1 à 2 147 483 647) qui identifie de manière unique le minuteur créé par l'appel.
+Cet identifiant, souvent appelé «&nbsp;ID de délai&nbsp;», peut être passé à {{DOMxRef("Window.clearTimeout","clearTimeout()")}} pour annuler le minuteur.
 
-Une même valeur de `timeoutID` ne sera jamais réutilisée par un appel ultérieur à `setTimeout()` ou `setInterval()` sur le même objet (que ce soit une fenêtre ou un <i lang="en">worker</i>). Toutefois, des objets différents utilisent des ensembles distincts d'identifiants.
+Dans le même environnement global (par exemple, une fenêtre ou un worker spécifique), l'identifiant de délai n'est jamais réutilisé pour un nouveau minuteur tant que le minuteur original reste actif.
+Cependant, des environnements globaux distincts maintiennent leurs propres ensembles indépendants d'identifiants de minuteur.
+
+### Exceptions
+
+- {{JSxRef("SyntaxError")}}
+  - : Le paramètre `code` ne peut pas être analysé comme un script.
+- {{JSxRef("TypeError")}}
+  - : Levée si le paramètre `code` est défini sur une chaîne de caractères alors que les [types de confiance](/fr/docs/Web/API/Trusted_Types_API) sont [imposés par une CSP](/fr/docs/Web/API/Trusted_Types_API#utiliser_une_csp_pour_appliquer_les_types_de_confiance) et qu'aucune politique par défaut n'est définie.
+    Elle est également levée si le premier paramètre n'est pas de l'un des types pris en charge&nbsp;: une fonction, une chaîne de caractères ou `TrustedScript`.
 
 ## Description
 
-Les minuteurs sont annulés grâce à la fonction [`clearTimeout()`](/fr/docs/Web/API/Window/clearTimeout).
+La fonction `setTimeout()` est couramment utilisée pour appeler une fonction qui est exécutée une seule fois, après un délai.
+Vous pouvez appeler {{DOMxRef("Window.clearTimeout()")}} pour annuler le délai avant qu'il ne se termine.
 
-Pour appeler une fonction de façon répétée (toutes les _N_ millisecondes), on utilisera plutôt [`setInterval()`](/fr/docs/Web/API/Window/setInterval).
+Si vous souhaitez appeler une fonction de manière répétée (par exemple, toutes les _N_ millisecondes), vous pouvez utiliser {{DOMxRef("Window.setInterval", "setInterval()")}}.
 
-### Conversion de valeur non-numérique pour la durée
+### Travailler avec des fonctions asynchrones
 
-Lorsque `setTimeout()` est appelée avec une valeur du paramètre `delay` qui n'est pas un nombre, une [conversion de type](/fr/docs/Glossary/Type_coercion) sera effectuée implicitement pour convertir la valeur en nombre. Ainsi, dans l'exemple qui suit, le code fait l'erreur d'utiliser la valeur `"1000"` qui est une chaîne de caractères, plutôt que le nombre `1000`, mais cela fonctionne, car la chaîne est transformée implicitement dans la valeur numérique `1000`, et la fonction est donc exécutée après 1 seconde.
-
-```js example-bad
-setTimeout(() => {
-  console.log("Retardée d'une seconde.");
-}, "1000");
-```
-
-Toutefois, dans de nombreux cas, la conversion implicite peut mener à des résultats inattendus voire surprenants. Par exemple, lorsque le code qui suit est exécuté, la chaîne de caractères `"1 seconde"` est en fait transformée dans le nombre `0`, et le code est donc exécuté immédiatement.
-
-```js example-bad
-setTimeout(() => {
-  console.log("Retardée d'une seconde.");
-}, "1 seconde");
-```
-
-Aussi, on veillera à ne pas utiliser de chaîne de caractères pour le paramètre `delay` et à utiliser uniquement des nombres&nbsp;:
-
-```js example-good
-setTimeout(() => {
-  console.log("Retardée d'une seconde.");
-}, 1000);
-```
-
-### Fonctionnement avec les fonctions asynchrones
-
-`setTimeout()` est une fonction asynchrone, ce qui signifie que la fonction passée en argument ne bloquera pas l'exécution des autres fonctions de la pile d'appels. Autrement dit, on ne peut pas utiliser `setTimeout()` afin de créer une pause avant que la prochaine fonction de la pile soit déclenchée.
+`setTimeout()` est une fonction asynchrone, ce qui signifie que la fonction passée en argument ne bloquera pas l'exécution des autres fonctions de la pile d'appels.
+Elle «&nbsp;n'attend pas&nbsp;», ce qui signifie que l'exécution des lignes de code après `setTimeout()` n'est pas bloquée jusqu'à ce que le code programmé ait été exécuté.
 
 Prenons cet exemple&nbsp;:
 
@@ -92,288 +95,371 @@ setTimeout(() => {
   console.log("Voici le troisième message");
 }, 1000);
 
-// Produira ceci dans la console&nbsp;:
+// Affiche :
 
 // Voici le troisième message
 // Voici le second message
 // Voici le premier message
 ```
 
-On voit ici que la première fonction ne crée pas une pause de 5 secondes que la deuxième fonction soit appelée. La première fonction est appelée par le moteur dès lors que 5 secondes sont écoulées. Pendant ce délai, le reste des instructions continue de s'exécuter et la deuxième fonction est appelée par le moteur dès que 3 secondes se sont écoulées. Juste après, il en va de même après la troisième fonction. Le délai de 1 seconde étant écoulé d'abord, c'est la troisième fonction qui est exécutée d'abord, puis la seconde et enfin la première.
+La méthode `setTimeout()` est appelée trois fois, en lui passant une fonction de rappel qui consigne l'ordre dans lequel `setTimeout()` a été appelée.
+Les méthodes appelées en premier générant des délais plus importants, les fonctions de rappel sont exécutées dans l'ordre inverse de celui dans lequel elles ont été programmées.
+Si `setTimeout()` reste bloqué jusqu'à ce que la fonction de rappel soit terminée, les messages s'affichent dans l'ordre.
 
-Pour créer une séquence d'opérations où une fonction se déclenche uniquement après qu'une autre fonction ait terminé, on utilisera plutôt [les promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+Les méthodes asynchrones sont utiles, car elles permettent d'exécuter des tâches en parallèle lorsque l'ordre d'exécution n'a pas d'importance.
+Si l'ordre d'exécution d'une méthode asynchrone a de l'importance, vous pouvez utiliser les [promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) (chaînage de promesses) pour attendre la fin d'une tâche.
 
-### Le problème de `this`
+### Les fonctions sont appelées avec le `this` global
 
-Lorsqu'on passe une méthode à `setTimeout()`, elle est appelée avec une valeur de `this` qui peut être différente de celle attendue. Ce problème général est détaillé dans [la référence JavaScript](/fr/docs/Web/JavaScript/Reference/Operators/this#en_tant_que_méthode_dun_objet).
+Les fonctions passées à `setTimeout()` sont exécutées avec la sémantique d'appel de fonction normale pour déterminer la référence de [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this).
+Ce problème est expliqué en détail dans la [référence JavaScript](/fr/docs/Web/JavaScript/Reference/Operators/this#fonctions_de_rappel).
 
-Le code exécuté par `setTimeout()` est appelé par un contexte d'exécution séparé de la fonction depuis laquelle `setTimeout()` a été appelé. Les règles usuelles pour la définition du mot-clé `this` s'appliquent et si `this` n'est pas défini lors de l'appel ou avec `bind()`, sa valeur par défaut sera l'objet `window` (ou `global`). Il ne s'agira pas de la même valeur de `this` qu'au sein de la fonction qui a appelé `setTimeout()`.
+Pour les fonctions qui ne sont pas fléchées, le contexte `this` est défini sur l'objet [`globalThis`](/fr/docs/Web/JavaScript/Reference/Global_Objects/globalThis) (un alias pour [`window`](/fr/docs/Web/API/Window/window) dans les navigateurs).
 
-Prenons l'exemple suivant&nbsp;:
-
-```js
-const monTableau = ["zéro", "un", "deux"];
-monTableau.maMethode = function (sPropriete) {
-  console.log(arguments.length > 0 ? this[sPropriete] : this);
-};
-
-monTableau.maMethode(); // affiche "zéro,un,deux"
-monTableau.maMethode(1); // affiche "un"
-```
-
-Cela fonctionne, car, lorsque `maMethode` est appelée, `this` vaut `monTableau` et, au sein de la fonction, `this[sPropriete]` est donc équivalent à `monTableau[sPropriete]`. Toutefois, si on écrit ceci&nbsp;:
+L'exemple suivant montre comment cela peut provoquer un comportement inattendu. Ici, lorsque nous passons la méthode `compteur.compter` directement à `setTimeout()`, le contexte `this` est perdu, et la méthode est appelée sur l'objet global au lieu de l'instance `Compteur`, ce qui entraîne une `TypeError` lorsque la méthode `compter` tente d'accéder à `this`&nbsp;:
 
 ```js
-setTimeout(monTableau.maMethode, 1.0 * 1000); // affiche "[object Window]" après 1 seconde
-setTimeout(monTableau.maMethode, 1.5 * 1000, "1"); // affiche "undefined" après 1.5 secondes
+class Compteur {
+  constructor() {
+    this.data = new Map();
+  }
+
+  compter(element) {
+    this.data.set(element, (this.data.get(element) || 0) + 1);
+  }
+}
+
+const compteur = new Compteur();
+
+compteur.compter("toto"); // Ajoute avec succès « toto » au tableau de correspondance
+setTimeout(compteur.compter, 1000, "truc");
+// TypeError: Cannot read properties of undefined (reading 'set')
 ```
 
-La fonction `monTableau.maMethode` est passée à `setTimeout`, et lorsqu'elle est appelée, la valeur de `this` n'est pas définie et vaut `window` par défaut.
+Pour contourner ce problème, vous devez vous assurer que la fonction transmise à `setTimeout` dispose du contexte `this` approprié. Il existe trois méthodes principales pour y parvenir&nbsp;:
 
-Il n'y a pas d'argument `thisArg` pour `setTimeout` (comme on peut en voir pour [`forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) et [`reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce). Comme indiqué après, utiliser `call()` ne fonctionne pas non plus.
+1. Si vous souhaitez définir explicitement le contexte `this`, au lieu de passer directement la méthode, encapsulez l'appel de méthode dans une autre fonction anonyme qui appelle explicitement la méthode avec le contexte correct&nbsp;:
 
-```js
-setTimeout.call(monTableau, monTableau.maMethode, 2.0 * 1000); // erreur
-setTimeout.call(monTableau, monTableau.maMethode, 2.5 * 1000, 2); // erreur également
-```
+   ```js
+   setTimeout(() => compteur.compter("truc"), 1000);
+   setTimeout(function () {
+     compteur.compter("truc");
+   }, 1000);
+   ```
 
-#### Solutions
+2. Si vous souhaitez utiliser le contexte `this` du code qui appelle `setTimeout()`, utilisez toujours une fonction fléchée, qui hérite du contexte `this` de sa portée englobante&nbsp;:
 
-##### Utiliser une fonction englobante
+   ```js example-bad
+   class Compteur {
+     // …
+     compterAvecDelai(element) {
+       // MAUVAIS : le contexte de `this` est perdu dans la fonction de rappel
+       setTimeout(function () {
+         this.data.set(element, (this.data.get(element) || 0) + 1);
+       }, 1000);
+     }
+   }
+   ```
 
-Une méthode pour résoudre ce problème consiste à englober la méthode dans une fonction afin que `this` ait la valeur attendue&nbsp;:
+   ```js example-good
+   class Compteur {
+     // …
+     compterAvecDelai(element) {
+       // BON : la fonction fléchée hérite du contexte de `this` de `compterAvecDelai()`
+       setTimeout(() => {
+         this.data.set(element, (this.data.get(element) || 0) + 1);
+       }, 1000);
+     }
+   }
+   ```
 
-```js
-setTimeout(function () {
-  monTableau.maMethode();
-}, 2.0 * 1000);
-// affiche "zéro,un,deux" après 2 secondes
-setTimeout(function () {
-  monTableau.maMethode("1");
-}, 2.5 * 1000);
-// affiche "un" après 2.5 secondes
-```
+3. Si vous souhaitez éviter les wrappers de fonction supplémentaires (qui augmentent l'utilisation de la mémoire) tout en définissant explicitement le contexte `this`, vous pouvez utiliser la méthode [`Function.prototype.bind()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) pour créer une nouvelle fonction avec le contexte `this` correct&nbsp;:
 
-La fonction englobante peut être une fonction fléchée&nbsp;:
+   ```js
+   setTimeout(compteur.compter.bind(compteur), 1000, "truc");
+   ```
 
-```js
-setTimeout(() => {
-  monTableau.maMethode();
-}, 2.0 * 1000);
-// affiche "zéro,un,deux" après 2 secondes
-setTimeout(() => {
-  monTableau.maMethode("1");
-}, 2.5 * 1000);
-// affiche "un" après 2.5 secondes
-```
+### Les valeurs de délai non numériques sont converties en nombres silencieusement
 
-##### Utiliser `bind()`
-
-On peut aussi utiliser la fonction [`bind()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) afin de fixer la valeur de `this` pour tous les appels à une fonction donnée&nbsp;:
-
-```js
-const monTableau = ["zéro", "un", "deux"];
-const maMethodeLiee = function (sPropriete) {
-  console.log(arguments.length > 0 ? this[sPropriete] : this);
-}.bind(monTableau);
-
-maMethodeLiee();
-// affiche "zéro,un,deux" car 'this' est lié à monTableau
-// dans la fonction
-maMethodeLiee(1);
-// affiche "un"
-setTimeout(maMethodeLiee, 1.0 * 1000);
-// Affiche "zéro,un,deux" après 1 seconde grâce à la liaison
-setTimeout(maMethodeLiee, 1.5 * 1000, "1");
-// Affiche "un" après 1.5 secondes
-```
-
-### Passer une chaîne de caractères pour les instructions à exécuter
-
-Lorsqu'on passe une chaîne de caractères plutôt qu'une fonction à `setTimeout()`, cela expose aux mêmes problèmes que d'utiliser [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval).
+Si la fonction `setTimeout()` est appelée avec une valeur [_d'attente_](#delay) qui n'est pas un nombre, une [conversion de type](/fr/docs/Glossary/Type_coercion) implicite est effectuée en arrière-plan sur cette valeur afin de la convertir en nombre.
+Par exemple, le code suivant utilise à tort la chaîne de caractères `"1000"` pour la valeur _d'attente_, au lieu du nombre `1000` — mais il fonctionne néanmoins, car lors de l'exécution du code, la chaîne de caractères est convertie en nombre `1000`, et le code s'exécute donc 1 seconde plus tard.
 
 ```js example-bad
-// À ne pas faire
-setTimeout("console.log('Hello World!');", 500);
+setTimeout(() => {
+  console.log("Décalé pour 1 seconde.");
+}, "1000");
 ```
+
+Dans de nombreux cas, la conversion implicite de type peut entraîner des résultats inattendus et surprenants.
+Par exemple, lorsque le code suivant s'exécute, la chaîne de caractères `"1 second"` est finalement convertie en nombre `0` — et le code s'exécute donc sans aucun délai.
+
+```js example-bad
+setTimeout(() => {
+  console.log("Décalé pour 1 seconde.");
+}, "1 second");
+```
+
+Par conséquent, n'utilisez pas de chaînes de caractères pour la valeur de _d'attente_, mais utilisez toujours des nombres&nbsp;:
 
 ```js example-good
-// On privilégiera cette forme
-setTimeout(function () {
-  console.log("Hello World!");
-}, 500);
+setTimeout(() => {
+  console.log("Décalé pour 1 seconde.");
+}, 1000);
 ```
 
-Une chaîne de caractères passée à `setTimeout()` est évaluée dans le contexte global et les symboles locaux au contexte où `setTimeout()` a été appelée ne seront plus disponibles lorsque la chaîne de caractères sera évaluée comme du code.
+### Valeur maximale du délai
 
-### Raisons pour lesquelles la durée effective est plus longue
+L'argument `delay` est converti en un entier signé sur 32 bits, ce qui limite la valeur à 2147483647 ms, soit environ 24,8 jours.
+Les délais supérieurs à cette valeur provoquent un dépassement d'entier.
+Par exemple, ce code&nbsp;:
 
-Plusieurs raisons peuvent expliquer que la durée effective d'un minuteur soit plus longue que celle attendue. Dans cette section, nous couvrirons les raisons les plus communes.
+```js
+setTimeout(() => console.log("coucou !"), 2 ** 32 - 5000);
+```
 
-#### Minuteurs imbriqués
+…ce qui donne en résultat que le délai d'attente est exécuté immédiatement (puisque `2**32 - 5000` déborde pour devenir un nombre négatif), tandis que le code suivant&nbsp;:
 
-Comme indiqué dans [le standard HTML](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers), les navigateurs appliqueront un délai minimum de 4 millisecondes lorsqu'un appel imbriqué à `setTimeout` a été planifié 5 fois.
+```js
+setTimeout(() => console.log("coucou !"), 2 ** 32 + 5000);
+```
 
-On peut observer ce comportement dans l'exemple qui suit, dans lequel on imbrique un appel à `setTimeout()` avec une durée spécifiée à `0` milliseconde. Ensuite, on affiche la durée effective lorsque le gestionnaire est appelé. On peut voir que, pour les 4 premières fois, la durée effective est de 0 milliseconde environ et qu'après, elle passe à environ 4 millisecondes&nbsp;:
+…ce qui donne en résultat que le délai d'attente est exécuté après environ 5 secondes.
+
+> [!NOTE]
+> Dans Node.js, tout délai supérieur à 2 147 483 647ms entraîne une exécution immédiate.
+
+### Raisons pour lesquelles les délais peuvent être plus longs que prévu
+
+Il existe un certain nombre de raisons pour lesquelles un délai d'attente peut prendre plus de temps que prévu pour s'exécuter.
+Cette section décrit les raisons les plus courantes.
+
+#### Délais imbriqués
+
+Comme défini dans le [standard HTML](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers), les navigateurs appliquent un délai minimum de 4 millisecondes une fois qu'un appel imbriqué à `setTimeout` a été programmé 5 fois.
+
+Cela peut être observé dans l'exemple suivant, dans lequel nous imbriquons un appel à `setTimeout` avec un délai de `0` millisecondes, et enregistrons le délai chaque fois que le gestionnaire est appelé.
+Les quatre premières fois, le délai est d'environ 0 millisecondes, et après cela il est d'environ 4 millisecondes&nbsp;:
 
 ```html
-<button id="run">Exécuter</button>
-<pre>Précédent    courant    durée</pre>
-<div id="log"></div>
+<button id="executer">Exécuter</button>
+<table>
+  <thead>
+    <tr>
+      <th>Précédent</th>
+      <th>Actuel</th>
+      <th>Délai réel</th>
+    </tr>
+  </thead>
+  <tbody id="journal"></tbody>
+</table>
 ```
 
 ```js
-let last = 0;
+let dernier = 0;
 let iterations = 10;
 
-function timeout() {
-  // Enregistrer l'instant de l'appel
-  logline(new Date().getMilliseconds());
-
-  // Tant qu'on n'a pas fini, planifier le prochain appel
+function delaiAttente() {
+  // journalise le moment de cet appel
+  journaliser(new Date().getMilliseconds());
+  // si nous n'avons pas terminé, programme l'appel suivant
   if (iterations-- > 0) {
-    setTimeout(timeout, 0);
+    setTimeout(delaiAttente, 0);
   }
 }
 
-function run() {
-  // Nettoyer le journal
-  const log = document.querySelector("#log");
-  while (log.lastElementChild) {
-    log.removeChild(log.lastElementChild);
+function executer() {
+  // nettoie le journal
+  const journal = document.querySelector("#journal");
+  while (journal.lastElementChild) {
+    journal.removeChild(journal.lastElementChild);
   }
 
-  // Initialiser le nombre d'itérations et l'horodatage
-  // de départ
+  // initialise le nombre d'itérations et l'horodatage de départ
   iterations = 10;
-  last = new Date().getMilliseconds();
-
-  // Démarrer le minuteur
-  setTimeout(timeout, 0);
+  dernier = new Date().getMilliseconds();
+  // démarre le minuteur
+  setTimeout(delaiAttente, 0);
 }
 
-function pad(number) {
-  return number.toString().padStart(3, "0");
+function journaliser(maintenant) {
+  // journalise le dernier horodatage, le nouvel horodatage et la différence
+  const tableBody = document.getElementById("journal");
+  const logRow = tableBody.insertRow();
+  logRow.insertCell().textContent = dernier;
+  logRow.insertCell().textContent = maintenant;
+  logRow.insertCell().textContent = maintenant - dernier;
+  dernier = maintenant;
 }
 
-function logline(now) {
-  // Afficher le dernier horodatage, le nouveau, et la
-  // différence
-  const newLine = document.createElement("pre");
-  newLine.textContent = `${pad(last)}           ${pad(now)}          ${
-    now - last
-  }`;
-  document.getElementById("log").appendChild(newLine);
-  last = now;
-}
-
-document.querySelector("#run").addEventListener("click", run);
+document.querySelector("#executer").addEventListener("click", executer);
 ```
 
-{{EmbedLiveSample("", 100, 420)}}
+```css hidden
+* {
+  font-family: monospace;
+}
+th,
+td {
+  padding: 0 10px;
+  text-align: center;
+  border: 1px solid;
+}
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+```
 
-#### Minuteurs dans les onglets inactifs
+{{EmbedLiveSample("Délais imbriqués", 100, 250)}}
 
-Afin de réduire la charge (et la consommation énergétique associée) des onglets en arrière-plan, les navigateurs appliqueront un délai minimum sur les onglets inactifs. Ceci peut ne pas s'appliquer si la page joue du son avec l'API Web Audio et [`AudioContext`](/fr/docs/Web/API/AudioContext).
+#### Délai d'attente dans les onglets inactifs
 
-Certains aspects spécifiques de cette règle dépendent des navigateurs&nbsp;:
+Pour réduire la charge (et la consommation de batterie associée) des onglets en arrière-plan, les navigateurs imposent un délai d'attente minimum dans les onglets inactifs.
+Il peut également être levé si une page joue du son en utilisant un objet {{DOMxRef("AudioContext")}} de l'API Web Audio.
 
-- Firefox Desktop et Chrome appliquent une durée minimale de 1 seconde pour les onglets inactifs.
-- Firefox pour Android applique une durée minimale de 15 minutes pour les onglets inactifs et peut les décharger complètement.
-- Firefox ne limite pas un onglet inactif si celui-ci contient un [`AudioContext`](/fr/docs/Web/API/AudioContext).
+Les détails de ce comportement dépendent du navigateur&nbsp;:
 
-#### Limitation des scripts de pistage
+- Firefox pour bureau a un délai d'attente minimum de 1 seconde pour les onglets inactifs.
+- Firefox pour Android a un délai d'attente minimum de 15 minutes pour les onglets inactifs et peut les décharger entièrement.
+- Firefox ne limite pas les onglets inactifs si l'onglet contient un objet {{DOMxRef("AudioContext")}}.
+- Chrome utilise différents niveaux de limitation en fonction de l'activité de l'onglet&nbsp;:
+  - **Limitation minimale**&nbsp;: S'applique aux minuteries lorsque la page est visible, a récemment émis un son ou est autrement considérée comme active par Chrome. Les minuteries s'exécutent près de l'intervalle demandé.
+  - **Limitation**&nbsp;: S'applique aux minuteries lorsque les conditions de limitation minimale ne sont pas remplies et que l'une de ces conditions est vraie&nbsp;:
+    - Nombre d'imbrications (c'est-à-dire le nombre d'appels de minuteries en chaîne) est inférieur à 5.
+    - La page est invisible depuis moins de 5 minutes.
+    - WebRTC est actif.
+      Les minuteries dans cet état sont vérifiées une fois par seconde, ce qui peut être regroupé avec d'autres minuteries ayant des délais similaires.
+  - **Limitation intensive**&nbsp;: Introduite dans Chrome 88 (janvier 2021). S'applique aux minuteries lorsque ni les conditions de limitation minimale ni les conditions de limitation ne sont remplies, et que toutes les conditions suivantes sont remplies&nbsp;:
+    - Le nombre d'imbrications est de 5 ou plus.
+    - La page est invisible depuis plus de 5 minutes.
+    - La page est silencieuse depuis plus de 30 secondes.
+    - WebRTC est inactif.
+      Les minuteries dans cet état sont vérifiées une fois par minute, ce qui peut être regroupé avec d'autres minuteries ayant des délais similaires.
 
-Firefox applique certaines limitations pour les scripts qu'il reconnaît comme scripts de pistage. Lors de l'exécution dans un onglet actif, le délai minimal est de 4ms. Pour les onglets en arrière-plan, ce délai passe à 10 seconds et s'applique 30 secondes après que le chargement initial du document a eu lieu.
+#### Limitation des scripts de suivi
 
-Voir [la page d'information sur la protection contre le pistage (en anglais)](https://wiki.mozilla.org/Security/Tracking_protection) pour plus de détails.
+Firefox applique une limitation supplémentaire aux scripts qu'il reconnaît comme des scripts de suivi.
+Lorsque le navigateur est au premier plan, le délai minimum de limitation est toujours de 4ms. Dans les onglets en arrière-plan, cependant, le délai minimum de limitation est de 10 000ms, soit 10 secondes, ce qui entre en vigueur 30 secondes après le premier chargement d'un document.
 
-#### Ordonnancement des autres tâches
+Voir [Protection contre le pistage <sup>(angl.)</sup>](https://wiki.mozilla.org/Security/Tracking_protection) pour plus de détails.
 
-Le minuteur peut également se déclencher plus tard si le système d'exploitation ou le navigateur est occupé à d'autres tâches.
+#### Délai d'attente tardif
 
-Par exemple, on notera que la fonction passée en argument de `setTimeout()` ne peut pas être exécutée avant que le <i lang="en">thread</i> qui appelle `setTimeout()` ait terminé son exécution. On aura donc&nbsp;:
+Le délai d'attente peut également se produire plus tard que prévu si la page (ou le système d'exploitation/navigateur) est occupé par d'autres tâches.
+Un cas important à noter est que la fonction ou le fragment de code ne peut pas être exécuté tant que le thread ayant appelé `setTimeout()` n'a pas terminé.
+Par exemple&nbsp;:
 
 ```js
 function toto() {
-  console.log("toto a été appelée");
+  console.log("toto a été appelé");
 }
 setTimeout(toto, 0);
-console.log("Après setTimeout()");
+console.log("Après setTimeout");
 ```
 
-Affichera ce qui suit dans la console&nbsp;:
+Écrit dans la console&nbsp;:
 
+```plain
+Après setTimeout
+toto a été appelé
 ```
-Après setTimeout()
-toto a été appelée
+
+C'est parce que même si `setTimeout` a été appelée avec un délai de zéro, elle est placée dans une file d'attente et programmée pour s'exécuter à la prochaine occasion&nbsp;; pas immédiatement.
+Le code en cours d'exécution doit se terminer avant l'exécution des fonctions de la file, l'ordre d'exécution qui en résulte peut donc ne pas être celui attendu.
+
+#### Reporter le déclenchement des minuteurs pendant le chargement de la page
+
+Firefox reporte le déclenchement des minuteurs `setTimeout()` pendant le chargement de l'onglet actuel. Le déclenchement est différé jusqu'à ce que le processus principal soit considéré comme inactif (similaire à {{DOMxRef("Window.requestIdleCallback()")}}), ou jusqu'au déclenchement de l'évènement de chargement.
+
+### Pages d'arrière-plan de WebExtensions et minuteurs
+
+Dans les [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions), `setTimeout()` ne fonctionne pas de manière fiable. Les auteur·ice·s d'extensions utilisent plutôt l'API [`alarms`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/alarms).
+
+### Considérations de sécurité
+
+La méthode peut être utilisée pour exécuter une entrée arbitraire transmise dans le paramètre `code`.
+Si l'entrée est une chaîne de caractères potentiellement dangereuse fournie par un·e utilisateur·ice elle constitue un vecteur possible d'attaques par [scripts inter-sites (XSS)](/fr/docs/Web/Security/Attacks/XSS).
+
+Par exemple, le code suivant montre comment `setTimeout()` peut exécuter `codeNonFiable` fourni par un·e utilisateur·ice&nbsp;:
+
+```js example-bad
+const codeNonFiable = "alert('Code potentiellement malveillant!');";
+const id = setTimeout(codeNonFiable, 1000);
 ```
 
-En effet, même si `setTimeout()` a été appelé avec un délai à zéro, la fonction correspondante est placée dans une queue et son exécution est planifiée pour le prochain cycle disponible et pas immédiatement.
+Les sites dotés d'une [politique de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/Guides/CSP) qui définit [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) ou [`default-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) empêchent par défaut l'exécution de ce code.
+Vous pouvez définir [`unsafe-eval`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) dans votre CSP pour autoriser l'exécution de `setTimeout()`, mais cela est dangereux car cela désactive l'une des principales protections de la CSP.
+Voir [JavaScript intégré](/fr/docs/Web/HTTP/Guides/CSP#javascript_en_incise) dans le guide sur la CSP.
 
-Le code en cours d'exécution doit terminer avant que les fonctions placées dans la queue puissent être exécutées. C'est pour cela qu'on a cet ordre d'exécution, qui peut ne pas être celui qu'on attendait.
+Si vous devez autoriser l'exécution des scripts au moyen de `setTimeout()` vous pouvez atténuer ces problèmes en assignant toujours des objets {{DOMxRef("TrustedScript")}} au lieu de chaînes de caractères, et en [imposant les types de confiance](/fr/docs/Web/API/Trusted_Types_API#utiliser_une_csp_pour_appliquer_les_types_de_confiance) au moyen de la directive CSP [`require-trusted-types-for`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for).
+Cela garantit que l'entrée passe par une fonction de transformation.
 
-#### Report des minuteurs pendant le chargement de la page
+Pour permettre à `setTimeout()` de s'exécuter, vous devez également définir le [mot-clé `trusted-types-eval`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) dans votre directive CSP `script-src`.
+Cette directive agit comme `unsafe-eval`, mais autorise l'évaluation de la méthode _uniquement_ si les types de confiance sont activés (si vous utilisez `unsafe-eval` elle autorise aussi l'exécution dans les navigateurs qui ne prennent pas en charge les types de confiance).
 
-Firefox diffèrera le déclenchement des minuteurs lorsque l'onglet actuel est en train de charger. Le déclenchement est reporté jusqu'à ce que le fil d'exécution principal soit considéré comme inactif (<i lang="en">idle</i>) (à la façon de [window.requestIdleCallback()](/fr/docs/Web/API/Window/requestIdleCallback)), ou jusqu'à ce que l'évènement `load` soit déclenché.
+Par exemple, la CSP requise pour votre site peut ressembler à ceci&nbsp;:
 
-### Pages d'arrière-plan des WebExtensions et minuteurs
+```http
+Content-Security-Policy: require-trusted-types-for 'script'; script-src '<your_allowlist>' 'trusted-types-eval'
+```
 
-Pour les [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions), `setTimeout()` ne fonctionne pas de façon sûre. Il faut privilégier l'API [`alarms`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/alarms) pour le développement d'extensions.
-
-### Valeur maximale pour le délai
-
-Les navigateurs comme Internet Explorer, Chrome, Safari, et Firefox stockent le délai sous la forme d'un entier signé sur 32 bits. Aussi, il y a un dépassement des limites lorsqu'on indique un délai supérieur à 2&nbsp;147&nbsp;483&nbsp;647&nbsp;ms (ce qui correspond à 24,8 jours), et le résultat est un minuteur qui est exécuté immédiatement.
+Le comportement de la fonction de transformation dépend du cas d'utilisation qui nécessite un script fourni par un·e utilisateur·ice.
+Si possible vous limitez les scripts autorisés au code précis dont vous approuvez l'exécution.
+Si cela n'est pas possible, vous pouvez autoriser ou bloquer l'utilisation de certaines fonctions dans la chaîne de caractères fournie.
 
 ## Exemples
 
-### Définir et annuler des minuteurs
+Notez que ces exemples omettent l'utilisation des types de confiance pour des raisons de concision.
+Consultez la section [Utiliser `TrustedScript`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval#utiliser_trustedscript) dans `eval()` pour voir un exemple de code illustrant l'approche recommandée.
 
-Dans l'exemple qui suit, on a deux boutons simples sur une page web qui sont reliés aux fonctions `setTimeout()` et `clearTimeout()`. Appuyer sur le premier bouton déclenchera un minuteur qui affichera un message après deux secondes et enregistrera l'identifiant du minuteur pour que celui-ci soit utilisé avec `clearTimeout()`. En appuyant sur le deuxième bouton, on peut annuler le minuteur.
+### Définir et effacer des délais d'attente
+
+L'exemple suivant met en place deux boutons simples dans une page Web et les associe aux routines `setTimeout()` et `clearTimeout()`.
+Appuyer sur le premier bouton définit un délai d'attente qui affiche un message au bout de deux secondes et stocke l'identifiant du délai d'attente pour qu'il soit utilisé par `clearTimeout()`.
+Vous pouvez, si vous le souhaitez, annuler ce délai d'attente en appuyant sur le deuxième bouton.
 
 #### HTML
 
 ```html
-<button onclick="delayedMessage();">
-  Afficher un message après deux secondes
-</button>
-<button onclick="clearMessage();">
-  Annuler le message avant qu'il apparaisse
-</button>
+<button id="afficher">Afficher un message au bout de deux secondes</button>
+<button id="annuler">Annuler le message avant son affichage</button>
 
-<div id="output"></div>
+<div id="sortie"></div>
 ```
 
 #### JavaScript
 
 ```js
-let timeoutID;
+let idAttente;
 
-function setOutput(outputContent) {
-  document.querySelector("#output").textContent = outputContent;
+function definirSortie(contenueSortie) {
+  document.querySelector("#sortie").textContent = contenueSortie;
 }
 
-function delayedMessage() {
-  setOutput("");
-  timeoutID = setTimeout(setOutput, 2 * 1000, "C'était lent !");
+function messageDiffere() {
+  definirSortie("");
+  idAttente = setTimeout(definirSortie, 2 * 1000, "C'est vraiment lent !");
 }
 
-function clearMessage() {
-  clearTimeout(timeoutID);
+function effacerMessage() {
+  clearTimeout(idAttente);
 }
+
+document.getElementById("afficher").addEventListener("click", messageDiffere);
+document.getElementById("annuler").addEventListener("click", effacerMessage);
 ```
 
 ```css hidden
-#output {
+#sortie {
   padding: 0.5rem 0;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample('')}}
+{{EmbedLiveSample("Définir et effacer des délais d'attente")}}
 
-Voir aussi [l'exemple `clearTimeout()`](/fr/docs/Web/API/Window/clearTimeout#example).
+Voir également l'exemple de {{DOMxRef("Window.clearTimeout", "clearTimeout()")}}.
 
 ## Spécifications
 
@@ -385,8 +471,9 @@ Voir aussi [l'exemple `clearTimeout()`](/fr/docs/Web/API/Window/clearTimeout#exa
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `setTimeout()` qui permet de passer des arguments à la fonction de rappel, avec la bibliothèque tierce `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
-- [`clearTimeout()`](/fr/docs/Web/API/Window/clearTimeout)
-- [`setInterval()`](/fr/docs/Web/API/Window/setInterval)
-- [`Window.requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame)
-- [`queueMicrotask()`](/fr/docs/Web/API/Window/queueMicrotask)
+- [Prothèse d'émulation de `setTimeout()` qui permet de passer des arguments à la fonction de rappel dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- La méthode {{DOMxRef("Window.clearTimeout()")}}
+- La méthode {{DOMxRef("WorkerGlobalScope.setTimeout()")}}
+- La méthode {{DOMxRef("Window.setInterval()")}}
+- La méthode {{DOMxRef("Window.requestAnimationFrame()")}}
+- La méthode {{DOMxRef("Window.queueMicrotask()")}}

@@ -2,7 +2,7 @@
 title: API File System
 slug: Web/API/File_System_API
 l10n:
-  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
+  sourceCommit: d571e753a6e1aa3f37c775f0308690bc738cdbe6
 ---
 
 {{DefaultAPISidebar("File System API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
@@ -51,7 +51,7 @@ Voici quelques cas d'utilisation possibles&nbsp;:
 
 - Visionnage vidéo hors ligne
   - L'application peut télécharger des fichiers volumineux (> 1 Go) pour une visualisation ultérieure.
-  - L'application peut accéder à des fichiers partiellement téléchargés (afin que vous puissiez regarder le premier chapitre d'une vidéo, même si l'application est toujours en train de télécharger le reste du contenu ou si le téléchargement n'est pas terminé parce que vous deviez partir).
+  - L'application peut accéder à des fichiers partiellement téléchargés (afin que vous puissiez regarder le premier chapitre d'une vidéo, même si l'application est toujours en train de télécharger le reste du contenu ou si le téléchargement n'est pas terminé parce que vous devez partir).
 
 - Client de messagerie Web hors ligne
   - Le client télécharge des pièces jointes et les stocke localement.
@@ -216,7 +216,7 @@ writableStream.write({ type: "truncate", size });
 
 Cet exemple lit et écrit de manière synchrone un fichier au [Système de fichiers d'origine privé](#système_de_fichiers_d_origine_privé).
 
-La fonction de gestionnaire d'événements asynchrones suivante est contenue dans un Web Worker. En recevant un message du thread principal, elle&nbsp;:
+La fonction de gestionnaire d'évènements asynchrones suivante est contenue dans un Web Worker. En recevant un message du thread principal, elle&nbsp;:
 
 - Crée une trappe d'accès aux fichiers synchrones.
 - Obtient la taille du fichier et crée un {{JSxRef("ArrayBuffer")}} pour le contenir.
@@ -255,7 +255,7 @@ onmessage = async (e) => {
 ```
 
 > [!NOTE]
-> Dans les versions antérieures de la spécification, {{DOMxRef("FileSystemSyncAccessHandle.close()", "close()")}}, {{DOMxRef("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{DOMxRef("FileSystemSyncAccessHandle.getSize()", "getSize()")}} et {{DOMxRef("FileSystemSyncAccessHandle.truncate()", "truncate()")}} ont été spécifiés de manière non ergonomique comme méthodes asynchrones. Cela a maintenant été [modifié <sup>(angl.)</sup>](https://github.com/whatwg/fs/issues/7), mais certains navigateurs soutiennent toujours les versions asynchrones.
+> Dans les versions antérieures de la spécification, {{DOMxRef("FileSystemSyncAccessHandle.close()", "close()")}}, {{DOMxRef("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{DOMxRef("FileSystemSyncAccessHandle.getSize()", "getSize()")}} et {{DOMxRef("FileSystemSyncAccessHandle.truncate()", "truncate()")}} ont été définis de manière non ergonomique comme méthodes asynchrones. Cela a maintenant été [modifié <sup>(angl.)</sup>](https://github.com/whatwg/fs/issues/7), mais certains navigateurs soutiennent toujours les versions asynchrones.
 
 ## Caractéristiques
 

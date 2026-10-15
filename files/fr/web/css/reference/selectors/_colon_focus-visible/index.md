@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:focus-visible`** s'applique lorsqu'un élément correspond à la pseudo-classe {{CSSxRef(":focus")}} et que {{Glossary("User Agent", "l'agent utilisateur")}} détermine, via une heuristique, que le focus devrait être mis en évidence sur l'élément (la plupart des navigateurs affichent un contour en surbrillance par défaut).
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:focus-visible`** s'applique lorsqu'un élément correspond à la pseudo-classe {{CSSxRef(":focus")}} et que {{Glossary("User Agent", "l'agent utilisateur")}} détermine, avec une heuristique, que la sélection doit être mise en évidence sur l'élément (la plupart des navigateurs affichent un contour en surbrillance par défaut).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :focus-visible", "tabbed-shorter")}}
 
@@ -44,7 +44,7 @@ select:focus-visible {
 </form>
 ```
 
-Ce sélecteur peut être utile afin de fournir un indicateur de focus différent selon le mode de navigation de l'utilisateur (souris ou clavier).
+Ce sélecteur peut être utile afin de fournir un indicateur de sélection différent selon le mode de navigation de l'utilisateur·ice (souris ou clavier).
 
 ## Syntaxe
 
@@ -54,27 +54,27 @@ Ce sélecteur peut être utile afin de fournir un indicateur de focus différent
 }
 ```
 
-## :focus contre :focus-visible
+## `:focus` et `:focus-visible`
 
-Originalement, l'agent utilisateur CSS appliquait les styles de focus uniquement sur la pseudo-classe `:focus`, stylisant la plupart des éléments en focus avec un contour de focus. Cela signifiait que tous les éléments, y compris tous les liens et boutons, avaient un contour de focus appliqué lorsqu'ils étaient en focus, ce que beaucoup trouvaient peu esthétique. En raison de cette apparence, certains auteur·ice·s ont supprimé les styles de contour de focus de l'agent utilisateur. Changer le style de focus peut diminuer l'utilisabilité, tandis que supprimer les styles de focus rend la navigation au clavier inaccessible pour les utilisateur·ice·s voyants.
+Originalement, l'agent utilisateur CSS appliquait les styles de sélection uniquement sur la pseudo-classe `:focus`, stylisant la plupart des éléments en sélection avec un contour de sélection. Cela signifie que tous les éléments, y compris tous les liens et boutons, avaient un contour de sélection appliqué lorsqu'ils sont sélectionnés, ce que beaucoup trouvaient peu esthétique. En raison de cette apparence, certains auteur·ice·s ont supprimé les styles de contour de sélection de l'agent utilisateur. Changer le style de sélection peut diminuer l'utilisabilité, tandis que supprimer les styles de sélection rend la navigation au clavier inaccessible pour les utilisateur·ice·s voyant·e·s.
 
-Les navigateurs n'indiquent plus visiblement le focus (comme en traçant un «&nbsp;contour de focus&nbsp;») autour de chaque élément lorsqu'il a le focus. Au lieu de cela, ils utilisent une variété d'heuristiques pour fournir des indicateurs de focus uniquement lorsque cela serait le plus utile pour l'utilisateur. Par exemple, lorsqu'un bouton est cliqué à l'aide d'un dispositif de pointage, le focus n'est généralement pas indiqué visuellement, mais lorsqu'une zone de texte nécessitant une saisie utilisateur a le focus, le focus est indiqué. Bien que les styles de focus soient toujours requis lorsque les utilisateur·ice·s naviguent sur la page avec le clavier ou lorsque le focus est géré via des scripts, les styles de focus ne sont pas requis lorsque l'utilisateur·ice sait où il met le focus, par exemple lorsqu'il utilise un dispositif de pointage tel qu'une souris ou un doigt pour définir physiquement le focus sur un élément, à moins que cet élément continue d'avoir besoin de l'attention de l'utilisateur·ice.
+Les navigateurs n'indiquent plus visiblement la sélection (comme en traçant un «&nbsp;contour de sélection&nbsp;») autour de chaque élément lorsqu'il a la sélection. Au lieu de cela, ils utilisent une variété d'heuristiques pour fournir des indicateurs de la sélection uniquement lorsque c'est le plus utile pour l'utilisateur·ice. Par exemple, lorsqu'un bouton est cliqué à l'aide d'un dispositif de pointage, la sélection n'est généralement pas indiqué visuellement, mais lorsqu'une zone de texte nécessitant une saisie utilisateur·ice a la sélection, la sélection est indiqué. Bien que les styles de la sélection soient toujours requis lorsque les utilisateur·ice·s naviguent sur la page avec le clavier ou lorsque la sélection est géré par des scripts, les styles de la sélection ne sont pas requis lorsque l'utilisateur·ice sait où il met la sélection, par exemple lorsqu'il utilise un dispositif de pointage tel qu'une souris ou un doigt pour définir physiquement la sélection sur un élément, à moins que cet élément continue d'avoir besoin de l'attention de l'utilisateur·ice.
 
-La pseudo-classe `:focus` correspond toujours à l'élément actuellement en focus. La pseudo-classe `:focus-visible` correspond également à l'élément en focus, mais uniquement si l'utilisateur·ice doit être informé de l'emplacement actuel du focus. Parce que la pseudo-classe `:focus-visible` correspond à l'élément en focus lorsque cela est nécessaire, l'utilisation de `:focus-visible` (au lieu de la pseudo-classe `:focus`) permet aux auteur·ice·s de modifier l'apparence de l'indicateur de focus sans changer le moment où l'indicateur de focus apparaît.
+La pseudo-classe `:focus` correspond toujours à l'élément actuellement sélectionné. La pseudo-classe `:focus-visible` correspond également à l'élément sélectionné, mais uniquement si l'utilisateur·ice doit être informé de l'emplacement actuel de la sélection. Parce que la pseudo-classe `:focus-visible` correspond à l'élément sélectionné lorsque cela est nécessaire, l'utilisation de `:focus-visible` (au lieu de la pseudo-classe `:focus`) permet aux auteur·ice·s de modifier l'apparence de l'indicateur de la sélection sans changer le moment où l'indicateur de la sélection apparaît.
 
-Lorsque la pseudo-classe {{CSSxRef(":focus")}} est utilisée, elle cible toujours l'élément actuellement en focus. Cela signifie que lorsque l'utilisateur·ice utilise un dispositif de pointage, un contour de focus visible apparaît autour de l'élément en focus, ce que certains considèrent comme intrusif. La pseudo-classe `:focus-visible` respecte le comportement d'indication de focus sélectif des agents utilisateurs tout en permettant la personnalisation de l'indicateur de focus.
+Lorsque la pseudo-classe {{CSSxRef(":focus")}} est utilisée, elle cible toujours l'élément actuellement sélectionné. Cela signifie que lorsque l'utilisateur·ice utilise un dispositif de pointage, un contour de la sélection visible apparaît autour de l'élément sélectionné, ce que certains considèrent comme intrusif. La pseudo-classe `:focus-visible` respecte le comportement d'indication de la sélection sélectif des agents utilisateurs tout en permettant la personnalisation de l'indicateur de la sélection.
 
 ## Accessibilité
 
 ### Troubles de la vision
 
-Il faut s'assurer que l'indicateur visuel de focus puisse être vu par des personnes ayant une vision faible. Cela pourra d'autant plus bénéficier aux personnes qui consultent le document dans un endroit fortement éclairé (dehors au soleil par exemple). La recommandation [WCAG 2.1 SC 1.4.11 pour le contraste non textuel <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) nécessite un contraste minimum de 3 à 1.
+Il faut s'assurer que l'indicateur visuel de la sélection puisse être vu par des personnes ayant une vision faible. Cela peut d'autant plus bénéficier aux personnes qui consultent le document dans un endroit fortement éclairé (dehors au soleil par exemple). La recommandation [WCAG 2.1 SC 1.4.11 pour le contraste non textuel <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) nécessite un contraste minimum de 3 à 1.
 
-- Indicateurs visuels de focus accessibles&nbsp;: [Conseils sur la conception d'indicateurs utiles et utilisables <sup>(angl.)</sup>](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
+- Indicateurs visuels de la sélection accessibles&nbsp;: [Conseils sur la conception d'indicateurs utiles et utilisables <sup>(angl.)</sup>](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
 
 ### Troubles cognitifs
 
-L'apparition ou la disparition d'un indicateur de focus peut être source de confusion pour les personnes souffrant de troubles cognitifs ou pour les personnes qui ne sont pas habituées à ces interfaces.
+L'apparition ou la disparition d'un indicateur de sélection peut être source de confusion pour les personnes souffrant de troubles cognitifs ou pour les personnes qui ne sont pas habituées à ces interfaces.
 
 ## Exemples
 
@@ -82,22 +82,22 @@ L'apparition ou la disparition d'un indicateur de focus peut être source de con
 
 Cet exemple présente trois paires de contrôles. Chaque paire se compose d'un champ de saisie de type [`text`](/fr/docs/Web/HTML/Reference/Elements/input/text) et d'un bouton.
 
-- La première paire n'ajoute aucun style personnalisé pour les états de focus et affiche le cas par défaut.
+- La première paire n'ajoute aucun style personnalisé pour les états de sélection et affiche le cas par défaut.
 - La deuxième paire ajoute des styles à l'aide de la pseudo-classe `:focus`.
 - La troisième paire ajoute des styles à l'aide de la pseudo-classe `:focus-visible`.
 
 #### HTML
 
 ```html
-<input type="text" value="Default styles" /><br />
+<input type="text" value="Styles par défaut" /><br />
 <button>Styles par défaut</button><br />
 
 <input class="focus-only" type="text" value=":focus" /><br />
-<button class="focus-only">:focus only</button><br />
+<button class="focus-only">seulement :focus</button><br />
 
 <input class="focus-visible-only" type="text" value=":focus-visible" />
 <br />
-<button class="focus-visible-only">:focus-visible only</button>
+<button class="focus-visible-only">seulement :focus-visible</button>
 ```
 
 #### CSS
@@ -117,17 +117,17 @@ button {
 }
 ```
 
-Si vous cliquez sur chaque élément tour à tour, vous verrez que lorsque `:focus` est utilisé pour mettre en forme l'anneau de focus, l'agent utilisateur dessine l'anneau de focus lorsque l'utilisateur·ice clique sur le bouton. Cependant, lorsque `:focus-visible` est utilisé pour mettre en forme l'anneau de focus, l'agrent utilisateur ne dessine pas l'anneau de focus lorsque l'utilisateur·ice clique sur le bouton, comme dans le cas par défaut.
+Si vous cliquez sur chaque élément tour à tour, vous voyez que lorsque `:focus` est utilisé pour mettre en forme l'anneau de sélection, l'agent utilisateur dessine l'anneau de sélection lorsque l'utilisateur·ice clique sur le bouton. Cependant, lorsque `:focus-visible` est utilisé pour mettre en forme l'anneau de sélection, l'agent utilisateur ne dessine pas l'anneau de sélection lorsque l'utilisateur·ice clique sur le bouton, comme dans le cas par défaut.
 
-Si vous parcourez ensuite chaque élément à l'aide de la touche Tab, vous constaterez que dans les trois cas — par défaut, `:focus` et `:focus-visible` — l'agent utilisateur dessine l'anneau de focus autour du bouton lorsque l'utilisateur·ice y accède à l'aide du clavier.
+Si vous parcourez ensuite chaque élément à l'aide de la touche Tab, vous constatez que dans les trois cas — par défaut, `:focus` et `:focus-visible` — l'agent utilisateur dessine l'anneau de sélection autour du bouton lorsque l'utilisateur·ice y accède à l'aide du clavier.
 
-Cela montre comment `:focus-visible` permet à un·e concepteur·rice de suivre la logique du navigateur pour déterminer quand un anneau de focus doit être affiché.
+Cela montre comment `:focus-visible` permet à un·e concepteur·rice de suivre la logique du navigateur pour déterminer quand un anneau de sélection doit être affiché.
 
 {{EmbedLiveSample("Comparaison de `:focus` et `:focus-visible`", "100%", 300)}}
 
 ### Fournir un `:focus` de repli
 
-Si votre code doit fonctionner dans d'anciennes versions de navigateurs qui ne prennent pas en charge `:focus-visible`, vérifiez la prise en charge de `:focus-visible` avec {{CSSxRef('@supports')}} et répétez le même style de mise en évidence, mais à l'intérieur d'une règle `:focus`. Notez que même si vous ne spécifiez rien du tout pour `:focus`, les anciens navigateurs afficheront simplement le contour natif, ce qui peut être suffisant.
+Si votre code doit fonctionner dans d'anciennes versions de navigateurs qui ne prennent pas en charge `:focus-visible`, vérifiez la prise en charge de `:focus-visible` avec {{CSSxRef('@supports')}} et répétez le même style de mise en évidence, mais à l'intérieur d'une règle `:focus`. Notez que même si vous ne définissez rien du tout pour `:focus`, les anciens navigateurs affichent simplement le contour natif, ce qui peut être suffisant.
 
 ```html
 <button class="button with-fallback" type="button">
@@ -146,7 +146,7 @@ Si votre code doit fonctionner dans d'anciennes versions de navigateurs qui ne p
 }
 
 .button:focus-visible {
-  /* Dessine le focus lorsque :focus-visible est pris en charge */
+  /* Dessine la sélection lorsque :focus-visible est pris en charge */
   outline: 3px solid deepskyblue;
   outline-offset: 3px;
 }

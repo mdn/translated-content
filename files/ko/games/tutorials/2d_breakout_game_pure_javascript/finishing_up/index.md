@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
 
 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 **10개의 레슨 중 마지막 단계**입니다. 이 수업을 마친 후 비교하여 살펴볼 소스코드는 [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html)에서 찾아볼 수 있습니다.
 
@@ -107,4 +107,4 @@ requestAnimationFrame(draw);
 
 당신은 또한 [이 튜토리얼 시리즈의 메인 페이지](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)로 돌아갈 수 있습니다. 즐겁게 코딩하세요!
 
-{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}

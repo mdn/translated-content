@@ -163,7 +163,7 @@ navigator.getVRDisplays().then((displays) => {
 
 ディスプレイがまだ表示されていない場合、 {{domxref("VRDisplay.requestPresent()")}} メソッドを使用して、ブラウザーがディスプレイへのコンテンツの表示を始めるようにリクエストします。これは、引数として、ディスプレイに表示したいレイヤーを表す {{domxref("VRLayerInit")}} オブジェクトの配列を取ります。
 
-現在、表示できるレイヤーの最大数は 1 で、必要なオブジェクトのメンバーは {{domxref("VRLayerInit.source")}} プロパティ(これは、そのレイヤーで表示したい {{htmlelement("canvas")}} への参照です。他の引数は、感覚的なデフォルト値として与えられています - {{domxref("VRLayerInit.leftBounds", "leftBounds")}} および {{domxref("VRLayerInit.rightBounds", "rightBounds")}})) で、引数は `[{ source: canvas }]` になっています。
+現在、表示できるレイヤーの最大数は 1 で、必要なオブジェクトのメンバーは {{domxref("VRLayerInit.source")}} プロパティ(これは、そのレイヤーで表示したい {{htmlelement("canvas")}} への参照です。他の引数は、感覚的なデフォルト値として与えられています - {{domxref("VRLayerInit.leftBounds", "leftBounds")}} および {{domxref("VRLayerInit.rightBounds", "rightBounds")}}) で、引数は `[{ source: canvas }]` になっています。
 
 `requestPresent()` は表示が正常に始まったときに履行されるプロミスを返します。
 

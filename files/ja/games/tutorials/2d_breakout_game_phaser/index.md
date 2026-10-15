@@ -34,7 +34,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 15. [ボタン](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
 16. [ゲームプレイのランダム化](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
 
-学習経路に関する注意点として、純粋な JavaScript から始めることが、ウェブゲーム開発の確かな知識を得るための最良の方法です。もしあなたが純粋な JavaScript のゲーム開発にまだ慣れていないなら、先にこのシリーズの対になるものである[純粋な JavaScript を使用した 2D ブレイクアウトゲーム](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)をやっておくことをお勧めします。
+学習経路に関する注意点として、純粋な JavaScript から始めることが、ウェブゲーム開発の確かな知識を得るための最良の方法です。もしあなたが純粋な JavaScript のゲーム開発にまだ慣れていないなら、先にこのシリーズの対になるものである[純粋な JavaScript を使用した 2D ブレイクアウトゲーム](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)をやっておくことをお勧めします。
 
 その後、好きなフレームワークを選んで、プロジェクトに使用することができます。私たちは、良いサポートとコミュニティが利用でき、プラグインの良いセットがある、堅実なフレームワークである Phaser を選びました。フレームワークは、開発時間を短縮し、退屈な部分を引き受けてくれるので、あなたは楽しいことに集中することができます。しかし、フレームワークは常に完璧というわけではありません。予期せぬことが起こったり、フレームワークが提供しない機能を書きたい場合、純粋な JavaScript の知識が必要になります。
 

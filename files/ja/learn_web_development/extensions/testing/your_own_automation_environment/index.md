@@ -64,7 +64,7 @@ Node.js を使用した Selenium テストの作成と実行については、�
 
 macOS システムとほとんどの Linux システムで `PATH` 変数を設定するには、次のようにします。
 
-1. `.zprofile` （または `bash` シェルを使用している場合はまだ `bash_profile` を開きます。
+1. `.zprofile` （または `bash` シェルを使用している場合はまだ `bash_profile`）を開きます。
    > [!NOTE]
    > 隠しファイルが表示されていない場合は表示させる必要があります。 [Show/Hide hidden files in macOS](https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) または [Show hidden folders in Ubuntu](https://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-file-manager-nautilus-on-ubuntu) を参照してください。
 2. ファイルの一番下に以下を貼り付けます（パスは自分のマシンで実際に使用されているものに更新してください）。

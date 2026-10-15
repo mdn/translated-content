@@ -3,7 +3,7 @@ title: "HTMLScriptElement: supports() 静的メソッド"
 short-title: supports()
 slug: Web/API/HTMLScriptElement/supports_static
 l10n:
-  sourceCommit: 3bd335bf04ca78b7f4917ebc99e0f4f47f11d3de
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("HTML DOM")}}
@@ -29,9 +29,9 @@ HTMLScriptElement.supports(type)
     - `"module"`
       - : [モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules)に対応しているかどうかを検査します。
     - `"importmap"`
-      - : インポートマップに対応しているかどうかを検査します。
+      - : [インポートマップ](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap)に対応しているかどうかを検査します。
     - `"speculationrules"`
-      - : 投機ルールに対応し、有効になっているかどうかを検査します。
+      - : [投機ルール](/ja/docs/Web/API/Speculation_Rules_API)に対応し、有効になっているかどうかを検査します。
 
     他の値であれば、このメソッドは `false` を返します。
 

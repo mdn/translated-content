@@ -2,7 +2,7 @@
 title: Editores de código
 slug: Learn_web_development/Getting_started/Environment_setup/Code_editors
 l10n:
-  sourceCommit: f12c4c8c5128f0e84d1167f8a6285fc68c1eb8e2
+  sourceCommit: 62ab95d20f246369cfab654c5a7a8727deb21ea6
 ---
 
 {{LearnSidebar}}
@@ -46,7 +46,7 @@ Es mejor que uses un editor de código completo como [Visual Studio Code](https:
 Recomendamos Visual Studio Code (VS Code), ya que es el editor que más usamos. Si aún no tienes VS Code (u otro editor de código) instalado, debes [instalarlo antes de continuar](https://code.visualstudio.com/).
 
 > [!NOTE]
-> Los Entornos de Desarrollo Integrados (IDEs) como [NetBeans](https://netbeans.apache.org/front/main/index.html) (multiplataforma, gratuito) y [WebStorm](https://www.jetbrains.com/webstorm/) (multiplataforma, no gratuito) tienden a tener más características que los editores de código simples, pero tienden a ser más complejos de lo que necesitas en esta etapa de tu viaje de aprendizaje.
+> Los Entornos de Desarrollo Integrados (IDEs) como [NetBeans](https://netbeans.apache.org/front/main/index.html) (multiplataforma, gratuito) y [WebStorm](https://www.jetbrains.com/webstorm/) (multiplataforma, no gratuito) tienen más características que los editores de código simples, pero tienden a ser más complejos de lo que necesitas en esta etapa de tu viaje de aprendizaje.
 
 ## Funcionalidad básica del editor de código
 
@@ -149,7 +149,7 @@ El concepto de buscar y reemplazar debería ser bastante familiar si has usado u
 4. Escribe `sayHello` en el cuadro _Reemplazar_ que ahora debería estar visible.
 5. Ahora puedes reemplazar todas las instancias de `createGreeting` en el código con `sayHello` usando los dos botones a la derecha del cuadro _Reemplazar_. El botón de la izquierda se mueve a la siguiente instancia de la cadena de búsqueda con un solo clic y la reemplaza con un segundo clic. El botón de la derecha reemplaza todas las instancias con un solo clic.
 
-VS Code tiene muchas características poderosas de buscar y reemplazar, consulta [Buscar y reemplazar](https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace).
+VS Code tiene muchas características poderosas de buscar y reemplazar, consulta [Buscar y reemplazar](https://code.visualstudio.com/docs/editing/codebasics#_find-and-replace).
 
 ## Mejorar tu editor de código con extensiones
 
@@ -159,6 +159,8 @@ La mayoría de los editores de código tienen un sistema de extensión o plugin 
 - Permitirte usar la funcionalidad de otras herramientas desde dentro del editor de código, como herramientas de control de versiones o servidores de prueba locales.
 - Proporcionar interfaz de usuario adicional o temas de resaltado de código/esquemas de color.
 - Sugerir fragmentos de código para cumplir con los requisitos. Estos se pueden generar a partir de plantillas estáticas o a través de herramientas de IA. El uso de IA para generar fragmentos de código tiene muchas de las mismas ventajas y advertencias que usarlo para generar resultados de búsqueda (consulta [Búsqueda de información > Uso de la IA](/es/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web#using_ai) para obtener más información).
+
+### Explorar extensiones de VS Code
 
 Las extensiones de VS Code se administran a través del panel del Mercado de extensiones (Marketplace) en VS Code, al que se accede a través del menú _Ver_ > _Extensiones_. Exploremoslo ahora.
 

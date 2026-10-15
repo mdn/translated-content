@@ -26,7 +26,7 @@ Cette ligne directrice vise à rendre le contenu textuel aussi compréhensible q
     <tr>
       <td>3.1.1 Langue de la page (A)</td>
       <td>
-        La langue humaine par défaut de chaque page web doit être détectable par le code. Cela permet notamment de s'assurer que la personne arrive sur une page rédigée dans une langue qui lui convient. Le moyen le plus simple est de définir l'attribut <a href="/fr/docs/Web/HTML/Reference/Global_attributes/lang">lang</a> sur l'élément {{htmlelement("html")}} de la page, en lui donnant la valeur du code de langue qui correspond le mieux à la langue du contenu.
+        La langue humaine par défaut de chaque page web doit être détectable par le code. Cela permet notamment de s'assurer que la personne arrive sur une page rédigée dans une langue qui lui convient. Le moyen le plus simple est de définir l'attribut <a href="/fr/docs/Web/HTML/Reference/Global_attributes/lang">lang</a> sur l'élément {{HTMLElement("html")}} de la page, en lui donnant la valeur du code de langue qui correspond le mieux à la langue du contenu.
       </td>
       <td>
         Voir
@@ -40,7 +40,7 @@ Cette ligne directrice vise à rendre le contenu textuel aussi compréhensible q
       <td>3.1.2 Langue des parties (AA)</td>
       <td>
         <p>
-          Si le contenu d'une page contient des mots ou expressions dans une langue différente de la langue principale, utilisez l'attribut <a href="/fr/docs/Web/HTML/Reference/Global_attributes/lang">lang</a> sur un élément englobant (par exemple un {{htmlelement("span")}} s'il n'y a pas d'élément sémantique adapté) pour indiquer la langue appropriée.
+          Si le contenu d'une page contient des mots ou expressions dans une langue différente de la langue principale, utilisez l'attribut <a href="/fr/docs/Web/HTML/Reference/Global_attributes/lang">lang</a> sur un élément englobant (par exemple un {{HTMLElement("span")}} s'il n'y a pas d'élément sémantique adapté) pour indiquer la langue appropriée.
         </p>
         <p>
           Il n'est pas nécessaire d'indiquer une langue différente pour les mots ou expressions identiques dans toutes les langues (par exemple les noms propres, les termes techniques qui ne relèvent pas d'une langue spécifique).
@@ -62,7 +62,7 @@ Cette ligne directrice vise à rendre le contenu textuel aussi compréhensible q
           Lorsqu'on utilise des abréviations, il faut fournir leur signification ou une définition si nécessaire.
         </p>
         <p>
-          L'élément {{htmlelement("abbr")}} est souvent considéré comme la meilleure façon de fournir le développement d'une abréviation — il prend un attribut <a href="/fr/docs/Web/HTML/Reference/Global_attributes/title">title</a> qui contient le développement, affiché au survol de l'acronyme. Cependant, le contenu de title n'est pas accessible au clavier ni toujours lu par les lecteurs d'écran. Il est donc préférable de proposer des liens vers des pages de glossaire contenant le développement et l'explication, ou à défaut de les inclure dans le texte autour.
+          L'élément {{HTMLElement("abbr")}} est souvent considéré comme la meilleure façon de fournir le développement d'une abréviation — il prend un attribut <a href="/fr/docs/Web/HTML/Reference/Global_attributes/title">title</a> qui contient le développement, affiché au survol de l'acronyme. Cependant, le contenu de title n'est pas accessible au clavier ni toujours lu par les lecteurs d'écran. Il est donc préférable de proposer des liens vers des pages de glossaire contenant le développement et l'explication, ou à défaut de les inclure dans le texte autour.
         </p>
       </td>
       <td>
@@ -92,7 +92,7 @@ Cette ligne directrice vise à rendre le contenu textuel aussi compréhensible q
           Un mécanisme doit permettre aux utilisateur·ice·s d'accéder à la prononciation des mots lorsque cela est nécessaire pour bien comprendre le contenu.
         </p>
         <p>
-          L'élément HTML {{htmlelement("audio")}} peut servir à créer un contrôle permettant d'écouter un fichier audio contenant la bonne prononciation, et il est aussi pertinent d'inclure un guide de prononciation textuel après les mots difficiles, comme dans les dictionnaires.
+          L'élément HTML {{HTMLElement("audio")}} peut servir à créer un contrôle permettant d'écouter un fichier audio contenant la bonne prononciation, et il est aussi pertinent d'inclure un guide de prononciation textuel après les mots difficiles, comme dans les dictionnaires.
         </p>
       </td>
       <td>
@@ -137,7 +137,7 @@ Cette ligne directrice vise à rendre les interfaces utilisateur intuitives et c
         </p>
       </td>
       <td>
-        L'événement {{domxref("Element.focus_event", "focus")}} de l'interface <code>Element</code> contient des informations utiles. Voir aussi
+        L'évènement {{DOMxRef("Element.focus_event", "focus")}} de l'interface <code>Element</code> contient des informations utiles. Voir aussi
         <a
           href="/fr/docs/Learn_web_development/Core/Accessibility/HTML#remettre_laccessibilité_au_clavier"
           >Remettre l'accessibilité au clavier</a
@@ -155,7 +155,7 @@ Cette ligne directrice vise à rendre les interfaces utilisateur intuitives et c
         </p>
       </td>
       <td>
-        L'événement {{domxref("Element/input_event", "input")}} est utile ici.
+        L'évènement {{DOMxRef("Element/input_event", "input")}} est utile ici.
       </td>
     </tr>
     <tr>
@@ -246,7 +246,7 @@ Cette ligne directrice vise à aider les utilisateur·ice·s à saisir des infor
           Lorsqu'une personne remplit un formulaire ou fait un choix, toute erreur détectée doit être clairement signalée, ainsi que le contrôle de formulaire concerné.
         </p>
         <p>
-          Il est conseillé de mettre en place une détection et une gestion des erreurs côté client, via les fonctionnalités de validation HTML ou JavaScript, selon le contexte. Lorsqu'une erreur est détectée, un message d'erreur intuitif doit s'afficher à côté du champ concerné pour aider la personne à corriger sa saisie. Pour les utilisateur·ice·s de lecteurs d'écran, on peut utiliser les régions aria-live pour signaler le changement.
+          Il est conseillé de mettre en place une détection et une gestion des erreurs côté client, avec les fonctionnalités de validation HTML ou JavaScript, selon le contexte. Lorsqu'une erreur est détectée, un message d'erreur intuitif doit s'afficher à côté du champ concerné pour aider la personne à corriger sa saisie. Pour les utilisateur·ice·s de lecteurs d'écran, on peut utiliser les régions aria-live pour signaler le changement.
         </p>
         <div class="note notecard">
           <p>
@@ -269,7 +269,7 @@ Cette ligne directrice vise à aider les utilisateur·ice·s à saisir des infor
       <td>3.3.2 Libellés ou instructions (A)</td>
       <td>
         <p>
-          Des instructions claires doivent être fournies lorsque la saisie de données est requise. Pour une consigne ou un libellé court, utilisez des éléments {{htmlelement("label")}} pour les champs simples (nom, âge, etc.), ou une combinaison de {{htmlelement("label")}}, {{htmlelement("fieldset")}} et {{htmlelement("legend")}} pour les groupes de champs (date de naissance, adresse postale, etc.).
+          Des instructions claires doivent être fournies lorsque la saisie de données est requise. Pour une consigne ou un libellé court, utilisez des éléments {{HTMLElement("label")}} pour les champs simples (nom, âge, etc.), ou une combinaison de {{HTMLElement("label")}}, {{HTMLElement("fieldset")}} et {{HTMLElement("legend")}} pour les groupes de champs (date de naissance, adresse postale, etc.).
         </p>
         <p>
           Si une explication plus complexe est nécessaire, ajoutez des paragraphes explicatifs ou essayez de rendre vos formulaires plus intuitifs.
@@ -304,7 +304,7 @@ Cette ligne directrice vise à aider les utilisateur·ice·s à saisir des infor
           Lorsqu'une erreur est détectée et que des suggestions de correction sont connues, il faut les fournir à la personne (par exemple, proposer d'autres identifiants si le nom d'utilisateur choisi est déjà pris), sauf si cela pose un problème de sécurité (mot de passe) ou de contexte (réponse à une question dans un quiz).
         </p>
         <p>
-          Dans ce cas, on utilisera probablement une combinaison de JavaScript et de fonctionnalités côté serveur pour vérifier la saisie et, si besoin, proposer des suggestions utiles, affichées comme les messages d'erreur (voir 3.3.1).
+          Dans ce cas, on utilise probablement une combinaison de JavaScript et de fonctionnalités côté serveur pour vérifier la saisie et, si besoin, proposer des suggestions utiles, affichées comme les messages d'erreur (voir 3.3.1).
         </p>
       </td>
       <td>Pas encore de suggestions de tutoriels.</td>
@@ -316,14 +316,14 @@ Cette ligne directrice vise à aider les utilisateur·ice·s à saisir des infor
           Pour les formulaires impliquant la saisie de données sensibles (contrats, transactions, données personnelles), au moins une des conditions suivantes doit être remplie&nbsp;:
         </p>
         <ul>
-          <li>Les soumissions sont réversibles.</li>
+          <li>Les envois sont réversibles.</li>
           <li>Les données sont vérifiées et la personne peut les corriger.</li>
           <li>Un mécanisme permet de confirmer et corriger les informations avant validation finale.</li>
         </ul>
       </td>
       <td>
         <p>
-          <strong>Réversible</strong>&nbsp;: pour toute vue où des données peuvent être saisies, proposez une vue équivalente permettant de modifier ou supprimer une entrée (voir par exemple <a href="/fr/docs/Learn_web_development/Extensions/Server-side/Django">Django web framework</a>).
+          <strong>Réversible</strong>&nbsp;: pour toute vue où des données peuvent être saisies, proposez une vue équivalente permettant de modifier ou supprimer une entrée (voir par exemple <a href="/fr/docs/Learn_web_development/Extensions/Server-side/Django">cadriciel web Django</a>).
         </p>
         <p>
           <strong>Vérification des données</strong>&nbsp;: comme en 3.3.1, combinez validation côté client et côté serveur pour détecter les erreurs et afficher des messages utiles.
@@ -336,7 +336,7 @@ Cette ligne directrice vise à aider les utilisateur·ice·s à saisir des infor
     <tr>
       <td>3.3.5 Aide contextuelle disponible (AAA)</td>
       <td>
-        Fournissez des instructions et des aides appropriées en contexte pour faciliter la saisie et la soumission des formulaires.
+        Fournissez des instructions et des aides appropriées en contexte pour faciliter la saisie et l'envoi des formulaires.
       </td>
       <td>
         Cela complète 3.3.1 et critères similaires, mais demande une aide contextuelle plus poussée&nbsp;: lien dédié vers une page d'aide, exemples de saisie réussie, etc.

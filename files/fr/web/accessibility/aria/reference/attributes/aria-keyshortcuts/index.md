@@ -10,9 +10,9 @@ L'attribut global `aria-keyshortcuts` indique les raccourcis clavier qu'un·e au
 
 ## Description
 
-Un raccourci clavier est une série d'une ou plusieurs touches qui indique au logiciel d'exécuter une action prédéfinie. Les raccourcis clavier permettent aux utilisateur·ice·s du clavier d'invoquer des commandes qui nécessiteraient autrement d'accéder à un menu ou d'utiliser le tactile ou la souris. La propriété `aria-keyshortcuts` définit les touches du clavier qui ont été mises en place pour activer ou donner la sélection à l'élément sur lequel l'attribut est défini.
+Un raccourci clavier est une série d'une ou plusieurs touches qui indique au logiciel d'exécuter une action prédéfinie. Les raccourcis clavier permettent aux utilisateur·ice·s du clavier d'invoquer des commandes qui nécessitent autrement d'accéder à un menu ou d'utiliser le tactile ou la souris. La propriété `aria-keyshortcuts` définit les touches du clavier qui ont été mises en place pour activer ou donner la sélection à l'élément sur lequel l'attribut est défini.
 
-L'attribut `aria-keyshortcuts` expose l'existence du raccourci aux technologies d'assistance afin que sa présence soit communiquée à ses utilisateur·ice·s. Comme tous les attributs ARIA, il n'a aucun effet sur la fonctionnalité de la page&nbsp;: le comportement clavier doit être ajouté via des gestionnaires d'événements JavaScript.
+L'attribut `aria-keyshortcuts` expose l'existence du raccourci aux technologies d'assistance afin que sa présence soit communiquée à ses utilisateur·ice·s. Comme tous les attributs ARIA, il n'a aucun effet sur la fonctionnalité de la page&nbsp;: le comportement clavier doit être ajouté avec des gestionnaires d'évènements JavaScript.
 
 Les raccourcis clavier appliqués à des éléments désactivés doivent aussi être désactivés. Par exemple, lorsque vous désactivez un élément pour les utilisateur·ice·s de la souris, pensez à le désactiver aussi pour les utilisateur·ice·s des raccourcis clavier.
 
@@ -20,7 +20,7 @@ Veillez à ce que tous les raccourcis clavier soient visibles pour les utilisate
 
 ### Règles de valeur de la propriété
 
-La valeur de l'attribut `aria-keyshortcuts` est une liste séparée par des espaces de combinaisons de touches qui peuvent être pressées pour activer une commande ou un widget de saisie. Chaque combinaison inclut zéro, une ou plusieurs touches modificatrices suivies exactement d'une touche non modificatrice à presser en même temps, reliées par un signe plus («&nbsp;+&nbsp;»). La valeur de l'attribut n'est pas sensible à la casse.
+La valeur de l'attribut `aria-keyshortcuts` est une liste séparée par des espaces de combinaisons de touches qui peuvent être pressées pour activer une commande ou un composant de saisie. Chaque combinaison inclut zéro, une ou plusieurs touches modificatrices suivies exactement d'une touche non modificatrice à presser en même temps, reliées par un signe plus («&nbsp;+&nbsp;»). La valeur de l'attribut n'est pas sensible à la casse.
 
 Exemples de raccourcis clavier valides&nbsp;:
 
@@ -35,13 +35,13 @@ aria-keyshortcuts="Meta+C Meta+Shift+C"
 
 Les touches modificatrices sont des touches qui n'ont pas d'impact lorsqu'elles sont utilisées seules. Elles s'écrivent `Alt`, `Ctrl`, `Maj`, `Meta` (touche Commande sur Mac), ou `AltGraph` (touche Option sur Mac).
 
-Les touches non modificatrices sont des touches qui ont un impact lorsqu'elles sont utilisées seules, comme imprimer un caractère, déplacer la sélection, ou générer un événement clavier. Les non-modificateurs qui impriment un caractère incluent des caractères comme `P`, `z` et `.`.
+Les touches non modificatrices sont des touches qui ont un impact lorsqu'elles sont utilisées seules, comme imprimer un caractère, déplacer la sélection, ou générer un évènement clavier. Les non-modificateurs qui impriment un caractère incluent des caractères comme `P`, `z` et `.`.
 
 Puisque le signe plus est utilisé pour écrire les combinaisons, il s'écrit «&nbsp;plus&nbsp;» s'il est utilisé comme non-modificateur. D'autres non-modificateurs écrits sont les caractères d'espace `Space` (Espace), `Tab`, `Enter` (Entrée), et tous les caractères qui déclenchent une action, comme `ArrowUp` (Flèche vers le haut), `PageUp` (Page précédente), et `Escape` (Échap).
 
-Si vous souhaitez utiliser un caractère qui pourrait poser problème, comme un guillemet double dans des guillemets doubles, échappez le caractère&nbsp;: `Ctrl+'`.
+Si vous souhaitez utiliser un caractère qui peut poser problème, comme un guillemet double dans des guillemets doubles, échappez le caractère&nbsp;: `Ctrl+'`.
 
-Modifier keys must be listed first in each key combination. Possible key combinations include `Control+P` or `Shift+Space` and `Q`. If the full shortcut requires all three of these combinations in order, it would be written as `aria-keyshortcuts="Control+P Shift+Space Q"`. When a key combination includes more than one modifier key, the order of the modifiers doesn't matter, but they all must come first, before the non-modifier.
+Les touches modificatrices doivent être listées en premier dans chaque combinaison de touches. Les combinaisons de touches possibles incluent `Control+P` ou `Shift+Space` et `Q`. Si le raccourci complet nécessite ces trois combinaisons dans l'ordre, il est écrit comme `aria-keyshortcuts="Control+P Shift+Space Q"`. Lorsqu'une combinaison de touches inclut plus d'une touche modificatrice, l'ordre des modificatrices n'a pas d'importance, mais elles doivent toutes venir en premier, avant la non-modificatrice.
 
 Ces deux déclarations d'attribut sont équivalentes&nbsp;:
 
@@ -52,7 +52,7 @@ aria-keyshortcuts="ctrl+shift+v"
 
 Notez que la casse n'a pas d'importance. Mais l'ordre de la non-modificatrice oui.
 
-Ces deux déclarations d'attribut sont invalides car la non-modificatrice doit être en dernier&nbsp;:
+Ces deux déclarations d'attribut sont invalides, car la non-modificatrice doit être en dernier&nbsp;:
 
 ```plain example-bad
 aria-keyshortcuts="V+Shift+Ctrl"
@@ -97,7 +97,7 @@ En plus du faible support des navigateurs, les mêmes préoccupations existent p
 - Une valeur d'accesskey peut entrer en conflit avec un raccourci système, navigateur ou technologie d'assistance.
 - Certaines valeurs de touches peuvent ne pas être présentes sur certains claviers, surtout avec l'internationalisation. Adapter à des langues spécifiques peut poser problème.
 - Les valeurs qui reposent sur des chiffres peuvent être déroutantes pour les personnes ayant des difficultés cognitives, si le chiffre n'a pas de lien logique avec la fonctionnalité déclenchée.
-- Informer l'utilisateur·ice que des raccourcis sont présents, pour qu'il·elle soit conscient·e de la fonctionnalité. Si le système n'a pas de moyen de notifier l'utilisateur·ice, il·elle pourrait activer un raccourci par accident.
+- Informer l'utilisateur·ice que des raccourcis sont présents, pour qu'il·elle soit conscient·e de la fonctionnalité. Si le système n'a pas de moyen de notifier l'utilisateur·ice, il·elle peut activer un raccourci par accident.
 
 ## Valeurs
 
@@ -114,10 +114,10 @@ Dans cet exemple, l'attribut `aria-keyshortcuts` sur l'élément est défini sur
 
 ## Interfaces associées
 
-- {{domxref("Element.ariaKeyShortcuts")}}
-  - : La propriété {{domxref("Element.ariaKeyShortcuts","ariaKeyShortcuts")}}, qui fait partie de l'interface {{domxref("Element")}}, reflète la valeur de l'attribut `aria-keyshortcuts`.
-- {{domxref("ElementInternals.ariaKeyShortcuts")}}
-  - : La propriété {{domxref("ElementInternals.ariaKeyShortcuts","ariaKeyShortcuts")}}, qui fait partie de l'interface {{domxref("ElementInternals")}}, reflète la valeur de l'attribut `aria-keyshortcuts`.
+- {{DOMxRef("Element.ariaKeyShortcuts")}}
+  - : La propriété {{DOMxRef("Element.ariaKeyShortcuts","ariaKeyShortcuts")}}, qui fait partie de l'interface {{DOMxRef("Element")}}, reflète la valeur de l'attribut `aria-keyshortcuts`.
+- {{DOMxRef("ElementInternals.ariaKeyShortcuts")}}
+  - : La propriété {{DOMxRef("ElementInternals.ariaKeyShortcuts","ariaKeyShortcuts")}}, qui fait partie de l'interface {{DOMxRef("ElementInternals")}}, reflète la valeur de l'attribut `aria-keyshortcuts`.
 
 ## Rôles associés
 

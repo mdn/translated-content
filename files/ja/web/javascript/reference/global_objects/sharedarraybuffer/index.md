@@ -87,7 +87,7 @@ WebAssembly Threads の提案では、新しい[不可分](https://github.com/We
 - {{jsxref("SharedArrayBuffer.prototype.byteLength")}}
   - : 配列のサイズ（バイト単位）。これは配列の構築時に設定され、`SharedArrayBuffer` が成長可能である場合にのみ {{jsxref("SharedArrayBuffer.prototype.grow()")}} メソッドを使用して変更することができます。
 - {{jsxref("Object/constructor", "SharedArrayBuffer.prototype.constructor")}}
-  - : インスタンスオブジェクトを作成したコンストラクター関数です。SharedArrayBuffer`インスタンスの場合、初期値は{{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer")}}コンストラクターです。
+  - : インスタンスオブジェクトを作成したコンストラクター関数です。`SharedArrayBuffer`インスタンスの場合、初期値は{{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer")}}コンストラクターです。
 - {{jsxref("SharedArrayBuffer.prototype.growable")}}
   - : 読み取り専用です。`SharedArrayBuffer` が成長可能な場合は `true` を、そうでない場合は `false` を返します。
 - {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}}

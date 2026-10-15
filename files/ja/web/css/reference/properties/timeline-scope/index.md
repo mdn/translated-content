@@ -1,8 +1,9 @@
 ---
-title: timeline-scope
+title: "`timeline-scope` プロパティ (CSS)"
+short-title: timeline-scope
 slug: Web/CSS/Reference/Properties/timeline-scope
 l10n:
-  sourceCommit: de6b6c760753776ad38b5d77c519fd1e845e0413
+  sourceCommit: 2a3061b6905ba8a8fe2654e1a6a978bc614bfd66
 ---
 
 **`timeline-scope`** は [CSS](/ja/docs/Web/CSS) のプロパティで、名前付きアニメーションタイムラインのスコープを変更します。
@@ -28,14 +29,14 @@ timeline-scope: unset;
 
 ### 値
 
-`timeline-scope` に許可されている値は次の通りです。
+このプロパティは、キーワード、またはカンマ区切りの独自のタイムライン名のリストとして指定します。
 
 - `none`
-  - : タイムラインのスコープに変更はありません。これがデフォルトです。
+  - : タイムラインの範囲に変更を加えません。これがデフォルトの設定です。
 - `all`
-  - : 子孫が定義するすべてのタイムラインの名前は、この要素とその子孫の範囲内で有効です。
+  - : その要素またはそのサブツリーに設定されたタイムライン名は、同じサブツリー内の要素とのみ一致するようにスコープを設定します。
 - `<dashed-ident>`
-  - : 子孫要素で定義されている既存の名前付きタイムライン（{{cssxref("scroll-timeline-name")}} または {{cssxref("view-timeline-name")}} を用いて宣言されたもの）の名前を指定します。これにより、タイムラインのスコープは `timeline-scope` が設定された要素とその子孫要素まで拡張されます。
+  - : {{cssxref("scroll-timeline-name")}} または {{cssxref("view-timeline-name")}} を使用して宣言された、カンマ区切りで区切られた 1 つ以上のタイムライン名を指定します。スコープを設定し、要素またはそのサブツリーに対して指定された `scroll-timeline-name` または `view-timeline-name` の値が設定された場合、それらは同じサブツリー内の要素とのみ一致するようにします。
 
 ## 解説
 
@@ -43,7 +44,7 @@ timeline-scope: unset;
 
 `timeline-scope` の値は、子孫要素に定義されたタイムラインの名前です。これにより、タイムラインの範囲が対象要素とその子孫要素を含むように変更されます。言い換えれば、`timeline-scope` プロパティが定義された要素とそのすべての子孫要素は、そのタイムラインを使用して制御できます。
 
-`timeline-scope` の値として指定された名前をつけてタイムラインが存在しない場合（または複数のタイムラインが存在する場合は）、指定された名前の非アクティブなタイムラインが作成されます。`timeline-scope` プロパティは名前付きタイムラインでのみ動作するため、 {{cssxref("view()")}} または {{cssxref("scroll()")}} アニメーションタイムライン関数で作成される無名タイムラインとの併用はできません。
+`timeline-scope` の値として指定された名前をつけてタイムラインが存在しない場合（または複数のタイムラインが存在する場合は）、指定された名前の非アクティブなタイムラインが作成されます。`timeline-scope` プロパティは名前付きタイムラインでのみ動作するため、 {{cssxref("animation-timeline/view", "view()")}} または {{cssxref("animation-timeline/scroll", "scroll()")}} アニメーションタイムライン関数で作成される無名タイムラインとの併用はできません。
 
 ## 公式定義
 

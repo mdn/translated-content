@@ -36,7 +36,7 @@ PublicKeyCredential.parseRequestOptionsFromJSON(options)
 
 ## 解説
 
-[（登録済みの）ユーザーの認証](/ja/docs/Web/API/Web_Authentication_API#ユーザーの認証)を行うウェブ認証プロセスでは、認証依頼者のサーバーが、既存の資格情報を探すために必要なウェブアプリ情報を送信します。この情報には、ユーザーの ID、認証依頼者、および「チャレンジ」に関する詳細が含まれ、必要に応じて資格情報の検索先も指定されます。例えば、ローカルの組み込み認証器や、USB、BLE などを介した外部の認証器などです。といった具合に。
+[（登録済みの）ユーザーの認証](/ja/docs/Web/API/Web_Authentication_API#ユーザーの認証)を行うウェブ認証プロセスでは、認証依頼者のサーバーが、既存の資格情報を探すために必要なウェブアプリ情報を送信します。この情報には、ユーザーの ID、認証依頼者、および「チャレンジ」に関する詳細が含まれ、必要に応じて資格情報の検索先も指定されます。例えば、ローカルの組み込み認証器や、USB、BLE などを介した外部の認証器などです。
 
 ウェブアプリは、[`navigator.credentials.get()`](/ja/docs/Web/API/CredentialsContainer/get) を、サーバーから提供されたデータ含むを {{domxref("PublicKeyCredentialRequestOptions")}} インスタンスを引数として渡して呼び出すことで、この情報を認証器に渡して資格情報を探します。
 

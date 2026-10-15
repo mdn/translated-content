@@ -1,9 +1,9 @@
 ---
-title: "HTML 属性: content"
+title: "`content` 属性 (HTML)"
 short-title: content
 slug: Web/HTML/Reference/Attributes/content
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 **`content`** 属性は、`<meta>` [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name) 属性で定義されたメタデータ名の値を指定します。

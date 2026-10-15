@@ -17,7 +17,7 @@ Ils offrent une alternative efficace au fait de charger d'abord la ressource san
   <tbody>
     <tr>
       <th scope="row">Type d'en-tête</th>
-      <td>{{Glossary("Fetch Metadata Request Header", "En-tête de requête Fetch Metadata")}}</td>
+      <td>{{Glossary("Fetch Metadata Request Header", "En-tête de métadonnées de requête de récupération")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden request header", "En-tête de requête interdit")}}</th>

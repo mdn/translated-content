@@ -1,6 +1,6 @@
 ---
 title: Переместить мяч
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball
 ---
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}

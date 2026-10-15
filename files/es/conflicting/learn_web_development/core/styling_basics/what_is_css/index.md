@@ -23,7 +23,7 @@ Las hojas de estilo en cascada (**{{Glossary("CSS")}}**, cascading style sheets)
           >trabajar con archivos</a
         >
         y nociones de HTML (véase
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >).
       </td>
@@ -35,7 +35,7 @@ Las hojas de estilo en cascada (**{{Glossary("CSS")}}**, cascading style sheets)
   </tbody>
 </table>
 
-En el módulo [Introducción al HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content), exponemos qué es el HTML y cómo se usa para definir documentos destinados a leerse en un navegador web. Los títulos se verán más grandes que el texto y los párrafos empezarán en una línea nueva y habrá un espacio entre ellos. Los enlaces aparecerán en un color diferente y subrayados para distinguirlos del resto del texto. Vienen predeterminados por el navegador y, en la práctica, son estilos muy básicos que el navegador aplica al HTML para asegurarse, básicamente, de que sean legibles incluso si el autor de la página no especifica un estilo explícito.
+En el módulo [Introducción al HTML](/es/docs/Learn_web_development/Core/Structuring_content), exponemos qué es el HTML y cómo se usa para definir documentos destinados a leerse en un navegador web. Los títulos se verán más grandes que el texto y los párrafos empezarán en una línea nueva y habrá un espacio entre ellos. Los enlaces aparecerán en un color diferente y subrayados para distinguirlos del resto del texto. Vienen predeterminados por el navegador y, en la práctica, son estilos muy básicos que el navegador aplica al HTML para asegurarse, básicamente, de que sean legibles incluso si el autor de la página no especifica un estilo explícito.
 
 ![Los estilos predeterminados utilizados por el navegador](html-example.png)
 
@@ -52,7 +52,7 @@ Un **documento** suele ser un archivo de texto estructurado con un lenguaje de m
 > [!NOTE]
 > Un navegador también recibe el nombre de {{Glossary("Agente de usuario", "agente de usuario")}}, que consiste en un programa informático que representa a una persona dentro del sistema. Los navegadores son el modelo principal de agente de usuario en el que pensamos cuando hablamos de CSS, pero no son el único. Hay otros documentos de usuario disponibles, como los que convierten documentos HTML y CSS en PDF para imprimir.
 
-El CSS se puede usar para estilos de texto muy básicos como, por ejemplo, cambiar el [color](/es/docs/Web/CSS/Reference/Values/color_value) y el [tamaño](/es/docs/Web/CSS/Reference/Properties/font-size) de los encabezados y los enlaces. Se puede utilizar para crear un diseño, como podría ser [convertir una columna de texto en una composición](/es/docs/Web/CSS/Layout_cookbook/Column_layouts) con un área de contenido principal y una barra lateral para información relacionada. Incluso se puede usar para crear efectos de [animación](/es/docs/Web/CSS/Guides/Animations). Echa un vistazo a los enlaces de este párrafo para ver ejemplos específicos.
+El CSS se puede usar para estilos de texto muy básicos como, por ejemplo, cambiar el [color](/es/docs/Web/CSS/Reference/Values/color_value) y el [tamaño](/es/docs/Web/CSS/Reference/Properties/font-size) de los encabezados y los enlaces. Se puede utilizar para crear un diseño, como podría ser [convertir una columna de texto en una composición](/es/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts) con un área de contenido principal y una barra lateral para información relacionada. Incluso se puede usar para crear efectos de [animación](/es/docs/Web/CSS/Guides/Animations). Echa un vistazo a los enlaces de este párrafo para ver ejemplos específicos.
 
 ## Sintaxis del CSS
 

@@ -34,7 +34,7 @@ Le descripteur [override-colors](/fr/docs/Glossary/CSS_Descriptor) accepte une l
 
 L'indice de couleur commence à zéro et toute [valeur de couleur](/fr/docs/Web/CSS/Reference/Values/color_value) peut être utilisée.
 
-Pour chaque paire indice-couleur, la couleur à l'indice spécifié dans la [palette de base](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette) sera remplacée. Si la police couleur ne possède pas de couleur à l'indice indiqué, cette valeur sera ignorée.
+Pour chaque paire indice-couleur, la couleur à l'indice définit dans la [palette de base](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette) est remplacée. Si la police couleur ne possède pas de couleur à l'indice indiqué, cette valeur est ignorée.
 
 ### Valeurs
 
@@ -53,19 +53,19 @@ Pour chaque paire indice-couleur, la couleur à l'indice spécifié dans la [pal
 
 ### Modifier les couleurs des emojis
 
-Cet exemple montre comment remplacer les couleurs de la police couleur [Noto Color Emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji) pour les adapter à l'identité visuelle de votre site.
+Cet exemple montre comment remplacer les couleurs de la police couleur [Noto Color Emoji <sup>(angl.)</sup>](https://fonts.google.com/noto/specimen/Noto+Color+Emoji) pour les adapter à l'identité visuelle de votre site.
 
 #### HTML
 
 ```html
-<section class="hats">
-  <div class="hat">
+<section class="chapeaux">
+  <div class="chapeau">
     <h2>Chapeau original</h2>
     <div class="emoji">🎩</div>
   </div>
-  <div class="hat">
+  <div class="chapeau">
     <h2>Chapeau rouge</h2>
-    <div class="emoji red-hat">🎩</div>
+    <div class="emoji chapeau-rouge">🎩</div>
   </div>
 </section>
 ```
@@ -73,7 +73,7 @@ Cet exemple montre comment remplacer les couleurs de la police couleur [Noto Col
 #### CSS
 
 ```css hidden
-.hats {
+.chapeaux {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -93,7 +93,7 @@ Cet exemple montre comment remplacer les couleurs de la police couleur [Noto Col
   font-family: "Noto Color Emoji", emoji;
   font-size: 3rem;
 }
-@font-palette-values --red {
+@font-palette-values --rouge {
   font-family: "Noto Color Emoji";
   override-colors:
     0 rgb(74 11 0),
@@ -102,24 +102,24 @@ Cet exemple montre comment remplacer les couleurs de la police couleur [Noto Col
     3 rgb(193 28 1),
     4 rgb(230 34 1);
 }
-.red-hat {
-  font-palette: --red;
+.chapeau-rouge {
+  font-palette: --rouge;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("modifier_les_couleurs_des_emojis")}}
+{{EmbedLiveSample("Modifier les couleurs des emojis")}}
 
 ### Modifier une couleur dans une palette de base alternative
 
-En utilisant la police [Rocher Color Font](https://www.harbortype.com/fonts/rocher-color/), cet exemple montre comment remplacer une couleur dans la police.
+En utilisant la police [Rocher Color Font <sup>(angl.)</sup>](https://www.harbortype.com/fonts/rocher-color/), cet exemple montre comment remplacer une couleur dans la police.
 
 #### HTML
 
 ```html
-<h2 class="normal-palette">Palette normale</h2>
-<h2 class="override-palette">Palette modifiée</h2>
+<h2 class="palette-normale">Palette normale</h2>
+<h2 class="palette-surchargee">Palette modifiée</h2>
 ```
 
 #### CSS
@@ -132,20 +132,20 @@ En utilisant la police [Rocher Color Font](https://www.harbortype.com/fonts/roch
 h2 {
   font-family: "Rocher", fantasy;
 }
-@font-palette-values --override-palette {
+@font-palette-values --palette-surchargee {
   font-family: "Rocher";
   base-palette: 3;
 }
-@font-palette-values --override-palette {
+@font-palette-values --palette-surchargee {
   font-family: "Rocher";
   base-palette: 3;
   override-colors: 0 rebeccapurple;
 }
-.normal-palette {
-  font-palette: --normal-palette;
+.palette-normale {
+  font-palette: --palette-normale;
 }
-.override-palette {
-  font-palette: --override-palette;
+.palette-surchargee {
+  font-palette: --palette-surchargee;
 }
 ```
 
@@ -155,7 +155,7 @@ Cet exemple montre que dans la `base-palette` `3`, la couleur à l'indice 0 est 
 
 ![Exemple montrant la palette de base et la palette de base avec 1 couleur modifiée](override-base-palette-color.jpg)
 
-## Specifications
+## Spécifications
 
 {{Specifications}}
 

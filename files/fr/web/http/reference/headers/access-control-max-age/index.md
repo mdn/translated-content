@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Access-Control-Max-Age`** indique pendant combien de temps les résultats d'une {{Glossary("preflight request", "requête préliminaire")}} (c'est-à-dire les informations contenues dans les en-têtes {{HTTPHeader("Access-Control-Allow-Methods")}} et {{HTTPHeader("Access-Control-Allow-Headers")}}) peuvent être mis en cache.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Access-Control-Max-Age`** indique pendant combien de temps les résultats d'une {{Glossary("preflight request", "requête préliminaire")}} (c'est-à-dire les informations contenues dans les en-têtes {{HTTPHeader("Access-Control-Allow-Methods")}} et {{HTTPHeader("Access-Control-Allow-Headers")}}) peuvent être mis en cache.
 
 <table class="properties">
   <tbody>

@@ -3,7 +3,7 @@ title: Estructurando la web con HTML
 short-title: HTML
 slug: Learn_web_development/Core/Structuring_content
 l10n:
-  sourceCommit: 25a3f6c781777a135143b0edd4b5e1f85857b802
+  sourceCommit: 456c370394c0cd8869feb60c4e9926f35422beaf
 ---
 
 {{NextMenu("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core")}}
@@ -71,7 +71,7 @@ Estos tutoriales no forman parte del itinerario de aprendizaje, pero resultan in
 - [Agregar gráficos vectoriales a la web](/es/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
   - : Los gráficos vectoriales son muy útiles en muchas situaciones: ocupan poco y son muy escalables, así que no se pixelan al ampliarlos o al mostrarlos a gran tamaño. En este artículo te mostramos cómo incluir uno en tu página web.
 - [Desde object hasta iframe: otras tecnologías de incrustación](/es/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)
-  - : Al hablar de incrustar contenido en páginas web solemos pensar en imágenes, video y audio. En este artículo damos un paso al costado y vemos algunos elementos que permiten incrustar una gran variedad de tipos de contenido: los elementos {{htmlelement("iframe")}}, {{htmlelement("embed")}} y {{htmlelement("object")}}. Los `<iframe>` sirven para incrustar otras páginas web, y los otros dos permiten incrustar recursos externos como archivos PDF.
+  - : Al hablar de incrustar contenido en páginas web solemos pensar en imágenes, video y audio. En este artículo damos un paso al costado y vemos algunos elementos que permiten incrustar una gran variedad de tipos de contenido: los elementos {{htmlelement("iframe")}}, {{htmlelement("embed")}} y {{htmlelement("object")}}. Estos elementos permiten incrustar recursos externos como otras páginas web y archivos PDF.
 
 ## Véase también
 

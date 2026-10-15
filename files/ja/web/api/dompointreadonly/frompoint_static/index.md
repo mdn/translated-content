@@ -5,7 +5,7 @@ slug: Web/API/DOMPointReadOnly/fromPoint_static
 
 {{APIRef("DOM")}}
 
-静的な **{domxref("DOMPointReadOnly")}}** メソッド `fromPoint()` は、指定された元の点から新しい `DOMPointReadOnly` オブジェクトを作成し、それを返します。
+静的な **{{domxref("DOMPointReadOnly")}}** メソッド `fromPoint()` は、指定された元の点から新しい `DOMPointReadOnly` オブジェクトを作成し、それを返します。
 
 また、 {{domxref("DOMPointReadOnly.DOMPointReadOnly", "new DOMPointReadOnly()")}} コンストラクターを使用しても、新しい `DOMPointReadOnly` オブジェクトを作成することができます。
 

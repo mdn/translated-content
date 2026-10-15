@@ -130,7 +130,7 @@ CSS メディアクエリーレベル 5 では、`environment-blending`, `nav-co
 
 ## 関連情報
 
-- [コンテナークエリ－](/ja/docs/Web/CSS/Guides/Containment/Container_queries)
+- [コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)
 - [`srcset` および `sizes` 属性の使用](/ja/docs/Web/HTML/Reference/Elements/img#srcset_および_sizes_属性の使用)
 - [CSS ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)
 - {{cssxref("@supports")}} を使用すると、ブラウザーのさまざまな CSS の技術への対応状況に応じてスタイルを適用することができます。

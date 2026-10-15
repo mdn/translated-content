@@ -3,7 +3,7 @@ title: Propriété CSS `animation-timeline`
 short-title: animation-timeline
 slug: Web/CSS/Reference/Properties/animation-timeline
 l10n:
-  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-timeline`** définit la chronologie utilisée pour contrôler la progression d'une animation CSS.
@@ -11,7 +11,7 @@ La propriété [CSS](/fr/docs/Web/CSS) **`animation-timeline`** définit la chro
 ## Syntaxe
 
 ```css
-/* Mots-clés */
+/* Valeurs avec un mot-clé */
 animation-timeline: none;
 animation-timeline: auto;
 
@@ -121,7 +121,7 @@ Nous avons un {{HTMLElement("article")}} avec trois enfants {{HTMLElement("secti
 
 #### CSS
 
-Nous utilisons la [mise en page flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout) pour placer les trois sections côte à côte. Nous utilisons le [contenu généré](/fr/docs/Web/CSS/Guides/Generated_content) pour afficher l'`id`. Nous appliquons le même style à tous les éléments, en appliquant l'animation `rotate` de {{CSSxRef("@keyframes")}} qui fait tourner l'élément d'un tour complet. Avec la propriété raccourcie {{CSSxRef("animation")}}, nous déclarons des itérations infinies de 2 secondes, progressant linéairement de l'animation `rotate`, en alternant la direction de chaque animation.
+Nous utilisons la [mise en page flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout) pour placer les trois sections côte à côte. Nous utilisons le [contenu généré](/fr/docs/Web/CSS/Guides/Generated_content) pour afficher un `id`. Nous appliquons le même style à tous les éléments, en appliquant l'animation `rotate` de {{CSSxRef("@keyframes")}} qui fait tourner l'élément d'un tour complet. Avec la propriété raccourcie {{CSSxRef("animation")}}, nous déclarons des itérations infinies de 2 secondes, progressant linéairement de l'animation `rotate`, en alternant la direction de chaque animation.
 
 ```css
 article {
@@ -179,7 +179,7 @@ Comme la propriété `animation-timeline` est incluse dans la propriété raccou
 
 #### Résultats
 
-{{EmbedLiveSample("Utilisation simple", "100%", 170)}}
+{{EmbedLiveSample("Utilisation simple", "100%", 200)}}
 
 Notez que déclarer une valeur `auto` a le même effet que de laisser `animation-timeline` à sa valeur par défaut, et que `none` retire toutes les chronologies de l'élément, donc aucune animation dans le cas de `none`.
 
@@ -192,12 +192,12 @@ Dans cet exemple, la chronologie d'animation est définie sur une chronologie de
 Notre conteneur comprend trois éléments extensibles qui sont suffisamment larges pour garantir que notre conteneur soit une zone de défilement. Celui du milieu contient une forme que nous allons animer.
 
 ```html live-sample___named_scroll live-sample___anonymous_scroll
-<div id="container">
-  <div class="stretcher"></div>
-  <div class="stretcher">
-    <div id="shape"></div>
+<div id="conteneur">
+  <div class="garder-forme"></div>
+  <div class="garder-forme">
+    <div id="forme"></div>
   </div>
-  <div class="stretcher"></div>
+  <div class="garder-forme"></div>
 </div>
 ```
 
@@ -205,10 +205,10 @@ Notre conteneur comprend trois éléments extensibles qui sont suffisamment larg
 
 Nous définissons le conteneur comme un conteneur flexible, en définissant une largeur ({{CSSxRef("width")}}) sur le conteneur qui correspond à la moitié de la largeur totale de ses enfants flexibles. L'ajout d'une valeur {{CSSxRef("overflow-x")}} de `scroll` lui donne une barre de défilement horizontale.
 
-Notre chronologie de progression de défilement, définie à l'aide des propriétés {{CSSxRef("scroll-timeline-name")}} et {{CSSxRef("scroll-timeline-axis")}}, est nommée `--square-timeline`. Cette chronologie est appliquée à notre élément `#shape` en utilisant `animation-timeline: --square-timeline`.
+Notre chronologie de progression de défilement, définie à l'aide des propriétés {{CSSxRef("scroll-timeline-name")}} et {{CSSxRef("scroll-timeline-axis")}}, est nommée `--square-timeline`. Cette chronologie est appliquée à notre élément `#forme` en utilisant `animation-timeline: --square-timeline`.
 
 ```css live-sample___named_scroll live-sample___anonymous_scroll
-#container {
+#conteneur {
   display: flex;
   width: 300px;
   border: 1px solid;
@@ -218,7 +218,7 @@ Notre chronologie de progression de défilement, définie à l'aide des proprié
   scroll-timeline-name: --square-timeline;
 }
 
-.stretcher {
+.garder-forme {
   flex: 0 0 200px;
 }
 ```
@@ -226,7 +226,7 @@ Notre chronologie de progression de défilement, définie à l'aide des proprié
 Le CSS ci-dessous définit un carré qui tourne dans des directions alternées selon la chronologie fournie par la propriété `animation-timeline`, qui est définie sur la chronologie `--square-timeline` nommée ci-dessus. L'animation est configurée pour se produire deux fois, dans des directions alternées, lorsqu'elle traverse la zone d'affichage. Nous avons ajouté des [coins crantés](/fr/docs/Web/CSS/Reference/Properties/corner-shape) pour rendre l'effet d'animation plus visible.
 
 ```css live-sample___named_scroll live-sample___anonymous_scroll
-#shape {
+#forme {
   background-color: deeppink;
   width: 100px;
   height: 100px;
@@ -273,10 +273,10 @@ Cet exemple étend le précédent, en appliquant une chronologie de progression 
 
 #### CSS
 
-Nous incluons tout le CSS de l'exemple précédent, en ne définissant que la propriété `animation-timeline` pour remplacer la valeur de l'exemple précédent. La chronologie est fournie par la valeur `scroll(inline nearest)`, qui sélectionne la barre de défilement dans la direction en incise de l'ancêtre le plus proche qui possède des barres de défilement. Il s'agit de la barre de défilement verticale de l'élément `#container`, car les éléments `.stretcher` n'ont pas de contenu débordant et ne sont donc pas des conteneurs de défilement.
+Nous incluons tout le CSS de l'exemple précédent, en ne définissant que la propriété `animation-timeline` pour remplacer la valeur de l'exemple précédent. La chronologie est fournie par la valeur `scroll(inline nearest)`, qui sélectionne la barre de défilement dans la direction en incise de l'ancêtre le plus proche qui possède des barres de défilement. Il s'agit de la barre de défilement verticale de l'élément `#conteneur`, car les éléments `.garder-forme` n'ont pas de contenu débordant et ne sont donc pas des conteneurs de défilement.
 
 ```css live-sample___anonymous_scroll
-#shape {
+#forme {
   animation-timeline: scroll(inline nearest);
 }
 ```
@@ -309,7 +309,7 @@ Dans cet exemple, nous montrons comment créer et appliquer une chronologie de p
 
 ```html-nolint hidden live-sample___named_view
 <main class="scroller">
-  <div class="container">
+  <div class="conteneur">
     <h1>Itinéraire</h1>
     <h2>Du Lincoln Memorial au Martin Luther King, Jr. Memorial</h2>
     <ol>
@@ -325,13 +325,13 @@ Dans cet exemple, nous montrons comment créer et appliquer une chronologie de p
 Notre HTML comprend beaucoup de texte dans un conteneur à l'intérieur d'une zone de défilement, que nous avons masqué pour plus de clarté. Au milieu de ce mur de texte, nous incluons deux éléments `<div>` que nous allons animer en fonction de la visibilité de l'élément lui-même dans le premier cas et de la visibilité de son parent dans le second cas&nbsp;:
 
 ```html live-sample___named_view
-<div class="animated-element self">SELF</div>
-<div class="animated-element parent">PARENT</div>
+<div class="element-anime personnel">PERSONNEL</div>
+<div class="element-anime parent">PARENT</div>
 ```
 
 ```html-nolint hidden live-sample___named_view
 </section>
-<h2>Martin Luther King, Jr. Memorial to Lincoln Memorial</h2>
+<h2>Du mémorial Martin Luther King, Jr. au mémorial Lincoln</h2>
 <ol>
   <li>Se diriger vers le nord en direction de Independence Ave SW</li
   ><li>Tourner à gauche sur Independence Ave</li
@@ -360,23 +360,23 @@ Nous créons une animation à images clés qui modifie l'opacité et l'échelle 
   }
 }
 
-.animated-element {
+.element-anime {
   animation: animation-effect 1ms linear;
 }
 ```
 
-L'élément `self` est explicitement nommé comme son propre conteneur de défilement en définissant la propriété `view-timeline-name` sur un `<dashed-ident>` et en définissant également ce nom `<dashed-ident>` comme valeur de la propriété `animation-timeline`. Dans le cas de `parent`, nous définissons le `container` comme conteneur de défilement pour l'élément animé&nbsp;:
+L'élément `personnel` est explicitement nommé comme son propre conteneur de défilement en définissant la propriété `view-timeline-name` sur un `<dashed-ident>` et en définissant également ce nom `<dashed-ident>` comme valeur de la propriété `animation-timeline`. Dans le cas de `parent`, nous définissons le `conteneur` comme conteneur de défilement pour l'élément animé&nbsp;:
 
 ```css live-sample___named_view
-.self {
-  view-timeline-name: --self-scroller-element;
-  animation-timeline: --self-scroller-element;
+.personnel {
+  view-timeline-name: --element-defilement-personnel;
+  animation-timeline: --element-defilement-personnel;
 }
-.container {
-  view-timeline-name: --parent-scroller-element;
+.conteneur {
+  view-timeline-name: --element-defilement-parent;
 }
 .parent {
-  animation-timeline: --parent-scroller-element;
+  animation-timeline: --element-defilement-parent;
 }
 ```
 
@@ -402,7 +402,7 @@ Des déclarations CSS supplémentaires ont été masquées pour plus de clarté.
     margin-bottom: 0.75lh;
   }
 
-  .animated-element {
+  .element-anime {
     height: 200px;
     width: calc(100% - 2em);
     margin: auto;
@@ -423,7 +423,7 @@ Faites défiler le conteneur pour voir les deux éléments s'animer.
 
 {{EmbedLiveSample("named_view", "100%", 350)}}
 
-Notez comment la visibilité de l'élément `self` contrôle sa propre animation. Dans ce cas, l'élément est à l'image clé `0%` lorsque le bord supérieur entre dans la zone visible, ou la partie visible du conteneur de défilement, et n'atteint l'image clé `100%` que lorsque le bord inférieur quitte la zone visible.
+Notez comment la visibilité de l'élément `personnel` contrôle sa propre animation. Dans ce cas, l'élément est à l'image clé `0%` lorsque le bord supérieur entre dans la zone visible, ou la partie visible du conteneur de défilement, et n'atteint l'image clé `100%` que lorsque le bord inférieur quitte la zone visible.
 
 L'élément `parent` ne devient visible que lorsque ce parent est visible, ce qui signifie que lorsqu'il entre dans la vue, il est déjà à environ `25%` de l'animation. Il n'est qu'à environ `75%` de son animation lorsqu'il quitte le haut de la zone visible.
 

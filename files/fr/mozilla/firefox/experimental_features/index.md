@@ -3,7 +3,7 @@ title: Fonctionnalités expérimentales dans Firefox
 short-title: Fonctionnalités expérimentales
 slug: Mozilla/Firefox/Experimental_features
 l10n:
-  sourceCommit: 27ab6daefdb5b4dea6e70a00bde29b8844e7c1ff
+  sourceCommit: 892eb917bee599a9d6cae7d33ed783129dbb39b3
 ---
 
 Cette page répertorie les fonctionnalités expérimentales et partiellement implémentées de Firefox, y compris les standards de la plateforme web en évolution ou proposés.
@@ -473,6 +473,21 @@ La propriété raccourcie {{CSSxRef("view-timeline")}} prend désormais en charg
 - `layout.css.scroll-driven-animations.enabled`
   - : Définir sur `true` pour activer.
 
+### Prise en charge des requêtes `named-feature()`
+
+La fonction `named-feature()` dans la règle conditionnelle {{CSSxRef("@supports")}} permet de tester si le navigateur prend en charge une fonctionnalité qui n'a pas d'autre syntaxe détectable, par exemple `@supports named-feature(anchor-position-follows-transforms)`.
+([bogue Firefox 2042977 <sup>(angl.)</sup>](https://bugzil.la/2042977) et [bogue Firefox 2055354 <sup>(angl.)</sup>](https://bugzil.la/2055354)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 156                    | Non                 |
+| Developer Edition | 156                    | Non                 |
+| Beta              | 156                    | Non                 |
+| Release           | 156                    | Non                 |
+
+- `layout.css.anchor-positioning.follows-transforms.enabled`
+  - : Définir sur `true` pour activer.
+
 ## SVG
 
 **Aucune fonctionnalité expérimentale dans ce cycle de publication.**
@@ -503,6 +518,22 @@ Lorsque cette fonctionnalité est activée, l'élément MathML [`<a>`](/fr/docs/
 | Developer Edition | 155                    | Non                 |
 | Beta              | 155                    | Non                 |
 | Release           | 155                    | Non                 |
+
+- `mathml.a.element.enabled`
+  - : Définir sur `true` pour activer.
+
+### Les éléments MathML `<a>`
+
+L'élément MathML `<a>` crée un lien hypertexte à partir du contenu MathML, exposant l'interface `MathMLAnchorElement` avec les mêmes propriétés de composant d'URL que les éléments HTML {{HTMLElement("a")}}.
+
+Cette version ajoute la prise en charge des attributs IDL `rel` et `relList`. ([bogue Firefox 2063819 <sup>(angl.)</sup>](https://bugzil.la/2063819)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 156                    | Oui                 |
+| Developer Edition | 156                    | Non                 |
+| Beta              | 156                    | Non                 |
+| Release           | 156                    | Non                 |
 
 - `mathml.a.element.enabled`
   - : Définir sur `true` pour activer.
@@ -558,6 +589,23 @@ Les assertions ne sont pas affectées par le drapeau [`m`](/fr/docs/Web/JavaScri
 - `javascript.options.experimental.regexp_buffer_boundaries`
   - : Définir sur `true` pour activer dans Nightly.
 
+### Proposition TC39 export `*` par défaut
+
+La [proposition TC39 export `*` par défaut <sup>(angl.)</sup>](https://github.com/tc39/proposal-export-star-default) permet aux déclarations [`export * from`](/fr/docs/Web/JavaScript/Reference/Statements/export#réexportation_agrégée) de réexporter l'exportation par défaut d'un module ainsi que ses exportations nommées. Sans cela, `export * from` ignore l'exportation par défaut d'un module.
+([bogue Firefox 2065611 <sup>(angl.)</sup>](https://bugzil.la/2065611)).
+
+Notez que cette proposition en est à un stade très précoce et est susceptible d'évoluer.
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 157                    | Non                 |
+| Developer Edition | 157                    | Non                 |
+| Beta              | 157                    | Non                 |
+| Release           | —                      | —                   |
+
+- `javascript.options.experimental.export_star_default`
+  - : Définir sur `true` pour activer.
+
 ## Les API Web
 
 ### Rapports de plantage
@@ -585,9 +633,11 @@ Cela permet d'éviter les collisions lorsque plusieurs composants Web déclarent
 L'implémentation inclut&nbsp;:
 
 - La propriété `customElementRegistry` sur {{DOMxRef("Document")}}, {{DOMxRef("Element")}} et {{DOMxRef("ShadowRoot")}}.
-  Le [constructeur `CustomElementRegistry()`](/fr/docs/Web/API/CustomElementRegistry/CustomElementRegistry) crée un nouvel objet `CustomElementRegistry` pour une utilisation avec une portée.
+  Le [constructeur `CustomElementRegistry()`](/fr/docs/Web/API/CustomElementRegistry/CustomElementRegistry) crée un nouvel objet `CustomElementRegistry` pour une utilisation avec une portée. ([bogue Firefox 2018900 <sup>(angl.)</sup>](https://bugzil.la/2018900))
 
-  ([bogue Firefox 2018900 <sup>(angl.)</sup>](https://bugzil.la/2018900)).
+Depuis la version 156&nbsp;:
+
+- [Les registres d'éléments personnalisés avec une portée](/fr/docs/Web/API/Web_components/Using_custom_elements#registres_déléments_personnalisés_avec_une_portée) sont désormais pris en charge, de sorte qu'un arbre d'ombre peut définir des éléments personnalisés qui ne se chevauchent pas avec ceux définis dans le registre global. ([bogue Firefox 2064333 <sup>(angl.)</sup>](https://bugzil.la/2064333)).
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
@@ -811,6 +861,81 @@ Les notifications ont la propriété [`requireInteraction`](/fr/docs/Web/API/Not
 
 - `dom.webnotifications.requireinteraction.enabled`
   - : Définir sur `true` pour activer.
+
+### L'option `navigate` pour les notifications
+
+L'option `navigate` du constructeur {{DOMxRef("Notification.Notification", "Notification()")}} et de {{DOMxRef("ServiceWorkerRegistration.showNotification()")}} prend une URL à ouvrir lorsque l'utilisateur·ice clique sur la notification, de sorte que vous n'avez plus besoin d'un gestionnaire de clics juste pour ouvrir une page. La nouvelle propriété en lecture seule {{DOMxRef("Notification.navigate")}} retourne cette URL. Lorsque l'option est définie, les évènements {{DOMxRef("Notification.click_event", "click")}} et {{DOMxRef("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} ne se déclenchent plus pour cette notification. Chaque entrée de l'option {{DOMxRef("Notification.actions", "actions")}} peut définir sa propre URL `navigate`, et un bouton d'action sans URL déclenche toujours `notificationclick` plutôt que d'utiliser l'URL de la notification.
+([bogue Firefox 2066184 <sup>(angl.)</sup>](https://bugzil.la/2066184)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 157                    | Non                 |
+| Developer Edition | 157                    | Non                 |
+| Beta              | 157                    | Non                 |
+| Release           | 157                    | Non                 |
+
+- `dom.webnotifications.navigate.enabled`
+  - : Définir sur `true` pour activer.
+
+### Assainir le HTML lors de l'analyse
+
+Les méthodes qui assainissent le HTML avec [l'API HTML Sanitizer](/fr/docs/Web/API/HTML_Sanitizer_API), telles que {{DOMxRef("Element.setHTML()")}}, suppriment désormais les éléments et attributs indésirables au fur et à mesure de l'analyse du balisage, au lieu d'analyser d'abord tout le contenu puis de le nettoyer ensuite. Le résultat est le même, sauf que le texte voisin se retrouve maintenant dans un seul nœud de texte au lieu d'être réparti sur plusieurs. ([bogue Firefox 2062652 <sup>(angl.)</sup>](https://bugzil.la/2062652)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 157                    | Non                 |
+| Developer Edition | 157                    | Non                 |
+| Beta              | 157                    | Non                 |
+| Release           | 157                    | Non                 |
+
+- `dom.security.sanitizer.while-parsing`
+  - : Définir sur `true` pour activer.
+
+### L'API Container Timing
+
+L'API Container Timing rapporte quand le contenu d'un élément conteneur est peint, ce qui vous permet de mesurer le temps de rendu d'une région de la page plutôt que de l'ensemble de la zone d'affichage.
+([bogue Firefox 1940240 <sup>(angl.)</sup>](https://bugzil.la/1940240)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 156                    | Non                 |
+| Developer Edition | 156                    | Non                 |
+| Beta              | 156                    | Non                 |
+| Release           | 156                    | Non                 |
+
+- `dom.enable_container_timing`
+  - : Définir sur `true` pour activer.
+
+### Encapsulation de clés dans Web Crypto
+
+[L'API Web Crypto](/fr/docs/Web/API/Web_Crypto_API) prend en charge ML-KEM, un algorithme qui permet à deux parties de convenir d'une clé secrète partagée et qui est conçu pour rester sécurisé face aux attaques des ordinateurs quantiques. Une partie transmet la clé publique de l'autre partie aux méthodes {{DOMxRef("SubtleCrypto")}} `encapsulateKey()` ou `encapsulateBits()`, qui retournent la clé partagée avec un texte chiffré à envoyer à l'autre partie. L'autre partie transmet ce texte chiffré et sa propre clé privée à `decapsulateKey()` ou `decapsulateBits()` pour obtenir la même clé partagée.
+
+Les noms d'algorithme `ML-KEM-512`, `ML-KEM-768`, et `ML-KEM-1024` sont pris en charge, ainsi que les {{DOMxRef("CryptoKey.usages", "usages")}} correspondantes et les nouveaux formats de clé `raw-public` et `raw-seed` pour {{DOMxRef("SubtleCrypto.importKey()")}} et {{DOMxRef("SubtleCrypto.exportKey()")}}. ([bogue Firefox 1943614 <sup>(angl.)</sup>](https://bugzil.la/1943614)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 157                    | Oui                 |
+| Developer Edition | 157                    | Non                 |
+| Beta              | 157                    | Non                 |
+| Release           | 157                    | Non                 |
+
+- `dom.webcrypto.encapsulation.enabled`
+  - : Définir sur `true` pour activer.
+
+### Formats personnalisés du Web dans l'API Presse-papiers asynchrone
+
+[L'API Clipboard](/fr/docs/Web/API/Clipboard_API) prend en charge les formats personnalisés du presse-papiers, permettant aux applications web d'écrire et de lire des types MIME personnalisés préfixés par `"web "` en utilisant les méthodes {{DOMxRef("Clipboard.write()")}} et {{DOMxRef("Clipboard.read()")}}, respectivement.
+Cela est pris en charge sur les ordinateurs de bureau à partir de Firefox 154 et sur Android à partir de Firefox 156 ([bogue Firefox 1956304 <sup>(angl.)</sup>](https://bugzil.la/1956304) et [bogue Firefox 2048545 <sup>(angl.)</sup>](https://bugzil.la/2048545)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ?     |
+| ----------------- | ---------------------- | ----------------------- |
+| Nightly           | 154                    | Oui (bureau uniquement) |
+| Developer Edition | 154                    | Non                     |
+| Beta              | 154                    | Non                     |
+| Release           | 154                    | Non                     |
+
+- `dom.clipboard.customFormatSupport.enabled`
+  - : Set to `true` to enable.
 
 ## Sécurité et confidentialité
 

@@ -3,7 +3,7 @@ title: Propriété CSS `-webkit-mask-composite`
 short-title: -webkit-mask-composite
 slug: Web/CSS/Reference/Properties/-webkit-mask-composite
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 {{Non-standard_Header}}
@@ -39,6 +39,8 @@ La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-mask-composite`** définit la 
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `clear`
   - : Les pixels qui se recouvrent entre l'image source et l'image de destination sont enlevés.
 - `copy`
@@ -60,7 +62,7 @@ La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-mask-composite`** définit la 
 - `destination-atop`
   - : Les pixels de l'image source sont affichés. Les pixels de l'image de destination sont uniquement utilisés s'ils ne chevauchent pas des portions non-transparentes de l'image source. Cela fait que l'image de destination n'a aucun effet.
 - `xor`
-  - : Les pixels qui se chevauchent deviennent complètement transparents s'ils étaient complètement opaques.
+  - : Les pixels qui se chevauchent deviennent complètement transparents s'ils sont complètement opaques.
 
 ## Définition formelle
 
@@ -83,7 +85,7 @@ La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-mask-composite`** définit la 
 
 ## Spécifications
 
-Cette propriété ne fait partie d'aucun standard. Cette propriété est spécifiée avec {{CSSxRef("mask-composite")}} utilisant des valeurs différentes.
+Cette propriété ne fait partie d'aucun standard. Cette propriété est définie avec {{CSSxRef("mask-composite")}} utilisant des valeurs différentes.
 
 ## Compatibilité des navigateurs
 

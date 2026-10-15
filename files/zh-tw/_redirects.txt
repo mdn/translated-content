@@ -86,10 +86,11 @@
 /zh-TW/docs/Firefox_3_Online_and_Offline_Events	/en-US/docs/Web/API/Navigator/onLine
 /zh-TW/docs/Firefox_3_for_developers	/zh-TW/docs/Mozilla/Firefox/Releases/3
 /zh-TW/docs/Firefox_3_技術文件	/zh-TW/docs/Mozilla/Firefox/Releases/3
-/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
-/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls	/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it	/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball	/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
+/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it	/zh-TW/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas
+/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/zh-TW/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript
+/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls	/zh-TW/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls
+/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it	/zh-TW/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas
+/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball	/zh-TW/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball
 /zh-TW/docs/Glossary/404	/zh-TW/docs/Web/HTTP/Reference/Status/404
 /zh-TW/docs/Glossary/502	/zh-TW/docs/Web/HTTP/Reference/Status/502
 /zh-TW/docs/Glossary/DOS_attack	/zh-TW/docs/Glossary/Denial_of_Service

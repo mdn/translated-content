@@ -5,7 +5,7 @@ l10n:
   sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`Authorization`** permet de fournir des informations d'identification afin d'authentifier un agent utilisateur auprès d'un serveur, donnant ainsi accès à des ressources protégées.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Authorization`** permet de fournir des informations d'identification afin d'authentifier un agent utilisateur auprès d'un serveur, donnant ainsi accès à des ressources protégées.
 
 L'en-tête `Authorization` est généralement, mais pas toujours, envoyé après qu'un agent utilisateur a tenté d'accéder à une ressource protégée sans fournir d'identifiants.
 Le serveur répond alors par un message {{HTTPStatus("401", "401 Unauthorized")}} contenant au moins un en-tête {{HTTPHeader("WWW-Authenticate")}}.
@@ -62,7 +62,7 @@ Authorization: Digest username=<username>,
     > Pour plus d'informations ou d'options, voir [Authentification HTTP&nbsp;: schémas d'authentification](/fr/docs/Web/HTTP/Guides/Authentication#schéma_dauthentification)
 
 À l'exception de `<auth-scheme>`, les autres directives sont propres à chaque [schéma d'authentification](/fr/docs/Web/HTTP/Guides/Authentication#schéma_dauthentification).
-En général, il faudra consulter la spécification correspondante (certaines clés pour un sous-ensemble de schémas sont listées ci-dessous).
+En général, il faut consulter la spécification correspondante (certaines clés pour un sous-ensemble de schémas sont listées ci-dessous).
 
 ### Authentification avec `Basic`
 
@@ -76,7 +76,7 @@ En général, il faudra consulter la spécification correspondante (certaines cl
 
 - `<response>`
   - : Une chaîne de chiffres hexadécimaux qui prouve que l'utilisateur·ice connaît le mot de passe.
-    L'algorithme encode le nom d'utilisateur·ice, le mot de passe, le realm, le cnonce, le qop, le nc, etc.
+    L'algorithme encode le nom d'utilisateur·ice, le mot de passe, le `realm`, le `cnonce`, le `qop`, le `nc`, etc.
     Voir la spécification pour plus de détails.
 - `username`
   - : Une chaîne de caractères entre guillemets contenant le nom de l'utilisateur·ice pour le `realm` défini, en texte brut ou sous forme de hachage hexadécimal.
@@ -85,7 +85,7 @@ En général, il faudra consulter la spécification correspondante (certaines cl
   - : Le nom de l'utilisateur·ice formaté selon la notation étendue définie dans la RFC5987.
     À utiliser uniquement si le nom ne peut pas être encodé dans `username` et si `userhash` vaut `"false"`.
 - `uri`
-  - : L'_URI de requête effective_. Voir la spécification pour plus d'informations.
+  - : Une _URI de requête effective_. Voir la spécification pour plus d'informations.
 - `realm`
   - : Domaine du nom d'utilisateur·ice/mot de passe demandé (doit correspondre à la valeur dans la réponse {{HTTPHeader("WWW-Authenticate")}} pour la ressource demandée).
 - `opaque`
@@ -102,7 +102,7 @@ En général, il faudra consulter la spécification correspondante (certaines cl
     Utilisée par le client et le serveur pour fournir une authentification mutuelle, garantir l'intégrité de certains messages et éviter les attaques par texte choisi.
     Voir la spécification pour plus d'informations.
 - `nc`
-  - : Compteur de nonce. Nombre hexadécimal de requêtes dans lesquelles le client a envoyé la valeur `cnonce` courante (y compris la requête actuelle).
+  - : Un compteur de nombre unique. Nombre hexadécimal de requêtes dans lesquelles le client a envoyé la valeur `cnonce` courante (y compris la requête actuelle).
     Le serveur peut utiliser des valeurs `nc` dupliquées pour détecter les tentatives de rejeu.
 - `userhash` {{Optional_Inline}}
   - : `"true"` si le nom d'utilisateur·ice a été haché. `"false"` par défaut.

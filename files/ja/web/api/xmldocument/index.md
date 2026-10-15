@@ -1,27 +1,23 @@
 ---
 title: XMLDocument
 slug: Web/API/XMLDocument
+l10n:
+  sourceCommit: 2f1159d6a0d59bccbb6cde08bad95bfe4f06d9ba
 ---
 
 {{APIRef("DOM")}}
 
-**XMLDocument** インターフェイスは XML ドキュメントを示します。汎用的な {{DOMxRef("Document")}} を継承し、特定のメソッドやプロパティを追加しません: それでも２つのタイプのドキュメントでは、いくつかのアルゴリズムの動作がことなります。
+**XMLDocument** インターフェイスは XML 文書を示します。汎用的な {{DOMxRef("Document")}} を継承し、固有のメソッドやプロパティを追加しません。それでもこれら 2 種類の文書では、いくつかのアルゴリズムの動作が異なります。
 
 {{InheritanceDiagram}}
 
 ## プロパティ
 
-_また、 {{DOMxRef("Document")}} からプロパティを継承します。_
-
-- {{DOMxRef("XMLDocument.async")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : {{DOMxRef("XMLDocument.load()")}} と併用して、非同期リクエストを示します。
+_{{DOMxRef("Document")}} から継承したプロパティもあります。_
 
 ## メソッド
 
-_また、 {{DOMxRef("Document")}} からメソッドを継承します。_
-
-- {{DOMxRef("XMLDocument.load()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : XML ドキュメントをロードします。
+_{{DOMxRef("Document")}} から継承したメソッドもあります。_
 
 ## 仕様書
 
@@ -33,4 +29,4 @@ _また、 {{DOMxRef("Document")}} からメソッドを継承します。_
 
 ## 関連情報
 
-- [The DOM interfaces index.](/ja/docs/Web/API/Document_Object_Model)
+- [ドキュメントオブジェクトモデル (DOM)](/ja/docs/Web/API/Document_Object_Model)

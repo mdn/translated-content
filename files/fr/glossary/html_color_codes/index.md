@@ -5,9 +5,9 @@ l10n:
   sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-Les **codes couleur HTML** est un terme général _de facto_ utilisé pour décrire les premières méthodes disponibles pour spécifier des couleurs sur les pages web. Cela inclut les noms de couleurs HTML comme `black`, `purple` et `aqua`, ainsi que les notations hexadécimales comme `#000000`, `#800080` et `#00ffff`. Celles-ci étaient à l'origine définies dans les spécifications HTML — voir par exemple les [définitions de couleurs HTML 3.2 <sup>(angl.)</sup>](https://www.w3.org/TR/2018/SPSD-html32-20180315/#colors) des 16 couleurs HTML d'origine.
+Les **codes couleur HTML** est un terme général _de facto_ utilisé pour décrire les premières méthodes disponibles pour définir des couleurs sur les pages web. Cela inclut les noms de couleurs HTML comme `black`, `purple` et `aqua`, ainsi que les notations hexadécimales comme `#000000`, `#800080` et `#00ffff`. Celles-ci sont à l'origine définies dans les spécifications HTML — voir par exemple les [définitions de couleurs HTML 3.2 <sup>(angl.)</sup>](https://www.w3.org/TR/2018/SPSD-html32-20180315/#colors) des 16 couleurs HTML d'origine.
 
-Il n'est plus exact de parler de «&nbsp;codes couleur HTML&nbsp;» ou de «&nbsp;noms de couleur HTML&nbsp;» pour le web. Les couleurs sont désormais spécifiées dans le [module CSS des couleurs](/fr/docs/Web/CSS/Guides/Colors) et sont généralement appelées couleurs CSS ou couleurs web.
+Il n'est plus exact de parler de «&nbsp;codes couleur HTML&nbsp;» ou de «&nbsp;noms de couleur HTML&nbsp;» pour le web. Les couleurs sont désormais définies dans le [module CSS des couleurs](/fr/docs/Web/CSS/Guides/Colors) et sont généralement appelées couleurs CSS ou couleurs web.
 
 ## Voir aussi
 

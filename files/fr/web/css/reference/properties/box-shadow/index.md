@@ -3,7 +3,7 @@ title: Propriété CSS `box-shadow`
 short-title: box-shadow
 slug: Web/CSS/Reference/Properties/box-shadow
 l10n:
-  sourceCommit: 2e4a849f599a666ea778b577d176529061e61efb
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`box-shadow`** ajoute des effets d'ombre autour du cadre d'un élément. Vous pouvez définir plusieurs effets séparés par des virgules. Une ombre de boîte est décrite par des décalages X et Y relatifs à l'élément, un rayon de flou, un rayon d'étalement et une couleur.
@@ -110,7 +110,7 @@ Pour définir plusieurs ombres, fournissez une liste d'ombres séparées par des
     - Si quatre valeurs sont définies, la quatrième valeur est interprétée comme `<spread-radius>`. Les valeurs positives font que l'ombre s'étend et devient plus grande, les valeurs négatives font que l'ombre rétrécit. Si elle n'est pas définie, elle est fixée à `0` (c'est-à-dire que l'ombre a la même taille que l'élément).
 
 - `inset` {{Optional_Inline}}
-  - : Modifie l'ombre d'une ombre portée extérieure à une ombre portée intérieure (comme si le contenu était enfoncé dans la boîte). Les ombres intérieures sont limitées à la zone de remplissage de l'élément et apparaissent au-dessus de l'arrière-plan mais sous le contenu. Par défaut, l'ombre se comporte comme une ombre portée, donnant l'apparence que la boîte est surélevée par rapport à son contenu. C'est le comportement par défaut lorsque `inset` n'est pas défini.
+  - : Modifie l'ombre d'une ombre portée extérieure à une ombre portée intérieure (comme si le contenu est enfoncé dans la boîte). Les ombres intérieures sont limitées à la zone de remplissage de l'élément et apparaissent au-dessus de l'arrière-plan mais sous le contenu. Par défaut, l'ombre se comporte comme une ombre portée, donnant l'apparence que la boîte est surélevée par rapport à son contenu. C'est le comportement par défaut lorsque `inset` n'est pas défini.
 
 ### Interpolation
 
@@ -170,7 +170,7 @@ blockquote {
 
 ### Définir zéro pour le décalage et le flou
 
-Lorsque les valeurs de `x-offset`, `y-offset` et `blur` sont toutes à zéro, l'ombre portée est un contour uni de même taille sur tous les côtés. Les ombres sont dessinées de l'arrière vers l'avant, donc la première ombre se place au-dessus des suivantes. Lorsque la propriété `border-radius` est fixée à 0, ce qui est la valeur par défaut, les coins de l'ombre sont, eh bien, des coins. Si nous avions mis une valeur différente pour `border-radius`, les coins auraient été arrondis.
+Lorsque les valeurs de `x-offset`, `y-offset` et `blur` sont toutes à zéro, l'ombre portée est un contour uni de même taille sur tous les côtés. Les ombres sont dessinées de l'arrière vers l'avant, donc la première ombre se place au-dessus des suivantes. Lorsque la propriété `border-radius` est fixée à 0, ce qui est la valeur par défaut, les coins de l'ombre sont, eh bien, des coins. Si nous avons mis une valeur différente pour `border-radius`, les coins ont été arrondis.
 
 Nous avons ajouté une marge de la taille de la plus large ombre portée pour garantir que l'ombre ne chevauche pas les éléments adjacents et ne dépasse pas la bordure du bloc englobant. Une ombre portée n'affecte pas les dimensions du [modèle de boîte](/fr/docs/Web/CSS/Guides/Box_model).
 

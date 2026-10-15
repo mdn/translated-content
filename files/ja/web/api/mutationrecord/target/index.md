@@ -1,5 +1,6 @@
 ---
 title: "MutationRecord: target プロパティ"
+short-title: target
 slug: Web/API/MutationRecord/target
 l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
@@ -23,7 +24,7 @@ l10n:
 
 以下の例では、コンテナー div `#container` の中に赤 div (`#red-div`) と青 div (`#blue-div`) の 2 個の div があります。このコンテナーを観測する {{domxref("MutationObserver")}} を作成します。このオブザーバーは子のリストへの変更を観測し、`subtree: true` をつけてあるのでコンテナーの子ノードの子ノードの変化も観測します。
 
-このオブサーバーのコールバックは、変更の `target` を記録します。`#red-div` や `#blue-div` にノードを追加すると、それに応じて `target` が `#red-div` や `#blue-div` になります。
+このオブザーバーのコールバックは、変更の `target` を記録します。`#red-div` や `#blue-div` にノードを追加すると、それに応じて `target` が `#red-div` や `#blue-div` になります。
 
 #### HTML
 

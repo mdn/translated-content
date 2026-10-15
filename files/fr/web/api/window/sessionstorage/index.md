@@ -1,64 +1,76 @@
 ---
-title: Window.sessionStorage
+title: "Window : propriété sessionStorage"
+short-title: sessionStorage
 slug: Web/API/Window/sessionStorage
+l10n:
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
-{{APIRef}}
+{{APIRef("Web Storage API")}}
 
-La propriété `sessionStorage` permet d'utiliser un objet {{domxref("Storage")}} valable pour la session de navigation en cours et pour les pages du même domaine que la page actuelle. L'objet global `sessionStorage` est similaire à {{domxref("Window.localStorage")}}, à la différence que les données enregistrées dans `sessionStorage` ont une durée vie limitée et expirent à la fin de la session de navigation actuelle. Une session de navigation dure aussi longtemps que le navigateur est ouvert et s'étend sur plusieurs chargements, rechargements et restaurations de pages. En revanche, une session de navigation n'est valable que pour le contexte de navigation actuel, c'est-à-dire que le fait d'**ouvrir une page dans un nouvel onglet ou dans une nouvelle fenêtre provoquera l'initialisation d'une nouvelle session de navigation**, ce qui diffère du comportement des sessions utilisant des cookies.
+La propriété en lecture seule **`sessionStorage`** accède à un objet {{DOMxRef("Storage")}} de session pour {{Glossary("origin", "l'origine")}} actuel. `sessionStorage` est similaire à {{DOMxRef("Window.localStorage", "localStorage")}}&nbsp;; la différence est que, tandis que `localStorage` est partitionné uniquement par origine, `sessionStorage` est partitionné à la fois par origine et par onglets du navigateur (contextes de navigation de premier niveau). Les données dans `sessionStorage` ne sont conservées que pendant la durée de la session de la page.
 
-Il est à noter que les données stockées dans sessionStorage ou localStorage sont **spécifiques au protocole de la page.**
+- Lorsque qu'un document est chargé dans un onglet particulier du navigateur, une session de page unique est créée et assignée à cet onglet particulier. Cette session de page n'est accessible que dans cet onglet particulier. Le document principal, et tous les {{Glossary("browsing context", "contextes de navigation")}} intégrés (cadres intégrés), sont regroupés par leur origine et chaque origine a accès à sa propre zone de stockage séparée.
+- Si la page possède un {{DOMxRef("Window.opener", "opener")}}, le `sessionStorage` est initialement une copie de l'objet `sessionStorage` de l'ouvreur. Cependant, ils restent séparés et les modifications apportées à l'un n'affectent pas l'autre. Pour empêcher la copie du `sessionStorage`, utilisez l'une des techniques qui suppriment `opener` (voir {{DOMxRef("Window.opener")}}).
+- Une session de page dure tant que l'onglet ou le navigateur est ouvert, et survit aux rechargements et restaurations de la page.
+- L'ouverture d'une page dans un nouvel onglet ou une nouvelle fenêtre crée une nouvelle session avec la valeur du contexte de navigation de premier niveau, ce qui diffère du fonctionnement des cookies de session.
+- La fermeture de l'onglet/de la fenêtre met fin à la session et efface les données dans `sessionStorage`.
 
-## Syntaxe
+## Valeur
+
+Un objet {{DOMxRef("Storage")}} qui peut être utilisé pour accéder à l'espace de stockage de session de l'origine actuelle.
+
+### Exceptions
+
+- `SecurityError`
+  - : Levée dans l'un des cas suivants&nbsp;:
+    - L'origine n'est pas [un tuple schéma/hôte/port valide](/fr/docs/Web/Security/Defenses/Same-origin_policy#definition_of_an_origin). Cela peut se produire si l'origine utilise les schémas `file:` ou `data:`, par exemple.
+    - La requête ne respecte pas une décision de politique. Par exemple, l'utilisateur·ice a configuré les navigateurs pour empêcher la page de conserver des données.
+
+    Notez que si l'utilisateur·ice bloque les cookies, les navigateurs interprètent probablement cela comme une instruction pour empêcher la page de conserver des données.
+
+## Exemples
+
+### Utilisation simple
 
 ```js
-// Enregistrer des données dans sessionStorage
-sessionStorage.setItem("clé", "valeur");
+// Sauvegarde des données dans sessionStorage
+sessionStorage.setItem("key", "value");
 
-// Récupérer des données depuis sessionStorage
-var data = sessionStorage.getItem("clé");
+// Récupère les données sauvegardées depuis sessionStorage
+let donnees = sessionStorage.getItem("key");
 
-// Supprimer des données de sessionStorage
-sessionStorage.removeItem("clé");
+// Supprime les données sauvegardées depuis sessionStorage
+sessionStorage.removeItem("key");
 
-// Supprimer toutes les données de sessionStorage
+// Supprime toutes les données sauvegardées depuis sessionStorage
 sessionStorage.clear();
 ```
 
-### Valeur
+### Sauvegarder le texte entre les actualisations
 
-Un objet {{domxref("Storage")}}.
-
-## Exemple
-
-L'exemple de code suivant accède à l'objet de stockage de session associé au domaine actuel et y ajoute une donnée à l'aide de {{domxref("Storage.setItem()")}}.
+L'exemple suivant sauvegarde automatiquement le contenu d'un champ de texte, et si le navigateur est actualisé, restaure le contenu du champ de texte afin qu'aucune écriture ne soit perdue.
 
 ```js
-sessionStorage.setItem("myCat", "Tom");
-```
+// Récupère le champ de texte que nous allons suivre
+let champ = document.getElementById("champ");
 
-L'exemple suivant sauvegarde automatiquement le contenu d'un champ textuel. Si la page est accidentellement rafraîchie, le contenu du champ est restauré de sorte qu'aucune saisie n'est perdue.
-
-```js
-// Récupération du champ à enregistrer
-var champ = document.getElementById("champ");
-
-// Vérification de l'existence d'une donnée enregistrée auparavant
-// (ce ne sera le cas que si la page a été rafraîchie)
+// Regarde si nous avons une valeur d'enregistrement automatique
+// (cela ne se produit que si la page est actualisée accidentellement)
 if (sessionStorage.getItem("autosave")) {
-  // Restauration du contenu du champ
+  // Restaure les contenus du champ de texte
   champ.value = sessionStorage.getItem("autosave");
 }
 
-// Écoute des changements de valeur du champ
-champ.addEventListener("change", function () {
-  // Enregistrement de la saisie utilisateur dans le stockage de session
+// Écoute les changements dans le champ de texte
+champ.addEventListener("change", () => {
+  // Et sauvegarde les résultats dans l'objet de stockage de session
   sessionStorage.setItem("autosave", champ.value);
 });
 ```
 
 > [!NOTE]
-> Veuillez vous référer à l'article [Utilisation de l'API Web Storage](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) pour des exemples plus complets.
+> Veuillez vous référer à l'article [Utiliser l'API Web Storage](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) pour des exemples plus complets.
 
 ## Spécifications
 
@@ -70,5 +82,5 @@ champ.addEventListener("change", function () {
 
 ## Voir aussi
 
-- [Utilisation de l'API Web Storage](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- {{domxref("Window.localStorage")}}
+- [Utiliser l'API Web Storage](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- La propriété {{DOMxRef("Window.localStorage")}}

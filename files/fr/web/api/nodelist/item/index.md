@@ -1,42 +1,47 @@
 ---
-title: NodeList.item()
+title: "NodeList : méthode item()"
+short-title: item()
 slug: Web/API/NodeList/item
+l10n:
+  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
 {{APIRef("DOM")}}
 
-Renvoie un noeud depuis une [`NodeList`](/fr/docs/Web/API/NodeList) par l'index. Cette méthode ne lance pas d'exceptions tant que vous fournissez des arguments. Une valeur `null` est renvoyée si l'index est hors des limites et une `TypeError` est lancée si aucun argument n'est fourni.
+La méthode **`item()`** de l'interface {{DOMxRef("NodeList")}} retourne un nœud depuis une [`NodeList`](/fr/docs/Web/API/NodeList) par l'index. Cette méthode ne lance pas d'exceptions tant que vous fournissez des arguments. Une valeur `null` est retournée si l'index est hors des limites et une {{JSxRef("TypeError")}} est levée si aucun argument n'est fourni.
+
+En JavaScript, au lieu d'appeler `nodeList.item(index)`, vous pouvez également accéder directement à un `index`, comme `nodeList[index]`.
 
 ## Syntaxe
 
-```js
-nodeItem = nodeList.item(index);
+```js-nolint
+item(index)
 ```
 
-- `nodeList` est une `NodeList`. Elle est généralement obtenue à partir d'une autre propriété ou méthode DOM, telle que [childNodes](/fr/docs/Web/API/Node/childNodes).
-- `index` est l'index du noeud à chercher. L'index commence à zéro.
-- `nodeItem` est le numéro d'`index` du noeud dans la `nodeList` retourné par la méthode `item`.
+### Paramètres
 
-## Syntaxe alternative
+- `index`
+  - : L'index du nœud à récupérer. L'index commence à zéro.
 
-JavaScript propose également une syntaxe semblable à un tableau pour obtenir un élément d'une liste de nœuds par index :
+### Valeur de retour
+
+Le nœud d'un `index` dans la `nodeList` retourné par la méthode `item`.
+
+### Exceptions
+
+- {{JSxRef("TypeError")}}
+  - : Levée si aucun argument n'est fourni.
+
+## Exemples
 
 ```js
-nodeItem = nodeList[index];
-```
-
-## Exemple
-
-```js
-var tables = document.getElementsByTagName("table");
-var firstTable = tables.item(1); // ou simplement tables[1] - renvoie le second tableau dans DOM
+const tableaux = document.getElementsByTagName("table");
+const premierTableau = tableaux.item(1); // ou tableaux[1] - retourne le second tableau dans le DOM
 ```
 
 ## Spécification
 
-[DOM Level 1 Core: NodeList.item()](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-item)
-
-[DOM Level 2 Core: NodeList.item()](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-844377136)
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

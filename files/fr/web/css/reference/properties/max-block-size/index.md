@@ -10,9 +10,9 @@ La propriété [CSS](/fr/docs/Web/CSS) **`max-block-size`** définit la taille m
 
 La longueur maximale de l'autre dimension est définie à l'aide de la propriété {{CSSxRef("max-inline-size")}}.
 
-Ceci est utile car `max-width` est toujours utilisé pour les tailles horizontales et `max-height` est toujours utilisé pour les tailles verticales, et si vous devez définir des longueurs en fonction de la taille de votre contenu textuel, vous devez pouvoir le faire en tenant compte de la direction d'écriture.
+Ceci est utile, car `max-width` est toujours utilisé pour les tailles horizontales et `max-height` est toujours utilisé pour les tailles verticales, et si vous devez définir des longueurs en fonction de la taille de votre contenu textuel, vous devez pouvoir le faire en tenant compte de la direction d'écriture.
 
-Chaque fois que vous utiliseriez normalement `max-height` ou `max-width`, vous devriez plutôt utiliser `max-block-size` pour définir la «&nbsp;hauteur&nbsp;» maximale du contenu (même si cela peut ne pas être une valeur verticale) et `max-inline-size` pour définir la «&nbsp;largeur&nbsp;» maximale du contenu (même si cela peut être vertical plutôt qu'horizontal). Voir les [exemples de `writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode#exemples), qui montrent les différents modes d'écriture en action.
+Chaque fois que vous utilisez normalement `max-height` ou `max-width`, vous devez plutôt utiliser `max-block-size` pour définir la «&nbsp;hauteur&nbsp;» maximale du contenu (même si cela peut ne pas être une valeur verticale) et `max-inline-size` pour définir la «&nbsp;largeur&nbsp;» maximale du contenu (même si cela peut être vertical plutôt qu'horizontal). Voir les [exemples de `writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode#exemples), qui montrent les différents modes d'écriture en action.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: max-block-size")}}
 
@@ -101,7 +101,7 @@ La valeur de la propriété `max-block-size` peut être n'importe quelle valeur 
 - {{CSSxRef("fit-content")}}
   - : Utilise l'espace disponible, mais pas plus que {{CSSxRef("max-content")}}, c'est-à-dire `min(max-content, max(min-content, stretch))`.
 - [`fit-content(<length-percentage>)`](/fr/docs/Web/CSS/Reference/Values/fit-content_function) {{Experimental_Inline}}
-  - : Utilise la formule `fit-content` avec l'espace disponible remplacé par l'argument spécifié, c'est-à-dire `min(max-content, max(min-content, argument))`.
+  - : Utilise la formule `fit-content` avec l'espace disponible remplacé par l'argument défini, c'est-à-dire `min(max-content, max(min-content, argument))`.
 
 ### Comment le mode d'écriture affecte la direction
 
@@ -113,7 +113,7 @@ Les valeurs de `writing-mode` affectent la correspondance de `max-block-size` av
 | `vertical-rl`, `vertical-lr`, `sideways-rl`, `sideways-lr`, `tb`, `tb-rl` | {{CSSxRef("max-width")}}          |
 
 > [!NOTE]
-> Les valeurs `sideways-lr` et `sideways-rl` pour `writing-mode` ont été retirées du module de spécification CSS sur les modes d'écriture de niveau 3 en fin de processus et pourraient être réintroduites dans la spécification de niveau 4.
+> Les valeurs `sideways-lr` et `sideways-rl` pour `writing-mode` ont été retirées du module de spécification CSS sur les modes d'écriture de niveau 3 en fin de processus et peuvent être réintroduites dans la spécification de niveau 4.
 
 > [!NOTE]
 > Les modes d'écritures `lr`, `lr-tb`, `rl`, `rb` et `rb-tl` ne sont plus autorisées dans les contextes {{Glossary("HTML")}}&nbsp;; elles ne peuvent être utilisées que dans les contextes {{Glossary("SVG")}} 1.x.
@@ -136,11 +136,11 @@ Tout le reste concernant les deux boîtes est identique, y compris les valeurs u
 
 #### HTML
 
-Le fragment HTML se compose de deux blocs {{HTMLElement("div")}} dont le mode d'écriture sera défini avec la propriété {{CSSxRef("writing-mode")}} selon que la classe HTML utilisée vaut `horizontal` ou `vertical`. Les deux boîtes utilisent la classe `standard-box`, qui fournit la coloration, le remplissage et les valeurs pour `max-block-size`.
+Le fragment HTML se compose de deux blocs {{HTMLElement("div")}} dont le mode d'écriture est défini avec la propriété {{CSSxRef("writing-mode")}} selon que la classe HTML utilisée vaut `horizontal` ou `vertical`. Les deux boîtes utilisent la classe `boite-standard`, qui fournit la coloration, le remplissage et les valeurs pour `max-block-size`.
 
 ```html
 <p>Writing mode <code>horizontal-tb</code> (par défaut)&nbsp;:</p>
-<div class="standard-box horizontal">
+<div class="boite-standard horizontal">
   Je m'appelle Ishmaël. Il y a quelques années, sans préciser davantage, n'ayant
   plus d'argent ou presque et rien de particulier à faire à terre, l'envie me
   prit de naviguer encore un peu et de revoir le monde de l'eau. C'est ma façon
@@ -148,7 +148,7 @@ Le fragment HTML se compose de deux blocs {{HTMLElement("div")}} dont le mode d'
 </div>
 
 <p>Writing mode <code>vertical-rl</code>&nbsp;:</p>
-<div class="standard-box vertical">
+<div class="boite-standard vertical">
   Je m'appelle Ishmaël. Il y a quelques années, sans préciser davantage, n'ayant
   plus d'argent ou presque et rien de particulier à faire à terre, l'envie me
   prit de naviguer encore un peu et de revoir le monde de l'eau. C'est ma façon
@@ -158,12 +158,12 @@ Le fragment HTML se compose de deux blocs {{HTMLElement("div")}} dont le mode d'
 
 #### CSS
 
-Le CSS définit trois classes. D'abord `standard-box`, qui est appliquée aux deux boîtes. Celle-ci fournit la mise en forme de base avec les tailles de bloc minimales et maximales, la taille de la police et ainsi de suite.
+Le CSS définit trois classes. D'abord `boite-standard`, qui est appliquée aux deux boîtes. Celle-ci fournit la mise en forme de base avec les tailles de bloc minimales et maximales, la taille de la police et ainsi de suite.
 
 On a ensuite les classes `horizontal` et `vertical`, qui ajoutent la propriété {{CSSxRef("writing-mode")}} à la boîte avec la valeur `horizontal-tb` ou `vertical-rl` selon la classe utilisée.
 
 ```css
-.standard-box {
+.boite-standard {
   padding: 4px;
   background-color: #abcdef;
   color: black;

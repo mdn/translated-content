@@ -74,7 +74,7 @@ html:active-view-transition {
 }
 ```
 
-次の段階では、アクティブなビュー遷移の `type` が `forwards`（「次へ」ボタンが押された場合）、`backwards`（「前へ」ボタンが押された場合」、または `upwards`（サムネイル画像がクリックされた場合）のいずれかによって、`image` の遷出ビューと遷入ビューに異なるアニメーションを適用します。これは、3 つの `:active-view-transition-type()` ルールセットを使用して行われます。各ルールセットは、それぞれの型に応じて、{{cssxref("animation-name")}} に `::view-transition-old()` および `::view-transition-new()` 擬似要素に異なる値を適用します。
+次の段階では、アクティブなビュー遷移の `type` が `forwards`（「次へ」ボタンが押された場合）、`backwards`（「前へ」ボタンが押された場合）、または `upwards`（サムネイル画像がクリックされた場合）のいずれかによって、`image` の遷出ビューと遷入ビューに異なるアニメーションを適用します。これは、3 つの `:active-view-transition-type()` ルールセットを使用して行われます。各ルールセットは、それぞれの型に応じて、{{cssxref("animation-name")}} に `::view-transition-old()` および `::view-transition-new()` 擬似要素に異なる値を適用します。
 
 ```css
 html:active-view-transition-type(forwards) {

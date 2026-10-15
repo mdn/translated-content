@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Cross-Origin-Resource-Policy`** (CORP) indique que le navigateur doit bloquer les requêtes inter-origines ou inter-sites [`no-cors`](/fr/docs/Web/API/RequestInit#no-cors) vers la ressource donnée.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Cross-Origin-Resource-Policy`** (CORP) indique que le navigateur doit bloquer les requêtes inter-origines ou inter-sites [`no-cors`](/fr/docs/Web/API/RequestInit#no-cors) vers la ressource donnée.
 
 Il définit la politique du propriétaire de la ressource concernant les sites/origines autorisés à charger cette ressource.
 
@@ -42,7 +42,7 @@ Pour plus d'exemples, voir https://resourcepolicy.fyi/.
 
 ### Interdire les requêtes `no-cors` inter-origines
 
-L'en-tête `Cross-Origin-Resource-Policy` ci-dessous fera en sorte que les agents utilisateurs compatibles refusent les requêtes `no-cors` inter-origines&nbsp;:
+L'en-tête `Cross-Origin-Resource-Policy` ci-dessous fait en sorte que les agents utilisateurs compatibles refusent les requêtes `no-cors` inter-origines&nbsp;:
 
 ```http
 Cross-Origin-Resource-Policy: same-origin

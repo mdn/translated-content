@@ -6,7 +6,7 @@ l10n:
   sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`suffix`** de la règle {{CSSxRef("@counter-style")}} permet de définir le contenu qui sera ajouté à la fin de la représentation du marqueur.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`suffix`** de la règle {{CSSxRef("@counter-style")}} permet de définir le contenu qui est ajouté à la fin de la représentation du marqueur.
 
 ## Syntaxe
 
@@ -22,7 +22,7 @@ suffix: url("bullet.png");
 Le descripteur **`suffix`** accepte comme valeur un seul `<symbol>`&nbsp;:
 
 - `<symbol>`
-  - : Spécifie un `<symbol>` qui est ajouté à la fin de la représentation du marqueur. Il peut s'agir d'une {{CSSxRef("&lt;string&gt;")}}, d'une {{CSSxRef("&lt;image&gt;")}} ou d'un {{CSSxRef("&lt;custom-ident&gt;")}}.
+  - : Définit un `<symbol>` qui est ajouté à la fin de la représentation du marqueur. Il peut s'agir d'une {{CSSxRef("&lt;string&gt;")}}, d'une {{CSSxRef("&lt;image&gt;")}} ou d'un {{CSSxRef("&lt;custom-ident&gt;")}}.
 
 ## Définition formelle
 
@@ -39,7 +39,7 @@ Le descripteur **`suffix`** accepte comme valeur un seul `<symbol>`&nbsp;:
 #### HTML
 
 ```html
-<ul class="choices">
+<ul class="choix">
   <li>Un</li>
   <li>Deux</li>
   <li>Trois</li>
@@ -56,7 +56,7 @@ Le descripteur **`suffix`** accepte comme valeur un seul `<symbol>`&nbsp;:
   suffix: ") ";
 }
 
-.choices {
+.choix {
   list-style: options;
 }
 ```

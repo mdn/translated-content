@@ -5,7 +5,7 @@ slug: Games/Tutorials
 
 Cette page contient plusieurs séries de tutoriels qui mettent en évidence différentes démarches pour créer efficacement différents types de jeux Web.
 
-- [Jeu 2D avec du pur JavaScript](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)
+- [Jeu 2D avec du pur JavaScript](/fr/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)
   - : Dans ce tutoriel étape par étape, vous implémenterez un jeu en utilisant du pur JavaScript. En cours de route, vous apprendrez les bases de l'utilisation de l'élément {{htmlelement ("canvas")}} pour implémenter les mécanismes fondamentaux du jeu tels que le rendu et les images en mouvement, la détection de collision, les mécanismes de contrôle et les états gagnants et perdants.
 - [Jeu 2D avec Phaser](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser)
   - : Dans ce tutoriel étape par étape, vous implémenterez un jeu en utilisant le framework de jeu HTML5 [Phaser](https://phaser.io/) . Cette idée ici est d'enseigner quelques-uns des fondamentaux (et des avantages) de travailler avec des cadres (_frameworks_), avec les mécanismes de jeu.

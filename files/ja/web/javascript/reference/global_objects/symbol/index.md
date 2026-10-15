@@ -89,7 +89,7 @@ Symbol.keyFor(Symbol.for("tokenString")) === "tokenString"; // true
 - {{jsxref("Symbol.dispose")}}
   - : オブジェクトがスコープ外に出た際に、そのオブジェクトのリソースを解放するメソッドです。 [`using`](/ja/docs/Web/JavaScript/Reference/Statements/using) 宣言で使用されます。
 - {{jsxref("Symbol.hasInstance")}}
-  - : コンストラクターオブジェクトがあるオブジェクトを自分のインスタンスとして認識するかどうかどうかを決定するメソッドです。{{jsxref("instanceof")}} から使用されます。
+  - : コンストラクターオブジェクトがあるオブジェクトを自分のインスタンスとして認識するかどうかを決定するメソッドです。{{jsxref("instanceof")}} から使用されます。
 - {{jsxref("Symbol.isConcatSpreadable")}}
   - : 論理値で、オブジェクトが配列要素に平坦化されるかどうかを示します。{{jsxref("Array.prototype.concat()")}} から使用されます。
 - {{jsxref("Symbol.iterator")}}

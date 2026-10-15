@@ -3,7 +3,7 @@ title: Propriété CSS `contain`
 short-title: contain
 slug: Web/CSS/Reference/Properties/contain
 l10n:
-  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
+  sourceCommit: 316367d0a304cf967691602672795825c05f835a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`contain`** indique qu'un élément et son contenu sont, autant que possible, indépendants du reste de l'arbre du document.
@@ -166,10 +166,10 @@ div {
 
 ```html
 <div class="contain-paint">
-  <p>Ce texte sera rogné aux limites de la boîte.</p>
+  <p>Ce texte est rogné aux limites de la boîte.</p>
 </div>
 <div>
-  <p>Ce texte ne sera pas rogné aux limites de la boîte.</p>
+  <p>Ce texte n'est pas rogné aux limites de la boîte.</p>
 </div>
 ```
 
@@ -192,7 +192,7 @@ L'exemple ci‑dessous montre comment les éléments se comportent avec et sans 
 </div>
 <div class="card">
   <h2>Carte 3</h2>
-  <!-- ... -->
+  <!-- … -->
 </div>
 ```
 
@@ -230,6 +230,7 @@ div {
 
 .float {
   float: left;
+  height: 40px;
   margin: 10px;
   background: aquamarine;
 }

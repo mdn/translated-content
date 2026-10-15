@@ -7,7 +7,7 @@ l10n:
 
 このページでは、さまざまなタイプのウェブゲームを効果的に作成するためのワークフローを紹介する、複数のチュートリアルシリーズを掲載しています。
 
-- [純粋な JavaScript を使ったブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)
+- [純粋な JavaScript を使ったブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)
   - : このステップバイステップのチュートリアルでは、純粋な JavaScript を使用してシンプルなブレイクアウトクローンを実装します。その過程で、 {{htmlelement("canvas")}} 要素を使用して、画像の描画や移動、衝突検出、制御機構、勝利と敗北状態などの基本的なゲームメカニズムを実装する基本を学びます。
 - [Phaser を使用した二次元ブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser)
   - : このステップバイステップのチュートリアルでは、前回のチュートリアルシリーズと同じブレイクアウトクローンを実装しますが、今回は、 [Phaser](https://phaser.io/) HTML ゲームフレームワークを使って実装します。このチュートリアルでは、フレームワークを使用する際の基本的なこと（および利点）を、基本的なゲームの仕組みと一緒に教えることを目的としています。

@@ -1,12 +1,14 @@
 ---
-title: HTML `<del>` 削除済みテキスト要素
+title: "`<del>` 削除済みテキスト要素 (HTML)"
 short-title: <del>
 slug: Web/HTML/Reference/Elements/del
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 15e1155ab8a0587405601cc4753bb789cd6ac47c
 ---
 
 **`<del>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書から削除された文字列の範囲を表します。これは例えば、「変更の追跡」や、ソースコードの差分情報を描画するときに使用することができます。{{HTMLElement("ins")}} 要素は逆の目的に、文書に追加された文字列を示すために用いることができます。
+
+一般的にこの要素は（必ずではありませんが）打ち消し線のスタイルを伴って描画されます。
 
 {{InteractiveExample("HTML デモ: &lt;del&gt;", "tabbed-standard")}}
 
@@ -35,8 +37,6 @@ blockquote {
   font-size: 1rem;
 }
 ```
-
-一般的にこの要素は（必ずではありませんが）打ち消し線のスタイルを伴って描画されます。
 
 ## 属性
 
@@ -74,7 +74,6 @@ del::after {
 
 スクリーンリーダーを使用する人によっては、特に冗長になるコンテンツのアナウンスを意図的に無効にしていることがあります。このため、この手法を悪用しないようにすることは重要であり、コンテンツが削除されていることを知らないと理解に影響するような場面でのみ使用するようにしてください。
 
-- [Short note on making your mark (more accessible) | Vispero](https://vispero.com/resources/short-note-on-making-your-mark-more-accessible/)
 - [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## 例

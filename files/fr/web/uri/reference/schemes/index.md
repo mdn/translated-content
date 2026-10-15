@@ -3,7 +3,7 @@ title: Schémas URI
 short-title: Schéma
 slug: Web/URI/Reference/Schemes
 l10n:
-  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 Le **schéma** d'une URI est la première partie de l'URI, avant le caractère `:`.
@@ -84,4 +84,4 @@ mailto:help@supercyberhelpdesk.info
 - [URIs](/fr/docs/Web/URI)
 - [URLs de données](/fr/docs/Web/URI/Reference/Schemes/data)
 - [URLs de ressources](/fr/docs/Web/URI/Reference/Schemes/resource)
-- [Liste IANA des schémas URI <sup>(angl.)</sup>](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
+- [Liste IANA des schémas URI <sup>(angl.)</sup>](https://www.iana.org/assignments/uri-schemes)

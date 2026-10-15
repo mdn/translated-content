@@ -10,7 +10,7 @@ Las Hojas de estilo en cascada (del ingles _Cascading Stylesheets_ {{glossary("C
 
 ## Itinerario de aprendizaje
 
-Antes de empezar con CSS deberemos conocer los fundamentos de HTML. Podemos trabajar este contenido en [introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) para posteriormente aprender:
+Antes de empezar con CSS deberemos conocer los fundamentos de HTML. Podemos trabajar este contenido en [introducción a HTML](/es/docs/Learn_web_development/Core/Structuring_content) para posteriormente aprender:
 
 - CSS, comenzando por el módulo de Introducción a CSS
 - [Módulos HTML](/es/docs/Learn_web_development/Core/Structuring_content#módulos) más avanzados

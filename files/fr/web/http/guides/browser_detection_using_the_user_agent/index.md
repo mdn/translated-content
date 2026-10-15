@@ -22,7 +22,7 @@ console.log(window.navigator.userAgent);
 Il peut être tentant d'analyser la chaîne de caractères AU (parfois appelée «&nbsp;analyseur d'agent utilisateur&nbsp;») et de modifier le comportement de votre site en fonction des valeurs de cette chaîne de caractères, mais cela est très difficile à faire de manière fiable et est souvent une source de bogues.
 
 Ce document décrit les pièges courants de l'utilisation de la chaîne de caractères AU pour la détection du navigateur et les alternatives recommandées.
-À la fin, nous fournissons quelques conseils pour la détection de l'AU en utilisant la chaîne de caractères, mais vous ne devriez le faire que si c'est absolument nécessaire&nbsp;!
+À la fin, nous fournissons quelques conseils pour la détection de l'AU en utilisant la chaîne de caractères, mais vous ne devez le faire que si c'est absolument nécessaire&nbsp;!
 
 ## Pourquoi la détection des fonctionnalités est préférable à la détection du navigateur
 
@@ -50,11 +50,11 @@ Ce code fait plusieurs hypothèses qui peuvent être incorrectes et qui cassent 
 
 1. Toutes les chaînes de caractères d'agent utilisateur qui incluent la sous-chaîne de caractères `Chrome` indiquent un navigateur Chrome.
 
-   L'un des plus grands problèmes de la détection des navigateurs basée sur les chaînes d'agent utilisateur est que les navigateurs et les agents utilisateurs prétendent régulièrement être un autre navigateur, ou incluent des informations basées sur plusieurs navigateurs.
+   L'un des plus grands problèmes de la détection des navigateurs basée sur les chaînes d'agent utilisateur est que les navigateurs et les agents utilisateurs prétendent rationnellement être un autre navigateur, ou incluent des informations basées sur plusieurs navigateurs.
 
 2. La fonctionnalité de précédence est toujours disponible si le navigateur est Chrome.
-   En réalité, le navigateur pourrait être une ancienne version de Chrome avant que la prise en charge ne soit ajoutée, ou il pourrait s'agir d'une version ultérieure de Chrome qui la supprime.
-3. Plus important encore, cela suppose qu'aucun autre navigateur ne prend en charge la fonctionnalité, alors qu'elle pourrait être ajoutée à n'importe quel autre navigateur à tout moment.
+   En réalité, le navigateur peut être une ancienne version de Chrome avant que la prise en charge ne soit ajoutée, ou il peut s'agir d'une version ultérieure de Chrome qui la supprime.
+3. Plus important encore, cela suppose qu'aucun autre navigateur ne prend en charge la fonctionnalité, alors qu'elle peut être ajoutée à n'importe quel autre navigateur à tout moment.
    Tous les navigateurs non correspondants sont bloqués en utilisant un repli inefficace.
 
 Il est important de noter que ces problèmes existent quel que soit le méthode de détection du navigateur&nbsp;; l'analyse de l'AU, les indices du client, la présence, l'absence ou le contenu d'autres en-têtes HTTP, et ainsi de suite.
@@ -117,7 +117,7 @@ Pour en savoir plus, consultez la documentation [Mettre en œuvre la détection 
 Une utilisation courante et incorrecte de l'analyse de l'agent utilisateur (et des [indications client](#indications_client)) est de détecter si le client est un appareil mobile.
 En général, les gens cherchent en réalité à savoir si l'appareil de l'utilisateur·ice est **adapté au toucher** et dispose d'un petit écran afin d'optimiser leur site en ajoutant, par exemple, un espacement supplémentaire aux boutons.
 
-Au lieu de cela, vous devriez détecter les fonctionnalités en utilisant des API modernes.
+Au lieu de cela, vous devez détecter les fonctionnalités en utilisant des API modernes.
 Par exemple, pour vérifier la prise en charge du toucher, essayez la propriété [`maxTouchPoints`](/fr/docs/Web/API/Navigator/maxTouchPoints) dans l'interface {{DOMxRef("Navigator")}}&nbsp;:
 
 ```js
@@ -128,10 +128,10 @@ if (navigator.maxTouchPoints > 1) {
 
 Pour d'autres préoccupations, comme la mise en page, utilisez du CSS moderne comme [les boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [les grilles](/fr/docs/Web/CSS/Guides/Grid_layout) pour des mises en page flexibles.
 Au lieu de masquer le contenu sur les écrans plus petits, ajustez la mise en page de manière dynamique.
-Les [requêtes de médias](/fr/docs/Web/CSS/Guides/Media_queries) devraient gérer la plupart des changements de mise en page, réduisant ainsi le besoin d'ajustements basés sur JavaScript.
+Les [requêtes de médias](/fr/docs/Web/CSS/Guides/Media_queries) doivent gérer la plupart des changements de mise en page, réduisant ainsi le besoin d'ajustements basés sur JavaScript.
 
 Si vous souhaitez garantir des transitions fluides lorsque les utilisateur·ice·s font pivoter leurs appareils ou passent entre différents modes d'écran, vous pouvez consulter [Détecter l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation).
-Pour les appareils pliables, il existe des API plus récentes telles que [l'API Device Posture](/fr/docs/Web/API/Device_Posture_API), bien que vous deviez vérifier les données de compatibilité, car le support varie considérablement.
+Pour les appareils pliables, il existe des API plus récentes telles que [l'API Device Posture](/fr/docs/Web/API/Device_Posture_API), bien que vous devez vérifier les données de compatibilité, car le support varie considérablement.
 
 ### Indications client
 
@@ -140,9 +140,9 @@ Dans les indications client, le serveur demande de manière proactive des inform
 
 Les indications client sont meilleures que l'analyse de l'agent utilisateur pour détecter les navigateurs basés sur Blink, car elles ne sont pas aussi couramment falsifiées et elles fournissent des informations plus petites et plus fiables, plus faciles à analyser.
 Modifier la fonctionnalité du site en fonction des indications client reste une mauvaise idée&nbsp;!
-Dans la mesure du possible, vous devriez plutôt utiliser la détection des fonctionnalités et l'amélioration progressive [comme décrit ci-dessus](#pourquoi_la_détection_des_fonctionnalités_est_préférable_à_la_détection_du_navigateur).
+Dans la mesure du possible, vous devez plutôt utiliser la détection des fonctionnalités et l'amélioration progressive [comme décrit ci-dessus](#pourquoi_la_détection_des_fonctionnalités_est_préférable_à_la_détection_du_navigateur).
 
-Par exemple, dans le mécanisme HTTP, le serveur inclut un en-tête {{HTTPHeader("Accept-CH")}} avec une liste d'en-têtes qui devraient être inclus par le client dans les requêtes suivantes.
+Par exemple, dans le mécanisme HTTP, le serveur inclut un en-tête {{HTTPHeader("Accept-CH")}} avec une liste d'en-têtes qui doivent être inclus par le client dans les requêtes suivantes.
 Supposons que le serveur envoie cette réponse au client&nbsp;:
 
 ```http
@@ -180,16 +180,16 @@ Assurez-vous de vérifier les détails de [Compatibilité des navigateurs](/fr/d
 
 Si vous envisagez encore la détection du navigateur au lieu de la détection des fonctionnalités et de l'amélioration progressive, vérifiez si vous êtes motivé par les raisons (invalides) suivantes&nbsp;:
 
-- **Vous essayez de contourner un bug spécifique dans une certaine version du navigateur**
+- **Vous essayez de contourner un bogue spécifique dans une certaine version du navigateur**
   - : Il est peu probable que vous soyez la première personne à le rencontrer.
-    Des experts ou des personnes ayant un autre point de vue peuvent vous donner des indices pour mieux éviter ou contourner le bug.
-    Si le problème est rare, il vaut la peine de vérifier si ce bug a été signalé au fournisseur du navigateur avec des systèmes de suivi des bogues ([Mozilla <sup>(angl.)</sup>](https://bugzilla.mozilla.org/); [WebKit <sup>(angl.)</sup>](https://bugs.webkit.org/); [Blink <sup>(angl.)</sup>](https://www.chromium.org/issue-tracking/); [Opera <sup>(angl.)</sup>](https://bugs.opera.com/)).
-    Les fabricants de navigateurs prêtent attention aux rapports de bugs, et le vôtre peut aider à corriger ou à fournir des solutions de contournement plus fiables pour un problème.
+    Des experts ou des personnes ayant un autre point de vue peuvent vous donner des indices pour mieux éviter ou contourner le bogue.
+    Si le problème est rare, il vaut la peine de vérifier si ce bogue a été signalé au fournisseur du navigateur avec des systèmes de suivi des bogues ([Mozilla <sup>(angl.)</sup>](https://bugzilla.mozilla.org/); [WebKit <sup>(angl.)</sup>](https://bugs.webkit.org/); [Blink <sup>(angl.)</sup>](https://www.chromium.org/issue-tracking/); [Opera <sup>(angl.)</sup>](https://bugs.opera.com/)).
+    Les fabricants de navigateurs prêtent attention aux rapports de bogues, et le vôtre peut aider à corriger ou à fournir des solutions de contournement plus fiables pour un problème.
 - **Servir un HTML différent en fonction du navigateur du/de la visiteur·euse**
   - : C'est généralement une mauvaise idée, mais il existe de rares cas où cela est nécessaire.
     Pouvez-vous l'éviter en ajoutant des éléments non sémantiques {{HTMLElement("div")}} ou {{HTMLElement("span")}}&nbsp;?
     Considérez s'il y a réellement un problème avec votre conception&nbsp;: pouvez-vous utiliser l'amélioration progressive ou des mises en page fluides pour aider à supprimer votre besoin de le faire&nbsp;?
-    L'effort nécessaire pour appliquer une détection précise de l'agent utilisateur par rapport à la refonte de votre HTML devrait être un facteur décisif.
+    L'effort nécessaire pour appliquer une détection précise de l'agent utilisateur par rapport à la refonte de votre HTML doit être un facteur décisif.
 - **Essayer de savoir si le navigateur d'un·e visiteur·euse possède une fonctionnalité spécifique**
   - : Votre site doit utiliser une fonctionnalité spécifique que certains navigateurs ne prennent pas encore en charge, et vous souhaitez que les utilisateur·ice·s avec des navigateurs incompatibles voient un site plus ancien avec moins de fonctionnalités que vous savez fonctionner.
     C'est la pire raison d'utiliser la détection de l'agent utilisateur, car tous les navigateurs finissent par rattraper leur retard.
@@ -205,7 +205,7 @@ Malheureusement, il n'existe pas d'uniformité dans les différentes parties de 
 Les navigateurs partageant un {{Glossary("engine/rendering", "moteur de rendu")}} commun affichant une page de la même manière&nbsp;: il est souvent raisonnable de supposer que ce qui fonctionne dans un navigateur fonctionne dans l'autre.
 Il existe trois principaux moteurs de rendu actifs&nbsp;: {{Glossary("Blink")}}, {{Glossary("Gecko")}} et {{Glossary("WebKit")}}.
 
-Le moteur de rendu est la chaîne de caractères `Gecko/20100101` dans l'exemple suivant, indiquant que le moteur de rendu est `Gecko`, et le «&nbsp;gecko-Trail&nbsp;» est la chaîne fixe `20100101`, ce qui signifie «&nbsp;bureau&nbsp;»&nbsp;:
+Le moteur de rendu est la chaîne de caractères `Gecko/20100101` dans l'exemple suivant, indiquant que le moteur de rendu est `Gecko`, et le «&nbsp;gecko-Trail&nbsp;» est la chaîne de caractères fixe `20100101`, ce qui signifie «&nbsp;bureau&nbsp;»&nbsp;:
 
 ```http
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/20100101 Firefox/138.0
@@ -213,7 +213,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/201001
 
 Détecter les noms des moteurs de rendu est courant sur les sites web, et de nombreux agents utilisateurs ont historiquement ajouté d'autres noms de rendu pour éviter que les sites web ne les excluent uniquement en fonction du nom du moteur de rendu.
 Il est donc important de faire attention à ne pas déclencher de faux positifs lors de la détection du moteur de rendu, car cette méthode est particulièrement peu fiable.
-Considérez la chaîne UA suivante envoyée par Chrome 134 sur macOS&nbsp;:
+Considérez la chaîne d'agent utilisateur suivante envoyée par Chrome 134 sur macOS&nbsp;:
 
 ```http
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
@@ -252,7 +252,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/201001
 Certains navigateurs envoient des informations contradictoires&nbsp;: Chrome, par exemple, rapporte à la fois Chrome et Safari.
 Donc, pour détecter Safari, vous devez vérifier la présence de la chaîne de caractères Safari et l'absence de la chaîne de caractères Chrome, Chromium se rapporte souvent à lui-même comme Chrome et SeaMonkey se rapporte à lui-même comme Firefox.
 
-Faites attention lorsque vous utilisez des expressions régulières sur la partie `BrowserName`, car les agents utilisateurs contiennent également des chaînes de caractères autour de la syntaxe Keyword/Value.
+Faites attention lorsque vous utilisez des expressions rationnelles sur la partie `BrowserName`, car les agents utilisateurs contiennent également des chaînes de caractères autour de la syntaxe Keyword/Value.
 Safari et Chrome contiennent la chaîne de caractères `like Gecko`, par exemple.
 
 | Nom du navigateur                  | Doit contenir   | Ne doit pas contenir           |
@@ -304,7 +304,7 @@ Le tableau suivant résume la manière dont les fournisseurs de navigateurs cour
 | Edge sur Windows 10 Mobile                                           | Jetons `Mobile/xyz` et `Edge/` à l'extérieur du commentaire. | `Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Mobile Safari/537.36 Edge/16.16299` |
 
 En bref, vous pouvez rechercher la chaîne de caractères `Mobi` n'importe où dans la chaîne de caractères de l'agent utilisateur.
-Si l'appareil est suffisamment grand pour ne pas être identifié par `Mobi`, vous devriez lui proposer votre site pour ordinateur de bureau (qui, conformément aux bonnes pratiques, devrait de toute façon prendre en charge la saisie tactile, car les appareils de bureau peuvent être équipés d'écrans tactiles).
+Si l'appareil est suffisamment grand pour ne pas être identifié par `Mobi`, vous devez lui proposer votre site pour ordinateur de bureau (qui, conformément aux bonnes pratiques, doit de toute façon prendre en charge la saisie tactile, car les appareils de bureau peuvent être équipés d'écrans tactiles).
 
 ## Voir aussi
 

@@ -2,7 +2,7 @@
 title: <a>
 slug: Web/SVG/Reference/Element/a
 l10n:
-  sourceCommit: 94a841dba1498c685a18e72d041fd9057f302d6c
+  sourceCommit: 8ae90c06d95ae6d0ccae0feb06ccab676fafbd24
 ---
 
 L'élément [SVG](/fr/docs/Web/SVG) **`<a>`** crée un lien hypertexte vers d'autres pages web, fichiers, emplacements dans la page en cours, adresses email, ou toute autre URL. Il est très similaire à l'élément HTML {{HTMLElement("a")}}.
@@ -21,19 +21,19 @@ L'élément `<a>` de SVG est un conteneur, ce qui signifie que vous pouvez crée
 - {{SVGAttr("href")}}
   - : Une {{Glossary("URL")}} ou un fragment d'URL vers lequel le lien hypertexte pointe.
     _Type de valeur_&nbsp;: **[`<URL>`](/fr/docs/Web/SVG/Guides/Content_type#url)**&nbsp;; _Valeur par défaut_&nbsp;: _aucune_&nbsp;; _Peut être animé_&nbsp;: **oui**
-- [`hreflang`](/fr/docs/Web/HTML/Reference/Elements/a#hreflang)
+- {{SVGAttr("hreflang")}}
   - : La langue humaine de l'URL ou du fragment d'URL vers lequel le lien hypertexte pointe.
     _Type de valeur_&nbsp;: **`<string>`**&nbsp;; _Valeur par défaut_&nbsp;: _aucune_&nbsp;; _Peut être animé_&nbsp;: **non**
 - [`interestfor`](/fr/docs/Web/HTML/Reference/Elements/a#interestfor) {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Définit l'élément `<a>` comme un **déclencheur d'intérêt**. Sa valeur est un `id` d'un élément cible qui est affecté d'une manière ou d'une autre (normalement affiché ou masqué) lorsque l'intérêt est montré ou perdu sur l'élément déclencheur (par exemple, en survolant/cessant de survoler ou en sélectionnant/perdant la sélection). Voir [Utiliser les déclencheurs d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) pour plus de détails et d'exemples.
     _Type de valeur_&nbsp;: **`<string>`**&nbsp;; _Valeur par défaut_&nbsp;: _aucune_&nbsp;; _Peut être animé_&nbsp;: **non**
-- [`ping`](/fr/docs/Web/HTML/Reference/Elements/a#ping) {{Experimental_Inline}}
+- {{SVGAttr("ping")}} {{Experimental_Inline}}
   - : Une liste d'URL séparées par des espaces auxquelles le navigateur envoie des requêtes {{HTTPMethod("POST")}} avec le corps `PING` lorsque le lien hypertexte est suivi (en arrière-plan). Cet attribut sert généralement au suivi. Pour une fonctionnalité mieux prise en charge qui répond aux mêmes cas d'utilisation, voir {{DOMxRef("Navigator.sendBeacon()")}}.
     _Type de valeur_&nbsp;: **[`<list-of-URLs>`](/fr/docs/Web/SVG/Guides/Content_type#list-of-ts)**&nbsp;; _Valeur par défaut_&nbsp;: _aucune_&nbsp;; _Peut être animé_&nbsp;: **non**
-- [`referrerpolicy`](/fr/docs/Web/HTML/Reference/Elements/a#referrerpolicy)
+- {{SVGAttr("referrerpolicy")}}
   - : Quel [référent](/fr/docs/Web/HTTP/Reference/Headers/Referer) envoyer lors de la récupération de {{Glossary("URL", "l'URL")}}.
     _Type de valeur_&nbsp;: `no-referrer` | `no-referrer-when-downgrade` | `same-origin` | `origin` | `strict-origin` | `origin-when-cross-origin` | `strict-origin-when-cross-origin` | `unsafe-url`&nbsp;; _Valeur par défaut_&nbsp;: _aucune_&nbsp;; _Peut être animé_&nbsp;: **non**
-- [`rel`](/fr/docs/Web/HTML/Reference/Elements/a#rel)
+- {{SVGAttr("rel")}}
   - : La relation entre l'objet cible et l'objet lien.
     _Type de valeur_&nbsp;: **[`<list-of-Link-Types>`](/fr/docs/Web/HTML/Reference/Attributes/rel)**&nbsp;; _Valeur par défaut_&nbsp;: _aucune_&nbsp;; _Peut être animé_&nbsp;: **non**
 - {{SVGAttr("target")}}
