@@ -45,7 +45,7 @@ const t = Temporal.Now.instant();
 "".concat(t); // '2022-07-31T04:48:56.113918308Z'
 ```
 
-Se advierte no usar `"" + x` para realizar coerción de strings.
+Se recomienda no usar `"" + x` para realizar la [coerción a string](/es/docs/Web/JavaScript/Reference/Global_Objects/String).
 
 ## Ejemplos
 
