@@ -1,5 +1,5 @@
 ---
-title: "Raison : Les informations d'identification ne sont pas prises en charge si l'en-tête CORS « Access-Control-Allow-Origin » est « * »"
+title: "Raison : L'authentification n'est pas prise en charge si l'en-tête CORS « Access-Control-Allow-Origin » est « * »"
 slug: Web/HTTP/Guides/CORS/Errors/CORSNotSupportingCredentials
 l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
@@ -8,7 +8,7 @@ l10n:
 ## Raison
 
 ```plain
-Raison : Les informations d'identification ne sont pas prises en charge si l'en-tête CORS « Access-Control-Allow-Origin » est « * »
+Raison : L'authentification n'est pas prise en charge si l'en-tête CORS « Access-Control-Allow-Origin » est « * »
 ```
 
 En anglais&nbsp;:
