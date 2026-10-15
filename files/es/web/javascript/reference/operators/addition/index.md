@@ -75,7 +75,7 @@ No puedes mezclar operandos BigInt y numérico en una suma. `null`, `undefined`,
 2 + 1n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 ```
 
-Los string tienen prioridad sobre otros tipos, asi que sumar un string a un BigInt produce una concatenación de string en vez de un `TypeError`.
+Los string tienen prioridad sobre otros tipos, así que sumar un string a un BigInt produce una concatenación de string en vez de un `TypeError`.
 
 ```js
 "1" + 2n; // "12"
