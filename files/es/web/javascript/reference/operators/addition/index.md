@@ -1,32 +1,34 @@
 ---
 title: Adición (+)
 slug: Web/JavaScript/Reference/Operators/Addition
+l10n:
+  sourceCommit: 1133f9e054bad2340b98a608b7894fd7daa62af6
 ---
 
 {{jsSidebar("Operators")}}
 
 El operador de adición (`+`) produce la suma de operandos numéricos o la concatenación de (cadenas) string.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Addition operator")}}
+{{InteractiveExample("JavaScript Demo: Expresiones - Operador de adición")}}
 
 ```js interactive-example
 console.log(2 + 2);
-// Expected output: 4
+// Salida esperada: 4
 
 console.log(2 + true);
-// Expected output: 3
+// Salida esperada: 3
 
-console.log("hello " + "everyone");
-// Expected output: "hello everyone"
+console.log("Hola " + "a todos");
+// Salida esperada: "Hola a todos"
 
 console.log(2001 + ": A Space Odyssey");
-// Expected output: "2001: A Space Odyssey"
+// Salida esperada: "2001: A Space Odyssey"
 ```
 
 ## Sintaxis
 
 ```
-Operator: x + y
+Operador: x + y
 ```
 
 ## Descripción
@@ -52,53 +54,58 @@ Se recomienda no usar `"" + x` para realizar la [coerción a string](/es/docs/We
 ### Adición numérica
 
 ```js
-// Número + Número -> adición
-1 + 2; // 3
+// número + número -> resultado de la adición
+1 + 2; // Salida esperada: 3
 
-// Booleano + Número -> adición
-true + 1; // 2
+// booleano + número -> resultado de la adición
+true + 1; // Salida esperada: 2
 
-// Booleano + Booleano -> adición
-false + false; // 0
+// booleano + booleano -> resultado de la adición
+false + false; // Salida esperada: 0
 ```
 
 ### Adición usando BigInts
 
 ```js
-1n + 2n; // 3n
+1n + 2n; // Salida esperada: 3n
 ```
 
 No puedes mezclar operandos BigInt y numérico en una suma. `null`, `undefined`, y valores booleanos son coercionados a números y quedan prohibidos también.
 
 ```js example-bad
-1n + 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
-2 + 1n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+1n + 2; // La consola arrojará TypeError: Cannot mix BigInt and other types, use explicit conversions
+2 + 1n; // La consola arrojará TypeError: Cannot mix BigInt and other types, use explicit conversions
 ```
 
 Los string tienen prioridad sobre otros tipos, así que sumar un string a un BigInt produce una concatenación de string en vez de un `TypeError`.
 
 ```js
-"1" + 2n; // "12"
+"1" + 2n; // Salida esperada: "12"
 ```
 
 Para realizar una suma entre un operando BigInt y uno que no es BigInt, convierte cualquiera de los operandos:
 
 ```js
-1n + BigInt(2); // 3n
-Number(1n) + 2; // 3
+1n + BigInt(2); // Salida esperada: 3n
+Number(1n) + 2; // Salida esperada: 3
 ```
 
-### Concatenación de (cadenas) String
+### Concatenación de strings
+
+Si uno de los operandos es un string, el otro operando es convertido a string y son concatenados:
 
 ```js
-// String + String -> concatenación
+// string + string -> concatenación
 "fut" + "bol"; // "futbol"
 
-// Número + String -> concatenación
-5 + "oh"; // "5oh"
+// número + string -> concatenación
+5 + "bol"; // "5bol"
 
-// String + Booleano -> concatenación
+// string + booleano -> concatenación
 "fut" + false; // "futfalse"
+
+// string + número -> concatenación
+"2" + 2; // "22"
 ```
 
 ## Especificaciones
@@ -109,14 +116,14 @@ Number(1n) + 2; // 3
 
 {{Compat}}
 
-## También revisa
+## Véase también
 
-- [Subtraction operator](/es/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](/es/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/es/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](/es/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](/es/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](/es/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](/es/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](/es/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](/es/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [Sustracción (`-`)](/es/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [División (`/`)](/es/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplicación (`*`)](/es/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Resto (`%`)](/es/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Exponenciación (`**`)](/es/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Incremento (`++`)](/es/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decremento (`--`)](/es/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Negación unaria (`-`)](/es/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unario más (`+`)](/es/docs/Web/JavaScript/Reference/Operators/Unary_plus)
