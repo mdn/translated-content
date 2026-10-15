@@ -134,7 +134,7 @@ Age: 86400
 …
 ```
 
-Le client qui reçoit cette réponse la trouve fraîche pour les 518400 secondes restantes, la différence entre le `max-age` de la réponse et l'`Age`.
+Le client qui reçoit cette réponse la trouve fraîche pour les 518400 secondes restantes, la différence entre le `max-age` de la réponse et `Age`.
 
 ## `Expires` ou `max-age`
 
@@ -154,11 +154,11 @@ Si les en-têtes {{HTTPHeader("Expires")}} et [`Cache-Control: max-age`](/fr/doc
 
 La manière dont les réponses sont distinguées les unes des autres repose essentiellement sur leurs URL&nbsp;:
 
-| URL                              | Corps de la réponse      |
-| -------------------------------- | ------------------------ |
-| `https://example.com/index.html` | `<!doctype html>...`     |
-| `https://example.com/style.css`  | `body { ...`             |
-| `https://example.com/script.js`  | `function main () { ...` |
+| URL                              | Corps de la réponse    |
+| -------------------------------- | ---------------------- |
+| `https://example.com/index.html` | `<!doctype html>…`     |
+| `https://example.com/style.css`  | `body { …`             |
+| `https://example.com/script.js`  | `function main () { …` |
 
 Cependant, le contenu des réponses n'est pas toujours le même, même si elles ont la même URL. Surtout lorsque la négociation de contenu est effectuée, la réponse du serveur peut dépendre des valeurs des en-têtes de requête `Accept`, `Accept-Language` et `Accept-Encoding`.
 
@@ -170,12 +170,12 @@ Vary: Accept-Language
 
 Cela fait en sorte que le cache soit indexé en fonction d'une combinaison de l'URL de la réponse et de l'en-tête de requête `Accept-Language` — plutôt que d'être basé uniquement sur l'URL de la réponse.
 
-| URL                              | `Accept-Language` | Corps de la réponse      |
-| -------------------------------- | ----------------- | ------------------------ |
-| `https://example.com/index.html` | `ja-JP`           | `<!doctype html>...`     |
-| `https://example.com/index.html` | `en-US`           | `<!doctype html>...`     |
-| `https://example.com/style.css`  | `ja-JP`           | `body { ...`             |
-| `https://example.com/script.js`  | `ja-JP`           | `function main () { ...` |
+| URL                              | `Accept-Language` | Corps de la réponse    |
+| -------------------------------- | ----------------- | ---------------------- |
+| `https://example.com/index.html` | `ja-JP`           | `<!doctype html>…`     |
+| `https://example.com/index.html` | `en-US`           | `<!doctype html>…`     |
+| `https://example.com/style.css`  | `ja-JP`           | `body { …`             |
+| `https://example.com/script.js`  | `ja-JP`           | `function main () { …` |
 
 Cependant, si vous fournissez une optimisation du contenu (par exemple, pour un design réactif) basée sur l'agent utilisateur, vous pouvez être tenté d'inclure `User-Agent` dans la valeur de l'en-tête `Vary`. Cependant, l'en-tête de requête `User-Agent` a généralement un très grand nombre de variations, ce qui réduit considérablement les chances que le cache soit réutilisé. Donc, si possible, envisagez plutôt une manière de varier le comportement en fonction de la détection des fonctionnalités plutôt qu'en fonction de l'en-tête de requête `User-Agent`.
 
@@ -327,7 +327,7 @@ Les sections suivantes examinent les circonstances plus en détail.
 
 ### Ne pas partager avec d'autres
 
-Il serait problématique qu'une réponse contenant du contenu personnalisé soit visible de manière inattendue par d'autres utilisateur·ice·s d'un cache.
+Il est problématique qu'une réponse contenant du contenu personnalisé soit visible de manière inattendue par d'autres utilisateur·ice·s d'un cache.
 
 Dans ce cas, l'utilisation de la directive `private` fait en sorte que la réponse personnalisée ne soit stockée que par le client spécifique et ne soit pas divulguée à d'autres utilisateur·ice·s du cache.
 
@@ -367,7 +367,7 @@ Cache-Control: no-cache, private
 
 ### Ce qui est perdu avec `no-store`
 
-Vous pouvez penser qu'ajouter `no-store` serait la bonne façon de se désengager de la mise en cache.
+Vous pouvez penser qu'ajouter `no-store` est la bonne façon de se désengager de la mise en cache.
 
 Cependant, il n'est pas recommandé d'accorder `no-store` de manière libérale, car vous perdez de nombreux avantages que HTTP et les navigateurs offrent, y compris le cache arrière/avant du navigateur.
 
@@ -395,7 +395,7 @@ If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
 
 (Les requêtes provenant de Chrome, Edge et Firefox ressemblent beaucoup à ce qui précède&nbsp;; les requêtes provenant de Safari sont un peu différentes.)
 
-La directive `max-age=0` dans la requête définit la «&nbsp;réutilisation des réponses avec un âge de 0 ou moins&nbsp;» — donc, en effet, les réponses stockées intermédiairement ne sont pas réutilisées.
+La directive `max-age=0` dans la requête définit la «&nbsp;réutilisation des réponses avec un âge de 0 ou moins&nbsp;» — donc, en effet, les réponses stockées par un intermédiaire ne sont pas réutilisées.
 
 Par conséquent, une requête est validée par `If-None-Match` et `If-Modified-Since`.
 

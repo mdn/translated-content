@@ -3,7 +3,7 @@ title: Liste des valeurs par défaut de l'en-tête Accept
 short-title: Valeurs par défaut de Accept
 slug: Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values
 l10n:
-  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
+  sourceCommit: 7b642841e72ef94e8723f26892000383513b550d
 ---
 
 Cet article documente les valeurs par défaut de l'en-tête HTTP [`Accept`](/fr/docs/Web/HTTP/Reference/Headers/Accept) pour des entrées et des versions de navigateurs spécifiques.
@@ -42,16 +42,17 @@ C'est généralement utilisé pour les requêtes initiées par la barre d'adress
 
 Lorsqu'une image est demandée, par exemple avec un élément HTML {{HTMLElement("img")}}, l'agent utilisateur définit souvent une liste spécifique de types de médias acceptés.
 
-| Agent utilisateur                          | Valeur                                                                     |
-| ------------------------------------------ | -------------------------------------------------------------------------- |
-| Firefox 128 et versions ultérieures [1]    | `image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5`    |
-| Firefox 92 à 127 [1]                       | `image/avif,image/webp,*/*`                                                |
-| Firefox 65 à 91 [1]                        | `image/webp,*/*`                                                           |
-| Firefox 47 à 63 [1]                        | `*/*`                                                                      |
-| Firefox antérieur à 47 [1]                 | `image/png,image/*;q=0.8,*/*;q=0.5`                                        |
-| Safari (depuis Mac OS Big Sur)             | `image/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5` |
-| Safari (avant Mac OS Big Sur)              | `image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5`            |
-| Chrome et Edge 121 et versions ultérieures | `image/avif,image/webp,image/apng,image/*,*/*;q=0.8`                       |
+| Agent utilisateur                          | Valeur                                                                            |
+| ------------------------------------------ | --------------------------------------------------------------------------------- |
+| Firefox 158 et versions ultérieures [1]    | `image/avif,image/jxl,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5` |
+| Firefox 128 à 157 [1]                      | `image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5`           |
+| Firefox 92 à 127 [1]                       | `image/avif,image/webp,*/*`                                                       |
+| Firefox 65 à 91 [1]                        | `image/webp,*/*`                                                                  |
+| Firefox 47 à 63 [1]                        | `*/*`                                                                             |
+| Firefox antérieur à 47 [1]                 | `image/png,image/*;q=0.8,*/*;q=0.5`                                               |
+| Safari (depuis Mac OS Big Sur)             | `image/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5`        |
+| Safari (avant Mac OS Big Sur)              | `image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5`                   |
+| Chrome et Edge 121 et versions ultérieures | `image/avif,image/webp,image/apng,image/*,*/*;q=0.8`                              |
 
 \[1] La valeur peut être définie sur une chaîne de caractères arbitraire à l'aide du paramètre `image.http.accept` (_[source <sup>(angl.)</sup>](https://searchfox.org/firefox-main/search?q=image.http.accept)_).
 
