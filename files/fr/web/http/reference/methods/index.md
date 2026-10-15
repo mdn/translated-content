@@ -3,24 +3,27 @@ title: Méthodes de requête HTTP
 short-title: Méthodes de requête
 slug: Web/HTTP/Reference/Methods
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 346e46c6e10334bf60df2a0a4ef58ebea4c80a4e
 ---
 
 <abbr title="Hypertext Transfer Protocol">HTTP</abbr> définit un ensemble de **méthodes de requête** pour indiquer le but de la requête et ce qui est attendu en cas de succès.
 Bien qu'elles puissent aussi être des noms, ces méthodes de requête sont parfois appelées _verbes HTTP_.
-Chaque méthode possède sa propre sémantique, mais certaines caractéristiques sont partagées entre plusieurs méthodes&nbsp;: les méthodes de requête peuvent être {{Glossary("Safe/HTTP", "sûre")}}, {{Glossary("idempotent", "idempotente")}} ou {{Glossary("cacheable", "cachable")}}.
+Chaque méthode possède sa propre sémantique, mais certaines caractéristiques sont partagées entre plusieurs méthodes&nbsp;: les méthodes de requête peuvent être {{Glossary("Safe/HTTP", "sûre")}}, {{Glossary("idempotent", "idempotente")}} ou {{Glossary("cacheable", "mise en cache")}}.
 
 - {{HTTPMethod("GET")}}
-  - : La méthode `GET` demande une représentation de la ressource spécifiée.
+  - : La méthode `GET` demande une représentation de la ressource définie.
     Les requêtes utilisant `GET` doivent uniquement récupérer des données et ne doivent pas contenir de {{Glossary("HTTP Content", "contenu")}} de requête.
+- {{HTTPMethod("QUERY")}}
+  - : La méthode `QUERY` initie une requête côté serveur. Elle demande que la ressource cible traite le contenu de la requête de manière sûre et idempotente, en renvoyant le résultat dans la réponse.
+    Elle est similaire à `GET`, mais permet un contenu de requête avec une sémantique définie.
 - {{HTTPMethod("HEAD")}}
   - : La méthode `HEAD` demande une réponse identique à une requête `GET`, mais sans le corps de la réponse.
 - {{HTTPMethod("POST")}}
-  - : La méthode `POST` soumet une entité à la ressource spécifiée, provoquant souvent un changement d'état ou des effets secondaires sur le serveur.
+  - : La méthode `POST` envoie une entité à la ressource définie, provoquant souvent un changement d'état ou des effets secondaires sur le serveur.
 - {{HTTPMethod("PUT")}}
   - : La méthode `PUT` remplace toutes les représentations actuelles de la ressource cible par le {{Glossary("HTTP Content", "contenu")}} de la requête.
 - {{HTTPMethod("DELETE")}}
-  - : La méthode `DELETE` supprime la ressource spécifiée.
+  - : La méthode `DELETE` supprime la ressource définie.
 - {{HTTPMethod("CONNECT")}}
   - : La méthode `CONNECT` établit un tunnel vers le serveur identifié par la ressource cible.
 - {{HTTPMethod("OPTIONS")}}
@@ -30,13 +33,14 @@ Chaque méthode possède sa propre sémantique, mais certaines caractéristiques
 - {{HTTPMethod("PATCH")}}
   - : La méthode `PATCH` applique des modifications partielles à une ressource.
 
-## Méthodes sûres, idempotentes et cachables
+## Méthodes sûres, idempotentes et mises en cache
 
 Le tableau suivant liste les méthodes de requête HTTP et leur catégorisation en termes de sûreté, de possibilité de mise en cache et d'idempotence.
 
-| Méthode                   | Sûre | Idempotente | Cachable         |
+| Méthode                   | Sûre | Idempotente | Mise en cache    |
 | ------------------------- | ---- | ----------- | ---------------- |
 | {{HTTPMethod("GET")}}     | Oui  | Oui         | Oui              |
+| {{HTTPMethod("QUERY")}}   | Oui  | Oui         | Oui              |
 | {{HTTPMethod("HEAD")}}    | Oui  | Oui         | Oui              |
 | {{HTTPMethod("OPTIONS")}} | Oui  | Oui         | Non              |
 | {{HTTPMethod("TRACE")}}   | Oui  | Oui         | Non              |
@@ -46,7 +50,7 @@ Le tableau suivant liste les méthodes de requête HTTP et leur catégorisation 
 | {{HTTPMethod("PATCH")}}   | Non  | Non         | Conditionnelle\* |
 | {{HTTPMethod("CONNECT")}} | Non  | Non         | Non              |
 
-\* `POST` et `PATCH` sont cachables lorsque les réponses incluent explicitement des informations de [fraîcheur](/fr/docs/Web/HTTP/Guides/Caching) et un en-tête {{HTTPHeader("Content-Location")}} correspondant.
+\* `POST` et `PATCH` sont mises en cache lorsque les réponses incluent explicitement des informations de [fraîcheur](/fr/docs/Web/HTTP/Guides/Caching) et un en-tête {{HTTPHeader("Content-Location")}} correspondant.
 
 ## Spécifications
 
