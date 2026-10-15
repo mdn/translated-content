@@ -32,7 +32,7 @@ Operator: x + y
 ## Descripción
 
 El operador (`+`) se sobrecarga por dos operaciones distintas: suma numérica y concatenación de string (cadena de caracteres). Cuando evalua, primero coerciona ambos operandos a sus valores primitivos. Después, los dos tipos de los operandos son probados en el siguiente orden:
-- Si un lado es un string, el otro operando es también convertido a string y ambos son concatenados.
+- Si un lado es un string, el otro operando también se [convierte a string](/es/docs/Web/JavaScript/Reference/Global_Objects/String) y ambos se concatenan.
 - Si ambos son [BigInts](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt), se realiza la suma de BigInt. Si un lado de la operación es un BigInt y el otro no, la operación arroja un {{jsxref("TypeError")}}.
 - Como última opción, ambos valores se [convierten a números](/es/docs/Web/JavaScript/Reference/Global_Objects/Number) y se realiza la suma numérica.
 
