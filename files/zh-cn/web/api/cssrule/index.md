@@ -36,7 +36,7 @@ l10n:
 - {{domxref("CSSRule.cssText")}}
   - : 表示该规则的文本形式，例如 `"h1,h2 { font-size: 16pt }"` 或 `"@import 'url'"`。要访问或修改规则的各部分（例如示例中“font-size”的值），请使用该规则类型专用接口上的属性（见上文）。
 - {{domxref("CSSRule.parentRule")}} {{ReadOnlyInline}}
-  - : 返回包含此规则的规则，否则为 `null`。例如，如果此规则是 {{cssxref("@media")}} 块内的样式规则，则父规则为该 {{domxref("CSSMediaRule")}}。
+  - : 返回包含此规则的规则，否则为 `null`。例如，如果此规则是 {{cssxref("@media")}} 块内的样式规则，则父规则为 {{domxref("CSSMediaRule")}}。
 - {{domxref("CSSRule.parentStyleSheet")}} {{ReadOnlyInline}}
   - : 返回包含此规则的样式表所对应的 {{domxref("CSSStyleSheet")}} 对象。
 - {{domxref("CSSRule.type")}} {{ReadOnlyInline}} {{deprecated_inline}}
