@@ -23,7 +23,7 @@ HTTP `SourceMap` 标头优先于源码注解（`sourceMappingURL=path-to-map.js.
 
 ```http
 SourceMap: <url>
-X-SourceMap: <url> (已弃用)
+X-SourceMap: <url>（已弃用）
 ```
 
 ### 指令
