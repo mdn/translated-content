@@ -81,7 +81,7 @@ Los string tienen prioridad sobre otros tipos, asi que sumar un string a un BigI
 "1" + 2n; // "12"
 ```
 
-Para realizar una suma entre un operando BigInt y uno que no es BigInt, convierta cualquiera de los operandos:
+Para realizar una suma entre un operando BigInt y uno que no es BigInt, convierte cualquiera de los operandos:
 
 ```js
 1n + BigInt(2); // 3n
