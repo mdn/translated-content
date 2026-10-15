@@ -337,7 +337,7 @@ if (3 in trees) {
 }
 ```
 
-如果想让数组中存在一个元素但是是`undefined`值，使用`undefined`关键字而不是`delete`操作。如下： `trees[3] 分配一个 undefined`,但是这个数组元素仍然存在：
+如果想让数组中存在一个元素但是 `undefined` 值，使用`undefined`关键字而不是`delete`操作。如下： `trees[3] 分配一个 undefined`,但是这个数组元素仍然存在：
 
 ```js
 var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
