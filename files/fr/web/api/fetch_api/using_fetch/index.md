@@ -7,13 +7,13 @@ l10n:
 
 {{DefaultAPISidebar("Fetch API")}}
 
-L'[API Fetch](/fr/docs/Web/API/Fetch_API) fournit une interface JavaScript pour effectuer des requêtes HTTP et traiter les réponses.
+[L'API Fetch](/fr/docs/Web/API/Fetch_API) fournit une interface JavaScript pour effectuer des requêtes HTTP et traiter les réponses.
 
 Fetch est le remplaçant moderne de {{DOMxRef("XMLHttpRequest")}}&nbsp;: contrairement à `XMLHttpRequest`, qui utilise des fonctions de rappel, Fetch est basé sur les promesses et s'intègre avec les fonctionnalités du web moderne telles que les [service workers](/fr/docs/Web/API/Service_Worker_API) et le [partage des ressources entre origines (CORS)](/fr/docs/Web/HTTP/Guides/CORS).
 
-Avec l'API Fetch, vous effectuez une requête en appelant {{DOMxRef("Window/fetch", "fetch()")}}, qui est disponible en tant que fonction globale dans les contextes {{DOMxRef("Window", "window")}} et {{DOMxRef("WorkerGlobalScope", "worker")}}. Vous lui passez un objet {{DOMxRef("Request")}} ou une chaîne contenant l'URL à récupérer, ainsi qu'un argument optionnel pour configurer la requête.
+Avec l'API Fetch, vous effectuez une requête en appelant {{DOMxRef("Window/fetch", "fetch()")}}, qui est disponible en tant que fonction globale dans les contextes {{DOMxRef("Window", "window")}} et {{DOMxRef("WorkerGlobalScope", "worker")}}. Vous lui passez un objet {{DOMxRef("Request")}} ou une chaîne de caractères contenant l'URL à récupérer, ainsi qu'un argument optionnel pour configurer la requête.
 
-La fonction `fetch()` retourne une promesse ({{JSxRef("Promise")}}) qui est résolue avec un objet {{DOMxRef("Response")}} représentant la réponse du serveur. Vous pouvez alors vérifier le statut de la requête et extraire le corps de la réponse dans différents formats, y compris texte et JSON, en appelant la méthode appropriée sur la réponse.
+La fonction `fetch()` retourne une promesse ({{JSxRef("Promise")}}) qui est complétée avec un objet {{DOMxRef("Response")}} représentant la réponse du serveur. Vous pouvez alors vérifier le statut de la requête et extraire le corps de la réponse dans différents formats, y compris texte et JSON, en appelant la méthode appropriée sur la réponse.
 
 Voici une fonction minimale qui utilise `fetch()` pour récupérer des données JSON depuis un serveur&nbsp;:
 
@@ -36,11 +36,11 @@ async function getData() {
 
 Nous déclarons une chaîne de caractères contenant l'URL puis appelons `fetch()`, en passant l'URL sans options supplémentaires.
 
-La fonction `fetch()` rejettera la promesse en cas de certaines erreurs, mais pas si le serveur répond avec un statut d'erreur comme {{HTTPStatus("404")}}&nbsp;: nous vérifions donc aussi le statut de la réponse et lançons une exception si ce n'est pas OK.
+La fonction `fetch()` rompt la promesse en cas de certaines erreurs, mais pas si le serveur répond avec un statut d'erreur comme {{HTTPStatus("404")}}&nbsp;: nous vérifions donc aussi le statut de la réponse et lançons une exception si ce n'est pas OK.
 
 Sinon, nous récupérons le contenu du corps de la réponse au format {{Glossary("JSON")}} en appelant la méthode {{DOMxRef("Response.json()", "json()")}} de l'interface `Response`, et affichons l'une de ses valeurs. Notez que, comme `fetch()` elle-même, `json()` est asynchrone, tout comme toutes les autres méthodes d'accès au contenu du corps de la réponse.
 
-Dans la suite de cette page, nous examinerons plus en détail les différentes étapes de ce processus.
+Dans la suite de cette page, nous examinons plus en détail les différentes étapes de ce processus.
 
 ## Effectuer une requête
 
@@ -217,15 +217,15 @@ Par défaut, les informations d'authentification ne sont incluses que dans les r
 - `same-origin` (valeur par défaut)&nbsp;: n'envoie et n'inclut les informations d'authentification que pour les requêtes de même origine.
 - `include`&nbsp;: inclut toujours les informations d'authentification, même pour les requêtes inter-origines.
 
-Notez que si l'attribut [`SameSite`](/fr/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) d'un cookie est défini sur `Strict` ou `Lax`, alors le cookie ne sera pas envoyé entre sites, même si `credentials` est défini sur `include`.
+Notez que si l'attribut [`SameSite`](/fr/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) d'un cookie est défini sur `Strict` ou `Lax`, alors le cookie n'est pas envoyé entre sites, même si `credentials` est défini sur `include`.
 
 Inclure des informations d'authentification dans des requêtes inter-origines peut rendre un site vulnérable aux attaques de type {{Glossary("CSRF")}}. Ainsi, même si `credentials` est défini sur `include`, le serveur doit également accepter leur inclusion en ajoutant l'en-tête {{HTTPHeader("Access-Control-Allow-Credentials")}} dans sa réponse. De plus, dans ce cas, le serveur doit définir explicitement l'origine du client dans l'en-tête de réponse {{HTTPHeader("Access-Control-Allow-Origin")}} (c'est-à-dire que `*` n'est pas autorisé).
 
 Cela signifie que si `credentials` est défini sur `include` et que la requête est inter-origines&nbsp;:
 
-- Si la requête est une [requête simple](/fr/docs/Web/HTTP/Guides/CORS#requêtes_simples), alors la requête sera envoyée avec les informations d'authentification, mais le serveur doit définir les en-têtes de réponse {{HTTPHeader("Access-Control-Allow-Credentials")}} et {{HTTPHeader("Access-Control-Allow-Origin")}}, sinon le navigateur retournera une erreur réseau à l'appelant. Si le serveur définit les bons en-têtes, alors la réponse, y compris les informations d'authentification, sera transmise à l'appelant.
+- Si la requête est une [requête simple](/fr/docs/Web/HTTP/Guides/CORS#requêtes_simples), alors la requête est envoyée avec les informations d'authentification, mais le serveur doit définir les en-têtes de réponse {{HTTPHeader("Access-Control-Allow-Credentials")}} et {{HTTPHeader("Access-Control-Allow-Origin")}}, sinon le navigateur retourne une erreur réseau à l'appelant. Si le serveur définit les bons en-têtes, alors la réponse, y compris les informations d'authentification, est transmise à l'appelant.
 
-- Si la requête n'est pas une requête simple, alors le navigateur enverra une [requête de pré-vérification](/fr/docs/Web/HTTP/Guides/CORS#requêtes_pré-vérifiées) sans informations d'authentification, et le serveur doit définir les en-têtes de réponse {{HTTPHeader("Access-Control-Allow-Credentials")}} et {{HTTPHeader("Access-Control-Allow-Origin")}}, sinon le navigateur retournera une erreur réseau à l'appelant. Si le serveur définit les bons en-têtes, alors le navigateur poursuivra avec la requête réelle, y compris les informations d'authentification, et transmettra la réponse réelle, y compris les informations d'authentification, à l'appelant.
+- Si la requête n'est pas une requête simple, alors le navigateur envoi une [requête de pré-vérification](/fr/docs/Web/HTTP/Guides/CORS#requêtes_pré-vérifiées) sans informations d'authentification, et le serveur doit définir les en-têtes de réponse {{HTTPHeader("Access-Control-Allow-Credentials")}} et {{HTTPHeader("Access-Control-Allow-Origin")}}, sinon le navigateur retourna une erreur réseau à l'appelant. Si le serveur définit les bons en-têtes, alors le navigateur poursuit avec la requête réelle, y compris les informations d'authentification, et transmet la réponse réelle, y compris les informations d'authentification, à l'appelant.
 
 ### Créer un objet `Request`
 
@@ -292,7 +292,7 @@ post(requete2);
 
 Pour rendre une requête annulable, créez un {{DOMxRef("AbortController")}}, et assignez son {{DOMxRef("AbortSignal")}} à la propriété `signal` de la requête.
 
-Pour annuler la requête, appelez la méthode {{DOMxRef("AbortController.abort()", "abort()")}} du contrôleur. L'appel à `fetch()` rejettera la promesse avec une exception `AbortError`.
+Pour annuler la requête, appelez la méthode {{DOMxRef("AbortController.abort()", "abort()")}} du contrôleur. L'appel à `fetch()` rompt la promesse avec une exception `AbortError`.
 
 ```js
 const controleur = new AbortController();
@@ -317,7 +317,7 @@ btnAnnuler.addEventListener("click", () => {
 });
 ```
 
-Si la requête est annulée après que l'appel à `fetch()` a été accompli mais avant que le corps de la réponse n'ait été lu, alors toute tentative de lecture du corps de la réponse rejettera avec une exception `AbortError`.
+Si la requête est annulée après que l'appel à `fetch()` a été complétée mais avant que le corps de la réponse n'ait été lu, alors toute tentative de lecture du corps de la réponse se rompt avec une exception `AbortError`.
 
 ```js
 async function recuperer() {
@@ -336,11 +336,11 @@ async function recuperer() {
 
 ## Traiter la réponse
 
-Dès que le navigateur a reçu le statut de la réponse et les en-têtes du serveur (et potentiellement avant que le corps de la réponse lui-même ait été reçu), la promesse retournée par `fetch()` est tenue avec un objet {{DOMxRef("Response")}}.
+Dès que le navigateur a reçu le statut de la réponse et les en-têtes du serveur (et potentiellement avant que le corps de la réponse lui-même ait été reçu), la promesse retournée par `fetch()` est complétée avec un objet {{DOMxRef("Response")}}.
 
 ### Vérifier le statut de la réponse
 
-La promesse retournée par `fetch()` sera rejetée en cas de certaines erreurs, comme une erreur réseau ou un mauvais schéma. Cependant, si le serveur répond avec une erreur comme {{HTTPStatus("404")}}, alors `fetch()` est tenue avec un objet `Response`, il faut donc vérifier le statut avant de lire le corps de la réponse.
+La promesse retournée par `fetch()` est rompue en cas de certaines erreurs, comme une erreur réseau ou un mauvais schéma. Cependant, si le serveur répond avec une erreur comme {{HTTPStatus("404")}}, alors `fetch()` est complétée avec un objet `Response`, il faut donc vérifier le statut avant de lire le corps de la réponse.
 
 La propriété {{DOMxRef("Response.status")}} donne le code de statut numérique, et la propriété {{DOMxRef("Response.ok")}} retourne `true` si le statut est dans la [plage 200](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès).
 
@@ -365,9 +365,9 @@ async function obtenirDonnees() {
 
 Les réponses possèdent une propriété {{DOMxRef("Response.type", "type")}} qui peut avoir l'une des valeurs suivantes&nbsp;:
 
-- `basic`&nbsp;: la requête était de même origine.
-- `cors`&nbsp;: la requête était une requête CORS inter-origines.
-- `opaque`&nbsp;: la requête était une requête simple inter-origines effectuée avec le mode `no-cors`.
+- `basic`&nbsp;: la requête est de même origine.
+- `cors`&nbsp;: la requête est une requête CORS inter-origines.
+- `opaque`&nbsp;: la requête est une requête simple inter-origines effectuée avec le mode `no-cors`.
 - `opaqueredirect`&nbsp;: la requête a défini l'option `redirect` sur `manual`, et le serveur a retourné un [statut de redirection](/fr/docs/Web/HTTP/Reference/Status#messages_de_redirection).
 
 Le type détermine le contenu possible de la réponse, comme suit&nbsp;:
@@ -409,7 +409,7 @@ L'interface `Response` fournit plusieurs méthodes pour récupérer l'intégrali
 - {{DOMxRef("Response.json()")}}
 - {{DOMxRef("Response.text()")}}
 
-Toutes ces méthodes sont asynchrones et retournent une promesse ({{JSxRef("Promise")}}) qui sera tenue avec le contenu du corps.
+Toutes ces méthodes sont asynchrones et retournent une promesse ({{JSxRef("Promise")}}) qui est complétée avec le contenu du corps.
 
 Dans cet exemple, on récupère une image et on la lit comme un {{DOMxRef("Blob")}}, que l'on peut ensuite utiliser pour créer une URL d'objet&nbsp;:
 
@@ -433,7 +433,7 @@ async function definirImage() {
 }
 ```
 
-La méthode lancera une exception si le corps de la réponse n'est pas dans le format approprié&nbsp;: par exemple, si vous appelez `json()` sur une réponse qui ne peut pas être analysée comme JSON.
+La méthode lance une exception si le corps de la réponse n'est pas dans le format approprié&nbsp;: par exemple, si vous appelez `json()` sur une réponse qui ne peut pas être analysée comme JSON.
 
 ### Lire le corps de la réponse en flux
 
@@ -491,7 +491,7 @@ Notez que lorsque vous accédez directement au corps de cette façon, vous obten
 
 ### Traiter un fichier texte ligne par ligne
 
-Dans l'exemple ci-dessous, on récupère une ressource texte et on la traite ligne par ligne, en utilisant une expression régulière pour détecter les fins de ligne. Par simplicité, on suppose que le texte est en UTF-8 et on ne gère pas les erreurs de récupération&nbsp;:
+Dans l'exemple ci-dessous, on récupère une ressource texte et on la traite ligne par ligne, en utilisant une expression rationnelle pour détecter les fins de ligne. Par simplicité, on suppose que le texte est en UTF-8 et on ne gère pas les erreurs de récupération&nbsp;:
 
 ```js
 async function* iterateurLignesFichierTexte(urlFichier) {

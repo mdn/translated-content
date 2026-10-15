@@ -3,7 +3,7 @@ title: MDN Web Docs les rôles et les équipes
 short-title: Rôles et équipes
 slug: MDN/Community/Roles_teams
 l10n:
-  sourceCommit: da7287ff61b6ea4db7f9a5e07be11263b525b7d0
+  sourceCommit: c5a0a55ef65c6ef451713b0aa594b782527676d1
 ---
 
 Le succès et la croissance du projet MDN Web Docs sont en grande partie dus à notre communauté de contributeur·ice·s. Certain·e·s contributeur·ice·s consacrent une partie de leur temps pour aider aux tâches quotidiennes liées à MDN Web Docs. Les modifications du site, y compris les tâches de maintenance, sont réalisées par des employé·e·s, des prestataires et un réseau de partenaires, tous·tes engagé·e·s pour la santé, la croissance et la maintenance de MDN Web Docs. Le projet s'appuie fortement sur les [rôles](#roles) et les [équipes](#equipes) de [l'organisation MDN sur GitHub <sup>(angl.)</sup>](https://github.com/mdn) pour gérer et intégrer les changements de ces différents groupes. La liste des membres actuels de l'organisation est disponible sur [github.com/orgs/mdn <sup>(angl.)</sup>](https://github.com/orgs/mdn/people).
@@ -168,7 +168,7 @@ Ils·Elles relisent et approuvent les requêtes de tirage dans leur domaine, ré
 
 En plus des responsabilités d'un·e [membre de l'organisation](#membre_de_lorganisation), les expert·e·s invité·e·s doivent&nbsp;:
 
-- Suivre le [guide de relecture <sup>(angl.)</sup>](https://github.com/mdn/translated-content/blob/main/REVIEWING.md).
+- Suivre le [processus de relecture des requêtes de tirage](/fr/docs/MDN/Community/Pull_requests#relire_une_requête_de_tirage).
 - Relire les requêtes de tirage dans leur domaine.
 - Aider d'autres contributeur·ice·s à devenir relecteur·ice·s.
 

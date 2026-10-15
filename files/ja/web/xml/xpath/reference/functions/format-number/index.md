@@ -29,7 +29,7 @@ format-number(number, pattern, decimalFormat)
 
 ## 解説
 
-この関数は XPath への XSLT 固有の追加です。コア XPath 関数ライブラリ－の一部ではありません。
+この関数は XPath への XSLT 固有の追加です。コア XPath 関数ライブラリーの一部ではありません。
 
 ## 仕様書
 

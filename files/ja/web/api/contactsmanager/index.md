@@ -9,7 +9,7 @@ l10n:
 
 **`ContactsManager`** は{{domxref('Contact Picker API', '連絡先ピッカー API', '', 1)}} のインターフェイスで、ユーザーが連絡先リストから項目を選択し、選択した項目の限られた詳細をウェブサイトやアプリケーションと共有できるようにします。
 
-ContactsManager` はグローバルな {{domxref('navigator.contacts')}} プロパティを通して利用することができます。
+`ContactsManager` はグローバルな {{domxref('navigator.contacts')}} プロパティを通して利用することができます。
 
 ## インスタンスメソッド
 

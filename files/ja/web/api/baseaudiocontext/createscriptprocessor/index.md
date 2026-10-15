@@ -35,7 +35,7 @@ createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 > Webkit は現在（バージョン 31）、このメソッドを呼び出すときに有効な `bufferSize` を渡すことを要求しています。
 
 > [!NOTE]
-> numberOfInputChannels`と`numberOfOutputChannels` の両方が 0 にするのは無効です。
+> `numberOfInputChannels`と`numberOfOutputChannels` の両方が 0 にするのは無効です。
 
 ### 返値
 

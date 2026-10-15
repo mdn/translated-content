@@ -3,7 +3,7 @@ title: Règle CSS `@font-palette-values`
 short-title: "@font-palette-values"
 slug: Web/CSS/Reference/At-rules/@font-palette-values
 l10n:
-  sourceCommit: e328268bb418551ab451881845881b5837c9da83
+  sourceCommit: d571e753a6e1aa3f37c775f0308690bc738cdbe6
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@font-palette-values`** permet de personnaliser les valeurs par défaut de la [palette de police](/fr/docs/Web/CSS/Reference/Properties/font-palette) créée par le·la créateur·ice de la police.

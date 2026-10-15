@@ -237,7 +237,7 @@ readonly attribute MediaError? error;
 キーワード `readonly` が存在する場合、そのプロパティを変更することはできません。読み取り専用としてマークする必要があります。
 
 - インターフェイスでは、その定義用語の横に \{{ReadOnlyInline}} マクロを追加してください。
-- そのページの最初の文章で、説明を次のように始めてください。 _**HTMLMediaElement.error`** プロパティは読み取り専用で..._。
+- そのページの最初の文章で、説明を次のように始めてください。 _**`HTMLMediaElement.error`** プロパティは読み取り専用で..._。
 - インターフェイスページの説明を _...を返します_ で始めてください。
 
 > [!NOTE]
@@ -506,7 +506,7 @@ setlike<valueType>
 - `entries()` はインデックスの[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.entries()')}}
 - `values()` は値の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.values()')}}
 - `keys()` はキーの[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.keys()')}}
-- forEach()`は、指定されたコールバック関数をリストの各項目に対して一度だけ実行します。例えば {{domxref('NodeList.forEach()')}} を参照してください。
+- `forEach()`は、指定されたコールバック関数をリストの各項目に対して一度だけ実行します。例えば {{domxref('NodeList.forEach()')}} を参照してください。
 
 set-like 宣言の前に read-only が付かない場合、以下のメソッドも生成されます。
 

@@ -2,7 +2,7 @@
 title: Arrière-plans et bordures
 slug: Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 l10n:
-  sourceCommit: 1b7c3c1e03f14c3878e4d8518b0f1a89bedfdc9c
+  sourceCommit: b7e9f482c51817d3a885e26092f8219fd0d9d278
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing", "Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}
@@ -447,7 +447,7 @@ body {
 p {
   padding: 10px;
   color: white;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(0 0 0 / 0.3);
 }
 
 section {
@@ -458,8 +458,8 @@ section {
 article {
   flex: 1;
   height: 300px;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/grapefruit-slice.jpg);
+  background-color: rgb(0 0 0 / 0.5);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/grapefruit-slice.jpg");
   background-size: 400px 400px;
   background-repeat: no-repeat;
   background-position: top center;
@@ -490,7 +490,7 @@ Essayez de faire défiler l'ensemble de l'exemple intégré, puis les conteneurs
 
 ## Utiliser la propriété raccourcie `background`
 
-Vous verrez souvent des arrière-plans définis grâce à la propriété raccourcie {{CSSxRef("background")}}, qui permet de définir toutes les différentes propriétés en une seule déclaration.
+Vous voyez souvent des arrière-plans définis grâce à la propriété raccourcie {{CSSxRef("background")}}, qui permet de définir toutes les différentes propriétés en une seule déclaration.
 
 Si vous utilisez plusieurs arrière-plans, vous devez définir toutes les propriétés pour le premier arrière-plan, puis ajouter votre prochain arrière-plan après une virgule. Dans l'exemple ci-dessous, nous avons un dégradé avec une taille et une position, puis une image d'arrière-plan avec `no-repeat` et une position, puis une couleur.
 

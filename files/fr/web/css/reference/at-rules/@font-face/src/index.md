@@ -3,7 +3,7 @@ title: Descripteur de règle CSS `src`
 short-title: src
 slug: Web/CSS/Reference/At-rules/@font-face/src
 l10n:
-  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
+  sourceCommit: b7e9f482c51817d3a885e26092f8219fd0d9d278
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`src`** pour la règle {{CSSxRef("@font-face")}} définit la ressource contenant les données de la police. Il est obligatoire pour que la règle `@font-face` soit valide.
@@ -28,17 +28,17 @@ src: url("path/to/fontCOLR-svg.otf") tech(color-SVG);
 
 /* Valeurs <format(<font-format>)> */
 src: url("path/to/font.woff") format("woff");
-src: url("path/to/font.otf") format("opentype");
+src: url("path/to/font.woff2") format("woff2");
 
 /* Ressources multiples */
 src:
   url("path/to/font.woff") format("woff"),
-  url("path/to/font.otf") format("opentype");
+  url("path/to/font.woff2") format("woff2");
 
 /* Ressources multiples avec format de police et technologies */
 src:
-  url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1),
-  url("trickster-outline.otf") format(opentype);
+  url("trickster-COLRv1.woff2") format("woff2") tech(color-COLRv1),
+  url("trickster-outline.woff2") format("woff2");
 ```
 
 ### Valeurs
@@ -89,10 +89,16 @@ Comme pour les autres URL en CSS, l'URL peut être relative, auquel cas elle est
 Si le fichier de police est un conteneur de plusieurs polices, un identifiant de fragment est inclus pour indiquer la sous-police à utiliser, comme ci-dessous&nbsp;:
 
 ```css
-/* WhichFont est le nom PostScript d'une police dans le fichier de police */
-src: url("collection.otc#WhichFont");
-/* WhichFont est l'id d'un élément dans le fichier de police SVG */
-src: url("fonts.svg#WhichFont");
+@font-face {
+  font-family: "WhichFont";
+  /* WhichFont est le nom PostScript d'une police dans le fichier de police */
+  src: url("collection.otc#WhichFont");
+}
+@font-face {
+  font-family: "WhichFont-svg";
+  /* WhichFont est l'id d'un élément dans le fichier de police SVG */
+  src: url("fonts.svg#WhichFont");
+}
 ```
 
 ### Formats de police
@@ -102,13 +108,13 @@ Pour vérifier si un format de police est pris en charge par un navigateur en CS
 
 | Mot-clé             | Format de police      | Extensions courantes |
 | ------------------- | --------------------- | -------------------- |
-| `collection`        | OpenType Collection   | .otc, .ttc           |
-| `embedded-opentype` | Embedded OpenType     | .eot                 |
-| `opentype`          | OpenType              | .otf, .ttf           |
-| `svg`               | Police SVG (obsolète) | .svg, .svgz          |
-| `truetype`          | TrueType              | .ttf                 |
-| `woff`              | WOFF 1.0              | .woff                |
-| `woff2`             | WOFF 2.0              | .woff2               |
+| `collection`        | OpenType Collection   | `.otc`, `.ttc`       |
+| `embedded-opentype` | Embedded OpenType     | `.eot`               |
+| `opentype`          | OpenType              | `.otf`, `.ttf`       |
+| `svg`               | Police SVG (obsolète) | `.svg`, `.svgz`      |
+| `truetype`          | TrueType              | `.ttf`               |
+| `woff`              | WOFF 1.0              | `.woff`              |
+| `woff2`             | WOFF 2.0              | `.woff2`             |
 
 > [!NOTE]
 >
@@ -166,7 +172,7 @@ L'exemple ci-dessous montre comment définir deux fontes avec la même famille d
   src:
     local("Futura-Medium"),
     url("FuturaMedium.woff") format("woff"),
-    url("FuturaMedium.otf") format("opentype");
+    url("FuturaMedium.woff2") format("woff2");
 }
 
 /* Définition d'une fonte grasse différente pour la même famille */
@@ -176,7 +182,7 @@ L'exemple ci-dessous montre comment définir deux fontes avec la même famille d
     local("Gill Sans Bold") /* nom complet */,
     local("GillSans-Bold") /* nom Postscript */,
     url("GillSansBold.woff") format("woff"),
-    url("GillSansBold.otf") format("opentype"),
+    url("GillSansBold.woff2") format("woff2"),
     url("GillSansBold.svg#MyFontBold"); /* Référence d'un fragment SVG par id */
   font-weight: bold;
 }
@@ -201,8 +207,8 @@ Une police utilisant la technologie `color-colrv1` et le format `opentype` est d
 @font-face {
   font-family: "Trickster";
   src:
-    url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1),
-    url("trickster-outline.otf") format(opentype);
+    url("trickster-COLRv1.woff2") format("woff2") tech(color-COLRv1),
+    url("trickster-outline.woff2") format("woff2");
 }
 
 /* Utilisation de la fonte */
@@ -221,8 +227,8 @@ En général, cela signifie que les fichiers locaux doivent apparaître avant le
 @font-face {
   font-family: "MgOpenModernaBold";
   src:
-    url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental),
-    url("MgOpenModernaBold.otf") format(opentype);
+    url("MgOpenModernaBoldIncr.woff2") format("woff2") tech(incremental),
+    url("MgOpenModernaBold.woff2") format("woff2");
 }
 ```
 
@@ -233,11 +239,11 @@ Certains navigateurs [n'ignorent pas encore les éléments invalides](#compatibi
 ```css
 @font-face {
   font-family: "MgOpenModernaBold";
-  src: url("MgOpenModernaBold.otf") format(opentype);
-  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental);
+  src: url("MgOpenModernaBold.woff2") format("woff2");
+  src: url("MgOpenModernaBoldIncr.woff2") format("woff2") tech(incremental);
   src:
-    url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental),
-    url("MgOpenModernaBold.otf") format(opentype);
+    url("MgOpenModernaBoldIncr.woff2") format("woff2") tech(incremental),
+    url("MgOpenModernaBold.woff2") format("woff2");
 }
 ```
 
@@ -249,7 +255,7 @@ L'exemple suivant montre comment vérifier si l'agent utilisateur prend en charg
 @supports font-tech(color-COLRv1) {
   @font-face {
     font-family: "Trickster";
-    src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1);
+    src: url("trickster-COLRv1.woff2") format("woff2") tech(color-COLRv1);
   }
 
   .texte_colore {

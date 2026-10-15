@@ -3,7 +3,7 @@ title: Règle CSS `@font-face`
 short-title: "@font-face"
 slug: Web/CSS/Reference/At-rules/@font-face
 l10n:
-  sourceCommit: 916eb95f63de092d96ed1b1b13f3e2261739a8e2
+  sourceCommit: 91e08923c809ca8deded3e3294f49bbe1a4a00b3
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@font-face`** permet de définir une police d'écriture particulière à utiliser pour afficher le texte de pages web. Cette police peut être chargée depuis un serveur distant ou depuis l'ordinateur de l'utilisateur·ice.
@@ -15,8 +15,7 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
   font-family: "Trickster";
   src:
     local("Trickster"),
-    url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
-    url("trickster-outline.otf") format("opentype"),
+    url("trickster-COLRv1.woff2") format("woff2") tech(color-COLRv1),
     url("trickster-outline.woff2") format("woff2");
 }
 ```

@@ -668,7 +668,7 @@ label {
 - `incremental` {{non-standard_inline}}
   - : 論理属性 `incremental` は WebKit および Blink 拡張で（そのため Safari, Opera, Chrome, などが対応）、もし存在すれば、{{Glossary("User agent", "ユーザーエージェント")}}に入力をライブ検索として処理します。ユーザーがフィールドの値を編集すると、ユーザーエージェントは {{domxref("HTMLInputElement/search_event", "search")}} イベントを検索ボックスを表す {{domxref("HTMLInputElement")}} オブジェクトへ送信します。これにより、ユーザーが検索を編集するたびに、コードからリアルタイムに検索結果を更新することができます。
 
-    `incremental` が指定されていない場合、{{domxref("HTMLInputElement/search_event", "search")}} イベントはユーザーが明示的に検索を実行した時のみ（フィールドを編集中に <kbd>Enter</kbd> または <kbd>Return</kbd> キーを押すなど) 送信されます。
+    `incremental` が指定されていない場合、{{domxref("HTMLInputElement/search_event", "search")}} イベントはユーザーが明示的に検索を実行した時のみ（フィールドを編集中に <kbd>Enter</kbd> または <kbd>Return</kbd> キーを押すなど）送信されます。
 
     `search` イベントは発生頻度が制限されているため、実装により定義された間隔よりも頻繁に送信されることはありません。
 
@@ -908,11 +908,11 @@ input.custom {
 
 {{cssxref("field-sizing")}} プロパティは、フォーム入力欄のサイズ設定の動作を制御することができます（つまり、デフォルトでは推奨されるサイズが設定されています）。このプロパティを使用すると、デフォルトの動作を上書きして、フォームコントロールがコンテンツに合わせてサイズを調整できるようになります。
 
-このプロパティは通常、コンテンツを収縮包装し、テキストが入力されるにつれて大きくなるフォームフィールドを形成するために使用します。これは、直接テキスト入力を受け入れる入力型（例えば、[`text`](/ja/docs/Web/HTML/Reference/Elements/input/text)、[`url`](/ja/docs/Web/HTML/Reference/Elements/input/url)、[`file`](/ja/docs/Web/HTML/Reference/Elements/input/file) 入力型、{{htmlelement("textarea")}} 要素で動作します。
+このプロパティは通常、コンテンツを収縮包装し、テキストが入力されるにつれて大きくなるフォームフィールドを形成するために使用します。これは、直接テキスト入力を受け入れる入力型（例えば [`text`](/ja/docs/Web/HTML/Reference/Elements/input/text) や [`url`](/ja/docs/Web/HTML/Reference/Elements/input/url)）、[`file`](/ja/docs/Web/HTML/Reference/Elements/input/file) 入力型、{{htmlelement("textarea")}} 要素で動作します。
 
 ### object-position と object-fit
 
-`<input>` 要素は特定の場合（多くはテキスト以外の入力や特殊なインターフェイス）（には、{{ glossary("replaced elements", "置換要素")}}になることがあります。その場合、CSS の {{cssxref("object-position")}} および {{cssxref("object-fit")}} プロパティを使って、要素の枠内での大きさと位置を調整することができます。
+`<input>` 要素は特定の場合（多くはテキスト以外の入力や特殊なインターフェイス）には、{{ glossary("replaced elements", "置換要素")}}になることがあります。その場合、CSS の {{cssxref("object-position")}} および {{cssxref("object-fit")}} プロパティを使って、要素の枠内での大きさと位置を調整することができます。
 
 ### スタイル設定
 
@@ -929,7 +929,7 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 
 ### ラベル
 
-ラベルは支援テキストを `<input>` に関連付けるために必要です。{{HTMLElement("label")}} 要素は、フォームの入力欄を説明するために、(レイアウト方法はさておき）*常に*適切な手段です。`<label>` を使用して `<input>` や {{HTMLElement("textarea")}} に何を入力するべきかを説明することは、決して悪い考えではありません。
+ラベルは支援テキストを `<input>` に関連付けるために必要です。{{HTMLElement("label")}} 要素は、フォームの入力欄を説明するために、（レイアウト方法はさておき）*常に*適切な手段です。`<label>` を使用して `<input>` や {{HTMLElement("textarea")}} に何を入力するべきかを説明することは、決して悪い考えではありません。
 
 #### 関連付けられたラベル
 
@@ -1184,7 +1184,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>、リスト化、サブミット可能、リセット可能、フォーム関連要素、<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>。<a href="#type"><code>type</code></a> の値が <code>hidden</code> でない場合はラベル付け可能要素、知覚可能コンテンツ。

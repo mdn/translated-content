@@ -1,45 +1,52 @@
 ---
-title: NodeList.keys()
+title: "NodeList : méthode keys()"
+short-title: keys()
 slug: Web/API/NodeList/keys
+l10n:
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`NodeList.keys()`** renvoie un {{jsxref("Iteration_protocols",'itérateur')}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des `unsigned integer` (_entier non signé_).
+La méthode **`keys()`** de l'interface {{DOMxRef("NodeList")}} retourne un {{JSxRef("Iteration_protocols", "itérateur",,1)}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des `unsigned integer` (_entier non signé_).
 
 ## Syntaxe
 
-```js
-nodeList.keys();
+```js-nolint
+keys()
 ```
 
-### Valeur retournée
+### Paramètres
 
-Renvoie un {{jsxref("Iteration_protocols","itérateur")}}.
+Aucun.
 
-## Exemple
+### Valeur de retour
+
+Retourne un {{JSxRef("Iteration_protocols", "itérateur",,1)}}.
+
+## Exemples
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
+const noeud = document.createElement("div");
+const enfant1 = document.createElement("p");
+const enfant2 = document.createTextNode("hey");
+const enfant3 = document.createElement("span");
 
-node.appendChild(kid1);
-node.appendChild(kid2);
-node.appendChild(kid3);
+noeud.appendChild(enfant1);
+noeud.appendChild(enfant2);
+noeud.appendChild(enfant3);
 
-var list = node.childNodes;
+let liste = noeud.childNodes;
 
-// Utilisation de for..of
-for (var key of list.keys()) {
-  console.log(key);
+// Utiliser for...of
+for (const cle of liste.keys()) {
+  console.log(cle);
 }
 ```
 
-Le résultat est :
+Le résultat est&nbsp;:
 
-```
+```plain
 0
 1
 2
@@ -55,5 +62,6 @@ Le résultat est :
 
 ## Voir aussi
 
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- [La prothèse d'émulation de `NodeList.prototype.entries` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterable-dom-collections)
+- L'interface {{DOMxRef("Node")}}
+- L'interface {{DOMxRef("NodeList")}}

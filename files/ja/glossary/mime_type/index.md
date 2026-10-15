@@ -2,7 +2,7 @@
 title: MIME type (MIME タイプ)
 slug: Glossary/MIME_type
 l10n:
-  sourceCommit: 5af7eee008b191ba354db23bd9d0ad299eb77678
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 **MIME タイプ** (現在は正しくは「メディアタイプ」と呼ばれますが、「コンテンツタイプ」と呼ばれることもあります) は、ファイルの種類を示し、ファイルと共に送信される文字列です (例えば、音声ファイルは `audio/ogg`、画像ファイルは `image/png` というようにラベル付けして、コンテンツ形式を記述します)。
@@ -17,4 +17,4 @@ Windows 上で従来行われていたファイル拡張子と同じ目的を果
 - [MIME タイプの不完全なリスト](/ja/docs/Web/HTTP/Guides/MIME_types/Common_types)
 - [MediaRecorder.mimeType](/ja/docs/Web/API/MediaRecorder/mimeType)
 - [メディアタイプ](https://ja.wikipedia.org/wiki/メディアタイプ) - ウィキペディア
-- [MIME タイプの一覧](https://www.iana.org/assignments/media-types/media-types.xhtml) (英語)
+- [MIME タイプの一覧](https://www.iana.org/assignments/media-types/media-types.xhtml) <sup>(英語)</sup>

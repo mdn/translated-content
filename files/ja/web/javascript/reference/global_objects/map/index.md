@@ -114,7 +114,7 @@ console.log(map.size);
         </p>
         <p>
           この順序は ECMAScript 2015 で初めて自身のプロパティに対してのみ定義されましたが、 ECMAScript 2020 では継承されたプロパティに対しても同様に順序が定義されています。
-          しかし、オブジェクトのプロパティが<strong>すべて</strong>反復処理される単一の単一のメカニズムはないことに注意してください。
+          しかし、オブジェクトのプロパティが<strong>すべて</strong>反復処理される単一のメカニズムはないことに注意してください。
           （{{jsxref("Statements/for...in", "for-in")}} は列挙可能な文字列キーのプロパティのみを含む、 {{jsxref("Object.keys")}} は自分自身の列挙可能な文字列キーのプロパティのみを含む、 {{jsxref("Object.getOwnPropertyNames")}} は列挙不可能な場合でも自分自身の文字列キーのプロパティを含む、 {{jsxref("Object.getOwnPropertySymbols")}} は、
           <code>Symbol</code> キーを持つプロパティに対しても同じことを行う、など。）
         </p>

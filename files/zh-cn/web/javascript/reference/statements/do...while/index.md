@@ -69,7 +69,7 @@ console.log(result);
 ```js
 do {
   if (!user.loggedIn) {
-    console.log("你未登陆");
+    console.log("你未登录");
     break;
   }
   const friends = user.getFriends();
@@ -89,7 +89,7 @@ do {
 ```js
 handleFriends: {
   if (!user.loggedIn) {
-    console.log("你未登陆");
+    console.log("你未登录");
     break handleFriends;
   }
   const friends = user.getFriends();
@@ -108,7 +108,7 @@ handleFriends: {
 ```js
 function handleFriends() {
   if (!user.loggedIn) {
-    console.log("你未登陆");
+    console.log("你未登录");
     return;
   }
   const friends = user.getFriends();

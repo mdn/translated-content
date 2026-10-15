@@ -8,11 +8,11 @@ l10n:
 
 {{APIRef("Performance API")}}
 
-読み取り専用の **`detail`** プロパティは、（{{domxref("Performance.measure","performance.measure()")}} を使用して）構築時にマークに記載された任意のメタデータを返します。
+読み取り専用の **`detail`** プロパティは、（{{domxref("Performance.measure","performance.measure()")}} を使用して）構築時にメジャーに記載された任意のメタデータを返します。
 
 ## 値
 
-（{{domxref("Performance.measure","performance.measure()")}} の `markOptions` から）設定された値を返します。
+（{{domxref("Performance.measure","performance.measure()")}} の `measureOptions` から）設定された値を返します。
 
 ## 例
 

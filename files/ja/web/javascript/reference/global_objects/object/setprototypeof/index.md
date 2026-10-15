@@ -59,7 +59,7 @@ Object.setPrototypeOf(obj, prototype)
 
 もし引数 `obj` がオブジェクト（例えば、数値、文字列など）でない場合、このメソッドは何もせず、オブジェクトに変換したり、プロトタイプを設定することなく、直接 `obj` をプリミティブ値として返します。もし `prototype` が `obj` のプロトタイプと同じ値であれば、 `obj` のプロトタイプが不変であっても `TypeError` は発生せずに `obj` が直接返されます。
 
-セキュリティの観点から、プロトタイプが不変であるように設計された組み込みオブジェクトがあります。これにより、プロトタイプ汚染攻撃、特に[ブロキシー関連の攻撃](https://github.com/tc39/ecma262/issues/272)を防ぐことができます。コア言語では、不変のプロトタイプを持つエキゾチックオブジェクトとして `Object.prototype` のみを指定しており、そのプロトタイプは常に `null` です。ブラウザーでは、 [`window`](/ja/docs/Web/API/Window) や [`location`](/ja/docs/Web/API/Window/location) の 2 つがとても一般的な例です。
+セキュリティの観点から、プロトタイプが不変であるように設計された組み込みオブジェクトがあります。これにより、プロトタイプ汚染攻撃、特に[プロキシー関連の攻撃](https://github.com/tc39/ecma262/issues/272)を防ぐことができます。コア言語では、不変のプロトタイプを持つエキゾチックオブジェクトとして `Object.prototype` のみを指定しており、そのプロトタイプは常に `null` です。ブラウザーでは、 [`window`](/ja/docs/Web/API/Window) や [`location`](/ja/docs/Web/API/Window/location) の 2 つがとても一般的な例です。
 
 ```js
 Object.isExtensible(Object.prototype); // true。プロパティを追加できる

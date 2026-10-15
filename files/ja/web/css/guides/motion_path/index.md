@@ -108,7 +108,7 @@ CSS モーションパスでは、[CSS 図形関数](/ja/docs/Web/CSS/Reference/
 - {{cssxref("animation")}} shorthand
 - {{cssxref("@keyframes")}}
 
-[CSS ボックスモル](/ja/docs/Web/CSS/Guides/Box_model)モジュール
+[CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール
 
 - [`<coord-box>`](/ja/docs/Web/CSS/Reference/Properties/offset-path#coord-box)
 

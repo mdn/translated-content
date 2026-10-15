@@ -154,7 +154,7 @@ x = g(); // 変数 x に g() の返値を再代入します。
 この結果の値は通常は使用されませんが、別の式で使用することができます。
 
 代入を連鎖させたり、他の式で代入を入れ子にすると、驚くような動作になることがあります。
-このため、 JavaScript のスタイルガイドによっては、代入の連鎖や入れ子を[連鎖や入れ子の代入を非推奨](https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment)と定めていることがあります。）
+このため、 JavaScript のスタイルガイドによっては、代入の連鎖や入れ子を[連鎖や入れ子の代入を非推奨](https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment)と定めていることがあります。
 とはいえ、代入の連鎖や入れ子が発生することもあるので、それらがどのように動作するのか理解できるようにしておくことは重要です。
 
 代入式を連鎖させたり入れ子にしたりすることで、その結果自体を別の変数に代入することができます。
@@ -250,7 +250,7 @@ x[f()] = g();
 
 `x[f()] = g()` も左から右へ評価されます。
 （この例では `x` には既に何らかのオブジェクトが代入されていると想定してください。
-オブジェクトについて詳しくは、[オブジェクトでの作業](/ja/docs/Web/JavaScript/Guide/Working_with_objects)をお読みください。
+オブジェクトについて詳しくは、[オブジェクトでの作業](/ja/docs/Web/JavaScript/Guide/Working_with_objects)をお読みください。）
 
 1. 代入式 `x[f()] = g()` の評価が始まります。
    1. この代入における代入の左辺の `x[f()]` プロパティアクセスの評価が始まります。

@@ -88,7 +88,7 @@ new VideoFrame(data, options)
           - : プレーンの各行が使用するバイト数（パディングを含む）を表す整数。
             プレーンが重なってはいけません。 `layout` を指定しない場合、プレーンはすき間なくパックされます。
     - `visibleRect` {{Optional_Inline}}
-      - : VideoFrame` の可視長方形を表すオブジェクトで、以下のものを含みます。
+      - : `VideoFrame` の可視長方形を表すオブジェクトで、以下のものを含みます。
         - `x`
           - : X 座標。
         - `y`
@@ -102,7 +102,7 @@ new VideoFrame(data, options)
     - `displayHeight` {{Optional_Inline}}
       - : アスペクト比調整後に表示される `VideoFrame` の高さ。
     - `colorSpace`
-      - : VideoFrame` の色空間を表すオブジェクトで、以下のものを含みます。
+      - : `VideoFrame` の色空間を表すオブジェクトで、以下のものを含みます。
         - `primaries`
           - : 文字列で、 {{domxref("VideoColorSpace.primaries")}} プロパティのページで記述されている、動画の色のプライマリーを表します。
         - `transfer`

@@ -1,31 +1,32 @@
 ---
 title: RegExp.leftContext ($`)
+short-title: leftContext ($`)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
+l10n:
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{non-standard_header}}
+> [!NOTE]
+> Toutes les propriétés statiques de `RegExp` qui exposent l'état de la dernière correspondance globalement sont obsolètes. Voir [Fonctionnalités RegExp obsolètes](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) pour plus d'informations.
 
-La propriété non-standard **`leftContext`** est une propriété statique accessible uniquement en lecture. Cette propriété liée aux expressions rationnelles contient la sous-chaîne qui précède la correspondance la plus récente. `` RegExp.$` `` est un alias pour cette propriété.
-
-## Syntaxe
-
-```js
-RegExp.leftContext;
-RegExp["$`"];
-```
+La propriété d'accesseur statique **`RegExp.leftContext`** retourne la sous-chaîne de caractères précédant la correspondance la plus récente. ``RegExp["$`"]`` est un alias pour cette propriété.
 
 ## Description
 
-La propriété `leftContext` est une propriété statique, elle n'est donc pas distincte entre les différents objets représentants les expressions rationnelles. Il faut donc toujours utiliser la syntaxe `RegExp.leftContext` ou ``RegExp['$`'].``
+Comme `leftContext` est une propriété statique de {{JSxRef("RegExp")}}, vous l'utilisez toujours comme `RegExp.leftContext` ou ``RegExp["$`"]``, plutôt que comme une propriété d'un objet `RegExp` que vous avez créé.
 
-La valeur de la propriété `leftContext` n'est accessible uniquement qu'en lecture. Elle est modifiée par le moteur à chaque fois qu'une nouvelle correspondance est trouvée.
+La valeur de `leftContext` est mise à jour chaque fois qu'une instance de `RegExp` (mais pas une sous-classe de `RegExp`) réussit une correspondance. Si aucune correspondance n'a été effectuée, `leftContext` est une chaîne de caractères vide. L'accesseur en écriture de `leftContext` est `undefined`, donc vous ne pouvez pas modifier cette propriété directement.
 
-L'alias ne peut pas être utilisé avec la notation utilisant le point (`` RegExp.$` ``). En effet, le parseur attend un gabarit de chaîne à la suite de l'accent grave. Si on utilise le point, on aura donc une exception {{jsxref("SyntaxError")}}. Pour cet alias, on utilisera [la notation à base de crochets](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#notation_avec_crochets).
+Vous ne pouvez pas utiliser l'alias raccourci avec l'accesseur de propriété par point (``RegExp.$` ``), car `` ` `` n'est pas une partie valide d'un identifiant, ce qui provoque une {{JSxRef("SyntaxError")}}. Utilisez plutôt la [notation avec les crochets](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors).
+
+`` $` `` peut également être utilisé pour remplacer une chaîne de caractères de {{JSxRef("String.prototype.replace()")}}, mais cela n'a aucun rapport avec la propriété héritée ``RegExp["$`"]``.
 
 ## Exemples
 
+### Utiliser `leftContext` et `$\``
+
 ```js
-var re = /monde/g;
+const re = /monde/g;
 re.test("coucou monde !");
 RegExp.leftContext; // "coucou "
 RegExp["$`"]; // "coucou "
@@ -33,7 +34,7 @@ RegExp["$`"]; // "coucou "
 
 ## Spécifications
 
-Cette propriété n'est pas standard et ne fait partie d'aucune spécification.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
@@ -41,8 +42,8 @@ Cette propriété n'est pas standard et ne fait partie d'aucune spécification.
 
 ## Voir aussi
 
-- {{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{non-standard_inline}} {{jsxref("RegExp.n", "RegExp.$1-$9")}}
+- La propriété statique [`RegExp.input` (`$_`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input)
+- La propriété statique [`RegExp.lastMatch` (`$&`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch)
+- La propriété statique [`RegExp.lastParen` (`$+`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastParen)
+- La propriété statique [`RegExp.rightContext` (`$'`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/rightContext)
+- La propriété statique [`RegExp.$1`, …, `RegExp.$9`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n)

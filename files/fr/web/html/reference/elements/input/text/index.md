@@ -335,7 +335,7 @@ Si vous essayez d'envoyer le formulaire avec un nom d'utilisateur·ice plus cour
 
 ### Utiliser un motif de validation
 
-L'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) permet d'indiquer une expression rationnelle que doit respecter la valeur saisie afin d'être valide (voir [Validation selon une expression régulière](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation#validation_selon_une_expression_régulière) pour une introduction à la validation des données avec les expressions rationnelles).
+L'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) permet d'indiquer une expression rationnelle que doit respecter la valeur saisie afin d'être valide (voir [Validation selon une expression rationnelle](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation#validation_selon_une_expression_rationnelle) pour une introduction à la validation des données avec les expressions rationnelles).
 
 Dans l'exemple qui suit, on restreint le format du texte afin que ce soit un texte en minuscules (pour lequel seules les lettres de `a` à `z` sont autorisées) et qui mesure entre 4 et 8 caractères.
 

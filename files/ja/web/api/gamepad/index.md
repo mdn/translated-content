@@ -20,7 +20,7 @@ Gamepad オブジェクトを取得する方法は 2 つあります。 {{domxre
 - {{domxref("Gamepad.connected")}} {{ReadOnlyInline}}
   - : ゲームパッドがシステムに繋がっているかを表す論理値。
 - {{domxref("Gamepad.displayId")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 関連する _{{domxref("VRDisplay")}}_ の _{{domxref("VRDisplay.displayId")}}_ を返します）該当する場合）。ゲームパッドが表示されているシーンを制御している `VRDisplay` を返します。
+  - : 関連する _{{domxref("VRDisplay")}}_ の _{{domxref("VRDisplay.displayId")}}_ を返します（該当する場合）。ゲームパッドが表示されているシーンを制御している `VRDisplay` を返します。
 - {{domxref("Gamepad.hand")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : コントローラーがどの手で握られているか、または握られる可能性が高いかを定義する列挙型です。
 - {{domxref("Gamepad.hapticActuators")}} {{ReadOnlyInline}} {{Experimental_Inline}}

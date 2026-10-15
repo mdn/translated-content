@@ -149,7 +149,7 @@ abbr {
     <tr>
       <th scope="row">
         <a href="/ja/docs/Web/HTML/Guides/Content_categories"
-          >コンテンツカテゴリ－</a
+          >コンテンツカテゴリー</a
         >
       </th>
       <td>
