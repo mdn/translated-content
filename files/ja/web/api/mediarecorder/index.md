@@ -2,10 +2,10 @@
 title: MediaRecorder
 slug: Web/API/MediaRecorder
 l10n:
-  sourceCommit: a6390b5024f29bcd6bdab5eedade24e3b446b37b
+  sourceCommit: 4bb8f0d1f9cb2d0e23b9e19f798a7ff39ac34a49
 ---
 
-{{APIRef("Media Recorder API")}}
+{{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder`** は [MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API) のインターフェイスで、メディアを簡単に収録するための機能を提供します。 これは、{{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} コンストラクターを使用して作成します。
 
@@ -28,10 +28,12 @@ l10n:
   - : 使用中の動画エンコードビットレートを返します。 これは、コンストラクターで指定したビットレートとは異なる場合があります（指定した場合）。
 - {{domxref("MediaRecorder.audioBitsPerSecond")}} {{ReadOnlyInline}}
   - : 使用中の音声エンコードビットレートを返します。 これは、コンストラクターで指定したビットレートとは異なる場合があります（指定した場合）。
+- {{domxref("MediaRecorder.audioBitrateMode")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : オーディオトラックのエンコードに使用されたビットレートモードを返します。
 
 ## 静的メソッド
 
-- {{domxref("MediaRecorder.isTypeSupported()")}}
+- {{domxref("MediaRecorder.isTypeSupported_static", "MediaRecorder.isTypeSupported()")}}
   - : 静的メソッドで、指定された MIME メディア種別が現在のユーザーエージェントで対応しているかどうかを示す `true` または `false` 値を返します。
 
 ## インスタンスメソッド
@@ -51,20 +53,18 @@ l10n:
 
 これらのイベントを待ち受けするには、 `addEventListener()` を使用するか、このインターフェイスの `onイベント名` プロパティにイベントリスナーを割り当てるかしてください。
 
-- [`dataavailable`](/ja/docs/Web/API/MediaRecorder/dataavailable_event)
+- {{domxref("MediaRecorder/dataavailable_event", "dataavailable")}}
   - : `timeslice` のミリ秒単位のメディアが収録されるたびに（または `timeslice` が指定されていない場合はメディア全体が収録されると）定期的に起動されます。このイベントは {{domxref("BlobEvent")}} 型であり、収録されたメディアを {{domxref("BlobEvent.data", "data")}} プロパティに保持しています。
-- [`error`](/ja/docs/Web/API/MediaRecorder/error_event)
+- {{domxref("MediaRecorder/error_event", "error")}}
   - : 録画を停止させる致命的なエラーがあったときに発行されます。このイベントは {{domxref("MediaRecorderErrorEvent")}} インターフェイスに基づいており、その {{domxref("MediaRecorderErrorEvent.error", "error")}} プロパティには、実際に発生したエラーを説明する {{domxref("DOMException")}} が含まれています。
-- [`pause`](/ja/docs/Web/API/MediaRecorder/pause_event)
+- {{domxref("MediaRecorder/pause_event", "pause")}}
   - : メディアの収録が一時停止したときに発生します。
-- [`resume`](/ja/docs/Web/API/MediaRecorder/resume_event)
+- {{domxref("MediaRecorder/resume_event", "resume")}}
   - : メディアの収録が一時停止後に再開したときに発生します。
-- [`start`](/ja/docs/Web/API/MediaRecorder/start_event)
+- {{domxref("MediaRecorder/start_event", "start")}}
   - : メディアの収録を開始したときに発生します。
-- [`stop`](/ja/docs/Web/API/MediaRecorder/stop_event)
+- {{domxref("MediaRecorder/stop_event", "stop")}}
   - : {{domxref("MediaStream")}} が終了したか、または {{domxref("MediaRecorder.stop()")}} メソッドが呼び出された場合のいずれかでメディアの収録が終了したときに発生します。
-- [`warning`](/ja/docs/Web/API/MediaRecorder) {{deprecated_inline}}
-  - : メディアの収録に致命的でないエラーが発生したとき、または {{domxref("MediaRecorder.onwarning()")}} メソッドが呼び出された後に発行されます。
 
 ## 例
 
@@ -79,8 +79,6 @@ if (navigator.mediaDevices) {
     .getUserMedia(constraints)
     .then((stream) => {
       const mediaRecorder = new MediaRecorder(stream);
-
-      visualize(stream);
 
       record.onclick = () => {
         mediaRecorder.start();
@@ -107,6 +105,7 @@ if (navigator.mediaDevices) {
         const clipLabel = document.createElement("p");
         const audio = document.createElement("audio");
         const deleteButton = document.createElement("button");
+        const mainContainer = document.querySelector("body");
 
         clipContainer.classList.add("clip");
         audio.setAttribute("controls", "");
@@ -116,7 +115,7 @@ if (navigator.mediaDevices) {
         clipContainer.appendChild(audio);
         clipContainer.appendChild(clipLabel);
         clipContainer.appendChild(deleteButton);
-        soundClips.appendChild(clipContainer);
+        mainContainer.appendChild(clipContainer);
 
         audio.controls = true;
         const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
@@ -155,8 +154,8 @@ if (navigator.mediaDevices) {
 ## 関連情報
 
 - [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + ウェブオーディオ API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[Github のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone)）。（英語）
+- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + ウェブオーディオ API 可視化デモ、[Chris Mills](https://github.com/chrisdavidmills) 著（[Github のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone)）。<sup>(英語)</sup>
 - [メディア要素の収録](/ja/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
-- [simpl.info の MediaStream Recording のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
+- [simpl.info の MediaStream Recording のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://github.com/samdutton) 著。<sup>(英語)</sup>
 - {{domxref("MediaDevices.getUserMedia")}}
-- [OpenLang](https://github.com/chrisjohndigital/OpenLang): MediaDevices と MediaStream 収録 API を動画の録画に使用する HTML5 動画言語ラボウェブアプリ（[GitHub のソース](https://github.com/chrisjohndigital/OpenLang)）（英語）
+- [OpenLang](https://github.com/chrisjohndigital/OpenLang): MediaDevices と MediaStream 収録 API を動画の録画に使用する HTML5 動画言語ラボウェブアプリ（[GitHub のソース](https://github.com/chrisjohndigital/OpenLang)）<sup>(英語)</sup>
