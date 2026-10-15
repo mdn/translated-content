@@ -91,7 +91,7 @@ function initBricks() {
     padding: 10,
   };
   const bricks = [];
-  // continue adding here...
+  // 在这里继续添加代码……
   return bricks;
 }
 ```
@@ -166,7 +166,7 @@ class Brick extends GameObject {
 
 ## 比较你的代码
 
-下面是目前应当实现的效果。点击“播放”按钮即可查看源代码。
+下面是目前应当实现的效果。点击“运行”按钮即可查看源代码。
 
 ```html hidden
 <canvas id="game-canvas" width="480" height="320"></canvas>
@@ -384,7 +384,7 @@ function getCollision(moving, velocity, obstacle, dt) {
 
 function moveBall(dt) {
   while (dt > 0) {
-    // Avoid repeatedly triggering the getter
+    // 避免重复触发 getter
     const ballHitbox = ball.hitbox;
     let hitTime = dt;
     let hitX = null;
@@ -412,7 +412,7 @@ function moveBall(dt) {
 
     const ballIsOutOfBounds = ball.hitbox.bottom > canvas.height;
     if (ballIsOutOfBounds) {
-      // Game over logic
+      // 游戏结束逻辑
       location.reload();
       return;
     }
@@ -420,7 +420,7 @@ function moveBall(dt) {
     if (contacts.length === 0) {
       break;
     }
-    // Snap the position to the point of contact to avoid floating point errors
+    // 将位置对齐到接触点，以避免浮点错误
     if (hitX !== null) {
       ball.pos.x = hitX + ball.size.w / 2;
     }
