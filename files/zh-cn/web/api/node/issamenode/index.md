@@ -28,7 +28,7 @@ isSameNode(otherNode)
 
 ### 返回值
 
-布尔值：若两个节点严格相等则为 `true`，否则为 `false`。
+布尔值，若两个节点严格相等则为 `true`，否则为 `false`。
 
 ## 示例
 
