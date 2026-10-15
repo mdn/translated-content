@@ -1,5 +1,6 @@
 ---
 title: "`anchor-name` CSS 属性"
+short-title: anchor-name
 slug: Web/CSS/Reference/Properties/anchor-name
 l10n:
   sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
@@ -39,19 +40,19 @@ anchor-name: unset;
 
 要相对于锚点元素定位一个元素，定位元素需要具备三个特征：关联、定位方式和位置。`anchor-name` 和 {{cssxref("position-anchor")}} 属性提供了显式关联。
 
-锚点元素可以通过 `anchor-name` 属性接受一个或多个设置在其上的 `<dashed-ident>` 锚点名称。当其中一个名称被设置为某个元素的 `position-anchor` 属性值，且该元素的 {{cssxref("position")}} 设置为 `absolute` 或 `fixed` 时，这两个元素就会关联起来。通过设置关联元素相对于锚点的位置，两个元素会彼此绑定，使其成为“锚点定位元素”。
+锚点元素可以通过 `anchor-name` 属性接受一个或多个设置在其上的 `<dashed-ident>` 锚点名称。当其中一个名称被设置为某个元素的 `position-anchor` 属性值，且该元素的 {{cssxref("position")}} 设置为 `absolute` 或 `fixed` 时，这两个元素就会关联起来。通过设置关联元素相对于锚点的位置，两个元素会彼此绑定，使其成为“锚点定位”元素。
 
 如果多个锚点元素设置了相同的锚点名称，且定位元素的 `position-anchor` 属性值引用了该名称，那么该定位元素将与源代码顺序中最后一个具有该锚点名称的锚点元素关联。
 
 锚点定位会改变锚点定位元素的[包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block)，使其 `position` 相对于锚点，而不是相对于最近的定位祖先元素。
 
-要将定位元素绑定到锚点元素，并将其放置在相对于锚点的特定位置，需要使用锚点定位功能，例如 {{cssxref("anchor()")}} 函数（设置在 {{glossary("inset properties", "inset 属性")}} 值中）或 {{cssxref("position-area")}} 属性。
+要将定位元素绑定到锚点元素，并将其放置在相对于锚点的特定位置，需要使用锚点定位功能，例如 {{cssxref("anchor()")}} 函数（设置在 {{glossary("inset properties", "inset 属性")}}值中）或 {{cssxref("position-area")}} 属性。
 
 如果锚点被隐藏（例如使用 {{cssxref("display", "display: none")}} 或 {{cssxref("visibility", "visibility: hidden")}}），或者由于另一个元素设置了 {{cssxref("content-visibility", "content-visibility: hidden")}} 而使锚点成为该元素[跳过的内容](/zh-CN/docs/Web/CSS/Guides/Containment/Using#跳过其内容)的一部分，则无法将定位元素与锚点元素关联。
 
-所有生成主框的元素都支持 `anchor-name` 属性。这意味着[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)（包括使用 {{cssxref("::before")}} 和 {{cssxref("::after")}} 创建的生成内容）以及 [`range` 输入框](/zh-CN/docs/Web/HTML/Reference/Elements/input/range)滑块（{{cssxref("::-webkit-slider-thumb")}}）等用户界面功能都可以成为锚点元素。除非另有指定，伪元素会隐式锚定到与其所属元素相同的元素。
+所有生成主盒子的元素都支持 `anchor-name` 属性。这意味着[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)（包括使用 {{cssxref("::before")}} 和 {{cssxref("::after")}} 创建的生成内容）以及 [`range` 输入](/zh-CN/docs/Web/HTML/Reference/Elements/input/range)滑块（{{cssxref("::-webkit-slider-thumb")}}）等用户界面特性都可以成为锚点元素。除非另有指定，伪元素会隐式锚定到与其所属元素相同的元素。
 
-有关锚点功能及其用法的更多信息，请参阅 [CSS 锚点定位](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning)模块和[使用 CSS 锚点定位](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Using)指南。
+有关锚点的特性及其用法的更多信息，请参阅 [CSS 锚点定位](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning)模块和[使用 CSS 锚点定位](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Using)指南。
 
 ## 形式定义
 
@@ -132,7 +133,7 @@ body {
 
 通过将锚点名称设置为定位元素 {{cssxref("position-anchor")}} 属性的值，我们将第二个 `<div>` 与锚点元素关联。然后设置定位元素的：
 
-- 将 {{cssxref("position")}} 属性设置为 `fixed`，使其成为_锚点定位元素_，从而可以相对于锚点在页面上的位置进行定位。
+- 将 {{cssxref("position")}} 属性设置为 `fixed`，使其成为*锚点定位元素*，从而可以相对于锚点在页面上的位置进行定位。
 - 将 {{cssxref("left")}} 和 {{cssxref("top")}} 属性分别设置为值为 `right` 和 `top` 的 {{cssxref("anchor()")}} 函数。这会使信息框的左边缘紧贴锚点的右边缘，并使其上边缘相对于锚点的上边缘定位。
 - 将 {{cssxref("margin-left")}} 设置为 `10px`，在锚点定位元素与锚点之间创建间距。
 
