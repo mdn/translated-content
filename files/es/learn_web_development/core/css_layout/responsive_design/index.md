@@ -1,164 +1,115 @@
 ---
-title: Diseño receptivo
+title: Diseño web adaptable
 slug: Learn_web_development/Core/CSS_layout/Responsive_Design
-original_slug: Learn/CSS/CSS_layout/Responsive_Design
+l10n:
+  sourceCommit: 4c58f4735f986a91bee1b77e336143630df727a2
 ---
 
-{{learnsidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
 
-En los primeros días del diseño web, las páginas se diseñaban para llenar un tamaño de pantalla en particular. Si el usuario tenía una pantalla más grande o más pequeña que la del diseñador, los resultados esperados iban desde barras de desplazamiento no deseadas hasta longitudes de línea excesivamente largas y un mal uso del espacio. A medida que estuvieron disponibles tamaños de pantalla más diversos, apareció el concepto de _diseño web responsivo_ (RWD, _responsive web design_), un conjunto de prácticas que permite a las páginas web alterar su diseño y apariencia para adaptarse a diferentes anchos de pantalla, resoluciones, etc. Es una idea que cambió la forma en que diseñamos para una web multidispositivo, y en este artículo te ayudaremos a comprender las principales técnicas que necesitas saber para dominarlo.
+El _diseño web adaptable_ (RWD, _responsive web design_) es un enfoque de diseño web para que las páginas web se vean bien en todos los tamaños y resoluciones de pantalla, garantizando a la vez una buena usabilidad. Es la forma de diseñar para una web multidispositivo. En este artículo te ayudaremos a entender algunas técnicas que puedes usar para dominarlo.
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerrequisitos:</th>
+      <th scope="row">Requisitos previos:</th>
       <td>
-        Conceptos básicos de HTML (véase
         <a href="/es/docs/Learn_web_development/Core/Structuring_content"
-          >Introducción al HTML</a
-        >) y nociones de cómo funciona el CSS (véase
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Primeros pasos en CSS</a> y
-        <a href="/es/docs/Learn_web_development/Core/Styling_basics"
-          >Los elementos básicos del CSS</a
-        >).
+          >Estructurar el contenido con HTML</a
+        >,
+        <a href="/es/docs/Learn_web_development/Core/Styling_basics">Fundamentos de estilo con CSS</a>,
+        <a href="/es/docs/Learn_web_development/Core/Text_styling/Fundamentals">Estilos fundamentales de texto y fuentes</a>,
+        y estar familiarizado con los <a href="/es/docs/Learn_web_development/Core/CSS_layout/Introduction">conceptos fundamentales del diseño con CSS</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objetivo:</th>
+      <th scope="row">Resultados de aprendizaje:</th>
       <td>
-        Comprender los conceptos fundamentales y la historia del diseño
-        responsivo.
+        <ul>
+          <li>Qué es el diseño adaptable: diseñar los diseños web para que sean flexibles y funcionen bien en distintos tamaños de pantalla, resoluciones, etc.</li>
+          <li>La relación entre las herramientas de diseño modernas, como grid y flexbox, y el diseño adaptable.</li>
+          <li>Los conceptos en los que se basa el uso de las consultas de medios para el diseño adaptable, incluidos el enfoque «primero móvil» (<em>mobile first</em>) y los puntos de ruptura.</li>
+          <li>Por qué hace falta <code>&lt;meta viewport=""&gt;</code> para que los documentos web se muestren correctamente en los dispositivos móviles.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-## Diseños de sitios web históricos
+## El precursor del diseño adaptable: el diseño web para móviles
 
-En un momento de la historia, solo tenías dos opciones al diseñar un sitio web:
+Antes de que el diseño web adaptable se convirtiera en el enfoque estándar para que los sitios web funcionaran en distintos tipos de dispositivos, los desarrolladores web hablaban de diseño web para móviles, desarrollo web para móviles o, a veces, diseño apto para móviles. Básicamente son lo mismo que el diseño web adaptable: el objetivo es asegurarse de que los sitios web funcionen bien en dispositivos con distintas características físicas (tamaño de pantalla, resolución) en cuanto al diseño, el contenido (texto y multimedia) y el rendimiento.
 
-- Podías crear un sitio _líquido_, que se expandiría para llenar toda la ventana del navegador
-- o un sitio de _ancho fijo_, que sería un tamaño fijo en píxeles.
+La diferencia tiene que ver sobre todo con los dispositivos implicados y con las tecnologías disponibles para crear soluciones:
 
-Estos dos enfoques tendían a dar como resultado un sitio web que se veía mejor ¡en la pantalla de la persona que diseñaba el sitio! El sitio líquido dio como resultado un diseño encogido en las pantallas que eran más pequeñas (como se ve a continuación) o longitudes de línea interminables en las pantallas que eran más grandes.
+- Antes hablábamos de escritorio o móvil, pero ahora hay muchos tipos de dispositivos disponibles, como equipos de escritorio, portátiles, móviles, tabletas, relojes, etc. En lugar de atender a unos pocos tamaños de pantalla distintos, ahora tenemos que diseñar los sitios de forma defensiva para atender a los tamaños y resoluciones de pantalla habituales, además de a los desconocidos.
+- Antes, los dispositivos móviles tenían poca potencia en cuanto a CPU/GPU y ancho de banda disponible. Algunos no admitían CSS o ni siquiera HTML y, por eso, era habitual detectar el navegador en el servidor para determinar el tipo de dispositivo o navegador antes de servir un sitio que el dispositivo pudiera manejar. A menudo se servían a los dispositivos móviles experiencias muy sencillas y básicas, porque era todo lo que podían manejar. Hoy en día, los dispositivos móviles pueden manejar las mismas tecnologías que las computadoras de escritorio, así que estas técnicas son menos habituales.
+  - Aun así, deberías usar las técnicas que se tratan en este artículo para ofrecer a los usuarios móviles una experiencia adecuada, porque todavía hay limitaciones como la duración de la batería y el ancho de banda de las que preocuparse.
+  - La experiencia de usuario sigue siendo importante. Por ejemplo, un usuario móvil de un sitio de viajes quizá solo quiera consultar los horarios y los retrasos de los vuelos, y no que le muestren un globo terráqueo animado en 3D con las rutas de vuelo y la historia de tu empresa.
+- Las tecnologías modernas son mucho mejores para crear experiencias adaptables. Por ejemplo, las [tecnologías de imágenes y multimedia adaptables](#imágenes_y_multimedia_adaptables) permiten ahora servir el contenido multimedia adecuado a cada dispositivo sin tener que recurrir a técnicas como la detección en el servidor.
 
-![Un diseño de página con dos columnas encogidas en una ventana gráfica del tamaño de un teléfono móvil.](mdn-rwd-liquid.png)
+## Introducción al diseño web adaptable
 
-> [!NOTE]
-> Observa este [ejemplo](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html) y su [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html) de un diseño líquido sencillo. Amplía o reduce la ventana del navegador y observa cómo cambia su aspecto en diferentes tamaños.
+HTML es fundamentalmente adaptable, o _fluido_. Si creas una página web que solo contenga HTML, sin CSS, y cambias el tamaño de la ventana, el navegador redistribuirá automáticamente el texto para que quepa en el viewport.
 
-El sitio de ancho fijo se arriesgaba a una barra de desplazamiento horizontal en pantallas que eran más pequeñas que el ancho del sitio (como se ve a continuación), y a un gran espacio en blanco en los bordes del diseño en las pantallas que eran más grandes.
+Aunque el comportamiento adaptable predeterminado pueda hacer pensar que no hace falta ninguna solución, las líneas de texto largas que se muestran a pantalla completa en un monitor ancho pueden ser difíciles de leer. Este problema se puede resolver con CSS, por ejemplo, creando columnas estrechas para limitar la longitud de las líneas. Sin embargo, esto puede crear problemas nuevos para los usuarios que estrechan la ventana del navegador o ven el sitio en un dispositivo móvil: las columnas se verán aplastadas y serán más difíciles de leer.
 
-![Un diseño con una barra de desplazamiento horizontal en una ventana de teléfono móvil.](mdn-rwd-fixed.png)
+![Un diseño con dos columnas aplastadas en un viewport de tamaño móvil.](mdn-rwd-liquid.png)
 
-> [!NOTE]
-> Observa este [ejemplo](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html) y su [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html) de un diseño sencillo con un ancho fijo. Nuevamente, cambia el tamaño de la ventana del navegador y observa el resultado.
+Crear una página web que no cambie de tamaño estableciendo un ancho fijo tampoco funciona: provoca barras de desplazamiento en los dispositivos estrechos y demasiado espacio vacío en las pantallas anchas.
 
-> [!NOTE]
-> Las capturas de pantalla anteriores se han tomado usando el [modo de diseño responsivo](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) de las herramientas DevTools de Firefox.
+El diseño web adaptable, o RWD, es un enfoque de diseño que tiene en cuenta toda la gama de dispositivos y tamaños de dispositivo disponibles, y permite adaptarse automáticamente a la pantalla, ya se vea el contenido en una tableta, un teléfono, una televisión o un reloj.
 
-A medida que la web móvil comenzó a hacerse realidad con los primeros teléfonos con funciones, las empresas que deseaban adoptar los dispositivos móviles solían crear una versión especial de su sitio web para dispositivo móvil, con una URL diferente (a menudo algo así como _m.example.com_ o _example.mobi_). Esto significaba que había que desarrollar y actualizar dos versiones independientes del sitio web.
+El diseño web adaptable no es una tecnología independiente, sino un enfoque. Es un término que se usa para describir un conjunto de buenas prácticas que sirven para crear un diseño que pueda _adaptarse_ a cualquier dispositivo con el que se vea el contenido.
 
-Además, estos sitios web para dispositivos móviles a menudo ofrecían una experiencia muy reducida. A medida que los dispositivos móviles se volvían más potentes y capaces de mostrar sitios web completos, esto resultaba frustrante para los usuarios de dispositivos móviles, que se veían atrapados en la versión móvil del sitio web y no podían acceder a la información que sabían que había en la versión de escritorio, que incluía todas las funciones del sitio web.
+El término _diseño adaptable_ (_responsive design_), [acuñado por Ethan Marcotte en 2010](https://alistapart.com/article/responsive-web-design/), describía el uso de cuadrículas fluidas, imágenes fluidas y consultas de medios para crear contenido adaptable.
 
-## Diseño flexible antes del diseño responsivo
+En aquella época, lo recomendado era usar `float` de CSS para el diseño y consultas de medios para consultar el ancho del navegador, creando diseños para distintos puntos de ruptura. Las imágenes fluidas se configuran para no superar el ancho de su contenedor: su propiedad `max-width` se establece en `100%`. Las imágenes fluidas se reducen cuando la columna que las contiene se estrecha, pero no crecen más allá de su tamaño intrínseco cuando la columna se ensancha. Esto permite que una imagen se reduzca para caber en su contenido en lugar de desbordarlo, pero que no crezca y se pixele si el contenedor se vuelve más ancho que la imagen.
 
-Se desarrollaron varios enfoques para tratar de resolver los inconvenientes de los métodos líquidos o de ancho fijo para crear sitios web. En 2004, Cameron Adams escribió una publicación titulada [Resolution dependent layout](https://www.themaninblue.com/writing/perspective/2004/09/21/), que describe un método para crear un diseño que podría adaptarse a diferentes resoluciones de pantalla. Este enfoque requería JavaScript para detectar la resolución de la pantalla y cargar el CSS correcto.
+Los métodos de diseño modernos de CSS son adaptables por naturaleza y, desde la publicación del artículo de Marcotte, tenemos multitud de características integradas en la plataforma web que facilitan el diseño de sitios adaptables.
 
-Zoe Mickley Gillenwater fue determinante en [su trabajo](http://zomigi.com/blog/voices-that-matter-slides-available/) de descripción y formalización de los diversos modos en que se podían crear sitios web flexibles para intentar encontrar una situación intermedia entre llenar toda la pantalla o tener un tamaño completamente fijo.
+El resto de este artículo explica las distintas características de la plataforma web que quizá quieras usar al crear un sitio adaptable.
 
-## Diseño responsivo
+## Consultas de medios
 
-El término _diseño responsivo_ fue acuñado por [Ethan Marcotte en 2010](https://alistapart.com/article/responsive-web-design/), y describía el uso combinado de tres técnicas.
+Las [consultas de medios](/es/docs/Web/CSS/Guides/Media_queries/Using) nos permiten hacer una serie de pruebas (por ejemplo, si la pantalla del usuario es más ancha que cierto ancho o tiene más de cierta resolución) y aplicar CSS de forma selectiva para dar a la página el estilo adecuado a las necesidades del usuario.
 
-1. La primera era la idea de las redes fluidas, algo que ya exploraba Gillenwater, y que puede leerse en el artículo de Marcotte, [Fluid Grids](https://alistapart.com/article/fluidgrids/) (publicado en 2009 en _A list apart_).
-2. La segunda técnica era la idea de las [imágenes fluidas](https://unstoppablerobotninja.com/entry/fluid-images). Usando una técnica muy simple de establecer la propiedad de `max-width` al `100%`, las imágenes se reducían si su columna de contención se volvía más estrecha que el tamaño intrínseco de la imagen, pero nunca se expandía. Esto permite reducir una imagen para que se ajuste a una columna de tamaño flexible, en lugar de que desborde, pero no se expande ni se pixela si la columna se ensancha más que la imagen.
-3. El tercer componente clave era la [consulta a los media](/es/docs/Web/CSS/Guides/Media_queries). Las consultas a los media habilitan el tipo de cambio de diseño que Cameron Adams había explorado previamente usando JavaScript, pero usando solo CSS. En lugar de tener un único diseño para todos los tamaños de pantalla, el diseño podría cambiarse. Las barras laterales pueden reposicionarse en una pantalla más pequeña, o puede mostrarse una navegación alternativa.
-
-Es importante comprender que **el diseño web responsivo no es una tecnología independiente**: es un término utilizado para describir un enfoque para el diseño web, o un conjunto de buenas prácticas utilizado para crear un diseño que puede _responder_ según el dispositivo que se utiliza para ver un contenido. En la exploración original de Marcotte, esto significaba cuadrículas flexibles (mediante elementos flotantes) y consultas de media; sin embargo, en los casi 10 años desde que se escribió ese artículo, trabajar de manera responsiva se ha convertido en la norma. Los métodos de diseño CSS modernos son inherentemente responsivos, y la plataforma web dispone de herramientas integradas nuevas que facilitan el diseño de sitios web responsivos.
-
-El resto de este artículo te indicará las diversas características de la plataforma web que puedas querer utilizar para crear un sitio responsivo.
-
-## La consulta a los media
-
-El diseño responsivo solo pudo surgir gracias a la consulta a los media. La especificación de nivel 3 de consulta a los media se convirtió en una candidata a Recomendación en 2009, lo que significa que se consideró lista para su implementación en los navegadores. Las consultas a los media nos permiten ejecutar una serie de pruebas (por ejemplo, si la pantalla del usuario es mayor que un ancho o una resolución determinados) y aplicar CSS selectivamente para diseñar la página de manera que resulte adecuada a las necesidades del usuario.
-
-Por ejemplo, la consulta a los media siguiente explora si la página web que se muestra lo hace como un medio de pantalla (por lo tanto, no es un documento impreso) y si la ventana tiene al menos 800 píxeles de ancho. El CSS para el selector `.container` solo se aplicará si ambas condiciones son ciertas.
+Por ejemplo, la siguiente consulta de medios comprueba si la página web actual se muestra como un medio de pantalla (y, por tanto, no es un documento impreso) y si el viewport tiene al menos `80rem` de ancho. La regla `.container` solo se aplicará si se cumplen estas dos condiciones.
 
 ```css
-@media screen and (min-width: 800px) {
+@media screen and (width >= 80rem) {
   .container {
     margin: 1em 2em;
   }
 }
 ```
 
-Puedes añadir múltiples consultas a los media dentro de una hoja de estilo, y ajustar todo tu diseño o solo partes de él para que se adapte mejor a los diferentes tamaños de pantalla. Los puntos en los que se introduce una consulta a los media y se cambia el diseño se conocen como _puntos de interrupción_.
+Puedes añadir varias consultas de medios en una hoja de estilo, para ajustar todo el diseño o partes de él a los distintos tamaños de pantalla. Los puntos en los que se introduce una consulta de medios y cambia el diseño se llaman _puntos de ruptura_ (_breakpoints_).
 
-Un enfoque común cuando se usan las consultas a los media es crear un diseño sencillo de una sola columna para dispositivos de pantalla estrecha (por ejemplo, teléfonos móviles), luego implementar un diseño en columnas para pantallas más grandes cuando se sabe que hay suficiente ancho de pantalla para manejarlo. Esto se describe a menudo como diseño **primero móvil**.
+Un enfoque habitual al usar consultas de medios es crear un diseño sencillo de una sola columna para los dispositivos de pantalla estrecha (por ejemplo, los teléfonos móviles) y después comprobar si hay pantallas más anchas e implementar un diseño de varias columnas cuando sabes que hay suficiente ancho de pantalla para ello. Diseñar primero para móviles se conoce como diseño **primero móvil** (_mobile first_).
 
-Obtén más información sobre las [consultas a los media](/es/docs/Web/CSS/Guides/Media_queries) en la documentación de MDN.
+Si usas puntos de ruptura, las buenas prácticas recomiendan definirlos con [unidades relativas](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#unidades_de_longitud_relativa) en lugar de con los tamaños absolutos de un dispositivo concreto.
 
-## Cuadrículas flexibles
+Hay distintos enfoques para los estilos definidos dentro de un bloque de consulta de medios, desde usar consultas de medios para enlazar hojas de estilo con {{htmlelement("link")}} según rangos de tamaño del navegador hasta incluir solo variables de propiedades personalizadas que guardan los valores asociados a cada punto de ruptura.
 
-Los sitios responsivos no solo cambian su diseño entre puntos de interrupción, sino que se construyen sobre cuadrículas flexibles. Una cuadrícula flexible significa que no tienes que centrarte en todos los tamaños de dispositivo posibles y construir para ellos un diseño en píxeles perfecto. Ese enfoque sería imposible dada la gran cantidad de dispositivos de tamaños diferentes que hay, y el hecho de que, al menos en la versión de escritorio, las personas no siempre tienen la ventana de su navegador maximizada.
-
-Al usar una cuadrícula flexible, solo necesitas añadir un punto de interrupción y cambiar el diseño en el punto en que el contenido comienza a verse mal. Por ejemplo, si las longitudes de las líneas se vuelven interminablemente largas a medida que el tamaño de la pantalla aumenta, o una caja se encoje hasta un ancho de dos palabras en cada línea a medida que el tamaño de la pantalla se reduce.
-
-En los primeros días del diseño responsivo, nuestra única opción para el diseño de páginas web era usar [elementos flotantes](/es/docs/Learn_web_development/Core/CSS_layout/Floats). Los diseños de pantalla con elementos flotantes flexibles se lograban dando a cada elemento un ancho porcentual asegurándose de que para toda la página no alcanzara más del 100%. En su trabajo original sobre cuadrículas fluidas, Marcotte detalló una fórmula para tomar un diseño de página web diseñado usando píxeles y convertirlo en porcentajes.
-
-```
-target / context = result
-```
-
-Por ejemplo, si el tamaño de nuestra columna de destino es de 60 píxeles y el contexto (o contenedor) en el que se encuentra es de 960 píxeles, dividimos 60 por 960 para obtener un valor que podemos usar en nuestro CSS, después de mover el separador de cifras decimales dos posiciones a la derecha.
-
-```css
-.col {
-  width: 6.25%; /* 60 / 960 = 0.0625 */
-}
-```
-
-Este enfoque se encuentra hoy en muchos lugares de la web, y aquí está documentado en la sección de compaginación de nuestro artículo sobre [métodos de compaginación heredados](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods). Es probable que encuentres sitios web que utilizan este enfoque en su trabajo, por lo que vale la pena entenderlo, aunque no vas a construir un sitio web moderno utilizando una cuadrícula flexible basada en elementos flotantes.
-
-El ejemplo siguiente muestra un diseño responsivo sencillo que utiliza consultas a los medios y una cuadrícula flexible. En pantallas estrechas, el diseño de página muestra las cajas en columna una encima de la otra:
-
-![Una vista de un dispositivo móvil con un diseño de página con cajas en columna vertical una encima de la otra.](mdn-rwd-mobile.png)
-
-En pantallas más anchas se pasa a dos columnas:
-
-![Una vista de un dispositivo de escritorio con un diseño a dos columnas.](mdn-rwd-desktop.png)
+Las consultas de medios pueden ayudar con el RWD, pero no son imprescindibles. Las cuadrículas flexibles, las unidades relativas y los valores mínimos y máximos de las unidades se pueden usar sin consultas de medios.
 
 > [!NOTE]
-> Puedes encontrar el [ejemplo en vivo](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html) y el [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html) de este ejemplo en GitHub.
+> Scrimba tiene un tutorial llamado [Aside: Media queries](https://scrimba.com/frontend-path-c0j/~0j3?via=mdn) <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup>, que ofrece una introducción interactiva a las consultas de medios y un desafío para comprobar que entiendes lo básico.
 
-## Tecnologías modernas de diseño de páginas web
+## Tecnologías de diseño adaptable
 
-Los métodos modernos de diseño de páginas web, como el [diseño en columnas](/es/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout), [Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) y [Grid](/es/docs/Learn_web_development/Core/CSS_layout/Grids) son responsivos por defecto. Todos estos métodos asumen que tratas de crear una cuadrícula flexible y te proporcionan los modos más fáciles de hacerlo.
+Los sitios adaptables se construyen sobre cuadrículas flexibles, lo que significa que no tienes que crear diseños perfectos al píxel para cada tamaño de dispositivo posible.
 
-### Multicol
+Con una cuadrícula flexible, puedes cambiar una característica o añadir un punto de ruptura y cambiar el diseño en el momento en que el contenido empieza a verse mal. Por ejemplo, para que las líneas no se vuelvan ilegiblemente largas a medida que aumenta el tamaño de la pantalla, puedes usar {{cssxref('columns')}}; si una caja se aplasta y queda con dos palabras por línea al estrecharse, puedes establecer un punto de ruptura.
 
-El más antiguo de estos métodos de diseño de páginas web es multicol. Cuando especificas un atributo `column-count`, esto indica en cuántas columnas deseas dividir tu contenido. El navegador entonces calcula el tamaño de estas columnas, que cambiará de acuerdo con el tamaño de la pantalla.
-
-```css
-.container {
-  column-count: 3;
-}
-```
-
-Si en lugar de ello estableces el atributo `column-width`, especificas un ancho _mínimo_. El navegador crea tantas columnas de ese ancho como quepan cómodamente en el contenedor, y reparte el espacio entre todas las columnas. Por lo tanto, el número de columnas cambia según la cantidad de espacio que hay.
-
-```css
-.container {
-  column-width: 10em;
-}
-```
+Varios métodos de diseño, como [Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) y [CSS Grid](/es/docs/Learn_web_development/Core/CSS_layout/Grids), son adaptables de forma predeterminada. Todos dan por sentado que intentas crear una cuadrícula flexible y te ofrecen formas más sencillas de hacerlo.
 
 ### Flexbox
 
-En el método Flexbox, los elementos flexibles se encogen y distribuyen el espacio entre los elementos según el espacio que hay en su contenedor, según su comportamiento inicial. Al cambiar los valores de `flex-grow` y `flex-shrink`, puedes indicar cómo deseas que se comporten los elementos cuando a su alrededor hay más o menos espacio.
+En flexbox, los elementos flexibles se encogen o crecen, repartiendo el espacio entre ellos según el espacio de su contenedor. Cambiando los valores de `flex-grow` y `flex-shrink` puedes indicar cómo quieres que se comporten los elementos cuando tienen más o menos espacio a su alrededor.
 
-En el ejemplo siguiente, los elementos flexibles ocupan cada uno la misma cantidad de espacio en el contenedor flexible, al utilizar la abreviatura `flex: 1` como se describe en el artículo [Flexbox: Dimensionamiento flexible de los elementos flex](/es/docs/Learn_web_development/Core/CSS_layout/Grids#Cuadr%C3%ADculas_flexibles_con_la_unidad_fr).
+En el ejemplo de abajo, cada elemento flexible ocupará la misma cantidad de espacio en el contenedor flexible, usando la forma abreviada `flex: 1`, como vimos antes (consulta [Flexbox: dimensionamiento flexible de los elementos flexibles](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox#dimensionamiento_flexible_de_elementos_flexibles)).
 
 ```css
 .container {
@@ -170,12 +121,76 @@ En el ejemplo siguiente, los elementos flexibles ocupan cada uno la misma cantid
 }
 ```
 
-> [!NOTE]
-> Como ejemplo, hemos reconstruido el anterior diseño de página responsivo sencillo, esta vez usando Flexbox. Puedes ver que ya no necesitamos usar valores de porcentaje extraños para calcular el tamaño de las columnas: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html).
+Así es como podríamos usar flexbox con una consulta de medios para un diseño adaptable.
 
-### Cuadrículas CSS
+```html live-sample___flex-based-rwd
+<div class="wrapper">
+  <div class="col1">
+    <p>
+      Este diseño es adaptable. Mira qué pasa si haces la ventana del navegador
+      más ancha o más estrecha.
+    </p>
+  </div>
+  <div class="col2">
+    <p>
+      Una noche de noviembre de 1782, según cuenta la historia, dos hermanos
+      estaban sentados junto al fuego en la pequeña ciudad francesa de Annonay,
+      observando cómo las volutas de humo gris del hogar subían por la ancha
+      chimenea. Se llamaban Stephen y Joseph Montgolfier, eran fabricantes de
+      papel de oficio y tenían fama de ser reflexivos y de sentir un profundo
+      interés por todo el conocimiento científico y los nuevos descubrimientos.
+    </p>
+    <p>
+      Antes de aquella noche (una noche memorable, como se demostraría), cientos
+      de millones de personas habían visto subir las volutas de humo de sus
+      fuegos sin sacar de ello ninguna inspiración especial.
+    </p>
+  </div>
+</div>
+```
 
-En el diseño de cuadrículas con CSS, la unidad `fr` permite la distribución del espacio disponible en las trazas de la cuadrícula. El ejemplo siguiente crea un contenedor de cuadrícula con tres trazas dimensionadas a `1fr`. Esto crea tres columnas, cada una de las cuales ocupa una parte del espacio que hay disponible en el contenedor. Puedes obtener más información sobre este enfoque para crear una cuadrícula en el módulo Aprender a diseñar cuadrículas en [Cuadrículas flexibles con la unidad fr](/es/docs/Learn_web_development/Core/CSS_layout/Grids#flexible_grids_with_the_fr_unit).
+```css hidden live-sample___flex-based-rwd
+body {
+  font: 1.2em / 1.5 sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #eeeeee;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 2em auto;
+}
+
+.col1,
+.col2 {
+  background-color: white;
+}
+```
+
+```css live-sample___flex-based-rwd
+@media screen and (width >= 600px) {
+  .wrapper {
+    display: flex;
+  }
+
+  .col1 {
+    flex: 1;
+    margin-right: 5%;
+  }
+
+  .col2 {
+    flex: 2;
+  }
+}
+```
+
+{{EmbedLiveSample("flex-based-rwd", "", "550px")}}
+
+Cambia el tamaño de la ventana del navegador. El diseño pasará de una columna a dos columnas cuando el tamaño del ejemplo anterior cruce el umbral de `600px` de ancho.
+
+### CSS grid
+
+En el diseño de cuadrícula de CSS, la unidad `fr` permite repartir el espacio disponible entre las pistas de la cuadrícula. El siguiente ejemplo crea un contenedor de cuadrícula con tres pistas de tamaño `1fr`. Esto creará tres pistas de columna, cada una de las cuales ocupará una parte del espacio disponible en el contenedor. Ya viste este enfoque antes (consulta [Cuadrículas flexibles con la unidad fr](/es/docs/Learn_web_development/Core/CSS_layout/Grids#cuadrículas_flexibles_con_la_unidad_fr) para repasarlo).
 
 ```css
 .container {
@@ -184,32 +199,96 @@ En el diseño de cuadrículas con CSS, la unidad `fr` permite la distribución d
 }
 ```
 
-> [!NOTE]
-> La versión del diseño de página en cuadrícula es aún más simple, ya que podemos definir las columnas en .wrapper: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html).
+Así es como podríamos usar el diseño de cuadrícula con una consulta de medios para un diseño adaptable.
 
-## Imágenes responsivas
+```html live-sample___grid-based-rwd
+<div class="wrapper">
+  <div class="col1">
+    <p>
+      Este diseño es adaptable. Mira qué pasa si haces la ventana del navegador
+      más ancha o más estrecha.
+    </p>
+  </div>
+  <div class="col2">
+    <p>
+      Una noche de noviembre de 1782, según cuenta la historia, dos hermanos
+      estaban sentados junto al fuego en la pequeña ciudad francesa de Annonay,
+      observando cómo las volutas de humo gris del hogar subían por la ancha
+      chimenea. Se llamaban Stephen y Joseph Montgolfier, eran fabricantes de
+      papel de oficio y tenían fama de ser reflexivos y de sentir un profundo
+      interés por todo el conocimiento científico y los nuevos descubrimientos.
+    </p>
+    <p>
+      Antes de aquella noche (una noche memorable, como se demostraría), cientos
+      de millones de personas habían visto subir las volutas de humo de sus
+      fuegos sin sacar de ello ninguna inspiración especial.
+    </p>
+  </div>
+</div>
+```
 
-El enfoque más simple para las imágenes responsivas es el que se describe en los primeros artículos de Marcotte sobre diseño responsivo. Básicamente, tomar una imagen que tenga el tamaño más grande que puedas necesitar, y reducirla. Este continúa siendo un enfoque utilizado hoy en día, y en la mayoría de las hojas de estilo encontrarás en alguna parte el CSS siguiente:
+```css hidden live-sample___grid-based-rwd
+body {
+  font: 1.2em / 1.5 sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #eeeeee;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 2em auto;
+}
 
-```css
-img {
-  max-width: 100%:
+.col1,
+.col2 {
+  background-color: white;
 }
 ```
 
-Hay inconvenientes obvios en este enfoque. La imagen puede mostrarse mucho más pequeña que su tamaño intrínseco, lo que representa una pérdida de ancho de banda: un usuario de dispositivo móvil puede descargar una imagen que sea varias veces el tamaño de lo que ve en realidad en la ventana del navegador. Además, es posible que no desees la misma relación de aspecto de la imagen en dispositivos móviles y en ordenadores de escritorio. Por ejemplo, podría ser bueno tener una imagen cuadrada para dispositivos móviles, pero mostrar la misma escena que una imagen horizontal en el escritorio. O bien es posible que, reconociendo el tamaño más pequeño de una imagen en dispositivos móviles, desees mostrar una imagen diferente, que se entienda mejor en un tamaño de pantalla pequeño. Estas cosas no se pueden lograr simplemente reduciendo una imagen.
+```css live-sample___grid-based-rwd
+@media screen and (width >= 600px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5%;
+  }
+}
+```
 
-Las imágenes responsivas, que utilizan el elemento {{htmlelement ("picture")}} y los atributos {{htmlelement ("img")}} `srcset` y `sizes` resuelven ambos problemas. Puedes proporcionar varios tamaños junto con «sugerencias» (metadatos que describen el tamaño de pantalla y la resolución para que la imagen sea la más adecuada), y el navegador elije la imagen que resulta más adecuada para cada dispositivo, y se asegura de que el usuario descarga un tamaño de imagen apropiado para el dispositivo que utiliza.
+{{EmbedLiveSample("grid-based-rwd", "", "550px")}}
 
-También puedes usar imágenes _de director artístico_, que proporcionan un recorte o una imagen completamente diferente para diferentes tamaños de pantalla.
+De nuevo, prueba a cambiar el tamaño de la ventana del navegador: deberías ver que el diseño del ejemplo cambia en el umbral de `600px` de ancho, igual que en el ejemplo anterior.
 
-Puedes encontrar una [guía detallada de imágenes responsivas en el artículo sobre Aprender HTML](/es/docs/Web/HTML/Guides/Responsive_images) en MDN.
+## Imágenes y multimedia adaptables
 
-## Tipografía responsiva
+Para asegurarte de que el contenido multimedia nunca sea más grande que su contenedor adaptable, puedes usar el siguiente enfoque:
 
-Un elemento de diseño responsivo que todavía no hemos tratado en trabajos anteriores es la idea de la tipografía responsiva. Este concepto describe esencialmente el hecho de cambiar el tamaño de letra según el espacio de pantalla que reflejan las consultas a media.
+```css
+img,
+picture,
+video {
+  max-width: 100%;
+}
+```
 
-En este ejemplo, queremos establecer que nuestro encabezado de nivel 1 sea `4rem`, lo que significa que será cuatro veces nuestro tamaño de letra base. ¡Es un título muy grande! Solo queremos este título de encabezado gigante en los tamaños de pantalla más grandes, por lo tanto, primero creamos un título de encabezado más pequeño y luego usamos las consultas a los media para sobrescribirlo con el tamaño más grande si sabemos que el usuario tiene un tamaño de pantalla de al menos `1200px`.
+Esto escala los elementos multimedia para asegurarse de que nunca desborden sus contenedores.
+
+> [!NOTE]
+> Usar una sola imagen grande y reducirla para que quepa en los dispositivos pequeños desperdicia ancho de banda, porque se descargan imágenes más grandes de lo necesario. Además, puede verse mal: una imagen apaisada, por ejemplo, puede verse bien en un monitor panorámico, pero ser difícil de ver en un dispositivo móvil, al que le iría mejor una imagen vertical. Estos problemas se pueden resolver con el elemento {{htmlelement("picture")}} y los atributos `srcset` y `sizes` de {{htmlelement("img")}}. Son características avanzadas que quedan fuera del alcance de este curso, pero puedes encontrar una guía detallada en [Imágenes adaptables](/es/docs/Web/HTML/Guides/Responsive_images).
+
+Otros consejos útiles:
+
+- Asegúrate siempre de usar un formato de imagen adecuado para las imágenes de tu sitio web (como PNG o JPG) y de optimizar el tamaño del archivo con un editor gráfico antes de ponerlas en tu sitio web.
+- Puedes usar características de CSS como los [degradados](/es/docs/Web/CSS/Guides/Images/Using_gradients) y las [sombras](/es/docs/Web/CSS/Reference/Properties/box-shadow) para implementar efectos visuales sin usar imágenes.
+- Puedes usar consultas de medios dentro del atributo media de los elementos {{htmlelement("source")}} anidados dentro de elementos {{htmlelement("video")}}/{{htmlelement("audio")}} para servir los archivos de video o audio adecuados a cada dispositivo (video y audio adaptables).
+
+## Tipografía adaptable
+
+La tipografía adaptable consiste en cambiar los tamaños de fuente dentro de consultas de medios o en usar unidades de viewport para reflejar la mayor o menor cantidad de espacio de pantalla disponible.
+
+### Usar consultas de medios para una tipografía adaptable
+
+En este ejemplo, queremos que nuestro encabezado de nivel 1 mida `4rem`, es decir, cuatro veces nuestro tamaño de fuente base. ¡Es un encabezado enorme! Solo queremos este encabezado gigante en los tamaños de pantalla más grandes, así que primero le damos al encabezado un tamaño menor de `2rem` y después usamos consultas de medios para sobrescribirlo con el tamaño mayor si sabemos que el usuario tiene una pantalla de al menos `1200px` de ancho.
 
 ```css
 html {
@@ -220,31 +299,93 @@ h1 {
   font-size: 2rem;
 }
 
-@media (min-width: 1200px) {
+@media (width >= 1200px) {
   h1 {
     font-size: 4rem;
   }
 }
 ```
 
-Hemos editado nuestro ejemplo anterior de cuadrícula responsiva para incluir también el tipo de respuesta utilizando el método descrito. Puedes ver cómo el título de encabezado cambia de tamaño cuando el diseño para a la versión de dos columnas.
+El siguiente ejemplo es una versión modificada de nuestro ejemplo anterior de cuadrícula adaptable, que incluye un encabezado adaptable con el método descrito. En móviles, el encabezado es más pequeño, pero en el escritorio vemos el encabezado de mayor tamaño:
 
-En la versión para dispositivo móvil, el encabezado es más pequeño:
+```html live-sample___type-rwd
+<div class="wrapper">
+  <div class="col1">
+    <h1>¡Mira mi tamaño!</h1>
+    <p>
+      Este diseño es adaptable. Mira qué pasa si haces la ventana del navegador
+      más ancha o más estrecha.
+    </p>
+  </div>
+  <div class="col2">
+    <p>
+      Una noche de noviembre de 1782, según cuenta la historia, dos hermanos
+      estaban sentados junto al fuego en la pequeña ciudad francesa de Annonay,
+      observando cómo las volutas de humo gris del hogar subían por la ancha
+      chimenea. Se llamaban Stephen y Joseph Montgolfier, eran fabricantes de
+      papel de oficio y tenían fama de ser reflexivos y de sentir un profundo
+      interés por todo el conocimiento científico y los nuevos descubrimientos.
+    </p>
+    <p>
+      Antes de aquella noche (una noche memorable, como se demostraría), cientos
+      de millones de personas habían visto subir las volutas de humo de sus
+      fuegos sin sacar de ello ninguna inspiración especial.
+    </p>
+  </div>
+</div>
+```
 
-![Un diseño de elementos apilados en columna con un tamaño de título de encabezado pequeño.](mdn-rwd-font-mobile.png)
+```css live-sample___type-rwd
+html {
+  font-size: 1em;
+}
 
-Sin embargo, en las versiones de escritorio vemos un tamaño de título de encabezado más grande:
+body {
+  font:
+    1.2em "Helvetica",
+    "Arial",
+    sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #eeeeee;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 2em auto;
+}
 
-![Un diseño en dos columnas con un título grande.](mdn-rwd-font-desktop.png)
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
 
-> [!NOTE]
-> Observa este ejemplo en: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
+.col1,
+.col2 {
+  background-color: white;
+}
 
-Como muestra este enfoque sobre la tipografía, no es necesario restringir las consultas a medios a cambiar solo el diseño de página. Se pueden usar para ajustar cualquier elemento y hacerlo más útil o atractivo según los diversos tamaños de pantalla.
+@media screen and (width >= 600px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5%;
+  }
 
-### El uso de unidades de ventana gráfica para tipografía responsiva
+  h1 {
+    font-size: 4rem;
+  }
+}
+```
 
-Un enfoque interesante es utilizar las unidades de ventana gráfica `vw` para habilitar la tipografía responsiva. `1vw` es igual al uno por ciento del ancho de la ventana gráfica, lo que significa que si configuras el tamaño del tipo de letra con `vw`, siempre estará en relación con el tamaño de la ventana gráfica.
+{{EmbedLiveSample("type-rwd", "", "550px")}}
+
+Como en los ejemplos anteriores, prueba a cambiar el ancho de la ventana del navegador y fíjate en que, en el umbral de `600px` de ancho, no solo cambia el diseño, sino también el tamaño del encabezado.
+
+Como muestra este enfoque de la tipografía, no tienes por qué limitar las consultas de medios a cambiar solo el diseño de la página. Se pueden usar para ajustar cualquier elemento y hacerlo más usable o atractivo en otros tamaños de pantalla.
+
+### Usar unidades de viewport para una tipografía adaptable
+
+Las unidades de viewport `vw` también se pueden usar para conseguir una tipografía adaptable, sin necesidad de establecer puntos de ruptura con consultas de medios. `1vw` equivale al uno por ciento del ancho del viewport, lo que significa que, si estableces el tamaño de fuente con `vw`, siempre estará relacionado con el tamaño del viewport.
 
 ```css
 h1 {
@@ -252,53 +393,110 @@ h1 {
 }
 ```
 
-El problema de hacer esto es que el usuario pierde la posibilidad de ampliar cualquier conjunto de texto configurado en unidades `vw`, porque ese texto siempre está en relación con el tamaño de la ventana gráfica. **Por lo tanto, nunca hay que establecer texto utilizando solo unidades de ventana**.
+El problema de hacer lo anterior es que el usuario pierde la posibilidad de hacer zoom en el texto establecido con la unidad `vw`, porque ese texto siempre está relacionado con el tamaño del viewport. **Por lo tanto, nunca deberías establecer el texto solo con unidades de viewport**.
 
-Hay una solución, que implica el uso de la función [`calc()`](/es/docs/Web/CSS/Reference/Values/calc). Si añades la unidad `vw` a un valor establecido con un tamaño fijo, como `em` o `rem`, el texto continúa siendo ampliable. Esencialmente, la unidad `vw` se añade sobre ese valor ampliado:
+Hay una solución, que consiste en usar {{cssxref("calc()")}}. Si sumas la unidad `vw` a un valor establecido con un tamaño fijo, como `em` o `rem`, el texto seguirá pudiendo ampliarse. Básicamente, la unidad `vw` se suma a ese valor ampliado:
 
 ```css
 h1 {
-  font-size: calc(1.5rem + 3vw);
+  font-size: calc(1.5rem + 4vw);
 }
 ```
 
-Esto significa que necesitamos especificar el tamaño de letra para el título de encabezado una sola vez, en lugar de configurarlo para dispositivos móviles y redefinirlo en las consultas a medios. Luego, el tipo de letra aumenta gradualmente a medida que aumenta el tamaño de la ventana gráfica.
+Esto significa que solo tenemos que especificar una vez el tamaño de fuente del encabezado, en lugar de establecerlo para móviles y redefinirlo en las consultas de medios. Así, la fuente aumenta gradualmente a medida que aumenta el tamaño del viewport.
 
-> [!NOTE]
-> Observa un ejemplo en: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html).
-
-## La metaetiqueta viewport
-
-Si observas el tipo de letra de una página HTML responsiva, en general vas a encontrar la siguiente etiqueta {{htmlelement ("meta")}} en la cabecera del documento.
-
-```html
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+```html live-sample___type-vw
+<div class="wrapper">
+  <div class="col1">
+    <h1>¡Mira mi tamaño!</h1>
+    <p>
+      Este diseño es adaptable. Mira qué pasa si haces la ventana del navegador
+      más ancha o más estrecha.
+    </p>
+  </div>
+  <div class="col2">
+    <p>
+      Una noche de noviembre de 1782, según cuenta la historia, dos hermanos
+      estaban sentados junto al fuego en la pequeña ciudad francesa de Annonay,
+      observando cómo las volutas de humo gris del hogar subían por la ancha
+      chimenea. Se llamaban Stephen y Joseph Montgolfier, eran fabricantes de
+      papel de oficio y tenían fama de ser reflexivos y de sentir un profundo
+      interés por todo el conocimiento científico y los nuevos descubrimientos.
+    </p>
+  </div>
+</div>
 ```
 
-Esta metaetiqueta informa a los navegadores de los dispositivos móviles que deben establecer el ancho de la ventana gráfica al ancho del dispositivo y escalar el documento al 100% de ese tamaño, de modo que el documento se mostrará al tamaño optimizado para esos dispositivos móviles.
+```css live-sample___type-vw
+body {
+  font: 1.2em / 1.5 sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #eeeeee;
+}
 
-¿Por qué esto es necesario? Porque los navegadores de los dispositivos móviles tienden a mentir sobre el ancho de su ventana gráfica.
+.wrapper {
+  max-width: 960px;
+  margin: 2em auto;
+}
 
-Esta metaetiqueta existe porque cuando se lanzó el iPhone original y la gente comenzó a ver sitios web en una pequeña pantalla de teléfono móvil, la mayoría de los sitios web no estaban optimizados para dispositivos móviles. Por lo tanto, el navegador móvil establecía el ancho de la ventana gráfica en 960 píxeles, representaba la página con ese ancho y mostraba el resultado como una versión reducida del diseño del escritorio. Otros navegadores de dispositivos móviles (por ejemplo, en Google Android) hicieron lo mismo. Los usuarios podían acercarse y desplazarse por el sitio web para ver las partes que les interesaban, pero se veía mal. Todavía verás esto hoy en día si tienes la desgracia de encontrarte con un sitio web que no tiene un diseño de página responsivo.
+h1 {
+  font-size: calc(1.5rem + 4vw);
+  margin: 0;
+}
 
-El problema es que tu diseño responsivo con puntos de interrupción y consultas a media no va a funcionar según lo previsto en los navegadores de dispositivos móviles, si tienes un diseño de pantalla estrecho que se inicia con un ancho de ventana de 480px o menos, pero la ventana gráfica está configurada en 960px. E cambio, al configurar `width=device-width` anulas el ancho predeterminado `width=960px` de Apple con el ancho real del dispositivo, y tus consultas a media funcionarán según lo previsto.
+.col1,
+.col2 {
+  background-color: white;
+}
 
-**Por lo tanto, _siempre_ debes incluir la línea de HTML anterior en la cabecera de tus documentos.**
+@media screen and (width >= 600px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5%;
+  }
+}
+```
 
-Con la metaetiqueta `viewport` puedes usar otras configuraciones, aunque, en general vas a querer usar la línea anterior.
+{{EmbedLiveSample("type-vw", "", "550px")}}
 
-- `initial-scale`: Establece el zoom inicial de la página, que establecemos en 1.
-- `height`: Establece una altura específica para la ventana gráfica.
-- `minimum-scale`: Establece el nivel mínimo de zoom.
-- `maximum-scale`: Establece el nivel máximo de zoom.
-- `user-scalable`: Impide el zoom si se establece en `no`.
+Prueba a cambiar el tamaño de la ventana del navegador, como antes, y fíjate en que esta vez el tamaño del encabezado aumenta _gradualmente_ a medida que cambia el ancho.
 
-Deberías evitar el uso de `minimum-scale` y `maximum-scale`, y en particular establecer `user-scalable` en `no`. Hay que permitir a los usuarios hacer zoom tanto o tan poco como lo necesiten; evitarlo provoca problemas de accesibilidad.
+## La etiqueta meta viewport
+
+Si miras el código fuente HTML de una página adaptable, normalmente verás la siguiente etiqueta {{htmlelement("meta")}} en el `<head>` del documento.
+
+```html
+<meta name="viewport" content="width=device-width" />
+```
+
+Esta etiqueta meta [`viewport`](/es/docs/Web/HTML/Reference/Elements/meta/name/viewport) indica a los navegadores móviles que deben establecer el ancho del viewport en el ancho del dispositivo, lo que muestra el documento con el tamaño optimizado para móviles que pretendías.
+
+¿Por qué hace falta? Porque los navegadores móviles suelen mentir sobre el ancho de su viewport.
+
+Esta etiqueta meta existe porque, cuando llegaron los primeros teléfonos inteligentes, la mayoría de los sitios no estaban optimizados para móviles. Por eso, el navegador móvil establecía el ancho del viewport en 980 píxeles, representaba la página con ese ancho y mostraba el resultado como una versión reducida del diseño de escritorio. Los usuarios podían hacer zoom y desplazarse por el sitio web para ver las partes que les interesaban, pero quedaba mal.
+
+Al establecer `width=device-width`, sustituyes el valor predeterminado del dispositivo móvil, como el `width=980px` predeterminado del iPhone, por el ancho real del dispositivo. Sin ella, tu diseño adaptable con puntos de ruptura y consultas de medios puede no funcionar como pretendías en los navegadores móviles. Si tienes un diseño para pantallas estrechas que se activa con un ancho de viewport de 480px o menos, pero el dispositivo dice que mide 980px de ancho, ese usuario no verá tu diseño para pantallas estrechas.
+
+**Así que _siempre_ deberías incluir la etiqueta meta viewport en la cabecera de tus documentos.**
+
+Hay otras opciones que puedes poner dentro del atributo `content` de la etiqueta meta viewport; consulta la referencia de [`<meta name="viewport">`](/es/docs/Web/HTML/Reference/Elements/meta/name/viewport) para obtener más detalles.
 
 ## Resumen
 
-El diseño responsivo se refiere a un diseño página de un sitio web o una aplicación que responde al entorno en el que se visualiza. Abarca una serie de características y técnicas de CSS y HTML, y ahora es esencialmente el modo como construimos los sitios web de forma predeterminada. Piensa en los sitios web que visitas con tu dispositivo móvil; probablemente sea inusual encontrar un sitio web que tenga la versión de escritorio reducida o en que necesites desplazarse hacia los lados para encontrar las cosas. Esto se debe a que la web se ha movido a este enfoque de diseño responsivo.
+El diseño adaptable se refiere al diseño de un sitio o una aplicación que se adapta al entorno en el que se ve. Abarca varias características y técnicas de CSS y HTML, y es básicamente la forma en que construimos los sitios web de forma predeterminada. Piensa en los sitios que visitas en tu teléfono: probablemente sea bastante raro encontrarte con un sitio que sea la versión de escritorio reducida, o en el que tengas que desplazarte hacia los lados para encontrar las cosas. Esto se debe a que la web ha adoptado este enfoque de diseño adaptable.
 
-Además, lograr diseños responsivos se ha vuelto mucho más fácil con la ayuda de los métodos de diseño que has aprendido en estos artículos. Si eres nuevo en el desarrollo web, hoy tienes muchas más herramientas a tu disposición que en los primeros días del diseño de página responsivo. Por lo tanto, vale la pena verificar la antigüedad de los materiales que consultas. Si bien los artículos históricos continúan siendo útiles, el uso moderno de CSS y HTML facilita mucho la creación de diseños elegantes y útiles, sin importar con qué dispositivo el visitante visita el sitio.
+También se ha vuelto mucho más fácil conseguir diseños adaptables gracias a los métodos de diseño que se tratan en este artículo. Si hoy empiezas en el desarrollo web, tienes muchas más herramientas a tu disposición que en los primeros tiempos del diseño adaptable. Por eso conviene comprobar la antigüedad de los materiales que uses. Aunque los artículos históricos siguen siendo útiles, el uso moderno de CSS y HTML facilita muchísimo crear diseños elegantes y útiles, sea cual sea el dispositivo con el que tu visitante vea el sitio.
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
+A continuación, estudiaremos las consultas de medios con más detalle y mostraremos cómo usarlas para resolver algunos problemas habituales.
+
+## Véase también
+
+- Trabajar con dispositivos de pantalla táctil:
+  - Los [eventos táctiles](/es/docs/Web/API/Touch_events) permiten interpretar la actividad de los dedos (o de un lápiz óptico) en pantallas táctiles o paneles táctiles, y ofrecen una buena compatibilidad con interfaces de usuario táctiles complejas.
+  - Usa las consultas de medios [pointer](/es/docs/Web/CSS/Reference/At-rules/@media/pointer) o [any-pointer](/es/docs/Web/CSS/Reference/At-rules/@media/any-pointer) para cargar CSS distinto en los dispositivos táctiles.
+- [Guía de consultas de medios de CSS-Tricks](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
+- La [Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup> de Scrimba enseña todo lo que necesitas saber para ser un desarrollador web front-end competente, con lecciones y desafíos interactivos divertidos, profesores expertos y una comunidad de apoyo. ¡Pasa de cero a conseguir tu primer trabajo front-end! Muchos de los componentes del curso están disponibles como versiones gratuitas independientes, entre ellos un módulo sobre diseño adaptable.
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
