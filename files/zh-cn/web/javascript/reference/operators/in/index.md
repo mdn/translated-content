@@ -47,7 +47,7 @@ prop in object
 
 ## 描述
 
-`in` 运算符用于测试对象或其原型链中是否存在字符串或 symbol 属性。如果你只想检查_非继承_属性，请改用 {{jsxref("Object.hasOwn()")}}。
+`in` 运算符用于测试对象或其原型链中是否存在字符串或 symbol 属性。如果你只想检查*非继承*属性，请改用 {{jsxref("Object.hasOwn()")}}。
 
 属性可能存在于对象中，但其值为 `undefined`。因此，`"x" in obj` 与 `obj.x !== undefined` 并不相同。要让 `in` 在属性被添加后返回 `false`，请使用 [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) 运算符，而不是将该属性的值设置为 `undefined`。
 
