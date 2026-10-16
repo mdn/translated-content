@@ -279,7 +279,7 @@ if (p1 instanceof Person && p2 instanceof Person) {
 }
 ```
 
-更多示例请参见[私有元素](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)和[类指南](/zh-CN/docs/Web/JavaScript/Guide/Using_classes#private_fields)。
+更多示例请参见[私有元素](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)和[类指南](/zh-CN/docs/Web/JavaScript/Guide/Using_classes#私有字段)。
 
 ## 规范
 
