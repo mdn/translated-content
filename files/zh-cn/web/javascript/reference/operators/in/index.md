@@ -201,7 +201,7 @@ function hasPerson(name) {
 hasPerson("hasOwnProperty"); // 返回 false
 ```
 
-或者，你可以考虑使用[空原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)或 {{jsxref("Map")}} 来存储 `ages`，从而避免其他错误。
+或者，你可以考虑使用 [null 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)或 {{jsxref("Map")}} 来存储 `ages`，从而避免其他错误。
 
 ```js example-good
 const ages = new Map([
