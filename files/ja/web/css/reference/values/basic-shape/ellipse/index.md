@@ -73,8 +73,8 @@ shape-outside: ellipse(closest-side farthest-side at 30%);
 
 ### 基本的な ellipse() の例
 
-この例では、水平方向の半径が 40%、垂直方向の半径が 50%、位置が左の楕円を示しています。これは、楕円の中心がボックスの左端にあることを意味しており、テキストを回り込ませるための半楕円の形になります。これらの値を変更すると、楕円の変化を確認することができます。
-Click "Play" in the code blocks to change these values to see how the ellipse changes:
+この例では、水平方向の半径が 40%、垂直方向の半径が 50%、位置が左の楕円を示しています。これは、楕円の中心がボックスの左端にあることを意味しており、テキストを回り込ませるための半楕円の形になります。
+以下のコードブロックの "Play" をクリックしてこれらの値を変更すると、楕円の変化を確認できます。
 
 ```html-nolint live-sample___ellipse
 <div class="box">
