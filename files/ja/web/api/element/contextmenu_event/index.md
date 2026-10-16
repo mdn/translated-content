@@ -34,7 +34,7 @@ oncontextmenu = (event) => {};
 {{InheritanceDiagram("PointerEvent")}}
 
 > [!NOTE]
-> この仕様書の以前のバージョンでは、このイベントのイベント型は {{domxref("MouseEvent")}} でした。 Firefox と Safari では今でもこの型で渡されます。
+> この仕様書の以前のバージョンでは、このイベントのイベント型は {{domxref("MouseEvent")}} でした。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)をご覧ください。
 
 ## イベントプロパティ
 
