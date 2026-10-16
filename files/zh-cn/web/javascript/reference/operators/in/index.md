@@ -112,7 +112,7 @@ const trees = ["redwood", "bay", "cedar", "oak", "maple"];
 "length" in trees; // 返回 true（length 是数组属性）
 Symbol.iterator in trees; // 返回 true
 
-// 内置对象
+// 预定义对象
 "PI" in Math; // 返回 true
 
 // 自定义对象
