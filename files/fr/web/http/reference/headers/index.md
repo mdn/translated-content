@@ -253,7 +253,7 @@ Les requêtes d'intervalle sont utiles pour des applications comme les lecteurs 
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP)
   - : Empêche l'ouverture/le contrôle d'une fenêtre par d'autres domaines.
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}} (CORP)
-  - : Empêche d'autres domaines de lire la réponse pour les ressources auxquelles cet en-tête est appliqué. Voir aussi [la page d'explication sur](/fr/docs/Web/HTTP/Cross-Origin_Resource_Policy).
+  - : Empêche d'autres domaines de lire la réponse pour les ressources auxquelles cet en-tête est appliqué. Voir aussi [la page d'explication sur](/fr/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy).
 - {{HTTPHeader("Content-Security-Policy")}} ({{Glossary("CSP")}})
   - : Contrôle les ressources qu'un agent utilisateur est autorisé à charger pour une page donnée.
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
