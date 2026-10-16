@@ -216,7 +216,7 @@ function hasPerson(name) {
 hasPerson("hasOwnProperty"); // 返回 false
 ```
 
-### 使用 `in` 运算符实现品牌检查
+### 使用 `in` 运算符实现特定类型检查
 
 下面的代码片段演示了一个静态函数，它可以判断对象是否由 `Person` 构造函数创建，从而安全地调用其他方法。
 
