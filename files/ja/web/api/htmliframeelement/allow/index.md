@@ -18,7 +18,7 @@ l10n:
 
 ## 値
 
-A string indicates the [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) specified for this {{HTMLElement("iframe")}} element, each policy must be separated by space.
+文字列で、この {{HTMLElement("iframe")}} 要素に対して指定された[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)を示します。それぞれのポリシーは空白で区切る必要があります。
 
 ## 例
 

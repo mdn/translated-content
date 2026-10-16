@@ -190,11 +190,11 @@ tbody > tr > td:last-of-type {
 
 ### 複数のヘッダー行
 
-This example demonstrates a table head section with two rows.
+この例では、2 行からなる表のヘッダー部分を示しています。
 
 #### HTML
 
-We extend the markup the table from the [basic example](#basic_head_structure) in this example by including two table rows ({{HTMLElement("tr")}}) within the `<thead>` element creating a multi-row table head. We included an additional column, splitting the student names into first and last names.
+この例では、[基本的な例](#基本的なヘッダー構造)の表のマークアップを拡張し、`<thead>` 要素の中に 2 つの表の行（{{HTMLElement("tr")}}）を含めて、複数行の表ヘッダーを作成しています。さらに列を 1 つ追加し、学生の名前を名前と苗字に分けています。
 
 ```html
 <table>

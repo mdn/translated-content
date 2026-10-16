@@ -48,7 +48,7 @@ base64 文字列は 4 文字の塊に分割することができ、最後の塊�
 
 {{jsxref("Uint8Array")}} クラスは、 {{jsxref("Uint8Array.fromBase64()")}}、{{jsxref("Uint8Array.prototype.toBase64()")}}、{{jsxref("Uint8Array.prototype.setFromBase64()")}} の各メソッドで、 base64 文字列との変換機能を提供しています。
 
-Browsers also natively provide two JavaScript functions for decoding and encoding Base64 strings:
+また、ブラウザーは Base64 文字列をデコードしたりエンコードしたりするための 2 つの JavaScript 関数をネイティブで提供しています。
 
 - {{domxref("Window.btoa()")}}（{{domxref("WorkerGlobalScope.btoa()", "ワーカーでも利用可能", "", "nocode")}}）: バイナリーデータの文字列から Base64 エンコード方式の ASCII 文字列を作成します（"btoa" は "binary to ASCII" と読んでください）。
 - {{domxref("Window.atob()")}}（{{domxref("WorkerGlobalScope.atob()", "ワーカーでも利用可能", "", "nocode")}}）: Base64 エンコード方式の文字列をデコードします（"atob" は "ASCII to binary" と読んでください）。
