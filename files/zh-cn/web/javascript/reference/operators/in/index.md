@@ -249,7 +249,7 @@ if (Person.isPerson(p1) && Person.isPerson(p2)) {
 ```js
 const p2 = {};
 
-p1.ageDifference(p2); // TypeError：无法从未声明私有成员的对象中读取 #age
+p1.ageDifference(p2); // TypeError: Cannot read private member #age from an object whose class did not declare it
 ```
 
 如果没有 `in` 运算符，你必须使用 `try...catch` 代码块来检查对象是否具有该私有元素。
