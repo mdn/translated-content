@@ -1,11 +1,9 @@
 ---
-title: テキストの装飾
+title: CSS テキスト装飾
 slug: Learn_web_development/Core/Text_styling
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 57bc2729e3963907c0b54158ae1a31318a2ebbd1
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core")}}
 
@@ -16,7 +14,7 @@ CSS 言語の基本を習得したら、次に取り組むべき CSS のトピ�
 このモジュールを始める前に、 [HTML](/ja/docs/Learn_web_development/Core/Structuring_content) と [CSS の基礎](/ja/docs/Learn_web_development/Core/Styling_basics)に親しんでおいてください。
 
 > [!NOTE]
-> 自分のファイルを作成できないコンピューター/タブレット/その他の端末で作業している場合、[JSBin](https://jsbin.com/)、[Glitch](https://glitch.com/) のようなオンラインコーディングプログラムで（ほとんどの）サンプルコードを試せます。
+> ファイルを作成できないコンピューター、タブレット、その他の端末で作業している場合は、[CodePen](https://codepen.io/) や [JSFiddle](https://jsfiddle.net/)　などのオンラインエディターでコードを実行してみることができます。
 
 ## チュートリアルと課題
 
@@ -30,5 +28,10 @@ CSS 言語の基本を習得したら、次に取り組むべき CSS のトピ�
   - : ここでは、ウェブフォントを詳しく探ります — これらを使用すると、ウェブページと一緒にカスタムフォントをダウンロードすることを可能にして、より多様でカスタムなテキストの装飾を可能にします。
 - [課題: コミュニティスクールのホームページの組版](/ja/docs/Learn_web_development/Core/Text_styling/Typesetting_a_homepage) <sup>課題</sup>
   - : この評価では、コミュニティスクールのホームページのテキストを装飾してもらい、テキストの装飾についての理解をテストします。
+
+## 関連情報
+
+- [Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
+  - : [Scrimba](https://scrimba.com/?via=mdn) の _Learn HTML and CSS_ コースでは、知識豊富な講師陣による楽しいインタラクティブなレッスンや課題を通じて、5つの素晴らしいプロジェクトを構築・展開しながら、HTML と CSS を学ぶことができます。
 
 {{NextMenu("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core")}}
