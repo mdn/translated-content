@@ -51,7 +51,7 @@ prop in object
 
 属性可能存在于对象中，但其值为 `undefined`。因此，`"x" in obj` 与 `obj.x !== undefined` 并不相同。要让 `in` 在属性被添加后返回 `false`，请使用 [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) 运算符，而不是将该属性的值设置为 `undefined`。
 
-你还可以使用 `in` 运算符检查对象中是否定义了特定的[私有类字段或方法](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)。如果属性已定义，该运算符返回 `true`，否则返回 `false`。这被称为_品牌检查_，因为当且仅当对象由该类构造函数创建时，它才返回 `true`；之后你也可以安全地访问其他私有元素。
+你还可以使用 `in` 运算符检查对象中是否定义了特定的[私有类字段或方法](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)。如果属性已定义，该运算符返回 `true`，否则返回 `false`。这被称为*特定类型检查*（branded check），因为当且仅当对象由该类构造函数创建时，它才返回 `true`；之后你也可以安全地访问其他私有元素。
 
 这是一个特殊语法——`in` 运算符的左侧是属性标识符而不是表达式，但不能加引号（否则它就是字符串属性，而不是私有元素）。
 
