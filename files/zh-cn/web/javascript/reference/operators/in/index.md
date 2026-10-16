@@ -93,7 +93,7 @@ class C {
   }
 }
 
-new C().foo(); // SyntaxError：必须在外层类中声明私有字段“#x”
+new C().foo(); // SyntaxError: Private field '#x' must be declared in an enclosing class
 ```
 
 ## 示例
