@@ -45,10 +45,8 @@ _このインターフェイスが継承するプロパティはありません�
 - {{domxref("NodeIterator.filter")}} {{readonlyInline}}
   - : 関連するノードを選択するために使用した {{domxref("NodeFilter")}} を返します。
 - {{domxref("NodeIterator.referenceNode")}} {{readonlyInline}}
-  {{experimental_inline() }}
   - : イテレーターが結び付けられている {{domxref("Node")}} を返します。
-- {{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{readonlyInline}} {{
-  experimental_inline() }}
+- {{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{readonlyInline}}
   - : 論理値のフラグで、 {{domxref("NodeIterator")}} が前に固定されるかどうかを示します。前に固定される場合は `true`、後に固定される場合は `false` になります。
 
 ## メソッド
