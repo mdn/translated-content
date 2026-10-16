@@ -1,6 +1,6 @@
 ---
 title: "Raison : « true » attendu dans l'en-tête CORS « Access-Control-Allow-Credentials »"
-slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowCredentials
+slug: Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials
 l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
