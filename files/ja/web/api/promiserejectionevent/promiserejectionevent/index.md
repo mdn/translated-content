@@ -37,7 +37,7 @@ new PromiseRejectionEvent(type, options)
 
 ## 例
 
-この例では、文字列 "My house is on fire" を理由とするプロミス `myPromise` に対して新しい {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} イベントが作成されます。理由`は数字とすることもできますし、家の住所や火事の程度、緊急連絡先の電話番号など、詳細な情報を記載したオブジェクトでも構いません。
+この例では、文字列 "My house is on fire" を理由とするプロミス `myPromise` に対して新しい {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} イベントが作成されます。`reason` は数字とすることもできますし、家の住所や火事の程度、緊急連絡先の電話番号など、詳細な情報を記載したオブジェクトでも構いません。
 
 ```js
 let myRejectionEvent = new PromiseRejectionEvent("unhandledrejection", {
