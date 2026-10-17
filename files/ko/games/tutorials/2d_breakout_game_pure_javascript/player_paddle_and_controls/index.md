@@ -1,6 +1,7 @@
 ---
 title: Paddle과 키보드 컨트롤
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls
+original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 ---
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}
