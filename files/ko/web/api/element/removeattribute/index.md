@@ -16,7 +16,7 @@ element.removeAttribute(attrName);
 ### 매개변수
 
 - `attrName`
-  - : 요소에서 제거할 특성 이름을 지정하는 {{domxref("DOMString")}}. 지정하지 않으면 오류 없이 아무 동작도 하지 않습니다.
+  - : 요소에서 제거할 특성 이름을 지정하는 {{jsxref("String")}}. 지정하지 않으면 오류 없이 아무 동작도 하지 않습니다.
 
 ### 반환 값
 

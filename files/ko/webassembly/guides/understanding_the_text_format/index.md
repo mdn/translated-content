@@ -293,7 +293,7 @@ const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 
 위의 예로든 로깅 기능은 아주 끔찍합니다. 단 하나의 정수만 출력합니다!(이 정수가 뭔지 어떻게 알겠어요 그죠?) 텍스트 문자열을 기록하려면 어떻게 해야할까요. 문자열 및 기타 복잡한 데이터 유형을 처리하기 위해 WebAssembly는 메모리를 제공합니다. 메모리는 사용하면서 크기를 키울 수 있는 대량의 바이트 배열 입니다. WebAssembly에는 [linear memory](http://webassembly.org/docs/semantics/#linear-memory)에서 읽고 쓰는 데 필요한 `i32.load` 및 `i32.store`와 같은 지침이 들어 있습니다.
 
-JavaScript의 관점에서 볼 때 크기가 조정 가능한 큰 {{domxref("ArrayBuffer")}} 안에 메모리가 모두있는 것처럼 보입니다. 이는 말 그대로 asm.js와 함께 사용해야함을 의미합니다. (크기 조정할 수 없다는 점을 제외하고요. asm.js [Programming model](http://asmjs.org/spec/latest/#programming-model)을 참고 하세요.).
+JavaScript의 관점에서 볼 때 크기가 조정 가능한 큰 {{jsxref("ArrayBuffer")}} 안에 메모리가 모두있는 것처럼 보입니다. 이는 말 그대로 asm.js와 함께 사용해야함을 의미합니다. (크기 조정할 수 없다는 점을 제외하고요. asm.js [Programming model](http://asmjs.org/spec/latest/#programming-model)을 참고 하세요.).
 
 따라서 문자열은 이 선형 메모리 내부의 있는 sequence of bytes라고 할 수 있습니다. 우리가 적절한 바이트 문자열을 메모리에 썼다고 가정 해 보고 어떻게 그 문자열을 JavaScript로 전달하는지 보겠습니다.
 
