@@ -8,10 +8,10 @@
 
 ## 元数据
 
-每个文档的开头都会有元数据，但在翻译本地化文档时，我们不需要将上游文档中的所有元数据字段都复制到本地化文档中。对于 `page-type`、`browser-compat` 和 `spec-urls` 等元数据被用于站点管理和自动化数据处理，本地化文档中无需包含它们。此外，出于追踪文档同步情况的目的，我们在基本的元数据类别的基础上引入了 `l10n.sourceCommit`，用于记录对应英文文档的最新提交。本地化文档中应该使用的元数据说明如下：
+每个文档的开头都会有元数据，但在翻译本地化文档时，我们不需要将上游文档中的所有元数据字段都复制到本地化文档中。对于 `page-type`、`sidebar`、`status`、`browser-compat` 和 `spec-urls` 等元数据（参见 [`front-matter-config.json`](https://github.com/mdn/content/blob/main/front-matter-config.json)）被用于站点管理和自动化数据处理，本地化文档中无需包含它们。此外，出于追踪文档同步情况的目的，我们在基本的元数据类别的基础上引入了 `l10n.sourceCommit`，用于记录对应英文文档的最新提交。本地化文档中应该使用的元数据说明如下：
 
 - `title`（必须）：为文档的大标题
-- `short-title`（可选）：为显示在侧边栏和面包屑中的短标题，若本地化文档采用的短标题与英文文档相同，则无需添加该元数据
+- `short-title`（可选）：为显示在侧边栏和面包屑中的短标题
 - `slug`（必须）：为与网页 URL 相关的元数据（URL path 部分的规则为：`/<locale>/docs/<slug>`），请与对应的英文文档保持一致
 - `l10n.sourceCommit`（可选）：为对应英文文档的最新提交的 SHA 值，请在完整同步英文文档翻译后更新或添加该元数据
 
@@ -19,6 +19,7 @@
 
 ```yaml
 title: HTMLAnchorElement：hash 属性
+short-title: hash
 slug: Web/API/HTMLAnchorElement/hash
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
