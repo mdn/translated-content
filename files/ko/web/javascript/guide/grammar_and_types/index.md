@@ -25,7 +25,7 @@ JavaScript에서는 명령을 {{Glossary("Statement", "명령문(statement)")}}�
 명령문이 한 줄을 다 차지할 경우에는 세미콜론이 필요하지 않습니다. 그러나 한 줄에 두 개 이상의 명령문이 필요하다면 반드시 세미콜론으로 구분해야 합니다.
 
 > [!NOTE]
-> ECMAScript는 세미콜론을 자동으로 삽입해 명령문을 끝내는 규칙([ASI](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#자동_세미콜론_삽입))도 가지고 있습니다. (더 많은 정보는 JavaScript의 [어휘 문법](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)에 대한 자세한 참고서를 참고하세요.)
+> ECMAScript는 세미콜론을 자동으로 삽입해 명령문을 끝내는 규칙([ASI](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion))도 가지고 있습니다. (더 많은 정보는 JavaScript의 [어휘 문법](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)에 대한 자세한 참고서를 참고하세요.)
 
 하지만, 세미콜론이 필요하지 않은 경우라도 항상 세미콜론으로 끝마치는 편이 버그 예방 차원에서 더 좋은 습관이라고 여겨집니다.
 
@@ -50,7 +50,7 @@ JavaScript의 스크립트 소스는 왼쪽에서 오른쪽으로 탐색하면�
 > [!NOTE]
 > 몇몇 JavaScript 파일의 시작부에 `#!/usr/bin/env node`와 같은 형태의 주석 문법이 쓰이는 것을 볼 수 있습니다.
 >
-> 이것은 **해시뱅 주석** 구문이라고 하는데, 이 특별한 주석은 스크립트를 실행할 때 쓸 특별한 JavaScript 인터프리터의 경로를 설정할 때 쓰입니다. [해시뱅 주석](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#해시뱅_주석)을 참고하여 자세한 내용을 확인할 수 있습니다.
+> 이것은 **해시뱅 주석** 구문이라고 하는데, 이 특별한 주석은 스크립트를 실행할 때 쓸 특별한 JavaScript 인터프리터의 경로를 설정할 때 쓰입니다. [해시뱅 주석](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#hashbang_comments)을 참고하여 자세한 내용을 확인할 수 있습니다.
 
 ## 선언
 
@@ -71,7 +71,7 @@ JavaScript 식별자는 문자, 밑줄 (`_`) 혹은 달러 기호 (`$`)로 시�
 
 JavaScript가 대소문자를 구분하기에, 문자는 "`A`"부터 "`Z`" (대문자)와 "`a`"부터 "`z`" (소문자)까지 모두 포함합니다.
 
-ISO 8859-1 혹은 Unicode 문자(가령 `å` 나 `ü`)도 식별자에 사용할 수 있습니다. (좀 더 상세한 내용은 [이 블로그 글](https://mathiasbynens.be/notes/javascript-identifiers-es6)을 참고.) 또한 [Unicode escape sequences](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#문자열_리터럴)도 식별자에 문자로 사용할 수 있습니다.
+ISO 8859-1 혹은 Unicode 문자(가령 `å` 나 `ü`)도 식별자에 사용할 수 있습니다. (좀 더 상세한 내용은 [이 블로그 글](https://mathiasbynens.be/notes/javascript-identifiers-es6)을 참고.) 또한 [Unicode escape sequences](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_escape_sequences)도 식별자에 문자로 사용할 수 있습니다.
 
 적절한 이름으로는 `Number_hits`, `temp99`, `$credit` 및 `_name` 등 입니다.
 
@@ -145,7 +145,7 @@ console.log(n * 32); // 콘솔에 0 으로 로그가 남음
 
 어떤 함수의 바깥에 변수를 선언하면, 현재 문서의 다른 코드에 해당 변수를 사용할 수 있기에 전역 변수라고 합니다. 만약 함수 내부에 변수를 선언하면, 오직 그 함수 내에서만 사용할 수 있기에 지역 변수라고 부릅니다.
 
-ECMAScript 2015 이전의 JavaScript는 [블록 문](/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#block_문) 스코프가 없습니다. 그래서 오히려, 블록 내에 선언된 변수는 그 블록 내에 존재하는 함수(혹은 전역 스코프)에 지역적입니다.
+ECMAScript 2015 이전의 JavaScript는 [블록 문](/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#블록문) 스코프가 없습니다. 그래서 오히려, 블록 내에 선언된 변수는 그 블록 내에 존재하는 함수(혹은 전역 스코프)에 지역적입니다.
 
 예를 들어서 아래의 코드는 `5`라는 로그가 남는데. `x`의 스코프가 전역 맥락 (혹은 코드가 함수의 일부분이라면 함수 맥락)이기 때문입니다. `x`의 스코프는 `if`문 블록에 제한되지 않습니다.
 
@@ -478,7 +478,7 @@ JavaScript 숫자 리터럴은 다른 진법의 정수 리터럴과 10진수의 
 0b11, 0b0011, 0b11101001010101010101n   (2진수)
 ```
 
-더 많은 정보는 [어휘 문법의 숫자 리터럴](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#숫자_리터럴)를 참고하세요.
+더 많은 정보는 [어휘 문법의 숫자 리터럴](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals)를 참고하세요.
 
 #### 부동 소수점 리터럴
 
@@ -715,7 +715,7 @@ myTag`Participant "${name}" is ${age} years old.`;
         <code>\u<em>XXXX</em></code>
       </td>
       <td>
-          유니코드 문자는 16진수 4자리 <em>XXXX</em>로 지정될 수 있습니다.<br />예를 들어, <code>\u00A9</code>는 copyright 심볼을 표현하는 유니코드 시퀀스입니다. <a href="/ko/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals">Unicode escape sequences</a>를 참고하세요.
+          유니코드 문자는 16진수 4자리 <em>XXXX</em>로 지정될 수 있습니다.<br />예를 들어, <code>\u00A9</code>는 copyright 심볼을 표현하는 유니코드 시퀀스입니다. <a href="/ko/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_escape_sequences">Unicode escape sequences</a>를 참고하세요.
       </td>
     </tr>
     <tr>
