@@ -1,126 +1,208 @@
 ---
-title: Player paddle and controls
+title: 玩家挡板和操控
 slug: Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls
+l10n:
+  sourceCommit: 69937a446786abf5a58d4214b4192597d0b3cdc6
 ---
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls", "Games/Tutorials/2D_breakout_game_Phaser/Game_over")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 的**第 7 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson07.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson07.html)完成本课程后找到源代码。
+这是[使用 Phaser 创建打砖块游戏教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 12 个步骤中的**第 5 步**。现在球已经可以移动并从墙壁反弹，但很快就会让人觉得无聊——没有交互！我们需要引入游戏玩法，因此在本文中，我们将创建一个可以移动并用来击球的挡板。
 
-我们有球从墙上移动并弹跳，但它很快变得无聊 - 没有互动！我们需要一种介绍游戏的方法，所以在这篇文章中，我们将创建一个桨来移动并击中球。
+## 渲染挡板
 
-## 渲染桨
+从框架的角度来看，挡板与球非常相似——我们需要添加一个属性来表示它，加载相应的图像资源，然后让它发挥作用。
 
-从框架的角度看，桨非常类似于球 - 我们需要添加一个变量来表示它，加载相关的图像资源，然后做出魔法。
+### 加载挡板
 
-### 装载桨
-
-首先，添加`paddle`我们将在我们的游戏中使用的`ball`变量，就在变量之后：
+首先，在 `ball` 属性之后添加游戏中要使用的 `paddle` 属性：
 
 ```js
-var paddle;
-```
-
-然后，在该`preload`功能中，`paddle`通过添加以下新`load.image()`调用来加载图像：
-
-```js
-function preload() {
+class ExampleScene extends Phaser.Scene {
+  ball;
+  paddle;
   // ...
-  game.load.image("ball", "img/ball.png");
-  game.load.image("paddle", "img/paddle.png");
 }
 ```
 
-### 添加桨图形
-
-所以我们不要忘记，在这一点上，你应该从 Github 抓住这个[图形](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/paddle.png)，并保存在你的`/img`文件夹中。
-
-### 渲染桨用物理引擎
-
-接下来，我们将通过`add.sprite()`在`create()`函数中添加以下调用来初始化我们的桨，将其添加到底部：
+然后，在 `preload` 方法中添加以下新的 `load.image()` 调用，加载 `paddle` 图像：
 
 ```js
-paddle = game.add.sprite(
-  game.world.width * 0.5,
-  game.world.height - 5,
+class ExampleScene extends Phaser.Scene {
+  // ...
+  preload() {
+    this.load.image("ball", "img/ball.png");
+    this.load.image("paddle", "img/paddle.png");
+  }
+  // ...
+}
+```
+
+别忘了，此时你应该下载[挡板图像](https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/paddle.png)，并将其保存到 `/img` 文件夹中。
+
+### 渲染挡板并启用物理系统
+
+接下来，我们将在 `create()` 方法中添加以下 `add.sprite()` 调用来初始化挡板——将它添加到方法的最底部：
+
+```js
+this.paddle = this.add.sprite(
+  this.scale.width * 0.5,
+  this.scale.height - 5,
   "paddle",
 );
 ```
 
-我们可以使用`world.width`和`world.height`值来将桨定位到我们想要的位置：`game.world.width*0.5`将在屏幕中间。在我们这个例子中，世界和画布是一样的，但是对于其他类型的游戏，例如侧滚滚，这个世界会变大，你可以修改它来创造有趣的效果。
+我们可以使用 `scale.width` 和 `scale.height` 的值，将挡板准确地放在想要的位置：`this.scale.width * 0.5` 就是屏幕的正中央。在我们的示例中，世界与画布大小相同，但对于横向卷轴游戏等其他类型的游戏，世界会更大，你可以调整它来创造有趣的效果。
 
-你会注意到，如果你`index.html`在这一点上重新加载，那么桨是目前不完全在中间的。为什么？因为计算位置的锚总是从对象的左上角开始。我们可以改变它，使锚在桨的宽度的中间和它的高度的底部，所以更容易将其定位在底部边缘。添加以下新行以下的行：
+你会注意到，此时重新加载 `index.html`，挡板会位于屏幕的最底部，位置太低了。为什么？因为计算位置所用的原点默认位于对象的中心。我们可以将原点改为挡板水平方向的中点、垂直方向的底部，这样就更容易将它放置在底部边缘。在刚才添加的代码之后添加以下一行：
 
 ```js
-paddle.anchor.set(0.5, 1);
+this.paddle.setOrigin(0.5, 1);
 ```
 
-桨现在位于我们想要的地方。现在，为了使它与球碰撞，我们必须为桨提供物理效果。继续添加以下新行，再次在`create()`函数的底部：
+现在挡板已经位于我们想要的位置。为了让它与球发生碰撞，我们还需要为挡板启用物理系统。继续在 `create()` 方法的底部添加以下一行：
 
 ```js
-game.physics.enable(paddle, Phaser.Physics.ARCADE);
+this.physics.add.existing(this.paddle);
 ```
 
-现在，魔法可以开始发生 - 该框架可以在每个框架上检查碰撞检测。要启用桨和球之间的碰撞检测，请将`collide()`方法添加到如下`update()`功能中：
+现在框架就可以在每一帧进行碰撞检测了。要启用挡板与球之间的碰撞检测，请在 `update()` 方法中添加 `collide()` 方法调用，如下所示：
 
 ```js
-function update() {
-  game.physics.arcade.collide(ball, paddle);
+class ExampleScene extends Phaser.Scene {
+  // ...
+  update() {
+    this.physics.collide(this.ball, this.paddle);
+  }
 }
 ```
 
-第一个参数是我们感兴趣的对象之一 - 球 - 第二个是另一个，桨。这有效，但不如我们预期的那样 - 当球击中桨时，桨从屏幕上掉下来！我们想要的就是球从跳板上跳起来，而桨子停在同一个地方。我们可以将`body`桨设置成`immovable`球，所以当球击中它时不会移动。为此，请在`create()`函数底部添加以下行：
+第一个参数是我们关注的对象之一——球，第二个参数则是另一个对象——挡板。这段代码可以运行，但效果不完全符合预期——当球击中挡板时，挡板会掉出屏幕！我们只希望球从挡板反弹，而挡板保持在原位。我们可以将挡板的 `body` 设置为不可移动，这样它就不会在被球击中时移动。为此，请在 `create()` 方法的底部添加以下一行：
 
 ```js
-paddle.body.immovable = true;
+this.paddle.body.setImmovable(true);
 ```
 
-现在它按预期工作。
-
-## 控制桨
-
-接下来的问题是我们不能移动桨。要做到这一点，我们可以使用系统的默认输入（鼠标或触摸，取决于平台），并将桨位置设置到位置的`input`位置。将以下新行添加到`update()`函数中，如下所示：
+你还会注意到，球击中挡板后会开始水平移动，而不是反弹回去。要解决这个问题，我们还需要设置球本身的反弹系数（之前已经通过 `setCollideWorldBounds()` 设置了与墙壁碰撞时的反弹系数）。在 `create()` 方法中，紧接着 `ball.body.setCollideWorldBounds(true, 1, 1)` 那一行添加以下代码（我们希望将球的所有配置放在一起）：
 
 ```js
-function update() {
-  game.physics.arcade.collide(ball, paddle);
-  paddle.x = game.input.x;
-}
+this.ball.body.setBounce(1);
 ```
 
-现在在每个新的一帧上，桨的`x`位置将根据输入的`x`位置进行调整，但是当我们开始游戏时，桨的位置不在中间。这是因为输入位置尚未定义。要修复，我们可以将默认位置（如果输入位置尚未定义）设置为屏幕中间。更新上一行如下：
+现在它就能按预期工作了。
+
+## 操控挡板
+
+接下来的问题是我们还不能移动挡板。为了解决这个问题，我们可以使用系统的默认输入（根据平台使用鼠标或触摸），并将挡板的位置设置为 `input` 的位置。在 `update()` 方法中添加以下一行：
 
 ```js
-paddle.x = game.input.x || game.world.width * 0.5;
+this.paddle.x = this.input.x;
 ```
 
-如果你还没有这样做，请重新加载`index.html`并尝试！
+现在每一帧中，挡板的 `x` 位置都会根据输入的 `x` 位置进行调整。不过，游戏开始时，挡板并不位于中间，因为输入位置尚未定义。为了解决这个问题，我们可以在输入位置尚未定义时，将默认位置设为屏幕中间。将刚才添加的代码更新为：
+
+```js
+this.paddle.x = this.input.x || this.scale.width * 0.5;
+```
+
+如果你还没有这样做，请重新加载 `index.html` 并试试看！
 
 ## 定位球
 
-我们有桨按预期工作，所以我们把球放在上面。它非常类似于定位桨 - 我们需要将其放置在屏幕中间水平和垂直的底部，与底部有一点偏移。要按照我们想要的方式放置它，我们将把锚定位到球的正中间。找到现有的行，并将其替换为以下两行：`ball = game.add.sprite( ... )`
+挡板已经按预期工作了，现在让我们把球放在挡板上。这个过程与定位挡板非常相似——我们需要将球放在屏幕水平方向的中间、垂直方向的底部，并与底部留出一点距离。为了将球准确地放在想要的位置，我们会让原点位于球的正中央。找到现有的 `this.ball = this.add.sprite(...)` 那一行，将其替换为以下代码：
 
 ```js
-ball = game.add.sprite(game.world.width * 0.5, game.world.height - 25, "ball");
-ball.anchor.set(0.5);
+this.ball = this.add.sprite(
+  this.scale.width * 0.5,
+  this.scale.height - 25,
+  "ball",
+);
 ```
 
-速度保持不变 - 我们只是将第二个参数的值从 150 改为 -150，所以球将通过向上移动而不是下降来开始游戏。查找现有`ball.body.velocity.set( ... )`行并将其更新为以下内容：
+速度几乎保持不变——我们只是将第二个参数的值从 150 改为 -150，这样球就会在游戏开始时向上移动，而不是向下移动。找到现有的 `this.ball.body.setVelocity()` 那一行，将其更新为：
 
 ```js
-ball.body.velocity.set(150, -150);
+this.ball.body.setVelocity(150, -150);
 ```
 
-现在球将从桨的中间开始。
+现在球会从挡板的正中央开始移动。
 
 ## 比较你的代码
 
-你可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
+以下是你目前应该得到的结果，可以实时运行。若要查看其源代码，请点击“运行”按钮。
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/ogqza0ye/","","400")}}
+```html hidden
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.js"></script>
+```
+
+```css hidden
+* {
+  padding: 0;
+  margin: 0;
+}
+```
+
+```js hidden
+class ExampleScene extends Phaser.Scene {
+  ball;
+  paddle;
+
+  preload() {
+    this.load.setBaseURL(
+      "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser",
+    );
+
+    this.load.image("ball", "ball.png");
+    this.load.image("paddle", "paddle.png");
+  }
+  create() {
+    this.ball = this.add.sprite(
+      this.scale.width * 0.5,
+      this.scale.height - 25,
+      "ball",
+    );
+    this.physics.add.existing(this.ball);
+    this.ball.body.setVelocity(150, -150);
+    this.ball.body.setCollideWorldBounds(true, 1, 1);
+    this.ball.body.setBounce(1);
+
+    this.paddle = this.add.sprite(
+      this.scale.width * 0.5,
+      this.scale.height - 5,
+      "paddle",
+    );
+    this.paddle.setOrigin(0.5, 1);
+    this.physics.add.existing(this.paddle);
+    this.paddle.body.setImmovable(true);
+  }
+  update() {
+    this.physics.collide(this.ball, this.paddle);
+    this.paddle.x = this.input.x || this.scale.width * 0.5;
+  }
+}
+
+const config = {
+  type: Phaser.CANVAS,
+  width: 480,
+  height: 320,
+  scene: ExampleScene,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
+  backgroundColor: "#eeeeee",
+  physics: {
+    default: "arcade",
+  },
+};
+
+const game = new Phaser.Game(config);
+```
+
+{{EmbedLiveSample("比较你的代码", "", 480, , , , , "allow-modals")}}
 
 ## 下一步
 
-我们可以移动桨，并将球反弹，但是如果球从屏幕的底部边缘反弹，那又有什么意义？我们来介绍丢失的可能性 - 也称为[游戏](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)逻辑。
+我们可以移动挡板，并让球从挡板反弹了，但如果球仍然会从屏幕底部边缘反弹，这又有什么意义呢？让我们引入失败机制——也就是[游戏结束](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)逻辑。
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls", "Games/Tutorials/2D_breakout_game_Phaser/Game_over")}}
