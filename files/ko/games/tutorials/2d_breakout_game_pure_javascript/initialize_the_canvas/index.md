@@ -1,6 +1,7 @@
 ---
 title: 캔버스 생성과 그리기
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas
+original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---

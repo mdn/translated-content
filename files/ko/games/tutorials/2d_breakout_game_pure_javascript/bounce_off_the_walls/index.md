@@ -1,6 +1,6 @@
 ---
 title: 공을 벽에 튕기기
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls
 l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---

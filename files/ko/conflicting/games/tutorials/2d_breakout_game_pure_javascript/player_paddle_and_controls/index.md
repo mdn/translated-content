@@ -1,6 +1,7 @@
 ---
 title: 마우스로 패들 조종하기
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
+slug: conflicting/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls
+original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
