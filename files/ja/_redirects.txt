@@ -5966,7 +5966,7 @@
 /ja/docs/Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed	/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSExternalRedirectNotAllowed
 /ja/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowHeader	/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowHeader
 /ja/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod	/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowMethod
-/ja/docs/Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials	/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials
+/ja/docs/Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials	/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowCredentials
 /ja/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound	/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound
 /ja/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight	/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 /ja/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin	/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
@@ -6000,7 +6000,7 @@
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSExternalRedirectNotAllowed	/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSExternalRedirectNotAllowed
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSInvalidAllowHeader	/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowHeader
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSInvalidAllowMethod	/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowMethod
-/ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSMIssingAllowCredentials	/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials
+/ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSMIssingAllowCredentials	/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowCredentials
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSMethodNotFound	/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSMissingAllowHeaderFromPreflight	/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSMissingAllowOrigin	/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
