@@ -31336,14 +31336,14 @@
       "mfuji09"
     ]
   },
-  "Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials": {
-    "modified": "2019-03-18T21:28:57.049Z",
+  "Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound": {
+    "modified": "2019-03-18T21:28:50.441Z",
     "contributors": [
       "mfuji09"
     ]
   },
-  "Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound": {
-    "modified": "2019-03-18T21:28:50.441Z",
+  "Web/HTTP/Guides/CORS/Errors/CORSMissingAllowCredentials": {
+    "modified": "2019-03-18T21:28:57.049Z",
     "contributors": [
       "mfuji09"
     ]
