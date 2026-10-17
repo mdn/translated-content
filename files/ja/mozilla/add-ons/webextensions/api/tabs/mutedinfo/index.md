@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo
 
 {{AddonSidebar}}
 
-This object contains a boolean indicating whether the tab is muted, and the reason for the last state change.
+このオブジェクトには、タブがミュートされているかどうかを示す真偽値と、最後に状態が変わった理由が含まれます。
 
 ## 型
 
@@ -14,9 +14,9 @@ This object contains a boolean indicating whether the tab is muted, and the reas
 - `extensionId`{{optional_inline}}
   - : `string`. ミュートの状態を最後に変更した拡張機能の ID です。もし拡張機能がミュートの状態の最後の変更の理由でないなら設定されません。
 - `muted`
-  - : `boolean`. タブが現在ミュートかどうか。Equivalent to whether the muted audio indicator is showing.
+  - : `boolean`. タブが現在ミュートかどうか。ミュートのインジケーターが表示されているかどうかと同じです。
 - `reason`{{optional_inline}}
-  - : {{WebExtAPIRef('tabs.MutedInfoReason')}}. ミュートもしくはアンピューとに設定された理由。Not set if the tab's muted state has never been changed.
+  - : {{WebExtAPIRef('tabs.MutedInfoReason')}}. ミュートもしくはアンミュートに設定された理由。タブのミュートの状態が一度も変更されていない場合は設定されません。
 
 ## ブラウザーの互換性
 
