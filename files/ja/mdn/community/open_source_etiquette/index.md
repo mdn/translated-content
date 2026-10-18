@@ -50,7 +50,7 @@ l10n:
 
 たとえ誰かと意見が異なったり、その人の下した決定が気に入らなくても、対応し、敬意を払いましょう。
 良い OSP には、協力者が協力中に不快な思いをしないよう、持つルールがあることを認識しましょう。
-これはふつう、 GitHub の `CODE_OF_CONDUCT.md` ファイルにあります（例えば [`mdn/content` CODE_OF_CONDUCT](https://github.com/mdn/content/blob/main/CODE_OF_CONDUCT.md) をご覧ください。
+これはふつう、 GitHub の `CODE_OF_CONDUCT.md` ファイルにあります（例えば [`mdn/content` CODE_OF_CONDUCT](https://github.com/mdn/content/blob/main/CODE_OF_CONDUCT.md) をご覧ください）。
 
 例えば、 MDN のリポジトリーは、広範囲に及ぶ [Mozilla コミュニティ参加ガイドライン](https://www.mozilla.org/ja/about/governance/policies/participation/)によって管理されています。
 通常、MDN のリポジトリーにおける軽度の攻撃的な行動（常にトピックから外れていたり、中断していたり、無礼であったりすること）は、通常、まずリポジトリー上で警告がなされ、次に最終警告、そして一時的または永久的な禁止措置がとられます。

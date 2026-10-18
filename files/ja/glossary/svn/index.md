@@ -11,5 +11,5 @@ Apache Subversion (**SVN**) は無償のソースコード管理 ({{Glossary("SC
 
 ## 関連情報
 
-- [Apache Subversion](https://ja.wikipedia.org/wiki/Apache_Subversion)（ウィキベディア）
+- [Apache Subversion](https://ja.wikipedia.org/wiki/Apache_Subversion)（ウィキペディア）
 - [公式ウェブサイト](https://subversion.apache.org/)（英語）

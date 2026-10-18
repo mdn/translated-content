@@ -3,7 +3,7 @@ title: Propriété CSS `animation-range-end`
 short-title: animation-range-end
 slug: Web/CSS/Reference/Properties/animation-range-end
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-range-end`** définit le point sur la chronologie où une animation doit se terminer.
@@ -22,6 +22,11 @@ animation-range-end: contain;
 animation-range-end: cover 80%;
 animation-range-end: contain 700px;
 
+/* Plusieurs valeurs */
+animation-range-end:
+  cover 80%,
+  contain 700px;
+
 /* Valeurs globales */
 animation-range-end: inherit;
 animation-range-end: initial;
@@ -32,11 +37,13 @@ animation-range-end: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme une liste de valeurs séparées par des virgules. Chaque valeur peut être l'une des suivantes&nbsp;:
+
 - `normal`
   - : Représente la fin de la chronologie. C'est la valeur par défaut.
-- {{CSSxRef("length-percentage")}}
+- {{CSSxRef("&lt;length-percentage&gt;")}}
   - : Définit une valeur de longueur ou de pourcentage mesurée à partir du début de la chronologie.
-- {{CSSxRef("timeline-range-name")}}
+- {{CSSxRef("&lt;timeline-range-name&gt;")}}
   - : Définit une plage de chronologie nommée dans la chronologie globale. La plage se termine à `100%`.
 - `<timeline-range-name> <length-percentage>`
   - : Définit une longueur ou un pourcentage mesuré à partir du début de la plage de chronologie nommée.
@@ -47,7 +54,9 @@ La propriété `animation-range-end` définit la fin de la plage d'attachement d
 
 La valeur de la propriété peut être `normal`, une `<length-percentage>`, ou un {{CSSxRef("timeline-range-name")}} avec une `<length-percentage>` optionnelle. Si la valeur `<timeline-range-name>` n'inclut pas de `<length-percentage>`, le pourcentage par défaut est `100%`.
 
-La propriété `animation-range-end` est incluse dans la propriété raccourcie {{CSSxRef("animation")}} uniquement comme valeur de réinitialisation. Cela signifie qu'utiliser la propriété raccourcie `animation` réinitialise toute valeur précédemment déclarée de `animation-range-end` à `normal`&nbsp;; la propriété raccourcie ne peut pas être utilisée pour définir une nouvelle valeur de `animation-range-end`. Lors de la création d'[animations pilotées par le défilement CSS](/fr/docs/Web/CSS/Guides/Scroll-driven_animations), il faut déclarer `animation-range-end` après toute déclaration de la propriété raccourcie `animation` pour éviter de réinitialiser la valeur à `normal`.
+Lorsque plusieurs valeurs séparées par des virgules sont définies, elles s'appliquent aux animations dans l'ordre d'apparition des valeurs de {{CSSxRef("animation-name")}}. Voir [Définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
+
+La propriété `animation-range-end` est incluse dans la propriété raccourcie {{CSSxRef("animation")}} uniquement comme valeur de réinitialisation. Cela signifie qu'utiliser la propriété raccourcie `animation` réinitialise toute valeur précédemment déclarée de `animation-range-end` à `normal`&nbsp;; la propriété raccourcie ne peut pas être utilisée pour définir une nouvelle valeur de `animation-range-end`. Lors de la création [d'animations pilotées par le défilement CSS](/fr/docs/Web/CSS/Guides/Scroll-driven_animations), il faut déclarer `animation-range-end` après toute déclaration de la propriété raccourcie `animation` pour éviter de réinitialiser la valeur à `normal`.
 
 La propriété `animation-range-end`, ainsi que la propriété {{CSSxRef("animation-range-start")}}, peuvent aussi être définies à l'aide de la propriété raccourcie {{CSSxRef("animation-range")}}.
 

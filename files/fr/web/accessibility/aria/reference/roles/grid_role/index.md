@@ -3,7 +3,7 @@ title: "ARIA : rôle grid"
 short-title: grid
 slug: Web/Accessibility/ARIA/Reference/Roles/grid_role
 l10n:
-  sourceCommit: db443a6062d0e858a62af2f9a3a7558335ffd2dd
+  sourceCommit: 96758f3d8ce1e5fbd9d58053bdef103eec1de108
 ---
 
 Le rôle `grid` est destiné à un composant qui contient une ou plusieurs lignes de cellules. La position de chaque cellule est significative et peut être mise au point à l'aide de l'entrée au clavier.
@@ -51,7 +51,9 @@ Un composant de grille contient une ou plusieurs lignes avec une ou plusieurs ce
 
 Les éléments de cellule ont le rôle [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), sauf s'ils sont un en-tête de ligne ou de colonne, auquel cas, les éléments sont [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) et [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role), respectivement. Les éléments de cellule doivent être possédés par des éléments avec un rôle [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role). Les lignes peuvent être regroupées à l'aide du rôle [`rowgroup`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role).
 
-Si la grille est utilisée comme un composant interactif, des [interactions au clavier](#interactions_au_clavier) doivent être mises en œuvre.
+La grille est un composant interactif, donc des [interactions au clavier](#interactions_au_clavier) doivent être implémentées.
+
+Un nom accessible est fortement recommandé pour le rôle `grid`, bien qu'il ne soit pas requis par l'ARIA. Utilisez [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) pour référencer une étiquette visible, ou [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) si aucune étiquette visible n'est présente.
 
 ### Propriétés, états et rôles ARIA associés
 

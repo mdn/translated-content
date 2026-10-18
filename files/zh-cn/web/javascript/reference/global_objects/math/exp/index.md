@@ -3,7 +3,7 @@ title: Math.exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 ---
 
-**`Math.exp()`** 函数返回 `e^x`，`x` 表示参数，`e` 是[欧拉常数（Euler's constant）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/E)，自然对数的底数。
+**`Math.exp()`** 函数返回 `e^x`，`x` 表示参数，`e` 是[欧拉数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/E)，自然对数的底数。
 
 ## 语法
 

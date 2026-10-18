@@ -3,7 +3,7 @@ title: Évènements DOM
 short-title: Travailler avec des évènements
 slug: Web/API/Document_Object_Model/Events
 l10n:
-  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
+  sourceCommit: de189c9ecabb11ee95043a801729050c624723a7
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -980,7 +980,7 @@ function simulateClick() {
 Il existe deux méthodes recommandées pour enregistrer des gestionnaires. Le code du gestionnaire peut être exécuté lorsqu'un évènement est déclenché soit en l'assignant à la propriété _onevent_ correspondante de l'élément cible, soit en enregistrant le gestionnaire comme écouteur à l'aide de la méthode {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}. Dans les deux cas, le gestionnaire reçoit un objet conforme à [l'interface `Event`](/fr/docs/Web/API/Event) (ou à une [interface dérivée](/fr/docs/Web/API/Event#interfaces_basées_sur_event)). La principale différence est que plusieurs gestionnaires peuvent être ajoutés (ou supprimés) avec les méthodes d'écouteur d'évènements.
 
 > [!WARNING]
-> Une troisième méthode, qui consiste à utiliser les attributs HTML onevent, n'est pas recommandée&nbsp;! Ils alourdissent le balisage, le rendent moins lisible et plus difficile à déboguer. Pour plus d'informations, voir [Gestionnaires d'évènements en ligne](/fr/docs/Learn_web_development/Core/Scripting/Events#gestionnaires_dévènements_en_ligne_à_éviter).
+> Une troisième méthode, qui consiste à utiliser les attributs HTML onevent, n'est pas recommandée&nbsp;! Ils alourdissent le balisage, le rendent moins lisible et plus difficile à déboguer. Pour plus d'informations, voir [Gestionnaires d'évènements en incise](/fr/docs/Learn_web_development/Core/Scripting/Events#gestionnaires_dévènements_en_incise_à_éviter).
 
 ### Utiliser les propriétés onevent
 

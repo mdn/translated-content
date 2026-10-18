@@ -27,7 +27,7 @@ l10n:
 
 ## 解説
 
-ポップオーバー要素は、呼び出し/制御要素（つまり、`<button>` または `<input type="button">` に対応する [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性を持つ) または {{domxref("HTMLElement.showPopover()")}} 呼び出しによって開かれるまで、非表示になっています。
+ポップオーバー要素は、呼び出し/制御要素（つまり、`<button>` または `<input type="button">` に対応する [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性を持つ）または {{domxref("HTMLElement.showPopover()")}} 呼び出しによって開かれるまで、非表示になっています。
 
 開くと、ポップオーバー要素は {{glossary("top layer", "最上位レイヤー")}} 内の他のすべての要素の上に現れ、親要素の {{cssxref('position')}} または {{cssxref('overflow')}} スタイル設定の影響を受けません。
 

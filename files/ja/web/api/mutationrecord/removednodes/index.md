@@ -1,8 +1,9 @@
 ---
 title: "MutationRecord: removedNodes プロパティ"
+short-title: removedNodes
 slug: Web/API/MutationRecord/removedNodes
 l10n:
-  sourceCommit: 5542c8f1ef9f67b3a7431f47ee2b4ce6ba4cec44
+  sourceCommit: be591971235a485fb10778eb990118eb1223a8e7
 ---
 
 {{APIRef("DOM")}}

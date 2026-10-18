@@ -1,8 +1,9 @@
 ---
-title: "<optgroup>: 選択肢グループ要素"
+title: "`<optgroup>` 選択肢グループ要素 (HTML)"
+short-title: <optgroup>
 slug: Web/HTML/Reference/Elements/optgroup
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 **`<optgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("select")}} 要素内の選択肢のグループを作成します。

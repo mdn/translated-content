@@ -1,8 +1,9 @@
 ---
-title: flex-flow
+title: "`flex-flow` プロパティ (CSS)"
+short-title: flex-flow
 slug: Web/CSS/Reference/Properties/flex-flow
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 6354422058e438a2599e4eab71eaec8eb40850fa
 ---
 
 **`flex-flow`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、フレックスコンテナーの向きと折り返しの動作を同時に指定します。
@@ -18,11 +19,19 @@ flex-flow: row-reverse nowrap;
 ```
 
 ```css interactive-example-choice
+flex-flow: row wrap balance;
+```
+
+```css interactive-example-choice
 flex-flow: column wrap-reverse;
 ```
 
 ```css interactive-example-choice
 flex-flow: column wrap;
+```
+
+```css interactive-example-choice
+flex-flow: column balance wrap;
 ```
 
 ```html interactive-example
@@ -34,6 +43,7 @@ flex-flow: column wrap;
     <div>Item Four</div>
     <div>Item Five</div>
     <div>Item Six</div>
+    <div>Item Seven</div>
   </div>
 </section>
 ```
@@ -50,7 +60,7 @@ flex-flow: column wrap;
   background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   width: 60px;
-  margin: 10px;
+  margin: 5px 10px;
 }
 ```
 
@@ -74,11 +84,14 @@ flex-flow: column-reverse;
 flex-flow: nowrap;
 flex-flow: wrap;
 flex-flow: wrap-reverse;
+flex-flow: wrap balance;
+flex-flow: balance wrap-reverse;
 
 /* flex-flow: <'flex-direction'> および <'flex-wrap'> */
 flex-flow: row nowrap;
 flex-flow: column wrap;
 flex-flow: column-reverse wrap-reverse;
+flex-flow: row-reverse balance wrap
 
 /* グローバル値 */
 flex-flow: inherit;
@@ -90,7 +103,32 @@ flex-flow: unset;
 
 ### 値
 
-値に関して詳しくは、 {{cssxref("flex-direction")}} および {{cssxref("flex-wrap")}} をご覧ください。
+このプロパティは、以下の型のキーワードを空白区切りで並べたリストとして指定します。
+
+- {{cssxref("flex-direction")}}
+  - : フレックスコンテナー内でフレックスアイテムを配置する際の主軸と方向を指定するキーワードです。
+- {{cssxref("flex-wrap")}}
+  - : フレックスアイテムが複数行にまたがるかどうかを指定する 1 つまたは 2 つのキーワード。また、改行を許可することができる場合、行の積み重ね方向や、行のバランスを取るかどうかを設定します。
+
+## 解説
+
+`flex-flow` 一括指定プロパティは、{{cssxref("flex-direction")}} および {{cssxref("flex-wrap")}} プロパティを指定し、フレックスコンテナーの方向とその折り返し動作を定義します。また、折り返しが許可されている場合に、フレックスアイテムを均等に配置するように定義することも可能です。
+
+例えば、`column-reverse wrap` を指定すると、主軸がブロック方向に設定され、主軸の先頭と主軸の末尾の順序が逆転します。これにより、フレックスアイテムは改行をすることができるので、必要があれば新しい行を生成します。
+
+```css
+.container {
+  flex-flow: column-reverse wrap;
+}
+```
+
+フレックスアイテムをそれぞれのフレックスラインに均等に配置するには、`wrap`に加えて、`flex-wrap` キーワードの [`balance`](/ja/docs/Web/CSS/Reference/Properties/flex-wrap#balance) を含めることができます。
+
+```css
+.container {
+  flex-flow: column-reverse wrap balance;
+}
+```
 
 ## 公式定義
 
@@ -102,15 +140,77 @@ flex-flow: unset;
 
 ## 例
 
-### column-reverse と wrap の設定
+### 基本的な使い方
 
-この例では、主軸はブロック方向であり、主軸の先頭と末尾が逆転しています。フレックスアイテムは、必要があれば折り返され、新しい行を作成することができます。
+この例では、フレックスコンテナー内で `flex-flow` 一括指定を使用することで、アイテムが複数の行にまたがって逆順に配置される様子を示しています。
+
+#### HTML
+
+以下に、アルファベット順に並べた単語の一覧を記載します。
+
+```html
+<ul>
+  <li>Alphabet</li>
+  <li>Banana</li>
+  <li>Crayons</li>
+  <li>Dinosaurs</li>
+  <li>Eggplant</li>
+  <li>Foundation</li>
+  <li>Ghosts</li>
+  <li>Happy</li>
+  <li>Igloo</li>
+  <li>Janitors</li>
+  <li>Kittens</li>
+  <li>Lasso</li>
+  <li>Magic 8-ball</li>
+  <li>Nincompoop</li>
+  <li>Orange</li>
+  <li>Petunia</li>
+  <li>Quality</li>
+  <li>Rancid</li>
+  <li>Shoelace</li>
+  <li>Terydactyl</li>
+  <li>Umbrella</li>
+  <li>Valentine</li>
+  <li>Westward</li>
+  <li>Xylophone</li>
+</ul>
+```
+
+#### CSS
+
+{{HTMLElement("ul")}} がフレックスコンテナーになるように {{cssxref("display")}} プロパティを設定し、{{cssxref("width")}} を定義し、フレックスアイテムとフレックス行の間に若干の余地があるように {{cssxref("gap")}} を追加し、さらに `flex-flow` を設定してアイテムが逆順で折り返されるようにします。簡潔にするため、追加の CSS は省略しています。
 
 ```css
-.container {
-  flex-flow: column-reverse wrap;
+ul {
+  display: flex;
+  width: 31em;
+  gap: 1em;
+
+  flex-flow: row-reverse wrap-reverse;
 }
 ```
+
+```css hidden
+ul {
+  list-style: none;
+  border: 1px solid;
+  font-family: sans-serif;
+}
+li {
+  font-size: 1.25rem;
+  padding: 5px;
+  border: 1px solid;
+  background-color: lightpink;
+}
+li:nth-of-type(even) {
+  background-color: lightgreen;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("Basic usage","",310)}}
 
 ## 仕様書
 

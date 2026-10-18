@@ -26,7 +26,7 @@ SVG では、アスペクト比は [`viewBox`](/ja/docs/Web/SVG/Reference/Attrib
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg"></svg>
 ```
 
-JavaScript API でアスペクト比を問い合わせると、幅を高さで割った倍精度浮動小数点数が返されます。JavaScript を使用して要素のアスペクト比を設定することもできます。例えば、{{domxref("MediaStreamTrack")}} または {{domxref("MediaTrackSettings")}} 辞書の [`aspectRatio`](/ja/docs/Web/API/MediaTrackSettings/aspectRatio) プロパティを使用して 1920x1080 動画のアスペクト比制約を設定するには、16/9、または 1920/1080 として計算され、`1.7777778` となります。
+JavaScript API でアスペクト比を問い合わせると、幅を高さで割った倍精度浮動小数点数が返されます。JavaScript を使用して要素のアスペクト比を設定することもできます。例えば、{{domxref("MediaStreamTrack")}} または {{domxref("MediaTrackSettings")}} 辞書の [`aspectRatio`](/ja/docs/Web/API/MediaStreamTrack/getSettings) プロパティを使用して 1920x1080 動画のアスペクト比制約を設定するには、16/9、または 1920/1080 として計算され、`1.7777778` となります。
 
 ```js
 const constraints = {

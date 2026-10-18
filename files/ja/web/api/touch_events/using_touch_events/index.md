@@ -112,7 +112,7 @@ function process_touchmove(ev) {
 タッチイベントを使用する際に考慮すべきベストプラクティスをいくつか紹介します。
 
 - タッチハンドラーで行う作業を最小限に抑えましょう。
-- 文書全体や文書ツリー内の上位ノードではなく）固有の対象要素にタッチ点ハンドラーを追加しましょう。
+- （文書全体や文書ツリー内の上位ノードではなく）固有の対象要素にタッチ点ハンドラーを追加しましょう。
 - {{domxref("Element/touchmove_event", "touchmove")}}、{{domxref("Element/touchend_event", "touchend")}}、{{domxref("Element/touchcancel_event", "touchcancel")}} イベントハンドラーは {{domxref("Element/touchstart_event", "touchstart")}} 内で追加しましょう。
 - 対象とするタッチ要素やノードは、指が触れるのに十分な大きさが必要です。対象領域が小さすぎる場合、タッチすると隣接する他の要素のイベントが発生する可能性があります。
 

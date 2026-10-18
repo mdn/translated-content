@@ -1,8 +1,9 @@
 ---
-title: "<h1>–<h6>: HTML の見出し要素"
+title: "`<h1>–<h6>` セクション見出し要素 (HTML)"
+short-title: <h1>–<h6>
 slug: Web/HTML/Reference/Elements/Heading_Elements
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: f398f522d05bb8bfe739ac2417b00712b7888494
 ---
 
 **`<h1>`** ～ **`<h6>`** は [HTML](/ja/docs/Web/HTML) の要素で、セクションの見出しを 6 段階で表します。`<h1>` が最上位で、`<h6>` が最下位です。既定では、すべての見出し要素は[ブロックレベル](/ja/docs/Glossary/Block-level_content)ボックスを作成し、改行して始まり、その包含ブロックの中で利用できる幅いっぱいに広がります。
@@ -51,6 +52,8 @@ h4 {
 ## 属性
 
 見出し要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
+
+[`headingoffset`](/ja/docs/Web/HTML/Reference/Global_attributes/headingoffset) および [`headingreset`](/ja/docs/Web/HTML/Reference/Global_attributes/headingreset) グローバル属性を使用することができます。これらにより、これらの要素の計算された見出しレベルを調整することができます。
 
 ## 使用上の注意
 

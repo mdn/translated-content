@@ -3,7 +3,7 @@ title: "Element : méthode computedStyleMap()"
 short-title: computedStyleMap()
 slug: Web/API/Element/computedStyleMap
 l10n:
-  sourceCommit: ebb9a6421c24c4aff2fef3913527571441361cf0
+  sourceCommit: 81a384e18b61c1d1b23d7f58f1fbd8ec3af45558
 ---
 
 {{APIRef("CSS Typed Object Model API")}}
@@ -50,7 +50,7 @@ a {
 }
 ```
 
-Nous ajoutons du JavaScript pour récupérer notre lien et renvoyer une liste de définitions de toutes les valeurs des propriétés CSS en utilisant `computedStyleMap()`.
+Nous ajoutons du JavaScript pour récupérer notre lien et retourner une liste de définitions de toutes les valeurs des propriétés CSS en utilisant `computedStyleMap()`.
 
 ```js
 // obtenir l'élément
@@ -82,7 +82,7 @@ Dans les autres navigateurs, vous ne voyez qu'un lien.
 
 {{EmbedLiveSample("Obtenir les styles par défaut", 300, 300)}}
 
-Avez-vous réalisé combien de propriétés CSS par défaut un lien avait&nbsp;? Mettez à jour le `document.querySelector("a")` en `document.querySelector("p")`, et vous remarquez une différence dans les valeurs calculées par défaut de `margin-top` et `margin-bottom`.
+Avez-vous réalisé combien de propriétés CSS par défaut un lien a&nbsp;? Mettez à jour le `document.querySelector("a")` en `document.querySelector("p")`, et vous remarquez une différence dans les valeurs calculées par défaut de `margin-top` et `margin-bottom`.
 
 ### Comparer avec `getComputedStyle()`
 

@@ -3,7 +3,7 @@ title: Firefox 156 note de version pour les développeurs
 short-title: Firefox 156
 slug: Mozilla/Firefox/Releases/156
 l10n:
-  sourceCommit: 79f0b295d759e9bb6e3c49197434a1d34c449731
+  sourceCommit: beede695ee6e0cceaabc3e678eb75a148d77a81e
 ---
 
 Cet article présente les informations concernant les changements de Firefox 156 qui concernent les développeur·euse·s.
@@ -13,18 +13,12 @@ Firefox 156 est sorti le [15 septembre 2026 <sup>(angl.)</sup>](https://whattrai
 
 ### Outils de développement
 
-- [L'inspecteur de page <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) résout désormais les fonctions de substitution — {{CSSxRef("var()")}}, {{CSSxRef("attr()")}}, et {{CSSxRef("env()")}} — lors du calcul des étapes affichées pour une déclaration, de sorte qu'une valeur provenant d'une propriété personnalisée ou d'un attribut est tracée jusqu'à sa source plutôt que d'être affichée non résolue.
-  ([bogue Firefox 2041622 <sup>(angl.)</sup>](https://bugzil.la/2041622)).
 - La lecture de la taille de la zone d'affichage dans le surligneur de l'inspecteur n'arrondit plus la largeur et la hauteur, ce qui auparavant signalait une taille trompeuse aux niveaux de zoom fractionnaires ou sur les écrans à haute densité.
   ([bogue Firefox 2055445 <sup>(angl.)</sup>](https://bugzil.la/2055445)).
 - Les outils de développement peuvent désormais se connecter à un serveur de débogage jusqu'à trois versions plus anciennes que le client, contre la limite précédente. Cela est important lors du débogage à distance d'une version plus ancienne de Firefox ou de GeckoView.
   ([bogue Firefox 2064221 <sup>(angl.)</sup>](https://bugzil.la/2064221)).
 - Correction du problème où le surligneur des règles restait visible après avoir été désactivé, lorsque l'inspecteur n'était pas le panneau sélectionné.
   ([bogue Firefox 2063982 <sup>(angl.)</sup>](https://bugzil.la/2063982)).
-- Correction du problème où <kbd>F2</kbd> invoquait «&nbsp;Modifier en tant que HTML&nbsp;» sur des nœuds qui ne le supportaient pas, et affichait un contenu obsolète d'une édition précédente.
-  ([bogue Firefox 2064213 <sup>(angl.)</sup>](https://bugzil.la/2064213)).
-- Correction de la position de la fenêtre bloquante «&nbsp;Paramètres de l'appareil&nbsp;» dans le [mode de conception réactive](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html).
-  ([bogue Firefox 2062153 <sup>(angl.)</sup>](https://bugzil.la/2062153)).
 
 ### HTML
 
@@ -45,14 +39,10 @@ Pas de changements notables.
   la ligne correcte est rognée lorsqu'une boîte en incise sur la dernière ligne est fragmentée ([bogue Firefox 2063909 <sup>(angl.)</sup>](https://bugzil.la/2063909)),
   et le rognage sur une boîte en incise ne supprime plus sa bordure et son remplissage ([bogue Firefox 2064596 <sup>(angl.)</sup>](https://bugzil.la/2064596)).
   Notez que {{CSSxRef("text-box-trim")}} n'a toujours aucun effet en combinaison avec {{CSSxRef("line-clamp")}}.
-- {{CSSxRef("@supports")}} ne signale plus la prise en charge du pseudo-élément `::-webkit-scrollbar`, donc `@supports selector(::-webkit-scrollbar)` retourne désormais `false`.
-  Les sites utilisant couramment cela comme un signal que `::-webkit-scrollbar-thumb` peut être mis en forme, ce que Firefox n'implémente pas, donc prétendre la prise en charge conduit à un style pire que de signaler l'absence de support.
-  Utilisez plutôt {{CSSxRef("scrollbar-width")}} et {{CSSxRef("scrollbar-color")}}.
-  ([bogue Firefox 2062782 <sup>(angl.)</sup>](https://bugzil.la/2062782)).
 
 ### JavaScript
 
-- {{JSxRef("Promise.try()")}} résout désormais la valeur retournée par sa fonction de rappel en utilisant `PromiseResolve`, donc une promesse retournée par la fonction de rappel est transmise telle quelle plutôt que d'être enveloppée dans une nouvelle promesse.
+- {{JSxRef("Promise.try()")}} résout désormais la valeur retournée par sa fonction de rappel de la même manière que {{JSxRef("Promise.resolve()")}}, donc une promesse retournée par la fonction de rappel est transmise telle quelle plutôt que d'être enveloppée dans une nouvelle promesse.
   `Promise.try(() => p)` est désormais la même promesse que `p` lorsque `p` est une promesse native. Cela suit un changement normatif de la spécification.
   ([bogue Firefox 2062293 <sup>(angl.)</sup>](https://bugzil.la/2062293)).
 - Les déclarations [`using`](/fr/docs/Web/JavaScript/Reference/Statements/using) ne peuvent plus être réaffectées, conformément à la sémantique de type const requise par la spécification. Auparavant, une telle liaison pouvait être modifiée silencieusement.
@@ -115,7 +105,7 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
   Les [registres d'éléments personnalisés à portée limitée](/fr/docs/Web/API/Web_components/Using_custom_elements#registre_déléments_personnalisés_à_portée_limitée) sont désormais pris en charge, de sorte qu'une racine d'ombre peut définir des éléments personnalisés qui ne sont pas en conflit avec ceux définis dans le registre global.
   Cette version active la fonctionnalité par défaut dans les versions Nightly. ([bogue Firefox 2064333 <sup>(angl.)</sup>](https://bugzil.la/2064333)).
 
-- **Requêtes de support de `named-feature()`**&nbsp;: `layout.css.supports.at-rule.enabled`
+- **Requêtes de support de `named-feature()`**&nbsp;: `layout.css.anchor-positioning.follows-transforms.enabled`
 
   La fonction `named-feature()` dans la règle conditionnelle {{CSSxRef("@supports")}} permet de tester si le navigateur prend en charge une fonctionnalité qui n'a pas d'autre syntaxe détectable, par exemple `@supports named-feature(anchor-position-follows-transforms)`.
   ([bogue Firefox 2042977 <sup>(angl.)</sup>](https://bugzil.la/2042977) et [bogue Firefox 2055354 <sup>(angl.)</sup>](https://bugzil.la/2055354)).
@@ -125,7 +115,7 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
   L'API Container Timing signale quand le contenu d'un élément conteneur est peint, ce qui vous permet de mesurer le temps de rendu d'une région de la page plutôt que de l'ensemble du viewport.
   ([bogue Firefox 1940240 <sup>(angl.)</sup>](https://bugzil.la/1940240)).
 
-- **Éléments MathML `<a>`**&nbsp;: `mathml.a.element.enabled`
+- **Formats personnalisés du Web dans l'API Clipboard asynchrone** (Nightly)&nbsp;: `dom.clipboard.customFormatSupport.enabled`
 
-  L'élément MathML `<a>` crée un lien hypertexte à partir du contenu MathML, exposant l'interface `MathMLAnchorElement` avec les mêmes propriétés de composant d'URL que les éléments HTML {{HTMLElement("a")}}.
-  Cette version ajoute la prise en charge des attributs IDL `rel` et `relList`. ([bogue Firefox 2063819 <sup>(angl.)</sup>](https://bugzil.la/2063819)).
+  [L'API Clipboard](/fr/docs/Web/API/Clipboard_API) prend désormais en charge les formats personnalisés du Web sur Android, permettant aux objets {{DOMxRef("ClipboardItem")}} de transporter des types MIME personnalisés préfixés par `"web "`, tels que `"web text/foo"`.
+  La prise en charge des autres plateformes a été ajoutée dans Firefox 154. ([bogue Firefox 2048545 <sup>(angl.)</sup>](https://bugzil.la/2048545)).

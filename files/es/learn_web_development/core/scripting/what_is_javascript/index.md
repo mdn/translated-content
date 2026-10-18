@@ -2,7 +2,7 @@
 title: ¿Qué es JavaScript?
 slug: Learn_web_development/Core/Scripting/What_is_JavaScript
 l10n:
-  sourceCommit: f4c14731a1a157fc8d8f7357ac4d74d14a7d7fb5
+  sourceCommit: c529f2672b3541cc28ea687ff9266f98b1734191
 ---
 
 {{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
@@ -131,7 +131,8 @@ Las **API del navegador** están integradas en tu navegador web y pueden exponer
   Cada vez que ves aparecer una ventana emergente en una página, o se muestra contenido nuevo (como vimos antes en nuestra demostración sencilla), por ejemplo, eso es el DOM en acción.
 - La [API de Geolocalización](/es/docs/Web/API/Geolocation_API) recupera información geográfica.
   Así es como [Google Maps](https://www.google.com/maps) puede encontrar tu ubicación y trazarla en un mapa.
-- Las API de [Canvas](/es/docs/Web/API/Canvas_API) y [WebGL](/es/docs/Web/API/WebGL_API) te permiten crear gráficos animados en 2D y 3D. Hay gente haciendo cosas increíbles con estas tecnologías web — mira [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) y [webglsamples](https://webglsamples.org/).
+- Las API de [Canvas](/es/docs/Web/API/Canvas_API) y [WebGL](/es/docs/Web/API/WebGL_API) te permiten crear gráficos animados en 2D y 3D.
+  Hay gente haciendo cosas increíbles con estas tecnologías web — mira [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) y [webglsamples](https://webglsamples.org/).
 - Las [API de audio y vídeo](/es/docs/Web/Media/Guides/Audio_and_video_delivery) como {{domxref("HTMLMediaElement")}} y [WebRTC](/es/docs/Web/API/WebRTC_API) te permiten hacer cosas realmente interesantes con multimedia, como reproducir audio y vídeo directamente en una página web, o tomar vídeo de tu cámara web y mostrarlo en la computadora de otra persona (prueba nuestra sencilla [demostración de Snapshot](https://chrisdavidmills.github.io/snapshot/) para hacerte una idea).
 
 Las **API de terceros** no están integradas en el navegador de forma predeterminada, y por lo general tienes que obtener su código e información de algún lugar de la Web. Por ejemplo:
@@ -233,7 +234,22 @@ Mientras que CSS usa elementos {{htmlelement("link")}} para aplicar hojas de est
 
 ### JavaScript interno
 
-1. En primer lugar, haz una copia local de nuestro archivo de ejemplo [apply-javascript.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Guárdalo en un directorio en algún lugar razonable.
+1. En primer lugar, crea un archivo HTML nuevo en tu sistema de archivos local y añádele el siguiente contenido:
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en-US">
+     <head>
+       <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width" />
+       <title>Ejemplo de aplicar JavaScript</title>
+     </head>
+     <body>
+       <button>Haz clic aquí</button>
+     </body>
+   </html>
+   ```
+
 2. Abre el archivo en tu navegador web y en tu editor de texto. Verás que el HTML crea una página web sencilla que contiene un botón en el que se puede hacer clic.
 3. A continuación, ve a tu editor de texto y agrega lo siguiente al final de tu `body`, justo antes de la etiqueta de cierre `</body>`:
 
@@ -263,29 +279,48 @@ Mientras que CSS usa elementos {{htmlelement("link")}} para aplicar hojas de est
 
 5. Guarda tu archivo y actualiza el navegador — ahora deberías ver que cuando haces clic en el botón, se genera un nuevo párrafo y se coloca debajo.
 
-> [!NOTE]
-> Si tu ejemplo no parece funcionar, repasa los pasos de nuevo y verifica que hayas hecho todo correctamente.
-> ¿Guardaste tu copia local del código inicial como un archivo `.html`?
-> ¿Agregaste tu elemento {{htmlelement("script")}} justo antes de la etiqueta `</body>`?
-> ¿Ingresaste el JavaScript exactamente como se muestra? **JavaScript distingue entre mayúsculas y minúsculas y es muy exigente, así que debes ingresar la sintaxis exactamente como se muestra, o de lo contrario puede que no funcione.**
+El ejemplo debería verse así:
 
-> [!NOTE]
-> Puedes ver esta versión en GitHub como [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) ([míralo en vivo también](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)).
+```html hidden live-sample___apply-javascript-internal
+<button>Haz clic aquí</button>
+
+<script>
+  function createParagraph() {
+    const para = document.createElement("p");
+    para.textContent = "¡Hiciste clic en el botón!";
+    document.body.appendChild(para);
+  }
+
+  const buttons = document.querySelectorAll("button");
+
+  for (const button of buttons) {
+    button.addEventListener("click", createParagraph);
+  }
+</script>
+```
+
+{{embedlivesample("apply-javascript-internal", "100%", "200")}}
+
+Si tu ejemplo no parece funcionar, repasa los pasos de nuevo y verifica que hayas hecho todo correctamente.
+
+- ¿Guardaste tu archivo local como un archivo `.html`?
+- ¿Agregaste tu elemento {{htmlelement("script")}} justo antes de la etiqueta `</body>`?
+- ¿Ingresaste el JavaScript exactamente como se muestra? **JavaScript distingue entre mayúsculas y minúsculas y es muy exigente, así que debes ingresar la sintaxis exactamente como se muestra, o de lo contrario puede que no funcione.**
 
 ### JavaScript externo
 
 Esto funciona muy bien, pero ¿qué pasa si quisiéramos poner nuestro JavaScript en un archivo externo? Exploremos esto ahora.
 
-1. Primero, crea un nuevo archivo en el mismo directorio que tu archivo HTML de ejemplo. Llámalo `script.js` — asegúrate de que tenga la extensión de archivo .js, ya que así es como se lo reconoce como JavaScript.
-2. Elimina tu elemento {{htmlelement("script")}} actual al final del `</body>` y agrega lo siguiente justo antes de la etiqueta de cierre `</head>` (de esa manera el navegador puede empezar a cargar el archivo antes que si estuviera al final):
+1. Primero, crea un nuevo archivo en el mismo directorio que tu archivo HTML. Llámalo `script.js` — asegúrate de que tenga la extensión de archivo `.js`, ya que así es como se lo reconoce como JavaScript.
+2. Elimina tu elemento {{htmlelement("script")}} del archivo HTML y después agrega lo siguiente justo antes de la etiqueta de cierre `</head>` (de esa manera el navegador puede empezar a cargar el archivo antes que si estuviera al final):
 
    ```html
    <script type="module" src="script.js"></script>
    ```
 
-3. Dentro de `script.js`, agrega el siguiente script:
+3. Dentro de `script.js`, agrega el siguiente JavaScript:
 
-   ```js
+   ```js live-sample___apply-javascript-external
    function createParagraph() {
      const para = document.createElement("p");
      para.textContent = "¡Hiciste clic en el botón!";
@@ -302,12 +337,17 @@ Esto funciona muy bien, pero ¿qué pasa si quisiéramos poner nuestro JavaScrip
 4. Guarda y actualiza tu navegador. Descubrirás que hacer clic en el botón no tiene ningún efecto, y si revisas la consola de tu navegador, verás un error similar a `Cross-origin request blocked`. Esto se debe a que, como muchos recursos externos, los módulos de JavaScript necesitan cargarse desde el [mismo origen](/es/docs/Web/Security/Defenses/Same-origin_policy) que el HTML, y las URL `file://` no califican. Hay dos soluciones para arreglar este problema:
    - Nuestra solución recomendada es [configurar un servidor de pruebas local](/es/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server). Con el programa de servidor en ejecución sirviendo los archivos `apply-javascript-external.html` y `script.js` en el puerto `8000`, abre tu navegador y ve a `http://localhost:8000`.
    - Si no puedes ejecutar un servidor local, también puedes usar `<script defer src="script.js"></script>` en lugar de `<script type="module" src="script.js"></script>`. Consulta [Estrategias de carga de scripts](#estrategias_para_la_carga_de_scripts) más abajo para más información. Pero ten en cuenta que las funciones que usamos en otras partes del tutorial pueden requerir un servidor HTTP local de todos modos.
-5. Ahora el sitio web funciona igual que antes, pero ahora tenemos nuestro JavaScript en un archivo externo.
-   Esto generalmente es bueno en términos de organizar tu código y hacerlo reutilizable en varios archivos HTML.
-   Además, el HTML es más fácil de leer sin grandes fragmentos de script volcados en él.
 
-> [!NOTE]
-> Puedes ver esta versión en GitHub como [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) y [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js) ([míralo en vivo también](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
+La página web funciona igual que antes, pero ahora tenemos nuestro JavaScript en un archivo externo:
+
+```html hidden live-sample___apply-javascript-external
+<button>Haz clic aquí</button>
+```
+
+{{embedlivesample("apply-javascript-external", "100%", "200")}}
+
+El JavaScript externo generalmente es bueno en términos de organizar tu código y hacerlo reutilizable en varios archivos HTML.
+Además, el HTML es más fácil de leer sin grandes fragmentos de script volcados en él.
 
 ### Controladores de JavaScript en línea
 
@@ -326,11 +366,7 @@ function createParagraph() {
 <button onclick="createParagraph()">¡Haz clic aquí!</button>
 ```
 
-Puedes probar esta versión de nuestra demostración a continuación.
-
-{{ EmbedLiveSample('Inline_JavaScript_handlers', '100%', 150) }}
-
-Esta demostración tiene exactamente la misma funcionalidad que en las dos secciones anteriores, excepto que el elemento {{htmlelement("button")}} incluye un controlador `onclick` en línea para hacer que la función se ejecute cuando se presiona el botón.
+Este código tiene exactamente la misma funcionalidad que las versiones que se muestran en las dos secciones anteriores, excepto que el elemento {{htmlelement("button")}} incluye un controlador `onclick` en línea para hacer que la función se ejecute cuando se presiona el botón.
 
 **Sin embargo, por favor no hagas esto.** Es mala práctica contaminar tu HTML con JavaScript, y es ineficiente — tendrías que incluir el atributo `onclick="createParagraph()"` en cada botón al que quieras que se le aplique el JavaScript.
 

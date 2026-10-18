@@ -8,11 +8,11 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`pattern`** de l'interface {{DOMxRef("HTMLInputElement")}} représente une [expression régulière](/fr/docs/Web/JavaScript/Guide/Regular_expressions) à laquelle une valeur non nulle de {{HTMLElement("input")}} doit correspondre. Elle reflète l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Attributes/pattern) de l'élément HTML {{HTMLElement("input")}}.
+La propriété **`pattern`** de l'interface {{DOMxRef("HTMLInputElement")}} représente une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_expressions) à laquelle une valeur non nulle de {{HTMLElement("input")}} doit correspondre. Elle reflète l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Attributes/pattern) de l'élément HTML {{HTMLElement("input")}}.
 
-La propriété `pattern` est valide pour les types `text`, `search`, `url`, `tel`, `email` et `password`. Elle définit une expression régulière que la propriété {{DOMxRef("HTMLInputElement.value", "value")}} de l'élément de saisie doit respecter pour que la valeur soit acceptée lors de la [validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation).
+La propriété `pattern` est valide pour les types `text`, `search`, `url`, `tel`, `email` et `password`. Elle définit une expression rationnelle que la propriété {{DOMxRef("HTMLInputElement.value", "value")}} de l'élément de saisie doit respecter pour que la valeur soit acceptée lors de la [validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation).
 
-Si une valeur non nulle ne respecte pas les contraintes définies par la valeur de `pattern`, la propriété en lecture seule {{DOMxRef('ValidityState.patternMismatch','patternMismatch')}} de l'objet {{DOMxRef('ValidityState')}} sera vraie.
+Si une valeur non nulle ne respecte pas les contraintes définies par la valeur de `pattern`, la propriété en lecture seule {{DOMxRef("ValidityState.patternMismatch","patternMismatch")}} de l'objet {{DOMxRef("ValidityState")}} est vraie.
 
 ## Valeur
 

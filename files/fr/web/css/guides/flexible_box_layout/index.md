@@ -3,7 +3,7 @@ title: Disposition des boîtes flexibles CSS
 short-title: Disposition des boîtes flexibles
 slug: Web/CSS/Guides/Flexible_box_layout
 l10n:
-  sourceCommit: ae836b44d9faa0e9f581631ed1dcccd2a502b618
+  sourceCommit: 04dfe418f2942ae739d41592c22fafa3679fc03c
 ---
 
 Le module **de disposition des boîtes flexibles CSS** définit un modèle de boîte CSS optimisé pour la conception d'interfaces utilisateur et la disposition des éléments dans une seule dimension. Dans le modèle de disposition flexible, les éléments enfants d'un conteneur flexible peuvent être disposés dans n'importe quelle direction et peuvent «&nbsp;s'adapter&nbsp;» en taille, soit en s'étendant pour remplir l'espace inutilisé, soit en se rétrécissant pour éviter de déborder de leur élément parent. L'alignement horizontal et vertical des éléments enfants peut être facilement modifié.
@@ -87,6 +87,8 @@ body {
   - : Apprenez à utiliser la mise en page en boîtes flexibles pour créer des mises en page web.
 - [Alignement des boîtes dans les boîtes flexibles](/fr/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
   - : Détaille les fonctionnalités de [l'alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment) qui sont spécifiques aux boîtes flexibles.
+- [Définir les espaces CSS](/fr/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+  - : Comprendre et définir les espaces dans les mises en page en grille, en boîtes flexibles et en colonnes multiples, y compris la manière dont les valeurs en pourcentage sont résolues.
 
 ## Concepts associés
 
@@ -107,8 +109,16 @@ Le module [d'alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment)
 Le module [des espaces CSS](/fr/docs/Web/CSS/Guides/Gaps)
 
 - {{CSSxRef("column-gap")}}
+- {{CSSxRef("column-rule")}}
 - {{CSSxRef("gap")}}
 - {{CSSxRef("row-gap")}}
+- {{CSSxRef("row-rule")}}
+- {{CSSxRef("rule")}}
+- {{CSSxRef("rule-color")}}
+- {{CSSxRef("rule-inset")}}
+- {{CSSxRef("rule-overlap")}}
+- {{CSSxRef("rule-style")}}
+- {{CSSxRef("rule-width")}}
 
 Le module [de dimensionnement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_sizing)
 

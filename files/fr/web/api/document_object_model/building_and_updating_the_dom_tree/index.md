@@ -1,17 +1,16 @@
 ---
 title: Construire et mettre à jour l'arbre DOM
 slug: Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
-original_slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 l10n:
-  sourceCommit: 277a8954951c900ef60a5175503976284c1d328d
+  sourceCommit: abc914f085fb9913c41c4cd4453da432e9d4e761
 ---
 
 {{DefaultAPISidebar("DOM")}}
 
-Cet article est un aperçu des méthodes fondamentales et puissantes du DOM niveau 1, et comment les utiliser en JavaScript. Vous apprendrez à créer, lire, contrôler et supprimer dynamiquement des éléments HTML. Les méthodes DOM présentées ici ne sont pas spécifiques à HTML&nbsp;: elles s'appliquent aussi à XML. Les démonstrations fournies fonctionnent dans tout navigateur moderne.
+Cet article est un aperçu des méthodes fondamentales et puissantes du DOM niveau 1, et comment les utiliser en JavaScript. Vous apprenez à créer, lire, contrôler et supprimer dynamiquement des éléments HTML. Les méthodes DOM présentées ici ne sont pas spécifiques à HTML&nbsp;: elles s'appliquent aussi à XML. Les démonstrations fournies fonctionnent dans tout navigateur moderne.
 
 > [!NOTE]
-> Les méthodes DOM présentées ici font partie de la spécification Document Object Model (Core) niveau 1. Le DOM niveau 1 inclut à la fois des méthodes d'accès et de manipulation génériques (DOM 1 Core) ainsi que des méthodes spécifiques aux documents HTML (DOM 1 HTML).
+> Ce guide montre à la fois les méthodes DOM génériques et les méthodes spécifiques aux éléments HTML.
 
 ## Créer dynamiquement un tableau HTML
 
@@ -78,7 +77,7 @@ td {
 
 #### Résultat
 
-{{ EmbedLiveSample('exemple') }}
+{{EmbedLiveSample("exemple")}}
 
 ### Explications
 
@@ -122,7 +121,7 @@ Une fois tous les éléments créés, on les ajoute à leur parent dans l'ordre 
    document.body.appendChild(tbl);
    ```
 
-Retenez cette technique&nbsp;: vous l'utiliserez souvent avec le DOM du W3C. On crée les éléments du haut vers le bas, puis on attache les enfants aux parents du bas vers le haut.
+Retenez cette technique&nbsp;: vous l'utilisez souvent avec le DOM du W3C. On crée les éléments du haut vers le bas, puis on attache les enfants aux parents du bas vers le haut.
 
 Voici le balisage HTML généré par le code JavaScript&nbsp;:
 
@@ -145,7 +144,7 @@ Voici l'arbre d'objets DOM généré pour l'élément `<table>` et ses enfants&n
 
 ![Comment un arbre d'objets DOM est généré à partir de l'élément principal et de ses enfants](sample1-tabledom.jpg)
 
-Vous pouvez construire ce tableau et ses éléments internes avec seulement quelques méthodes DOM. Gardez à l'esprit le modèle arborescente pour les structures que vous souhaitez créer&nbsp;: cela facilitera l'écriture du code. Dans l'arbre du `<table>` de la figure, l'élément `<table>` a un enfant&nbsp;: l'élément `<tbody>`. `<tbody>` a deux enfants. Chaque enfant `<tr>` de `<tbody>` a deux enfants `<td>`. Enfin, chaque `<td>` a un enfant&nbsp;: un nœud texte.
+Vous pouvez construire ce tableau et ses éléments internes avec seulement quelques méthodes DOM. Gardez à l'esprit le modèle arborescente pour les structures que vous souhaitez créer&nbsp;: cela facilite l'écriture du code. Dans l'arbre du `<table>` de la figure, l'élément `<table>` a un enfant&nbsp;: l'élément `<tbody>`. `<tbody>` a deux enfants. Chaque enfant `<tr>` de `<tbody>` a deux enfants `<td>`. Enfin, chaque `<td>` a un enfant&nbsp;: un nœud texte.
 
 ## Définir la couleur de fond d'un paragraphe
 
@@ -173,7 +172,7 @@ function setBackground() {
   // récupère le deuxième paragraphe de la liste
   const secondParagraph = paragraphs[1];
 
-  // applique le style en ligne
+  // applique le style en incise
   secondParagraph.style.background = "red";
 }
 
@@ -182,7 +181,7 @@ document.querySelector("input").addEventListener("click", setBackground);
 
 #### Résultat
 
-{{ EmbedLiveSample('exemple_2') }}
+{{EmbedLiveSample("exemple_2")}}
 
 ### Explications
 
@@ -202,7 +201,7 @@ Voici les étapes réalisées&nbsp;:
    const secondParagraph = paragraphs[1];
    ```
 
-   ![Un élément paragraphe est ajouté comme nouveau frère à un paragraphe existant dans un arbre DOM](sample2a2.jpg)
+   ![Un élément paragraphe est ajouté comme nouveau voisin à un paragraphe existant dans un arbre DOM](sample2a2.jpg)
 
 3. Enfin, on définit la couleur de fond sur rouge avec la propriété {{DOMxRef("HTMLElement.style", "style")}} de l'objet {{DOMxRef("HTMLParagraphElement", "paragraphe")}}&nbsp;:
 
@@ -228,9 +227,9 @@ En appelant `secondParagraph.appendChild(node_element)`, vous faites de l'élém
 secondParagraph.appendChild(myTextNode);
 ```
 
-Après avoir testé cet exemple, vous remarquerez que les mots bonjour et monde sont collés&nbsp;: bonjourle monde. Visuellement, dans la page HTML, il semble qu'il n'y ait qu'un seul nœud texte, mais dans le modèle de document, il y a bien deux nœuds. Le second est un nouveau nœud de type `TEXT_NODE`, et c'est le deuxième enfant du deuxième `<p>`. La figure suivante montre le nœud texte nouvellement créé dans l'arbre du document.
+Après avoir testé cet exemple, vous remarquez que les mots bonjour et monde sont collés&nbsp;: bonjourle monde. Visuellement, dans la page HTML, il semble qu'il n'y ait qu'un seul nœud texte, mais dans le modèle de document, il y a bien deux nœuds. Le second est un nouveau nœud de type `TEXT_NODE`, et c'est le deuxième enfant du deuxième `<p>`. La figure suivante montre le nœud texte nouvellement créé dans l'arbre du document.
 
-![Les nœuds texte d'un élément paragraphe comme frères dans l'arbre DOM.](sample2b2.jpg)
+![Les nœuds texte d'un élément paragraphe comme voisins dans l'arbre DOM.](sample2b2.jpg)
 
 > [!NOTE]
 > `createTextNode()` et `appendChild()` sont un moyen simple d'inclure un espace entre les mots _bonjour_ et _le monde_. Notez aussi que la méthode `appendChild` ajoute l'enfant après le dernier enfant, comme le mot _monde_ ajouté après _bonjour_. Si vous souhaitez insérer un nœud texte entre _bonjour_ et _le monde_, utilisez `insertBefore` au lieu de `appendChild`.
@@ -326,7 +325,7 @@ myTable.setAttribute("border", "2");
 
 Cet exemple introduit deux nouveaux attributs DOM. D'abord, il utilise l'attribut `childNodes` pour obtenir la liste des nœuds enfants de myCell. La liste `childNodes` inclut tous les nœuds enfants, quel que soit leur nom ou type. Comme `getElementsByTagName()`, elle retourne une liste de nœuds.
 
-Les différences sont&nbsp;: (a) `getElementsByTagName()` ne retourne que les éléments du nom de balise spécifié&nbsp;; (b) `childNodes` inclut tous les descendants à tous les niveaux, pas seulement les enfants immédiats.
+Les différences sont&nbsp;: (a) `getElementsByTagName()` ne retourne que les éléments du nom de balise défini&nbsp;; (b) `childNodes` inclut tous les descendants à tous les niveaux, pas seulement les enfants immédiats.
 
 Une fois la liste obtenue, utilisez `[x]` pour récupérer l'enfant souhaité. Cet exemple stocke dans `myCellText` le nœud texte de la deuxième cellule de la deuxième ligne du tableau.
 

@@ -85,7 +85,7 @@ La IU de la entrada generalmente varía entre navegadores; véase [Compatibiidad
 
 ## Valor
 
-Una {{jsxref("String")}} representando la fecha introducida en la entrada. La fecha es formateada siguiendo el ISO8601, descrito en [Formato válido de una fecha en formato de texto](/es/docs/Web/HTML/Date_and_time_formats#formato_válido_de_una_fecha_en_formato_de_texto).
+Una {{jsxref("String")}} representando la fecha introducida en la entrada. La fecha es formateada siguiendo el ISO8601, descrito en [Formato válido de una fecha en formato de texto](/es/docs/Web/HTML/Guides/Date_and_time_formats#formato_válido_de_una_fecha_en_formato_de_texto).
 
 Puedes establecer un valor por defecto para la entrada introduciendo una fecha en el atributo [`value`](/es/docs/Web/HTML/Reference/Elements/input#value) de la siguiente forma:
 
@@ -519,5 +519,5 @@ daySelect.onchange = function () {
 
 - Los elementos {{HTMLElement("input")}} generícos y la interfaz usada para manipularlos, {{domxref("HTMLInputElement")}}
 - [Tutorial seleccionador de fechas](/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
-- [Formatos de fecha y tiempo usados en HTML](/es/docs/Web/HTML/Date_and_time_formats)
+- [Formatos de fecha y tiempo usados en HTML](/es/docs/Web/HTML/Guides/Date_and_time_formats)
 - [Compatibilidad con las propiedades CSS](/es/docs/Learn_web_development/Extensions/Forms)

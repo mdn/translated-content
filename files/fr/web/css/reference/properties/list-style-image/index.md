@@ -3,7 +3,7 @@ title: Propriété CSS `list-style-image`
 short-title: list-style-image
 slug: Web/CSS/Reference/Properties/list-style-image
 l10n:
-  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`list-style-image`** définit une image à utiliser comme marqueur d'élément de liste.

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSS Custom Highlight API")}}
 
-**`entries()`** は {{domxref("Highlight")}} インターフェイスのメソッドで、新しい[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)オブジェクトを返します。これは、この `Highlight` オブジェクト内の各 {{domxref("Range")}} オブジェクトを」配列 `[range, range]` の形で、挿入順に反復処理します。
+**`entries()`** は {{domxref("Highlight")}} インターフェイスのメソッドで、新しい[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)オブジェクトを返します。これは、この `Highlight` オブジェクト内の各 {{domxref("Range")}} オブジェクトを配列 `[range, range]` の形で、挿入順に反復処理します。
 
 `Highlight` は {{jsxref("Set")}} 風オブジェクトですので、これは {{jsxref("Set.entries()")}} を使うのと似ています。
 

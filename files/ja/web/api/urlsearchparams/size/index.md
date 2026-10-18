@@ -33,7 +33,7 @@ searchParams.size; // 4
 
 ### 検索引数が存在するかどうかをチェック
 
-size` プロパティは、検索引数があるかどうかをチェックするのに便利です。
+`size` プロパティは、検索引数があるかどうかをチェックするのに便利です。
 
 ```js
 const url = new URL("https://example.com?foo=1&bar=2");

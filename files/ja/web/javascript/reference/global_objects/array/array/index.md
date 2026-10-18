@@ -35,7 +35,7 @@ Array(arrayLength)
   - : `Array` コンストラクターに渡された唯一の引数が 0 から 2<sup>32</sup>-1 の間（両端を含む）の整数であった場合は、新しい JavaScript の配列を返し、その `length` プロパティがその値になります。
 
   > [!NOTE]
-  > これは `arrayLength` 個の空のスロットを持つ配列であり、実際に `undefined` の値が入ったスロットではありません。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)を参照してください）。
+  > これは `arrayLength` 個の空のスロットを持つ配列であり、実際に `undefined` の値が入ったスロットではありません。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)を参照してください。
 
 ### 例外
 

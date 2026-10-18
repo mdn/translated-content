@@ -5,7 +5,7 @@ slug: Web/API/Plugin
 
 {{ApiRef("HTML DOM")}}
 
-Plugin` インターフェイスは、 ブラウザーのプラグインに関する情報を提供します。
+`Plugin` インターフェイスは、 ブラウザーのプラグインに関する情報を提供します。
 
 > [!NOTE]
 > 最新のブラウザーでは、 `Plugin` オブジェクトのプロパティを列挙することができなくなりました。
@@ -18,8 +18,6 @@ Plugin` インターフェイスは、 ブラウザーのプラグインに関�
   - : プラグインのファイルのファイル名。
 - {{domxref("Plugin.name")}} {{readonlyinline}}
   - : プラグインの名称。
-- {{domxref("Plugin.version")}} {{readonlyinline}}
-  - : プラグインのバージョン番号文字列。
 
 ## メソッド
 

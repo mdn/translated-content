@@ -2,7 +2,7 @@
 title: Estándares web
 slug: Learn_web_development/Getting_started/Web_standards
 l10n:
-  sourceCommit: 90e419a0ec9741f35bc564beb90e74210bc4c97a
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
 {{LearnSidebar}}

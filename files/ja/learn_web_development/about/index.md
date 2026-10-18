@@ -79,7 +79,7 @@ _フロントエンド開発者_ という言葉は曖昧で、人によって�
 
 - バックエンドの言語/プラットフォームの網羅的な解説。HTTP やサーバーサイド技術の仕組みを理解することはすべてのウェブ開発者にとって有用であるため、[Node.js (Express)](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) および [Python (Django)](/ja/docs/Learn_web_development/Extensions/Server-side/Django) については簡単に紹介しています。しかし、複数のプラットフォームにわたる網羅的な解説は提供していません。これは MDN の対象範囲外です。
 - 従来型のリレーショナルデータベース (例: [MySQL](https://dev.mysql.com/doc/)、[Postgres](https://www.postgresql.org/)) や、その他のサーバーサイドのデータストア (例: [MongoDB](https://www.mongodb.com/)、[Google Cloud Datastore](https://cloud.google.com/products/datastore))などのクラウドデータベースの詳細な解説。[サーバーサイドウェブサイトプログラミング](/ja/docs/Learn_web_development/Extensions/Server-side) モジュールにおいて、これらの技術について簡単な紹介を行っています。
-- クラウドプラットフォーム（例: [Amazon AWS](https://aws.amazon.com/)、[Google Cloud Platform](https://console.cloud.google.com/)、[Microsoft Azure](https://azure.microsoft.com/) やコンテナ化ツール (例: [Kubernetes](https://kubernetes.io/)、[Docker](https://www.docker.com/)) など、プロビジョニングや自動化に関する DevOps の詳細なトピックは扱いません。ただし、GitHub や自動テストツールなど、DevOps 分野に含まれるツールの一部については軽く触れます。これらはフロントエンド開発者の領域とも明確に重なるためです。
+- クラウドプラットフォーム (例: [Amazon AWS](https://aws.amazon.com/)、[Google Cloud Platform](https://console.cloud.google.com/)、[Microsoft Azure](https://azure.microsoft.com/)) やコンテナ化ツール (例: [Kubernetes](https://kubernetes.io/)、[Docker](https://www.docker.com/)) など、プロビジョニングや自動化に関する DevOps の詳細なトピックは扱いません。ただし、GitHub や自動テストツールなど、DevOps 分野に含まれるツールの一部については軽く触れます。これらはフロントエンド開発者の領域とも明確に重なるためです。
 - [開発者のためのデザイン](/ja/docs/Learn_web_development/Core/Design_for_developers)で説明されている基本的な知識を超えるグラフィックデザイン。
 - プロダクトマネジメントやプログラムマネジメントなどの役割に関連するスキル (例: 組織化、調査、計画)。
 

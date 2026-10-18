@@ -3,7 +3,7 @@ title: Propriété CSS `animation-duration`
 short-title: animation-duration
 slug: Web/CSS/Reference/Properties/animation-duration
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-duration`** définit la durée nécessaire à une animation pour effectuer un cycle complet.
@@ -107,6 +107,8 @@ animation-duration: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme une liste séparée par des virgules des valeurs suivantes&nbsp;:
+
 - `auto`
   - : Pour les animations basées sur le temps, `auto` est équivalent à une valeur de `0s` (voir ci-dessous). Pour les [animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations), `auto` remplit toute la chronologie avec l'animation.
 
@@ -114,9 +116,9 @@ animation-duration: unset;
   - : Le temps qu'une animation met pour effectuer un cycle complet. Cette valeur peut être indiquée en secondes (`s`) ou en millisecondes (`ms`). La valeur doit être positive ou nulle et l'unité est obligatoire.
 
     Si aucune valeur n'est fournie, la valeur par défaut `0s` est utilisée, auquel cas l'animation s'exécute tout de même (les évènements {{DOMxRef("Element/animationstart_event", "animationstart")}} et {{DOMxRef("Element/animationend_event", "animationend")}} sont déclenchés). Le fait que l'animation soit visible ou non lorsque la durée est `0s` dépend de la valeur de {{CSSxRef("animation-fill-mode")}}, comme expliqué ci-dessous&nbsp;:
-    - Si `animation-fill-mode` est défini sur `backwards` ou `both`, la première image de l'animation telle que définie par `animation-direction` sera affichée pendant le compte à rebours de {{CSSxRef("animation-delay")}}.
-    - Si `animation-fill-mode` est défini sur `forwards` ou `both`, la dernière image de l'animation sera affichée, telle que définie par `animation-direction`, après expiration du `animation-delay`.
-    - Si `animation-fill-mode` est défini sur `none`, l'animation n'aura aucun effet visible.
+    - Si `animation-fill-mode` est défini sur `backwards` ou `both`, la première image de l'animation telle que définie par `animation-direction` est affichée pendant le compte à rebours de {{CSSxRef("animation-delay")}}.
+    - Si `animation-fill-mode` est défini sur `forwards` ou `both`, la dernière image de l'animation est affichée, telle que définie par `animation-direction`, après expiration du `animation-delay`.
+    - Si `animation-fill-mode` est défini sur `none`, l'animation n'a aucun effet visible.
 
 > [!NOTE]
 > Les valeurs négatives sont considérées comme invalides. Certaines implémentations, préfixées, considèrent parfois que ces valeurs sont synonymes de `0s`.
@@ -125,7 +127,7 @@ animation-duration: unset;
 > Lorsque vous indiquez plusieurs valeurs séparées par des virgules sur une propriété `animation-*`, elles sont appliquées aux animations dans l'ordre d'apparition des {{CSSxRef("animation-name")}}. Si le nombre d'animations et de valeurs de propriété `animation-*` ne correspond pas, voir [Définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
 
 > [!NOTE]
-> Lors de la création d'[animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations), définir une valeur `animation-duration` en secondes ou millisecondes n'a pas vraiment de sens. Lors des tests, cela ne semblait avoir aucun effet sur les animations de progression de défilement, tandis que sur les animations de progression de vue, cela semblait rapprocher l'animation de la fin de la chronologie. Cependant, Firefox exige qu'une valeur `animation-duration` soit définie pour appliquer correctement l'animation. Il est donc conseillé de définir `animation-duration` à `1ms` afin que les animations fonctionnent dans Firefox, sans trop altérer l'effet.
+> Lors de la création [d'animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations), définir une valeur `animation-duration` en secondes ou millisecondes n'a pas vraiment de sens. Lors des tests, cela ne semble avoir aucun effet sur les animations de progression de défilement, tandis que sur les animations de progression de vue, cela semble rapprocher l'animation de la fin de la chronologie. Cependant, Firefox exige qu'une valeur `animation-duration` soit définie pour appliquer correctement l'animation. Il est donc conseillé de définir `animation-duration` à `1ms` afin que les animations fonctionnent dans Firefox, sans trop altérer l'effet.
 
 ## Définition formelle
 

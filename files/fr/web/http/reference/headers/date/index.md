@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} et {{Glossary("response header", "de réponse")}} HTTP **`Date`** contient la date et l'heure auxquelles le message a été créé.
+{{Glossary("request header", "L'en-tête de requête")}} et {{Glossary("response header", "de réponse")}} HTTP **`Date`** contient la date et l'heure auxquelles le message a été créé.
 
 <table class="properties">
   <tbody>

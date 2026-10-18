@@ -1,8 +1,9 @@
 ---
-title: flex-shrink
+title: "`flex-shrink` プロパティ (CSS)"
+short-title: flex-shrink
 slug: Web/CSS/Reference/Properties/flex-shrink
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: efbef0da1dbe29be125eb7db0b831a4e4bd9220d
 ---
 
 **`flex-shrink`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムのフレックス縮小係数を設定します。すべてのフレックスアイテムの寸法がフレックスコンテナーより大きい場合、フレックスアイテムはそれに合わせるため、 `flex-shrink` 値に従って[収縮します](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#flex-shrink_プロパティ)。それぞれのフレックス行の[負の余白](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#正と負の余白)は、その行の `flex-shrink` 値が `0` より大きいフレックスアイテム間で分配されます。
@@ -65,6 +66,13 @@ flex-shrink: revert-layer;
 flex-shrink: unset;
 ```
 
+### 値
+
+このプロパティは次の値で指定します。
+
+- `<number>`
+  - : {{cssxref("&lt;number&gt;")}} を参照してください。負の値は無効です。デフォルト値は 1 です。
+
 ## 解説
 
 `flex-shrink` プロパティはフレックス縮小係数を指定します。これは、フレックスコンテナー内でフレックスアイテムに負の余白が配分されたときに、そのフレックスアイテムが他のフレックスアイテムに対して相対的にどれだけ縮小するかを決定します。
@@ -74,13 +82,6 @@ flex-shrink: unset;
 `flex-grow` プロパティは、各アイテムのフレックス伸長係数に比例して、利用できる正の余白を指定するプロパティで、 `flex-grow` プロパティの値のみを考慮します。 `flex-shrink` プロパティは、ボックスがあふれることなくコンテナー内で収まるように、負の余白を除去することを管理します。余白の除去は余白を追加するよりも少し複雑です。フレックス縮小係数はフレックス基本サイズに掛け合わされ、アイテムがどれだけ縮小できるかに比例して負の空間を分配します。これにより、大きなアイテムが顕著に縮小する前に、小さなアイテムが `0px` まで縮小してしまうことを防ぎます。
 
 一般的に、 `flex-shrink` は {{cssxref("flex-grow")}} や {{cssxref("flex-basis")}} プロパティと一緒に使用します。 `flex` 一括指定では、フレックス縮小係数は常に 2 つ目の `<number>` になります。一括指定に 1 つの数値しか記載されていない場合、その値は `flex-grow` 値であると想定されます。
-
-### 値
-
-`flex-shrink` プロパティは単一の `<number>` で指定します。
-
-- `<number>`
-  - : {{cssxref("&lt;number&gt;")}} を参照してください。負の値は無効です。既定値は 1 です。
 
 ## 公式定義
 
@@ -110,7 +111,7 @@ flex-shrink: unset;
 
 #### CSS
 
-各フレックスアイテムの {{cssxref("width")}} は `200px` です。 {{cssxref("flex-basis")}} プロパティは既定で `auto` なので、各アイテムの flex-basis は `200px` になります。これにより、フレックスアイテムの合計幅は `1000px` となり、コンテナー内で使用するサイズの 2 倍になります。すべてのフレックスアイテムは縮小可能で、 `flex-shrink` 値が `0` より大きく設定しています。 最後の 2 つのアイテムはより縮小されるように `flex-shrink` 値が大きく設定されています。
+各フレックスアイテムの {{cssxref("width")}} は `200px` です。 {{cssxref("flex-basis")}} プロパティはデフォルトで `auto` なので、各アイテムの flex-basis は `200px` になります。これにより、フレックスアイテムの合計幅は `1000px` となり、コンテナー内で使用するサイズの 2 倍になります。すべてのフレックスアイテムは縮小可能で、 `flex-shrink` 値が `0` より大きく設定しています。 最後の 2 つのアイテムはより縮小されるように `flex-shrink` 値が大きく設定されています。
 
 ```css live-sample___setting_flex_item_shrink_factor
 #content {
@@ -168,7 +169,7 @@ div {
 
 {{EmbedLiveSample('Setting_flex_item_shrink_factor', 500, 100)}}
 
-フレックスアイテムは縮小できるので、コンテナー内であふれることはありません。 `500px` の負の余白は、 `flex-shrink` の値に基づいて 5 つのアイテムに分配されます。最初の 3 つのアイテムには `flex-shrink: 1` が設定されています。 D は `flex-shrink: 1.5`、 E は `flex-shrink: 2` を設定しています。 D と E の最終的な幅は他よりも小さくなり、 E は D より小さくなります。
+フレックスアイテムは縮小可能であるため、コンテナーからはみ出しません。`500px` の負の余白は、各アイテムの `flex-shrink` 値に基づいて 5 つのアイテムに分配されます。5 つのアイテムの縮小値の合計は `1 + 1 + 1 + 1.5 + 2` = `6.5` です。その結果、`flex-shrink: 1` のアイテムの幅は `1/6.5 * 500px` = `76.92px` だけ縮小され、`flex-shrink: 1.5` が設定されたアイテムの幅は `1.5/6.5 * 500px` = `115.38px` だけ縮小され、`flex-shrink: 2` を付けているアイテムの幅は `2/6.5 * 500px` = `153.85px` だけ縮小されます。
 
 ## 仕様書
 

@@ -27,7 +27,7 @@ class ExampleScene extends Phaser.Scene {
 
 ## 定义新的文本标签
 
-文本的定义方式与我们在[得分](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)课程中所做的类似。在 `create()` 方法内现有的 `scoreText` 定义下方添加以下代码：
+文本的定义方式与我们在[得分](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win)课程中所做的类似。在 `create()` 方法内现有的 `scoreText` 定义下方添加以下代码：
 
 ```js
 this.livesText = this.add.text(this.scale.width - 5, 5, `生命：${this.lives}`, {

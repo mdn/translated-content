@@ -3,7 +3,7 @@ title: "Element : propriété innerHTML"
 short-title: innerHTML
 slug: Web/API/Element/innerHTML
 l10n:
-  sourceCommit: ad01ed9218be15d7aeaa0666ec0bc2a2d17f3574
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
 {{APIRef("DOM")}}
@@ -40,7 +40,7 @@ Lorsqu'elle est définie sur la valeur `null`, cette valeur `null` est convertie
 `innerHTML` obtient une sérialisation des éléments DOM enfants imbriqués dans l'élément, ou définit du HTML ou XML qui doit être analysé pour remplacer l'arbre DOM à l'intérieur de l'élément.
 
 Notez que certains navigateurs sérialisent les caractères `<` et `>` en tant que `&lt;` et `&gt;` lorsqu'ils apparaissent dans les valeurs d'attribut (voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs)).
-Ceci est pour prévenir une vulnérabilité de sécurité potentielle ([mutation XSS <sup>(angl.)</sup>](https://www.securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass.html)) dans laquelle un·e attaquant·e peut créer une entrée qui contourne une [fonction d'assainissement](/fr/docs/Web/Security/Attacks/XSS#assainissement), permettant une attaque de type script inter-sites (XSS).
+Ceci est pour prévenir une vulnérabilité de sécurité potentielle ([mutation XSS <sup>(angl.)</sup>](https://securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass.html)) dans laquelle un·e attaquant·e peut créer une entrée qui contourne une [fonction d'assainissement](/fr/docs/Web/Security/Attacks/XSS#assainissement), permettant une attaque de type script inter-sites (XSS).
 
 ### Considérations sur le DOM d'ombre
 

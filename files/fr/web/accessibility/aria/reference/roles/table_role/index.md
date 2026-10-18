@@ -3,10 +3,10 @@ title: "ARIA : rôle table"
 short-title: table
 slug: Web/Accessibility/ARIA/Reference/Roles/table_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 705109e85b6c5a9142260c58a617ef295b3b1316
 ---
 
-Le rôle `table` identifie l'élément comme une structure de tableau non interactive contenant des données organisées en lignes et colonnes, similaire à l'élément HTML natif {{HTMLElement("table")}}.
+Le rôle `table` identifie l'élément comme une structure de tableau non interactive contenant des données organisées en rangées et colonnes, similaire à l'élément HTML natif {{HTMLElement("table")}}.
 
 ```html
 <div
@@ -53,7 +53,7 @@ Un élément avec `role="table"` est une structure tabulaire statique avec des l
 
 Pour créer un tableau ARIA, ajoutez `role="table"` à l'élément conteneur. À l'intérieur de ce conteneur, chaque ligne possède le rôle `row` et contient des cellules enfants. Chaque cellule a le rôle `columnheader`, `rowheader` ou `cell`. Les lignes peuvent être enfants du tableau ou d'un `rowgroup`.
 
-La légende du tableau peut être définie avec [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) ou [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). Tous les autres éléments sémantiques de tableau, comme {{HTMLElement("tbody")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}, {{HTMLElement("th")}} et {{HTMLElement("td")}}, doivent être ajoutés avec les rôles associés&nbsp;: `rowgroup`, `row`, `columnheader` et `cell`.
+Un nom accessible est fortement recommandé pour le rôle `table`, bien qu'il ne soit pas requis par ARIA. Fournissez-le soit par une étiquette visible référencée par [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby), soit par une étiquette définie par [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). Si une légende visible est présente, utilisez `aria-labelledby` pour y faire référence. Tous les autres éléments sémantiques de tableau, comme {{HTMLElement("tbody")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}, {{HTMLElement("th")}} et {{HTMLElement("td")}}, doivent être ajoutés avec les rôles associés&nbsp;: `rowgroup`, `row`, `columnheader` et `cell`.
 
 Si le tableau contient des colonnes ou des lignes triables, l'attribut [`aria-sort`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) doit être ajouté sur la cellule d'en-tête (et non sur le tableau lui-même). Si des lignes ou colonnes sont masquées, il faut inclure [`aria-colcount`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount) ou [`aria-rowcount`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount) pour indiquer le nombre total de colonnes ou de lignes, ainsi que [`aria-colindex`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) ou [`aria-rowindex`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex) sur chaque cellule. [`aria-colindex`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) ou [`aria-rowindex`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex) est défini sur la position de la cellule dans la ligne ou la colonne. Si le tableau inclut des cellules qui s'étendent sur plusieurs lignes ou colonnes, il faut aussi inclure [`aria-rowspan`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan) ou [`aria-colspan`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan). Il est bien plus simple d'utiliser l'élément {{HTMLElement("table")}} avec tous les éléments et attributs sémantiques associés, qui sont pris en charge par toutes les technologies d'assistance.
 

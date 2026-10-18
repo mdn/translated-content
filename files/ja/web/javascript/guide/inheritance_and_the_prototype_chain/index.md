@@ -321,7 +321,7 @@ Derived.prototype = Object.create(Base.prototype);
 
 その裏側で何が起こっているのか、もう少し詳しく見てみましょう。
 
-JavaScript では、前述したように、関数はプロパティを持つことができます。すべての関数は `prototype` という名前の特別なプロパティがあります。以下のコードは独立したものであることに注意してください（このウェブページには、以下のコード以外に他の JavaScript は存在しないと考えてよいでしょう）。最高の学習体験をするためには、コンソールを開き、「コンソール」タブに移動して、以下の JavaScript コードをコピー＆ペーストし、 Enter/Return キーを押して実行することを強くお勧めします。（コンソールは、ほとんどのウェブブラウザーの開発者ツールに記載されています。詳しい情報は [Firefox 開発者ツール](https://firefox-source-docs.mozilla.org/devtools-user/index.html)、[Chrome 開発者ツール](https://developer.chrome.com/docs/devtools/)、[Edge 開発者ツール](https://learn.microsoft.com/ja/archive/microsoft-edge/legacy/developer/)を参照してください。
+JavaScript では、前述したように、関数はプロパティを持つことができます。すべての関数は `prototype` という名前の特別なプロパティがあります。以下のコードは独立したものであることに注意してください（このウェブページには、以下のコード以外に他の JavaScript は存在しないと考えてよいでしょう）。最高の学習体験をするためには、コンソールを開き、「コンソール」タブに移動して、以下の JavaScript コードをコピー＆ペーストし、 Enter/Return キーを押して実行することを強くお勧めします。（コンソールは、ほとんどのウェブブラウザーの開発者ツールに記載されています。詳しい情報は [Firefox 開発者ツール](https://firefox-source-docs.mozilla.org/devtools-user/index.html)、[Chrome 開発者ツール](https://developer.chrome.com/docs/devtools/)、[Edge 開発者ツール](https://learn.microsoft.com/ja/archive/microsoft-edge/legacy/developer/)を参照してください。）
 
 ```js
 function doSomething() {}

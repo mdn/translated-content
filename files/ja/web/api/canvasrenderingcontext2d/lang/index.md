@@ -14,7 +14,7 @@ l10n:
 
 `lang` プロパティは、以下の文字列値のいずれかを取ることができます。
 
-- キャンバスのコンテストの言語を表す{{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}。
+- キャンバスのコンテキストの言語を表す{{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}。
 - 文字列 `inherit`。 この場合、言語は元の {{HTMLElement("canvas")}} 要素、または明示的に `lang` が設定された最も近い利用できる祖先要素の [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性から継承されます。
 - 空文字列 (`""`)。このキャンバスコンテキストに言語がないことを指定します。
 
