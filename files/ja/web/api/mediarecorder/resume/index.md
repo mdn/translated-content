@@ -10,7 +10,7 @@ l10n:
 
 **`resume()`** は {{domxref("MediaRecorder")}} インターフェイスのメソッドで、以前に一時停止していたメディアの記録を再開するために使用します。
 
-{{domxref("MediaRecorder.state")}} がすでに "recording" である場合、`resume()`  の呼び出しは効果がありません。
+{{domxref("MediaRecorder.state")}} がすでに "recording" である場合、`resume()` の呼び出しは効果がありません。
 
 `resume()` メソッドを呼び出すと、ブラウザーは次の手順を実行するタスクをキューに入れます。
 
