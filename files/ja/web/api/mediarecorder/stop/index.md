@@ -1,13 +1,14 @@
 ---
-title: MediaRecorder.stop()
+title: "MediaRecorder: stop() メソッド"
+short-title: stop()
 slug: Web/API/MediaRecorder/stop
 l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+  sourceCommit: 0ca31f3b72e94b4b107c45ac6216071e486cac0a
 ---
 
 {{APIRef("MediaStream Recording")}}
 
-**`MediaRecorder.stop()`** メソッド（[MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は、メディアキャプチャを停止するために使用します。
+**`stop()`** は {{domxref("MediaRecorder")}} インターフェイスのメソッドで、メディアキャプチャを停止するために使用します。
 
 `stop()` メソッドを呼び出すと、 UA は次の手順を実行するタスクをキューに入れます。
 
@@ -30,9 +31,10 @@ stop()
 
 なし ({{jsxref("undefined")}})。
 
-### エラー
+### 例外
 
-`MediaRecorder` オブジェクトの {{domxref("MediaRecorder.state")}} が "inactive" のときに `stop()` メソッドが呼び出されると、`InvalidState` エラーが発生します — メディアキャプチャが既に停止している場合は停止しても意味がありません。
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : `MediaRecorder` が現在 `"inactive"` である場合に発生します。`MediaRecorder` がアクティブでない場合、収録を停止することはできません。
 
 ## 例
 
@@ -54,6 +56,6 @@ stop.onclick = () => {
 ## 関連情報
 
 - [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[GitHub のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone)）。（英語）
-- [simpl.info の MediaStream 収録のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
+- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://github.com/chrisdavidmills) 作（[GitHub のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone)）。<sup>(英語)</sup>
+- [simpl.info の MediaStream 収録のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://github.com/samdutton) 作。<sup>(英語)</sup>
 - {{domxref("Navigator.getUserMedia")}}
