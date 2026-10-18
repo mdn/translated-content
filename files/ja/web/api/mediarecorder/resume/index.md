@@ -1,13 +1,16 @@
 ---
-title: MediaRecorder.resume()
+title: "MediaRecorder: resume() メソッド"
+short-title: resume()
 slug: Web/API/MediaRecorder/resume
 l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+  sourceCommit: 78039f57d12515cd2f97af490a5ec736d228c431
 ---
 
 {{APIRef("MediaStream Recording")}}
 
-**`MediaRecorder.resume()`** メソッド（[MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は、以前に一時停止していたメディアの記録を再開するために使用します。
+**`resume()`** は {{domxref("MediaRecorder")}} インターフェイスのメソッドで、以前に一時停止していたメディアの記録を再開するために使用します。
+
+{{domxref("MediaRecorder.state")}} がすでに "recording" である場合、`resume()`  の呼び出しは効果がありません。
 
 `resume()` メソッドを呼び出すと、ブラウザーは次の手順を実行するタスクをキューに入れます。
 
@@ -32,7 +35,8 @@ resume()
 
 ### エラー
 
-`MediaRecorder` オブジェクトの {{domxref("MediaRecorder.state")}} が "inactive" のときに `resume()` メソッドが呼び出されると、`InvalidState` エラーが発生します — まだ一時停止していない場合、記録を再開できませんし、{{domxref("MediaRecorder.state")}} がすでに `"recording"` の場合、`resume()` は効果がありません。
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : `MediaRecorder` が現在 `"inactive"` である場合に発生します。
 
 ## 例
 
@@ -59,6 +63,6 @@ pause.onclick = () => {
 ## 関連情報
 
 - [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[Github のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone/)）。（英語）
-- [simpl.info の MediaStream 収録のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
+- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://github.com/chrisdavidmills) 作（[Github のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone/)）。<sup>(英語)</sup>
+- [simpl.info の MediaStream 収録のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://github.com/samdutton) 作。<sup>(英語)</sup>
 - {{domxref("Navigator.getUserMedia")}}
