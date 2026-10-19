@@ -111,7 +111,7 @@ IANA 维护了[一系列的验证方案](https://www.iana.org/assignments/http-a
 
 该 `.htaccess` 文件格式通常看起来像这样：
 
-```plain
+```apacheconf
 AuthType Basic
 AuthName "Access to the staging site"
 AuthUserFile /path/to/.htpasswd
@@ -120,7 +120,7 @@ Require valid-user
 
 该 `.htaccess` 文件引用一个 `.htpasswd` 文件，其中每行用冒号（`:`）分隔的用户名和密码。你不能看到真实的密码因为它们是[散列](https://httpd.apache.org/docs/2.4/misc/password_encryptions.html)（在这个例子中是使用了 MD5）。你可以命名 `.htpasswd` 文件为你所喜欢的名字，但是应该保证这个文件不被其他人访问。(Apache 通常配置阻止访问 `.ht*` 类的文件).
 
-```plain
+```apacheconf
 aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
 user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 ```
@@ -131,7 +131,7 @@ user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 
 `auth_basic_user_file` 指令指定包含加密的用户凭据 `.htpasswd` 文件，就像上面的 apache 例子。
 
-```plain
+```apacheconf
 location /status {
     auth_basic           "Access to the staging site";
     auth_basic_user_file /etc/apache2/.htpasswd;

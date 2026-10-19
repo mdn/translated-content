@@ -23,7 +23,7 @@ const digest = crypto.subtle.digest(algorithm, data);
   - `SHA-384`
   - `SHA-512`
 
-- _`data`_ es un {{jsxref("ArrayBuffer")}} o {{domxref("ArrayBufferView")}} que contiene los datos a ser digitalizados.
+- _`data`_ es un {{jsxref("ArrayBuffer")}} o {{jsxref("TypedArray")}} que contiene los datos a ser digitalizados.
 
 ### Valor de retorno
 

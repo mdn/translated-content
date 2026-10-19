@@ -1,29 +1,31 @@
 ---
-title: Utiliser des lignes nommées sur une grille
+title: Disposition avec des lignes de grille nommées
+short-title: Utiliser les lignes de grille nommées
 slug: Web/CSS/Guides/Grid_layout/Named_grid_lines
-original_slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Grid_template_areas", "Web/CSS/Guides/Grid_layout/Auto-placement","Web/CSS/Guides/Grid_layout")}}
+Dans les articles précédents, on a vu comment placer des objets sur les lignes définies par les pistes de la grille en utilisant [la définition des pistes de la grille](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement) et également comment placer des objets [en utilisant des zones de modèle nommées](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas). Dans ce guide, nous allons examiner comment ces deux concepts fonctionnent ensemble lorsque nous utilisons des lignes nommées.
 
-Dans les articles précédents, on a vu comment placer des objets sur les lignes définies par les pistes de la grilles. On a également vu comment placer des objets sur des zones nommées. Dans ce guide, nous allons combiner ces deux concepts et apprendre à placer les objets sur des lignes avec des noms. Le nommage des lignes peut s'avérer très utile mais un aspect encore plus intéressant consiste à combiner les noms et les tailles de pistes. Cela sera plus clair lorsque nous aurons vu les différents exemples.
+Le nommage des lignes est extrêmement utile, mais une partie de la syntaxe de la grille qui peut prêter à confusion provient de cette combinaison de noms et de tailles de pistes. Une fois que vous travaillez sur quelques exemples, cela devient plus clair et plus facile à utiliser.
 
 ## Nommer des lignes lorsqu'on définit une grille
 
-Lorsqu'on définit une grille avec `grid-template-rows` et `grid-template-columns`, on peut donner des noms aux lignes (toutes ou seulement quelques unes). Pour illustrer ce point, nous allons reprendre la disposition utilisée dans l'article sur le placement sur les lignes. Cette fois, nous allons utiliser des lignes avec des noms.
+Vous pouvez donner un nom à certaines ou à toutes les lignes de votre grille lorsque vous définissez votre grille avec les propriétés {{CSSxRef("grid-template-rows")}} et {{CSSxRef("grid-template-columns")}}. Pour illustrer ce point, nous allons utiliser la disposition de base créée dans le guide sur [le placement sur les lignes](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement). Cette fois, nous allons créer la grille en utilisant des lignes nommées.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -32,34 +34,39 @@ Lorsqu'on définit une grille avec `grid-template-rows` et `grid-template-column
 }
 ```
 
-Lorsqu'on définit la grille, on nomme les lignes entre crochets. Ces noms peuvent être n'importe quelle valeur. Ici, on définit un nom pour le début et la fin du conteneur, pour les lignes et pour les colonnes. On définit les blocs du centres (ici `content-start` et `content-end`), à la fois pour les lignes et pour les colonnes. Il n'est pas nécessaire de nommer toutes les lignes de la grille, on peut très bien uniquement nommer celles qui sont importantes.
+Lorsqu'on définit la grille, on nomme nos lignes entre crochets (`[]`). Ces noms peuvent être n'importe quelle valeur. On définit un nom pour le début et la fin du conteneur, à la fois pour les lignes et pour les colonnes. Dans ce cas, les lignes de début et de fin du bloc central de la grille sont respectivement nommées `content-start` et `content-end`.
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
   grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end];
 }
 ```
 
-Une fois que les lignes sont nommées, on peut utiliser ce nom plutôt que le numéro de ligne afin de placer les éléments.
+Nous n'avons pas besoin de nommer toutes les lignes de nos grilles&nbsp;; vous pouvez choisir de ne nommer que les lignes clés de votre disposition.
+
+Une fois que les lignes ont des noms, nous pouvons utiliser le nom que nous avons défini, plutôt que le numéro de ligne, pour placer les éléments de la grille.
 
 ```css
-.box1 {
+.boite1 {
   grid-column-start: main-start;
   grid-row-start: main-start;
   grid-row-end: main-end;
 }
-.box2 {
+
+.boite2 {
   grid-column-start: content-end;
   grid-row-start: main-start;
   grid-row-end: content-end;
 }
-.box3 {
+
+.boite3 {
   grid-column-start: content-start;
   grid-row-start: main-start;
 }
-.box4 {
+
+.boite4 {
   grid-column-start: content-start;
   grid-column-end: main-end;
   grid-row-start: content-end;
@@ -67,40 +74,40 @@ Une fois que les lignes sont nommées, on peut utiliser ce nom plutôt que le nu
 ```
 
 ```html
-<div class="wrapper">
-  <div class="box1">Un</div>
-  <div class="box2">Deux</div>
-  <div class="box3">Trois</div>
-  <div class="box4">Quatre</div>
+<div class="enveloppe">
+  <div class="boite1">Un</div>
+  <div class="boite2">Deux</div>
+  <div class="boite3">Trois</div>
+  <div class="boite4">Quatre</div>
 </div>
 ```
 
-{{EmbedLiveSample("Nommer_des_lignes_lorsqu'on_définit_une_grille", '500', '330')}}
+{{EmbedLiveSample("Nommer des lignes lorsqu'on définit une grille", 500, 305)}}
 
-Tout le reste continue de fonctionner de la même façon. Vous pouvez aussi utiliser des noms et des numéros. Le nommage des lignes est utile lorsqu'on souhaite créer une disposition _responsive_ où on redéfinit la grille plutôt que d'avoir à redéfinir la position du contenu en changeant les numéros de lignes dans les _media queries_.
+Tout le reste du placement sur les lignes fonctionne de la même manière. Dans notre disposition en grille, nous avons donné un nom d'alias à chaque ligne numérotée. Dans les éléments de notre grille, nous faisons référence à un nom plutôt qu'à un numéro. Nommer les lignes de cette manière est utile — lorsque nous créons une disposition adaptative, nous pouvons mettre à jour les propriétés de grille du conteneur plutôt que les éléments de la grille dans chaque [requête de média](/fr/docs/Web/CSS/Guides/Media_queries/Using).
 
 ### Donner plusieurs noms à une ligne
 
-On peut donner plusieurs noms à une ligne (par exemple une ligne qui décrirait la fin de la barre latérale et le début du contenu principal). Pour cela, à l'intérieur des crochets, on déclare les différents noms, séparés par un espace : `[sidebar-end main-start]`. On peut ensuite désigner la ligne par l'un de ces noms.
+On peut donner plusieurs noms à une ligne (par exemple une ligne qui décrit la fin de la barre latérale et le début du contenu principal). Pour cela, à l'intérieur des crochets, on déclare les différents noms, séparés par un espace&nbsp;: `[sidebar-end main-start]`. On peut ensuite désigner la ligne par l'un de ces noms.
 
 ## Définir des zones de grilles implicites à l'aide de lignes nommées
 
-Plus haut, nous avons vu qu'il était possible de donner n'importe quel nom à une ligne. D'un point de vue technique, ce nom est un [identifiant personnalisé (ou _custom ident_)](https://drafts.csswg.org/css-values-4/#custom-idents), c'est-à-dire un nom défini par l'auteur de la feuille de style. Pour être plus précis, ce nom ne doit pas reprendre les mots-clés qui apparaissent dans la spécification et ne doit pas être source de confusion (on évitera ainsi d'utiliser `span`). Les identifiants ne sont pas mis entre quotes.
+Lorsque nous nommons les lignes, nous indiquons que vous pouvez leur donner le nom de votre choix. Le nom est un {{CSSxRef("custom-ident")}}, un nom défini par l'auteur·ice. Lorsque vous choisissez le nom, vous devez éviter les mots qui peuvent apparaître dans la spécification et prêter à confusion, comme `span`. Les identifiants ne sont pas entre guillemets.
 
-Bien qu'on puisse choisir n'importe quel nom (avec les contraintes qu'on vient d'énoncer), si on utilise les suffixes `-start` et `-end` pour désigner les lignes qui entourent une zone (comme dans l'exemple ci-avant), la grille créera automatiquement une zone nommée avec le nom utilisé devant ces suffixes. Si on reprend l'exemple précédent où on utilise `content-start` et `content-end` pour les lignes et pour les colonnes, cela signifie qu'on a, implicitement, une zone de grille intitulée `content` qu'on peut également manipuler
+Vous pouvez choisir n'importe quel nom, mais si vous ajoutez `-start` et `-end` aux lignes qui entourent une zone, comme dans l'exemple ci-dessus, la grille crée une zone nommée à partir du nom principal utilisé. Dans l'exemple ci-dessus, nous avons `content-start` et `content-end` pour les lignes et pour les colonnes. Cela signifie que nous obtenons une zone de grille nommée `content`, dans laquelle nous pouvons placer un élément si nous le souhaitons.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -112,38 +119,38 @@ Bien qu'on puisse choisir n'importe quel nom (avec les contraintes qu'on vient d
 On utilise les mêmes définitions qu'avant mais cette fois, nous allons placer un objet dans la zone intitulée `content`.
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
   grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end];
 }
-.thing {
+.chose {
   grid-area: content;
 }
 ```
 
 ```html
-<div class="wrapper">
-  <div class="thing">Je suis dans une zone nommée content.</div>
+<div class="enveloppe">
+  <div class="chose">Je suis dans une zone nommée content.</div>
 </div>
 ```
 
-{{EmbedLiveSample("Définir_des_zones_de_grilles_implicites_à_l'aide_de_lignes_nommées", '500', '330')}}
+{{EmbedLiveSample("Définir des zones de grilles implicites à l'aide de lignes nommées", 500, 305)}}
 
-Il n'est pas nécessaire de définir l'emplacement de cette zone avec `grid-template-areas` car les lignes suffisent à créer la zone et à la placer.
+Nous n'avons pas besoin de définir où les zones sont avec {{CSSxRef("grid-template-areas")}} puisque nos lignes nommées ont créé une zone pour nous.
 
 ## Définir des lignes implicites à l'aide de zones nommées
 
-Nous avons vu comment des lignes nommées permettaient de créer des zones nommées. Cela fonctionne également dans l'autre sens. Les zones nommées créent aussi des lignes nommées qui peuvent ensuite être utilisées pour placer les objets. Si on reprend l'exemple utilisé dans le guide sur les zones nommées, on peut utiliser les lignes créées implicitement pour voir comment cela fonctionne.
+Nous avons vu comment les lignes nommées créent une zone nommée, et cela fonctionne également dans l'autre sens. Les zones de modèle nommées créent des lignes nommées que vous pouvez utiliser pour positionner vos éléments. Si nous prenons la disposition créée dans le guide sur les [zones de modèle de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas), nous pouvons utiliser les lignes créées par nos zones pour voir comment cela fonctionne.
 
-Dans cet exemple, on ajoute un élément `div` supplémentaire et on lui ajoute la classe `overlay`. On déclare des zones nommées à l'aide de `grid-area` puis on indique la disposition via la propriété `grid-template-areas`. Les noms utilisés pour les zones sont :
+Dans cet exemple, nous avons ajouté un élément `<div>` supplémentaire avec la classe `superposition`. Nous avons créé des zones nommées à l'aide de la propriété {{CSSxRef("grid-area")}}, puis une disposition créée dans `grid-template-areas`. Les noms des zones sont les suivants&nbsp;:
 
 - `hd`
 - `ft`
 - `main`
 - `sd`
 
-Cela crée implicitement les lignes et colonnes suivantes :
+Cela crée implicitement les lignes et colonnes suivantes&nbsp;:
 
 - `hd-start`
 - `hd-end`
@@ -154,24 +161,24 @@ Cela crée implicitement les lignes et colonnes suivantes :
 - `ft-start`
 - `ft-end`
 
-Dans l'image qui suit, on peut voir l'emplacement de ces lignes. Certaines lignes peuvent avoir deux noms (par exemple, `sd-end` et `main-start` font référence à la même ligne verticale).
+Vous pouvez voir les lignes nommées sur l'image. Notez que certaines lignes portent deux noms — par exemple, `sd-end` et `main-start` désignent la même ligne de colonne.
 
-![An image showing the implicit line names created by our grid areas.](5_multiple_lines_from_areas.png)
+![Une image montrant les noms de lignes implicites créés par nos zones de grille.](5_multiple_lines_from_areas.png)
 
-On peut positionner `overlay` grâce à ces lignes implicites, de la même façon qu'on aurait positionner un objet avec des lignes créées explicitement :
+Le positionnement d'un `superposition` à l'aide de ces lignes implicites nommées revient à positionner un élément à l'aide de lignes nommées.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -181,7 +188,7 @@ On peut positionner `overlay` grâce à ces lignes implicites, de la même faço
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: minmax(100px, auto);
@@ -190,63 +197,68 @@ On peut positionner `overlay` grâce à ces lignes implicites, de la même faço
     "sd sd sd main main main main main main"
     "ft ft ft ft   ft   ft   ft   ft   ft";
 }
-.header {
+
+.en-tete {
   grid-area: hd;
 }
-.footer {
+
+.pied-page {
   grid-area: ft;
 }
-.content {
+
+.contenu {
   grid-area: main;
 }
-.sidebar {
+
+.barre-laterale {
   grid-area: sd;
 }
-.wrapper > div.overlay {
+
+.enveloppe > div.superposition {
   z-index: 10;
   grid-column: main-start / main-end;
   grid-row: hd-start / ft-end;
-  border: 4px solid rgb(92, 148, 13);
-  background-color: rgba(92, 148, 13, 0.4);
-  color: rgb(92, 148, 13);
+  border: 4px solid rgb(92 148 13);
+  background-color: rgb(92 148 13 / 40%);
+  color: rgb(92 148 13);
   font-size: 150%;
 }
 ```
 
 ```html
-<div class="wrapper">
-  <div class="header">En-tête</div>
-  <div class="sidebar">Barre latérale</div>
-  <div class="content">Contenu</div>
-  <div class="footer">Pied de page</div>
-  <div class="overlay">Masque</div>
+<div class="enveloppe">
+  <div class="en-tete">En-tête</div>
+  <div class="barre-laterale">Barre latérale</div>
+  <div class="contenu">Contenu</div>
+  <div class="pied-page">Pied de page</div>
+  <div class="superposition">Masque</div>
 </div>
 ```
 
-{{EmbedLiveSample("Définir_des_lignes_implicites_à_l'aide_de_zones_nommées", '500', '330')}}
+{{EmbedLiveSample("Définir des lignes implicites à l'aide de zones nommées", 500, 305)}}
 
-Grâce à tout ça, on voit qu'on peut créer des lignes à partir de zones nommées et créer des zones à partir de lignes nommées. Aussi, mieux vaut prendre le temps de réfléchir aux noms utilisés lorsqu'on définit un grille. En effet, plus les noms utilisés seront clairs, plus la maintenance et le travail d'équipe seront simplifiés.
+Étant donné que nous avons la possibilité de positionner des lignes créées à partir de zones nommées et des zones à partir de lignes nommées, il vaut la peine de consacrer un peu de temps à la planification de votre stratégie de nommage dès le début de la création de votre mise en page en grille. Choisir des noms qui ont du sens pour vous et votre équipe rend vos dispositions plus intuitives.
 
-## Utiliser plusieurs lignes avec le même nom : `repeat()`
+## Définir plusieurs lignes qui ont le même nom avec `repeat()`
 
-Si vous souhaitez que chaque ligne ait un nom différent, il faudra alors définir la piste de façon détaillée et non utiliser la syntaxe avec `repeat()` car il faut préciser le nom de la ligne entre crochets lorsqu'on définit les pistes. Si vous utilisez la syntaxe avec `repeat()`, vous obtiendrez plusieurs lignes avec le même nom… ce qui peut également être utile.
+Si vous souhaitez attribuer un nom unique à toutes vos lignes de grille, vous devez définir la piste à l'aide de propriétés explicites plutôt que d'utiliser la syntaxe de répétition, car les noms doivent être ajoutés entre crochets lors de la définition des pistes. Si vous utilisez la syntaxe de répétition, vous obtenez plusieurs lignes portant le même nom, ce qui peut s'avérer utile ou prêter à confusion, selon les exigences de votre disposition.
 
-### Une grille à 12 colonnes avec repeat()
+### Une grille à 12 colonnes avec `repeat()`
 
-Dans l'exemple qui suit, nous allons créer une grille avec douze colonnes de même largeur. Avant de définir la taille d'une piste pour la colonne (`1fr`), on définit un nom : `[col-start]`. Cela signifie qu'on aura une grille avec 12 colonnes, toutes intitulées `col-start` et qui mesureront chacune `1fr` de large.
+Dans cet exemple, nous créons une grille composée de 12 colonnes de largeur égale. Avant de définir la largeur `1fr` de la piste de colonne, nous définissons une ligne nommée `[col-start]`. Cela signifie que nous avons une grille comportant 12 lignes de colonne, toutes nommées `col-start`, avant une colonne d'une largeur de `1fr`.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -256,81 +268,87 @@ Dans l'exemple qui suit, nous allons créer une grille avec douze colonnes de m�
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
 }
 ```
 
-Une fois la grille créée, on peut y placer les objets. On a alors plusieurs lignes avec le nom `col-start` et si on place un objet après la ligne `col-start`, la grille utilisera la première ligne intitulée `col-start` (dans notre cas, c'est la ligne la plus à gauche). Pour indiquer une autre ligne, on utilisera le nom, suivi du numéro de cette ligne. Ainsi, pour placer un objet à partir de la première ligne jusqu'à la cinquième, on pourra utiliser :
+Une fois que vous avez créé la grille, vous pouvez y placer des éléments. Comme nous avons plusieurs lignes nommées `col-start`, si vous placez un élément qui commence après une ligne `col-start`, c'est la première ligne nommée `col-start` qui est utilisée. Dans notre cas, il s'agit de la ligne située complètement à gauche. Pour cibler une autre ligne, utilisez le nom suivi du numéro correspondant à cette ligne.
+
+Pour placer un élément s'étendant de la première ligne nommée `col-start` à la 5e ligne portant ce nom, nous pouvons utiliser&nbsp;:
 
 ```css
-.item1 {
+.element1a5 {
   grid-column: col-start / col-start 5;
 }
 ```
 
-On peut également utiliser le mot-clé `span`. Avec la règle suivante, le deuxième objet sera placé à partir de la septième ligne et occupera 3 lignes :
+Vous pouvez également utiliser le mot-clé `span`. Cet élément s'étend sur 3 lignes à partir de la 7e ligne, nommée `col-start`&nbsp;:
 
 ```css
-.item2 {
+.element7a9 {
   grid-column: col-start 7 / span 3;
 }
 ```
 
 ```html
-<div class="wrapper">
-  <div class="item1">Je vais de col-start 1 à col-start 5</div>
-  <div class="item2">Je vais de col-start 7 et je m'étends sur 3 lignes</div>
+<div class="enveloppe">
+  <div class="element1a5">Je vais de col-start 1 à col-start 5</div>
+  <div class="element7a9">
+    Je vais de col-start 7 et je m'étends sur 3 lignes
+  </div>
 </div>
 ```
 
-{{EmbedLiveSample("Une_grille_à_12_colonnes_avec_repeat", '500', '330')}}
+{{EmbedLiveSample("Une grille à 12 colonnes avec `repeat()`", 500, 100)}}
 
-Si vous observez cette disposition grâce à l'outil de mise en évidence des grilles dans Firefox, vous verrez les différentes lignes et le placement des éléments sur ces lignes :
+Si vous examinez cette disposition dans les outils de développement de votre navigateur, vous voyez comment s'affichent les lignes de colonnes et comment nos éléments sont positionnés par rapport à ces lignes.
 
-![The 12 column grid with items placed. The Grid Highlighter shows the position of the lines.](5_named_lines1.png)
+![La grille à 12 colonnes avec les éléments positionnés. L'outil de mise en évidence de la grille de Firefox indique la position des lignes.](5_named_lines1.png)
 
 ### Définir des lignes nommées avec une liste de piste
 
-La syntaxe `repeat()` permet également d'utiliser une liste de plusieurs pistes et pas uniquement une seule piste. Dans la règle qui suit, on crée une grille composée de huit pistes qui commence par une colonne plus étroite (`1fr`), intitulée `col1-start`, et qui est suivie par une colonne plus large (`3fr`), intitulée `col2-start`.
+La syntaxe `repeat()` peut également prendre en paramètre une liste de pistes&nbsp;; il n'y a pas que les pistes individuelles qui peuvent être répétées.
+
+Ce code CSS crée une grille à huit pistes, avec une colonne plus étroite d'une largeur de `1fr` nommée `col1-start`, suivie d'une colonne plus large de `3fr` nommée `col2-start`.
 
 ```css
-.wrapper {
+.enveloppe {
   grid-template-columns: repeat(4, [col1-start] 1fr [col2-start] 3fr);
 }
 ```
 
-Si on utilise `repeat()` et qu'on place deux lignes l'une à la suite de l'autre, ces lignes seront fusionnées et on aura le même résultat que si on avait donné plusieurs noms à un même ligne. La règle suivante permet de créer quatre pistes dont la largeur est `1fr`, chacune avec un début et une fin.
+Si votre syntaxe de répétition place deux lignes l'une à côté de l'autre, celles-ci sont fusionnées et produisent le même résultat que si vous attribuez plusieurs noms à une même ligne dans une définition de piste sans répétition. La définition suivante crée quatre pistes `1fr`, chacune comportant une ligne de début et une ligne de fin.
 
 ```css
-.wrapper {
+.enveloppe {
   grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
 }
 ```
 
-Si on écrivait la même définition sans utiliser `repeat()`, on aurait la forme suivante :
+Si l'on écrit cette déclaration sans utiliser la notation de répétition, elle se présente comme suit&nbsp;:
 
 ```css
-.wrapper {
+.enveloppe {
   grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr [col-end];
 }
 ```
 
-Si vous utilisez une liste de pistes, vous pouvez utiliser le mot-clé `span` pour indiquer le nombre de lignes à occuper mais aussi pour indiquer le nombre de lignes à occuper qui ont un nom donné.
+À l'aide d'une liste de pistes, on peut utiliser le mot-clé `span` pour couvrir un certain nombre de lignes, y compris des lignes portant un nom donné&nbsp;:
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -340,62 +358,66 @@ Si vous utilisez une liste de pistes, vous pouvez utiliser le mot-clé `span` po
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(6, [col1-start] 1fr [col2-start] 3fr);
 }
-.item1 {
+
+.element1 {
   grid-column: col1-start / col2-start 2;
 }
-.item2 {
+
+.element2 {
   grid-row: 2;
   grid-column: col1-start 2 / span 2 col1-start;
 }
 ```
 
 ```html
-<div class="wrapper">
-  <div class="item1">
+<div class="enveloppe">
+  <div class="element1">
     Je suis placé à partir de la première col1-start et jusqu'à la deuxième
     col2-start.
   </div>
-  <div class="item2">
+  <div class="element2">
     Je suis placé à partir de la deuxième col1-start et je m'étend sur deux
     lignes nommées col1-start
   </div>
 </div>
 ```
 
-{{EmbedLiveSample('Définir_des_lignes_nommées_avec_une_liste_de_piste', '500', '330')}}
+{{EmbedLiveSample("Définir des lignes nommées avec une liste de piste", 500, 255)}}
 
 ### Cadre d'une grille à 12 colonnes
 
-Avec ces trois derniers articles, nous avons vu de nombreuses façons qui permettaient de placer des objets sur une grille. Cela peut sembler un peu trop inutilement compliqué mais il faut garder à l'esprit que toutes ne sont pas obligatoirement nécessaires. Dans la pratique, utiliser des zones nommés pour des dispositions simples permet d'avoir une représentation visuelle simple et de déplacer les différents objets facilement sur la grille.
+Après avoir découvert le positionnement numérique et par nom basé sur les lignes, ainsi que les [zones de modèle de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas), nous savons désormais qu'il existe plusieurs façons de positionner des éléments à l'aide de la disposition en grille CSS. Cela peut sembler trop complexe, mais vous n'avez pas besoin de toutes les utiliser. En pratique, l'utilisation des zones de modèle nommées fonctionne bien pour les dispositions simples, car cette méthode offre une bonne représentation visuelle de votre disposition et rend le déplacement des éléments sur la grille plus intuitif. Par exemple, lorsque vous travaillez avec une disposition stricte à plusieurs colonnes, la démonstration sur les lignes nommées présentée dans la dernière partie de ce guide s'avère très utile.
 
-Si on travaille avec une disposition sur plusieurs colonnes (comme celles utilisées dans ces derniers exemples), les lignes nommées feront parfaitement l'affaire. Si vous prenez par exemple des _frameworks_ tels que Foundation ou Bootstrap, ceux-ci fonctionnent sur une grille avec 12 colonnes. Le _framework_ importe ensuite le code nécessaire aux différents calculs afin de s'assurer que l'ensemble des colonnes fasse 100%. En utilisant une grille CSS, le seule code nécessaire pour obtenir un tel _framework_ se résume à :
+Les systèmes de grille traditionnels tels que Foundation ou Bootstrap reposent sur une grille à 12 colonnes. Ces cadriciels (<i lang="en">frameworks</i> en anglais) importent du code permettant d'effectuer des calculs qui garantissent que la somme des largeurs des colonnes est égale à 100%. Les cadriciels ne sont pas indispensables&nbsp;! Le seul code CSS dont nous avons besoin pour un «&nbsp;cadriciel&nbsp;» de grille à 12 colonnes est le suivant&nbsp;:
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
-  grid-gap: 10px;
+  gap: 10px;
   grid-template-columns: repeat(12, [col-start] 1fr);
 }
 ```
 
-On peut alors utiliser ce modèle pour mettre en forme notre page. Par exemple, on peut créer une disposition avec trois colonnes, un en-tête et un pied de page avec les règles suivantes :
+Nous pouvons ensuite utiliser ce «&nbsp;cadriciel&nbsp;» pour mettre en page notre page.
+
+Par exemple, pour créer une mise en page à trois colonnes avec un en-tête et un pied de page, nous pouvons utiliser le code suivant.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > * {
+.enveloppe > * {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -405,42 +427,45 @@ On peut alors utiliser ce modèle pour mettre en forme notre page. Par exemple, 
 ```
 
 ```html
-<div class="wrapper">
-  <header class="main-header">Je suis l'en-tête</header>
-  <aside class="side1">Je suis la barre latérale 1</aside>
-  <article class="content">Je suis l'article</article>
-  <aside class="side2">Je suis la barre latérale 2</aside>
-  <footer class="main-footer">Je suis le pied de page</footer>
+<div class="enveloppe">
+  <header class="en-tete-principal">Je suis l'en-tête</header>
+  <aside class="lateral1">Je suis la barre latérale 1</aside>
+  <article class="contenu">Je suis l'article</article>
+  <aside class="lateral2">Je suis la barre latérale 2</aside>
+  <footer class="pied-page-principal">Je suis le pied de page</footer>
 </div>
 ```
 
-Pour placer ces éléments, on utilise la grille de la façon suivante :
+Pour placer ces éléments, on utilise la grille de la façon suivante&nbsp;:
 
 ```css
-.main-header,
-.main-footer {
+.en-tete-principal,
+.pied-page-principal {
   grid-column: col-start / span 12;
 }
-.side1 {
+
+.lateral1 {
   grid-column: col-start / span 3;
   grid-row: 2;
 }
-.content {
+
+.contenu {
   grid-column: col-start 4 / span 6;
   grid-row: 2;
 }
-.side2 {
+
+.lateral2 {
   grid-column: col-start 10 / span 3;
   grid-row: 2;
 }
 ```
 
-{{ EmbedLiveSample('Cadre_dune_grille_à_12_colonnes', '500', '330') }}
+{{EmbedLiveSample("Cadre d'une grille à 12 colonnes", 500, 205)}}
 
-Là encore, l'outil de mise en évidence de la grille permet de voir comment le placement fonctionne :
+Une fois encore, l'outil de mise en évidence de la grille dans les outils de développement nous aide à comprendre le fonctionnement de la grille sur laquelle nous avons placé nos éléments.
 
-![The layout with the grid highlighted.](5_named_lines2.png)
+![La disposition avec la grille mise en évidence.](5_named_lines2.png)
 
-Et voilà tout ce dont on a besoin. Aucun calcul compliqué, la grille a automatiquement retiré la gouttière de 10 pixels avant d'affecter l'espace aux pistes qui mesurent `1fr`. Lorsque vous construirez vos propres disposition, vous serez plus à l'aise avec la syntaxe et utiliserez les techniques qui sont les plus pertinentes pour vos projets. Essayez de construire cetaines dispositions classiques avec des différentes méthodes, vous deviendrez plus efficaces pour manipuler les grilles CSS. Dans le prochain guide, nous verrons comment la grille peut placer des objets automatiquement, sans même avoir besoin d'utiliser les propriétés de placement !
+C'est tout ce dont nous avons besoin. Nous n'avons pas besoin de faire de calculs&nbsp;! La disposition de grille CSS a automatiquement supprimé notre piste de marge de 10 pixels avant d'attribuer l'espace aux pistes de colonne `1fr`.
 
-{{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Grid_template_areas", "Web/CSS/Guides/Grid_layout/Auto-placement","Web/CSS/Guides/Grid_layout")}}
+Dans la suite, nous voyons comment la disposition de grille CSS peut positionner les éléments à notre place sans nécessiter aucune propriété de placement, dans le guide [Placement automatique dans la disposition de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Auto-placement).

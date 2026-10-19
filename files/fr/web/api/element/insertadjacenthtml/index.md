@@ -3,7 +3,7 @@ title: "Element : méthode insertAdjacentHTML()"
 short-title: insertAdjacentHTML()
 slug: Web/API/Element/insertAdjacentHTML
 l10n:
-  sourceCommit: 65cbd4ff030e6763d6868917137d728c3ec29288
+  sourceCommit: b0e1a82bcd76c608c183cfe858a1f49f0a1e67ad
 ---
 
 {{APIRef("DOM")}}

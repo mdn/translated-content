@@ -2,7 +2,7 @@
 title: Telnet
 slug: Glossary/Telnet
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: e3a2272d272f21ea38e5fff9bd6ccec2d0dfb1a8
 ---
 
 **Telnet** est un outil en ligne de commandes et un protocole basé sur TCP/IP pour accéder à des ordinateurs distants.

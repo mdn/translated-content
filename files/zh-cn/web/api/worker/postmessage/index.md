@@ -28,7 +28,7 @@ postMessage(message, transfer)
 - `transfer` {{optional_inline}}
   - : 一个可选的、会被转移所有权的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)。如果一个对象的所有权被转移，它将在发送它的上下文中变为不可用（中止），而仅在接收方的 worker 中可用。
 
-    像 {{domxref("ArrayBuffer")}}、{{domxref("MessagePort")}} 或 {{domxref("ImageBitmap")}} 类的实例才是可转移对象，才能够被转移。不能将 `null` 作为 `transfer` 的值。
+    像 {{jsxref("ArrayBuffer")}}、{{domxref("MessagePort")}} 或 {{domxref("ImageBitmap")}} 类的实例才是可转移对象，才能够被转移。不能将 `null` 作为 `transfer` 的值。
 
 ### 返回值
 

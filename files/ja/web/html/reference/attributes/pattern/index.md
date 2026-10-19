@@ -1,12 +1,10 @@
 ---
-title: "HTML 属性: pattern"
+title: "`pattern` 属性 (HTML)"
 short-title: pattern
 slug: Web/HTML/Reference/Attributes/pattern
 l10n:
-  sourceCommit: 1b7dbf06b84237832fc9108e1531542fd6a21a5b
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
-
-{{HTMLSidebar}}
 
 **`pattern`** 属性は、フォームコントロールの値が一致すべき[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)を指定します。`null` 以外の値が `pattern` 値によって設定された制約に適合しない場合、{{domxref('ValidityState')}} オブジェクトの読み取り専用の {{domxref('ValidityState.patternMismatch','patternMismatch')}} プロパティが真になります。
 
@@ -154,7 +152,7 @@ div {
 
 p {
   font-size: 80%;
-  color: #999;
+  color: #999999;
 }
 
 input + span {

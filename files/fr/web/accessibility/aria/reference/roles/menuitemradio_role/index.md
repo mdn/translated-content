@@ -3,7 +3,7 @@ title: "ARIA : rôle menuitemradio"
 short-title: menuitemradio
 slug: Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role
 l10n:
-  sourceCommit: 1474534461893381d54c502e655f334b5568e597
+  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
 ---
 
 Le rôle `menuitemradio` est un élément de menu sélectionnable dans un ensemble d'éléments ayant le même rôle, dont un seul peut être sélectionné à la fois.
@@ -14,7 +14,7 @@ Les éléments dans les menus et les barres de menus sont des éléments de menu
 
 Un `menuitemradio` est un élément de menu sélectionnable dans un ensemble d'éléments ayant le même rôle, dont un seul peut être sélectionné à la fois.
 
-Les trois types d'éléments de menu ne peuvent être contenus ou possédés que par un élément ayant le rôle [`menu`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) ou [`menubar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role), éventuellement imbriqués dans un élément de regroupement ayant le rôle [`group`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role). Être imbriqué ou possédé (voir [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)) dans un `menu` ou une `menubar` identifie les éléments de menu comme des widgets liés.
+Les trois types d'éléments de menu ne peuvent être contenus ou possédés que par un élément ayant le rôle [`menu`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) ou [`menubar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role), éventuellement imbriqués dans un élément de regroupement ayant le rôle [`group`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role). Être imbriqué ou possédé (voir [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)) dans un `menu` ou une `menubar` identifie les éléments de menu comme des composants liés.
 
 Lorsque tous les éléments d'un sous-menu sont membres du même groupe radio, le `group` est défini par l'élément menu&nbsp;; l'élément `group` n'est pas nécessaire.
 
@@ -22,7 +22,7 @@ Les éléments de menu ayant le rôle `menuitemradio` doivent inclure l'attribut
 
 Comme pour l'attribut `checked` des {{HTMLElement("input")}} de type `radio`, l'attribut `aria-checked` d'un `menuitemradio` indique si l'élément de menu est sélectionné (`true`) ou non (`false`). Il n'existe pas de valeur `mixed` comme pour `menuitemcheckbox`.
 
-Un seul `menuitemradio` dans un groupe peut être sélectionné à la fois. Lorsqu'un élément du groupe est sélectionné, l'attribut `aria-checked` est défini sur `true`, tandis que l'élément `menuitemradio` précédemment sélectionné dans le même groupe, s'il y en avait un, devient non sélectionné, en passant la valeur de l'attribut `aria-checked` à `false`.
+Un seul `menuitemradio` dans un groupe peut être sélectionné à la fois. Lorsqu'un élément du groupe est sélectionné, l'attribut `aria-checked` est défini sur `true`, tandis que l'élément `menuitemradio` précédemment sélectionné dans le même groupe, s'il y en a un, devient désélectionné, en passant la valeur de l'attribut `aria-checked` à `false`.
 
 Si vous souhaitez que plusieurs éléments d'un groupe soient sélectionnés, ou si vous souhaitez permettre la sélection et la dé-sélection d'un élément, utilisez plutôt `menuitemcheckbox`.
 

@@ -3,8 +3,6 @@ title: Décrémentation (--)
 slug: Web/JavaScript/Reference/Operators/Decrement
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur de décrémentation (`--`) permet de décrémenter (c'est-à-dire de soustraire un) son opérande et renvoie une valeur qui est le résultat avant ou après la modification.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Decrement operator")}}

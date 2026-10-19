@@ -5,7 +5,7 @@ l10n:
   sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
 ---
 
-{{APIRef("Canvas API")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("Canvas API")}}{{non-standard_header}}
 
 非标准的 **`HTMLCanvasElement.mozOpaque`** 属性是一个布尔值，反映了 {{HTMLElement("canvas")}} 元素的 [`moz-opaque`](/zh-CN/docs/Web/HTML/Reference/Elements/canvas#moz-opaque) HTML 属性。它让画布确定是否需要考虑半透明效果。如果画布确定没有半透明效果，则可以优化绘制性能。
 

@@ -3,7 +3,7 @@ title: Propriété CSS `font-variation-settings`
 short-title: font-variation-settings
 slug: Web/CSS/Reference/Properties/font-variation-settings
 l10n:
-  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
+  sourceCommit: 91e08923c809ca8deded3e3294f49bbe1a4a00b3
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variation-settings`** permet de contrôler de façon fine les caractéristiques des [polices variables](/fr/docs/Web/CSS/Guides/Fonts/Variable_fonts) en définissant les noms d'axes à quatre lettres des caractéristiques à faire varier ainsi que leurs valeurs.
@@ -38,7 +38,7 @@ font-variation-settings: "wdth" 75;
 
 ```css interactive-example
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2");
   font-family: "Amstelvar";
   font-style: normal;
 }

@@ -3,8 +3,6 @@ title: label
 slug: Web/JavaScript/Reference/Statements/label
 ---
 
-{{jsSidebar("Statements")}}
-
 Une **instruction étiquetée (_labeled_ en anglais)** peut être utilisée avec les instructions {{jsxref("Statements/break", "break")}} ou {{jsxref("Statements/continue", "continue")}}. Un label permet d'identifier une instruction avec un identifiant pour y faire référence plus tard.
 
 {{InteractiveExample("JavaScript Demo: Statement - Label")}}

@@ -3,7 +3,7 @@ title: "Request: Request() コンストラクター"
 short-title: Request()
 slug: Web/API/Request/Request
 l10n:
-  sourceCommit: ca8be373334524886ee437112d7eae180a59be48
+  sourceCommit: f6e66d18205c93fcaeb2ea9ad51541b5b4d7d2b1
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
@@ -45,12 +45,18 @@ new Request(input, options)
 
 ### 例外
 
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : 次の場合に発生します。
+    - [トピック API](/ja/docs/Web/API/Topics_API) の使用が、仕様上、{{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によって明示的に禁止されており、`browsingTopics` が `true` に設定されている場合。
+    - [プライベートステートトークン API](/ja/docs/Web/API/Private_State_Token_API)の使用が、仕様上、{{httpheader('Permissions-Policy/private-state-token-issuance','private-state-token-issuance')}} または {{httpheader('Permissions-Policy/private-state-token-redemption','private-state-token-redemption')}} を含む[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によって明示的に禁止されており、かつ `privateToken` オプションが指定され、その中に許可されていない `privateToken.operation` 型が含まれている場合。
 - `TypeError`
-  - : URL に `http://user:password@example.com` のように資格情報が入っていたり、解釈できなかったりした場合。
+  - : 次の場合に発生します。
+    - URL に `http://user:password@example.com` のように資格情報が入っていたり、解釈できなかったりした場合。
+    - `privateToken` 初期化オプションが指定されており、`privateToken.operation` の型が `send-redemption-record` となっているにもかかわらず、`privateToken.issues` 配列が空であるか設定されていないか、あるいは指定された `issuers` のうち 1 つ以上が信頼できない HTTPS URL である。
 
 ## 例
 
-[Fetch Request の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request) ([Fetch Request のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-request/) を参照) では、コンストラクターを使用して新しいリクエストオブジェクトを生成してから、 {{domxref("Window/fetch", "fetch()")}} 呼び出しを使用して取得しています。画像を取得してから、それを適切に処理できるように MIME タイプを設定するため、レスポンスの {{domxref("Response.blob")}} を実行しています。それから、オブジェクト URL を生成して、 {{htmlelement("img")}} 要素に表示しています。
+[Fetch Request の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request) ([Fetch Request のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-request/)を参照) では、コンストラクターを使用して新しいリクエストオブジェクトを生成してから、 {{domxref("Window/fetch", "fetch()")}} 呼び出しを使用して取得しています。画像を取得してから、それを適切に処理できるように MIME タイプを設定するため、レスポンスの {{domxref("Response.blob")}} を実行しています。それから、オブジェクト URL を生成して、 {{htmlelement("img")}} 要素に表示しています。
 
 ```js
 const myImage = document.querySelector("img");
@@ -64,7 +70,7 @@ fetch(myRequest)
   });
 ```
 
-[Fetch Request with init の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request-with-init) ([Fetch Request init のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-request-with-init/) を参照) では、 `fetch()` を呼び出すときに初期化オブジェクトを渡している以外は同じです。
+[Fetch Request with init の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request-with-init) ([Fetch Request init のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-request-with-init/)を参照) では、 `fetch()` を呼び出すときに初期化オブジェクトを渡している以外は同じです。
 この場合、 {{httpheader("Cache-Control")}} の値を設定して、どのようなキャッシュレスポンスなら許容できるかを示すことができます。
 
 ```js
@@ -82,7 +88,7 @@ const options = {
 const req = new Request("flowers.jpg", options);
 
 fetch(req).then((response) => {
-  // ...
+  // …
 });
 ```
 
@@ -90,7 +96,7 @@ fetch(req).then((response) => {
 
 ```js
 fetch(req, options).then((response) => {
-  // ...
+  // …
 });
 ```
 

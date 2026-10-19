@@ -3,10 +3,10 @@ title: "Document: fullscreen プロパティ"
 short-title: fullscreen
 slug: Web/API/Document/fullscreen
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("Fullscreen API")}}{{Deprecated_Header}}
+{{APIRef("Fullscreen API")}}
 
 廃止された {{domxref("Document")}} インターフェイスの **`fullscreen`** プロパティは読み取り専用で、文書が現在全画面モードで表示されているかどうかを報告します。
 

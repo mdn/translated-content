@@ -3,7 +3,7 @@ title: "Function : propriété caller"
 short-title: caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 l10n:
-  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 {{Non-standard_Header}}
@@ -49,7 +49,7 @@ Notez que le seul comportement défini par la spécification ECMAScript est que 
 
 Cette propriété remplace la propriété obsolète `arguments.caller` de l'objet {{JSxRef("Functions/arguments", "arguments")}}.
 
-La propriété spéciale `__caller__`, qui renvoyait l'objet d'activation de l'appelant permettant ainsi de reconstituer la pile, a été supprimée pour des raisons de sécurité.
+La propriété spéciale `__caller__`, qui retourne l'objet d'activation de l'appelant vous permettant ainsi de reconstituer la pile, a été supprimée pour des raisons de sécurité.
 
 ## Exemples
 

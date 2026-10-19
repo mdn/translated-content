@@ -113,13 +113,7 @@ p {
     </tr>
     <tr>
       <td><code>text-overflow: clip</code></td>
-      <td style="padding: 1px; font-family: monospace">
-        <img
-          alt="t-o_clip.png"
-          class="default internal"
-          src="t-o_clip.png"
-        />
-      </td>
+      <td style="padding: 1px; font-family: monospace">123456</td>
       <td style="direction: ltr">
         <div
           style="
@@ -134,13 +128,7 @@ p {
           123456
         </div>
       </td>
-      <td style="padding: 1px; font-family: monospace">
-        <img
-          alt="t-o_clip_rtl.png"
-          class="default internal"
-          src="t-o_clip_rtl.png"
-        />
-      </td>
+      <td style="padding: 1px; font-family: monospace">654321</td>
       <td style="direction: rtl">
         <div
           style="

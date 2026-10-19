@@ -9,7 +9,7 @@ slug: Web/API/WaveShaperNode/WaveShaperNode
 
 ## 语法
 
-```plain
+```js-nolint
 var waveShaperNode = new WaveShaperNode(context, options)
 ```
 

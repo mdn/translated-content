@@ -3,7 +3,7 @@ title: Propriété CSS `container-type`
 short-title: container-type
 slug: Web/CSS/Reference/Properties/container-type
 l10n:
-  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
+  sourceCommit: 892eb917bee599a9d6cae7d33ed783129dbb39b3
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`container-type`** permet de définir le type de contexte de conteneur utilisé dans une requête de conteneur.
@@ -31,7 +31,7 @@ container-type: unset;
 
 ### Valeurs
 
-Cette propriété est définie par une ou deux valeurs de mots-clés issues de la liste suivante. Dans le cas où deux valeurs sont spécifiées, l'une doit être `scroll-state` et l'autre doit être `inline-size` ou `size`&nbsp;:
+Cette propriété est définie par une ou deux valeurs de mots-clés issues de la liste suivante. Dans le cas où deux valeurs sont définies, l'une doit être `scroll-state` et l'autre doit être `inline-size` ou `size`&nbsp;:
 
 - `anchored`
   - : Établit un conteneur de requête pour les requêtes de conteneur ancré sur le conteneur. Dans ce cas, la taille de l'élément n'est pas calculée de façon isolée&nbsp;; aucune [compartimentation](/fr/docs/Web/CSS/Guides/Containment/Using) n'est appliquée.
@@ -66,7 +66,7 @@ Certains types de requêtes de conteneur ne peuvent être effectués que sur des
 
 - [Taille](#requêtes_de_taille_de_conteneur)&nbsp;: Permet d'appliquer sélectivement des règles CSS aux enfants d'un conteneur, en fonction d'une condition de taille générale ou en incise, telle qu'une dimension maximale ou minimale, un rapport d'aspect ou une orientation.
 - [État de défilement](#requêtes_détat_de_défilement_du_conteneur)&nbsp;: Permet d'appliquer sélectivement des règles CSS aux enfants d'un conteneur, en fonction d'une condition d'état de défilement, comme si le conteneur est partiellement défilé ou s'il est une [cible d'accrochage](/fr/docs/Glossary/Scroll_snap#cible_daccrochage) qui va être accrochée à son conteneur d'accrochage de défilement.
-- [Ancré](#requêtes_de_conteneur_ancré)&nbsp;: Permet d'appliquer sélectivement des règles CSS aux enfants d'un conteneur, en fonction de si le conteneur est [positionné par ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning) et a une [option de repli de position](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) appliquée.
+- [Ancré](#requêtes_de_conteneur_ancré)&nbsp;: Permet d'appliquer sélectivement des règles CSS aux enfants d'un conteneur, en fonction de si le conteneur est [positionné par une ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning) et a une [option de repli de position](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) appliquée.
 
 Si un `container-type` n'est pas défini sur un conteneur, l'élément n'est pas un conteneur de requêtes pour les requêtes de taille, d'état de défilement ou ancrées, mais peut toujours être utilisé comme conteneur de requêtes pour les [requêtes de style de conteneur](/fr/docs/Web/CSS/Reference/At-rules/@container#requêtes_de_style_de_conteneur) et les [requêtes de conteneur uniquement par nom](/fr/docs/Web/CSS/Guides/Containment/Container_queries#requêtes_de_conteneur_uniquement_par_un_nom).
 
@@ -100,7 +100,7 @@ Par exemple, vous pouvez avoir un élément infobulle positionné par une ancre 
 ```css
 .tooltip {
   position: absolute;
-  position-anchor: --monAncre;
+  position-anchor: --mon-ancre;
   position-area: top;
   position-try-fallbacks: flip-block;
   container-type: anchored;

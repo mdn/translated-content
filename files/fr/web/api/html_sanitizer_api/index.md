@@ -2,7 +2,7 @@
 title: API HTML Sanitizer
 slug: Web/API/HTML_Sanitizer_API
 l10n:
-  sourceCommit: 8a74d8feac267c1ddc37a4a8bc61e9aa8db75b12
+  sourceCommit: f4c14731a1a157fc8d8f7357ac4d74d14a7d7fb5
 ---
 
 {{DefaultAPISidebar("HTML Sanitizer API")}}
@@ -14,7 +14,7 @@ l10n:
 Les applications web ont souvent besoin de travailler avec du HTML non fiable côté client, par exemple, dans le cadre d'une solution de modèle côté client, lors du rendu de contenu généré par les utilisateur·ice·s, ou si elles incluent des données dans un cadre provenant d'un autre site.
 
 L'injection de HTML qui n'est pas fiable peut rendre un site vulnérable à différent [types d'attaques](/fr/docs/Web/Security/Attacks).
-En particulier, [les attaques par script intersite (XSS)](/fr/docs/Web/Security/Attacks/XSS) fonctionnent en injectant du HTML non fiable dans le DOM, ce qui exécute ensuite du JavaScript dans le contexte de l'origine actuelle — permettant au code malveillant de s'exécuter comme s'il provenait de l'origine du site.
+En particulier, [les attaques par script inter-site (XSS)](/fr/docs/Web/Security/Attacks/XSS) fonctionnent en injectant du HTML non fiable dans le DOM, ce qui exécute ensuite du JavaScript dans le contexte de l'origine actuelle — permettant au code malveillant de s'exécuter comme s'il provenait de l'origine du site.
 Ces attaques peuvent être atténuées en supprimant les éléments et attributs HTML non sécurisés avant qu'ils ne soient injectés dans le DOM.
 
 L'API HTML Sanitizer fournit un certain nombre de méthodes pour supprimer les entités HTML indésirables des entrées HTML avant qu'elles ne soient injectées dans le DOM.
@@ -25,9 +25,9 @@ Ces méthodes existent en versions sécurisées contre les XSS, qui garantissent
 L'API HTML Sanitizer fournit des méthodes sécurisées et non sécurisées pour injecter des chaînes de caractères HTML dans un élément ({{DOMxRef('Element')}}) ou une racine d'ombre ({{DOMxRef('ShadowRoot')}}) et pour analyser du HTML dans le document ({{DOMxRef('Document')}}).
 
 - Méthodes sécurisées
-  - : {{DOMxRef('Element.setHTML()')}}, {{DOMxRef('ShadowRoot.setHTML()')}} et {{DOMxRef('Document/parseHTML_static','Document.parseHTML()')}}.
+  - : {{DOMxRef("Element.setHTML()")}}, {{DOMxRef("ShadowRoot.setHTML()")}} et {{DOMxRef("Document/parseHTML_static","Document.parseHTML()")}}.
 - Méthodes non sécurisées
-  - : {{DOMxRef('Element.setHTMLUnsafe()')}}, {{DOMxRef('ShadowRoot.setHTMLUnsafe()')}} et {{DOMxRef('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
+  - : {{DOMxRef("Element.setHTMLUnsafe()")}}, {{DOMxRef("ShadowRoot.setHTMLUnsafe()")}} et {{DOMxRef("Document/parseHTMLUnsafe_static","Document.parseHTMLUnsafe()")}}.
 
 Toutes les méthodes prennent le HTML à injecter et un {{DOMxRef("Sanitizer")}} ou {{DOMxRef("SanitizerConfig")}} optionnel comme arguments.
 Les objets d'assainissement définissent les entités HTML qui sont filtrées de l'entrée avant qu'elle ne soit injectée.
@@ -58,19 +58,19 @@ unElementCible.setHTMLUnsafe(chaineNonSure, { assainisseur });
 
 ### Configurations de l'assainisseur
 
-La configuration d'un assainisseur définit quelles entités HTML spnt autorisées, remplacées ou supprimées lorsque l'assainisseur est utilisé, y compris les éléments, les attributs, les attributs `data-*` et les commentaires.
+La configuration d'un assainisseur définit quelles entités HTML sont autorisées, remplacées ou supprimées lorsque l'assainisseur est utilisé, y compris les éléments, les attributs, les attributs `data-*` et les commentaires.
 
 Il existe deux mécanismes pour définir une configuration d'assainisseur, dont l'un ou l'autre peut être passé à toutes les méthodes d'assainissement&nbsp;:
 
-- {{DOMxRef('SanitizerConfig')}} est un objet dictionnaire qui définit des tableaux pour les éléments et attributs autorisés/interdits et des propriétés booléennes qui indiquent si les commentaires et les attributs de données spnt autorisés ou omis, et ainsi de suite.
+- {{DOMxRef("SanitizerConfig")}} est un objet dictionnaire qui définit des tableaux pour les éléments et attributs autorisés/interdits et des propriétés booléennes qui indiquent si les commentaires et les attributs de données sont autorisés ou omis, et ainsi de suite.
 
   Seul un sous-ensemble des options de configuration possibles peut être défini dans une configuration particulière afin de réduire la redondance et l'ambiguïté.
   Le sous-ensemble autorisé est résumé dans la section [Configurations d'autorisation et de suppression](#configurations_dautorisation_et_de_suppression) ci-dessous, et décrit en détail dans [Configuration valide](/fr/docs/Web/API/SanitizerConfig#configuration_valide).
 
-- {{DOMxRef('Sanitizer')}} est essentiellement une enveloppe autour d'un objet {{DOMxRef('SanitizerConfig')}} qui fournit des méthodes pour modifier ergonomiquement la configuration et s'assurer qu'elle reste valide.
+- {{DOMxRef("Sanitizer")}} est essentiellement une enveloppe autour d'un objet {{DOMxRef("SanitizerConfig")}} qui fournit des méthodes pour modifier de façon ergonomique la configuration et s'assurer qu'elle reste valide.
 
   Par exemple, vous pouvez utiliser une méthode pour ajouter un élément autorisé, et elle supprime également l'élément du tableau `replaceWithChildrenElements` (si présent).
-  L'interface fournit également des méthodes pour retourner une copie de l'objet {{DOMxRef('SanitizerConfig')}} sous-jacent et pour mettre à jour l'assainisseur afin qu'il soit sûr contre les XSS.
+  L'interface fournit également des méthodes pour retourner une copie de l'objet {{DOMxRef("SanitizerConfig")}} sous-jacent et pour mettre à jour l'assainisseur afin qu'il soit sûr contre les XSS.
   Elle peut fournir des normalisations de la configuration de l'assainisseur utilisée pour le construire, ce qui facilite sa compréhension et sa réutilisation.
 
 Bien que vous puissiez utiliser l'une ou l'autre interface dans toutes les méthodes d'assainissement, `Sanitizer` est probablement plus efficace à partager et à réutiliser que `SanitizerConfig`.
@@ -109,13 +109,13 @@ Si vous définissez un objet de configuration vide, une configuration d'autorisa
 
 ##### Configurations d'autorisation
 
-Avec les «&nbsp;configurations autorisées&nbsp;», vous définissez les éléments et attributs que vous souhaitez _autoriser_ (ou remplacer par des éléments enfants) — tous les autres éléments/attributs dans l'entrée spnt supprimés.
-Cela permet de comprendre facilement quels éléments spnt autorisés dans le DOM lorsque le HTML est analysé.
+Avec les «&nbsp;configurations autorisées&nbsp;», vous définissez les éléments et attributs que vous souhaitez _autoriser_ (ou remplacer par des éléments enfants) — tous les autres éléments/attributs dans l'entrée sont supprimés.
+Cela permet de comprendre facilement quels éléments sont autorisés dans le DOM lorsque le HTML est analysé.
 Elles sont utiles lorsque vous savez exactement quelles entités HTML vous souhaitez pouvoir injecter dans un contexte particulier.
 
 Les configurations autorisées sont créées en définissant un `Sanitizer` qui enveloppe un {{DOMxRef("SanitizerConfig")}} incluant les tableaux [`elements`](/fr/docs/Web/API/SanitizerConfig#éléments) et/ou [`attributes`](/fr/docs/Web/API/SanitizerConfig#attributs) (et non les tableaux `removeElements` ou `removeAttributes`).
 
-Par exemple, la configuration suivante est créée en passant un {{DOMxRef('SanitizerConfig')}} qui autorise les éléments HTML {{HTMLElement("p")}} et {{HTMLElement("div")}}, ainsi que les attributs `cite` et `onclick` sur tout élément autorisé.
+Par exemple, la configuration suivante est créée en passant un {{DOMxRef("SanitizerConfig")}} qui autorise les éléments HTML {{HTMLElement("p")}} et {{HTMLElement("div")}}, ainsi que les attributs `cite` et `onclick` sur tout élément autorisé.
 Elle remplace également les éléments HTML {{HTMLElement("b")}} par leurs nœuds enfants.
 
 ```js
@@ -126,7 +126,7 @@ const assainisseur = new Sanitizer({
 });
 ```
 
-La même configuration peut également être créée en utilisant les méthodes de {{DOMxRef('Sanitizer')}}.
+La même configuration peut également être créée en utilisant les méthodes de {{DOMxRef("Sanitizer")}}.
 Notez que dans le code suivant, le constructeur `Sanitizer()` prend un objet vide, ce qui donne un `Sanitizer` dont la configuration sous-jacente inclut à la fois les tableaux `elements` et `attributes` — en d'autres termes, une «&nbsp;configuration autorisée&nbsp;».
 
 ```js
@@ -147,7 +147,7 @@ Dans les «&nbsp;configurations de suppression&nbsp;» vous définissez les él�
 
 Les configurations de suppression sont créées en utilisant un {{DOMxRef("SanitizerConfig")}} qui inclut les tableaux [`removeElements`](/fr/docs/Web/API/SanitizerConfig#removeelements) et/ou [`removeAttributes`](/fr/docs/Web/API/SanitizerConfig#removeattributes) (et non les tableaux `elements` ou `attributes`).
 
-Par exemple, la configuration suivante de `Sanitizer` supprimerait les mêmes éléments qui étaient autorisés dans le code précédent&nbsp;:
+Par exemple, la configuration suivante de `Sanitizer` supprime les mêmes éléments qui sont autorisés dans le code précédent&nbsp;:
 
 ```js
 const sanitizer = new Sanitizer({
@@ -211,12 +211,12 @@ Vous pouvez également appeler {{DOMxRef("Sanitizer/removeUnsafe", "removeUnsafe
 
 La configuration par défaut de l'assainisseur est plus restrictive que la configuration de base sécurisée contre les XSS.
 Elle définit l'assainisseur qui est utilisé si vous appelez {{DOMxRef("Element.setHTML()")}} ou les autres [méthodes de désinfection sécurisées](/fr/docs/Web/API/HTML_Sanitizer_API#méthodes_dassainissement) sans passer d'objet assainisseur.
-C'est également la configuration qui est renvoyée par le [constructeur `Sanitizer()`](/fr/docs/Web/API/Sanitizer/Sanitizer) lorsqu'aucune configuration n'est définie.
+C'est également la configuration qui est retournée par le [constructeur `Sanitizer()`](/fr/docs/Web/API/Sanitizer/Sanitizer) lorsqu'aucune configuration n'est définie.
 
 La configuration supprime les types d'éléments suivants&nbsp;:
 
 1. Ceux qui sont connus pour être non sécurisés contre les XSS (comme défini dans la [configuration de base sécurisée contre les XSS](#configuration_de_base_sécurisée_contre_les_XSS)).
-2. Éléments supplémentaires qui pourraient être utilisés dans des attaques de clickjacking, de spoofing ou autres.
+2. Éléments supplémentaires qui peuvent être utilisés dans des attaques de détournement de clic, d'usurpation d'identité ou autres.
 3. Les commentaires et les attributs `data-*`.
 
 Par conséquent, elle fournit un assainisseur avec une surface d'attaque minimale, tout en restant adapté à la majorité des cas d'utilisation de l'assainissement.
@@ -225,63 +225,63 @@ Pour une liste des éléments et attributs autorisés, voir [Configuration par d
 
 ### Nettoyage et types fiables
 
-[L'API Trusted Types](/fr/docs/Web/API/Trusted_Types_API) fournit des mécanismes pour s'assurer que les entrées sont passées par une fonction de transformation définie par l'utilisateur·ice avant d'être transmises à une API qui pourrait exécuter cette entrée.
+[L'API Trusted Types](/fr/docs/Web/API/Trusted_Types_API) fournit des mécanismes pour s'assurer que les entrées sont passées par une fonction de transformation définie par l'utilisateur·ice avant d'être transmises à une API qui peut exécuter cette entrée.
 Cette fonction de transformation est le plus souvent utilisée pour assainir l'entrée, mais ce n'est pas obligatoire&nbsp;: l'objectif principal de l'API est de faciliter l'audit du code d'assainissement par les développeur·euse·s, et non de définir comment ou si l'assainissement est effectué.
 
 Les méthodes d'assainissement HTML sécurisées n'utilisent pas de types fiables.
-Comme elles filtrent toujours toutes les entités XSS non sécurisées avant que le HTML d'entrée ne soit injecté, il n'est pas nécessaire d'assainisser la chaîne de caractères d'entrée ou d'auditer les méthodes.
+Comme elles filtrent toujours toutes les entités XSS non sécurisées avant que le HTML d'entrée ne soit injecté, il n'est pas nécessaire d'assainir la chaîne de caractères d'entrée ou d'auditer les méthodes.
 
 Cependant, les méthodes d'assainissement HTML non sécurisées peuvent injecter du HTML non fiable, selon l'assainisseur, et fonctionnent donc avec des types fiables.
 Les méthodes peuvent prendre soit une chaîne de caractères, soit un `TrustedType` en entrée.
 Si un assainisseur est également fourni, la fonction de transformation est exécutée en premier, puis l'assainisseur.
 
-Notez que le comportement de la fonction de transformation dans ce cas dépend de la politique du site Web (qui pourrait être de rejeter toute utilisation des méthodes non sécurisées).
+Notez que le comportement de la fonction de transformation dans ce cas dépend de la politique du site Web (qui peut être de rejeter toute utilisation des méthodes non sécurisées).
 
 ### Bibliothèques d'assainissement tierces
 
-Avant l'API Sanitizer, les développeur·euse·s filtraient généralement les chaînes de caractères d'entrée en utilisant des bibliothèques tierces telles que [DOMPurify <sup>(angl.)</sup>](https://github.com/cure53/DOMPurify), peut-être appelées à partir de fonctions de transformation dans les types fiables.
+Avant l'API Sanitizer, les développeur·euse·s filtrent généralement les chaînes de caractères d'entrée en utilisant des bibliothèques tierces telles que [DOMPurify <sup>(angl.)</sup>](https://github.com/cure53/DOMPurify), peut-être appelées à partir de fonctions de transformation dans les types fiables.
 
-Ces bibliothèques ne devraient pas être nécessaires lors de l'utilisation des méthodes d'assainissement HTML sécurisées, car l'API est intégrée au navigateur et est plus consciente du contexte d'analyse et du code autorisé à s'exécuter que les bibliothèques d'analyse externes.
+Ces bibliothèques ne doivent pas être nécessaires lors de l'utilisation des méthodes d'assainissement HTML sécurisées, car l'API est intégrée au navigateur et est plus consciente du contexte d'analyse et du code autorisé à s'exécuter que les bibliothèques d'analyse externes.
 
 Elles peuvent être utiles avec les méthodes HTML non sécurisées et les types fiables, en fonction des politiques de types fiables du site Web.
 
 ## Interfaces
 
-- {{DOMxRef('Sanitizer')}}
+- {{DOMxRef("Sanitizer")}}
   - : Objet de configuration réutilisable qui définit les éléments et attributs autorisés/supprimés lors de l'assainissement des chaînes de caractères HTML non fiables.
     Il est utilisé dans les méthodes qui insèrent des chaînes de caractères HTML dans le DOM ou le Document.
-- {{DOMxRef('SanitizerConfig')}}
+- {{DOMxRef("SanitizerConfig")}}
   - : Un dictionnaire qui définit une configuration d'assainisseur.
-    Cela peut être utilisé aux mêmes endroits que {{DOMxRef('Sanitizer')}}, mais il est probablement moins efficace à utiliser et à réutiliser.
+    Cela peut être utilisé aux mêmes endroits que {{DOMxRef("Sanitizer")}}, mais il est probablement moins efficace à utiliser et à réutiliser.
 
 ## Extensions à d'autres interfaces
 
 ### Méthodes sûres contre le XSS
 
-- {{DOMxRef('Element.setHTML()')}}
+- {{DOMxRef("Element.setHTML()")}}
   - : Analyse une chaîne de caractères HTML en une sous-arborescence de nœuds, en supprimant tous les éléments invalides dans le contexte de l'élément.
     Supprime ensuite tous les éléments et attributs non autorisés par la configuration de l'assainisseur, ainsi que tous ceux considérés comme non sécurisés au regard des XSS (même s'ils sont autorisés par la configuration).
     La sous-arborescence est ensuite insérée dans le DOM en tant que sous-arborescence de l'élément.
-- {{DOMxRef('ShadowRoot.setHTML()')}}
+- {{DOMxRef("ShadowRoot.setHTML()")}}
   - : Analyse une chaîne de caractères HTML en une sous-arborescence de nœuds.
     Supprime ensuite tous les éléments et attributs non autorisés par la configuration de l'assainisseur, ainsi que tous ceux considérés comme non sécurisés au regard des XSS (même s'ils sont autorisés par la configuration).
     La sous-arborescence est ensuite insérée en tant que sous-arborescence du `ShadowRoot`.
-- {{DOMxRef('Document/parseHTML_static','Document.parseHTML()')}}
+- {{DOMxRef("Document/parseHTML_static", "Document.parseHTML()")}}
   - : Analyse une chaîne de caractères HTML en une sous-arborescence de nœuds.
     Supprime ensuite tous les éléments et attributs non autorisés par la configuration de l'assainisseur, ainsi que tous ceux considérés comme non sécurisés au regard des XSS (même s'ils sont autorisés par la configuration).
     La sous-arborescence est ensuite définie comme racine du {{DOMxRef("Document")}}.
 
 ### Méthodes non sécurisées contre le XSS
 
-- {{DOMxRef('Element.setHTMLUnsafe()')}}
+- {{DOMxRef("Element.setHTMLUnsafe()")}}
   - : Analyse une chaîne de caractères HTML en une sous-arborescence de nœuds, en supprimant tous les éléments invalides dans le contexte de l'élément.
     Supprime ensuite tous les éléments et attributs non autorisés par l'assainisseur&nbsp;: si aucun assainisseur n'est défini, tous les éléments sont autorisés.
     La sous-arborescence est ensuite insérée dans le DOM en tant que sous-arborescence de l'élément.
-- {{DOMxRef('ShadowRoot.setHTMLUnsafe()')}}
+- {{DOMxRef("ShadowRoot.setHTMLUnsafe()")}}
   - : Analyse une chaîne de caractères HTML en une sous-arborescence de nœuds.
     Supprime ensuite tous les éléments et attributs non autorisés par l'assainisseur&nbsp;: si aucun assainisseur n'est défini, tous les éléments sont autorisés.
     La sous-arborescence est ensuite insérée en tant que sous-arborescence du `ShadowRoot`.
-- {{DOMxRef('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}
+- {{DOMxRef("Document/parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
   - : Analyse une chaîne de caractères HTML en une sous-arborescence de nœuds.
     Supprime ensuite tous les éléments et attributs non autorisés par l'assainisseur&nbsp;: si aucun assainisseur n'est défini, tous les éléments sont autorisés.
     La sous-arborescence est ensuite définie comme racine du {{DOMxRef("Document")}}.
@@ -316,16 +316,16 @@ unElementCible.setHTMLUnsafe(chaineNonSure);
 
 ### Utiliser une configuration d'assainisseur autorisant certains éléments
 
-Ce code montre comment vous pourriez utiliser `Element.setHTMLUnsafe()` avec un assainisseur autorisant uniquement les éléments HTML {{HTMLElement("p")}}, {{HTMLElement("b")}} et {{HTMLElement("div")}}.
-Tous les autres éléments de la chaîne de caractères d'entrée seraient supprimés.
+Ce code montre comment vous pouvez utiliser `Element.setHTMLUnsafe()` avec un assainisseur autorisant uniquement les éléments HTML {{HTMLElement("p")}}, {{HTMLElement("b")}} et {{HTMLElement("div")}}.
+Tous les autres éléments de la chaîne de caractères d'entrée sont supprimés.
 
 ```js
 const assainisseur = new Sanitizer({ elements: ["p", "b", "div"] });
 unElementCible.setHTMLUnsafe(chaineNonSure, { assainisseur });
 ```
 
-Notez que dans ce cas, vous devriez normalement utiliser `setHTML()`.
-Vous ne devriez utiliser `Element.setHTMLUnsafe()` que si vous devez autoriser des éléments ou des attributs non sécurisés contre les XSS.
+Notez que dans ce cas, vous devez normalement utiliser `setHTML()`.
+Vous ne devez utiliser `Element.setHTMLUnsafe()` que si vous devez autoriser des éléments ou des attributs non sécurisés contre les XSS.
 
 ## Spécifications
 

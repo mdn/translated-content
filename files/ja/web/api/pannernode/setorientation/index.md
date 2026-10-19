@@ -6,7 +6,7 @@ l10n:
   sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
-{{APIRef("Web Audio API")}}{{Deprecated_Header}}
+{{APIRef("Web Audio API")}}
 
 > [!NOTE]
 > この非推奨メソッドを置き換えるために推奨される方法は、 [`orientationX`](/ja/docs/Web/API/PannerNode/orientationX), [`orientationY`](/ja/docs/Web/API/PannerNode/orientationY), [`orientationZ`](/ja/docs/Web/API/PannerNode/orientationZ) 属性を直接設定することです。

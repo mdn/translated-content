@@ -13,7 +13,7 @@ slug: Web/API/Range/setStart
 
 ## 语法
 
-```plain
+```js-nolint
 range.setStart(startNode, startOffset);
 ```
 

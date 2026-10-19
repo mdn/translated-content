@@ -13,7 +13,7 @@ slug: Web/API/HTMLElement/offsetLeft
 
 ## 语法
 
-```plain
+```js
 left = element.offsetLeft;
 ```
 

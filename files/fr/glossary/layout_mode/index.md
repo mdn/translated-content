@@ -2,7 +2,7 @@
 title: Mode de disposition
 slug: Glossary/Layout_mode
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c26d4cc8e9b10c504587531c49fa82b7b646be18
 ---
 
 Un **mode de disposition CSS** (_layout mode_), parfois raccourci en «&nbsp;disposition&nbsp;» est un algorithme qui détermine la position et la taille des boîtes des éléments en fonction des interactions avec leurs voisins et leurs ancêtres.
@@ -13,8 +13,8 @@ Il existe plusieurs modes de disposition&nbsp;:
   - : Tous les éléments font partie du flux normal jusqu'à ce qu'une propriété les en sorte. Le flux normal inclut&nbsp;:
     - **[Disposition en bloc](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout)**
       - : Conçue pour organiser des boîtes comme les paragraphes.
-    - **[Disposition en ligne](/fr/docs/Web/CSS/Guides/Inline_layout)**
-      - : Conçue pour organiser des éléments en ligne comme le texte.
+    - **[Disposition en incise](/fr/docs/Web/CSS/Guides/Inline_layout)**
+      - : Conçue pour organiser des éléments en incise comme le texte.
 
 - **[Disposition en tableau](/fr/docs/Web/CSS/Guides/Table)**
   - : Conçue pour organiser des tableaux.
@@ -30,7 +30,7 @@ Il existe plusieurs modes de disposition&nbsp;:
   - : Conçue pour organiser les éléments selon une grille fixe.
 
 > [!NOTE]
-> [Les propriétés CSS](/fr/docs/Web/CSS/Reference) ne s'appliquent toutes à tous les _modes de disposition_. La plupart des propriétés n'ont d'effet que pour un ou deux de ces modes et seront sans effet pour un élément qui s'inscrit dans un autre mode de disposition.
+> [Les propriétés CSS](/fr/docs/Web/CSS/Reference) ne s'appliquent toutes à tous les _modes de disposition_. La plupart des propriétés n'ont d'effet que pour un ou deux de ces modes et sont sans effet pour un élément qui s'inscrit dans un autre mode de disposition.
 
 ## Voir aussi
 

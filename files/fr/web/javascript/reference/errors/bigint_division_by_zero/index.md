@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
 ---
 
-{{jsSidebar("Errors")}}
-
 L'exception JavaScript <i lang="en">"BigInt division by zero"</i> se produit lorsqu'une valeur [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) est divisée par `0n`.
 
 ## Message

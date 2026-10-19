@@ -22,7 +22,11 @@ original_slug: Web/CSS/:left
 
 ## Синтаксис
 
-{{csssyntax}}
+```css
+:left {
+  /* ... */
+}
+```
 
 ## Примеры
 

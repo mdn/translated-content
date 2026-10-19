@@ -5,7 +5,7 @@ l10n:
   sourceCommit: e8e22a6e6d6455222c8c1a1e1346a149d300ab35
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 {{DOMxRef("Document")}} 接口的 **`all`** 只读属性会返回以文档节点为根的 {{DOMxRef("HTMLAllCollection")}} 集合。
 

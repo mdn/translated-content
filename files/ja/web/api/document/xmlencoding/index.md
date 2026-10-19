@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}
 
 XML 宣言によって決定されたエンコード方式を返します。未指定または不明の場合は `null` となります。
 

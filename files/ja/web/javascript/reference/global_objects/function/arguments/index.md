@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{Deprecated_Header}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 > [!NOTE]
 > {{jsxref("Function")}} オブジェクトの `arguments` プロパティは非推奨です。推奨される `arguments` オブジェクトへのアクセス方法は、関数内で利用できる変数 {{jsxref("Functions/arguments", "arguments")}} を利用することです。

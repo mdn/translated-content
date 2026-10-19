@@ -2,7 +2,7 @@
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
 l10n:
-  sourceCommit: efb84732016b60b17f81358960f9d5ebf516c5fe
+  sourceCommit: 9c560a9d9de6f663ada0c1bebaf93a3c76e0901d
 ---
 
 {{APIRef("WebRTC")}}
@@ -104,7 +104,7 @@ _{{DOMxRef("EventTarget")}} から継承したメソッドもあります。_
   - : {{DOMxRef("RTCPeerConnection.getSenders", "getSenders()")}} によって報告される送信者リストから対応する {{DOMxRef("RTCRtpSender")}} を実際に削除せずに、指定したトラックからのメディア送信を停止するよう接続のローカル側に指示します。
     トラックがすでに停止している場合、または接続の送信者リストにない場合、このメソッドは何の効果も持ちません。
 - {{DOMxRef("RTCPeerConnection.restartIce", "restartIce()")}}
-  - : ICE 候補の収集を、接続の両端でやり直すよう簡単に要求できるようにします。
+  - : 接続の両端において、ICE 候補の収集を簡単に再実行するようリクエストすることができます。
     これにより、 {{Glossary("ICE")}} の再起動を発生させるために、呼び出し側または受信側のどちらかが同じメソッドを使用することができ、プロセスが簡素化されます。
 - {{DOMxRef("RTCPeerConnection.setConfiguration", "setConfiguration()")}}
   - : 指定されたオブジェクトに含まれる値に基づいて、接続の現在の構成を設定します。
@@ -152,7 +152,7 @@ _{{DOMxRef("EventTarget")}} から継承したメソッドもあります。_
     これは、 ICE 交渉がまだ始まっていないか (`new`)、候補の収集を始めたか (`gathering`)、終了したか (`complete`) を示します。
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
   - : {{Glossary("ICE")}} 接続の交渉または再交渉を行う必要があるときに送信されます。
-    これは、最初に接続を開くときにも、変化するネットワーク条件に適応する必要があるときにも発生します。
+    これは、接続を初めて確立するときだけでなく、変化するネットワーク状況に対応する必要があるときにも現れる可能性があります。
     受信側は、オファーを作成し、相手ピアに送信することで応答する必要があります。
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
   - : この接続の {{Glossary("ICE")}} 信号の状態が変化したときに送信されます。
@@ -168,6 +168,10 @@ _{{DOMxRef("EventTarget")}} から継承したメソッドもあります。_
 - {{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : {{domxref("MediaStream")}} が接続から削除されたときに送信されます。
     この古いイベントを待ち受けるのではなく、それぞれのストリームの {{domxref("MediaStream.removetrack_event", "removetrack")}} イベントを待ち受けるために使用する必要があります。
+
+## 例
+
+コード例については [WebRTC samples > `RTCPeerConnection`](https://webrtc.github.io/samples/#peerconnection) を参照してください。
 
 ## 仕様書
 

@@ -3,8 +3,6 @@ title: "ReferenceError: can't access lexical declaration 'X' before initializati
 slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 ---
 
-{{jsSidebar("Errors")}}
-
 ## Message
 
 ```

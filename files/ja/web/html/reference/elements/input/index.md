@@ -1,9 +1,9 @@
 ---
-title: HTML `<input>` 入力要素
+title: "`<input>` 入力要素 (HTML)"
 short-title: <input>
 slug: Web/HTML/Reference/Elements/input
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 6488b82388db9e593ec28be1d845688e29c679e1
 ---
 
 **`<input>`** は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーからデータを受け取るための、ウェブベースのフォーム用の操作可能なコントロールを作成するために使用します。端末と{{Glossary("User agent", "ユーザーエージェント")}}によりますが、広範に渡る種類のデータ入力やコントロールウィジェットが利用できます。`<input>` 要素は入力型と属性の組み合わせの数が非常に多いため、HTML の中で最も強力かつ最も複雑な要素の一つです。
@@ -617,6 +617,12 @@ label {
 - `value`
   - : 入力コントロールの値です。HTML の中で指定されると、これは初期値となり、その後で JavaScript を使用してそれぞれの {{domxref("HTMLInputElement")}} オブジェクトの `value` プロパティにアクセスすることで、いつでも変更したり受け取ったりすることができます。`value` 属性は常に省略可ですが、`checkbox`, `radio`, `hidden` においては必須だと考えてください。
 
+- `webkitdirectory`
+  - : 論理属性の `webkitdirectory` は、存在する場合、ファイル選択ダイアログのインターフェイスでユーザーが選択できる対象をディレクトリーのみに限定することを示します。詳細や例については、{{domxref("HTMLInputElement.webkitdirectory")}} を参照してください。
+
+    > [!NOTE]
+    > `webkitdirectory` は、[ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API) で定義されています。この名前が `webkitdirectory` となっているのは、もともと Chrome 独自の API だったためです。現在では、すべてのブラウザーで利用可能です。
+
 - `width`
   - : `image` 入力ボタンにのみ有効で、`width` にはグラフィックの送信ボタンを表現するために表示する画像ファイルの幅を指定します。{{HTMLElement("input/image", "image")}} 入力型を参照してください。
 
@@ -656,21 +662,13 @@ label {
         以前の検索クエリーのドロップダウンリストに表示する項目の最大数です。<strong>Safari のみ。</strong>
       </td>
     </tr>
-    <tr>
-      <td>
-        <a href="#webkitdirectory"><code>webkitdirectory</code></a>
-      </td>
-      <td>
-        論理属性で、ユーザーがディレクトリー（または <a href="#multiple"><code>multiple</code></a> も存在すれば複数のディレクトリー）を選択できるようにするかどうかを示します。
-      </td>
-    </tr>
   </tbody>
 </table>
 
 - `incremental` {{non-standard_inline}}
   - : 論理属性 `incremental` は WebKit および Blink 拡張で（そのため Safari, Opera, Chrome, などが対応）、もし存在すれば、{{Glossary("User agent", "ユーザーエージェント")}}に入力をライブ検索として処理します。ユーザーがフィールドの値を編集すると、ユーザーエージェントは {{domxref("HTMLInputElement/search_event", "search")}} イベントを検索ボックスを表す {{domxref("HTMLInputElement")}} オブジェクトへ送信します。これにより、ユーザーが検索を編集するたびに、コードからリアルタイムに検索結果を更新することができます。
 
-    `incremental` が指定されていない場合、{{domxref("HTMLInputElement/search_event", "search")}} イベントはユーザーが明示的に検索を実行した時のみ（フィールドを編集中に <kbd>Enter</kbd> または <kbd>Return</kbd> キーを押すなど) 送信されます。
+    `incremental` が指定されていない場合、{{domxref("HTMLInputElement/search_event", "search")}} イベントはユーザーが明示的に検索を実行した時のみ（フィールドを編集中に <kbd>Enter</kbd> または <kbd>Return</kbd> キーを押すなど）送信されます。
 
     `search` イベントは発生頻度が制限されているため、実装により定義された間隔よりも頻繁に送信されることはありません。
 
@@ -681,11 +679,6 @@ label {
   - : `results` 属性は Safari のみが対応しており、 `<input>` 要素のネイティブな検索クエリーのドロップダウンメニューに表示する項目の最大数を上書きすることができる数値です。
 
     この値は、負でない 10 進数でなければならなりません。指定しない場合、または無効な値を指定した場合は、ブラウザーのデフォルトの最大項目数が使用されます。
-
-- `webkitdirectory` {{non-standard_inline}}
-  - : 論理属性の `webkitdirectory` は、もし存在する場合は、ファイル選択インターフェイスでユーザーがディレクトリーのみを選択することができることを示します。詳しい解説と例については {{domxref("HTMLInputElement.webkitdirectory")}} を参照してください。
-
-    `webkitdirectory` はもともと WebKit ベースのブラウザー向けのみに実装されたものですが、Microsoft Edge や Firefox 50 以降でも使用できます。しかし、比較的広く対応されていますが、まだ標準になっておらず、代替手段がない限りは使用するべきではありません。
 
 ## メソッド
 
@@ -915,11 +908,11 @@ input.custom {
 
 {{cssxref("field-sizing")}} プロパティは、フォーム入力欄のサイズ設定の動作を制御することができます（つまり、デフォルトでは推奨されるサイズが設定されています）。このプロパティを使用すると、デフォルトの動作を上書きして、フォームコントロールがコンテンツに合わせてサイズを調整できるようになります。
 
-このプロパティは通常、コンテンツを収縮包装し、テキストが入力されるにつれて大きくなるフォームフィールドを形成するために使用します。これは、直接テキスト入力を受け入れる入力型（例えば、[`text`](/ja/docs/Web/HTML/Reference/Elements/input/text)、[`url`](/ja/docs/Web/HTML/Reference/Elements/input/url)、[`file`](/ja/docs/Web/HTML/Reference/Elements/input/file) 入力型、{{htmlelement("textarea")}} 要素で動作します。
+このプロパティは通常、コンテンツを収縮包装し、テキストが入力されるにつれて大きくなるフォームフィールドを形成するために使用します。これは、直接テキスト入力を受け入れる入力型（例えば [`text`](/ja/docs/Web/HTML/Reference/Elements/input/text) や [`url`](/ja/docs/Web/HTML/Reference/Elements/input/url)）、[`file`](/ja/docs/Web/HTML/Reference/Elements/input/file) 入力型、{{htmlelement("textarea")}} 要素で動作します。
 
 ### object-position と object-fit
 
-`<input>` 要素は特定の場合（多くはテキスト以外の入力や特殊なインターフェイス）（には、{{ glossary("replaced elements", "置換要素")}}になることがあります。その場合、CSS の {{cssxref("object-position")}} および {{cssxref("object-fit")}} プロパティを使って、要素の枠内での大きさと位置を調整することができます。
+`<input>` 要素は特定の場合（多くはテキスト以外の入力や特殊なインターフェイス）には、{{ glossary("replaced elements", "置換要素")}}になることがあります。その場合、CSS の {{cssxref("object-position")}} および {{cssxref("object-fit")}} プロパティを使って、要素の枠内での大きさと位置を調整することができます。
 
 ### スタイル設定
 
@@ -936,7 +929,7 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 
 ### ラベル
 
-ラベルは支援テキストを `<input>` に関連付けるために必要です。{{HTMLElement("label")}} 要素は、フォームの入力欄を説明するために、(レイアウト方法はさておき）*常に*適切な手段です。`<label>` を使用して `<input>` や {{HTMLElement("textarea")}} に何を入力するべきかを説明することは、決して悪い考えではありません。
+ラベルは支援テキストを `<input>` に関連付けるために必要です。{{HTMLElement("label")}} 要素は、フォームの入力欄を説明するために、（レイアウト方法はさておき）*常に*適切な手段です。`<label>` を使用して `<input>` や {{HTMLElement("textarea")}} に何を入力するべきかを説明することは、決して悪い考えではありません。
 
 #### 関連付けられたラベル
 
@@ -1191,7 +1184,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>、リスト化、サブミット可能、リセット可能、フォーム関連要素、<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>。<a href="#type"><code>type</code></a> の値が <code>hidden</code> でない場合はラベル付け可能要素、知覚可能コンテンツ。

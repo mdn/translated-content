@@ -4,8 +4,6 @@ slug: Web/XML/XSLT/Reference/Element/with-param
 original_slug: Web/XSLT/Element/with-param
 ---
 
-{{XsltSidebar}}
-
 L'élément `<xsl:with-param>` définit la valeur d'un paramètre à passer à un modèle.
 
 ### Syntaxe

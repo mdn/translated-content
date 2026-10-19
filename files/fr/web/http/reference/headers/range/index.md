@@ -3,21 +3,21 @@ title: En-tête Range
 short-title: Range
 slug: Web/HTTP/Reference/Headers/Range
 l10n:
-  sourceCommit: ca1647a3e2b77cdf9df220244998f25b86629048
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`Range`** indique la partie d'une ressource que le serveur doit retourner.
-Plusieurs parties peuvent être demandées en même temps dans un seul en-tête `Range`, et le serveur peut renvoyer ces plages dans un document multipartie.
-Si le serveur renvoie des plages, il utilise le code d'état {{HTTPStatus("206", "206 Partial Content")}} pour la réponse.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Range`** indique la partie d'une ressource que le serveur doit retourner.
+Plusieurs parties peuvent être demandées en même temps dans un seul en-tête `Range`, et le serveur peut retourner ces plages dans un document en plusieurs parties.
+Si le serveur retourne des plages, il utilise le code d'état {{HTTPStatus("206", "206 Partial Content")}} pour la réponse.
 Si les plages sont invalides, le serveur retourne l'erreur {{HTTPStatus("416", "416 Range Not Satisfiable")}}.
 
 Un serveur qui ne prend pas en charge les requêtes de plage peut ignorer l'en-tête `Range` et retourner la ressource entière avec un code d'état {{HTTPStatus("200")}}.
 Les anciens navigateurs utilisaient un en-tête de réponse {{HTTPHeader("Accept-Ranges", "Accept-Ranges: none")}} pour désactiver des fonctionnalités comme «&nbsp;pause&nbsp;» ou «&nbsp;reprendre&nbsp;» dans les gestionnaires de téléchargement, mais comme le fait qu'un serveur ignore l'en-tête `Range` a la même signification que de répondre avec `Accept-Ranges: none`, cet en-tête est rarement utilisé de cette manière.
 
-Actuellement, seules les [unités `bytes` sont enregistrées <sup>(angl.)</sup>](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units), ce sont des _décalages_ (indexés à partir de zéro et inclusifs).
+Actuellement, seules les [unités `bytes` sont enregistrées <sup>(angl.)</sup>](https://www.iana.org/assignments/http-parameters#range-units), ce sont des _décalages_ (indexés à partir de zéro et inclusifs).
 Si les données demandées ont un [codage de contenu](/fr/docs/Web/HTTP/Reference/Headers/Content-Encoding) appliqué, chaque plage d'octets représente la séquence d'octets encodés, et non les octets obtenus après décodage.
 
-L'en-tête est un [en-tête de requête autorisé par CORS](/fr/docs/Glossary/CORS-safelisted_request_header) lorsque la directive spécifie une seule plage d'octets.
+L'en-tête est un [en-tête de requête autorisé par CORS](/fr/docs/Glossary/CORS-safelisted_request_header) lorsque la directive définie une seule plage d'octets.
 
 <table class="properties">
   <tbody>

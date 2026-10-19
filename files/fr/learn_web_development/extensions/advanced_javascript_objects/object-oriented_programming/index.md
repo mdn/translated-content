@@ -2,17 +2,17 @@
 title: Programmation orientée objet
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming
 l10n:
-  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
+  sourceCommit: 19179e39c722467775f659c6cb5f9465f4f3d6d6
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
-La programmation orientée objet (POO) est un paradigme de programmation fondamental pour de nombreux langages de programmation, dont Java et C++. Dans cet article, nous fournirons un aperçu des concepts de base de la POO. Nous décrivons trois concepts principaux&nbsp;: **classes et instances**, **héritage** et **encapsulation**. Pour l'instant, nous décrivons ces concepts sans référence particulière à JavaScript, donc tous les exemples sont donnés en {{Glossary("Pseudocode", "pseudo-code")}}.
+La programmation orientée objet (POO) est un paradigme de programmation fondamental pour de nombreux langages de programmation, dont Java et C++. Dans cet article, nous fournissons un aperçu des concepts de base de la POO. Nous décrivons trois concepts principaux&nbsp;: **classes et instances**, **héritage** et **encapsulation**. Pour l'instant, nous décrivons ces concepts sans référence particulière à JavaScript, donc tous les exemples sont donnés en {{Glossary("Pseudocode", "pseudo-code")}}.
 
 > [!NOTE]
 > Pour être tout à fait précis, les fonctionnalités décrites ici appartiennent à un style particulier de POO appelé **basé sur les classes** ou «&nbsp;classique&nbsp;». Lorsque l'on parle de POO, c'est généralement ce type qui est sous-entendu.
 
-Après cela, en JavaScript, nous examinerons comment les constructeurs et la chaîne de prototypes se rapportent à ces concepts de POO, et comment ils diffèrent. Dans l'article suivant, nous examinerons certaines fonctionnalités supplémentaires de JavaScript qui facilitent la mise en œuvre de programmes orientés objet.
+Après cela, en JavaScript, nous examinons comment les constructeurs et la chaîne de prototypes se rapportent à ces concepts de POO, et comment ils diffèrent. Dans l'article suivant, nous examinons certaines fonctionnalités supplémentaires de JavaScript qui facilitent la mise en œuvre de programmes orientés objet.
 
 <table>
   <tbody>
@@ -235,8 +235,8 @@ Cela dit, les constructeurs et les prototypes peuvent être utilisés pour impl�
 
 ## Résumé
 
-Dans cet article, nous avons vu les fonctionnalités de base offertes par la programmation orientée objet et rapidement comment les constructeurs et prototypes JavaScript étaient liés à ces fonctionnalités.
+Dans cet article, nous avons vu les fonctionnalités de base offertes par la programmation orientée objet et rapidement comment les constructeurs et prototypes JavaScript sont liés à ces fonctionnalités.
 
-Dans le prochain article, nous verrons les fonctionnalités de JavaScript qui permettent de réaliser une programmation orientée objet basée sur des classes.
+Dans le prochain article, nous voyons les fonctionnalités de JavaScript qui permettent de réaliser une programmation orientée objet basée sur des classes.
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

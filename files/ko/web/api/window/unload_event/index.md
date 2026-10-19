@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f2175c4c2cf9de232ec9b2e1c395903d53ea24a0
 ---
 
-{{APIRef}}{{deprecated_header}}
+{{APIRef}}
 
 > [!WARNING]
 > 개발자들은 이 이벤트의 사용을 피해야 합니다. 아래의 "사용 일람"을 참고하세요.

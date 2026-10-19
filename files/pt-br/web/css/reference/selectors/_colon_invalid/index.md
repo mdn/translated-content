@@ -19,7 +19,11 @@ Essa pseudo-classe é útil para usuário identificar quais campos foram preench
 
 ## Sintaxe
 
-{{csssyntax}}
+```css
+:invalid {
+  /* ... */
+}
+```
 
 ## Exemplo
 

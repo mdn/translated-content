@@ -40,7 +40,7 @@ additional information here).
 - [原因：CORS header 'Access-Control-Allow-Origin' does not match 'xyz'](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSAllowOriginNotMatchingOrigin)
 - [原因：Credential is not supported if the CORS header 'Access-Control-Allow-Origin' is '\*'](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSNotSupportingCredentials)
 - [原因：Did not find method in CORS header 'Access-Control-Allow-Methods'](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound)
-- [原因：expected 'true' in CORS header 'Access-Control-Allow-Credentials'](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials)
+- [原因：expected 'true' in CORS header 'Access-Control-Allow-Credentials'](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowCredentials)
 - [原因：CORS preflight channel did not succeed](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSPreflightDidNotSucceed)
 - [原因：invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowMethod)
 - [原因：invalid token 'xyz' in CORS header 'Access-Control-Allow-Headers'](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowHeader)

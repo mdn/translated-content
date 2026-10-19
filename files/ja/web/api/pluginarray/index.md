@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 `PluginArray` インターフェイスは、利用可能な[プラグイン](/ja/docs/Mozilla/Add-ons/Plugins)を記述する {{DOMxRef("Plugin")}} のリストを格納するために使用されます。これは {{DOMxRef("Navigator.plugins", "navigator.plugins")}} プロパティから返されます。`PluginArray` は JavaScript の配列ではありませんが、`length` プロパティがあり、それぞれのアイテムにブラケット記法 (`plugins[2]`) を使用すると、`item(index)` や `namedItem("name")` メソッドと同様にアクセスできます。
 

@@ -100,7 +100,7 @@ input {
 
 我们来看一下下面的代码：
 
-```plain
+```css
 .foo {
   --widthA: 100px;
   --widthB: calc(var(--widthA) / 2);

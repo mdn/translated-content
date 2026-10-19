@@ -5,14 +5,14 @@ l10n:
   sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
 ---
 
-**`marker-mid`** 属性は、指定された[シェイプ](/ja/docs/Web/SVG/Reference/Element#基本シェイプ)の中間の頂点すべてに描かれる矢印やマーカーを定義します。
+**`marker-mid`** 属性は、指定された[図形](/ja/docs/Web/SVG/Reference/Element#図形要素)の最終頂点に描画される矢印やマーカーを定義します。
 
 マーカーは、[パスデータ](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド)の最初と最後以外のすべての頂点に描画されます。
 
 > [!NOTE]
-> プレゼンテーション属性であるため、 `marker-mid` には対応する CSS プロパティ {{cssxref("marker-mid")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
+> プレゼンテーション属性であるため、`marker-mid` には対応する CSS プロパティ {{cssxref("marker-mid")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
 
-この属性は次の SVG 要素で使用できます。
+この属性は以下の SVG 要素で使用できます。
 
 - {{SVGElement("circle")}}
 - {{SVGElement("ellipse")}}
@@ -58,12 +58,12 @@ svg {
       <td><code>none</code> | <code>&#x3C;marker-ref></code></td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>none</code></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
-      <td>可</td>
+      <td>離散</td>
     </tr>
   </tbody>
 </table>
@@ -86,4 +86,4 @@ svg {
 - {{SVGElement("marker")}}
 - {{SVGAttr("marker-start")}}
 - {{SVGAttr("marker-end")}}
-- CSS の {{cssxref('marker-mid')}} プロパティ
+- CSS {{cssxref('marker-mid')}} プロパティ

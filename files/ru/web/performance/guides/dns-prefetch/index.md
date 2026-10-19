@@ -3,7 +3,7 @@ title: Использование dns-prefetch
 slug: Web/Performance/Guides/dns-prefetch
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
+{{QuickLinksWithSubPages("/ru/docs/Web/Performance")}}
 
 **`DNS-prefetch`** (предзагрузка DNS) - это попытка определить IP адрес по имени домена до того, как ресурс с этого домена будет фактически запрошен. Это может быть загрузчик файлов, который используется позже или ссылка, по которой, вероятно, перейдёт пользователь.
 

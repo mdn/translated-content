@@ -118,7 +118,7 @@ footer {
         <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role">contentinfo</a> 或
         <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Generic_role">generic</a>
        如果是 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/article">article</a>、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/aside">aside</a>、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/main">main</a>、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/nav">nav</a> 或 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/section">section</a> 元素的后代，则为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role">contentinfo</a> 或
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Generic_role">generic</a>，或一个具有 <code>role=<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a></code>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Complementary_role">complementary</a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Main_role">main</a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">navigation</a> 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Region_role">region</a> 的元素
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Generic_role">generic</a>，或一个具有 <code>role=<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/article_role">article</a></code>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Complementary_role">complementary</a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Main_role">main</a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">navigation</a> 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Region_role">region</a> 的元素
       </td>
     </tr>
     <tr>

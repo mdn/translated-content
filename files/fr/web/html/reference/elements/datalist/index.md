@@ -3,7 +3,7 @@ title: "Élément HTML `<datalist>` : l'élément de liste des données"
 short-title: <datalist>
 slug: Web/HTML/Reference/Elements/datalist
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<datalist>`** contient un ensemble d'éléments HTML {{HTMLElement("option")}} qui représentent les options permises ou recommandées à choisir dans d'autres contrôles.

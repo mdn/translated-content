@@ -5,8 +5,6 @@ slug: Web/API/Document/anchors
 
 {{APIRef("DOM")}}
 
-{{deprecated_header}}
-
 `anchors` retorna uma lista de todas as âncoras no documento.
 
 ## Sintaxe

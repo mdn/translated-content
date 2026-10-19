@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{deprecated_header}}
-
 **`<plaintext>`** は [HTML](/ja/docs/Web/HTML) の要素で、開始タグ以降のすべてを生のテキストとして表示し、それ以降の HTML を無視します。開始タグ以降は全て生のテキスト扱いになるので、終了タグはありません。
 
 > [!WARNING]

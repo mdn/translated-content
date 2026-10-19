@@ -3,7 +3,7 @@ title: "Iterator : méthode statique zipKeyed()"
 short-title: zipKeyed()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/zipKeyed
 l10n:
-  sourceCommit: c534ba0cb925657de5e99ab8c540eae31afd9382
+  sourceCommit: 5b9e4bb67e5cb4bb2b780e7338a6560463e5a1a7
 ---
 
 {{SeeCompatTable}}
@@ -22,7 +22,7 @@ Iterator.zipKeyed(iterables, options)
 ### Paramètres
 
 - `iterables`
-  - : Un objet. La clé de chaque propriété est utilisée comme clé dans les objets résultants. La valeur de la propriété doit implémenter soit le protocole [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»), soit, à défaut, le protocole [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérateur_»). Ces itérables peuvent être infinis. Les chaînes de caractères sont rejetées&nbsp;: pour zipper des chaînes, convertissez-les explicitement en itérateurs en utilisant {{JSxRef("Iterator.from()")}}.
+  - : Un objet. La clé de chaque propriété est utilisée comme clé dans les objets résultants. La valeur de la propriété doit implémenter soit le protocole [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»), soit, à défaut, le protocole [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérateur_»). Ces itérables peuvent être infinis. Les chaînes de caractères sont rejetées&nbsp;: pour zipper des chaînes de caractères, convertissez-les explicitement en itérateurs en utilisant {{JSxRef("Iterator.from()")}}.
 - `options` {{Optional_Inline}}
   - : Un objet définissant le comportement en cas de longueurs d'entrée incohérentes. Il peut avoir les propriétés suivantes&nbsp;:
     - `mode` {{Optional_Inline}}
@@ -51,7 +51,7 @@ Si l'on représente les itérables sous forme de tableaux, l'entrée peut ressem
 });
 ```
 
-L'itérateur résultant, quelle que soit l'option, commencera par produire les objets suivants&nbsp;:
+L'itérateur résultant, quelle que soit l'option, commence par produire les objets suivants&nbsp;:
 
 ```js
 ({ a: a1, b: b1, c: c1 });
@@ -59,7 +59,7 @@ L'itérateur résultant, quelle que soit l'option, commencera par produire les o
 ({ a: a3, b: b3, c: c3 });
 ```
 
-Après que les trois premiers objets ont été produits, l'itérable d'entrée `b` est épuisé au quatrième appel à `next()`&nbsp;: il retourne `{ done: true }`. Ce qui se passe ensuite dépend de l'option `mode`. Si `mode` vaut `"shortest"` (valeur par défaut), l'itérateur résultant s'arrête ici&nbsp;: les deux autres itérateurs d'entrée sont [fermés](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#errors_during_iteration). Si `mode` vaut `"strict"`, une erreur est levée car les deux autres itérables ne sont _pas_ terminés lorsque le second retourne `{ done: true }`. Si `mode` vaut `"longest"`, l'itérateur résultant continue de produire des objets en comblant les valeurs manquantes. Par exemple, si `padding` n'est pas fourni, il vaut `undefined`&nbsp;:
+Après que les trois premiers objets ont été produits, l'itérable d'entrée `b` est épuisé au quatrième appel à `next()`&nbsp;: il retourne `{ done: true }`. Ce qui se passe ensuite dépend de l'option `mode`. Si `mode` vaut `"shortest"` (valeur par défaut), l'itérateur résultant s'arrête ici&nbsp;: les deux autres itérateurs d'entrée sont [fermés](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#errors_during_iteration). Si `mode` vaut `"strict"`, une erreur est levée, car les deux autres itérables ne sont _pas_ terminés lorsque le second retourne `{ done: true }`. Si `mode` vaut `"longest"`, l'itérateur résultant continue de produire des objets en comblant les valeurs manquantes. Par exemple, si `padding` n'est pas fourni, il vaut `undefined`&nbsp;:
 
 ```js
 ({ a: a4, b: undefined, c: c4 });

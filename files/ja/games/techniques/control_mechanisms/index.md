@@ -1,6 +1,8 @@
 ---
 title: ゲーム制御機構の搭載
 slug: Games/Techniques/Control_mechanisms
+l10n:
+  sourceCommit: 21addd31954b2629ab3e186dacdf7edca813dc7d
 ---
 
 ゲーム開発プラットフォームとしての HTML5 の主な利点の 1 つは、さまざまなプラットフォームおよび端末上で実行できることです。端末間の違いを合理化することは、特に異なるコンテキストに適切なコントロールを提供するときには、複数の課題を生み出します。このシリーズの記事では、タッチ画面のスマートフォン、マウス、キーボード、そしてゲームパッドなどのあまり一般的ではないメカニズムを使用してプレイできるゲームの構築方法について説明します。
@@ -11,7 +13,7 @@ slug: Games/Techniques/Control_mechanisms
 
 ![Captain Rogers: Battle at Andromeda - cover of the game containing Enclave Games and Blackmoon Design logos, Roger's space ship and title of the game.](captainrogers2-cover.png)
 
-Captain Rogers は [Phaser](https://phaser.io/) フレームワークを使用して作成されています。現在、 JavaScript でシンプルな 2D ゲームを開発するための最も人気のあるツールですが、これらの記事に含まれる知識を純粋な JavaScript または他のフレームワークでゲームを構築する際に再利用することはかなり簡単なはずです。 Phaser の入門書をお探しなら、[2D breakout game using Phaser](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser) チュートリアルをチェックしてみてください。
+Captain Rogers は [Phaser](https://phaser.io/) フレームワークを使用して作成されています。現在、 JavaScript でシンプルな二次元ゲームを開発するための最も人気のあるツールですが、これらの記事に含まれる知識を純粋な JavaScript または他のフレームワークでゲームを構築する際に再利用することはかなり簡単なはずです。 Phaser の入門書をお探しなら、[2D breakout game using Phaser](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser) チュートリアルをチェックしてみてください。
 
 以下の記事では、モバイルのタッチ操作から、デスクトップのキーボード／マウス／ゲームパッド、そしてテレビのリモコン、ラップトップの前で叫んだり手を振ったり、バナナを握ったりといった型破りなものまで、さまざまなプラットフォームに対応するために、Captain Rogers にさまざまな操作機構を搭載する方法を紹介します。
 
@@ -28,20 +30,26 @@ Captain Rogers は [Phaser](https://phaser.io/) フレームワークを使用�
 例えば、`create()` 関数でボタンを定義することができます。
 
 ```js
-create() {
+function create() {
   // …
-  const buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);
+  const buttonEnclave = this.add.button(
+    10,
+    10,
+    "logo-enclave",
+    this.clickEnclave,
+    this,
+  );
   // …
 }
 ```
 
-ゲーム開始時に一度だけ作成され、クリックされるとそれに割り当てられた `this.clickEnclave()` アクションを実行しますが、 `update()` 関数でマウスのポインターの値を使用してアクションを作成することもできます。
+ゲーム開始時に一度だけ作成され、クリックされるとそれに割り当てられた `this.clickEnclave()` アクションを実行しますが、`update()` 関数でマウスのポインターの値を使用してアクションを作成することもできます。
 
 ```js
-update() {
+function update() {
   // …
-  if(this.game.input.mousePointer.isDown) {
-      // do something
+  if (this.game.input.mousePointer.isDown) {
+    // 何もしない
   }
   // …
 }
@@ -57,7 +65,7 @@ update() {
 
 ## 記事
 
-HTML5 が真にマルチプラットフォームであるため、JavaScript はモバイルゲームに最適です。以下の記事はすべて、さまざまな制御機構とインターフェイスするために提供される API に焦点を当てています。
+HTML は真にマルチプラットフォームであるため、JavaScript はモバイルゲームに最適です。以下の記事はすべて、さまざまな制御機構とインターフェイスするために提供される API に焦点を当てています。
 
 1. [モバイルのタッチ制御](/ja/docs/Games/Techniques/Control_mechanisms/Mobile_touch) — 最初の記事は、モバイルファーストの考え方が浸透していることから、タッチでキックオフします。
 2. [デスクトップ PC のマウスとキーボードによる操作](/ja/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) — デスクトップ／ノートパソコンでプレイする場合、ゲームに受け入れられるレベルのアクセシビリティを提供するためには、キーボードとマウスによる操作性を提供することが不可欠です。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 07f0cf4375aaa02e1071d8bd0e8518db7609b7a9
 ---
 
-{{Deprecated_Header}}
-
 **`mathsize`** [全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)设置 MathML 元素的[字体大小](/zh-CN/docs/Web/CSS/Reference/Properties/font-size)。
 
 > [!NOTE]

@@ -21,7 +21,7 @@ var result = crypto.subtle.importKey(format, keyData, algo, extractable, usages)
   - `"spki"`, normalmente uma key pública, no [Simple public key infrastructure](http://en.wikipedia.org/wiki/Simple_public-key_infrastructure) padrão.
   - `"jwk"`, a key no formato [JSON Web Key](https://tools.ietf.org/html/draft-ietf-jose-json-web-key-41).
 
-- `keyData` é uma {{domxref("ArrayBuffer")}} ou uma {{domxref("JSONWebKey")}} contendo uma key no formato dado.
+- `keyData` é uma {{jsxref("ArrayBuffer")}} ou uma {{domxref("JSONWebKey")}} contendo uma key no formato dado.
 - `algo` é um objeto de dicionário que define o algoritmo que foi utilizado para gerar a key que está sendo importada.
 - `extractable` é um {{jsxref("Boolean")}} indicando se a key pode ser extraída de um objeto {{domxref("CryptoKey")}} em um estágio mais tardio.
 - `usages` é um {{jsxref("Array")}} que indica o que pode ser feito com a key. Valores possíveis do array são:

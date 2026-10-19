@@ -105,7 +105,7 @@ A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}}
 
 ### 示例
 
-```plain
+```html
 <figure role="img" aria-labelledby="cow-caption">
   <pre>
   ___________________________
@@ -118,7 +118,8 @@ A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}}
                  ||     ||
   </pre>
   <figcaption id="cow-caption">
-    A cow saying, "I'm an expert in my field." The cow is illustrated using preformatted text characters.
+    A cow saying, "I'm an expert in my field." The cow is illustrated using
+    preformatted text characters.
   </figcaption>
 </figure>
 ```

@@ -3,7 +3,7 @@ title: Document：selectedStyleSheetSet 属性
 slug: Web/API/Document/selectedStyleSheetSet
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}
 
 **`selectedStyleSheetSet`** 属性表示当前使用的样式表集合的名称。
 

@@ -86,8 +86,6 @@ CSS の値は型を使わずに表現しますので、 {{JSxRef("String")}} オ
 
 ### 廃止された CSSOM インターフェイス {{deprecated_inline}}
 
-{{deprecated_header}}
-
 - {{DOMxRef("CSSPrimitiveValue")}} {{deprecated_inline}}
 - {{DOMxRef("CSSValue")}} {{deprecated_inline}}
 - {{DOMxRef("CSSValueList")}} {{deprecated_inline}}

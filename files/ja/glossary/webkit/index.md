@@ -2,7 +2,7 @@
 title: WebKit
 slug: Glossary/WebKit
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 1f6d5b39a5883789ece6b570227648113c7021a1
 ---
 
 _WebKit_ は、マークアップを基に適切に整形されたウェブページを表示するためのフレームワークの 1 つです。 {{Glossary("Apple Safari")}}、そして多くのモバイル向けブラウザーも、 WebKit によって動いています（WebKit は移植性もカスタマイズ性も高いからです）。

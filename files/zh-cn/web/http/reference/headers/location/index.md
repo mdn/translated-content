@@ -22,7 +22,7 @@ slug: Web/HTTP/Reference/Headers/Location
 
 ## 语法
 
-```plain
+```http
 Location: <url>
 ```
 
@@ -33,7 +33,7 @@ Location: <url>
 
 ## 示例
 
-```plain
+```http
 Location: /index.html
 ```
 

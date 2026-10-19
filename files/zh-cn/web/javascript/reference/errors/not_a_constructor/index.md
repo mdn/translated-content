@@ -71,7 +71,7 @@ var mycar = new Car("Eagle", "Talon TSi", 1993);
 
 当返回了一个 immediately-resolved 或者 immediately-rejected Promise 的时候，你根本不需要去创建、操作一个新的 Promise 对象。
 
-这是不合法的（[Promise constructor](/zh-CN/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise#Constructor) 被错误的调用了）且会抛出一个 错误 `TypeError: this is not a constructor` exception:
+这是不合法的（[Promise 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)被错误地调用了）且会抛出 `TypeError: this is not a constructor` 异常：
 
 ```js example-bad
 return new Promise.resolve(true);

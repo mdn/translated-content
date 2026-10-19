@@ -23,7 +23,7 @@ l10n:
     <tr>
       <th scope="row">学習成果:</th>
       <td>
-        オブジェクトの使い方とオブジェクト指向のテクニックを実世界のコンテストで練習する。
+        オブジェクトの使い方とオブジェクト指向のテクニックを実世界のコンテキストで練習する。
       </td>
     </tr>
   </tbody>
@@ -309,7 +309,7 @@ function loop() {
 - [requestAnimationFrame()](/ja/docs/Web/API/Window/requestAnimationFrame)
 - [2D の衝突検出](/ja/docs/Games/Techniques/2D_collision_detection)
 - [3D の衝突検出](/ja/docs/Games/Techniques/3D_collision_detection)
-- [純粋な JavaScript を使用した 2D ブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — 2D ゲームの作り方に関する、素晴しい初心者向けチュートリアル。
+- [純粋な JavaScript を使用した 2D ブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) — 2D ゲームの作り方に関する、素晴しい初心者向けチュートリアル。
 - [Phaser を使用した 2D ブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser) — JavaScript ゲームライブラリーを使って 2D ゲームを作るための基本を解説しています。
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

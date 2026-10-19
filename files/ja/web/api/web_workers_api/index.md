@@ -62,7 +62,7 @@ l10n:
 - [基本的な共有ワーカーの例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker)（[共有ワーカーを実行](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)）
 - [OffscreenCanvas ワーカーの例](https://github.com/mdn/dom-examples/tree/main/web-workers/offscreen-canvas-worker)（[OffscreenCanvas ワーカーを実行](https://mdn.github.io/dom-examples/web-workers/offscreen-canvas-worker/)）
 
-これらのデモの動く仕組みを詳しく知りたい場合は。[ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)を参照してください。
+これらのデモの動く仕組みを詳しく知りたい場合は、[ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)を参照してください。
 
 ## 仕様書
 

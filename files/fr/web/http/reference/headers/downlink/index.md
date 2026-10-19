@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`Downlink`** est utilisé dans les [indications client](/fr/docs/Web/HTTP/Guides/Client_hints) pour fournir la bande passante approximative en <abbr>Mbps</abbr> (mégabits par seconde) de la connexion du client au serveur.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Downlink`** est utilisé dans les [indications du client](/fr/docs/Web/HTTP/Guides/Client_hints) pour fournir la bande passante approximative en <abbr>Mbps</abbr> (mégabits par seconde) de la connexion du client au serveur.
 
 Cette indication permet à un serveur de choisir quelles informations sont envoyées en fonction de la bande passante du réseau.
 Par exemple, un serveur peut choisir d'envoyer des versions plus petites des images et autres ressources sur des réseaux à faible bande passante.
@@ -23,7 +23,7 @@ Par exemple, un serveur peut choisir d'envoyer des versions plus petites des ima
       <th scope="row">Type d'en-tête</th>
       <td>
         {{Glossary("Request header", "En-tête de requête")}},
-        <a href="/fr/docs/Web/HTTP/Guides/Client_hints">indication client</a>
+        <a href="/fr/docs/Web/HTTP/Guides/Client_hints">Indications du client</a>
       </td>
     </tr>
     <tr>
@@ -53,7 +53,7 @@ Le serveur doit d'abord activer la réception de l'en-tête `Downlink` en envoya
 Accept-CH: Downlink
 ```
 
-Ensuite, lors des requêtes suivantes, le client peut renvoyer un en-tête `Downlink`&nbsp;:
+Ensuite, lors des requêtes suivantes, le client peut retourner un en-tête `Downlink`&nbsp;:
 
 ```http
 Downlink: 1.7
@@ -69,7 +69,7 @@ Downlink: 1.7
 
 ## Voir aussi
 
-- [Améliorer la confidentialité des utilisateur·ice·s et l'expérience des développeur·euse·s avec les indications client User-Agent](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints?hl=fr)
+- [Améliorer la confidentialité des utilisateur·ice·s et l'expérience des développeur·euse·s avec les indications du client d'agent utilisateur](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints?hl=fr)
 - Indications client réseau&nbsp;:
   - {{HTTPHeader("RTT")}}
   - {{HTTPHeader("ECT")}}

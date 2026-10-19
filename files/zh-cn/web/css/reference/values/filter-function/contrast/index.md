@@ -35,7 +35,7 @@ filter: contrast(0);
 
 ## 语法
 
-```plain
+```css
 contrast(amount)
 ```
 

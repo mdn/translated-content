@@ -1,8 +1,9 @@
 ---
-title: font-variation-settings
+title: "`font-variation-settings` プロパティ (CSS)"
+short-title: font-variation-settings
 slug: Web/CSS/Reference/Properties/font-variation-settings
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 91e08923c809ca8deded3e3294f49bbe1a4a00b3
 ---
 
 **`font-variation-settings`** は [CSS](/ja/docs/Web/CSS) のプロパティで、変更したい特性の 4 文字の軸名と特性の値を指定することにより、[可変フォント](/ja/docs/Web/CSS/Guides/Fonts/Variable_fonts)に対する低水準の制御を行うことができます。
@@ -36,7 +37,7 @@ font-variation-settings: "wdth" 75;
 
 ```css interactive-example
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2");
   font-family: "Amstelvar";
   font-style: normal;
 }
@@ -50,7 +51,7 @@ p {
 ## 構文
 
 ```css
-/* 既定の設定を使用 */
+/* デフォルトの設定を使用 */
 font-variation-settings: normal;
 
 /* 可変フォントの軸名の値を設定 */
@@ -66,10 +67,10 @@ font-variation-settings: unset;
 
 ### 値
 
-このプロパティは 1 つまたは 2 つの形を取ることができます。
+このプロパティは、`normal` または文字列と数値のペアのカンマ区切りリストとして指定します。
 
 - `normal`
-  - : テキストは既定の設定を使用してレイアウトされます。
+  - : テキストはデフォルトの設定を使用してレイアウトされます。
 - `<string> <number>`
   - : テキストを描画する際、フォントの特性を有効または無効にするために可変フォントの軸名のリストがテキストレイアウトエンジンへ渡されます。それぞれの設定は常に、一つ以上の4文字の ASCII 文字の {{cssxref("&lt;string&gt;")}} と、続いて設定する軸の値を示す {{cssxref("number")}} の組み合わせから成ります。`<string>` の文字が多すぎたり少なすぎたり、文字が U+20 - U+7E のコードポイントの範囲を超えていたりした場合は、プロパティ全体が無効になります。フォントデザイナーによって定義された利用可能な値の範囲次第では、`<number>` は小数や負の数を取ることもできます。
 
@@ -139,7 +140,7 @@ font-variation-settings: unset;
 
 ### フォントの太さの変数の制御 (wght)
 
-以下のコードブロック内の "Play" をクリックすると、 MDN Playground で例を編集できます。 CSS を編集して、様々なフォントの太さの値を試してみてください。太さの範囲から外れた値を指定した場合に何が起こるのかを確認してください。
+以下のコードブロック内の "Play" をクリックすると、 MDN Playground で例を編集できます。CSS を編集して、様々なフォントの太さの値を試してみてください。太さの範囲から外れた値を指定した場合に何が起こるのかを確認してください。
 
 ```html hidden live-sample___variable-fonts-weight-example
 <div>
@@ -224,7 +225,7 @@ angle.addEventListener("input", (e) => {
 
 ### フォントの傾きの変数の制御 (slnt)
 
-以下のコードブロック内の "Play" をクリックすると、 MDN Playground で例を編集できます。 CSS を編集して、様々なフォントの太さの値を試してみてください。
+以下のコードブロック内の "Play" をクリックすると、 MDN Playground で例を編集できます。CSS を編集して、様々なフォントの太さの値を試してみてください。
 
 ```html hidden live-sample___variable-fonts-slant-example
 <div>

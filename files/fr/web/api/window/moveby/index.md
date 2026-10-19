@@ -3,7 +3,7 @@ title: "Window : méthode moveBy()"
 short-title: moveBy()
 slug: Web/API/Window/moveBy
 l10n:
-  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
+  sourceCommit: f542ed344953b3312fc92150bba11536667e288a
 ---
 
 {{APIRef("CSSOM view API")}}

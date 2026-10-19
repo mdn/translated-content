@@ -9,7 +9,7 @@ slug: Web/API/CSSStyleDeclaration/length
 
 ## 语法
 
-```plain
+```js
 var num = styles.length;
 ```
 

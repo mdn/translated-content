@@ -3,8 +3,6 @@ title: arguments
 slug: Web/JavaScript/Reference/Functions/arguments
 ---
 
-{{jsSidebar("Fonctions")}}
-
 L'objet **`arguments`** est un objet, **semblable** à un tableau, correspondant aux arguments passés à une fonction.
 
 > [!NOTE]

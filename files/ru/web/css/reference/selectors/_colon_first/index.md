@@ -21,7 +21,11 @@ original_slug: Web/CSS/:first
 
 ## Синтаксис
 
-{{csssyntax}}
+```css
+:first {
+  /* ... */
+}
+```
 
 ## Примеры
 

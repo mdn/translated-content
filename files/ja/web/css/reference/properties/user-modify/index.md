@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 **`user-modify`** プロパティは Firefox では効果がありません。元々は要素の内容をユーザーが編集できるかどうかを決める予定でした。
 

@@ -8,7 +8,11 @@ original_slug: Web/CSS/:fullscreen
 
 ## 구문
 
-{{csssyntax}}
+```css
+:fullscreen {
+  /* ... */
+}
+```
 
 ## 사용 참고
 

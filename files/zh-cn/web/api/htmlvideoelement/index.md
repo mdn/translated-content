@@ -39,7 +39,7 @@ _继承了其父对象 {{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElemen
 - {{domxref("HTMLVideoElement.mozFrameDelay")}} {{readonlyInline}}{{non-standard_inline}}
   - : 返回一个 `double` 值，表示到目前为止，距上一次绘制过去了多长时间，单位是秒。
 - {{domxref("HTMLVideoElement.mozHasAudio")}} {{readonlyInline}}{{non-standard_inline}}
-  - : 返回一个{{domxref("Boolean")}}值，表示这个视频是否有关联音频。
+  - : 返回一个{{jsxref("Boolean")}}值，表示这个视频是否有关联音频。
 
 ## 方法
 

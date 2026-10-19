@@ -541,7 +541,7 @@ for (const resetPara of resetParas) {
 
 ## まとめ
 
-これで数当てゲームができました。最後までついて来れましたね！作ったプログラムを動かしてみてください。[最終版はここで遊べます](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。）もし作ったプログラムが動かなければ、[ソースコード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)と見比べてみてください。
+これで数当てゲームができました。最後までついて来れましたね！作ったプログラムを動かしてみてください。[最終版はここで遊べます](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。もし作ったプログラムが動かなければ、[ソースコード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)と見比べてみてください。
 
 次のレッスンも役立つかもしれません。そのレッスンでは、 JavaScript コードを記述する際に何が問題となるかを説明し、その過程で「数字当てゲーム」を参照しています。
 

@@ -4,8 +4,6 @@ slug: Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 original_slug: Web/JavaScript/Reference/Errors/Deprecated_octal
 ---
 
-{{jsSidebar("Errors")}}
-
 ## Message
 
 ```

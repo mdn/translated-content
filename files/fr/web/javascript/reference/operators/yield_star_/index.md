@@ -3,8 +3,6 @@ title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
 ---
 
-{{jsSidebar("Operators")}}
-
 Une **expression `yield*`** est utilisée afin de déléguer le mécanisme d'itération/génération à un autre {{jsxref("Statements/function*", "générateur")}} ou à un autre objet itérable.
 
 {{InteractiveExample("JavaScript Demo: Expressions - yield*")}}

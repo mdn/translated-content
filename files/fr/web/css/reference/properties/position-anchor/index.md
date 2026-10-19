@@ -311,7 +311,7 @@ La sortie est ancrée au curseur. Modifiez la valeur et la sortie reste au-dessu
 {{EmbedLiveSample("Utiliser le curseur d'une plage comme ancre", "100%", 225)}}
 
 > [!NOTE]
-> Le positionnement par ancre CSS pour cette démonstration ne fonctionne actuellement pas dans Firefox. Le curseur de la glissière peut être ciblé avec le pseudo-élément {{CSSxRef("::-moz-range-thumb")}} dans Firefox, mais il n'est actuellement pas disponible en tant qu'ancre (voir [bogue Firefox 1993699 <sup>(angl.)</sup>](https://bugzil.la/1993699)).
+> Le positionnement par une ancre CSS pour cette démonstration ne fonctionne actuellement pas dans Firefox. Le curseur de la glissière peut être ciblé avec le pseudo-élément {{CSSxRef("::-moz-range-thumb")}} dans Firefox, mais il n'est actuellement pas disponible en tant qu'ancre (voir [bogue Firefox 1993699 <sup>(angl.)</sup>](https://bugzil.la/1993699)).
 
 ## Spécifications
 
@@ -326,5 +326,5 @@ La sortie est ancrée au curseur. Modifiez la valeur et la sortie reste au-dessu
 - La propriété {{CSSxRef("anchor-name")}}
 - La propriété {{CSSxRef("anchor-scope")}}
 - L'attribut HTML [`anchor`](/fr/docs/Web/HTML/Reference/Global_attributes/anchor)
-- Le module [de positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
-- Le guide [d'utilisation du positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
+- Le module [de positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
+- Le guide [d'utilisation du positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)

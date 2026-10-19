@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5a2cea779777daaff451f21ca3b7f4c28a68de9e
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("String")}} 값의 **`big()`** 메서드는 해당 문자열을 큰 글꼴로 표시되게 만드는 {{HTMLElement("big")}} 요소(`<big>str</big>`)에 해당 문자열을 집어넣은 문자열을 생성합니다.
 

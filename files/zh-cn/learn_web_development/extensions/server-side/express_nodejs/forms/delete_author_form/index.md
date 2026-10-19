@@ -108,7 +108,7 @@ exports.author_delete_post = function (req, res, next) {
 
 创建 **/views/author_delete.pug** 并复制贴上底下文字。
 
-```plain
+```pug
 extends layout
 
 block content

@@ -3,7 +3,7 @@ title: Firefox 153 note de version pour les développeurs
 short-title: Firefox 153
 slug: Mozilla/Firefox/Releases/153
 l10n:
-  sourceCommit: 3b763f8f076c053b7a44e261c3a19a1879bc11ff
+  sourceCommit: f398f522d05bb8bfe739ac2417b00712b7888494
 ---
 
 Cet article présente les informations concernant les changements de Firefox 153 qui concernent les développeur·euse·s.

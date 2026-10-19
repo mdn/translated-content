@@ -3,8 +3,6 @@ title: Multiplication (*)
 slug: Web/JavaScript/Reference/Operators/Multiplication
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur de multiplication (`*`) fournit le produit de la multiplication des deux opérandes.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Multiplication operator")}}

@@ -5,7 +5,7 @@ slug: Web/API/AnalyserNode/getFloatFrequencyData
 
 {{ APIRef("Web Audio API") }}
 
-La méthode **`getFloatFrequencyData()`** de l'interface {{ domxref("AnalyserNode") }} copie les données de fréquence dans un tableau {{domxref("Float32Array")}} passé en paramètre.
+La méthode **`getFloatFrequencyData()`** de l'interface {{ domxref("AnalyserNode") }} copie les données de fréquence dans un tableau {{jsxref("Float32Array")}} passé en paramètre.
 
 Si le tableau a moins d'éléments que la propriété {{domxref("AnalyserNode.frequencyBinCount")}}, les données en excès sont supprimées. S'il a davantage d'éléments, les éléments non utilisés sont ignorés.
 
@@ -25,7 +25,7 @@ analyseur.getByteTimeDomainData(tableauDonnees);
 ### Paramètres
 
 - `array`
-  - : {{domxref("Float32Array")}} dans lequel seront copiées les données de fréquence. Pour tout échantillon silencieux, la valeur est `-Infinity`.
+  - : {{jsxref("Float32Array")}} dans lequel seront copiées les données de fréquence. Pour tout échantillon silencieux, la valeur est `-Infinity`.
 
 ### Valeur de retour
 
@@ -72,7 +72,7 @@ dessiner();
 ## Paramètres
 
 - array
-  - : Le tableau {{domxref("Float32Array")}} dans lequel seront copiées les données du domaine fréquentiel.
+  - : Le tableau {{jsxref("Float32Array")}} dans lequel seront copiées les données du domaine fréquentiel.
 
 ## Spécifications
 

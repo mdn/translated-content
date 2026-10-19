@@ -3,8 +3,6 @@ title: class
 slug: Web/JavaScript/Reference/Statements/class
 ---
 
-{{jsSidebar("Statements")}}
-
 La **déclaration class** crée une nouvelle classe avec le nom fourni en utilisant l'héritage à base de prototypes pour émuler le fonctionnement de classe.
 
 {{InteractiveExample("JavaScript Demo: Statement - Class")}}

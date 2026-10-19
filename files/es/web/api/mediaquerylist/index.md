@@ -14,7 +14,7 @@ Esto hace posible observar un documento para detectar cuando sus consultas de me
 La nueva versión de la interfaz de `MediaQueryList` hereda las propiedades de su interfaz principal, {{domxref("EventTarget")}}.
 
 - {{domxref("MediaQueryList.matches")}} {{readonlyInline}}
-  - : Un {{domxref("Boolean")}} que devuelve `true` si el
+  - : Un {{jsxref("Boolean")}} que devuelve `true` si el
     {{domxref("document")}} actualmente coincide con la lista de consultas de medios, o `false` si no.
 - {{domxref("MediaQueryList.media")}} {{readonlyInline}}
   - : Un {{jsxref("String")}} representa una consulta de medios serializada.

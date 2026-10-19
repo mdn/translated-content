@@ -19,7 +19,7 @@ _Cette interface hérite de propriétés de la part de son parent, {{domxref("No
   - : Une {{domxref ("NamedNodeMap")}} des entités déclarées dans la DTD. Chaque noeud de cette carte implémente l'interface {{domxref ("Entity")}}.
 
 - {{domxref("DocumentType.internalSubset")}} {{readonlyInline}} {{deprecated_inline}}
-  - : Un {{domxref ("DOMString")}} du sous-ensemble interne, ou null s'il n'y en a pas. Par exemple "\<! ELEMENT foo (bar)">
+  - : Un {{jsxref("String")}} du sous-ensemble interne, ou null s'il n'y en a pas. Par exemple "\<! ELEMENT foo (bar)">
 - {{domxref("DocumentType.name")}} {{readonlyInline}}
   - : une {{jsxref("String")}}, par exemple, `"html"` pour `<!DOCTYPE HTML>`.
 - {{domxref("DocumentType.notations")}} {{readonlyInline}} {{deprecated_inline}}

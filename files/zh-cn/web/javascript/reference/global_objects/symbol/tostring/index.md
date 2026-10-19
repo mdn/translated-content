@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 
 ## 语法
 
-```plain
+```js-nolint
 symbol.toString();
 ```
 

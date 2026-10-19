@@ -21,7 +21,7 @@ slug: Web/API/Text
 _Inherits properties from its parent, {{domxref("CharacterData")}}._
 
 - {{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}
-  - : Возвращает флаг {{domxref("Boolean")}}, сигнализирующий, содержит ли (или нет) text node только пробел(ы).
+  - : Возвращает флаг {{jsxref("Boolean")}}, сигнализирующий, содержит ли (или нет) text node только пробел(ы).
 - {{domxref("Text.wholeText")}} {{readonlyInline}}
   - : Возвращает {{jsxref("String")}}, который содержит все `Text` nodes логически примыкающие к этому {{domxref("Node")}}, соединённые как в документе.
 - {{domxref("Text.assignedSlot")}} {{readonlyinline}}

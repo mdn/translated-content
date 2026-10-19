@@ -17,7 +17,11 @@ original_slug: Web/CSS/:placeholder-shown
 
 ## Синтаксис
 
-{{csssyntax}}
+```css
+:placeholder-shown {
+  /* ... */
+}
+```
 
 ## Примеры
 

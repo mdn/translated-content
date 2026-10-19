@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 **`HTMLParamElement`** 接口提供用于操作 {{HTMLElement("param")}} 元素（表示一对充当 {{HTMLElement("object")}} 元素的参数的键和值）的特定属性（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用）。
 

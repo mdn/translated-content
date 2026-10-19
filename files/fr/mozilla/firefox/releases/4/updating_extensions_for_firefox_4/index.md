@@ -2,7 +2,7 @@
 title: Mise à jour des extensions pour Firefox 4
 slug: Mozilla/Firefox/Releases/4/Updating_extensions_for_Firefox_4
 l10n:
-  sourceCommit: 2591a9b59de88401a2ef0fb7d0b8d0281e3f5376
+  sourceCommit: e3a2272d272f21ea38e5fff9bd6ccec2d0dfb1a8
 ---
 
 Cet article fournit des informations détaillées sur les modifications apportées à Firefox 4 qui pourraient avoir une incidence sur les extensions existantes.

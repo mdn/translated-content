@@ -44,7 +44,7 @@ Puedes crear un nuevo objeto `Request` usando el constructor {{domxref("Request.
 - {{domxref("Body.body")}} {{readonlyInline}}
   - : Un simple getter usado para exponer un contenido del cuerpo {{domxref("ReadableStream")}}
 - {{domxref("Body.bodyUsed")}} {{readonlyInline}}
-  - : Almacena un {{domxref("Boolean")}} que declara si ya se ha usado el cuerpo en una respuesta.
+  - : Almacena un {{jsxref("Boolean")}} que declara si ya se ha usado el cuerpo en una respuesta.
 
 ## Métodos
 
@@ -54,13 +54,13 @@ Puedes crear un nuevo objeto `Request` usando el constructor {{domxref("Request.
 `Request` implementa {{domxref("Body")}}, por lo que también tiene los siguientes métodos disponibles:
 
 - {{domxref("Body.arrayBuffer()")}}
-  - : Devuelve una promesa que se resuelve con una representación {{domxref("ArrayBuffer")}} del cuerpo de la solicitud.
+  - : Devuelve una promesa que se resuelve con una representación {{jsxref("ArrayBuffer")}} del cuerpo de la solicitud.
 - {{domxref("Body.blob()")}}
   - : Devuelve una promesa que se resuelve con una representación {{domxref("Blob")}} del cuerpo de la solicitud.
 - {{domxref("Body.formData()")}}
   - : Devuelve una promesa que se resuelve con una representación {{domxref("FormData")}} del cuerpo de la solicitud.
 - {{domxref("Body.json()")}}
-  - : Devuelve una promesa que se resuelve con una representación {{domxref ("JSON")}} del cuerpo de la solicitud.
+  - : Devuelve una promesa que se resuelve con una representación {{jsxref("JSON")}} del cuerpo de la solicitud.
 - {{domxref("Body.text()")}}
   - : Devuelve una promesa que se resuelve con una representación {{jsxref("String")}} (text) del cuerpo de la solicitud.
 

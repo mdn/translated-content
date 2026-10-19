@@ -1,12 +1,10 @@
 ---
-title: "HTML 属性: placeholder"
+title: "`placeholder` 属性 (HTML)"
 short-title: placeholder
 slug: Web/HTML/Reference/Attributes/placeholder
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
 ---
-
-{{HTMLSidebar}}
 
 **`placeholder`** 属性は、フォームコントロールに値が無いときにコントロールに表示するテキストを定義します。プレースホルダーテキストは、ユーザーにコントロールに入力するべきデータの種類に関する短いヒントを提供するべきです。
 

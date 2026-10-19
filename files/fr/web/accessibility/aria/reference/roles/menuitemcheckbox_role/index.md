@@ -3,7 +3,7 @@ title: "ARIA : rôle menuitemcheckbox"
 short-title: menuitemcheckbox
 slug: Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role
 l10n:
-  sourceCommit: 1474534461893381d54c502e655f334b5568e597
+  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
 ---
 
 Le rôle `menuitemcheckbox` est un `menuitem` avec un état vérifiable dont les valeurs possibles sont `true`, `false` ou `mixed`.

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}
 
 **`MutationEvent`** インターフェイスは、 Document Object Model (DOM) の階層とノードの変更に特化したイベントプロパティを提供します。
 

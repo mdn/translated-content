@@ -21,7 +21,11 @@ p:first-of-type {
 
 ## Sintaxe
 
-{{csssyntax}}
+```css
+:first-of-type {
+  /* ... */
+}
+```
 
 ## Exemplos
 

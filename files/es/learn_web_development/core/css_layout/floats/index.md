@@ -14,7 +14,7 @@ Originalmente pensada para flotar imágenes dentro de bloques de texto, la propi
       <th scope="row">Requisitos previos:</th>
       <td>
         HTML básico (ver
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >), y una idea de Cómo funciona CSS (ver
         <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Introducción a CSS</a>.)

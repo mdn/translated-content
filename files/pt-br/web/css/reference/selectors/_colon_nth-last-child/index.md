@@ -38,7 +38,11 @@ A pseudo-classe `nth-last-child` é especificada com um único argumento, que re
 
 ### Sintaxe formal
 
-{{csssyntax}}
+```css-nolint
+:nth-last-child(<nth> [of <complex-selector-list>]?) {
+  /* ... */
+}
+```
 
 ## Exemplos
 

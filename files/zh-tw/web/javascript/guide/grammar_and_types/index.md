@@ -13,7 +13,7 @@ JavaScript 許多基本語法借鑒自 Java，C 或是 C++，但亦受 Awk、Per
 
 JavaScript 是 Case-sensitive（區分大小寫）並使用 Unicode 編碼。舉例來說，Früh (德文的"early") 可以當作變數的名稱。
 
-```plain
+```js
 var Früh = "foobar";
 ```
 
@@ -432,7 +432,7 @@ Do not confuse the primitive Boolean values `true` and `false` with the true and
 
 舉個例子：
 
-```plain
+```js-nolint
 3.1415926
 -.123456789
 -3.1E+12
@@ -615,7 +615,7 @@ console.log(quote);
 
 The result of this would be:
 
-```plain
+```js-nolint
 He read "The Cremation of Sam McGee" by R.W. Service.
 ```
 

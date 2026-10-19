@@ -79,7 +79,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 
 なお、拡張機能が持つことができるページアクションは 1 つだけです。
 
-ページアクションのプロパティはすべて、 [`pageAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)` API を使用してプログラムから変更することができます。
+ページアクションのプロパティはすべて、 [`pageAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API を使用してプログラムから変更することができます。
 
 ## アイコン
 

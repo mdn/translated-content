@@ -42,10 +42,10 @@ Ce descripteur accepte une liste de _tuples additifs_ (ensemble d'éléments) s�
   - : Un entier positif ou nul qui indique le poids entier associé au symbole du tuple.
 
 - [`<symbol>`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#symbol)
-  - : Spécifie le symbole du compteur à utiliser pour la valeur de poids définie par l'entier associé du tuple.
+  - : Définit le symbole du compteur à utiliser pour la valeur de poids définie par l'entier associé du tuple.
 
 > [!NOTE]
-> Les tuples additifs doivent être définis dans l'ordre décroissant des poids&nbsp;; sinon, la déclaration du descripteur n'est pas valide et sera ignorée.
+> Les tuples additifs doivent être définis dans l'ordre décroissant des poids&nbsp;; sinon, la déclaration du descripteur n'est pas valide et est ignorée.
 
 ## Description
 

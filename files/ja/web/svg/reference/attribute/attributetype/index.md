@@ -5,8 +5,6 @@ l10n:
   sourceCommit: db01d0c8b4cbf8a4467b1db65e17f6724d0ce710
 ---
 
-{{Deprecated_Header}}
-
 **`attributeType`** 属性は、対象の属性およびそれに関連付けられた値が定義されている名前空間を指定します。
 
 この属性は、以下の SVG 要素で使用できます。

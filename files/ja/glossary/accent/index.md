@@ -2,10 +2,8 @@
 title: Accent (強調色)
 slug: Glossary/Accent
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 **強調色**は主に明るい色であり、配色内で実用的な色である背景色や前景色と対照的な色です。これらは多くのプラットフォームの視覚スタイルに存在します（ただし、すべてではありません）。
 

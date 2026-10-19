@@ -39,7 +39,7 @@ _無變動。_
 
 - The {{domxref("Document.anchors", "anchors")}}, {{domxref("Document.applets", "applets")}}, {{domxref("Document.embeds", "embeds")}}, {{domxref("Document.forms", "forms")}}, {{domxref("Document.head", "head")}}, {{domxref("Document.images", "images")}}, {{domxref("Document.links", "links")}}, {{domxref("Document.plugins", "plugins")}}, and {{domxref("Document.scripts", "scripts")}} properties have been moved from the {{domxref("HTMLDocument")}} interface onto {{domxref("Document")}} ([Firefox bug 1415588](https://bugzil.la/1415588)).
 - The {{domxref("Node.getUserData()")}} and {{domxref("Node.setUserData()")}} methods have been removed from the platform completely ([Firefox bug 749981](https://bugzil.la/749981)).
-- {{domxref("DOMTokenList.replace()")}} now returns a {{domxref("Boolean")}} to indicate whether the replacement occurred successfully, rather than void ([Firefox bug 1444909](https://bugzil.la/1444909)).
+- {{domxref("DOMTokenList.replace()")}} now returns a {{jsxref("Boolean")}} to indicate whether the replacement occurred successfully, rather than void ([Firefox bug 1444909](https://bugzil.la/1444909)).
 
 #### DOM 事件
 

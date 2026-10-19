@@ -3,8 +3,6 @@ title: ET logique (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur ET logique (`&&`) (conjonction logique) renvoie vrai si et uniquement si ses deux opérandes sont `true` ou équivalents à `true`. Il est généralement utilisé avec des valeurs booléennes et, quand c'est le cas, il renvoie une valeur booléenne. Toutefois, l'opérateur `&&` renvoie en fait la valeur d'un de ses opérandes et, si cet opérateur est utilisé avec des valeurs non-booléennes, il renverra une valeur non-booléenne.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Logical AND", "shorter")}}

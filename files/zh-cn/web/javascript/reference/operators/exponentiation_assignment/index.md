@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 145e8c316fcdd8f67f3595fc52b0bbfacf7b949d
 ---
 
-
-
 **幂赋值**（**`**=`**）对两个操作数执行[幂运算](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)，并将结果赋给左操作数。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Exponentiation assignment operator")}}
@@ -20,7 +18,7 @@ console.log((a **= 2));
 console.log((a **= 0));
 // Expected output: 1
 
-console.log((a **= 'hello'));
+console.log((a **= "hello"));
 // Expected output: NaN
 ```
 

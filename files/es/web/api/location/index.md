@@ -41,7 +41,7 @@ _La interface `Location` no hereda ningun metodo, pero los implementa desde {{do
 - {{domxref("Location.assign()")}}
   - : Carga el recurso en la URL proporcionada en el parámetro.
 - {{domxref("Location.reload()")}}
-  - : Recarga el recurso desde la URL actual. Si unico y opcional parametro es {{domxref("Boolean")}}, el cual, cuando es `true`, hace que la pagina siempre sea recargada desde el servidor. Si es `false` o no es especificado, el navegador puede recargar la pagina desde su cache.
+  - : Recarga el recurso desde la URL actual. Si unico y opcional parametro es {{jsxref("Boolean")}}, el cual, cuando es `true`, hace que la pagina siempre sea recargada desde el servidor. Si es `false` o no es especificado, el navegador puede recargar la pagina desde su cache.
 - {{domxref("Location.replace()")}}
   - : Reemplaza el recurso actual por el recibido como URL. La diferencia con el metodo `assign()` es que luego de usar `replace()` la pagina actual no va a ser guardada en la sesión {{domxref("History")}}, esto significa que el usuario no podrá usar el boton _Atras_ para navegar a esta.
 - {{domxref("Location.toString()")}}

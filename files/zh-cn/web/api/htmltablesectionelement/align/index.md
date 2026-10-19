@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 {{domxref("HTMLTableSectionElement")}} 接口的 **`align`** 属性是一个指示如何在 {{htmlelement("thead")}}、{{htmlelement("tbody")}} 或 {{htmlelement("tfoot")}} 表格部分水平对齐文本的字符串，单个行和单元格可以覆盖它。
 

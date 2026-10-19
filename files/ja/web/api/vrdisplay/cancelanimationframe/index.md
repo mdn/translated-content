@@ -3,7 +3,7 @@ title: VRDisplay.cancelAnimationFrame()
 slug: Web/API/VRDisplay/cancelAnimationFrame
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}
 
 **`cancelAnimationFrame()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 {{domxref("Window.cancelAnimationFrame")}} の特別な実装であり、 {{domxref("VRDisplay.requestAnimationFrame()")}} で登録したコールバックを登録解除します．
 

@@ -1,15 +1,16 @@
 ---
-title: text-decoration-inset
+title: CSS `text-decoration-inset` プロパティ
+short-title: text-decoration-inset
 slug: Web/CSS/Reference/Properties/text-decoration-inset
 l10n:
-  sourceCommit: 0fe625f488d9b548f57bb7f4c714287ba093d96b
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 {{SeeCompatTable}}
 
-`text-decoration-inset` は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のテキスト装飾の開始点と終了点を調整し、レンダリングされたテキストに対して装飾を短縮したり、延長したり、位置をずらしたりすることができます。
+**`text-decoration-inset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のテキスト装飾の開始点と終了点を調整し、レンダリングされたテキストに対して装飾を短縮したり、延長したり、位置をずらしたりすることができます。
 
-{{InteractiveExample("CSS Demo: text-decoration-inset")}}
+{{InteractiveExample("CSS デモ: text-decoration-inset")}}
 
 ```css interactive-example-choice
 text-decoration-inset: 20px;
@@ -136,9 +137,8 @@ li {
     content: "このブラウザーは text-decoration-inset プロパティに対応していません。";
     background-color: wheat;
     display: block;
-    padding: 10px 0;
-    width: 100%;
     text-align: center;
+    padding: 1rem 0;
   }
 }
 ```
@@ -195,9 +195,8 @@ u {
     content: "このブラウザーは text-decoration-inset プロパティに対応していません。";
     background-color: wheat;
     display: block;
-    padding: 10px 0;
-    width: 100%;
     text-align: center;
+    padding: 1rem 0;
   }
 }
 ```

@@ -4,8 +4,6 @@ slug: Web/XML/XPath/Reference/Functions/document
 original_slug: Web/XPath/Functions/document
 ---
 
-{{XsltSidebar}}
-
 La fonction `document` recherche un ensemble de nœuds dans un ou des documents externes et retourne l'ensemble de nœuds résultant.
 
 ### Syntaxe

@@ -5,7 +5,7 @@ slug: Web/API/SubtleCrypto/digest
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-La méthode **`digest()`** de l'interface {{domxref("SubtleCrypto")}} génère un {{Glossary("digest")}} de la donnée fournie. Un condensé est une petite valeur de taille fixe issue d'une donnée de taille variable. Les condensés cryptographiques doivent résister à la collision, ce qui signifie qu'il doit être très difficile d'obtenir le même condensé à partir de deux entrés différentes.
+La méthode **`digest()`** de l'interface {{domxref("SubtleCrypto")}} génère un {{Glossary("hash function", "digest")}} de la donnée fournie. Un condensé est une petite valeur de taille fixe issue d'une donnée de taille variable. Les condensés cryptographiques doivent résister à la collision, ce qui signifie qu'il doit être très difficile d'obtenir le même condensé à partir de deux entrés différentes.
 
 Il prend en argument un identifiant pour l'algorithme de condensé et les données à traiter. Il retourne une {{jsxref("Promise")}} qui contiendra le condensé.
 
@@ -23,7 +23,7 @@ const digest = crypto.subtle.digest(algorithm, data);
   - `SHA-384`
   - `SHA-512`.
 
-- _`data`_ est un {{jsxref("ArrayBuffer")}} ou un {{domxref("ArrayBufferView")}} contenant les données à traiter.
+- _`data`_ est un {{jsxref("ArrayBuffer")}} ou un {{jsxref("TypedArray")}} contenant les données à traiter.
 
 ### Valeur retournée
 

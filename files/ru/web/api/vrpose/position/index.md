@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ccbc5d4100e0a5de844e060b025883ef1611d7b8
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 Доступное только для чтения свойство **`position`** интерфейса {{domxref ("VRPose")}} возвращает позицию {{domxref ("VRDisplay")}} в текущий момент времени {{domxref ("VRPose.timestamp")}} в виде 3D-вектора.
 
@@ -25,7 +25,7 @@ l10n:
 
 ### Значение
 
-{{domxref("Float32Array")}} или `null`, если VR-датчик не может предоставить данные о местоположении.
+{{jsxref("Float32Array")}} или `null`, если VR-датчик не может предоставить данные о местоположении.
 
 > [!NOTE]
 > Пользовательские агенты могут предоставлять эмулированные значения положения с помощью таких методов, как моделирование шеи; при этом {{domxref ("VRDisplayCapabilities.hasPosition")}} должен возвращать `false`.

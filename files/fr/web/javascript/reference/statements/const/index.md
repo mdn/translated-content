@@ -3,8 +3,6 @@ title: const
 slug: Web/JavaScript/Reference/Statements/const
 ---
 
-{{jsSidebar("Statements")}}
-
 La **déclaration `const`** permet de créer une constante nommée accessible uniquement en lecture. Cela ne signifie pas que la valeur contenue est immuable, uniquement que l'identifiant ne peut pas être réaffecté. Autrement dit la valeur d'une constante ne peut pas être modifiée par des réaffectations ultérieures. Une constante ne peut pas être déclarée à nouveau.
 
 {{InteractiveExample("JavaScript Demo: Statement - Const")}}

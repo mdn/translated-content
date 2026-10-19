@@ -55,7 +55,7 @@ button.addEventListener("click", focusInput);
 
 #### Résultat
 
-{{EmbedLiveSample('Retirer la sélection d'un champ texte')}}
+{{EmbedLiveSample("Retirer la sélection d'un champ texte")}}
 
 ## Spécifications
 

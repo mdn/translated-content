@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/acos
 
 ## 语法
 
-```plain
+```js-nolint
 Math.acos(x)
 ```
 

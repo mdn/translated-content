@@ -3,8 +3,6 @@ title: Expression function*
 slug: Web/JavaScript/Reference/Operators/function*
 ---
 
-{{jsSidebar("Operators")}}
-
 Le mot-clé **`function*`** peut être utilisé pour définir une fonction génératrice à l'intérieur d'une expression.
 
 {{InteractiveExample("JavaScript Demo: Expressions - function* expression")}}

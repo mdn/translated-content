@@ -3,7 +3,7 @@ title: "Request: blob() メソッド"
 short-title: blob()
 slug: Web/API/Request/blob
 l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+  sourceCommit: 562051c4ad20e9ecb5faf905286cdfca545a340d
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
@@ -22,7 +22,14 @@ blob()
 
 ### 返値
 
-{{domxref("Blob")}} で解決するプロミス。
+{{domxref("Blob")}} で解決するプロミス。この Blob は本体のバイトデータをデータとして持ち、メディア種別がリクエストの `Content-Type` ヘッダーの値です。
+
+### 例外
+
+- {{jsxref("TypeError")}}
+  - : 以下のどちらかの理由で発生します。
+    - リクエストの本文が[変更中またはロック済み](/ja/docs/Web/API/Fetch_API/Using_Fetch#ロックされ妨害されたストリーム)である。
+    - 本文のコンテンツをデコードする際にエラーが発生した（例えば、{{httpheader("Content-Encoding")}} ヘッダーが正しくないなど）。
 
 ## 例
 

@@ -1,8 +1,9 @@
 ---
 title: Firefox ユーザーエージェント文字列リファレンス
+short-title: Firefox UA 文字列
 slug: Web/HTTP/Reference/Headers/User-Agent/Firefox
 l10n:
-  sourceCommit: b1e1430dd3b1d2e01197231ab0fa6047ed8a221b
+  sourceCommit: 0bd99260a605fec40b453f2e6178f15b0b2a6c03
 ---
 
 この文書では、 Firefox 4 以降および Gecko 2.0 以降ベースのアプリケーションで用いられるユーザーエージェント文字列について説明します。 Gecko 2.0 での変更点について詳しくは [Final ユーザーエージェント文字列 for Firefox 4](https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/)E (ブログ記事) をご覧ください。[ユーザーエージェントの検出](/ja/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)に関する文書や [Hacks の投稿](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)もご覧ください。
@@ -27,8 +28,8 @@ Firefox 自身のユーザーエージェント文字列は、 4 つの部分に
 
 Gecko ベースの他製品では下記 2 つの形式のいずれかであり、各トークンの意味は以下に記載した内容を除いて同じです。
 
-`Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail appname/appversion`
-`Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail Firefox/firefox-version appname/appversion`
+`Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail app-name/app-version`
+`Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail Firefox/firefox-version app-name/app-version`
 
 - `appname/appversion` は、アプリケーションの名称とバージョンを示します。例えばこれは、`Camino/2.1.1` や `SeaMonkey/2.7.1` となります。
 - `Firefox/firefox-version` は、Firefox を想定するウェブサイトと最大限の互換性を得るために一部の Gecko ベースのブラウザーが組み入れる場合がある、省略可能な互換性トークンです。 `firefox-version` は一般的に、導入した Gecko のバージョンに相当する Firefox のリリースを表します。一部の Gecko ベースのブラウザーはこのトークンを使用しないかもしれません。従って、推定の際は Firefox ではなく Gecko を探してください!
@@ -54,19 +55,23 @@ Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0
 
 Windows のユーザーエージェントには以下のバリエーションがあり、その中で _x.y_ は Windows NT のバージョンを表します（例えば、Windows NT 6.1）。
 
-| Windows バージョン               | Gecko ユーザーエージェント文字列                                                  |
-| -------------------------------- | --------------------------------------------------------------------------------- |
-| Windows NT on x86 or aarch64 CPU | Mozilla/5.0 (Windows NT _x_._y_; rv:10.0) Gecko/20100101 Firefox/10.0             |
-| Windows NT on x64 CPU            | Mozilla/5.0 (Windows NT _x_._y_; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0 |
+| Windows バージョン   | Gecko ユーザーエージェント文字列                                                  |
+| -------------------- | --------------------------------------------------------------------------------- |
+| Windows NT (x86 CPU) | Mozilla/5.0 (Windows NT _x_._y_; rv:10.0) Gecko/20100101 Firefox/10.0             |
+| Windows NT (x64 CPU) | Mozilla/5.0 (Windows NT _x_._y_; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0 |
+
+> [!NOTE]
+> aarch64 CPU は、Windows 11 では x86_64 として、Windows 10 では x86 として認識されます（Windows 10 は x64 エミュレーションに対応していないため）。
+> [Bugzilla #1763310](https://bugzil.la/1763310) を参照してください。
 
 ## macOS
 
 ここで、 _x.y_ は macOS のバージョンです（例えば、 macOS 10.15）。 Firefox 87 から、 Firefox は報告する macOS のバージョン数値を 10.15 に制限するため、 macOS 11.0 Big Sur 以降はユーザーエージェント文字列で "10.15" と報告されます。 ARM ベースの Mac はユーザーエージェント文字列で "Intel" と報告されます。
 
-| Mac OS X バージョン                 | Gecko ユーザーエージェント文字列                                                   |
-| ----------------------------------- | ---------------------------------------------------------------------------------- |
-| Mac OS X on x86, x86_64, or aarch64 | Mozilla/5.0 (Macintosh; Intel Mac OS X _x.y_; rv:10.0) Gecko/20100101 Firefox/10.0 |
-| Mac OS X on PowerPC                 | Mozilla/5.0 (Macintosh; PPC Mac OS X _x.y_; rv:10.0) Gecko/20100101 Firefox/10.0   |
+| Mac OS X バージョン             | Gecko ユーザーエージェント文字列                                                   |
+| ------------------------------- | ---------------------------------------------------------------------------------- |
+| Mac OS X (x86, x86_64, aarch64) | Mozilla/5.0 (Macintosh; Intel Mac OS X _x.y_; rv:10.0) Gecko/20100101 Firefox/10.0 |
+| Mac OS X (PowerPC)              | Mozilla/5.0 (Macintosh; PPC Mac OS X _x.y_; rv:10.0) Gecko/20100101 Firefox/10.0   |
 
 ## Linux
 
@@ -76,6 +81,9 @@ Linux には多様なプラットフォームが存在します。 Linux ディ�
 | ------------------------------- | -------------------------------------------------------------------- |
 | Linux デスクトップ (i686 CPU)   | Mozilla/5.0 (X11; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0   |
 | Linux デスクトップ (x86_64 CPU) | Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0 |
+
+> [!NOTE]
+> Firefox 127.0 以降では、32 ビット x86 が Firefox のユーザーエージェント文字列内で x86_64 として報告されるようになりました。{{domxref("navigator.platform")}} および {{domxref("navigator.oscpu")}} において、32 ビット x86 が x86_64 として報告されるようになりました（[Firefox 127.0 リリースノート](https://www.firefox.com/en-US/firefox/127.0/releasenotes/) を参照）。
 
 ## Android 版 Firefox
 
@@ -127,72 +135,6 @@ Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHT
 ```
 
 メモ: このユーザーエージェント文字列は iPhone XR シミュレーターから取得したもので、端末によって異なるかもしれません。
-
-## Firefox for Fire TV
-
-Firefox for Fire TV のバージョン 3 (およびそれ以前もおそらく) は、以下の書式のユーザーエージェント文字列を使用します。
-
-```plain
-Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/<firefox-version> Chrome/<Chrome Rev> Safari/<WebKit Rev>
-```
-
-| Firefox TV のバージョン | ユーザーエージェント文字列                                                                                                         |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| v3.0                    | Mozilla/5.0 (Linux; Android 7.1.2) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/3.0 Chrome/59.0.3017.125 Safari/537.36 |
-
-## Firefox for Echo Show
-
-Firefox for Echo Show はバージョン 1.1 から、以下の書式のユーザーエージェント文字列を使用しています。
-
-```plain
-Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/<firefox-version> Chrome/<Chrome Rev> Safari/<WebKit Rev>
-```
-
-| Firefox for Echo Show のバージョン | ユーザーエージェント文字列                                                                                                         |
-| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| v1.1                               | Mozilla/5.0 (Linux; Android 5.1.1) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/1.1 Chrome/59.0.3017.125 Safari/537.36 |
-
-## Firefox OS
-
-| フォームファクター | Gecko のユーザーエージェント文字列                                |
-| ------------------ | ----------------------------------------------------------------- |
-| 携帯電話           | Mozilla/5.0 (Mobile; rv:26.0) Gecko/26.0 Firefox/26.0             |
-| タブレット         | Mozilla/5.0 (Tablet; rv:26.0) Gecko/26.0 Firefox/26.0             |
-| テレビ             | Mozilla/5.0 (TV; rv:44.0) Gecko/44.0 Firefox/44.0                 |
-| 端末特有           | Mozilla/5.0 (Mobile; **_nnnn;_** rv:26.0) Gecko/26.0 Firefox/26.0 |
-
-### 端末特有のユーザーエージェント文字列
-
-Mozilla は**強く反対**していますが、残念ながら一部の機器メーカーは端末の ID を表すトークンを、ユーザーエージェント文字列に含めています。これに当てはまる場合は Firefox OS のユーザーエージェント文字列が、前出の表で示したように端末特有の文字列になります。 **_nnnn;_** が、端末を示すメーカーのコードです ([ガイドライン](https://wiki.mozilla.org/B2G/User_Agent/Device_Model_Inclusion_Requirements)もご覧ください)。私たちは "**NexusOne;**", "**ZTEOpen;**", "**Open C;**" などを見つけました（空白を入れることも非推奨です）。ユーザーエージェント検出のロジックを支援するためにこの情報を提供しますが、 Mozilla はユーザーエージェント文字列で端末 ID を検出することを推奨しません。
-
-ユーザーエージェント文字列に端末 ID を持つ場合を含むすべてのモバイル端末を検出するであろう、JavaScript の正規表現は以下のとおりです。
-
-```js
-/mobi/i;
-```
-
-`i` は大文字・小文字を区別しないことを示し、 `mobi` がすべてのモバイルブラウザーに一致します。
-
-### Firefox OS のバージョン番号
-
-Firefox OS のバージョン番号は UA 文字列に含まれませんが、 UA 文字列には Gecko のバージョンからバージョン情報を特定することができます。
-
-| Firefox OS のバージョン番号 | Gecko のバージョン番号 |
-| --------------------------- | ---------------------- |
-| 1.0.1                       | 18.0                   |
-| 1.1                         | 18.1                   |
-| 1.2                         | 26.0                   |
-| 1.3                         | 28.0                   |
-| 1.4                         | 30.0                   |
-| 2.0                         | 32.0                   |
-| 2.1                         | 34.0                   |
-| 2.2                         | 37                     |
-| 2.5                         | 44                     |
-
-> [!NOTE]
-> この対応関係は [Mercurial リポジトリー名](https://hg-edge.mozilla.org/releases)から容易に判断できます。`mozilla-b2g` で始まるリポジトリーが Firefox OS のリリースリポジトリーであり、Firefox OS と Gecko の両バージョンがその名前に含まれています。
-
-Firefox OS のバージョン番号は 4 つの数字があります: `X.X.X.Y`. 始めの 2 つの数字は Mozilla の製品チームが管理しており、新機能を伴うバージョンを表します（例: v1.1、1.2 など）。3 番目の番号はセキュリティ更新向けの定期的なバージョンの識別 (最大 6 週間ごと) として増えていきます。4 番目の番号は OEM が管理します。
 
 ## 関連情報
 

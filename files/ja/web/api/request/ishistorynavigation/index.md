@@ -3,7 +3,7 @@ title: "Request: isHistoryNavigation プロパティ"
 short-title: isHistoryNavigation
 slug: Web/API/Request/isHistoryNavigation
 l10n:
-  sourceCommit: f2dc3d5367203c860cf1a71ce0e972f018523849
+  sourceCommit: 5415d3f4ce7dde04c2b7d26b93298ffb5f259d64
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
@@ -21,30 +21,31 @@ l10n:
 この例は、サービスワーカー内で実行されます。 {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}} イベントを待ち受けします。イベントハンドラー内で、サービスワーカーは `isHistoryNavigation` プロパティをチェックして、リクエストが履歴ナビゲーションによるものかどうかを判断します。 履歴ナビゲーションによるリクエストの場合は、キャッシュされたレスポンスで応答しようと試みます。 キャッシュがこのリクエストに対するレスポンスを含んでいない場合は、サービスワーカーはネットワークからレスポンスを取得し、その複製をキャッシュし、ネットワークレスポンスで応答します。
 
 ```js
-self.addEventListener("request", (event) => {
-  // ...
+self.addEventListener("fetch", (event) => {
+  // …
 
   if (event.request.isHistoryNavigation) {
     event.respondWith(
-      caches.match(event.request).then((response) => {
+      (async () => {
+        let response = await caches.match(event.request);
         if (response !== undefined) {
           return response;
-        } else {
-          return fetch(event.request).then((response) => {
-            let responseClone = response.clone();
-
-            caches.open("v1").then((cache) => {
-              cache.put(event.request, responseClone);
-            });
-
-            return response;
-          });
         }
-      }),
+        response = await fetch(event.request);
+        const responseClone = response.clone();
+
+        event.waitUntil(
+          caches
+            .open("v1")
+            .then((cache) => cache.put(event.request, responseClone)),
+        );
+
+        return response;
+      })(),
     );
   }
 
-  // ...
+  // …
 });
 ```
 

@@ -3,8 +3,6 @@ title: L'opérateur delete
 slug: Web/JavaScript/Reference/Operators/delete
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur **`delete`** permet de retirer une propriété d'un objet.
 
 {{InteractiveExample("JavaScript Demo: Expressions - delete operator")}}

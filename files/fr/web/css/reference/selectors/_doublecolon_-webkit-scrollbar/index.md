@@ -3,12 +3,20 @@ title: Pseudo-élément CSS `::-webkit-scrollbar`
 short-title: ::-webkit-scrollbar
 slug: Web/CSS/Reference/Selectors/::-webkit-scrollbar
 l10n:
-  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
+  sourceCommit: b2a7378d76136b568fe9414f46abda899b2bf700
 ---
 
 {{Non-standard_Header}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-scrollbar`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de modifier le style de la barre de défilement associée à un élément. Il s'agit d'un pseudo-élément propriétaire, uniquement disponible pour les navigateurs WebKit.
+
+Les propriétés standard {{cssxref("scrollbar-color")}} et {{cssxref("scrollbar-width")}} peuvent être utilisées comme alternatives pour les navigateurs qui ne prennent pas en charge ce pseudo-élément et les pseudo-éléments associés `::-webkit-scrollbar-*` (voir la [compatibilité des navigateurs](#compatibilité_des_navigateurs)).
+
+> [!NOTE]
+> Si les valeurs calculées de {{cssxref("scrollbar-color")}} et {{cssxref("scrollbar-width")}} d'un élément sont différentes de `auto`, elles remplacent le style `::-webkit-scrollbar-*`.
+> Comme `scrollbar-color` est hérité, un élément est affecté lorsqu'un ancêtre le définit, même si l'élément lui-même ne le fait pas.
+> Définir `scrollbar-color: auto` sur l'élément restaure son style `::-webkit-scrollbar-*` s'il a été précédemment supprimé par un réglage `scrollbar-color` sur un ancêtre.
+> Voir [Ajouter une solution de repli pour les styles de barre de défilement](#ajouter_une_solution_de_repli_pour_les_styles_de_barre_de_défilement) pour plus de détails.
 
 ## Sélecteurs de barre de défilement
 

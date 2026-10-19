@@ -5,7 +5,7 @@ slug: Web/API/GamepadPose/hasOrientation
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-{{domxref("GamepadPose")}} インターフェイスの **`hasOrientation`** 読み取り専用プロパティは、 {{domxref("Gamepad")}} が方向情報を返すことができるかどうかを示す {{domxref("Boolean")}} を返します。
+{{domxref("GamepadPose")}} インターフェイスの **`hasOrientation`** 読み取り専用プロパティは、 {{domxref("Gamepad")}} が方向情報を返すことができるかどうかを示す {{jsxref("Boolean")}} を返します。
 
 ## 構文
 
@@ -15,7 +15,7 @@ var hasItGotOrientation = gamepadPoseInstance.hasOrientation;
 
 ### 値
 
-{{domxref("Boolean")}} 。
+{{jsxref("Boolean")}} 。
 
 ## 例
 

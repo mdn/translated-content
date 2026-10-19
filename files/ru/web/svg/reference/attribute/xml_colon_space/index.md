@@ -3,7 +3,7 @@ title: xml:space
 slug: Web/SVG/Reference/Attribute/xml:space
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{SVGRef}}
 
 « [SVG Attribute reference home](/en-US/SVG/Attribute)
 

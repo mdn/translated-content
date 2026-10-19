@@ -3,8 +3,6 @@ title: function
 slug: Web/JavaScript/Reference/Statements/function
 ---
 
-{{jsSidebar("Statements")}}
-
 La déclaration **`function`** (ou l'instruction `function`) permet de définir une fonction et les paramètres que celle-ci utilise.
 
 {{InteractiveExample("JavaScript Demo: Statement - Function")}}

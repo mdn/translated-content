@@ -1,8 +1,9 @@
 ---
-title: animation-timeline
+title: "`animation-timeline` プロパティ (CSS)"
+short-title: animation-timeline
 slug: Web/CSS/Reference/Properties/animation-timeline
 l10n:
-  sourceCommit: f6b253c16e6b1b9fe568c082a6f9f9bbd18a1c5d
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 **`animation-timeline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 CSS アニメーションの進行を制御するのに使われるタイムラインを指定します。
@@ -45,7 +46,7 @@ animation-timeline: unset;
   - : アニメーションはタイムラインに関連付けられません。
 
 - `auto`
-  - : アニメーションのタイムラインはこの文書の既定の {{domxref("DocumentTimeline")}} です。
+  - : アニメーションのタイムラインはこの文書のデフォルトの {{domxref("DocumentTimeline")}} です。
 
 - {{cssxref("animation-timeline/scroll", "scroll()")}}
   - : ルート要素、直近のスクローラー、またはそれ自身を無名スクロール進行タイムラインとして定義し、またオプションでスクローラーのスクロール軸を定義します。
@@ -71,7 +72,7 @@ CSS キーフレームアニメーションのデフォルトのタイムライ�
     - [無名スクロール進行タイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#無名スクロール進行タイムライン)
       - : アニメーションさせる要素の `animation-timeline` プロパティに {{cssxref("animation-timeline/scroll", "scroll()")}} 関数を設定します。この関数の 2 つのオプション引数は、スクロール進行タイムラインを指定するスクローラーと、使用するスクロール軸を定義します。
 - [ビュー進行タイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#ビュー進行タイムライン)
-  - : スクローラー内の要素（主体 (_Subject_) と呼ばれる）の可視性の変化に基づいて進行します。既定では、スクローラーの一方の端に最初に主体が表示されたときにタイムラインは `0%` になり、反対側の端に到達したときに `100%` になります。ビュー進行タイムラインは、2 つの方法で指定することができます。
+  - : スクローラー内の要素（主体 (_Subject_) と呼ばれる）の可視性の変化に基づいて進行します。デフォルトでは、スクローラーの一方の端に最初に主体が表示されたときにタイムラインは `0%` になり、反対側の端に到達したときに `100%` になります。ビュー進行タイムラインは、2 つの方法で指定することができます。
     - [名前付きビュー進行タイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#名前付きビュー進行タイムライン)
       - : {{cssxref("view-timeline-name")}} プロパティ（または {{cssxref("view-timeline")}} の一括指定プロパティ）を `<dashed-ident>` に設定することで、主体の名前を明示的に指定します。要素の `animation-timeline` プロパティをアニメーション対象の `<dashed-ident>` に設定すると、主体の可視性が要素のアニメーション進行を制御します。なお、アニメーション対象の要素が主体と同一である必要はありません。
     - [無名ビュー進行タイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#無名ビュー進行タイムライン_view_関数)
@@ -167,7 +168,7 @@ div {
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }
@@ -203,7 +204,7 @@ div {
 
 コンテナーをフレックスコンテナーとして定義し、コンテナーの {{cssxref("width")}} を、そのフレックス子要素の合計幅の半分に設定します。{{cssxref("overflow-x")}} の値を `scroll` に設定することで、水平スクロールバーが設けられます。
 
-{{cssxref("scroll-timeline-name")}} および {{cssxref("scroll-timeline-axis")}} プロパティで定義されたスクロール進行タイムラインは、`--square-timeline` と名付けられてます。このタイムラインは、`#square` 要素に `animation-timeline: --square-timeline` を使用して適用されます。
+{{cssxref("scroll-timeline-name")}} および {{cssxref("scroll-timeline-axis")}} プロパティで定義されたスクロール進行タイムラインは、`--square-timeline` と名付けられてます。このタイムラインは、`#shape` 要素に `animation-timeline: --square-timeline` を使用して適用されます。
 
 ```css live-sample___named_scroll live-sample___anonymous_scroll
 #container {
@@ -253,7 +254,7 @@ div {
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }
@@ -287,7 +288,7 @@ div {
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }
@@ -323,8 +324,8 @@ div {
 HTML はスクロール領域内のコンテナー内で大量のテキストを記載していますが、簡潔化のため非表示にしています。このテキストの壁の中央に、2 つの `<div>` 要素を記載します。まず 1 つは要素自体の可視性に基づいて、2 つ目は親要素の可視性に基づいてアニメーションを適用します。
 
 ```html live-sample___named_view
-<div class="animatedElement self">SELF</div>
-<div class="animatedElement parent">PARENT</div>
+<div class="animated-element self">SELF</div>
+<div class="animated-element parent">PARENT</div>
 ```
 
 ```html-nolint hidden live-sample___named_view
@@ -347,7 +348,7 @@ HTML はスクロール領域内のコンテナー内で大量のテキストを
 要素の不透明度と変倍を変更するキーフレームアニメーションを生成し、両方のアニメーションする要素に適用します。
 
 ```css live-sample___named_view
-@keyframes animationEffect {
+@keyframes animation-effect {
   0% {
     opacity: 0;
     scale: 0;
@@ -358,8 +359,8 @@ HTML はスクロール領域内のコンテナー内で大量のテキストを
   }
 }
 
-.animatedElement {
-  animation: animationEffect 1ms linear;
+.animated-element {
+  animation: animation-effect 1ms linear;
 }
 ```
 
@@ -367,14 +368,14 @@ HTML はスクロール領域内のコンテナー内で大量のテキストを
 
 ```css live-sample___named_view
 .self {
-  view-timeline-name: --selfScrollerElement;
-  animation-timeline: --selfScrollerElement;
+  view-timeline-name: --self-scroller-element;
+  animation-timeline: --self-scroller-element;
 }
 .container {
-  view-timeline-name: --parentScrollerElement;
+  view-timeline-name: --parent-scroller-element;
 }
 .parent {
-  animation-timeline: --parentScrollerElement;
+  animation-timeline: --parent-scroller-element;
 }
 ```
 
@@ -400,7 +401,7 @@ HTML はスクロール領域内のコンテナー内で大量のテキストを
     margin-bottom: 0.75lh;
   }
 
-  .animatedElement {
+  .animated-element {
     height: 200px;
     width: calc(100% - 2em);
     margin: auto;
@@ -441,4 +442,4 @@ HTML はスクロール領域内のコンテナー内で大量のテキストを
 - {{domxref("AnimationTimeline")}}
 - [ガイド: CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
 - [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)モジュール
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)モジュール

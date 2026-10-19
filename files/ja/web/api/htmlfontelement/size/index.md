@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{deprecated_header}}{{ APIRef("HTML DOM") }}
+{{ APIRef("HTML DOM") }}
 
 廃止された **`HTMLFontElement.size`** プロパティは、HTML の [`size`](/ja/docs/Web/HTML/Reference/Elements/font#size) 属性を反映した文字列です。これは 1 から 7 までのフォントサイズか、例えば -2 や +1 のような既定値 3 からの相対値を格納します。
 

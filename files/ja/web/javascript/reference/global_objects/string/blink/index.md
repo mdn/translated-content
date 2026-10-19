@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{Deprecated_Header}}
-
 **`blink()`** は {{jsxref("String")}} 値のメソッドで、この文字列を `<blink>` の中に埋め込んだ文字列 (`<blink>str</blink>`) を生成し、古いブラウザーにおいて文字列を点滅させるために使用します。
 
 > [!NOTE]

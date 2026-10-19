@@ -133,11 +133,11 @@ _L'interface n'hérite d'aucune propriété._
 - {{domxref("NodeIterator.filter")}} {{readonlyInline}}
   - : Renvoie un {{domxref("NodeFilter")}} utilisé pour sélectionner les noeuds pertinents.
 - {{domxref("NodeIterator.expandEntityReferences")}} {{readonlyInline}} {{deprecated_inline}}
-  - : est un {{domxref("Boolean")}} (_booléen_) indiquant si, lors de la suppression d'une {{domxref("EntityReference")}}, tout son sous-arbre doit être supprimé en même temps.
+  - : est un {{jsxref("Boolean")}} (_booléen_) indiquant si, lors de la suppression d'une {{domxref("EntityReference")}}, tout son sous-arbre doit être supprimé en même temps.
 - {{domxref("NodeIterator.referenceNode")}} {{readonlyInline}} {{experimental_inline() }}
   - : Renvoie le {{domxref("Node")}} (noeud) auquel l'itérateur est ancré.
 - {{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{readonlyInline}} {{ experimental_inline() }}
-  - : Renvoie un {{domxref("Boolean")}} (_booléen_) qui indique si le {{domxref("NodeIterator")}} est ancré avant (`true` (_vrai_)) ou après (`false` (_faux_)) le noeud d'ancrage.
+  - : Renvoie un {{jsxref("Boolean")}} (_booléen_) qui indique si le {{domxref("NodeIterator")}} est ancré avant (`true` (_vrai_)) ou après (`false` (_faux_)) le noeud d'ancrage.
 
 ## Méthodes
 

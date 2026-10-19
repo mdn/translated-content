@@ -1,12 +1,10 @@
 ---
-title: "HTML 属性: readonly"
+title: "`readonly` 属性 (HTML)"
 short-title: readonly
 slug: Web/HTML/Reference/Attributes/readonly
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
 ---
-
-{{HTMLSidebar}}
 
 **`readonly`** は論理属性で、存在する場合、要素が変更可能ではなくなり、ユーザーがそのコントロールを編集できなくなります。
 
@@ -96,23 +94,23 @@ readonly が付いた値を動的に変更できる唯一の方法は、スク�
 
 ```html
 <div class="group">
-  <input type="text" value="何らかの値" readonly="readonly" id="text" />
+  <input type="text" value="何らかの値" readonly id="text" />
   <label for="text">テキストボックス</label>
 </div>
 <div class="group">
-  <input type="date" value="2020-01-01" readonly="readonly" id="date" />
+  <input type="date" value="2020-01-01" readonly id="date" />
   <label for="date">日付</label>
 </div>
 <div class="group">
-  <input type="email" value="何らかの値" readonly="readonly" id="email" />
+  <input type="email" value="何らかの値" readonly id="email" />
   <label for="email">メールドレス</label>
 </div>
 <div class="group">
-  <input type="password" value="何らかの値" readonly="readonly" id="pwd" />
+  <input type="password" value="何らかの値" readonly id="pwd" />
   <label for="pwd">パスワード</label>
 </div>
 <div class="group">
-  <textarea readonly="readonly" id="ta">何らかの値</textarea>
+  <textarea readonly id="ta">何らかの値</textarea>
   <label for="ta">メッセージ</label>
 </div>
 ```

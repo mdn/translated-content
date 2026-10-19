@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{deprecated_header}}
-
 **`<rb>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("ruby") }} 表記のベースとなるテキストの部分、すなわち修飾される文字列を区切るために使用されます。一つの `<rb>` 要素がベーステキストの不可分な区間を区切るように囲みます。
 
 ## 属性

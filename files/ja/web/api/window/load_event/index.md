@@ -3,12 +3,12 @@ title: "Window: load イベント"
 short-title: load
 slug: Web/API/Window/load_event
 l10n:
-  sourceCommit: 367358d6847aa1766344951207dfd79d5c073a66
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
-**`load`** イベントは、ページ全体が、スタイルシートや画像などのすべての依存するリソースを含めて読み込まれたときに発生します。
+**`load`** イベントは、ページ全体が読み込まれたときに発生します。これには、スタイルシート、スクリプト（非同期、遅延実行、およびモジュールスクリプトを含む）、iframe、画像など、すべての依存リソースが含まれますが、[遅延読み込み](/ja/docs/Web/Performance/Guides/Lazy_loading#画像、iframe、動画、音声)されているものは除きます。
 これは {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} が、ページの DOM の読み込みが完了すれば、リソースの読み込みが完了するのを待たずに発生するのと対照的です。
 
 このイベントはキャンセル不可で、バブリングしません。
@@ -19,14 +19,16 @@ l10n:
 > [!NOTE]
 > メイン文書が読み込まれたときに配信される `load` イベントは `window` に配信されますが、 2 つのプロパティが変更されています。 `target` は `document` であり、`path` は `undefined` です。これら 2 つのプロパティは過去との互換性のために変更されています。
 
+操作対象のDOMが完全に構築される前にスクリプトが実行されるのを避けるには、イベントリスナーで囲まずに、スクリプトをドキュメント本体の最後、閉じタグ `</body>` の直前に配置します。通常、`load` イベントは、画像や遅延読み込みされるスクリプトなどの外部リソースの読み込みを待つ場合にのみ使用すべきです。
+
 ## 構文
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("load", (event) => {});
+```js-nolint
+addEventListener("load", (event) => { })
 
-onload = (event) => {};
+onload = (event) => { }
 ```
 
 ## イベント型

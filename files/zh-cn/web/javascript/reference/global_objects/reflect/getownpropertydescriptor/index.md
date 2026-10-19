@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
 
 ## 语法
 
-```plain
+```js-nolint
 Reflect.getOwnPropertyDescriptor(target, propertyKey)
 ```
 

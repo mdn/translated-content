@@ -1,97 +1,96 @@
 ---
 title: PointerEvent
 slug: Web/API/PointerEvent
+l10n:
+  sourceCommit: bec7ef59277e752985de0ee963c86f6e8e4b3400
 ---
 
-{{ APIRef("Pointer Events") }}
+{{APIRef("Pointer Events")}}
 
-L'interface **`PointerEvent`** représente les données de l'état d'un évènement du DOM produit par un pointeur, tels que la géométrie du point de contact, le type d'appareil qui a généré l'évènement, l'intensité de pression qui a été appliquée au contact de la surface, etc.
+L'interface **`PointerEvent`** représente l'état d'un évènement du DOM produit par un pointeur, tels que la géométrie du point de contact, le type d'appareil qui a généré l'évènement, l'intensité de pression qui a été appliquée au contact de la surface, etc.
 
-Un _pointeur_ est une représentation agnostique de tout appareil de saisie (tels qu'une souris, un stylet, ou un point de contact sur une surface tactile). Le pointeur peut cibler des coordonnées spécifiques (ou une collection de coordonnées) sur la surface de contact telle qu'un écran.
+Un _pointeur_ est une représentation agnostique du matériel des dispositifs d'entrée (tels qu'une souris, un stylet ou un point de contact sur une surface tactile). Le pointeur peut cibler des coordonnées spécifiques (ou un ensemble de coordonnées) sur la surface de contact telle qu'un écran.
 
-Le _test de ciblage_ d'un pointeur est le processus qu'un navigateur utilise pour déterminer l'élément pour un évènement de pointeur. Typiquement, cela est déterminé en considérant la position du pointeur ainsi que l'agencement visuel des éléments dans un document sur l'écran.
+Le _test de ciblage_ d'un pointeur est le processus qu'un navigateur utilise pour déterminer l'élément cible pour un évènement de pointeur. Typiquement, cela est déterminé en considérant la position du pointeur ainsi que l'agencement visuel des éléments dans un document sur un support écran.
+
+{{InheritanceDiagram}}
 
 ## Constructeurs
 
-- {{domxref("PointerEvent.PointerEvent", "PointerEvent()")}}
-  - : Crée un PointerEvent synthétique et anonyme.
+- {{DOMxRef("PointerEvent.PointerEvent", "PointerEvent()")}}
+  - : Crée un `PointerEvent` synthétique et non fiable.
 
-## Propriétés
+## Propriétés d'instance
 
-_Cette interface hérite des proprétés de {{domxref("MouseEvent")}} et {{domxref("Event")}}._
+_Cette interface hérite des propriétés de {{DOMxRef("MouseEvent")}} et de {{DOMxRef("Event")}}._
 
-- {{ domxref('PointerEvent.pointerId')}} {{readonlyInline}}
-  - : Un identifiant unique pour le pointeur ayant provoqué l'évènement.
-- {{ domxref('PointerEvent.width')}} {{readonlyInline}}
+- {{DOMxRef("PointerEvent.altitudeAngle")}} {{ReadOnlyInline}}
+  - : Représente l'angle entre l'axe d'un transducteur (un pointeur ou un stylet) et le plan X-Y d'un écran de dispositif.
+- {{DOMxRef("PointerEvent.azimuthAngle")}} {{ReadOnlyInline}}
+  - : Représente l'angle entre le plan Y-Z et le plan contenant à la fois l'axe du transducteur (un pointeur ou un stylet) et l'axe Y.
+- {{DOMxRef("PointerEvent.persistentDeviceId")}} {{ReadOnlyInline}}
+  - : Un identifiant unique pour le dispositif de pointage générant le `PointerEvent`.
+- {{DOMxRef("PointerEvent.pointerId")}} {{ReadOnlyInline}}
+  - : Un identifiant unique pour le pointeur à l'origine de l'évènement.
+- {{DOMxRef("PointerEvent.width")}} {{ReadOnlyInline}}
   - : La largeur (magnitude sur l'axe X), en pixels CSS, de la géométrie de contact du pointeur.
-- {{ domxref('PointerEvent.height')}} {{readonlyInline}}
-  - : La hauteur (magniture sur l'axe Y), en pixels CSS, de la géométrie de contact du pointeur.
-- {{ domxref('PointerEvent.pressure')}} {{readonlyInline}}
-  - : La pressure normalisée de l'influx du pointeur dans un intervalle compris entre 0 et 1, où 0 et 1 représentent respectivement la pression minimale et maximale que l'appareil est capable de détecter.
-- {{ domxref('PointerEvent.tangentialPressure')}} {{readonlyInline}}
-  - : La pression tangentielle normalisée d'un influx de pointeur (également nommée compression ou contrainte cylindrique), où 0 et 1 représentent respectivement la pression minimale et maximale que l'appareil est capable de détecter.
-- {{ domxref('PointerEvent.tiltX')}} {{readonlyInline}}
-  - : Le plan de l'angle (en dégrés, dans un intervalle compris entre -90 et 90) entre le plan Y-Z et le plan contenant à la fois l'axe du transducteur (ex. : un crayon stylet) et l'axe Y.
-- {{ domxref('PointerEvent.tiltY')}} {{readonlyInline}}
-  - : Le plan de l'angle (en dégrés, dans un intervalle compris entre -90 et 90) entre le plan X-Z et le plan contenant à la fois l'axe du transducteur (ex. : un crayon stylet) et l'axe X.
-- {{ domxref('PointerEvent.twist')}} {{readonlyInline}}
-  - : La rotation en degrés et dans le sens des aiguilles d'une montre, d'un transducteur (ex. : crayon stylet) autour de axe principal, avec une valeur comprise dans un intervalle entre 0 et 359.
-- {{ domxref('PointerEvent.pointerType')}} {{readonlyInline}}
-  - : Indique le type d'appareil qui a provoqué l'évènement (souris, stylet, touché, etc.)
-- {{ domxref('PointerEvent.isPrimary')}} {{readonlyInline}}
-  - : Indique si le pointeur est le principal appareil de ce type.
+- {{DOMxRef("PointerEvent.height")}} {{ReadOnlyInline}}
+  - : La hauteur (magnitude sur l'axe Y), en pixels CSS, de la géométrie de contact du pointeur.
+- {{DOMxRef("PointerEvent.pressure")}} {{ReadOnlyInline}}
+  - : La pression normalisée de l'entrée du pointeur dans la plage `0` à `1`, où `0` et `1` représentent respectivement la pression minimale et maximale que le matériel est capable de détecter.
+- {{DOMxRef("PointerEvent.tangentialPressure")}} {{ReadOnlyInline}}
+  - : La pression tangentielle normalisée de l'entrée du pointeur (également connue sous le nom de pression de la bague ou [contrainte du cylindre <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Cylinder_stress)) dans la plage `-1` à `1`, où `0` est la position neutre du contrôle.
+- {{DOMxRef("PointerEvent.tiltX")}} {{ReadOnlyInline}}
+  - : L'angle plan (en degrés, dans la plage de `-90` à `90`) entre le plan Y-Z et le plan contenant à la fois l'axe du pointeur (par exemple, le stylet) et l'axe Y.
+- {{DOMxRef("PointerEvent.tiltY")}} {{ReadOnlyInline}}
+  - : L'angle plan (en degrés, dans la plage de `-90` à `90`) entre le plan X-Z et le plan contenant à la fois l'axe du pointeur (par exemple, le stylet) et l'axe X.
+- {{DOMxRef("PointerEvent.twist")}} {{ReadOnlyInline}}
+  - : La rotation dans le sens des aiguilles d'une montre du pointeur (par exemple, le stylet) autour de son axe principal en degrés, avec une valeur dans la plage `0` à `359`.
+- {{DOMxRef("PointerEvent.pointerType")}} {{ReadOnlyInline}}
+  - : Indique le type de dispositif ayant provoqué l'évènement (souris, stylet, tactile, etc.).
+- {{DOMxRef("PointerEvent.isPrimary")}} {{ReadOnlyInline}}
+  - : Indique si le pointeur représente le pointeur principal de ce type de pointeur.
 
-## Methods
+## Méthodes d'instance
 
-- {{ domxref('PointerEvent.getCoalescedEvents()')}} {{deprecated_inline}}
-  - : Retourne une séquence de toutes les instances de `PointerEvent` qui ont été dirigées vers l'évènement [`pointermove`](/fr/docs/Web/API/Element/pointermove_event) envoyé.
+- {{DOMxRef("PointerEvent.getCoalescedEvents()")}} {{SecureContext_Inline}}
+  - : Retourne une séquence de toutes les instances de `PointerEvent` qui ont été fusionnées dans l'évènement {{DOMxRef("Element/pointermove_event", "pointermove")}} envoyé.
+- {{DOMxRef("PointerEvent.getPredictedEvents()")}}
+  - : Retourne une séquence d'instances de `PointerEvent` que le navigateur prévoit suivre les évènements fusionnés de l'évènement {{DOMxRef("Element/pointermove_event", "pointermove")}} envoyé.
 
 ## Types d'évènements de pointeur
 
-L'interface `PointerEvent` a plusieurs types d'évènements. Pour déterminer quel évènement s'est produit, regardez la propriété {{ domxref("Event.type", "type") }} de l'évènement.
+L'interface `PointerEvent` a plusieurs types d'évènements. Pour déterminer quel évènement a été déclenché, consultez la propriété {{DOMxRef("Event.type", "type")}} de l'évènement.
 
 > [!NOTE]
-> Il est important de remarquer que dans beaucoup de cas, à la fois les évènements du pointeur et de la souris sont envoyés (afin de laisser la logique interagir avec l'utilisateur même lorsqu'elle n'est pas spécifique à un type de pointeur) . Si vous utilisez les évènements de pointeur, vous devez exécuter {{ domxref("event.preventDefault()") }} afin d'empêcher l'évènement de la souris d'être également envoyée.
+> Il est important de noter que dans de nombreux cas, les évènements de pointeur et de souris sont tous deux envoyés (afin de permettre au code non spécifique aux pointeurs d'interagir avec l'utilisateur·ice). Si vous utilisez des évènements de pointeur, vous devez appeler {{DOMxRef("Event.preventDefault()", "preventDefault()")}} pour empêcher l'envoi de l'évènement de souris.
 
-- [`pointerover`](/fr/docs/Web/API/Element/pointerover_event)
-  - : Cet évènement est déclenché lorsqu'un appareil de pointage est déplacé vers la zone du test de ciblage d'un élément.
-- [`pointerenter`](/fr/docs/Web/API/Element/pointerenter_event)
-  - : Cet évènement est déclenché lorsqu'un appareil de pointage est déplacé vers la zone du test de ciblage d'un élément ou l'un de ses descendants, ce qui inclut un évènement de pointage vers le bas d'un appareil qui ne propose pas de fonctionnalité de survol (voir pointage vers le bas). Ce type d'évènement est similaire à un pointage par dessus, mais se différencie en ne faisant pas circuler l'évènement.
-- [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event)
-  - : L'évènement est déclenché lorsqu'un pointeur devient _actif_. Pour une souris, il est déclenché lorsque l'appareil passe d'aucun bouton pressé à au moins un bouton pressé. Pour un touché, il est déclenché lorsqu'un contact physique est effectué avec le numériseur. Pour un stylet, il est déclenché au contact de ce dernier avec le numériseur.
-- [`pointermove`](/fr/docs/Web/API/Element/pointermove_event)
+- {{DOMxRef("Element/pointerover_event", "pointerover")}}
+  - : Cet évènement est déclenché lorsqu'un dispositif de pointage est déplacé dans les limites de test de l'élément.
+- {{DOMxRef("Element/pointerenter_event", "pointerenter")}}
+  - : Cet évènement est déclenché lorsqu'un dispositif de pointage est déplacé dans les limites de test d'un élément ou de l'un de ses descendants, y compris à la suite d'un évènement `pointerdown` provenant d'un dispositif qui ne prend pas en charge le survol (voir `pointerdown`). Ce type d'évènement est similaire à `pointerover`, mais diffère en ce qu'il ne se propage pas.
+- {{DOMxRef("Element/pointerdown_event", "pointerdown")}}
+  - : L'évènement est déclenché lorsqu'un pointeur devient _actif_. Pour la souris, il est déclenché lorsque le dispositif passe de l'état où aucun bouton n'est enfoncé à l'état où au moins un bouton est enfoncé. Pour le tactile, il est déclenché lorsqu'un contact physique est établi avec le numériseur. Pour le stylet, il est déclenché lorsque le stylet entre en contact physique avec le numériseur.
+
+    > [!NOTE]
+    > Pour les navigateurs tactiles qui permettent la [manipulation directe](https://w3c.github.io/pointerevents/#dfn-direct-manipulation), un évènement `pointerdown` déclenche la [capture implicite du pointeur](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture), ce qui fait que la cible capture tous les évènements de pointeur suivants comme s'ils se produisent sur la cible qui capture. En conséquence, `pointerover`, `pointerenter`, `pointerleave` et `pointerout` **ne sont pas déclenchés** tant que cette capture est active. La capture peut être libérée manuellement en appelant {{DOMxRef("Element.releasePointerCapture")}} sur l'élément cible, ou elle est libérée implicitement après un évènement `pointerup` ou `pointercancel`.
+
+- {{DOMxRef("Element/pointermove_event", "pointermove")}}
   - : Cet évènement est déclenché lorsqu'un pointeur change de coordonnées.
-- [`pointerup`](/fr/docs/Web/API/Element/pointerup_event)
-  - : Cet événement est déclenché lorsqu'un pointeur n'est plus _actif_.
-- [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event)
-  - : Un navigateur déclenche cet évènement s'il conclut que le pointeur ne sera plus capable de générer des évènements (par exemple, l'appareil concerné a été désactivé).
-- [`pointerout`](/fr/docs/Web/API/Element/pointerout_event)
-  - : Cet évènement est déclenché pour plusieurs raisons qui incluent : l'appareil de pointage est déplacé en dehors de la zone du test de ciblage d'un élément; déclencher l'évènement de pointage vers le haut pour un appareil qui ne supporte pas le survol (voir pointage vers le haut); après avoir déclenché un évènement de pointage annulé (voir pointage annulé); lorsqu'un stylet quitte la zone de portée pour être détectée au survol par le numériseur.
-- [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event)
-  - : Cet évènement est déclenché lorsqu'un appareil de pointage est déplacé en dehors de la zone de ciblage d'un élément. Pour les appareils avec un stylet, cet évènement est déclenché lorsque le stylet quitte la zone de portée pour être détectée au survol par le numériseur.
-- [`gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)
-  - : Cet évènement est déclenché lorsqu'un élément est capturé par un pointeur.
-- [`lostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event)
-  - : Cet évènement est déclenché après qu'un pointeur ait relâché sa capture.
-
-## GlobalEventHandlers
-
-- {{ domxref('GlobalEventHandlers.onpointerover') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerover`](/fr/docs/Web/API/Element/pointerover_event).
-- {{ domxref('GlobalEventHandlers.onpointerenter') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerenter`](/fr/docs/Web/API/Element/pointerenter_event).
-- {{ domxref('GlobalEventHandlers.onpointerdown') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event).
-- {{ domxref('GlobalEventHandlers.onpointermove') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointermove`](/fr/docs/Web/API/Element/pointermove_event).
-- {{ domxref('GlobalEventHandlers.onpointerup') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerup`](/fr/docs/Web/API/Element/pointerup_event).
-- {{ domxref('GlobalEventHandlers.onpointercancel') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event).
-- {{ domxref('GlobalEventHandlers.onpointerout') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerout`](/fr/docs/Web/API/Element/pointerout_event).
-- {{ domxref('GlobalEventHandlers.onpointerleave') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event).
+- {{DOMxRef("Element/pointerrawupdate_event", "pointerrawupdate")}} {{Experimental_Inline}}
+  - : Cet évènement est déclenché lorsque l'une des propriétés d'un pointeur change.
+- {{DOMxRef("Element/pointerup_event", "pointerup")}}
+  - : Cet évènement est déclenché lorsqu'un pointeur n'est plus _actif_.
+- {{DOMxRef("Element/pointercancel_event", "pointercancel")}}
+  - : Un navigateur déclenche cet évènement s'il conclut que le pointeur ne peut plus générer d'évènements (par exemple si le dispositif associé est désactivé).
+- {{DOMxRef("Element/pointerout_event", "pointerout")}}
+  - : Cet évènement est déclenché pour plusieurs raisons, notamment&nbsp;: le dispositif de pointage est déplacé en dehors des limites de test de l'élément&nbsp;; le déclenchement de l'évènement `pointerup` pour un dispositif qui ne prend pas en charge le survol (voir `pointerup`)&nbsp;; après le déclenchement de l'évènement `pointercancel` (voir `pointercancel`)&nbsp;; lorsqu'un stylet quitte la plage de survol détectable par le numériseur.
+- {{DOMxRef("Element/pointerleave_event", "pointerleave")}}
+  - : Cet évènement est déclenché lorsqu'un dispositif de pointage est déplacé en dehors des limites de test de l'élément. Pour les dispositifs stylet, cet évènement est déclenché lorsque le stylet quitte la plage de survol détectable par le numériseur.
+- {{DOMxRef("Element/gotpointercapture_event", "gotpointercapture")}}
+  - : Cet évènement est déclenché lorsqu'un élément reçoit la capture du pointeur.
+- {{DOMxRef("Element/lostpointercapture_event", "lostpointercapture")}}
+  - : Cet évènement est déclenché après que la capture du pointeur a été libérée pour un pointeur.
 
 ## Exemple
 
@@ -107,7 +106,6 @@ Un exemple de chaque propriété, type d'évènement, et un gestionnaire d'évè
 
 ## Voir aussi
 
-- {{ domxref("Touch_events","Touch Events") }}
-- {{ domxref("GestureEvent") }}
-- {{ domxref("MSGestureEvent") }}
-- {{cssxref("touch-action")}}
+- [Les évènements tactiles](/fr/docs/Web/API/Touch_events)
+- L'interface {{DOMxRef("GestureEvent")}}
+- La propriété CSS {{CSSxRef("touch-action")}}

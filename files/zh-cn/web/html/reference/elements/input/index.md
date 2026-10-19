@@ -1153,7 +1153,7 @@ Firefox 使用以下启发式方法来确定验证用户输入的语言（至少
     <tr>
       <th scope="row">允许内容</th>
       <td>
-        无，这是一个{{Glossary("void element", "空元素")}}</a>。
+        无，这是一个{{Glossary("void element", "空元素")}}。
       </td>
     </tr>
     <tr>

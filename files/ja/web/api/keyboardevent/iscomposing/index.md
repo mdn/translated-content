@@ -3,7 +3,7 @@ title: "KeyboardEvent: isComposing プロパティ"
 short-title: isComposing
 slug: Web/API/KeyboardEvent/isComposing
 l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{APIRef("UI Events")}}

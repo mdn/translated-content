@@ -7,7 +7,7 @@ l10n:
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`syntax`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@property")}} définit les types de valeurs autorisées pour la [propriété personnalisée CSS](/fr/docs/Web/CSS/Reference/Properties/--*) enregistrée.
-Il contrôle la façon dont la valeur spécifiée de la propriété est traitée pour obtenir la [valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée).
+Il contrôle la façon dont la valeur définie de la propriété est traitée pour obtenir la [valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée).
 Ce descripteur est obligatoire&nbsp;: s'il est absent ou invalide, la règle `@property` entière est ignorée.
 
 ## Syntaxe
@@ -130,9 +130,9 @@ window.CSS.registerProperty({
 
 ## Voir aussi
 
-- Autres descripteurs de {{CSSxRef("@property")}}&nbsp;: {{CSSxRef("@property/inherits","inherits")}} et {{CSSxRef("@property/initial-value", "initial-value")}}
+- Les autres descripteurs de {{CSSxRef("@property")}}&nbsp;: {{CSSxRef("@property/inherits","inherits")}} et {{CSSxRef("@property/initial-value", "initial-value")}}
 - [Enregistrement des propriétés personnalisées CSS](/fr/docs/Web/CSS/Guides/Properties_and_values_API/Registering_properties)
-- [API Propriétés et valeurs CSS](/fr/docs/Web/API/CSS_Properties_and_Values_API)
-- [API Peinture CSS](/fr/docs/Web/API/CSS_Painting_API)
-- [API Typage de modèle d'objet CSS](/fr/docs/Web/API/CSS_Typed_OM_API)
-- [API Houdini](/fr/docs/Web/API/Houdini_APIs)
+- [L'API Propriétés et valeurs CSS](/fr/docs/Web/API/CSS_Properties_and_Values_API)
+- [L'API Peinture CSS](/fr/docs/Web/API/CSS_Painting_API)
+- [L'API Typage de modèle d'objet CSS](/fr/docs/Web/API/CSS_Typed_OM_API)
+- [L'API Houdini](/fr/docs/Web/API/Houdini_APIs)

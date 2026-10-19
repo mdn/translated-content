@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{Deprecated_Header}}
-
 **`<dir>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("user agent","ユーザーエージェント")}}が適用するスタイルやアイコンを用いて表示する、ファイルやフォルダーのディレクトリーのコンテナーとして使われます。この要素は廃止されたので使わないで下さい。代わりに、ファイル一覧を含め、一覧には {{HTMLElement("ul")}} 要素を使用してください。
 
 > [!WARNING]

@@ -10,7 +10,11 @@ original_slug: Web/CSS/::-moz-progress-bar
 
 ## Синтаксис
 
-{{csssyntax}}
+```css
+::-moz-progress-bar {
+  /* ... */
+}
+```
 
 ## Примеры
 

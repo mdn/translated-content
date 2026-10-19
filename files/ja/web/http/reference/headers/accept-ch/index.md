@@ -1,50 +1,55 @@
 ---
-title: Accept-CH
+title: Accept-CH ヘッダー
+short-title: Accept-CH
 slug: Web/HTTP/Reference/Headers/Accept-CH
-original_slug: Web/HTTP/Headers/Accept-CH
+l10n:
+  sourceCommit: 013f3148c4e85038bd961c984e357da703d315e3
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}
+{{securecontext_header}}
 
-**`Accept-CH`** ヘッダーはサーバーによって設定され、クライアントが後続のリクエストに含める{{glossary("Client Hints", "クライアントヒント")}}ヘッダーを指定します。
+HTTP の **`Accept-CH`** {{Glossary("Response header","レスポンスヘッダー")}}は、クライアントが以降のリクエストにどの[クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)ヘッダーを含めるべきかを指定するために、サーバーによって設定される場合があります。
+クライアントヒントが確実に送信されるようにするため、`Accept-CH` ヘッダーはすべての保護されたリクエストにおいて維持される必要があります。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">ヘッダー種別</th>
-      <td>
-        {{Glossary("Response header","レスポンスヘッダー")}}
-      </td>
+      <td>{{Glossary("Response header","レスポンスヘッダー")}}</td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
+        {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}
       </th>
-      <td>?</td>
+      <td>いいえ</td>
     </tr>
   </tbody>
 </table>
 
-> [!NOTE]
-> クライアントヒントには、安全なオリジン (TLS 経由) でのみアクセスできます。 Accept-CH ヘッダーと Accept-CH-Lifetime ヘッダーは、クライアントヒントが確実に送信されるように、すべての安全なリクエストに対して保持する必要があります。
-
 ## 構文
 
-```
-Accept-CH: <list of client hints>
+```http
+Accept-CH: <client-hints-headers>
+
+// クライアントヒントヘッダーは、カンマ区切りのリストです
+Accept-CH: <ch-header-one>, <ch-header-two>
 ```
 
 ## 例
 
-```
-Accept-CH: DPR, Viewport-Width
-Accept-CH: Width
-Accept-CH-Lifetime: 86400
-Vary: DPR, Viewport-Width, Width
+### クライアントヒントレスポンスヘッダー
+
+次のレスポンスヘッダーは、サーバーが以降のリクエストにおいて `Sec-CH-Viewport-Width` および `Sec-CH-Width` [端末クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#端末クライアントヒント)を受け入れることを示しています。
+{{HTTPHeader("Vary")}} ヘッダーは、受け入れられたクライアントヒントに基づいて、[レスポンスを変化させる](/ja/docs/Web/HTTP/Guides/Client_hints#キャッシュとクライアントヒント)際にどの値が使用されたかを示します。
+
+```http
+Accept-CH: Sec-CH-Viewport-Width, Sec-CH-Width
+Vary: Sec-CH-Viewport-Width, Sec-CH-Width
 ```
 
-> [!NOTE]
-> 受け入れられたクライアントのヒントに基づいて、[レスポンスを変更](/ja/docs/Web/HTTP/Guides/Client_hints#varying_client_hints)することを忘れないでください。
+## 仕様書
+
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -52,5 +57,4 @@ Vary: DPR, Viewport-Width, Width
 
 ## 関連情報
 
-- {{HTTPHeader("Accept-CH-Lifetime")}}
 - {{HTTPHeader("Vary")}}

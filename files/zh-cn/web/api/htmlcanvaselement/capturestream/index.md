@@ -9,7 +9,7 @@ slug: Web/API/HTMLCanvasElement/captureStream
 
 ## 语法
 
-```plain
+```js-nolint
 MediaStream = canvas.captureStream(frameRate);
 ```
 

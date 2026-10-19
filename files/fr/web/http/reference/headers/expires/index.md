@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Expires`** contient la date/heure après laquelle la réponse est considérée comme expirée dans le contexte de la [mise en cache HTTP](/fr/docs/Web/HTTP/Guides/Caching).
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Expires`** contient la date/heure après laquelle la réponse est considérée comme expirée dans le contexte de la [mise en cache HTTP](/fr/docs/Web/HTTP/Guides/Caching).
 
 La valeur `0` est utilisée pour représenter une date dans le passé, indiquant que la ressource a déjà expiré.
 

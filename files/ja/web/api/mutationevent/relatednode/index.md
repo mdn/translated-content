@@ -6,7 +6,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}
 
 **`relatedNode`** は {{domxref("MutationEvent")}} インターフェイスの読み取り専用プロパティで、 `DOMSubtreeModified` のサブツリー内の変更されたノードのように、イベントに関連するノードを示す文字列を返します。
 

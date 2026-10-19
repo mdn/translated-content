@@ -2,7 +2,7 @@
 title: Modèle de page de propriété CSS
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
 l10n:
-  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
+  sourceCommit: 5c739c00c318740ed42a431b64867048c4fe449d
 ---
 
 > [!NOTE]
@@ -88,7 +88,7 @@ Voir la section [Exemples interactifs](/fr/docs/MDN/Writing_guidelines/Page_stru
 
 ## Propriétés constitutives
 
-Ajoutez cette section uniquement pour les propriétés abrégées, telles que [animation](/fr/docs/Web/CSS/Reference/Properties/animation), afin de lister toutes les propriétés longues associées.
+Ajoutez cette section uniquement pour les propriétés raccourcies, telles que [animation](/fr/docs/Web/CSS/Reference/Properties/animation), afin de lister toutes les propriétés longues associées.
 
 Introduisez les valeurs avec l'une des phrases suivantes, selon le cas&nbsp;:
 
@@ -98,6 +98,16 @@ Cette propriété est un raccourci pour les propriétés CSS suivantes&nbsp;:
 Cette propriété est un raccourci pour les propriétés logiques suivantes&nbsp;:
 
 Cette propriété est un raccourci pour les propriétés physiques suivantes&nbsp;:
+```
+
+### Sous-propriétés qui ne font que réinitialiser
+
+Ajoutez cette section uniquement pour les propriétés raccourcies, telles que [animation](/fr/docs/Web/CSS/Reference/Properties/animation), afin de lister toutes les propriétés longues associées qui sont seulement réinitialisées (réinitialisées par la propriété abrégée, mais non définissables par celle-ci).
+
+Introduisez les propriétés avec l'introduction suivante&nbsp;:
+
+```md
+Cette propriété réinitialise les propriétés CSS suivantes à leurs valeurs initiales&nbsp;:
 ```
 
 ## Syntaxe

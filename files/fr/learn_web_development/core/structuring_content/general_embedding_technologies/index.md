@@ -3,10 +3,10 @@ title: Des objets aux cadres intégrés — les technologies d'intégration
 short-title: Technologies d'intégration
 slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
 l10n:
-  sourceCommit: f08b3d623c43e0256072013372ba393b5bd1a5a0
+  sourceCommit: 456c370394c0cd8869feb60c4e9926f35422beaf
 ---
 
-Les développeur·euse·s pensent généralement à intégrer des médias tels que des images, des vidéos et de l'audio dans des pages web. Dans cet article, nous faisons un pas de côté en examinant certains éléments qui permettent d'intégrer une grande variété de types de contenus dans vos pages web&nbsp;: les éléments {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} et {{HTMLElement("object")}}. Les `<iframe>` servent à intégrer d'autres pages web, et les deux autres permettent d'intégrer des ressources externes telles que des fichiers PDF.
+Les développeur·euse·s pensent généralement à intégrer des médias tels que des images, des vidéos et de l'audio dans des pages web. Dans cet article, nous faisons un pas de côté en examinant certains éléments qui permettent d'intégrer une grande variété de types de contenus dans vos pages web&nbsp;: les éléments {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} et {{HTMLElement("object")}}. Ces éléments permettent d'intégrer des ressources externes telles que d'autres pages Web et des fichiers PDF.
 
 <table>
   <tbody>
@@ -69,7 +69,7 @@ Si vous faites une erreur, vous pouvez toujours réinitialiser à l'aide du bout
 Alors, c'était facile et amusant, non&nbsp;? Les éléments {{HTMLElement("iframe")}} sont conçus pour vous permettre d'intégrer d'autres documents web dans le document courant. C'est idéal pour incorporer du contenu tiers sur votre site que vous ne contrôlez pas directement et que vous ne souhaitez pas avoir à développer vous-même — comme des vidéos de fournisseurs de vidéos en ligne, des systèmes de commentaires comme [Disqus <sup>(angl.)</sup>](https://disqus.com/), des cartes de fournisseurs de cartes en ligne, des bannières publicitaires, etc. Même les exemples éditables en direct que vous avez utilisés dans ce cours sont implémentés à l'aide de `<iframe>`.
 
 Avant d'utiliser les éléments `<iframe>`, il existe quelques préoccupations de sécurité à connaître.
-Supposons que vous vouliez inclure le glossaire MDN sur l'une de vos pages web à l'aide de l'élément {{HTMLElement("iframe")}}, vous pouvez essayer quelque chose comme l'exemple de code suivant.
+Supposons que vous voulez inclure le glossaire MDN sur l'une de vos pages web à l'aide de l'élément {{HTMLElement("iframe")}}, vous pouvez essayer quelque chose comme l'exemple de code suivant.
 Si vous ajoutiez le code ci-dessous dans l'une de vos pages, vous pouvez être surpris·e de voir un message d'erreur au lieu de la page du glossaire&nbsp;:
 
 ```html
@@ -121,7 +121,7 @@ Les créateur·ice·s de navigateurs et les développeur·euse·s web ont appris
 > [!NOTE]
 > Le [détournement de clic](/fr/docs/Web/Security/Attacks/Clickjacking) est un type d'attaque courante utilisant les `<iframe>` où des pirates intègrent un `<iframe>` invisible dans votre document (ou intègrent votre document dans leur propre site malveillant) et l'utilisent pour capturer les interactions des utilisateur·ice·s. C'est un moyen courant de tromper les utilisateur·ice·s ou de voler des données sensibles.
 
-Un petit exemple d'abord — essayez de charger l'exemple précédent que nous avons montré ci-dessus dans votre navigateur — vous pouvez [le trouver en direct sur GitHub <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ([voir le code source <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) aussi.) Au lieu de la page que vous attendiez, vous voyez probablement un message du type «&nbsp;Je ne peux pas ouvrir cette page&nbsp;», et si vous regardez la _Console_ dans les [outils de développement du navigateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), vous voyez un message indiquant pourquoi. Dans Firefox, vous voyez quelque chose comme _Le chargement de "https\://developer.mozilla.org/fr/docs/Glossary" dans un cadre est refusé par la directive "X-Frame-Options" définie sur "DENY"_. C'est dû au fait que les développeur·euse·s qui ont construit le MDN ont inclus un paramètre sur le serveur qui sert les pages du site Web pour empêcher qu'elles soient intégrées dans des `<iframe>` (voir [Configurer les directives CSP](#configurer_les_directives_csp), ci-dessous.) Cela a du sens — une page entière de MDN n'a pas vraiment de sens à être intégrée dans d'autres pages à moins que vous ne vouliez faire quelque chose comme les intégrer sur votre site et les revendiquer comme les vôtres — ou tenter de voler des données par le [détournement de clic](/fr/docs/Web/Security/Attacks/Clickjacking), ce qui sont toutes deux de très mauvaises choses à faire. De plus, si tout le monde commençait à faire cela, toute la bande passante supplémentaire commence à coûter beaucoup d'argent à Mozilla.
+Un petit exemple d'abord — essayez de charger l'exemple précédent que nous avons montré ci-dessus dans votre navigateur — vous pouvez [le trouver en direct sur GitHub <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ([voir le code source <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) aussi.) Au lieu de la page que vous attendiez, vous voyez probablement un message du type «&nbsp;Je ne peux pas ouvrir cette page&nbsp;», et si vous regardez la _Console_ dans les [outils de développement du navigateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), vous voyez un message indiquant pourquoi. Dans Firefox, vous voyez quelque chose comme _Le chargement de "https\://developer.mozilla.org/fr/docs/Glossary" dans un cadre est refusé par la directive "X-Frame-Options" définie sur "DENY"_. C'est dû au fait que les développeur·euse·s qui ont construit le MDN ont inclus un paramètre sur le serveur qui sert les pages du site Web pour empêcher qu'elles soient intégrées dans des `<iframe>` (voir [Configurer les directives CSP](#configurer_les_directives_csp), ci-dessous.) Cela a du sens — une page entière de MDN n'a pas vraiment de sens à être intégrée dans d'autres pages à moins que vous ne voulez faire quelque chose comme les intégrer sur votre site et les revendiquer comme les vôtres — ou tenter de voler des données par le [détournement de clic](/fr/docs/Web/Security/Attacks/Clickjacking), ce qui sont toutes deux de très mauvaises choses à faire. De plus, si tout le monde commençait à faire cela, toute la bande passante supplémentaire commence à coûter beaucoup d'argent à Mozilla.
 
 #### N'intégrer que lorsque c'est nécessaire
 
@@ -148,7 +148,7 @@ Activer HTTPS sur votre site nécessite l'installation d'un certificat de sécur
 
 Vous devez donner aux personnes malveillantes le moins de pouvoir possible pour faire de mauvaises choses sur votre site web, vous devez donc accorder au contenu intégré _uniquement les permissions nécessaires à son fonctionnement._ Bien entendu, cela s'applique aussi à votre propre contenu. Un conteneur pour du code, où il peut être utilisé de manière appropriée — ou pour des tests — mais qui ne peut pas nuire au reste du code (ni accidentellement ni de façon malveillante), est appelé une [sandbox](<https://en.wikipedia.org/wiki/Sandbox_(computer_security)>).
 
-> Vous pouvez lire l'article de Frederik Braun [On the X-Frame-Options Security Header <sup>(angl.)</sup>](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) pour plus d'informations sur ce sujet. Évidemment, une explication complète dépasse le cadre de cet article.
+> Vous pouvez lire l'article de Frederik Braun [sur l'en-tête de sécurité `X-Frame-Options` <sup>(angl.)</sup>](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) pour plus d'informations sur ce sujet. Évidemment, une explication complète dépasse le cadre de cet article.
 
 ## Les éléments \<embed> et \<object>
 
@@ -214,7 +214,7 @@ Regardons un exemple de `<object>` qui intègre un PDF dans une page (voir [l'ex
 </object>
 ```
 
-Les PDF étaient une étape nécessaire entre le papier et le numérique, mais ils posent de nombreux [défis d'accessibilité <sup>(angl.)</sup>](https://webaim.org/techniques/acrobat/acrobat) et peuvent être difficiles à lire sur de petits écrans. Ils restent néanmoins populaires dans certains cercles, mais il est beaucoup mieux de les lier afin qu'ils puissent être téléchargés ou lus sur une page séparée, plutôt que de les intégrer dans une page web.
+Les PDF sont une étape nécessaire entre le papier et le numérique, mais ils posent de nombreux [défis d'accessibilité <sup>(angl.)</sup>](https://webaim.org/techniques/acrobat/acrobat) et peuvent être difficiles à lire sur de petits écrans. Ils restent néanmoins populaires dans certains cercles, mais il est beaucoup mieux de les lier afin qu'ils puissent être téléchargés ou lus sur une page séparée, plutôt que de les intégrer dans une page web.
 
 ## Résumé
 

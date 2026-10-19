@@ -12,9 +12,9 @@ Para utilizar WebAssembly en JavaScript, necesita primero jalar su módulo dentr
 
 WebAssembly no está integradon aún con la etiqueta `<script type='module'>` o con la directiva ES2015 `import`, así, no existe una forma para que el navegador busque sus módulos a partir de importaciones.
 
-Los métodos anteriores [`WebAssembly.compile`](/es/docs/WebAssembly/Reference/JavaScript_interface/compile)/[`WebAssembly.instantiate`](/es/docs/WebAssembly/Reference/JavaScript_interface/instantiate) requieren que se creen un {{domxref("ArrayBuffer")}} que contenga su módulo binario WebAssembly después de buscar los bytes sin procesar, y luego los compila/instancia. Estos es análogo a la `new Function(string)`, excepto que estamos sustituyendo una cadena de caracteres (código fuente JavaScript) con una memoria intermedia (arreglo) de bytes (código fuente de WebAssembly).
+Los métodos anteriores [`WebAssembly.compile`](/es/docs/WebAssembly/Reference/JavaScript_interface/compile)/[`WebAssembly.instantiate`](/es/docs/WebAssembly/Reference/JavaScript_interface/instantiate) requieren que se creen un {{jsxref("ArrayBuffer")}} que contenga su módulo binario WebAssembly después de buscar los bytes sin procesar, y luego los compila/instancia. Estos es análogo a la `new Function(string)`, excepto que estamos sustituyendo una cadena de caracteres (código fuente JavaScript) con una memoria intermedia (arreglo) de bytes (código fuente de WebAssembly).
 
-Lo actual en métodos [`WebAssembly.compileStreaming`](/es/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming)/[`WebAssembly.instantiateStreaming`](/es/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) es que son mucho más eficientes — desempeñan sus acciones directamente sobre flujos de bytes sin procesar (raw streams) originados en la red, suprimiendo la necesidad de tenerl el paso de {{domxref("ArrayBuffer")}}.
+Lo actual en métodos [`WebAssembly.compileStreaming`](/es/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming)/[`WebAssembly.instantiateStreaming`](/es/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) es que son mucho más eficientes — desempeñan sus acciones directamente sobre flujos de bytes sin procesar (raw streams) originados en la red, suprimiendo la necesidad de tenerl el paso de {{jsxref("ArrayBuffer")}}.
 
 La pregunta ¿cómo hacemos para tener esos bytes dentro de la memoria intermedia (arreglo) y compilarlos? En la siguiente sección lo explicamos.
 
@@ -32,7 +32,7 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 );
 ```
 
-Si usamos el método anterior [`WebAssembly.instantiate()`](/es/docs/WebAssembly/Reference/JavaScript_interface/instantiate) , que no trabaja sobre una transmisión (stream) directa, necesitaremos un paso adicional para convertir el byte code buscado a un {{domxref("ArrayBuffer")}}, como se muestra a continuación:
+Si usamos el método anterior [`WebAssembly.instantiate()`](/es/docs/WebAssembly/Reference/JavaScript_interface/instantiate) , que no trabaja sobre una transmisión (stream) directa, necesitaremos un paso adicional para convertir el byte code buscado a un {{jsxref("ArrayBuffer")}}, como se muestra a continuación:
 
 ```js
 fetch("module.wasm")

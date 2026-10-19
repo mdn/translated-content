@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 3dd7df0af3b0ada1a7c5784cc2bc5448adcda8af
 ---
 
-{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}{{non-standard_header}}
 
 {{domxref("RTCEncodedVideoFrame")}} 接口的 **`timestamp`** 只读属性指示帧采样开始的时间。
 

@@ -15,7 +15,7 @@ Notification.renotify;
 
 ### Valeur
 
-Un {{domxref("Boolean")}}. `false` est la valeur par défaut; `true` oblige la notification à renotifier l'utilisateur.
+Un {{jsxref("Boolean")}}. `false` est la valeur par défaut; `true` oblige la notification à renotifier l'utilisateur.
 
 ## Spécifications
 

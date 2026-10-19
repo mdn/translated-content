@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}{{Deprecated_Header}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 > [!NOTE]
 > 此方法已弃用，取而代之的是 {{DOMxRef("FileReader.readAsArrayBuffer","readAsArrayBuffer()")}}。

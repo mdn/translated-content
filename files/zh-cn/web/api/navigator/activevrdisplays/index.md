@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ccbc5d4100e0a5de844e060b025883ef1611d7b8
 ---
 
-{{APIRef("WebVR API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 {{domxref("Navigator")}} 接口的只读属性 **`activeVRDisplays`** 返回一个包含所有当前正在呈现（{{domxref("VRDisplay.ispresenting")}} 为 `true`）的 {{domxref("VRDisplay")}} 对象的数组。
 

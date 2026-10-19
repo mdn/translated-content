@@ -15,7 +15,7 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 
 - Структурированные клоны могут копировать [`RegExp`](/en-US/JavaScript/Reference/Global_Objects/RegExp) объекты.
 - Структурированные клоны могут копировать {{ domxref("Blob") }}, {{ domxref("File") }}, и {{ domxref("FileList") }} объекты.
-- Структурированные клоны могут копировать {{ domxref("ImageData") }} объекты. The dimensions of the clone's {{ domxref("CanvasPixelArray") }} will match the original and have a duplicate of the same pixel data.
+- Структурированные клоны могут копировать {{ domxref("ImageData") }} объекты. The dimensions of the clone's {{jsxref("Uint8ClampedArray")}} will match the original and have a duplicate of the same pixel data.
 - Structured clones can correctly duplicate objects containing cyclic graphs of references.
 
 ## Исключения, не работающие со структурированными клонами

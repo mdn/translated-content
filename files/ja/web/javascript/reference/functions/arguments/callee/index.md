@@ -6,8 +6,6 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{Deprecated_Header}}
-
 > [!NOTE]
 > [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では、`arguments.callee` にアクセスすると {{jsxref("TypeError")}} が発生します。関数が自身を参照しなければならない場合は、[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)に名前を付けるか、[関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)を使用してください。
 

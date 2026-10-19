@@ -5,7 +5,7 @@ slug: Web/API/CSSStyleDeclaration/getPropertyValue
 
 {{ APIRef("CSSOM") }}
 
-**CSSStyleDeclaration.getPropertyValue()** интерфейс метода, который возвращает {{domxref('DOMString')}}, указанного CSS-свойства.
+**CSSStyleDeclaration.getPropertyValue()** интерфейс метода, который возвращает {{jsxref("String")}}, указанного CSS-свойства.
 
 ## Синтаксис
 
@@ -15,11 +15,11 @@ var value = style.getPropertyValue(property);
 
 ### Параметры
 
-- _`property`_ - это {{domxref('DOMString')}} представляющий имя свойства, которое должно быть обработано.
+- _`property`_ - это {{jsxref("String")}} представляющий имя свойства, которое должно быть обработано.
 
 ### Возвращаемое значение
 
-- `value` - это {{domxref('DOMString')}} содержащий значение свойства. Если не задано, возвращается пустая строка.
+- `value` - это {{jsxref("String")}} содержащий значение свойства. Если не задано, возвращается пустая строка.
 
 ## Пример
 

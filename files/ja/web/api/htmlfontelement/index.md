@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 font 要素のドキュメントオブジェクトモデル（DOM）表現を実装します。HTML フォント要素 {{HTMLElement("font")}} は、テキストのフォントサイズ、フォントフェイス、色を定義します。
 

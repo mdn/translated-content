@@ -6,7 +6,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}
 
 **`UIEvent.which`** は {{domxref("UIEvent")}} インターフェイスの読み取り専用プロパティで、マウスの押されたボタンを示す数値、`keyCode` の数値、キーボードで押されたキーの文字コード (`charCode`) のいずれかを返します。
 

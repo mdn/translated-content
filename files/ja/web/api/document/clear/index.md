@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 **`Document.clear()`** メソッドは何も行わず、何もエラーを発生しません。
 

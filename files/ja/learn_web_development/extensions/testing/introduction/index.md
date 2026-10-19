@@ -1,11 +1,12 @@
 ---
 title: はじめてのブラウザー横断テスト
+short-title: 入門
 slug: Learn_web_development/Extensions/Testing/Introduction
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 6030ef1aadf967b80e2c79c3d3463cccc8ea0c95
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Testing/Testing_strategies", "Learn_web_development/Extensions/Testing")}}
+{{NextMenu("Learn_web_development/Extensions/Testing/Testing_strategies", "Learn_web_development/Extensions/Testing")}}
 
 この記事では、ブラウザー横断テストの概要について、ブラウザー横断テストとは何か、よくある問題、デバッグ/トラブルシューティングのための手法などを説明します。
 
@@ -122,24 +123,24 @@ l10n:
 
 物理的なハードウェア上ですべての異なるブラウザー、オペレーティングシステム、端末の組み合わせをテストする手段がない場合、エミュレーター（デスクトップコンピューター上のソフトウェアを使ってデバイスをエミュレートする）や仮想マシン（デスクトップコンピューター上で複数のオペレーティングシステムとソフトウェアの組み合わせをエミュレートできるソフトウェア）を使用することもできます。この方法は、特に状況によってはとても有益な選択肢です。例えば、 Windows では同じマシンに複数のバージョンの Windows を同時にインストールすることができないため、複数の仮想マシンを使用することが唯一の選択肢となる場合が多いのです。
 
-もう1つのオプションは、ユーザーグループ、すなわちあなたのサイトをテストするために開発チーム以外の人々のグループを使用することです。これは、友人や家族のグループ、他の従業員のグループ、地元の大学のクラス、または有料でサイトをテストして結果を提供する、プロのユーザーテストのセットアップかもしれません。
+もう 1 つのオプションは、ユーザーグループ、すなわちあなたのサイトをテストするために開発チーム以外の人々のグループを使用することです。これは、友人や家族のグループ、他の従業員のグループ、地元の大学のクラス、または有料でサイトをテストして結果を提供する、プロのユーザーテストのセットアップかもしれません。
 
 最後に、監査ツールや自動化ツールを使用して、テストをよりスマートに行うことができます。これは、プロジェクトが大きくなるにつれて賢明な選択です。自分自身でテスト自動化システムを設定することができます（[Selenium](https://www.selenium.dev/) はよく使われるアプリです）。このシステムでは、例えば、さまざまなブラウザーでサイトを読み込んだりすることができます。
 
 - ボタンをクリックすると何かが正常に動作するかどうかを確認し（例えば地図が表示されるなど）、テストが完了したら結果を表示します。
 - それぞれの画面ショットを撮ることで、レイアウトがさまざまなブラウザーで一貫しているかどうかを確認できます。
 
-テストにお金を投資したいのであれば、セットアップとテストの大部分を自動化してくれる商用ツールもあります（[Sauce Labs](https://saucelabs.com/) や [Browser Stack](https://www.browserstack.com/) など）。この種のツールは通常、継続的インテグレーションのワークフローを作成することができ、コードの変更をコードリポジトリーに送信する前に自動的にテストします。
+テストにお金を投資したいのであれば、セットアップとテストの大部分を自動化してくれる商用ツールもあります（[Sauce Labs](https://saucelabs.com/) や [Browser Stack](https://www.browserstack.com/) など）。この種のツールは通常、{{glossary("continuous integration", "継続的インテグレーション")}}のワークフローを作成することができ、コードの変更をコードリポジトリーに送信する前に自動的にテストします。
 
 #### リリース前のブラウザーでのテスト
 
 プレリリース版のブラウザーでテストするのはよい考えであることが多いので、以下のリンクを参照してください。
 
-- [Firefox Developer Edition](https://www.mozilla.org/ja/firefox/developer/)
-- [Microsoft Edge Insider](https://www.microsoft.com/ja-jp/edge/download/insider)
+- [Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/)
+- [Microsoft Edge Insider](https://explore.microsoft.com/ja-jp/edge/download/insider)
 - [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
 - [Chrome Canary](https://www.google.com/chrome/canary/)
-- [Opera Developer](https://www.opera.com/browsers/opera/developer)
+- [Opera Developer](https://www.opera.com/opera/developer)
 
 これは、サイトでとても新しい技術を使用していて、最新の実装に対してテストしたい場合や、ブラウザー最新リリースバージョンでバグがあり、ブラウザー開発者が新しいバージョンでバグを修正したかどうかを確認したい場合に特に多く見られます。
 
@@ -166,6 +167,6 @@ l10n:
 
 ## 要約
 
-この記事では、ブラウザー横断テストに関して知っておくべき最も大事な概念について、高位の理解を与えてきました。この知識を備えたことで、ブラウザー横断テストの戦略について学び始める準備ができています。
+この記事を通じて、ブラウザー横断テストにおける最も重要な概念について、大まかには理解できたはずです。この知識を備えたことで、次はブラウザー横断テストの戦略について学び始める準備が整いました。
 
 {{NextMenu("Learn_web_development/Extensions/Testing/Testing_strategies", "Learn_web_development/Extensions/Testing")}}

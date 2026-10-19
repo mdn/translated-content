@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{deprecated_header}}{{non-standard_header}}
+{{non-standard_header}}
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`-moz-user-focus`** 用于指示元素是否可以获得焦点。
 

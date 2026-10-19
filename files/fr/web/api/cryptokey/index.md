@@ -3,9 +3,9 @@ title: CryptoKey
 slug: Web/API/CryptoKey
 ---
 
-{{APIRef("Web Crypto API")}}
+{{APIRef("Web Crypto API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-L'interface **`CryptoKey`** représente une {{glossary("clef")}} cryptographique dérivé d'un algorithme de clef spécifique.
+L'interface **`CryptoKey`** représente une {{glossary("key", "clef")}} cryptographique dérivé d'un algorithme de clef spécifique.
 
 Un objet `CryptoKey` peut être obtenu en utilisant : {{domxref("SubtleCrypto.generateKey()")}}, {{domxref("SubtleCrypto.deriveKey()")}} ou {{domxref("SubtleCrypto.importKey()")}}
 

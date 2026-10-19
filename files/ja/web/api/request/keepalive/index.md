@@ -3,7 +3,7 @@ title: "Request: keepalive プロパティ"
 short-title: keepalive
 slug: Web/API/Request/keepalive
 l10n:
-  sourceCommit: 0ffc63a13598470ddb4a4d3281800eeb2bf6ae2b
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Fetch API")}}

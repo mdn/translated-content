@@ -19,7 +19,11 @@ Este seletor é útil, pegando um exemplo comum, para destacar um todo {{htmlEle
 
 ## Sintaxe
 
-{{csssyntax}}
+```css
+:focus-within {
+  /* ... */
+}
+```
 
 ## Exemplo
 

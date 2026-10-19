@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 706cbf21987296c604cc96b7f95095ed7aba6bb8
 ---
 
-{{APIRef("Web Speech API")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("Web Speech API")}}{{non-standard_header}}
 
 {{domxref("SpeechGrammar")}} 接口的 **`src`** 属性用于获取或设置 `SpeechGrammar` 对象中包含语法的字符串。
 

@@ -4,8 +4,6 @@ slug: Web/XML/XPath/Reference/Functions/ceiling
 original_slug: Web/XPath/Functions/ceiling
 ---
 
-{{XsltSidebar}}
-
 La fonction `ceiling` évalue un nombre décimal et retourne le plus petit nombre entier supérieur ou égal au nombre évalué.
 
 ### Syntaxe

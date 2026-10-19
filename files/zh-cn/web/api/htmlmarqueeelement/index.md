@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fcdc6853377f0dfef656f8036bfaa41804a8ebef
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 **`HTMLMarqueeElement`** 接口提供操作 {{HTMLElement("marquee")}} 元素的方法。
 

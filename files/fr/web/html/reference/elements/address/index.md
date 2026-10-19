@@ -3,7 +3,7 @@ title: "Élément HTML `<address>` : l'élément d'adresse de contact"
 short-title: <address>
 slug: Web/HTML/Reference/Elements/address
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<address>`** indique que le HTML inclus fournit des informations de contact pour une personne, des personnes ou une organisation.

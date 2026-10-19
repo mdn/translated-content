@@ -24,7 +24,7 @@ console.log(BigInt.asUintN(64, U64_CEIL * -42n));
 
 ## 语法
 
-```plain
+```js-nolint
 BigInt.asUintN(width, bigint);
 ```
 

@@ -7,7 +7,7 @@ slug: Web/HTTP/Reference/Status/505
 
 ## 状态
 
-```plain
+```http
 505 HTTP Version Not Supported
 ```
 

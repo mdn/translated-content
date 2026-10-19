@@ -8,7 +8,7 @@ l10n:
 > [!NOTE]
 > _この説明文全体を削除してから公開してください。_
 >
-> **訳注:** このテンプレートは翻訳記事用です。新たな記事を執筆する場合は、英語版を参照してください。日本語の単独記事を立項することはできません。）
+> **訳注:** このテンプレートは翻訳記事用です。新たな記事を執筆する場合は、英語版を参照してください。日本語の単独記事を立項することはできません。
 >
 > ---
 >
@@ -73,7 +73,7 @@ l10n:
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 **`NameOfTheProperty`** は \{{domxref("NameOfTheParentInterface")}} インターフェイスの[読み取り専用]プロパティで、 _\<その動作の簡潔な概要を提供します\>_。
 
@@ -84,7 +84,7 @@ _数段落以上の説明が必要な場合は、「例」の節の前に「解�
 
 ## 値
 
-\{{domxref("SomeDataType" )}} です。
+\{{domxref("SomeDataType")}} です。
 
 _通常はデータ型のみを記載し、必要に応じてそのデータ型の取り得る値も記載します。_
 _プロパティのセッターとゲッターの動作が異なる場合は、通常、それぞれ別個の文で網羅します。_

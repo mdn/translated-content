@@ -434,5 +434,5 @@ Notez comment la largeur de la boîte d'information est toujours la même que ce
 - L'attribut SVG {{SVGAttr("width")}}
 - Le guide [d'introduction au modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
 - Le module [du modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model)
-- Le module [de positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
+- Le module [de positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
 - Le module [des valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units)

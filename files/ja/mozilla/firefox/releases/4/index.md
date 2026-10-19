@@ -279,7 +279,7 @@ Gecko は現在 [HTML5](/ja/docs/Glossary/HTML5) パーサーを利用するよ�
 - ドキュメントルートに [`privatebrowsingmode` 属性](https://web.archive.org/web/20210620014429/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Supporting_private_browsing_mode#detecting_whether_private_browsing_mode_is_permanent)が追加されました。これはプライベートブラウジングがセッションで一時的であるか永続的であるかの状態を含む、プライベートブラウジングモードの状態を示します。
 - {{domxref("window.getComputedStyle()")}} メソッドの 2 番目の引数が、他の主なブラウザーと同様に省略可能になりました。
 - DOM の {{domxref("StorageEvent")}} オブジェクトが仕様の最新版に合致するようになりました。
-- {{domxref("Window.setTimeout", "setTimeout()")}} および {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} メソッドの最小遅延時間を設定するための `dom.min_timeout_value が追加されました。
+- {{domxref("Window.setTimeout", "setTimeout()")}} および {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} メソッドの最小遅延時間を設定するための `dom.min_timeout_value` が追加されました。
 - [`MozAfterPaint`](https://web.archive.org/web/20191010014917/https://developer.mozilla.org/en-US/docs/Web/Events#Add-on-specific_events) イベントは、潜在的なセキュリティ問題があるため、デフォルトでは送られなくなりました。設定を変更することで有効にできます。
 
 ### セキュリティ

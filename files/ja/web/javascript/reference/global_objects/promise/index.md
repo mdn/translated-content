@@ -2,7 +2,7 @@
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: a6a2daec3965d85ef6dfc06cfd3507c1b2f886e2
 ---
 
 **`Promise`** オブジェクトは、非同期処理の完了（もしくは失敗）の結果およびその結果の値を表します。
@@ -20,7 +20,7 @@ l10n:
 - 拒否 (_rejected_): 処理が失敗したことを意味します。
 
 待機状態のプロミスの _最終的な状態_ は、何らかの値を持つ履行 (_fulfilled_) 状態、もしくは何らかの理由 (エラー) を持つ拒否 (_rejected_) 状態のいずれかになります。
-そのどちらとなっても、`then` メソッドによって関連付けられたハンドラーが呼び出されます。対応するハンドラーが割り当てられたとき、既にプロミスが履行または拒否状態になっていても、そのハンドラーは呼び出されます。よって、非同期処理とその関連付けられたハンドラーとの競合は発生しません。
+これらのどちらの状態になっても、プロミスの `then` メソッドによってキューに入れられた、関連付けられたハンドラーが呼び出されます。対応するハンドラーが登録された時点でプロミスがすでに履行済みまたは拒否済みである場合でも、そのハンドラーは呼び出されるため、非同期操作の完了とハンドラーの登録との間に競合状態は発生しません。
 
 プロミスが履行または拒否のいずれかで、待機以外の状態になった場合は、決定 (_settled_) と呼ばれます。
 
@@ -137,7 +137,9 @@ JavaScript のエコシステムには、プロミスが言語の一部となる
 既存のプロミス実装と相互運用するために、言語ではプロミスの代わりに Thenable を使用することができます。例えば、 [`Promise.resolve`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) はプロミスの解決だけでなく、 Thenable の追跡も行います。
 
 ```js
-const aThenable = {
+// これは Promises/A+ に準拠した thenable ではありません！ onFulfilled を
+// 同期的に呼び出します。あくまでデモ用です。
+const thenable = {
   then(onFulfilled, onRejected) {
     onFulfilled({
       // Thenable は他の Thenable で履行される
@@ -148,12 +150,14 @@ const aThenable = {
   },
 };
 
-Promise.resolve(aThenable); // プロミスは 42 で履行
+Promise.resolve(thenable); // プロミスは 42 で履行
 ```
+
+`then()` メソッドは、指定された `onFulfilled` および `onRejected` コールバックの実行をスケジュールする役割を担っています。エラー処理や非同期性など、その意味づけは [Promises/A+ 仕様書](https://promisesaplus.com/)<sup>(英語)</sup>で厳密に定義されているため、ここでは繰り返しません。自分で `thenable` を実装する必要が生じることはとても稀です。ネイティブのプロミスを使用していない場合でも、おそらく [Bluebird](https://www.npmjs.com/package/bluebird)<sup>(英語)</sup> などのプロミスライブラリーを使用しているでしょう。
 
 ### プロミスの並行処理
 
-`Promise` クラスは，非同期タスクの[並行処理](https://ja.wikipedia.org/wiki/並行計算)を容易にするために、4 つの静的メソッドを提供しています。
+`Promise` クラスは，非同期タスクの[並行処理](https://ja.wikipedia.org/wiki/並行計算)を容易にするために、主な 4 つの静的メソッドを提供しています。
 
 - {{jsxref("Promise.all()")}}
   - : **すべて**のが履行されたときに履行され、**いずれか**のプロミスが拒否されると拒否される。
@@ -166,7 +170,23 @@ Promise.resolve(aThenable); // プロミスは 42 で履行
 
 これらのメソッドはすべて、プロミス（正確には [Thenable](#thenable)）の[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)オブジェクトを受け取り、新しいプロミスを返します。これらはすべてサブクラス化に対応しています。つまり、 `Promise` のサブクラスに対して呼び出すことができ、その結果はサブクラスの種類を持つプロミスになります。そのためには、サブクラスのコンストラクターに [`Promise()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) と同じ定義を実装する必要があります。すなわち、単一の `executor` 関数を取り、これが `resolve` と `reject` コールバック関数を引数として取るようにします。また、サブクラスには静的メソッドの `resolve` も必要です。これは {{jsxref("Promise.resolve()")}} のように呼び出すことができ、値をプロミスに解決するためのメソッドです。
 
-JavaScript はもともと[シングルスレッド](/ja/docs/Glossary/Thread)なので、異なるプロミス間で制御が移り、プロミスの実行が同時に行われるように見えても、指定された瞬間には 1 つのタスクしか実行されないことに注意してください。JavaScript で[並列実行](https://ja.wikipedia.org/wiki/並列計算)を行うには、[ワーカースレッド](/ja/docs/Web/API/Web_Workers_API)を使うしかありません。
+他にも 2 つの便利な静的メソッドがあります。{{jsxref("Promise.allKeyed()")}} と {{jsxref("Promise.allSettledKeyed()")}} です。これらは `Promise.all()` や `Promise.allSettled()` と同様に動作しますが、プロミスを持つオブジェクトを受け取り、同じ形状のオブジェクトで履行されるプロミスを返します。配列の代わりにオブジェクトで動作することで、保守が困難になりがちな任意の配列の順序付けではなく、結果に意味のあるキーを関連付けることができます。
+
+これらのメソッドは、{{jsxref("Promise/then", "then()")}} を使用して、それぞれの入力プロミスにハンドラーを添付します。結果として得られるプロミスが早期に決定した場合（たとえば、`Promise.race()` 内のいずれかの入力が決定した場合など）でも、他のハンドラーは除去されません。同じ待機中のプロミスを並行処理メソッドに繰り返し渡すと、たとえそれらのハンドラーが一度も使用されなかったとしても、ハンドラーが蓄積されてしまう可能性があります。
+
+```js
+const pendingPromise = new Promise(() => {});
+
+for (let i = 0; i < 1000; i++) {
+  await Promise.race([Promise.resolve(0), pendingPromise]);
+}
+// すべてのタスクは完了したが、pendingPromise には 1000 件のレース
+// すべてによって添付されたハンドラーが残っている
+```
+
+プロミスには、これらのハンドラーを解除する方法は提供されていません。入力プロミスが待機中で、かつアクセス可能な状態である限り、ハンドラーはそのまま添付されたままになります。可能であれば、待機中のプロミスが不要になった時点で、{{domxref("AbortSignal")}} を使用して、その基盤となる操作を取り消してください。
+
+JavaScript はもともと[シングルスレッド](/ja/docs/Glossary/Thread)なので、異なるプロミス間で制御が移り、プロミスの実行が同時に行われるように見えても、ある瞬間には 1 つのタスクしか実行されないことに注意してください。JavaScript で[並列実行](https://ja.wikipedia.org/wiki/並列計算)を行うには、[ワーカースレッド](/ja/docs/Web/API/Web_Workers_API)を使うしかありません。
 
 ## コンストラクター
 
@@ -182,8 +202,12 @@ JavaScript はもともと[シングルスレッド](/ja/docs/Glossary/Thread)�
 
 - {{jsxref("Promise.all()")}}
   - : 入力としてプロミスの反復可能オブジェクトを受け取り、単一の `Promise` を返します。この返されたプロミスは、入力されたプロミスがすべて履行されたとき（空の反復可能オブジェクトが渡されたときを含める）に、履行された値の配列で履行されます。入力のプロミスのいずれかが拒否されると、この最初の拒否理由によって拒否されます。
+- {{jsxref("Promise.allKeyed()")}} {{experimental_inline}}
+  - : `Promise.all()` と同様に、プロミスのオブジェクトを受け取り、同じ構造のオブジェクトを返すプロミスを返します。これにより、結果を意味的に意味のあるキーに関連付けることができます。
 - {{jsxref("Promise.allSettled()")}}
   - : 入力としてプロミスの反復可能オブジェクトを受け取り、単一の `Promise` を返します。この返されたプロミスは、入力のプロミスがすべて決定されたときに履行されます（空の反復可能オブジェクトが渡された場合を含む）。
+- {{jsxref("Promise.allSettledKeyed()")}} {{experimental_inline}}
+  - : `Promise.allSettled()`と同様に、プロミスのオブジェクトを受け取り、同じ構造のオブジェクトを返すプロミスを返す点が異なります。これにより、結果を意味的に意味のあるキーに関連付けることができます。
 - {{jsxref("Promise.any()")}}
   - : 入力としてプロミスの反復可能オブジェクトを受け取り、単一の `Promise` を返します。この返されたプロミスは、入力されたプロミスのいずれかが履行されたときに履行され、最初の履行値を返します。入力されたプロミスがすべて拒否された場合（空の反復可能オブジェクトが渡された場合も含む）、拒否された理由の配列を含む {{jsxref("AggregateError")}} を返します。
 - {{jsxref("Promise.race()")}}
@@ -193,7 +217,7 @@ JavaScript はもともと[シングルスレッド](/ja/docs/Glossary/Thread)�
 - {{jsxref("Promise.resolve()")}}
   - : 与えられた値で解決された `Promise` オブジェクトを返します。もし値が Thenable （つまり `then` メソッドを持っているオブジェクト）ならば、返されるプロミスはその Thenable をたどり、その結果を採用します。そうでなければ、返されるプロミスは与えられた値で履行されます。
 - {{jsxref("Promise.try()")}}
-  - : あらゆる種類のコールバック（復帰か例外か、同期的か非同期的にかかわらず）を取り、その結果を `Promise` でラップします。
+  - : あらゆる種類のコールバック（復帰か例外か、同期的か非同期的にかかわらず）を受け取り、その結果を `Promise` に変換します。
 - {{jsxref("Promise.withResolvers()")}}
   - : {{jsxref("Promise/Promise", "Promise()")}} コンストラクターの実行側に渡された 2 つの引数に対応する、新しい `Promise` オブジェクトとそれを解決または拒否する 2 つの関数を格納したオブジェクトを返します。
 
@@ -247,7 +271,7 @@ myFirstPromise.then((successMessage) => {
 
 関数 `troubleWithGetNumber()` は `throw` で終わることに注意してください。プロミス連鎖ではすべての `.then()` のプロミスを通過するため、エラーが発生した後で、`throw` がなく、エラーが「解決済み」であるようにみえても、強制的に行われます。これは面倒なので、`.then()` プロミスの連鎖全体で `onRejected` を省略して、最終的な `catch()` で単一の `onRejected` を使用するのが一般的です。
 
-このコードは NodeJS で実行できます。実際にエラーが発生しているのを見ることで理解度が高まります。より多くのエラーを強制的に発生させるには、 `threshold` の値を変更してください。
+このコードは Node.js で実行できます。実際にエラーが発生しているのを見ることで理解度が高まります。より多くのエラーを強制的に発生させるには、 `threshold` の値を変更してください。
 
 ```js
 // エラー処理が経験できるように、"threshold" はランダムにエラーを発生させる。
@@ -491,15 +515,11 @@ imgLoad(imgUrl).then(
 <!-- x.html -->
 <!doctype html>
 <script>
-  window.addEventListener(
-    "message",
-    (event) => {
-      document.querySelector("#text").textContent = "hello";
-      // このコードは現行の設定オブジェクトを追跡するブラウザーでしか動作しません
-      console.log(event);
-    },
-    false,
-  );
+  window.addEventListener("message", (event) => {
+    document.querySelector("#text").textContent = "hello";
+    // このコードは現行の設定オブジェクトを追跡するブラウザーでしか動作しない
+    console.log(event);
+  });
 </script>
 ```
 
@@ -521,5 +541,5 @@ imgLoad(imgUrl).then(
 - [`Promise` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-promise)
 - [プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)ガイド
 - [Promises/A+ specification](https://promisesaplus.com/)
-- [JavaScript Promises: an introduction](https://web.dev/articles/promises) (web.dev, 2013)
+- [JavaScript Promises: an introduction](https://web.dev/articles/promises) - web.dev (2013)
 - [Callbacks, Promises, and Coroutines: Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/slideshow/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript/9953720) (Domenic Denicola によるスライドショー, 2011)

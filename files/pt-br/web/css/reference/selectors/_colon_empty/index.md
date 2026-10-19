@@ -17,7 +17,11 @@ div:empty {
 
 ## Sintaxe
 
-{{csssyntax}}
+```css
+:empty {
+  /* ... */
+}
+```
 
 ## Exemplos
 

@@ -1,91 +1,553 @@
 ---
-title: Subgrid
+title: Sous-grille avec `subgrid`
+short-title: Sous-grille
 slug: Web/CSS/Guides/Grid_layout/Subgrid
-original_slug: Web/CSS/CSS_grid_layout/Subgrid
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-La valeur **`subgrid`** a été ajoutée par le module de spécification _CSS Grid Layout_ de niveau 2 pour les propriétés {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}}. Dans ce guide, nous verrons comment utiliser cette valeur ainsi que les cas d'utilisation ou patrons de conception qui peuvent en bénéficier.
+Le module [de disposition de grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout) inclut une valeur `subgrid` pour {{CSSxRef("grid-template-columns")}} et {{CSSxRef("grid-template-rows")}}. Ce guide détaille ce que fait la sous-grille et donne quelques cas d'utilisation ainsi que des modèles de conception auxquels la fonctionnalité répond.
 
-## Une introduction à `subgrid`
+## Introduction aux sous-grilles
 
-Lorsqu'on ajoute `display: grid` à un conteneur, seuls les descendants directs deviennent des éléments de grille et peuvent être placés sur la grille ainsi créée. Les enfants de ces descendants seront disposés selon le flux habituel.
+Lorsque vous ajoutez [`display: grid`](/fr/docs/Web/CSS/Reference/Properties/display) à un conteneur de grille, seuls les enfants directs deviennent des éléments de grille, qui peuvent ensuite être placés sur la grille que vous avez créée. Les enfants de ces éléments s'affichent dans le flux normal.
 
-On peut imbriquer des grilles en utilisant `display: grid` sur un descendant direct du conteneur de grille mais les grilles créées seront indépendantes. On ne pourra pas récupérer le dimensionnement des pistes de la grille parente pour l'utiliser dans la grille fille. Il est donc difficile d'aligner des objets de la grille fille sur la grille parente.
+Vous pouvez «&nbsp;imbriquer&nbsp;» des grilles en faisant d'un élément de grille un conteneur de grille. Ces grilles restent toutefois indépendantes de la grille parente et les unes des autres, ce qui signifie qu'elles ne reprennent pas la dimension de leurs pistes depuis la grille parente. Cela rend difficile l'alignement des éléments de grille imbriqués sur la grille principale.
 
-Si on utilise la valeur `subgrid` pour `grid-template-columns` et/ou `grid-template-rows`, on pourra utiliser les pistes de la grille parente à l'intérieur plutôt que de créer des pistes indépendantes.
+Si vous définissez la valeur `subgrid` sur `grid-template-columns`, `grid-template-rows` ou les deux, la grille imbriquée utilise les pistes définies sur la grille parente au lieu de créer une nouvelle liste de pistes.
 
-Ainsi, si on utilise `grid-template-columns: subgrid` et que la grille imbriquée s'inscrit dans trois colonnes du parent, la grille imbriquée possèdera trois pistes, dimensionnées comme celles du parent. Les gouttières (_gaps_) sont également héritées mais il est possible de les surcharger avec une valeur {{cssxref("gap")}} différente. Les noms des lignes peuvent être passés du parent à la grille fille et la grille fille peut aussi déclarer ses propres noms de ligne.
+Par exemple, si vous utilisez `grid-template-columns: subgrid` et que la grille imbriquée couvre trois pistes de colonnes de la grille parente, la grille imbriquée possède trois pistes de colonnes de la même taille que celles de la grille parente. Les [espacements](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#gutters) sont hérités, mais peuvent être remplacés par une autre valeur de {{CSSxRef("gap")}}. Les [noms de lignes](/fr/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines) peuvent être transmis de la grille parente à la sous-grille, et la sous-grille peut également déclarer ses propres noms de lignes.
 
-## Les sous-grilles pour les colonnes
+## Sous-grilles pour les colonnes
 
-Dans l'exemple qui suit, on a une grille décomposée en neufs colonnes de `1fr` chacune et avec quatre lignes qui mesurent au moins `100px`.
+Dans l'exemple ci-dessous, la disposition de grille possède neuf pistes de colonnes `1fr` et quatre lignes d'une hauteur minimale de `100px`.
 
-On place un objet `.item` entre les colonnes 2 et 7 et entre les lignes 2 à 4. On indique que cet objet est lui-même une grille et on définit les pistes de colonnes comme sous-grille et on utilise des lignes normales. L'objet ainsi paramétré s'étalant sur 5 colonnes de la grille parente, cela signifie que la sous-grille possède cinq pistes pour les colonnes. On place alors un objet `.subitem` sur cette deuxième grille.
+`.element` est placé entre les lignes de colonnes 2 et 7 et les lignes 2 et 4. Cet élément de grille est lui-même défini comme une grille avec `display: grid`, puis défini comme une sous-grille en lui donnant des pistes de colonnes qui sont une sous-grille (`grid-template-columns: subgrid`) et des lignes définies normalement. La sous-grille possède cinq pistes de colonnes, car elle couvre cinq pistes de colonnes.
 
-Les lignes horizontales de cet exemple ne sont pas une sous-grille et se comportent comme pour une grille imbriquée « classique ». La zone de la grille parente s'étend donc afin de pouvoir stocker le contenu de cette grille imbriquée.
+Comme `.element` est une sous-grille, même si `.sous-element` n'est pas un enfant direct de la `.grille` externe, il peut être placé sur cette grille externe, avec ses colonnes alignées sur les colonnes de la grille externe. Les lignes ne sont pas une sous-grille et se comportent donc comme le fait normalement une grille imbriquée. La zone de grille de la grille parente s'agrandit pour être suffisamment grande pour cette grille imbriquée.
 
-{{EmbedGHLiveSample("css-examples/grid/subgrid/columns.html", '100%', 1200)}}
+```html live-sample___columns
+<div class="grille">
+  <div class="element">
+    <div class="sous-element"></div>
+  </div>
+</div>
+```
 
-On notera que la numérotation recommence à l'intérieur de la grille imbriquée. La colonne n°1 de la sous-grille correspond donc ici à la colonne n°2 de la grille parente. Autrement dit, les numéros des colonnes et des lignes de la grille parente ne sont pas héritées via la sous-grille. Cela permet une disposition modulaire et indépendante de la position quant à la grille parente.
+```css hidden live-sample___columns
+* {
+  box-sizing: border-box;
+}
 
-## Les sous-grilles pour les lignes
+.grille {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
 
-Dans l'exemple ci-après, on a la même disposition mais on utilise cette fois `subgrid` pour la propriété `grid-template-rows` et on définit explicitement des pistes pour les colonnes. Les colonnes se comportent donc comme pour une grille imbriquée mais les lignes de la sous-grille sont liées à celles de la grille parente.
+.element {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  color: #d9480f;
+}
 
-{{EmbedGHLiveSample("css-examples/grid/subgrid/rows.html", '100%', 1200)}}
+.sous-element {
+  background-color: rgb(40 240 83);
+}
+```
 
-## Les sous-grilles sur deux dimensions
+```css live-sample___columns
+.grille {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(4, minmax(100px, auto));
+}
 
-Bien entendu, on peut définir une sous-grille pour les lignes et pour les colonnes en même temps. Cela signifie que la sous-grille sera couplée à la grille parente pour les deux axes.
+.element {
+  display: grid;
+  grid-column: 2 / 7;
+  grid-row: 2 / 4;
+  grid-template-columns: subgrid;
+  grid-template-rows: repeat(3, 80px);
+}
 
-{{EmbedGHLiveSample("css-examples/grid/subgrid/both.html", '100%', 1200)}}
+.sous-element {
+  grid-column: 3 / 6;
+  grid-row: 1 / 3;
+}
+```
 
-### Absence de grille implicite pour une sous-grille
+Notez que la numérotation des lignes recommence dans la sous-grille — la ligne de colonne 1 est la première ligne de la sous-grille lorsqu'elle se trouve dans la sous-grille. L'élément utilisant la sous-grille n'hérite pas de la numérotation des lignes de la grille parente. Cela signifie que vous pouvez disposer sans risque un composant susceptible d'être placé à différentes positions sur la grille principale, en sachant que les numéros de ligne du composant restent toujours identiques.
 
-S'il vous faut placer automatiquement des objets et que vous ne connaissez pas leur quantité, faites attention à l'utilisation des sous-grilles : celles-ci empêcheront la création de lignes supplémentaires pour afficher le contenu.
+{{EmbedLiveSample("columns", "", 450)}}
 
-Pour mieux illustrer ce point, voyons le prochain exemple (on utilise le même parent et la même sous-grille qu'avant) où on essaie d'afficher 12 éléments automatiquement dans une grille qui contient uniquement 10 cellules. La sous-grille étant couplée sur les deux axes (lignes et colonnes), il n'y a aucune place restante pour les deux éléments restants et ils sont donc placés sur la dernière piste de la grille, comme indiqué dans la spécification.
+## Sous-grilles pour les lignes
 
-{{EmbedGHLiveSample("css-examples/grid/subgrid/no-implicit.html", '100%', 1200)}}
+Cet exemple utilise le même HTML que ci-dessus, mais ici `subgrid` est appliqué comme valeur de `grid-template-rows`, avec des pistes de colonnes définies explicitement. Dans ce cas, les pistes de colonnes se comportent comme une grille imbriquée ordinaire, mais les lignes sont liées aux deux pistes que `.element` couvre.
 
-Si on retire la valeur sur `grid-template-rows`, on permet alors la création de pistes implicites. Ainsi, même si on n'aura pas l'alignement avec les pistes de la grille parente, on pourra avoir autant de lignes que nécessaire pour afficher l'ensemble du contenu.
+```html live-sample___rows hidden
+<div class="grille">
+  <div class="element">
+    <div class="sous-element"></div>
+  </div>
+</div>
+```
 
-{{EmbedGHLiveSample("css-examples/grid/subgrid/implicit.html", '100%', 1200)}}
+```css hidden live-sample___rows
+* {
+  box-sizing: border-box;
+}
 
-## Utilisation des gouttières et des sous-grilles
+.grille {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
 
-Si vous utilisez {{cssxref("gap")}}, {{cssxref("column-gap")}} ou {{cssxref("row-gap")}} sur la grille parente, celles-ci seront héritées par la sous-grille et vous aurez donc le même espacement entre les pistes dans la sous-grille et dans la grille parente. Dans certains cas, on peut cependant vouloir d'avoir des espacements différents ou aucun espacement. Pourcela, on pourra utiliser les propriétés `gap-*` sur le conteneur de grille de la sous-grille.
+.element {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  color: #d9480f;
+}
 
-Dans l'exempel qui suit, la grille parente définit des gouttières de 20 pixels pour les lignes et les colonnes et pour la sous-grille, on fixe la propriété `row-gap` à `0`.
+.sous-element {
+  background-color: rgb(40 240 83);
+}
+```
 
-{{EmbedGHLiveSample("css-examples/grid/subgrid/gap.html", '100%', 1200)}}
+```css live-sample___rows
+.grille {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(4, minmax(100px, auto));
+}
 
-Si on inspecte le résultat avec l'inspecteur de grille de Firefox, on pourra voir que l'espace auparavant occupé par la gouttière est partagé entre les cellules et permet d'agrandir la zone pour le contenu.
+.element {
+  display: grid;
+  grid-column: 2 / 7;
+  grid-row: 2 / 4;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: subgrid;
+}
 
-![The smaller item displays in the gap as row-gap is set to 0 on the subgrid.](gap.png)
+.sous-element {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+```
 
-## Les lignes nommées
+{{EmbedLiveSample("rows", "", 405)}}
 
-Lorsqu'on utilise les grilles CSS, on peut fournir des noms aux lignes et positionner des objets sur la grille par rapport à ces noms plutôt qu'en utilisant les numéros de lignes. Les noms des lignes de la grille parente sont passés à la sous-grille et on peut donc placer des objets relativement à ces noms. Dans l'exempel qui suit, on a des lignes intitulées `col-start` et `col-end` sur la grille parente et on utilise ces noms pour placer un objet à l'intérieur de la sous-grille.
+## Les sous-grilles dans les deux dimensions
 
-{{EmbedGHLiveSample("css-examples/grid/subgrid/line-names.html", '100%', 1200)}}
+Dans cet exemple, les lignes et les colonnes sont définies comme une sous-grille, ce qui lie la sous-grille aux pistes de la grille parente dans les deux dimensions.
 
-Il est aussi possible d'utiliser de nouveaux noms dans la sous-grille. Pour cela, on ajoutera une liste de noms entre crochets après le mot-clé `subgrid`. Si on disposait de 4 lignes sur la sous-grille, on pourrait alors écrire `grid-template-columns: subgrid [line1] [line2] [line3] [line4]`.
+```html live-sample___both hidden
+<div class="grille">
+  <div class="element">
+    <div class="sous-element"></div>
+  </div>
+</div>
+```
 
-Les noms indiquées sur la sous-grille sont ajoutés à ceux déjà portés par la grille parente et on peut donc utiliser les uns ou les autres. Dans l'exemple suivant, on illustre ce point en positionnant un objet en utilisant deux noms : l'un provenant de la grille parente et l'autre provenant de la grille fille.
+```css hidden live-sample___both
+* {
+  box-sizing: border-box;
+}
 
-{{EmbedGHLiveSample("css-examples/grid/subgrid/adding-line-names.html", '100%', 1200)}}
+.grille {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
 
-## Utilisation des sous-grilles
+.element {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  color: #d9480f;
+}
 
-Exception faite qu'il faille veiller au contenu qui ne pourrait pas être affiché dans une sous-grille, cette dernière se comporte généralement comme une grille imbriquée. La différence principale réside dans le dimensionnement des pistes qui peut provenir de la grille parente. Toutefois (et comme avec une simple grille imbriquée), la taille du contenu placé sur la sous-grille peut modifier le dimensionnement des pistes (lorsqu'on utilise un dimensionnement qui s'adapte au contenu). Ainsi, les pistes dimensionnées automatiquement s'agrandiront pour contenir les objets de la grille parente et aussi ceux de la sous-grille.
+.sous-element {
+  background-color: rgb(40 240 83);
+}
+```
 
-Une telle ressemblance entre `subgrid` et les grilles imbriquées peut faciliter le passage d'une méthode à l'autre. Ainsi, si on réalise qu'il faut une grille implicite sur les lignes, il suffit de retirer `subgrid` pour la propriété `grid-template-rows` (et éventuellement fournir une valeur à `grid-auto-rows` afin de contrôler le dimensionnement implicite).
+```css live-sample___both
+.grille {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(4, minmax(100px, auto));
+}
+
+.element {
+  display: grid;
+  grid-column: 2 / 7;
+  grid-row: 2 / 4;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
+
+.sous-element {
+  grid-column: 3 / 6;
+  grid-row: 1 / 3;
+}
+```
+
+{{EmbedLiveSample("both", "", 405)}}
+
+### Aucune grille implicite dans une dimension utilisant une sous-grille
+
+Si vous devez placer automatiquement des éléments et ne savez pas combien d'éléments vous en avez, faites attention lors de la création d'une sous-grille, car elle empêche la création de lignes supplémentaires pour contenir ces éléments.
+
+Regardez l'exemple suivant — il utilise la même grille parente et enfant que dans l'exemple précédent. Douze éléments à l'intérieur de la sous-grille essaient de se placer automatiquement dans dix cellules de grille. Comme la sous-grille est dans les deux dimensions, les deux éléments supplémentaires ne peuvent aller nulle part et vont donc dans la dernière piste de la grille. C'est le comportement défini dans la spécification.
+
+```html live-sample___no-implicit
+<div class="grille">
+  <div class="element">
+    <div class="sous-element">1</div>
+    <div class="sous-element">2</div>
+    <div class="sous-element">3</div>
+    <div class="sous-element">4</div>
+    <div class="sous-element">5</div>
+    <div class="sous-element">6</div>
+    <div class="sous-element">7</div>
+    <div class="sous-element">8</div>
+    <div class="sous-element">9</div>
+    <div class="sous-element">10</div>
+    <div class="sous-element">11</div>
+    <div class="sous-element">12</div>
+  </div>
+</div>
+```
+
+```css hidden live-sample___no-implicit
+* {
+  box-sizing: border-box;
+}
+body {
+  font: 1.2em sans-serif;
+}
+
+.grille {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.element {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  color: #d9480f;
+}
+
+.sous-element {
+  background-color: #d9480f;
+  color: white;
+  border-radius: 5px;
+}
+```
+
+```css live-sample___no-implicit
+.grille {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(4, minmax(100px, auto));
+}
+
+.element {
+  display: grid;
+  grid-column: 2 / 7;
+  grid-row: 2 / 4;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
+```
+
+{{EmbedLiveSample("no-implicit", "", 405)}}
+
+La suppression de la valeur `grid-template-rows` active la création normale de pistes implicites et crée autant de lignes que nécessaire. Elles ne s'alignent pas sur les pistes de la grille parente.
+
+```html live-sample___implicit
+<div class="grille">
+  <div class="element">
+    <div class="sous-element">1</div>
+    <div class="sous-element">2</div>
+    <div class="sous-element">3</div>
+    <div class="sous-element">4</div>
+    <div class="sous-element">5</div>
+    <div class="sous-element">6</div>
+    <div class="sous-element">7</div>
+    <div class="sous-element">8</div>
+    <div class="sous-element">9</div>
+    <div class="sous-element">10</div>
+    <div class="sous-element">11</div>
+    <div class="sous-element">12</div>
+  </div>
+</div>
+```
+
+```css hidden live-sample___implicit
+* {
+  box-sizing: border-box;
+}
+body {
+  font: 1.2em sans-serif;
+}
+
+.grille {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.element {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  color: #d9480f;
+}
+
+.sous-element {
+  background-color: #d9480f;
+  color: white;
+  border-radius: 5px;
+}
+```
+
+```css live-sample___implicit
+.grille {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(4, minmax(100px, auto));
+}
+
+.element {
+  display: grid;
+  grid-column: 2 / 7;
+  grid-row: 2 / 4;
+  grid-template-columns: subgrid;
+  grid-auto-rows: minmax(100px, auto);
+}
+```
+
+{{EmbedLiveSample("implicit", "", 510)}}
+
+## Les propriétés d'espacement et la sous-grille
+
+Toutes les valeurs de {{CSSxRef("gap")}}, {{CSSxRef("column-gap")}} ou {{CSSxRef("row-gap")}} définies sur la grille parente sont transmises à la sous-grille, ce qui crée le même espacement entre les pistes que dans la grille parente. Ce comportement par défaut peut être remplacé en appliquant les propriétés `gap-*` au conteneur de la sous-grille.
+
+Dans cet exemple, la grille parente possède une gouttière de `20px` pour les lignes et les colonnes et la sous-grille définit `row-gap` à `0`.
+
+```html live-sample___gap
+<div class="grille">
+  <div class="element">
+    <div class="sous-element"></div>
+    <div class="sous-element2"></div>
+  </div>
+</div>
+```
+
+```css hidden live-sample___gap
+* {
+  box-sizing: border-box;
+}
+
+.grille {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.element {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  color: #d9480f;
+}
+
+.sous-element {
+  background-color: rgb(40 240 83);
+}
+```
+
+```css live-sample___gap
+.grille {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(4, minmax(100px, auto));
+  gap: 20px;
+}
+
+.element {
+  display: grid;
+  grid-column: 2 / 7;
+  grid-row: 2 / 4;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  row-gap: 0;
+}
+
+.sous-element {
+  grid-column: 3 / 6;
+  grid-row: 1 / 3;
+}
+
+.sous-element2 {
+  background-color: rgb(0 0 0 / 0.5);
+  grid-column: 2;
+  grid-row: 1;
+}
+```
+
+{{EmbedLiveSample("gap", "", 465)}}
+
+Si vous inspectez ceci dans l'inspecteur de grille de vos outils de développement, vous notez que la ligne de la sous-grille se trouve au centre de la gouttière. Définir la gouttière à `0` agit de manière similaire à l'application d'une marge négative à un élément, en redonnant l'espace de la gouttière à l'élément.
+
+![L'élément plus petit s'affiche dans l'espacement lorsque row-gap vaut 0 sur la sous-grille, comme le montre l'inspecteur de grille des outils de développement de Firefox.](gap.png)
+
+## Lignes de grille nommées
+
+Lors de l'utilisation d'une grille CSS, vous pouvez [nommer les lignes de votre grille](/fr/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines), puis positionner les éléments selon ces noms plutôt que selon le numéro de ligne. Les noms de lignes de la grille parente sont transmis à la sous-grille et vous pouvez les utiliser pour placer les éléments. Dans l'exemple ci-dessous, les lignes nommées `col-start` et `col-end` de la grille parente servent à placer le sous-élément.
+
+```html live-sample___line-names
+<div class="grille">
+  <div class="element">
+    <div class="sous-element"></div>
+  </div>
+</div>
+```
+
+```css hidden live-sample___line-names
+* {
+  box-sizing: border-box;
+}
+
+.grille {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.element {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  color: #d9480f;
+}
+
+.sous-element {
+  background-color: rgb(40 240 83);
+}
+```
+
+```css live-sample___line-names
+.grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr [col-start] 1fr 1fr 1fr [col-end] 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, minmax(100px, auto));
+  gap: 20px;
+}
+
+.element {
+  display: grid;
+  grid-column: 2 / 7;
+  grid-row: 2 / 4;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
+
+.sous-element {
+  grid-column: col-start / col-end;
+  grid-row: 1 / 3;
+}
+```
+
+{{EmbedLiveSample("line-names", "", 465)}}
+
+Vous pouvez également définir des noms de lignes sur la sous-grille. Pour cela, ajoutez une liste de noms de lignes entre crochets après le mot-clé `subgrid`. Par exemple, si vous avez quatre lignes dans votre sous-grille et que vous voulez toutes les nommer, vous pouvez utiliser la syntaxe `grid-template-columns: subgrid [line1] [line2] [line3] [line4]`
+
+Les lignes définies sur la sous-grille sont ajoutées aux lignes définies sur la grille parente, vous pouvez donc utiliser les unes, les autres ou les deux. Dans cet exemple, un élément est placé en dessous à l'aide des lignes parentes et un autre à l'aide des lignes de la sous-grille.
+
+```html live-sample___adding-line-names
+<div class="grille">
+  <div class="element">
+    <div class="sous-element"></div>
+    <div class="sous-element2"></div>
+  </div>
+</div>
+```
+
+```css hidden live-sample___adding-line-names
+* {
+  box-sizing: border-box;
+}
+
+.grille {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.element {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  color: #d9480f;
+}
+
+.sous-element {
+  background-color: rgb(40 240 83);
+}
+```
+
+```css live-sample___adding-line-names
+.grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr [col-start] 1fr 1fr 1fr [col-end] 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, minmax(100px, auto));
+  gap: 20px;
+}
+
+.element {
+  display: grid;
+  grid-column: 2 / 7;
+  grid-row: 2 / 4;
+  grid-template-columns: subgrid [sub-a] [sub-b] [sub-c] [sub-d] [sub-e] [sub-f];
+  grid-template-rows: subgrid;
+}
+
+.sous-element {
+  grid-column: col-start / col-end;
+  grid-row: 1 / 3;
+}
+
+.sous-element2 {
+  background-color: rgb(0 0 0 / 0.5);
+  grid-column: sub-b / sub-d;
+  grid-row: 1;
+}
+```
+
+{{EmbedLiveSample("adding-line-names", "", 465)}}
+
+## Utiliser les sous-grilles
+
+Une sous-grille fonctionne de manière très similaire à n'importe quelle grille imbriquée&nbsp;; la seule différence est que la dimension des pistes de la sous-grille est définie sur la grille parente. Toutefois, comme pour toute grille imbriquée, la taille du contenu de la sous-grille peut modifier la dimension des pistes, en supposant qu'une méthode de dimensionnement des pistes est utilisée et permet au contenu d'influencer la taille. Dans ce cas, les pistes de lignes dont la taille est automatique s'agrandissent pour contenir le contenu de la grille principale et celui de la sous-grille.
+
+Comme la valeur sous-grille agit presque de la même manière qu'une grille imbriquée ordinaire, il est facile de passer de l'une à l'autre. Par exemple, si vous constatez que vous avez besoin d'une grille implicite pour les lignes, vous devez supprimer la valeur `subgrid` de `grid-template-rows` et éventuellement donner une valeur à `grid-auto-rows` pour contrôler le dimensionnement des pistes implicites.
 
 ## Spécifications
 
 {{Specifications}}
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 ## Voir aussi
 
-- [Les concepts de bases des grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#sous-grille)
+- [Vidéo&nbsp;: Mettre en page des formulaires avec subgrid <sup>(angl.)</sup>](https://www.youtube.com/watch?v=gmQlK3kRft4) (2019)
+- [Vidéo&nbsp;: N'attendez pas pour utiliser subgrid afin d'améliorer la disposition des cartes <sup>(angl.)</sup>](https://www.youtube.com/watch?v=lLnFtK1LNu4) (2019)
+- [Vidéo&nbsp;: Bonjour subgrid&nbsp;! <sup>(angl.)</sup>](https://www.youtube.com/watch?v=vxOj7CaWiPU) présentation de CSSConf.eu (2019)

@@ -542,7 +542,7 @@ onmessage = function (oEvent) {
 
 ### 移轉資料所有權 - 可移轉物件 (transferable objects)
 
-Google Chrome 17+ 以及 Firefox 18+ 能夠和 worker 高效能地傳送另外一種特定型態物件 (可移轉物件, transferable objects，這種物件實作了 {{domxref("Transferable")}} 介面)，可移轉物件當被傳送到另一端時並不需要複製，因此可以大大提升傳送大型資料物件的效能；這好比像是 C/C++ 的 pass-by-reference，但是不同的是，一旦移轉後原先的環境便失去了持有資料，例如當主頁面傳送 {{domxref("ArrayBuffer")}} 後，主頁面便不再能夠使用這筆資料物件了，這筆資料物件的存取連結已經靜靜地移轉到 worker 端了。
+Google Chrome 17+ 以及 Firefox 18+ 能夠和 worker 高效能地傳送另外一種特定型態物件 (可移轉物件, transferable objects，這種物件實作了 {{domxref("Transferable")}} 介面)，可移轉物件當被傳送到另一端時並不需要複製，因此可以大大提升傳送大型資料物件的效能；這好比像是 C/C++ 的 pass-by-reference，但是不同的是，一旦移轉後原先的環境便失去了持有資料，例如當主頁面傳送 {{jsxref("ArrayBuffer")}} 後，主頁面便不再能夠使用這筆資料物件了，這筆資料物件的存取連結已經靜靜地移轉到 worker 端了。
 
 ```js
 // Create a 32MB "file" and fill it.

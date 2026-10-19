@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/bindTexture
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.bindTexture(target, texture);
 ```
 

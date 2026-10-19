@@ -16,12 +16,12 @@ const array1 = [1, 2, 3];
 console.log(array1.includes(2));
 // Résultat attendu : true
 
-const pets = ['chat', 'chien', 'chauve-souris'];
+const pets = ["chat", "chien", "chauve-souris"];
 
-console.log(pets.includes('chat'));
+console.log(pets.includes("chat"));
 // Résultat attendu : true
 
-console.log(pets.includes('at'));
+console.log(pets.includes("at"));
 // Résultat attendu : false
 ```
 

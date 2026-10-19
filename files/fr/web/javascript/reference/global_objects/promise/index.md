@@ -2,7 +2,7 @@
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
 l10n:
-  sourceCommit: f8759faac983abbcd8276fd45ae881bb39efdf7a
+  sourceCommit: 9bda33365e40b6c609fa5190a0af9b5dc6438cf0
 ---
 
 L'objet **`Promise`** représente un objet qui incarne la complétion éventuelle (ou l'échec) d'une opération asynchrone et sa valeur résultante.
@@ -172,9 +172,23 @@ La classe `Promise` offre quatre principales méthodes statiques pour faciliter 
 
 Toutes ces méthodes prennent un [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») de promesses ([semi-promesses](#semi-promesse), pour être exact) et retournent une nouvelle promesse. Elles prennent toutes en charge la sous-classification, ce qui signifie qu'elles peuvent être appelées sur des sous-classes de `Promise`, et le résultat est une promesse du type de la sous-classe. Pour ce faire, le constructeur de la sous-classe doit implémenter la même signature que le constructeur [`Promise()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) — acceptant une seule fonction `executor` qui peut être appelée avec les rappels `resolve` et `reject` comme paramètres. La sous-classe doit également avoir une méthode statique `resolve` qui peut être appelée comme {{JSxRef("Promise.resolve()")}} pour résoudre des valeurs en promesses.
 
-Notez que JavaScript est [processus unique](/fr/docs/Glossary/Thread) par nature, donc à un instant donné, une seule tâche est en cours d'exécution, bien que le contrôle puisse passer entre différentes promesses, donnant l'impression que l'exécution des promesses est concurrente. [L'exécution parallèle](<https://fr.wikipedia.org/wiki/Parallélisme_(informatique)>) en JavaScript ne peut être réalisée que par le biais de [processus de travail](/fr/docs/Web/API/Web_Workers_API).
-
 Il existe deux autres méthodes statiques pratiques&nbsp;: {{JSxRef("Promise.allKeyed()")}} et {{JSxRef("Promise.allSettledKeyed()")}}, qui se comportent comme `Promise.all()` et `Promise.allSettled()`, mais prennent des _objets_ de promesses et retournent des promesses qui se complètent avec des _objets_ de la même forme. En travaillant avec des objets au lieu de tableaux, vous pouvez associer les résultats à des clés sémantiquement significatives, au lieu d'un ordre de tableau arbitraire qui peut être difficile à maintenir.
+
+Ces méthodes attachent des gestionnaires à chaque promesse d'entrée en utilisant {{jsxref("Promise/then", "then()")}}. Même lorsque la promesse résultante est acquittée tôt (par exemple lorsqu'une entrée dans `Promise.race()` est acquittée), les autres gestionnaires ne sont pas supprimés. Passer de manière répétée la même promesse en attente aux méthodes de concurrence peut accumuler des gestionnaires même lorsque ces gestionnaires ne sont jamais utilisés&nbsp;:
+
+```js
+const promesseEnAttente = new Promise(() => {});
+
+for (let i = 0; i < 1000; i++) {
+  await Promise.race([Promise.resolve(0), promesseEnAttente]);
+}
+// Toutes les tâches sont terminées, mais promesseEnAttente conserve les
+// gestionnaires attachés par les 1000 courses.
+```
+
+Les promesses ne fournissent aucun moyen de se désabonner de ces gestionnaires&nbsp;; ils restent attachés tant que la promesse d'entrée est en attente et accessible. Dans la mesure du possible, annulez l'opération sous-jacente en utilisant un {{domxref("AbortSignal")}} lorsque la promesse en attente n'est plus utile.
+
+Notez que JavaScript fonctionne sur un [processus unique](/fr/docs/Glossary/Thread) par nature&nbsp;; à un instant donné, une seule tâche est en cours d'exécution, bien que le contrôle puisse passer d'une promesse à l'autre, donnant l'impression que l'exécution des promesses est concurrente. [L'exécution parallèle <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Parallel_computing) en JavaScript ne peut être réalisée que par le biais de [processus de travail](/fr/docs/Web/API/Web_Workers_API).
 
 ## Constructeur
 

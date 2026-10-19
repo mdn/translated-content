@@ -2,7 +2,7 @@
 title: Authentification HTTP
 slug: Web/HTTP/Guides/Authentication
 l10n:
-  sourceCommit: 6030ef1aadf967b80e2c79c3d3463cccc8ea0c95
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 Le HTTP fournit un cadre général pour le contrôle d'accès et l'authentification.
@@ -10,7 +10,7 @@ Cette page est une introduction au cadre HTTP pour l'authentification et montre 
 
 ## La structure d'authentification HTTP
 
-Le RFC {{RFC("7235")}} définit le cadre d'authentification HTTP, qui peut être utilisé par un serveur pour {{Glossary("challenge", "défier")}} une requête client, et par un client pour fournir des informations d'authentification.
+Le RFC {{RFC(7235)}} définit le cadre d'authentification HTTP, qui peut être utilisé par un serveur pour {{Glossary("challenge", "défier")}} une requête client, et par un client pour fournir des informations d'authentification.
 
 Le flux de défi et de réponse fonctionne comme suit&nbsp;:
 
@@ -30,15 +30,15 @@ Les informations contenues dans les en-têtes et leur mode de codage changent be
 ### Authentification par procuration
 
 Le même mécanisme de défi-réponse peut être utilisé pour _l'authentification par procuration_.
-Comme l'authentification des ressources et l'authentification par procuration peuvent coexister, un autre jeu d'en-têtes et de codes de réponse est nécessaire. Dans le cas des proxys, le code de statut de défi est {{HTTPStatus("407")}} (Proxy Authentication Required), l'en-tête de réponse {{HTTPHeader("Proxy-Authenticate")}} contient au moins un défi applicable au mandataire, et l'en-tête de requête {{HTTPHeader("Proxy-Authorization")}} est utilisé pour fournir les informations d'identification au serveur mandataire.
+Comme l'authentification des ressources et l'authentification par procuration peuvent coexister, un autre jeu d'en-têtes et de codes de réponse est nécessaire. Dans le cas des proxys, le code de statut de défi est {{HTTPStatus(407, "407 Proxy Authentication Required")}}, l'en-tête de réponse {{HTTPHeader("Proxy-Authenticate")}} contient au moins un défi applicable au mandataire, et l'en-tête de requête {{HTTPHeader("Proxy-Authorization")}} est utilisé pour fournir les informations d'identification au serveur mandataire.
 
 ### Accès interdit
 
-Si un serveur (ou un serveur mandataire) reçoit des identifiants _invalides_, il doit répondre avec un code de statut {{HTTPStatus("401")}} `Unauthorized` ou avec un code de statut {{HTTPStatus("407")}} `Proxy Authentication Required`, et l'utilisateur·ice peut envoyer une nouvelle requête ou remplacer le champ d'en-tête {{HTTPHeader("Authorization")}}.
+Si un serveur (ou un serveur mandataire) reçoit des identifiants _invalides_, il doit répondre avec un code de statut {{HTTPStatus(401)}} `Unauthorized` ou avec un code de statut {{HTTPStatus(407)}} `Proxy Authentication Required`, et l'utilisateur·ice peut envoyer une nouvelle requête ou remplacer le champ d'en-tête {{HTTPHeader("Authorization")}}.
 
-Si un serveur (ou un serveur mandataire) reçoit des identifiants valides mais _inappropriés_ pour accéder à une ressource donnée, le serveur doit répondre avec le code de statut {{HTTPStatus("403")}} `Forbidden`. Contrairement aux codes {{HTTPStatus("401")}} `Unauthorized` ou {{HTTPStatus("407")}} `Proxy Authentication Required`, l'authentification est impossible pour cet·te utilisateur·ice et les navigateurs ne proposent pas une nouvelle tentative.
+Si un serveur (ou un serveur mandataire) reçoit des identifiants valides mais _inappropriés_ pour accéder à une ressource donnée, le serveur doit répondre avec le code de statut {{HTTPStatus(403)}} `Forbidden`. Contrairement aux codes {{HTTPStatus(401)}} `Unauthorized` ou {{HTTPStatus(407)}} `Proxy Authentication Required`, l'authentification est impossible pour cet·te utilisateur·ice et les navigateurs ne proposent pas une nouvelle tentative.
 
-Dans tous les cas, le serveur peut préférer retourner un code de statut {{HTTPStatus("404")}} `Not Found`, afin de masquer l'existence de la page à un·e utilisateur·ice sans privilèges adéquats ou non correctement authentifié.
+Dans tous les cas, le serveur peut préférer retourner un code de statut {{HTTPStatus(404)}} `Not Found`, afin de masquer l'existence de la page à un·e utilisateur·ice sans privilèges adéquats ou non correctement authentifié.
 
 ### Authentification des images multi-origines
 
@@ -76,7 +76,7 @@ Proxy-Authorization: <type> <credentials>
 
 Le cadre général de l'authentification HTTP est la base de plusieurs schémas d'authentification.
 
-IANA maintient une [liste des schémas d'authentification <sup>(angl.)</sup>](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), mais il existe d'autres schémas proposés par des services d'hébergement, tels qu'Amazon AWS.
+IANA maintient une [liste des schémas d'authentification <sup>(angl.)</sup>](https://www.iana.org/assignments/http-authschemes), mais il existe d'autres schémas proposés par des services d'hébergement, tels qu'Amazon AWS.
 
 Certains schémas d'authentification courants incluent&nbsp;:
 
@@ -166,5 +166,5 @@ Cette syntaxe n'est plus autorisée dans les navigateurs modernes&nbsp;; le nom 
 - L'en-tête {{HTTPHeader("Authorization")}}
 - L'en-tête {{HTTPHeader("Proxy-Authorization")}}
 - L'en-tête {{HTTPHeader("Proxy-Authenticate")}}
-- Les codes de statut {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}
+- Les codes de statut {{HTTPStatus(401)}}, {{HTTPStatus(403)}}, {{HTTPStatus(407)}}
 - [Les bonnes pratiques de sécurité HTTP](/fr/docs/Web/Security)

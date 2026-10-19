@@ -2,21 +2,20 @@
 title: ExtendableCookieChangeEvent
 slug: Web/API/ExtendableCookieChangeEvent
 l10n:
-  sourceCommit: 9fb6c9e56c6db295967384730feeb941509ac743
+  sourceCommit: 335a6f38068e697c64009243648c75fb97650402
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("service")}}
 
-[「Cookie Store API」](/ja/docs/Web/API/Cookie_Store_API)の **`ExtendableCookieChangeEvent`** インターフェイスは、Cookie が何か変更された時 {{domxref("ServiceWorkerRegistration.oncookiechange()")}} に渡されるイベント型です。Cookie の変更イベントは、Cookie と種類 (`"changed"` または `"deleted"`) からなります。
+**`ExtendableCookieChangeEvent`** は{{domxref("Cookie Store API", "クッキーストアー API", "", "nocode")}} のインターフェイスで、サービスワーカーのクッキー変更サブスクリプションリストに一致するクッキーの変更が発生した際に、{{domxref("ServiceWorkerGlobalScope")}} で発生する {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "cookiechange")}} イベントに渡されるイベント型です。Cookie の変更イベントは、Cookie と種類 (`"changed"` または `"deleted"`) からなります。
 
 `ExtendableCookieChangeEvent` を発生させる Cookie の変更は、以下のものがあります。
 
-- Cookie が新規作成され、すぐには削除されません。この場合の `type` は `"changed"` です。
-- Cookie が新規作成され、すぐに削除されます。この場合の `type` は `"deleted"` です。
-- Cookie が削除されます。この場合の `type` は `"deleted"` です。
-
-> [!NOTE]
-> 同じ名前・ドメイン・パスの他の Cookie が挿入されることにより置き換えられる Cookie は無視され、変更イベントを発生させません。
+- Cookie が新規作成され、すぐには削除されなかった場合、または置き換えられた場合。
+  この場合の `type` は "changed" です。
+- Cookie が新規作成され、すぐに削除された場合。
+  この場合の `type` は "deleted" です。
+- Cookie が削除された場合。この場合の `type` は "deleted" です。
 
 {{InheritanceDiagram}}
 
@@ -27,12 +26,16 @@ l10n:
 
 ## インスタンスプロパティ
 
-_このインターフェイスは、{{domxref("ExtendableEvent")}} からもプロパティを継承します。_
+_このインターフェイスには {{domxref("ExtendableEvent")}} から継承したプロパティもあります。_
 
 - {{domxref("ExtendableCookieChangeEvent.changed")}} {{ReadOnlyInline}}
   - : 変更された Cookie が格納された配列を返します。
 - {{domxref("ExtendableCookieChangeEvent.deleted")}} {{ReadOnlyInline}}
   - : 削除された Cookie が格納された配列を返します。
+
+## インスタンスメソッド
+
+_このインターフェイスには {{domxref("ExtendableEvent")}} から継承したメソッドもあります。_
 
 ## 例
 
@@ -42,6 +45,7 @@ _このインターフェイスは、{{domxref("ExtendableEvent")}} からもプ
 self.addEventListener("activate", (event) => {
   event.waitUntil(async () => {
     const subscriptions = await self.registration.cookies.getSubscriptions();
+
     await self.registration.cookies.unsubscribe(subscriptions);
 
     await self.registration.cookies.subscribe([

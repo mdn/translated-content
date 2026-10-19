@@ -3,10 +3,10 @@ title: Fonction CSS `anchor()`
 short-title: anchor()
 slug: Web/CSS/Reference/Values/anchor
 l10n:
-  sourceCommit: 7dbcde5a0aa6855447d015d99eba6fb8be6c2185
+  sourceCommit: 25ad29eedf5897f5b0ca23c3295261cbd01c6031
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`anchor()`** peut être utilisée dans les valeurs d'une [propriété d'encart](#propriétés_acceptant_les_valeurs_de_la_fonction_anchor) d'un élément **positionné par ancre**, et retourne une valeur de longueur relative à la position des bords de l'élément d'ancre associé.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`anchor()`** peut être utilisée dans les valeurs d'une [propriété d'encart](#propriétés_acceptant_les_valeurs_de_la_fonction_anchor) d'un élément **positionné par une ancre**, et retourne une valeur de longueur relative à la position des bords de l'élément d'ancrage associé.
 
 ## Syntaxe
 
@@ -38,7 +38,7 @@ anchor(<anchor-name> <anchor-side>, <length-percentage>)
 Les paramètres sont&nbsp;:
 
 - `<anchor-name>` {{Optional_Inline}}
-  - : La valeur de la propriété {{CSSxRef("anchor-name")}} de l'élément d'ancre auquel vous voulez positionner le côté de l'élément. Il s'agit d'une valeur `<dashed-ident>`. Si elle est omise, l'élément utilise son **ancre par défaut**, référencée dans sa propriété {{CSSxRef("position-anchor")}}, ou associée à l'élément avec l'attribut HTML [`anchor`](/fr/docs/Web/HTML/Reference/Global_attributes/anchor).
+  - : La valeur de la propriété {{CSSxRef("anchor-name")}} de l'élément d'ancrage auquel vous voulez positionner le côté de l'élément. Il s'agit d'une valeur `<dashed-ident>`. Si elle est omise, l'élément utilise son **ancre par défaut**, référencée dans sa propriété {{CSSxRef("position-anchor")}}, ou associée à l'élément avec l'attribut HTML [`anchor`](/fr/docs/Web/HTML/Reference/Global_attributes/anchor).
 
     > [!NOTE]
     > Définir un `<anchor-name>` à l'intérieur d'une fonction `anchor()` n'associe pas un élément à une ancre&nbsp;; cela ne sert qu'à positionner l'élément par rapport à cette ancre. La propriété CSS {{CSSxRef("position-anchor")}} ou l'attribut HTML [`anchor`](/fr/docs/Web/HTML/Reference/Global_attributes/anchor) reste nécessaire pour créer l'association.
@@ -46,25 +46,25 @@ Les paramètres sont&nbsp;:
 - `<anchor-side>`
   - : Définit le côté de l'ancre, ou la distance relative depuis le côté de départ (`start`), par rapport auquel vous positionnez l'élément. Si une valeur physique ou logique est utilisée et qu'elle n'est pas [compatible](#compatibilité_des_propriétés_dencart_et_des_valeurs_anchor-side) avec la propriété d'encart sur laquelle `anchor()` est définie, la valeur de repli est utilisée. Les valeurs valides comprennent&nbsp;:
     - `top`
-      - : Le haut de l'élément d'ancre.
+      - : Le haut de l'élément d'ancrage.
     - `right`
-      - : Le côté droit de l'élément d'ancre.
+      - : Le côté droit de l'élément d'ancrage.
     - `bottom`
-      - : Le bas de l'élément d'ancre.
+      - : Le bas de l'élément d'ancrage.
     - `left`
-      - : Le côté gauche de l'élément d'ancre.
+      - : Le côté gauche de l'élément d'ancrage.
     - `inside`
       - : Le même côté que la propriété d'encart.
     - `outside`
       - : Le côté opposé de la propriété d'encart.
     - `start`
-      - : Le début logique du [bloc contenant](/fr/docs/Web/CSS/Guides/Display/Containing_block) de l'élément d'ancre le long de l'axe de la propriété d'encart sur laquelle la fonction `anchor()` est définie.
+      - : Le début logique du [bloc contenant](/fr/docs/Web/CSS/Guides/Display/Containing_block) de l'élément d'ancrage le long de l'axe de la propriété d'encart sur laquelle la fonction `anchor()` est définie.
     - `end`
-      - : La fin logique du bloc contenant de l'élément d'ancre le long de l'axe de la propriété d'encart sur laquelle la fonction `anchor()` est définie.
+      - : La fin logique du bloc contenant de l'élément d'ancrage le long de l'axe de la propriété d'encart sur laquelle la fonction `anchor()` est définie.
     - `self-start`
-      - : Le début logique du contenu de l'élément d'ancre le long de l'axe de la propriété d'encart sur laquelle la fonction `anchor()` est définie.
+      - : Le début logique du contenu de l'élément d'ancrage le long de l'axe de la propriété d'encart sur laquelle la fonction `anchor()` est définie.
     - `self-end`
-      - : La fin logique du contenu de l'élément d'ancre le long de l'axe de la propriété d'encart sur laquelle la fonction `anchor()` est définie.
+      - : La fin logique du contenu de l'élément d'ancrage le long de l'axe de la propriété d'encart sur laquelle la fonction `anchor()` est définie.
     - `center`
       - : Le centre de l'axe de la propriété d'encart sur laquelle la fonction `anchor()` est définie.
     - {{CSSxRef("percentage")}}
@@ -81,11 +81,11 @@ Retourne une valeur de type {{CSSxRef("&lt;length&gt;")}}.
 
 La fonction `anchor()` permet de positionner un élément par rapport aux bords d'un élément d'ancre. Elle n'est valide que dans les valeurs des {{Glossary("inset properties", "propriété d'encart")}} appliquées à des éléments en position absolue ou fixe.
 
-Elle retourne une valeur `<length>` qui définit la distance entre le côté de l'élément positionné par ancre indiqué par la valeur d'encart et le côté de l'élément d'ancre indiqué par la valeur `<anchor-side>` choisie. Comme elle retourne une `<length>`, elle peut être utilisée dans [d'autres fonctions CSS](/fr/docs/Web/CSS/Reference/Values/Functions) acceptant des valeurs de longueur, y compris {{CSSxRef("calc()")}}, {{CSSxRef("clamp()")}}, etc.
+Elle retourne une valeur `<length>` qui définit la distance depuis le côté du bloc contenant correspondant à la propriété d'encart jusqu'au côté de l'élément d'ancrage défini par la valeur `<anchor-side>` choisie. Comme elle retourne une `<length>`, elle peut être utilisée dans [d'autres fonctions CSS](/fr/docs/Web/CSS/Reference/Values/Functions) acceptant des valeurs de longueur, y compris {{CSSxRef("calc()")}}, {{CSSxRef("clamp()")}}, etc.
 
 Si aucune ancre portant le nom défini par `<anchor-name>` n'existe, ou si l'élément positionné n'a pas d'ancre associée (par exemple avec la propriété {{CSSxRef("position-anchor")}}), le premier paramètre est considéré comme invalide et la valeur de repli `<length-percentage>` est utilisée si elle est disponible. Par exemple, si `top: anchor(bottom, 50px)` est défini sur l'élément positionné mais qu'aucune ancre n'est associée, la valeur de repli est utilisée, donc `top` a une valeur calculée de `50px`.
 
-Pour plus d'informations sur les fonctionnalités et l'utilisation des ancres, consultez le module [Positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [Utiliser le positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
+Pour plus d'informations sur les fonctionnalités et l'utilisation des ancres, consultez le module [Positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [Utiliser le positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
 
 ### Propriétés acceptant les valeurs de la fonction `anchor()`
 
@@ -113,8 +113,8 @@ Vous pouvez utiliser des valeurs logiques de `<anchor-side>` dans les propriét�
 
 L'utilisation de paramètres physiques `<anchor-side>` dans des propriétés d'encart logiques est plus complexe, car le côté physique doit correspondre à l'axe pertinent de la propriété d'encart dans le mode d'écriture courant. Par exemple&nbsp;:
 
-- En mode d'écriture horizontal, la direction du bloc est de haut en bas, donc `inset-block-end: anchor(bottom)` fonctionne mais `inset-block-end: anchor(left)` est incompatible. Si `inset-block-end: anchor(left, 50px)` est défini, la valeur calculée est `50px` et l'élément positionné est placé à `50px` de la fin du bloc (en bas) de son ancêtre positionné le plus proche ou de la fenêtre d'affichage, selon la valeur de `position`.
-- En mode d'écriture vertical, la direction du bloc est de droite à gauche ou de gauche à droite, donc `inset-block-end: anchor(left)` fonctionne, mais `inset-block-end: anchor(top)` est incompatible. Si `inset-block-end: anchor(top, 50px)` est défini, la valeur calculée est `50px` et l'élément positionné est placé à `50px` de la fin du bloc (à gauche ou à droite selon le mode d'écriture) de son ancêtre positionné le plus proche ou de la fenêtre d'affichage, selon la valeur de `position`.
+- En mode d'écriture horizontal, la direction du bloc est de haut en bas&nbsp;; donc `inset-block-end: anchor(bottom)` fonctionne, mais `inset-block-end: anchor(left)` est incompatible. Si `inset-block-end: anchor(left, 50px)` est défini, la valeur calculée est `50px` et l'élément positionné est placé à `50px` de la fin du bloc (en bas) de son ancêtre positionné le plus proche ou de la fenêtre d'affichage, selon la valeur de `position`.
+- En mode d'écriture vertical, la direction du bloc est de droite à gauche ou de gauche à droite&nbsp;; donc `inset-block-end: anchor(left)` fonctionne, mais `inset-block-end: anchor(top)` est incompatible. Si `inset-block-end: anchor(top, 50px)` est défini, la valeur calculée est `50px` et l'élément positionné est placé à `50px` de la fin du bloc (à gauche ou à droite selon le mode d'écriture) de son ancêtre positionné le plus proche ou de la fenêtre d'affichage, selon la valeur de `position`.
 
 Pour éviter toute confusion avec ces valeurs, il est conseillé d'utiliser les propriétés d'encart logiques avec des valeurs `<anchor-side>` logiques, et les propriétés d'encart physiques avec des valeurs `<anchor-side>` physiques. Vous devez privilégier l'utilisation des valeurs logiques autant que possible, car elles sont meilleures pour [l'internationalisation](/fr/docs/Glossary/Internationalization).
 
@@ -179,7 +179,7 @@ Bien qu'un élément positionné puisse être placé par rapport à plusieurs é
 
 ### Exemple courant
 
-Dans cet exemple, la fonction `anchor()` sert à définir la hauteur d'un élément positionné par ancre à celle de son ancre, en alignant ses bords supérieur et inférieur sur ceux de l'ancre. La fonction `anchor()` utilisée dans une fonction `calc()` permet ensuite de décaler l'élément positionné par rapport à son ancre.
+Dans cet exemple, la fonction `anchor()` sert à définir la hauteur d'un élément positionné par une ancre à celle de son ancre, en alignant ses bords supérieur et inférieur sur ceux de l'ancre. La fonction `anchor()` utilisée dans une fonction `calc()` permet ensuite de décaler l'élément positionné par rapport à son ancre.
 
 #### HTML
 
@@ -193,7 +193,7 @@ Nous incluons un élément HTML {{HTMLElement("div")}} qui est défini comme not
 
 #### CSS
 
-Nous définissons la valeur de `anchor-name` de l'élément d'ancre comme celle de la propriété `position-anchor` de l'élément positionné pour les associer, puis nous appliquons trois propriétés d'encart à l'élément positionné par ancre. Les deux premières alignent le bord supérieur de l'élément avec celui de l'ancre et le bord inférieur avec celui de l'ancre. Dans la troisième propriété d'encart, la fonction `anchor()` est utilisée dans une fonction `calc()` pour placer le bord gauche de l'élément à `10px` du bord droit de l'ancre.
+Nous définissons la valeur de `anchor-name` de l'élément d'ancrage comme celle de la propriété `position-anchor` de l'élément positionné pour les associer, puis nous appliquons trois propriétés d'encart à l'élément positionné par une ancre. Les deux premières alignent le bord supérieur de l'élément avec celui de l'ancre et le bord inférieur avec celui de l'ancre. Dans la troisième propriété d'encart, la fonction `anchor()` est utilisée dans une fonction `calc()` pour placer le bord gauche de l'élément à `10px` du bord droit de l'ancre.
 
 ```css
 .ancre {
@@ -226,7 +226,7 @@ Cet exemple montre un élément positionné par rapport à une ancre avec ses pr
 
 #### HTML
 
-Nous définissons deux éléments HTML {{HTMLElement("div")}}, l'un avec la classe `anchor` et l'autre avec la classe `boite-info`. Ceux-ci sont respectivement l'élément d'ancre et l'élément positionné que nous allons associer.
+Nous définissons deux éléments HTML {{HTMLElement("div")}}, l'un avec la classe `anchor` et l'autre avec la classe `boite-info`. Ceux-ci sont respectivement l'élément d'ancrage et l'élément positionné que nous allons associer.
 
 Nous ajoutons également du texte de remplissage autour des deux `<div>` pour rendre le {{HTMLElement("body")}} plus haut et permettre le défilement. Cet exemple inclut aussi deux éléments HTML {{HTMLElement("select")}} pour créer les menus déroulants permettant de choisir différentes valeurs `<anchor-side>` pour positionner l'élément. Le texte de remplissage et les éléments `<select>` sont masqués pour plus de clarté.
 
@@ -389,7 +389,7 @@ Sélectionnez différentes valeurs dans les menus déroulants pour voir comment 
 
 ### Élément positionné par rapport à plusieurs ancres
 
-Cet exemple positionne un élément par rapport à deux ancres différentes, qui servent à définir la position des coins supérieur gauche et inférieur droit de l'élément positionné par ancre. Les ancres peuvent être déplacées à l'aide des commandes clavier ou en les faisant glisser, ce qui redimensionne l'élément positionné.
+Cet exemple positionne un élément par rapport à deux ancres différentes, qui servent à définir la position des coins supérieur gauche et inférieur droit de l'élément positionné par une ancre. Les ancres peuvent être déplacées à l'aide des commandes clavier ou en les faisant glisser, ce qui redimensionne l'élément positionné.
 
 #### HTML
 
@@ -457,7 +457,7 @@ Chaque ancre reçoit une valeur {{CSSxRef("anchor-name")}} différente, une vale
 }
 ```
 
-L'élément positionné par ancre, avec sa propriété `position` définie sur `fixed`, est associé à une ancre avec sa propriété {{CSSxRef("position-anchor")}}. Il est positionné par rapport à deux ancres en incluant deux valeurs `<anchor-name>` différentes dans les fonctions `anchor()` définies sur ses propriétés d'encart. Dans ce cas, nous utilisons des valeurs {{CSSxRef("&lt;percentage&gt;")}} pour le paramètre `<anchor-side>`, ce qui définit la distance à partir du début de l'axe de la propriété d'encart sur laquelle la fonction est appliquée.
+L'élément positionné par une ancre, avec sa propriété `position` définie sur `fixed`, est associé à une ancre avec sa propriété {{CSSxRef("position-anchor")}}. Il est positionné par rapport à deux ancres en incluant deux valeurs `<anchor-name>` différentes dans les fonctions `anchor()` définies sur ses propriétés d'encart. Dans ce cas, nous utilisons des valeurs {{CSSxRef("&lt;percentage&gt;")}} pour le paramètre `<anchor-side>`, ce qui définit la distance à partir du début de l'axe de la propriété d'encart sur laquelle la fonction est appliquée.
 
 ```css
 .boite-info {
@@ -559,6 +559,6 @@ L'élément positionné est placé par rapport aux deux ancres. Faites-les gliss
 - La propriété {{CSSxRef("position-anchor")}}
 - La propriété {{CSSxRef("position-area")}}
 - La fonction {{CSSxRef("anchor-size()")}}
-- Le guide [pour utiliser le positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
+- Le guide [pour utiliser le positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
 - Le guide [d'options de repli et masquage conditionnel pour le dépassement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)
-- Le module [de position par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
+- Le module [de position par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)

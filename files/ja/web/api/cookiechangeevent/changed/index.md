@@ -1,13 +1,16 @@
 ---
 title: "CookieChangeEvent: changed プロパティ"
+short-title: changed
 slug: Web/API/CookieChangeEvent/changed
 l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+  sourceCommit: f4c14731a1a157fc8d8f7357ac4d74d14a7d7fb5
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}
 
-{{domxref("CookieChangeEvent")}} インターフェイスの読み取り専用プロパティ **`changed`** は、変更された Cookie の配列を返します。
+**`changed`** は {{domxref("CookieChangeEvent")}} インターフェイスの読み取り専用プロパティで、変更された Cookie の配列を返します。
+
+なお、有効期限が過去の日付に設定されて作成されたクッキーは、即座に削除されるため、ここには含まれません。
 
 ## 値
 
@@ -22,9 +25,9 @@ l10n:
 - `path`
   - : Cookie のパスを表す文字列です。
 - `expires`
-  - : ミリ秒単位の [UNIX 時間](/ja/docs/Glossary/Unix_time)で与えられるタイムスタンプで、Cookie の有効期限を表します。
+  - : ミリ秒単位の {{glossary("Unix time", "UNIX 時間")}}で与えられるタイムスタンプで、Cookie の有効期限を表します。
 - `secure`
-  - : Cookie がセキュアコンテキスト (HTTP ではなく HTTPS) のサイト由来かを表す {{jsxref("Boolean")}} です。
+  - : 論理値 ({{jsxref("Boolean")}}) で、Cookie が保護されたコンテキスト (HTTP ではなく HTTPS) でのみ使用されるかどうかを表します。
 - `sameSite`
   - : 以下の [`SameSite`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) の値のいずれかです。
     - `"strict"`
@@ -34,20 +37,23 @@ l10n:
     - `"none"`
       - : Cookie はすべてのコンテキストで送信されます。
 
+- `partitioned`
+  - : クッキーが区画化されたクッキーであるか (`true`)、そうでないか (`false`) を示す論理値です。情報については、[個別区画化された状態を持つクッキー (CHIPS)](/ja/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies)を参照してください。
+
 ## 例
 
-この例では、Cookie が設定されると、イベントリスナーがコンソールに `changed` プロパティを記録します。この配列の最初の要素には、今設定されたばかりの Cookie を表すオブジェクトが格納されています。
+この例では、Cookie が設定されると、イベントリスナーがコンソールに `changed` プロパティを記録します。この配列の最初の要素には、設定されたばかりの Cookie を表すオブジェクトが格納されています。
 
 ```js
 cookieStore.addEventListener("change", (event) => {
   console.log(event.changed[0]);
 });
 
-const one_day = 24 * 60 * 60 * 1000;
+const oneDay = 24 * 60 * 60 * 1000;
 cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",
-  expires: Date.now() + one_day,
+  expires: Date.now() + oneDay,
   domain: "example.com",
 });
 ```

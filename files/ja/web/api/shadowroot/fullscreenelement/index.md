@@ -3,7 +3,7 @@ title: "ShadowRoot: fullscreenElement プロパティ"
 short-title: fullscreenElement
 slug: Web/API/ShadowRoot/fullscreenElement
 l10n:
-  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
+  sourceCommit: a23122d0e86fb376234614beb5b350b217068054
 ---
 
 {{APIRef("Shadow DOM")}}
@@ -12,7 +12,7 @@ l10n:
 
 ## 値
 
-現在全画面モードで表示されている {{domxref('Element')}}、または全画面モードの要素がなければ `null` を返します。
+現在全画面モードで表示されている要素の {{domxref('Element')}}、または全画面モードの要素がなければ `null` を返します。
 
 ## 例
 

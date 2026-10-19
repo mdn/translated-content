@@ -21,7 +21,7 @@ isSupersetOf(other)
 
 ### 返値
 
-`other` の集合にあるあるすべての要素がこの Set にもあれば `true`、そうでなければ `false` です。
+`other` の集合にあるすべての要素がこの Set にもあれば `true`、そうでなければ `false` です。
 
 ## 解説
 

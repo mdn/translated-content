@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 Значение свойства `Navigator.appName` всегда равно «`Netscape`», в любом браузере. Это свойство существует только в целях совместимости.
 

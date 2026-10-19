@@ -28,7 +28,7 @@ HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP 内容安全策略) 中 **`f
 
 `font-src` 策略可以包含一个或多个源：
 
-```plain
+```http
 Content-Security-Policy: font-src <source>;
 Content-Security-Policy: font-src <source> <source>;
 ```

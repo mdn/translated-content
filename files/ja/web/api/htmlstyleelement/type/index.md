@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 **`HTMLStyleElement.type`** プロパティは、現在のスタイルの種類を返します。
 この値は [HTML の `<style>` 要素の `type` 属性](/ja/docs/Web/HTML/Reference/Elements/style#type)の値を反映します。

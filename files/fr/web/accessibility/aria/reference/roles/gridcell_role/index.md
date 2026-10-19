@@ -3,7 +3,7 @@ title: "ARIA : rôle gridcell"
 short-title: gridcell
 slug: Web/Accessibility/ARIA/Reference/Roles/gridcell_role
 l10n:
-  sourceCommit: c1564acf160ef4b320fb7b89ab65211b9c50cf1b
+  sourceCommit: 96758f3d8ce1e5fbd9d58053bdef103eec1de108
 ---
 
 Le rôle `gridcell` est utilisé pour créer une cellule dans une [grille](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) ou un [arbre de grille](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role). Il est destiné à imiter la fonctionnalité de l'élément HTML {{HTMLElement("td")}} pour le regroupement d'informations de style tableau.
@@ -87,7 +87,7 @@ Les éléments `<td>` et les éléments auxquels un rôle de `gridcell` est appl
 
 #### Cellules extensibles
 
-Dans une [treegrid](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role), les cellules de grille peuvent être rendues extensibles en basculant l'attribut [`aria-expanded`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded). Notez que si cet attribut est fourni, il s'applique uniquement à la cellule de grille individuelle.
+Dans un [arbre de grille](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role), les cellules de grille peuvent indiquer l'expansion et la réduction en basculant l'attribut [`aria-expanded`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded). Notez que si cet attribut est fourni, il s'applique uniquement à la cellule de grille individuelle, et non à la ligne conteneur. Le principal cas d'utilisation concerne les tableaux croisés dynamiques, où vous présentez des données regroupées de manière hiérarchique.
 
 ### Propriétés, états et rôles WAI-ARIA associés
 

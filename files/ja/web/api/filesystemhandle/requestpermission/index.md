@@ -1,34 +1,44 @@
 ---
-title: FileSystemHandle.requestPermission()
+title: "FileSystemHandle: requestPermission() メソッド"
+short-title: requestPermission()
 slug: Web/API/FileSystemHandle/requestPermission
 l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
-{{domxref("FileSystemHandle")}} インターフェイスの **`requestPermission()`** メソッドは、ファイルハンドルの読み取りまたは読み書きの許可を要求します。
+**`requestPermission()`** は {{domxref("FileSystemHandle")}} インターフェイスのメソッドで、ファイルハンドルの読み取りまたは読み書きの許可を要求します。
 
 ## 構文
 
 ```js-nolint
-requestPermission(fileSystemHandlePermissionDescriptor)
+requestPermission(descriptor)
 ```
 
 ### 引数
 
-- FileSystemHandlePermissionDescriptor {{optional_inline}}
+- `descriptor` {{optional_inline}}
   - : 要求する許可のモードを指定するオブジェクトです。以下のオプションが設定可能です。
-    - : `'mode'`: `'read'` または `'readwrite'` のいずれかの値をとります。
+    - `'mode'` {{optional_inline}}
+      - : `'read'`, `'write'`, `'readwrite'` のいずれかの値をとります。
 
 ### 返値
 
-`'granted'`、`'denied'`、`'prompt'` のいずれかである {{domxref('PermissionStatus.state')}} です。
+{{jsxref("Promise")}} であり、{{domxref('PermissionStatus.state')}} に解決します。その値は `'granted'`, `'denied'`, `'prompt'` のいずれかです。また、下記の例外のいずれかで拒否されることもあります。
 
 ### 例外
 
 - {{jsxref("TypeError")}}
-  - : 引数が指定されていないか、`mode` が `'read'` でも `'readwrite'` でもないとき投げられます。
+  - : 引数が指定されていないか、`mode` が `'read'` でも `'readwrite'` でもないとき発生します。
+- `SecurityError` {{domxref("DOMException")}}
+  - : 以下のいずれかの場合に発生します。
+    - このメソッドは、最上位のコンテキストと[同一オリジン](/ja/docs/Web/Security/Defenses/Same-origin_policy)ではないコンテキスト（つまり、オリジンを越えるiframe）内で呼び出された。
+    - ボタンの押下など、一時的な活性化がありませんでした。これには、ワーカーなど、ユーザーによる活性化を受け付けられない「ウィンドウ」以外のコンテキストでハンドルが実行されている場合も含まれます。
+
+## セキュリティ
+
+[ユーザーによる一時的な活性化](/ja/docs/Web/Security/Defenses/User_activation)が要求されます。この機能が動作するには、ユーザーがページまたは UI の要素を操作する必要があります。
 
 ## 例
 
@@ -69,5 +79,5 @@ async function verifyPermission(fileHandle, withWrite) {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [ファイルシステム API](/ja/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

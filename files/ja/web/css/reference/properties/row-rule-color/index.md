@@ -3,14 +3,14 @@ title: CSS `row-rule-color` プロパティ
 short-title: row-rule-color
 slug: Web/CSS/Reference/Properties/row-rule-color
 l10n:
-  sourceCommit: 9cf3002bd29376c15d49df6fab2e6a264285abf6
+  sourceCommit: b6de98eb9cd52ce7e37f22a340352f0af4c9d597
 ---
 
 {{SeeCompatTable}}
 
-**`row-rule-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、複数行のグリッド、フレックス、段組みレイアウトで行・段間に引かれる罫線の色を設定します。
+**`row-rule-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、複数行のグリッド、フレックス、段組みレイアウトで行間に引かれる罫線の色を設定します。
 
-{{InteractiveExample("CSS Demo: row-rule-color")}}
+{{InteractiveExample("CSS デモ: row-rule-color")}}
 
 ```css interactive-example-choice
 row-rule-color: magenta;
@@ -91,13 +91,13 @@ row-rule-color: unset;
   - : {{cssxref("repeat()")}} 関数に、第一引数で {{cssxref("&lt;integer&gt;")}} で `1` 以上の値を指定し、それ以降の引数で 1 つ以上の `<color>` 値を指定したものです。この `<integer>` は、一連の `<color>` 値を繰り返す回数です。
 
 - `<auto-repeat-line-color>`
-  - : {{cssxref("repeat()")}} 関数に、第一引数で `auto` を指定し、それ以降の引数で 1 つ以上の `<color>` 値を指定したものです。指定された `<color>` の値は、プロパティ値の他の要素によって明示的に指定されていない罫線に対して値を埋めるために、必要な回数だけ繰り返して使用されます。
+  - : {{cssxref("repeat()")}} 関数に、第一引数で `auto` を指定し、それ以降の引数で 1 つ以上の `<color>` 値を指定したものです。指定された `<color>` の値は、プロパティ値の他の要素によって明示的に指定されていない行間罫に対して値を埋めるために、必要な回数だけ繰り返して使用されます。
 
 ## 解説
 
-`row-rule-color` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)のコンテナーに複数の行・段がある場合に、行・段間の隙間に描画される罫線の色を定義します。
+`row-rule-color` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)のコンテナーに複数の行がある場合に、行間のギャップに描画される罫線の色を定義します。
 
-この値は、カンマ区切りの一連の成分からなり、`<line-color>`、`<repeated-line-color>`、`<auto-repeat-line-color>` といった型を含めることができます。
+この値は、カンマで区切られた一連の成分からなり、`<line-color>`、`<repeat-line-color>`、`<auto-repeat-line-color>` といった型を含めることができます。
 
 `row-rule-color` は、{{cssxref("row-rule-width")}} および {{cssxref("row-rule-style")}} プロパティとともに、一括指定の {{cssxref("row-rule")}} で設定できます。`row-rule-color` は、{{cssxref("column-rule-color")}} プロパティとともに、一括指定の {{cssxref("rule-color")}} で設定することもできます。
 
@@ -107,7 +107,7 @@ row-rule-color: unset;
 row-rule-color: blue;
 ```
 
-複数の `<line-color>` が宣言されている場合は、行・段間罫線に、指定された順序で適用されます。罫線の数が `<line-color>` の値の数より多い場合、すべての罫線に色が割り当てられるまで、罫線の色のリストが繰り返し適用されます。例えば、次のように宣言すると、奇数番目の罫線は青、偶数番目の罫線は黄色になります。
+複数の `<line-color>` が宣言されている場合は、行間罫に、指定された順序で適用されます。罫線の数が `<line-color>` の値の数より多い場合、すべての罫線に色が割り当てられるまで、線の色のリストが繰り返し適用されます。例えば、次のように宣言すると、奇数番目の罫線は青、偶数番目の罫線は黄色になります。
 
 ```css
 row-rule-color: blue, yellow;
@@ -124,7 +124,7 @@ row-rule-color: blue, repeat(2, yellow, red);
 
 CSS の色関数や独自のプロパティなど、あらゆる色空間の有効な色値を指定することができます。特に色値が複雑になるにつれて、`repeat()` を使用すると記述が簡単になります。これにより、行数に関係なく、単一の関数だけで繰り返しパターンを記述できるようになります。
 
-`--base: yellow` と `--mixin: blue` を設定した場合、次のの記述は前の宣言と同様の結果になります。
+`--base: yellow` と `--mixin: blue` を設定した場合、次の記述は前の宣言と同様の結果になります。
 
 ```css
 row-rule-color:
@@ -148,9 +148,9 @@ row-rule-color:
 row-rule-color: blue, repeat(auto, yellow), red;
 ```
 
-この場合、最初の行間罫線は青、最後の行間罫線は赤、それ以外の行間罫線はすべて黄色になります。コンテナーの行数が 3、6、11、16、21 のどれであっても、最初の罫線は常に青になり、罫線が 2 本以上ある限り、最後の行間罫線は常に赤になります。それ以外のすべての行間罫線は黄色になります。つまり、行が 2 行または 3 行しかない場合は、黄色の線は現れません。
+この場合、最初の行間罫は青、最後は赤、それ以外はすべて黄色になります。コンテナーの行数が 3、6、11、16、21 のどれであっても、最初の罫線は常に青になり、行間罫が 2 本以上あれば、最後は常に赤になります。それ以外はすべて黄色になります。つまり、行が 2 行または 3 行しかない場合は、黄色の線は表示されません。
 
-`auto` キーワードを`repeat()` 関数内で使用すると、リストの他の部分から値を受け取らない罫線色の値を設定する自動リピーターを作成し、リストが繰り返されるのを防ぎます。`row-rule-color` の値に記載することができる `repeat(auto, <color>)` の数は、最大 1 つです。
+`auto` キーワードを`repeat()` 関数内で使用すると、リストの他の部分から値を受け取らない行間罫の色の値を設定する自動リピーターを作成し、リストが繰り返されるのを防ぎます。`row-rule-color` の値に指定することができる `repeat(auto, <color>)` の数は、最大 1 つです。
 
 ## 公式定義
 
@@ -204,7 +204,7 @@ ul {
 
 この例では、色のリスト内にある値の数が、行間の溝の数よりも少ない場合、値が繰り返し使用される様子を示しています。
 
-前回の例と同じ HTML と CSS を使用し、`row-rule-color` の値として、カンマで区切られた 3 つの色を記載します。
+前回の例と同じ HTML と CSS を使用し、`row-rule-color` の値として、カンマで区切られた 3 つの色を指定します。
 
 ```css live-sample___repeat
 ul {

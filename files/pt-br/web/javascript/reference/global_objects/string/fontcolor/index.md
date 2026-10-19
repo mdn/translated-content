@@ -3,7 +3,7 @@ title: String.prototype.fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}
 
 O método `fontcolor()` cria um elemento HTML [\<font>](/pt-BR/docs/Web/HTML/Element/font) que faz com que uma string seja exibida na cor especificada.
 

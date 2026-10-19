@@ -3,7 +3,7 @@ title: Structurer le contenu avec HTML
 short-title: HTML
 slug: Learn_web_development/Core/Structuring_content
 l10n:
-  sourceCommit: 25a3f6c781777a135143b0edd4b5e1f85857b802
+  sourceCommit: 456c370394c0cd8869feb60c4e9926f35422beaf
 ---
 
 {{NextMenu("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core")}}
@@ -71,7 +71,7 @@ Ces tutoriels ne font pas partie du parcours d'apprentissage, mais ils sont néa
 - [Inclure des graphiques vectoriels en HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
   - : Les graphiques vectoriels sont très utiles dans de nombreuses circonstances — ils ont de petites tailles de fichier et sont hautement évolutifs, ils ne se pixelisent donc pas lorsqu'on effectue un zoom ou qu'on les agrandit beaucoup. Dans cet article, nous vous montrons comment en inclure un dans votre page Web.
 - [D'object à iframe — technologies générales d'intégration](/fr/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)
-  - : Les développeur·euse·s pensent souvent à intégrer des médias tels que des images, des vidéos et de l'audio dans des pages Web. Dans cet article, nous faisons un pas de côté en examinant certains éléments qui permettent d'intégrer une grande variété de types de contenu dans vos pages Web&nbsp;: les éléments HTML {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} et {{HTMLElement("object")}}. Les `<iframe>` servent à intégrer d'autres pages Web, et les deux autres permettent d'intégrer des ressources externes telles que des fichiers PDF.
+  - : Les développeur·euse·s pensent souvent à intégrer des médias tels que des images, des vidéos et de l'audio dans des pages Web. Dans cet article, nous faisons un pas de côté en examinant certains éléments qui permettent d'intégrer une grande variété de types de contenu dans vos pages Web&nbsp;: les éléments HTML {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} et {{HTMLElement("object")}}. Ces éléments permettent d'intégrer des ressources externes telles que d'autres pages Web et des fichiers PDF.
 
 ## Voir aussi
 

@@ -24,7 +24,7 @@ Cookie: name=value; name2=value2; name3=value3
 
 ## 範例
 
-```plain
+```http
 Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
 ```
 

@@ -10,7 +10,7 @@ l10n:
 
 ## 解説
 
-`maxByteLength` プロパティはアクセサプロパティであり、その set アクセサ－関数は `undefined` です。つまり、このプロパティは読み取り専用です。この値は、この共有配列が構築されたときに設定され、 {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer()")}} コンストラクターの `maxByteLength` オプションを介して設定され、変更することはできません。
+`maxByteLength` プロパティはアクセサプロパティであり、その set アクセサー関数は `undefined` です。つまり、このプロパティは読み取り専用です。この値は、この共有配列が構築されたときに設定され、 {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer()")}} コンストラクターの `maxByteLength` オプションを介して設定され、変更することはできません。
 
 この `SharedArrayBuffer` が `maxByteLength` 値を指定せずに構築された場合、このプロパティは、この `SharedArrayBuffer` の {{jsxref("SharedArrayBuffer/byteLength", "byteLength")}} 値に等しい値を返します。
 

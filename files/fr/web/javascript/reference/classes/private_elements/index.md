@@ -1,32 +1,32 @@
 ---
-title: Propriétés privées
+title: Éléments privés
 slug: Web/JavaScript/Reference/Classes/Private_elements
-original_slug: Web/JavaScript/Reference/Classes/Private_properties
 l10n:
-  sourceCommit: 2024a508694208f0316c484fb41e2c5823deae88
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Classes")}}
+Les **éléments privés** sont les équivalents des propriétés de classe normales, qui sont publiques, comme [les champs de classe](/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields), les méthodes de classe, etc. Les éléments privés sont créées en utilisant un croisillon `#` comme préfixe et ne peuvent pas être référencées légalement en dehors de la classe. L'encapsulation de ces éléments de classe est assurée par JavaScript lui-même. Le seul moyen d'accéder à un élément privé est d'utiliser la [notation par point](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#notation_par_point), et vous ne pouvez le faire que dans la classe qui définit l'élément privé.
 
-Les **propriétés privées** sont les équivalents des propriétés de classe normales, qui sont publiques, comme [les champs de classe](/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields), les méthodes de classe, etc. Les propriétés privées sont créées en utilisant un croisillon `#` comme préfixe et ne peuvent pas être référencée légalement en dehors de la classe. L'encapsulation de cette isolation dans la classe est gérée par le moteur JavaScript.
+Les éléments privés ne sont pas disponibles de façon native en JavaScript avant l'apparition de cette syntaxe. En utilisant l'héritage de prototype, ce comportement peut être émulé avec des objets [`WeakMap`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#émuler_les_membres_privés), ou [des fermetures (<i lang="en">closures</i>)](/fr/docs/Web/JavaScript/Guide/Closures#émuler_des_méthodes_privées_avec_des_fermetures), mais cela n'est pas aussi pratique que la syntaxe avec `#`.
 
-Les propriétés privées n'étaient pas disponibles de façon native en JavaScript avant l'apparition de cette syntaxe. En utilisant l'héritage prototypal, ce comportement pouvait être émulé avec des objets [`WeakMap`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members), ou [des fermetures (<i lang="en">closures</i>)](/fr/docs/Web/JavaScript/Guide/Closures#émuler_des_méthodes_privées_avec_des_fermetures), mais cela n'était pas aussi pratique que la syntaxe avec `#`.
+> [!NOTE]
+> Sur le MDN, nous évitons d'utiliser le terme «&nbsp;propriété privée&nbsp;». Une [propriété](/fr/docs/Glossary/Property/JavaScript) en JavaScript a une clé de type chaîne de caractères ou symbole, et possède des attributs comme `writable`, `enumerable` et `configurable`, mais les éléments privés n'en ont aucun. Bien que les éléments privés soient accessibles avec la notation par point familière, ils ne peuvent pas être [interceptés par un mandataire](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy), énumérés, supprimés ou manipulés à l'aide de toute méthode {{JSxRef("Object")}}.
 
 ## Syntaxe
 
 ```js-nolint
-class ClasseAvecProprietesPrivees {
-  #champPrive;
-  #champPriveAvecInitialisateur = 42;
+class ClassWithPrivate {
+  #privateField;
+  #privateFieldWithInitializer = 42;
 
-  #methodePrivee() {
+  #privateMethod() {
     // …
   }
 
-  static #champPriveStatique;
-  static #champPriveStatiqueAvecInitialisateur = 42;
+  static #privateStaticField;
+  static #privateStaticFieldWithInitializer = 42;
 
-  static #methodePriveeStatique() {
+  static #privateStaticMethod() {
     // …
   }
 }
@@ -50,15 +50,11 @@ Pour chaque type de propriété d'une classe, on a des équivalents privés&nbsp
 - Accesseurs privés statiques
 - Mutateurs privés statiques
 
-Toutes ces fonctionnalités représentent des _propriétés privées_. Toutefois, [les constructeurs](/fr/docs/Web/JavaScript/Reference/Classes/constructor) ne peuvent pas être privés en JavaScript. Pour empêcher une classe d'être construite en dehors d'elle-même, il faudra [utiliser un marqueur privé](#simuler_des_constructeurs_privés).
+Toutes ces fonctionnalités représentent des _propriétés privées_. Toutefois, [les constructeurs](/fr/docs/Web/JavaScript/Reference/Classes/constructor) ne peuvent pas être privés en JavaScript. Pour empêcher une classe d'être construite en dehors d'elle-même, il faut [utiliser un marqueur privé](#simuler_des_constructeurs_privés).
 
-Les propriétés privées sont déclarées avec des identifiants préfixés par `#` (en anglais, on parle de <i lang="en">hash names</i>). Le préfixe avec le croisillon fait partie inhérente du nom de la propriété (on peut y voir une analogie avec l'ancienne convention utilisant un tiret bas comme préfixe `_champPrive`, mais il ne s'agit pas d'une propriété dont le nom est une chaîne de caractère classique et on ne peut donc pas y accéder dynamiquement en utilisant [la notation avec les crochets](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#notation_avec_crochets)).
+Les propriétés privées sont déclarées avec des identifiants préfixés par `#` (en anglais, on parle de <i lang="en">hash names</i>). Le préfixe avec le croisillon fait partie inhérente du nom de la propriété — on peut y voir une analogie avec l'ancienne convention utilisant un tiret bas comme préfixe `_champPrive` — mais il ne s'agit pas d'une propriété dont le nom est une chaîne de caractère classique et on ne peut donc pas y accéder dynamiquement en utilisant [la notation avec les crochets](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#notation_avec_crochets).
 
-Les cas suivants sont des erreurs de syntaxe&nbsp;:
-
-- Faire référence aux noms privés en dehors de la classe.
-- Faire référence à des propriétés privées qui n'ont pas été déclarées dans le corps de la classe
-- Tenter de supprimer une propriété privée avec [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete).
+Il s'agit d'une erreur de syntaxe de faire référence aux noms commençant par `#` en dehors de la classe. Il s'agit également d'une erreur de syntaxe de faire référence à des éléments privés qui n'ont pas été déclarés dans le corps de la classe, ou de tenter de supprimer des éléments déclarés avec [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete).
 
 ```js-nolint example-bad
 class ClasseAvecChampPrive {
@@ -74,12 +70,12 @@ const instance = new ClasseAvecChampPrive();
 instance.#champPrive; // Erreur de syntaxe
 ```
 
-JavaScript est un langage dynamique et peut faire cette vérification à la compilation grâce à la syntaxe particulière des propriétés privées.
+JavaScript est un langage dynamique et peut faire cette vérification à la compilation grâce à la syntaxe particulière des éléments privés.
 
 > [!NOTE]
-> Le code exécuté dans la console Google Chrome permet d'accéder aux propriétés privées en dehors de la classe. Il s'agit d'une dérogation propre aux outils de développement.
+> Le code exécuté dans la console Google Chrome permet d'accéder aux éléments privés en dehors de la classe. Il s'agit d'une dérogation propre aux outils de développement.
 
-Si vous tentez d'accéder à une propriété privée sur un objet qui ne dispose pas de la propriété, vous obtiendrez une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) et non `undefined`, comme c'est le cas pour les propriétés normales (publiques).
+Si vous tentez d'accéder à un élément privé sur un objet qui ne dispose pas de la propriété, vous obtenez une exception {{JSxRef("TypeError")}} et non `undefined`, comme c'est le cas pour les propriétés normales (publiques).
 
 ```js example-bad
 class C {
@@ -94,9 +90,9 @@ console.log(C.getX(new C())); // undefined
 console.log(C.getX({})); // TypeError: Cannot read private member #x from an object whose class did not declare it
 ```
 
-Cet exemple illustre également l'accès aux propriétés privées depuis les fonctions statiques et pour les instances de la classe définies par ailleurs.
+Cet exemple illustre également l'accès aux éléments privé depuis les fonctions statiques et pour les instances de la classe définies par ailleurs.
 
-L'opérateur [`in`](/fr/docs/Web/JavaScript/Reference/Operators/in) peut être utilisé pour vérifier si un objet tiers possède une propriété privée. L'opérateur renverra `true` si le champ privé existe, `false` sinon.
+L'opérateur [`in`](/fr/docs/Web/JavaScript/Reference/Operators/in) peut être utilisé pour vérifier si un objet tiers possède un élément privée. L'opérateur retourne `true` si le champ privé existe, `false` sinon.
 
 ```js example-good
 class C {
@@ -116,9 +112,9 @@ console.log(C.getX(new C(new Date()))); // la date/heure courante
 console.log(C.getX({})); // "obj doit être une instance de C"
 ```
 
-Un corollaire à cette déclaration préalable et à cette absence de suppression est que si on trouve un objet possédant au moins une propriété privée de la classe courante (via un `try...catch` ou une vérification `in`), cet objet en possèdera toutes les autres propriétés privées. Un objet possédant une propriété privée d'une classe signifie généralement qu'il a été construit par cette classe (ça [n'est pas forcément le cas](#renvoyer_un_objet_différent)).
+Un corollaire à cette déclaration préalable et à cette absence de suppression est que si on trouve un objet possédant au moins un élément privé de la classe courante (avec un `try...catch` ou une vérification `in`), cet objet en possède tous les autres éléments privés. Un objet possédant un élément privé d'une classe signifie généralement qu'il a été construit par cette classe (ça [n'est pas forcément le cas](#renvoyer_un_objet_différent)).
 
-Les propriétés privées ne font par partie du modèle [d'héritage prototypal](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain), car elles ne sont accessibles qu'au sein du corps de la classe courante et ne sont pas héritées par les sous-classes. Les propriétés privées qui ont le même nom, mais des classes différentes sont totalement différentes et n'ont aucune relation entre elles. Il faut voir les propriétés privées comme des métadonnées externes rattachées à chaque instance, gérées par la classe. Pour cette raison, [`Object.freeze()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) et [`Object.seal()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/seal) n'ont pas d'effet sur les propriétés privées.
+Les éléments privés ne font pas partie du modèle [d'héritage de prototype](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain), car ils ne sont accessibles qu'au sein du corps de la classe courante et ne sont pas hérités par les sous-classes. Les éléments privés qui ont le même nom, mais des classes différentes sont totalement différentes et n'ont aucune relation entre elles. Il faut voir les éléments privés comme des métadonnées externes rattachées à chaque instance, gérées par la classe. Pour cette raison, {{DOMxRef("Window.structuredClone", "structuredClone()")}} ne clone pas les éléments privés, {{JSxRef("Object.freeze()")}} et {{JSxRef("Object.seal()")}} n'ont pas d'effet sur les éléments privés.
 
 Pour plus d'informations sur la façon dont les champs privés sont initialisés, voir [la page sur les champs publics des classes](/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields).
 
@@ -159,20 +155,20 @@ new SousClasse(); // Dans certains outils de développement, cela affichera Sous
 > [!NOTE]
 > La propriété `#champPrive`, provenant de la classe de base `ClasseAvecChampPrive` est privée et est donc uniquement accessible à l'intérieur de `ClasseAvecChampPrive` et est inaccessible depuis `SousClasse`.
 
-#### Renvoyer un objet différent
+#### Retourner un objet différent
 
-Le constructeur d'une classe peut renvoyer un objet différent, qui sera alors utilisé comme nouveau `this` pour le constructeur de la classe dérivée. La classe dérivée pourra alors définir des champs privés sur l'objet qui a été renvoyé, permettant ainsi indirectement d'adjoindre des champs privés pour des objets qui ne sont pas des instances.
+Le constructeur d'une classe peut retourner un objet différent, qui est alors utilisé comme nouveau `this` pour le constructeur de la classe dérivée. La classe dérivée peut alors définir des champs privés sur l'objet qui a été retourné, permettant ainsi indirectement d'adjoindre des champs privés pour des objets qui ne sont pas des instances.
 
 ```js
 class Stamper extends class {
-  // Une classe de base dont le constructeur renvoie
+  // Une classe de base dont le constructeur retourne
   // l'objet qui lui est fourni.
   constructor(obj) {
     return obj;
   }
 } {
-  // Cette déclaration rajoutera le champ privé
-  // sur l'objet renvoyé par le constructeur
+  // Cette déclaration rajoute le champ privé
+  // sur l'objet retourné par le constructeur
   // de la classe de base
   #stamp = 42;
   static getStamp(obj) {
@@ -182,11 +178,11 @@ class Stamper extends class {
 
 const obj = {};
 new Stamper(obj);
-// `Stamper` appelle `Base`, qui renvoie `obj`, et `obj` est
+// `Stamper` appelle `Base`, qui retourne `obj`, et `obj` est
 // désormais la valeur `this`. `Stamper` définit alors
 // `#stamp` sur `obj`
 
-console.log(obj); // Dans certains outils de développement, on verra {#stamp: 42}
+console.log(obj); // Dans certains outils de développement, on voit {#stamp: 42}
 console.log(Stamper.getStamp(obj)); // 42
 console.log(obj instanceof Stamper); // false
 
@@ -195,7 +191,7 @@ new Stamper(obj); // Error: Initializing an object twice is an error with privat
 ```
 
 > [!WARNING]
-> Implémenter un tel fonctionnement sera source de confusion. Il est généralement recommandé de ne rien renvoyer à partir du constructeur, a fortiori, quelque chose qui n'a pas de lien avec `this`.
+> Implémenter un tel fonctionnement est source de confusion. Il est généralement recommandé de ne rien retourner à partir du constructeur, a fortiori, quelque chose qui n'a pas de lien avec `this`.
 
 #### Champs statiques privés
 
@@ -232,14 +228,14 @@ class SousClasse extends ClasseAvecChampStatiquePrive {}
 SousClasse.methodeStatiquePublique(); // TypeError: Cannot read private member #champStatiquePrive from an object whose class did not declare it
 ```
 
-Le même comportement se produira si la méthode est appelée avec `super`, car [les méthodes appelées avec `super` ne reçoivent pas la classe parente comme valeur pour `this`](/fr/docs/Web/JavaScript/Reference/Operators/super#appeler_des_méthodes_avec_super).
+Le même comportement se produit si la méthode est appelée avec `super`, car [les méthodes appelées avec `super` ne reçoivent pas la classe parente comme valeur pour `this`](/fr/docs/Web/JavaScript/Reference/Operators/super#appeler_des_méthodes_avec_super).
 
 ```js
 class ClasseAvecChampStatiquePrive {
   static #champStatiquePrive = 42;
 
   static methodeStatiquePublique() {
-    // Même appelée avec super, `this` fera référence
+    // Même appelée avec super, `this` fait référence
     // à SousClasse
     return this.#champStatiquePrive;
   }
@@ -397,10 +393,10 @@ ConstructeurPrive.create(); // ConstructeurPrive {}
 
 ## Voir aussi
 
-- [Le guide Utiliser les classes](/fr/docs/Web/JavaScript/Guide/Using_classes)
-- [Classes](/fr/docs/Web/JavaScript/Reference/Classes)
+- Le guide pour [Utiliser les classes](/fr/docs/Web/JavaScript/Guide/Using_classes)
+- [Les classes](/fr/docs/Web/JavaScript/Reference/Classes)
 - [Les champs de classe publics](/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
-- [`class`](/fr/docs/Web/JavaScript/Reference/Statements/class)
-- [La FAQ sur la syntaxe des champs privés (en anglais)](https://github.com/tc39/proposal-class-fields/blob/main/PRIVATE_SYNTAX_FAQ.md) dans la proposition TC39 relative aux champs de classe
-- [La sémantique des différents éléments de classe JavaScript (en anglais)](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html), par Shu-yu Guo (2018)
-- [Champs de classe publics et privés (en anglais)](https://v8.dev/features/class-fields) sur v8.dev (2018)
+- L'instruction {{JSxRef("Statements/class", "class")}}
+- [La FAQ sur la syntaxe des champs privés <sup>(angl.)</sup>](https://github.com/tc39/proposal-class-fields/blob/main/PRIVATE_SYNTAX_FAQ.md) dans la proposition TC39 relative aux champs de classe
+- [La sémantique des différents éléments de classe JavaScript <sup>(angl.)</sup>](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html), par Shu-yu Guo (2018)
+- [Champs de classe publics et privés <sup>(angl.)</sup>](https://v8.dev/features/class-fields) sur v8.dev (2018)

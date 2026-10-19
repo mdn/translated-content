@@ -1,8 +1,9 @@
 ---
-title: animation-range-start
+title: "`animation-range-start` プロパティ (CSS)"
+short-title: animation-range-start
 slug: Web/CSS/Reference/Properties/animation-range-start
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 **`animation-range-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションが開始するタイムライン上の点を設定します。
@@ -21,6 +22,11 @@ animation-range-start: contain;
 animation-range-start: cover 20%;
 animation-range-start: contain 100px;
 
+/* 複数の値 */
+animation-range-start:
+  cover 20%,
+  contain 100px;
+
 /* グローバル値 */
 animation-range-start: inherit;
 animation-range-start: initial;
@@ -30,6 +36,8 @@ animation-range-start: unset;
 ```
 
 ### 値
+
+このプロパティは、カンマ区切りの値のリストとして指定されます。それぞれの値は、以下のいずれかになります。
 
 - `normal`
   - : タイムラインの先頭を表します。これがデフォルト値です。
@@ -42,9 +50,11 @@ animation-range-start: unset;
 
 ## 解説
 
-`animation-range-start` プロパティの有効な値は、`normal`、`<length-percentage>`、またはオプションの `<length-percentage>` を含む {{cssxref("timeline-range-name")}} です。`<timeline-range-name>` の値に `<length-percentage>` が含まれない場合、パーセント値はデフォルトで `0%` になります。
+`animation-range-start` プロパティの有効な値は、`normal`、{{cssxref("length-percentage")}}、またはオプションの `<timeline-range-name>` を含む {{cssxref("timeline-range-name")}} です。`<timeline-range-name>` の値に `<length-percentage>` が含まれない場合、パーセント値はデフォルトで `0%` になります。
+
 利用可能な値の詳細な説明については、{{cssxref("animation-range")}} を参照してください。
-同時に、[View progress timeline visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/) も調べることをおすすめします。ここでは、さまざまな値が何を意味しているかをわかりやすい視覚的書式化で表示させます。
+
+カンマ区切りで複数の値を指定する場合、それらは {{cssxref("animation-name")}} の値が現れる順序に従ってアニメーションに適用されます。詳細は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values)を参照してください。
 
 `animation-range-start` はリセット専用の値として {{cssxref("animation")}} の一括指定に含まれています。これは、`animation` を記載することで、前回宣言した `animation-range-start` の値が `normal` にリセットされることを意味していますが、`animation` によって固有の値を設定することはできません。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を作成する際には、 `animation` の一括指定を宣言した後に `animation-range-end` を宣言しないと、その効果を得ることができません。
 
@@ -60,7 +70,7 @@ animation-range-start: unset;
 
 ## 例
 
-### 範囲の先頭を指定したスクロールビュー進行タイムラインの作成
+### 範囲の先頭を指定したスクロール進行タイムラインの作成
 
 この例では、`animation-range-start` がビュー進捗進行タイムラインでアニメーション処理される要素に適用されています。これにより、要素が親ビューポートの端に到達するかなり前に、アニメーションが最後のキーフレームに到達するようになります。
 
@@ -183,7 +193,7 @@ p {
 
 スクロールして要素のアニメーションを確認してください。要素がビューポートに入るときに既に変倍され半透明である点に注目してください。これは、要素のアニメーションがビューポートに入るかなり前から始まるためです。
 
-{{EmbedLiveSample("Creating a named view progress timeline with range start", "100%", "480px")}}
+{{EmbedLiveSample("Creating a scroll progress timeline with range start", "100%", "480px")}}
 
 ## 仕様書
 
@@ -201,5 +211,6 @@ p {
 - {{cssxref("view-timeline-inset")}}
 - {{domxref("Element.animate()")}} `rangeStart` プロパティ
 - [スクロール駆動アニメーションタイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [タイムライン範囲名を理解する](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)
 - [View progress timeline: Ranges and animation progress visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

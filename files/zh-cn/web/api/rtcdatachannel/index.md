@@ -17,7 +17,7 @@ RTCDataChannel 接口代表在两者之间建立了一个双向数据通道的�
 - {{domxref("RTCDataChannel.label")}} {{readOnlyInline}}
   - : 返回一个包含有描述数据通道名字的{{jsxref("String")}}。这个字段没有唯一性要求。
 - {{domxref("RTCDataChannel.ordered")}} {{readOnlyInline}}
-  - : 返回一个{{domxref("Boolean")}}对象，表示传递信息的顺序是否有保证。
+  - : 返回一个{{jsxref("Boolean")}}对象，表示传递信息的顺序是否有保证。
 - {{domxref("RTCDataChannel.protocol")}} {{readOnlyInline}}
   - : 返回一个包含有正在使用的子协议的名称的 {{jsxref("String")}}，如果没有这样的子协议，返回""
 - {{domxref("RTCDataChannel.id")}} {{readOnlyInline}}
@@ -32,15 +32,15 @@ RTCDataChannel 接口代表在两者之间建立了一个双向数据通道的�
 - {{domxref("RTCDataChannel.bufferedAmount")}} {{readOnlyInline}}
   - : 返回一个`unsigned long`，表示缓冲队列中等待发送的字节数。这些数据是通过{{domxref("RTCDataChannel.send()")}}添加进缓冲队列但还未被发送的数据请求。注意：就算 channel 处于`closed`状态，队列中的缓存还会保持。
 - {{domxref("RTCDataChannel.binaryType")}}
-  - : 是一个{{jsxref("String")}} 类型，表示由链路发送的二进制数据的类型。该项的值应该为`"blob"`或者`"arraybuffer"`，默认值为`"blob"`。当值为`"blob"`的时候，使用{{domxref("Blob")}}对象，当值为`"arraybuffer"`时，使用{{domxref("ArrayBuffer")}}对象
+  - : 是一个{{jsxref("String")}} 类型，表示由链路发送的二进制数据的类型。该项的值应该为`"blob"`或者`"arraybuffer"`，默认值为`"blob"`。当值为`"blob"`的时候，使用{{domxref("Blob")}}对象，当值为`"arraybuffer"`时，使用{{jsxref("ArrayBuffer")}}对象
 - {{domxref("RTCDataChannel.maxPacketLifeType")}} {{readOnlyInline}}
   - : 是一个`unsigned short`类型，表示不可靠模式下的消息发送允许时间长度，单位为毫秒。
 - {{domxref("RTCDataChannel.maxRetransmits")}} {{readOnlyInline}}
   - : 是一个`unsigned short`类型，表示不可靠模式下消息允许尝试重发的最大次数。
 - {{domxref("RTCDataChannel.negotiated")}} {{readOnlyInline}}
-  - : 是一个{{domxref("Boolean")}}类型，表示这个 channel 是否已经通过应用协商。
+  - : 是一个{{jsxref("Boolean")}}类型，表示这个 channel 是否已经通过应用协商。
 - {{domxref("DataChannel.reliable")}} {{non-standard_inline}} {{readOnlyInline}}
-  - : 是一个{{domxref("Boolean")}}类型，表示这个链接能不能以非可靠模式发送消息。已经废弃的 api。
+  - : 是一个{{jsxref("Boolean")}}类型，表示这个链接能不能以非可靠模式发送消息。已经废弃的 api。
 - {{domxref("DataChannel.stream")}} {{non-standard_inline}} {{readOnlyInline}}
   - : 和{{domxref("RTCDataChannel.id")}}等效，已经废弃的 api。
 
@@ -60,7 +60,7 @@ RTCDataChannel 接口代表在两者之间建立了一个双向数据通道的�
 - {{domxref("RTCDataChannel.close()")}}
   - : 关闭 channel 的方法。这个关闭动作不是直接生效的。这个方法会将 channel 的{{domxref("RTCDataChannel.readyState", "state")}} 属性设置为`"closing"`状态，在消息队列中的消息全部发送完毕之后，channel 才会被关闭。
 - {{domxref("RTCDataChannel.send()")}}
-  - : 将参数中的数据通过 channel 发送。这个数据可以是{{jsxref("String")}}, {{domxref("Blob")}}, {{domxref("ArrayBuffer")}}或者是 {{domxref("ArrayBufferView")}}类型。
+  - : 将参数中的数据通过 channel 发送。这个数据可以是{{jsxref("String")}}, {{domxref("Blob")}}, {{jsxref("ArrayBuffer")}}或者是 {{jsxref("TypedArray")}}类型。
 
 ## 示例
 

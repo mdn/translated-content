@@ -16,7 +16,7 @@ slug: Web/API/Range
 _没有继承的属性。_
 
 - {{domxref("Range.collapsed")}} {{ReadOnlyInline}}
-  - : 返回一个表示 `Range` 的起始位置和终止位置是否相同的{{domxref("Boolean", "布尔值")}}。
+  - : 返回一个表示 `Range` 的起始位置和终止位置是否相同的{{jsxref("Boolean", "布尔值")}}。
 - {{domxref("Range.commonAncestorContainer")}} {{ReadOnlyInline}}
   - : 返回完整包含 `startContainer` 和 `endContainer` 的、最深一级的{{ domxref("Node", "节点") }}。
 - {{domxref("Range.endContainer")}} {{ReadOnlyInline}}

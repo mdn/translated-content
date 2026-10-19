@@ -26,7 +26,7 @@ HTTP {{HTTPHeader("Content-Security-Policy")}}（内容安全策略）中的 **`
 
 base-uri 安全策略可以设置一个或多个源：
 
-```plain
+```http
 Content-Security-Policy: base-uri <source>;
 Content-Security-Policy: base-uri <source> <source>;
 ```

@@ -2,14 +2,14 @@
 title: Grille
 slug: Glossary/Grid
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 298079b550c76f20de6611c4ecdde4c30dc68b2b
 ---
 
 Une **grille CSS** est définie en utilisant la valeur `grid` de la propriété {{CSSxRef("display")}}&nbsp;; vous pouvez définir les colonnes et les lignes de votre grille en utilisant les propriétés {{CSSxRef("grid-template-rows")}} et {{CSSxRef("grid-template-columns")}}.
 
 La grille que vous définissez avec ces propriétés est décrite comme une _grille explicite_.
 
-Si vous placez du contenu en dehors de cette grille explicite, ou si vous comptez sur le placement automatique, l'algorithme de grille doit créer une {{Glossary("grid tracks", "piste")}} (_track_) de ligne ou de colonne supplémentaire pour contenir des {{Glossary("grid cell", "cellules de grille")}} (_grid cells_), des pistes supplémentaires seront alors créées dans la grille implicite. La grille implicite est la grille créée automatiquement en raison de l'ajout de contenu en dehors des pistes définies.
+Si vous placez du contenu en dehors de cette grille explicite, ou si vous comptez sur le placement automatique, l'algorithme de grille doit créer une {{Glossary("grid tracks", "piste")}} de ligne ou de colonne supplémentaire pour contenir des {{Glossary("grid cell", "cellules de grille")}}, des pistes supplémentaires sont alors créées dans la grille implicite. La grille implicite est la grille créée automatiquement en raison de l'ajout de contenu en dehors des pistes définies.
 
 Dans l'exemple ci-dessous, nous avons créé une _grille explicite_ de 3 colonnes et 2 lignes. La _troisième_ ligne de la grille est une piste de ligne de _grille implicite_, formée en raison des 2 éléments en plus, par rapport aux 6 qui remplissent les pistes explicites.
 
@@ -20,13 +20,13 @@ Dans l'exemple ci-dessous, nous avons créé une _grille explicite_ de 3 colonne
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -36,7 +36,7 @@ Dans l'exemple ci-dessous, nous avons créé une _grille explicite_ de 3 colonne
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 100px 100px;
@@ -44,7 +44,7 @@ Dans l'exemple ci-dessous, nous avons créé une _grille explicite_ de 3 colonne
 ```
 
 ```html
-<div class="wrapper">
+<div class="enveloppe">
   <div>Un</div>
   <div>Deux</div>
   <div>Trois</div>
@@ -56,7 +56,7 @@ Dans l'exemple ci-dessous, nous avons créé une _grille explicite_ de 3 colonne
 </div>
 ```
 
-{{ EmbedLiveSample('Exemple', '500', '330') }}
+{{EmbedLiveSample("Exemple", 500, 330)}}
 
 ## Voir aussi
 

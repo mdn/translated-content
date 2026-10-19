@@ -2,7 +2,7 @@
 title: Flux de travail et processus
 slug: Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes
 l10n:
-  sourceCommit: 11a5944cd0a3bf015b2ee9c7ee4c55025dd878ca
+  sourceCommit: 15e1155ab8a0587405601cc4753bb789cd6ac47c
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills/Finding_a_job", "Learn_web_development/Getting_started/Soft_skills")}}
@@ -159,7 +159,7 @@ Il existe un type spécifique de méthodologie agile appelé **scrum**, qui a un
 - Le·la scrum master organise de courtes réunions quotidiennes (**stand-up meetings**) où chacun·e parle de ses avancées et des éventuels problèmes rencontrés, afin de détecter rapidement les difficultés.
 - À la fin de chaque sprint, le·la scrum master organise une réunion de rétrospective pour examiner ce qui a bien fonctionné, ce qui a moins bien fonctionné, et les leçons à tirer pour le sprint suivant.
 
-Un autre type de méthodologie agile est appelé **kanban**, qui comporte moins de règles que scrum, n'utilise pas de sprints, et met davantage l'accent sur l'amélioration continue. Kanban est particulièrement utile pour gérer des processus continus qui n'ont pas de fin clairement définie, comme les tickets de support client.
+Un autre type de méthodologie agile est appelé **kanban**, qui comporte peu de règles que scrum, n'utilise pas de sprints, et met davantage l'accent sur l'amélioration continue. Kanban est particulièrement utile pour gérer des processus continus qui n'ont pas de fin clairement définie, comme les tickets de support client.
 
 ### Tableaux kanban
 
@@ -183,7 +183,6 @@ Suivez l'avancement d'un projet complet du début à la fin&nbsp;: essayez avec 
 ## Voir aussi
 
 - [Qu'est-ce qu'une pile technologique et comment ça fonctionne&nbsp;? <sup>(angl.)</sup>](https://www.mongodb.com/resources/basics/technology-stack), mongodb.com
-- [Structure d'équipe de développement web&nbsp;: rôles et processus <sup>(angl.)</sup>](https://www.truemark.dev/blog/web-development-team-structure-role-process/), truemark.dev (2017)
 - [Agile contre Cascade <sup>(angl.)</sup>](https://www.productplan.com/learn/agile-vs-waterfall), ProductPlan
 - [Qu'est-ce que Scrum&nbsp;? <sup>(angl.)</sup>](https://www.scrum.org/learning-series/what-is-scrum/), scrum.org
 

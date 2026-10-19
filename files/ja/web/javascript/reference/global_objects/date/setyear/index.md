@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 **`setSeconds()`** は {{jsxref("Date")}} インスタンスのメソッドで、地方時に基づき、指定された日時の「年」を変更します。
 

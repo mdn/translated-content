@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Push API")}}{{Deprecated_header}}
+{{APIRef("Push API")}}
 
 **`subscriptionId`** は {{domxref("PushSubscription")}} インターフェイスの読み取り専用プロパティで、このプッシュサブスクリプションに関連するサブスクリプション ID が入った文字列を返します。
 

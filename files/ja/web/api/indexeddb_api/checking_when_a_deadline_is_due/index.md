@@ -1,8 +1,8 @@
 ---
-title: 期限の確認
+title: 締め切りの日付を調べる
 slug: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 l10n:
-  sourceCommit: fd56a549d24a8002df09735ee8319ce1a721c233
+  sourceCommit: 0118259a43f804bf9f4a68895beb03cec955c909
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}
@@ -27,7 +27,21 @@ l10n:
 
 - ToDo リストのタイトルを入力するためのテキスト入力です。これはユーザーの入力作業の中で最も避けられないものです。
 - 期限の「時」と「分」を入力するための数値入力。 `type="number"` に対応しているブラウザーでは、小さな上下矢印の数字ピッカーが表示されます。モバイルプラットフォームでは、データを入力するためのテンキーが用意されていることが多く、これは便利です。他のプラットフォームでは、標準的なテキスト入力になりますが、これは問題ありません。
-- 期限の日、月、年を入力するための {{HTMLElement("select")}} 要素。これらの値は、ユーザーにとって最も曖昧な入力となるため (7, sunday, sun? 04, 4, April, Apr? 2013, '13, 13?) 日は数値で、月は月名で、年は 4 桁の年号で記録されます。
+- 期限の日、月、年を入力するための {{HTMLElement("select")}} 要素。これらの値は、ユーザーが入力する際に最も曖昧になりやすいため (7, sunday, sun? 04, 4, April, Apr? 2013, '13, 13?)、選択肢から選んでもらうのが最善の解決策だと判断しました。これにより、モバイルユーザーにとって煩わしい入力作業も省くことができます。日はその月の数字として記録され、月は完全な月名として記録され、年は今年から始まり 12 年先までとして表示されます。
+
+アプリの初期化時に、年のドロップダウンに値を設定し、後で使用するために現在の年を格納します。
+
+```js
+const currentYear = new Date().getFullYear();
+for (let i = 0; i <= 12; i++) {
+  const option = document.createElement("option");
+  const yearValue = currentYear + i;
+  option.value = yearValue;
+  option.textContent = yearValue;
+  year.appendChild(option);
+}
+year.value = currentYear;
+```
 
 フォームの送信ボタンが押されると、 `addData()` 関数が実行され、次のように始まります。
 
@@ -109,14 +123,14 @@ function addData(e) {
     minutes.value = null;
     day.value = "01";
     month.value = "January";
-    year.value = 2020;
+    year.value = currentYear;
   };
-  // update the display of data to show the newly added item, by running displayData() again.
+  // displayData() を再度実行して、新しく追加されたアイテムをデータの表示で示します。
   displayData();
 }
 ```
 
-この次の節では、新規アイテムの追加が成功したことを伝えるログメッセージを作成し、フォームをリセットして次のタスクの入力準備を整えます。最後に `displayData()` 関数を実行して、アプリ内のデータの表示を更新し、先ほど入力された新しいタスクを表示します。
+この次の節では、新規アイテムの追加が成功したことを伝えるログメッセージを作成し、フォームをリセットして次のタスクの入力準備を整えます。なお、年フィールドは、アプリの初期化時に `currentYear` に設定されることに注意してください。最後に `displayData()` 関数を実行して、アプリ内のデータの表示を更新し、先ほど入力された新しいタスクを表示します。
 
 ### 期限に達したかどうかの確認
 
@@ -134,7 +148,7 @@ function checkDeadlines() {
 }
 ```
 
-まず、空の `Date` オブジェクトを作成して、現在の日付と時刻を取得します。`Date` オブジェクトには、内部の日付や時刻のさまざまな部分を抽出するためのメソッドがいくつかあります。ここでは、現在の分 (簡単な数値として取得)、時 (簡単な数値として取得)、日 (これは `getDate()` が必要、 `getDay()` は曜日を 1-7 で返すため)、月 (0-11 の数値を返す。下記参照)、年 (`getFullYear()` が必要、`getYear()` は非推奨であり、誰にとってもあまり役に立たない奇妙な値を返します) を読み取ります。
+まず、空の `Date` オブジェクトを作成して、現在の日付と時刻を取得します。`Date` オブジェクトには、内部の日付や時刻のさまざまな部分を抽出するためのメソッドがいくつかあります。ここでは、現在の分 (簡単な数値として取得)、時 (簡単な数値として取得)、日 (これは `getDate()` が必要、 `getDay()` は曜日を 0-6 で返すため)、月 (0-11 の数値を返す。下記参照)、年 (`getFullYear()` が必要、`getYear()` は非推奨であり、誰にとってもあまり役に立たない奇妙な値を返します) を読み取ります。
 
 ```js
 function checkDeadlines() {

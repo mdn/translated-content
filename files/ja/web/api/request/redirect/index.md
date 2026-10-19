@@ -3,7 +3,7 @@ title: "Request: redirect プロパティ"
 short-title: redirect
 slug: Web/API/Request/redirect
 l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
@@ -18,7 +18,7 @@ l10n:
 - `error`
 - `manual`
 
-リクエストの作成時に指定されなかった場合は、既定値の `follow` になります。
+リクエストの作成時に指定されなかった場合は、デフォルト値の `follow` になります。
 
 ## 例
 

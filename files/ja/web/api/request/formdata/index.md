@@ -3,7 +3,7 @@ title: "Request: formData() メソッド"
 short-title: formData()
 slug: Web/API/Request/formData
 l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+  sourceCommit: 562051c4ad20e9ecb5faf905286cdfca545a340d
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
@@ -23,6 +23,15 @@ formData()
 ### 返値
 
 {{jsxref("Promise")}} であり、 {{domxref("FormData")}} オブジェクトで解決します。
+
+### 例外
+
+- {{jsxref("TypeError")}}
+  - : 以下のいずれかの理由で発生します。
+    - リクエストの本文が[変更中またはロック済み](/ja/docs/Web/API/Fetch_API/Using_Fetch#ロックされ妨害されたストリーム)である。
+    - 本文のコンテンツをデコードする際にエラーが発生した（例えば、{{httpheader("Content-Encoding")}} ヘッダーが正しくないなど）。
+    - 本文の {{glossary("MIME")}} タイプを、リクエストに含まれる {{httpheader("Content-Type")}} ヘッダーから特定できないか、あるいはそのタイプが `application/x-www-form-urlencoded` または `multipart/form-data` ではない。
+    - 本文が `FormData` オブジェクトとして構文解析できない。
 
 ## 例
 

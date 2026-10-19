@@ -3,7 +3,7 @@ title: "HTMLScriptElement: referrerPolicy プロパティ"
 short-title: referrerPolicy
 slug: Web/API/HTMLScriptElement/referrerPolicy
 l10n:
-  sourceCommit: 8bc0a4031588e94e6b7d89ebfe45716a99f5b0c0
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
 {{APIRef("HTML DOM")}}
@@ -28,13 +28,13 @@ l10n:
 - `strict-origin`
   - : プロトコルのセキュリティレベルが変わらない場合（例: HTTPS→HTTPS）だけ、文書のオリジンをリファラーとして送信し、セキュリティレベルの低い宛先（例: HTTPS→HTTP）には送信しないようにします。
 - `strict-origin-when-cross-origin` (default)
-  - : これは、ポリシーが指定されていない場合のユーザーエージェントの既定の動作です。同一オリジンリクエストを行う場合は完全な URL を送信し、プロトコルのセキュリティレベルが変わらない場合はオリジンのみを送信し（例: HTTPS→HTTPS）、セキュリティレベルの低い宛先にはヘッダーを送信しません（例: HTTPS→HTTP）。
+  - : これは、ポリシーが指定されていない場合のユーザーエージェントのデフォルトの動作です。同一オリジンリクエストを行う場合は完全な URL を送信し、プロトコルのセキュリティレベルが変わらない場合はオリジンのみを送信し（例: HTTPS→HTTPS）、セキュリティレベルの低い宛先にはヘッダーを送信しません（例: HTTPS→HTTP）。
 - `unsafe-url`
   - : 同一オリジンまたはオリジン間リクエストを実行するときに、完全な URL を送信します。このポリシーは、 TLS で保護されたリソースから安全でないオリジンへのオリジンとパスを漏洩します。
     この設定の影響を慎重に検討してください。
 
 > [!NOTE]
-> 空文字列の値 (`""`) は既定値であると同時に、 `referrerpolicy` が対応していない場合の代替値でもあります。もし `<script>` 要素に `referrerpolicy` が明示的に指定されていない場合には、より高いレベルのリファラーポリシー、つまり文書やドメイン全体に設定されているものを採用することになります。上位のポリシーが利用できない場合、空文字列は `no-referrer-when-downgrade` と同等に扱われます。
+> 空文字列の値 (`""`) はデフォルト値であると同時に、 `referrerpolicy` が対応していない場合の代替値でもあります。もし `<script>` 要素に `referrerpolicy` が明示的に指定されていない場合には、より高いレベルのリファラーポリシー、つまり文書やドメイン全体に設定されているものを採用することになります。上位のポリシーが利用できない場合、空文字列は `no-referrer-when-downgrade` と同等に扱われます。
 
 ## 例
 

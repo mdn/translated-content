@@ -1,20 +1,20 @@
 ---
 title: "SyntaxError: missing } after property list"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Errors")}}
 
 JavaScript の例外 "missing } after property list" は、[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)の構文のどこかに間違いがあった場合に発生します。実際に中括弧がない可能性もありますが、カンマを忘れている可能性もあります。
 
-## メッセージ
+## エラーメッセージ
 
-```js
-SyntaxError: Expected '}' (Edge)
+```plain
 SyntaxError: missing } after property list (Firefox)
+SyntaxError: Unexpected identifier 'c'. Expected '}' to end an object literal. (Safari)
 ```
 
-## エラーの種類
+## エラー型
 
 {{jsxref("SyntaxError")}}
 
@@ -28,8 +28,8 @@ SyntaxError: missing } after property list (Firefox)
 
 多くの場合は、オブジェクト初期化子のコードでカンマを忘れています。
 
-```js example-bad
-var obj = {
+```js-nolint example-bad
+const obj = {
   a: 1,
   b: { myProp: 2 }
   c: 3
@@ -39,7 +39,7 @@ var obj = {
 修正すると次のようになります。
 
 ```js example-good
-var obj = {
+const obj = {
   a: 1,
   b: { myProp: 2 },
   c: 3,

@@ -54,8 +54,8 @@ El evento `load` se dispara cuando un recurso y sus recursos dependientes han te
 | ------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------- |
 | `target` {{readonlyInline}}     | `{{domxref("EventTarget")}}` | El objetivo del evento (el objetivo superior en el árbol DOM).                         |
 | `type` {{readonlyInline}}       | `{{jsxref("String")}}`       | El tipo de evento.                                                                     |
-| `bubbles` {{readonlyInline}}    | `{{domxref("Boolean")}}`     | Si el elemento normalmente se propaga (bubbles) o no.                                  |
-| `cancelable` {{readonlyInline}} | `{{domxref("Boolean")}}`     | Si el evento es cancelable o no.                                                       |
+| `bubbles` {{readonlyInline}}    | `{{jsxref("Boolean")}}`      | Si el elemento normalmente se propaga (bubbles) o no.                                  |
+| `cancelable` {{readonlyInline}} | `{{jsxref("Boolean")}}`      | Si el evento es cancelable o no.                                                       |
 | `view` {{readonlyInline}}       | `{{domxref("WindowProxy")}}` | `{{domxref("Document.defaultView", "document.defaultView")}}` (`window` del documento) |
 | `detail` {{readonlyInline}}     | `long` (`float`)             | 0.                                                                                     |
 

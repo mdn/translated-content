@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/attachShader
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.attachShader(program, shader);
 ```
 

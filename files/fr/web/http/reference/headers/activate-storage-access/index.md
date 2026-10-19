@@ -3,7 +3,7 @@ title: En-tête Activate-Storage-Access
 short-title: Activate-Storage-Access
 slug: Web/HTTP/Reference/Headers/Activate-Storage-Access
 l10n:
-  sourceCommit: 1296e665fd82a80bb17123725dcbf1f08b89ab4e
+  sourceCommit: f4c14731a1a157fc8d8f7357ac4d74d14a7d7fb5
 ---
 
 {{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Activate-Storage-Access`** permet à un serveur d'activer une autorisation accordée pour accéder à ses [cookies non partitionnés](/fr/docs/Web/API/Storage_Access_API#cookies_partitionnés_contre_non_partitionnés) lors d'une requête inter-sites.
@@ -17,7 +17,7 @@ Ils offrent une alternative efficace au fait de charger d'abord la ressource san
   <tbody>
     <tr>
       <th scope="row">Type d'en-tête</th>
-      <td>{{Glossary("Fetch Metadata Request Header", "En-tête de requête Fetch Metadata")}}</td>
+      <td>{{Glossary("Fetch Metadata Request Header", "En-tête de métadonnées de requête de récupération")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden request header", "En-tête de requête interdit")}}</th>

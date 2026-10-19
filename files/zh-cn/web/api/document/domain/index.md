@@ -3,7 +3,7 @@ title: Document.domain
 slug: Web/API/Document/domain
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 {{domxref("Document")}} 接口的 **`domain`** 属性获取/设置当前文档{{glossary("origin", "来源")}}的域名部分，常用于[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)。
 

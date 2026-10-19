@@ -9,7 +9,7 @@ slug: Web/HTTP/Reference/Status/409
 
 ## 状态
 
-```plain
+```http
 409 Conflict
 ```
 

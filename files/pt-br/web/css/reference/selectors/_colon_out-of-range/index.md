@@ -23,7 +23,11 @@ Essa pseudo classe é muito útil por dar ao usuario uma indicacão visual de qu
 
 ## Sintaxe
 
-{{csssyntax}}
+```css
+:out-of-range {
+  /* ... */
+}
+```
 
 ## Exemplo
 

@@ -16,7 +16,7 @@ _Hereda propiedades de su padre, {{domxref("Element")}}, y los implementalo de {
 - {{domxref("HTMLElement.contentEditable")}}
   - : Es un {{jsxref("String")}}, donde el valor `"true"` significa que el elemento es editable y si el valor es `"false"` significa que no lo es.
 - {{domxref("HTMLElement.isContentEditable")}} {{readonlyInline}}
-  - : Devuelve un {{domxref("Boolean")}} si el contenido del elemento puede ser editado.
+  - : Devuelve un {{jsxref("Boolean")}} si el contenido del elemento puede ser editado.
 - {{domxref("HTMLElement.contextMenu")}}
   - : Es un {{domxref("HTMLMenuElement")}} que representa el menú contextual asociado al elemento. Puede ser `null`
 - {{domxref("HTMLElement.dataset")}} {{readonlyInline}}

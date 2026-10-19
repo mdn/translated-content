@@ -1,8 +1,9 @@
 ---
-title: overflow-inline
+title: "`overflow-inline` プロパティ (CSS)"
+short-title: overflow-inline
 slug: Web/CSS/Reference/Properties/overflow-inline
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 **`overflow-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、コンテンツがボックスのインライン方向の先頭および末尾方向の端をあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、コンテンツをはみ出させる、のいずれかになります。
@@ -28,9 +29,9 @@ overflow-inline: revert-layer;
 overflow-inline: unset;
 ```
 
-`overflow-inline` プロパティは、単一の {{cSSXref("overflow_value", "&lt;overflow&gt;")}} キーワード値で指定します。
-
 ### 値
+
+`overflow-inline` プロパティは、単一の {{cSSXref("overflow_value", "&lt;overflow&gt;")}} キーワード値で指定します。
 
 - `visible`
   - : コンテンツは切り取られず、パディングボックスのインライン方向の先頭と末尾の端よりも外側に表示される可能性があります。

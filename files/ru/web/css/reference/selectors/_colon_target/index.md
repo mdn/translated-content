@@ -29,7 +29,11 @@ http://www.example.com/index.html#section2
 
 ## Синтаксис
 
-{{csssyntax}}
+```css
+:target {
+  /* ... */
+}
+```
 
 ## Примеры
 

@@ -26,7 +26,7 @@ console.log(beasts.indexOf("giraffe"));
 
 ## 語法
 
-```plain
+```js-nolint
 arr.indexOf(searchElement[, fromIndex])
 ```
 

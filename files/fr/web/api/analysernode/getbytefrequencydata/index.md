@@ -5,7 +5,7 @@ slug: Web/API/AnalyserNode/getByteFrequencyData
 
 {{ APIRef("Web Audio API") }}
 
-La méthode **`getByteFrequencyData()`** de l'objet [`AnalyserNode`](/fr/docs/Web/API/AnalyserNode) copie les données de fréquence dans le {{domxref("Uint8Array")}} passé en argument.
+La méthode **`getByteFrequencyData()`** de l'objet [`AnalyserNode`](/fr/docs/Web/API/AnalyserNode) copie les données de fréquence dans le {{jsxref("Uint8Array")}} passé en argument.
 
 Si le tableau a moins d'éléments que {{domxref("AnalyserNode.frequencyBinCount")}}, les excédants sont supprimés; s'il en a davantage, les excédants sont ignorés.
 
@@ -24,7 +24,7 @@ analyseur.getByteFrequencyData(tableauDonnees);
 
 ### Retourne
 
-Un {{domxref("Uint8Array")}}.
+Un {{jsxref("Uint8Array")}}.
 
 ## Exemple
 
@@ -71,7 +71,7 @@ dessiner();
 ## Paramètres
 
 - array
-  - : Le {{domxref("Uint8Array")}} dans lequel seront copiées les données relatives à la fréquence.
+  - : Le {{jsxref("Uint8Array")}} dans lequel seront copiées les données relatives à la fréquence.
 
 ## Spécifications
 

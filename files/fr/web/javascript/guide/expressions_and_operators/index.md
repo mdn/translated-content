@@ -3,7 +3,7 @@ title: Expressions et opérateurs
 slug: Web/JavaScript/Guide/Expressions_and_operators
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}
+{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}
 
 Dans ce chapitre, nous décrirons les expressions et opérateurs en JavaScript, qui permettent notamment l'affectation, la comparaison, les opérations arithmétiques, binaires, logiques, la manipulation de chaîne de caractères, etc.
 

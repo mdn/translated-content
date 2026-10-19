@@ -2,7 +2,7 @@
 title: Sections de syntaxe
 slug: MDN/Writing_guidelines/Page_structures/Syntax_sections
 l10n:
-  sourceCommit: c6e5080f41fc8ef79e487e01c6978069b7819423
+  sourceCommit: de1ffe9d19ce381ed182255fcc8fe0517029cfa2
 ---
 
 La section de syntaxe d'une page de référence MDN contient un encadré de syntaxe définissant la syntaxe exacte d'une fonctionnalité (par exemple, quels paramètres peut-elle accepter, lesquels sont optionnels&nbsp;?). Cet article explique comment rédiger les encadrés de syntaxe pour les articles de référence.

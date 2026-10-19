@@ -3,10 +3,10 @@ title: Propriété CSS `column-rule`
 short-title: column-rule
 slug: Web/CSS/Reference/Properties/column-rule
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 04dfe418f2942ae739d41592c22fafa3679fc03c
 ---
 
-La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) `column-rule` définit la largeur, le style et la couleur des lignes tracées entre les colonnes des dispositions en grille, flexible et multi-colonnes.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) `column-rule` définit la largeur, le style et la couleur des lignes tracées entre les colonnes des dispositions en grille, flexible et à plusieurs colonnes.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: column-rule")}}
 
@@ -116,7 +116,7 @@ Cette propriété est définie sous la forme d'une liste de valeurs séparées p
 
 ## Description
 
-La propriété `column-rule` définit le style de ligne de toutes les lignes de règle tracées dans les espaces entre les colonnes dans les conteneurs [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grille](/fr/docs/Web/CSS/Guides/Grid_layout) comportant plus d'une colonne.
+La propriété `column-rule` définit le style de ligne de toutes les lignes de règle tracées dans les espaces entre les colonnes dans les conteneurs [à plusieurs colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grille](/fr/docs/Web/CSS/Guides/Grid_layout) comportant plus d'une colonne.
 
 La propriété `column-rule` est un raccourci pour {{CSSxRef("column-rule-color")}}, {{CSSxRef("column-rule-style")}} et {{CSSxRef("column-rule-width")}}. La propriété `column-rule`, ainsi que la propriété raccourcie {{CSSxRef("row-rule")}}, peuvent également être définies à l'aide de la propriété raccourcie {{CSSxRef("rule")}}.
 
@@ -160,7 +160,7 @@ Si le nombre d'espaces entre les colonnes est supérieur au nombre de styles, la
 
 ### Répéter automatiquement les styles de ligne
 
-La fonction `repeat()` accepte également `auto` comme premier argument au lieu d'un entier positif. Avec `auto` comme premier argument, les valeurs [`<gap-rule>`](#gap-rule) passées comme arguments suivants sont répétées autant de fois que nécessaire pour remplir les valeurs de toutes les règles qui ne sont pas explicitement spécifiées par d'autres composants de la valeur de la propriété.
+La fonction `repeat()` accepte également `auto` comme premier argument au lieu d'un entier positif. Avec `auto` comme premier argument, les valeurs [`<gap-rule>`](#gap-rule) passées comme arguments suivants sont répétées autant de fois que nécessaire pour remplir les valeurs de toutes les règles qui ne sont pas explicitement définies par d'autres composants de la valeur de la propriété.
 
 ```css
 column-rule:
@@ -185,7 +185,7 @@ Le mot-clé `auto` au sein de la fonction `repeat()` crée un répéteur automat
 
 ### Exemple simple
 
-Dans cet exemple, nous définissons une seule règle pour les lignes tracées entre les éléments flex.
+Dans cet exemple, nous définissons une seule règle pour les lignes tracées entre les éléments flexibles.
 
 #### HTML
 
@@ -276,7 +276,7 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("auto", "", "180")}}
+{{EmbedLiveSample("auto", "", 180)}}
 
 ```css hidden live-sample___basic live-sample___repeat live-sample___func live-sample___auto
 @layer no-support {
@@ -307,4 +307,5 @@ ul {
 - La propriété {{CSSxRef("column-rule-style")}}
 - La propriété raccourcie {{CSSxRef("row-rule")}}
 - La propriété raccourcie {{CSSxRef("rule")}}
+- [Définir les espaces CSS](/fr/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - Le module [d'espacement CSS](/fr/docs/Web/CSS/Guides/Gaps)

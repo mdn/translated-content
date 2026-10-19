@@ -3,7 +3,7 @@ title: "Navigator: свойство plugins"
 slug: Web/API/Navigator/plugins
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 Возвращает объект {{domxref("PluginArray")}}, список плагинов установленных в приложении.
 

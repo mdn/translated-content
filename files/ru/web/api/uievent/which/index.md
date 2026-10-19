@@ -5,7 +5,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}
 
 Доступное только для чтение свойство **`UIEvent.which`** интерфейса {{domxref("UIEvent")}} возвращает число, указывающее на то, какая клавиша мыши была нажата или числовой код (`keyCode`) или код символа (`charCode`) нажатой клавиши на клавиатуре.
 

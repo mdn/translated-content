@@ -90,8 +90,6 @@ Le premier paquet de réponse sera de 14 Kb. Cela fait partie de {{glossary('TCP
 
 Avec un {{glossary('TCP slow start')}}, après la réception du paquet initial, le serveur double la taille du paquet suivant, pour atteindre environ 28 Kb. La taille des paquets suivants augmente jusqu'à atteindre un seuil prédéterminé ou jusqu'à ce qu'un encombrement se produise.
 
-![](congestioncontrol.jpg)
-
 Si vous avez déjà entendu parler de la règle de 14 Kb pour le chargement de page initial, c'est le démarrage lent de TCP qui explique pourquoi la réponse initiale est de 14 Ko et pourquoi l'optimisation des performances Web appelle à l'optimisation de la focalisation avec cette réponse initiale à l'esprit. Le démarrage lent TCP augmente progressivement les vitesses de transmission en fonction des capacités du réseau afin d'éviter les encombrements.
 
 ### Contrôle congestion
@@ -147,7 +145,7 @@ La construction du CSSOM est très, très rapide et n'est pas affiché dans une 
 
 #### Compilation JavaScript
 
-Lors de l'analyse du CSS et de la création du CSSOM, d'autres ressources, notamment des fichiers JavaScript, sont en cours de téléchargement (grâce au scanner de préchargement). JavaScript est interprété, compilé, analysé et exécuté. Les scripts sont analysés dans des arbres à syntaxe abstraite. Certains moteurs de navigateur utilisent le {{glossary('Abstract Syntax Tree','Arbre de syntaxe abstraite')}} et le transmettent à un interpréteur, générant le code binaire exécuté sur le thread principal. Ceci est connu sous le nom de compilation JavaScript.
+Lors de l'analyse du CSS et de la création du CSSOM, d'autres ressources, notamment des fichiers JavaScript, sont en cours de téléchargement (grâce au scanner de préchargement). JavaScript est interprété, compilé, analysé et exécuté. Les scripts sont analysés dans des arbres à syntaxe abstraite. Certains moteurs de navigateur utilisent [l'arbre de syntaxe abstraite <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Abstract_Syntax_Tree) et le transmettent à un interpréteur, générant le code binaire exécuté sur le thread principal. Ceci est connu sous le nom de compilation JavaScript.
 
 #### Construire l'arbre d'accessibilité
 

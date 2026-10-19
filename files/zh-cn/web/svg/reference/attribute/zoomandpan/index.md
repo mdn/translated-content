@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a9063bb88f28dc2a9b32e39f060ab6930663da52
 ---
 
-{{Deprecated_Header}}
-
 **`zoomAndPan`** 属性指定 SVG 文档是否可以被放大和平移。
 
 此语境中的放大是指对最外层 SVG 文档片段施加附加的缩放与平移变换所产生的效果。

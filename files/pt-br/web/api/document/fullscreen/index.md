@@ -3,7 +3,7 @@ title: Document.fullscreen
 slug: Web/API/Document/fullscreen
 ---
 
-{{APIRef("Fullscreen API")}}{{Deprecated_Header}}
+{{APIRef("Fullscreen API")}}
 
 A propriedade de somente leitura da interface **`fullscreen`** retorna se o documento correspondente está mostrando conteúdo em modo de tela cheia (full-screen).
 

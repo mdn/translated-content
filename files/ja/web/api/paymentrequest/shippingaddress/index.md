@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0ee5b41dca22ac5c3cd7f2c6523f76125c2526e9
 ---
 
-{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+{{securecontext_header}}{{APIRef("Payment Request API")}}{{Non-standard_header}}
 
 **`shippingAddress`** は {{domxref('PaymentRequest')}} インターフェイスの読み取り専用プロパティで、ユーザーから指定された配送先住所を返します。既定値は `null` です。
 

@@ -29,7 +29,7 @@ Range: <unit>=-<suffix-length>
 
 ## 示例
 
-```plain
+```http
 Range: bytes=200-1000, 2000-6576, 19000-
 ```
 

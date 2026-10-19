@@ -7,7 +7,7 @@ slug: Web/HTTP/Reference/Status/451
 
 ## 状态
 
-```plain
+```http
 451 Unavailable For Legal Reasons
 ```
 
@@ -17,7 +17,7 @@ slug: Web/HTTP/Reference/Status/451
 
 注意 {{HTTPHeader("Link")}} 首部中可能会包含一个 `rel="blocked-by"` 字段，用于标明为该资源无法提供负责的主体，例如颁布法令将资源删除的个人或组织的名称。
 
-```plain
+```http
 HTTP/1.1 451 Unavailable For Legal Reasons
 Link: <https://spqr.example.org/legislatione>; rel="blocked-by"
 Content-Type: text/html

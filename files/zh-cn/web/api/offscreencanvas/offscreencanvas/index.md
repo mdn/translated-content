@@ -9,7 +9,7 @@ slug: Web/API/OffscreenCanvas/OffscreenCanvas
 
 ## 语法
 
-```plain
+```js-nolint
 new OffscreenCanvas(width, height);
 ```
 

@@ -11,7 +11,7 @@ Las Cabeceras pueden ser agrupadas de acuerdo a sus contextos:
 - {{Glossary("Cabecera general")}}: Cabeceras que se aplican tanto a las peticiones como a las respuestas, pero sin relación con los datos que finalmente se transmiten en el cuerpo.
 - {{Glossary("Cabecera de consulta")}}: Cabeceras que contienen más información sobre el contenido que va a obtenerse o sobre el cliente.
 - {{Glossary("Cabecera de respuesta")}}: Cabeceras que contienen más información sobre el contenido, como su origen o el servidor (nombre, versión, etc.).
-- {{Glossary("Cabecera de entidad")}}: Cabeceras que contienen más información sobre el cuerpo de la entidad, como el tamaño del contenido o su tipo MIME.
+- {{Glossary("Entity_header", "Cabecera de entidad")}}: Cabeceras que contienen más información sobre el cuerpo de la entidad, como el tamaño del contenido o su tipo MIME.
 
 Las cabeceras también pueden clasificarse de acuerdo a cómo se comportan frente a ellas los proxies:
 

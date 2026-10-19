@@ -18,7 +18,7 @@ Conçu au début des années 1990, HTTP est un protocole extensible qui a évolu
 
 HTTP est un protocole client-serveur : les requêtes sont envoyées par une entité : l'agent utilisateur (ou le proxy qui agit au nom de celui-ci). La majorité du temps, l'agent utilisateur est un navigateur web, mais cela peut-être n'importe quoi, un robot qui analyse le Web pour remplir et maintenir l'index d'un moteur de recherche est un exemple d'agent utilisateur.
 
-Chaque requête individuelle est envoyée au serveur, qui la traite et fournit une _réponse_. Entre cette requête et la réponse se trouve de nombreuses entités qu'on désignera de façon générique sous le terme {{glossary("Proxy", "proxies")}}. Celles-ci exécutent différentes opérations et agissent comme passerelles ou comme {{glossary("Cache", "caches")}} par exemple.
+Chaque requête individuelle est envoyée au serveur, qui la traite et fournit une _réponse_. Entre cette requête et la réponse se trouve de nombreuses entités qu'on désignera de façon générique sous le terme {{glossary("Proxy_server", "proxies")}}. Celles-ci exécutent différentes opérations et agissent comme passerelles ou comme {{glossary("Cache", "caches")}} par exemple.
 
 ![chaîne client serveur](https://mdn.github.io/shared-assets/images/diagrams/http/overview/client-server-chain.svg)
 
@@ -138,7 +138,7 @@ Un exemple de requête HTTP :
 Une requête comprend les éléments suivants :
 
 - Une [méthode](/fr/docs/Web/HTTP/Reference/Methods) HTTP : généralement un verbe tel que {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} ou un nom comme {{HTTPMethod("OPTIONS")}} ou {{HTTPMethod("HEAD")}} qui définit l'opération que le client souhaite effectuer. Par exemple, un client souhaite accéder à une ressource (en utilisant GET) ou téléverser le résultat d'un [formulaire HTML](/fr/docs/Learn_web_development/Extensions/Forms) (en utilisant `POST`), bien que d'autres opérations puissent être nécessaires dans d'autres cas.
-- Le chemin de la ressource à extraire : l'URL de la ressource à laquelle on a retiré les éléments déductibles du contexte, par exemple le {{glossary ("protocole")}} (http\://), le {{glossary ("domaine")}} (ici .mozilla.org), ou le {{glossary ("port")}} TCP (ici 80).
+- Le chemin de la ressource à extraire : l'URL de la ressource à laquelle on a retiré les éléments déductibles du contexte, par exemple le {{glossary("protocol", "protocole")}} (http\://), le {{glossary("domain", "domaine")}} (ici .mozilla.org), ou le {{glossary("port")}} TCP (ici 80).
 - La version du protocole HTTP.
 - Les [en-têtes](/fr/docs/Web/HTTP/Reference/Headers) optionnels qui transmettent des informations supplémentaires pour les serveurs.
 - Ou un corps, pour certaines méthodes comme POST, semblable à ceux dans les réponses, qui contiennent la ressource envoyée.
@@ -159,9 +159,9 @@ Une réponse comprend les éléments suivants:
 
 ## Les APIs basées sur HTTP
 
-L'API la plus utilisée se basant sur HTTP est l'API {{domxref("XMLHttpRequest")}} qui permet d'échanger des données entre un agent utilisateur {{Glossary("user agent")}} et un serveur.
+L'API la plus utilisée se basant sur HTTP est l'API {{domxref("XMLHttpRequest")}} qui permet d'échanger des données entre un {{Glossary("user agent", "agent utilisateur")}} et un serveur.
 
-Une autre API, [server-sent events](/fr/docs/Web/API/Server-sent_events), est un service unidirectionnel permettant à un serveur d'envoyer des notifications au client, en se basant sur le protocole HTTP. À l'aide de l'utilisation de l'interface {{domxref("EventSource")}}, le client ouvre une connexion et initie un gestionnaire d'évènements. Le navigateur convertit alors automatiquement les messages du flux HTTP en objets de type {{domxref("Event")}}, pour ensuite les déléguer au gestionnaire d'évènements qui se sont abonnés à ce {{domxref("Event.type", "type")}} d'évènement. Dans le cas où le type est inconnu ou si aucun gestionnaire typé n'a été défini, ils sont délivrés au gestionnaire d'évènements {{domxref("EventSource.onmessage", "onmessage")}}.
+Une autre API, [server-sent events](/fr/docs/Web/API/Server-sent_events), est un service unidirectionnel permettant à un serveur d'envoyer des notifications au client, en se basant sur le protocole HTTP. À l'aide de l'utilisation de l'interface {{domxref("EventSource")}}, le client ouvre une connexion et initie un gestionnaire d'évènements. Le navigateur convertit alors automatiquement les messages du flux HTTP en objets de type {{domxref("Event")}}, pour ensuite les déléguer au gestionnaire d'évènements qui se sont abonnés à ce {{domxref("Event.type", "type")}} d'évènement. Dans le cas où le type est inconnu ou si aucun gestionnaire typé n'a été défini, ils sont délivrés au gestionnaire d'évènements {{domxref("EventSource.message_event", "onmessage")}}.
 
 ## Conclusion
 

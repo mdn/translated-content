@@ -31,11 +31,11 @@ S'il n'y a pas de priorité définie pour les deux premières valeurs, l'ordre d
 text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
 ```
 
-| Valeur      | Priorité                       |
-| ----------- | ------------------------------ |
-| `text/html` | `0.8` (totalement spécifié)    |
-| `text/*`    | `0.8` (partiellement spécifié) |
-| `*/*`       | `0.8` (non spécifié)           |
+| Valeur      | Priorité                     |
+| ----------- | ---------------------------- |
+| `text/html` | `0.8` (totalement défini)    |
+| `text/*`    | `0.8` (partiellement défini) |
+| `*/*`       | `0.8` (pas défini)           |
 
 Quelques syntaxes, comme celle de {{HTTPHeader("Accept")}}, autorisent des spécificateurs supplémentaires comme `text/html;level=1`. Ceux-ci augmentent la spécificité de la valeur. Leur utilisation est extrêmement rare.
 

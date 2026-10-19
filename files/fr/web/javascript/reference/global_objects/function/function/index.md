@@ -3,7 +3,7 @@ title: Constructeur Function()
 short-title: Function()
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
 l10n:
-  sourceCommit: fefa80c1e817377a0bbaf6a636ce6b8797f38fbb
+  sourceCommit: 051d02b402b7f76c2078b12283aa18318c34c38b
 ---
 
 > [!WARNING]

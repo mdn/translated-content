@@ -61,23 +61,23 @@ slug: Web/API/URL
 
 如果`url`参数是相对 URL，则构造函数将使用`url`参数和可选的`base`参数作为基础。
 
-```plain
-const url = new URL('../cats', 'http://www.example.com/dogs');
+```js
+const url = new URL("../cats", "http://www.example.com/dogs");
 console.log(url.hostname); // "www.example.com"
 console.log(url.pathname); // "/cats"
 ```
 
 可以设置 URL 属性以构造 URL：
 
-```plain
-url.hash = 'tabby';
+```js
+url.hash = "tabby";
 console.log(url.href); // "http://www.example.com/cats#tabby"
 ```
 
 URL 根据 {{RFC(3986)}}中的规则进行编码。例如：
 
-```plain
-url.pathname = 'démonstration.html';
+```js
+url.pathname = "démonstration.html";
 console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
 ```
 
@@ -85,7 +85,7 @@ console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
 
 要从当前窗口的 URL 获取搜索参数，可以执行以下操作：
 
-```plain
+```js
 // https://some.site/?id=123
 const parsedUrl = new URL(window.location.href);
 console.log(parsedUrl.searchParams.get("id")); // "123"
@@ -93,8 +93,10 @@ console.log(parsedUrl.searchParams.get("id")); // "123"
 
 URL 的{{domxref("URL.toString", "toString()")}}方法仅返回{{domxref("URL.href", "href")}} 属性的值，因此构造函数可以 用于直接对 URL 进行规范化和编码。
 
-```plain
-const response = await fetch(new URL('http://www.example.com/démonstration.html'));
+```js
+const response = await fetch(
+  new URL("http://www.example.com/démonstration.html"),
+);
 ```
 
 ## 规范

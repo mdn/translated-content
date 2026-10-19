@@ -20,7 +20,7 @@ var tampon = tableauDonnees.getChannelData(canal);
 
 ### Valeur
 
-Un {{domxref("Float32Array")}}.
+Un {{jsxref("Float32Array")}}.
 
 ## Exemple
 

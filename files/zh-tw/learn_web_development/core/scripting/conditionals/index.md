@@ -290,7 +290,7 @@ if (x === 5 || x === 7 || x === 10 || x === 20) {
 
 [`switch` statements](/zh-TW/docs/Web/JavaScript/Reference/Statements/switch) are your friend here — they take a single expression/value as an input, and then look through a number of choices until they find one that matches that value, executing the corresponding code that goes along with it. Here's some more pseudocode, to give you an idea:
 
-```plain
+```js
 switch (expression) {
   case choice1:
     run this code
@@ -378,7 +378,7 @@ function setWeather() {
 
 There is one final bit of syntax we want to introduce you to, before we get you to play with some examples. The [ternary or conditional operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_operator) is a small bit of syntax that tests a condition and returns one value/expression if it is `true`, and another if it is `false` — this can be useful in some situations, and can take up a lot less code than an `if...else` block if you simply have two choices that are chosen between via a `true`/`false` condition. The pseudocode looks like this:
 
-```plain
+```js-nolint
 ( condition ) ? run this code : run this code instead
 ```
 

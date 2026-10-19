@@ -4,8 +4,6 @@ slug: Web/JavaScript/Guide/Memory_management
 original_slug: Web/JavaScript/Memory_management
 ---
 
-{{JsSidebar("Advanced")}}
-
 Les langages de bas niveau, tels que C, possèdent des primitives permettant de gérer la mémoire : [`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) et [`free()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions) par exemple. En revanche, lorsqu'on utilise JavaScript, la mémoire est allouée lors de la création des objets puis libérée « automatiquement » lorsque ceux-ci ne sont plus utilisés. Cette libération automatique est appelée _garbage collection_ en anglais ou ramasse-miettes. Le fait que ce processus soit automatique est souvent source de confusion et donne parfois l'impression que JavaScript (ou d'autres langages de haut niveau) ne permet pas de gérer la mémoire : nous allons voir que ce n'est pas le cas.
 
 ## Le cycle de vie de la mémoire

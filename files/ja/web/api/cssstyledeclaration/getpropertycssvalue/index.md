@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
-{{ APIRef("CSSOM") }} {{deprecated_header}}
+{{ APIRef("CSSOM") }}
 
 **CSSStyleDeclaration.getPropertyCSSValue()** メソッドインターフェイスは、プロパティの CSS 値を含む {{domxref('CSSValue')}} を返します。プロパティ名が一括指定プロパティの場合は `null` を返すことに注意して下さい。
 

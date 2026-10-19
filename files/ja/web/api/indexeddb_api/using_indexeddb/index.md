@@ -2,7 +2,7 @@
 title: IndexedDB の使用
 slug: Web/API/IndexedDB_API/Using_IndexedDB
 l10n:
-  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
+  sourceCommit: f5ea8950d5cc7bc42691e0bb8a3e634160814bac
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}
@@ -45,8 +45,9 @@ const request = window.indexedDB.open("MyTestDatabase", 3);
 open メソッドの第 2 引数は、データベースのバージョンです。データベースのバージョンは、データベースのスキーマ、すなわちデータベース内のオブジェクトストアとその構造を決定します。データベースが存在しない場合に `open` 操作でデータベースが作成されると、`onupgradeneeded` イベントが発生し、そのイベントハンドラーでデータベースのスキーマを作成することができます。データベースが存在する場合に従来より高いバージョン番号を指定すると、すぐに `onupgradeneeded` イベントが発生して、そのイベントハンドラーで更新されたスキーマを提供することができます。詳しくは、後ほど[データベースのバージョンの作成と更新](#データベースのバージョンの作成と更新)で説明します。また、 {{ domxref("IDBFactory.open") }} のリファレンスページもご覧ください。
 
 > [!WARNING]
-> バージョン番号は `unsigned long long` 型の数値であり、とても大きい整数にすることができます。また浮動小数点数値は使用できず、使用した場合は `upgradeneeded` イベントが発生せず、もっとも近い小さな数値に変換されてトランザクションが始まるでしょう。よって、例えばバージョン番号として 2.4 を使用しないでください。
-> `const request = indexedDB.open("MyTestDatabase", 2.4); // 行ってはいけません。バージョンは 2 に丸められます`
+> バージョン番号は整数であるため、渡される値は丸め処理の対象となります。例えば、2.1 や 2.4 といった値は、どちらも 2 に丸められます。
+> 丸め処理の結果、同じ整数になる数値間のアップグレードを試みても、`onupgradeneeded` イベントは発生しません。
+> 大きなバージョン番号を扱う際は、JavaScript で表現可能な[整数の範囲](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値のエンコーディング)にもご注意ください。
 
 #### ハンドラーの生成
 
@@ -481,6 +482,25 @@ index.openKeyCursor().onsuccess = (event) => {
     console.log(`Name: ${cursor.key}, SSN: ${cursor.primaryKey}`);
     cursor.continue();
   }
+};
+```
+
+インデックスは複数のプロパティに対して作成することも可能で、これにより、名前とメールアドレスの両方を指定して人物を検索するなど、複数の値の組み合わせを使ってレコードを検索できます。複合インデックスを作成するには、`createIndex` を呼び出す際に、プロパティ名の配列をキーパスとして渡します。その後、同じ順序で値の配列を渡すことで、インデックスに対してクエリーを実行できます。
+
+まず、`request.onupgradeneeded` 内でインデックスを作成したことを確認してください。
+
+```js
+const index = objectStore.createIndex("name_email", ["name", "email"]);
+```
+
+その後、次のようにインデックスをクエリーできます。
+
+```js
+const index = objectStore.index("name_email");
+
+index.get(["Donna", "donna@home.org"]).onsuccess = (event) => {
+  console.log(event.target.result);
+  // {ssn: '555-55-5555', name: 'Donna', age: 32, email: 'donna@home.org'}
 };
 ```
 

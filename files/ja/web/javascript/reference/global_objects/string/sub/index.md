@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{Deprecated_Header}}
-
 **`sub()`** は {{jsxref("String")}} 値のメソッドで、文字列を {{HTMLElement("sub")}} 要素に埋め込んだ文字列 (`<sub>str</sub>`) を生成し、文字列が下付き文字として表示されるようにします。
 
 > [!NOTE]

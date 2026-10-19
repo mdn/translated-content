@@ -13,7 +13,7 @@ slug: Web/HTTP/Reference/Headers/Clear-Site-Data
 
 `Clear-Site-Data` 可以接受一个或多个参数，如果想要清除所有类型的数据，可以使用通配符 (`"*"`)
 
-```plain
+```http
 // 单个参数
 Clear-Site-Data: "cache"
 
@@ -52,7 +52,7 @@ Clear-Site-Data: "*"
 
 如果用户退出你的网站或服务，你可能希望删除本地存储的数据。你可以通过在 `https://example.com/logout` 的响应头增加 Clear-Site-Data，以达到目的：
 
-```plain
+```http
 Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"
 ```
 
@@ -60,7 +60,7 @@ Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"
 
 如果它在 `https://example.com/clear-cookies` 的响应头中出现，则同一域 `https://example.com` 和所有子域（如 `https://stage.example.com` 等）中的所有 Cookie，将都被清除。
 
-```plain
+```http
 Clear-Site-Data: "cookies"
 ```
 

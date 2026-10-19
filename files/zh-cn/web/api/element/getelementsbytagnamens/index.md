@@ -9,7 +9,7 @@ slug: Web/API/Element/getElementsByTagNameNS
 
 ## 语法
 
-```plain
+```js-nolint
 elements = element.getElementsByTagNameNS(namespaceURI, localName)
 ```
 

@@ -25,7 +25,7 @@ var myRequest = new Request(input[, init]);
 - _init_ {{optional_inline}}
   - : Um objeto de opções contendo quaisquer configurações personalizadas que você deseja aplicar à solicitação. As opções possíveis são:
     - `method`: O método de request, ex: `GET`, `POST`.
-    - `headers`: Quaisquer cabeçalhos que você deseja adicionar à sua solicitação, contidos em um objeto {{domxref("Headers")}} ou em um objeto literal com valores de {{domxref("ByteString")}}.
+    - `headers`: Quaisquer cabeçalhos que você deseja adicionar à sua solicitação, contidos em um objeto {{domxref("Headers")}} ou em um objeto literal com valores de {{jsxref("String")}}.
     - `body`: Qualquer corpo que você deseja adicionar à sua solicitação: isso pode ser um {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{jsxref("String")}}, ou objeto {{domxref("ReadableStream")}}. Observe que uma solicitação usando o método GET ou HEAD não pode ter um corpo.
     - `mode`: O modo que você deseja usar para a solicitação, por exemplo: `cors`, `no-cors`, `same-origin`, or `navigate`. O padrão é `cors`. No Chrome o padrão é `no-cors` antes do Chrome 47 e `same-origin` do Chrome 47 em diante.
     - `credentials`: As credenciais de solicitação que você deseja usar para a solicitação: `omit`, `same-origin`, ou `include`. O padrão é `omit`. No Chrome o padrão é `same-origin` antes do Chrome 47 e `include` do Chrome 47 em diante.

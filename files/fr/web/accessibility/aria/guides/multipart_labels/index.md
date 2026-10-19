@@ -14,7 +14,7 @@ Si vous utilisez un lecteur d'écran, avez-vous remarqué que, dans Firefox, ce 
 
 La solution réside dans l'attribut ARIA `aria-labelledby`. Sa valeur est une chaîne de caractères composée des identifiants des éléments HTML à concaténer pour former un nom accessible unique.
 
-`aria-labelledby` et `aria-describedby` sont tous deux spécifiés sur l'élément de formulaire à étiqueter (par exemple un `<input>`). Dans les deux cas, les associations label/for éventuellement présentes sont remplacées par `aria-labelledby`. Si vous fournissez `aria-labelledby` dans une page HTML, ajoutez aussi un label/for pour la compatibilité avec les anciens navigateurs ne prenant pas encore ARIA en charge. Avec Firefox 3, les utilisateur·ice·s malvoyant·e·s bénéficient automatiquement d'une meilleure accessibilité, mais les utilisateur·ice·s de navigateurs plus anciens ne sont pas pénalisé·e·s.
+`aria-labelledby` et `aria-describedby` sont tous deux définis sur l'élément de formulaire à étiqueter (par exemple un `<input>`). Dans les deux cas, les associations label/for éventuellement présentes sont remplacées par `aria-labelledby`. Si vous fournissez `aria-labelledby` dans une page HTML, ajoutez aussi un label/for pour la compatibilité avec les anciens navigateurs ne prenant pas encore ARIA en charge. Avec Firefox 3, les utilisateur·ice·s malvoyant·e·s bénéficient automatiquement d'une meilleure accessibilité, mais les utilisateur·ice·s de navigateurs plus anciens ne sont pas pénalisé·e·s.
 
 ### Exemple
 

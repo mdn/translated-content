@@ -4,8 +4,6 @@ slug: Web/XML/XSLT/Reference/Element/apply-templates
 original_slug: Web/XSLT/Element/apply-templates
 ---
 
-{{XsltSidebar}}
-
 L'élément `<xsl:apply-templates>` sélectionne un ensemble de nœuds dans l'arbre d'entrée et demande au processeur de leur appliquer les modèles appropriés.
 
 ### Syntaxe

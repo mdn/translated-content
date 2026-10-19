@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{Deprecated_Header}}
-
 > [!NOTE]
 > `compile()` メソッドは互換性のためにのみ定義されています。`compile()` を使用すると、それまで不変であった正規表現のソースとフラグが変更可能なものとなり、ユーザーの期待を裏切る可能性があります。代わりに [`RegExp()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) コンストラクターを使用して新しい正規表現オブジェクトを構築してください。
 

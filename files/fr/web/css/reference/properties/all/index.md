@@ -3,7 +3,7 @@ title: Propriété CSS `all`
 short-title: all
 slug: Web/CSS/Reference/Properties/all
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 8a13259a44523cd17b4fe347088b62c6d7a35265
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`all`** permet de réinitialiser toutes les propriétés d'un élément, à l'exception de {{CSSxRef("unicode-bidi")}}, {{CSSxRef("direction")}} et des [propriétés personnalisées](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), avec leurs valeurs initiales, héritées ou qui proviennent d'une autre couche de la cascade voire d'une autre feuille de style.

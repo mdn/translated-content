@@ -3,8 +3,6 @@ title: String.prototype.anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
 ---
 
-{{deprecated_header}}
-
 {{jsxref("String")}} 值的 **`anchor()`** 方法创建一个带有名称的 {{HTMLElement("a")}} 元素字符串，其中嵌入了调用的字符串（`<a name="...">str</a>`）。
 
 > [!NOTE]

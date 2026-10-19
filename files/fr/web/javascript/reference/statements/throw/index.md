@@ -3,8 +3,6 @@ title: throw
 slug: Web/JavaScript/Reference/Statements/throw
 ---
 
-{{jsSidebar("Statements")}}
-
 L'instruction **`throw`** permet de lever une exception définie par l'utilisateur. L'exécution de la fonction courante sera stoppée (les instructions situées après l'instruction `throw` ne seront pas exécutées) et le contrôle sera passé au premier bloc {{jsxref("Statements/try...catch","catch")}} de la pile d'appels. Si aucun bloc `catch` ne se trouve dans les fonctions de la pile d'appels, le programme sera terminé.
 
 {{InteractiveExample("JavaScript Demo: Statement - Throw")}}

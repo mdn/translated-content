@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}
 
 **`merchantvalidation`** イベントは[決済リクエスト API](/ja/docs/Web/API/Payment_Request_API) によって、決済ハンドラーが、購入をリクエストされた販売者が、決済ハンドラーを使用することが許可されていることを確認することを要求する場合に {{domxref("PaymentRequest")}} オブジェクトへ配信されます。
 

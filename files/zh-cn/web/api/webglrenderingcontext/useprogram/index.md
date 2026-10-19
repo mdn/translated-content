@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/useProgram
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.useProgram(program);
 ```
 

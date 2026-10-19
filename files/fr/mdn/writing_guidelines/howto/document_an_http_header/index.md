@@ -3,7 +3,7 @@ title: Comment documenter un en-tête HTTP
 short-title: Documenter un en-tête HTTP
 slug: MDN/Writing_guidelines/Howto/Document_an_HTTP_header
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 La [page de référence des en-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers) documente la section des en-têtes des messages de requête et de réponse dans le protocole de transfert hypertexte ([HTTP](/fr/docs/Web/HTTP)).
@@ -15,7 +15,7 @@ Cet article explique comment créer une nouvelle page de référence pour un en-
 ## Étape 1 - Déterminer l'en-tête HTTP à documenter
 
 - De nombreux en-têtes HTTP sont définis dans diverses normes de l'IETF.
-- L'IANA tient un [registre des champs d'en-tête HTTP <sup>(angl.)</sup>](https://www.iana.org/assignments/http-fields/http-fields.xhtml) et Wikipédia répertorie [les champs d'en-tête connus <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields), mais tous ne sont pas pertinents pour les développeuses et développeurs web ou ne font pas partie d'une norme officielle.
+- L'IANA tient un [registre des champs d'en-tête HTTP <sup>(angl.)</sup>](https://www.iana.org/assignments/http-fields) et Wikipédia répertorie [les champs d'en-tête connus <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields), mais tous ne sont pas pertinents pour les développeur·euse·s web ou ne font pas partie d'une norme officielle.
 - S'il existe des **liens rouges** sur la page de [référence des en-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers), ces en-têtes sont un bon choix à documenter.
 - En cas de doute, [demandez à l'équipe de MDN Web Docs](/fr/docs/MDN/Community/Communication_channels) s'il est judicieux d'écrire sur l'en-tête que vous avez choisi.
 
@@ -46,7 +46,7 @@ Cet article explique comment créer une nouvelle page de référence pour un en-
 
 ## Étape 5 - Ajouter des informations sur la compatibilité des navigateurs
 
-- Si vous avez consulté d'autres pages d'en-tête HTTP, vous verrez qu'il existe une macro `\{{Compat}}` qui remplit une table du navigateur pour vous.
+- Si vous avez consulté d'autres pages d'en-tête HTTP, vous voyez qu'il existe une macro `\{{Compat}}` qui remplit une table du navigateur pour vous.
 - La page du tableau de compatibilité est générée à partir de données structurées. Si vous souhaitez contribuer à ces données, veuillez consulter les instructions à l'adresse <https://github.com/mdn/browser-compat-data/blob/main/README.md> et nous envoyer une <i lang="en">pull request</i>.
 
 ## Étape 6 - Mise à jour de la liste des en-têtes HTTP
@@ -55,4 +55,4 @@ Assurez-vous que votre en-tête est répertorié dans une catégorie appropriée
 
 ## Étape 7 - Révision du contenu
 
-Après avoir créé la page d'en-tête, soumettez-la en tant que <i lang="en">pull request</i>. Un membre de notre équipe de révision sera automatiquement désigné pour réviser votre page.
+Après avoir créé la page d'en-tête, soumettez-la en tant que <i lang="en">pull request</i>. Un membre de notre équipe de révision est automatiquement désigné pour réviser votre page.

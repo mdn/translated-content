@@ -22,7 +22,7 @@ console.log(elements.join("-"));
 
 ## 語法
 
-```plain
+```js-nolint
 arr.join([separator])
 ```
 

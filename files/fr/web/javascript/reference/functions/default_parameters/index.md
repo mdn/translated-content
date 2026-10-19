@@ -3,8 +3,6 @@ title: Valeurs par défaut des arguments
 slug: Web/JavaScript/Reference/Functions/Default_parameters
 ---
 
-{{jsSidebar("Functions")}}
-
 Cette syntaxe permet d'initialiser des paramètres lors de l'appel de la fonction si aucune valeur n'est passée ou si c'est la valeur {{jsxref("undefined")}} qui est passée.
 
 {{InteractiveExample("JavaScript Demo: Functions Default")}}

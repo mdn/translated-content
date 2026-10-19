@@ -8,7 +8,7 @@ l10n:
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<position-area>`** définit la cellule ou les cellules étendues d'une **grille de zones de position** (<i lang="en">position-area grid</i>), une grille 3×3 dont la cellule centrale est un élément ancre.
 
-Les valeurs du mot-clé `<position-area>` peuvent être définies comme valeur de la propriété {{CSSxRef("position-area")}} pour placer un élément positionné par ancre à un emplacement spécifique par rapport à son élément d'ancrage associé.
+Les valeurs du mot-clé `<position-area>` peuvent être définies comme valeur de la propriété {{CSSxRef("position-area")}} pour placer un élément positionné par une ancre à un emplacement spécifique par rapport à son élément d'ancrage associé.
 
 ## Syntaxe
 
@@ -38,7 +38,7 @@ Les zones de position fonctionnent sur le concept d'une **grille de zones de pos
 
 ![La grille de zones de position, comme décrite ci-dessous](position-area.png)
 
-Lorsqu'elle est utilisée comme valeur de la propriété `position-area` d'un élément positionné, les dimensions de la tuile centrale sont définies par le [bloc conteneur](/fr/docs/Web/CSS/Guides/Display/Containing_block) de l'élément d'ancrage par défaut. Les dimensions du bord externe de la grille sont définies par le bloc conteneur de l'élément positionné. Les termes logiques sont généralement basés sur le mode d'écriture et la direction du bloc conteneur, sauf pour les mots-clés `self-*`, qui sont calculés à partir du mode d'écriture de l'élément positionné par ancre.
+Lorsqu'elle est utilisée comme valeur de la propriété `position-area` d'un élément positionné, les dimensions de la tuile centrale sont définies par le [bloc conteneur](/fr/docs/Web/CSS/Guides/Display/Containing_block) de l'élément d'ancrage par défaut. Les dimensions du bord externe de la grille sont définies par le bloc conteneur de l'élément positionné. Les termes logiques sont généralement basés sur le mode d'écriture et la direction du bloc conteneur, sauf pour les mots-clés `self-*`, qui sont calculés à partir du mode d'écriture de l'élément positionné par une ancre.
 
 Les tuiles de la grille sont réparties en lignes et colonnes&nbsp;:
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b9bcca1e96839aa9cddea3263196e0cf4656d387
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 **`VRDisplayEvent()`** コンストラクターは、 {{domxref("VRDisplayEvent")}} オブジェクトを作成します。
 

@@ -3,8 +3,6 @@ title: L'opérateur set
 slug: Web/JavaScript/Reference/Functions/set
 ---
 
-{{jsSidebar("Functions")}}
-
 La syntaxe **`set`** permet de lier une propriété d'un objet à une fonction qui sera appelée à chaque tentative de modification de cette propriété.
 
 {{InteractiveExample("JavaScript Demo: Functions Setter")}}

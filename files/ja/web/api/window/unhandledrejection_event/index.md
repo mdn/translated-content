@@ -94,6 +94,6 @@ window.addEventListener("unhandledrejection", (event) => {
 
 ## 関連情報
 
-- [プロミスの拒否イベント](/ja/docs/Web/JavaScript/Guide/Using_promises#プロミスの拒否イベント)
+- [プロミス拒否イベント](/ja/docs/Web/JavaScript/Guide/Using_promises#プロミス拒否イベント)
 - {{domxref("Window/rejectionhandled_event", "rejectionhandled")}} イベント
 - {{jsxref("Promise")}}

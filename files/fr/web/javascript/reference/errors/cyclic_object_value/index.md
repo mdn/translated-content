@@ -3,8 +3,6 @@ title: "TypeError: cyclic object value"
 slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
 ---
 
-{{jsSidebar("Errors")}}
-
 ## Message
 
 ```

@@ -1,45 +1,39 @@
 ---
-title: NodeList.length
+title: "NodeList : propriété length"
+short-title: length
 slug: Web/API/NodeList/length
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
 
-## Résumé
+La propriété en lecture seule **`length`** de l'interface {{DOMxRef("NodeList")}} retourne le nombre d'éléments contenus dans cet objet.
 
-`length` renvoie le nombre d'éléments dans une `NodeList`.
+## Valeur
 
-## Syntaxe
+Un entier représentant le nombre d'éléments dans une `NodeList`.
 
-```js
-numItems = nodeList.length;
-```
+## Exemples
 
-- `numItems` est un entier (_integer_), valeur représentant le nombre d'éléments dans une `NodeList`.
-
-## Exemple
+La propriété `length` est souvent utile dans la programmation DOM. Elle est souvent utilisée pour tester la longueur d'une liste, pour voir si elle existe du tout. Elle est également couramment utilisée comme itérateur dans une boucle `for`, comme dans cet exemple.
 
 ```js
-// tous les paragraphes dans le document
-var items = document.getElementsByTagName("p");
-// pour chaque élément de la liste,
-// ajouter l'élément entier en tant que chaîne de HTML
-var gross = "";
-for (var i = 0; i < items.length; i++) {
-  gross += items[i].innerHTML;
+// Tous les paragraphes dans le document
+const elements = document.getElementsByTagName("p");
+
+// Pour chaque élément de la liste, ajouter l'élément entier en tant que chaîne des caractères HTML
+let brut = "";
+for (let i = 0; i < elements.length; i++) {
+  brut += elements[i].innerHTML;
 }
-// gross est maintenant tout le HTML pour les paragraphes
+
+// brut contient maintenant tout le HTML pour les paragraphes
 ```
 
-## Notes
+## Spécifications
 
-Malgré l'emplacement de cette page dans la référence, `length` n'est pas une propriété d'[Element](en/DOM/element), mais plutôt d'une `NodeList`. Les objets NodeList sont retournés à partir des méthodes DOM comme [document.getElementsByTagName](en/DOM/document.getElementsByTagName).
-
-`length` est une propriété très commune dans la programmation de DOM. Il est très courant de tester la longueur d'une liste (pour voir si elle existe) et de l'utiliser comme itérateur dans une boucle for, comme dans l'exemple ci-dessus.
-
-## Spécification
-
-[length](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-203510337)
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

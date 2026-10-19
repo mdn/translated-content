@@ -15,7 +15,7 @@ Notification.silent;
 
 ### Valeur
 
-Un {{domxref("Boolean")}}. `false` est la valeur par défaut; `true` rend la notification silencieuse.
+Un {{jsxref("Boolean")}}. `false` est la valeur par défaut; `true` rend la notification silencieuse.
 
 ## Spécifications
 

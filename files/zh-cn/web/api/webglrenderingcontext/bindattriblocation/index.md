@@ -9,7 +9,7 @@ WebGL API 的 **`WebGLRenderingContext.bindAttribLocation()`** 方法将通用�
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.bindAttribLocation(program, index, name);
 ```
 
@@ -28,8 +28,8 @@ void gl.bindAttribLocation(program, index, name);
 
 ## 示例
 
-```plain
-gl.bindAttribLocation(program, colorLocation, 'vColor');
+```js
+gl.bindAttribLocation(program, colorLocation, "vColor");
 ```
 
 ## 规范

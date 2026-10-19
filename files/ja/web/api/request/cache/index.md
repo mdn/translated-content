@@ -3,7 +3,7 @@ title: "Request: cache プロパティ"
 short-title: cache
 slug: Web/API/Request/cache
 l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}

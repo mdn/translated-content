@@ -1,38 +1,47 @@
 ---
-title: AudioContext.createBiquadFilter()
+title: BaseAudioContext：createBiquadFilter() 方法
+short-title: createBiquadFilter()
 slug: Web/API/BaseAudioContext/createBiquadFilter
+l10n:
+  sourceCommit: 77d90a23ee0a3b5486a7963f68ad4e56efb06a7b
 ---
 
-{{ APIRef("Web Audio API") }}
+{{APIRef("Web Audio API")}}
 
-{{ domxref("AudioContext") }} 的`createBiquadFilter()` 方法创建了一个 {{ domxref("BiquadFilterNode") }}, 它提供了一个可以指定多个不同的一般滤波器类型的双二阶滤波器。
+{{domxref("BaseAudioContext")}} 接口的 **`createBiquadFilter()`** 方法创建一个 {{domxref("BiquadFilterNode")}}，表示可配置为多种常见滤波器类型的二阶滤波器。
+
+> [!NOTE]
+> {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}} 构造函数是创建 {{domxref("BiquadFilterNode")}} 的推荐方式；请参见[创建一个音频节点](/zh-CN/docs/Web/API/AudioNode#创建一个音频节点)。
 
 ## 语法
 
-```js
-var audioCtx = new AudioContext();
-var biquadFilter = audioCtx.createBiquadFilter();
+```js-nolint
+createBiquadFilter()
 ```
 
-### 返回
+### 参数
 
-一个 {{domxref("BiquadFilterNode")}}.
+无。
+
+### 返回值
+
+一个 {{domxref("BiquadFilterNode")}}。
 
 ## 示例
 
-这个例子展示了一个利用 AudioContext 创建四项滤波器节点（Biquad filter node）的例子。想要查看完整工作的示例，请查看我们的 For [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) 样例（也可以查看 [源码](https://github.com/mdn/voice-change-o-matic) ）.
+下面的示例展示了如何使用 AudioContext 创建 Biquad 滤波器节点。如需更完整的应用示例或信息，请查看我们的[变声器](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic)演示（相关代码见 [app.js 第 108–193 行](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193)）。
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
-//set up the different audio nodes we will use for the app
-var analyser = audioCtx.createAnalyser();
-var distortion = audioCtx.createWaveShaper();
-var gainNode = audioCtx.createGain();
-var biquadFilter = audioCtx.createBiquadFilter();
-var convolver = audioCtx.createConvolver();
+// 设置应用中会用到的各个音频节点
+const analyser = audioCtx.createAnalyser();
+const distortion = audioCtx.createWaveShaper();
+const gainNode = audioCtx.createGain();
+const biquadFilter = audioCtx.createBiquadFilter();
+const convolver = audioCtx.createConvolver();
 
-// connect the nodes together
+// 将节点连接在一起
 
 source = audioCtx.createMediaStreamSource(stream);
 source.connect(analyser);
@@ -42,14 +51,14 @@ biquadFilter.connect(convolver);
 convolver.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
-// Manipulate the Biquad filter
+// 操控 Biquad 滤波器
 
 biquadFilter.type = "lowshelf";
-biquadFilter.frequency.value = 1000;
-biquadFilter.gain.value = 25;
+biquadFilter.frequency.setValueAtTime(1000, audioCtx.currentTime);
+biquadFilter.gain.setValueAtTime(25, audioCtx.currentTime);
 ```
 
-## 规格
+## 规范
 
 {{Specifications}}
 
@@ -57,6 +66,6 @@ biquadFilter.gain.value = 25;
 
 {{Compat}}
 
-## 相关
+## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

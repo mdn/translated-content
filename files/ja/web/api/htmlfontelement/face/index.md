@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{deprecated_header}}{{ APIRef("HTML DOM") }}
+{{ APIRef("HTML DOM") }}
 
 廃止された **`HTMLFontElement.face`** プロパティは、HTML の [`face`](/ja/docs/Web/HTML/Reference/Elements/font#face) 属性を反映した文字列で、1 つ以上のフォント名のカンマ区切りリストが入ります。
 

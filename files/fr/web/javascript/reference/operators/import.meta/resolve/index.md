@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c1ccc5843f5a7702f5cc69d4bf37db0aadc808ac
 ---
 
-{{JSSidebar("Operators")}}
-
 **`import.meta.resolve()`** est une fonction native, définie sur l'objet [`import.meta`](/fr/docs/Web/JavaScript/Reference/Operators/import.meta) d'un module JavaScript qui résout un spécificateur de module en une URL, en utilisant l'URL du module courant comme base.
 
 ## Syntaxe

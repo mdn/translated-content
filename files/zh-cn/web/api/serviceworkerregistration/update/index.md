@@ -22,7 +22,7 @@ update()
 
 ### 返回
 
-返回 {{domxref("Promise")}} 在 resolve 时对应一个 {{domxref("ServiceWorkerRegistration")}} 对象。
+返回 {{jsxref("Promise")}} 在 resolve 时对应一个 {{domxref("ServiceWorkerRegistration")}} 对象。
 
 ## 示例
 

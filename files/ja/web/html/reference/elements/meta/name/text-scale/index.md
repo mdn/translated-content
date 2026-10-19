@@ -3,8 +3,10 @@ title: <meta name="text-scale">
 short-title: text-scale
 slug: Web/HTML/Reference/Elements/meta/name/text-scale
 l10n:
-  sourceCommit: 4607393c465f5a8bdbb36047f2ec03c2fb058af5
+  sourceCommit: 4c58f4735f986a91bee1b77e336143630df727a2
 ---
+
+{{SeeCompatTable}}
 
 **`text-scale`** は {{htmlelement("meta")}} 要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name) 属性の値で、
 {{htmlelement("html")}} ルート要素の {{cssxref("font-size")}} の初期の倍率を、OS およびブラウザーレベルのテキスト倍率設定に比例させるように設定できます。
@@ -68,10 +70,10 @@ OS のテキスト倍率設定に基づいてサイズを調整するには、[`
 
 ```html-nolint live-sample___text-scale
 <!doctype html>
-<html>
+<html lang="ja">
   <head>
     <meta name="text-scale" content="scale" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width" />
   </head>
   <body>
     <p class="text-scale">
@@ -79,7 +81,7 @@ OS のテキスト倍率設定に基づいてサイズを調整するには、[`
     </p>
     <p class="fixed">
       このフォントサイズは、text-scale が設定されていても、ユーザーのフォント環境設定を反映しません。
-      <div class="text-scale">でも、このフォントサイズは反映されます。</div>
+      <span class="text-scale">でも、このフォントサイズは反映されます。</span>
     </p>
   </body>
 </html>
@@ -87,9 +89,9 @@ OS のテキスト倍率設定に基づいてサイズを調整するには、[`
 
 ```html-nolint hidden live-sample___no-text-scale
 <!doctype html>
-<html>
+<html lang="ja">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width" />
   </head>
   <body>
     <p class="text-scale">
@@ -97,7 +99,7 @@ OS のテキスト倍率設定に基づいてサイズを調整するには、[`
     </p>
     <p class="fixed">
       このフォントサイズは、ユーザーのフォント環境設定を反映しません。
-      <div class="text-scale">これも同じです！</div>
+      <span class="text-scale">これも同じです！</span>
     </p>
   </body>
 </html>
@@ -144,10 +146,10 @@ OS のテキスト倍率設定に基づいてサイズを調整するには、[`
 
 ```html live-sample___text-scale-layout
 <!doctype html>
-<html>
+<html lang="ja">
   <head>
     <meta name="text-scale" content="scale" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width" />
   </head>
   <body>
     <main>メインコンテンツ</main>

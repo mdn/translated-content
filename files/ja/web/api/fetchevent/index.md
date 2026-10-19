@@ -2,10 +2,10 @@
 title: FetchEvent
 slug: Web/API/FetchEvent
 l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+  sourceCommit: b19a19b1f3563c8f24fe7146c21cec2abdf68c9a
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 これは `fetch` イベント用のイベント型で、{{domxref("ServiceWorkerGlobalScope", "サービスワーカーのグローバルスコープ", "", 1)}}に配信されます。これには、リクエストや、受け手がどうレスポンスを扱うのかといった、フェッチに関する情報が含まれています。これは、このフェッチへのレスポンスを提供する {{domxref("FetchEvent.respondWith", "event.respondWith()")}} メソッドを提供します。
 
@@ -14,7 +14,7 @@ l10n:
 ## コンストラクター
 
 - {{domxref("FetchEvent.FetchEvent()", "FetchEvent()")}}
-  - : 新しい `FetchEvent` オブジェクトを作成します。 このコンストラクターは通常は使用しません。 ブラウザーはこのオブジェクト自体を作成して `fetch` イベントのコールバックに提供します。
+  - : 新しい `FetchEvent` オブジェクトを作成します。 このコンストラクターは通常は使用しません。 ブラウザーはこのオブジェクトを作成して `fetch` イベントのコールバックに提供します。
 
 ## プロパティ
 
@@ -22,10 +22,12 @@ _祖先である {{domxref("Event")}} からプロパティを継承していま
 
 - {{domxref("FetchEvent.clientId")}} {{ReadOnlyInline}}
   - : フェッチを開始した同一オリジンの{{domxref("Client", "クライアント")}}の {{domxref("Client.id", "id")}} です。
+- {{domxref("FetchEvent.handled")}} {{ReadOnlyInline}}
+  - : イベントが処理されるまでは待機中であり、イベントが処理されると履行されるプロミスです。
+- {{domxref("FetchEvent.isReload")}} {{ReadOnlyInline}} {{Deprecated_inline}} {{Non-standard_inline}}
+  - : イベントが、ページの再読み込みを試みたユーザーによって配信された場合は `true` を返し、それ以外の場合は `false` を返します。
 - {{domxref("FetchEvent.preloadResponse")}} {{ReadOnlyInline}}
   - : {{domxref("Response")}} のための {{jsxref("Promise")}}、またはこのフェッチがナビゲーションでない場合や、[ナビゲーションの先読み](/ja/docs/Web/API/NavigationPreloadManager)が有効になっていない場合は `undefined` です。
-- {{domxref("FetchEvent.replacesClientId")}} {{ReadOnlyInline}}
-  - : ページのナビゲーション中に置き換えられる{{domxref("Client", "クライアント")}}の {{domxref("Client.id", "id")}} です。
 - {{domxref("FetchEvent.resultingClientId")}} {{ReadOnlyInline}}
   - : ページのナビゲーション中に前のクライアントを置き換える{{domxref("Client", "クライアント")}}の {{domxref("Client.id", "id")}} です。
 - {{domxref("FetchEvent.request")}} {{ReadOnlyInline}}
@@ -36,20 +38,20 @@ _祖先である {{domxref("Event")}} からプロパティを継承していま
 _親である {{domxref("ExtendableEvent")}} からメソッドを継承しています。_
 
 - {{domxref("FetchEvent.respondWith()")}}
-  - : ブラウザー既定のフェッチ処理を抑止し、自身のレスポンス（のプロミス）を提供します。
+  - : ブラウザーデフォルトのフェッチ処理を抑止し、自身のレスポンス（のプロミス）を提供します。
 - {{domxref("ExtendableEvent.waitUntil()")}}
   - : イベントの存続期間を延長します。 ストリーミングやキャッシュなど、レスポンスの返却を超えて延長するタスクをブラウザーに通知するために使用します。
 
 ## 例
 
-この fetch イベントは、 GET 以外のリクエストに対してブラウザー既定のものを使用します。 GET リクエストに対してはキャッシュから一致するものを返そうとし、ない場合はネットワークから読み取ります。キャッシュに一致するものが見つかった場合、次回ためにキャッシュを非同期に更新します。
+この fetch イベントは、 GET 以外のリクエストに対してブラウザーデフォルトのものを使用します。 GET リクエストに対してはキャッシュから一致するものを返そうとし、ない場合はネットワークから読み取ります。キャッシュに一致するものが見つかった場合、次回ためにキャッシュを非同期に更新します。
 
 ```js
 self.addEventListener("fetch", (event) => {
-  // GET 以外のリクエストでは、ブラウザーに既定のことをさせる
+  // GET 以外のリクエストでは、ブラウザーにデフォルトのことをさせる
   if (event.request.method !== "GET") return;
 
-  // 既定のことを行わず、自分自身のリクエストを扱う
+  // デフォルトのことを行わず、自分自身のリクエストを扱う
   event.respondWith(
     (async () => {
       // キャッシュからレスポンスの取得を試みる
@@ -80,5 +82,6 @@ self.addEventListener("fetch", (event) => {
 
 ## 関連情報
 
+- [`fetch` イベント](/ja/docs/Web/API/ServiceWorkerGlobalScope/fetch_event)
 - {{jsxref("Promise")}}
 - [フェッチ API](/ja/docs/Web/API/Fetch_API)

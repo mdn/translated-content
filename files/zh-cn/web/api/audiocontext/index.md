@@ -54,7 +54,7 @@ var audioCtx = new AudioContext();
 
 跨浏览器的方式：
 
-```plain
+```js
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 

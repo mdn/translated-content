@@ -22,7 +22,7 @@ slug: Web/HTTP/Reference/Headers/Expect
 
 目前规范中只规定了 "100-continue" 这一个期望条件。
 
-```plain
+```http
 Expect: 100-continue
 ```
 
@@ -37,7 +37,7 @@ Expect: 100-continue
 
 客户端发送带有 Expect 消息头的请求，等服务器回复后再发送消息体。
 
-```plain
+```http
 PUT /somewhere/fun HTTP/1.1
 Host: origin.example.com
 Content-Type: video/h264

@@ -2,7 +2,7 @@
 title: Bifurcation (Fork)
 slug: Glossary/Fork
 l10n:
-  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
+  sourceCommit: da7287ff61b6ea4db7f9a5e07be11263b525b7d0
 ---
 
 Une **bifurcation** (<i lang="en">fork</i> en anglais) est une copie d'un projet logiciel existant à un moment donné pour permettre à quelque-un d'ajouter ses propres modifications au projet.

@@ -3,7 +3,7 @@ title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
 ---
 
-{{jsSidebar("Objects")}} {{deprecated_header}}
+{{jsSidebar("Objects")}}
 
 Устаревший метод **`escape()`** возвращает новую строку, в которой определённые символы заменены шестнадцатеричной управляющей последовательностью. Используйте методы {{jsxref("encodeURI")}} или {{jsxref("encodeURIComponent")}} вместо него.
 

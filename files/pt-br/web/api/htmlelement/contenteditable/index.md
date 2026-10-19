@@ -11,7 +11,7 @@ A propriedade **`HTMLElement.contentEditable`** é usada para indicar se o eleme
 - `"false"` Indica que o elemento não pode ser editável;
 - `"inherit"` Indica que o elemento herda o status editável de seu pai.
 
-Você pode usar a propriedade {{domxref( "HTMLElement.isContentEditable")}} para testar o valor calculado {{domxref ("Boolean")}} desta propriedade.
+Você pode usar a propriedade {{domxref( "HTMLElement.isContentEditable")}} para testar o valor calculado {{jsxref("Boolean")}} desta propriedade.
 
 ## Sintaxe
 

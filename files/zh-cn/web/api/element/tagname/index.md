@@ -11,7 +11,7 @@ slug: Web/API/Element/tagName
 
 ## 语法
 
-```plain
+```html
 elementName = element.tagName
 ```
 
@@ -25,7 +25,7 @@ elementName = element.tagName
 
 假设给定下面的源码
 
-```plain
+```js
 <span id="born">When I was born...</span>
 ```
 

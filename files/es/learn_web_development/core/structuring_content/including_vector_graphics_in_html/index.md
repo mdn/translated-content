@@ -1,63 +1,73 @@
 ---
-title: Agregar Gráficos Vectoriales a la Web
+title: Incluir gráficos vectoriales en HTML
+short-title: Gráficos vectoriales
 slug: Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
-original_slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
+l10n:
+  sourceCommit: 2066cc916dfdcbb782340bf0ce562b230e947cba
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/General_embedding_technologies", "Web/HTML/Guides/Responsive_images", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
-
-Los gráficos vectoriales son muy útiles en muchas circunstancias — tienen tamaño de archivo pequeños y son altamente escalables, por lo que no se pixelan cuando se amplían a un tamaño más grande. En este artículo le mostraremos cómo incluir uno en su página web.
+Los gráficos vectoriales son muy útiles en muchas circunstancias — tienen un tamaño de archivo pequeño y son muy escalables, por lo que no se pixelan al hacer zoom o al ampliarlos a un tamaño grande. En este artículo te mostraremos cómo incluir uno en tu página web.
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisitos:</th>
+      <th scope="row">Requisitos previos:</th>
       <td>
-        Debe conocer los
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
-          >conceptos básicos de HTML</a
-        >
+        Debes conocer los
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content">conceptos básicos de HTML</a>
         y cómo
         <a href="/es/docs/Learn_web_development/Core/Structuring_content/HTML_images"
-          >insertar imágenes en su documento</a
-        >
+          >insertar una imagen en tu documento</a
+        >.
       </td>
     </tr>
     <tr>
       <th scope="row">Objetivo:</th>
-      <td>Aprender a incrustar una imagen SVG (vector) en una página web.</td>
+      <td>Aprender a incrustar una imagen SVG (vectorial) en una página web.</td>
     </tr>
   </tbody>
 </table>
 
 > [!NOTE]
-> Este artículo no tiene la intención de enseñarte SVG; solo mostrarte qué es, y cómo agregarlo a las páginas web.
+> Este artículo no pretende enseñarte SVG, sino solo qué es y cómo añadirlo a las páginas web.
 
 ## ¿Qué son los gráficos vectoriales?
 
-En la web, trabajarás con dos tipos de imágenes — **imágenes rasterizadas**, e **imágenes vectoriales**:
+En la web, trabajarás con dos tipos de imágenes — **imágenes rasterizadas** e **imágenes vectoriales**:
 
-- **Las imágenes ráster** se definen mediante una cuadrícula de píxeles — un archivo de imagen rasterizado contiene información que muestra exactamente dónde se colocará cada píxel y exactamente de qué color debe ser. Los formatos de ráster web populares incluyen mapa de bits (`.bmp`), PNG (`.png`), JPEG (`.jpg`), and GIF (`.gif`.)
-- **Las imágenes vectoriales** se definen mediante algoritmos — un archivo de imagen vectorial contiene definiciones de forma y ruta que la computadora puede usar para determinar cómo debería verse la imagen cuando se representa en la pantalla. El formato {{glossary("SVG")}} nos permite crear poderosos gráficos vectoriales para usar en la Web.
+- **Las imágenes rasterizadas** se definen mediante una cuadrícula de píxeles — un archivo de imagen rasterizada contiene información que muestra exactamente dónde debe colocarse cada píxel y de qué color debe ser. Los formatos rasterizados populares en la web incluyen Bitmap (`.bmp`), PNG (`.png`), JPEG (`.jpg`) y GIF (`.gif`).
+- **Las imágenes vectoriales** se definen mediante algoritmos — un archivo de imagen vectorial contiene definiciones de formas y trazados que la computadora puede usar para calcular cómo debe verse la imagen al representarse en la pantalla. El formato {{glossary("SVG")}} nos permite crear potentes gráficos vectoriales para usar en la web.
 
-Para darte una idea de la diferencia entre los dos, veamos un ejemplo. Puede encontrar este ejemplo en vivo en nuestro repositorio de Github como [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) — muestra dos imágenes aparentemente idénticas una al lado de la otra, de una estrella roja con una sombra negra. La diferencia es que el de la izquierda es un PNG y el de la derecha es una imagen SVG.
+Para darte una idea de la diferencia entre ambos, veamos un ejemplo:
 
-La diferencia se hace evidente cuando amplía la página — la imagen PNG se pixela a medida que se acerca porque contiene información sobre dónde debería estar cada píxel (y de qué color). Cuando se amplía, cada píxel simplemente aumenta de tamaño para llenar varios píxeles en la pantalla, por lo que la imagen comienza a verse borrosa. Sin embargo, la imagen vectorial sigue luciendo agradable y nítida, porque no importa el tamaño que tenga, los algoritmos se utilizan para resolver las formas en la imagen, y los valores simplemente se escalan a medida que aumenta.
+```html live-sample___raster-vector live-sample___raster-vector-zoomed
+<img src="star.png" alt="Una estrella rasterizada" />
+<img src="star.svg" role="img" alt="Una estrella vectorial" />
+```
 
-![Two star images](raster-vector-default-size.png)
+Esto muestra dos estrellas rojas aparentemente idénticas con una sombra negra, una junto a la otra. La diferencia es que la de la izquierda es una imagen rasterizada (PNG) y la de la derecha es una imagen vectorial (SVG).
 
-![Two star images zoomed in, one crisp and the other blurry](raster-vector-zoomed.png)
+{{EmbedLiveSample("raster-vector", "100%", 120)}}
 
-> [!NOTE]
-> Las imágenes de arriba son en realidad todos PNG, con la estrella de la izquierda en cada caso representando una imagen rasterizada y la estrella de la derecha representando una imagen vectorial. Nuevamente, vaya a la demostración de vector-versus-raster.html para ver un ejemplo real.
+La diferencia se hace evidente cuando amplías la página o aumentas el tamaño de las imágenes. Lo siguiente muestra cómo se representan ambas estrellas con un ancho de `300px`:
 
-Además, los archivos de imágenes vectoriales son mucho más ligeros que sus equivalentes ráster, porque solo necesitan contener un puñado de algoritmos, en lugar de información sobre cada píxel de la imagen individualmente.
+```css hidden live-sample___raster-vector-zoomed
+img {
+  width: 300px;
+}
+```
+
+{{EmbedLiveSample("raster-vector-zoomed", "100%", 350)}}
+
+La imagen PNG se pixela porque contiene información sobre dónde debe estar cada píxel (y de qué color). Al ampliarla, cada píxel aumenta de tamaño para ocupar varios píxeles en la pantalla, por lo que la imagen empieza a verse borrosa. La imagen SVG, en cambio, sigue viéndose nítida y limpia, porque sin importar el tamaño que tenga, se usan los algoritmos para calcular las formas de la imagen, y los valores se escalan a medida que esta crece.
+
+Además, los archivos de imágenes vectoriales son mucho más livianos que sus equivalentes rasterizados, porque solo necesitan contener un puñado de algoritmos, en lugar de información sobre cada píxel de la imagen individualmente.
 
 ## ¿Qué es SVG?
 
-[SVG](/es/docs/Web/SVG) es un lenguaje basado en {{glossary("XML")}}-para describir imágenes vectoriales. Básicamente es un marcado, como HTML, excepto que tiene muchos elementos diferentes para definir las formas que desea que aparezcan en su imagen y los efectos que desea aplicar a esas formas. SVG es para marcar gráficos, no contenido. En el extremo más simple del espectro, tienes elementos para crear formas simples, como {{svgelement("circle")}} and {{svgelement("rect")}}. Las funciones SVG más avanzadas incluyen {{svgelement("feColorMatrix")}} (transformar colores usando una matriz de transformación), {{svgelement("animate")}} (animar partes de su gráfico vectorial), and {{svgelement("mask")}} (aplica una máscara sobre la parte superior de tu imagen).
+[SVG](/es/docs/Web/SVG) es un lenguaje basado en {{glossary("XML")}} para describir imágenes vectoriales. Básicamente es marcado, como HTML, salvo que tienes muchos elementos diferentes para definir las formas que quieres que aparezcan en tu imagen y los efectos que quieres aplicarles a esas formas. SVG sirve para marcar gráficos, no contenido. SVG define elementos para crear formas básicas, como {{svgelement("circle")}} y {{svgelement("rect")}}, así como elementos para crear formas más complejas, como {{svgelement("path")}} y {{svgelement("polygon")}}. Entre las funciones más avanzadas de SVG se incluyen {{svgelement("feColorMatrix")}} (transformar colores usando una matriz de transformación), {{svgelement("animate")}} (animar partes de tu gráfico vectorial) y {{svgelement("mask")}} (aplicar una máscara sobre tu imagen).
 
-Como ejemplo simple, el siguiente código crea un círculo y un rectángulo:
+Como ejemplo básico, el siguiente código crea un círculo y un rectángulo:
 
 ```html
 <svg
@@ -71,68 +81,66 @@ Como ejemplo simple, el siguiente código crea un círculo y un rectángulo:
 </svg>
 ```
 
-Esto crea la siguiente salida:
+Esto genera el siguiente resultado:
 
-{{ EmbedLiveSample('What_is_SVG', 300, 200, "", "", "hide-codepen-jsfiddle") }}
+{{EmbedLiveSample("¿Qué_es_SVG", 300, 240, "", "")}}
 
-En el ejemplo anterior, puede tener la impresión de que SVG es fácil de codificar manualmente. Sí, puede codificar manualmente SVG simple en un editor de texto, pero para una imagen compleja, esto rápidamente comienza a ser muy difícil. Para crear imágenes SVG, la mayoría de la gente usa un editor de gráficos vectoriales como Inkscape o Illustrator. Estos paquetes le permiten crear una variedad de ilustraciones utilizando varias herramientas gráficas y crear aproximaciones de fotos (por ejemplo, la función Trazar mapa de bits de Inkscape).
+A partir del ejemplo anterior, puede que tengas la impresión de que SVG es fácil de escribir a mano. Sí, puedes escribir SVG simple a mano en un editor de texto, pero para una imagen compleja esto rápidamente se vuelve muy difícil. Para crear imágenes SVG, la mayoría de las personas usa un editor de gráficos vectoriales como [Inkscape](https://inkscape.org/) o [Illustrator](https://en.wikipedia.org/wiki/Adobe_Illustrator). Estos programas te permiten crear una variedad de ilustraciones usando distintas herramientas gráficas, y crear aproximaciones de fotos (por ejemplo, la función Trazar mapa de bits de Inkscape).
 
 SVG tiene algunas ventajas adicionales además de las descritas hasta ahora:
 
-- El texto en imágenes vectoriales sigue siendo accesible (lo que también beneficia a su {{glossary("SEO")}}).
-- Los SVG se prestan bien al estilo / scripting, porque cada componente de la imagen es un elemento que se puede diseñar a través de CSS o scripting a través de JavaScript.
+- El texto en las imágenes vectoriales sigue siendo accesible (lo que también beneficia tu {{glossary("SEO")}}).
+- Los SVG se prestan bien para el estilo y los scripts, porque cada componente de la imagen es un elemento que se puede estilizar con CSS o manipular con JavaScript.
 
-Entonces, ¿por qué alguien querría usar gráficos rasterizados sobre SVG? Bueno, SVG tiene algunas desventajas:
+Entonces, ¿por qué alguien querría usar gráficos rasterizados en vez de SVG? Bueno, SVG tiene algunas desventajas:
 
-- SVG puede complicarse rápidamente, lo que significa que el tamaño de los archivos puede crecer. Además, los SVG complejos también pueden requerir un tiempo de procesamiento significativo en el navegador.
-- SVG puede ser más difícil de crear que las imágenes rasterizadas, dependiendo del tipo de imagen que intente crear.
-- SVG no es compatible con navegadores más antiguos, por lo que puede no ser adecuado si necesita admitir versiones anteriores de Internet Explorer con su sitio web (SVG comenzó a ser compatible a partir de IE9).
+- SVG puede complicarse muy rápido, lo que significa que el tamaño de los archivos puede crecer; los SVG complejos también pueden requerir un tiempo de procesamiento considerable en el navegador.
+- SVG puede ser más difícil de crear que las imágenes rasterizadas, dependiendo del tipo de imagen que quieras crear.
 
-Los gráficos rasterizados son posiblemente mejores para imágenes de precisión complejas, como fotos, por las razones descritas anteriormente.
+Los gráficos rasterizados son, en general, mejores para imágenes complejas y precisas, como las fotos, por las razones descritas anteriormente.
 
-> [!NOTE]
-> En Inkscape, guarde sus archivos como SVG simple para ahorrar espacio. Además, consulte este artículo que describe [cómo preparar SVGs para la web](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
+Los gráficos SVG exportados desde editores como Inkscape tienen un gran margen de optimización de tamaño. Antes de publicarlos en la web, probablemente quieras pasarlos por un optimizador de SVG como [SVGO](https://www.npmjs.com/package/svgo).
 
-## Agregar SVG a sus páginas
+## Añadir SVG a tus páginas
 
-En esta sección, veremos las diferentes formas en las que puede agregar gráficos vectoriales SVG a sus páginas web.
+En esta sección repasaremos las distintas formas en que puedes añadir gráficos vectoriales SVG a tus páginas web.
 
-### La forma rápida: {{htmlelement("img")}}
+### La forma rápida: el elemento `img`
 
-Para incrustar un SVG a través de un elemento {{htmlelement ("img")}}, solo necesita hacer referencia a él en el atributo src como es de esperar. Necesitará un atributo de altura o ancho (o ambos si su SVG no tiene una relación de aspecto inherente). Si aún no lo ha hecho, lea [Imágenes en HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_images).
+Para incrustar un SVG mediante un elemento {{htmlelement("img")}}, solo necesitas hacer referencia a él en el atributo `src`, como es de esperar. Necesitarás un atributo `height` o `width` (o ambos si tu SVG no tiene una {{glossary("aspect ratio", "relación de aspecto")}} inherente). Si todavía no lo hiciste, lee [Imágenes en HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_images).
 
 ```html
 <img
   src="equilateral.svg"
-  alt="triangle with all three sides equal"
+  alt="triángulo con los tres lados iguales"
   height="87"
   width="100" />
 ```
 
-#### Pros
+#### Ventajas
 
-- Sintaxis de imagen rápida y familiar con equivalente de texto integrado disponible en el atributo `alt`.
-- Puede convertir la imagen en un hipervínculo fácilmente anidando el `<img>` dentro de un elemento {{htmlelement ("a")}}.
-- El navegador puede almacenar en caché el archivo SVG, lo que da como resultado tiempos de carga más rápidos para cualquier página que utilice la imagen cargada en el futuro.
+- Sintaxis de imagen rápida y conocida, con un equivalente textual integrado disponible en el atributo `alt`.
+- Puedes convertir la imagen en un hipervínculo fácilmente anidando el `<img>` dentro de un elemento {{htmlelement("a")}}.
+- El navegador puede almacenar en caché el archivo SVG, lo que se traduce en tiempos de carga más rápidos para cualquier página que use la imagen cargada en el futuro.
 
-#### Cons
+#### Desventajas
 
-- No puede manipular la imagen con JavaScript.
-- Si desea controlar el contenido SVG con CSS, debe incluir estilos CSS en línea en su código SVG. (Las hojas de estilo externas invocadas desde el archivo SVG no tienen efecto).
-- No puede cambiar el estilo de la imagen con pseudoclases CSS (como `:focus`).
+- No puedes manipular la imagen con JavaScript.
+- Si quieres controlar el contenido del SVG con CSS, debes incluir estilos CSS en línea dentro de tu código SVG. (Las hojas de estilo externas invocadas desde el archivo SVG no tienen efecto).
+- No puedes volver a estilizar la imagen con pseudoclases CSS (como `:focus`).
 
-### Solución de problemas y compatibilidad con varios navegadores
+### Solución de problemas y compatibilidad entre navegadores
 
-Para los navegadores que no admiten SVG (IE 8 y versiones anteriores, Android 2.3 y versiones anteriores), puede hacer referencia a un PNG o JPG de su atributo src y usar un atributo [`srcset`](/es/docs/Web/HTML/Reference/Elements/img#srcset) ( que solo los navegadores recientes reconocen) para hacer referencia al SVG. Siendo este el caso, solo los navegadores compatibles cargarán el SVG; los navegadores más antiguos cargarán el PNG en su lugar:
+Para los navegadores que no admiten SVG (IE 8 y versiones anteriores, Android 2.3 y versiones anteriores), puedes hacer referencia a un PNG o JPG desde tu atributo `src` y usar un atributo [`srcset`](/es/docs/Web/HTML/Reference/Elements/img#srcset) (que solo reconocen los navegadores más recientes) para hacer referencia al SVG. En este caso, solo los navegadores compatibles cargarán el SVG — los navegadores más antiguos cargarán el PNG en su lugar:
 
 ```html
 <img
   src="equilateral.png"
-  alt="triangle with equal sides"
+  alt="triángulo con lados iguales"
   srcset="equilateral.svg" />
 ```
 
-También puede usar SVG como imágenes de fondo CSS, como se muestra a continuación. En el siguiente código, los navegadores más antiguos se quedarán con el PNG que entienden, mientras que los navegadores más nuevos cargarán el SVG:
+También puedes usar SVG como imágenes de fondo de CSS, como se muestra a continuación. En el siguiente código, los navegadores más antiguos se quedarán con el PNG que sí entienden, mientras que los más nuevos cargarán el SVG:
 
 ```css
 background: url("fallback.png") no-repeat center;
@@ -140,13 +148,13 @@ background-image: url("image.svg");
 background-size: contain;
 ```
 
-Al igual que el método `<img>` descrito anteriormente, la inserción de SVG con imágenes de fondo CSS significa que el SVG no se puede manipular con JavaScript y también está sujeto a las mismas limitaciones de CSS.
+Al igual que con el método `<img>` descrito antes, insertar SVG mediante imágenes de fondo de CSS significa que el SVG no se puede manipular con JavaScript, y está sujeto a las mismas limitaciones de CSS.
 
-Si sus SVG no se muestran en absoluto, podría deberse a que su servidor no está configurado correctamente. Si ese es el problema, este [artículo le indicará la dirección correcta](/es/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started#a_word_on_webservers).
+Si tus SVG no aparecen en absoluto, puede deberse a que tu servidor no está configurado correctamente. Si ese es el problema, este [artículo te orientará en la dirección correcta](/es/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started#unas_palabras_sobre_los_servidores_web_para_archivos_.svgz).
 
-### Cómo incluir código SVG dentro de su HTML
+### Cómo incluir código SVG dentro de tu HTML
 
-También puede abrir el archivo SVG en un editor de texto, copiar el código SVG y pegarlo en su documento HTML; esto a veces se denomina poner su SVG en línea o SVG en línea. Asegúrese de que su fragmento de código SVG comience y termine con las etiquetas \<svg> \</svg> (no incluya nada fuera de ellas). Aquí tiene un ejemplo muy simple de lo que puede pegar en su documento:
+También puedes abrir el archivo SVG en un editor de texto, copiar el código SVG y pegarlo en tu documento HTML — a esto a veces se le llama poner tu **SVG en línea**, o **inlining SVG**. Asegúrate de que tu fragmento de código SVG comience con una etiqueta de apertura `<svg>` y termine con una etiqueta de cierre `</svg>`. Aquí tienes un ejemplo muy simple de lo que podrías pegar en tu documento:
 
 ```html
 <svg width="300" height="200">
@@ -154,192 +162,74 @@ También puede abrir el archivo SVG en un editor de texto, copiar el código SVG
 </svg>
 ```
 
-#### Pros
+#### Ventajas
 
-- Poner su SVG en línea ahorra una solicitud HTTP y, por lo tanto, puede reducir un poco su tiempo de carga.
-- Puede asignar clases e identificadores a elementos SVG y aplicarles estilo con CSS, ya sea dentro del SVG o donde quiera que ponga las reglas de estilo CSS para su documento HTML. De hecho, puede utilizar cualquier atributo de presentación SVG como propiedad CSS.
-- SVG en línea es el único enfoque que le permite usar interacciones CSS (como `:focus`) y animaciones CSS en su imagen SVG (incluso en su hoja de estilo normal).
-- Puede convertir el marcado SVG en un hipervínculo envolviéndolo en un elemento {{htmlelement ("a")}}.
+- Poner tu SVG en línea ahorra una solicitud HTTP y, por lo tanto, puede reducir un poco tu tiempo de carga.
+- Puedes asignar `class` e `id` a los elementos SVG y estilizarlos con CSS, ya sea dentro del SVG o donde pongas las reglas de estilo CSS para tu documento HTML. De hecho, puedes usar cualquier [atributo de presentación de SVG](/es/docs/Web/SVG/Reference/Attribute#atributos_presentacionales) como propiedad CSS.
+- Poner el SVG en línea es el único enfoque que te permite usar interacciones CSS (como `:focus`) y animaciones CSS en tu imagen SVG (incluso en tu hoja de estilo habitual).
+- Puedes convertir el marcado SVG en un hipervínculo envolviéndolo en un elemento {{htmlelement("a")}}.
 
-#### Cons
+#### Desventajas
 
-- Este método solo es adecuado si está utilizando SVG en un solo lugar. La duplicación hace que el mantenimiento requiera muchos recursos.
-- El código SVG adicional aumenta el tamaño de su archivo HTML.
-- El navegador no puede almacenar en caché SVG en línea, ya que almacenaría en caché activos de imagen normales, por lo que las páginas que incluyen la imagen no se cargarán más rápido después de que se cargue la primera página que contiene la imagen.
-- Puede incluir respaldo en un elemento {{svgelement ("foreignObject")}}, pero los navegadores que admiten SVG aún descargan las imágenes de respaldo. Debe sopesar si la sobrecarga adicional realmente vale la pena, solo para admitir navegadores obsoletos.
+- Este método solo es adecuado si usas el SVG en un único lugar. La duplicación hace que el mantenimiento consuma muchos recursos.
+- El código SVG adicional aumenta el tamaño de tu archivo HTML.
+- El navegador no puede almacenar en caché el SVG en línea como lo haría con los recursos de imagen normales, por lo que las páginas que incluyen la imagen no cargarán más rápido después de que se cargue la primera página que la contiene.
+- Puedes incluir contenido de reserva en un elemento {{svgelement("foreignObject")}}, pero los navegadores que admiten SVG igual descargan las imágenes de reserva. Debes evaluar si vale la pena la sobrecarga extra solo para admitir navegadores obsoletos.
 
-### Cómo incrustar un SVG con un {{htmlelement("iframe")}}
+### Cómo incrustar un SVG con un `iframe`
 
-Puede abrir imágenes SVG en su navegador al igual que las páginas web. Entonces, incrustar un documento SVG con un `<iframe>` se realiza tal como lo estudiamos en [De \<object> a \<iframe> — otras tecnologías de incrustación](/es/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies).
+Puedes abrir imágenes SVG en tu navegador igual que las páginas web. Así que incrustar un documento SVG con un `<iframe>` se hace tal como vimos en [De \<object> a \<iframe> — otras tecnologías de incrustación](/es/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies).
 
-Aquí hay una revisión rápida:
+Aquí tienes un repaso rápido:
 
 ```html
-<iframe src="triangle.svg" width="500" height="500" sandbox>
-  <img src="triangle.png" alt="Triangle with three unequal sides" />
-</iframe>
+<iframe src="triangle.svg" width="500" height="500" sandbox></iframe>
 ```
 
-Este definitivamente no es el mejor método para elegir:
+Definitivamente este no es el mejor método a elegir:
 
-#### Cons
+#### Desventajas
 
-- Los `iframes` tienen un mecanismo de respaldo, como puede ver, pero los navegadores solo muestran el respaldo si carecen por completo de soporte para los iframes.
-- Además, a menos que el SVG y su página web actual tengan el mismo {{glossary('origin')}}, no puede usar JavaScript en su página web principal para manipular el SVG.
+- Los elementos `<iframe>` pueden incluir contenido de reserva entre sus etiquetas de apertura y cierre, pero este solo se muestra en los navegadores que no admiten `<iframe>`, no cuando la imagen falla al cargar.
+- Además, a menos que el SVG y tu página web actual tengan el mismo {{glossary("origin", "origen")}}, no puedes usar JavaScript en tu página web principal para manipular el SVG.
 
-## Aprendizaje activo: jugar con SVG
+## Jugar con SVG
 
-En esta sección de aprendizaje activo, nos gustaría que simplemente probaras a jugar con algunos SVG por diversión. En la entrada a continuación, verá que ya le hemos proporcionado algunas muestras para que pueda comenzar. También puedes ir a la [Referencia de Elementos SVG](/es/docs/Web/SVG/Reference/Element), descubrir más detalles sobre otros juguetes que puedes usar en SVG y probarlos también. Esta sección trata sobre cómo practicar sus habilidades de investigación y divertirse.
+En este ejercicio, nos gustaría que probaras a jugar con algo de SVG. Presiona el botón **Play** para abrir el siguiente ejemplo en el MDN Playground y editarlo ahí.
 
-Si se queda atascado y no puede hacer que su código funcione, siempre puede restablecerlo con el _botón Restablecer_.
+Ve a la [Referencia de elementos SVG](/es/docs/Web/SVG/Reference/Element) para ver qué otros elementos puedes usar que aportan mucha funcionalidad incorporada.
+Hay otras formas que puedes probar, como elipses, o puedes experimentar con [patrones](/es/docs/Web/SVG/Reference/Element/pattern), o incluso con [efectos de filtro](/es/docs/Web/SVG/Reference/Element/filter).
+Esta sección trata sobre poner en práctica tus habilidades de investigación, probar algo nuevo y divertirte un poco.
 
-```html hidden
-<h2>Live output</h2>
+Si te quedas atascado y no logras que tu código funcione, siempre puedes reiniciarlo usando el botón _Reset_ en el Playground.
 
-<div class="output" style="min-height: 50px;"></div>
-
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
-</p>
-
-<textarea id="code" class="input" style="width: 95%;min-height: 200px;">
+```html live-sample___playing-with-svg
 <svg width="100%" height="100%">
-<rect width="100%" height="100%" fill="red" />
-<circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" />
-<polygon points="120,0 240,225 0,225" fill="green"/>
-<text x="50" y="100" font-family="Verdana" font-size="55"
-fill="white" stroke="black" stroke-width="2">
-Hello!
-</text>
+  <rect width="100%" height="100%" fill="red" />
+  <circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" />
+  <polygon points="120,0 240,225 0,225" fill="green" />
+  <text
+    x="50"
+    y="100"
+    font-family="Verdana"
+    font-size="55"
+    fill="white"
+    stroke="black"
+    stroke-width="2">
+    Hello!
+  </text>
 </svg>
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" disabled />
-</div>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
-
-h2 {
-  font-size: 16px;
-}
-
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
-
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-```
-
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-let code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-const htmlSolution = "";
-let solutionEntry = htmlSolution;
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.keyCode === 27) {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  const caretPos = textarea.selectionStart;
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 500, "", "", "hide-codepen-jsfiddle") }}
+{{EmbedLiveSample("playing-with-SVG", 700, 300)}}
 
 ## Resumen
 
-Este artículo le ha proporcionado un recorrido rápido por qué son los gráficos vectoriales y SVG, por qué es útil conocerlos y cómo incluir SVG en sus páginas web. Nunca tuvo la intención de ser una guía completa para aprender SVG, solo un indicador para que sepa qué es SVG si lo encuentra en sus viajes por la Web. Así que no se preocupe si todavía no siente que es un experto en SVG. Hemos incluido algunos enlaces a continuación que pueden ayudarlo si desea ir y obtener más información sobre cómo funciona.
+Este artículo te dio un recorrido rápido por qué son los gráficos vectoriales y SVG, por qué es útil conocerlos, y cómo incluir SVG dentro de tus páginas web. Nunca tuvo la intención de ser una guía completa para aprender SVG, sino solo una referencia para que sepas qué es SVG si te lo encuentras en tus andanzas por la web. Así que no te preocupes si sientes que todavía no eres un experto en SVG. Incluimos algunos enlaces a continuación que pueden ayudarte si quieres profundizar más en cómo funciona.
 
-En el próximo artículo de este módulo, exploraremos las imágenes adaptables en detalle, observando las herramientas que tiene HTML para permitirle hacer que sus imágenes funcionen mejor en diferentes dispositivos.
-
-## Vea también
+## Véase también
 
 - [Tutorial de SVG](/es/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started) en MDN
-- [Consejos rápidos para SVGs adaptables](http://thenewcode.com/744/Making-SVG-Responsive)
-- [Tutorial de Sara Soueidan sobre imágenes SVG adaptables](https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
-- [Beneficios de accesibilidad de SVG](https://www.w3.org/TR/SVG-access/)
-- [Cómo escalar SVGs](https://css-tricks.com/scale-svg/) (¡no es tan simple como los gráficos rasterizados!)
-
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/General_embedding_technologies", "Web/HTML/Guides/Responsive_images", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
+- [Tutorial de Sara Soueidan sobre imágenes SVG responsivas](https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
+- [Propiedades de SVG y CSS](https://css-tricks.com/svg-properties-and-css/)
+- [Cómo escalar SVG](https://css-tricks.com/scale-svg/) (¡no es tan simple como los gráficos rasterizados!)

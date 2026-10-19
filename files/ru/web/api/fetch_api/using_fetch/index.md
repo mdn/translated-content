@@ -335,7 +335,7 @@ none: по умолчанию.request: защита объекта заголо�
 
 Свойства объекта-ответа которые чаще всего используются:
 
-{{domxref("Response.status")}} — Целочисленное (по умолчанию 200) содержит код статуса ответа.{{domxref("Response.statusText")}} — Строка (по умолчанию"OK"), которая соответствует HTTP коду статуса.{{domxref("Response.ok")}} — как сказано ранее, это короткое свойство для упрощения проверки на то что статус ответа находится где-то между 200-299 включительно. Это свойство типа {{domxref("Boolean")}}.
+{{domxref("Response.status")}} — Целочисленное (по умолчанию 200) содержит код статуса ответа.{{domxref("Response.statusText")}} — Строка (по умолчанию"OK"), которая соответствует HTTP коду статуса.{{domxref("Response.ok")}} — как сказано ранее, это короткое свойство для упрощения проверки на то что статус ответа находится где-то между 200-299 включительно. Это свойство типа {{jsxref("Boolean")}}.
 
 Они так же могут быть созданы с помощью JavaScript, но реальная польза от этого есть только при использовании {{domxref("ServiceWorker_API", "сервис-воркеров")}}, когда вы предоставляете собственный ответ на запрос с помощью метода {{domxref("FetchEvent.respondWith","respondWith()")}}:
 
@@ -360,7 +360,7 @@ addEventListener("fetch", function (event) {
 
 Запрос и ответ могут содержать данные тела. Тело является экземпляром любого из следующих типов:
 
-{{domxref("ArrayBuffer")}}{{domxref("ArrayBufferView")}} (Uint8Array и подобные){{domxref("Blob")}}/Filestring{{domxref("URLSearchParams")}}{{domxref("FormData")}}
+{{jsxref("ArrayBuffer")}}{{jsxref("TypedArray")}} (Uint8Array и подобные){{domxref("Blob")}}/Filestring{{domxref("URLSearchParams")}}{{domxref("FormData")}}
 
 {{domxref("Body")}} примесь определяет следующие методы для извлечения тела (реализованы как для {{domxref("Request")}} так и для {{domxref("Response")}}). Все они возвращают promise, который в конечном итоге исполняется и выводит содержимое.
 

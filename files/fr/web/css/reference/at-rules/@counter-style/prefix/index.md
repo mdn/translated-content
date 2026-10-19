@@ -6,7 +6,7 @@ l10n:
   sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`prefix`** de la règle {{CSSxRef('@counter-style')}} permet de définir le contenu qui sera ajouté au début de la représentation du marqueur du compteur.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`prefix`** de la règle {{CSSxRef('@counter-style')}} permet de définir le contenu qui est ajouté au début de la représentation du marqueur du compteur.
 
 Lorsque la valeur du compteur est négative, le `prefix` apparaît avant le signe négatif et tout autre `<symbol>` ajouté par le descripteur {{CSSxRef("@counter-style/negative", "negative")}}.
 
@@ -24,7 +24,7 @@ prefix: url("bullet.png");
 Le descripteur **`prefix`** accepte comme valeur un seul `<symbol>`&nbsp;:
 
 - `<symbol>`
-  - : Spécifie un `<symbol>` — une {{CSSxRef("&lt;string&gt;")}}, une {{CSSxRef("&lt;image&gt;")}} ou un {{CSSxRef("&lt;custom-ident&gt;")}} — qui est ajouté avant la représentation du marqueur.
+  - : Définit un `<symbol>` — une {{CSSxRef("&lt;string&gt;")}}, une {{CSSxRef("&lt;image&gt;")}} ou un {{CSSxRef("&lt;custom-ident&gt;")}} — qui est ajouté avant la représentation du marqueur.
 
 ## Définition formelle
 

@@ -1,7 +1,7 @@
 ---
 title: "SVGAElement: referrerpolicy プロパティ"
 short-title: referrerpolicy
-slug: Web/API/SVGAElement/referrerpolicy
+slug: Web/API/SVGAElement/referrerPolicy
 l10n:
   sourceCommit: acb7e62eb10471075a46e78542cdb4798e82bfe7
 ---

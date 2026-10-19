@@ -3,8 +3,6 @@ title: String.prototype.blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
 ---
 
-{{deprecated_header}}
-
 {{jsxref("String")}} 值的 **`blink()`** 方法创建一个字符串，其在 `<blink>str</blink>` 中嵌入字符串，这使得字符串在旧版浏览器中闪烁。
 
 > [!NOTE]

@@ -41,7 +41,7 @@ slug: WebAssembly/Guides/Using_the_JavaScript_API
 
 ### Загрузка wasm-модуля в потоке
 
-Новшество в Firefox 58 - это возможность компилировать и создавать экземпляры (объекты) модулей WebAssembly непосредственно из исходников. Это достигается использованием методов [`WebAssembly.compileStreaming()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming) и [`WebAssembly.instantiateStreaming()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming). Эти методы занимают меньше места чем их непотоковые аналоги, потому что они могут преобразовывать байт-код прямо в модуль или экземпляр модуля, исключая необходимость отдельного размещения ответа ({{domxref("Response")}}) в объекте {{domxref("ArrayBuffer")}} после загрузки файла.
+Новшество в Firefox 58 - это возможность компилировать и создавать экземпляры (объекты) модулей WebAssembly непосредственно из исходников. Это достигается использованием методов [`WebAssembly.compileStreaming()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming) и [`WebAssembly.instantiateStreaming()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming). Эти методы занимают меньше места чем их непотоковые аналоги, потому что они могут преобразовывать байт-код прямо в модуль или экземпляр модуля, исключая необходимость отдельного размещения ответа ({{domxref("Response")}}) в объекте {{jsxref("ArrayBuffer")}} после загрузки файла.
 
 Следующий пример (см. наш демонстрационный файл [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) на GitHub и его работу [вживую](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)) показывает как использовать `instantiateStreaming()` чтобы загрузить wasm-модуль, импортировать JavaScript функцию в него, компилировать, создать его экземпляр и получить доступ к его экспортируемой функции. Все это в одном шаге.
 
@@ -62,7 +62,7 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 Если вы не можете или не хотите использовать методы описанные выше, то вы можете использовать вместо этого непотоковые методы [`WebAssembly.compile`](/ru/docs/WebAssembly/Reference/JavaScript_interface/compile) / [`WebAssembly.instantiate`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiate).
 
-Эти методы не получают непосредственно доступ к байт-коду, так что требуется дополнительный шаг помещения ответа загрузки файла в объект {{domxref("ArrayBuffer")}} перед компилированием и созданием экземпляра wasm-модуля.
+Эти методы не получают непосредственно доступ к байт-коду, так что требуется дополнительный шаг помещения ответа загрузки файла в объект {{jsxref("ArrayBuffer")}} перед компилированием и созданием экземпляра wasm-модуля.
 
 Эквивалентный код будет выглядеть так:
 
@@ -128,7 +128,7 @@ memory.grow(1);
 При превышении максимального значения, указанного при создании объекта памяти, будет выброшено исключение [`WebAssembly.RangeError`](/ru/docs/WebAssembly/Reference/JavaScript_interface/RangeError). Движок использует предоставленные верхние границы для резервирования памяти заранее, что делает расширение памяти более эффективным.
 
 > [!NOTE]
-> Так как размер объекта {{domxref("ArrayBuffer")}} неизменен, после успешного вызова метода [`Memory.prototype.grow()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) свойство buffer объекта памяти будет возвращать уже новый объект {{domxref("ArrayBuffer")}} (с новым размером в свойстве byteLength) и любые предыдущие объекты ArrayBuffer станут в некотором роде "отсоединёнными", или отключёнными от низкоуровневой памяти, к которой они ранее относились.
+> Так как размер объекта {{jsxref("ArrayBuffer")}} неизменен, после успешного вызова метода [`Memory.prototype.grow()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) свойство buffer объекта памяти будет возвращать уже новый объект {{jsxref("ArrayBuffer")}} (с новым размером в свойстве byteLength) и любые предыдущие объекты ArrayBuffer станут в некотором роде "отсоединёнными", или отключёнными от низкоуровневой памяти, к которой они ранее относились.
 
 Подобно функциям, диапазоны линейной памяти могут быть импортированы или определены внутри модуля. Также, модуль имеет возможность экспортировать свою память. Это означает, что JavaScript-код может получить доступ к объекту памяти WebAssembly либо c помощью создания нового объекта через конструктор `WebAssembly.Memory` и передачи его в импортируемый объект, либо с помощью получения объекта памяти через экспортируемый объект (через [`Instance.prototype.exports`](/ru/docs/WebAssembly/JavaScript_interface/Instance/exports)).
 
@@ -164,7 +164,7 @@ memory.grow(1);
    console.log(sum);
    ```
 
-Обратите внимание на то, что мы создаём представление данных {{domxref("Uint32Array")}} с помощью свойства buffer объекта памяти ([`Memory.prototype.buffer`](/ru/docs/WebAssembly/JavaScript_interface/Memory/buffer)), а не самого объекта памяти.
+Обратите внимание на то, что мы создаём представление данных {{jsxref("Uint32Array")}} с помощью свойства buffer объекта памяти ([`Memory.prototype.buffer`](/ru/docs/WebAssembly/JavaScript_interface/Memory/buffer)), а не самого объекта памяти.
 
 Импорт памяти почти такой же как импорт функций, только вместо JavaScript функций передаются объекты памяти. Импорт памяти полезен по двум причинам:
 

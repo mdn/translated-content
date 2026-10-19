@@ -8,7 +8,7 @@ original_slug: Web/CSS/initial
 
 ### Resumen
 
-**initial** es un valor permitido en todas las propiedades CSS. Fuerza la utilización del [valor inicial](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing) de la propiedad para el elemento al cual se aplica.
+**initial** es un valor permitido en todas las propiedades CSS. Fuerza la utilización del [valor inicial](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing#valor_inicial) de la propiedad para el elemento al cual se aplica.
 
 #### Para propiedades no heredadas
 

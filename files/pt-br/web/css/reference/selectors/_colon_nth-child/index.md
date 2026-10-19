@@ -35,7 +35,11 @@ A pseudo-classe **`nth-child`** é usada com apenas um argumento, que representa
 
 ### Sintaxe formal
 
-{{csssyntax}}
+```css-nolint
+:nth-child([ <An+B> | even | odd ] [of <complex-selector-list>]?) {
+  /* ... */
+}
+```
 
 ## Exemplos
 

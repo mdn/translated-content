@@ -13,7 +13,7 @@ slug: Web/API/Element/getElementsByTagName
 
 ## 语法
 
-```plain
+```js-nolint
 elements = element.getElementsByTagName(tagName)
 ```
 

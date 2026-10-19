@@ -1,12 +1,10 @@
 ---
-title: "HTML 属性: crossorigin"
+title: "`crossorigin` 属性 (HTML)"
 short-title: crossorigin
 slug: Web/HTML/Reference/Attributes/crossorigin
 l10n:
-  sourceCommit: c6cab7f1aa7dc9f3495486a5b46020db320101cf
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
-
-{{HTMLSidebar}}
 
 **`crossorigin`** 属性は、{{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("video")}} の各要素で有効です。[CORS](/ja/docs/Web/HTTP/Guides/CORS) への対応を提供し、したがって要素が読み取るデータのために CORS リクエストの構成を有効にします。要素によっては、属性は CORS 設定属性になります。
 
@@ -23,7 +21,7 @@ l10n:
 
 不正なキーワードや空文字列を指定すると、 `anonymous` が指定されたものと同じように扱われます。
 
-既定では（つまり、属性が指定されていない場合）、 CORS はまったく使用されません。ユーザーエージェントはそのリソースへの完全アクセス権限を求めず、オリジン間リクエストの場合、その要素の種類に応じて一定の制限が適用されます。
+デフォルトでは（つまり、属性が指定されていない場合）、 CORS はまったく使用されません。ユーザーエージェントはそのリソースへの完全アクセス権限を求めず、オリジン間リクエストの場合、その要素の種類に応じて一定の制限が適用されます。
 
 <table class="no-markdown">
   <tbody>
@@ -55,7 +53,9 @@ l10n:
 > [!NOTE]
 > `crossorigin` 属性は、 Chromium ベースのブラウザーでは [`rel="icon"`](/ja/docs/Web/HTML/Reference/Attributes/rel#icon) では対応していません。[公開 Chromium issue](https://crbug.com/1121645) を参照してください。
 
-### 例: `<script>` 要素の `crossorigin`
+## 例
+
+### `<script>` 要素の `crossorigin`
 
 以下の {{HTMLElement("script")}} 要素を使用すると、ユーザー資格情報を送信せずに `https://example.com/example-framework.js` スクリプトを実行します。
 
@@ -65,9 +65,9 @@ l10n:
   crossorigin="anonymous"></script>
 ```
 
-### 例: 資格情報付きのウェブマニフェスト
+### 資格情報付きのウェブマニフェスト
 
-資格情報を必要とするマニフェストを読み取るときは、同じオリジンからのファイル読み取りであっても `use-credentials` の値を使用する必要があります。
+資格情報を必要とする[マニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)を読み取るときは、同じオリジンからのファイル読み取りであっても `use-credentials` の値を使用する必要があります。
 
 ```html
 <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />

@@ -3,7 +3,7 @@ title: Introduction au côté serveur
 short-title: Introduction
 slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
 l10n:
-  sourceCommit: 710372d69095aaeadfba6c892f3e39ed63df4c54
+  sourceCommit: 8bc4e3fe45532906246a760bff0b06b7cd105c52
 ---
 
 {{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps")}}
@@ -85,14 +85,14 @@ Les développeur·euse·s web ne peuvent pas contrôler quel navigateur est util
 
 Le code côté serveur peut être écrit dans nombre de langages de programmation — les langages les plus populaires pour la programmation web côté serveur sont entre autres PHP, Python, Ruby, C#, et NodeJS (JavaScript). Le code côté serveur a plein accès au système d'exploitation du serveur et le·la développeur·euse est libre de choisir le langage (et la version) qu'il·elle veut utiliser.
 
-Typiquement, les développeur·euse·s écrivent leur code en utilisant des **frameworks web**. Les frameworks web sont des ensembles de fonctions, objets, règles et autres constructions de code conçus pour résoudre des problèmes courants, accélérer le développement et simplifier les différents types de tâches rencontrées dans un domaine particulier.
+Typiquement, les développeur·euse·s écrivent leur code en utilisant des **cadriciels web**. Les cadriciels web sont des ensembles de fonctions, objets, règles et autres constructions de code conçus pour résoudre des problèmes courants, accélérer le développement et simplifier les différents types de tâches rencontrées dans un domaine particulier.
 
-Encore une fois, bien que le code côté client et côté serveur utilisent des frameworks, les domaines d'application sont très différents et par conséquent les frameworks aussi. Les frameworks web côté client simplifient les tâches de mise en page et de présentation tandis que les frameworks web côté serveur fournissent des fonctionnalités «&nbsp;courantes&nbsp;» que vous avez probablement à implémenter vous-même autrement (comme le support des sessions, des utilisateur·ice·s et de l'authentification, l'accès à la base de données, les bibliothèques de templates, etc.).
+Encore une fois, bien que le code côté client et côté serveur utilisent des cadriciels (<i lang="en">frameworks</i> en anglais), les domaines d'application sont très différents et par conséquent les cadriciels aussi. Les cadriciels web côté client simplifient les tâches de mise en page et de présentation tandis que les cadriciels web côté serveur fournissent des fonctionnalités «&nbsp;courantes&nbsp;» que vous avez probablement à implémenter vous-même autrement (comme le support des sessions, des utilisateur·ice·s et de l'authentification, l'accès à la base de données, les bibliothèques de templates, etc.).
 
 > [!NOTE]
-> Les frameworks côté client sont souvent utilisés pour accélérer le développement du code côté client, mais vous pouvez également choisir d'écrire tout le code à la main&nbsp;; en vérité, écrire votre code à la main peut être plus rapide et plus efficace si vous n'avez besoin que d'une petite interface web très simple.
+> Les cadriciels côté client sont souvent utilisés pour accélérer le développement du code côté client, mais vous pouvez également choisir d'écrire tout le code à la main&nbsp;; en vérité, écrire votre code à la main peut être plus rapide et plus efficace si vous n'avez besoin que d'une petite interface web très simple.
 >
-> En revanche, vous ne pensez presque jamais à écrire les composants côté serveur d'une application web sans framework — implémenter des fonctionnalités vitales comme un serveur HTTP est très difficile à faire à partir de rien, comme disons en Python, alors que les frameworks web Python comme Django le fournissent tout prêt à l'emploi, accompagné d'autres outils très utiles.
+> En revanche, vous ne pensez presque jamais à écrire les composants côté serveur d'une application web sans cadriciel — implémenter des fonctionnalités vitales comme un serveur HTTP est très difficile à faire à partir de rien, comme disons en Python, alors que les cadriciels web Python comme Django le fournissent tout prêt à l'emploi, accompagné d'autres outils très utiles.
 
 ## Que peut-on faire côté serveur?
 
@@ -108,7 +108,7 @@ Les utilisations les plus courantes et les plus bénéfiques de la programmation
 
 Imaginez combien de produits sont disponibles sur Amazon et combien de posts ont été écrits sur Facebook. Créer une page statique distincte pour chaque produit ou article est totalement impossible.
 
-La programmation côté serveur nous permet plutôt de stocker l'information dans une base de données et de construire et retourner dynamiquement le HTML ainsi que d'autres types de fichiers (comme les PDF, images, etc.). Il est également possible de simplement retourner des données ({{Glossary("JSON")}}, {{Glossary("XML")}}, etc.) pour les afficher avec des frameworks côté client (cela réduit la charge de travail du serveur et la quantité de données qui doit être retournée).
+La programmation côté serveur nous permet plutôt de stocker l'information dans une base de données et de construire et retourner dynamiquement le HTML ainsi que d'autres types de fichiers (comme les PDF, images, etc.). Il est également possible de simplement retourner des données ({{Glossary("JSON")}}, {{Glossary("XML")}}, etc.) pour les afficher avec des cadriciels côté client (cela réduit la charge de travail du serveur et la quantité de données qui doit être retournée).
 
 Le serveur ne se limite pas à l'envoi d'informations à partir de bases de données, il peut retourner le résultat d'autres outils logiciels, ou les données de services de communication. Le contenu peut même être ciblé pour le type d'appareil client qui le reçoit.
 
@@ -159,7 +159,7 @@ La programmation côté serveur permet aux développeur·euse·s d'utiliser des 
 Cela permet, par exemple, à un site de savoir qu'un·e utilisateur·ice s'est déjà identifié·e et d'afficher des messages qui lui sont destinés, d'afficher son historique de commande, ou peut-être encore, dans le cas d'un jeu, lui permettre de reprendre là où il en est resté.
 
 > [!NOTE]
-> Visitez le site d'un journal qui a une offre d'abonnement et ouvrez des pages (par exemple [The Age](http://www.theage.com.au/)). Si vous continuez à visiter le site quelques heures/jours, éventuellement, vous commencerez à être redirigé vers des pages expliquant comment vous abonner, et vous ne pouvez plus accéder aux articles. Cette information est un exemple de session stockée dans des cookies.
+> Visitez le site d'un journal qui a une offre d'abonnement et ouvrez des pages (par exemple [The Age <sup>(angl.)</sup>](http://www.theage.com.au/)). Si vous continuez à visiter le site quelques heures/jours, éventuellement, vous commencez à être redirigé vers des pages expliquant comment vous abonner, et vous ne pouvez plus accéder aux articles. Cette information est un exemple de session stockée dans des cookies.
 
 ### Notifications et communication
 
@@ -193,8 +193,8 @@ Vous avez maintenant appris que le code côté serveur est exécuté sur un serv
 
 Vous devez également comprendre que c'est utile pour créer des sites web qui délivrent de l'information _efficacement_, adaptée à chaque utilisateur·ice et avoir une bonne idée de quelques choses que vous êtes capable de faire quand vous êtes programmeur·euse côté serveur.
 
-Finalement, vous devez comprendre que le code côté serveur peut être écrit dans de nombreux langages de programmation et que l'on peut utiliser des frameworks web pour rendre ce processus plus facile.
+Finalement, vous devez comprendre que le code côté serveur peut être écrit dans de nombreux langages de programmation et que l'on peut utiliser des cadriciels web pour rendre ce processus plus facile.
 
-Dans un futur article, nous vous aidons à choisir le framework le plus adapté pour la création d'un premier site. Ensuite, nous vous présentons les principales interactions client-serveur plus en détails.
+Dans un futur article, nous vous aidons à choisir le cadriciel le plus adapté pour la création d'un premier site. Ensuite, nous vous présentons les principales interactions client-serveur plus en détails.
 
 {{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps")}}

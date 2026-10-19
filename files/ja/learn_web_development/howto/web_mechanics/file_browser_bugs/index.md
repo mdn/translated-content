@@ -1,72 +1,79 @@
 ---
-title: ARIA に関するバグの報告方法
+title: ブラウザーにバグを報告するタイミングと方法
 slug: Learn_web_development/Howto/Web_mechanics/File_browser_bugs
-original_slug: Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
 l10n:
-  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
+  sourceCommit: 423161782178b119c64cd0b41bff8df20dc84a56
 ---
 
-ARIA 技術の状態は常にコミュニティに依存しています。実装上の課題に気づいた場合は、その時点から少し時間をかけて開発者に知らせてください。バグを報告する場合は、こちらから行ってください。
+ブラウザーはソフトウェアであり、他のソフトウェアと同様にバグが存在することがあります。開発しているウェブサイトが、期待通りに、あるいは MDN や仕様書などのドキュメントに記載されている通りに動作しないことに気づく場合があります。これは、あなたのコードのバグ、ドキュメントのバグ（そうでないことを願いますが！）、あるいはウェブサイトのテストに使っているブラウザーのバグのいずれかを示している可能性があります。この記事では、どれが原因なのかを判断する方法と、ブラウザーの問題だと判明した場合にバグを報告する方法について説明します。
 
-### スクリーンリーダー
+## 誰のバグなのか
 
-<table style="width: 100%;">
- <thead>
-  <tr>
-   <th>ソフトウェア</th>
-   <th>報告先</th>
-   <th>メモ</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://www.freedomscientific.com/products/software/jaws/">Freedom Scientific JAWS</a></td>
-   <td><a href="https://support.freedomscientific.com/Forms/TechSupport">JAWS technical support form</a></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Mozilla/Developer_guide/Inner_and_outer_windows">GW Micro Window Eyes</a></td>
-   <td><a href="mailto:support@gwmicro.com">Window-Eyes comments, questions, and feedback</a></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="https://www.nvaccess.org/">Non Visual Desktop Access (NVDA)</a></td>
-   <td><a href="https://github.com/nvaccess/nvda">File NVDA bugs</a></td>
-   <td>Discuss NVDA issues</td>
-  </tr>
-  </tbody>
-  </table>
+ブラウザーのバグを報告する前に、それが本当にブラウザーのバグであることを確認する必要があります。問題は、あなたのコード、ドキュメント、ブラウザー、仕様書の 4 つのうちのいずれかに由来する可能性があります。ブラウザーにバグを報告する前に、他の可能性を排除しておくことが重要です。一般的に、仕様書はすべての情報源の中で最も信頼できるものです。ブラウザーとドキュメントはどちらも仕様書に従いますが、それでも誤りがあることがあります。あなたのコードについては……そうですね、ブラウザーのバグだと決めつける前に、誤字や論理的な誤りがないか再確認するのは常に良いことです。
 
-### ブラウザー
+### テストケースの作成
 
-<table style="width: 100%;">
- <thead>
-  <tr>
-   <th>ソフトウェア</th>
-   <th>報告先</th>
-   <th>メモ</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Apple Safari</td>
-   <td><a href="https://www.webkit.org/reporting-bugs/">File WebKit.org bugs</a></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>Google Chrome</td>
-   <td><a href="https://issues.chromium.org/issues">File Chromium bugs</a></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>Mozilla Firefox</td>
-   <td><a href="https://bugzilla.mozilla.org/">File Firefox bugs </a></td>
-   <td>Use Component: Disability Access APIs</td>
-  </tr>
-  <tr>
-   <td>Opera</td>
-   <td><a href="https://bugs.opera.com/wizard/">File Opera bugs</a></td>
-   <td>Use [ARIA] in the summary field</td>
-  </tr>
- </tbody>
-</table>
+問題の原因を特定する最初のステップは、バグを再現する最小限のテストケースを作成することです。それは小さく単独で動作するものであるべきで、できれば外部依存や無関係なコードのない、CSS と JavaScript を埋め込んだ単一の HTML ファイルが望ましいです。これには 2 つの理由から有用です。
+
+- 問題があなた自身のコードや外部の依存関係によって発生している可能性を最小限に抑えられます。
+- バグを報告するときなど、誰かと問題について話し合いたい場合には、いずれにしてもテストケースを提供する必要があります。
+
+例えば、以下は {{cssxref(":autofill")}} 疑似クラスに関するバグの適切なテストケースになります。ここでは、doctype や `<head>` タグ、`<body>` タグ、input のラベルといったベストプラクティスを省略し、必要最小限まで簡略化していることに注目してください。関連するコードはまだそこに存在しているので、これで問題ありません。
+
+```html
+<style>
+  :autofill {
+    border: 3px solid darkorange;
+  }
+</style>
+<input id="name" name="name" type="text" autocomplete="name" />
+<input id="email" name="email" type="email" autocomplete="email" />
+```
+
+### コードのテスト
+
+HTML コードをローカルに保存して [テスト用サーバーを介して配信する](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) 方法や、[JSFiddle](https://jsfiddle.net/) や [CodePen](https://codepen.io/) のようなオンラインサービスを使ってライブデモを作成する方法があります。
+
+問題がブラウザーのバグかどうかを確認する最も簡単な方法は、[複数のブラウザー](/ja/docs/Learn_web_development/Extensions/Testing/Introduction) でテストケースを開いてみることです。ブラウザーごとに異なる動作をする場合は、ブラウザーのバグである可能性が高くなります。
+
+> [!NOTE]
+> プライベートウィンドウでのテスト、拡張機能の無効化、キャッシュのクリアなど、問題を切り分けるために他にも試せる手順があります。バグを報告する前に、これらも試してみるとよいでしょう。
+
+### 実装状況の確認
+
+まずはドキュメントを信頼し、その記述と一致しない動作をするブラウザーを調査することから始めましょう。予期しない動作のすべてがバグであるとは限りません。ブラウザーがまだ仕様書にマージされていない機能や動作を実装していることがあり、その結果としてドキュメント化されていない可能性が低くなります。また、機能が仕様書には記述されているものの、まだどのブラウザーにも実装されていないという可能性もあり、これもまたドキュメント化されていない場合があります。
+
+この時点で、実装状況を判断するためにさらに多くの情報源を確認する必要があります。以下はその確認先の一例です。
+
+- **MDN のブラウザー互換性の一覧表**：リファレンスページの「ブラウザーの互換性」節（例えば `shape()` CSS 関数のページの [この節](/ja/docs/Web/CSS/Reference/Values/basic-shape/shape#browser_compatibility) を確認してください）には、どのブラウザーがどの程度その機能をサポートしているかについての情報があります。これにより、対象のブラウザーにその機能が実装されていないことや、部分的にしか実装されていない（つまり既知のバグや制限がある）ことが分かる場合があります。
+- **仕様書のリポジトリ**：[WHATWG](https://github.com/whatwg)（DOM、HTML、fetch など）、[CSSWG](https://github.com/w3c/csswg-drafts)（CSS）、[TC39](https://github.com/tc39)（JavaScript）といった標準化団体はすべて GitHub 上で公開して作業を行っています。仕様書が最近変更されたかどうかや、テストしている機能について未解決の Issue があるかどうかを確認できます。
+- **コミュニティフォーラム**：[MDN コミュニティ](/ja/docs/MDN/Community/Communication_channels) は始めるのに最適な場所であり、他のウェブ開発フォーラムも同様です。ブラウザーがまだ何かを実装していないのか、既知のバグがあるのかについて質問するのに適した場所です。
+- **テストしているブラウザーの Issue トラッカー**：問題に関連する Issue が既に報告されている場合、それはそのバグが実在することの確認になり、他にすることは何もありません。実は、この Issue トラッカーについては次に取り上げます。
+
+もちろん、すべてのブラウザーが同じように動作していたとしても、それらすべてにバグが存在する可能性や、1 つのブラウザーだけが意図した動作を実装している可能性も残っています。ドキュメントが古い、あるいは誤っていることもあります。確実を期すには、仕様書を信頼できる情報源とみなすべきです（ブラウザーが仕様書に先行して機能を実装しているまれなケースを除きます）。すべての MDN リファレンスページの「仕様書」節（この [例](/ja/docs/Web/CSS/Reference/Values/basic-shape/shape#specifications) を参照）には、関連する仕様書へのリンクがあります。仕様書を読んで、本来どのような動作であるべきかを確認してください。仕様書はブラウザーのエンジニア向けに書かれているため、理解が難しい場合がありますが、できる限り読んでみてください。
+
+すべてのブラウザーと仕様書が一致しているにもかかわらず MDN が誤っていると判明した場合は、ぜひ [貢献](/ja/docs/MDN/Community/Getting_started) をご検討ください。
+
+## ブラウザーのバグトラッカー
+
+各ブラウザーには、既存のバグを検索したり新しいバグを報告したりできる独自のバグトラッカーがあります。インターフェースや手順は最初は少し馴染みがないと感じるかもしれませんが、通常は説明があります。次の表に主要なブラウザーのバグトラッカーを示します。
+
+| ブラウザー      | バグトラッカー                                        |
+| --------------- | ----------------------------------------------------- |
+| Apple Safari    | [WebKit Bugzilla](https://webkit.org/reporting-bugs/) |
+| Google Chrome   | [Chromium Issues](https://issues.chromium.org/issues) |
+| Mozilla Firefox | [Mozilla Bugzilla](https://bugzilla.mozilla.org/)     |
+| Opera           | [Opera Bug Wizard](https://bugs.opera.com/wizard/)    |
+
+新しいバグを報告する前に、既存のバグ報告を検索してください。問題と一致する既存のバグ報告が見つかった場合は、あなたが見つけたこと（例えば回避策を見つけた場合や、そのバグについてさらなる情報がある場合など）についてコメントを追加できます。ただし、「私もこのバグに遭遇しました」といった価値を付け加えないコメントは追加しないでください。既存のバグが見つからない場合は、新しいバグを報告してください。重複していた場合は誰かが教えてくれます。
+
+新しいバグを報告する際は、最小限のテストケースと、報告フォームが求めるその他の情報（ブラウザーのバージョン、期待される結果と実際の結果、スクリーンショットなど）を必ず含めてください。バグトラッカーによっては、レンダリングやネットワークなど、バグのコンポーネントやカテゴリーを選択するよう求められることもあります。ブラウザーの開発者はこれらのラベルを使って作業を整理しています。何を選べばよいか分からない場合は、最善だと思うものを選んでください。必要であれば誰かが再割り当てしてくれます。
+
+## ブラウザー以外のソフトウェアのバグを報告する
+
+バグがブラウザーと連携する可能性のあるブラウザー以外のソフトウェアに関連する場合は、該当するソフトウェアのベンダーにバグを報告する必要があります。次の表に、いくつかの支援技術とそのバグの報告先を示します。
+
+| ソフトウェア                                                                | 報告先                                                                                 |
+| --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| [Freedom Scientific JAWS](https://vispero.com/jaws-screen-reader-software/) | [JAWS technical support form](https://support.freedomscientific.com/Forms/TechSupport) |
+| [Non Visual Desktop Access (NVDA)](https://www.nvaccess.org/)               | [File NVDA bugs](https://github.com/nvaccess/nvda)                                     |

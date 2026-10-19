@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0fe8f4d7e9cd5b1b6a39e9fa047468206d3c3ca2
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 {{domxref("HTMLObjectElement")}} 接口的 **`useMap`** 属性返回一个反映 [`useMap`](/zh-CN/docs/Web/HTML/Reference/Elements/object#usemap) HTML 属性的字符串，指定要使用的 {{HTMLElement("map")}} 元素。
 

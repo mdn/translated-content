@@ -23,7 +23,7 @@ console.log(Reflect.getPrototypeOf(proto1));
 
 ## 语法
 
-```plain
+```js-nolint
 Reflect.getPrototypeOf(target)
 ```
 

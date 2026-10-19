@@ -2,7 +2,7 @@
 title: IndexedDB API
 slug: Web/API/IndexedDB_API
 l10n:
-  sourceCommit: 1e0a2838cb7781245288eec60fbf7606bb6ac8dc
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{DefaultAPISidebar("IndexedDB")}} {{AvailableInWorkers}}

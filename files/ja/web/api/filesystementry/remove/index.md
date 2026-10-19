@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e4cc8b707a1056c14a6316079798b95cb39b725f
 ---
 
-{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}
 
 {{domxref("FileSystemEntry")}} インターフェイスの **`remove()`** メソッドは、ファイルシステムからファイルまたはディレクトリーを除去します。ディレクトリーは空でなければ除去されません。
 

@@ -159,7 +159,7 @@ MDN の[ウェブパフォーマンスの学習領域](/ja/docs/Learn_web_develo
 ### HTTP
 
 - [Content-encoding](/ja/docs/Web/HTTP/Reference/Headers/Content-Encoding)
-- リソースヒント（[dns-prefetch](/ja/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control)、[preconnect](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect)、[prefetch](/ja/docs/Glossary/Prefetch)、事前レンダリングによる
+- リソースヒント（[dns-prefetch](/ja/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control)、[preconnect](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect)、[prefetch](/ja/docs/Glossary/Prefetch)、事前レンダリングによる）
 - [HTTP/2](/ja/docs/Web/HTTP/Guides/Messages#http2_メッセージ)
 - [クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)
 

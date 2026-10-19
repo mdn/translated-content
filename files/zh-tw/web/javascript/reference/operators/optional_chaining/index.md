@@ -27,7 +27,7 @@ console.log(adventurer.someNonExistentMethod?.());
 
 ## 語法
 
-```plain
+```js-nolint
 obj?.prop
 obj?.[expr]
 arr?.[index]

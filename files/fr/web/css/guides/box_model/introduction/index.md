@@ -3,7 +3,7 @@ title: Introduction au modèle de boîte CSS
 short-title: Introduction
 slug: Web/CSS/Guides/Box_model/Introduction
 l10n:
-  sourceCommit: ca5d9f9e63b460fc0c9e15ac57d9739e10e4ea0d
+  sourceCommit: 298079b550c76f20de6611c4ecdde4c30dc68b2b
 ---
 
 Lors de la mise en page d'un document, le moteur de rendu du navigateur représente chaque élément sous la forme d'une boîte rectangulaire selon le **modèle de boîte CSS de base**. CSS définit la taille, la position et les propriétés (couleur, arrière-plan, taille de la bordure, etc.) de ces boîtes.
@@ -34,9 +34,9 @@ L'épaisseur des bordures est déterminée par les propriétés {{CSSxRef("borde
 
 La **zone de marge**, délimitée par le bord de la marge, étend la zone de bordure pour inclure une zone vide utilisée pour séparer l'élément de ses voisins. Ses dimensions sont la _largeur de la boîte de marge_ et la _hauteur de la boîte de marge_.
 
-La taille de la zone de marge est déterminée par les propriétés {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}}, {{CSSxRef("margin-left")}} et la propriété abrégée {{CSSxRef("margin")}}. Lorsque la [fusion des marges](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing) se produit, la zone de marge n'est pas clairement définie car les marges sont partagées entre les boîtes.
+La taille de la zone de marge est déterminée par les propriétés {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}}, {{CSSxRef("margin-left")}} et la propriété abrégée {{CSSxRef("margin")}}. Lorsque la [fusion des marges](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing) se produit, la zone de marge n'est pas clairement définie, car les marges sont partagées entre les boîtes.
 
-Enfin, notez que pour les éléments en ligne non remplacés, l'espace occupé (la contribution à la hauteur de la ligne) est déterminé par la propriété {{CSSxRef('line-height')}}, même si les bordures et le remplissage sont toujours affichés autour du contenu.
+Enfin, notez que pour les éléments en incise non remplacés, l'espace occupé (la contribution à la hauteur de la ligne) est déterminé par la propriété {{CSSxRef('line-height')}}, même si les bordures et le remplissage sont toujours affichés autour du contenu.
 
 ## Voir aussi
 

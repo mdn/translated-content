@@ -9,13 +9,13 @@ slug: Web/HTTP/Reference/Status/407
 
 ## 状态
 
-```plain
+```http
 407 Proxy Authentication Required
 ```
 
 ## 响应示例
 
-```plain
+```http
 HTTP/1.1 407 Proxy Authentication Required
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 Proxy-Authenticate: Basic realm="Access to internal site"

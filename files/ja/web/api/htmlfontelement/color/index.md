@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 4656260748aea78929639c4bf776d643d9911a82
 ---
 
-{{deprecated_header}}{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}
 
 廃止された **`HTMLFontElement.color`** プロパティは、HTML の [`color`](/ja/docs/Web/HTML/Reference/Elements/font#color) 属性を反映した文字列で、名前付き色または 16 進数の #RRGGBB 形式で指定した色が入ります。
 

@@ -1,51 +1,43 @@
 ---
-title: RegExp.$1-$9
+title: RegExp.$1, …, RegExp.$9
+short-title: $1, …, $9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
+l10n:
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{non-standard_header}}
+> [!NOTE]
+> Toutes les propriétés statiques de `RegExp` qui exposent l'état de la dernière correspondance globalement sont obsolètes. Voir [Fonctionnalités RegExp obsolètes](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) pour plus d'informations.
 
-Les propriétés non-standard **$1, $2, $3, $4, $5, $6, $7, $8, $9** sont des propriétés statiques accessibles en lecture qui contiennent les différents groupes capturés par une expression rationnelle.
-
-## Syntaxe
-
-```js
-RegExp.$1;
-RegExp.$2;
-RegExp.$3;
-RegExp.$4;
-RegExp.$5;
-RegExp.$6;
-RegExp.$7;
-RegExp.$8;
-RegExp.$9;
-```
+La propriété d'accesseur statique **`RegExp.$1, …, RegExp.$9`** retourne les sous-chaînes de caractères entre parenthèses correspondant aux groupes capturés.
 
 ## Description
 
-Les propriétés $1, ..., $9 sont des propriétés statiques. Ce ne sont pas des propriétés rattachées à une expression rationnelle donnée. Pour cette raison, on utilisera toujours la syntaxe `RegExp.$1`, ..., `RegExp.$9`.
+Comme `$1` à `$9` sont des propriétés statiques de {{JSxRef("RegExp")}}, vous les utilisez toujours sous la forme `RegExp.$1`, `RegExp.$2`, etc., plutôt qu'en tant que propriétés d'un objet `RegExp` que vous avez créé.
 
-Les valeurs de ces propriétés ne sont accessibles qu'en lecture et sont modifiées par le moteur à chaque fois qu'une nouvelle correspondance est trouvée.
+Les valeurs de `$1, …, $9` sont mises à jour chaque fois qu'une instance de `RegExp` (mais pas d'une sous-classe de `RegExp`) réussit une correspondance. Si aucune correspondance n'a été effectuée, ou si la dernière correspondance ne contient pas le groupe capturant correspondant, la propriété respective est une chaîne de caractères vide. L'accesseur en écriture de chaque propriété est `undefined`, vous ne pouvez donc pas modifier les propriétés directement.
 
-Le nombre de groupe d'une expression rationnelle n'est pas limité. Cependant, l'objet `RegExp` ne contient que les neufs premiers groupes. Pour accéder à chacun des groupes liés à une expression rationnelle donnée, on pourra utiliser les indices du tableau relevant les correspondances.
+Le nombre de sous-chaînes de caractères entre parenthèses possibles est illimité, mais l'objet `RegExp` ne peut contenir que les neuf premières. Vous pouvez accéder à toutes les sous-chaînes de caractères entre parenthèses par les index du tableau retourné.
 
-Ces propriétés peuvent être utilisées pour le texte de remplacement de la méthode {{jsxref("String.replace")}}. Avec cette méthode, on ne préfixera pas les valeurs par `RegExp` (voir l'exemple ci-après), lorsque les parenthèses groupantes ne sont pas utilisées dans l'expression, `$n` sera interprété littérallement (avec `n` un entier positif).
+`$1, …, $9` peuvent également être utilisés dans la chaîne de caractères de remplacement de {{JSxRef("String.prototype.replace()")}}, mais cela n'a aucun rapport avec les propriétés héritées `RegExp.$n`.
 
 ## Exemples
 
-Dans le script qui suit, on utilise {{jsxref("String.prototype.replace()", "replace()")}} d'une instance de {{jsxref("String")}} pour inverser le premier mot et le dernier et placer une virgule entre. Le script utilise `$1` et `$2` pour faire référence aux groupes de l'expression rationnelle :
+### Utiliser `$n` avec `RegExp.prototype.test()`
+
+Le script suivant utilise la méthode {{JSxRef("RegExp.prototype.test()")}} pour récupérer un nombre dans une chaîne de caractères générique.
 
 ```js
-var re = /(\w+)\s(\w+)/;
-var str = "Jean Biche";
-str.replace(re, "$2, $1"); // "Biche, Jean"
-RegExp.$1; // "Jean"
-RegExp.$2; // "Biche"
+const chaine = "Test 24";
+const nombre = /(\d+)/.test(chaine) ? RegExp.$1 : "0";
+nombre; // "24"
 ```
+
+Veuillez noter que toute opération impliquant l'utilisation d'autres expressions rationnelles entre un appel à `re.test(chaine)` et la propriété `RegExp.$n` peut avoir des effets secondaires, de sorte que l'accès à ces propriétés spéciales doit être effectué immédiatement, sinon le résultat peut être inattendu.
 
 ## Spécifications
 
-Ces propriétés ne sont pas standard, elles ne font partie d'aucune spécification.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
@@ -53,8 +45,8 @@ Ces propriétés ne sont pas standard, elles ne font partie d'aucune spécificat
 
 ## Voir aussi
 
-- {{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
+- La propriété statique [`RegExp.input` (`$_`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input)
+- La propriété statique [`RegExp.lastMatch` (`$&`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch)
+- La propriété statique [`RegExp.lastParen` (`$+`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastParen)
+- La propriété statique [`RegExp.leftContext` (`` $` ``)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/leftContext)
+- La propriété statique [`RegExp.rightContext` (`$'`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/rightContext)

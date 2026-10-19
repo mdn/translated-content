@@ -11,15 +11,15 @@ La méthode **`of()`** des instances de {{JSxRef("Intl.DisplayNames")}} reçoit 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.DisplayNames.prototype.of()")}}
 
 ```js interactive-example
-const regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
-const regionNamesInTraditionalChinese = new Intl.DisplayNames(['zh-Hant'], {
-  type: 'region',
+const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" });
+const regionNamesInTraditionalChinese = new Intl.DisplayNames(["zh-Hant"], {
+  type: "region",
 });
 
-console.log(regionNamesInEnglish.of('US'));
+console.log(regionNamesInEnglish.of("US"));
 // Résultat attendu : "United States"
 
-console.log(regionNamesInTraditionalChinese.of('US'));
+console.log(regionNamesInTraditionalChinese.of("US"));
 // Résultat attendu : "美國"
 ```
 

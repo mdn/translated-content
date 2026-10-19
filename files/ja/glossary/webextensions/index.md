@@ -1,11 +1,11 @@
 ---
 title: WebExtensions
 slug: Glossary/WebExtensions
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-WebExtensions は Firefox でブラウザー拡張機能を開発するためのクロスブラウザーシステムです。このシステムには API が提供され、これはかなりにわたって様々なブラウザー、例えば Mozilla Firefox, Google Chrome, Opera Browser, Microsoft Edge をサポートします。
+WebExtensions は Firefox でブラウザー拡張機能を開発するためのブラウザー横断のシステムです。このシステムには API が提供され、これはかなり広範に様々なブラウザー、例えば Mozilla Firefox, Google Chrome, Opera Browser, Microsoft Edge, Apple Safari に対応しています。
 
 ## 関連項目
 

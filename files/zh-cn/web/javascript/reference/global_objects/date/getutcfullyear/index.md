@@ -20,7 +20,7 @@ console.log(date2.getUTCFullYear());
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.getUTCFullYear()
 ```
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_header}}
+{{APIRef("CSSOM")}}
 
 {{domxref("CSSValueList")}} 接口的 **`length`** 只读属性表示列表中 {{domxref("CSSValue")}} 的数量。索引的有效值范围是 `0` 到 `length-1`（包含）。
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 **`HTMLFrameSetElement`** インターフェイスは、(継承している普通の {{domxref("HTMLElement")}} インターフェイスに加えて) {{HTMLELEment("frameset")}} 要素を操作するための特別なプロパティを提供します。
 

@@ -87,7 +87,7 @@ var z = new Int32Array(buffer, 0, 4);
 
 ## 兼容性说明
 
-Starting with ECMAScript 2015 (ES6), `In32Array` constructors require to be constructed with a {{jsxref("new")}} operator. Calling a `Int32Array` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
+从 ECMAScript 2015（ES6）开始，`Int32Array` 构造函数必须使用 {{jsxref("new")}} 运算符来构造。如果不使用 `new` 而把 `Int32Array` 构造函数当作普通函数调用，则会抛出 {{jsxref("TypeError")}}。
 
 ```js example-bad
 var dv = Int32Array([1, 2, 3]);

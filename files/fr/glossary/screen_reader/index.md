@@ -2,7 +2,7 @@
 title: Lecteur d'écran
 slug: Glossary/Screen_reader
 l10n:
-  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
 Les lecteurs d'écran sont des applications logicielles qui tentent de transmettre ce qui est affiché à l'écran de manière non visuelle, généralement sous forme de synthèse vocale, mais aussi en braille ou en icônes sonores. Les lecteurs d'écran sont essentiels pour les utilisateur·ice·s malvoyant·e·s, illettré·e·s ou ayant un trouble d'apprentissage. Il existe quelques lecteurs d'écran sous forme d'extensions de navigateur, mais la plupart fonctionnent à l'échelle du système pour toutes les applications, et non seulement pour le navigateur.
@@ -23,7 +23,7 @@ Voir [Guide d'utilisation de VoiceOver pour Mac](https://support.apple.com/fr-fr
 
 Narrateur est une application de lecture d'écran intégrée à Windows 10 et Windows 11.
 
-Voir [Guide complet de Narrateur](https://support.microsoft.com/fr-fr/accessibility/windows/narrator/complete-guide-to-narrator).
+Voir [Guide complet de Narrateur](https://support.microsoft.com/en-us/accessibility/windows/narrator/complete-guide-to-narrator).
 
 ### ChromeVox
 

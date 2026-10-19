@@ -3,7 +3,7 @@ title: HTTP ヘッダー
 short-title: ヘッダー
 slug: Web/HTTP/Reference/Headers
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 **HTTP ヘッダー**を使用すると、クライアントとサーバーは、リクエストまたはレスポンスのメッセージに追加情報を渡すことができます。
@@ -11,7 +11,7 @@ HTTP/1.X では、ヘッダーは、大文字と小文字を区別しない名�
 HTTP/2 以降では、開発者ツールで表示すると、ヘッダーは小文字で示され (`accept: */*`)、[擬似ヘッダー](/ja/docs/Web/HTTP/Guides/Messages#擬似ヘッダー)の特別なグループには接頭辞としてコロンが付きます (`:status: 200`)。
 それぞれのプロトコルバージョンの構文に関する詳細情報は、 [HTTP メッセージ](/ja/docs/Web/HTTP/Guides/Messages)ページで探すことができます。
 
-独自の私的なヘッダーは、以前は `X-` 接頭辞を使用していましたが、この慣習は、標準外のフィールドが標準になったときに不便が発生するため、2012 年に [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648) で非推奨になりました。それ以外のヘッダーは [IANA HTTP フィールド名レジストリー](https://www.iana.org/assignments/http-fields/http-fields.xhtml)に収録されており、その基になったものは [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229) で定義されていました。
+独自の私的なヘッダーは、以前は `X-` 接頭辞を使用していましたが、この慣習は、標準外のフィールドが標準になったときに不便が発生するため、2012 年に [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648) で非推奨になりました。それ以外のヘッダーは [IANA HTTP フィールド名レジストリー](https://www.iana.org/assignments/http-fields)に収録されており、その基になったものは [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229) で定義されていました。
 IANA レジストリーでは、[ステータスに関する情報](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status)を含めてヘッダーが掲載されています。
 
 ヘッダーは、そのコンテキストに応じて分類できます。
@@ -173,6 +173,18 @@ IANA レジストリーでは、[ステータスに関する情報](https://gith
 - {{HTTPHeader("Content-Location")}}
   - : 返すデータの代替データの場所を示します。
 
+## メッセージ署名
+
+- {{HTTPHeader("Accept-Signature")}}
+  - : [`Accept-Signature`](https://www.rfc-editor.org/info/rfc9421/#section-5.1) ヘッダーは、署名付きのレスポンスまたは後続のリクエストを要求するもので、署名対象の要素と署名パラメーターを指定します。
+- {{HTTPHeader("Signature")}}
+  - : [`Signature`](https://www.rfc-editor.org/info/rfc9421/#section-4.2) ヘッダーには、1 つ以上のラベル付き署名値が含まれます。それぞれのラベルは、`Signature-Input` の項目に対応しています。
+- {{HTTPHeader("Signature-Input")}}
+  - : [`Signature-Input`](https://www.rfc-editor.org/info/rfc9421/#section-4.1) ヘッダーは、それぞれの署名によって網羅されるメッセージ要素の順序付きリストと、作成時刻や鍵識別子などのメタデータを識別します。
+
+> [!NOTE]
+> これらの定義は RFC 9421 に準拠しています。[Signed HTTP Exchanges (SXG) 草案](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html) では、互換性のない意味づけを持つ `Accept-Signature` および `Signature` のほか、これとは異なる `Signed-Headers` ヘッダーも定義されています。しかし、SXG を実装している唯一のブラウザーである Chromium は、これらの HTTP ヘッダーに対応していません。
+
 ## 環境設定
 
 環境設定をリクエストに含めて送信することで、リクエストやレスポンスのオプションの動作を示すことができます。
@@ -266,9 +278,9 @@ HTTP の[範囲付きリクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)�
 - {{HTTPHeader("X-XSS-Protection")}}
   - : クロスサイトスクリプティングのフィルタリングを有効化します。
 
-## メタデータ読み取りリクエストヘッダー
+## メタデータ取得リクエストヘッダー
 
-{{Glossary("Fetch metadata request header", "メタデータ読み取りリクエストヘッダー")}}は、リクエストが発生したときのコンテキストに関する情報を提供します。サーバーはこれを利用して、リクエストがどこから来たのか、リソースがどのように使用されるのかに基づいて、リクエストを許可すべきかどうかを判断することができます。
+{{Glossary("Fetch metadata request header", "メタデータ取得リクエストヘッダー")}}は、リクエストが発生したときのコンテキストに関する情報を提供します。サーバーはこれを利用して、リクエストがどこから来たのか、リソースがどのように使用されるのかに基づいて、リクエストを許可すべきかどうかを判断することができます。
 
 - {{HTTPHeader("Sec-Fetch-Site")}}
   - : リクエスト開始元のオリジンと宛先のオリジンとの関係を示します。これは構造化ヘッダーで、値はトークンであり、取りうる値は `cross-site`, `same-origin`, `same-site`, `none` です。
@@ -279,12 +291,22 @@ HTTP の[範囲付きリクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)�
 - {{HTTPHeader("Sec-Fetch-Dest")}}
   - : リクエストの宛先を示します。これは構造化ヘッダーで、値はトークンであり、取りうる値は `audio`, `audioworklet`, `document`, `embed`, `empty`, `font`, `image`, `manifest`, `object`, `paintworklet`, `report`, `script`, `serviceworker`, `sharedworker`, `style`, `track`, `video`, `worker`, `xslt` です。
 
-以下のリクエストヘッダーは、厳密には「メタデータ読み取りリクエストヘッダー」ではありませんが、同様にリソースがどのように使用されるかのコンテキストに関する情報を提供します。サーバーはキャッシュの動作や返す情報を変更するためにこれらを使用するかもしれません。
+以下のリクエストヘッダーは、厳密には「メタデータ取得リクエストヘッダー」ではありませんが、同様にリソースがどのように使用されるかのコンテキストに関する情報を提供します。サーバーはキャッシュの動作や返す情報を変更するためにこれらを使用するかもしれません。
 
 - {{HTTPHeader("Sec-Purpose")}}
   - : リクエストがユーザーエージェントによって直ちに使用される以外の目的である場合に、その目的を示します。このヘッダーは現在一つの可能な値 `prefetch` を持っており、これはリソースが将来のナビゲーションのために優先的に読み取られていることを示します。
 - {{HTTPHeader("Service-Worker-Navigation-Preload")}}
   - : サービスワーカーの起動中に、リソースに対して {{domxref("Window/fetch", "fetch()")}} で先制的なリクエストをする際に送られるリクエストヘッダーです。この値は {{domxref("NavigationPreloadManager.setHeaderValue()")}} で設定され、通常の `fetch()` 処理とは異なる形でリソースを返すべきことをサーバーに通知するために使用することができます。
+
+## ストレージアクセス取得ヘッダー
+
+これらのヘッダーにより、[ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API) のワークフローを強化することができます。
+
+- {{HTTPHeader("Sec-Fetch-Storage-Access")}}
+  - : 現在のフェッチコンテキストの「ストレージアクセス状態」を示します。この状態は、`none`、`inactive`、`active` のいずれかになります。
+    サーバーは、`Activate-Storage-Access`を返答することで、ブラウザーに対して、`inactive` の権限を有効にしてリクエストを再試行するよう要求したり、ステータスが `active` の場合は、サードパーティクッキーへのアクセス権限を持つリソースを読み込むよう要求したりすることができます。
+- {{HTTPHeader("Activate-Storage-Access")}}
+  - : `Sec-Fetch-Storage-Access` へのレスポンスとして使用され、ブラウザーがセキュアアクセス用の既存の権限を有効にしてクッキーを使用してリクエストを再試行可能であること、またはすでに権限が有効になっている場合はクッキーへのアクセス権限を保有してリソースを読み込めることを示します。
 
 ## サーバー送信イベント
 
@@ -409,18 +431,29 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)は一�
 > [!NOTE]
 > ユーザーエージェントクライアントヒントは、データの漏洩に使用することができる[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の委譲が必要であるため、[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)内では利用できません。
 
-#### 端末クライアントヒント
+#### 端末およびレスポンシブ画像クライアントヒント
 
-- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : 画像リソースを選択するために、画面の {{HTTPHeader("DPR")}} クライアントヒントが使用されるリクエストにおける、画像機器とピクセルの比 (DPR) を確認するために使用されるレスポンスヘッダーです。
-- {{HTTPHeader("Device-Memory")}}
+- {{HTTPHeader("Sec-CH-Device-Memory")}} {{experimental_inline}}
   - : 利用できるクライアント RAM メモリーのおおよその量。これは[端末メモリー API](/ja/docs/Web/API/Device_Memory_API) の一部です。
-- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{non-standard_inline}}
+- {{HTTPHeader("Sec-CH-DPR")}} {{experimental_inline}}
   - : クライアント端末のピクセル比率（{{Glossary("CSS pixel","CSS ピクセル")}}ごとの物理的デバイスピクセル数）を提供したリクエストヘッダー。
-- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{non-standard_inline}}
+- {{HTTPHeader("Sec-CH-Viewport-Height")}} {{experimental_inline}}
+  - : クライアントのレイアウトビューポートの高さを {{Glossary("CSS pixel","CSS pixels")}}で指定するリクエストヘッダーです。
+- {{HTTPHeader("Sec-CH-Viewport-Width")}} {{experimental_inline}}
   - : クライアントのレイアウトビューポートの幅を {{Glossary("CSS pixel","CSS ピクセル")}}で指定するリクエストヘッダーです。
+- {{HTTPHeader("Sec-CH-Width")}} {{experimental_inline}}
+- : 画像の幅を {{Glossary("CSS pixel","CSS ピクセル")}}で指定するリクエストヘッダーです。
+
+##### 非推奨の端末およびレスポンシブ画像クライアントヒント
+
+- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : {{HTTPHeader("Sec-CH-Device-Memory")}} として標準化されました。
+- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : {{HTTPHeader("Sec-CH-DPR")}} として標準化されました。
+- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : {{HTTPHeader("Sec-CH-Viewport-Width")}} として標準化されました。
 - {{HTTPHeader("Width")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : リソースの希望する幅を物理ピクセル（画像の内在サイズ）で示すリクエストヘッダーです。
+  - : {{HTTPHeader("Sec-CH-Width")}} として標準化されました。
 
 #### ネットワーククライアントヒント
 
@@ -474,23 +507,19 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)は一�
 詳しい情報は[トピック API](/ja/docs/Web/API/Topics_API) のドキュメントを参照してください。
 
 - {{HTTPHeader("Observe-Browsing-Topics")}} {{experimental_inline}} {{non-standard_inline}}
-  - : [トピック API を有効にする機能](/ja/docs/Web/API/Topics_API/Using#what_api_features_enable_the_topics_api)によって生成されたリクエストに対するレスポンスを監視し、呼び出されたサイトの URL から推測される興味深いトピックをマークするために使用されるレスポンスヘッダーです。
+  - : トピック API を有効にする機能によって生成されたリクエストに対するレスポンスを監視し、呼び出されたサイトの URL から推測される興味深いトピックをマークするために使用されるレスポンスヘッダーです。
 - {{HTTPHeader("Sec-Browsing-Topics")}} {{experimental_inline}} {{non-standard_inline}}
   - : 広告技術プラットフォームが個人設定された広告を選んで表示するために使用する、関連付けられたリクエストとともに、現在のユーザーが選択したトピックを送信するリクエストヘッダーです。
 
 ### その他
 
-- {{HTTPHeader("Accept-Signature")}} {{experimental_inline}}
-  - : クライアントは [`Accept-Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-accept-signature-header) ヘッダーフィールドを送信して、利用可能な署名を利用する意図を示したり、対応している署名の種類を示したりすることができます。
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : このリクエストが TLS early data で送信されたことを示します。
+- {{HTTPHeader("Idempotency-Key")}} {{experimental_inline}}
+  - : `POST` および `PATCH` リクエストに対して固有のキーを提供し、これらのリクエストをべき等なものにすることができます。
 - {{HTTPHeader("Set-Login")}} {{experimental_inline}}
   - : 連合 ID プロバイダー (IdP) が送信するレスポンスヘッダーで、ログイン状態を設定します。つまり、現在のブラウザーで IdP にユーザーがログインしているかどうかということです。
     これはブラウザーで保存され、 [FedCM API](/ja/docs/Web/API/FedCM_API) で使用されます。
-- {{HTTPHeader("Signature")}} {{experimental_inline}}
-  - : [`Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-signature-header) ヘッダーフィールドは、交換のための署名のリストを伝え、それぞれはその署名の権威を決定して、そして更新する方法についての情報を伴います。
-- {{HTTPHeader("Signed-Headers")}} {{experimental_inline}}
-  - : [`Signed-Headers`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-signed-headers-header) ヘッダーフィールドは、シグネチャに含めるためのレスポンスヘッダーフィールドの順序付きリストを識別します。
 - {{HTTPHeader("Speculation-Rules")}} {{experimental_inline}}
   - : [投機ルール](/ja/docs/Web/API/Speculation_Rules_API) の JSON 定義を格納したテキストリソースを指す URL のリストを提供します。レスポンスが HTML 文書の場合、これらのルールは文書の投機ルール設定に追加されます。
 - {{HTTPHeader("Sec-Speculation-Tags")}} {{experimental_inline}}
@@ -507,7 +536,7 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)は一�
 - {{HTTPHeader("X-Forwarded-Proto")}} {{non-standard_inline}}
   - : クライアントがプロキシーやロードバランサーに接続するために使用したプロトコル (HTTP または HTTPS) を識別します。
 - {{HTTPHeader("X-DNS-Prefetch-Control")}} {{non-standard_inline}}
-  - : ユーザーがたどるであろうリンクや、ドキュメントが参照する画像、 CSS、 JavaScript などのリソースのドメイン名解決をブラウザーが事前に行う機能である、 DNS 先読みを制御します。
+  - : DNS 先読み機能を制御します。これは、ブラウザーが、ユーザーがアクセスする可能性のあるリンクや、画像、CSS、JavaScript など、文書内で参照されているアイテムの URL について、事前にドメイン名解決を行う機能です。
 - {{HTTPHeader("X-Robots-Tag")}} {{non-standard_inline}}
   - : [`X-Robots-Tag`](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag) ヘッダーは、一般の検索エンジンの結果でウェブページをどのように索引付けをするかを示します。このヘッダーは [`<meta name="robots">`](/ja/docs/Web/HTML/Reference/Elements/meta/name/robots) と等価です。
 
@@ -520,6 +549,6 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)は一�
 
 ## 関連情報
 
-- [Wikipedia の HTTP ヘッダーの一覧のページ](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)（英語）
-- [IANA レジストリー](https://www.iana.org/assignments/http-fields/http-fields.xhtml)（英語）
-- [HTTP Working Group](https://httpwg.org/specs/)（英語）
+- [Wikipedia の HTTP ヘッダーの一覧のページ](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)<sup>(英語)</sup>
+- [IANA レジストリー](https://www.iana.org/assignments/http-fields)<sup>(英語)</sup>
+- [HTTP Working Group](https://httpwg.org/specs/)<sup>(英語)</sup>

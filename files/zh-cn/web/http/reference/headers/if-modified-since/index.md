@@ -15,7 +15,7 @@ slug: Web/HTTP/Reference/Headers/If-Modified-Since
 
 ## 语法
 
-```plain
+```http
 If-Modified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 ```
 
@@ -40,7 +40,7 @@ If-Modified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 
 ## 示例
 
-```plain
+```http
 If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 

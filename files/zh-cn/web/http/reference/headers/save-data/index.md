@@ -12,7 +12,7 @@ Save-Data 请求头字段是一个布尔值，在请求中，表示客户端对�
 
 ## 语法
 
-```plain
+```http
 Save-Data: <sd-token>
 ```
 

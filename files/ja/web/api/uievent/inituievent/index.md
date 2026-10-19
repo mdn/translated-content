@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("UI Events")}} {{deprecated_header}}
+{{APIRef("UI Events")}}
 
 **`UIEvent.initUIEvent()`** メソッドは、一度作成された UI イベントを初期化します。
 

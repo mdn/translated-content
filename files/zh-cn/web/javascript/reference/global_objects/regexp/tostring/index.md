@@ -7,8 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 
 ## 语法
 
-```plain
-regexObj.toString()
+```js
+regexObj.toString();
 ```
 
 ### 参数

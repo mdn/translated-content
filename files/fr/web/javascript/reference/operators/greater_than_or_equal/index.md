@@ -3,8 +3,6 @@ title: Supérieur ou égal (>=)
 slug: Web/JavaScript/Reference/Operators/Greater_than_or_equal
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur supérieur ou égal (`>=`) renvoie `true` si l'opérande gauche est supérieur ou égal à l'opérande droit et `false` sinon.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Greater than or equal operator")}}

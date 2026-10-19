@@ -3,8 +3,6 @@ title: var
 slug: Web/JavaScript/Reference/Statements/var
 ---
 
-{{jsSidebar("Statements")}}
-
 L'instruction **`var`** (pour variable) permet de déclarer une variable et éventuellement d'initialiser sa valeur.
 
 {{InteractiveExample("JavaScript Demo: Statement - Var")}}

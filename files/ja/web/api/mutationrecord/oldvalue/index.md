@@ -1,5 +1,6 @@
 ---
 title: "MutationRecord: oldValue プロパティ"
+short-title: oldValue
 slug: Web/API/MutationRecord/oldValue
 l10n:
   sourceCommit: 7cd51a73ad94df604db79ccacbbe0513d0967650

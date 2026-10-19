@@ -4,8 +4,6 @@ slug: Web/JavaScript/Reference/Functions/arguments/Symbol.iterator
 original_slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
 ---
 
-{{jsSidebar("Functions")}}
-
 La valeur initiale de la propriété **`@@iterator`** est le même objet que la fonction utilisée pour la valeur initiale de la propriété {{jsxref("Array.prototype.values")}}.
 
 ## Syntaxe

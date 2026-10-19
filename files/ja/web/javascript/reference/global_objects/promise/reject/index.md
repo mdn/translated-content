@@ -3,7 +3,7 @@ title: Promise.reject()
 short-title: reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: a6a2daec3965d85ef6dfc06cfd3507c1b2f886e2
 ---
 
 **`Promise.reject()`** は静的メソッドで、引数で与えられた理由で拒否された `Promise` オブジェクトを返します。
@@ -81,16 +81,19 @@ rejected.catch((v) => {
 ```js
 class NotPromise {
   constructor(executor) {
-    // The "resolve" and "reject" functions behave nothing like the
-    // native promise's, but Promise.reject() calls them in the same way.
+    // "resolve" および "reject" 関数の動作は、ネイティブのプロミスの
+    // ものとはまったく異なるが、Promise.reject() はこれらを同様に呼び出す。
     executor(
       (value) => console.log("Resolved", value),
       (reason) => console.log("Rejected", reason),
     );
   }
+
+  static reject = Promise.reject;
 }
 
-Promise.reject.call(NotPromise, "foo"); // Logs "Rejected foo"
+const p = NotPromise.reject("foo"); // "Rejected foo" とログ出力
+// p は NotPromise インスタンス
 ```
 
 ## 仕様書

@@ -5,7 +5,7 @@ slug: Web/API/AnalyserNode/getFloatTimeDomainData
 
 {{ APIRef("Web Audio API") }}
 
-La méthode **`getFloatTimeDomainData()`** de l'interface {{ domxref("AnalyserNode") }} copie les données de forme d'onde ou du domaine temporel, dans un tableau {{domxref("Float32Array")}} passé en paramètre.
+La méthode **`getFloatTimeDomainData()`** de l'interface {{ domxref("AnalyserNode") }} copie les données de forme d'onde ou du domaine temporel, dans un tableau {{jsxref("Float32Array")}} passé en paramètre.
 
 Si le tableau a moins d'éléments que la propriété {{domxref("AnalyserNode.fftSize")}}, les données en excès sont supprimées. S'il a davantage d'éléments, les éléments non utilisés sont ignorés.
 
@@ -24,7 +24,7 @@ analyseur.getFloatTimeDomainData(tableauDonnees);
 
 ### Renvoie
 
-Un tableau {{domxref("Float32Array")}}.
+Un tableau {{jsxref("Float32Array")}}.
 
 ## Exemple
 
@@ -78,7 +78,7 @@ dessiner();
 ## Paramètres
 
 - array
-  - : Un tableau {{domxref("Float32Array")}} dans lequel seront copiées les données du domaine temporel.
+  - : Un tableau {{jsxref("Float32Array")}} dans lequel seront copiées les données du domaine temporel.
 
 ## Spécifications
 

@@ -11,7 +11,7 @@ HTTP **`X-XSS-Protection`** 响应头是 Internet Explorer，Chrome 和 Safari �
 
 ## 语法
 
-```plain
+```http
 X-XSS-Protection: 0
 X-XSS-Protection: 1
 X-XSS-Protection: 1; mode=block

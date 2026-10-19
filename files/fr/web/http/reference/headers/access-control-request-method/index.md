@@ -6,8 +6,8 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`Access-Control-Request-Method`** est utilisé par les navigateurs lors de l'émission d'une {{Glossary("preflight request", "requête préliminaire")}} pour indiquer au serveur quelle [méthode HTTP](/fr/docs/Web/HTTP/Reference/Methods) sera utilisée lors de la requête réelle.
-Cet en-tête est nécessaire car la requête préliminaire est toujours une {{HTTPMethod("OPTIONS")}} et n'utilise pas la même méthode que la requête réelle.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Access-Control-Request-Method`** est utilisé par les navigateurs lors de l'émission d'une {{Glossary("preflight request", "requête préliminaire")}} pour indiquer au serveur quelle [méthode HTTP](/fr/docs/Web/HTTP/Reference/Methods) est utilisée lors de la requête réelle.
+Cet en-tête est nécessaire, car la requête préliminaire est toujours une {{HTTPMethod("OPTIONS")}} et n'utilise pas la même méthode que la requête réelle.
 
 <table class="properties">
   <tbody>

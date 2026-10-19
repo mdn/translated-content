@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
 
 ## 语法
 
-```plain
+```js-nolint
 Symbol.for(key);
 ```
 

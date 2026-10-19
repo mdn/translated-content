@@ -5,7 +5,7 @@ l10n:
   sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
 ---
 
-{{APIRef("Fullscreen API")}}{{Deprecated_Header}}
+{{APIRef("Fullscreen API")}}
 
 过时的 {{domxref("Document")}} 接口的 **`fullscreen`** 只读属性表明页面当前是否以全屏模式显示内容。
 

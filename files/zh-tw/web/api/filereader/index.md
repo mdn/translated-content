@@ -71,7 +71,7 @@ File 物件可以從使用者於 {{HTMLElement("input")}} 元素選擇之檔案�
 - {{domxref("FileReader.abort()")}}
   - : 中斷目前的讀取，此方法回傳後屬性 `readyState` 將會是 `DONE`。
 - {{domxref("FileReader.readAsArrayBuffer()")}}
-  - : 開始讀取指定的 {{domxref("Blob")}}，讀取完成後屬性 `result` 將以 {{domxref("ArrayBuffer")}} 物件來表示讀入的資料內容。
+  - : 開始讀取指定的 {{domxref("Blob")}}，讀取完成後屬性 `result` 將以 {{jsxref("ArrayBuffer")}} 物件來表示讀入的資料內容。
 - {{domxref("FileReader.readAsBinaryString()")}} {{non-standard_inline}}
   - : 開始讀取指定的 {{domxref("Blob")}}，讀取完成後屬性 `result` 將以字串型式來表示讀入的原始二進位資料（raw binary data）。
 - {{domxref("FileReader.readAsDataURL()")}}

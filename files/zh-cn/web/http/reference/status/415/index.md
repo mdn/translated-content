@@ -9,7 +9,7 @@ slug: Web/HTTP/Reference/Status/415
 
 ## 状态
 
-```plain
+```http
 415 Unsupported Media Type
 ```
 

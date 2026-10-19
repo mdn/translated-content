@@ -9,7 +9,7 @@ slug: Web/API/Document/createDocumentFragment
 
 ## 语法
 
-```plain
+```js
 let fragment = document.createDocumentFragment();
 ```
 

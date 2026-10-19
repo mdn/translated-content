@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/drawElements
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.drawElements(mode, count, type, offset);
 ```
 

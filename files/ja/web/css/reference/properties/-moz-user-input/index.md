@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 Mozilla アプリケーションでは、 **`-moz-user-input`** はある要素がユーザーの入力を受け付けるかどうかを決定します。
 

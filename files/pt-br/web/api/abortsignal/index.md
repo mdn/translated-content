@@ -12,7 +12,7 @@ A interface **`AbortSignal`** representa o sinal de um objeto que permite a voc�
 _A interface AbortSignal também herda propriedades de sua interface pai, {{domxref("EventTarget")}}._
 
 - {{domxref("AbortSignal.aborted")}} {{readonlyInline}}
-  - : Um {{domxref("Boolean")}} que indica quando a(s) Request(s) com a qual o sinal está se comunicando está/estão abortadas(`true`) ou não(`false`).
+  - : Um {{jsxref("Boolean")}} que indica quando a(s) Request(s) com a qual o sinal está se comunicando está/estão abortadas(`true`) ou não(`false`).
 
 ### Handlers de Eventos
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{APIRef("HTML DOM")}} {{deprecated_header}}{{non-standard_header}}
+{{APIRef("HTML DOM")}} {{non-standard_header}}
 
 このメソッドは、長時間実行される操作を分割し、ブラウザーの他の操作（イベントや表示の更新など）が完了した直後にコールバック関数を実行するために使用されます。
 

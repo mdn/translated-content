@@ -22,7 +22,11 @@ Esta pseudo-classe é utilizada para destacar campos que devem ter dados válido
 
 ## Sintaxe
 
-{{csssyntax}}
+```css
+:required {
+  /* ... */
+}
+```
 
 ## Exemplos
 

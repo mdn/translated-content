@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/deleteRenderbuffer
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.deleteRenderbuffer(renderbuffer);
 ```
 

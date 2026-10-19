@@ -3,8 +3,6 @@ title: Object.prototype.__lookupSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 ---
 
-{{deprecated_header}}
-
 > [!NOTE]
 > 该方法已被弃用，建议使用 {{jsxref("Object.getOwnPropertyDescriptor()")}} API。该方法的行为只针对 Web 兼容性进行了规定，在任何平台上都不需要实现该方法。它可能无法在所有地方正常工作。
 

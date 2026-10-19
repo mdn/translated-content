@@ -1,9 +1,9 @@
 ---
-title: "HTML 属性: required"
+title: "`required` 属性 (HTML)"
 short-title: required
 slug: Web/HTML/Reference/Attributes/required
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 [論理](/ja/docs/Glossary/Boolean/HTML)属性の **`required`** 属性は、存在する場合、所有するフォームを送信する前にユーザーが入力に値を指定しなければならないことを示します。
@@ -19,13 +19,15 @@ l10n:
 > [!NOTE]
 > [`aria-required="true"`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) を設定すると、ある要素（任意の要素）が必須であることをスクリーンリーダーに伝えますが、その要素が任意であるかどうかには関係ありません。
 
+## 解説
+
 ### 属性の相互作用
 
 読み取り専用フィールドは値を変更することができないので、 `required` は [`readonly`](/ja/docs/Web/HTML/Reference/Attributes/readonly) 属性が指定されている入力欄には影響を与えません。
 
 ### ユーザビリティ
 
-`required`属性を設定する、その {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} が必須であることをユーザーに知らせるために、コントロールの近くに目に見える表示を提供してください。さらに、必須フォームコントロールを {{cssxref(':required')}} 擬似クラスでターゲットにし、必須であることを示すようにスタイル付けしてください。これにより、視覚障碍者のユーザーのユーザービリティが向上します。しかし、 `aria-required="true"` を追加しても、ブラウザーとスクリーンリーダーの組み合わせがまだ `required` に対応していない場合には問題ありません。
+`required` 属性を設定する場合は、その {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} が必須であることをユーザーに知らせるために、コントロールの近くに目に見える表示を提供してください。さらに、必須フォームコントロールを {{cssxref(':required')}} 擬似クラスでターゲットにし、必須であることを示すようにスタイル付けしてください。これにより、目の見えるユーザーのユーザビリティが向上します。支援技術は `required` 属性に基づいて、そのフォームコントロールが必須であることをユーザーに伝えるはずですが、ブラウザーとスクリーンリーダーの組み合わせがまだ `required` に対応していない場合に備えて、 `aria-required="true"` を追加しておいても問題はありません。
 
 ### 制約検証
 

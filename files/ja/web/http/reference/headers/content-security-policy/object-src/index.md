@@ -1,11 +1,12 @@
 ---
-title: "CSP: object-src"
+title: "Content-Security-Policy: object-src ディレクティブ"
+short-title: object-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/object-src
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} の **`object-src`** ディレクティブは、 {{HTMLElement("object")}} や {{HTMLElement("embed")}} 要素の有効なソースを指定します。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} の **`object-src`** ディレクティブは、{{HTMLElement("object")}} や {{HTMLElement("embed")}} 要素の有効なソースを指定します。
 
 > [!NOTE]
 > `object-src` で制御される要素は、おそらく偶然にも古い HTML 要素と見なされており、新しい標準機能が搭載されていません（`<iframe>` の `sandbox` や `allow` などのセキュリティ属性など）。したがって、このフェッチディレクティブで制限することを[推奨します](https://csp.withgoogle.com/docs/strict-csp.html) （例えば、可能であれば明示的に `object-src 'none'` を設定するなど）。
@@ -59,7 +60,7 @@ Content-Security-Policy: object-src https://example.com/
 以下の {{HTMLElement("object")}} や {{HTMLElement("embed")}} 要素はブロックされ、読み込まれません。
 
 ```html
-<embed src="https://not-example.com/flash"></embed>
+<embed src="https://not-example.com/flash" />
 <object data="https://not-example.com/plugin"></object>
 ```
 

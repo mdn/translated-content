@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Web Audio API")}}{{Deprecated_Header}}
+{{APIRef("Web Audio API")}}
 
 > [!NOTE]
 > この非推奨メソッドを置き換えるために推奨される方法は、 [`positionX`](/ja/docs/Web/API/PannerNode/positionX), [`positionY`](/ja/docs/Web/API/PannerNode/positionY), [`positionZ`](/ja/docs/Web/API/PannerNode/positionZ) 属性を直接設定することです。

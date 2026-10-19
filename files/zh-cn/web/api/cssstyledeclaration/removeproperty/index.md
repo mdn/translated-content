@@ -15,11 +15,11 @@ var oldValue = style.removeProperty(property);
 
 ### 参数
 
-- _`property`_ 是一个 {{domxref('DOMString')}} ，代表要移除的属性名。注意由多个单词组成的属性要用连字符连接各个单词，不接收驼峰命名法的形式。
+- _`property`_ 是一个 {{jsxref("String")}} ，代表要移除的属性名。注意由多个单词组成的属性要用连字符连接各个单词，不接收驼峰命名法的形式。
 
 ### 返回值
 
-- `oldValue` 是一个 {{domxref('DOMString')}} ，等于被移除的属性在移除前的属性值。
+- `oldValue` 是一个 {{jsxref("String")}} ，等于被移除的属性在移除前的属性值。
 
 ### 异常
 

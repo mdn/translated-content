@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 66c9543af6a0cf1baf89d5b0c972ee7dd08663b0
 ---
 
-{{APIRef("Performance API")}}{{Deprecated_Header}}
+{{APIRef("Performance API")}}
 
 古い **`PerformanceNavigation.type`** プロパティは読み取り専用で、このページへの移動方法を表す定数を含む `unsigned short` を返します。
 

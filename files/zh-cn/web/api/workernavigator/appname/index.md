@@ -5,7 +5,7 @@ l10n:
   sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 在任何浏览器中，**`WorkerNavigator.appName`** 属性的值始终为“`Netscape`”。此属性仅出于兼容性目的而保留。
 

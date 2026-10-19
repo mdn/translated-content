@@ -6,7 +6,7 @@ l10n:
   sourceCommit: dd868507df863ab4f37d53c960c76e20e9ee365f
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`Referer`** contient l'adresse absolue ou partielle à partir de laquelle une ressource a été demandée.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Referer`** contient l'adresse absolue ou partielle à partir de laquelle une ressource a été demandée.
 L'en-tête `Referer` permet à un serveur d'identifier les pages référentes à partir desquelles des personnes accèdent à une page ou où les ressources demandées sont utilisées.
 Ces données peuvent être utilisées pour l'analyse, la journalisation, l'optimisation du cache, et plus encore.
 
@@ -14,7 +14,7 @@ Lorsque vous cliquez sur un lien, le `Referer` contient l'adresse de la page qui
 Lorsque vous effectuez des requêtes de ressources vers un autre domaine, le `Referer` contient l'adresse de la page qui utilise la ressource demandée.
 
 L'en-tête `Referer` peut contenir une _origine_, un _chemin_ et une _chaîne de requête_, et peut ne pas contenir des [fragments d'URL](/fr/docs/Web/URI/Reference/Fragment) (par exemple `#section`) ni des informations `username:password`.
-La _politique de référent_ de la requête définit les données qui peuvent être incluses. Voir {{HTTPHeader("Referrer-Policy")}} pour plus d'[informations](/fr/docs/Web/HTTP/Reference/Headers/Referrer-Policy#directives) et d'[exemples](/fr/docs/Web/HTTP/Reference/Headers/Referrer-Policy#exemples).
+La _politique de référent_ de la requête définit les données qui peuvent être incluses. Voir {{HTTPHeader("Referrer-Policy")}} pour plus [d'informations](/fr/docs/Web/HTTP/Reference/Headers/Referrer-Policy#directives) et [d'exemples](/fr/docs/Web/HTTP/Reference/Headers/Referrer-Policy#exemples).
 
 Le `Referer` doit également être envoyé dans les requêtes suivant une réponse {{HTTPHeader("Refresh")}} (ou l'équivalent [`<meta http-equiv="refresh" content="...">`](/fr/docs/Web/HTML/Reference/Elements/meta/http-equiv)) provoquant une navigation vers une nouvelle page, si la politique de référent le permet.
 
@@ -73,5 +73,5 @@ Referer: https://example.com/
 - L'en-tête HTTP {{HTTPHeader("Referrer-Policy")}}
 - [Politique de même origine (<i lang="en">same-origin policy</i>)](/fr/docs/Web/Security/Defenses/Same-origin_policy)
 - [Fetch](/fr/docs/Web/API/Fetch_API): {{DOMxRef("Request.referrerPolicy")}}
-- [Tighter Control Over Your Referrers — Mozilla Security Blog <sup>(angl.)</sup>](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)
+- [Un contrôle accru sur vos référents — Mozilla Security Blog <sup>(angl.)</sup>](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)
 - [Référent HTTP](<https://fr.wikipedia.org/wiki/Référent_(informatique)>) sur Wikipédia

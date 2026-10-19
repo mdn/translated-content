@@ -1,9 +1,9 @@
 ---
-title: "HTML 属性: integrity"
+title: "`integrity` 属性 (HTML)"
 short-title: integrity
 slug: Web/HTML/Reference/Attributes/integrity
 l10n:
-  sourceCommit: fef6630e9b90f9794d3194ea8389ff70599c6884
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 **`integrity`** 属性は、開発者がリンクされたスクリプトやスタイルシートに特定のコンテンツを持っていることを保証するための仕組みを提供します。ブラウザーは、そのリソースに実際にそのコンテンツを持っているかどうかを調べ、持っていない場合はリソースの読み込みを拒否します。

@@ -1,8 +1,10 @@
 ---
-title: Feature Policy
+title: Permissions Policy
 slug: Web/HTTP/Guides/Permissions_Policy
 original_slug: Web/HTTP/Permissions_Policy
 ---
+
+{{SeeCompatTable}}
 
 Feature Policy ("réglementation des fonctionnalités" en français) permet aux développeurs web d'activer, de modifier ou de désactiver spécifiquement le comportement de certaines fonctionnalités et API dans le navigateur. Elle est similaire à {{Glossary("CSP", "Content Security Policy")}} mais contrôle les fonctionnalités plus que la sécurité.
 
@@ -19,7 +21,7 @@ Par exemple, voici des choses que vous pourrez faire avec Feature Policy :
 
 - Changer le comportement par défaut de la lecture automatique sur mobile ou pour les vidéos de source externe,
 - Vous interdire d'utiliser les API sensitives comme l'appareil photographique ou le microphone.
-- Permettre aux iframes d'utiliser l'[API plein écran](/fr/docs/Web/API/Fullscreen_API).
+- Permettre aux iframes d'utiliser [l'API plein écran](/fr/docs/Web/API/Fullscreen_API).
 - Empêcher l'utilisateur d'API obsolètes comme les [XHR synchrones](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest) ou {{domxref("document.write()")}}.
 - Vous assurer que les images sont dimensionnées correctement et ne sont pas trop grosses pour le cadre de la fenêtre.
 
@@ -37,8 +39,8 @@ Une règle est composée d'un ensemble de directives individuelles. Chaque direc
 
 Feature Policy fournit deux manières d'appliquer des règles pour contrôler les fonctionnalités :
 
-- L'en-tête HTTP {{httpheader("Feature-Policy")}}.
-- L'attribut {{HTMLElement("iframe","<code>allow</code>","#Attributes")}} sur les iframes.
+- L'en-tête HTTP {{httpheader("Permissions-Policy")}}.
+- L'attribut `{{HTMLElement("iframe#attributs", "allow")}}` sur les {{htmlelement("iframe")}}.
 
 La principale différence entre les deux est que que l'attribut ne contrôle les fonctionnalités que dans l'iframe tandis que l'en-tête les contrôle dans la réponse et chacun des contenus imbriqués dans la page.
 
@@ -117,9 +119,8 @@ Les fonctionnalités incluent (voir la [liste des Features](/fr/docs/Web/HTTP/Re
 
 ## Voir aussi
 
-- [Utiliser Feature Policy](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
-- {{HTTPHeader("Feature-Policy")}} HTTP header
-- {{HTMLElement("iframe","<code>allow</code>","#Attributes")}} attribute on iframes
+- L'en-tête {{HTTPHeader("Permissions-Policy")}}
+- L'attribut `{{HTMLElement("iframe#attributs", "allow")}}` de l'élément HTML `<iframe>`
 - [Introduction à Feature Policy](https://developers.google.com/web/updates/2018/06/feature-policy)
 - [Feature policies sur www.chromestatus.com](https://www.chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
 - [Feature-Policy Tester (extension Chrome Developer Tools)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)

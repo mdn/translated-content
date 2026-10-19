@@ -1,12 +1,10 @@
 ---
-title: "HTML 属性: dirname"
+title: "`dirname` 属性 (HTML)"
 short-title: dirname
 slug: Web/HTML/Reference/Attributes/dirname
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
-
-{{HTMLSidebar}}
 
 **`dirname`** 属性は {{htmlelement("textarea")}} および {{htmlelement("input")}} 要素で用いることができ、フォームの送信時に要素のテキストの内容の向きを表します。
 ブラウザーは、この属性の値をユーザーが入力したテキストが左から右に読むのか、右から左に読むのかを識別するのに用います。

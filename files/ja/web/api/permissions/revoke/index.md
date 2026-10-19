@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
 ---
 
-{{APIRef("Permissions API")}}{{deprecated_header}}
+{{APIRef("Permissions API")}}
 
 **`Permissions.revoke()`** は {{domxref("Permissions")}} インターフェイスのメソッドで、現在設定されている権限を既定の状態（通常は `prompt`）に戻します。
 このメソッドは、グローバルな {{domxref("Permissions")}} オブジェクトである {{domxref("navigator.permissions")}} に対して呼び出します。
@@ -23,7 +23,7 @@ revoke(descriptor)
     - `name`
       - : 権限を照会したい API の名前。 有効な値は、`'geolocation'`、`'midi'`、`'notifications'`、`'push'` です。
     - `userVisibleOnly`
-      - : Push のみ。 Firefox は対応していません。 下記の[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください）すべてのメッセージについて通知を表示するか、サイレントプッシュ通知を送信できるかを示します。 既定値は `false` です。
+      - : （Push のみ。 Firefox は対応していません。 下記の[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください）すべてのメッセージについて通知を表示するか、サイレントプッシュ通知を送信できるかを示します。 既定値は `false` です。
     - `sysex` （MIDI のみ）
       - : システムエクスクルーシブメッセージが必要か受信するかどうかを示します。 既定値は `false` です。
 

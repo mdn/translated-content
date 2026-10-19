@@ -9,25 +9,25 @@ Les images SVG sont très flexibles et lorsqu'on les utilise en CSS avec les pro
 
 ## Un algorithme simple
 
-Dans la plupart des cas, l'algorithme utilisé pourra être réduit à ces quatre règles. Ces règles ne sont pas exhaustives et ne couvrent pas certains cas aux limites mais cela sera suffisant ici&nbsp;:
+Dans la plupart des cas, l'algorithme utilisé peut être réduit à ces quatre règles. Ces règles ne sont pas exhaustives et ne couvrent pas certains cas aux limites mais c'est suffisant ici&nbsp;:
 
 1. Si {{CSSxRef("background-size")}} définit une dimension fixe (des pourcentages ou des unités relatives fixées par le contexte), cette dimension l'emporte.
-2. Si l'image possède des proportions intrinsèques (autrement dit, si le ratio largeur/hauteur est constant : 16:9, 4:3, 2.39:1, 1:1), l'arrière-plan sera affiché en conservant ces proportions.
+2. Si l'image possède des proportions intrinsèques (autrement dit, si le rapport largeur/hauteur est constant&nbsp;: 16:9, 4:3, 2.39:1, 1:1), l'arrière-plan est affiché en conservant ces proportions.
 3. Si l'image définit une taille et que celle-ci n'est pas modifiée par `constrain` ou `cover`, c'est la taille définie qui prévaut.
 4. Dans tous les autres cas, l'image est affichée avec la taille de la zone dédiée à l'arrière-plan.
 
-On notera ici que l'algorithme ne prend en cas que les dimensions et/ou les proportions de l'image (leur absence éventullement). Ainsi, une image SVG dont les dimensions sont fixées sera traitée comme une image matricielle de la même taille.
+Notez ici que l'algorithme ne prend en compte que les dimensions et/ou les proportions de l'image (leur absence éventuelle). Ainsi, une image SVG dont les dimensions sont fixées est traitée comme une image matricielle de la même taille.
 
 > [!NOTE]
 > Si vous essayez d'étirer votre SVG pour obtenir un {{Glossary("aspect ratio", "rapport d'aspect")}} différent avec CSS — par exemple pour l'étirer sur l'arrière-plan de la page — assurez-vous que votre SVG inclut `preserveAspectRatio="none"`. Pour en savoir plus, consultez {{SVGAttr("preserveAspectRatio")}}.
 
 ## Fichiers d'exemples
 
-Avant de nous plonger dans l'analyse des résultats obtenus en utilisant différents types d'images SVG sources et de voir à quoi elles ressemblent lorsqu'elles sont associées à une {{CSSxRef("background-size")}}, il sera utile de regarder quelques images sources d'exemple qui ont différentes dimensions et paramètres de taille, que nous utiliserons plus tard comme valeurs de `background-image` dans nos exemples. Le navigateur rend les images {{SVGElement("svg")}} par défaut à `300px` de large et `150px` de haut.
+Avant de nous plonger dans l'analyse des résultats obtenus en utilisant différents types d'images SVG sources et de voir à quoi elles ressemblent lorsqu'elles sont associées à une {{CSSxRef("background-size")}}, il est utile de regarder quelques images sources d'exemple qui ont différentes dimensions et paramètres de taille, que nous utilisons plus tard comme valeurs de `background-image` dans nos exemples. Le navigateur rend les images {{SVGElement("svg")}} par défaut à `300px` de large et `150px` de haut.
 
 ### Image sans dimension ni proportion
 
-Cette image ne possède ni dimension ni proportion. Quelle que soit sa taille, il n'y aura pas de ratio largeur/hauteur particulier. On a ici une image qui forme un dégradé, quelles que soient les dimensions et la proportion de l'écran.
+Cette image ne possède ni dimension ni proportion. Quelle que soit sa taille, il n'y a pas de rapport largeur/hauteur particulier. On a ici une image qui forme un dégradé, quelles que soient les dimensions et la proportion de l'écran.
 
 ```html
 <svg>
@@ -65,9 +65,9 @@ Cette image mesure 100 pixels de large mais n'a pas de hauteur ni de proportion 
 
 ### Image avec une dimension fixée et des proportions intrinsèques
 
-Cette image définit une hauteur de 100 pixels mais pas de largeur. Elle définit également un ratio d'aspect intrinsèque de 3:4. Cela garantit que son ratio largeur:hauteur est toujours de 3:4, sauf si elle est délibérément redimensionnée de manière disproportionnée (c'est-à-dire en définissant explicitement une largeur et une hauteur qui ne respectent pas ce ratio).
+Cette image définit une hauteur de 100 pixels mais pas de largeur. Elle définit également un rapport d'aspect intrinsèque de 3:4. Cela garantit que son rapport largeur:hauteur est toujours de 3:4, sauf si elle est délibérément redimensionnée de manière disproportionnée (c'est-à-dire en définissant explicitement une largeur et une hauteur qui ne respectent pas ce rapport).
 
-C'est très similaire à la spécification d'une largeur et d'une hauteur spécifiques&nbsp;; une fois que vous avez une dimension et un ratio, l'autre dimension est implicite.
+C'est très similaire à la spécification d'une largeur et d'une hauteur spécifiques&nbsp;; une fois que vous avez une dimension et un rapport, l'autre dimension est implicite.
 
 ```html
 <svg height="100" viewBox="0 0 3 4" preserveAspectRatio="none">
@@ -88,7 +88,7 @@ C'est très similaire à la spécification d'une largeur et d'une hauteur spéci
 
 ### Image sans largeur ni hauteur mais avec des proportions intrinsèques
 
-Cette image n'indique pas de hauteur ou de largeur mais un ratio intrinsèque de 1:1. On obtiendra toujours un carré (qui pourra être utilisé comme une icône) pour n'importe quelle taille : 32x32, 128x128, or 512x512.
+Cette image n'indique pas de hauteur ou de largeur mais un rapport intrinsèque de 1:1. On obtient toujours un carré (qui peut être utilisé comme une icône) pour n'importe quelle taille&nbsp;: 32x32, 128x128 ou 512x512.
 
 ```html
 <svg viewBox="0 0 1 1" preserveAspectRatio="none">
@@ -120,11 +120,11 @@ div {
 
 ### Définir des dimensions fixées sur les deux axes
 
-Si on utilise {{CSSxRef("background-size")}} pour indiquer la longueur et la largeur de l'image, celles-ci seront toujours utilisées (cf. la règle n°1 précédemment énoncée). Autrement dit, l'image sera toujours étirée pour obtenir ces dimensions, quelles que soient les dimensions initiales de l'image ou ses proportions.
+Si on utilise {{CSSxRef("background-size")}} pour indiquer la longueur et la largeur de l'image, celles-ci sont toujours utilisées (cf. la règle n°1 précédemment énoncée). Autrement dit, l'image est toujours étirée pour obtenir ces dimensions, quelles que soient les dimensions initiales de l'image ou ses proportions.
 
 #### Aucune dimension ni proportion
 
-Dans cet exemple, l'image n'a ni dimensions définies, ni ratio intrinsèque&nbsp;:
+Dans cet exemple, l'image n'a ni dimensions définies, ni rapport intrinsèque&nbsp;:
 
 ```html hidden live-sample___scaling1
 <div></div>
@@ -150,7 +150,7 @@ div {
 
 #### Une dimension définie et aucune proportion
 
-Dans cet exemple, l'image a une dimension spécifiée, mais aucun ratio intrinsèque défini&nbsp;:
+Dans cet exemple, l'image a une dimension définie, mais aucun rapport intrinsèque défini&nbsp;:
 
 ```html hidden live-sample___scaling2
 <div></div>
@@ -180,7 +180,7 @@ div {
 <div></div>
 ```
 
-Dans cet exemple, l'image a une dimension explicitement définie, ainsi qu'un ratio intrinsèque, ce qui signifie que les deux dimensions sont effectivement définies. Définir une hauteur et une largeur absolues pour `background-size` remplace les dimensions définies dans le SVG&nbsp;:
+Dans cet exemple, l'image a une dimension explicitement définie, ainsi qu'un rapport intrinsèque, ce qui signifie que les deux dimensions sont effectivement définies. Définir une hauteur et une largeur absolues pour `background-size` remplace les dimensions définies dans le SVG&nbsp;:
 
 ```css hidden live-sample___scaling3
 div {
@@ -228,13 +228,13 @@ div {
 
 ### Utiliser `contain` ou `cover`
 
-En utilisant la valeur `cover` pour {{CSSxRef("background-size")}}, l'image sera réduite au maximum pour couvrir toute la zone de l'arrière-plan. `contain` fonctionne de façon symétrique, l'image est agrandie autant que possible sans être rognée par la zone de l'arrière-plan.
+En utilisant la valeur `cover` pour {{CSSxRef("background-size")}}, l'image est réduite au maximum pour couvrir toute la zone de l'arrière-plan. `contain` fonctionne de façon symétrique, l'image est agrandie autant que possible sans être rognée par la zone de l'arrière-plan.
 
 Pour une image ayant un rapport d'aspect intrinsèque, une seule taille correspond aux critères `cover`/ajustement seuls. Mais si aucun rapport d'aspect intrinsèque n'est défini, les critères `cover`/ajustement ne suffisent pas, c'est alors la contrainte de taille (grande/petite) qui détermine la taille finale.
 
 #### Aucune dimension ni proportion
 
-Si une image n'a ni dimensions définie, ni proportions définies, les règles 2 ou 3 ne pourront pas s'appliquer. La règle 4 est donc utilisée et l'image couvre toute la zone (ce qui satisfait d'ailleurs les différentes contraintes).
+Si une image n'a ni dimensions définie, ni proportions définies, les règles 2 ou 3 ne peuvent pas s'appliquer. La règle 4 est donc utilisée et l'image couvre toute la zone (ce qui satisfait d'ailleurs les différentes contraintes).
 
 ```html hidden live-sample___cc1
 <div></div>
@@ -260,7 +260,7 @@ div {
 
 #### Une dimension définie et aucune proportion
 
-Dans cet exemple, l'image a une dimension spécifiée mais aucun ratio intrinsèque, la règle 4 s'applique, et l'image est redimensionnée pour couvrir toute la zone de l'arrière-plan.
+Dans cet exemple, l'image a une dimension définie mais aucun rapport intrinsèque, la règle 4 s'applique, et l'image est redimensionnée pour couvrir toute la zone de l'arrière-plan.
 
 ```html hidden live-sample___cc2
 <div></div>
@@ -286,9 +286,9 @@ div {
 
 #### Une dimension définie et des proportions intrinsèques
 
-Dans ces exemples, l'image a une dimension explicitement définie, ainsi qu'un ratio intrinsèque.
+Dans ces exemples, l'image a une dimension explicitement définie, ainsi qu'un rapport intrinsèque.
 
-Les choses changent lorsque vous définissez un ratio intrinsèque. Dans ce cas, la règle 1 n'est pas pertinente, donc la règle 2 est appliquée&nbsp;: nous essayons de préserver tout ratio intrinsèque (tout en respectant `contain` ou `cover`). Par exemple, préserver un ratio d'aspect intrinsèque de 3:4 pour une boîte de 300x200 avec `contain` signifie dessiner un arrière-plan de 150x200.
+Les choses changent lorsque vous définissez un rapport intrinsèque. Dans ce cas, la règle 1 n'est pas pertinente, donc la règle 2 est appliquée&nbsp;: nous essayons de préserver tout rapport intrinsèque (tout en respectant `contain` ou `cover`). Par exemple, préserver un rapport d'aspect intrinsèque de 3:4 pour une boîte de 300x200 avec `contain` signifie dessiner un arrière-plan de 150x200.
 
 ##### Cas avec `contain`
 
@@ -342,7 +342,7 @@ div {
 
 {{EmbedLiveSample("cc5", 200, 230)}}
 
-Ici, le ratio 3:4 est préservé tout en étirant l'image pour remplir toute la boîte. Cela entraîne le rognage de la partie inférieure de l'image.
+Ici, le rapport 3:4 est préservé tout en étirant l'image pour remplir toute la boîte. Cela entraîne le rognage de la partie inférieure de l'image.
 
 #### Aucune dimension mais des proportions intrinsèques
 
@@ -372,7 +372,7 @@ div {
 
 {{EmbedLiveSample("cc6", 200, 230)}}
 
-On voit ici que l'image est redimensionnée à la plus petite taille tout en conservant le ratio 1:1.
+On voit ici que l'image est redimensionnée à la plus petite taille tout en conservant le rapport 1:1.
 
 ##### Cas avec `cover`
 
@@ -398,15 +398,15 @@ div {
 
 {{EmbedLiveSample("cc7", 200, 230)}}
 
-Ici, l'image est dimensionnée afin de remplir la plus grande dimension. Le ratio 1:1 a été préservé, bien qu'avec cette image source, cela puisse être difficile à voir.
+Ici, l'image est dimensionnée afin de remplir la plus grande dimension. Le rapport 1:1 a été préservé, bien qu'avec cette image source, cela puisse être difficile à voir.
 
 ### Utiliser `auto` pour dimensionner automatiquement les deux axes
 
-Si {{CSSxRef("background-size")}} vaut `auto` ou `auto auto`, la règle 2 dit que le rendu doit préserver tout ratio intrinsèque fourni.
+Si {{CSSxRef("background-size")}} vaut `auto` ou `auto auto`, la règle 2 dit que le rendu doit préserver tout rapport intrinsèque fourni.
 
 #### Aucune dimension ni proportion intrinsèque
 
-Lorsque les images de fond avec redimensionnement automatique n'ont ni ratio intrinsèque ni dimensions définies, la règle 4 s'applique et l'image est rendue pour remplir la zone de fond.
+Lorsque les images de fond avec redimensionnement automatique n'ont ni rapport intrinsèque ni dimensions définies, la règle 4 s'applique et l'image est rendue pour remplir la zone de fond.
 
 ```html hidden live-sample___both-auto1
 <div></div>
@@ -432,7 +432,7 @@ div {
 
 #### Une dimension mais aucune proportion intrinsèque
 
-S'il n'y a aucune proportion définie mais qu'une dimension est fournie, la règle n°3 s'appliquera et l'image sera affichée avec ces dimensions.
+S'il n'y a aucune proportion définie mais qu'une dimension est fournie, la règle n°3 s'applique et l'image est affichée avec ces dimensions.
 
 ```html hidden live-sample___both-auto2
 <div></div>
@@ -456,7 +456,7 @@ div {
 
 {{EmbedLiveSample("both-auto2", 200, 230)}}
 
-Notez ici que la largeur, qui est définie dans le SVG source à 100 pixels, est respectée, tandis que la hauteur remplit la zone de fond puisqu'elle n'est pas définie (ni explicitement, ni par un ratio intrinsèque).
+Notez ici que la largeur, qui est définie dans le SVG source à 100 pixels, est respectée, tandis que la hauteur remplit la zone de fond puisqu'elle n'est pas définie (ni explicitement, ni par un rapport intrinsèque).
 
 #### Une dimension et des proportions intrinsèques
 
@@ -488,7 +488,7 @@ div {
 
 #### Aucune dimension définie mais des proportions intrinsèques
 
-Lorsque qu'un ratio intrinsèque est défini, mais qu'aucune dimension n'est définie, la règle n°4 s'applique — sauf que la règle n°2 s'applique également. L'image est donc rendue de la même manière que pour le cas `contain`.
+Lorsque qu'un rapport intrinsèque est défini, mais qu'aucune dimension n'est définie, la règle n°4 s'applique — sauf que la règle n°2 s'applique également. L'image est donc rendue de la même manière que pour le cas `contain`.
 
 ```html hidden live-sample___both-auto4
 <div></div>
@@ -518,7 +518,7 @@ Avec la première règle, les dimensions définies sont toujours utilisées et i
 
 #### Aucune dimension ni proportion intrinsèque
 
-Si l'image ne possède ni dimension ni proportion intrinsèque, c'est la règle n°4 qui s'applique et les dimensions de la zone pour l'arrière-plan seront utilisées pour `auto`.
+Si l'image ne possède ni dimension ni proportion intrinsèque, c'est la règle n°4 qui s'applique et les dimensions de la zone pour l'arrière-plan sont utilisées pour `auto`.
 
 ```html hidden live-sample___auto0
 <div></div>
@@ -546,7 +546,7 @@ Ici, la largeur est déterminée en utilisant la largeur de la zone pour l'arri�
 
 #### Une dimension intrinsèque mais pas de proportion intrinsèque
 
-Si l'image possède une dimension implicite mais pas de ratio, la dimension définie sera utilisée selon la règle n°3 si elle vaut `auto` dans le code CSS.
+Si l'image possède une dimension implicite mais pas de rapport, la dimension définie est utilisée selon la règle n°3 si elle vaut `auto` dans le code CSS.
 
 ```html hidden live-sample___auto1
 <div></div>

@@ -25,7 +25,7 @@ console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
 
 ## 语法
 
-```plain
+```js
 JSON.stringify(value[, replacer [, space]])
 ```
 

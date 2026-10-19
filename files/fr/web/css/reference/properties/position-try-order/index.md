@@ -3,10 +3,10 @@ title: Propriété CSS `position-try-order`
 short-title: position-try-order
 slug: Web/CSS/Reference/Properties/position-try-order
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 7c56e442e76d472eff1c6a06eb5432bb11a47f3e
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`position-try-order`** permet de définir diverses options de repli qui entraînent l'utilisation d'un repli de position disponible pour définir la position d'un élément positionné par ancre, au lieu de ses paramètres de position initiaux.
+La propriété [CSS](/fr/docs/Web/CSS) **`position-try-order`** vous permet de prioriser l'option {{CSSxRef("position-try-fallbacks")}} appliquée à un élément positionné par une ancre lorsqu'il est affiché pour la première fois, en fonction de l'option qui crée le plus d'espace autour de l'élément dans la direction donnée.
 
 > [!NOTE]
 > Il existe également une propriété raccourcie — {{CSSxRef("position-try")}}, qui peut être utilisée pour définir les valeurs de `position-try-order` et {{CSSxRef("position-try-fallbacks")}} dans une seule déclaration.
@@ -34,25 +34,25 @@ position-try-order: unset;
 La propriété `position-try-order` peut être définie soit avec la valeur clé `normal`, soit avec une `<try-size>`.
 
 - `normal`
-  - : La valeur par défaut. Aucune option de repli de position n'est essayée lorsque l'élément est affiché pour la première fois.
+  - : La valeur par défaut. Aucune option de repli de position n'est essayée lorsque l'élément est rendu pour la première fois.
 - `<try-size>`
-  - : Définit les différentes options de repli de taille, qui définissent les critères déterminant quelle option de repli doit être appliquée à l'élément positionné par ancre lorsqu'il est affiché pour la première fois. Les valeurs disponibles sont&nbsp;:
+  - : Définit les différents critères qui sont utilisés pour déterminer quelle option de repli de position doit être appliquée à l'élément positionné par une ancre lorsqu'il est rendu pour la première fois. Les valeurs disponibles sont&nbsp;:
     - `most-height`
-      - : L'option de repli de position est appliquée pour donner à l'élément contenant le plus de hauteur.
+      - : Applique l'option de repli de position qui donne à l'élément le plus d'espace vertical.
     - `most-width`
-      - : L'option de repli de position est appliquée pour donner à l'élément contenant le plus de largeur.
+      - : Applique l'option de repli de position qui donne à l'élément le plus d'espace horizontal.
     - `most-block-size`
-      - : L'option de repli de position est appliquée pour donner à l'élément contenant la plus grande taille dans la direction de bloc.
+      - : Applique l'option de repli de position qui donne à l'élément le plus d'espace dans la direction de bloc.
     - `most-inline-size`
-      - : L'option de repli de position est appliquée pour donner à l'élément contenant la plus grande taille dans la direction en incise.
+      - : Applique l'option de repli de position qui donne à l'élément le plus d'espace dans la direction en incise.
 
 ## Description
 
-La propriété `position-try-order` a un objectif légèrement différent des autres fonctionnalités de repli de position, en ce qu'elle utilise les options de repli de position lorsque l'élément positionné est affiché pour la première fois, plutôt que lorsqu'il est en cours de défilement. Par exemple, vous pourriez vouloir afficher initialement l'élément dans un espace qui a plus de hauteur ou de largeur disponible que la position initiale par défaut.
+La propriété `position-try-order` a un objectif légèrement différent des autres fonctionnalités de repli de position, en ce qu'elle influence l'option de repli de position qui est appliquée lorsque l'élément positionné est affiché pour la première fois, plutôt que lorsqu'il est en cours de défilement. Par exemple, vous pouvez vouloir afficher initialement l'élément dans un espace qui a plus de hauteur ou de largeur disponible que la position initiale par défaut.
 
-Le navigateur testera les options de repli de position disponibles pour déterminer laquelle offre le plus d'espace à l'élément positionné par ancre dans la dimension définie. Il appliquera ensuite cette option, remplaçant le style initial de l'élément.
+Le navigateur teste les options `position-try-fallbacks` disponibles pour déterminer laquelle offre le plus d'espace à l'élément positionné par une ancre dans la direction définie. Il applique ensuite cette option, remplaçant le style initial de l'élément lorsque la page est rendue une première fois.
 
-Si aucune option de repli de position n'est disponible offrant plus de largeur/hauteur que la position initiale assignée à l'élément, aucune option de repli de position n'est appliquée. En effet, le comportement est comme si `position-try-order` était défini sur `normal`.
+Si aucune option de repli de position n'est disponible offrant plus de largeur/hauteur que la position initiale assignée à l'élément, aucune option de repli de position n'est appliquée, comme si `position-try-order` est définie sur `normal`.
 
 Pour des informations détaillées sur les fonctionnalités d'ancrage et l'utilisation des options de repli de position, consultez le module [de positionnement des ancres CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [des options de repli et masquage conditionnel pour le débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding).
 
@@ -66,13 +66,13 @@ Pour des informations détaillées sur les fonctionnalités d'ancrage et l'utili
 
 ## Exemples
 
-### Utilisation simple de `position-try-order`
+### Utilisation simple
 
-Cette démo montre l'effet de `position-try-order`.
+Cet exemple montre l'effet de `position-try-order`.
 
 #### HTML
 
-Le HTML inclut deux éléments HTML {{HTMLElement("div")}} qui deviendront une ancre et un élément positionné par ancre, ainsi qu'un `<form>` contenant des boutons radio permettant de sélectionner différentes valeurs de `position-try-order`.
+Le HTML inclut deux éléments HTML {{HTMLElement("div")}} qui deviennent une ancre et un élément positionné par une ancre.
 
 ```html
 <div class="ancre">⚓︎</div>
@@ -80,34 +80,19 @@ Le HTML inclut deux éléments HTML {{HTMLElement("div")}} qui deviendront une a
 <div class="boite-information">
   <p>Ceci est une boîte d'information.</p>
 </div>
-
-<form>
-  <fieldset>
-    <legend>Choisissez un ordre de repli</legend>
-    <div>
-      <label for="radio-normal">normal</label>
-      <input
-        type="radio"
-        id="radio-normal"
-        name="position-try-order"
-        value="normal"
-        checked />
-    </div>
-    <div>
-      <label for="radio-most-height">most-height</label>
-      <input
-        type="radio"
-        id="radio-most-height"
-        name="position-try-order"
-        value="most-height" />
-    </div>
-  </fieldset>
-</form>
 ```
 
 #### CSS
 
-Dans le CSS, l'ancre reçoit un {{CSSxRef("anchor-name")}} et a une grande marge ({{CSSxRef("margin")}}) pour la positionner vers le centre supérieur de la zone d'affichage&nbsp;:
+Dans le CSS, nous commençons par définir une valeur `position-try-order` de `normal` sur l'élément positionné par une ancre, afin qu'il soit plus facile à trouver lorsque nous vous demandons de le modifier ensuite&nbsp;:
+
+```css
+.boite-information {
+  position-try-order: normal;
+}
+```
+
+L'ancre reçoit une ancre nommée ({{CSSxRef("anchor-name")}}) et a une grande marge ({{CSSxRef("margin")}}) pour la positionner vers le centre de la zone d'affichage&nbsp;:
 
 ```css hidden
 .ancre {
@@ -139,15 +124,9 @@ Dans le CSS, l'ancre reçoit un {{CSSxRef("anchor-name")}} et a une grande marge
   font-size: 1rem;
   text-align: center;
 }
-
-form {
-  position: fixed;
-  bottom: 2px;
-  right: 2px;
-}
 ```
 
-Nous incluons ensuite une option de position personnalisée nommée `--bas-personnalise` qui positionne l'élément en dessous de l'ancre et lui donne une marge appropriée&nbsp;:
+Nous incluons une option de position personnalisée nommée `--bas-personnalise`, qui positionne l'élément avec une position d'ancrage en dessous de l'ancre et lui donne une marge appropriée&nbsp;:
 
 ```css
 @position-try --bas-personnalise {
@@ -157,7 +136,7 @@ Nous incluons ensuite une option de position personnalisée nommée `--bas-perso
 }
 ```
 
-Nous positionnons initialement l'élément au-dessus de son ancre, puis nous lui donnons notre option de position personnalisée en utilisant le raccourci `position-try`, qui définit également la propriété `position-try-order` sur `normal`&nbsp;:
+Nous positionnons initialement l'élément avec une position d'ancrage au-dessus de son ancre, puis nous lui donnons notre option de position personnalisée en utilisant le raccourci `position-try-fallbacks`&nbsp;:
 
 ```css
 .boite-information {
@@ -168,34 +147,17 @@ Nous positionnons initialement l'élément au-dessus de son ancre, puis nous lui
   margin-bottom: 10px;
   justify-self: anchor-center;
 
-  position-try: normal --bas-personnalise;
-}
-```
-
-#### JavaScript
-
-Enfin, nous incluons un peu de JavaScript. Cela définit un gestionnaire d'évènements {{DOMxRef("HTMLElement/change_event", "change")}} sur les boutons radio afin que, lorsqu'une nouvelle valeur est sélectionnée, cette valeur soit appliquée à la propriété `position-try-order` de la boîte d'information.
-
-```js
-const boiteInformation = document.querySelector(".boite-information");
-const formulaire = document.forms[0];
-const radios = formulaire.elements["position-try-order"];
-
-for (const radio of radios) {
-  radio.addEventListener("change", definirOrdreRepli);
-}
-
-function definirOrdreRepli(e) {
-  const ordreRepli = e.target.value;
-  boiteInformation.style.positionTryOrder = ordreRepli;
+  position-try-fallbacks: --bas-personnalise;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Utilisation simple de `position-try-order`", "100%", 310)}}
+{{EmbedLiveSample("Utilisation simple", "100%", 310)}}
 
-Essayez de sélectionner l'option d'ordre `most-height`. Cela a pour effet d'appliquer `--bas-personnalise` comme option de repli de position, ce qui positionne l'élément en dessous de l'ancre. Cela se produit parce qu'il y a plus d'espace vertical en dessous de l'ancre qu'au-dessus.
+Initialement, l'élément avec une position d'ancrage est positionné au-dessus de son ancre, ce qui est la position par défaut que nous lui avons donnée.
+
+Ouvrez maintenant l'exemple dans le MDN Playground en appuyant sur le bouton **Exécuter**, exécutez l'exemple, puis changez la valeur de `position-try-order` en `most-height` ou `most-block-size`. Lorsque l'exemple est re-rendu, l'élément avec une position d'ancrage est positionné en dessous de son ancre&nbsp;: l'option de repli `--bas-personnalise` est appliquée, car elle donne à l'élément positionné plus d'espace environnant que la position par défaut.
 
 ## Spécifications
 
@@ -210,6 +172,6 @@ Essayez de sélectionner l'option d'ordre `most-height`. Cela a pour effet d'app
 - La propriété {{CSSxRef("position-try")}}
 - La propriété {{CSSxRef("position-try-fallbacks")}}
 - La règle {{CSSxRef("@position-try")}}
-- Le module [de positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
-- Le guide [d'utilisation du positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
+- Le module [de positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
+- Le guide [d'utilisation du positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
 - Le guide [des options de repli et de masquage conditionnel en cas de débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)

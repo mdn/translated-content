@@ -14,7 +14,7 @@ var miOK = respuesta.ok;
 
 ### Valor
 
-Un {{domxref("Boolean")}}.
+Un {{jsxref("Boolean")}}.
 
 ## Ejemplo
 

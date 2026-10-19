@@ -32,7 +32,7 @@ _Наследует свойства от его родителя, {{domxref("HT
 - {{domxref("HTMLAreaElement.media")}}
   - : Это {{jsxref("String")}} содержание которого отображает [`media`](/ru/docs/Web/HTML/Reference/Elements/area#media) HTML атрибут, показывающий целевое media, связанного с ним ресурса.
 - {{domxref("HTMLAreaElement.noHref")}}
-  - : Это {{domxref("Boolean")}} флаг показывающий, если зона неактивна (`true`) или активна (`false`).
+  - : Это {{jsxref("Boolean")}} флаг показывающий, если зона неактивна (`true`) или активна (`false`).
 - {{domxref("URLUtils.password")}}
   - : Это {{jsxref("String")}} содержащий пароль указанный перед именем домена.
 - {{domxref("URLUtils.origin")}} {{readonlyInline}}

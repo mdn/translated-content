@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
 ---
 
-{{jsSidebar("Errors")}}
-
 L'exception JavaScript <i lang="en">"unparenthesized unary expression can't appear on the left-hand side of '\*\*'"</i> se produit lorsqu'un opérateur unaire (parmi `typeof`, `void`, `delete`, `await`, `!`, `~`, `+`, `-`) est utilisé sur l'opérande gauche de [l'opérateur d'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation) sans parenthèse.
 
 ## Message

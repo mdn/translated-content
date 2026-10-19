@@ -2,63 +2,66 @@
 title: ウェブ音声 API の使用
 slug: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 l10n:
-  sourceCommit: d169fd2b21950bc0c0976ebbee74054692e33162
+  sourceCommit: 26fb7eaa7b398a35c2463fa15ab6ccfa46a9e06d
 ---
 
 {{DefaultAPISidebar("Web Speech API")}}
-ウェブ音声 API は、音声認識と音声合成（text to speech または tts としても知られています）という 2 つの異なる分野の機能を提供しており、アクセシビリティと制御メカニズムに興味深い新しい可能性をもたらします。この記事では、両方の分野の簡単な紹介とデモを提供します。
+
+ウェブ音声 API は、音声認識と音声合成（text to speech または TTS としても知られています）という 2 つの異なる分野の機能を提供しており、アクセシビリティと制御に興味深い新しい可能性をもたらします。この記事では、両方の分野の紹介とデモを提供します。
 
 ## 音声認識
 
-音声認識では、端末のマイクを通して音声を受信し、音声認識サービスによって文法のリスト（基本的には特定のアプリで認識させたい語彙）と照合されます。単語や句が正常に認識されると、結果（または結果のリスト）がテキスト文字列として返され、その結果としてさらなるアクションを開始することができます。
+音声認識では、端末のマイク（または音声トラック）から音声を受け取り、それを音声認識サービスで調べます。サービスが単語やフレーズを正しく認識すると、さらなる操作を起動するために使用できるテキスト文字列（または文字列のリスト）が返されます。
 
-ウェブ音声 API には、このための中心的な制御インターフェイスである {{domxref("SpeechRecognition")}} と、文法や結果などを表現するためのいくつかの密接に関連したインターフェイスがあります。一般的に、音声認識には端末上で利用可能な既定の音声認識システムが使用されます。最近のほとんどの OS には音声コマンドを発行するための音声認識システムが搭載されています。macOS の Dictation、iOS の Siri、Windows 10 の Cortana、Android の Speech などを想像してください。
+ウェブ音声 API には、このための中心的な制御インターフェイスである {{domxref("SpeechRecognition")}} と、文法や結果などを表現するためのいくつかの密接に関連したインターフェイスがあります。
 
-> [!NOTE]
-> Chrome などの一部のブラウザーでは、ウェブページで音声認識を使用するためにサーバーベースの認識エンジンが必要です。音声が認識処理のためにウェブサービスに送信されるため、オフラインでは機能しません。
+通常、音声認識には、ユーザーの端末に搭載されている音声認識システムが使用されます。現行のオペレーティングシステムのほとんどには、macOS の **Dictation** や Windows の **Copilot** など、音声コマンドを実行するための音声認識システムが備わっています。
+
+一部のブラウザーでは、ウェブページで音声認識を使用するためにサーバーベースの認識エンジンが必要です。音声が認識処理のためにウェブサービスに送信されるため、オフラインでは機能しません。
+
+プライバシーとパフォーマンスを改善するため、音声認識を端末上で実行するように指定します。これにより、音声データも文字起こしされた会話も、処理のためにサードパーティのサービスに送信されることはなくなります。端末上での機能については、[端末上での音声認識](#on-device_speech_recognition)の節で詳しく取り上げます。
 
 ### デモ
 
-ウェブ音声認識の簡単な使い方を示すために、 [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer) というデモを書いてみました。画面をタップ/クリックし、HTML の色のキーワードを言うと、アプリの背景色がその色に変わります。
+ウェブ音声認識の簡単な使い方を示すために、 [Speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer) というデモを書いてみました。画面をタップ/クリックし、HTML の色のキーワードを言うと、アプリの背景色がその色に変わります。
 
 ![Speech Color changer というタイトルのアプリの UI。画面を内側へタップして色を言うと、アプリの背景をその色に変えてくれるというアプリです。この例では、背景を赤に変えています。](speech-color-changer.png)
 
-デモを実行するには、 Chrome 等の対応しているモバイルブラウザーで[ライブデモの URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) に移動してください。
-
-### ブラウザーの対応状況
-
-ウェブ音声 API の音声認識のサポートは、通常 Chrome for Desktop と Android に限られています — Chrome はバージョン 33 付近からサポートしていますが、接頭辞付きのインターフェイスを使用しているため、 `webkitSpeechRecognition` などの接頭辞付きバージョンを含める必要があります。
+デモを実行するには、[ライブデモの URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) に[対応しているブラウザー](/ja/docs/Web/API/SpeechRecognition#ブラウザーの互換性)でアクセスしてください。
 
 ### HTML と CSS
 
-アプリの HTML と CSS は本当に簡単です。タイトル、説明段落、診断メッセージを出力する div があるだけです。
+このアプリの HTML と CSS は基本的なものです。タイトル、説明文の段落 ({{htmlelement("p")}})、制御ボタン ({{htmlelement("button")}})、そしてアプリが認識した単語を含む診断メッセージを表示させる出力用段落があります。
 
 ```html
 <h1>Speech color changer</h1>
-<p>Tap/click then say a color to change the background color of the app.</p>
-<div>
-  <p class="output"><em>…diagnostic messages</em></p>
-</div>
+
+<p class="hints"></p>
+
+<button>Start recognition</button>
+
+<p class="output"><em>...diagnostic messages</em></p>
 ```
 
-この CSS では、他の端末でも問題なく見えるように、非常にシンプルなレスポンシブのスタイル付けをしています。
+この CSS では、他の端末でも問題なく見えるように、基本的なレスポンシブのスタイル付けをしています。
 
 ### JavaScript
 
 JavaScript をもう少し詳しく見てみましょう。
 
-#### Chrome 対応
+#### 接頭辞付きプロパティ
 
-前述したように、Chrome は現在接頭辞付きのプロパティで音声認識に対応しているので、適切なオブジェクトを Chrome に供給し、そして将来的な実装で接頭辞なしの機能をサポートする可能性も踏まえ、以下の行をコードの最初に追加しています。
+現在、一部のブラウザーでは、接頭辞つきプロパティで音声認識に対応しています。
+そのため、コードの冒頭で、接頭辞をつけたプロパティと、接頭辞のないバージョンの両方を扱うことができるように、以下の行を記述します。
 
 ```js
-const SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
-const SpeechGrammarList = window.SpeechGrammarList || webkitSpeechGrammarList;
+const SpeechRecognition =
+  window.SpeechRecognition || window.webkitSpeechRecognition;
 const SpeechRecognitionEvent =
-  window.SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
+  window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent;
 ```
 
-#### 文法
+#### 色リスト
 
 コードの次の部分では、アプリが認識する文法を定義します。次の変数は文法を保持するために定義されています。
 
@@ -72,44 +75,27 @@ const colors = [
   "blue",
   "brown",
   "chocolate",
-  "coral" /* … */,
+  "coral",
+  // …
 ];
-const grammar = `#JSGF V1.0; grammar colors; public <color> = ${colors.join(
-  " | ",
-)};`;
 ```
 
-使用されている文法形式は [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**) です — それについての詳細はリンク先の仕様書を参照してください。しかし、今のところは手っ取り早く実行してみましょう。
+#### 音声認識インスタンスの作成
 
-- 行の区切りは JavaScript と同じようにセミコロンで区切られています。
-- 最初の行 — `#JSGF V1.0;` — は、使用されているフォーマットとバージョンを示します。これは常に最初に含める必要があります。
-- 2 行目は認識したい用語の種類を示します。`public` はパブリックルールであることを宣言し、角括弧内の文字列はこの用語の認識名 (`color`) を定義し、等号の後に続く項目のリストは、用語の適切な値として認識され受け入れられる代替値です。それぞれがパイプ文字で区切られていることに注意してください。
-- 上記の構造に従ってそれぞれの行に好きなだけ多くの用語を定義することができ、かなり複雑な文法定義を記載することができます。この基本的なデモでは、単純にしています。
-
-#### 文法を音声認識にプラグインする
-
-次にやるべきことは、アプリケーションの認識を制御する音声認識インスタンスを定義することです。これは {{domxref("SpeechRecognition.SpeechRecognition()","SpeechRecognition()")}} コンストラクターを使用して行います。また、{{domxref("SpeechGrammarList.SpeechGrammarList()","SpeechGrammarList()")}} コンストラクターを使用して、文法を含む新しい音声文法リストも作成します。
+次にやるべきことは、アプリケーションの認識を制御する音声認識インスタンスを定義することです。これは {{domxref("SpeechRecognition.SpeechRecognition()","SpeechRecognition()")}} コンストラクターを使用して行います。
 
 ```js
 const recognition = new SpeechRecognition();
-const speechRecognitionList = new SpeechGrammarList();
 ```
 
-{{domxref("SpeechGrammarList.addFromString()")}} メソッドを使ってリストに `grammar` を追加します。 このメソッドは追加したい文字列を引数として受けとり、さらにオプションで、リスト内で利用可能な他の文法との関係においてこの文法の重要度を指定する重み値を受け取ります（0 から 1 までの範囲で指定できます）。追加された文法は{{domxref("SpeechGrammar")}} オブジェクトのインスタンスとしてリスト内で利用できます。
-
-```js
-speechRecognitionList.addFromString(grammar, 1);
-```
-
-次に、 {{domxref("SpeechGrammarList")}} を {{domxref("SpeechRecognition.grammars")}} プロパティの値として設定して、音声認識インスタンスに追加しています。他にも、認識インスタンスのプロパティをいくつか設定してから、次に移ります。
+次に、認識インスタンスのいくつかのプロパティを設定します。
 
 - {{domxref("SpeechRecognition.continuous")}}: 認識が開始されるたびに連続した結果をキャプチャする (`true`) か、または単一の結果だけをキャプチャする (`false`) かを制御します。
-- {{domxref("SpeechRecognition.lang")}}: 認識の言語を設定します。これを設定することは良い習慣であるため、推奨されます。
-- {{domxref("SpeechRecognition.interimResults")}}: 音声認識システムが中間的な結果を返すか、最終的な結果だけを返すか定義します。このシンプルなデモでは最終的な結果で十分です。
-- {{domxref("SpeechRecognition.maxAlternatives")}}: 結果ごとに返される代替候補数を設定します。これは、結果が完全に明確ではなく、ユーザーが正しいものを選択できるように代替候補のリストを表示したい場合などに便利な場合があります。しかし、このシンプルなデモでは必要ないのでここでは 1 つだけ指定します（これは実際にはデフォルトです）。
+- {{domxref("SpeechRecognition.lang")}}: 認識の言語を設定します。このことを明示的に設定することが、推奨される最善の手法です。
+- {{domxref("SpeechRecognition.interimResults")}}: 音声認識システムが中間的な結果を返すか、最終的な結果だけを返すか定義します。このデモでは、最終的な結果で十分です。
+- {{domxref("SpeechRecognition.maxAlternatives")}}: 結果ごとに返される代替候補数を設定します。これは、たとえば結果が完全には明確ではなく、ユーザーが選択できる候補の一覧を表示したい場合などに役立つことがあります。しかし、このデモでは必要ないため、ここでは 1 つだけ指定します（これはデフォルトの設定です）。
 
 ```js
-recognition.grammars = speechRecognitionList;
 recognition.continuous = false;
 recognition.lang = "en-US";
 recognition.interimResults = false;
@@ -118,21 +104,20 @@ recognition.maxAlternatives = 1;
 
 #### 音声認識の開始
 
-出力先の {{htmlelement("div")}} と HTML 要素への参照を取得（診断メッセージを出力したり、後でアプリの背景色を更新したりできるようにするため）した後、画面がタップ/クリックされたときに音声認識サービスが開始されるように onclick ハンドラーを実装します。これは {{domxref("SpeechRecognition.start()")}} を呼び出すことで実現しています。 `forEach()` メソッドは何色を言っているかを示す色付きインジケーターを出力するために使われています。
+出力段落、`<html>` 要素、説明文、および `<button>` への参照を取得した後、`onclick` ハンドラーを実装します。ユーザーがボタンを押すと、{{domxref("SpeechRecognition.start()")}} を呼び出すことで音声認識サービスが開始されます。また、`forEach()` メソッドを使用して、ユーザーが発声できる色を示す色付きのインジケーターを出力しています。
 
 ```js
 const diagnostic = document.querySelector(".output");
 const bg = document.querySelector("html");
 const hints = document.querySelector(".hints");
+const startBtn = document.querySelector("button");
 
-let colorHTML = "";
-colors.forEach((color, i) => {
-  console.log(color, i);
-  colorHTML += `<span style="background-color:${color};"> ${color} </span>`;
-});
-hints.innerHTML = `Tap or click then say a color to change the background color of the app. Try ${colorHTML}.`;
+const colorHTML = colors
+  .map((v) => `<span style="background-color:${v};">${v}</span>`)
+  .join("");
+hints.innerHTML = `Press the button then say a color to change the background color of the app. Try ${colorHTML}.`;
 
-document.body.onclick = () => {
+startBtn.onclick = () => {
   recognition.start();
   console.log("Ready to receive a color command.");
 };
@@ -140,7 +125,7 @@ document.body.onclick = () => {
 
 #### 結果の受け取りと処理
 
-音声認識が開始されると、結果やその他の周辺情報を取得するために使用できる多くのイベントハンドラーがあります（[`SpeechRecognition` のイベント](/ja/docs/Web/API/SpeechRecognition#イベント) を参照してください）。最も一般的なものは {{domxref("SpeechRecognition.result_event", "result")}} イベントで、成功した結果を受信したときに発生します。
+音声認識が開始されると、いくつものイベントハンドラーが利用できるようになり、結果やその他の関連情報を受け取るために使うことができます（`SpeechRecognition` の[イベント](/ja/docs/Web/API/SpeechRecognition#イベント)を参照してください）。最も一般的なものは {{domxref("SpeechRecognition.result_event", "result")}} イベントで、成功した結果を受信したときに発生します。
 
 ```js
 recognition.onresult = (event) => {
@@ -151,9 +136,13 @@ recognition.onresult = (event) => {
 };
 ```
 
-ここの 2 行目はちょっと複雑そうなので、順を追って説明していきましょう。{{domxref("SpeechRecognitionEvent.results")}}プロパティは、 {{domxref("SpeechRecognitionResult")}} オブジェクトを含む {{domxref("SpeechRecognitionResultList")}} オブジェクトを返します。これはゲッターを持っているので配列のようにアクセスでき、最初の `[0]` は 0 の位置にある `SpeechRecognitionResult` を返します。各 `SpeechRecognitionResult` オブジェクトには、個々に認識された単語を含む {{domxref("SpeechRecognitionAlternative")}} オブジェクトが含まれています。これらは配列のようにアクセスできるようにゲッターも持っています — 2 番目の `[0]` は、したがって位置 0 の `SpeechRecognitionAlternative` を返します。次に、その `transcript` プロパティを返して個々の認識結果を含む文字列を文字列として取得し、背景色をその色に設定し、認識された色を UI の診断メッセージとして報告します。
+ここの 2 行目はちょっと複雑そうなので、順を追って説明していきましょう。
 
-また、 {{domxref("SpeechRecognition.speechend_event", "speechend")}} イベントを使用して音声認識サービスの実行を停止します（1 つの単語が認識され、それが発話され終わったら {{domxref("SpeechRecognition.stop()")}}) を使用します）。
+- {{domxref("SpeechRecognitionEvent.results")}} プロパティは、{{domxref("SpeechRecognitionResult")}} オブジェクトを含む {{domxref("SpeechRecognitionResultList")}} オブジェクトを返します。これはゲッターを持っているので配列のようにアクセスでき、最初の `[0]` は `0` の位置にある `SpeechRecognitionResult` を返します。
+- 各 `SpeechRecognitionResult` オブジェクトには、個々に認識された単語を含む {{domxref("SpeechRecognitionAlternative")}} オブジェクトが含まれています。これらは配列のようにアクセスできるようにゲッターも持っています — 2 番目の `[0]` は、したがって位置 `0` の `SpeechRecognitionAlternative` を返します。
+- `SpeechRecognitionAlternative` の `transcript` プロパティは、認識されたテキストを含む文字列を返します。この値は、背景色を認識された色に設定するために使用されるほか、UI 上で診断メッセージとして表示されることもあります。
+
+また、1 つの単語が認識された後に、{{domxref("SpeechRecognition.speechend_event", "speechend")}} イベントを使用して、（{{domxref("SpeechRecognition.stop()")}} により）音声認識サービスを停止します。
 
 ```js
 recognition.onspeechend = () => {
@@ -161,9 +150,9 @@ recognition.onspeechend = () => {
 };
 ```
 
-#### エラーや認識されない発話のハンドリング
+#### エラーや認識されない発話の処理
 
-最後の 2 つのハンドラは、定義された文法にない音声が認識されたケースやエラーが発生したケースを処理するためのものです。 {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} は最初に言及したケースを処理することになっているようですが、今のところ正しく動作しているようには見えないことに注意してください（とにかく認識されたものを返すだけです）。
+最後の 2 つのハンドラーは、発話された用語が認識されなかった場合や、認識中にエラーが発生した場合を扱います。{{domxref("SpeechRecognition.nomatch_event", "nomatch")}} イベントは前者のケースを処理するためのものですが、ほとんどの場合、たとえ意味不明なものであっても、認識エンジンは何らかの結果を返すことになります。
 
 ```js
 recognition.onnomatch = (event) => {
@@ -179,37 +168,203 @@ recognition.onerror = (event) => {
 };
 ```
 
+## 端末上の音声認識
+
+音声認識は通常、オンラインサービスを利用して行われます。つまり、音声記録がサーバーに送信されて処理され、その結果がブラウザーに返される仕組みです。これにはいくつかの問題があります。
+
+- プライバシー：多くのユーザーは、自分の音声がサーバーに送信されることに抵抗を感じています。
+- パフォーマンス：認識のたびにデータをサーバーに送信すると、負荷の高いアプリケーションではパフォーマンスが低下する恐れがあり、またアプリがオフラインでは動作しなくなります。
+
+これらの問題を軽減するため、ウェブ音声APIでは、音声認識をブラウザー上で端末内処理として実行するよう指定することができます。これには、認識対象とする各言語ごとに、言語パックを1回だけダウンロードする必要があります。インストールが完了すれば、オフラインでもこの機能を利用できるようになります。
+
+この節で、端末内音声認識の使用方法について説明します。
+
+### デモ
+
+デバイス上での音声認識を実演するために、[On-device speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/on-device-speech-color-changer) というサンプルアプリを作成しました （[デモを実際に実行する](https://mdn.github.io/dom-examples/web-speech-api/on-device-speech-color-changer/)）。
+
+このデモは、先ほど説明したオンラインの音声カラーチェンジャーデモと非常に似た仕組みで動作しますが、以下の点が異なります。
+
+> [!NOTE]
+> 当初の音声色変更デモでは、ウェブ音声 API をベンダー接頭辞付きのプロパティでのみ対応するブラウザーに対応するため、追加のコード行を盛り込んでいました（詳細については、[接頭辞付きプロパティ](#接頭辞付きプロパティ)の節を参照してください）。端末上で動作するバージョンのデモでは、この機能に対応する実装は接頭辞なしで動作するため、接頭辞付きのコードは必要ありません。
+
+### 端末上の認識の指定
+
+ブラウザーのローカル処理を使用するように指定するには、音声認識を開始する前に、{{domxref("SpeechRecognition.processLocally")}} プロパティを `true` に設定してください（デフォルト値は `false` です）。
+
+```js
+recognition.processLocally = true;
+```
+
+### 利用可能性の確認と言語パックのインストール
+
+端末上の音声認識を機能させるには、認識したい言語に対応した言語パックがブラウザーにインストールされている必要があります。`processLocally = true` を指定した後に `start()` メソッドを実行しても、正しい言語パックがインストールされていない場合、その関数呼び出しは [`language-not-supported`](/ja/docs/Web/API/SpeechRecognitionErrorEvent/error#language-not-supported) エラーにより失敗します。
+
+正しい言語パックをインストールするには、以下の 2 つの手順に従ってください。
+
+1. ユーザーの端末に言語パックが利用可能かどうかを確認します。これは、{{domxref("SpeechRecognition.available_static", "SpeechRecognition.available()")}} 静的メソッドを使用して処理されます。
+2. 言語パックが利用できない場合はインストールします。これは、{{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} 静的メソッドを使用して処理されます。
+
+これらの処理は、アプリのコントロールボタン (`<button>`) における以下の `click` イベントハンドラーで処理されます。
+
+```js
+startBtn.addEventListener("click", () => {
+  // 対象言語の利用可否を確認する
+  SpeechRecognition.available({ langs: ["en-US"], processLocally: true }).then(
+    (result) => {
+      if (result === "unavailable") {
+        diagnostic.textContent = `en-US is not available to download at this time. Sorry!`;
+      } else if (result === "available") {
+        recognition.start();
+        console.log("Ready to receive a color command.");
+      } else {
+        diagnostic.textContent = `en-US language pack is downloading...`;
+        SpeechRecognition.install({
+          langs: ["en-US"],
+          processLocally: true,
+        }).then((result) => {
+          if (result) {
+            diagnostic.textContent = `en-US language pack downloaded. Start recognition again.`;
+          } else {
+            diagnostic.textContent = `en-US language pack failed to download. Try again later.`;
+          }
+        });
+      }
+    },
+  );
+});
+```
+
+`available()` メソッドは、2 つのプロパティを含むオプションオブジェクトを受け取ります。
+
+- 利用可能かどうかを確認する言語を含む `langs` 配列。
+- 言語の利用可能かどうかをデバイス上でのみ確認するか（`true`）、またはローカルまたはサーバーベースの認識サービスを通じて確認するかを指定する論理値の `processLocally`（`false`、デフォルト）。
+
+このメソッドを実行すると、指定された言語の利用可否を示す列挙型値で解決される {{jsxref("Promise")}} が返されます。このデモでは、次の 3 つの条件についてチェックを行います。
+
+- 結果の値が `unavailable` の場合、ダウンロード可能な適切な言語パックが存在しないことを意味します。この場合、出力に適切なメッセージを表示します。
+- 結果の値が `unavailable` の場合、ローカルに利用可能な言語パックがないことを意味します。この場合、適切なメッセージを出力に表示します。
+- 値がそれ以外（`downloadable` または `downloading`）の場合、言語パックのダウンロードが開始されることをユーザーに知らせる診断メッセージを出力し、その後、ダウンロードを処理するために `install()` メソッドを実行します。
+
+`install()` メソッドは `available()` メソッドと似たように動作しますが、そのオプションオブジェクトが `langs` 配列のみを受け取る点が異なります。実行されると、`langs` で指定された言語のすべての言語パックのダウンロードが開始され、指定された言語パックが正常にダウンロードおよびインストールされたかどうかを示す論理値（`true` または `false`）で解決される {{jsxref("Promise")}} が返されます。
+
+このデモでは、成功時と失敗時を示す診断メッセージを出力しています。より本格的なアプリでは、ダウンロード処理中はコントロールを無効にし、プロミスが解決した後に再び有効にするのが一般的でしょう。
+
+### 権限ポリシーの統合
+
+`available()` および `install()` メソッドの使用は、{{httpheader("Permissions-Policy/on-device-speech-recognition", "on-device-speech-recognition")}} {{httpheader("Permissions-Policy")}} によって制御されます。具体的には、定義されたポリシーによって使用がブロックされている場合、これらのメソッドを呼び出そうとしても失敗します。
+
+`on-device-speech-recognition` のデフォルトの許可リスト値は `self` です。つまり、埋め込まれた別オリジンの文書内でこれらのメソッドを使用しようとする場合や、その使用を明示的に無効にしたい場合を除き、ポリシーの調整について心配する必要はありません。
+
+### 品質レベルの要件の指定
+
+`available()` メソッドと `install()` メソッドは、いずれも [`quality`](/ja/docs/Web/API/SpeechRecognition/available_static#quality) オプションに対応しています。これにより、音声認識の複雑さのレベルに応じた対応状況を確認できます。たとえば、短い音声コマンドの処理は、ディクテーションや文字起こしの処理よりもはるかに単純であり、前者のユースケースは後者よりも多くのハードウェアと言語パックの組み合わせでサポートされている可能性が高いです。
+
+たとえば、以下のコードスニペットは、[デバイス内音声カラーチェンジャー](#デモ_2)の例のコードを修正したもので、`quality` オプションを `dictation` に設定して `available()` メソッドを呼び出し、デバイス内認識がこの品質レベルに対応しているかどうかを確認しています。返された結果が `unavailable` の場合、`SpeechRecognition` オブジェクトの {{domxref("SpeechRecognition.processLocally", "processLocally")}} プロパティを `false` に設定して、API にクラウド認識サービスの使用を強制し、その後、認識サービスを `start()` で開始します。
+
+結果が `available` の場合は問題ないので、`start()` を呼び出してデバイス上の認識を開始します。結果がそれ以外の値の場合は、`quality` オプションを `dictation` に設定して `install()` メソッドを実行し、必要な言語パックをインストールします。
+
+```js
+startBtn.addEventListener("click", () => {
+  // 端末上の対象言語のディクテーション品質の利用可否を確認する
+  SpeechRecognition.available({
+    langs: ["en-US"],
+    processLocally: true,
+    quality: "dictation",
+  }).then((result) => {
+    if (result === "unavailable") {
+      diagnostic.textContent = `On-device recognition for dictation not available, running with cloud recognition`;
+      recognition.processLocally = false;
+      recognition.start();
+    } else if (result === "available") {
+      recognition.start();
+      console.log("Ready to receive a color command.");
+    } else {
+      diagnostic.textContent = `en-US language pack downloading`;
+      SpeechRecognition.install({
+        langs: ["en-US"],
+        processLocally: true,
+        quality: "dictation",
+      }).then((result) => {
+        if (result) {
+          diagnostic.textContent = `en-US language pack downloaded. Try again.`;
+        } else {
+          diagnostic.textContent = `en-US language pack failed to download. Try again later.`;
+        }
+      });
+    }
+  });
+});
+```
+
+## 音声認識における文脈バイアス
+
+音声認識サービスが特定の単語やフレーズを正しく認識できない場合があります。これは、専門用語（医学用語や科学用語など）、固有名詞、あまり一般的ではないフレーズ、あるいは他の単語と発音が似ていて誤認識されやすい単語などで、特に頻繁に発生します。
+
+例えば、テスト中に、[On-device speech color changer](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) が、色 `azure` の認識に問題があることが判明しました。この機能は、"as you" のような結果を繰り返し返していました。その他にも、頻繁に誤認識された色として、`khaki` ("car key")、`tan`、`thistle` ("this all") などがありました。
+
+こうした問題を軽減するため、ウェブ音声APIでは、発話される可能性が高く、認識エンジンが優先的に注目すべきフレーズを強調するよう、認識エンジンにヒントを与えることができます。これにより、それらの単語やフレーズが正しく認識される可能性が高まります。
+
+これを行うには、{{domxref("SpeechRecognitionPhrase")}} オブジェクトの配列を {{domxref("SpeechRecognition.phrases")}} プロパティの値として設定します。各 `SpeechRecognitionPhrase` オブジェクトには、以下の情報が含まれています：
+
+- `phrase` プロパティ：ブーストしたい単語やフレーズを含む文字列です。
+- `boost` プロパティ：`0.0` 以上 `10.0` 以下の浮動小数点数で、その単語やフレーズに適用するブーストの度合いを設定します。値が大きいほど、その単語やフレーズが認識されやすくなります。
+
+"On-device speech color changer" のデモでは、ブーストするフレーズとそれぞれのブースト値の配列を作成することで、この処理を行っています。
+
+```js
+const phraseData = [
+  { phrase: "azure", boost: 5.0 },
+  { phrase: "khaki", boost: 3.0 },
+  { phrase: "tan", boost: 2.0 },
+];
+```
+
+これらは、`SpeechRecognitionPhrase` オブジェクトの `ObservableArray` として表現する必要があります。これを実現するために、元の配列をマッピングし、{{domxref("SpeechRecognitionPhrase.SpeechRecognitionPhrase", "SpeechRecognitionPhrase()")}} コンストラクターを使用して、各配列要素を `SpeechRecognitionPhrase` オブジェクトに変換します。
+
+```js
+const phraseObjects = phraseData.map(
+  (p) => new SpeechRecognitionPhrase(p.phrase, p.boost),
+);
+```
+
+`SpeechRecognition` インスタンスを作成した後、`phraseObjects` 配列を `SpeechRecognition.phrases` プロパティの値として設定することで、文脈に応じたバイアスフレーズを追加します。
+
+```js
+recognition.phrases = phraseObjects;
+```
+
+フレーズ配列は、通常の JavaScript 配列と同じように変更できます。例えば、新しいフレーズを動的に追加（push）することで変更できます。
+
+```js
+recognition.phrases.push(new SpeechRecognitionPhrase("thistle", 5.0));
+```
+
+このコードにより、問題となっていた色キーワードが以前よりも正確に認識されるようになったことがわかりました。
+
 ## 音声合成
 
-音声合成 (別名 text-to-speech または tts) は、アプリ内のテキストを音声に合成し、機器のスピーカーまたは音声出力接続から再生することを指します。
+音声合成 (別名 text-to-speech または TTS) は、アプリ内のテキストを音声に合成し、機器のスピーカーまたは音声出力接続から再生することを指します。
 
 ウェブ音声 API には、このための中心的な制御インターフェイス — {{domxref("SpeechSynthesis")}} があり、さらに、合成される（発話とも呼ばれる）テキスト、発話に使用される音声などを表現する、密接に関連した多数のインターフェイスがあります。繰り返しになりますが、ほとんどの OS は何らかの音声合成システムを保有しており、利用可能な場合はこのタスクのために API が使用されることになります。
 
 ### デモ
 
-ウェブ音声合成の基本的な使い方を示すために、 [Speak easy synthesis](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis) というデモを提供しています。これには、合成するテキストを入力し、テキストが発声されるときに使用する音程、速度、および音声を設定するための一連のフォームコントロールが記載されています。テキストを入力した後、 <kbd>Enter</kbd>/<kbd>Return</kbd> を押すと、そのテキストが発話されるのを聞くことができます。
+ウェブ音声合成の使い方を紹介するために、[Speech synthesizer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis) というサンプルアプリを作成しました。このアプリには、合成したいテキストを入力するための入力フィールドがあります。読み上げ速度や音程を調整できるほか、ドロップダウンメニューから使用する音声を選択することもできます。テキストを入力したら、<kbd>Enter</kbd>/<kbd>Return</kbd> キーを押すか、**Play** ボタンをクリックすると、テキストが読み上げられます。
 
 ![speak easy synthesis というアプリの UI。合成するテキストを入力する入力欄、音声の速度やピッチを制御するスライダーコントロール、異なる形を選ぶドロップダウンメニューがあります。](speak-easy-synthesis.png)
 
-デモを実行するには、Chromeなどの対応しているモバイルブラウザーで[ライブデモの URL](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/) に移動してください。
-
-### ブラウザーの対応
-
-Web Speech APIの音声合成への対応は、主流のブラウザーでまだ進んでおらず、現在では以下のものに限られています。
-
-- Firefox のデスクトップ版とモバイル版では、 Gecko 42+ (Windows)/44+ で接頭辞なしで対応しており、`about:config` で `media.webspeech.synth.enabled` フラッグを `true` に切り替えることでオンにすることが可能です。
-- Firefox OS 2.5+では既定で、何の権限も必要なく対応しています。
-- Chrome のデスクトップ版と Android 版では、バージョン 33 あたりから接頭辞なしで対応しています。
+デモを実行するには、[対応ブラウザー](/ja/docs/Web/API/SpeechSynthesis#ブラウザーの互換性)で[ライブデモの URL](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/) にアクセスしてください。
 
 ### HTML と CSS
 
-HTMLとCSSは、タイトル、使用されるためのいくつかの指示、およびいくつかの単純なコントロールを持つ形式を含む、これもとても単純なものです。 {{htmlelement("select")}} 要素は最初は空ですが、JavaScript で {{htmlelement("option")}} を入力しています（後述します）。
+このアプリの HTML と CSS はかなり基本的なものです。タイトル、使用方法の説明、そして基本的なコントロールがいくつかあるフォームがあります。 {{htmlelement("select")}} 要素は最初は空です。JavaScript で {{htmlelement("option")}} を入力しています（後述します）。
 
 ```html
 <h1>Speech synthesizer</h1>
 
 <p>
-  Enter some text in the input below and press return to hear it. change voices
+  Enter some text in the input below and press return to hear it. Change voices
   using the dropdown menu.
 </p>
 
@@ -279,7 +434,9 @@ function populateVoiceList() {
 }
 ```
 
-この関数を実行するようになったら、以下のようにします。これは、 Firefox が {{domxref("SpeechSynthesis.voiceschanged_event", "voiceschanged")}} イベントに対応しておらず、 {{domxref("SpeechSynthesis.getVoices()")}} が発行されると声のリストを返すだけになってしまうためです。しかし、 Chrome では、イベントが発行されるのを待ってからリストを作成する必要があるため、下記のような if 文を記載しています。
+古いブラウザーでは、{{domxref("SpeechSynthesis.voiceschanged_event", "voiceschanged")}} イベントに対応しておらず、{{domxref("SpeechSynthesis.getVoices()")}} が実行されると、単に音声のリストが返されるだけです。
+一方、Chrome などのブラウザーでは、リストを初期化する前に、このイベントが発生するのを待つ必要があります。
+両方のケースに対応するため、以下に示すような関数を実行します。
 
 ```js
 populateVoiceList();
@@ -301,7 +458,8 @@ inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+  const selectedOption =
+    voiceSelect.selectedOptions[0].getAttribute("data-name");
   for (const voice of voices) {
     if (voice.name === selectedOption) {
       utterThis.voice = voice;
@@ -310,25 +468,19 @@ inputForm.onsubmit = (event) => {
   utterThis.pitch = pitch.value;
   utterThis.rate = rate.value;
   synth.speak(utterThis);
+  utterThis.onpause = (event) => {
+    const char = event.utterance.text.charAt(event.charIndex);
+    console.log(
+      `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
+    );
+  };
+  inputTxt.blur();
+};
 ```
 
 ハンドラーの最後の部分では、 {{domxref("SpeechSynthesisUtterance.pause_event", "pause")}} イベントを記述して、 {{domxref("SpeechSynthesisEvent")}} がいかに有益な用途で使用できるかを示しています。 {{domxref("SpeechSynthesis.pause()")}} が呼び出されると、音声が一時停止された文字番号と名前を報告するメッセージを返します。
 
-```js
-utterThis.onpause = (event) => {
-  const char = event.utterance.text.charAt(event.charIndex);
-  console.log(
-    `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
-  );
-};
-```
-
-最後に、テキスト入力に対して [blur()](/ja/docs/Web/API/HTMLElement/blur) を呼び出しています。これは主に Firefox OS 上でキーボードを隠すためのものです。
-
-```js
-  inputTxt.blur();
-}
-```
+最後に、テキスト入力に対して [`blur()`](/ja/docs/Web/API/HTMLElement/blur) を呼び出しています。これは主に Firefox OS 上でキーボードを隠すためのものです。
 
 #### 表示されているピッチとレートの値の更新
 

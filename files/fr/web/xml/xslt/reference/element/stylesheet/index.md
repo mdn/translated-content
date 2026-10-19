@@ -4,8 +4,6 @@ slug: Web/XML/XSLT/Reference/Element/stylesheet
 original_slug: Web/XSLT/Element/stylesheet
 ---
 
-{{XsltSidebar}}
-
 L'élément `<xsl:stylesheet>` (ou son équivalent `<xsl:transform>`) est l'élément le plus externe d'une feuille de style, celui qui contient tout les autres éléments.
 
 ### Déclaration de l'espace de nommage

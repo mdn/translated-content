@@ -3,8 +3,6 @@ title: Soustraction (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur de soustraction (`-`) effectue la soustraction entre les deux opérandes et fournit la différence obtenue.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Subtraction operator")}}

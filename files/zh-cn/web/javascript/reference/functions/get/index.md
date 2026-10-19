@@ -21,7 +21,7 @@ console.log(obj.latest);
 
 ## 语法
 
-```plain
+```js-nolint
 {get prop() { ... } }
 
 {get [expression]() { ... } }

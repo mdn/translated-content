@@ -3,14 +3,14 @@ title: CSS `column-rule-visibility-items` プロパティ
 short-title: column-rule-visibility-items
 slug: Web/CSS/Reference/Properties/column-rule-visibility-items
 l10n:
-  sourceCommit: 7f138099644a02640a903b2abc39e685ca8ca7cd
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 {{SeeCompatTable}}
 
-**`column-rule-visibility-items`** は [CSS](/ja/docs/Web/CSS) のプロパティで、空の領域に隣接する隙間に、列・段間の罫線の区間を描画するかどうかを定義します。
+**`column-rule-visibility-items`** は [CSS](/ja/docs/Web/CSS) のプロパティで、空の領域に隣接するギャップに、列間罫・段間罫の区間を描画するかどうかを定義します。
 
-{{InteractiveExample("CSS Demo: column-rule-visibility-items")}}
+{{InteractiveExample("CSS デモ: column-rule-visibility-items")}}
 
 ```css interactive-example-choice
 column-rule-visibility-items: all;
@@ -73,21 +73,23 @@ column-rule-visibility-items: unset;
 
 ### 値
 
+このプロパティは、以下のキーワード値のいずれかで指定します。
+
 - `all`
-  - : 隣接する領域にアイテムが含まれているかどうかに関わらず、すべての隙間の区間に列・段間の罫線を引きます。
+  - : 隣接する領域にアイテムが含まれているかどうかに関わらず、すべてのギャップの区間に列間罫・段間罫を引きます。
 
 - `around`
-  - : 隣接する 2 つの領域のうち、少なくとも 1 つがアイテムで占められている場合、その隙間の区間には列・段間の罫線を引きます。
+  - : 隣接する 2 つの領域のうち、少なくとも 1 つがアイテムで占められている場合、そのギャップの区間には列間罫・段間罫を引きます。
 
 - `between`
-  - : 隣接する 2 つの領域が両方ともアイテムで占められている場合のみ、その間の区間には列・段間の罫線を引きます。
+  - : 隣接する 2 つの領域が両方ともアイテムで占められている場合のみ、その間の区間には列間罫・段間罫を引きます。
 
 - `normal`
   - : グリッドコンテナーの場合、`all` と同じ動作をします。段組みレイアウトの場合は、`between` と同じ動作をします。これがデフォルトの設定です。
 
 ## 解説
 
-`column-rule-visibility-items` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)および[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)コンテナーで複数の列がある場合、空の領域に隣接する列の隙間に列・段間罫線の区間を描画するかどうかを定義します。
+`column-rule-visibility-items` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)および[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)コンテナーに複数の列がある場合、空の領域に隣接する列のギャップに列・段間罫線の区間を描画するかどうかを定義します。
 
 `column-rule-visibility-items` と {{cssxref("row-rule-visibility-items")}} プロパティの両方を {{cssxref("rule-visibility-items")}} 一括指定を使用して設定することができます。
 
@@ -103,7 +105,7 @@ column-rule-visibility-items: unset;
 
 ### 基本的な例
 
-この例では、隣接するグリッド領域のうち少なくとも 1 つにグリッドアイテムが含まれている場合、2 つのグリッド領域の間に罫線が描画されるよう列間罫線を定義します。
+この例では、隣接するグリッド領域のうち少なくとも 1 つにグリッドアイテムが含まれている場合、2 つのグリッド領域の間に罫線が描画されるよう列間罫を定義します。
 
 #### HTML
 
@@ -124,7 +126,7 @@ column-rule-visibility-items: unset;
 
 順序付きリスト ({{htmlelement("ol")}}) をグリッドコンテナーとして定義し、{{cssxref("grid-template-columns")}} および {{cssxref("grid-template-rows")}} プロパティの両方を `repeat(4, 1fr)` に設定して 4 列 4 行のグリッドを生成し、{{cssxref("grid-column")}} および {{cssxref("grid-row")}} プロパティを使用して、最後のアイテムを右下のグリッド領域に移動させます。{{cssxref("gap")}} を `20px` に指定し、`5px` の破線の罫線が収まるよう、列間に十分な空間を提供します。
 
-最後に、`column-rule-visibility-items` を `between` に設定しました。これにより、隣接する両方のグリッド領域にグリッドアイテムが含まれている場合にのみ、列間に罫線が描画されるようになります。
+最後に、`column-rule-visibility-items` を `between` に設定しました。これにより、隣接する両方のグリッド領域にグリッドアイテムが含まれている場合にのみ、列間罫が描画されるようになります。
 
 ```css
 ol {

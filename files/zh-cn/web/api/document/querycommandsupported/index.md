@@ -3,7 +3,7 @@ title: Document.queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}
+{{ApiRef("DOM")}}
 
 **`Document.queryCommandSupported()`** 方法确定浏览器是否支持指定的编辑指令。
 

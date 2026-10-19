@@ -1,17 +1,20 @@
 ---
-title: History.length
+title: "History : propriété length"
+short-title: length
 slug: Web/API/History/length
+l10n:
+  sourceCommit: beb3ba101b5535f226f4de17de996513b13eecdb
 ---
 
 {{APIRef("History API")}}
 
-La propriété en lecture seule **`History.length`** retourne un entier indiquant le nombre d'élément dans l'historique de session, incluant la page courante. Par exemple, pour une page dans un nouvel onglet, la propriété retournera `1`.
+La propriété en lecture seule **`length`** de l'interface {{DOMxRef("History")}} retourne un entier représentant le nombre d'éléments dans l'historique de session, incluant la page actuellement chargée.
 
-## Syntaxe
+Par exemple, pour une page chargée dans un nouvel onglet, cette propriété retourne `1`.
 
-```js
-const length = history.length;
-```
+## Valeur
+
+Un nombre.
 
 ## Spécifications
 
@@ -23,4 +26,4 @@ const length = history.length;
 
 ## Voir aussi
 
-- L'interface {{domxref("History")}} auquel `length` se rattache.
+- L'interface {{DOMxRef("History")}} à laquelle elle est rattachée.

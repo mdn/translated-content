@@ -49,7 +49,7 @@ _このインターフェイスは {{domxref("UIEvent")}} および {{domxref("E
 - {{domxref("TouchEvent.shiftKey")}} {{ReadOnlyInline}}
   - : 論理値で、タッチイベントが発行されたときにシフトキーが押されていたかどうかを示します。
 - {{domxref("TouchEvent.targetTouches")}} {{ReadOnlyInline}}
-  - : 現在タッチ面に接触してしており、**かつ**イベントのターゲット要素と同じ要素で開始された、すべての {{domxref("Touch")}} オブジェクトの {{domxref("TouchList")}} です。
+  - : 現在タッチ面に接触しており、**かつ**イベントのターゲット要素と同じ要素で開始された、すべての {{domxref("Touch")}} オブジェクトの {{domxref("TouchList")}} です。
 - {{domxref("TouchEvent.touches")}} {{ReadOnlyInline}}
   - : 対象や、変更されたステータスに関係なく、表面との現在の接点をすべて表す {{domxref("Touch")}} オブジェクトの {{domxref("TouchList")}} です。
 - {{domxref("TouchEvent.rotation")}} {{non-standard_inline()}} {{ReadOnlyInline}}

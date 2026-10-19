@@ -25,7 +25,7 @@ WebGLUniformLocation = WebGLRenderingContext.getUniformLocation(programme, nom);
 - `programme`
   - : Le {{domxref ("WebGLProgram")}} dans lequel localiser la variable uniform indiquée.
 - `nom`
-  - : Une {{domxref ("DOMString")}} indiquant le nom de la variable uniform dont l'emplacement doit être retourné. Le nom ne peut contenir aucun espace, et vous ne pouvez pas utiliser cette fonction pour obtenir l'emplacement d'aucun uniform commençant par la chaîne réservée `"gl_"`, du fait que ceux-ci sont internes à la couche WebGL.
+  - : Une {{jsxref("String")}} indiquant le nom de la variable uniform dont l'emplacement doit être retourné. Le nom ne peut contenir aucun espace, et vous ne pouvez pas utiliser cette fonction pour obtenir l'emplacement d'aucun uniform commençant par la chaîne réservée `"gl_"`, du fait que ceux-ci sont internes à la couche WebGL.
 
 ### Valeur retournée
 

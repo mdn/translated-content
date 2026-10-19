@@ -1,18 +1,17 @@
 ---
 title: AsyncGenerator.prototype.throw()
+short-title: throw()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/throw
 l10n:
-  sourceCommit: 6bd17cb9cbc2d11163617b9f71706e93fdd743c8
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`throw()`** は {{jsxref("AsyncGenerator")}} インスタンスのメソッドで、あたかも `throw` 文がジェネレーター本体の中の停止中の位置に挿入されたかのように動作し、エラー状態をジェネレーターに通知して、エラーを処理するか、クリーンアップを実行してそれ自身を閉じることができます。
 
 ## 構文
 
 ```js-nolint
-asyncGeneratorObject.throw(exception)
+asyncGeneratorInstance.throw(exception)
 ```
 
 ### 引数
@@ -37,7 +36,7 @@ asyncGeneratorObject.throw(exception)
 
 ### throw() の使用
 
-次の例では、単純なジェネレーターと、`throw` メソッドを使用して発生したエラーについて示します。エラーは、通常通り {{jsxref("Statements/try...catch", "try...catch")}} ブロックで捕らえることができます。
+次の例では、ジェネレーターと、`throw` メソッドを使用して発生したエラーについて示します。エラーは、通常通り {{jsxref("Statements/try...catch", "try...catch")}} ブロックで捕らえることができます。
 
 ```js
 // 非同期タスクです。実際にはもっと有益なことを使用していることを
@@ -77,4 +76,4 @@ asyncGen
 ## 関連情報
 
 - {{jsxref("Statements/async_function*", "async function*")}}
-- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)ガイド

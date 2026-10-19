@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("DOM")}}{{Deprecated_header}}
+{{APIRef("DOM")}}
 
 **`specified`** は {{domxref("Attr")}} インターフェイスのプロパティで、常に `true` を返します。
 

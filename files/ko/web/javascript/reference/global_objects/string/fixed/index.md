@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5a2cea779777daaff451f21ca3b7f4c28a68de9e
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("String")}} 값의 **`fixed()`** 메서드는 해당 문자열을 고정폭 글꼴로 표시하게 만드는 {{HTMLElement("tt")}} 요소(`<tt>str</tt>`)에 해당 문자열을 집어넣은 문자열을 생성합니다.
 

@@ -43,7 +43,7 @@ indexOf(searchElement, fromIndex)
 
 ### 返値
 
-配列内にある最初の `searchElement` のインデックスです。見つからなかった場合は `-1`` です。
+配列内にある最初の `searchElement` のインデックスです。見つからなかった場合は `-1` です。
 
 ## 解説
 

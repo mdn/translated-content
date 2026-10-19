@@ -35,7 +35,7 @@ createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
 
 ## 連鎖
 
-よくあるニーズは、 2 つ以上の非同期処理を連続して実行することで、前回の処理が成功したときに、その結果をもとに後続の処理を始めることです。昔は、複数の非同期処理を連続して実行すると、古典的な[コールバック地獄](https://medium.com/@raihan_tazdid/callback-hell-in-javascript-all-you-need-to-know-296f7f5d3c1)に陥っていました。
+よくあるニーズとして、2 つ以上の非同期操作を連続して実行することが挙げられます。この場合、それぞれの操作は、前回の操作が成功したとき、前回の段階の結果を用いて開始されます。昔は、複数の非同期処理を連続して実行すると、古典的な[コールバック地獄](https://medium.com/@raihan_tazdid/callback-hell-in-javascript-all-you-need-to-know-296f7f5d3c1)<sup>(英語)</sup>に陥っていました。
 
 ```js-nolint
 doSomething(function (result) {
@@ -204,7 +204,7 @@ async function logIngredients() {
 `async`/`await` はプロミスを基に構築されています。例えば、`doSomething()` は以前と同じ関数であるため、プロミスから `async`/`await` に変更するために必要なリファクタリングは最小限で済みます。 `async`/`await` の構文については、[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)および [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) のリファレンスで詳しく説明されています。
 
 > [!NOTE]
-> `async`/`await` は通常のプロミス連鎖と同じ並列処理の意味論をもちます。 1 つの非同期関数内で `await` を使用しても、プログラム全体が停止するわけではなく、その値に依存する部分のみが停止します。そのため、 `await` が待機中の間にも、他にも非同期のジョブが実行される可能性があります。
+> `async`/`await` は通常のプロミス連鎖と同じ並行処理の意味論をもちます。 1 つの非同期関数内で `await` を使用しても、プログラム全体が停止するわけではなく、その値に依存する部分のみが停止します。そのため、 `await` が待機中の間にも、他にも非同期のジョブが実行される可能性があります。
 
 ## エラー処理
 
@@ -335,14 +335,14 @@ async function main() {
 }
 ```
 
-### プロミスの拒否イベント
+### プロミス拒否イベント
 
 プロミス拒否イベントがどのハンドラーによっても処理されなかった場合、そのイベントは呼び出しスタックの先頭にバブリングし、ホストはそれを表面化させる必要があります。ウェブでは、プロミスが拒否されるたびに、 2 種類のイベントのどちらかがグローバルスコープに送られます（一般的には、 [`window`](/ja/docs/Web/API/Window) か、ウェブワーカーで使用する場合は、 [`Worker`](/ja/docs/Web/API/Worker)、または他のワーカーベースのインターフェイスです）。この 2 つのイベントは次の通りです。
 
 - [`unhandledrejection`](/ja/docs/Web/API/Window/unhandledrejection_event)
   - : プロミスが拒否されたものの、拒否ハンドラーが利用できない場合に送られます。
 - [`rejectionhandled`](/ja/docs/Web/API/Window/rejectionhandled_event)
-  - : プロミスが拒否されたとき、実行者の `reject` 関数によって拒否が処理された後に送られます。
+  - : すでに `unhandledrejection` イベントを発生させた、拒否されたプロミスにハンドラーが添付された場合に送信されます。
 
 いずれの場合でも、この（[`PromiseRejectionEvent`](/ja/docs/Web/API/PromiseRejectionEvent) 型の）イベントは、拒否されたプロミスを示す [`promise`](/ja/docs/Web/API/PromiseRejectionEvent/promise) プロパティと、そのプロミスが失敗した理由を表す [`reason`](/ja/docs/Web/API/PromiseRejectionEvent/reason) プロパティを持ちます。
 
@@ -374,13 +374,13 @@ Promise.all([func1(), func2(), func3()]).then(([result1, result2, result3]) => {
 
 配列内のプロミスのいずれかが拒否された場合、`Promise.all()` は返されたプロミスを直ちに拒否します。他の操作は引き続き実行されますが、その結果は `Promise.all()` の返値からは利用できません。これにより、予期せぬ状態や振る舞いが発生する可能性があります。 {{jsxref("Promise.allSettled()")}} は、解決する前にすべての操作が完了することを保証する別の合成ツールです。
 
-これらのメソッドはすべてプロミスを並列処理します。一連のプロミスは同時に開始され、他にも待つことはありません。いくつかの賢い JavaScript を使用することで、逐次合成が可能です。
+これらのメソッドはすべてプロミスを並行処理します。一連のプロミスは同時に開始され、他にも待つことはありません。いくつかの賢い JavaScript を使用することで、逐次合成が可能です。
 
 ```js
 [func1, func2, func3]
   .reduce((p, f) => p.then(f), Promise.resolve())
   .then((result3) => {
-    // result3 を使用
+    /* result3 を使用 */
   });
 ```
 
@@ -423,7 +423,7 @@ for (const f of [func1, func2, func3]) {
 /* 最終的な結果 (すなわち result3) を使用 */
 ```
 
-しかし、プロミスを逐次的に構成する前に、それが実に必要かどうかを検討してください。あるプロミスの実行が他のプロミスの結果に依存していない限り、それらが不必要にブロックし合わないように、常にプロミス並列処理を実行する方がよいのです。
+しかし、プロミスを逐次的に構成する前に、それが実に必要かどうかを検討してください。あるプロミスの実行が他のプロミスの結果に依存していない限り、それらが不必要にブロックし合わないように、常にプロミス並行処理を実行する方がよいのです。
 
 ## キャンセル
 

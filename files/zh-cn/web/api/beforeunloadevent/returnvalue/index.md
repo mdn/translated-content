@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 {{domxref("BeforeUnloadEvent")}} 接口的 **`returnValue`** 属性，当设置为真值时，会触发浏览器生成的确认对话框，提示用户在尝试关闭或重新加载页面或者导航到其他地方时，是否确实要离开该页面。此功能旨在避免未保存数据的丢失。
 

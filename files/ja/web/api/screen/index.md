@@ -30,7 +30,7 @@ _親である {{domxref("EventTarget")}} から継承したプロパティもあ
 - {{DOMxRef("Screen.orientation")}}
   - : この画面に関連付けられた {{DOMxRef("ScreenOrientation")}} インスタンスを返します。
 - {{DOMxRef("Screen.pixelDepth")}}
-  - : 画面のピット深度を取得します。
+  - : 画面のビット深度を取得します。
 - {{DOMxRef("Screen.width")}}
   - : 画面の幅を返します。
 - {{DOMxRef("Screen.mozEnabled")}} {{Non-standard_Inline}} {{Deprecated_Inline}}

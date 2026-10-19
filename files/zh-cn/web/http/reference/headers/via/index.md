@@ -11,7 +11,7 @@ slug: Web/HTTP/Reference/Headers/Via
 
 ## 语法
 
-```plain
+```http
 Via: [ <protocol-name> "/" ] <protocol-version> <host> [ ":" <port> ]
 or
 Via: [ <protocol-name> "/" ] <protocol-version> <pseudonym>
@@ -30,7 +30,7 @@ Via: [ <protocol-name> "/" ] <protocol-version> <pseudonym>
 
 ## 示例
 
-```plain
+```http
 Via: 1.1 vegur
 Via: HTTP/1.1 GWA
 Via: 1.0 fred, 1.1 p.example.net

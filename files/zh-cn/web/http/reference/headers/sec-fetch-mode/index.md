@@ -12,7 +12,7 @@ slug: Web/HTTP/Reference/Headers/Sec-Fetch-Mode
 
 ## 语法
 
-```plain
+```http
 Sec-Fetch-Mode: cors
 Sec-Fetch-Mode: navigate
 Sec-Fetch-Mode: nested-navigate
