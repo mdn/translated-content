@@ -68,7 +68,7 @@ false + false; // Salida esperada: 0
 ### Adición usando BigInts
 
 ```js
-1n + 2n; // Salida esperada: 3n
+1n + 2n; // 3n
 ```
 
 No puedes mezclar operandos BigInt y numérico en una suma. `null`, `undefined`, y valores booleanos son coercionados a números y quedan prohibidos también.
