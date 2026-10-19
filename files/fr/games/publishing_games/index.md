@@ -13,7 +13,7 @@ Vous avez déjà suivi un [tutoriel](/fr/docs/Games/Tutorials/2D_breakout_game_p
 
 ## Promouvoir votre jeu
 
-Développer et finaliser un jeu ne suffit pas. Vous devez informer le monde que vous avez réalisé quelque chose d'intéressant, avec lequel les gens ont plaisir à jouer. Il y a de nombreux moyens de [Promouvoir votre jeu](/fr/docs/Games/Publishing_games/Game_promotion) — beaucoup d'entre-eux sont gratuits — et donc, même si vous avez du mal à gagner votre vie en tant que développeur·euse indépendant·e avec un budget nul, vous disposez malgré tout de nombreux moyens d'informer les gens de votre nouveau super jeu. Faire la promotion de votre jeu vous aidera beaucoup notamment si vous souhaitez le monétiser par la suite, il est donc important de le faire correctement.
+Développer et finaliser un jeu ne suffit pas. Vous devez informer le monde que vous avez réalisé quelque chose d'intéressant, avec lequel les gens ont plaisir à jouer. Il y a de nombreux moyens de [Promouvoir votre jeu](/fr/docs/Games/Publishing_games/Game_promotion) — beaucoup d'entre-eux sont gratuits — et donc, même si vous avez du mal à gagner votre vie en tant que développeur·euse indépendant·e avec un budget nul, vous disposez malgré tout de nombreux moyens d'informer les gens de votre nouveau super jeu. Faire la promotion de votre jeu vous aide beaucoup notamment si vous souhaitez le monétiser par la suite, il est donc important de le faire correctement.
 
 ## Monétiser votre jeu
 
