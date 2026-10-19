@@ -493,7 +493,7 @@ timeRange(hour1, min1, sec1, hour2, min2, sec2, gmt)
 Si une seule valeur est définie (pour chaque catégorie&nbsp;: heure, minute, seconde), la fonction retourne une valeur true uniquement aux moments correspondant à cette spécification. Si les deux valeurs sont définies, le résultat est true entre ces moments, y compris les limites, _mais les limites sont ordonnées_.
 
 > [!WARNING]
-> **L'ordre des heures, minutes et secondes est important**. Avant Firefox 49, `timeRange(0, 23)` est toujours évalué à true. Maintenant, `timeRange(23, 0)` n'est évalué à true que si l'heure actuelle est 23:00 ou minuit.
+> **L'ordre des heures, minutes et secondes est important**. Avant Firefox 49, `timeRange(0, 23)` est toujours évalué à true. Maintenant, `timeRange(23, 0)` n'est évalué à `true` que si l'heure actuelle est 23h00 ou minuit.
 
 #### Exemples
 
