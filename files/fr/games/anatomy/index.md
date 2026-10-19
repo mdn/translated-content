@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f99d00a1c3697e26a679925954e26564e7e79b98
 ---
 
-Cet article se concentre sur l'anatomie et le flux de la plupart des jeux video à partir d'un point de vue technique, concernant la manière dont la boucle principale doit tourner. Cela aide les débutants dans l'arène du développement à comprendre ce qui est requis quand il est question de bâtir un jeu et comment les standards du web comme JavaScript leur est offert comme outil. Les programmeurs de jeux expérimentés et nouveaux dans le développement web peuvent aussi en tirer bénéfice.
+Cet article se concentre sur l'anatomie et le flux de la plupart des jeux video à partir d'un point de vue technique, concernant la manière dont la boucle principale doit tourner. Cela aide les débutant·e·s dans l'arène du développement à comprendre ce qui est requis quand il est question de bâtir un jeu et comment les standards du web comme JavaScript leur est offert comme outil. Les programmeurs de jeux expérimentés et nouveaux dans le développement web peuvent aussi en tirer bénéfice.
 
 ## Présenter, accepter, interpréter, calculer, répéter
 
@@ -57,7 +57,7 @@ Il y a deux problèmes évidents avec notre boucle principale précédente: `mai
  * Débuter avec le point virgule au cas où le code qui réside au-dessus de cet exemple
  * s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
  * penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
- * marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
+ * marque le début de notre nouvelle ligne si la précédente n'est pas vide ou complétée.
  */
 
 (() => {
@@ -83,7 +83,7 @@ Pour le second problème, arrêter la boucle principale, vous avez besoin d'annu
  * Débuter avec le point virgule au cas où le code qui réside au-dessus de cet exemple
  * s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
  * penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
- * marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
+ * marque le début de notre nouvelle ligne si la précédente n'est pas vide ou complétée.
  *
  * Assumons aussi que MonJeu est défini précédemment.
  */
@@ -131,14 +131,14 @@ Seule, cette valeur n'est pas très utile, considérant qu'il est relatif à un 
 const tNow = window.performance.now();
 ```
 
-Retournons sur le sujet de la boucle principale. Il vous arrive souvent de vouloir savoir quand votre boucle principale a été invoquée. Parce que cela est commun, la fonction `window.requestAnimationFrame()` fournit toujours un `DOMHighResTimeStamp` avec un argument de retour quand elles sont exécutées. Cela mène à une amélioration de notre boucle précédente.
+Retournons sur le sujet de la boucle principale. Il vous arrive souvent de vouloir savoir quand votre boucle principale a été invoquée. Parce que c'est commun, la fonction `window.requestAnimationFrame()` fournit toujours un `DOMHighResTimeStamp` avec un argument de retour quand elles sont exécutées. Cela mène à une amélioration de notre boucle précédente.
 
 ```js
 /*
  * Débuter avec le point virgule au cas où le code qui réside au-dessus de cet exemple
  * s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
  * penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
- * marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
+ * marque le début de notre nouvelle ligne si la précédente n'est pas vide ou complétée.
  *
  * Assumons aussi que MonJeu est défini précédemment.
  */
@@ -173,7 +173,7 @@ Si votre jeu peut atteindre le maximum du taux de rafraîchissement sur n'import
  * Débuter avec le point virgule au cas où le code qui réside au-dessus de cet exemple
  * s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
  * penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
- * marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
+ * marque le début de notre nouvelle ligne si la précédente n'est pas vide ou complétée.
  *
  * Assumons aussi que MonJeu est défini précédemment.
  */
@@ -190,7 +190,7 @@ Si votre jeu peut atteindre le maximum du taux de rafraîchissement sur n'import
 })();
 ```
 
-Si le maximum du taux de rafraîchissement ne peut être atteint, les paramètres de qualités peuvent être mis à jour pour rester sous notre gain en temps. L'exemple le plus célèbre de ce concept est le jeu de id Software, RAGE. Ce jeu a retiré à l'utilisateur·ice le contrôle afin de conserver son temps de calcul à environ 16ms (ou environ 60ips). Si le calcul prenait trop de temps alors la résolution est diminuée, les textures et autres éléments échouent au chargement et à l'affichage, et ainsi de suite. Ce cas (non-web) a créé plusieurs hypothèses et faits&nbsp;:
+Si le maximum du taux de rafraîchissement ne peut être atteint, les paramètres de qualités peuvent être mis à jour pour rester sous notre gain en temps. L'exemple le plus célèbre de ce concept est le jeu de id Software, RAGE. Ce jeu a retiré à l'utilisateur·ice le contrôle afin de conserver son temps de calcul à environ 16ms (ou environ 60ips). Si le calcul prend trop de temps alors la résolution est diminuée, les textures et autres éléments échouent au chargement et à l'affichage, et ainsi de suite. Ce cas (non-web) a créé plusieurs hypothèses et faits&nbsp;:
 
 - Chaque image d'animation compte pour une entrée utilisateur.
 - Aucune image n'a besoin d'être extrapolée (devinée), car chaque élément à sa propre mise à jour.
@@ -232,7 +232,7 @@ Une méthode séparée de mise à jour et de dessin peut avoir l'air de l'exempl
 * Débuter avec le point virgule au cas où le code qui réside au-dessus de cet exemple
 * s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
 * penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
-* marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
+* marque le début de notre nouvelle ligne si la précédente n'est pas vide ou complétée.
 *
 * Assumons aussi que MonJeu est défini précédemment.
 *
@@ -263,10 +263,10 @@ Une méthode séparée de mise à jour et de dessin peut avoir l'air de l'exempl
     const nextTick = MonJeu.lastTick + MonJeu.tickLength;
     let numTicks = 0;
 
-    //Si tFrame < nextTick alors 0 ticks doit être mis à jour (0 est par défaut pour numTicks).
-    //Si tFrame = nextTick alors 1 tick doit être mis à jour (et ainsi de suite).
-    //Note: Comme nous le mentionnons dans le sommaire, vous devez faire un suivi de la taille de numTicks.
-    //S'il est important, alors soit votre jeu est en veille, soit votre machine ne répond plus.
+    // Si tFrame < nextTick alors 0 ticks doit être mis à jour (0 est par défaut pour numTicks).
+    // Si tFrame = nextTick alors 1 tick doit être mis à jour (et ainsi de suite).
+    // Note : Comme nous le mentionnons dans le sommaire, vous devez faire un suivi de la taille de numTicks.
+    // S'il est important, alors soit votre jeu est en veille, soit votre machine ne répond plus.
     if (tFrame > nextTick) {
       const timeSinceTick = tFrame - MonJeu.lastTick;
       numTicks = Math.floor(timeSinceTick / MonJeu.tickLength);
@@ -285,15 +285,15 @@ Une méthode séparée de mise à jour et de dessin peut avoir l'air de l'exempl
   }
 
   MonJeu.lastTick = performance.now();
-  MonJeu.lastRender = MonJeu.lastTick; //Prétendre que le premier dessin était sur la première mise à jour.
-  MonJeu.tickLength = 50; //Cela positionne votre simulation pour tourner à 20Hz (50ms)
+  MonJeu.lastRender = MonJeu.lastTick; // Prétend que le premier dessin est sur la première mise à jour.
+  MonJeu.tickLength = 50; // Cela positionne votre simulation pour tourner à 20Hz (50ms)
 
   setInitialState();
   main(performance.now()); // Débute le cycle
 })();
 ```
 
-Une autre alternative est de simplement faire certaines choses moins souvent. Si une portion de votre boucle de mise à jour est difficile à calculer et intense (en temps), vous devez considérer réduire sa fréquence et, idéalement, la diviser en portions à travers une période plus allongée. Un exemple implicite de cela est rencontré dans «&nbsp;The Artillery Blog for Artillery Games&nbsp;», où ils [ajustent leur taux de création de miettes <sup>(angl.)</sup>](https://web.archive.org/web/20161021030645/http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html) pour optimiser leur ramasse-miettes. Apparemment, le nettoyage des ressources n'est pas sensible au temps (spécialement si le nettoyage est plus dérangeant que le la miette elle-même).
+Une autre alternative est de simplement faire certaines choses moins souvent. Si une portion de votre boucle de mise à jour est difficile à calculer et intense (en temps), vous devez considérer réduire sa fréquence et, idéalement, la diviser en portions à travers une période plus allongée. Un exemple implicite de c'est rencontré dans «&nbsp;The Artillery Blog for Artillery Games&nbsp;», où ils [ajustent leur taux de création de miettes <sup>(angl.)</sup>](https://web.archive.org/web/20161021030645/http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html) pour optimiser leur ramasse-miettes. Apparemment, le nettoyage des ressources n'est pas sensible au temps (spécialement si le nettoyage est plus dérangeant que le la miette elle-même).
 
 Cela peut aussi s'appliquer à vos propres tâches. Elles sont de bonnes candidates pour en générer quand les ressources disponibles deviennent un problème.
 
