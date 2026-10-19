@@ -1,5 +1,5 @@
 ---
-title: 球板及控制
+title: 球板和操控
 slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls
 l10n:
   sourceCommit: 69937a446786abf5a58d4214b4192597d0b3cdc6

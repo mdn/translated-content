@@ -76,6 +76,6 @@ const game = new Phaser.Game(config);
 
 ## 下一步
 
-现在开始看起来更像是一个游戏了，但我们还无法以任何方式操控它——是时候介绍[玩家挡板和操控](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)了。
+现在开始看起来更像是一个游戏了，但我们还无法以任何方式操控它——是时候介绍[球板和操控](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)了。
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Physics", "Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls")}}

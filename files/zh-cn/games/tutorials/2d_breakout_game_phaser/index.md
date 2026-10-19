@@ -19,7 +19,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 2. [移动小球](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball)
 3. [物理](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics)
 4. [从墙壁反弹](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls)
-5. [球板和控制](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)
+5. [球板和操控](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)
 6. [游戏结束](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
 7. [建立砖块](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
 8. [记录得分和赢得游戏](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win)
