@@ -1,5 +1,6 @@
 ---
 title: JSON.isRawJSON()
+short-title: isRawJSON()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/isRawJSON
 l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
