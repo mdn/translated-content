@@ -27,7 +27,7 @@ JavaScript 객체는 속성을 저장하는 동적인 "가방"과 (**자기만�
 >
 > 생성자로 사용될 때 주어진 함수에 의해 생성된 객체의 모든 `인스턴스`에 `[[Prototype]]`이 할당되도록 지정하는 함수의 `func.prototype` 속성과 혼동해서는 안 됩니다. [나중 섹션](#constructors)에서 생성자 함수의 `prototype` 속성에 대해 논의할 것입니다.
 
-객체의 `[[Prototype]]`을 지정하는 방법에는 여러 가지가 있으며, [나중 섹션](#different_ways_of_creating_and_mutating_prototype_chains)에 나열되어 있습니다. 지금은, 설명을 위해 [`__proto__` 문법](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter)을 사용합니다. `{ __proto__: ... }` 구문이 표준이며, 더 이상 사용되지 않는 `obj.__proto__` 접근자와 다르다는 점을 참고해주십시오.
+객체의 `[[Prototype]]`을 지정하는 방법에는 여러 가지가 있으며, [나중 섹션](#different_ways_of_creating_and_mutating_prototype_chains)에 나열되어 있습니다. 지금은, 설명을 위해 [`__proto__` 문법](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer#프로토타입_변형)을 사용합니다. `{ __proto__: ... }` 구문이 표준이며, 더 이상 사용되지 않는 `obj.__proto__` 접근자와 다르다는 점을 참고해주십시오.
 `{ a: 1, b: 2, __proto__: c }`와 같은 객체 리터럴에서, 값 `c`(`null` 또는 다른 객체여야 합니다)는 해당 객체의 `[[Prototype]]`이 됩니다. 반면, `a` 및 `b`와 같은 다른 키는 해당 객체의 *자체 속성*이 됩니다. `[[Prototype]]`은 객체의 "내부 속성"일 뿐이므로, 이 구문은 매우 자연스럽게 읽히는 부분입니다.
 
 다음은 속성에 접근하려고 할 때 발생하는 상황입니다.
@@ -72,7 +72,7 @@ console.log(o.d); // undefined
 // 속성을 찾을 수 없어서, undefined를 반환합니다.
 ```
 
-객체의 속성에 값을 지정하면 "자기만의 속성"이 생성됩니다. 단, [getter or setter](/ko/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)가 적용되는 속성이 상속되는 경우 예외적인 규칙이 적용됩니다.
+객체의 속성에 값을 지정하면 "자기만의 속성"이 생성됩니다. 단, [getter or setter](/ko/docs/Web/JavaScript/Guide/Working_with_objects#접근자와_설정자_정의하기)가 적용되는 속성이 상속되는 경우 예외적인 규칙이 적용됩니다.
 
 마찬가지로, 더 긴 프로토타입 체인을 만들 수 있으며, 모든 체인에서 속성을 찾을 수 있습니다.
 
