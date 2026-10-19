@@ -74,8 +74,8 @@ false + false; // Salida esperada: 0
 No puedes mezclar operandos BigInt y numérico en una suma. `null`, `undefined`, y valores booleanos son coercionados a números y quedan prohibidos también.
 
 ```js example-bad
-1n + 2; // La consola arrojará TypeError: Cannot mix BigInt and other types, use explicit conversions
-2 + 1n; // La consola arrojará TypeError: Cannot mix BigInt and other types, use explicit conversions
+1n + 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+2 + 1n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 ```
 
 Los string tienen prioridad sobre otros tipos, así que sumar un string a un BigInt produce una concatenación de string en vez de un `TypeError`.
