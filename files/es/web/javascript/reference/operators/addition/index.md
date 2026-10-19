@@ -7,9 +7,9 @@ l10n:
 
 {{jsSidebar("Operators")}}
 
-El operador de adición (`+`) produce la suma de operandos numéricos o la concatenación de (cadenas) string.
+El operador de **adición (`+`)** produce la suma de operandos numéricos o la concatenación de string.
 
-{{InteractiveExample("JavaScript Demo: Addition (+) operator")}}
+{{InteractiveExample("Demostracion en JavaScript: Operador de adición (+)")}}
 
 ```js interactive-example
 console.log(2 + 2);
@@ -27,8 +27,8 @@ console.log(2001 + ": A Space Odyssey");
 
 ## Sintaxis
 
-```
-Operador: x + y
+```js-nolint
+x + y
 ```
 
 ## Descripción
@@ -55,14 +55,13 @@ Se recomienda no usar `"" + x` para realizar la [coerción a string](/es/docs/We
 ### Adición numérica
 
 ```js
-// número + número -> resultado de la adición
-1 + 2; // Salida esperada: 3
+1 + 2; // 3
+```
 
-// booleano + número -> resultado de la adición
-true + 1; // Salida esperada: 2
-
-// booleano + booleano -> resultado de la adición
-false + false; // Salida esperada: 0
+Otros valores que no son string, ni Bigint son coercionados a números.
+```js
+true + 1; // 2
+false + false; // 0
 ```
 
 ### Adición usando BigInts
@@ -96,16 +95,9 @@ Number(1n) + 2; // 3
 Si uno de los operandos es un string, el otro operando es convertido a string y son concatenados:
 
 ```js
-// string + string -> concatenación
 "fut" + "bol"; // "futbol"
-
-// número + string -> concatenación
 5 + "bol"; // "5bol"
-
-// string + booleano -> concatenación
 "fut" + false; // "futfalse"
-
-// string + número -> concatenación
 "2" + 2; // "22"
 ```
 
