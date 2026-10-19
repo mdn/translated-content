@@ -87,8 +87,8 @@ Los string tienen prioridad sobre otros tipos, así que sumar un string a un Big
 Para realizar una suma entre un operando BigInt y uno que no es BigInt, convierte cualquiera de los operandos:
 
 ```js
-1n + BigInt(2); // Salida esperada: 3n
-Number(1n) + 2; // Salida esperada: 3
+1n + BigInt(2); // 3n
+Number(1n) + 2; // 3
 ```
 
 ### Concatenación de strings
