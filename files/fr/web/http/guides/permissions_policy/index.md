@@ -15,7 +15,7 @@ Exemples de ce que vous pouvez faire avec la politique de permission&nbsp;:
 
 - Modifier le comportement par défaut de la lecture automatique sur mobile et pour les vidéos de source externe.
 - Restreindre l'utilisation par un site des appareils sensibles comme l'appareil photo, le microphone ou les haut-parleurs.
-- Autoriser les iframes à utiliser [l'API Fullscreen](/fr/docs/Web/API/Fullscreen_API).
+- Autoriser les cadres intégrés à utiliser [l'API Fullscreen](/fr/docs/Web/API/Fullscreen_API).
 - Empêcher la possibilité d'exécuter des scripts sur des éléments qui ne sont pas visibles dans la zone d'affichage, afin d'améliorer les performances.
 
 > [!NOTE]
