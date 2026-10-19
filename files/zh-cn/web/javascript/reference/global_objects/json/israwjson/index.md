@@ -108,7 +108,7 @@ console.log(
 
 ## 参见
 
-- [Polyfill of `JSON.isRawJSON` in `core-js`](https://github.com/zloirock/core-js#jsonparse-source-text-access)
+- [`core-js` 中 `JSON.isRawJSON` 的 polyfill](https://github.com/zloirock/core-js#jsonparse-source-text-access)
 - {{jsxref("JSON")}}
 - {{jsxref("JSON.stringify()")}}
 - {{jsxref("JSON.rawJSON()")}}
