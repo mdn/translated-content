@@ -347,8 +347,7 @@ shExpMatch(str, shExp)
 Retourne `true` si la chaîne de caractères correspond à l'expression shell glob définie.
 
 La prise en charge de la syntaxe des expressions glob particulières varie selon les navigateurs&nbsp;:
-`*` (correspond à un nombre quelconque de caractères) et `?` (correspond à un caractère) sont toujours pris en charge,
-tandis que `[caractères]` et `[^caractères]` sont en outre pris en charge par certaines implémentations (y compris Firefox).
+`*` (correspond à un nombre quelconque de caractères) et `?` (correspond à un caractère) sont toujours pris en charge, tandis que `[characters]` et `[^characters]` sont en outre pris en charge par certaines implémentations (y compris Firefox).
 
 > [!NOTE]
 > Si elles sont prises en charge par le client, les expressions régulières JavaScript offrent généralement un moyen plus puissant et cohérent de faire correspondre des modèles dans les URL (et autres chaînes de caractères).
