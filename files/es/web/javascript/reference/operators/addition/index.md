@@ -9,7 +9,7 @@ l10n:
 
 El operador de adición (`+`) produce la suma de operandos numéricos o la concatenación de (cadenas) string.
 
-{{InteractiveExample("JavaScript Demo: Expresiones - Operador de adición")}}
+{{InteractiveExample("JavaScript Demo: Addition (+) operator")}}
 
 ```js interactive-example
 console.log(2 + 2);
