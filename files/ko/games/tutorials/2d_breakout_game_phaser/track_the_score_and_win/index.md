@@ -1,6 +1,7 @@
 ---
 title: 득점
-slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
+slug: Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win
+original_slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
 l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---

@@ -1,6 +1,6 @@
 ---
 title: 순수한 자바스크립트를 이용한 2D 벽돌깨기 게임
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript
 l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---

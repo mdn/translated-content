@@ -1,6 +1,7 @@
 ---
 title: 개발 마무리
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives
+original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
