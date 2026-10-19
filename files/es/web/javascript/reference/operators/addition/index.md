@@ -81,7 +81,7 @@ No puedes mezclar operandos BigInt y numérico en una suma. `null`, `undefined`,
 Los string tienen prioridad sobre otros tipos, así que sumar un string a un BigInt produce una concatenación de string en vez de un `TypeError`.
 
 ```js
-"1" + 2n; // Salida esperada: "12"
+"1" + 2n; // "12"
 ```
 
 Para realizar una suma entre un operando BigInt y uno que no es BigInt, convierte cualquiera de los operandos:
