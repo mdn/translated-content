@@ -1,7 +1,6 @@
 ---
 title: Un aperçu de HTTP
 slug: Web/HTTP/Guides/Overview
-original_slug: Web/HTTP/Overview
 l10n:
   sourceCommit: a3400c39a245e0404c621c2cdbe75ad0a3eb8672
 ---
