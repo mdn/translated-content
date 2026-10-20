@@ -36,7 +36,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
 - {{DOMxRef("Window.crashReport")}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{Experimental_Inline}}
   - : Retourne un objet {{DOMxRef("CrashReportContext")}} qui permet d'enregistrer des données arbitraires pour le contexte de navigation de niveau supérieur actuel, qui sont ensuite ajoutées à un {{DOMxRef("CrashReport")}} et envoyées à un point de rapport en cas de plantage du navigateur.
 - {{DOMxRef("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Retourne un booléen indiquant si le document courant a été chargé dans une {{HTMLElement("iframe")}} sans identifiants. Voir [IFrame credentialless](/fr/docs/Web/Security/IFrame_credentialless) pour plus de détails.
+  - : Retourne un booléen indiquant si le document courant a été chargé dans une {{HTMLElement("iframe")}} sans identifiants. Voir [IFrame credentialless](/fr/docs/Web/HTTP/Guides/IFrame_credentialless) pour plus de détails.
 - {{DOMxRef("Window.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : Retourne un booléen indiquant si le site web est en état d'isolation inter-origine.
 - {{DOMxRef("Window.crypto")}} {{ReadOnlyInline}}

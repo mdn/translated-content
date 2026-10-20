@@ -123,7 +123,7 @@ Voici une liste de fonctionnalités courantes, qui sont contrôlées grâce à H
 - _Authentification_&nbsp;:
   Certaines pages peuvent être protégées de sorte que seul·e·s certain·e·s utilisateur·ice·s puissent y accéder.
   Une authentification simple peut être fournie par HTTP, soit en utilisant l'en-tête {{HTTPHeader ("WWW-Authenticate")}} et des en-têtes similaires, soit en définissant une session spécifique grâce à des [cookies HTTP](/fr/docs/Web/HTTP/Guides/Cookies).
-- _[Mandataires et tunnels](/fr/docs/Web/HTTP/Proxy_servers_and_tunneling)_&nbsp;:
+- _[Mandataires et tunnels](/fr/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling)_&nbsp;:
   Les serveurs et/ou les clients sont souvent situés sur des intranets et cachent leur véritable adresse IP à d'autres.
   Les requêtes HTTP passent ensuite par des mandataires pour traverser cette barrière de réseau.
   Tous les mandataires ne sont pas des mandataires HTTP.
