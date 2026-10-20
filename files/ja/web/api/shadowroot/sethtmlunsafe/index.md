@@ -347,4 +347,4 @@ allowScriptButton.addEventListener("click", () => {
 - {{domxref("ShadowRoot.innerHTML")}}
 - {{domxref("Element.setHTML()")}} および {{domxref("Element.setHTMLUnsafe()")}}
 - {{domxref("Document.parseHTML_static", "Document.parseHTML()")}} および {{domxref("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
-- [HTML サニタイザー API](/en-US/docs/Web/API/HTML_Sanitizer_API)
+- [HTML サニタイザー API](/ja/docs/Web/API/HTML_Sanitizer_API)
