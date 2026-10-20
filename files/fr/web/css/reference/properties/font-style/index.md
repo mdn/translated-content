@@ -3,7 +3,7 @@ title: Propriété CSS `font-style`
 short-title: font-style
 slug: Web/CSS/Reference/Properties/font-style
 l10n:
-  sourceCommit: 1551c09756bad6ad2772ce8ed6a934ae4e309642
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-style`** permet de sélectionner une fonte italique ou oblique parmi celles listées par {{CSSxRef("font-family")}}.
@@ -99,7 +99,7 @@ Cliquez sur «&nbsp;Exécuter&nbsp;» dans les blocs de code ci-dessous pour éd
 
 ```html live-sample___oblique-example
 <p class="exemple">
-  ...il n'est pas étonnant de croiser un Mégalosaure, long d'une quarantaine de
+  …il n'est pas étonnant de croiser un Mégalosaure, long d'une quarantaine de
   pieds, se dandinant comme un lézard éléphantesque sur Holborn Hill.
 </p>
 ```

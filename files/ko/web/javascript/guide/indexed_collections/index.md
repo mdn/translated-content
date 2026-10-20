@@ -38,7 +38,7 @@ const arr3 = [element0, element1, /* … ,*/ elementN];
 해당 값을 배열의 요소로 초기화됩니다. 배열의 `length` 속성은 인수의 수로 설정됩니다.
 
 대괄호 구문을 "배열 리터럴" 또는 "배열 초기자(array initializer)"라고 합니다.
-배열 성성을 위한 다른 형태보다 짧아서 일반적으로 선호하는 방법입니다. 자세한 내용은 [배열 리터럴](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals)을 참조하세요.
+배열 성성을 위한 다른 형태보다 짧아서 일반적으로 선호하는 방법입니다. 자세한 내용은 [배열 리터럴](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#배열_리터럴)을 참조하세요.
 
 길이가 0이 아니지만 요소가 없는 배열을 만들려면 다음 중 하나를 사용할 수 있습니다.
 
@@ -609,7 +609,7 @@ for (const key in arr) {
 const objectSpread = { ...arr }; // { '0': 1, '1': 2, '4': 5 }
 ```
 
-배열 메서드가 희소 배열에서 작동하는 방식에 대한 전체 목록은 [`Array` 참조 페이지](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#array_methods_and_empty_slots)를 참조하세요.
+배열 메서드가 희소 배열에서 작동하는 방식에 대한 전체 목록은 [`Array` 참조 페이지](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#배열_메서드와_빈_슬롯)를 참조하세요.
 
 ## 다차원 배열
 

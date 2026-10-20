@@ -3,7 +3,7 @@ title: En-tête Want-Repr-Digest
 short-title: Want-Repr-Digest
 slug: Web/HTTP/Reference/Headers/Want-Repr-Digest
 l10n:
-  sourceCommit: 879be34803b4be7357ed5607ac90a7be413fb969
+  sourceCommit: 892eb917bee599a9d6cae7d33ed783129dbb39b3
 ---
 
 {{Glossary("request header", "L'en-tête de requête")}} et {{Glossary("response header", "de réponse")}} HTTP **`Want-Repr-Digest`** **indique** une préférence pour que le destinataire envoie un en-tête d'intégrité {{HTTPHeader("Repr-Digest")}} dans les messages associés à l'URI de la requête et aux métadonnées de la représentation.
@@ -62,4 +62,4 @@ Les développeur·euse·s peuvent définir et obtenir des en-têtes HTTP en util
 ## Voir aussi
 
 - Les en-têtes de condensé {{HTTPHeader("Content-Digest")}}, {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Content-Digest")}}
-- Le guide du SDK [des signatures numériques pour les API <sup>(angl.)</sup>](https://developer.ebay.com/develop/guides/digital-signatures-for-apis) utilise les `Content-Digest` pour les signatures numériques dans les appels HTTP (developer.ebay.com)
+- Le guide du SDK [des signatures numériques pour les API <sup>(angl.)</sup>](https://developer.ebay.com/develop/guides/sell/digital-signatures-for-apis) utilise les `Content-Digest` pour les signatures numériques dans les appels HTTP (developer.ebay.com)

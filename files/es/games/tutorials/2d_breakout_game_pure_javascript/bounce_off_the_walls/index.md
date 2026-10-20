@@ -1,108 +1,236 @@
 ---
-title: Rebota en las paredes
+title: Rebotar en las paredes
 slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls
+l10n:
+  sourceCommit: 69937a446786abf5a58d4214b4192597d0b3cdc6
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
 
-Este es el **tercer** paso de 10 del [tutorial Canvas para el desarrollo de juegos](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente y pegarle un vistazo después de completar esta lección [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html).
+Este es el **paso 3** de los 11 del [tutorial para crear un juego Breakout con JavaScript puro](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Ahora que ya introdujimos la física del movimiento, podemos empezar a implementar la detección de colisiones en el juego. Primero veremos las paredes.
 
-Es agradable ver nuestra bola moviéndose, pero desaparece rápidamente de la pantalla, limitando la diversión que podemos tener con ella. Para superar esto, implementaremos una detección de colisión muy simple (que se explicará [más adelante](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field) con más detalle) para hacer que la pelota rebote en los cuatro bordes del Canvas.
+## Rebotar en los límites del mundo
 
-## Detección de colisión simple
+La [ley de la reflexión](<https://es.wikipedia.org/wiki/Reflexión_(física)>) nos dice que, en un mundo ideal, cuando una pelota choca con una superficie plana como una pared, rebota: la componente de la velocidad perpendicular a la pared se invierte, mientras que la componente paralela a la pared se conserva. Por ejemplo, si la pelota choca con el límite inferior mientras se mueve hacia abajo a la derecha, debería rebotar y moverse hacia arriba a la derecha.
 
-Para detectar la colisión verificamos si la bola está tocando (chocando con) la pared y si es así, cambiaremos la dirección de su movimiento en consecuencia.
-
-Para facilitar los cálculos, definamos una variable llamada `ballRadius` que mantendrá el radio del círculo dibujado y se utilizará para los cálculos. Añade esto a tu código, en algún lugar por debajo de las declaraciones de variables existentes:
+Podemos implementar esta lógica como otro método de `Ball`. Este método recibe dos indicadores booleanos que indican si la pelota chocó con una pared vertical, con una horizontal o con ambas (en cuyo caso rebota por el mismo camino por el que llegó).
 
 ```js
-var ballRadius = 10;
-```
-
-Ahora actualice la línea que dibuja la bola dentro de la funcion drawBall() a esto:
-
-```js
-ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-```
-
-### Rebotando arriba y abajo
-
-Hay cuatro paredes para rebotar la pelota - vamos a centrarnos en la de arriba en primer lugar. Tendremos que comprobar, en cada fotograma, si la pelota está tocando el borde superior del Canvas - si es así, invertiremos el movimiento de la bola para que empiece a moverse en la dirección opuesta y se mantenga dentro de los límites visibles. Recordando que el sistema de coordenadas comienza desde la parte superior izquierda, podemos llegar a algo como esto:
-
-```js
-if (y + dy < 0) {
-  dy = -dy;
+class Ball {
+  // …
+  onCollide({ x, y }) {
+    if (x) {
+      this.vel.x = -this.vel.x;
+    }
+    if (y) {
+      this.vel.y = -this.vel.y;
+    }
+  }
 }
 ```
 
-Si el valor de y de la posición de la bola es menor que cero, cambie la dirección del movimiento en el eje y, estableciéndolo igual a sí mismo, invertido. Si la pelota se movía hacia arriba con una velocidad de 2 píxeles por fotograma, ahora se moverá "arriba" con una velocidad de -2 píxeles, lo que en realidad equivale a bajar a una velocidad de 2 píxeles por fotograma.
+Haremos la detección de colisiones justo después de actualizar la posición. El movimiento de la pelota se actualizará así, suponiendo que se mueve directamente hacia la izquierda con `vx = -1`:
 
-El código anterior se ocuparía de que la pelota rebote desde el borde superior, así que ahora vamos a pensar en el borde inferior:
+1. Fotograma 1: en `x = 1`, `vx = -1`
+2. Fotograma 2: en `x = 0`; se detecta una colisión, así que la velocidad pasa a ser `vx = 1`
+3. Fotograma 3: en `x = 1`, `vx = 1`
+
+> [!NOTE]
+> En el fotograma 2, es posible que `x` sea menor que 0, por ejemplo si `vx = -2`, de modo que la pelota se superpone con la pared. Como esto no dura más de unos pocos fotogramas, la mayoría de los motores de juegos lo toleran, porque simplifica mucho los cálculos. También puedes ajustar la posición de la pelota para evitar la superposición, por ejemplo, estableciendo `x = 0` siempre que `x <= 0`.
+
+La lógica esencial es la siguiente:
 
 ```js
-if (y + dy > canvas.height) {
-  dy = -dy;
+const x = hittingLeftBoundary || hittingRightBoundary;
+const y = hittingTopBoundary || hittingBottomBoundary;
+if (x || y) {
+  ball.onCollide({ x, y });
 }
 ```
 
-Si la posición y de la pelota es mayor que la altura del canvas (recuerde que contamos los valores y desde la parte superior izquierda, de modo que el borde superior empieza en 0 y el borde inferior está en 480 píxeles, la altura del canvas), entonces rebota del borde inferior invirtiendo el movimiento del eje y como antes.
+Solo tenemos que reemplazar cada una de las variables de las condiciones por las expresiones adecuadas. Tomemos como ejemplo el límite izquierdo. Su coordenada `x` es 0, lo que significa que, siempre que el borde izquierdo de la pelota tenga una coordenada `x` menor o igual que 0 y se esté moviendo hacia la izquierda, sabemos que ha chocado con el límite.
 
-Podríamos fusionar esas dos sentencias en una para ahorrar código:
+> [!NOTE]
+> Imagina lo siguiente: la pelota se mueve hacia la izquierda, se superpone con la pared (la coordenada `x` es negativa) e invierte la dirección. Sin embargo, el siguiente fotograma ocurre tan rápido que la pelota todavía no ha salido del todo de la pared (la coordenada `x` sigue siendo negativa). Sin esta condición, se dispararía otra colisión y la dirección se invertiría de nuevo. Esto se conoce como [collision jitter](https://docs.flatredball.com/flatredball/tutorials/code-tutorials/collision-jitter) (temblor por colisión), un error habitual en los juegos, sobre todo en los antiguos que no usan motores de juegos consolidados. Lo resolvemos añadiendo la condición "se mueve hacia la izquierda"; también puede resolverse implementando el "ajuste para evitar la superposición" mencionado antes.
+
+Para obtener el borde izquierdo de la pelota, tenemos que restar la mitad de su ancho a la posición del centro, igual que hacemos para obtener las coordenadas de `drawImage()`.
 
 ```js
-if (y + dy > canvas.height || y + dy < 0) {
-  dy = -dy;
+const hittingLeftBoundary = ball.pos.x - ball.size.w / 2 <= 0 && ball.vel.x < 0;
+```
+
+Las implementaciones de los otros tres límites quedan como ejercicio; recuerda que el límite derecho tiene una coordenada `x` igual a `canvas.width`, mientras que los límites superior e inferior tienen coordenadas `y` de 0 y `canvas.height`, respectivamente.
+
+> [!NOTE]
+> Aquí aproximamos la pelota como un cuadrado centrado en `ball.pos`, de tamaño `ball.size.w` por `ball.size.h` (que son las dimensiones de la imagen PNG), porque es más fácil calcular la superposición de cuadrados que la de formas geométricas arbitrarias. Esto se conoce como _hitbox_ (caja de colisión). Un objeto también puede tener muchas hitboxes si su geometría es compleja. Como nuestro recurso PNG no tiene relleno, la hitbox basada en la imagen circunscribe con bastante precisión el círculo dibujado, salvo por el espacio sobrante en las cuatro esquinas. Cuanto más complejo sea el objeto, más difícil es crear un conjunto de hitboxes preciso sin perder rendimiento.
+
+## Incorporar el manejo de colisiones
+
+Mantenemos la detección de colisiones fuera de los objetos, porque la mayoría de las colisiones ocurren entre dos objetos y, además, puede que queramos controlar cuándo y cómo se producen. La clase `Ball` solo se encarga de proporcionar la `hitbox` y la respuesta `onCollide()`. Implementamos `hitbox` como un getter:
+
+```js
+class Ball {
+  // …
+  get hitbox() {
+    return {
+      left: this.pos.x - this.size.w / 2,
+      right: this.pos.x + this.size.w / 2,
+      top: this.pos.y - this.size.h / 2,
+      bottom: this.pos.y + this.size.h / 2,
+    };
+  }
 }
 ```
 
-Si cualquiera de las dos afirmaciones es verdadera, invierte el movimiento de la pelota.
+El getter calcula los bordes a partir de la posición y el tamaño actuales de la pelota cada vez que leemos `ball.hitbox`. Así evitamos guardar un segundo conjunto de coordenadas que tendríamos que actualizar cada vez que la pelota se mueve.
 
-### Rebotando en la izquierda y derecha
-
-Tenemos el borde superior e inferior cubiertos, así que pensemos en los de izquierda y derecha. Es muy similar en realidad, todo lo que tienes que hacer es repetir las declaraciones de x en lugar de y:
+Ahora añade el manejador de colisiones fuera de la clase. Recibe un objeto que expone `hitbox`, `vel` y `onCollide()`, junto con el ancho y el alto del mundo:
 
 ```js
-if (x + dx > canvas.width || x + dx < 0) {
-  dx = -dx;
-}
+function handleWallCollisions(object, width, height) {
+  const hitbox = object.hitbox;
+  const hittingLeftBoundary = hitbox.left <= 0 && object.vel.x < 0;
+  const hittingRightBoundary = hitbox.right >= width && object.vel.x > 0;
+  const hittingTopBoundary = hitbox.top <= 0 && object.vel.y < 0;
+  const hittingBottomBoundary = hitbox.bottom >= height && object.vel.y > 0;
 
-if (y + dy > canvas.height || y + dy < 0) {
-  dy = -dy;
+  const x = hittingLeftBoundary || hittingRightBoundary;
+  const y = hittingTopBoundary || hittingBottomBoundary;
+  if (x || y) {
+    object.onCollide({ x, y });
+  }
 }
 ```
 
-En este punto, debe insertar el bloque de código anterior en la función draw(), justo antes de la llave de cierre.
-
-### ¡La pelota sigue desapareciendo en la pared!
-
-Prueba tu código en este punto, y te quedarás impresionado - ¡ahora tenemos una pelota que rebotó en los cuatro bordes del canvas! Pero tenemos otro problema sin embargo - cuando la bola golpea cada pared se hunde en ella levemente antes de cambiar la dirección:
-
-![](ball-in-wall.png)
-
-Esto es porque estamos calculando el punto de colisión de la pared y el centro de la bola, mientras que deberíamos hacerlo por su circunferencia. La bola debe rebotar justo después de que toca la pared, no cuando ya está a medio camino en la pared, así que vamos a ajustar nuestras declaraciones un poco para incluir eso. Actualice el último código que agregó, a esto:
+Dentro de la función principal `update()`, llama al manejador justo después de `ball.move()`:
 
 ```js
-if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
-  dx = -dx;
-}
-if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
-  dy = -dy;
-}
+ball.move(dt);
+handleWallCollisions(ball, canvas.width, canvas.height);
 ```
 
-Cuando la distancia entre el centro de la bola y el borde de la pared es exactamente igual que el radio de la pelota, cambiará la dirección del movimiento. Restando el radio de un ancho del eje y añadiéndolo al otro nos da la impresión de una adecuada detección de colisiones - la pelota rebota de las paredes como debería hacerlo.
+Ahora el bucle del juego mueve la pelota, gestiona las colisiones con las paredes y después la dibuja. El algoritmo de colisiones actual es muy sencillo y permite la "penetración temporal" mencionada antes. Más adelante, cuando añadamos más objetos, mejoraremos este algoritmo.
 
 ## Compara tu código
 
-Chequea el código acabado para esta parte con el tuyo, y juega:
+Esto es lo que deberías tener hasta ahora, funcionando en vivo. Para ver su código fuente, haz clic en el botón "Play".
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","370")}}
+```html hidden
+<canvas id="game-canvas" width="480" height="320"></canvas>
+```
 
-> [!NOTE]
-> Cambia el color de la bola a un color al azar, cada vez que golpea una pared.
+```css hidden
+* {
+  padding: 0;
+  margin: 0;
+}
 
-## Siguientes pasos
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
 
-Ahora hemos llegado al punto donde nuestra pelota se mueve y permanece en el tablero de juego. En el capítulo cuarto, veremos la implementación del control de una pala - vea [Control de Pala y teclado](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls).
+canvas {
+  display: block;
+  width: min(100vw, 150vh);
+  height: auto;
+}
+```
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
+```js hidden
+const canvas = document.getElementById("game-canvas");
+const ctx = canvas.getContext("2d");
+let lastTimestamp = null;
+
+class Ball {
+  asset;
+  ctx;
+  size = { w: undefined, h: undefined };
+  pos = { x: 50, y: 50 };
+  vel = { x: 150, y: 150 };
+  constructor(url, ctx) {
+    this.asset = new Image();
+    this.asset.src = url;
+    this.ctx = ctx;
+  }
+  async preload() {
+    await this.asset.decode();
+    if (this.size.w === undefined) {
+      this.size.w = this.asset.width;
+      this.size.h = this.asset.height;
+    }
+  }
+  get hitbox() {
+    return {
+      left: this.pos.x - this.size.w / 2,
+      right: this.pos.x + this.size.w / 2,
+      top: this.pos.y - this.size.h / 2,
+      bottom: this.pos.y + this.size.h / 2,
+    };
+  }
+  draw() {
+    this.ctx.drawImage(
+      this.asset,
+      this.pos.x - this.size.w / 2,
+      this.pos.y - this.size.h / 2,
+    );
+  }
+  move(dt) {
+    this.pos.x += this.vel.x * dt;
+    this.pos.y += this.vel.y * dt;
+  }
+  onCollide({ x, y }) {
+    if (x) {
+      this.vel.x = -this.vel.x;
+    }
+    if (y) {
+      this.vel.y = -this.vel.y;
+    }
+  }
+}
+
+const ball = new Ball(
+  "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/ball.png",
+  ctx,
+);
+
+Promise.all([ball].map((obj) => obj.preload())).then(() =>
+  requestAnimationFrame(update),
+);
+
+function update(timestamp) {
+  const dt = lastTimestamp === null ? 0 : (timestamp - lastTimestamp) / 1000;
+  lastTimestamp = timestamp;
+  ball.move(dt);
+  handleWallCollisions(ball, canvas.width, canvas.height);
+
+  ctx.fillStyle = "#eeeeee";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ball.draw();
+
+  requestAnimationFrame(update);
+}
+
+function handleWallCollisions(object, width, height) {
+  const hitbox = object.hitbox;
+  const hittingLeftBoundary = hitbox.left <= 0 && object.vel.x < 0;
+  const hittingRightBoundary = hitbox.right >= width && object.vel.x > 0;
+  const hittingTopBoundary = hitbox.top <= 0 && object.vel.y < 0;
+  const hittingBottomBoundary = hitbox.bottom >= height && object.vel.y > 0;
+
+  const x = hittingLeftBoundary || hittingRightBoundary;
+  const y = hittingTopBoundary || hittingBottomBoundary;
+  if (x || y) {
+    object.onCollide({ x, y });
+  }
+}
+```
+
+{{EmbedLiveSample("compara tu código", "", 480, , , , , "allow-modals")}}
+
+## Próximos pasos
+
+Esto ya empieza a parecerse más a un juego, pero todavía no podemos controlarlo de ninguna forma. Ya es hora de introducir la [paleta del jugador y los controles](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls).
+
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}

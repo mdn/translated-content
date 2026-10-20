@@ -1,13 +1,14 @@
 ---
-title: MediaRecorder.stream
+title: "MediaRecorder: stream プロパティ"
+short-title: stream
 slug: Web/API/MediaRecorder/stream
 l10n:
-  sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
+  sourceCommit: 78039f57d12515cd2f97af490a5ec736d228c431
 ---
 
 {{APIRef("MediaStream Recording")}}
 
-**`MediaRecorder.stream`** は読み取り専用プロパティで、 `MediaRecorder` を作成したときに `MediaRecorder()` コンストラクターに渡したストリームを返します。
+**`stream`** は {{domxref("MediaRecorder")}} インターフェイスの読み取り専用プロパティで、 `MediaRecorder` を作成したときに {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} コンストラクターに渡したストリームを返します。
 
 ## 値
 
@@ -17,7 +18,7 @@ l10n:
 
 ```js
 if (navigator.getUserMedia) {
-  console.log("getUserMediaがサポートされています。");
+  console.log("getUserMedia に対応しています。");
   navigator.getUserMedia(
     // 制約 - このアプリに必要なのは音声のみ
     {
@@ -46,6 +47,6 @@ if (navigator.getUserMedia) {
 ## 関連情報
 
 - [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + ウェブオーディオ API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[GitHub のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone)）。（英語）
-- [simpl.info の MediaStream Recording のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
+- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + ウェブオーディオ API 可視化デモ、[Chris Mills](https://github.com/chrisdavidmills) 著（[GitHub のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone)）。<sup>(英語)</sup>
+- [simpl.info の MediaStream Recording のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://github.com/samdutton) 著。<sup>(英語)</sup>
 - {{domxref("Navigator.getUserMedia")}}

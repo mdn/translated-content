@@ -1,80 +1,83 @@
 ---
 title: NodeList
 slug: Web/API/NodeList
+l10n:
+  sourceCommit: 4df1c84eb714ea19f7e5ebaa740d0f00c73d8cb4
 ---
 
 {{APIRef("DOM")}}
 
-Les objets **`NodeList`** sont des collections de nœuds comme celles retournées par {{domxref("Node.childNodes")}} et la méthode {{domxref("document.querySelectorAll()")}}.
+Les objets **`NodeList`** sont des collections de [nœuds](/fr/docs/Web/API/Node), généralement retournés par des propriétés telles que {{DOMxRef("Node.childNodes")}} et des méthodes telles que {{DOMxRef("document.querySelectorAll()")}}.
 
-> [!NOTE]
-> Bien que `NodeList` ne soit pas un tableau (`Array`), il est possible d'itérer dessus en utilisant `forEach()`. Il peut également être converti en tableau (`Array`) en utilisant {{jsxref("Array.from()")}}.
->
-> Néanmoins certains vieux navigateurs n'ont pas encore implémenté `NodeList.forEach()` ni `Array.from()`. Mais ces limitations peuvent être contournées en utilisant {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} (plus dans ce document).
+Cette interface est une [tentative de créer une liste non modifiable <sup>(angl.)</sup>](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) et continue d'être prise en charge uniquement pour ne pas casser le code qui l'utilise déjà. Les API modernes représentent les structures de liste en utilisant des types basés sur les [tableaux](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) JavaScript, rendant ainsi de nombreuses méthodes de tableau disponibles, tout en imposant en même temps des sémantiques supplémentaires sur leur utilisation (comme rendre leurs éléments en lecture seule).
 
-Dans certains cas, la `NodeList` est une collection en direct, ce qui signifie que les changements dans le DOM sont reflétés dans la collection. Par exemple, {{domxref("Node.childNodes")}} est en direct :
+Ces raisons historiques ne signifient pas que vous, en tant que développeur·euse, devez éviter `NodeList`. Vous ne créez pas vous-même des objets `NodeList`, mais vous les obtenez à partir d'API telles que {{DOMxRef("Document.querySelectorAll()")}}, et ces API ne sont pas obsolètes. Cependant, faites attention aux différences sémantiques par rapport à un véritable tableau.
+
+Bien que `NodeList` ne soit pas un tableau (`Array`), il est possible d'itérer dessus avec `forEach()`. Il peut également être converti en un véritable tableau (`Array`) en utilisant {{JSxRef("Array.from()")}}.
+
+## Listes de nœuds dynamiques et statiques
+
+Bien qu'ils soient tous deux considérés comme des objets `NodeList`, il existe 2 types de NodeList&nbsp;: _dynamiques_ et _statiques_.
+
+Dans la plupart des cas, le `NodeList` est _dynamique_, ce qui signifie que les modifications dans le DOM mettent automatiquement à jour la collection.
+
+Par exemple, {{DOMxRef("Node.childNodes")}} est dynamique&nbsp;:
 
 ```js
-var parent = document.getElementById("parent");
-var child_nodes = parent.childNodes;
-console.log(child_nodes.length); // supposons "2"
+const parent = document.getElementById("parent");
+let noeudsEnfants = parent.childNodes;
+console.log(noeudsEnfants.length); // suppose "2"
 parent.appendChild(document.createElement("div"));
-console.log(child_nodes.length); // devrait afficher "3"
+console.log(noeudsEnfants.length); // affiche "3"
 ```
 
-Dans d'autres cas, la `NodeList` est une collection statique, ce qui signifie que tout changement dans le DOM n'affectera pas le contenu de la collection. {{domxref("document.querySelectorAll()")}} renvoie une `NodeList` statique.
+Dans d'autres cas, le `NodeList` est _statique_, où toute modification dans le DOM n'affecte pas le contenu de la collection. La méthode omniprésente {{DOMxRef("document.querySelectorAll()")}} est la seule API qui retourne un `NodeList` _statique_.
 
-Il est bon de garder cette distinction à l'esprit pour choisir la façon de parcourir les éléments de la liste des nœuds et, en particulier, pour mettre en cache la longueur de la liste.
+Il est bon de garder cette distinction à l'esprit lorsque vous choisissez comment itérer sur les éléments du `NodeList`, et si vous devez mettre en cache la `length` de la liste.
 
-## Propriétés
+## Propriétés d'instance
 
-- {{domxref("NodeList.length")}}
-  - : Le nombre de nœuds dans la `NodeList`.
+- {{DOMxRef("NodeList.length")}} {{ReadOnlyInline}}
+  - : Le nombre de nœud dans `NodeList`.
 
-## Méthodes
+## Méthodes d'instance
 
-- {{domxref("NodeList.item()")}}
-  - : Retourne un élément de la liste par son index ou `null` si l'index est en dehors des limites. Équivalent à `nodeList[idx]` (qui renvoie à la place `undefined` quand `idx` est hors des limites).
-- {{domxref("NodeList.entries()")}}
-  - : renvoie un {{jsxref("Iteration_protocols","itérateur")}} permettant de parcourir toutes les paires clé / valeur contenues dans cet objet.
-- {{domxref("NodeList.forEach()")}}
-  - : exécute une fonction fournie une fois par élément `NodeList`.
-- {{domxref("NodeList.keys()")}}
-  - : renvoie un {{jsxref("Iteration_protocols","itérateur")}} permettant de parcourir toutes les clés des paires clé / valeur contenues dans cet objet.
-- {{domxref("NodeList.values()")}}
-  - : renvoie un {{jsxref("Iteration_protocols","itérateur")}} permettant de parcourir toutes les valeurs des paires clé / valeur contenues dans cet objet.
+- {{DOMxRef("NodeList.item()")}}
+  - : Retourne un élément de la liste par son index, ou `null` si l'index est hors limites.
 
-## Exemple
+    Une alternative à l'accès `nodeList[i]` (qui retourne `undefined` lorsque `i` est hors limites). Cela est principalement utile pour les implémentations DOM non JavaScript.
 
-Il est possible de boucler sur les éléments d'une `NodeList` en utilisant&nbsp;:
+- {{DOMxRef("NodeList.entries()")}}
+  - : Retourne un {{JSxRef("Iteration_protocols", "itérateur",,1)}}, permettant au code de parcourir toutes les paires clé/valeur contenues dans la collection. (Dans ce cas, les clés sont des entiers commençant à `0` et les valeurs sont des nœuds.)
+- {{DOMxRef("NodeList.forEach()")}}
+  - : Exécute une fonction fournie une fois par élément `NodeList`, en passant l'élément en tant qu'argument à la fonction.
+- {{DOMxRef("NodeList.keys()")}}
+  - : Retourne un {{JSxRef("Iteration_protocols", "itérateur",,1)}}, permettant au code de parcourir toutes les clés des paires clé/valeur contenues dans la collection. (Dans ce cas, les clés sont des entiers commençant à `0`.)
+- {{DOMxRef("NodeList.values()")}}
+  - : Retourne un {{JSxRef("Iteration_protocols", "itérateur",,1)}} permettant au code de parcourir toutes les valeurs (nœuds) des paires clé/valeur contenues dans la collection.
+
+## Exemples
+
+Il est possible de parcourir les éléments d'un `NodeList` en utilisant une boucle [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for)&nbsp;:
 
 ```js
-for (var i = 0; i < myNodeList.length; ++i) {
-  var item = myNodeList[i]; // L'appel de myNodeList.item(i) n'est pas nécessaire en JavaScript
+for (let i = 0; i < maListeDeNoeuds.length; i++) {
+  let element = maListeDeNoeuds[i];
 }
 ```
 
-Ne soyez pas tenté d'utiliser [`for… in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) ou [`for each… in`](/fr/docs/JavaScript/Reference/Instructions/for_each…in) pour énumérer les éléments de la liste, car cela énumère également la taille (`length`) et les propriétés du `NodeList` et cause des erreurs si votre script ne gère que les objets de type {{domxref("element")}}. De plus, `for… in` ne garantit pas de visiter les propriétés dans un ordre particulier.
+**N'utilisez pas [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) pour énumérer les éléments dans les `NodeList`**, car elles énumèrent _également_ ses propriétés `length` et `item` et provoquent des erreurs si votre script suppose qu'il ne doit traiter que des objets {{DOMxRef("element")}}. De plus, `for...in` ne garantit pas de visiter les propriétés dans un ordre particulier.
 
-Les boucles [`for… of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) boucleront correctement sur les objets `NodeList` :
+Les boucles [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) parcourent correctement les objets `NodeList`&nbsp;:
 
 ```js
-var list = document.querySelectorAll("input[type=checkbox]");
-for (var item of list) {
-  item.checked = true;
+const liste = document.querySelectorAll("input[type=checkbox]");
+for (const caseACocher of liste) {
+  caseACocher.checked = true;
 }
 ```
 
-Les navigateurs récents prennent également en charge les méthodes d'itérateur {{domxref("NodeList.forEach()", "forEach()")}}, aussi bien que {{domxref("NodeList.entries()", "entries()")}}, {{domxref("NodeList.values()", "values()")}} et {{domxref("NodeList.keys()", "keys()")}}.
-
-Il y a aussi dans Internet Explorer une façon compatible d'utiliser {{jsxref("Array.forEach()", "Array.prototype.forEach")}} pour l'itération.
-
-```js
-var list = document.querySelectorAll("input[type=checkbox]");
-Array.prototype.forEach.call(list, function (item) {
-  item.checked = true;
-});
-```
+Les navigateurs prennent également en charge la méthode d'itérateur ({{DOMxRef("NodeList.forEach()", "forEach()")}}) ainsi que {{DOMxRef("NodeList.entries()", "entries()")}}, {{DOMxRef("NodeList.values()", "values()")}} et {{DOMxRef("NodeList.keys()", "keys()")}}.
 
 ## Spécifications
 

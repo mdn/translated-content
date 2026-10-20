@@ -3,7 +3,7 @@ title: En-tête Refresh
 short-title: Refresh
 slug: Web/HTTP/Reference/Headers/Refresh
 l10n:
-  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
+  sourceCommit: c44003c788a907ef19e0d766e98f29ffca5b6798
 ---
 
 {{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Refresh`** indique à un navigateur web de rafraîchir ou de rediriger la page lorsqu'une durée définie s'est écoulée après le chargement complet de la page.

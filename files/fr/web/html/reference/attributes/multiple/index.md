@@ -3,7 +3,7 @@ title: "Attribut HTML : `multiple`"
 short-title: multiple
 slug: Web/HTML/Reference/Attributes/multiple
 l10n:
-  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
+  sourceCommit: fd0b11ad5b5014a9333578adcc4bc98fb9024da3
 ---
 
 L'attribut booléen **`multiple`**, s'il est défini, signifie que le contrôle de formulaire accepte une ou plusieurs valeurs. Valable pour les types de saisie [`email`](/fr/docs/Web/HTML/Reference/Elements/input/email) et [`file`](/fr/docs/Web/HTML/Reference/Elements/input/file) et l'élément {{HTMLElement("select")}}, la manière dont l'utilisateur·ice opte pour plusieurs valeurs dépend du contrôle de formulaire.
@@ -46,8 +46,8 @@ input:invalid {
 
 ## Vue d'ensemble
 
-Selon le type, le contrôle de formulaire peut avoir une apparence différente si l'attribut `multiple` est défini. Pour le type de saisie de fichier, la messagerie native fournie par le navigateur diffère. Dans Firefox, l'entrée de fichier indique «&nbsp;Aucun fichier sélectionné&nbsp;» lorsque l'attribut est présent et «&nbsp;Aucun fichier sélectionné&nbsp;» dans le cas contraire, lorsqu'aucun fichier n'est sélectionné. La plupart des navigateurs affichent une zone de liste déroulante pour un contrôle {{HTMLElement("select")}} avec l'attribut `multiple` défini contre une liste déroulante à une ligne lorsque l'attribut est omis. L'entrée `{{HTMLElement("input/email", "email")}}` s'affiche de la même manière, mais correspondra à la pseudo-classe {{CSSxRef(":invalid")}} si plus d'une adresse électronique séparée par des virgules est incluse en l'absence de l'attribut.
-Selon le type, le contrôle de formulaire peut avoir une apparence différente si l'attribut `multiple` est défini. Pour le type de saisie de fichier, la messagerie native fournie par le navigateur diffère. Dans Firefox, l'entrée de fichier indique «&nbsp;Aucun fichier sélectionné&nbsp;» lorsque l'attribut est présent et «&nbsp;Aucun fichier sélectionné&nbsp;» dans le cas contraire, lorsqu'aucun fichier n'est sélectionné. La plupart des navigateurs affichent une zone de liste déroulante pour un contrôle {{HTMLElement("select")}} avec l'attribut `multiple` défini contre une liste déroulante à une ligne lorsque l'attribut est omis. L'entrée `{{HTMLElement("input/email", "email")}}` s'affiche de la même manière, mais correspondra à la pseudo-classe {{CSSxRef(":invalid")}} si plus d'une adresse électronique séparée par des virgules est incluse en l'absence de l'attribut.
+Selon le type, le contrôle de formulaire peut avoir une apparence différente si l'attribut `multiple` est défini. Pour le type de saisie de fichier, la messagerie native fournie par le navigateur diffère. Dans Firefox, l'entrée de fichier indique «&nbsp;Aucun fichier sélectionné&nbsp;» lorsque l'attribut est présent et «&nbsp;Aucun fichier sélectionné&nbsp;» dans le cas contraire, lorsqu'aucun fichier n'est sélectionné. La plupart des navigateurs affichent une zone de liste déroulante pour un contrôle {{HTMLElement("select")}} avec l'attribut `multiple` défini contre une liste déroulante à une ligne lorsque l'attribut est omis. L'entrée `{{HTMLElement("input/email", "email")}}` s'affiche de la même manière, mais correspond à la pseudo-classe {{CSSxRef(":invalid")}} si plus d'une adresse électronique séparée par des virgules est incluse en l'absence de l'attribut.
+Selon le type, le contrôle de formulaire peut avoir une apparence différente si l'attribut `multiple` est défini. Pour le type de saisie de fichier, la messagerie native fournie par le navigateur diffère. Dans Firefox, l'entrée de fichier indique «&nbsp;Aucun fichier sélectionné&nbsp;» lorsque l'attribut est présent et «&nbsp;Aucun fichier sélectionné&nbsp;» dans le cas contraire, lorsqu'aucun fichier n'est sélectionné. La plupart des navigateurs affichent une zone de liste déroulante pour un contrôle {{HTMLElement("select")}} avec l'attribut `multiple` défini contre une liste déroulante à une ligne lorsque l'attribut est omis. L'entrée `{{HTMLElement("input/email", "email")}}` s'affiche de la même manière, mais correspond à la pseudo-classe {{CSSxRef(":invalid")}} si plus d'une adresse électronique séparée par des virgules est incluse en l'absence de l'attribut.
 
 Lorsque `multiple` est défini sur le type de saisie `{{HTMLElement("input/email", "email")}}`, l'utilisateur·ice peut inclure zéro (si ce n'est pas également [`required`](/fr/docs/Web/HTML/Reference/Attributes/required)), une ou plusieurs adresses électroniques séparées par des virgules.
 
@@ -68,7 +68,7 @@ Lorsque l'attribut est omis, l'utilisateur·ice ne peut sélectionner qu'un seul
 L'attribut `multiple` de l'élément {{HTMLElement("select")}} représente un contrôle permettant de sélectionner zéro ou plusieurs options dans la liste d'options. Sinon, l'élément {{HTMLElement("select")}} représente un contrôle permettant de sélectionner une seule {{HTMLElement("select")}} dans la liste d'options.
 
 ```html
-<select multiple name="dwarfs" id="dwarfs">
+<select multiple name="nains" id="nains">
   <option>Grincheux</option>
   <option>Joyeux</option>
   <option>Dormeur</option>
@@ -81,6 +81,14 @@ L'attribut `multiple` de l'élément {{HTMLElement("select")}} représente un co
 
 Lorsque `multiple` est défini, la plupart des navigateurs affichent une boîte de liste défilante au lieu d'une liste déroulante à ligne unique.
 
+Les options sélectionnées en nombre sont transmises selon la convention de tableau {{DOMxRef("URLSearchParams")}}, c'est-à-dire `name=value1&name=value2`.
+
+## Problèmes d'accessibilité
+
+Fournissez des instructions pour aider les utilisateur·ice·s à comprendre comment remplir le formulaire et utiliser les différents contrôles du formulaire. Indiquez les champs obligatoires et facultatifs, les formats de données et toute autre information pertinente. Lorsque vous utilisez l'attribut `multiple`, informez l'utilisateur·ice que plusieurs valeurs sont autorisées et donnez des instructions sur la manière de saisir plusieurs valeurs, par exemple «&nbsp;séparez les adresses e-mail par une virgule.&nbsp;»
+
+Définir `size="1"` sur une liste de sélection multiple peut la faire apparaître comme une liste de sélection simple dans certains navigateurs, mais elle ne s'étend alors pas lorsque l'utilisateur·ice y place le curseur, ce qui nuit à l'ergonomie. Évitez cette pratique. Si vous modifiez l'apparence d'une liste de sélection, et même si vous ne le faites pas, veillez à informer l'utilisateur·ice qu'il est possible de sélectionner plusieurs options par un autre moyen.
+
 ## Exemples
 
 ### Saisie d'adresses électroniques
@@ -92,11 +100,11 @@ Lorsque `multiple` est défini, la plupart des navigateurs affichent une boîte 
   multiple
   name="emails"
   id="emails"
-  list="dwarfemails"
+  list="emails-nains"
   required
   size="64" />
 
-<datalist id="dwarfemails">
+<datalist id="emails-nains">
   <option value="grincheux@menuisiers.fr">Grincheux</option>
   <option value="joyeux@menuisiers.fr">Joyeux</option>
   <option value="dormeur@menuisiers.fr">Dormeur</option>
@@ -150,7 +158,7 @@ Lorsque `multiple` est défini sur le type de saisie `{{HTMLElement("input/file"
 
 Notez la différence d'aspect entre l'exemple avec `multiple` défini et l'autre entrée `file` sans.
 
-Lorsque le formulaire est soumis, si nous avions utilisé [`method="get"`](/fr/docs/Web/HTML/Reference/Elements/form), chaque nom de fichier sélectionné aurait été ajouté aux paramètres de l'URL sous la forme `?uploads=img1.jpg&uploads=img2.svg`. Cependant, comme nous soumettons des données de formulaire multipart, il faut utiliser la méthode post. Voir l'élément {{HTMLElement("form")}} et la page [Envoi de données de formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#lattribut_method) pour plus d'informations.
+Lorsque le formulaire est envoyé, si nous utilisons [`method="get"`](/fr/docs/Web/HTML/Reference/Elements/form), chaque nom de fichier sélectionné est ajouté aux paramètres de l'URL sous la forme `?uploads=img1.jpg&uploads=img2.svg`. Cependant, comme nous soumettons des données de formulaire multipart, il faut utiliser la méthode post. Voir l'élément {{HTMLElement("form")}} et la page [Envoi de données de formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#lattribut_method) pour plus d'informations.
 
 ### Saisir plusieurs options
 
@@ -159,10 +167,8 @@ L'attribut `multiple` de l'élément {{HTMLElement("select")}} représente un co
 ```html
 <form method="get" action="#">
   <p>
-    <label for="dwarfs"
-      >Sélectionnez les menuisiers que vous aimez&nbsp;:</label
-    >
-    <select multiple name="dwarfs" id="dwarfs">
+    <label for="nains">Sélectionnez les menuisiers que vous aimez&nbsp;:</label>
+    <select multiple name="nains" id="nains">
       <option>grincheux@menuisiers.fr</option>
       <option>joyeux@menuisiers.fr</option>
       <option>dormeur@menuisiers.fr</option>
@@ -185,7 +191,7 @@ L'attribut `multiple` de l'élément {{HTMLElement("select")}} représente un co
     </select>
   </p>
   <p>
-    <input type="submit" value="Soumettre" />
+    <input type="submit" value="Envoyer" />
   </p>
 </form>
 ```
@@ -195,7 +201,7 @@ L'attribut `multiple` de l'élément {{HTMLElement("select")}} représente un co
 Notez la différence d'apparence entre les deux contrôles de formulaire.
 
 ```css
-/* Décommentez ce CSS pour que le sélecteur multiple ait la même hauteur que le simple. */
+/* Dé-commentez ce CSS pour que le sélecteur multiple ait la même hauteur que le simple. */
 
 /*
 select[multiple] {
@@ -209,7 +215,7 @@ select[multiple]:active {
 */
 ```
 
-Il existe plusieurs façons de sélectionner plusieurs options dans un élément `<select>` avec un attribut `multiple`. Selon le système d'exploitation, les utilisateur·ice·s de souris peuvent maintenir les touches <kbd>Ctrl</kbd>, <kbd>Commande</kbd> ou <kbd>Maj</kbd> enfoncées, puis cliquer sur plusieurs options pour les sélectionner/désélectionner. Les utilisateur·ice·s du clavier peuvent sélectionner plusieurs éléments contigus en ciblant l'élément `<select>`, en sélectionnant un élément en haut ou en bas de la plage qu'ils souhaitent sélectionner à l'aide des touches de curseur <kbd>Haut</kbd> et <kbd>Bas</kbd> pour monter et descendre dans les options. La sélection de non-contigus n'est pas aussi bien supportée — les éléments devraient pouvoir être sélectionnés et désélectionnés en appuyant sur <kbd>Espace</kbd>, mais le support varie selon les navigateurs.
+Il existe plusieurs façons de sélectionner plusieurs options dans un élément `<select>` avec un attribut `multiple`. Selon le système d'exploitation, les utilisateur·ice·s de souris peuvent maintenir les touches <kbd>Ctrl</kbd>, <kbd>Commande</kbd> ou <kbd>Maj</kbd> enfoncées, puis cliquer sur plusieurs options pour les sélectionner/désélectionner. Les utilisateur·ice·s du clavier peuvent sélectionner plusieurs éléments contigus en ciblant l'élément `<select>`, en sélectionnant un élément en haut ou en bas de la plage qu'ils souhaitent sélectionner à l'aide des touches de curseur <kbd>Haut</kbd> et <kbd>Bas</kbd> pour monter et descendre dans les options. La sélection de non-contigus n'est pas aussi bien supportée — les éléments doivent pouvoir être sélectionnés et désélectionnés en appuyant sur <kbd>Espace</kbd>, mais la prise en charge varie selon les navigateurs.
 
 ## Spécifications
 

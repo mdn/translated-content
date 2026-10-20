@@ -2,10 +2,8 @@
 title: Media query (メディアクエリー)
 slug: Glossary/Media_query
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{GlossarySidebar}}
 
 **メディアクエリー** (media query) は、CSS、JavaScript、HTML、その他のウェブ言語において、文書のコンテンツとは無関係に、文書が表示されているユーザーエージェントや端末の側面をチェックし、関連するコードブロックや特性クエリーが適用されるべきかどうかを判断するための論理式です。
 

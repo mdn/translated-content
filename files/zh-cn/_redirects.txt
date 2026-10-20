@@ -3966,7 +3966,7 @@
 /zh-CN/docs/Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed	/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSExternalRedirectNotAllowed
 /zh-CN/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowHeader	/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowHeader
 /zh-CN/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod	/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowMethod
-/zh-CN/docs/Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials	/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials
+/zh-CN/docs/Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials	/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowCredentials
 /zh-CN/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound	/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound
 /zh-CN/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight	/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 /zh-CN/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin	/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
@@ -3975,7 +3975,7 @@
 /zh-CN/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded	/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSOriginHeaderNotAdded
 /zh-CN/docs/Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed	/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSPreflightDidNotSucceed
 /zh-CN/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp	/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp
-/zh-CN/docs/Web/HTTP/CORS/Errors/CORS错误允许凭证	/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials
+/zh-CN/docs/Web/HTTP/CORS/Errors/CORS错误允许凭证	/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowCredentials
 /zh-CN/docs/Web/HTTP/CSP	/zh-CN/docs/Web/HTTP/Guides/CSP
 /zh-CN/docs/Web/HTTP/Caching	/zh-CN/docs/Web/HTTP/Guides/Caching
 /zh-CN/docs/Web/HTTP/Caching_FAQ	/zh-CN/docs/Web/HTTP/Guides/Caching

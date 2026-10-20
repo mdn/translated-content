@@ -1,13 +1,14 @@
 ---
-title: "Raison : l'en-tête CORS « Access-Control-Allow-Origin » est manquant"
+title: "Raison : L'en-tête CORS « Access-Control-Allow-Origin » est manquant"
 slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
-original_slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
+l10n:
+  sourceCommit: 92396cf8979e107c3ac42c2b9fc382013ea1c234
 ---
 
-## Message
+## Raison
 
 ```http
-Raison : l'en-tête CORS « Access-Control-Allow-Origin » est manquant
+Raison : L'en-tête CORS « Access-Control-Allow-Origin » est manquant
 ```
 
 En anglais&nbsp;:
@@ -16,43 +17,59 @@ En anglais&nbsp;:
 Reason: CORS header 'Access-Control-Allow-Origin' missing
 ```
 
-## Quel est le problème&nbsp;?
+## Quel est le problème ?
 
-La réponse à la requête [CORS](/fr/docs/Glossary/CORS) ne contient pas l'en-tête requis [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin), dont la fonction est de déterminer si le domaine à l'origine de la requête est autorisé à accéder à cette ressource.
+La réponse à la requête {{Glossary("CORS")}} est dépourvue de l'en-tête requis {{HTTPHeader("Access-Control-Allow-Origin")}}, qui est utilisé pour déterminer si la ressource peut ou non être accessible par le contenu opérant dans l'origine actuelle.
 
-Si vous avez le contrôle du serveur, vous pouvez ajouter l'origine de la requête à la liste des domaines autorisés à accéder aux ressources du serveur en l'ajoutant aux valeurs de l'en-tête `Access-Control-Allow-Origin`.
+Si le serveur est sous votre contrôle, ajoutez l'origine du site demandeur à l'ensemble des domaines autorisés en l'ajoutant à la valeur de l'en-tête `Access-Control-Allow-Origin`.
 
-Par exemple, pour autoriser le site `https://example.com` à accéder aux ressources avec CORS, l'en-tête doit être comme suit&nbsp;:
+Par exemple, pour permettre à un site situé à `https://example.com` d'accéder à la ressource en utilisant CORS, l'en-tête doit être&nbsp;:
 
 ```http
 Access-Control-Allow-Origin: https://example.com
 ```
 
-Vous pouvez aussi configurer le serveur pour autoriser tous les domaines à accéder aux ressources avec le caractère générique `*`. Ceci ne devrait être utilisé que pour des API publiques. Les API privées ne devraient jamais utiliser `*`, et devraient à la place utiliser un domaine ou un ensemble de domaines. De plus, l'astérisque ne fonctionne que pour les requêtes ayant `anonymous` comme valeur pour l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin)&nbsp;; il empêche également l'envoi d'identifiants (par exemple des cookies) dans une requête.
+Vous pouvez également configurer un site pour permettre à n'importe quel site d'y accéder en utilisant le caractère générique `*`. Vous ne devez utiliser cela que pour les API publiques. Les API privées ne doivent jamais utiliser `*` et doivent plutôt avoir un ou plusieurs domaines spécifiques définis. De plus, le caractère générique ne fonctionne que pour les requêtes effectuées avec l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) défini sur `anonymous`, et il empêche l'envoi de justificatifs comme les cookies dans les requêtes.
 
 ```http
 Access-Control-Allow-Origin: *
 ```
 
 > [!WARNING]
-> Autoriser n'importe quel site à accéder à une API privée est une mauvaise idée.
+> Utiliser le caractère générique pour permettre à tous les sites d'accéder à une API privée est une mauvaise idée.
 
-Pour autoriser n'importe quel site à faire des requêtes CORS _sans_ utiliser le caractère générique `*` (par exemple, pour fournir des authentifiants), votre serveur doit lire la valeur de l'en-tête `Origin` de la requête et l'utiliser dans `Access-Control-Allow-Origin`, tout en ajoutant un en-tête `Vary: Origin` pour indiquer que certains en-têtes sont définis dynamiquement selon leur origine.
+Pour permettre à n'importe quel site d'effectuer des requêtes CORS _sans_ utiliser le caractère générique `*` (par exemple, pour activer l'envoi de justificatifs), votre serveur doit lire la valeur de l'en-tête `Origin` de la requête et utiliser cette valeur pour définir `Access-Control-Allow-Origin`, et doit également définir un en-tête `Vary: Origin` pour indiquer que certains en-têtes sont définis dynamiquement en fonction de l'origine.
 
-L'instruction exacte pour définir les en-têtes dépend de votre serveur web. Par exemple, dans Apache, ajoutez une ligne comme celle qui suit à la configuration du serveur (dans la section appropriée `<Directory>`, `<Location>`, `<Files>`, ou `<VirtualHost>`). La configuration se trouve généralement dans un fichier `.conf` (`httpd.conf` et `apache.conf` sont des noms couramment attribués à ces fichiers) ou dans un fichier `.htaccess`.
+## Exemples pour les serveurs web courants
 
+La directive exacte pour définir les en-têtes dépend de votre serveur web.
+
+Dans les exemples ci-dessous,
+
+Dans **Apache** ([documentation <sup>(angl.)</sup>](https://httpd.apache.org/docs/2.4/mod/mod_headers.html#header)), ajoutez une ligne telle que la suivante à la configuration du serveur (dans la section `<Directory>`, `<Location>`, `<Files>` ou `<VirtualHost>` appropriée). La configuration se trouve généralement dans un fichier `.conf` (`httpd.conf` et `apache.conf` sont des noms courants pour ceux-ci), ou dans un fichier `.htaccess`&nbsp;:
+
+```apacheconf
+Header set Access-Control-Allow-Origin 'https://example.com'
 ```
-Header set Access-Control-Allow-Origin 'origin-list'
+
+Dans **Nginx** ([documentation <sup>(angl.)</sup>](https://nginx.org/en/docs/http/ngx_http_headers_module.html#add_header)), la commande pour configurer cet en-tête est&nbsp;:
+
+```nginx
+add_header 'Access-Control-Allow-Origin' 'https://example.com' always;
 ```
 
-Avec Nginx, la commande pour mettre en place cet en-tête est&nbsp;:
+## Si vous ne contrôlez pas le serveur
 
-```
-add_header 'Access-Control-Allow-Origin' 'origin-list'
-```
+Si le serveur distant n'est pas sous votre contrôle et n'inclut pas l'en-tête `Access-Control-Allow-Origin`, vous ne pouvez pas corriger cette erreur côté serveur. Envisagez ces alternatives&nbsp;:
+
+- Passez votre requête en tant que [requête simple](/fr/docs/Web/HTTP/Guides/CORS#simple_requests) pour éviter de déclencher un pré-vol, si le serveur gère les requêtes inter-origines simples.
+- Si vous n'avez pas besoin de lire la réponse, utilisez [`mode: "no-cors"`](/fr/docs/Web/API/Request/mode) dans votre appel `fetch()`. La réponse est opaque (illisible), mais la requête réussit.
+- Acheminez la requête avec un serveur mandataire que vous contrôlez, qui récupère la ressource et la retourne avec les en-têtes CORS appropriés.
+
+Consultez [les considérations côté client](/fr/docs/Web/HTTP/Guides/CORS/Errors#considérations_côté_client) pour plus de détails.
 
 ## Voir aussi
 
-- [Les erreurs relatives au CORS](/fr/docs/Web/HTTP/Guides/CORS/Errors)
-- Glossaire&nbsp;: [CORS](/fr/docs/Glossary/CORS)
+- [Les erreurs CORS](/fr/docs/Web/HTTP/Guides/CORS/Errors)
+- L'entrée du glossaire {{Glossary("CORS")}}
 - [Introduction au CORS](/fr/docs/Web/HTTP/Guides/CORS)

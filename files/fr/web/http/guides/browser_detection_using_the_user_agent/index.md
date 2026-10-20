@@ -50,7 +50,7 @@ Ce code fait plusieurs hypothèses qui peuvent être incorrectes et qui cassent 
 
 1. Toutes les chaînes de caractères d'agent utilisateur qui incluent la sous-chaîne de caractères `Chrome` indiquent un navigateur Chrome.
 
-   L'un des plus grands problèmes de la détection des navigateurs basée sur les chaînes d'agent utilisateur est que les navigateurs et les agents utilisateurs prétendent rationnellement être un autre navigateur, ou incluent des informations basées sur plusieurs navigateurs.
+   L'un des plus grands problèmes de la détection des navigateurs basée sur les chaînes de caractères d'agent utilisateur est que les navigateurs et les agents utilisateurs prétendent rationnellement être un autre navigateur, ou incluent des informations basées sur plusieurs navigateurs.
 
 2. La fonctionnalité de précédence est toujours disponible si le navigateur est Chrome.
    En réalité, le navigateur peut être une ancienne version de Chrome avant que la prise en charge ne soit ajoutée, ou il peut s'agir d'une version ultérieure de Chrome qui la supprime.
@@ -213,7 +213,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/201001
 
 Détecter les noms des moteurs de rendu est courant sur les sites web, et de nombreux agents utilisateurs ont historiquement ajouté d'autres noms de rendu pour éviter que les sites web ne les excluent uniquement en fonction du nom du moteur de rendu.
 Il est donc important de faire attention à ne pas déclencher de faux positifs lors de la détection du moteur de rendu, car cette méthode est particulièrement peu fiable.
-Considérez la chaîne d'agent utilisateur suivante envoyée par Chrome 134 sur macOS&nbsp;:
+Considérez la chaîne de caractères d'agent utilisateur suivante envoyée par Chrome 134 sur macOS&nbsp;:
 
 ```http
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36

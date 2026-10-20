@@ -3,7 +3,7 @@ title: Propriété CSS `font`
 short-title: font
 slug: Web/CSS/Reference/Properties/font
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 3f221b9845703eb21db70cdc321f843d5c1c072b
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`font`** permet de définir toutes les différentes propriétés de la police d'un élément. Elle permet aussi d'attribuer à un élément une police système.
@@ -83,6 +83,24 @@ Cette propriété est une propriété raccourcie pour les propriétés CSS suiva
 - {{CSSxRef("font-variant")}}
 - {{CSSxRef("font-weight")}}
 - {{CSSxRef("line-height")}}
+
+### Sous-propriétés qui sont uniquement réinitialisées
+
+Cette propriété réinitialise les propriétés CSS suivantes à leurs valeurs initiales&nbsp;:
+
+- {{CSSxRef("font-feature-settings")}}
+- {{CSSxRef("font-kerning")}}
+- {{CSSxRef("font-language-override")}}
+- {{CSSxRef("font-optical-sizing")}}
+- {{CSSxRef("font-size-adjust")}}
+- {{CSSxRef("font-variant-alternates")}}
+- {{CSSxRef("font-variant-caps")}}
+- {{CSSxRef("font-variant-east-asian")}}
+- {{CSSxRef("font-variant-emoji")}}
+- {{CSSxRef("font-variant-ligatures")}}
+- {{CSSxRef("font-variant-numeric")}}
+- {{CSSxRef("font-variant-position")}}
+- {{CSSxRef("font-variation-settings")}}
 
 ## Syntaxe
 
