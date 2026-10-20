@@ -3,7 +3,7 @@ title: 2D breakout game using Phaser
 slug: Games/Tutorials/2D_breakout_game_Phaser
 ---
 
-{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
+{{Next("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas")}}
 
 이 튜토리얼을 차례차례 진행하면서 우리는 HTML5 {{htmlelement("canvas")}} 로 렌더되는 순수한 JavaScript로 쓰여진 간단한 MDN 벽돌깨기 게임을 만들 것입니다.
 
@@ -23,7 +23,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 4. [패들과 키보드 컨트롤](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)
 5. [게임 오버](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over)
 6. [벽돌 필드 만들기](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
-7. [충돌 감지](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)
+7. [충돌 감지](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
 8. [점수 추적과 승리](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)
 9. [마우스 컨트롤](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls)
 10. [마무리](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up)
@@ -38,6 +38,6 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 ## 다음 단계
 
-좋습니다, 이제 시작하도록 합시다. 첫 번째 챕터인 [캔버스 생성과 그리기](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it) 부터 시작합니다.
+좋습니다, 이제 시작하도록 합시다. 첫 번째 챕터인 [캔버스 생성과 그리기](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas) 부터 시작합니다.
 
 {{Next("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas")}}

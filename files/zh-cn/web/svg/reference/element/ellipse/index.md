@@ -1,15 +1,34 @@
 ---
-title: ellipse
+title: <ellipse>
 slug: Web/SVG/Reference/Element/ellipse
+l10n:
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
-`ellipse`元素是一个 SVG 基本形状，用来创建一个椭圆，基于一个中心坐标以及它们的`x`半径和`y`半径。
+**`<ellipse>`** [SVG](/zh-CN/docs/Web/SVG) 元素是一种 SVG 基本形状，用于根据中心坐标以及 x 和 y 半径创建椭圆。
 
-椭圆不能指定精确的椭圆倾向（假设，举个例子，你想画一个 45 度角倾斜的椭圆），但是可以利用{{ SVGAttr("transform") }}属性实现旋转。
+> [!NOTE]
+> 椭圆无法指定精确朝向（例如，若你想绘制倾斜 45 度的椭圆），但可以使用 {{SVGAttr("transform")}} 属性旋转它。
 
 ## 使用上下文
 
 {{svginfo}}
+
+## 属性
+
+- {{SVGAttr("cx")}}
+  - : 椭圆中心的 x 坐标。_值类型_：[**\<length>**](/zh-CN/docs/Web/SVG/Guides/Content_type#长度) | [**\<percentage>**](/zh-CN/docs/Web/SVG/Guides/Content_type#百分数)；_默认值_：`0`；_动画性_：**是**
+- {{SVGAttr("cy")}}
+  - : 椭圆中心的 y 坐标。_值类型_：[**\<length>**](/zh-CN/docs/Web/SVG/Guides/Content_type#长度) | [**\<percentage>**](/zh-CN/docs/Web/SVG/Guides/Content_type#百分数)；_默认值_：`0`；_动画性_：**是**
+- {{SVGAttr("rx")}}
+  - : 椭圆在 x 轴上的半径。_值类型_：`auto` | [**\<length>**](/zh-CN/docs/Web/SVG/Guides/Content_type#长度) | [**\<percentage>**](/zh-CN/docs/Web/SVG/Guides/Content_type#百分数)；_默认值_：`auto`；_动画性_：**是**
+- {{SVGAttr("ry")}}
+  - : 椭圆在 y 轴上的半径。_值类型_：`auto` | [**\<length>**](/zh-CN/docs/Web/SVG/Guides/Content_type#长度) | [**\<percentage>**](/zh-CN/docs/Web/SVG/Guides/Content_type#百分数)；_默认值_：`auto`；_动画性_：**是**
+- {{SVGAttr("pathLength")}}
+  - : 此属性用于指定路径的总长度，单位为用户单位。_值类型_：[**\<number>**](/zh-CN/docs/Web/SVG/Guides/Content_type#数字)；_默认值_：_无_；_动画性_：**是**
+
+> [!NOTE]
+> 从 SVG2 开始，`cx`、`cy`、`rx` 和 `ry` 是*几何属性*，这意味着这些属性也可以作为该元素的 CSS 属性使用。
 
 ## 示例
 
@@ -29,29 +48,9 @@ svg {
 
 {{EmbedLiveSample('示例', 100, '100%')}}
 
-## 属性
+## 规范
 
-### 全局属性
-
-- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
-
-### 专有属性
-
-- {{ SVGAttr("cx") }}
-- {{ SVGAttr("cy") }}
-- {{ SVGAttr("rx") }}
-- {{ SVGAttr("ry") }}
-
-## DOM 接口
-
-该元素实现了 [`SVGEllipseElement`](/zh-CN/docs/DOM/SVGEllipseElement) 接口。
+{{Specifications}}
 
 ## 浏览器兼容性
 
@@ -59,4 +58,4 @@ svg {
 
 ## 参见
 
-- {{ SVGElement("circle") }}
+- 其他 SVG 基本形状：**{{ SVGElement('circle') }}**、{{ SVGElement('line') }}、{{ SVGElement('polygon') }}、{{ SVGElement('polyline') }}、{{ SVGElement('rect') }}

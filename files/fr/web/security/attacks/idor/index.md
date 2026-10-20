@@ -2,7 +2,7 @@
 title: Référence directe à un objet non sécurisée (IDOR)
 slug: Web/Security/Attacks/IDOR
 l10n:
-  sourceCommit: aa6c136a56b7861893376386fc572e9a505d39db
+  sourceCommit: f99d00a1c3697e26a679925954e26564e7e79b98
 ---
 
 La **référence directe à un objet non sécurisée (<abbr lang="en">IDOR</abbr>)** (<i lang="en">Insecure Direct Object Reference</i> en anglais) est une vulnérabilité qui permet à un·e attaquant·e d'exploiter un contrôle d'accès insuffisant et une exposition non sécurisée des identifiants d'objets, tels que les clés de base de données ou les chemins de fichiers.

@@ -3,12 +3,12 @@ title: Conceptos básicos de las tablas HTML
 short-title: Conceptos básicos de tablas
 slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
 l10n:
-  sourceCommit: ce12c10364f35c64184dec44be85537b7e10d91f
+  sourceCommit: 2e0b9415ed31484a4830e214eff9e06e408c7261
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
 
-Este artículo te ayudará a comenzar con las tablas HTML. Vamos a exponer conceptos básicos como filas y celdas, encabezados, celdas que abarcan varias columnas y filas, y la forma de agrupar todas las celdas de una columna para aplicarles estilo.
+Este artículo te ayudará a comenzar con las tablas HTML. Vamos a exponer conceptos básicos como filas y celdas, encabezados, celdas que abarcan varias columnas y filas, y cómo dar estilo a todas las celdas de una columna como un solo elemento.
 
 <table>
   <tbody>
@@ -17,7 +17,7 @@ Este artículo te ayudará a comenzar con las tablas HTML. Vamos a exponer conce
       <td>
         Familiaridad básica con HTML, como se cubre en
         <a href="/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
-          >Primeros pasos con HTML</a
+          >Sintaxis básica de HTML</a
         >.
       </td>
     </tr>
@@ -39,21 +39,21 @@ Este artículo te ayudará a comenzar con las tablas HTML. Vamos a exponer conce
 
 ## ¿Qué es una tabla?
 
-Una tabla es un conjunto estructurado de datos compuesto por filas y columnas (**datos tabulares**). Una tabla te permite consultar de forma rápida y sencilla valores que indican algún tipo de conexión entre distintos tipos de datos, por ejemplo una persona y su edad, o un día de la semana, o el horario de una piscina municipal.
+Una tabla es un conjunto estructurado de datos compuesto por filas y columnas (**datos tabulares**). Una tabla te permite consultar de forma rápida y sencilla valores que indican una conexión entre distintos tipos de datos; por ejemplo, una persona y su edad, un día de la semana o el horario de una piscina municipal.
 
 ![Una tabla de ejemplo que muestra nombres y edades de algunas personas: Chris 38, Dennis 45, Sarah 29, Karen 47.](numbers-table.png)
 
 ![Un horario de piscina que muestra una tabla de datos de ejemplo](swimming-timetable.png)
 
-Las tablas se usan mucho en la sociedad humana, y desde hace mucho tiempo, como demuestra este documento del censo de los Estados Unidos de 1800:
+Las tablas se usan mucho en la sociedad humana y desde hace mucho tiempo, como demuestra este documento del censo de los Estados Unidos de 1800:
 
 ![Un documento en pergamino muy antiguo; los datos no se leen con facilidad, pero se ve claramente que se está usando una tabla de datos.](1800-census.jpg)
 
-No es de extrañar, por tanto, que quienes crearon HTML proporcionaran un medio para estructurar y presentar datos tabulares en la web.
+No es de extrañar, por tanto, que quienes crearon HTML proporcionaran una forma de estructurar y presentar datos tabulares en la web.
 
 ### ¿Cómo funciona una tabla?
 
-El aspecto básico de una tabla es que es un elemento rígido. Es fácil interpretar la información haciendo asociaciones visuales entre los encabezados de las filas y las columnas. Por ejemplo, observa la tabla siguiente y busca un gigante gaseoso joviano con 62 lunas. Puedes encontrar la respuesta asociando los encabezados de la fila y la columna correspondientes.
+Las tablas son rígidas. La información se interpreta haciendo asociaciones visuales entre los encabezados de las filas y las columnas. Por ejemplo, observa la tabla de abajo y busca un gigante gaseoso joviano con 62 lunas. Puedes encontrar la respuesta asociando los encabezados de fila y de columna correspondientes.
 
 ```html hidden
 <table>
@@ -218,32 +218,32 @@ td {
 
 {{EmbedLiveSample("¿Cómo_funciona_una_tabla", 100, 560)}}
 
-Cuando se implementan correctamente, las herramientas de accesibilidad como los lectores de pantalla manejan bien las tablas HTML, así que una tabla HTML bien hecha debe mejorar la experiencia de las personas videntes e invidentes por igual.
+Cuando se implementan correctamente, las herramientas de accesibilidad como los lectores de pantalla manejan bien las tablas, así que una tabla HTML bien hecha debe mejorar la experiencia de las personas videntes y de las personas con discapacidad visual por igual.
 
 ### Dar estilo a las tablas
 
-También puedes [echar un vistazo al ejemplo en vivo de los datos de los planetas](https://mdn.github.io/learning-area/html/tables/planets-data/) en GitHub. Una cosa que notarás es que allí la tabla se lee bastante mejor: esto se debe a que la tabla que ves más arriba en esta página tiene un estilo mínimo, mientras que la versión de GitHub tiene aplicado un CSS bastante más elaborado.
+También puedes [echar un vistazo al ejemplo en vivo de los datos de los planetas](https://mdn.github.io/learning-area/html/tables/planets-data/) en GitHub. Una cosa que notarás es que allí la tabla se lee mejor: la tabla que aparece antes en esta página tiene un estilo mínimo, mientras que la versión de GitHub tiene aplicado un CSS más completo.
 
-No te hagas ilusiones: para que las tablas sean eficaces en la web, necesitas aportar cierta información de estilo con [CSS](/es/docs/Learn_web_development/Core/Styling_basics), además de una buena estructura sólida con HTML. En esta lección nos centramos en la parte de HTML; aprenderás a dar estilo a las tablas más adelante, en nuestra lección [Dar estilo a tablas](/es/docs/Learn_web_development/Core/Styling_basics/Tables).
+No te hagas ilusiones: para que las tablas sean eficaces en la web, necesitas aportar cierta información de estilo con [CSS](/es/docs/Learn_web_development/Core/Styling_basics), además de una estructura buena y sólida con HTML. En esta lección nos centramos en la parte de HTML; aprenderás a dar estilo a las tablas más adelante, en nuestra lección [Dar estilo a tablas](/es/docs/Learn_web_development/Core/Styling_basics/Tables).
 
-En este módulo no nos centraremos en CSS, pero te proporcionamos una hoja de estilos CSS mínima para que la uses y tus tablas se lean mejor que con el estilo predeterminado que se obtiene sin dar ningún estilo. Puedes encontrar la [hoja de estilos aquí](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css), y también una [plantilla HTML](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) que la aplica; juntas te darán un buen punto de partida para experimentar con tablas HTML.
+En este módulo no nos centraremos en CSS, pero te proporcionamos una hoja de estilos CSS mínima que hará que tus tablas se lean mejor que con el estilo predeterminado que se obtiene sin dar ningún estilo. Puedes encontrar la [hoja de estilos aquí](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css), y también una [plantilla HTML](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) que aplica la hoja de estilos: juntas te darán un buen punto de partida para experimentar con las tablas HTML.
 
 ### ¿Cuándo no debes usar tablas HTML?
 
-Las tablas HTML deben usarse para datos tabulares (información que resulta fácil de manejar en filas y columnas): para eso están diseñadas. Por desgracia, mucha gente solía usar tablas HTML para maquetar páginas web, por ejemplo una fila para la cabecera de la página, una fila para cada columna de contenido, una fila para el pie, etc. Esta técnica se usaba en el pasado porque la compatibilidad con CSS en los navegadores era mucho más limitada. Los navegadores modernos tienen una compatibilidad sólida con CSS, así que las maquetaciones basadas en tablas ya no son necesarias. Hoy son extremadamente raras, pero todavía puedes verlas en algunos rincones de la web.
+Las tablas HTML son solo para datos tabulares (información que resulta fácil de manejar en filas y columnas): para eso están diseñadas. Por desgracia, la gente solía usar tablas HTML para maquetar páginas web; por ejemplo, una fila para la cabecera de la página, otra fila para cada columna de contenido, una fila para el pie, etc. Esta técnica se usaba en el pasado porque la compatibilidad con CSS en los navegadores era mucho más limitada. Los navegadores modernos tienen una compatibilidad sólida con CSS, así que las maquetaciones basadas en tablas ya no son necesarias. Hoy son extremadamente raras, pero todavía puedes verlas en algunos rincones de la web.
 
 En resumen, usar tablas para maquetar en vez de [técnicas de maquetación con CSS](/es/docs/Learn_web_development/Core/CSS_layout) es mala idea. Los motivos principales son estos:
 
-1. **Las tablas de maquetación reducen la accesibilidad para las personas con discapacidad visual**: los [lectores de pantalla](/es/docs/Learn_web_development/Core/Accessibility/Tooling#screen_readers), que usan las personas ciegas, interpretan las etiquetas que hay en una página HTML y leen su contenido en voz alta. Como las tablas no son la herramienta adecuada para maquetar, y el marcado es más complejo que con las técnicas de maquetación de CSS, la salida del lector de pantalla resultará confusa para quien lo usa.
-2. **Las tablas producen sopa de etiquetas**: como se ha mencionado, las maquetaciones con tablas suelen implicar estructuras de marcado más complejas que las técnicas de maquetación adecuadas. Esto puede hacer que el código sea más difícil de escribir, mantener y depurar.
-3. **Las tablas no son adaptables automáticamente**: cuando usas contenedores de maquetación adecuados (como {{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}} o {{htmlelement("div")}}), su ancho es de forma predeterminada el 100 % del elemento padre. Las tablas, en cambio, se dimensionan de forma predeterminada según su contenido, así que hacen falta medidas adicionales para que el estilo de una maquetación con tablas funcione bien en una variedad de dispositivos.
+1. **Las tablas de maquetación reducen la accesibilidad para las personas con discapacidad visual**: los [lectores de pantalla](/es/docs/Learn_web_development/Core/Accessibility/Tooling), que usan las personas ciegas, interpretan las etiquetas que hay en una página HTML y leen su contenido en voz alta. Como las tablas no están pensadas para maquetar y dan lugar a un marcado más complejo, la salida resultante del lector de pantalla será confusa.
+2. **Las tablas producen sopa de etiquetas**: como se ha mencionado, las maquetaciones con tablas suelen implicar estructuras de marcado más complejas que las técnicas de maquetación adecuadas, lo que hace que el código sea más difícil de escribir, mantener y depurar.
+3. **Las tablas no son adaptables automáticamente**: cuando usas contenedores de maquetación adecuados (como {{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}} o {{htmlelement("div")}}), su ancho es de forma predeterminada el 100 % del elemento padre. Las tablas se dimensionan de forma predeterminada según su contenido, así que requieren trabajo adicional para mostrarse bien en una variedad de dispositivos.
 
 ## Crea tu primera tabla
 
-Ya hemos hablado bastante de teoría, así que vamos a meternos en un ejemplo práctico y a construir una tabla sencilla.
+Ya hemos hablado bastante de teoría, así que vamos a meternos en un ejemplo práctico. Aquí construirás una tabla sencilla.
 
-1. Antes que nada, haz una copia de [blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) en un directorio nuevo de tu equipo. La plantilla HTML ya contiene un elemento `<link>` que aplica el CSS al HTML, así que no tienes que preocuparte por eso.
-2. El contenido de toda tabla va encerrado entre estas dos etiquetas: **[`<table></table>`](/es/docs/Web/HTML/Reference/Elements/table)**. Agrégalas dentro del `body` de tu HTML.
+1. Antes que nada, haz una copia de [blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) en un directorio nuevo de tu equipo local. La plantilla HTML ya contiene un elemento `<link>` para aplicar el CSS, así que no tienes que preocuparte por eso.
+2. Toda tabla va encerrada entre las etiquetas **[`<table></table>`](/es/docs/Web/HTML/Reference/Elements/table)**. Agrégalas dentro del `body` de tu HTML.
 3. El contenedor más pequeño dentro de una tabla es una celda, que se crea con un elemento **[`<td>`](/es/docs/Web/HTML/Reference/Elements/td)** («td» viene de _table data_, datos de tabla). Agrega lo siguiente dentro de las etiquetas de tu tabla:
 
    ```html
@@ -259,9 +259,9 @@ Ya hemos hablado bastante de teoría, así que vamos a meternos en un ejemplo pr
    <td>Soy tu cuarta celda.</td>
    ```
 
-Como verás, las celdas no se colocan una debajo de otra, sino que se alinean automáticamente entre sí en la misma fila. Cada elemento `<td>` crea una sola celda y juntas forman la primera fila. Cada celda que agregamos hace que la fila se alargue.
+Las celdas no se colocan una debajo de otra, sino que se alinean automáticamente en la misma fila. Cada elemento `<td>` crea una sola celda, y juntas forman la primera fila. Cada celda que agregamos hace que la fila se alargue.
 
-Para que esta fila deje de crecer y las celdas siguientes empiecen a colocarse en una segunda fila, tenemos que usar el elemento [`<tr>`](/es/docs/Web/HTML/Reference/Elements/tr) («tr» viene de _table row_, fila de tabla). Vamos a investigarlo ahora.
+Para que las celdas siguientes empiecen a colocarse en una segunda fila, tenemos que usar el elemento [`<tr>`](/es/docs/Web/HTML/Reference/Elements/tr) («tr» viene de _table row_, fila de tabla). Veamos esto ahora.
 
 1. Coloca las cuatro celdas que ya has creado dentro de etiquetas `<tr>`, así:
 
@@ -303,7 +303,7 @@ Tu HTML terminado debería verse más o menos así:
 
 ## Añadir encabezados con elementos \<th>
 
-Ahora vamos a centrarnos en los encabezados de tabla: celdas especiales que van al comienzo de una fila o columna y definen el tipo de datos que contiene esa fila o columna (por ejemplo, observa las celdas «Persona» y «Edad» del primer ejemplo que se muestra en este artículo). Para ilustrar por qué son útiles, echa un vistazo al ejemplo de tabla siguiente. En primer lugar, el código fuente:
+Ahora vamos a centrarnos en los encabezados de tabla: celdas especiales que van al comienzo de una fila o columna y definen el tipo de datos que contiene esa fila o columna (por ejemplo, observa las celdas «Persona» y «Edad» del primer ejemplo de este artículo). Para ver por qué son útiles, echa un vistazo al siguiente ejemplo de tabla. Primero, el código fuente:
 
 ```html live-sample___table-headers
 <table>
@@ -360,11 +360,11 @@ Y ahora la tabla ya renderizada:
 
 {{EmbedLiveSample("table-headers", "", "250")}}
 
-El problema aquí es que, aunque más o menos se entiende lo que pasa, no resulta tan fácil relacionar los datos entre sí como podría serlo. Si los encabezados de fila y de columna destacaran de alguna manera, sería mucho mejor.
+El problema aquí es que, aunque se entiende lo que pasa, no resulta tan fácil relacionar los datos entre sí como podría serlo. Si los encabezados de fila y de columna destacaran, sería más fácil.
 
 ### Añadir encabezados a la tabla de perros
 
-Ahora nos gustaría que probaras a mejorar el ejemplo de la tabla de perros añadiendo algunos encabezados.
+Vamos a mejorar el ejemplo de la tabla de perros añadiendo algunos encabezados.
 
 1. Primero, haz otra copia de nuestros archivos [blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) en un directorio nuevo de tu equipo.
 2. Añade el código siguiente dentro del `<body>` de tu HTML:
@@ -410,7 +410,7 @@ Ahora nos gustaría que probaras a mejorar el ejemplo de la tabla de perros aña
    </table>
    ```
 
-3. Para que los encabezados de la tabla se reconozcan como encabezados, tanto visual como semánticamente, puedes usar el elemento [`<th>`](/es/docs/Web/HTML/Reference/Elements/th) («th» viene de _table header_, encabezado de tabla). Funciona exactamente igual que un `<td>`, salvo que denota un encabezado y no una celda normal. Ve a tu HTML y cambia por elementos `<th>` todos los elementos `<td>` que rodean los encabezados de la tabla.
+3. Para que los encabezados de la tabla se reconozcan como encabezados, tanto visual como semánticamente, puedes usar el elemento [`<th>`](/es/docs/Web/HTML/Reference/Elements/th) («th» viene de _table header_, encabezado de tabla). Funciona igual que un `<td>`, salvo que indica un encabezado y no una celda normal. Ve a tu HTML y cambia todos los elementos `<td>` que rodean los encabezados de la tabla por elementos `<th>`.
 4. Guarda tu HTML y cárgalo en un navegador: deberías ver que ahora los encabezados se ven como encabezados.
 
 <details>
@@ -467,7 +467,7 @@ Ya hemos respondido en parte a esta pregunta: es más fácil encontrar los datos
 > [!NOTE]
 > Los encabezados de tabla vienen con algo de estilo predeterminado: aparecen en negrita y centrados aunque no añadas tu propio estilo a la tabla, para ayudarles a destacar.
 
-Los encabezados de tabla tienen además otra ventaja: junto con el atributo `scope` (que veremos en el artículo siguiente), permiten hacer las tablas más accesibles asociando cada encabezado con todos los datos de la misma fila o columna. Los lectores de pantalla pueden entonces leer de una vez toda una fila o columna de datos, lo cual resulta bastante útil.
+Los encabezados de tabla tienen otra ventaja: junto con el atributo `scope` (que veremos en el próximo artículo), hacen que las tablas sean más accesibles al asociar cada encabezado con todos los datos de la misma fila o columna. Así, los lectores de pantalla pueden leer en voz alta una fila o columna entera de datos de una vez, lo que resulta muy útil.
 
 ## Permitir que las celdas abarquen varias filas y columnas
 
@@ -520,7 +520,7 @@ Pero el resultado no es exactamente lo que queremos:
 
 ### Arreglar la disposición con `rowspan` y `colspan`
 
-Necesitamos una forma de que «Animales», «Hipopótamo» y «Cocodrilo» abarquen dos columnas, y que «Caballo» y «Pollo» abarquen hacia abajo dos filas. Por suerte, los encabezados y las celdas de tabla tienen los atributos `colspan` y `rowspan`, que nos permiten hacer justamente eso. Ambos aceptan un valor numérico sin unidades, que equivale al número de filas o columnas que quieres abarcar. Por ejemplo, `colspan="2"` hace que una celda abarque dos columnas.
+Necesitamos una forma de que «Animales», «Hipopótamo» y «Cocodrilo» abarquen dos columnas, y que «Caballo» y «Pollo» abarquen dos filas. Por suerte, las tablas HTML ofrecen los atributos `colspan` y `rowspan` para conseguirlo. Ambos aceptan un valor numérico sin unidades igual al número de filas o columnas que se quieren abarcar. Por ejemplo, `colspan="2"` hace que una celda abarque dos columnas.
 
 Vamos a usar `colspan` y `rowspan` para mejorar esta tabla.
 
@@ -596,9 +596,9 @@ Tu HTML terminado debería verse más o menos así:
 
 ## Agrupar columnas con `<colgroup>` y `<col>`
 
-Hay una forma de apuntar a columnas enteras de una tabla como una sola entidad, por ejemplo al aplicar estilos a una tabla (algo que aprenderás más adelante en [Dar estilo a tablas](/es/docs/Learn_web_development/Core/Styling_basics/Tables)). A medida que ganes experiencia creando tablas HTML, descubrirás que aplicar un color de fondo, por ejemplo, a todas las celdas de una sola columna es más difícil de lo que parece. Los elementos {{htmlelement("colgroup")}} y {{htmlelement("col")}} ofrecen una solución a este problema.
+Hay una forma de apuntar a columnas enteras de una tabla como una sola entidad; por ejemplo, al aplicar estilos a una tabla (algo que aprenderás más adelante en [Dar estilo a tablas](/es/docs/Learn_web_development/Core/Styling_basics/Tables)). A medida que ganes experiencia creando tablas HTML, descubrirás que aplicar un color de fondo, por ejemplo, a todas las celdas de una sola columna es más difícil de lo que parece. Los elementos {{htmlelement("colgroup")}} y {{htmlelement("col")}} ofrecen una solución a este problema.
 
-El elemento `<colgroup>` debe incluirse como hijo de la tabla, justo después de la etiqueta de apertura `<table>`. Dentro del elemento `<colgroup>` puedes incluir uno o más elementos `<col>`, que representan grupos de columnas. El elemento `<col>` puede incluir un atributo `span` que indica el número de columnas de ese grupo. También puede incluir atributos globales como `style` (si quieres apuntar al grupo con estilos en línea) o `class` (si quieres apuntar a ese grupo con CSS o JavaScript mediante un nombre de clase). Los elementos `<col>` representan las columnas de la tabla desde el principio, por ejemplo desde el lado izquierdo en una tabla escrita en un idioma que se lee de izquierda a derecha, como el español.
+El elemento `<colgroup>` se incluye como hijo de la tabla, justo después de la etiqueta de apertura `<table>`. Dentro del elemento `<colgroup>` puedes incluir uno o más elementos `<col>`, que representan grupos de columnas. El elemento `<col>` puede incluir un atributo `span` que indica el número de columnas de ese grupo. También puede incluir atributos globales como `style` (para apuntar al grupo con estilos en línea) o `class` (para apuntar al grupo con CSS o JavaScript mediante un nombre de clase). Los elementos `<col>` representan las columnas de la tabla desde el principio, por ejemplo desde el lado izquierdo en una tabla escrita en un idioma que se lee de izquierda a derecha, como el español.
 
 Veamos un ejemplo para entenderlo. La tabla siguiente muestra un horario escolar:
 
@@ -667,7 +667,7 @@ Veamos un ejemplo para entenderlo. La tabla siguiente muestra un horario escolar
 </table>
 ```
 
-En esta tabla hay ocho columnas. Veamos más de cerca la estructura de `<colgroup>` y `<col>` para mostrar cómo les afecta:
+Esta tabla tiene ocho columnas. Veamos más de cerca la estructura de `<colgroup>` y `<col>` para mostrar cómo les afecta:
 
 ```html
 <colgroup>
@@ -682,7 +682,7 @@ En esta tabla hay ocho columnas. Veamos más de cerca la estructura de `<colgrou
 
 Si observamos los elementos `<col>`:
 
-- El primero tiene `span="2"`, así que representa la primera _y_ la segunda columna desde la izquierda de la tabla. No apuntamos a estas columnas con ningún estilo, pero necesitamos incluirlo para poder apuntar a las columnas siguientes.
+- El primero tiene `span="2"`, así que representa la primera _y_ la segunda columna desde la izquierda de la tabla. No apuntamos a estas columnas con ningún estilo; nos permite apuntar a las columnas siguientes.
 - El segundo y el cuarto no tienen el atributo `span`, así que representan una sola columna: la tercera y la quinta, respectivamente. Tienen aplicada la clase `column-background`.
 - El tercero no tiene el atributo `span` y tiene aplicada la clase `column-fixed-width`. Representa la cuarta columna.
 - El quinto no tiene el atributo `span` y tiene aplicada la clase `column-background-border`. Representa la sexta columna.
@@ -745,11 +745,41 @@ Veamos cómo se renderiza el código anterior:
 Fíjate en cómo las distintas columnas reciben los estilos especificados en las clases.
 
 > [!NOTE]
-> Aunque `<colgroup>` y `<col>` sirven sobre todo para dar estilo, son una funcionalidad de HTML, así que los hemos cubierto aquí y no en nuestros módulos de CSS. También es justo decir que son una funcionalidad _limitada_: como se muestra en la [página de referencia de `<colgroup>`](/es/docs/Web/HTML/Reference/Elements/colgroup#usage_notes), sólo se puede aplicar un subconjunto limitado de estilos a un elemento `<col>`, y la mayoría del resto de ajustes que estuvieron disponibles históricamente están obsoletos (eliminados, o marcados para su eliminación).
+> Aunque `<colgroup>` y `<col>` sirven sobre todo para dar estilo, son una funcionalidad de HTML, así que los hemos cubierto aquí y no en nuestros módulos de CSS. Son una funcionalidad _limitada_: como se muestra en la [página de referencia de `<colgroup>`](/es/docs/Web/HTML/Reference/Elements/colgroup), solo se puede aplicar un subconjunto limitado de estilos a un elemento `<col>`. La mayoría del resto de estilos que estuvieron disponibles históricamente están obsoletos (eliminados, o marcados para su eliminación).
+
+### ¿Los estilos de `<col>` chocan con otros estilos de la tabla?
+
+La respuesta es «sí». Los estilos de las tablas se pintan en este orden: los establecidos en `<table>`, después en `<col>`, después en `<tr>` y después en `<th>` y `<td>`. Esto significa que los estilos establecidos en las filas, los encabezados y las celdas de la tabla sobrescriben los estilos de las columnas.
+
+Pruébalo añadiendo estilos de columna al [ejemplo de la plantilla](#crea_tu_primera_tabla) con el que trabajaste antes en el artículo. Si añades lo siguiente al HTML, encima de la primera etiqueta `<tr>`:
+
+```html
+<colgroup>
+  <col span="2" style="border: 2px solid black; background-color: red" />
+</colgroup>
+```
+
+Verás que las dos primeras columnas de la tabla reciben un borde `black` de `2px`, pero no un color de fondo `red`. Esto se debe a que los encabezados y las filas de la tabla tienen establecidos los siguientes estilos en `minimal-table.css`, que sobrescriben los estilos de las columnas:
+
+```css
+th {
+  background-color: rgb(235 235 235);
+}
+
+tr:nth-child(even) td {
+  background-color: rgb(250 250 250);
+}
+
+tr:nth-child(odd) td {
+  background-color: rgb(220 220 220);
+}
+```
+
+Elimina estos estilos `background-color` para ver el color de fondo `red`.
 
 ## Repaso interactivo de los conceptos de tablas
 
-El contenido incrustado a continuación, de Scrimba<sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>, ofrece una lección interactiva que resume la mayoría de las técnicas cubiertas en este artículo. Échale un vistazo para repasar los puntos clave y practicar un poco más.
+El contenido incrustado a continuación, de Scrimba<sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup>, ofrece una lección interactiva que resume la mayoría de las técnicas cubiertas en este artículo. Échale un vistazo para repasar los puntos clave y practicar un poco más.
 
 <mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~03s" scrimtitle="HTML tables"></scrim-inline>
 

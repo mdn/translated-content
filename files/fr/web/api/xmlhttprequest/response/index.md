@@ -1,121 +1,37 @@
 ---
-title: XMLHttpRequest.response
+title: "XMLHttpRequest : propriété response"
+short-title: response
 slug: Web/API/XMLHttpRequest/response
+l10n:
+  sourceCommit: 118909727d715a42a27e3d368379bf959feca4af
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers("window_and_worker_except_service")}}
 
-La propriété `XMLHttpRequest.response` contient le corps de la réponse. Elle peut être de type ArrayBuffer, Blob, Document, un objet JavaScript ou une DOMString en fonction de la valeur de la propriété `XMLHttpRequest.responseType`. La réponse ( `Value of response` ) est nulle si la requête est incomplète ou n'as pas été effectué avec succès. Cependant, si `responseType` est "text" ou une chaine vide et tant que la requête est en cours ( dans l'état _loading_ ), `response` peut contenir la réponse partielle.
+La propriété en lecture seule **`response`** de l'interface {{DOMxRef("XMLHttpRequest")}} retourne le contenu du corps de la réponse sous forme de {{JSxRef("ArrayBuffer")}}, de {{DOMxRef("Blob")}}, de {{DOMxRef("Document")}}, d'un {{JSxRef("Object")}} JavaScript ou d'une chaîne de caractères, en fonction de la valeur de la propriété {{DOMxRef("XMLHttpRequest.responseType", "responseType")}} de la requête.
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td class="header">Valeur de <code>responseType</code></td>
-      <td class="header">
-        Type de donnée de la propriété <code>response</code>
-      </td>
-    </tr>
-    <tr>
-      <td><code>""</code></td>
-      <td>{{jsxref("String")}} (valeur par défaut)</td>
-    </tr>
-    <tr>
-      <td><code>"arraybuffer"</code></td>
-      <td>{{jsxref("ArrayBuffer")}}</td>
-    </tr>
-    <tr>
-      <td><code>"blob"</code></td>
-      <td>{{domxref("Blob")}}</td>
-    </tr>
-    <tr>
-      <td><code>"document"</code></td>
-      <td>{{domxref("Document")}}</td>
-    </tr>
-    <tr>
-      <td><code>"json"</code></td>
-      <td><p>Objet JavaScript depuis une réponse JSON.</p></td>
-    </tr>
-    <tr>
-      <td><code>"text"</code></td>
-      <td>{{jsxref("String")}}</td>
-    </tr>
-    <tr>
-      <td><code>"moz-blob"</code> {{non-standard_inline}}</td>
-      <td>
-        <p>
-          Used by Firefox to allow retrieving partial {{domxref("Blob")}}
-          data from progress events. This lets your progress event handler start
-          processing data while it's still being received.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>"moz-chunked-text"</code>{{non-standard_inline}}</td>
-      <td>
-        <p>
-          Similar to <code>"text"</code>, but is streaming. This means that the
-          value in <code>response</code> is only available during dispatch of
-          the <code>"progress"</code> event and only contains the data received
-          since the last <code>"progress"</code> event.
-        </p>
-        <p>
-          When <code>response</code> is accessed during a
-          <code>"progress"</code> event it contains a string with the data.
-          Otherwise it returns <code>null</code>.
-        </p>
-        <p>
-          This mode currently only works in Firefox.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>"moz-chunked-arraybuffer"</code>{{non-standard_inline}}
-      </td>
-      <td>
-        <p>
-          Similar to <code>"arraybuffer"</code>, but is streaming. This means
-          that the value in <code>response</code> is only available during
-          dispatch of the <code>"progress"</code> event and only contains the
-          data received since the last <code>"progress"</code> event.
-        </p>
-        <p>
-          When <code>response</code> is accessed during a
-          <code>"progress"</code> event it contains a string with the data.
-          Otherwise it returns <code>null</code>.
-        </p>
-        <p>
-          This mode currently only works in Firefox.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>"ms-stream"{{non-standard_inline}}</td>
-      <td>
-        <p>
-          Indique que la réponse est une partie d'un téléchargement d'un flux
-          (?). Supporté uniquement pour les requêtes des téléchargements et
-          disponible uniquement dans Internet Explorer.
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Valeur
 
-> [!NOTE]
-> À partir de Gecko 11.0 et de WebKit build 528, ces navigateurs ne permettent plus l'utilisation de l'attribut `responseType` lors des requêtes synchrones. Cela renvoi l'erreur `NS_ERROR_DOM_INVALID_ACCESS_ERR`. Ce changement a été proposé au W3C afin d'être standardisé.
+Un objet approprié en fonction de la valeur de {{DOMxRef("XMLHttpRequest.responseType", "responseType")}}.
+Vous pouvez tenter de demander que les données soient fournies dans un format spécifique en définissant la valeur de `responseType` après avoir appelé {{DOMxRef("XMLHttpRequest.open", "open()")}} pour initialiser la requête, mais avant d'appeler {{DOMxRef("XMLHttpRequest.send", "send()")}} pour envoyer la requête au serveur.
 
-## Example
+La valeur est `null` si la requête n'est pas encore terminée ou a échoué, à l'exception du cas où l'on lit des données textuelles en utilisant un `responseType` de `"text"` ou la chaîne de caractères vide (`""`), la réponse peut contenir la réponse partielle tant que la requête est encore dans l'état {{DOMxRef("XMLHttpRequest.readyState", "readyState")}} `LOADING` (3).
+
+## Exemples
+
+Cet exemple présente une fonction, `charger()`, qui charge et traite une page depuis le serveur. Elle fonctionne en créant un objet {{DOMxRef("XMLHttpRequest")}} et en créant un écouteur pour les évènements {{DOMxRef("XMLHttpRequest/readystatechange_event", "readystatechange")}} de sorte que lorsque `readyState` passe à `DONE` (4), la `response` est obtenue et transmise à la fonction de rappel fournie à `charger()`.
+
+Le contenu est traité comme des données textuelles brutes (puisque rien ici ne remplace la valeur par défaut de {{DOMxRef("XMLHttpRequest.responseType", "responseType")}}).
 
 ```js
-var url = "somePage.html"; // une page locale
+const url = "unePage.html"; // Une page locale
 
-function load(url, callback) {
-  var xhr = new XMLHttpRequest();
+function charger(url, fonctionRappel) {
+  const xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function () {
+  xhr.onreadystatechange = () => {
     if (xhr.readyState === 4) {
-      console.log(xhr.response); // Par défault une DOMString
+      fonctionRappel(xhr.response);
     }
   };
 

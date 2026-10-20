@@ -21,7 +21,7 @@ Un objet {{DOMxRef("Storage")}} qui peut être utilisé pour accéder à l'espac
 - `SecurityError`
   - : Levée dans l'un des cas suivants&nbsp;:
     - L'origine n'est pas [un schéma/hôte/port valide](/fr/docs/Web/Security/Defenses/Same-origin_policy#définition_de_lorigine). Cela peut se produire si l'origine utilise les schémas `file:` ou `data:`, par exemple.
-    - La requête viole une décision de politique. Par exemple, l'utilisateur·ice a configuré le navigateur pour empêcher la page de conserver des données.
+    - La requête transgresse une décision de politique. Par exemple, l'utilisateur·ice a configuré le navigateur pour empêcher la page de conserver des données.
 
     Notez que si l'utilisateur·ice bloque les cookies, les navigateurs interprètent probablement cela comme une instruction pour empêcher la page de conserver des données.
 

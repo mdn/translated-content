@@ -1,5 +1,6 @@
 ---
 title: "MutationRecord: target プロパティ"
+short-title: target
 slug: Web/API/MutationRecord/target
 l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9

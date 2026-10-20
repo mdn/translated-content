@@ -3,7 +3,7 @@ title: Propriété CSS `flex`
 short-title: flex
 slug: Web/CSS/Reference/Properties/flex
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`flex`** définit comment un {{Glossary("flex item", "élément flexible")}} va grandir ou rétrécir pour occuper l'espace disponible dans son conteneur flexible.
@@ -120,7 +120,7 @@ La propriété `flex` peut être définie avec une, deux ou trois valeurs.
 - `none`
   - : L'élément est dimensionné selon ses propriétés `width` et `height`. Il n'est pas flexible&nbsp;: il ne peut ni rétrécir ni grandir par rapport au conteneur flexible. Cela équivaut à `flex: 0 0 auto`.
 
-Les effets flexbox les plus courants peuvent être obtenus avec les valeurs `flex` suivantes&nbsp;:
+Les effets des boîtes flexibles les plus courants peuvent être obtenus avec les valeurs `flex` suivantes&nbsp;:
 
 - `initial`&nbsp;: L'élément flexible ne grandit pas mais peut rétrécir. Cette valeur par défaut équivaut à `flex: 0 1 auto`. L'élément est dimensionné selon ses propriétés `width` ou `height`, selon la direction du `flex-direction`. S'il y a un espace négatif disponible, l'élément rétrécit à sa taille minimale pour s'adapter au conteneur, mais il ne grandit pas pour absorber l'espace positif disponible dans le conteneur flexible.
 - `auto`&nbsp;: L'élément flexible peut grandir et rétrécir. Cette valeur équivaut à `flex: 1 1 auto`. L'élément est dimensionné selon ses propriétés `width` ou `height`, selon la direction du `flex-direction`, mais il grandit pour absorber l'espace positif disponible dans le conteneur flexible ou rétrécit à sa taille minimale pour s'adapter au conteneur en cas d'espace négatif. L'élément flexible est totalement flexible.

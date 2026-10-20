@@ -3,14 +3,14 @@ title: Propriété CSS `column-rule-break`
 short-title: column-rule-break
 slug: Web/CSS/Reference/Properties/column-rule-break
 l10n:
-  sourceCommit: 1474534461893381d54c502e655f334b5568e597
+  sourceCommit: d3a0fd9820ca27a3f17642841af8426735cb4ec3
 ---
 
 {{SeeCompatTable}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`column-rule-break`** définit le comportement de rupture des règles de colonne en segments chaque fois que les règles de colonne intersectent les espaces entre les lignes.
 
-{{InteractiveExample("Démonstration CSS&nbsp;: rule")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: column-rule-break")}}
 
 ```css interactive-example-choice
 column-rule-break: none;
@@ -102,7 +102,7 @@ Cette propriété est définie comme un mot-clé parmi la liste suivante&nbsp;:
 
 La propriété `column-rule-break` définit si les règles de colonne doivent ou non se rompre en segments lorsqu'elles intersectent les espaces entre les lignes.
 
-Les règles de colonne sont peintes dans un espace entre les colonnes sous forme d'un ou plusieurs segments, les segments se produisant entre les éléments de grille adjacents dans des colonnes séparées, entre les éléments flex ou les lignes flex dans les mises en page flexibles en fonction de la `flex-direction`, ou entre les colonnes dans les mises en page en multi-colonnes.
+Les règles de colonne sont peintes dans un espace entre les colonnes sous forme d'un ou plusieurs segments, les segments se produisant entre les éléments de grille adjacents dans des colonnes séparées, entre les éléments flexibles ou les lignes flexibles dans les dispositions flexibles en fonction de la `flex-direction`, ou entre les colonnes dans les dispositions à plusieurs colonnes.
 
 La propriété `column-rule-break` ne détermine que si la rupture se produit. Par défaut, la rupture entre les segments de règle de colonne correspond à la hauteur de l'espace entre les lignes, chaque segment commençant et se terminant au bord de l'espace (ou au bord du conteneur). Si l'espace entre les lignes est `0`, cette rupture peut ne pas être visible. Les positions de fin peuvent être contrôlées avec les propriétés {{CSSxRef("column-rule-inset")}}.
 
@@ -136,7 +136,8 @@ Dans les conteneurs de grille, par défaut, les segments de règle de colonne co
 ```
 
 ```css hidden
-body {
+h1,
+div {
   font-family: sans-serif;
   text-align: center;
 }
@@ -164,6 +165,18 @@ h2 {
   border: 1px solid green;
   background-color: lime;
   height: 30px;
+}
+
+@layer no-support {
+  @supports not (column-rule-break: intersection) {
+    body::before {
+      content: "Votre navigateur ne prend pas en charge la propriété column-rule-break";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 
@@ -212,7 +225,8 @@ Dans les boîtes flexibles, que les règles de colonne se rompent à chaque espa
 ```
 
 ```css hidden
-body {
+h1,
+article {
   font-family: sans-serif;
   text-align: center;
 }
@@ -255,18 +269,30 @@ section {
   flex: 1 1 auto;
   height: 30px;
 }
+
+@layer no-support {
+  @supports not (column-rule-break: intersection) {
+    body::before {
+      content: "Votre navigateur ne prend pas en charge la propriété column-rule-break";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 {{EmbedLiveSample("Conteneurs flexibles", "", 300)}}
 
 En modes d'écriture horizontaux, le fait de définir `column-rule-break` sur `intersection` n'affecte que les règles de colonne dans les scénarios `column` et `column-reverse`.
 
-### Conteneurs multi-colonnes
+### Conteneurs à plusieurs colonnes
 
-Dans les conteneurs multi-colonnes, la valeur par défaut `normal` se comporte de la même manière que `intersection`. Alors que les décorations de ligne sont continues par défaut, les règles de colonne se rompent à chaque intersection. Les règles de colonne se divisent en segments à chaque espace de ligne, chaque segment commençant et se terminant au bord de l'espace. Ces positions de début et de fin peuvent être modifiées avec les propriétés `column-rule-inset`.
+Dans les conteneurs à plusieurs colonnes, la valeur par défaut `normal` se comporte de la même manière que `intersection`. Alors que les décorations de ligne sont continues par défaut, les règles de colonne se rompent à chaque intersection. Les règles de colonne se divisent en segments à chaque espace de ligne, chaque segment commençant et se terminant au bord de l'espace. Ces positions de début et de fin peuvent être modifiées avec les propriétés `column-rule-inset`.
 
 ```html hidden
-<h1>Règles par défaut dans les conteneurs multi-colonnes</h1>
+<h1>Règles par défaut dans les conteneurs à plusieurs colonnes</h1>
 <ol>
   <li>Un poisson</li>
   <li>Deux poissons</li>
@@ -309,15 +335,14 @@ Dans les conteneurs multi-colonnes, la valeur par défaut `normal` se comporte d
 ```
 
 ```css hidden
-body {
+h1,
+ol,
+fieldset {
   font-family: sans-serif;
   text-align: center;
 }
 h1 {
   font-size: 1.25em;
-}
-h2 {
-  font-size: 1em;
 }
 ol {
   columns: 3 / 4em;
@@ -344,9 +369,20 @@ li {
 label {
   margin-right: 20px;
 }
+@layer no-support {
+  @supports not (column-rule-break: intersection) {
+    body::before {
+      content: "Votre navigateur ne prend pas en charge la propriété column-rule-break";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
-{{EmbedLiveSample("Conteneurs multi-colonnes", "", 540)}}
+{{EmbedLiveSample("Conteneurs à plusieurs colonnes", "", 540)}}
 
 Si vous sélectionnez `none`, la règle de colonne ne se divise plus en segments&nbsp;; elle continue plutôt depuis le haut du conteneur, jusqu'à atteindre le bord inférieur. Les propriétés `column-rule-inset` peuvent être utilisées pour décaler les extrémités des décorations de l'écart entre les colonnes.
 
@@ -362,7 +398,7 @@ Si vous sélectionnez `none`, la règle de colonne ne se divise plus en segments
 
 ### Utilisation simple
 
-Dans cet exemple, nous utilisons la propriété `column-rule-break` pour rompre chaque segment de règle dans un conteneur en grille afin que des segments de règle de colonne soient créés entre les espaces entre les lignes. La modification de la propriété `row-gap` change la taille des segments.
+Dans cet exemple, nous utilisons la propriété `column-rule-break` pour diviser chaque segment de ligne dans un conteneur de grille, créant ainsi des segments de lignes de colonne entre les espaces entre les lignes. La modification de la propriété `row-gap` permet de modifier la taille de ces segments.
 
 #### HTML
 
@@ -382,7 +418,7 @@ Nous créons une liste de 50 éléments et un curseur pour sélectionner la larg
 <p>
   <label
     >Modifier la largeur de l'espace entre les lignes.
-    <input type="range" min="0" max="32" value="16" id="gap"
+    <input type="range" min="0" max="32" value="16" id="espacement"
   /></label>
   <output id="o"></output>
 </p>
@@ -470,15 +506,26 @@ li {
   font-family: sans-serif;
   line-height: 50px;
 }
+@layer no-support {
+  @supports not (column-rule-break: intersection) {
+    body::before {
+      content: "Votre navigateur ne prend pas en charge la propriété column-rule-break";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 ```js hidden live-sample___basic
-const gap = document.getElementById("gap");
+const espacement = document.getElementById("espacement");
 const ul = document.getElementById("ul");
 const output = document.getElementById("o");
 
-gap.addEventListener("input", () => {
-  output.innerText = ul.style.rowGap = `${gap.value}px`;
+espacement.addEventListener("input", () => {
+  output.innerText = ul.style.rowGap = `${espacement.value}px`;
 });
 ```
 
@@ -486,7 +533,7 @@ gap.addEventListener("input", () => {
 
 {{EmbedLiveSample("Basic", "", 600)}}
 
-Agrandissez les espaces entre les lignes et notez comment les ruptures entre les segments de colonnes s'agrandissent. Réduisez la largeur de l'espace entre les lignes à `0px` et remarquez comment la décoration des colonnes semble continue. Ce n'est pas le cas&nbsp;! L'espace de `0px` entre les segments peut ne pas être visible, mais les segments commencent et se terminent toujours à l'espace, donc tous les décalages définis avec les propriétés `column-rule-inset` sont toujours appliqués.
+Agrandissez les espaces entre les lignes et notez comment les ruptures entre les segments de colonnes s'agrandissent. Réduisez la largeur de l'espace entre les lignes à `0px` et remarquez comment la décoration des colonnes semble continue. Ce n'est pas le cas&nbsp;! L'espace de `0px` entre les segments peut ne pas être visible, mais les segments commencent et se terminent toujours à l'espace, donc tous les décalages définis avec les propriétés `column-rule-inset-*` s'appliquent toujours.
 
 ## Spécifications
 
