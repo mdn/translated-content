@@ -26,7 +26,7 @@ onstatechange = (event) => { }
 
 ## 示例
 
-以下代码片段摘自我们的 [AudioContext 状态演示](https://github.com/mdn/webaudio-examples)（[查看实时运行效果](https://mdn.github.io/webaudio-examples/audiocontext-states/)）。`onstatechange` 处理器用于在当前 {{domxref(“BaseAudioContext.state”, “state”)}} 发生每次变化时，将其记录到控制台。
+以下代码片段摘自我们的 [AudioContext 状态演示](https://github.com/mdn/webaudio-examples)（[查看实时运行效果](https://mdn.github.io/webaudio-examples/audiocontext-states/)）。`onstatechange` 处理器用于在当前 {{domxref("BaseAudioContext.state", "state")}} 发生每次变化时，将其记录到控制台。
 
 ```js
 audioCtx.onstatechange = () => {
