@@ -30,7 +30,7 @@ l10n:
 // アクセスできない closed のシャドウルートを作成します
 let element = document.createElement("div");
 element.attachShadow({ mode: "closed" });
-console.log(element.shadowRoot);// シャドウルートが closed なので null と出力
+console.log(element.shadowRoot); // シャドウルートが closed なので null と出力
 
 // アクセスできる open のシャドウルートを作成します
 let element2 = document.createElement("div");
