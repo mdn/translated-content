@@ -54,7 +54,7 @@ setHTML(input, options)
 
 `setHTML()` は、サニタイザーの設定で許可されていない HTML エンティティをすべて除去し、さらに、サニタイザーの設定で許可されているかどうかにかかわらず、XSS のリスクがある要素や属性をすべて除去します。
 
-`options.sanitizer` 引数にサニタイザーが指定されていない場合、`setHTML()` は [デフォルトのサニタイザー設定](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) を使用して実行されます。
+`options.sanitizer` 引数にサニタイザーが指定されていない場合、`setHTML()` は [デフォルトのサニタイザー設定](/ja/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) を使用して実行されます。
 この設定は、XSS 攻撃だけでなく、クリックジャッキングやスプーフィングなどの他の攻撃も防止するため、ほとんどの用途に適しています。
 
 独自の `Sanitizer` または `SanitizerConfig` を指定することで、許可または除去される要素、属性、コメントを選択できます。
