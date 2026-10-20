@@ -7,7 +7,7 @@ l10n:
 
 **`Intl.DisplayNames`** 对象支持语言、区域和脚本显示名称的一致翻译。
 
-{{InteractiveExample("JavaScript Demo: Intl.DisplayNames")}}
+{{InteractiveExample("JavaScript 演示：Intl.DisplayNames")}}
 
 ```js interactive-example
 const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" });
@@ -15,11 +15,8 @@ const regionNamesInTraditionalChinese = new Intl.DisplayNames(["zh-Hant"], {
   type: "region",
 });
 
-console.log(regionNamesInEnglish.of("US"));
-// Expected output: "United States"
-
-console.log(regionNamesInTraditionalChinese.of("US"));
-// Expected output: "美國"
+console.log(regionNamesInEnglish.of("US")); // 预期输出："United States"
+console.log(regionNamesInTraditionalChinese.of("US")); // 预期输出："美國"
 ```
 
 ## 构造函数
