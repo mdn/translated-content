@@ -51,7 +51,7 @@ JSON.stringify({ value: rawJSON });
 // {"value":12345678901234567890}
 ```
 
-更多示例请参见 [无损数字序列化](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON#using_json_numbers)。
+更多示例请参见[无损数字序列化](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON#使用_json_数字)。
 
 请注意，尽管我们向 `JSON.rawJSON()` 传入了一个字符串，它在最终生成的 JSON 中仍会成为数字。这是因为该字符串表示的是原样输出的 JSON 文本。如果要序列化字符串，则应向 `JSON.rawJSON()` 传入一个带引号的字符串值：
 
