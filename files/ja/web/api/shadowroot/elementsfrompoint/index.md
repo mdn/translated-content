@@ -39,7 +39,9 @@ const msg = elements.map((el) => el.localName).join(" < ");
 if (msg) {
   console.log(msg);
 } else {
-  console.log("x: 20、y: 20 の位置に、この独自の要素の子要素は存在しませんでした。");
+  console.log(
+    "x: 20、y: 20 の位置に、この独自の要素の子要素は存在しませんでした。",
+  );
 }
 ```
 
