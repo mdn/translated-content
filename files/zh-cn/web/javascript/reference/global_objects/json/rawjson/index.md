@@ -34,7 +34,7 @@ JSON.rawJSON(string)
 
 ## 描述
 
-原始 JSON 对象可以看作一种不可变的原子数据结构，类似于各种[原始值](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#primitive_values)。它不是普通对象，除原始 JSON 文本外不包含其他数据。它可用于“预序列化”数据，以生成 `JSON.stringify` 因各种原因无法直接生成的格式。最常见的用例是解决浮点数精度丢失问题。例如：
+原始 JSON 对象可以看作一种不可变的原子数据结构，类似于各种[原始值](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#原始值)。它不是普通对象，除原始 JSON 文本外不包含其他数据。它可用于“预序列化”数据，以生成 `JSON.stringify` 因各种原因无法直接生成的格式。最常见的用例是解决浮点数精度丢失问题。例如：
 
 ```js
 JSON.stringify({ value: 12345678901234567890 });
