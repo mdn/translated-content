@@ -20,7 +20,7 @@ JSON.rawJSON(string)
 
 ### 返回值
 
-一个可用于创建 JSON 文本的对象，其内容与提供的 `string` 完全相同，且不会在字符串两侧添加引号。此对象[具有 `null` 原型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)，并且[被冻结](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)（因此不会因任何原始值转换而意外地被序列化为普通对象），并具有以下属性：
+一个可用于创建 JSON 文本的对象，其内容与提供的 `string` 完全相同，且不会在字符串两侧添加引号。此对象[具有 `null` 原型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)，并且[被冻结](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)（因此不会因任何原始值转换而意外地被序列化为普通对象），并具有以下属性：
 
 - `rawJSON`
   - : 提供的原始 JSON `string`。
