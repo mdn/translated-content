@@ -182,7 +182,7 @@ Lorsqu'une réponse fournit un en-tête `Location` identifiant une ressource éq
 Une URI est plus susceptible d'être enregistrée ou autrement traitée par des intermédiaires que le contenu de la requête, donc déplacer une requête hors de l'URI réduit sa diffusion.
 Pour cette raison, `QUERY` doit être privilégié par rapport à `GET` pour les requêtes confidentielles.
 
-Cet avantage ne tient que si le reste de l'échange le préserve ; notez les contraintes sur les [URI de ressources équivalentes](#ressources_équivalentes) et la [normalisation du cache](#mise_en_cache) décrites ci-dessus.
+Cet avantage ne tient que si le reste de l'échange le préserve&nbsp;; notez les contraintes sur les [URI de ressources équivalentes](#ressources_équivalentes) et la [normalisation du cache](#mise_en_cache) décrites ci-dessus.
 
 ## Exemples
 
