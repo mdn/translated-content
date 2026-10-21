@@ -22,7 +22,7 @@ l10n:
 
 - **[コンテナースタイルクエリー](/ja/docs/Web/CSS/Reference/At-rules/@container#コンテナースタイルクエリー)**
   - : スタイルクエリーを使用すると、親要素のスタイル特性に基づいて要素にスタイルを適用することができます。ここで、空でない要素であればどれでもスタイルクエリーのコンテナーとなり得ます。スタイル特性としては、CSS プロパティ、CSS [カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)、または有効な CSS [宣言](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_宣言)が指定可能です。
-   これにより、コンテナー要素に `display: inline` のフレックス宣言が設定されているか、カスタムプロパティの値がどうであるかといったスタイル特性に基づいて、その子孫要素にスタイルを適用することができます。
+    これにより、コンテナー要素に `display: inline` のフレックス宣言が設定されているか、カスタムプロパティの値がどうであるかといったスタイル特性に基づいて、その子孫要素にスタイルを適用することができます。
 
 - **[名前のみのコンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries#名前のみのコンテナークエリー)**
   - : 「名前のみ」のコンテナークエリーを使用すると、要素に特定の {{cssxref("container-name")}} が設定されているかどうかに基づいて、その要素にスタイルを選択的に適用することができます。
