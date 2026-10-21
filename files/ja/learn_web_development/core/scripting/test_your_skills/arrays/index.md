@@ -17,7 +17,7 @@ l10n:
 
 まず最初に、[学習パートナー](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)である [Scrimba](https://scrimba.com/home) が作成した、配列を使った楽しくインタラクティブな課題をご紹介します。
 
-埋め込みのスクリムを見て、指示に従ってコードを編集し、タイムライン上の課題（小さな幽霊のアイコン）を完了してください。完了したら、スクリムの再生を再開して、教師の解答が自分の解答と一致するかどうかを調べることができます。
+埋め込みのスクリムを見て、指示に従ってコードを編集し、タイムライン上の課題（小さなゴーストのアイコン）を完了してください。完了したら、スクリムの再生を再開して、教師の解答が自分の解答と一致するかどうかを調べることができます。
 
 <mdn-scrim-inline url="https://scrimba.com/learn-javascript-c0v/~05e" scrimtitle="Render images from an array" survey="true"></scrim-inline>
 
