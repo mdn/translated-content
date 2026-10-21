@@ -677,13 +677,11 @@ td {
 > [!NOTE]
 > `<colgroup>` と `<col>` はスタイル設定を主に目的としていますが、これらは HTML の機能であるため、CSS モジュールではなくここで網羅しています。同時に、これらは限定的な機能であるとも言えるでしょう。[`<colgroup>` リファレンスページ](/ja/docs/Web/HTML/Reference/Elements/colgroup#usage_notes)で示されているように、`<col>` 要素に適用できるスタイルは限定されたサブセットのみであり、歴史的に利用できるその他の設定の大半は非推奨（削除済み、または削除予定）となっています。
 
-<!--
 ## テーブル概念の対話的な復習
 
-次のScrimba<sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>からの埋め込みコンテンツは、この記事で網羅したテクニックの大半をまとめたインタラクティブなレッスンを提供します。重要なポイントの復習や追加練習のために、ぜひご覧ください。
+次の Scrimba<sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>からの埋め込みコンテンツは、この記事で網羅したテクニックの大半をまとめたインタラクティブなレッスンを提供します。重要なポイントの復習や追加練習のために、ぜひご覧ください。
 
 <mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~03s" scrimtitle="HTML tables"></scrim-inline>
--->
 
 ## まとめ
 
