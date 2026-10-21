@@ -40,7 +40,7 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 ## アイコン
 
-ブラウザーアクションのアイコンの作成方法の詳細は、 [Iconography](https://design.firefox.com/photon/visuals/iconography.html) を [Photon Design System](https://design.firefox.com/photon/index.html) のドキュメントで参照してください。
+ブラウザーアクションのアイコンの作成方法の詳細は、 [Iconography](https://acorn.firefox.com/latest/foundations/styles/iconography-QEDMXQqj) を [Acorn Design System](https://acorn.firefox.com/latest) のドキュメントで参照してください。
 
 ## 例
 

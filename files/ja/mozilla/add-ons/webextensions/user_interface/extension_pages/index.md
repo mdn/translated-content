@@ -69,7 +69,7 @@ browser.history.onVisited.addListener(onVisited);
 
 ## ウェブページのデザイン
 
-Firefox のスタイルに適合するようなデザインの方法の詳細は、 [Photon Design System](https://design.firefox.com/photon/index.html) および[ブラウザースタイル](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) のドキュメントを参照してください。
+Firefox のスタイルに適合するようなデザインの方法の詳細は、 [Acorn Design System](https://acorn.firefox.com/latest) のドキュメントを参照してください。
 
 ## 例
 
