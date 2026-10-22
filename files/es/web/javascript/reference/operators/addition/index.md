@@ -58,7 +58,8 @@ Se recomienda no usar `"" + x` para realizar la [coerción a string](/es/docs/We
 1 + 2; // 3
 ```
 
-Otros valores que no son string, ni Bigint son coercionados a números.
+Los demás valores que no son string ni BigInt se coercionan a números:
+
 ```js
 true + 1; // 2
 false + false; // 0
