@@ -57,7 +57,7 @@ Firefox 콘솔은 CORS에 의해 요청이 실패했을 때 메시지를 출력�
 - [Reason: Did not find method in CORS header
   'Access-Control-Allow-Methods'](/ko/docs/Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound)
 - [Reason: expected 'true' in CORS header
-  'Access-Control-Allow-Credentials'](/ko/docs/Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials)
+  'Access-Control-Allow-Credentials'](/ko/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowCredentials)
 - [Reason: CORS preflight channel did not
   succeed](/ko/docs/Web/HTTP/Guides/CORS/Errors/CORSPreflightDidNotSucceed)
 - [Reason: invalid token 'xyz' in CORS header

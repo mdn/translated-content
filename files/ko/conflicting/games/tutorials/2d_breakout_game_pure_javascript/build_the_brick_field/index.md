@@ -6,9 +6,9 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
 
-이 학습은 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 일곱 번째 단계입니다. [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html)에서 이번 학습에서 완성된 코드를 확인할 수 있습니다.
+이 학습은 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)의 일곱 번째 단계입니다. [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html)에서 이번 학습에서 완성된 코드를 확인할 수 있습니다.
 
 지난 학습에서 우린 화면에 벽돌을 표현했습니다. 그러나 공은 벽돌을 그냥 지나쳐버리니 게임은 아직 그렇게 흥미롭지 않습니다. 우린 공이 벽돌을 파괴하고 튕겨져 나올 수 있도록 충돌 감지 기능을 고려해봐야 합니다.
 
@@ -133,6 +133,6 @@ collisionDetection();
 
 ## 다음 단계
 
-우리는 충분히 여기까지 왔습니다! 이제 여덟 번째 장에서는 [점수 추가와 승패 판정 방법](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)을 알아 볼 것입니다.
+우리는 충분히 여기까지 왔습니다! 이제 여덟 번째 장에서는 [점수 추가와 승패 판정 방법](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win)을 알아 볼 것입니다.
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win")}}

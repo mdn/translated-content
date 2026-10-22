@@ -5,9 +5,9 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
 
-이번 단계는 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 여섯 번째 학습입니다. [Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html)에서 이번 학습의 소스코드를 확인할 수 있습니다.
+이번 단계는 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)의 여섯 번째 학습입니다. [Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html)에서 이번 학습의 소스코드를 확인할 수 있습니다.
 
 게임플레이 원리를 수정한 후에, 우리는 게임에서 패배할 수 있게 되었습니다. 이것은 실제 게임에 보다 가까운 느낌이기 때문에 훌륭합니다. 하지만 벽과 패들에 공이 튀기는 것 말고 할 수 있는 것이 없기 때문에 금방 지루해집니다. 벽돌깨기 게임에서 진정으로 필요로 한 것은 공으로 파괴할 벽돌입니다. 이 것이 지금 우리가 만들 것입니다!
 
@@ -109,6 +109,6 @@ drawBricks();
 
 ## 다음 단계
 
-이제 우리에겐 벽돌이 있습니다! 하지만 공은 벽돌들과의 반응이 없습니다. 우리는 다음 단계에서 이 문제에 대해 다룰 것입니다: [충돌 감지](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
+이제 우리에겐 벽돌이 있습니다! 하지만 공은 벽돌들과의 반응이 없습니다. 우리는 다음 단계에서 이 문제에 대해 다룰 것입니다: [충돌 감지](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}
