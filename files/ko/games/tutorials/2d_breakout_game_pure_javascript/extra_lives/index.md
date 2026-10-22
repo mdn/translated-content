@@ -8,7 +8,7 @@ l10n:
 
 {{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
 
-[Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 **10개의 레슨 중 마지막 단계**입니다. 이 수업을 마친 후 비교하여 살펴볼 소스코드는 [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html)에서 찾아볼 수 있습니다.
+[Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)의 **10개의 레슨 중 마지막 단계**입니다. 이 수업을 마친 후 비교하여 살펴볼 소스코드는 [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html)에서 찾아볼 수 있습니다.
 
 우리가 쓰는 모든 게임에 항상 개선해야 할 것이 있습니다. 예를 들자면, 우리는 플레이어에게 한 개보다 많은 라이프를 제공할 수 있습니다. 플레이어들은 한 번 또는 두 번의 실수를 만들어도 여전히 게임을 끝낼 수 있습니다. 우리는 또한 우리의 코드 렌더링을 개선할 수 있습니다.
 
@@ -106,6 +106,6 @@ requestAnimationFrame(draw);
 
 축하합니다! 당신은 모든 수업을 완수하였습니다! 이쯤 되면 이제 캔버스의 조작 기초와 간단한 2D 게임 구현 방법을 알게 되었을 것입니다. 이제 몇몇 프레임워크를 배우고 게임 개발을 계속하기에 좋은 시간입니다. 이 시리즈의 [2D breakout game using Phaser](/ko/docs/Games/Tutorials/2D_breakout_game_Phaser) 또는 [Cyber Orb built in Phaser](/ko/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation) 튜토리얼을 확인해 볼 수 있습니다. [Games section on MDN](/ko/docs/Games)의 섹션에서 더 많은 지식과 영감을 얻어보세요.
 
-당신은 또한 [이 튜토리얼 시리즈의 메인 페이지](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)로 돌아갈 수 있습니다. 즐겁게 코딩하세요!
+당신은 또한 [이 튜토리얼 시리즈의 메인 페이지](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)로 돌아갈 수 있습니다. 즐겁게 코딩하세요!
 
 {{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
