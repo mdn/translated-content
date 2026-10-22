@@ -9,7 +9,7 @@ l10n:
 
 El operador de **adición (`+`)** produce la suma de operandos numéricos o la concatenación de string.
 
-{{InteractiveExample("Demostracion en JavaScript: Operador de adición (+)")}}
+{{InteractiveExample("JavaScript Demo: Addition (+) operator")}}
 
 ```js interactive-example
 console.log(2 + 2);
