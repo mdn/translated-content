@@ -31481,15 +31481,6 @@
       "yyss"
     ]
   },
-  "Web/HTTP/Guides/Cross-Origin_Resource_Policy": {
-    "modified": "2020-10-15T22:27:25.103Z",
-    "contributors": [
-      "mfuji09",
-      "Potappo",
-      "shisama",
-      "53able"
-    ]
-  },
   "Web/HTTP/Guides/Evolution_of_HTTP": {
     "modified": "2020-09-25T15:03:35.377Z",
     "contributors": [
@@ -42326,6 +42317,15 @@
       "mfuji09",
       "satakeh",
       "hashedhyphen"
+    ]
+  },
+  "Web/Security/Practical_implementation_guides/CORP": {
+    "modified": "2020-10-15T22:27:25.103Z",
+    "contributors": [
+      "mfuji09",
+      "Potappo",
+      "shisama",
+      "53able"
     ]
   },
   "Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion": {

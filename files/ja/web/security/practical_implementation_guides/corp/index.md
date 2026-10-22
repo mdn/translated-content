@@ -1,6 +1,7 @@
 ---
 title: オリジン間リソースポリシー (CORP)
-slug: Web/HTTP/Guides/Cross-Origin_Resource_Policy
+slug: Web/Security/Practical_implementation_guides/CORP
+original_slug: Web/HTTP/Guides/Cross-Origin_Resource_Policy
 l10n:
   sourceCommit: d5c3db4df1e063769b8113567f4558ad4298b00b
 ---

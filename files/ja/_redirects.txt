@@ -5987,11 +5987,12 @@
 /ja/docs/Web/HTTP/Content_negotiation	/ja/docs/Web/HTTP/Guides/Content_negotiation
 /ja/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values	/ja/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values
 /ja/docs/Web/HTTP/Cookies	/ja/docs/Web/HTTP/Guides/Cookies
-/ja/docs/Web/HTTP/Cross-Origin_Resource_Policy	/ja/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy
-/ja/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)	/ja/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy
+/ja/docs/Web/HTTP/Cross-Origin_Resource_Policy	/ja/docs/Web/Security/Practical_implementation_guides/CORP
+/ja/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)	/ja/docs/Web/Security/Practical_implementation_guides/CORP
 /ja/docs/Web/HTTP/Evolution_of_HTTP	/ja/docs/Web/HTTP/Guides/Evolution_of_HTTP
 /ja/docs/Web/HTTP/Feature_Policy	/ja/docs/Web/HTTP/Guides/Permissions_Policy
 /ja/docs/Web/HTTP/Gecko_user_agent_string_reference	/ja/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox
+/ja/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy	/ja/docs/Web/Security/Practical_implementation_guides/CORP
 /ja/docs/Web/HTTP/HTTP_access_control	/ja/docs/Web/HTTP/Guides/CORS
 /ja/docs/Web/HTTP/HTTP_access_control/Errors	/ja/docs/Web/HTTP/Guides/CORS/Errors
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSAllowOriginNotMatchingOrigin	/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSAllowOriginNotMatchingOrigin
