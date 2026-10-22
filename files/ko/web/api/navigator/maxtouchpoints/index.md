@@ -8,8 +8,8 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`maxTouchPoints`** 는 {{domxref("Navigator")}} 인터페이스의 
-읽기 전용 속성이며, 현재 기기가 지원하는 동시 터치 접촉점의 
+**`maxTouchPoints`** 는 {{domxref("Navigator")}} 인터페이스의
+읽기 전용 속성이며, 현재 기기가 지원하는 동시 터치 접촉점의
 최대 개수를 반환합니다.
 
 ## 값
