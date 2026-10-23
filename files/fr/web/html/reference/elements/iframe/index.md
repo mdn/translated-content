@@ -3,10 +3,10 @@ title: "Élément HTML `<iframe>` : l'élément de cadre intégré"
 short-title: <iframe>
 slug: Web/HTML/Reference/Elements/iframe
 l10n:
-  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<iframe>`** représente un {{Glossary("Browsing context", "contexte de navigation")}} imbriqué, intégrant une autre page HTML dans la page courante.
+L'élément [HTML](/fr/docs/Web/HTML) **`<iframe>`** représente un {{Glossary("Browsing context", "contexte de navigation")}} imbriqué, intégrant un autre document dans la page courante.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;iframe&gt;", "tabbed-standard")}}
 
@@ -26,11 +26,6 @@ iframe {
   width: 100%; /* prévaut sur la largeur définie par l'attribut HTML width */
 }
 ```
-
-Chaque contexte de navigation intégré possède son propre [document](/fr/docs/Web/API/Document) et permet des navigations vers des URL. Les navigations de chaque contexte de navigation intégré sont linéarisées dans [l'historique de session](/fr/docs/Web/API/History) du contexte de navigation _le plus élevé_. Le contexte de navigation qui contient les autres est appelé _contexte de navigation parent_. Le contexte de navigation _le plus élevé_ — celui qui n'a pas de parent — correspond généralement à la fenêtre du navigateur, représentée par l'objet {{DOMxRef("Window")}}.
-
-> [!WARNING]
-> Parce que chaque contexte de navigation constitue un environnement de document complet, chaque `<iframe>` présent dans une page augmente la mémoire et les ressources informatiques nécessaires. Bien qu'en théorie vous puissiez utiliser autant d'un `<iframe>` que vous le souhaitez, surveillez les problèmes de performance.
 
 ## Attributs
 
@@ -134,6 +129,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
     > [!NOTE]
     >
+    > - L'attribut `sandbox` peut bloquer le visualiseur PDF intégré du navigateur. Voir [Intégration de PDF](#intégrer_des_pdf).
     > - Lorsque le document intégré possède la même origine que la page englobante, il est **fortement déconseillé** d'utiliser à la fois `allow-scripts` et `allow-same-origin`, car cela permet au document intégré de retirer l'attribut `sandbox` — le rendant aussi peu sûr que de ne pas utiliser `sandbox` du tout.
     > - La mise en bac à sable est inutile si un·e attaquant·e peut afficher du contenu en dehors d'un `iframe` en mode bac à sable — par exemple si le·la visiteur·euse ouvre le cadre dans un nouvel onglet. Un tel contenu doit également être servi depuis une _origine séparée_ pour limiter les dommages potentiels.
 
@@ -176,7 +172,14 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `no`
       - : Ne jamais afficher de barre de défilement.
 
-## Scripts
+## Notes d'utilisation
+
+Chaque contexte de navigation intégré possède son propre [document](/fr/docs/Web/API/Document) et permet des navigations vers des URL. Les navigations de chaque contexte de navigation intégré sont linéarisées dans [l'historique de session](/fr/docs/Web/API/History) du contexte de navigation _le plus élevé_. Le contexte de navigation qui contient les autres est appelé _contexte de navigation parent_. Le contexte de navigation _le plus élevé_ — celui qui n'a pas de parent — correspond généralement à la fenêtre du navigateur, représentée par l'objet {{DOMxRef("Window")}}.
+
+> [!WARNING]
+> Parce que chaque contexte de navigation constitue un environnement de document complet, chaque `<iframe>` présent dans une page augmente la mémoire et les ressources informatiques nécessaires. Bien qu'en théorie vous puissiez utiliser autant d'un `<iframe>` que vous le souhaitez, surveillez les problèmes de performance.
+
+### Scripts
 
 Les `iframes` (et aussi les {{HTMLElement("frame")}}) font partie du pseudo-tableau {{DOMxRef("window.frames")}}.
 
@@ -188,7 +191,7 @@ Les scripts qui tentent d'accéder au contenu du cadre intégré (_iframe_) doiv
 Les scripts ne peuvent pas accéder à la plupart des propriétés des autres objets `window` s'ils ont été chargés depuis un domaine différent. Cela s'applique également aux scripts d'un cadre intégré qui souhaitent accéder au contexte englobant.
 On peut toutefois communiquer entre différents domaines grâce à la méthode {{DOMxRef("Window.postMessage()")}}.
 
-### Navigation vers le haut depuis des cadres d'origines différentes
+#### Navigation vers le haut depuis des cadres d'origines différentes
 
 Les scripts exécutés dans un cadre de même origine peuvent accéder à la propriété {{DOMxRef("Window.top")}} et définir {{DOMxRef("Window.location","window.top.location")}} pour rediriger la page de plus haut niveau vers une nouvelle URL.
 Ce comportement est appelé «&nbsp;navigation vers le haut&nbsp;».
@@ -201,18 +204,24 @@ Concrètement, un cadre d'origines différentes ne peut pas rediriger immédiate
 Un cadre en bac à sable bloque toute navigation vers le haut à moins que les valeurs de l'attribut `sandbox` ne soient définies sur [`allow-top-navigation`](#allow-top-navigation) ou [`allow-top-navigation-by-user-activation`](#allow-top-navigation-by-user-activation).
 Notez que les autorisations de navigation vers le haut sont héritées, un cadre imbriqué ne peut effectuer une navigation vers le haut que si ses cadres parentes y sont également autorisées.
 
-## Positionnement et redimensionnement
+### Intégrer des PDF
+
+Un `<iframe>` peut afficher un PDF en utilisant le visualiseur PDF intégré du navigateur. Contrairement à {{HTMLElement("object")}}, il ne prend pas en charge le contenu enfant comme solution de repli si le PDF ne peut pas être affiché. Fournissez un lien en dehors du `<iframe>` afin que les utilisateur·ice·s puissent ouvrir le PDF séparément.
+
+L'attribut [`sandbox`](#sandbox) peut empêcher le visualiseur PDF intégré de se charger, même avec `allow-scripts` ou `allow-downloads`. Ce n'est pas un moyen portable d'ajouter des restrictions à un aperçu PDF natif. Le visualiseur PDF du navigateur isole déjà tout contenu exécutable.
+
+### Positionnement et redimensionnement
 
 En tant {{Glossary("replaced elements", "qu'élément remplacé")}}, la position, l'alignement et le redimensionnement du document embarqué avec `<iframe>` peuvent être ajustés par la propriété {{CSSxRef("object-position")}}.
 
 > [!NOTE]
 > La propriété {{CSSxRef("object-fit")}} n'a aucun effet sur les éléments `<iframe>`.
 
-## Comportement des évènements `error` et `load`
+### Comportement des évènements `error` et `load`
 
 Les évènements `error` et `load` déclenchés sur des `<iframe>` peuvent être utilisés pour sonder l'espace d'URL des serveurs HTTP du réseau local. Par conséquent, par mesure de sécurité, les agents utilisateur ne déclenchent pas l'évènement [`error`](/fr/docs/Web/API/HTMLElement/error_event) sur les `<iframe>`, et l'évènement [`load`](/fr/docs/Web/API/HTMLElement/load_event) est toujours déclenché même si le contenu d'un `<iframe>` échoue à se charger.
 
-## Dimensionnement adaptatif de `<iframe>`
+### Dimensionnement adaptatif de `<iframe>`
 
 Pour des raisons de sécurité et de confidentialité, les éléments `<iframe>` n'exposent pas par défaut d'informations au document parent sur la taille du contenu dans le document qu'ils intègrent.
 

@@ -3,10 +3,12 @@ title: Valeur d'attribut HTML `<input type="email">`
 short-title: <input type="email">
 slug: Web/HTML/Reference/Elements/input/email
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`email`** permettent à l'utilisateur·ice de saisir et d'éditer une adresse électronique ou, si l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Attributes/multiple) est indiqué, une liste d'adresses électroniques.
+
+La valeur saisie dans le champ est automatiquement validée pour vérifier s'il s'agit d'une chaîne de caractères vide ou d'une adresse mail valide (ou une liste de telles adresses) avant que le formulaire soit envoyé. Les pseudo-classes CSS {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} sont automatiquement appliquées selon la validité des champs afin d'indiquer visuellement si la valeur courante du champ est une adresse mail valide ou non.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
 
@@ -29,8 +31,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-La valeur saisie dans le champ est automatiquement validée pour vérifier s'il s'agit d'une chaîne de caractères vide ou d'une adresse mail valide (ou une liste de telles adresses) avant que le formulaire soit envoyé. Les pseudo-classes CSS {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} sont automatiquement appliquées selon la validité des champs afin d'indiquer visuellement si la valeur courante du champ est une adresse mail valide ou non.
 
 ## Valeur
 
@@ -134,7 +134,7 @@ Grâce à l'attribut booléen [`multiple`](/fr/docs/Web/HTML/Reference/Attribute
 <input id="emailAddress" type="email" multiple />
 ```
 
-{{EmbedLiveSample('Gérer plusieurs adresses mail', 600, 40)}}
+{{EmbedLiveSample("Gérer plusieurs adresses mail", 600, 40)}}
 
 Avec cet attribut, la valeur saisie est valide quand on saisit zéro, une ou plusieurs adresses électroniques bien formées, séparées par des virgules et éventuellement entourées de blancs.
 
@@ -180,7 +180,7 @@ La taille physique de la boîte de saisie peut être paramétrée grâce à l'at
 <input type="email" size="15" />
 ```
 
-{{EmbedLiveSample('Contrôler la taille physique', 600, 40)}}
+{{EmbedLiveSample("Contrôler la taille physique", 600, 40)}}
 
 #### Contrôler la taille de la valeur
 
@@ -196,7 +196,7 @@ Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 32 caractèr
 
 ### Fournir des options par défaut
 
-#### Fournir une seule option par défaut avec value
+#### Fournir une seule option par défaut avec `value`
 
 Comme toujours, vous pouvez fournir une valeur par défaut pour une boîte de saisie `email` en définissant son attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value)&nbsp;:
 
@@ -204,11 +204,11 @@ Comme toujours, vous pouvez fournir une valeur par défaut pour une boîte de sa
 <input type="email" value="default@example.com" />
 ```
 
-{{EmbedLiveSample("Fournir une seule option par défaut avec value", 600, 40)}}
+{{EmbedLiveSample("Fournir une seule option par défaut avec `value`", 600, 40)}}
 
 #### Proposer des suggestions
 
-Pour aller plus loin, vous pouvez fournir une liste d'options par défaut parmi lesquelles l'utilisateur·ice peut choisir en définissant l'attribut [`list`](/fr/docs/Web/HTML/Reference/Elements/input#list). Cela ne limite pas l'utilisateur·ice à ces options, mais lui permet de sélectionner plus rapidement des adresses électroniques courantes. Cela fournit aussi des suggestions à [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete). L'attribut `list` définit l'identifiant d'un {{HTMLElement("datalist")}}, qui contient à son tour un élément {{HTMLElement("option")}} par valeur suggérée&nbsp;; chaque `value` d'`option` correspond à la valeur suggérée pour la boîte de saisie d'adresse électronique.
+Pour aller plus loin, vous pouvez fournir une liste d'options par défaut parmi lesquelles l'utilisateur·ice peut choisir en définissant l'attribut [`list`](/fr/docs/Web/HTML/Reference/Elements/input#list). Cela ne limite pas l'utilisateur·ice à ces options, mais lui permet de sélectionner plus rapidement des adresses électroniques courantes. Cela fournit aussi des suggestions à [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete). L'attribut `list` définit l'identifiant d'un {{HTMLElement("datalist")}}, qui contient à son tour un élément {{HTMLElement("option")}} par valeur suggérée&nbsp;; chaque `value` de `option` correspond à la valeur suggérée pour la boîte de saisie d'adresse électronique.
 
 ```html
 <input type="email" size="40" list="defaultEmails" />
@@ -304,7 +304,13 @@ label::after {
 </form>
 ```
 
-{{EmbedLiveSample("", 700, 275)}}
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
+{{EmbedLiveSample("Validation grâce à une expression rationnelle", 700, 275)}}
 
 Le formulaire ({{HTMLElement("form")}}) contient un élément {{HTMLElement("input")}} de type `email` pour saisir l'adresse de l'utilisateur·ice, un élément {{HTMLElement("textarea")}} permettant de saisir le message et un élément `<input>` de type [`"submit"`](/fr/docs/Web/HTML/Reference/Elements/input/submit) qui forme un bouton permettant d'envoyer le formulaire. Chaque champ possède un élément {{HTMLElement("label")}} associé qui permet d'indiquer ce qui est attendu.
 
@@ -353,7 +359,7 @@ En complément, l'élément {{HTMLElement("label")}} est utilisé pour associer 
 </datalist>
 ```
 
-{{EmbedLiveSample('Exemples', 600, 80)}}
+{{EmbedLiveSample("Exemples", 600, 80)}}
 
 ## Résumé technique
 

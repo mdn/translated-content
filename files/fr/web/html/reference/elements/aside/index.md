@@ -3,7 +3,7 @@ title: "Élément HTML `<aside>` : l'élément aparté"
 short-title: <aside>
 slug: Web/HTML/Reference/Elements/aside
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 63e6075c870f818291e857d0ad5b291d1b5afe5b
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<aside>`** représente une partie d'un document dont le contenu n'est lié que de façon indirecte au contenu principal du document. Les apartés sont fréquemment présentés sous forme de barres latérales ou d'encadrés.
@@ -51,6 +51,7 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 ## Notes d'utilisation
 
 - N'utilisez pas l'élément `<aside>` pour baliser un texte entre parenthèses, car ce type de texte est considéré comme faisant partie du flux principal.
+- L'élément `<aside>` a un rôle implicite de [`complementary`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role), sauf s'il n'a pas de {{Glossary("accessible name", "nom accessible")}} et est imbriqué dans du [contenu sectionnant](/fr/docs/Web/HTML/Guides/Content_categories#contenu_sectionnant), auquel cas il a le rôle [`generic`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role).
 
 ## Exemples
 
@@ -128,7 +129,7 @@ Cet exemple utilise `<aside>` pour baliser un paragraphe dans un article. Le par
           ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role"
             >complementary</a
           ></code
-        >
+        >, ou <code><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role">generic</a></code> lorsqu'il n'a pas de {{Glossary("accessible name", "nom accessible")}} et est imbriqué dans du <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_sectionnant">contenu sectionnant</a>.
       </td>
     </tr>
     <tr>

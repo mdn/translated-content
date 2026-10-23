@@ -2,7 +2,7 @@
 title: Rapport d'aspect (Aspect ratio)
 slug: Glossary/Aspect_ratio
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c44003c788a907ef19e0d766e98f29ffca5b6798
 ---
 
 Un **rapport d'aspect** est la relation proportionnelle entre la largeur et la hauteur d'un élément ou de la {{Glossary("viewport", "zone d'affichage")}}. Il s'exprime comme un {{CSSxRef("ratio")}} de deux nombres.
@@ -26,7 +26,7 @@ En SVG, le rapport d'aspect est défini par l'attribut [`viewBox`](/fr/docs/Web/
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg"></svg>
 ```
 
-Dans les API JavaScript, interroger un rapport d'aspect retourne un nombre flottant en double précision représentant la largeur divisée par la hauteur. On peut aussi utiliser JavaScript pour définir le rapport d'aspect d'un élément. Par exemple, définir une contrainte de rapport d'aspect pour une vidéo 1920x1080 avec le dictionnaire {{DOMxRef("MediaStreamTrack")}} ou {{DOMxRef("MediaTrackSettings")}} et la propriété [`aspectRatio`](/fr/docs/Web/API/MediaTrackSettings/aspectRatio) sera calculé comme 16/9, ou 1920/1080, soit `1.7777777778`&nbsp;:
+Dans les API JavaScript, interroger un rapport d'aspect retourne un nombre flottant en double précision représentant la largeur divisée par la hauteur. On peut aussi utiliser JavaScript pour définir le rapport d'aspect d'un élément. Par exemple, définir une contrainte de rapport d'aspect pour une vidéo 1920x1080 avec la propriété {{DOMxRef("MediaTrackConstraint.aspectProportion")}} est calculée comme 16/9, ou 1920/1080, soit `1.7777777778`&nbsp;:
 
 ```js
 const constraints = {

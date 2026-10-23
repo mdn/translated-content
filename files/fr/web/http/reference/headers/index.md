@@ -3,7 +3,7 @@ title: En-têtes HTTP
 short-title: En-têtes
 slug: Web/HTTP/Reference/Headers
 l10n:
-  sourceCommit: 346e46c6e10334bf60df2a0a4ef58ebea4c80a4e
+  sourceCommit: bd5271a96d814ed6876e974186c465f1b3959e07
 ---
 
 Les **en-têtes HTTP** permettent au client et au serveur de transmettre des informations supplémentaires avec un message dans une requête ou une réponse.
@@ -253,7 +253,7 @@ Les requêtes d'intervalle sont utiles pour des applications comme les lecteurs 
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP)
   - : Empêche l'ouverture/le contrôle d'une fenêtre par d'autres domaines.
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}} (CORP)
-  - : Empêche d'autres domaines de lire la réponse pour les ressources auxquelles cet en-tête est appliqué. Voir aussi [la page d'explication sur](/fr/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy).
+  - : Empêche d'autres domaines de lire la réponse pour les ressources auxquelles cet en-tête est appliqué. Voir aussi [l'article explicatif sur les CORP](/fr/docs/Web/Security/Practical_implementation_guides/CORP).
 - {{HTTPHeader("Content-Security-Policy")}} ({{Glossary("CSP")}})
   - : Contrôle les ressources qu'un agent utilisateur est autorisé à charger pour une page donnée.
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
