@@ -1,63 +1,74 @@
 ---
-title: 跨源资源策略（CORP）
+title: 跨源资源策略（CORP）实现
+short-title: 跨源资源策略（CORP）
 slug: Web/Security/Practical_implementation_guides/CORP
-original_slug: Web/Security/Practical_implementation_guides/CORP
 l10n:
-  sourceCommit: d5c3db4df1e063769b8113567f4558ad4298b00b
+  sourceCommit: bd5271a96d814ed6876e974186c465f1b3959e07
 ---
 
-**跨源资源策略**（Cross-Origin Resource Policy）是通过 [HTTP 标头 `Cross-Origin-Resource-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy) 设定的，它允许网站和应用程序选择性地启用保护机制，以防范来自其他来源的资源请求（例如由 `<img>` 或 `<script>` 标签触发的请求），缓解诸如[幽灵漏洞](https://zh.wikipedia.org/wiki/幽灵漏洞)之类的推测执行侧信道攻击，以及跨站脚本包含攻击。CORP 是对浏览器默认的{{Glossary("Same-origin_policy", "同源策略")}}的补充。
+**跨源资源策略**（Cross-Origin Resource Policy）是通过 {{httpheader("Cross-Origin-Resource-Policy")}} 响应标头设定的，它允许网站和应用程序选择性地启用保护机制，以防范来自其他来源的资源请求（例如由 `<img>` 或 `<script>` 标签触发的请求）。CORP 是对浏览器默认的{{Glossary("same-origin policy", "同源策略")}}的补充。
 
-> [!NOTE]
-> 该策略仅对 [`no-cors`](https://fetch.spec.whatwg.org/#concept-request-mode) 请求生效，对于列入 CORS 安全名单的方法/标头默认触发。
+## 问题
 
-由于该策略是通过[_响应标头_](/zh-CN/docs/Glossary/Response_header)来实施的，所以其并不会拦截实际的请求——是浏览器在接收到该响应标头后，通过移除响应主体来防止结果泄露的。
+默认情况下，{{Glossary("same-origin policy", "同源策略")}}会阻止脚本直接读取跨源响应，从而防止资源站点上的用户数据泄露。然而，某些侧信道硬件漏洞（尤其是[幽灵漏洞](<https://zh.wikipedia.org/wiki/幽灵漏洞>)）会利用现代处理器的预测执行功能（一种性能特性）来泄露敏感数据，只要响应字节进入嵌入方的内存即可。此外，跨站脚本包含（XSSI）攻击允许通过传统的 `<script>` 元素获取跨源数据。因此，即使是传统上被认为对跨源嵌入是安全的通道——这些通道因此不需要资源提供者的配合——也可能存在安全隐患。
 
-## 用法
+## 解决方案
 
-> [!NOTE]
-> 由于 [Chrome 的一个漏洞](https://crbug.com/1074261)，设置 Cross-Origin-Resource-Policy 可能会导致 PDF 渲染异常，使访问者无法阅读某些 PDF 文件的第一页之后的内容。在生产环境中使用此标头时请务必谨慎。
+在资源上使用 `Cross-Origin-Resource-Policy` 来阻止 [`no-cors`](/zh-CN/docs/Web/API/RequestInit#mode) 跨源请求——这些请求默认会针对某些 API 和元素（尤其是 `<script>` 和 `<img>` 元素）发出。由于该策略是通过响应标头来表达的，因此并不会阻止实际的请求。相反，浏览器会将响应转换为网络错误，从而防止结果泄露。
 
-Web 应用程序通过 {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP 响应标头设置跨源资源策略，其接受以下三个值之一：
-
-- `same-site`
-  - : 只有来自同{{Glossary("Site", "站点")}}的请求才能读取资源。
-
-    > [!WARNING]
-    > 其安全性要低于{{Glossary("origin", "来源")}}。[用于检查两个来源是否属于同一站点的算法](https://html.spec.whatwg.org/multipage/origin.html#same-site)定义于 HTML 标准中，涉及对*可注册域名*的检查。
+可能的值如下：
 
 - `same-origin`
-  - : 只有来自同{{Glossary("Origin", "来源")}}（即，方案 + 主机 + 端口）的请求才能读取资源。
+  - : 将资源访问权限限制为仅来自同[*源*](/zh-CN/docs/Glossary/Origin)的请求。建议对返回敏感用户信息或私有 API 的 URL 采用此设置。
+- `same-site`
+  - : 将资源访问权限限制为来自同一[*站点*](/zh-CN/docs/Glossary/Site)的请求。建议将此设置用于来自那些其功能在多个同一站点源之间共享的源的响应。例如，提供静态资源的公司 CDN，以及处理身份验证的单点登录（SSO）应用。
+
+    > [!WARNING]
+    > 这比 `same-origin` 更宽松。HTML 标准中定义了[用于检查两个源是否属于同一网站的算法](https://html.spec.whatwg.org/multipage/origin.html#same-site)，该算法涉及对*可注册域名*的检查。
 
 - `cross-origin`
-  - : 来自任何{{Glossary("Origin", "来源")}}（包括同站和跨站）的请求都能读取资源。在使用 COEP 时非常有用（见下文）。
+  - : 允许通过跨源请求访问资源。仅建议对来自广泛使用的源（例如公共 CDN 或微件）的响应启用此功能。如果未设置该标头，则此为默认行为，但若要让使用严格 {{httpheader("Cross-Origin-Embedder-Policy")}} 的跨源嵌入者嵌入该资源，则必须显式设置该标头。
+
+请为你的网站设置尽可能严格的值。
+
+CORP 由资源提供方提供。如果您是此类跨源资源的嵌入方，可以在文档中添加 {{httpheader("Cross-Origin-Embedder-Policy")}} 标头，并将值设置为 `require-corp`。如果跨源资源未显式发送允许嵌入者的 `Cross-Origin-Resource-Policy` 头，浏览器将阻止文档加载该资源。这是使网站实现[跨源隔离](/zh-CN/docs/Web/API/Window/crossOriginIsolated)的一部分。
+
+## 示例
+
+### 确保资源提供者的安全性
+
+如果某项资源在 `no-cors` 模式下不得进行跨源加载，则该资源的响应应包含：
 
 ```http
-Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
+Cross-Origin-Resource-Policy: same-origin
 ```
 
-在进行跨源资源策略检查时，如果设置了该标头，浏览器将拒绝来自不同源/站点的 `no-cors` 请求。
+### 使嵌入器处于跨源隔离状态
 
-## 与跨源嵌入策略（COEP）的关系
+要启用 {{jsxref("SharedArrayBuffer")}} 和高精度 {{domxref("Performance.now()")}}，文档必须处于跨源隔离状态。请在文档中包含以下标头：
 
-当在文档上使用 {{HTTPHeader("Cross-Origin-Embedder-Policy")}} HTTP 响应标头时，可用于要求文档加载的子资源要么与该文档属于同一来源，要么携带 {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP 响应标头以表明其允许被嵌入——这就是 `cross-origin` 值的应用场景。
+```http
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Embedder-Policy: require-corp
+```
 
-## 历史
+使用 `Cross-Origin-Embedder-Policy: require-corp` 的页面只能加载那些明确选择允许被嵌入的跨源资源。资源可通过使用显式的 CORP 来选择允许被嵌入：
 
-这个概念最初于 2012 年被提出（以 `From-Origin` 标头），但在 2018 年第二季度被[重新提上议程](https://github.com/whatwg/fetch/issues/687)，并已在 Safari 和 Chromium 中实现。
+```http
+Cross-Origin-Resource-Policy: cross-origin
+```
 
-2018 年初，两个被称为*熔断*和*幽灵漏洞*的侧信道硬件漏洞被披露。这些漏洞导致敏感数据泄露，其成因源于旨在提升性能的推测执行功能所引发的竞态条件。
+对于使用[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)发起的请求，请改用 `Access-Control-Allow-Origin`：
 
-跨源资源策略的制定旨在为网站提供一种直接手段，来阻断预期外的 `no-cors` 跨源请求。这是抵御“幽灵漏洞”类攻击的有效防御措施，因为在攻击者访问到响应主体之前，浏览器已经把它移除掉了。
-
-## 规范
-
-{{Specifications}}
-
-## 浏览器兼容性
-
-{{Compat}}
+```http
+Access-Control-Allow-Origin: https://example.com
+```
 
 ## 参见
 
-- {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP 标头
+- [考虑部署跨源资源策略](https://resourcepolicy.fyi/)
+- [XS-Leaks 维基](https://xsleaks.dev/)
+- [`Access-Control-Allow-Origin`](/zh-CN/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin)
+- [`Cross-Origin-Embedder-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy)
+- [`Cross-Origin-Opener-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy)
+- [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
