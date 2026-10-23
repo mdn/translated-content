@@ -215,7 +215,7 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Guides/Range_requests)允许客户端�
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}}（COOP）
   - : 防止其他域打开/控制窗口。
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}}（CORP）
-  - : 防止从其他域读取应用了此标头的资源的响应。见 [CORP 的解释文章](/zh-CN/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)。
+  - : 防止从其他域读取应用了此标头的资源的响应。见 [CORP 的解释文章](/zh-CN/docs/Web/Security/Practical_implementation_guides/CORP)。
 - {{HTTPHeader("Content-Security-Policy")}}（{{Glossary("CSP")}}）
   - : 控制用户代理可以为给定页面加载哪些资源。
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
