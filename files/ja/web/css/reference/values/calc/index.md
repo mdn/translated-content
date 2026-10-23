@@ -1,8 +1,9 @@
 ---
-title: calc()
+title: "`calc()` 関数 (CSS)"
+short-title: calc()
 slug: Web/CSS/Reference/Values/calc
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bf3b0f3217d5d5a6957e9e17f863ece19d939d20
 ---
 
 **`calc()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 CSS のプロパティ値を指定する際に計算を行うことができるものです。 {{cssxref("&lt;length&gt;")}}、{{cssxref("&lt;frequency&gt;")}}、{{cssxref("angle")}}、{{cssxref("&lt;time&gt;")}}、{{cssxref("&lt;percentage&gt;")}}、{{cssxref("&lt;number&gt;")}}、{{cssxref("&lt;integer&gt;")}}、{{cssxref("color_value", "&lt;color-function&gt;")}} の値が利用できる場所ならば使用できます。
@@ -139,7 +140,7 @@ h1 {
 これによって、ページが拡大縮小されたときにテキストの大きさが変化します。
 
 - [MDN WCAG のを理解する 1.4 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
-- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [Understanding Success Criterion 1.4.4: Resize Text | WAI | W3C](https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html)
 
 ## 例
 
@@ -187,15 +188,13 @@ input {
 }
 ```
 
-ここで、フォームはウィンドウの取り得る幅の 1/6 を使うように指定しています。それから、入力項目が必ず妥当なサイズを持つように再度 `calc()` を使い、コンテナーの幅 - 1em の幅になるように指定します。次の HTML でこの CSS を使います。
+ここで、コンテナーはウィンドウの取り得る幅の 1/6 を使うように指定しています。それから、入力項目が必ず適切なサイズになるように再度 `calc()` を使い、コンテナーの幅 -1em の幅になるように指定します。次の HTML でこの CSS を使います。
 
 ```html
-<form>
-  <div id="form-box">
-    <label>何か入力:</label>
-    <input type="text" id="misc" name="misc" />
-  </div>
-</form>
+<div id="form-box">
+  <label>何か入力:</label>
+  <input type="text" id="misc" name="misc" />
+</div>
 ```
 
 {{EmbedLiveSample('Automatically_sizing_form_fields_to_fit_their_container', '700', '80')}}
