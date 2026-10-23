@@ -3,12 +3,12 @@ title: "Attribut HTML : `required`"
 short-title: required
 slug: Web/HTML/Reference/Attributes/required
 l10n:
-  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 L'attribut {{Glossary("Boolean/HTML", "booléen")}} **`required`**, s'il est présent, indique que l'utilisateur·ice doit définir une valeur avant que le formulaire propriétaire puisse être envoyé.
 
-L'attribut `required` est pris en charge par les types `{{HTMLElement("input/text", "text")}}`, `{{HTMLElement("input/search", "search")}}`, `{{HTMLElement("input/url", "url")}}`, `{{HTMLElement("input/tel", "tel")}}`, `{{HTMLElement("input/email", "email")}}`, `{{HTMLElement("input/password", "password")}}`, `{{HTMLElement("input/date", "date")}}`, `{{HTMLElement("input/month", "month")}}`, `{{HTMLElement("input/week", "week")}}`, `{{HTMLElement("input/time", "time")}}`, `{{HTMLElement("input/datetime-local", "datetime-local")}}`, `{{HTMLElement("input/number", "number")}}`, `{{HTMLElement("input/checkbox", "checkbox")}}`, `{{HTMLElement("input/radio", "radio")}}`, `{{HTMLElement("input/file", "file")}}`, de l'élément HTML {{HTMLElement("input")}}, ainsi que les éléments HTML de contrôle de formulaire {{HTMLElement("select")}} et {{HTMLElement("textarea")}}. Si l'attribut est présent sur l'un de ces types ou éléments, la pseudo-classe CSS {{CSSxRef(":required")}} correspondra. Si l'attribut n'est pas inclus, la pseudo-classe {{CSSxRef(":optional")}} correspondra.
+L'attribut `required` est pris en charge par les types `{{HTMLElement("input/text", "text")}}`, `{{HTMLElement("input/search", "search")}}`, `{{HTMLElement("input/url", "url")}}`, `{{HTMLElement("input/tel", "tel")}}`, `{{HTMLElement("input/email", "email")}}`, `{{HTMLElement("input/password", "password")}}`, `{{HTMLElement("input/date", "date")}}`, `{{HTMLElement("input/month", "month")}}`, `{{HTMLElement("input/week", "week")}}`, `{{HTMLElement("input/time", "time")}}`, `{{HTMLElement("input/datetime-local", "datetime-local")}}`, `{{HTMLElement("input/number", "number")}}`, `{{HTMLElement("input/checkbox", "checkbox")}}`, `{{HTMLElement("input/radio", "radio")}}`, `{{HTMLElement("input/file", "file")}}`, de l'élément HTML {{HTMLElement("input")}}, ainsi que les éléments HTML de contrôle de formulaire {{HTMLElement("select")}} et {{HTMLElement("textarea")}}. Si l'attribut est présent sur l'un de ces types ou éléments, la pseudo-classe CSS {{CSSxRef(":required")}} correspond. Si l'attribut n'est pas inclus, la pseudo-classe {{CSSxRef(":optional")}} correspond.
 
 L'attribut n'est pas pris en charge ou pertinent pour les types `{{HTMLElement("input/range", "range")}}` et `{{HTMLElement("input/color", "color")}}`, car les deux ont des valeurs par défaut. Le type `color` a pour valeur par défaut `#000000`. Le type `range` a pour valeur par défaut le point médian entre `min` et `max` — avec `min` et `max` par défaut à 0 et 100 respectivement dans la plupart des navigateurs si non déclarés. `required` n'est pas non plus pris en charge sur le type `{{HTMLElement("input/hidden", "hidden")}}` — il n'est pas attendu que l'utilisateur·ice remplisse un champ de formulaire caché. Enfin, `required` n'est pas pris en charge sur les types de bouton, y compris `{{HTMLElement("input/image", "image")}}`.
 
@@ -27,11 +27,11 @@ Comme un champ en lecture seule ne peut pas être modifié, `required` n'a aucun
 
 ### Utilisabilité
 
-Lorsque vous incluez l'attribut `required`, fournissez une indication visible près du contrôle informant l'utilisateur·ice que {{HTMLElement("input")}}, {{HTMLElement("select")}} ou {{HTMLElement("textarea")}} est requis. De plus, ciblez les contrôles de formulaire requis avec la pseudo-classe {{CSSxRef(":required")}}, en les stylisant de manière à indiquer qu'ils sont requis. Cela améliore l'utilisabilité pour les utilisateur·ice·s voyants. La technologie d'assistance doit informer l'utilisateur·ice que le contrôle de formulaire est obligatoire en fonction de l'attribut required, mais ajouter `aria-required="true"` ne nuit pas, au cas où la combinaison navigateur / lecteur d'écran ne prendrait pas encore en charge `required`.
+Lorsque vous incluez l'attribut `required`, fournissez une indication visible près du contrôle informant l'utilisateur·ice que {{HTMLElement("input")}}, {{HTMLElement("select")}} ou {{HTMLElement("textarea")}} est requis. De plus, ciblez les contrôles de formulaire requis avec la pseudo-classe {{CSSxRef(":required")}}, en les stylisant de manière à indiquer qu'ils sont requis. Cela améliore l'utilisabilité pour les utilisateur·ice·s voyants. La technologie d'assistance doit informer l'utilisateur·ice que le contrôle de formulaire est obligatoire en fonction de l'attribut required, mais ajouter `aria-required="true"` ne nuit pas, au cas où la combinaison navigateur / lecteur d'écran ne prend pas encore en charge `required`.
 
 ### Validation des contraintes
 
-Si l'élément est requis et que sa valeur est une chaîne de caractères (<i lang="en">string</i> en anglais) vide, alors l'élément présente {{DOMxRef("ValidityState.valueMissing", "valueMissing")}} et l'élément correspondra à la pseudo-classe {{CSSxRef(":invalid")}}.
+Si l'élément est requis et que sa valeur est une chaîne de caractères (<i lang="en">string</i> en anglais) vide, alors l'élément présente {{DOMxRef("ValidityState.valueMissing", "valueMissing")}} et l'élément correspond à la pseudo-classe {{CSSxRef(":invalid")}}.
 
 ## Problèmes d'accessibilité
 
@@ -53,6 +53,12 @@ Fournissez une indication à l'utilisateur·ice pour l'informer que le contrôle
   </div>
   <input type="submit" />
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ### Résultat

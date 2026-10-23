@@ -3,10 +3,12 @@ title: "Élément HTML `<del>` : l'élément de texte supprimé"
 short-title: <del>
 slug: Web/HTML/Reference/Elements/del
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 32eceacf42b6bff41d9605298eba143cb7e199a1
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<del>`** représente une portion de texte qui a été supprimée d'un document. Cela peut être utilisé, par exemple, pour afficher le «&nbsp;suivi des modifications&nbsp;» ou des informations sur les différences dans le code source. L'élément HTML {{HTMLElement("ins")}} peut être utilisé pour l'effet inverse&nbsp;: indiquer le texte qui a été ajouté au document.
+
+Cet élément est souvent (mais pas nécessairement) rendu en appliquant un style barré au texte.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;del&gt;", "tabbed-standard")}}
 
@@ -36,8 +38,6 @@ blockquote {
 }
 ```
 
-Cet élément est souvent (mais pas nécessairement) rendu en appliquant un style barré au texte.
-
 ## Attributs
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
@@ -46,36 +46,6 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Une URL pour une ressource expliquant le changement (cela peut être un procès verbal d'une réunion par exemple).
 - `datetime`
   - : Cet attribut indique l'heure et la date du changement et doit être une chaîne de caractères représentant une date valide, avec une heure facultative. Si la valeur ne peut pas être analysée comme telle, l'élément n'a pas d'information temporelle associée. Voir [l'article sur les formats](/fr/docs/Web/HTML/Guides/Date_and_time_formats) pour la représentation [d'une date seule](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates) ou [d'une date avec une heure](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates_et_heures_locales).
-
-## Accessibilité
-
-Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `del`. On peut le rendre accessible aux annonces avec la propriété CSS {{CSSxRef("content")}} et grâce aux pseudo-éléments {{CSSxRef("::before")}} et {{CSSxRef("::after")}}.
-
-```css
-del::before,
-del::after {
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-del::before {
-  content: " [Début de la suppression]";
-}
-
-del::after {
-  content: " [Fin de la suppression] ";
-}
-```
-
-Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment ces annonces pour éviter une verbosité trop importante. Il est donc important de ne pas abuser de cette technique et de ne l'appliquer qu'à des situations où il est nécessaire de comprendre que du contenu a été supprimé.
-
-- [Note courte sur la façon de laisser votre marque (plus accessible) | Vispero <sup>(angl.)</sup>](https://vispero.com/resources/short-note-on-making-your-mark-more-accessible/)
-- [Ajustement des styles de niveau texte | Adrian Roselli <sup>(angl.)</sup>](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## Exemples
 

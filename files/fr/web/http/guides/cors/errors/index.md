@@ -2,10 +2,10 @@
 title: Erreurs CORS
 slug: Web/HTTP/Guides/CORS/Errors
 l10n:
-  sourceCommit: 92396cf8979e107c3ac42c2b9fc382013ea1c234
+  sourceCommit: a8b5a77bb154e0c3a124fb4af441d11e4259836e
 ---
 
-[Le partage des ressources entre origines multiples](/fr/docs/Web/HTTP/Guides/CORS) ({{Glossary("CORS")}}) est une norme qui permet à un serveur de relâcher la [politique de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy). Cela est utilisé pour autoriser explicitement certaines requêtes inter-origines tout en en rejetant d'autres. Par exemple, si un site propose un service intégrable, il peut être nécessaire de relâcher certaines restrictions. Mettre en place une telle configuration CORS n'est pas nécessairement facile et peut présenter certains défis. Dans ces pages, nous examinons certains messages d'erreur CORS courants et comment les résoudre.
+[Le partage des ressources entre origines multiples](/fr/docs/Web/HTTP/Guides/CORS) ({{Glossary("CORS")}}) est une norme qui permet à un serveur de relâcher la [politique de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy). C'est utilisé pour autoriser explicitement certaines requêtes inter-origines tout en en rejetant d'autres. Par exemple, si un site propose un service intégrable, il peut être nécessaire de relâcher certaines restrictions. Mettre en place une telle configuration CORS n'est pas nécessairement facile et peut présenter certains défis. Dans ces pages, nous examinons certains messages d'erreur CORS courants et comment les résoudre.
 
 Si la configuration CORS n'est pas correctement mise en place, la console du navigateur affiche une erreur du type `"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at [some site]"` indiquant que la requête a été bloquée pour violation des règles de sécurité CORS. Cela n'est pas nécessairement une erreur de configuration. Il est possible que la requête soit en fait intentionnellement refusée par l'application web de l'utilisateur·ice et le service externe distant. Cependant, si le point de terminaison est censé être disponible, un certain débogage est nécessaire pour réussir.
 

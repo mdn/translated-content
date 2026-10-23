@@ -3,7 +3,7 @@ title: Comment s'informer sur une technologie
 short-title: Chercher une technologie
 slug: MDN/Writing_guidelines/Howto/Research_technology
 l10n:
-  sourceCommit: bdb97b3e01499ce52f02caa3f51d6dd245a48782
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
 
 Cet article vous fournit des informations pratiques sur la manière d'aborder la documentation des technologies.

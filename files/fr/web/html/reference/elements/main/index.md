@@ -3,7 +3,7 @@ title: "Élément HTML `<main>` : l'élément de contenu principal"
 short-title: <main>
 slug: Web/HTML/Reference/Elements/main
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 100cf25d92d3953f3c70ecaa2af637d5e42179d8
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<main>`** représente le contenu principal du corps ({{HTMLElement("body")}}) d'un document. La zone de contenu principal se compose de contenu directement lié ou qui développe le sujet central d'un document, ou la fonctionnalité centrale d'une application.
@@ -34,13 +34,13 @@ header {
 }
 ```
 
-Un document ne doit pas comporter plus d'un élément `<main>` qui ne possède pas l'attribut [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden) défini.
-
 ## Attributs
 
 Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-## Notes
+## Notes d'utilisation
+
+Un document ne doit pas comporter plus d'un élément `<main>` qui ne possède pas l'attribut [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden) défini.
 
 Le contenu d'un élément `<main>` doit être unique au document. Le contenu répété dans un ensemble de documents ou de sections de document, comme les barres latérales, les liens de navigation, les informations sur le droit d'auteur·ice, les logos du site et les formulaires de recherche, ne doit pas être inclus, sauf si le formulaire de recherche constitue la fonctionnalité principale de la page.
 

@@ -3,7 +3,7 @@ title: "Élément HTML `<body>` : l'élément pour le corps du document"
 short-title: <body>
 slug: Web/HTML/Reference/Elements/body
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: f44f946c49273a558b97e342e22a100780d224c8
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<body>`** représente le contenu principal du document HTML. Il ne peut y avoir qu'un élément `<body>` par document.
@@ -144,7 +144,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     <tr>
       <th scope="row">Omission de balises</th>
       <td>
-        La balise d'ouverture peut être omise si le premier élément n'est pas un caractère espace, un commentaire, un élément {{HTMLElement("script")}} ou un élément {{HTMLElement("style")}}. La balise de fermeture peut être omise si l'élément <code>&#x3C;body></code> a un contenu ou une balise d'ouverture, et qu'il n'est pas immédiatement suivi d'un commentaire.
+        La balise d'ouverture peut être omise si l'élément est vide, ou si le premier élément à l'intérieur n'est pas un espace ASCII ou un commentaire, sauf si le premier élément à l'intérieur est un élément {{HTMLElement("meta")}}, {{HTMLElement("noscript")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} ou {{HTMLElement("template")}}. La balise de fermeture peut être omise si l'élément <code>&#x3C;body></code> n'est pas immédiatement suivi d'un commentaire.
       </td>
     </tr>
     <tr>

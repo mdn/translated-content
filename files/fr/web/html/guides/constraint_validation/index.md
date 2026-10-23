@@ -3,7 +3,7 @@ title: Utiliser la validation des formulaires HTML et l'API de validation des co
 short-title: Validation des contraintes
 slug: Web/HTML/Guides/Constraint_validation
 l10n:
-  sourceCommit: bce3c7c8ee532a9f4026ace7be8ac20deb71834a
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 La création de formulaires web a toujours été une tâche complexe. Alors que le balisage du formulaire lui-même est simple, vérifier que chaque champ possède une valeur valide et cohérente est plus difficile, et informer l'utilisateur·ice du problème peut vite devenir un casse-tête. {{Glossary("HTML5")}} a introduit de nouveaux mécanismes pour les formulaires&nbsp;: il a ajouté de nouveaux types sémantiques pour l'élément {{HTMLElement("input")}} et la _validation des contraintes_ pour faciliter le contrôle du contenu du formulaire côté client. Les contraintes de base et courantes peuvent être vérifiées, sans avoir besoin de JavaScript, en définissant de nouveaux attributs&nbsp;; des contraintes plus complexes peuvent être testées à l'aide de l'API Constraint Validation.
@@ -30,10 +30,10 @@ En HTML, les contraintes de base peuvent être déclarées de deux façons&nbsp;
 
 Les contraintes intrinsèques portées par l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) sont&nbsp;:
 
-| Type de champ                                                              | Description de la contrainte                                                                                                                                                              | Violation correspondante                                      |
-| -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| [`<input type="URL">`](/fr/docs/Web/HTML/Reference/Elements/input/url)     | La valeur doit être une [URL](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) absolue, telle que définie [dans le standard évolutif URL](https://url.spec.whatwg.org/). | [`TypeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) |
-| [`<input type="email">`](/fr/docs/Web/HTML/Reference/Elements/input/email) | La valeur doit être une adresse électronique avec une syntaxe valide (généralement au format `nom@domaine.tld` ou `nom@domaine`).                                                         | [`TypeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) |
+| Type de champ                                                              | Description de la contrainte                                                                                                                                                                                 | Violation correspondante                                      |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| [`<input type="URL">`](/fr/docs/Web/HTML/Reference/Elements/input/url)     | La valeur doit être une [URL](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) absolue, telle que définie [dans le standard évolutif URL <sup>(angl.)</sup>](https://url.spec.whatwg.org/). | [`TypeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) |
+| [`<input type="email">`](/fr/docs/Web/HTML/Reference/Elements/input/email) | La valeur doit être une adresse électronique avec une syntaxe valide (généralement au format `nom@domaine.tld` ou `nom@domaine`).                                                                            | [`TypeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) |
 
 Pour ces deux types de champ, si l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/input#multiple) est utilisé, plusieurs valeurs peuvent être passées dans le champ sous la forme d'une liste séparée par des virgules. Si au moins une des valeurs ne respecte pas les conditions décrites ici, la violation de contrainte `TypeMismatch` est déclenchée.
 
@@ -222,6 +222,12 @@ Pour cet exemple, nous allons ajouter un script de vérification pour ce formula
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 Ce fragment HTML affiche le formulaire suivant&nbsp;:
 
 {{EmbedLiveSample("Exemple de contrainte portant sur plusieurs champs : validation du code postal")}}
@@ -292,7 +298,7 @@ Voici le fragment HTML utilisé pour l'exemple&nbsp;:
 <input type="file" id="fs" />
 ```
 
-Cela donnera le formulaire suivant&nbsp;:
+Cela donne le formulaire suivant&nbsp;:
 
 {{EmbedLiveSample("Limiter la taille d'un fichier avant son envoi")}}
 
@@ -349,7 +355,7 @@ Les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) {{CSSx
 Plusieurs outils peuvent vous aider à contrôler le texte utilisé pour indiquer une erreur de validation&nbsp;:
 
 - La méthode `setCustomValidity(message)` pour les éléments suivants&nbsp;:
-  - {{HTMLElement("fieldset")}}. Note&nbsp;: fournir un message d'invalidité personnalisé pour les éléments `<fieldset>` n'empêchera pas l'envoi du formulaire dans la plupart des navigateurs.
+  - {{HTMLElement("fieldset")}}. Note&nbsp;: fournir un message d'invalidité personnalisé pour les éléments `<fieldset>` n'empêche pas l'envoi du formulaire dans la plupart des navigateurs.
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}
   - {{HTMLElement("select")}}

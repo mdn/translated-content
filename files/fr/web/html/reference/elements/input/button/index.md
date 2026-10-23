@@ -3,10 +3,13 @@ title: Valeur d'attribut HTML `<input type="button">`
 short-title: <input type="button">
 slug: Web/HTML/Reference/Elements/input/button
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page avec un gestionnaire d'évènement (la plupart du temps pour l'évènement {{DOMxRef("Element/click_event", "click")}}).
+
+> [!NOTE]
+> Bien que les éléments `<input>` de type `"button"` représentent toujours des éléments HTML valides, l'élément {{HTMLElement("button")}}, plus récent, est la meilleure méthode pour créer des boutons hors d'un formulaire. Il est aussi possible d'insérer des éléments HTML dans l'étiquette du bouton, ce qui permet notamment d'avoir des images.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
 
@@ -46,9 +49,6 @@ Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comm
     inset 2px 2px 3px rgb(0 0 0 / 60%);
 }
 ```
-
-> [!NOTE]
-> Bien que les éléments `<input>` de type `"button"` représentent toujours des éléments HTML valides, l'élément {{HTMLElement("button")}}, plus récent, est la meilleure méthode pour créer des boutons hors d'un formulaire. Il est aussi possible d'insérer des éléments HTML dans l'étiquette du bouton, ce qui permet notamment d'avoir des images.
 
 ## Valeur
 
@@ -208,7 +208,7 @@ function desactiverBouton() {
 {{EmbedLiveSample("Héritage de l'état désactivé", 650, 100)}}
 
 > [!NOTE]
-> À la différence des autres navigateurs, Firefox conserve l'état `disabled` d'un élément `<input>` même après le rechargement de la page. Pour contourner ce comportement, définissez l'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete) de l'élément `<input>` à `off`. (Voir [Firefox bogue 654072 <sup>(angl.)</sup>](https://bugzil.la/654072) pour plus de détails.)
+> À la différence des autres navigateurs, Firefox conserve l'état `disabled` d'un élément `<input>` même après le rechargement de la page. Pour contourner ce comportement, définissez l'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete) de l'élément `<input>` à `off`. (Voir [bogue Firefox 654072 <sup>(angl.)</sup>](https://bugzil.la/654072) pour plus de détails.)
 
 ## Validation
 

@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="password">`
 short-title: <input type="password">
 slug: Web/HTML/Reference/Elements/input/password
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
 Les éléments `<input>` de type **`password`** permettent à l'utilisateur·ice de saisir un mot de passe de manière sécurisée.
@@ -37,14 +37,6 @@ label {
   margin-top: 1rem;
 }
 ```
-
-Le comportement précis du processus de saisie peut varier d'un navigateur à l'autre.
-Certains navigateurs affichent le caractère tapé pendant un court instant avant de le masquer, tandis que d'autres permettent à l'utilisateur·ice d'afficher ou de masquer le texte en clair.
-Ces deux approches aident l'utilisateur·ice à vérifier qu'il·elle a bien saisi le mot de passe souhaité, ce qui peut être particulièrement difficile sur les appareils mobiles.
-
-> [!NOTE]
-> Les différents formulaires qui permettent d'envoyer des informations sensibles (comme des mots de passe) doivent être servis sur HTTPS.
-> De nombreux navigateurs implémentent désormais des mécanismes pour avertir contre les formulaires de connexion non sécurisés.
 
 ## Valeur
 
@@ -110,6 +102,14 @@ Ceci ne définit _pas_ de limite au nombre de caractères que l'utilisateur·ice
 ## Utiliser les contrôles de saisie de mot de passe
 
 Les champs de saisie de mot de passe fonctionnent généralement comme les autres champs de saisie de texte&nbsp;; la principale différence est que le contenu est masqué afin d'empêcher les personnes proches de l'utilisateur·ice de lire le mot de passe.
+
+Le comportement précis du processus de saisie peut varier d'un navigateur à l'autre.
+Certains navigateurs affichent le caractère tapé pendant un court instant avant de le masquer, tandis que d'autres permettent à l'utilisateur·ice d'afficher ou de masquer le texte en clair.
+Ces deux approches aident l'utilisateur·ice à vérifier qu'il·elle a bien saisi le mot de passe souhaité, ce qui peut être particulièrement difficile sur les appareils mobiles.
+
+> [!NOTE]
+> Les différents formulaires qui permettent d'envoyer des informations sensibles (comme des mots de passe) doivent être servis sur HTTPS.
+> De nombreux navigateurs implémentent désormais des mécanismes pour avertir contre les formulaires de connexion non sécurisés.
 
 ### Un contrôle basique
 

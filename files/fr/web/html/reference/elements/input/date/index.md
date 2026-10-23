@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="date">`
 short-title: <input type="date">
 slug: Web/HTML/Reference/Elements/input/date
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de **`type="date"`** créent des champs de saisie permettant à l'utilisateur·ice d'entrer une date. L'apparence de l'interface du sélecteur de date varie selon le navigateur et le système d'exploitation. La valeur est normalisée au format `yyyy-mm-dd`.
@@ -40,7 +40,7 @@ label {
 
 ## Valeur
 
-Une chaîne de caractères représentant la date saisie dans le champ. La date est formatée selon le [format des chaînes de date](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates).
+Une chaîne de caractères représentant la date saisie dans le champ. La date est formatée selon le [format des chaînes de caractères de date](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates).
 
 Vous pouvez définir une valeur par défaut pour le champ en indiquant une date dans l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value)&nbsp;:
 
@@ -102,31 +102,25 @@ Dans cette section, nous allons examiner des utilisations simples puis plus comp
 Dans son expression la plus simple `<input type="date">` s'utilise avec un élément `<input>` et un élément {{HTMLElement("label")}}&nbsp;:
 
 ```html
-<form action="https://example.com">
-  <label>
-    Veuillez saisir votre date de naissance&nbsp;:
-    <input type="date" name="bday" />
-  </label>
-
-  <p><button>Envoyer</button></p>
-</form>
+<label>
+  Veuillez saisir votre date de naissance&nbsp;:
+  <input type="date" name="bday" />
+</label>
 ```
 
 {{EmbedLiveSample("Utilisation simple", 600, 40)}}
 
-Ce fragment de HTML envoie la date saisie avec la clé `bday` vers `https://example.com`, ce qui donne une URL résultante comme `https://example.com/?bday=1955-06-08`.
+Si ce champ de saisie est inclus dans un formulaire envoyé à `https://example.com` en utilisant la méthode `GET`, la date saisie est envoyée sous la clé `bday` — ce qui donne une URL comme `https://example.com/?bday=1955-06-08`.
 
 ### Paramétrer une date maximale et une date minimale
 
 On peut utiliser les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) afin de restreindre les dates qui peuvent être saisies par l'utilisateur·ice. Dans l'exemple suivant, on indique une date minimum au premier avril 2017 (`2017-04-01`) et une date maximale au 30 avril 2017 (`2017-04-30`)&nbsp;:
 
 ```html
-<form>
-  <label
-    >Veuillez choisir la meilleure date pour la soirée&nbsp;:
-    <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
-  </label>
-</form>
+<label
+  >Veuillez choisir la meilleure date pour la soirée&nbsp;:
+  <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
+</label>
 ```
 
 {{EmbedLiveSample("Paramétrer une date maximale et une date minimale", 600, 40)}}
@@ -168,6 +162,12 @@ Voyons un exemple de dates minimale et maximale, et rendons aussi le champ oblig
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 Si on essaie d'envoyer le formulaire avec une date incomplète (ou en dehors de l'intervalle indiqué), le message affiche une erreur. Vous pouvez essayer ici&nbsp;:
 
 {{EmbedLiveSample("Validation", 600, 100)}}
@@ -205,13 +205,11 @@ Dans cet exemple, nous créons un sélecteur de date en utilisant le sélecteur 
 Le HTML ressemble à ceci&nbsp;:
 
 ```html
-<form>
-  <div class="nativeDatePicker">
-    <label for="bday">Entrez votre date de naissance&nbsp;:</label>
-    <input type="date" id="bday" name="bday" />
-    <span class="validity"></span>
-  </div>
-</form>
+<div class="nativeDatePicker">
+  <label for="bday">Entrez votre date de naissance&nbsp;:</label>
+  <input type="date" id="bday" name="bday" />
+  <span class="validity"></span>
+</div>
 ```
 
 ### CSS
