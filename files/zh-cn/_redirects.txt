@@ -3990,6 +3990,7 @@
 /zh-CN/docs/Web/HTTP/Cookies	/zh-CN/docs/Web/HTTP/Guides/Cookies
 /zh-CN/docs/Web/HTTP/Evolution_of_HTTP	/zh-CN/docs/Web/HTTP/Guides/Evolution_of_HTTP
 /zh-CN/docs/Web/HTTP/Feature_Policy	/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy
+/zh-CN/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy	/zh-CN/docs/Web/Security/Practical_implementation_guides/CORP
 /zh-CN/docs/Web/HTTP/HTTP_Strict_Transport_Security	/zh-CN/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security
 /zh-CN/docs/Web/HTTP/HTTP请求方法	/zh-CN/docs/Web/HTTP/Reference/Methods
 /zh-CN/docs/Web/HTTP/HTTP请求方法/GET	/zh-CN/docs/Web/HTTP/Reference/Methods/GET
