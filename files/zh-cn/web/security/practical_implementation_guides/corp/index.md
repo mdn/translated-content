@@ -10,7 +10,7 @@ l10n:
 
 ## 问题
 
-默认情况下，{{Glossary("same-origin policy", "同源策略")}}会阻止脚本直接读取跨源响应，从而防止资源站点上的用户数据泄露。然而，某些侧信道硬件漏洞（尤其是[幽灵漏洞](<https://zh.wikipedia.org/wiki/幽灵漏洞>)）会利用现代处理器的预测执行功能（一种性能特性）来泄露敏感数据，只要响应字节进入嵌入方的内存即可。此外，跨站脚本包含（XSSI）攻击允许通过传统的 `<script>` 元素获取跨源数据。因此，即使是传统上被认为对跨源嵌入是安全的通道——这些通道因此不需要资源提供者的配合——也可能存在安全隐患。
+默认情况下，{{Glossary("same-origin policy", "同源策略")}}会阻止脚本直接读取跨源响应，从而防止资源站点上的用户数据泄露。然而，某些侧信道硬件漏洞（尤其是[幽灵漏洞](https://zh.wikipedia.org/wiki/幽灵漏洞)）会利用现代处理器的预测执行功能（一种性能特性）来泄露敏感数据，只要响应字节进入嵌入方的内存即可。此外，跨站脚本包含（XSSI）攻击允许通过传统的 `<script>` 元素获取跨源数据。因此，即使是传统上被认为对跨源嵌入是安全的通道——这些通道因此不需要资源提供者的配合——也可能存在安全隐患。
 
 ## 解决方案
 
@@ -19,9 +19,9 @@ l10n:
 可能的值如下：
 
 - `same-origin`
-  - : 将资源访问权限限制为仅来自同[*源*](/zh-CN/docs/Glossary/Origin)的请求。建议对返回敏感用户信息或私有 API 的 URL 采用此设置。
+  - : 将资源访问权限限制为仅来自同[_源_](/zh-CN/docs/Glossary/Origin)的请求。建议对返回敏感用户信息或私有 API 的 URL 采用此设置。
 - `same-site`
-  - : 将资源访问权限限制为来自同一[*站点*](/zh-CN/docs/Glossary/Site)的请求。建议将此设置用于来自那些其功能在多个同一站点源之间共享的源的响应。例如，提供静态资源的公司 CDN，以及处理身份验证的单点登录（SSO）应用。
+  - : 将资源访问权限限制为来自同一[_站点_](/zh-CN/docs/Glossary/Site)的请求。建议将此设置用于来自那些其功能在多个同一站点源之间共享的源的响应。例如，提供静态资源的公司 CDN，以及处理身份验证的单点登录（SSO）应用。
 
     > [!WARNING]
     > 这比 `same-origin` 更宽松。HTML 标准中定义了[用于检查两个源是否属于同一网站的算法](https://html.spec.whatwg.org/multipage/origin.html#same-site)，该算法涉及对*可注册域名*的检查。
@@ -31,7 +31,7 @@ l10n:
 
 请为你的网站设置尽可能严格的值。
 
-CORP 由资源提供方提供。如果您是此类跨源资源的嵌入方，可以在文档中添加 {{httpheader("Cross-Origin-Embedder-Policy")}} 标头，并将值设置为 `require-corp`。如果跨源资源未显式发送允许嵌入者的 `Cross-Origin-Resource-Policy` 头，浏览器将阻止文档加载该资源。这是使网站实现[跨源隔离](/zh-CN/docs/Web/API/Window/crossOriginIsolated)的一部分。
+CORP 由资源提供方提供。如果你是此类跨源资源的嵌入方，可以在文档中添加 {{httpheader("Cross-Origin-Embedder-Policy")}} 标头，并将值设置为 `require-corp`。如果跨源资源未显式发送允许嵌入者的 `Cross-Origin-Resource-Policy` 头，浏览器将阻止文档加载该资源。这是使网站实现[跨源隔离](/zh-CN/docs/Web/API/Window/crossOriginIsolated)的一部分。
 
 ## 示例
 
