@@ -5,31 +5,35 @@ slug: Glossary/TLD
 
 {{GlossarySidebar}}
 
-TLD (トップレベルドメイン)は、インターネットの階層的な {{Glossary("DNS")}} (ドメインネームシステム) で最も一般的な {{Glossary("domain")}} です。TLD は {{Glossary("domain name")}} の最後の要素です。例えば、`developer.mozilla.org` の "org" です。
+TLD (トップレベルドメイン) は、インターネットの階層的な {{Glossary("DNS")}} (ドメインネームシステム) で最も一般的な {{Glossary("domain")}} です。TLD は {{Glossary("domain name")}} の最後の要素です。例えば、`developer.mozilla.org` の「org」です。
 
-{{Glossary("ICANN")}} (Internet Corporation for Assigned Names and Numbers) designates organizations to manage each TLD. Depending on how strict an administrating organization might be, TLD often serves as a clue to the purpose, ownership, or nationality of a website.
+各TLD は、{{Glossary("ICANN")}} (Internet Corporation for Assigned Names and Numbers) の指定した組織が管理しています。この管理組織の厳格さにもよりますが、TLDはウェブサイトの目的、所有者、国籍を示す手がかりとなることがよくあります。
 
-Consider an example Internet address: `https://developer.mozilla.org`
-Here org is the TLD; mozilla.org is the second-level domain name; and developer is a subdomain name. All together, these constitute a fully-qualified domain name; the addition of https\:// makes this a complete URL.
+インターネットアドレスについて、`https://developer.mozilla.org` を例に考えてみましょう。この例では、org が TLD、mozilla.org がセカンドレベルドメイン名、developer がサブドメイン名です。これらをすべて繋げることで、完全修飾ドメイン名が構成できます。さらに https:// を追加すると、完全な URL になります。
 
-{{Glossary("IANA")}} today distinguishes the following groups of top-level domains:
+TLD は現在、{{Glossary("IANA")}} が次のとおりに分類しています。
 
-- country-code top-level domains (ccTLD)
-  - : Two-character domains established for countries or territories. Example: _.us_ for United States.
-- internationalized country code top-level domains (IDN ccTLD)
-  - : ccTLDs in non-Latin character sets (e.g., Arabic or Chinese).
-- generic top-level domains (gTLD)
-  - : Top-level domains with three or more characters.
-- unsponsored top-level domains
-  - : Domains that operate directly under policies established by ICANN processes for the global Internet community, for example "com" and "edu".
-- sponsored top-level domains (sTLD)
-  - : These domains are proposed and sponsored by private organizations that decide whether an applicant is eligible to use the TLD, based on community theme concepts.
-- infrastructure top-level domain
-  - : This group consists of one domain, the {{Glossary("ARPA", "Address and Routing Parameter Area")}} (ARPA).
+- 国別コードトップレベルドメイン (ccTLD)
+  - : 国と地域に割り当てた2文字で表記するTLDのことです。例えば「.ja」は日本を表します。
+  - : 翻訳者注: ここでいう「2文字」とは、小文字のラテン文字のことです。
+- 国際化国別コードトップレベルドメイン (IDN ccTLD)
+  - : 例えばアラビア文字や漢字など、ラテン文字以外の文字で表記する「ccTLD」のことです。
+  - : 翻訳者注: 日本語では総務省などが「多国文字による国別トップレベルドメイン」などと表現することがあります。また、日本が構想している「.日本」は2026年時点で承認を受けていません。
+- 汎用トップレベルドメイン (gTLD)
+  - : 3文字以上で表記する多くのTLDのことです。
+  - : 翻訳者注: 例えば「com」や「info」のことで、緩やかな分野があるため、日本語では「分野別トップレベルドメイン」と意訳することあります。
+- スポンサーなしトップレベルドメイン
+  - : gTLD のうち、例えば「com」や「edu」などのグローバルなインターネットコミュニティのため、ICANNがポリシーに基づいて直接運営するドメインです。
+  - : 翻訳者注: しばしば「unsponsored TLD」と略すことがあります。
+- スポンサー付きトップレベルドメイン (sTLD)
+  - : gTLD のうち、いわゆる一般組織が提案および支援している、つまりスポンサー組織があるドメインです。そのコミュニティのテーマや概念に基づき、そのsTLDを使用する資格があるかどうかをスポンサー組織が判断します。
+- インフラストラクチャトップレベルドメイン
+  - : このグループには、{{Glossary("ARPA", "アドレスおよびルーティングパラメータ領域")}} (ARPA) というTLDのみが属しています。
+  - : 翻訳者注: 名前の通り、インターネットのとても重要なインフラがあるドメインです。単独のグループである理由は重要であることに加えて、単純に特定の目的のためだけのTLDなのでgTLDではないし、特定の国や地域のためのTLDではないのでccTLDでもないからです。しばしば「infrastructure TLD」と略すことがあります。
 
-## Learn more
+## 詳細情報
 
-### General knowledge
+### 一般的な情報
 
-- [トップレベルドメイン](https://ja.wikipedia.org/wiki/トップレベルドメイン) (Wikipedia)
-- [List of top-level domains](https://www.iana.org/domains/root/db)
+- ウィキペディアの[トップレベルドメイン](https://ja.wikipedia.org/wiki/トップレベルドメイン)の記事
+- 実際の[トップレベルドメインの一覧](https://www.iana.org/domains/root/db)
