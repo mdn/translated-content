@@ -5,7 +5,7 @@ slug: Web/API/AbortSignal/aborted
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-**`aborted`** 읽기 전용 프로퍼티는 신호가 통신하는 DOM 요청이 취소되었는지(`true`) 그렇지 않은지(`false`)를 나타내는 {{domxref("Boolean")}}을 반환한다.
+**`aborted`** 읽기 전용 프로퍼티는 신호가 통신하는 DOM 요청이 취소되었는지(`true`) 그렇지 않은지(`false`)를 나타내는 {{jsxref("Boolean")}}을 반환한다.
 
 ## 구문
 
@@ -15,7 +15,7 @@ var isAborted = abortSignal.aborted;
 
 ### 값
 
-{{domxref("Boolean")}}
+{{jsxref("Boolean")}}
 
 ## 예제
 
