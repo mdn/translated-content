@@ -71,4 +71,4 @@ document.addEventListener('keyup', function () {
 
 ## Resultado ao vivo
 
-{{EmbedLiveSample('O exemplo', 120, 120)}}
+{{EmbedLiveSample('An example', 120, 120)}}
