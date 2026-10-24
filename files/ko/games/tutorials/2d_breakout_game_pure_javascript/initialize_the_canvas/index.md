@@ -6,7 +6,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball")}}
 
 이 강의는 [게임 개발 캔버스 튜토리얼](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)의 10단계 중 첫 번째 과정입니다. [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html)에서 이 강의의 완성된 코드를 볼 수 있습니다.
 

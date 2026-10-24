@@ -4,7 +4,7 @@ slug: conflicting/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over")}}
 
 이 글은 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)의 10단계 중 4단계 입니다. 이 글을 다 읽고 난 뒤 완성된 소스코드는 [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html) 에서 확인할 수 있습니다.
 
