@@ -4552,7 +4552,6 @@
 /fr/docs/Web/HTTP/Evolution_of_HTTP	/fr/docs/Web/HTTP/Guides/Evolution_of_HTTP
 /fr/docs/Web/HTTP/FAQ_sur_le_préchargement_des_liens	/fr/docs/Glossary/Prefetch
 /fr/docs/Web/HTTP/Feature_Policy	/fr/docs/Web/HTTP/Guides/Permissions_Policy
-/fr/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy	/fr/docs/Web/Security/Practical_implementation_guides/CORP
 /fr/docs/Web/HTTP/Headers	/fr/docs/Web/HTTP/Reference/Headers
 /fr/docs/Web/HTTP/Headers/Accept	/fr/docs/Web/HTTP/Reference/Headers/Accept
 /fr/docs/Web/HTTP/Headers/Accept-Encoding	/fr/docs/Web/HTTP/Reference/Headers/Accept-Encoding
