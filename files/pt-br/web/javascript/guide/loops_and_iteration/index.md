@@ -318,7 +318,7 @@ Embora seja tentador usar esta forma para interagir com os elementos de um Array
 
 ## Declaração `for...of`
 
-A declaração for...of cria uma laço com objetos interativos ((incluindo, {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, assim por conseguinte ), executando uma iteração para o valor de cada propriedade distinta.
+A declaração for...of cria uma laço com objetos iteráveis ((incluindo, {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, assim por conseguinte ), executando uma iteração para o valor de cada propriedade distinta.
 
 ```
 for (variavel of objeto) {
