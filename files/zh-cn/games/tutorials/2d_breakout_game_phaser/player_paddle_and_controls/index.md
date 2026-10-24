@@ -1,5 +1,5 @@
 ---
-title: Player paddle and controls
+title: 球板和操控
 slug: Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls
 ---
 
