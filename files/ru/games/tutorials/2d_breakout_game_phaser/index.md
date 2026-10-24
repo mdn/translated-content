@@ -27,14 +27,14 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 8. [Конец игры](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
 9. [Создание поля блоков](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
 10. [Определение столкновения](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection)
-11. [Счёт](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
+11. [Счёт](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win)
 12. [Победа в игре](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game)
 13. [Добавление жизней](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)
 14. [Анимация](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
 15. [Кнопки](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
 16. [Создание случайных событий](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
 
-Также мы хотели бы заметить, что лучший способ научиться создавать веб-игры - это чистый (pure) JavaScript. Если вы ещё не знакомы с разработкой на чистом JavaScript, то мы предлагаем вам первым делом пройти туториал [2D игра на чистом JavaScript](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript).
+Также мы хотели бы заметить, что лучший способ научиться создавать веб-игры - это чистый (pure) JavaScript. Если вы ещё не знакомы с разработкой на чистом JavaScript, то мы предлагаем вам первым делом пройти туториал [2D игра на чистом JavaScript](/ru/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript).
 
 После этого вы можете выбрать любой фреймворк и использовать его в своих проектах. Мы выбрали Phaser, потому что это прочный фреймворк с хорошей поддержкой, открытым сообществом и набором различных плагинов. Фреймворки ускоряют разработку и заботятся о скучных вещах, позволяя вам сосредоточиться на самом весёлом. Однако они не идеальны, так что если что-то пойдёт не так или вы захотите написать функцию, которую фреймворк не поддерживает, то вам пригодятся знания чистого JavaScript.
 
