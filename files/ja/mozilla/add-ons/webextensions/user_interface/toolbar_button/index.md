@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 {{AddonSidebar}}
 
 このユーザーインターフェイスオプションは、よく[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)と呼ばれており、 ブラウザーのツールバーに追加されるボタンです。 ユーザーはボタンをクリックして拡張機能とやりとりします。
-![](browser-action.png)
+![ブラウザーのツールバーにある、足跡の形をしたブラウザーアクションのカスタムアイコン。](toolbar_button.png)
 
 ツールバーボタン（ブラウザーアクション）はアドレスバーボタン（ページアクション）とよく似ています。違いと使用する場面ついてのガイダンスは、[ページアクションとブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions#page_actions_and_browser_actions)を参照してください。
 
@@ -40,7 +40,7 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 ## アイコン
 
-ブラウザーアクションのアイコンの作成方法の詳細は、 [Iconography](https://design.firefox.com/photon/visuals/iconography.html) を [Photon Design System](https://design.firefox.com/photon/index.html) のドキュメントで参照してください。
+ブラウザーアクションのアイコンの作成方法の詳細は、 [Iconography](https://acorn.firefox.com/latest/foundations/styles/iconography-QEDMXQqj) を [Acorn Design System](https://acorn.firefox.com/latest) のドキュメントで参照してください。
 
 ## 例
 
