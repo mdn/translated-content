@@ -1,21 +1,19 @@
 ---
-title: CSS `column-height` プロパティ
+title: "`column-height` プロパティ (CSS)"
 short-title: column-height
 slug: Web/CSS/Reference/Properties/column-height
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 25e50f8d5b36eb86d40916f6f06051671333f3a7
 ---
 
 {{SeeCompatTable}}
 
 **`column-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)における各段の高さを指定します。
 
-{{cssxref("columns")}} 一括指定プロパティを使用すると、`column-height`、{{cssxref("column-count")}}、{{cssxref("column-width")}} の各プロパティ値を、単一の宣言で設定することができます。
-
 ## 構文
 
 ```css
-/* キーワード */
+/* キーワード値 */
 column-height: auto;
 
 /* <length> 値 */
@@ -33,6 +31,8 @@ column-height: unset;
 
 ### 値
 
+このプロパティは、以下のリストにあるいずれか 1 つの値として指定します。
+
 - `auto`
   - : 初期値です。コンテンツのコンテナーの高さが設定されている場合、コンテンツの段はその高さまで引き伸ばされ、コンテンツがコンテナーの中に収まらない場合は、オーバーフローして横に広がります。コンテンツのコンテナーが高さを設定していない場合、コンテンツはコンテナー内で生成された段に均等に配分されます。
 - {{cssxref("&lt;length>")}}
@@ -47,6 +47,8 @@ column-height: unset;
 `column-height` プロパティと {{cssxref("column-wrap")}} を組み合わせることで、段の高さを個別に設定し、コンテナーの端に達した際に段を新しい行に折り返すことができます。
 
 `column-wrap` のデフォルト値は `auto` ですが、`column-height` が `<length>` 値に設定されている場合は `wrap` として解釈されます。`wrap` を指定すると、高さが固定された段が複数行にまたがって表示されるようになります。`column-height` が `auto` の場合、`column-wrap: auto` は `nowrap` として解釈され、コンテナーの高さが固定されている場合でも、段が水平方向にあふれる可能性があります。このデフォルトの動作により、通常は `column-wrap` プロパティを明示的に設定する必要はありません。
+
+`column-height` プロパティは、{{cssxref("column-count")}} や {{cssxref("column-width")}} プロパティとともに、 {{cssxref("columns")}} 一括指定を使用して設定することもできます。
 
 ## 公式定義
 
@@ -141,7 +143,7 @@ MDN の HTML、CSS、JavaScript の各ホームページから引用した複数
   <strong>HTML</strong> (HyperText Markup Language) はウェブのもっとも基本的な構成要素です。 HTML はウェブページの基本レイアウトに従ってウェブページの*コンテンツ*を記述し定義するものです。HTML に隣接する他の技術としては、ウェブページの表示や表現を記述するもの (CSS) または機能や振る舞いを記述するもの (JavaScript) があります。
 </p>
 <p>
-  「ハイパーテキスト」はウェブページから別なページに、ウェブサイト内でもウェブサイト間でも、接続するリンクを示します。リンクはウェブの基礎的な特徴です。コンテンツをインターネットにアップロードして他の人々が作成したページにリンクすれば、 World Wide Web の活発な参加者になれます。
+  「ハイパーテキスト」は、ウェブページから別なページに、ウェブサイト内でもウェブサイト間でも、接続するリンクを含むテキストを示します。リンクはウェブの基礎的な特徴です。コンテンツをインターネットにアップロードして他の人々が作成したページにリンクすれば、 World Wide Web の活発な参加者になれます。
 </p>
 <p>
   HTML ではウェブブラウザーのテキスト、画像、その他のコンテンツを記述するために「マークアップ」を使用します。 HTML のマークアップには、
@@ -385,7 +387,9 @@ html {
 p {
   line-height: 1.5;
 }
+```
 
+```css hidden live-sample___scroll-snapped live-sample___column-playground live-sample___basic-example
 @supports not (column-height: 15em) {
   body::before {
     content: "このブラウザーは 'column-height' プロパティに対応していません。";
