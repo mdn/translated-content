@@ -1,6 +1,7 @@
 ---
 title: 跨來源資源政策（CORP）
-slug: Web/HTTP/Guides/Cross-Origin_Resource_Policy
+slug: Web/Security/Practical_implementation_guides/CORP
+original_slug: Web/HTTP/Guides/Cross-Origin_Resource_Policy
 l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
