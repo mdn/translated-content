@@ -7,7 +7,7 @@ slug: Web/API/URL/revokeObjectURL_static
 
 O método estático **`URL.revokeObjectURL()`** anula uma URL que anteriormente foi criada pelo método {{domxref("URL.createObjectURL()") }}.
 
-Execute este método quando terminar de utilizar um objeto URL para informar o browser que não preicsa mais manter uma referência deste arquivo.
+Execute este método quando terminar de utilizar um objeto URL para informar o browser que não precisa mais manter uma referência deste arquivo.
 
 {{AvailableInWorkers}}
 
