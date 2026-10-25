@@ -25,7 +25,7 @@ ARIA の **`switch`** ロールは、[`checkbox`](/ja/docs/Web/Accessibility/ARI
 
 ## 解説
 
-ARIA の **`switch`** ロールは、[`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role) ロールと同じですが、「チェックされた」や「チェックされていない」ではなく、「オン」と「オフ」のどちらかになります。 [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role) ロールと同様に、`aria-checked` 属性が必須です。 可能な値は `true` と `false` の 2 つです。 `<input type="checkbox">` や `role="checkbox"` とは異なり、`indeterminate` や `mixed` はありません。  `switch` ロールは、`aria-checked` 属性において `mixed` という値に対応していません。`switch` に `mixed` という値を割り当てると、代わりに値が `false` に設定されます。
+ARIA の **`switch`** ロールは、[`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role) ロールと同じですが、「チェックされた」や「チェックされていない」ではなく、「オン」と「オフ」のどちらかになります。 [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role) ロールと同様に、`aria-checked` 属性が必須です。 可能な値は `true` と `false` の 2 つです。 `<input type="checkbox">` や `role="checkbox"` とは異なり、`indeterminate` や `mixed` はありません。 `switch` ロールは、`aria-checked` 属性において `mixed` という値に対応していません。`switch` に `mixed` という値を割り当てると、代わりに値が `false` に設定されます。
 
 支援技術では、スイッチのオン/オフの概念を反映するために、`switch` ウィジェットを特別な表現で表すことを選択できます。
 
@@ -69,11 +69,11 @@ ARIA の **`switch`** ロールは、[`checkbox`](/ja/docs/Web/Accessibility/ARI
 
 ## ユーザーエージェントと支援技術への影響
 
- `switch` ロールが要素に追加されると、{{Glossary("user agent","ユーザーエージェント")}}は次のようにそれを処理します。
+`switch` ロールが要素に追加されると、{{Glossary("user agent","ユーザーエージェント")}}は次のようにそれを処理します。
 
 - その要素は、 `switch` ロールを持つものとして、システムのアクセシビリティインフラストラクチャに公開されます。
 - `aria-checked` 属性の値が変更されると、システムのアクセシビリティ API が使用可能で、それが `switch` ロールをサポートしている場合、それを使用してアクセス可能なイベントが発生します。
--  `switch` ロールが適用された要素の子孫である全ての要素には、プレゼンテーション (`presentation`) ロールが自動的に割り当てられます。 これにより、スイッチを構築するために使用された要素が、支援技術によって個別にインタラクションされることを防ぎます。 これらの要素内のテキストは、{{cssxref("display", "display: none")}} または `aria-hidden="true"` を使用して明示的に隠されていない限り、ユーザーエージェントに可視のままであり、読み上げやその他の方法でユーザーに届けられる可能性があります。
+- `switch` ロールが適用された要素の子孫である全ての要素には、プレゼンテーション (`presentation`) ロールが自動的に割り当てられます。 これにより、スイッチを構築するために使用された要素が、支援技術によって個別にインタラクションされることを防ぎます。 これらの要素内のテキストは、{{cssxref("display", "display: none")}} または `aria-hidden="true"` を使用して明示的に隠されていない限り、ユーザーエージェントに可視のままであり、読み上げやその他の方法でユーザーに届けられる可能性があります。
 
 支援技術では、 `switch` ロールに対応している場合、次のように対応します。
 
