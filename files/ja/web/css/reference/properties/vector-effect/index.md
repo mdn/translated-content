@@ -1,5 +1,5 @@
 ---
-title: CSS `vector-effect` プロパティ
+title: "`vector-effect` プロパティ (CSS)"
 short-title: vector-effect
 slug: Web/CSS/Reference/Properties/vector-effect
 l10n:

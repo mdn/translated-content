@@ -1,5 +1,5 @@
 ---
-title: CSS `row-rule-style` プロパティ
+title: "`row-rule-style` プロパティ (CSS)"
 short-title: row-rule-style
 slug: Web/CSS/Reference/Properties/row-rule-style
 l10n:
