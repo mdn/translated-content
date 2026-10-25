@@ -1,5 +1,5 @@
 ---
-title: CSS `border-inline-start-width` プロパティ
+title: "`border-inline-start-width` プロパティ (CSS)"
 short-title: border-inline-start-width
 slug: Web/CSS/Reference/Properties/border-inline-start-width
 l10n:

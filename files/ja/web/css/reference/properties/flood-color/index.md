@@ -1,5 +1,5 @@
 ---
-title: CSS `flood-color` プロパティ
+title: "`flood-color` プロパティ (CSS)"
 short-title: flood-color
 slug: Web/CSS/Reference/Properties/flood-color
 l10n:

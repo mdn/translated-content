@@ -1,5 +1,5 @@
 ---
-title: CSS `box-pack` プロパティ
+title: "`box-pack` プロパティ (CSS)"
 short-title: box-pack
 slug: Web/CSS/Reference/Properties/box-pack
 l10n:

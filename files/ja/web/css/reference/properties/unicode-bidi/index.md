@@ -1,5 +1,5 @@
 ---
-title: CSS `unicode-bidi` プロパティ
+title: "`unicode-bidi` プロパティ (CSS)"
 short-title: unicode-bidi
 slug: Web/CSS/Reference/Properties/unicode-bidi
 l10n:

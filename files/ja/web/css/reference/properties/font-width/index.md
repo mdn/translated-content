@@ -1,5 +1,5 @@
 ---
-title: CSS `font-width` プロパティ
+title: "`font-width` プロパティ (CSS)"
 short-title: font-width
 slug: Web/CSS/Reference/Properties/font-width
 l10n:

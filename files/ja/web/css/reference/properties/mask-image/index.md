@@ -1,5 +1,5 @@
 ---
-title: CSS `mask-image` プロパティ
+title: "`mask-image` プロパティ (CSS)"
 short-title: mask-image
 slug: Web/CSS/Reference/Properties/mask-image
 l10n:

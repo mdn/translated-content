@@ -1,5 +1,5 @@
 ---
-title: CSS `page-break-after` プロパティ
+title: "`page-break-after` プロパティ (CSS)"
 short-title: page-break-after
 slug: Web/CSS/Reference/Properties/page-break-after
 l10n:
