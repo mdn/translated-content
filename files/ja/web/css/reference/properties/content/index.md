@@ -1,8 +1,9 @@
 ---
-title: content
+title: "`content` プロパティ (CSS)"
+short-title: content
 slug: Web/CSS/Reference/Properties/content
 l10n:
-  sourceCommit: f7f6f16b39d5a2a1436ed1ffb2d3cd7b24ba6521
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 **`content`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ある要素を生成された値で置き換えます。これは、要素または擬似要素の内部でレンダリングされるものを定義するために使用することができます。要素の場合、 `content` プロパティは、要素が通常通りレンダリングされるか（`normal` または `none`）、画像（および関連付けられた "alt" テキスト）に置き換えられるかを指定します。擬似要素とマージンボックスの場合、 `content` は、コンテンツを画像、テキスト、その両方、またはなしとして定義し、要素が全体的にレンダリングされるかどうかを決定します。
@@ -43,7 +44,7 @@ l10n:
 content: normal;
 content: none;
 
-/* <image> 値 */
+/* <content-replacement>: <image> 値 */
 content: url("http://www.example.com/test.png");
 content: linear-gradient(#e66465, #9198e5);
 content: image-set("image1x.png" 1x, "image2x.png" 2x);
@@ -70,7 +71,8 @@ content: close-quote;
 content: no-open-quote;
 content: no-close-quote;
 
-/* normal と none を除き、複数の値が同時に使用可 */
+/* <content-list>: コンテンツ値のリスト。
+複数の値が同時に使用可 */
 content: "prefix" url("http://www.example.com/test.png");
 content: "prefix" url("/img/test.png") "suffix" / "Alt text";
 content: open-quote counter(chapter_counter);
@@ -99,7 +101,7 @@ content: unset;
     要素に適用された場合は、この値は効果がありません。
 
 - `normal`
-  - : 既定値です。 {{cssxref("::before")}} および {{cssxref("::after")}} 擬似要素では `none` として計算されます。それ以外の擬似要素では、 {{cssxref("::marker")}}、{{cssxref("::placeholder")}}、{{cssxref("::file-selector-button")}} において、コンテンツは初期（または通常）コンテンツが期待されます。通常の要素またはページマージンボックスの場合、これは要素の子孫に計算されます。
+  - : デフォルト値です。 {{cssxref("::before")}} および {{cssxref("::after")}} 擬似要素では `none` として計算されます。それ以外の擬似要素では、 {{cssxref("::marker")}}、{{cssxref("::placeholder")}}、{{cssxref("::file-selector-button")}} において、コンテンツは初期（または通常）コンテンツが期待されます。通常の要素またはページマージンボックスの場合、これは要素の子孫に計算されます。
 
 - {{cssxref("&lt;string&gt;")}}
   - : 一致する単一引用符または二重引用符で囲まれた文字の並び。複数の文字列値は連結されます（CSS には連結演算子はありません）。
@@ -108,11 +110,11 @@ content: unset;
   - : {{cssxref("image")}} で、表示する画像を表します。 {{cssxref("url_value", "&lt;url&gt;")}}、{{cssxref("image/image-set", "image-set()")}}、{{cssxref("gradient")}} のデータ型、または {{cssxref("element()")}} 関数で定義されるウェブページ自身の一部です。
 
 - `<counter>`
-  - : `<counter>` の値は [CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)の値で、通常は {{cssxref("&lt;counter-reset&gt;")}} および {{cssxref("&lt;counter-increment&gt;")}} プロパティで定義され、計算によって生み出される数値です。 {{cssxref("counter()")}} または {{cssxref("counters()")}} 関数を使用して表示することができます。
+  - : `<counter>` の値は [CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)の値で、通常は {{cssxref("counter-reset")}} および {{cssxref("counter-increment")}} プロパティで定義され、計算によって生み出される数値です。 {{cssxref("counter()")}} または {{cssxref("counters()")}} 関数を使用して表示することができます。
     - {{cssxref("counter()")}}
-      - : {{cssxref("counter()")}} 関数には、 'counter(_名前_)' または 'counter(_名前_, スタイル)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前の最も内側のカウンターです。 {{cssxref("&lt;list-style-type&gt;")}} で指定されたスタイルで整形されます（`decimal` が既定値です）。
+      - : {{cssxref("counter()")}} 関数には、 'counter(_名前_)' または 'counter(_名前_, スタイル)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前の最も内側のカウンターです。 {{cssxref("list-style-type")}} で指定されたスタイルで整形されます（`decimal` がデフォルト値です）。
     - {{cssxref("counters()")}}
-      - : {{cssxref("counters()")}} 関数も、 'counters(名前, 文字列)' または 'counters(名前, 文字列, スタイル)' の 2 つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前のすべてのカウンターの値であり、外側から内側に向けて、指定された文字列で区切られます。 {{cssxref("&lt;list-style-type&gt;")}} で指定されたスタイルで整形されます（`decimal` が既定値です）。
+      - : {{cssxref("counters()")}} 関数も、 'counters(名前, 文字列)' または 'counters(名前, 文字列, スタイル)' の 2 つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前のすべてのカウンターの値であり、外側から内側に向けて、指定された文字列で区切られます。 {{cssxref("list-style-type")}} で指定されたスタイルで整形されます（`decimal` がデフォルト値です）。
 
 - `<quote>`
   - : `<quote>` データ型には、言語または位置に依存したキーワードです。
@@ -236,7 +238,7 @@ q::after {
 
 {{EmbedLiveSample('Quotes', '100%', 200)}}
 
-[生成される引用符の種類](/ja/docs/Web/CSS/Reference/Properties/quotes#自動引用符)は、言語によって異なります。 ブラウザーは既定では、 {{HTMLElement("q")}} 要素の前後に開始引用符と終了引用符を追加します。例えば、この例の引用符は、明示的に設定されていない場合でも表示されます。 `content` プロパティの値をそれぞれ `no-open-quote` と `no-close-quote` に設定するか、または両方を `none` に設定することで、引用符を無効にすることができます。 また、代わりに {{cssxref("quotes")}} プロパティを `none` に設定することで、引用符を無効にすることもできます。
+[生成される引用符の種類](/ja/docs/Web/CSS/Reference/Properties/quotes#自動引用符)は、言語によって異なります。 ブラウザーはデフォルトでは、 {{HTMLElement("q")}} 要素の前後に開始引用符と終了引用符を追加します。例えば、この例の引用符は、明示的に設定されていない場合でも表示されます。 `content` プロパティの値をそれぞれ `no-open-quote` と `no-close-quote` に設定するか、または両方を `none` に設定することで、引用符を無効にすることができます。 また、代わりに {{cssxref("quotes")}} プロパティを `none` に設定することで、引用符を無効にすることもできます。
 
 ### テキストをリストアイテムカウンターに追加
 
@@ -510,4 +512,4 @@ div {
 - {{glossary("Replaced elements", "置換要素")}}
 - [CSS 生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)モジュール
 - [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
-- ブラウザーのアクセシビリティパネル: [Firefox アクセシビリティインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/)、[Chrome のアクセシビリティパネル](https://developer.chrome.com/docs/devtools/accessibility/reference#pane)、[Safari のアクセシビリティツリー](https://webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)
+- ブラウザーのアクセシビリティパネル: [Firefox アクセシビリティインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/)、[Chrome のアクセシビリティパネル](https://developer.chrome.com/docs/devtools/accessibility/reference#pane)、[Safari のアクセシビリティツリー](https://university.webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)
