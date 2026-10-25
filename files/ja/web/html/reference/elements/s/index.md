@@ -1,5 +1,5 @@
 ---
-title: HTML `<s>` 取り消し要素
+title: "`<s>` 取り消し要素"
 short-title: <s>
 slug: Web/HTML/Reference/Elements/s
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: HTML `<strike>` 取り消し線要素
+title: "`<strike>` 取り消し線要素"
 short-title: <strike>
 slug: Web/HTML/Reference/Elements/strike
 l10n:

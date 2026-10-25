@@ -1,5 +1,5 @@
 ---
-title: HTML `<thead>` 表ヘッダー要素
+title: "`<thead>` 表ヘッダー要素"
 short-title: <thead>
 slug: Web/HTML/Reference/Elements/thead
 l10n:

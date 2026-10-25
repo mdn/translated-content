@@ -1,5 +1,5 @@
 ---
-title: "`<mark>` テキストマーク要素 (HTML)"
+title: "`<mark>` テキストマーク要素"
 short-title: <mark>
 slug: Web/HTML/Reference/Elements/mark
 l10n:

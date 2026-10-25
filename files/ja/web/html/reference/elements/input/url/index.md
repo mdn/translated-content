@@ -1,5 +1,5 @@
 ---
-title: HTML `<input type="url">` 属性値
+title: '`<input type="url">` 属性値'
 short-title: <input type="url">
 slug: Web/HTML/Reference/Elements/input/url
 l10n:

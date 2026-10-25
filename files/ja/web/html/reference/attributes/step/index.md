@@ -1,5 +1,5 @@
 ---
-title: "`step` 属性 (HTML)"
+title: "`step` 属性"
 short-title: step
 slug: Web/HTML/Reference/Attributes/step
 l10n:

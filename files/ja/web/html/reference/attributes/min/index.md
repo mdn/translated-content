@@ -1,5 +1,5 @@
 ---
-title: "`min` 属性 (HTML)"
+title: "`min` 属性"
 short-title: min
 slug: Web/HTML/Reference/Attributes/min
 l10n:

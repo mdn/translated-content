@@ -1,5 +1,5 @@
 ---
-title: HTML `<big>` 大きめのテキスト要素
+title: "`<big>` 大きめのテキスト要素"
 short-title: <big>
 slug: Web/HTML/Reference/Elements/big
 l10n:

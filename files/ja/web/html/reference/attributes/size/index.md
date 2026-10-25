@@ -1,5 +1,5 @@
 ---
-title: "`size` 属性 (HTML)"
+title: "`size` 属性"
 short-title: size
 slug: Web/HTML/Reference/Attributes/size
 l10n:

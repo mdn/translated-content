@@ -1,5 +1,5 @@
 ---
-title: HTML `<ins>` 挿入テキスト要素
+title: "`<ins>` 挿入テキスト要素"
 short-title: <ins>
 slug: Web/HTML/Reference/Elements/ins
 l10n:

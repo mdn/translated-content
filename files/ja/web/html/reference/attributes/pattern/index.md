@@ -1,5 +1,5 @@
 ---
-title: "`pattern` 属性 (HTML)"
+title: "`pattern` 属性"
 short-title: pattern
 slug: Web/HTML/Reference/Attributes/pattern
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: HTML `<frame>` フレーム要素
+title: "`<frame>` フレーム要素"
 short-title: <frame>
 slug: Web/HTML/Reference/Elements/frame
 l10n:

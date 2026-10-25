@@ -1,5 +1,5 @@
 ---
-title: HTML `<input type="time">` 属性値
+title: '`<input type="time">` 属性値'
 short-title: <input type="time">
 slug: Web/HTML/Reference/Elements/input/time
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "`capture` 属性 (HTML)"
+title: "`capture` 属性"
 short-title: capture
 slug: Web/HTML/Reference/Attributes/capture
 l10n:

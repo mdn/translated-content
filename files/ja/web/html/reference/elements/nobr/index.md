@@ -1,5 +1,5 @@
 ---
-title: HTML `<nobr>` 無改行テキスト要素
+title: "`<nobr>` 無改行テキスト要素"
 short-title: <nobr>
 slug: Web/HTML/Reference/Elements/nobr
 l10n:
