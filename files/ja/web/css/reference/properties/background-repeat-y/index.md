@@ -1,9 +1,12 @@
 ---
-title: background-repeat-y
+title: "`background-repeat-y` プロパティ (CSS)"
+short-title: background-repeat-y
 slug: Web/CSS/Reference/Properties/background-repeat-y
 l10n:
-  sourceCommit: 739c9994ad2e83809110f601d8941f61d6785f29
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
+
+{{SeeCompatTable}}
 
 **`background-repeat-y`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景画像を垂直軸方向にどのように反復表示するか、それとも反復しないかを設定します。
 
@@ -161,8 +164,8 @@ div {
       content: "このブラウザーは `background-repeat-x` プロパティに対応していません。";
       background-color: wheat;
       display: block;
-      padding: 1em;
       text-align: center;
+      padding: 1rem 0;
     }
   }
 }
