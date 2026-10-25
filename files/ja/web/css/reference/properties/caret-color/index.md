@@ -1,11 +1,14 @@
 ---
-title: caret-color
+title: "`caret-color` プロパティ (CSS)"
+short-title: caret-color
 slug: Web/CSS/Reference/Properties/caret-color
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
-**`caret-color`** は CSS のプロパティで、次に入力された文字が挿入される位置を示す可視マーカーである**入力キャレット**の色を設定します。これは**テキスト入力カーソル**と呼ばれることもあります。これは挿入位置に現れる目印であり、次に入力される文字が追加されるか、または次に削除される文字が除去される位置を示します。
+**`caret-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、次に入力された文字が挿入される位置を示す可視マーカーである**入力キャレット**の色を設定します。これは**テキスト入力カーソル**と呼ばれることもあります。これは挿入位置に現れる目印であり、次に入力される文字が追加されるか、または次に削除される文字が除去される位置を示します。
+
+`caret-color` プロパティは {{cssxref("caret")}} 一括指定プロパティの一部として設定することもできます。
 
 {{InteractiveExample("CSS デモ: caret-color")}}
 
@@ -59,6 +62,8 @@ caret-color: unset;
 ```
 
 ### 値
+
+このプロパティは、以下のリストから 1 つの値を指定します。
 
 - `auto`
   - : 一般的に [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) に解決します。これは変更されるテキストの {{cssxref("color")}} です。
