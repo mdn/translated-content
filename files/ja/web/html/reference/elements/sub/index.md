@@ -1,5 +1,5 @@
 ---
-title: HTML `<sub>` 下付き文字要素
+title: "`<sub>` 下付き文字要素"
 short-title: <sub>
 slug: Web/HTML/Reference/Elements/sub
 l10n:

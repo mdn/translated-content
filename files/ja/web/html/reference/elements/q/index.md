@@ -1,5 +1,5 @@
 ---
-title: HTML `<q>` インライン引用要素
+title: "`<q>` インライン引用要素"
 short-title: <q>
 slug: Web/HTML/Reference/Elements/q
 l10n:

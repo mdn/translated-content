@@ -1,5 +1,5 @@
 ---
-title: "`maxlength` 属性 (HTML)"
+title: "`maxlength` 属性"
 short-title: maxlength
 slug: Web/HTML/Reference/Attributes/maxlength
 l10n:

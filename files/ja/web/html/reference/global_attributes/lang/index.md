@@ -1,5 +1,5 @@
 ---
-title: "`lang` グローバル属性 (HTML)"
+title: "`lang` グローバル属性"
 short-title: lang
 slug: Web/HTML/Reference/Global_attributes/lang
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: HTML `<input type="month">` 属性値
+title: '`<input type="month">` 属性値'
 short-title: <input type="month">
 slug: Web/HTML/Reference/Elements/input/month
 l10n:

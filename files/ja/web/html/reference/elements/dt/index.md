@@ -1,5 +1,5 @@
 ---
-title: HTML `<dt>` 説明用語要素
+title: "`<dt>` 説明用語要素"
 short-title: <dt>
 slug: Web/HTML/Reference/Elements/dt
 l10n:

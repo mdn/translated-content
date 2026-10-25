@@ -1,5 +1,5 @@
 ---
-title: HTML `<bdo>` 双方向文字列上書き要素
+title: "`<bdo>` 双方向文字列上書き要素"
 short-title: <bdo>
 slug: Web/HTML/Reference/Elements/bdo
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: HTML `<div>` コンテンツ区分要素
+title: "`<div>` コンテンツ区分要素"
 short-title: <div>
 slug: Web/HTML/Reference/Elements/div
 l10n:

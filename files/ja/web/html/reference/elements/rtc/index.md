@@ -1,5 +1,5 @@
 ---
-title: HTML `<rtc>` ルビテキストコンテナー要素
+title: "`<rtc>` ルビテキストコンテナー要素"
 short-title: <rtc>
 slug: Web/HTML/Reference/Elements/rtc
 l10n:

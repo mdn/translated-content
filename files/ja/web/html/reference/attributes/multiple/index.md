@@ -1,5 +1,5 @@
 ---
-title: "`multiple` 属性 (HTML)"
+title: "`multiple` 属性"
 short-title: multiple
 slug: Web/HTML/Reference/Attributes/multiple
 l10n:

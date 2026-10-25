@@ -1,5 +1,5 @@
 ---
-title: HTML `<script type="importmap">` 属性値
+title: '`<script type="importmap">` 属性値'
 short-title: importmap
 slug: Web/HTML/Reference/Elements/script/type/importmap
 l10n:

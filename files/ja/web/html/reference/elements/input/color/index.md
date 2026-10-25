@@ -1,5 +1,5 @@
 ---
-title: HTML `<input type="color">` 属性値
+title: '`<input type="color">` 属性値'
 short-title: <input type="color">
 slug: Web/HTML/Reference/Elements/input/color
 l10n:

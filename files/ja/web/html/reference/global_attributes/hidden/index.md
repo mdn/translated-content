@@ -1,5 +1,5 @@
 ---
-title: "`hidden` グローバル属性 (HTML)"
+title: "`hidden` グローバル属性"
 short-title: hidden
 slug: Web/HTML/Reference/Global_attributes/hidden
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: HTML `<form>` フォーム要素
+title: "`<form>` フォーム要素"
 short-title: <form>
 slug: Web/HTML/Reference/Elements/form
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: HTML `<acronym>` 頭字語または略語要素
+title: "`<acronym>` 頭字語または略語要素"
 short-title: <acronym>
 slug: Web/HTML/Reference/Elements/acronym
 l10n:

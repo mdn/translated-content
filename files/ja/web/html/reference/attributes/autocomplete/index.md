@@ -1,5 +1,5 @@
 ---
-title: "`autocomplete` 属性 (HTML)"
+title: "`autocomplete` 属性"
 short-title: autocomplete
 slug: Web/HTML/Reference/Attributes/autocomplete
 l10n:

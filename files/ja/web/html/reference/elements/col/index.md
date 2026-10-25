@@ -1,5 +1,5 @@
 ---
-title: HTML `<col>` 表の列要素
+title: "`<col>` 表の列要素"
 short-title: <col>
 slug: Web/HTML/Reference/Elements/col
 l10n:

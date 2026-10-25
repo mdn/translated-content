@@ -1,5 +1,5 @@
 ---
-title: "`id` グローバル属性 (HTML)"
+title: "`id` グローバル属性"
 short-title: id
 slug: Web/HTML/Reference/Global_attributes/id
 l10n:

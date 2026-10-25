@@ -1,5 +1,5 @@
 ---
-title: HTML `<rp>` ルビの代替表示用括弧要素
+title: "`<rp>` ルビの代替表示用括弧要素"
 short-title: <rp>
 slug: Web/HTML/Reference/Elements/rp
 l10n:

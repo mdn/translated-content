@@ -1,5 +1,5 @@
 ---
-title: HTML `<ol>` 順序付きリスト要素
+title: "`<ol>` 順序付きリスト要素"
 short-title: <ol>
 slug: Web/HTML/Reference/Elements/ol
 l10n:

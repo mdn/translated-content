@@ -1,5 +1,5 @@
 ---
-title: HTML `<object>` 外部オブジェクト要素
+title: "`<object>` 外部オブジェクト要素"
 short-title: <object>
 slug: Web/HTML/Reference/Elements/object
 l10n:

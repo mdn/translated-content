@@ -1,5 +1,5 @@
 ---
-title: "`<del>` 削除済みテキスト要素 (HTML)"
+title: "`<del>` 削除済みテキスト要素"
 short-title: <del>
 slug: Web/HTML/Reference/Elements/del
 l10n:

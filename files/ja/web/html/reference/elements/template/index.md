@@ -1,5 +1,5 @@
 ---
-title: "`<template>` コンテンツテンプレート要素 (HTML)"
+title: "`<template>` コンテンツテンプレート要素"
 short-title: <template>
 slug: Web/HTML/Reference/Elements/template
 l10n:

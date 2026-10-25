@@ -1,5 +1,5 @@
 ---
-title: HTML `<meta name="color-scheme">` 属性値
+title: '`<meta name="color-scheme">` 属性値'
 short-title: color-scheme
 slug: Web/HTML/Reference/Elements/meta/name/color-scheme
 l10n:
