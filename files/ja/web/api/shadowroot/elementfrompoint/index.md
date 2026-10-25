@@ -3,7 +3,7 @@ title: "ShadowRoot: elementFromPoint() メソッド"
 short-title: elementFromPoint()
 slug: Web/API/ShadowRoot/elementFromPoint
 l10n:
-  sourceCommit: f77236a72e479b61c6b1cb6059c9ae1e90f4c7cd
+  sourceCommit: 730741c750cc299b85798f1adbaf7adbd6e2016d
 ---
 
 {{APIRef("DOM")}}{{Non-standard_Header}}

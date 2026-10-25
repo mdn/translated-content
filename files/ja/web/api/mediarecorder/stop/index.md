@@ -3,7 +3,7 @@ title: "MediaRecorder: stop() メソッド"
 short-title: stop()
 slug: Web/API/MediaRecorder/stop
 l10n:
-  sourceCommit: 0ca31f3b72e94b4b107c45ac6216071e486cac0a
+  sourceCommit: 78039f57d12515cd2f97af490a5ec736d228c431
 ---
 
 {{APIRef("MediaStream Recording")}}
