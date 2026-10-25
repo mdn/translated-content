@@ -1,11 +1,12 @@
 ---
-title: background-repeat
+title: "`background-repeat` プロパティ (CSS)"
+short-title: background-repeat
 slug: Web/CSS/Reference/Properties/background-repeat
 l10n:
-  sourceCommit: 1b3165b1717bbd0bfc1c90ad68c80a84e0b4fc8c
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-**`background-repeat`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景画像をどのように反復するかを設定します。背景画像は水平軸方向と垂直軸方向に繰り返したり、まったく反復しないようにしたりすることができます。
+**`background-repeat`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、背景画像をどのように反復するかを設定します。背景画像は水平軸方向と垂直軸方向に繰り返したり、まったく反復しないようにしたりすることができます。
 
 {{InteractiveExample("CSS デモ: background-repeat")}}
 
@@ -47,6 +48,13 @@ background-repeat: space repeat;
   min-height: 100%;
 }
 ```
+
+## 構成要素のプロパティ
+
+このプロパティは以下の CSS プロパティの一括指定です。
+
+- {{cssxref("background-repeat-x")}}
+- {{cssxref("background-repeat-y")}}
 
 ## 構文
 
