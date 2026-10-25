@@ -1,8 +1,9 @@
 ---
-title: contain-intrinsic-block-size
+title: "`contain-intrinsic-block-size` プロパティ (CSS)"
+short-title: contain-intrinsic-block-size
 slug: Web/CSS/Reference/Properties/contain-intrinsic-block-size
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 **`contain-intrinsic-block-size`** は [CSS](/ja/docs/Web/CSS) の[論理プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)で、要素が[サイズ抑制](/ja/docs/Web/CSS/Guides/Containment/Using#サイズ抑制)の対象となっている場合に、ブラウザーがレイアウトに使用することができる要素のブロックサイズを定義します。
