@@ -46,7 +46,7 @@ l10n:
 
 `checkbox` の子要素はプレゼンテーション要素であるため、次のコードは以下と同等です。
 
-```html
+```html-nolint
 <div role="checkbox"><h6 role="presentation">このチェックボックスの名前</h6></div>
 ```
 
