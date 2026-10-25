@@ -62,7 +62,6 @@ ARIA の `listitem` ロールは、項目のリスト内の項目を識別する
 > [!NOTE]
 > CSS で `list-style: none;` を指定してリストのスタイル設定を行うと、リストの意味づけが除去されます。`role="listitem"` を追加すると、意味づけが復元されます。
 
-
 > [!NOTE]
 > タブ付きインターフェイスとして機能する項目のリストをマークアップする場合は、代わりに [`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)、[`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role)、[`tablist`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role) の各ロールを使用するべきです。
 
