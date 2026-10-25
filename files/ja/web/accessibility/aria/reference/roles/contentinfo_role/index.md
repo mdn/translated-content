@@ -85,9 +85,8 @@ l10n:
     <!-- 記事のコンテンツ -->
     <footer aria-label="毎日パッタイのメタデータ">
       <p>
-        <a href="#">リサ</a>によって <time datetime="2021-09-23 12:17"
-          >9 月 23 日</time
-        >に投稿されました。
+        <a href="#">リサ</a>によって
+        <time datetime="2021-09-23 12:17">9 月 23 日</time>に投稿されました。
       </p>
     </footer>
   </article>
