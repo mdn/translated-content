@@ -152,7 +152,7 @@ Cache-Control: no-cache
 Cache-Control: max-age=604800, must-revalidate
 ```
 
-HTTP では、キャッシュがオリジンサーバーから切り離されたときに、[古いレスポンス](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)を再利用できます。 `must-revalidate` はそれを防ぐための方法で、キャッシュは保存されたレスポンスを元のサーバーで再検証するか、それが検証不可能な場合は 504 (Gateway Timeout) のレスポンスを生成します。
+HTTP では、キャッシュがオリジンサーバーから切り離されたときに、[古いレスポンス](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)を再利用できます。 `must-revalidate` はそれを防ぐための方法で、キャッシュは保存されたレスポンスをオリジンサーバーで再検証するか、それが検証不可能な場合は 504 (Gateway Timeout) のレスポンスを生成します。
 
 > [!NOTE]
 > `must-revalidate` ディレクティブは、<kbd>戻る</kbd>ボタンなどを使用した履歴ナビゲーションにおける再検証を保証するものではありません。
@@ -335,7 +335,7 @@ Cache-Control: max-stale=3600
 
 #### `min-fresh`
 
-リクエストディレクティブの `min-fresh` は、クライアントが少なくとも _N_ 秒間[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)な保存されたレスポンスを許可することを示します。
+`min-fresh=N` リクエストディレクティブは、この先少なくとも _N_ 秒間は[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)なままである保存されたレスポンスであれば、クライアントが受け入れることを示します。
 
 ```http
 Cache-Control: min-fresh=600
