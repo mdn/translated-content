@@ -56,6 +56,7 @@ The review teams for each locale are:
   - [JuanVqz](https://github.com/JuanVqz)
   - [Graywolf9](https://github.com/Graywolf9)
   - [mariomorillo](https://github.com/mariomorillo)
+  - [GNUXDAR](https://github.com/GNUXDAR)
 
 ---
 
