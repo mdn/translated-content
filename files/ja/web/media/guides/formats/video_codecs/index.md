@@ -1,12 +1,9 @@
 ---
 title: ウェブ動画コーデックガイド
 slug: Web/Media/Guides/Formats/Video_codecs
-original_slug: Web/Media/Formats/Video_codecs
 l10n:
-  sourceCommit: bea339d321513fc6d66d95c8f0305b9387fa57bb
+  sourceCommit: 64d995ef99a84226348832ed398e9edc7809e53e
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Media")}}
 
 このガイドでは、ウェブ上で使用する可能性の高い、または使用を検討している動画コーデックを紹介し、その機能の概要と互換性や有用性に関する懸念、そして自分のプロジェクトの動画に適したコーデックを選ぶためのアドバイスを提供します。
 
@@ -151,7 +148,7 @@ l10n:
     <tr>
       <th scope="row">フレームレート</th>
       <td>
-        主に、画像内の動きの滑らかさの知覚に影響を与えます。この点については、フレームレートが高いほど、動きはより滑らかでリアルに現れます。最終的には、この点を返すようになります。詳細は下記の<a href="#reduced_frame_rate">フレームレート</a>を参照してください。
+        主に、画像内の動きの滑らかさの知覚に影響を与えます。この点については、フレームレートが高いほど、動きはより滑らかでリアルに現れます。最終的には、この点を返すようになります。詳細は下記の<a href="#フレームレートの縮小化">フレームレート</a>を参照してください。
       </td>
       <td>
         エンコード時にフレームレートを下げないことを想定すると、フレームレートが高いほど圧縮された動画サイズは大きくなります。
@@ -264,7 +261,7 @@ l10n:
         </p>
       </td>
       <td>
-        <a href="moire-pattern.jpg"><img alt="モアレ模様により波のような渦巻きを示すレンガ壁" src="moire-pattern.jpg" /></a>
+        <img alt="モアレ模様により波のような渦巻きを示すレンガ壁" src="moire-pattern.jpg" />
       </td>
     </tr>
     <tr>
@@ -275,11 +272,8 @@ l10n:
         </p>
       </td>
       <td>
-        <a href="staircase-effect.jpg"
-          ><img alt="
-          階段効果を発生させるエイリアシングにより、斜め線が階段のように見える写真
-          " src="staircase-effect.jpg"
-        /></a>
+        <img alt="階段効果を発生させるエイリアシングにより、斜め線が階段のように見える写真"
+        src="staircase-effect.jpg" />
       </td>
     </tr>
     <tr>
@@ -290,9 +284,7 @@ l10n:
         </p>
       </td>
       <td>
-        <a href="stroboscopic-effect.gif"
-          ><img alt="エイリアシングによる車輪の回転で、ワゴンホイール効果が発生します。" src="stroboscopic-effect.gif"
-        /></a>
+        <img alt="エイリアシングによる車輪の回転で、ワゴンホイール効果が発生します。" src="stroboscopic-effect.gif" />
       </td>
     </tr>
   </tbody>
@@ -426,9 +418,8 @@ AV1 は現在 3 つのプロファイルを提供しています。**メイン**
 
 例えば、 AV1 レベル 2.0 は最大フレーム幅 2048 ピクセル、最大フレーム高さ 1152 ピクセルですが、ピクセル単位の最大フレームサイズは 147456 なので、実際にはレベル 2.0 で 2048x1152 の動画にすることはできません。ただし、少なくとも Firefox と Chrome では、ソフトウェアデコードを実行するときにレベルは実際には無視され、デコーダーは指定された集合を与えられた動画を再生するために最善を尽くすだけであることはメモしておく必要があります。しかし、今後の互換性のために、選んだレベルの範囲内にとどめるべきです。
 
-現時点での AV1 の最大の欠点は、とても新しく、ほとんどのブラウザーに対応するのがまだ途中であることです。また、エンコーダーやデコーダーはまだ性能の最適化が行われておらず、ハードウェアのエンコーダーやデコーダーはまだほとんど開発中で、生産されていません。このため、動画を AV1 形式にエンコードする際には、すべての作業をソフトウェアで行うため、とても長い時間を要します。
-
-これらのことから、当分の間、 AV1 は動画コーデックの最初の選択肢にはなりませんが、将来的に使用する準備が整うのを見守る必要があります。
+AV1 はすべてのブラウザーで対応していますが、Safari での対応はハードウェアデコーダーを搭載した端末に限定されています。
+具体的には、M3 搭載の MacBook 以降、iPhone 15 Pro、iPhone 16 以降です。多くのモバイル端末やデスクトップ端末がハードウェアデコーダーを搭載しているため、AV1 はウェブ上で動画を配信する上で優れた選択肢であり、旧型の Apple 端末向けには代替手段も用意されています。
 
 <table class="standard-table">
   <tbody>
@@ -522,14 +513,17 @@ AV1 は現在 3 つのプロファイルを提供しています。**メイン**
             <tr>
               <th scope="row">AV1 対応</th>
               <td>70</td>
-              <td>75</td>
+              <td>121</td>
               <td>67</td>
               <td>113</td>
               <td>57</td>
-              <td>17</td>
+              <td>17<sup>*</sup></td>
             </tr>
           </tbody>
         </table>
+        <p>
+          <sup>*</sup> Safari は、M3 MacBook 以降、iPhone 15 Pro、iPhone 16 以降で AV1 に対応しています。
+        </p>
       </td>
     </tr>
     <tr>
@@ -578,9 +572,9 @@ AVC はまた、同じシーンの複数のビュー (Multiview Video Coding) �
 
 しかし、 AVC は専有的な形式であり、その技術に関しては複数の当事者によって多数の特許が所有されています。 AVC 形式のメディアを商業的に使用するにはライセンスが必要ですが、 Via LA パテントプールでは、エンドユーザーが無料で使用する限り、 AVC 形式のインターネット動画のストリーミングにはライセンス料を要求していません。
 
-ウェブ ブラウザー以外のウェブ RTC の実装（JavaScript API を記載していない実装）は、ウェブ RTC 呼び出しのコーデックとして AVC に対応することが必須です。ウェブブラウザーは必須ではありませんが、一部のブラウザーは対応しています。
+ウェブブラウザー以外のウェブ RTC の実装（JavaScript API を記載していない実装）は、ウェブ RTC 呼び出しのコーデックとして AVC に対応することが必須です。ウェブブラウザーは必須ではありませんが、一部のブラウザーは対応しています。
 
-ウェブブラウザーの HTML コンテンツでは、AVC は広く互換性があり、多くのプラットフォームが AVC メディアのハードウェアエンコードとデコードに対応しています。しかし、自分のプロジェクトで AVC を使用することを選ぶ前に、その[ライセンス要件](https://www.via-la.com/licensing-2/avc-h-264/)に注意してください。
+ウェブブラウザーの HTML コンテンツでは、AVC は広く互換性があり、多くのプラットフォームが AVC メディアのハードウェアエンコードとデコードに対応しています。しかし、自分のプロジェクトで AVC を使用することを選ぶ前に、その[ライセンス要件](https://www.via-la.com/licensing-programs/avc-h-264/)に注意してください。
 
 <table class="standard-table">
   <tbody>
@@ -720,7 +714,7 @@ AVC はまた、同じシーンの複数のビュー (Multiview Video Coding) �
     <tr>
       <th scope="row">ライセンス</th>
       <td>
-        多数の特許を有する独占的なものです。商用利用する場合は<a href="https://www.via-la.com/licensing-2/avc-h-264/"
+        多数の特許を有する独占的なものです。商用利用する場合は<a href="https://www.via-la.com/licensing-programs/avc-h-264/"
           >ライセンスが必要</a
         >です。複数のパテントプールが適用される場合があるので注意。
       </td>
@@ -847,13 +841,13 @@ H.263 は独占的な形式で、Telenor, Fujitsu, Motorola, Samsung, Hitachi, P
 
 ### HEVC (H.265)
 
-**[高効率動画コーデック](http://hevc.info/)** (**HEVC**) は、ITU の H.265 と MPEG-H Part 2 (MPEG-4 に続く、まだ開発中のもの) によって定義されています。HEVC は、非常に高い解像度（8K 動画を含む）を含むサイズの動画の効率的なエンコードとデコードに対応するように設計されており、ソフトウェアが現代のプロセッサーの利点を生かすために特別に設計された構造になっています。理論的には、HEVC は [AVC](#avc_h.264) の半分の圧縮ファイルサイズで、同等の画像品質を実現することができます。
+**高効率動画コーデック** (**HEVC**) は、ITU の H.265 と MPEG-H Part 2 (MPEG-4 に続く、まだ開発中のもの) によって定義されています。HEVC は、非常に高い解像度（8K 動画を含む）を含むサイズの動画の効率的なエンコードとデコードに対応するように設計されており、ソフトウェアが現代のプロセッサーの利点を生かすために特別に設計された構造になっています。理論的には、HEVC は [AVC](#avc_h.264) の半分の圧縮ファイルサイズで、同等の画像品質を実現することができます。
 
 例えば、以前のコーデックで使用されていたマクロブロックと同様に、それぞれの符号化木単位 (CTU) は、各サンプルのルマ値の木と、同じ符号化木単位で使用される各クロマサンプルのクロマ値の木、および必要な構文要素から構成されています。この構造により、複数のコアで容易に処理できるよう対応されています。
 
 HEVC の興味深い機能は、メインプロファイルが 4:2:0 のクロマサブサンプリングで 8 ビット/成分色のみを対応していることです。また、4:4:4動画が特別に処理される点も興味深い点です。ルマサンプル（画像のピクセルをグレースケールで表現）とCb、Crサンプル（グレーをどのように変化させて色のピクセルを作成するかを示す）を保有する代わりに、3チャンネルを各色ごとに3つのモノクロ画像として扱い、それをレンダリング時に合成してフルカラー画像を作成します。
 
-HEVCは独占的な形式で、多くの特許で保護されています。ライセンスは [Via LA によって管理](https://www.via-la.com/licensing-2/hevc-vvc/)され、料金はコンテンツ制作者や配信者ではなく、開発者に請求されます。アプリやウェブサイトで HEVC を使用するかどうかを決める前に、最新のライセンス条項と要件を必ず確認してください。
+HEVC は独占的な形式で、多くの特許で保護されています。ライセンスは [Via LA によって管理](https://www.via-la.com/licensing-programs/hevc-vvc/)され、料金はコンテンツ制作者や配信者ではなく、開発者に請求されます。アプリやウェブサイトで HEVC を使用するかどうかを決める前に、最新のライセンス条項と要件を必ず確認してください。
 
 <table class="standard-table">
   <tbody>
@@ -967,16 +961,23 @@ HEVCは独占的な形式で、多くの特許で保護されています。ラ�
               <th scope="row">HEVC / H.265 対応</th>
               <td>107</td>
               <td>18</td>
-              <td>なし</td>
+              <td>120</td>
               <td>94</td>
               <td>11</td>
             </tr>
           </tbody>
         </table>
         <p>Chrome は、ハードウェアコーデックを備えた Windows 8 以降、Linux、ChromeOS 端末、およびすべての macOS Big Sur+ および Android 5.0 以降の端末で HEVC に対応します。 </p>
-        <p>Edge (Chromium) は、ハードウェアコーデックを備えた Windows 10 1709 以降の端末で、<a href="https://apps.microsoft.com/store/detail/hevc-video-extension/9NMZLZ57R3T7">Microsoft Store から HEVC 動画拡張機能</a>をインストールした場合に対応します。他のプラットフォームにおける Chrome と同様の対応状況となります。Edge（レガシー）は、ハードウェアデコーダーのある端末でのみ HEVC に対応しています。
+        <p>Edge (Chromium) は、ハードウェアコーデックを備えた Windows 10 1709 以降の端末で、<a href="https://apps.microsoft.com/detail/9nmzlz57r3t7">Microsoft Store から HEVC 動画拡張機能</a>をインストールした場合に対応します。他のプラットフォームにおける Chrome と同様の対応状況となります。Edge（レガシー）は、ハードウェアデコーダーのある端末でのみ HEVC に対応しています。
         </p>
-        <p>HEVC は特許で保護されているため、Mozilla は HEVC に対応していません。</p>
+        <p>Firefox は次のバージョンで HEVC が利用できます。
+          <ul>
+            <li>Windows では、Firefox 134 からのハードウェア（対応している端末上で、範囲は Edge と同じ）またはソフトウェア（Windows では、ユーザーが拡張機能を有料で購入してインストールしなければならない）のどちらかで利用できます。</li>
+            <li>macOS では Firefox 136 から、ハードウェアとソフトウェアのどちらかで利用できます。</li>
+            <li>Linux では Firefox 137 から、ハードウェアとソフトウェアのどちらかで（システムの ffmpeg により）利用できます。</li>
+            <li>Android では Firefox 137 から、ハードウェアのみで利用できます。</li>
+          </ul>
+        </p>
         <p>Opera およびその他の Chromium ベースのブラウザーは、Chrome と同じ対応状況です。</p>
         <p>Safari は、macOS High Sierra 以降のすべての端末で HEVC に対応しています。</p>
       </td>
@@ -994,7 +995,28 @@ HEVCは独占的な形式で、多くの特許で保護されています。ラ�
         {{Glossary("RTP")}} /
         <a href="/ja/docs/Web/API/WebRTC_API">WebRTC</a> 互換
       </th>
-      <td>なし</td>
+      <td>
+        <table class="standard-table">
+          <tbody>
+            <tr>
+              <th scope="row">機能</th>
+              <th scope="col">Chrome</th>
+              <th scope="col">Edge</th>
+              <th scope="col">Firefox</th>
+              <th scope="col">Opera</th>
+              <th scope="col">Safari</th>
+            </tr>
+            <tr>
+              <th scope="row">HEVC / H.265 対応</th>
+              <td>136</td>
+              <td>136</td>
+              <td>なし</td>
+              <td>121</td>
+              <td>なし</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
     </tr>
     <tr>
       <th scope="row">サポート/管理組織</th>
@@ -1007,7 +1029,7 @@ HEVCは独占的な形式で、多くの特許で保護されています。ラ�
       <th scope="row">仕様書</th>
       <td>
         <a href="https://www.itu.int/rec/T-REC-H.265"
-          >http://www.itu.int/rec/T-REC-H.265</a
+          >https://www.itu.int/rec/T-REC-H.265</a
         ><br /><a href="https://www.iso.org/standard/69668.html"
           >https://www.iso.org/standard/69668.html</a
         >
@@ -1016,7 +1038,7 @@ HEVCは独占的な形式で、多くの特許で保護されています。ラ�
     <tr>
       <th scope="row">ライセンス</th>
       <td>
-        独占的であり、<a href="https://www.via-la.com/licensing-2/hevc-vvc/"
+        独占的であり、<a href="https://www.via-la.com/licensing-programs/hevc-vvc/"
           >ライセンス要件</a
         >を満たしていることを確認してください。複数のパテントプールが適用される場合がありますので、ご注意ください。
       </td>
@@ -1045,7 +1067,7 @@ HEVCは独占的な形式で、多くの特許で保護されています。ラ�
     <tr>
       <th scope="row">圧縮</th>
       <td>
-        Lossy
+        非可逆
         <a href="https://ja.wikipedia.org/wiki/%E9%9B%A2%E6%95%A3%E3%82%B3%E3%82%B5%E3%82%A4%E3%83%B3%E5%A4%89%E6%8F%9B"
           >DCT ベースのアルゴリズム</a
         >
@@ -1053,7 +1075,7 @@ HEVCは独占的な形式で、多くの特許で保護されています。ラ�
     </tr>
     <tr>
       <th scope="row">対応しているフレームサイズ</th>
-      <td>Up to 4,096 x 4,096 pixels</td>
+      <td>4,096 x 4,096 ピクセルまで</td>
     </tr>
     <tr>
       <th scope="row">対応しているカラーモード</th>
@@ -1126,9 +1148,9 @@ HEVCは独占的な形式で、多くの特許で保護されています。ラ�
       <th scope="row">ライセンス</th>
       <td>
         独占的。
-        <a href="https://www.via-la.com/licensing-2/mpeg-4-visual/"
+        <a href="https://www.via-la.com/licensing-programs/mpeg-4-visual/"
           >ライセンスの取得</a
-        >は、 <a href="https://www.via-la.com/">MPEG LA</a> や <a href="https://about.att.com/innovation/ip/patents"
+        >は、 <a href="https://www.via-la.com/">Via LA</a> や <a href="https://about.att.com/innovation/ip/patents"
           >AT&#x26;T</a
         > から必要に応じて
       </td>
@@ -1146,7 +1168,7 @@ MPEG-2 デコーダーで MPEG-1 動画も再生できるため、様々なソ�
   <tbody>
     <tr>
       <th scope="row">対応しているビットレート</th>
-      <td>Up to 1.5 Mbps</td>
+      <td>1.5 Mbps まで</td>
     </tr>
     <tr>
       <th scope="row">対応しているフレームレート</th>
@@ -1252,7 +1274,7 @@ MPEG-2 には、異なる形で利用できるいくつかのプロファイル�
   <tbody>
     <tr>
       <th scope="row">対応しているビットレート</th>
-      <td>Up to 100 Mbps; レベルによって異なる profile</td>
+      <td>100 Mbps まで。レベルとプロファイルによって異なる</td>
     </tr>
     <tr>
       <th scope="row">対応しているフレームレート</th>
@@ -1376,8 +1398,7 @@ MPEG-2 には、異なる形で利用できるいくつかのプロファイル�
     <tr>
       <th scope="row">コンテナーの対応</th>
       <td>
-        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpegmpeg-2">MPEG</a>, MPEG-TS (MPEG Transport Stream), <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4">MP4</a>, <a href="/ja/docs/Web/Media/Guides/Formats/Containers#quicktime"
-          >QuickTime</a>
+        <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpegmpeg-2">MPEG</a>, MPEG-TS (MPEG Transport Stream), <a href="/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4">MP4</a>, <a href="/ja/docs/Web/Media/Guides/Formats/Containers#quicktime">QuickTime</a>
       </td>
     </tr>
     <tr>
@@ -1402,7 +1423,8 @@ MPEG-2 には、異なる形で利用できるいくつかのプロファイル�
     <tr>
       <th scope="row">ライセンス</th>
       <td>
-        独占的。 2024 年 10 月 1 日時点でマレーシアを除く全世界ですべての特許が失効しているため、マレーシアでは MPEG-2 を自由に使用することができます。特許は <a href="https://www.via-la.com/licensing-2/mpeg-2/">Via LA</a> がライセンスしています。
+        独占的。 2024 年 10 月 1 日時点でマレーシアを除く全世界ですべての特許が失効しているため、マレーシア以外では MPEG-2 を自由に使用することができます。
+        特許は <a href="https://www.via-la.com/licensing-programs/mpeg-2/">Via LA</a> がライセンスしています。
       </td>
     </tr>
   </tbody>
@@ -1420,7 +1442,7 @@ Theora は元々 On2 Technologies の VC3 コーデックをベースにして�
 
 Theora の欠点は、色成分あたり 8 ビットしか対応していないことで、カラーバンディングを避けるために 10 ビット以上を使用するオプションはありません。とはいえ、 8 ビット/成分は現在でも最も一般的に使用されている色形式なので、ほとんどの用途で不便に感じることはないでしょう。また、 Theora は Ogg コンテナーでのみ使用することができます。しかし、最大の欠点は、 Safari が対応していないことです。そのため、 Theora は macOS だけでなく、何百万台もの iPhone や iPad でも利用することができません。
 
-[Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/) は、 Theora と、その中で使用される Ogg コンテナー形式について、さらなる詳細を提供しています。
+[Theora Cookbook](https://archive.flossmanuals.net/ogg-theora/) は、 Theora と、その中で使用される Ogg コンテナー形式について、さらなる詳細を提供しています。
 
 <table class="standard-table">
   <tbody>
@@ -1533,11 +1555,9 @@ Theora の欠点は、色成分あたり 8 ビットしか対応していない�
 
 **Video Processor 8** (**VP8**) コーデックは、当初 On2 Technologies 社によって作成されました。 On2 の購入に従うことで、 Google は関連する特許を行使しないことを約束し、オープンかつロイヤリティフリーの動画形式として VP8 をリリースしました。品質と圧縮率の点で、 VP8 は [AVC](#avc_h.264) に匹敵します。
 
-ブラウザーが対応している場合、 VP8 ではアルファチャンネルを持つ動画を再生でき、それぞれのピクセルのアルファ成分で指定した程度まで背景が透けて見えるようにすることができます。
+ブラウザーが対応している場合、 VP8 ではアルファチャンネルを持つ動画を再生でき、それぞれのピクセルのアルファ成分で指定した程度まで背景が透けて見えるようにすることができます。Safari は、VP8 動画のアルファ透過に対応していません。
 
 VP8 のブラウザーの対応は、 HTML コンテンツ、特に [WebM](/ja/docs/Web/Media/Guides/Formats/Containers#webm) ファイル内では良好です。
-このため、 VP8 はコンテンツの有力な候補となりますが、利用できるのであれば VP9 がより望ましい選択となります。
-ウェブブラウザーは、 WebRTC のために VP8 に対応している必要がありますが、対応しているすべてのブラウザーが HTML の audio おｙび video 要素で VP8 に対応しているわけではありません。
 
 <table class="standard-table">
   <tbody>
@@ -1577,9 +1597,7 @@ VP8 のブラウザーの対応は、 HTML コンテンツ、特に [WebM](/ja/d
     <tr>
       <th scope="row">ブラウザーの互換性</th>
       <td>
-        <p>Chrome、Edge、Firefox、Opera、Safari のすべてのバージョン<p>
-        <p><a href="https://webkit.org/blog/8672/on-the-road-to-webrtc-1-0-including-vp8/">iOS: Safari 12.1</a> 以降 では、 WebRTC 接続時のみ VP8 に対応しています。</p>
-        <p>Firefox は利用できる H.264 ハードウェアデコーダーがない場合のみ、MSE で VP8 に対応します。利用できるかどうかを調べるには {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}} を使用してください。</p>
+        <p>Chrome、Edge、Firefox、Opera、Safari のすべてのバージョン。ただし、Safari はアルファ透過には対応していない。<p>
       </td>
     </tr>
     <tr>
@@ -1624,10 +1642,7 @@ VP9 のメインプロファイルは、 4:2:0 のクロマサブサンプリン
 
 VP9 はブラウザーで広く対応しており、このコーデックのハードウェア実装はかなり一般的になっています。
 VP9 は [WebM](/ja/docs/Web/Media/Guides/Formats/Containers#webm) で義務づけられている 2 つの動画コーデックのうちの 1 つです（他にも [VP8](#vp8) があります）。
-ただし、 WebM と VP9 の Safari 対応はバージョン 14.1 でしか導入されていないので、 VP9 を使用することを選んだ場合は、iPhone、iPad、Mac ユーザー向けに AVC や HEVC などのフォールバック形式を提供することを検討してください。
-
-VP9 は、WebM コンテナーを使用することができる（そして、必要なときにフォールバック動画を提供することができる）場合に、良い選択肢となります。
-独占的なコーデックではなく、オープンなコーデックを使用したい場合は、特にそうです。
+ただし、Safari はこの形式のアルファ透過に対応していない点にご注意ください。
 
 <table class="standard-table">
   <tbody>
@@ -1711,11 +1726,7 @@ VP9 は、WebM コンテナーを使用することができる（そして、�
     <tr>
       <th scope="row">ブラウザーの互換性</th>
       <td>
-        <p>Chrome、Edge、Firefox、Opera、Safari のすべてのバージョン<p>
-        <p>
-          Firefox は、利用できる H.264 ハードウェアデコーダーがない場合にのみ、MSE で VP8 に対応します。 {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}} を使用して、利用できるかどうかを調べてください。
-        </p>
-        </ul>
+        <p>Chrome、Edge、Firefox、Opera、Safari のすべてのバージョン。ただし、Safari はアルファ透過には対応していない。<p>
       </td>
     </tr>
     <tr>
@@ -1762,46 +1773,29 @@ VP9 は、WebM コンテナーを使用することができる（そして、�
 
 それぞれの動画の単一のバージョンしか提供できない場合は、ニーズに合わせて最適な形式を選べます。第 1 の選択肢は、品質と、パフォーマンスと、互換性の良い組み合わせであるため推奨されます。第 2 の選択肢は、品質や、パフォーマンスや、サイズをある程度犠牲にして、最も広範な互換性のある選択肢となります。
 
-### 普段使いの動画におすすめ
+### ウェブにおすすめ
 
 まず、ブログ、情報サイト、動画が製品のデモに使用される（ただし、動画自体が製品であるわけではない）中小企業のウェブサイトなど、一般的なウェブサイトで表示される動画に最適なオプションを見てみましょう。
 
-1. **[WebM](/ja/docs/Web/Media/Guides/Formats/Containers#webm)** コンテナーで、動画には **[VP9](#vp9)** コーデック、音声には **[Opus](/ja/docs/Web/Media/Formats/Audio_codecs#opus)** コーデックを使用する方法。これらはすべてオープンでロイヤリティフリーの形式で、対応が進んでいますが、かなり最近のブラウザーでしか対応していませんので、フォールバックを使用するといいでしょう。
-
-   ```html
-   <video controls src="filename.webm"></video>
-   ```
-
-2. **[MP4](/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4)** コンテナーで、動画には **[AVC](#avc_h.264)** (**H.264**) コーデック、音声には **[AAC](/ja/docs/Web/Media/Formats/Audio_codecs#aac_advanced_audio_coding)** コーデックが理想的です。これは、 MP4 コンテナー、 AVC および AAC コーデックの組み合わせが、すべての主要なブラウザーで広く対応しているためで、その品質は、ほとんどの用途で一般的に良好です。ただし、ライセンス要件に準拠していることを確認してください。
+1. **[WebM](/ja/docs/Web/Media/Guides/Formats/Containers#webm)** コンテナーで、動画には **[VP9](#vp9)** コーデック、音声には **[Opus](/ja/docs/Web/Media/Guides/Formats/Audio_codecs#opus)** コーデックを使用する方法。これらはすべてオープンでロイヤリティフリーの形式で、対応が進んでいますが、かなり最近のブラウザーでしか対応していませんので、フォールバックを使用するといいでしょう。
 
    ```html
    <video controls>
-     <source type="video/webm" src="filename.webm" />
+     <source type="video/webm; codecs=av01,opus" src="filename.webm" />
+   </video>
+   ```
+
+2. **[MP4](/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4)** コンテナーで、動画には **[AVC](#avc_h.264)** (**H.264**) コーデック、音声には **[AAC](/ja/docs/Web/Media/Guides/Formats/Audio_codecs#aac_advanced_audio_coding)** コーデックが理想的です。これは、 MP4 コンテナー、 AVC および AAC コーデックの組み合わせが、すべての主要なブラウザーで広く対応しているためで、その品質は、ほとんどの用途で一般的に良好です。ただし、ライセンス要件に準拠していることを確認してください。
+
+   ```html
+   <video controls>
+     <source type="video/webm; codecs=av01,opus" src="filename.webm" />
      <source type="video/mp4" src="filename.mp4" />
    </video>
    ```
 
 > [!NOTE]
 > {{HTMLElement("video")}} 要素は、その中に {{HTMLElement("source")}} 要素があってもなくても、閉じタグの `</video>` が必要です。
-
-### 高画質な動画表示におすすめ
-
-可能な限り最高の品質で動画を表示することを使命とする場合、できるだけ多くの形式を提供することが好ましいと思われます。最高の品質を実現するコーデックは、最新のものである傾向があり、したがって、ブラウザーの互換性にギャップが生じる可能性が最も高くなるからです。
-
-1. WebM コンテナーで、動画に AV1、音声に Opus を使用したもの。 AV1 をエンコードする際に、 High または Professional プロファイルを使用することができれば、 6.3 などの高いレベルで、 4K または 8K の解像度で、優れた動画品質を維持したまま、非常に高いビットレートを取得することが可能です。 Opus の Fullband プロファイルを使用して音声を 48kHz のサンプルレートでエンコードすると、取り込める音声帯域が最大になり、人間の可聴域であるほぼすべての周波数帯域を取り込むことができます。
-
-   ```html
-   <video controls src="filename.webm"></video>
-   ```
-
-2. MP4 コンテナーで、 [HEVC](#hevc_h.265) コーデックを使用した 10 ビットまたは 12 ビット色深度のメイン 4:2:2、あるいはコンポーネントあたり最大 16 ビットのメイン 4:4:4 プロファイルなど、高度なメインプロファイルのいずれかを使用しているもの。高ビットレートでは、色再現性の高い優れたグラフィック品質を提供します。さらに、オプションで HDR メタデータを記載することで、ハイダイナミックレンジの動画を提供することも可能です。音声については、高いサンプルレート（最低でも 48kHz、理想的には 96kHz）で AAC コーデックを使用し、高速エンコードではなく、複雑なエンコードで使用されます。
-
-   ```html
-   <video controls>
-     <source type="video/webm" src="filename.webm" />
-     <source type="video/mp4" src="filename.mp4" />
-   </video>
-   ```
 
 ### アーカイブ、編集、リミックスにおすすめ
 
@@ -1814,7 +1808,7 @@ VP9 は、WebM コンテナーを使用することができる（そして、�
 ウェブサイトやアプリの外部からアーカイブ用に動画を準備するには、元の非圧縮動画データに対して圧縮を行うユーティリティを使用します。例えば、無料の [x264](https://www.videolan.org/developers/x264.html) ユーティリティは、非常に高いビットレートを使用して [AVC](#avc_h.264) 形式で動画をエンコードするために使用できます。
 
 ```bash
-x264 --crf 18 -preset ultrafast --output out-file.mp4 infile
+x264 --crf 18 -preset ultrafast --output out-file.mp4 in-file
 ```
 
 他のコーデックは、動画を大幅に圧縮した場合、最良の品質レベルを持つことができますが、それらのエンコーダーは十分に遅い傾向があり、この圧縮で取得するほぼ無損失のエンコーディングは、ほぼ同じ全体の品質レベルで圧倒的に速くなります。
@@ -1835,7 +1829,7 @@ const options = {
 let recorder = new MediaRecorder(sourceStream, options);
 ```
 
-この例では `MediaRecorder` を作成し、 BT.2100 HDR を使用した [AV1](#av1) 動画を 12 ビット色で 4:4:4 クロマサブサンプリングで、音声を [FLAC](/ja/docs/Web/Media/Formats/Audio_codecs#flac_free_lossless_audio_codec) の可逆圧縮で記録する設定にしています。結果として得られるファイルは、動画と音声のトラックで共有される 800Mbps 以下のビットレートを使用します。ハードウェアの性能、要件、使用する特定のコーデックに応じて、これらの値を調整する必要がある可能性があります。このビットレートは明らかにネットワーク伝送には現実的でなく、ローカルにのみ使用されるでしょう。
+この例では `MediaRecorder` を作成し、 BT.2100 HDR を使用した [AV1](#av1) 動画を 12 ビット色で 4:4:4 クロマサブサンプリングで、音声を [FLAC](/ja/docs/Web/Media/Guides/Formats/Audio_codecs#flac_free_lossless_audio_codec) の可逆圧縮で記録する設定にしています。結果として得られるファイルは、動画と音声のトラックで共有される 800Mbps 以下のビットレートを使用します。ハードウェアの性能、要件、使用する特定のコーデックに応じて、これらの値を調整する必要がある可能性があります。このビットレートは明らかにネットワーク伝送には現実的でなく、ローカルにのみ使用されるでしょう。
 
 `codecs` 引数の値をドットで区切られたプロパティに分解すると、以下のようになります。
 
@@ -1856,10 +1850,10 @@ let recorder = new MediaRecorder(sourceStream, options);
 
 ## 関連情報
 
-- [ウェブ音声コーデックガイド](/ja/docs/Web/Media/Formats/Audio_codecs)
+- [ウェブ音声コーデックガイド](/ja/docs/Web/Media/Guides/Formats/Audio_codecs)
 - [メディアコンテナー形式（ファイル形式）](/ja/docs/Web/Media/Guides/Formats/Containers)
-- [ウェブコンテンツにおけるメディア対応に関する問題の扱い](/ja/docs/Web/Media/Formats/Support_issues)
-- [WebRTC で使用されるコーデック](/ja/docs/Web/Media/Formats/WebRTC_codecs)
+- [ウェブコンテンツにおけるメディア対応に関する問題の扱い](/ja/docs/Web/Media/Guides/Formats/Support_issues)
+- [WebRTC で使用されるコーデック](/ja/docs/Web/Media/Guides/Formats/WebRTC_codecs)
 - {{RFC(6381)}}: The "Codecs" and "Profiles" parameters for "Bucket" media types
 - {{RFC(5334)}}: Ogg Media Types
 - {{RFC(3839)}}: MIME Type Registrations for 3GPP Multimedia Files
