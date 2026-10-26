@@ -1,5 +1,5 @@
 ---
-title: HTML `<b>` 注目付け要素
+title: "`<b>` 注目付け要素"
 short-title: <b>
 slug: Web/HTML/Reference/Elements/b
 l10n:

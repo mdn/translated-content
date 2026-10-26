@@ -1,5 +1,5 @@
 ---
-title: CSS `stroke-miterlimit` プロパティ
+title: "`stroke-miterlimit` プロパティ (CSS)"
 short-title: stroke-miterlimit
 slug: Web/CSS/Reference/Properties/stroke-miterlimit
 l10n:

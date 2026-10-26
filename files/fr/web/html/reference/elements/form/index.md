@@ -3,10 +3,12 @@ title: "Élément HTML `<form>` : l'élément représentant un formulaire"
 short-title: <form>
 slug: Web/HTML/Reference/Elements/form
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<form>`** représente une section du document contenant des contrôles interactifs permettant d'envoyer des informations.
+
+Il est possible d'utiliser les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) CSS {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} pour mettre en forme un élément `<form>` selon que le contenu des {{DOMxRef("HTMLFormElement.elements", "elements")}} du formulaire est valide ou non.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;form&gt;", "tabbed-standard")}}
 
@@ -24,6 +26,12 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<form>`** représente une section du do
     <input type="submit" value="S'abonner !" />
   </div>
 </form>
+```
+
+```js interactive-example
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css interactive-example
@@ -45,8 +53,6 @@ label {
   padding-right: 10px;
 }
 ```
-
-Il est possible d'utiliser les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) CSS {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} pour mettre en forme un élément `<form>` selon que le contenu des {{DOMxRef("HTMLFormElement.elements", "elements")}} du formulaire est valide ou non.
 
 ## Attributs
 
@@ -141,6 +147,14 @@ Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire
     <label><input type="radio" name="radio" />Sélectionnez-moi</label>
   </fieldset>
 </form>
+```
+
+```js hidden
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
 ```
 
 ### Résultat

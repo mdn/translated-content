@@ -150,7 +150,7 @@ ul {
 
 {{EmbedLiveSample("基本的な例")}}
 
-Note how the background remains fixed relative to the list's viewport when you scroll the overflowing text into view.
+あふれたテキストをスクロールして表示させても、背景はリストのビューポートに対して固定されたままである点に注目してください。
 
 ### 複数の背景画像
 

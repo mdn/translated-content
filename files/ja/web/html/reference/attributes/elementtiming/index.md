@@ -1,5 +1,5 @@
 ---
-title: "`elementtiming` 属性 (HTML)"
+title: "`elementtiming` 属性"
 short-title: elementtiming
 slug: Web/HTML/Reference/Attributes/elementtiming
 l10n:

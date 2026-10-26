@@ -3,7 +3,7 @@ title: "Élément HTML `<a>` : l'élément d'ancre"
 short-title: <a>
 slug: Web/HTML/Reference/Elements/a
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: d8a98813a991199d24cf40bc74298850d8b41e37
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<a>`** (ou élément _d'ancre_), avec [son attribut `href`](#href), crée un hyperlien vers des pages web, des fichiers, des adresses e-mail, des emplacements dans la même page ou toute autre ressource accessible par une URL.
@@ -60,15 +60,13 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
       - Le segment final dans l'URL&nbsp;: [path](/fr/docs/Web/API/URL/pathname)
       - Le {{Glossary("MIME_type", "type MIME")}} (depuis l'en-tête {{HTTPHeader("Content-Type")}}, le début d'une URL [`data:`](/fr/docs/Web/URI/Reference/Schemes/data), ou {{DOMxRef("Blob.type")}} pour une URL [`blob:`](/fr/docs/Web/URI/Reference/Schemes/blob))
 
-    - `filename`&nbsp;: définir une valeur la suggère comme nom de fichier. Les caractères `/` et `\` sont convertis en caractères de soulignement (`_`). Les systèmes de fichiers peuvent interdire d'autres caractères dans les noms de fichiers, les navigateurs ajustent donc le nom suggéré si nécessaire.
+    - `filename`&nbsp;: définir une valeur la suggère comme nom de fichier. Les caractères `/` et `\` sont convertis en caractères de soulignement (`_`). Les systèmes de fichiers peuvent interdire d'autres caractères dans les noms de fichiers, les navigateurs ajustent donc le nom suggéré si nécessaire. Cet ajustement se produit lorsque le téléchargement est déclenché et n'est pas observable avec la propriété {{DOMxRef("HTMLAnchorElement.download")}}.
 
     > [!NOTE]
     >
-    > - `download` ne fonctionne que pour [les URLs de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy), ou les schémas `blob:` et `data:`.
+    > - `download` ne fonctionne que pour [les URLs de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy), [`blob:`](/fr/docs/Web/URI/Reference/Schemes/blob) de même origine, et les schémas [`data:`](/fr/docs/Web/URI/Reference/Schemes/data). Pour les autres URLs, l'attribut `download` est ignoré et une navigation normale se produit, bien que la page cible puisse toujours utiliser `Content-Disposition` pour indiquer un téléchargement.
     > - Le comportement du téléchargement varie selon le navigateur, les paramètres utilisateur·ice·s et d'autres facteurs. L'utilisateur·ice peut être invité·e avant le début du téléchargement, ou le fichier peut être enregistré automatiquement, ou il peut s'ouvrir automatiquement, soit dans une application externe, soit dans le navigateur lui-même.
-    > - Si l'en-tête `Content-Disposition` comporte des informations différentes de celles de l'attribut `download`, le comportement résultant peut différer&nbsp;:
-    >   - Si l'en-tête définit un `nom de fichier`, il a priorité sur un nom de fichier défini dans l'attribut `download`.
-    >   - Si l'en-tête définit une disposition de `inline`, Chrome et Firefox donnent la priorité à l'attribut et le traitent comme un téléchargement. Les anciennes versions de Firefox (avant 82) donnent la priorité à l'en-tête et affichent le contenu en incise.
+    > - L'attribut `download`, lorsqu'il est pris en compte, remplace le comportement `Content-Disposition: inline`, mais le paramètre `filename` de `Content-Disposition` remplace le nom dans l'attribut `download`.
 
 - `href`
   - : L'URL vers laquelle pointe l'hyperlien. Les liens ne sont pas limités aux URL basées sur HTTP&nbsp;: ils peuvent utiliser n'importe quel schéma d'URL pris en charge par les navigateurs&nbsp;:

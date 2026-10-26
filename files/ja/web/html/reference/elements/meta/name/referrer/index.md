@@ -1,5 +1,5 @@
 ---
-title: HTML `<meta name="referrer">` 属性値
+title: '`<meta name="referrer">` 属性値'
 short-title: referrer
 slug: Web/HTML/Reference/Elements/meta/name/referrer
 l10n:

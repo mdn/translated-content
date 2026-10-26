@@ -1,5 +1,5 @@
 ---
-title: CSS `paint-order` プロパティ
+title: "`paint-order` プロパティ (CSS)"
 short-title: paint-order
 slug: Web/CSS/Reference/Properties/paint-order
 l10n:

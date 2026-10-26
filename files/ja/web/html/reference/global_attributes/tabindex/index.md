@@ -1,5 +1,5 @@
 ---
-title: "`tabindex` グローバル属性 (HTML)"
+title: "`tabindex` グローバル属性"
 short-title: tabindex
 slug: Web/HTML/Reference/Global_attributes/tabindex
 l10n:

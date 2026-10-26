@@ -3,7 +3,7 @@ title: "MediaRecorder: error イベント"
 short-title: error
 slug: Web/API/MediaRecorder/error_event
 l10n:
-  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("MediaStream Recording")}}
@@ -16,10 +16,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用sるうか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("event", (event) => {});
+```js-nolint
+addEventListener("error", (event) => { })
 
-onevent = (event) => {};
+onerror = (event) => { }
 ```
 
 ## イベント型
@@ -27,13 +27,6 @@ onevent = (event) => {};
 {{domxref("MediaRecorderErrorEvent")}} です。 {{domxref("Event")}} を継承しています。
 
 {{InheritanceDiagram("MediaRecorderErrorEvent")}}
-
-## イベントプロパティ
-
-_親インターフェイスである {{domxref("Event")}} からプロパティを継承しています_。
-
-- {{domxref("MediaRecorderErrorEvent.error", "error")}} {{ReadOnlyInline}}
-  - : {{domxref("DOMException")}} で、発生したエラーに関する情報を保持しています。
 
 ## 解説
 

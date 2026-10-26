@@ -1,5 +1,5 @@
 ---
-title: CSS `overflow-block` プロパティ
+title: "`overflow-block` プロパティ (CSS)"
 short-title: overflow-block
 slug: Web/CSS/Reference/Properties/overflow-block
 l10n:

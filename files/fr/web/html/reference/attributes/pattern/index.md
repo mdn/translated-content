@@ -3,7 +3,7 @@ title: "Attribut HTML : `pattern`"
 short-title: pattern
 slug: Web/HTML/Reference/Attributes/pattern
 l10n:
-  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 L'attribut **`pattern`** indique une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_expressions) que doit respecter la valeur du contrôle du formulaire. Si une valeur non nulle (qui n'est pas `null`) ne respecte pas les contraintes portées par `pattern`, la propriété {{DOMxRef("ValidityState.patternMismatch", "patternMismatch")}} en lecture seule, rattachée à l'objet {{DOMxRef("ValidityState")}}, vaut `true`.
@@ -147,6 +147,12 @@ L'exemple qui suit permet de restreindre les valeurs saisies entre 4 et 8 caract
     <button>Envoyer</button>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden

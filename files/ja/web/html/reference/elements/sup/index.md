@@ -1,5 +1,5 @@
 ---
-title: HTML `<sup>` 上付き文字要素
+title: "`<sup>` 上付き文字要素"
 short-title: <sup>
 slug: Web/HTML/Reference/Elements/sup
 l10n:

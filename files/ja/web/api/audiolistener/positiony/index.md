@@ -15,7 +15,7 @@ l10n:
 
 ## 値
 
-An {{domxref("AudioParam")}}. Its default value is 0, and it can range between positive and negative infinity.
+{{domxref("AudioParam")}} です。既定値は 0 で、正の無限大から負の無限大の範囲になります。
 
 ## 例
 

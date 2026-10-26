@@ -1,5 +1,5 @@
 ---
-title: HTML `<input type="week">` 属性値
+title: '`<input type="week">` 属性値'
 short-title: <input type="week">
 slug: Web/HTML/Reference/Elements/input/week
 l10n:

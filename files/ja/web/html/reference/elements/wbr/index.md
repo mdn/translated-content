@@ -1,5 +1,5 @@
 ---
-title: HTML `<wbr>` 改行機会要素
+title: "`<wbr>` 改行機会要素"
 short-title: <wbr>
 slug: Web/HTML/Reference/Elements/wbr
 l10n:

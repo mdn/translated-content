@@ -1,5 +1,5 @@
 ---
-title: HTML `<legend>` フィールドセット凡例要素
+title: "`<legend>` フィールドセット凡例要素"
 short-title: <legend>
 slug: Web/HTML/Reference/Elements/legend
 l10n:

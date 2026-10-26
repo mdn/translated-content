@@ -1,5 +1,5 @@
 ---
-title: HTML `<param>` オブジェクト引数要素
+title: "`<param>` オブジェクト引数要素"
 short-title: <param>
 slug: Web/HTML/Reference/Elements/param
 l10n:

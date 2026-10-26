@@ -1,5 +1,5 @@
 ---
-title: HTML `<option>` 選択肢要素
+title: "`<option>` 選択肢要素"
 short-title: <option>
 slug: Web/HTML/Reference/Elements/option
 l10n:

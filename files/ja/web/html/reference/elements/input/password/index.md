@@ -1,5 +1,5 @@
 ---
-title: HTML `<input type="password">` 属性値
+title: '`<input type="password">` 属性値'
 short-title: <input type="password">
 slug: Web/HTML/Reference/Elements/input/password
 l10n:

@@ -3,7 +3,7 @@ title: "Élément HTML `<bdo>` : l'élément de remplacement bidirectionnelle"
 short-title: <bdo>
 slug: Web/HTML/Reference/Elements/bdo
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 100cf25d92d3953f3c70ecaa2af637d5e42179d8
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<bdo>`** force la direction courante du texte, de sorte que le texte à l'intérieur est affiché dans une direction différente.
@@ -36,8 +36,6 @@ bdo {
 }
 ```
 
-Les caractères du texte sont dessinés à partir du point de départ dans la direction donnée&nbsp;; l'orientation des caractères individuels n'est pas affectée (les caractères ne sont donc pas dessinés vers l'arrière, par exemple).
-
 ## Attributs
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
@@ -46,6 +44,10 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : La direction du texte au sein de l'élément. Cet attribut peut valoir&nbsp;:
     - `ltr`&nbsp;: pour un texte allant de gauche à droite (<i lang="en">left-to-right</i>).
     - `rtl`&nbsp;: pour un texte allant de droite à gauche (<i lang="en">right-to-left</i>).
+
+## Notes d'utilisation
+
+Les caractères du texte sont dessinés à partir du point de départ dans la direction donnée&nbsp;; l'orientation des caractères individuels n'est pas affectée (les caractères ne sont donc pas dessinés vers l'arrière, par exemple).
 
 ## Exemples
 
@@ -58,10 +60,6 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 ### Résultat
 
 {{EmbedLiveSample("","100%")}}
-
-## Notes
-
-La spécification HTML 4 ne définissait pas d'évènement pour cet élément. Ils ont été ajoutés en XHTML. Ceci était probablement un oubli de la spécification HTML 4.
 
 ## Résumé technique
 
@@ -91,8 +89,7 @@ La spécification HTML 4 ne définissait pas d'évènement pour cet élément. I
     <tr>
       <th scope="row">Omission de balises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
+        Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.
       </td>
     </tr>
     <tr>
@@ -121,9 +118,7 @@ La spécification HTML 4 ne définissait pas d'évènement pour cet élément. I
     <tr>
       <th scope="row">Interface DOM</th>
       <td>
-        {{DOMxRef("HTMLElement")}}. Auparavant et jusqu'à Gecko 1.9.2 (Firefox 4) inclus, Firefox
-        implémente l'interface
-        {{DOMxRef("HTMLSpanElement")}} pour cet élément.
+        {{DOMxRef("HTMLElement")}}. Auparavant et jusqu'à Gecko 1.9.2 (Firefox 4) inclus, Firefox implémente l'interface {{DOMxRef("HTMLSpanElement")}} pour cet élément.
       </td>
     </tr>
   </tbody>

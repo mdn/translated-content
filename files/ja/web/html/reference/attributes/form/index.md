@@ -1,5 +1,5 @@
 ---
-title: "`form` 属性 (HTML)"
+title: "`form` 属性"
 short-title: form
 slug: Web/HTML/Reference/Attributes/form
 l10n:

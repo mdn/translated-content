@@ -2,7 +2,7 @@
 title: Extensions de navigateur
 slug: Mozilla/Add-ons/WebExtensions
 l10n:
-  sourceCommit: 09109b6f9444d22215ba330ec1e64e73980b2a6c
+  sourceCommit: 674fbb492c76a45adf433810f0f5737a0405bd9c
 ---
 
 Les extensions, ou modules complémentaires, peuvent modifier et améliorer les fonctionnalités d'un navigateur. Les extensions pour Firefox s'appuient sur la technologie inter-navigateurs de l'API WebExtensions.
@@ -32,6 +32,7 @@ Obtenez des informations détaillées sur les concepts qui servent de base aux e
 - [Présentation de l'API JavaScript](/fr/docs/Mozilla/Add-ons/WebExtensions/API)
 - [Scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 - [Scripts d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Background_scripts)
+- [Permission `activeTab`](/fr/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission)
 - [Motifs de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 - [Travailler avec des fichiers](/fr/docs/Mozilla/Add-ons/WebExtensions/Working_with_files)
 - [Internationalisation](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization)

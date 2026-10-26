@@ -32,7 +32,7 @@ array.with(index, value)
 ### 예외
 
 - {{jsxref("RangeError")}}
-  - : `index > array.length` 혹은 `index < -array.length` 일때 발생합니다.
+  - : `index >= array.length` 혹은 `index < -array.length` 일때 발생합니다.
 
 ## 설명
 

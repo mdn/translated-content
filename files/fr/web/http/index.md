@@ -3,7 +3,7 @@ title: "HTTP : HyperText Transfer Protocol"
 short-title: HTTP
 slug: Web/HTTP
 l10n:
-  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
+  sourceCommit: bd5271a96d814ed6876e974186c465f1b3959e07
 ---
 
 **_<i lang="en">Hypertext Transfer Protocol</i> (HTTP) (ou protocole de transfert hypertexte en français)_** est un protocole de [la couche application](https://fr.wikipedia.org/wiki/Couche_application) qui permet de transmettre des documents hypermédias, comme HTML.
@@ -89,7 +89,7 @@ Nous vous conseillons de commencer par les guides fondamentaux avant d'explorer 
 - [Politique de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/Guides/CSP)
   - : CSP permet aux administrateur·ice·s de sites web d'utiliser l'en-tête de réponse {{HTTPHeader("Content-Security-Policy")}} pour contrôler quelles ressources le client est autorisé à charger pour une page donnée.
     Le guide CSP décrit le mécanisme général de la politique de sécurité du contenu, qui aide à détecter et à atténuer certains types d'attaques, notamment les attaques par injection de données et de scripts inter-sites (XSS).
-- [Politique de ressources entre origines (CORP)](/fr/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)
+- [Politique de ressources entre origines (CORP)](/fr/docs/Web/Security/Practical_implementation_guides/CORP)
   - : CORP permet aux sites et applications de choisir d'activer une protection contre des requêtes spécifiques provenant d'autres origines (comme celles effectuées avec des éléments `<script>` et `<img>`), afin d'atténuer les attaques spéculatives par canal auxiliaire.
 - [Recommandations de sécurité web de Mozilla <sup>(angl.)</sup>](https://infosec.mozilla.org/guidelines/web_security)
   - : Un ensemble de conseils pour aider les équipes opérationnelles à créer des applications web sécurisées.

@@ -1,5 +1,5 @@
 ---
-title: CSS `fill-rule` プロパティ
+title: "`fill-rule` プロパティ (CSS)"
 short-title: fill-rule
 slug: Web/CSS/Reference/Properties/fill-rule
 l10n:

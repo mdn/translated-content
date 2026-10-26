@@ -1,5 +1,5 @@
 ---
-title: HTML `<tfoot>` 表フッター要素
+title: "`<tfoot>` 表フッター要素"
 short-title: <tfoot>
 slug: Web/HTML/Reference/Elements/tfoot
 l10n:

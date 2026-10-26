@@ -1,5 +1,5 @@
 ---
-title: "`<select>` 選択要素 (HTML)"
+title: "`<select>` 選択要素"
 short-title: <select>
 slug: Web/HTML/Reference/Elements/select
 l10n:

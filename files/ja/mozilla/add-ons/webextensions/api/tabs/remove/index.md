@@ -24,7 +24,7 @@ var removing = browser.tabs.remove(
 
 ### 戻り値
 
-A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the specified tabs have been removed or their `beforeunload` prompts have been handled. If any error occurs, the promise will be rejected with an error message.
+指定したすべてのタブが閉じられるか、それらの `beforeunload` プロンプトが処理されたときに、引数なしで履行される [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) です。エラーが発生した場合、プロミスはエラーメッセージで拒否されます。
 
 ## ブラウザーの互換性
 

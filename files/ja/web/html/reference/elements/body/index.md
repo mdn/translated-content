@@ -1,5 +1,5 @@
 ---
-title: HTML `<body>` 文書本体要素
+title: "`<body>` 文書本体要素"
 short-title: <body>
 slug: Web/HTML/Reference/Elements/body
 l10n:

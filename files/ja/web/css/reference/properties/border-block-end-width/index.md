@@ -1,5 +1,5 @@
 ---
-title: CSS `border-block-end-width` プロパティ
+title: "`border-block-end-width` プロパティ (CSS)"
 short-title: border-block-end-width
 slug: Web/CSS/Reference/Properties/border-block-end-width
 l10n:

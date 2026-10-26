@@ -1,5 +1,5 @@
 ---
-title: HTML `<input type="checkbox">` 属性値
+title: '`<input type="checkbox">` 属性値'
 short-title: <input type="checkbox">
 slug: Web/HTML/Reference/Elements/input/checkbox
 l10n:

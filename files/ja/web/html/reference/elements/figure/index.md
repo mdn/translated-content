@@ -1,5 +1,5 @@
 ---
-title: HTML `<figure>` キャプションが付けられる図要素
+title: "`<figure>` キャプションが付けられる図要素"
 short-title: <figure>
 slug: Web/HTML/Reference/Elements/figure
 l10n:
