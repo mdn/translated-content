@@ -1,11 +1,11 @@
 ---
 title: 跨來源資源政策（CORP）
-slug: Web/HTTP/Guides/Cross-Origin_Resource_Policy
+slug: Web/Security/Practical_implementation_guides/CORP
 l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-**跨來源資源政策**是透過 [`Cross-Origin-Resource-Policy` HTTP 標頭](/zh-TW/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy)設定的一項政策，允許網站和應用程式選擇保護自己免受其他來源（例如使用 `<script>` 和 `<img>` 元素發出的請求）的某些請求，以減輕推測性側信道攻擊（例如[幽靈漏洞](https://zh.wikipedia.org/wiki/幽灵漏洞)）以及跨網站腳本包含攻擊。
+**跨來源資源政策**是透過 {{httpheader("Cross-Origin-Resource-Policy")}} 回應標頭設定的一項政策，允許網站和應用程式選擇保護自己免受其他來源（例如使用 `<script>` 和 `<img>` 元素發出的請求）的某些請求，以減輕推測性側信道攻擊（例如[幽靈漏洞](https://zh.wikipedia.org/wiki/幽灵漏洞)）以及跨網站腳本包含攻擊。
 
 CORP 是超越預設的{{Glossary("same-origin policy", "同源政策")}}的另一層保護。跨來源資源政策補充了[跨來源讀取封鎖](https://fetch.spec.whatwg.org/#corb)（CORB），這是一種防止某些跨來源讀取的機制。
 
@@ -15,9 +15,6 @@ CORP 是超越預設的{{Glossary("same-origin policy", "同源政策")}}的另�
 由於此政策是通過[_回應標頭_](/zh-TW/docs/Glossary/Response_header)表達的，實際請求不會被阻止——相反，瀏覽器通過剝離回應主體來防止結果洩漏。
 
 ## 使用方式
-
-> [!NOTE]
-> 由於 [Chrome 中的錯誤](https://crbug.com/1074261)，設置 Cross-Origin-Resource-Policy 可能會破壞 PDF 渲染，導致訪客無法閱讀部分 PDF 的後續頁面。在生產環境中使用此標頭時請謹慎。
 
 Web 應用程式通過 {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP 回應標頭設置跨來源資源政策，該標頭接受下方三個值之一：
 
