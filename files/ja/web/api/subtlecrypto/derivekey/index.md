@@ -19,7 +19,7 @@ l10n:
 ## 構文
 
 ```js-nolint
-deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
+deriveKey(algorithm, baseKey, derivedKeyType, extractable, keyUsages)
 ```
 
 ### 引数
