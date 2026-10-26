@@ -38,12 +38,12 @@ fill(value, start, end)
 - `value`
   - : Une valeur avec laquelle remplir le tableau. Notez que tous les éléments du tableau auront exactement cette valeur&nbsp;: si `value` est un objet, chaque case du tableau référencera cet objet.
 - `start` {{Optional_Inline}}
-  - : L'indice de début (à partir de zéro) à partir duquel commencer à remplir, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière).
+  - : L'indice de début (à partir de zéro) à partir duquel commencer à remplir, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier).
     - Un indice négatif compte à rebours depuis la fin du tableau&nbsp;: si `-array.length <= start < 0`, on utilise `start + array.length`.
     - Si `start < -array.length` ou si `start` est omis, on utilise `0`.
     - Si `start >= array.length`, aucun indice n'est rempli.
 - `end` {{Optional_Inline}}
-  - : L'indice de fin (à partir de zéro) auquel arrêter de remplir, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière). `fill()` remplit jusqu'à mais sans inclure `end`.
+  - : L'indice de fin (à partir de zéro) auquel arrêter de remplir, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier). `fill()` remplit jusqu'à mais sans inclure `end`.
     - Un indice négatif compte à rebours depuis la fin du tableau&nbsp;: si `-array.length <= end < 0`, on utilise `end + array.length`.
     - Si `end < -array.length`, on utilise `0`.
     - Si `end >= array.length` ou si `end` est omis ou `undefined`, on utilise `array.length`, ce qui fait que tous les indices jusqu'à la fin sont remplis.

@@ -37,7 +37,7 @@ includes(searchElement, fromIndex)
 - `searchElement`
   - : La valeur à rechercher.
 - `fromIndex` {{Optional_Inline}}
-  - : La position (en partant de 0) dans le tableau à partir de laquelle commencer la recherche. Cette valeur est [convertie en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière).
+  - : La position (en partant de 0) dans le tableau à partir de laquelle commencer la recherche. Cette valeur est [convertie en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier).
     - Un indice négatif compte à rebours depuis la fin du tableau — si `-array.length <= fromIndex < 0`, `fromIndex + array.length` est utilisé. Cependant, le tableau est tout de même parcouru de l'avant vers l'arrière dans ce cas.
     - Si `fromIndex < -array.length` ou si `fromIndex` est omis, `0` est utilisé, ce qui fait que tout le tableau est parcouru.
     - Si `fromIndex >= array.length`, le tableau n'est pas parcouru et `false` est retourné.

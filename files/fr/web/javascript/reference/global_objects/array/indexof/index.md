@@ -36,7 +36,7 @@ indexOf(searchElement, fromIndex)
 - `searchElement`
   - : L'élément à rechercher dans le tableau.
 - `fromIndex` {{Optional_Inline}}
-  - : L'indice à partir duquel commencer la recherche, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière).
+  - : L'indice à partir duquel commencer la recherche, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier).
     - Un indice négatif compte à rebours depuis la fin du tableau — si `-array.length <= fromIndex < 0`, `fromIndex + array.length` est utilisé. À noter&nbsp;: le tableau est toujours parcouru de l'avant vers l'arrière dans ce cas.
     - Si `fromIndex < -array.length` ou si `fromIndex` est omis, `0` est utilisé, ce qui fait que tout le tableau est parcouru.
     - Si `fromIndex >= array.length`, le tableau n'est pas parcouru et `-1` est retourné.

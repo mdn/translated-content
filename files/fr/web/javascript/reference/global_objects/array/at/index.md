@@ -33,7 +33,7 @@ at(index)
 ### Paramètres
 
 - `index`
-  - : Indice (commençant à zéro) de l'élément du tableau à retourner, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière). Un indice négatif compte à rebours depuis la fin du tableau — si `index < 0`, c'est `index + array.length` qui est utilisé.
+  - : Indice (commençant à zéro) de l'élément du tableau à retourner, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier). Un indice négatif compte à rebours depuis la fin du tableau — si `index < 0`, c'est `index + array.length` qui est utilisé.
 
 ### Valeur de retour
 

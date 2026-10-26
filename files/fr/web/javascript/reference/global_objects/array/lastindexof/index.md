@@ -32,7 +32,7 @@ lastIndexOf(searchElement, fromIndex)
 - `searchElement`
   - : L'élément à rechercher dans le tableau.
 - `fromIndex` {{Optional_Inline}}
-  - : L'index de départ (basé sur zéro) à partir duquel commencer la recherche à rebours, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière).
+  - : L'index de départ (basé sur zéro) à partir duquel commencer la recherche à rebours, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier).
     - Un index négatif compte à rebours depuis la fin du tableau — si `-array.length <= fromIndex < 0`, on utilise `fromIndex + array.length`.
     - Si `fromIndex < -array.length`, le tableau n'est pas parcouru et `-1` est retourné. On peut considérer conceptuellement que la recherche commence à une position inexistante avant le début du tableau et recule à partir de là. Aucun élément n'est rencontré, donc `searchElement` n'est jamais trouvé.
     - Si `fromIndex >= array.length` ou si `fromIndex` est omis ou vaut `undefined`, on utilise `array.length - 1`, ce qui fait parcourir tout le tableau. On peut considérer conceptuellement que la recherche commence à une position inexistante après la fin du tableau et recule à partir de là. Elle atteint finalement la vraie fin du tableau, puis commence à parcourir les éléments réels à rebours.

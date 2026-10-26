@@ -225,7 +225,7 @@ console.log(Array.prototype.join.call(objetRessemblantATableau, "+")); // 'a+b'
 
 #### Normalisation de la propriété length
 
-La propriété `length` est [convertie en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière) puis bornée entre 0 et 2<sup>53</sup> - 1. `NaN` devient `0`, donc même si `length` n'est pas présente ou vaut `undefined`, elle se comporte comme si elle valait `0`.
+La propriété `length` est [convertie en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier) puis bornée entre 0 et 2<sup>53</sup> - 1. `NaN` devient `0`, donc même si `length` n'est pas présente ou vaut `undefined`, elle se comporte comme si elle valait `0`.
 
 Le langage évite d'attribuer à `length` une [valeur entière non sûre](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER). Toutes les méthodes natives lèvent une {{JSxRef("TypeError")}} si `length` doit être supérieure à 2<sup>53</sup> - 1. Cependant, comme la propriété {{JSxRef("Array/length", "length")}} des tableaux lève une erreur si elle dépasse 2<sup>32</sup> - 1, ce seuil n'est généralement pas atteint sauf si la méthode est appelée sur un objet qui n'est pas un tableau.
 

@@ -26,7 +26,7 @@ Un nouvel [objet d'aide à l'itérateur](/fr/docs/Web/JavaScript/Reference/Globa
 ### Exceptions
 
 - {{JSxRef("RangeError")}}
-  - : Levée si `limit` devient {{JSxRef("NaN")}} ou négatif lors de la [conversion en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière).
+  - : Levée si `limit` devient {{JSxRef("NaN")}} ou négatif lors de la [conversion en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier).
 
 ## Exemples
 

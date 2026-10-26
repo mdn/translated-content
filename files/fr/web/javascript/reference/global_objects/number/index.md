@@ -84,7 +84,7 @@ Il existe deux méthodes qui permettent de déclencher cette conversion (ou pres
 
 {{JSxRef("Number.parseFloat()")}} et {{JSxRef("Number.parseInt()")}} sont semblables à `Number()` mais servent uniquement à convertir des chaînes de caractères, en suivant des règles légèrement différentes. Par exemple, `parseInt()` ne reconnaît pas le point décimal et `parseFloat()` ne reconnaît pas le préfixe `0x`.
 
-#### Conversion entière
+#### Conversion en entier
 
 Certaines opérations s'attendent à manipuler des entiers, notamment celles qui fonctionnent avec des indices de tableaux ou de chaînes de caractères, des composantes temporelles et des bases numériques. Après la conversion numérique décrite ci-avant, le résultat est [tronqué](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc) en un nombre entier (la partie fractionnaire est ignorée). Si le nombre est `±Infinity`, il est retourné tel quel. Si le nombre est `NaN` ou `-0`, c'est `0` qui est retourné. Le résultat est donc toujours un entier (qui n'est pas `-0`) ou `±Infinity`.
 
