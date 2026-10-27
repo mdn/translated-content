@@ -42,7 +42,7 @@ deriveKey(algorithm, baseKey, derivedKeyType, extractable, keyUsages)
   - : 論理値で、 {{domxref("SubtleCrypto.exportKey()")}} または {{domxref("SubtleCrypto.wrapKey()")}} を使用して鍵をエクスポートすることが可能かどうかを示します。
 - `keyUsages`
   - : 導出鍵で何ができるかを示す {{jsxref("Array")}} です。
-    鍵の使用は `derivedKeyAlgorithm` で設定するにはアルゴリズムで許可されていなければならないことに注意してください。
+    鍵の使用方法が `derivedKeyType` で設定したアルゴリズムで許可されていなければならないことに注意してください。
     配列の使用可能な値は以下の通りです。
     - `encrypt`: この鍵はメッセージの[暗号化](/ja/docs/Web/API/SubtleCrypto/encrypt)で使用される可能性があります。
     - `decrypt`: この鍵はメッセージの[復号](/ja/docs/Web/API/SubtleCrypto/decrypt)で使用される可能性があります。
