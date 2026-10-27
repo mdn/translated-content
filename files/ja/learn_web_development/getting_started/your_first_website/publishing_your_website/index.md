@@ -78,7 +78,7 @@ l10n:
 
 これらを試してみて、一番合ったものを見つけてみましょう。
 
-- [Scrimba](https://scrimba.com/new?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Scrimba](https://scrimba.com/new?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
 - [JSFiddle](https://jsfiddle.net/)
 - [JSBin](https://jsbin.com/)
 - [CodePen](https://codepen.io/)
