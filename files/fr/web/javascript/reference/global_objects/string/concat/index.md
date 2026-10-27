@@ -1,33 +1,38 @@
 ---
-title: String.prototype.concat()
+title: "String : méthode concat()"
+short-title: concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-La méthode **`concat()`** combine le texte de plusieurs chaînes avec la chaîne appelante et renvoie la nouvelle chaîne ainsi formée.
+La méthode **`concat()`** des valeurs {{JSxRef("String")}} concatène les arguments de chaîne de caractères à cette chaîne de caractères et retourne une nouvelle chaîne de caractères.
 
-{{InteractiveExample("JavaScript Demo: String.concat()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: String.prototype.concat()")}}
 
 ```js interactive-example
-const str1 = "Hello";
-const str2 = "World";
+const str1 = "Bonjour";
+const str2 = "Le monde";
 
 console.log(str1.concat(" ", str2));
-// Expected output: "Hello World"
+// Résultat attendu : "Bonjour Le monde"
 
 console.log(str2.concat(", ", str1));
-// Expected output: "World, Hello"
+// Résultat attendu : "Le monde, Bonjour"
 ```
 
 ## Syntaxe
 
-```js
-str.concat(string2[, string3, ..., stringN])
+```js-nolint
+concat(str1)
+concat(str1, str2)
+concat(str1, str2, /* …, */ strN)
 ```
 
 ### Paramètres
 
-- `string2...stringN`
-  - : Chaînes de caractères à concaténer ensemble.
+- `str1`, …, `strN`
+  - : Une ou plusieurs chaînes de caractères à concaténer à `str`. Bien que techniquement autorisé, appeler `String.prototype.concat()` sans arguments est une opération inutile, car elle ne résulte pas en une copie observable (comme {{JSxRef("Array.prototype.concat()")}}), étant donné que les chaînes de caractères sont immuables. Cela ne doit se produire que si vous utilisez la syntaxe de [décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) pour passer un tableau de chaînes de caractères en tant qu'arguments, et que ce tableau est vide.
 
 ### Valeur de retour
 
@@ -35,31 +40,32 @@ Une nouvelle chaîne de caractères qui contient la concaténation des chaînes 
 
 ## Description
 
-La fonction `concat()` renvoie une nouvelle chaîne correspondant à la concaténation des différents arguments avec la chaîne courante. La chaîne courante est celle sur laquelle a été appelée la méthode `concat()`. Si les valeurs passées en arguments ne sont pas des chaînes de caractères, elles sont automatiquement converties en chaînes (grâce à leur méthode `toString()` avant la concaténation).
+La fonction `concat()` concatène les arguments de chaîne de caractères à la chaîne de caractères appelante et retourne une nouvelle chaîne de caractères.
+
+Si les arguments ne sont pas de type chaîne de caractères, ils sont convertis en valeurs de type chaîne de caractères avant la concaténation.
+
+La méthode `concat()` est très similaire aux [opérateurs d'addition/concaténation de chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Operators/Addition) (`+`, `+=`), sauf que `concat()` [force directement ses arguments à être des chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#conversion_en_chaîne_de_caractères), tandis que l'addition force d'abord ses opérandes à être des valeurs primitives. Pour plus d'informations, voir la page de référence pour [l'opérateur `+`](/fr/docs/Web/JavaScript/Reference/Operators/Addition).
 
 ## Exemples
 
-L'exemple suivant combine plusieurs chaînes afin d'en former une nouvelle.
+### Utiliser la méthode `concat()`
+
+L'exemple suivant combine plusieurs chaînes de caractères afin d'en former une nouvelle.
 
 ```js
-var coucou = "Bonjour ";
-console.log(coucou.concat("Tristan,", " bonne journée."));
+const bonjour = "Bonjour, ";
+console.log(bonjour.concat("Kevin", ". Passez une bonne journée."));
+// Bonjour, Kevin. Passez une bonne journée.
 
-/* Bonjour Tristan, bonne journée. */
+const listeSalutations = ["Bonjour", " ", "Kevin", "!"];
+"".concat(...listeSalutations); // "Bonjour Kevin!"
 
-var salutation = ["Bonjour", " ", "Alfred", " ", "!"];
-"".concat(...salutation); // "Bonjour Alfred !"
-
-"".concat({}); // [object Object]
+"".concat({}); // "[object Object]"
 "".concat([]); // ""
 "".concat(null); // "null"
 "".concat(true); // "true"
 "".concat(4, 5); // "45"
 ```
-
-## Performance
-
-Il est fortement recommandé d'utiliser les {{jsxref("Operators", "opérateurs d'affectation", "opérateurs_daffectation", 1)}} (+, +=) plutôt que la méthode `concat()` pour des raisons de performance.
 
 ## Spécifications
 
@@ -71,5 +77,5 @@ Il est fortement recommandé d'utiliser les {{jsxref("Operators", "opérateurs d
 
 ## Voir aussi
 
-- {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators", "Les opérateurs d'affectation", "opérateurs_daffectation", 1)}}
+- La méthode {{JSxRef("Array.prototype.concat()")}}
+- [L'addition (`+`)](/fr/docs/Web/JavaScript/Reference/Operators/Addition)
