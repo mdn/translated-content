@@ -101,7 +101,7 @@ JSX の詳細については、React チームの [JSX でマークアップを�
 [既存のプロジェクトに React を追加する](https://ja.react.dev/learn/add-react-to-an-existing-project)には、いくつかの [`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) を HTML ファイルにコピーすることで可能ですが、 Vite を使用することで、より多くの時間をアプリの構築に費やすことができ、セットアップに費やす時間を減らすことができます。
 
 > [!NOTE]
-> Scrimba の [First React Code](https://scrimba.com/learn-react-c0e/~03uo?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>の scrim に沿って読み終えれば、一切ローカル環境の設定を行うことなく、Reactのコードを書き始めることができます。
+> Scrimba の [First React Code](https://scrimba.com/learn-react-c0e/~03uo?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>の scrim に沿って読み終えれば、一切ローカル環境の設定を行うことなく、Reactのコードを書き始めることができます。
 > 続ける前にお気軽にお試しください。
 
 ### 必要条件
@@ -507,7 +507,7 @@ React では:
 
 ## 関連情報
 
-- [Learn React](https://scrimba.com/learn-react-c0e?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Learn React](https://scrimba.com/learn-react-c0e?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
   - : [Scrimba](https://scrimba.com?via=mdn) の _Learn React_ コースは、 React の初心者にとって完璧な出発点となる究極の React 101 です。 140 以上の対話式のコード課題を解き、 8 つの楽しいプロジェクトを構築することで、現行の React の基本を学ぶことができます。
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
