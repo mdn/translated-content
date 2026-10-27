@@ -1,5 +1,5 @@
 ---
-title: "`for` 属性 (HTML)"
+title: "`for` 属性"
 short-title: for
 slug: Web/HTML/Reference/Attributes/for
 l10n:

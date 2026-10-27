@@ -1,5 +1,5 @@
 ---
-title: HTML `<code>` インラインコード要素
+title: "`<code>` インラインコード要素"
 short-title: <code>
 slug: Web/HTML/Reference/Elements/code
 l10n:

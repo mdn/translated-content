@@ -3,7 +3,7 @@ title: Propriété CSS `contain-intrinsic-width`
 short-title: contain-intrinsic-width
 slug: Web/CSS/Reference/Properties/contain-intrinsic-width
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`contain-intrinsic-width`** définit la largeur d'un élément que le navigateur utilise pour la mise en page lorsque l'élément est envoyé à la [compartimentation de la taille](/fr/docs/Web/CSS/Guides/Containment/Using#compartimentation_de_la_taille).
@@ -66,26 +66,26 @@ En plus de l'exemple ci-dessous, la page {{CSSxRef("contain-intrinsic-size")}} c
 
 ### Définir la largeur intrinsèque
 
-Le HTML ci-dessous définit un élément «&nbsp;contained_element&nbsp;» qui est envoyé à la contrainte de taille et qui contient un élément enfant.
+Le HTML ci-dessous définit un élément «&nbsp;element_conteneur&nbsp;» qui est envoyé à la contrainte de taille et qui contient un élément enfant.
 
 ```html
-<div id="contained_element">
-  <div class="child_element"></div>
+<div id="element_conteneur">
+  <div class="element_enfant"></div>
 </div>
 ```
 
-Le CSS ci-dessous définit {{CSSxRef("content-visibility")}} de `contained_element` sur `auto`, donc si l'élément est masqué, il est envoyé à la contrainte de taille.
+Le CSS ci-dessous définit {{CSSxRef("content-visibility")}} de `element_conteneur` sur `auto`, donc si l'élément est masqué, il est envoyé à la contrainte de taille.
 La largeur et la hauteur utilisées lorsque l'élément est envoyé à la contrainte de taille sont définies simultanément à l'aide de `contain-intrinsic-width` et `contain-intrinsic-height`, respectivement.
 
 ```css
-#contained_element {
+#element_conteneur {
   border: 2px solid green;
   width: 151px;
   content-visibility: auto;
   contain-intrinsic-width: 152px;
   contain-intrinsic-height: 52px;
 }
-.child_element {
+.element_enfant {
   border: 1px solid red;
   background: blue;
   height: 50px;

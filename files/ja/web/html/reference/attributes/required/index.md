@@ -1,5 +1,5 @@
 ---
-title: "`required` 属性 (HTML)"
+title: "`required` 属性"
 short-title: required
 slug: Web/HTML/Reference/Attributes/required
 l10n:

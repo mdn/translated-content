@@ -39,7 +39,7 @@ La validation forte consiste à garantir que la ressource est, octet par octet, 
 Il est assez difficile d'avoir un identifiant unique pour la validation forte avec {{HTTPHeader("Last-Modified")}}. Cela se fait souvent en utilisant un {{HTTPHeader("ETag")}} avec le hachage MD5 de la ressource (ou un dérivé).
 
 > [!NOTE]
-> Parce qu'un changement d'encodage du contenu nécessite un changement d'ETag, certains serveurs modifient les ETags lors de la compression des réponses d'un serveur d'origine (par exemple, les proxies inverses).
+> Parce qu'un changement d'encodage du contenu nécessite un changement d'ETag, certains serveurs modifient les ETags lors de la compression des réponses d'un serveur d'origine (par exemple, les mandataires inverses).
 > Le serveur Apache ajoute par défaut le nom de la méthode de compression (`-gzip`) aux ETags, mais c'est [configurable en utilisant la directive `DeflateAlterETag` <sup>(angl.)</sup>](https://httpd.apache.org/docs/2.4/mod/mod_deflate.html).
 
 ### Validation faible
@@ -59,13 +59,13 @@ Plusieurs en-têtes HTTP, appelées en-têtes conditionnels, permettent de condi
 - {{HTTPHeader("If-Unmodified-Since")}}
   - : Réussit si la date {{HTTPHeader("Last-Modified")}} de la ressource distante est plus ancienne ou égale à celle donnée dans cet en-tête.
 - {{HTTPHeader("If-Range")}}
-  - : Similaire à {{HTTPHeader("If-Match")}}, ou {{HTTPHeader("If-Unmodified-Since")}}, mais peut n'avoir qu'un seul ETag ou une seule date. Si cela échoue, la requête de plage échoue, et au lieu d'une réponse {{HTTPStatus("206", "206 Partial Content")}}, un {{HTTPStatus("200", "200 OK")}} est envoyé avec la ressource complète.
+  - : Similaire à {{HTTPHeader("If-Match")}}, ou {{HTTPHeader("If-Unmodified-Since")}}, mais peut n'avoir qu'un seul ETag ou une seule date. Si cela échoue, la requête de plage échoue, et au lieu d'une réponse {{HTTPStatus(206, "206 Partial Content")}}, un {{HTTPStatus(200, "200 OK")}} est envoyé avec la ressource complète.
 
 ## Cas d'utilisation
 
 ### Mise à jour du cache
 
-Le cas d'utilisation le plus commun pour les requêtes conditionnelles est la mise à jour du cache. Avec un cache vide ou absent, la ressource demandée est retournée avec un statut {{HTTPStatus("200")}} `OK`.
+Le cas d'utilisation le plus commun pour les requêtes conditionnelles est la mise à jour du cache. Avec un cache vide ou absent, la ressource demandée est retournée avec un statut {{HTTPStatus(200)}} `OK`.
 
 ![La requête émise lorsque le cache est vide déclenche le téléchargement de la ressource, avec les deux valeurs de validation envoyées en en-tête. Le cache est alors rempli.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/cache-sequence-1.svg)
 
@@ -73,11 +73,11 @@ Avec la ressource, les validateurs sont envoyés dans les en-têtes. Dans cet ex
 
 Tant que le cache n'est pas obsolète, aucune requête n'est émise. Mais une fois qu'il devient obsolète, ce processus est principalement contrôlé par l'en-tête {{HTTPHeader("Cache-Control")}}. Le client n'utilise pas directement la valeur mise en cache, mais émet une _requête conditionnelle_. La valeur du validateur est utilisée comme paramètre des en-têtes {{HTTPHeader("If-Modified-Since")}} et {{HTTPHeader("If-None-Match")}}.
 
-Si la ressource n'a pas changé, le serveur retourne une réponse {{HTTPStatus("304")}} `Not Modified`. Cela rend le cache à nouveau frais, et le client utilise la ressource mise en cache. Bien qu'il y ait un aller-retour de requête/réponse qui consomme certaines ressources, c'est plus efficace que de transmettre à nouveau l'intégralité de la ressource.
+Si la ressource n'a pas changé, le serveur retourne une réponse {{HTTPStatus(304)}} `Not Modified`. Cela rend le cache à nouveau frais, et le client utilise la ressource mise en cache. Bien qu'il y ait un aller-retour de requête/réponse qui consomme certaines ressources, c'est plus efficace que de transmettre à nouveau l'intégralité de la ressource.
 
 ![Avec un cache obsolète, la requête conditionnelle est envoyée. Le serveur peut déterminer si la ressource a changé et, comme dans ce cas, décider de ne pas l'envoyer à nouveau, car elle est identique.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/cache-sequence-2.svg)
 
-Si la ressource a changé, le serveur retourne simplement une réponse {{HTTPStatus("200", "200 OK")}} avec la nouvelle version de la ressource (comme si la requête n'est pas conditionnelle). Le client utilise cette nouvelle ressource (et la met en cache).
+Si la ressource a changé, le serveur retourne simplement une réponse {{HTTPStatus(200, "200 OK")}} avec la nouvelle version de la ressource (comme si la requête n'est pas conditionnelle). Le client utilise cette nouvelle ressource (et la met en cache).
 
 ![Dans le cas où la ressource a été modifiée, elle est retournée comme si la requête n'est pas conditionnelle.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/cache-sequence-3.svg)
 
@@ -123,11 +123,11 @@ Les requêtes conditionnelles permettent de mettre en œuvre _l'algorithme de ve
 
 ![Les requêtes conditionnelles vous permettent de mettre en œuvre le verrouillage optimiste : maintenant, le plus rapide gagne, et les autres reçoivent une erreur.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/optimistic-locking-3.svg)
 
-C'est mis en œuvre en utilisant les en-têtes {{HTTPHeader("If-Match")}} ou {{HTTPHeader("If-Unmodified-Since")}}. Si l'ETag ne correspond pas au fichier original, ou si le fichier a été modifié depuis qu'il a été obtenu, la modification est rejetée avec une erreur {{HTTPStatus("412", "412 Precondition Failed")}}. Il appartient alors au client de gérer l'erreur&nbsp;: soit en informant l'utilisateur·ice de recommencer (cette fois sur la version la plus récente), soit en affichant à l'utilisateur·ice une _diff_ des deux versions, l'aidant à décider quelles modifications il souhaite conserver.
+C'est mis en œuvre en utilisant les en-têtes {{HTTPHeader("If-Match")}} ou {{HTTPHeader("If-Unmodified-Since")}}. Si l'ETag ne correspond pas au fichier original, ou si le fichier a été modifié depuis qu'il a été obtenu, la modification est rejetée avec une erreur {{HTTPStatus(412, "412 Precondition Failed")}}. Il appartient alors au client de gérer l'erreur&nbsp;: soit en informant l'utilisateur·ice de recommencer (cette fois sur la version la plus récente), soit en affichant à l'utilisateur·ice une _diff_ des deux versions, l'aidant à décider quelles modifications il souhaite conserver.
 
 ### Gérer le premier téléchargement d'une ressource
 
-Le premier téléchargement d'une ressource est un cas particulier du précédent. Comme toute mise à jour d'une ressource, il est sujet à une condition de course si deux clients essaient de l'effectuer à des moments similaires. Pour éviter cela, des requêtes conditionnelles peuvent être utilisées&nbsp;: en ajoutant {{HTTPHeader("If-None-Match")}} avec la valeur spéciale `*`, représentant n'importe quel ETag. La requête réussit uniquement si la ressource n'existait pas auparavant&nbsp;:
+Le premier téléchargement d'une ressource est un cas particulier du précédent. Comme toute mise à jour d'une ressource, il est sujet à une condition de course si deux clients essaient de l'effectuer à des moments similaires. Pour éviter cela, des requêtes conditionnelles peuvent être utilisées&nbsp;: en ajoutant {{HTTPHeader("If-None-Match")}} avec la valeur spéciale `*`, représentant n'importe quel ETag. La requête réussit uniquement si la ressource n'existe pas&nbsp;:
 
 ![Comme pour un téléchargement régulier, le premier téléchargement d'une ressource est sujet à une condition de course : If-None-Match peut l'éviter.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/first-upload.svg)
 
@@ -143,6 +143,6 @@ Dans les deux cas, il est clair que les requêtes conditionnelles sont une fonct
 
 ## Voir aussi
 
-- Le code de statut {{HTTPStatus("304", "304 Not Modified")}}
+- Le code de statut {{HTTPStatus(304, "304 Not Modified")}}
 - L'en-tête {{HTTPHeader("If-None-Match")}}
 - [Serveur Apache `mod_deflate.c` <sup>(angl.)</sup>](https://github.com/apache/httpd/blob/4348e8cb7d8c41b1c8019ceb0a1612bb4a3384f7/modules/filters/mod_deflate.c#L495-L500) transforme les ETags lors de la compression

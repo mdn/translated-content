@@ -43,9 +43,9 @@ function f(x, o) {
 }
 ```
 
-`f`被调用时，`x`有可能能取到值，也可能是`undefined`，如果能取到，有可能是在 o 上取的值，也可能是函数的第一个参数`x`的值（如果 o 中没有这个属性的话）。如果你忘记在作为第二个参数的对象 o 中定义`x`这个属性，程序并不会报错，只是取到另一个值而已。
+`f`被调用时，`x`有可能取到值，也可能是`undefined`，如果能取到，有可能是在 o 上取的值，也可能是函数的第一个参数`x`的值（如果 o 中没有这个属性的话）。如果你忘记在作为第二个参数的对象 o 中定义`x`这个属性，程序并不会报错，只是取到另一个值而已。
 
-**弊端**：使用 `with` 语句的代码，无法向前兼容，特別是在使用一些原生数据类型的时候。看下面的例子：
+**弊端**：使用 `with` 语句的代码，无法向前兼容，特别是在使用一些原生数据类型的时候。看下面的例子：
 
 ```js
 function f(foo, values) {
@@ -61,7 +61,7 @@ function f(foo, values) {
 
 ### 使用 with 语句
 
-下面的`with`语句指定[`Math`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)对象作为默认对象。`with`语句里面的变量，分別指向`Math`对象的[`PI`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/PI) 、`cos` 和 [`sin`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/sin) 函数，不用在前面添加命名空间。后续所有引用都指向`Math`对象。
+下面的`with`语句指定[`Math`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)对象作为默认对象。`with`语句里面的变量，分别指向`Math`对象的[`PI`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/PI) 、`cos` 和 [`sin`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/sin) 函数，不用在前面添加命名空间。后续所有引用都指向`Math`对象。
 
 ```js
 var a, x, y;

@@ -3,7 +3,7 @@ title: En-tête Cross-Origin-Resource-Policy (CORP)
 short-title: Cross-Origin-Resource-Policy
 slug: Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy
 l10n:
-  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
+  sourceCommit: bd5271a96d814ed6876e974186c465f1b3959e07
 ---
 
 {{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Cross-Origin-Resource-Policy`** (CORP) indique que le navigateur doit bloquer les requêtes inter-origines ou inter-sites [`no-cors`](/fr/docs/Web/API/RequestInit#no-cors) vers la ressource donnée.
@@ -58,7 +58,7 @@ Cross-Origin-Resource-Policy: same-origin
 
 ## Voir aussi
 
-- [Explication de la Cross-Origin Resource Policy (CORP)](/fr/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)
+- [Explication de la Cross-Origin Resource Policy (CORP)](/fr/docs/Web/Security/Practical_implementation_guides/CORP)
 - [Envisager de déployer Cross-Origin Resource Policy <sup>(angl.)</sup>](https://resourcepolicy.fyi/)
 - L'en-tête {{HTTPHeader("Cross-Origin-Embedder-Policy")}}
 - L'en-tête {{HTTPHeader("Access-Control-Allow-Origin")}}

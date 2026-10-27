@@ -3,7 +3,7 @@ title: Propriété CSS `background`
 short-title: background
 slug: Web/CSS/Reference/Properties/background
 l10n:
-  sourceCommit: 3f221b9845703eb21db70cdc321f843d5c1c072b
+  sourceCommit: 8c21ceeff860d7b9f64b177115e3897543e7fcab
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`background`** définit l'ensemble des propriétés de style d'arrière-plan en une seule déclaration, comme la couleur, l'image, l'origine, la taille et le mode de répétition.
@@ -185,7 +185,6 @@ Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assi
   Dans le ciel.
 </p>
 <p class="attention">Voici un paragraphe&nbsp;!</p>
-<p></p>
 ```
 
 #### CSS

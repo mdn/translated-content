@@ -3,7 +3,7 @@ title: Propriété CSS `container-type`
 short-title: container-type
 slug: Web/CSS/Reference/Properties/container-type
 l10n:
-  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
+  sourceCommit: 892eb917bee599a9d6cae7d33ed783129dbb39b3
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`container-type`** permet de définir le type de contexte de conteneur utilisé dans une requête de conteneur.
@@ -100,7 +100,7 @@ Par exemple, vous pouvez avoir un élément infobulle positionné par une ancre 
 ```css
 .tooltip {
   position: absolute;
-  position-anchor: --monAncre;
+  position-anchor: --mon-ancre;
   position-area: top;
   position-try-fallbacks: flip-block;
   container-type: anchored;

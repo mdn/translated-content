@@ -1,5 +1,5 @@
 ---
-title: "`<noembed>` 埋め込みフォールバック要素 (HTML)"
+title: "`<noembed>` 埋め込みフォールバック要素"
 short-title: <noembed>
 slug: Web/HTML/Reference/Elements/noembed
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: HTML `<menu>` メニュー要素
+title: "`<menu>` メニュー要素"
 short-title: <menu>
 slug: Web/HTML/Reference/Elements/menu
 l10n:

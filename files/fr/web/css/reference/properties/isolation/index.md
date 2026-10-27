@@ -3,10 +3,12 @@ title: Propriété CSS `isolation`
 short-title: isolation
 slug: Web/CSS/Reference/Properties/isolation
 l10n:
-  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`isolation`** indique que l'élément crée un nouveau {{Glossary("stacking context", "contexte d'empilement")}}.
+
+Cette propriété est particulièrement utile lorsqu'elle est utilisée en combinaison avec {{CSSxRef("mix-blend-mode")}} et {{CSSxRef("z-index")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: isolation")}}
 
@@ -45,8 +47,6 @@ isolation: isolate;
   color: #8245a3;
 }
 ```
-
-Cette propriété est particulièrement utile lorsqu'elle est utilisée en combinaison avec {{CSSxRef("mix-blend-mode")}} et {{CSSxRef("z-index")}}.
 
 ## Syntaxe
 

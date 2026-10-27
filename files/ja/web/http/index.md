@@ -89,7 +89,7 @@ HTTP は拡張可能なプロトコルであり、リソースや統一リソー
 - [コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/Guides/CSP)
   - : CSP を使用すると、ウェブサイト管理者は {{HTTPHeader("Content-Security-Policy")}} レスポンスヘッダーを利用して、指定されたページに対してクライアントが読み込むことをすることができるリソースを制御できます。
     CSP ガイドでは、クロスサイトスクリプティング (XSS) やデータ注入攻撃など、特定の種類の攻撃を検知・軽減するのに役立つ、コンテンツセキュリティポリシー (CSP) の仕組み全体を説明しています。
-- [オリジン間リソースポリシー (CORP)](/ja/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)
+- [オリジン間リソースポリシー (CORP)](/ja/docs/Web/Security/Practical_implementation_guides/CORP)
   - : CORP は、ウェブサイトやアプリケーションが、他のオリジンからの特定のリクエスト（`<script>` や `<img>` などの要素を含むものなど）に対する保護を有効にできるようにし、推測型サイドチャネル攻撃を軽減します。
 - [Mozilla ウェブセキュリティガイドライン](https://infosec.mozilla.org/guidelines/web_security)
   - : 運用チームがセキュアなウェブアプリケーションを開発するのに役立つコツをまとめました。

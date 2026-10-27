@@ -1,141 +1,93 @@
 ---
-title: Anatomie d'une WebExtension
+title: Anatomie d'une extension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
+l10n:
+  sourceCommit: ee33efab7300d7bf7319921a22f2eb2b60df91da
 ---
 
-Une extension se compose de plusieurs fichiers, packagés pour la distribution et l'installation. Dans cet article, nous allons rapidement passer par les fichiers qui pourraient être présents dans une extension.
+Une extension est constituée d'un ensemble de fichiers regroupés en vue de leur distribution et de leur installation. Cet article décrit les fichiers pouvant se trouver dans une extension.
 
 ## manifest.json
 
-Il s'agit du seul fichier qui doit être présent dans chaque extension. Il contient des métadonnées de base sur l'extension telles que son nom, sa version et les autorisations requises. Il fournit également des pointeurs vers d'autres fichiers dans l'extension.
+Ce fichier est le seul qui doit obligatoirement figurer dans chaque extension. Il contient des métadonnées de base, telles que son nom, sa version et les autorisations requises.
 
-Ce manifeste peut également contenir des pointeurs vers plusieurs autres types de fichiers :
+Le manifeste peut également contenir des références à plusieurs autres types de fichiers&nbsp;:
 
-- [page d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)&nbsp;: implémentez une logique à longue durée.
-- Icônes pour l'extension et tous les boutons qu'elle peut définir.
-- [Sidebars, popups, et options pages](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#sidebars_popups_options_pages): Documents HTML qui fournissent du contenu pour divers composants de l'interface utilisateur.
-- [Script de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts) : interagissez avec les pages Web (Notez que ce n'est pas le même que javaScript dans un élément {{HTMLElement("script")}} au sein d'une page).
-- [Web-accessible resources](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#web_accessible_resources) : Rendez le contenu packagé accessible aux pages Web et aux scripts de contenu.
+- [Scripts d'arrière-plan](#scripts_darrière-plan)
+  - : Les scripts qui répondent aux évènements du navigateur.
+- Icônes
+  - : Pour l'extension et tous les boutons qu'elle peut définir.
+- [Barres latérales, fenêtres intrusives, et pages d'options](#barres_latérales_fenêtres_intrusives_et_pages_doptions)
+  - : Les documents HTML qui fournissent du contenu pour divers composants de l'interface utilisateur.
+- [Scripts de contenu](#scripts_de_contenu)
+  - : JavaScript inclus avec votre extension, que votre extension injecte dans les pages Web.
+- [Ressources accessibles depuis le Web](#ressources_accessibles_depuis_le_web)
+  - : Contenu empaqueté rendu accessible aux pages Web et aux scripts de contenu.
 
-![](webextension-anatomy.png)
+![Les composants d'une extension. Le fichier manifest.json doit être présent dans toutes les extensions. Il fournit des pointeurs vers les pages d'arrière-plan, les scripts de contenu, les actions du navigateur, les actions de page, les pages d'options et les ressources accessibles depuis le Web. Les pages d'arrière-plan sont écrites en HTML et JavaScript. Les scripts de contenu sont écrits en JavaScript et CSS. L'utilisateur·ice clique sur une icône pour déclencher les actions du navigateur et les actions de page, qui peuvent afficher une fenêtre contextuelle composée de HTML, CSS et JavaScript. Les pages d'options sont composées de HTML, CSS et JavaScript.](webextension-anatomy.png)
 
-Voir la page référence [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) pour tous les détails.
+Voir la page de référence [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) pour tous les détails.
 
-En plus de celles déjà listées dans le manifeste, une extension peut également inclure des pages d'extensions supplémentaires et des fichiers de support.
+En plus de ceux énumérés dans le manifeste, une extension peut inclure des [pages d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) supplémentaires et des fichiers de prise en charge.
 
 ## Scripts d'arrière-plan
 
-Les extensions doivent souvent conserver un état à long terme ou effectuer des opérations à long terme indépendamment de la durée de vie d'une page Web ou d'une fenêtre de navigateur. C'est le rôle des scripts d'arrière-plan.
+Les extensions doivent souvent répondre à des évènements qui se produisent dans le navigateur indépendamment de la durée de vie d'une page Web ou d'une fenêtre de navigateur particulière. C'est le rôle des scripts d'arrière-plan.
 
-Les scripts en arrière-plan sont chargés dès que l'extension est chargée et restent chargés jusqu'à ce que l'extension soit désactivée ou désinstallée. Vous pouvez utiliser n'importe laquelle des [WebExtension APIs](/fr/docs/Mozilla/Add-ons/WebExtensions/API) dans le script, tant que vous avez demandé les [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) nécessaires.
+Les scripts d'arrière-plan peuvent être persistants ou non persistants.
 
-### Spécifier les scripts d'arrière-plan
+- Les scripts d'arrière-plan persistants se chargent dès que l'extension est chargée et restent chargés jusqu'à ce que l'extension soit désactivée ou désinstallée. Seules les extensions Manifest V2 peuvent utiliser des scripts d'arrière-plan persistants.
+- Les scripts d'arrière-plan non persistants se chargent lorsque c'est nécessaire pour répondre à un évènement et se déchargent lorsqu'ils deviennent inactifs. Les extensions Manifest V3 utilisent uniquement des scripts d'arrière-plan non persistants, et les extensions Manifest V2 peuvent opter pour ce comportement.
 
-Vous pouvez inclure un script d'arrière-plan à l'aide de la clé `background` dans "manifest.json" :
+Vous pouvez utiliser n'importe laquelle des [API WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions/API) dans le script, si vous avez demandé les [autorisations](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) nécessaires.
 
-```json
-// manifest.json
+Consultez l'article sur les [scripts d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) pour en savoir plus.
 
-"background": {
-  "scripts": ["background-script.js"]
-}
-```
+## Barres latérales, fenêtres intrusives et pages d'options
 
-Vous pouvez spécifier plusieurs scripts en arrière-plan : si vous le faites, ils s'exécutent dans le même contexte, tout comme plusieurs scripts chargés dans une seule page Web.
+Votre extension peut inclure divers composants d'interface utilisateur dont le contenu est défini à l'aide d'un document HTML&nbsp;:
 
-Au lieu de spécifier des scripts d'arrière-plan, vous pouvez spécifier une page d'arrière-plan qui a l'avantage supplémentaire de supporter les modules ES6 :
+- [Barre latérale](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)
+  - : Un volet affiché à gauche de la fenêtre du navigateur, à côté de la page Web.
+- [Fenêtre intrusive](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
+  - : Une boîte de dialogue affichée lorsque l'utilisateur·ice clique sur un [bouton de la barre d'outils](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) ou un [bouton de la barre d'adresse](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
+- [Options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
+  - : Une page affichée lorsque l'utilisateur·ice accède aux préférences de votre extension dans le gestionnaire d'extensions natif du navigateur.
 
-**manifest.json:**
+Pour chacun de ces composants, vous créez un fichier HTML et y faites référence en utilisant une propriété spécifique dans [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json). Le fichier HTML peut inclure des fichiers CSS et JavaScript, tout comme une page Web standard.
 
-```json
-// manifest.json
+Tous ces composants sont des [pages d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages). Contrairement à une page Web normale, le JavaScript de votre extension peut utiliser les mêmes API WebExtensions privilégiées que votre script d'arrière-plan.
 
-"background": {
-  "page": "background-page.html"
-}
-```
+## Pages d'extension
 
-**background-page.html:**
+Vous pouvez également inclure dans votre extension des documents HTML qui ne sont pas attachés à un composant d'interface utilisateur prédéfini. Contrairement aux documents que vous pouvez fournir pour les barres latérales, les fenêtres intrusives ou les pages d'options, ceux-ci n'ont pas d'entrée dans `manifest.json`. Cependant, ils ont également accès aux mêmes API WebExtensions privilégiées que votre script d'arrière-plan.
 
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <script type="module" src="background-script.js"></script>
-  </head>
-</html>
-```
-
-### Environnement des scripts d'arrière-plan
-
-#### APIs DOM
-
-Les scripts d'arrière-plan s'exécutent dans le contexte de pages spéciales appelées pages d'arrière-plan. Cela leur donne une [`fenêtre`](/fr/docs/Web/API/Window) globale, ainsi que toutes les API DOM standard fournies par cet objet.
-
-> [!WARNING]
-> Dans Firefox, les pages d'arrière-plan ne supportent pas l'utilisation de [`alert()`](/fr/docs/Web/API/Window/alert), [`confirm()`](/fr/docs/Web/API/Window/confirm), ou [`prompt()`](/fr/docs/Web/API/Window/prompt).
-
-#### APIs des WebExtensions
-
-Les scripts d'arrière-plan peuvent utiliser l'une des [APIs des WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions/API) dans le script, à condition que leur extension dispose des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) nécessaires.
-
-#### Cross-origin access
-
-Les scripts d'arrière-plan peuvent faire des requêtes XHR à tous les hôtes pour lesquels ils ont des [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
-
-#### Contenu Web
-
-Les scripts d'arrière-plan n'obtiennent pas un accès direct aux pages Web. Toutefois, ils peuvent charger des [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) dans les pages Web et peuvent [communiquer avec ces scripts de contenu à l'aide d'une API de communication](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts).
-
-#### Politique de sécurité du contenu
-
-Les scripts d'arrière-plan sont restreints à certaines opérations pour lutter contre d'autres potentiellement dangereuses, comme l'utilisation de la fonction [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval), par le biais d'une politique de sécurité du contenu. Pour plus de détails, consultez la [politique de sécurité du contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy).
-
-## Sidebars, popups, pages options
-
-Votre extension peut inclure divers composants d'interface utilisateur dont le contenu est défini à l'aide d'un document HTML :
-
-- Une [barre latérale](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) est un volet qui s'affiche dans la partie gauche de la fenêtre du navigateur, à côté de la page Web.
-- Un [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) est une boîte de dialogue que vous pouvez afficher lorsque l'utilisateur clique sur un [bouton de la barre d'outils](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) ou de la [barre d'adresse](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
-- Une [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) est une page qui s'affiche lorsque l'utilisateur accède aux préférences de votre module complémentaire dans le gestionnaire d'add-ons natif du navigateur.
-
-Pour chacun de ces composants, vous créez un fichier HTML et pointez vers lui en utilisant une propriété spécifique dans [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json). Le fichier HTML peut inclure des fichiers CSS et JavaScript, tout comme une page Web normale.
-
-Toutes ces pages sont un type de [pages d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages),et contrairement à une page Web normale, votre JavaScript peut utiliser les mêmes API d'extension Web privilégiées que votre script de fond. Ils peuvent même accéder directement aux variables de la page d'arrière-plan en utilisant {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
-
-## Page d'extension
-
-Vous pouvez également inclure dans votre extension des documents HTML qui ne sont pas attachés à un composant d'interface utilisateur prédéfini. Contrairement aux documents que vous pouvez fournir pour les sidebars, les popups ou les pages d'options, ceux-ci n'ont pas d'entrée dans manifest.json. Cependant, ils ont également accès aux mêmes API WebExtension privilégiées que votre script d'arrière-plan.
-
-Vous chargerez typiquement une page comme celle-ci en utilisant {{WebExtAPIRef("windows.create()")}} ou {{WebExtAPIRef("tabs.create()")}}.
+Vous chargez typiquement une page comme celle-ci en utilisant {{WebExtAPIRef("windows.create()")}} ou {{WebExtAPIRef("tabs.create()")}}.
 
 Voir les [pages d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) pour en savoir plus.
 
 ## Scripts de contenu
 
-Utilisez les scripts de contenu pour accéder et manipuler des pages Web. Les scripts de contenu sont chargés dans des pages Web et lancés dans le contexte de cette page particulière.
+Utilisez les scripts de contenu pour accéder et manipuler des pages Web. Les scripts de contenu sont chargés dans des pages Web et s'exécutent dans le contexte de cette page particulière.
 
-Les scripts de contenu sont des scripts fournis par les extensions qui s'exécutent dans le contexte d'une page Web ; cela diffère des scripts qui sont chargés par la page elle-même, y compris ceux qui sont fournis dans les éléments {{HTMLElement ("script")}} dans la page.
+Les scripts de contenu sont des scripts fournis par l'extension qui s'exécutent dans le contexte d'une page Web&nbsp;; cela diffère des scripts chargés par la page elle-même, y compris ceux fournis dans les éléments HTML {{HTMLElement("script")}} de la page.
 
-Les scripts de contenu peuvent voir et manipuler le DOM de la page, tout comme les scripts normaux chargés par la page.
+Les scripts de contenu peuvent accéder et manipuler le DOM de la page, tout comme les autres scripts chargés par la page. Cependant, contrairement aux scripts de page normaux, les scripts de contenu peuvent&nbsp;:
 
-Contrairement aux scripts de pages normales, ils peuvent :
+- Utiliser un petit sous-ensemble des [API WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions/API).
+- [Échanger des messages avec leurs scripts d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communiquer_avec_les_scripts_darrière-plan), ce qu'un
+  script de contenu peut utiliser pour demander au script d'arrière-plan de faire quelque chose en utilisant une API WebExtensions.
 
-- Effectuer des requêtes XHR entre domaines.
-- Utiliser un petit sous-ensemble de l'[APIs des WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions/API).
-- [Echanger des messages avec leurs scripts d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communication_avec_les_scripts_darrière-plan) et peuvent ainsi accéder indirectement à toutes les API des WebExtensions.
+Les scripts de contenu ne peuvent pas accéder directement aux scripts de page normaux, mais peuvent échanger des messages avec eux en utilisant l'API standard [`window.postMessage()`](/fr/docs/Web/API/Window/postMessage).
 
-Les scripts de contenu ne peuvent pas directement accéder normalement aux scripts de page, mais peuvent échanger des messages avec eux à l'aide de l'API standard [`window.postMessage()`](/fr/docs/Web/API/Window/postMessage).
+Votre extension peut également injecter du CSS dans les pages Web en utilisant le mécanisme utilisé pour injecter des scripts de contenu.
 
-Habituellement, quand nous parlons de scripts de contenu, nous parlons de JavaScript, mais vous pouvez injecter du CSS dans des pages Web en utilisant le même mécanisme.
+Voir l'article sur les [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) pour en savoir plus.
 
-Voir l'article de [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) pour en savoir plus.
+## Ressources accessibles depuis le web
 
-## Rendre accessible des ressources web
+Les ressources accessibles depuis le web sont des fichiers — tels que des images, HTML, CSS et JavaScript — que vous incluez dans l'extension et que vous souhaitez rendre accessibles aux scripts de contenu et aux scripts de page. Les ressources rendues accessibles depuis le web peuvent être référencées par les scripts de page et les scripts de contenu en utilisant un schéma d'URI spécifique.
 
-Les ressources web sont des fichiers tels que des images, des fichiers HTML, CSS ou JavaScript qui sont inclus dans l'extension afin d'être utilisés par les scripts de contenu et les scripts d'arrière-plan. Les ressources web mises à disposition peuvent être référencées depuis les scripts grâce à un schéma d'URI spécifique.
+Par exemple, si un script de contenu souhaite insérer des images sur des pages web, vous pouvez les inclure dans l'extension et les rendre accessibles depuis le web. Ensuite, le script de contenu peut créer et ajouter des balises [`img`](/fr/docs/Web/HTML/Reference/Elements/img) faisant référence aux images par l'attribut `src`.
 
-Ainsi, si un script de contenu souhaite insérer des images sur une page web, on pourra insérer ces images dans l'extension et les rendre accessible. Ensuite, le script de contenu pourra créer et ajouter une balise {{HTMLElement("img")}} faisant référence à l'image via l'attribut `src` ciblant le fichier via le schéma spécifique.
-
-Pour en savoir plus, se référer à la documentation de la clé [`web_accessible_resources`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) du fichier `manifest.json`.
+Pour en savoir plus, consultez la documentation de la clé [`"web_accessible_resources"`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) du fichier `manifest.json`.

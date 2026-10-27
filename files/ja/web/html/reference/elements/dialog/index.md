@@ -1,5 +1,5 @@
 ---
-title: HTML `<dialog>` ダイアログ要素
+title: "`<dialog>` ダイアログ要素"
 short-title: <dialog>
 slug: Web/HTML/Reference/Elements/dialog
 l10n:

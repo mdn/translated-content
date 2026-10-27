@@ -1,5 +1,5 @@
 ---
-title: HTML `<dd>` 詳細説明要素
+title: "`<dd>` 詳細説明要素"
 short-title: <dd>
 slug: Web/HTML/Reference/Elements/dd
 l10n:

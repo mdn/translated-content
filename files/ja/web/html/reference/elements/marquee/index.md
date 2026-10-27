@@ -1,5 +1,5 @@
 ---
-title: HTML `<marquee>` マーキー要素
+title: "`<marquee>` マーキー要素"
 short-title: <marquee>
 slug: Web/HTML/Reference/Elements/marquee
 l10n:

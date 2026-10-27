@@ -1,5 +1,5 @@
 ---
-title: HTML `<meta name="robots">` 属性値
+title: '`<meta name="robots">` 属性値'
 short-title: robots
 slug: Web/HTML/Reference/Elements/meta/name/robots
 l10n:

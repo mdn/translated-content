@@ -152,7 +152,7 @@ Cache-Control: no-cache
 Cache-Control: max-age=604800, must-revalidate
 ```
 
-HTTP では、キャッシュがオリジンサーバーから切り離されたときに、[古いレスポンス](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)を再利用できます。 `must-revalidate` はそれを防ぐための方法で、キャッシュは保存されたレスポンスを元のサーバーで再検証するか、それが検証不可能な場合は 504 (Gateway Timeout) のレスポンスを生成します。
+HTTP では、キャッシュがオリジンサーバーから切り離されたときに、[古いレスポンス](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)を再利用できます。 `must-revalidate` はそれを防ぐための方法で、キャッシュは保存されたレスポンスをオリジンサーバーで再検証するか、それが検証不可能な場合は 504 (Gateway Timeout) のレスポンスを生成します。
 
 > [!NOTE]
 > `must-revalidate` ディレクティブは、<kbd>戻る</kbd>ボタンなどを使用した履歴ナビゲーションにおける再検証を保証するものではありません。
@@ -294,7 +294,7 @@ Cache-Control: no-store
 
 #### `max-age`
 
-`max-age=N` リクエストディレクティブは、元のサーバーで生成されたレスポンスが _N_ 秒以内にクライアントに格納されることを示します。ここで、_N_ は `0` を含む非負の整数であれば何でも入れることができます。
+`max-age=N` リクエストディレクティブは、オリジンサーバーで生成されてから _N_ 秒以内の保存されたレスポンスであれば、クライアントが受け入れることを示します。ここで、_N_ は `0` を含む非負の整数であれば何でも入れることができます。
 
 ```http
 Cache-Control: max-age=10800
@@ -320,7 +320,7 @@ Cache-Control: max-age=0
 
 #### `max-stale`
 
-`max-stale=N` リクエストディレクティブは、クライアントが _N_ 秒以内に[期限切れ](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)となるレスポンスを格納することを示すものです。
+`max-stale=N` リクエストディレクティブは、[期限切れ](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)になってから _N_ 秒以内の保存されたレスポンスであれば、クライアントが受け入れることを示すものです。
 _N_ の値が指定されていない場合、クライアントは期限切れのレスポンスをどのタイミングでも受け入れることになります。
 
 ```http
@@ -335,7 +335,7 @@ Cache-Control: max-stale=3600
 
 #### `min-fresh`
 
-リクエストディレクティブの `min-fresh` は、クライアントが少なくとも _N_ 秒間[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)な保存されたレスポンスを許可することを示します。
+`min-fresh=N` リクエストディレクティブは、この先少なくとも _N_ 秒間は[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)なままである保存されたレスポンスであれば、クライアントが受け入れることを示します。
 
 ```http
 Cache-Control: min-fresh=600

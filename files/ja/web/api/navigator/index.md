@@ -2,7 +2,7 @@
 title: Navigator
 slug: Web/API/Navigator
 l10n:
-  sourceCommit: f2088b8912ef205a737551441d54b73507bd3ac6
+  sourceCommit: d678295b8c67d19354bca1db406af1b6bc8cf1c6
 ---
 
 {{APIRef("DOM")}}
@@ -17,6 +17,8 @@ _継承しているプロパティはありません。_
 
 ### 標準プロパティ
 
+- {{domxref("Navigator.audioSession")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : ウェブアプリケーションから出力されるオーディオと、端末上で再生中の他のオーディオとの相互作用を制御するために使用できる {{domxref("AudioSession")}} オブジェクトを返します。
 - {{domxref("Navigator.bluetooth")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : 現在の文書の {{domxref("Bluetooth")}} オブジェクトを返し、 [Web Bluetooth API](/ja/docs/Web/API/Web_Bluetooth_API) の機能へのアクセスを提供します。
 - {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}} {{securecontext_inline}}
@@ -31,9 +33,11 @@ _継承しているプロパティはありません。_
   - : {{domxref("CredentialsContainer")}} インターフェイスを返し、ログインやログアウトの成功といったイベントが発生したときに、資格情報を要求してユーザーエージェントへ通知する手段を提供します。
 - {{domxref("Navigator.deviceMemory")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 端末のメモリーをギガバイト単位で返します。この値は 2 の累乗に最も近い値を 1024 で割った概算値です。
+- {{domxref("Navigator.devicePosture")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : ブラウザーの {{domxref("DevicePosture")}} オブジェクトを返します。これにより、開発者は端末の現在の形態（つまり、ビューポートが展開状態か折りたたみ状態か）を照会し、形態の変化に応じてコードを実行することができます。
 - {{domxref("Navigator.geolocation")}} {{ReadOnlyInline}}
   - : 端末の物理的な場所を取得することができる {{domxref("Geolocation")}} オブジェクトを返します。
-- {{domxref("Navigator.gpu")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxref("Navigator.gpu")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 現在の閲覧コンテキストの {{domxref("GPU")}} オブジェクトを返します。 {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}} のエントリーポイントです。
 - {{domxref("Navigator.hardwareConcurrency")}} {{ReadOnlyInline}}
   - : 使用可能な論理プロセッサーのコア数を返します。
@@ -49,7 +53,7 @@ _継承しているプロパティはありません。_
   - : ユーザーが知っている言語を表す文字列を、望ましい順に並べた配列を返します。
 - {{domxref("Navigator.locks")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : {{domxref("LockManager")}} オブジェクトを返します。これは、新しい {{domxref('Lock')}} オブジェクトを要求したり、既存の {{domxref('Lock')}} オブジェクトをクエリーしたりするためのものです。
-- {{domxref("Navigator.login")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxref("Navigator.login")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : ブラウザーの {{domxref("NavigatorLogin")}} オブジェクトへのアクセスを提供します。これは、連合 ID プロバイダー (IdP) が、ユーザーが IdP にログインまたはログインする際に、ユーザーのログインステータスを設定するために使用することができます。詳細は、[連合資格情報管理 (FedCM) API](/ja/docs/Web/API/FedCM_API) を参照してください。
 - {{domxref("Navigator.maxTouchPoints")}} {{ReadOnlyInline}}
   - : 現在の端末で対応している同時タッチ点の最大数を返します。
@@ -65,11 +69,13 @@ _継承しているプロパティはありません。_
   - : ブラウザーが PDF に移動したときにインラインで表示できるのであれば `true` を、そうでなければ `false` を返します。
 - {{domxref("Navigator.permissions")}} {{ReadOnlyInline}}
   - : {{domxref("Permissions")}} オブジェクトを返します。これは、[権限 API](/ja/docs/Web/API/Permissions_API) が対応する API の許可状態の問い合わせや更新に使用できます。
+- {{domxref("Navigator.preferences")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+  - : 文書の現在の {{domxref("PreferenceManager")}} オブジェクトを返します。このオブジェクトを使用すると、[ユーザーの環境設定](/ja/docs/Web/API/User_Preferences_API)情報にアクセスできます。
 - {{domxref("Navigator.presentation")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : {{domxref("Presentation")}} API への参照を返します。
 - {{domxref("Navigator.scheduling")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 現在の文書の {{domxref("Scheduling")}} オブジェクトを返します。
-- {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : {{domxref("Serial")}} オブジェクトを返します。これは、シリアルポートを制御できるようにする[ウェブシリアル API](/ja/docs/Web/API/Web_Serial_API) のエントリーポイントを表します。
 - {{domxref("Navigator.serviceWorker")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : {{domxref("ServiceWorkerContainer")}} オブジェクトを返します。これは、[関連付けれた文書](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)の {{domxref("ServiceWorker")}} オブジェクトの登録、削除、更新、通信の機能を提供します。
@@ -98,7 +104,7 @@ _継承しているプロパティはありません。_
 
 - {{domxref("Navigator.buildID")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : ブラウザーのビルド識別子を返します。最近のブラウザーでは、このプロパティはプライバシーの目的で、固定のタイムスタンプを返すようになり、例えば Firefox 64 系列では `20181001000000` となります。
-- {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{non-standard_inline}}
+- {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : ユーザーの情報が共有または販売されることへの同意を示す論理値を返します。
 - {{domxref("Navigator.standalone")}} {{Non-standard_Inline}}
   - : ブラウザーをスタンドアロンモードで実行しているかを示す論理値を返します。 Apple の iOS Safari だけで使用できます。
@@ -106,30 +112,30 @@ _継承しているプロパティはありません。_
 ### 非推奨のプロパティ
 
 - {{domxref("Navigator.activeVRDisplays")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : {{domxref("VRDisplay")}} オブジェクトのうち、現在表示している（{{domxref("VRDisplay.ispresenting")}} が `true` である）ものすべてを格納する配列を返します。
-- {{domxref("Navigator.appCodeName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : {{domxref("VRDisplay")}} オブジェクトのうち、現在表示している（{{domxref("VRDisplay.isPresenting")}} が `true` である）ものすべてを格納する配列を返します。
+- {{domxref("Navigator.appCodeName")}} {{ReadOnlyInline}}
   - : どのブラウザーでも `'Mozilla'` を返します。
-- {{domxref("Navigator.appName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.appName")}} {{ReadOnlyInline}}
   - : どのブラウザーでも `'Netscape'` を返します。
-- {{domxref("Navigator.appVersion")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.appVersion")}} {{ReadOnlyInline}}
   - : ブラウザーのバージョンを文字列で返します。このプロパティが正確な値を返すことを期待しないで下さい。
 - {{domxref("Navigator.doNotTrack")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : ユーザーの do-not-track 設定の値を返します。この値が "yes" であるとき、ウェブサイトやアプリケーションはユーザーを追跡するべきではありません。
-- {{domxref("Navigator.mimeTypes")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.mimeTypes")}} {{ReadOnlyInline}}
   - : ブラウザーが対応している MIME タイプの一覧を {{domxref("MimeTypeArray")}} で返します。
-- {{domxref("Navigator.oscpu")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.oscpu")}} {{ReadOnlyInline}}
   - : 現在の OS を表す文字列を返します。
-- {{domxref("Navigator.platform")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.platform")}} {{ReadOnlyInline}}
   - : 現在のブラウザーのプラットフォームを表す文字列を返します。このプロパティが正確な値を返すことを期待しないで下さい。
-- {{domxref("Navigator.plugins")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.plugins")}} {{ReadOnlyInline}}
   - : {{domxref("PluginArray")}} を返します。これはブラウザーにインストールされているプラグインを列挙します。
-- {{domxref("Navigator.product")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.product")}} {{ReadOnlyInline}}
   - : どのブラウザーも、常に `'Gecko'` を返します。
-- {{domxref("Navigator.productSub")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.productSub")}} {{ReadOnlyInline}}
   - : `'20030107'` または `'"20100101'` の文字列のどちらかを返します。
-- {{domxref("Navigator.vendor")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.vendor")}} {{ReadOnlyInline}}
   - : 空文字列、`'Apple Computer Inc.'`、`'Google Inc.'` のいずれかを返します。
-- {{domxref("Navigator.vendorSub")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("Navigator.vendorSub")}} {{ReadOnlyInline}}
   - : 常に空文字列を返します。
 
 ## インスタンスメソッド
@@ -141,7 +147,7 @@ _継承するメソッドはありません。_
 - {{domxref("Navigator.clearAppBadge()")}} {{SecureContext_Inline}}
   - : 現在のアプリのバッジを消去し、 {{jsxref("undefined")}} に解決するプロミス ({{jsxref("Promise")}}) を返します。
 - {{domxref("Navigator.deprecatedReplaceInURN()")}} {{Experimental_Inline}}
-  - : 指定された文字列は、指定された不透明な URN または `FencedFrameConfig` 内部の `url` プロパティに対応する URL で置換されます。このメソッドは、一時的な措置として利用できるようになりました（そのため「非推奨」となっています）。フェンスで囲まれたフレームの URL で置換できるようにすることで、広告技術プロバイダーが既存の実装を[プライバシーサンドボックス](https://developers.google.com/privacy-sandbox) API に移行するのに役立つためです。
+  - : 指定された文字列は、指定された不透明な URN または `FencedFrameConfig` 内部の `url` プロパティに対応する URL で置換されます。このメソッドは、一時的な措置として利用できるようになりました（そのため「非推奨」となっています）。フェンスで囲まれたフレームの URL で置換できるようにすることで、広告技術プロバイダーが既存の実装を[プライバシーサンドボックス API](https://privacysandbox.google.com/)<sup>(英語)</sup> に移行するのに役立つためです。
 - {{domxref("Navigator.getAutoplayPolicy()")}} {{Experimental_Inline}}
   - : 指定したメディア要素、音声コンテキスト、またはメディア機能の "type" が自動再生を許可されているかどうかを示す値を返します。
 - {{domxref("Navigator.getBattery()")}} {{SecureContext_Inline}}
@@ -173,9 +179,9 @@ _継承するメソッドはありません。_
   - : ユーザーにプロンプトで許可を取った後に、ローカルコンピューターのマイクやカメラからの音声または動画ストリームを返します。
 - {{domxref("Navigator.getVRDisplays()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : コンピューターに接続されて使用可能な VR 機器を表す {{domxref("VRDisplay")}} の配列に解決されるプロミスを返します。
-- {{domxref("Navigator.javaEnabled()")}} {{Deprecated_Inline}}
+- {{domxref("Navigator.javaEnabled()")}}
   - : 常に false を返します。
-- {{domxref("Navigator.taintEnabled()")}} {{Deprecated_Inline}}
+- {{domxref("Navigator.taintEnabled()")}}
   - : `false` を返します。 JavaScript の taint/untaint 関数は JavaScript 1.2 で削除されました。
 
 ## 仕様書

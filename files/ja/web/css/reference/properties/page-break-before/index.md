@@ -1,5 +1,5 @@
 ---
-title: CSS `page-break-before` プロパティ
+title: "`page-break-before` プロパティ (CSS)"
 short-title: page-break-before
 slug: Web/CSS/Reference/Properties/page-break-before
 l10n:

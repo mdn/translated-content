@@ -1,5 +1,5 @@
 ---
-title: HTML `<button>` ボタン要素
+title: "`<button>` ボタン要素"
 short-title: <button>
 slug: Web/HTML/Reference/Elements/button
 l10n:

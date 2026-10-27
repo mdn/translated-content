@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="file">`
 short-title: <input type="file">
 slug: Web/HTML/Reference/Elements/input/file
 l10n:
-  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`file"`** permettent à l'utilisateur·ice de choisir un ou plusieurs fichiers stockés sur son appareil. Une fois sélectionnés, les fichiers peuvent être téléversés vers un serveur à l'aide de [l'envoi de formulaire](/fr/docs/Learn_web_development/Extensions/Forms), ou manipulés à l'aide du code JavaScript et de [l'API File](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
@@ -65,13 +65,12 @@ L'attribut [`capture`](/fr/docs/Web/HTML/Reference/Attributes/capture) est une c
 
 Lorsque l'attribut booléen [`multiple`](/fr/docs/Web/HTML/Reference/Attributes/multiple) est défini, le champ de fichier permet à l'utilisateur·ice de sélectionner plusieurs fichiers.
 
-## Attribut non-standard
-
-En complément des attributs précédents, les éléments `<input type="file">` peuvent utiliser les attributs spécifiques suivants. Ces attributs ne sont pas standard et ne doivent donc pas être utilisés.
-
 ### `webkitdirectory`
 
 L'attribut booléen `webkitdirectory`, lorsqu'il est présent, indique que seuls les répertoires doivent être disponibles pour être sélectionnés par l'utilisateur·ice dans l'interface de sélection de fichiers. Voir {{DOMxRef("HTMLInputElement.webkitdirectory")}} pour plus de détails et d'exemples.
+
+> [!NOTE]
+> `webkitdirectory` est défini dans [l'API File and Directory Entries](/fr/docs/Web/API/File_and_Directory_Entries_API). Il est nommé `webkitdirectory` en raison de ses origines en tant qu'API spécifique à Chrome. Il est maintenant disponible dans tous les navigateurs.
 
 ## Identifiants de type de fichier uniques
 
@@ -94,15 +93,10 @@ L'attribut `accept` prend comme valeur une chaîne de caractères contenant un o
 ### Un exemple simple
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="file">Sélectionner le fichier à envoyer</label>
-    <input type="file" id="file" name="file" multiple />
-  </div>
-  <div>
-    <button>Envoyer</button>
-  </div>
-</form>
+<div>
+  <label for="file">Sélectionner le fichier à envoyer</label>
+  <input type="file" id="file" name="file" multiple />
+</div>
 ```
 
 ```css hidden
@@ -152,19 +146,14 @@ Vous pouvez définir les types de fichiers acceptables avec l'attribut [`accept`
 Voyons un exemple plus complet&nbsp;:
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="profile_pic">Sélectionnez le fichier à utiliser</label>
-    <input
-      type="file"
-      id="profile_pic"
-      name="profile_pic"
-      accept=".jpg, .jpeg, .png" />
-  </div>
-  <div>
-    <button>Envoyer</button>
-  </div>
-</form>
+<div>
+  <label for="profile_pic">Sélectionnez le fichier à utiliser</label>
+  <input
+    type="file"
+    id="profile_pic"
+    name="profile_pic"
+    accept=".jpg, .jpeg, .png" />
+</div>
 ```
 
 ```css hidden
@@ -225,15 +214,15 @@ Dans l'exemple qui suit, on présente un sélecteur de fichiers plus avancé, qu
 Le code HTML ressemble à ceci&nbsp;:
 
 ```html
-<form method="post" enctype="multipart/form-data">
+<div class="selecteur-fichier">
   <div>
-    <label for="image_uploads"
+    <label for="televerser_fichier"
       >Sélectionner des images à téléverser (PNG, JPG)</label
     >
     <input
       type="file"
-      id="image_uploads"
-      name="image_uploads"
+      id="televerser_fichier"
+      name="televerser_fichier"
       accept=".jpg, .jpeg, .png"
       multiple />
   </div>
@@ -241,9 +230,9 @@ Le code HTML ressemble à ceci&nbsp;:
     <p>Aucun fichier sélectionné pour le moment</p>
   </div>
   <div>
-    <button>Envoyer</button>
+    <button type="button">Envoyer</button>
   </div>
-</form>
+</div>
 ```
 
 ```css hidden
@@ -251,18 +240,18 @@ html {
   font-family: sans-serif;
 }
 
-form {
+.selecteur-fichier {
   background: #cccccc;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid black;
 }
 
-form ol {
+.selecteur-fichier ol {
   padding-left: 0;
 }
 
-form li,
+.selecteur-fichier li,
 div > p {
   background: #eeeeee;
   display: flex;
@@ -272,18 +261,18 @@ div > p {
   border: 1px solid black;
 }
 
-form img {
+.selecteur-fichier img {
   height: 64px;
   order: 1;
 }
 
-form p {
+.selecteur-fichier p {
   line-height: 32px;
   padding-left: 10px;
 }
 
-form label,
-form button {
+.selecteur-fichier label,
+.selecteur-fichier button {
   background-color: #7f9ccb;
   padding: 5px 10px;
   border-radius: 5px;
@@ -292,14 +281,14 @@ form button {
   height: auto;
 }
 
-form label:hover,
-form button:hover {
+.selecteur-fichier label:hover,
+.selecteur-fichier button:hover {
   background-color: #2d5ba3;
   color: white;
 }
 
-form label:active,
-form button:active {
+.selecteur-fichier label:active,
+.selecteur-fichier button:active {
   background-color: #0d3f8f;
   color: white;
 }
@@ -419,9 +408,8 @@ function returnFileSize(number) {
 > Les unités «&nbsp;Ko&nbsp;» et «&nbsp;Mo&nbsp;» utilisées ici respectent la convention de [préfixe SI](https://fr.wikipedia.org/wiki/Pr%C3%A9fixe_binaire) selon laquelle 1 Ko = 1 000 octets, comme sous macOS. Différents systèmes représentent différemment la taille des fichiers. Par exemple, Ubuntu utilise les préfixes IEC où 1 Ko = 1024 octets, tandis que les spécifications RAM utilisent souvent les préfixes SI pour représenter les puissances de deux (1 Ko = 1024 octets). C'est pourquoi nous avons utilisé `1e3` (`1000`) et `1e6` (`1000000`) au lieu de `1024` et `1048576`. Dans votre application, vous devez communiquer clairement le système d'unités à vos utilisateur·ice·s si la taille exacte est importante.
 
 ```js hidden
-const button = document.querySelector("form button");
+const button = document.querySelector(".selecteur-fichier button");
 button.addEventListener("click", (e) => {
-  e.preventDefault();
   const para = document.createElement("p");
   para.append("Image téléversée !");
   preview.replaceChildren(para);

@@ -1,5 +1,5 @@
 ---
-title: HTML `<input type="number">` 属性値
+title: '`<input type="number">` 属性値'
 short-title: <input type="number">
 slug: Web/HTML/Reference/Elements/input/number
 l10n:

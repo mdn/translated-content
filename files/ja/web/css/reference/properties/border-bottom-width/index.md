@@ -1,5 +1,5 @@
 ---
-title: CSS `border-bottom-width` プロパティ
+title: "`border-bottom-width` プロパティ (CSS)"
 short-title: border-bottom-width
 slug: Web/CSS/Reference/Properties/border-bottom-width
 l10n:

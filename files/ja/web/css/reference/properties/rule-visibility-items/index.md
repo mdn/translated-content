@@ -1,5 +1,5 @@
 ---
-title: CSS `rule-visibility-items` プロパティ
+title: "`rule-visibility-items` プロパティ (CSS)"
 short-title: rule-visibility-items
 slug: Web/CSS/Reference/Properties/rule-visibility-items
 l10n:

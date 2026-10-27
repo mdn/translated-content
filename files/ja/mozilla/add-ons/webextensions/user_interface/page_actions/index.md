@@ -83,7 +83,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 
 ## アイコン
 
-For details on how to create icons to use with your page action, see [Iconography](https://design.firefox.com/photon/visuals/iconography.html) in the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
+ページアクションのアイコンの作成方法の詳細は、 [Iconography](https://acorn.firefox.com/latest/foundations/styles/iconography-QEDMXQqj) を [Acorn Design System](https://acorn.firefox.com/latest) のドキュメントで参照してください。
 
 ## 例
 

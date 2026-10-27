@@ -123,7 +123,7 @@ Object.defineProperty(obj, "key", withValue("static"));
 
 如果旧描述符的 `configurable` 特性被设置为 `false`，则该属性被称为*不可配置的*。无法更改不可配置的访问器属性的任何特性，也不能将其在数据类型和访问器类型之间切换。对于具有 `writable: true` 的数据属性，可以修改其值并将 `writable` 特性从 `true` 改为 `false`。当试图更改不可配置的属性（除非允许更改 `value` 和 `writable`）时，会抛出 {{jsxref("TypeError")}}，除非在数据属性上定义一个与原始值相同的值。
 
-当当前属性是可配置的时，将特性设置为 `undefined` 可以有效地删除它。例如，如果 `o.k` 是一个访问器属性，`Object.defineProperty(o, "k", { set: undefined })` 将删除 setter，使 `k` 只有 getter 并变成只读的。如果新描述符中缺少一个特性，则会保留旧描述符该特性的值（不会被隐式重新设置为 `undefined`）。通过提供不同类型的描述符，可以在数据属性和访问器属性之间切换。例如，如果新描述符是数据描述符（带有 `value` 或 `writable`），则原始描述符的 `get` 和 `set` 属性都将被删除。
+当属性可配置时，将特性设置为 `undefined` 可以有效地删除它。例如，如果 `o.k` 是一个访问器属性，`Object.defineProperty(o, "k", { set: undefined })` 将删除 setter，使 `k` 只有 getter 并变成只读的。如果新描述符中缺少一个特性，则会保留旧描述符该特性的值（不会被隐式重新设置为 `undefined`）。通过提供不同类型的描述符，可以在数据属性和访问器属性之间切换。例如，如果新描述符是数据描述符（带有 `value` 或 `writable`），则原始描述符的 `get` 和 `set` 属性都将被删除。
 
 ## 示例
 

@@ -2,15 +2,15 @@
 title: WebVR API
 slug: Web/API/WebVR_API
 l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+  sourceCommit: 892eb917bee599a9d6cae7d33ed783129dbb39b3
 ---
 
 {{DefaultAPISidebar("WebVR API")}}{{Non-standard_header}}
 
 > [!NOTE]
-> WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザーでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。
+> WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として批准されることはなく、実装やデフォルトで有効化していたブラウザーはごく少数であり、少数の端末しか対応していませんでした。
 
-WebVR は、バーチャルリアリティデバイス — 例えば Oculus Rift のようなヘッドマウントディスプレイ — をウェブアプリへ公開し、ヘッドマウントディスプレイの位置や動きを 3D 空間上の動きへと変換する手助けを行います。これによって、バーチャルな製品紹介やインタラクティブな訓練アプリといったものから超臨場感のファーストパーソン・シューティングゲームといったものまで、非常に面白い様々なアプリケーションをつくることができます。
+WebVR は、仮想現実機器 — 例えば Oculus Rift のようなヘッドマウントディスプレイ — をウェブアプリへ公開し、ヘッドマウントディスプレイの位置や動きを三次元空間上の動きへと変換する手助けを行います。これによって、仮想的な製品紹介やインタラクティブな訓練アプリといったものから超臨場感のファーストパーソン・シューティングゲームといったものまで、非常に面白い様々なアプリケーションをつくることができます。
 
 ## 概念と利用方法
 
@@ -21,7 +21,7 @@ WebVR は、バーチャルリアリティデバイス — 例えば Oculus Rift
 {{DOMxRef("VRDisplay")}} は WebVR API の中心的なインターフェイスであり、そのプロパティとメソッドを介して、以下の機能にアクセスすることができます。
 
 - ディスプレイを識別するための有用な情報を取得し、ディスプレイにどのような機能があるのか、ディスプレイに関連付けられたコントローラなどを確認することができます。
-- ディスプレイに表示したいコンテンツの各フレームの {{DOMxRef("VRFrameData", "frame data")}} を取得し、一貫したレートで表示するためにそれらのフレームを送信します。
+- ディスプレイに表示したいコンテンツの各フレームの[フレームデータ](/ja/docs/Web/API/VRFrameData)を取得し、一貫したレートで表示するためにそれらのフレームを送信します。
 - ディスプレイへの表示の開始と停止。
 
 典型的な (シンプルな) WebVR アプリは次のように動作します。
@@ -64,7 +64,7 @@ if (!navigator.getVRDisplays) {
 - {{DOMxRef("VRDisplayCapabilities")}}
   - : {{DOMxRef("VRDisplay")}} の利用可能な機能を示しています — この機能は VR 機器で使える機能テストを実行するために使うことができ、例えば位置情報を返すことが可能かに使えます。
 - {{DOMxRef("VRDisplayEvent")}}
-  - : WebVR 関連イベントのイベントオブジェクトを表します (下記の [window オブジェクト拡張](#window)を参照)。
+  - : WebVR 関連イベントのイベントオブジェクトを表します (下記の [window イベント](#window_イベント)を参照)。
 - {{DOMxRef("VRFrameData")}}
   - : VR シーンの 1 フレームをレンダリングするために必要なすべての情報を表します。 {{DOMxRef("VRDisplay.getFrameData()")}} から構築されます。
 - {{DOMxRef("VRPose")}}
@@ -90,7 +90,7 @@ WebVR API は、以下の API を継承することで、掲載されている�
 #### Navigator
 
 - {{DOMxRef("Navigator.activeVRDisplays")}} {{ReadOnlyInline}}
-  - : 現在表示されている（{{DOMxRef("VRDisplay.ispresenting")}} が `true の`）すべての {{DOMxRef("VRDisplay")}} オブジェクトを持つ配列を返します。
+  - : 現在表示されている（{{DOMxRef("VRDisplay.isPresenting")}} が `true の`）すべての {{DOMxRef("VRDisplay")}} オブジェクトを持つ配列を返します。
 - {{DOMxRef("Navigator.getVRDisplays()")}}
   - : コンピュータに接続されている利用可能な VR 機器を表す {{DOMxRef("VRDisplay")}} オブジェクトの配列へ解決する promise を返します。
 
@@ -106,10 +106,6 @@ WebVR API は、以下の API を継承することで、掲載されている�
   - : ディスプレイが表示できるようになったときに発生します。
 - {{DOMxRef("Window.vrdisplaydeactivate_event", "vrdisplaydeactivate")}}
   - : ディスプレイが表示できなくなったときに発生します。
-- {{DOMxRef("Window.vrdisplayblur_event", "vrdisplayblur")}}
-  - : ブラウザー、OS、VR ハードウェアによってディスプレイへの表示が何らかの理由で一時停止された場合に発生します。
-- {{DOMxRef("Window.vrdisplayfocus_event", "vrdisplayfocus")}}
-  - : 一時停止後にディスプレイの表示が再開されたときに発生します。
 
 ## 例
 
@@ -118,14 +114,13 @@ WebVR API は、以下の API を継承することで、掲載されている�
 - [webvr-tests](https://github.com/mdn/webvr-tests): 基本的な機能の使い方を示すためのシンプルなデモ。
 - [Carmel starter kit](https://github.com/facebookarchive/Carmel-Starter-Kit) — Facebook の WebVR ブラウザーである Carmel に沿った、単純でよくコメントされた素敵な例です。
 - [WebVR.info samples](https://webvr.info/samples/) — より詳細な例とソースコード
-- [WebVR.rocks Firefox demos](https://webvr.rocks/firefox#demos) — ショーケースの例
 - [A-Frame homepage](https://aframe.io/) — A-Frameの使用例を示します。
 
 ## 仕様書
 
-この API は古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部であり、これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) で置き枯れられました。標準規格になる見込みはありません。
+この API は古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部であり、これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) で置き換えられました。標準規格になる見込みはありません。
 
-すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、 [A-Frame](https://aframe.io/)、[Babylon.js](https://www.babylonjs.com/)、[Three.js](https://threejs.org/) などのフレームワークを使用するか、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を使用することが、すべてのブラウザーで動作する WebXR アプリを開発する上で推奨されます。[\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)
+すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、 [A-Frame](https://aframe.io/)、[Babylon.js](https://www.babylonjs.com/)、[Three.js](https://threejs.org/) などのフレームワークを使用するか、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を使用することが、すべてのブラウザーで動作する WebXR アプリを開発する上で推奨されます。情報については、[Meta の WebVR から WebXR へのポーティング](https://developers.meta.com/vr/documentation/web/port-vr-xr/)ガイドをご覧ください。
 
 ## ブラウザーの互換性
 
@@ -134,8 +129,7 @@ WebVR API は、以下の API を継承することで、掲載されている�
 ## 関連情報
 
 - [A-Frame](https://aframe.io/) — VR 体験を構築するためのオープンソースのウェブフレームワーク。
-- [webvr.info](https://webvr.info) — WebVR の最新情報、ブラウザー設定、コミュニティなど。
+- [webvr.info](https://webvr.info/) — WebVR の最新情報、ブラウザー設定、コミュニティなど。
 - [threejs-vr-boilerplate](https://github.com/MozillaReality/vr-web-examples/tree/master/threejs-vr-boilerplate) — WebVR アプリを書き込むための有益なスターターテンプレートです。
 - [Web VR polyfill](https://github.com/immersive-web/webvr-polyfill) — JavaScript による WebVR の実装です。
-- [Supermedium](https://www.supermedium.com) — 最高の WebVR コンテンツに簡単にアクセスするための純粋な WebVR ブラウザーです。
 - [WebVR Directory](https://webvr.directory/) — 良質な WebVR サイトを掲載しています。

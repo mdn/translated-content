@@ -1,5 +1,5 @@
 ---
-title: "`placeholder` 属性 (HTML)"
+title: "`placeholder` 属性"
 short-title: placeholder
 slug: Web/HTML/Reference/Attributes/placeholder
 l10n:

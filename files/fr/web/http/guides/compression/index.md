@@ -15,7 +15,7 @@ En pratique, les développeur·euse·s web n'ont pas besoin de mettre en œuvre 
 
 ## Fichiers au format compressé
 
-Chaque type de données contient une certaine redondance, c'est-à-dire de _l'espace perdu_. Si le texte peut généralement avoir jusqu'à 60% de redondance, ce taux peut être beaucoup plus élevé pour certains autres médias comme l'audio et la vidéo. Contrairement au texte, ces autres types de médias utilisent beaucoup d'espace pour stocker leurs données et le besoin d'optimiser le stockage et de récupérer de l'espace était évident très tôt. Les ingénieurs ont conçu l'algorithme de compression optimisé utilisé par les formats de fichiers conçus à cet effet. Les algorithmes de compression utilisés pour les fichiers peuvent être regroupés en deux grandes catégories&nbsp;:
+Chaque type de données contient une certaine redondance, c'est-à-dire de _l'espace perdu_. Si le texte peut généralement avoir jusqu'à 60% de redondance, ce taux peut être beaucoup plus élevé pour certains autres médias comme l'audio et la vidéo. Contrairement au texte, ces autres types de médias utilisent beaucoup d'espace pour stocker leurs données et le besoin d'optimiser le stockage et de récupérer de l'espace est évident très tôt. Les ingénieurs ont conçu l'algorithme de compression optimisé utilisé par les formats de fichiers conçus à cet effet. Les algorithmes de compression utilisés pour les fichiers peuvent être regroupés en deux grandes catégories&nbsp;:
 
 - _Compression sans perte_, le cycle compression/décompression ne modifie pas les données. Les données ainsi décompressées correspondent à l'octet près à l'original.
   Pour les images, `gif` ou `png` utilisent une compression sans perte.
@@ -63,7 +63,7 @@ Pour ce faire, HTTP utilise un mécanisme similaire à la négociation de conten
 
 En pratique, la compression saut par saut est transparente pour le serveur et le client, et elle est rarement utilisée. Les en-têtes {{HTTPHeader("TE")}} et {{HTTPHeader("Transfer-Encoding")}} sont principalement utilisés pour envoyer une réponse par morceaux, ce qui vous permet de commencer à transmettre une ressource sans connaître sa longueur.
 
-Il est important de noter que l'utilisation de {{HTTPHeader("Transfer-Encoding")}} et de la compression au niveau des nœuds est si rare que la plupart des serveurs, comme Apache, Nginx ou IIS, n'ont pas de moyen simple de la configurer. Une telle configuration se fait généralement au niveau du proxy.
+Il est important de noter que l'utilisation de {{HTTPHeader("Transfer-Encoding")}} et de la compression au niveau des nœuds est si rare que la plupart des serveurs, comme Apache, Nginx ou IIS, n'ont pas de moyen simple de la configurer. Une telle configuration se fait généralement au niveau du mandataire.
 
 ## Voir aussi
 

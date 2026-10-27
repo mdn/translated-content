@@ -1,5 +1,5 @@
 ---
-title: HTML `<rb>` ルビベース要素
+title: "`<rb>` ルビベース要素"
 short-title: <rb>
 slug: Web/HTML/Reference/Elements/rb
 l10n:

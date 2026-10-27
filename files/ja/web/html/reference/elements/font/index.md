@@ -1,5 +1,5 @@
 ---
-title: HTML `<font>` フォント要素
+title: "`<font>` フォント要素"
 short-title: <font>
 slug: Web/HTML/Reference/Elements/font
 l10n:

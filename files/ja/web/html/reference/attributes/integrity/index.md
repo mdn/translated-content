@@ -1,5 +1,5 @@
 ---
-title: "`integrity` 属性 (HTML)"
+title: "`integrity` 属性"
 short-title: integrity
 slug: Web/HTML/Reference/Attributes/integrity
 l10n:

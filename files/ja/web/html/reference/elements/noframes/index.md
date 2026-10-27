@@ -1,5 +1,5 @@
 ---
-title: HTML `<noframes>` フレームフォールバック要素
+title: "`<noframes>` フレームフォールバック要素"
 short-title: <noframes>
 slug: Web/HTML/Reference/Elements/noframes
 l10n:

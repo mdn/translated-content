@@ -1,5 +1,5 @@
 ---
-title: HTML `<var>` 変数要素
+title: "`<var>` 変数要素"
 short-title: <var>
 slug: Web/HTML/Reference/Elements/var
 l10n:

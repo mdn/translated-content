@@ -1,5 +1,5 @@
 ---
-title: HTML `<map>` イメージマップ要素
+title: "`<map>` イメージマップ要素"
 short-title: <map>
 slug: Web/HTML/Reference/Elements/map
 l10n:

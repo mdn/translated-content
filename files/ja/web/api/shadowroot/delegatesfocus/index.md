@@ -3,14 +3,14 @@ title: "ShadowRoot: delegatesFocus プロパティ"
 short-title: delegatesFocus
 slug: Web/API/ShadowRoot/delegatesFocus
 l10n:
-  sourceCommit: 26091e4af9c73bb6c5d1466df5070c949498fdbd
+  sourceCommit: 759102220c07fb140b3e06971cd5981d8f0f134f
 ---
 
 {{APIRef("Shadow DOM")}}
 
 **`delegatesFocus`** は {{domxref("ShadowRoot")}} インターフェイスの読み取り専用プロパティで、シャドウルートがフォーカスを委任する場合は `true`、そうでなければ `false` を返します。
 
-`true` の場合、シャドウ DOM のフォーカスを受け取れない部分がクリックされるか、ホスト要素に対して `.focus()` が呼び出されると、フォーカスを受け取ることができる最初の部分がフォーカスを受け取り、シャドウホストが `:focus` のスタイルになります。
+`true` の場合、シャドウ DOM のフォーカスを受け取れない部分がクリックされたとき、またはホスト要素に対して `.focus()` が呼び出されたとき、ホストのシャドウ DOM 内の最初のフォーカス可能な部分にフォーカスが移り、シャドウホストには適用可能なすべての `:focus` スタイル設定が指定されます。
 
 キーボードのユーザー（スクリーンリーダーを使用するユーザーも含む）にとっては、フォーカスが特に重要です。 `delegatesFocus` の既定の動作は、最初のフォーカス可能な要素にフォーカスを当てるというものです。これは、その要素がタブ順序の一部として意図されていない場合（例えば、`tabindex="-1"` の要素）や、より「重要な」フォーカス可能な要素に初期フォーカスを当てるべき場合（例えば、最初のテキストフィールドをその前にある「閉じる」ボタンより優先させるなど）には望ましくない場合があります。このような場合、初期フォーカスを受け取る要素に `autofocus` 属性を指定することができます。 `autofocus` 属性は、アクセシビリティに関する課題を引き起こす可能性があるため、使用する際には注意が必要です。例えば、DOM の順序が後にある要素にフォーカスが設定されているために気づかないような重要なコンテンツを回避するといった課題です。
 
@@ -23,16 +23,16 @@ l10n:
 ## 例
 
 ```js
-let customElem = document.querySelector("my-shadow-dom-element");
-let shadow = customElem.shadowRoot;
+const customElem = document.querySelector("my-shadow-dom-element");
+const shadow = customElem.shadowRoot;
 
-// ...
+// …
 
-// Does it delegate focus?
-let hostElem = shadow.delegatesFocus;
+// フォーカスを譲渡するか？
+const hostElem = shadow.delegatesFocus;
 ```
 
-`<template>` のドキュメント内の[フォーカスのｐ譲渡を伴う宣言的シャドウ DOM](/ja/docs/Web/HTML/Reference/Elements/template#フォーカスを譲渡を伴う宣言的シャドウ_dom)の例では、フォーカスを譲ることの効果が示されています。
+`<template>` の文書内の[フォーカスの譲渡を伴う宣言的シャドウ DOM](/ja/docs/Web/HTML/Reference/Elements/template#フォーカスを譲渡を伴う宣言的シャドウ_dom)の例では、フォーカスを譲ることの効果が示されています。
 
 ## 仕様書
 

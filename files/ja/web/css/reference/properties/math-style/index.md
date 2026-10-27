@@ -1,5 +1,5 @@
 ---
-title: CSS `math-style` プロパティ
+title: "`math-style` プロパティ (CSS)"
 short-title: math-style
 slug: Web/CSS/Reference/Properties/math-style
 l10n:

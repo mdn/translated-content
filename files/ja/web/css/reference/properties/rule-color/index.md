@@ -1,5 +1,5 @@
 ---
-title: CSS `rule-color` プロパティ
+title: "`rule-color` プロパティ (CSS)"
 short-title: rule-color
 slug: Web/CSS/Reference/Properties/rule-color
 l10n:

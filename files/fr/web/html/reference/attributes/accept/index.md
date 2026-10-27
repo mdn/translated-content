@@ -3,7 +3,7 @@ title: "Attribut HTML : `accept`"
 short-title: accept
 slug: Web/HTML/Reference/Attributes/accept
 l10n:
-  sourceCommit: 2066cc916dfdcbb782340bf0ce562b230e947cba
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 L'attribut **`accept`** prend comme valeur une liste, séparée par des virgules, d'un ou plusieurs types de fichiers ou de [spécificateurs de type de fichier unique](#spécification_de_type_de_fichier_unique), décrivant les types de fichiers autorisés.
@@ -102,15 +102,10 @@ L'attribut `accept` prend comme valeur une chaîne de caractères contenant une 
 ### Un exemple de base
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="file">Choisissez le fichier à téléverser</label>
-    <input type="file" id="file" name="file" multiple />
-  </div>
-  <div>
-    <button>Envoyer</button>
-  </div>
-</form>
+<div>
+  <label for="file">Choisissez le fichier à téléverser</label>
+  <input type="file" id="file" name="file" multiple />
+</div>
 ```
 
 ```css
@@ -141,19 +136,14 @@ Les types de fichiers acceptables peuvent être définis avec l'attribut [`accep
 Examinons un exemple plus complet&nbsp;:
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="profile_pic">Choisissez le fichier à téléverser</label>
-    <input
-      type="file"
-      id="profile_pic"
-      name="profile_pic"
-      accept=".jpg, .jpeg, .png" />
-  </div>
-  <div>
-    <button>Envoyer</button>
-  </div>
-</form>
+<div>
+  <label for="profile_pic">Choisissez le fichier à téléverser</label>
+  <input
+    type="file"
+    id="profile_pic"
+    name="profile_pic"
+    accept=".jpg, .jpeg, .png" />
+</div>
 ```
 
 ```css hidden

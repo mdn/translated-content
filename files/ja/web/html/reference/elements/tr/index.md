@@ -1,5 +1,5 @@
 ---
-title: HTML `<tr>` 表の行要素
+title: "`<tr>` 表の行要素"
 short-title: <tr>
 slug: Web/HTML/Reference/Elements/tr
 l10n:

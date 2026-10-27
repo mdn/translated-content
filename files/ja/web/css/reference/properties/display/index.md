@@ -1,5 +1,5 @@
 ---
-title: CSS `display` プロパティ
+title: "`display` プロパティ (CSS)"
 short-title: display
 slug: Web/CSS/Reference/Properties/display
 l10n:

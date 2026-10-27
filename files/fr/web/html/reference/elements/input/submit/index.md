@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="submit">`
 short-title: <input type="submit">
 slug: Web/HTML/Reference/Elements/input/submit
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`submit`** sont affichés comme des boutons. Lorsqu'un évènement {{DOMxRef("Element/click_event", "click")}} se produit (généralement parce que l'utilisateur·ice a cliqué sur le bouton), {{Glossary("user agent", "l'agent utilisateur")}} tente d'envoyer le formulaire au serveur.
@@ -113,6 +113,12 @@ Commençons par un exemple simple&nbsp;:
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 Voici le résultat obtenu&nbsp;:
 
 {{EmbedLiveSample("Un bouton pour envoyer simple", 650, 100)}}
@@ -139,6 +145,12 @@ Voici l'exemple précédent avec la touche d'accès <kbd>s</kbd> ajoutée&nbsp;:
     <input type="submit" value="Envoyer" accesskey="s" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 Par exemple, dans Firefox pour Mac, en appuyant sur <kbd>Control</kbd>-<kbd>Option</kbd>-<kbd>S</kbd> déclenche le bouton Envoyer, tandis que Chrome sur Windows utilise <kbd>Alt</kbd>+<kbd>S</kbd>.

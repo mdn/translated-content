@@ -3,7 +3,7 @@ title: Propriété CSS `font-size-adjust`
 short-title: font-size-adjust
 slug: Web/CSS/Reference/Properties/font-size-adjust
 l10n:
-  sourceCommit: 032208d4eb693c082d62e570f80ed5542325bbb6
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-size-adjust`** ajuste la taille d'une police pour correspondre à un indicateur de police choisit, telle que la hauteur des lettres minuscules, à une proportion définie de la {{CSSxRef("font-size")}}. Cette propriété est destinée à ajuster les polices de repli afin qu'elles aient des métriques similaires à celles de la police de premier choix.
@@ -41,15 +41,15 @@ Cette propriété définie comme valeur le mot-clé `none`, ou une valeur (`<num
 - `<font-metric>` {{Optional_Inline}}
   - : Définit l'indicateur de fonte à utiliser pour ajuster la taille de la fonte. Par défaut, `ex-height` est utilisé si aucun `<font-metric>` n'est défini. Ce paramètre est défini comme l'un des mots-clés suivants&nbsp;:
     - `ex-height`
-      - : Utilise le ratio de la hauteur d'x (hauteur de la lettre minuscule «&nbsp;x&nbsp;» dans une fonte) à la taille de la fonte (valeur d'aspect) pour ajuster la taille de la fonte. Cette valeur de mot-clé est utilisée pour normaliser les lettres minuscules entre les fontes.
+      - : Utilise la proportion de la hauteur d'x (hauteur de la lettre minuscule «&nbsp;x&nbsp;» dans une fonte) à la taille de la fonte (valeur d'aspect) pour ajuster la taille de la fonte. Cette valeur de mot-clé est utilisée pour normaliser les lettres minuscules entre les fontes.
     - `cap-height`
-      - : Utilise le ratio de la hauteur des capitales (hauteur des lettres majuscules) par rapport à la taille de la fonte pour ajuster la taille de la fonte. Cette valeur de mot-clé sert à normaliser les lettres majuscules entre les fontes.
+      - : Utilise la proportion de la hauteur des capitales (hauteur des lettres majuscules) par rapport à la taille de la fonte pour ajuster la taille de la fonte. Cette valeur de mot-clé sert à normaliser les lettres majuscules entre les fontes.
     - `ch-width`
-      - : Utilise le ratio de la largeur d'approche (espace horizontal occupé par un caractère dans une fonte) du caractère «&nbsp;0&nbsp;» (ZÉRO, U+0030) par rapport à la taille de la fonte. Cette valeur de mot-clé sert à normaliser la chasse étroite horizontale des fontes.
+      - : Utilise la proportion de la largeur d'approche (espace horizontal occupé par un caractère dans une fonte) du caractère «&nbsp;0&nbsp;» (ZÉRO, U+0030) par rapport à la taille de la fonte. Cette valeur de mot-clé sert à normaliser la chasse étroite horizontale des fontes.
     - `ic-width`
-      - : Utilise le ratio de la largeur d'approche du caractère «&nbsp;水&nbsp;» (idéogramme d'eau CJC, U+6C34) par rapport à la taille de la fonte. Cette valeur de mot-clé sert à normaliser la chasse large horizontale des fontes, en particulier celles qui incluent des caractères CJC (chinois, japonais, coréen).
+      - : Utilise la proportion de la largeur d'approche du caractère «&nbsp;水&nbsp;» (idéogramme d'eau CJC, U+6C34) par rapport à la taille de la fonte. Cette valeur de mot-clé sert à normaliser la chasse large horizontale des fontes, en particulier celles qui incluent des caractères CJC (chinois, japonais, coréen).
     - `ic-height`
-      - : Utilise le ratio de la hauteur d'approche (espace vertical occupé par un caractère dans une fonte) du caractère «&nbsp;水&nbsp;» (idéogramme d'eau CJC, U+6C34) par rapport à la taille de la fonte. Cette valeur de mot-clé sert à normaliser la chasse large verticale des fontes, en particulier celles qui incluent des caractères CJC.
+      - : Utilise la proportion de la hauteur d'approche (espace vertical occupé par un caractère dans une fonte) du caractère «&nbsp;水&nbsp;» (idéogramme d'eau CJC, U+6C34) par rapport à la taille de la fonte. Cette valeur de mot-clé sert à normaliser la chasse large verticale des fontes, en particulier celles qui incluent des caractères CJC.
 
 - {{CSSxRef("&lt;number&gt;")}}
   - : La proportion pour ajuster la taille de la fonte utilisée, en fonction du `<font-metric>` défini.
@@ -65,7 +65,7 @@ Cette propriété définie comme valeur le mot-clé `none`, ou une valeur (`<num
 
 La propriété `font-size-adjust` ajuste la taille d'une fonte pour correspondre à un indicateur de fonte choisit, telle que la hauteur des lettres minuscules, à une proportion définie de la {{CSSxRef("font-size")}}. L'ajustement est appliqué à chaque fonte utilisée pour rendre le texte, et pas seulement aux fontes de repli.
 
-Définir une valeur `<number>` ajuste la taille de la fonte en fonction du `<font-metric>` par défaut ou défini. Par exemple, lorsque la valeur est définie sur `ex-height`, la valeur `<number>` ajuste la taille de la fonte sélectionnée de sorte que la hauteur de son glyphe `x` soit le multiple défini de la taille de la fonte. Cette valeur doit généralement correspondre à la valeur d'aspect (ratio de la hauteur en x à la taille de la fonte) de la première fonte choisie. Cela signifie que la première fonte, lorsqu'elle est disponible, s'affiche de manière cohérente dans tous les navigateurs. La sélection d'une valeur différente redimensionne également la première fonte choisie, mais dans ce cas, il est préférable de modifier la {{CSSxRef("font-size")}} à la place.
+Définir une valeur `<number>` ajuste la taille de la fonte en fonction du `<font-metric>` par défaut ou défini. Par exemple, lorsque la valeur est définie sur `ex-height`, la valeur `<number>` ajuste la taille de la fonte sélectionnée de sorte que la hauteur de son glyphe `x` soit le multiple défini de la taille de la fonte. Cette valeur doit généralement correspondre à la valeur d'aspect (proportion de la hauteur en x à la taille de la fonte) de la première fonte choisie. Cela signifie que la première fonte, lorsqu'elle est disponible, s'affiche de manière cohérente dans tous les navigateurs. La sélection d'une valeur différente redimensionne également la première fonte choisie, mais dans ce cas, il est préférable de modifier la {{CSSxRef("font-size")}} à la place.
 
 > [!NOTE]
 > Si le `<font-metric>` défini a été redéfini dans {{CSSxRef("@font-face")}}, par exemple en utilisant le descripteur [`size-adjust`](/fr/docs/Web/CSS/Reference/At-rules/@font-face/size-adjust), alors l'indicateur redéfini est utilisé dans le calcul de `font-size-adjust`. Cela signifie que lorsque `font-size-adjust` et `size-adjust` sont appliqués ensemble, `size-adjust` n'a aucun effet.
@@ -75,12 +75,12 @@ Définir une valeur `<number>` ajuste la taille de la fonte en fonction du `<fon
 
 La taille de fonte ajustée est calculée à l'aide de la formule `u  =  ( m / m′ ) s`, où&nbsp;:
 
-- `m` est le ratio souhaité défini par `<number>` ou obtenu en utilisant `from-font`.
-- `m′` est le ratio de l'indicateur choisi par rapport à la taille de la fonte dans la fonte en cours d'ajustement.
+- `m` est la proportion souhaité défini par `<number>` ou obtenu en utilisant `from-font`.
+- `m′` est la proportion de l'indicateur choisi par rapport à la taille de la fonte dans la fonte en cours d'ajustement.
 - `s` est la valeur de la propriété `font-size`.
 - `u` est la nouvelle taille de fonte ajustée.
 
-Prenons cet exemple pour voir comment la taille de fonte ajustée est calculée. Une première fonte choisie a une `font-size` de `12px` (`s`), et le ratio de `cap-height` à la taille de la fonte est de `0.20` (`m`). Le ratio de `cap-height` à la taille de la fonte dans la fonte de repli est de `0.15` (`m′`). La valeur de `font-size-adjust` a été définie à `cap-height 0.20`. Si la fonte principale n'est pas disponible, la taille de fonte ajustée de la fonte de repli est calculée à `16px` (`(0.20 / 0.15) * 12`). Cela garantit que la `cap-height` de la fonte de repli est similaire à celle de la première fonte choisie lors de l'affichage.
+Prenons cet exemple pour voir comment la taille de fonte ajustée est calculée. Une première fonte choisie a une `font-size` de `12px` (`s`), et la proportion de `cap-height` à la taille de la fonte est de `0.20` (`m`). la proportion de `cap-height` à la taille de la fonte dans la fonte de repli est de `0.15` (`m′`). La valeur de `font-size-adjust` a été définie à `cap-height 0.20`. Si la fonte principale n'est pas disponible, la taille de fonte ajustée de la fonte de repli est calculée à `16px` (`(0.20 / 0.15) * 12`). Cela garantit que la `cap-height` de la fonte de repli est similaire à celle de la première fonte choisie lors de l'affichage.
 
 ## Définition formelle
 
@@ -96,7 +96,7 @@ Prenons cet exemple pour voir comment la taille de fonte ajustée est calculée.
 
 Cet exemple montre comment la propriété `font-size-adjust` peut être utilisée pour conserver la même valeur d'aspect entre les fontes. La fonte Verdana possède une valeur d'aspect relativement élevée de `0.545`, ce qui signifie que les lettres minuscules sont relativement hautes par rapport aux lettres majuscules. Cela rend le texte lisible même avec de petites tailles de fonte. Cependant, la fonte Times a une valeur d'aspect plus faible de `0.447`, donc le texte est moins lisible en petite taille. Si Verdana est la première fonte choisie et Times la fonte de repli, définir la propriété `font-size-adjust` permet de conserver la même valeur d'aspect dans Times. Ainsi, si la fonte de repli est Times, le texte garde un niveau de lisibilité similaire à celui qu'il a avec Verdana.
 
-De même, le ratio de la hauteur des majuscules à la taille de la fonte dans Verdana est de `0.73` et dans Times de `0.66`. Lorsque la propriété `font-size-adjust` est appliquée à Times pour ajuster la hauteur des majuscules afin de correspondre au ratio de Verdana, la fonte Times s'affiche avec une taille ajustée ((0.73 / 0.66) \* 14) `15.48px`.
+De même, la proportion de la hauteur des majuscules à la taille de la fonte dans Verdana est de `0.73` et dans Times de `0.66`. Lorsque la propriété `font-size-adjust` est appliquée à Times pour ajuster la hauteur des majuscules afin de correspondre à la proportion de Verdana, la fonte Times s'affiche avec une taille ajustée ((0.73 / 0.66) \* 14) `15.48px`.
 
 ```html
 <p class="verdana">
@@ -113,8 +113,8 @@ De même, le ratio de la hauteur des majuscules à la taille de la fonte dans Ve
   deux fontes.
 </p>
 <p class="times adj-times-cap-height">
-  D&nbsp;: Ce texte en Times 14px est ajusté pour avoir le même ratio de hauteur
-  des majuscules à la taille de la fonte que Verdana, ainsi les lettres
+  D&nbsp;: Ce texte en Times 14px est ajusté pour avoir la même proportion de
+  hauteur des majuscules à la taille de la fonte que Verdana, ainsi les lettres
   majuscules sont normalisées entre les deux fontes.
 </p>
 ```
@@ -142,11 +142,11 @@ De même, le ratio de la hauteur des majuscules à la taille de la fonte dans Ve
 {{EmbedLiveSample("Normaliser la taille de la fonte par les lettres minuscules et majuscules", 500, 200)}}
 
 Sans `font-size-adjust` dans `B`, le passage de la fonte Verdana à la fonte Times peut entraîner une baisse notable de la lisibilité en raison de sa valeur d'aspect plus faible.
-Dans `C`, remarquez qu'une seule valeur est définie pour la propriété `font-size-adjust`, donc la valeur par défaut `<font-metric>` `ex-height` est utilisée. `D` montre à quoi ressemble la fonte par rapport à `A` si la hauteur des lettres majuscules était ajustée.
+Dans `C`, remarquez qu'une seule valeur est définie pour la propriété `font-size-adjust`, donc la valeur par défaut `<font-metric>` `ex-height` est utilisée. `D` montre à quoi ressemble la fonte par rapport à `A` si la hauteur des lettres majuscules est ajustée.
 
 ### Déterminer la valeur d'aspect d'une fonte
 
-Pour une fonte donnée, le même contenu dans deux éléments HTML {{HTMLElement("span")}} côte à côte peut être utilisé pour déterminer la valeur d'aspect de la fonte. Si la même taille de fonte est utilisée pour le contenu des deux spans, les spans sont alignés lorsque la valeur de `font-size-adjust` dans l'un des spans est correcte pour la fonte donnée.
+Pour une fonte donnée, le même contenu dans deux éléments HTML {{HTMLElement("span")}} côte à côte peut être utilisé pour déterminer la valeur d'aspect de la fonte. Si la même taille de fonte est utilisée pour le contenu des deux `<span>`, les `<span>` sont alignés lorsque la valeur de `font-size-adjust` dans l'un des `<span>` est correcte pour la fonte donnée.
 
 Dans l'exemple ci-dessous, il y a trois paires d'éléments `<span>` côte à côte, chacun contenant la lettre «&nbsp;b&nbsp;». L'objectif est d'ajuster la propriété `font-size-adjust` pour le `<span>` de droite dans chaque paire jusqu'à ce que les bordures autour des deux lettres soient alignées. La valeur de `font-size-adjust` obtenue peut être considérée comme la valeur d'aspect de la fonte.
 

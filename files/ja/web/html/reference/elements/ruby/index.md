@@ -1,5 +1,5 @@
 ---
-title: HTML `<ruby>` ルビ注釈要素
+title: "`<ruby>` ルビ注釈要素"
 short-title: <ruby>
 slug: Web/HTML/Reference/Elements/ruby
 l10n:
