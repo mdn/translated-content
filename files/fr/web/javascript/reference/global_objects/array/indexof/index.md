@@ -3,7 +3,7 @@ title: "Array : méthode indexOf()"
 short-title: indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`indexOf()`** des instances de {{JSxRef("Array")}} retourne le premier indice auquel un élément donné peut être trouvé dans le tableau, ou -1 s'il n'est pas présent.
@@ -55,7 +55,7 @@ La méthode `indexOf()` est [générique](/fr/docs/Web/JavaScript/Reference/Glob
 
 ## Exemples
 
-### Utiliser `indexOf()`
+### Utiliser la méthode `indexOf()`
 
 L'exemple suivant utilise `indexOf()` pour localiser des valeurs dans un tableau.
 
@@ -75,7 +75,7 @@ const tableau = [NaN];
 tableau.indexOf(NaN); // -1
 ```
 
-### Trouver toutes les occurences d'un élément
+### Trouver toutes les occurrences d'un élément
 
 ```js
 const indices = [];
@@ -128,7 +128,7 @@ const objetSimilaireTableau = {
   0: 2,
   1: 3,
   2: 4,
-  3: 5, // ignoré par indexOf() car length vaut 3
+  3: 5, // ignoré par indexOf(), car length vaut 3
 };
 console.log(Array.prototype.indexOf.call(objetSimilaireTableau, 2));
 // 0
@@ -146,6 +146,8 @@ console.log(Array.prototype.indexOf.call(objetSimilaireTableau, 5));
 
 ## Voir aussi
 
+- [La prothèse d'émulation de `Array.prototype.indexOf` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation es-shims de `Array.prototype.indexOf` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.indexof)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.findIndex()")}}
@@ -153,5 +155,3 @@ console.log(Array.prototype.indexOf.call(objetSimilaireTableau, 5));
 - La méthode {{JSxRef("Array.prototype.lastIndexOf()")}}
 - La méthode {{JSxRef("TypedArray.prototype.indexOf()")}}
 - La méthode {{JSxRef("String.prototype.indexOf()")}}
-- [Prothèse d'émulation de `Array.prototype.indexOf` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.indexOf` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.indexof)

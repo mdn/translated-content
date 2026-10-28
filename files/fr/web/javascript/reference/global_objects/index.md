@@ -2,7 +2,7 @@
 title: Objets natifs standards
 slug: Web/JavaScript/Reference/Global_Objects
 l10n:
-  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
+  sourceCommit: 31bad7cd99cccf47f6332b81bbff4371e2bc551f
 ---
 
 Ce chapitre documente tous les objets standards intégrés de JavaScript, y compris leurs méthodes et propriétés.
@@ -145,6 +145,7 @@ Les abstractions de contrôle aident à structurer le code, en particulier le co
 
 ### Introspection
 
+- {{JSxRef("AbstractModuleSource")}}
 - {{JSxRef("Reflect")}}
 - {{JSxRef("Proxy")}}
 

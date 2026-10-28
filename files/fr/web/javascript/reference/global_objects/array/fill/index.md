@@ -3,7 +3,7 @@ title: "Array : méthode fill()"
 short-title: fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`fill()`** des instances de {{JSxRef("Array")}} modifie tous les éléments d'un tableau compris dans un intervalle d'indices pour leur attribuer une valeur statique. Elle retourne le tableau modifié.
@@ -132,7 +132,7 @@ console.log(Array.prototype.fill.call(objetSimilaireTableau, 1));
 
 ## Voir aussi
 
+- [Prothèse d'émulation de `Array.prototype.fill` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("TypedArray.prototype.fill()")}}
-- [Prothèse d'émulation de `Array.prototype.fill` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)

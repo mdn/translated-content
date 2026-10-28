@@ -3,10 +3,10 @@ title: "Array : méthode slice()"
 short-title: slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-La méthode **`slice()`** des instances {{JSxRef("Array")}} retourne un {{Glossary("Shallow_copy", "copie superficielle")}} d'une portion d'un tableau sous la forme d'un nouvel objet tableau sélectionné de `start` à `end` (`end` non incluse), où `start` et `end` représentent l'indice des éléments dans ce tableau. Le tableau d'origine ne sera pas modifié.
+La méthode **`slice()`** des instances {{JSxRef("Array")}} retourne un {{Glossary("Shallow_copy", "copie superficielle")}} d'une portion d'un tableau sous la forme d'un nouvel objet tableau sélectionné de `start` à `end` (`end` non incluse), où `start` et `end` représentent l'indice des éléments dans ce tableau. Le tableau d'origine n'est pas modifié.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.slice()", "taller")}}
 
@@ -100,7 +100,7 @@ const lastTwo = fruits.slice(-2);
 console.log(lastTwo); // ['Mangue', 'Ananas']
 ```
 
-Dans cet exemple, `slice(-2)` extrait les deux derniers éléments du tableau. Lorsqu'on utilise un indice négatif avec la méthode `slice`, les indices négatifs sont comptés depuis la fin du tableau&nbsp;: `-1` désigne le dernier élément, `-2` le précédent, etc. L'indice négatif `-2` est inclus car il représente le point de départ de l'extraction.
+Dans cet exemple, `slice(-2)` extrait les deux derniers éléments du tableau. Lorsqu'on utilise un indice négatif avec la méthode `slice`, les indices négatifs sont comptés depuis la fin du tableau&nbsp;: `-1` désigne le dernier élément, `-2` le précédent, etc. L'indice négatif `-2` est inclus, car il représente le point de départ de l'extraction.
 
 ```plain
 |     |     |     |     |     |
@@ -189,7 +189,7 @@ const objetSimilaireTableau = {
   0: 2,
   1: 3,
   2: 4,
-  3: 33, // ignoré par slice() car length vaut 3
+  3: 33, // ignoré par slice(), car length vaut 3
 };
 console.log(Array.prototype.slice.call(objetSimilaireTableau, 1, 3));
 // [ 3, 4 ]
@@ -228,6 +228,8 @@ console.log([1, 2, , 4, 5].slice(1, 4)); // [2, vide, 4]
 
 ## Voir aussi
 
+- [La prothèse d'émulation de `Array.prototype.slice` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation es-shims de `Array.prototype.slice` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.slice)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.pop()")}}
@@ -236,5 +238,3 @@ console.log([1, 2, , 4, 5].slice(1, 4)); // [2, vide, 4]
 - La méthode {{JSxRef("Array.prototype.splice()")}}
 - La méthode {{JSxRef("TypedArray.prototype.slice()")}}
 - La méthode {{JSxRef("String.prototype.slice()")}}
-- [Prothèse d'émulation de `Array.prototype.slice` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.slice` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.slice)

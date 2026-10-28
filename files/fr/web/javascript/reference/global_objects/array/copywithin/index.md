@@ -3,7 +3,7 @@ title: "Array : méthode copyWithin()"
 short-title: copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`copyWithin()`** des instances de {{JSxRef("Array")}} copie superficiellement une partie de ce tableau à un autre emplacement dans le même tableau et retourne ce tableau sans en modifier la longueur.
@@ -119,8 +119,8 @@ console.log(Array.prototype.copyWithin.call(objetSimilaireTableau, 3, 1));
 
 ## Voir aussi
 
+- [La prothèse d'émulation de `Array.prototype.copyWithin` dans `core-js`<sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation es-shims de `Array.prototype.copyWithin`<sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.copywithin)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("TypedArray.prototype.copyWithin()")}}
-- [Prothèse d'émulation de `Array.prototype.copyWithin` dans `core-js`<sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.copyWithin`<sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.copywithin)
