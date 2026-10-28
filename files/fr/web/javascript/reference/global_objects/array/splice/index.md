@@ -38,7 +38,7 @@ splice(start, deleteCount, item1, item2, /* …, */ itemN)
 ### Paramètres
 
 - `start`
-  - : L'indice (commençant à zéro) à partir duquel commencer à modifier le tableau, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière).
+  - : L'indice (commençant à zéro) à partir duquel commencer à modifier le tableau, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier).
     - Un indice négatif compte à rebours depuis la fin du tableau — si `-array.length <= start < 0`, on utilise `start + array.length`.
     - Si l'indice `start` est inférieur à `-array.length`, on utilise `0`.
     - Si l'indice `start` est supérieur ou égal à `array.length`, aucun élément ne sera supprimé, mais la méthode se comportera comme une fonction d'ajout, ajoutant autant d'éléments que fourni.
@@ -47,7 +47,7 @@ splice(start, deleteCount, item1, item2, /* …, */ itemN)
 - `deleteCount` {{Optional_Inline}}
   - : Un entier indiquant le nombre d'éléments à supprimer à partir de l'indice `start`.
 
-    Si le paramètre `deleteCount` est omis, ou si sa valeur est supérieure ou égale au nombre d'éléments après la position indiquée par l'indice `start`, alors tous les éléments de l'indice `start` à la fin du tableau seront supprimés. Cependant, si vous souhaitez passer un paramètre `itemN`, vous devez passer `Infinity` comme valeur de `deleteCount` pour supprimer tous les éléments après l'indice `start`, car un `undefined` explicite est [converti](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière) en `0`.
+    Si le paramètre `deleteCount` est omis, ou si sa valeur est supérieure ou égale au nombre d'éléments après la position indiquée par l'indice `start`, alors tous les éléments de l'indice `start` à la fin du tableau seront supprimés. Cependant, si vous souhaitez passer un paramètre `itemN`, vous devez passer `Infinity` comme valeur de `deleteCount` pour supprimer tous les éléments après l'indice `start`, car un `undefined` explicite est [converti](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier) en `0`.
 
     Si le paramètre `deleteCount` vaut `0` ou une valeur négative, aucun élément n'est supprimé.
     Dans ce cas, vous devez spécifier au moins un nouvel élément (voir ci-dessous).

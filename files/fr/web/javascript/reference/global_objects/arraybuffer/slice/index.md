@@ -35,12 +35,12 @@ slice(start, end)
 ### Paramètres
 
 - `start` {{Optional_Inline}}
-  - : L'indice à partir de 0 auquel vous commencez l'extraction, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière).
+  - : L'indice à partir de 0 auquel vous commencez l'extraction, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier).
     - Un indice négatif compte à partir de la fin du tampon — si `-buffer.length <= start < 0`, on utilise la valeur `start + buffer.length`.
     - Si la valeur de l'indice `start` est inférieure à la longueur négative du tampon ou si l'indice `start` est omis, on utilise la valeur `0`.
     - Si la valeur de l'indice `start` est supérieure ou égale à la longueur du tampon, un tampon vide est retourné.
 - `end` {{Optional_Inline}}
-  - : L'indice à partir de 0 auquel vous terminez l'extraction, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière). `slice()` extrait jusqu'à (sans inclure) la valeur de l'indice `end`.
+  - : L'indice à partir de 0 auquel vous terminez l'extraction, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier). `slice()` extrait jusqu'à (sans inclure) la valeur de l'indice `end`.
     - Un indice négatif compte à partir de la fin du tampon — si `-buffer.length <= end < 0`, on utilise la valeur `end + buffer.length`.
     - Si la valeur de l'indice `end` est inférieure à la longueur négative du tampon, on utilise la valeur `0`.
     - Si la valeur de l'indice `end` est supérieure ou égale à la longueur du tampon, ou si l'indice `end` est omis ou vaut `undefined`, on utilise la valeur de la longueur du tampon (tous les éléments jusqu'à la fin sont extraits).

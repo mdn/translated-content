@@ -43,12 +43,12 @@ slice(start, end)
 ### Paramètres
 
 - `start` {{Optional_Inline}}
-  - : L'indice (compté à partir de zéro) à partir duquel commencer l'extraction, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière).
+  - : L'indice (compté à partir de zéro) à partir duquel commencer l'extraction, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier).
     - Un indice négatif compte depuis la fin du tableau — si `-array.length <= start < 0`, on utilise `start + array.length`.
     - Si `start < -array.length` ou si `start` est omis, `0` est utilisé.
     - Si `start >= array.length`, un tableau vide est retourné.
 - `end` {{Optional_Inline}}
-  - : L'indice (compté à partir de zéro) jusqu'auquel extraire le fragment, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière). `slice()` extrait jusqu'à, mais sans inclure, `end`.
+  - : L'indice (compté à partir de zéro) jusqu'auquel extraire le fragment, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier). `slice()` extrait jusqu'à, mais sans inclure, `end`.
     - Un indice négatif compte depuis la fin du tableau — si `-array.length <= end < 0`, on utilise `end + array.length`.
     - Si `end < -array.length`, `0` est utilisé.
     - Si `end >= array.length` ou si `end` est omis ou vaut `undefined`, `array.length` est utilisé, ce qui entraîne l'extraction de tous les éléments jusqu'à la fin.
