@@ -2,14 +2,12 @@
 title: ブロック
 slug: Web/JavaScript/Reference/Statements/block
 l10n:
-  sourceCommit: 0f3738f6b1ed1aa69395ff181207186e1ad9f4d8
+  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
 ---
-
-{{jsSidebar("Statements")}}
 
 **ブロック文** は 0 個以上の文をグループ化するのに使われます。ブロックは中括弧（「波括弧」）の組で区切られ、0 個以上の文または宣言のリストを含みます。
 
-{{InteractiveExample("JavaScript デモ: Statement - Block", "taller")}}
+{{InteractiveExample("JavaScript デモ: ブロック文", "taller")}}
 
 ```js interactive-example
 var x = 1;
@@ -44,9 +42,9 @@ console.log(y);
 
 さらに、[`let`](/ja/docs/Web/JavaScript/Reference/Statements/let)、[`const`](/ja/docs/Web/JavaScript/Reference/Statements/const)、[`class`](/ja/docs/Web/JavaScript/Reference/Statements/class) などのブロックスコープ宣言と組み合わせることで、[IIFE](/ja/docs/Glossary/IIFE) のように、一時変数がグローバル名前空間を汚染するのを防ぐことができます。
 
-### 非厳格モード時の var または関数定義のブロックスコープの規則
+### 厳格モードでない時の var または関数定義のブロックスコープの規則
 
-非厳格モードでは、`var` の宣言や、[関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)で作成された変数は、ブロックスコープを**持ちません**。ブロック内で導入された変数は、それを含んでいる関数またはスクリプトがスコープとなり、変数を設定した効果は、そのブロック自体を超えて持続します。言い換えれば、ブロック文はスコープを作成しません。例えば、
+厳格モードでない場合、`var` の宣言や、[関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)で作成された変数は、ブロックスコープを**持ちません**。ブロック内で導入された変数は、それを含んでいる関数またはスクリプトがスコープとなり、変数を設定した効果は、そのブロック自体を超えて持続します。言い換えれば、ブロック文はスコープを作成しません。例えば、
 
 ```js
 var x = 1;
@@ -86,7 +84,7 @@ console.log(c); // 1 が出力され、SyntaxError は発生しない...
 
 ブロックスコープを持つ `const c = 2` は、ブロック内で固有に宣言することができるため、`SyntaxError: Identifier 'c' has already been declared` を発生させ*ない*ことに注意してください。
 
-[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では、ブロック内の関数宣言はそのブロックのスコープを持ち、巻き上げられます。
+[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では、ブロック内の関数宣言はそのブロックのスコープを持ち、ブロックの先頭に巻き上げられます。
 
 ```js
 "use strict";
@@ -146,6 +144,21 @@ console.log(sector);
 //   perimeter: 30.471975511965976
 // }
 console.log(typeof radius); // "undefined"
+```
+
+### ブロック内の `using` 宣言
+
+ブロック内では、{{jsxref("Statements/using", "using")}} または {{jsxref("Statements/await_using", "await using")}} を使用して変数を宣言できます。これにより、制御がブロックを離れる際に、その変数に格納されていたオブジェクトが破棄されます。情報については、[リソース管理](/ja/docs/Web/JavaScript/Guide/Resource_management)を参照してください。
+
+```js
+{
+  using reader1 = stream1.getReader();
+  using reader2 = stream2.getReader();
+
+  // reader1 および reader2 で何かをする
+
+  // ブロックを終了する前に、reader1 と reader2 は自動的に解放される
+}
 ```
 
 ## 仕様書
