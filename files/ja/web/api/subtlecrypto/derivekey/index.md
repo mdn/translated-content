@@ -19,7 +19,7 @@ l10n:
 ## 構文
 
 ```js-nolint
-deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
+deriveKey(algorithm, baseKey, derivedKeyType, extractable, keyUsages)
 ```
 
 ### 引数
@@ -34,17 +34,15 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
   - : 導出アルゴリズムへの入力を表す {{domxref("CryptoKey")}} です。
     `algorithm` が ECDH または X25519 である場合、これは ECDH または X25519 の秘密鍵となります。
     それ以外の場合、それは導出関数の初期キー素材になります。例えば、 PBKDF2 の場合、 [`SubtleCrypto.importKey()`](/ja/docs/Web/API/SubtleCrypto/importKey) を使用して `CryptoKey` としてインポートしたパスワードになります。
-- `derivedKeyAlgorithm`
+- `derivedKeyType`
   - : 導出鍵を使用するアルゴリズムを定義するオブジェクトです。
-    - [HMAC](/ja/docs/Web/API/SubtleCrypto/sign#hmac) の場合、 [`HmacKeyGenParams`](/ja/docs/Web/API/HmacKeyGenParams) オブジェクトを渡してください。
-    - [AES-CTR](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-ctr)、[AES-CBC](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-cbc)、[AES-GCM](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-gcm)、[AES-KW](/ja/docs/Web/API/SubtleCrypto/wrapKey#aes-kw) のいずれかの場合、 [`AesKeyGenParams`](/ja/docs/Web/API/AesKeyGenParams) オブジェクトを渡してください。
-    - [HKDF](#hkdf) の場合、 [`HkdfParams`](/ja/docs/Web/API/HkdfParams) オブジェクトを渡してください。
-    - [PBKDF2](#pbkdf2) の場合、 [`Pbkdf2Params`](/ja/docs/Web/API/Pbkdf2Params) オブジェクトを渡してください。
+    - [HMAC](/ja/docs/Web/API/SubtleCrypto/sign#hmac) の場合、 [`HmacImportParams`](/ja/docs/Web/API/HmacImportParams) オブジェクトを渡してください。
+    - [AES-CTR](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-ctr)、[AES-CBC](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-cbc)、[AES-GCM](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-gcm)、[AES-KW](/ja/docs/Web/API/SubtleCrypto/wrapKey#aes-kw) のいずれかの場合、 [`AesDerivedKeyParams`](/ja/docs/Web/API/AesDerivedKeyParams) オブジェクトを渡してください。
 - `extractable`
   - : 論理値で、 {{domxref("SubtleCrypto.exportKey()")}} または {{domxref("SubtleCrypto.wrapKey()")}} を使用して鍵をエクスポートすることが可能かどうかを示します。
 - `keyUsages`
   - : 導出鍵で何ができるかを示す {{jsxref("Array")}} です。
-    鍵の使用は `derivedKeyAlgorithm` で設定するにはアルゴリズムで許可されていなければならないことに注意してください。
+    鍵の使用方法が `derivedKeyType` で設定したアルゴリズムで許可されていなければならないことに注意してください。
     配列の使用可能な値は以下の通りです。
     - `encrypt`: この鍵はメッセージの[暗号化](/ja/docs/Web/API/SubtleCrypto/encrypt)で使用される可能性があります。
     - `decrypt`: この鍵はメッセージの[復号](/ja/docs/Web/API/SubtleCrypto/decrypt)で使用される可能性があります。
