@@ -296,7 +296,7 @@ const toto = new Toto();
 if (toto.constructor.name === "Toto") {
   console.log("'toto' est une instance de 'Toto'");
 } else {
-  console.log("Oops!");
+  console.log("Oups !");
 }
 ```
 
@@ -308,7 +308,7 @@ const b = new a();
 if (b.constructor.name === "Toto") {
   console.log("'toto' est une instance de 'Toto'");
 } else {
-  console.log("Oops!");
+  console.log("Oups !");
 }
 ```
 
