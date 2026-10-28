@@ -65,7 +65,7 @@ Ainsi, la propriété de données `[Symbol.unscopables]` de `Array.prototype` fa
 
 ## Voir aussi
 
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Array.prototype[Symbol.unscopables]` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype[Symbol.unscopables]` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - L'instruction {{JSxRef("Statements/with", "with")}}

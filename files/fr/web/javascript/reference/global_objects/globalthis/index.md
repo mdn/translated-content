@@ -116,6 +116,6 @@ if (typeof globalThis.Intl === "undefined") {
 
 ## Voir aussi
 
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `globalThis` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/global-this)
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `globalThis` <sup>(angl.)</sup>](https://www.npmjs.com/package/globalthis)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `globalThis` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/global-this)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `globalThis` <sup>(angl.)</sup>](https://www.npmjs.com/package/globalthis)
 - L'opérateur {{JSxRef("this")}}

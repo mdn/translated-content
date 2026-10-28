@@ -77,8 +77,8 @@ const annee = noel.getYear(); // retourne 95
 
 ## Voir aussi
 
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Date.prototype.getYear` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/date)
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Date.prototype.getYear` <sup>(angl.)</sup>](https://www.npmjs.com/package/date.prototype.getyear)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Date.prototype.getYear` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/date)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Date.prototype.getYear` <sup>(angl.)</sup>](https://www.npmjs.com/package/date.prototype.getyear)
 - La méthode {{JSxRef("Date.prototype.getFullYear()")}}
 - La méthode {{JSxRef("Date.prototype.getUTCFullYear()")}}
 - La méthode {{JSxRef("Date.prototype.setYear()")}}

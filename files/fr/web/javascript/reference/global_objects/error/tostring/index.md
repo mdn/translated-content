@@ -85,4 +85,4 @@ console.log(e5.toString()); // "bonjour"
 
 ## Voir aussi
 
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Error.prototype.toString` avec de nombreuses corrections de bogues dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Error.prototype.toString` avec de nombreuses corrections de bogues dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)

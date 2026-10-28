@@ -97,8 +97,8 @@ console.log("cause" in erreur3); // false
 
 ## Voir aussi
 
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Error` avec la pris en charge de `cause` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `cause` de l'objet `Error` <sup>(angl.)</sup>](https://www.npmjs.com/package/error-cause)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Error` avec la pris en charge de `cause` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `cause` de l'objet `Error` <sup>(angl.)</sup>](https://www.npmjs.com/package/error-cause)
 - L'instruction {{JSxRef("Statements/throw", "throw")}}
 - L'instruction {{JSxRef("Statements/try...catch", "try...catch")}}
 - [Causes d'erreur <sup>(angl.)</sup>](https://v8.dev/features/error-cause) sur v8.dev (2021)

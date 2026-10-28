@@ -387,6 +387,6 @@ Cette modification doit être rétrocompatible tant que vous transmettez le rés
 
 ## Voir aussi
 
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) du comportement moderne de `JSON.stringify` (symbol, unicode bien formé, JSON brut) dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/json)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) du comportement moderne de `JSON.stringify` (symbol, unicode bien formé, JSON brut) dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/json)
 - La méthode {{JSxRef("JSON.parse()")}}
 - La méthode {{JSxRef("JSON.rawJSON()")}}

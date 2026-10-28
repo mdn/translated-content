@@ -70,7 +70,7 @@ Number.isFinite(null); // false
 
 ## Voir aussi
 
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Number.isFinite` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Number.isFinite` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.isfinite)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Number.isFinite` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Number.isFinite` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.isfinite)
 - L'objet natif {{JSxRef("Number")}}
 - La fonction native {{JSxRef("isFinite()")}}

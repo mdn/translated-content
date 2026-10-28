@@ -91,8 +91,8 @@ document.body.dataset.theme = options.get("theme");
 
 ## Voir aussi
 
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Map.prototype.getOrInsert` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/collections#h-map)
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Map.prototype.getOrInsert` <sup>(angl.)</sup>](https://www.npmjs.com/package/map.prototype.getorinsert)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Map.prototype.getOrInsert` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/collections#h-map)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Map.prototype.getOrInsert` <sup>(angl.)</sup>](https://www.npmjs.com/package/map.prototype.getorinsert)
 - L'objet natif {{JSxRef("Map")}}
 - La méthode {{JSxRef("Map.prototype.get()")}}
 - La méthode {{JSxRef("Map.prototype.set()")}}

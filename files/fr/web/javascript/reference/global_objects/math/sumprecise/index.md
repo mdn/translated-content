@@ -82,6 +82,6 @@ console.log(Math.sumPrecise([1e20, 0.1, -1e20])); // 0.1
 
 ## Voir aussi
 
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Math.sumPrecise` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Math.sumPrecise` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.sumprecise)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.sumPrecise` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.sumPrecise` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.sumprecise)
 - La méthode {{JSxRef("Array.prototype.reduce()")}}

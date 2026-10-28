@@ -313,7 +313,7 @@ slice(arguments);
 
 ## Voir aussi
 
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Function.prototype.bind` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/function)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Function.prototype.bind` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/function)
 - La méthode {{JSxRef("Function.prototype.apply()")}}
 - La méthode {{JSxRef("Function.prototype.call()")}}
 - {{JSxRef("Functions", "Les fonctions", "", 1)}}

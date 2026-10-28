@@ -45,8 +45,8 @@ const maMap = new Map([
 
 ## Voir aussi
 
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Map` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/collections#h-map)
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Map` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-map)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Map` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/collections#h-map)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Map` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-map)
 - L'objet natif {{JSxRef("Set")}}
 - L'objet natif {{JSxRef("WeakMap")}}
 - L'objet natif {{JSxRef("WeakSet")}}

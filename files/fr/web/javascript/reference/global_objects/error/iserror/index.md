@@ -106,6 +106,6 @@ try {
 
 ## Voir aussi
 
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Error.isError` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Error.isError` <sup>(angl.)</sup>](https://www.npmjs.com/package/error.iserror)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Error.isError` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Error.isError` <sup>(angl.)</sup>](https://www.npmjs.com/package/error.iserror)
 - L'objet natif {{JSxRef("Error")}}

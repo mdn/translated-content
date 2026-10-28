@@ -85,8 +85,8 @@ console.log(Array.prototype.toSorted.call(objetSimilaireTableau));
 
 ## Voir aussi
 
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Array.prototype.toSorted` dans core-js <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.toSorted` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.tosorted)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.toSorted` dans core-js <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.toSorted` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.tosorted)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - La méthode {{JSxRef("Array.prototype.sort()")}}
 - La méthode {{JSxRef("Array.prototype.toReversed()")}}

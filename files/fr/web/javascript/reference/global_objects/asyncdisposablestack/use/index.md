@@ -58,7 +58,7 @@ async function lireContenuFichier(chemin) {
 
 ## Voir aussi
 
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `AsyncDisposableStack.prototype.use` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `AsyncDisposableStack.prototype.use` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources en JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
 - L'objet natif {{JSxRef("AsyncDisposableStack")}}
 - La méthode {{JSxRef("AsyncDisposableStack.prototype.adopt()")}}

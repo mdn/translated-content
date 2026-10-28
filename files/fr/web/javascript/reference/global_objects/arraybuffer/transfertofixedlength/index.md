@@ -79,8 +79,8 @@ console.log(view2[7]); // 4
 
 ## Voir aussi
 
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `ArrayBuffer.prototype.transferToFixedLength` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `ArrayBuffer.prototype.transferToFixedLength` <sup>(angl.)</sup>](https://www.npmjs.com/package/arraybuffer.prototype.transfertofixedlength)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `ArrayBuffer.prototype.transferToFixedLength` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `ArrayBuffer.prototype.transferToFixedLength` <sup>(angl.)</sup>](https://www.npmjs.com/package/arraybuffer.prototype.transfertofixedlength)
 - L'objet natif {{JSxRef("ArrayBuffer")}}
 - La propriété {{JSxRef("ArrayBuffer.prototype.detached")}}
 - La méthode {{JSxRef("ArrayBuffer.prototype.transfer()")}}
