@@ -295,7 +295,7 @@ ls | wc -l
    curl https://developer.mozilla.org/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location
    ```
 
-出力は次のようになります (`curl` は最初にいくつかのダウンロードカウンターなどを出力します)。
+   出力は次のようになります (`curl` は最初にいくつかのダウンロードカウンターなどを出力します)。
 
    ```bash
    location: /ja/docs/Web/API/Window/fetch
