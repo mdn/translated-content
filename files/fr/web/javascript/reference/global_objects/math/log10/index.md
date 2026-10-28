@@ -3,7 +3,7 @@ title: "Math : méthode statique log10()"
 short-title: log10()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log10
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.log10()`** retourne le logarithme de base 10 d'un nombre. C'est-à-dire
@@ -53,7 +53,7 @@ Cette fonction est équivalente à `Math.log(x) / Math.log(10)`. Pour `log10(e)`
 
 ## Exemples
 
-### Utiliser `Math.log10()`
+### Utiliser la méthode `Math.log10()`
 
 ```js
 Math.log10(-2); // NaN
@@ -75,8 +75,8 @@ Math.log10(Infinity); // Infinity
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.log10` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
-- [La prothèse d'émulation es-shims de `Math.log10` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.log10)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.log10` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.log10` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.log10)
 - La méthode statique {{JSxRef("Math.exp()")}}
 - La méthode statique {{JSxRef("Math.log()")}}
 - La méthode statique {{JSxRef("Math.log1p()")}}

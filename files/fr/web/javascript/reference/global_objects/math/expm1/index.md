@@ -3,7 +3,7 @@ title: "Math : méthode statique expm1()"
 short-title: expm1()
 slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.expm1()`** retourne {{JSxRef("Math/E","e")}} élevé à la puissance d'un nombre, moins 1. C'est-à-dire
@@ -57,7 +57,7 @@ Comme `expm1()` est une méthode statique de `Math`, vous l'utilisez toujours so
 
 ## Exemple
 
-### Utiliser `Math.expm1()`
+### Utiliser la méthode `Math.expm1()`
 
 ```js
 Math.expm1(-Infinity); // -1
@@ -78,7 +78,7 @@ Math.expm1(Infinity); // Infinity
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.expm1` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.expm1` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
 - La propriété statique {{JSxRef("Math.E")}}
 - La méthode statique {{JSxRef("Math.exp()")}}
 - La méthode statique {{JSxRef("Math.log()")}}

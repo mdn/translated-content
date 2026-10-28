@@ -3,7 +3,7 @@ title: "Math : méthode statique sumPrecise()"
 short-title: sumPrecise()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sumPrecise
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.sumPrecise()`** prend un itérable de nombres et retourne leur somme. Elle est plus précise que de les additionner dans une boucle, car elle évite la perte de précision des nombres à virgule flottante dans les résultats intermédiaires.
@@ -65,7 +65,7 @@ Parce que les littéraux à virgule flottante `0.1` et `0.2` représentent déj�
 
 ## Exemples
 
-### Utiliser `Math.sumPrecise()`
+### Utiliser la méthode `Math.sumPrecise()`
 
 ```js
 console.log(Math.sumPrecise([1, 2, 3])); // 6
@@ -82,6 +82,6 @@ console.log(Math.sumPrecise([1e20, 0.1, -1e20])); // 0.1
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Math.sumPrecise` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#mathsumprecise)
-- [Prothèse d'émulation es-shims de `Math.sumPrecise` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.sumprecise)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.sumPrecise` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.sumPrecise` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.sumprecise)
 - La méthode {{JSxRef("Array.prototype.reduce()")}}

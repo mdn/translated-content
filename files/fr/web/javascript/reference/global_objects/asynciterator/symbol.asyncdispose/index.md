@@ -3,7 +3,7 @@ title: "AsyncIterator : méthode [Symbol.asyncDispose]()"
 short-title: "[Symbol.asyncDispose]()"
 slug: Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncDispose
 l10n:
-  sourceCommit: 99e4e41ce89ef69db3d08766296699f342c5a8ff
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`[Symbol.asyncDispose]()`** des instances de {{JSxRef("AsyncIterator")}} implémente le _protocole d'élimination asynchrone_ et permet de libérer la ressource lorsqu'elle est utilisée avec {{JSxRef("Statements/await_using", "await using")}}. Elle appelle et attend la méthode `return()` de `this`, si celle‑ci existe.
@@ -60,7 +60,7 @@ doSomething();
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `AsyncIterator.prototype[Symbol.asyncDispose]` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
 - La propriété statique {{JSxRef("Symbol.asyncDispose")}}
 - La déclaration {{JSxRef("Statements/await_using", "await using")}}
-- [Prothèse d'émulation de `AsyncIterator.prototype[Symbol.asyncDispose]` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#explicit-resource-management)

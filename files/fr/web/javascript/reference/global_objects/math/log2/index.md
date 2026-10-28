@@ -3,7 +3,7 @@ title: "Math : méthode statique log2()"
 short-title: log2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log2
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.log2()`** retourne le logarithme en base 2 d'un nombre. Autrement dit
@@ -53,7 +53,7 @@ Cette fonction est l'équivalent de `Math.log(x) / Math.log(2)`. Pour `log2(e)`,
 
 ## Exemples
 
-### Utiliser `Math.log2()`
+### Utiliser la méthode `Math.log2()`
 
 ```js
 Math.log2(-2); // NaN
@@ -76,7 +76,7 @@ Math.log2(Infinity); // Infinity
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.log2` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.log2` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
 - La méthode statique {{JSxRef("Math.exp()")}}
 - La méthode statique {{JSxRef("Math.log()")}}
 - La méthode statique {{JSxRef("Math.log10()")}}

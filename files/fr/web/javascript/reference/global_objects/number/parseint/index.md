@@ -3,7 +3,7 @@ title: "Number : méthode statique parseInt()"
 short-title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Number.parseInt()`** analyse un argument de type chaîne de caractères et retourne un entier dans la base définie.
@@ -70,7 +70,7 @@ Son objectif est la modularisation des objets natifs. Voir {{JSxRef("parseInt()"
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Number.parseInt` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
-- [La prothèse d'émulation es-shims de `Number.parseInt` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.parseInt)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Number.parseInt` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Number.parseInt` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.parseInt)
 - L'objet natif {{JSxRef("Number")}}
 - La fonction native {{JSxRef("parseInt()")}}

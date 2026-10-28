@@ -3,7 +3,7 @@ title: Constructeur DisposableStack()
 short-title: DisposableStack()
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/DisposableStack
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Le constructeur **`DisposableStack()`** crée des objets {{JSxRef("DisposableStack")}}.
@@ -27,7 +27,7 @@ Un nouvel objet `DisposableStack`.
 
 ## Exemples
 
-### Créer un DisposableStack
+### Créer un `DisposableStack`
 
 ```js
 const disposer = new DisposableStack();
@@ -46,4 +46,5 @@ disposer.dispose();
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `DisposableStack` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)

@@ -3,7 +3,7 @@ title: "DisposableStack : méthode defer()"
 short-title: defer()
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/defer
 l10n:
-  sourceCommit: 7a5b580a28a0b1a33e42e9fb81c8234994ec0e36
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`defer()`** des instances de {{JSxRef("DisposableStack")}} prend une fonction de rappel à appeler lors de la libération de la pile.
@@ -17,7 +17,7 @@ defer(onDispose)
 ### Paramètres
 
 - `onDispose`
-  - : Une fonction qui sera appelée lors de la libération de la pile. La fonction ne reçoit aucun argument.
+  - : Une fonction qui est appelée lors de la libération de la pile. La fonction ne reçoit aucun argument.
 
 ### Valeur de retour
 
@@ -73,6 +73,7 @@ async function requestWithLock(url, options) {
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `DisposableStack.prototype.defer` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
 - L'objet natif {{JSxRef("DisposableStack")}}
 - La méthode {{JSxRef("DisposableStack.prototype.adopt()")}}

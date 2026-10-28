@@ -2,7 +2,7 @@
 title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
 l10n:
-  sourceCommit: 1d2e1875bdfdd2fb8d0806535220bbd56d3a091d
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Un objet **`AggregateError`** représente une erreur lorsque plusieurs erreurs doivent être agrégées en une seule. Ce type d'exception est levé lorsque plusieurs erreurs sont rapportées par une opération, par exemple avec {{JSxRef("Promise.any()")}} lorsque l'ensemble des promesses qui lui sont passées échouent.
@@ -72,7 +72,7 @@ try {
 
 ## Voir
 
-- [Prothèse d'émulation de `AggregateError` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-promise)
-- [Prothèse d'émulation de `AggregateError` fourni par es-shims <sup>(angl.)</sup>](https://www.npmjs.com/package/es-aggregate-error)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `AggregateError` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `AggregateError` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-aggregate-error)
 - L'objet natif {{JSxRef("Error")}}
 - La propriété {{JSxRef("Promise.any")}}

@@ -3,7 +3,7 @@ title: "Array : méthode reverse()"
 short-title: reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`reverse()`** des instances {{JSxRef("Array")}} inverse un tableau _[en place](https://fr.wikipedia.org/wiki/Algorithme_en_place)_ et retourne la référence vers ce même tableau, le premier élément du tableau devenant le dernier, et le dernier élément devenant le premier. En d'autres termes, l'ordre des éléments du tableau est inversé par rapport à l'ordre initial.
@@ -46,7 +46,7 @@ La méthode `reverse()` transpose les éléments du tableau appelant, modifie le
 
 Elle préserve les cases vides. Si le tableau source est un [tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux), les nouveaux indices des cases vides sont [supprimés](/fr/docs/Web/JavaScript/Reference/Operators/delete) et restent vides.
 
-La méthode `reverse()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend uniquement que la valeur de `this` possède une propriété `length` et des propriétés indexées par des entiers. Bien que les chaînes de caractères soient également assimilables à des tableaux, cette méthode ne doit pas leur être appliquée, car les chaînes sont immuables.
+La méthode `reverse()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend uniquement que la valeur de `this` possède une propriété `length` et des propriétés indexées par des entiers. Bien que les chaînes de caractères soient également assimilables à des tableaux, cette méthode ne doit pas leur être appliquée, car les chaînes de caractères sont immuables.
 
 ## Exemples
 
@@ -95,19 +95,19 @@ console.log([1, , 3, 4].reverse()); // [4, 3, empty, 1]
 
 ### Appeler `reverse()` sur des objets qui ne sont pas des tableaux
 
-La méthode `reverse()` lit la propriété `length` de `this`. Elle parcourt ensuite chaque propriété ayant une clé entière entre `0` et `length / 2`, et échange les deux indices correspondants aux extrémités, en [supprimant](/fr/docs/Web/JavaScript/Reference/Operators/delete) toute propriété de destination pour laquelle la propriété source n'existait pas.
+La méthode `reverse()` lit la propriété `length` de `this`. Elle parcourt ensuite chaque propriété ayant une clé entière entre `0` et `length / 2`, et échange les deux indices correspondants aux extrémités, en [supprimant](/fr/docs/Web/JavaScript/Reference/Operators/delete) toute propriété de destination pour laquelle la propriété source n'existe pas.
 
 ```js
 const objetSimilaireTableau = {
   length: 3,
   unrelated: "foo",
   2: 4,
-  3: 33, // ignoré par reverse() car length vaut 3
+  3: 33, // ignoré par reverse(), car length vaut 3
 };
 console.log(Array.prototype.reverse.call(objetSimilaireTableau));
 // { 0: 4, 3: 33, length: 3, unrelated: 'foo' }
-// L'indice 2 est supprimé car il n'y avait pas d'indice 0 à l'origine
-// L'indice 3 est inchangé car length vaut 3
+// L'indice 2 est supprimé, car il n'y a pas d'indice 0 à l'origine
+// L'indice 3 est inchangé, car length vaut 3
 ```
 
 ## Spécifications
@@ -120,11 +120,11 @@ console.log(Array.prototype.reverse.call(objetSimilaireTableau));
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.reverse` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.reverse` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.reverse)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.join()")}}
 - La méthode {{JSxRef("Array.prototype.sort()")}}
 - La méthode {{JSxRef("Array.prototype.toReversed()")}}
 - La méthode {{JSxRef("TypedArray.prototype.reverse()")}}
-- [Prothèse d'émulation de `Array.prototype.reverse` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.reverse` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.reverse)

@@ -3,7 +3,7 @@ title: "Iterator : méthode every()"
 short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/every
 l10n:
-  sourceCommit: 76972cdb4d87dd72e0a2a3146af07d82c7ef7d67
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`every()`** des instances de {{JSxRef("Iterator")}} est similaire à {{JSxRef("Array.prototype.every()")}}&nbsp;: elle retourne `false` si elle trouve un élément qui ne satisfait pas la fonction de test fournie. Sinon, si l'itérateur est épuisé sans trouver un tel élément, elle retourne `true`.
@@ -75,8 +75,8 @@ console.log(seq.next()); // { value: undefined, done: true }
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Iterator.prototype.every` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-helpers)
-- [Prothèse d'émulation es-shims de `Iterator.prototype.every` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Iterator.prototype.every` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator.prototype.every` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
 - L'objet natif {{JSxRef("Iterator")}}
 - La méthode {{JSxRef("Iterator.prototype.find()")}}
 - La méthode {{JSxRef("Iterator.prototype.some()")}}

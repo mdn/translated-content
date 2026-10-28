@@ -3,7 +3,7 @@ title: "Array : méthode flatMap()"
 short-title: flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`flatMap()`** des instances de {{JSxRef("Array")}} retourne un nouveau tableau créé en appliquant une fonction de rappel à chaque élément du tableau, puis en aplatissant le résultat d'un niveau. Elle est identique à une {{JSxRef("Array/map", "map()")}} suivi d'un {{JSxRef("Array/flat", "flat()")}} de profondeur 1 (`arr.map(...args).flat()`), mais légèrement plus efficace que d'appeler ces deux méthodes séparément.
@@ -189,11 +189,11 @@ console.log(
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.flatMap` dans core‑js <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.flatMap` dans es‑shims <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.flatmap)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.concat()")}}
 - La méthode {{JSxRef("Array.prototype.flat()")}}
 - La méthode {{JSxRef("Array.prototype.map()")}}
 - La méthode {{JSxRef("Array.prototype.reduce()")}}
-- [Prothèse d'émulation de `Array.prototype.flatMap` dans core‑js <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation de `Array.prototype.flatMap` dans es‑shims <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.flatmap)

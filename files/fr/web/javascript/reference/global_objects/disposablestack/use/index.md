@@ -3,7 +3,7 @@ title: "DisposableStack : méthode use()"
 short-title: use()
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/use
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`use()`** des instances de {{JSxRef("DisposableStack")}} enregistre une valeur qui implémente le [protocole de libération](/fr/docs/Web/JavaScript/Guide/Resource_management) dans la pile.
@@ -46,7 +46,7 @@ disposer.use(reader);
 
 ### Utiliser la méthode `use()`
 
-Ce code consomme un {{DOMxRef("ReadableStream")}} via un {{DOMxRef("ReadableStreamDefaultReader")}}. Le lecteur est automatiquement fermé lorsque la fonction se termine, en supposant qu'il implémente une méthode `[Symbol.dispose]()` qui libère le verrou sur le flux de façon synchrone.
+Ce code consomme un {{DOMxRef("ReadableStream")}} avec un {{DOMxRef("ReadableStreamDefaultReader")}}. Le lecteur est automatiquement fermé lorsque la fonction se termine, en supposant qu'il implémente une méthode `[Symbol.dispose]()` qui libère le verrou sur le flux de façon synchrone.
 
 ```js
 {
@@ -70,6 +70,7 @@ Ce code consomme un {{DOMxRef("ReadableStream")}} via un {{DOMxRef("ReadableStre
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `DisposableStack.prototype.use` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
 - L'objet natif {{JSxRef("DisposableStack")}}
 - La méthode {{JSxRef("DisposableStack.prototype.adopt()")}}

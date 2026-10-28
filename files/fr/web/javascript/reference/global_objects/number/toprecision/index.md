@@ -3,7 +3,7 @@ title: "Number : méthode toPrecision()"
 short-title: toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`toPrecision()`** de {{JSxRef("Number")}} retourne une chaîne de caractères représentant ce nombre avec le nombre de chiffres significatifs défini.
@@ -91,6 +91,7 @@ console.log(num.toPrecision(10)); // '1.234500000e-7'
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) du comportement moderne de `Number.prototype.toPrecision` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
 - La méthode {{JSxRef("Number.prototype.toFixed()")}}
 - La méthode {{JSxRef("Number.prototype.toExponential()")}}
 - La méthode {{JSxRef("Number.prototype.toString()")}}

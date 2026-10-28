@@ -2,7 +2,7 @@
 title: globalThis
 slug: Web/JavaScript/Reference/Global_Objects/globalThis
 l10n:
-  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La propriété globale **`globalThis`** contient la valeur [globale de `this`](/fr/docs/Web/JavaScript/Reference/Operators/this#dans_le_contexte_global), qui est généralement similaire à [l'objet global](/fr/docs/Glossary/Global_object).
@@ -29,7 +29,7 @@ L'objet global `this`.
 
 ## Description
 
-Historiquement, accéder à l'objet global a nécessité différentes syntaxes selon les environnements JavaScript. Sur le Web, vous pouvez utiliser {{DOMxRef("Window/window", "window")}}, {{DOMxRef("Window/self", "self")}}, ou {{DOMxRef("Window/frames", "frames")}} — mais dans les [Web Workers](/fr/docs/Web/API/Worker) seul `self` fonctionne. Dans Node.js aucun de ces mots-clés ne fonctionne et il faut utiliser `global`. Le mot-clé `this` pouvait être utilisé à l'intérieur des fonctions en mode non-strict, mais `this` vaut `undefined` dans les modules et dans les fonctions utilisant le mode strict. Vous pouvez aussi utiliser `Function('return this')()`, mais les environnements qui désactivent {{JSxRef("Global_Objects/eval", "eval()")}}, comme {{Glossary("CSP")}} dans les navigateurs, empêchent l'utilisation de {{JSxRef("Function")}} de cette manière.
+Historiquement, accéder à l'objet global a nécessité différentes syntaxes selon les environnements JavaScript. Sur le Web, vous pouvez utiliser {{DOMxRef("Window/window", "window")}}, {{DOMxRef("Window/self", "self")}}, ou {{DOMxRef("Window/frames", "frames")}} — mais dans les [Web Workers](/fr/docs/Web/API/Worker) seul `self` fonctionne. Dans Node.js aucun de ces mots-clés ne fonctionne et il faut utiliser `global`. Le mot-clé `this` peut être utilisé à l'intérieur des fonctions en mode non-strict, mais `this` vaut `undefined` dans les modules et dans les fonctions utilisant le mode strict. Vous pouvez aussi utiliser `Function('return this')()`, mais les environnements qui désactivent {{JSxRef("Global_Objects/eval", "eval()")}}, comme {{Glossary("CSP")}} dans les navigateurs, empêchent l'utilisation de {{JSxRef("Function")}} de cette manière.
 
 La propriété `globalThis` fournit une méthode standard pour accéder à la valeur de `this` global (et donc à l'objet global lui-même) dans tous les environnements. Contrairement à des propriétés similaires comme `window` et `self`, elle fonctionne aussi bien dans les contextes avec ou sans fenêtre. Ainsi, on peut accéder à l'objet global de façon homogène, sans avoir à connaître l'environnement d'exécution du code. Pour mieux mémoriser ce nom, rappelez-vous que dans la portée globale, la valeur de `this` est `globalThis`.
 
@@ -56,7 +56,7 @@ console.log(window.Math === Math); // true
 
 Cependant, un cas où il faut accéder explicitement à l'objet global est lors de l'écriture sur celui-ci, généralement pour des [prothèses d'émulation](/fr/docs/Glossary/Polyfill).
 
-Avant `globalThis`, la seule façon fiable et multiplateforme d'obtenir l'objet global d'un environnement était `Function('return this')()`. Cependant, cela provoque des violations de [CSP](/fr/docs/Web/HTTP/Guides/CSP) dans certains contextes, donc les auteur·ice·s utilisaient une définition par morceaux comme celle-ci (légèrement adaptée de la [source core-js originale <sup>(angl.)</sup>](https://github.com/zloirock/core-js/blob/master/packages/core-js/internals/global-this.js))&nbsp;:
+Avant `globalThis`, la seule façon fiable et multiplateforme d'obtenir l'objet global d'un environnement est `Function('return this')()`. Cependant, cela provoque des violations de [CSP](/fr/docs/Web/HTTP/Guides/CSP) dans certains contextes, donc les auteur·ice·s utilisent une définition par morceaux comme celle-ci (légèrement adaptée de la [source core-js originale <sup>(angl.)</sup>](https://github.com/zloirock/core-js/blob/master/packages/core-js/internals/global-this.js))&nbsp;:
 
 ```js
 function verifier(it) {
@@ -116,6 +116,6 @@ if (typeof globalThis.Intl === "undefined") {
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `globalThis` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-globalthis)
-- [Prothèse d'émulation es-shims de `globalThis` <sup>(angl.)</sup>](https://www.npmjs.com/package/globalthis)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `globalThis` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/global-this)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `globalThis` <sup>(angl.)</sup>](https://www.npmjs.com/package/globalthis)
 - L'opérateur {{JSxRef("this")}}

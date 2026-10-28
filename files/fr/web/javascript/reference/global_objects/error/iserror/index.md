@@ -3,7 +3,7 @@ title: "Error : méthode statique isError()"
 short-title: isError()
 slug: Web/JavaScript/Reference/Global_Objects/Error/isError
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Error.isError()`** détermine si la valeur passée est une erreur {{JSxRef("Error")}}.
@@ -28,12 +28,12 @@ Error.isError(value)
 `Error.isError()` vérifie si la valeur passée est une {{JSxRef("Error")}}. Elle le fait en effectuant une _vérification brandée_ pour un champ privé initialisé par le constructeur {{JSxRef("Error/Error", "Error()")}}.
 C'est le même mécanisme utilisé par {{JSxRef("Array.isArray()")}}, qui est lui‑même similaire au mécanisme utilisé par l'opérateur {{JSxRef("Operators/in", "in")}}.
 
-C'est une alternative plus robuste à [`instanceof Error`](/fr/docs/Web/JavaScript/Reference/Operators/instanceof) car elle évite les faux positifs et les faux négatifs&nbsp;:
+C'est une alternative plus robuste à [`instanceof Error`](/fr/docs/Web/JavaScript/Reference/Operators/instanceof), car elle évite les faux positifs et les faux négatifs&nbsp;:
 
-- `Error.isError()` rejette les valeurs qui ne sont pas de véritables instances de `Error`, même si elles ont `Error.prototype` dans leur chaîne de prototypes — `instanceof Error` les accepterait car il vérifie la chaîne de prototypes.
-- `Error.isError()` accepte les objets `Error` créés dans un autre contexte d'exécution — `instanceof Error` renvoie `false` pour ces objets car l'identité du constructeur `Error` diffère entre les contextes d'exécution.
+- `Error.isError()` rejette les valeurs qui ne sont pas de véritables instances de `Error`, même si elles ont `Error.prototype` dans leur chaîne de prototypes — `instanceof Error` les accepte, car il vérifie la chaîne de prototypes.
+- `Error.isError()` accepte les objets `Error` créés dans un autre contexte d'exécution — `instanceof Error` retourne `false` pour ces objets, car l'identité du constructeur `Error` diffère entre les contextes d'exécution.
 
-`Error.isError()` retourne `true` pour les instances de {{DOMxRef("DOMException")}}. Cela s'explique par le fait que, bien que `DOMException` ne soit pas défini comme une véritable sous‑classe d'`Error` (le constructeur `Error` n'est pas le prototype du constructeur `DOMException`), `DOMException` se comporte néanmoins comme `Error` pour tous les besoins de la vérification brandée.
+`Error.isError()` retourne `true` pour les instances de {{DOMxRef("DOMException")}}. Cela s'explique par le fait que, bien que `DOMException` ne soit pas défini comme une véritable sous‑classe de `Error` (le constructeur `Error` n'est pas le prototype du constructeur `DOMException`), `DOMException` se comporte néanmoins comme `Error` pour tous les besoins de la vérification brandée.
 
 ## Exemples
 
@@ -64,9 +64,9 @@ Error.isError(false);
 Error.isError({ __proto__: Error.prototype });
 ```
 
-### instanceof vs. Error.isError()
+### `instanceof` contre `Error.isError()`
 
-Lors de la vérification d'une instance d'`Error`, `Error.isError()` est préféré à `instanceof` car il fonctionne entre contextes d'exécution.
+Lors de la vérification d'une instance de `Error`, `Error.isError()` est préféré à `instanceof`, car il fonctionne entre contextes d'exécution.
 
 ```js
 const iframe = document.createElement("iframe");
@@ -106,6 +106,6 @@ try {
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Error.isError` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#erroriserror)
-- [Prothèse d'émulation es-shims de `Error.isError` <sup>(angl.)</sup>](https://www.npmjs.com/package/error.iserror)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Error.isError` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Error.isError` <sup>(angl.)</sup>](https://www.npmjs.com/package/error.iserror)
 - L'objet natif {{JSxRef("Error")}}

@@ -3,10 +3,10 @@ title: "Iterator : méthode flatMap()"
 short-title: flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/flatMap
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-La méthode **`flatMap()`** des instances de {{JSxRef("Iterator")}} retourne un nouvel [objet d'aide d'itérateur](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator#objets_daide_à_litérateur) qui prend chaque élément de l'itérateur original, le passe à travers une fonction de mappage, et produit les éléments retournés par la fonction de mappage (qui sont contenus dans un autre itérateur ou itérable).
+La méthode **`flatMap()`** des instances de {{JSxRef("Iterator")}} retourne un nouvel [objet d'aide d'itérateur](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator#objets_daide_à_litérateur) qui prend chaque élément de l'itérateur original, le passe à travers une fonction d'association dans un tableau, et produit les éléments retournés par la fonction d'association dans un tableau (qui sont contenus dans un autre itérateur ou itérable).
 
 ## Syntaxe
 
@@ -98,7 +98,7 @@ console.log(fusion.get("a")); // 1
 console.log(fusion.get("e")); // 5
 ```
 
-Cela évite de créer des copies temporaires du contenu de la map. Notez que le tableau `[map1, map2]` doit d'abord être converti en itérateur (en utilisant {{JSxRef("Array.prototype.values()")}}), car {{JSxRef("Array.prototype.flatMap()")}} ne fusionne que les tableaux, pas les itérables.
+Cela évite de créer des copies temporaires du contenu du tableau associatif. Notez que le tableau `[map1, map2]` doit d'abord être converti en itérateur (en utilisant {{JSxRef("Array.prototype.values()")}}), car {{JSxRef("Array.prototype.flatMap()")}} ne fusionne que les tableaux, pas les itérables.
 
 ```js
 new Map([map1, map2].flatMap((x) => x)); // Map(1) {undefined => undefined}
@@ -115,7 +115,7 @@ Les chaînes de caractères sont itérables, mais `flatMap()` rejette spécifiqu
   .toArray(); // TypeError: Iterator.prototype.flatMap called on non-object
 ```
 
-Vous pouvez vouloir l'envelopper dans un tableau à la place afin que toute la chaîne soit produite en une seule fois&nbsp;:
+Vous pouvez vouloir l'envelopper dans un tableau à la place afin que toute la chaîne de caractères soit produite en une seule fois&nbsp;:
 
 ```js
 [1, 2, 3]
@@ -144,5 +144,5 @@ Ou, si le comportement d'itération par points de code est souhaité, vous pouve
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Iterator.prototype.flatMap` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-helpers)
-- [Prothèse d'émulation es-shims de `Iterator.prototype.flatMap` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Iterator.prototype.flatMap` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator.prototype.flatMap` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)

@@ -2,7 +2,7 @@
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
 l10n:
-  sourceCommit: 56b4064cda33205f7fb9dd9826665fbf75508cdf
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Les valeurs **`Number`** représentent les nombres décimaux comme `37` ou `-9.25`.
@@ -240,7 +240,7 @@ Number("-Infinity"); // -Infinity
 
 ## Voir aussi
 
-- [Une prothèse d'émulation du comportement moderne de `Number` (dont la prise en charge des littéraux binaires et octaux) dans la bibliothèque `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) du comportement moderne de `Number` (dont la prise en charge des littéraux binaires et octaux) dans la bibliothèque `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
 - La propriété native {{JSxRef("NaN")}}
 - [Les opérateurs arithmétiques](/fr/docs/Web/JavaScript/Reference/Operators#opérateurs_arithmétiques)
 - L'objet natif {{JSxRef("Math")}}

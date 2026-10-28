@@ -3,10 +3,10 @@ title: "Iterator : méthode map()"
 short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/map
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-La méthode **`map()`** des instances de {{JSxRef("Iterator")}} retourne un nouvel [objet d'aide à l'itérateur](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator#objets_daide_à_litérateur) qui produit les éléments de l'itérateur, chacun transformé par une fonction de mappage.
+La méthode **`map()`** des instances de {{JSxRef("Iterator")}} retourne un nouvel [objet d'aide à l'itérateur](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator#objets_daide_à_litérateur) qui produit les éléments de l'itérateur, chacun transformé par une fonction de tableau associatif.
 
 ## Syntaxe
 
@@ -17,7 +17,7 @@ map(callbackFn)
 ### Paramètres
 
 - `callbackFn`
-  - : Une fonction à exécuter pour chaque élément produit par l'itérateur. Elle retourne la valeur qui sera produite par l'objet d'aide à l'itérateur. La fonction est appelée avec les arguments suivants&nbsp;:
+  - : Une fonction à exécuter pour chaque élément produit par l'itérateur. Elle retourne la valeur qui est produite par l'objet d'aide à l'itérateur. La fonction est appelée avec les arguments suivants&nbsp;:
     - `element`
       - : L'élément actuel en cours de traitement.
     - `index`
@@ -25,7 +25,7 @@ map(callbackFn)
 
 ### Valeur de retour
 
-Un nouvel [objet d'aide à l'itérateur](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator#objets_daide_à_litérateur). Chaque fois que la méthode `next()` de l'objet d'aide à l'itérateur est appelée, elle obtient l'élément suivant de l'itérateur sous-jacent, applique `callbackFn` et renvoie la valeur retournée. Lorsque l'itérateur sous-jacent est terminé, l'objet d'aide à l'itérateur est également terminé (la méthode `next()` produit `{ value: undefined, done: true }`).
+Un nouvel [objet d'aide à l'itérateur](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator#objets_daide_à_litérateur). Chaque fois que la méthode `next()` de l'objet d'aide à l'itérateur est appelée, elle obtient l'élément suivant de l'itérateur sous-jacent, applique `callbackFn` et retourne la valeur retournée. Lorsque l'itérateur sous-jacent est terminé, l'objet d'aide à l'itérateur est également terminé (la méthode `next()` produit `{ value: undefined, done: true }`).
 
 ## Description
 
@@ -96,8 +96,8 @@ for (const n of fibonacci()) {
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Iterator.prototype.map` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-helpers)
-- [Prothèse d'émulation es-shims de `Iterator.prototype.map` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Iterator.prototype.map` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator.prototype.map` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
 - L'objet natif {{JSxRef("Iterator")}}
 - La méthode {{JSxRef("Iterator.prototype.flatMap()")}}
 - La méthode {{JSxRef("Array.prototype.reduce()")}}

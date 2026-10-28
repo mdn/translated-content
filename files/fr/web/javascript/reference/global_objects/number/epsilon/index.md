@@ -3,7 +3,7 @@ title: "Number : propriété statique EPSILON"
 short-title: EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La propriété statique **`Number.EPSILON`** représente la différence entre 1 et la plus petite valeur en virgule flottante supérieure à 1.
@@ -100,6 +100,6 @@ En plus de la magnitude, il est important de considérer la _précision_ de vos 
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Number.EPSILON` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
-- [La prothèse d'émulation es-shims de `Number.EPSILON` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-constants)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Number.EPSILON` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Number.EPSILON` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-constants)
 - L'objet natif {{JSxRef("Number")}}

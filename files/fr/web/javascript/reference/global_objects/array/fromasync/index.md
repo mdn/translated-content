@@ -3,7 +3,7 @@ title: "Array : méthode statique fromAsync()"
 short-title: fromAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fromAsync
 l10n:
-  sourceCommit: f34bebcf0fec2d69b96bb313c37f7e67b0355830
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Array.fromAsync()`** crée une nouvelle instance de `Array` (copie superficielle) à partir d'un [objet itérable asynchrone](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#les_protocoles_ditérateur_asynchrone_et_ditérable_asynchrone), d'un [objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»), ou d'un [objet semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Indexed_collections#manipuler_des_objets_semblables_à_des_tableaux).
@@ -53,7 +53,7 @@ for await (const element of items) {
 `Array.fromAsync()` est presque équivalent à {{JSxRef("Array.from()")}} en termes de comportement, à l'exception des points suivants&nbsp;:
 
 - `Array.fromAsync()` gère les objets itérables asynchrones.
-- `Array.fromAsync()` retourne une promesse ({{JSxRef("Promise")}}) qui se résout en une instance de tableau.
+- `Array.fromAsync()` retourne une promesse ({{JSxRef("Promise")}}) qui se complète en une instance de tableau.
 - Si `Array.fromAsync()` est appelée avec un objet itérable non asynchrone, chaque élément ajouté au tableau est d'abord [attendu](/fr/docs/Web/JavaScript/Reference/Operators/await).
 - Si un `mapFn` est fourni, sa sortie est également attendue en interne.
 
@@ -101,7 +101,7 @@ Array.fromAsync(createAsyncIter()).then((array) => console.log(array));
 ```
 
 > [!NOTE]
-> En pratique, il est rare de rencontrer un objet itérable asynchrone qui produit des promesses, car si vous l'implémentez avec une [fonction génératrice asynchrone](/fr/docs/Web/JavaScript/Reference/Statements/async_function*), l'expression [`yield`](/fr/docs/Web/JavaScript/Reference/Operators/yield) désempaquète automatiquement les promesses.
+> En pratique, il est rare de rencontrer un objet itérable asynchrone qui produit des promesses, car si vous l'implémentez avec une [fonction génératrice asynchrone](/fr/docs/Web/JavaScript/Reference/Statements/async_function*), l'expression [`yield`](/fr/docs/Web/JavaScript/Reference/Operators/yield) désenveloppe automatiquement les promesses.
 
 ### Tableau à partir d'un objet itérable synchrone
 
@@ -231,10 +231,10 @@ function* generatorWithRejectedPromises() {
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.fromAsync` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array/Array", "Array()")}}
 - La méthode {{JSxRef("Array.of()")}}
 - La méthode {{JSxRef("Array.from()")}}
 - L'instruction {{JSxRef("Statements/for-await...of", "for await...of")}}
-- [La prothèse d'émulation de `Array.fromAsync` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#arrayfromasync)
