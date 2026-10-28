@@ -2,10 +2,8 @@
 title: 非推奨の機能、廃止された機能
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 l10n:
-  sourceCommit: 758299969f63c13d235212f1adff79a649702adf
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
-
-{{jsSidebar("More")}}
 
 このページのリストは JavaScript で廃止予定（まだ使用できるが削除する予定）とされた、あるいは既に廃止され使用不可となった機能の一覧です。
 
@@ -106,14 +104,14 @@ console.log("b");
 ```js
 var a = 2;
 try {
-  throw 42;
+  throw new Error();
 } catch (a) {
   var a = 1; // この 1 は、外側の `a` ではなく、捕捉された `a` に代入される
 }
 console.log(a); // 2
 
 try {
-  throw 42;
+  throw new Error();
   // メモ: 内部で宣言されている `a` との重複を避けるため、
   // `err` に変更してみる
 } catch (err) {
@@ -150,7 +148,7 @@ console.log(a); // 1
 
 | プロパティ                   | 説明                                                                                        | 代替                                                                                                                                                                          |
 | ---------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `__count__`                  | ユーザー定義オブジェクトに直接定義された列挙可能なプロパティの数を返します。                | [`Object.keys()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)                                                                                               |
+| `__count__`                  | ユーザー定義オブジェクトで直接利用できる列挙可能なプロパティの数を返します。                | [`Object.keys()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)                                                                                               |
 | `__parent__`                 | オブジェクトのコンテキストを指し示します。                                                  | 直接の置き換えなし                                                                                                                                                            |
 | `__iterator__`               | [旧形式のイテレーター](#旧形式のジェネレーターとイテレーター)と共に使用                     | [`Symbol.iterator`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) および新しい[反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols) |
 | `__noSuchMethod__`           | 存在しないプロパティがメソッドとして呼ばれたときに呼び出されるメソッド。                    | {{jsxref("Proxy")}}                                                                                                                                                           |
