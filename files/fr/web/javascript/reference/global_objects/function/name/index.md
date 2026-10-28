@@ -325,5 +325,5 @@ Dans la version non compressée, le programme exécute la branche vraie et affic
 ## Voir aussi
 
 - [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Function: name` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/function)
-- [La prothèse es-shims de `Function.prototype.name` <sup>(angl.)</sup>](https://www.npmjs.com/package/function.prototype.name)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Function.prototype.name` <sup>(angl.)</sup>](https://www.npmjs.com/package/function.prototype.name)
 - L'objet natif {{JSxRef("Function")}}
