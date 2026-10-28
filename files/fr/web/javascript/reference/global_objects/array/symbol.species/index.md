@@ -90,7 +90,7 @@ class MonTableau extends Array {
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Array[Symbol.species]` et prise en charge de `[Symbol.species]` dans toutes les méthodes concernées de `Array` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Array[Symbol.species]` et prise en charge de `[Symbol.species]` dans toutes les méthodes concernées de `Array` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La propriété {{JSxRef("Symbol.species")}}

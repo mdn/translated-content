@@ -74,5 +74,5 @@ view.getInt16(1); // 42
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `DataView` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `DataView` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - L'objet natif {{JSxRef("DataView")}}

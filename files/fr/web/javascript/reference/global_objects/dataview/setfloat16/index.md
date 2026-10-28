@@ -67,7 +67,7 @@ dataview.getFloat16(1); // 0
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `DataView.prototype.setFloat16` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `DataView.prototype.setFloat16` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - Le guide [des tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - L'objet natif {{JSxRef("DataView")}}
 - L'objet natif {{JSxRef("ArrayBuffer")}}

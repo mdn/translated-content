@@ -34,8 +34,8 @@ console.log(newBuffer.detached); // false
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `ArrayBuffer.prototype.detached` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
-- [La prothèse d'émulation es-shims de `ArrayBuffer.prototype.detached` <sup>(angl.)</sup>](https://www.npmjs.com/package/arraybuffer.prototype.detached)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `ArrayBuffer.prototype.detached` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `ArrayBuffer.prototype.detached` <sup>(angl.)</sup>](https://www.npmjs.com/package/arraybuffer.prototype.detached)
 - {{JSxRef("ArrayBuffer")}}
 - {{JSxRef("ArrayBuffer.prototype.transfer()")}}
 - {{JSxRef("ArrayBuffer.prototype.transferToFixedLength()")}}

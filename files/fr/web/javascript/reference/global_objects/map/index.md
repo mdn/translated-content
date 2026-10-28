@@ -464,8 +464,8 @@ console.log(fusion.get(3)); // trois
 
 ## Voir aussi
 
-- [La prothèse d'émulation pour `Map` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/collections#h-map)
-- [La prothèse d'émulation pour `Map` dans es-shims <sup>(angl.)</sup>](https://www.npmjs.com/package/es-map)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) pour `Map` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/collections#h-map)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) pour `Map` dans es-shims <sup>(angl.)</sup>](https://www.npmjs.com/package/es-map)
 - L'objet natif {{JSxRef("Set")}}
 - L'objet natif {{JSxRef("WeakMap")}}
 - L'objet natif {{JSxRef("WeakSet")}}

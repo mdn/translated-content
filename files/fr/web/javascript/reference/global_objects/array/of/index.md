@@ -92,8 +92,8 @@ console.log(Array.of.call({}, 1)); // [ 1 ]
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Array.of` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
-- [La prothèse d'émulation es-shims de `Array.of` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.of)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Array.of` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Array.of` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.of)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - Le constructeur {{JSxRef("Array/Array", "Array()")}}

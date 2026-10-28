@@ -81,7 +81,7 @@ Sortie&nbsp;:
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Iterator.prototype.chunks` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
-- [La prothèse d'émulation es-shims de `Iterator.prototype.chunks` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Iterator.prototype.chunks` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator.prototype.chunks` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
 - L'objet natif {{JSxRef("Iterator")}}
 - La méthode {{JSxRef("Iterator.prototype.windows()")}}

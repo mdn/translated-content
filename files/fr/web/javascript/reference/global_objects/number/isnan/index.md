@@ -103,7 +103,7 @@ isNaN(" "); // false, c'est converti en 0
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Number.isNaN` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
-- [La prothèse d'émulation es-shims de `Number.isNaN` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.isnan)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Number.isNaN` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Number.isNaN` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.isnan)
 - L'objet natif {{JSxRef("Number")}}
 - La fonction native {{JSxRef("isNaN()")}}

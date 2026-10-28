@@ -120,8 +120,8 @@ console.log(Array.prototype.reverse.call(objetSimilaireTableau));
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Array.prototype.reverse` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
-- [La prothèse d'émulation es-shims de `Array.prototype.reverse` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.reverse)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Array.prototype.reverse` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.reverse` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.reverse)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.join()")}}

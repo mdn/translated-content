@@ -56,8 +56,8 @@ console.log(fibonacci().take(5).join(" - ")); // "1 - 1 - 2 - 3 - 5"
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Iterator.prototype.join` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
-- [La prothèse d'émulation es-shims de `Iterator.prototype.join` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Iterator.prototype.join` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator.prototype.join` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
 - L'objet natif {{JSxRef("Iterator")}}
 - la méthode {{JSxRef("Iterator.prototype.reduce()")}}
 - la méthode {{JSxRef("Array.prototype.join()")}}

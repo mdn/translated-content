@@ -80,8 +80,8 @@ Math.log1p(Infinity); // Infinity
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.log1p` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
-- [La prothèse d'émulation es-shims de `Math.log1p` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.log1p)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.log1p` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.log1p` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.log1p)
 - La méthode statique {{JSxRef("Math.exp()")}}
 - La méthode statique {{JSxRef("Math.log()")}}
 - La méthode statique {{JSxRef("Math.expm1()")}}

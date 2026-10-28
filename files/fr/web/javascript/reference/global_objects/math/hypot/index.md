@@ -85,7 +85,7 @@ Math.hypot(-3); // 3, de la même manière que Math.abs(-3)
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.hypot` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.hypot` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
 - La méthode statique {{JSxRef("Math.abs()")}}
 - La méthode statique {{JSxRef("Math.pow()")}}
 - La méthode statique {{JSxRef("Math.sqrt()")}}

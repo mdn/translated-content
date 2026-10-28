@@ -71,7 +71,7 @@ Math.cbrt(Infinity); // Infinity
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.cbrt` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
-- [La prothèse d'émulation es-shims de `Math.cbrt` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.cbrt)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.cbrt` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.cbrt` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.cbrt)
 - La méthode statique {{JSxRef("Math.pow()")}}
 - La méthode statique {{JSxRef("Math.sqrt()")}}

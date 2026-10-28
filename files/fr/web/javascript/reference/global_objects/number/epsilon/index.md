@@ -100,6 +100,6 @@ En plus de la magnitude, il est important de considérer la _précision_ de vos 
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Number.EPSILON` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
-- [La prothèse d'émulation es-shims de `Number.EPSILON` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-constants)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Number.EPSILON` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Number.EPSILON` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-constants)
 - L'objet natif {{JSxRef("Number")}}

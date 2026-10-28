@@ -70,8 +70,8 @@ Math.asinh(Infinity); // Infinity
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.asinh` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
-- [La prothèse d'émulation es-shims de `Math.asinh` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.asinh)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.asinh` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.asinh` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.asinh)
 - La méthode statique {{JSxRef("Math.acosh()")}}
 - La méthode statique {{JSxRef("Math.atanh()")}}
 - La méthode statique {{JSxRef("Math.cosh()")}}

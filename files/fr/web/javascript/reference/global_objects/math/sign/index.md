@@ -74,8 +74,8 @@ Math.sign(); // NaN
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.sign` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
-- [La prothèse d'émulation es-shims de `Math.sign` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.sign)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.sign` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.sign` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.sign)
 - La méthode statique {{JSxRef("Math.abs()")}}
 - La méthode statique {{JSxRef("Math.ceil()")}}
 - La méthode statique {{JSxRef("Math.floor()")}}

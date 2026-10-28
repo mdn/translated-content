@@ -189,8 +189,8 @@ console.log(
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Array.prototype.flatMap` dans core‑js <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
-- [La prothèse d'émulation de `Array.prototype.flatMap` dans es‑shims <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.flatmap)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Array.prototype.flatMap` dans core‑js <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Array.prototype.flatMap` dans es‑shims <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.flatmap)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.concat()")}}

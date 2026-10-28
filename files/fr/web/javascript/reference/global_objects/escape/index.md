@@ -57,7 +57,7 @@ escape("@*_+-./"); // "@*_+-./"
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `escape` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `escape` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
 - La fonction {{JSxRef("encodeURI()")}}
 - La fonction {{JSxRef("encodeURIComponent()")}}
 - La fonction {{JSxRef("unescape()")}}

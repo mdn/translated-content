@@ -93,7 +93,7 @@ Pour des scénarios plus complexes, vous pouvez utiliser plutôt [l'API Performa
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Date.now` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/date)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Date.now` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/date)
 - La méthode API {{DOMxRef("Performance.now()")}}
 - La méthode {{DOMxRef("console/time_static", "console.time()")}}
 - La méthode {{DOMxRef("console/timeEnd_static", "console.timeEnd()")}}

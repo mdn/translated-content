@@ -79,8 +79,8 @@ console.log(Array.prototype.toReversed.call(objetSimilaireTableau));
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Array.prototype.toReversed` dans core-js <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
-- [La prothèse d'émulation es-shims de `Array.prototype.toReversed` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.toreversed)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Array.prototype.toReversed` dans core-js <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.toReversed` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.toreversed)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - La méthode {{JSxRef("Array.prototype.reverse()")}}
 - La méthode {{JSxRef("Array.prototype.toSorted()")}}

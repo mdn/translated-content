@@ -121,8 +121,8 @@ console.log(resultat.get(restock2));
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Map.groupBy` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/collections#h-map)
-- [La prothèse d'émulation es-shims de `Map.groupBy` <sup>(angl.)</sup>](https://www.npmjs.com/package/map.groupby)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Map.groupBy` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/collections#h-map)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Map.groupBy` <sup>(angl.)</sup>](https://www.npmjs.com/package/map.groupby)
 - Le guide [des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - La méthode {{JSxRef("Array.prototype.reduce()")}}
 - Le constructeur {{JSxRef("Map/Map", "Map()")}}

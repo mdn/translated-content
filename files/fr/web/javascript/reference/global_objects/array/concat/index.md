@@ -157,8 +157,8 @@ console.log(Array.prototype.concat.call(objetSimilaireTableau, 3, 4)); // [1, 2,
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Array.prototype.concat` dans `core-js` avec corrections et prise en charge des comportements modernes comme `Symbol.isConcatSpreadable` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
-- [La prothèse d'émulation es-shims de `Array.prototype.concat` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.concat)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Array.prototype.concat` dans `core-js` avec corrections et prise en charge des comportements modernes comme `Symbol.isConcatSpreadable` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.concat` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.concat)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.push()")}}

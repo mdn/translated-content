@@ -228,8 +228,8 @@ console.log([1, 2, , 4, 5].slice(1, 4)); // [2, vide, 4]
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Array.prototype.slice` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
-- [La prothèse d'émulation es-shims de `Array.prototype.slice` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.slice)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Array.prototype.slice` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.slice` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.slice)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.pop()")}}

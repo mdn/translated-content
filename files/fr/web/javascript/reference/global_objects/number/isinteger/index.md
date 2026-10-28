@@ -85,6 +85,6 @@ Number.isInteger(4500000000000000.1); // true, à cause d'une perte de précisio
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Number.isInteger` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
-- [La prothèse d'émulation es-shims de `Number.isInteger` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.isinteger)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Number.isInteger` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Number.isInteger` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.isinteger)
 - L'objet natif {{JSxRef("Number")}}

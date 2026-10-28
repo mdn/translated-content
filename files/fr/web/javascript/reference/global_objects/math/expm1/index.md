@@ -78,7 +78,7 @@ Math.expm1(Infinity); // Infinity
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.expm1` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.expm1` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
 - La propriété statique {{JSxRef("Math.E")}}
 - La méthode statique {{JSxRef("Math.exp()")}}
 - La méthode statique {{JSxRef("Math.log()")}}

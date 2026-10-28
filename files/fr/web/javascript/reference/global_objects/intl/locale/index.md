@@ -135,6 +135,6 @@ console.log(us12hour.hourCycle); // Affiche "h12"
 
 ## Voir aussi
 
-- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) pour `Intl.Locale` <sup>(angl.)</sup>](https://formatjs.github.io/docs/polyfills/intl-locale/)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) pour `Intl.Locale` <sup>(angl.)</sup>](https://formatjs.github.io/docs/polyfills/intl-locale/)
 - L'objet natif {{JSxRef("Intl")}}
 - [La spécification Unicode pour les identifiants de locale <sup>(angl.)</sup>](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers) dans la spécification du langage de balisage des données de locale Unicode

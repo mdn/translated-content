@@ -110,8 +110,8 @@ console.log(Array.prototype.toSpliced.call(objetSimilaireTableau, 0, 1, 2, 3));
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Array.prototype.toSpliced` dans core-js <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
-- [La prothèse d'émulation es-shims de `Array.prototype.toSpliced` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.tospliced)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Array.prototype.toSpliced` dans core-js <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.toSpliced` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.tospliced)
 - La méthode {{JSxRef("Array.prototype.splice()")}}
 - La méthode {{JSxRef("Array.prototype.toReversed()")}}
 - La méthode {{JSxRef("Array.prototype.toSorted()")}}

@@ -115,8 +115,8 @@ buffer3.transfer(20); // RangeError: Invalid array buffer length
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `ArrayBuffer.prototype.transfer` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
-- [La prothèse d'émulation es-shims de `ArrayBuffer.prototype.transfer` <sup>(angl.)</sup>](https://www.npmjs.com/package/arraybuffer.prototype.transfer)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `ArrayBuffer.prototype.transfer` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `ArrayBuffer.prototype.transfer` <sup>(angl.)</sup>](https://www.npmjs.com/package/arraybuffer.prototype.transfer)
 - L'objet natif {{JSxRef("ArrayBuffer")}}
 - La propriété {{JSxRef("ArrayBuffer.prototype.detached")}}
 - La méthode {{JSxRef("ArrayBuffer.prototype.transferToFixedLength()")}}

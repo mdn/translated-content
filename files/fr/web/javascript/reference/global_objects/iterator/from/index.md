@@ -118,7 +118,7 @@ console.log(obj2.next()); // { valeur: 1, fait: false }
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Iterator.from` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
-- [La prothèse d'émulation es-shims de `Iterator.from` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Iterator.from` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator.from` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
 - L'objet natif {{JSxRef("Iterator")}}
 - La méthode statique {{JSxRef("Array.from()")}}

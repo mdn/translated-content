@@ -82,6 +82,6 @@ Math.fround(2 ** 150); // Infinity
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.fround` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
-- [La prothèse d'émulation es-shims de `Math.fround` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.fround)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.fround` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.fround` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.fround)
 - La méthode statique {{JSxRef("Math.round()")}}

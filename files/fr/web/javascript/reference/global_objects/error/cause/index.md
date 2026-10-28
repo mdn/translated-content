@@ -126,6 +126,6 @@ function makeRSA(p, q) {
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Error` avec la prise en charge de `cause` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Error` avec la prise en charge de `cause` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)
 - La propriété {{JSxRef("Error.prototype.message")}}
 - La méthode {{JSxRef("Error.prototype.toString()")}}

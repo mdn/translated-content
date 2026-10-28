@@ -71,8 +71,8 @@ Math.atanh(2); // NaN
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.atanh` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
-- [La prothèse d'émulation es-shims de `Math.atanh` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.atanh)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.atanh` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.atanh` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.atanh)
 - La méthode statique {{JSxRef("Math.acosh()")}}
 - La méthode statique {{JSxRef("Math.asinh()")}}
 - La méthode statique {{JSxRef("Math.cosh()")}}

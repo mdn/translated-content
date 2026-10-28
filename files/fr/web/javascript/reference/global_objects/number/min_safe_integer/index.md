@@ -59,8 +59,8 @@ Number.MIN_SAFE_INTEGER; // -9007199254740991
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Number.MIN_SAFE_INTEGER` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
-- [La prothèse d'émulation es-shims de `Number.MIN_SAFE_INTEGER` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-constants)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Number.MIN_SAFE_INTEGER` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Number.MIN_SAFE_INTEGER` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-constants)
 - La propriété statique {{JSxRef("Number.MAX_SAFE_INTEGER")}}
 - La méthode statique {{JSxRef("Number.isSafeInteger()")}}
 - L'objet natif {{JSxRef("BigInt")}}

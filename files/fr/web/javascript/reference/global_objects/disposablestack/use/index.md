@@ -70,7 +70,7 @@ Ce code consomme un {{DOMxRef("ReadableStream")}} avec un {{DOMxRef("ReadableStr
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `DisposableStack.prototype.use` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `DisposableStack.prototype.use` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
 - L'objet natif {{JSxRef("DisposableStack")}}
 - La méthode {{JSxRef("DisposableStack.prototype.adopt()")}}

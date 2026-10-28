@@ -76,7 +76,7 @@ Math.log2(Infinity); // Infinity
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.log2` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.log2` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
 - La méthode statique {{JSxRef("Math.exp()")}}
 - La méthode statique {{JSxRef("Math.log()")}}
 - La méthode statique {{JSxRef("Math.log10()")}}

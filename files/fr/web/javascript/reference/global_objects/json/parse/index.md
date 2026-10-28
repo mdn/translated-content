@@ -203,5 +203,5 @@ JSON.parse("{\"foo\": 1}"); // OK
 
 ## Voir aussi
 
-- [La prothèse d'émulation du comportement moderne de `JSON.parse` (paramètre `context` du reviver) dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/json)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) du comportement moderne de `JSON.parse` (paramètre `context` du reviver) dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/json)
 - La méthode {{JSxRef("JSON.stringify()")}}

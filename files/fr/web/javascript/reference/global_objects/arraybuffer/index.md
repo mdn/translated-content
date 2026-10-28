@@ -94,7 +94,7 @@ const view = new Int32Array(buffer);
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `ArrayBuffer` dans `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `ArrayBuffer` dans `core-js`](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [Guide des tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - L'objet natif {{JSxRef("SharedArrayBuffer")}}
 - [<i lang="en">RangeError: invalid array length</i>](/fr/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

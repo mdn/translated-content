@@ -81,8 +81,8 @@ console.log((77).toExponential()); // 7.7e+1
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Number.prototype.toExponential` avec de nombreux correctifs de bogues dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
-- [La prothèse d'émulation es-shims de `Number.prototype.toExponential` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.prototype.toexponential)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Number.prototype.toExponential` avec de nombreux correctifs de bogues dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Number.prototype.toExponential` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.prototype.toexponential)
 - La méthode {{JSxRef("Number.prototype.toFixed()")}}
 - La méthode {{JSxRef("Number.prototype.toPrecision()")}}
 - La méthode {{JSxRef("Number.prototype.toString()")}}

@@ -109,7 +109,7 @@ console.log(
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `JSON.isRawJSON` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/json)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `JSON.isRawJSON` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/json)
 - L'objet natif {{JSxRef("JSON")}}
 - La méthode {{JSxRef("JSON.stringify()")}}
 - La méthode {{JSxRef("JSON.rawJSON()")}}

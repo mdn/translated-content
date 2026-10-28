@@ -71,6 +71,6 @@ Math.imul(0xfffffffe, 5); // -10
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.imul` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
-- [La prothèse d'émulation es-shims de `Math.imul` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.imul)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.imul` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.imul` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.imul)
 - [Emscripten <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Emscripten) sur Wikipedia

@@ -61,5 +61,5 @@ try {
 ## Voir aussi
 
 - La propriété {{JSxRef("Promise.any")}}
-- [La prothèse d'émulation de `AggregateError` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)
-- [La prothèse d'émulation es-shims de `AggregateError` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-aggregate-error)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `AggregateError` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `AggregateError` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-aggregate-error)

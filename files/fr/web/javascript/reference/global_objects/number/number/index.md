@@ -74,7 +74,7 @@ BigInt(Number(2n ** 54n + 1n)) === 2n ** 54n + 1n; // false
 
 ## Voir aussi
 
-- [La prothèse d'émulation pour le comportement moderne de `Number` (avec prise en charge des littéraux binaires et octaux) dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) pour le comportement moderne de `Number` (avec prise en charge des littéraux binaires et octaux) dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
 - La propriété native {{JSxRef("NaN")}}
 - L'objet natif {{JSxRef("Math")}}
 - L'objet natif {{JSxRef("BigInt")}}

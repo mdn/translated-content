@@ -224,7 +224,7 @@ try {
 
 ## Voir aussi
 
-- [La prothèse d'émulation pour `Error` avec la prise en charge de `cause` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) pour `Error` avec la prise en charge de `cause` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)
 - [Prothèse d'émulation es-shims de Error `cause` <sup>(angl.)</sup>](https://www.npmjs.com/package/error-cause)
 - L'instruction {{JSxRef("Statements/throw", "throw")}}
 - L'instruction {{JSxRef("Statements/try...catch", "try...catch")}}

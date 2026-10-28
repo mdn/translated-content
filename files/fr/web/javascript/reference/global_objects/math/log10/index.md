@@ -75,8 +75,8 @@ Math.log10(Infinity); // Infinity
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.log10` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
-- [La prothèse d'émulation es-shims de `Math.log10` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.log10)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.log10` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.log10` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.log10)
 - La méthode statique {{JSxRef("Math.exp()")}}
 - La méthode statique {{JSxRef("Math.log()")}}
 - La méthode statique {{JSxRef("Math.log1p()")}}

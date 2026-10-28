@@ -71,7 +71,7 @@ Math.tanh(Infinity); // 1
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.tanh` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Math.tanh` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
 - La méthode statique {{JSxRef("Math.acosh()")}}
 - La méthode statique {{JSxRef("Math.asinh()")}}
 - La méthode statique {{JSxRef("Math.atanh()")}}

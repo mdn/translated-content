@@ -96,8 +96,8 @@ console.log(Array.prototype.with.call(objetSimilaireTableau, 0, 1));
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Array.prototype.with` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
-- [La prothèse d'émulation es-shims de `Array.prototype.with` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.with)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.with` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.with` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.with)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - La méthode {{JSxRef("Array.prototype.toReversed()")}}
 - La méthode {{JSxRef("Array.prototype.toSorted()")}}

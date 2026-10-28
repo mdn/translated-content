@@ -97,7 +97,7 @@ Utilisez uniquement `~~` comme substitution de `Math.trunc()` lorsque vous êtes
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.trunc` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Math.trunc` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
 - La méthode statique {{JSxRef("Math.abs()")}}
 - La méthode statique {{JSxRef("Math.ceil()")}}
 - La méthode statique {{JSxRef("Math.floor()")}}

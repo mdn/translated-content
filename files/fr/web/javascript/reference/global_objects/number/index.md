@@ -240,7 +240,7 @@ Number("-Infinity"); // -Infinity
 
 ## Voir aussi
 
-- [La prothèse d'émulation du comportement moderne de `Number` (dont la prise en charge des littéraux binaires et octaux) dans la bibliothèque `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) du comportement moderne de `Number` (dont la prise en charge des littéraux binaires et octaux) dans la bibliothèque `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
 - La propriété native {{JSxRef("NaN")}}
 - [Les opérateurs arithmétiques](/fr/docs/Web/JavaScript/Reference/Operators#opérateurs_arithmétiques)
 - L'objet natif {{JSxRef("Math")}}

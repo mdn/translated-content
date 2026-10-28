@@ -70,7 +70,7 @@ Son objectif est la modularisation des objets natifs. Voir {{JSxRef("parseInt()"
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Number.parseInt` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
-- [La prothèse d'émulation es-shims de `Number.parseInt` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.parseInt)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Number.parseInt` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Number.parseInt` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.parseInt)
 - L'objet natif {{JSxRef("Number")}}
 - La fonction native {{JSxRef("parseInt()")}}

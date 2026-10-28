@@ -78,8 +78,8 @@ Number.isSafeInteger(3.0); // true
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Number.isSafeInteger` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
-- [La prothèse d'émulation es-shims de `Number.isSafeInteger` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.issafeinteger)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Number.isSafeInteger` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Number.isSafeInteger` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.issafeinteger)
 - L'objet natif {{JSxRef("Number")}}
 - La propriété statique {{JSxRef("Number.MIN_SAFE_INTEGER")}}
 - La propriété statique {{JSxRef("Number.MAX_SAFE_INTEGER")}}

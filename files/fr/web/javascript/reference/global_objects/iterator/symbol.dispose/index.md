@@ -60,7 +60,7 @@ faireQuelqueChose();
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Iterator.prototype[Symbol.dispose]` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) (<i lang="en">polyfill</i> en anglais) de `Iterator.prototype[Symbol.dispose]` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources en JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
 - La propriété statique {{JSxRef("Symbol.dispose")}}
 - La déclaration {{JSxRef("Statements/using", "using")}}

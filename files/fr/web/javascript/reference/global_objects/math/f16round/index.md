@@ -79,7 +79,7 @@ Math.f16round(100000); // Infinity
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.f16round` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
-- [La prothèse d'émulation es-shims de `Math.f16round` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.f16round)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.f16round` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.f16round` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.f16round)
 - La méthode statique {{JSxRef("Math.fround()")}}
 - La méthode statique {{JSxRef("Math.round()")}}
