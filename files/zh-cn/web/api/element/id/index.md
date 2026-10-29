@@ -1,11 +1,9 @@
 ---
-title: "Element：id 属性"
+title: Element：id 属性
 short-title: id
 slug: Web/API/Element/id
 l10n:
   sourceCommit: 88c33ab5f4ccd88d13a0a5272de45d4d33f9f636
-page-type: web-api-instance-property
-browser-compat: api.Element.id
 ---
 
 {{ApiRef("DOM")}}
