@@ -96,8 +96,8 @@ for (const codePoint of str) {
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `String.prototype.codePointAt` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
-- [La prothèse d'émulation es-shims de `String.prototype.codePointAt` <sup>(angl.)</sup>](https://www.npmjs.com/package/string.prototype.codepointat)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `String.prototype.codePointAt` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `String.prototype.codePointAt` <sup>(angl.)</sup>](https://www.npmjs.com/package/string.prototype.codepointat)
 - La méthode statique {{JSxRef("String.fromCodePoint()")}}
 - La méthode statique {{JSxRef("String.fromCharCode()")}}
 - La méthode {{JSxRef("String.prototype.charCodeAt()")}}
