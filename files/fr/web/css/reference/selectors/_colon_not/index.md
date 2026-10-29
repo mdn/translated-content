@@ -3,10 +3,12 @@ title: Pseudo-classe CSS `:not()`
 short-title: :not()
 slug: Web/CSS/Reference/Selectors/:not
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:not()`** représente les éléments qui ne correspondent pas à une liste de sélecteurs. Comme elle empêche la sélection d'éléments spécifiques, elle est connue sous le nom de _pseudo-classe de négation_.
+
+La pseudo-classe `:not()` présente un certain nombre de [particularités, astuces et résultats inattendus](#description) que vous devez connaître avant de l'utiliser.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :not()", "tabbed-shorter")}}
 
@@ -40,13 +42,11 @@ p > :not(strong, b.important) {
 </p>
 ```
 
-La pseudo-classe `:not()` présente un certain nombre de [particularités, astuces et résultats inattendus](#description) que vous devez connaître avant de l'utiliser.
-
 ## Syntaxe
 
 ```css-nolint
 :not(<complex-selector-list>) {
-  /* ... */
+  /* … */
 }
 ```
 
@@ -58,13 +58,13 @@ La pseudo-classe `:not()` nécessite une [liste de sélecteurs](/fr/docs/Web/CSS
 
 Il existe plusieurs effets et résultats inhabituels lors de l'utilisation de `:not()` que vous devez garder à l'esprit lorsque vous l'utilisez&nbsp;:
 
-- Des sélecteurs inutiles peuvent être écrits en utilisant cette pseudo-classe. Par exemple, `:not(*)` correspond à tout élément qui n'est pas un élément, ce qui est évidemment absurde, donc la règle qui l'accompagne ne sera jamais appliquée.
-- Cette pseudo-classe peut augmenter la [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) d'une règle. Par exemple, `#toto:not(#truc)` correspondra au même élément que le plus simple `#toto`, mais a la spécificité plus élevée de deux sélecteurs `id`.
-- La spécificité de la pseudo-classe `:not()` est remplacée par la spécificité du sélecteur le plus spécifique dans son argument de sélecteurs séparés par des virgules ; fournissant la même spécificité que si elle avait été écrite [`:not(:is(argument))`](/fr/docs/Web/CSS/Reference/Selectors/:is).
-- `:not(.toto)` correspondra à tout ce qui n'est pas `.toto`, _y compris {{HTMLElement("html")}} et {{HTMLElement("body")}}_.
-- Ce sélecteur correspondra à tout ce qui n'est pas un X. Cela peut être surprenant lorsqu'il est utilisé avec des [combinators descendants](/fr/docs/Web/CSS/Reference/Selectors/Descendant_combinator), car il existe plusieurs chemins pour sélectionner un élément cible. Par exemple, `body :not(table) a` s'appliquera toujours aux liens à l'intérieur d'une {{HTMLElement("table")}}, puisque {{HTMLElement("tr")}}, {{HTMLElement("tbody")}}, {{HTMLElement("th")}}, {{HTMLElement("td")}}, {{HTMLElement("caption")}}, etc. peuvent tous correspondre à la partie `:not(table)` du sélecteur. Pour éviter cela, vous pouvez utiliser `body a:not(table a)` à la place, qui ne s'appliquera qu'aux liens qui ne sont pas des descendants d'un tableau.
+- Des sélecteurs inutiles peuvent être écrits en utilisant cette pseudo-classe. Par exemple, `:not(*)` correspond à tout élément qui n'est pas un élément, ce qui est évidemment absurde, donc la règle qui l'accompagne n'est jamais appliquée.
+- Cette pseudo-classe peut augmenter la [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) d'une règle. Par exemple, `#toto:not(#truc)` correspond au même élément que le plus simple `#toto`, mais a la spécificité plus élevée de deux sélecteurs `id`.
+- La spécificité de la pseudo-classe `:not()` est remplacée par la spécificité du sélecteur le plus spécifique dans son argument de sélecteurs séparés par des virgules&nbsp;; fournissant la même spécificité que si elle a été écrite [`:not(:is(argument))`](/fr/docs/Web/CSS/Reference/Selectors/:is).
+- `:not(.toto)` correspond à tout ce qui n'est pas `.toto`, _y compris {{HTMLElement("html")}} et {{HTMLElement("body")}}_.
+- Ce sélecteur correspond à tout ce qui n'est pas un X. Cela peut être surprenant lorsqu'il est utilisé avec des [combinators descendants](/fr/docs/Web/CSS/Reference/Selectors/Descendant_combinator), car il existe plusieurs chemins pour sélectionner un élément cible. Par exemple, `body :not(table) a` s'applique toujours aux liens à l'intérieur d'une {{HTMLElement("table")}}, puisque {{HTMLElement("tr")}}, {{HTMLElement("tbody")}}, {{HTMLElement("th")}}, {{HTMLElement("td")}}, {{HTMLElement("caption")}}, etc. peuvent tous correspondre à la partie `:not(table)` du sélecteur. Pour éviter cela, vous pouvez utiliser `body a:not(table a)` à la place, qui ne s'applique qu'aux liens qui ne sont pas des descendants d'un tableau.
 - Vous pouvez nier plusieurs sélecteurs en même temps. Exemple&nbsp;: `:not(.toto, .truc)` est équivalent à `:not(.toto):not(.truc)`.
-- Si un sélecteur passé à la pseudo-classe `:not()` est invalide ou non pris en charge par le navigateur, toute la règle sera invalidée. Le moyen efficace de contourner ce comportement est d'utiliser la pseudo-classe {{CSSxRef(":is()")}}, qui accepte une liste de sélecteurs tolérante. Par exemple, `:not(.toto, :invalid-pseudo-class)` invalidera toute la règle, mais `:not(:is(.toto, :invalid-pseudo-class))` correspondra à tout élément (_y compris {{HTMLElement("html")}} et {{HTMLElement("body")}}_) qui n'est pas `.toto`.
+- Si un sélecteur passé à la pseudo-classe `:not()` est invalide ou non pris en charge par le navigateur, toute la règle est invalidée. Le moyen efficace de contourner ce comportement est d'utiliser la pseudo-classe {{CSSxRef(":is()")}}, qui accepte une liste de sélecteurs tolérante. Par exemple, `:not(.toto, :invalid-pseudo-class)` invalide toute la règle, mais `:not(:is(.toto, :invalid-pseudo-class))` correspond à tout élément (_y compris {{HTMLElement("html")}} et {{HTMLElement("body")}}_) qui n'est pas `.toto`.
 
 ## Exemples
 
@@ -168,9 +168,9 @@ div:not(:is(.toto, .truc)) {
 
 {{EmbedLiveSample("Utiliser `:not()` avec des sélecteurs invalides", "100%", 200)}}
 
-La règle `p:not(.toto, :invalid-pseudo-class)` est invalide car elle contient un sélecteur invalide. La pseudo-classe `:is()` accepte une liste de sélecteurs tolérante, donc la règle `:is(.toto, :invalid-pseudo-class)` est valide et équivalente à `:is(.toto)`. Ainsi, la règle `p:not(:is(.toto, :invalid-pseudo-class))` est valide et équivalente à `p:not(.toto)`.
+La règle `p:not(.toto, :invalid-pseudo-class)` est invalide, car elle contient un sélecteur invalide. La pseudo-classe `:is()` accepte une liste de sélecteurs tolérante, donc la règle `:is(.toto, :invalid-pseudo-class)` est valide et équivalente à `:is(.toto)`. Ainsi, la règle `p:not(:is(.toto, :invalid-pseudo-class))` est valide et équivalente à `p:not(.toto)`.
 
-Si `:invalid-pseudo-class` était un sélecteur valide, les deux premières règles ci-dessus seraient toujours équivalentes (les deux dernières règles le montrent). L'utilisation de `:is()` rend la règle plus robuste.
+Si `:invalid-pseudo-class` est un sélecteur valide, les deux premières règles ci-dessus sont toujours équivalentes (les deux dernières règles le montrent). L'utilisation de `:is()` rend la règle plus robuste.
 
 ## Spécifications
 

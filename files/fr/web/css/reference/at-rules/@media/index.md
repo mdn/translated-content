@@ -3,7 +3,7 @@ title: Règle CSS `@media`
 short-title: "@media"
 slug: Web/CSS/Reference/At-rules/@media
 l10n:
-  sourceCommit: 3869bc5647462538141417d68fc14362c7929ce9
+  sourceCommit: d78544a841b0e266a6efc169c044573f5e0b4e7d
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@media`** permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs [requêtes média (<i lang="en">media queries</i>)](/fr/docs/Web/CSS/Guides/Media_queries). Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.
@@ -138,7 +138,7 @@ Les expressions de caractéristique média testent leur présence, leur valeur o
 - {{CSSxRef("@media/overflow-block", "overflow-block")}}
   - : Comment le périphérique de sortie gère-t-il le contenu qui déborde de la zone d'affichage selon l'axe du bloc&nbsp;?
 - {{CSSxRef("@media/overflow-inline", "overflow-inline")}}
-  - : Le contenu qui déborde de la zone d'affichage selon l'axe en ligne peut-il être défilé&nbsp;?
+  - : Le contenu qui déborde de la zone d'affichage selon l'axe en incise peut-il être défilé&nbsp;?
 - {{CSSxRef("@media/pointer", "pointer")}}
   - : Le mécanisme d'entrée principal est-il un dispositif de pointage, et si oui, avec quelle précision&nbsp;?
 - {{CSSxRef("@media/prefers-color-scheme", "prefers-color-scheme")}}
@@ -192,7 +192,7 @@ Il est aussi possible de combiner plusieurs requêtes média en une seule règle
 - `and`
   - : Cet opérateur permet de combiner plusieurs tests de caractéristiques afin que le résultat du test vaille `true` si chacun des tests individuels vaut `true`. Il permet également de joindre des tests de caractéristiques média et des tests de type de média.
 - `not`
-  - : Cet opérateur donne la négation d'une requête média, renvoyant `true` si la requête devait renvoyer `false`. Si cet opérateur est présent dans une liste de requêtes séparées par des virgules, la négation porte uniquement sur la requête sur laquelle l'opérateur est appliqué. Si l'opérateur `not` est utilisé, il _est nécessaire_ d'indiquer un type de média.
+  - : Cet opérateur donne la négation d'une requête média, renvoyant `true` si la requête doit retourner `false`. Si cet opérateur est présent dans une liste de requêtes séparées par des virgules, la négation porte uniquement sur la requête sur laquelle l'opérateur est appliqué. Si l'opérateur `not` est utilisé, il _est nécessaire_ d'indiquer un type de média.
 
     > [!NOTE]
     > Dans la spécification de niveau 3, le mot-clé `not` permet uniquement de prendre la négation d'une requête média entière (et pas d'une caractéristique seule).
