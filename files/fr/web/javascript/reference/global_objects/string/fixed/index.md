@@ -62,7 +62,7 @@ document.getElementById("yourElemId").style.fontFamily = "monospace";
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `String.prototype.fixed` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
-- [La prothèse d'émulation es-shims de `String.prototype.fixed` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-string-html-methods)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `String.prototype.fixed` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `String.prototype.fixed` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-string-html-methods)
 - [Les méthodes d'encapsulation HTML](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#méthodes_dencapsulation_html)
 - L'élément HTML {{HTMLElement("tt")}}
