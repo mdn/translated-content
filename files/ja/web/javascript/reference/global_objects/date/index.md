@@ -214,21 +214,21 @@ YYYY-MM-DDTHH:mm:ss.sssZ
 ## インスタンスメソッド
 
 - {{jsxref("Date.prototype.getDate()")}}
-  - : 地方時に基づき、指定された日時の「日」 (`1` ～ `31`) を返します。
+  - : 現地時間に基づき、指定された日時の「日」 (`1` ～ `31`) を返します。
 - {{jsxref("Date.prototype.getDay()")}}
-  - : 地方時に基づき、指定された日時の「曜日」 (`0` ～ `6`) を返します。
+  - : 現地時間に基づき、指定された日時の「曜日」 (`0` ～ `6`) を返します。
 - {{jsxref("Date.prototype.getFullYear()")}}
-  - : 地方時に基づき、指定された日時の「年」 (4 桁の年であれば 4 桁) を返します。
+  - : 現地時間に基づき、指定された日時の「年」 (4 桁の年であれば 4 桁) を返します。
 - {{jsxref("Date.prototype.getHours()")}}
-  - : 地方時に基づき、指定された日時の「時」 (`0` ～ `23`) を返します。
+  - : 現地時間に基づき、指定された日時の「時」 (`0` ～ `23`) を返します。
 - {{jsxref("Date.prototype.getMilliseconds()")}}
-  - : 地方時に基づき、指定された日時の「ミリ秒」 (`0` ～ `999`) を返します。
+  - : 現地時間に基づき、指定された日時の「ミリ秒」 (`0` ～ `999`) を返します。
 - {{jsxref("Date.prototype.getMinutes()")}}
-  - : 地方時に基づき、指定された日時の「分」 (`0` ～ `59`) を返します。
+  - : 現地時間に基づき、指定された日時の「分」 (`0` ～ `59`) を返します。
 - {{jsxref("Date.prototype.getMonth()")}}
-  - : 地方時に基づき、指定された日時の「月」 (`0` ～ `11`) を返します。
+  - : 現地時間に基づき、指定された日時の「月」 (`0` ～ `11`) を返します。
 - {{jsxref("Date.prototype.getSeconds()")}}
-  - : 地方時に基づき、指定された日時の「秒」 (`0` ～ `59`) を返します。
+  - : 現地時間に基づき、指定された日時の「秒」 (`0` ～ `59`) を返します。
 - {{jsxref("Date.prototype.getTime()")}}
   - : 指定された日時を協定世界時 (UTC) の 1970 年 1 月 1 日 00:00:00 からの経過ミリ秒単位の数値で返します。 (それ以前の時刻では負の数を返します。)
 - {{jsxref("Date.prototype.getTimezoneOffset()")}}
@@ -250,21 +250,21 @@ YYYY-MM-DDTHH:mm:ss.sssZ
 - {{jsxref("Date.prototype.getUTCSeconds()")}}
   - : 協定世界時に基づき、指定された日時の「秒」 (`0` ～ `59`) を返します。
 - {{jsxref("Date.prototype.getYear()")}} {{Deprecated_Inline}}
-  - : 地方時に基づき、指定された日時の「年」 (ふつうは 2 ～ 3 桁) を返します。代わりに {{jsxref("Date/getFullYear", "getFullYear()")}} を使用してください。
+  - : 現地時間に基づき、指定された日時の「年」 (ふつうは 2 ～ 3 桁) を返します。代わりに {{jsxref("Date/getFullYear", "getFullYear()")}} を使用してください。
 - {{jsxref("Date.prototype.setDate()")}}
-  - : 地方時に基づき、指定された日時の「日」を設定します。
+  - : 現地時間に基づき、指定された日時の「日」を設定します。
 - {{jsxref("Date.prototype.setFullYear()")}}
-  - : 地方時に基づき、指定された日時の「年」を完全な形 (例えば、 4 桁の年であれば 4 桁) で設定します。
+  - : 現地時間に基づき、指定された日時の「年」を完全な形 (例えば、 4 桁の年であれば 4 桁) で設定します。
 - {{jsxref("Date.prototype.setHours()")}}
-  - : 地方時に基づき、指定された日時の「時」を設定します。
+  - : 現地時間に基づき、指定された日時の「時」を設定します。
 - {{jsxref("Date.prototype.setMilliseconds()")}}
-  - : 地方時に基づき、指定された日時の「ミリ秒」を設定します。
+  - : 現地時間に基づき、指定された日時の「ミリ秒」を設定します。
 - {{jsxref("Date.prototype.setMinutes()")}}
-  - : 地方時に基づき、指定された日時の「分」を設定します。
+  - : 現地時間に基づき、指定された日時の「分」を設定します。
 - {{jsxref("Date.prototype.setMonth()")}}
-  - : 地方時に基づき、指定された日時の「月」を設定します。
+  - : 現地時間に基づき、指定された日時の「月」を設定します。
 - {{jsxref("Date.prototype.setSeconds()")}}
-  - : 地方時に基づき、指定された日時の「秒」を設定します。
+  - : 現地時間に基づき、指定された日時の「秒」を設定します。
 - {{jsxref("Date.prototype.setTime()")}}
   - : `Date` オブジェクトを協定世界時 (UTC) の 1970 年 1 月 1 日 00:00:00 からのミリ秒単位の数で表された時刻に設定します。
 - {{jsxref("Date.prototype.setUTCDate()")}}
@@ -282,7 +282,7 @@ YYYY-MM-DDTHH:mm:ss.sssZ
 - {{jsxref("Date.prototype.setUTCSeconds()")}}
   - : 協定世界時に基づき、指定された日時の「秒」を設定します。
 - {{jsxref("Date.prototype.setYear()")}} {{Deprecated_Inline}}
-  - : 協定地方時に基づき、指定された日時の「年」 (ふつうは 2 ～ 3 桁) を設定します。代わりに {{jsxref("Date/setFullYear", "setFullYear()")}} を使用してください。
+  - : 協定現地時間に基づき、指定された日時の「年」 (ふつうは 2 ～ 3 桁) を設定します。代わりに {{jsxref("Date/setFullYear", "setFullYear()")}} を使用してください。
 - {{jsxref("Date.prototype.toDateString()")}}
   - : `Date` の「日付」部を、 'Thu Apr 12 2018' のように人間が読みやすい形式の文字列にして返します。
 - {{jsxref("Date.prototype.toISOString()")}}
