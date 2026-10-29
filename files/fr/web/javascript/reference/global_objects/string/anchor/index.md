@@ -1,55 +1,61 @@
 ---
-title: String.prototype.anchor()
+title: "String : méthode anchor()"
+short-title: anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
+l10n:
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-La méthode **`anchor()`** permet de créer une ancre HTML {{HTMLElement("a")}} qui est utilisé comme cible hypertexte.
+La méthode **`anchor()`** de valeurs {{JSxRef("String")}} crée une chaîne de caractères qui intègre cette chaîne de caractères dans un élément HTML {{HTMLElement("a")}} avec un attribut name (`<a name="...">str</a>`).
+
+> [!NOTE]
+> Toutes les [méthodes d'encapsulation HTML](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#méthodes_dencapsulation_html) sont obsolètes et ne sont standardisées que pour des raisons de compatibilité. Utilisez plutôt les [API DOM](/fr/docs/Web/API/Document_Object_Model) telles que {{DOMxRef("document.createElement()")}}.
+>
+> La spécification HTML n'autorise plus l'élément HTML {{HTMLElement("a")}} à avoir un attribut `name`, donc cette méthode ne crée même pas un balisage valide.
 
 ## Syntaxe
 
-```js
-str.anchor(name);
+```js-nolint
+anchor(name)
 ```
 
 ### Paramètres
 
 - `name`
-  - : Une chaîne de caractères représentant l'attribut `name` de la balise à créér.
+  - : Une chaîne de caractères représentant une valeur `name` à mettre dans la balise de début générée `<a name="...">`.
 
 ### Valeur de retour
 
-Une chaîne de caractères qui représente un élément HTML {{HTMLElement("a")}}.
-
-## Description
-
-On utilise la méthode `anchor()` pour créer et afficher des ancres dans un document HTML à l'aide de JavaScript.
-
-Ici la chaîne représente le texte que verra l'utilisateur. Le paramètre `name` représente l'attribut `name` de l'élément {{HTMLElement("a")}}.
-
-Les ancres créées avec la méthode `anchor` deviennent des éléments accessibles à travers le tableau {{domxref("document.anchors")}}.
+Une chaîne de caractères commençant par une balise de début `<a name="name">` (les guillemets doubles dans `name` sont remplacés par `&quot;`), suivie du texte `str`, puis d'une balise de fin `</a>`.
 
 ## Exemples
 
-```js
-var maChaîne = "Table des matières";
+### Utiliser la méthode `anchor()`
 
-document.body.innerHTML = maChaîne.anchor("ancre_contenu");
+Le code ci-dessous crée une chaîne de caractères HTML puis remplace le corps du document avec celle-ci&nbsp;:
+
+```js
+const contenuChaineCaracteres = "Bonjour, le monde";
+
+document.body.innerHTML = contenuChaineCaracteres.anchor("bonjour");
 ```
 
-produira le code HTML suivant :
+Cela produit le code HTML suivant&nbsp;:
 
 ```html
-<a name="ancre_contenu">Table des matières</a>
+<a name="bonjour">Bonjour, le monde</a>
 ```
 
-## Prothèse d'émulation (_polyfill_)
+> [!WARNING]
+> Ce balisage est invalide, car `name` n'est plus un attribut valide de l'élément HTML {{HTMLElement("a")}}.
+
+Au lieu d'utiliser `anchor()` et de créer directement du texte HTML, vous devez utiliser les API DOM telles que [`document.createElement()`](/fr/docs/Web/API/Document/createElement). Par exemple&nbsp;:
 
 ```js
-if (!String.prototype.anchor) {
-  String.prototype.anchor = function (x) {
-    return '<a name="' + x + '">' + this + "</a>";
-  };
-}
+const contenuChaineCaracteres = "Bonjour, le monde";
+const elem = document.createElement("a");
+elem.innerText = contenuChaineCaracteres;
+document.body.appendChild(elem);
 ```
 
 ## Spécifications
@@ -62,4 +68,7 @@ if (!String.prototype.anchor) {
 
 ## Voir aussi
 
-- {{jsxref("String.prototype.link()")}}
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `String.prototype.anchor` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `String.prototype.anchor` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-string-html-methods)
+- [Les méthodes d'encapsulation HTML](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#méthodes_dencapsulation_html)
+- L'élément HTML {{HTMLElement("a")}}
