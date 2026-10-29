@@ -97,7 +97,7 @@ npm パッケージマネージャのサイトには、多数の ODM/ORM ソリ�
 この図には、モデル間の関係 (それらの多重度も含む) も示されています。多重度は、関係内に存在する可能性がある各モデルの番号 (最大および最小) を示す図上の番号です。たとえば、ボックス間の接続線は、`Book` と `Genre` が関連していることを示しています。`Book` モデルに近い数字は、ジャンルに 0 個以上の Book がある必要があることを示しており、線のもう一方の端にある`Genre` の隣の数字は、本に 0 個以上の関連する`Genre`があることを示しています。
 
 > [!NOTE]
-> 下記の [Mongoose 入門](#mongoose_入門書)で説明されているように、1 つのモデルだけで documents/models 間の関係を定義するフィールドがあるほうがよいでしょう (他のモデルで関連する `_id` を検索することによって逆の関係を見つけることができます)。以下では、Book スキーマの Book/Genre と Book/Author の関係、および BookInstance スキーマの Book/BookInstance の関係を定義します。この選択は多少恣意的でした - 他のスキーマでも同じようにフィールドを持つことができました。
+> 下記の [Mongoose 入門](#mongoose_入門)で説明されているように、1 つのモデルだけで documents/models 間の関係を定義するフィールドがあるほうがよいでしょう (他のモデルで関連する `_id` を検索することによって逆の関係を見つけることができます)。以下では、Book スキーマの Book/Genre と Book/Author の関係、および BookInstance スキーマの Book/BookInstance の関係を定義します。この選択は多少恣意的でした - 他のスキーマでも同じようにフィールドを持つことができました。
 
 ![Mongoose Library Model with correct cardinality](library_website_-_mongoose_express.png)
 
@@ -365,7 +365,7 @@ const breakfastSchema = new Schema({
 > レコードの作成、更新、削除、およびクエリーは、[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/プロミス) を返す非同期操作です。
 > 下記の例では、関連するメソッドと `await` の使用法のみを表示しています（つまり、メソッドを使用するために不可欠なコードです）。
 > わかりやすくするため、外側の `async function` およびエラーを捕捉するための `try...catch` ブロックは除外しています。
-> `await/async` の使用に関する情報については、上記の[データベース API は非同期である](#データベース-api-は非同期である)をご覧ください。
+> `await/async` の使用に関する情報については、上記の[データベース API は非同期である](#データベース_api_は非同期である)をご覧ください。
 
 #### 文書の作成と変更
 
