@@ -3,7 +3,7 @@ title: "Object : méthode statique getOwnPropertyNames()"
 short-title: getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Object.getOwnPropertyNames()`** retourne un tableau contenant toutes les propriétés (y compris les propriétés non-énumérables, sauf celles utilisant `Symbol`) trouvées directement dans un objet donné.
@@ -52,7 +52,7 @@ Object.getOwnPropertyNames("foo");
 
 ## Exemples
 
-### Utiliser `Object.getOwnPropertyNames()`
+### Utiliser la méthode `Object.getOwnPropertyNames()`
 
 ```js
 const arr = ["a", "b", "c"];
@@ -130,7 +130,7 @@ console.log(nonEnumSeulement);
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Object.getOwnPropertyNames` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.getOwnPropertyNames` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
 - [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - La méthode statique {{JSxRef("Object.hasOwn()")}}
 - La méthode {{JSxRef("Object.prototype.propertyIsEnumerable()")}}

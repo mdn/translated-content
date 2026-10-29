@@ -3,7 +3,7 @@ title: Fonction CSS `invert()`
 short-title: invert()
 slug: Web/CSS/Reference/Values/filter-function/invert
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: cff28ac91efd68d0809779c81902bd080f614a1d
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`invert()`** permet d'inverser les couleurs de l'image. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
@@ -59,7 +59,7 @@ invert(60%)
 ### Paramètres
 
 - {{CSSxRef("&lt;number&gt;")}} ou {{CSSxRef("&lt;percentage&gt;")}} {{Optional_Inline}}
-  - : Définit le niveau d'inversion. Une valeur de `100%` inverse complètement l'image, tandis qu'une valeur de `0%` laisse l'image inchangée. Les valeurs comprises entre `0%` et `100%` appliquent un effet proportionnel. La valeur initiale utilisée pour {{Glossary("interpolation", "l'interpolation")}} est `0`. La valeur par défaut est `1`.
+  - : Définit le niveau d'inversion. Une valeur de `100%` inverse complètement l'image, tandis qu'une valeur de `0%` laisse l'image inchangée. Les valeurs comprises entre `0%` et `100%` appliquent un effet proportionnel. Les valeurs supérieures à `100%` sont autorisées, mais l'effet est limité à `100%`. Les valeurs négatives ne sont pas autorisées. La valeur initiale utilisée pour {{Glossary("interpolation", "l'interpolation")}} est `0`. La valeur par défaut est `1`.
 
 ## Syntaxe formelle
 
@@ -139,7 +139,7 @@ On ajoute du CSS qui inverse les éléments selon leur classe `filter` ou `svgFi
         <img
           class="svgFilter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="Pride flag" />
+          alt="Drapeau des fiertés" />
       </td>
       <td>
         <svg id="svg" height="220" width="220" overflow="visible">
@@ -159,7 +159,7 @@ On ajoute du CSS qui inverse les éléments selon leur classe `filter` ou `svgFi
       <td>
         <img
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="Pride flag" />
+          alt="Drapeau des fiertés" />
       </td>
     </tr>
   </tbody>

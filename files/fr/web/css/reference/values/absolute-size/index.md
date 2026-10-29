@@ -3,7 +3,7 @@ title: Type CSS `<absolute-size>`
 short-title: <absolute-size>
 slug: Web/CSS/Reference/Values/absolute-size
 l10n:
-  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
+  sourceCommit: d78544a841b0e266a6efc169c044573f5e0b4e7d
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<absolute-size>`** décrit les mots-clés de taille absolue. Ce type de donnée est utilisé dans les propriétés abrégées {{CSSxRef("font")}} et {{CSSxRef("font-size")}}.
@@ -21,22 +21,22 @@ Les mots-clés de taille de police correspondent à l'attribut HTML obsolète `s
 Le type de donnée `<absolute-size>` est défini à l'aide d'un mot-clé choisi dans la liste ci-dessous.
 
 - `xx-small`
-  - : Une taille absolue équivalente à 60&nbsp;% de `medium`. Correspond à l'attribut obsolète `size="1"`.
+  - : Une taille absolue équivalente à 60% de `medium`. Correspond à l'attribut obsolète `size="1"`.
 
 - `x-small`
-  - : Une taille absolue équivalente à 75&nbsp;% de `medium`.
+  - : Une taille absolue équivalente à 75% de `medium`.
 
 - `small`
-  - : Une taille absolue équivalente à 89&nbsp;% de `medium`. Correspond à l'attribut obsolète `size="2"`.
+  - : Une taille absolue équivalente à 89% de `medium`. Correspond à l'attribut obsolète `size="2"`.
 
 - `medium`
   - : Taille de police préférée de l'utilisateur·ice. Cette valeur sert de référence centrale. Correspond à `size="3"`.
 
 - `large`
-  - : Une taille absolue 20&nbsp;% plus grande que `medium`. Correspond à l'attribut obsolète `size="4"`.
+  - : Une taille absolue 20% plus grande que `medium`. Correspond à l'attribut obsolète `size="4"`.
 
 - `x-large`
-  - : Une taille absolue 50&nbsp;% plus grande que `medium`. Correspond à l'attribut obsolète `size="5"`.
+  - : Une taille absolue 50% plus grande que `medium`. Correspond à l'attribut obsolète `size="5"`.
 
 - `xx-large`
   - : Une taille absolue deux fois plus grande que `medium`. Correspond à l'attribut obsolète `size="6"`.
@@ -48,9 +48,9 @@ Le type de donnée `<absolute-size>` est défini à l'aide d'un mot-clé choisi 
 
 Chaque mot-clé `<absolute-size>` est dimensionné par rapport à la taille `medium` et aux caractéristiques propres à chaque appareil, comme la résolution. Les agents utilisateurs maintiennent une table de tailles de police pour chaque police, les mots-clés `<absolute-size>` servant d'index.
 
-Dans CSS1 (1996), le facteur d'échelle entre deux mots-clés adjacents était de 1,5, ce qui était trop élevé. Dans CSS2 (1998), ce facteur était de 1,2, ce qui posait problème pour les petites valeurs. Comme un ratio fixe entre les mots-clés de taille absolue s'est révélé problématique, il n'y a plus de recommandation de ratio fixe. La seule recommandation pour préserver la lisibilité est que la plus petite taille de police ne doit pas être inférieure à `9px`.
+Dans CSS1 (1996), le facteur d'échelle entre deux mots-clés adjacents était de 1,5, ce qui était trop élevé. Dans CSS2 (1998), ce facteur était de 1,2, ce qui posait problème pour les petites valeurs. Comme une proportion fixe entre les mots-clés de taille absolue s'est révélé problématique, il n'y a plus de recommandation de proportion fixe. La seule recommandation pour préserver la lisibilité est que la plus petite taille de police ne doit pas être inférieure à `9px`.
 
-Pour chaque mot-clé `<absolute-size>`, le tableau suivant indique le facteur d'échelle, la correspondance avec les titres [`<h1>` à `<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) et la correspondance avec l'attribut HTML [size](#attribut_html_size) obsolète.
+Pour chaque mot-clé `<absolute-size>`, le tableau suivant indique le facteur d'échelle, la correspondance avec les titres [`<h1>` à `<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) et la correspondance avec l'attribut HTML [`size`](#attribut_html_size) obsolète.
 
 | `<absolute-size>`    | xx-small | x-small | small | medium | large | x-large | xx-large | xxx-large |
 | -------------------- | -------- | ------- | ----- | ------ | ----- | ------- | -------- | --------- |
@@ -60,7 +60,7 @@ Pour chaque mot-clé `<absolute-size>`, le tableau suivant indique le facteur d'
 
 ### Attribut HTML size
 
-L'attribut `size` permettant de définir la taille de police en HTML est obsolète. Sa valeur était soit un entier entre `1` et `7`, soit une valeur relative. Les valeurs relatives étaient un entier précédé de `+` ou `-` pour augmenter ou diminuer la taille de la police. Une valeur de `+1` augmentait la taille d'un cran, `-2` la diminuait de deux crans, la valeur calculée étant limitée à un minimum de `1` et un maximum de `7`.
+L'attribut `size` permettant de définir la taille de police en HTML est obsolète. Sa valeur est soit un entier entre `1` et `7`, soit une valeur relative. Les valeurs relatives sont un entier précédé de `+` ou `-` pour augmenter ou diminuer la taille de la police. Une valeur de `+1` augmente la taille d'un cran, `-2` la diminue de deux crans, la valeur calculée étant limitée à un minimum de `1` et un maximum de `7`.
 
 ## Exemples
 
@@ -111,7 +111,7 @@ li {
 
 #### Résultat
 
-{{EmbedLiveSample('comparaison_des_mots-clés', '100%', 400)}}
+{{EmbedLiveSample("Comparaison des mots-clés", "100%", 400)}}
 
 ## Spécifications
 

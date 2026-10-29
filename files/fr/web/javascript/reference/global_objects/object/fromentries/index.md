@@ -3,7 +3,7 @@ title: "Object : méthode statique fromEntries()"
 short-title: fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Object.fromEntries()`** permet de transformer une liste de paires de clés/valeurs en un objet.
@@ -106,8 +106,8 @@ console.log(objet2);
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Object.fromEntries` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
-- [La prothèse d'émulation es-shims de `Object.fromEntries` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.fromentries)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.fromEntries` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Object.fromEntries` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.fromentries)
 - La méthode statique {{JSxRef("Object.entries()")}}
 - La méthode statique {{JSxRef("Object.keys()")}}
 - La méthode statique {{JSxRef("Object.values()")}}

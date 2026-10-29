@@ -2,7 +2,7 @@
 title: Temporal.PlainDateTime
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime
 l10n:
-  sourceCommit: 9b86874b5762b52ce0055f58d561004d1a204ad5
+  sourceCommit: 76c2e04d720aa8260ba7d75788ed96776aac35c6
 ---
 
 L'objet **`Temporal.PlainDateTime`** représente une date (date du calendrier) et une heure (heure murale) sans fuseau horaire. Il est fondamentalement représenté comme une combinaison d'une [date](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate) (avec un système de calendrier associé) et d'une [heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime).
@@ -11,7 +11,7 @@ L'objet **`Temporal.PlainDateTime`** représente une date (date du calendrier) e
 
 Un `PlainDateTime` est essentiellement la combinaison d'un {{JSxRef("Temporal.PlainDate")}} et d'un {{JSxRef("Temporal.PlainTime")}}. Comme les informations de date et d'heure n'ont pas beaucoup d'interaction, toutes les informations générales sur les propriétés de date sont documentées dans l'objet `PlainDate`, et toutes les informations générales sur les propriétés de temps sont documentées dans l'objet `PlainTime`.
 
-Si la date et l'heure représentent un instant défini qui doit rester invariant à travers les fuseaux horaires, vous devriez utiliser l'objet {{JSxRef("Temporal.ZonedDateTime")}} à la place. Utilisez `PlainDateTime` lorsque vous devez représenter un événement se produisant à une heure murale spécifique qui peut être un instant différent dans différents fuseaux horaires.
+Si la date et l'heure représentent un instant défini qui doit rester invariant à travers les fuseaux horaires, vous devez utiliser l'objet {{JSxRef("Temporal.ZonedDateTime")}} à la place. Utilisez `PlainDateTime` lorsque vous devez représenter un évènement se produisant à une heure murale spécifique qui peut être un instant différent dans différents fuseaux horaires.
 
 ### Format RFC 9557
 
@@ -36,15 +36,15 @@ YYYY-MM-DD T HH:mm:ss.sssssssss [u-ca=calendar_id]
 - `ss.sssssssss` {{Optional_Inline}}
   - : Un nombre à deux chiffres de `00` à `59`. Peut être suivi optionnellement d'un `.` ou `,` et d'un à neuf chiffres. Par défaut `00`. Les composants `HH`, `mm` et `ss` peuvent être séparés par `:` ou rien. Vous pouvez omettre soit `ss` seul, soit `ss` et `mm`, donc l'heure peut être sous trois formes&nbsp;: `HH`, `HH:mm` ou `HH:mm:ss.sssssssss`.
 - `[u-ca=calendar_id]` {{Optional_Inline}}
-  - : Remplacez `calendar_id` par le calendrier à utiliser. Voir [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_calendriers_pris_en_charge) pour une liste des types de calendriers couramment pris en charge. Par défaut `[u-ca=iso8601]`. Peut avoir un _drapeau critique_ en préfixant la clé avec `!`&nbsp;: par exemple, `[!u-ca=iso8601]`. Ce drapeau indique généralement aux autres systèmes qu'il ne peut pas être ignoré s'ils ne le prennent pas en charge. L'analyseur `Temporal` générera une erreur si les annotations contiennent deux annotations de calendrier ou plus et qu'une d'entre elles est critique. Notez que le `YYYY-MM-DD` est toujours interprété comme une date du calendrier ISO 8601, puis converti en calendrier défini.
+  - : Remplacez `calendar_id` par le calendrier à utiliser. Voir [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_calendriers_pris_en_charge) pour une liste des types de calendriers couramment pris en charge. Par défaut `[u-ca=iso8601]`. Peut avoir un _drapeau critique_ en préfixant la clé avec `!`&nbsp;: par exemple, `[!u-ca=iso8601]`. Ce drapeau indique généralement aux autres systèmes qu'il ne peut pas être ignoré s'ils ne le prennent pas en charge. L'analyseur `Temporal` génère une erreur si les annotations contiennent deux annotations de calendrier ou plus et qu'une d'entre elles est critique. Notez que le `YYYY-MM-DD` est toujours interprété comme une date du calendrier ISO 8601, puis converti en calendrier défini.
 
-Comme entrée, vous pouvez éventuellement inclure le décalage et l'identifiant du fuseau horaire, dans le même format que [`ZonedDateTime`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#format_rfc_9557), mais ils seront ignorés. Notez que le décalage ne doit _pas_ être `Z`. Les autres annotations au format `[clé=valeur]` sont également ignorées, et elles ne doivent pas avoir le drapeau critique.
+Comme entrée, vous pouvez éventuellement inclure le décalage et l'identifiant du fuseau horaire, dans le même format que [`ZonedDateTime`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#format_rfc_9557), mais ils sont ignorés. Notez que le décalage ne doit _pas_ être `Z`. Les autres annotations au format `[clé=valeur]` sont également ignorées, et elles ne doivent pas avoir le drapeau critique.
 
 Lors de la sérialisation, vous pouvez configurer le nombre de chiffres fractionnaires pour les secondes, décider d'afficher l'identifiant du calendrier et ajouter un drapeau critique pour celui-ci.
 
 ## Constructeur
 
-- {{JSxRef("Temporal/PlainDateTime/PlainDateTime", "Temporal.PlainDateTime()")}} {{Experimental_Inline}}
+- {{JSxRef("Temporal/PlainDateTime/PlainDateTime", "Temporal.PlainDateTime()")}}
   - : Crée un nouvel objet `Temporal.PlainDateTime` en fournissant directement les données sous-jacentes.
 
 ## Méthodes statiques
@@ -63,7 +63,7 @@ Ces propriétés sont définies sur `Temporal.PlainDateTime.prototype` et partag
 - {{JSxRef("Object/constructor", "Temporal.PlainDateTime.prototype.constructor")}}
   - : La fonction constructeur qui a créé l'objet instance. Pour les instances de `Temporal.PlainDateTime`, la valeur initiale est le constructeur {{JSxRef("Temporal/PlainDateTime/PlainDateTime", "Temporal.PlainDateTime()")}}.
 - {{JSxRef("Temporal/PlainDateTime/day", "Temporal.PlainDateTime.prototype.day")}}
-  - : Retourne un entier positif représentant l'indice du jour dans le mois de cette date, basé sur 1, ce qui correspond au même numéro de jour que vous verriez sur un calendrier. Dépend du [calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendriers). Généralement commence à 1 et est continu, mais pas toujours.
+  - : Retourne un entier positif représentant l'indice du jour dans le mois de cette date, basé sur 1, ce qui correspond au même numéro de jour que vous voyez sur un calendrier. Dépend du [calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendriers). Généralement commence à 1 et est continu, mais pas toujours.
 - {{JSxRef("Temporal/PlainDateTime/dayOfWeek", "Temporal.PlainDateTime.prototype.dayOfWeek")}}
   - : Retourne un entier positif représentant l'indice du jour dans la semaine de cette date, basé sur 1. Les jours de la semaine sont numérotés séquentiellement de `1` à {{JSxRef("Temporal/PlainDateTime/daysInWeek", "daysInWeek")}}, chaque numéro correspondant à son nom. Dépend du [calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendriers). 1 représente généralement le lundi dans le calendrier, même lorsque les locales utilisant le calendrier peuvent considérer un autre jour comme le premier jour de la semaine (voir {{JSxRef("Intl/Locale/getWeekInfo", "Intl.Locale.prototype.getWeekInfo()")}}).
 - {{JSxRef("Temporal/PlainDateTime/dayOfYear", "Temporal.PlainDateTime.prototype.dayOfYear")}}
@@ -105,7 +105,7 @@ Ces propriétés sont définies sur `Temporal.PlainDateTime.prototype` et partag
 - {{JSxRef("Temporal/PlainDateTime/yearOfWeek", "Temporal.PlainDateTime.prototype.yearOfWeek")}}
   - : Retourne un entier représentant l'année à associer à l'indice de la semaine de cette date, ou `undefined` si le calendrier n'a pas de système de semaine bien défini. Dépend du [calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendriers). Habituellement, c'est l'année de la date, mais pour ISO 8601, les premiers et derniers jours de l'année peuvent être attribués à la dernière semaine de l'année précédente ou à la première semaine de l'année suivante, ce qui fait que `yearOfWeek` peut différer de 1.
 - `Temporal.PlainDateTime.prototype[Symbol.toStringTag]`
-  - : La valeur initiale de la propriété [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne `"Temporal.PlainDateTime"`. Cette propriété est utilisée dans {{JSxRef("Object.prototype.toString()")}}.
+  - : La valeur initiale de la propriété [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne de caractères `"Temporal.PlainDateTime"`. Cette propriété est utilisée dans {{JSxRef("Object.prototype.toString()")}}.
 
 ## Méthodes d'instance
 

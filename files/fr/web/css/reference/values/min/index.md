@@ -3,7 +3,7 @@ title: Fonction CSS `min()`
 short-title: min()
 slug: Web/CSS/Reference/Values/min
 l10n:
-  sourceCommit: 11c522da37b7469cbce26bbe220936aec1d372d0
+  sourceCommit: bf3b0f3217d5d5a6957e9e17f863ece19d939d20
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`min()`** permet d'obtenir la plus petite valeurs parmi une liste d'expressions, séparées par des virgules afin d'utiliser ce minimum comme valeur d'une propriété CSS. La fonction `min()` peut être utilisée à tout endroit où une valeur de type {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}} ou {{CSSxRef("&lt;integer&gt;")}} est autorisée.
@@ -52,7 +52,7 @@ Vous pouvez utiliser différentes unités pour chaque valeur de votre expression
 
 ### Notes
 
-- Les expressions mathématiques impliquant des pourcentages pour les largeurs et hauteurs des colonnes de tableau, des groupes de colonnes de tableau, des lignes de tableau, des groupes de lignes de tableau et des cellules de tableau dans les tableaux à disposition automatique et fixe _peuvent_ être traitées comme si `auto` avait été défini.
+- Les expressions mathématiques impliquant des pourcentages pour les largeurs et hauteurs des colonnes de tableau, des groupes de colonnes de tableau, des lignes de tableau, des groupes de lignes de tableau et des cellules de tableau dans les tableaux à disposition automatique et fixe _peuvent_ être traitées comme si `auto` est défini.
 - Il est permis d'imbriquer les fonctions `max()` et `min()` comme valeurs d'expression. Les expressions sont des expressions mathématiques complètes, vous pouvez donc utiliser l'addition, la soustraction, la multiplication et la division directement sans utiliser la fonction `calc()` elle-même.
 - L'expression peut être des valeurs combinant les opérateurs d'addition (`+`), de soustraction (`-`), de multiplication (`*`) et de division (`/`), en utilisant les règles de priorité des opérateurs standard. Assurez-vous de mettre un espace de chaque côté des opérandes `+` et `-`.
 - Vous pouvez (et devez souvent) combiner les valeurs `min()` et `max()`, ou utiliser `min()` dans une fonction `clamp()` ou `calc()`.
@@ -73,7 +73,7 @@ Lors de l'utilisation de `min()` pour définir une taille de police maximale, as
 
 ### Définir une taille maximale pour une étiquette et un champ de saisie
 
-Un autre cas d'utilisation de `min()` consiste à définir une taille maximale pour les contrôles de formulaire réactifs&nbsp;: permettre à la largeur des étiquettes et des champs de saisie de diminuer à mesure que la largeur du formulaire diminue.
+Un autre cas d'utilisation de `min()` consiste à définir une taille maximale pour les contrôles de formulaire réactifs&nbsp;: permettre à la largeur des étiquettes et des champs de saisie de diminuer à mesure que la largeur de leur conteneur diminue.
 
 Regardons un peu de CSS&nbsp;:
 
@@ -87,20 +87,20 @@ label {
   background-color: pink;
 }
 
-form {
+.conteneur {
   margin: 4px;
   border: 1px solid black;
   padding: 4px;
 }
 ```
 
-Ici, le formulaire lui-même, ainsi que la marge, la bordure et le remplissage, occupent 100% de la largeur de son parent. Nous déclarons que l'entrée de formulaire et l'étiquette doivent être la valeur la plus petite entre 40% de la largeur du formulaire jusqu'au remplissage ou 400px de large, selon ce qui est le plus petit. En d'autres termes, la largeur maximale que peuvent avoir l'étiquette et l'entrée de formulaire est de 400px. La largeur minimale est de 40% de la largeur du formulaire, ce qui sur l'écran d'une montre connectée est très petit.
+Ici, le conteneur lui-même, ainsi que la marge, la bordure et le remplissage, occupent 100% de la largeur de son parent. Nous déclarons que l'entrée et l'étiquette doivent être la valeur la plus petite entre 40% de la largeur du conteneur jusqu'au remplissage ou 400px de large, selon ce qui est le plus petit. En d'autres termes, la largeur maximale que peuvent avoir l'étiquette et l'entrée est de 400px. La largeur minimale est de 40% de la largeur du conteneur, ce qui sur l'écran d'une montre connectée est très petit.
 
 ```html
-<form>
+<div class="conteneur">
   <label for="misc">Tapez quelque chose&nbsp;:</label>
   <input type="text" id="misc" name="misc" />
-</form>
+</div>
 ```
 
 {{EmbedLiveSample("Définir une taille maximale pour une étiquette et un champ de saisie", "100%", 110)}}

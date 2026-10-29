@@ -3,7 +3,7 @@ title: "Promise : méthode statique reject()"
 short-title: reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: a6a2daec3965d85ef6dfc06cfd3507c1b2f886e2
 ---
 
 La méthode statique **`Promise.reject()`** retourne un objet `Promise` qui est rompue avec une raison donnée.
@@ -79,7 +79,7 @@ rejected.catch((v) => {
 `Promise.reject()` est une méthode générique. Elle peut être appelée sur n'importe quel constructeur qui implémente la même signature que le constructeur `Promise()`. Par exemple, nous pouvons l'appeler sur un constructeur qui lui passe `console.log` en tant que `reject`&nbsp;:
 
 ```js
-class NestPasUnePromesse {
+class PasUnePromesse {
   constructor(executeur) {
     // Les fonctions « resolve » et « reject » ne se comportent pas du
     // tout comme celles de la promesse native, mais Promise.reject() les
@@ -89,9 +89,12 @@ class NestPasUnePromesse {
       (raison) => console.log("Rompue", raison),
     );
   }
+
+  static reject = Promise.reject;
 }
 
-Promise.reject.call(NestPasUnePromesse, "toto"); // Affiche "Rompue toto"
+const p = PasUnePromesse.reject("toto"); // Logs "Rompue toto"
+// p est une instance de PasUnePromesse
 ```
 
 ## Spécifications

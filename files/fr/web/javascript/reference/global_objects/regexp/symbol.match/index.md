@@ -3,7 +3,7 @@ title: "RegExp : méthode [Symbol.match]()"
 short-title: "[Symbol.match]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match
 l10n:
-  sourceCommit: 07758d01509695fe45ccc3f7687f6597dc3d9e2a
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`[Symbol.match]()`** des instances de {{JSxRef("RegExp")}} définit comment [`String.prototype.match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match) doit se comporter. De plus, sa présence (ou son absence) peut influencer la manière dont un objet est considéré comme une expression rationnelle.
@@ -132,7 +132,7 @@ console.log(resultat.group(3)); // 02
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `RegExp.prototype[Symbol.match]` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `RegExp.prototype[Symbol.match]` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
 - La méthode {{JSxRef("String.prototype.match()")}}
 - La méthode [`RegExp.prototype[Symbol.matchAll]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
 - La méthode [`RegExp.prototype[Symbol.replace]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)

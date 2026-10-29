@@ -3,7 +3,7 @@ title: Fonction CSS `grayscale()`
 short-title: grayscale()
 slug: Web/CSS/Reference/Values/filter-function/grayscale
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: cff28ac91efd68d0809779c81902bd080f614a1d
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`grayscale()`** convertit une image en niveaux de gris. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
@@ -45,7 +45,7 @@ grayscale(amount)
 ### Paramètres
 
 - `amount` {{Optional_Inline}}
-  - : La quantité de l'image d'entrée convertie en niveaux de gris. Elle s'exprime en nombre ({{CSSxRef("&lt;number&gt;")}}) ou en pourcentage ({{CSSxRef("&lt;percentage&gt;")}}). Une valeur de `100%` convertit l'image entièrement en niveaux de gris, tandis qu'une valeur de `0%` laisse l'image inchangée. Les valeurs comprises entre `0%` et `100%` appliquent un effet linéairement proportionnel. La valeur initiale utilisée pour {{Glossary("interpolation", "l'interpolation")}} est `0`. La valeur par défaut est `1`.
+  - : La quantité de l'image d'entrée convertie en niveaux de gris. Elle s'exprime en nombre ({{CSSxRef("&lt;number&gt;")}}) ou en pourcentage ({{CSSxRef("&lt;percentage&gt;")}}). Une valeur de `100%` convertit l'image entièrement en niveaux de gris, tandis qu'une valeur de `0%` laisse l'image inchangée. Les valeurs comprises entre `0%` et `100%` appliquent un effet linéairement proportionnel. Les valeurs supérieures à `100%` sont autorisées, mais l'effet est limité à `100%`. Les valeurs négatives ne sont pas autorisées. La valeur initiale utilisée pour {{Glossary("interpolation", "l'interpolation")}} est `0`. La valeur par défaut est `1`.
 
 ## Syntaxe formelle
 

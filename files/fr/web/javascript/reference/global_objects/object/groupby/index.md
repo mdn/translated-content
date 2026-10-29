@@ -3,7 +3,7 @@ title: "Object : méthode statique groupBy()"
 short-title: groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 > [!NOTE]
@@ -60,7 +60,7 @@ Les éléments de l'objet retourné et de l'itérable original sont les mêmes (
 
 ## Exemples
 
-### Utiliser `Object.groupBy()`
+### Utiliser la méthode `Object.groupBy()`
 
 Pour commencer, on définit un tableau contenant un inventaire d'aliments. Chaque aliment possède un nom, un type et une quantité.
 
@@ -132,8 +132,8 @@ const resultat2 = Object.groupBy(inventaire, maFonctionDeRappel);
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Object.groupBy()` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#array-grouping)
-- [La prothèse d'émulation es-shims de `Object.groupBy` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.groupby)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.groupBy()` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Object.groupBy` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.groupby)
 - Le guide [des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - La méthode statique {{JSxRef("Array.prototype.reduce()")}}
 - La méthode statique {{JSxRef("Object.fromEntries()")}}

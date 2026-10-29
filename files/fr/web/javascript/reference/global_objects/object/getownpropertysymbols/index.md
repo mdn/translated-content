@@ -3,7 +3,7 @@ title: "Object : méthode statique getOwnPropertySymbols()"
 short-title: getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Object.getOwnPropertySymbols()`** retourne un tableau contenant tous les symboles des propriétés trouvées directement sur un objet donné.
@@ -47,7 +47,7 @@ Comme tous les objets n'ont pas de propriétés symboliques propres initialement
 
 ## Exemples
 
-### Utiliser `Object.getOwnPropertySymbols()`
+### Utiliser la méthode `Object.getOwnPropertySymbols()`
 
 ```js
 const obj = {};
@@ -74,6 +74,6 @@ console.log(objectSymbols[0]); // Symbol(a)
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Object.getOwnPropertySymbols` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.getOwnPropertySymbols` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
 - La méthode statique {{JSxRef("Object.getOwnPropertyNames()")}}
 - L'objet natif {{JSxRef("Symbol")}}

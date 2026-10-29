@@ -3,7 +3,7 @@ title: Constructeur RegExp()
 short-title: RegExp()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Le constructeur **`RegExp()`** crée des objets {{JSxRef("RegExp")}}.
@@ -131,7 +131,7 @@ commande.match(new RegExp(`\\b(${petitDejeuners.join("|")})\\b`, "g"));
 
 ## Voir aussi
 
-- [La prothèse d'émulation pour de nombreuses fonctionnalités modernes de `RegExp` (`dotAll`, indicateur `sticky`, groupes de capture nommés, etc.) dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) pour de nombreuses fonctionnalités modernes de `RegExp` (`dotAll`, indicateur `sticky`, groupes de capture nommés, etc.) dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
 - Le guide [des expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
 - La méthode {{JSxRef("String.prototype.match()")}}
 - La méthode {{JSxRef("String.prototype.replace()")}}

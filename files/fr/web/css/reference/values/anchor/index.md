@@ -3,7 +3,7 @@ title: Fonction CSS `anchor()`
 short-title: anchor()
 slug: Web/CSS/Reference/Values/anchor
 l10n:
-  sourceCommit: 25ad29eedf5897f5b0ca23c3295261cbd01c6031
+  sourceCommit: 93149226b6b94a770731d262508f5c4aa10bcbed
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`anchor()`** peut être utilisée dans les valeurs d'une [propriété d'encart](#propriétés_acceptant_les_valeurs_de_la_fonction_anchor) d'un élément **positionné par une ancre**, et retourne une valeur de longueur relative à la position des bords de l'élément d'ancrage associé.
@@ -107,7 +107,7 @@ Les {{Glossary("inset properties", "propriétés d'encart")}} CSS qui acceptent 
 
 Lorsque vous utilisez une fonction `anchor()` dans la valeur d'une propriété d'encart, le paramètre `<anchor-side>` indiqué dans la fonction doit être compatible avec l'axe sur lequel la propriété d'encart s'applique.
 
-Cela signifie que les valeurs physiques de `<anchor-side>` peuvent être utilisées dans les propriétés d'encart physiques si la propriété a la même direction d'axe que `<anchor-side>`. Autrement dit, les côtés `top` et `bottom` ne sont pas valides dans les propriétés `left` et `right`, et inversement, les côtés `left` et `right` ne sont pas valides dans les propriétés `top` et `bottom`. Par exemple, `top: anchor(bottom)` est correct, car ce sont deux valeurs verticales, mais `top: anchor(left)` n'est pas valide, car `left` est une valeur horizontale. Si `top: anchor(left, 50px)` est défini, la valeur de repli est utilisée, donc `top` a une valeur calculée de `50px`. Si aucune valeur de repli n'est présente, la propriété d'encart se comporte comme si elle était définie sur `auto`.
+Cela signifie que les valeurs physiques de `<anchor-side>` peuvent être utilisées dans les propriétés d'encart physiques si la propriété a la même direction d'axe que `<anchor-side>`. Autrement dit, les côtés `top` et `bottom` ne sont pas valides dans les propriétés `left` et `right`, et inversement, les côtés `left` et `right` ne sont pas valides dans les propriétés `top` et `bottom`. Par exemple, `top: anchor(bottom)` est correct, car ce sont deux valeurs verticales, mais `top: anchor(left)` n'est pas valide, car `left` est une valeur horizontale. Si `top: anchor(left, 50px)` est défini, la valeur de repli est utilisée, donc `top` a une valeur calculée de `50px`. Si aucune valeur de repli n'est présente, la propriété d'encart se comporte comme si elle est définie sur `auto`.
 
 Vous pouvez utiliser des valeurs logiques de `<anchor-side>` dans les propriétés d'encart physiques et logiques, car elles sont relatives à l'axe pertinent de la propriété d'encart, qu'elle soit logique ou physique. Par exemple, `top: anchor(start)`, `top: anchor(self-end)`, `inset-block-start: anchor(end)` et `inset-inline-end: anchor(self-start)` fonctionnent tous correctement.
 
@@ -141,8 +141,6 @@ Lorsque vous utilisez `anchor()` pour positionner des [fenêtres contextuelles](
   inset: auto;
 }
 ```
-
-Le groupe de travail CSS [étudie des moyens d'éviter ce contournement <sup>(angl.)</sup>](https://github.com/w3c/csswg-drafts/issues/10258).
 
 ### Utiliser `anchor()` dans `calc()`
 
