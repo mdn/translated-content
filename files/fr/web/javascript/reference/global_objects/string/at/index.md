@@ -94,8 +94,8 @@ console.log(avecAt); // 'à'
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `String.prototype.at` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
-- [La prothèse d'émulation es-shims de `String.prototype.at` <sup>(angl.)</sup>](https://www.npmjs.com/package/string.prototype.at)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `String.prototype.at` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `String.prototype.at` <sup>(angl.)</sup>](https://www.npmjs.com/package/string.prototype.at)
 - La méthode {{JSxRef("String.prototype.indexOf()")}}
 - La méthode {{JSxRef("String.prototype.lastIndexOf()")}}
 - La méthode {{JSxRef("String.prototype.charCodeAt()")}}
