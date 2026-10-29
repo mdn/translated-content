@@ -1,10 +1,6 @@
 ---
 title: MathML
 slug: Web/MathML
-page-type: landing-page
-browser-compat: mathml.elements.math
-spec-urls: https://w3c.github.io/mathml/
-sidebar: mathmlref
 l10n:
   sourceCommit: 9ba3ab2c48fb51423f811d329818071e4c79caca
 ---
