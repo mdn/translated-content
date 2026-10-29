@@ -1,13 +1,12 @@
 ---
 title: Date.prototype.setYear()
+short-title: setYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-{{JSRef}}
-
-**`setSeconds()`** は {{jsxref("Date")}} インスタンスのメソッドで、地方時に基づき、指定された日時の「年」を変更します。
+**`setYear()`** は {{jsxref("Date")}} インスタンスのメソッドで、現地時間に基づき、指定された日時の「年」を変更します。
 
 しかし、古い `setYear()` メソッドが年を設定する方法は、好ましい {{jsxref("Date/setFullYear", "setFullYear()")}} メソッドが年を設定する方法と異なり、いくつかのケースでは `new Date()` や {{jsxref("Date.parse()")}} が年の値を設定する方法とも異なっています。詳細度は、`22` や `61` のような 2 桁の数字が指定された場合、以下のようになります。
 
@@ -60,7 +59,7 @@ theBigDay.setYear(2000);
 
 ## 関連情報
 
-- [`Date.prototype.setYear` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-date)
+- [`Date.prototype.setYear` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/date)
 - {{jsxref("Date.prototype.getFullYear()")}}
 - {{jsxref("Date.prototype.getUTCFullYear()")}}
 - {{jsxref("Date.prototype.setFullYear()")}}
