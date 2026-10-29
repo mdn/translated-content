@@ -74,8 +74,8 @@ console.log(chaine.endsWith("pas être", 19)); // true
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `String.prototype.endsWith` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
-- [La prothèse d'émulation es-shims de `String.prototype.endsWith` <sup>(angl.)</sup>](https://www.npmjs.com/package/string.prototype.endswith)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `String.prototype.endsWith` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `String.prototype.endsWith` <sup>(angl.)</sup>](https://www.npmjs.com/package/string.prototype.endswith)
 - La méthode {{JSxRef("String.prototype.startsWith()")}}
 - La méthode {{JSxRef("String.prototype.includes()")}}
 - La méthode {{JSxRef("String.prototype.indexOf()")}}
