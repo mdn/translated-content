@@ -351,7 +351,9 @@ math {
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>Моя страница с перемещёнными пределами и небольшим крупным оператором</title>
+    <title>
+      Моя страница с перемещёнными пределами и небольшим крупным оператором
+    </title>
     <link
       rel="stylesheet"
       href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
