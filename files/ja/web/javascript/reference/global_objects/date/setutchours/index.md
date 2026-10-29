@@ -1,11 +1,10 @@
 ---
 title: Date.prototype.setUTCHours()
+short-title: setUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`setUTCHours()`** は {{jsxref("Date")}} インスタンスのメソッドで、協定世界時に基づき、この日時の時、分、秒、ミリ秒を変更します。
 

@@ -1,13 +1,12 @@
 ---
 title: Date.prototype.toTimeString()
+short-title: toTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`toTimeString()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日時の地方時での時刻部分を英語で返します。
+**`toTimeString()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日時の現地時間での時刻部分を英語で返します。
 
 {{InteractiveExample("JavaScript デモ: Date.prototype.toTimeString()", "shorter")}}
 
@@ -35,21 +34,21 @@ toTimeString()
 
 ## 解説
 
-{{jsxref("Date")}} インスタンスは特定の時点を参照します。`toTimeString()` は日付を地方時で解釈し、_時刻_ の部分を英語で整形します。これは常に `HH:mm:ss GMT±xxxx (TZ)` の形式を使用します。
+{{jsxref("Date")}} インスタンスは特定の時点を参照します。`toTimeString()` は日付を現地時間で解釈し、_時刻_ の部分を英語で整形します。これは常に `HH:mm:ss GMT±xxxx (TZ)` の形式を使用します。
 
 | 書式文字列 | 説明                                                            |
 | ---------- | --------------------------------------------------------------- |
 | `HH`       | 時、2 桁（必要であれば先頭の 0 を含む）。                       |
 | `mm`       | 分、2 桁（必要であれば先頭の 0 を含む）。                       |
 | `ss`       | 秒、2 桁（必要であれば先頭の 0 を含む）。                       |
-| `±xxxx`    | 地方時のオフセット - 時: 2 桁、分: 2 桁 (e.g. `-0500`, `+0800`) |
-| `TZ`       | 地方時の名前（`PDT`, `PST` など）                               |
+| `±xxxx`    | 現地時間のオフセット - 時: 2 桁、分: 2 桁 (e.g. `-0500`, `+0800`) |
+| `TZ`       | 現地時間の名前（`PDT`, `PST` など）                               |
 
 例: "04:42:04 GMT+0000 (Coordinated Universal Time)".
 
 - 日付の部分を取得したい場合は、 {{jsxref("Date/toDateString", "toDateString()")}} を使用してください。
 - 日付と時刻の両方を取得したい場合は、 {{jsxref("Date/toString", "toString()")}} を使用してください。
-- 日時を地方時ではなく UTC として解釈したい場合は、 {{jsxref("Date/toUTCString", "toUTCString()")}} を使用してください。
+- 日時を現地時間ではなく UTC として解釈したい場合は、 {{jsxref("Date/toUTCString", "toUTCString()")}} を使用してください。
 - 時刻をもっとユーザーが読みやすい形式（例えばローカライズしたもの）で整形したい場合は、 {{jsxref("Date/toLocaleTimeString", "toLocaleDateString()")}} を使用してください。
 
 ## 例

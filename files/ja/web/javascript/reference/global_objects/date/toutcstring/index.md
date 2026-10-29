@@ -1,11 +1,10 @@
 ---
 title: Date.prototype.toUTCString()
+short-title: toUTCString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`toUTCString()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日付を [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.1) 形式で表す文字列を返します。負の年を使用することができます。タイムゾーンは常に協定世界時 (UTC) です。 `toGMTString()` は、このメソッドの別名です。
 
