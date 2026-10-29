@@ -659,7 +659,7 @@ URL は `mongodb+srv://your_user_name:your_password@cluster0.cojoign.mongodb.net
 ## Mongoose のインストール
 
 コマンドプロンプトを開き、[ローカルライブラリーのウェブサイト用スケルトン](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)を作成したディレクトリーに移動してください。
-以下のコマンドを入力して、Mongoose （およびその依存関係）をインストールし、**package.json** ファイルに追加してください。ただし、前述の [Mongoose 入門](#installing_mongoose_and_mongodb) を読み、すでにこの作業を行っている場合は除きます。
+以下のコマンドを入力して、Mongoose （およびその依存関係）をインストールし、**package.json** ファイルに追加してください。ただし、前述の [Mongoose 入門](#mongoose_と_mongodb_のインストール) を読み、すでにこの作業を行っている場合は除きます。
 
 ```bash
 npm install mongoose
