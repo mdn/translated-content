@@ -3,7 +3,7 @@ title: "RegExp : méthode exec()"
 short-title: exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`exec()`** des instances de {{JSxRef("RegExp")}} exécute une recherche avec cette expression rationnelle pour trouver une correspondance dans une chaîne de caractères définie et retourne un tableau de résultats, ou {{JSxRef("null")}}.
@@ -68,7 +68,7 @@ Lorsque vous utilisez `exec()`, l'indicateur global n'a aucun effet si l'indicat
 
 ## Exemples
 
-### Utiliser `exec()`
+### Utiliser la méthode `exec()`
 
 Considérons l'exemple suivant&nbsp;:
 
@@ -148,5 +148,6 @@ Cela affiche un message contenant `'bonjour monde !'`.
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `RegExp.prototype.exec` avec prise en charge des groupes capturants nommés, `dotAll` et `sticky` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
 - Le guide [des expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
 - L'objet natif {{JSxRef("RegExp")}}

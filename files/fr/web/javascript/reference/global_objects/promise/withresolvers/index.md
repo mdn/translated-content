@@ -3,7 +3,7 @@ title: "Promise : méthode statique withResolvers()"
 short-title: withResolvers()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/withResolvers
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Promise.withResolvers()`** retourne un objet contenant un nouvel objet {{JSxRef("Promise")}} et deux fonctions pour le résoudre ou le rompre (<i lang="en">rejected</i> en anglais), correspondant aux deux paramètres passés à l'exécuteur du constructeur {{JSxRef("Promise/Promise", "Promise()")}}.
@@ -86,9 +86,11 @@ class PasUnePromesse {
       (raison) => console.log("Rompue", raison),
     );
   }
+
+  static withResolvers = Promise.withResolvers;
 }
 
-const { promise, resolve, reject } = Promise.withResolvers.call(PasUnePromesse);
+const { promise, resolve, reject } = PasUnePromesse.withResolvers();
 resolve("bonjour");
 // Journaux : Résolue bonjour
 ```
@@ -103,8 +105,8 @@ resolve("bonjour");
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Promise.withResolvers` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#promisewithresolvers)
-- [La prothèse d'émulation es-shims de `Promise.withResolvers` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.withresolvers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Promise.withResolvers` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/promise)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Promise.withResolvers` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.withresolvers)
 - Le guide [d'utilisation des promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)
 - L'objet natif {{JSxRef("Promise")}}
 - Le constructeur {{JSxRef("Promise/Promise", "Promise()")}}

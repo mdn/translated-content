@@ -3,7 +3,7 @@ title: "Promise : méthode finally()"
 short-title: finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 l10n:
-  sourceCommit: a99bc85f30c0c5a8dc5c85b7b552b442d411a082
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`finally()`** des instances de {{JSxRef("Promise")}} planifie l'exécution d'une fonction lorsque la promesse est terminée (soit complétée (<i lang="en">fulfilled</i> en anglais), soit rompue (<i lang="en">rejected</i> en anglais)). Elle retourne immédiatement un autre objet {{JSxRef("Promise")}}, ce qui permet de [chaîner](/fr/docs/Web/JavaScript/Guide/Using_promises#chaînage) des appels à d'autres méthodes de promesse.
@@ -118,8 +118,8 @@ fetch(maRequete)
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Promise.prototype.finally` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-promise)
-- [La prothèse d'émulation es-shims de `Promise.prototype.finally` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.prototype.finally)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Promise.prototype.finally` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/promise)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Promise.prototype.finally` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.prototype.finally)
 - L'objet natif {{JSxRef("Promise")}}
 - La méthode {{JSxRef("Promise.prototype.then()")}}
 - La méthode {{JSxRef("Promise.prototype.catch()")}}

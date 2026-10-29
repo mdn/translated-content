@@ -3,7 +3,7 @@ title: "RegExp : méthode test()"
 short-title: test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`test()`** des instances de {{JSxRef("RegExp")}} exécute une recherche avec cette expression rationnelle pour trouver une correspondance entre l'expression rationnelle et une chaîne de caractères définie. Elle retourne `true` s'il y a une correspondance&nbsp;; `false` dans le cas contraire.
@@ -59,7 +59,7 @@ Comme avec `exec()` (ou en combinaison avec elle), des appels successifs à `tes
 
 ## Exemples
 
-### Utiliser `test()`
+### Utiliser la méthode `test()`
 
 Cet exemple teste si `"bonjour"` est contenu au tout début d'une chaîne de caractères, renvoyant un résultat booléen.
 
@@ -130,5 +130,6 @@ regex.test("tototructoto"); // false
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `RegExp.prototype.test` avec prise en charge des groupes capturants nommés, `dotAll` et `sticky` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
 - Le guide [des expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
 - L'objet natif {{JSxRef("RegExp")}}

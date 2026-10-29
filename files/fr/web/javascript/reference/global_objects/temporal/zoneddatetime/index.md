@@ -2,7 +2,7 @@
 title: Temporal.ZonedDateTime
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime
 l10n:
-  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
+  sourceCommit: 76c2e04d720aa8260ba7d75788ed96776aac35c6
 ---
 
 L'objet **`Temporal.ZonedDateTime`** représente une date et une heure avec un fuseau horaire. Il est fondamentalement représenté comme une combinaison d'un [instant](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant), d'un fuseau horaire et d'un système de calendrier.
@@ -42,7 +42,7 @@ Lors de la saisie, la correspondance des identifiants nommés s'effectue sans di
 > [!NOTE]
 > Lorsque vous définissez le nom du fuseau horaire, vous ne souhaitez généralement pas le définir sur `"UTC"`. `ZonedDateTime` est destinée à être affichée aux utilisateur·ice·s, mais aucun·e humain·e ne vit dans le fuseau horaire «&nbsp;UTC&nbsp;». Si vous ne connaissez pas le fuseau horaire au moment de la construction mais que vous connaissez l'heure affichée, utilisez un {{JSxRef("Temporal.PlainDateTime")}}. Si vous connaissez l'instant exact, utilisez un {{JSxRef("Temporal.Instant")}}.
 
-Lorsqu'une API `Temporal` accepte un _identifiant de fuseau horaire_, en plus des identifiants principaux de fuseau horaire et des identifiants de fuseau horaire qui ne sont pas principaux, elle accepte également un _identifiant de fuseau horaire à décalage_, qui est sous la même forme que le décalage, sauf que la précision subminute n'est pas autorisée. Par exemple, `+05:30`, `-08`, `+0600` sont tous des identifiants de décalage valides. En interne, les identifiants de décalage sont stockés sous la forme `±HH:mm`.
+Lorsqu'une API `Temporal` accepte un _identifiant de fuseau horaire_, en plus des identifiants principaux de fuseau horaire et des identifiants de fuseau horaire qui ne sont pas principaux, elle accepte également un _identifiant de fuseau horaire à décalage_, qui est sous la même forme que le décalage, sauf que la précision inférieure à la minute n'est pas autorisée. Par exemple, `+05:30`, `-08`, `+0600` sont tous des identifiants de décalage valides. En interne, les identifiants de décalage sont stockés sous la forme `±HH:mm`.
 
 > [!NOTE]
 > Évitez d'utiliser des identifiants de décalage si vous pouvez utiliser un fuseau horaire nommé à la place. Même si une région a toujours utilisé un seul décalage, il est préférable d'utiliser l'identifiant nommé pour se prémunir contre les futurs changements politiques du décalage.
@@ -64,7 +64,7 @@ La base de données des fuseaux horaires IANA change de temps en temps, généra
 | `Asia/Ho_Chi_Minh`                | `Asia/Saigon`                                |
 | `Europe/Kyiv`                     | `Europe/Kiev`                                |
 
-Historiquement, ces changements de noms ont causé des problèmes pour les programmeur·euse·s, car la base de données Unicode [CLDR <sup>(angl.)</sup>](https://github.com/unicode-org/cldr/blob/main/common/bcp47/timezone.xml) (une bibliothèque utilisée par les navigateurs pour fournir des identifiants et des données de fuseau horaire) ne suivait pas les renommages de l'IANA pour des [raisons de stabilité <sup>(angl.)</sup>](https://unicode.org/reports/tr35/#Time_Zone_Identifiers). En conséquence, certains navigateurs comme Chrome et Safari ont signalé des identifiants obsolètes de la CLDR, tandis que d'autres navigateurs comme Firefox ont remplacé les valeurs par défaut de la CLDR et ont signalé les identifiants principaux à jour.
+Historiquement, ces changements de noms ont causé des problèmes pour les programmeur·euse·s, car la base de données Unicode [CLDR <sup>(angl.)</sup>](https://github.com/unicode-org/cldr/blob/main/common/bcp47/timezone.xml) (une bibliothèque utilisée par les navigateurs pour fournir des identifiants et des données de fuseau horaire) ne suit pas les renommages de l'IANA pour des [raisons de stabilité <sup>(angl.)</sup>](https://unicode.org/reports/tr35/#Time_Zone_Identifiers). En conséquence, certains navigateurs comme Chrome et Safari ont signalé des identifiants obsolètes de la CLDR, tandis que d'autres navigateurs comme Firefox ont remplacé les valeurs par défaut de la CLDR et ont signalé les identifiants principaux à jour.
 
 Avec l'introduction de `Temporal`, ce comportement est désormais davantage standardisé&nbsp;:
 
@@ -154,7 +154,7 @@ Les ambiguïtés de décalage sont rares et ne concernent presque toujours que l
 - `use`
   - : Utilise le décalage pour calculer l'heure exacte. Cette option «&nbsp;utilise&nbsp;» le décalage pour déterminer l'instant auquel se réfère la chaîne de caractères de la date et de l'heure, même si le décalage à cet instant a changé. L'identifiant de fuseau horaire est toujours utilisé pour déduire le décalage (éventuellement mis à jour) et utiliser ce décalage pour convertir l'heure exacte en heure locale. Dans l'exemple `2019-12-23T12:00:00-02:00[America/Sao_Paulo]` ci-dessus, cette option fait en sorte que le rappel se déclenche à 11h, heure locale.
 - `ignore`
-  - : Utilise l'identifiant du fuseau horaire pour recalculer le décalage, en ignorant celui défini dans la chaîne de caractères. Cette option conserve l'heure locale telle qu'elle avait été calculée initialement lors de l'enregistrement de l'heure, mais peut aboutir à un instant différent. Notez qu'en ignorant le décalage, la même [ambiguïté d'interprétation de l'heure locale](#ambiguïté_et_écarts_lors_du_passage_de_lheure_locale_à_lutc) peut se produire, ce qui est résolu en utilisant l'option `disambiguation`. Dans l'exemple `2019-12-23T12:00:00-02:00[America/Sao_Paulo]` ci-dessus, cette option fait en sorte que le rappel se déclenche à 12h, heure locale.
+  - : Utilise l'identifiant du fuseau horaire pour recalculer le décalage, en ignorant celui défini dans la chaîne de caractères. Cette option conserve l'heure locale telle qu'elle a été calculée initialement lors de l'enregistrement de l'heure, mais peut aboutir à un instant différent. Notez qu'en ignorant le décalage, la même [ambiguïté d'interprétation de l'heure locale](#ambiguïté_et_écarts_lors_du_passage_de_lheure_locale_à_lutc) peut se produire, ce qui est résolu en utilisant l'option `disambiguation`. Dans l'exemple `2019-12-23T12:00:00-02:00[America/Sao_Paulo]` ci-dessus, cette option fait en sorte que le rappel se déclenche à 12h, heure locale.
 - `reject`
   - : Lève une erreur `RangeError` chaque fois qu'il y a un conflit entre le décalage et l'identifiant du fuseau horaire. C'est le comportement par défaut de {{JSxRef("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}.
 - `prefer`
@@ -171,7 +171,7 @@ Notez que le décalage `Z` n'est pas équivalent à `+00:00`. Le décalage `Z` s
 
 ## Constructeur
 
-- {{JSxRef("Temporal/ZonedDateTime/ZonedDateTime", "Temporal.ZonedDateTime()")}} {{Experimental_Inline}}
+- {{JSxRef("Temporal/ZonedDateTime/ZonedDateTime", "Temporal.ZonedDateTime()")}}
   - : Crée un nouvel objet `Temporal.ZonedDateTime` en fournissant directement les données sous-jacentes.
 
 ## Méthodes statiques
