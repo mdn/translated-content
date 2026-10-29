@@ -1,13 +1,12 @@
 ---
 title: Date.prototype.setSeconds()
+short-title: setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 5ed8a617221499f2255e55634ce2122c942eb610
 ---
 
-{{JSRef}}
-
-**`setSeconds()`** は {{jsxref("Date")}} インスタンスのメソッドで、地方時に基づき、指定された日時の「秒」や「ミリ秒」を変更します。
+**`setSeconds()`** は {{jsxref("Date")}} インスタンスのメソッドで、現地時間に基づき、指定された日時の「秒」や「ミリ秒」を変更します。
 
 {{InteractiveExample("JavaScript デモ: Date.prototype.setSeconds()")}}
 
@@ -20,8 +19,8 @@ console.log(event.getSeconds());
 // 予想される結果: 42
 
 console.log(event);
-// 予想される結果: "Sat Apr 19 1975 23:15:42 GMT+0100 (CET)"
-// Note: your timezone may vary
+// 予想される結果: "Tue Aug 19 1975 23:15:42 GMT+0100 (CET)"
+// メモ: タイムゾーンは変わる可能性があります
 ```
 
 ## 構文
