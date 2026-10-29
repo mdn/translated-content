@@ -32,36 +32,36 @@ veryverythickmathspace => 0.3888888888888889em
 
 ### Единицы измерения
 
-| Единица | Описание                                                                                                      |
-| ------- | ------------------------------------------------------------------------------------------------------------- |
-| `em`    | Единица, {{cssxref("font-size", "зависящая от размера шрифта")}}                                            |
+| Единица | Описание                                                                                                                      |
+| ------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `em`    | Единица, {{cssxref("font-size", "зависящая от размера шрифта")}}                                                              |
 | `ex`    | Единица, {{cssxref("font-size", "зависящая от размера шрифта")}}. Высота строчной буквы `x` (`1ex ≈ 0.5em` во многих шрифтах) |
-| `px`    | Пиксели                                                                                                       |
-| `in`    | Дюймы (1 дюйм = 2,54 сантиметра)                                                                              |
-| `cm`    | Сантиметры                                                                                                    |
-| `mm`    | Миллиметры                                                                                                    |
-| `pt`    | Пункты (1 пункт = 1/72 дюйма)                                                                                 |
-| `pc`    | Пики (1 пика = 12 пунктов)                                                                                    |
-| `%`     | Процент от значения по умолчанию                                                                             |
+| `px`    | Пиксели                                                                                                                       |
+| `in`    | Дюймы (1 дюйм = 2,54 сантиметра)                                                                                              |
+| `cm`    | Сантиметры                                                                                                                    |
+| `mm`    | Миллиметры                                                                                                                    |
+| `pt`    | Пункты (1 пункт = 1/72 дюйма)                                                                                                 |
+| `pc`    | Пики (1 пика = 12 пунктов)                                                                                                    |
+| `%`     | Процент от значения по умолчанию                                                                                              |
 
 ### Константы
 
-| Константа                         | Значение   |
-| --------------------------------- | ---------- |
-| `veryverythinmathspace`           | 1/18 `em`  |
-| `verythinmathspace`               | 2/18 `em`  |
-| `thinmathspace`                   | 3/18 `em`  |
-| `mediummathspace`                 | 4/18 `em`  |
-| `thickmathspace`                  | 5/18 `em`  |
-| `verythickmathspace`              | 6/18 `em`  |
-| `veryverythickmathspace`          | 7/18 `em`  |
-| `negativeveryverythinmathspace`   | -1/18 `em` |
-| `negativeverythinmathspace`       | -2/18 `em` |
-| `negativethinmathspace`           | -3/18 `em` |
-| `negativemediummathspace`         | -4/18 `em` |
-| `negativethickmathspace`          | -5/18 `em` |
-| `negativeverythickmathspace`      | -6/18 `em` |
-| `negativeveryverythickmathspace`  | -7/18 `em` |
+| Константа                        | Значение   |
+| -------------------------------- | ---------- |
+| `veryverythinmathspace`          | 1/18 `em`  |
+| `verythinmathspace`              | 2/18 `em`  |
+| `thinmathspace`                  | 3/18 `em`  |
+| `mediummathspace`                | 4/18 `em`  |
+| `thickmathspace`                 | 5/18 `em`  |
+| `verythickmathspace`             | 6/18 `em`  |
+| `veryverythickmathspace`         | 7/18 `em`  |
+| `negativeveryverythinmathspace`  | -1/18 `em` |
+| `negativeverythinmathspace`      | -2/18 `em` |
+| `negativethinmathspace`          | -3/18 `em` |
+| `negativemediummathspace`        | -4/18 `em` |
+| `negativethickmathspace`         | -5/18 `em` |
+| `negativeverythickmathspace`     | -6/18 `em` |
+| `negativeveryverythickmathspace` | -7/18 `em` |
 
 ## Совместимость с браузерами
 
