@@ -39,9 +39,9 @@ Un nuevo [objeto iterador iterable](/es/docs/Web/JavaScript/Reference/Global_Obj
 
 ## Descripción
 
-Cuando se usa en [arreglos dispersos](/es/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), el método `keys()` itera las ranuras vacías como si tuvieran el valor `undefined`.
+Cuando se usa en [arreglos dispersos](/es/docs/Web/JavaScript/Guide/Indexed_collections), el método `keys()` itera las ranuras vacías como si tuvieran el valor `undefined`.
 
-El método `keys()` es [genérico](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). Solo espera que el valor de `this` tenga una propiedad `length` y propiedades con claves enteras.
+El método `keys()` es [genérico](/es/docs/Web/JavaScript/Reference/Global_Objects/Array). Solo espera que el valor de `this` tenga una propiedad `length` y propiedades con claves enteras.
 
 ## Ejemplos
 
