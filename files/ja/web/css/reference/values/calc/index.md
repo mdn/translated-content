@@ -1,5 +1,5 @@
 ---
-title: "`calc()` 関数 (CSS)"
+title: "`calc()` 関数"
 short-title: calc()
 slug: Web/CSS/Reference/Values/calc
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "`background-repeat-y` プロパティ (CSS)"
+title: "`background-repeat-y` プロパティ"
 short-title: background-repeat-y
 slug: Web/CSS/Reference/Properties/background-repeat-y
 l10n:
