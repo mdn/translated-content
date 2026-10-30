@@ -40,7 +40,7 @@ para.addEventListener("pointerover", (event) => {
 });
 ```
 
-使用 `onpointerover` 事件处理器属性：
+使用 `onpointerover` 事件处理器属性（但请注意，这会替换掉之前使用 `onpointerover` 添加的其他事件监听器，如存在的话）：
 
 ```js
 const para = document.querySelector("p");
