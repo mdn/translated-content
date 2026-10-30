@@ -3,7 +3,7 @@ title: Element：pointercancel 事件
 short-title: pointercancel
 slug: Web/API/Element/pointercancel_event
 l10n:
-  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
+  sourceCommit: e1b44d1e4197102da109a563f343cf41ef06ca7c
 ---
 
 {{APIRef("Pointer Events")}}
@@ -23,11 +23,15 @@ l10n:
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用此事件名称，或设置事件处理器属性。
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 中使用此事件名称：
 
 ```js-nolint
 addEventListener("pointercancel", (event) => { })
+```
 
+或者，对接口的[事件处理器属性](/zh-CN/docs/Web/API/Document_Object_Model/Events#使用_onevent_属性)赋值：
+
+```js-nolint
 onpointercancel = (event) => { }
 ```
 
@@ -49,7 +53,7 @@ para.addEventListener("pointercancel", (event) => {
 });
 ```
 
-使用 `onpointercancel` 事件处理器属性：
+使用 `onpointercancel` 事件处理器属性（但请注意，这会替换掉之前使用 `onpointercancel` 添加的其他事件监听器，如存在的话）：
 
 ```js
 const para = document.querySelector("p");

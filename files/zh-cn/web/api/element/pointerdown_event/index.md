@@ -3,12 +3,12 @@ title: Element：pointerdown 事件
 short-title: pointerdown
 slug: Web/API/Element/pointerdown_event
 l10n:
-  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
+  sourceCommit: e1b44d1e4197102da109a563f343cf41ef06ca7c
 ---
 
 {{APIRef("Pointer Events")}}
 
-`pointerdown` 事件会在指针变得活跃时触发。对于鼠标，其会在设备由没有按键按下变为至少有一个按键被按下时触发。对于触控设备，其会在数位板发生物理接触时被触发。对于笔，其会在触控笔与数位板物理接触时触发。
+`pointerdown` 事件会在指针变为活动状态时触发。对于鼠标，其会在设备由没有按键按下变为至少有一个按键被按下时触发。对于触控设备，其会在数位板发生物理接触时被触发。对于笔，其会在触控笔与数位板物理接触时触发。
 
 此事件的行为不同于 {{domxref("Element/mousedown_event", "mousedown")}} 事件。当使用物理鼠标时，只要鼠标上的任何按键被按下就会触发 `mousedown` 事件。`pointerdown` 事件仅在第一个按键被按下时触发，后续按下按键不会触发 `pointerdown` 事件。
 
@@ -17,12 +17,16 @@ l10n:
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用此事件名称，或设置事件处理器属性。
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 中使用此事件名称：
 
 ```js-nolint
 addEventListener("pointerdown", (event) => { })
+```
 
-onpointerout = (event) => { }
+或者，对接口的[事件处理器属性](/zh-CN/docs/Web/API/Document_Object_Model/Events#使用_onevent_属性)赋值：
+
+```js-nolint
+onpointerdown = (event) => { }
 ```
 
 ## 事件类型
@@ -43,7 +47,7 @@ para.addEventListener("pointerdown", (event) => {
 });
 ```
 
-使用 `onpointerdown` 事件处理器属性：
+使用 `onpointerdown` 事件处理器属性（但请注意，这会替换掉之前使用 `onpointerdown` 添加的其他事件监听器，如存在的话）：
 
 ```js
 const para = document.querySelector("p");

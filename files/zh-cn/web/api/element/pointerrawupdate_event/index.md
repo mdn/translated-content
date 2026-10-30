@@ -20,15 +20,13 @@ l10n:
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用此事件名称，或设置事件处理器属性。
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 中使用此事件名称：
 
 ```js-nolint
 addEventListener("pointerrawupdate", (event) => { })
-
-onpointerrawupdate = (event) => { }
 ```
 
-或者，对接口的[事件处理器属性](/zh-CN/docs/Web/API/Document_Object_Model/Events#使用_onevent_属性)赋值
+或者，对接口的[事件处理器属性](/zh-CN/docs/Web/API/Document_Object_Model/Events#使用_onevent_属性)赋值：
 
 ```js-nolint
 onpointerrawupdate = (event) => { }

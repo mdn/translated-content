@@ -3,7 +3,7 @@ title: Element：pointermove 事件
 short-title: pointermove
 slug: Web/API/Element/pointermove_event
 l10n:
-  sourceCommit: a0d27fbd56b5327923e072af498c3e8e3252afce
+  sourceCommit: e1b44d1e4197102da109a563f343cf41ef06ca7c
 ---
 
 {{APIRef("Pointer Events")}}
@@ -18,11 +18,15 @@ l10n:
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用此事件名称，或设置事件处理器属性。
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 中使用此事件名称：
 
 ```js-nolint
 addEventListener("pointermove", (event) => { })
+```
 
+或者，对接口的[事件处理器属性](/zh-CN/docs/Web/API/Document_Object_Model/Events#使用_onevent_属性)赋值：
+
+```js-nolint
 onpointermove = (event) => { }
 ```
 
@@ -48,7 +52,7 @@ para.addEventListener("pointermove", (event) => {
 });
 ```
 
-也可以使用 `onpointermove` 事件处理器属性：
+也可以使用 `onpointermove` 事件处理器属性（但请注意，这会替换掉之前使用 `onpointermove` 添加的其他事件监听器，如存在的话）：
 
 ```js
 const para = document.querySelector("p");
