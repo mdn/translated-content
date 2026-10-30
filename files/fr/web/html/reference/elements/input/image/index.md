@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="image">`
 short-title: <input type="image">
 slug: Web/HTML/Reference/Elements/input/image
 l10n:
-  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`image`** sont utilisés pour créer des boutons d'envoi de formulaire graphiques. Autrement dit, il s'agit de boutons d'envoi qui affichent une image plutôt qu'un texte.
@@ -233,6 +233,12 @@ L'exemple suivant affiche le même bouton qu'auparavant, cette fois-ci inclus da
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 #### CSS
 
 Voici quelques règles CSS pour améliorer l'apparence des éléments de base&nbsp;:
@@ -277,10 +283,15 @@ Dans ce nouvel exemple, on adapte l'exemple précédent afin d'avoir plus de pla
       type="image"
       src="https://mdn.github.io/shared-assets/images/examples/login-button.png"
       alt="Login"
-      width="200"
-      height="100" />
+      width="100" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 #### CSS

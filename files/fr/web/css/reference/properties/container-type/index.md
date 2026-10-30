@@ -3,7 +3,7 @@ title: Propriété CSS `container-type`
 short-title: container-type
 slug: Web/CSS/Reference/Properties/container-type
 l10n:
-  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
+  sourceCommit: 892eb917bee599a9d6cae7d33ed783129dbb39b3
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`container-type`** permet de définir le type de contexte de conteneur utilisé dans une requête de conteneur.
@@ -31,7 +31,7 @@ container-type: unset;
 
 ### Valeurs
 
-Cette propriété est définie par une ou deux valeurs de mots-clés issues de la liste suivante. Dans le cas où deux valeurs sont spécifiées, l'une doit être `scroll-state` et l'autre doit être `inline-size` ou `size`&nbsp;:
+Cette propriété est définie par une ou deux valeurs de mots-clés issues de la liste suivante. Dans le cas où deux valeurs sont définies, l'une doit être `scroll-state` et l'autre doit être `inline-size` ou `size`&nbsp;:
 
 - `anchored`
   - : Établit un conteneur de requête pour les requêtes de conteneur ancré sur le conteneur. Dans ce cas, la taille de l'élément n'est pas calculée de façon isolée&nbsp;; aucune [compartimentation](/fr/docs/Web/CSS/Guides/Containment/Using) n'est appliquée.
@@ -100,7 +100,7 @@ Par exemple, vous pouvez avoir un élément infobulle positionné par une ancre 
 ```css
 .tooltip {
   position: absolute;
-  position-anchor: --monAncre;
+  position-anchor: --mon-ancre;
   position-area: top;
   position-try-fallbacks: flip-block;
   container-type: anchored;

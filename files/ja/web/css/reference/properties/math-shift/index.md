@@ -1,5 +1,5 @@
 ---
-title: CSS `math-shift` プロパティ
+title: "`math-shift` プロパティ (CSS)"
 short-title: math-shift
 slug: Web/CSS/Reference/Properties/math-shift
 l10n:

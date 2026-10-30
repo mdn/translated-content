@@ -7,7 +7,7 @@ l10n:
 
 En CSS, la locution «&nbsp;**ordre canonique**&nbsp;» est utilisée pour désigner l'ordre dans lequel des valeurs séparées doivent être définies (ou {{Glossary("parse", "analysées")}}) ou doivent être {{Glossary("serialization", "sérialisées")}} dans le cadre d'une valeur de propriété CSS. Il est défini par la {{Glossary ("Syntax", "syntaxe")}} formelle de la propriété et se réfère normalement à l'ordre dans lequel les valeurs longues doivent être définies dans le cadre d'une seule valeur raccourcie.
 
-Par exemple, {{CSSxRef("background")}}, les valeurs de propriété raccourcie sont constituées de plusieurs propriétés `background-*` . L'ordre canonique de ces valeurs longues est défini comme suit&nbsp;:
+Par exemple, {{CSSxRef("background")}}, les valeurs de propriété raccourcie sont constituées de plusieurs propriétés `background-*`. L'ordre canonique de ces valeurs longues est défini comme suit&nbsp;:
 
 1. {{CSSxRef("background-image")}}
 2. {{CSSxRef("background-position")}}
@@ -18,7 +18,7 @@ Par exemple, {{CSSxRef("background")}}, les valeurs de propriété raccourcie so
 7. {{CSSxRef("background-clip")}}
 8. {{CSSxRef("background-color")}}
 
-De plus, sa syntaxe exige que, si une valeur pour {{CSSxRef("background-size")}} est donnée, elle doit être spécifiée après la valeur de {{CSSxRef("background-position")}}, séparée par une barre oblique. D'autres valeurs peuvent apparaître dans n'importe quel ordre.
+De plus, sa syntaxe exige que, si une valeur pour {{CSSxRef("background-size")}} est donnée, elle doit être définie après la valeur de {{CSSxRef("background-position")}}, séparée par une barre oblique. D'autres valeurs peuvent apparaître dans n'importe quel ordre.
 
 ## Voir aussi
 

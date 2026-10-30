@@ -550,7 +550,7 @@ span {
 
 個別指定プロパティを照会するスタイルの機能クエリーは、計算された値が各プロパティで一致する場合は真となり、一致しない場合は偽となります。例えば、 `@container style(border: 2px solid red)` は、その短縮形を構成する 12 個の個別指定プロパティ（`border-bottom-style` など）がすべて真であれば真になります。
 
-なお、[`!important`](/ja/docs/Web/CSS/Reference/Values/important)はスタイルクエリ－内で使用できますが、無視されます。
+なお、[`!important`](/ja/docs/Web/CSS/Reference/Values/important)はスタイルクエリー内で使用できますが、無視されます。
 
 ```css
 /* !important は有効だが、効果がない */

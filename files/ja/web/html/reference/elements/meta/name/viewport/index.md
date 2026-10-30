@@ -1,5 +1,5 @@
 ---
-title: HTML `<meta name="viewport">` 属性値
+title: '`<meta name="viewport">` 属性値'
 short-title: viewport
 slug: Web/HTML/Reference/Elements/meta/name/viewport
 l10n:

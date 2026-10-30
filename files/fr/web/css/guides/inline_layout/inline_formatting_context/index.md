@@ -1,54 +1,239 @@
 ---
-title: Contexte de formatage en ligne (inline/incise)
+title: Contexte de formatage en incise
 slug: Web/CSS/Guides/Inline_layout/Inline_formatting_context
-original_slug: Web/CSS/CSS_inline_layout/Inline_formatting_context
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-Dans cet article, nous allons voir ce qu'est le contexte de formatage en ligne (_inline formatting context_).
+Ce guide explique le contexte de formatage en incise.
 
-## Concepts-clés
+## Concepts de base
 
-Le contexte de formatage en ligne est une des méthodes permettant de créer le rendu visuel d'une page web. Les boîtes en ligne sont disposées les unes après les autres selon le mode d'écriture utilisé :
+Le contexte de formatage en incise fait partie du rendu visuel d'une page web. Les boîtes en incise sont disposées les unes après les autres, dans la direction dans laquelle les phrases s'écoulent selon le mode d'écriture utilisé&nbsp;:
 
-- Pour un mode d'écriture horizontal, les boîtes en ligne sont disposées horizontalement de la gauche vers la droite.
-- Pour une mode d'écriture vertical, les boîtes en lignes sont disposées verticalement du haut vers le bas.
+- Dans un mode d'écriture horizontal, les boîtes sont disposées horizontalement, en commençant par la gauche.
+- Dans un mode d'écriture vertical, elles sont disposées verticalement en commençant par le haut.
 
-Dans l'exemple qui suit, on a deux éléments ({{HTMLElement("div")}}) avec une bordure noire qui forment chacuns [un contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context) au sein duquel chaque mot contribue à un contexte de formatage en ligne. Les boîtes utilisées dans le mode d'écriture horizontal sont organisées horizontalement tandis que celles dans l'élément avec un mode d'écriture vertical sont disposées verticalement.
+Dans l'exemple ci-dessous, les deux éléments HTML {{HTMLElement("div")}} avec les bordures noires font partie d'un [contexte de formatage en bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context), tandis qu'à l'intérieur de chaque boîte, les mots participent à un contexte de formatage en incise. Les mots dans le mode d'écriture horizontal s'écoulent horizontalement, tandis que les mots dans le mode d'écriture vertical s'écoulent verticalement.
 
-{{EmbedGHLiveSample("css-examples/inline-formatting/inline.html", '100%', 720)}}
+```html live-sample___inline
+<div class="exemple horizontal">Un Deux Trois</div>
+<div class="exemple vertical">Quatre Cinq Six</div>
+```
 
-Les boîtes qui forment une ligne sont contenues dans une zone rectangulaire qu'on appelle boîte de ligne (_line box_). Cette boîte sera assez grande pour contenir l'ensemble des boîtes en ligne de cette ligne. Lorsqu'il n'y a plus de place disponible sur l'axe en ligne, une autre ligne est créée. Ainsi, un paragraphe est formé par un ensemble de boîtes de ligne, empilées le long de l'axe de bloc.
+```css live-sample___inline
+body {
+  font: 1.2em sans-serif;
+}
+.exemple {
+  border: 5px solid black;
+  margin: 20px;
+}
 
-Lorsqu'une boîte en ligne est découpée en deux, les marges, bordures et le remplissage (_padding_) n'ont pas d'impact visuel à l'emplacement de la séparation. Dans le prochain exemple, on peut voir un élément ({{HTMLElement("span")}}) enveloppant un ensemble de mots s'étirant sur deux lignes. On voit que la bordure sur `<span>` est coupée au passage à la ligne.
+.horizontal {
+  writing-mode: horizontal-tb;
+}
+.vertical {
+  writing-mode: vertical-rl;
+}
+```
 
-{{EmbedGHLiveSample("css-examples/inline-formatting/break.html", '100%', 720)}}
+{{EmbedLiveSample("inline", "", 240)}}
 
-Les marges, les bordures et le remplissage (_padding_) le long de la direction en ligne sont respectés. Dans l'exemple suivant, on peut voir comment sont ajoutés les marges, bordures et le remplissage à l'élément en ligne `<span>` qui a été ajouté.
+Les boîtes formant une ligne sont contenues dans une zone rectangulaire appelée boîte de ligne. Cette boîte est assez grande pour contenir toutes les boîtes en incise dans cette ligne&nbsp;; lorsqu'il n'y a plus de place dans la direction en incise, une autre ligne est créée. Par conséquent, un paragraphe est un ensemble de boîtes de ligne en incise, empilées dans la direction en bloc.
 
-{{EmbedGHLiveSample("css-examples/inline-formatting/mbp.html", '100%', 920)}}
+Lorsqu'une boîte en incise est coupée, les marges, les bordures et les rembourrages n'ont aucun effet visuel où le coupure se produit. Dans l'exemple suivant, il y a un élément HTML {{HTMLElement("span")}} qui entoure un ensemble de mots qui s'enroulent sur deux lignes. La bordure sur le `<span>` se brise au point d'enroulement.
+
+```html live-sample___break
+<div class="exemple">
+  Avant cette nuit —
+  <span
+    >une nuit mémorable, comme il allait le prouver — des centaines de millions
+    de personnes</span
+  >
+  avaient regardé les volutes de fumée s'élever de leurs feux sans en tirer une
+  inspiration particulière.
+</div>
+```
+
+```css live-sample___break
+body {
+  font: 1.2em sans-serif;
+}
+.exemple {
+  border: 5px solid black;
+  margin: 20px;
+}
+
+span {
+  border: 5px solid rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("break")}}
+
+Les marges, bordures et les remplissages dans la direction en incise sont respectés. Dans l'exemple ci-dessous, vous pouvez voir comment la marge, la bordure et le remplissage sur l'élément `<span>` en incise sont ajoutés.
+
+```html live-sample___mbp
+<div class="exemple horizontal">Un <span>Deux</span> Trois</div>
+<div class="exemple vertical">Quatre <span>Cinq</span> Six</div>
+```
+
+```css live-sample___mbp
+body {
+  font: 1.2em sans-serif;
+}
+
+.exemple {
+  border: 5px solid black;
+  margin: 20px;
+}
+
+span {
+  border: 5px solid rebeccapurple;
+  padding-inline-start: 20px;
+  padding-inline-end: 40px;
+  margin-inline-start: 30px;
+  margin-inline-end: 10px;
+}
+.horizontal {
+  writing-mode: horizontal-tb;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+}
+```
+
+{{EmbedLiveSample("mbp", "", 340)}}
 
 > [!NOTE]
-> Dans ces exemples, on utilise les propriétés logiques (relatives à la direction du flux avec le mode d'écriture et la directionnalité) (ex. {{cssxref("padding-inline-start")}} plutôt que {{cssxref("padding-left")}}) afin qu'elles s'appliquent le long de la direction en ligne, que le texte soit horizontal ou vertical. Pour en savoir plus sur ces propriétés, voir [les propriétés et les valeurs logiques en CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values).
+> Nous utilisons les propriétés logiques, relatives au flux — {{CSSxRef("padding-inline-start")}} plutôt que {{CSSxRef("padding-left")}} — afin qu'elles fonctionnent dans la dimension en incise, que le texte soit horizontal ou vertical. Pour en savoir plus sur ces propriétés, consultez [Propriétés et valeurs logiques](/fr/docs/Web/CSS/Guides/Logical_properties_and_values).
 
-## Alignement sur la direction de bloc (_block_)
+## Aligner dans la direction du bloc
 
-Les boîtes en ligne peuvent être alignées sur la direction de bloc de différentes façons avec la propriété {{cssxref("vertical-align")}}. Celle-ci permettra d'aligner le contenu sur l'axe de bloc (lorsque le mode d'écriture est vertical, `vertical-align` ne permet pas d'aligner sur l'axe vertical !). Dans l'exemple qui suit, une portion de texte plus grande rend la boîte de ligne plus grande pour la première phrase. On peut alors utiliser `vertical-align` afin d'aligner les boîtes en ligne. L'exemple utilise initialement la valeur `top` mais vous pouvez le modifier en utilisant `middle`, `bottom` ou encore `baseline`.
+Les boîtes en incises peuvent être alignées dans la direction du bloc de différentes manières, en utilisant la propriété {{CSSxRef("vertical-align")}}, qui aligne sur l'axe du bloc dans les modes d'écriture verticaux (donc pas du tout verticalement&nbsp;!). Dans l'exemple ci-dessous, le grand texte fait augmenter la taille de la boîte en incise de la première phrase, par conséquent la propriété `vertical-align` peut être utilisée pour aligner les boîtes en incise de chaque côté de lui. Nous utilisons la valeur `top`, essayez de la changer en `middle`, `bottom` ou `baseline`.
 
-{{EmbedGHLiveSample("css-examples/inline-formatting/align.html", '100%', 920)}}
+```html live-sample___align
+<div class="exemple horizontal">
+  Avant cette nuit —
+  <span
+    >une nuit mémorable, comme il allait le prouver — des centaines de millions
+    de personnes</span
+  >
+  avaient regardé les volutes de fumée s'élever de leurs feux sans en tirer une
+  inspiration particulière.
+</div>
 
-## Alignement le long de la direction en ligne (_inline_)
+<div class="exemple vertical">
+  Avant cette nuit —
+  <span
+    >une nuit mémorable, comme il allait le prouver — des centaines de millions
+    de personnes</span
+  >
+  avaient regardé les volutes de fumée s'élever de leurs feux sans en tirer une
+  inspiration particulière.
+</div>
+```
 
-S'il reste de l'espace le long de la direction en ligne, la propriété {{cssxref("text-align")}} permetra d'aligner le contenu des boîtes en lignes au sein des boîtes de ligne. Dans l'exemple qui suit, vous pouvez notamment changer la valeur de `text-align` afin d'utiliser `end`.
+```css live-sample___align
+body {
+  font: 1.2em sans-serif;
+}
 
-{{EmbedGHLiveSample("css-examples/inline-formatting/text-align.html", '100%', 920)}}
+span {
+  font-size: 200%;
+  vertical-align: top;
+}
 
-## Effets du flottement (`float`)
+.exemple {
+  border: 5px solid black;
+  margin: 20px;
+  inline-size: 400px;
+}
 
-Les boîtes de ligne ont généralement la même taille sur l'axe en ligne (c'est-à-dire la même largeur quand on utilise un mode d'écriture horizontal ou la même hauteur si on utilise un mode d'écriture vertical). S'il existe un élément flottant ({{cssxref("float")}}) au sein du même contexte de formatage de bloc, cet élément entraînera la diminution de la taille des boîtes de ligne pour celles qui entourent l'élément flottant.
+.horizontal {
+  writing-mode: horizontal-tb;
+}
 
-{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}
+.vertical {
+  writing-mode: vertical-rl;
+}
+```
+
+{{EmbedLiveSample("align", "", 750)}}
+
+## Aligner dans la direction en incise
+
+S'il y a de l'espace supplémentaire dans la direction en incise, la propriété {{CSSxRef("text-align")}} peut être utilisée pour aligner les boîtes en incise à l'intérieur de leur boîte de ligne. Essayez de changer la valeur de `text-align` ci-dessous en `end`.
+
+```html live-sample___text-align
+<div class="exemple horizontal">Un Deux Trois</div>
+<div class="exemple vertical">Quatre Cinq Six</div>
+```
+
+```css hidden live-sample___text-align
+body {
+  font: 1.2em sans-serif;
+}
+
+.exemple {
+  border: 5px solid black;
+  margin: 20px;
+}
+
+.horizontal {
+  writing-mode: horizontal-tb;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+}
+```
+
+```css live-sample___text-align
+.exemple {
+  text-align: center;
+  inline-size: 250px;
+}
+```
+
+{{EmbedLiveSample("text-align", "", 350)}}
+
+## Effet des éléments flottants
+
+Les boîtes en incise ont généralement la même taille dans la direction en incise, donc la même largeur si on travaille dans un mode d'écriture horizontal, ou la même hauteur si on travaille dans un mode d'écriture vertical. Cependant, si il y a un {{CSSxRef("float")}} dans le même contexte de formatage en bloc, le flottant fait que les boîtes en incise qui entourent le flottant deviennent plus courtes.
+
+```html live-sample___float
+<div class="boite">
+  <div class="flottant">Je suis une boîte flottante&nbsp;!</div>
+  <p>Je suis le contenu à l'intérieur du conteneur.</p>
+</div>
+```
+
+```css live-sample___float
+body {
+  font: 1.2em sans-serif;
+}
+
+.boite {
+  background-color: rgb(224 206 247);
+  border: 5px solid rebeccapurple;
+}
+
+.flottant {
+  float: left;
+  width: 250px;
+  height: 150px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+}
+```
+
+{{EmbedLiveSample("float", "", 200)}}
 
 ## Voir aussi
 
-- [Le contexte de formatage en bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context)
-- [Le modèle de formatage visuel](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+- [Contexte de formatage en bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- [Modèle de formatage visuel](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model)

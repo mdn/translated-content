@@ -3,7 +3,7 @@ title: Propriété CSS `-webkit-text-stroke`
 short-title: -webkit-text-stroke
 slug: Web/CSS/Reference/Properties/-webkit-text-stroke
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) [CSS](/fr/docs/Web/CSS) **`-webkit-text-stroke`** définit la [largeur](/fr/docs/Web/CSS/Reference/Values/length) et la [couleur](/fr/docs/Web/CSS/Reference/Values/color_value) du contour des caractères du texte.
@@ -30,6 +30,8 @@ Cette propriété est une propriété raccourcie pour les propriétés CSS suiva
 ```
 
 ### Valeurs
+
+Cette propriété est définie avec deux valeurs séparées par un espace&nbsp;:
 
 - {{CSSxRef("&lt;length&gt;")}}
   - : La largeur du tracé du texte.

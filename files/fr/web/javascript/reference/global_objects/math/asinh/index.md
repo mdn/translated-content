@@ -3,7 +3,7 @@ title: "Math : méthode statique asinh()"
 short-title: asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.asinh()`** retourne le sinus hyperbolique inverse d'un nombre. C'est-à-dire,
@@ -45,7 +45,7 @@ Le sinus hyperbolique inverse de `x`.
 
 ## Description
 
-Parce que `asinh()` est une méthode statique de `Math`, vous l'utilisez toujours comme `Math.asinh()`, plutôt qu'en tant que méthode d'un objet `Math` que vous auriez créé (`Math` n'est pas un constructeur).
+Parce que `asinh()` est une méthode statique de `Math`, vous l'utilisez toujours comme `Math.asinh()`, plutôt qu'en tant que méthode d'un objet `Math` que vous avez créé (`Math` n'est pas un constructeur).
 
 ## Exemples
 
@@ -70,8 +70,8 @@ Math.asinh(Infinity); // Infinity
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Math.asinh` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
-- [Prothèse d'émulation es-shims de `Math.asinh` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.asinh)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.asinh` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.asinh` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.asinh)
 - La méthode statique {{JSxRef("Math.acosh()")}}
 - La méthode statique {{JSxRef("Math.atanh()")}}
 - La méthode statique {{JSxRef("Math.cosh()")}}

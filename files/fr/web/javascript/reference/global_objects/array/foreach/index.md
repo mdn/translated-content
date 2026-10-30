@@ -3,7 +3,7 @@ title: "Array : méthode forEach()"
 short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 l10n:
-  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`forEach()`** des instances de {{JSxRef("Array")}} exécute une fonction fournie une fois pour chaque élément du tableau.
@@ -261,6 +261,8 @@ Array.prototype.forEach.call(objetSimilaireTableau, (x) => console.log(x));
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.forEach` dans core-js <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.forEach` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.foreach)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.find()")}}
@@ -271,5 +273,3 @@ Array.prototype.forEach.call(objetSimilaireTableau, (x) => console.log(x));
 - La méthode {{JSxRef("TypedArray.prototype.forEach()")}}
 - La méthode {{JSxRef("Map.prototype.forEach()")}}
 - La méthode {{JSxRef("Set.prototype.forEach()")}}
-- [Prothèse d'émulation de `Array.prototype.forEach` dans core-js <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.forEach` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.foreach)

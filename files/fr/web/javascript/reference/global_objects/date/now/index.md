@@ -3,7 +3,7 @@ title: "Date : méthode statique now()"
 short-title: now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
 l10n:
-  sourceCommit: 91b5a448a517239876a4bc92640bbbf29e30b106
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Date.now()`** retourne le nombre de millisecondes écoulées depuis [l'époque](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), qui est défini comme minuit au début du 1er janvier 1970, UTC.
@@ -93,7 +93,7 @@ Pour des scénarios plus complexes, vous pouvez utiliser plutôt [l'API Performa
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Date.now` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-date)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Date.now` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/date)
 - La méthode API {{DOMxRef("Performance.now()")}}
 - La méthode {{DOMxRef("console/time_static", "console.time()")}}
 - La méthode {{DOMxRef("console/timeEnd_static", "console.timeEnd()")}}

@@ -3,7 +3,7 @@ title: Utiliser la validation des formulaires HTML et l'API de validation des co
 short-title: Validation des contraintes
 slug: Web/HTML/Guides/Constraint_validation
 l10n:
-  sourceCommit: 6f889a782a6663e055bbfaf29a4b0be895866b9d
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 La création de formulaires web a toujours été une tâche complexe. Alors que le balisage du formulaire lui-même est simple, vérifier que chaque champ possède une valeur valide et cohérente est plus difficile, et informer l'utilisateur·ice du problème peut vite devenir un casse-tête. {{Glossary("HTML5")}} a introduit de nouveaux mécanismes pour les formulaires&nbsp;: il a ajouté de nouveaux types sémantiques pour l'élément {{HTMLElement("input")}} et la _validation des contraintes_ pour faciliter le contrôle du contenu du formulaire côté client. Les contraintes de base et courantes peuvent être vérifiées, sans avoir besoin de JavaScript, en définissant de nouveaux attributs&nbsp;; des contraintes plus complexes peuvent être testées à l'aide de l'API Constraint Validation.
@@ -23,21 +23,21 @@ Pour une introduction de base à ces concepts, avec des exemples, consultez le [
 
 En HTML, les contraintes de base peuvent être déclarées de deux façons&nbsp;:
 
-- En choisissant la valeur sémantique la plus appropriée pour l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) de l'élément {{HTMLElement("input")}}. Ainsi, choisir le type `email` créera automatiquement une contrainte vérifiant que la valeur est une adresse électronique valide.
+- En choisissant la valeur sémantique la plus appropriée pour l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) de l'élément {{HTMLElement("input")}}. Ainsi, choisir le type `email` crée automatiquement une contrainte vérifiant que la valeur est une adresse électronique valide.
 - En définissant des valeurs pour les attributs relatifs à la validation qui permettent de décrire des contraintes simplement, sans avoir besoin de JavaScript.
 
 ### Types de champs
 
 Les contraintes intrinsèques portées par l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) sont&nbsp;:
 
-| Type de champ                                                              | Description de la contrainte                                                                                                                                                              | Violation correspondante                                      |
-| -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| [`<input type="URL">`](/fr/docs/Web/HTML/Reference/Elements/input/url)     | La valeur doit être une [URL](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) absolue, telle que définie [dans le standard évolutif URL](https://url.spec.whatwg.org/). | [`TypeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) |
-| [`<input type="email">`](/fr/docs/Web/HTML/Reference/Elements/input/email) | La valeur doit être une adresse électronique avec une syntaxe valide (généralement au format `nom@domaine.tld` ou `nom@domaine`).                                                         | [`TypeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) |
+| Type de champ                                                              | Description de la contrainte                                                                                                                                                                                 | Violation correspondante                                      |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| [`<input type="URL">`](/fr/docs/Web/HTML/Reference/Elements/input/url)     | La valeur doit être une [URL](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) absolue, telle que définie [dans le standard évolutif URL <sup>(angl.)</sup>](https://url.spec.whatwg.org/). | [`TypeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) |
+| [`<input type="email">`](/fr/docs/Web/HTML/Reference/Elements/input/email) | La valeur doit être une adresse électronique avec une syntaxe valide (généralement au format `nom@domaine.tld` ou `nom@domaine`).                                                                            | [`TypeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) |
 
 Pour ces deux types de champ, si l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/input#multiple) est utilisé, plusieurs valeurs peuvent être passées dans le champ sous la forme d'une liste séparée par des virgules. Si au moins une des valeurs ne respecte pas les conditions décrites ici, la violation de contrainte `TypeMismatch` est déclenchée.
 
-On notera que la plupart des types de champ n'ont pas de contraintes intrinsèques&nbsp;: soit il n'y a pas de contrainte particulière, soit le navigateur applique un algorithme de transformation pour que les valeurs incorrectes utilisent une valeur par défaut correcte.
+Notez que la plupart des types de champ n'ont pas de contraintes intrinsèques&nbsp;: soit il n'y a pas de contrainte particulière, soit le navigateur applique un algorithme de transformation pour que les valeurs incorrectes utilisent une valeur par défaut correcte.
 
 ### Attributs relatifs à la validation
 
@@ -125,7 +125,7 @@ En complément de l'attribut `type` mentionné ci-avant, les attributs suivants 
       <td><code>date</code></td>
       <td>Un nombre entier (qui exprime des jours)</td>
       <td rowspan="5">
-        À moins que l'attribut vaille <code>any</code>, la valeur devra être <strong>min</strong> + un multiple entier de l'incrément.
+        À moins que l'attribut vaille <code>any</code>, la valeur doit être <strong>min</strong> + un multiple entier de l'incrément.
       </td>
       <td rowspan="5">{{DOMxRef("ValidityState/stepMismatch", "stepMismatch")}}</td>
     </tr>
@@ -180,7 +180,7 @@ En complément de l'attribut `type` mentionné ci-avant, les attributs suivants 
 
 En complément de la validation native effectuée par le navigateur, on peut manipuler la validation des contraintes en JavaScript à l'aide de l'API <i lang="en">Constraint Validation</i>, sur un élément du formulaire ou sur le formulaire ([`<form>`](/fr/docs/Web/HTML/Reference/Elements/form)). La validation des contraintes a lieu quand&nbsp;:
 
-- On appelle la méthode `checkValidity()` ou `reportValidity()` depuis une instance d'une interface du DOM correspondant à un élément de formulaire, ({{DOMxRef("HTMLInputElement")}}, {{DOMxRef("HTMLSelectElement")}}, {{DOMxRef("HTMLButtonElement")}}, {{DOMxRef("HTMLOutputElement")}} ou {{DOMxRef("HTMLTextAreaElement")}}). Dans ce cas, seules les contraintes de l'élément correspondant sont évaluées et permettent au script d'obtenir l'état de validité. La méthode `checkValidity()` renvoie un booléen qui indique si la valeur de l'élément respecte les contraintes (c'est généralement ce qui est fait par l'agent utilisateur pour déterminer quelle pseudo-classe CSS s'applique entre {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}}). La méthode `reportValidity()` renvoie quant à elle le détail des contraintes qui ne sont pas respectées.
+- On appelle la méthode `checkValidity()` ou `reportValidity()` depuis une instance d'une interface du DOM correspondant à un élément de formulaire, ({{DOMxRef("HTMLInputElement")}}, {{DOMxRef("HTMLSelectElement")}}, {{DOMxRef("HTMLButtonElement")}}, {{DOMxRef("HTMLOutputElement")}} ou {{DOMxRef("HTMLTextAreaElement")}}). Dans ce cas, seules les contraintes de l'élément correspondant sont évaluées et permettent au script d'obtenir l'état de validité. La méthode `checkValidity()` retourne un booléen qui indique si la valeur de l'élément respecte les contraintes (c'est généralement ce qui est fait par l'agent utilisateur pour déterminer quelle pseudo-classe CSS s'applique entre {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}}). La méthode `reportValidity()` retourne quant à elle le détail des contraintes qui ne sont pas respectées.
 - On appelle la méthode `checkValidity()` ou `reportValidity()` de l'objet {{DOMxRef("HTMLFormElement")}} correspondant au formulaire.
 - On envoie le formulaire.
 
@@ -189,14 +189,14 @@ On qualifie parfois un appel à `checkValidity()` de validation _statique_ des c
 > [!NOTE]
 >
 > - Si l'attribut [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#novalidate) est placé sur l'élément {{HTMLElement("form")}}, la validation interactive des contraintes n'a pas lieu.
-> - Appeler la méthode `submit()` d'un objet {{DOMxRef("HTMLFormElement")}} ne déclenchera pas de validation des contraintes. Autrement dit, cette méthode envoie les données du formulaire au serveur, même si elles ne respectent pas les contraintes. Pour passer par la validation, on pourra appeler la méthode `click()` du bouton d'envoi.
+> - Appeler la méthode `submit()` d'un objet {{DOMxRef("HTMLFormElement")}} ne déclenche pas de validation des contraintes. Autrement dit, cette méthode envoie les données du formulaire au serveur, même si elles ne respectent pas les contraintes. Pour passer par la validation, on peut appeler la méthode `click()` du bouton d'envoi.
 > - Les contraintes `minlength` et `maxlength` ne sont vérifiées que sur une saisie utilisateur·ice. Elles ne sont pas vérifiées si une valeur est définie par programmation, même en appelant explicitement `checkValidity()` ou `reportValidity()`.
 
 ## Implémenter des contraintes complexes à l'aide de l'API
 
 Grâce à JavaScript et à l'API <i lang="en">Constraint Validation</i>, on peut implémenter des contraintes plus complexes, qui portent par exemple sur plusieurs champs à la fois ou qui impliquent des calculs avancés.
 
-Le principe consiste à déclencher une fonction JavaScript lorsqu'un évènement d'un champ de formulaire a lieu (par exemple **onchange**) et de calculer à ce moment si la contrainte est respectée ou non puis d'utiliser `field.setCustomValidity()` pour fournir le résultat de la validation&nbsp;: une chaîne vide indiquera que la contrainte est respectée et n'importe quelle autre chaîne indiquera une erreur et c'est alors cette chaîne de caractères qui sera affichée à l'utilisateur·ice.
+Le principe consiste à déclencher une fonction JavaScript lorsqu'un évènement d'un champ de formulaire a lieu (par exemple **onchange**) et de calculer à ce moment si la contrainte est respectée ou non puis d'utiliser `field.setCustomValidity()` pour fournir le résultat de la validation&nbsp;: une chaîne de caractères vide indique que la contrainte est respectée et n'importe quelle autre chaîne de caractères indique une erreur et c'est alors cette chaîne de caractères qui est affichée à l'utilisateur·ice.
 
 ### Exemple de contrainte portant sur plusieurs champs : validation du code postal
 
@@ -220,6 +220,12 @@ Pour cet exemple, nous allons ajouter un script de vérification pour ce formula
   </select>
   <input type="submit" value="Valider" />
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 Ce fragment HTML affiche le formulaire suivant&nbsp;:
@@ -292,7 +298,7 @@ Voici le fragment HTML utilisé pour l'exemple&nbsp;:
 <input type="file" id="fs" />
 ```
 
-Cela donnera le formulaire suivant&nbsp;:
+Cela donne le formulaire suivant&nbsp;:
 
 {{EmbedLiveSample("Limiter la taille d'un fichier avant son envoi")}}
 
@@ -334,22 +340,22 @@ L'aspect des éléments peut être personnalisé grâce aux pseudo-classes CSS s
 
 #### `:required` et `:optional`
 
-Les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) {{CSSxRef(':required')}} et {{CSSxRef(':optional')}} permettent d'écrire des sélecteurs pour cibler les éléments qui ont ou non l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required).
+Les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) {{CSSxRef(":required")}} et {{CSSxRef(":optional")}} permettent d'écrire des sélecteurs pour cibler les éléments qui ont ou non l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required).
 
 #### `:placeholder-shown`
 
-Voir {{CSSxRef(':placeholder-shown')}}.
+Voir {{CSSxRef(":placeholder-shown")}}.
 
 #### `:valid` et `:invalid`
 
-Les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) {{CSSxRef(':valid')}} et {{CSSxRef(':invalid')}} sont utilisées pour représenter des éléments `<input>` dont le contenu est valide (respectivement invalide) par rapport au type de champ. Ces classes permettent de mettre en forme les éléments de formulaire valides ou invalides afin d'en faciliter l'identification.
+Les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} sont utilisées pour représenter des éléments `<input>` dont le contenu est valide (respectivement invalide) par rapport au type de champ. Ces classes permettent de mettre en forme les éléments de formulaire valides ou invalides afin d'en faciliter l'identification.
 
 ### Contrôler le texte utilisé pour la validation des contraintes
 
 Plusieurs outils peuvent vous aider à contrôler le texte utilisé pour indiquer une erreur de validation&nbsp;:
 
 - La méthode `setCustomValidity(message)` pour les éléments suivants&nbsp;:
-  - {{HTMLElement("fieldset")}}. Note&nbsp;: fournir un message d'invalidité personnalisé pour les éléments `<fieldset>` n'empêchera pas l'envoi du formulaire dans la plupart des navigateurs.
+  - {{HTMLElement("fieldset")}}. Note&nbsp;: fournir un message d'invalidité personnalisé pour les éléments `<fieldset>` n'empêche pas l'envoi du formulaire dans la plupart des navigateurs.
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}
   - {{HTMLElement("select")}}

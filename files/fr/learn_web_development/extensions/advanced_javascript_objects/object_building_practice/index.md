@@ -313,7 +313,7 @@ C'est tout pour les articles sur les objets — il ne vous reste plus qu'à test
 - [requestAnimationFrame()](/fr/docs/Web/API/Window/requestAnimationFrame)
 - [Détection de collision 2D](/fr/docs/Games/Techniques/2D_collision_detection)
 - [Détection de collision 3D](/fr/docs/Games/Techniques/3D_collision_detection)
-- [Jeu d'évasion 2D utilisant du JavaScript pu](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) —un excellent tutoriel pour débutant montrant comment construire un jeu en 2D.
+- [Jeu d'évasion 2D utilisant du JavaScript pu](/fr/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) —un excellent tutoriel pour débutant montrant comment construire un jeu en 2D.
 - [Jeu d'évasion 2D utilisant phaser](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser) — explique les bases de la construction d'un jeu 2D en utilisant une bibliothèque de jeux JavaScript.
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

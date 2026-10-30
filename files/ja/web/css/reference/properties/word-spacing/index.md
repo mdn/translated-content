@@ -1,9 +1,9 @@
 ---
-title: CSS `word-spacing` プロパティ
+title: "`word-spacing` プロパティ (CSS)"
 short-title: word-spacing
 slug: Web/CSS/Reference/Properties/word-spacing
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 91e08923c809ca8deded3e3294f49bbe1a4a00b3
 ---
 
 **`word-spacing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、タグ間や単語間の間隔を設定します。
@@ -42,7 +42,7 @@ word-spacing: -0.4ch;
 
 ```css interactive-example
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2");
   font-family: "Amstelvar";
   font-style: normal;
 }
@@ -74,6 +74,8 @@ word-spacing: unset;
 ```
 
 ### 値
+
+このプロパティはキーワード `normal` または `<length-percentage>` で指定します。
 
 - `normal`
   - : 現在のフォントやブラウザーで定義された普通の単語の間隔です。

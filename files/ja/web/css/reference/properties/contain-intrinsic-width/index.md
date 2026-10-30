@@ -1,8 +1,9 @@
 ---
-title: contain-intrinsic-width
+title: "`contain-intrinsic-width` プロパティ (CSS)"
+short-title: contain-intrinsic-width
 slug: Web/CSS/Reference/Properties/contain-intrinsic-width
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 **`contain-intrinsic-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素が[サイズ抑制](/ja/docs/Web/CSS/Guides/Containment/Using#サイズ抑制)の主体となっている場合に、ブラウザーがレイアウトに使用する要素の幅を設定します。

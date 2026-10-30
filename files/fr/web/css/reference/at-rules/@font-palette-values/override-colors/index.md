@@ -3,7 +3,7 @@ title: Descripteur de règle CSS `override-colors`
 short-title: override-colors
 slug: Web/CSS/Reference/At-rules/@font-palette-values/override-colors
 l10n:
-  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
+  sourceCommit: 72af34c38ae0d97bc3c9bde4998d538bcc56634a
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`override-colors`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-palette-values")}} est utilisé pour remplacer les couleurs de la [palette de base](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette) choisie pour une police couleur.
@@ -34,7 +34,7 @@ Le descripteur [override-colors](/fr/docs/Glossary/CSS_Descriptor) accepte une l
 
 L'indice de couleur commence à zéro et toute [valeur de couleur](/fr/docs/Web/CSS/Reference/Values/color_value) peut être utilisée.
 
-Pour chaque paire indice-couleur, la couleur à l'indice spécifié dans la [palette de base](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette) sera remplacée. Si la police couleur ne possède pas de couleur à l'indice indiqué, cette valeur sera ignorée.
+Pour chaque paire indice-couleur, la couleur à l'indice définit dans la [palette de base](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette) est remplacée. Si la police couleur ne possède pas de couleur à l'indice indiqué, cette valeur est ignorée.
 
 ### Valeurs
 
@@ -53,19 +53,19 @@ Pour chaque paire indice-couleur, la couleur à l'indice spécifié dans la [pal
 
 ### Modifier les couleurs des emojis
 
-Cet exemple montre comment remplacer les couleurs de la police couleur [Noto Color Emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji) pour les adapter à l'identité visuelle de votre site.
+Cet exemple montre comment remplacer les couleurs de la police couleur [Noto Color Emoji <sup>(angl.)</sup>](https://fonts.google.com/noto/specimen/Noto+Color+Emoji) pour les adapter à l'identité visuelle de votre site.
 
 #### HTML
 
 ```html
-<section class="hats">
-  <div class="hat">
+<section class="chapeaux">
+  <div class="chapeau">
     <h2>Chapeau original</h2>
     <div class="emoji">🎩</div>
   </div>
-  <div class="hat">
+  <div class="chapeau">
     <h2>Chapeau rouge</h2>
-    <div class="emoji red-hat">🎩</div>
+    <div class="emoji chapeau-rouge">🎩</div>
   </div>
 </section>
 ```
@@ -73,7 +73,7 @@ Cet exemple montre comment remplacer les couleurs de la police couleur [Noto Col
 #### CSS
 
 ```css hidden
-.hats {
+.chapeaux {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -85,7 +85,7 @@ Cet exemple montre comment remplacer les couleurs de la police couleur [Noto Col
   font-family: "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
-  src: url("https://fonts.gstatic.com/l/font?kit=Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabts6diywYkdG3gjD0U&skey=a373f7129eaba270&v=v24")
+  src: url("https://mdn.github.io/shared-assets/fonts/noto-color-emoji/NotoColorEmoji-Regular.woff2")
     format("woff2");
 }
 
@@ -93,33 +93,33 @@ Cet exemple montre comment remplacer les couleurs de la police couleur [Noto Col
   font-family: "Noto Color Emoji", emoji;
   font-size: 3rem;
 }
-@font-palette-values --red {
+@font-palette-values --rouge {
   font-family: "Noto Color Emoji";
   override-colors:
-    0 rgb(74 11 0),
-    1 rgb(149 22 1),
-    2 rgb(183 27 1),
-    3 rgb(193 28 1),
-    4 rgb(230 34 1);
+    720 rgb(74 11 0),
+    1192 rgb(149 22 1),
+    2052 rgb(183 27 1),
+    3426 rgb(193 28 1),
+    4614 rgb(230 34 1);
 }
-.red-hat {
-  font-palette: --red;
+.chapeau-rouge {
+  font-palette: --rouge;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("modifier_les_couleurs_des_emojis")}}
+{{EmbedLiveSample("Modifier les couleurs des emojis")}}
 
 ### Modifier une couleur dans une palette de base alternative
 
-En utilisant la police [Rocher Color Font](https://www.harbortype.com/fonts/rocher-color/), cet exemple montre comment remplacer une couleur dans la police.
+En utilisant la police [Rocher Color Font <sup>(angl.)</sup>](https://www.harbortype.com/fonts/rocher-color/), cet exemple montre comment remplacer une couleur dans la police.
 
 #### HTML
 
 ```html
-<h2 class="normal-palette">Palette normale</h2>
-<h2 class="override-palette">Palette modifiée</h2>
+<h2 class="palette-normale">Palette normale</h2>
+<h2 class="palette-surchargee">Palette modifiée</h2>
 ```
 
 #### CSS
@@ -132,20 +132,20 @@ En utilisant la police [Rocher Color Font](https://www.harbortype.com/fonts/roch
 h2 {
   font-family: "Rocher", fantasy;
 }
-@font-palette-values --override-palette {
+@font-palette-values --palette-surchargee {
   font-family: "Rocher";
   base-palette: 3;
 }
-@font-palette-values --override-palette {
+@font-palette-values --palette-surchargee {
   font-family: "Rocher";
   base-palette: 3;
   override-colors: 0 rebeccapurple;
 }
-.normal-palette {
-  font-palette: --normal-palette;
+.palette-normale {
+  font-palette: --palette-normale;
 }
-.override-palette {
-  font-palette: --override-palette;
+.palette-surchargee {
+  font-palette: --palette-surchargee;
 }
 ```
 
@@ -155,7 +155,7 @@ Cet exemple montre que dans la `base-palette` `3`, la couleur à l'indice 0 est 
 
 ![Exemple montrant la palette de base et la palette de base avec 1 couleur modifiée](override-base-palette-color.jpg)
 
-## Specifications
+## Spécifications
 
 {{Specifications}}
 

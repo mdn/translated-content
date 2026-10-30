@@ -1,5 +1,5 @@
 ---
-title: HTML `<meta http-equiv>` 属性
+title: "`<meta http-equiv>` 属性"
 short-title: <meta http-equiv>
 slug: Web/HTML/Reference/Elements/meta/http-equiv
 l10n:

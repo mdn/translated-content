@@ -1,5 +1,5 @@
 ---
-title: CSS `view-timeline` プロパティ
+title: "`view-timeline` プロパティ (CSS)"
 short-title: view-timeline
 slug: Web/CSS/Reference/Properties/view-timeline
 l10n:

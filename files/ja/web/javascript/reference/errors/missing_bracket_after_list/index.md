@@ -1,50 +1,51 @@
 ---
 title: "SyntaxError: missing ] after element list"
 slug: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
+JavaScript の例外 "missing ] after element list" は、配列の初期化構文のどこかにエラーがあった場合に発生します。閉じ括弧 (`]`) やカンマ (`,`) が抜けている可能性があります。
 
-JavaScript の例外 "missing ] after element list" は、配列の初期化構文のどこかにエラーがあった場合に発生します。閉じ括弧 ("`]`") やカンマ ("`,`") が抜けている可能性があります。
+## エラーメッセージ
 
-## メッセージ
-
-```js
-SyntaxError: missing ] after element list
+```plain
+SyntaxError: missing ] after element list (Firefox)
+SyntaxError: Unexpected token ';'. Expected either a closing ']' or a ',' following an array element. (Safari)
 ```
 
-## エラーの種類
+## エラー型
 
 {{jsxref("SyntaxError")}}。
 
 ## エラーの原因
 
-どこかに配列初期化構文のエラーがあります。閉じ括弧 ("`]`") かカンマ ("`,`") が不足している可能性があります。
+どこかに配列初期化構文のエラーがあります。閉じ括弧 (`]`) かカンマ (`,`) が不足している可能性があります。
 
 ## 例
 
 ### 不完全な配列の初期化
 
-```js example-bad
-var list = [1, 2,
+```js-nolint example-bad
+const list = [1, 2,
 
-var instruments = [
-  'Ukulele',
-  'Guitar',
-  'Piano'
+const instruments = [
+  "Ukulele",
+  "Guitar",
+  "Piano",
 };
 
-var data = [{foo: 'bar'} {bar: 'foo'}];
+const data = [{ foo: "bar" } { bar: "foo" }];
 ```
 
 修正すると次のようになります。
 
 ```js example-good
-var list = [1, 2];
+const list = [1, 2];
 
-var instruments = ["Ukulele", "Guitar", "Piano"];
+const instruments = ["Ukulele", "Guitar", "Piano"];
 
-var data = [{ foo: "bar" }, { bar: "foo" }];
+const data = [{ foo: "bar" }, { bar: "foo" }];
 ```
 
 ## 関連情報

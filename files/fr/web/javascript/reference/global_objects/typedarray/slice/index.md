@@ -28,9 +28,9 @@ slice(début, fin)
 ## Paramètres
 
 - `début` {{optional_inline}}
-  - : L'indice (compté à partir de zéro), [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière), à partir duquel commencer le fragment.
+  - : L'indice (compté à partir de zéro), [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier), à partir duquel commencer le fragment.
 - `fin` {{optional_inline}}
-  - : L'indice (compté à partir de zéro), [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière), jusqu'auquel extraire le fragment. Le fragment obtenu n'inclura pas l'élément situé à l'indice `fin`.
+  - : L'indice (compté à partir de zéro), [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier), jusqu'auquel extraire le fragment. Le fragment obtenu n'inclura pas l'élément situé à l'indice `fin`.
 
 ### Valeur de retour
 

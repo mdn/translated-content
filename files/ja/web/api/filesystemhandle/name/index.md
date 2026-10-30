@@ -1,13 +1,14 @@
 ---
-title: FileSystemHandle.name
+title: "FileSystemHandle: name プロパティ"
+short-title: name
 slug: Web/API/FileSystemHandle/name
 l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
-{{domxref("FileSystemHandle")}} インターフェイスの読み取り専用プロパティ **`name`** は、ハンドルが表すエントリーの名前を返します。
+**`name`** は {{domxref("FileSystemHandle")}} インターフェイスの読み取り専用プロパティで、ハンドルが表す項目の名前を返します。
 
 ## 値
 
@@ -39,5 +40,5 @@ async function getFile() {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [ファイルシステム API](/ja/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

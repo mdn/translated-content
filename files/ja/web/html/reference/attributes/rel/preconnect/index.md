@@ -1,11 +1,10 @@
 ---
-title: rel="preconnect"
+title: '`rel="preconnect"` 属性値 (HTML)'
+short-title: preconnect
 slug: Web/HTML/Reference/Attributes/rel/preconnect
 l10n:
-  sourceCommit: 0389dd29e0827791ad9d2f6b8cda217c121f9c19
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
-
-{{HTMLSidebar}}
 
 **`preconnect`** キーワードを [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性に指定すると、 {{HTMLElement("link")}} 要素では、ユーザーがターゲットリソースのオリジンからのリソースを必要とする可能性が高いことをブラウザーに示唆します。そのため、ブラウザーはそのオリジンへの接続を事前に開始しておくことで、ユーザーの操作性を改善することができる可能性があります。事前接続は、ハンドシェイク（HTTP のオリジンでは DNS+TCP、 HTTPS のオリジンでは DNS+TCP+TLS）の一部またはすべてを事前に実行しておくことにより、指定されたオリジンからの将来の読み込みを高速化します。
 
@@ -19,7 +18,7 @@ l10n:
 <link rel="preconnect" href="https://example.com" />
 ```
 
-事前接続は HTTP の [Link](/ja/docs/Web/HTTP/Reference/Headers/Link) ヘッダーで、次のように実装することもできます。
+事前接続は HTTP の [`Link`](/ja/docs/Web/HTTP/Reference/Headers/Link) ヘッダーで、次のように実装することもできます。
 
 ```http
 Link: <https://example.com>; rel="preconnect"

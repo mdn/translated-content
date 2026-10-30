@@ -1,9 +1,7 @@
 ---
-title: theme expérimentation
+title: theme_experiment
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
 ---
-
-{{AddonSidebar}}
 
 <table class="standard-table">
   <tbody>

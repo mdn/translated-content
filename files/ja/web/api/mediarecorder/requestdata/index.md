@@ -1,13 +1,14 @@
 ---
-title: MediaRecorder.requestData()
+title: "MediaRecorder: requestData() メソッド"
+short-title: requestData()
 slug: Web/API/MediaRecorder/requestData
 l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+  sourceCommit: 78039f57d12515cd2f97af490a5ec736d228c431
 ---
 
 {{APIRef("MediaStream Recording")}}
 
-**`MediaRecorder.requestData()`** メソッド（[MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は、 {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントを発生させるために使用します。これは、このメソッドを呼び出した時点での、キャプチャされたメディアの {{domxref("Blob")}} オブジェクトを含みます。その後、これを入手して操作することができます。
+**`requestData()`** は {{domxref("MediaRecorder")}} インターフェイスのメソッドで、{{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントを発生させるために使用します。これは、このメソッドを呼び出した時点での、キャプチャされたメディアの {{domxref("Blob")}} オブジェクトを含みます。その後、これを入手して操作することができます。
 
 `requestData()` メソッドを呼び出すと、ブラウザーは次の手順を実行するタスクをキューに入れます。
 
@@ -29,9 +30,10 @@ requestData()
 
 なし ({{jsxref("undefined")}})。
 
-### エラー
+### 例外
 
-`MediaRecorder` オブジェクトの {{domxref("MediaRecorder.state")}} が `"recording"` でないときに `requestData()` メソッドが呼び出されると、`InvalidState` エラーが発生します — 記録が行われていないと、メディアをキャプチャできません。
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : `MediaRecorder` が現在 `「inactive」` の状態である場合に発生します。`MediaRecorder` がアクティブでない場合、録画をキャプチャすることはできません。
 
 ## 例
 
@@ -55,6 +57,6 @@ captureMedia.onclick = () => {
 ## 関連情報
 
 - [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[GitHub のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone/)）。（英語）
-- [simpl.info の MediaStream 収録のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
+- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://github.com/chrisdavidmills) 作（[GitHub のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone/)）。<sup>(英語)</sup>
+- [simpl.info の MediaStream 収録のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://github.com/samdutton) 作。<sup>(英語)</sup>
 - {{domxref("Navigator.getUserMedia")}}

@@ -3,7 +3,7 @@ title: "Object : méthode statique is()"
 short-title: is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Object.is()`** détermine si deux valeurs sont [les mêmes](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#égalité_de_valeur_similaire_avec_object.is).
@@ -65,7 +65,7 @@ Un booléen indiquant si les arguments ont la même valeur.
 
 ## Exemples
 
-### Utiliser `Object.is()`
+### Utiliser la méthode `Object.is()`
 
 ```js
 // Cas 1 : Évaluer si le résultat est le même en utilisant ===
@@ -103,6 +103,6 @@ Object.is(NaN, Number.NaN); // true
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Object.is` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
-- [La prothèse d'émulation es-shims de `Object.is` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.is)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.is` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Object.is` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.is)
 - [Comparaisons d'égalité et de similitude](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)

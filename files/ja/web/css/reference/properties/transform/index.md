@@ -1,8 +1,9 @@
 ---
-title: transform
+title: "`transform` プロパティ (CSS)"
+short-title: transform
 slug: Web/CSS/Reference/Properties/transform
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 **`transform`** は [CSS](/ja/docs/Web/CSS) のプロパティで、与えられた要素を回転、拡大縮小、傾斜、移動することできます。
@@ -94,13 +95,13 @@ transform: revert-layer;
 transform: unset;
 ```
 
-`transform` プロパティには、キーワード値 `none` か 1 つ以上の `<transform-function>` の値のいずれかが指定されます。
-
 ### 値
+
+このプロパティは、キーワード値 `none` または 1 つ以上の `<transform-function>` の値のどちらかで指定します。
 
 - {{cssxref("&lt;transform-function&gt;")}}
   - : 適用される 1 つ以上の [CSS 座標変換関数](/ja/docs/Web/CSS/Reference/Values/transform-function)です。
-    座標変換関数は、左から右へ順に重ねられ、つまり[右から左の順に座標変換の合成の効果が適用されます](#座標変換の順番)。
+    座標変換関数は左から右へと組み合わされます。それぞれの関数は次の関数のための新しい座標系を確立し、といった具合に繰り返されるため、視覚的な結果は関数の記述順序と一致します。あるいは、親の座標系を固定したまま、同じ変換を関数を逆順（右から左）に適用することとして説明することもできます。
 - `none`
   - : 座標変換を何も適用しないことを指定します。
 
@@ -148,9 +149,11 @@ div {
 
 {{EmbedLiveSample("Translating_and_rotating_an_element", "400", "160")}}
 
-### 座標変換の順番
+### 座標変換関数の順序の比較
 
-座標変換関数の順番は重要です。この例では、 2 つのボックスが同じ値で回転および平行移動されています。座標変換関数の順番だけが異なっています。
+座標変換関数の順序は重要です。
+
+この例では、2 つのボックスが同じ値で回転および移動されていますが、関数の順序が逆になっています。点線は、回転前後の X 軸を示しています。
 
 #### HTML
 
@@ -210,11 +213,9 @@ div {
 
 {{EmbedLiveSample("Transform_order", "400", "460")}}
 
-要素が平行移動される前に回転された場合、平行移動の方向は回転された軸になります。この軸は点線で示されています。
-
-### その他の例
-
-その他の例は、[CSS 座標変換の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)および {{cssxref("&lt;transform-function&gt;")}} をご覧ください。
+- ボックス 1（先に `translateX()`、次に `rotate()`）: 座標空間が先に X 軸に沿って `200px` 移動し、その後、その移動後の空間内で `135deg` 回転させるため、要素は元の位置より右側に、回転した状態で配置されます。
+- ボックス 2（先に `rotate()`、次に `translateX()`）: 座標系がまず `135deg` 回転させるため、要素はその後、点線で示された方向に沿って、回転した軸に沿って `200px` 移動されます。
+  その他の例は、[CSS 座標変換の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)および {{cssxref("&lt;transform-function&gt;")}} をご覧ください。
 
 ## 仕様書
 
@@ -230,4 +231,4 @@ div {
 - {{cssxref("&lt;transform-function&gt;")}} データ型にすべての座標変換関数の説明があります
 - 独立した CSS プロパティ: {{cssxref('translate')}}, {{cssxref('rotate')}}, {{cssxref('scale')}} （`skew` プロパティはありません）
 - SVG の {{SVGAttr("transform")}} 属性
-- CSS 座標変換機能を視覚化するオンラインツール: [CSS Transform Playground](https://css-transform.moro.es/)（英語）
+- CSS 座標変換機能を視覚化するオンラインツール: [CSS Transform Playground](https://css-transform.moro.es/)<sup>(英語)</sup>

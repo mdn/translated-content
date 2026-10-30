@@ -1,12 +1,12 @@
 ---
-title: HTML `rel="modulepreload"` 属性値
+title: '`rel="modulepreload"` 属性値 (HTML)'
 short-title: modulepreload
 slug: Web/HTML/Reference/Attributes/rel/modulepreload
 l10n:
   sourceCommit: fc7c0c6df803d5ce26e7b2a72725a7d021ed0694
 ---
 
-**`modulepreload`** キーワードを {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性に指定すると、[モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules)とその依存関係を先取りして取得し、後で実行するために文書のモジュールマップに保存するための宣言的な方法を提供します。
+**`modulepreload`** キーワードを {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel) 属性に指定すると、[モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules)とその依存関係を先取りして取得し、後で実行するために文書のモジュールマップに保存するための宣言的な方法を提供します。
 
 事前読み込みされたモジュールとその依存関係を早期にダウンロードすることができ、全体のダウンロードと処理時間を大幅に縮小することができます。
 これは、各モジュールが処理され、依存関係が発見されたときに、ページがモジュールを並列に取得することを可能にするからです。
@@ -88,4 +88,4 @@ modules/
 ## 関連情報
 
 - [投機的読み込み](/ja/docs/Web/Performance/Guides/Speculative_loading)で、`<link rel="modulepreload">` や他にも同様のパフォーマンス改善機能の比較ができます。
-- [Preloading modules](https://web.dev/articles/modulepreload) (web.dev)
+- [Preloading modules](https://web.dev/articles/modulepreload) - web.dev

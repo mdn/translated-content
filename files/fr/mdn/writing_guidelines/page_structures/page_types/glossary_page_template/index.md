@@ -2,7 +2,7 @@
 title: Modèle de page de glossaire
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Glossary_page_template
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: c44003c788a907ef19e0d766e98f29ffca5b6798
 ---
 
 > [!NOTE]

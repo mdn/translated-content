@@ -1,5 +1,5 @@
 ---
-title: CSS `border-inline-end` プロパティ
+title: "`border-inline-end` プロパティ (CSS)"
 short-title: border-inline-end
 slug: Web/CSS/Reference/Properties/border-inline-end
 l10n:

@@ -3,7 +3,7 @@ title: "Array : méthode with()"
 short-title: with()
 slug: Web/JavaScript/Reference/Global_Objects/Array/with
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`with()`** des instances de {{JSxRef("Array")}} est la version [sans mutations](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_copie_et_méthodes_mutantes) de l'utilisation de la [notation entre crochets](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#notation_avec_crochets) pour modifier la valeur à un indice donné. Elle retourne un nouveau tableau dans lequel l'élément à l'indice donné est remplacé par la valeur fournie.
@@ -38,7 +38,7 @@ La méthode `with()` modifie la valeur à un indice donné dans le tableau, en r
 
 En combinant `with()` avec {{JSxRef("Array/at", "at()")}}, vous pouvez lire et écrire (respectivement) dans un tableau en utilisant des indices négatifs.
 
-La méthode `with()` ne produit jamais de [tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux). Si le tableau source est creux, les cases vides seront remplacées par `undefined` dans le nouveau tableau.
+La méthode `with()` ne produit jamais de [tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux). Si le tableau source est creux, les cases vides sont remplacées par `undefined` dans le nouveau tableau.
 
 La méthode `with()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend seulement que la valeur de `this` possède une propriété `length` et des propriétés à indices entiers.
 
@@ -80,7 +80,7 @@ const objetSimilaireTableau = {
   unrelated: "foo",
   0: 5,
   2: 4,
-  3: 3, // ignoré par with() car length vaut 3
+  3: 3, // ignoré par with(), car length vaut 3
 };
 console.log(Array.prototype.with.call(objetSimilaireTableau, 0, 1));
 // [ 1, undefined, 4 ]
@@ -96,11 +96,11 @@ console.log(Array.prototype.with.call(objetSimilaireTableau, 0, 1));
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.with` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.with` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.with)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - La méthode {{JSxRef("Array.prototype.toReversed()")}}
 - La méthode {{JSxRef("Array.prototype.toSorted()")}}
 - La méthode {{JSxRef("Array.prototype.toSpliced()")}}
 - La méthode {{JSxRef("Array.prototype.at()")}}
 - La méthode {{JSxRef("TypedArray.prototype.with()")}}
-- [Prothèse d'émulation de `Array.prototype.with` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#change-array-by-copy)
-- [Prothèse d'émulation es-shims de `Array.prototype.with` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.with)

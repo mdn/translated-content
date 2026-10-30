@@ -3,7 +3,7 @@ title: "Number : méthode toExponential()"
 short-title: toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`toExponential()`** de {{JSxRef("Number")}} retourne une chaîne de caractères représentant ce nombre en notation exponentielle.
@@ -59,7 +59,7 @@ Si un nombre a plus de chiffres que ceux demandés par le paramètre `fractionDi
 
 ## Exemples
 
-### Utiliser `toExponential()`
+### Utiliser la méthode `toExponential()`
 
 ```js
 const numObj = 77.1234;
@@ -81,8 +81,8 @@ console.log((77).toExponential()); // 7.7e+1
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Number.prototype.toExponential` avec de nombreux correctifs de bogues dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
-- [La prothèse d'émulation es-shims de `Number.prototype.toExponential` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.prototype.toexponential)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Number.prototype.toExponential` avec de nombreux correctifs de bogues dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Number.prototype.toExponential` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.prototype.toexponential)
 - La méthode {{JSxRef("Number.prototype.toFixed()")}}
 - La méthode {{JSxRef("Number.prototype.toPrecision()")}}
 - La méthode {{JSxRef("Number.prototype.toString()")}}

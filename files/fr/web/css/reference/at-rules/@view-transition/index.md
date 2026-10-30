@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
-La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@view-transition`** est utilisée pour choisir les documents actuels et de destination qui subiront [une transition d'affichage](/fr/docs/Web/API/View_Transition_API), dans le cas d'une navigation entre plusieurs documents.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@view-transition`** est utilisée pour choisir les documents actuels et de destination qui subissent [une transition d'affichage](/fr/docs/Web/API/View_Transition_API), dans le cas d'une navigation entre plusieurs documents.
 
 Pour qu'une transition d'affichage inter-document fonctionne, les documents actuel et de destination de la navigation doivent être sur la même origine.
 
@@ -22,11 +22,11 @@ Pour qu'une transition d'affichage inter-document fonctionne, les documents actu
 ### Descripteurs
 
 - `navigation`
-  - : Un mot-clé définissant l'effet que cette règle @ aura sur le comportement de transition d'affichage du document. Les valeurs possibles sont&nbsp;:
+  - : Un mot-clé définissant l'effet que cette règle @ a sur le comportement de transition d'affichage du document. Les valeurs possibles sont&nbsp;:
     - `auto`
-      - : Le document subira une transition d'affichage lorsqu'il prendra part à une navigation, à condition que celle-ci soit [de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy), sans redirections inter-origines, et que son {{DOMxRef("NavigateEvent.navigationType", "navigationType")}} soit `traverse`, `push`, ou `replace`. Dans le cas de `push` ou `replace`, la navigation doit être initiée par un·e utilisateur·ice interagissant avec le contenu de la page, et non par une fonctionnalité de l'interface utilisateur du navigateur.
+      - : Le document subit une transition d'affichage lorsqu'il prend part à une navigation, à condition que celle-ci soit [de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy), sans redirections inter-origines, et que son {{DOMxRef("NavigateEvent.navigationType", "navigationType")}} soit `traverse`, `push`, ou `replace`. Dans le cas de `push` ou `replace`, la navigation doit être initiée par un·e utilisateur·ice interagissant avec le contenu de la page, et non par une fonctionnalité de l'interface utilisateur du navigateur.
     - `none`
-      - : Le document ne subira pas de transition d'affichage.
+      - : Le document ne subit pas de transition d'affichage.
 
 - `types`
   - : Définit les [types](/fr/docs/Web/API/View_Transition_API/Using_types) de transition d'affichage à définir pour la transition d'affichage active des documents actuel et de destination. Les valeurs possibles sont&nbsp;:
@@ -45,9 +45,9 @@ Pour qu'une transition d'affichage inter-document fonctionne, les documents actu
 
 Les extraits de code suivants affichent des concepts clés utilisés dans une démo de transition de page.
 La démo utilise des transitions de vue transversale&nbsp;; une demi-deuxième transition qui se produit lors de la navigation entre deux pages d'un site.
-Pour la démo complète, voir le [Afficher la démonstration de l'application multipages avec transitions](https://mdn.github.io/dom-examples/view-transitions/mpa/).
+Pour la démo complète, voir le [Afficher la démonstration de l'application multi-pages avec transitions <sup>(angl.)</sup>](https://mdn.github.io/dom-examples/view-transitions/mpa/).
 
-La règle `@view-transition` est spécifiée dans le CSS pour vos documents actuels et de destination d'une navigation afin de les inclure tous les deux dans la transition d'affichage&nbsp;:
+La règle `@view-transition` est définie dans le CSS pour vos documents actuels et de destination d'une navigation afin de les inclure tous les deux dans la transition d'affichage&nbsp;:
 
 ```css
 @view-transition {
@@ -89,11 +89,11 @@ En plus de `@view-transition`, nous utilisons la règle {{CSSxRef("@keyframes")}
 }
 ```
 
-Voir la démonstration de [l'application multipages avec transitions](https://mdn.github.io/dom-examples/view-transitions/mpa/).
+Voir la démonstration de [l'application multi-pages avec transitions](https://mdn.github.io/dom-examples/view-transitions/mpa/).
 
 ### Utiliser les types de transition de vue
 
-Notre [exemple de types de transition MPA <sup>(angl.)</sup>](https://mdn.github.io/dom-examples/view-transitions/mpa-chapter-nav-transition-types/) ([code source <sup>(angl.)</sup>](https://github.com/mdn/dom-examples/tree/main/view-transitions/mpa-chapter-nav-transition-types)) montre comment utiliser `types` via `@view-transition`&nbsp;:
+Notre [exemple de types de transition MPA <sup>(angl.)</sup>](https://mdn.github.io/dom-examples/view-transitions/mpa-chapter-nav-transition-types/) ([code source <sup>(angl.)</sup>](https://github.com/mdn/dom-examples/tree/main/view-transitions/mpa-chapter-nav-transition-types)) montre comment utiliser `types` avec `@view-transition`&nbsp;:
 
 ```css
 @view-transition {
@@ -102,7 +102,7 @@ Notre [exemple de types de transition MPA <sup>(angl.)</sup>](https://mdn.github
 }
 ```
 
-Voir [Utiliser les types avec les transitions d'affichage inter-documents via `@view-transition`](/fr/docs/Web/API/View_Transition_API/Using_types#utilisation_de_types_avec_des_transitions_de_vue_entre_documents_via_view-transition) pour un guide pas à pas de l'exemple référencé.
+Voir [Utiliser les types avec les transitions d'affichage inter-documents avec `@view-transition`](/fr/docs/Web/API/View_Transition_API/Using_types#utilisation_de_types_avec_des_transitions_de_vue_entre_documents_via_view-transition) pour un guide pas à pas de l'exemple référencé.
 
 ## Spécifications
 
@@ -119,7 +119,7 @@ Voir [Utiliser les types avec les transitions d'affichage inter-documents via `@
 - Le pseudo-élément {{CSSxRef("::view-transition-old()")}}
 - Le pseudo-élément {{CSSxRef("::view-transition-group()")}}
 - Le pseudo-élément {{CSSxRef("::view-transition-image-pair()")}}
-- L'[API View Transition](/fr/docs/Web/API/View_Transition_API)
+- [L'API View Transition](/fr/docs/Web/API/View_Transition_API)
 - [Utiliser les types de transition de vue](/fr/docs/Web/API/View_Transition_API/Using_types)
 - [Les règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rules)
 - [Fonctions des règles @ CSS](/fr/docs/Web/CSS/Reference/At-rules/At-rule_functions)

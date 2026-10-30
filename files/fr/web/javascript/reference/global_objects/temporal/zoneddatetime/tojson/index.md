@@ -3,7 +3,7 @@ title: "Temporal.ZonedDateTime : méthode toJSON()"
 short-title: toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/toJSON
 l10n:
-  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
+  sourceCommit: 13d5331637ae88b41af236e4b3d1b6c901d08f69
 ---
 
 La méthode **`toJSON()`** des instances de {{JSxRef("Temporal.ZonedDateTime")}} retourne une chaîne de caractères représentant cette date et cette heure dans le même [format RFC 9557](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#format_rfc_9557) que l'appel de {{JSxRef("Temporal/ZonedDateTime/toString", "toString()")}}. Elle est destinée à être appelée implicitement par {{JSxRef("JSON.stringify()")}}.
@@ -24,7 +24,7 @@ Une chaîne de caractères représentant la date et l'heure données dans le [fo
 
 ## Description
 
-La méthode `toJSON()` est automatiquement appelée par {{JSxRef("JSON.stringify()")}} lorsqu'un objet `Temporal.ZonedDateTime` est converti en chaîne de caractères JSON. Cette méthode est généralement destinée à sérialiser de manière utile les objets `Temporal.ZonedDateTime` lors de la sérialisation [JSON](/fr/docs/Glossary/JSON), qui peuvent ensuite être désérialisés en utilisant la fonction {{JSxRef("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}} comme réactivateur de {{JSxRef("JSON.parse()")}}.
+La méthode `toJSON()` est automatiquement appelée par {{JSxRef("JSON.stringify()")}} lorsqu'un objet `Temporal.ZonedDateTime` est converti en chaîne de caractères JSON. Cette méthode est généralement destinée à sérialiser de manière utile les objets `Temporal.ZonedDateTime` lors de la sérialisation [JSON](/fr/docs/Glossary/JSON), qui peuvent ensuite être désérialisés en utilisant la fonction {{JSxRef("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}} dans le réactivateur de {{JSxRef("JSON.parse()")}}.
 
 ## Exemples
 

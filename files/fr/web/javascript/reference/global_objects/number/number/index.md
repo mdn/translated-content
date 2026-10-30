@@ -3,7 +3,7 @@ title: Constructeur Number()
 short-title: Number()
 slug: Web/JavaScript/Reference/Global_Objects/Number/Number
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Le constructeur **`Number()`** crée des objets {{JSxRef("Number")}}. Lorsqu'il est appelé en tant que fonction, il retourne des valeurs primitives de type `Number`.
@@ -74,7 +74,7 @@ BigInt(Number(2n ** 54n + 1n)) === 2n ** 54n + 1n; // false
 
 ## Voir aussi
 
-- [La prothèse d'émulation pour le comportement moderne de `Number` (avec prise en charge des littéraux binaires et octaux) dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) pour le comportement moderne de `Number` (avec prise en charge des littéraux binaires et octaux) dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
 - La propriété native {{JSxRef("NaN")}}
 - L'objet natif {{JSxRef("Math")}}
 - L'objet natif {{JSxRef("BigInt")}}

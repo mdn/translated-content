@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="search">`
 short-title: <input type="search">
 slug: Web/HTML/Reference/Elements/input/search
 l10n:
-  sourceCommit: 8a13259a44523cd17b4fe347088b62c6d7a35265
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`search`** sont des champs de texte conçus pour que l'utilisateur·ice puisse saisir des requêtes de recherche. Ils sont fonctionnellement identiques aux champs [`text`](/fr/docs/Web/HTML/Reference/Elements/input/text), mais peuvent être mis en forme différemment par {{Glossary("user agent", "l'agent utilisateur")}}.
@@ -63,9 +63,9 @@ L'entrée de formulaire échoue à la [validation des contraintes](/fr/docs/Web/
 
 ### `pattern`
 
-L'attribut `pattern`, lorsqu'il est défini, est une expression régulière que la valeur de l'élément [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) doit correspondre pour que la valeur passe la [validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Il doit s'agir d'une expression régulière JavaScript valide, telle qu'utilisée par le type {{JSxRef("RegExp")}}, et comme documenté dans notre [guide sur les expressions régulières](/fr/docs/Web/JavaScript/Guide/Regular_expressions)&nbsp;; le drapeau `'u'` est défini lors de la compilation de l'expression régulière afin que le modèle soit traité comme une séquence de points de code Unicode, au lieu de {{Glossary("ASCII")}}. Aucune barre oblique ne doit être définie autour du texte du modèle.
+L'attribut `pattern`, lorsqu'il est défini, est une expression rationnelle que la valeur de l'élément [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) doit correspondre pour que la valeur passe la [validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Il doit s'agir d'une expression rationnelle JavaScript valide, telle qu'utilisée par le type {{JSxRef("RegExp")}}, et comme documenté dans notre [guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)&nbsp;; le drapeau `'u'` est défini lors de la compilation de l'expression rationnelle afin que le modèle soit traité comme une séquence de points de code Unicode, au lieu de {{Glossary("ASCII")}}. Aucune barre oblique ne doit être définie autour du texte du modèle.
 
-Si le motif défini n'est pas défini ou est invalide, aucune expression régulière n'est appliquée et cet attribut est complètement ignoré.
+Si le motif défini n'est pas défini ou est invalide, aucune expression rationnelle n'est appliquée et cet attribut est complètement ignoré.
 
 > [!NOTE]
 > Utilisez l'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#title) pour définir un texte que la plupart des navigateurs affichent comme info-bulle pour expliquer les exigences de correspondance du motif. Vous devez également inclure d'autres textes explicatifs à proximité.
@@ -135,19 +135,14 @@ Les éléments `<input>` de type `search` sont semblables aux éléments de type
 ### Exemple simple
 
 ```html
-<form>
-  <div>
-    <input type="search" id="maRecherche" name="q" />
-    <button>Rechercher</button>
-  </div>
-</form>
+<input type="search" id="maRecherche" name="q" />
 ```
 
 Cet exemple produit le résultat suivant&nbsp;:
 
 {{EmbedLiveSample("Exemple simple", 600, 40)}}
 
-`q` est la valeur la plus communément utilisée pour l'attribut `name` des champs de recherche mais cette valeur spécifique n'est pas obligatoire. Lorsque le formulaire est envoyé, les données envoyées au serveur ont la forme `q=termederecherche`.
+`q` est la valeur la plus communément utilisée pour l'attribut `name` des champs de recherche mais cette valeur spécifique n'est pas obligatoire. Si ce champ est inclus dans un formulaire et que celui-ci est envoyé, les données envoyées au serveur ont la forme `q=termederecherche`.
 
 > [!NOTE]
 > Il est toujours nécessaire de fournir une valeur pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/input#name), sinon aucune valeur n'est envoyée.
@@ -167,16 +162,11 @@ De plus, les navigateurs modernes proposent souvent une auto-complétion basée 
 Il est possible de fournir un texte indicatif dans le champ de recherche afin de fournir une indication quant aux recherches qu'il est possible de faire. Pour cela, on ajoute un texte avec l'attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Elements/input#placeholder). Par exemple&nbsp;:
 
 ```html
-<form>
-  <div>
-    <input
-      type="search"
-      id="maRecherche"
-      name="q"
-      placeholder="Rechercher sur le site…" />
-    <button>Rechercher</button>
-  </div>
-</form>
+<input
+  type="search"
+  id="maRecherche"
+  name="q"
+  placeholder="Rechercher sur le site…" />
 ```
 
 Voici le résultat obtenu avec ce fragment HTML&nbsp;:
@@ -195,17 +185,12 @@ Cela peut toutefois prêter à confusion pour les utilisateur·ice·s de lecteur
 Prenons un exemple minimaliste&nbsp;:
 
 ```html
-<form role="search">
-  <div>
-    <input
-      type="search"
-      id="maRecherche"
-      name="q"
-      placeholder="Rechercher sur le site…"
-      aria-label="Rechercher parmi le contenu du site" />
-    <button>Rechercher</button>
-  </div>
-</form>
+<input
+  type="search"
+  id="maRecherche"
+  name="q"
+  placeholder="Rechercher sur le site…"
+  aria-label="Rechercher parmi le contenu du site" />
 ```
 
 Voici le résultat obtenu grâce à ce fragment HTML&nbsp;:
@@ -222,17 +207,12 @@ Il n'y a aucune différence visuelle avec l'exemple précédent mais avec cette 
 Il est possible de contrôler la taille physique du champ de saisie grâce à l'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size). Cet attribut permet d'indiquer le nombre de caractères qui peuvent être affichés simultanément à l'intérieur du champ. Ainsi, dans l'exemple qui suit, la zone de recherche peut contenir 30 caractères&nbsp;:
 
 ```html
-<form>
-  <div>
-    <input
-      type="search"
-      id="maRecherche"
-      name="q"
-      placeholder="Rechercher sur le site…"
-      size="30" />
-    <button>Rechercher</button>
-  </div>
-</form>
+<input
+  type="search"
+  id="maRecherche"
+  name="q"
+  placeholder="Rechercher sur le site…"
+  size="30" />
 ```
 
 On obtient une boîte de recherche plus large qu'auparavant&nbsp;:
@@ -283,6 +263,12 @@ Il est possible d'utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/E
     <span class="validite"></span>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden
@@ -338,6 +324,12 @@ Dans l'exemple qui suit, la valeur saisie dans le champ de recherche doit mesure
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 input {
   margin-right: 10px;
@@ -364,9 +356,9 @@ Si vous essayez d'envoyer une valeur qui est plus petite que 4 caractères, vous
 
 ### Indiquer un motif
 
-L'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) permet d'indiquer une expression rationnelle que doit respecter la valeur saisie pour être considérée valide (cf. [Validation selon une expression régulière](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation#validation_selon_une_expression_régulière) pour une introduction).
+L'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) permet d'indiquer une expression rationnelle que doit respecter la valeur saisie pour être considérée valide (cf. [Validation selon une expression rationnelle](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation#validation_selon_une_expression_rationnelle) pour une introduction).
 
-Regardons un exemple. Imaginons que nous voulions fournir un formulaire de recherche par identifiant de produit, et que les identifiants soient tous des codes composés de deux lettres suivies de quatre chiffres. L'exemple suivant couvre ce cas&nbsp;:
+Regardons un exemple. Imaginons que nous voulons fournir un formulaire de recherche par identifiant de produit, et que les identifiants soient tous des codes composés de deux lettres suivies de quatre chiffres. L'exemple suivant couvre ce cas&nbsp;:
 
 ```html
 <form>
@@ -384,6 +376,12 @@ Regardons un exemple. Imaginons que nous voulions fournir un formulaire de reche
     <span class="validite"></span>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden

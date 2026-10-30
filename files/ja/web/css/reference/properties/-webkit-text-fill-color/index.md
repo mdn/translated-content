@@ -1,5 +1,5 @@
 ---
-title: CSS `-webkit-text-fill-color` プロパティ
+title: "`-webkit-text-fill-color` プロパティ (CSS)"
 short-title: -webkit-text-fill-color
 slug: Web/CSS/Reference/Properties/-webkit-text-fill-color
 l10n:

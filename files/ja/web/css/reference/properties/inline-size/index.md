@@ -1,5 +1,5 @@
 ---
-title: CSS `inline-size` プロパティ
+title: "`inline-size` プロパティ (CSS)"
 short-title: inline-size
 slug: Web/CSS/Reference/Properties/inline-size
 l10n:

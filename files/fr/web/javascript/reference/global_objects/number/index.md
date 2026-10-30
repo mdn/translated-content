@@ -2,7 +2,7 @@
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
 l10n:
-  sourceCommit: 56b4064cda33205f7fb9dd9826665fbf75508cdf
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Les valeurs **`Number`** représentent les nombres décimaux comme `37` ou `-9.25`.
@@ -84,7 +84,7 @@ Il existe deux méthodes qui permettent de déclencher cette conversion (ou pres
 
 {{JSxRef("Number.parseFloat()")}} et {{JSxRef("Number.parseInt()")}} sont semblables à `Number()` mais servent uniquement à convertir des chaînes de caractères, en suivant des règles légèrement différentes. Par exemple, `parseInt()` ne reconnaît pas le point décimal et `parseFloat()` ne reconnaît pas le préfixe `0x`.
 
-#### Conversion entière
+#### Conversion en entier
 
 Certaines opérations s'attendent à manipuler des entiers, notamment celles qui fonctionnent avec des indices de tableaux ou de chaînes de caractères, des composantes temporelles et des bases numériques. Après la conversion numérique décrite ci-avant, le résultat est [tronqué](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc) en un nombre entier (la partie fractionnaire est ignorée). Si le nombre est `±Infinity`, il est retourné tel quel. Si le nombre est `NaN` ou `-0`, c'est `0` qui est retourné. Le résultat est donc toujours un entier (qui n'est pas `-0`) ou `±Infinity`.
 
@@ -240,7 +240,7 @@ Number("-Infinity"); // -Infinity
 
 ## Voir aussi
 
-- [Une prothèse d'émulation du comportement moderne de `Number` (dont la prise en charge des littéraux binaires et octaux) dans la bibliothèque `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) du comportement moderne de `Number` (dont la prise en charge des littéraux binaires et octaux) dans la bibliothèque `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
 - La propriété native {{JSxRef("NaN")}}
 - [Les opérateurs arithmétiques](/fr/docs/Web/JavaScript/Reference/Operators#opérateurs_arithmétiques)
 - L'objet natif {{JSxRef("Math")}}

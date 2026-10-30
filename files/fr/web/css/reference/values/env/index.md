@@ -3,7 +3,7 @@ title: Fonction CSS `env()`
 short-title: env()
 slug: Web/CSS/Reference/Values/env
 l10n:
-  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
+  sourceCommit: 977386fc14a76dec21374aef1e0571900b28dab4
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`env()`** peut être utilisée pour insérer la valeur d'une [variable d'environnement](/fr/docs/Web/CSS/Guides/Environment_variables/Using) définie par l'agent utilisateur dans votre CSS. Alternativement, `env()` peut être utilisée pour créer des valeurs dynamiques dans des fichiers SVG externes qui sont mises à jour à l'aide de la propriété CSS {{CSSxRef("link-parameters")}}.
@@ -74,7 +74,7 @@ Lorsque la substitution `env()` est invalide, et qu'une valeur de secours invali
 
 Initialement fournie par le navigateur iOS pour permettre aux développeur·euse·s de placer leur contenu dans une zone sûre de la zone d'affichage, et de ne pas être masqué par les encoches ou les coins arrondis des appareils, les valeurs `safe-area-inset-*` peuvent être utilisées pour garantir que le contenu est visible pour les utilisateur·ice·s. Cette fonctionnalité a ensuite été étendue au-delà de son objectif initial pour permettre des cas d'utilisation tels que [d'empêcher les notifications de l'appareil de couvrir une partie de l'interface utilisateur de l'application](#utiliser_env_pour_sassurer_que_les_boutons_ne_sont_pas_masqués_par_linterface_utilisateur_de_lappareil).
 
-Un autre cas d'utilisation des variables `env()` concerne les [applications web progressives](/fr/docs/Web/Progressive_web_apps) (PWAs) de bureau qui utilisent la fonctionnalité [Window Controls Overlay](/fr/docs/Web/API/Window_Controls_Overlay_API) pour tirer parti de toute la surface de la fenêtre de l'application. En utilisant les valeurs [`titlebar-area-*`](#titlebar-area-x), les développeur·euse·s peuvent positionner des éléments là où se trouvait la barre de titre et [s'assurer que le contenu n'est pas masqué par les boutons de contrôle de la fenêtre](#utiliser_env_pour_sassurer_que_le_contenu_nest_pas_masqué_par_les_boutons_de_contrôle_de_la_fenêtre_dans_les_pwa_de_bureau).
+Un autre cas d'utilisation des variables `env()` concerne les [applications web progressives](/fr/docs/Web/Progressive_web_apps) (PWAs) de bureau qui utilisent la fonctionnalité [Window Controls Overlay](/fr/docs/Web/API/Window_Controls_Overlay_API) pour tirer parti de toute la surface de la fenêtre de l'application. En utilisant les valeurs [`titlebar-area-*`](#titlebar-area-x), les développeur·euse·s peuvent positionner des éléments là où se trouve la barre de titre et [s'assurer que le contenu n'est pas masqué par les boutons de contrôle de la fenêtre](#utiliser_env_pour_sassurer_que_le_contenu_nest_pas_masqué_par_les_boutons_de_contrôle_de_la_fenêtre_dans_les_pwa_de_bureau).
 
 Les noms de variables `viewport-segment-*` peuvent être utilisés pour ajuster vos conteneurs afin qu'ils s'adaptent parfaitement aux segments disponibles d'un appareil à plusieurs segments de zone d'affichage, comme un appareil à charnière ou pliable. Les entiers suivant le nom `viewport-segment-*` indiquent quel segment des multiples segments la variable d'environnement référence.
 
@@ -194,17 +194,17 @@ Nous incluons un paragraphe de texte&nbsp;:
 ```html
 <p>
   Si la fonction <code>env()</code> est prise en charge dans votre navigateur,
-  le texte de ce paragraphe est 50 pixels de padding avec la bordure gauche mais
-  pas la droite / basse et haute. En effet, le code CSS associé est équivalent à
-  <code>padding: 0 0 0 50px</code>, car les noms des propriétés CSS associées
-  aux agents utilisateurs sont sensibles à la casse (contrairement aux autres
-  propriétés).
+  le texte de ce paragraphe est 50 pixels de remplissage avec la bordure gauche
+  mais pas la droite / basse et haute. En effet, le code CSS associé est
+  équivalent à <code>padding: 0 0 0 50px</code>, car les noms des propriétés CSS
+  associées aux agents utilisateurs sont sensibles à la casse (contrairement aux
+  autres propriétés).
 </p>
 ```
 
 #### CSS
 
-Nous définissons une largeur ({{CSSxRef("width")}}) de `300px` et une bordure ({{CSSxRef("border")}}). Nous ajoutons ensuite un remplissage ({{CSSxRef("padding")}}), en utilisant la fonction `env()` avec une valeur de repli pour la taille du padding de chaque côté. Nous définissons intentionnellement une valeur invalide pour le padding gauche (rappelez-vous, les noms des variables d'environnement sont sensibles à la casse), pour démontrer l'utilisation de la valeur de repli.
+Nous définissons une largeur ({{CSSxRef("width")}}) de `300px` et une bordure ({{CSSxRef("border")}}). Nous ajoutons ensuite un remplissage ({{CSSxRef("padding")}}), en utilisant la fonction `env()` avec une valeur de repli pour la taille du remplissage de chaque côté. Nous définissons intentionnellement une valeur invalide pour le remplissage gauche (rappelez-vous, les noms des variables d'environnement sont sensibles à la casse), pour démontrer l'utilisation de la valeur de repli.
 
 ```css
 p {

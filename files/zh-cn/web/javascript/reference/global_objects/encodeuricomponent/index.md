@@ -29,7 +29,7 @@ encodeURIComponent(str);
 
 ### 返回值
 
-原字串作为 URI 组成部分被被编码后的新字符串。
+表示所提供 `uriComponent` 作为 URI 组成部分被编码后的新字符串。
 
 ## 描述
 

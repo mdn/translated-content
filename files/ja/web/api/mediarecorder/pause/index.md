@@ -1,19 +1,20 @@
 ---
-title: MediaRecorder.pause()
+title: "MediaRecorder: pause() メソッド"
+short-title: pause()
 slug: Web/API/MediaRecorder/pause
 l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+  sourceCommit: bb48907e64eb4bf60f17efd7d39b46c771d220a0
 ---
 
 {{APIRef("MediaStream Recording")}}
 
-**`MediaRecorder.pause()`** メソッド（[MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は、メディアストリームの記録を一時停止するために使用します。
+**`pause()`** は {{domxref("MediaRecorder")}} インターフェイスのメソッドで、メディアストリームの収録を一時停止するために使用します。
 
 `MediaRecorder` オブジェクトの `pause()` メソッドが呼び出されると、ブラウザーは次の手順を実行するタスクをキューに入れます。
 
 1. {{domxref("MediaRecorder.state")}} が "inactive" の場合は、DOM の `InvalidState` エラーを発生させてこれらの手順を終了します。 そうでない場合は、次の手順に進みます。
 2. {{domxref("MediaRecorder.state")}} を "paused" に設定します。
-3. 現在の {{domxref("Blob")}} へのデータ収集を停止しますが、後で記録を再開できるように使用可能な状態にしておきます。
+3. 現在の {{domxref("Blob")}} へのデータ収集を停止しますが、後で収録を再開できるように使用可能な状態にしておきます。
 4. {{domxref("MediaRecorder/pause_event", "pause")}} イベントを発生させます。
 
 ## 構文
@@ -33,7 +34,7 @@ pause()
 ### 例外
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : `MediaRecorder` は現在 `"inactive"` です。 アクティブでない場合は記録を一時停止できません。 一時停止している間に `pause()` を呼び出しても、何もしません。
+  - : `MediaRecorder` は現在 `"inactive"` です。 アクティブでない場合は収録を一時停止できません。 一時停止している間に `pause()` を呼び出しても、何もしません。
 
 ## 例
 
@@ -54,7 +55,7 @@ pause.onclick = () => {
 
 ## 関連情報
 
-- [MediaStream Recording API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[GitHub のソース](https://github.com/mdn/web-dictaphone/)）。（英語）
-- [simpl.info の MediaStream Recording のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
-- {{domxref("MediaDevices.getUserMedia")}}
+- [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://github.com/chrisdavidmills) 作（[GitHub のソース](https://github.com/mdn/web-dictaphone/)）。<sup>(英語)</sup>
+- [simpl.info の MediaStream Recording のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://github.com/samdutton) 作。<sup>(英語)</sup>
+- {{domxref("Navigator.getUserMedia")}}

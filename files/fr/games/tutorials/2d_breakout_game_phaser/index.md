@@ -34,7 +34,7 @@ Toutes les leçons - et les différentes versions du jeu [MDN Breakout game](htt
 15. [Boutons](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
 16. [Mode de jeu aléatoire](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
 
-Comme note sur les parcours d'apprentissage — en commençant par le JavaScript pur est le meilleur moyen d'acquérir une solide connaissance du développement de jeux en ligne. Si vous n'êtes pas déjà familier avec le développement de jeux en JavaScript pur, nous vous suggérons de travailler d'abord avec l'homologue de cette série, [2D breakout game using pure JavaScript](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript).
+Comme note sur les parcours d'apprentissage — en commençant par le JavaScript pur est le meilleur moyen d'acquérir une solide connaissance du développement de jeux en ligne. Si vous n'êtes pas déjà familier avec le développement de jeux en JavaScript pur, nous vous suggérons de travailler d'abord avec l'homologue de cette série, [2D breakout game using pure JavaScript](/fr/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript).
 
 Après cela, vous pouvez choisir n'importe quel framework que vous voulez et l'utiliser pour vos projets ; nous avons choisi Phaser car c'est un bon framework solide, avec un bon support et une communauté disponible, et un bon ensemble de plugins. Les cadres accélèrent le temps de développement et aident à prendre soin des parties ennuyeuses, vous permettant ainsi de vous concentrer sur les choses amusantes. Cependant, les frameworks ne sont pas toujours parfaits, donc si quelque chose d'inattendu se produit ou si vous voulez écrire des fonctionnalités que le framework ne fournit pas, vous aurez besoin de connaissances en JavaScript pur.
 

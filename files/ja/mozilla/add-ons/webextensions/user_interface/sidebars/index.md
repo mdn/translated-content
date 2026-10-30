@@ -36,7 +36,7 @@ browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
 
 ## サイドバーの設定
 
-サイドバーを設定するには、 [`sidebar_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) キーを manifest.json に設定して、既定のドキュメントを、既定ののタイトルおよびアイコンとともに設定してください。
+サイドバーを設定するには、 [`sidebar_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) キーを manifest.json に設定して、既定のドキュメントを、既定のタイトルおよびアイコンとともに設定してください。
 
 ```json
 "sidebar_action": {
@@ -52,7 +52,7 @@ browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
 
 ## サイドバーのデザイン
 
-サイドバーウェブページを Firefox のスタイルに合わせてデザインする方法については、 [Photon Design System](https://design.firefox.com/photon/index.html) のドキュメントを参照してください。
+サイドバーウェブページを Firefox のスタイルに合わせてデザインする方法については、 [Acorn Design System](https://acorn.firefox.com/latest) のドキュメントを参照してください。
 
 ## 例
 

@@ -3,7 +3,7 @@ title: "Math : méthode statique cosh()"
 short-title: cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.cosh()`** retourne le cosinus hyperbolique d'un nombre. C'est-à-dire,
@@ -45,7 +45,7 @@ Le cosinus hyperbolique de `x`.
 
 ## Description
 
-Parce que `cosh()` est une méthode statique de `Math`, vous l'utilisez toujours comme `Math.cosh()`, plutôt que comme une méthode d'un objet `Math` que vous auriez créé (`Math` n'est pas un constructeur).
+Parce que `cosh()` est une méthode statique de `Math`, vous l'utilisez toujours comme `Math.cosh()`, plutôt que comme une méthode d'un objet `Math` que vous avez créé (`Math` n'est pas un constructeur).
 
 ## Exemple
 
@@ -70,8 +70,8 @@ Math.cosh(Infinity); // Infinity
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Math.cosh` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
-- [Prothèse d'émulation es-shims de `Math.cosh` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.cosh)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.cosh` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.cosh` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.cosh)
 - La méthode statique {{JSxRef("Math.acosh()")}}
 - La méthode statique {{JSxRef("Math.asinh()")}}
 - La méthode statique {{JSxRef("Math.atanh()")}}

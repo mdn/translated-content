@@ -1,27 +1,19 @@
 ---
 title: 'TypeError: "x" is not a constructor'
 slug: Web/JavaScript/Reference/Errors/Not_a_constructor
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Errors")}}
 
 JavaScript の例外 "is not a constructor" は、オブジェクトや変数をコンストラクターとして使用しようとしたものの、そのオブジェクトや変数がコンストラクターではなかった場合に発生します。
 
 ## エラーメッセージ
 
-```js
-TypeError: Object doesn't support this action (Edge)
-TypeError: "x" is not a constructor
-
-TypeError: Math is not a constructor
-TypeError: JSON is not a constructor
-TypeError: Symbol is not a constructor
-TypeError: Reflect is not a constructor
-TypeError: Intl is not a constructor
-TypeError: Atomics is not a constructor
+```plain
+TypeError: x is not a constructor (V8-based & Firefox & Safari)
 ```
 
-## エラーの種類
+## エラー型
 
 {{jsxref("TypeError")}}
 
@@ -38,7 +30,7 @@ TypeError: Atomics is not a constructor
 ### 無効な場合
 
 ```js example-bad
-var Car = 1;
+const Car = 1;
 new Car();
 // TypeError: Car is not a constructor
 
@@ -49,7 +41,7 @@ new Symbol();
 // TypeError: Symbol is not a constructor
 
 function* f() {}
-var obj = new f();
+const obj = new f();
 // TypeError: f is not a constructor
 ```
 
@@ -68,33 +60,44 @@ function Car(make, model, year) {
 次のようにして `mycar` というオブジェクトを生成できるようになりました。
 
 ```js
-var mycar = new Car("Eagle", "Talon TSi", 1993);
+const myCar = new Car("Eagle", "Talon TSi", 1993);
 ```
 
 ### プロミスの場合
 
-ただちに解決するか拒否されるプロミスを返す場合は、 _new Promise(...)_ を生成して操作する必要はありません。
+ただちに解決するか拒否されるプロミスを返す場合は、`new Promise(...)` を生成して操作する必要はありません。代わりに、[`Promise.resolve()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) または [`Promise.reject()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) [静的メソッド](<https://en.wikipedia.org/wiki/Method_(computer_programming)#Static_methods>)を使用してください。
 
-これは正しくなく ([Promise コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)が正しく呼び出されません)、 `TypeError: this is not a constructor` 例外が発生します。</p>
+これは正しくなく ([`Promise` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)が正しく呼び出されません)、 `TypeError: this is not a constructor` 例外が発生します。
 
 ```js example-bad
-return new Promise.resolve(true);
+function fn() {
+  return new Promise.resolve(true);
+}
 ```
 
-代わりに、 [Promise.resolve()](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) または
-[Promise.reject()](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) の[静的メソッド](<https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)#%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%82%AF%E3%83%A9%E3%82%B9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89>)を使用してください。
+これは正しいものですが、不必要に長いです。
 
-<pre class="brush: js">// This is legal, but unnecessarily long:
-return new Promise((resolve, reject) =&gt; { resolve(true); })
+```js
+function fn() {
+  return new Promise((resolve, reject) => {
+    resolve(true);
+  });
+}
+```
 
-// Instead, return the static method:
-return Promise.resolve(true);
-return Promise.reject(false);
-</pre>
+その代わりに静的メソッドを返しましょう。
 
-<h2 id="See_also">関連情報</h2>
+```js example-good
+function resolveAlways() {
+  return Promise.resolve(true);
+}
 
-<ul>
-  <li><a href="/ja/docs/Glossary/Constructor">コンストラクター</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/new"><code>new</code></a> 演算子</li>
-</ul>
+function rejectAlways() {
+  return Promise.reject(new Error());
+}
+```
+
+## 関連情報
+
+- [コンストラクター](/ja/docs/Glossary/Constructor)
+- [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new)

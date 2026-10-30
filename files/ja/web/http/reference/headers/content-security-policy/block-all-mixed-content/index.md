@@ -1,8 +1,9 @@
 ---
-title: "CSP: block-all-mixed-content"
+title: "Content-Security-Policy: block-all-mixed-content ディレクティブ"
+short-title: block-all-mixed-content
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/block-all-mixed-content
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
 > [!WARNING]
@@ -41,8 +42,7 @@ Content-Security-Policy: img-src https:
 
 ## 仕様書
 
-現在のどの仕様にも属していません。
-古い仕様書である [Mixed Content Level 1](https://www.w3.org/TR/2015/CR-mixed-content-20150317/#strict-opt-in) で定義されていたものです。
+{{Specifications}}
 
 ## ブラウザーの互換性
 

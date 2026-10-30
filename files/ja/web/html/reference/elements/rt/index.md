@@ -1,5 +1,5 @@
 ---
-title: HTML `<rt>` ルビテキスト要素
+title: "`<rt>` ルビテキスト要素"
 short-title: <rt>
 slug: Web/HTML/Reference/Elements/rt
 l10n:

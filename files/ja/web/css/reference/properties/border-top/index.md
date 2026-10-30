@@ -1,5 +1,5 @@
 ---
-title: CSS `border-top` プロパティ
+title: "`border-top` プロパティ (CSS)"
 short-title: border-top
 slug: Web/CSS/Reference/Properties/border-top
 l10n:

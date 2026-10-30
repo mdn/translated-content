@@ -6,17 +6,17 @@ l10n:
   sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-L'attribut `aria-selected` indique l'état «&nbsp;sélectionné&nbsp;» actuel de divers widgets.
+L'attribut `aria-selected` indique l'état «&nbsp;sélectionné&nbsp;» actuel de divers composants.
 
 ## Description
 
 L'attribut `aria-selected` indique l'état «&nbsp;sélectionné&nbsp;» actuel pour les rôles [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), [`option`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/option_role), [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) et [`tab`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role).
 
-Cet attribut sert à indiquer quels éléments d'un widget composite à sélection unique ou multiple sont sélectionnés. Si plusieurs éléments peuvent être sélectionnés en même temps, ajoutez `aria-multiselectable="true"` sur la grille, la liste, le tablist ou tout autre rôle parent, et incluez `aria-selected` uniquement sur les cellules, options et onglets sélectionnables.
+Cet attribut sert à indiquer quels éléments d'un composant composite à sélection unique ou multiple sont sélectionnés. Si plusieurs éléments peuvent être sélectionnés en même temps, ajoutez `aria-multiselectable="true"` sur la grille, la liste, le tablist ou tout autre rôle parent, et incluez `aria-selected` uniquement sur les cellules, options et onglets sélectionnables.
 
 Pour d'autres rôles, l'état sélectionné actuel est défini avec [`aria-current`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current), ou éventuellement [`aria-checked`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) ou [`aria-pressed`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed), selon le rôle.
 
-Les widgets qui prennent en charge à la fois `aria-selected` et `aria-current` en même temps leur donnent des significations différentes. Par exemple, `aria-current="page"` peut être utilisé dans un arbre de navigation pour indiquer quelle page est actuellement affichée, tandis que `aria-selected="true"` indique que la page sera sélectionnée et affichée lorsque l'utilisateur·ice activera l'élément `treeitem`.
+Les composants qui prennent en charge à la fois `aria-selected` et `aria-current` en même temps leur donnent des significations différentes. Par exemple, `aria-current="page"` peut être utilisé dans un arbre de navigation pour indiquer quelle page est actuellement affichée, tandis que `aria-selected="true"` indique que la page est sélectionnée et affichée lorsque l'utilisateur·ice active l'élément `treeitem`.
 
 ### Grille
 
@@ -26,7 +26,7 @@ Définir `aria-selected="false"` sur une cellule de grille sélectionnable indiq
 
 `aria-selected` et `aria-checked` sont tous deux valides pour [`option`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/option_role). Certaines interfaces utilisateur indiquent la sélection avec `aria-selected` dans les listes à sélection unique et avec `aria-checked` dans les listes à sélection multiple.
 
-Ne spécifiez pas à la fois `aria-selected` et `aria-checked` sur les éléments `option` contenus dans la même `listbox`, sauf si le sens et l'objectif de `aria-selected` sont différents de ceux de `aria-checked` dans l'interface utilisateur, que le sens et l'objectif de chaque état sont clairs, et que l'UI propose des méthodes distinctes pour contrôler chaque état.
+Ne définissez pas à la fois `aria-selected` et `aria-checked` sur les éléments `option` contenus dans la même `listbox`, sauf si le sens et l'objectif de `aria-selected` sont différents de ceux de `aria-checked` dans l'interface utilisateur, que le sens et l'objectif de chaque état sont clairs, et que l'UI propose des méthodes distinctes pour contrôler chaque état.
 
 ### Ligne
 

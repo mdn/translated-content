@@ -1,8 +1,9 @@
 ---
-title: accent-color
+title: "`accent-color` プロパティ (CSS)"
+short-title: accent-color
 slug: Web/CSS/Reference/Properties/accent-color
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 **`accent-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、一部の要素で生成されるユーザーインターフェイス要素の{{Glossary("accent", "強調表示")}}色を設定します。
@@ -73,6 +74,8 @@ accent-color: unset;
 
 ### 値
 
+このプロパティは、キーワード `auto` または 1 つの `<color>` 値として指定します。
+
 - `auto`
   - : UA が選択した色を表します。プラットフォームの強調色がある場合は、それと一致します。
 - {{cssxref("&lt;color&gt;")}}
@@ -89,6 +92,9 @@ accent-color: unset;
 
 各ユーザーエージェントには、読みやすさとコントラストを確実に保持するためのバリエーションを持つアクセントカラーがあります。そのアクセントカラーはすべてのユーザーインターフェイスコントロールで使用されるわけではなく、コントロールのすべての状態で使用されるわけでもありません。
 `accent-color` は、それが適用される状態でアクセントカラーを使用するユーザーインターフェイスコントロールにのみ適用されます。
+
+> [!NOTE]
+> {{glossary("fingerprinting", "フィンガープリンティング")}}のリスクを縮小するため、一部のブラウザーでは、特定の制限された状況下で使用される場合を除き、`accent-color: auto` に対して固定値を返します。詳細については、[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
 ## 公式定義
 

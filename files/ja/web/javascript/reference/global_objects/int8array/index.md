@@ -32,7 +32,7 @@ _親である {{jsxref("TypedArray")}} から継承したインスタンスプ�
 これらのプロパティは `Int8Array.prototype` で定義されており、すべての `Int8Array` インスタンスで共有されています。
 
 - {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Int8Array.prototype.BYTES_PER_ELEMENT")}}
-  - : 要素の大きさを数値で返します。`Int8Array` の場合は `2` です。
+  - : 要素の大きさを数値で返します。`Int8Array` の場合は `1` です。
 - {{jsxref("Object/constructor", "Int8Array.prototype.constructor")}}
   - : このインスタンスオブジェクトを構築したコンストラクター関数です。 `Int8Array` インスタンスの場合、初期値は {{jsxref("Int8Array/Int8Array", "Int8Array")}} コンストラクターです。
 

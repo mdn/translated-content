@@ -3,7 +3,7 @@ title: En-têtes HTTP
 short-title: En-têtes
 slug: Web/HTTP/Reference/Headers
 l10n:
-  sourceCommit: 366bcbeeeb196a0bc34eaa4e6cdbf244c4ee8354
+  sourceCommit: bd5271a96d814ed6876e974186c465f1b3959e07
 ---
 
 Les **en-têtes HTTP** permettent au client et au serveur de transmettre des informations supplémentaires avec un message dans une requête ou une réponse.
@@ -253,7 +253,7 @@ Les requêtes d'intervalle sont utiles pour des applications comme les lecteurs 
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP)
   - : Empêche l'ouverture/le contrôle d'une fenêtre par d'autres domaines.
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}} (CORP)
-  - : Empêche d'autres domaines de lire la réponse pour les ressources auxquelles cet en-tête est appliqué. Voir aussi [la page d'explication sur](/fr/docs/Web/HTTP/Cross-Origin_Resource_Policy).
+  - : Empêche d'autres domaines de lire la réponse pour les ressources auxquelles cet en-tête est appliqué. Voir aussi [l'article explicatif sur les CORP](/fr/docs/Web/Security/Practical_implementation_guides/CORP).
 - {{HTTPHeader("Content-Security-Policy")}} ({{Glossary("CSP")}})
   - : Contrôle les ressources qu'un agent utilisateur est autorisé à charger pour une page donnée.
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
@@ -533,7 +533,7 @@ Voir la documentation de [l'API Topics](/fr/docs/Web/API/Topics_API) pour plus d
 - {{HTTPHeader("X-Forwarded-Proto")}} {{Non-standard_Inline}}
   - : Identifie le protocole (HTTP ou HTTPS) utilisé par le client pour se connecter à l'intermédiaire (<i lang="en">proxy</i> ou un <i lang="en">load balancer</i>).
 - {{HTTPHeader("X-DNS-Prefetch-Control")}} {{Non-standard_Inline}}
-  - : Contrôle la récupération proactive du DNS, utilisée par les navigateurs pour résoudre en avance les noms de domaine que la personne peut atteindre avec les liens, images, fichiers CSS ou JavaScript, etc.
+  - : Contrôle la récupération anticipée des DNS, une fonctionnalité grâce à laquelle les navigateurs effectuent de manière proactive la résolution des noms de domaine, tant pour les liens et URL que l'utilisateur·ice peut choisir de suivre que pour les éléments référencés par le document, notamment les images, les feuilles de style CSS, les scripts JavaScript, etc.
 - {{HTTPHeader("X-Robots-Tag")}} {{Non-standard_Inline}}
   - : L'en-tête HTTP [`X-Robots-Tag`](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag?hl=fr) indique comment une page web doit être indexée par les moteurs de recherche public. En pratique, cet en-tête est équivalent à [`<meta name="robots" content="…">`](/fr/docs/Web/HTML/Reference/Elements/meta/name/robots).
 

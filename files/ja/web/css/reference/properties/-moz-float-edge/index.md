@@ -1,5 +1,5 @@
 ---
-title: CSS `-moz-float-edge` プロパティ
+title: "`-moz-float-edge` プロパティ (CSS)"
 short-title: -moz-float-edge
 slug: Web/CSS/Reference/Properties/-moz-float-edge
 l10n:

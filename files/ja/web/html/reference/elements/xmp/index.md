@@ -1,5 +1,5 @@
 ---
-title: HTML `<xmp>` プレーンテキストレンダリング要素
+title: "`<xmp>` プレーンテキストレンダリング要素"
 short-title: <xmp>
 slug: Web/HTML/Reference/Elements/xmp
 l10n:

@@ -3,7 +3,7 @@ title: "Number : méthode toFixed()"
 short-title: toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`toFixed()`** de {{JSxRef("Number")}} retourne une chaîne de caractères représentant ce nombre en utilisant la [notation à point fixe <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Fixed-point_arithmetic) avec le nombre de décimales défini.
@@ -111,6 +111,7 @@ Comme l'accès aux membres a une [priorité](/fr/docs/Web/JavaScript/Reference/O
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) du comportement moderne de `Number.prototype.toFixed` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
 - La méthode {{JSxRef("Number.prototype.toExponential()")}}
 - La méthode {{JSxRef("Number.prototype.toPrecision()")}}
 - La méthode {{JSxRef("Number.prototype.toString()")}}

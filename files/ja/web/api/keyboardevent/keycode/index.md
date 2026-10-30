@@ -3,7 +3,7 @@ title: "KeyboardEvent: keyCode プロパティ"
 short-title: keyCode
 slug: Web/API/KeyboardEvent/keyCode
 l10n:
-  sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
+  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
 ---
 
 {{APIRef("UI Events")}}
@@ -12,46 +12,10 @@ l10n:
 
 これは通常、キーに対応する 10 進数の ASCII ({{RFC(20)}}) または Windows 1252 コードです。キーを識別できない場合は、この値は `0` になります。
 
-これはしばらく非推奨となっていますので、できれば使用しないようにしてください。代わりに、もし実装されていれば {{domxref("KeyboardEvent.code")}} を使用してください。残念ながら、まだ実装されていないブラウザーもありますので、対象となるすべてのブラウザーで対応するものを使用するように注意する必要があります。
+可能であれば、この使用は避けるべきです。これはかなり前から非推奨となっています。代わりに、{{domxref("KeyboardEvent.code")}}（押された物理キーの場合）または {{domxref("KeyboardEvent.key")}}（そのキーに割り当てられた文字の場合）を使用しましょう。非常に古いブラウザーを対象とする場合は、いずれかのプロパティの互換性を調べましょう。
 
 > [!NOTE]
-> ウェブ開発者は `keydown` と `keyup` イベントを処理する際に、表示可能な文字に対して `keyCode` 属性を使用するべきではありません。前述のように、`keyCode` 属性は表示可能な文字、特に <kbd>Shift</kbd> や <kbd>Alt</kbd> キーが押された状態での文字に対しては有用ではありません。ショートカットキーハンドラーを実装する場合、通常は {{domxref("Element/keypress_event", "keypress")}} イベントの方がよいでしょう（少なくとも Gecko を使用するランタイムではそうでしょう）。
-
-## 例
-
-```js
-window.addEventListener(
-  "keydown",
-  (event) => {
-    if (event.defaultPrevented) {
-      return; // 既定のアクションがキャンセルされている場合は何もしないようにします。
-    }
-
-    let handled = false;
-    if (event.key !== undefined) {
-      // KeyboardEvent.key でイベントを処理し、handled を true に設定します。
-      handled = true;
-    } else if (event.keyCode !== undefined) {
-      // KeyboardEvent.keyCode でイベントを処理し、handled を true に設定します。
-      handled = true;
-    }
-
-    if (handled) {
-      // イベントが処理された場合、"ダブルアクション" を抑制する
-      event.preventDefault();
-    }
-  },
-  true,
-);
-```
-
-## 仕様書
-
-{{Specifications}}
-
-## ブラウザーの互換性
-
-{{Compat}}
+> ウェブ開発者は `keydown` と `keyup` イベントを処理する際に、表示可能な文字に対して `keyCode` 属性を使用するべきではありません。前述のように、`keyCode` 属性は表示可能な文字、特に <kbd>Shift</kbd> や <kbd>Alt</kbd> キーが押された状態での文字に対しては有用ではありません。
 
 ## keyCode の値
 
@@ -72,10 +36,10 @@ Firefox は、キーによって入力可能な {{Glossary("ASCII")}} 文字か�
 5. 押されたキーが、別の ASCII 文字を修飾キーなしで入力する場合、それに対応するキーコードを使用します。
 6. 押されたキーが、別の ASCII文字を Shift キー修飾で入力する場合、それに対応するキーコードを使用します。
 7. それ以外の場合、すなわち、押されたキーが Unicode 文字を入力する場合は以下の通り。
-   1. キーボードレイアウトが ASCII 対応の（ASCII アルファベットを入力できる）場合、 0 を使用するか、[下記の追加ルール](#keycode_of_punctuation_keys_on_some_keyboard_layout)で計算します。
+   1. キーボードレイアウトが ASCII 対応の（ASCII アルファベットを入力できる）場合、 0 を使用するか、下記の追加ルールで計算します。
    2. それ以外の場合、つまりキーボードレイアウトが ASCII に対応していない場合は、最も優先度の高い環境にインストールされている ASCII に対応したキーボードレイアウトを使用します。
       1. 代替キーボードレイアウトで押されたキーが ASCII のアルファベットまたは数字を入力する場合、そのキーコードを使用します。
-      2. それ以外の場合、 0 を使用するか、[下記の追加ルール](#keycode_of_punctuation_keys_on_some_keyboard_layout)で計算します。
+      2. それ以外の場合、 0 を使用するか、下記の追加ルールで計算します。
 
 Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規則で設定します（上記のリストのポイント 7.1 または 7.2 に到達したとき）。
 
@@ -874,7 +838,7 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0xBD (189)</code></td>
       <td colspan="3" rowspan="2"><code>0xAD (173)</code></td>
       <td rowspan="2"><code>0xAD (173)</code></td>
-      <td rowspan="2"><code>0xAD (173)</code>[1]</td>
+      <td rowspan="2"><code>0xAD (173)</code> [1]</td>
       <td rowspan="2"><code>0xAD (173)</code></td>
       <td colspan="3" rowspan="2"><code>0xAD (173)</code></td>
     </tr>
@@ -901,7 +865,7 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x36 (54)</code>⚠️</td>
       <td rowspan="2"><code>0xBB (187)</code></td>
       <td><code>0xBB (187)</code></td>
-      <td><code>0xBB (187)</code>[1]</td>
+      <td><code>0xBB (187)</code> [1]</td>
       <td><code>0xBB (187)</code></td>
       <td rowspan="2"><code>0x3D (61)</code></td>
       <td rowspan="2"><code>0xA0 (160)</code>⚠️</td>
@@ -971,8 +935,8 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
       <td rowspan="2"><code>0xDC (220)</code>⚠️</td>
       <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
-      <td rowspan="2"><code>0xDC </code>(220)</td>
-      <td rowspan="2"><code>0xDC </code>(220)</td>
+      <td rowspan="2"><code>0xDC (220)</code></td>
+      <td rowspan="2"><code>0xDC (220)</code></td>
       <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
       <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
       <td rowspan="2"><code>0xDC (220)</code>⚠️</td>
@@ -2302,7 +2266,7 @@ Gecko は、対応表を明示的に作成するために、`KeyboardEvent` に�
       <td>0x0E (14)</td>
       <td>
         予約済みですが、使用されていません。 {{deprecated_inline}} （削除。
-        [Firefox バグ 969247](https://bugzil.la/969247) を参照）
+        <a href="https://bugzil.la/969247">Firefox バグ 969247</a> を参照）
       </td>
     </tr>
     <tr>
@@ -2548,7 +2512,7 @@ Gecko は、対応表を明示的に作成するために、`KeyboardEvent` に�
     <tr>
       <td><code>DOM_VK_AT</code></td>
       <td>0x40 (64)</td>
-      <td>アットマーク ("@") キー。</td>
+      <td>アット記号 ("@") キー。</td>
     </tr>
     <tr>
       <td><code>DOM_VK_A</code></td>
@@ -2958,7 +2922,7 @@ Gecko は、対応表を明示的に作成するために、`KeyboardEvent` に�
     </tr>
     <tr>
       <td><code>DOM_VK_DOUBLE_QUOTE</code></td>
-      <td>0xA3 (162)</td>
+      <td>0xA2 (162)</td>
       <td>二重引用符 (""") キー。</td>
     </tr>
     <tr>
@@ -3269,10 +3233,42 @@ Gecko は、対応表を明示的に作成するために、`KeyboardEvent` に�
   </tbody>
 </table>
 
+## 例
+
+```js
+window.addEventListener("keydown", (event) => {
+  if (event.defaultPrevented) {
+    return; // 既定のアクションがキャンセルされている場合は何もしないようにします。
+  }
+
+  let handled = false;
+  if (event.key !== undefined) {
+    // KeyboardEvent.key でイベントを処理し、handled を true に設定します。
+    handled = true;
+  } else if (event.keyCode !== undefined) {
+    // KeyboardEvent.keyCode でイベントを処理し、handled を true に設定します。
+    handled = true;
+  }
+
+  if (handled) {
+    // イベントが処理された場合、"ダブルアクション" を抑制する
+    event.preventDefault();
+  }
+});
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
 ### Windows の OEM 固有キー
 
 Windows では、仮想キーコードのいくつかの値は、 OEM の特定のキー用に定義（予約）されています。これらは、非標準のキーボードの特殊なキーで利用可能です。言い換えれば、いくつかの値は、2 つ以上のベンダー（またはハードウェア）によって異なる意味で使用されています。
 
 Gecko 21 （および 15 より古いバージョン）では、OEM 固有のキー値は Windows 上でのみ keyCode 属性で利用可能です。そのため、通常のウェブアプリケーションでは使用できません。それらはイントラネットのアプリケーション、または同様の状況においてのみ使用されます。
 
-詳しくは MSDN の "[Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)](<https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa452679(v=msdn.10)>)" を参照してください。
+詳しくは MSDN の "[Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)](<https://learn.microsoft.com/en-us/previous-versions/windows/embedded/aa452679(v=msdn.10)>)" を参照してください。

@@ -1,5 +1,5 @@
 ---
-title: HTML `<base>` 文書基底 URL 要素
+title: "`<base>` 文書基底 URL 要素"
 short-title: <base>
 slug: Web/HTML/Reference/Elements/base
 l10n:

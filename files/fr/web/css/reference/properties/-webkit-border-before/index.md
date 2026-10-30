@@ -3,7 +3,7 @@ title: Propriété CSS `-webkit-border-before`
 short-title: -webkit-border-before
 slug: Web/CSS/Reference/Properties/-webkit-border-before
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 6354422058e438a2599e4eab71eaec8eb40850fa
 ---
 
 {{Non-standard_Header}}
@@ -36,7 +36,7 @@ Cette propriété est une propriété raccourcie pour les propriétés CSS suiva
 
 ### Valeurs
 
-Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre&nbsp;:
+Cette propriété est définie comme une liste séparée par des espaces d'une à trois des valeurs suivantes&nbsp;:
 
 - `<border-width>`
   - : Voir {{CSSxRef("border-width")}}.

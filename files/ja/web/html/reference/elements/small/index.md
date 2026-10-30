@@ -1,5 +1,5 @@
 ---
-title: HTML `<small>` 附随コメント要素
+title: "`<small>` 附随コメント要素"
 short-title: <small>
 slug: Web/HTML/Reference/Elements/small
 l10n:

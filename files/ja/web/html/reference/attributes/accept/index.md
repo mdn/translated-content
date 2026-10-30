@@ -1,5 +1,5 @@
 ---
-title: "`accept` 属性 (HTML)"
+title: "`accept` 属性"
 short-title: accept
 slug: Web/HTML/Reference/Attributes/accept
 l10n:

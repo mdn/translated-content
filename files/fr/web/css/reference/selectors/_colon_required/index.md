@@ -3,7 +3,7 @@ title: Pseudo-classe CSS `:required`
 short-title: :required
 slug: Web/CSS/Reference/Selectors/:required
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: bf3b0f3217d5d5a6957e9e17f863ece19d939d20
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:required`** permet de cibler un élément {{HTMLElement("input")}} pour lequel l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) est activé. Cela permet de mettre en forme les éléments obligatoires pour remplir correctement un formulaire.
@@ -13,11 +13,11 @@ La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/f
 ```css interactive-example
 label {
   display: block;
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 
-.req {
-  color: red;
+fieldset {
+  margin-top: 0.5em;
 }
 
 *:required {
@@ -26,47 +26,61 @@ label {
 ```
 
 ```html interactive-example
-<form>
-  <label for="name">Nom&nbsp;: <span class="req">*</span></label>
-  <input id="name" name="name" type="text" required />
+<label for="name">Nom (requis)&nbsp;:</label>
+<input id="name" name="name" type="text" required />
 
-  <label for="birth">Date de naissance&nbsp;:</label>
-  <input id="birth" name="birth" type="date" />
+<label for="birth">Date de naissance&nbsp;:</label>
+<input id="birth" name="birth" type="date" />
 
-  <label for="origin"
-    >Comment avez-vous entendu parler de nous&nbsp;?
-    <span class="req">*</span></label
-  >
-  <select id="origin" name="origin" required>
-    <option>Google</option>
-    <option>Facebook</option>
-    <option>Publicité</option>
-  </select>
-  <p><span class="req">*</span> - Champ obligatoire</p>
-</form>
+<label for="origin"
+  >Comment avez-vous entendu parler de nous&nbsp;? (requis)</label
+>
+<select id="origin" name="origin" required>
+  <option value="">Choisissez une option</option>
+  <option value="google">Google</option>
+  <option value="facebook">Facebook</option>
+  <option value="advertisement">Publicité</option>
+</select>
+
+<fieldset>
+  <legend>Méthode de contact privilégiée&nbsp;:</legend>
+  <label>
+    <input name="contact" type="radio" value="email" checked /> Courriel
+  </label>
+  <label><input name="contact" type="radio" value="phone" /> Téléphone</label>
+</fieldset>
+
+<label>
+  <input name="newsletter" type="checkbox" checked /> Je souhaite m'abonner à
+  une lettre d'information personnalisée.
+</label>
+<label>
+  <input name="privacy" type="checkbox" required /> J'ai lu et j'accepte la
+  Politique de confidentialité (obligatoire).
+</label>
 ```
 
-La pseudo-classe est utile pour mettre en évidence les champs qui doivent contenir des données valides avant qu'un formulaire puisse être soumis.
+La pseudo-classe est utile pour mettre en évidence les champs qui doivent contenir des données valides avant qu'un formulaire puisse être envoyé.
 
 > [!NOTE]
-> La pseudo-classe {{CSSxRef(":optional")}} pourra être utilisée pour mettre en forme les champs facultatifs.
+> La pseudo-classe {{CSSxRef(":optional")}} peut être utilisée pour mettre en forme les champs facultatifs.
 
 ## Syntaxe
 
 ```css
 :required {
-  /* ... */
+  /* … */
 }
 ```
 
 ## Accessibilité
 
-Si un formulaire ({{HTMLElement("form")}}) contient des champs ({{HTMLElement("input")}}) optionnels, les champs obligatoires doivent être indiqués avec l'attribut [`input`](/fr/docs/Web/HTML/Element/required#input). Ainsi, les personnes utilisant des outils d'assistance (par exemple un lecteur d'écran) pourront savoir que ces champs ont besoin d'un contenu valide afin de pouvoir envoyer le formulaire.
+Si un formulaire ({{HTMLElement("form")}}) contient des champs ({{HTMLElement("input")}}) optionnels, les champs obligatoires doivent être indiqués avec l'attribut [`input`](/fr/docs/Web/HTML/Element/required#input). Ainsi, les personnes utilisant des outils d'assistance (par exemple un lecteur d'écran) peuvent savoir que ces champs ont besoin d'un contenu valide afin de pouvoir envoyer le formulaire.
 
-Les champs obligatoires devraient également être indiqués visuellement et cette indication ne doit pas uniquement être fournie avec une couleur. Généralement, un texte descriptif ou une icône est utilisé.
+Les champs obligatoires doivent également être indiqués visuellement et cette indication ne doit pas uniquement être fournie avec une couleur. Généralement, un texte descriptif ou une icône est utilisé.
 
 - [Explications des recommendation WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Comprendre le critère de succès 1.4.3 | W3C Comprendre les WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [Comprendre le critère de succès 1.4.3 | Comprendre les WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Exemples
 
@@ -114,7 +128,7 @@ input:required:invalid {
 
 #### Résultat
 
-{{EmbedLiveSample('le_champ_requis_a_une_bordure_rouge', '100%', 120)}}
+{{EmbedLiveSample("Le champ requis a une bordure rouge", "100%", 120)}}
 
 ## Spécifications
 

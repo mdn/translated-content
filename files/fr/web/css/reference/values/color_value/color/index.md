@@ -3,7 +3,7 @@ title: Fonction CSS `color()`
 short-title: color()
 slug: Web/CSS/Reference/Values/color_value/color
 l10n:
-  sourceCommit: 99251a2a7cc534462d5c0ad6fbcb17905e4df826
+  sourceCommit: c44003c788a907ef19e0d766e98f29ffca5b6798
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`color()`** permet de définir une couleur dans un {{Glossary("color space", "espace colorimétrique")}} particulier, au lieu de l'espace colorimétrique sRGB implicite utilisé par la plupart des autres fonctions de couleur.
@@ -205,7 +205,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("utiliser_les_espaces_colorimétriques_prédéfinis_avec_color")}}
+{{EmbedLiveSample("Utiliser les espaces colorimétriques prédéfinis avec `color()`")}}
 
 ### Utiliser l'espace colorimétrique xyz avec `color()`
 
@@ -248,7 +248,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("utiliser_lespace_colorimétrique_xyz_avec_color")}}
+{{EmbedLiveSample("Utiliser l'espace colorimétrique xyz avec `color()`")}}
 
 ### Utiliser les media queries `color-gamut` avec `color()`
 
@@ -297,7 +297,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("utiliser_les_media_queries_color-gamut_avec_color")}}
+{{EmbedLiveSample("Utiliser les media queries `color-gamut` avec `color()`")}}
 
 ### Utiliser les couleurs relatives avec `color()`
 
@@ -371,7 +371,7 @@ Les variantes sont définies en passant la propriété personnalisée [--base-co
 
 Le résultat est le suivant&nbsp;:
 
-{{ EmbedLiveSample("utiliser_les_couleurs_relatives_avec_color", "100%", "200") }}
+{{EmbedLiveSample("Utiliser les couleurs relatives avec `color()`", "100%", 200)}}
 
 ## Spécifications
 

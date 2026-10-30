@@ -1,12 +1,10 @@
 ---
-title: CSS `random()` 関数
+title: "`random()` 関数 (CSS)"
 short-title: random()
 slug: Web/CSS/Reference/Values/random
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 74b73e8310d2ecfecd3e4a2aa21e5b54f43d7387
 ---
-
-{{SeeCompatTable}}
 
 **`random()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、指定された範囲内でランダムな値を生成します。また、必要に応じて、その範囲内の値を指定された増分の間隔の値に制限することもできます。これは、{{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;frequency&gt;")}}、{{cssxref("angle")}}、{{CSSxRef("&lt;time&gt;")}}、 {{CSSxRef("&lt;resolution&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;integer&gt;")}} をプロパティ値内で指定する際に使用できます。
 
@@ -18,10 +16,10 @@ l10n:
 
 ```css interactive-example
 .box {
-  rotate: random(element-shared, 0deg, 360deg);
-  width: random(element-shared, 50px, 300px);
-  background-color: hsl(random(element-shared, 0, 360) 50% 50%);
-  height: random(element-shared, 50px, 300px);
+  rotate: random(property-scoped, 0deg, 360deg);
+  width: random(property-scoped, 50px, 300px);
+  background-color: hsl(random(property-scoped, 0, 360) 50% 50%);
+  height: random(property-scoped, 50px, 300px);
 }
 
 @supports not (order: random(1, 2)) {
@@ -45,35 +43,43 @@ random(0rad, 1turn, 30deg)
 
 /* 基準値付き */
 random(auto, 0, 360)
-random(element-shared, 0s, 5s)
+random(element-scoped, 0s, 5s)
+random(property-scoped, 0s, 5s)
+random(property-index-scoped, 0s, 5s)
 random(--unique-base, 400px, 100px)
 random(fixed 0.5, 1em, 40vw)
-random(--unique-base element-shared, 100dpi, 300dpi)
+random(--unique-base property-scoped, 100dpi, 300dpi)
 
 /* 基準値と増分の値付き */
-random(element-shared, 0deg, 360deg, 45deg)
+random(property-scoped, 0deg, 360deg, 45deg)
 random(--my-base, 1em, 3rem, 2px)
 ```
 
 ### 引数
 
-- `<random-value-sharing>` {{optional_inline}}
-  - : 文書内のどの `random()` 関数が乱数基準値を共有し、固有の値を取得するかを制御します。
-    この値は、次のいずれかの値、あるいは空白で区切った独自のキーとキーワード `element-shared` の両方を指定できます。
+`random(seed, min, max, step)` 関数は、カンマ区切りの式を 2 つから 4 つまでの引数として受け入れます。
+
+- `<random-key>` {{optional_inline}}
+  - : 文書内のどの `random()` 関数がランダムな基準値（シード）を共有し、どの関数が異なる値を取得するかを制御します。
+    以下のいずれかの値として指定します。
     - `auto`
-      - : 要素のスタイル内で `random()` が使用されるたびに、それぞれ固有のランダムな初期値が取得されます。
+      - : `auto` はデフォルト値であり、`<random-key>` が指定されていない場合に適用されます。この乱数関数は、互いに独立した乱数値を生成します。乱数キャッシュ名、ひいては結果は、複合値内の各 `random()` インスタンス間で、異なるプロパティ間で、また異なる要素間でそれぞれ異なります。これは、`element-scoped property-index-scoped` を指定することと同等です。
+    - `element-scoped`
+      - : ランダムなキャッシュ名に要素固有の識別子を追加します。これにより、複数のプロパティ（例：`width` や `height`）に適用した場合、両方のプロパティで同じ値が使用されますが、各要素（例：`<div>`）にはそれぞれ異なるランダムな値が割り当てられます。
+    - `property-scoped`
+      - : ランダムなキャッシュ名にプロパティ名を追加します。そのため、複数のプロパティ（例：`width` や `height`）に適用した場合、それぞれのプロパティには異なるランダム値が割り当てられますが、それぞれの要素（例：`<div>`）では同じランダム値が使用されます。
+    - `property-index-scoped`
+      - : 同じプロパティ値で使用されるすべての乱数関数の中から、`random()` 関数のプロパティ名とインデックスを乱数キャッシュ名に追加することで、同じ宣言内の複数のインスタンスがそれぞれ異なる乱数値を取得できるようにします。
     - {{cssxref("dashed-ident")}}
-      - : 要素のプロパティ間で同じ乱数基準値を使用するための独自のキー（例：`--my-random-key`）です。
-    - `element-shared`
-      - : このキーを使用すると、同じプロパティを持つすべての要素間で乱数基準値が共有されます。この基準値は、同じ要素の他のプロパティの値に記載されている `random()` 関数とは独立しています。ただし、それらの random 関数にも同じ独自のキーが含まれている場合は除きます。
+      - : ランダムなキャッシュキーのカスタム名（例：`--my-random-key`）。単独で使用した場合、同じ識別子を使用するすべての要素およびプロパティ間で、同じランダムなベース値が共有されます。`*-scoped` キーワードと組み合わせて使用した場合、共有の挙動はそのキーワードによって決定されます。
     - `fixed <number>`
-      - : 生成される乱数基準値として、`0` 以上 `1` 以下の範囲を指定します。
+      - : ランダムなキャッシュ名を無視し、`<number>`（`0` 以上 `1` 未満の範囲）をシード値として使用します。
 
 - `<calc-sum>, <calc-sum>`
-  - : カンマ区切りで指定される、2 つの必須の `<number>`、`<dimension>`、`<percentage>` の値、あるいはこれらの型のいずれかに変換される計算式で、それぞれ最小値と最大値を定義します。両方の値は、同じ[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)に変換可能でなければなりません。最大値が最小値よりも小さい場合、この関数は最初の `<calc-sum>` 値を返します。
+  - : `<number>`、`<dimension>`、`<percentage>` の値、あるいはこれらの型のいずれかに変換される計算式として指定し、それぞれ最小値と最大値を定義します。両方の値は、同じ[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)に変換可能でなければなりません。最大値が最小値よりも小さい場合、この関数は最初の `<calc-sum>` 値を返します。
 
 - `<calc-sum>` {{optional_inline}}
-  - : オプションの 3 つ目の `<calc-sum>`（その前にカンマを付ける）は、増分の間隔の値を指定します。これが存在する場合、かつカンマで区切られた最小値と最大値の 2 つの `<calc-sum>` と同じデータ型である場合、返値は最小値、または最小値から増分値ずつ増加した値（最大値以下）となります。
+  - : 増分の間隔を指定します。この引数が存在する場合、かつ最小値および最大値 `<calc-sum>` と同じデータ型である場合、返値は最小値、あるいは最小値から最大値までの範囲において、増分値ごとに計算された値となります。
 
 ### 返値
 
@@ -81,7 +87,7 @@ random(--my-base, 1em, 3rem, 2px)
 
 ## 解説
 
-`random(SEED, MIN, MAX, STEP)` 関数は、最小値と最大値、およびオプションの増分値を指定し、最小値から開始します。この関数は、指定された範囲内でランダムな結果を生成します。基準値（[オプションの `<random-value-sharing>`](#random-value-sharing) 引数）を使用すると、異なるプロパティや要素間でランダムな基底値を共有したり、変化させたりすることができます。
+`random(SEED, MIN, MAX, STEP)` 関数は、最小値と最大値、およびオプションの増分値を指定し、最小値から開始します。この関数は、指定された範囲内でランダムな結果を生成します。基準値（[オプションの `<random-key>`](#random-key) 引数）を使用すると、異なるプロパティや要素間でランダムな基底値を共有したり、変化させたりすることができます。
 
 関数が有効となるためには、指定された最小値、最大値、および増分値は、すべて同じデータ型でなければなりません。2 ～ 3 つの `<calc-sum>` 引数の単位は同じである必要はありませんが、{{cssxref("number")}}、{{cssxref("percentage")}}、 {{cssxref("length")}}、{{cssxref("angle")}}、{{cssxref("time")}}、{{cssxref("frequency")}} など、同じデータ型である必要があります。
 
@@ -89,24 +95,47 @@ random(--my-base, 1em, 3rem, 2px)
 
 乱数基準値は、[乱数のシード](/ja/docs/Glossary/RNG)と同様に機能します。これは、最終的な乱数結果を生成するために使用される開始値です。2 つの `random()` 関数が同じ基準値を共有する場合、その結果は予測可能なパターンで連動して変化します。基準値が異なる場合、その結果は互いに完全に独立しています。
 
-オプションの 1 つ目の `<random-value-sharing>` 引数は、乱数基準値の共有方法を制御します。共有を有効にすると、同じランダム生成値を再利用することができるようになり、これは一部のデザイン効果において不可欠です。値は、`auto`、`element-shared` キーワード、独自の {{cssxref("dashed-ident")}}、または `fixed <number>` に設定できます。`element-shared` キーワードと空白で区切った独自の {{cssxref("dashed-ident")}} を指定することも可能です。
+オプションの 1 つ目の `<random-key>` 引数は、ランダムなベース値の共有方法を制御します。この引数には、`auto`、スコープキーワード（`element-scoped`、`property-scoped`、`property-index-scoped` のいずれか）、カスタム {{cssxref("dashed-ident")}}、`fixed <number>`、あるいはスコープキーワードと組み合わせた `<dashed-ident>` を指定できます。
 
-#### `element-shared` キーワード
+#### スコープのキーワード
 
-`random()` 関数のうち `element-shared` キーワードを持つものはすべて、単一のプロパティについて、すべての要素で同じ乱数基準値を共有します。例えば、以下のように宣言した場合、`.a`、`.b`、`.c` は同じサイズの矩形となり、3 つとも同じランダムな幅を持ち、それぞれ独立して生成された同じランダムな高さを持つことになります。
+スコープキーワードを単独で使用すると、カスタム名を指定せずに共有を制御できます。
+
+- `property-scoped` は、プロパティごとにすべての要素間でベース値を共有します。
+- `element-scoped` は、プロパティごとにそれぞれの要素にカスタムベース値を割り当てます。
+- `property-index-scoped` は `property-scoped` と同様に動作しますが、同時に、一括指定内の位置に応じて `random()` の呼び出しを別個の形で分離します。
+
+`property-scoped` キーワードを使用すると、`.a`、`.b`、`.c` はすべて同一の矩形になります。これは、すべての要素が同じ `width` 値と同じ `height` 値を取得するためです。
 
 ```css
 .a,
 .b,
 .c {
-  width: random(element-shared, 10px, 200px);
-  height: random(element-shared, 10px, 200px);
+  width: random(property-scoped, 10px, 200px);
+  height: random(property-scoped, 10px, 200px);
 }
 ```
 
+`element-scoped` の値を設定すると、各要素にそれぞれ独立した `width` 値と `height` 値が割り当てられます。
+
+`property-index-scoped` キーワードは、それぞれの位置に独自の共有値が必要な一括指定で有益です。
+
+```css
+.a,
+.b,
+.c {
+  margin: random(property-index-scoped, 5px, 40px)
+    random(property-index-scoped, 5px, 40px)
+    random(property-index-scoped, 5px, 40px)
+    random(property-index-scoped, 5px, 40px);
+}
+```
+
+3 つの要素すべてに、同じ上マージンや右マージンといった具合に、同じマージン値が指定されていますが、4 つのマージン値は互いに異なります。
+
 #### カスタム名
 
-`<dashed-ident>`（`--custom-name` など）を指定すると、同じ名前を持つ要素のスタイル内のそれぞれの要素は、同じ乱数基準値を共有し、異なる `<dashed-ident>` 値を持つ要素には、それぞれ異なる乱数基準値が代入されます。以下のように宣言した場合、`.a`、`.b`、`.c` はすべて正方形になります。これは、各要素内において、同じ識別子を参照するすべてのプロパティが同じ基準値を共有するためです。したがって、それぞれの幅は高さと同じになります。なお、この場合、`.a`、`.b`、`.c` は異なるサイズになります。これは、基準値の共有が要素間ではなく、要素内のプロパティ間で行われるためです。
+単独で使用される `<dashed-ident>`（例：`--custom-name`）は、その基本値をグローバルに共有します。つまり、文書内のどこで同じ識別子を使用して `random()` を呼び出しても、同じ結果が取得されます。これにより、すべての `width` および `height` が同じ値に解決されるため、`.a`、`.b`、`.c` はまったく同じ正方形になります。
 
 ```css
 .a,
@@ -117,15 +146,24 @@ random(--my-base, 1em, 3rem, 2px)
 }
 ```
 
-#### `<dashed-ident>` と `element-shared` の設定
-
-`<dashed-ident>` を `element-shared` と組み合わせると（`random(--custom-name element-shared, 0, 100)` など）、同じ `<random-value-sharing>` 引数を使用する要素とプロパティの両方で、乱数基準値が共有されます。指定された例では、`.a`、`.b`、`.c` はすべて同じサイズの正方形になります。
+`<dashed-ident>` をスコープキーワードと組み合わせることで、その共有範囲を絞り込むことができます。`property-scoped` を指定すると、要素間でグローバルな状態を維持しつつ、プロパティごとに別個の状態で存在します。
 
 ```css
 .a,
 .b,
 .c {
-  width: random(--custom-name element-shared, , 10px, 200px);
+  width: random(--custom-name property-scoped, 10px, 200px);
+  height: random(--custom-name property-scoped, 10px, 200px);
+}
+```
+
+一方、`element-scoped` では、各要素内で `width` と `height` の関連性は維持されますが、それぞれの要素に独自の値が割り当てられるため、`.a`、`.b`、`.c` はそれぞれ異なるサイズの正方形になります。
+
+```css
+.a,
+.b,
+.c {
+  width: random(--custom-name element-shared, 10px, 200px);
   height: random(--custom-name element-shared, 10px, 200px);
 }
 ```
@@ -150,7 +188,7 @@ random(--my-base, 1em, 3rem, 2px)
 }
 ```
 
-`<random-value-sharing>` がデフォルト値であるか、明示的に `auto` に設定されている場合、ユーザーエージェントは、プロパティ名と順序に基づいた一貫したルールに従って、シード名、すなわち生成された値共有識別子を自動生成します。このため、`random()` 関数は同じシード名となり、その結果、同じ乱数基準値を持つことになります。この例では、`width` プロパティ値内の `random()` 関数に対して生成された値共有識別子は、`.foo` と `.foo:hover` で同じであるため、状態間で値は変化しません。同様に、両方の `margin` 宣言における最初の 2 つの `random()` 関数は、同じ生成値共有識別子を持っています。つまり、`margin` 一括指定の最初の 2 つの値は、ホバー時でも変更されません。ホバー時、`bar` の上マージンと右マージンは同じままですが、下マージンと左マージンには独立したランダム値が取得されます。それぞれの `random()` 関数に対して独立した値を取得するには、固有の {{cssxref("dashed-ident")}} を提供する必要があります。
+`<random-key>` がデフォルト値であるか、明示的に `auto` に設定されている場合、ユーザーエージェントは、プロパティ名と順序に基づいた一貫したルールに従って、シード名、すなわち生成された値共有識別子を自動生成します。このため、`random()` 関数は同じシード名となり、その結果、同じ乱数基準値を持つことになります。この例では、`width` プロパティ値内の `random()` 関数に対して生成された値共有識別子は、`.foo` と `.foo:hover` で同じであるため、状態間で値は変化しません。同様に、両方の `margin` 宣言における最初の 2 つの `random()` 関数は、同じ生成値共有識別子を持っています。つまり、`margin` 一括指定の最初の 2 つの値は、ホバー時でも変更されません。ホバー時、`bar` の上マージンと右マージンは同じままですが、下マージンと左マージンには独立したランダム値が取得されます。それぞれの `random()` 関数に対して独立した値を取得するには、固有の {{cssxref("dashed-ident")}} を提供する必要があります。
 
 ### カスタムプロパティ
 
@@ -212,7 +250,7 @@ random(--my-base, 1em, 3rem, 2px)
 
 #### CSS
 
-5 つのバッジを円として描画します。`random()` 関数を {{cssxref("color_value/hsl()")}} 色関数内で使用し、色相 ({{cssxref("hue")}}) の {{cssxref("angle")}} を定義します。`element-shared` を設定することで、デフォルトの `badge` と `desaturated` との間で乱数基準値を共有し、同じ色相 ({{cssxref("hue")}}) の彩度を抑えたバージョンとします。それから、基準値共有引数をデフォルトの `auto` に設定することで、`unique` バッジを上書きし、真にランダムな `hue` を実現します。
+5 つのバッジを円として描画します。`random()` 関数を {{cssxref("color_value/hsl()")}} 色関数内で使用し、色相 ({{cssxref("hue")}}) の {{cssxref("angle")}} を定義します。`property-scoped` を設定することで、デフォルトの `badge` と `desaturated` との間で乱数基準値を共有し、同じ色相 ({{cssxref("hue")}}) の彩度を抑えたバージョンとします。それから、基準値共有引数をデフォルトの `auto` に設定することで、`unique` バッジを上書きし、真にランダムな `hue` を実現します。
 
 ```css
 .badge {
@@ -220,10 +258,10 @@ random(--my-base, 1em, 3rem, 2px)
   width: 5em;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background: hsl(random(element-shared, 0, 360) 50% 50%);
+  background: hsl(random(property-scoped, 0, 360) 50% 50%);
 }
 .badge.desaturated {
-  background: hsl(random(element-shared, 0, 360) 10% 50%);
+  background: hsl(random(property-scoped, 0, 360) 10% 50%);
 }
 .badge.unique {
   background: hsl(random(0, 360) 50% 50%);
@@ -248,11 +286,11 @@ random(--my-base, 1em, 3rem, 2px)
 
 ### プロパティ間で乱数値を共有
 
-この例では、星が散りばめられた背景を作成し、`<dashed-ident>` を使用して要素のプロパティ間でシード値を共有する方法を示します。
+この例では、星が散りばめられた背景を作成し、`<dashed-ident>` と `element-scoped` を組み合わせて、要素間で値を共有することなく、それぞれの要素内のプロパティ間でランダムな基本値を共有する方法を示します。
 
 #### HTML
 
-5 つの粒子があり、それらはすべて同じクラス名を持っています。
+5 つの粒があり、それらはすべて同じクラス名を持っています。
 
 ```html
 <div class="particle"></div>
@@ -264,7 +302,7 @@ random(--my-base, 1em, 3rem, 2px)
 
 #### CSS
 
-すべての粒子に同じスタイルが適用されています。それぞれの粒子のサイズと位置をランダムに設定するために、`random()` 関数を使用して {{cssxref("height")}}、{{cssxref("width")}}、{{cssxref("top")}}、{{cssxref("left")}} の値を決定しています。`height` と `width` の基準値として `<dashed-ident>` を使用しています。これは、指定された範囲内では粒子のサイズが互いに独立しているものの、それぞれの粒子の `height` は `width` と同じになることを意味します。`top` と `left` プロパティについては、基準値を `auto` に設定することができるため、各プロパティおよび要素の基準値は互いに独立しています。
+すべての粒に同じスタイルが適用されています。`random()` 関数を使用して、{{cssxref("height")}}、{{cssxref("width")}}、{{cssxref("top")}}、{{cssxref("left")}} の値をランダムに設定し、それぞれの粒のサイズと位置をランダムに決定します。`<dashed-ident>` に `height` と `width` に対して `element-scoped` を組み合わせることで、それぞれの粒は円（高さと幅が一致する）になりますが、サイズ設定は他の粒とは独立して行われます。`top` と `left` はデフォルトの `auto` のままにしているため、各軸が独立して位置指定されます。
 
 ```css
 body {
@@ -275,8 +313,8 @@ body {
   border-radius: 50%;
   background: white;
   position: fixed;
-  width: random(--particle-size, 0.25em, 1em);
-  height: random(--particle-size, 0.25em, 1em);
+  width: random(--particle-size element-scoped, 0.25em, 1em);
+  height: random(--particle-size element-scoped, 0.25em, 1em);
   top: random(0%, 100%);
   left: random(0%, 100%);
   animation: move 1s alternate-reverse infinite;

@@ -3,7 +3,7 @@ title: "Iterator : méthode statique zip()"
 short-title: zip()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/zip
 l10n:
-  sourceCommit: 5b9e4bb67e5cb4bb2b780e7338a6560463e5a1a7
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Iterator.zip()`** crée un nouvel objet {{JSxRef("Iterator")}} qui agrège plusieurs éléments à partir de plusieurs objets itérables en retournant des tableaux contenant les éléments à la même position. Elle permet essentiellement de "zipper" les itérables d'entrée, permettant une itération simultanée sur eux.
@@ -202,8 +202,8 @@ for (const [char1, char2] of it) {
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Iterator.zip` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/proposals/joint-iteration)
-- [Prothèse d'émulation es-shims de `Iterator.zip` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Iterator.zip` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator.zip` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
 - L'objet natif {{JSxRef("Iterator")}}
 - La méthode statique {{JSxRef("Iterator.zipKeyed()")}}
 - La méthode statique {{JSxRef("Iterator.from()")}}

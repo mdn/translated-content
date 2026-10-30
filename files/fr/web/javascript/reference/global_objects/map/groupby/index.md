@@ -3,7 +3,7 @@ title: "Map : méthode statique groupBy()"
 short-title: groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 > [!NOTE]
@@ -42,7 +42,7 @@ Map.groupBy(items, callbackFn)
 ### Paramètres
 
 - `items`
-  - : Un [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») (comme un objet {{JSxRef("Array")}}) dont les éléments seront groupés.
+  - : Un [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») (comme un objet {{JSxRef("Array")}}) dont les éléments sont groupés.
 - `callbackFn`
   - : Une fonction à exécuter pour chaque élément de l'itérable. Elle doit retourner une valeur ({{Glossary("object", "objet")}} ou {{Glossary("primitive", "valeur primitive")}}) indiquant le groupe de l'élément courant. La fonction est appelée avec les arguments suivants&nbsp;:
     - `element`
@@ -58,14 +58,14 @@ Un objet {{JSxRef("Map")}} avec une clé pour chaque groupe, chacune associée �
 
 `Map.groupBy()` appelle la fonction `callbackFn` fournie une fois pour chaque élément d'un itérable. La fonction de rappel doit retourner une valeur indiquant le groupe de l'élément associé. Les valeurs retournées par `callbackFn` sont utilisées comme clés pour l'objet {{JSxRef("Map")}} retourné par `Map.groupBy()`. Chaque clé est associée à un tableau contenant tous les éléments pour lesquels la fonction de rappel a retourné la même valeur.
 
-Les éléments de l'objet {{JSxRef("Map")}} retourné et de l'itérable d'origine sont les mêmes (il ne s'agit pas de {{Glossary("deep copy","copies profondes")}}). Toute modification de la structure interne des éléments sera répercutée à la fois dans l'itérable d'origine et dans l'objet {{JSxRef("Map")}} retourné.
+Les éléments de l'objet {{JSxRef("Map")}} retourné et de l'itérable d'origine sont les mêmes (il ne s'agit pas de {{Glossary("deep copy","copies profondes")}}). Toute modification de la structure interne des éléments est répercutée à la fois dans l'itérable d'origine et dans l'objet {{JSxRef("Map")}} retourné.
 
-Cette méthode est utile lorsque vous devez regrouper des informations associées à un objet particulier qui peut potentiellement changer au fil du temps. En effet, même si l'objet est modifié, il continuera de fonctionner comme clé pour la `Map` retournée. Si vous créez plutôt une représentation sous forme de chaîne de caractères pour l'objet et que vous l'utilisez comme clé de regroupement dans {{JSxRef("Object.groupBy()")}}, vous devrez maintenir la correspondance entre l'objet original et sa représentation lorsque l'objet change.
+Cette méthode est utile lorsque vous devez regrouper des informations associées à un objet particulier qui peut potentiellement changer au fil du temps. En effet, même si l'objet est modifié, il continue de fonctionner comme clé pour la `Map` retournée. Si vous créez plutôt une représentation sous forme de chaîne de caractères pour l'objet et que vous l'utilisez comme clé de regroupement dans {{JSxRef("Object.groupBy()")}}, vous devez maintenir la correspondance entre l'objet original et sa représentation lorsque l'objet change.
 
 > [!NOTE]
-> Pour accéder aux groupes dans la `Map` retournée, vous devez utiliser le même objet que celui qui a été initialement utilisé comme clé dans la `Map` (même si vous pouvez modifier ses propriétés). Vous ne pouvez pas utiliser un autre objet qui aurait simplement le même nom et les mêmes propriétés.
+> Pour accéder aux groupes dans la `Map` retournée, vous devez utiliser le même objet que celui qui a été initialement utilisé comme clé dans la `Map` (même si vous pouvez modifier ses propriétés). Vous ne pouvez pas utiliser un autre objet qui a simplement le même nom et les mêmes propriétés.
 
-`Map.groupBy` ne lit pas la valeur de `this`. Elle peut être appelée sur n'importe quel objet et une nouvelle instance de {{JSxRef("Map")}} sera retournée.
+`Map.groupBy` ne lit pas la valeur de `this`. Elle peut être appelée sur n'importe quel objet et une nouvelle instance de {{JSxRef("Map")}} est retournée.
 
 ## Exemples
 
@@ -121,8 +121,8 @@ console.log(resultat.get(restock2));
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Map.groupBy` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#array-grouping)
-- [Prothèse d'émulation es-shims de `Map.groupBy` <sup>(angl.)</sup>](https://www.npmjs.com/package/map.groupby)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Map.groupBy` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/collections#h-map)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Map.groupBy` <sup>(angl.)</sup>](https://www.npmjs.com/package/map.groupby)
 - Le guide [des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - La méthode {{JSxRef("Array.prototype.reduce()")}}
 - Le constructeur {{JSxRef("Map/Map", "Map()")}}

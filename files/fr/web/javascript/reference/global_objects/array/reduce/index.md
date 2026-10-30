@@ -3,7 +3,7 @@ title: "Array : méthode reduce()"
 short-title: reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`reduce()`** des instances {{JSxRef("Array")}} exécute une fonction de rappel «&nbsp;de réduction&nbsp;» fournie par l'utilisateur·ice sur chaque élément du tableau, dans l'ordre, en transmettant la valeur retournée par le calcul précédent. Le résultat final de l'exécution du réducteur sur tous les éléments du tableau est une seule valeur.
@@ -61,21 +61,21 @@ La valeur qui résulte de l'exécution de la fonction de rappel «&nbsp;de rédu
 
 ## Description
 
-La méthode `reduce()` est une [méthode itérative](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives). Elle exécute une fonction de rappel «&nbsp;de réduction&nbsp;» sur tous les éléments du tableau, dans l'ordre croissant des indices, et les accumule en une seule valeur. À chaque itération, la valeur retournée par `callbackFn` est transmise à nouveau à `callbackFn` lors de l'appel suivant en tant qu'`accumulator`. La dernière valeur de `accumulator` (c'est-à-dire la valeur retournée par `callbackFn` lors de la dernière itération du tableau) devient la valeur retournée par `reduce()`. Consultez la section [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives) pour plus d'informations sur le fonctionnement général de ces méthodes.
+La méthode `reduce()` est une [méthode itérative](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives). Elle exécute une fonction de rappel «&nbsp;de réduction&nbsp;» sur tous les éléments du tableau, dans l'ordre croissant des indices, et les accumule en une seule valeur. À chaque itération, la valeur retournée par `callbackFn` est transmise à nouveau à `callbackFn` lors de l'appel suivant en tant que `accumulator`. La dernière valeur de `accumulator` (c'est-à-dire la valeur retournée par `callbackFn` lors de la dernière itération du tableau) devient la valeur retournée par `reduce()`. Consultez la section [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives) pour plus d'informations sur le fonctionnement général de ces méthodes.
 
 `callbackFn` n'est appelée que pour les indices du tableau qui ont des valeurs attribuées. Elle n'est pas appelée pour les cases vides dans un [tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux).
 
 Contrairement aux autres [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives), `reduce()` n'accepte pas d'argument `thisArg`. `callbackFn` est toujours appelée avec la valeur `undefined` pour `this`, qui est remplacée par `globalThis` si `callbackFn` n'est pas en mode strict.
 
-`reduce()` est un concept central de la [programmation fonctionnelle](https://fr.wikipedia.org/wiki/Programmation_fonctionnelle)&nbsp;: il n'est pas possible d'y modifier une valeur, donc pour accumuler toutes les valeurs d'un tableau, il faut retourner une nouvelle valeur d'accumulateur à chaque itération. Cette convention s'applique à `reduce()` en JavaScript&nbsp;: il convient d'utiliser [l'opérateur de propagation](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) ou d'autres méthodes de copie pour créer de nouveaux tableaux et objets comme accumulateur, plutôt que de modifier l'existant. Si vous décidez de modifier l'accumulateur au lieu de le copier, veillez à toujours retourner l'objet modifié dans la fonction de rappel, sinon l'itération suivante recevra la valeur `undefined`. Cependant, copier l'accumulateur peut entraîner une utilisation accrue de la mémoire et une dégradation des performances&nbsp;: voir [Quand ne pas utiliser reduce()](#quand_ne_pas_utiliser_reduce) pour plus de détails. Dans ces cas, pour éviter de mauvaises performances et un code illisible, il est préférable d'utiliser une boucle `for` à la place.
+`reduce()` est un concept central de la [programmation fonctionnelle](https://fr.wikipedia.org/wiki/Programmation_fonctionnelle)&nbsp;: il n'est pas possible d'y modifier une valeur, donc pour accumuler toutes les valeurs d'un tableau, il faut retourner une nouvelle valeur d'accumulateur à chaque itération. Cette convention s'applique à `reduce()` en JavaScript&nbsp;: il convient d'utiliser [l'opérateur de propagation](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) ou d'autres méthodes de copie pour créer de nouveaux tableaux et objets comme accumulateur, plutôt que de modifier l'existant. Si vous décidez de modifier l'accumulateur au lieu de le copier, veillez à toujours retourner l'objet modifié dans la fonction de rappel, sinon l'itération suivante reçoit la valeur `undefined`. Cependant, copier l'accumulateur peut entraîner une utilisation accrue de la mémoire et une dégradation des performances&nbsp;: voir [Quand ne pas utiliser reduce()](#quand_ne_pas_utiliser_reduce) pour plus de détails. Dans ces cas, pour éviter de mauvaises performances et un code illisible, il est préférable d'utiliser une boucle `for` à la place.
 
 La méthode `reduce()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend seulement que la valeur de `this` possède une propriété `length` et des propriétés à clés entières.
 
 ### Cas particuliers
 
-Si le tableau ne contient qu'un seul élément (peu importe sa position) et qu'aucune `initialValue` n'est fournie, ou si `initialValue` est fournie mais que le tableau est vide, la valeur unique sera retournée _sans_ appeler `callbackFn`.
+Si le tableau ne contient qu'un seul élément (peu importe sa position) et qu'aucune `initialValue` n'est fournie, ou si `initialValue` est fournie mais que le tableau est vide, la valeur unique est retournée _sans_ appeler `callbackFn`.
 
-Si `initialValue` est fournie et que le tableau n'est pas vide, la méthode reduce appellera toujours la fonction de rappel en commençant à l'index 0.
+Si `initialValue` est fournie et que le tableau n'est pas vide, la méthode reduce appelle toujours la fonction de rappel en commençant à l'index 0.
 
 Si `initialValue` n'est pas fournie, la méthode reduce se comporte différemment selon que la longueur du tableau est supérieure à 1, égale à 1 ou égale à 0, comme illustré dans l'exemple suivant&nbsp;:
 
@@ -116,7 +116,7 @@ function reducer(accumulator, currentValue, index) {
 array.reduce(reducer);
 ```
 
-La fonction de rappel sera appelée quatre fois, avec les arguments et valeurs de retour suivants à chaque appel&nbsp;:
+La fonction de rappel est appelée quatre fois, avec les arguments et valeurs de retour suivants à chaque appel&nbsp;:
 
 |                 | `accumulator` | `currentValue` | `index` | Valeur retournée |
 | --------------- | ------------- | -------------- | ------- | ---------------- |
@@ -125,7 +125,7 @@ La fonction de rappel sera appelée quatre fois, avec les arguments et valeurs d
 | Troisième appel | `48`          | `18`           | `3`     | `66`             |
 | Quatrième appel | `66`          | `19`           | `4`     | `85`             |
 
-Le paramètre `array` ne change jamais pendant le processus&nbsp;: il reste toujours `[15, 16, 17, 18, 19]`. La valeur retournée par `reduce()` sera celle du dernier appel de la fonction de rappel (`85`).
+Le paramètre `array` ne change jamais pendant le processus&nbsp;: il reste toujours `[15, 16, 17, 18, 19]`. La valeur retournée par `reduce()` est celle du dernier appel de la fonction de rappel (`85`).
 
 ### Fonctionnement de `reduce()` avec une valeur initiale
 
@@ -138,7 +138,7 @@ Ici, on réduit le même tableau avec le même algorithme, mais en passant une `
 );
 ```
 
-La fonction de rappel sera appelée cinq fois, avec les arguments et valeurs de retour suivants à chaque appel&nbsp;:
+La fonction de rappel est appelée cinq fois, avec les arguments et valeurs de retour suivants à chaque appel&nbsp;:
 
 |                 | `accumulator` | `currentValue` | `index` | Valeur retournée |
 | --------------- | ------------- | -------------- | ------- | ---------------- |
@@ -148,7 +148,7 @@ La fonction de rappel sera appelée cinq fois, avec les arguments et valeurs de 
 | Quatrième appel | `58`          | `18`           | `3`     | `76`             |
 | Cinquième appel | `76`          | `19`           | `4`     | `95`             |
 
-La valeur retournée par `reduce()` dans ce cas sera `95`.
+La valeur retournée par `reduce()` dans ce cas est `95`.
 
 ### Additionner les valeurs d'un tableau d'objets
 
@@ -243,7 +243,7 @@ const objetSimilaireTableau = {
   0: 2,
   1: 3,
   2: 4,
-  3: 99, // ignoré par reduce() car length vaut 3
+  3: 99, // ignoré par reduce(), car length vaut 3
 };
 console.log(
   Array.prototype.reduce.call(objetSimilaireTableau, (x, y) => x + y),
@@ -303,7 +303,7 @@ for (const name of names) {
 }
 ```
 
-Ainsi, si votre accumulateur est un tableau ou un objet et que vous le copiez à chaque itération, vous pouvez accidentellement introduire une complexité quadratique dans votre code, ce qui dégradera rapidement les performances sur de grandes données. Cela s'est produit dans du code réel&nbsp;: voir par exemple [Rendre Tanstack Table 1000x plus rapide avec un changement d'une ligne <sup>(angl.)</sup>](https://jpcamara.com/2023/03/07/making-tanstack-table.html).
+Ainsi, si votre accumulateur est un tableau ou un objet et que vous le copiez à chaque itération, vous pouvez accidentellement introduire une complexité quadratique dans votre code, ce qui dégrade rapidement les performances sur de grandes données. Cela s'est produit dans du code réel&nbsp;: voir par exemple [Rendre Tanstack Table 1000x plus rapide avec un changement d'une ligne <sup>(angl.)</sup>](https://jpcamara.com/2023/03/07/making-tanstack-table.html).
 
 Quelques cas d'usage acceptables de `reduce()` sont donnés ci-dessus (notamment la somme d'un tableau, le chaînage de promesses et le chaînage de fonctions). Il existe d'autres cas où de meilleures alternatives à `reduce()` existent.
 
@@ -404,6 +404,8 @@ Dans les cas où `reduce()` est le meilleur choix, une bonne documentation et de
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.reduce` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.reduce` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.reduce)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.map()")}}
@@ -413,5 +415,3 @@ Dans les cas où `reduce()` est le meilleur choix, une bonne documentation et de
 - La méthode {{JSxRef("TypedArray.prototype.reduce()")}}
 - La méthode {{JSxRef("Object.groupBy()")}}
 - La méthode {{JSxRef("Map.groupBy()")}}
-- [Prothèse d'émulation de `Array.prototype.reduce` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.reduce` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.reduce)

@@ -3,7 +3,7 @@ title: "Math : méthode statique fround()"
 short-title: fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.fround()`** retourne la représentation en virgule flottante à [précision simple sur 32 bits <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) la plus proche d'un nombre.
@@ -49,7 +49,7 @@ Puisque `fround()` est une méthode statique de `Math`, vous l'utilisez toujours
 
 ## Exemples
 
-### Utiliser `Math.fround()`
+### Utiliser la méthode `Math.fround()`
 
 Le nombre 1,5 peut être représenté avec précision en système binaire, et sa représentation est identique en 32 bits et en 64 bits&nbsp;:
 
@@ -82,6 +82,6 @@ Math.fround(2 ** 150); // Infinity
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.fround` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
-- [La prothèse d'émulation es-shims pour `Math.fround` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.fround)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.fround` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.fround` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.fround)
 - La méthode statique {{JSxRef("Math.round()")}}

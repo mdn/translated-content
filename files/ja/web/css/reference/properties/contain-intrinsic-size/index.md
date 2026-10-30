@@ -1,11 +1,12 @@
 ---
-title: contain-intrinsic-size
+title: "`contain-intrinsic-size` プロパティ (CSS)"
+short-title: contain-intrinsic-size
 slug: Web/CSS/Reference/Properties/contain-intrinsic-size
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
-**`contain-intrinsic-size`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、要素が[サイズ抑制](/ja/docs/Web/CSS/Guides/Containment/Using#サイズ抑制)の対象である場合に、ブラウザーがレイアウトに使用する要素のサイズを設定します。
+**`contain-intrinsic-size`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、要素が[サイズ抑制](/ja/docs/Web/CSS/Guides/Containment/Using#サイズ抑制)の対象である場合に、ブラウザーがレイアウトに使用する要素のサイズを設定します。
 
 ## 構成要素のプロパティ
 

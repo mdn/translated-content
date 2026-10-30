@@ -1,57 +1,56 @@
 ---
-title: Définir des zones sur une grille
+title: Les zones d'une grille
 slug: Web/CSS/Guides/Grid_layout/Grid_template_areas
-original_slug: Web/CSS/CSS_grid_layout/Grid_template_areas
+l10n:
+  sourceCommit: 32bdfdb82cf91ce9942b694286dec62be2cc20aa
 ---
 
-{{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Line-based_placement", "Web/CSS/Guides/Grid_layout/Named_grid_lines","Web/CSS/Guides/Grid_layout")}}
+Dans le [guide sur la disposition en grille basée sur les lignes](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement), nous avons étudié les lignes de la grille et comment positionner les éléments par rapport à ces lignes. Lorsque vous utilisez la disposition en grille CSS, vous avez toujours des lignes, ce qui peut être un moyen simple de placer des éléments sur votre grille. Cependant, il existe une méthode alternative pour positionner les éléments sur la grille, que vous pouvez utiliser seule ou en combinaison avec la disposition basée sur les lignes. Cette méthode consiste à placer nos éléments en utilisant des zones de modèle nommées. Vous voyez très rapidement pourquoi nous appelons parfois cela la méthode de l'art ASCII pour la disposition en grille&nbsp;!
 
-Dans [le guide précédent](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement), on a étudié les lignes formées par une grille et comment positionner des objets sur ces lignes. Lorsqu'on utilise une grille CSS, on a toujours ces lignes et celles-ci permettent d'avoir une disposition simple. Toutefois, il existe une autre méthode de disposition avec les grilles, qu'on peut utiliser seule ou combinée avec les lignes. Avec cette méthode, on place les éléments sur des _zones_ de la grille. Nous allons voir dans ce guide comment cela fonctionne voire comment on peut faire de l'ASCII-art en CSS avec les grilles !
+## Nommer une zone de grille
 
-## Donner un nom à une zone de grille
-
-On a déjà utilisé la propriété {{cssxref("grid-area")}} précédemment. C'est cette propriété qui utilise les numéros des lignes comme valeur pour positionner une zone de grille :
+Vous avez déjà rencontré la propriété {{CSSxRef("grid-area")}}. C'est cette propriété qui peut prendre comme valeur les quatre lignes utilisées pour positionner une zone de grille.
 
 ```css
-.box1 {
+.boite1 {
   grid-area: 1 / 1 / 4 / 2;
 }
 ```
 
-Ici, on définit les quatre lignes qui entourent la zone en question :
+Ce que nous faisons ici en définissant les quatre lignes, c'est définir la zone en définissant les lignes qui entourent cette zone.
 
-![The Grid Area defined by lines](4_area.png)
+![La zone de grille définie par les lignes](4_area.png)
 
-On peut également définir une zone en lui donnant un nom puis en définissant l'emplacement de cette zone grâce à la propriété {{cssxref("grid-template-areas")}}. Vous pouvez choisir les noms de vos zones, on peut par exemple créer une disposition avec quatre zones :
+On peut également définir une zone en lui donnant un nom puis en définissant l'emplacement de cette zone grâce à la propriété {{CSSxRef("grid-template-areas")}}. Vous pouvez choisir les noms de vos zones. Par exemple, si nous souhaitons créer la disposition illustrée ci-dessous, nous pouvons identifier quatre zones principales.
 
-- Un en-tête (_header_)
-- Un pied de page (_footer_)
-- Une barre latérale (_sidebar_)
-- Le contenu principale (_content_)
+- Un en-tête
+- Un pied de page
+- Une barre latérale
+- Le contenu principale
 
-![An image showing a simple two column layout with header and footer](4_layout.png)
+![Une image montrant une disposition simple à deux colonnes avec un en-tête et un pied de page](4_layout.png)
 
-Avec {{cssxref("grid-area")}}, on affecte un nom à chacune de ces zones. Pour le moment, aucune disposition n'a été créée mais on a des noms qu'on pourra utiliser dans notre disposition :
+Avec {{CSSxRef("grid-area")}}, on affecte un nom à chacune de ces zones. Pour le moment, aucune disposition n'a été créée mais on a des noms qu'on peut utiliser dans notre disposition&nbsp;:
 
 ```css
-.header {
+.en-tete {
   grid-area: hd;
 }
-.footer {
+.pied-page {
   grid-area: ft;
 }
-.content {
+.contenu {
   grid-area: main;
 }
-.sidebar {
+.barre-laterale {
   grid-area: sd;
 }
 ```
 
-Grâce à ces noms, on peut créer l'organisation. Cette fois, plutôt que de placer les objets grâce aux numéros de ligne, on définit la disposition dans le conteneur de la grille :
+Une fois ces noms définis, on peut créer la disposition. Cette fois, plutôt que de placer les éléments grâce aux numéros de ligne définis sur les éléments eux-mêmes, on crée toute la disposition dans le conteneur de la grille. Ici, nous créons une grille à 9 colonnes et définissons que les zones `hd` et `ft` s'étendent sur les 9 colonnes, tandis que `sd` s'étend sur trois colonnes et `main` sur six. Chaque zone ne s'étend que sur une seule ligne.
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: minmax(100px, auto);
@@ -67,7 +66,7 @@ Grâce à ces noms, on peut créer l'organisation. Cette fois, plutôt que de pl
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
@@ -75,7 +74,7 @@ Grâce à ces noms, on peut créer l'organisation. Cette fois, plutôt que de pl
   margin: 0 auto;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -85,33 +84,33 @@ Grâce à ces noms, on peut créer l'organisation. Cette fois, plutôt que de pl
 ```
 
 ```html
-<div class="wrapper">
-  <div class="header">En-tête</div>
-  <div class="sidebar">Barre latérale</div>
-  <div class="content">Contenu</div>
-  <div class="footer">Pied de page</div>
+<div class="enveloppe">
+  <div class="en-tete">En-tête</div>
+  <div class="barre-laterale">Barre latérale</div>
+  <div class="contenu">Contenu</div>
+  <div class="pied-page">Pied de page</div>
 </div>
 ```
 
-{{EmbedLiveSample("Donner_un_nom_à_une_zone_de_grille", '300', '330')}}
+{{EmbedLiveSample("Nommer une zone de grille", 300, 305)}}
 
-Grâce à cette méthode, il n'est pas nécessaire de gérer chacun des éléments individuellement. Tout est organisé au travers du conteneur. La disposition est décrite grâce à la propriété {{cssxref("grid-template-areas")}}.
+Grâce à cette méthode, il n'est pas nécessaire de gérer chacun des éléments individuellement. Tout est organisé au travers du conteneur. La disposition est décrite grâce à la propriété {{CSSxRef("grid-template-areas")}}.
 
 ## Laisser une cellule vide
 
-Dans l'exemple précédent, toute la grille est occupée… On peut également utiliser cette méthode pour laisser des cellules vides. Pour cela, il faut utiliser un point à la place d'un nom de zone. Aussi, si on veut que le pied de page soit uniquement affiché sous le contenu, il faudra avoir trois cellules vides sous la barre latérale.
+Nous avons entièrement rempli notre grille avec des zones dans cet exemple, sans laisser d'espace blanc. Cependant, cette méthode de mise en page vous permet de laisser des cellules de la grille vides. Pour laisser une cellule vide, utilisez le point, `.`. Si nous souhaitons afficher uniquement le pied de page directement sous le contenu principal, nous devons laisser vides les trois cellules situées sous la barre latérale.
 
 ```css
-.header {
+.en-tete {
   grid-area: hd;
 }
-.footer {
+.pied-page {
   grid-area: ft;
 }
-.content {
+.contenu {
   grid-area: main;
 }
-.sidebar {
+.barre-laterale {
   grid-area: sd;
 }
 ```
@@ -121,7 +120,7 @@ Dans l'exemple précédent, toute la grille est occupée… On peut également u
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
@@ -129,7 +128,7 @@ Dans l'exemple précédent, toute la grille est occupée… On peut également u
   margin: 0 auto;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -139,7 +138,7 @@ Dans l'exemple précédent, toute la grille est occupée… On peut également u
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: minmax(100px, auto);
@@ -151,35 +150,35 @@ Dans l'exemple précédent, toute la grille est occupée… On peut également u
 ```
 
 ```html
-<div class="wrapper">
-  <div class="header">En-tête</div>
-  <div class="sidebar">Barre latérale</div>
-  <div class="content">Contenu</div>
-  <div class="footer">Pied de page</div>
+<div class="enveloppe">
+  <div class="en-tete">En-tête</div>
+  <div class="barre-laterale">Barre latérale</div>
+  <div class="contenu">Contenu</div>
+  <div class="pied-page">Pied de page</div>
 </div>
 ```
 
-{{EmbedLiveSample("Laisser_une_cellule_vide", '300', '330')}}
+{{EmbedLiveSample("Laisser une cellule vide", 300, 305)}}
 
-Si on veut que la disposition soit bien représentée, on peut utiliser plusieurs points. Tant que ceux-ci ne sont pas séparés par un espace, ils compteront pour une seule cellule. Dans le cas d'une disposition complexe, cela permet d'avoir des lignes et colonnes clairement alignées, y compris dans la règle CSS.
+Pour rendre la disposition plus claire, on peut utiliser plusieurs caractères `.`. Tant qu'il y a au moins un espace entre les points, ceux-ci sont considérés comme une seule cellule. Pour une mise en page complexe, il est avantageux d'avoir les lignes et les colonnes bien alignées. Cela permet en effet de voir directement, dans le code CSS, à quoi ressemble cette disposition.
 
 ## Occuper plusieurs cellules
 
-Dans notre exemple, chacune des zones occupe plusieurs cellules car on a répété le nom de la zone avec des espaces entre (on peut ajouter plus d'espaces si besoin, afin d'avoir une disposition lisible, c'est ce qu'on a fait précédemment pour que `hd` et `ft` soient alignés avec `main`).
+Dans notre exemple, chaque zone couvre plusieurs cellules de la grille et nous y parvenons en répétant plusieurs fois le nom de cette zone de grille, séparé par des espaces. Vous pouvez ajouter des espaces supplémentaires pour que vos colonnes restent bien alignées dans la valeur de `grid-template-areas`. Vous pouvez constater que nous avons procédé ainsi pour que les zones `hd` et `ft` s'alignent avec `main`.
 
-La zone qu'on crée avec les noms doit être rectangulaires. Actuellement, il n'existe pas de méthode pour créer une zone avec une forme de L (bien que la spécification indique qu'une prochaine version pourrait couvrir cette fonctionnalité). On peut toutefois agrandir des lignes horizontales aussi simplement que des colonnes. Par exemple, on pourrait avoir la barre latérale qui descend jusqu'en bas en remplaçant les points par `sd`.
+La zone que vous créez en enchaînant les noms de zones doit être rectangulaire, à l'heure actuelle, il n'existe aucun moyen de créer une zone en forme de L. La spécification indique toutefois qu'une version future pourrait offrir cette fonctionnalité. Vous pouvez toutefois faire s'étendre des zones sur plusieurs lignes aussi facilement que sur plusieurs colonnes. Par exemple, nous pouvons faire en sorte que notre barre latérale s'étende jusqu'à la fin du pied de page en remplaçant le `.` par `sd`.
 
 ```css
-.header {
+.en-tete {
   grid-area: hd;
 }
-.footer {
+.pied-page {
   grid-area: ft;
 }
-.content {
+.contenu {
   grid-area: main;
 }
-.sidebar {
+.barre-laterale {
   grid-area: sd;
 }
 ```
@@ -189,7 +188,7 @@ La zone qu'on crée avec les noms doit être rectangulaires. Actuellement, il n'
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
@@ -197,7 +196,7 @@ La zone qu'on crée avec les noms doit être rectangulaires. Actuellement, il n'
   margin: 0 auto;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -207,7 +206,7 @@ La zone qu'on crée avec les noms doit être rectangulaires. Actuellement, il n'
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: minmax(100px, auto);
@@ -219,32 +218,32 @@ La zone qu'on crée avec les noms doit être rectangulaires. Actuellement, il n'
 ```
 
 ```html hidden
-<div class="wrapper">
-  <div class="header">En-tête</div>
-  <div class="sidebar">Barre latérale</div>
-  <div class="content">Contenu</div>
-  <div class="footer">Pied de page</div>
+<div class="enveloppe">
+  <div class="en-tete">En-tête</div>
+  <div class="barre-laterale">Barre latérale</div>
+  <div class="contenu">Contenu</div>
+  <div class="pied-page">Pied de page</div>
 </div>
 ```
 
-{{EmbedLiveSample("Occuper_plusieurs_cellules", '300', '330')}}
+{{EmbedLiveSample("Occuper plusieurs cellules", 300, 305)}}
 
-La valeur utilisée pour {{cssxref("grid-template-areas")}} doit obligatoirement décrire une grille complète, sinon elle est considérée invalide et la propriété est ignorée. Cela signifie qu'il faut le même nombre de cellules pour chaque ligne (si une cellule est vide, on l'indiquera avec un point). Si des zones ne sont pas rectangulaires, cela sera également considéré comme invalide.
+La valeur de {{CSSxRef("grid-template-areas")}} doit afficher une grille complète, sinon elle est considérée comme invalide (et la propriété est ignorée). Cela signifie qu'il faut le même nombre de cellules pour chaque ligne (si une cellule est vide, on l'indique avec un point). Si des zones ne sont pas rectangulaires, c'est également considéré comme invalide.
 
-## Redéfinir une grille avec des _media queries_
+## Redéfinir une grille avec des requêtes de média
 
 Notre disposition fait désormais partie de notre feuille de style CSS. On peut donc l'adapter très facilement pour différentes résolutions. On peut redéfinir la position des objets sur la grille ou la grille elle-même, ou les deux simultanément.
 
-Pour ce faire, on définit les noms des zones en dehors de toute _media query_ afin de pouvoir y accéder quel que soit l'endroit où la zone sera placée.
+Lors de cette opération, définissez les noms de vos zones en dehors de toute _media query_. Ainsi, la zone de contenu est toujours appelée `main`, peu importe où elle est placée sur la grille.
 
-Pour la disposition vue précédemment, on définit ici une disposition par défaut sur une seule colonne pour les affichages étroits. On a donc une seule piste sur laquelle s'empilent les objets :
+Pour la disposition vue précédemment, on peut souhaiter avoir une disposition très basique pour les affichages étroits, en définissant une grille à une seule colonne et en empilant nos quatre éléments sur quatre lignes.
 
 ```css hidden
 * {
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
@@ -252,7 +251,7 @@ Pour la disposition vue précédemment, on définit ici une disposition par déf
   margin: 0 auto;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -262,20 +261,20 @@ Pour la disposition vue précédemment, on définit ici une disposition par déf
 ```
 
 ```css
-.header {
+.en-tete {
   grid-area: hd;
 }
-.footer {
+.pied-page {
   grid-area: ft;
 }
-.content {
+.contenu {
   grid-area: main;
 }
-.sidebar {
+.barre-laterale {
   grid-area: sd;
 }
 
-.wrapper {
+.enveloppe {
   display: grid;
   grid-auto-rows: minmax(100px, auto);
   grid-template-columns: 1fr;
@@ -287,11 +286,11 @@ Pour la disposition vue précédemment, on définit ici une disposition par déf
 }
 ```
 
-On peut ensuite redéfinir la disposition à l'intérieur des différentes _media queries_ utilisées pour avoir une disposition sur deux colonnes, voire trois lorsque l'espace le permet. On notera que pour la disposition la plus large, on a une grille organisée sur 9 colonnes/pistes et on redéfinit l'emplacement des objets avec `grid-template-areas`.
+Nous pouvons ensuite redéfinir cette disposition à l'intérieur des [requêtes de média](/fr/docs/Web/CSS/Guides/Media_queries/Using) pour passer à une disposition sur deux colonnes, et éventuellement à trois colonnes si l'espace disponible est encore plus large. Notez que pour la disposition la plus large, nous conservons la grille à neuf colonnes, en redéfinissant l'emplacement des éléments à l'aide de `grid-template-areas`.
 
 ```css
-@media (min-width: 500px) {
-  .wrapper {
+@media (width >= 30em) {
+  .enveloppe {
     grid-template-columns: repeat(9, 1fr);
     grid-template-areas:
       "hd hd hd hd   hd   hd   hd   hd   hd"
@@ -299,8 +298,8 @@ On peut ensuite redéfinir la disposition à l'intérieur des différentes _medi
       "sd sd sd  ft  ft   ft   ft   ft   ft";
   }
 }
-@media (min-width: 700px) {
-  .wrapper {
+@media (width >= 60em) {
+  .enveloppe {
     grid-template-areas:
       "hd hd hd   hd   hd   hd   hd   hd hd"
       "sd sd main main main main main ft ft";
@@ -309,29 +308,29 @@ On peut ensuite redéfinir la disposition à l'intérieur des différentes _medi
 ```
 
 ```html hidden
-<div class="wrapper">
-  <div class="header">En-tête</div>
-  <div class="sidebar">Barre latérale</div>
-  <div class="content">Contenu</div>
-  <div class="footer">Pied de page</div>
+<div class="enveloppe">
+  <div class="en-tete">En-tête</div>
+  <div class="barre-laterale">Barre latérale</div>
+  <div class="contenu">Contenu</div>
+  <div class="pied-page">Pied de page</div>
 </div>
 ```
 
-{{EmbedLiveSample("Redéfinir_une_grille_avec_des_media_queries", '550', '330')}}
+{{EmbedLiveSample("Redéfinir une grille avec des requêtes de média", 550, 330)}}
 
 ## Utiliser `grid-template-areas` pour des éléments d'interface utilisateur
 
-La plupart des exemples illustrent une utilisation de la grille pour la disposition principale de la page. Toutefois, une grille peut également être utile pour les petits éléments. {{cssxref("grid-template-areas")}} est assez pratique car elle permet de voir facilement à quoi ressemblera l'élément.
+La plupart des exemples illustrent une utilisation de la grille pour la disposition principale de la page. Toutefois, une grille peut également être utile pour les petits éléments. Utiliser {{CSSxRef("grid-template-areas")}} est assez pratique, car elle permet de voir facilement à quoi ressemble l'élément.
 
 ### Exemple d'objet média
 
-Dans l'exemple qui suit, on crée un objet « media » qui servira de composant pour afficher un media (une image par exemple) d'un côté et un texte de l'autre. On pourra ainsi voir l'effet obtenu en changeant la disposition avec l'image à droite ou à gauche.
+Dans l'exemple qui suit, nous créons un «&nbsp;[objet média](/fr/docs/Web/CSS/How_to/Layout_cookbook/Media_objects)&nbsp;». Il s'agit d'un composant avec un espace pour une image ou un autre média d'un côté et du contenu de l'autre. L'image peut être affichée à droite ou à gauche de la boîte.
 
-![Images showing an example media object design](4_media_objects.png)
+![Images montrant un exemple de conception d'objet média](4_media_objects.png)
 
-Ici, la grille se compose de deux pistes en colonnes. La colonne pour l'image est dimensionnée avec `1fr` et celle pour le texte reçoit `3fr`. Si on souhaitait utiliser une largeur fixe pour l'image, on aurait pu utiliser des pixels pour définir la taille de la colonne et utiliser `1fr` pour la zone du texte. Cette colonne de `1fr` aurait alors occupé le reste de l'espace.
+Notre grille est une grille de pistes à deux colonnes, avec une colonne pour l'image dimensionnée à `1fr` et le texte à `3fr`. Si vous souhaitez une zone d'image d'une largeur fixe, définissez la colonne de l'image avec une largeur en pixels et attribuez `1fr` à la zone de texte. Une piste de colonne unique de `1fr` occupe alors l'espace restant.
 
-Pour la zone dédiée à l'image, on crée une zone de grille intitulée `img` et pour le texte, on crée une seconde zone intitulée `content`. Ensuite, on utilise ces noms pour créer l'organisation via la propriété `grid-template-areas`.
+Nous donnons à la zone de l'image le nom de zone de grille `img` et à la zone de texte le nom `content`, puis nous pouvons les disposer à l'aide de la propriété `grid-template-areas`.
 
 ```css
 * {
@@ -343,8 +342,6 @@ Pour la zone dédiée à l'image, on crée une zone de grille intitulée `img` e
   border-radius: 5px;
   background-color: #fff4e6;
   max-width: 400px;
-}
-.media {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-areas: "img content";
@@ -356,7 +353,7 @@ Pour la zone dédiée à l'image, on crée une zone de grille intitulée `img` e
   background-color: #ffd8a8;
 }
 
-.media .text {
+.media .texte {
   grid-area: content;
   padding: 10px;
 }
@@ -365,18 +362,18 @@ Pour la zone dédiée à l'image, on crée une zone de grille intitulée `img` e
 ```html
 <div class="media">
   <div class="image"></div>
-  <div class="text">
+  <div class="texte">
     Dans cet exemple, on peut utiliser grid-template-areas pour échanger les
     places du texte et du media.
   </div>
 </div>
 ```
 
-{{EmbedLiveSample("Exemple_d'objet_média", '300', '200')}}
+{{EmbedLiveSample("Exemple d'objet média", 300, 200)}}
 
 ### Afficher l'image de l'autre côté
 
-Si on a besoin d'afficher l'image d l'autre côté, il suffit de redéfinir une grille pour laquelle la piste qui mesure `1fr` est en dernier et d'échanger les valeurs dans {{cssxref("grid-template-areas")}}.
+Si on a besoin d'afficher l'image d l'autre côté, il suffit de redéfinir une grille pour laquelle la piste qui mesure `1fr` est en dernier et d'échanger les valeurs dans {{CSSxRef("grid-template-areas")}}.
 
 ```css
 * {
@@ -388,15 +385,13 @@ Si on a besoin d'afficher l'image d l'autre côté, il suffit de redéfinir une 
   border-radius: 5px;
   background-color: #fff4e6;
   max-width: 400px;
-}
-.media {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-areas: "img content";
   margin-bottom: 1em;
 }
 
-.media.flipped {
+.media.retourne {
   grid-template-columns: 3fr 1fr;
   grid-template-areas: "content img";
 }
@@ -406,48 +401,48 @@ Si on a besoin d'afficher l'image d l'autre côté, il suffit de redéfinir une 
   background-color: #ffd8a8;
 }
 
-.media .text {
+.media .texte {
   grid-area: content;
   padding: 10px;
 }
 ```
 
 ```html
-<div class="media flipped">
+<div class="media retourne">
   <div class="image"></div>
-  <div class="text">
+  <div class="texte">
     Dans cet exemple, on peut utiliser grid-template-areas pour échanger les
     places du texte et du media.
   </div>
 </div>
 ```
 
-{{EmbedLiveSample("Afficher_l'image_de_l'autre_côté", '300', '200') }}
+{{EmbedLiveSample("Afficher l'image de l'autre côté", 300, 200)}}
 
 ## Les propriétés raccourcies pour les grilles CSS
 
-Nous avons vu différentes façons de placer des objets sur une grille et plusieurs des propriétés utilisées pour définir une grille. Voyons maintenant les propriétés raccourcies qui sont disponibles pour les grilles CSS et qui permettent de rendre le code un peu plus concis.
+Regardons différentes façons de placer des éléments sur nos grilles et de nombreuses propriétés utilisées pour définir la grille, c'est le bon moment pour jeter un œil à quelques raccourcis disponibles pour définir la grille et de nombreuses choses à son sujet en une seule ligne de CSS.
 
-Attention, ces propriétés peuvent parfois devenir complexes à lire, que ce soit pour les autres développeurs qui liraient votre code voire pour vous-même d'ici quelques semaines. Cependant, elles font partie de la spécification et vous pourrez les rencontrer dans des exemples ou dans d'autres bases de code.
+Cela peut rapidement devenir difficile à lire pour d'autres développeur·euse·s, ou même pour vous-même à l'avenir. Cependant, ils font partie de la spécification et il est probable que vous les rencontrez dans des exemples ou en utilisation par d'autres développeur·euse·s, même si vous choisissez de ne pas les utiliser.
 
-Avant d'utiliser une propriété raccourcie, il est préférable de se rappeler qu'une propriété raccourcie permet d'en définir plusieurs grâce à une seule règle **mais aussi** qu'une propriété raccourcie réinitialise les propriétés avec leurs valeurs initiales lorsqu'elles ne sont pas déclarées via la propriété raccourcie. Aussi, si vous utilisez une propriété raccourcie, sachez qu'elle peut réinitialiser une propriété que vous auriez utilisé autre part.
+Avant d'utiliser un raccourci, il convient de se rappeler que les raccourcis permettent non seulement de définir de nombreuses propriétés en une seule fois, mais qu'ils **réinitialisent** également tout ce que vous ne définissez pas (ou ne pouvez pas définir) dans le raccourci à leurs valeurs initiales. Par conséquent, si vous utilisez un raccourci, soyez conscient qu'il peut réinitialiser des choses que vous avez appliquées ailleurs.
 
-Les deux propriétés raccourcies pour les grilles sont `grid-template` et `grid`.
+Les deux propriétés raccourcies du conteneur de grille sont la propriété raccourcie de grille explicite {{CSSxRef("grid-template")}} et la propriété raccourcie de définition de grille {{CSSxRef("grid")}}.
 
 ### `grid-template`
 
-La propriété {{cssxref("grid-template")}} permet de définir les propriétés suivantes :
+La propriété raccourcie {{CSSxRef("grid-template")}} définit les propriétés longues suivantes&nbsp;:
 
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-areas")}}
+- {{CSSxRef("grid-template-rows")}}
+- {{CSSxRef("grid-template-columns")}}
+- {{CSSxRef("grid-template-areas")}}
 
-Cette propriété est appelée propriété raccourcie « explicite » car elle permet de paramétrer les aspects d'une grille définie explicitement. Elle n'a pas d'impact sur les propriétés qui créeraient des lignes ou colonnes implicites.
+On appelle cette propriété _propriété raccourcie de grille explicite_, car elle définit les valeurs que vous contrôlez lorsque vous définissez une grille explicite, et non celles qui affectent les éventuelles pistes de lignes ou de colonnes que le navigateur peut créer implicitement.
 
-Le fragment de code suivant crée une disposition identique à celle que nous avons vu plus haut dans cet article.
+Le code suivant crée une disposition avec {{CSSxRef("grid-template")}} qui est identique à celle créée précédemment dans ce guide.
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template:
     "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
@@ -459,25 +454,23 @@ Le fragment de code suivant crée une disposition identique à celle que nous av
 
 La première valeur correspond à celle de `grid-template-areas` mais on déclare également les tailles de chaque ligne à la fin de chaque ligne (avec `minmax(100px, auto)`).
 
-Après la valeur de `grid-template-areas`, on a un barre oblique (/) puis une liste de pistes qui définit les colonnes explicitement.
+Après la valeur de `grid-template-areas`, on a un barre oblique (`/`) puis une liste de pistes qui définit les colonnes explicitement.
 
 ### `grid`
 
-La propriété {{cssxref("grid")}} va un cran plus loin et définit également les propriétés utilisées par la grille implicite. Elle permet de paramétrer :
+La propriété raccourcie {{CSSxRef("grid")}} va un cran plus loin et définit également les propriétés utilisées par la grille implicite. Vous allez donc paramétrer&nbsp;:
 
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-areas")}}
-- {{cssxref("grid-auto-rows")}}
-- {{cssxref("grid-auto-columns")}}
-- {{cssxref("grid-auto-flow")}}
+- {{CSSxRef("grid-template-rows")}}
+- {{CSSxRef("grid-template-columns")}}
+- {{CSSxRef("grid-template-areas")}}
+- {{CSSxRef("grid-auto-rows")}}
+- {{CSSxRef("grid-auto-columns")}}
+- {{CSSxRef("grid-auto-flow")}}
 
-Cette propriété réinitialise également la propriété {{cssxref("gap")}} avec la valeur `0` mais, en revanche, elle ne permet pas de définir des espaces.
-
-On peut utiliser la même syntaxe qu'avec {{cssxref("grid-template")}} mais attention, cela réinitialisera les valeurs des autres propriétés :
+Vous pouvez utiliser cette syntaxe de la même manière que le raccourci {{CSSxRef("grid-template")}}. Sachez simplement que lorsque vous le faites, vous réinitialisez les autres valeurs définies par la propriété.
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid:
     "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
@@ -487,8 +480,8 @@ On peut utiliser la même syntaxe qu'avec {{cssxref("grid-template")}} mais atte
 }
 ```
 
-Dans les articles suivants, nous verrons les fonctionnalités offertes par cette propriété raccourcie, notamment pour le placement automatique et pour la propriété `grid-auto-flow`.
+Revenez sur les autres fonctionnalités offertes par cette propriété raccourcie en examinant le [placement automatique dans une disposition en grille](/fr/docs/Web/CSS/Guides/Grid_layout/Auto-placement) et la propriété `grid-auto-flow`.
 
-Après ces quelques guides, vous devriez désormais être en mesure de créer des grilles et de placer les éléments sur des lignes ou grâce à des zones nommées. Prenez le temps de construire certains motifs « classiques » à l'aide de grille pour mieux apprendre en manipulant. Au fur et à mesure, vous aurez des questions et arriverez sur des scénarios que nous n'avons pas encore évoqués. Dans la suite de ces articles, nous nous intéresserons plus en détails aux autres éléments de la spécification afin de pouvoir créer des dispositions plus complexes.
+## Étapes suivantes
 
-{{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Line-based_placement", "Web/CSS/Guides/Grid_layout/Named_grid_lines","Web/CSS/Guides/Grid_layout")}}
+Si vous suivez les [guides sur les grilles](/fr/docs/Web/CSS/Guides/Grid_layout#guides), vous pouvez créer des dispositions en grille avec le [placement basé sur les lignes](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement) ou des zones de modèle nommées. Examinez maintenant la création de [dispositions en grille avec des lignes de grille nommées](/fr/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines).

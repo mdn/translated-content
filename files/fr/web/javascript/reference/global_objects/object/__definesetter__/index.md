@@ -3,7 +3,7 @@ title: "Object : méthode __defineSetter__()"
 short-title: __defineSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
 l10n:
-  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 > [!NOTE]
@@ -43,7 +43,7 @@ Tous les objets qui héritent de `Object.prototype` (c'est-à-dire tous sauf les
 
 ## Exemples
 
-### Utiliser `__defineSetter__()`
+### Utiliser la méthode `__defineSetter__()`
 
 ```js
 const o = {};
@@ -96,7 +96,7 @@ console.log(o.anotherValue); // 5
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Object.prototype.__defineSetter__` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.prototype.__defineSetter__` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
 - La méthode [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - L'opérateur {{JSxRef("Functions/set", "set")}}
 - La méthode {{JSxRef("Object.defineProperty()")}}

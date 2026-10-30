@@ -2,7 +2,7 @@
 title: Estilizando tablas
 slug: Learn_web_development/Core/Styling_basics/Tables
 l10n:
-  sourceCommit: 56ccb15b023cb11234cd044a68d6d3a93e752326
+  sourceCommit: 1b7c3c1e03f14c3878e4d8518b0f1a89bedfdc9c
 ---
 
 {{LearnSidebar}}
@@ -244,7 +244,7 @@ Carga tu HTML en un navegador para ver cómo se ve de forma predeterminada.
 
 ## Actualizar la fuente
 
-Este es un punto menor, y no estrictamente relevante para el estilo de tablas, pero pensamos que la fuente predeterminada se veía un poco demasiado formal para una tabla sobre bandas punk. Comienza tu CSS agregando la siguiente regla:
+Comienza tu CSS agregando la siguiente regla:
 
 ```css
 html {
@@ -354,7 +354,7 @@ Queríamos dedicar una sección aparte para mostrarte cómo implementar **rayas 
 
 ```css
 tbody tr:nth-child(odd) {
-  background-color: #eeeeee;
+  background-color: #dddddd;
 }
 ```
 
@@ -426,7 +426,7 @@ tfoot {
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #eeeeee;
+  background-color: #dddddd;
 }
 
 caption {

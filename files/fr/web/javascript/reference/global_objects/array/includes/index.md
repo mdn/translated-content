@@ -3,7 +3,7 @@ title: "Array : méthode includes()"
 short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 l10n:
-  sourceCommit: 76972cdb4d87dd72e0a2a3146af07d82c7ef7d67
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`includes()`** des instances de {{JSxRef("Array")}} détermine si un tableau contient une certaine valeur parmi ses éléments, et retourne `true` ou `false` selon le cas.
@@ -37,7 +37,7 @@ includes(searchElement, fromIndex)
 - `searchElement`
   - : La valeur à rechercher.
 - `fromIndex` {{Optional_Inline}}
-  - : La position (en partant de 0) dans le tableau à partir de laquelle commencer la recherche. Cette valeur est [convertie en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière).
+  - : La position (en partant de 0) dans le tableau à partir de laquelle commencer la recherche. Cette valeur est [convertie en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier).
     - Un indice négatif compte à rebours depuis la fin du tableau — si `-array.length <= fromIndex < 0`, `fromIndex + array.length` est utilisé. Cependant, le tableau est tout de même parcouru de l'avant vers l'arrière dans ce cas.
     - Si `fromIndex < -array.length` ou si `fromIndex` est omis, `0` est utilisé, ce qui fait que tout le tableau est parcouru.
     - Si `fromIndex >= array.length`, le tableau n'est pas parcouru et `false` est retourné.
@@ -56,7 +56,7 @@ La méthode `includes()` est [générique](/fr/docs/Web/JavaScript/Reference/Glo
 
 ## Exemples
 
-### Utilisation d'`includes()`
+### Utiliser la méthode `includes()`
 
 ```js
 [1, 2, 3].includes(2); // true
@@ -131,6 +131,8 @@ console.log(Array.prototype.includes.call(objetSimilaireTableau, 1));
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.includes` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.includes` <sup>(angl.)</sup>](https://www.npmjs.com/package/array-includes)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.indexOf()")}}
@@ -138,5 +140,3 @@ console.log(Array.prototype.includes.call(objetSimilaireTableau, 1));
 - La méthode {{JSxRef("Array.prototype.findIndex()")}}
 - La méthode {{JSxRef("TypedArray.prototype.includes()")}}
 - La méthode {{JSxRef("String.prototype.includes()")}}
-- [Prothèse d'émulation de `Array.prototype.includes` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.includes` <sup>(angl.)</sup>](https://www.npmjs.com/package/array-includes)

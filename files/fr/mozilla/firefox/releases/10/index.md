@@ -21,7 +21,7 @@ Firefox 10 est sorti le 31 janvier 2012. Cet article fournit des informations su
 ### JavaScript
 
 - La méthode `WeakMap.set()` retourne maintenant `undefined`, au lieu de retourner elle-même.
-- Un bogue a été introduit dans la gestion des expressions régulières dans Firefox 7&nbsp;; il a été corrigé. Voir [le bogue Firefox 683838 <sup>(angl.)</sup>](https://bugzil.la/683838) si vous voulez les détails sanglants.
+- Un bogue a été introduit dans la gestion des expressions rationnelles dans Firefox 7&nbsp;; il a été corrigé. Voir [le bogue Firefox 683838 <sup>(angl.)</sup>](https://bugzil.la/683838) si vous voulez les détails sanglants.
 - Vous ne pouvez plus utiliser la syntaxe ECMAScript pour XML (E4X) obsolète en mode strict [ECMAScript 5](/fr/docs/Web/JavaScript/Reference/Strict_mode) (c'est-à-dire après `"use strict;"`).
 
 ### DOM

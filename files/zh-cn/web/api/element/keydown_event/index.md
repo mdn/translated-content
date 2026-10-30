@@ -1,61 +1,46 @@
 ---
 title: Element：keydown 事件
 slug: Web/API/Element/keydown_event
+l10n:
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
-**`keydown`** 事件触发于键盘按键按下的时候。
+**`keydown`** 事件在某个键被按下时触发。
 
-与 [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event) 事件不同的是，所有按键均会触发 `keydown` 事件，无论这些按键是否会产生字符值。
+与已弃用的 {{domxref("Element/keypress_event", "keypress")}} 事件不同，`keydown` 事件会针对所有按键触发，无论它们是否产生字符值。
 
-<table class="properties">
-  <thead></thead>
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("KeyboardEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onkeydown", "onkeydown")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+`keydown` 和 [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) 事件提供一个表明按下了哪个键的代码，而 `keypress` 表明输入了哪个字符。例如，小写字母“a”在 `keydown` 和 `keyup` 中会被报告为 65，但在 `keypress` 中为 97。所有事件均将大写字母“A”报告为 65。
 
-`keydown` 与 [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) 事件捕获了键盘按键的操作，而 `keypress` 反映了具体输入某个字符的值。比如，小写"a" 在`keydown` 和 `keyup`事件中输出的是大写 A 的 Unicode 编码 65，但是在`keypress`中输出的就是小写"a"的 Unicode 编码 97。大写 "A"在这些事件中输出的都是 Unicode 编码 65。
+按键事件的事件目标是当前正在处理键盘操作的焦点元素。这包括：{{HTMLElement("input")}}、{{HTMLElement("textarea")}}、任何设置了 [`contentEditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable) 的元素，以及其他可通过键盘交互的元素，例如 {{HTMLElement("a")}}、{{HTMLElement("button")}} 和 {{HTMLElement("summary")}}。如果没有合适的元素处于焦点，事件目标将是 {{HTMLElement("body")}} 或根元素。此事件会[冒泡](/zh-CN/docs/Learn_web_development/Core/Scripting/Event_bubbling)。它可以到达 {{domxref("Document")}} 和 {{domxref("Window")}}。
 
-键盘事件只能由 `<inputs>`, `<textarea>` 以及任何具有 `contentEditable` 或 `tabindex="-1"`属性的组件触发。
+不同按键事件之间，事件目标可能会改变。例如，按下 <kbd>Tab</kbd> 键时，`keydown` 的目标会与 `keyup` 的目标不同，因为焦点已经改变。
 
-自 Firefox 65 起， `keydown` 与 [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) 事件会在 IME（输入法编辑器）复合事件中被触发，目的是为了提升 CJKT（中日韩台地区）用户跨浏览器性能，([Firefox bug 354358](https://bugzil.la/354358)). 若要忽略复合事件中所有 `keydown` 事件，可以按照如下代码修改 (229 是某个在 IME 中触发的键盘事件对应的 `keyCode`):
+## 语法
 
-```js
-eventTarget.addEventListener("keydown", (event) => {
-  if (event.isComposing || event.keyCode === 229) {
-    return;
-  }
-  // do something
-});
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
+
+```js-nolint
+addEventListener("keydown", (event) => { })
+
+onkeydown = (event) => { }
 ```
+
+## 事件类型
+
+{{domxref("KeyboardEvent")}}。继承自 {{domxref("UIEvent")}} 和 {{domxref("Event")}}。
+
+{{InheritanceDiagram("KeyboardEvent")}}
 
 ## 示例
 
 ### addEventListener keydown 示例
 
-这个例子展示了当你在{{HtmlElement("input")}}元素中按下一个按键时， {{domxref("KeyboardEvent.code")}} 的取值
+每当你在 {{HtmlElement("input")}} 元素内按下某个键时，此示例会记录 {{domxref("KeyboardEvent.code")}} 的值。
 
 ```html
-<input placeholder="Click here, then press down a key." size="40" />
+<input placeholder="点这里，然后按下某个键。" size="40" />
 <p id="log"></p>
 ```
 
@@ -72,11 +57,21 @@ function logKey(e) {
 
 {{EmbedLiveSample("addEventListener_keydown_示例")}}
 
-### onkeydown 示例
+### 使用 IME 时的 keydown 事件
+
+从 Firefox 65 开始，`keydown` 和 [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) 事件现在会在{{glossary("Input method editor", "输入法编辑器")}}的组合期间触发，以提升 CJKT 用户的跨浏览器兼容性（[Firefox bug 354358](https://bugzil.la/354358)）。要忽略所有属于组合过程的 `keydown` 事件，可以像下面这样做（229 是与已被 IME 处理的事件相关的 `keyCode` 特殊值）：
 
 ```js
-input.onkeydown = logKey;
+eventTarget.addEventListener("keydown", (event) => {
+  if (event.isComposing || event.keyCode === 229) {
+    return;
+  }
+  // 执行某些操作
+});
 ```
+
+> [!NOTE]
+> 键入打开输入法的第一个字符时，`compositionstart` 可能在 `keydown` *之后*触发；键入关闭输入法的最后一个字符时，`compositionend` 可能在 `keydown` *之前*触发。在这些情况下，即使事件属于组合过程，`isComposing` 仍为 `false`。不过，此时 {{domxref("KeyboardEvent.keyCode")}} 仍为 `229`，因此尽管 `keyCode` 已弃用，仍建议一并检查它。
 
 ## 规范
 
@@ -91,4 +86,3 @@ input.onkeydown = logKey;
 - [`input`](/zh-CN/docs/Web/API/Element/input_event)
 - [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event)
 - [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event)
-- [Document `keydown` event](/zh-CN/docs/Web/API/Element/keydown_event)

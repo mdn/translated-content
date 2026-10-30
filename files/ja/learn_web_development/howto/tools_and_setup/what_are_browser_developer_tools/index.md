@@ -144,7 +144,7 @@ JavaScript デバッガーでは、変数の値を見たり、ブレークポイ
 
 さまざまなブラウザーでの JavaScript デバッガーについて詳しく知ることができます。
 
-- [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html))
+- [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
 - [Chrome Debugger](https://developer.chrome.com/docs/devtools/javascript/) （Opera と Edge のデバッガーも同様）
 - [Safari Sources tab](https://webkit.org/web-inspector/sources-tab/)
 

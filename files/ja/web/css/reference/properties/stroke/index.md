@@ -1,5 +1,5 @@
 ---
-title: CSS `stroke` プロパティ
+title: "`stroke` プロパティ (CSS)"
 short-title: stroke
 slug: Web/CSS/Reference/Properties/stroke
 l10n:

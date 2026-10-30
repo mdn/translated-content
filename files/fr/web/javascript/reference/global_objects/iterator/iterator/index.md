@@ -3,7 +3,7 @@ title: Constructeur Iterator()
 short-title: Iterator()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/Iterator
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Le constructeur **`Iterator()`** est destiné à être utilisé comme la [superclasse](/fr/docs/Web/JavaScript/Reference/Classes/extends) d'autres classes qui créent des itérateurs. Il lève une erreur s'il est construit directement.
@@ -15,7 +15,7 @@ new Iterator()
 ```
 
 > [!NOTE]
-> `Iterator()` peut seulement être construit avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` lance une {{JSxRef("TypeError")}}. De plus, `Iterator()` ne peut pas être construit lui-même — il est généralement construit implicitement via des appels à {{JSxRef("Operators/super", "super()")}} à l'intérieur du constructeur d'une sous-classe.
+> `Iterator()` peut seulement être construit avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` lance une {{JSxRef("TypeError")}}. De plus, `Iterator()` ne peut pas être construit lui-même — il est généralement construit implicitement avec des appels à {{JSxRef("Operators/super", "super()")}} à l'intérieur du constructeur d'une sous-classe.
 
 ### Paramètres
 
@@ -72,7 +72,7 @@ for (const nombre of fourchette) {
 - L'itérateur retourné hérite de {{JSxRef("Generator")}}, ce qui signifie que les modifications de `Generator.prototype` vont affecter l'itérateur retourné, constituant une fuite d'abstraction.
 - L'itérateur retourné n'hérite pas d'un prototype personnalisé, ce qui complique l'ajout de méthodes supplémentaires à l'itérateur.
 
-Nous pouvons imiter l'implémentation des itérateurs natifs, tels que [l'itérateurs de map](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator), en sous-classant `Iterator`. Cela permet de définir des propriétés supplémentaires, telles que [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag), tout en rendant disponibles les méthodes d'aide à l'itérateur sur l'itérateur retourné.
+Nous pouvons imiter l'implémentation des itérateurs natifs, tels que [l'itérateurs de tableau associatif](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator), en sous-classant `Iterator`. Cela permet de définir des propriétés supplémentaires, telles que [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag), tout en rendant disponibles les méthodes d'aide à l'itérateur sur l'itérateur retourné.
 
 ```js
 class Plage {
@@ -140,7 +140,7 @@ Le modèle de sous-classement est utile si vous souhaitez créer de nombreux it�
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Iterator` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-helpers)
-- [Prothèse d'émulation es-shims de `Iterator` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Iterator` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
 - L'objet natif {{JSxRef("Iterator")}}
 - La méthode statique {{JSxRef("Iterator.from()")}}

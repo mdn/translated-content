@@ -8,10 +8,10 @@ l10n:
 
 {{SeeCompatTable}}
 
-{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Save-Data`** est un [indications du client réseau](/fr/docs/Web/HTTP/Guides/Client_hints#indications_du_client_sur_le_réseau) qui indique la préférence du client pour une utilisation réduite des données.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Save-Data`** est une [indication du client réseau](/fr/docs/Web/HTTP/Guides/Client_hints#indications_du_client_sur_le_réseau) qui indique la préférence du client pour une utilisation réduite des données.
 Cela peut être pour des raisons telles que des coûts de transfert élevés, des vitesses de connexion lentes, etc.
 
-`Save-Data` est un [indications à faible entropie](/fr/docs/Web/HTTP/Guides/Client_hints#indications_à_faible_entropie), et peut donc être envoyé par le client même s'il n'est pas demandé par le serveur utilisant un {{HTTPHeader("Accept-CH")}} en-tête de réponse.
+`Save-Data` est une [indication à faible entropie](/fr/docs/Web/HTTP/Guides/Client_hints#indications_à_faible_entropie), et peut donc être envoyé par le client même s'il n'est pas demandé par le serveur utilisant un {{HTTPHeader("Accept-CH")}} en-tête de réponse.
 De plus, il doit être utilisé pour réduire les données envoyées au client indépendamment des valeurs des autres indices de client qui indiquent la capacité du réseau, comme {{HTTPHeader("Downlink")}} et {{HTTPHeader("RTT")}}.
 
 Une valeur de `On` indique que l'utilisateur·ice a explicitement choisi un mode de réduction de l'utilisation des données sur le client.

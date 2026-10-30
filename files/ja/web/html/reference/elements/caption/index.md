@@ -1,5 +1,5 @@
 ---
-title: HTML `<caption>` 表キャプション要素
+title: "`<caption>` 表キャプション要素"
 short-title: <caption>
 slug: Web/HTML/Reference/Elements/caption
 l10n:

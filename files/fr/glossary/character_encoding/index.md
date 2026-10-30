@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-Un **encodage de caractères** définit une correspondance entre les octets et le texte. Une séquence d'octets permet différentes interprétations textuelles. En spécifiant un codage particulier (tel que UTF-8), nous spécifions comment la séquence d'octets doit être interprétée.
+Un **encodage de caractères** définit une correspondance entre les octets et le texte. Une séquence d'octets permet différentes interprétations textuelles. En définissant un codage particulier (tel que UTF-8), nous définissons comment la séquence d'octets doit être interprétée.
 
 Par exemple, en HTML, nous déclarons généralement l'usage du codage de caractères UTF-8 en utilisant la ligne suivante&nbsp;:
 
@@ -13,7 +13,7 @@ Par exemple, en HTML, nous déclarons généralement l'usage du codage de caract
 <meta charset="utf-8" />
 ```
 
-Ceci nous permet de nous assurer que nous pouvons utiliser des caractères issus de presque toutes les langues humaines dans notre document HTML et que ces caractères seront affichés correctement.
+Ceci nous permet de nous assurer que nous pouvons utiliser des caractères issus de presque toutes les langues humaines dans notre document HTML et que ces caractères sont affichés correctement.
 
 ## Voir aussi
 

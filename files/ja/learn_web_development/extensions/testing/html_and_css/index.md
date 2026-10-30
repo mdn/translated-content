@@ -342,7 +342,7 @@ Mozilla Developer Network (MDN) を使用するために、ほとんどの人は
 - その他の補助的なリファレンス素材、例えば[ウェブ上のメディア型と形式のガイド](/ja/docs/Web/Media/Guides/Formats)など。
 - 特定の問題を解決する有益なチュートリアル、例えば[ブラウザーに依存しない動画プレイヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)。
 
-[caniuse.com](https://caniuse.com/) は、いくつかの有益な外部リソースリンクとともに、対応する情報を提供しています。例えば、 <https://caniuse.com/#search=video> をご覧ください）テキストボックスに検索したい機能を入力してください）。
+[caniuse.com](https://caniuse.com/) は、いくつかの有益な外部リソースリンクとともに、対応する情報を提供しています。例えば、 <https://caniuse.com/#search=video> をご覧ください（テキストボックスに検索したい機能を入力してください）。
 
 [stackoverflow.com](https://stackoverflow.com/) (SO) は、質問をしたり、開発者仲間に解決策を共有してもらったり、前回の投稿を調べたり、他の開発者を助けたりすることができるフォーラムサイトです。新しい質問を投稿する前に、あなたの質問に対する答えがすでにあるかどうか見ていくことをお勧めします。例えば、SO で "disabling autofocus on HTML dialog" と検索したところ、すかさず [Disable showModal auto-focusing using HTML attributes](https://stackoverflow.com/questions/63267581/disable-showmodal-auto-focusing-using-html-attributes) がヒットしました。
 

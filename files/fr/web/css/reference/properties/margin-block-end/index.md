@@ -3,7 +3,7 @@ title: Propriété CSS `margin-block-end`
 short-title: margin-block-end
 slug: Web/CSS/Reference/Properties/margin-block-end
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`margin-block-end`** définit la marge logique de fin de bloc d'un élément, qui correspond à une marge physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément.

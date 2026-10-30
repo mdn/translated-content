@@ -3,14 +3,12 @@ title: Constructeur Temporal.PlainYearMonth()
 short-title: Temporal.PlainYearMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/PlainYearMonth
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 76c2e04d720aa8260ba7d75788ed96776aac35c6
 ---
-
-{{SeeCompatTable}}
 
 Le constructeur **`Temporal.PlainYearMonth()`** crée des objets {{JSxRef("Temporal.PlainYearMonth")}}.
 
-Ce constructeur permet de créer des instances en fournissant directement les données sous-jacentes. Comme pour toutes les autres classes `Temporal`, vous devriez généralement construire des objets `Temporal.PlainYearMonth` en utilisant la méthode statique {{JSxRef("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}, qui peut gérer une variété de types d'entrée.
+Ce constructeur permet de créer des instances en fournissant directement les données sous-jacentes. Comme pour toutes les autres classes `Temporal`, vous devez généralement construire des objets `Temporal.PlainYearMonth` en utilisant la méthode statique {{JSxRef("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}, qui peut gérer une variété de types d'entrée.
 
 ## Syntaxe
 
@@ -24,7 +22,7 @@ new Temporal.PlainYearMonth(year, month, calendar, referenceDay)
 > `Temporal.PlainYearMonth()` ne peut être construit qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` déclenche une {{JSxRef("TypeError")}}.
 
 > [!WARNING]
-> Évitez d'utiliser les paramètres `calendar` et `referenceDay`, car {{JSxRef("Temporal/PlainYearMonth/equals", "equals()")}} et {{JSxRef("Temporal/PlainYearMonth/compare", "compare()")}} prendront en compte le jour de référence pour la comparaison, ce qui peut entraîner que deux mois et années équivalentes soient considérées comme différentes si elles ont des jours de référence différents. Pour créer un objet `Temporal.PlainYearMonth` avec un calendrier non ISO, utilisez la méthode statique {{JSxRef("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}.
+> Évitez d'utiliser les paramètres `calendar` et `referenceDay`, car {{JSxRef("Temporal/PlainYearMonth/equals", "equals()")}} et {{JSxRef("Temporal/PlainYearMonth/compare", "compare()")}} prennent en compte le jour de référence pour la comparaison, ce qui peut entraîner que deux mois et années équivalentes soient considérées comme différentes si elles ont des jours de référence différents. Pour créer un objet `Temporal.PlainYearMonth` avec un calendrier non ISO, utilisez la méthode statique {{JSxRef("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}.
 
 ### Paramètres
 
@@ -68,7 +66,7 @@ console.log(ym3.toString()); // 2021-07-31[u-ca=chinese]
 
 ### Utilisation inappropriée
 
-Vous devriez éviter d'utiliser les paramètres `calendar` et `referenceDay`, sauf si vous savez que le `referenceDay` est le jour de référence canonique qui serait sélectionné par `Temporal.PlainYearMonth.from()` pour la même année-mois.
+Vous devez éviter d'utiliser les paramètres `calendar` et `referenceDay`, sauf si vous savez que le `referenceDay` est le jour de référence canonique qui est sélectionné par `Temporal.PlainYearMonth.from()` pour la même année-mois.
 
 ```js
 const ym = new Temporal.PlainYearMonth(2021, 7, "chinese", 1);

@@ -1,5 +1,5 @@
 ---
-title: HTML `<pre>` 整形済みテキスト要素
+title: "`<pre>` 整形済みテキスト要素"
 short-title: <pre>
 slug: Web/HTML/Reference/Elements/pre
 l10n:

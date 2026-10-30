@@ -3,7 +3,7 @@ title: "ARIA : rôle form"
 short-title: form
 slug: Web/Accessibility/ARIA/Reference/Roles/form_role
 l10n:
-  sourceCommit: 6193c69cb71e80e45e7dff97188253ed15d58321
+  sourceCommit: 705109e85b6c5a9142260c58a617ef295b3b1316
 ---
 
 Le rôle `form` peut être utilisé pour identifier un groupe d'éléments sur une page qui fournissent une fonctionnalité équivalente à celle d'un formulaire HTML. Le formulaire n'est pas exposé en tant que région de repère à moins qu'il n'ait un [nom accessible](/fr/docs/Glossary/Accessible_name).
@@ -25,7 +25,7 @@ Ceci est un formulaire qui collecte et enregistre les informations de contact d'
 Un [repère](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#3._rôles_de_repères) `form` identifie une région de contenu qui contient une collection d'éléments et d'objets qui, dans leur ensemble, se combinent pour créer un formulaire lorsque aucun autre repère nommé n'est approprié (par exemple, [`main`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/main_role) ou [`search`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)).
 
 > [!NOTE]
-> L'utilisation de l'élément {{HTMLElement("form")}} communique automatiquement une section de contenu en tant que repère `form`, si elle est fournie avec un nom accessible. Les développeur·euse·s devraient toujours préférer utiliser le bon élément HTML sémantique plutôt que d'utiliser ARIA.
+> L'utilisation de l'élément {{HTMLElement("form")}} communique automatiquement une section de contenu en tant que repère `form`, si elle est fournie avec un nom accessible. Les développeur·euse·s doivent toujours privilégier utiliser le bon élément HTML sémantique plutôt que d'utiliser ARIA.
 
 Utilisez l'élément HTML {{HTMLElement("form")}} si possible. L'élément `<form>` définit un repère `form` lorsqu'il a un nom accessible (par exemple, [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby), [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title)). Assurez-vous d'avoir une étiquette unique sur chaque formulaire dans un document pour aider les utilisateur·ice·s à comprendre l'objectif du formulaire. Cette étiquette doit être visible pour tous les utilisateur·ice·s, pas seulement pour les utilisateur·ice·s de technologies d'assistance. Utilisez le repère `search` au lieu du repère `form` lorsque le formulaire est utilisé pour des fonctionnalités de recherche.
 
@@ -94,6 +94,8 @@ Vous n'avez pas besoin de déclarer `role="form"` sur chaque [élément de formu
 Si un formulaire est utilisé pour la recherche, vous devez utiliser la valeur plus spécialisée [`role="search"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role).
 
 ### Étiquetage des repères
+
+Un nom accessible est fortement recommandé pour le rôle `form`, bien qu'il ne soit pas requis par l'ARIA.
 
 Chaque élément {{HTMLElement("form")}} et rôle de formulaire qui doit être exposé en tant que repère doit avoir un nom accessible. Ce nom permet à un·e utilisateur·ice de technologie d'assistance de comprendre rapidement l'objectif du repère de formulaire.
 

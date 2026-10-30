@@ -2,7 +2,7 @@
 title: Gestion des connexions dans HTTP/1.x
 slug: Web/HTTP/Guides/Connection_management_in_HTTP_1.x
 l10n:
-  sourceCommit: bc45e7d6005f231e1f18c8cec29ca0b7c1e694bb
+  sourceCommit: f0311fa176576faf8be270e23eaf25b725740d87
 ---
 
 La gestion des connexions est un sujet clé dans HTTP&nbsp;: l'ouverture et le maintien des connexions ont un impact important sur les performances des sites Web et des applications Web. Dans HTTP/1.x, il existe plusieurs modèles&nbsp;: _connexions de courte durée_, _connexions persistantes_ et _acheminement HTTP_.
@@ -18,7 +18,7 @@ Deux modèles plus récents ont été créés dans HTTP/1.1. Le modèle de conne
 > [!NOTE]
 > HTTP/2 ajoute des modèles supplémentaires pour la gestion des connexions.
 
-Il est important de noter que la gestion des connexions dans HTTP s'applique à la connexion entre deux nœuds consécutifs, ce qui est [saut par saut](/fr/docs/Web/HTTP/Reference/Headers#hop-by-hop_headers) et non [de bout en bout](/fr/docs/Web/HTTP/Reference/Headers#end-to-end_headers). Le modèle utilisé dans les connexions entre un client et son premier proxy peut différer du modèle entre un proxy et le serveur de destination (ou tout proxy intermédiaire). Les en-têtes HTTP impliqués dans la définition du modèle de connexion, comme {{HTTPHeader("Connection")}} et {{HTTPHeader("Keep-Alive")}}, sont des en-têtes [de saut par saut](/fr/docs/Web/HTTP/Reference/Headers#hop-by-hop_headers) dont les valeurs peuvent être modifiées par les nœuds intermédiaires.
+Il est important de noter que la gestion des connexions dans HTTP s'applique à la connexion entre deux nœuds consécutifs, ce qui est [saut par saut](/fr/docs/Web/HTTP/Reference/Headers#hop-by-hop_headers) et non [de bout en bout](/fr/docs/Web/HTTP/Reference/Headers#end-to-end_headers). Le modèle utilisé dans les connexions entre un client et son premier mandataire peut différer du modèle entre un mandataire et le serveur de destination (ou tout mandataire intermédiaire). Les en-têtes HTTP impliqués dans la définition du modèle de connexion, comme {{HTTPHeader("Connection")}} et {{HTTPHeader("Keep-Alive")}}, sont des en-têtes [de saut par saut](/fr/docs/Web/HTTP/Reference/Headers#hop-by-hop_headers) dont les valeurs peuvent être modifiées par les nœuds intermédiaires.
 
 Un sujet connexe est le concept de mise à niveau des connexions HTTP, dans lequel une connexion HTTP/1.1 est mise à niveau vers un protocole différent, tel que TLS/1.0, WebSocket, ou même HTTP/2 en clair. Ce [mécanisme de mise à niveau du protocole](/fr/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism) est documenté plus en détail ailleurs.
 
@@ -52,7 +52,7 @@ Dans HTTP/1.1, la persistance est la valeur par défaut, et l'en-tête n'est plu
 >
 > - Les [mandataires](https://fr.wikipedia.org/wiki/Proxy) bogués sont encore courants et cela conduit à des comportements étranges et erratiques que les développeur·euse·s web ne peuvent pas prévoir ni diagnostiquer facilement.
 > - L'acheminement est complexe à mettre en œuvre correctement&nbsp;: la taille de la ressource transférée, le [RTT](https://fr.wikipedia.org/wiki/Round-trip_delay_time) effectif qui est utilisé, ainsi que la bande passante effective, ont une incidence directe sur l'amélioration apportée par l'acheminement. Sans connaître ces éléments, les messages importants peuvent être retardés derrière des messages moins importants. La notion d'important évolue même pendant la mise en page&nbsp;! L'acheminement HTTP n'apporte donc qu'une amélioration marginale dans la plupart des cas.
-> - L'acheminement est soumis au {{Glossary("head of line blocking", "blocage en tête de ligne")}}.
+> - L'acheminement est envoyé au {{Glossary("head of line blocking", "blocage en tête de ligne")}}.
 >
 > Pour ces raisons, l'acheminement a été remplacé par un meilleur algorithme, le _multiplexage_, utilisé par HTTP/2.
 
@@ -83,10 +83,10 @@ Une meilleure gestion des connexions permet d'améliorer considérablement les p
 
 - [Évolution de HTTP](/fr/docs/Web/HTTP/Guides/Evolution_of_HTTP)
 - Termes du glossaire&nbsp;:
-  - {{Glossary('HTTP')}}
-  - {{Glossary('HTTP_2', 'HTTP/2')}}
-  - {{Glossary('QUIC')}}
-  - {{Glossary('Round Trip Time', 'Round Trip Time (RTT)')}}
-  - {{Glossary('TCP slow start')}}
-  - {{Glossary('TLS')}}
-  - {{Glossary('TCP', 'Transmission Control Protocol (TCP)')}}
+  - {{Glossary("HTTP")}}
+  - {{Glossary("HTTP_2", "HTTP/2")}}
+  - {{Glossary("QUIC")}}
+  - {{Glossary("Round Trip Time", "Round Trip Time (RTT)")}}
+  - {{Glossary("TCP slow start", "Démarrage lent TCP")}}
+  - {{Glossary("TLS")}}
+  - {{Glossary("TCP", "Transmission Control Protocol (TCP)")}}

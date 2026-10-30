@@ -3,10 +3,12 @@ title: Valeur d'attribut HTML `<input type="email">`
 short-title: <input type="email">
 slug: Web/HTML/Reference/Elements/input/email
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`email`** permettent à l'utilisateur·ice de saisir et d'éditer une adresse électronique ou, si l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Attributes/multiple) est indiqué, une liste d'adresses électroniques.
+
+La valeur saisie dans le champ est automatiquement validée pour vérifier s'il s'agit d'une chaîne de caractères vide ou d'une adresse mail valide (ou une liste de telles adresses) avant que le formulaire soit envoyé. Les pseudo-classes CSS {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} sont automatiquement appliquées selon la validité des champs afin d'indiquer visuellement si la valeur courante du champ est une adresse mail valide ou non.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
 
@@ -29,8 +31,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-La valeur saisie dans le champ est automatiquement validée pour vérifier s'il s'agit d'une chaîne de caractères vide ou d'une adresse mail valide (ou une liste de telles adresses) avant que le formulaire soit envoyé. Les pseudo-classes CSS {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} sont automatiquement appliquées selon la validité des champs afin d'indiquer visuellement si la valeur courante du champ est une adresse mail valide ou non.
 
 ## Valeur
 
@@ -74,14 +74,14 @@ Un attribut booléen qui indique, s'il est présent, que plusieurs adresses éle
 
 ### `pattern`
 
-L'attribut `pattern` est une expression régulière que doit respecter la valeur du champ afin d'être [valide](/fr/docs/Web/HTML/Guides/Constraint_validation). Cette expression régulière doit être une expression régulière valide pour JavaScript (telle qu'utilisée par [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et telle que documentée dans [ce guide](/fr/docs/Web/JavaScript/Guide/Regular_expressions)). Le marqueur `'u'` est fourni par le navigateur lors de la compilation de l'expression régulière afin que le motif soit traité comme une séquence de points de code Unicode plutôt que comme des caractères {{Glossary("ASCII")}}. Aucune barre oblique (`/`) ne doit être utilisée autour du motif.
+L'attribut `pattern` est une expression rationnelle que doit respecter la valeur du champ afin d'être [valide](/fr/docs/Web/HTML/Guides/Constraint_validation). Cette expression rationnelle doit être une expression rationnelle valide pour JavaScript (telle qu'utilisée par [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et telle que documentée dans [ce guide](/fr/docs/Web/JavaScript/Guide/Regular_expressions)). Le marqueur `'u'` est fourni par le navigateur lors de la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode plutôt que comme des caractères {{Glossary("ASCII")}}. Aucune barre oblique (`/`) ne doit être utilisée autour du motif.
 
-Si l'expression régulière est invalide ou que cet attribut n'est pas défini, l'attribut est ignoré.
+Si l'expression rationnelle est invalide ou que cet attribut n'est pas défini, l'attribut est ignoré.
 
 > [!NOTE]
 > L'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#title) peut être utilisé afin d'afficher une bulle d'informations qui explique les conditions à respecter. Il est également conseillé d'inclure un texte explicatif à proximité du champ.
 
-Voir [la section sur l'utilisation de cet attribut ci-après](#validation_grâce_à_une_expression_régulière) pour plus d'exemples.
+Voir [la section sur l'utilisation de cet attribut ci-après](#validation_grâce_à_une_expression_rationnelle) pour plus d'exemples.
 
 ### `placeholder`
 
@@ -134,7 +134,7 @@ Grâce à l'attribut booléen [`multiple`](/fr/docs/Web/HTML/Reference/Attribute
 <input id="emailAddress" type="email" multiple />
 ```
 
-{{EmbedLiveSample('Gérer plusieurs adresses mail', 600, 40)}}
+{{EmbedLiveSample("Gérer plusieurs adresses mail", 600, 40)}}
 
 Avec cet attribut, la valeur saisie est valide quand on saisit zéro, une ou plusieurs adresses électroniques bien formées, séparées par des virgules et éventuellement entourées de blancs.
 
@@ -180,7 +180,7 @@ La taille physique de la boîte de saisie peut être paramétrée grâce à l'at
 <input type="email" size="15" />
 ```
 
-{{EmbedLiveSample('Contrôler la taille physique', 600, 40)}}
+{{EmbedLiveSample("Contrôler la taille physique", 600, 40)}}
 
 #### Contrôler la taille de la valeur
 
@@ -196,7 +196,7 @@ Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 32 caractèr
 
 ### Fournir des options par défaut
 
-#### Fournir une seule option par défaut avec value
+#### Fournir une seule option par défaut avec `value`
 
 Comme toujours, vous pouvez fournir une valeur par défaut pour une boîte de saisie `email` en définissant son attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value)&nbsp;:
 
@@ -204,11 +204,11 @@ Comme toujours, vous pouvez fournir une valeur par défaut pour une boîte de sa
 <input type="email" value="default@example.com" />
 ```
 
-{{EmbedLiveSample("Fournir une seule option par défaut avec value", 600, 40)}}
+{{EmbedLiveSample("Fournir une seule option par défaut avec `value`", 600, 40)}}
 
 #### Proposer des suggestions
 
-Pour aller plus loin, vous pouvez fournir une liste d'options par défaut parmi lesquelles l'utilisateur·ice peut choisir en définissant l'attribut [`list`](/fr/docs/Web/HTML/Reference/Elements/input#list). Cela ne limite pas l'utilisateur·ice à ces options, mais lui permet de sélectionner plus rapidement des adresses électroniques courantes. Cela fournit aussi des suggestions à [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete). L'attribut `list` définit l'identifiant d'un {{HTMLElement("datalist")}}, qui contient à son tour un élément {{HTMLElement("option")}} par valeur suggérée&nbsp;; chaque `value` d'`option` correspond à la valeur suggérée pour la boîte de saisie d'adresse électronique.
+Pour aller plus loin, vous pouvez fournir une liste d'options par défaut parmi lesquelles l'utilisateur·ice peut choisir en définissant l'attribut [`list`](/fr/docs/Web/HTML/Reference/Elements/input#list). Cela ne limite pas l'utilisateur·ice à ces options, mais lui permet de sélectionner plus rapidement des adresses électroniques courantes. Cela fournit aussi des suggestions à [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete). L'attribut `list` définit l'identifiant d'un {{HTMLElement("datalist")}}, qui contient à son tour un élément {{HTMLElement("option")}} par valeur suggérée&nbsp;; chaque `value` de `option` correspond à la valeur suggérée pour la boîte de saisie d'adresse électronique.
 
 ```html
 <input type="email" size="40" list="defaultEmails" />
@@ -235,7 +235,7 @@ Il existe deux niveaux de validation de contenu pour les champs `email`. D'abord
 
 ### Validation simple
 
-Les navigateurs fournissent automatiquement une validation afin de s'assurer que seul un texte correspondant au format standard d'une adresse électronique Internet est saisi dans le champ. Les navigateurs utilisent un algorithme équivalent à l'expression régulière suivante&nbsp;:
+Les navigateurs fournissent automatiquement une validation afin de s'assurer que seul un texte correspondant au format standard d'une adresse électronique Internet est saisi dans le champ. Les navigateurs utilisent un algorithme équivalent à l'expression rationnelle suivante&nbsp;:
 
 ```js
 /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?)*$/i;
@@ -246,9 +246,9 @@ Pour en savoir plus sur le fonctionnement de la validation des formulaires et su
 > [!NOTE]
 > La spécification comporte certains problèmes relatifs aux noms de domaines internationaux et à la validation des adresses électroniques en HTML. Pour plus d'informations, voir [le bogue 15489 du W3C <sup>(angl.)</sup>](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489) et [whatwg/html#4562 <sup>(angl.)</sup>](https://github.com/whatwg/html/issues/4562).
 
-### Validation grâce à une expression régulière
+### Validation grâce à une expression rationnelle
 
-Si vous avez besoin que l'adresse électronique saisie soit restreinte à autre chose que «&nbsp;une chaîne de caractères qui ressemble à une adresse électronique&nbsp;», vous pouvez utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) pour définir une {{Glossary("regular expression", "expression régulière")}} à laquelle la valeur doit correspondre pour être valide. Si l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/input#multiple) est défini, chaque élément individuel de la liste séparée par des virgules doit correspondre à {{Glossary("regular expression", "l'expression régulière")}}.
+Si vous avez besoin que l'adresse électronique saisie soit restreinte à autre chose que «&nbsp;une chaîne de caractères qui ressemble à une adresse électronique&nbsp;», vous pouvez utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) pour définir une {{Glossary("regular expression", "expression rationnelle")}} à laquelle la valeur doit correspondre pour être valide. Si l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/input#multiple) est défini, chaque élément individuel de la liste séparée par des virgules doit correspondre à {{Glossary("regular expression", "l'expression rationnelle")}}.
 
 Par exemple, supposons que vous créez une page pour les employé·e·s de <i lang="en">Best Startup Ever, Inc.</i> qui leur permet de contacter leur service informatique en cas de besoin. Dans notre formulaire simplifié, l'utilisateur·ice doit saisir son adresse électronique et un message décrivant le problème rencontré. Nous voulons nous assurer que non seulement l'utilisateur·ice fournit une adresse électronique valide, mais aussi, pour des raisons de sécurité, que l'adresse soit une adresse interne à l'entreprise.
 
@@ -304,7 +304,13 @@ label::after {
 </form>
 ```
 
-{{EmbedLiveSample("", 700, 275)}}
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
+{{EmbedLiveSample("Validation grâce à une expression rationnelle", 700, 275)}}
 
 Le formulaire ({{HTMLElement("form")}}) contient un élément {{HTMLElement("input")}} de type `email` pour saisir l'adresse de l'utilisateur·ice, un élément {{HTMLElement("textarea")}} permettant de saisir le message et un élément `<input>` de type [`"submit"`](/fr/docs/Web/HTML/Reference/Elements/input/submit) qui forme un bouton permettant d'envoyer le formulaire. Chaque champ possède un élément {{HTMLElement("label")}} associé qui permet d'indiquer ce qui est attendu.
 
@@ -314,18 +320,18 @@ L'attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Elements/input#placeholde
 
 ![Adresse électronique invalide en état d'erreur avec une info-bulle affichant « veuillez saisir une adresse électronique ».](enter-valid-email-address.png)
 
-Si on utilise uniquement les attributs qu'on vient de décrire, on restreint les valeurs saisissables aux adresses électroniques valides de 64 caractères. Or, on veut également valider le fait que l'adresse respecte le format `[nomutilisateur]@beststartupever.com`. C'est pourquoi on utilise l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) avec la valeur `".+@beststartupever.com"`. Cette valeur est une expression régulière qui permet de vérifier que la chaîne de caractères contient un ou plusieurs caractères quelconques, ensuite suivi d'une arobase (`@`) puis du nom de domaine `beststartupever.com`.
+Si on utilise uniquement les attributs qu'on vient de décrire, on restreint les valeurs saisissables aux adresses électroniques valides de 64 caractères. Or, on veut également valider le fait que l'adresse respecte le format `[nomutilisateur]@beststartupever.com`. C'est pourquoi on utilise l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) avec la valeur `".+@beststartupever.com"`. Cette valeur est une expression rationnelle qui permet de vérifier que la chaîne de caractères contient un ou plusieurs caractères quelconques, ensuite suivi d'une arobase (`@`) puis du nom de domaine `beststartupever.com`.
 
-Notez que cette expression régulière ne permet pas de vérifier que l'adresse électronique est valide (on peut par exemple avoir `@beststartupever.com` (avec une espace en début de chaîne de caractères) ou encore `@@beststartupever.com` qui ne sont pas valides). En fait, le navigateur vérifie que l'adresse respecte l'expression régulière fournie **et** que l'adresse est valide. Autrement dit, avec le type `email` et cette valeur pour l'attribut `pattern`, on s'assure que l'adresse est une adresse électronique valide et que c'est une bien une adresse avec le nom de domaine `beststartupever.com`.
+Notez que cette expression rationnelle ne permet pas de vérifier que l'adresse électronique est valide (on peut par exemple avoir `@beststartupever.com` (avec une espace en début de chaîne de caractères) ou encore `@@beststartupever.com` qui ne sont pas valides). En fait, le navigateur vérifie que l'adresse respecte l'expression rationnelle fournie **et** que l'adresse est valide. Autrement dit, avec le type `email` et cette valeur pour l'attribut `pattern`, on s'assure que l'adresse est une adresse électronique valide et que c'est une bien une adresse avec le nom de domaine `beststartupever.com`.
 
-Lorsqu'on utilise l'attribut `pattern`. il est conseillé d'utiliser l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) afin de décrire le motif de l'expression régulière. Autrement dit, dans ce cas, l'attribut `title` doit décrire le format souhaité plutôt que contenir une autre information. En effet, cet attribut est affiché ou prononcé en cas d'erreur. Par exemple, le navigateur peut afficher le message «&nbsp;Le texte saisi ne correspond pas au motif requis.&nbsp;» suivi du texte indiqué dans la valeur de `title`. Par exemple si l'attribut `title` vaut «&nbsp;Adresse mail&nbsp;», le message affiché est «&nbsp;Le texte saisi ne correspond pas au motif requis. Adresse mail&nbsp;» ce qui n'est pas correct.
+Lorsqu'on utilise l'attribut `pattern`. il est conseillé d'utiliser l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) afin de décrire le motif de l'expression rationnelle. Autrement dit, dans ce cas, l'attribut `title` doit décrire le format souhaité plutôt que contenir une autre information. En effet, cet attribut est affiché ou prononcé en cas d'erreur. Par exemple, le navigateur peut afficher le message «&nbsp;Le texte saisi ne correspond pas au motif requis.&nbsp;» suivi du texte indiqué dans la valeur de `title`. Par exemple si l'attribut `title` vaut «&nbsp;Adresse mail&nbsp;», le message affiché est «&nbsp;Le texte saisi ne correspond pas au motif requis. Adresse mail&nbsp;» ce qui n'est pas correct.
 
 C'est pour cela qu'on indique la chaîne de caractères «&nbsp;Merci de fournir uniquement une adresse Best Startup Ever&nbsp;». Le message complet obtenu est donc&nbsp;: «&nbsp;Le texte saisi ne correspond pas au motif requis. Merci de fournir uniquement une adresse Best Startup Ever.&nbsp;»
 
 ![Une adresse électronique valide, mais le champ est en état d'erreur avec une info-bulle affichant « Le texte saisi ne correspond pas au motif requis. Merci de fournir uniquement une adresse Best Startup Ever d'entreprise. »](email-pattern-match-bad.png)
 
 > [!NOTE]
-> Si vous rencontrez des problèmes à propos de l'expression régulière, n'hésitez pas à ouvrir la console du navigateur. Cette dernière peut contenir des messages d'erreur aidant à diagnostiquer et résoudre le problème.
+> Si vous rencontrez des problèmes à propos de l'expression rationnelle, n'hésitez pas à ouvrir la console du navigateur. Cette dernière peut contenir des messages d'erreur aidant à diagnostiquer et résoudre le problème.
 
 ## Exemples
 
@@ -353,7 +359,7 @@ En complément, l'élément {{HTMLElement("label")}} est utilisé pour associer 
 </datalist>
 ```
 
-{{EmbedLiveSample('Exemples', 600, 80)}}
+{{EmbedLiveSample("Exemples", 600, 80)}}
 
 ## Résumé technique
 

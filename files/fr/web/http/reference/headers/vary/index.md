@@ -1,49 +1,39 @@
 ---
-title: Vary
+title: En-tête Vary
+short-title: Vary
 slug: Web/HTTP/Reference/Headers/Vary
-original_slug: Web/HTTP/Headers/Vary
+l10n:
+  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-L'en-tête HTTP **`Vary`** détermine comment les en-têtes de requêtes futures sont associés pour décider si une réponse en cache peut être réutilisée plutôt que de solliciter à nouveau le serveur d'origine. Il est utilisé par le serveur pour indiquer quels en-têtes sont utilisés pour représenter une resource dans un algorithme de [négociation de contenu](/fr/docs/Web/HTTP/Guides/Content_negotiation).
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Vary`** décrit les parties du message de requête (à l'exception de la méthode et de l'URL) qui ont influencé le contenu de la réponse dans laquelle il apparaît.
+Inclure un en-tête `Vary` garantit que les réponses sont mises en cache séparément en fonction des en-têtes répertoriés dans le champ `Vary`.
+Le plus souvent, cela est utilisé pour créer une clé de cache lorsque la [négociation de contenu](/fr/docs/Web/HTTP/Guides/Content_negotiation) est utilisée.
 
-L'en-tête `Vary` doit être renseigné de manière identique sur une réponse {{HTTPStatus("304")}} `Not Modified` à ce qu'elle aurait été sur la réponse {{HTTPStatus("200")}} `OK` correspondante.
+La même valeur d'en-tête `Vary` doit être utilisée sur toutes les réponses pour une URL donnée, y compris les réponses {{HTTPStatus("304")}} `Not Modified` et la réponse «&nbsp;par défaut&nbsp;».
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Type d'en-tête</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>non</td>
+      <td>{{Glossary("Response header", "En-tête de réponse")}}</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntaxe
 
-```
+```http
 Vary: *
-Vary: <header-name>, <header-name>, ...
+Vary: <header-name>, …, <header-nameN>
 ```
 
 ## Directives
 
-- \*
-  - : Chaque requête pour une URL doit être traitée comme une requête unique à ne pas mettre en cache. Une meilleure manière de l'indiquer est d'utiliser {{HTTPHeader("Cache-Control")}}`: private`, qui est plus clair à lire et signale aussi que l'objet ne doit jamais être mis en cache.
-- \<header-name>
-  - : Une liste séparé par des virgules de noms d'en-tête à prendre en compte lorsqu'il est décidé si une réponse en cache peut être utilisée ou non.
-
-## Examples
-
-### Service dynamique
-
-Lorsque l'en-tête `Vary: User-Agent` est utilisée, les serveurs de cache doivent prendre en compte l'agent de l'utilisateur pour décider de servir la page depuis le cache ou non. Par exemple, si vous servez du contenu différent pour les utilisateurs sur mobile, il aide à éviter qu'une version ordinateur de votre site ne soit distribuée à un utilisateur sur mobile. Il peut aider google et d'autres moteurs de recherche à prendre en compte la version pour mobile d'un site, ainsi que de signaler que le [Cloaking](https://en.wikipedia.org/wiki/Cloaking) n'est pas intentionel.
-
-```
-Vary: User-Agent
-```
+- `*` (joker)
+  - : Des facteurs autres que les en-têtes de requête ont influencé la génération de cette réponse. Cela implique que la réponse ne peut pas être mise en cache.
+- `<header-name>`
+  - : Le nom d'un en-tête de requête qui peut avoir influencé la génération de cette réponse.
 
 ## Spécifications
 
@@ -55,6 +45,7 @@ Vary: User-Agent
 
 ## Voir aussi
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("User-Agent")}}
-- [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
+- [Négociation de contenu](/fr/docs/Web/HTTP/Guides/Content_negotiation)
+- [Mise en cache HTTP&nbsp;: Vary](/fr/docs/Web/HTTP/Guides/Caching#vary)
+- [Comprendre l'en-tête Vary <sup>(angl.)</sup>](https://www.smashingmagazine.com/2017/11/understanding-vary-header/) sur smashingmagazine.com (2017)
+- [Les bonnes pratiques pour utiliser l'en-tête Vary <sup>(angl.)</sup>](https://www.fastly.com/blog/best-practices-using-vary-header) sur fastly.com

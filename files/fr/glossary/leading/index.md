@@ -17,6 +17,6 @@ Le demi-interligne peut être supprimé du bord de début et du bord de fin du c
 
 - La propriété CSS {{CSSxRef("line-height")}}
 - La propriété CSS {{CSSxRef("text-box")}}
-- [Module de mise en page en ligne CSS](/fr/docs/Web/CSS/CSS_inline_layout)
+- [Module de mise en page en ligne CSS](/fr/docs/Web/CSS/Guides/Inline_layout)
 - [Interlignage](<https://fr.wikipedia.org/wiki/Interlignage_(typographie)>) sur Wikipédia
 - [L'interligne en CSS <sup>(angl.)</sup>](https://matthiasott.com/notes/the-thing-with-leading-in-css) sur matthiasott.com (2022)

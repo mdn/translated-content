@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Access-Control-Allow-Origin`** indique si la réponse peut être partagée avec le code demandeur provenant de l'{{Glossary("origin", "origine")}} donnée.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Access-Control-Allow-Origin`** indique si la réponse peut être partagée avec le code demandeur provenant de {{Glossary("origin", "l'origine")}} donnée.
 
 <table class="properties">
   <tbody>
@@ -37,7 +37,7 @@ Access-Control-Allow-Origin: null
   - : Définit l'origine «&nbsp;null&nbsp;».
     > [!NOTE]
     > La valeur `null` ne doit pas être utilisée. Il peut sembler sûr de retourner `Access-Control-Allow-Origin: "null"`&nbsp;; cependant, l'origine des ressources qui utilisent un schéma non hiérarchique (comme `data:` ou `file:`) et des documents isolés est sérialisée en `null`.
-    > De nombreux navigateurs accorderont à ces documents l'accès à une réponse avec un en-tête `Access-Control-Allow-Origin: null`, et n'importe quelle origine peut créer un document hostile avec une origine `null`.
+    > De nombreux navigateurs accordent à ces documents l'accès à une réponse avec un en-tête `Access-Control-Allow-Origin: null`, et n'importe quelle origine peut créer un document hostile avec une origine `null`.
     > Par conséquent, la valeur `null` pour l'en-tête `Access-Control-Allow-Origin` doit être évitée.
 
 ## Exemples
@@ -54,11 +54,11 @@ Pour permettre `https://developer.mozilla.org` d'accéder à vos ressources, vou
 Access-Control-Allow-Origin: https://developer.mozilla.org
 ```
 
-Limiter les valeurs possibles d'`Access-Control-Allow-Origin` à un ensemble d'origines autorisées nécessite du code côté serveur pour vérifier la valeur de l'en-tête de requête {{HTTPHeader("Origin")}}, la comparer à une liste d'origines autorisées, puis, si la valeur de {{HTTPHeader("Origin")}} est dans la liste, définir la valeur d'`Access-Control-Allow-Origin` sur la même valeur que celle de {{HTTPHeader("Origin")}}.
+Limiter les valeurs possibles de `Access-Control-Allow-Origin` à un ensemble d'origines autorisées nécessite du code côté serveur pour vérifier la valeur de l'en-tête de requête {{HTTPHeader("Origin")}}, la comparer à une liste d'origines autorisées, puis, si la valeur de {{HTTPHeader("Origin")}} est dans la liste, définir la valeur de `Access-Control-Allow-Origin` sur la même valeur que celle de {{HTTPHeader("Origin")}}.
 
 ### CORS et le cache
 
-Si le serveur envoie une réponse avec une valeur d'`Access-Control-Allow-Origin` contenant une origine explicite (plutôt que le joker `*`), la réponse doit également inclure un en-tête de réponse {{HTTPHeader("Vary")}} avec la valeur `Origin` — pour indiquer aux navigateurs que les réponses du serveur peuvent différer selon la valeur de l'en-tête de requête `Origin`.
+Si le serveur envoie une réponse avec une valeur de `Access-Control-Allow-Origin` contenant une origine explicite (plutôt que le joker `*`), la réponse doit également inclure un en-tête de réponse {{HTTPHeader("Vary")}} avec la valeur `Origin` — pour indiquer aux navigateurs que les réponses du serveur peuvent différer selon la valeur de l'en-tête de requête `Origin`.
 
 ```http
 Access-Control-Allow-Origin: https://developer.mozilla.org

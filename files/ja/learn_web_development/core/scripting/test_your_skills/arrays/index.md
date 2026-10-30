@@ -13,15 +13,13 @@ l10n:
 > [!NOTE]
 > 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
-<!--
 ## 対話型チャレンジ
 
-まず最初に、[学習パートナー](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)である [Scrimba](https://scrimba.com/home) が作成した、マージンの一括指定を使った楽しくインタラクティブな課題をご紹介します。
+まず最初に、[学習パートナー](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)である [Scrimba](https://scrimba.com/home) が作成した、配列を使った楽しくインタラクティブな課題をご紹介します。
 
-埋め込みのスクリームを見て、指示に従ってコードを編集し、タイムライン上の課題（小さな幽霊のアイコン）を完了してください。完了したら、スクリームの再生を再開して、教師の解答が自分の解答と一致するかどうかを調べることができます。
+埋め込みのスクリムを見て、指示に従ってコードを編集し、タイムライン上の課題（小さなゴーストのアイコン）を完了してください。完了したら、スクリムの再生を再開して、教師の解答が自分の解答と一致するかどうかを調べることができます。
 
 <mdn-scrim-inline url="https://scrimba.com/learn-javascript-c0v/~05e" scrimtitle="Render images from an array" survey="true"></scrim-inline>
--->
 
 > [!NOTE]
 > この課題は、このコースではまだ明示的に扱っていない JavaScript の機能に頼っているため、やや難しい目標です。最善を尽くして、わからないことはオンラインで情報を探してください。

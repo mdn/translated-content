@@ -15,7 +15,7 @@ sort(compareFn)
 ### 参数
 
 - `compareFunction` {{optional_inline}}
-  - : 指定定义排序顺序的函数
+  - : 确定元素顺序的函数
 
 ### 返回值
 

@@ -3,12 +3,10 @@ title: HTML のマイクロフォーマットの使用
 short-title: マイクロフォーマット
 slug: Web/HTML/Guides/Microformats
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
-
-[_マイクロフォーマット_](http://microformats.org/) (Microformat) (**μF** と略記されることもあります) は、意味情報と構造化データを HTML に埋め込むために使用される規格で、検索エンジンやアグリゲーター、その他のツールが使用するための API を提供します。HTML のこれらの最小限のパターンは、人、組織、イベント、場所などの基本的な情報からドメイン固有の情報まで、さまざまなものをマークアップするために使用されます。
+[_マイクロフォーマット_](https://microformats.org/wiki/Main_Page) (Microformat) は、意味情報と構造化データを HTML に埋め込むために使用される規格で、検索エンジンやアグリゲーター、その他のツールが使用するための API を提供します。HTML のこれらの最小限のパターンは、人、組織、イベント、場所などの基本的な情報からドメイン固有の情報まで、さまざまなものをマークアップするために使用されます。
 
 - マイクロフォーマットオブジェクトを作成するには、クラス属性に `h-*` クラス名を使用します。
 - オブジェクトにプロパティを追加するには、オブジェクトの子孫のいずれかに `p-*`、`u-*`、`dt-*`、`e-*` クラス名を使用します。
@@ -35,7 +33,7 @@ l10n:
 
 ## マイクロフォーマットの用途
 
-マイクロフォーマットには数多くの用途があります。最初の例は、[Webmention 標準](https://www.w3.org/TR/webmention/)です。これは、メッセージやコメントをあるサイトから別のサイトに送信する方法を提供するためにマイクロフォーマットを使用しています。 Webmention 仕様では、メッセージやコメントをリッチで相互運用可能な方法で公開するために、サイトが公開および利用することができる特定の属性を定義しています。マイクロフォーマットは、 Webmention と組み合わせて使用して、あるサイトから別のサイトに「いいね！」、再投稿、ブックマークなどのソーシャルリアクションを送信することもできます。
+マイクロフォーマットには数多くの用途があります。最初の例は、[Webmention 標準](https://webmention.net/draft/)です。これは、メッセージやコメントをあるサイトから別のサイトに送信する方法を提供するためにマイクロフォーマットを使用しています。 Webmention 仕様では、メッセージやコメントをリッチで相互運用可能な方法で公開するために、サイトが公開および利用することができる特定の属性を定義しています。マイクロフォーマットは、 Webmention と組み合わせて使用して、あるサイトから別のサイトに「いいね！」、再投稿、ブックマークなどのソーシャルリアクションを送信することもできます。
 
 マイクロフォーマットは、サイト間のシンジケーションも容易にします。アグリゲーターは、公開されているマイクロフォーマットを含むページを構文解析して、投稿のタイトル、本文、作成者などの情報を探します。このアグリゲーターは、収集した意味情報を用いて、その結果を自分のサイトに表示することができます。たとえば、ニュースアグリゲーターやコミュニティの掲示板は、投稿を容易にし、マイクロフォーマットを使用してページから関連コンテンツを抽出することができます。さらに、ウェブサイトは、ソーシャルネットワークなどのサードパーティーにコンテンツを公開するよう、巧妙に作成されたリクエストを送信するためにマイクロフォーマットを使用することができます。
 
@@ -469,7 +467,7 @@ h-entry によるブログ投稿の例:
 ## 関連情報
 
 - [class 属性](/ja/docs/Web/HTML/Reference/Global_attributes/class)
-- [Microformat](https://ja.wikipedia.org/wiki/Microformat)（ウィキペディア）
+- [Microformat](https://ja.wikipedia.org/wiki/Microformat) - ウィキペディア
 - [Microformats 公式ウェブサイト](https://microformats.org/wiki/Main_Page)
-- [Search engines support](https://microformats.org/wiki/search_engines) on Microformats official website
+- [Search engines support](https://microformats.org/wiki/search_engines) - Microformats 公式サイト
 - [Microformats on IndieWebCamp](https://indieweb.org/microformats)

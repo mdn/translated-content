@@ -1,5 +1,5 @@
 ---
-title: CSS `border-right-color` プロパティ
+title: "`border-right-color` プロパティ (CSS)"
 short-title: border-right-color
 slug: Web/CSS/Reference/Properties/border-right-color
 l10n:

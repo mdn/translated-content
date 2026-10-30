@@ -1,5 +1,5 @@
 ---
-title: HTML `<script type="importmap">` 属性値
+title: '`<script type="importmap">` 属性値'
 short-title: importmap
 slug: Web/HTML/Reference/Elements/script/type/importmap
 l10n:
@@ -114,7 +114,7 @@ import { name as circleName } from "shapes/circle.js";
 
 ### スコープ化されたモジュール指定子の対応表
 
-scopes` キーを使って、モジュールをインポートするスクリプトが特定の URL パスを格納した場合にのみ使用される対応付けを提供することができます。
+`scopes` キーを使って、モジュールをインポートするスクリプトが特定の URL パスを格納した場合にのみ使用される対応付けを提供することができます。
 読み込むスクリプトの URL が指定されたパスに一致する場合、そのスコープに関連付けられたマッピングが使用されます。
 これにより、インポートを行うコードによって異なるバージョンのモジュールを使用することができます。
 

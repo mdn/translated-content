@@ -1,5 +1,6 @@
 ---
 title: "MutationRecord: nextSibling プロパティ"
+short-title: nextSibling
 slug: Web/API/MutationRecord/nextSibling
 l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48

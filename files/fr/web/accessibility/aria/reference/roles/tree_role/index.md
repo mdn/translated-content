@@ -3,7 +3,7 @@ title: "ARIA : rôle tree"
 short-title: tree
 slug: Web/Accessibility/ARIA/Reference/Roles/tree_role
 l10n:
-  sourceCommit: d1fd21c87a4917e56dab84fc0b1d321ebb22874e
+  sourceCommit: 9abb432251513c5fdcaf5aad0764126fc68413c4
 ---
 
 Un `tree` («&nbsp;arbre&nbsp;») est un composant qui permet à l'utilisateur·ice de sélectionner un ou plusieurs éléments dans une collection organisée hiérarchiquement.
@@ -19,13 +19,13 @@ Les vues de l'arborescence ARIA se naviguent principalement avec les touches fl�
 > [!WARNING]
 > Les vues de l'arborescence utilisent une navigation plus proche des applications natives que des applications web. Avant de créer une vue de l'arborescence, envisagez d'autres solutions pour répondre à votre besoin fonctionnel.
 
+Pour plus d'informations sur la manière de baliser les nœuds individuels d'un arbre, consultez [`treeitem`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role).
+
 ### Arbres à sélection unique et multiple
 
 Les arbres peuvent être «&nbsp;à sélection unique&nbsp;», permettant à l'utilisateur·ice de choisir un seul élément pour une action, ou «&nbsp;à sélection multiple&nbsp;», où il·elle peut sélectionner plusieurs éléments pour une action. Dans les arbres à sélection multiple, le `tree` porte [`aria-multiselectable`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable) à true. Sinon, `aria-multiselectable` est à `false` ou la valeur par défaut `false` est implicite. Dans les deux cas, pour l'accessibilité clavier, la gestion de la sélection doit être assurée pour tous les descendants de l'arbre.
 
-Dans certaines implémentations d'arbre à sélection unique, l'élément sélectionné est aussi celui qui a la sélection&nbsp;: c'est le modèle «&nbsp;la sélection suit la sélection clavier&nbsp;». Quand un arbre à sélection unique reçoit la sélection, si aucun élément n'est sélectionné avant, la sélection se place sur le premier nœud. Si un élément est sélectionné avant, la sélection se place sur cet élément. Dans les arbres à sélection unique, [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) est à `true` pour l'élément sélectionné et n'est pas présent sur les autres éléments.
-
-Dans les arbres à sélection multiple, tous les éléments sélectionnés portent `aria-selected="true"` et tous les éléments sélectionnables mais non sélectionnés portent `aria-selected="false"`. Ne mettez pas l'attribut `aria-selected` sur les éléments non sélectionnables.
+Dans certaines implémentations d'arbre à sélection unique, l'élément sélectionné est aussi celui qui a la sélection&nbsp;: c'est le modèle «&nbsp;la sélection suit la sélection clavier&nbsp;». Quand un arbre à sélection unique reçoit la sélection, si aucun élément n'est sélectionné avant, la sélection se place sur le premier nœud. Si un élément est sélectionné avant, la sélection se place sur cet élément.
 
 Quand un arbre à sélection multiple reçoit la sélection, si aucun élément n'est sélectionné avant, la sélection se place sur le premier élément. Si un ou plusieurs éléments sont sélectionnés avant, la sélection se place sur le premier élément sélectionné.
 
@@ -33,19 +33,11 @@ Dans les arbres à sélection multiple, l'état sélectionné est toujours indé
 
 ### Hiérarchie de l'arbre
 
-Dans une vue de l'arborescence, le nœud `tree` est la racine&nbsp;: il peut avoir des enfants, petits-enfants et autres descendants de type `treeitem`.
-
-Chaque élément servant de nœud d'arbre porte le rôle `treeitem`, sauf la racine qui porte le rôle `tree`. Un `tree` n'a pas de parent `tree`&nbsp;: c'est la racine. Si un nœud est imbriqué dans un arbre et possède des enfants, il porte le rôle `treeitem` et l'attribut [`aria-expanded`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)&nbsp;: `aria-expanded="false"` quand le nœud est fermé, `aria-expanded="true"` quand il est ouvert.
-
-Les nœuds `treeitem` peuvent être des enfants directs de la racine, imbriqués dans un autre `treeitem`, ou, optionnellement, dans un élément [`group`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role), qui, dans un arbre, est une collection extensible d'éléments treeitem.
-
-Ne mettez pas `aria-expanded` sur les nœuds terminaux — ceux sans enfants `treeitem` — car cela décrit à tort le nœud comme parent pour les technologies d'assistance.
+Dans une vue de l'arborescence, l'élément `tree` est le conteneur de la hiérarchie des nœuds `treeitem`. Chaque élément servant de nœud d'arbre a le rôle `treeitem`. Les éléments de l'arborescence de premier niveau sont des nœuds racines&nbsp;; ils peuvent avoir des enfants, des petits-enfants et d'autres descendants.
 
 ### Placement et présence dans le DOM
 
-Tous les treeitem sont contenus ou possédés par un élément avec le rôle `tree`. Si certains treeitem ne sont pas des descendants directs du `tree` dans le code, ajoutez [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) sur le conteneur pour inclure les éléments qui ne sont pas enfants dans le DOM. Ces éléments apparaissent dans l'ordre de lecture à la suite des treeitem enfants du DOM. Les scripts qui gèrent la sélection doivent s'assurer que l'ordre visuel de sélection correspond à cet ordre de lecture pour les technologies d'assistance.
-
-Si l'ensemble des nœuds disponibles n'est pas présent dans le DOM à cause d'un chargement dynamique lors du déplacement ou du défilement dans l'arbre, chaque nœud doit avoir [`aria-level`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level), [`aria-setsize`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) et [`aria-posinset`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) renseignés.
+Tous les treeitem sont contenus ou possédés par un élément avec le rôle `tree`. Si certains nœuds racines ne sont pas contenus dans le `tree` dans le DOM, incluez [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) sur le conteneur de l'arbre pour les référencer. Ces éléments possédés qui ne sont pas des descendants apparaissent dans l'ordre de lecture dans la séquence où ils sont référencés et après tous les treeitem qui sont des descendants du DOM. Les scripts qui gèrent la sélection doivent s'assurer que l'ordre visuel de sélection correspond à cet ordre de lecture pour les technologies d'assistance.
 
 ### Nom accessible
 
@@ -79,18 +71,18 @@ Pour un arbre vertical (orientation par défaut)&nbsp;:
     <td><kbd>Flèche vers la droite</kbd></td>
     <td>
       <ul>
-        <li>Si la sélection est sur un nœud fermé, ouvre le nœud&nbsp;; la sélection ne bouge pas.
-        <li>Si la sélection est sur un nœud ouvert, déplace la sélection sur le premier enfant.
-        <li>Si la sélection est sur un nœud terminal (sans enfants), ne fait rien.
+        <li>Lorsque la sélection est sur un nœud fermé, ouvre le nœud&nbsp;; la sélection ne bouge pas.
+        <li>Lorsque la sélection est sur un nœud ouvert, déplace la sélection sur le premier enfant.
+        <li>Lorsque la sélection est sur un nœud terminal (sans enfants), ne fait rien.
     </td>
   </tr>
   <tr>
     <td><kbd>Flèche vers la gauche</kbd></td>
     <td>
       <ul>
-        <li>Si la sélection est sur un nœud ouvert, ferme le nœud.
-        <li>Si la sélection est sur un enfant qui est aussi un nœud terminal ou fermé, déplace la sélection sur le parent.
-        <li>Si la sélection est sur un arbre fermé, ne fait rien.
+        <li>Lorsque la sélection est sur un nœud ouvert, ferme le nœud.
+        <li>Lorsque la sélection est sur un nœud racine qui est aussi soit un nœud terminal, soit un nœud fermé, ne fait rien.
+        <li>Lorsque la sélection est sur un enfant qui est aussi un nœud terminal ou fermé, déplace la sélection sur le parent.
     </td>
   </tr>
   <tr>
@@ -124,10 +116,7 @@ Pour un arbre vertical (orientation par défaut)&nbsp;:
   <tr>
     <td><kbd>Entrée</kbd></td>
     <td>
-      Effectue l'action par défaut sur le nœud sélectionné. Pour les nœuds
-      parents, ouvre ou ferme le nœud. Dans les arbres à sélection unique, si le
-      nœud n'a pas d'enfants, sélectionne le nœud courant s'il n'est pas déjà
-      sélectionné (action par défaut).
+      Effectue l'action par défaut du nœud actuellement sélectionné. Pour les nœuds parents, l'ouverture ou la fermeture du nœud est une action par défaut possible. Dans les arbres à sélection unique, où la sélection ne suit pas la sélection au clavier, l'action par défaut sélectionne généralement le nœud courant s'il n'est pas déjà sélectionné.
     </td>
   </tr>
   <tr>

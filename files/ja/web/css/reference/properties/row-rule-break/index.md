@@ -1,5 +1,5 @@
 ---
-title: CSS `row-rule-break` プロパティ
+title: "`row-rule-break` プロパティ (CSS)"
 short-title: row-rule-break
 slug: Web/CSS/Reference/Properties/row-rule-break
 l10n:
@@ -363,7 +363,7 @@ label {
 
 #### HTML
 
-50 件のアイテムからなるリストと、。列のギャップの幅を変更するためのスライダーを作成します。簡潔にするため、HTML の大部分は省略しています。
+50 件のアイテムからなるリストと、列のギャップの幅を変更するためのスライダーを作成します。簡潔にするため、HTML の大部分は省略しています。
 
 ```html
 <ul>

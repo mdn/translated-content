@@ -1,5 +1,5 @@
 ---
-title: HTML `<input type="reset">` 属性値
+title: '`<input type="reset">` 属性値'
 short-title: <input type="reset">
 slug: Web/HTML/Reference/Elements/input/reset
 l10n:

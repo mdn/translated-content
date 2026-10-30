@@ -35,7 +35,7 @@ _{{domxref("HTMLElement")}} から継承しているメソッドがあります�
 - {{domxref("HTMLCanvasElement.toDataURL()")}}
   - : `type` 引数で指定した形式（既定では `png`）で画像を表現した data-URL を返します。返す画像の解像度は 96dpi です。
 - {{domxref("HTMLCanvasElement.toBlob()")}}
-  - : キャンパスに格納する画像を表す {{domxref("Blob")}} オブジェクトを作成します。このファイルは、ユーザーエージェントの判断で、ディスクにキャッシュされたり、メモリーに格納されたりすることがあります。
+  - : キャンバスに格納する画像を表す {{domxref("Blob")}} オブジェクトを作成します。このファイルは、ユーザーエージェントの判断で、ディスクにキャッシュされたり、メモリーに格納されたりすることがあります。
 - {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}
   - : {{domxref("OffscreenCanvas")}} オブジェクトへの制御権を、メインスレッドまたはワーカーへ移譲します。
 

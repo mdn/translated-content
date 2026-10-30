@@ -42,7 +42,7 @@ input[type="color"]::-moz-color-swatch {
 
 {{EmbedLiveSample("Exemples", 300, 50)}}
 
-## Specifications
+## Spécifications
 
 Ce pseudo-élément ne fait partie d'aucun standard.
 
@@ -53,4 +53,4 @@ Ce pseudo-élément ne fait partie d'aucun standard.
 ## Voir aussi
 
 - Les pseudo-éléments semblables utilisés par les autres navigateurs&nbsp;:
-  - {{CSSxRef("::-webkit-color-swatch")}} pris en charge par WebKit et Blink (utilisés par Safari, Chrome et Opera)
+  - `::-webkit-color-swatch` pris en charge par WebKit et Blink (utilisés par Safari, Chrome et Opera)

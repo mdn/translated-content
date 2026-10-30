@@ -3,7 +3,7 @@ title: "Array : méthode toReversed()"
 short-title: toReversed()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toReversed
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`toReversed()`** des instances de {{JSxRef("Array")}} est la version [copiante](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_copie_et_méthodes_de_mutation) de la méthode {{JSxRef("Array/reverse", "reverse()")}}. Elle retourne un nouveau tableau avec les éléments dans l'ordre inversé.
@@ -26,7 +26,7 @@ Un nouveau tableau contenant les éléments dans l'ordre inversé.
 
 La méthode `toReversed()` retourne un nouveau tableau dont les éléments sont dans l'ordre inverse de celui du tableau d'origine.
 
-Lorsqu'elle est utilisée sur un [tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableau_creux), la méthode `toReversed()` parcourt les cases vides comme si elles avaient la valeur `undefined`.
+Lorsqu'elle est utilisée sur un [tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableau_creux), la méthode `toReversed()` parcourt les cases vides comme si elles ont la valeur `undefined`.
 
 La méthode `toReversed()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend seulement que la valeur de `this` possède une propriété `length` et des propriétés à clés entières.
 
@@ -34,18 +34,18 @@ La méthode `toReversed()` est [générique](/fr/docs/Web/JavaScript/Reference/G
 
 ### Inversion des éléments d'un tableau
 
-L'exemple suivant crée un tableau `items` contenant trois éléments, puis crée un nouveau tableau qui est l'inverse de `items`. Le tableau `items` reste inchangé.
+L'exemple suivant crée un tableau `elements` contenant trois éléments, puis crée un nouveau tableau qui est l'inverse de `elements`. Le tableau `elements` reste inchangé.
 
 ```js
-const items = [1, 2, 3];
-console.log(items); // [1, 2, 3]
+const elements = [1, 2, 3];
+console.log(elements); // [1, 2, 3]
 
-const reversedItems = items.toReversed();
-console.log(reversedItems); // [3, 2, 1]
-console.log(items); // [1, 2, 3]
+const elementsInverses = elements.toReversed();
+console.log(elementsInverses); // [3, 2, 1]
+console.log(elements); // [1, 2, 3]
 ```
 
-### Utilisation de `toReversed()` sur un tableau creux
+### Utiliser `toReversed()` sur un tableau creux
 
 La valeur de retour de `toReversed()` n'est jamais un tableau creux. Les cases vides deviennent `undefined` dans le tableau retourné.
 
@@ -61,7 +61,7 @@ La méthode `toReversed()` lit la propriété `length` de `this`. Elle parcourt 
 ```js
 const objetSimilaireTableau = {
   length: 3,
-  unrelated: "foo",
+  unrelated: "toto",
   2: 4,
 };
 console.log(Array.prototype.toReversed.call(objetSimilaireTableau));
@@ -79,11 +79,11 @@ console.log(Array.prototype.toReversed.call(objetSimilaireTableau));
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.toReversed` dans core-js <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.toReversed` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.toreversed)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - La méthode {{JSxRef("Array.prototype.reverse()")}}
 - La méthode {{JSxRef("Array.prototype.toSorted()")}}
 - La méthode {{JSxRef("Array.prototype.toSpliced()")}}
 - La méthode {{JSxRef("Array.prototype.with()")}}
 - La méthode {{JSxRef("TypedArray.prototype.toReversed()")}}
-- [Prothèse d'émulation de `Array.prototype.toReversed` dans core-js <sup>(angl.)</sup>](https://github.com/zloirock/core-js#change-array-by-copy)
-- [Prothèse d'émulation es-shims de `Array.prototype.toReversed` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.toreversed)

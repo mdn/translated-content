@@ -239,7 +239,7 @@ elt.addEventListener('click', function() { ... } , false);
 
 ### 解析 JSON（将字符串转化为 JavaScript 对象）
 
-如果你在调用 `eval()` 传入的字符串参数中包含数据（如：一个数组“\[1,2,3]”）而不是代码，你应该考虑将其转换为 [JSON](/zh-CN/docs/Glossary/JSON) 对象，这允许你用 JavaScript 语法的子集来表示数据。[在扩展中下载 JSON 和 JavaScript](/zh-CN/docs/Downloading_JSON_and_JavaScript_in_extensions)
+如果你在调用 `eval()` 传入的字符串参数中包含数据（如：一个数组“\[1,2,3]”）而不是代码，你应该考虑将其转换为 [JSON](/zh-CN/docs/Glossary/JSON) 对象，这允许你用 JavaScript 语法的子集来表示数据。
 
 提示：因为 JSON 语法子集相对于 JavaScript 语法子集比较有局限性，很多在 JavaScript 中可用的特性在 JSON 中就不起作用了。比如，后缀逗号在 JSON 中不支持，并且对象中的属性名在 JSON 中必须用引号括起来。请务必使用 JSON 序列化方法来生成稍后将被解析为 JSON 的字符串。
 
@@ -249,7 +249,7 @@ elt.addEventListener('click', function() { ... } , false);
 
 ### 以有限权限运行代码
 
-如果你必须执行这段代码，应考虑以更低的权限运行。此建议主要适用于扩展和 XUL 应用程序，可以使用 [Components.utils.evalInSandbox](/zh-CN/docs/Components.utils.evalInSandbox) 做到降低权限。
+如果你必须执行这段代码，应考虑以更低的权限运行。此建议主要适用于扩展和 XUL 应用程序。
 
 ## 示例
 

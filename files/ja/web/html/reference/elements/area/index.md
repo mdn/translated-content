@@ -1,5 +1,5 @@
 ---
-title: HTML `<area>` イメージマップ領域要素
+title: "`<area>` イメージマップ領域要素"
 short-title: <area>
 slug: Web/HTML/Reference/Elements/area
 l10n:

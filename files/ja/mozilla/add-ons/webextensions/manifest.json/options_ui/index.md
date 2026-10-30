@@ -49,9 +49,6 @@ l10n:
 
 `options_ui` キーは次のコンテンツを持つオブジェクトです。
 
-| `open_in_tab` | `Boolean` | 省略可能。既定値は `false`。`true` の場合、オプションページはブラウザーのアドオンマネージャーに統合されたものではなく、通常のブラウザータブで開かれる。 |
-| `page` | `String` | 必須。オプションページの仕様を含む HTML ファイルへのパス。パスは manifest.json 自体への相対パス。 |
-
 <table class="fullwidth-table standard-table">
   <thead>
     <tr>
@@ -77,10 +74,7 @@ l10n:
           ブラウザーの UI と、<code>browser_style</code> プロパティを使用する他の拡張機能とで見た目が一致するようにするスタイルシートを、ページに記載するために使用します。既定値は <code>true</code> ですが、このプロパティを記載することをお勧めします。
         </p>
         <p>
-          Firefox では <code>chrome://browser/content/extension.css</code>、macOS では <code>chrome://browser/content/extension-mac.css<code> で、このスタイルシートは見ることができます。寸法を設定する場合、このスタイルシートが現在 <code>box-sizing: border-box</code> を設定していることに注意してください（<a href="/ja/docs/Web/CSS/Reference/Properties/box-sizing">box-sizing</a> を参照してください）。
-        </p>
-        <p>
-          <a class="external external-icon" href="https://design.firefox.com/photon/">Firefox スタイルガイド</a>では、特定のスタイルを取得するためにポップアップの要素に適用できるクラスについて記述しています。
+          Firefox では <code>chrome://browser/content/extension.css</code>、macOS では <code>chrome://browser/content/extension-mac.css</code> で、このスタイルシートは見ることができます。寸法を設定する場合、このスタイルシートが現在 <code>box-sizing: border-box</code> を設定していることに注意してください（<a href="/ja/docs/Web/CSS/Reference/Properties/box-sizing">box-sizing</a> を参照してください）。
         </p>
       </td>
     </tr>

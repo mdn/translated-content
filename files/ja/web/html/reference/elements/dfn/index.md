@@ -1,5 +1,5 @@
 ---
-title: HTML `<dfn>` 定義要素
+title: "`<dfn>` 定義要素"
 short-title: <dfn>
 slug: Web/HTML/Reference/Elements/dfn
 l10n:

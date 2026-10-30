@@ -1,5 +1,5 @@
 ---
-title: HTML `<input type="range">` 属性値
+title: '`<input type="range">` 属性値'
 short-title: <input type="range">
 slug: Web/HTML/Reference/Elements/input/range
 l10n:

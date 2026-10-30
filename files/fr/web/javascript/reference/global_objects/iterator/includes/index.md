@@ -3,10 +3,8 @@ title: "Iterator : méthode includes()"
 short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/includes
 l10n:
-  sourceCommit: 8330e7c1afd31d53ae12c3271e96d681bba9e223
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{SeeCompatTable}}
 
 La méthode **`includes()`** des instances de {{JSxRef("Iterator")}} est similaire à {{JSxRef("Array.prototype.includes()")}}&nbsp;: elle retourne `true` si elle trouve un élément égal à la valeur donnée. Sinon, si l'itérateur est épuisé sans trouver un tel élément, elle retourne `false`.
 
@@ -47,7 +45,7 @@ L'appel de `includes()` ferme toujours l'itérateur sous-jacent, même si la mé
 
 ## Exemples
 
-### Utiliser `includes()`
+### Utiliser la méthode `includes()`
 
 ```js
 function* fibonacci() {
@@ -106,7 +104,8 @@ Si `fromIndex` est supérieur ou égal au nombre d'éléments disponibles, `fals
 
 ## Voir aussi
 
-- [La prothèse d'émulation es-shims de `Iterator.prototype.includes` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Iterator.prototype.includes` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator.prototype.includes` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
 - L'objet natif {{JSxRef("Iterator")}}
 - La méthode {{JSxRef("Iterator.prototype.every()")}}
 - La méthode {{JSxRef("Iterator.prototype.find()")}}

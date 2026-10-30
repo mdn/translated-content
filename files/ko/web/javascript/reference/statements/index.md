@@ -56,7 +56,7 @@ JavaScript 응용 프로그램은 적절한 구문을 갖는 문으로 구성됩
   - : 테스트 조건이 거짓으로 평가될 때까지 지정된 문을 실행하는 루프를 만듭니다. 조건은 문을 실행한 후 평가됩니다, 그 결과 지정된 문은 적어도 한 번 실행됩니다.
 - {{jsxref("Statements/for", "for")}}
   - : 괄호로 묶이고 세미콜론으로 구분된 선택사항 식 셋으로 구성된 루프를 만듭니다, 루프에서 실행되는 문이 뒤따릅니다.
-- {{jsxref("Statements/for_each...in", "for each...in")}} {{deprecated_inline}} {{non-standard_inline}}
+- `for each...in` {{deprecated_inline}} {{non-standard_inline}}
   - : 객체의 모든 속성값에 대해 지정된 변수를 반복합니다. 각 개별 속성에 대해, 지정된 문이 실행됩니다.
 - {{jsxref("Statements/for...in", "for...in")}}
   - : 임의의 순서로 객체의 열거 속성을 반복합니다. 각 개별 속성에 대해, 문은 실행될 수 있습니다.

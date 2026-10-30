@@ -3,7 +3,7 @@ title: "Promise : méthode statique allSettled()"
 short-title: allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 l10n:
-  sourceCommit: cbf7f4b55e2c0bc0c096773435b159edcaa8c9e2
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Promise.allSettled()`** prend un itérable de promesses en entrée et retourne une seule promesse ({{JSxRef("Promise")}}). Cette promesse retournée est complétée (<i lang="en">fulfilled</i> en anglais) lorsque toutes les promesses de l'entrée sont acquittées (<i lang="en">settle</i> en anglais) (y compris lorsqu'un itérable vide est passé), avec un tableau d'objets qui décrivent le résultat de chaque promesse.
@@ -60,7 +60,7 @@ En comparaison, la promesse retournée par {{JSxRef("Promise.all()")}} peut êtr
 
 ## Exemples
 
-### Utiliser `Promise.allSettled()`
+### Utiliser la méthode `Promise.allSettled()`
 
 ```js
 Promise.allSettled([
@@ -81,7 +81,7 @@ Promise.allSettled([
 Vous pouvez également déstructurer les résultats pour avoir une variable par résultat de règlement.
 
 ```js
-const [statut1, statut2] = Promise.allSettled([
+const [statut1, statut2] = await Promise.allSettled([
   Promise.resolve(33),
   new Promise((resolve) => setTimeout(() => resolve(66), 0)),
 ]);
@@ -102,8 +102,8 @@ Si vous déstructurez le résultat, vous devez conserver les variables de résul
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Promise.allSettled` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-promise)
-- [La prothèse d'émulation es-shims de `Promise.allSettled` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.allsettled)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Promise.allSettled` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/promise)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Promise.allSettled` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.allsettled)
 - Le guide [d'utilisation des promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)
 - [Programmation asynchrone à l'aide des promesses](/fr/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - L'objet natif {{JSxRef("Promise")}}

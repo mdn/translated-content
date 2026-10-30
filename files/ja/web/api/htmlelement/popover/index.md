@@ -27,7 +27,7 @@ l10n:
 
 ### 機能検出
 
-`popover` 属性を使用して、[ポップオーバー API](/ja/docs/Web/API/Popover_API) の機能を検出するすることができます。
+`popover` 属性を使用して、[ポップオーバー API](/ja/docs/Web/API/Popover_API) の機能を検出することができます。
 
 ```js
 function supportsPopover() {

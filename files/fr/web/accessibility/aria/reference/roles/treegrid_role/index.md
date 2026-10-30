@@ -3,7 +3,7 @@ title: "ARIA : rôle treegrid"
 short-title: treegrid
 slug: Web/Accessibility/ARIA/Reference/Roles/treegrid_role
 l10n:
-  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
+  sourceCommit: 96758f3d8ce1e5fbd9d58053bdef103eec1de108
 ---
 
 Le rôle `treegrid` identifie un élément comme étant une grille dont les lignes peuvent être développées ou réduites, de la même manière qu'une «&nbsp;arborescence&nbsp;» (<i lang="en">tree</i> en anglais).
@@ -56,12 +56,6 @@ Si la grille arborescente propose des fonctions de tri, l'attribut [`aria-sort`]
 
 Si le `treegrid` possède un [`menu`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) qui s'ouvre lors d'un clic droit, ajoutez [`aria-haspopup="true"`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) sur l'élément `treegrid`. Cela informe les technologies d'assistance qu'un menu contextuel est associé. La possibilité pour les utilisateur·ice·s clavier et souris d'ouvrir et de placer la sélection dans le menu doit être gérée en JavaScript.
 
-### Grilles arborescentes en lecture seule
-
-Par défaut, les grilles arborescentes sont considérées comme éditables. Si une grille arborescente n'est pas éditable, utilisez l'attribut [`aria-readonly`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) pour informer les technologies d'assistance qu'elle est en lecture seule. La valeur de l'attribut, lorsqu'elle est définie sur l'élément ayant le rôle `treegrid`, se propage à tous les éléments `columnheader`, `rowheader` et `gridcell`. Cette valeur globale peut être remplacée pour des cellules individuelles en ajoutant `aria-readonly` sur les descendants concernés.
-
-Comme tous les attributs ARIA, ajouter `aria-readonly` informe uniquement les technologies d'assistance du caractère éditable ou non du contenu, mais n'active ni ne désactive l'interactivité. Cela doit être géré avec l'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) ou en JavaScript.
-
 ## Propriétés, états et rôles WAI-ARIA associés
 
 - [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
@@ -76,6 +70,8 @@ Comme tous les attributs ARIA, ajouter `aria-readonly` informe uniquement les te
   - : Cellule contenant des informations d'en-tête de ligne dans une structure tabulaire.
 - [`aria-expanded`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
   - : Pour les éléments extensibles, la valeur est `true` ou `false`. Indique aussi que l'élément est extensible, donc ne doit pas être présent si l'élément ne peut pas être développé.
+- [`aria-readonly`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)
+  - : Indique si le contenu des cellules peut être modifié dans une grille arborescente qui propose des fonctions d'édition. Omettez cet attribut si la grille arborescente ne propose pas d'édition du contenu des cellules. Notez que l'ouverture et la fermeture des lignes ne constituent pas une édition du contenu des cellules. La valeur définie sur la grille arborescente se propage à ses cellules et peut être remplacée sur des cellules individuelles. L'attribut informe uniquement les technologies d'assistance&nbsp;; il n'active ni ne désactive l'édition.
 - [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
   - : Identifie une relation contextuelle entre un parent et ses enfants lorsque la hiérarchie DOM ne peut pas être utilisée pour représenter la relation.
 - [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)

@@ -3,7 +3,7 @@ title: En-tête Link
 short-title: Link
 slug: Web/HTTP/Reference/Headers/Link
 l10n:
-  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 L'en-tête HTTP **`Link`** permet de sérialiser un ou plusieurs liens dans les en-têtes HTTP.
@@ -118,5 +118,5 @@ La directive `fetchpriority` doit être utilisée avec parcimonie, et uniquement
 
 - Le code de statut {{HTTPStatus("103", "103 Early Hints")}}
 - L'élément HTML {{HTMLElement("link")}}
-- [Les relations de lien <sup>(angl.)</sup>](https://www.iana.org/assignments/link-relations/link-relations.xhtml) registre IANA
+- [Les relations de lien <sup>(angl.)</sup>](https://www.iana.org/assignments/link-relations) registre IANA
 - [Optimiser le chargement des ressources avec l'API Fetch Priority <sup>(angl.)</sup>](https://web.dev/articles/fetch-priority?hl=fr#browser_priority_and_fetchpriority) pour des informations sur la façon dont cette API affecte les priorités sur Chrome.
