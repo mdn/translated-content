@@ -3,7 +3,7 @@ title: Element：pointerrawupdate 事件
 short-title: pointerrawupdate
 slug: Web/API/Element/pointerrawupdate_event
 l10n:
-  sourceCommit: a0d27fbd56b5327923e072af498c3e8e3252afce
+  sourceCommit: 195b87dbb0e63aab27700b606fc96c4cd7982f64
 ---
 
 {{APIRef("Pointer Events")}}{{secureContext_header}}
@@ -25,6 +25,12 @@ l10n:
 ```js-nolint
 addEventListener("pointerrawupdate", (event) => { })
 
+onpointerrawupdate = (event) => { }
+```
+
+或者，对接口的[事件处理器属性](/zh-CN/docs/Web/API/Document_Object_Model/Events#使用_onevent_属性)赋值
+
+```js-nolint
 onpointerrawupdate = (event) => { }
 ```
 
