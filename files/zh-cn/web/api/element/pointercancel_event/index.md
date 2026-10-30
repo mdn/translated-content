@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Pointer Events")}}
 
-**`pointercancel`** 事件会在浏览器判断可能不再会有指针事件发生，或者在激发 {{domxref("Element/pointerdown_event", "pointerdown")}} 事件后指针被用于平移、缩放或滚动来操作视口时触发。
+**`pointercancel`** 事件会在浏览器判断可能不再会有指针事件发生，或者在触发 {{domxref("Element/pointerdown_event", "pointerdown")}} 事件后指针被用于平移、缩放或滚动来操作视口时触发。
 
 一些会触发 `pointercancel` 事件的情况的例子：
 
@@ -16,10 +16,10 @@ l10n:
 - 设备的屏幕方向在指针活动期间发生了改变。
 - 浏览器认为用户的指针输入始于意外。例如，设备支持防手掌误触功能以防止用户使用触控笔时手倚靠在屏幕上而意外触发事件。
 - CSS {{cssxref("touch-action")}} 属性打断了继续输入。
-- 用户同时使用了太多指针进行交互，浏览器会在现有全部指针上激发此事件（即使用户仍在触摸屏幕）。
+- 用户同时使用了太多指针进行交互，浏览器会在现有全部指针上触发此事件（即使用户仍在触摸屏幕）。
 
 > [!NOTE]
-> 在激发 `pointercancel` 事件后，浏览器也会发送 {{domxref("Element/pointerout_event", "pointerout")}} 事件，接着再发送 {{domxref("Element/pointerleave_event", "pointerleave")}} 事件。
+> 在触发 `pointercancel` 事件后，浏览器也会发送 {{domxref("Element/pointerout_event", "pointerout")}} 事件，接着再发送 {{domxref("Element/pointerleave_event", "pointerleave")}} 事件。
 
 ## 语法
 
