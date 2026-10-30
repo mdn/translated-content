@@ -1,5 +1,5 @@
 ---
-title: "`column-height` プロパティ (CSS)"
+title: "`column-height` プロパティ"
 short-title: column-height
 slug: Web/CSS/Reference/Properties/column-height
 l10n:

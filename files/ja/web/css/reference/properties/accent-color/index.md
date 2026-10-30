@@ -1,5 +1,5 @@
 ---
-title: "`accent-color` プロパティ (CSS)"
+title: "`accent-color` プロパティ"
 short-title: accent-color
 slug: Web/CSS/Reference/Properties/accent-color
 l10n:

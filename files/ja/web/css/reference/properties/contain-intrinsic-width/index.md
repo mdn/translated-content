@@ -1,5 +1,5 @@
 ---
-title: "`contain-intrinsic-width` プロパティ (CSS)"
+title: "`contain-intrinsic-width` プロパティ"
 short-title: contain-intrinsic-width
 slug: Web/CSS/Reference/Properties/contain-intrinsic-width
 l10n:

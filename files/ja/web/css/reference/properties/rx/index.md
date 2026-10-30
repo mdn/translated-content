@@ -1,5 +1,5 @@
 ---
-title: "`rx` プロパティ (CSS)"
+title: "`rx` プロパティ"
 short-title: rx
 slug: Web/CSS/Reference/Properties/rx
 l10n:

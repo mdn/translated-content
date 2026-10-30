@@ -1,5 +1,5 @@
 ---
-title: "`font-width` アットルール記述子 (CSS)"
+title: "`font-width` アットルール記述子"
 short-title: font-width
 slug: Web/CSS/Reference/At-rules/@font-face/font-width
 l10n:

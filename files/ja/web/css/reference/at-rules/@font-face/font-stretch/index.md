@@ -1,5 +1,5 @@
 ---
-title: "`font-stretch` アットルール記述子 (CSS)"
+title: "`font-stretch` アットルール記述子"
 short-title: font-stretch
 slug: Web/CSS/Reference/At-rules/@font-face/font-stretch
 l10n:

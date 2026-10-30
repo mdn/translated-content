@@ -1,5 +1,5 @@
 ---
-title: "`all` プロパティ (CSS)"
+title: "`all` プロパティ"
 short-title: all
 slug: Web/CSS/Reference/Properties/all
 l10n:
