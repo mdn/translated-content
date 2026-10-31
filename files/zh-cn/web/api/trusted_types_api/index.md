@@ -150,7 +150,7 @@ element.innerHTML = userInput;
 
 #### TrustedHTML
 
-- {{domxref("Document.execCommand()")}}，其 `commandName` 类型为 [`"insertHTML"`](/en-US/docs/Web/API/Document/execCommand#inserthtml)
+- {{domxref("Document.execCommand()")}}，其 `commandName` 类型为 [`"insertHTML"`](/zh-CN/docs/Web/API/Document/execCommand#inserthtml)
 - {{domxref("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
 - {{domxref("Document.write()")}}
 - {{domxref("Document.writeln()")}}
