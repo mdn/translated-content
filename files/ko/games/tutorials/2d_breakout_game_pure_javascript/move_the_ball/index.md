@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
 이 강의는 [게임 개발 캔버스 튜토리얼](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)의 10단계 중 두 번째 과정입니다. [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html)에서 이 강의의 완성된 코드를 볼 수 있습니다.
 
