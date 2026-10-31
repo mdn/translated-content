@@ -1,13 +1,12 @@
 ---
 title: Date.prototype.getYear()
+short-title: getYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getYear
 l10n:
-  sourceCommit: e8320dfbed49d37589d0fe759ef6506885f340f7
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-{{JSRef}}
-
-**`getYear()`** は {{jsxref("Date")}} インスタンスのメソッドで、地方時に基づき、指定された日時の「年」を返します。`getYear()` は完全な桁数の値を返さないため（いわゆる「2000 年問題」）、使用されなくなり、{{jsxref("Date/getFullYear", "getFullYear()")}} メソッドに置き換えられました。
+**`getYear()`** は {{jsxref("Date")}} インスタンスのメソッドで、現地時間に基づき、指定された日時の「年」を返します。`getYear()` は完全な桁数の値を返さないため（いわゆる「2000 年問題」）、使用されなくなり、{{jsxref("Date/getFullYear", "getFullYear()")}} メソッドに置き換えられました。
 
 ## 構文
 
@@ -21,7 +20,7 @@ getYear()
 
 ### 返値
 
-指定された日時の、地方時に基づく「年」から 1900 を引いた整数です。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
+指定された日時の、現地時間に基づく「年」から 1900 を引いた整数です。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
 
 - 2000 年以降の年について、`getYear()` が返す値は 100 以上です。例えば、 2026 年の場合、`getYear()` は 126 を返します。
 - 1900 年から 1999 年について、`getYear()` が返す値は 0 から 99 の間です。例えば、 1976 年の場合、`getYear()` は 76 を返します。
@@ -78,7 +77,7 @@ const year = xmas.getYear(); // 95 を返す
 
 ## 関連情報
 
-- [`Date.prototype.getYear` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-date)
+- [`Date.prototype.getYear` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/date)
 - [es-shims の `Date.prototype.getYear` のポリフィル](https://www.npmjs.com/package/date.prototype.getyear)
 - {{jsxref("Date.prototype.getFullYear()")}}
 - {{jsxref("Date.prototype.getUTCFullYear()")}}
