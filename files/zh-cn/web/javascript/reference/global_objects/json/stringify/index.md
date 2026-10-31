@@ -1,5 +1,6 @@
 ---
 title: JSON.stringify()
+short-title: stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 ---
 
