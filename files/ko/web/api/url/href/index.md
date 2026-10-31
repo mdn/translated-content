@@ -5,7 +5,7 @@ slug: Web/API/URL/href
 
 {{ApiRef("URL API")}}
 
-{{domxref("URL")}} 인터페이스의 **`href`** 속성은 전체 URL을 담은 {{domxref("USVString")}}입니다.
+{{domxref("URL")}} 인터페이스의 **`href`** 속성은 전체 URL을 담은 {{jsxref("String")}}입니다.
 
 {{AvailableInWorkers}}
 
@@ -18,7 +18,7 @@ url.href = newUrlString;
 
 ### 값
 
-{{domxref("USVString")}}.
+{{jsxref("String")}}.
 
 ## 예제
 

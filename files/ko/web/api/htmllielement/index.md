@@ -16,7 +16,7 @@ slug: Web/API/HTMLLIElement
 _부모인 {{domxref("HTMLElement")}}에서 상속받습니다._
 
 - {{domxref("HTMLLIElement.type")}} {{deprecated_inline}}
-  - : 는 {{domxref("DOMString")}} 의 `"disc"`, `"square"` 나 `"circle"` 같은 bullets 타입을 대표합니다.
+  - : 는 {{jsxref("String")}} 의 `"disc"`, `"square"` 나 `"circle"` 같은 bullets 타입을 대표합니다.
     리스트 유형을 정의하는 표준 정의 방법은 CSS {{cssxref("list-style-type")}} 프로퍼티를 통해서 이므로, 스트립트를 통하여 CSSSOM 메소드를 사용하세요.
 - {{domxref("HTMLLIElement.value")}}
   - : 는 주어진 {{HTMLElement("ol")}} 리스트 엘리먼트 안에서 서수의 위치를 가르키는 오랜 서수적 포지션입니다. 이것은 HTML의 {{HTMLElement("li")}}엘리먼트의 [`value`](/ko/docs/Web/HTML/Reference/Elements/li#value)속성을 나타냅니다. 그리고 `0` 보다 작을 수도 있습니다.

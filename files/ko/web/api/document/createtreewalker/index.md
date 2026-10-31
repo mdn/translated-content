@@ -39,7 +39,7 @@ document.createTreeWalker(root, whatToShow[, filter[, entityReferenceExpansion]]
 - `filter` {{optional_inline}}
   - : 선택적인 {{domxref("NodeFilter")}}이다. {{domxref("TreeWalker")}}가 `whatToShow` 체크를 통과한 노드의 승인여부를 판단하기 위해 호출하는 `acceptNode` 메소드를 가진 객체이다.
 - `entityReferenceExpansion` {{optional_inline}} {{deprecated_inline}}
-  - : 한 {{domxref("EntityReference")}}를 버릴 때 그 전체 하위 트리를 같이 버려야하는지를 나타내는 {{domxref("Boolean")}} 플래그이다.
+  - : 한 {{domxref("EntityReference")}}를 버릴 때 그 전체 하위 트리를 같이 버려야하는지를 나타내는 {{jsxref("Boolean")}} 플래그이다.
 
 ### 반환 값
 
