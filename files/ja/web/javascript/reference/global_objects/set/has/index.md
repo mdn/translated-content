@@ -3,10 +3,10 @@ title: Set.prototype.has()
 short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 7b63b90d24ad8945977bb9dc2735d75f72829bc1
 ---
 
-**`has()`** は {{jsxref("Set")}} インターフェイスのメソッドで、指定された値をもつ要素がこの集合内に存在するかどうかを示す論理値を返します。
+**`has()`** は {{jsxref("Set")}} インターフェイスのメソッドで、指定された値がこの `Set` 内に存在するかどうかを示す論理値を返します。
 
 {{InteractiveExample("JavaScript デモ: Set.prototype.has()")}}
 
@@ -36,11 +36,11 @@ has(value)
 
 ### 返値
 
-この `Set` オブジェクト内に指定された値をもつ要素が存在していたら `true` を返します。さもなければ `false` を返します。
+この `Set` オブジェクト内に指定された値が存在していたら `true` を返します。さもなければ `false` を返します。
 
 ## 例
 
-### has() メソッドの使用
+### has() の使用
 
 ```js
 const mySet = new Set();
@@ -50,10 +50,10 @@ console.log(mySet.has("foo")); // true
 console.log(mySet.has("bar")); // false
 
 const set = new Set();
-const obj1 = { key1: 1 };
-set.add(obj1);
+const obj = { key1: 1 };
+set.add(obj);
 
-console.log(set.has(obj1)); // true
+console.log(set.has(obj)); // true
 console.log(set.has({ key1: 1 })); // オブジェクト参照が異なるため false を返す
 console.log(set.add({ key1: 1 })); // set には 2 つの項目が含まれるようになる
 ```
