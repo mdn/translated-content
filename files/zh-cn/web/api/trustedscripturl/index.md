@@ -40,4 +40,4 @@ console.log(sanitized); /* TrustedScriptURL 对象 */
 
 ## 参见
 
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types)
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.developers.google.cn/articles/trusted-types)
