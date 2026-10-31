@@ -334,7 +334,7 @@ console.log(escaped instanceof TrustedHTML); // true
 el.innerHTML = escaped;
 ```
 
-在文章 [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types) 中阅读关于此示例的更多信息，以及探索其他清洗输入的方式。
+在文章 [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.developers.google.cn/articles/trusted-types) 中阅读关于此示例的更多信息，以及探索其他清洗输入的方式。
 
 ## 规范
 
