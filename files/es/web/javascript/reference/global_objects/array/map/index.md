@@ -40,14 +40,14 @@ var nuevo_array = arr.map(function callback(currentValue, index, array) {
     - `index`
       - : El índice del elemento actual dentro del array.
     - `array`
-      - : El array sobre el que se llama `map.`
+      - : El array sobre el que se llama `map`.
 
 - `thisArg`
   - : Opcional. Valor a usar como `this` al ejecutar `callback`.
 
 ### Valor devuelto
 
-Un nuevo array en la que cada elemento es el resultado de ejecutar `callback`.
+Un nuevo array en el que cada elemento es el resultado de ejecutar `callback`.
 
 ## Descripción
 
@@ -115,7 +115,7 @@ var dobles = numeros.map(function (num) {
 
 ### Usando `map` de forma genérica
 
-Este ejemplo muestra como usar `map` en {{jsxref("String")}} para obtener un arreglo de bytes en codifcación ASCII representando el valor de los caracteres:
+Este ejemplo muestra cómo usar `map` en {{jsxref("String")}} para obtener un arreglo de bytes en codificación ASCII representando el valor de los caracteres:
 
 ```js
 var map = Array.prototype.map;
@@ -127,7 +127,7 @@ var valores = map.call("Hello World", function (char) {
 
 ### Usando `map` genérico con `querySelectorAll`
 
-Este ejemplo muestra como iterar sobre una colección de objetos obtenidos por `querySelectorAll`. En este caso obtenemos todas las opciones seleccionadas en pantalla y se imprimen en la consola:
+Este ejemplo muestra cómo iterar sobre una colección de objetos obtenidos por `querySelectorAll`. En este caso obtenemos todas las opciones seleccionadas en pantalla y se imprimen en la consola:
 
 ```js
 var elems = document.querySelectorAll("select option:checked");
@@ -148,14 +148,14 @@ var str = "12345";
   .join("");
 
 // Salida: '54321'
-// Bonus: usa'===' para probar si la cadena original era un palindromo
+// Bonus: usa '===' para probar si la cadena original era un palíndromo
 ```
 
 ### Caso de uso engañoso
 
 [(inspirado por este artículo)](http://www.wirfs-brock.com/allen/posts/166)
 
-Es común utilizar el callback con un argumento (el elemento siendo pasado). Ciertas funciones son también usadas comunmente con un argumento, aún cuando toman argumentos adicionales opcionales. Estos hábitos pueden llevar a comportamientos confusos.
+Es común utilizar el callback con un argumento (el elemento siendo pasado). Ciertas funciones son también usadas comúnmente con un argumento, aun cuando toman argumentos adicionales opcionales. Estos hábitos pueden llevar a comportamientos confusos.
 
 ```js
 // Considera:
@@ -177,13 +177,13 @@ function returnInt(element) {
 ["1", "2", "3"].map(returnInt); // [1, 2, 3]
 // El resultado es un arreglo de números (como se esperaba)
 
-// Un modo más simple de lograr lo de arriba, mientras de evita el "gotcha":
+// Un modo más simple de lograr lo de arriba, mientras se evita el "gotcha":
 ["1", "2", "3"].map(Number); // [1, 2, 3]
 ```
 
 ## Polyfill
 
-`map` fue agregado al estandar ECMA-262 en la 5th edición; por lo tanto podría no estar presente en todas la implementaciones del estándar. Puedes sobrepasar esto insertando el siguiente código al comienzo de tus scripts, permitiendo el uso de `map` en implementaciones que no lo soportan de forma nativa. Este algoritmo es exactamente el mismo especificado en ECMA-262, 5th edición, asumiendo {{jsxref("Object")}}, {{jsxref("TypeError")}}, y {{jsxref("Array")}} tienen sus valores originales y que el `callback.call` evalua el valor original de `{{jsxref("Function.prototype.call")}}`.
+`map` fue agregado al estándar ECMA-262 en la 5th edición; por lo tanto podría no estar presente en todas las implementaciones del estándar. Puedes sobrepasar esto insertando el siguiente código al comienzo de tus scripts, permitiendo el uso de `map` en implementaciones que no lo soportan de forma nativa. Este algoritmo es exactamente el mismo especificado en ECMA-262, 5th edición, asumiendo {{jsxref("Object")}}, {{jsxref("TypeError")}}, y {{jsxref("Array")}} tienen sus valores originales y que el `callback.call` evalúa el valor original de `{{jsxref("Function.prototype.call")}}`.
 
 ```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.19
