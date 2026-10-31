@@ -1,41 +1,55 @@
 ---
-title: GlobalEventHandlers.onpointerenter
+title: Element：pointerenter 事件
+short-title: pointerenter
 slug: Web/API/Element/pointerenter_event
+l10n:
+  sourceCommit: e1b44d1e4197102da109a563f343cf41ef06ca7c
 ---
 
-{{APIRef}}
+{{APIRef("Pointer Events")}}
 
-HTML DOMpointerenter 事件的 GlobalEventHandlers（全局事件处理函数）
+`pointerenter` 事件会在定点设备移入元素以及其子孙元素的命中测试边界时触发，也包括由来自不支持悬停的设备的 {{domxref("Element/pointerdown_event", "pointerdown")}} 事件导致的情形（参见 {{domxref("Element/pointerdown_event", "pointerdown")}}）。另外，`pointerenter` 的运作方式与 {{domxref("Element/mouseenter_event", "mouseenter")}} 相同，并且会在同一时间被派发。视情况，它们也会与 {{domxref("Element/mouseover_event", "mouseover")}} 和 {{domxref("Element/pointerover_event", "pointerover")}} 事件在同一时间被派发。
 
-```js
-var enterHandler = targetElement.onpointerenter;
+## 语法
+
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 中使用此事件名称：
+
+```js-nolint
+addEventListener("pointerenter", (event) => { })
 ```
 
-### 返回值
+或者，对接口的[事件处理器属性](/zh-CN/docs/Web/API/Document_Object_Model/Events#使用_onevent_属性)赋值：
 
-- `enterHandler`
-  - : `targetElement`的 pointerenter 事件处理函数。
+```js-nolint
+onpointerenter = (event) => { }
+```
+
+## 事件类型
+
+{{domxref("PointerEvent")}}。继承自 {{domxref("Event")}}。
+
+{{InheritanceDiagram("PointerEvent")}}
 
 ## 示例
 
-这个例子展示了使用 onpointerenter 来设置元素 pointerenter 事件处理函数的两种方式*。*
+使用 `addEventListener()`：
 
 ```js
-<html>
-<script>
-function enterHandler(ev) {
- // 处理 pointerenter 事件
-}
-function init() {
- var el=document.getElementById("target1");
- el.onpointerenter = enterHandler;
-}
-</script>
-<body onload="init();">
-<div id="target1"> 点我 ... </div>
-<div id="target2" onpointerenter="enterHandler(event)"> 点我 ... </div>
-</body>
-</html>
+const para = document.querySelector("p");
+
+para.addEventListener("pointerenter", (event) => {
+  console.log("指针进入了元素");
+});
+```
+
+使用 `onpointerenter` 事件处理器属性（但请注意，这会替换掉之前使用 `onpointerenter` 添加的其他事件监听器，如存在的话）：
+
+```js
+const para = document.querySelector("p");
+
+para.onpointerenter = (event) => {
+  console.log("指针进入了元素");
+};
 ```
 
 ## 规范
@@ -49,12 +63,14 @@ function init() {
 ## 参见
 
 - 相关事件
-  - [`gotpointercapture`](/zh-CN/docs/Web/API/Element/gotpointercapture_event)
-  - [`lostpointercapture`](/zh-CN/docs/Web/API/Element/lostpointercapture_event)
-  - [`pointerover`](/zh-CN/docs/Web/API/Element/pointerover_event)
-  - [`pointerdown`](/zh-CN/docs/Web/API/Element/pointerdown_event)
-  - [`pointermove`](/zh-CN/docs/Web/API/Element/pointermove_event)
-  - [`pointerup`](/zh-CN/docs/Web/API/Element/pointerup_event)
-  - [`pointercancel`](/zh-CN/docs/Web/API/Element/pointercancel_event)
-  - [`pointerout`](/zh-CN/docs/Web/API/Element/pointerout_event)
-  - [`pointerleave`](/zh-CN/docs/Web/API/Element/pointerleave_event)
+  - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
+  - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
+  - {{domxref('Element/pointerover_event', 'pointerover')}}
+  - {{domxref('Element/pointerdown_event', 'pointerdown')}}
+  - {{domxref('Element/pointermove_event', 'pointermove')}}
+  - {{domxref('Element/pointerup_event', 'pointerup')}}
+  - {{domxref('Element/pointercancel_event', 'pointercancel')}}
+  - {{domxref('Element/pointerout_event', 'pointerout')}}
+  - {{domxref('Element/pointerleave_event', 'pointerleave')}}
+  - {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}}
+  - {{domxref("Element/mouseenter_event", "mouseenter")}}
