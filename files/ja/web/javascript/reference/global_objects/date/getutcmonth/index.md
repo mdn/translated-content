@@ -1,11 +1,10 @@
 ---
 title: Date.prototype.getUTCMonth()
+short-title: getUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`getUTCMonth()`** は {{jsxref("Date")}} インスタンスのメソッドで、協定世界時に基づき、指定された日時の「月」を表す 0 を基点とした値（すなわち 0 が年の最初の月を示す）を返します。
 

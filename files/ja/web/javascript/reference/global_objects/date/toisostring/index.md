@@ -1,11 +1,10 @@
 ---
 title: Date.prototype.toISOString()
+short-title: toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`toISOString()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日時を[日時文字列形式](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#日時文字列形式)で表す文字列を返します。この形式は、[ISO 8601](https://ja.wikipedia.org/wiki/ISO_8601) に基づく簡略化された形式で、常に 24 または 27 文字の長さです（`YYYY-MM-DDTHH:mm:ss.sssZ` または `±YYYYYY-MM-DDTHH:mm:ss.sssZ`）。タイムゾーンは常に 0 UTC オフセットになり、接尾辞 `Z` で表記されます。
 
@@ -15,7 +14,7 @@ l10n:
 const event = new Date("05 October 2011 14:48 UTC");
 console.log(event.toString());
 // 予想される結果: "Wed Oct 05 2011 16:48:00 GMT+0200 (CEST)"
-// Note: your timezone may vary
+// メモ: タイムゾーンは変わる可能性があります
 
 console.log(event.toISOString());
 // 予想される結果: "2011-10-05T14:48:00.000Z"

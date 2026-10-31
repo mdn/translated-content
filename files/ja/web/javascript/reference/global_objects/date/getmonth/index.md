@@ -1,11 +1,10 @@
 ---
 title: Date.prototype.getMonth()
+short-title: getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`getMonth()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日付の「月」を表す 0 を基点とした値（すなわち 0 が年の最初の月を示す）を返します。
 
@@ -30,7 +29,7 @@ getMonth()
 
 ### 返値
 
-地方時に基づき、指定された日時の「月」を表す 0 から 11 までの間の整数値です。 1 月は 0、2 月 は 1 というようになります。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
+現地時間に基づき、指定された日時の「月」を表す 0 から 11 までの間の整数値です。 1 月は 0、2 月 は 1 というようになります。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
 
 ## 解説
 

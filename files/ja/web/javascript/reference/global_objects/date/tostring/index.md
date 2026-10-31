@@ -1,13 +1,12 @@
 ---
 title: Date.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`toString()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日時を地方時で解釈したものを表す文字列を返します。
+**`toString()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日時を現地時間で解釈したものを表す文字列を返します。
 
 {{InteractiveExample("JavaScript デモ: Date.prototype.toString()", "shorter")}}
 
@@ -43,7 +42,7 @@ toString()
 
 - 日付部分を取得したい場合は、 {{jsxref("Date/toDateString", "toDateString()")}} を使用してください。
 - 時刻部分を取得したい場合は、 {{jsxref("Date/toTimeString", "toTimeString()")}} を使用してください。
-- 日付を地方時ではなく UTC として解釈したい場合は、 {{jsxref("Date/toUTCString", "toUTCString()")}} を使用してください。
+- 日付を現地時間ではなく UTC として解釈したい場合は、 {{jsxref("Date/toUTCString", "toUTCString()")}} を使用してください。
 - 日付をもっとユーザーが読みやすい形式（例えばローカライズ）で整形したい場合は、 {{jsxref("Date/toLocaleString", "toLocaleString()")}} を使用してください。
 
 ## 例

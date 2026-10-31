@@ -1,13 +1,12 @@
 ---
 title: Date.prototype.getMinutes()
+short-title: getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`getMinutes()`** は {{jsxref("Date")}} インスタンスのメソッドで、地方時に基づき、指定された日時の「分」を返します。
+**`getMinutes()`** は {{jsxref("Date")}} インスタンスのメソッドで、現地時間に基づき、指定された日時の「分」を返します。
 
 {{InteractiveExample("JavaScript デモ: Date.prototype.getMinutes()", "shorter")}}
 
@@ -30,7 +29,7 @@ getMinutes()
 
 ### 返値
 
-地方時に基づき、指定された日時の「分」を表す 0 から 59 までの間の数値です。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
+現地時間に基づき、指定された日時の「分」を表す 0 から 59 までの間の数値です。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
 
 ## 例
 
