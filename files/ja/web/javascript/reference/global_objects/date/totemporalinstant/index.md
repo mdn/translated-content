@@ -1,11 +1,10 @@
 ---
 title: Date.prototype.toTemporalInstant()
+short-title: toTemporalInstant()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toTemporalInstant
 l10n:
-  sourceCommit: d0b9cef0713eb263934a98e94202b97c143204a4
+  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
-
-{{JSRef}}{{SeeCompatTable}}
 
 **`toTemporalInstant()`** は {{jsxref("Date")}} インスタンスのメソッドで、新しい {{jsxref("Temporal.Instant")}} オブジェクトを作成し、 {{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} 値をこの日時の[タイムスタンプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)と同にして返します。
 
