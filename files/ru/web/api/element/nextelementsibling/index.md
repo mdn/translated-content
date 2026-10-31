@@ -5,7 +5,7 @@ slug: Web/API/Element/nextElementSibling
 
 {{APIRef("DOM")}}
 
-**`NonDocumentTypeChildNode.nextElementSibling`** свойство только для чтения, возвращающее последующий элемент перед текущим, или `null`, если элемент является последним в своём родительском узле.
+**`NonDocumentTypeChildNode.nextElementSibling`** свойство только для чтения, возвращающее следующий элемент после текущего, или `null`, если элемент является последним в своём родительском узле.
 
 ## Синтаксис
 
