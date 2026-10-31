@@ -2,10 +2,8 @@
 title: "数量詞: *, +, ?, {n}, {n,}, {n,m}"
 slug: Web/JavaScript/Reference/Regular_expressions/Quantifier
 l10n:
-  sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
+  sourceCommit: 0f6daa30cf89c66d37700c51b8a12e660fee29d9
 ---
-
-{{JsSidebar}}
 
 **数量詞**は、[アトム](/ja/docs/Web/JavaScript/Reference/Regular_expressions#アトム)を指定した回数繰り返します。数量詞は適用するアトムの後に配置します。
 
@@ -28,6 +26,9 @@ atom{count}?
 atom{min,}?
 atom{min,max}?
 ```
+
+> [!NOTE]
+> `?` を `{count}` の後に追加することは、構文的には有効ですが、実際には利用価値がありません。`{count}` は常に `count` 回照合しますので、`atom{count}?` は `atom{count}` と全く同じように動作します。
 
 ### 引数
 
@@ -63,13 +64,13 @@ re.test("a{1, 3}"); // true
 
 この動作は [Unicode 対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)で修正され、中括弧を[エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)なしでリテラルに入れることができなくなりました。`{` と `}` がエスケープなしでリテラルとして使用できるというのは[ウェブの互換性のための非推奨構文](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)としてのみ認められており、頼ってはいけません。
 
-```js
+```js-nolint example-bad
 /a{1, 3}/u; // SyntaxError: Invalid regular expression: Incomplete quantifier
 ```
 
 最小値が最大値より大きいと構文エラーになります。
 
-```js
+```js-nolint example-bad
 /a{3,2}/; // SyntaxError: Invalid regular expression: numbers out of order in {} quantifier
 ```
 
@@ -109,7 +110,7 @@ re.test("a{1, 3}"); // true
 
 数量詞は単一のアトムに適用されます。長いパターンや論理和を量化したい場合は、[グループ化](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)する必要があります。 数量詞は[アサーション](/ja/docs/Web/JavaScript/Reference/Regular_expressions#アサーション)には適用できません。
 
-```js
+```js-nolint example-bad
 /^*/; // SyntaxError: Invalid regular expression: nothing to repeat
 ```
 
@@ -178,7 +179,7 @@ Another paragraph
 
 ## 関連情報
 
-- [数量詞](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-- [正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
+- [数量詞](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)ガイド
+- [正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
 - [論理和: `|`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
 - [文字クラス: `[...]`, `[^...]`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
