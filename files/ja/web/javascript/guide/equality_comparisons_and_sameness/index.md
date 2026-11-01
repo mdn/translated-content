@@ -206,7 +206,7 @@ function sameValueZero(x, y) {
 
 ### 注意: Object.is() と NaN
 
-{{jsxref("Object.is()")}} では、すべての {{jsxref("NaN")}} のインスタンスを同じ値として扱っています。しかし、[型付き配列](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)を利用して、すべてのコンテキストで同じように動作しない、`NaN` の異なる浮動小数点表現を持つことが可能になりました。例を示します。
+{{jsxref("Object.is()")}} では、すべての {{jsxref("NaN")}} のインスタンスを同じ値として扱っています。しかし、[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)を利用して、すべてのコンテキストで同じように動作しない、`NaN` の異なる浮動小数点表現を持つことが可能になりました。例を示します。
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
