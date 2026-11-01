@@ -3,7 +3,7 @@ title: Array.fromAsync()
 short-title: fromAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fromAsync
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`Array.fromAsync()`** は静的メソッドで、[非同期反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)オブジェクト、[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)オブジェクト、[配列風](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)のオブジェクトから、シャローコピーされた新しい配列インスタンスを作成します。
@@ -196,9 +196,9 @@ function* makeIterableOfPromises() {
 })();
 ```
 
-### 同期反復可能オブジェクトのエラー処理なし
+### 拒否時に反復可能オブジェクトを閉じる
 
-[`for await...of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of#同期の反復可能オブジェクトおよびジェネレーターの反復処理) と同様に、反復処理されるオブジェクトが同期反復可能オブジェクトで、反復処理中にエラーが発生した場合、基盤となるイテレーターの `return()` メソッドは呼び出されず、イテレーターは閉じられません。
+[`for await...of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of#同期の反復可能オブジェクトおよびジェネレーターの反復処理) と同様に、反復処理の対象となるオブジェクトが同期反復可能オブジェクトであり、かつ生成されたプロミスが拒否された場合、基盤となるイテレーターの `return()` メソッドが（存在すれば）呼び出され、イテレーターがクリーンアップ処理を実行することができます。
 
 ```js
 function* generatorWithRejectedPromises() {
@@ -206,7 +206,7 @@ function* generatorWithRejectedPromises() {
     yield 0;
     yield Promise.reject(new Error("error"));
   } finally {
-    console.log("called finally");
+    console.log("finally が呼び出されました");
   }
 }
 
@@ -217,25 +217,8 @@ function* generatorWithRejectedPromises() {
     console.log("caught", e);
   }
 })();
+// finally が呼び出されました
 // caught Error: error
-// No "called finally" message
-```
-
-イテレーターを閉じる必要がある場合は、代わりに {{jsxref("Statements/for...of", "for...of")}} ループを使用して、各値を `await` する必要があります。
-
-```js
-(async () => {
-  const arr = [];
-  try {
-    for (const val of generatorWithRejectedPromises()) {
-      arr.push(await val);
-    }
-  } catch (e) {
-    console.log("caught", e);
-  }
-})();
-// called finally
-// caught 3
 ```
 
 ## 仕様書
@@ -248,7 +231,7 @@ function* generatorWithRejectedPromises() {
 
 ## 関連情報
 
-- [`Array.fromAsync` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#arrayfromasync)
+- [`Array.fromAsync` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array/Array", "Array()")}}
