@@ -1,43 +1,57 @@
 ---
 title: Element：pointerover 事件
+short-title: pointerover
 slug: Web/API/Element/pointerover_event
+l10n:
+  sourceCommit: e1b44d1e4197102da109a563f343cf41ef06ca7c
 ---
 
-{{APIRef}}
+{{APIRef("Pointer Events")}}
 
-The `pointerover` event is fired when a pointing device is moved into an element's hit test boundaries.
+`pointerover` 事件会在定点设备移入元素的命中测试边界时触发。
+
+`pointerover` 事件具有和 {{domxref("Element/mouseover_event", "mouseover")}} 事件相同的问题。如果目标元素拥有子元素，`pointerout` 和 `pointerover` 事件在指针移动到这些子元素的边界之上时也会触发，而不仅仅是在目标元素本身上触发。通常来说，{{domxref("Element/pointerenter_event", "pointerenter")}} 和 {{domxref("Element/pointerleave_event", "pointerleave")}} 事件的行为更合理，因为它们不受指针移入子元素的影响。
 
 ## 语法
 
-```plain
-var overHandler = targetElement.onpointerover;
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 中使用此事件名称：
+
+```js-nolint
+addEventListener("pointerover", (event) => { })
 ```
 
-### 返回值
+或者，对接口的[事件处理器属性](/zh-CN/docs/Web/API/Document_Object_Model/Events#使用_onevent_属性)赋值：
 
-- `overHandler`
-  - : pointerover 事件处理器返回目标元素的`overHandler.`
+```js-nolint
+onpointerover = (event) => { }
+```
 
-## 案例
+## 事件类型
 
-这里使用两种方式展示了如何去使用 _onpointerover_ 去设置一个元素的 _pointerover_ 事件处理器
+{{domxref("PointerEvent")}}。继承自 {{domxref("Event")}}。
+
+{{InheritanceDiagram("PointerEvent")}}
+
+## 示例
+
+使用 `addEventListener()`：
 
 ```js
-<html>
-<script>
-function overHandler(ev) {
- // Process the pointerover event
-}
-function init() {
- var el=document.getElementById("target1");
- el.onpointerover = overHandler;
-}
-</script>
-<body onload="init();">
-<div id="target1"> Touch me ... </div>
-<div id="target2" onpointerover="overHandler(event)"> Touch me ... </div>
-</body>
-</html>
+const para = document.querySelector("p");
+
+para.addEventListener("pointerover", (event) => {
+  console.log("指针移入了");
+});
+```
+
+使用 `onpointerover` 事件处理器属性（但请注意，这会替换掉之前使用 `onpointerover` 添加的其他事件监听器，如存在的话）：
+
+```js
+const para = document.querySelector("p");
+
+para.onpointerover = (event) => {
+  console.log("指针移入了");
+};
 ```
 
 ## 规范
@@ -51,12 +65,14 @@ function init() {
 ## 参见
 
 - 相关事件
-  - [`gotpointercapture`](/zh-CN/docs/Web/API/Element/gotpointercapture_event)
-  - [`lostpointercapture`](/zh-CN/docs/Web/API/Element/lostpointercapture_event)
-  - [`pointerenter`](/zh-CN/docs/Web/API/Element/pointerenter_event)
-  - [`pointerdown`](/zh-CN/docs/Web/API/Element/pointerdown_event)
-  - [`pointermove`](/zh-CN/docs/Web/API/Element/pointermove_event)
-  - [`pointerup`](/zh-CN/docs/Web/API/Element/pointerup_event)
-  - [`pointercancel`](/zh-CN/docs/Web/API/Element/pointercancel_event)
-  - [`pointerout`](/zh-CN/docs/Web/API/Element/pointerout_event)
-  - [`pointerleave`](/zh-CN/docs/Web/API/Element/pointerleave_event)
+  - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
+  - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
+  - {{domxref('Element/pointerenter_event', 'pointerenter')}}
+  - {{domxref('Element/pointerdown_event', 'pointerdown')}}
+  - {{domxref('Element/pointermove_event', 'pointermove')}}
+  - {{domxref('Element/pointerup_event', 'pointerup')}}
+  - {{domxref('Element/pointercancel_event', 'pointercancel')}}
+  - {{domxref('Element/pointerout_event', 'pointerout')}}
+  - {{domxref('Element/pointerleave_event', 'pointerleave')}}
+  - {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}}
+  - {{domxref("Element/mouseover_event", "mouseover")}}
