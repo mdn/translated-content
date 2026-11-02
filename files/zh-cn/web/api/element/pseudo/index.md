@@ -73,7 +73,7 @@ p::after {
 
 #### JavaScript
 
-在脚本中，我们抓取 `<p>` 和 `<output>` 元素的引用，然后通过 `pseudo()` 方法获取一个表示 `<p>` 的 `::after` 伪元素的 `CSSPseudoElement`。接着在 `<output>` 元素中记录一些伪元素的详细信息。同时还要用一个 [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) 结构写一些最基本的错误处理，用来在不支持的浏览器里显示错误消息。
+在脚本中，我们抓取 `<p>` 和 `<output>` 元素的引用，然后通过 `pseudo()` 方法获取一个表示 `<p>` 的 `::after` 伪元素的 `CSSPseudoElement`。接着在 `<output>` 元素中记录一些伪元素的详细信息。同时还要用一个 [`try...catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 结构写一些最基本的错误处理，用来在不支持的浏览器里显示错误消息。
 
 ```js live-sample___basic
 const pElem = document.querySelector("p");
