@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`column-rule-inset-cap`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、コンテナーの先頭の端および末尾の端にある列罫線の区間の[キャップ端点](#キャップ端点を理解する)、および他の行や列の区間と交差しない区間の端点をずらすことができます。
+**`column-rule-inset-cap`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、コンテナーの先頭の端および末尾の端にある列間罫の区間の[キャップ端点](#キャップ端点を理解する)、および他の行や列の区間と交差しない区間の端点をずらすことができます。
 
 {{InteractiveExample("CSS Demo: column-rule-inset-cap")}}
 
@@ -147,7 +147,7 @@ column-rule-inset-cap: unset;
 
 `column-rule-inset-cap` の長さの値は、指定された値だけ区間を内側に配置します。負の長さの値を指定すると外側に配置され、端のキャップ区間がコンテナーの上端および下端からはみ出すことになります。端のキャップ区間に対するパーセント値は `0` を基準としているため、効果はありません。
 
-内部の区間では、[パーセント値](#パーセント値を理解する)は {{cssxref("row-gap")}} のサイズに関連しています。`-50%` を設定すると、区間は隙間の中央まで伸び、`-100%` を設定すると、区間は隙間全体に広がります。
+内部の区間では、[パーセント値](#パーセント値を理解する)は {{cssxref("row-gap")}} のサイズに対する割合です。`-50%` を設定すると、区間は隙間の中央まで伸び、`-100%` を設定すると、区間は隙間全体に広がります。
 
 `column-rule-inset-cap` プロパティは、いくつかの[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)を構成するプロパティです。
 
