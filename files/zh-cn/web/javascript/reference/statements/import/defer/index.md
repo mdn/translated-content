@@ -147,7 +147,7 @@ import text from "./module.js" with { type: "text" };
 
 ```js
 // -- squares.js --
-console.log("Initializing squares");
+console.log("初始化 squares 模块");
 const squares = Array.from({ length: 10000 }, (_, index) => index ** 2);
 
 export function getSquare(index) {
@@ -161,17 +161,17 @@ export function getSquare(index) {
 // -- main.js --
 import defer * as squares from "./squares.js";
 
-console.log("Ready");
+console.log("就绪");
 
 export function showSquare(index) {
   console.log(squares.getSquare(index));
 }
 
-showSquare(3); // 输出 "Initializing squares"，然后输出 9
+showSquare(3); // 输出 "初始化 squares 模块"，然后输出 9
 showSquare(4); // 输出 16；不会重复初始化
 ```
 
-`"Ready"` 会先于 `"Initializing squares"` 输出。如果从未调用 `showSquare()`，且没有其他导入触发 `squares.js` 执行，那么查找表就永远不会初始化。
+`"就绪"` 会先于 `"初始化 squares 模块"` 输出。如果从未调用 `showSquare()`，且没有其他导入触发 `squares.js` 执行，那么查找表就永远不会初始化。
 
 ### 延迟具有异步依赖的模块
 
@@ -180,12 +180,12 @@ showSquare(4); // 输出 16；不会重复初始化
 ```js
 // -- config.js --
 export const locale = await Promise.resolve("en-US");
-console.log("Configuration ready");
+console.log("配置已就绪");
 ```
 
 ```js
 // -- format.js --
-console.log("Formatting module evaluated");
+console.log("格式化模块已执行");
 
 export function format(value, locale) {
   return new Intl.NumberFormat(locale).format(value);
@@ -197,7 +197,7 @@ export function format(value, locale) {
 import { locale } from "./config.js";
 import { format } from "./format.js";
 
-console.log("Report module evaluated");
+console.log("报告模块已执行");
 
 export function createReport(value) {
   return format(value, locale);
@@ -208,17 +208,17 @@ export function createReport(value) {
 // -- main.js --
 import defer * as report from "./report.js";
 
-console.log("Main module evaluated");
+console.log("主模块已执行");
 console.log(report.createReport(1000));
 ```
 
 输出如下：
 
 ```plain
-Configuration ready
-Main module evaluated
-Formatting module evaluated
-Report module evaluated
+配置已就绪
+主模块已执行
+格式化模块已执行
+报告模块已执行
 1,000
 ```
 
@@ -229,7 +229,7 @@ Report module evaluated
 ```js
 // -- broken.js --
 export const value = 1;
-throw new Error("Initialization failed");
+throw new Error("初始化失败");
 ```
 
 ```js
@@ -240,7 +240,7 @@ for (let attempt = 0; attempt < 2; attempt++) {
   try {
     console.log(broken.value);
   } catch (error) {
-    console.log(error.message); // 两次都会输出 "Initialization failed"
+    console.log(error.message); // 两次都会输出 "初始化失败"
   }
 }
 ```
