@@ -49,7 +49,7 @@ pseudo(type)
 
 #### CSS
 
-我们赋予 `<p>` 元素的 {{cssxref("::after")}} 伪元素一些{{cssxref("content", "内容")}}，并为两者应用一些基本的样式。
+我们赋予 `<p>` 元素的 {{cssxref("::after")}} 伪元素一些 {{cssxref("content")}}，并为两者应用一些基本的样式。
 
 ```css hidden live-sample___basic
 body {
