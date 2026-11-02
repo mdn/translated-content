@@ -46,7 +46,7 @@
     "mdast-util-from-markdown": "^2.1.0",
     "ora": "^9.4.1",
     "prettier": "^3.9.10",
-    "unist-util-visit": "^5.1.0",
+    "unist-util-visit": "^5.2.0",
     "yargs": "^18.2.0"
   },
   "allowScripts": {
