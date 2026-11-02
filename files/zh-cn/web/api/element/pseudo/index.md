@@ -43,7 +43,7 @@ pseudo(type)
 写一个 {{htmlelement("p")}} 元素来容纳文本，以及一个 {{htmlelement("output")}} 元素来记录 JavaScript 的输出。
 
 ```html live-sample___basic
-<p>纽约最热门的俱乐部是……</p>
+<p>纽约最火的夜店是……</p>
 <output></output>
 ```
 
@@ -65,7 +65,7 @@ p {
 }
 
 p::after {
-  content: "折叠内容";
+  content: "Crease";
   background-color: cadetblue;
   padding: 20px;
 }
