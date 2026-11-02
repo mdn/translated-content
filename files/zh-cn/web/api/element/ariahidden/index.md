@@ -26,7 +26,7 @@ l10n:
 在此示例中，ID 为 `hidden` 的元素上的 `aria-hidden` 属性被设置为 `"true"`。通过 `ariaHidden`，我们将它的值更新为 `"false"`。
 
 ```html
-<div id="hidden" aria-hidden="true">Some things are better left unsaid.</div>
+<div id="hidden" aria-hidden="true">有些话不说为妙。</div>
 ```
 
 ```js
