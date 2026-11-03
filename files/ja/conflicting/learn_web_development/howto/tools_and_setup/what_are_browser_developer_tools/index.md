@@ -1,6 +1,7 @@
 ---
 title: ウェブサイトが正しく動作することを確認するには
-slug: Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
+slug: conflicting/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
+original_slug: Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 l10n:
   sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---

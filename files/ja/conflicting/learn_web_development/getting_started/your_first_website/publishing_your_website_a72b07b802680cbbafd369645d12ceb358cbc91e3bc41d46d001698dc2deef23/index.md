@@ -1,6 +1,7 @@
 ---
 title: ウェブサーバーにファイルをアップロードするには
-slug: Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
+slug: conflicting/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website_a72b07b802680cbbafd369645d12ceb358cbc91e3bc41d46d001698dc2deef23
+original_slug: Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 l10n:
   sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
