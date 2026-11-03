@@ -3,7 +3,7 @@ title: Function.prototype[Symbol.hasInstance]()
 short-title: "[Symbol.hasInstance]()"
 slug: Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
 ---
 
 **`[Symbol.hasInstance]()`** は {{jsxref("Function")}} インスタンスのメソッドで、コンストラクター関数がオブジェクトをそのコンストラクターのインスタンスの一つであると認識するかどうかを決定するデフォルトの手続きを定義します。これは、[`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) 演算子から呼ばれます。

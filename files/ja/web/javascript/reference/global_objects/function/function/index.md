@@ -3,10 +3,17 @@ title: Function() コンストラクター
 short-title: Function()
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
 ---
 
-**`Function()`** コンストラクターは、新しい {{jsxref("Function")}} オブジェクトを生成します。コンストラクターを直接呼び出すと動的に関数を生成することができますが、セキュリティや、 {{jsxref("Global_Objects/eval", "eval()")}} と似た性能の（ただし、はるかに重要性の低い）問題を抱えます。ただし `eval` とは異なり、 `Function` コンストラクターはグローバルスコープで実行される関数のみを生成します。
+> [!WARNING]
+> このコンストラクターに渡された引数は、JavaScript として動的に構文解析され実行されます。このような API は[インジェクションシンク](/ja/docs/Web/API/Trusted_Types_API#概念と使用法)と呼ばれ、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS) 攻撃の経路となる可能性があります。
+>
+> 文字列の代わりに {{domxref("TrustedScript")}} オブジェクトを常に渡し、[信頼型を強制](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)することで、このリスクを軽減できます。
+>
+> 詳しくは[セキュリティ上の注意事項](#セキュリティ上の注意事項)をご覧ください。
+
+**`Function()`** コンストラクターは、新しい {{jsxref("Function")}} オブジェクトを生成します。コンストラクターを直接呼び出すと動的に関数を作成できますが、{{jsxref("Global_Objects/eval", "eval()")}} と同様のセキュリティ上の問題と、規模ははるかに小さいものの同様の性能上の問題があります。ただし `eval` とは異なり、`Function` コンストラクターが生成する関数はグローバルスコープでのみ実行されます。
 
 {{InteractiveExample("JavaScript デモ: Function() コンストラクター", "shorter")}}
 
@@ -37,12 +44,19 @@ Function(arg1, arg2, /* …, */ argN, functionBody)
 ### 引数
 
 - `arg1`, …, `argN` {{optional_inline}}
-  - : 関数で仮引数名として使用される名前。それぞれ、JavaScript で有効な引数（プレーン[識別子](/ja/docs/Glossary/Identifier)、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[分割](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)引数のいずれか、オプションで[既定](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)値付き）に対応する文字列、またはカンマで区切られたそのような文字列のリストでなければなりません。
+  - : 関数の仮引数名を指定する {{domxref("TrustedScript")}} インスタンスまたは文字列です。値は、有効な JavaScript の引数（通常の[識別子](/ja/docs/Glossary/Identifier)、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)引数のいずれかで、任意で[デフォルト](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)値を指定したもの）か、カンマ区切りで並べたそのような文字列のリストに対応していなければなりません。
 
-    引数は関数式と同様に解釈できるため、空白やコメントも受け入れられます。例えば、`"x", "theValue = 42", "[a, b] /* 数値 */"`、または `"x, theValue = 42, [a, b] /* 数値 */"` です。（`"x, theValue = 42", "[a, b]"` も正しいですが、とても読みづらいです。）
+    引数は関数式と同様に構文解析されるため、空白やコメントも受け入れられます。例えば、`"x", "theValue = 42", "[a, b] /* 数値 */"`、または `"x, theValue = 42, [a, b] /* 数値 */"` です。（`"x, theValue = 42", "[a, b]"` も正しいですが、とても読みづらいです。）
 
 - `functionBody`
-  - : 関数定義を形成する JavaScript の文を含む文字列です。
+  - : 関数定義を構成する JavaScript の文を含む {{domxref("TrustedScript")}} または文字列です。
+
+### 例外
+
+- {{jsxref("SyntaxError")}}
+  - : 関数の引数を有効な引数リストとして構文解析できない場合、または `functionBody` を有効な JavaScript の文として構文解析できない場合に発生します。
+- {{jsxref("TypeError")}}
+  - : CSP によって [信頼型](/ja/docs/Web/API/Trusted_Types_API) が[強制](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)されており、デフォルトポリシーが定義されていない場合に、引数のいずれかが文字列であると発生します。
 
 ## 解説
 
@@ -59,7 +73,7 @@ ${functionBody}
 
 これは、この関数の [`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/toString) メソッドを呼び出すことで観察することができます。
 
-しかし、通常の[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)とは異なり、 `anonymous` の名前は `functionBody` のスコープには追加されません。 `functionBody` はグローバルスコープにしかアクセスしないためです。 `functionBody` が[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でない場合（本体自体に `"use strict"` ディレクティブを指定する必要があるのは、コンテキストから厳格性が継承されないためです）、 [`arguments.callee`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee) を使用して関数自体を参照することができます。あるいは、再帰的な部分を内部関数として定義することもできます。
+しかし、通常の[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)とは異なり、`anonymous` という名前は `functionBody` のスコープには追加されません。これは、`functionBody` がグローバルスコープにしかアクセスできないためです。`functionBody` が[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でない場合（コンテキストから厳格モードは継承されないため、本体内に `"use strict"` ディレクティブを指定する必要があります）、[`arguments.callee`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee) を使って関数自体を参照できます。あるいは、再帰処理を内部関数として定義することもできます。
 
 ```js
 const recursiveFn = new Function(
@@ -84,7 +98,30 @@ new Function("/*", "*/) {");
 // "function anonymous(/*) {*/) {}" にはならない
 ```
 
+### セキュリティ上の注意事項
+
+このメソッドは、いずれかの引数に渡された任意の入力を実行できます。ユーザーが指定した入力が安全でない可能性のある文字列の場合、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS) 攻撃の経路となるおそれがあります。例えば、次の例では `untrustedCode` がユーザーから提供されたものとします。
+
+```js example-bad
+const untrustedCode = "alert('Potentially evil code!');";
+const adder = new Function("a", "b", untrustedCode);
+```
+
+[CSP の `script-src` ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)または[CSP の `default-src` ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src)を指定した[コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/Guides/CSP) を設定したウェブサイトでは、デフォルトでこのようなコードの実行が禁止されます。`Function()` によるスクリプトの実行を許可する必要がある場合は、文字列の代わりに {{domxref("TrustedScript")}} オブジェクトを常に渡し、[CSP の `require-trusted-types-for` ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for)を使って[信頼型を強制](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)することで、リスクを軽減できます。これにより、入力が変換関数を通過するようになります。
+
+`Function()` の実行を許可するには、CSP の `script-src` ディレクティブで [`trusted-types-eval` キーワード](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval)も指定する必要があります。[`unsafe-eval` キーワード](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval)でも `Function()` の実行を許可できますが、信頼型に対応していないブラウザーでも実行が許可されるため、`trusted-types-eval` より安全性が大幅に低くなります。
+
+例えば、サイトに必要な CSP は次のようになります。
+
+```http
+Content-Security-Policy: require-trusted-types-for 'script'; script-src '<your_allowlist>' 'trusted-types-eval'
+```
+
+変換関数の動作は、ユーザー提供のスクリプトを必要とする具体的な用途によって異なります。可能であれば、実行を信頼するコードだけを許可するようにしてください。それができない場合は、渡された文字列内で特定の関数の使用を許可または禁止する方法もあります。
+
 ## 例
+
+簡潔にするため、以下の例では信頼型の使用を省略しています。推奨される方法を示すコードは、`eval()` の[「TrustedScript の使用」](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval#trustedscript-の使用)をご覧ください。
 
 ### Function コンストラクターに引数を指定する
 
@@ -146,6 +183,7 @@ sayHello("world");
 
 ## 関連情報
 
+- [`eval()` における Function コンストラクターの使用](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval#function-コンストラクターの使用)
 - [`function`](/ja/docs/Web/JavaScript/Reference/Statements/function)
 - [`function` 式](/ja/docs/Web/JavaScript/Reference/Operators/function)
 - {{jsxref("Functions", "関数", "", 1)}}
