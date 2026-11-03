@@ -248,7 +248,7 @@ Esta sección comienza con una frase introductoria que explica cómo se construy
 
 > Esta propiedad se especifica como uno de los siguientes valores de palabra clave. La palabra clave `oblique` puede ir seguida opcionalmente por un `<angle>`:
 
-En la lista de definiciones, envuelve cada tipo de valor en corchetes angulares y enlázalo a la página de referencia de MDN que cubre ese tipo de valor si existe una página para ella. Para ver un ejemplo, consulta la sección "Valores" de {{CSSxRef("list-style-image")}}.
+En la lista de definiciones, envuelve cada tipo de valor en corchetes angulares y enlázalo a la página de referencia de MDN que cubre ese tipo de valor si existe una página para él. Para ver un ejemplo, consulta la sección "Valores" de {{CSSxRef("list-style-image")}}.
 
 #### Sintaxis formal
 
