@@ -2,7 +2,7 @@
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
 ---
 
 **`Function`** オブジェクトは[関数](/ja/docs/Web/JavaScript/Reference/Functions)についてのメソッドを提供します。 JavaScript では、すべての関数が実際には `Function` オブジェクトです。
@@ -19,7 +19,7 @@ l10n:
 - {{jsxref("Function.prototype.arguments")}} {{deprecated_inline}} {{non-standard_inline}}
   - : この関数に渡された引数を表します。[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)、アロー関数、非同期関数、ジェネレーター関数については、 `arguments` プロパティにアクセスすると {{jsxref("TypeError")}} が発生します。代わりに関数のクロージャ内で {{jsxref("Functions/arguments", "arguments")}} オブジェクトを使用してください。
 - {{jsxref("Function.prototype.caller")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : 現在実行している関数を呼び出した関数を返します。[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)、アロー関数、非同期関数、ジェネレーター関数については、 `arguments` プロパティにアクセスすると {{jsxref("TypeError")}} が発生します。
+  - : 現在実行している関数を呼び出した関数を表します。[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)、アロー関数、非同期関数、ジェネレーター関数については、`caller` プロパティにアクセスすると {{jsxref("TypeError")}} が発生します。
 - {{jsxref("Object/constructor", "Function.prototype.constructor")}}
   - : インスタンスオブジェクトを作成したコンストラクター関数。 `Function` のインスタンスの場合、初期値は {{jsxref("Function/Function", "Function")}} コンストラクターです。
 
@@ -31,7 +31,7 @@ l10n:
   - : 関数によって期待される引数の数を指定します。
 - {{jsxref("Function/name", "name")}}
   - : 関数の名前です。
-- {{jsxref("Function", "prototype")}}
+- {{jsxref("Function/prototype", "prototype")}}
   - : [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 演算子付きでコンストラクターとして関数を使用する場合に使用されます。新しいオブジェクトのプロトタイプとなります。
 
 ## インスタンスメソッド
@@ -46,7 +46,7 @@ l10n:
   - : 関数のソースコードを表す文字列を返します。
     {{jsxref("Object.prototype.toString")}} メソッドを上書きします。
 - [`Function.prototype[Symbol.hasInstance]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance)
-  - : コンストラクター関数が、オブジェクトをコンストラクターのインスタンスの 1 つとして認識するかどうかを判断するための、既定の手順を指定します。 [`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) 演算子によって呼び出されます。
+  - : コンストラクター関数が、オブジェクトをコンストラクターのインスタンスの 1 つとして認識するかどうかを判断するための、デフォルトの手順を指定します。[`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) 演算子によって呼び出されます。
 
 ## 例
 
