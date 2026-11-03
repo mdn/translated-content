@@ -20,6 +20,7 @@ Para obtener directrices específicas de tecnología, consulta los siguientes ar
 
 Existe una consideración general que debes tener en cuenta: **Los lectores copiarán y pegarán ejemplos en su propio código y es posible que lo utilicen en producción.**
 Por lo tanto, debes asegurarte de que los ejemplos de código sean utilizables, sigan las mejores prácticas generalmente aceptadas y no hagan nada que pueda hacer que una aplicación sea insegura, ineficiente, abultada o inaccesible.
+
 Ejecuta y prueba cada ejemplo de código antes de enviarlo, independientemente de las herramientas que hayas utilizado para crearlo.
 No pegues código que no hayas verificado.
 
@@ -46,7 +47,7 @@ Al crear ejemplos de código para una tecnología que aún no está disponible e
 
 Mantén visible el resultado renderizado de los ejemplos de código incluso cuando el navegador del lector no admita la característica que se demuestra. Esto permite a los lectores comparar el código con su resultado y ver cómo se comporta el ejemplo sin la característica. Muestra un mensaje de compatibilidad del navegador junto al resultado renderizado en lugar de ocultarlo o eliminarlo, para explicar por qué el resultado puede parecer distinto de la demostración prevista.
 
-Por ejemplo, en los ejemplos de código CSS, usa la [regla `@supports` con el operador `not`](/es/docs/Web/CSS/Reference/At-rules/@supports#the_not_operator) para mostrar un mensaje de compatibilidad del navegador cuando el navegador del lector no admita la característica que se demuestra.
+Por ejemplo, en los ejemplos de código CSS, usa la [regla `@supports` con el operador `not`](/es/docs/Web/CSS/Reference/At-rules/@supports#el_operador_not) para mostrar un mensaje de compatibilidad del navegador cuando el navegador del lector no admita la característica que se demuestra.
 
 #### HTML
 
@@ -98,7 +99,7 @@ div {
 
 Compara el resultado renderizado en distintos navegadores para ver cómo se comporta el ejemplo cuando se admite `corner-shape` y cuando no.
 
-En tus propios ejemplos, puedes marcar el bloque CSS de compatibilidad del navegador como [`hidden`](/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples#hiding_code) para que sus estilos se apliquen al ejemplo en vivo sin mostrar el bloque de código en el artículo.
+En tus propios ejemplos, puedes marcar el bloque CSS de compatibilidad del navegador como [`hidden`](/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples#ocultar_código) para que sus estilos se apliquen al ejemplo en vivo sin mostrar el bloque de código en el artículo.
 
 ## Estilo y formato de código de MDN
 
