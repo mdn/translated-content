@@ -1,6 +1,7 @@
 ---
 title: 如何确保你的网站正常运行？
-slug: Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
+slug: conflicting/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
+original_slug: Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 ---
 
 在这篇文章中我们将重温针对网站的各种故障排除步骤以及解决这些问题的基本措施。

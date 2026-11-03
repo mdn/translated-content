@@ -1,6 +1,7 @@
 ---
 title: 在互联网上做一件事要花费多少？
-slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
+slug: conflicting/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website_5624eb714ed29691809fdfd50be9e405e109913038e8c44269c32b12f2245049
+original_slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 ---
 
 参与互联网（运营网站）并不像看起来那么便宜。本文中我们将讨论你所需的花费及理由。

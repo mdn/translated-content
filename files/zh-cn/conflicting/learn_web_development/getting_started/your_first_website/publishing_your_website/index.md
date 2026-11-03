@@ -1,6 +1,7 @@
 ---
 title: 如何将文件上传到 web 服务器
-slug: Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
+slug: conflicting/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
+original_slug: Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 ---
 
 这篇文章将会告诉你如何利用文件传输工具来发布你的网站。
