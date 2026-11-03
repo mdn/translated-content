@@ -79,7 +79,7 @@ l10n:
 
 - [什么是 Web 服务器？](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [什么是域名？](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
-- [在互联网上做一件事要花费多少？](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
+- [在互联网上做一件事要花费多少？](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 - [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website)：Codeacademy 提供的一个很好的教程，它比本文更深入一些，还展示了一些其他技术。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}

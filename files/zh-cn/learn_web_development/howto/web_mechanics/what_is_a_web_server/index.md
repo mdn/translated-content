@@ -62,7 +62,7 @@ l10n:
 
 因为所有的这些原因，寻找一个优秀的托管提供者是建立你的网站的一个重要部分。比较不同公司提供的服务并选择一个适合你的需求和预算的服务（服务的价格从免费到每月上万美金不等）。你可以在[这篇文章](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#专业网站机构和托管)中找到更多的细节。
 
-一旦你设置好一个网络托管解决方案，你必须[上传你的文件到你的 web 服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)。
+一旦你设置好一个网络托管解决方案，你必须[上传你的文件到你的 web 服务器](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)。
 
 ### 通过 HTTP 交流
 
@@ -102,6 +102,6 @@ HTTP 为客户和服务器间的如何沟通提供清晰的规则。我们会在
 
 现在你已经熟悉了什么是 web 服务器，你可以：
 
-- 钻研[在 web 上做某些事情要花费多少](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
-- 学习关于[创建一个网页所需要的各种软件](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- 移步到某些实用的东西，像是[如何上传文件到一个 web 服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)。
+- 钻研[在 web 上做某些事情要花费多少](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
+- 学习关于[创建一个网页所需要的各种软件](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
+- 移步到某些实用的东西，像是[如何上传文件到一个 web 服务器](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)。

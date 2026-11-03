@@ -11,5 +11,5 @@ l10n:
 
 ## 参见
 
-- [通过 FTP 上传文件的初学者教程](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [通过 FTP 上传文件的初学者教程](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 - 维基百科上的[文件传输协议](https://zh.wikipedia.org/wiki/文件传输协议)

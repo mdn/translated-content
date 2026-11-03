@@ -10,7 +10,7 @@ slug: Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is
     <tr>
       <th scope="row">前提：</th>
       <td>
-        你需要知道怎么<a href="/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server"
+        你需要知道怎么<a href="/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website"
           >上传文件到 web 服务器</a
         >。
       </td>
@@ -81,7 +81,7 @@ _当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/
 
 ![Deleting the ‘s’](code-correct.png)
 
-保存，[推送到服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)，并在你的浏览器中重现加载网页。
+保存，[推送到服务器](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)，并在你的浏览器中重现加载网页。
 
 ![The image loads corectly in the browser](image-corrected.png)
 

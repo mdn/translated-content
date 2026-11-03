@@ -271,7 +271,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 要想为网站启用 HTTPS，你需要安装特殊的安全证书。许多托管提供商提供了支持 HTTPS 的托管服务，无需你自己进行任何设置即可安装证书。但是，如果你*确实*需要自己动手为网站设置 HTTPS 支持，[Let's Encrypt](https://letsencrypt.org/) 提供了工具和说明，可以自动创建和安装所需的证书，并支持包括 Apache Web 服务器、Nginx 和其他常用的 Web 服务器。Let's Encrypt 的工具旨在使该过程尽可能简单，因此强烈建议使用它或其他可用的方法来启用你的网站的 HTTPS。
 
 > [!NOTE]
-> [Github pages](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) 允许默认情况下通过 HTTPS 提供内容。如果你正在使用其他的托管，请向你的托管服务商确定他们为基于 HTTPS 的内容托管提供哪些支持。
+> [Github pages](/zh-CN/docs/Learn_web_development/Core/Version_control) 允许默认情况下通过 HTTPS 提供内容。如果你正在使用其他的托管，请向你的托管服务商确定他们为基于 HTTPS 的内容托管提供哪些支持。
 
 #### 始终使用 `sandbox` 属性
 
