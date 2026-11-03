@@ -15,20 +15,20 @@ l10n:
 
 ### TypedArray オブジェクト
 
-| 型                              | 値の範囲                                                   | サイズ (バイト数) | Web IDL 型            |
-| ------------------------------- | ---------------------------------------------------------- | ----------------- | --------------------- |
-| {{jsxref("Int8Array")}}         | -128 から 127                                              | 1                 | `byte`                |
-| {{jsxref("Uint8Array")}}        | 0 から 255                                                 | 1                 | `octet`               |
-| {{jsxref("Uint8ClampedArray")}} | 0 から 255                                                 | 1                 | `octet`               |
-| {{jsxref("Int16Array")}}        | -32768 から 32767                                          | 2                 | `short`               |
-| {{jsxref("Uint16Array")}}       | 0 から 65535                                               | 2                 | `unsigned short`      |
-| {{jsxref("Int32Array")}}        | -2147483648 から 2147483647                                | 4                 | `long`                |
-| {{jsxref("Uint32Array")}}       | 0 から 4294967295                                          | 4                 | `unsigned long`       |
-| {{jsxref("Float16Array")}}      | `-65504` から `65504`                                      | 2                 | なし                  |
-| {{jsxref("Float32Array")}}      | `-3.4e38` から `3.4e38`                                     | 4                 | `unrestricted float`  |
-| {{jsxref("Float64Array")}}      | `-1.8e308` から `1.8e308`                                   | 8                 | `unrestricted double` |
-| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> から 2<sup>63</sup> - 1                    | 8                 | `bigint`              |
-| {{jsxref("BigUint64Array")}}    | 0 から 2<sup>64</sup> - 1                                   | 8                 | `bigint`              |
+| 型                              | 値の範囲                                | サイズ (バイト数) | Web IDL 型            |
+| ------------------------------- | --------------------------------------- | ----------------- | --------------------- |
+| {{jsxref("Int8Array")}}         | -128 から 127                           | 1                 | `byte`                |
+| {{jsxref("Uint8Array")}}        | 0 から 255                              | 1                 | `octet`               |
+| {{jsxref("Uint8ClampedArray")}} | 0 から 255                              | 1                 | `octet`               |
+| {{jsxref("Int16Array")}}        | -32768 から 32767                       | 2                 | `short`               |
+| {{jsxref("Uint16Array")}}       | 0 から 65535                            | 2                 | `unsigned short`      |
+| {{jsxref("Int32Array")}}        | -2147483648 から 2147483647             | 4                 | `long`                |
+| {{jsxref("Uint32Array")}}       | 0 から 4294967295                       | 4                 | `unsigned long`       |
+| {{jsxref("Float16Array")}}      | `-65504` から `65504`                   | 2                 | なし                  |
+| {{jsxref("Float32Array")}}      | `-3.4e38` から `3.4e38`                 | 4                 | `unrestricted float`  |
+| {{jsxref("Float64Array")}}      | `-1.8e308` から `1.8e308`               | 8                 | `unrestricted double` |
+| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> から 2<sup>63</sup> - 1 | 8                 | `bigint`              |
+| {{jsxref("BigUint64Array")}}    | 0 から 2<sup>64</sup> - 1               | 8                 | `bigint`              |
 
 ### 値のエンコード方式と正規化
 
