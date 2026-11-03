@@ -113,7 +113,7 @@ l10n:
 
 - [ウェブサーバーとは何か](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [ドメイン名を理解する](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
-- [ウェブサイトで何かするのにいくらかかるか?](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
+- [ウェブサイトで何かするのにいくらかかるか?](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 - [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website): Codecademy の良いチュートリアルで、もう少し詳しく追加のテクニック含めて示しています。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}

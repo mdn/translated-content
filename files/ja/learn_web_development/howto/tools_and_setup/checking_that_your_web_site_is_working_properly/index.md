@@ -13,7 +13,7 @@ l10n:
       <th scope="row">前提条件:</th>
       <td>
         <a
-          href="/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server"
+          href="/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website"
           >ウェブサーバーにファイルをアップロードする</a
         >方法を知っている必要があります。
       </td>
@@ -86,7 +86,7 @@ Firefox のネットワークツール (**ツール ➤ ウェブ開発者 ➤ �
 
 !['s' を削除します。](code-correct.png)
 
-保存して[サーバーにプッシュし](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)、ブラウザーでページを再読み込みします。
+保存して[サーバーにプッシュし](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)、ブラウザーでページを再読み込みします。
 
 ![画像はブラウザーで正しく読み込まれます。](image-corrected.png)
 
