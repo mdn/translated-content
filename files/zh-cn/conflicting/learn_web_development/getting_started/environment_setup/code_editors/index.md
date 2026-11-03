@@ -12,7 +12,7 @@ original_slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editor
       <th scope="row">前提：</th>
       <td>
         你应该已经知晓了<a
-          href="/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need">为了建立一个网站所需的各种软件</a
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software">为了建立一个网站所需的各种软件</a
         >。
       </td>
     </tr>
