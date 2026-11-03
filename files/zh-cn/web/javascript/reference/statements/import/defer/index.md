@@ -167,7 +167,7 @@ export function showSquare(index) {
   console.log(squares.getSquare(index));
 }
 
-showSquare(3); // 输出 "初始化 squares 模块"，然后输出 9
+showSquare(3); // 输出“初始化 squares 模块”，然后输出 9
 showSquare(4); // 输出 16；不会重复初始化
 ```
 
@@ -179,7 +179,7 @@ showSquare(4); // 输出 16；不会重复初始化
 
 ```js
 // -- config.js --
-export const locale = await Promise.resolve("en-US");
+export const locale = await Promise.resolve("zh-CN");
 console.log("配置已就绪");
 ```
 
