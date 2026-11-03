@@ -60,7 +60,7 @@ l10n:
 
 これらすべての理由から、良いホスティングのプロバイダーを探すことは、ウェブサイトを構築する上で重要な部分です。様々なサービス会社が提供するものを探し、ニーズや予算に合う一つを選択しましょう（無料のものから月当たり数千ドルまでのサービスがあります）。詳しくは[この記事](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#ホスティング)にあります。
 
-ウェブのホスティングサービスを契約したら、後は[ウェブサーバーにファイルをアップロードする](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)だけです。
+ウェブのホスティングサービスを契約したら、後は[ウェブサーバーにファイルをアップロードする](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)だけです。
 
 ### HTTP による通信
 
@@ -106,6 +106,6 @@ HTTP はクライアントとサーバーがどのように通信するかにつ
 
 ウェブサーバーのことがよく分かったら、次のステップに進みましょう。
 
-- [ウェブ上で何かをするためにどれくらいコストがかかるか](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)を知る
-- [ウェブサイトを作成するのに必要な様々なソフトウェア](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)についてもっと学ぶ
-- [ファイルをウェブサーバーにアップロードするには](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)のような、実践的な記事を読む
+- [ウェブ上で何かをするためにどれくらいコストがかかるか](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)を知る
+- [ウェブサイトを作成するのに必要な様々なソフトウェア](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)についてもっと学ぶ
+- [ファイルをウェブサーバーにアップロードするには](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)のような、実践的な記事を読む

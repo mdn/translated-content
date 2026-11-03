@@ -179,12 +179,12 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 ### ウェブ上へのファイルのアップロード
 
-ウェブサイトを公開する準備が整ったら、ウェブページをウェブサーバーにアップロードする必要があります。さまざまなプロバイダーからサーバー上のスペースを購入できます（[ウェブ上で何かをするためにどれくらいコストがかかる？](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)を参照）。どのプロバイダーを使用するかが決まったら、プロバイダーは通常、SFTP URL、ユーザー名、パスワード、およびそれらのサーバーへの接続に必要なその他の情報の形式で、アクセス情報をメールで送信します。(S)FTPは今や幾分時代遅れになっていて、 [RSync](https://ja.wikipedia.org/wiki/Rsync) や [Git/GitHub](https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site) のような他のアップロードシステムが普及し始めていることを覚えておいてください。
+ウェブサイトを公開する準備が整ったら、ウェブページをウェブサーバーにアップロードする必要があります。さまざまなプロバイダーからサーバー上のスペースを購入できます（[ウェブ上で何かをするためにどれくらいコストがかかる？](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)を参照）。どのプロバイダーを使用するかが決まったら、プロバイダーは通常、SFTP URL、ユーザー名、パスワード、およびそれらのサーバーへの接続に必要なその他の情報の形式で、アクセス情報をメールで送信します。(S)FTPは今や幾分時代遅れになっていて、 [RSync](https://ja.wikipedia.org/wiki/Rsync) や [Git/GitHub](https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site) のような他のアップロードシステムが普及し始めていることを覚えておいてください。
 
 > [!NOTE]
 > FTP は本質的に安全ではありません。ホスティングプロバイダーが安全な接続、例えば SSH を介した SFTP または RSync の使用を許可していることを確認してください。
 
-ウェブサーバーを作成する際、ウェブサーバーにファイルをアップロードすることは非常に重要なステップなので、[別の記事](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)で詳しく説明します。ここでは、単純な機能に限った無料 (S)FTP クライアントの例を示すにとどめます。
+ウェブサーバーを作成する際、ウェブサーバーにファイルをアップロードすることは非常に重要なステップなので、[別の記事](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)で詳しく説明します。ここでは、単純な機能に限った無料 (S)FTP クライアントの例を示すにとどめます。
 
 <table class="standard-table">
   <thead>
@@ -266,6 +266,6 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 ## 次のステップ
 
-- 一部のソフトウェアは無料ですが、すべてではありません。[ウェブ上で何かをするのにいくらのコストがかかるかを調べましょう](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)。
-- テキストエディターについてさらに学びたいのなら、[テキストエディターの選び方とインストール方法](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors)に関する記事をお読みください。
-- ウェブ上にウェブサイトを公開する方法が分からないのであれば、[「ウェブサーバーにファイルをアップロードする方法」](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)を参照してください。
+- 一部のソフトウェアは無料ですが、すべてではありません。[ウェブ上で何かをするのにいくらのコストがかかるかを調べましょう](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)。
+- テキストエディターについてさらに学びたいのなら、[テキストエディターの選び方とインストール方法](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors)に関する記事をお読みください。
+- ウェブ上にウェブサイトを公開する方法が分からないのであれば、[「ウェブサーバーにファイルをアップロードする方法」](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)を参照してください。
