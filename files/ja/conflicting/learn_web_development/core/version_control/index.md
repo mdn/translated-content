@@ -1,6 +1,7 @@
 ---
 title: GitHub Pages の使い方
-slug: Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
+slug: conflicting/Learn_web_development/Core/Version_control
+original_slug: Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
 l10n:
   sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
