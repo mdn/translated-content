@@ -3,7 +3,7 @@ title: Ejemplos de código en MDN
 short-title: Ejemplos de código
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
 l10n:
-  sourceCommit: 74ab773eebccc1f7fe27c2c4abd4998cc074186b
+  sourceCommit: f99d00a1c3697e26a679925954e26564e7e79b98
 ---
 
 En MDN encontrarás numerosos ejemplos de código que muestran cómo usar las características de la plataforma web que documentamos.
@@ -108,10 +108,10 @@ La macro tiene tres parámetros:
 2. El ancho del `<iframe>`, que puede expresarse como porcentaje o en píxeles.
 3. La altura del `<iframe>`, que puede expresarse como porcentaje o en píxeles.
 
-Veamos un ejemplo. Supongamos que queremos insertar el código en <https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/>. Podríamos usar la siguiente llamada:
+Veamos un ejemplo. Supongamos que queremos insertar el código en <https://mdn.github.io/learning-area/html/introduction-to-html/getting-started/>. Podríamos usar la siguiente llamada:
 
-\\{{EmbedGHLiveSample("learning-area/css/styling-boxes/backgrounds/", '100%', 100)}}
+\\{{EmbedGHLiveSample("learning-area/html/introduction-to-html/getting-started/", '100%', 100)}}
 
 Así es como se ve al renderizarlo:
 
-{{EmbedGHLiveSample("learning-area/css/styling-boxes/backgrounds/", '100%', 100)}}
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/getting-started/", '100%', 100)}}
