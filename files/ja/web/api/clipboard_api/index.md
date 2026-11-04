@@ -471,7 +471,7 @@ reload.addEventListener("click", () => {
 `text/html` Blob は、元の表を再利用するのではなく、`buildTable()` で作成した SKU 列のない縮小版の表です (任意の HTML 利用者が独自の形式より少ない情報を得ることを示しています)。
 この関数は「コピー」ボタンと表自体の `copy` イベントリスナーの両方で使われるため、表を手動で選択してコピーした場合も、ボタンをクリックした場合と同じクリップボードの内容になります。
 
-```js
+```js-nolint
 const sourceTable = document.querySelector("#source");
 const copyButton = document.querySelector("#copy_custom");
 
@@ -565,7 +565,7 @@ pasteRichtextButton.addEventListener("click", async () => {
 
 「任意のプレーンテキストの貼り付け先」ボタンは `text/plain` 形式だけを探します。
 
-```js
+```js-nolint
 const targetPlaintext = document.querySelector("#target_plaintext");
 const pastePlaintextButton = document.querySelector("#paste_plaintext");
 
@@ -660,7 +660,7 @@ eventSource.addEventListener("cut", () => {
 
 `paste` イベントのデフォルトのアクションを上書きし、貼り付けたテキストをそのままではなく大文字にして挿入します。
 
-```js
+```js-nolint
 eventSource.addEventListener("paste", (event) => {
   const pasted = event.clipboardData.getData("text/plain");
   const { selectionStart, selectionEnd, value } = eventSource;
@@ -675,7 +675,7 @@ eventSource.addEventListener("paste", (event) => {
 
 システムクリップボードの内容がどのソースから変更された場合でも、{{domxref("Navigator.clipboard")}} で `clipboardchange` が発行されます。
 
-```js
+```js-nolint
 navigator.clipboard.addEventListener("clipboardchange", () => {
   log("clipboardchange イベント: システムクリップボードの内容が変更されました。");
 });
