@@ -1,8 +1,9 @@
 ---
 title: "CSSStyleSheet: removeRule() メソッド"
+short-title: removeRule()
 slug: Web/API/CSSStyleSheet/removeRule
 l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
 {{APIRef("CSSOM")}}
