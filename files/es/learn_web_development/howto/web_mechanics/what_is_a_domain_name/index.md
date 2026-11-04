@@ -166,6 +166,6 @@ Como ya vimos, cuando quieres mostrar una página web en tu navegador, es más f
 Bien, hablamos mucho sobre procesos y arquitectura. Es hora de continuar.
 
 - Si quieres poner manos a la obra, es un buen momento para empezar a explorar el diseño y descubrir [la anatomía de una página web](/es/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts).
-- También vale la pena señalar que algunos aspectos de la creación de un sitio web tienen un costo. Consulta [cuánto cuesta crear un sitio web](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost).
+- También vale la pena señalar que algunos aspectos de la creación de un sitio web tienen un costo. Consulta [cuánto cuesta crear un sitio web](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website).
 - O lee más sobre [nombres de dominio](https://es.wikipedia.org/wiki/Dominio_de_Internet) en Wikipedia.
 - El tutorial [Cómo funciona el DNS](https://howdns.works/) tiene una explicación divertida y colorida.

@@ -113,7 +113,7 @@ Aunque las herramientas de control de versiones son esenciales para los equipos 
 
 Cuando termines de desarrollar un sitio web o una aplicación (en tu computadora local, o quizá en un servidor de desarrollo), querrás ponerlo en un servidor web remoto para que tus usuarios puedan escribir la dirección web asociada y verlo en la web.
 
-Hay varias formas de hacerlo: desde contratar un alojamiento y usar una [aplicación de SFTP](/es/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server), hasta usar un servicio como [GitHub Pages](https://pages.github.com/) o [Netlify](https://www.netlify.com/), o incluso preparar una demostración rápida para compartirla con otras personas con algo como [CodePen](https://codepen.io/) o [JSFiddle](https://jsfiddle.net/).
+Hay varias formas de hacerlo: desde contratar un alojamiento y usar una [aplicación de SFTP](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website), hasta usar un servicio como [GitHub Pages](https://pages.github.com/) o [Netlify](https://www.netlify.com/), o incluso preparar una demostración rápida para compartirla con otras personas con algo como [CodePen](https://codepen.io/) o [JSFiddle](https://jsfiddle.net/).
 
 Una lista de opciones así puede parecer abrumadora, pero no te preocupes: ahora mismo no necesitas saber nada sobre publicar sitios web. Veremos este tema muchas veces más adelante en el curso. Muy pronto tendrás experiencia práctica con él en nuestro módulo [Tu primer sitio web](/es/docs/Learn_web_development/Getting_started/Your_first_website).
 

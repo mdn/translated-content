@@ -115,7 +115,7 @@ Para obtener más información, véase [Ayuda de GitHub Pages](https://docs.gith
 
 - [¿Qué es un servidor web?](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [Comprensión de los nombres de dominio](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
-- [¿Cuánto cuesta hacer algo en la web?](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
+- [¿Cuánto cuesta hacer algo en la web?](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 - [Despliega un sitio web](https://www.codecademy.com/learn/deploy-a-website): Un buen tutorial de Codecademy que va un poco más allá y muestra algunas técnicas adicionales.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}

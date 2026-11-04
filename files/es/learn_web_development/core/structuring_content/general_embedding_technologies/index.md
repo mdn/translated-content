@@ -139,7 +139,7 @@ Si el contenido tiene licencia, debes obedecer los términos de esa licencia. Po
 Habilitar HTTPS en tu sitio requiere instalar un certificado de seguridad especial. Muchos proveedores de hosting ofrecen alojamiento con HTTPS habilitado sin que necesites hacer ninguna configuración por tu cuenta para poner en marcha un certificado. Pero si _sí_ necesitas configurar el soporte de HTTPS para tu sitio por tu cuenta, [Let's Encrypt](https://letsencrypt.org/) proporciona herramientas e instrucciones que puedes usar para crear e instalar automáticamente el certificado necesario — con soporte incorporado para los servidores web más utilizados, incluyendo el servidor web Apache, Nginx y otros. Las herramientas de Let's Encrypt están diseñadas para hacer el proceso lo más sencillo posible, así que realmente no hay una buena razón para evitar usarlas, u otros medios disponibles, para habilitar HTTPS en tu sitio.
 
 > [!NOTE]
-> Las [páginas de GitHub](/es/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) permiten que el contenido se sirva mediante HTTPS por defecto.
+> Las [páginas de GitHub](/es/docs/Learn_web_development/Core/Version_control) permiten que el contenido se sirva mediante HTTPS por defecto.
 > Si estás usando un proveedor de hosting diferente, deberías comprobar qué soporte ofrece para servir contenido con HTTPS.
 
 #### Usa siempre el atributo `sandbox`

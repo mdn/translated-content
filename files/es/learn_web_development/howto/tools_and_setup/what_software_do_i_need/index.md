@@ -181,12 +181,12 @@ Esta es una captura de panalla de un editor de texto online:
 
 ### Subir archivos a la Web
 
-Cuando tu sitio web está listo para visualización pública , tendrás que subir tus páginas web a tu servidor web. Puedes comprar espacio en un servidor de varios proveedores (vea el artículo [¿Cuánto cuesta hacer algo en la web?](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)). Una vez que establezca qué proveedor utilizar, el proveedor le enviará un correo con la información de acceso, usualmente en la forma de una URL SFTP, nombre de usuario, contraseña, y otra información necesaria para conectarte con su servidor. Tenga en cuenta que el protocolo (S)FTP está actualmente algo pasado de moda, mientras otros sistemas de carga de archivos están comenzando a volverse populares como [RSync](https://en.wikipedia.org/wiki/Rsync) y [Git/GitHub](https://help.github.com/articles/using-a-custom-domain-with-github-pages/).
+Cuando tu sitio web está listo para visualización pública , tendrás que subir tus páginas web a tu servidor web. Puedes comprar espacio en un servidor de varios proveedores (vea el artículo [¿Cuánto cuesta hacer algo en la web?](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)). Una vez que establezca qué proveedor utilizar, el proveedor le enviará un correo con la información de acceso, usualmente en la forma de una URL SFTP, nombre de usuario, contraseña, y otra información necesaria para conectarte con su servidor. Tenga en cuenta que el protocolo (S)FTP está actualmente algo pasado de moda, mientras otros sistemas de carga de archivos están comenzando a volverse populares como [RSync](https://en.wikipedia.org/wiki/Rsync) y [Git/GitHub](https://help.github.com/articles/using-a-custom-domain-with-github-pages/).
 
 > [!NOTE]
 > FTP es inherentemente inseguro. Deberías asegurarte de que tu proveedor de alojamiento permite el uso de una conexión segura, por ejemplo SFTP o RSync sobre SSH.
 
-Subir archivos a un sitio web es un paso muy importante mientras se crea un sitio web, por lo que sete tema se abarca en detalle en [un artículo aparte](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server). Por ahora, se presenta una lista de clientes (S)FTP gratuitos:
+Subir archivos a un sitio web es un paso muy importante mientras se crea un sitio web, por lo que sete tema se abarca en detalle en [un artículo aparte](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website). Por ahora, se presenta una lista de clientes (S)FTP gratuitos:
 
 <table>
   <thead>
@@ -270,7 +270,7 @@ Sin falta ejecute algunas pruebas en dispositivos reales, especialmente en dispo
 
 ## Próximos pasos
 
-- Algunos de estos programas son gratis, pero no todos. [Descubra cuánto cuesta hacer algo en la web](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost).
+- Algunos de estos programas son gratis, pero no todos. [Descubra cuánto cuesta hacer algo en la web](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website).
 
-- Si desea aprrender más sobre editores de texto, lea este artículo acerca de [cómo seleccionar e instalar un editor de texto](/es/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors).
-- Si se está preguntando cómo publicar en tu sitio web, eche un vistazo a ["Cómo subir archivos a un servidor web"](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
+- Si desea aprrender más sobre editores de texto, lea este artículo acerca de [cómo seleccionar e instalar un editor de texto](/es/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors).
+- Si se está preguntando cómo publicar en tu sitio web, eche un vistazo a ["Cómo subir archivos a un servidor web"](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website).
