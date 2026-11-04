@@ -3,17 +3,17 @@ title: Firefox における実験的機能
 short-title: 実験的機能
 slug: Mozilla/Firefox/Experimental_features
 l10n:
-  sourceCommit: e1d75786a9ba2607af68a3fe2ef8dc3aaba99661
+  sourceCommit: 3e280ba0985e16f5cc48136b3c812ec506ac9735
 ---
 
 このページには、Firefox の実験的機能および部分的に実装されている機能、および開発中または提案中のウェブプラットフォーム標準が記載されています。
-以下の各項目には、その機能が含まれているビルド（Nightly、Beta、Developer Edition、Release）、その機能が既定で有効になっているかどうか、およびその機能を有効化または設定するために使用できる**環境設定**の名前に関する情報が記載されています。
+以下の各項目には、その機能が含まれているビルド（Nightly、Beta、Developer Edition、Release）、その機能がデフォルトで有効になっているかどうか、およびその機能を有効化または設定するために使用できる**環境設定**の名前に関する情報が記載されています。
 それぞれの機能の説明には、その機能を実装または有効にする [Bugzilla のバグ](https://bugzilla.mozilla.org)へのリンクも記載されています。
 この情報により、実験的な機能を試して、正式にリリースされる前にフィードバックを提供することができます。
 
-ライフサイクルの観点では、新しい機能は通常、 [Nightly](https://www.firefox.com/ja/channel/desktop/#nightly) で最初に現れます。ここでは、早期のフィードバックや検査のために、多くの場合、既定で有効になっています。
+ライフサイクルの観点では、新しい機能は通常、 [Nightly](https://www.firefox.com/ja/channel/desktop/#nightly) で最初に現れます。ここでは、早期のフィードバックや検査のために、多くの場合、デフォルトで有効になっています。
 大きな問題が見当たらない場合、 [Beta](https://www.firefox.com/ja/channel/desktop/#beta) および [Developer Edition](https://www.firefox.com/ja/developer/) のプレリリースビルドに含められます。最後に、承認された機能は、 [stable Release](https://www.firefox.com/ja/) チャネルで提供されます。
-リリースビルドにおいて既定で有効化された機能は、もはや実験的なものではないので、このページから除去されます。
+リリースビルドにおいてデフォルトで有効化された機能は、もはや実験的なものではないので、このページから除去されます。
 
 これらの機能を有効にするには、Firefox のアドレスバーに `about:config` と入力し、関連付けられた**環境設定**を検索してその値を変更します。通常、この値は `true` と `false` のどちらかです。
 機能によっては、変更を有効にするためにブラウザーを再起動する必要がある場合があります。
@@ -91,6 +91,36 @@ HTML の [`<input type="color">`](/ja/docs/Web/HTML/Reference/Elements/input/col
 - `dom.headingoffset.enabled`
   - : 有効にするには `true` に設定してください。
 
+### `<script type="speculationrules">`
+
+[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) は、リンクに対するユーザーの行動などの要因に基づいて、どのリソースが先読みされるかまたは事前レンダリングされるかを指定することで、今後のナビゲーションのパフォーマンスを改善する仕組みを提供します。
+
+当初の対応では、[`prefetch`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules#prefetch) のみが含まれており、リソースは [`urls`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules#urls) リストで指定され、[`immediate`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules#immediate) の即時実行モードが適用されていました。これには、{{domxref("PerformanceResourceTiming.deliveryType")}} プロパティの `navigational-prefetch` 値に対する対応も含まれます（[Firefox バグ 2041381](https://bugzil.la/2041381)）。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 155            | Yes              |
+| Developer Edition  | 155            | No               |
+| Beta               | 155            | No               |
+| Release            | 155            | No               |
+
+- `dom.speculation_rules.enabled`
+  - : 有効にするには `true` に設定してください。
+
+#### 中間の積極性
+
+Firefox 158 では、[`moderate`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules#moderate) という積極性への対応が追加されました。これにより、ユーザーがリンクにカーソルを短時間（デフォルトで 200 ミリ秒）合わせると、該当する先読みが開始されます。([Firefox バグ 2061013](https://bugzil.la/2061013))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 158            | Yes              |
+| Developer Edition  | 158            | No               |
+| Beta               | 158            | No               |
+| Release            | 158            | No               |
+
+- `dom.speculation_rules.enabled`
+  - : 有効にするには `true` に設定してください。
+
 ## CSS
 
 ### `circle()` と `ellipse()` で `farthest-corner` と `closest-corner` キーワードが使用可能に
@@ -150,30 +180,6 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 - `layout.css.fit-content-function.enabled`
   - : 有効にするには `true` に設定してください。
 
-### スクロール駆動アニメーション
-
-以前は「スクロールリンクアニメーション」と呼ばれていた[スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)は、時間やその他の次元ではなく、スクロールバーのスクロール位置に依存します。
-{{cssxref('scroll-timeline-name')}} および {{cssxref('scroll-timeline-axis')}} プロパティ（および {{cssxref('scroll-timeline')}} 一括指定プロパティ）を使用すると、特定の名前付きコンテナー内の特定のスクロールバーを、スクロール駆動アニメーションのソースとして使用できることを指定できます。
-スクロールタイムラインを[アニメーション](/ja/docs/Web/CSS/Guides/Animations)に関連付けするには、 {{cssxref('animation-timeline')}} プロパティを `scroll-timeline-name` で定義した名前の値に設定します。
-
-{{cssxref('scroll-timeline')}} 一括指定プロパティを使用する場合、プロパティ値の順序は {{cssxref('scroll-timeline-name')}} の後に {{cssxref('scroll-timeline-axis')}} を指定する必要があります。
-個別指定プロパティと一括指定プロパティは、設定で両方利用できます。
-あるいは、{{cssxref("animation-timeline/scroll", "scroll()")}} 関数記法を {{cssxref('animation-timeline')}} で使用して、親要素のスクロールバー軸をタイムラインに使用することを指定することもできます。
-
-詳細については、[Firefox バグ 1807685](https://bugzil.la/1807685)、[Firefox バグ 1804573](https://bugzil.la/1804573)、[Firefox バグ 1809005](https://bugzil.la/1809005)、[Firefox バグ 1676791](https://bugzil.la/1676791), [Firefox バグ 1754897](https://bugzil.la/1754897)、[Firefox バグ 1817303](https://bugzil.la/1817303)、[Firefox バグ 1737918](https://bugzil.la/1737918) を参照してください。
-
-{{cssxref('animation-range-start')}}、{{cssxref('animation-range-end')}} の各プロパティ（および {{cssxref('animation-range')}} 一括指定プロパティ）にはまだ対応していません。詳細については、[Firefox バグ 1676779](https://bugzil.la/1676779) を参照してください。
-
-| リリースチャンネル | 追加バージョン | デフォルトで有効 |
-| ------------------ | -------------- | ---------------- |
-| Nightly            | 136            | Yes              |
-| Developer Edition  | 110            | No               |
-| Beta               | 110            | No               |
-| Release            | 110            | No               |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : 有効にするには `true` に設定してください。
-
 ### prefers-reduced-transparency メディア特性
 
 CSS の {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}} メディア特性を使用すると、ユーザーが端末で透明または半透明のレイヤー効果を最小限に抑える設定を有効にしているかどうかを検出できます。
@@ -202,38 +208,6 @@ CSS の {{cssxref("@media/inverted-colors", "inverted-colors")}} メディア特
 | Release            | 114            | No               |
 
 - `layout.css.inverted-colors.enabled`
-  - : 有効にするには `true` に設定してください。
-
-### 名前付きビュー進行タイムラインプロパティ
-
-CSS の {{cssxref("view-timeline-name")}} プロパティを使用すると、特定の要素に名前を付け、その要素の親要素であるスクロール要素がビュー進行タイムラインのソースであることを識別することができます。
-この名前は `animation-timeline` に代入することができ、これにより、関連付けられた要素は、その祖先のスクロールバーの表示領域内を移動する際にアニメーションします。
-詳しくは [Firefox バグ 1737920](https://bugzil.la/1737920) を参照してください。
-
-| リリースチャンネル | 追加バージョン | デフォルトで有効 |
-| ------------------ | -------------- | ---------------- |
-| Nightly            | 136            | Yes              |
-| Developer Edition  | 114            | No               |
-| Beta               | 114            | No               |
-| Release            | 114            | No               |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : 有効にするには `true` に設定してください。
-
-### 無名ビュー進行タイムライン関数
-
-CSS の {{cssxref("animation-timeline/view", "view()")}} 関数を使用すると、要素の `animation-timeline` をビュー進行タイムラインとして指定することができます。これにより、要素は、その親スクロールバーの表示領域内を移動するにつれてアニメーションします。
-この関数は、アニメーションのタイムラインを提供する親要素の軸と、アニメーションの開始位置および開始する可視領域内のインセットを定義します。
-詳しくは ([Firefox バグ 1808410](https://bugzil.la/1808410)) を参照してください。
-
-| リリースチャンネル | 追加バージョン | デフォルトで有効 |
-| ------------------ | -------------- | ---------------- |
-| Nightly            | 136            | Yes              |
-| Developer Edition  | 114            | No               |
-| Beta               | 114            | No               |
-| Release            | 114            | No               |
-
-- `layout.css.scroll-driven-animations.enabled`
   - : 有効にするには `true` に設定してください。
 
 ### ベンダー接頭辞付き座標変換プロパティ
@@ -365,34 +339,6 @@ CSS の [`@container`](/ja/docs/Web/CSS/Reference/At-rules/@container) アット
 - `layout.css.attr.enabled`
   - : 有効にするには `true` に設定してください。
 
-### `<timeline-range-name>` 値
-
-CSS の {{cssxref("animation-range-start")}}、{{cssxref("animation-range-end")}} および一括指定プロパティの {{cssxref("animation-range")}} は、[`<timeline-range-name>`](/ja/docs/Web/CSS/Reference/Values/timeline-range-name) の値を指定できるようになりました。これらの [`<timeline-range-name>`](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) 値を使用することで、スクロール駆動アニメーションがどの区間内で実行されるかを正確に指定できます。([Firefox バグ 1804775](https://bugzil.la/1804775))。
-
-| リリースチャンネル | 追加バージョン | デフォルトで有効 |
-| ------------------ | -------------- | ---------------- |
-| Nightly            | 151            | Yes              |
-| Developer Edition  | 151            | No               |
-| Beta               | 151            | No               |
-| Release            | 151            | No               |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : 有効にするには `true` に設定してください。
-
-### `@keyframes` セレクターにおける `<timeline-range-name>` 値
-
-{{cssxref("@keyframes")}} アットルールは、[`<timeline-range-name>`](/ja/docs/Web/CSS/Reference/Values/timeline-range-name) の値に対応するようになりました。これらの[値](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names)を使用すると、スクロール駆動型アニメーションが行われる範囲を指定できます。（[Firefox バグ 1824875](https://bugzil.la/1824875)）。
-
-| リリースチャンネル | 追加バージョン | デフォルトで有効 |
-| ------------------ | -------------- | ---------------- |
-| Nightly            | 152            | Yes              |
-| Developer Edition  | 152            | No               |
-| Beta               | 152            | No               |
-| Release            | 152            | No               |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : 有効にするには `true` に設定してください。
-
 ### 外部リソースの属性の更新
 
 CSS の {{cssxref("link-parameters")}} プロパティおよび {{cssxref("param")}} 関数に対応するようになりました。これにより、ユーザーは、CSS の {{cssxref("env")}} 関数で属性が設定されている SVG などの外部リソースの属性を更新することができます。つまり、色やその他の値だけが異なる複数のバリエーションを生成する代わりに、単一の外部リソースを使用することができます（[Firefox バグ 2046153](https://bugzil.la/2046153)）。
@@ -435,34 +381,6 @@ CSS の {{cssxref("text-decoration-inset")}} プロパティは、値として�
 - `layout.css.text-decoration-inset-percentage.enabled`
   - : 有効にするには `true` に設定してください。
 
-### `view-timeline` に `view-timeline-inset` を含める
-
-{{cssxref("view-timeline")}} 一括指定プロパティが、{{cssxref("view-timeline-inset")}} プロパティに対応するようになりました。この短縮プロパティを使用すると、開始や終了のインセット（またはアウトセット）値を指定して、ビュー進行タイムラインの位置を調整できます。（[Firefox バグ 2046602](https://bugzil.la/2046602)）。
-
-| リリースチャンネル | 追加バージョン | デフォルトで有効 |
-| ------------------ | -------------- | ---------------- |
-| Nightly            | 155            | Yes              |
-| Developer Edition  | 155            | No               |
-| Beta               | 155            | No               |
-| Release            | 155            | No               |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : 有効にするには `true` に設定してください。
-
-### `timeline-scope` 名がデフォルトでグローバルになる
-
-名前付きタイムラインのスコープに関するデフォルトの挙動が、グローバルになるよう更新されました。これは、{{cssxref("timeline-scope")}} CSS プロパティと、{{cssxref("scroll-timeline-name")}} または {{cssxref("view-timeline-name")}} のいずれかの値を使用することで、要素およびそのサブツリーにスコープを限定することができます ([Firefox バグ 2024012](https://bugzil.la/2024012))。
-
-| リリースチャンネル | 追加バージョン | デフォルトで有効 |
-| ------------------ | -------------- | ---------------- |
-| Nightly            | 155            | Yes              |
-| Developer Edition  | 155            | No               |
-| Beta               | 155            | No               |
-| Release            | 155            | No               |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : 有効にするには `true` に設定してください。
-
 ### `named-feature()` 対応クエリー
 
 `named-feature()` 関数を {{cssxref("@supports")}} アットルール内で使用すると、他の方法で検出できない構文を持つ機能がブラウザーで対応しているかどうかをテストできます。例えば、`@supports named-feature(anchor-position-follows-transforms)` などです。
@@ -478,9 +396,34 @@ CSS の {{cssxref("text-decoration-inset")}} プロパティは、値として�
 - `layout.css.anchor-positioning.follows-transforms.enabled`
   - : 有効にするには `true` に設定してください。
 
-### `at-rule()` 対応クエリー
+### CSS `random()` 関数
 
-[`at-rule()`](/ja/docs/Web/CSS/Reference/At-rules/@supports#at-rule) 関数を {{cssxref("@supports")}} アットルールで使用すると、ブラウザーが指定された CSS アットルールを対応しているかどうかを検査できます。例えば、`@supports at-rule(@scope)` などです。また、{{cssxref("@import")}} の `supports()` 関数でも動作します。（[Firefox バグ 2060754](https://bugzil.la/2060754)）。
+CSS {{cssxref("random")}} 関数は、指定された範囲内でランダムな値を生成し、必要に応じて、その範囲内の値をステップサイズごとの間隔に制限することができます。オプションの `<random-key>` 引数は、どの `random()` 関数がランダム値を共有するかを制御します。例えば、要素間やプロパティ間で共有する場合などです（[Firefox バグ 2071165](https://bugzil.la/2071165)）。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 158            | Yes              |
+| Developer Edition  | 158            | No               |
+| Beta               | 158            | No               |
+| Release            | 158            | No               |
+
+- `layout.css.random.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### `corner-shape` プロパティ
+
+{{cssxref("corner-shape")}} 一括指定プロパティおよびそれを構成する個別指定プロパティに、Nightly が対応するようになりました。これらのプロパティを使用すると、{{cssxref("corner-shape-value")}} キーワード値のいずれか、または {{cssxref("superellipse")}} 関数を用いて、角の形状をカスタマイズできます。
+([Firefox バグ 2070927](https://bugzil.la/2070927))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 158            | Yes              |
+| Developer Edition  | 157            | No               |
+| Beta               | 157            | No               |
+| Release            | 157            | No               |
+
+- `layout.css.corner-shape.enabled`
+  - : 有効にするには `true` に設定してください。
 
 ## SVG
 
@@ -516,18 +459,16 @@ CSS の {{cssxref("text-decoration-inset")}} プロパティは、値として�
 - `mathml.a.element.enabled`
   - : 有効にするには `true` に設定してください。
 
-### MathML `<a>` 要素
+### 新しい `MathMLAnchorElement` プロパティ
 
-MathML の `<a>` 要素は、MathML コンテンツからハイパーリンクを作成し、HTML の {{HTMLElement("a")}} 要素と同じ URL コンポーネントのプロパティを持つ `MathMLAnchorElement` インターフェイスを公開します。
-
-このリリースでは、`rel` および `relList` IDL 属性に対応する機能が追加されました。（[Firefox バグ 2063819](https://bugzil.la/2063819)）。
+{{domxref("MathMLAnchorElement")}} インターフェイスが、{{domxref("MathMLAnchorElement.download", "download")}}、{{domxref("MathMLAnchorElement.ping", "ping")}}、{{domxref("MathMLAnchorElement.rel", "rel")}}、{{domxref("MathMLAnchorElement.relList", "relList")}}、{{domxref("MathMLAnchorElement.referrerPolicy", "referrerPolicy")}} の各プロパティに対応するようになりました。（[Firefox バグ 2064612](https://bugzil.la/2064612)）。
 
 | リリースチャンネル | 追加バージョン | デフォルトで有効 |
 | ------------------ | -------------- | ---------------- |
-| Nightly            | 156            | Yes              |
-| Developer Edition  | 156            | No               |
-| Beta               | 156            | No               |
-| Release            | 156            | No               |
+| Nightly            | 159            | Yes              |
+| Developer Edition  | 159            | No               |
+| Beta               | 159            | No               |
+| Release            | 159            | No               |
 
 - `mathml.a.element.enabled`
   - : 有効にするには `true` に設定してください。
@@ -583,6 +524,37 @@ MathML の `<a>` 要素は、MathML コンテンツからハイパーリンク�
 - `javascript.options.experimental.regexp_buffer_boundaries`
   - : Nightly で有効にするには `true` に設定してください。
 
+### TC39 `*` デフォルトエクスポートに関する提案
+
+[TC39 `*` デフォルトエクスポートに関する提案](https://github.com/tc39/proposal-export-star-default)では、[`export * from`](/ja/docs/Web/JavaScript/Reference/Statements/export#re-exporting_aggregating) 宣言によって、モジュールの名前付きエクスポートとともにデフォルトエクスポートを再エクスポートすることができるようになります。これがなければ、`export * from` はモジュールのデフォルトエクスポートをスキップしてしまいます。
+([Firefox バグ 2065611](https://bugzil.la/2065611))。
+
+なお、この提案はとても初期の段階にあり、変更される可能性があることにご留意ください。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 157            | No               |
+| Developer Edition  | 157            | No               |
+| Beta               | 157            | No               |
+| Release            | —              | —                |
+
+- `javascript.options.experimental.export_star_default`
+  - : 有効にするには `true` に設定してください。
+
+### TC39 によるモジュールの評価の延期に関する提案
+
+[TC39 によるモジュール評価の遅延に関する提案](https://github.com/tc39/proposal-defer-import-eval)では、 [`import defer`](/ja/docs/Web/JavaScript/Reference/Statements/import/defer) 宣言と [`import.defer()`](/ja/docs/Web/JavaScript/Reference/Operators/import/defer) 構文を追加します。この方法でインポートされたモジュールは、その依存関係とともに事前に読み込まれますが、そのコードが実行されるのは、そのエクスポートのいずれかに最初にアクセスされたときのみです。そのため、すぐに必要とされないモジュールによって起動が遅くなることはありません。最上位で `await` を使用するモジュールは、引き続き即座に実行されます。（[Firefox バグ 1952263](https://bugzil.la/1952263)）。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 158            | No               |
+| Developer Edition  | —              | —                |
+| Beta               | —              | —                |
+| Release            | —              | —                |
+
+- `javascript.options.experimental.defer_import_eval`
+  - : Nightly で有効にするには `true` に設定してください。
+
 ## API
 
 ### クラッシュレポート
@@ -601,31 +573,6 @@ MathML の `<a>` 要素は、MathML コンテンツからハイパーリンク�
 - `dom.reporting.crash.enabled`
   - : 有効にするには `true` に設定してください（Nightly ではデフォルトで有効）。
 
-### スコープ付きカスタム要素レジストリー
-
-[スコープ付きカスタム要素レジストリー](/ja/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) に対応します。
-スコープ付きレジストリーを使用すると、シャドウツリーが独立した {{domxref("CustomElementRegistry")}} を生成でき、その定義はその特定の DOM サブツリーにのみ適用されます。
-これにより、複数のウェブコンポーネントが同じ名前の要素を宣言した場合の競合を避けることができます。
-
-実装内容には次のものがあります。
-
-- `customElementRegistry` プロパティ（{{domxref("Document")}}, {{domxref("Element")}}, {{domxref("ShadowRoot")}}）
-  [`CustomElementRegistry()` コンストラクター](/ja/docs/Web/API/CustomElementRegistry/CustomElementRegistry) は、スコープ限定で使用するための新しい `CustomElementRegistry` オブジェクトを作成します。 ([Firefox バグ 2018900](https://bugzil.la/2018900))
-
-バージョン 156 より:
-
-- [スコープ付きカスタム要素レジストリー](/ja/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries)が対応するようになったため、シャドウルートはグローバルレジストリーで定義されたカスタム要素と競合しないカスタム要素を定義できるようになりました。([Firefox バグ 2064333](https://bugzil.la/2064333))。
-
-| リリースチャンネル | 追加バージョン | デフォルトで有効 |
-| ------------------ | -------------- | ---------------- |
-| Nightly            | 150            | Yes              |
-| Developer Edition  | 150            | No               |
-| Beta               | 150            | No               |
-| Release            | 150            | No               |
-
-- `dom.scoped-custom-element-registries.enabled`
-  - : 有効にするには `true` に設定してください。
-
 ### CSS Typed Object Model Level 1
 
 [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API) は Nightly に実装されています。
@@ -640,6 +587,52 @@ MathML の `<a>` 要素は、MathML コンテンツからハイパーリンク�
 | Release            | 149            | No               |
 
 - `layout.css.typed-om.enabled`
+  - : 有効にするには `true` に設定してください。
+
+#### ワーカーおよびワークレットで公開される CSS の数値ファクトリー関数
+
+{{domxref("CSS")}} 名前空間の[数値ファクトリー関数](/ja/docs/Web/API/CSS/factory_functions_static)（例: `CSS.px()`）は、`Window` だけでなく、ワーカーやペイントワークレットでも公開されるようになりました。これらは [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_型付きオブジェクトモデル_API)の一部であるため、Nightly 版以外では、`layout.css.typed-om.enabled` 環境設定を `true` に設定する必要があります。（[Firefoxバグ 2079188](https://bugzil.la/2079188)）。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 159            | No               |
+| Developer Edition  | 159            | No               |
+| Beta               | 159            | No               |
+| Release            | 159            | No               |
+
+- `layout.css.namespace.exposed-in-workers-and-worklets`
+  - : 有効にするには `true` に設定してください。
+- `layout.css.typed-om.enabled`
+  - : 有効にするには `true` に設定してください（Nightly ではデフォルトで有効）。
+
+### 端末内音声認識
+
+[端末内音声認識](/ja/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition)が、Nightly 版（デスクトップ版のみ）で対応するようになりました。これにより、クラウドサービスに頼ることなく、ブラウザー上で直接[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) を介して音声認識を行うことができるようになります。
+([Firefox bug 2069803](https://bugzil.la/2069803)).
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 158            | Yes              |
+| Developer Edition  | 158            | No               |
+| Beta               | 158            | No               |
+| Release            | 158            | No               |
+
+- `media.webspeech.recognition.enable`
+  - : 有効にするには `true` に設定してください。
+
+### ストリーミングリクエスト本体
+
+{{domxref("ReadableStream")}} をリクエスト本体として設定できるようになりました（例えば、{{domxref("Request.Request", "Request()")}} コンストラクターや {{domxref("Window.fetch()")}} メソッドなどを通じて）。これにより、リクエスト本体全体が利用できるのを待つ必要がなく、アップロードデータを段階的にストリーミングできるようになります。
+([Firefox バグ 1594633](https://bugzil.la/1594633))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 158            | Yes              |
+| Developer Edition  | 158            | No               |
+| Beta               | 158            | No               |
+| Release            | 158            | No               |
+
+- `dom.fetch.streaming_upload`
   - : 有効にするには `true` に設定してください。
 
 ### グラフィック: Canvas, WebGL, WebGPU
@@ -729,30 +722,13 @@ Linux や Intel Silicon 搭載 macOS などのその他のプラットフォー�
 - `image.avif.compliance_strictness`
   - : 厳格度レベルを示す数値。指定可能な値は次のとおりです。
     - `0`: 推奨 ("should" 言語) と要求 ("shall" 言語) の両方で仕様違反のある画像でも、安全に、あるいは曖昧さを排除して解釈できるのであれば、受け付けます。
-    - `1` **（既定値）**: 要件違反は却下し、勧告違反は許可する。
+    - `1` **（デフォルト値）**: 要件違反は却下し、勧告違反は許可する。
     - `2`: 厳格。要件や推奨事項の違反は一切認めません。
-
-#### JPEG XL 対応
-
-Firefox は、JPEG の後継となる最新の画像形式である [JPEG XL](https://jpeg.org/jpegxl/) に対応しています。この形式は、圧縮率と画質の向上に加え、透明度、アニメーション、HDR 対応などの新機能も備えています。
-詳細は [Firefox バグ 1539075](https://bugzil.la/1539075) および [Firefox バグ 2016688](https://bugzil.la/2016688) を参照してください。
-
-Firefox 149 では、従来の C++ 製 [JPEG XL](https://jpeg.org/jpegxl/) 画像デコーダーが、Rust ベースの `jxl-rs` ライブラリーを使用した新しい実装に置き換えました（[Firefox バグ 1986393](https://bugzil.la/1986393)）。
-
-| リリースチャンネル | 追加バージョン | デフォルトで有効 |
-| ------------------ | -------------- | ---------------- |
-| Nightly            | 153            | Yes              |
-| Developer Edition  | 152            | No               |
-| Beta               | 152            | No               |
-| Release            | 152            | No               |
-
-- `image.jxl.enabled`
-  - : 有効にするには `true` に設定してください。
 
 ### WebVR API （無効化）
 
 非推奨化された [WebVR API](/ja/docs/Web/API/WebVR_API) は削除途上にあります。
-これは既定ですべてのビルドで無効化されています [Firefox バグ 1750902](https://bugzil.la/1750902)。
+これはデフォルトですべてのビルドで無効化されています [Firefox バグ 1750902](https://bugzil.la/1750902)。
 
 | リリースチャンネル | Version removed | デフォルトで有効 |
 | ------------------ | --------------- | ---------------- |
@@ -827,7 +803,7 @@ Firefox 149 では、従来の C++ 製 [JPEG XL](https://jpeg.org/jpegxl/) 画�
 
 ### 通知 API
 
-通知には、Windows システムおよび Nightly リリースでは、既定で [`requireInteraction`](/ja/docs/Web/API/Notification/requireInteraction) プロパティが true に設定されています。 ([Firefox バグ 1794475](https://bugzil.la/1794475)).
+通知には、Windows システムおよび Nightly リリースでは、デフォルトで [`requireInteraction`](/ja/docs/Web/API/Notification/requireInteraction) プロパティが true に設定されています。 ([Firefox バグ 1794475](https://bugzil.la/1794475)).
 
 | リリースチャンネル | 変更バージョン | デフォルトで有効 |
 | ------------------ | -------------- | ---------------- |
@@ -837,6 +813,21 @@ Firefox 149 では、従来の C++ 製 [JPEG XL](https://jpeg.org/jpegxl/) 画�
 | Release            | 117            | Windows only     |
 
 - `dom.webnotifications.requireinteraction.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### 通知の `navigate` オプション
+
+`navigate` オプションを {{domxref("Notification.Notification", "Notification()")}} コンストラクターおよび {{domxref("ServiceWorkerRegistration.showNotification()")}} に設定すると、ユーザーが通知をクリックした際に開く URL を指定できます。そのため、ページを開くためのクリックハンドラーを用意する必要がなくなりました。新しい読み取り専用の {{domxref("Notification.navigate")}} プロパティは、その URL を返します。このオプションが設定されると、その通知に対して {{domxref("Notification.click_event", "click")}} および {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} イベントは発生しなくなります。{{domxref("Notification.actions", "actions")}} オプションのそれぞれの項目は、独自の `navigate` URL を設定できます。また、URL が設定されていないアクションボタンは、通知の URL を使用するのではなく、引き続き `notificationclick` が発生します。
+([Firefox bug 2066184](https://bugzil.la/2066184)).
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 157            | No               |
+| Developer Edition  | 157            | No               |
+| Beta               | 157            | No               |
+| Release            | 157            | No               |
+
+- `dom.webnotifications.navigate.enabled`
   - : 有効にするには `true` に設定してください。
 
 ### コンテナータイミング API
@@ -852,6 +843,37 @@ Firefox 149 では、従来の C++ 製 [JPEG XL](https://jpeg.org/jpegxl/) 画�
 | Release            | 156            | No               |
 
 - `dom.enable_container_timing`
+  - : 有効にするには `true` に設定してください。
+
+### ウェブ暗号における鍵のカプセル化
+
+[ウェブ暗号 API](/ja/docs/Web/API/Web_Crypto_API) は、2 つの当事者が共有秘密鍵について合意を形成できるアルゴリズムである ML-KEM を対応しており、量子コンピュータによる攻撃に対しても安全性を維持するように設計されています。一方の当事者は、相手方の公開鍵を {{domxref("SubtleCrypto")}} のメソッド `encapsulateKey()` または `encapsulateBits()` に渡します。これらのメソッドは、共有鍵と、相手方に送信する暗号文を返します。それ以外にも、もう一方の当事者は、その暗号文と自分自身で持っている秘密鍵を `decapsulateKey()` または `decapsulateBits()` に渡すことで、同じ共有鍵を導き出します。
+
+`ML-KEM-512`、`ML-KEM-768`、`ML-KEM-1024` というアルゴリズム名が、対応する{{domxref("CryptoKey.usages", "usages")}}、および {{domxref("SubtleCrypto.importKey()")}} と {{domxref("SubtleCrypto.exportKey()")}} 向けの新しい `raw-public` および `raw-seed` キー書式に対応しています ([Firefox バグ 1943614](https://bugzil.la/1943614))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 157            | Yes              |
+| Developer Edition  | 157            | No               |
+| Beta               | 157            | No               |
+| Release            | 157            | No               |
+
+- `dom.webcrypto.encapsulation.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### 非同期クリップボード API におけるウェブ独自形式
+
+[クリップボード API](/ja/docs/Web/API/Clipboard_API) は、独自のクリップボード形式に対応しており、ウェブアプリが {{domxref("Clipboard.write()")}} メソッドおよび {{domxref("Clipboard.read()")}} メソッドを使用して、それぞれ `"web "` で始まる独自の MIME タイプを書き込んだり読み込んだりすることができます。
+この機能は、デスクトップ版では Firefox 154 以降で対応しており、Android 版では Firefox 156 以降で対応しています（[Firefox バグ 1956304](https://bugzil.la/1956304) および [Firefox バグ 2048545](https://bugzil.la/2048545)）。
+
+| リリースチャンネル | 変更バージョン | デフォルトで有効       |
+| ------------------ | -------------- | ---------------------- |
+| Nightly            | 154            | Yes (デスクトップのみ) |
+| Developer Edition  | 154            | No                     |
+| Beta               | 154            | No                     |
+| Release            | 154            | No                     |
+
+- `dom.clipboard.customFormatSupport.enabled`
   - : 有効にするには `true` に設定してください。
 
 ## セキュリティとプライバシー
@@ -971,23 +993,9 @@ Firefox は、ページ側のクライアントコードによって既に追加
 - `network.http.idempotencyKey.enabled`
   - : 有効にするには `true` に設定してください。
 
-### MIME タイプ image/jxl の Accept ヘッダー
+### デフォルトで SameSite=Lax
 
-[既定のリクエストおよび画像リクエスト](/ja/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values)の HTTP [`Accept`](/ja/docs/Web/HTTP/Reference/Headers/Accept) ヘッダーは、`image/jxl` MIME タイプに対応していることを示す環境設定で構成できます。
-
-| リリースチャンネル | 追加バージョン | デフォルトで有効 |
-| ------------------ | -------------- | ---------------- |
-| Nightly            | 128            | No               |
-| Developer Edition  | 128            | No               |
-| Beta               | 128            | No               |
-| Release            | 128            | No               |
-
-- `image.jxl.enabled`
-  - : 有効にするには `true` に設定してください。
-
-### 既定で SameSite=Lax
-
-[SameSite クッキー](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value)の既定値は Lax です。この設定では、クッキーは、ユーザーが元のサイトに移動する場合にのみ送信され、サードパーティのサイトに画像やフレームを読み込むためのサイト間サブリクエストなどには送信されません。
+[SameSite クッキー](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value)のデフォルト値は Lax です。この設定では、クッキーは、ユーザーが元のサイトに移動する場合にのみ送信され、サードパーティのサイトに画像やフレームを読み込むためのサイト間サブリクエストなどには送信されません。
 詳しくは、 [Firefox バグ 1617609](https://bugzil.la/1617609) を参照してください。
 
 | リリースチャンネル | 追加バージョン | デフォルトで有効 |
@@ -1005,7 +1013,7 @@ Firefox は、ページ側のクライアントコードによって既に追加
 [`Access-Control-Allow-Headers`](/ja/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Headers) は、 [CORS プリフライトリクエスト](/ja/docs/Glossary/Preflight_request)に対するレスポンスヘッダーで、最終リクエストに含めることができるリクエストヘッダーを指定します。
 レスポンスディレクティブには、ワイルドカード (`*`) を含めることができます。これは、最終リクエストに `Authorization` ヘッダーを除くすべてのヘッダーを含めることができることを示します。
 
-既定では、Firefox は、 `Access-Control-Allow-Headers: *` という応答を受け取った後、最終リクエストに `Authorization` ヘッダーを含めます。
+デフォルトでは、Firefox は、 `Access-Control-Allow-Headers: *` という応答を受け取った後、最終リクエストに `Authorization` ヘッダーを含めます。
 Firefox が `Authorization` ヘッダーを含めないようにするには、環境設定を `false` に設定してください。
 詳しくは [Firefox バグ 1687364](https://bugzil.la/1687364) を参照してください。
 

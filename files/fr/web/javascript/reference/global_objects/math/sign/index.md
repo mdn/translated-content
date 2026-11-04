@@ -3,7 +3,7 @@ title: "Math : méthode statique sign()"
 short-title: sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.sign()`** retourne 1 ou -1, indiquant le signe du nombre passé en argument. Si l'entrée est 0 ou -0, elle est retournée telle quelle.
@@ -51,7 +51,7 @@ Puisque `sign()` est une méthode statique de `Math`, vous l'utilisez toujours c
 
 ## Exemples
 
-### Utiliser `Math.sign()`
+### Utiliser la méthode `Math.sign()`
 
 ```js
 Math.sign(3); // 1
@@ -74,8 +74,8 @@ Math.sign(); // NaN
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.sign` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
-- [La prothèse d'émulation es-shims de `Math.sign` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.sign)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.sign` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.sign` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.sign)
 - La méthode statique {{JSxRef("Math.abs()")}}
 - La méthode statique {{JSxRef("Math.ceil()")}}
 - La méthode statique {{JSxRef("Math.floor()")}}

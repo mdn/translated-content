@@ -1,5 +1,5 @@
 ---
-title: CSS `box-flex-group` プロパティ
+title: "`box-flex-group` プロパティ (CSS)"
 short-title: box-flex-group
 slug: Web/CSS/Reference/Properties/box-flex-group
 l10n:

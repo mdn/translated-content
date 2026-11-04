@@ -1,5 +1,5 @@
 ---
-title: "`rel` 属性 (HTML)"
+title: "`rel` 属性"
 short-title: rel
 slug: Web/HTML/Reference/Attributes/rel
 l10n:

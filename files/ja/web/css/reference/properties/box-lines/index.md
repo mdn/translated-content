@@ -1,5 +1,5 @@
 ---
-title: CSS `box-lines` プロパティ
+title: "`box-lines` プロパティ (CSS)"
 short-title: box-lines
 slug: Web/CSS/Reference/Properties/box-lines
 l10n:

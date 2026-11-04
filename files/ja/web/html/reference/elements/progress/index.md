@@ -1,5 +1,5 @@
 ---
-title: "`<progress>` 進捗インジケーター要素 (HTML)"
+title: "`<progress>` 進捗インジケーター要素"
 short-title: <progress>
 slug: Web/HTML/Reference/Elements/progress
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: CSS `rule-width` プロパティ
+title: "`rule-width` プロパティ (CSS)"
 short-title: rule-width
 slug: Web/CSS/Reference/Properties/rule-width
 l10n:

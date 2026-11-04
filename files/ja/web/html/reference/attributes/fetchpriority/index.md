@@ -1,5 +1,5 @@
 ---
-title: "`fetchpriority` 属性 (HTML)"
+title: "`fetchpriority` 属性"
 short-title: fetchpriority
 slug: Web/HTML/Reference/Attributes/fetchpriority
 l10n:

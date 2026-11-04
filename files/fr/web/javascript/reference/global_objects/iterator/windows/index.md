@@ -3,7 +3,7 @@ title: "Iterator : méthode windows()"
 short-title: windows()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/windows
 l10n:
-  sourceCommit: e316526e520d8163e9151dca8973eb777b5285e0
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 {{SeeCompatTable}}
@@ -26,7 +26,7 @@ windows(windowSize, underSized)
 - `underSized` {{Optional_Inline}}
   - : Une chaîne de caractères définissant ce qu'il faut faire lorsque le nombre d'éléments dans l'itérateur est inférieur à `windowSize` mais supérieur à 0. Il peut s'agir de l'une des valeurs suivantes&nbsp;:
     - `"only-full"` (par défaut)
-      - : Ignore la fenêtre partielle. L'itérateur retourné se termine immédiatement comme si l'entrée était vide.
+      - : Ignore la fenêtre partielle. L'itérateur retourné se termine immédiatement comme si l'entrée est vide.
     - `"allow-partial"`
       - : Rend tous les éléments de la fenêtre partielle sous forme de tableau (avec une longueur inférieure à `windowSize`).
 
@@ -104,7 +104,7 @@ for (const sousChaine of sousChaines) {
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Iterator.prototype.windows` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-chunking)
-- [La prothèse d'émulation es-shims de `Iterator.prototype.windows` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Iterator.prototype.windows` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator.prototype.windows` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
 - L'objet natif {{JSxRef("Iterator")}}
 - La méthode {{JSxRef("Iterator.prototype.chunks()")}}

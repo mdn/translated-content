@@ -1,5 +1,5 @@
 ---
-title: HTML `<frameset>` フレームセット要素
+title: "`<frameset>` フレームセット要素"
 short-title: <frameset>
 slug: Web/HTML/Reference/Elements/frameset
 l10n:

@@ -3,7 +3,7 @@ title: "Math : méthode statique trunc()"
 short-title: trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.trunc()`** retourne la partie entière d'un nombre en retirant toute partie fractionnaire.
@@ -47,7 +47,7 @@ Puisque `trunc()` est une méthode statique de `Math`, elle doit toujours être 
 
 ## Exemples
 
-### Utiliser `Math.trunc()`
+### Utiliser la méthode `Math.trunc()`
 
 ```js
 Math.trunc(-Infinity); // -Infinity
@@ -97,7 +97,7 @@ Utilisez uniquement `~~` comme substitution de `Math.trunc()` lorsque vous êtes
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.trunc` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.trunc` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
 - La méthode statique {{JSxRef("Math.abs()")}}
 - La méthode statique {{JSxRef("Math.ceil()")}}
 - La méthode statique {{JSxRef("Math.floor()")}}

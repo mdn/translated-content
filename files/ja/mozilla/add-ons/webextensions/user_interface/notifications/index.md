@@ -44,7 +44,7 @@ browser.notifications.onClicked.addListener(handleClick);
 
 ## アイコン
 
-通知に使うアイコン作成方法の詳細は、 [Iconography](https://design.firefox.com/photon/visuals/iconography.html) の記事を [Photon Design System](https://design.firefox.com/photon/index.html) のドキュメント内で参照してください。
+通知に使うアイコン作成方法の詳細は、 [Iconography](https://acorn.firefox.com/latest/foundations/styles/iconography-QEDMXQqj) の記事を [Acorn Design System](https://acorn.firefox.com/latest) のドキュメント内で参照してください。
 
 ## 例
 

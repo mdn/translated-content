@@ -3,7 +3,7 @@ title: "AsyncDisposableStack : méthode disposeAsync()"
 short-title: disposeAsync()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/disposeAsync
 l10n:
-  sourceCommit: 7a5b580a28a0b1a33e42e9fb81c8234994ec0e36
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`disposeAsync()`** des instances de {{JSxRef("AsyncDisposableStack")}} libère la pile en appelant tous les libérateurs enregistrés, dans l'ordre inverse de leur enregistrement, en attendant la fin de chacun avant d'appeler le suivant. Si la pile est déjà libérée, cette méthode ne fait rien.
@@ -37,7 +37,7 @@ Une nouvelle promesse ({{JSxRef("Promise")}}) qui se résout avec `undefined` lo
 
 Ici, on ajoute trois libérateurs à la pile, en utilisant les méthodes {{JSxRef("AsyncDisposableStack/use", "use()")}}, {{JSxRef("AsyncDisposableStack/adopt", "adopt()")}} et {{JSxRef("AsyncDisposableStack/defer", "defer()")}}. Lorsque `disposeAsync()` est appelée, les libérateurs sont appelés dans l'ordre inverse de leur enregistrement.
 
-Notez qu'en général, il n'est pas nécessaire d'appeler `disposeAsync()` manuellement. Déclarez la pile avec {{JSxRef("Statements/await_using", "await using")}} et sa méthode [`[Symbol.asyncDispose]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/Symbol.asyncDispose) sera automatiquement appelée lorsque la pile sortira de la portée.
+Notez qu'en général, il n'est pas nécessaire d'appeler `disposeAsync()` manuellement. Déclarez la pile avec {{JSxRef("Statements/await_using", "await using")}} et sa méthode [`[Symbol.asyncDispose]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/Symbol.asyncDispose) est automatiquement appelée lorsque la pile sort de la portée.
 
 ```js
 class Ressource {
@@ -68,7 +68,7 @@ async function faireQuelqueChose() {
   // Affiche dans l'ordre&nbsp;:
   // Libérateur différé
   // Ressource libérée
-  // Ressource libérée via Symbol.dispose
+  // Ressource libérée avec Symbol.dispose
 }
 
 faireQuelqueChose();
@@ -84,6 +84,7 @@ faireQuelqueChose();
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `AsyncDisposableStack.prototype.disposeAsync` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources en JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
 - L'objet natif {{JSxRef("AsyncDisposableStack")}}
 - La méthode {{JSxRef("AsyncDisposableStack.prototype.adopt()")}}

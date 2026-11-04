@@ -2,7 +2,7 @@
 title: ウェブの閲覧
 slug: Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 l10n:
-  sourceCommit: e81cf36acffe197d01b1ad282c3582ebd7b0b54d
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
@@ -194,6 +194,6 @@ AI が生成した検索結果は、情報を受け取るための非常に一�
   - `intitle:cheese` は、ページのメインタイトルに "cheese" が含まれる結果のみを返します。
 
   > [!NOTE]
-  > さまざまな検索エンジンで使用できる技術は他にもたくさんあります。他にどのような技術があるか探してみてください。参考になるリソースとして [Google 検索の結果を絞り込む](https://support.google.com/websearch/answer/2466433?hl=ja), [How to use advanced syntax on DuckDuckGo Search](https://duckduckgo.com/duckduckgo-help-pages/results/syntax)、[高度な検索オプション](https://support.microsoft.com/ja-JP/bing/advanced-search-options)などがあります。
+  > さまざまな検索エンジンで使用できる技術は他にもたくさんあります。他にどのような技術があるか探してみてください。参考になるリソースとして [Google 検索の結果を絞り込む](https://support.google.com/websearch/answer/2466433?hl=ja), [How to use advanced syntax on DuckDuckGo Search](https://duckduckgo.com/duckduckgo-help-pages/results/syntax)、[高度な検索オプション](https://support.microsoft.com/ja-jp/bing/advanced-search-options)などがあります。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}

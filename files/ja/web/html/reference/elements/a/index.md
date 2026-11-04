@@ -1,5 +1,5 @@
 ---
-title: HTML `<a>` アンカー要素
+title: "`<a>` アンカー要素"
 short-title: <a>
 slug: Web/HTML/Reference/Elements/a
 l10n:

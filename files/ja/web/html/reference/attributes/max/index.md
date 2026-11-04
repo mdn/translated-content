@@ -1,5 +1,5 @@
 ---
-title: "`max` 属性 (HTML)"
+title: "`max` 属性"
 short-title: max
 slug: Web/HTML/Reference/Attributes/max
 l10n:

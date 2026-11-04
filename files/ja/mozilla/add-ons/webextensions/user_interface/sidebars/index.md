@@ -52,7 +52,7 @@ browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
 
 ## サイドバーのデザイン
 
-サイドバーウェブページを Firefox のスタイルに合わせてデザインする方法については、 [Photon Design System](https://design.firefox.com/photon/index.html) のドキュメントを参照してください。
+サイドバーウェブページを Firefox のスタイルに合わせてデザインする方法については、 [Acorn Design System](https://acorn.firefox.com/latest) のドキュメントを参照してください。
 
 ## 例
 

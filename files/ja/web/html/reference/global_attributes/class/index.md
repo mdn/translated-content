@@ -1,5 +1,5 @@
 ---
-title: "`class` グローバル属性 (HTML)"
+title: "`class` グローバル属性"
 short-title: class
 slug: Web/HTML/Reference/Global_attributes/class
 l10n:

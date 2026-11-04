@@ -1,5 +1,5 @@
 ---
-title: HTML `<tt>` テレタイプテキスト要素
+title: "`<tt>` テレタイプテキスト要素"
 short-title: <tt>
 slug: Web/HTML/Reference/Elements/tt
 l10n:

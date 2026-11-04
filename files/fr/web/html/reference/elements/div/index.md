@@ -3,10 +3,10 @@ title: "Élément HTML `<div>` : l'élément de division du contenu"
 short-title: <div>
 slug: Web/HTML/Reference/Elements/div
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 100cf25d92d3953f3c70ecaa2af637d5e42179d8
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<div>`** est le conteneur générique du contenu de flux. Il n'a aucun effet sur le contenu ou la mise en page tant qu'il n'est pas mis en forme d'une manière quelconque à l'aide de {{Glossary("CSS")}} (par exemple, si la mise en forme lui est appliquée directement, ou si un modèle de mise en page tel que [Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) est appliqué à son élément parent).
+L'élément [HTML](/fr/docs/Web/HTML) **`<div>`** est le conteneur générique du contenu de flux. Il n'a aucun effet sur le contenu ou la mise en page tant qu'il n'est pas mis en forme d'une manière quelconque à l'aide de {{Glossary("CSS")}} (par exemple, si la mise en forme lui est appliquée directement, ou si un modèle de mise en page tel que [les boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) est appliqué à son élément parent).
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;div&gt;", "tabbed-standard")}}
 
@@ -38,18 +38,18 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<div>`** est le conteneur générique d
 }
 ```
 
-En tant que conteneur «&nbsp;pur&nbsp;», l'élément `<div>` ne représente rien en soi. Il est plutôt utilisé pour regrouper le contenu afin qu'il puisse être facilement mis en forme à l'aide des attributs [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id), pour marquer une section d'un document comme étant écrite dans une langue différente (à l'aide de l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang)), etc.
-
 ## Attributs
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
-> L'attribut `align` est désormais obsolète et ne doit plus être appliqué pour un `<div>`. On privilégie l'utilisation des propriétés et outils CSS (tels que [la grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout) ou [les boîtes flexibles (flexbox)](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox)) pour aligner et positionner des éléments `<div>`.
+> L'attribut `align` est désormais obsolète et ne doit plus être appliqué pour un `<div>`. On privilégie l'utilisation des propriétés et outils CSS (tels que [la grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout) ou [les boîtes flexibles CSS](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox)) pour aligner et positionner des éléments `<div>`.
 
 ## Notes d'utilisation
 
-- L'élément `<div>` doit uniquement être utilisé lorsqu'il n'existe aucun autre élément dont la sémantique permet de représenter le contenu (par exemple {{HTMLElement("article")}} ou {{HTMLElement("nav")}}).
+En tant que conteneur «&nbsp;pur&nbsp;», l'élément `<div>` ne représente rien en soi. Il est plutôt utilisé pour regrouper le contenu afin qu'il puisse être facilement mis en forme à l'aide des attributs [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id), pour marquer une section d'un document comme étant écrite dans une langue différente (à l'aide de l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang)), etc.
+
+L'élément `<div>` doit uniquement être utilisé lorsqu'il n'existe aucun autre élément dont la sémantique permet de représenter le contenu (par exemple {{HTMLElement("article")}} ou {{HTMLElement("nav")}}).
 
 ## Accessibilité
 
@@ -74,12 +74,12 @@ L'élément `<div>` possède [un rôle ARIA implicite `generic` <sup>(angl.)</su
 
 ### Un exemple mis en forme
 
-Cet exemple crée une boîte avec une ombre en appliquant la mise en forme avec du CSS sur l'élément `<div>`. Notez que l'utilisation de l'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) sur l'élément `<div>` afin d'appliquer la règle `"shadowbox"`.
+Cet exemple crée une boîte avec une ombre en appliquant la mise en forme avec du CSS sur l'élément `<div>`. Notez que l'utilisation de l'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) sur l'élément `<div>` afin d'appliquer la règle `"boite-avec-ombre"`.
 
 #### HTML
 
 ```html
-<div class="shadowbox">
+<div class="boite-avec-ombre">
   <p>
     Voici un paragraphe très intéressant inscrit dans une boîte avec une ombre.
   </p>
@@ -89,7 +89,7 @@ Cet exemple crée une boîte avec une ombre en appliquant la mise en forme avec 
 #### CSS
 
 ```css
-.shadowbox {
+.boite-avec-ombre {
   width: 15em;
   border: 1px solid #333;
   box-shadow: 8px 8px 5px #444;

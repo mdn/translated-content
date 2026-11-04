@@ -3,7 +3,7 @@ title: Fonctions de valeur CSS
 short-title: Fonctions
 slug: Web/CSS/Reference/Values/Functions
 l10n:
-  sourceCommit: d35a7643766c8f8d1d92044ca771dbf8dc843906
+  sourceCommit: 08a5a4313166a8f36f8c0c1320ac970423239b9a
 ---
 
 Les **fonctions de valeur CSS** (<i lang="en">CSS value functions</i> en anglais) sont des instructions qui invoquent un traitement de données spécial ou des calculs pour retourner une [valeur](/fr/docs/Web/CSS/Guides/Values_and_units) [CSS](/fr/docs/Web/CSS) pour une propriété CSS. Les fonctions de valeur CSS représentent des [types de données](/fr/docs/Web/CSS/Reference/Values/Data_types) plus complexes et peuvent prendre certains arguments d'entrée pour calculer la valeur de retour.
@@ -149,6 +149,11 @@ Chacune des pages ci-dessous contient des informations détaillées sur la synta
   - : Calcule le logarithme d'un nombre.
 - {{CSSxRef("exp()")}}
   - : Calcule `e` élevé à la puissance d'un nombre.
+
+### Les fonctions de valeur aléatoire
+
+- {{CSSxRef("random()")}}
+  - : Génère une valeur aléatoire comprise entre une valeur minimale et une valeur maximale.
 
 ### Les fonctions liées au signe
 

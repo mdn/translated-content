@@ -3,7 +3,7 @@ title: "Math : méthode statique sinh()"
 short-title: sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.sinh()`** retourne le sinus hyperbolique d'un nombre. C'est-à-dire,
@@ -51,7 +51,7 @@ Puisque `sinh()` est une méthode statique de `Math`, il faut toujours l'utilise
 
 ## Exemples
 
-### Utiliser `Math.sinh()`
+### Utiliser la méthode `Math.sinh()`
 
 ```js
 Math.sinh(-Infinity); // -Infinity
@@ -71,9 +71,9 @@ Math.sinh(Infinity); // Infinity
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Math.sinh` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
-- La méthode statique {{jsxref("Math.acosh()")}}
-- La méthode statique {{jsxref("Math.asinh()")}}
-- La méthode statique {{jsxref("Math.atanh()")}}
-- La méthode statique {{jsxref("Math.cosh()")}}
-- La méthode statique {{jsxref("Math.tanh()")}}
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.sinh` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- La méthode statique {{JSxRef("Math.acosh()")}}
+- La méthode statique {{JSxRef("Math.asinh()")}}
+- La méthode statique {{JSxRef("Math.atanh()")}}
+- La méthode statique {{JSxRef("Math.cosh()")}}
+- La méthode statique {{JSxRef("Math.tanh()")}}

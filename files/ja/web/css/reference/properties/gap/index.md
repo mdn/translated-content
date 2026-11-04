@@ -1,5 +1,5 @@
 ---
-title: CSS `gap` プロパティ
+title: "`gap` プロパティ (CSS)"
 short-title: gap
 slug: Web/CSS/Reference/Properties/gap
 l10n:

@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="text">`
 short-title: <input type="text">
 slug: Web/HTML/Reference/Elements/input/text
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`text`** permettent de créer des champs de saisie pour du texte sur une seule ligne.
@@ -122,45 +122,31 @@ Les éléments `<input>` de type `text` sont utilisés pour créer des champs te
 ### Exemple simple
 
 ```html
-<form>
-  <div>
-    <label for="uname">
-      Veuillez choisir un nom d'utilisateur·ice&nbsp;:
-    </label>
-    <input type="text" id="uname" name="name" />
-  </div>
-  <div>
-    <button>Envoyer</button>
-  </div>
-</form>
+<div>
+  <label for="uname"> Veuillez choisir un nom d'utilisateur·ice&nbsp;: </label>
+  <input type="text" id="uname" name="name" />
+</div>
 ```
 
 Voici ce qui est obtenu&nbsp;:
 
 {{EmbedLiveSample("Exemple simple", 600, 90)}}
 
-Lorsque le formulaire est envoyé, la paire nom/valeur est envoyée au serveur sous la forme `uname=Chris` (si «&nbsp;Chris&nbsp;» était le texte qui avait été saisi avant d'envoyer le formulaire). Il faut veiller à bien avoir un attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/input#name) pour l'élément {{HTMLElement("input")}}, car sinon, rien n'est envoyé.
+Si ce champ de saisie est inclus dans un formulaire et envoyé, la paire nom/valeur est envoyée au serveur sous la forme `uname=Chris` (si «&nbsp;Chris&nbsp;» est le texte qui est saisi avant d'envoyer le formulaire). Il faut veiller à bien avoir un attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/input#name) pour l'élément {{HTMLElement("input")}}, car sinon, rien n'est envoyé.
 
 ### Utiliser des textes indicatifs
 
 Il est possible de fournir un texte indicatif (<i lang="en">placeholder</i> en anglais) qui est affiché dans le champ lorsqu'aucune valeur n'a été saisie. Pour cela, on utilise l'attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Elements/input#placeholder). Par exemple&nbsp;:
 
 ```html
-<form>
-  <div>
-    <label for="uname">
-      Veuillez choisir un nom d'utilisateur·ice&nbsp;:
-    </label>
-    <input
-      type="text"
-      id="uname"
-      name="name"
-      placeholder="Un seul mot, en minuscules" />
-  </div>
-  <div>
-    <button>Envoyer</button>
-  </div>
-</form>
+<div>
+  <label for="uname"> Veuillez choisir un nom d'utilisateur·ice&nbsp;: </label>
+  <input
+    type="text"
+    id="uname"
+    name="name"
+    placeholder="Un seul mot, en minuscules" />
+</div>
 ```
 
 Voici le résultat qui est obtenu&nbsp;:
@@ -174,22 +160,15 @@ Le texte indicatif est généralement affiché dans une couleur plus claire que 
 La taille physique du champ de saisie peut être adaptée grâce à l'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size). Sa valeur correspond au nombre de caractères qui sont affichés simultanément. Voici par exemple, un fragment de code HTML où la contrôle de saisie affiche au plus 30 caractères en même temps (on peut saisir un texte plus long mais toutes les lettres ne sont pas affichées)&nbsp;:
 
 ```html
-<form>
-  <div>
-    <label for="uname">
-      Veuillez choisir un nom d'utilisateur·ice&nbsp;:
-    </label>
-    <input
-      type="text"
-      id="uname"
-      name="name"
-      placeholder="Un seul mot, en minuscules"
-      size="30" />
-  </div>
-  <div>
-    <button>Envoyer</button>
-  </div>
-</form>
+<div>
+  <label for="uname"> Veuillez choisir un nom d'utilisateur·ice&nbsp;: </label>
+  <input
+    type="text"
+    id="uname"
+    name="name"
+    placeholder="Un seul mot, en minuscules"
+    size="30" />
+</div>
 ```
 
 {{EmbedLiveSample("Contrôler la taille physique du champ", 600, 90)}}
@@ -249,6 +228,12 @@ On peut utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/in
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 div {
   margin-bottom: 10px;
@@ -304,6 +289,12 @@ Dans l'exemple suivant, pour que le texte soit valide, il faut qu'il soit plus l
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 div {
   margin-bottom: 10px;
@@ -342,7 +333,9 @@ Dans l'exemple qui suit, on restreint le format du texte afin que ce soit un tex
 ```html
 <form>
   <div>
-    <label for="uname">Veuillez choisir un nom d'utilisateur&nbsp;:</label>
+    <label for="uname">
+      Veuillez choisir un nom d'utilisateur·ice&nbsp;:
+    </label>
     <input
       type="text"
       id="uname"
@@ -351,12 +344,20 @@ Dans l'exemple qui suit, on restreint le format du texte afin que ce soit un tex
       size="45"
       pattern="[a-z]{4,8}" />
     <span class="validity"></span>
-    <p>Un nom d'utilisateur doit être en minuscules sur 4 à 8 caractères.</p>
+    <p>
+      Un nom d'utilisateur·ice doit être en minuscules sur 4 à 8 caractères.
+    </p>
   </div>
   <div>
     <button>Envoyer</button>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden

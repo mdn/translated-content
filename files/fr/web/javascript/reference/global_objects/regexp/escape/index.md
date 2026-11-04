@@ -3,7 +3,7 @@ title: "RegExp : méthode statique escape()"
 short-title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/escape
 l10n:
-  sourceCommit: 0f96a043fc900d79fbd064b5628db17072843714
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`RegExp.escape()`** [échappe](/fr/docs/Web/JavaScript/Reference/Regular_expressions#séquences_déchapement) tous les caractères potentiellement syntaxiques d'une expression rationnelle dans une chaîne de caractères, et retourne une nouvelle chaîne de caractères qui peut être utilisée en toute sécurité comme motif [littéral](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) pour le constructeur {{JSxRef("RegExp/RegExp", "RegExp()")}}.
@@ -40,7 +40,7 @@ Une nouvelle chaîne de caractères qui peut être utilisée en toute sécurité
 
 ## Exemples
 
-### Utiliser `RegExp.escape()`
+### Utiliser la méthode `RegExp.escape()`
 
 Les exemples suivants illustrent différentes entrées et sorties de la méthode `RegExp.escape()`.
 
@@ -103,6 +103,6 @@ Cette fonction fait désormais exactement ce que nous voulons et ne transforme p
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `RegExp.escape` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#regexp-escaping)
-- [La prothèse d'émulation de es-shims de `RegExp.escape` <sup>(angl.)</sup>](https://www.npmjs.com/package/regexp.escape)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `RegExp.escape` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `RegExp.escape` <sup>(angl.)</sup>](https://www.npmjs.com/package/regexp.escape)
 - L'objet natif {{JSxRef("RegExp")}}

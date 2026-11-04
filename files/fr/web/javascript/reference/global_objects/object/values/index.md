@@ -3,7 +3,7 @@ title: "Object : méthode statique values()"
 short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Object.values()`** retourne un tableau contenant les valeurs des propriétés énumérables d'un objet donné ayant des clés de type chaîne de caractères.
@@ -38,7 +38,7 @@ Un tableau dont les éléments sont les valeurs des propriétés énumérables d
 
 ## Description
 
-`Object.values()` retourne un tableau dont les éléments sont les valeurs des propriétés énumérables ayant des clés de type chaîne de caractères directement rattachées à l'objet `object`. C'est la même chose que d'itérer avec une boucle {{JSxRef("Statements/for...in", "for...in")}}, sauf qu'une boucle `for...in` énumère également les propriétés de la chaîne de prototypes. L'ordre du tableau retourné par `Object.values()` est le même que celui fourni par une boucle {{JSxRef("Statements/for...in", "for...in")}}.
+`Object.values()` retourne un tableau dont les éléments sont les valeurs des propriétés énumérables ayant des clés de type chaîne de caractères directement rattachées à l'objet `object`. C'est similaire au fait d'accéder aux valeurs à l'intérieur d'une boucle {{JSxRef("Statements/for...in", "for...in")}}, sauf qu'une boucle `for...in` énumère également les propriétés de la chaîne de prototypes. L'ordre du tableau retourné par `Object.values()` est le même que celui fourni par une boucle {{JSxRef("Statements/for...in", "for...in")}}.
 
 Si vous avez besoin des clés des propriétés, utilisez plutôt {{JSxRef("Object.keys()")}}. Si vous avez besoin à la fois des clés et des valeurs des propriétés, utilisez plutôt {{JSxRef("Object.entries()")}}.
 
@@ -97,8 +97,8 @@ console.log(Object.values(100)); // []
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Object.values` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
-- [Prothèse d'émulation es-shims de `Object.values` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.values)
+- [Prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.values` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
+- [Prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Object.values` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.values)
 - [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - La méthode statique {{JSxRef("Object.keys()")}}
 - La méthode statique {{JSxRef("Object.entries()")}}

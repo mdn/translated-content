@@ -1,5 +1,5 @@
 ---
-title: "`exportparts` グローバル属性 (HTML)"
+title: "`exportparts` グローバル属性"
 short-title: exportparts
 slug: Web/HTML/Reference/Global_attributes/exportparts
 l10n:

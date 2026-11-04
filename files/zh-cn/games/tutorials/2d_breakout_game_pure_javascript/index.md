@@ -20,7 +20,7 @@ l10n:
 1. [初始化画布](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas)
 2. [让球动起来](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball)
 3. [从墙壁反弹](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls)
-4. [玩家球板和控制](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls)
+4. [球板和操控](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls)
 5. [游戏结束](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over)
 6. [创建砖块](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)
 7. [统计得分、获得胜利](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win)

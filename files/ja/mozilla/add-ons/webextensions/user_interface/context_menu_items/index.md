@@ -51,7 +51,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 ## アイコン
 
-コンテキストメニューで使用するアイコンの作り方の詳細は、 [Iconography](https://design.firefox.com/photon/visuals/iconography.html) を [Photon Design System](https://design.firefox.com/photon/index.html) のドキュメントで参照してください。
+コンテキストメニューで使用するアイコンの作り方の詳細は、 [Iconography](https://acorn.firefox.com/latest/foundations/styles/iconography-QEDMXQqj) を [Acorn Design System](https://acorn.firefox.com/latest) のドキュメントで参照してください。
 
 ## 例
 

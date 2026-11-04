@@ -1,5 +1,5 @@
 ---
-title: HTML `<abbr>` 略語要素
+title: "`<abbr>` 略語要素"
 short-title: <abbr>
 slug: Web/HTML/Reference/Elements/abbr
 l10n:

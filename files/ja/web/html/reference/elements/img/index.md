@@ -1,5 +1,5 @@
 ---
-title: "`<img>` 画像埋め込み要素 (HTML)"
+title: "`<img>` 画像埋め込み要素"
 short-title: <img>
 slug: Web/HTML/Reference/Elements/img
 l10n:

@@ -2,7 +2,7 @@
 title: Sélecteurs d'imbrication &
 slug: Web/CSS/Reference/Selectors/Nesting_selector
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 5249290f5d1191482d679f74ee0efdcc108ead9c
 ---
 
 Le **sélecteur d'imbrication CSS `&`** indique explicitement la relation entre les règles parentes et enfants lors de l'utilisation de [l'imbrication CSS](/fr/docs/Web/CSS/Guides/Nesting). Il rend les sélecteurs de règles enfants imbriquées _relatifs à l'élément parent_. Sans le sélecteur d'imbrication `&`, le sélecteur de règle enfant cible les éléments enfants. Les sélecteurs de règles enfants ont le même poids de [spécificité](/fr/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity) que s'ils sont dans {{CSSxRef(":is()")}}.
@@ -14,14 +14,24 @@ Si le sélecteur d'imbrication `&` n'est pas utilisé dans une règle de style i
 
 ## Syntaxe
 
-```css
+```css-nolint
+/* Imbriquée directement — ajoute un espace (descendant) */
 parentRule {
-  /* propriétés de style de la règle parente */
-  & childRule {
-    /* propriétés de style de la règle enfant */
-  }
+  & childRule { }
+}
+
+/* Attaché à la règle parente — pas d'espace (par exemple, pseudo-classe, sélecteur composé) */
+parentRule {
+  &:pseudo-class { }
+}
+
+/* Contexte inversé — & placé après un autre sélecteur */
+parentRule {
+  otherRule & { }
 }
 ```
+
+## Description
 
 ### Sélecteur d'imbrication `&` et espaces
 
@@ -138,7 +148,7 @@ Le sélecteur d'imbrication `&` peut être placé plusieurs fois :
 
 Le sélecteur `&` est équivalent au sélecteur {{CSSxRef(":is()")}} et possède la même limitation que celui-ci, il ne peut pas représenter les pseudo-éléments.
 
-Par exemple, avec la règle de style suivante, aucun contenu généré ne sera coloré en rouge, même lorsqu'il est imbriqué dans `<div class="important">`, car `.important :is(.foo::before)` ne peut rien cibler.
+Par exemple, avec la règle de style suivante, aucun contenu généré n'est coloré en rouge, même lorsqu'il est imbriqué dans `<div class="important">`, car `.important :is(.foo::before)` ne peut rien cibler.
 
 ```css
 .foo::before {

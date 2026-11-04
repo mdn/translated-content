@@ -3,25 +3,25 @@ title: Valeur d'attribut HTML `<input type="url">`
 short-title: <input type="url">
 slug: Web/HTML/Reference/Elements/input/url
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`url`** sont employées afin de permettre à un·e utilisateur·ice de saisir ou d'éditer une URL.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;url&quot;&gt;", "tabbed-shorter")}}
 
+La valeur saisie est automatiquement validée par le navigateur qui vérifie qu'elle est vide ou formatée correctement avant que le formulaire puisse être envoyé. Les pseudo-classes {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} sont appliquées automatiquement selon le cas de figure.
+
 ```html interactive-example
-<form>
-  <label for="url">Entrez une URL commençant par https://&nbsp;:</label>
-  <input
-    type="url"
-    name="url"
-    id="url"
-    placeholder="https://example.com"
-    pattern="https://.*"
-    size="30"
-    required />
-</form>
+<label for="url">Entrez une URL commençant par https://&nbsp;:</label>
+<input
+  type="url"
+  name="url"
+  id="url"
+  placeholder="https://example.com"
+  pattern="https://.*"
+  size="30"
+  required />
 ```
 
 ```css interactive-example
@@ -37,8 +37,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-La valeur saisie est automatiquement validée par le navigateur qui vérifie qu'elle est vide ou formatée correctement avant que le formulaire puisse être envoyé. Les pseudo-classes {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} sont appliquées automatiquement selon le cas de figure.
 
 ## Valeur
 
@@ -298,6 +296,14 @@ L'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) décri
   </label>
   <button>Submit</button>
 </form>
+```
+
+```js hidden live-sample___url-validation
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
 ```
 
 #### CSS

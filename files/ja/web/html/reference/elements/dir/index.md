@@ -1,5 +1,5 @@
 ---
-title: HTML `<dir>` ディレクトリー要素
+title: "`<dir>` ディレクトリー要素"
 short-title: <dir>
 slug: Web/HTML/Reference/Elements/dir
 l10n:

@@ -2,7 +2,7 @@
 title: Modèle de sous-page de référence d'API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template
 l10n:
-  sourceCommit: 743d7644188577789b102fd41c6ab75bae49f8ab
+  sourceCommit: c44003c788a907ef19e0d766e98f29ffca5b6798
 ---
 
 > [!NOTE]

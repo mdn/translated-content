@@ -3,7 +3,7 @@ title: "Array : méthode toSorted()"
 short-title: toSorted()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSorted
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`toSorted()`** des instances de {{JSxRef("Array")}} est la version [copiante](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_copie_et_méthodes_de_mutation) de la méthode {{JSxRef("Array/sort", "sort()")}}. Elle retourne un nouveau tableau dont les éléments sont triés par ordre croissant.
@@ -37,22 +37,22 @@ La méthode `toSorted()` est [générique](/fr/docs/Web/JavaScript/Reference/Glo
 ### Trier un tableau
 
 ```js
-const months = ["Mar", "Jan", "Feb", "Dec"];
-const sortedMonths = months.toSorted();
-console.log(sortedMonths); // ['Dec', 'Feb', 'Jan', 'Mar']
-console.log(months); // ['Mar', 'Jan', 'Feb', 'Dec']
+const mois = ["Mar", "Jan", "Feb", "Dec"];
+const moisTries = mois.toSorted();
+console.log(moisTries); // ['Dec', 'Feb', 'Jan', 'Mar']
+console.log(mois); // ['Mar', 'Jan', 'Feb', 'Dec']
 
-const values = [1, 10, 21, 2];
-const sortedValues = values.toSorted((a, b) => a - b);
-console.log(sortedValues); // [1, 2, 10, 21]
-console.log(values); // [1, 10, 21, 2]
+const valeurs = [1, 10, 21, 2];
+const valeursTriees = valeurs.toSorted((a, b) => a - b);
+console.log(valeursTriees); // [1, 2, 10, 21]
+console.log(valeurs); // [1, 10, 21, 2]
 ```
 
 Pour plus d'exemples d'utilisation, voir {{JSxRef("Array/sort", "sort()")}}.
 
 ### Utiliser `toSorted()` sur un tableau creux
 
-Les cases vides sont triées comme si elles avaient la valeur `undefined`. Elles sont toujours placées à la fin du tableau et `compareFn` n'est pas appelé pour elles.
+Les cases vides sont triées comme si elles ont la valeur `undefined`. Elles sont toujours placées à la fin du tableau et `compareFn` n'est pas appelé pour elles.
 
 ```js
 console.log(["a", "c", , "b"].toSorted()); // ['a', 'b', 'c', undefined]
@@ -66,10 +66,10 @@ La méthode `toSorted()` lit la propriété `length` de `this`. Elle collecte en
 ```js
 const objetSimilaireTableau = {
   length: 3,
-  unrelated: "foo",
+  unrelated: "toto",
   0: 5,
   2: 4,
-  3: 3, // ignoré par toSorted() car length vaut 3
+  3: 3, // ignoré par toSorted(), car length vaut 3
 };
 console.log(Array.prototype.toSorted.call(objetSimilaireTableau));
 // [4, 5, undefined]
@@ -85,11 +85,11 @@ console.log(Array.prototype.toSorted.call(objetSimilaireTableau));
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.toSorted` dans core-js <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.toSorted` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.tosorted)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - La méthode {{JSxRef("Array.prototype.sort()")}}
 - La méthode {{JSxRef("Array.prototype.toReversed()")}}
 - La méthode {{JSxRef("Array.prototype.toSpliced()")}}
 - La méthode {{JSxRef("Array.prototype.with()")}}
 - La méthode {{JSxRef("TypedArray.prototype.toSorted()")}}
-- [Prothèse d'émulation de `Array.prototype.toSorted` dans core-js <sup>(angl.)</sup>](https://github.com/zloirock/core-js#change-array-by-copy)
-- [Prothèse d'émulation es-shims de `Array.prototype.toSorted` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.tosorted)

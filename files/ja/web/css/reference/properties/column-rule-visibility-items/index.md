@@ -1,5 +1,5 @@
 ---
-title: CSS `column-rule-visibility-items` プロパティ
+title: "`column-rule-visibility-items` プロパティ (CSS)"
 short-title: column-rule-visibility-items
 slug: Web/CSS/Reference/Properties/column-rule-visibility-items
 l10n:

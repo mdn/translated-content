@@ -3,7 +3,7 @@ title: "DisposableStack : méthode [Symbol.dispose]()"
 short-title: "[Symbol.dispose]()"
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/Symbol.dispose
 l10n:
-  sourceCommit: 7a5b580a28a0b1a33e42e9fb81c8234994ec0e36
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`[Symbol.dispose]()`** des instances de {{JSxRef("DisposableStack")}} implémente le _protocole de libération_ et permet de la libérer lorsqu'elle est utilisée avec {{JSxRef("Statements/using", "using")}} ou {{JSxRef("Statements/await_using", "await using")}}. C'est un alias de la méthode {{JSxRef("DisposableStack/dispose", "dispose()")}}.
@@ -48,6 +48,7 @@ La méthode `Symbol.dispose` est conçue pour être appelée automatiquement dan
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `DisposableStack.prototype[Symbol.dispose]` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
 - L'objet natif {{JSxRef("DisposableStack")}}
 - La méthode {{JSxRef("DisposableStack.prototype.dispose()")}}

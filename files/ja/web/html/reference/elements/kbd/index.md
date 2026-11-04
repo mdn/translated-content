@@ -1,5 +1,5 @@
 ---
-title: HTML `<kbd>` キーボード入力要素
+title: "`<kbd>` キーボード入力要素"
 short-title: <kbd>
 slug: Web/HTML/Reference/Elements/kbd
 l10n:

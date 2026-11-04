@@ -3,7 +3,7 @@ title: Constructeur Map()
 short-title: Map()
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
 l10n:
-  sourceCommit: 1d905454be7d8910d5e3b33f0c22d063fe212816
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Le **constructeur `Map()`** permet de créer des objets {{JSxRef("Map")}}.
@@ -21,7 +21,7 @@ new Map(iterable)
 ### Paramètres
 
 - `iterable` {{Optional_Inline}}
-  - : Si un [objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) (comme un tableau) est passé, tous ses éléments seront ajoutés au nouvel objet `Map`. Chaque élément doit être un objet avec deux propriétés&nbsp;: `0` et `1`, qui correspondent à la clé et à la valeur (par exemple, `[[1, "un"],[2, "deux"]]`). Si vous ne définissez pas ce paramètre, ou si sa valeur est `null` ou `undefined`, le nouvel objet `Map` est vide.
+  - : Si un [objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) (comme un tableau) est passé, tous ses éléments sont ajoutés au nouvel objet `Map`. Chaque élément doit être un objet avec deux propriétés&nbsp;: `0` et `1`, qui correspondent à la clé et à la valeur (par exemple, `[[1, "un"],[2, "deux"]]`). Si vous ne définissez pas ce paramètre, ou si sa valeur est `null` ou `undefined`, le nouvel objet `Map` est vide.
 
 ## Exemples
 
@@ -45,8 +45,8 @@ const maMap = new Map([
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Map` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#map)
-- [Prothèse d'émulation es-shims de `Map` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-map)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Map` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/collections#h-map)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Map` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-map)
 - L'objet natif {{JSxRef("Set")}}
 - L'objet natif {{JSxRef("WeakMap")}}
 - L'objet natif {{JSxRef("WeakSet")}}

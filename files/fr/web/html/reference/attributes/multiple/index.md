@@ -3,7 +3,7 @@ title: "Attribut HTML : `multiple`"
 short-title: multiple
 slug: Web/HTML/Reference/Attributes/multiple
 l10n:
-  sourceCommit: fd0b11ad5b5014a9333578adcc4bc98fb9024da3
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 L'attribut booléen **`multiple`**, s'il est défini, signifie que le contrôle de formulaire accepte une ou plusieurs valeurs. Valable pour les types de saisie [`email`](/fr/docs/Web/HTML/Reference/Elements/input/email) et [`file`](/fr/docs/Web/HTML/Reference/Elements/input/file) et l'élément {{HTMLElement("select")}}, la manière dont l'utilisateur·ice opte pour plusieurs valeurs dépend du contrôle de formulaire.
@@ -132,68 +132,58 @@ Certains navigateurs prennent en charge l'apparition de la [`list`](/fr/docs/Web
 Lorsque `multiple` est défini sur le type de saisie `{{HTMLElement("input/file", "file")}}`, l'utilisateur·ice peut sélectionner un ou plusieurs fichiers&nbsp;:
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <p>
-    <label for="uploads">
-      Choisissez les images que vous voulez télécharger&nbsp;:
-    </label>
-    <input
-      type="file"
-      id="uploads"
-      name="uploads"
-      accept=".jpg, .jpeg, .png, .svg, .gif"
-      multiple />
-  </p>
-  <p>
-    <label for="text">Choisissez un fichier texte à télécharger&nbsp;:</label>
-    <input type="file" id="text" name="text" accept=".txt" />
-  </p>
-  <p>
-    <input type="submit" value="Soumettre" />
-  </p>
-</form>
+<p>
+  <label for="uploads">
+    Choisissez les images que vous voulez télécharger&nbsp;:
+  </label>
+  <input
+    type="file"
+    id="uploads"
+    name="uploads"
+    accept=".jpg, .jpeg, .png, .svg, .gif"
+    multiple />
+</p>
+<p>
+  <label for="text">Choisissez un fichier texte à télécharger&nbsp;:</label>
+  <input type="file" id="text" name="text" accept=".txt" />
+</p>
 ```
 
 {{EmbedLiveSample("Saisie de fichiers", "", 160)}}
 
 Notez la différence d'aspect entre l'exemple avec `multiple` défini et l'autre entrée `file` sans.
 
-Lorsque le formulaire est envoyé, si nous utilisons [`method="get"`](/fr/docs/Web/HTML/Reference/Elements/form), chaque nom de fichier sélectionné est ajouté aux paramètres de l'URL sous la forme `?uploads=img1.jpg&uploads=img2.svg`. Cependant, comme nous soumettons des données de formulaire multipart, il faut utiliser la méthode post. Voir l'élément {{HTMLElement("form")}} et la page [Envoi de données de formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#lattribut_method) pour plus d'informations.
+Si ces champs sont inclus dans un formulaire envoyé en utilisant [`method="get"`](/fr/docs/Web/HTML/Reference/Elements/form), le nom de chaque fichier sélectionné est ajouté aux paramètres de l'URL sous la forme `?uploads=img1.jpg&uploads=img2.svg`. Pour envoyer les fichiers en tant que données de formulaire multipart, utilisez `method="post"` et `enctype="multipart/form-data"`. Voir l'élément {{HTMLElement("form")}} et la page [Envoi de données de formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#lattribut_method) pour plus d'informations.
 
 ### Saisir plusieurs options
 
 L'attribut `multiple` de l'élément {{HTMLElement("select")}} représente un contrôle permettant de sélectionner zéro ou plusieurs options dans la liste d'options. Sinon, l'élément {{HTMLElement("select")}} représente un contrôle permettant de sélectionner une seule {{HTMLElement("select")}} dans la liste des options. L'apparence du contrôle varie généralement en fonction de la présence de l'attribut multiple, la plupart des navigateurs affichant une liste déroulante à défilement au lieu d'une liste déroulante à ligne unique lorsque l'attribut est présent.
 
 ```html
-<form method="get" action="#">
-  <p>
-    <label for="nains">Sélectionnez les menuisiers que vous aimez&nbsp;:</label>
-    <select multiple name="nains" id="nains">
-      <option>grincheux@menuisiers.fr</option>
-      <option>joyeux@menuisiers.fr</option>
-      <option>dormeur@menuisiers.fr</option>
-      <option>timide@menuisiers.fr</option>
-      <option>atchoum@menuisiers.fr</option>
-      <option>simplet@menuisiers.fr</option>
-      <option>doc@menuisiers.fr</option>
-    </select>
-  </p>
-  <p>
-    <label for="favoriteOnly">Sélectionnez votre préféré&nbsp;:</label>
-    <select name="favoriteOnly" id="favoriteOnly">
-      <option>grincheux@menuisiers.fr</option>
-      <option>joyeux@menuisiers.fr</option>
-      <option>dormeur@menuisiers.fr</option>
-      <option>timide@menuisiers.fr</option>
-      <option>atchoum@menuisiers.fr</option>
-      <option>simplet@menuisiers.fr</option>
-      <option>doc@menuisiers.fr</option>
-    </select>
-  </p>
-  <p>
-    <input type="submit" value="Envoyer" />
-  </p>
-</form>
+<p>
+  <label for="nains">Sélectionnez les menuisiers que vous aimez&nbsp;:</label>
+  <select multiple name="nains" id="nains">
+    <option>grincheux@menuisiers.fr</option>
+    <option>joyeux@menuisiers.fr</option>
+    <option>dormeur@menuisiers.fr</option>
+    <option>timide@menuisiers.fr</option>
+    <option>atchoum@menuisiers.fr</option>
+    <option>simplet@menuisiers.fr</option>
+    <option>doc@menuisiers.fr</option>
+  </select>
+</p>
+<p>
+  <label for="favoriteOnly">Sélectionnez votre préféré&nbsp;:</label>
+  <select name="favoriteOnly" id="favoriteOnly">
+    <option>grincheux@menuisiers.fr</option>
+    <option>joyeux@menuisiers.fr</option>
+    <option>dormeur@menuisiers.fr</option>
+    <option>timide@menuisiers.fr</option>
+    <option>atchoum@menuisiers.fr</option>
+    <option>simplet@menuisiers.fr</option>
+    <option>doc@menuisiers.fr</option>
+  </select>
+</p>
 ```
 
 {{EmbedLiveSample("Saisir plusieurs options", "", 220)}}

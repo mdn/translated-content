@@ -1,5 +1,5 @@
 ---
-title: "`<datalist>` データリスト要素 (HTML)"
+title: "`<datalist>` データリスト要素"
 short-title: <datalist>
 slug: Web/HTML/Reference/Elements/datalist
 l10n:

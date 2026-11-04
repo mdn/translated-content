@@ -3,7 +3,7 @@ title: "Élément HTML `<article>` : l'élément de contenu d'un article"
 short-title: <article>
 slug: Web/HTML/Reference/Elements/article
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 100cf25d92d3953f3c70ecaa2af637d5e42179d8
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<article>`** représente une composition autonome dans un document, une page, une application ou un site, destinée à être distribuée ou réutilisée indépendamment (par exemple dans une syndication). Les exemples incluent&nbsp;: un message de forum, un article de magazine ou de journal, une entrée de blog, une fiche produit, un commentaire envoyé par un·e utilisateur·ice, un composant ou gadget interactif, ou tout autre élément de contenu indépendant.
@@ -54,17 +54,17 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<article>`** représente une compositio
 }
 ```
 
-Un document donné peut contenir plusieurs articles&nbsp;; par exemple, sur un blog qui affiche le texte de chaque article l'un après l'autre au fur et à mesure que le lecteur fait défiler, chaque article est contenu dans un élément `<article>`, avec éventuellement une ou plusieurs balises `<section>` à l'intérieur.
-
 ## Attributs
 
 Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes), communs à tous les éléments.
 
 ## Notes d'utilisation
 
+Un document donné peut contenir plusieurs articles&nbsp;; par exemple, sur un blog qui affiche le texte de chaque article l'un après l'autre au fur et à mesure que le lecteur fait défiler, chaque article est contenu dans un élément `<article>`, avec éventuellement une ou plusieurs balises `<section>` à l'intérieur.
+
 - Chaque élément `<article>` doit être identifié, généralement en incluant un titre (un élément [`<h1>` à `<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)) comme enfant de l'élément `<article>`.
 - Lorsqu'un élément `<article>` est imbriqué, l'élément intérieur représente un article lié à l'élément extérieur. Par exemple, les commentaires d'un article de blog peuvent être des éléments `<article>` imbriqués dans l'élément `<article>` représentant l'article de blog.
-- Les informations sur l'auteur ou l'autrice d'un élément `<article>` peuvent être fournies avec l'élément {{HTMLElement("address")}}, mais cela ne s'applique pas aux éléments `<article>` imbriqués.
+- Les informations sur l'auteur·ice d'un élément `<article>` peuvent être fournies avec l'élément {{HTMLElement("address")}}, mais cela ne s'applique pas aux éléments `<article>` imbriqués.
 - La date et l'heure de publication d'un élément `<article>` peuvent être décrites à l'aide de l'attribut [`datetime`](/fr/docs/Web/HTML/Reference/Elements/time#datetime) d'un élément {{HTMLElement("time")}}.
 
 ## Exemples
@@ -77,7 +77,7 @@ Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs
     <p>Les dinosaures étaient super&nbsp;!</p>
   </section>
   <section class="user_reviews">
-    <h3>Avis des utilisateur·ices</h3>
+    <h3>Avis des utilisateur·ice·s</h3>
     <article class="user_review">
       <h4>Trop effrayant&nbsp;!</h4>
       <p>Beaucoup trop effrayant pour moi.</p>

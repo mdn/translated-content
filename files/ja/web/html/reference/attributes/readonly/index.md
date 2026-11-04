@@ -1,5 +1,5 @@
 ---
-title: "`readonly` 属性 (HTML)"
+title: "`readonly` 属性"
 short-title: readonly
 slug: Web/HTML/Reference/Attributes/readonly
 l10n:

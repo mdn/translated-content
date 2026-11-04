@@ -3,7 +3,7 @@ title: "Math : méthode statique f16round()"
 short-title: f16round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/f16round
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.f16round()`** retourne la représentation en virgule flottante [16 bits demi-précision <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Half-precision_floating-point_format) la plus proche d'un nombre.
@@ -47,7 +47,7 @@ Comme `f16round()` est une méthode statique de `Math`, vous l'utilisez toujours
 
 ## Exemples
 
-### Utiliser `Math.f16round()`
+### Utiliser la méthode `f16round()`
 
 Le nombre 1,5 peut être représenté avec précision dans le système binaire, et est identique en 16 bits et 64 bits&nbsp;:
 
@@ -79,7 +79,7 @@ Math.f16round(100000); // Infinity
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.f16round` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#float16-methods)
-- [La prothèse d'émulation es-shims de `Math.f16round` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.f16round)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.f16round` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.f16round` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.f16round)
 - La méthode statique {{JSxRef("Math.fround()")}}
 - La méthode statique {{JSxRef("Math.round()")}}

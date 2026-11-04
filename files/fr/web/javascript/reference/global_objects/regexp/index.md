@@ -2,7 +2,7 @@
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 l10n:
-  sourceCommit: 6ef7bc04d63cf8b512bdbea149a6cb875cc063e3
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 L'objet **`RegExp`** est utilisé pour faire correspondre du texte avec un motif.
@@ -323,7 +323,7 @@ Notez que, pour des raisons de compatibilité web, `RegExp.$N` retourne toujours
 
 ## Voir aussi
 
-- [La prothèse d'émulation de nombreuses fonctionnalités modernes de `RegExp` (`dotAll`, indicateurs `sticky`, groupes de capture nommés, etc.) dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de nombreuses fonctionnalités modernes de `RegExp` (`dotAll`, indicateurs `sticky`, groupes de capture nommés, etc.) dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
 - Le guide [des expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
 - [Les expressions rationnelles](/fr/docs/Web/JavaScript/Reference/Regular_expressions)
 - La méthode {{JSxRef("String.prototype.match()")}}

@@ -1,5 +1,5 @@
 ---
-title: HTML `<search>` 一般検索要素
+title: "`<search>` 一般検索要素"
 short-title: <search>
 slug: Web/HTML/Reference/Elements/search
 l10n:

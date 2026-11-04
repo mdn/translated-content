@@ -1,5 +1,5 @@
 ---
-title: HTML `<input type="submit">` 属性値
+title: '`<input type="submit">` 属性値'
 short-title: <input type="submit">
 slug: Web/HTML/Reference/Elements/input/submit
 l10n:

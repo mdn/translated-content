@@ -6,9 +6,9 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}
 
-이 레슨은 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 10개 중 **9번째** 단계입니다. 당신은 [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html)에서 완성된 소스코드를 찾을 수 있습니다.
+이 레슨은 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)의 10개 중 **9번째** 단계입니다. 당신은 [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html)에서 완성된 소스코드를 찾을 수 있습니다.
 
 게임 자체는 사실상 완성되었으므로, 이를 다듬는 작업을 해봅시다. 우리는 이미 키보드로 조종하는 코드를 추가했지만 마우스 조종하는 코드를 쉽게 추가할 수 있습니다.
 
@@ -50,4 +50,4 @@ function mouseMoveHandler(e) {
 
 이제 우리는 완전한 게임을 할 수 있게 되었습니다. 우리는 몇 가지 작은 코드만으로 이 레슨을 마치게 될 것 입니다! — [마지막](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives).
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}

@@ -3,7 +3,7 @@ title: "Object : méthode statique entries()"
 short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Object.entries()`** retourne un tableau contenant les paires clé-valeur des propriétés propres énumérables d'un objet, dont les clés sont des chaînes de caractères.
@@ -48,7 +48,7 @@ Si vous n'avez besoin que des clés, utilisez {{JSxRef("Object.keys()")}}. Si vo
 
 ## Exemples
 
-### Utilisation de `Object.entries()`
+### Utiliser la méthode `Object.entries()`
 
 ```js
 const obj = { foo: "bar", baz: 42 };
@@ -124,6 +124,8 @@ Object.entries(obj).forEach(([key, value]) => {
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.entries` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Object.entries` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.entries)
 - [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - La méthode statique {{JSxRef("Object.keys()")}}
 - La méthode statique {{JSxRef("Object.values()")}}
@@ -132,5 +134,3 @@ Object.entries(obj).forEach(([key, value]) => {
 - La méthode statique {{JSxRef("Object.fromEntries()")}}
 - La méthode statique {{JSxRef("Object.getOwnPropertyNames()")}}
 - La méthode {{JSxRef("Map.prototype.entries()")}}
-- [La prothèse d'émulation de `Object.entries` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
-- [La prothèse d'émulation es-shims de `Object.entries` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.entries)

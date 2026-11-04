@@ -1,5 +1,5 @@
 ---
-title: "`dirname` 属性 (HTML)"
+title: "`dirname` 属性"
 short-title: dirname
 slug: Web/HTML/Reference/Attributes/dirname
 l10n:

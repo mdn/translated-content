@@ -1,5 +1,5 @@
 ---
-title: CSS `-webkit-mask-repeat-x` プロパティ
+title: "`-webkit-mask-repeat-x` プロパティ (CSS)"
 short-title: -webkit-mask-repeat-x
 slug: Web/CSS/Reference/Properties/-webkit-mask-repeat-x
 l10n:

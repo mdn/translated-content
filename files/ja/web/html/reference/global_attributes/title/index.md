@@ -1,5 +1,5 @@
 ---
-title: "`title` グローバル属性 (HTML)"
+title: "`title` グローバル属性"
 short-title: title
 slug: Web/HTML/Reference/Global_attributes/title
 l10n:

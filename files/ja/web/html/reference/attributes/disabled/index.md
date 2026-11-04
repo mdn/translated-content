@@ -1,5 +1,5 @@
 ---
-title: "`disabled` 属性 (HTML)"
+title: "`disabled` 属性"
 short-title: disabled
 slug: Web/HTML/Reference/Attributes/disabled
 l10n:

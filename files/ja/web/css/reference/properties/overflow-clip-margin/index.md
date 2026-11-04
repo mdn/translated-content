@@ -1,5 +1,5 @@
 ---
-title: CSS `overflow-clip-margin` プロパティ
+title: "`overflow-clip-margin` プロパティ (CSS)"
 short-title: overflow-clip-margin
 slug: Web/CSS/Reference/Properties/overflow-clip-margin
 l10n:

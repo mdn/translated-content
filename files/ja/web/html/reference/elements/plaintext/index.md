@@ -1,5 +1,5 @@
 ---
-title: HTML `<plaintext>` プレーンテキスト要素
+title: "`<plaintext>` プレーンテキスト要素"
 short-title: <plaintext>
 slug: Web/HTML/Reference/Elements/plaintext
 l10n:

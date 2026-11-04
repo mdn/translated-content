@@ -1,5 +1,5 @@
 ---
-title: HTML `<details>` 詳細折りたたみ要素
+title: "`<details>` 詳細折りたたみ要素"
 short-title: <details>
 slug: Web/HTML/Reference/Elements/details
 l10n:

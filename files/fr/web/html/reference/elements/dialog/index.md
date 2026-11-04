@@ -3,7 +3,7 @@ title: "Élément HTML `<dialog>` : l'élément de boîte de dialogue"
 short-title: <dialog>
 slug: Web/HTML/Reference/Elements/dialog
 l10n:
-  sourceCommit: c03648dd993f7afd0c17ce57061dc31d64f5e943
+  sourceCommit: 31e1fcaa50ff25bb27d7093758fa7a7088fff1e0
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<dialog>`** représente une boite de dialogue ou un composant interactif (par exemple un inspecteur ou une fenêtre).
@@ -278,9 +278,7 @@ Lorsque la boîte de dialogue bloquante est affichée, elle apparaît au-dessus 
 
 Cet exemple illustre la propriété [`returnValue`](/fr/docs/Web/API/HTMLDialogElement/returnValue) de l'élément `<dialog>` et la fermeture d'une boîte de dialogue bloquante à l'aide d'un formulaire. Par défaut, la valeur de retour est la chaîne de caractères vide ou la valeur du bouton qui envoie le formulaire dans l'élément `<dialog>`, s'il y en a un.
 
-Cet exemple ouvre une boîte de dialogue bloquante lorsque le bouton «&nbsp;Afficher la fenêtre&nbsp;» est activé. La boîte de dialogue contient un formulaire avec un {{HTMLElement("select")}} et deux {{HTMLElement("button")}}, dont la valeur par défaut est `type="submit"`. Un écouteur d'évènement met à jour la valeur du bouton «&nbsp;Confirmer&nbsp;» lorsque l'option sélectionnée change. Si le bouton «&nbsp;Confirmer&nbsp;» est activé pour fermer la boîte de dialogue, la valeur actuelle du bouton est la valeur de retour. Si la boîte de dialogue est fermée en appuyant sur le bouton «&nbsp;Annuler&nbsp;», la valeur de retour `returnValue` est `cancel`.
-
-Lorsque le dialogue est fermé, la valeur de retour est affichée sous le bouton «&nbsp;Afficher la fenêtre&nbsp;». Si le dialogue est fermé en appuyant sur la touche <kbd>Échap</kbd>, la valeur de retour `returnValue` n'est pas mise à jour et l'évènement `close` ne se produit pas, ce qui signifie que le texte dans l'élément {{HTMLElement("output")}} n'est pas mis à jour.
+Cet exemple ouvre une boîte de dialogue bloquante lorsque le bouton «&nbsp;Afficher la fenêtre&nbsp;» est activé. La boîte de dialogue contient un formulaire avec un {{HTMLElement("select")}} et trois {{HTMLElement("button")}}, dont la valeur par défaut est `type="submit"`. Seul le bouton «&nbsp;Annuler&nbsp;» a un attribut `value` explicite, qui est automatiquement utilisé pour définir la valeur de retour (`returnValue`) du dialogue.
 
 #### HTML
 
@@ -292,7 +290,7 @@ Lorsque le dialogue est fermé, la valeur de retour est affichée sous le bouton
       <label>
         Animal préféré&nbsp;:
         <select>
-          <option value="default">Choisissez…</option>
+          <option value="nothing">Choisissez…</option>
           <option>Crevette en saumure</option>
           <option>Panda rouge</option>
           <option>Singe-araignée</option>
@@ -301,7 +299,8 @@ Lorsque le dialogue est fermé, la valeur de retour est affichée sous le bouton
     </p>
     <div>
       <button value="cancel" formmethod="dialog">Annuler</button>
-      <button id="confirmBtn" value="default">Confirmer</button>
+      <button id="requestCloseBtn">Annuler avec requestClose</button>
+      <button id="confirmBtn">Confirmer</button>
     </div>
   </form>
 </dialog>
@@ -318,32 +317,44 @@ Le dialogue est ouvert grâce à un écouteur d'évènement sur le bouton «&nbs
 Le dialogue se ferme lorsque le bouton «&nbsp;Annuler&nbsp;» est activé, car le `<button>` comprend l'attribut [`formmethod="dialog"`](/fr/docs/Web/HTML/Reference/Elements/input/submit#formmethod).
 Lorsque la méthode d'un formulaire est [`dialog`](#notes_additionnelles), l'état du formulaire est enregistré mais non envoyé, et le dialogue est fermé (l'attribut remplace la méthode par défaut {{HTTPMethod("GET")}} de l'élément {{HTMLElement("form")}}).
 Sans `action`, l'envoi du formulaire avec la méthode par défaut {{HTTPMethod("GET")}} entraîne le rechargement de la page.
-Nous utilisons JavaScript pour empêcher l'envoi et fermer le dialogue avec les méthodes {{DOMxRef("event.preventDefault()")}} et {{DOMxRef("HTMLDialogElement.close()")}}, respectivement.
+Pour les deux autres boutons, nous utilisons JavaScript pour empêcher l'envoi avec {{DOMxRef("event.preventDefault()")}} et fermer le dialogue avec {{DOMxRef("HTMLDialogElement.close()")}} ou {{DOMxRef("HTMLDialogElement.requestClose()")}}.
+
+Si le dialogue est fermé en appuyant sur la touche <kbd>Échap</kbd> ou le bouton `requestClose()`, un évènement `cancel` est déclenché en premier, donnant au code la possibilité d'empêcher la fermeture dans certains cas. Dans cet exemple, l'écouteur d'évènement `cancel` n'annule pas l'évènement&nbsp;; il se contente de définir `returnValue` sur `"cancelEvent"`. Cette valeur n'est observable que lors de l'appui sur la touche <kbd>Échap</kbd>, car l'argument passé à `requestClose()`, `"requestClose"`, écrase `returnValue` juste avant que l'écouteur d'évènement `close` ne soit appelé.
+
+Quelle que soit la manière dont le dialogue est fermé, l'écouteur d'évènement `close` met à jour le texte dans l'élément {{HTMLElement("output")}} avec la valeur finale de `returnValue`.
 
 ```js
 const showButton = document.getElementById("showDialog");
 const favDialog = document.getElementById("favDialog");
 const outputBox = document.querySelector("output");
 const selectEl = favDialog.querySelector("select");
+const requestCloseBtn = favDialog.querySelector("#requestCloseBtn");
 const confirmBtn = favDialog.querySelector("#confirmBtn");
 
-// Le bouton "Afficher la fenêtre" ouvre la boîte de dialogue bloquante
+// Le bouton « Afficher la fenêtre » ouvre la boîte de dialogue bloquante
 showButton.addEventListener("click", () => {
   favDialog.showModal();
 });
 
-// Le bouton "Annuler" ferme la boîte de dialogue sans envoi du formulaire grâce à [formmethod="dialog"], ce qui déclenche un évènement de fermeture.
-favDialog.addEventListener("close", (e) => {
-  outputBox.value =
-    favDialog.returnValue === "default"
-      ? "Pas de valeur retournée."
-      : `Valeur retournée : ${favDialog.returnValue}.`; // Vérifie la présence de "default" au lieu d'une chaîne de caractères vide
+requestCloseBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  favDialog.requestClose("requestClose");
 });
 
-// Empêche le bouton "Confirmer" d'envoyer le formulaire par défaut et ferme la boîte de dialogue avec la méthode `close()`, ce qui déclenche l'évènement "close".
+// Ferme la boîte de dialogue avec l'animal sélectionné
 confirmBtn.addEventListener("click", (event) => {
-  event.preventDefault(); // Nous ne voulons pas envoyer ce faux formulaire
-  favDialog.close(selectEl.value); // Il faut envoyer la valeur du sélecteur ici.
+  event.preventDefault();
+  favDialog.close(selectEl.value);
+});
+
+// De la touche Échap ou de requestClose()
+favDialog.addEventListener("cancel", () => {
+  favDialog.returnValue = "cancelEvent";
+});
+
+// Afficher la valeur de retour à chaque fois que la boîte de dialogue se ferme
+favDialog.addEventListener("close", () => {
+  outputBox.value = `ReturnValue : ${favDialog.returnValue}.`;
 });
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: HTML `<slot>` ウェブコンポーネントスロット要素
+title: "`<slot>` ウェブコンポーネントスロット要素"
 short-title: <slot>
 slug: Web/HTML/Reference/Elements/slot
 l10n:

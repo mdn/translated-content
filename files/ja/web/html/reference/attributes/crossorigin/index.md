@@ -1,5 +1,5 @@
 ---
-title: "`crossorigin` 属性 (HTML)"
+title: "`crossorigin` 属性"
 short-title: crossorigin
 slug: Web/HTML/Reference/Attributes/crossorigin
 l10n:

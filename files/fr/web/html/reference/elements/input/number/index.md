@@ -3,12 +3,14 @@ title: Valeur d'attribut HTML `<input type="number">`
 short-title: <input type="number">
 slug: Web/HTML/Reference/Elements/input/number
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`number`** permettent à un·e utilisateur·ice de saisir des nombres dans un formulaire. De tels contrôles incluent des mécanismes de validation natifs afin de rejeter les valeurs qui ne sont pas numériques.
 
 Le navigateur peut agrémenter le contrôle avec des flèches afin d'incrémenter/décrémenter la valeur grâce à la souris ou avec le doigt.
+
+Sur les navigateurs qui ne prennent pas en charge les champs de type `number`, un champ `number` est ramené à un champ de type `text`.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
 
@@ -31,8 +33,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-Sur les navigateurs qui ne prennent pas en charge les champs de type `number`, un champ `number` est ramené à un champ de type `text`.
 
 ## Valeur
 
@@ -255,6 +255,12 @@ L'exemple suivant illustre toutes ces fonctionnalités, ainsi que l'utilisation 
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 {{EmbedLiveSample("Validation", 600, 80)}}
 
 Essayez d'envoyer le formulaire avec différentes valeurs invalides — aucune valeur&nbsp;; une valeur inférieure à 0 ou supérieure à 100&nbsp;; une valeur qui n'est pas un multiple de 10&nbsp;; ou une valeur non numérique — et observez comment les messages d'erreur du navigateur varient selon les cas.
@@ -343,6 +349,12 @@ Le code HTML ressemble à ceci&nbsp;:
     <input type="submit" value="Envoyer" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 Remarquez que nous utilisons de nombreux attributs déjà abordés plus haut dans l'article. Comme nous voulons accepter une valeur en mètres avec des centimètres, nous avons défini la valeur de `step` à `0.01`, afin que des valeurs comme _1.78_ ne soient pas considérées comme invalides. Nous avons également ajouté un texte indicatif pour ce champ.

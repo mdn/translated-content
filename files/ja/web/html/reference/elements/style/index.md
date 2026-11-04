@@ -1,5 +1,5 @@
 ---
-title: HTML `<style>` スタイル情報要素
+title: "`<style>` スタイル情報要素"
 short-title: <style>
 slug: Web/HTML/Reference/Elements/style
 l10n:

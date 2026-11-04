@@ -1,5 +1,5 @@
 ---
-title: "`minlength` 属性 (HTML)"
+title: "`minlength` 属性"
 short-title: minlength
 slug: Web/HTML/Reference/Attributes/minlength
 l10n:

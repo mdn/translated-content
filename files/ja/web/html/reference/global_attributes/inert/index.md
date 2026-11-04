@@ -1,5 +1,5 @@
 ---
-title: HTML `inert` グローバル属性
+title: "`inert` グローバル属性"
 short-title: inert
 slug: Web/HTML/Reference/Global_attributes/inert
 l10n:

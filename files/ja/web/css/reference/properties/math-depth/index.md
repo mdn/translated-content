@@ -1,5 +1,5 @@
 ---
-title: CSS `math-depth` プロパティ
+title: "`math-depth` プロパティ (CSS)"
 short-title: math-depth
 slug: Web/CSS/Reference/Properties/math-depth
 l10n:

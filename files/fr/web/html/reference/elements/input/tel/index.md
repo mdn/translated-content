@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="tel">`
 short-title: <input type="tel">
 slug: Web/HTML/Reference/Elements/input/tel
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`tel`** permettent de saisir un numéro de téléphone. Contrairement aux contrôles utilisés pour [`<input type="email">`](/fr/docs/Web/HTML/Reference/Elements/input/email) et [`<input type="url">`](/fr/docs/Web/HTML/Reference/Elements/input/url), la valeur saisie n'est pas automatiquement validée selon un format donné, car les formats des numéros de téléphone varient à travers le monde.
@@ -37,11 +37,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-Bien que les entrées de type `tel` soient fonctionnellement identiques aux entrées `text` standard, elles présentent néanmoins des avantages concrets&nbsp;; le plus évident est que les navigateurs mobiles — en particulier sur les téléphones portables — peuvent choisir d'afficher un clavier personnalisé, optimisé pour la saisie de numéros de téléphone. L'utilisation d'un type d'entrée spécifique pour les numéros de téléphone facilite également la mise en place d'une validation personnalisée et la gestion de ces numéros.
-
-> [!NOTE]
-> Les navigateurs qui ne prennent pas en charge le type `tel` utilisent à la place un champ `{{HTMLElement("input/text", "text")}}` standard.
 
 ## Valeur
 
@@ -101,6 +96,11 @@ L'attribut `size` est une valeur numérique qui indique la largeur idéale du ch
 Cet attribut _n'impose pas_ de limite sur le nombre de caractères qui peuvent être saisis. Il indique uniquement, de façon approximative, le nombre de caractères visibles au même moment. Pour imposer une contrainte de taille sur la longueur maximale de la valeur saisissable, on peut utiliser l'attribut [`maxlength`](#maxlength).
 
 ## Utiliser le champ de téléphone
+
+Bien que les entrées de type `tel` soient fonctionnellement identiques aux entrées `text` standard, elles présentent néanmoins des avantages concrets&nbsp;; le plus évident est que les navigateurs mobiles — en particulier sur les téléphones portables — peuvent choisir d'afficher un clavier personnalisé, optimisé pour la saisie de numéros de téléphone. L'utilisation d'un type d'entrée spécifique pour les numéros de téléphone facilite également la mise en place d'une validation personnalisée et la gestion de ces numéros.
+
+> [!NOTE]
+> Les navigateurs qui ne prennent pas en charge le type `tel` utilisent à la place un champ `{{HTMLElement("input/text", "text")}}` standard.
 
 Les numéros de téléphone sont un type de données très fréquemment collecté sur le web. Par exemple, lors de la création d'un site d'inscription ou de commerce électronique, vous devez probablement demander à l'utilisateur·ice un numéro de téléphone, que ce soit pour des raisons professionnelles ou pour les contacts en cas d'urgence. Étant donné la fréquence à laquelle les numéros de téléphone sont saisis, il est regrettable qu'une solution «&nbsp;taille unique&nbsp;» pour valider les numéros de téléphone ne soit pas pratique.
 
@@ -235,6 +235,12 @@ Il est possible de rendre la saisie obligatoire avant de pouvoir envoyer le form
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 On utilise la feuille de style suivante pour indiquer les éléments valides ou invalides du formulaire&nbsp;:
 
 ```css
@@ -296,6 +302,12 @@ Dans cet exemple, on utilise la même feuille de style que précédemment mais l
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 div {
   margin-bottom: 10px;
@@ -336,55 +348,50 @@ Dans cet exemple, on présente une interface simple avec un élément {{HTMLElem
 Chaque boîte de saisie possède un attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Elements/input#placeholder) qui indique le format pressenti. On utilise également l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) afin d'indiquer le nombre de caractères ainsi qu'un attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) qui peut être lu par un lecteur d'écran et qui décrit quoi saisir dans le contrôle.
 
 ```html
-<form>
-  <div>
-    <label for="country">Veuillez choisir votre pays&nbsp;:</label>
-    <select id="country" name="country">
-      <option>Royaume-Uni</option>
-      <option selected>États-Unis</option>
-      <option>Allemagne</option>
-    </select>
-  </div>
-  <div>
-    <p>Veuillez saisir vos numéros de téléphone&nbsp;:</p>
-    <span class="areaDiv">
-      <input
-        id="areaNo"
-        name="areaNo"
-        type="tel"
-        required
-        placeholder="Code régional"
-        pattern="[0-9]{3}"
-        aria-label="Code régional" />
-      <span class="validity"></span>
-    </span>
-    <span class="number1Div">
-      <input
-        id="number1"
-        name="number1"
-        type="tel"
-        required
-        placeholder="Premier fragment"
-        pattern="[0-9]{3}"
-        aria-label="Premier fragment du numéro" />
-      <span class="validity"></span>
-    </span>
-    <span class="number2Div">
-      <input
-        id="number2"
-        name="number2"
-        type="tel"
-        required
-        placeholder="Second fragment"
-        pattern="[0-9]{4}"
-        aria-label="Second fragment du numéro" />
-      <span class="validity"></span>
-    </span>
-  </div>
-  <div>
-    <button>Envoyer</button>
-  </div>
-</form>
+<div>
+  <label for="country">Veuillez choisir votre pays&nbsp;:</label>
+  <select id="country" name="country">
+    <option>Royaume-Uni</option>
+    <option selected>États-Unis</option>
+    <option>Allemagne</option>
+  </select>
+</div>
+<div>
+  <p>Veuillez saisir vos numéros de téléphone&nbsp;:</p>
+  <span class="areaDiv">
+    <input
+      id="areaNo"
+      name="areaNo"
+      type="tel"
+      required
+      placeholder="Code régional"
+      pattern="[0-9]{3}"
+      aria-label="Code régional" />
+    <span class="validity"></span>
+  </span>
+  <span class="number1Div">
+    <input
+      id="number1"
+      name="number1"
+      type="tel"
+      required
+      placeholder="Premier fragment"
+      pattern="[0-9]{3}"
+      aria-label="Premier fragment du numéro" />
+    <span class="validity"></span>
+  </span>
+  <span class="number2Div">
+    <input
+      id="number2"
+      name="number2"
+      type="tel"
+      required
+      placeholder="Second fragment"
+      pattern="[0-9]{4}"
+      aria-label="Second fragment du numéro" />
+    <span class="validity"></span>
+  </span>
+</div>
 ```
 
 Le code JavaScript associé est relativement simple, il contient un gestionnaire d'évènements {{DOMxRef("HTMLElement.change_event", "onchange")}} qui est déclenché lorsque la valeur du `<select>` est modifiée. Il met alors à jour les attributs `pattern`, `placeholder` et `aria-label` du contrôle pour adapter le format attendu au pays choisi.

@@ -1,5 +1,5 @@
 ---
-title: CSS `mask-border-source` プロパティ
+title: "`mask-border-source` プロパティ (CSS)"
 short-title: mask-border-source
 slug: Web/CSS/Reference/Properties/mask-border-source
 l10n:

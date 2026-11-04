@@ -3,7 +3,7 @@ title: Date() コンストラクター
 short-title: Date()
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 91b5a448a517239876a4bc92640bbbf29e30b106
 ---
 
 **`Date()`** コンストラクターは {{jsxref("Date")}} オブジェクトを生成します。関数として呼び出された場合は、現在時刻を表す文字列を返します。
@@ -101,27 +101,11 @@ Date()
 
 ### 時間の精度の低下
 
-タイミング攻撃や[フィンガープリンティング](/ja/docs/Glossary/Fingerprinting)に対する保護機能を提供するために、`new Date()` の精度がブラウザーの設定に応じて丸められることがあります。Firefox では、`privacy.reduceTimerPrecision` 設定は既定で有効になっており、既定で 2 ミリ秒になります。この場合、精度は 100ms または `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` の値のどちらか大きい方になります。
+タイミング攻撃や[フィンガープリンティング](/ja/docs/Glossary/Fingerprinting)に対する保護機能を提供するために、`new Date()` の精度がブラウザーの設定に応じて下げられることがあります。
 
-例えば、時刻の精度を下げた場合、`new Date().getTime()` の結果は常に 2 の倍数になり、`privacy.resistFingerprinting` を有効にした場合は 100（または `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`）の倍数になります。
+コンストラクターにタイムスタンプ、日付文字列、日付オブジェクト、または日付成分値が渡された場合、ブラウザーは渡された時刻に対してタイマーの丸め処理を適用しません。
 
-```js
-// Firefox 60 での時間の制度の低下 (2ms)
-new Date().getTime();
-// 取りうる値:
-// 1519211809934
-// 1519211810362
-// 1519211811670
-// …
-
-// `privacy.resistFingerprinting` が有効な場合の時間の制度の低下
-new Date().getTime();
-// 取りうる値:
-// 1519129853500
-// 1519129858900
-// 1519129864400
-// …
-```
+引数なしで呼び出された場合、このコンストラクターは {{jsxref("Date.now()")}} と同じ方法で現在の時刻を取得します。このコンストラクターは、その時計の読み取り値の精度を継承し、追加の誤差を生じさせることはありません。
 
 ## 例
 

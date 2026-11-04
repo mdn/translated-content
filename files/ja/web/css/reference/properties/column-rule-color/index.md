@@ -1,5 +1,5 @@
 ---
-title: CSS `column-rule-color` プロパティ
+title: "`column-rule-color` プロパティ (CSS)"
 short-title: column-rule-color
 slug: Web/CSS/Reference/Properties/column-rule-color
 l10n:

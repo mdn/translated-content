@@ -1,5 +1,5 @@
 ---
-title: HTML `<ul>` 順序なしリスト要素
+title: "`<ul>` 順序なしリスト要素"
 short-title: <ul>
 slug: Web/HTML/Reference/Elements/ul
 l10n:

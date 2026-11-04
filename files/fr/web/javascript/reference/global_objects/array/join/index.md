@@ -3,7 +3,7 @@ title: "Array : méthode join()"
 short-title: join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
 l10n:
-  sourceCommit: 7c2fdcaace1ab622a1055b7cc710297c452ce9ee
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`join()`** des instances de {{JSxRef("Array")}} crée et retourne une nouvelle chaîne de caractères en concaténant tous les éléments de ce tableau, séparés par des virgules ou par une chaîne de caractères de séparation définie. Si le tableau ne contient qu'un seul élément, cet élément est retourné sans utiliser le séparateur.
@@ -33,7 +33,7 @@ join(separator)
 ### Paramètres
 
 - `separator` {{Optional_Inline}}
-  - : Une chaîne de caractères utilisée pour séparer chaque paire d'éléments adjacents du tableau. Si ce paramètre est omis, les éléments du tableau sont séparés par une virgule (",").
+  - : Une chaîne de caractères utilisée pour séparer chaque paire d'éléments adjacents du tableau. Si ce paramètre est omis, les éléments du tableau sont séparés par une virgule («&nbsp;,&nbsp;»).
 
 ### Valeur de retour
 
@@ -66,7 +66,7 @@ arr.push(1, [3, arr, 4], 2);
 console.log(arr.join(";")); // 1;3,,4;2
 ```
 
-Lorsqu'elle est utilisée sur un [tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux), la méthode `join()` itère sur les emplacements vides comme s'ils avaient la valeur `undefined`.
+Lorsqu'elle est utilisée sur un [tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux), la méthode `join()` itère sur les emplacements vides comme s'ils ont la valeur `undefined`.
 
 La méthode `join()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend uniquement que la valeur de `this` possède une propriété `length` et des propriétés à clés entières.
 
@@ -121,10 +121,10 @@ console.log(Array.prototype.join.call(objetSimilaireTableau, "."));
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.join` dans core-js <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.join` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.join)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("String.prototype.split()")}}
 - La méthode {{JSxRef("Array.prototype.toString()")}}
 - La méthode {{JSxRef("TypedArray.prototype.join()")}}
-- [Prothèse d'émulation de `Array.prototype.join` dans core-js <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.join` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.join)

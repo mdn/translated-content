@@ -1,5 +1,5 @@
 ---
-title: HTML `<input type="email">` 属性値
+title: '`<input type="email">` 属性値'
 short-title: <input type="email">
 slug: Web/HTML/Reference/Elements/input/email
 l10n:

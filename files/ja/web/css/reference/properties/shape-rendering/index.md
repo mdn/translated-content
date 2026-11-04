@@ -1,5 +1,5 @@
 ---
-title: CSS `shape-rendering` プロパティ
+title: "`shape-rendering` プロパティ (CSS)"
 short-title: shape-rendering
 slug: Web/CSS/Reference/Properties/shape-rendering
 l10n:

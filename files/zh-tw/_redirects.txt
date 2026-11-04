@@ -784,7 +784,8 @@
 /zh-TW/docs/Web/HTTP/CORS	/zh-TW/docs/Web/HTTP/Guides/CORS
 /zh-TW/docs/Web/HTTP/Caching	/zh-TW/docs/Web/HTTP/Guides/Caching
 /zh-TW/docs/Web/HTTP/Cookies	/zh-TW/docs/Web/HTTP/Guides/Cookies
-/zh-TW/docs/Web/HTTP/Cross-Origin_Resource_Policy	/zh-TW/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy
+/zh-TW/docs/Web/HTTP/Cross-Origin_Resource_Policy	/zh-TW/docs/Web/Security/Practical_implementation_guides/CORP
+/zh-TW/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy	/zh-TW/docs/Web/Security/Practical_implementation_guides/CORP
 /zh-TW/docs/Web/HTTP/Headers/Accept	/zh-TW/docs/Web/HTTP/Reference/Headers/Accept
 /zh-TW/docs/Web/HTTP/Headers/Accept-CH	/zh-TW/docs/Web/HTTP/Reference/Headers/Accept-CH
 /zh-TW/docs/Web/HTTP/Headers/Accept-Encoding	/zh-TW/docs/Web/HTTP/Reference/Headers/Accept-Encoding

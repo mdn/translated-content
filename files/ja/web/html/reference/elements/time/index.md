@@ -1,5 +1,5 @@
 ---
-title: HTML `<time>` （日付）時刻要素
+title: "`<time>` （日付）時刻要素"
 short-title: <time>
 slug: Web/HTML/Reference/Elements/time
 l10n:

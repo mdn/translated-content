@@ -3,7 +3,7 @@ title: "Math : méthode statique hypot()"
 short-title: hypot()
 slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.hypot()`** retourne la racine carrée de la somme des carrés de ses arguments. Autrement dit,
@@ -62,7 +62,7 @@ Puisque `hypot()` est une méthode statique de `Math`, vous l'utilisez toujours 
 
 ## Exemples
 
-### Utiliser `Math.hypot()`
+### Utiliser la méthode `Math.hypot()`
 
 ```js
 Math.hypot(3, 4); // 5
@@ -85,7 +85,7 @@ Math.hypot(-3); // 3, de la même manière que Math.abs(-3)
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.hypot` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.hypot` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
 - La méthode statique {{JSxRef("Math.abs()")}}
 - La méthode statique {{JSxRef("Math.pow()")}}
 - La méthode statique {{JSxRef("Math.sqrt()")}}

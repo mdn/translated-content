@@ -1,5 +1,5 @@
 ---
-title: HTML `<i>` 慣用テキスト要素
+title: "`<i>` 慣用テキスト要素"
 short-title: <i>
 slug: Web/HTML/Reference/Elements/i
 l10n:

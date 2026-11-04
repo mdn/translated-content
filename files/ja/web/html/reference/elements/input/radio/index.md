@@ -1,5 +1,5 @@
 ---
-title: HTML `<input type="radio">` 属性値
+title: '`<input type="radio">` 属性値'
 short-title: <input type="radio">
 slug: Web/HTML/Reference/Elements/input/radio
 l10n:

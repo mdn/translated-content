@@ -1,5 +1,5 @@
 ---
-title: CSS `color-interpolation` プロパティ
+title: "`color-interpolation` プロパティ (CSS)"
 short-title: color-interpolation
 slug: Web/CSS/Reference/Properties/color-interpolation
 l10n:

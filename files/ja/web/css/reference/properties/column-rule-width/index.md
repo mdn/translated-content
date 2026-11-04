@@ -1,5 +1,5 @@
 ---
-title: CSS `column-rule-width` プロパティ
+title: "`column-rule-width` プロパティ (CSS)"
 short-title: column-rule-width
 slug: Web/CSS/Reference/Properties/column-rule-width
 l10n:

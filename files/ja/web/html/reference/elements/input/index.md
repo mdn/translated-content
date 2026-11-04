@@ -1,5 +1,5 @@
 ---
-title: "`<input>` 入力要素 (HTML)"
+title: "`<input>` 入力要素"
 short-title: <input>
 slug: Web/HTML/Reference/Elements/input
 l10n:

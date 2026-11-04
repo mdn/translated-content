@@ -1,5 +1,5 @@
 ---
-title: "`<h1>–<h6>` セクション見出し要素 (HTML)"
+title: "`<h1>–<h6>` セクション見出し要素"
 short-title: <h1>–<h6>
 slug: Web/HTML/Reference/Elements/Heading_Elements
 l10n:

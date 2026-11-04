@@ -3,10 +3,8 @@ title: Constructeur Temporal.Instant()
 short-title: Temporal.Instant()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/Instant
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 76c2e04d720aa8260ba7d75788ed96776aac35c6
 ---
-
-{{SeeCompatTable}}
 
 Le constructeur **`Temporal.Instant()`** crée des objets {{JSxRef("Temporal.Instant")}}.
 

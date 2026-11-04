@@ -1,5 +1,5 @@
 ---
-title: HTML `<address>` 連絡先要素
+title: "`<address>` 連絡先要素"
 short-title: <address>
 slug: Web/HTML/Reference/Elements/address
 l10n:

@@ -3,7 +3,7 @@ title: Constructeur ArrayBuffer()
 short-title: ArrayBuffer()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Le constructeur **`ArrayBuffer()`** crée des objets {{JSxRef("ArrayBuffer")}}.
@@ -82,6 +82,6 @@ buffer.resize(12);
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `ArrayBuffer` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - L'objet natif {{JSxRef("SharedArrayBuffer")}}
-- [Prothèse d'émulation pour `ArrayBuffer` avec la bibliothèque `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-typed-arrays)

@@ -1,5 +1,5 @@
 ---
-title: HTML `<video>` 動画埋め込み要素
+title: "`<video>` 動画埋め込み要素"
 short-title: <video>
 slug: Web/HTML/Reference/Elements/video
 l10n:

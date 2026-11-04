@@ -1,49 +1,52 @@
 ---
-title: String.prototype.blink()
+title: "String : méthode blink()"
+short-title: blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
+l10n:
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-La méthode **`blink()`** crée un élément HTML `<blink>` qui affiche la chaine de caractères en clignotant.
+La méthode **`blink()`** de valeurs {{JSxRef("String")}} crée une chaîne de caractères qui intègre cette chaîne de caractères dans un élément HTML `<blink>` (`<blink>str</blink>`), ce qui faisait clignoter la chaîne de caractères dans les anciens navigateurs.
 
-> [!WARNING]
-> Les textes clignotants sont fortement déconseillés par de nombreux standards d'accessibilité. L'élément `<blink>` est lui-même non standard et obsolète !
+> [!NOTE]
+> Toutes les [méthodes d'encapsulation HTML](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#méthodes_dencapsulation_html) sont obsolètes et ne sont standardisées que pour des raisons de compatibilité. Dans le cas de `blink()`, l'élément `<blink>` lui-même est retiré des navigateurs modernes, et le texte clignotant est fortement déconseillé par plusieurs standards d'accessibilité. Évitez d'utiliser cet élément de quelque manière que ce soit.
 
 ## Syntaxe
 
-```js
-str.blink();
+```js-nolint
+blink()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-Une chaine de caractères représentant un élément HTML `<blink>`.
-
-## Description
-
-La méthode `blink()` place la chaine de caractères dans une balise `<blink>` :
-`"<blink>str</blink>`"
+Une chaîne de caractères commençant par une balise de début `<blink>`, suivie du texte `str`, et se terminant par une balise de fin `</blink>`.
 
 ## Exemples
 
-L'exemple suivant utilise des méthodes de `String` pour changer l'affichage d'une chaine de caractères :
+### Utiliser la méthode `blink()`
+
+Le code ci-dessous crée une chaîne de caractères HTML, puis remplace le contenu du corps du document par celle-ci&nbsp;:
 
 ```js
-var chaîneMonde = "Coucou monde";
+const contenuChaineCaracteres = "Bonjour, le monde";
 
-console.log(chaîneMonde.blink());
-console.log(chaîneMonde.bold());
-console.log(chaîneMonde.italics());
-console.log(chaîneMonde.strike());
+document.body.innerHTML = contenuChaineCaracteres.blink();
 ```
 
-Cet exemple produira le code HTML suivant :
+Cela crée le HTML suivant&nbsp;:
 
 ```html
-<blink>Coucou monde</blink>
-<b>Coucou monde</b>
-<i>Coucou monde</i>
-<strike>Coucou monde</strike>
+<blink>Bonjour, le monde</blink>
 ```
+
+> [!WARNING]
+> Cette balise est invalide, car `blink` n'est plus un élément valide.
+
+Vous devez éviter d'utiliser des éléments clignotants dans tous les cas.
 
 ## Spécifications
 
@@ -55,6 +58,6 @@ Cet exemple produira le code HTML suivant :
 
 ## Voir aussi
 
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.italics()")}}
-- {{jsxref("String.prototype.strike()")}}
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `String.prototype.blink` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `String.prototype.blink` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-string-html-methods)
+- [Les méthodes d'encapsulation HTML](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#méthodes_dencapsulation_html)

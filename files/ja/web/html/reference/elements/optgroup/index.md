@@ -1,5 +1,5 @@
 ---
-title: "`<optgroup>` 選択肢グループ要素 (HTML)"
+title: "`<optgroup>` 選択肢グループ要素"
 short-title: <optgroup>
 slug: Web/HTML/Reference/Elements/optgroup
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: HTML `<colgroup>` 表の列グループ要素
+title: "`<colgroup>` 表の列グループ要素"
 short-title: <colgroup>
 slug: Web/HTML/Reference/Elements/colgroup
 l10n:

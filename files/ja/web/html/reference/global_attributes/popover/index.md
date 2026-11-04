@@ -1,5 +1,5 @@
 ---
-title: HTML `popover` グローバル属性
+title: "`popover` グローバル属性"
 short-title: popover
 slug: Web/HTML/Reference/Global_attributes/popover
 l10n:

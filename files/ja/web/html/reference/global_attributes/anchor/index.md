@@ -1,5 +1,5 @@
 ---
-title: "`anchor` グローバル属性 (HTML)"
+title: "`anchor` グローバル属性"
 short-title: anchor
 slug: Web/HTML/Reference/Global_attributes/anchor
 l10n:

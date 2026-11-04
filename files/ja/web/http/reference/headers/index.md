@@ -251,7 +251,7 @@ HTTP の[範囲付きリクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)�
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP)
   - : 他のドメインがウィンドウを開いたり制御したりすることを防ぎます。
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}} (CORP)
-  - : このヘッダーが適用されたリソースのレスポンスが他のドメインから読み取られるのを防ぎます。[CORP の説明記事](/ja/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)を参照してください。
+  - : このヘッダーが適用されたリソースのレスポンスが他のドメインから読み取られるのを防ぎます。[CORP の説明記事](/ja/docs/Web/Security/Practical_implementation_guides/CORP)を参照してください。
 - {{HTTPHeader("Content-Security-Policy")}} ({{Glossary("CSP")}})
   - : ユーザーエージェントがページで読み込むことを許可するリソースを制御します。
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}

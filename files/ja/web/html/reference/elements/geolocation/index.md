@@ -1,5 +1,5 @@
 ---
-title: HTML `<geolocation>` 位置情報要素
+title: "`<geolocation>` 位置情報要素"
 short-title: <geolocation>
 slug: Web/HTML/Reference/Elements/geolocation
 l10n:

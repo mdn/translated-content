@@ -1,5 +1,5 @@
 ---
-title: "`dir` グローバル属性 (HTML)"
+title: "`dir` グローバル属性"
 short-title: dir
 slug: Web/HTML/Reference/Global_attributes/dir
 l10n:

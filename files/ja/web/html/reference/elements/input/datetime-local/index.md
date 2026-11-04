@@ -1,5 +1,5 @@
 ---
-title: HTML `<input type="datetime-local">` 属性値
+title: '`<input type="datetime-local">` 属性値'
 short-title: <input type="datetime-local">
 slug: Web/HTML/Reference/Elements/input/datetime-local
 l10n:

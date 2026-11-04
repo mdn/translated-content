@@ -3,7 +3,7 @@ title: Fonction CSS `color-mix()`
 short-title: color-mix()
 slug: Web/CSS/Reference/Values/color_value/color-mix
 l10n:
-  sourceCommit: b01888f5bfa93e23fdf398afc3073d61d6d3c832
+  sourceCommit: b7e9f482c51817d3a885e26092f8219fd0d9d278
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`color-mix()`** prend une ou plusieurs valeurs de type {{CSSxRef("&lt;color&gt;")}} et retourne le résultat de leur mélange selon des proportions données, dans un espace de couleur donné.
@@ -74,28 +74,34 @@ La catégorie `<polar-color-space>` inclut [`hsl`](/fr/docs/Web/CSS/Reference/Va
 
 ### Espace colorimétrique par défaut et méthode d'interpolation
 
-Lors du mélange de couleurs sans définir d'espace colorimétrique ni de méthode d'interpolation de teinte, l'espace colorimétrique `oklab` est utilisé, avec `shorter` comme méthode d'interpolation de teinte.
+Lors du mélange de couleurs sans définir d'espace colorimétrique, l'espace colorimétrique `oklab` est utilisé.
 
-Les trois déclarations suivantes sont équivalentes&nbsp;:
+Les deux déclarations suivantes sont équivalentes&nbsp;:
 
 ```css
 background-color: color-mix(red, blue);
 background-color: color-mix(in oklab, red, blue);
-background-color: color-mix(in oklab shorter hue, red, blue);
+```
+
+Lors de l'utilisation d'un espace colorimétrique polaire tel que `oklch`, la méthode d'interpolation de teinte par défaut est `shorter hue`. Les deux déclarations suivantes sont équivalentes&nbsp;:
+
+```css
+background-color: color-mix(in oklch, red, blue);
+background-color: color-mix(in oklch shorter hue, red, blue);
 ```
 
 ### Couleurs proportionnelles
 
 Chaque couleur peut être déclarée avec une valeur `<percentage>` comprise entre `0%` et `100%`, ce qui définit la quantité de la couleur correspondante à mélanger. Les pourcentages sont normalisés si la valeur totale des pourcentages déclarés n'est pas égale à `100%`.
 
-Lorsque deux couleurs sont mélangées, les deux pourcentages de couleur (que nous appellerons `p1` et `p2`) sont normalisés comme suit&nbsp;:
+Lorsque deux couleurs sont mélangées, les deux pourcentages de couleur (que nous appelons `p1` et `p2`) sont normalisés comme suit&nbsp;:
 
 - Si `p1` et `p2` sont omis, alors `p1 = p2 = 50%`.
 - Si `p1` est omis, alors `p1 = 100% - p2`.
 - Si `p2` est omis, alors `p2 = 100% - p1`.
 - Si `p1 = p2 = 0%`, la fonction est invalide.
 - Si `p1 + p2 ≠ 100%`, alors `p1' = p1 / (p1 + p2)` et `p2' = p2 / (p1 + p2)`, où `p1'` et `p2'` sont les résultats de la normalisation.
-  - Si `p1 + p2 < 100%`, un multiplicateur alpha de `p1 + p2` est appliqué à la couleur résultante. Cela est similaire au mélange dans [`transparent`](/fr/docs/Web/CSS/Reference/Values/named-color#transparent), avec un pourcentage `pt = 100% - p1 - p2`.
+  - Si `p1 + p2 < 100%`, un multiplicateur alpha de `p1 + p2` est appliqué à la couleur résultante. C'est similaire au mélange dans [`transparent`](/fr/docs/Web/CSS/Reference/Values/named-color#transparent), avec un pourcentage `pt = 100% - p1 - p2`.
 
 ## Syntaxe formelle
 
@@ -480,7 +486,7 @@ li:nth-child(6) {
 
 {{EmbedLiveSample("Utiliser l'interpolation de teinte avec `color-mix()`", "100%", 440)}}
 
-Avec `longer hue`, les incréments ou décréments entre les couleurs seront toujours supérieurs ou égaux à ceux obtenus avec `shorter hue`. Utilisez `increasing hue` ou `decreasing hue` lorsque la direction du changement de la valeur de teinte est plus importante que la distance entre les valeurs.
+Avec `longer hue`, les incréments ou décréments entre les couleurs sont toujours supérieurs ou égaux à ceux obtenus avec `shorter hue`. Utilisez `increasing hue` ou `decreasing hue` lorsque la direction du changement de la valeur de teinte est plus importante que la distance entre les valeurs.
 
 ## Spécifications
 

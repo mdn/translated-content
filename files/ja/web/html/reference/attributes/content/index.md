@@ -1,5 +1,5 @@
 ---
-title: "`content` 属性 (HTML)"
+title: "`content` 属性"
 short-title: content
 slug: Web/HTML/Reference/Attributes/content
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: HTML `<li>` リストアイテム要素
+title: "`<li>` リストアイテム要素"
 short-title: <li>
 slug: Web/HTML/Reference/Elements/li
 l10n:

@@ -2,7 +2,7 @@
 title: Plantilla de subpágina de evento de API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template
 l10n:
-  sourceCommit: 1d08cee771feea858e4fdb594bac036b9cd210a6
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 > [!NOTE]
@@ -55,8 +55,7 @@ l10n:
 > La cadena de herramientas añade estas macros automáticamente (no es necesario añadirlas ni eliminarlas):
 >
 > - `\{{SeeCompatTable}}`: genera un aviso de **Esta es una tecnología experimental** que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   Si es experimental y la tecnología está oculta tras una preferencia (`pref`) en Firefox, también debes completar una entrada para ella en la página [Funciones experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}`: genera un aviso de **Obsoleto** que indica que se [desaconseja](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#obsoleto) el uso de la tecnología.
+>   Si es experimental y la tecnología está oculta tras una preferencia (`pref`) en Firefox, también debes completar una entrada para ella en la página [Funciones experimentales de Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
 > - `\{{Non-standard_Header}}`: genera un aviso de **No estándar** que indica que la característica no forma parte de ninguna especificación.
 >
 > Debes actualizar o eliminar las siguientes macros según las indicaciones a continuación:
@@ -66,7 +65,7 @@ l10n:
 >   Si es así, también debes completar una entrada para ella en la página [Características restringidas a contextos seguros](/es/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts).
 > - `\{{AvailableInWorkers}}`: genera una nota de **Disponible en workers** que indica que la tecnología está disponible en un [contexto de worker](/es/docs/Web/API/Web_Workers_API).
 >   Si solo está disponible en el contexto de ventana (`window`), puedes eliminar la llamada a la macro.
->   Si también está disponible, o solo está disponible en el contexto de worker, es posible que también debas pasarle un parámetro debido a su disponibilidad (consulta el [código fuente de la macro \\{{AvailableInWorkers}}](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) para ver todos los valores disponibles); también es posible que debas completar una entrada para ella en la página [API web disponibles en workers](/es/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#web_apis_available_in_workers).
+>   Si también está disponible, o solo está disponible en el contexto de worker, es posible que también debas pasarle un parámetro debido a su disponibilidad (consulta el [código fuente de la macro \\{{AvailableInWorkers}}](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) para ver todos los valores disponibles); también es posible que debas completar una entrada para ella en la página [API web disponibles en workers](/es/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 > - `\{{APIRef("GroupDataName")}}`: esto genera la barra lateral de referencia de la izquierda que muestra enlaces de referencia rápida relacionados con la página actual.
 >   Por ejemplo, todas las páginas de la [WebVR API](/es/docs/Web/API/WebVR_API) tienen la misma barra lateral, que apunta a las demás páginas de la API.
 >   Para generar la barra lateral correcta para tu API, debes añadir una entrada `GroupData` a nuestro repositorio de GitHub e incluir el nombre de esa entrada dentro de la llamada a la macro en lugar de _GroupDataName_.
@@ -81,10 +80,10 @@ l10n:
 > **Enlace al objeto padre**
 >
 > Añade un enlace a esta nueva página desde la sección _Eventos_ de su objeto padre.
-> Por ejemplo, [Element: wheel event](/es/docs/Web/API/Element/wheel_event) está enlazado desde [`Element` Eventos](/es/docs/Web/API/Element#eventos).
+> Por ejemplo, [Element: wheel event](/es/docs/Web/API/Element/wheel_event) está enlazado desde [Eventos de `Element`](/es/docs/Web/API/Element#eventos).
 >
 > Si el objeto padre no tiene una sección _Eventos_, añade una.
-> Si se trata de una nueva "clase" de evento, entonces debes añadir un enlace a esta sección del padre desde la guía [Eventos del DOM](/es/docs/Web/API/Document_Object_Model/Events#event_index).
+> Si se trata de una nueva "clase" de evento, entonces debes añadir un enlace a esta sección del padre desde la guía [Eventos del DOM](/es/docs/Web/API/Document_Object_Model/Events#índice_de_eventos).
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar._
 

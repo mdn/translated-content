@@ -3,10 +3,10 @@ title: "JSON : méthode statique rawJSON()"
 short-title: rawJSON()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/rawJSON
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-La méthode statique **`JSON.rawJSON()`** crée un objet «&nbsp;raw JSON&nbsp;» contenant un fragment de texte JSON. Lorsqu'il est sérialisé en JSON, l'objet JSON brut est traité comme s'il était déjà du texte JSON. Ce texte doit être un JSON valide.
+La méthode statique **`JSON.rawJSON()`** crée un objet «&nbsp;raw JSON&nbsp;» contenant un fragment de texte JSON. Lorsqu'il est sérialisé en JSON, l'objet JSON brut est traité comme s'il est déjà du texte JSON. Ce texte doit être un JSON valide.
 
 ## Syntaxe
 
@@ -21,7 +21,7 @@ JSON.rawJSON(string)
 
 ### Valeur de retour
 
-Un objet qui peut être utilisé pour créer du texte JSON ayant exactement le même contenu que la `string` fournie, sans guillemets autour de la chaîne elle‑même. Cet objet possède un [prototype `null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object#prototypes_dobjets_null) et [est figé](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) (il ne sera donc jamais sérialisé accidentellement en objet ordinaire par une conversion primitive), et il expose la propriété suivante&nbsp;:
+Un objet qui peut être utilisé pour créer du texte JSON ayant exactement le même contenu que la `string` fournie, sans guillemets autour de la chaîne de caractères elle‑même. Cet objet possède un [prototype `null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object#prototypes_dobjets_null) et [est figé](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) (il n'est donc jamais sérialisé accidentellement en objet ordinaire par une conversion primitive), et il expose la propriété suivante&nbsp;:
 
 - `rawJSON`
   - : La chaîne de caractères (`string`) JSON d'origine fournie.
@@ -54,7 +54,7 @@ JSON.stringify({ valeur: jsonBrut });
 
 Pour un exemple plus complet, voir [Sérialisation de nombres sans perte](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON#sérialisation_des_nombres_sans_perte).
 
-Notez que bien que nous ayons passé une chaîne de caractères à `JSON.rawJSON()`, elle devient tout de même un nombre dans le JSON final. Cela s'explique parce que la chaîne de caractères représente le texte JSON littéral. Si vous souhaitez sérialiser une chaîne de caractères, vous devez utiliser `JSON.rawJSON()` avec une valeur de chaîne entourée de guillemets&nbsp;:
+Notez que bien que nous ayons passé une chaîne de caractères à `JSON.rawJSON()`, elle devient tout de même un nombre dans le JSON final. Cela s'explique parce que la chaîne de caractères représente le texte JSON littéral. Si vous souhaitez sérialiser une chaîne de caractères, vous devez utiliser `JSON.rawJSON()` avec une valeur de chaîne de caractères entourée de guillemets&nbsp;:
 
 ```js
 const jsonBrut = JSON.rawJSON('"Bonjour le monde"');
@@ -108,7 +108,7 @@ const objetJSON = JSON.rawJSON('{"a": 1, "b": 2}');
 console.log(JSON.stringify({ valeur: "\ud83d\ude04" })); // {"valeur":"😄"}
 ```
 
-Cela peut ne pas être souhaitable, car le récepteur de cette chaîne peut gérer Unicode différemment. Pour améliorer l'interopérabilité, vous pouvez définir explicitement la chaîne de caractères à sérialiser avec des séquences d'échappement&nbsp;:
+Cela peut ne pas être souhaitable, car le récepteur de cette chaîne de caractères peut gérer Unicode différemment. Pour améliorer l'interopérabilité, vous pouvez définir explicitement la chaîne de caractères à sérialiser avec des séquences d'échappement&nbsp;:
 
 ```js
 const jsonBrut = JSON.rawJSON('"\\ud83d\\ude04"');
@@ -129,7 +129,7 @@ Notez que les doubles barres obliques dans `rawJSON` représentent en réalité 
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `JSON.rawJSON` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#jsonparse-source-text-access)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `JSON.rawJSON` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/json)
 - L'objet natif {{JSxRef("JSON")}}
 - La méthode {{JSxRef("JSON.isRawJSON()")}}
 - La méthode {{JSxRef("JSON.stringify()")}}

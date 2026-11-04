@@ -1,5 +1,5 @@
 ---
-title: HTML `<canvas>` グラフィックキャンバス要素
+title: "`<canvas>` グラフィックキャンバス要素"
 short-title: <canvas>
 slug: Web/HTML/Reference/Elements/canvas
 l10n:

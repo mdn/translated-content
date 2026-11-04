@@ -3,7 +3,7 @@ title: "Élément HTML `<input>` : l'élément de saisie dans un formulaire"
 short-title: <input>
 slug: Web/HTML/Reference/Elements/input
 l10n:
-  sourceCommit: 26fb7eaa7b398a35c2463fa15ab6ccfa46a9e06d
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<input>`** permet de créer des contrôles interactifs pour les formulaires web afin d'accepter des données de la part de l'utilisateur·ice&nbsp;; une grande variété de types de données d'entrée et de composants de contrôle est disponible, selon l'appareil et {{Glossary("user agent", "agent utilisateur")}}. L'élément `<input>` est l'un des éléments HTML les plus puissants et les plus complexes en raison du grand nombre de combinaisons possibles de types d'entrée et d'attributs.
@@ -580,6 +580,12 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 - `value`
   - : La valeur du contrôle. Lorsque cette valeur est fournie dans le document HTML, il s'agit de la valeur initiale, qui peut ensuite être récupérée et éventuellement modifiée avec JavaScript avec la propriété `value` de l'objet {{DOMxRef("HTMLInputElement")}} correspondant. Cet attribut est toujours optionnel en théorie, mais peut être considéré comme obligatoire en pratique pour les types de champ `checkbox`, `radio`, et `hidden`.
 
+- `webkitdirectory`
+  - : L'attribut booléen `webkitdirectory`, si présent, indique que seuls les dossiers peuvent être disponibles à la sélection de l'utilisateur·ice dans l'interface de sélection de fichier. Voir {{DOMxRef("HTMLInputElement.webkitdirectory")}} pour plus de détails et d'exemples.
+
+    > [!NOTE]
+    > `webkitdirectory` est défini dans [l'API File and Directory Entries](/fr/docs/Web/API/File_and_Directory_Entries_API). Il porte le nom de `webkitdirectory`, car il s'agit à l'origine d'une API propre à Chrome. Il est désormais disponible dans tous les navigateurs.
+
 - `width`
   - : Cet attribut est uniquement valide pour le type de contrôle `image`, où il exprime la largeur du fichier d'image à afficher sur le bouton graphique. Voir le type {{HTMLElement("input/image", "image")}} pour plus d'informations.
 
@@ -614,12 +620,6 @@ Les attributs qui suivent ne sont pas standard et sont disponibles dans certains
       <td><a href="#results"><code>results</code></a></td>
       <td>Le nombre maximum de résultats qui doivent être affichés dans une liste déroulante affichant les recherches précédentes. <strong>Uniquement dans Safari.</strong></td>
     </tr>
-    <tr>
-      <td>
-        <a href="#webkitdirectory"><code>webkitdirectory</code></a>
-      </td>
-      <td>Un booléen indiquant s'il est possible de choisir un répertoire (ou plusieurs répertoires si <a href="#multiple"><code>multiple</code></a> est également présent).</td>
-    </tr>
   </tbody>
 </table>
 
@@ -637,11 +637,6 @@ Les attributs qui suivent ne sont pas standard et sont disponibles dans certains
   - : Uniquement pris en charge par Safari, cet attribut est une valeur numérique qui permet de surcharger le nombre de résultats à afficher dans la liste des suggestions de l'élément `<input>` à partir des requêtes précédentes.
 
     Sa valeur doit être un nombre positif. Si aucune valeur n'est indiquée ou qu'une valeur invalide est fournie, c'est le nombre d'options maximum par défaut du navigateur qui est utilisé.
-
-- `webkitdirectory` {{Non-standard_Inline}}
-  - : Un attribut booléen qui, lorsqu'il est présent, indique que seuls les répertoires peuvent être sélectionnés par le sélecteur de fichier. Voir {{DOMxRef("HTMLInputElement.webkitdirectory")}} pour plus de détails et d'exemples.
-
-    Bien qu'originalement implémenté uniquement par les navigateurs WebKit, `webkitdirectory` est également utilisable avec Microsoft Edge et Firefox 50 (ou ultérieur). Toutefois, malgré cette prise en charge assez large, il n'est toujours pas standard et ne doit pas être utilisé à moins qu'il n'y ait aucune autre alternative.
 
 ## Méthodes
 
@@ -1022,6 +1017,12 @@ Si vous souhaitez afficher un message d'erreur spécifique lorsqu'un champ est i
   <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
   <button>Envoyer</button>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 Les fonctionnalités HTML de base pour la validation des formulaires permettent d'afficher un message d'erreur par défaut si on tente d'envoyer le formulaire sans valeur ou avec une valeur qui ne respecte pas le motif de l'expression rationnelle indiquée avec `pattern`.

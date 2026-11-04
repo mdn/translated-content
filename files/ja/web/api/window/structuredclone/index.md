@@ -64,7 +64,7 @@ console.assert(clone.itself === clone); // 循環参照も保持されている
 
 ### 移譲される値
 
-[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)（のみ）が複製先のオブジェクトに複製する代わりに移譲することができます。この場合、 `options` 引数の `transfer` プロパティを使用します。移譲により、元のオブジェクトは使用不可能になります。
+[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)（のみ）は、複製先のオブジェクトに複製する代わりに移譲することができます。この場合、 `options` 引数の `transfer` プロパティを使用します。移譲により、元のオブジェクトは使用不可能になります。
 
 > [!NOTE]
 > これが役立つ場面として、バッファー内のデータを保存する前に非同期で検証する場合です。

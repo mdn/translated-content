@@ -162,6 +162,6 @@ runButton.addEventListener("click", () => {
 
 ## 下一步
 
-现在，我们的球既能在游戏板上移动，又能停留在上面。在教程第四步中，我们将探讨如何实现可控制的球板——请参阅[球板和键盘控制](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls)。
+现在，我们的球既能在游戏板上移动，又能停留在上面。在教程第四步中，我们将探讨如何实现可控制的球板——请参阅[球板和操控](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls)。
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}

@@ -3,7 +3,7 @@ title: "Date : méthode toJSON()"
 short-title: toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 13d5331637ae88b41af236e4b3d1b6c901d08f69
 ---
 
 La méthode **`toJSON()`** des instances de {{JSxRef("Date")}} retourne une chaîne de caractères représentant cette date au même format ISO que {{JSxRef("Date/toISOString", "toISOString()")}}.
@@ -34,11 +34,11 @@ Aucun.
 
 ### Valeur de retour
 
-Une chaîne de caractères représentant la date donnée au [format chaîne de date-heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#format_de_chaîne_date-heure) selon le temps universel, ou `null` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide). Pour les dates valides, la valeur de retour est identique à celle de {{JSxRef("Date/toISOString", "toISOString()")}}.
+Une chaîne de caractères représentant la date donnée au [format chaîne_de_caractères de date-heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#format_de_chaîne_de_caractères_date-heure) selon le temps universel, ou `null` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide). Pour les dates valides, la valeur de retour est identique à celle de {{JSxRef("Date/toISOString", "toISOString()")}}.
 
 ## Description
 
-La méthode `toJSON()` est automatiquement appelée par {{JSxRef("JSON.stringify()")}} lorsqu'un objet `Date` est converti en chaîne de caractères. Cette méthode est généralement destinée, par défaut, à sérialiser utilement les objets {{JSxRef("Date")}} lors de la sérialisation [JSON](/fr/docs/Glossary/JSON), qui peuvent ensuite être désérialisés à l'aide du constructeur {{JSxRef("Date/Date", "Date()")}} comme reviver de {{JSxRef("JSON.parse()")}}.
+La méthode `toJSON()` est automatiquement appelée par {{JSxRef("JSON.stringify()")}} lorsqu'un objet `Date` est converti en chaîne de caractères. Cette méthode est généralement destinée, par défaut, à sérialiser utilement les objets {{JSxRef("Date")}} lors de la sérialisation [JSON](/fr/docs/Glossary/JSON), qui peuvent ensuite être désérialisés à l'aide du constructeur {{JSxRef("Date/Date", "Date()")}} dans le <i lang="en">reviver</i> de {{JSxRef("JSON.parse()")}}.
 
 La méthode tente d'abord de convertir sa valeur `this` [en une valeur primitive](/fr/docs/Web/JavaScript/Guide/Data_structures#contrainte_de_valeur_primitive) en appelant successivement [`[Symbol.toPrimitive]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (avec l'indication `"number"`), {{JSxRef("Object/valueOf", "valueOf()")}}, puis {{JSxRef("Object/toString", "toString()")}}. Si le résultat est un nombre [non fini](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite), `null` est retourné. (Cela correspond généralement à une date invalide, dont {{JSxRef("Date/valueOf", "valueOf()")}} retourne {{JSxRef("NaN")}}.) Sinon, si la valeur primitive convertie n'est pas un nombre ou est un nombre fini, la valeur de retour de {{JSxRef("Date/toISOString", "this.toISOString()")}} est retournée.
 
@@ -81,7 +81,7 @@ console.log(donnee);
 ```
 
 > [!NOTE]
-> Le reviver de `JSON.parse()` doit être adapté à la structure attendue du contenu, car la sérialisation est _irréversible_&nbsp;: il n'est pas possible de distinguer une chaîne représentant une date d'une chaîne normale.
+> Le <i lang="en">reviver</i> de `JSON.parse()` doit être adapté à la structure attendue du contenu, car la sérialisation est _irréversible_&nbsp;: il n'est pas possible de distinguer une chaîne de caractères représentant une date d'une chaîne de caractères normale.
 
 ## Spécifications
 

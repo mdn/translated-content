@@ -19,15 +19,13 @@ l10n:
 
 このコースの中ではまだ明確に教えていませんが、この API を使用する例をいくつか見ていると思いますので、問題にうまく答えるためにはどのような DOM API が必要なのかを調べてみてください。私たちの [DOM スクリプト操作入門](/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting)チュートリアルが良い出発点になるでしょう。
 
-<!--
-## Interactive challenge
+## 対話型チャレンジ
 
-First of all, we are giving you a fun, interactive challenge involving function return values, created by our [learning partner](/en-US/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み), [Scrimba](https://scrimba.com/home).
+まず最初に、[学習パートナー](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)である [Scrimba](https://scrimba.com/home) が作成した、関数の返値を使った楽しくインタラクティブな課題をご紹介します。
 
-Watch the embedded scrim, and complete the task on the timeline (the little ghost icon) by following the instructions and editing the code. When you are done, you can resume watching the scrim to check how the teacher's solution matches up with yours.
+埋め込みのスクリムを見て、指示に従ってコードを編集し、タイムライン上の課題（小さなゴーストのアイコン）を完了してください。完了したら、スクリムの再生を再開して、教師の解答が自分の解答と一致するかどうかを調べることができます。
 
 <mdn-scrim-inline url="https://scrimba.com/learn-javascript-c0v/~02h" scrimtitle="Returning values in functions" survey="true"></scrim-inline>
--->
 
 ## 関数 1
 
