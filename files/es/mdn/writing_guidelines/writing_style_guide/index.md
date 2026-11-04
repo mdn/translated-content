@@ -3,7 +3,7 @@ title: Guía de estilo de redacción
 short-title: Guía de estilo
 slug: MDN/Writing_guidelines/Writing_style_guide
 l10n:
-  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
 
 Esta guía de estilo de redacción describe cómo debe escribirse, organizarse, deletrearse y formatearse el contenido en MDN Web Docs.
@@ -26,7 +26,9 @@ Las siguientes subsecciones proporcionan las recomendaciones para lograr esto:
 - [Incluye ejemplos relevantes](#incluye_ejemplos_relevantes)
 - [Proporciona una introducción descriptiva](#proporciona_una_introduccion_descriptiva)
 - [Usa un lenguaje inclusivo](#usa_un_lenguaje_inclusivo)
+- [Usa un lenguaje accesible](#usa_un_lenguaje_accesible)
 - [Escribe pensando en SEO](#escribe_pensando_en_seo)
+- [Sé responsable de lo que escribes](#sé_responsable_de_lo_que_escribes)
 
 ### Considera tu público objetivo
 
@@ -192,6 +194,12 @@ La siguiente lista de verificación es buena para tener en cuenta al escribir y 
     > Del mismo modo, **no** agregues material repetitivo e inútil o blobs de palabras clave dentro de la página real, en un intento de mejorar el tamaño y el ranking de búsqueda de la página. Esto hace más daño que bien, tanto para la legibilidad del contenido como para nuestros resultados de búsqueda.
 
 - **Enfócate en el contenido del tema**: Es mucho mejor escribir contenido en torno al tema de la página que una palabra clave específica. Es muy probable que haya muchas palabras clave que podrías incluir para un tema dado; de hecho, muchos expertos en SEO compilan una lista de 5-100 palabras clave diferentes (variando entre palabras clave cortas, medianas y de cola larga) para incluir dentro de su artículo, dependiendo de la longitud. Hacerlo diversificará tu redacción, lo que llevará a menos repetición.
+
+### Sé responsable de lo que escribes
+
+Sean cuales sean las herramientas que uses para escribir, tú eres responsable del resultado.
+Una persona debe revisar toda la prosa antes de enviarla.
+Edita el texto para que siga las [tres C de la redacción](#considera_las_tres_c_de_la_redaccion) y comprueba que sea técnicamente correcto.
 
 ## Estilo de redacción
 
