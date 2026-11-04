@@ -1,6 +1,7 @@
 ---
 title: ウェブで何かするのにかかるコスト
-slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
+slug: conflicting/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
+original_slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 l10n:
   sourceCommit: e488eba036b2fee56444fd579c3759ef45ff2ca8
 ---

@@ -20,8 +20,8 @@ slug: Learn_web_development/Extensions/Server-side
 Вам потребуется понимать "как работает веб". Мы рекомендуем вам сначала ознакомиться с темами:
 
 - [Что такое веб-сервер](/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
-- [Какое ПО мне нужно для построения веб-сайта?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- [Как заливать файлы на веб-сервер?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [Какое ПО мне нужно для построения веб-сайта?](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
+- [Как заливать файлы на веб-сервер?](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 
 С этим базовым набором знаний вы будете готовы освоить модули в этой секции.
 

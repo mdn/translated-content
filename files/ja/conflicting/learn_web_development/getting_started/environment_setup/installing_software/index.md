@@ -1,6 +1,7 @@
 ---
 title: ウェブサイトを作るのにどんなソフトウェアが必要か
-slug: Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
+slug: conflicting/Learn_web_development/Getting_started/Environment_setup/Installing_software
+original_slug: Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
 l10n:
   sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---

@@ -1,6 +1,7 @@
 ---
 title: どんなテキストエディターが利用できるか
-slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
+slug: conflicting/Learn_web_development/Getting_started/Environment_setup/Code_editors
+original_slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
