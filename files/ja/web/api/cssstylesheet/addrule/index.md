@@ -1,8 +1,9 @@
 ---
 title: "CSSStyleSheet: addRule() メソッド"
+short-title: addRule()
 slug: Web/API/CSSStyleSheet/addRule
 l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
 {{APIRef("CSSOM")}}
@@ -18,9 +19,9 @@ addRule(selector, styleBlock, index)
 ### 引数
 
 - `selector`
-  - : CSS ルールのセレクター部分を指定する文字列です。既定値は文字列 `undefined` です。
+  - : CSS ルールのセレクター部分を指定する文字列です。デフォルトは文字列 `undefined` です。
 - `styleBlock`
-  - : `selector` に一致する要素に適用されるスタイルブロックを示す文字列です。既定値は文字列 `undefined` です。
+  - : `selector` に一致する要素に適用されるスタイルブロックを示す文字列です。デフォルトは文字列 `undefined` です。
 - `index` {{optional_inline}}
   - : オプションで、このスタイルシートの {{domxref("CSSRuleList")}} の中に新しいルールを挿入するための位置を指定します。`index` が指定されなかった場合、現在リストにある最後の項目の次の位置（つまり、 `cssStyleSheet.cssRules.length` の値）が使用されます。
 
