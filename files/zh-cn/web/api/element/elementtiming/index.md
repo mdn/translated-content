@@ -1,13 +1,18 @@
 ---
 title: Element：elementTiming 属性
+short-title: elementTiming
 slug: Web/API/Element/elementTiming
+status:
+  - experimental
 l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+  sourceCommit: 4d218f9fdff30e8e01a26402b9f9615c9527ccf6
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-{{domxref("Element")}} 接口的 **`elementTiming`** 属性用于标识在 {{domxref("PerformanceElementTiming")}} API 中观测的元素。`elementTiming` 属性反映了 [`elementtiming`](/zh-CN/docs/Web/HTML/Reference/Attributes/elementtiming) HTML 属性的值。
+{{domxref("Element")}} 接口的 **`elementTiming`** 属性用于标识在 {{domxref("PerformanceElementTiming")}} API 中观测的元素。
+
+`elementTiming` 属性反映了 [`elementtiming`](/zh-CN/docs/Web/HTML/Reference/Attributes/elementtiming) 属性的值。
 
 ## 值
 
