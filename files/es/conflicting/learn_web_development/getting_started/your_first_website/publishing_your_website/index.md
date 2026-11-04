@@ -1,7 +1,7 @@
 ---
 title: ¿Cuánto cuesta hacer algo en la Web?
-slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
-original_slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
+slug: conflicting/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
+original_slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 ---
 
 {{QuicklinksWithSubPages("/es/docs/Learn/Common_questions")}}

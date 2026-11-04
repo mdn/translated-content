@@ -1,7 +1,7 @@
 ---
 title: ¿Qué software necesito para construir un sitio web?
-slug: Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
-original_slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
+slug: conflicting/Learn_web_development/Getting_started/Environment_setup/Installing_software
+original_slug: Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
 ---
 
 {{QuicklinksWithSubPages("/es/docs/Learn/Common_questions")}}
