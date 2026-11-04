@@ -38,7 +38,7 @@ l10n:
 > - **page-type**
 >   - : La clave `page-type` para las páginas de inicio Web/API siempre es `web-api-overview`.
 > - **status**
->   - : Indicadores que describen el estado de esta característica. Es un array que puede contener uno o más de los siguientes valores: `experimental`, `deprecated`, `non-standard`. Esta clave no debe establecerse manualmente: se establece automáticamente en función de los valores de los datos de compatibilidad del navegador para dicha característica. Consulta ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#¿cómo_se_agregan_o_actualizan_los_estados_de_las_características).
+>   - : Indicadores que describen el estado de esta característica. Es un array que puede contener uno o más de los siguientes valores: `experimental`, `deprecated`, `non-standard`. Esta clave no debe establecerse manualmente: se establece automáticamente en función de los valores de los datos de compatibilidad del navegador para dicha característica. Consulta ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características).
 >
 > ---
 >
@@ -66,7 +66,7 @@ l10n:
 >   Para generar la barra lateral correcta para tu API, debes añadir una entrada `GroupData` a nuestro repositorio de GitHub e incluir el nombre de esa entrada dentro de la llamada a la macro en lugar de _GroupDataName_.
 >   Consulta nuestra guía [Barras laterales de referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) para obtener información sobre cómo hacerlo.
 >
-> No añadas manualmente las macros de encabezado de estado. Consulta la sección ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#¿cómo_se_agregan_o_actualizan_los_estados_de_las_características) para añadir estos estados a la página.
+> No añadas manualmente las macros de encabezado de estado. Consulta la sección ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características) para añadir estos estados a la página.
 >
 > Justo después de este bloque de nota se muestran ejemplos de los avisos de **Contexto seguro**, **Disponible en workers**, **Experimental**, **Obsoleto** y **No estándar**.
 >
