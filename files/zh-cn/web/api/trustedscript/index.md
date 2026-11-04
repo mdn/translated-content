@@ -7,17 +7,16 @@ l10n:
 
 {{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
-{{domxref("Trusted Types API", "", "", "nocode")}} 的 **`TrustedScript`** 接口表示一个包含裸脚本内容的字符串，开发者可以将其插入[注入落点](/zh-CN/docs/Web/API/Trusted_Types_API#理念与使用)，从而可以执行该脚本。这些对象由
-{{domxref("TrustedTypePolicy.createScript","TrustedTypePolicy.createScript()")}} 创建，自身不存在构造方法。
+{{domxref("Trusted Types API", "可信类型 API", "", "nocode")}} 的 **`TrustedScript`** 接口表示一个包含未编译脚本主体的字符串，开发者可以将其插入[注入汇聚点](/zh-CN/docs/Web/API/Trusted_Types_API#概念和用法)，从而可能执行该脚本。这些对象由 {{domxref("TrustedTypePolicy.createScript","TrustedTypePolicy.createScript()")}} 创建，因此没有构造函数。
 
-**TrustedScript** 对象的值在对象被创建时设置，且不允许通过 JavaScript 修改，因为其没有暴露 setter 方法。
+`TrustedScript` 对象的值在对象被创建时设置，且不允许通过 JavaScript 修改，因为其没有暴露 setter 方法。
 
 ## 实例方法
 
 - {{domxref("TrustedScript.toJSON()")}}
   - : 返回一个表示 `TrustedScript` 对象的字符串，与 {{domxref("TrustedScript.toString()")}} 的返回内容相同。此方法会由 {{jsxref("JSON.stringify()")}} 自动调用。
 - {{domxref("TrustedScript.toString()")}}
-  - : 返回清洗过的脚本字符串。
+  - : 包含净化过的脚本的字符串。
 
 ## 示例
 
@@ -25,7 +24,7 @@ l10n:
 
 ```js
 const sanitized = scriptPolicy.createScript("eval('2 + 2')");
-console.log(sanitized); /* a TrustedScript 对象 */
+console.log(sanitized); /* TrustedScript 对象 */
 ```
 
 ## 规范
@@ -38,4 +37,4 @@ console.log(sanitized); /* a TrustedScript 对象 */
 
 ## 参见
 
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.developers.google.cn/articles/trusted-types)
+- [使用可信类型防范基于 DOM 的跨站脚本攻击漏洞](https://web.developers.google.cn/articles/trusted-types)

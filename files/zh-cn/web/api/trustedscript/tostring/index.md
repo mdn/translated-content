@@ -1,5 +1,6 @@
 ---
-title: "TrustedScript: toString() 方法"
+title: TrustedScript：toString() 方法
+short-title: toString()
 slug: Web/API/TrustedScript/toString
 l10n:
   sourceCommit: 3ceedbd90089cfb6970c9bf63ff9e6f3801fcbc5
@@ -7,7 +8,7 @@ l10n:
 
 {{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
-{{domxref("TrustedScript")}} 接口的 **`toString()`** 方法返回一个可以被安全注入到[注入落点](/zh-CN/docs/Web/API/Trusted_Types_API#理念与使用)中的字符串。
+{{domxref("TrustedScript")}} 接口的 **`toString()`** 方法返回一个可以被安全插入到[注入汇聚点](/zh-CN/docs/Web/API/Trusted_Types_API#概念和用法)中的字符串。
 
 ## 语法
 
@@ -21,7 +22,7 @@ toString()
 
 ### 返回值
 
-包含清洗过的脚本的字符串。
+包含净化过的脚本的字符串。
 
 ## 示例
 

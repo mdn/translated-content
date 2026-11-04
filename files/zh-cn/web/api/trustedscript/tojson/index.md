@@ -1,13 +1,16 @@
 ---
-title: "TrustedScript: toJSON() 方法"
+title: TrustedScript：toJSON() 方法
+short-title: toJSON()
 slug: Web/API/TrustedScript/toJSON
 l10n:
-  sourceCommit: 736da094f1fe86aefb458e5505ad216789b0ba12
+  sourceCommit: 15d531b54c7f0d96ac80ef00b494fd40743d59ce
 ---
 
 {{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
-{{domxref("TrustedScript")}} 接口的 **`toJSON()`** 方法返回其存储数据的 JSON 表示形式。
+{{domxref("TrustedScript")}} 接口的 **`toJSON()`** 方法返回一个表示 `TrustedScript` 对象的字符串。这与 {{domxref("TrustedScript.toString()")}} 返回的字符串相同。
+
+在 [JSON](/zh-CN/docs/Glossary/JSON) 序列化过程中遇到 `TrustedScript` 对象时，{{jsxref("JSON.stringify()")}} 会自动调用此方法。序列化后的值随后可以在 {{jsxref("JSON.parse()")}} 的 reviver 函数中使用 {{domxref("TrustedTypePolicy.createScript()")}} 方法转换回来，这会再次对其运行策略的转换函数。
 
 ## 语法
 
@@ -21,15 +24,34 @@ toJSON()
 
 ### 返回值
 
-包含存储数据的 JSON 表示形式的字符串。
+一个字符串。
 
 ## 示例
 
-常量 `sanitized` 是一个由可信类型策略创建的对象。`toString()` 方法返回一个可以安全地作为脚本执行的字符串。
+### 直接调用 toJSON()
+
+此示例创建了一个 `TrustedScript` 对象。直接调用 `toJSON()` 会返回其存储的字符串值。
 
 ```js
 const sanitized = scriptPolicy.createScript("eval('2 + 2')");
-console.log(sanitized.toJSON());
+
+const json = sanitized.toJSON();
+console.log(json); // 与 sanitized.toString() 的值相同
+console.log(typeof json); // "string"
+```
+
+### 序列化为 JSON 字符串
+
+上一个示例中的 `TrustedScript` 对象使用 {{jsxref("JSON.stringify()")}} 进行序列化，它会自动调用 `toJSON()` 方法。
+
+```js
+console.log(JSON.stringify(sanitized));
+```
+
+这会输出以下 JSON 字符串，其中包含外围的双引号（属于字符串内容的一部分）：
+
+```json
+"eval('2 + 2')"
 ```
 
 ## 规范

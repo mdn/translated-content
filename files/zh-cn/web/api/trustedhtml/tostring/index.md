@@ -1,5 +1,6 @@
 ---
-title: "TrustedHTML: toString() 方法"
+title: TrustedHTML：toString() 方法
+short-title: toString()
 slug: Web/API/TrustedHTML/toString
 l10n:
   sourceCommit: c7d5004cd6c5d5b1318f626425fcb06cb2c6a509
@@ -7,7 +8,7 @@ l10n:
 
 {{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
-{{domxref("TrustedHTML")}} 接口的 **`toString()`** 方法返回一个可以被安全地注入到注入落点中的字符串。
+{{domxref("TrustedHTML")}} 接口的 **`toString()`** 方法返回一个可以被安全地插入到[注入汇聚点](/zh-CN/docs/Web/API/Trusted_Types_API#概念和用法)中的字符串。
 
 ## 语法
 
@@ -21,11 +22,11 @@ toString()
 
 ### 返回值
 
-包含经过清洗的 HTML 的字符串。
+包含经过净化的 HTML 的字符串。
 
 ## 示例
 
-常量 `escaped` 是一个由可信类型策略 excapeHTMLPolicy 创建的对象。`toString()` 方法返回一个可以安全地插入文档的字符串。
+常量 `escaped` 是一个通过可信类型策略 `escapeHTMLPolicy` 创建的对象。`toString()` 方法返回一个可以安全地插入文档的字符串。
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
