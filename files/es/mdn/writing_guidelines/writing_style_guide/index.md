@@ -21,10 +21,10 @@ El objetivo es escribir páginas que incluyan toda la información que los lecto
 
 Las siguientes subsecciones proporcionan las recomendaciones para lograr esto:
 
-- [Considera tu público objetivo](#considera_tu_publico_objetivo)
-- [Considera las tres C de la redacción](#considera_las_tres_c_de_la_redaccion)
+- [Considera tu público objetivo](#considera_tu_público_objetivo)
+- [Considera las tres C de la redacción](#considera_las_tres_c_de_la_redacción)
 - [Incluye ejemplos relevantes](#incluye_ejemplos_relevantes)
-- [Proporciona una introducción descriptiva](#proporciona_una_introduccion_descriptiva)
+- [Proporciona una introducción descriptiva](#proporciona_una_introducción_descriptiva)
 - [Usa un lenguaje inclusivo](#usa_un_lenguaje_inclusivo)
 - [Usa un lenguaje accesible](#usa_un_lenguaje_accesible)
 - [Escribe pensando en SEO](#escribe_pensando_en_seo)
@@ -199,22 +199,22 @@ La siguiente lista de verificación es buena para tener en cuenta al escribir y 
 
 Sean cuales sean las herramientas que uses para escribir, tú eres responsable del resultado.
 Una persona debe revisar toda la prosa antes de enviarla.
-Edita el texto para que siga las [tres C de la redacción](#considera_las_tres_c_de_la_redaccion) y comprueba que sea técnicamente correcto.
+Edita el texto para que siga las [tres C de la redacción](#considera_las_tres_c_de_la_redacción) y comprueba que sea técnicamente correcto.
 
 ## Estilo de redacción
 
 Además de escribir oraciones gramaticalmente correctas en inglés, te recomendamos que sigas estas pautas para mantener el contenido coherente en MDN Web Docs.
 
-- [Abreviaturas y acrónimos](#abreviaturas_y_acronimos)
-- [Uso de mayúsculas](#uso_de_mayusculas)
+- [Abreviaturas y acrónimos](#abreviaturas_y_acrónimos)
+- [Uso de mayúsculas](#uso_de_mayúsculas)
 - [Contracciones](#contracciones)
-- [Números y numerales](#numeros_y_numerales)
-- [Pluralización](#pluralizacion)
-- [Apóstrofos y comillas](#apostrofos_y_comillas)
+- [Números y numerales](#números_y_numerales)
+- [Pluralización](#pluralización)
+- [Apóstrofos y comillas](#apóstrofos_y_comillas)
 - [Comas](#comas)
 - [Guiones](#guiones)
-- [Ortografía](#ortografia)
-- [Terminología](#terminologia)
+- [Ortografía](#ortografía)
+- [Terminología](#terminología)
 - [Voz](#voz)
 
 ### Abreviaturas y acrónimos
@@ -441,17 +441,17 @@ Intenta ser coherente, sin embargo.
 
 Esta sección enumera las pautas a seguir para diferentes partes de cada página, como encabezados, notas, enlaces y ejemplos.
 
-- [Ejemplos de código](#ejemplos_de_codigo)
-- [Referencias cruzadas (vinculación)](#referencias_cruzadas_vinculacion)
+- [Ejemplos de código](#ejemplos_de_código)
+- [Referencias cruzadas (vinculación)](#referencias_cruzadas_vinculación)
 - [Enlaces externos](#enlaces_externos)
 - [URL acortadas (enlaces cortos)](#url_acortadas_enlaces_cortos)
 - [Niveles de encabezado](#niveles_de_encabezado)
-- [Imágenes y otros medios](#imagenes_y_otros_medios)
+- [Imágenes y otros medios](#imágenes_y_otros_medios)
 - [Listas](#listas)
-- [Sección Véase también](#seccion_vease_tambien)
-- [Subpáginas](#subpaginas)
+- [Sección Véase también](#sección_véase_también)
+- [Subpáginas](#subpáginas)
 - [Slugs](#slugs)
-- [Títulos](#titulos)
+- [Títulos](#títulos)
 
 ### Ejemplos de código
 
@@ -485,7 +485,7 @@ Si la sección a la que te estás vinculando está en la misma página, puedes s
 
 En MDN, otra forma de vincular a una página de referencia es usando una macro. Estas macros se describen en la página [Macros de uso común](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_reference_pages). Por ejemplo, para vincular a la página de referencia de un elemento HTML, usa la macro `HTMLElement`, y para vincular a la página de referencia de una propiedad de CSS, usa la macro `CSSxRef`.
 
-Seguimos pautas similares de referencia cruzada en las secciones [Véase también](#seccion_vease_tambien) al final de las páginas de referencia, páginas del glosario y guías.
+Seguimos pautas similares de referencia cruzada en las secciones [Véase también](#sección_véase_también) al final de las páginas de referencia, páginas del glosario y guías.
 
 ### Enlaces externos
 
@@ -604,7 +604,7 @@ Sin embargo, dependiendo del tipo de lista que estés creando, querrás ajustar 
 
 ### Sección Véase también
 
-La mayoría de las guías, páginas de referencia e incluso páginas del glosario en MDN Web Docs contienen una sección _Véase también_ al final del artículo. Esta sección contiene [referencias cruzadas](#referencias_cruzadas_vinculacion) a temas relacionados dentro de MDN y, a veces, enlaces a artículos externos relacionados. Por ejemplo, esta es la [sección Véase también](/es/docs/Web/CSS/Reference/At-rules/@layer#see_also) para la página `@layer`.
+La mayoría de las guías, páginas de referencia e incluso páginas del glosario en MDN Web Docs contienen una sección _Véase también_ al final del artículo. Esta sección contiene [referencias cruzadas](#referencias_cruzadas_vinculación) a temas relacionados dentro de MDN y, a veces, enlaces a artículos externos relacionados. Por ejemplo, esta es la [sección Véase también](/es/docs/Web/CSS/Reference/At-rules/@layer#see_also) para la página `@layer`.
 
 En general, presenta los enlaces en una sección Véase también en formato de [lista con viñetas](#listas) con cada elemento de la lista como una frase. Sin embargo, en la sección [Aprender desarrollo web](/es/docs/Learn_web_development) de MDN, la sección Véase también sigue el formato de [lista de definiciones](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#definition_lists).
 
@@ -633,7 +633,7 @@ Para mantener la coherencia en MDN Web Docs, ten en cuenta las siguientes pautas
   - **Correcto**: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("color")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}: Otras propiedades relacionadas con el color
 - Para los enlaces externos, trata de especificar el sitio web de origen y el año de publicación o última actualización (entre paréntesis) siempre que sea factible y apropiado. Proporcionar esta información por adelantado da a los lectores una idea clara del destino que alcanzarán al hacer clic en el enlace. La fecha de publicación o última actualización guía a los lectores para evaluar la relevancia del artículo vinculado y también ayuda a los mantenedores de MDN a revisar los enlaces a artículos que no se han actualizado en mucho tiempo. Si proporcionas un enlace a un artículo en Wikipedia, por ejemplo, puedes ignorar la fecha de publicación/actualización. El siguiente elemento de la lista es un ejemplo de agregar un enlace al artículo externo [Top-level await](https://v8.dev/features/top-level-await) en la sección Véase también, junto con la información de origen y año:
   - **Correcto**: [Top-level await](https://v8.dev/features/top-level-await) en v8.dev (2019)
-- Para los enlaces externos a libros, también puedes proporcionar los nombres de los autores. Se enumeran algunos ejemplos en la sección [Lectura adicional](#idioma_gramatica_y_ortografia). Abstente de agregar nombres de autores para publicaciones de blog o repositorios de GitHub a los que puedas vincular.
+- Para los enlaces externos a libros, también puedes proporcionar los nombres de los autores. Se enumeran algunos ejemplos en la sección [Lectura adicional](#idioma_gramática_y_ortografía). Abstente de agregar nombres de autores para publicaciones de blog o repositorios de GitHub a los que puedas vincular.
 
 #### Orden de los enlaces
 
