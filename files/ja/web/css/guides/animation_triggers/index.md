@@ -2,7 +2,6 @@
 title: CSS アニメーショントリガー
 short-title: アニメーショントリガー
 slug: Web/CSS/Guides/Animation_triggers
-spec-urls: https://drafts.csswg.org/animation-triggers-1/
 l10n:
   sourceCommit: 1a2a5b56a689b441ebf3be91b90f15746c5a5a01
 ---
