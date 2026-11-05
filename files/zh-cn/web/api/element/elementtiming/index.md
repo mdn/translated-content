@@ -2,8 +2,6 @@
 title: Element：elementTiming 属性
 short-title: elementTiming
 slug: Web/API/Element/elementTiming
-status:
-  - experimental
 l10n:
   sourceCommit: 4d218f9fdff30e8e01a26402b9f9615c9527ccf6
 ---
