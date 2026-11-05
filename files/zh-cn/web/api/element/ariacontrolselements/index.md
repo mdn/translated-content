@@ -8,8 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("Element")}} 接口的 **`ariaControlsElements`** 属性是一个数组，包含由应用了该属性的元素所控制的元素。
-例如，可以在 [combobox](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) 上设置此属性以指示它弹出的元素，或者在 [`scrollbar`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) 上设置以指示它所控制元素的 ID。
+{{domxref("Element")}} 接口的 **`ariaControlsElements`** 属性是一个数组，包含由应用了该属性的元素所控制的元素。例如，可以在 [combobox](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) 上设置此属性以指示它弹出的元素，或者在 [`scrollbar`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) 上设置以指示它所控制元素的 ID。
 
 [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 主题包含关于应当如何使用该特性和属性的更多信息。
 
@@ -17,17 +16,13 @@ l10n:
 
 一个由 {{domxref("HTMLElement")}} 的子类组成的数组，表示由此元素控制的元素。
 
-读取时，返回的数组是静态的且只读。
-写入时，所赋值的数组会被复制：之后对该数组的更改不会影响属性的值。
+读取时，返回的数组是静态的且只读。写入时，所赋值的数组会被复制：之后对该数组的更改不会影响属性的值。
 
 ## 描述
 
-该属性是使用 [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 特性设置受控元素的一种灵活替代方案。
-与 `aria-controls` 不同的是，分配给此属性的元素不必具有 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性。
+该属性是使用 [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 特性设置受控元素的一种灵活替代方案。与 `aria-controls` 不同的是，分配给此属性的元素不必具有 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性。
 
-当定义了 [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 特性时，该属性会反映这个特性，但仅限与有效作用域内元素匹配的已列出的引用 `id` 值。
-如果设置了该属性，则相应的特性会被清除。
-有关反射元素引用和作用域的更多信息，请参见*反射特性*指南中的[反射的元素引用](/zh-CN/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)。
+当定义了 [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 特性时，该属性会反映这个特性，但仅限与有效作用域内元素匹配的已列出的引用 `id` 值。如果设置了该属性，则相应的特性会被清除。有关反射元素引用和作用域的更多信息，请参见*反射特性*指南中的[反射的元素引用](/zh-CN/docs/Web/API/Document_Object_Model/Reflected_attributes#反射的元素引用)。
 
 ## 示例
 
@@ -37,20 +32,19 @@ l10n:
 
 #### HTML
 
-HTML 首先定义了一个 {{htmlelement("button")}} 元素和两个由它控制的 {{htmlelement("div")}} 元素：`panel1` 和 `panel2`。
-对受控面板的引用列在按钮的 `aria-controls` 特性中。
+HTML 首先定义了一个 {{htmlelement("button")}} 元素和两个由它控制的 {{htmlelement("div")}} 元素：`panel1` 和 `panel2`。对受控面板的引用列在按钮的 `aria-controls` 特性中。
 
 ```html
 <button id="toggleButton" aria-controls="panel1 panel2" aria-expanded="false">
-  Show Details
+  展示详情
 </button>
 
 <div class="panel" id="panel1" aria-hidden="true">
-  <p>Panel1 opened/closed by button.</p>
+  <p>面板 1 可通过按钮打开/关闭。</p>
 </div>
 
 <div class="panel" id="panel2" aria-hidden="true">
-  <p>Panel2 opened/closed by button.</p>
+  <p>面板 2 可通过按钮打开/关闭。</p>
 </div>
 ```
 
@@ -98,38 +92,35 @@ toggleButton.addEventListener("click", () => {
 
   toggleButton.setAttribute("aria-expanded", !isExpanded);
   panel1.style.display = isExpanded ? "none" : "block";
-  panel1.setAttribute("aria-hidden", isExpanded); // true when hidden, false when shown.
+  panel1.setAttribute("aria-hidden", isExpanded); // 隐藏时为 true，展示时为 false。
 
   panel2.style.display = isExpanded ? "none" : "block";
-  panel2.setAttribute("aria-hidden", isExpanded); // true when hidden, false when shown.
+  panel2.setAttribute("aria-hidden", isExpanded); // 隐藏时为 true，展示时为 false。
 });
 ```
 
-接着，示例使用 {{domxref("Element.getAttribute()")}} 获取 `aria-controls` 特性的值（一个列出所引用元素 `id` 值的字符串）。
-然后检查是否支持 `ariaControlsElements` 属性，如果支持，则记录其值。
-最后返回并记录每个受控元素的内部文本。
+接着，示例使用 {{domxref("Element.getAttribute()")}} 获取 `aria-controls` 特性的值（一个列出所引用元素 `id` 值的字符串）。然后检查是否支持 `ariaControlsElements` 属性，如果支持，则记录其值。最后返回并记录每个受控元素的内部文本。
 
 ```js
-log(`aria-controls: ${toggleButton.getAttribute("aria-controls")}`);
-// Feature test for ariaControlsElements
+log(`aria-controls：${toggleButton.getAttribute("aria-controls")}`);
+// ariaControlsElements 特性检测
 if ("ariaControlsElements" in Element.prototype) {
-  // Get ariaControlsElements
+  // 获取 ariaControlsElements
   const controlledElements = toggleButton.ariaControlsElements;
-  log(`ariaControlsElements: ${controlledElements}`);
+  log(`ariaControlsElements：${controlledElements}`);
 
-  // List innerText for each of the ariaControlsElements
+  // 列出每一个 ariaControlsElements 的 innerText
   controlledElements.forEach((controlled) => {
-    log(` Controlled element text: ${controlled.textContent.trim()}`);
+    log(` 受控元素文本：${controlled.textContent.trim()}`);
   });
 } else {
-  log("element.ariaControlsElements: not supported by browser");
+  log("element.ariaControlsElements：不被浏览器支持");
 }
 ```
 
 #### 结果
 
-点击下方的按钮来显示和隐藏面板。
-日志中显示了原始的元素引用、关联/返回的元素，以及每个元素的内部文本。
+点击下方的按钮来显示和隐藏面板。日志中显示了原始的元素引用、关联/返回的元素，以及每个元素的内部文本。
 
 {{EmbedLiveSample("Get the controlled elements","100%","280px")}}
 
@@ -145,4 +136,4 @@ if ("ariaControlsElements" in Element.prototype) {
 
 - [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 特性
 - {{domxref("ElementInternals.ariaControlsElements")}}
-- *反射特性*指南中的[反射的元素引用](/zh-CN/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)
+- *反射特性*指南中的[反射的元素引用](/zh-CN/docs/Web/API/Document_Object_Model/Reflected_attributes#反射的元素引用)
