@@ -39,7 +39,7 @@ CSS スクロールトリガーアニメーションを使うと、通常の時�
 
 HTML には複数の段落があり、その途中に {{htmlelement("figure")}} 要素があり、その中に `<img>` と `<figcaption>` を含みます。簡潔にするため、ソース全体は示していません。
 
-```html
+```html-nolint
 ...
 
 <p>...</p>
@@ -507,7 +507,7 @@ HTML はこれまでの例と似ていますが、強調表示するコンテン
 ...
 ```
 
-```html hidden live-sample___multiple-triggers
+```html-nolint hidden live-sample___multiple-triggers
 <section>
   <h2>このコンテンツはアニメーションします！</h2>
 
