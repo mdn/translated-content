@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("Element")}} 接口的 **`ariaControlsElements`** 属性是一个包含由应用了该属性的元素所控制的元素的数组。例如，可以在 [combobox](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) 上设置此属性以指示它弹出的元素，或者在 [`scrollbar`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) 上设置以指示它所控制元素的 ID。
 
-[`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 主题包含关于应当如何使用该特性和属性的更多信息。
+[`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 主题包含关于应当如何使用 HTML 属性（attribute）和接口属性（property）的更多信息。
 
 ## 值
 
