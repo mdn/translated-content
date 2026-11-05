@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("Element")}} 接口的 **`ariaControlsElements`** 属性是一个数组，包含由应用了该属性的元素所控制的元素。例如，可以在 [combobox](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) 上设置此属性以指示它弹出的元素，或者在 [`scrollbar`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) 上设置以指示它所控制元素的 ID。
+{{domxref("Element")}} 接口的 **`ariaControlsElements`** 属性是一个包含由应用了该属性的元素所控制的元素的数组。例如，可以在 [combobox](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) 上设置此属性以指示它弹出的元素，或者在 [`scrollbar`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) 上设置以指示它所控制元素的 ID。
 
 [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 主题包含关于应当如何使用该特性和属性的更多信息。
 
@@ -20,9 +20,9 @@ l10n:
 
 ## 描述
 
-该属性是使用 [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 特性设置受控元素的一种灵活替代方案。与 `aria-controls` 不同的是，分配给此属性的元素不必具有 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性。
+该属性是使用 [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) HTML 属性设置受控元素的一种灵活替代方案。与 `aria-controls` 不同的是，分配给此属性的元素不必具有 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性。
 
-当定义了 [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 特性时，该属性会反映这个特性，但仅限与有效作用域内元素匹配的已列出的引用 `id` 值。如果设置了该属性，则相应的特性会被清除。有关反射元素引用和作用域的更多信息，请参见*反射特性*指南中的[反射的元素引用](/zh-CN/docs/Web/API/Document_Object_Model/Reflected_attributes#反射的元素引用)。
+当定义了 [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 属性时，该属性会反映这个 HTML 属性，但仅限与有效作用域内元素匹配的已列出的引用 `id` 值。如果设置了该属性，则相应的特性会被清除。有关反射元素引用和作用域的更多信息，请参见*反射属性*指南中的[反射的元素引用](/zh-CN/docs/Web/API/Document_Object_Model/Reflected_attributes#反射的元素引用)。
 
 ## 示例
 
@@ -32,7 +32,7 @@ l10n:
 
 #### HTML
 
-HTML 首先定义了一个 {{htmlelement("button")}} 元素和两个由它控制的 {{htmlelement("div")}} 元素：`panel1` 和 `panel2`。对受控面板的引用列在按钮的 `aria-controls` 特性中。
+HTML 首先定义了一个 {{htmlelement("button")}} 元素和两个由它控制的 {{htmlelement("div")}} 元素：`panel1` 和 `panel2`。对受控面板的引用列在按钮的 `aria-controls` 属性中。
 
 ```html
 <button id="toggleButton" aria-controls="panel1 panel2" aria-expanded="false">
@@ -72,7 +72,7 @@ HTML 首先定义了一个 {{htmlelement("button")}} 元素和两个由它控制
 
 #### JavaScript
 
-代码首先根据按钮的 [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) 特性设置面板的显示或隐藏切换。
+代码首先根据按钮的 [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) 属性设置面板的显示或隐藏切换。
 
 ```js hidden
 const logElement = document.querySelector("#log");
@@ -99,7 +99,7 @@ toggleButton.addEventListener("click", () => {
 });
 ```
 
-接着，示例使用 {{domxref("Element.getAttribute()")}} 获取 `aria-controls` 特性的值（一个列出所引用元素 `id` 值的字符串）。然后检查是否支持 `ariaControlsElements` 属性，如果支持，则记录其值。最后返回并记录每个受控元素的内部文本。
+接着，示例使用 {{domxref("Element.getAttribute()")}} 获取 `aria-controls` 属性的值（一个列出所引用元素 `id` 值的字符串）。然后检查是否支持 `ariaControlsElements` 属性，如果支持，则记录其值。最后返回并记录每个受控元素的内部文本。
 
 ```js
 log(`aria-controls：${toggleButton.getAttribute("aria-controls")}`);
@@ -134,6 +134,6 @@ if ("ariaControlsElements" in Element.prototype) {
 
 ## 参见
 
-- [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 特性
+- [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 属性
 - {{domxref("ElementInternals.ariaControlsElements")}}
-- *反射特性*指南中的[反射的元素引用](/zh-CN/docs/Web/API/Document_Object_Model/Reflected_attributes#反射的元素引用)
+- *反射属性*指南中的[反射的元素引用](/zh-CN/docs/Web/API/Document_Object_Model/Reflected_attributes#反射的元素引用)
