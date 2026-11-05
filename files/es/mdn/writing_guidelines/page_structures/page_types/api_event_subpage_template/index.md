@@ -2,7 +2,7 @@
 title: Plantilla de subpágina de evento de API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template
 l10n:
-  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
+  sourceCommit: 88e4ba556d3a475dc4d60937f7db5178b2a1d54b
 ---
 
 > [!NOTE]
@@ -95,11 +95,15 @@ Puedes copiar la mayor parte de este texto del resumen de la propiedad en la pá
 
 ## Sintaxis
 
-Usa el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establece una propiedad de manejador de eventos.
+Usa el nombre del evento en {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("NameOfTheEvent", (event) => { })
+```
 
+También puedes asignarlo a la [propiedad de manejador de eventos](/es/docs/Web/API/Document_Object_Model/Events#usar_las_propiedades_onevent) de la interfaz:
+
+```js-nolint
 onNameOfTheEvent = (event) => { }
 ```
 
@@ -137,6 +141,8 @@ Ten en cuenta que usamos el plural "Ejemplos" incluso si la página contiene sol
 Cada ejemplo debe tener un encabezado H3 (`###`) que lo identifique. El encabezado debe describir qué hace el ejemplo. Por ejemplo, "Un ejemplo sencillo" no dice nada sobre el ejemplo y, por lo tanto, no es un buen encabezado. El encabezado debe ser conciso. Para una descripción más larga, usa el párrafo posterior al encabezado.
 
 Consulta nuestra guía sobre cómo añadir [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
+
+Si quieres mostrar tanto `addEventListener` como `onEvent`, evita afirmar o dar a entender que los dos ejemplos son equivalentes. Lo ideal es añadir siempre un paréntesis explícito que diga «pero ten en cuenta que esto reemplaza otros manejadores de eventos añadidos con `onEvent`, si los hay».
 
 > [!NOTE]
 > A veces querrás enlazar a ejemplos que se encuentran en otra página.
