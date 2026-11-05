@@ -1,7 +1,7 @@
 ---
 title: Element：prefix 属性
-slug: Web/API/Element/prefix
 short-title: prefix
+slug: Web/API/Element/prefix
 l10n:
   sourceCommit: 68f3a6c1641c2524d291c9103589f3aa361e74a2
 ---
