@@ -53,7 +53,7 @@ Hay consideraciones de estilo y contenido que debes tener en cuenta al añadir o
 ## Ejemplos estáticos
 
 Los ejemplos estáticos son bloques de código que muestran cómo se ve una característica en el código fuente.
-Estos se colocan en una página utilizando "delimitadores de código" de Markdown, como se describe en [Bloques de código de ejemplo](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#example_code_blocks).
+Estos se colocan en una página utilizando "delimitadores de código" de Markdown, como se describe en [Bloques de código de ejemplo](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#bloques_de_código_de_ejemplo).
 Cuando se utilizan en páginas de documentación, tienen este aspecto:
 
 ```js
@@ -69,7 +69,7 @@ Están pensados para los lectores que quieren probar un ejemplo sin tener que le
 
 La macro `InteractiveExample` acepta un título para el ejemplo como cadena de texto, seguido de una palabra clave que especifica la altura del ejemplo.
 Los bloques de código que se incluyen en el ejemplo aparecen después de la llamada a la macro y contienen la palabra clave `interactive-example` en la cadena de información después del lenguaje del bloque de código.
-El uso de [`Array.concat()` en JavaScript](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/concat#try_it) es un buen ejemplo de esta macro; así es como aparece en el código fuente Markdown:
+El uso de [`Array.concat()` en JavaScript](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/concat#pruébalo) es un buen ejemplo de esta macro; así es como aparece en el código fuente Markdown:
 
 ````md
 \{{InteractiveExample("JavaScript Demo: Array.concat()", "shorter")}}
