@@ -3,7 +3,7 @@ title: Math.acos()
 short-title: acos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acos
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
 **`Math.acos()`** は静的メソッドで、引数として与えた数値の逆余弦（アークコサイン）をラジアン単位で返します。すなわち次の通りです。
@@ -77,3 +77,4 @@ Math.acos(2); // NaN
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("acos()")}} 関数
