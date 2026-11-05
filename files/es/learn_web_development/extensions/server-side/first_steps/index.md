@@ -16,7 +16,7 @@ Necesitarás entender "cómo funciona la web". Te recomendamos que leas primero 
 
 - [Qué es un servidor web](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [¿Qué software necesito para construir un sitio web?](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- [¿Cómo se suben los ficheros a un servidor web?](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
+- [¿Cómo se suben los ficheros a un servidor web?](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 
 Con este conocimiento básico estarás listo para recorrer el camino a través de los módulos de esta sección.
 

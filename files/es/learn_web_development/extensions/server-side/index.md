@@ -22,7 +22,7 @@ Necesitarás entender "cómo tabaja la web". Te recomendamos que leas primero lo
 
 - [¿Qué es un servidor web?](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [¿Qué software necesito para construir un sitio web?](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- [¿Cómo subo ficheros a un servidor web?](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
+- [¿Cómo subo ficheros a un servidor web?](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 
 Con ese conocimiento básico estarás preparado para recorrer el camino a través de los módulos de esta sección.
 
