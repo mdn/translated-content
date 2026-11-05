@@ -37,7 +37,7 @@ El entorno de desarrollo es una instalación de Django en tu computadora local q
 
 Las principales herramientas que el propio Django proporciona son un conjunto de scripts de Python para crear y trabajar con proyectos Django, junto con un simple _servidor web de desarrollo_ que puedes usar para probar localmente (es decir, en tu computadora, no en un servidor web externo) aplicaciones web Django en el navegador de tu computadora.
 
-Hay otras herramientas periféricas, que a menudo forman parte del entorno de desarrollo, que no cubriremos aquí. Estas incluyen cosas como un [editor de texto](/es/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors) o un IDE para editar código, linters para el formateo automático, etc. Asumimos que ya tienes instalado un editor de texto.
+Hay otras herramientas periféricas, que a menudo forman parte del entorno de desarrollo, que no cubriremos aquí. Estas incluyen cosas como un [editor de texto](/es/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors) o un IDE para editar código, linters para el formateo automático, etc. Asumimos que ya tienes instalado un editor de texto.
 
 ### ¿Cuáles son las opciones de configuración de Django?
 
