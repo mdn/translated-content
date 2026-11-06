@@ -1,8 +1,9 @@
 ---
 title: Element：prefix 属性
+short-title: prefix
 slug: Web/API/Element/prefix
 l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+  sourceCommit: 68f3a6c1641c2524d291c9103589f3aa361e74a2
 ---
 
 {{APIRef("DOM")}}
@@ -11,7 +12,7 @@ l10n:
 
 ## 值
 
-字符串。
+字符串或 `null`。
 
 ## 示例
 
