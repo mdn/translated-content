@@ -150,7 +150,9 @@ Con cada iteración, el bucle incrementa `n` y agrega ese valor a `x`. Por lo ta
 - Después de la segunda pasada: `n` = `2` y `x` = `3`
 - Después de la tercera pasada: `n` = `3` y `x` = `6`
 
-Después de completar la tercera pasada, la condición `n < 3` ya no es `true`, por lo que el bucle termina.**Ejemplo 2**
+Después de completar la tercera pasada, la condición `n < 3` ya no es `true`, por lo que el bucle termina.
+
+### Ejemplo 2
 
 Evita los bucles infinitos. Asegúrate de que la condición en un bucle eventualmente se convierta en `false`; de lo contrario, el bucle nunca terminará. Las declaraciones en el siguiente bucle `while` se ejecutan indefinidamente porque la condición nunca se vuelve `false`:
 
@@ -173,7 +175,7 @@ En este ejemplo, la etiqueta `markLoop` identifica un bucle `while`.
 
 markLoop: while (theMark === true) { doSomething(); }
 
-Declaración `break`
+## Declaración `break`
 
 Usa la instrucción {{JSxRef("Statements/break", "break")}} para terminar un bucle, `switch` o junto con una declaración etiquetada.
 
