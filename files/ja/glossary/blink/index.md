@@ -2,12 +2,10 @@
 title: Blink
 slug: Glossary/Blink
 l10n:
-  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-Blink は、 Google によって Chromium の一部（それゆえ {{glossary("Google Chrome", "Chrome")}} の一部でもある）として開発されたオープンソースのブラウザー用レイアウトエンジンです。特に、 Blink はレイアウト、レンダリング、 {{glossary("DOM")}} の処理を扱う {{glossary("WebKit")}} 内の WebCore ライブラリーのフォークとして始まりましたが、現在は独立した{{glossary("rendering engine", "レンダリングエンジン")}}として成立しています。
+Blink は、 Google によって Chromium の一部（それゆえ {{glossary("Google Chrome", "Chrome")}} の一部でもある）として開発されたオープンソースのブラウザー用レイアウトエンジンです。特に、 Blink はレイアウト、レンダリング、 {{glossary("DOM")}} の処理を扱う {{glossary("WebKit")}} 内の WebCore ライブラリーのフォークとして始まりましたが、現在は独立した{{Glossary("Engine/Rendering", "レンダリングエンジン")}}として成立しています。
 
 ## 関連情報
 
@@ -19,4 +17,4 @@ Blink は、 Google によって Chromium の一部（それゆえ {{glossary("G
   - {{glossary("Gecko")}}
   - {{glossary("Trident")}}
   - {{glossary("WebKit")}}
-  - {{glossary("Rendering engine", "レンダリングエンジン")}}
+  - {{Glossary("Engine/Rendering", "レンダリングエンジン")}}
