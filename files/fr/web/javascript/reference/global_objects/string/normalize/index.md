@@ -137,14 +137,11 @@ Toutes les séquences canoniquement équivalentes sont également compatibles, m
 
 Par exemple&nbsp;:
 
-- le point de code U+FB00 représente la [ligature](/fr/docs/Glossary/Ligature) `"ﬀ"`. Il est compatible
-  avec deux points de code U+0066 consécutifs (`"ff"`).
-- le point de code U+24B9 représente le symbole
-  `"Ⓓ"`.
+- le point de code U+FB00 représente la [ligature](/fr/docs/Glossary/Ligature) `"ﬀ"`. Il est compatible avec deux points de code U+0066 consécutifs (`"ff"`).
+- le point de code U+24B9 représente le symbole `"Ⓓ"`.
   Il est compatible avec le point de code U+0044 (`"D"`).
 
-À certains égards (comme le tri), vous devez les traiter comme équivalentes—et à d'autres
-(comme l'apparence visuelle), vous ne le devez pas, elles ne sont donc pas en équivalence canonique.
+À certains égards (comme le tri), vous devez les traiter comme équivalentes — et à d'autres (comme l'apparence visuelle), vous ne le devez pas, elles ne sont donc pas en équivalence canonique.
 
 Vous pouvez utiliser `normalize()` en utilisant les arguments `"NFKD"` ou `"NFKC"` pour produire une forme de la chaîne de caractères qui est la même pour toutes les chaînes de caractères compatibles&nbsp;:
 
