@@ -180,13 +180,7 @@ label:
   instrucción
 ```
 
-El valor de `label` puede ser cualquier identificador de JavaScript que no sea una palabra reservada. La `declaración` que identifica a una etiqueta puede ser cualquier enunciado.
-
-## Ejemplo
-
-En este ejemplo, la etiqueta `markLoop` identifica un bucle `while`.
-
-markLoop: while (theMark === true) { doSomething(); }
+El valor de `label` puede ser cualquier identificador de JavaScript que no sea una palabra reservada. La `declaración` que identifica a una etiqueta puede ser cualquier enunciado. Para ejemplos de uso de declaraciones etiquetadas, mira los ejemplos de `break` y `continue` más abajo.
 
 ## Declaración `break`
 
