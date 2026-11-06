@@ -37,7 +37,7 @@ Un ciclo {{JSxRef("Statements/for", "for")}} se repite hasta que una condición 
 
 Una declaración `for` tiene el siguiente aspecto:
 
-```
+```js-nolint
 for ([expresiónInicial]; [expresiónCondicional]; [expresiónDeActualización])
   instrucción
 ```
@@ -100,7 +100,7 @@ La instrucción {{JSxRef("Statements/do...while", "do...while")}} se repite hast
 
 Una declaración `do...while` tiene el siguiente aspecto:
 
-```
+```js-nolint
 do
   expresión
 while (condición);
@@ -114,13 +114,19 @@ Si `condición` es `true`, la declaración se ejecuta de nuevo. Al final de cada
 
 En el siguiente ejemplo, el bucle `do` itera al menos una vez y se repite hasta que `i` ya no sea menor que `5`.
 
-let i = 0; do { i += 1; console.log(i); } while (i < 5);
+```js
+let i = 0;
+do {
+  i += 1;
+  console.log(i);
+} while (i < 5);
+```
 
 ## Declaración `while`
 
 Una declaración {{JSxRef("Statements/while", "while")}} ejecuta sus instrucciones siempre que una condición especificada se evalúe como `true`. Una instrucción `while` tiene el siguiente aspecto:
 
-```
+```js-nolint
 while (condición)
   expresión
 ```
@@ -165,7 +171,14 @@ while (true) {
 
 ## Declaración `labeled`
 
-Una {{JSxRef("Statements/label", "label")}} proporciona una instrucción con un identificador que te permite hacer referencia a ella en otra parte de tu programa. Por ejemplo, puedes usar una etiqueta para identificar un bucle y luego usar las declaraciones `break` o `continue` para indicar si un programa debe interrumpir el bucle o continuar su ejecución.La sintaxis de la instrucción etiquetada es similar a la siguiente:label : instrucción
+Una {{JSxRef("Statements/label", "label")}} proporciona una instrucción con un identificador que te permite hacer referencia a ella en otra parte de tu programa. Por ejemplo, puedes usar una etiqueta para identificar un bucle y luego usar las declaraciones `break` o `continue` para indicar si un programa debe interrumpir el bucle o continuar su ejecución.
+
+La sintaxis de la instrucción etiquetada es similar a la siguiente:
+
+```js-nolint
+label:
+  instrucción
+```
 
 El valor de `label` puede ser cualquier identificador de JavaScript que no sea una palabra reservada. La `declaración` que identifica a una etiqueta puede ser cualquier enunciado.
 
@@ -184,7 +197,7 @@ Usa la instrucción {{JSxRef("Statements/break", "break")}} para terminar un buc
 
 La sintaxis de la instrucción `break` se ve así:
 
-```
+```js
 break;
 break [label];
 ```
@@ -234,7 +247,7 @@ La instrucción {{JSxRef("Statements/continue", "continue")}} se puede usar para
 
 La sintaxis de la instrucción `continue` se parece a la siguiente:
 
-```
+```js
 continue [label];
 ```
 
@@ -270,17 +283,34 @@ while (i < 5) {
 
 ### Ejemplo 2
 
-Una declaración etiquetada `checkiandj` contiene una declaración etiquetada `checkj`. Si se encuentra `continue`, el programa termina la iteración actual de `checkj` y comienza la siguiente iteración. Cada vez que se encuentra `continue`, `checkj` reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el resto de la instrucción `checkiandj` se completa y `checkiandj` reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el programa continúa en la declaración que sigue a `checkiandj`.
+Una declaración etiquetada `checkIandJ` contiene una declaración etiquetada `checkJ`. Si se encuentra `continue`, el programa termina la iteración actual de `checkJ` y comienza la siguiente iteración. Cada vez que se encuentra `continue`, `checkJ` reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el resto de la instrucción `checkIandJ` se completa y `checkIandJ` reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el programa continúa en la declaración que sigue a `checkIandJ`.
 
-Si `continue` tuviera una etiqueta de `checkiandj`, el programa continuaría en la parte superior de la declaración `checkiandj`.
+Si `continue` tuviera una etiqueta de `checkIandJ`, el programa continuaría en la parte superior de la declaración `checkIandJ`.
 
-let i = 0; let j = 10; checkiandj: while (i < 4) { console.log(i); i += 1; checkj: while (j > 4) { console.log(j); j -= 1; if ((j % 2) === 0) { continue checkj; } console.log(j + 'es impar.'); } console.log('i = ' + i); console.log('j = ' + j); }
+```js
+let i = 0;
+let j = 10;
+checkIandJ: while (i < 4) {
+  console.log(i);
+  i += 1;
+  checkJ: while (j > 4) {
+    console.log(j);
+    j -= 1;
+    if (j % 2 === 0) {
+      continue;
+    }
+    console.log(j, "es impar.");
+  }
+  console.log("i =", i);
+  console.log("j =", j);
+}
+```
 
 ## Declaración `for...in`
 
 La instrucción {{JSxRef("Statements/for...in", "for...in")}} itera una variable especificada sobre todas las propiedades enumerables de un objeto. Para cada propiedad distinta, JavaScript ejecuta las instrucciones especificadas. Una declaración `for...in` tiene el siguiente aspecto:
 
-```
+```js-nolint
 for (variable in objeto)
   instrucción
 ```
@@ -317,7 +347,7 @@ Por lo tanto, es mejor usar un bucle {{JSxRef("Statements/for", "for")}} tradici
 
 La declaración {{JSxRef("Statements/for...of", "for...of")}} crea un bucle que se repite sobre [objetos iterables](/es/docs/Web/JavaScript/Reference/Iteration_protocols) (incluidos {{JSxRef("Array")}}, {{JSxRef("Map")}}, {{JSxRef("Set")}}, objetos {{JSxRef("Functions/arguments", "arguments")}} y así sucesivamente), invocando un bucle de iteración personalizado con declaraciones que se ejecutarán para el valor de cada distinta propiedad.
 
-```
+```js-nolint
 for (variable of objeto)
   expresión
 ```
