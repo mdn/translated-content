@@ -2,10 +2,8 @@
 title: Baseline (ベースライン、組版)
 slug: Glossary/Baseline/Typography
 l10n:
-  sourceCommit: 243e5eabfe95971f2850fcfdf2a7b2f210c85532
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{GlossarySidebar}}
 
 **ベースライン**とは、行ボックスのインライン軸と平行の概念上の線であり、テキストの個々の文字が配置されるところです。ベースラインは、フォント内の文字のデザインや、組版において様々なフォントやフォントサイズの文字の配置をガイドします。
 
