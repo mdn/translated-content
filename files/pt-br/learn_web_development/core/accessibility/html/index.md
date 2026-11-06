@@ -150,7 +150,7 @@ A linguagem que você usa também pode afetar a acessibilidade. No geral, você 
 
 - Não utilize traços se você pode evitá-los. Ao invés de escrever 5-7, escreva 5 a 7.
 - Expanda as abreviações — ao invés de escrever Jan, escreva Janeiro.
-- Expanda os acrônimos, pelo menos uma ou duaz vezes. Ao invés de escrever direto HTML, escreva _Hypertext Markup Language_, ou HTML.
+- Expanda os acrônimos, pelo menos uma ou duas vezes. Ao invés de escrever direto HTML, escreva _Hypertext Markup Language_, ou HTML.
 
 ### Layouts de páginas
 
