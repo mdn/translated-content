@@ -1,11 +1,14 @@
 ---
-title: String.prototype.matchAll()
+title: "String : méthode matchAll()"
+short-title: matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
+l10n:
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-La méthode **`matchAll()`** renvoie un itérateur contenant l'ensemble des correspondances entre une chaîne de caractères d'une part et une expression rationnelle d'autre part (y compris les groupes capturants).
+La méthode **`matchAll()`** des valeurs {{JSxRef("String")}} retourne un itérateur contenant l'ensemble des résultats correspondant à cette chaîne de caractères par rapport à une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_expressions), y compris les [groupes capturant](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 
-{{InteractiveExample("JavaScript Demo: String.matchAll()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: String.prototype.matchAll()")}}
 
 ```js interactive-example
 const regexp = /t(e)(st(\d?))/g;
@@ -14,88 +17,142 @@ const str = "test1test2";
 const array = [...str.matchAll(regexp)];
 
 console.log(array[0]);
-// Expected output: Array ["test1", "e", "st1", "1"]
+// Résultat attendu : Array ["test1", "e", "st1", "1"]
 
 console.log(array[1]);
-// Expected output: Array ["test2", "e", "st2", "2"]
+// Résultat attendu : Array ["test2", "e", "st2", "2"]
 ```
 
 ## Syntaxe
 
-```js
-str.matchAll(regexp);
+```js-nolint
+matchAll(regexp)
 ```
 
 ### Paramètres
 
 - `regexp`
-  - : Un objet représentant une expression rationnelle. Si cet objet n'est pas une instance de {{jsxref("RegExp")}}, il est automatiquement et implicitement converti en une telle instance à l'aide de `new RegExp(obj)`.
+  - : Un objet représentant une expression rationnelle, ou tout objet possédant une méthode [`Symbol.matchAll`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/matchAll).
+
+    Si `regexp` n'est pas un objet `RegExp` et ne possède pas de méthode `Symbol.matchAll`, il est implicitement converti en {{JSxRef("RegExp")}} en utilisant `new RegExp(regexp, 'g')`.
+
+    Si `regexp` [est une expression rationnelle](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp#gestion_spéciale_pour_les_expressions_rationnelles), alors il doit avoir l'indicateur global (`g`) activé, sinon un {{JSxRef("TypeError")}} est levé.
 
 ### Valeur de retour
 
-Un [itérateur](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators).
+Un [objet itérateur itérable](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator) (qui ne peut pas être relancé) contenant les correspondances ou un itérateur vide si aucune correspondance n'est trouvée. Chaque valeur retournée par l'itérateur est un tableau ayant la même structure que la valeur de retour de {{JSxRef("RegExp.prototype.exec()")}}.
+
+### Exceptions
+
+- {{JSxRef("TypeError")}}
+  - : Levé si le paramètre `regexp` [est une expression rationnelle](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp#gestion_spéciale_pour_les_expressions_rationnelles) qui n'a pas l'indicateur global (`g`) activé (sa propriété [`flags`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) ne contient pas `"g"`).
+
+## Description
+
+L'implémentation de `String.prototype.matchAll` ne fait pas grand-chose d'autre que d'appeler la méthode `Symbol.matchAll` de l'argument avec la chaîne de caractères comme premier paramètre (à part la validation supplémentaire que l'expression rationnelle est globale). L'implémentation réelle provient de [`RegExp.prototype[Symbol.matchAll]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll).
 
 ## Exemples
 
-### `Regexp.exec()` et `matchAll()`
+### `Regexp.prototype.exec()` et `matchAll()`
 
-Avant l'apparition de `matchAll()` en JavaScript, il était possible d'utiliser {{jsxref("RegExp.exec")}} (et des expressions rationnelles utilisant le marqueur `/g`) dans une boucle afin d'obtenir l'ensemble des correspondances :
+Sans `matchAll()`, il est possible d'utiliser l'appel à [`regexp.exec()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) (et des expressions rationnelles avec l'indicateur `g`) dans une boucle pour obtenir toutes les correspondances&nbsp;:
 
 ```js
-const regexp = RegExp("foo*", "g");
-const str = "table football, foosball";
+const regexp = /foo[a-z]*/g;
+const chaine = "table football, foosball";
 
-while ((matches = regexp.exec(str)) !== null) {
+let correspondance;
+while ((correspondance = regexp.exec(chaine)) !== null) {
   console.log(
-    `${matches[0]} trouvé. Prochaine recherche à partir de ${regexp.lastIndex}.`,
+    `${correspondance[0]} trouvé. Prochaine recherche à partir de ${regexp.lastIndex}.`,
   );
   // dans la console : "foo trouvé. Prochaine recherche à partir de 9."
   // dans la console : "foo trouvé. Prochaine recherche à partir de 19."
 }
 ```
 
-Avec `matchAll()`, on peut éviter la boucle `while` et le marqueur global. On récupère l'itérateur et on utilise une boucle [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of), [la décomposition de tableau](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) ou encore {{jsxref("Array.from()")}} :
+Avec `matchAll()`, on peut éviter la boucle {{JSxRef("Statements/while", "while")}} et le marqueur global. On récupère l'itérateur et on utilise une boucle {{JSxRef("Statements/for...of", "for...of")}}, [la décomposition de tableau](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) ou le constructeur {{JSxRef("Array.from()")}}&nbsp;:
 
 ```js
-const regexp = RegExp("foo*", "g");
-const str = "table football, foosball";
-let matches = str.matchAll(regexp);
+const regexp = /foo[a-z]*/g;
+const chaine = "table football, foosball";
+const correspondances = chaine.matchAll(regexp);
 
-for (const match of matches) {
-  console.log(match);
+for (const correspondance of correspondances) {
+  console.log(
+    `${correspondance[0]} trouvé start=${correspondance.index} end=${
+      correspondance.index + correspondance[0].length
+    }.`,
+  );
 }
-// Array [ "foo" ]
-// Array [ "foo" ]
+// football trouvé start=6 end=14.
+// foosball trouvé start=16 end=24.
 
-// l'itérateur est épuise après l'itération via for..of
-// On rappelle matchAll afin de créer un nouvel itérateur
-matches = str.matchAll(regexp);
+// L'itérateur correspondants est épuisé après l'itération for…of
+// Appelez à nouveau matchAll pour créer un nouvel itérateur
+correspondances = chaine.matchAll(regexp);
 
-Array.from(matches, (m) => m[0]);
-// Array [ "foo", "foo" ]
+Array.from(correspondances, (m) => m[0]);
+// [ "football", "foosball" ]
 ```
 
-### Meilleur accès aux groupes capturants
-
-Un autre avantage de `matchAll()` est un meilleur accès aux groupes capturants. De fait, les groupes capturants sont ignorés par [`match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match) lorsqu'on utilise le marqueur global `/g` :
+`matchAll` lève une exception si l'indicateur `g` est absent.
 
 ```js
-var regexp = /t(e)(st(\d?))/g;
-var str = "test1test2";
-
-str.match(regexp);
-// Array ['test1', 'test2']
+const regexp = /[a-c]/;
+const str = "abc";
+str.matchAll(regexp);
+// TypeError
 ```
 
-Avec `matchAll()`, on peut y accéder :
+`matchAll` crée en interne une copie de `regexp` — ainsi, contrairement à {{JSxRef("RegExp/exec", "regexp.exec()")}}, `lastIndex` ne change pas pendant le parcours de la chaîne de caractères.
 
 ```js
-let array = [...str.matchAll(regexp)];
+const regexp = /[a-c]/g;
+regexp.lastIndex = 1;
+const str = "abc";
+Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
+// [ "1 b", "1 c" ]
+```
 
-array[0];
+Cependant, contrairement à l'utilisation de [`regexp.exec()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) dans une boucle, vous ne pouvez pas modifier `lastIndex` pour faire avancer ou reculer l'expression rationnelle.
+
+### Meilleur accès aux groupes capturant (que `String.prototype.match()`)
+
+Une autre raison importante d'utiliser `matchAll` est le meilleur accès aux groupes capturant.
+
+Les groupes capturant sont ignorés lors de l'utilisation de {{JSxRef("String/match", "match()")}} avec l'indicateur global `g`&nbsp;:
+
+```js
+const regexp = /t(e)(st(\d?))/g;
+const chaine = "test1test2";
+
+chaine.match(regexp); // ['test1', 'test2']
+```
+
+Avec `matchAll`, vous pouvez facilement accéder aux groupes capturant&nbsp;:
+
+```js
+const tableau = [...chaine.matchAll(regexp)];
+
+tableau[0];
 // ['test1', 'e', 'st1', '1', index: 0, input: 'test1test2', length: 4]
-array[1];
+tableau[1];
 // ['test2', 'e', 'st2', '2', index: 5, input: 'test1test2', length: 4]
+```
+
+### Utiliser `matchAll()` avec un objet autre qu'une expression rationnelle qui implémente `[Symbol.matchAll]()`
+
+Si un objet possède une méthode `Symbol.matchAll`, il peut servir de moteur de correspondance personnalisé. La valeur de retour de `Symbol.matchAll` devient celle de `matchAll()`.
+
+```js
+const chaine = "Hmm, c'est intéressant.";
+
+chaine.matchAll({
+  [Symbol.matchAll](chaine) {
+    return [["Oui, c'est intéressant."]];
+  },
+}); // retourne [["Oui, c'est intéressant."]]
 ```
 
 ## Spécifications
@@ -108,6 +165,12 @@ array[1];
 
 ## Voir aussi
 
-- {{jsxref("RegExp")}}
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `String.prototype.matchAll` dans `core-js`](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `String.prototype.matchAll`](https://www.npmjs.com/package/string.prototype.matchall)
+- Le guide [des expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
+- Le guide [des groupes et références arrière](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
+- La méthode {{JSxRef("String.prototype.match()")}}
+- L'objet natif {{JSxRef("RegExp")}}
+- La méthode {{JSxRef("RegExp.prototype.exec()")}}
+- La méthode {{JSxRef("RegExp.prototype.test()")}}
+- La méthode [`RegExp.prototype[Symbol.matchAll]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
