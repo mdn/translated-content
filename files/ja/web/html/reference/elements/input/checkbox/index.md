@@ -3,7 +3,7 @@ title: '`<input type="checkbox">` 属性値'
 short-title: <input type="checkbox">
 slug: Web/HTML/Reference/Elements/input/checkbox
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 {{htmlelement("input")}} 要素の **`checkbox`** 型は、デフォルトでボックスとして描画され、政府の書類で見られるように、有効な時にはチェックが入ります。正確な外見はブラウザーが実行されているオペレーティングシステムの構成によります。一般にこれは四角形ですが、角が丸くなることもあります。チェックボックスによって、フォームで単一の値を選択して（または選択せずに）送信することができます。
@@ -38,9 +38,6 @@ input {
   margin: 0.4rem;
 }
 ```
-
-> [!NOTE]
-> [ラジオボタン](/ja/docs/Web/HTML/Reference/Elements/input/radio)はチェックボックスと似ていますが、重要な違いがあります。[同じ名前のラジオボタン](/ja/docs/Web/HTML/Reference/Elements/input/radio#ラジオグループの定義)はグループ化されており、同時に 1 つしか選択できないのに対し、チェックボックスは単一の値をオンにしたりオフにしたり切り替えることができます。複数のコントロールがある場所では、ラジオボタンはその中で一つしか選択できませんが、チェックボックスは複数の値が選択できます。
 
 ## 値
 
@@ -93,7 +90,7 @@ input {
 
 ## チェックボックスの使用
 
-上記で最も基本的なチェックボックスの使用を見てきました。他に必要になりそうなチェックボックスに関するよく使われる機能や技術を見てみましょう。
+チェックボックスは[ラジオボタン](/ja/docs/Web/HTML/Reference/Elements/input/radio)と似ていますが、重要な違いがあります。[同じ名前のラジオボタン](/ja/docs/Web/HTML/Reference/Elements/input/radio#ラジオグループの定義)はグループ化され、同時に 1 つしか選択できません。一方、チェックボックスでは個々の値をオンまたはオフにできます。同じ名前のコントロールが複数ある場合、ラジオボタンではその中から 1 つだけを選択できますが、チェックボックスでは複数の値を選択できます。
 
 ### 複数チェックボックスの扱い
 
@@ -144,20 +141,17 @@ input {
 次の例では、チェックボックスをオン／オフスイッチのように見せて動作させる方法をご紹介します。
 
 ```html
-<form>
-  <fieldset>
-    <legend>設定を変更</legend>
-    <div>
-      <label for="theme">ダークモード</label>
-      <input type="checkbox" name="theme" id="theme" switch checked />
-    </div>
-    <div>
-      <label for="notifications">通知</label>
-      <input type="checkbox" name="notifications" id="notifications" switch />
-    </div>
-    <button type="submit">送信</button>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>設定を変更</legend>
+  <div>
+    <label for="theme">ダークモード</label>
+    <input type="checkbox" name="theme" id="theme" switch checked />
+  </div>
+  <div>
+    <label for="notifications">通知</label>
+    <input type="checkbox" name="notifications" id="notifications" switch />
+  </div>
+</fieldset>
 ```
 
 > [!NOTE]
@@ -228,37 +222,35 @@ function updateDisplay() {
 ```
 
 ```html live-sample___indeterminate_state
-<form>
-  <fieldset>
-    <legend>レシピを完成させる</legend>
-    <div>
-      <input type="checkbox" id="enchantment" name="enchantment" />
-      <label for="enchantment">魔法一覧表</label>
-      <ul>
-        <li>
-          <input type="checkbox" id="book" name="ingredient" value="book" />
-          <label for="book">本</label>
-        </li>
-        <li>
-          <input
-            type="checkbox"
-            id="diamonds"
-            name="ingredient"
-            value="diamonds" />
-          <label for="diamonds">ダイヤモンド (x2)</label>
-        </li>
-        <li>
-          <input
-            type="checkbox"
-            id="obsidian"
-            name="ingredient"
-            value="obsidian" />
-          <label for="obsidian">黒曜石 (x4)</label>
-        </li>
-      </ul>
-    </div>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>レシピを完成させる</legend>
+  <div>
+    <input type="checkbox" id="enchantment" name="enchantment" />
+    <label for="enchantment">魔法一覧表</label>
+    <ul>
+      <li>
+        <input type="checkbox" id="book" name="ingredient" value="book" />
+        <label for="book">本</label>
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          id="diamonds"
+          name="ingredient"
+          value="diamonds" />
+        <label for="diamonds">ダイヤモンド (x2)</label>
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          id="obsidian"
+          name="ingredient"
+          value="obsidian" />
+        <label for="obsidian">黒曜石 (x4)</label>
+      </li>
+    </ul>
+  </div>
+</fieldset>
 ```
 
 {{EmbedLiveSample("indeterminate_state", "", 200)}}
@@ -274,55 +266,50 @@ function updateDisplay() {
 ### HTML
 
 ```html live-sample___examples
-<form>
-  <fieldset>
-    <legend>興味のあるものを選択してください</legend>
-    <div>
-      <label>
-        <input type="checkbox" id="coding" name="interest" value="coding" />
-        コーディング
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="music" name="interest" value="music" />
-        音楽
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="art" name="interest" value="art" />
-        美術
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="sports" name="interest" value="sports" />
-        スポーツ
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="cooking" name="interest" value="cooking" />
-        料理
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="other" name="interest" value="other" />
-        その他
-      </label>
-      <input
-        type="text"
-        id="otherValue"
-        name="other"
-        aria-label="Other interest" />
-    </div>
-    <div>
-      <button type="submit">フォームを送信</button>
-    </div>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>興味のあるものを選択してください</legend>
+  <div>
+    <label>
+      <input type="checkbox" id="coding" name="interest" value="coding" />
+      コーディング
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="music" name="interest" value="music" />
+      音楽
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="art" name="interest" value="art" />
+      美術
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="sports" name="interest" value="sports" />
+      スポーツ
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="cooking" name="interest" value="cooking" />
+      料理
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="other" name="interest" value="other" />
+      その他
+    </label>
+    <input
+      type="text"
+      id="otherValue"
+      name="other"
+      aria-label="その他の関心事" />
+  </div>
+</fieldset>
 ```
 
 ### CSS
@@ -332,16 +319,13 @@ html {
   font-family: sans-serif;
 }
 
-form {
-  width: 600px;
-  margin: 0 auto;
-}
-
 div {
   margin-bottom: 10px;
 }
 
 fieldset {
+  width: 600px;
+  margin: 0 auto;
   background: cyan;
   border: 5px solid blue;
 }
@@ -401,12 +385,6 @@ otherCheckbox.addEventListener("change", () => {
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
