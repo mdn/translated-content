@@ -23,7 +23,7 @@ slug: Web/API/PerformanceEntry
 - {{domxref("PerformanceEntry.name")}} {{readonlyInline}}
   - : A value that further specifies the value returned by the {{domxref("PerformanceEntry.entryType")}} property. The value of both depends on the subtype. See property page for valid values.
 - {{domxref("PerformanceEntry.entryType")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}} representing the type of performance metric such as, for example, "`mark`". See property page for valid values.
+  - : A {{jsxref("String")}} representing the type of performance metric such as, for example, "`mark`". See property page for valid values.
 - {{domxref("PerformanceEntry.startTime")}} {{readonlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the starting time for the performance metric.
 - {{domxref("PerformanceEntry.duration")}} {{readonlyInline}}
