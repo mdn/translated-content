@@ -1,7 +1,6 @@
 ---
 title: Block (ブロック)
 slug: Glossary/Block
-page-type: glossary-disambiguation
 l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
