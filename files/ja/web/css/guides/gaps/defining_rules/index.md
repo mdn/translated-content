@@ -149,7 +149,7 @@ div {
 - {{cssxref("&lt;line-style&gt;")}}
   - : 描画される線のスタイルを定義するキーワードで、`solid`、`dashed`、`dotted`、`double`、`groove`、`ridge`、`inset`、`outset`、`none`、`hidden` のいずれか。デフォルトは `none` です。
 - `<repeat-line-style>`
-  - : `repeat()` 関数。最初の引数として {{cssxref(「&lt;integer&gt;」)}} を、その後の引数として 1 つ以上の `<line-style>` 値を指定します。`<integer>` の値は `1` 以上で、`<line-style>` 値のリストを何回繰り返すかを指定します。
+  - : `repeat()` 関数。最初の引数として {{cssxref("&lt;integer&gt;")}} を、その後の引数として 1 つ以上の `<line-style>` 値を指定します。`<integer>` の値は `1` 以上で、`<line-style>` 値のリストを何回繰り返すかを指定します。
 - `<auto-repeat-line-style>`
   - : `repeat()` 関数。最初の引数に `auto` を、その後の引数に 1 つ以上の `<line-style>` 値を指定します。これにより、自動リピーターが生成され、プロパティ値の他の要素から値を受け取らない隙間の罫線に `<line-style>` 値が割り当てられます。これにより、プロパティのカンマ区切りリストが循環することを防ぎます。リストには、`<auto-repeat-line-style>` の値を最大 1 つだけ含めることができます。
 
