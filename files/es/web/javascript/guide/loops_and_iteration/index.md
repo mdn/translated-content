@@ -38,7 +38,7 @@ Un ciclo {{JSxRef("Statements/for", "for")}} se repite hasta que una condición 
 Una declaración `for` tiene el siguiente aspecto:
 
 ```js-nolint
-for ([expresiónInicial]; [expresiónCondicional]; [expresiónDeActualización])
+for (expresiónInicial; expresiónCondicional; expresiónDeActualización)
   instrucción
 ```
 
@@ -307,10 +307,10 @@ for (variable in objeto)
 La siguiente función toma como argumento un objeto y el nombre del objeto. Luego itera sobre todas las propiedades del objeto y devuelve una cadena que enumera los nombres de las propiedades y sus valores.
 
 ```js
-function dump_props(obj, obj_name) {
+function dumpProps(obj, objName) {
   let result = "";
-  for (let i in obj) {
-    result += obj_name + "." + i + " = " + obj[i] + "<br>";
+  for (const i in obj) {
+    result += `${objName}.${i} = ${obj[i]}<br>`;
   }
   result += "<hr>";
   return result;
@@ -319,9 +319,9 @@ function dump_props(obj, obj_name) {
 
 Para un objeto `car` con propiedades `make` y `model`, `result` sería:
 
-```js
-car.make = Ford;
-car.model = Mustang;
+```
+car.make = Ford
+car.model = Mustang
 ```
 
 ### Arrays
@@ -345,13 +345,15 @@ El siguiente ejemplo muestra la diferencia entre un bucle `for...of` y un bucle 
 const arr = [3, 5, 7];
 arr.foo = "hola";
 
-for (let i in arr) {
-  console.log(i); // logs "0", "1", "2", "foo"
+for (const i in arr) {
+  console.log(i);
 }
+// "0" "1" "2" "foo"
 
-for (let i of arr) {
-  console.log(i); // logs 3, 5, 7
+for (const i of arr) {
+  console.log(i);
 }
+// Muestra: 3 5 7
 ```
 
 Las declaraciones `for...of` y `for...in` también se pueden usar con [desestructuración](/es/docs/Web/JavaScript/Reference/Operators/Destructuring). Por ejemplo, puedes recorrer simultáneamente las claves y los valores de un objeto usando {{JSxRef("Object.entries()")}}.
