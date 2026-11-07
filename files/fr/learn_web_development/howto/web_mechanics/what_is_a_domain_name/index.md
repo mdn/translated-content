@@ -147,5 +147,5 @@ Comme nous l'avons mentionné au début, quand on souhaite se rendre sur un site
 Dans ces articles, nous avons beaucoup discuté des processus et de l'infrastructure. Nous allons maintenant passer à la suite :
 
 - Si vous souhaitez commencer, débutez en explorant les différents design possibles décrit sur [concevoir une page web](/fr/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts).
-- Construire un site web peut coûter de l'argent. Vous trouverez les différentes informations sur [combien coûte la construction d'un site web](/fr/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost).
+- Construire un site web peut coûter de l'argent. Vous trouverez les différentes informations sur [combien coûte la construction d'un site web](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website).
 - Vous pouvez aussi approfondir en consultant l'article sur [les noms de domaine](https://fr.wikipedia.org/wiki/Nom_de_domaine) sur Wikipédia.

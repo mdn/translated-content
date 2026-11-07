@@ -11,5 +11,5 @@ Pendant de nombreuses années, c'était le standard _de facto_ pour le transfert
 
 ## Voir aussi
 
-- [Guide du débutant pour mettre en ligne des fichiers via FTP](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [Guide du débutant pour mettre en ligne des fichiers via FTP](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 - [FTP](https://fr.wikipedia.org/wiki/File_Transfer_Protocol) sur Wikipédia
