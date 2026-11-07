@@ -195,7 +195,7 @@ La sintaxis de la instrucción `break` se ve así:
 
 ```js
 break;
-break [label];
+break label;
 ```
 
 1. La primera forma de la sintaxis termina el bucle envolvente más interno o el `switch.`
@@ -219,11 +219,11 @@ for (let i = 0; i < a.length; i++) {
 let x = 0;
 let z = 0;
 labelCancelLoops: while (true) {
-  console.log("Bucles externos: " + x);
+  console.log("Bucles externos: ", x);
   x += 1;
   z = 1;
   while (true) {
-    console.log("Bucles internos: " + z);
+    console.log("Bucles internos: ", z);
     z += 1;
     if (z === 10 && x === 10) {
       break labelCancelLoops;
@@ -244,7 +244,8 @@ La instrucción {{JSxRef("Statements/continue", "continue")}} se puede usar para
 La sintaxis de la instrucción `continue` se parece a la siguiente:
 
 ```js
-continue [label];
+continue;
+continue label;
 ```
 
 ### Ejemplo 1
