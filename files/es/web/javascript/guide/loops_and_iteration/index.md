@@ -260,20 +260,11 @@ while (i < 5) {
   n += i;
   console.log(n);
 }
-//1,3,7,12
-
-let i = 0;
-let n = 0;
-while (i < 5) {
-  i++;
-  if (i === 3) {
-    // continue;
-  }
-  n += i;
-  console.log(n);
-}
-// 1,3,6,10,15
+// Muestra:
+// 1 3 7 12
 ```
+
+Si comentas `continue;`, el bucle se ejecutaría hasta el final y verías `1,3,6,10,15`.
 
 ### Ejemplo 2
 
