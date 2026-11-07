@@ -354,4 +354,16 @@ for (let i of arr) {
 }
 ```
 
+Las declaraciones `for...of` y `for...in` también se pueden usar con [desestructuración](/es/docs/Web/JavaScript/Reference/Operators/Destructuring). Por ejemplo, puedes recorrer simultáneamente las claves y los valores de un objeto usando {{JSxRef("Object.entries()")}}.
+
+```js
+const obj = { foo: 1, bar: 2 };
+
+for (const [key, val] of Object.entries(obj)) {
+  console.log(key, val);
+}
+// "foo" 1
+// "bar" 2
+```
+
 {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
