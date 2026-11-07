@@ -19,8 +19,8 @@ Des connaissances minimales en concepts de programmation pourront être utiles, 
 Vous allez avoir besoin de comprendre "comment le fonctionne le Web". Nous vous recommandons premièremement de lire les sujets suivants :
 
 - [Qu'est-ce qu'un serveur web](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
-- [De quel logiciels ai-je besoin afin de faire des sites web ?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- [Comment transférer des fichiers à un serveur web ?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [De quel logiciels ai-je besoin afin de faire des sites web ?](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
+- [Comment transférer des fichiers à un serveur web ?](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 
 Ces articles vous donnerons les outils nécessaires afin de travailler avec les modules de cette section.
 
