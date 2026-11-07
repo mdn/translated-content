@@ -1226,12 +1226,6 @@
       "gsb6"
     ]
   },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_getting_started": {
-    "modified": "2020-07-16T22:39:49.009Z",
-    "contributors": [
-      "fred_melo_07"
-    ]
-  },
   "Learn_web_development/Core/Scripting": {
     "modified": "2020-07-16T22:29:54.330Z",
     "contributors": [
@@ -2286,12 +2280,6 @@
       "kabwto"
     ]
   },
-  "Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server": {
-    "modified": "2020-11-22T03:28:22.451Z",
-    "contributors": [
-      "kvojps"
-    ]
-  },
   "Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools": {
     "modified": "2020-07-16T22:35:47.861Z",
     "contributors": [
@@ -2300,12 +2288,6 @@
       "ocaccy",
       "7aylors",
       "rubenfaria"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need": {
-    "modified": "2020-07-16T22:35:33.538Z",
-    "contributors": [
-      "sredoja"
     ]
   },
   "Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server": {
@@ -14433,6 +14415,12 @@
       "GiovanniHD201E"
     ]
   },
+  "conflicting/Learn_web_development/Core/Frameworks_libraries": {
+    "modified": "2020-07-16T22:39:49.009Z",
+    "contributors": [
+      "fred_melo_07"
+    ]
+  },
   "conflicting/Learn_web_development/Core/Scripting": {
     "modified": "2020-07-16T22:31:10.224Z",
     "contributors": [
@@ -14537,6 +14525,18 @@
     "modified": "2020-07-16T22:28:09.218Z",
     "contributors": [
       "terasider"
+    ]
+  },
+  "conflicting/Learn_web_development/Getting_started/Environment_setup/Installing_software": {
+    "modified": "2020-07-16T22:35:33.538Z",
+    "contributors": [
+      "sredoja"
+    ]
+  },
+  "conflicting/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website": {
+    "modified": "2020-11-22T03:28:22.451Z",
+    "contributors": [
+      "kvojps"
     ]
   },
   "conflicting/MDN/Community": {
