@@ -1,7 +1,7 @@
 ---
 title: Choisir, installer et paramétrer un éditeur de texte
-slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
-original_slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
+slug: conflicting/Learn_web_development/Getting_started/Environment_setup/Code_editors
+original_slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 ---
 
 Dans cet article, nous présentons les éléments principaux à connaître pour installer un éditeur de texte utilisé pour du développement web.
