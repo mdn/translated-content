@@ -30,7 +30,7 @@ text-justify: distribute; /* 已被废除，不提倡使用 */
 - `inter-character`
   - : 通过在文本中的字符之间添加空间来实现行对齐（这将会改变 {{cssxref("letter-spacing")}} 的值），比如日语就是最适合使用这个属性的语言。
 - `distribute` {{deprecated_inline}}
-  - : 显示效果与设置了 `inter-word` 一致，不提倡使用这个属性，现在这个属性或许还能有效果，但那完全是为了向后兼容而被保留着。
+  - : 显示效果与 `inter-character` 一致，此属性为向后兼容而保留。
 
 ### 语法
 
