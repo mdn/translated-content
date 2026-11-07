@@ -3,10 +3,10 @@ title: TypedArray.prototype.values()
 short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
 ---
 
-**`values()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、配列内の各インデックスに対する値を持つ新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.values()")}} と同じです。
+**`values()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の各要素の値を反復処理する新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.values()")}} と同じです。
 
 {{InteractiveExample("JavaScript デモ: TypedArray.prototype.values()")}}
 
@@ -33,7 +33,7 @@ values()
 
 ### 返値
 
-新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトです。
+新しい[反復可能イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
 
 ## 解説
 
@@ -73,7 +73,7 @@ console.log(values.next().value); // 50
 
 ## 関連情報
 
-- [`TypedArray.prototype.values` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.values` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}

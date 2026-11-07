@@ -3,10 +3,10 @@ title: TypedArray.prototype.toSorted()
 short-title: toSorted()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toSorted
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
 ---
 
-**`toSorted()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、 {{jsxref("TypedArray/sort", "sort()")}} メソッドの[コピーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)版です。これは、要素を昇順にソートした新しい型付き配列を返します。このメソッドは {{jsxref("Array.prototype.toSorted()")}} と同じアルゴリズムですが、既定で文字列としてではなく数値として値をソートする点が異なります。
+**`toSorted()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、 {{jsxref("TypedArray/sort", "sort()")}} メソッドの[コピーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)版です。これは、要素を昇順にソートした新しい型付き配列を返します。このメソッドは {{jsxref("Array.prototype.toSorted()")}} と同じアルゴリズムですが、デフォルトで文字列としてではなく数値として値をソートする点が異なります。
 
 ## 構文
 
@@ -53,7 +53,7 @@ console.log(numbers); // Uint8Array [ 40, 1, 5, 200 ]
 
 ## 関連情報
 
-- [`TypedArray.prototype.toSorted` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#change-array-by-copy)
+- [`TypedArray.prototype.toSorted` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray.prototype.sort()")}}
 - {{jsxref("TypedArray.prototype.toReversed()")}}
