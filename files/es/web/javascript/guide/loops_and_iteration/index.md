@@ -52,7 +52,7 @@ Cuando se ejecuta un bucle `for`, ocurre lo siguiente:
 
 ### Ejemplo
 
-En el siguiente ejemplo, la función contiene una instrucción `for` que cuenta el número de opciones seleccionadas en una lista de desplazamiento (el elemento {{HTMLElement("select")}} de HTML representa un control que proporciona un menú de opciones que permite múltiples selecciones).
+En el siguiente ejemplo, la función contiene una instrucción `for` que cuenta el número de opciones seleccionadas en una lista de desplazamiento (un elemento {{HTMLElement("select")}} que permite múltiples selecciones).
 
 #### HTML
 
@@ -336,7 +336,7 @@ Por lo tanto, es mejor usar un bucle {{JSxRef("Statements/for", "for")}} tradici
 La declaración {{JSxRef("Statements/for...of", "for...of")}} crea un bucle que se repite sobre [objetos iterables](/es/docs/Web/JavaScript/Reference/Iteration_protocols) (incluidos {{JSxRef("Array")}}, {{JSxRef("Map")}}, {{JSxRef("Set")}}, objetos {{JSxRef("Functions/arguments", "arguments")}} y así sucesivamente), invocando un bucle de iteración personalizado con declaraciones que se ejecutarán para el valor de cada distinta propiedad.
 
 ```js-nolint
-for (variable of objeto)
+for (variable of iterable)
   expresión
 ```
 
