@@ -22,14 +22,14 @@ Los diversos mecanismos de bucle ofrecen diferentes formas de determinar los pun
 
 Las declaraciones para bucles proporcionadas en JavaScript son:
 
-- [Declaración for](#declaracion_for)
-- [Declaración do...while](#declaracion_do...while)
-- [Declaración while](#declaracion_while)
-- [Declaración labeled](#declaracion_labeled)
-- [Declaración break](#declaracion_break)
-- [Declaración continue](#declaracion_continue)
-- [Declaración for...in](#declaracion_for...in)
-- [Declaración for...of](#declaracion_for...of)
+- [Declaración for](#declaración_for)
+- [Declaración do...while](#declaración_do...while)
+- [Declaración while](#declaración_while)
+- [Declaración labeled](#declaración_labeled)
+- [Declaración break](#declaración_break)
+- [Declaración continue](#declaración_continue)
+- [Declaración for...in](#declaración_for...in)
+- [Declaración for...of](#declaración_for...of)
 
 ## Declaración `for`
 
