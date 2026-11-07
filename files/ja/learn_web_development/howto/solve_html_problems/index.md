@@ -1,11 +1,12 @@
 ---
 title: よくある HTML の問題の解決
+short-title: よくある HTML の問題
 slug: Learn_web_development/Howto/Solve_HTML_problems
 l10n:
-  sourceCommit: eb20babb96149f98bcbf7817b58e305c5297f2e1
+  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
 ---
 
-{{LearnSidebar}}
+## よくある問題と解決策
 
 以下のリンクは、 HTML で解決しなければならない日常的な問題の解決策を示すものです。
 
