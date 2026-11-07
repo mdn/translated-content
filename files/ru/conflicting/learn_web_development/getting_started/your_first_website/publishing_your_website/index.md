@@ -1,6 +1,7 @@
 ---
 title: Как загрузить файлы на веб-сервер
-slug: Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
+slug: conflicting/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
+original_slug: Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 ---
 
 {{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
