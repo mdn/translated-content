@@ -200,7 +200,7 @@ break;
 break label;
 ```
 
-1. La primera forma de la sintaxis termina el bucle envolvente más interno o el `switch.`
+1. La primera forma de la sintaxis termina el bucle envolvente más interno o el `switch`.
 2. La segunda forma de la sintaxis termina la instrucción etiquetada específica.
 
 ### Ejemplo 1
