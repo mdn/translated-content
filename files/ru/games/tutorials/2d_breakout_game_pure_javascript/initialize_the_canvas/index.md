@@ -3,7 +3,7 @@ title: Создание Canvas и рисование на нём
 slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball")}}
 
 Это **1й шаг** из 10 [Gamedev Canvas tutorial](/ru/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Вы можете найти исходный код для этого урока по ссылке [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html).
 
