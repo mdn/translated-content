@@ -3,7 +3,7 @@ title: "Function: name"
 short-title: name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
 ---
 
 **`name`** は {{jsxref("Function")}} オブジェクトの読み取り専用プロパティで、作成時に付けられた関数の名前、もしくは無名関数の場合は `anonymous` または `''` （空文字列）を返します。
@@ -26,7 +26,7 @@ console.log(object.func2.name);
 
 ## 値
 
-数値です。
+文字列です。
 
 {{js_property_attributes(0, 0, 1)}}
 
@@ -35,7 +35,7 @@ console.log(object.func2.name);
 
 ## 解説
 
-関数の `name` プロパティは、デバッグツールやエラーメッセージで関数を識別するために使用することができます。言語自体には意味づけは存在しません。
+関数の `name` プロパティは、デバッグツールやエラーメッセージで関数を識別するために使用できます。このプロパティは、言語自体の意味論には影響しません。
 
 `name` プロパティは読み取り専用のため、代入演算子で変更することはできません。
 
@@ -48,7 +48,7 @@ console.log(someFunction.name); // someFunction
 
 変更するには、 {{jsxref("Object.defineProperty()")}} を使用してください。
 
-`name` プロパティは、関数が定義されている方法から通常推測されます。次の節では、それが推測されるさまざまな方法について記述します。
+`name` プロパティは、関数の定義方法から通常推測されます。次の節では、名前が推測されるさまざまな方法について説明します。
 
 ### 関数宣言
 
@@ -90,14 +90,14 @@ const someFunction = function someFunctionName() {};
 someFunction.name; // "someFunctionName"
 ```
 
-`function` キーワードまたはアロー関数構文を使用して作成される無名関数式は、既定で名前が `""` （空文字列）になります。
+`function` キーワードまたはアロー関数構文を使用して作成される無名関数式は、デフォルトで名前が `""` （空文字列）になります。
 
 ```js
 (function () {}).name; // ""
 (() => {}).name; // ""
 ```
 
-ただし、そのようなケースはまれです。通常、関数を別の場所で呼び出すためには、関数式は識別子に関連付けられます。無名関数式の名前は、特定の構文コンテキスト内、たとえば[変数宣言とメソッド](#変数宣言とメソッド)、[初期化子と既定値](#初期化子と既定値)で推測できます。
+ただし、そのようなケースはまれです。通常、関数を別の場所で呼び出すためには、関数式は識別子に関連付けられます。無名関数式の名前は、特定の構文コンテキスト内、たとえば[変数宣言とメソッド](#変数宣言とメソッド)、[初期化子とデフォルト値](#初期化子とデフォルト値)で推測できます。
 
 名前付きであることが推測できない実用的な例としては、別の関数から返される関数があります。
 
@@ -130,9 +130,9 @@ f = () => {};
 f.name; // "f"
 ```
 
-### 初期化子と既定値
+### 初期化子とデフォルト値
 
-[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#既定値)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)などの初期化子（既定値）の関数は、バインド済みの識別子の名前を `name` として継承します。
+[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#既定値)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)などの初期化子（デフォルト値）の関数は、束縛された識別子の名前を `name` として継承します。
 
 ```js
 const [f = () => {}] = [];
@@ -187,9 +187,9 @@ descriptor.get.name; // "get foo"
 descriptor.set.name; // "set foo";
 ```
 
-### クラスでの関数名
+### クラス
 
-`obj.constructor.name` でオブジェクトの「クラス」を知ることができます (ただし、下記の警告を確認してください)。
+クラス名には、関数宣言や関数式と同じアルゴリズムが適用されます。
 
 ```js
 class Foo {}
@@ -197,7 +197,7 @@ Foo.name; // "Foo"
 ```
 
 > [!WARNING]
-> JavaScript は、関数に `name` というプロパティが存在しない場合にのみ、関数の `name` プロパティを設定します。ただし、クラスの[静的メンバー](/ja/docs/Web/JavaScript/Reference/Classes/static)は、クラスコンストラクター関数のプロパティとして設定されるため、組み込みの `name` が適用されるのを防ぎます。下記の[例](#オブジェクトのコンストラクター名を示す)を参照してください。
+> JavaScript は、関数に `name` という独自のプロパティがない場合にのみ、関数の `name` プロパティを設定します。ただし、クラスの[静的メンバー](/ja/docs/Web/JavaScript/Reference/Classes/static)はクラスコンストラクター関数自身のプロパティになるため、組み込みの `name` が設定されなくなります。下記の[例](#オブジェクトのコンストラクター名を示す)をご覧ください。
 
 ### 関数名としてのシンボル
 
@@ -248,7 +248,7 @@ const fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // "Foo"
 ```
 
-しかし、静的メンバーは自分自身でクラスのプロパティとなるため、静的メソッドプロパティ `name()` を持つほぼすべてのクラスについて、クラス名を取得することはできません。
+しかし、静的メンバーはクラス自身のプロパティになるため、静的メソッドプロパティ `name()` を持つほぼすべてのクラスでは、クラス名を取得できません。
 
 ```js
 class Foo {
@@ -273,7 +273,7 @@ class Foo {
 console.log(new Foo().constructor.name); // 123
 ```
 
-クラスに `name` という静的プロパティがある場合、「書き込み可能」にもなります。このような独自の手法を用いなければ、既定では「読み取り専用」となります。
+クラスに `name` という静的プロパティがある場合、`name` は書き込み可能にもなります。独自の静的定義がない場合、組み込みの `name` は読み取り専用です。
 
 ```js
 Foo.name = "Hello";
@@ -285,7 +285,7 @@ console.log(Foo.name); // Foo に静的な "name" がある場合は "Hello"、�
 ### JavaScript 圧縮ツールおよび最小化ツール
 
 > [!WARNING]
-> `name` プロパティを使用しているときに、 JavaScript の圧縮（ミニファイ）や難読化のような変換を行う際には注意が必要です。これらのツールは JavaScript ビルドパイプラインの一部として、本番環境に設置する前にプログラムのサイズを縮小するためによく使用されます。これらの変換は、ビルド時に関数名を変更することがあります。
+> `name` プロパティを使用しているときに、JavaScript の圧縮（ミニファイ）や難読化のような変換を行う場合は注意が必要です。これらのツールは JavaScript のビルドパイプラインの一部として、本番環境にデプロイする前にプログラムのサイズを縮小するためによく使用されます。このような変換では、ビルド時に関数名が変更されることがあります。
 
 次のようなソースコードは、
 
@@ -324,6 +324,6 @@ if (b.constructor.name === "Foo") {
 
 ## 関連情報
 
-- [`Function: name` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-function)
+- [`Function: name` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/function)
 - [es-shims polyfill of `Function.prototype.name`](https://www.npmjs.com/package/function.prototype.name)
 - {{jsxref("Function")}}
