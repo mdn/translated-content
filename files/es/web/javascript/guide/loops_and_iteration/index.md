@@ -1,6 +1,8 @@
 ---
 title: Bucles e iteración
 slug: Web/JavaScript/Guide/Loops_and_iteration
+l10n:
+  sourceCommit: 0abb70602b0b3b11a2909c417a03e10eabd607a8
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
