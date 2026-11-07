@@ -1,6 +1,8 @@
 ---
 title: Bucles e iteración
 slug: Web/JavaScript/Guide/Loops_and_iteration
+l10n:
+  sourceCommit: 0abb70602b0b3b11a2909c417a03e10eabd607a8
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
@@ -22,14 +24,14 @@ Los diversos mecanismos de bucle ofrecen diferentes formas de determinar los pun
 
 Las declaraciones para bucles proporcionadas en JavaScript son:
 
-- [Declaración for](#declaracion_for)
-- [Declaración do...while](#declaracion_do...while)
-- [Declaración while](#declaracion_while)
-- [Declaración labeled](#declaracion_labeled)
-- [Declaración break](#declaracion_break)
-- [Declaración continue](#declaracion_continue)
-- [Declaración for...in](#declaracion_for...in)
-- [Declaración for...of](#declaracion_for...of)
+- [Declaración for](#declaración_for)
+- [Declaración do...while](#declaración_do...while)
+- [Declaración while](#declaración_while)
+- [Declaración labeled](#declaración_labeled)
+- [Declaración break](#declaración_break)
+- [Declaración continue](#declaración_continue)
+- [Declaración for...in](#declaración_for...in)
+- [Declaración for...of](#declaración_for...of)
 
 ## Declaración `for`
 
@@ -37,61 +39,63 @@ Un ciclo {{JSxRef("Statements/for", "for")}} se repite hasta que una condición 
 
 Una declaración `for` tiene el siguiente aspecto:
 
-```
-for ([expresiónInicial]; [expresiónCondicional]; [expresiónDeActualización])
+```js-nolint
+for (expresiónInicial; expresiónCondicional; expresiónDeActualización)
   instrucción
 ```
 
 Cuando se ejecuta un bucle `for`, ocurre lo siguiente:
 
 1. Se ejecuta la expresión de iniciación `expresiónInicial`, si existe. Esta expresión normalmente inicia uno o más contadores de bucle, pero la sintaxis permite una expresión de cualquier grado de complejidad. Esta expresión también puede declarar variables.
-2. Se evalúa la expresión `expresiónCondicional`. Si el valor de `expresiónCondicional` es verdadero, se ejecutan las instrucciones del bucle. Si el valor de `condición` es falso, el bucle `for` termina. (Si la expresión `condición` se omite por completo, se supone que la condición es verdadera).
+2. Se evalúa la expresión `expresiónCondicional`. Si el valor de `expresiónCondicional` es verdadero, se ejecutan las instrucciones del bucle. Si el valor de `expresiónCondicional` es falso, el bucle `for` termina. (Si la expresión `expresiónCondicional` se omite por completo, se supone que la condición es verdadera).
 3. Se ejecuta la `instrucción`. Para ejecutar varias instrucciones, usa una declaración de bloque (`{ ... }`) para agrupar esas declaraciones.
 4. Si está presente, se ejecuta la expresión de actualización `expresiónDeActualización`.
 5. El control regresa al paso 2.
 
 ### Ejemplo
 
-En el siguiente ejemplo, la función contiene una instrucción `for` que cuenta el número de opciones seleccionadas en una lista de desplazamiento (el elemento {{HTMLElement("select")}} de HTML representa un control que proporciona un menú de opciones que permite múltiples selecciones). La instrucción `for` declara la variable `i` y la inicia a `0`. Comprueba que `i` es menor que el número de opciones en el elemento `<select>`, realiza la siguiente instrucción `if` e incrementa `i` después de cada pasada por el bucle.
+En el siguiente ejemplo, la función contiene una instrucción `for` que cuenta el número de opciones seleccionadas en una lista de desplazamiento (un elemento {{HTMLElement("select")}} que permite múltiples selecciones).
+
+#### HTML
 
 ```html
 <form name="selectForm">
-  <p>
-    <label for="musicTypes"
-      >Elija algunos tipos de música, luego haga clic en el botón de
-      abajo:</label
-    >
-    <select id="musicTypes" name="musicTypes" multiple="multiple">
-      <option selected="selected">R&B</option>
-      <option>Jazz</option>
-      <option>Blues</option>
-      <option>New Age</option>
-      <option>Classical</option>
-      <option>Opera</option>
-    </select>
-  </p>
-  <p><input id="btn" type="button" value="¿Cuántos están seleccionados?" /></p>
+  <label for="musicTypes"
+    >Elige algunos tipos de música, luego haz clic en el botón de abajo:</label
+  >
+  <select id="musicTypes" name="musicTypes" multiple>
+    <option selected>R&amp;B</option>
+    <option>Jazz</option>
+    <option>Blues</option>
+    <option>New Age</option>
+    <option>Classical</option>
+    <option>Opera</option>
+  </select>
+  <button id="btn" type="button">¿Cuántos están seleccionados?</button>
 </form>
+```
 
-<script>
-  function howMany(selectObject) {
-    let numberSelected = 0;
-    for (let i = 0; i < selectObject.options.length; i++) {
-      if (selectObject.options[i].selected) {
-        numberSelected++;
-      }
+#### JavaScript
+
+La instrucción `for` declara la variable `i` y la inicia a `0`. Comprueba que `i` es menor que el número de opciones en el elemento `<select>`, realiza la siguiente instrucción `if` e incrementa `i` después de cada pasada por el bucle.
+
+```js
+function countSelected(selectObject) {
+  let numberSelected = 0;
+  for (let i = 0; i < selectObject.options.length; i++) {
+    if (selectObject.options[i].selected) {
+      numberSelected++;
     }
-    return numberSelected;
   }
+  return numberSelected;
+}
 
-  let btn = document.getElementById("btn");
-  btn.addEventListener("click", function () {
-    alert(
-      "Número de opciones seleccionadas: " +
-        howMany(document.selectForm.musicTypes),
-    );
-  });
-</script>
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", () => {
+  const musicTypes = document.selectForm.musicTypes;
+  console.log(`Has seleccionado ${countSelected(musicTypes)} opción(es).`);
+});
 ```
 
 ## Declaración `do...while`
@@ -100,13 +104,13 @@ La instrucción {{JSxRef("Statements/do...while", "do...while")}} se repite hast
 
 Una declaración `do...while` tiene el siguiente aspecto:
 
-```
+```js-nolint
 do
   expresión
 while (condición);
 ```
 
-`exposición` siempre se ejecuta una vez antes de que se verifique la condición. (Para ejecutar varias instrucciones, usa una declaración de bloque (`{ ... }`) para agrupar esas declaraciones).
+`expresión` siempre se ejecuta una vez antes de que se verifique la condición. (Para ejecutar varias instrucciones, usa una declaración de bloque (`{ ... }`) para agrupar esas declaraciones).
 
 Si `condición` es `true`, la declaración se ejecuta de nuevo. Al final de cada ejecución, se comprueba la condición. Cuando la condición es `false`, la ejecución se detiene y el control pasa a la declaración que sigue a `do...while`.
 
@@ -114,13 +118,19 @@ Si `condición` es `true`, la declaración se ejecuta de nuevo. Al final de cada
 
 En el siguiente ejemplo, el bucle `do` itera al menos una vez y se repite hasta que `i` ya no sea menor que `5`.
 
-let i = 0; do { i += 1; console.log(i); } while (i < 5);
+```js
+let i = 0;
+do {
+  i += 1;
+  console.log(i);
+} while (i < 5);
+```
 
 ## Declaración `while`
 
 Una declaración {{JSxRef("Statements/while", "while")}} ejecuta sus instrucciones siempre que una condición especificada se evalúe como `true`. Una instrucción `while` tiene el siguiente aspecto:
 
-```
+```js-nolint
 while (condición)
   expresión
 ```
@@ -150,7 +160,9 @@ Con cada iteración, el bucle incrementa `n` y agrega ese valor a `x`. Por lo ta
 - Después de la segunda pasada: `n` = `2` y `x` = `3`
 - Después de la tercera pasada: `n` = `3` y `x` = `6`
 
-Después de completar la tercera pasada, la condición `n < 3` ya no es `true`, por lo que el bucle termina.**Ejemplo 2**
+Después de completar la tercera pasada, la condición `n < 3` ya no es `true`, por lo que el bucle termina.
+
+### Ejemplo 2
 
 Evita los bucles infinitos. Asegúrate de que la condición en un bucle eventualmente se convierta en `false`; de lo contrario, el bucle nunca terminará. Las declaraciones en el siguiente bucle `while` se ejecutan indefinidamente porque la condición nunca se vuelve `false`:
 
@@ -163,17 +175,18 @@ while (true) {
 
 ## Declaración `labeled`
 
-Una {{JSxRef("Statements/label", "label")}} proporciona una instrucción con un identificador que te permite hacer referencia a ella en otra parte de tu programa. Por ejemplo, puedes usar una etiqueta para identificar un bucle y luego usar las declaraciones `break` o `continue` para indicar si un programa debe interrumpir el bucle o continuar su ejecución.La sintaxis de la instrucción etiquetada es similar a la siguiente:label : instrucción
+Una {{JSxRef("Statements/label", "label")}} proporciona una instrucción con un identificador que te permite hacer referencia a ella en otra parte de tu programa. Por ejemplo, puedes usar una etiqueta para identificar un bucle y luego usar las declaraciones `break` o `continue` para indicar si un programa debe interrumpir el bucle o continuar su ejecución.
 
-El valor de `label` puede ser cualquier identificador de JavaScript que no sea una palabra reservada. La `declaración` que identifica a una etiqueta puede ser cualquier enunciado.
+La sintaxis de la instrucción etiquetada es similar a la siguiente:
 
-## Ejemplo
+```js-nolint
+label:
+  instrucción
+```
 
-En este ejemplo, la etiqueta `markLoop` identifica un bucle `while`.
+El valor de `label` puede ser cualquier identificador de JavaScript que no sea una palabra reservada. La `declaración` que identifica a una etiqueta puede ser cualquier enunciado. Para ejemplos de uso de declaraciones etiquetadas, mira los ejemplos de `break` y `continue` más abajo.
 
-markLoop: while (theMark === true) { doSomething(); }
-
-Declaración `break`
+## Declaración `break`
 
 Usa la instrucción {{JSxRef("Statements/break", "break")}} para terminar un bucle, `switch` o junto con una declaración etiquetada.
 
@@ -182,12 +195,12 @@ Usa la instrucción {{JSxRef("Statements/break", "break")}} para terminar un buc
 
 La sintaxis de la instrucción `break` se ve así:
 
-```
+```js
 break;
-break [label];
+break label;
 ```
 
-1. La primera forma de la sintaxis termina el bucle envolvente más interno o el `switch.`
+1. La primera forma de la sintaxis termina el bucle envolvente más interno o el `switch`.
 2. La segunda forma de la sintaxis termina la instrucción etiquetada específica.
 
 ### Ejemplo 1
@@ -208,11 +221,11 @@ for (let i = 0; i < a.length; i++) {
 let x = 0;
 let z = 0;
 labelCancelLoops: while (true) {
-  console.log("Bucles externos: " + x);
+  console.log("Bucles externos: ", x);
   x += 1;
   z = 1;
   while (true) {
-    console.log("Bucles internos: " + z);
+    console.log("Bucles internos: ", z);
     z += 1;
     if (z === 10 && x === 10) {
       break labelCancelLoops;
@@ -232,8 +245,9 @@ La instrucción {{JSxRef("Statements/continue", "continue")}} se puede usar para
 
 La sintaxis de la instrucción `continue` se parece a la siguiente:
 
-```
-continue [label];
+```js
+continue;
+continue label;
 ```
 
 ### Ejemplo 1
@@ -251,34 +265,42 @@ while (i < 5) {
   n += i;
   console.log(n);
 }
-//1,3,7,12
-
-let i = 0;
-let n = 0;
-while (i < 5) {
-  i++;
-  if (i === 3) {
-    // continue;
-  }
-  n += i;
-  console.log(n);
-}
-// 1,3,6,10,15
+// Muestra:
+// 1 3 7 12
 ```
+
+Si comentas `continue;`, el bucle se ejecutaría hasta el final y verías `1,3,6,10,15`.
 
 ### Ejemplo 2
 
-Una declaración etiquetada `checkiandj` contiene una declaración etiquetada `checkj`. Si se encuentra `continue`, el programa termina la iteración actual de `checkj` y comienza la siguiente iteración. Cada vez que se encuentra `continue`, `checkj` reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el resto de la instrucción `checkiandj` se completa y `checkiandj` reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el programa continúa en la declaración que sigue a `checkiandj`.
+Una declaración etiquetada `checkIandJ` contiene una declaración etiquetada `checkJ`. Si se encuentra `continue`, el programa termina la iteración actual de `checkJ` y comienza la siguiente iteración. Cada vez que se encuentra `continue`, `checkJ` reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el resto de la instrucción `checkIandJ` se completa y `checkIandJ` reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el programa continúa en la declaración que sigue a `checkIandJ`.
 
-Si `continue` tuviera una etiqueta de `checkiandj`, el programa continuaría en la parte superior de la declaración `checkiandj`.
+Si `continue` tuviera una etiqueta de `checkIandJ`, el programa continuaría en la parte superior de la declaración `checkIandJ`.
 
-let i = 0; let j = 10; checkiandj: while (i < 4) { console.log(i); i += 1; checkj: while (j > 4) { console.log(j); j -= 1; if ((j % 2) === 0) { continue checkj; } console.log(j + 'es impar.'); } console.log('i = ' + i); console.log('j = ' + j); }
+```js
+let i = 0;
+let j = 10;
+checkIandJ: while (i < 4) {
+  console.log(i);
+  i += 1;
+  checkJ: while (j > 4) {
+    console.log(j);
+    j -= 1;
+    if (j % 2 === 0) {
+      continue;
+    }
+    console.log(j, "es impar.");
+  }
+  console.log("i =", i);
+  console.log("j =", j);
+}
+```
 
 ## Declaración `for...in`
 
 La instrucción {{JSxRef("Statements/for...in", "for...in")}} itera una variable especificada sobre todas las propiedades enumerables de un objeto. Para cada propiedad distinta, JavaScript ejecuta las instrucciones especificadas. Una declaración `for...in` tiene el siguiente aspecto:
 
-```
+```js-nolint
 for (variable in objeto)
   instrucción
 ```
@@ -288,10 +310,10 @@ for (variable in objeto)
 La siguiente función toma como argumento un objeto y el nombre del objeto. Luego itera sobre todas las propiedades del objeto y devuelve una cadena que enumera los nombres de las propiedades y sus valores.
 
 ```js
-function dump_props(obj, obj_name) {
+function dumpProps(obj, objName) {
   let result = "";
-  for (let i in obj) {
-    result += obj_name + "." + i + " = " + obj[i] + "<br>";
+  for (const i in obj) {
+    result += `${objName}.${i} = ${obj[i]}<br>`;
   }
   result += "<hr>";
   return result;
@@ -300,9 +322,9 @@ function dump_props(obj, obj_name) {
 
 Para un objeto `car` con propiedades `make` y `model`, `result` sería:
 
-```js
-car.make = Ford;
-car.model = Mustang;
+```
+car.make = Ford
+car.model = Mustang
 ```
 
 ### Arrays
@@ -315,8 +337,8 @@ Por lo tanto, es mejor usar un bucle {{JSxRef("Statements/for", "for")}} tradici
 
 La declaración {{JSxRef("Statements/for...of", "for...of")}} crea un bucle que se repite sobre [objetos iterables](/es/docs/Web/JavaScript/Reference/Iteration_protocols) (incluidos {{JSxRef("Array")}}, {{JSxRef("Map")}}, {{JSxRef("Set")}}, objetos {{JSxRef("Functions/arguments", "arguments")}} y así sucesivamente), invocando un bucle de iteración personalizado con declaraciones que se ejecutarán para el valor de cada distinta propiedad.
 
-```
-for (variable of objeto)
+```js-nolint
+for (variable of iterable)
   expresión
 ```
 
@@ -326,13 +348,27 @@ El siguiente ejemplo muestra la diferencia entre un bucle `for...of` y un bucle 
 const arr = [3, 5, 7];
 arr.foo = "hola";
 
-for (let i in arr) {
-  console.log(i); // logs "0", "1", "2", "foo"
+for (const i in arr) {
+  console.log(i);
 }
+// "0" "1" "2" "foo"
 
-for (let i of arr) {
-  console.log(i); // logs 3, 5, 7
+for (const i of arr) {
+  console.log(i);
 }
+// Muestra: 3 5 7
+```
+
+Las declaraciones `for...of` y `for...in` también se pueden usar con [desestructuración](/es/docs/Web/JavaScript/Reference/Operators/Destructuring). Por ejemplo, puedes recorrer simultáneamente las claves y los valores de un objeto usando {{JSxRef("Object.entries()")}}.
+
+```js
+const obj = { foo: 1, bar: 2 };
+
+for (const [key, val] of Object.entries(obj)) {
+  console.log(key, val);
+}
+// "foo" 1
+// "bar" 2
 ```
 
 {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
