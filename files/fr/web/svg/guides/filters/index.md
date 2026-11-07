@@ -1,6 +1,7 @@
 ---
 title: Filtres SVG
-slug: Web/SVG/Guides/SVG_filters
+slug: Web/SVG/Guides/Filters
+original_slug: Web/SVG/Guides/SVG_filters
 l10n:
   sourceCommit: a9063bb88f28dc2a9b32e39f060ab6930663da52
 ---
