@@ -148,7 +148,7 @@ rgb(31 41 59 / 26%);
 
 ### 詳細度の制御
 
-可能であれば、[`:where()`](/ja/docs/Web/CSS/Reference/Selectors/:where) 疑似クラスの使いすぎやセレクターの重複など、詳細度を上げたり下げたりして予想外の結果を招くことは避けてください。代わりに、次の方法で詳細度を管理することを検討してください。
+可能であれば、[`:where()`](/ja/docs/Web/CSS/Reference/Selectors/:where) 擬似クラスの使いすぎやセレクターの重複など、詳細度を上げたり下げたりして予想外の結果を招くことは避けてください。代わりに、次の方法で詳細度を管理することを検討してください。
 
 - カスケードを利用できるように宣言の順序を変える
 - 宣言内のプロパティの順序を調整し、互いに上書きしないようにする
@@ -270,13 +270,13 @@ button {
 
 スタイル設定にはクラスを使い、ID は JavaScript での使用や、一意なページ内アンカー（`<a href="#section1">`）へのリンクなど、CSS 以外の目的のために使ってください。ID の使用が正当な場合は、セレクターとして使用し、[詳細度の制御](#詳細度の制御)に利用することもできます。
 
-### 古い疑似要素セレクター
+### 古い擬似要素セレクター
 
-`::before`、`::after`、`::first-letter`、`::first-line` の[疑似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)は、単一のコロン（`:before` など）でも記述できます。単一コロンの構文は推奨されておらず、読者が[疑似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)（`:hover`）と誤認する可能性があるため、避けてください。
+`::before`、`::after`、`::first-letter`、`::first-line` の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)は、単一のコロン（`:before` など）でも記述できます。単一コロンの構文は推奨されておらず、読者が[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)（`:hover`）と誤認する可能性があるため、避けてください。
 
 ### 複雑なセレクターリスト
 
-`:is()`、`:where()`、`:not()` 疑似クラスは、[複雑なセレクターリスト](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複雑セレクター)を受け入れます。これらを使うと、セレクターを短くできます。
+`:is()`、`:where()`、`:not()` 擬似クラスは、[複雑なセレクターリスト](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複雑セレクター)を受け入れます。これらを使うと、セレクターを短くできます。
 
 次のようにします。
 
