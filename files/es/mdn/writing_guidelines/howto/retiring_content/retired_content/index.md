@@ -2,7 +2,7 @@
 title: Contenido retirado
 slug: MDN/Writing_guidelines/Howto/Retiring_content/Retired_content
 l10n:
-  sourceCommit: ca0b474bb2e153ce72718cb304306e540065a888
+  sourceCommit: 238b07dfeb8c347c590bd02a63140867525d511c
 ---
 
 Esta página enumera las secciones de MDN Web Docs que se han retirado. Cada entrada incluye un enlace al contenido archivado en el [repositorio MDN Museum](https://github.com/mdn/museum) y al issue o la discusión de GitHub donde se tomó la decisión de retirarla.
@@ -33,6 +33,14 @@ Una colección de ejemplos de prueba de la WebVR API, que incluye información b
 > [!NOTE]
 > Este retiro es anterior al proceso de [Retirar contenido](/es/docs/MDN/Writing_guidelines/Howto/Retiring_content). No queda ninguna discusión.
 
+### Tutoriales de los frameworks JS: Angular, Ember, Svelte y Vue
+
+- **Retirada:** agosto de 2026
+- **Contenido archivado:** [museum/learn_web_development/frameworks_libraries](https://github.com/mdn/museum/tree/main/learn_web_development/frameworks_libraries)
+- **Discusión:** [Removing the old and out-of-date JavaScript framework articles from Learn web development](https://github.com/orgs/mdn/discussions/827)
+- **PR en GitHub:** [Archive JS framework content](https://github.com/mdn/content/pull/45105)
+
+Un conjunto de tutoriales de iniciación que enseñan cómo construir una aplicación web básica usando los frameworks Angular, Ember, Svelte y Vue.
 <!--
 ### Nombre de la sección
 
