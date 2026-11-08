@@ -1,7 +1,7 @@
 ---
 title: JavaScript コンストラクターページのテンプレート
-slug: MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_constructor_page_template
 short-title: Constructor()
+slug: MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_constructor_page_template
 l10n:
   sourceCommit: 865686a652cb8dc4e9522e23399896e6373bfc19
 ---
