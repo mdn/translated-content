@@ -1,73 +1,70 @@
 ---
-title: Firefox 131 for developers
+title: Firefox 131 開発者向けリリースノート
+short-title: Firefox 131
 slug: Mozilla/Firefox/Releases/131
 l10n:
-  sourceCommit: d27be65a297aa82a1eceb024be325b1385a498e5
+  sourceCommit: 5ef5a171a41dbcb48c953cc3c98c1237566796e9
 ---
 
-このページでは、開発者に影響する Firefox 131 の変更点をまとめています。Firefox 131 は、米国時間 [2024 年 10 月 1 日](https://whattrainisitnow.com/release/?version=129) にリリースされました。
+このページでは、開発者に影響する Firefox 131 の変更点をまとめています。Firefox 131 は、米国時間 [2024 年 10 月 1 日](https://whattrainisitnow.com/release/?version=131) にリリースされました。
 
-## ウェブ開発者向けの変更点一覧
+## ウェブ開発者向けの変更点
 
 ### CSS
 
-- [Anchor Positioning](/ja/docs/Web/CSS/Guides/Anchor_positioning) のさらなる実装の準備として、`inset-area` CSS プロパティを {{CSSXRef("position-area")}} に改名しました。現在、このプロパティは値を解析するために内部で使用するのみです。Anchor Positioning の機能は、設定で制御した上で順次ロールアウトしています。詳しくは [Firefox における実験的機能: CSS Anchor Positioning](/ja/docs/Mozilla/Firefox/Experimental_features#css_anchor_positioning) をご覧ください ([Firefox bug 1909358](https://bugzil.la/1909358)、[Firefox bug 1838746](https://bugzil.la/1838746))。
+- [アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning) のさらなる実装の準備として、`inset-area` CSS プロパティを {{CSSXRef("position-area")}} に改名しました。現在、このプロパティは値を構文解析するために内部で使用するのみです。アンカー位置指定の機能は、設定で制御した上で順次ロールアウトしています ([Firefox バグ 1909358](https://bugzil.la/1909358)、[Firefox バグ 1838746](https://bugzil.la/1838746))。
 
 ### JavaScript
 
-- {{jsxref("Iterator.prototype.drop()")}}、{{jsxref("Iterator.prototype.every()")}}、{{jsxref("Iterator.prototype.filter()")}}、{{jsxref("Iterator.prototype.find()")}}、{{jsxref("Iterator.prototype.flatMap()")}}、{{jsxref("Iterator.prototype.forEach()")}}、{{jsxref("Iterator.prototype.map()")}}、{{jsxref("Iterator.prototype.reduce()")}}、{{jsxref("Iterator.prototype.some()")}}、{{jsxref("Iterator.prototype.take()")}} を含む、同期イテレーターヘルパーをサポートしました。これらのヘルパーは、中間的な `Array` オブジェクトを作成する必要なくイテレーターで `Array` のような操作を可能にします。また、中間的な `Array` を作成できない大量のデータセットでも使用できます。詳しくは `Iterator` インターフェイスの [Iterator helpers](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers) をご覧ください ([Firefox bug 1896390](https://bugzil.la/1896390))。
+- {{jsxref("Iterator.prototype.drop()")}}、{{jsxref("Iterator.prototype.every()")}}、{{jsxref("Iterator.prototype.filter()")}}、{{jsxref("Iterator.prototype.find()")}}、{{jsxref("Iterator.prototype.flatMap()")}}、{{jsxref("Iterator.prototype.forEach()")}}、{{jsxref("Iterator.prototype.map()")}}、{{jsxref("Iterator.prototype.reduce()")}}、{{jsxref("Iterator.prototype.some()")}}、{{jsxref("Iterator.prototype.take()")}} を含む、同期イテレーターヘルパーメソッドに対応しました。これらのヘルパーを使うと、中間的な `Array` オブジェクトを作成せずに、イテレーターに対して `Array` のような操作を実行できます。また、中間的な `Array` を作成できないほど大量のデータセットにも使用できます。詳しくは `Iterator` インターフェイスの [Iterator helper methods](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_methods) をご覧ください ([Firefox バグ 1896390](https://bugzil.la/1896390))。
 
 ### HTTP
 
-- [`SameSite=None`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#none) の属性値を持つ {{httpheader("Set-Cookie")}} HTTP ヘッダーは、[`Secure`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) 属性も持つことが必要になりました。これは、`SameSite=None` を設定した Cookie が HTTPS 接続だけで送信されることを保証します。また、Firefox は値が不特定な `SameSite` を `SameSite=None` とみなすため、`SameSite` を指定していない Cookie も同じ制約があります ([Firefox bug 1909673](https://bugzil.la/1909673))。
-- [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies)、いわゆる "Partitioned Cookies" をサポートしました。
-  この機能は開発者が {{HTTPHeader("Set-Cookie")}} HTTP ヘッダーの [`partitioned`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#partitioned) ディレクティブを使用して、Cookie を分割された記憶領域へ保存できるようにします。これを設定すると Cookie がトップレベルごとに分割された記憶領域に保存されて、同じトップレベルサイトかサブドメインに限り読み取れるようになります。これはクロスサイトトラッキングを防ぎながら、サイトのさまざまなサブドメインにわたって埋め込み地図やチャットウィジェットの状態を維持するなどの、適切なサードパーティ Cookie の利用を可能にします ([Firefox bug 1908160](https://bugzil.la/1908160))。
+- [`SameSite=None`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#none) の属性値を持つ {{httpheader("Set-Cookie")}} HTTP ヘッダーは、[`Secure`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) 属性も持つ必要があります。これにより、`SameSite=None` を設定した Cookie が HTTPS 接続でのみ送信されることが保証されます。また、Firefox は未指定の `SameSite` 値を `SameSite=None` と解釈するため、`SameSite` を指定していない Cookie にも同じ制約が適用されます ([Firefox バグ 1909673](https://bugzil.la/1909673))。
+- [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies)、いわゆる "partitioned cookies" に対応しました。
+  この機能では、{{HTTPHeader("Set-Cookie")}} HTTP ヘッダーの [`partitioned`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#partitioned) ディレクティブを使用して Cookie を分割ストレージに保存できます。このディレクティブを設定すると、Cookie はトップレベルサイトごとに別々のストレージに保存され、設定されたトップレベルサイトとそのサブドメイン内でのみ読み取れます。これにより、クロスサイトトラッキングを防ぎながら、サイトの異なるサブドメインに埋め込まれた地図やチャットウィジェットの状態を保持するといった、サードパーティ Cookie の正当な用途を実現できます ([Firefox バグ 1908160](https://bugzil.la/1908160))。
 
 ### API
 
-- {{domxref('PointerEvent')}} インターフェイスの {{domxref('PointerEvent.altitudeAngle','altitudeAngle')}} および {{domxref('PointerEvent.azimuthAngle','azimuthAngle')}} プロパティをサポートしました。- それぞれポインターやスタイラスと画面 (X 軸 -Y 軸の面) の角度、および画面上で X 軸に対するスタイラスの回転角を示します ([Firefox bug 1656377](https://bugzil.la/1656377))。
-- [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments) をサポートしました。ユーザーがウェブページのテキストの一部分にリンクおよびハイライト表示することを可能にします。この機能は[URL フラグメント](/ja/docs/Web/URI/Reference/Fragment) で、表示されるテキストのパターンに基づいて対象を識別する特定の構文を使用します。
-  開発者は {{domxref("Document.fragmentDirective")}} プロパティ ({{domxref("FragmentDirective")}} インターフェイスのインスタンス) の存在によって、テキストフラグメントをサポートしているか確認できます。また、{{CSSxRef("::target-text")}} 擬似要素を使用して、テキストフラグメントリンクで指定されたテキストの選択およびスタイル設定が可能です ([Firefox bug 1914877](https://bugzil.la/1914877))。
-- {{domxref("Document")}} インターフェイスの {{domxref('Document/caretPositionFromPoint','caretPositionFromPoint()')}} メソッドを、キャレットの位置に対応するシャドウルートがメソッドに渡されていればシャドウ DOM におけるキャレット位置のテキストノードとオフセットを返すように更新しました。{{domxref("ShadowRoot")}} オブジェクトは、新たに追加された引数 `options` の `shadowRoots` プロパティを使用してメソッドに渡すことができます ([Firefox bug 1914596](https://bugzil.la/1914596))。
+- {{domxref('PointerEvent')}} インターフェイスの {{domxref('PointerEvent.altitudeAngle','altitudeAngle')}} および {{domxref('PointerEvent.azimuthAngle','azimuthAngle')}} プロパティに対応しました。これらはそれぞれ、ポインターまたはスタイラスと画面 (X-Y 平面) の間の角度、および画面上での X 軸に対するスタイラスの回転角を示します ([Firefox バグ 1656377](https://bugzil.la/1656377))。
+- [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments)に対応しました。ユーザーはウェブページのテキストの一部にリンクし、その箇所をハイライト表示できます。この機能では、表示されるテキストのパターンに基づいて対象を識別する特定の構文を[URL フラグメント](/ja/docs/Web/URI/Reference/Fragment)で使用します。
+  開発者は {{domxref("Document.fragmentDirective")}} プロパティ ({{domxref("FragmentDirective")}} インターフェイスのインスタンス) が存在するかどうかで、テキストフラグメントに対応しているか確認できます。また、{{CSSxRef("::target-text")}} 擬似要素を使用して、テキストフラグメントリンクで指定されたテキストを選択し、スタイルを設定できます ([Firefox バグ 1914877](https://bugzil.la/1914877))。
+- {{domxref("Document")}} インターフェイスの {{domxref('Document/caretPositionFromPoint','caretPositionFromPoint()')}} メソッドを更新しました。対応するシャドウルートがメソッドに渡されていれば、シャドウ DOM 内のキャレット位置に対応するテキストノードとオフセットを返します。{{domxref("ShadowRoot")}} オブジェクトは、新たに追加された引数 `options` の `shadowRoots` プロパティを使用してメソッドに渡すことができます ([Firefox バグ 1914596](https://bugzil.la/1914596))。
 
 ### WebAssembly
 
-- `exnref` の値を持つ新たな例外参照を、WebAssembly と JavaScript の間の双方向の [例外処理](/ja/docs/WebAssembly/JavaScript_interface/Exception) の支援に使用できるようになりました ([Firefox bug 1908375](https://bugzil.la/1908375))。
+- `exnref` の値を持つ新たな例外参照を、WebAssembly と JavaScript の間の双方向の[例外処理](/ja/docs/WebAssembly/Reference/JavaScript_interface/Exception)に使用できるようになりました ([Firefox バグ 1908375](https://bugzil.la/1908375))。
 
 ### WebDriver への適合 (WebDriver BiDi, Marionette)
 
 #### 一般
 
-- WebDriver Classic および BiDi の双方で、`keyUp` および `keyDown` アクションが `value` で複数の文字を受け入れないようになりました ([Firefox bug 1910352](https://bugzil.la/1910352))。
+- WebDriver Classic および BiDi の双方で、`keyUp` および `keyDown` アクションが `value` で複数の文字を受け入れないようになりました ([Firefox バグ 1910352](https://bugzil.la/1910352))。
 
 #### WebDriver BiDi
 
-- `network.continueResponse` コマンドの残りの引数をサポートしました:
-  - 引数 cookies および headers ([Firefox bug 1853887](https://bugzil.la/1853887))。
-  - 引数 `statusCode` (例: 200, 304) および `reasonPhrase` (例: "OK"、"Not modified") ([Firefox bug 1913737](https://bugzil.la/1913737))。
-- 引数 `wait` が `none` である場合に `browsingContext.navigate` コマンドが返り `beforeunload` プロンプトが発生するようになりました ([Firefox bug 1763134](https://bugzil.la/1763134))。
-- 仕様書の要求に従って、ナビゲーションが失敗したすべてのケースで `browsingContext.navigate` コマンドが `unknown error` を返すようになりました ([Firefox bug 1905083](https://bugzil.la/1905083))。
-- `session.new` コマンドは、クライアントが引数で指定していない場合に `unhandledPromptBehavior` 機能をレスポンスに含めないようになりました ([Firefox bug 1909455](https://bugzil.la/1909455))。
+- `network.continueResponse` コマンドの残りの引数に対応しました:
+  - 引数 cookies および headers ([Firefox バグ 1853887](https://bugzil.la/1853887))。
+  - 引数 `statusCode` (例: 200, 304) および `reasonPhrase` (例: "OK"、"Not modified") ([Firefox バグ 1913737](https://bugzil.la/1913737))。
+- 引数 `wait` が `none` である場合に `browsingContext.navigate` コマンドが返り `beforeunload` プロンプトが発生するようになりました ([Firefox バグ 1763134](https://bugzil.la/1763134))。
+- 仕様書の要求に従って、ナビゲーションが失敗したすべてのケースで `browsingContext.navigate` コマンドが `unknown error` を返すようになりました ([Firefox バグ 1905083](https://bugzil.la/1905083))。
+- `session.new` コマンドは、クライアントが引数で指定していない場合に `unhandledPromptBehavior` 機能をレスポンスに含めないようになりました ([Firefox バグ 1909455](https://bugzil.la/1909455))。
 
-## アドオン開発者向けの変更点一覧
+## アドオン開発者向けの変更点
 
-- Nightly 版のFirefox 131 で、{{WebExtAPIRef("storage.session")}} API で保存するデータに 10 MB の上限が強制されるようになりました。以前の Firefox は上限を実装していませんでした。この制限は Firefox 134 からリリース版にロールアウトします ([Firefox bug 1915688](https://bugzil.la/1915688))。これにより、以前の動作に依存する拡張機能が問題を修正できるようになります ([Firefox bug 1908925](https://bugzil.la/1908925))。
-- {{WebExtAPIRef("storage.session")}} が {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}} API および {{WebExtAPIRef("storage.session.QUOTA_BYTES")}} プロパティをサポートしました ([Firefox bug 1908925](https://bugzil.la/1908925))。
-- `tabs.update()` で `openerTabId` が変更されたときに {{WebExtAPIRef("tabs.onUpdated")}} が発生するようになりました ([Firefox bug 1409262](https://bugzil.la/1409262))。
-- `openerTabId` をクリアーするため、{{WebExtAPIRef("tabs.update")}} で `openerTabId` に `-1` を設定することが可能になりました ([Firefox bug 1409262](https://bugzil.la/1409262))。
+- Firefox Nightly 131 で、{{WebExtAPIRef("storage.session")}} API によって保存されるデータに 10 MB の上限が適用されるようになりました。以前の Firefox ではこの上限は実装されていませんでした。この制限は Firefox 137 からリリース版にも適用されます ([Firefox バグ 1915688](https://bugzil.la/1915688))。これにより、以前の動作に依存している拡張機能は問題を修正できます ([Firefox バグ 1908925](https://bugzil.la/1908925))。
+- {{WebExtAPIRef("storage.session")}} が {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}} API および {{WebExtAPIRef("storage.session.QUOTA_BYTES")}} プロパティに対応しました ([Firefox バグ 1908925](https://bugzil.la/1908925))。
+- `tabs.update()` で `openerTabId` が変更されたときに {{WebExtAPIRef("tabs.onUpdated")}} が発生するようになりました ([Firefox バグ 1409262](https://bugzil.la/1409262))。
+- `openerTabId` をクリアーするため、{{WebExtAPIRef("tabs.update")}} で `openerTabId` に `-1` を設定することが可能になりました ([Firefox バグ 1409262](https://bugzil.la/1409262))。
 
 ## 実験的なウェブ機能
 
 以下の機能は Firefox 131 で新たに導入しましたが、デフォルトで無効です。これらを実験するには、`about:config` ページで適切な設定項目を検索して `true` に設定してください。[実験的機能](/ja/docs/Mozilla/Firefox/Experimental_features) のページで、さらに多くの機能を確認できます。
 
-- **正規表現の (?ims-ims:...) モディファイアー:** `javascript.options.experimental.regexp_modifiers`。
+- **正規表現の (?ims-ims:...) 修飾子:** `javascript.options.experimental.regexp_modifiers`。
 
-  正規表現の [(?ims-ims:...)](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Modifier) モディファイアーは、正規表現パターンの特定の一部分に限って効果がある変更を行えます ([Firefox bug 1899813](https://bugzil.la/1899813))。
+  正規表現の [(?ims-ims:...)](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Modifier) 修飾子を使うと、正規表現パターンの特定の部分だけに適用される変更を指定できます ([Firefox バグ 1899813](https://bugzil.la/1899813))。
 
 - **マイクとカメラの権限:** `permissions.media.query.enabled`。
 
-  マイクやカメラへのアクセスが許可されているか拒否されているか、またはユーザーの承諾が必要な状態かを確認するため、{{domxref("Permissions.query()")}} メソッドで `microphone` および `camera` の [権限](/ja/docs/Web/API/Permissions_API) が使用可能になりました ([Firefox bug 1609427](https://bugzil.la/1609427) および [Firefox bug 1915222](https://bugzil.la/1915222))。
-
-## 過去のバージョン
-
-{{Firefox_for_developers}}
+  マイクやカメラへのアクセスが許可されているか拒否されているか、またはユーザーの承諾が必要な状態かを確認するため、{{domxref("Permissions.query()")}} メソッドで `microphone` および `camera` の [権限](/ja/docs/Web/API/Permissions_API) が使用可能になりました ([Firefox バグ 1609427](https://bugzil.la/1609427) および [Firefox バグ 1915222](https://bugzil.la/1915222))。
