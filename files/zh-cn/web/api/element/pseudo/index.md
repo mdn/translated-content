@@ -3,7 +3,7 @@ title: Element：pseudo() 方法
 short-title: pseudo()
 slug: Web/API/Element/pseudo
 l10n:
-  sourceCommit: b0db98a5c5a6cc7dbc519c272ab0572f6481afc6
+  sourceCommit: 1b1802abb7dc82aba2a13c429d25a34aaa945acf
 ---
 
 {{SeeCompatTable}}
