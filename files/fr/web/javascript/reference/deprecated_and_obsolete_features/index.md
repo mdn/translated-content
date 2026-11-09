@@ -161,7 +161,7 @@ La méthode `valueOf()` n'est plus spécialisée pour `RegExp`. Elle utilise {{J
 
 ### Méthodes de `String`
 
-- Les méthodes génériques non standard de `String` comme `String.slice(myStr, 0, 12)`, `String.replace(myStr, /\./g, "!")`, etc. ont été introduites dans Firefox 1.5 (JavaScript 1.6), dépréciées dans Firefox 53 et supprimées dans Firefox 68. Vous pouvez utiliser les méthodes sur {{JSxRef("String", "String.prototype", "méthodes_dinstance")}} avec {{JSxRef("Function.call()")}} à la place.
+- Les méthodes génériques non standard de `String` comme `String.slice(myStr, 0, 12)`, `String.replace(myStr, /\./g, "!")`, etc. ont été introduites dans Firefox 1.5 (JavaScript 1.6), dépréciées dans Firefox 53 et supprimées dans Firefox 68. Vous pouvez utiliser les méthodes sur {{JSxRef("String", "String.prototype", "#méthodes_dinstance")}} avec {{JSxRef("Function.call()")}} à la place.
 - `String.prototype.quote` a été supprimé dans Firefox 37.
 - Le paramètre non standard `flags` dans {{JSxRef("String.prototype.search")}}, {{JSxRef("String.prototype.match")}}, et {{JSxRef("String.prototype.replace")}} est obsolète.
 
@@ -175,7 +175,7 @@ La méthode `valueOf()` n'est plus spécialisée pour `RegExp`. Elle utilise {{J
 
 ### Méthodes de `Array`
 
-- Les méthodes génériques non standard de `Array` comme `Array.slice(myArr, 0, 12)`, `Array.forEach(myArr, myFn)`, etc. ont été introduites dans Firefox 1.5 (JavaScript 1.6), dépréciées dans Firefox 68 et supprimées dans Firefox 71. Vous pouvez utiliser les méthodes sur {{JSxRef("Array", "Array.prototype", "méthodes_dinstance")}} avec {{JSxRef("Function.call()")}} à la place.
+- Les méthodes génériques non standard de `Array` comme `Array.slice(myArr, 0, 12)`, `Array.forEach(myArr, myFn)`, etc. ont été introduites dans Firefox 1.5 (JavaScript 1.6), dépréciées dans Firefox 68 et supprimées dans Firefox 71. Vous pouvez utiliser les méthodes sur {{JSxRef("Array", "Array.prototype", "#méthodes_dinstance")}} avec {{JSxRef("Function.call()")}} à la place.
 
 | Propriété           | Description                                            | Alternative         |
 | ------------------- | ------------------------------------------------------ | ------------------- |
