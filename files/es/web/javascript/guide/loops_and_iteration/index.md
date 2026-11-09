@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0abb70602b0b3b11a2909c417a03e10eabd607a8
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
+{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 Los bucles ofrecen una forma rápida y sencilla de hacer algo repetidamente. Este capítulo de la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide) presenta las diferentes declaraciones de iteración disponibles para JavaScript.
 
@@ -48,13 +48,13 @@ Cuando se ejecuta un bucle `for`, ocurre lo siguiente:
 
 1. Se ejecuta la expresión de iniciación `expresiónInicial`, si existe. Esta expresión normalmente inicia uno o más contadores de bucle, pero la sintaxis permite una expresión de cualquier grado de complejidad. Esta expresión también puede declarar variables.
 2. Se evalúa la expresión `expresiónCondicional`. Si el valor de `expresiónCondicional` es verdadero, se ejecutan las instrucciones del bucle. Si el valor de `expresiónCondicional` es falso, el bucle `for` termina. (Si la expresión `expresiónCondicional` se omite por completo, se supone que la condición es verdadera).
-3. Se ejecuta la `instrucción`. Para ejecutar varias instrucciones, usa una declaración de bloque (`{ ... }`) para agrupar esas declaraciones.
+3. Se ejecuta la `instrucción`. Para ejecutar varias instrucciones, usa una [declaración de bloque](/es/docs/Web/JavaScript/Reference/Statements/block) (`{ ... }`) para agrupar esas declaraciones.
 4. Si está presente, se ejecuta la expresión de actualización `expresiónDeActualización`.
 5. El control regresa al paso 2.
 
 ### Ejemplo
 
-En el siguiente ejemplo, la función contiene una instrucción `for` que cuenta el número de opciones seleccionadas en una lista de desplazamiento (un elemento {{HTMLElement("select")}} que permite múltiples selecciones).
+En el siguiente ejemplo, la función contiene una instrucción `for` que cuenta el número de opciones seleccionadas en una lista de desplazamiento (un elemento [`<select>`](/es/docs/Web/HTML/Reference/Elements/select) que permite múltiples selecciones).
 
 #### HTML
 
