@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-{{APIRef("DOM")}}.
+{{APIRef("DOM")}}
 
 {{domxref("Element")}} 接口的 **`pseudo()`** 方法返回一个 {{domxref("CSSPseudoElement")}} 对象，该对象表示一个与该元素相关的指定类型的 [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)。
 
