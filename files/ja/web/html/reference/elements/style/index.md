@@ -3,7 +3,7 @@ title: "`<style>` スタイル情報要素"
 short-title: <style>
 slug: Web/HTML/Reference/Elements/style
 l10n:
-  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
+  sourceCommit: b58d84c261b9cfa66d46a070ba205c53e18ee3e0
 ---
 
 **`<style>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書あるいは文書の一部分のスタイル情報を含みます。 `<style>` 要素を含んでいる文書のコンテンツに適用される CSS を含みます。
@@ -35,12 +35,6 @@ p {
 }
 ```
 
-`<style>` 要素は、通常、文書の {{htmlelement("head")}} 内に記載されます。また、{{htmlelement("template")}} 要素内など、メタデータコンテンツが許可されている場所であればどこでも使用できます。
-
-文書に複数の `<style>` および `<link>` が含まれている場合、これらは含まれている文書の DOM 上の順序で適用されます。 — 予期しないカスケード問題を防ぐために、含まれている順序が正しいことを確認してください。
-
-`<link>` 要素と同じ方法で、 `<style>` 要素に `media` 属性を付けて[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)を含めると、ビューポートの幅などのメディア特性に依存して内部スタイルシートを選択的に適用することができます。
-
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
@@ -63,6 +57,26 @@ p {
 
 - `type` {{deprecated_inline}}
   - : この属性は指定すべきではありません。指定した場合、許可される値は空文字列か `text/css` と大文字と小文字を区別せずに一致するものだけです。
+
+## 使用上の注意
+
+`<style>` 要素は通常、文書の {{htmlelement("head")}} 内に記載されます。また、任意の要素を含められる {{htmlelement("template")}} 要素の[テンプレートコンテンツ](/ja/docs/Web/API/HTMLTemplateElement/content)内でも使用できます。{{htmlelement("body")}} 内では、親要素の最初の子要素として使用できます（[body 内での `<style>` の使用](#body_内での_style_の使用)を参照）。
+
+文書に複数の `<style>` 要素や `<link>` 要素を含めると、文書内の順序で DOM に適用されます。予期しないカスケードの問題を防ぐため、正しい順序で記述してください。
+
+`<link>` 要素と同様に、`<style>` 要素に[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)を含む `media` 属性を指定すると、ビューポートの幅などのメディア特性に応じて内部スタイルシートを選択的に適用できます。
+
+### body 内での `<style>` の使用
+
+`<style>` 要素は、{{htmlelement("body")}} などのフローコンテンツが許可される場所で使用できます。ただし、その親要素の最初の子要素であり、そのスタイルシートが親要素とその子孫だけにスタイルを適用する場合に限ります。
+
+- すべてのスタイルルールは、スコープルートセレクターのない {{cssxref("@scope")}} ルール内に記述する必要があります。例: `@scope { ... }` や `@scope to (.x) { ... }`。このような `@scope` ルールのスコープは `<style>` 要素の親要素になります。また、このルールは {{cssxref("@media")}}、{{cssxref("@supports")}}、{{cssxref("@container")}}、{{cssxref("@starting-style")}}、{{cssxref("@layer")}} などのルール内にネストできます。
+- `@scope (.card) { ... }` のようなスコープルートセレクターを持つ `@scope` ルールも、スコープルートセレクターのない `@scope` ルール内にネストする必要があります。
+- スタイルシートに {{cssxref("@import")}} ルールを含めてはなりません。
+
+ブラウザーは body 内にある `<style>` 要素を適用しますが、これらのルールに従わないものは無効な HTML です。これらのルールにより、親要素以外では、ブラウザーがすでに描画した可能性のあるコンテンツに `<style>` 要素が再度スタイルを適用しないようにします。
+
+{{cssxref("@font-face")}}、{{cssxref("@keyframes")}}、{{cssxref("@property")}} などのアットルールは、文書全体で使う名前を定義します。すでに描画された可能性のあるコンテンツに再度スタイルを適用しないようにするには、このような名前を `<style>` 要素の親要素内でのみ使用し、文書内のほかの場所では使われていない名前を選んでください。
 
 ## 例
 
@@ -180,6 +194,34 @@ p {
 
 {{EmbedLiveSample('Including_a_media_query', '100%', '100')}}
 
+### body 内でのスコープ付きスタイル
+
+次の例では、`<style>` 要素が {{htmlelement("aside")}} 要素の最初の子要素になっています。そのルールはスコープルートセレクターのない `@scope` ルール内にあるため、`<aside>` とその子孫にのみ適用されます。
+
+```html
+<aside>
+  <style>
+    @scope {
+      :scope {
+        background-color: lightyellow;
+        padding: 0 1rem;
+      }
+      p {
+        font-weight: bold;
+      }
+    }
+  </style>
+  <p>ご存じですか？タコには心臓が 3 つあります。</p>
+</aside>
+<p>この段落は aside の外側にあるため、スタイルは適用されません。</p>
+```
+
+`@scope` ルールの外側に `p { margin: 0; }` のようなルールを追加すると、`<aside>` に限定されないため HTML が無効になります。
+
+#### 結果
+
+{{EmbedLiveSample('Scoped_styles_in_the_body', '100%', '150')}}
+
 ## 技術的概要
 
 <table class="properties">
@@ -193,6 +235,9 @@ p {
       <td>
         <a href="/ja/docs/Web/HTML/Guides/Content_categories#メタデータコンテンツ"
           >メタデータコンテンツ</a
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
         >
       </td>
     </tr>
@@ -212,7 +257,10 @@ p {
       <td>
         <a href="/ja/docs/Web/HTML/Guides/Content_categories#メタデータコンテンツ"
           >メタデータコンテンツ</a
-        >を受け入れるすべての要素
+        >を受け入れるすべての要素。また、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >を受け入れる要素の最初の子要素
       </td>
     </tr>
     <tr>
