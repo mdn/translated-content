@@ -102,9 +102,42 @@ ctx.closePath();
 
 ## 여러분의 코드와 비교해 보세요
 
-JSFiddle에서 라이브로 실행되는 전체 코드입니다.
+라이브로 실행되는 전체 코드입니다.
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}
+```html hidden
+<canvas id="myCanvas" width="480" height="320"></canvas>
+```
+
+```css hidden
+canvas {
+  background: #eee;
+}
+```
+
+```js hidden
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+ctx.beginPath();
+ctx.rect(20, 40, 50, 50);
+ctx.fillStyle = "#FF0000";
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
+ctx.fillStyle = "green";
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.rect(160, 10, 100, 40);
+ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
+ctx.stroke();
+ctx.closePath();
+```
+
+{{EmbedLiveSample("여러분의 코드와 비교해 보세요", 600, 340)}}
 
 > [!NOTE]
 > **연습해보기**: 주어진 모양들의 크기와 색상을 변경해보세요.
