@@ -1,13 +1,14 @@
 ---
 title: "ARIA: math ロール"
+short-title: math
 slug: Web/Accessibility/ARIA/Reference/Roles/math_role
 l10n:
-  sourceCommit: 22cf84fc5704222a2e2e5ac67b95b02dcfea08ff
+  sourceCommit: cac79d099b0a4e48456cb53eb2435f6acf03e188
 ---
 
 `math` ロールは、コンテンツが数式を表すことを示します。
 
-## 説明
+## 解説
 
 `math` ロールを持つコンテンツは、[MathML](/ja/docs/Web/MathML) などのアクセシブルな形式、またはブラウザーやポリフィルライブラリーによってアクセシブルな形式に変換できる他の種類のテキスト表現でマークアップされることを意図しています。
 
