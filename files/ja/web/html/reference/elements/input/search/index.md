@@ -1,9 +1,9 @@
 ---
-title: '`<input type="search">` 属性値 (HTML)'
+title: '`<input type="search">` 属性値'
 short-title: <input type="search">
 slug: Web/HTML/Reference/Elements/input/search
 l10n:
-  sourceCommit: 8a13259a44523cd17b4fe347088b62c6d7a35265
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 {{HTMLElement("input")}} 要素の **`search`** 型は、ユーザーが検索クエリーを入力するために設計されたテキスト入力欄です。 [`text`](/ja/docs/Web/HTML/Reference/Elements/input/text) 入力欄と機能的には同じですが、{{Glossary("user agent", "ユーザーエージェント")}}は別なスタイルを適用するかもしれません。
@@ -11,10 +11,10 @@ l10n:
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;search&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<label for="site-search">Search the site:</label>
+<label for="site-search">サイトを検索:</label>
 <input type="search" id="site-search" name="q" />
 
-<button>Search</button>
+<button>検索</button>
 ```
 
 ```css interactive-example
@@ -135,19 +135,14 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 ### 基本的な例
 
 ```html
-<form>
-  <div>
-    <input type="search" id="mySearch" name="q" />
-    <button>検索</button>
-  </div>
-</form>
+<input type="search" id="mySearch" name="q" />
 ```
 
 次のように表示されます。
 
 {{EmbedLiveSample("Basic_example", 600, 40)}}
 
-`q` は検索入力に与えられる最も一般的な `name` ですが、そうする必要があるわけではありません。送信すると、サーバーに送信されるデータの名前と値の組は `q=検索語` となります。
+`q` は検索入力に指定される最も一般的な `name` ですが、必須ではありません。この入力欄をフォームに含めて送信すると、サーバーに送信されるデータの名前と値の組は `q=searchTerm` となります。
 
 > [!NOTE]
 > 入力欄に [`name`](/ja/docs/Web/HTML/Reference/Elements/input#name) を設定することを忘れないでください。そうしないと送信されません。
@@ -158,7 +153,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ![フォーカスリング付きの検索入力で、テキストは 'cats'。入力欄の右横に × のアイコンが並んでいます。](chrome-cross-icon.png)
 
-加えて、最近のブラウザーは以前ドメイン内で入力された検索語を自動的に格納し、そのドメインの検索入力欄で従属的な検索が行われたときに、自動補完オプションに上がってくるようにする傾向があります。これは同じ又は似た検索を繰り返して行う傾向があるユーザーにとって便利です。次のスクリーンショットは Firefox のものです。
+加えて、最近のブラウザーは、以前入力された検索語をドメインごとに自動的に保存する傾向があります。同じドメインの検索入力欄で後から検索すると、それらの検索語が自動補完候補として表示されます。これは、同じ検索語や似た検索語を繰り返し検索するユーザーにとって便利です。次のスクリーンショットは Firefox のものです。
 
 ![エラー状態で、フォーカスリングが赤くなっている入力。ユーザーは文字 'h' を入力した。入力ボックスの直下に、 hello と hermansje という 2 つの選択肢を持つポップアップ選択リストが表示されている。](firefox-auto-complete.png)
 
@@ -169,12 +164,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 [`placeholder`](/ja/docs/Web/HTML/Reference/Elements/input#placeholder) 属性を使用して、テキスト入力欄の内部に有用なプレイスホルダーを提供することで、何を入力すればよいかのヒントを提供することができます。次の例を見てください。
 
 ```html
-<form>
-  <div>
-    <input type="search" id="mySearch" name="q" placeholder="サイトを検索..." />
-    <button>検索</button>
-  </div>
-</form>
+<input type="search" id="mySearch" name="q" placeholder="サイトを検索..." />
 ```
 
 プレイスホルダーの表示方法を以下で確認できます。
@@ -183,28 +173,23 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### 検索フォームのラベルとアクセシビリティ
 
-検索フォームの一つの問題はアクセシビリティです。一般的なデザインの慣例では、検索フィールドにハラベルがなく（虫眼鏡のアイコンや同類のものはあります）、よく見えるユーザーには、その配置から検索フォームの目的が明確に分かります（[この例は、典型的な視覚的パターンを示しています](#アクセシブルな検索フォーム)）。
+検索フォームの一つの問題はアクセシビリティです。一般的なデザインの慣例では、検索フィールドにラベルを付けません（虫眼鏡のアイコンなどは表示することがあります）。その配置から検索機能の目的が視覚的に明確に分かるためです（[この例は、典型的な視覚的パターンを示しています](#アクセシブルな検索フォーム)）。
 
-ただし、これによりスクリーンリーダーのユーザーには、検索入力欄が何であるかについて音声による案内が一切示されないため、混乱を招く可能性があります。視覚的なデザインに影響を与えずにこの問題を回避する方法の一つとして、[ランドマーク要素](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/landmark_role)を使用することが挙げられます。
+ただし、これではスクリーンリーダーのユーザーに検索入力欄の目的が音声で伝わらず、混乱を招く可能性があります。視覚的なデザインに影響を与えずにこの問題を回避する方法の一つとして、[ランドマーク要素](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/landmark_role)を使用できます。
 
-- 検索機能全体を {{HTMLElement("search")}} 要素で囲んでください。これにより、支援技術が読み上げたり、すばやく移動したりできるランドマーク領域が作成されます。もし `<input>` がすでに `<form>` 内に含まれている場合は、代わりに `<form>` 要素に [`role="search"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) を追加することも可能です。これにより、`<form>` 自体も検索ランドマークとなります。`<search>` 要素はネイティブな HTML の意味づけを使用しますが、`role="search"` の方がより広く対応しており、すでに `<form>` ラッパーを持っている場合には、入力が簡潔になる場合があります。
-- これで十分ではない場合、 {{HTMLElement("input")}} 自身の [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性を使用することができます。これはスクリーンリーダーによって読み上げられ説明的なテキストラベルです。これは非視覚的な `<label>` と同等のものです。
+- 検索機能全体を {{HTMLElement("search")}} 要素で囲んでください。これにより、支援技術が読み上げたり、すばやく移動したりできるランドマーク領域が作成されます。もし `<input>` がすでに `<form>` 内に含まれている場合は、代わりに `<form>` 要素に [`role="search"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) を追加することもできます。これにより、`<form>` 自体も検索ランドマークとなります。`<search>` 要素はネイティブな HTML の意味づけを使用しますが、`role="search"` の方がより広く対応しており、すでに `<form>` ラッパーがある場合には、入力が簡潔になることがあります。
+- それだけでは不十分な場合は、{{HTMLElement("input")}} 自身に [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性を指定できます。この説明的なテキストラベルはスクリーンリーダーで読み上げられ、視覚的には表示しない `<label>` と同等の役割を果たします。
 
 最小限の例を見てみましょう。
 
 ```html
 <search>
-  <form>
-    <div>
-      <input
-        type="search"
-        id="mySearch"
-        name="q"
-        placeholder="サイトを検索..."
-        aria-label="サイトコンテンツ内を検索" />
-      <button>検索</button>
-    </div>
-  </form>
+  <input
+    type="search"
+    id="mySearch"
+    name="q"
+    placeholder="サイトを検索..."
+    aria-label="サイトコンテンツ内を検索" />
 </search>
 ```
 
@@ -222,17 +207,12 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 入力ボックスの物理的な寸法は、 [`size`](/ja/docs/Web/HTML/Reference/Elements/input#size) 属性を使って制御することができます。これによって、テキスト入力欄が一度に表示できる文字数を指定することができます。これは要素の幅に影響し、幅をピクセル数ではなく文字数で指定することができます。例えば、この例の中では、入力欄は30文字の幅です。
 
 ```html
-<form>
-  <div>
-    <input
-      type="search"
-      id="mySearch"
-      name="q"
-      placeholder="サイトを検索..."
-      size="30" />
-    <button>検索</button>
-  </div>
-</form>
+<input
+  type="search"
+  id="mySearch"
+  name="q"
+  placeholder="サイトを検索..."
+  size="30" />
 ```
 
 結果はこの広い入力ボックスになります。
@@ -283,6 +263,12 @@ input:valid ~ span::after {
     <span class="validity"></span>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden
@@ -338,6 +324,12 @@ input:valid ~ span::after {
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 input {
   margin-right: 10px;
@@ -386,6 +378,12 @@ input:valid ~ span::after {
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 input {
   margin-right: 10px;
@@ -416,7 +414,7 @@ input:valid ~ span::after {
 
 #### HTML
 
-メインナビゲーションのアイテムは、リンクのリストで構成されています。検索 {{htmlelement("form")}} に [`role="search"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) 属性が指定されており、これにより `<form>` が検索ランドマークとなり、支援技術 (AT) にその存在が通知されます。同時に、`<input type="search">` 要素には [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) を付与し、スクリーンリーダーによって読み上げられる明確なラベルを設定しています。
+メインナビゲーションのアイテムは、リンクのリストで構成されています。検索機能は {{htmlelement("search")}} 要素で囲み、支援技術 (AT) がその存在を認識できる検索ランドマークにしています。また、`<input type="search">` 要素には [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) を指定し、スクリーンリーダーで読み上げられる明確なラベルを設定しています。
 
 ```html live-sample___accessible-search
 <nav>
@@ -425,14 +423,13 @@ input:valid ~ span::after {
     <li><a href="#">紹介</a></li>
     <li><a href="#">連絡先</a></li>
   </ul>
-  <form role="search">
+  <search>
     <input
       type="search"
       name="q"
       placeholder="検索クエリー"
-      aria-label="Search through site content" />
-    <button>検索</button>
-  </form>
+      aria-label="サイトコンテンツ内を検索" />
+  </search>
 </nav>
 ```
 
@@ -472,7 +469,7 @@ nav a {
   line-height: 1.2;
 }
 
-nav form {
+nav search {
   flex: 1;
   display: flex;
   align-items: center;
@@ -487,25 +484,9 @@ input[type="search"] {
   flex: 3;
   height: 30px;
 }
-
-button {
-  flex: 1;
-  height: 30px;
-  padding: 0 1em;
-  background: #333333;
-  border: 0;
-  color: white;
-}
 ```
 
-HTML を理解する上で関係がないため、簡潔さを期して、この例の CSS と JavaScript は非表示にしています。下記ライブサンプルにある "Play" ボタンを押すと、それらを調べることができます。
-
-```js hidden live-sample___accessible-search
-const form = document.querySelector("form");
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-});
-```
+HTML を理解する上で関係がないため、簡潔さを期して、この例の CSS は非表示にしています。下記ライブサンプルにある "Play" ボタンを押すと、CSS を確認できます。
 
 #### 結果
 
