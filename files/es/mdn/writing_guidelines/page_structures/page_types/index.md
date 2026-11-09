@@ -2,7 +2,7 @@
 title: Tipos de página
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 l10n:
-  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
+  sourceCommit: 964ab8ae30c5ce0a343cc6d0f28c1b94389bae89
 ---
 
 MDN utiliza repetidamente varios tipos de páginas.
@@ -60,20 +60,34 @@ Para ver la lista completa de tipos de página, consulta [La clave page-type de 
 
 A continuación, se muestran ejemplos de las distintas páginas que encontrarás en MDN, junto con plantillas que puedes usar para crear contenido nuevo según el tipo de contenido que se presentará, entre las que se incluyen las siguientes páginas:
 
-- [Página de inicio de API](#api_landing_page)
-- [Página de referencia de API](#api_reference_page)
-- [Subpágina de referencia de API](#api_reference_subpage)
-- [Página de referencia de elemento HTML](#html_element_reference_page)
-- [Página de referencia de atributo HTML](#html_attribute_reference_page)
-- [Página de referencia de elemento SVG](#svg_element_reference_page)
-- [Página de módulo CSS](#css_module_page)
-- [Página de referencia de característica CSS](#css_feature_reference_page)
-- [Página de referencia de cabecera HTTP](#http_header_reference_page)
-- [Página de referencia de ARIA](#aria_reference_page)
-- [Página conceptual](#conceptual_page)
-- [Página de glosario](#glossary_page)
-- [Página de inicio](#landing_page)
-- [Páginas de Aprende desarrollo web](#learn_web_development_pages)
+- [Página de inicio de API](#página_de_inicio_de_api)
+- [Página de referencia de API](#página_de_referencia_de_api)
+- [Subpágina de referencia de API](#subpágina_de_referencia_de_api)
+- [Página de referencia de elemento HTML](#página_de_referencia_de_elemento_html)
+- [Página de referencia de atributo HTML](#página_de_referencia_de_atributo_html)
+- [Página de referencia de elemento SVG](#página_de_referencia_de_elemento_svg)
+- [Página de módulo CSS](#página_de_módulo_css)
+- [Página de referencia de característica CSS](#página_de_referencia_de_característica_css)
+- [Página de referencia de cabecera HTTP](#página_de_referencia_de_cabecera_http)
+- [Página de referencia de ARIA](#página_de_referencia_de_aria)
+- [Página conceptual](#página_conceptual)
+- [Página de glosario](#página_de_glosario)
+- [Clase de JavaScript](#página_de_clase_de_javascript)
+- [Constructor de JavaScript](#página_de_constructor_de_javascript)
+- [Error de JavaScript](#página_de_error_de_javascript)
+- [Función de JavaScript](#página_de_función_de_javascript)
+- [Propiedad global de JavaScript](#página_de_propiedad_global_de_javascript)
+- [Propiedad de acceso de instancia de JavaScript](#página_de_propiedad_de_acceso_de_instancia_de_javascript)
+- [Propiedad de datos de instancia de JavaScript](#página_de_propiedad_de_datos_de_instancia_de_javascript)
+- [Método de instancia de JavaScript](#página_de_método_de_instancia_de_javascript)
+- [Espacio de nombres de JavaScript](#página_de_espacio_de_nombres_de_javascript)
+- [Operador de JavaScript](#página_de_operador_de_javascript)
+- [Sentencia de JavaScript](#página_de_sentencia_de_javascript)
+- [Propiedad de acceso estática de JavaScript](#página_de_propiedad_de_acceso_estática_de_javascript)
+- [Propiedad de datos estática de JavaScript](#página_de_propiedad_de_datos_estática_de_javascript)
+- [Método estático de JavaScript](#página_de_método_estático_de_javascript)
+- [Página de inicio](#página_de_inicio)
+- [Páginas de Aprende desarrollo web](#páginas_de_aprende_desarrollo_web)
 
 Cada sección incluye enlaces a páginas de ejemplo en vivo para ese tipo de página.
 
@@ -173,13 +187,13 @@ Una **página de referencia SVG** enumera todos los atributos disponibles en un 
 
 ### Página de módulo CSS
 
-Cada **módulo de [CSS](/es/docs/Web/CSS)** representa una especificación de CSS que brinda soporte para ciertas características e implementaciones en CSS. Por ejemplo, el módulo [modelo de caja CSS](/es/docs/Web/CSS/Guides/Box_model) representa la [especificación](/es/docs/Web/CSS/Guides/Box_model#specifications) que describe las propiedades de margen y relleno (padding) que permiten crear espaciado dentro y alrededor de una caja CSS.
+Cada **módulo de [CSS](/es/docs/Web/CSS)** representa una especificación de CSS que brinda soporte para ciertas características e implementaciones en CSS. Por ejemplo, el módulo [modelo de caja CSS](/es/docs/Web/CSS/Guides/Box_model) representa la [especificación](/es/docs/Web/CSS/Guides/Box_model#especificaciones) que describe las propiedades de margen y relleno (padding) que permiten crear espaciado dentro y alrededor de una caja CSS.
 
 Una **página de módulo CSS** proporciona una descripción general de las características que ofrece el módulo y enumera todas las propiedades, tipos de datos, funciones CSS, etc., que ofrece el módulo. Cuando es posible, la página de módulo CSS incluye una demostración rápida de lo que se puede lograr usando las propiedades del módulo mediante un ejemplo interactivo.
 La página del módulo sirve principalmente como una página de _navegación_, pero también funciona como una página de _referencia_ rápida para el módulo.
 
 Algunas propiedades y características relacionadas que pertenecen a otros módulos, pero que están estrechamente vinculadas a la funcionalidad que ofrece el módulo que estás documentando, también pueden cubrirse en una sección _Conceptos relacionados_.
-Por ejemplo, el tipo de datos `<easing-function>` y la media query `prefers-reduced-motion` no están cubiertos en el módulo de animaciones CSS, pero dado que están estrechamente relacionados con las animaciones CSS, es recomendable destacarlos en la sección [Conceptos relacionados](/es/docs/Web/CSS/Guides/Animations#related_concepts) de la página del módulo de animaciones CSS.
+Por ejemplo, el tipo de datos `<easing-function>` y la media query `prefers-reduced-motion` no están cubiertos en el módulo de animaciones CSS, pero dado que están estrechamente relacionados con las animaciones CSS, es recomendable destacarlos en la sección [Conceptos relacionados](/es/docs/Web/CSS/Guides/Animations#conceptos_relacionados) de la página del módulo de animaciones CSS.
 
 #### Ejemplos
 
@@ -234,6 +248,214 @@ Una **página de referencia de ARIA** describe un [rol](/es/docs/Web/Accessibili
 
 - [Plantilla de página de ARIA](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template)
 
+### Página de clase de JavaScript
+
+Una **página de clase de JavaScript** ofrece una descripción general de una clase de JavaScript, incluidos su propósito y su uso, y enumera todos los métodos y propiedades, estáticos o de instancia, de la clase. Una clase de JavaScript se define como un objeto de función intrínseco con una propiedad `prototype` que comparten todas las instancias de la clase. Según esta definición, `BigInt` también es una clase, aunque no se pueda llamar con `new`.
+
+#### Ejemplos
+
+- [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [`BigInt`](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
+- [`Map`](/es/docs/Web/JavaScript/Reference/Global_Objects/Map)
+- [`Intl.Collator`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)
+- [`Temporal.ZonedDateTime`](/es/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime)
+
+#### Plantillas
+
+- [Plantilla de página de clase de JavaScript](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_class_page_template)
+
+### Página de constructor de JavaScript
+
+Una **página de constructor de JavaScript** ofrece información sobre el constructor de una clase de JavaScript y sobre cómo debe llamarse. El constructor de una clase se define simplemente como el propio objeto de función: por ejemplo, `BigInt()` es un constructor, aunque no se pueda llamar con `new`. No todas las clases tienen un constructor que valga la pena documentar: la clase {{jsxref("TypedArray")}}, por ejemplo, es una clase abstracta que siempre lanza un error al llamarla y, por lo tanto, no tiene página propia.
+
+#### Ejemplos
+
+- [`Array()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
+- [`BigInt()`](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
+- [`Map()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Map/Map)
+- [`Intl.Collator()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator)
+- [`Temporal.ZonedDateTime()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/ZonedDateTime)
+
+#### Plantillas
+
+- [Plantilla de página de constructor de JavaScript](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_constructor_page_template)
+
+### Página de error de JavaScript
+
+Una **página de error de JavaScript** ofrece información sobre cuándo se produce un error de JavaScript y cómo solucionarlo. Está pensada principalmente como referencia para las herramientas de desarrollo. Estas referencias de errores se organizan principalmente según los mensajes de error de Firefox: un mensaje de error por página. Consulta también la guía [cómo documentar errores](/es/docs/MDN/Writing_guidelines/Howto/Document_web_errors).
+
+#### Ejemplos
+
+- [ReferenceError: "x" is not defined](/es/docs/Web/JavaScript/Reference/Errors/Not_defined)
+
+#### Plantillas
+
+- [Plantilla de página de error de JavaScript](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_error_page_template)
+
+### Página de función de JavaScript
+
+Una **página de función de JavaScript** ofrece información sobre una función de JavaScript que no pertenece a ninguna clase ni espacio de nombres: su propósito, sus parámetros y su valor de retorno.
+
+Si la función está disponible de forma estática en una clase o un espacio de nombres, usa en su lugar la plantilla de [página de método estático de JavaScript](#página_de_método_estático_de_javascript). Si la función puede considerarse una clase (porque tiene una propiedad `prototype`), usa en su lugar la plantilla de [página de clase de JavaScript](#página_de_clase_de_javascript). La pista principal para usar la plantilla de página de función global es que la propiedad tiene como valor una función y empieza con minúscula.
+
+#### Ejemplos
+
+- [`eval()`](/es/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- [`encodeURIComponent()`](/es/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
+
+#### Plantillas
+
+- [Plantilla de página de función de JavaScript](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_function_page_template)
+
+### Página de propiedad global de JavaScript
+
+Una **página de propiedad global de JavaScript** ofrece información sobre una propiedad global de JavaScript que no pertenece a ninguna clase ni espacio de nombres: su propósito y su uso.
+
+Si la propiedad está disponible de forma estática en una clase o un espacio de nombres, usa en su lugar la plantilla de [página de propiedad de datos estática de JavaScript](#página_de_propiedad_de_datos_estática_de_javascript). Si la propiedad es una función, usa en su lugar la plantilla de [página de función de JavaScript](#página_de_función_de_javascript). Si la propiedad es un objeto simple cuyo objetivo principal es alojar otras propiedades, usa en su lugar la plantilla de [página de espacio de nombres de JavaScript](#página_de_espacio_de_nombres_de_javascript). La pista principal para usar la plantilla de página de propiedad global es que la propiedad tiene un valor primitivo, o bien empieza con minúscula y no es una función.
+
+#### Ejemplos
+
+- [`Infinity`](/es/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
+- [`globalThis`](/es/docs/Web/JavaScript/Reference/Global_Objects/globalThis)
+
+#### Plantillas
+
+- [Plantilla de página de propiedad global de JavaScript](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_global_property_page_template)
+
+### Página de propiedad de acceso de instancia de JavaScript
+
+Una **página de propiedad de acceso de instancia de JavaScript** ofrece información sobre una propiedad de acceso de una instancia de una clase de JavaScript. Una propiedad de acceso consta de un getter y, a veces, de un setter, y casi siempre se define en el prototipo de la instancia. La especificación usa la sintaxis `get Constructor.prototype.propertyName` para definir una propiedad de acceso. Casi todas las propiedades de acceso de instancia no heredadas del núcleo del lenguaje JavaScript solo tienen getter, lo que las hace de solo lectura.
+
+Si la propiedad tiene como valor una función, usa en su lugar la plantilla de [página de método de instancia de JavaScript](#página_de_método_de_instancia_de_javascript).
+
+#### Ejemplos
+
+- [`Map.prototype.size`](/es/docs/Web/JavaScript/Reference/Global_Objects/Map/size)
+
+#### Plantillas
+
+- [Plantilla de página de propiedad de acceso de instancia de JavaScript](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_instance_accessor_property_page_template)
+
+### Página de propiedad de datos de instancia de JavaScript
+
+Una **página de propiedad de datos de instancia de JavaScript** ofrece información sobre una propiedad de datos de una instancia de una clase de JavaScript. Una propiedad de datos consta de un valor y un indicador de escritura, y puede definirse en el prototipo de la instancia o directamente en la propia instancia.
+
+Toda instancia tiene una propiedad de datos llamada [`constructor`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) que apunta a la función constructora que creó la instancia. Esta propiedad de datos se menciona en la página principal de la clase, pero no se documenta en una página aparte para cada clase.
+
+Si la propiedad tiene como valor una función, usa en su lugar la plantilla de [página de método de instancia de JavaScript](#página_de_método_de_instancia_de_javascript).
+
+#### Ejemplos
+
+- [`Array`: `length`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
+- [`Error.prototype.name`](/es/docs/Web/JavaScript/Reference/Global_Objects/Error/name)
+
+#### Plantillas
+
+- [Plantilla de página de propiedad de datos de instancia de JavaScript](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_instance_data_property_page_template)
+
+### Página de método de instancia de JavaScript
+
+Una **página de método de instancia de JavaScript** ofrece información sobre un método de una instancia de una clase de JavaScript. Un método es una propiedad de la instancia cuyo valor es una función. En general, un método es una propiedad de datos definida en el prototipo de la instancia, pero hay algunas excepciones heredadas, como [`Intl.DateTimeFormat.prototype.format()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format), que es una propiedad de acceso que devuelve una función enlazada. Para que a quien lee le resulten familiares, las tratamos como métodos normales.
+
+#### Ejemplos
+
+- [`Array.prototype.push()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+- [`Intl.DateTimeFormat.prototype.resolvedOptions()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions)
+
+#### Plantillas
+
+- [Plantilla de página de método de instancia de JavaScript](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_instance_method_page_template)
+
+### Página de espacio de nombres de JavaScript
+
+Una **página de espacio de nombres de JavaScript** ofrece una descripción general de un espacio de nombres de JavaScript, incluidos su propósito y su uso, y enumera todos los métodos y propiedades del espacio de nombres. Un espacio de nombres de JavaScript se define como un objeto simple que aloja otras propiedades.
+
+#### Ejemplos
+
+- [`Intl`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- [`Math`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math)
+- [`Temporal`](/es/docs/Web/JavaScript/Reference/Global_Objects/Temporal)
+- [`Temporal.Now`](/es/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Now)
+
+#### Plantillas
+
+- [Plantilla de página de espacio de nombres de JavaScript](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_namespace_page_template)
+
+### Página de operador de JavaScript
+
+Una **página de operador de JavaScript** ofrece información sobre un operador de JavaScript, incluidos su propósito y su uso. _Operador_ no es un término con una definición universalmente aceptada. Para MDN, lo definimos como una sintaxis parametrizada por uno o más operandos, normalmente en forma de expresiones o de construcciones similares a expresiones.
+
+#### Ejemplos
+
+- [Adición (`+`)](/es/docs/Web/JavaScript/Reference/Operators/Addition)
+- [`await`](/es/docs/Web/JavaScript/Reference/Operators/await)
+- [`class`](/es/docs/Web/JavaScript/Reference/Operators/class)
+
+#### Plantillas
+
+- [Plantilla de página de operador de JavaScript](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_operator_page_template)
+
+### Página de sentencia de JavaScript
+
+Una **página de sentencia de JavaScript** ofrece información sobre una sentencia o declaración de JavaScript, incluidos su propósito, su sintaxis y su uso. Describe los componentes de la sintaxis de la sentencia y cómo afecta a la ejecución del programa o qué enlaces introduce.
+
+Para las formas de expresión, como una expresión de función o una expresión de clase, usa en su lugar la plantilla de [página de operador de JavaScript](#página_de_operador_de_javascript).
+
+#### Ejemplos
+
+- [`if...else`](/es/docs/Web/JavaScript/Reference/Statements/if...else)
+- [`for...of`](/es/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`const`](/es/docs/Web/JavaScript/Reference/Statements/const)
+
+#### Plantillas
+
+- [Plantilla de página de sentencia de JavaScript](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_statement_page_template)
+
+### Página de propiedad de acceso estática de JavaScript
+
+Una **página de propiedad de acceso estática de JavaScript** ofrece información sobre una propiedad de acceso a la que se accede directamente en una clase o un espacio de nombres de JavaScript. Describe el valor que devuelve el getter y, cuando hay un setter, los valores que acepta y el efecto de la asignación.
+
+Para una propiedad de acceso de una instancia, usa en su lugar la plantilla de [página de propiedad de acceso de instancia de JavaScript](#página_de_propiedad_de_acceso_de_instancia_de_javascript).
+
+#### Ejemplos
+
+- [`Array[Symbol.species]`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
+- [`RegExp.input`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input)
+
+#### Plantillas
+
+- [Plantilla de página de propiedad de acceso estática de JavaScript](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_static_accessor_property_page_template)
+
+### Página de propiedad de datos estática de JavaScript
+
+Una **página de propiedad de datos estática de JavaScript** ofrece información sobre una propiedad de datos a la que se accede directamente en una clase o un espacio de nombres de JavaScript. Describe el valor de la propiedad, sus atributos, su propósito y su uso.
+
+Si la propiedad es una propiedad de acceso, usa en su lugar la plantilla de [página de propiedad de acceso estática de JavaScript](#página_de_propiedad_de_acceso_estática_de_javascript). Si la propiedad tiene como valor una función, usa en su lugar la plantilla de [página de método estático de JavaScript](#página_de_método_estático_de_javascript). Las clases y los espacios de nombres expuestos como propiedades tienen sus propias [páginas de clase](#página_de_clase_de_javascript) o [páginas de espacio de nombres](#página_de_espacio_de_nombres_de_javascript).
+
+#### Ejemplos
+
+- [`Math.PI`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/PI)
+- [`Number.MAX_SAFE_INTEGER`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)
+
+#### Plantillas
+
+- [Plantilla de página de propiedad de datos estática de JavaScript](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_static_data_property_page_template)
+
+### Página de método estático de JavaScript
+
+Una **página de método estático de JavaScript** ofrece información sobre un método que se llama directamente en una clase o un espacio de nombres de JavaScript. Describe el propósito del método, su sintaxis, sus parámetros, su valor de retorno y sus excepciones.
+
+Para un método de una instancia, usa en su lugar la plantilla de [página de método de instancia de JavaScript](#página_de_método_de_instancia_de_javascript). Para una función global, usa en su lugar la plantilla de [página de función de JavaScript](#página_de_función_de_javascript).
+
+#### Ejemplos
+
+- [`Array.from()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
+- [`Temporal.Now.instant()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Now/instant)
+
+#### Plantillas
+
+- [Plantilla de página de método estático de JavaScript](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_static_method_page_template)
+
 ### Página conceptual
 
 Una **página conceptual** es una página de _guía_ que explica o enseña algo.
@@ -282,7 +504,7 @@ Dentro de Aprende desarrollo web solo hay unos pocos tipos de páginas.
 - **Página de inicio de módulo**, por ejemplo [Estructurar contenido con HTML](/es/docs/Learn_web_development/Core/Structuring_content)
   - : Estas contienen un párrafo de introducción, una sección que detalla los prerrequisitos que debes tener antes de comenzar el módulo y una lista de los tutoriales incluidos, seguida de una lista opcional de "Tutoriales adicionales" que están relacionados pero no forman parte de la ruta de aprendizaje central, y una lista opcional de enlaces "Véase también".
 - **Página de tutorial**, por ejemplo [Sintaxis básica de HTML](/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
-  - : La estructura de un tutorial de Aprende no es estricta, pero debe proporcionar una experiencia de aprendizaje práctica (consulta [Guías de escritura de Aprende desarrollo web > Enfoque](/es/docs/MDN/Writing_guidelines/Learning_content#approach)), debe tener un conjunto de "Prerrequisitos" y "Resultados de aprendizaje" enumerados al principio, y el contenido debe enseñar los resultados de aprendizaje indicados.
+  - : La estructura de un tutorial de Aprende no es estricta, pero debe proporcionar una experiencia de aprendizaje práctica (consulta [Guías de escritura de Aprende desarrollo web > Enfoque](/es/docs/MDN/Writing_guidelines/Learning_content#enfoque)), debe tener un conjunto de "Prerrequisitos" y "Resultados de aprendizaje" enumerados al principio, y el contenido debe enseñar los resultados de aprendizaje indicados.
 
 ### Ejemplos
 
@@ -295,5 +517,5 @@ Dentro de Aprende desarrollo web solo hay unos pocos tipos de páginas.
 
 ## Véase también
 
-- [Componentes de página](/es/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
+- [Componentes de página](/es/docs/MDN/Writing_guidelines/Writing_style_guide#componentes_de_la_página)
 - [Crear ejemplos de código en Markdown](/es/docs/MDN/Writing_guidelines/Code_style_guide)
