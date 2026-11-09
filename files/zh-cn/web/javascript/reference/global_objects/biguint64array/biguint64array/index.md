@@ -3,7 +3,7 @@ title: BigUint64Array() 构造函数
 short-title: BigUint64Array()
 slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array/BigUint64Array
 l10n:
-  sourceCommit: 86e6a39c09408844137f307b83d35eca43d5cfda
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
 **`BigUint64Array()`** 构造函数用于创建 {{jsxref("BigUint64Array")}} 对象。除非显式提供初始化数据，否则其内容会被初始化为 `0n`。
