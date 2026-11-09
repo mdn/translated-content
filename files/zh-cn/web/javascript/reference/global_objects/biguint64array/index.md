@@ -2,7 +2,7 @@
 title: BigUint64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array
 l10n:
-  sourceCommit: 86e6a39c09408844137f307b83d35eca43d5cfda
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
 **`BigUint64Array`** 类型的数组代表由 64 位无符号整数组成的数组，采用平台的字节顺序。如果需要控制字节顺序，请调用 {{jsxref("DataView")}}。除非显式提供初始化数据，否则其内容会被初始化为 `0n`。数组建立之后，你可以使用该对象的方法来引用数组的元素，或使用标准数组索引语法（即方括号表示法）来引用数组中的元素。
