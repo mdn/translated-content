@@ -17,7 +17,7 @@ l10n:
 
 `GPUError` をベースとするエラーオブジェクトの使い方の例は、以下を参照してください。
 
-- [`GPUDevice.popErrorScope`](/ja/docs/Web/API/GPUDevice/popErrorScope#例)
+- [`GPUDevice.popErrorScope`](/ja/docs/Web/API/GPUDevice/popErrorScope#examples)
 - [`GPUDevice uncapturederror` イベント](/ja/docs/Web/API/GPUDevice/uncapturederror_event#examples)
 - {{domxref("GPUInternalError")}}・{{domxref("GPUOutOfMemoryError")}}・{{domxref("GPUValidationError")}}
 
