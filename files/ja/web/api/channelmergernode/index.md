@@ -55,7 +55,7 @@ _特有のメソッドはありません。 親である {{domxref("AudioNode")}
 
 ## 例
 
-コード零については [`BaseAudioContext.createChannelMerger()`](/ja/docs/Web/API/BaseAudioContext/createChannelMerger#example) を参照してください。
+コード零については [`BaseAudioContext.createChannelMerger()`](/ja/docs/Web/API/BaseAudioContext/createChannelMerger#例) を参照してください。
 
 ## 仕様書
 

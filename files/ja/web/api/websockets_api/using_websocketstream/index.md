@@ -99,7 +99,7 @@ const { closeCode, reason } = await wss.closed;
 
 ## 完全なサンプルクライアント
 
-`WebSocketStream` の基本的な使い方を示すために、サンプルクライアントを作成しました。記事の一番下に[全リスト](#全リスト)がありますので、以下の説明と合わせてご覧ください。
+`WebSocketStream` の基本的な使い方を示すために、サンプルクライアントを作成しました。記事の一番下に[全リスト](#完全なリスト)がありますので、以下の説明と合わせてご覧ください。
 
 > [!NOTE]
 > この例を動作させるには、サーバーコンポーネントも必要です。[WebSocket サーバーを JavaScript (Deno) で書く](/ja/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno)で説明されている Deno サーバーと連携するようにクライアントを書きましたが、互換性のあるサーバーであればどれでも構いません。
