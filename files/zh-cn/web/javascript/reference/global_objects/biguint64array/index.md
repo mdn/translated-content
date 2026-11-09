@@ -84,7 +84,7 @@ console.log(biguint64FromIterable);
 
 ## 参见
 
-- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
