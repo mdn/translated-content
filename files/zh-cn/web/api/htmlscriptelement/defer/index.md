@@ -3,7 +3,7 @@ title: HTMLScriptElement：defer 属性
 short-title: defer
 slug: Web/API/HTMLScriptElement/defer
 l10n:
-  sourceCommit: 86e6a39c09408844137f307b83d35eca43d5cfda
+  sourceCommit: 3d57022613fbc562cc948938972aeffcaece819b
 ---
 
 {{APIRef("HTML DOM")}}
