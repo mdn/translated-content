@@ -35,7 +35,7 @@ HTML は文書の意味的な情報を提供することに特化しているの
 HTML を使用する主な理由の 1 つは、{{Glossary("Hyperlink", "ハイパーリンク")}}を使用してナビゲーションを簡単にすることであり、これは様々な形で使用することができます。
 
 - [ハイパーリンクを作成する方法](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)
-- [HTML を使って目次を作成する方法](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#アクティブラーニング_ナビゲーションメニューの作成)
+- [HTML を使って目次を作成する方法](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#ナビゲーションメニューの作成)
 
 ### 画像とマルチメディア
 

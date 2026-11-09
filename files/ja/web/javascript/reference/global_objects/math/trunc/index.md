@@ -3,7 +3,7 @@ title: Math.trunc()
 short-title: trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`Math.trunc()`** 関数は、引数として与えた数の小数部の桁を取り除くことによって整数部を返します。
@@ -41,7 +41,7 @@ Math.trunc(x)
 
 ## 解説
 
-`Math.trunc()` の処理は、他の 3 つの `Math` メソッド、{{jsxref("Math.floor()")}}、{{jsxref("Math.ceil()")}}、{{jsxref("Math.round()")}} よりも直感的です。引数が正の数か負の数かに関わらず、小数点とその右側の桁を切り詰め（切り捨て）ます。
+`Math.trunc()` の処理は、他の 3 つの `Math` メソッド、{{jsxref("Math.floor()")}}、{{jsxref("Math.ceil()")}}、{{jsxref("Math.round()")}} よりも単純です。引数が正の数か負の数かにかかわらず、小数点以下を取り除きます。
 
 `trunc()` は `Math` オブジェクトの静的なメソッドなので、自ら生成した `Math` オブジェクトのメソッドとしてではなく、常に、`Math.trunc()` として使用してください (`Math` オブジェクトにはコンストラクタがありません)。
 
@@ -71,13 +71,13 @@ Math.trunc(Infinity); // Infinity
 ```js
 const original = 3.14;
 const truncated1 = ~~original; // 二重否定
-const truncated2 = original & -1; // Bitwise AND with -1
-const truncated3 = original | 0; // Bitwise OR with 0
-const truncated4 = original ^ 0; // Bitwise XOR with 0
-const truncated5 = original >> 0; // Bitwise shifting by 0
+const truncated2 = original & -1; // -1 とのビット単位 AND
+const truncated3 = original | 0; // 0 とのビット単位 OR
+const truncated4 = original ^ 0; // 0 とのビット単位 XOR
+const truncated5 = original >> 0; // 0 ビット分の右シフト
 ```
 
-これは本質的に `toInt32` であり、 `Math.trunc` とは異なることに注意してください。値が -2<sup>31</sup> - 1 < `value` < 2<sup>31</sup> (-2147483649 < `value` < 2147483648) を満たさない場合、変換がオーバーフローしてしまいます。
+これは本質的に `toInt32` であり、`Math.trunc` とは異なることに注意してください。値が -2<sup>31</sup> - 1 < `value` < 2<sup>31</sup> (-2147483649 < `value` < 2147483648) を満たさない場合、変換がオーバーフローしてしまいます。
 
 ```js
 const a = ~~2147483648; // -2147483648
@@ -97,7 +97,7 @@ const c = ~~4294967296; // 0
 
 ## 関連情報
 
-- [`Math.trunc` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.trunc` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.ceil()")}}
 - {{jsxref("Math.floor()")}}
