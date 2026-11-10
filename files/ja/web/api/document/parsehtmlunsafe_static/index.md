@@ -3,16 +3,16 @@ title: "Document: parseHTMLUnsafe() 静的メソッド"
 short-title: parseHTMLUnsafe()
 slug: Web/API/Document/parseHTMLUnsafe_static
 l10n:
-  sourceCommit: cda9415220ba812ba2ee24e0af1c8e8001ab9924
+  sourceCommit: 41a472e5bad6c6d2698d6e85c1172909cb102fa1
 ---
 
 {{APIRef("DOM")}}
 
 > [!WARNING]
 > このメソッドは、入力を HTML として構文解析し、DOM に書き込みます。
-> このような API は[インジェクションシンク](/ja/docs/Web/API/Trusted_Types_API#概念と使い方)と呼ばれ、入力が攻撃者から来たものであれば、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS)攻撃の経路となる可能性があります。
+> このような API は[インジェクションシンク](/ja/docs/Web/API/Trusted_Types_API#概念と使い方)と呼ばれ、入力が攻撃者から来たものであれば、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS) 攻撃の経路となる可能性があります。
 >
-> このリスクを軽減するには、文字列の代わりに常に `TrustedHTML` オブジェクトを割り当て、[信頼型を強制する](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)ようにしてください。
+> このリスクを軽減するには、文字列の代わりに常に `TrustedHTML` オブジェクトを渡し、[信頼型を強制する](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)ようにしてください。
 > 詳しくは[セキュリティの注意事項](#セキュリティの注意事項)を参照してください。
 
 > [!NOTE]
@@ -46,9 +46,9 @@ Document.parseHTMLUnsafe(input, options)
 
 ### 例外
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : これは次の場合に発生します。
-    - `html` が文字列で渡された場合（[信頼型](/ja/docs/Web/API/Trusted_Types_API)が[CSP によって強制](/ja/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types)されており、デフォルトポリシーが定義されていない場合）。
+    - `html` が文字列で渡された場合（[信頼型](/ja/docs/Web/API/Trusted_Types_API)が[CSP によって強制](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)されており、デフォルトポリシーが定義されていない場合）。
     - `options.sanitizer` に次のいずれかが渡された場合。
       - {{domxref("SanitizerConfig")}} が[有効](/ja/docs/Web/API/SanitizerConfig#valid_configuration)でないもの。
         例えば、"allowed" と "removed" の両方の設定項目を含む構成などです。
@@ -70,9 +70,9 @@ HTML の文字列が具体的なシャドウホスト内で複数の[宣言型�
 
 メソッド名の接尾辞 "Unsafe" は、このメソッドがすべての XSS リスクのある HTML エンティティの除去を強制しないことを示しています（{{domxref("Document/parseHTML_static", "Document.parseHTML()")}}とは異なります）。
 適切なサニタイザーと併用すればそのように動作させることができますが、効果的なサニタイザーを保有する必要はなく、サニタイザー自体を使用しなくてもよいのです！
-したがって、このメソッドは、ユーザーから指定された潜在的に安全でない文字列が、先に無害化されることなく DOM に注入される、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS)攻撃の攻撃経路となり得ます。
+したがって、このメソッドは、ユーザーから指定された潜在的に安全でない文字列が、先に無害化されることなく DOM に注入される、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS) 攻撃の経路となり得ます。
 
-このリスクを軽減するには、文字列の代わりに常に {{domxref("TrustedHTML")}} オブジェクトを渡すようにし、CSP の [`require-trusted-types-for`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) ディレクティブを使用して[信頼型を強制](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)することで、このリスクを軽減する必要があります。
+このリスクを軽減するには、文字列の代わりに常に {{domxref("TrustedHTML")}} オブジェクトを渡し、CSP の [`require-trusted-types-for`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) ディレクティブを使用して[信頼型を強制](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)してください。
 これにより、入力は変換関数を通過することになり、挿入される前に入力を[無害化](/ja/docs/Web/Security/Attacks/XSS#sanitization)して、潜在的に危険なマークアップ（{{htmlelement("script")}} 要素やイベントハンドラー属性など）を除去することが可能になります。
 
 `TrustedHTML` を使用することで、無害化処理のコードが有効であるかどうかを、すべてのインジェクション・シンクに散在させるのではなく、わずかな場所だけで監査・検査することができます。

@@ -3,7 +3,7 @@ title: "Element: setAttributeNS() メソッド"
 short-title: setAttributeNS()
 slug: Web/API/Element/setAttributeNS
 l10n:
-  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
+  sourceCommit: 41a472e5bad6c6d2698d6e85c1172909cb102fa1
 ---
 
 {{ APIRef("DOM") }}
@@ -12,7 +12,7 @@ l10n:
 > このメソッドは、属性に応じて、HTML、スクリプト、またはスクリプトの URL として構文解析される属性値を受け取る可能性があります。
 > この API は[インジェクションシンク](/ja/docs/Web/API/Trusted_Types_API#概念と使い方)と呼ばれ、元の値が攻撃者から提供されたものである場合、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS) 攻撃の攻撃経路となる可能性があります。
 >
-> このリスクを軽減するには、常に適切な信頼型オブジェクト（{{domxref("TrustedHTML")}}、{{domxref("TrustedScript")}}、{{domxref("TrustedScriptURL")}} のいずれか）を常に渡すことで、このリスクを軽減できます。また、[信頼型の強制適用](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)を行うことも有効です。
+> このリスクは、適切な信頼型オブジェクト（{{domxref("TrustedHTML")}}、{{domxref("TrustedScript")}}、{{domxref("TrustedScriptURL")}} のいずれか）を渡し、[信頼型を強制する](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)ことで軽減できます。
 > 詳しくは {{domxref("Element.setAttribute()")}} の[セキュリティ上の注意事項](/ja/docs/Web/API/Element/setAttribute#セキュリティ上の注意事項)を参照してください。
 
 **`setAttributeNS()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定された名前空間と名前を持つ新しい属性を追加したり、属性の値を変更したりします。
@@ -58,7 +58,7 @@ setAttributeNS(namespaceURI, qualifiedName, value)
 ### 例外
 
 - `NamespaceError` {{domxref("DOMException")}}
-  - : [`namespaceURI`](#namespaceuri) の値が以下の場合の発生します。
+  - : [`namespaceURI`](#namespaceuri) の値が次のいずれかの場合に発生します。
     - 有効な名前空間 URI ではない。
     - `prefix` に値があるときに空文字列を設定した。
     - [`prefix`](#prefix) が `xml` または `xmlns` に設定された場合に、それぞれ `http://www.w3.org/XML/1998/namespace` または `http://www.w3.org/2000/xmlns/` ではない場合。
@@ -70,7 +70,7 @@ setAttributeNS(namespaceURI, qualifiedName, value)
     > [!NOTE]
     > 仕様の以前のバージョンでは、`qualifiedName` が有効な [XML 名](https://www.w3.org/TR/xml/#dt-name) であることが要求されるなど、より厳しい制約が設けられていました。
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : [`value`](#value) に、信頼型オブジェクトではなく文字列が渡された場合（それらを要求される属性について）、 [信頼型](/ja/docs/Web/API/Trusted_Types_API)が [CSP によって強制されている](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)場合で、かつデフォルトのポリシーが定義されていない場合に発生します。
 
 ### 例
@@ -88,7 +88,7 @@ d.setAttributeNS(
 
 ### 信頼型
 
-`setAttribute()` の[安全はでない属性の設定](/ja/docs/Web/API/Element/setAttribute#安全はでない属性の設定)の例では、`setAttributeNS()` とともに [信頼型](/ja/docs/Web/API/Trusted_Types_API)を使用する方法が示されています。
+`setAttribute()` の[安全でない属性の設定](/ja/docs/Web/API/Element/setAttribute#安全でない属性の設定)の例では、`setAttributeNS()` とともに[信頼型](/ja/docs/Web/API/Trusted_Types_API)を使用する方法を説明しています。
 
 ## 仕様書
 
