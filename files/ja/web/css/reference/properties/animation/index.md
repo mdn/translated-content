@@ -1,5 +1,5 @@
 ---
-title: "`animation` プロパティ (CSS)"
+title: "`animation` プロパティ"
 short-title: animation
 slug: Web/CSS/Reference/Properties/animation
 l10n:
