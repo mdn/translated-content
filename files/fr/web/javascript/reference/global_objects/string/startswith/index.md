@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-La méthode **`startsWith()`** des valeurs {{JSxRef("String")}} détermine si cette chaîne de caractères commence par les caractères d'une chaîne de caractères définie, renvoyant `true` ou `false` selon le cas.
+La méthode **`startsWith()`** des valeurs {{JSxRef("String")}} détermine si cette chaîne de caractères commence par les caractères d'une chaîne de caractères définie, retournant `true` ou `false` selon le cas.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: String.prototype.startsWith()")}}
 
