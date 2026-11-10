@@ -3,10 +3,12 @@ title: '`<input type="datetime-local">` 属性値'
 short-title: <input type="datetime-local">
 slug: Web/HTML/Reference/Elements/input/datetime-local
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 {{htmlelement("input")}} 要素の **`datetime-local`** 型は、ユーザーが簡単に日付と時刻、つまり年、月、日と時、分を入力することができる入力コントロールを生成します。ユーザーのローカルタイムゾーンが使用されます。
+
+このコントロールの UI は一般的にブラウザーによって異なります。このコントロールは、ローカルの日付と時刻を意図通りに表すものであり、必ずしもユーザーのローカルの日付と時刻を表すわけではありません。つまり、ユーザーのローカルタイムゾーンでは無効な組み合わせ（夏時間への切り替え時に時計が進むことで生じる 1 時間の空白など）であっても、年、月、日、時、分の有効な組み合わせなら入力できます。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
 
@@ -35,8 +37,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-このコントロールの UI は一般的にブラウザーによって異なります。このコントロールは、ローカルの日付と時刻を意図通りに表示しますが、必ずしもユーザーの地域の日付と時刻を表示するわけではありません。言い換えれば、この入力フィールドは、ユーザーの地域のタイムゾーンでは不正な組み合わせ（夏時間の切り替え移行期間の 1 時間など）であっても、年、月、日、時、分を任意に組み合わせることができます。
 
 ## 値
 
@@ -128,7 +128,7 @@ dateControl.value = "2017-06-01T08:30";
 
 ## 検証
 
-デフォルトでは、 `<input type="datetime-local">` は入力された値の検証を行いません。ユーザーインターフェイスの実装は一般的に、日付でないものの入力をさせないからです。これは便利です。しかし、それでも入力欄を空のままにしたり、 (`text` 型にフォールバックするブラウザーにおいて) 無効な日付 (例えば 4 月 32 日など) を入力したりすることが可能です。
+デフォルトでは、 `<input type="datetime-local">` は入力された値の検証を行いません。ユーザーインターフェイスの実装は一般的に、日付でないものの入力をさせないからです。これは便利です。しかし、それでも入力欄を空のままにしたり、 (`text` 型の入力欄で代替されるブラウザーでは) 無効な日付 (例えば 4 月 32 日など) を入力したりすることが可能です。
 
 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) を使用して有効な日付を制限したり ([日付の最大値と最小値の設定](#日時の最大値と最小値の設定)を参照)、 [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を使用して日時の入力を必須にしたりすることができます。その結果、ブラウザーでは、範囲を外れた日付や空の日付欄を送信しようとするとエラーが表示されるでしょう。
 
@@ -154,6 +154,12 @@ dateControl.value = "2017-06-01T08:30";
     <input type="submit" value="予約する！" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 不完全な日付 (または設定した範囲を外れた日付) を送信しようとすると、ブラウザーはエラーを表示します。例を実行してみましょう。
@@ -198,10 +204,8 @@ input:valid + span::after {
 最も単純な `<input type="datetime-local">` の使用方法は、下記のように基本的な `<input>` と {{htmlelement("label")}} 要素の組み合わせることです。
 
 ```html
-<form>
-  <label for="party">パーティーを予約する日時を入力してください:</label>
-  <input id="party" type="datetime-local" name="party-date" />
-</form>
+<label for="party">パーティーを予約する日時を入力してください:</label>
+<input id="party" type="datetime-local" name="party-date" />
 ```
 
 {{ EmbedLiveSample('Basic_uses_of_datetime-local', 600, 40) }}
@@ -211,15 +215,13 @@ input:valid + span::after {
 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性を使用することで、ユーザーが選べる日時を制限することができます。次の例では、日時の最小値を `2025-06-01T08:30`、最大値を `2025-06-30T16:30` に設定しています。
 
 ```html
-<form>
-  <label for="party">パーティーを予約する日時を入力してください:</label>
-  <input
-    id="party"
-    type="datetime-local"
-    name="party-date"
-    min="2025-06-01T08:30"
-    max="2025-06-30T16:30" />
-</form>
+<label for="party">パーティーを予約する日時を入力してください:</label>
+<input
+  id="party"
+  type="datetime-local"
+  name="party-date"
+  min="2025-06-01T08:30"
+  max="2025-06-30T16:30" />
 ```
 
 {{ EmbedLiveSample('Setting_maximum_and_minimum_dates_and_times', 600, 40) }}
@@ -270,14 +272,6 @@ input:valid + span::after {
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
