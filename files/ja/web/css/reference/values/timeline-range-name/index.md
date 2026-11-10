@@ -3,7 +3,7 @@ title: "`<timeline-range-name>` 型"
 short-title: <timeline-range-name>
 slug: Web/CSS/Reference/Values/timeline-range-name
 l10n:
-  sourceCommit: 5f3da7dfeb0b6938fcae8a08fc08f9b8aea1ff65
+  sourceCommit: 4aba58b4ad2745a73054f60b6d649d8e29b7b44d
 ---
 
 **`<timeline-range-name>`** は{{glossary("enumerated", "列挙型")}}のデータ型で、[ビュー進行タイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)の中にある定義済みの名前付きタイムライン範囲のいずれかを表す CSS 識別子です。
@@ -13,6 +13,12 @@ l10n:
 - {{cssxref("animation-range-end")}}
 - {{cssxref("animation-range-start")}}
 - {{cssxref("animation-range")}} 一括指定
+- {{cssxref("timeline-trigger-activation-range-end")}}
+- {{cssxref("timeline-trigger-activation-range-start")}}
+- {{cssxref("timeline-trigger-activation-range")}} 一括指定
+- {{cssxref("timeline-trigger-active-range-end")}}
+- {{cssxref("timeline-trigger-active-range-start")}}
+- {{cssxref("timeline-trigger-active-range")}} 一括指定
 
 ## 構文
 
@@ -66,4 +72,5 @@ l10n:
 - [タイムライン範囲名を理解する](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - [スクロール駆動アニメーションタイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)ガイド
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)モジュール
+- [CSS アニメーショントリガー](/ja/docs/Web/CSS/Guides/Animation_triggers)モジュール
 - [View timeline range visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)
