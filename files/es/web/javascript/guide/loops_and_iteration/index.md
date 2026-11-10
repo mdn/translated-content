@@ -245,7 +245,7 @@ La instrucción {{JSxRef("Statements/continue", "continue")}} se puede usar para
 
 La sintaxis de la instrucción `continue` se parece a la siguiente:
 
-```js
+```js-nolint
 continue;
 continue label;
 ```
