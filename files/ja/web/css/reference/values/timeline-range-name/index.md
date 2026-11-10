@@ -1,5 +1,5 @@
 ---
-title: "`<timeline-range-name>` 型 (CSS)"
+title: "`<timeline-range-name>` 型"
 short-title: <timeline-range-name>
 slug: Web/CSS/Reference/Values/timeline-range-name
 l10n:
