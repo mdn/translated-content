@@ -3,7 +3,7 @@ title: "Element: innerHTML プロパティ"
 short-title: innerHTML
 slug: Web/API/Element/innerHTML
 l10n:
-  sourceCommit: ad01ed9218be15d7aeaa0666ec0bc2a2d17f3574
+  sourceCommit: 41a472e5bad6c6d2698d6e85c1172909cb102fa1
 ---
 
 {{APIRef("DOM")}}
@@ -13,7 +13,7 @@ l10n:
 > この API は[インジェクションシンク](/ja/docs/Web/API/Trusted_Types_API#概念と使い方)と呼ばれており、入力がもともと攻撃者からのものである場合、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS) 攻撃の攻撃経路となる可能性があります。
 >
 > このリスクを軽減するには、文字列の代わりに常に `TrustedHTML` オブジェクトを代入し、[信頼型を強制する](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)ようにしてください。
-> 詳細については、[セキュリティに関する注意事項](#セキュリティに関する注意事項)を参照してください。
+> 詳しくは[セキュリティ上の注意事項](#セキュリティ上の注意事項)を参照してください。
 
 **`innerHTML`** は {{domxref("Element")}} オブジェクトのプロパティで、要素内の HTML または XML のマークアップを取得したり設定したりします。どちらの場合も{{glossary("shadow tree", "シャドウルート")}}は含まれません。
 
@@ -30,7 +30,7 @@ l10n:
 
 - `SyntaxError` {{domxref("DOMException")}}
   - : `innerHTML` の値を、正しくない形の HTML の文字列を使用して設定しようとした場合に発生します。
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : [信頼型](/ja/docs/Web/API/Trusted_Types_API)が [CSP によって強制されている](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)場合で、かつデフォルトのポリシーが定義されていないときに、プロパティが文字列に設定されると、この例外が発生します。
 - `NoModificationAllowedError` {{domxref("DOMException")}}
   - : 親が {{domxref("Document")}} であるノードに HTML を挿入しようとした場合に発生します。
@@ -40,7 +40,7 @@ l10n:
 `innerHTML` は、その要素内に含まれる子 DOM 要素のシリアライズされたデータを取得するか、その要素内の DOM ツリーを置き換えるために構文解析されるべき HTML または XML を設定します。
 
 なお、一部のブラウザーでは、属性値内に `<` や `>` 文字が現れる場合、これらを `&lt;` や `&gt;` としてシリアル化します（[ブラウザーの互換性](#ブラウザーの互換性)を参照）。
-これは、攻撃者が[無害化関数](/ja/docs/Web/Security/Attacks/XSS#無害化)を迂回する入力を生成し、クロスサイトスクリプティング (XSS) 攻撃をすることができる、潜在的なセキュリティの脆弱性を防ぐためのもの ([mutation XSS](https://www.securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass.html)) です。
+これは、攻撃者が[無害化関数](/ja/docs/Web/Security/Attacks/XSS#無害化)を迂回する入力を生成し、クロスサイトスクリプティング (XSS) 攻撃を実行できるという潜在的なセキュリティ脆弱性を防ぐためです（[mutation XSS](https://securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass.html)）。
 
 ### シャドウ DOM の注意事項
 
@@ -50,7 +50,7 @@ DOM ツリーをプロパティから読み込んでシリアライズした場�
 ですから、例えば [`<template>`](/ja/docs/Web/HTML/Reference/Elements/template) は、 [`shadowrootmode`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootmode) 属性が指定されているかどうかにかかわらず、 {{domxref("HTMLTemplateElement")}} に解釈されます。
 宣言的なシャドウルートが含まれた HTML 文字列から要素のコンテンツを設定するには、 {{domxref("Element.setHTMLUnsafe()")}} または {{domxref("ShadowRoot.setHTMLUnsafe()")}} を使用する必要があります。
 
-### セキュリティに関する注意事項
+### セキュリティ上の注意事項
 
 `innerHTML` プロパティは、おそらく [クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS) 攻撃において最も一般的な攻撃経路です。この攻撃では、ユーザーによって指定された安全性が保証されていない文字列が、事前に無害化されることなく DOM に注入されてしまいます。
 この機能は、{{HTMLElement("script")}} 要素が注入された際の実行は防ぎますが、攻撃者が悪意のある JavaScript を実行するために HTML を巧妙に作成する他の多くの方法に対しては脆弱です。
@@ -65,7 +65,7 @@ el.innerHTML = name; // アラートが表示される
 これにより、入力が変換関数を通過し、その関数によって、入力が挿入される前に、潜在的に危険なマークアップが除去されるための[無害化処理](/ja/docs/Web/Security/Attacks/XSS#sanitization)が行われる可能性があります。
 
 > [!NOTE]
-> ユーザーが提供したコンテンツがプレーンテキストであることが分かっている場合は、{{domxref("Node.textContent")}} を使用しましょう。
+> ユーザーが提供するコンテンツがプレーンテキストであることが分かっている場合は、{{domxref("Node.textContent")}} を使用してください。
 > これにより、そのコンテンツが HTML として構文解析されるのを防ぐことができます。
 
 ## 例
@@ -127,8 +127,8 @@ element.innerHTML = trustedHTML;
 ```
 
 > [!WARNING]
-> `innerHTML` に文字列を直接代入することは可能ですが、挿入する文字列に悪意のあるコンテンツが含まれている可能性がある場合、[セキュリティ上のリスク](#セキュリティに関する注意事項)となります。
-> コンテンツを挿入する前に必ず `TrustedHTML` を使用して無害化を行い、CSP ヘッダーを設定して[信頼型を強制](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)するようにしてください。
+> `innerHTML` に文字列を直接代入することは可能ですが、挿入する文字列に悪意のあるコンテンツが含まれている可能性がある場合、[セキュリティ上のリスク](#セキュリティ上の注意事項)となります。
+> コンテンツを挿入する前に必ず `TrustedHTML` を使用して無害化し、CSP ヘッダーを設定して[信頼型を強制](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)してください。
 
 ## 仕様書
 

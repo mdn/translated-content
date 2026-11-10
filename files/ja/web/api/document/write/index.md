@@ -3,7 +3,7 @@ title: "Document: write() メソッド"
 short-title: write()
 slug: Web/API/Document/write
 l10n:
-  sourceCommit: 65cbd4ff030e6763d6868917137d728c3ec29288
+  sourceCommit: 41a472e5bad6c6d2698d6e85c1172909cb102fa1
 ---
 
 {{ApiRef("DOM")}}
@@ -51,7 +51,7 @@ write(markup, markup2, /* …, */ markupN)
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : このメソッドが、XML 文書に対して呼び出されたか、パーサーが独自の要素のコンストラクターを実行している最中に呼び出されました。
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : [信頼型が強制されている場合](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)で、かつ {{domxref("TrustedHTML")}} オブジェクトを生成するための[デフォルトのポリシーが定義されていない場合](/ja/docs/Web/API/TrustedTypePolicyFactory/createPolicy#既定のポリシーの作成)に、文字列が引数の 1 つとして渡されました。
 
 ## 解説
@@ -76,7 +76,7 @@ write(markup, markup2, /* …, */ markupN)
 
 Edge のみですが、{{HTMLElement("iframe")}} 内で `document.write()` を複数の回呼び出すと、"SCRIPT70: Permission denied" というエラーが発生します。
 
-### セキュリティの注意事項
+### セキュリティ上の注意事項
 
 このメソッドは、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS) 攻撃の攻撃経路となり得ます。これは、ユーザーから指定された安全性が保証されていない文字列が、まず無害化されることなく DOM に挿入されてしまうためです。
 このメソッドは、一部のブラウザーにおいて、{{HTMLElement("script")}} 要素が挿入された際の実行をブロックする場合がありますが（Chrome については [document.write() への介入](https://developer.chrome.com/blog/removing-document-write/)を参照）、攻撃者が悪意のある JavaScript を実行するために HTML を細工する他の多くの方法に対しては脆弱です。
@@ -109,9 +109,9 @@ Edge のみですが、{{HTMLElement("iframe")}} 内で `document.write()` を�
 このメソッドは、入力文字列に対して何らかの処理を行うことができます。信頼型 API では、入力データをポリシー変換関数に通すことのみが要求されており、変換関数が具体的な処理を行うことは要求されていません。
 
 このメソッドを使用して、{{htmlelement("script")}} タグやイベントハンドラー属性など、安全性が確保されていない可能性のある要素を除去し、入力を[無害化](/ja/docs/Web/Security/Attacks/XSS#無害化)します。
-サニタイズは適切な方法で実施するのが難しいため、このプロセスでは通常、[DOMPurify](https://github.com/cure53/DOMPurify) のような信頼できるサードパーティー製ライブラリーが使用されます。
+無害化を適切に行うのは難しいため、このプロセスでは通常、[DOMPurify](https://github.com/cure53/DOMPurify) のような信頼できるサードパーティ製ライブラリーが使用されます。
 
-ここでは、説明のために、スクリプトの開始タグおよび終了タグ内の `<` 記号を `&lt;` 文字に置き換える、ごく基本的な「サニタイザー」を実装します。
+ここでは、説明のために、スクリプトの開始タグおよび終了タグ内の `<` 記号を `&lt;` 文字に置き換える、ごく基本的な無害化処理を実装します。
 
 ```js
 const policy = trustedTypes.createPolicy("docPolicy", {
@@ -152,7 +152,7 @@ replace.addEventListener("click", () => {
 ### 文字列の書き込み
 
 これは前の例と同じですが、信頼型が使用も強制もされない点が異なります。
-サニタイズされていない文字列を出力しているため、[XSS 攻撃](/ja/docs/Web/Security/Attacks/XSS)の攻撃経路となることがあります。
+無害化されていない文字列を出力しているため、[XSS 攻撃](/ja/docs/Web/Security/Attacks/XSS)の攻撃経路となることがあります。
 
 この例では、最初にデフォルトのテキストとボタンが表示されます。
 ボタンがクリックされると、現在の文書が開かれ、3 つの HTML 文字列が文書に書き込まれ、その後文書が閉じられます。
