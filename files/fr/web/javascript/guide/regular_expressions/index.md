@@ -40,7 +40,7 @@ La correspondance effectuée avec cette partie du motif est mémorisée pour une
 ### Utiliser des motifs simples
 
 Les motifs simples sont construits à partir de caractères pour lesquels on souhaite avoir une correspondance directe. Par exemple, le motif `/arc/` correspond aux combinaisons de caractères dans les chaînes de caractères uniquement lorsque la séquence exacte `"arc"` apparaît (tous les caractères ensemble et dans cet ordre).
-Une telle correspondance réussit dans les chaînes de caractères `"Salut, sais-tu où est ton abc ?" ` et `"Les derniers modèles d'avions ont évolué à partir du slabcraft."`.
+Une telle correspondance réussit dans les chaînes de caractères `"Salut, sais-tu où est ton arc ?" ` et `"Ils proviennent de procédés de fabrication archaïques."`.
 Dans les deux cas, la correspondance se fait avec la sous-chaîne de caractères `"abc"`.
 Il n'y a pas de correspondance dans la chaîne de caractères `"Attraper le crabe"`, car bien qu'elle contienne la sous-chaîne de caractères `"ab c"`, elle ne contient pas la sous-chaîne de caractères exacte `"abc"`.
 
