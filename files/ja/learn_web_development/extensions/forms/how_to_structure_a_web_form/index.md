@@ -2,7 +2,7 @@
 title: フォームの構築方法
 slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 l10n:
-  sourceCommit: 423161782178b119c64cd0b41bff8df20dc84a56
+  sourceCommit: bfead5c281d92a213f0191746fd98a6bdc4dc457
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
@@ -47,34 +47,33 @@ l10n:
 
 多くの支援技術は {{HTMLElement("legend")}} 要素を、対応する {{HTMLElement("fieldset")}} 要素内にある各ウィジェットのラベルの一部であるかのように扱うでしょう。例えば [Jaws](https://vispero.com/jaws-screen-reader-software/) や [NVDA](https://www.nvaccess.org/) といったスクリーンリーダーは、各ウィジェットのラベルを読み上げる前に legend の内容を読み上げます。
 
-以下に小さなサンプルを挙げます。
+例を示します。
 
-```html
-<form>
-  <fieldset>
-    <legend>Fruit juice size</legend>
-    <p>
-      <input type="radio" name="size" id="size_1" value="small" />
-      <label for="size_1">Small</label>
-    </p>
-    <p>
-      <input type="radio" name="size" id="size_2" value="medium" />
-      <label for="size_2">Medium</label>
-    </p>
-    <p>
-      <input type="radio" name="size" id="size_3" value="large" />
-      <label for="size_3">Large</label>
-    </p>
-  </fieldset>
-</form>
+```html live-sample___fieldset-legend
+<fieldset>
+  <legend>ジュースの量</legend>
+  <p>
+    <input type="radio" name="size" id="size_1" value="small" />
+    <label for="size_1">小</label>
+  </p>
+  <p>
+    <input type="radio" name="size" id="size_2" value="medium" />
+    <label for="size_2">中</label>
+  </p>
+  <p>
+    <input type="radio" name="size" id="size_3" value="large" />
+    <label for="size_3">大</label>
+  </p>
+</fieldset>
 ```
 
-> [!NOTE]
-> この例は [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html))。
+次のように表示されます。
 
-この例では、スクリーンリーダーは最初のウィジェットを "Fruit juice size small"、2 番目を "Fruit juice size medium"、3 番目を "Fruit juice size large" と読み上げるでしょう。
+{{embedlivesample("fieldset-legend", "100%", 200)}}
 
-この例での用途は、最も重要なものの 1 つです。一連のラジオボタンを有するたびに、それらを {{HTMLElement("fieldset")}} 要素の内部に入れ子にする必要があります。他にも用途があり、一般的に {{HTMLElement("fieldset")}} 要素はフォームを分割するために使用することもできます。長いフォームは複数のページにまたがるのが理想的ですが、フォームが長くなって単一のページに収めなければならない場合、異なるフィールドセット内に異なる関連するセクションを置くことでユーザビリティを向上させることができます。
+上のフォームを読み上げると、スクリーンリーダーは最初のラジオボタンのラベルを「ジュースの量 小」、2 番目を「ジュースの量 中」、3 番目を「ジュースの量 大」と読み上げます。
+
+ラジオボタンをまとめる場合は、{{HTMLElement("fieldset")}} 要素の中に入れてください。{{HTMLElement("fieldset")}} 要素にはほかの用途もあり、一般にフォームをセクションに分けるためにも使えます。長いフォームは複数のページに分けるのが理想ですが、長いフォームを 1 ページに収める必要がある場合は、関連するセクションを別々のフィールドセットに分けると使いやすくなります。
 
 支援技術に対する影響力が大きいため、 {{HTMLElement("fieldset")}} 要素はアクセシブルなフォームを構築するための重要な要素の 1 つです。しかし、それを乱用しないことはあなたの責任です。可能であれば、フォームを作成するたびに、[スクリーンリーダーがどのように解釈するかを聞いてみる](/ja/docs/Learn_web_development/Core/Accessibility/Tooling#スクリーンリーダー)ようにしてください。変だと感じたら、フォームの構造を改善するようにしましょう。
 
@@ -104,23 +103,22 @@ l10n:
 
 ラベルをセットアップするもう 1 つの利点は、ユーザーがラベルをクリックするとウィジェットをアクティブにすることが、あらゆるブラウザーで可能になります。これは例えば、テキスト入力で、入力と同様にラベルをクリックしてフォーカスさせることができますし、ラジオボタンやチェックボックスで特に有用です — このコントロールのヒットエリアはとても小さく、できるだけ大きくしておくのは便利です。
 
-例えば、次の例で "I like cherry" の テキストをクリックすると選択された _taste_cherry_ チェックボックスの状態が切り替わります。
+例えば、次の例で「さくらんぼが好きです」というラベルをクリックすると、_taste_cherry_ チェックボックスの選択状態が切り替わります。
 
-```html
-<form>
-  <p>
-    <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry" />
-    <label for="taste_1">I like cherry</label>
-  </p>
-  <p>
-    <input type="checkbox" id="taste_2" name="taste_banana" value="banana" />
-    <label for="taste_2">I like banana</label>
-  </p>
-</form>
+```html live-sample___checkbox-label
+<p>
+  <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry" />
+  <label for="taste_1">さくらんぼが好きです</label>
+</p>
+<p>
+  <input type="checkbox" id="taste_2" name="taste_banana" value="banana" />
+  <label for="taste_2">バナナが好きです</label>
+</p>
 ```
 
-> [!NOTE]
-> この例は [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html))。
+試してみてください。
+
+{{embedlivesample("checkbox-label", "100%", 100)}}
 
 ### 複数のラベル
 
@@ -358,6 +356,12 @@ l10n:
    ```
 
 下記では完了したフォームに追加 CSS を適用しました。フォームの外観を変更したい場合は、[例](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form/Example)からスタイルをコピーするか、[ウェブフォームのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)を参照してください。
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
 
 {{EmbedLiveSample("building_a_form_structure","100%",620)}}
 
